@@ -1,0 +1,3 @@
+## <a name="prepare-your-development-environment"></a>Vorbereiten der Entwicklungsumgebung
+
+Das erste, was Sie tun müssen, ist die Vorbereitung Ihrer Entwicklungsumgebung. Sie müssen sicherstellen, dass das Hochladen von benutzerdefinierten Apps für die Office 365 Organisation aktiviert ist, in der Sie Ihre APP erstellen möchten. Wenn Sie einen dedizierten Entwicklungsmandanten benötigen, können Sie sich für das [Office 365 Entwicklerprogramm](https://developer.microsoft.com/office/dev-program)registrieren. Weitere Informationen finden Sie unter [Einrichten der Entwicklungsumgebung](~/concepts/build-and-test/prepare-your-o365-tenant.md).
