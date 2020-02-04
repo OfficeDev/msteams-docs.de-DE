@@ -1,0 +1,7 @@
+- name: "Microsoft\_Teams"
+  tocHref: /microsoftteams/
+  topicHref: /microsoftteams/
+  items:
+    - name: Entwicklerplattform
+      tocHref: /microsoftteams/platform/
+      topicHref: /microsoftteams/platform/index

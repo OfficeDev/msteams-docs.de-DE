@@ -1,0 +1,10 @@
+## <a name="learn-more"></a><span data-ttu-id="34499-101">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="34499-101">Learn more</span></span>
+
+<span data-ttu-id="34499-102">Testen Sie es in einem Schnellstart:</span><span class="sxs-lookup"><span data-stu-id="34499-102">Try it out in a quickstart:</span></span>
+
+* <span data-ttu-id="34499-103">Schnellstarts für C #</span><span class="sxs-lookup"><span data-stu-id="34499-103">Quickstarts for C#</span></span>
+  * [<span data-ttu-id="34499-104">Messaging-Erweiterung mit Aktions basierten Befehlen</span><span class="sxs-lookup"><span data-stu-id="34499-104">Messaging extension with action-based commands</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
+  * [<span data-ttu-id="34499-105">Messaging-Erweiterung mit suchbasierten Befehlen</span><span class="sxs-lookup"><span data-stu-id="34499-105">Messaging extension with search-based commands</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
+* <span data-ttu-id="34499-106">Schnellstarts für JavaScript</span><span class="sxs-lookup"><span data-stu-id="34499-106">Quickstarts for JavaScript</span></span>
+  * [<span data-ttu-id="34499-107">Messaging-Erweiterung mit Aktions basierten Befehlen</span><span class="sxs-lookup"><span data-stu-id="34499-107">Messaging extension with action-based commands</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
+  * [<span data-ttu-id="34499-108">Messaging-Erweiterung mit suchbasierten Befehlen</span><span class="sxs-lookup"><span data-stu-id="34499-108">Messaging extension with search-based commands</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
