@@ -3,12 +3,12 @@ title: Text Formatierung in Karten
 description: Beschreibt die Formatierung von Karten Texten in Microsoft Teams
 keywords: Teams-Bots-Kartenformat
 ms.date: 03/29/2018
-ms.openlocfilehash: 4a467c5b0b21cc3c19977bf7caa25e6790904b10
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: eb8aa13b9e75d08dadd5e615029a9d418c6c7892
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674523"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783969"
 ---
 # <a name="card-formatting"></a>Kartenformatierung
 
@@ -105,14 +105,16 @@ Auf Android wird die Formatierung für Adaptive Karten Abschriften wie folgt ang
     ]
 }
 ```
+
 ## <a name="mention-support-within-adaptive-cards"></a>Erwähnung von Unterstützung in adaptiven Karten 
 
 > [!NOTE]
-> Die Erwähnung der Unterstützung in Cards wird derzeit nur in der [Entwicklervorschau](~/resources/dev-preview/developer-preview-intro) unterstützt.
+> Die Erwähnung der Unterstützung in Cards wird derzeit nur in der [Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md) unterstützt.
 
 Bots und Messaging-Erweiterungen können jetzt Erwähnungen innerhalb des Karteninhalts in Text Block-und FactSet-Elementen enthalten. 
 
 ### <a name="constructing-mentions"></a>Erstellen von Erwähnungen
+
 Um eine Erwähnung in eine Adaptive Karte aufzunehmen, muss Ihre APP die folgenden Elemente enthalten:
 
 * `<at>username</at>`in den unterstützten Adaptive Card-Elementen
@@ -121,6 +123,7 @@ Um eine Erwähnung in eine Adaptive Karte aufzunehmen, muss Ihre APP die folgend
 Beachten Sie, dass derzeit keine Karten mit Erwähnungen auf mobilen Clients unterstützt werden.
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>Beispiel Adaptive Karte mit Erwähnung
+
 ``` json
 {
   "contentType": "application/vnd.microsoft.card.adaptive",

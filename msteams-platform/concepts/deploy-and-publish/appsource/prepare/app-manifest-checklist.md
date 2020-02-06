@@ -2,14 +2,17 @@
 title: Prüfliste für App-Manifeste
 description: Die Prüfliste für Ihr App-Manifest für die Veröffentlichung Ihrer Microsoft Teams-app in AppSource
 keywords: Office-Veröffentlichungs Checkliste für Microsoft Teams Publishing Store
-ms.openlocfilehash: e684bb4f578944c6f37eeb43541a491d42ec3479
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6186daf264f04e04d6037ddfb7d9208994cc3c57
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674420"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783878"
 ---
 # <a name="app-manifest-checklist"></a>Prüfliste für App-Manifeste
+
+>[!IMPORTANT]
+>Aktuell wird die Verwaltung von Office-Lösungen vom Verkäufer-Dashboard zum Partner Center verschoben. Detailinformationen finden Sie unter [Verschieben vom Verkäufer-Dashboard zum Partner Center](https://developer.microsoft.com/office/blogs/moving-management-of-solutions-from-seller-dashboard-to-partner-center/) und unter [FAQ ‒ Häufig gestellte Fragen](https://docs.microsoft.com/office/dev/store/partner-center-faq).
 
 Das App-Manifest muss mit den unten beschriebenen Richtlinien übereinstimmen.
 
@@ -19,13 +22,13 @@ Das App-Manifest muss mit den unten beschriebenen Richtlinien übereinstimmen.
 ## <a name="tips"></a>Tipps 
 
 * Verwenden Sie nicht "Teams", "Microsoft" oder "App" in Ihrem APP-Namen.
-* Der Entwickler Name im App-Manifest muss mit dem im Partner Center oder Verkäuferdashboard definierten Anbieternamen übereinstimmen.
+* Der Entwickler Name in ihrem Manifest muss mit dem im Partner Center definierten Anbieternamen übereinstimmen.
 * Stellen Sie sicher, dass die APP-Beschreibung, Screenshots, Text und Werbebilder nur die APP beschreiben und keine zusätzlichen Werbungen, Promotionen oder urheberrechtlich geschützten Markennamen enthalten.
 * Wenn für Ihr Produkt ein Konto in Ihrem Dienst oder ein anderer Dienst erforderlich ist, geben Sie das in der Beschreibung an, und stellen Sie sicher, dass Links zur Registrierung vorhanden sind, und melden Sie sich an und melden Sie sich ab.
 * Wenn Ihr Produkt zusätzliche Käufe erfordert, um ordnungsgemäß zu funktionieren, müssen Sie dies in der Beschreibung auflisten.
-* Geben Sie die erforderlichen Begriffe und Datenschutzrichtlinien Links im Manifest und im Partner Center oder Verkäuferdashboard an. Stellen Sie sicher, dass die Links ordnungsgemäß in die richtige Dokumentation aufgelöst werden, idealerweise Teams spezifisch. Für Bots müssen Sie dieselben Informationen im Abschnitt "Übermittlung" der Seite "bot Framework-Registrierung" angeben.
-* Stellen Sie sicher, dass Metadaten im Manifest exakt mit den Metadaten im Partner Center oder Verkäuferdashboard (und, für Bots, in der bot-Framework-Registrierung) übereinstimmen. Beachten Sie, dass Ihr Verkäuferdashboard Eintrag eine ausführlichere und formatierte Beschreibung zur Verwendung auf der AppSource-Produktseite enthalten sollte.
-* Stellen Sie sicher, dass der in ihrem Manifest verwendete APP-Titel exakt mit dem im Partner Center eingegebenen APP-Titel oder Verkäuferdashboard Übermittlung übereinstimmt.
+* Geben Sie die erforderlichen Begriffe und Datenschutzrichtlinien Links im Manifest und im Partner Center oder Dashboard an. Stellen Sie sicher, dass die Links ordnungsgemäß in die richtige Dokumentation aufgelöst werden, idealerweise Teams spezifisch. Für Bots müssen Sie dieselben Informationen im Abschnitt "Übermittlung" der Seite "bot Framework-Registrierung" angeben.
+* Stellen Sie sicher, dass Metadaten im Manifest genau den Metadaten im Partner Center (und, für Bots, in der bot-Framework-Registrierung) entsprechen. Beachten Sie, dass Ihr Partner Center-Eintrag möglicherweise eine detailliertere und formatierte Beschreibung zur Verwendung auf der AppSource-Produktseite enthält.
+* Stellen Sie sicher, dass der in ihrem Manifest verwendete APP-Titel eine **exakte Übereinstimmung** mit dem im Partner Center-Beitrag eingegebenen APP-Titel ist. *Weitere Informationen finden Sie unter* [Erstellen effektiver Auflistungen in Microsoft AppSource und in Office – verwenden Sie einen konsistenten Add-in-Namen ](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings#use-a-consistent-add-in-name).
 
 ## <a name="metadata-requirement"></a>Metadaten-Anforderung
 
@@ -51,10 +54,10 @@ Die folgenden Metadaten sind für Ihre APP erforderlich.
 
 |Daten|Typ|Größe|Manifest|Partner Center|Beschreibung|
 |---|---|---|---|---|---|
-|App-Name|Zeichenfolge|30|`name.short`|✔|Der Name Ihrer Anwendung, wie er im Storefront-und im-Produkt angezeigt werden soll.|
-|Langer App-Name|Zeichenfolge|30|`name.full`|✔|Der Name Ihrer Anwendung, wie er im Storefront-und im-Produkt angezeigt werden soll.|
-|Kurzbeschreibung|Zeichenfolge|80|`description.short`|✔|Kurze Beschreibung Ihrer APP.|
-|Lange Beschreibung|Zeichenfolge|4000|`description.full`|✔|Eine ausführlichere Beschreibung Ihrer APP. In der Manifestdatei ist eine genaue Zusammenfassung ausreichend. Im Partner Center können Sie eine umfangreichere und formatierte Beschreibung für die AppSource-Produktseite verwenden.|
+|App-Name|String|30|`name.short`|✔|Der Name Ihrer Anwendung, wie er im Storefront-und im-Produkt angezeigt werden soll.|
+|Langer App-Name|String|30|`name.full`|✔|Der Name Ihrer Anwendung, wie er im Storefront-und im-Produkt angezeigt werden soll.|
+|Kurzbeschreibung|String|80|`description.short`|✔|Kurze Beschreibung Ihrer APP.|
+|Lange Beschreibung|String|4000|`description.full`|✔|Eine ausführlichere Beschreibung Ihrer APP. In der Manifestdatei ist eine genaue Zusammenfassung ausreichend. Im Partner Center können Sie eine umfangreichere und formatierte Beschreibung für die AppSource-Produktseite verwenden.|
 |Screenshots (1-5)|. png,. jpg oder. gif|1366w x 768h und kleiner als 1024 KB||✔|Mindestens ein Screenshot, der Ihre APP-Erfahrung zeigt. Wird auf der Seite mit den App-Details verwendet.|
 
 ## <a name="submission-extras-for-bots"></a>Eingabe-Extras für Bots

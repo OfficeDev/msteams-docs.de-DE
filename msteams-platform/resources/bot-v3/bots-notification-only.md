@@ -1,22 +1,22 @@
 ---
-title: Nur Benachrichtigungs Bots
-description: Beschreibt, welche Benachrichtigungen nur für Bots in Microsoft Teams gelten
+title: Nur-Benachrichtigungs-Bots
+description: Beschreibt, welche nur-Benachrichtigungs-Bots in Microsoft Teams sind
 keywords: Teams-Bots-Benachrichtigung
-ms.date: 05/20/2019
-ms.openlocfilehash: 37652bc2d6171191c81be4e5a2875f47c79574f9
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.date: 01/29/2020
+ms.openlocfilehash: d312f9cd4558d35fc2492b5cf0b4f77b65660833
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674118"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783906"
 ---
-# <a name="notification-only-bots-in-microsoft-teams"></a>Nur Benachrichtigungs Bots in Microsoft Teams
+# <a name="notification-only-bots-in-microsoft-teams"></a>Nur-Benachrichtigungs-Bots in Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
 Wenn Ihr bot nur den Zweck hat, Benachrichtigungen an Benutzer zu übertragen und keine Konversation vorzunehmen, können Sie `isNotificationOnly` das Feld in Ihrem App-Manifest aktivieren. Dadurch werden die folgenden Änderungen erstellt:
 
-* Benutzer können Ihre Benachrichtigung nur bot senden.
+* Benutzer können Ihren nur-Benachrichtigung-bot nicht Nachrichten.
 * Benutzer können den bot nicht @mention.
 
 ## <a name="app-manifest"></a>App-Manifest
@@ -45,5 +45,4 @@ Um dies zu aktivieren, `isNotificationOnly` legen `true`Sie auf fest.
 
 ## <a name="best-practices-and-limitations"></a>Bewährte Methoden und Einschränkungen
 
-* Sie können keine `personal` bereichsbezogene Benachrichtigung nur bot erstellen, da der Benutzer ihre Benachrichtigung nur bot in einem persönlichen Chat senden kann. Dies bedeutet, dass Sie kein `conversationUpdate` Ereignis empfangen können, das die erforderlichen Details zum Senden einer Benachrichtigung bereitstellt. Ihre Benachrichtigung nur der bot funktioniert nur dann ordnungsgemäß, `team` wenn er den Bereich unterstützt und einem Team hinzugefügt wird. In der Team Einstellung hat ihr bot Zugriff auf die erforderlichen Informationen, um entweder eine Benachrichtigung an einen Kanal oder privat an einen Benutzer zu senden.
-* Benachrichtigung nur Bots verwenden proaktives Messaging zur Kommunikation mit dem Benutzer. Weitere Informationen finden Sie unter [proaktives Messaging für Bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) .
+* Nur für Benachrichtigungs-Bots wird proaktives Messaging verwendet, um mit dem Benutzer zu kommunizieren. Weitere Informationen finden Sie unter [proaktives Messaging für Bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) .
