@@ -3,12 +3,12 @@ title: Senden von Nachrichten an Connectors und Webhooks
 description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Teams
 localization_priority: Priority
 keywords: Teams O365-Connector
-ms.openlocfilehash: cf720bb8193c6b61ba37e8d89fafc044555222ac
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b22159002713ccec6441f2128190e9944945aff6
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674514"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783913"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Senden von Nachrichten an Connectors und Webhooks
 
@@ -230,14 +230,15 @@ Um zu überprüfen, ob eine `HttpPOST`-Aktion ordnungsgemäß funktioniert, verw
 
 ## <a name="rate-limiting-for-connectors"></a>Begrenzung der Datenübertragungsrate für Connectors
 
-Dieser Wert begrenzt den Datenverkehr, der von einem Connector oder einem eingehenden Webhook in einem Kanal generiert werden darf.
+Dieser Wert begrenzt den Datenverkehr, der von einem Connector oder einem eingehenden Webhook in einem Kanal generiert werden darf. Anforderungen, die von Ihrem Webhook oder Connector getätigt werden, werden bei Überschreitung des Schwellengrenzwerts eingeschränkt. Die Zeitdauer des Einschränkungsverhaltens steht direkt mit den Parametern der überschrittenen Anforderungsrate im Zusammenhang. Wenn ein Connector beispielsweise 100 Nachrichtenanforderungen in 3600 Sekunden überschreitet, wird der Connector für die nächsten 3600 Sekunden eingeschränkt:
 
 | Zeitraum (Sek.)  | Max. zulässige Nachrichtenanforderungen  |
 |---|---|
 | 1   | 4  |  
 | 30   | 60  |  
-| 3600  | 100  | 
+| 3600 (1 Stunde)  | 100  | 
 | 7200 | 150  | 
+| 86400 (1 Tag) | 1800  | 
 
 Eine [Wiederholungslogik mit exponentiellem Backoff](/azure/architecture/patterns/retry) wie unten würde die Begrenzung der Datenübertragungsrate in Fällen abmildern, in denen Anforderungen die Grenzwerte innerhalb einer Sekunde überschreiten. Wenden Sie bitte [bewährte Methoden](../../bots/how-to/rate-limit.md#best-practices) an, um zu vermeiden, dass die Ratenlimits überschritten werden.
 
