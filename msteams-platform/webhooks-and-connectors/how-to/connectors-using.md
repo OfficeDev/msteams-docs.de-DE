@@ -3,12 +3,12 @@ title: Senden von Nachrichten an Connectors und Webhooks
 description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Teams
 localization_priority: Priority
 keywords: Teams O365-Connector
-ms.openlocfilehash: b22159002713ccec6441f2128190e9944945aff6
-ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
+ms.openlocfilehash: 56ef6adc7731eadc0a799f489867d8e056248e03
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "41783913"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953467"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Senden von Nachrichten an Connectors und Webhooks
 
@@ -227,18 +227,21 @@ Sie können nun die Konfigurationsfunktion starten. Denken Sie daran, dass diese
 
 Um zu überprüfen, ob eine `HttpPOST`-Aktion ordnungsgemäß funktioniert, verwenden Sie Ihren [benutzerdefinierten eingehenden Webhook](#setting-up-a-custom-incoming-webhook).
 
-
 ## <a name="rate-limiting-for-connectors"></a>Begrenzung der Datenübertragungsrate für Connectors
 
-Dieser Wert begrenzt den Datenverkehr, der von einem Connector oder einem eingehenden Webhook in einem Kanal generiert werden darf. Anforderungen, die von Ihrem Webhook oder Connector getätigt werden, werden bei Überschreitung des Schwellengrenzwerts eingeschränkt. Die Zeitdauer des Einschränkungsverhaltens steht direkt mit den Parametern der überschrittenen Anforderungsrate im Zusammenhang. Wenn ein Connector beispielsweise 100 Nachrichtenanforderungen in 3600 Sekunden überschreitet, wird der Connector für die nächsten 3600 Sekunden eingeschränkt:
+Die Grenzwerte für die Anwendungsdatenübertragungsrate steuern den Datenverkehr, der von einem Connector oder eingehenden Webhook in einem Kanal generiert werden darf. Teams verfolgt Anforderungen über ein Fenster mit fester Datenübertragungsrate und einen inkrementellen Zähler, der in Sekunden gemessen wird.  Wenn zu viele Anforderungen gestellt werden, wird die Clientverbindung gedrosselt, bis das Fenster aktualisiert wird, d. h. für die Dauer der festen Datenübertragungsrate.
 
-| Zeitraum (Sek.)  | Max. zulässige Nachrichtenanforderungen  |
+### <a name="transactions-per-second-thresholds"></a>**Schwellenwerte für Transaktionen pro Sekunde**
+
+| Zeit (Sekunden)  | Maximal zulässige Anforderungen  |
 |---|---|
 | 1   | 4  |  
 | 30   | 60  |  
-| 3600 (1 Stunde)  | 100  | 
-| 7200 | 150  | 
-| 86400 (1 Tag) | 1800  | 
+| 3600   | 100  |
+| 7200 | 150  |
+| 86400  | 1800  |
+
+*Siehe auch* [Office 365-Connectors – Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
 
 Eine [Wiederholungslogik mit exponentiellem Backoff](/azure/architecture/patterns/retry) wie unten würde die Begrenzung der Datenübertragungsrate in Fällen abmildern, in denen Anforderungen die Grenzwerte innerhalb einer Sekunde überschreiten. Wenden Sie bitte [bewährte Methoden](../../bots/how-to/rate-limit.md#best-practices) an, um zu vermeiden, dass die Ratenlimits überschritten werden.
 
