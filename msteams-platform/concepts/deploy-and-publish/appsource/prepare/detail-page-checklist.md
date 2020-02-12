@@ -2,12 +2,12 @@
 title: Erstellen einer tollen App-Detailseite
 description: Beschreibt, welche Seite mit den App-Details erforderlich ist
 keywords: Veröffentlichen von Office-Veröffentlichungsrichtlinien für Microsoft Teams AppSource Inhalt
-ms.openlocfilehash: 4a98cca7b1ddd87d79e38d863fd3868171b7749e
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: a7ccacb89e330e55db986595d083790d07e46a53
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674177"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953516"
 ---
 # <a name="build-a-great-app-details-page"></a>Erstellen einer tollen App-Detailseite
 
@@ -41,7 +41,7 @@ Dies ist eines der ersten Elemente, die Benutzern angezeigt werden. Es sollte at
 
 ## <a name="outline-icon"></a>Gliederungssymbol
 
-Dies wird in Messaging Erweiterungen verwendet, die vom Benutzer und im linken Navigationsmenü als Favorit gekennzeichnet sind. Stellen Sie sicher, dass Sie einfach und erkennbar ist.
+Dies wird in Messaging Erweiterungen verwendet, die vom Benutzer und im linken Navigationsmenü als Favorit gekennzeichnet sind. Stellen Sie sicher, dass Sie einfach und erkennbar ist. Das Gliederungssymbol muss nur weiß und Transparenz enthalten (keine anderen Farben). Die erforderlichen Spezifikationen *finden Sie unter* [Erstellen eines App-Pakets für Ihre Microsoft Teams-App-Symbole](../../../build-and-test/apps-package.md#icons).
 
 ![App-Symbol Gliederungs](~/assets/images/store-detail-page/AppIconOutline-02.png)
 ![Speicheransicht App-Symbol Gliederung appstudio Ansicht](~/assets/images/store-detail-page/AppIconOutline-01.png)
