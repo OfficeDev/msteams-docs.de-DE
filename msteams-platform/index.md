@@ -4,11 +4,11 @@ title: Entwicklerplattform für Microsoft Teams
 description: Enthält die Dokumentation für Entwickler, die es Ihnen ermöglichen, mit Microsoft Teams tolle Apps zu erstellen.
 localization_priority: Priority
 author: clearab
-ms.openlocfilehash: c8d249e9e22d6b846f838e7413179da950911271
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b5a2a5af9d3bdbe71f332c97400425b7cf2d979f
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674142"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953505"
 ---
-[!include[Content](~/includes/landing-page.html)]
+[!include[Content](~/includes/landing-page.md)]
