@@ -2,12 +2,12 @@
 title: Referenz zu Entwurfsrichtlinien
 description: Beschreibt die Richtlinien für das Entwerfen einer persönlichen app.
 keywords: Teams-Entwurfsrichtlinien – Referenzrahmen für persönliche apps
-ms.openlocfilehash: 6a07b618d78a3ad79850713052c88ef178c1ecc1
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 0d886adf926697f8920c0893589201ea4e4c3a9c
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674154"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228073"
 ---
 # <a name="personal-apps"></a>Persönliche apps
 
@@ -34,7 +34,7 @@ Eine persönliche app enthält normalerweise die folgenden Registerkarten:
 
 ### <a name="your-tab"></a>Ihre Registerkarte
 
-Hier werden Ihre Benutzer alle Ihre Inhalte sehen. Es ist Ihr persönlicher Raum. Die Registerkarte kann als Liste, als Raster, als Spalten oder als einzelne Leinwand angeordnet werden... Was auch immer am besten für Ihre Anwendung geeignet ist. Weitere Informationen zum Entwerfen effektiver Registerkarten finden Sie unter: [Tabs Design (~/Tabs/Design/Tabs.MD).
+Hier werden Ihre Benutzer alle Ihre Inhalte sehen. Es ist Ihr persönlicher Raum. Die Registerkarte kann als Liste, als Raster, als Spalten oder als einzelne Leinwand angeordnet werden... Was auch immer am besten für Ihre Anwendung geeignet ist. Weitere Informationen zum Entwerfen effektiver Registerkarten finden Sie unter: [Tabs Design](../../tabs/design/tabs.md).
 
 Da auf dieser Registerkarte Elemente aus mehreren Kanälen angezeigt werden können, sollte jedes Element ein eigenes Team, einen eigenen Kanal und eine eigene Registerkarte anzeigen, damit der Benutzer leicht erkennen kann, woher er stammt.
 
@@ -54,7 +54,7 @@ Hierbei handelt es sich um eine Liste aller Registerkarten in der Organisation d
 
 Ein Bot ist nicht erforderlich, ist aber eine großartige Möglichkeit, direkt und privat mit ihren Benutzern zu kommunizieren. Die Benachrichtigung ist eine der wichtigsten Funktionen einer persönlichen APP, und welche bessere Möglichkeit gibt es, als bei der direkten Kommunikation zu Benachrichtigen?
 
-Bots liefern Nachrichten in Form von Karten, die spezifische Informationen (wie eine Warnung, dass neue Inhalte verfügbar sind) oder umfassende Updates (wie eine tägliche to-do-Liste) bereitstellen können. Weitere Informationen zum Entwerfen effektiver Bots finden Sie unter: [Bot Design (~/Bots/Design/Bots.MD).
+Bots liefern Nachrichten in Form von Karten, die spezifische Informationen (wie eine Warnung, dass neue Inhalte verfügbar sind) oder umfassende Updates (wie eine tägliche to-do-Liste) bereitstellen können. Weitere Informationen zum Entwerfen effektiver Bots finden Sie unter: [bot-Design](../../bots/design/bots.md).
 
 ![Bot-Begrüßung](~/assets/images/Personal-apps-Bot.png)
 

@@ -2,12 +2,12 @@
 title: Erste Schritte mit dem Landarbeits Generator für Microsoft Teams
 description: Erste Schritte beim Erstellen von tollen apps mit dem Landwirtschafts Generator für Microsoft Teams
 keywords: Erste Schritte Node. js nodejs
-ms.openlocfilehash: b0a9ae8d526286790d266e4291ef95d4ed7ce90f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6318b51c29c673b0bf3504218100cf0d7aad7b97
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674266"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228087"
 ---
 # <a name="build-your-first-microsoft-teams-app"></a>Erstellen Ihrer ersten Microsoft Teams-App
 
@@ -118,7 +118,7 @@ Sie sollten jetzt in der Lage sein, `http://localhost:3007/myFirstAppTab/` zu na
 
 Microsoft Teams lässt nicht zu, dass Ihre APP auf localhost gehostet wird, daher müssen Sie Sie entweder in einer öffentlichen URL veröffentlichen oder einen Proxy wie ngrok verwenden.
 
-Eine gute Nachricht ist, dass das Gerüst Projekt diese integrierte ist. Wenn Sie den `gulp ngrok-serve` ngrok-Dienst ausführen, wird im Hintergrund mit einem eindeutigen-und einem öffentlichen DNS-Eintrag gestartet, und es wird auch das Manifest mit dieser eindeutigen URL Verpacken und dann genau dasselbe tun `gulp serve`wie.
+Eine gute Nachricht ist, dass das Gerüst Projekt diese integrierte ist. Wenn Sie den `gulp ngrok-serve` ngrok-Dienst ausführen, wird im Hintergrund mit einem eindeutigen und öffentlichen DNS-Eintrag gestartet, und es wird auch das Manifest mit dieser eindeutigen URL Verpacken und dann genau dasselbe tun wie `gulp serve`.
 
 Erstellen Sie `gulp ngrok-serve`nach dem Starten ein neues Microsoft Teams-Team, und klicken Sie bei der Erstellung auf den Namen des Teams, um zu den Teams-Einstellungen zu wechseln, und wählen Sie dann *apps*aus. In der unteren rechten Ecke sehen Sie einen Link zum *Hochladen einer benutzerdefinierten App*, wählen Sie Sie aus, und navigieren Sie dann zu Ihrem Projekt `package`Ordner und dem Unterordner mit dem Namen. Wählen Sie die ZIP-Datei in diesem Ordner aus, und wählen Sie öffnen aus. Ihre APP wird nun in Microsoft Teams quer geladene.
 

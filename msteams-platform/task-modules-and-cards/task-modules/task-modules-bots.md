@@ -2,12 +2,12 @@
 title: Verwenden von Aufgaben Modulen in Microsoft Teams-Bots
 description: Vorgehensweise verwenden von Aufgaben Modulen mit Microsoft Teams-Bots, einschließlich bot-Framework-Karten, Adaptive Karten und Deep Links.
 keywords: Aufgaben Module-Bots für Teams
-ms.openlocfilehash: 3a0e4591dbb26ff4afa8cc06edc0a03365da0eca
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 09b0ede85c613d5724c6ecddbccd2a59c43cad74
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674282"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228094"
 ---
 # <a name="using-task-modules-from-microsoft-teams-bots"></a>Verwenden von Aufgaben Modulen von Microsoft Teams-Bots
 
@@ -76,8 +76,6 @@ Dieser Abschnitt definiert das Schema dessen, was Ihr bot erhält, wenn er `task
 | `value`  | Die vom Entwickler definierte Nutzlast. Normalerweise spiegelt die `value` Struktur des Objekts das, was von Teams gesendet wurde. In diesem Fall ist es jedoch anders, da wir Dynamic FETCH (`task/fetch`) sowohl von bot-Framework (`value`) als auch von Adaptive Card `Action.Submit` -Aktionen`data`() unterstützen möchten, und wir benötigen eine `context` Möglichkeit, Teams mit dem bot zu kommunizieren, zusätzlich `value` / `data`zu dem, was in enthalten war.<br/><br/>Dies erfolgt durch Kombinieren der beiden Elemente in einem übergeordneten Objekt:<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
 
 ## <a name="example-receiving-and-responding-to-taskfetch-and-tasksubmit-invoke-messages---nodejs"></a>Beispiel: empfangen und reagieren auf Tasks/FETCH-und Task/Submit-Invoke-Nachrichten-Node. js
-
-Das behandeln `invoke` von Nachrichten im bot-Framework kann ein wenig knifflig sein, da es im bot Framework SDK keine formelle Unterstützung dafür gibt. Um es einfacher zu machen, hat Teams `onInvoke()` Hilfsfunktionen im [botbuilder-Teams-NPM-Paket (für Node. js)](https://www.npmjs.com/package/botbuilder-teams)erstellt. In diesem Beispiel wird gezeigt, wie Sie vorgehen müssen:
 
 > [!NOTE]
 > Der folgende Beispielcode wurde zwischen der technischen Vorschau und der endgültigen Version dieses Features geändert: das Schema der `task/fetch` Anforderung wurde geändert, um zu verfolgen, was [im vorherigen Abschnitt dokumentiert](#payload-of-taskfetch-and-tasksubmit-messages)wurde. Das heißt, die Dokumentation war richtig, aber die Implementierung war nicht. In den `// for Technical Preview [...]` Kommentaren unten finden Sie Informationen zu den geänderten Funktionen.
@@ -159,6 +157,8 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
     }
 }
 ```
+
+*Siehe auch* [Microsoft Teams-Beispielcode für Aufgaben Module –](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts) Beispiele für nodejs und [bot-Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
 
 ## <a name="example-receiving-and-responding-to-taskfetch-and-tasksubmit-invoke-messages---c"></a>Beispiel: empfangen und reagieren auf Tasks/FETCH-und Task/Submit-Invoke-Nachrichten-C #
 

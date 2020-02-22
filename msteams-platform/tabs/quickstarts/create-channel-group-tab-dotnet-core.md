@@ -4,12 +4,12 @@ author: laujan
 description: Eine Schnellstartanleitung zum Erstellen einer benutzerdefinierten Kanal-und Gruppenregisterkarte mit ASP.net Core.
 ms.topic: quickstart
 ms.author: laujan
-ms.openlocfilehash: 7fdc4b042aac0664ae9d62c73c90689c75823592
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 47a0c98d630501944c7a5f4baf4620dbb70cdbcd
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674560"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228008"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core"></a>Erstellen einer benutzerdefinierten Kanal-und Gruppenregisterkarte mit ASP.net Core
 
@@ -113,4 +113,3 @@ In *Tab. cshtml* zeigt die Anwendung dem Benutzer zwei Optionsschaltflächen zum
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 
-[!INCLUDE [dotnet-upload-to-teams](~/includes/tabs/dotnet-upload-to-teams.md)]

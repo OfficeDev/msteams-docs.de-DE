@@ -2,12 +2,12 @@
 title: Initiieren von Aktionen mit Messaging Erweiterungen
 description: Erstellen Aktions basierter Messaging Erweiterungen, um Benutzern das Auslösen externer Dienste zu ermöglichen
 keywords: Microsoft Teams Messaging Extensions Messaging Extensions Search
-ms.openlocfilehash: 9b7d3bd53ba45d55e80f858a3c89be265c13482b
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 1a38b4f7bfb413defd28950ca9b97f7411cf9c09
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674371"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228031"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Initiieren von Aktionen mit Messaging Erweiterungen
 
@@ -496,9 +496,7 @@ Ihre Nachrichten Erweiterung muss nun auf zwei neue Arten von Interaktionen reag
 
 Bei der Antwort auf `edit` die Anforderung sollten Sie mit einer `task` Antwort mit den Werten Antworten, die mit den Informationen aufgefüllt sind, die der Benutzer bereits übermittelt hat. Wenn Sie auf die `send` Anforderung reagieren, sollten Sie eine Nachricht an den Kanal senden, der die fertige Adaptive Karte enthält.
 
-# <a name="typescriptnodejstabtypescript"></a>[Manuskript/Node. js](#tab/typescript)
-
-Das folgende Beispiel zeigt, wie Sie dies mit dem [node. js Teams bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams)tun.
+# <a name="typescriptnodejs"></a>[Manuskript/Node. js](#tab/typescript)
 
 ```typescript
 teamChatConnector.onComposeExtensionSubmitAction((
@@ -558,7 +556,9 @@ teamChatConnector.onComposeExtensionSubmitAction((
     });
 ```
 
-# <a name="cnettabdotnet"></a>[C#-/.net](#tab/dotnet)
+*Siehe auch* [bot Framework-Beispiele](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+
+# <a name="cnet"></a>[C#-/.net](#tab/dotnet)
 
 In diesem Beispiel wird dieser Ablauf mithilfe des [Microsoft. bot. Connector. Teams SDK (v3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)veranschaulicht.
 

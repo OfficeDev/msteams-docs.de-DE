@@ -2,13 +2,13 @@
 title: Suche mit Messaging Erweiterungen
 description: Beschreibt, wie suchbasierte Messaging Erweiterungen entwickelt werden
 keywords: Microsoft Teams Messaging Extensions Messaging Extensions Search
-ms.date: 05/20/2019
-ms.openlocfilehash: 7baf55d7184784a436ac5a3d6b82db233389bca7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.date: 07/20/2019
+ms.openlocfilehash: c220d976fa3e9920c8d4bb332a793b23d9b294c4
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674368"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228045"
 ---
 # <a name="search-with-messaging-extensions"></a>Suche mit Messaging Erweiterungen
 
@@ -125,7 +125,7 @@ Wenn ein Benutzer eine Abfrage ausführt, sendet Microsoft Teams Ihrem Dienst ei
 
 Zusätzlich zu den standardmäßigen bot-Aktivitätseigenschaften enthält die Nutzlast die folgenden Anforderungs Metadaten:
 
-|Eigenschaftenname|Zweck|
+|Eigenschaftsname|Zweck|
 |---|---|
 |`type`| Typ der Anforderung; muss sein `invoke`. |
 |`name`| Der Typ des Befehls, der für den Dienst ausgestellt wird. Derzeit werden die folgenden Typen unterstützt: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
@@ -135,11 +135,11 @@ Zusätzlich zu den standardmäßigen bot-Aktivitätseigenschaften enthält die N
 |`channelData.tenant.id`| Azure Active Directory Mandanten-ID. |
 |`channelData.channel.id`| Kanal-ID (wenn die Anforderung in einem Kanal erfolgt ist). |
 |`channelData.team.id`| Team-ID (wenn die Anforderung in einem Kanal erfolgt ist). |
-|`clientInfo`Entität | Zusätzliche Metadaten zum Client, beispielsweise Gebietsschema/Sprache und Typ des Clients. |
+|`clientInfo`|Optionale Metadaten zur Client Software, die zum Senden der Nachricht eines Benutzers verwendet wurde. Die Entität kann zwei Eigenschaften enthalten:<br>Das `country` Feld enthält den erkannten Speicherort des Benutzers.<br>Das `platform` Feld beschreibt die Messaging-Clientplattform. <br>Weitere Informationen *finden Sie unter* [nicht-IRI-Entitätstypen – abgeschlossen werden ungültig](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
 
 Die Anforderungsparameter selbst werden im Value-Objekt gefunden, das die folgenden Eigenschaften enthält:
 
-| Eigenschaftenname | Zweck |
+| Eigenschaftsname | Zweck |
 |---|---|
 | `commandId` | Der Name des vom Benutzer aufgerufenen Befehls, der einem der im App-Manifest deklarierten Befehle entspricht. |
 | `parameters` | Array von Parametern. Jedes Parameter-Objekt enthält den Namen des Parameters sowie den vom Benutzer bereitgestellten Parameterwert. |
@@ -183,11 +183,9 @@ Die Anforderungsparameter selbst werden im Value-Objekt gefunden, das die folgen
   },
   "entities": [
     {
-      "locale": "en-US",
+    "type": "clientInfo",
       "country": "US",
-      "platform": "Windows",
-      "timezone": "America/Los_Angeles",
-      "type": "clientInfo"
+      "platform": "Windows"
     }
   ]
 }
@@ -239,7 +237,7 @@ Wenn der Benutzer eine Abfrage ausführt, gibt Microsoft Teams eine synchrone ht
 
 Ihr Dienst sollte mit den Ergebnissen Antworten, die mit der Benutzerabfrage übereinstimmen. Die Antwort muss einen HTTP-Statuscode `200 OK` und ein gültiges Application/JSON-Objekt mit folgendem Text angeben:
 
-|Eigenschaftenname|Zweck|
+|Eigenschaftsname|Zweck|
 |---|---|
 |`composeExtension`|Antwortumschlag auf oberster Ebene.|
 |`composeExtension.type`|Typ der Antwort. Die folgenden Typen werden unterstützt: <br>`result`: zeigt eine Liste der Suchergebnisse an. <br>`auth`: der Benutzer wird aufgefordert, sich zu authentifizieren. <br>`config`: der Benutzer wird aufgefordert, die Messaging Erweiterung einzurichten. <br>`message`: zeigt eine nur-Text-Nachricht an. |
@@ -524,10 +522,10 @@ Zu diesem Zeitpunkt wird das Fenster geschlossen, und die Steuerung wird an den 
     "timestamp": "2017-04-26T05:18:25.629Z",
     "localTimestamp": "2017-04-25T22:18:25.629-07:00",
     "entities": [{
-        "locale": "en-US",
+        "type": "clientInfo",
         "country": "US",
         "platform": "Web",
-        "type": "clientInfo"
+        
     }],
     "text": "",
     "attachments": [],
@@ -602,8 +600,6 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ### <a name="nodejs"></a>Node.js
 
-Die Microsoft [Teams-Erweiterungen](https://www.npmjs.com/package/botbuilder-teams) für das bot Builder SDK für Node. js bieten Hilfsobjekte und-Methoden zum Vereinfachen des Empfangs, der Verarbeitung und der Reaktion auf Messaging Erweiterungsanforderungen.
-
 #### <a name="example-code-in-nodejs"></a>Beispielcode in Node. js
 
 ```javascript
@@ -659,3 +655,4 @@ class App {
 const app = new App();
 app.run();
 ```
+*Siehe auch* [bot Framework-Beispiele](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
