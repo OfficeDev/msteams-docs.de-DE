@@ -369,5 +369,7 @@
       href: resources/schema/manifest-schema.md
     - name: JSON-Schema der Lokalisierungsdatei
       href: resources/schema/localization-schema.md
+    - name: Leitfaden für Teamteilnehmer
+      href: resources/teams-contributor-reference.md
 - name: Support und Feedback
   href: feedback.md
