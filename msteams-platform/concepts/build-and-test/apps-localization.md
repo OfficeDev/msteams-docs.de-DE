@@ -3,12 +3,12 @@ title: Lokalisierung für Team-apps
 description: Beschreibt Probleme beim Lokalisieren Ihrer APP.
 keywords: Teams veröffentlichen Store Office Publishing AppSource Localization Language
 ms.date: 05/15/2018
-ms.openlocfilehash: b09f33e53303587e81b445c012de92b11dd90580
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 0affa61ee1967a0e1bc19e423f05049bad750ce7
+ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674199"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42279761"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Lokalisierung für Microsoft Teams-apps
 
@@ -66,9 +66,9 @@ Anschließend möchten Sie die Eigenschaft "localizationInfo" mit der Standardsp
 }
 ```
 
-Sie können zusätzliche JSON-Dateien mit Übersetzungen aller Benutzerzeichenfolgen in ihrem Manifest bereitstellen. Diese Dateien müssen dem [JSON-Schema der Lokalisierungsdatei](~/resources/schema/localization-schema.md) entsprechen, und Sie müssen der Eigenschaft "localizationInfo" des Manifests hinzugefügt werden. Jede Datei korreliert mit einem Language-Tag, das der Microsoft Teams-Client verwendet, um die entsprechenden Zeichenfolgen auszuwählen. Das sprach-Tag hat die Form <language> - <region> , aber es wird empfohlen, den <region> Teil auszulassen, der auf alle Regionen abzielt, die die gewünschte Sprache unterstützen.
+Sie können zusätzliche JSON-Dateien mit Übersetzungen aller Benutzerzeichenfolgen in ihrem Manifest bereitstellen. Diese Dateien müssen dem [JSON-Schema der Lokalisierungsdatei](../../resources/schema/localization-schema.md) entsprechen, und Sie müssen der Eigenschaft "localizationInfo" des Manifests hinzugefügt werden. Jede Datei korreliert mit einem Language-Tag, das der Microsoft Teams-Client verwendet, um die entsprechenden Zeichenfolgen auszuwählen. Das sprach-Tag hat die Form <language> - <region> , aber es wird empfohlen, den <region> Teil auszulassen, der auf alle Regionen abzielt, die die gewünschte Sprache unterstützen.
 
-Der Microsoft Teams-Client wendet die Zeichenfolgen in dieser Reihenfolge an: Standardsprachen Zeichenfolgen – #a0 Sprache des Benutzers nur Zeichenfolgen – #a1 Benutzersprache + Benutzer Regions Zeichenfolgen.
+Der Microsoft Teams-Client wendet die Zeichenfolgen in dieser Reihenfolge an: Standardsprachen Zeichenfolgen – > Sprache des Benutzers nur Zeichenfolgen – > Benutzersprache + Benutzer Regions Zeichenfolgen.
 
 Sie geben beispielsweise eine Standardsprache von "fr" (Französisch, alle Regionen) und zusätzliche Sprachdateien für "en" (Englisch, alle Regionen) und "en-GB" (Englisch, Großbritannien) an. Wenn die Sprache des Benutzers auf "en-GB" festgelegt ist:
 

@@ -4,12 +4,12 @@ author: clearab
 description: Vorgehensweise durchführen einer Link Entfaltung mit Messaging Erweiterung in einer Microsoft Teams-app.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 5b20ea303a2c3d085651a53b01af4bb449d386de
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ccc23f06fbe759dc4c38dfc63dfa356d38352c27
+ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674581"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42279774"
 ---
 # <a name="link-unfurling"></a>Link-Entfaltung
 
@@ -69,27 +69,27 @@ Wir unterstützen die folgenden Kartentypen:
 
 Eine Übersicht finden Sie unter [Was sind Karten](~/task-modules-and-cards/what-are-cards.md) .
 
-# <a name="cnettabdotnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#-/.net](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
 {
     //You'll use the query.link value to search your service and create a card response
-    var heroCard = new ThumbnailCard
+    var card = new HeroCard
     {
-        Title = "Thumbnail Card",
+        Title = "Hero Card",
         Text = query.Url,
         Images = new List<CardImage> { new CardImage("https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png") },
     };
 
-    var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, heroCard);
+    var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, card);
     var result = new MessagingExtensionResult(AttachmentLayoutTypes.List, "result", new[] { attachments }, null, "test unfurl");
 
     return new MessagingExtensionResponse(result);
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/Node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node. js](#tab/javascript)
 
 ```javascript
 class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
@@ -112,7 +112,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[Json](#tab/json)
+# <a name="json"></a>[Json](#tab/json)
 
 Dies ist ein Beispiel für die `invoke` an Ihren bot gesendet.
 
