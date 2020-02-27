@@ -116,7 +116,7 @@
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
             - name: Manuskript/Node. js
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
-    - name: Anleitungen
+    - name: Schrittanleitungen
       expanded: true
       items:
         - name: Erstellen einer Messaging Erweiterung
@@ -157,7 +157,7 @@
       items:
         - name: Entwurfsübersicht
           href: bots/design/bots.md
-    - name: Anleitungen
+    - name: Schrittanleitungen
       expanded: true
       items:
         - name: Erstellen eines bot für Teams
@@ -240,7 +240,7 @@
           href: tabs/design/tabs.md
         - name: Registerkarten auf mobilen Clients
           href: tabs/design/tabs-mobile.md
-    - name: Anleitungen
+    - name: Schrittanleitungen
       expanded: true
       items:
         - name: Hinzufügen von Registerkarten zu Ihrer APP
@@ -299,7 +299,7 @@
   items:
     - name: Was sind webhooks und Connectors?
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - name: Anleitungen
+    - name: Schrittanleitungen
       expanded: true
       items:
         - name: Erstellen eines eingehenden webhooks
@@ -365,6 +365,8 @@
       href: resources/media-formats.md
     - name: SameSite-Cookie-Attribut (2020 Update)
       href: resources/samesite-cookie-update.md
+    - name: Änderungen der bot-API für Team Mitglieder/Chat Mitglieder
+      href: resources/team-chat-member-api-changes.md
     - name: Manifest-Schema
       href: resources/schema/manifest-schema.md
     - name: JSON-Schema der Lokalisierungsdatei
