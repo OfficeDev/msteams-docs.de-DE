@@ -2,12 +2,12 @@
 title: Ratenbegrenzung
 description: Ratenbegrenzung und bewährte Methoden in Microsoft Teams
 keywords: Teams Bots Ratenbegrenzung
-ms.openlocfilehash: 4e9efab539ec7817d259fd6c149c438ba02e3ce5
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 145f65a7e17b833e11631dfc219d9f5732f43bc6
+ms.sourcegitcommit: 6c692734a382865531a83b9ebd6f604212f484fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674207"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42371765"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>Optimieren Ihres bot: Ratenbegrenzung und bewährte Methoden in Microsoft Teams
 
@@ -46,26 +46,29 @@ Das Verwenden einer exponentiellen Backoff mit einem willkürlichen Jitter ist d
 
 Im folgenden finden Sie ein Beispiel für die Verwendung eines exponentiellen Backoff über den Anwendungs Block der transienten Fehlerbehandlung.
 
-Sie können Backoff und Wiederholungsversuche mit [temporären Fehler Behandlungs Bibliotheken](/previous-versions/msp-n-p/hh680901(v=pandp.50))durchführen. Richtlinien zum beziehen und Installieren des NuGet-Pakets finden Sie unter [Hinzufügen des Anwendungsblocks der vorübergehenden Fehlerbehandlung zur Lösung](/previous-versions/msp-n-p/hh680891(v=pandp.50)) .
+Sie können Backoff und Wiederholungsversuche mit [vorübergehender Fehlerbehandlung](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)durchführen. Richtlinien zum beziehen und Installieren des NuGet-Pakets finden Sie unter [Hinzufügen des Anwendungsblocks der vorübergehenden Fehlerbehandlung zu Ihrer Lösung](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)). *Siehe auch* [transient Fault Handling](/azure/architecture/best-practices/transient-faults).
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
-{
-    // List of error codes to retry on
-    List<int> transientErrorStatusCodes = new List<int>() { 429 };
-
-    public bool IsTransient(Exception ex)
     {
-        var httpOperationException = ex as HttpOperationException;
-        if (httpOperationException != null)
-        {
-            return httpOperationException.Response != null &&
-                    transientErrorStatusCodes.Contains((int) httpOperationException.Response.StatusCode);
-        }
+        // List of error codes to retry on
+        List<int> transientErrorStatusCodes = new List<int>() { 429 };
 
-        return false;
+        public bool IsTransient(Exception ex)
+        {
+            if (ex.Message.Contains("429"))
+                return true;
+
+            var httpOperationException = ex as HttpOperationException;
+            if (httpOperationException != null)
+            {
+                return httpOperationException.Response != null &&
+                        transientErrorStatusCodes.Contains((int)httpOperationException.Response.StatusCode);
+            }
+
+            return false;
+        }
     }
-}
 ```
 
 ## <a name="example-backoff"></a>Beispiel: Backoff
@@ -83,10 +86,10 @@ var exponentialBackoffRetryStrategy = new ExponentialBackoff(3, TimeSpan.FromSec
 
 
 // Define the Retry Policy
-var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(), fixedIntervalRetryStrategy);
+var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(), exponentialBackoffRetryStrategy);
 
 //Execute any bot sdk action
-await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync((Activity)reply)).ConfigureAwait(false);
+await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync( (Activity)reply) ).ConfigureAwait(false);
 ```
 
 Sie können auch eine `System.Action` Methodenausführung mit der oben beschriebenen Wiederholungs Richtlinie ausführen. Mit der referenzierten Bibliothek können Sie auch ein festes Intervall oder einen linearen Backoff-Mechanismus angeben.
@@ -104,26 +107,22 @@ Dieser Grenzwert steuert den Datenverkehr, den ein bot für eine einzelne Unterh
 
 | **Szenario** | **Zeitraum (Sek.)** | **Max. zulässige Vorgänge** |
 | --- | --- | --- |
-| NewMessage | 1  | 7  |
-| NewMessage | 2  | 8  |
-| NewMessage | 30 | 60 |
-| NewMessage | 3600 | 1800 |
-| UpdateMessage | 1  | 7  |
-| UpdateMessage | 2  | 8  |
-| UpdateMessage | 30 | 60 |
-| UpdateMessage | 3600 | 1800 |
-| NewThread | 1  | 7  |
-| NewThread | 2  | 8  |
-| NewThread | 30 | 60 |
-| NewThread | 3600 | 1800 |
-| GetThreadMembers | 1  | 14  |
-| GetThreadMembers | 2  | 16  |
-| GetThreadMembers | 30 | 120 |
-| GetThreadMembers | 3600 | 3600 |
-| GetThread | 1  | 14  |
-| GetThread | 2  | 16  |
-| GetThread | 30 | 120 |
-| GetThread | 3600 | 3600 |
+|| 1 | 7 |
+| An Unterhaltung senden | 2 | 8 |
+| An Unterhaltung senden | 30 | 60 |
+| An Unterhaltung senden | 3600 | 1800 |
+| Unterhaltung erstellen | 1 | 7 |
+| Unterhaltung erstellen | 2 | 8 |
+| Unterhaltung erstellen | 30 | 60 |
+| Unterhaltung erstellen | 3600 | 1800 |
+| Abrufen von Unterhaltungs Mitgliedern| 1 | 14  |
+| Abrufen von Unterhaltungs Mitgliedern| 2 | 16  |
+| Abrufen von Unterhaltungs Mitgliedern| 30 | 120 |
+| Abrufen von Unterhaltungs Mitgliedern| 3600 | 3600 |
+| Unterhaltungen abrufen | 1 | 14  |
+| Unterhaltungen abrufen | 2 | 16  |
+| Unterhaltungen abrufen | 30 | 120 |
+| Unterhaltungen abrufen | 3600 | 3600 |
 
 ## <a name="per-thread-limit-for-all-bots"></a>Grenzwert pro Thread für alle Bots
 
@@ -131,16 +130,16 @@ Dieser Grenzwert steuert den Datenverkehr, den alle Bots in einer einzigen Unter
 
 | **Szenario** | **Zeitraum (Sek.)** | **Max. zulässige Vorgänge** |
 | --- | --- | --- |
-| NewMessage | 1  | 14  |
-| NewMessage | 2  | 16  |
-| UpdateMessage | 1  | 14  |
-| UpdateMessage | 2  | 16  |
-| NewThread | 1  | 14  |
-| NewThread | 2  | 16  |
-| GetThreadMembers | 1  | 28 |
-| GetThreadMembers | 2  | 32 |
-| GetThread | 1  | 28 |
-| GetThread | 2  | 32 |
+| An Unterhaltung senden | 1 | 14  |
+| An Unterhaltung senden | 2 | 16  |
+| Unterhaltung erstellen | 1 | 14  |
+| Unterhaltung erstellen | 2 | 16  |
+| Createconversation| 1 | 14  |
+| Createconversation| 2 | 16  |
+| Abrufen von Unterhaltungs Mitgliedern| 1 | 28 |
+| Abrufen von Unterhaltungs Mitgliedern| 2 | 32 |
+| Unterhaltungen abrufen | 1 | 28 |
+| Unterhaltungen abrufen | 2 | 32 |
 
 ## <a name="bot-per-data-center-limit"></a>Bot pro Rechenzentrums Grenze
 
@@ -148,6 +147,6 @@ Dieser Grenzwert steuert den Datenverkehr, den ein bot in allen Threads in einem
 
 |**Zeitraum (Sek.)** | **Max. zulässige Vorgänge** |
 | --- | --- |
-| 1  | 20 |
+| 1 | 20 |
 | 1800 | 8000 |
 | 3600 | 15000 |

@@ -2,19 +2,19 @@
 title: Entwurfsrichtlinien für Registerkarten
 description: Beschreibt die Richtlinien zum Erstellen von Registerkarten für Inhalt und Zusammenarbeit.
 keywords: Teams-Entwurfsrichtlinien Referenz-Framework-Registerkartenkonfiguration
-ms.openlocfilehash: adf86678a42e2267af00734e1ef85efced882488
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: c718dd897d314ecb5acfbb7cc537b8eead142b0c
+ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674060"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42365262"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Inhalte und Unterhaltungen auf einmal mithilfe von Registerkarten
 
 > [!Important]
 > **Registerkarten auf mobilen Clients**
 >
-> Befolgten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md) , wenn Sie Ihre Registerkarten erstellen. Wenn Ihre Registerkarte die Authentifizierung verwendet, müssen Sie Ihr Microsoft Teams-JavaScript-SDK auf Version 1.4.1 oder höher aktualisieren, oder die Authentifizierung schlägt fehl.
+> Befolgten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](./tabs-mobile.md) , wenn Sie Ihre Registerkarten erstellen. Wenn Ihre Registerkarte die Authentifizierung verwendet, müssen Sie Ihr Microsoft Teams-JavaScript-SDK auf Version 1.4.1 oder höher aktualisieren, oder die Authentifizierung schlägt fehl.
 >
 > **Persönliche Registerkarten (statisch) auf mobilen Geräten:**
 >
@@ -40,9 +40,6 @@ Registerkarten funktionieren am besten, wenn Sie erstellt werden, um eine bestim
 
 Vermeiden Sie es, mehrere Bereiche auf einer Registerkarte zu erstellen, Navigationsebenen hinzuzufügen oder Benutzer zu verpflichten, sowohl vertikal als auch horizontal in einer Registerkarte zu scrollen. In anderen Worten: versuchen Sie nicht, Registerkarten auf Ihrer Registerkarte zu haben.
 
-> [!TIP]
-> Vermeiden Sie es, mehrere Bereiche auf einer Registerkarte zu erstellen, Navigationsebenen hinzuzufügen oder Benutzer zu verpflichten, sowohl vertikal als auch horizontal in einer Registerkarte zu scrollen.
-
 ### <a name="integration"></a>Integration
 
 Hier finden Sie Möglichkeiten, Benutzer über die Tab-Aktivität zu informieren, indem Sie beispielsweise Karten für eine Unterhaltung veröffentlichen.
@@ -55,35 +52,53 @@ Finden Sie eine Möglichkeit, um eine Unterhaltung um eine Registerkarte zu erle
 
 Stellen Sie sicher, dass Sie den richtigen Personen zum richtigen Zeitpunkt Zugriff gewähren. Wenn Sie Ihren Anmeldeprozess einfach halten, können Sie keine Barrieren für Beiträge und Zusammenarbeit schaffen.
 
+### <a name="responsiveness-to-window-sizing"></a>Reaktionsfähigkeit auf Fenstergröße
+
+Teams können in Fenstergrößen so klein wie 720px verwendet werden, damit sichergestellt ist, dass eine Registerkarte in einem kleinen Fenster nutzbar ist, ist genauso wichtig wie die Benutzerfreundlichkeit bei sehr hohen Auflösungen.
+
+### <a name="flat-navigation"></a>Flache Navigation
+
+Wir bitten Entwickler, Ihr gesamtes Portal nicht zu einer Registerkarte hinzuzufügen. die relativ flache Navigation hilft dabei, ein einfacheres Gesprächs Modell beizubehalten. In anderen Worten handelt es sich bei der Unterhaltung um eine Liste von Dingen, wie beispielsweise Arbeitsaufgaben mit drei abgelagerten Elementen oder um eine einzelne Sache wie eine spec.
+
+Es gibt inhärente Navigationsprobleme mit der Hierarchie der tiefen Navigation in Thread-Unterhaltungen. Für eine optimale Benutzerfreundlichkeit sollte die Registerkartennavigation auf ein Minimum reduziert und wie folgt gestaltet werden:
+
+> [!div class="checklist"]
+>
+> * **Öffnet ein Aufgabenmodul wie eine einzelne Arbeitsaufgabe oder Entität**. Dies schließt einen vollständigen Chat aus und ist die beste Option, um den Chat speziell für die Registerkarte und nicht für die unter Entitäten oder Bearbeitungs Erfahrungen zu halten.
+>* **Öffnet ein Pseudo Dialogfeld in einem IFRAME**. Wenn Sie mit einem geschirmten Hintergrund verwendet wird, empfiehlt es sich, die hellere Farbe anstelle der Dunkelheit zu verwenden. Die `app-gray-10 at 30%` Transparenz funktioniert gut.
+>* **Öffnet eine Browser Seite**.
+
 ### <a name="personality"></a>Persönlichkeit
 
-Ihr Tab-Canvas bietet eine gute Gelegenheit, Ihre Benutzeroberfläche zu Branden. Integrieren Sie Ihre eigenen Logos, Farben und Layouts, um Persönlichkeit zu vermitteln.
+Ihr Tab-Canvas bietet eine großartige Gelegenheit, Ihre Benutzeroberfläche zu Branden. Ihr Logo ist ein wichtiger Bestandteil ihrer Identität und ihrer Verbindung mit ihren Benutzern., stellen Sie daher sicher, dass Sie es einschließen:
 
-Ihr Logo ist ein wichtiger Bestandteil ihrer Identität und eine Verbindung mit ihren Benutzern. Achten Sie darauf, Sie einzubeziehen.
+> [!div class="checklist"]
+>
+>* Platzieren Sie Ihr Logo in der linken oder rechten Ecke oder am unteren Rand
+> * Halten Sie Ihr Logo klein und unaufdringlich
 
-* Platzieren Sie Ihr Logo in der linken oder rechten Ecke oder am unteren Rand
-* Halten Sie Ihr Logo klein und unaufdringlich
+Unter Einbeziehung ihrer eigenen Farben und Layouts Twill auch Hilfe bei der Kommunikation Persönlichkeit.
 
 > [!TIP]
-> Arbeiten Sie mit unserem visuellen Stil, damit Ihr Dienst sich wie ein Teil von Microsoft Teams anfühlt.
+> Arbeiten Sie mit unserem visuellen Stil, damit Ihr Dienst sich wie ein Teil von Microsoft Teams anfühlt. *Siehe*zum Beispiel [Teams Colors] (/Concepts/Design/Components/Typography.MD
 
 ---
 
 ## <a name="tab-layouts"></a>Registerkarten Layouts
 
-[!include[Tab layouts](~/includes/design/tab-layouts.html)]
+[!INCLUDE [Tab layouts](../../includes/design/tab-layouts.html)]
 
 ---
 
 ## <a name="types-of-tabs"></a>Typen von Registerkarten
 
-[!include[Tab types](~/includes/design/tab-types.html)]
+[!INCLUDE [Tab types](../../includes/design/tab-types.html)]
 
 ---
 
 ## <a name="configuration-page-height"></a>Höhe der Konfigurationsseiten
 
->[!NOTE]
+>[!IMPORTANT]
 >Im September 2018 wurde die Höhe für die Registerkarten- [Konfigurationsseite](~/tabs/how-to/create-tab-pages/configuration-page.md) erhöht, während die Breite unverändert blieb. Wenn Ihre APP für die ältere Größe ausgelegt ist, hat Ihre Registerkarten-Konfigurationsseite sehr viele vertikale Leerzeichen. Ältere Store-Apps, die von dieser Änderung ausgenommen sind, müssen sich nach der Aktualisierung an Microsoft wenden, um die neuen Dimensionen zu erfüllen.
 
 Die Abmessungen der Registerkarten-Konfigurationsseite:
@@ -116,4 +131,15 @@ Wann immer möglich, sollten Karten und Bots einen tiefen Link zu umfangreichere
 
 ### <a name="naming"></a>Benennungs
 
-In vielen Fällen kann der Name Ihrer APP einen großen Namen für die Registerkarte bilden. Sie sollten Ihre Registerkarten jedoch entsprechend der von Ihnen bereitgestellten Funktionen benennen.
+In vielen Fällen wird der Name Ihrer APP zu einem großen Registerkartennamen. Sie sollten Ihre Registerkarten jedoch auch entsprechend der von Ihnen bereitgestellten Funktionen benennen.
+
+## <a name="notifications-for-tabs"></a>Benachrichtigungen für Registerkarten
+
+Es gibt zwei Benachrichtigungs Modi für Änderungen an Registerkarten Inhalten:
+
+> [!div class="checklist"]
+>
+> * **Verwenden Sie die APP-API, um Benutzer über Änderungen zu informieren**. Diese Meldung wird im Aktivitätsfeed des Benutzers und im Deep-Link zur Registerkarte angezeigt. *Weitere Informationen finden Sie unter*  [Erstellen von Deep Links zu Inhalten und Features in Microsoft Teams](/concepts/build-and-test/deep-links?view=msteams-client-js-latest)
+> * **Verwenden Sie einen bot**. Diese Methode wird vor allem bevorzugt, wenn der Tab-Thread gezielt ist. Das Ergebnis ist, dass die Thread-Unterhaltung der Registerkarte als kürzlich aktiviert in die Ansicht verschoben wird. Diese Methode ermöglicht auch eine gewisse Raffinesse in der Art und Weise, wie die Benachrichtigung gesendet wird.
+
+  Durch das Senden einer Nachricht an einen Tab-Thread wird das Bewusstsein der Aktivität für alle Benutzer erhöht, ohne dass alle Personen explizit benachrichtigt werden. Dies ist die Sensibilisierung ohne Rauschen. Darüber hinaus wird bei `@mention` bestimmten Benutzern die gleiche Benachrichtigung in Ihren Feed eingefügt, indem Sie Sie direkt mit dem Tab-Thread verbindet.
