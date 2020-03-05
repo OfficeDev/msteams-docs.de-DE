@@ -2,12 +2,12 @@
 title: Microsoft Teams-App-Vorlagen
 description: Links und Beschreibungen von App-Vorlagen für die Microsoft Teams-Plattform
 keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
-ms.openlocfilehash: 36f04727828b3bfa3be9b808cafcd33c11bf2c0d
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 7bbd1093a7d3d2ed29498ce79051549621784b57
+ms.sourcegitcommit: a955121927090ee01173d70628c388991f53d23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365269"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "42416852"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -38,7 +38,7 @@ Es bietet eine Grundlage zum Erstellen benutzerdefinierter, zielorientierter Kom
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![FAQ Plus GIF](~/assets/images/CompanyCommunicatorCompose.png)
+![FAQ Plus GIF](../assets/images/CompanyCommunicatorCompose.png)
 
 ## <a name="faq-plus"></a>FAQ Plus
 
@@ -61,7 +61,7 @@ Conversational Q&ein Bots sind eine einfache Möglichkeit, Antworten auf häufig
 >
 >
 
-![FAQ Plus GIF](~/assets/images/FAQPlusEndUser.gif)
+![FAQ Plus GIF](../assets/images/FAQPlusEndUser.gif)
 
 ## <a name="hr-support"></a>HR Support
 
@@ -69,7 +69,7 @@ HR Support bot ist ein freundliches Q&ein bot, der einen Support Experten aus de
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
 
-![HR Support](~/assets/images/expert-user.png)
+![HR Support](../assets/images/expert-user.png)
 
 ## <a name="list-search"></a>Suche auflisten
 
@@ -79,7 +79,7 @@ Um diese Schmerzen zu lindern, stellen wir Ihnen gerne die Vorlage "Listensuche-
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
-![Such-App auflisten](~/assets/images/list-search-template.png)
+![Such-App auflisten](../assets/images/list-search-template.png)
 
 ## <a name="custom-stickers"></a>Custom Stickers
 
@@ -89,7 +89,7 @@ Diese APP ermöglicht auch die einfache Freigabe von Bildern/GIFs/Aufklebern in 
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
-![Aufkleber-App](~/assets/images/stickers.png)
+![Aufkleber-App](../assets/images/stickers.png)
 
 ## <a name="icebreaker"></a>Icebreaker
 
@@ -99,13 +99,13 @@ Zusätzlich zur Förderung persönlicher Verbindungen in Ihrem gesamten Team kan
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
-![Icebreaker-App](~/assets/images/icebreaker.png)
+![Icebreaker-App](../assets/images/icebreaker.png)
 
 ## <a name="scrum-status-bot"></a>Scrum-Status-bot
 
 Scrum Status bot ist ein einfacher Scrum Assistant-bot, mit dem Benutzer asynchrone Stand-up-Besprechungen ausführen und Benutzern die Möglichkeit geben können, Ihre täglichen Updates freizugeben. Sie ist für die Arbeit in Gruppenchats in Microsoft Teams vorgesehen, und alle Mitglieder können an Scrum mitwirken. Ein Scrum kann gestartet und beendet werden, und die von anderen Benutzern in einem laufenden Scrum vorgenommenen Aktualisierungen können angezeigt werden.
 
-[Git auf GitHub](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus/)
+[Git auf GitHub](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus)
 
 ![Scrum-Status-bot](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
@@ -135,10 +135,27 @@ Book-a-Room ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , mit dem Be
 
 ## <a name="attendance-app"></a>Anwesenheits-App
 
-Die Anwesenheits-APP ist eine [Power apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/embed-teams-appdesigned) -Registerkarte, die in einem Team fixiert werden kann. Es wurde entwickelt, um die Anwesenheit zu erfassen, in der Regel in Einstellungen wie Lern-und Schulungsumgebungen. Benutzer können Teilnahme an bis zu 30 Tagen in der Vergangenheit markieren oder bearbeiten und zusammengefasste anwesenheitsberichte für eine ganze Gruppe oder einzelne Teilnehmer anzeigen.
+Die Anwesenheits-APP ist eine [Power apps](/powerapps/maker/canvas-apps/embed-teams-app) -Registerkarte, die in einem Team fixiert werden kann. Es wurde entwickelt, um die Anwesenheit zu erfassen, in der Regel in Einstellungen wie Lern-und Schulungsumgebungen. Benutzer können Teilnahme an bis zu 30 Tagen in der Vergangenheit markieren oder bearbeiten und zusammengefasste anwesenheitsberichte für eine ganze Gruppe oder einzelne Teilnehmer anzeigen.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
 
 ![Teilnahme-App-Demo](../assets/images/attendance-app.png)
+
+## <a name="associate-insights-app"></a>Associate Insights-App
+
+Associate Insights ist eine [Power apps](/powerapps/maker/canvas-apps/embed-teams-app) -Vorlage, die First-Workern die Möglichkeit gibt, Kundenmeinungen, Gefühle und Wahrnehmungen direkt zu erfassen und zu übermitteln. First-work-Mitarbeiter sind häufig der erste Unternehmensvertreter, der sich mit Kunden in einer 1:1-Anlaufstelle beschäftigt. Die gesammelten Daten können gemeinsam von Geschäftsteams verwendet werden, beispielsweise über eine Power BI Teams-Registerkarte, um die Produktverbesserung zu verbessern und die Benutzerfreundlichkeit zu verbessern.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
+
+:::row:::
+  :::column span="2":::
+    ![Feedback Ansicht der von der APP generierten Einblicke](../assets/images/associate-insights-app.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Power BI-Ansicht der generierten Einblicke in die APP](../assets/images/associate-insights-app2.png)
+:::column-end:::
+:::row-end:::
 
 Haben Sie eine Idee für eine APP-Vorlage, die Sie sehen möchten? [Lassen Sie es uns bitte wissen](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
