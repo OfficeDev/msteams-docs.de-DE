@@ -2,12 +2,12 @@
 title: Microsoft Teams-App-Vorlagen
 description: Links und Beschreibungen von App-Vorlagen für die Microsoft Teams-Plattform
 keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
-ms.openlocfilehash: 7bbd1093a7d3d2ed29498ce79051549621784b57
-ms.sourcegitcommit: a955121927090ee01173d70628c388991f53d23b
+ms.openlocfilehash: e3eb7788515d9d44c820c472b24eeee44f4b0993
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "42416852"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42587329"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -63,7 +63,7 @@ Conversational Q&ein Bots sind eine einfache Möglichkeit, Antworten auf häufig
 
 ![FAQ Plus GIF](../assets/images/FAQPlusEndUser.gif)
 
-## <a name="hr-support"></a>HR Support
+## <a name="hr-support-bot"></a>HR-Support-bot
 
 HR Support bot ist ein freundliches Q&ein bot, der einen Support Experten aus dem HR-Team in der Schleife bringt, wenn er nicht helfen kann. Man kann dem bot eine Frage stellen, und der bot antwortet mit einer Antwort, wenn er in der Wissensdatenbank enthalten ist. Wenn dies nicht der Fall ist, ermöglicht der bot dem Benutzer, eine Abfrage zu senden, die dann in einem vorkonfigurierten Team von Experten veröffentlicht wird, die Hilfe bei der Bereitstellung von Unterstützung durch das Handeln auf die Benachrichtigungen innerhalb des Teams selbst leisten. Darüber hinaus schlägt der bot Links zu empfohlenen HR-Richtlinien/Fragen vor, indem er nach vorkonfigurierten Tags in der Frage sucht. Diese Kacheln befinden sich auch auf der zugehörigen Registerkarte als Kurzübersicht. Die HR-Unterstützung eignet sich gut für leichte QnA und bietet schnelle Unterstützung beim Starten neuer Projekte/Initiativen in der Organisation.
 
@@ -71,7 +71,7 @@ HR Support bot ist ein freundliches Q&ein bot, der einen Support Experten aus de
 
 ![HR Support](../assets/images/expert-user.png)
 
-## <a name="list-search"></a>Suche auflisten
+## <a name="list-search-app"></a>Such-App auflisten
 
 Die Zusammenarbeit in Microsoft Teams verweist häufig auf Informationen, die in Elementen in einer SharePoint-Liste enthalten sind. Wenn Sie einfach einen Link zu dem fraglichen Element einfügen, wird jeder dazu gezwungen, den Kontext von der Unterhaltung Weg zu wechseln, die benötigten Informationen zu finden und dann zu Teams zurückzukehren, um die Unterhaltung fortzusetzen. Während die Unterhaltung in der Regel fortgesetzt wird, müssen die Benutzer mehrmals zurück zum Referenzelement wechseln, um neue Kommentare zu überprüfen und ihre Erinnerungen an die im Element enthaltenen Informationen zu aktualisieren. Dieser Kontextwechsel schafft ein Hindernis für eine reibungslose Zusammenarbeit und ist ein Rezept für Dinge, die durch die Risse fallen.
 
@@ -81,7 +81,7 @@ Um diese Schmerzen zu lindern, stellen wir Ihnen gerne die Vorlage "Listensuche-
 
 ![Such-App auflisten](../assets/images/list-search-template.png)
 
-## <a name="custom-stickers"></a>Custom Stickers
+## <a name="custom-stickers-app"></a>Benutzerdefinierte Aufkleber-App
 
 Self-Expression ist Kern einer gesunden Teamkultur. Diese APP-Vorlage ist eine [Messaging Erweiterung](~/messaging-extensions/what-are-messaging-extensions.md) , mit der Benutzer benutzerdefinierte Aufkleber und GIFs in Microsoft Teams verwenden können. Diese Vorlage bietet eine einfache webbasierte Konfigurations Erfahrung, bei der jeder Benutzer mit Konfigurationszugriff die GIFs/Aufkleber/Bilder hochladen kann, die er seinen Endbenutzern zur Verfügung stellen möchte, sodass das gesamte Team einen beliebigen von Ihnen ausgewählten Aufkleber verwenden kann.
 
@@ -91,7 +91,7 @@ Diese APP ermöglicht auch die einfache Freigabe von Bildern/GIFs/Aufklebern in 
 
 ![Aufkleber-App](../assets/images/stickers.png)
 
-## <a name="icebreaker"></a>Icebreaker
+## <a name="icebreaker-bot"></a>Bot von Icebreaker
 
 Icebreaker ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , der Ihr Team näher rückt, indem zwei zufällige Teammitglieder jede Woche in einer Besprechung zusammenpassen. Der bot vereinfacht die Planung, indem er automatisch angibt, dass für beide Mitglieder freie Zeiten möglich sind. Stärken Sie persönliche Verbindungen und erstellen Sie eine eng verbundene Community mit dieser app.
 
@@ -158,4 +158,13 @@ Associate Insights ist eine [Power apps](/powerapps/maker/canvas-apps/embed-team
 :::column-end:::
 :::row-end:::
 
+## <a name="incentives-app"></a>Incentives-App
+
+Incentives ist eine [Power apps](/powerapps/maker/canvas-apps/embed-teams-app) -Vorlage, die lohnen Mitarbeiterbeteiligung an bestimmten Aktivitäten wie Schulungen und Change Management-Initiativen verwaltet und nachverfolgt. Administratoren verwenden die APP zum Einrichten von bestimmten Aktivitäten, zum Zuweisen von Punkten zur Fertigstellung und zum Angeben der erforderlichen Berechtigungs Punkt Stufen für Belohnungen. Mitarbeiter verwenden die APP, um Ihre gesammelten Punkte anzuzeigen und bei Erreichen der Berechtigung einlösbare Prämien anzufordern und zu fordern.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-incentives)
+
+![Demo zur Incentives-App](../assets/images/incentives-app.png)
+
 Haben Sie eine Idee für eine APP-Vorlage, die Sie sehen möchten? [Lassen Sie es uns bitte wissen](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
+

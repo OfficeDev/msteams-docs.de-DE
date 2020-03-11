@@ -2,12 +2,12 @@
 title: Nach Veröffentlichung
 description: Vorgehensweisen nach dem Veröffentlichen der APP
 keywords: Update Zertifikat für Teams nach Veröffentlichung
-ms.openlocfilehash: 05e4ea47bbf81967ccf086230bf0ad8c633f6e0b
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 54d0615c262e45729a36f556c3eda3b810d2a097
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674176"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42582860"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Verwalten und unterstützen Ihrer veröffentlichten App 
 
@@ -27,7 +27,9 @@ Beispiel: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672f
 
 * Verwenden Sie nicht die Schaltfläche *neue APP hinzufügen* , um Ihre APP erneut zu übermitteln. Verwenden Sie stattdessen die Kachel für Ihre APP auf der Registerkarte Übersicht.
 * Die im aktualisierten Manifest enthaltene-ID sollte mit einer erhöhten Versionsnummer im aktuellen Manifest identisch sein.
-* Erhöhen Sie die Versionsnummer in ihrem Manifest.
+* Erhöhen Sie die Versionsnummer im Manifest, wenn Sie Änderungen an ihrer Übermittlung an den Manifesten vornehmen.
+* Aktualisierte Übermittlungen sind erforderlich, um einem neuen Überprüfungs-und Validierungsprozess unterzogen zu werden.
+
 
 ### <a name="when-does-updating-your-app-trigger-the-user-consent-flow"></a>Wann löst die Aktualisierung Ihrer APP den Benutzer Zustimmungs Fluss aus?
 
@@ -35,4 +37,4 @@ Wenn ein Benutzer Ihre Anwendung installiert eines der ersten Schritte, die Sie 
 
 * Hinzufügen einer neuen Funktion zu einer APP, beispielsweise Hinzufügen eines bot zu einer nur-Tab-app.
 * Ändern des Berechtigungs Arrays im Manifest.
-* Erhöhen Sie Ihre APP-Versionsnummer in ihrem Manifest.
+* Inkrementieren der APP-Versionsnummer in ihrem Manifest.

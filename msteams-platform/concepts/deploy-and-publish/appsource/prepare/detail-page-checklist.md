@@ -2,12 +2,12 @@
 title: Erstellen einer tollen App-Detailseite
 description: Beschreibt, welche Seite mit den App-Details erforderlich ist
 keywords: Veröffentlichen von Office-Veröffentlichungsrichtlinien für Microsoft Teams AppSource Inhalt
-ms.openlocfilehash: a7ccacb89e330e55db986595d083790d07e46a53
-ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
+ms.openlocfilehash: 741bc7b623e97b338c54c4dcfec5b1ca75201867
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41953516"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42582867"
 ---
 # <a name="build-a-great-app-details-page"></a>Erstellen einer tollen App-Detailseite
 
@@ -29,22 +29,22 @@ Der Name einer APP spielt eine wichtige Rolle darin, wie Benutzer Sie im AppSour
 
 * Verwenden Sie keine generischen Ausdrücke oder Namen, die den vorhandenen APP-Namen ähneln.
 * Verwenden Sie nicht "Teams", "Microsoft" oder "App" in Ihrem APP-Namen.
-![App Name Store View](~/assets/images/store-detail-page/AppName-02.png)
-![App Name appstudio View](~/assets/images/store-detail-page/AppName-01.png)
+![App-namens Speicher](~/assets/images/store-detail-page/AppName-02.png)
+![anzeigen APP-Namen-app-Studio-Ansicht](~/assets/images/store-detail-page/AppName-01.png)
 
 ## <a name="color-icon"></a>Farbsymbol
 
 Dies ist eines der ersten Elemente, die Benutzern angezeigt werden. Es sollte attraktiv und Blickfang beim Scrollen durch den App Store sein. Stellen Sie sicher, dass es einen guten ersten Eindruck und kommuniziert auch Ihre Marke das Bild und den Zweck. AppSource hat weitere Tipps zum [Erstellen einer konsistenten visuellen Identität](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity).
 
-![App Icon Store](~/assets/images/store-detail-page/AppIcon-02.png)
-![App-Symbol appstudio-Ansicht](~/assets/images/store-detail-page/AppIcon-01.png)
+![App-Symbolspeicher](~/assets/images/store-detail-page/AppIcon-02.png)
+![Ansicht App-Symbol-App-Studio-Ansicht](~/assets/images/store-detail-page/AppIcon-01.png)
 
 ## <a name="outline-icon"></a>Gliederungssymbol
 
 Dies wird in Messaging Erweiterungen verwendet, die vom Benutzer und im linken Navigationsmenü als Favorit gekennzeichnet sind. Stellen Sie sicher, dass Sie einfach und erkennbar ist. Das Gliederungssymbol muss nur weiß und Transparenz enthalten (keine anderen Farben). Die erforderlichen Spezifikationen *finden Sie unter* [Erstellen eines App-Pakets für Ihre Microsoft Teams-App-Symbole](../../../build-and-test/apps-package.md#icons).
 
 ![App-Symbol Gliederungs](~/assets/images/store-detail-page/AppIconOutline-02.png)
-![Speicheransicht App-Symbol Gliederung appstudio Ansicht](~/assets/images/store-detail-page/AppIconOutline-01.png)
+![Speicheransicht App-Symbol Übersicht App Studio-Ansicht](~/assets/images/store-detail-page/AppIconOutline-01.png)
 
 ## <a name="short-description"></a>Kurzbeschreibung
 
@@ -64,7 +64,7 @@ Dies ist eine präzise Zusammenfassung Ihrer APP. Diese soll originell und anspr
 
 Hier ist eine Ansicht in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
-![Kurze Beschreibung appstudio-Ansicht](~/assets/images/store-detail-page/ShortDescription-01.png)
+![Kurzbeschreibung App Studio-Ansicht](~/assets/images/store-detail-page/ShortDescription-01.png)
 
 ## <a name="long-description"></a>Lange Beschreibung
 
@@ -80,6 +80,22 @@ Dadurch werden die Hauptfeatures der Lösung, die Probleme, die gelöst werden, 
 * Verwenden Sie Active Voice, und sprechen Sie direkt mit Benutzern.
 * Verwenden Sie Aufzählungspunkte, um ihre Features aufzulisten.
 * Fügen Sie einen Hilfe-oder Support Link hinzu, damit Ihre Benutzer wissen, wie Sie Sie erreichen können, wenn Sie Fragen haben.
+* Stellen Sie sicher, dass Sie alle Einschränkungen oder Einschränkungen für eine bessere Benutzerführung aufrufen.
+
+
+>[!NOTE]
+>Microsoft Teams unterstützt die folgende Abzugs Syntax:  
+> **Links**. `[title](url/address/here)`.  
+>**Bilder**. `![alt text](url/address/here)`.  
+> **Fett formatiert**. `**bold text**`   `__bold text__`.  
+> **Kursiv**. `*italicized text*`  `_italicized text`.  
+>**[Sortierte Listen](https://www.markdownguide.org/basic-syntax/#ordered-lists)**<br>
+>`1. first`  <br>` 1. second `  <br>`1.third`<br>
+>**[Unsortierte Liste](https://www.markdownguide.org/basic-syntax/#unordered-lists)**<br>
+` - short` <br>`- bulleted` <br>`- list`<br>
+>**NewLine**. `Place two empty spaces or a backslash \`  \
+`at the end of a line.`<br>
+ >**Escape.** Verwenden Sie einen Inline-Backslash, um Sonderzeichen zu escapen.. `\*asterisk`.
 
 **Verbote**
 
@@ -89,11 +105,11 @@ Dadurch werden die Hauptfeatures der Lösung, die Probleme, die gelöst werden, 
 
 Hier ist eine Ansicht in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
-![App Long Description appstudio-Ansicht](~/assets/images/store-detail-page/LongDescription-01.png)
+![App-Long Description App Studio-Ansicht](~/assets/images/store-detail-page/LongDescription-01.png)
 
 ## <a name="screenshots"></a>Screenshots
 
-Die im [Verkäuferdashboard](https://sellerdashboard.microsoft.com/Registration) hochgeladenen Screenshots werden sowohl in [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) als auch in Ihrer APP-Auflistung im Teams-Client angezeigt. Sie bieten eine visuelle Vorschau Ihrer APP zusammen mit Ihrer APP-Beschreibung.
+Die im [Partner Center](https://partner.microsoft.com) hochgeladenen Screenshots werden sowohl in [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) als auch in Ihrer APP-Auflistung im Teams-Client angezeigt. Sie bieten eine visuelle Vorschau Ihrer APP zusammen mit Ihrer APP-Beschreibung.
 Sie können ein bis fünf Screenshots zur Verfügung stellen, die als PNG-, JPG-oder GIF-Dateien formatiert sind. Screenshots sollten 1366 x 768 Pixel mit einer maximalen Größe von 1024 KB sein.
 
 **Aufgaben:**
