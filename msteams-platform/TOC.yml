@@ -19,6 +19,8 @@
       href: samples/code-samples.md
     - name: Produktionsfertige App-Vorlagen
       href: samples/app-templates.md
+    - name: Produktionsfertige Schaltstellen-Konnektoren
+      href: samples/shifts-wfm-connectors.md
 - name: Konzepte
   expanded: true
   items:
