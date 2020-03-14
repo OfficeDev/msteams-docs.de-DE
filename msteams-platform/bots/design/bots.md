@@ -2,12 +2,12 @@
 title: Entwurfsrichtlinien für Bots
 description: Beschreibt die Richtlinien zum Erstellen von Bots
 keywords: Teams-Entwurfsrichtlinien Referenz Framework-Bots im Gespräch
-ms.openlocfilehash: f59a1e9c280f27567692b4d10341db79d05c3464
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 172778e8d4adc08986d360c52b2bd076c443ac1a
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674497"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635284"
 ---
 # <a name="start-talking-with-bots"></a>Gespräch mit Bots beginnen
 
@@ -31,27 +31,43 @@ Wir unterstützen bis zu sechs Schaltflächen pro Karte. Seien Sie beim Schreibe
 
 Grafiken sind eine gute Möglichkeit, eine Geschichte zu erzählen, aber nicht alle bot-Unterhaltungen benötigen Grafiken, also verwenden Sie Sie für maximale Auswirkung.
 
+### <a name="onboarding-users"></a>Onboarding-Benutzer
+
+Es ist wichtig, dass sich Bots selbst vorstellen und übermitteln, was Sie Benutzern antun können. Dieser *Wert Exchange* hilft Benutzern zu verstehen, was mit dem bot zu tun ist, wo die Einschränkungen liegen können, und, was am wichtigsten ist, hilft Benutzern, die Interaktion mit einem Computer zu tolerieren, der nicht so intuitiv wie eine reale Person sein wird. Darüber hinaus erteilt es die Berechtigung für Benutzerdaten in Exchange für den tatsächlichen Wert, den der Dienst bereitstellt.
+
+#### <a name="welcome-messages"></a>Begrüßungsnachrichten
+
+Willkommensnachrichten sind die beste Möglichkeit, um den Ton Ihres bot festzulegen und sollten in persönlichen und Team-oder Gruppen Szenarien verwendet werden. In der Nachricht werden die Funktionen des bot und einige gängige Methoden für deren Interaktion erklärt. Verwenden Sie spezifische Funktionsbeispiele wie "*versuchen Sie, Fragen.*..." in einer Aufzählungsliste. Wenn möglich, sollten diese Vorschläge gespeicherte Antworten zurückgeben. Es ist wichtig, dass die Funktionsbeispiele funktionieren, ohne dass sich Benutzer anmelden müssen.
+
+#### <a name="tours"></a>Touren
+
+Include a *Take a Tour* -Attribut mit Begrüßungsnachrichten und Antworten auf Benutzereingabe Äquivalent zu "*Hilfe*". Dies ist die effektivste Möglichkeit, Benutzern zu ermöglichen, zu erfahren, was ein bot tun kann. Karussells in eins-zu-eins-Erlebnissen sind eine hervorragende Möglichkeit, diese Geschichte zu erzählen, einschließlich der Schaltflächen zum *Verknüpfen mit Beispielen* möglicher Antworten wird empfohlen. Tours sind auch großartige Orte, um über die anderen Funktionen einer APP zu sprechen. Sie können beispielsweise Screenshots von Messaging Erweiterungen und Microsoft Teams-Registerkarten hinzufügen.  Benutzer sollten sich nicht für den Zugriff auf und die Verwendung einer Tour anmelden.
+
+Wenn Touren in Team-oder Gruppen Szenarien verwendet werden, sollten Sie in einem Aufgabenmodul geöffnet werden, um den laufenden Unterhaltungen zwischen Benutzern nicht mehr Karten Rauschen hinzuzufügen.
+
 ### <a name="responding-to-users-and-failing-gracefully"></a>Reagieren auf Benutzer und fehlgeschlagene ordnungsgemäße
 
-Ihr bot sollte auch auf Dinge wie "Hi", "Help" und "Thanks" reagieren können, während häufige Rechtschreibfehler und Colloquialisms berücksichtigt werden. Zum Beispiel:
+Ihr bot sollte auch auf Dinge wie "*Hallo*", "*Hilfe*" und "*Danke*" reagieren können, während häufige Rechtschreibfehler und Colloquialisms berücksichtigt werden. Zum Beispiel:
 
 #### <a name="x2713-hello"></a>&#x2713; Hallo
 
-`Hi` `how are you` `howdy`
+`"Hi"`  `"How are you"`  `"Howdy"`
 
 #### <a name="x2713-help"></a>&#x2713; Hilfe
 
-`What do you do?` `How does this work?` `What the heck?`
+`"What do you do?"`  `"How does this work?"`  `"What the heck?"`
 
 #### <a name="x2713-thanks"></a>&#x2713; Dank
 
-`Thank you` `thankyou` `thx`
+`"Thank you"`  `"Thankyou"`  `"Thx"`
 
 Ihr bot sollte in der Lage sein, die folgenden Arten von Abfragen und Eingaben zu verarbeiten:
 
-* **Erkannte Fragen**: Dies sind die "Best Case"-Fragen, die Sie von Benutzern erwarten.
-* **Erkannte nicht-Fragen**: Abfragen über nicht unterstützte Funktionen, zufällige Informationen oder wenn jemand bei Ihrem bot fluchen möchte.
-* **Unbekannte Fragen**: unverständliche Eingaben (d. h., Kauderwelsch).
+> [!div class="checklist"]
+>
+> * **Erkannte Fragen**. Dies sind die Fragen, die Sie von Benutzern im Fall eines "besten Szenarios" erwarten.
+> * **Erkannte nicht-Fragen**. Abfragen über nicht unterstützte Funktionen und/oder zufällige, nicht verwandte oder profane Einträge.
+> * **Unbekannte Fragen**: Eingabe oder Einträge, die unverständlich, bedeutungslos oder Unsinn sind.
 
 Beispiele für bot-Persönlichkeits-und-Antworttypen:
 
@@ -92,11 +108,15 @@ Tabs machen Ihren bot viel funktionaler. Mit Registerkarten können Sie Folgende
 
 ### <a name="x2713-a-place-to-host-standing-queries"></a>&#x2713; einer Stelle zum Hosten von ständigen Abfragen
 
-In persönlichen Gesprächen zwischen einem bot und einer einzelnen Person können benutzerspezifische Informationen und Listen in Registerkarten untergebracht werden. Sie sind auch ein guter Ort, um bot-Antworten auf häufig gestellte Fragen (FAQs) zu verwalten, sodass Benutzer nicht weiter gefragt werden müssen.
+In persönlichen Unterhaltungen zwischen einem bot und einer einzelnen Person können Registerkarten benutzerspezifische Informationen und Listen enthalten. Sie sind auch ein guter Ort, um bot-Antworten auf häufig gestellte Fragen (FAQs) zu verwalten, sodass Benutzer nicht weiter gefragt werden müssen.
 
 ### <a name="x2713-a-place-to-finish-a-conversation"></a>&#x2713; eine Stelle zum Abschließen einer Unterhaltung
 
-Sie können eine Verknüpfung mit einer Registerkarte von einer Karte herstellen. Wenn Ihr bot eine Antwort bereitstellt, die einige weitere Schritte erfordert, kann er eine Verknüpfung mit einer Registerkarte herstellen, um die Aufgabe oder den Ablauf abzuschließen.
+Sie können eine Verknüpfung mit einer Registerkarte von einer Karte herstellen. Wenn Ihr bot eine Antwort bereitstellt, die einige weitere Schritte erfordert, kann er eine Verknüpfung mit einer Registerkarte herstellen, um die Aufgabe oder den Ablauf abzuschließen. Beispielsweise kann als Antwort auf "wie kann ich mein iPhone formatieren?" eine gute Antwort eine Karte sein, die die ersten Schritte umreißt und eine Schaltfläche für *mehr anzeigen* enthält, die dann den Benutzer zur Registerkarte " *Hilfe* " des bot und zu tiefen Links zu den spezifischen Anweisungen führt.
+
+### <a name="x2713-a-place-to-host-a-settings-page"></a>&#x2713; einen Ort zum Hosten einer Einstellungsseite
+
+Bots sollten über einige Benutzersteuerelemente verfügen. Für viele Bots ist es über eine Chat Schnittstelle zulässig; Diese Einstellungen sind jedoch schwer zu merken. Auf der Registerkarte "Einstellungen" können Sie Benutzereinstellungen anzeigen, Benutzern erlauben, Sie alle gleichzeitig zu ändern, und ist möglicherweise auch ein guter Ausgangspunkte für komplexere bot-Benutzerverhalten.
 
 ### <a name="x2713-a-place-to-provide-some-help"></a>&#x2713; ein Ort, um Hilfe zu leisten
 
@@ -105,13 +125,27 @@ Fügen Sie eine Registerkarte hinzu, mit der Benutzer über die Kommunikation mi
 ![Bereitstellen von Hilfe](~/assets/images/framework/framework_bots_tbot-help.png)
 
 > [!TIP]
-> Durch das Einbetten von Teilen Ihrer Website auf eine Registerkarte kann ein Benutzer den Kontext einer Unterhaltung beibehalten, während dieser den Dienst verwendet. Es entfällt die Notwendigkeit, ihren Dienst in einem Browser zu starten und zwischen apps hin und her zu wechseln.
+> Durch das Einbetten von Teilen Ihrer Website in eine Registerkarte können Benutzer den Kontext einer Unterhaltung bei der Verwendung Ihres Diensts beibehalten. Es entfällt die Notwendigkeit, ihren Dienst in einem Browser zu starten und zwischen apps hin und her zu wechseln.
 
 ---
 
-## <a name="best-practices"></a>Bewährte Methoden
+## <a name="bots-in-channels"></a>Bots in Kanälen
 
-### <a name="x2713-bots-arent-assistants"></a>&#x2713; Bots sind keine Assistenten
+Das Aufrufen eines bot in einem Kanal kann durch `@mention`ausgeführt werden. Das Dialogfeld "bot" sollte in Kanälen und Gruppen im Vergleich zu eins-zu-eins-Szenarien eindeutig sein, und es ist generell ratsam, separate Ansätze zu berücksichtigen. Dies gilt insbesondere in den folgenden Fällen:
+
+### <a name="sensitive-data-sent-by-a-bot"></a>Von einem bot gesendete vertrauliche Daten
+
+Während die Benutzer in einem Team dem Dienst bekannt sein können, können die tatsächlichen Benutzerrollen nicht. Dies bedeutet, dass beispielsweise in einem Bildungs Szenario mit Mobbing die Kontaktinformationen von übergeordneten und Kursteilnehmer nicht in einer Team Einstellung freigegeben werden. Stattdessen kann die Nachricht des bot lauten: "zwei Mobbing-Vorfälle sind heute aufgetreten" zusammen mit einer Schaltfläche zum Anzeigen von Details.
+
+Durch das Starten von Details auf einer Webseite oder einem Aufgabenmodul können Benutzeranmeldeinformationen oder Abfragen für einen Index für Benutzerrollen, die mit Aad-Konten verbunden sind, angefordert werden. In diesen beiden Optionen befinden sich die Daten in einem privaten Ansichtsbereich, und es wird kein Datenverlust geben. Wenn dieselben Daten in einem 1:1-Chat zwischen einem Benutzer und dem bot gesendet werden, sind die Daten nur für den Benutzer in diesem Kontext sichtbar und daher sicher, in der bot-Nachricht vollständig angezeigt zu werden. Das Hinzufügen von Benutzern von einem Kanal zu einem 1:1-Chat sollte jedoch vermieden werden, da die erzwungene Navigation stark störend ist.
+
+### <a name="sending-cards-as-a-response-to-interactions"></a>Senden von Karten als Reaktion auf Interaktionen
+
+Beim Senden einer Karussell Karte als Reaktion auf eine *Tour* in einem 1:1-Chat ist es durchaus akzeptabel, das gleiche Muster kann Dutzende oder Hunderte von *Tour-Karussells* in einem aktiven Kanal mit vielen Benutzern ergeben. Um dies zu vermeiden, sollten sekundäre Karten in einem Aufgabenmodul gehostet werden. Dieses Muster hält Benutzer im Kontext mit dem Kanal, hält den Kanal von übermäßigen bot-Antworten sauber und kann optional unterschiedliche Benutzerrollen berücksichtigen, wenn die *Tour* angezeigt wird.
+
+## <a name="useful-tips"></a>Nützliche Tipps
+
+### <a name="x2713-remember-bots-arent-assistants"></a>&#x2713; denken Sie daran, Bots sind keine Assistenten
 
 Im Gegensatz zu Agents, beispielsweise Cortana, fungieren Bots als Spezialisten.
 

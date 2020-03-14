@@ -4,12 +4,12 @@ author: clearab
 description: Wie Sie proaktive Nachrichten mit Ihrem Microsoft Teams-bot senden.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2821e4d7ddeb74b3921be792cc55a136ab4ac5e4
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.openlocfilehash: 566b93f519001cbc2470b43e4729fa8b4aa0a9d2
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228080"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635277"
 ---
 # <a name="send-proactive-messages"></a>Senden proaktiver Nachrichten
 
@@ -28,7 +28,7 @@ Das Senden einer Nachricht zum Starten eines neuen Unterhaltungs Threads untersc
 1. [Abrufen der eindeutigen ID des Benutzers und der Mandanten-ID](#obtain-necessary-user-information)
 1. [Senden der Nachricht](#examples)
 
-Wenn Sie proaktive nach **** richten erstellen `MicrosoftAppCredentials.TrustServiceUrl`, müssen Sie die Dienst-URL aufrufen und weiter `ConnectorClient` geben, bevor Sie die Nachricht senden, die Sie verwenden werden. Wenn dies nicht der Fall ist, erhält Ihre APP `401: Unauthorized` eine Antwort. 
+Wenn Sie proaktive nach **must** richten erstellen `MicrosoftAppCredentials.TrustServiceUrl`, müssen Sie die Dienst-URL aufrufen und weiter `ConnectorClient` geben, bevor Sie die Nachricht senden, die Sie verwenden werden. Wenn dies nicht der Fall ist, erhält Ihre APP `401: Unauthorized` eine Antwort. 
 
 ## <a name="best-practices-for-proactive-messaging"></a>Bewährte Methoden für proaktives Messaging
 
@@ -68,7 +68,7 @@ Bots können neue Unterhaltungen mit einem einzelnen Microsoft Teams-Benutzer er
 > [!Note]
 > Die proaktive Installation von apps mithilfe von Graph befindet sich derzeit in der Betaphase.
 
-Gelegentlich kann es erforderlich sein, Benutzer proaktiv Nachrichten zu verständigen, die zuvor noch nicht mit Ihrer APP installiert oder mit ihr interagiert haben. Beispielsweise möchten Sie das [Unternehmens Communicator](~/samples/app-templates.md#company-communicator) verwenden, um Nachrichten an die gesamte Organisation zu senden. In diesem Szenario können Sie die Graph-API verwenden, um Ihre APP proaktiv für Ihre Benutzer zu installieren, und dann die erforderlichen Werte aus `conversationUpdate` dem Ereignis Zwischenspeichern, das Ihre APP bei der Installation empfangen wird.
+Gelegentlich kann es erforderlich sein, Benutzer proaktiv Nachrichten zu verständigen, die zuvor noch nicht mit Ihrer APP installiert oder mit ihr interagiert haben. Beispielsweise möchten Sie das [Unternehmens Communicator](~/samples/app-templates.md#company-communicator-app) verwenden, um Nachrichten an die gesamte Organisation zu senden. In diesem Szenario können Sie die Graph-API verwenden, um Ihre APP proaktiv für Ihre Benutzer zu installieren, und dann die erforderlichen Werte aus `conversationUpdate` dem Ereignis Zwischenspeichern, das Ihre APP bei der Installation empfangen wird.
 
 Sie können nur apps installieren, die sich in Ihrem Organisations-App-Katalog oder im Microsoft Teams-App-Store befinden.
 
