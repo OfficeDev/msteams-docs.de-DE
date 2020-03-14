@@ -5,12 +5,12 @@ description: Erstellen eines Bots für Microsoft Teams.
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: 9e0bd603772cf4da8465a638c4a7f5b426a1fbfb
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b9999fb8fcb39b4cd70789d909fecd9cad13e5d7
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674478"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635298"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>Erstellen eines Bots für Microsoft Teams
 
@@ -62,9 +62,9 @@ Szenarien, in denen Ihre Bot-Registrierung in Azure erfolgen **muss** (entweder 
 
 #### <a name="using-app-studio"></a>Verwenden von App Studio
 
-*App Studio* ist eine Teams-App, die Sie bei der Erstellung von Teams-Apps unterstützt, beispielsweise beim Registrieren Ihres Webdiensts als Bot, beim Erstellen eines App-Manifests und beim Erstellen Ihres App-Pakets. App Studio enthält außerdem eine React-Steuerelementbibliothek sowie konfigurierbare Beispiele für Karten. Siehe [Erste Schritte mit Teams App Studio](../../concepts/build-and-test/app-studio-overview.md).
+*App Studio* ist eine Teams-Anwendung, die Sie bei der Erstellung von Teams-Apps unterstützt, beispielsweise beim Registrieren Ihres Webdiensts als Bot, beim Erstellen eines App-Manifests und App-Pakets und beim Aktualisieren von Einstellungen und Konfigurationen. App Studio enthält außerdem eine React-Steuerelementbibliothek sowie konfigurierbare Beispiele für Karten. Siehe [Erste Schritte mit Teams App Studio](../../concepts/build-and-test/app-studio-overview.md).
 
-Denken Sie daran: Wenn Sie Ihren Webdienst mit App Studio registrieren, müssen Sie zu https://dev.botframework.com/bots wechseln, um Ihre Registrierung zu verwalten. Einige Einstellungen (wie z. B. Ihr Messagingendpunkt) können auch in App Studio aktualisiert werden.
+Denken Sie daran: Wenn Sie Ihren Webdienst mit App Studio registrieren, müssen Sie zu https://dev.botframework.com/bots wechseln, um Ihre Registrierung zu verwalten.
 
 #### <a name="in-the-legacy-portal"></a>Im Legacy-Portal
 
