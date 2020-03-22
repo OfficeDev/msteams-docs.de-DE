@@ -4,12 +4,12 @@ description: Beschreibt Tipps für die Übermittlung und die meisten fehlgeschla
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 75ac2a01f1ccd8e38977e1cd099544e7dd160733
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 12d0f39da24fc6850d74c9c78728b6a9b6de587a
+ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279788"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42896520"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Tipps für eine erfolgreiche App-Übermittlung
 
@@ -51,7 +51,7 @@ In diesem Artikel werden häufige Gründe für die Überprüfung von apps-Fehler
 
 Weitere Informationen zur Authentifizierung finden Sie unter:
 
-* [Authentifizierungs Dokumentation](/concepts/authentication/authentication.md)
+* [Authentifizierungs Dokumentation](../../../authentication/authentication.md)
 * [Beispiel für die bot-Authentifizierung im Knoten](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 * [Beispiel für Tab-Authentifizierung im Knoten](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [Tab/bot-Authentifizierung in C#/.net](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)

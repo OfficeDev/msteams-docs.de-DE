@@ -3,7 +3,7 @@
   items:
     - name: Was sind Microsoft Teams-apps?
       href: overview.md
-    - name: Was ist neu?
+    - name: Was sind die Neuerungen?
       href: whats-new.md
 - name: Erste Schritte
   items:
@@ -94,13 +94,13 @@
                   href: concepts/deploy-and-publish/appsource/post-publish/overview.md
                 - name: Anwendungs Zertifizierungsprogramm
                   href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
-    - name: Authentifizierung in Microsoft Teams-apps
+    - name: Authentifizierungs Flüsse in ihren apps
       items:
         - name: Authentifizierungsübersicht
           href: concepts/authentication/authentication.md
         - name: Konfigurieren von Identitätsanbietern
           href: concepts/authentication/configure-identity-provider.md
-- name: Aufgabenorientierte Interaktionen mit Messaging-Erweiterungen
+- name: Messaging-Erweiterungen
   items:
     - name: Was sind Messaging Erweiterungen?
       href: messaging-extensions/what-are-messaging-extensions.md
@@ -141,6 +141,8 @@
           href: messaging-extensions/how-to/link-unfurling.md
         - name: Hinzufügen von Authentifizierung
           href: messaging-extensions/how-to/add-authentication.md
+        - name: Hinzufügen einer Konfigurationsseite
+          href: messaging-extensions/how-to/add-configuration-page.md
 - name: Unterhaltungs Bots
   items:
     - name: Was sind Bots in Microsoft Teams?
@@ -212,7 +214,7 @@
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
         - name: Von der Anwendung gehostete Medien
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: Eingebettete Weboberfläche mit Registerkarten
+- name: Registerkarten
   items:
     - name: Was sind benutzerdefinierte Registerkarten?
       href: tabs/what-are-tabs.md
