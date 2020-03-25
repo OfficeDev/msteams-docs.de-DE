@@ -4,12 +4,12 @@ author: laujan
 description: Vorgehensweise verwenden des Teams-Client-SDK zum Hinzufügen von Teams-fähigen Funktionen zu Ihren benutzerdefinierten Registerkarten
 keywords: Teams Tabs Gruppenkanal konfigurierbares statisches SDK JavaScript Personal
 ms.topic: conceptual
-ms.openlocfilehash: eac5a8ec03ba12d926346afb40ca9bc6e9dda8d6
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 66d44617b897e44268ae2cee53f7ea64743ad821
+ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674561"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "42928510"
 ---
 # <a name="using-the-teams-client-sdk"></a>Verwenden des Teams-Client-SDK
 
@@ -23,6 +23,8 @@ In der folgenden Tabelle werden die in der Entwicklung von Tabs üblicherweise v
 | -----     | -----     | -----    | -----        |
 | `microsoftTeams.initialize()` | Initialisiert die Teams-Bibliothek. Diese Funktion muss vor anderen SDK-aufrufen aufgerufen werden.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initialize-any-)|
 |`microsoftTeams.getContext(callback: (context: Context)`| Ruft den aktuellen Zustand ab, in dem die Seite läuft. Der Rückruf Ruft das **context** -Objekt ab.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getcontext--context--context-----void-)<br/>[Kontext-obj](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest)|
+| `microsoftTeams.initializeWithContext({contentUrl: string, websiteUrl: string})` | Initialisiert die Teams-Bibliothek und legt den [Rahmen Kontext](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest) der Registerkarte abhängig von der contentUrl und websiteUrl. Dadurch wird sichergestellt, dass die Funktion "Gehe zu Website/Reload" mit der korrekten URL arbeitet.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initializewithframecontext-framecontext--------void--string---)|
+| `microsoftTeams.setFrameContext({contentUrl: string, websiteUrl: string})` | Legt den [Rahmen Kontext](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest) der Registerkarte je nach contentUrl und websiteUrl. Dadurch wird sichergestellt, dass die Funktion "Gehe zu Website/Reload" mit der korrekten URL arbeitet.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#setframecontext-framecontext-)|
 | `microsoftTeams.registerFullScreenHandler(handler: (isFullScreen: boolean)` |Der Handler, der registriert wird, wenn der Benutzer die Vollbildansicht/Fenster Ansicht eines Tabs umschalten kann.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerfullscreenhandler--isfullscreen--boolean-----void-)<br/>[boolean](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest#isfullscreen)|
 |`microsoftTeams.registerChangeSettingsHandler()` |Der Handler, der registriert wird, wenn der Benutzer die Schaltfläche "aktivierte **Einstellungen** " auswählt, um eine Registerkarte neu zu konfigurieren.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerchangesettingshandler-------void-)|
 | `microsoftTeams.getTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters,)` |Ruft die Registerkarten im Besitz der App ab. Der Rückruf Ruft das **TabInformation** -Objekt ab. Das **TabInstanceParameters** -Objekt ist ein optionaler Parameter.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#gettabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-)<br/>[TabInfo obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinformation?view=msteams-client-js-latest)|

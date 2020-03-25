@@ -2,12 +2,12 @@
 title: Anfordern von Geräte Berechtigungen für Ihre Microsoft Teams-Registerkarte
 description: Aktualisieren des App-Manifests, um Zugriff auf systemeigene Features anzufordern, in denen normalerweise Benutzer Zustimmung erforderlich ist
 keywords: Teams-Registerkarten Entwicklung
-ms.openlocfilehash: 454466ff17ecf275f6ae6c7413df8e117335f3c8
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: f0e19c0ed716147c097137c4ef0bf3454783b2eb
+ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674083"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "42928517"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Anfordern von Geräte Berechtigungen für Ihre Microsoft Teams-Registerkarte
 
@@ -15,7 +15,7 @@ Möglicherweise möchten Sie die Registerkarte mit Features erweitern, die den Z
 
 * Kamera
 * Mikrofon
-* Ort
+* Standort
 * Benachrichtigungen
 
 ![Bildschirm "Geräte Berechtigungseinstellungen"](~/assets/images/tabs/device-permissions.png)
@@ -57,7 +57,7 @@ Mit jeder Eigenschaft können Sie den Benutzer auffordern, seine Zustimmung einz
 
 | Eigenschaft      | Beschreibung   |
 | --- | --- |
-| Medien         | Berechtigung zur Verwendung der Kamera, des Mikrofons und der Lautsprecher |
+| media         | Berechtigung zur Verwendung der Kamera, des Mikrofons und der Lautsprecher |
 | Geolocation   | Berechtigung zum Zurückgeben des Standorts des Benutzers      |
 | Benachrichtigungen | Berechtigung zum Senden der Benutzer Benachrichtigungen      |
 | MIDI          | Berechtigung zum Senden und empfangen von MIDI-Informationen von einem digitalen Musikinstrument   |
@@ -106,3 +106,7 @@ Notification.requestPermission(function(result) { /* ... */ });
 ```
 
 ![Eingabeaufforderung für Tabs Device Permissions](~/assets/images/tabs/device-permissions-prompt.png)
+
+## <a name="permission-behavior-across-login-sessions"></a>Berechtigungsverhalten für Anmeldesitzungen
+
+Berechtigungen für systemeigene Geräte werden pro Anmeldesitzung gespeichert. Wenn Sie sich also bei einer anderen Instanz von Teams anmelden (z.b. auf einem anderen Computer), sind Ihre Geräte Berechtigungen aus ihren vorherigen Sitzungen nicht verfügbar. Stattdessen müssen Sie die Geräte Berechtigungen für den neuen Anmelde sessoin erneut einwilligen. Dies bedeutet auch, dass Ihre Geräte Berechtigungen für diese vorherige Anmeldesitzung gelöscht werden, wenn Sie sich von Teams abmelden (oder Mandanten innerhalb von Teams wechseln). Beachten Sie Folgendes, wenn Sie systemeigene Geräte Berechtigungen entwickeln: die systemeigenen Funktionen, die Sie einwilligen, gelten nur für Ihre _aktuelle_ Anmelde-sessoin.
