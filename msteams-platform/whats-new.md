@@ -2,12 +2,12 @@
 title: Neuerungen
 description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 keywords: Teams What es New Latest
-ms.openlocfilehash: ad02795c7ab84e290b83e781ea413dd3ef797fdb
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: f8550070ed010d99c0c33202ada95b64c05cdc4f
+ms.sourcegitcommit: 68aeac34a2e585b985eabfae5d160b6b26d43b1a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674056"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42982144"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuerungen für Entwickler in Microsoft Teams
 
@@ -17,6 +17,7 @@ Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und d
 
 | **Date** | **Hinweise** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
+| 03/24/2020 | Unterstützung für das Abrufen eines einzelnen Elements einer Unterhaltung und zusätzlicher Unterstützung für das Abrufen von ausgelagerten Elementen hinzugefügt. | [Kontext von Teams für Ihren bot abrufen](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | Der `replyToId` Parameter in Nutzlasten, die an einen bot gesendet werden, ist nicht mehr verschlüsselt, sodass Sie diesen Wert verwenden können, um Deeplinks für diese Nachrichten zu erstellen. Nachrichten Nutzlasten enthalten die verschlüsselten Werte im `legacy.replyToId`Parameter.  |
 | 11/5/2019 | Einmaliges Anmelden mit dem Microsoft Teams-JavaScript-SDK in einer Webinhalts Seite befindet sich in der Entwicklervorschau | [Einmaliges Anmelden](~/tabs/how-to/authentication/auth-aad-sso.md) |
 | 10/31/2019 | Unter Haltungs Bots und Messaging-Erweiterungs Dokumentation aktualisiert, um das 4,6 bot Framework SDK widerzuspiegeln. Die Dokumentation für das V3 SDK steht im Abschnitt Resources zur Verfügung. | Alle bot-und Messaging-Erweiterungs Dokumentation. |
