@@ -4,12 +4,12 @@ author: clearab
 description: Informieren Sie sich über die Erweiterungspunkte, die für Ihre APP im Microsoft Teams-Client verfügbar sind.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f65a5111bf59b08347291caa15c557dc0a48e886
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 1db9b6828ef8a4e186160351b90c01f253df552d
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674151"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034029"
 ---
 # <a name="extensible-points-in-the-teams-client"></a>Erweiterbare Punkte im Microsoft Teams-Client
 
@@ -23,11 +23,11 @@ Mit Teams, Kanälen und Gruppenchats können mehrere Personen zusammenarbeiten. 
 
 Sie können erweitert werden mit:
 
-* **[Konversations Bots](~/bots/what-are-bots.md)** interagieren mit Mitgliedern der Unterhaltung durch Chat und reagieren auf Ereignisse (wie ein Hinzuzufügender neuer Member oder ein Kanal, der umbenannt wird). Alle Unterhaltungen mit einem bot in diesem Kontext sind für alle Mitglieder des Kanals oder der Gruppe sichtbar, daher müssen Sie sicherstellen, dass die Unterhaltung für jeden relevant ist.
+* [**Konversations Bots**](~/bots/what-are-bots.md) interagieren mit Mitgliedern der Unterhaltung durch Chat und reagieren auf Ereignisse (wie ein Hinzuzufügender neuer Member oder ein Kanal, der umbenannt wird). Alle Unterhaltungen mit einem bot in diesem Kontext sind für alle Mitglieder des Kanals oder der Gruppe sichtbar, daher müssen Sie sicherstellen, dass die Unterhaltung für jeden relevant ist.
 
-* **[Konfigurierbare Registerkarten](~/tabs/what-are-tabs.md)** mit einer eingebetteten voll Bildumgebung, die für den Kanal oder den Gruppenchat konfiguriert ist, in dem die Datei installiert ist. Alle Mitglieder interagieren mit der gleichen freigegebenen Webanwendung, sodass eine Status lose Einzelseiten-App-Erfahrung typisch ist.
+* [**Konfigurierbare Registerkarten**](~/tabs/what-are-tabs.md) mit einer eingebetteten voll Bildumgebung, die für den Kanal oder den Gruppenchat konfiguriert ist, in dem die Datei installiert ist. Alle Mitglieder interagieren mit der gleichen freigegebenen Webanwendung, sodass eine Status lose Einzelseiten-App-Erfahrung typisch ist.
 
-* **[Webhooks und Connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)** ermöglichen externen Diensten das Bereitstellen von Nachrichten an die Unterhaltung und Ihre Benutzer zum Senden von Nachrichten an Ihren Dienst. Sie können Karten-und Karten Aktionen nutzen, um umfangreiche, Nachrichten mit Aktionen zu erstellen.
+* [**Webhooks und Connectors**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) ermöglichen externen Diensten das Bereitstellen von Nachrichten an die Unterhaltung und Ihre Benutzer zum Senden von Nachrichten an Ihren Dienst. Sie können Karten-und Karten Aktionen nutzen, um umfangreiche, Nachrichten mit Aktionen zu erstellen.
 
 ### <a name="personal-apps"></a>Persönliche apps
 
@@ -35,13 +35,13 @@ Sie können erweitert werden mit:
 
 Sie können Folgendes enthalten:
 
-* **[Conversational Bots](~/bots/what-are-bots.md)** mit einer 1:1-Unterhaltung mit dem Benutzer. Da es sich um eine private Unterhaltung handelt, ist es in der Regel am besten, diese Interaktion in einer persönlichen APP zu haben, wenn Ihre APP eine Multi-Turn-Unterhaltung benötigt oder eine Benachrichtigung nur für einen einzelnen Benutzer bereitstellen muss.
+* [**Conversational Bots**](~/bots/what-are-bots.md) mit einer 1:1-Unterhaltung mit dem Benutzer. Da es sich um eine private Unterhaltung handelt, ist es in der Regel am besten, diese Interaktion in einer persönlichen APP zu haben, wenn Ihre APP eine Multi-Turn-Unterhaltung benötigt oder eine Benachrichtigung nur für einen einzelnen Benutzer bereitstellen muss.
 
-* **[Persönliche Registerkarten](~/tabs/what-are-tabs.md)** , die eine eingebettete Weboberfläche im Vollbildmodus bereitstellen.
+* [**Persönliche Registerkarten**](~/tabs/what-are-tabs.md), die eine eingebettete Weboberfläche im Vollbildmodus bereitstellen.
 
 ## <a name="messages"></a>Nachrichten
 
-Nachrichten stellen das Herzstück der Zusammenarbeit in Microsoft Teams dar. Mit einem **[Aktionsbefehl für die Messaging Erweiterung](~/messaging-extensions/what-are-messaging-extensions.md)** kann Ihre APP Benutzern das Aufrufen der API Ihrer APP aus einer Nachricht ermöglichen und den Inhalt der Nachricht zur Verarbeitung oder Aktion an Ihre APP senden. Ihre APP kann Antworten, indem Sie dem Benutzer ein Formular (ein Aufgabenmodul) zur Verfügung stellt, um weitere Informationen zu sammeln, eine Antwort auf die ursprüngliche Nachricht zu senden oder eine Nachricht direkt an den Benutzer zu senden.
+Nachrichten stellen das Herzstück der Zusammenarbeit in Microsoft Teams dar. Mit einem [**Aktionsbefehl für die Messaging Erweiterung**](~/messaging-extensions/what-are-messaging-extensions.md)kann Ihre APP Benutzern das Aufrufen der API Ihrer APP aus einer Nachricht ermöglichen und den Inhalt der Nachricht zur Verarbeitung oder Aktion an Ihre APP senden. Ihre APP kann Antworten, indem Sie dem Benutzer ein Formular (ein Aufgabenmodul) zur Verfügung stellt, um weitere Informationen zu sammeln, eine Antwort auf die ursprüngliche Nachricht zu senden oder eine Nachricht direkt an den Benutzer zu senden.
 
 ## <a name="writing-messages"></a>Schreiben von Nachrichten
 
@@ -49,17 +49,17 @@ Ihre APP kann Benutzern helfen, effektivere Nachrichten zu erstellen, indem Sie 
 
 Es gibt drei Möglichkeiten, wie Ihre App Benutzer bei der Erstellung besserer Nachrichten unterstützenkann:
 
-* **[Messaging Extension – Suchbefehle](~/messaging-extensions/what-are-messaging-extensions.md)** , mit denen Sie schnell ein externes System durchsuchen, eine Vorschau der Ergebnisse dieser Suche anzeigen und dann das Ergebnis als umfangreiche Karte in den Chat einfügen.
+* [**Messaging Extension – Suchbefehle**](~/messaging-extensions/what-are-messaging-extensions.md) , mit denen Sie schnell ein externes System durchsuchen, eine Vorschau der Ergebnisse dieser Suche anzeigen und dann das Ergebnis als umfangreiche Karte in den Chat einfügen.
 
-* **[Messaging Extension-Link Entfaltung](~/messaging-extensions/what-are-messaging-extensions.md)** ermöglicht Ihrer APP, Webdomänen zu überwachen, für die Sie sich interessieren. Wenn eine URL, die diese Domäne enthält, in das Meldungsfeld verfassen eingefügt wird, wird die API ihrer app aufgerufen, sodass Sie der Nachricht eine umfangreiche Karte mit zusätzlichen Informationen zum verknüpften Element hinzufügen können.
+* [**Messaging Extension-Link Entfaltung**](~/messaging-extensions/what-are-messaging-extensions.md) ermöglicht Ihrer APP, Webdomänen zu überwachen, für die Sie sich interessieren. Wenn eine URL, die diese Domäne enthält, in das Meldungsfeld verfassen eingefügt wird, wird die API ihrer app aufgerufen, sodass Sie der Nachricht eine umfangreiche Karte mit zusätzlichen Informationen zum verknüpften Element hinzufügen können.
 
-* **[Messaging Extension-Action Commands](~/messaging-extensions/what-are-messaging-extensions.md)** präsentieren Sie Ihrem Benutzer ein modales Formular (ein Aufgabenmodul), senden Sie die Ergebnisse des Formulars an Ihre APP, und fügen Sie dann entweder direkt eine Nachricht in die Unterhaltung ein, oder erstellen Sie einen Teil einer Nachricht, die der Benutzer vor dem Senden an die Unterhaltung bearbeiten kann.
+* [**Messaging Extension-Action Commands**](~/messaging-extensions/what-are-messaging-extensions.md) präsentieren Sie Ihrem Benutzer ein modales Formular (ein Aufgabenmodul), senden Sie die Ergebnisse des Formulars an Ihre APP, und fügen Sie dann entweder direkt eine Nachricht in die Unterhaltung ein, oder erstellen Sie einen Teil einer Nachricht, die der Benutzer vor dem Senden an die Unterhaltung bearbeiten kann.
 
 ## <a name="user-interface-ui-elements"></a>Elemente der Benutzeroberfläche (UI)
 
 Zusätzlich zu den Erweiterbarkeitspunkten bietet die Microsoft Teams-Plattform flexible Benutzeroberflächenelemente für apps, die Sie nutzen können. Diese Elemente ermöglichen es Ihnen, umfangreiche Erfahrungen zu erstellen, die sich für den Microsoft Teams-Client als systemeigen erweisen.
 
-### <a name="cards--card-actions"></a>Karten #a0 Karten Aktionen
+### <a name="cards--card-actions"></a>Karten & Karten Aktionen
 
 [Karten](~/task-modules-and-cards/what-are-cards.md) sind von schematisierten JSON definierte Benutzeroberflächencontainer, die mehrere Eigenschaften und Anlagen enthalten können. Sie können formatierten Text, Medien, Steuerelemente (wie Dropdownfelder und Optionsfelder) und Schaltflächen enthalten, die Karten Aktionen auslösen. Karten Aktionen können Nutzlasten an die API Ihrer APP senden, einen Link öffnen, Authentifizierungs Flüsse initiieren oder Nachrichten an Unterhaltungen senden. Die Microsoft Teams-Plattform unterstützt mehrere Arten von Karten, einschließlich Adaptive Karten, Hero Cards, Thumbnail-Karten und vieles mehr. Sie können in Kartensammlungen kombiniert und in einer Liste oder einem Karussell angezeigt werden.
 

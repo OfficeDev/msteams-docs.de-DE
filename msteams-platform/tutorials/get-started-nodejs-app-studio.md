@@ -3,12 +3,14 @@ title: Erste Schritte mit App Studio und Node. js
 description: Erste Schritte beim Erstellen von tollen apps in Microsoft Teams mit Node. js und App Studio
 keywords: Erste Schritte Node. js nodejs App Studio
 ms.date: 11/09/2018
-ms.openlocfilehash: 36da6d7445ad7780f6bbbf52ccce3e558c76be72
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.topic: tutorial
+ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
+ms.openlocfilehash: 92fbbdd30e9cdaf54644b42bf642ca5825bcec51
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674513"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034050"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-nodejs-and-app-studio"></a>Erste Schritte mit der Microsoft Teams-Plattform mit Node. js und App Studio
 

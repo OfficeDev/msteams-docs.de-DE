@@ -2,12 +2,14 @@
 title: Erste Schritte mit dem Landarbeits Generator für Microsoft Teams
 description: Erste Schritte beim Erstellen von tollen apps mit dem Landwirtschafts Generator für Microsoft Teams
 keywords: Erste Schritte Node. js nodejs
-ms.openlocfilehash: 6318b51c29c673b0bf3504218100cf0d7aad7b97
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.topic: tutorial
+ms.custom: scenarios:getting-started
+ms.openlocfilehash: 217c0900e067a61e083e7ffb0b121afdaa51c49f
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228087"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034043"
 ---
 # <a name="build-your-first-microsoft-teams-app"></a>Erstellen Ihrer ersten Microsoft Teams-App
 

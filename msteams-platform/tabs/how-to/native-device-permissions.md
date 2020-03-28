@@ -2,12 +2,12 @@
 title: Anfordern von Geräte Berechtigungen für Ihre Microsoft Teams-Registerkarte
 description: Aktualisieren des App-Manifests, um Zugriff auf systemeigene Features anzufordern, in denen normalerweise Benutzer Zustimmung erforderlich ist
 keywords: Teams-Registerkarten Entwicklung
-ms.openlocfilehash: f0e19c0ed716147c097137c4ef0bf3454783b2eb
-ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
+ms.openlocfilehash: e9dc6c6f177e3a87e2846bcb836cc38601c9a50e
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "42928517"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034036"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Anfordern von Geräte Berechtigungen für Ihre Microsoft Teams-Registerkarte
 
@@ -21,13 +21,10 @@ Möglicherweise möchten Sie die Registerkarte mit Features erweitern, die den Z
 ![Bildschirm "Geräte Berechtigungseinstellungen"](~/assets/images/tabs/device-permissions.png)
 
 > [!IMPORTANT]
-> Die systemeigene Gerätefunktionalität wird derzeit nicht für Registerkarten auf mobilen Clients unterstützt, aber die vollständige Unterstützung wird bald verfügbar sein. Zur Vorbereitung auf diese Änderung sollten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md) beim Erstellen Ihrer Registerkarten befolgten. Persönliche Apps (statische Registerkarten) sind derzeit in der [Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md)verfügbar.
 >
-> Wenn die vollständige Unterstützung für Tabs freigegeben wird:
+> Die systemeigene Gerätefunktionalität wird derzeit für Registerkarten auf mobilen Clients nicht unterstützt.
 >
-> * Alle Registerkarten sind auf mobilen Geräten immer verfügbar.
-> * Ihr `contentUrl` **wird in den Mobile Teams-Client geladen**.
-> * Bei Kanälen/Gruppenregisterkarten können Benutzer ihre Registerkarte weiterhin in einem separaten Browser öffnen `websiteUrl`, jedoch werden Sie `contentUrl` zuerst geladen.  
+> Die Geolocation-API wird derzeit nicht vollständig auf allen Desktop-Clients unterstützt.
 
 ## <a name="device-permissions"></a>Geräteberechtigungen
 
@@ -109,4 +106,4 @@ Notification.requestPermission(function(result) { /* ... */ });
 
 ## <a name="permission-behavior-across-login-sessions"></a>Berechtigungsverhalten für Anmeldesitzungen
 
-Berechtigungen für systemeigene Geräte werden pro Anmeldesitzung gespeichert. Wenn Sie sich also bei einer anderen Instanz von Teams anmelden (z.b. auf einem anderen Computer), sind Ihre Geräte Berechtigungen aus ihren vorherigen Sitzungen nicht verfügbar. Stattdessen müssen Sie die Geräte Berechtigungen für den neuen Anmelde sessoin erneut einwilligen. Dies bedeutet auch, dass Ihre Geräte Berechtigungen für diese vorherige Anmeldesitzung gelöscht werden, wenn Sie sich von Teams abmelden (oder Mandanten innerhalb von Teams wechseln). Beachten Sie Folgendes, wenn Sie systemeigene Geräte Berechtigungen entwickeln: die systemeigenen Funktionen, die Sie einwilligen, gelten nur für Ihre _aktuelle_ Anmelde-sessoin.
+Berechtigungen für systemeigene Geräte werden pro Anmeldesitzung gespeichert. Wenn Sie sich also bei einer anderen Instanz von Teams anmelden (z.b. auf einem anderen Computer), sind Ihre Geräte Berechtigungen aus ihren vorherigen Sitzungen nicht verfügbar. Stattdessen müssen Sie die Geräte Berechtigungen für die neue Anmeldesitzung erneut genehmigen. Dies bedeutet auch, dass Ihre Geräte Berechtigungen für diese vorherige Anmeldesitzung gelöscht werden, wenn Sie sich von Teams abmelden (oder Mandanten innerhalb von Teams wechseln). Beachten Sie Folgendes, wenn Sie systemeigene Geräte Berechtigungen entwickeln: die systemeigenen Funktionen, die Sie einwilligen, gelten nur für Ihre _aktuelle_ Anmeldesitzung.
