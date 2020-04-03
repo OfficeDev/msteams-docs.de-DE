@@ -3,12 +3,12 @@ title: Lokalisierung für Team-apps
 description: Beschreibt Probleme beim Lokalisieren Ihrer APP.
 keywords: Teams veröffentlichen Store Office Publishing AppSource Localization Language
 ms.date: 05/15/2018
-ms.openlocfilehash: 0affa61ee1967a0e1bc19e423f05049bad750ce7
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: c7d8ff47d370badcc75e3ad5d10a2ca298b80195
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279761"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120282"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Lokalisierung für Microsoft Teams-apps
 
@@ -78,7 +78,7 @@ Sie geben beispielsweise eine Standardsprache von "fr" (Französisch, alle Regio
 Wenn die Sprache des Benutzers auf "en-ca" festgelegt ist: 
 
 1. Der Microsoft Teams-Client nimmt die Zeichenfolgen "fr" mit den Zeichenfolgen "en" überschrieben.
-2. Da kein "en-ca"-localazation angegeben wird, werden die "en"-Lokalisierungen verwendet.
+2. Da keine "en-ca"-Lokalisierung bereitgestellt wird, werden die "en"-Lokalisierungen verwendet.
 
 Wenn die Sprache des Benutzers auf "es-es" festgelegt ist, übernimmt der Microsoft Teams-Client die Zeichenfolgen "fr" und setzt diese nicht mit einer der Sprachdateien außer Kraft.
 

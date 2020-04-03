@@ -15,12 +15,12 @@
       href: tutorials/get-started-yeoman.md
 - name: Beispiele und Vorlagen
   items:
-    - name: Beispiel-apps
-      href: samples/code-samples.md
     - name: Produktionsfertige App-Vorlagen
       href: samples/app-templates.md
     - name: Produktionsfertige Schaltstellen-Konnektoren
       href: samples/shifts-wfm-connectors.md
+    - name: Beispiel-apps
+      href: samples/code-samples.md
 - name: Konzepte
   expanded: true
   items:
@@ -137,7 +137,7 @@
               href: messaging-extensions/how-to/search-commands/define-search-command.md
             - name: Empfangen und beantworten von Suchabfragen
               href: messaging-extensions/how-to/search-commands/respond-to-search.md
-        - name: Link-Entfaltung
+        - name: Verbreiten von Links
           href: messaging-extensions/how-to/link-unfurling.md
         - name: Hinzufügen von Authentifizierung
           href: messaging-extensions/how-to/add-authentication.md
@@ -184,7 +184,7 @@
               href: bots/how-to/debug/locally-with-an-ide.md
             - name: Debuggen mit der Inspektions-Middleware
               href: /azure/bot-service/bot-service-debug-inspection-middleware
-        - name: Authentifizierung
+        - name: Authentication
           items:
             - name: Authentifizierungs Fluss in Bots
               href: bots/how-to/authentication/auth-flow-bot.md

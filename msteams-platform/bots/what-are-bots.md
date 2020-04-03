@@ -4,16 +4,16 @@ author: clearab
 description: Eine Übersicht über Unterhaltungs Bots in Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: e10275cba97f835cd59e572b48d2db7cb902d096
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 132b71a4da7462c426468c7fc2f79b26b6fbb03b
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635305"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120290"
 ---
 # <a name="what-are-conversational-bots"></a>Was sind Unterhaltungs Bots?
 
-Mit Unterhaltungs Bots können Benutzer über Text, interaktive Karten und Aufgaben Module mit Ihrem Webdienst interagieren. Sie sind unglaublich flexibel – Unterhaltungs Bots können mit einigen einfachen Befehlen oder komplexen, mit künstlicher Intelligenz versehenen und natürlichen sprachverarbeitenden virtuellen Assistenten behandelt werden. Sie können ein Aspekt einer größeren Anwendung oder völlig eigenständig sein.
+Unterhaltungsbots ermöglichen Benutzern, mit Ihrem Webdienst über Text, interaktive Karten und Aufgabenmodule zu interagieren. Sie sind unglaublich flexibel – Unterhaltungs Bots können mit einigen einfachen Befehlen oder komplexen, mit künstlicher Intelligenz versehenen und natürlichen sprachverarbeitenden virtuellen Assistenten behandelt werden. Sie können ein Aspekt einer größeren Anwendung oder völlig eigenständig sein.
 
 Die folgende GIF-Datei zeigt einen Benutzer, der sich mit einem bot in einem 1:1-Chat unter Verwendung von Text und interaktiven Karten unterhält. Die Suche nach der richtigen Mischung aus Karten, Text und Aufgaben Modulen ist der Schlüssel zum Erstellen eines nützlichen bot. Vergessen Sie nicht, Bots sind viel mehr als nur Text!
 
@@ -23,11 +23,11 @@ Die folgende GIF-Datei zeigt einen Benutzer, der sich mit einem bot in einem 1:1
 
 Ihr Teams-bot besteht aus drei Elementen:
 
-* Ein öffentlich zugänglicher Webdienst, den Sie hosten.
+* Einem öffentlich zugänglichen Webdienst, der von Ihnen betrieben wird.
 * Ihre bot-Registrierung mit dem bot-Framework.
 * Ihr Teams-App-Paket mit Ihrem App-Manifest. Dies wird von den Benutzern installiert, und der Microsoft Teams-Client wird mit Ihrem Webdienst verbunden, der über den bot-Dienst weitergeleitet wird.
 
-Bots für Microsoft Teams sind auf dem [Microsoft-bot-Framework](https://dev.botframework.com/)aufgebaut. Wenn Sie bereits einen bot haben, der auf dem bot-Framework basiert, können Sie ihn ganz einfach an die Arbeit in Microsoft Teams anpassen. Es wird empfohlen, dass Sie entweder C# oder Node. js verwenden, um unsere [SDKs](/microsoftteams/platform/#pivot=sdk-tools)nutzen zu können. Diese Pakete erweitern die Klassen und Methoden des Basic bot Builder-SDK wie folgt:
+Bots für Microsoft Teams basieren auf dem [Microsoft Bot Framework](https://dev.botframework.com/). Wenn Sie bereits einen bot haben, der auf dem bot-Framework basiert, können Sie ihn ganz einfach an die Arbeit in Microsoft Teams anpassen. Es wird empfohlen, dass Sie entweder C# oder Node. js verwenden, um unsere [SDKs](/microsoftteams/platform/#pivot=sdk-tools)nutzen zu können. Diese Pakete erweitern die Klassen und Methoden des Basic bot Builder-SDK wie folgt:
 
 * Verwenden Sie spezielle Kartentypen wie die Office 365-Anschluss Karte.
 * Verwenden und Festlegen von Team spezifischen Kanaldaten zu Aktivitäten
@@ -49,24 +49,24 @@ Bots in Microsoft Teams können Teil einer 1:1-Unterhaltung, eines Gruppenchats 
 
 ### <a name="in-a-channel"></a>In einem Kanal
 
-Kanäle enthalten threadbezogene Unterhaltungen zwischen mehreren Personen – potenziell viele Personen (derzeit bis zu 2000). Dadurch kann Ihr bot möglicherweise massiv erreicht werden, aber einzelne Interaktionen müssen prägnant sein. Herkömmliche Multi-Turn-Interaktionen funktionieren wahrscheinlich nicht gut. Suchen Sie stattdessen interaktive Karten oder Aufgaben Module oder führen Sie die Unterhaltung möglicherweise in eine 1:1-Unterhaltung ein, wenn Sie viele Informationen sammeln müssen. Ihr bot hat auch nur Zugriff auf Nachrichten, in denen `@mentioned` er direkt ist, Sie können keine weiteren Nachrichten aus der Unterhaltung mit Microsoft Graph und erweiterte Berechtigungen auf Organisationsebene abrufen.
+Kanäle enthalten threadbezogene Unterhaltungen zwischen mehreren Personen – potenziell viele Personen (derzeit bis zu 2000). Dadurch erhält Ihr Bot potenziell eine enorme Reichweite, die einzelnen Interaktionen müssen aber präzise sein. Herkömmliche dialogartige Interaktionen mit vielen Fragen und Antworten funktionieren wahrscheinlich nicht gut. Versuchen Sie stattdessen, interaktive Karten oder Aufgabenmodule einzusetzen, oder lagern Sie die Unterhaltung in eine 1:1-Unterhaltung aus, wenn Sie viele Informationen sammeln müssen. Ihr bot hat auch nur Zugriff auf Nachrichten, in denen `@mentioned` er direkt ist, Sie können keine weiteren Nachrichten aus der Unterhaltung mit Microsoft Graph und erweiterte Berechtigungen auf Organisationsebene abrufen.
 
-Einige Szenarien, in denen Bots in einem Kanal Excel enthalten, umfassen Folgendes:
+Dies sind einige Szenarien, in denen Bots in einem Kanal glänzen können:
 
-* **Benachrichtigungen**, insbesondere wenn Sie eine interaktive Karte für Benutzer zur Verfügung stellen, um zusätzliche Informationen zu nehmen.
+* **Benachrichtigungen**, insbesondere, wenn Sie eine interaktive Karte für die Benutzer bereitstellen, die weitere Informationen aufnimmt.
 * **Feedback Szenarien** wie Umfragen und Umfragen.
-* Interaktionen, die in einem **einzelnen Anforderungs-Antwort-Zyklus**aufgelöst werden können, wobei die Ergebnisse für mehrere Mitglieder der Unterhaltung nützlich sind.
+* Interaktionen, die in einem **einzelnen Anfrage/Antwortzyklus** gelöst werden können, und deren Ergebnis für mehrere Mitglieder der Unterhaltung nützlich ist.
 * **Soziale/lustige Bots** – holen Sie sich ein fantastisches Cat-Bild, wählen Sie zufällig einen Gewinner aus usw.
 
 ### <a name="in-a-group-chat"></a>In einem Gruppenchat
 
-Gruppenchats sind nicht threadbezogene Unterhaltungen zwischen drei oder mehr Personen. Sie neigen dazu, weniger Mitglieder als ein Kanal und sind mehr flüchtig. Ähnlich wie bei einem Kanal hat ihr bot nur dann Zugriff auf Nachrichten, wenn `@mentioned` er direkt ist.
+Gruppenchats sind Unterhaltungen ohne Threading zwischen drei oder mehr Personen. Sie neigen dazu, weniger Mitglieder als ein Kanal und sind mehr flüchtig. Ähnlich wie bei einem Kanal hat ihr bot nur dann Zugriff auf Nachrichten, wenn `@mentioned` er direkt ist.
 
 Szenarien, die in einem Kanal gut funktionieren, werden in der Regel in einem Gruppenchat genauso gut funktionieren.
 
 ### <a name="in-a-one-to-one-chat"></a>In einem eins-zu-eins-Chat
 
-Dies ist die herkömmliche Möglichkeit für einen Unterhaltungs-bot, mit einem Benutzer zu interagieren. Sie können unglaublich vielfältige Arbeitslasten ermöglichen. Q&Bots, Bots, die Workflows in anderen Systemen initiieren, Bots, die Witze erzählen, und Bots, die Notizen machen, sind nur einige Beispiele. Denken Sie daran, zu prüfen, ob eine Gesprächs basierte Oberfläche die beste Möglichkeit zum präsentieren ihrer Funktionalität ist.
+Dies ist das herkömmliche Interaktionsverfahren eines Unterhaltungs-Bots mit einem Benutzer. Sie können unglaublich vielfältige Arbeitslasten ermöglichen. Q&A-Bots, Bots, die Arbeitsabläufe in anderen Systemen auslösen, Bots, die Witze erzählen, und Bots, die Notizen erfassen, sind nur ein paar Beispiele. Denken Sie daran, zu prüfen, ob eine Gesprächs basierte Oberfläche die beste Möglichkeit zum präsentieren ihrer Funktionalität ist.
 
 ## <a name="bot-fails"></a>Bot schlägt fehl
 
@@ -92,7 +92,7 @@ Ein bot, der übermäßige Befehle unterstützt, insbesondere eine Vielzahl von 
 
 ### <a name="maintaining-a-large-retrieval-knowledge-base-with-unranked-responses"></a>Aufrecht erhalten einer großen Retrieval-Wissensdatenbank mit unbewerteten Antworten
 
-Bots eignen sich am besten für kurze, schnelle Interaktionen, nicht aber lange Listen, die nach einer Antwort suchen.
+Bots eignen sich am besten für kurze, schnelle Interaktionen und nicht Durchsichten langer Listen, die nach einer Antwort suchen.
 
 ## <a name="get-started"></a>Erste Schritte
 
