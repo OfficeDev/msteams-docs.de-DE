@@ -3,12 +3,12 @@ title: Senden von Nachrichten an Connectors und Webhooks
 description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Teams
 localization_priority: Priority
 keywords: Teams O365-Connector
-ms.openlocfilehash: 56ef6adc7731eadc0a799f489867d8e056248e03
-ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
+ms.openlocfilehash: df91dfc68dbafb5e32d8c0e5732eb820c21a51b0
+ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41953467"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225777"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Senden von Nachrichten an Connectors und Webhooks
 
@@ -148,7 +148,13 @@ In den folgenden Schritten wird [cURL](https://curl.haxx.se/) verwendet. Wir geh
 1. Geben Sie den folgenden cURL-Befehl in die Befehlszeile ein:
 
    ```bash
-   curl -H "Content-Type: application/json" -d "{\"text\": \"Hello World\"}" <YOUR WEBHOOK URL>
+   // on macOS or Linux
+   curl -H 'Content-Type: application/json' -d '{\"text\": \"Hello World\"}' <YOUR WEBHOOK URL>
+   ```
+
+   ```bash
+   // on Windows
+   curl.exe -H 'Content-Type: application/json' -d '{\"text\": \"Hello World\"}' <YOUR WEBHOOK URL>
    ```
 
 2. Wenn die POST-Anforderung erfolgreich ist, sollte eine einfache **1** durch `curl` ausgegeben werden.
