@@ -2,12 +2,12 @@
 title: Leitfaden für den Microsoft Teams-App-Genehmigungsprozess
 description: Beschreibt den Genehmigungsprozess für die Veröffentlichung Ihrer APP im Microsoft Teams-App-Store.
 keywords: Veröffentlichungs AppSource für Microsoft Teams-Veröffentlichungs Speicher
-ms.openlocfilehash: 761cb69ddebac28af5ffc39401eefa9e1b424bc3
-ms.sourcegitcommit: 27789fd2e6f522f33f2135c66b0153949d9b0d64
+ms.openlocfilehash: e0b8c7d1b98747019a096924de395a7ccf608a0c
+ms.sourcegitcommit: ebd653e0646c8ddf0b0f4f2da55831c5acbad5d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "43285937"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "43509322"
 ---
 # <a name="submit-your-app-to-appsource"></a>Übermitteln Ihrer APP an AppSource
 
@@ -43,7 +43,15 @@ Die Telefonnummer besteht aus drei Teilen: Ländervorwahl, Ortsvorwahl und Telef
 
 ## <a name="why-do-i-get-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>Warum erhalte ich die Meldung "dieses Konto ist nicht veröffentlicht?", wenn ich versuche, mein Add-in über das Partner Center zu übermitteln?
 
-Die obige Fehlermeldung wird angezeigt, wenn der [Status Ihrer Kontoüberprüfung](/partner-center/verification-responses) aussteht. Sie können den Status der Kontoüberprüfung im Partner Center- [Dashboard](https://partner.microsoft.com/dashboard) überprüfen, indem Sie die Option **Einstellungen** (Zahnradsymbol) in der oberen rechten Ecke der Seitenkopf Schale auswählen und die Einstellungen für das**Konto**  => **Konto** für **Entwicklereinstellungen** => auswählen. Während des Konto Überprüfungsprozesses wird der Status jedes erforderlichen Schritts (e-Mail-Besitz, Überprüfung der Arbeitsplätze und Unternehmens Verifizierung) angezeigt. Nachdem der Überprüfungsvorgang erfolgreich abgeschlossen wurde, ändert sich der Überprüfungsstatus Ihrer Registrierung auf der Profilseite von "Ausstehend" in "autorisiert", und die Prozessschritte werden nicht mehr angezeigt. Im *folgenden finden Sie Informationen*zur Lösung möglicher Überprüfungsprobleme.
+Die obige Fehlermeldung wird angezeigt, wenn der [Status Ihrer Kontoüberprüfung](/partner-center/verification-responses) aussteht. Sie können den Status der Kontoüberprüfung im Partner Center- [Dashboard](https://partner.microsoft.com/dashboard) überprüfen, indem Sie die Option **Einstellungen** (Zahnradsymbol) in der oberen rechten Ecke der Seitenkopf Schale auswählen und die Einstellungen für das**Konto**  => **Konto** für **Entwicklereinstellungen** => auswählen.
+
+![Seite "Partner Center-Kontoeinstellungen"](../../../assets/images/partner-center-accts-page.png)
+
+![Partner Center-Überprüfungsstatus](../../../assets/images/partner-center-verification-status.png)
+
+Während des Konto Überprüfungsprozesses wird der Status jedes erforderlichen Schritts (e-Mail-Besitz, Überprüfung der Arbeitsplätze und Unternehmens Verifizierung) angezeigt. Nachdem der Überprüfungsvorgang erfolgreich abgeschlossen wurde, ändert sich der Überprüfungsstatus Ihrer Registrierung auf der Profilseite von "Ausstehend" in "autorisiert", und die Prozessschritte werden nicht mehr angezeigt.
+
+![Partner Center-Überprüfungsfehler](../../../assets/images/partner-center-acct-verification-error.png)
 
 ## <a name="how-i-do-get-further-support-for-my-account-related-issues"></a>Wie erhalte ich weitere Unterstützung für meine Konto bezogenen Probleme?
 
