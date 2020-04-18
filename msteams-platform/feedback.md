@@ -1,17 +1,19 @@
 ---
-title: Unterstützung und Feedback
-description: Microsoft Teams-Entwickler Support und Feedback
+title: Microsoft Teams-Entwickler Support und Feedback
+description: Das Microsoft Teams-Produktteam antwortet der Entwicklercommunity über mehrere Feedback-und Supportkanäle.
 keywords: Teams Feedback Entwickler Fragen Probleme Kontakt Supportanfrage Bugs Beiträge
-ms.openlocfilehash: 9bec08dc1c40267445a54f31013a8ea9456ccb56
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: dc152fc9445e3fc9583638d522c03e9f2052bcd9
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225784"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550945"
 ---
-# <a name="microsoft-teams-developer-support-and-feedback"></a>Microsoft Teams-Entwickler Support und Feedback  
+# <a name="microsoft-teams-developer-support-and-feedback"></a>Microsoft Teams-Entwickler Support und Feedback
 
-Das Microsoft Team-Produktteam antwortet der Entwicklercommunity über mehrere Kanäle.
+Das Microsoft Teams-Produktteam antwortet der Entwicklercommunity über mehrere Feedback-und Supportkanäle.
+
+## <a name="support-and-feedback-channels"></a>Support-und Feedbackkanäle
 
 - **Allgemeine Fragen zur Microsoft Teams-Entwicklerplattform:** Senden Sie eine e-Mail an den [Microsoft Teams-Entwickler Support](mailto:microsoftteamsdev@microsoft.com). Diese e-Mail-Adresse ist _nicht_ für Kommentare oder Vorschläge zu nicht Platt Form bezogenen Features von Microsoft Teams vorgesehen. Darüber hinaus werden alle e-Mails, die an diese Adresse gesendet werden, nicht auf alle Antworten gelesen.
 

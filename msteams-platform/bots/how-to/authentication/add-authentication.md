@@ -4,12 +4,12 @@ author: clearab
 description: Vorgehensweise Hinzufügen von OAuth-Authentifizierung zu einem bot in Microsoft Teams.
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 4a573037e970be3f6c010a0a3c4b2e18be811d2f
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: f5eae27de45cd0932e4d2ed62fa954429a48aa6d
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225798"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550978"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Hinzufügen von Authentifizierung zu ihren Teams-bot
 
@@ -33,7 +33,7 @@ In diesem Artikel erhalten Sie Informationen zu folgenden Themen:
 
 - Kenntnisse der [grundlegenden][concept-basics]Funktionen von bot, der [Verwaltung von Status][concept-state], der [Dialogfeld Bibliothek][concept-dialogs]und der [Implementierung eines sequenziellen Unterhaltungs Flusses][simple-dialog].
 - Kenntnisse in Azure und OAuth 2,0-Entwicklung.
-- Visual Studio 2017 oder höher und git.
+- Die aktuellen Versionen von Visual Studio und git.
 - Azure-Konto. Bei Bedarf können Sie ein [Kostenloses Azure-Konto](https://azure.microsoft.com/free/)erstellen.
 - Im folgenden Beispiel.
 
@@ -173,7 +173,7 @@ Der Verbindungsname wird vom bot-Code zum Abrufen von Benutzerauthentifizierungs
 
 Nachdem die vorläufigen Einstellungen vorgenommen wurden, konzentrieren wir uns auf die Erstellung des bot, der in diesem Artikel verwendet werden soll.
 
-# <a name="cnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 1. Klon [CS-auth-Sample][teams-auth-bot-cs].
 1. Starten Sie Visual Studio.
@@ -444,7 +444,7 @@ Bei der Authentifizierung verhält sich Microsoft Teams geringfügig anders als 
 Eine **Invoke-Aktivität** wird an den bot statt an die Ereignisaktivität gesendet, die von anderen Kanälen verwendet wird.
 Dies wird durch Unterklassen für das **ActivityHandler**getan.
 
-# <a name="cnet"></a>[C#-/.net](#tab/dotnet-sample)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet-sample)
 
 **Bots/DialogBot. cs**
 

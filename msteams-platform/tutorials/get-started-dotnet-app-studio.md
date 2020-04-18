@@ -5,12 +5,12 @@ keywords: Erste Schritte mit .net c# CSharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: d38491ec1d152e8710e52530e3903a4bad3e1459
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: 61237cd3178fcb41357230536827f732faf65ee4
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034057"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550959"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-cnet-and-app-studio"></a>Erste Schritte mit der Microsoft Teams-Plattform mit C#/.net und App Studio
 
@@ -29,7 +29,7 @@ In diesem Lernprogramm erfahren Sie, wie Sie mit dem Erstellen einer Microsoft T
 Um dieses Lernprogramm abzuschließen, müssen Sie die folgenden Tools abrufen:
 
 - [Installieren von git](https://git-scm.com/downloads)
-- [Installieren Sie Visual Studio 2017](https://www.visualstudio.com/downloads/). Sie können die ﻿kostenlose Community Edition installieren.
+- [Installieren Sie Visual Studio](https://www.visualstudio.com/downloads/). Sie können die ﻿kostenlose Community Edition installieren.
 
 Wenn Sie während der Installation eine Option `git` zum Hinzufügen des Pfads sehen, wählen Sie aus. Das ist praktisch.
 
@@ -43,7 +43,7 @@ git version 2.17.1.windows.2
 
 ```
 
-Stellen Sie sicher, dass Sie Visual Studio 2017 starten und alle Updates installieren, falls dies angezeigt wird.
+Stellen Sie sicher, dass Sie die neueste Version von Visual Studio starten und alle Updates installieren, falls dies angezeigt wird.
 
 Sie können weiterhin dieses Terminalfenster verwenden, um die Befehle auszuführen, die in diesem Lernprogramm folgen.
 

@@ -3,12 +3,12 @@ title: Text Formatierung in Karten
 description: Beschreibt die Formatierung von Karten Texten in Microsoft Teams
 keywords: Teams-Bots-Kartenformat
 ms.date: 03/29/2018
-ms.openlocfilehash: 0c723c436346498ed2e5704db6f6401204530165
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 9ced8a8956265322e91b9d40dc7dc7064ee4659f
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365248"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550952"
 ---
 # <a name="format-cards-in-teams"></a>Formatieren von Karten in Microsoft Teams
 
@@ -61,15 +61,15 @@ Die Formatierung unterscheidet sich geringfügig zwischen dem Desktop und den mo
 
 Auf dem Desktop wird die Formatierung für das Abgleichen von adaptiven Karten in beiden Webbrowsern und in der Microsoft Teams-Clientanwendung wie folgt angezeigt:
 
-![Formatieren von adaptiven Karten Abschlägen im Desktop Client](/assets/images/cards/Adaptive-markdown-desktop-client.png)
+![Formatieren von adaptiven Karten Abschlägen im Desktop Client](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
 Auf IOS wird die Formatierung für Adaptive Karten Abschriften wie folgt angezeigt:
 
-![Formatierung von adaptiven Karten Abschriften in ios](/assets/images/cards/Adaptive-markdown-iOS-75.png)
+![Formatierung von adaptiven Karten Abschriften in ios](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
 Auf Android wird die Formatierung für Adaptive Karten Abschriften wie folgt angezeigt:
 
-![Formatierung von adaptiven Karten Abschriften in Android](/assets/images/cards/Adaptive-markdown-Android.png)
+![Formatierung von adaptiven Karten Abschriften in Android](../../assets/images/cards/Adaptive-markdown-Android.png)
 
 ### <a name="more-information-on-adaptive-cards"></a>Weitere Informationen zu adaptiven Karten
 
@@ -179,11 +179,11 @@ In connectorkarten werden für die neureihen für `\n\n`, jedoch nicht für `\n`
 
 Auf dem Desktop sieht die Abschlag Formatierung für connectorkarten wie folgt aus:
 
-![Abschlag Formatierung für connectorkarten im Desktop Client](/assets/images/cards/connector-desktop-markdown-combined.png)
+![Abschlag Formatierung für connectorkarten im Desktop Client](../../assets/images/cards/connector-desktop-markdown-combined.png)
 
 Auf IOS sieht die Abschläge für Verbindungskarten wie folgt aus:
 
-![Abschlag Formatierung für connectorkarten im IOS-Client](/assets/images/cards/connector-iphone-markdown-combined-80.png)
+![Abschlag Formatierung für connectorkarten im IOS-Client](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
 
 Probleme:
 
@@ -192,7 +192,7 @@ Probleme:
 
 Auf Android sieht die Abschläge für Verbindungskarten wie folgt aus:
 
-![Abschlag Formatierung für connectorkarten im Android-Client](/assets/images/cards/connector-android-markdown-combined.png)
+![Abschlag Formatierung für connectorkarten im Android-Client](../../assets/images/cards/connector-android-markdown-combined.png)
 
 ### <a name="formatting-example-for-markdown-connector-cards"></a>Formatierungs Beispiel für Abschlag-konnektorkarten
 
@@ -268,11 +268,11 @@ In connectorkarten werden die Neubuchungen in HTML mithilfe des `<p>` -Tags gere
 
 Auf dem Desktop sieht die HTML-Formatierung für Verbindungskarten wie folgt aus:
 
-![HTML-Formatierung für Verbindungskarten im Desktop Client](/assets/images/cards/Connector-desktop-html-combined.png)
+![HTML-Formatierung für Verbindungskarten im Desktop Client](../../assets/images/cards/Connector-desktop-html-combined.png)
 
 Auf IOS sieht HTML-Formatierung wie folgt aus:
 
-![HTML-Formatierung für Verbindungskarten im IOS-Client](/assets/images/cards/connector-iphone-html-combined-80.png)
+![HTML-Formatierung für Verbindungskarten im IOS-Client](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
 Probleme:
 
@@ -281,7 +281,7 @@ Probleme:
 
 Auf Android sieht HTML-Formatierung wie folgt aus:
 
-![HTML-Formatierung für Verbindungskarten im Android-Client](/assets/images/cards/connector-android-html-combined.png)
+![HTML-Formatierung für Verbindungskarten im Android-Client](../../assets/images/cards/connector-android-html-combined.png)
 
 ### <a name="formatting-sample-for-html-connector-cards"></a>Formatierungs Beispiel für HTML-Verbindungskarten
 
@@ -356,11 +356,11 @@ Aufgrund der Unterschiede zwischen Desktop und mobiler Plattform unterscheidet s
 
 Auf dem Desktop wird die HTML-Formatierung wie folgt angezeigt:
 
-![HTML-Formatierung im Desktop Client](/assets/images/cards/card-formatting-xml-desktop-v2.png)
+![HTML-Formatierung im Desktop Client](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
 
 Auf IOS wird die HTML-Formatierung wie folgt angezeigt:
 
-![HTML-Formatierung im IOS-Client](/assets/images/cards/card-formatting-xml-mobile-v2.png)
+![HTML-Formatierung im IOS-Client](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
 
 Probleme:
 
@@ -368,7 +368,7 @@ Probleme:
 
 Auf Android wird die HTML-Formatierung wie folgt angezeigt:
 
-![HTML-Formatierung im Android-Client](/assets/images/cards/card-formatting-xml-android-60.png)
+![HTML-Formatierung im Android-Client](../../assets/images/cards/card-formatting-xml-android-60.png)
 
 Zeichenformatierungen wie Fett und kursiv werden auf Android korrekt angezeigt.
 
