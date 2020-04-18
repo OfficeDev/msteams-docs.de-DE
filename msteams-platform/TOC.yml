@@ -1,42 +1,42 @@
 - name: Übersicht
   expanded: true
   items:
-    - name: Was sind Microsoft Teams-apps?
+    - name: Was sind Microsoft Teams-Apps?
       href: overview.md
     - name: Was sind die Neuerungen?
       href: whats-new.md
 - name: Erste Schritte
   items:
-    - name: 'Erstellen einer App mithilfe von C #'
+    - name: 'Erstellen einer App mithilfe von C#'
       href: tutorials/get-started-dotnet-app-studio.md
-    - name: Erstellen einer APP mit dem Knoten
+    - name: Erstellen einer App mithilfe von Node
       href: tutorials/get-started-nodejs-app-studio.md
-    - name: Erstellen einer APP mit dem "landkraft-Generator"
+    - name: Erstellen einer App mit dem Yeoman-Generator
       href: tutorials/get-started-yeoman.md
 - name: Beispiele und Vorlagen
   items:
     - name: Produktionsfertige App-Vorlagen
       href: samples/app-templates.md
-    - name: Produktionsfertige Schaltstellen-Konnektoren
+    - name: Produktionsfertige Shifts-Connectors
       href: samples/shifts-wfm-connectors.md
-    - name: Beispiel-apps
+    - name: Beispielapps
       href: samples/code-samples.md
 - name: Konzepte
   expanded: true
   items:
-    - name: Erstellen von Apps für Microsoft Teams
+    - name: Apps für Microsoft Teams erstellen
       href: concepts/building-an-app.md
-    - name: Erweiterbarkeitspunkte im Microsoft Teams-Client
+    - name: Erweiterbarkeitspunkte im Teams-Client
       href: concepts/extensibility-points.md
-    - name: Entwerfen Ihrer APP
+    - name: Entwerfen Ihrer App
       items:
-        - name: Grundlegendes zu den Anwendungsfällen
+        - name: Grundlegendes zu Ihren Anwendungsfällen
           href: concepts/design/understand-use-cases.md
         - name: Zuordnen von Anwendungsfällen zu Features
           href: concepts/design/map-use-cases.md
-        - name: Persönliche apps
+        - name: Persönliche Apps
           href: concepts/design/personal-apps.md
-        - name: Benutzeroberflächenkomponenten
+        - name: Komponenten der Benutzeroberfläche
           items:
             - name: Farben
               href: concepts/design/components/color.md
@@ -48,80 +48,80 @@
               href: concepts/design/components/fields.md
             - name: Dialoge
               href: concepts/design/components/dialogs.md
-    - name: Erstellen und Testen Ihrer APP
+    - name: Erstellen und Testen Ihrer App
       items:
-        - name: Vorbereiten des Office 365 Mandanten
+        - name: Vorbereiten Ihres Office 365-Mandanten
           href: concepts/build-and-test/prepare-your-o365-tenant.md
-        - name: Verwenden von App Studio zum Erstellen Ihrer APP
+        - name: 'Verwendung von App Studio, um Ihre App zu erstellen'
           href: concepts/build-and-test/app-studio-overview.md
-        - name: Erstellen Ihres App-Pakets
+        - name: Erstellen Ihres App-Paketes
           href: concepts/build-and-test/apps-package.md
-        - name: Testen und Debuggen Ihrer APP
+        - name: Testen und Debuggen Ihrer App
           href: concepts/build-and-test/debug.md
-        - name: Hinzufügen von Test Daten zu Ihrer Umgebung
+        - name: Hinzufügen von Testdaten zu Ihrer Umgebung
           href: concepts/build-and-test/test-data.md
-        - name: Verwenden von Deep-Links für die Navigation
+        - name: Verwenden von Deep-Links zur Navigation
           href: concepts/build-and-test/deep-links.md
-        - name: Lokalisieren Ihrer APP
+        - name: Lokalisieren Ihrer App
           href: concepts/build-and-test/apps-localization.md
-        - name: Erstellen einer Share-to-Teams-Schaltfläche für Ihre Website
+        - name: Erstellen einer Schaltfläche zum Teilen in Teams für Ihre Website
           href: concepts/build-and-test/share-to-teams.md
-    - name: Bereitstellen und Veröffentlichen Ihrer APP
+    - name: Ihre App bereitstellen und veröffentlichen
       items:
-        - name: Auswählen der Verteilungsmethoden
+        - name: Auswahl Ihrer Distributionsmethode
           href: concepts/deploy-and-publish/overview.md
-        - name: Hochladen der APP für ein Team oder einen Benutzer
+        - name: Ihre App für ein Team oder einen Benutzer hochladen
           href: concepts/deploy-and-publish/apps-upload.md
-        - name: Veröffentlichen Ihrer APP in Ihrer Organisation
+        - name: Ihre App in Ihrer Organisation veröffentlichen
           href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
-        - name: Veröffentlichen Ihrer APP auf AppSource
+        - name: Ihre App auf AppSource veröffentlichen
           items:
-            - name: Grundlegendes zur AppSource-Übermittlung
+            - name: Grundlegendes zur Einreichung auf AppSource
               href: concepts/deploy-and-publish/appsource/publish.md
-            - name: Vorbereiten Ihrer APP
+            - name: Vorbereiten Ihrer App
               items:
-                - name: Prüfliste für die Übermittlung
+                - name: Checkliste vor der Einreichung
                   href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
-                - name: Prüfliste für die APP-Detailseite
+                - name: Checkliste für die Details-Seite der App
                   href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
-                - name: Prüfliste für App-Manifeste
+                - name: Checkliste für das App-Manifest
                   href: concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md
-                - name: Häufig fehlgeschlagene Fälle
+                - name: Häufige Ablehnungsgründe
                   href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-            - name: Nach der Veröffentlichung Ihrer APP
+            - name: Nach der Veröffentlichung Ihrer App
               items:
-                - name: Vorgehens nach dem Veröffentlichen Ihrer APP
+                - name: Was nach der Veröffentlichung Ihrer App zu tun ist
                   href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-                - name: Anwendungs Zertifizierungsprogramm
+                - name: Programm zur Anwendungszertifizierung
                   href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
-    - name: Authentifizierungs Flüsse in ihren apps
+    - name: Authentifizierungsabläufe in Ihren Apps
       items:
         - name: Authentifizierungsübersicht
           href: concepts/authentication/authentication.md
-        - name: Konfigurieren von Identitätsanbietern
+        - name: Identitätsanbieter konfigurieren
           href: concepts/authentication/configure-identity-provider.md
 - name: Messaging-Erweiterungen
   items:
-    - name: Was sind Messaging Erweiterungen?
+    - name: Was sind Messaging-Erweiterungen?
       href: messaging-extensions/what-are-messaging-extensions.md
-    - name: Quick Starts
+    - name: Schnellstarts
       items:
-        - name: Befehl "with Action"
+        - name: Mit Aktionsbefehl
           items:
-            - name: 'C#-/.net'
+            - name: 'C#/.NET'
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-            - name: Manuskript/Node. js
+            - name: TypeScript/Node.js
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action'
         - name: Mit Suchbefehl
           items:
-            - name: 'C#-/.net'
+            - name: 'C#/.NET'
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-            - name: Manuskript/Node. js
+            - name: TypeScript/Node.js
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
     - name: Schrittanleitungen
       expanded: true
       items:
-        - name: Erstellen einer Messaging Erweiterung
+        - name: Erstellen einer Nachrichten-Erweiterung
           href: messaging-extensions/how-to/create-messaging-extension.md
         - name: Aktionsbasierte Befehle
           items:
@@ -129,42 +129,42 @@
               href: messaging-extensions/how-to/action-commands/define-action-command.md
             - name: Erstellen und Senden des Aufgabenmoduls
               href: messaging-extensions/how-to/action-commands/create-task-module.md
-            - name: Senden einer Antwort an die Submit-Aktion
+            - name: Senden einer Reaktion auf die Einreichungs-Option
               href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
         - name: Suchbasierte Befehle
           items:
-            - name: Definieren von Suchbefehlen
+            - name: Definition von Suchbefehlen
               href: messaging-extensions/how-to/search-commands/define-search-command.md
-            - name: Empfangen und beantworten von Suchabfragen
+            - name: Suchanfragen erhalten und darauf reagieren
               href: messaging-extensions/how-to/search-commands/respond-to-search.md
-        - name: Verbreiten von Links
+        - name: Entfalten von Links
           href: messaging-extensions/how-to/link-unfurling.md
-        - name: Hinzufügen von Authentifizierung
+        - name: Authentifizierung hinzufügen
           href: messaging-extensions/how-to/add-authentication.md
-        - name: Hinzufügen einer Konfigurationsseite
+        - name: Eine Konfigurationsseite hinzufügen
           href: messaging-extensions/how-to/add-configuration-page.md
 - name: Bots
   items:
     - name: Was sind Bots in Microsoft Teams?
       href: bots/what-are-bots.md
-    - name: Funktionsweise von Bots
+    - name: Wie Bots funktionieren
       href: bots/bot-basics.md
-    - name: Quick Starts
+    - name: Schnellstarts
       items:
-        - name: 'Teams Conversation bot in C #'
+        - name: 'Teams-Unterhaltungsbot in C#'
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot'
-        - name: Teams Conversation bot in JavaScript
+        - name: Teams-Unterhaltungsbot in JavaScript
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot'
-        - name: Teams Conversation bot in python
+        - name: Teams-Unterhaltungsbot in Python
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot'
-    - name: Entwerfen Ihres bot
+    - name: Entwurf Ihres Bots
       items:
         - name: Entwurfsübersicht
           href: bots/design/bots.md
     - name: Schrittanleitungen
       expanded: true
       items:
-        - name: Erstellen eines bot für Teams
+        - name: Erstellen eines Bots für Teams
           href: bots/how-to/create-a-bot-for-teams.md
         - name: Unterhaltungen
           items:
@@ -172,45 +172,45 @@
               href: bots/how-to/conversations/conversation-basics.md
             - name: Abonnieren von Unterhaltungsereignissen
               href: bots/how-to/conversations/subscribe-to-conversation-events.md
-            - name: Kanal-und Gruppenunterhaltungen
+            - name: Kanal- und Gruppenunterhaltungen
               href: bots/how-to/conversations/channel-and-group-conversations.md
-            - name: Senden proaktiver Nachrichten
+            - name: Versenden proaktiver Nachrichten
               href: bots/how-to/conversations/send-proactive-messages.md
-            - name: Senden und empfangen von Dateien
+            - name: Dateien senden und erhalten
               href: bots/how-to/conversations/send-and-receive-files.md
-        - name: Debuggen des bot
+        - name: Ihren Bot debuggen
           items:
-            - name: Debuggen lokal mit einer IDE
+            - name: Lokal mit einer IDE debuggen
               href: bots/how-to/debug/locally-with-an-ide.md
-            - name: Debuggen mit der Inspektions-Middleware
+            - name: Mit der Inspektions-Middleware debuggen
               href: /azure/bot-service/bot-service-debug-inspection-middleware
         - name: Authentifizierung
           items:
-            - name: Authentifizierungs Fluss in Bots
+            - name: Authentifizierungsfluss in Bots
               href: bots/how-to/authentication/auth-flow-bot.md
-            - name: Hinzufügen von Authentifizierung zu Ihrem bot
+            - name: Ihrem Bot Authentifizierung hinzufügen
               href: bots/how-to/authentication/add-authentication.md
-        - name: Formatieren Ihrer bot-Nachricht
+        - name: Formatieren Ihrer Bot-Nachricht
           href: bots/how-to/format-your-bot-messages.md
-        - name: Aktualisieren und Löschen von bot-Nachrichten
+        - name: Bot-Nachrichten aktualisieren und ändern
           href: bots/how-to/update-and-delete-bot-messages.md
-        - name: Kontext von Teams für Ihren bot abrufen
+        - name: Teams-Kontext für Ihren Bot erhalten
           href: bots/how-to/get-teams-context.md
-        - name: Erstellen eines Menübefehls für Ihren bot
+        - name: Ein Befehlsmenü für Ihren Bot erstellen
           href: bots/how-to/create-a-bot-commands-menu.md
-        - name: Verwalten der bot-Ratenbegrenzung
+        - name: Umgang mit der Begrenzung der Datenübertragungsrate für Bots
           href: bots/how-to/rate-limit.md
-    - name: Anrufer und Besprechungs-Bots
+    - name: Anruf- und Besprechungs-Bots
       items:
-        - name: Calling and Meeting Bots (Übersicht)
+        - name: Überblick über Anruf- und Besprechungs-Bots
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
-        - name: Echt Zeit Medienkonzepte
+        - name: Echtzeitmedienkonzepte
           href: bots/calls-and-meetings/real-time-media-concepts.md
-        - name: Registrieren eines anrufenden bot
+        - name: Einen Anrufbot registrieren
           href: bots/calls-and-meetings/registering-calling-bot.md
-        - name: Benachrichtigungen über eingehende Anrufe
+        - name: Eingehende Anrufbenachrichtigungen
           href: bots/calls-and-meetings/call-notifications.md
-        - name: Debuggen und lokale Tests
+        - name: Debugging und lokale Tests
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
         - name: Von der Anwendung gehostete Medien
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
@@ -218,97 +218,97 @@
   items:
     - name: Was sind benutzerdefinierte Registerkarten?
       href: tabs/what-are-tabs.md
-    - name: Quick Starts
+    - name: Schnellstarts
       items:
-        - name: Node. js und reagieren
+        - name: Node.js und React
           items:
-            - name: Erstellen einer Kanal-und Gruppenregisterkarte
+            - name: Erstellen von Kanal- und Gruppen-Registerkarten
               href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
             - name: Erstellen einer persönlichen Registerkarte
               href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: 'C#-/ASP.net-Kern'
+        - name: 'C#/ASP.NET Core'
           items:
-            - name: Erstellen einer Kanal-und Gruppenregisterkarte
+            - name: Erstellen von Kanal- und Gruppen-Registerkarten
               href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
             - name: Erstellen einer persönlichen Registerkarte
               href: tabs/quickstarts/create-personal-tab-dotnet-core.md
         - name: 'C#/ASP.NET MVC'
           items:
-            - name: Erstellen einer Kanal-und Gruppenregisterkarte
+            - name: Erstellen von Kanal- und Gruppen-Registerkarten
               href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
             - name: Erstellen einer persönlichen Registerkarte
               href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: Entwerfen Ihrer Registerkarten
+    - name: Entwerfen Sie Ihre Registerkarten
       items:
         - name: Entwurfsübersicht
           href: tabs/design/tabs.md
-        - name: Registerkarten auf mobilen Clients
+        - name: Registerkarten in mobilen Clients
           href: tabs/design/tabs-mobile.md
     - name: Schrittanleitungen
       expanded: true
       items:
-        - name: Hinzufügen von Registerkarten zu Ihrer APP
+        - name: Ihren Apps Registerkarten hinzufügen
           href: tabs/how-to/add-tab.md
-        - name: Erstellen von Registerkartenseiten
+        - name: Registerkartenseiten erstellen
           items:
             - name: Erstellen einer Inhaltsseite
               href: tabs/how-to/create-tab-pages/content-page.md
             - name: Erstellen einer Konfigurationsseite
               href: tabs/how-to/create-tab-pages/configuration-page.md
-            - name: Erstellen einer Registerkarten-Entfernungs Seite
+            - name: Erstellen einer Seite zum Entfernen von Registerkarten
               href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: Hinzufügen von Authentifizierung zu ihren Registerkarten
+        - name: Fügen Sie Ihren Registerkarten Authentifizierungsfunktionen hinzu
           items:
             - name: Authentifizierungsfluss
               href: tabs/how-to/authentication/auth-flow-tab.md
-            - name: Verwenden Azure AD Authentifizierung
+            - name: Verwenden von Azure AD-Authentifizierung
               href: tabs/how-to/authentication/auth-tab-aad.md
             - name: Verwenden der automatischen Authentifizierung
               href: tabs/how-to/authentication/auth-silent-aad.md
-            - name: Verwenden der Authentifizierung mit einmaligem Anmelden
+            - name: Verwenden der Authentifizierung durch einmaliges Anmelden
               href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: Verwenden des Teams-Client-SDK
+        - name: Verwenden des Teams-Client-SDKs
           href: tabs/how-to/using-teams-client-sdk.md
-        - name: Einrichten eines weiteren Teams-Kontexts
+        - name: Weiteren Kontext zu Teams abrufen
           href: tabs/how-to/access-teams-context.md
-        - name: DevTools für Microsoft Teams-Registerkarten
+        - name: Entwicklertools für Microsoft Teams-Registerkarten
           href: tabs/how-to/developer-tools.md
-        - name: Hinzufügen Ihrer benutzerdefinierten Registerkarte zu SharePoint
+        - name: SharePoint Ihre benutzerdefinierte Registerkarte hinzufügen
           href: tabs/how-to/tabs-in-sharepoint.md
-        - name: Anfordern von Geräte Berechtigungen
+        - name: Geräteberechtigungen anfordern
           href: tabs/how-to/native-device-permissions.md
-- name: Aufgaben Module und-Karten
+- name: Aufgabenmodule und Karten
   items:
-    - name: Was sind Aufgaben Module?
+    - name: Was sind Aufgabenmodule?
       href: task-modules-and-cards/what-are-task-modules.md
     - name: Was sind Karten?
       href: task-modules-and-cards/what-are-cards.md
     - name: Karten
       items:
-        - name: Entwerfen effektiver Karten
+        - name: Effektive Karten gestalten
           href: task-modules-and-cards/cards/design-effective-cards.md
-        - name: Formatieren von Kartentext
+        - name: Kartentext formatieren
           href: task-modules-and-cards/cards/cards-format.md
-        - name: Karten Aktionen hinzufügen und darauf reagieren
+        - name: Kartenaktionen hinzufügen und darauf reagieren
           href: task-modules-and-cards/cards/cards-actions.md
-        - name: Karten Referenz
+        - name: Karten-Referenz
           href: task-modules-and-cards/cards/cards-reference.md
-    - name: Aufgaben Module
+    - name: Aufgabenmodule
       items:
-        - name: Von einem bot
+        - name: Von einem Bot
           href: task-modules-and-cards/task-modules/task-modules-bots.md
-        - name: Von einer Registerkarte
+        - name: Aus einer Registerkarte
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
 - name: Webhooks und Connectors
   items:
-    - name: Was sind webhooks und Connectors?
+    - name: Was sind Webhooks und Connectors?
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
     - name: Schrittanleitungen
       expanded: true
       items:
-        - name: Erstellen eines eingehenden webhooks
+        - name: Erstellen eines eingehenden Webhooks
           href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-        - name: Erstellen eines ausgehenden webhooks
+        - name: Erstellen eines ausgehenden Webhooks
           href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
         - name: Erstellen eines O365-Connectors
           href: webhooks-and-connectors/how-to/connectors-creating.md
@@ -316,7 +316,7 @@
           href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Ressourcen
   items:
-    - name: Bots-V3-SDK
+    - name: Bots – v3 SDK
       href: resources/bot-v3/bots-overview.md
       items:
         - name: Erstellen eines Bots
@@ -324,58 +324,58 @@
         - name: Unterhaltungen
           href: resources/bot-v3/bot-conversations/bots-conversations.md
           items:
-            - name: Persönliche Gespräche mit Bots
+            - name: Persönliche Unterhaltungen mit Bots
               href: resources/bot-v3/bot-conversations/bots-conv-personal.md
-            - name: Kanal-und Gruppenunterhaltungen mit Bots
+            - name: Kanal- und Gruppenunterhaltungen mit Bots
               href: resources/bot-v3/bot-conversations/bots-conv-channel.md
-            - name: Starten einer Unterhaltung
+            - name: Beginn einer Unterhaltung
               href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
-        - name: Karten-und Karten Aktionen
+        - name: Karten- und Kartenaktionen
           href: resources/bot-v3/bots-cards.md
-        - name: Nachrichtenformatierung
+        - name: Mitteilungsformatierung
           href: resources/bot-v3/bots-message-format.md
         - name: Bot-Ereignisse
           href: resources/bot-v3/bots-notifications.md
         - name: Kontext für Bots
           href: resources/bot-v3/bots-context.md
-        - name: Senden und empfangen von Dateien
+        - name: Dateien senden und erhalten
           href: resources/bot-v3/bots-files.md
-        - name: Nur-Benachrichtigungs-Bots
+        - name: Reine Benachrichtigungsbots
           href: resources/bot-v3/bots-notification-only.md
         - name: Bot-Menüs
           href: resources/bot-v3/bots-menus.md
         - name: Bots mit Registerkarten
           href: resources/bot-v3/bots-with-tabs.md
-        - name: Formatieren von bot-Nachrichten
+        - name: Formatierung von Bot-Mitteilungen
           href: resources/bot-v3/bots-text-formats.md
-        - name: Testen eines bot
+        - name: Testen eines Bots
           href: resources/bot-v3/bots-test.md
-    - name: Messaging Extensions-V3 SDK
+    - name: Nachrichtenerweiterungen – v3 SDK
       href: resources/messaging-extension-v3/messaging-extensions-overview.md
       items:
-        - name: Such Erweiterungen
+        - name: Sucherweiterungen
           href: resources/messaging-extension-v3/search-extensions.md
-        - name: Aktions Erweiterungen
+        - name: Aktionserweiterungen
           href: resources/messaging-extension-v3/create-extensions.md
     - name: Öffentliche Entwicklervorschau
       items:
-        - name: Übersicht über Entwicklervorschau
+        - name: Übersicht über die Entwicklervorschau
           href: resources/dev-preview/developer-preview-intro.md
-        - name: Manifest-Schema für Entwicklervorschau
+        - name: Entwicklervorschau-Manifestschema
           href: resources/schema/manifest-schema-dev-preview.md
         - name: Features in der Entwicklervorschau
           href: resources/dev-preview/developer-preview-features.md
     - name: Unterstützte Medienformate für Bots
       href: resources/media-formats.md
-    - name: SameSite-Cookie-Attribut (2020 Update)
+    - name: SameSite-Cookie-Attribut (Update von 2020)
       href: resources/samesite-cookie-update.md
-    - name: Änderungen der bot-API für Team Mitglieder/Chat Mitglieder
+    - name: Bot API-Änderungen für Team-/Chatmitglieder
       href: resources/team-chat-member-api-changes.md
-    - name: Manifest-Schema
+    - name: Manifestschema
       href: resources/schema/manifest-schema.md
     - name: JSON-Schema der Lokalisierungsdatei
       href: resources/schema/localization-schema.md
-    - name: Leitfaden für Teamteilnehmer
+    - name: Leitfaden für Teams-Mitwirkende
       href: resources/teams-contributor-reference.md
 - name: Support und Feedback
   href: feedback.md
