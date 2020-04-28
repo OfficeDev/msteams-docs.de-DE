@@ -5,7 +5,7 @@
       href: overview.md
     - name: Was sind die Neuerungen?
       href: whats-new.md
-- name: Erste Schritte
+- name: Lernprogramme und Codebeispiele
   items:
     - name: 'Erstellen einer App mithilfe von C#'
       href: tutorials/get-started-dotnet-app-studio.md
@@ -13,14 +13,14 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Erstellen einer App mit dem Yeoman-Generator
       href: tutorials/get-started-yeoman.md
-- name: Beispiele und Vorlagen
+    - name: Erweitern des Teams-Clients mit benutzerdefinierten Apps
+      href: tutorials/code-samples.md
+- name: App-Vorlagen und -Integrationen
   items:
     - name: Produktionsfertige App-Vorlagen
       href: samples/app-templates.md
     - name: Produktionsfertige Shifts-Connectors
       href: samples/shifts-wfm-connectors.md
-    - name: Beispielapps
-      href: samples/code-samples.md
 - name: Konzepte
   expanded: true
   items:
@@ -104,6 +104,10 @@
   items:
     - name: Was sind Messaging-Erweiterungen?
       href: messaging-extensions/what-are-messaging-extensions.md
+    - name: Entwurf
+      items:
+        - name: Entwurfsrichtlinien für Messagingerweiterungen
+          href: messaging-extensions/design/messaging-extension-design.md
     - name: Schnellstarts
       items:
         - name: Mit Aktionsbefehl
