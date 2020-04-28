@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Aktualisieren und Löschen von Nachrichten, die von Ihrem Microsoft Teams-bot gesendet wurden
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 012a6edb77f75c43cff01c58fb94e03fd4f61a85
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 222409fa0d02a571b7295dedb0c60b1ca3f90cca
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674466"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914609"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>Aktualisieren und Löschen von Nachrichten, die von Ihrem bot gesendet wurden
 
@@ -21,7 +21,7 @@ Anstatt Ihre Nachrichten als statische Momentaufnahmen von Daten zu haben, kann 
 
 Die neue Nachricht muss nicht mit dem Original in Type übereinstimmen. Wenn die ursprüngliche Nachricht beispielsweise eine Anlage enthielt, kann es sich bei der neuen Nachricht um eine einfache Textnachricht handeln.
 
-# <a name="cnettabdotnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 Um eine vorhandene Nachricht zu aktualisieren, übergeben Sie `Activity` ein neues Objekt mit der vorhandenen Aktivitäts- `UpdateActivityAsync` ID an die `TurnContext` Methode der Klasse. *Siehe* [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable)
 
@@ -31,7 +31,7 @@ newActivity.Id = activityId;
 await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[Manuskript/Node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 Um eine vorhandene Nachricht zu aktualisieren, übergeben Sie `Activity` ein neues Objekt mit der vorhandenen Aktivitäts- `updateActivity` ID an die `TurnContext` Methode des Objekts. *Siehe* [Update Subversion](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--)
 
@@ -41,7 +41,7 @@ newActivity.id = activityId;
 await turnContext.updateActivity(newActivity);
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 Um eine vorhandene Nachricht zu aktualisieren, übergeben Sie `Activity` ein neues Objekt mit der vorhandenen Aktivitäts- `update_activity` ID an die `TurnContext` Methode der Klasse. Siehe [TurnContextClass](link to Python API ref docs).
 
@@ -60,7 +60,7 @@ update_result = await context.update_activity(new_activity)
 Im bot-Framework hat jede Nachricht eine eigene eindeutige Aktivitäts-ID.
 Nachrichten können mithilfe der `DeleteActivity` Methode des bot-Frameworks wie hier gezeigt gelöscht werden.
 
-# <a name="cnettabdotnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 Um diese Nachricht zu löschen, übergeben Sie die ID der Aktivität `DeleteActivityAsync` an die Methode `TurnContext` der Klasse. *Siehe* [turncontext. DeleteActivityAsync-Methode](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable)
 
@@ -71,7 +71,7 @@ foreach (var activityId in _list)
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[Manuskript/Node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 Um diese Nachricht zu löschen, übergeben Sie die ID der Aktivität `deleteActivity` an die Methode `TurnContext` des Objekts. *Siehe* [Delete](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--) -Aktion
 
@@ -81,9 +81,9 @@ for (let i = 0; i < activityIds.length; i++) {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
-Um diese Nachricht zu löschen, übergeben Sie die ID der Aktivität `delete_activity` an die Methode `TurnContext` des Objekts. Siehe [delete_activity](link to Python API ref docs).
+Um diese Nachricht zu löschen, übergeben Sie die ID der Aktivität `delete_activity` an die Methode `TurnContext` des Objekts. Siehe [Activity-Update-and-Delete](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py).
 
 ```python
 for each activity_id in _list:

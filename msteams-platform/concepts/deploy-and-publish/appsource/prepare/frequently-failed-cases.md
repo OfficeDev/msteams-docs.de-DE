@@ -4,12 +4,12 @@ description: Beschreibt Tipps für die Übermittlung und die meisten fehlgeschla
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 12d0f39da24fc6850d74c9c78728b6a9b6de587a
-ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
+ms.openlocfilehash: 52225bd082059430a9804cf8fb225ac539781b33
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42896520"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914574"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Tipps für eine erfolgreiche App-Übermittlung
 
@@ -30,6 +30,7 @@ In diesem Artikel werden häufige Gründe für die Überprüfung von apps-Fehler
 * Ihre APP darf keinen ausführbaren Code in der Benutzerumgebung automatisch herunterladen, installieren oder starten. Alle Downloads sollten eine explizite Berechtigung des Benutzers suchen.
 * Jedes Material, das Sie Ihrer Erfahrung zuordnen, wie Beschreibungen und Support Dokumentationen, muss genau sein. Achten Sie in diesen Materialien auf Rechtschreibung, Zeichensetzung und Grammatik.
 * Bereitstellen von Hilfe-und Supportinformationen Es wird dringend empfohlen, dass Ihre APP einen Link zu Hilfe/FAQ für die Benutzeroberfläche mit der ersten Ausführung enthält. Für alle persönlichen apps wird empfohlen, ihre Hilfeseite als persönliche Registerkarte bereitzustellen, um eine bessere Benutzerfreundlichkeit zu erreichen.
+* Erhöhen Sie Ihre APP-Versionsnummer im Manifest, wenn Sie an ihrer Übermittlung Manifeste Änderungen vornehmen.
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; bieten eine klare und einfache Anmeldung/abmelden und Anmelde Erfahrung
 

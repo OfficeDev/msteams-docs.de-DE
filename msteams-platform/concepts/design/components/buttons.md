@@ -2,12 +2,12 @@
 title: Referenz zu Entwurfsrichtlinien
 description: Beschreibt die Richtlinien für die Verwendung von Schaltflächen, Links und Steuerelementen in ihren apps.
 keywords: Teams-Entwurfsrichtlinien Referenzkomponenten Schaltflächenlinks Farben
-ms.openlocfilehash: 09dad651fee9c97fd52e672ea055e2c24b549a59
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b9325980c38048ee250ace6b00f1ed29c6cbea8d
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674409"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914588"
 ---
 # <a name="buttons-links-and-controls"></a>Schaltflächen, Links und Steuerelemente
 
@@ -18,6 +18,10 @@ ms.locfileid: "41674409"
 Die Art und Weise, wie Schaltflächen formatiert werden, hilft bei der Kommunikation, welche Art von Aktion ausgelöst wird. Wir halten eine Vielzahl von Schaltflächen, die formatiert sind, um unterschiedliche Schwerpunkte anzuzeigen.
 
 Schaltflächen können Text, ein Symbol oder eine Kombination aus Text und Symbol aufweisen. Um verschiedene Ebenen in einer Hierarchie zu kommunizieren, haben wir die primären und sekundären Schaltflächen innerhalb der einzelnen Kategorien entworfen.
+
+### <a name="fluent-design-system"></a>Fluent-Entwurfs System
+
+Die Fluent-Benutzeroberfläche bietet Anleitungen für Webseiten-und Desktop-Komponenten Zustände, Styling und Barrierefreiheit. Schaltflächen auf der Microsoft Teams-Plattform können formatiert werden, um unterschiedliche Gewichtungs Ebenen anzuzeigen. *Siehe*  [Fluent UI Buttons Colors](https://fluentsite.z22.web.core.windows.net/components/button/definition?showCode=false&showRtl=false&showTransparent=false&showVariables=true#types-emphasis) for HTML and CSS hexadezimal Color values.
 
 ### <a name="text-buttons"></a>Text Schaltflächen
 

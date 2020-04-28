@@ -2,12 +2,12 @@
 title: Entwurfsrichtlinien für Registerkarten
 description: Beschreibt die Richtlinien zum Erstellen von Registerkarten für Inhalt und Zusammenarbeit.
 keywords: Teams-Entwurfsrichtlinien Referenz-Framework-Registerkartenkonfiguration
-ms.openlocfilehash: 409c8994b4266e37146038df054c0da6fb887607
-ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
+ms.openlocfilehash: 342e01e348c74eb143391a7d238396a2d866766a
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42896499"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914553"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Inhalte und Unterhaltungen auf einmal mithilfe von Registerkarten
 
@@ -36,15 +36,15 @@ Auf einer Registerkarte "gut" sollten die folgenden Merkmale angezeigt werden:
 
 Registerkarten funktionieren am besten, wenn Sie erstellt werden, um eine bestimmte Anforderung zu erfüllen. Konzentrieren Sie sich auf eine kleine Gruppe von Aufgaben oder eine Teilmenge der Daten, die für den Kanal relevant ist, in dem sich die Registerkarte befindet.
 
-### <a name="reduced-chrome"></a>Reduziertes Chrom
+### <a name="reduced-chrome"></a>Einfach halten
 
-Vermeiden Sie es, mehrere Bereiche auf einer Registerkarte zu erstellen, Navigationsebenen hinzuzufügen oder Benutzer zu verpflichten, sowohl vertikal als auch horizontal in einer Registerkarte zu scrollen. In anderen Worten: versuchen Sie nicht, Registerkarten auf Ihrer Registerkarte zu haben.
+Vermeiden Sie es, auf einer Registerkarte mehrere Panels zu erstellen, Navigationsebenen hinzuzufügen oder zu fordern, dass Benutzer auf einer Registerkarte sowohl vertikal als auch horizontal scrollen. Versuchen Sie also, keine Registerkarten auf Ihrer Registerkarte zu haben.
 
 ### <a name="integration"></a>Integration
 
-Hier finden Sie Möglichkeiten, Benutzer über die Tab-Aktivität zu informieren, indem Sie beispielsweise Karten für eine Unterhaltung veröffentlichen.
+Hier finden Sie Möglichkeiten, Benutzer über die Tab-Aktivität zu informieren, indem Sie einer Unterhaltung [Adaptive Karten](../../task-modules-and-cards/what-are-cards.md#adaptive-cards) senden.
 
-### <a name="conversational"></a>Gesprächs
+### <a name="conversational"></a>Unterhaltung
 
 Finden Sie eine Möglichkeit, um eine Unterhaltung um eine Registerkarte zu erleichtern. Dadurch wird sichergestellt, dass Unterhaltungen auf dem Inhalt, den Daten oder dem Prozess zur Hand stehen.
 

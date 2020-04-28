@@ -4,12 +4,12 @@ author: clearab
 description: Eine Übersicht über Messaging-Erweiterungen auf der Microsoft Teams-Plattform
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: dd68f2005cbb3ed119a9aadfafd6066db221000b
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: 2a9fcdbcdda6bb85b6f5edc21253d05327ca5157
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225791"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914602"
 ---
 # <a name="what-are-messaging-extensions"></a>Was sind Messaging-Erweiterungen?
 
@@ -42,7 +42,7 @@ Der Typ des Messaging Erweiterungs Befehls definiert die Benutzeroberflächenele
 
 ### <a name="action-commands"></a>Aktionsbefehle
 
-Mit Aktionsbefehlen können Sie Ihren Benutzern ein modales Popup präsentieren, um Informationen zu sammeln oder anzuzeigen. Wenn Sie das Formular übermitteln, kann Ihr Webdienst Antworten, indem er eine Nachricht direkt in die Unterhaltung einfügt, oder indem er eine Nachricht in den Bereich zum Verfassen von Nachrichten einfügt und es dem Benutzer ermöglicht, die Nachricht zu übermitteln. Sie können sogar mehrere Formulare für komplexere Workflows miteinander verketten.
+Mit Aktions Befehlen können Sie Ihren Benutzern ein modales Popup-Fenster zum Erfassen oder Anzeigen von Informationen präsentieren. Wenn Sie das Formular übermitteln, kann Ihr Webdienst Antworten, indem er eine Nachricht direkt in die Unterhaltung einfügt, oder indem er eine Nachricht in den Bereich zum Verfassen von Nachrichten einfügt und es dem Benutzer ermöglicht, die Nachricht zu übermitteln. Sie können sogar mehrere Formulare für komplexere Workflows miteinander verketten.
 
 Sie können aus dem Bereich zum Verfassen von Nachrichten, dem Befehlsfeld oder aus einer Nachricht ausgelöst werden. Wenn Sie aus einer Nachricht aufgerufen wird, enthält die anfängliche JSON-Nutzlast, die an Ihren bot gesendet wird, die gesamte Nachricht, von der Sie aufgerufen wurde.
 
@@ -56,7 +56,7 @@ Sie können aus dem Nachrichtenbereich "Verfassen" oder aus dem Befehlsfeld ausg
 
 ![Suchbefehl für Messaging Erweiterung](~/assets/images/search-extension.png)
 
-### <a name="link-unfurling"></a>Verbreiten von Links
+### <a name="link-unfurling"></a>Entfalten von Links
 
 Sie müssen auch die Option zum Aufrufen des Diensts verwenden, wenn eine URL im Bereich zum Verfassen von Nachrichten eingefügt wird. Mit dieser Funktion, die als **Link-Entfaltung**bezeichnet wird, können Sie abonnieren, um einen Aufruf zu erhalten, wenn URLs, die eine bestimmte Domäne enthalten, in den Bereich zum Verfassen von Nachrichten eingefügt werden. Ihr Webdienst kann die URL in eine detaillierte Karte "aufteilen" und bietet mehr Informationen als die standardmäßige Website-Vorschau Karte. Sie können sogar Schaltflächen hinzufügen, damit Ihre Benutzer Sofortaktionen ausführen können, ohne den Microsoft Teams-Client verlassen zu müssen.
 
@@ -75,6 +75,6 @@ Können Sie mit dem Erstellen beginnen? Versuchen Sie es mit einem unserer Schne
 
 Erstellen Sie eine Messaging Erweiterung:
 
-* [Erstellen einer Messaging Erweiterung](~/messaging-extensions/how-to/create-messaging-extension.md)
+* [Erstellen einer Nachrichten-Erweiterung](~/messaging-extensions/how-to/create-messaging-extension.md)
 * [Aktions-Messaging-Erweiterungs Befehl definieren](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 * [Definieren des Befehls für die Suchnachrichten Erweiterung](~/messaging-extensions/how-to/search-commands/define-search-command.md)

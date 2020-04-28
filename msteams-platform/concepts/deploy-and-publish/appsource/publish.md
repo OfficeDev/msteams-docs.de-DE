@@ -2,12 +2,12 @@
 title: Leitfaden für den Microsoft Teams-App-Genehmigungsprozess
 description: Beschreibt den Genehmigungsprozess für die Veröffentlichung Ihrer APP im Microsoft Teams-App-Store.
 keywords: Veröffentlichungs AppSource für Microsoft Teams-Veröffentlichungs Speicher
-ms.openlocfilehash: e0b8c7d1b98747019a096924de395a7ccf608a0c
-ms.sourcegitcommit: ebd653e0646c8ddf0b0f4f2da55831c5acbad5d3
+ms.openlocfilehash: 70f81f40ff424ab28e7129da7b947be0b1fcf469
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "43509322"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914546"
 ---
 # <a name="submit-your-app-to-appsource"></a>Übermitteln Ihrer APP an AppSource
 
@@ -28,7 +28,7 @@ Wenn Sie Ihre APP in [AppSource](https://appsource.microsoft.com) veröffentlich
 > * Wenn Ihre Teams-APP einen bot enthält, müssen Sie den [Code of Conduct für](https://aka.ms/bf-conduct)den bot Developer Framework einhalten.
 > * Wenn Ihre APP einen Office 365 Connector enthält, gelten möglicherweise zusätzliche Bedingungen. *Weitere Informationen finden Sie unter* [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) und [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
 
-## <a name="faqs--teams-apps-and-partner-accounts"></a>**FAQs – Microsoft Teams-apps und Partner Konten**
+## <a name="faqs--teams-apps-and-partner-accounts"></a>FAQs – Microsoft Teams-apps und Partner Konten
 
 ## <a name="how-do-i-create-a-partner-center-account"></a>Wie erstelle ich ein Partner Center-Konto?
 
@@ -96,4 +96,4 @@ Senden Sie eine e-Mail **<teamsubm@microsoft.com>** mit den folgenden Details:
     * Ein Screenshot des Problems.
 
 > [!div class="nextstepaction"]
-> [Weitere Informationen zu app-Validierungsrichtlinien für Microsoft Teams](/office/dev/store/validation-policies#14-microsoft-teams-apps)
+> [Weitere Informationen zu app-Validierungsrichtlinien für Microsoft Teams](https://docs.microsoft.com/legal/marketplace/certification-policies)

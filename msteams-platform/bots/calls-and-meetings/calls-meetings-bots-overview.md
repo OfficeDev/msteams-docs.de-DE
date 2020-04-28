@@ -2,12 +2,12 @@
 title: Bots für Anrufe und Online Besprechungen
 description: Erfahren Sie, wie Ihre Microsoft Teams-apps mit Benutzern interagieren können, die Sprach-und Videofunktionen mithilfe von Microsoft Graph-APIs für Anrufe und Onlinebesprechungen verwenden.
 keywords: Anrufe für Audio-Video-IVR-VoIP-Onlinebesprechungen
-ms.openlocfilehash: 03bd7e085908a49f070fe84aba87138ecabafb83
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: e89fc576a0688a65e86c03696619569c41b6a3a2
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674249"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914616"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots für Anrufe und Onlinebesprechungen
 
@@ -36,8 +36,8 @@ Um diese Microsoft Graph-APIs in einer Microsoft Teams-APP zu verwenden, erstell
 Hier finden Sie weitere Informationen zum Erstellen und Testen von Anrufen und Online-Besprechungs-Bots:
 
 * [Diagramm-API-Referenz](/graph/api/resources/communications-api-overview?view=graph-rest-beta)
-* [Beispiel-apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-* [Registrieren eines bot, der Anrufe und Onlinebesprechungen](./registering-calling-bot.md) und [Microsoft Graph-Berechtigungen für Anrufe und Online-Besprechungs-Bots](/registering-calling-bot.md#add-microsoft-graph-permissions) unterstützt
+* [Beispielapps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+* [Registrieren eines bot, der Anrufe und Onlinebesprechungen](./registering-calling-bot.md) und [Microsoft Graph-Berechtigungen für Anrufe und Online-Besprechungs-Bots](./registering-calling-bot.md#add-microsoft-graph-permissions) unterstützt
 * [So entwickeln Sie Anrufer-und Online-Besprechungs-Bots auf Ihrem lokalen PC](./debugging-local-testing-calling-meeting-bots.md)
 * [Weitere Informationen zur Echt Zeit Medienverarbeitung](./real-time-media-concepts.md)und [was für die Unterstützung von von Anwendungen gehosteten Medien erforderlich ist](./requirements-considerations-application-hosted-media-bots.md)
 * [Technische Informationen zum Verarbeiten von Benachrichtigungen über eingehende Anrufe](./call-notifications.md)
