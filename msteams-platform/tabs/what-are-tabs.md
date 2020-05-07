@@ -4,12 +4,12 @@ author: laujan
 description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Microsoft Teams-Plattform
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 77faa5a4b3bf7eede1443317ad8baac4934ebf9a
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 1c4f1e2a62fd9ce3542a229cbcb8d79551caee10
+ms.sourcegitcommit: 214eccbadb7f3a67236b79a041ef487b7bf6dfbd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365255"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "44119049"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>Was sind benutzerdefinierte Microsoft Teams-Registerkarten?
 
@@ -24,7 +24,6 @@ Es gibt zwei Arten von Registerkarten in Microsoft Teams – Kanal/Gruppe und pe
 
 > [!div class="checklist"]
 >
-> * Bewusstsein für die gesamte Liste eines Teams.
 > * Wenn einer APP, die auch einen bot enthält, eine Registerkarte hinzugefügt wird, wird der bot ebenfalls dem Team hinzugefügt.
 > * Bekanntheitsgrad der Aad-ID des aktuellen Benutzers.
 > * Gebietsschema Awareness für den Benutzer, um die Sprache anzugeben, `en-us`also. 
