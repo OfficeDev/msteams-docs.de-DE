@@ -6,12 +6,12 @@ layout: LandingPage
 ms.topic: landing-page
 localization_priority: Priority
 ms.author: lajanuar
-ms.openlocfilehash: d73bfe89ba2cc8a62c912572786bd81ab9e641fe
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: 66bc048e3507326d8a330f8d8c1e698e0fdb0576
+ms.sourcegitcommit: 214eccbadb7f3a67236b79a041ef487b7bf6dfbd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120831"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "44163321"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -38,17 +38,21 @@ ms.locfileid: "43120831"
                                         <h3 style="font-size: 1.15rem">Erkunden Sie unsere Dokumentation</h3>
                                         <hr />
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/microsoftteams/platform/overview">Erstellen von Apps auf der Microsoft Teams-Plattform</a></p>
+                                              href="/microsoftteams/platform/overview">Erstellen von Apps auf der Microsoft Teams-Plattform</a></p>
+                                        <p ><a class="barLink" style="font-size: 0.95rem"
+                                                href="/microsoftteams/platform/tabs/what-are-tabs"><img src="/microsoftteams/platform/assets/icons/tab-icon-2.svg" height="16" width="16" alt="tab icon">Registerkarten – Eingebettete Weboberflächen</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions">Aufgabenorientierte Interaktionen mit Messaging-Erweiterungen</a></p>
+                                                href="/microsoftteams/platform/bots/what-are-bots"><img src="/microsoftteams/platform/assets/icons/bot-icon-2.svg" height="16" width="16"  alt="bot icon">Bots – Konversationsbasierte Interaktionen</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/microsoftteams/platform/tabs/what-are-tabs">Eingebettete Weboberfläche mit Registerkarten</a></p>
+                                                href="/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions"><img src="/microsoftteams/platform/assets/icons/messaging-icon-2.svg" height="16" width="16" alt="messaging icon">Messaging-Erweiterungen – Aufgabenorientierte Interaktionen</a></p>
+                                         <p><a class="barLink" style="font-size: 0.95rem"
+                                                href="/microsoftteams/platform/task-modules-and-cards/what-are-task-modules"><img src="https://docs.microsoft.com/media/common/i_queries.svg" height="16" width="16" alt="task module icon">Aufgabenmodule und Karten – reichhaltiges Messaging und Benachrichtigungen</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/microsoftteams/platform/bots/what-are-bots">Bots in Microsoft Teams</a></p>
+                                                href="/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors"><img src="https://docs.microsoft.com/media/common/i_service-hooks.svg" height="16" width="16" alt="webhooks connectors icon">Webhooks und Konnektoren – programmiertes Messaging und Benachrichtigungen</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/graph/teams-concept-overview">Microsoft Teams + Graph</a></p>
+                                                href="https://docs.microsoft.com/graph/teams-concept-overview"><img src="/microsoftteams/platform/assets/icons/graph-icon-1.svg" height="16" width="16" alt="graph icon">Microsoft Teams + Graph</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/MicrosoftTeams/Microsoft-Teams">Verwaltung von Microsoft Teams</a></p>
+                                                href="https://docs.microsoft.com/microsoftteams/"><img src="https://docs.microsoft.com/media/common/i_identity-protection.svg" height="16" width="16" alt="teams admin icon">Verwaltung von Microsoft Teams</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -432,6 +436,82 @@ ms.locfileid: "43120831"
                                                 <div class="cardText">
                                                     <h3>App „Gruppenaktivitäten“</h3>
                                                     <p>Schnelles Erstellen und Verwalten von Aktivitätsgruppen und auf Zusammenarbeit bezogenen Workflows.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-quickresponses">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/teams-troubleshoot.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>App „Schnelle Antworten“</h3>
+                                                    <p>Beantworten Sie die häufig gestellten Fragen der Benutzer, und erstellen Sie eine dynamische Bibliothek mit Antworten.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-remotesupport">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-technical-support-4.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Remote Support-Bot</h3>
+                                                    <p>Stellen Sie eine fokussierte Schnittstelle zwischen anfordernden Mitarbeitern in Ihrer Organisation und dem internen Supportteam bereit.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-incidentreport">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/system-center-service-manager.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Schadensbericht-Bot</h3>
+                                                    <p>Optimieren Sie die Verwaltung von Vorfällen innerhalb Ihrer Organisation.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-requestateam">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com//media/illustrations/teams-fast-track.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>App „Ein Team anfordern“</h3>
+                                                    <p>Verbessern Sie den Arbeitsablauf zum Einrichten neuer Teams in Ihrer Organisation.</p>
                                                 </div>
                                             </div>
                                         </div>
