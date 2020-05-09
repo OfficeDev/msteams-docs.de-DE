@@ -3,12 +3,12 @@ title: App-Zertifizierung
 description: Beschreibt das selbst Bewertungsprogramm von Store-Apps
 keywords: Teams Compliance appsource Store App Certification Partner Center
 ms.date: 05/06/2019
-ms.openlocfilehash: 11c69527e60290f908e8fd3c781a02cd26bbbe14
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ff159f39061dd7073a93d3270d254365db4b2228
+ms.sourcegitcommit: 950e5f9c2a58d3856d026a251c5fe112d4d6121a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674422"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "44170507"
 ---
 # <a name="microsoft-teams-app-certification"></a>Microsoft Teams-App-Zertifizierung
 
@@ -26,7 +26,7 @@ Die Fertigstellung der APP-Zertifizierung ist freiwillig, wird jedoch dringend e
 
 ### <a name="for-existing-store-apps"></a>Für vorhandene Store-Apps
 
-Wenn Sie bereits über eine APP im App Store verfügen und an dem Programm teilnehmen möchten, können Sie sich mit uns in Verbindung setzen, indem Sie [dieses Formular](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3oKPRKv815GlRdzCCYPJGZUOUgzSUtFNU8yOFpYR0oyWElHVkxHODhQUyQlQCN0PWcu)ausfüllen. Jemand aus unserem Team wird Sie nachverfolgen, um den Prozess gestartet zu bekommen.
+Wenn Sie bereits über eine APP im App Store verfügen und an dem Programm teilnehmen möchten, können Sie sich mit uns in Verbindung setzen, indem Sie [dieses Formular](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3oKPRKv815GlRdzCCYPJGZUMzlXMVVIRkhXQUVXT0paQVQ0UUdRWEZSSCQlQCN0PWcu)ausfüllen. Jemand aus unserem Team wird Sie nachverfolgen, um den Prozess gestartet zu bekommen.
 
 ### <a name="for-new-or-updated-store-apps"></a>Für neue oder aktualisierte Store-Apps
 
@@ -44,6 +44,6 @@ Grundlegende Informationen zu Ihrer APP wie lizenzierungsdetails und Kontaktinfo
 
 Informationen darüber, welche Daten Ihre APP sammelt, warum Sie diese Informationen sammeln und ob der Administrator die gesammelten Informationen kontrolliert. Beispiele hierfür sind Daten, auf die über Microsoft Graph zugegriffen wird, alle bot-Funktionen und jede Telemetrie, die Sie sammeln.
 
-#### <a name="security--compliance"></a>Security & Compliance
+#### <a name="security--compliance"></a>Sicherheit & Compliance
 
 Informationen im Zusammenhang mit der Sicherheit und Compliance der gesamten app (nicht nur Ihre Teams-APP, sondern auch die zugrunde liegenden Dienste). Die Informationen werden im Microsoft Cloud App Security-Katalog gespeichert. Weitere Informationen finden Sie auf [dieser Seite](/cloud-app-security/attest-your-app).
