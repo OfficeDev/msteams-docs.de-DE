@@ -100,54 +100,70 @@
           href: concepts/authentication/authentication.md
         - name: Identitätsanbieter konfigurieren
           href: concepts/authentication/configure-identity-provider.md
-- name: Messaging-Erweiterungen
+- name: Registerkarten – Eingebettete Weboberflächen
   items:
-    - name: Was sind Messaging-Erweiterungen?
-      href: messaging-extensions/what-are-messaging-extensions.md
-    - name: Entwurf
-      items:
-        - name: Entwurfsrichtlinien für Messagingerweiterungen
-          href: messaging-extensions/design/messaging-extension-design.md
+    - name: Was sind benutzerdefinierte Registerkarten?
+      href: tabs/what-are-tabs.md
     - name: Schnellstarts
       items:
-        - name: Mit Aktionsbefehl
+        - name: Node.js und React
           items:
-            - name: 'C#/.NET'
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-            - name: TypeScript/Node.js
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action'
-        - name: Mit Suchbefehl
+            - name: Erstellen von Kanal- und Gruppen-Registerkarten
+              href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
+            - name: Erstellen einer persönlichen Registerkarte
+              href: tabs/quickstarts/create-personal-tab-node-yeoman.md
+        - name: 'C#/ASP.NET Core'
           items:
-            - name: 'C#/.NET'
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-            - name: TypeScript/Node.js
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
+            - name: Erstellen von Kanal- und Gruppen-Registerkarten
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
+            - name: Erstellen einer persönlichen Registerkarte
+              href: tabs/quickstarts/create-personal-tab-dotnet-core.md
+        - name: 'C#/ASP.NET MVC'
+          items:
+            - name: Erstellen von Kanal- und Gruppen-Registerkarten
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+            - name: Erstellen einer persönlichen Registerkarte
+              href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
+    - name: Entwerfen Sie Ihre Registerkarten
+      items:
+        - name: Entwurfsübersicht
+          href: tabs/design/tabs.md
+        - name: Registerkarten in mobilen Clients
+          href: tabs/design/tabs-mobile.md
     - name: Schrittanleitungen
       expanded: true
       items:
-        - name: Erstellen einer Nachrichten-Erweiterung
-          href: messaging-extensions/how-to/create-messaging-extension.md
-        - name: Aktionsbasierte Befehle
+        - name: Ihren Apps Registerkarten hinzufügen
+          href: tabs/how-to/add-tab.md
+        - name: Registerkartenseiten erstellen
           items:
-            - name: Aktionsbefehle definieren
-              href: messaging-extensions/how-to/action-commands/define-action-command.md
-            - name: Erstellen und Senden des Aufgabenmoduls
-              href: messaging-extensions/how-to/action-commands/create-task-module.md
-            - name: Senden einer Reaktion auf die Einreichungs-Option
-              href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-        - name: Suchbasierte Befehle
+            - name: Erstellen einer Inhaltsseite
+              href: tabs/how-to/create-tab-pages/content-page.md
+            - name: Erstellen einer Konfigurationsseite
+              href: tabs/how-to/create-tab-pages/configuration-page.md
+            - name: Erstellen einer Seite zum Entfernen von Registerkarten
+              href: tabs/how-to/create-tab-pages/removal-page.md
+        - name: Fügen Sie Ihren Registerkarten Authentifizierungsfunktionen hinzu
           items:
-            - name: Definition von Suchbefehlen
-              href: messaging-extensions/how-to/search-commands/define-search-command.md
-            - name: Suchanfragen erhalten und darauf reagieren
-              href: messaging-extensions/how-to/search-commands/respond-to-search.md
-        - name: Entfalten von Links
-          href: messaging-extensions/how-to/link-unfurling.md
-        - name: Authentifizierung hinzufügen
-          href: messaging-extensions/how-to/add-authentication.md
-        - name: Eine Konfigurationsseite hinzufügen
-          href: messaging-extensions/how-to/add-configuration-page.md
-- name: Bots
+            - name: Authentifizierungsfluss
+              href: tabs/how-to/authentication/auth-flow-tab.md
+            - name: Verwenden von Azure AD-Authentifizierung
+              href: tabs/how-to/authentication/auth-tab-aad.md
+            - name: Verwenden der automatischen Authentifizierung
+              href: tabs/how-to/authentication/auth-silent-aad.md
+            - name: Verwenden der Authentifizierung durch einmaliges Anmelden
+              href: tabs/how-to/authentication/auth-aad-sso.md
+        - name: Verwenden des Teams-Client-SDKs
+          href: tabs/how-to/using-teams-client-sdk.md
+        - name: Weiteren Kontext zu Teams abrufen
+          href: tabs/how-to/access-teams-context.md
+        - name: Entwicklertools für Microsoft Teams-Registerkarten
+          href: tabs/how-to/developer-tools.md
+        - name: SharePoint Ihre benutzerdefinierte Registerkarte hinzufügen
+          href: tabs/how-to/tabs-in-sharepoint.md
+        - name: Geräteberechtigungen anfordern
+          href: tabs/how-to/native-device-permissions.md
+- name: Bots – Konversationsbasierte Interaktionen
   items:
     - name: Was sind Bots in Microsoft Teams?
       href: bots/what-are-bots.md
@@ -218,70 +234,54 @@
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
         - name: Von der Anwendung gehostete Medien
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: Registerkarten
+- name: Messaging-Erweiterungen – Aufgabenorientierte Interaktionen
   items:
-    - name: Was sind benutzerdefinierte Registerkarten?
-      href: tabs/what-are-tabs.md
+    - name: Was sind Messaging-Erweiterungen?
+      href: messaging-extensions/what-are-messaging-extensions.md
+    - name: Entwurf
+      items:
+        - name: Entwurfsrichtlinien für Messagingerweiterungen
+          href: messaging-extensions/design/messaging-extension-design.md
     - name: Schnellstarts
       items:
-        - name: Node.js und React
+        - name: Mit Aktionsbefehl
           items:
-            - name: Erstellen von Kanal- und Gruppen-Registerkarten
-              href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-            - name: Erstellen einer persönlichen Registerkarte
-              href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: 'C#/ASP.NET Core'
+            - name: 'C#/.NET'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
+            - name: TypeScript/Node.js
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action'
+        - name: Mit Suchbefehl
           items:
-            - name: Erstellen von Kanal- und Gruppen-Registerkarten
-              href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-            - name: Erstellen einer persönlichen Registerkarte
-              href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: 'C#/ASP.NET MVC'
-          items:
-            - name: Erstellen von Kanal- und Gruppen-Registerkarten
-              href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-            - name: Erstellen einer persönlichen Registerkarte
-              href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: Entwerfen Sie Ihre Registerkarten
-      items:
-        - name: Entwurfsübersicht
-          href: tabs/design/tabs.md
-        - name: Registerkarten in mobilen Clients
-          href: tabs/design/tabs-mobile.md
+            - name: 'C#/.NET'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
+            - name: TypeScript/Node.js
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
     - name: Schrittanleitungen
       expanded: true
       items:
-        - name: Ihren Apps Registerkarten hinzufügen
-          href: tabs/how-to/add-tab.md
-        - name: Registerkartenseiten erstellen
+        - name: Erstellen einer Nachrichten-Erweiterung
+          href: messaging-extensions/how-to/create-messaging-extension.md
+        - name: Aktionsbasierte Befehle
           items:
-            - name: Erstellen einer Inhaltsseite
-              href: tabs/how-to/create-tab-pages/content-page.md
-            - name: Erstellen einer Konfigurationsseite
-              href: tabs/how-to/create-tab-pages/configuration-page.md
-            - name: Erstellen einer Seite zum Entfernen von Registerkarten
-              href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: Fügen Sie Ihren Registerkarten Authentifizierungsfunktionen hinzu
+            - name: Aktionsbefehle definieren
+              href: messaging-extensions/how-to/action-commands/define-action-command.md
+            - name: Erstellen und Senden des Aufgabenmoduls
+              href: messaging-extensions/how-to/action-commands/create-task-module.md
+            - name: Senden einer Reaktion auf die Einreichungs-Option
+              href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
+        - name: Suchbasierte Befehle
           items:
-            - name: Authentifizierungsfluss
-              href: tabs/how-to/authentication/auth-flow-tab.md
-            - name: Verwenden von Azure AD-Authentifizierung
-              href: tabs/how-to/authentication/auth-tab-aad.md
-            - name: Verwenden der automatischen Authentifizierung
-              href: tabs/how-to/authentication/auth-silent-aad.md
-            - name: Verwenden der Authentifizierung durch einmaliges Anmelden
-              href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: Verwenden des Teams-Client-SDKs
-          href: tabs/how-to/using-teams-client-sdk.md
-        - name: Weiteren Kontext zu Teams abrufen
-          href: tabs/how-to/access-teams-context.md
-        - name: Entwicklertools für Microsoft Teams-Registerkarten
-          href: tabs/how-to/developer-tools.md
-        - name: SharePoint Ihre benutzerdefinierte Registerkarte hinzufügen
-          href: tabs/how-to/tabs-in-sharepoint.md
-        - name: Geräteberechtigungen anfordern
-          href: tabs/how-to/native-device-permissions.md
-- name: Aufgabenmodule und Karten
+            - name: Definition von Suchbefehlen
+              href: messaging-extensions/how-to/search-commands/define-search-command.md
+            - name: Suchanfragen erhalten und darauf reagieren
+              href: messaging-extensions/how-to/search-commands/respond-to-search.md
+        - name: Entfalten von Links
+          href: messaging-extensions/how-to/link-unfurling.md
+        - name: Authentifizierung hinzufügen
+          href: messaging-extensions/how-to/add-authentication.md
+        - name: Eine Konfigurationsseite hinzufügen
+          href: messaging-extensions/how-to/add-configuration-page.md
+- name: Aufgabenmodule und Karten – reichhaltiges Messaging und Benachrichtigungen
   items:
     - name: Was sind Aufgabenmodule?
       href: task-modules-and-cards/what-are-task-modules.md
@@ -303,7 +303,7 @@
           href: task-modules-and-cards/task-modules/task-modules-bots.md
         - name: Aus einer Registerkarte
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-- name: Webhooks und Connectors
+- name: Webhooks und Connectors – programmiertes Messaging und Benachrichtigungen
   items:
     - name: Was sind Webhooks und Connectors?
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
