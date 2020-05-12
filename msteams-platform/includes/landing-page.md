@@ -6,12 +6,12 @@ layout: LandingPage
 ms.topic: landing-page
 localization_priority: Priority
 ms.author: lajanuar
-ms.openlocfilehash: 66bc048e3507326d8a330f8d8c1e698e0fdb0576
-ms.sourcegitcommit: 214eccbadb7f3a67236b79a041ef487b7bf6dfbd
+ms.openlocfilehash: 7a1f3462daa79130994dc976e67bf36b5fca96a7
+ms.sourcegitcommit: 950e5f9c2a58d3856d026a251c5fe112d4d6121a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "44163321"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "44173631"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -128,7 +128,7 @@ ms.locfileid: "44163321"
                 </ul>
             </li>
             <li>
-                <a href="#samples-demos-templates">Beispiele &amp; Vorlagen</a>
+                <a href="#samples-demos-templates">Vorlagen, Integrationen &amp; Beispiele</a>
                 <ul id="samples-demos-templates">
                     <li>
                         <a href="#templates">App-Vorlagen</a>
