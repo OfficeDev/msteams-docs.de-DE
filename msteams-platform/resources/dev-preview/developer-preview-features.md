@@ -2,26 +2,22 @@
 title: Features in der Public Developer Preview
 description: Beschreibt die Features in der öffentlichen Entwicklervorschau von Microsoft Teams
 keywords: Entwicklerfeatures in Microsoft Teams Preview
-ms.openlocfilehash: abec097d9f3b6fb48a4a50cb26d73cf811151149
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 7ed442072779917dcc5db3ebcb4afaac9db0407f
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674111"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210701"
 ---
 # <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Features in der Public Preview für Entwickler von Microsoft Teams
 
 Die Entwicklervorschau umfasst die folgenden neuen Features:
 
-## <a name="mention-support-in-adaptive-cards"></a>Erwähnung der Unterstützung in adaptiven Karten
+## <a name="adaptive-cards-v12-support"></a>Adaptive Cards v 1.2-Unterstützung
 
-Sie können nun @ Mentions in einem adaptiven Kartentext für Bots und Messaging-Erweiterungs Antworten hinzufügen. @ Mentions in Cards beruhen auf der gleichen Benachrichtigungslogik und der gleichen Darstellung wie die von regulären erwähnten Meldungen. Beachten Sie, dass kartenbasierte Erwähnungen nur heute in den Webservern und Desktop Clients unterstützt werden, wobei die Unterstützung für die Wiedergabe in mobilen Clients in Kürze verfügbar ist.
+Die Unterstützung für [Adaptive Karten v 1.2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0) in Microsoft Teams steht nun der allgemeinen Öffentlichkeit zur Verfügung. [Medienelemente](https://adaptivecards.io/explorer/Media.html) werden jedoch derzeit in Adaptive Cards v 1.2 auf der Microsoft Teams-Plattform nicht unterstützt.
 
-## <a name="adaptive-12-support"></a>Adaptive 1,2-Unterstützung
-
-Microsoft Teams unterstützt jetzt die [Adaptive Version 1,2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0) in der Entwicklervorschau. Beachten Sie, dass [Medienelemente](https://adaptivecards.io/explorer/Media.html) noch nicht unterstützt werden.
-
-## <a name="tabs-single-sign-on"></a>Registerkarten für einmaliges Anmelden
+## <a name="tabs-single-sign-on-sso"></a>Registerkarten für einmaliges Anmelden (SSO)
 
 Sie können jetzt [einmaliges Anmelden (Single Sign-on, SSO)](~/tabs/how-to/authentication/auth-aad-sso.md) für die Anmeldung und Authentifizierung eines Benutzers auf Desktop-und Mobilgeräten verwenden, indem Sie das Microsoft Teams-JavaScript-SDK über eine Webinhalts Seite verwenden. Einer der Vorteile besteht darin, dass sich ein Benutzer niemals anmelden muss; und nachdem Sie der App mithilfe Ihres Profils zugestimmt haben: Sie werden automatisch auf Ihrer Registerkarte (einschließlich Mobiltelefon) angemeldet.
 

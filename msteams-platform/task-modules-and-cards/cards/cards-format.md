@@ -3,12 +3,12 @@ title: Text Formatierung in Karten
 description: Beschreibt die Formatierung von Karten Texten in Microsoft Teams
 keywords: Teams-Bots-Kartenformat
 ms.date: 03/29/2018
-ms.openlocfilehash: 9ced8a8956265322e91b9d40dc7dc7064ee4659f
-ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
+ms.openlocfilehash: e857a1250593c135aa23ad38a571a5561bb91431
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "43550952"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210687"
 ---
 # <a name="format-cards-in-teams"></a>Formatieren von Karten in Microsoft Teams
 
@@ -18,19 +18,19 @@ Karten unterstützen die Formatierung nur in der Text-Eigenschaft, nicht in den 
 
 Die Formatierungsunterstützung unterscheidet sich zwischen verschiedenen Kartentypen, und das Rendering der Karte kann sich geringfügig zwischen dem Desktop und den Clients für Mobile Teams sowie Microsoft Teams im Desktop Browser unterscheiden.
 
-Sie können ein Inlinebild mit einer beliebigen Teams-Karte einfügen. Bilder werden als, `.png` `.jpg`oder `.gif` Dateien formatiert und dürfen nicht mehr als 1024 × 1024 px oder 1 MB betragen. Animierte GIF-Zeichen werden nicht offiziell unterstützt. *Siehe* [Karten Referenz](./cards-reference.md#inline-card-images)
+Sie können ein Inlinebild mit einer beliebigen Teams-Karte einfügen. Bilder werden als `.png` , `.jpg` oder `.gif` Dateien formatiert und dürfen nicht mehr als 1024 × 1024 px oder 1 MB betragen. Animierte GIF-Zeichen werden nicht offiziell unterstützt. *Siehe* [Karten Referenz](./cards-reference.md#inline-card-images)
 
 ## <a name="formatting-cards-with-markdown"></a>Formatieren von Karten mit Abschlag
 
 Es gibt zwei Kartentypen, die das Abschlag in Microsoft Teams unterstützen:
 
 > [!div class="checklist"]
-> * **Adaptive Karten**: das Abschlag wird sowohl im `Textblock` Feld Adaptive Karten als `Fact.Title` auch `Fact.Value`unterstützt. HTML wird in adaptiven Karten nicht unterstützt.
+> * **Adaptive Karten**: das Abschlag wird sowohl im Feld Adaptive Karten `Textblock` als auch unterstützt `Fact.Title` `Fact.Value` . HTML wird in adaptiven Karten nicht unterstützt.
 > * **O365-connectorkarten**: Abschlag und limitierter HTML-Code werden in Office 365-connectorkarten in den Textfeldern unterstützt.
 
 # <a name="markdown-formatting-adaptive-cards"></a>[**Abschlag Formatierung: Adaptive Karten**](#tab/adaptive-md)
 
- Die unterstützten `Textblock`Format `Fact.Title` Vorlagen `Fact.Value` für und sind:
+ Die unterstützten Formatvorlagen für `Textblock` `Fact.Title` und `Fact.Value` sind:
 
 | Format | Beispiel | Markdown |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ Die folgenden Abschlag Tags werden nicht unterstützt:
 
 ### <a name="newlines-for-adaptive-cards"></a>Neugliederungen für Adaptive Karten
 
-In Listen können Sie die oder `\r` `\n` Escape-Sequenzen für "reinlines" verwenden. Die `\n\n` Verwendung in einer Liste bewirkt, dass das nächste Element in der Liste eingerückt wird. Wenn Sie an einer anderen Stelle im TextBlock eine Umrisse `\n\n`benötigen, verwenden Sie.
+In Listen können Sie die `\r` oder `\n` Escape-Sequenzen für "reinlines" verwenden. `\n\n`Die Verwendung in einer Liste bewirkt, dass das nächste Element in der Liste eingerückt wird. Wenn Sie an einer anderen Stelle im TextBlock eine Umrisse benötigen, verwenden Sie `\n\n` .
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops für Adaptive Karten
 
@@ -109,12 +109,14 @@ Auf Android wird die Formatierung für Adaptive Karten Abschriften wie folgt ang
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards"></a>Erwähnung von Unterstützung in adaptiven Karten
+### <a name="mention-support-within-adaptive-cards-v12"></a>Erwähnung der Unterstützung in Adaptive Cards v 1.2
+
+Kartenbasierte Erwähnungen werden in den Netz-, Desktop-und mobilen Clients unterstützt. Sie können @ Mentions in einem adaptiven Kartentext für Bots und Messaging-Erweiterungs Antworten hinzufügen.  Um @ Mentions in Cards hinzuzufügen, befolgten Sie die gleiche Benachrichtigungslogik und die gleiche Darstellung wie die nachrichtenbasierte [Erwähnungen in Kanal-und Gruppenchat Unterhaltungen](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions ).
+
+Bots und Messaging-Erweiterungen können Erwähnungen innerhalb des Karteninhalts in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) und [FactSet](https://adaptivecards.io/explorer/FactSet.html) -Elementen enthalten.
 
 > [!NOTE]
-> Die Erwähnung der Unterstützung in Cards wird derzeit nur in der [Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md) unterstützt.
-
-Bots und Messaging-Erweiterungen können jetzt Erwähnungen innerhalb des Karteninhalts in Text Block-und FactSet-Elementen enthalten.
+>[Medienelemente](https://adaptivecards.io/explorer/Media.html) werden derzeit in Adaptive Cards v 1.2 auf der Teams-Plattform nicht unterstützt.
 
 ### <a name="constructing-mentions"></a>Erstellen von Erwähnungen
 
@@ -122,8 +124,6 @@ Um eine Erwähnung in eine Adaptive Karte aufzunehmen, muss Ihre APP die folgend
 
 * `<at>username</at>`in den unterstützten Adaptive Card-Elementen
 * Das `mention` Objekt innerhalb einer `msteams` Eigenschaft im Karteninhalt, das die Teams-Benutzer-ID des erwähnten Benutzers enthält
-
-Beachten Sie, dass derzeit keine Karten mit Erwähnungen auf mobilen Clients unterstützt werden.
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>Beispiel Adaptive Karte mit Erwähnung
 
@@ -164,7 +164,7 @@ Connectorkarten unterstützen beschränkte Abschlag-und HTML-Formatierung. Die H
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| Kopfzeile (Ebenen 1&ndash;3) | **Text** | `### Text`|
+| Kopfzeile (Ebenen 1 &ndash; 3) | **Text** | `### Text`|
 | durchgestrichen | ~~text~~ | `~~text~~` |
 | Unsortierte Liste | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | sortierte Liste | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -173,7 +173,7 @@ Connectorkarten unterstützen beschränkte Abschlag-und HTML-Formatierung. Die H
 | Link | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
 | Bild Link |![Duck on a Rock](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
-In connectorkarten werden für die neureihen für `\n\n`, jedoch nicht für `\n` oder `\r`gerendert.
+In connectorkarten werden für die neureihen für `\n\n` , jedoch nicht für `\n` oder gerendert `\r` .
 
 ### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>Unterschiede bei Mobiltelefonen und Desktops für connectorkarten mit Abschlag
 
@@ -253,7 +253,7 @@ Connectorkarten unterstützen beschränkte Abschlag-und HTML-Formatierung. Das A
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| Kopfzeile (Ebenen 1&ndash;3) | **Text** | `<h3>Text</h3>` |
+| Kopfzeile (Ebenen 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | durchgestrichen | ~~text~~ | `<strike>text</strike>` |
 | Unsortierte Liste | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | sortierte Liste | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -262,7 +262,7 @@ Connectorkarten unterstützen beschränkte Abschlag-und HTML-Formatierung. Das A
 | Link | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | Bild Link | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-In connectorkarten werden die Neubuchungen in HTML mithilfe des `<p>` -Tags gerendert.
+In connectorkarten werden die Neubuchungen in HTML mithilfe des- `<p>` Tags gerendert.
 
 ### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a>Unterschiede zwischen Mobiltelefonen und Desktops für connectorkarten mithilfe von HTML
 
@@ -341,7 +341,7 @@ HTML-Tags werden für einfache Karten wie die Hero-und die Thumbnail-Karte unter
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| Kopfzeile (Ebenen 1&ndash;3) | **Text** | `<h3>Text</h3>` |
+| Kopfzeile (Ebenen 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | durchgestrichen | ~~text~~ | `<strike>text</strike>` |
 | Unsortierte Liste | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | sortierte Liste | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

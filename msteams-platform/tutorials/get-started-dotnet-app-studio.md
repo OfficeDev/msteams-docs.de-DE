@@ -5,12 +5,12 @@ keywords: Erste Schritte mit .net c# CSharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 61237cd3178fcb41357230536827f732faf65ee4
-ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
+ms.openlocfilehash: c29fdde23ff6ff0e8269ccaf256c5154c0145a7b
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "43550959"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210694"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-cnet-and-app-studio"></a>Erste Schritte mit der Microsoft Teams-Plattform mit C#/.net und App Studio
 
@@ -31,9 +31,9 @@ Um dieses Lernprogramm abzuschließen, müssen Sie die folgenden Tools abrufen:
 - [Installieren von git](https://git-scm.com/downloads)
 - [Installieren Sie Visual Studio](https://www.visualstudio.com/downloads/). Sie können die ﻿kostenlose Community Edition installieren.
 
-Wenn Sie während der Installation eine Option `git` zum Hinzufügen des Pfads sehen, wählen Sie aus. Das ist praktisch.
+Wenn Sie während der Installation eine Option zum Hinzufügen `git` des Pfads sehen, wählen Sie aus. Das ist praktisch.
 
-Überprüfen `git` Sie Ihre Installation, indem Sie Folgendes in einem Terminalfenster ausführen:
+Überprüfen Sie Ihre `git` Installation, indem Sie Folgendes in einem Terminalfenster ausführen:
 > [!NOTE]
 > Verwenden Sie das Terminal-Fenster, mit dem Sie sich am besten auf Ihrer Plattform vertraut machen. In diesen Beispielen wird bash verwendet, wird jedoch auf den meisten Plattformen ausgeführt.
 
@@ -64,7 +64,7 @@ git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
 
 ## <a name="build-and-run-the-sample"></a>Erstellen und Ausführen des Beispiels
 
-Nachdem das Repository geklont wurde, verwenden Sie Visual Studio, um die Lösungsdatei `Microsoft.Teams.Samples.HelloWorld.sln` aus dem Stammverzeichnis des Beispiels zu öffnen und `Build Solution` im `Build` Menü zu klicken. Sie können das Beispiel durch Drücken `F5` oder auswählen `Start Debugging` im `Debug` Menü ausführen.
+Nachdem das Repository geklont wurde, verwenden Sie Visual Studio, um die Lösungsdatei `Microsoft.Teams.Samples.HelloWorld.sln` aus dem Stammverzeichnis des Beispiels zu öffnen und im Menü zu klicken `Build Solution` `Build` . Sie können das Beispiel durch Drücken `F5` oder auswählen im `Start Debugging` Menü Ausführen `Debug` .
 
 Wenn die APP gestartet wird, wird ein Browserfenster geöffnet, in dem der Stamm der APP gestartet ist. Sie können zu den folgenden URLs navigieren, um sicherzustellen, dass alle App-URLs geladen werden:
 
@@ -76,15 +76,15 @@ Wenn die APP gestartet wird, wird ein Browserfenster geöffnet, in dem der Stamm
 <a name="HostSample"></a>
 
 > [!Note]
-> Wenn Sie eine Fehlermeldung wie `Could not find a part of the path … bin\roslyn\csc.exe`erhalten, versuchen Sie, das Paket mit `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`dem Befehl zu aktualisieren. Weitere Informationen finden Sie [in dieser Frage auf StackOverflow](https://stackoverflow.com/questions/32780315) .
+> Wenn Sie eine Fehlermeldung wie erhalten `Could not find a part of the path … bin\roslyn\csc.exe` , versuchen Sie, das Paket mit dem Befehl zu aktualisieren `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r` . Weitere Informationen finden Sie [in dieser Frage auf StackOverflow](https://stackoverflow.com/questions/32780315) .
 
 ## <a name="host-the-sample-app"></a>Hosten der Beispiel-App
 
-Beachten Sie, dass apps in Microsoft Teams Webanwendungen sind, die eine oder mehrere Funktionen verfügbar machen. Damit die Microsoft Teams-Plattform Ihre APP lädt, muss Ihre APP über das Internet erreichbar sein. Damit Ihre APP über das Internet erreichbar ist, müssen Sie Ihre APP hosten. Sie können es entweder in Microsoft Azure kostenlos hosten oder einen Tunnel für den lokalen Prozess auf dem Entwicklungscomputer mit `ngrok`erstellen. Wenn Sie das Hosten Ihrer APP abgeschlossen haben, notieren Sie sich die Stamm-URL. Es sieht etwa wie folgt aus `https://yourteamsapp.ngrok.io` : `https://yourteamsapp.azurewebsites.net`oder.
+Beachten Sie, dass apps in Microsoft Teams Webanwendungen sind, die eine oder mehrere Funktionen verfügbar machen. Damit die Microsoft Teams-Plattform Ihre APP lädt, muss Ihre APP über das Internet erreichbar sein. Damit Ihre APP über das Internet erreichbar ist, müssen Sie Ihre APP hosten. Sie können es entweder in Microsoft Azure kostenlos hosten oder einen Tunnel für den lokalen Prozess auf dem Entwicklungscomputer mit erstellen `ngrok` . Wenn Sie das Hosten Ihrer APP abgeschlossen haben, notieren Sie sich die Stamm-URL. Es sieht etwa wie folgt aus: `https://yourteamsapp.ngrok.io` oder `https://yourteamsapp.azurewebsites.net` .
 
 ### <a name="tunnel-using-ngrok"></a>Tunnel mit ngrok
 
-Für schnelle Tests können Sie die APP auf Ihrem lokalen Computer ausführen und einen Tunnel über einen Webendpunkt erstellen. [ngrok](https://ngrok.com) ist ein kostenloses Tool, mit dem Sie genau dies tun können. Mit ngrok können Sie eine Webadresse wie `https://d0ac14a5.ngrok.io` (diese URL ist nur ein Beispiel) erhalten. Sie können ngrok für Ihre Umgebung [herunterladen und installieren](https://ngrok.com/download) . Stellen Sie sicher, dass Sie Sie an einen Speicherort `PATH`in Ihrem hinzufügen.
+Für schnelle Tests können Sie die APP auf Ihrem lokalen Computer ausführen und einen Tunnel über einen Webendpunkt erstellen. [ngrok](https://ngrok.com) ist ein kostenloses Tool, mit dem Sie genau dies tun können. Mit ngrok können Sie eine Webadresse wie `https://d0ac14a5.ngrok.io` (diese URL ist nur ein Beispiel) erhalten. Sie können ngrok für Ihre Umgebung [herunterladen und installieren](https://ngrok.com/download) . Stellen Sie sicher, dass Sie Sie an einen Speicherort in Ihrem hinzufügen `PATH` .
 
 Nachdem Sie es installiert haben, können Sie ein neues Terminalfenster öffnen und den folgenden Befehl ausführen, um einen Tunnel zu erstellen. Im Beispiel wird Port 3333 verwendet, stellen Sie daher sicher, dass Sie es hier angeben.
 
@@ -92,10 +92,10 @@ Nachdem Sie es installiert haben, können Sie ein neues Terminalfenster öffnen 
 ngrok http 3333 -host-header=localhost:3333
 ```
 
-Ngrok wird Anfragen aus dem Internet abhören und diese an Ihre APP weiterleiten, die auf Port 3333 läuft. Sie können überprüfen, ob Sie Ihren Browser öffnen `https://d0ac14a5.ngrok.io/hello` und die Hello-Seite Ihrer App laden. Achten Sie darauf, dass Sie die von ngrok in ihrer Konsolensitzung angezeigte Weiterleitungsadresse anstelle dieser URL verwenden.
+Ngrok wird Anfragen aus dem Internet abhören und diese an Ihre APP weiterleiten, die auf Port 3333 läuft. Sie können überprüfen, ob Sie Ihren Browser öffnen und die `https://d0ac14a5.ngrok.io/hello` Hello-Seite Ihrer App laden. Achten Sie darauf, dass Sie die von ngrok in ihrer Konsolensitzung angezeigte Weiterleitungsadresse anstelle dieser URL verwenden.
 
 > [!NOTE]
-> Wenn Sie einen anderen Port im Schritt " [Build" und "ausführen](#build-and-run-the-sample) " verwendet haben, stellen Sie sicher, dass Sie die gleiche Port `ngrok` Nummer zum Einrichten des Tunnels verwenden.
+> Wenn Sie einen anderen Port im Schritt " [Build" und "ausführen](#build-and-run-the-sample) " verwendet haben, stellen Sie sicher, dass Sie die gleiche Portnummer zum Einrichten des `ngrok` Tunnels verwenden.
 > [!TIP]
 > Es empfiehlt sich, `ngrok` in einem anderen Terminalfenster ausgeführt zu werden, damit es ausgeführt wird, ohne dass die APP beeinträchtigt wird, die Sie später möglicherweise beenden, neu erstellen und erneut ausführen müssen. Die `ngrok` Sitzung gibt nützliche Debuginformationen in diesem Fenster zurück.
 
@@ -103,7 +103,7 @@ Die APP ist nur während der aktuellen Sitzung auf dem Entwicklungscomputer verf
 
 ### <a name="host-in-azure"></a>Host in Azure
 
-Microsoft Azure können Sie Ihre .NET-Anwendung auf einer freien Ebene mit der freigegebenen Infrastruktur hosten. Dies reicht aus, um dieses `Hello World` Beispiel ausführen zu können. Weitere Informationen finden Sie unter [Erstellen eines neuen kostenlosen Kontos](https://azure.microsoft.com/free/) .
+Microsoft Azure können Sie Ihre .NET-Anwendung auf einer freien Ebene mit der freigegebenen Infrastruktur hosten. Dies reicht aus, um dieses Beispiel ausführen zu können `Hello World` . Weitere Informationen finden Sie unter [Erstellen eines neuen kostenlosen Kontos](https://azure.microsoft.com/free/) .
 
 Visual Studio bietet integrierte Unterstützung für die APP-Bereitstellung für unterschiedliche Anbieter, einschließlich Azure.
 
@@ -115,7 +115,7 @@ Visual Studio bietet integrierte Unterstützung für die APP-Bereitstellung für
 
 Für die Beispiel-App müssen die folgenden Umgebungsvariablen auf die Werte festgelegt werden, auf die Sie zuvor hingewiesen haben.
 
-Öffnen Sie die Datei "Internet. config", und suchen Sie nach dem Abschnitt *appSettings* . Aktualisieren Sie den *MicrosoftAppId* -Wert mit ihrer bot-ID, die Sie zuvor gespeichert haben. Aktualisieren Sie das *MicrosoftAppPassword* mit dem zuvor gespeicherten bot-Kennwort.
+Öffnen Sie die Datei appSettings. JSON. Aktualisieren Sie den *MicrosoftAppId* -Wert mit ihrer bot-ID, die Sie zuvor gespeichert haben. Aktualisieren Sie das *MicrosoftAppPassword* mit dem zuvor gespeicherten bot-Kennwort.
 
 <img width="560px" src="~/assets/images/get-started/get-started-net-azure-add-keys.png" title="Festlegen der Schlüssel"/>
 
@@ -123,13 +123,13 @@ Nachdem diese Änderungen vorgenommen wurden, erstellen Sie die APP neu. Wenn Si
 
 ## <a name="configure-the-app-tab"></a>Konfigurieren der Registerkarte "App"
 
-Nachdem Sie die app in einem Team installiert haben, müssen Sie Sie so konfigurieren, dass Inhalte angezeigt werden. Wechseln Sie zu einem Kanal im Team, in dem Sie die Beispiel-App installiert haben, und klicken Sie auf die Schaltfläche **"+"** , um eine neue Registerkarte hinzuzufügen. Sie können dann in `Hello World` der Liste **Registerkarte hinzufügen** auswählen. Anschließend wird ein Konfigurationsdialogfeld angezeigt. In diesem Dialogfeld können Sie auswählen, welche Registerkarte in diesem Kanal angezeigt werden soll. Nachdem Sie die Registerkarte ausgewählt haben und `Save` klicken Sie auf dann können `Hello World` Sie die Registerkarte mit der ausgewählten Registerkarte geladen sehen.
+Nachdem Sie die app in einem Team installiert haben, müssen Sie Sie so konfigurieren, dass Inhalte angezeigt werden. Wechseln Sie zu einem Kanal im Team, in dem Sie die Beispiel-App installiert haben, und klicken Sie auf die Schaltfläche **"+"** , um eine neue Registerkarte hinzuzufügen. Sie können dann `Hello World` in der Liste **Registerkarte hinzufügen** auswählen. Anschließend wird ein Konfigurationsdialogfeld angezeigt. In diesem Dialogfeld können Sie auswählen, welche Registerkarte in diesem Kanal angezeigt werden soll. Nachdem Sie die Registerkarte ausgewählt haben und klicken Sie auf `Save` dann können Sie die `Hello World` Registerkarte mit der ausgewählten Registerkarte geladen sehen.
 
 <img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot von configure" />
 
 ### <a name="test-your-bot-in-teams"></a>Testen Sie Ihren bot in Microsoft Teams
 
-Sie können nun mit dem bot in Microsoft Teams interagieren. Wählen Sie einen Kanal in dem Team aus, in dem Sie Ihre APP `@your-bot-name`registriert haben, und geben Sie ein. Dies wird als ** \@Erwähnung**bezeichnet. Jede Nachricht, die Sie an den bot senden, wird als Antwort an Sie zurückgesendet.
+Sie können nun mit dem bot in Microsoft Teams interagieren. Wählen Sie einen Kanal in dem Team aus, in dem Sie Ihre APP registriert haben, und geben Sie ein `@your-bot-name` . Dies wird als ** \@ Erwähnung**bezeichnet. Jede Nachricht, die Sie an den bot senden, wird als Antwort an Sie zurückgesendet.
 
 <img width="450px" title="Bot-Antworten" src="~/assets/images/samples-hello-world-bot.png" />
 
