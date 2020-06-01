@@ -2,32 +2,22 @@
 title: Registerkarten auf mobilen Geräten
 description: Beschreibt die Richtlinien für das Entwerfen von Registerkarten, die auf mobilen Geräten funktionieren.
 keywords: Teams-Entwurfsrichtlinien – Referenzrahmen-Mobile Registerkarten für persönliche apps
-ms.openlocfilehash: 928fb8586434eca9cc1577fd45c6b94594724d7f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6fe40b9cc5b6e898d0f0bce14b3dfedfd2c14032
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674346"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455520"
 ---
 # <a name="tabs-on-mobile"></a>Registerkarten auf mobilen Geräten
-
-> [!Important]
-> Die vollständige Unterstützung für Registerkarten auf mobilen Clients wird in Kürze verfügbar sein. Um diese Änderung vorzubereiten, sollten Sie die folgenden Anweisungen beim Erstellen Ihrer Registerkarten befolgten. Persönliche Apps (statische Registerkarten) sind derzeit in der [Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md)verfügbar. und Channel/Group Chat Registerkarten stehen im `...` Überlaufmenü für die Registerkarte zur Verfügung.
->
-> Wenn die vollständige Unterstützung für Tabs freigegeben wird:
->
-> * Alle Registerkarten sind auf mobilen Geräten immer verfügbar.
-> * Ihr `contentUrl` **wird in den Mobile Teams-Client geladen**.
-> * Bei Kanälen/Gruppenregisterkarten können Benutzer ihre Registerkarte weiterhin in einem separaten Browser öffnen `websiteUrl`, jedoch werden Sie `contentUrl` zuerst geladen.
-> * Wenn Ihre Registerkarte die Authentifizierung verwendet, müssen Sie Ihr Microsoft Teams-JavaScript-SDK auf Version 1.4.1 oder höher aktualisieren, oder die Authentifizierung schlägt fehl.
 
 Benutzerdefinierte Registerkarten können Teil eines Kanals, Gruppenchats oder einer persönlichen APP sein (apps, die statische Registerkarten und/oder einen 1:1-bot enthalten).
 
 Persönliche apps sind auf mobilen Clients in der APP-Schublade verfügbar. Die APP kann nur von einem Desktop-oder WebClient installiert werden, und es kann bis zu 24 Stunden dauern, bis Sie auf mobilen Clients angezeigt wird.
 
-Gruppen-und Kanal Registerkarten sind auch auf mobilen Clients verfügbar. Das Standardverhalten besteht derzeit darin, `websiteUrl` dass Sie Ihre Registerkarte in einem Browserfenster starten können. Sie können jedoch auf einem mobilen Client geladen werden, indem Sie auf `...` das Überlaufmenü neben der Registerkarte und dann auf **Öffnen**klicken, `contentUrl` mit dem Sie die Registerkarte in den mobilen Microsoft Teams-Client laden.
+Gruppen-und Kanal Registerkarten sind auch auf mobilen Clients verfügbar. Das Standardverhalten besteht derzeit darin, dass Sie Ihre `websiteUrl` Registerkarte in einem Browserfenster starten können. Sie können jedoch auf einem mobilen Client geladen werden, indem Sie auf das `...` Überlaufmenü neben der Registerkarte und dann auf **Öffnen**klicken, mit dem Sie `contentUrl` die Registerkarte in den mobilen Microsoft Teams-Client laden.
 
-![Mobile App Schublade](~/assets/images/app-drawer.png)
+![Mobile App Schublade](../../assets/images/personal-app-mobile.png)
 
 ## <a name="developer-considerations-for-mobile-support"></a>Entwickler Überlegungen für die Mobile Unterstützung
 
@@ -45,7 +35,7 @@ Da die Registerkarte auf Geräten mit einer großen Bandbreite von Bildschirmgr�
 
 Damit die Authentifizierung auf mobilen Clients funktioniert, müssen Sie Microsoft Teams js SDK auf mindestens Version 1.4.1 aktualisieren.
 
-### <a name="low-bandwidth--intermittent-connections"></a>Geringe Bandbreiten #a0 intermittierende Verbindungen
+### <a name="low-bandwidth--intermittent-connections"></a>Geringe Bandbreiten & intermittierende Verbindungen
 
 Mobile Clients müssen regelmäßig mit niedriger Bandbreite und zeitweiligen Verbindungen arbeiten. Ihre APP sollte alle Timeouts entsprechend behandeln, indem Sie dem Benutzer eine Kontext Meldung bereitstellt. Sie sollten auch Benutzer Fortschrittsindikatoren angeben, um Ihren Benutzern Feedback für alle langwierigen Prozesse zur Verfügung zu stellen.
 
@@ -63,7 +53,7 @@ Dies ist ein großer Bereich, in dem Arbeit erledigt wird. Die wiki-app folgt di
 
 ![einzelnes Canvas-Layout](~/assets/images/mobile-single-canvas.png)
 
-#### <a name="list"></a>Liste
+#### <a name="list"></a>Auflisten
 
 Listen eignen sich hervorragend zum Sortieren und Filtern großer Datenmengen und bieten eine große Rolle, um die wichtigsten Dinge am besten zu halten. Es ist hilfreich, sortierbare Spalten zu verwenden. Im Menü mit den Auslassungspunkten können jedem Listenelementaktionen hinzugefügt werden.
 
@@ -81,7 +71,7 @@ Im folgenden finden Sie ein Beispiel für eine persönliche APP, die zwei statis
 
 ![Tabs und Bots auf mobilen Geräten](~/assets/images/mobile-tab-with-bot.png)
 
-### <a name="ui-components"></a>Benutzeroberflächenkomponenten
+### <a name="ui-components"></a>Komponenten der Benutzeroberfläche
 
 #### <a name="color-palettes"></a>Farbpaletten
 

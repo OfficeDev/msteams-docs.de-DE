@@ -2,12 +2,12 @@
 title: Neuerungen
 description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 keywords: Teams What es New Latest
-ms.openlocfilehash: de3366594d58996b689fc3d50f41a70ff80facee
-ms.sourcegitcommit: 28af65730884b788ff77a4ec4032219380df8b70
+ms.openlocfilehash: eede16c65faa2366b8c0734a39d84b558b1d68ed
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "44281832"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453854"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuerungen für Entwickler in Microsoft Teams
 
@@ -17,24 +17,25 @@ Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und d
 
 | **Date** | **Hinweise** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
+| 05/20/2020 | Ressourcenspezifische Genehmigungsberechtigungen mit Microsoft Graph-APIs befinden sich in der Entwicklervorschau. |[Ressourcenspezifische Zustimmung (RSC) – Entwicklervorschau](graph-api/rsc/resource-specific-consent.md) |
 | 03/24/2020 | Unterstützung für das Abrufen eines einzelnen Elements einer Unterhaltung und zusätzlicher Unterstützung für das Abrufen von ausgelagerten Elementen hinzugefügt. | [Teams-Kontext für Ihren Bot erhalten](~/bots/how-to/get-teams-context.md)
-| 12/26/2019 | Der `replyToId` Parameter in Nutzlasten, die an einen bot gesendet werden, ist nicht mehr verschlüsselt, sodass Sie diesen Wert verwenden können, um Deeplinks für diese Nachrichten zu erstellen. Nachrichten Nutzlasten enthalten die verschlüsselten Werte im Parameter `legacy.replyToId` .  |
-| 11/5/2019 | Einmaliges Anmelden mit dem Microsoft Teams-JavaScript-SDK in einer Webinhalts Seite befindet sich in der Entwicklervorschau | [Einmaliges Anmelden](tabs/how-to/authentication/auth-aad-sso.md) |
+| 12/26/2019 | Der `replyToId` Parameter in Nutzlasten, die an einen bot gesendet werden, ist nicht mehr verschlüsselt, sodass Sie diesen Wert verwenden können, um Deeplinks für diese Nachrichten zu erstellen. Nachrichten Nutzlasten enthalten die verschlüsselten Werte im Parameter. `legacy.replyToId`.  |
+| 11/5/2019 | Das einmalige Anmelden mit dem Microsoft Teams-JavaScript-SDK in einer Webinhalts Seite befindet sich in der Entwicklervorschau. | [Einmaliges Anmelden](tabs/how-to/authentication/auth-aad-sso.md) |
 | 10/31/2019 | Unter Haltungs Bots und Messaging-Erweiterungs Dokumentation aktualisiert, um das 4,6 bot Framework SDK widerzuspiegeln. Die Dokumentation für das V3 SDK steht im Abschnitt Resources zur Verfügung. | Alle bot-und Messaging-Erweiterungs Dokumentation. |
-| 10/31/2019 | Neue Dokumentationsstruktur und wichtige Artikel Umgestaltung. Melden Sie alle Dead Links oder 404s, indem Sie ein GitHub-Problem erstellen. | Alle! |
-| 9/13/2019 | Anforderungs-bot wird von der Aktions basierten Messaging Erweiterung installiert | [Initiieren von Aktionen mit Messaging Erweiterungen](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
-| 8/28/2019 | Unterstützung für private Kanäle in Registerkarten und Connectors | [Kontext für die Registerkarte abrufen](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
-| 06/20/2019 | Freigeben einer externen Website von einer externen Website in einen Teams-Kanal | [Freigeben für Teams](~/share-to-teams.md) |
-| 05/25/2019 | Antworten mit bot-Nachrichten aus dem Aufgabenmodul | [Antworten mit bot-Nachrichten aus dem Aufgabenmodul](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
-| 05/25/2019 | Bots in Gruppenchats | [Interagieren mit einem bot im Gruppenchat oder-Kanal](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
-| 05/20/2019 | App-Manifest-Lokalisierung | [App-Lokalisierung](~/publishing/apps-localization.md) |
-| 05/20/2019 | Nachrichten Aktionen | [Nachrichten Aktionen](resources/messaging-extension-v3/create-extensions.md#action-type-message-extensions) |
-| 05/20/2019 | Verknüpfungs Entfaltung (benutzerdefinierte URL-Vorschau) | [Entfalten von Links](messaging-extensions/how-to/link-unfurling.md)|
-| 05/06/2019 | Anwendungs Zertifizierungsprogramm für Store-Apps | [Anwendungszertifizierung](~/publishing/application-certification.md) |
+| 10/31/2019 | Neue Dokumentationsstruktur und wichtige Artikel Umgestaltung. Melden Sie alle toten Links oder 404s, indem Sie ein GitHub-Problem erstellen. | Alle! |
+| 9/13/2019 | Der Anforderungs-bot wird von der Aktions basierten Messaging Erweiterung installiert. | [Initiieren von Aktionen mit Messaging Erweiterungen](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
+| 8/28/2019 | Unterstützung für private Kanäle in Registerkarten und Connectors. | [Kontext für die Registerkarte abrufen](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
+| 06/20/2019 | Geben Sie eine externe Website aus einer externen Website in einen Teams-Kanal frei. | [Freigeben für Teams](~/share-to-teams.md) |
+| 05/25/2019 | Antwort mit der bot-Nachricht aus dem Aufgabenmodul. | [Antworten mit bot-Nachrichten aus dem Aufgabenmodul](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
+| 05/25/2019 | Bots in Gruppenchats. | [Interagieren mit einem bot im Gruppenchat oder-Kanal](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
+| 05/20/2019 | App-Manifest-Lokalisierung. | [App-Lokalisierung](~/publishing/apps-localization.md) |
+| 05/20/2019 | Nachrichten Aktionen. | [Nachrichten Aktionen](resources/messaging-extension-v3/create-extensions.md#action-type-message-extensions) |
+| 05/20/2019 | Verknüpfung wird entfaltet (benutzerdefinierte URL-Vorschau). | [Entfalten von Links](messaging-extensions/how-to/link-unfurling.md)|
+| 05/06/2019 | Anwendungs Zertifizierungsprogramm für Store-Apps. | [Anwendungszertifizierung](~/publishing/application-certification.md) |
 | 05/06/2019 | App-Vorlagen sind jetzt verfügbar. | [App-Vorlagen](~/samples/app-templates.md) |
-| 04/23/2019 | Aktionsbasierte Messaging Erweiterungen sind jetzt verfügbar | [Aktionsbasierte Nachrichten Erweiterungen](~/concepts/messaging-extensions/create-extensions.md) |
-| 02/18/2019 | Das Erstellen von Deep Links zu privatem Chat erfolgt außerhalb der Entwicklervorschau und verfügbar | [Deep Linking to a Chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
-| 01/23/2019 | Informationen zur Oberflächen-SKU und zu licencetype im Registerkartenkontext | [Registerkartenkontext](~/concepts/tabs/tabs-context.md) |
+| 04/23/2019 | Aktionsbasierte Messaging Erweiterungen sind jetzt verfügbar. | [Aktionsbasierte Nachrichten Erweiterungen](~/concepts/messaging-extensions/create-extensions.md) |
+| 02/18/2019 | Das Erstellen von Deep Links zu privatem Chat erfolgt außerhalb der Entwicklervorschau und steht zur Verfügung. | [Deep Linking to a Chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 01/23/2019 | Informationen zur Oberflächen-SKU und zu licencetype im Registerkartenkontext. | [Registerkartenkontext](~/concepts/tabs/tabs-context.md) |
 | 12.11.2018 | Registerkarten im Gruppenchat sind jetzt in der veröffentlichten Version von Teams verfügbar und wurden aus der Entwicklervorschau verschoben. Im Rahmen dieser Arbeit wurde der Abschnitt Tabs aus Gründen der Übersichtlichkeit überarbeitet.| [Konfigurierbare Registerkarten](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | Erste Schritte für Node js und .NET/C# wurden für die Verwendung von App Studio in Microsoft Teams aktualisiert, und ein neuer Abschnitt wurde hinzugefügt, um Apps für Node-basierte Teams in Azure zu hosten. | Erste [Schritte mit der Microsoft Teams-Plattform mit C#/.net und App Studio](~/get-started/get-started-dotnet-app-studio.md), erste [Schritte mit der Microsoft Teams-Plattform mit Node js und App Studio](~/get-started/get-started-nodejs-app-studio.md), [Hosten der Node Teams-app in Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | Sie können nun tiefe Links zu privaten Chats zwischen Benutzern erstellen. | [Deep Linking to a Chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
@@ -46,7 +47,7 @@ Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und d
 | 08/15/2018 | Adaptive Karten werden jetzt in Microsoft Teams unterstützt.|[Adaptive Karten Aktionen in Microsoft Teams](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
 | 08/10/2018 | Die Client Unterstützung für devtools wurde für die Entwicklervorschau dokumentiert.| [DevTools für den Microsoft Teams-Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
 | 08/08/2018 | Messaging-Erweiterungen unterstützen jetzt mehrere Befehle. Dieses Feature wurde in der Entwicklervorschau und jetzt für alle Benutzer freigegeben.| [composeExtensions. Commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
-| 08/07/2018 | Die Inline Konfiguration wird nun in Connectors unterstützt. Die Connectors-Dokumentation wurde ebenfalls überarbeitet und zur Verdeutlichung erweitert.| [Connectors](~/concepts/connectors/connectors.md)|
+| 08/07/2018 | Die Inline Konfiguration wird nun in Connectors unterstützt. Die Connectors-Dokumentation wurde auch zur besseren Übersichtlichkeit überarbeitet und erweitert.| [Connectors](~/concepts/connectors/connectors.md)|
 | 08/06/2018 | Ihr Bot kann nun Dateien senden und empfangen.| [Senden und empfangen von Dateien über Ihren bot](~/concepts/bots/bots-files.md)|
 | 07/27/2018 | Die Entwicklervorschau unterstützt jetzt mehrere Befehle in Messaging Erweiterungen. | [Messaging Erweiterungen wurden erweitert](~/resources/dev-preview/developer-preview-features.md)|
 | 07/23/2018 | Informationen zur APP-erneuten Zertifizierung wurden dem Abschnitt "Veröffentlichung" hinzugefügt. |[Manifest-Berechtigungen](resources/schema/manifest-schema.md#permissions)|
@@ -54,7 +55,7 @@ Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und d
 | 07/12/2018 | Informationen zum Gastzugriff. | [Gastzugriff in Microsoft Teams](https://docs.microsoft.com/microsoftteams/guest-access#guest-access-overview)|
 | 06/07/2018 | Vorab Veröffentlichungsinformationen für den Microsoft Teams-Mandanten-App-Katalog wurden hinzugefügt. | [Veröffentlichen Ihrer Microsoft Teams-App](~/publishing/apps-publish.md)|
 | 05/31/2018 | Die Entwicklervorschau für Teams (Ring 3,6) wurde aktualisiert und enthält die Möglichkeit, Bots und Tabs zum Gruppenchat hinzuzufügen. | [Features in der Entwicklervorschau](~/resources/dev-preview/developer-preview-features.md), [Developer Preview-Schema](~/resources/schema/manifest-schema-dev-preview.md)|
-| 05/29/2018 | Adaptive Karten werden jetzt in Microsoft Teams in den [Aktionen für Adaptive Karten in Microsoft Teams](task-modules-and-cards/cards/cards-reference.md) unterstützt. |
+| 05/29/2018 | Adaptive Karten werden jetzt in Microsoft Teams in den [Aktionen für Adaptive Karten in Microsoft Teams](task-modules-and-cards/cards/cards-reference.md)unterstützt. |
 | 05/29/2018 | Wenn Sie die Vorschau des [Entwicklers](~/resources/dev-preview/developer-preview-intro.md)verwenden, kann Ihr bot nun Dateien senden und empfangen.| [Senden und empfangen von Dateien über Ihren bot](~/concepts/bots/bots-files.md), [Features in der Public Developer Preview für Microsoft Teams](~/resources/dev-preview/developer-preview-features.md)|
 | 04/17/2018 | replyToID wurde zur Nutzlast für die `Invoke` -und Karten Aktionen hinzugefügt `MessageBack` . Dies ist besonders nützlich, wenn Sie die Nachricht aktualisieren müssen, aus der die Karten Aktion stammt. | [Karten Aktionen](~/concepts/cards/cards-actions.md)|
 | 04/12/2018 | Dieses Thema wurde hinzugefügt, um Änderungen an der Microsoft Teams-Programmierschnittstelle und diesen Dokumentations Sätzen nachzuverfolgen. | [Neuigkeiten](~/whats-new.md)|

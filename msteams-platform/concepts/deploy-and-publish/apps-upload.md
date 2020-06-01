@@ -2,12 +2,12 @@
 title: Hochladen Ihrer benutzerdefinierten app in Microsoft Teams
 description: Beschreibt, wie Sie Ihre APP in Microsoft Teams hochladen
 keywords: Upload von Teams-apps
-ms.openlocfilehash: b5807644a0c9afa26b81d07c71d5f45ab3c8ba00
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 256a9bea48ed816f2e9912006dd2fe7301743919
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674175"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453882"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Hochladen eines App-Pakets in Microsoft Teams
 
@@ -20,7 +20,7 @@ Um Ihre APP-Erfahrung in Microsoft Teams zu testen, müssen Sie Ihre APP in Team
 
 Für die Entwicklung als auch für AppSource (ehemals Office Store)-Übermittlung müssen Sie ein uploadable-Paket erstellen, das die Informationen zum Beschreiben Ihrer Benutzeroberfläche enthält. Das Paket, eine ZIP-Datei, enthält das Anwendungsmanifest und die Symbole, die Ihre Benutzeroberfläche eindeutig definieren.
 
-Informationen zum Erstellen eines Upload-Pakets finden Sie unter [Erstellen des Pakets für Ihre Microsoft Teams-App](~/concepts/build-and-test/apps-package.md).
+Informationen zum Erstellen eines Upload-Pakets finden Sie unter [Erstellen des Pakets für Ihre Microsoft Teams-App](../build-and-test/apps-package.md).
 
 Wenn Ihr Paket erstellt wurde, können Sie es jetzt in ein Team hochladen. Sobald hochgeladen, steht sie für alle Benutzer im ausgewählten Team und nur für die Benutzer dieses Teams zur Verfügung.
 
@@ -40,16 +40,16 @@ Es gibt zwei Möglichkeiten, Ihre APP in Microsoft Teams hochzuladen:
 
 1. Wählen Sie in der unteren linken Ecke von Microsoft Teams das Symbol Store aus. Wählen Sie auf der Seite Store die Option "benutzerdefinierte App hochladen" aus.
 
-   ![Team anzeigen](~/assets/images/store-upload-a-custom-app.png)
+   ![Team anzeigen](../../assets/images/store-upload-a-custom-app.png)
 
 2. Navigieren Sie im Dialogfeld *Öffnen* zu dem Paket, das Sie hochladen möchten, und wählen Sie *Öffnen*aus.
 
 Das hochgeladene Paket sollte jetzt für die Verwendung in der im Zustimmungsdialogfeld angegebenen Gruppe oder Unterhaltung zur Verfügung stehen. Wenn Ihre APP nicht angezeigt wird, ist der häufigste Grund ein Fehler im Manifest, insbesondere IDs für die APP-, bot-und Messaging-Erweiterungen. Wenn die APP nicht für Unterhaltungen ausgelegt ist, wird diese Option nicht angezeigt.
 
 >[!NOTE]
-> Apps in Unterhaltungen befinden sich derzeit in der [Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md), und die Option wird nicht angezeigt, wenn Teams nicht in diesem Modus ausgeführt werden.
+> Apps in Unterhaltungen befinden sich derzeit in der [Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md), und die Option wird nicht angezeigt, wenn Teams nicht in diesem Modus ausgeführt werden.
 
-![Beispiel für bot in der Liste der hochgeladenen Bots](~/assets/images/botinlist.jpg)
+![Beispiel für bot in der Liste der hochgeladenen Bots](../../assets/images/botinlist.jpg)
 
 ## <a name="upload-your-package-into-a-team-using-the-apps-tab"></a>Hochladen des Pakets mithilfe der Registerkarte "Apps" in ein Team
 
@@ -60,13 +60,13 @@ Das hochgeladene Paket sollte jetzt für die Verwendung in der im Zustimmungsdia
 
 2. Wählen Sie die Registerkarte Apps aus, und wählen Sie dann *eine benutzerdefinierte App* in der rechten oberen Ecke Hochladen aus.
 
-   ![Einstiegspfad hochladen](~/assets/images/uploadACustomApp.png)
+   ![Einstiegspfad hochladen](../../assets/images/UploadACustomApp.png)
 
 3. Navigieren Sie zu Ihrem ZIP-Paket auf Ihrem Computer, und wählen Sie es aus.
 
 4. Nach einer kurzen Pause wird Ihre hochgeladene app in der Liste angezeigt.
 
-   ![Beispiel für bot in der Liste der hochgeladenen Bots](~/assets/images/botinlist.jpg)
+   ![Beispiel für bot in der Liste der hochgeladenen Bots](../../assets/images/botinlist.jpg)
 
 Wenn Ihre APP nicht lädt, ist der häufigste Grund ein Fehler im Manifest, insbesondere IDs für die APP-, bot-und Messaging-Erweiterungen.
 
@@ -74,15 +74,15 @@ Wenn Ihre APP nicht lädt, ist der häufigste Grund ein Fehler im Manifest, insb
 
 Wenn die APP Registerkarten enthält, können Benutzer Sie an jede Unterhaltung oder einen Team Kanal mit dem standardmäßigen Tab Gallery Flow anheften:
 
-1. Wechseln Sie zu einem Kanal im Team. Klicken *+* Sie auf der rechten Seite der vorhandenen Registerkarten auf (*Registerkarte hinzufügen*).
+1. Wechseln Sie zu einem Kanal im Team. Klicken Sie *+* auf der rechten Seite der vorhandenen Registerkarten auf (*Registerkarte hinzufügen*).
 
 2. Wählen Sie in der angezeigten Galerie die Registerkarte aus.
 
 3. Akzeptieren Sie die Zustimmungsaufforderung.
 
-4. Konfigurieren Sie die Registerkarte über die [Konfigurationsseite](~/tabs/how-to/create-tab-pages/configuration-page.md) , und wählen Sie *Speichern*aus.
+4. Konfigurieren Sie die Registerkarte über die [Konfigurationsseite](../../tabs/how-to/create-tab-pages/configuration-page.md) , und wählen Sie *Speichern*aus.
 
-  ![Das Dialogfeld "Register hinzufügen" mit einem Katalog verfügbarer Registerkarten](~/assets/images/tab_gallery.png)
+  ![Das Dialogfeld "Register hinzufügen" mit einem Katalog verfügbarer Registerkarten](../../assets/images/tab_gallery.png)
 
 ## <a name="accessing-your-uploaded-bot"></a>Zugriff auf Ihren hochgeladenen bot
 
@@ -102,15 +102,15 @@ Wenn die APP im Team oder in der Unterhaltung geladen ist, können Benutzer eine
 
 2. Wählen Sie Ihren Connector aus dem Abschnitt **hochgeladene** unten aus.
 
-3. Konfigurieren Sie den Connector über die [Konfigurationsseite](~/webhooks-and-connectors/how-to/connectors-creating.md) , und wählen Sie *Speichern*aus.
+3. Konfigurieren Sie den Connector über die [Konfigurationsseite](../../webhooks-and-connectors/how-to/connectors-creating.md) , und wählen Sie *Speichern*aus.
 
-  ![Das DialogfeldRegister hinzufügen mit einem Katalog verfügbarer Registerkarten.](~/assets/images/connector_gallery.png)
+  ![Das DialogfeldRegister hinzufügen mit einem Katalog verfügbarer Registerkarten.](../../assets/images/connector_gallery.png)
 
 ## <a name="accessing-your-uploaded-messaging-extension"></a>Zugriff auf Ihre hochgeladene Messaging Erweiterung
 
 Eine hochgeladene App mit einer Messaging Erweiterung wird automatisch im Menü *Weitere Optionen* (*&#8943;*) im Feld Verfassen angezeigt.
 
-![Messaging-Erweiterungen](~/assets/images/compose-extensions/cesampleapp.png)
+![Messaging-Erweiterungen](../../assets/images/compose-extensions/cesampleapp.png)
 
 ## <a name="removing-or-updating-your-app"></a>Entfernen oder Aktualisieren Ihrer APP
 
@@ -123,5 +123,5 @@ Wenn Sie Manifestinformationen ändern, müssen Sie zuerst die APP entfernen und
 
 ## <a name="troubleshooting-notes"></a>Problembehandlung bei Notizen
 
-* Wenn das Manifest nicht lädt, überprüfen Sie bitte, ob Sie alle Anweisungen unter [Erstellen des Pakets](~/concepts/build-and-test/apps-package.md) befolgt und Ihr Manifest anhand des [Schemas](~/resources/schema/manifest-schema.md)überprüft haben.
+* Wenn das Manifest nicht lädt, überprüfen Sie bitte, ob Sie alle Anweisungen unter [Erstellen des Pakets](../../concepts/build-and-test/apps-package.md) befolgt und Ihr Manifest anhand des [Schemas](../../resources/schema/manifest-schema.md)überprüft haben.
 

@@ -2,12 +2,12 @@
 title: Entwurfsrichtlinien für Bots
 description: Beschreibt die Richtlinien zum Erstellen von Bots
 keywords: Teams-Entwurfsrichtlinien Referenz Framework-Bots im Gespräch
-ms.openlocfilehash: 172778e8d4adc08986d360c52b2bd076c443ac1a
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 731e36ac3437e22435ea6054ad359d0c6bc2ead3
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635284"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453889"
 ---
 # <a name="start-talking-with-bots"></a>Gespräch mit Bots beginnen
 
@@ -35,7 +35,7 @@ Grafiken sind eine gute Möglichkeit, eine Geschichte zu erzählen, aber nicht a
 
 Es ist wichtig, dass sich Bots selbst vorstellen und übermitteln, was Sie Benutzern antun können. Dieser *Wert Exchange* hilft Benutzern zu verstehen, was mit dem bot zu tun ist, wo die Einschränkungen liegen können, und, was am wichtigsten ist, hilft Benutzern, die Interaktion mit einem Computer zu tolerieren, der nicht so intuitiv wie eine reale Person sein wird. Darüber hinaus erteilt es die Berechtigung für Benutzerdaten in Exchange für den tatsächlichen Wert, den der Dienst bereitstellt.
 
-#### <a name="welcome-messages"></a>Begrüßungsnachrichten
+#### <a name="welcome-messages"></a>Willkommensnachrichten
 
 Willkommensnachrichten sind die beste Möglichkeit, um den Ton Ihres bot festzulegen und sollten in persönlichen und Team-oder Gruppen Szenarien verwendet werden. In der Nachricht werden die Funktionen des bot und einige gängige Methoden für deren Interaktion erklärt. Verwenden Sie spezifische Funktionsbeispiele wie "*versuchen Sie, Fragen.*..." in einer Aufzählungsliste. Wenn möglich, sollten diese Vorschläge gespeicherte Antworten zurückgeben. Es ist wichtig, dass die Funktionsbeispiele funktionieren, ohne dass sich Benutzer anmelden müssen.
 
@@ -131,7 +131,7 @@ Fügen Sie eine Registerkarte hinzu, mit der Benutzer über die Kommunikation mi
 
 ## <a name="bots-in-channels"></a>Bots in Kanälen
 
-Das Aufrufen eines bot in einem Kanal kann durch `@mention`ausgeführt werden. Das Dialogfeld "bot" sollte in Kanälen und Gruppen im Vergleich zu eins-zu-eins-Szenarien eindeutig sein, und es ist generell ratsam, separate Ansätze zu berücksichtigen. Dies gilt insbesondere in den folgenden Fällen:
+Das Aufrufen eines bot in einem Kanal kann durch ausgeführt werden `@mention` . Das Dialogfeld "bot" sollte in Kanälen und Gruppen im Vergleich zu eins-zu-eins-Szenarien eindeutig sein, und es ist generell ratsam, separate Ansätze zu berücksichtigen. Dies gilt insbesondere in den folgenden Fällen:
 
 ### <a name="sensitive-data-sent-by-a-bot"></a>Von einem bot gesendete vertrauliche Daten
 
@@ -165,4 +165,4 @@ Bestimmen Sie, ob Ihr Ton freundlich und leicht sein soll, "nur die Fakten" oder
 
 Unterstützung von Multi-Turn-Interaktionen, während immer noch vollständig geformte Fragen zulässt Das antizipieren des nächsten Schritts erleichtert Benutzern das Durchlaufen von Aufgaben Abläufen erheblich.
 
-Wenn ein Benutzer mehrere Schritte zum Ausführen einer Aufgabe ausführt, lassen Sie den bot diesen Schritt durchführen, aber beenden Sie ihn, indem Sie einen schnelleren Pfad vorschlagen. Wenn ein Benutzer beispielsweise mehrere Konversations Schritte durchgeführt hat, um eine Besprechung festzulegen (indem er zuerst eine Besprechung angibt, dann identifiziert, mit wem, dann die Uhrzeit angibt und dann den Tag angibt), beenden Sie die Unterhaltung mit dem folgenden Vorschlag: Fragen Sie das nächste Mal, ob Sie kann eine Besprechung mit Bob um 1:00 Morgen planen.
+Wenn ein Benutzer mehrere Schritte zum Ausführen einer Aufgabe ausführt, lassen Sie den bot diesen Schritt durchführen, aber beenden Sie ihn, indem Sie einen schnelleren Pfad vorschlagen. Wenn ein Benutzer beispielsweise mehrere Gesprächsrunden zum Festlegen einer Besprechung genommen hat (indem er zuerst eine Besprechung angibt, dann identifiziert, mit wem, dann die Uhrzeit angibt und dann den Tag angibt), beenden Sie die Unterhaltung mit dem folgenden Vorschlag: Fragen Sie das nächste Mal, ob Sie eine Besprechung mit Bob um 1:00 Morgen planen können.

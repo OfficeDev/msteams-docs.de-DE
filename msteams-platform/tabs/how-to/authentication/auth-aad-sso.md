@@ -2,12 +2,12 @@
 title: Einmaliges Anmelden
 description: Beschreibt einmaliges Anmelden (Single Sign-on, SSO)
 keywords: Teams-Authentifizierung SSO-Aad
-ms.openlocfilehash: 1857651aecd902f04bd57f5b4e2fb0fda88eb348
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 8f9d94346aad7c096e4310f80b6cda73856afc8c
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674092"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455513"
 ---
 # <a name="single-sign-on"></a>Einmaliges Anmelden
 
@@ -41,12 +41,12 @@ Registrieren Sie Ihre Anwendung im Registrierungs Portal für den Azure AD v 1.0
 * Aad-Anwendungs-ID wird abgerufen
 * Geben Sie die Berechtigungen an, die Ihre Anwendung für den Aad-Endpunkt (und optional für Microsoft Graph) benötigt. 
 * Gewähren Sie der Microsoft Teams-Desktop-,-Webanwendung und der mobilen Anwendung eine Vertrauensstellung für Ihre Anwendung.
-* Vorautorisieren der Microsoft Teams-Anwendung für Ihre APP mit dem Standardbereichs Namen `access_as_user`von.
+* Vorautorisieren der Microsoft Teams-Anwendung für Ihre APP mit dem Standardbereichs Namen von `access_as_user` .
 
 > [!NOTE]
 > Es gibt einige wichtige Einschränkungen, die Sie beachten sollten:
 >
-> * Wir unterstützen nur Graph-API-Berechtigungen auf Benutzerebene (IE: e-Mail, Profil, offline_access, OpenID. Wenn Sie Zugriff auf andere Diagrammbereiche benötigen, lesen Sie unsere empfohlene Problemumgehung am Ende dieser Dokumentation.
+> * Wir unterstützen nur Graph-API-Berechtigungen auf Benutzerebene, beispielsweise e-Mail, Profil, offline_access, OpenID. Wenn Sie Zugriff auf andere Diagrammbereiche benötigen, lesen Sie unsere empfohlene Problemumgehung am Ende dieser Dokumentation.
 > * Es ist wichtig, dass der Domänenname Ihrer Anwendung bei ihrer Azure AD Anwendung registriert wird. Dabei muss es sich um den Domänennamen handeln, auf dem die Anwendung ausgeführt wird, wenn ein Authentifizierungstoken in Microsoft Teams angefordert wird, und auch, wenn die Resource-Eigenschaft in Ihrem Teams-Manifest angegeben wird (weitere Details im nächsten Abschnitt).
 > * Wir unterstützen derzeit nicht mehrere Domänen pro app.
 > * Wir unterstützen auch keine Anwendungen, die die `azurewebsites.net` Domäne verwenden, da diese Domäne zu häufig ist und möglicherweise ein Sicherheitsrisiko darstellt.
@@ -60,22 +60,22 @@ Registrieren Sie Ihre Anwendung im Registrierungs Portal für den Azure AD v 1.0
     * Lassen Sie die **Umleitungs-URI** leer.
     * Wählen Sie **registrieren** aus.
 3. Kopieren und speichern Sie auf der Übersichtsseite die **Anwendungs-ID (Client)**. Sie benötigen Sie später beim Aktualisieren des Teams-Anwendungsmanifests.
-4. Wählen Sie unter **Verwalten** die Option **Eine API verfügbar machen** aus. Wählen Sie den Link **festlegen** aus, um den Anwendungs-ID-URI `api://{AppID}`in Form von zu generieren. Fügen Sie den vollqualifizierten Domänennamen zwischen den doppelten Schrägstrichen und der GUID (mit einem Schrägstrich "/" am Ende hinzugefügt) ein. Die gesamte ID sollte folgende Form haben:`api://fully-qualified-domain-name.com/{AppID}`
-    * Ex: `api://subdomain.example.com:6789/c6c1f32b-5e55-4997-881a-753cc1d563b7`.
+4. Wählen Sie unter **Verwalten** die Option **Eine API verfügbar machen** aus. Wählen Sie den Link **festlegen** aus, um den Anwendungs-ID-URI in Form von zu generieren `api://{AppID}` . Fügen Sie den vollqualifizierten Domänennamen zwischen den doppelten Schrägstrichen und der GUID (mit einem Schrägstrich "/" am Ende hinzugefügt) ein. Die gesamte ID sollte folgende Form haben:`api://fully-qualified-domain-name.com/{AppID}`
+    * Ex: `api://subdomain.example.com:6789/c6c1f32b-5e55-4997-881a-753cc1d563b7` .
 
 > [!NOTE]
 > Wenn eine Fehlermeldung angezeigt wird, die besagt, dass die Domäne bereits beansprucht wird, Sie jedoch der Eigentümer sind, folgen Sie dem Verfahren unter [Schnellstart: Hinzufügen eines benutzerdefinierten Domänennamens zu Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain), um sie zu registrieren. Wiederholen Sie dann den Vorgang. (Dieser Fehler kann auch auftreten, wenn Sie nicht mit den Anmeldeinformationen eines Administrators im Office 365 Mandanten angemeldet sind).
 
 5. Wählen Sie die Schaltfläche**Bereich hinzufügen** aus. Geben Sie im Bereich, der geöffnet wird, `access_as_user` für**Bereichsname** ein.
 6. Festlegen, wer einwilligen kann? an Administratoren und Benutzer
-7. Füllen Sie die Felder für die Konfiguration der Administrator-und Benutzer Zustimmungs Ansagen mit Werten aus `access_as_user` , die für den Bereich geeignet sind. Vorschläge:
+7. Füllen Sie die Felder für die Konfiguration der Administrator-und Benutzer Zustimmungs Ansagen mit Werten aus, die für den Bereich geeignet sind `access_as_user` . Vorschläge:
     * **Titel der Administrator Zustimmung:** Teams können auf das Profil des Benutzers zugreifen
     * **Administrator-Zustimmungs Beschreibung**: ermöglicht Teams das Aufrufen der webapin der App als aktueller Benutzer.
     * **Benutzer Zustimmungs Titel**: Teams können auf Ihr Benutzerprofil zugreifen und in Ihrem Namen Anfragen stellen
     * **Beschreibung der Benutzer Zustimmung:** Aktivieren von Teams zum Aufrufen der APIs dieser APP mit den gleichen Rechten
 8. Sicherstellen, dass der **Status** auf " **aktiviert** " festgelegt ist
 9. **Bereich "hinzufügen** " auswählen
-    * Hinweis: der Domänenteil des **Bereichsnamens** , der direkt unterhalb des Textfelds angezeigt wird, sollte automatisch mit dem im vorherigen Schritt festgelegten **Anwendungs-ID** -URI übereinstimmen, wobei `/access_as_user` der Wert am Ende angefügt ist. Zum Beispiel: 
+    * Hinweis: der Domänenteil des **Bereichsnamens** , der direkt unterhalb des Textfelds angezeigt wird, sollte automatisch mit dem im vorherigen Schritt festgelegten **Anwendungs-ID** -URI übereinstimmen, wobei der Wert `/access_as_user` an das Ende angefügt ist, beispielsweise: 
         * `api://subdomain.example.com:6789/c6c1f32b-5e55-4997-881a-753cc1d563b7/access_as_user`
 10. Im Abschnitt **autorisierte Clientanwendungen** identifizieren Sie die Anwendungen, die Sie für die Webanwendung Ihrer APP autorisieren möchten. Jeder der folgenden IDs muss eingegeben werden:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`(Mobile Teams/Desktopanwendung)
@@ -93,7 +93,7 @@ Fügen Sie Ihrem Microsoft Teams-Manifest neue Eigenschaften hinzu:
 
 * **WebApplicationInfo**: Das übergeordnete Element der folgenden Elemente.
 * **ID** – die Client-ID der Anwendung. Hierbei handelt es sich um eine Anwendungs-ID, die Sie im Rahmen der Registrierung der Anwendung mit Azure AD 1,0-Endpunkt erhalten.
-* **Resource** – die Domäne und Unterdomäne Ihrer Anwendung. Hierbei handelt es sich um den gleichen URI `api://` (einschließlich des Protokolls), den Sie bei der Registrierung der app in Aad verwendet haben. Der Domänenteil dieses URIs sollte der Domäne entsprechen, einschließlich aller Unterdomänen, die in den URLs im Abschnitt Ihres Teams-Anwendungsmanifests verwendet werden.
+* **Resource** – die Domäne und Unterdomäne Ihrer Anwendung. Hierbei handelt es sich um den gleichen URI (einschließlich des `api://` Protokolls), den Sie bei der Registrierung der app in Aad verwendet haben. Der Domänenteil dieses URIs sollte der Domäne entsprechen, einschließlich aller Unterdomänen, die in den URLs im Abschnitt Ihres Teams-Anwendungsmanifests verwendet werden.
 
 ```json
 "webApplicationInfo": {
@@ -104,7 +104,7 @@ Fügen Sie Ihrem Microsoft Teams-Manifest neue Eigenschaften hinzu:
 
 Hinweise:
 
-* Die Ressource für eine Aad-APP ist in der Regel nur der Stamm der Website-URL und der Anwendungs- `api://subdomain.example.com/6789/c6c1f32b-5e55-4997-881a-753cc1d563b7`ID (beispielsweise). Dieser Wert wird auch verwendet, um sicherzustellen, dass Ihre Anforderung aus derselben Domäne stammt. Vergewissern Sie sich daher, `contentURL` dass für Ihre Registerkarte die gleichen Domänen wie für Ihre Ressourceneigenschaft verwendet werden.
+* Die Ressource für eine Aad-APP ist in der Regel nur der Stamm der Website-URL und der Anwendungs-ID (beispielsweise `api://subdomain.example.com/6789/c6c1f32b-5e55-4997-881a-753cc1d563b7` ). Dieser Wert wird auch verwendet, um sicherzustellen, dass Ihre Anforderung aus derselben Domäne stammt. Vergewissern Sie sich daher, dass `contentURL` für Ihre Registerkarte die gleichen Domänen wie für Ihre Ressourceneigenschaft verwendet werden.
 * Sie müssen manifestVersion Version 1,5 oder höher verwenden, damit diese Felder verwendet werden.
 * Bereiche werden im Manifest nicht unterstützt und sollten stattdessen im Abschnitt API-Berechtigungen im Azure-Portal angegeben werden.
 
@@ -126,7 +126,7 @@ Wenn Sie anrufen `getAuthToken` und zusätzliche Benutzer Zustimmung erforderlic
 
 ## <a name="demo-code"></a>Demo Code
 
-Jetzt können Sie unsere Test Anwendungs [Aufgabe Meow](https://github.com/ydogandjiev/taskmeow) besuchen und das SSO-Manifest und das `teams.auth.service.js` Auschecken `sso.auth.service.js` der und-Datei verwenden, um zu sehen, wie der Authentifizierungs Workflow behandelt wird.
+Jetzt können Sie unsere Test Anwendungs [Aufgabe Meow](https://github.com/ydogandjiev/taskmeow) besuchen und das SSO-Manifest und das Auschecken der `teams.auth.service.js` und- `sso.auth.service.js` Datei verwenden, um zu sehen, wie der Authentifizierungs Workflow behandelt wird.
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
@@ -148,12 +148,12 @@ Ein weiterer Ansatz für das Hinzufügen zusätzlicher Diagrammbereiche wäre di
 
 1. Das mit getAuthToken abgerufene Token muss serverseitig mithilfe [von AADs im Auftrag von Flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow) ausgetauscht werden, um Zugriff auf diese zusätzlichen Graph-APIs zu erhalten.
     * Stellen Sie sicher, dass Sie den V2-Graph-Endpunkt für diesen Exchange verwenden.
-2. Wenn der Exchange-Fehler auftritt, gibt Aad eine ungültige Grant-Ausnahme zurück. Normalerweise gibt es eine von zwei Fehler `ConsentRequired` Meldungen: oder`InteractionRequired`
+2. Wenn der Exchange-Fehler auftritt, gibt Aad eine ungültige Grant-Ausnahme zurück. Normalerweise gibt es eine von zwei Fehlermeldungen: `ConsentRequired` oder`InteractionRequired`
 3. Wenn der Exchange-Fehler auftritt, müssen Sie um zusätzliche Zustimmung bitten. Es wird empfohlen, einige Benutzeroberflächen anzuzeigen, in denen der Benutzer aufgefordert wird, zusätzliche Zustimmung zu erteilen. Diese Benutzeroberfläche sollte eine Schaltfläche enthalten, die ein Aad-Zustimmungsdialogfeld mithilfe unserer [Aad-Authentifizierungs-API](~/concepts/authentication/auth-silent-aad.md)auslöst.
 4. Wenn Sie eine zusätzliche Zustimmung von Aad anfordern, müssen Sie den `prompt=consent` [Abfrage-String-Parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) in Aad einschließen, da andernfalls Aad keine weiteren Bereiche abgefragt wird.
     * Statt:`?scope={scopes}`
     * Verwenden Sie Folgendes:`?prompt=consent&scope={scopes}`
-    * Stellen Sie sicher `{scopes}` , dass alle Bereiche eingeschlossen sind, für die Sie den Benutzer auffordern (z. b.: Mail. Read oder User. Read).
+    * Stellen Sie sicher, dass `{scopes}` alle Bereiche eingeschlossen sind, für die Sie den Benutzer auffordern (z. b.: Mail. Read oder User. Read).
 5. Nachdem der Benutzer zusätzliche Berechtigungen erteilt hat, wiederholen Sie den Vorgang im Auftrag von Flow, um Zugriff auf diese zusätzlichen APIs zu erhalten.
 
 ### <a name="non-aad-authentication"></a>Nicht-Aad-Authentifizierung

@@ -4,12 +4,12 @@ author: clearab
 description: Eine Übersicht über Unterhaltungs Bots in Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6f1ce3cf905b0c638652784fdc76b37ea0f6aca9
-ms.sourcegitcommit: 28af65730884b788ff77a4ec4032219380df8b70
+ms.openlocfilehash: a88d516c57faa96e29de3e786910a13c4d65ac84
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "44281846"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453868"
 ---
 # <a name="what-are-conversational-bots"></a>Was sind Unterhaltungs Bots?
 
@@ -53,7 +53,7 @@ Bots in Microsoft Teams können Teil einer 1:1-Unterhaltung, eines Gruppenchats 
 
 ### <a name="in-a-channel"></a>In einem Kanal
 
-Kanäle enthalten threadbezogene Unterhaltungen zwischen mehreren Personen – potenziell viele Personen (derzeit bis zu 2000). Dadurch erhält Ihr Bot potenziell eine enorme Reichweite, die einzelnen Interaktionen müssen aber präzise sein. Herkömmliche dialogartige Interaktionen mit vielen Fragen und Antworten funktionieren wahrscheinlich nicht gut. Versuchen Sie stattdessen, interaktive Karten oder Aufgabenmodule einzusetzen, oder lagern Sie die Unterhaltung in eine 1:1-Unterhaltung aus, wenn Sie viele Informationen sammeln müssen. Ihr bot hat auch nur Zugriff auf Nachrichten, in denen er `@mentioned` direkt ist, Sie können keine weiteren Nachrichten aus der Unterhaltung mit Microsoft Graph und erweiterte Berechtigungen auf Organisationsebene abrufen.
+Kanäle enthalten threadbezogene Unterhaltungen zwischen mehreren Personen – potenziell viele Personen (derzeit bis zu 2000). Dadurch erhält Ihr Bot potenziell eine enorme Reichweite, die einzelnen Interaktionen müssen aber präzise sein. Herkömmliche dialogartige Interaktionen mit vielen Fragen und Antworten funktionieren wahrscheinlich nicht gut. Versuchen Sie stattdessen, interaktive Karten oder Aufgabenmodule einzusetzen, oder lagern Sie die Unterhaltung in eine 1:1-Unterhaltung aus, wenn Sie viele Informationen sammeln müssen. Ihr bot hat auch nur Zugriff auf Nachrichten, in denen er `@mentioned` direkt ist, obwohl Sie zusätzliche Nachrichten aus der Unterhaltung mithilfe von Microsoft Graph und erweiterte Berechtigungen auf Organisationsebene abrufen können.
 
 Dies sind einige Szenarien, in denen Bots in einem Kanal glänzen können:
 

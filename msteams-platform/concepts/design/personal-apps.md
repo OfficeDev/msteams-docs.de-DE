@@ -2,27 +2,19 @@
 title: Referenz zu Entwurfsrichtlinien
 description: Beschreibt die Richtlinien für das Entwerfen einer persönlichen app.
 keywords: Teams-Entwurfsrichtlinien – Referenzrahmen für persönliche apps
-ms.openlocfilehash: 0d886adf926697f8920c0893589201ea4e4c3a9c
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.openlocfilehash: f66691234149afa56a6753dd51379c9f2355318e
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228073"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455499"
 ---
-# <a name="personal-apps"></a>Persönliche apps
+# <a name="personal-apps"></a>Persönliche Apps
 
-> [!Important]
-> Die vollständige Unterstützung für Registerkarten auf mobilen Clients wird in Kürze verfügbar sein. Zur Vorbereitung auf diese Änderung sollten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md) beim Erstellen Ihrer Registerkarten befolgten. Persönliche Apps (statische Registerkarten) sind derzeit in der [Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md)verfügbar.
->
-> Wenn die vollständige Unterstützung für Tabs freigegeben wird:
->
-> * Alle Registerkarten sind auf mobilen Geräten immer verfügbar.
-> * Ihr `contentUrl` **wird in den Mobile Teams-Client geladen**.
-> * Bei Kanälen/Gruppenregisterkarten können Benutzer ihre Registerkarte weiterhin in einem separaten Browser öffnen `websiteUrl`, jedoch werden Sie `contentUrl` zuerst geladen.
+> [!NOTE]
+> Die vollständige Unterstützung für Registerkarten auf mobilen Clients wird in Microsoft Teams unterstützt. Beachten Sie beim Erstellen von Registerkarten für mobile Plattformen die [Anleitungen für Registerkarten auf mobilen Geräten](../../tabs/design/tabs-mobile.md) .
 
-Eine persönliche APP ist eine APP mit einem persönlichen Bereich. Als App-Entwickler haben Sie die Möglichkeit, eine Version Ihrer APP bereitzustellen, die für den jeweiligen Benutzer erstellt wurde. In dieser Version ist die Sammlung von Registerkarten (und der bot, wenn Sie einen enthalten haben) für die Person konzipiert. Auf diese Weise können Sie eine 1:1-Interaktion mit ihren Benutzern erstellen.
-
-Eine persönliche APP ist, wo jemand alles, was Ihnen gehört, und alle Elemente, die Sie zuletzt in der App angezeigt haben, angezeigt werden. Alles wird an einer Stelle platziert. Im folgenden Screenshot ist Contoso eine persönliche App im Flyout für persönliche apps.
+Eine persönliche APP ist eine Microsoft Teams-Anwendung mit einem persönlichen Bereich.  Als App-Entwickler haben Sie die Möglichkeit, eine Version Ihrer APP bereitzustellen, die sich auf Interaktionen mit einem einzelnen Benutzer konzentriert. Es kann sich um einen [Unterhaltungs bot](../../bots/what-are-bots.md) handeln, der sich mit einem Benutzer oder einer [persönlichen Registerkarte](../../tabs/what-are-tabs.md) , die ein eingebettetes Weberlebnis bereitstellt, in eins-zu-eins-Gesprächen beschäftigt. Mit persönlichen Apps können Benutzer Ihre ausgewählten Inhalte an einer Stelle anzeigen. Im folgenden Screenshot ist Contoso eine persönliche App im Flyout für persönliche apps.
 
 ![Bild des Menüs "App-Überlauf"](~/assets/images/Personal-apps-App-flyout.png)
 

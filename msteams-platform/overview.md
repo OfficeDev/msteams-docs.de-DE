@@ -4,16 +4,16 @@ author: clearab
 description: Übersichtsseite mit Beschreibungen der Microsoft Teams-Entwicklerplattform und erste Schritte beim Erstellen von Apps für Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: cb9d91f2de29bac00f4cdcd9672adf9d7d4ee734
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 5225669ccc8c76bb532d045df6b65105c893e734
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674577"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455485"
 ---
-# <a name="what-are-microsoft-teams-apps"></a>Was sind Microsoft Teams-apps?
+# <a name="what-are-microsoft-teams-apps"></a>Was sind Microsoft Teams-Apps?
 
-Microsoft Teams ist ein Arbeitsbereich für die Zusammenarbeit in Office 365, der in apps und Dienste integriert wird, die für die Zusammenarbeit verwendet werden. Die Microsoft Teams-Entwicklerplattform erleichtert Entwicklern das Integrieren ihrer eigenen apps und Dienste, um die Produktivität zu verbessern, Entscheidungen schneller zu treffen, den Fokus zu erhöhen (durch Reduzieren des Kontextwechsels) und die Zusammenarbeit in vorhandenen Inhalten zu schaffen und Workflows. Auf der Microsoft Teams-Plattform erstellte apps sind Brücken zwischen dem Teams-Client und Ihren Diensten und Workflows; direkte Integration in den Kontext ihrer Plattform für die Zusammenarbeit.
+Microsoft Teams ist ein Arbeitsbereich für die Zusammenarbeit in Office 365, der in apps und Dienste integriert wird, die für die Zusammenarbeit verwendet werden. Die Microsoft Teams-Entwicklerplattform erleichtert Entwicklern das Integrieren ihrer eigenen apps und Dienste, um die Produktivität zu verbessern, Entscheidungen schneller zu treffen, den Fokus zu erhöhen (durch Reduzieren des Kontextwechsels) und die Zusammenarbeit in vorhandenen Inhalten und Workflows zu erstellen. Auf der Microsoft Teams-Plattform erstellte apps sind Brücken zwischen dem Teams-Client und Ihren Diensten und Workflows; direkte Integration in den Kontext ihrer Plattform für die Zusammenarbeit.
 
 ## <a name="what-can-teams-apps-do"></a>Was können Teams-apps tun?
 
@@ -37,22 +37,22 @@ Eine Teams-App besteht aus drei Hauptteilen:
 * **Ihr Teams-App-Paket** , das die von Ihren Benutzern installierte App erstellt und die Metadaten und Verweise Ihrer APP auf ihre Dienste enthält.
 * **Ihr Dienst, Workflow oder Ihre Website** , die die erforderliche Logik, Datenspeicherung und API-Aufrufe ausführen, um Ihre APP zu vertreiben.
 
-Beachten Sie, dass alle Funktionen, die Sie in einer Microsoft Teams-app verfügbar machen, öffentlich über das Internet verfügbar sind, es sei denn, Sie führen zusätzliche Schritte aus, um Sie zu sichern. Wenn Sie Zugriff auf vertrauliche oder geschützte Informationen gewähren möchten, müssen Sie sicherstellen, dass ihre Dienste mindestens den Endpunkt authentifizieren, der eine Verbindung zu Ihrer APP herstellt oder [Ihre Benutzer authentifiziert](~/concepts/authentication/authentication.md).
+Beachten Sie, dass alle Funktionen, die Sie in einer Microsoft Teams-app verfügbar machen, öffentlich über das Internet verfügbar sind, es sei denn, Sie führen zusätzliche Schritte aus, um Sie zu sichern. Wenn Sie Zugriff auf vertrauliche oder geschützte Informationen gewähren möchten, müssen Sie sicherstellen, dass ihre Dienste mindestens den Endpunkt authentifizieren, der eine Verbindung zu Ihrer APP herstellt oder [Ihre Benutzer authentifiziert](concepts/authentication/authentication.md).
 
 ## <a name="how-can-you-share-your-teams-app"></a>Wie können Sie Ihre Teams-App freigeben?
 
 Wenn Sie bereit sind, Ihre Microsoft Teams-apps freizugeben, haben Sie je nach Zielgruppe drei Optionen.
 
-* **[Direktes Hochladen Ihrer APP](~/concepts/deploy-and-publish/apps-upload.md)** Wenn Ihre APP nur für Ihr Team oder einige wenige Personen in Ihrer Organisation freigegeben werden muss, können Sie Ihr App-Paket freigeben und direkt hochladen.
-* **[Veröffentlichen im Organisations-App-Katalog](~/concepts/deploy-and-publish/apps-publish.md)** Sie können Ihre APP für Ihre gesamte Organisation über den App-Katalog freigeben.
-* **[Veröffentlichen im öffentlichen App Store](~/concepts/deploy-and-publish/apps-publish.md)** Wenn Ihre APP für alle Benutzer geeignet ist, können Sie Sie in unserem öffentlichen App-Store veröffentlichen. Je nach Ihren Zielen sind Sie möglicherweise für Marketing-und Vertriebsunterstützung berechtigt.
+* **[Direktes Hochladen Ihrer APP](concepts/deploy-and-publish/apps-upload.md)** Wenn Ihre APP nur für Ihr Team oder einige wenige Personen in Ihrer Organisation freigegeben werden muss, können Sie Ihr App-Paket freigeben und direkt hochladen.
+* **[Veröffentlichen im Organisations-App-Katalog](concepts/deploy-and-publish/apps-upload.md)** Sie können Ihre APP für Ihre gesamte Organisation über den App-Katalog freigeben.
+* **[Veröffentlichen im öffentlichen App Store](concepts/deploy-and-publish/apps-upload.md)** Wenn Ihre APP für alle Benutzer geeignet ist, können Sie Sie in unserem öffentlichen App-Store veröffentlichen. Je nach Ihren Zielen sind Sie möglicherweise für Marketing-und Vertriebsunterstützung berechtigt.
 
 ## <a name="get-started"></a>Erste Schritte
 
-* [Erstellen einer bot-und Tab-app in C #](~/tutorials/get-started-dotnet-app-studio.md)
-* [Erstellen einer bot-und Tab-app in JavaScript/Node. js](~/tutorials/get-started-nodejs-app-studio.md)
+* [Erstellen einer bot-und Tab-app in C #](tutorials/get-started-dotnet-app-studio.md)
+* [Erstellen einer bot-und Tab-app in JavaScript/Node. js](tutorials/get-started-nodejs-app-studio.md)
 
 ## <a name="learn-more"></a>Weitere Informationen
 
-* [Erweiterbarkeitspunkte im Microsoft Teams-Client](~/concepts/extensibility-points.md)
-* [Erstellen von Apps für Microsoft Teams](~/concepts/building-an-app.md)
+* [Erweiterbarkeitspunkte im Teams-Client](concepts/extensibility-points.md)
+* [Erstellen von Apps für Microsoft Teams](concepts/building-an-app.md)
