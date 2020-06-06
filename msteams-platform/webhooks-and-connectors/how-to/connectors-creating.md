@@ -1,14 +1,14 @@
 ---
 title: Office 365-Connectors
 description: Beschreibt die ersten Schritte mit Office 365-Konnektoren in Microsoft Teams
-keywords: Teams o365 Connector
+keywords: Teams O365-Connector
 ms.date: 04/19/2019
-ms.openlocfilehash: e26c264cc418d326e783ff0378089d2565ecbfef
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 9c18a4c0dfda449c1507b26e78889cfab56ffd5f
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674072"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44590851"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Erstellen Office 365 Connectors für Microsoft Teams
 
@@ -35,7 +35,7 @@ Ihre Benutzer werden die gesamte Connector-Konfigurationsumgebung durchführen, 
 
 Sie können Ihre vorhandene Webkonfigurations Erfahrung wieder verwenden oder eine separate Version erstellen, die speziell in Microsoft Teams gehostet wird. Ihr Code sollte:
 
-1. Schließen Sie das Microsoft Teams-JavaScript-SDK ein. Dadurch erhält der Codezugriff auf APIs, um allgemeine Vorgänge wie Abrufen des aktuellen Benutzers/Kanals/Team Kontexts und Initiieren von Authentifizierungs Flüssen auszuführen. Initialisieren Sie das SDK durch `microsoftTeams.initialize()`Aufrufen von.
+1. Schließen Sie das Microsoft Teams-JavaScript-SDK ein. Dadurch erhält der Codezugriff auf APIs, um allgemeine Vorgänge wie Abrufen des aktuellen Benutzers/Kanals/Team Kontexts und Initiieren von Authentifizierungs Flüssen auszuführen. Initialisieren Sie das SDK durch Aufrufen von `microsoftTeams.initialize()`.
 2. Rufen `microsoftTeams.settings.setValidityState(true)` Sie an, wenn Sie die Schaltfläche speichern aktivieren möchten. Sie sollten dies als Antwort auf eine gültige Benutzereingabe wie eine Auswahl oder ein Feld Update tun.
 3. Registrieren eines `microsoftTeams.settings.registerOnSaveHandler()` Ereignishandlers, der aufgerufen wird, wenn der Benutzer auf Speichern klickt.
 4. Aufrufen `microsoftTeams.settings.setSettings()` , um die Connectoreinstellungen zu speichern. Was hier gespeichert wird, ist auch, was im Konfigurationsdialogfeld angezeigt wird, wenn der Benutzer versucht, eine vorhandene Konfiguration für den Connector zu aktualisieren.
@@ -45,12 +45,12 @@ Sie können Ihre vorhandene Webkonfigurations Erfahrung wieder verwenden oder ei
 #### <a name="getsettings-response-properties"></a>`GetSettings()`Antworteigenschaften
 
 >[!Note]
->Die Parameter, die durch `getSettings` den Aufruf hier zurückgegeben werden, unterscheiden sich, wenn Sie diese Methode auf einer Registerkarte aufrufen und von den [hier](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest)dokumentierten abweichen.
+>Die Parameter, die durch den `getSettings` Aufruf hier zurückgegeben werden, unterscheiden sich, wenn Sie diese Methode auf einer Registerkarte aufrufen und von den [hier](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest)dokumentierten abweichen.
 
 | Parameter   | Details |
 |-------------|---------|
-| `entityId`       | Die Entitäts-ID, die vom Code beim Aufruf `setSettings()`festgelegt wird. |
-| `configName`  | Der Konfigurationsname, wie vom Code beim Aufruf `setSettings()`festgelegt. |
+| `entityId`       | Die Entitäts-ID, die vom Code beim Aufruf festgelegt wird `setSettings()` . |
+| `configName`  | Der Konfigurationsname, wie vom Code beim Aufruf festgelegt `setSettings()` . |
 | `contentUrl` | Die URL der Konfigurationsseite, die vom Code beim Aufruf festgelegt wird`setSettings()` |
 | `webhookUrl` | Die webhook-URL, die für diesen Connector erstellt wurde. Speichern Sie die webhook-URL, und verwenden Sie Sie, um strukturiertes JSON zu veröffentlichen, um Karten an den Kanal zu senden. `webhookUrl` wird nur zurückgegeben, wenn Anwendung erfolgreich zurückgegeben wird. |
 | `appType` | Die zurückgegebenen Werte werden können `mail`, `groups` bzw. `teams` entsprechend Office 365-Mail, Office 365-Gruppen oder Microsoft Teams sein. |
@@ -59,11 +59,11 @@ Sie können Ihre vorhandene Webkonfigurations Erfahrung wieder verwenden oder ei
 Wenn Sie den Benutzer als Teil des Ladens Ihrer Seite in Schritt 2 oben authentifizieren müssen, lesen Sie [diesen Link](~/tabs/how-to/authentication/auth-flow-tab.md) , um Details darüber zu erhalten, wie Sie die Anmeldung beim Einbetten Ihrer Seite integrieren können.
 
 > [!NOTE]
-> Aufgrund von clientseitigen Kompatibilitätsgründen muss Ihr Code vor dem Aufruf `microsoftTeams.authentication.registerAuthenticationHandlers()` `authenticate()`mit den URL-und Success/Failure-Rückrufmethoden aufgerufen werden.
+> Aufgrund von clientseitigen Kompatibilitätsgründen muss Ihr Code `microsoftTeams.authentication.registerAuthenticationHandlers()` vor dem Aufruf mit den URL-und Success/Failure-Rückrufmethoden aufgerufen werden `authenticate()` .
 
 #### <a name="handling-edits"></a>Behandeln von Bearbeitungen
 
-Ihr Code sollte Benutzer behandeln, die zum Bearbeiten einer vorhandenen Connector-Konfiguration zurückkehren. Rufen `microsoftTeams.settings.setSettings()` Sie dazu während der anfänglichen Konfiguration mit den folgenden Parametern auf:
+Der Code sollte wiederkehrenden Benutzern ermöglichen, eine vorhandene Connector-Konfiguration zu bearbeiten. Rufen Sie dazu `microsoftTeams.settings.setSettings()` während der anfänglichen Konfiguration mit den folgenden Parametern auf:
 
 - `entityId`ist die benutzerdefinierte ID, die von Ihrem Dienst verstanden wird, und stellt dar, was der Benutzer konfiguriert hat.
 - `configName`ist ein Anzeigename, den Ihr Konfigurationscode abrufen kann.
@@ -73,25 +73,25 @@ Normalerweise wird dieser Aufruf als Teil des Save-Ereignishandlers ausgeführt.
 
 #### <a name="handling-removals"></a>Behandeln von Entfernungen
 
-Sie können optional einen Ereignishandler ausführen, wenn der Benutzer eine vorhandene Connector-Konfiguration entfernt. Sie registrieren diesen Handler durch Aufrufen `microsoftTeams.settings.registerOnRemoveHandler()`von. Dieser Handler kann verwendet werden, um Bereinigungsvorgänge wie das Entfernen von Einträgen aus einer Datenbank durchzuführen.
+Sie können optional einen Ereignishandler ausführen, wenn der Benutzer eine vorhandene Connector-Konfiguration entfernt. Sie registrieren diesen Handler durch Aufrufen von `microsoftTeams.settings.registerOnRemoveHandler()` . Dieser Handler kann verwendet werden, um Bereinigungsvorgänge wie das Entfernen von Einträgen aus einer Datenbank durchzuführen.
 
 ### <a name="including-the-connector-in-your-manifest"></a>Einschließen des Konnektors in Ihr Manifest
 
 Sie können das automatisch generierte Teams-App-Manifest aus dem Portal herunterladen. Bevor Sie es verwenden können, um Ihre APP zu testen oder zu veröffentlichen, müssen Sie jedoch folgende Schritte ausführen:
 
-- Schließen Sie zwei Symbole ein, und befolgen Sie die Anweisungen unter [Icons](~/concepts/build-and-test/apps-package.md#icons).
-- Ändern Sie `icons` den Teil des Manifests so, dass er auf die Dateinamen der Symbole anstelle von URLs verweist.
+- Schließen Sie zwei Symbole ein, indem Sie den Anweisungen in [Symbole](~/concepts/build-and-test/apps-package.md#icons) folgen.
+- Ändern Sie den `icons`-Teil des Manifests so, dass er auf die Dateinamen der Symbole anstelle von URLs verweist.
 
-Die folgende Manifest. JSON-Datei enthält die grundlegenden Elemente, die zum Testen und übermitteln Ihrer APP erforderlich sind.
+Die folgende manifest.JSON-Datei enthält die grundlegenden Elemente, die zum Testen und Übermitteln Ihrer APP erforderlich sind.
 
 > [!NOTE]
-> Ersetzen `id` Sie `connectorId` und im folgenden Beispiel durch die GUID Ihres Konnektors.
+> Ersetzen Sie im folgenden Beispiel `id` und `connectorId` mit der GUID des Connectors.
 
-#### <a name="example-manifestjson-with-connector"></a>Beispiel Manifest. JSON mit Connector
+#### <a name="example-manifestjson-with-connector"></a>Beispiel-manifest.JSON mit Connector
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
@@ -129,15 +129,15 @@ Die folgende Manifest. JSON-Datei enthält die grundlegenden Elemente, die zum T
 
 ## <a name="testing-your-connector"></a>Testen des Connectors
 
-Wenn Sie Ihren Connector testen möchten, laden Sie ihn wie bei jeder anderen app in ein Team hoch. Sie können ein ZIP-Paket mithilfe der Manifestdatei aus dem Connectors Developer Dashboard (geändert wie im vorherigen Abschnitt weitergeleitet) und den beiden Symboldateien erstellen.
+Um den Connector zu testen, laden Sie ihn wie jede andere App in ein Team hoch. Sie können ein ZIP-Paket erstellen und dafür die (wie im vorherigen Abschnitt beschrieben modifizierte) Manifestdatei aus dem Entwicklerdashboard für Connectors sowie die beiden Symboldateien verwenden.
 
-Nachdem Sie die APP hochgeladen haben, öffnen Sie die Liste Konnektoren in einem beliebigen Kanal. Scrollen Sie nach unten, um Ihre APP im **hochgeladenen** Abschnitt anzuzeigen.
+Nachdem Sie die App hochgeladen haben, öffnen Sie die Liste der Connectors von einem beliebigen Kanal aus. Scrollen Sie ganz nach unten bis zu Ihrer App im Abschnitt **Hochgeladenen**.
 
-![Screenshot des Abschnitts "uploaded" im Dialogfeld "Connector"](~/assets/images/connectors/connector_dialog_uploaded.png)
+![Screenshot des Abschnitts "Hochgeladen" im Connector-Dialogfeld](~/assets/images/connectors/connector_dialog_uploaded.png)
 
-Sie können nun die Konfigurationsumgebung starten. Beachten Sie, dass dieser Fluss vollständig innerhalb von Microsoft Teams als gehostete Erfahrung auftritt.
+Sie können nun die Konfigurationsfunktion starten. Beachten Sie, dass dieser Fluss vollständig innerhalb von Microsoft Teams als gehostete Erfahrung auftritt.
 
-Um zu überprüfen `HttpPOST` , ob eine Aktion ordnungsgemäß funktioniert, [Senden Sie Nachrichten an den Connector](~/webhooks-and-connectors/how-to/connectors-using.md).
+Um zu überprüfen, ob eine `HttpPOST` Aktion ordnungsgemäß funktioniert, [Senden Sie Nachrichten an den Connector](~/webhooks-and-connectors/how-to/connectors-using.md).
 
 ## <a name="publish-connectors-for-your-organization"></a>Veröffentlichen von Connectors für Ihre Organisation
 
@@ -151,5 +151,5 @@ Nachdem Sie Ihr App-Paket hochgeladen haben, können Sie den Connector in einem 
 1. Wählen Sie die Leiste **zu einem Team hinzufügen** aus.
 1. Geben Sie im nächsten Dialogfenster einen Team-oder Kanalnamen ein.
 1. Wählen Sie in der unteren rechten Ecke des Dialogfensters die Option zum **Einrichten einer Verbindungs** Leiste aus.
-1. Der Connector wird im Abschnitt &#9679;&#9679;&#9679; => *Weitere Optionen* => *Connectors* => *alle* => *Connectors für Ihr Team* für dieses Team verfügbar sein. Sie können navigieren, indem Sie zu diesem Abschnitt Scrollen oder nach der Connector-App suchen.
+1. Der Connector wird im Abschnitt &#9679;&#9679;&#9679; => *Weitere Optionen*  =>  *Connectors*  =>  *alle*  =>  *Connectors für Ihr Team* für dieses Team verfügbar sein. Sie können navigieren, indem Sie zu diesem Abschnitt Scrollen oder nach der Connector-App suchen.
 1. Um den Connector zu konfigurieren oder zu ändern, wählen Sie die Leiste **configure** aus.

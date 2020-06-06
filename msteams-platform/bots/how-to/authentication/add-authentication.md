@@ -4,12 +4,12 @@ author: clearab
 description: Vorgehensweise Hinzufügen von OAuth-Authentifizierung zu einem bot in Microsoft Teams.
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: b5a246db1838d19d81e42e9a60efa74bb5363573
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: 2b9765a2f295e85dc9b4d2c1b1ddcae4d642e268
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210724"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44590872"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Hinzufügen von Authentifizierung zu ihren Teams-bot
 
@@ -143,7 +143,7 @@ In diesem Verfahren verwenden Sie einen Azure AD Anbieter; Außerdem können and
         - Wenn Sie *Konten in einem beliebigen Organisations Verzeichnis (AAD Directory-Multi Mandanten und persönliche Microsoft-Konten wie Skype, Xbox, Outlook)* ausgewählt haben, geben Sie das Wort " **Common** " anstelle einer Mandanten-ID ein. Andernfalls wird die Aad-App über den Mandanten überprüfen, dessen ID ausgewählt wurde, und persönliche Microsoft-Konten ausschließen.
 
     h. Geben Sie für **Ressourcen-URL**den Eintrag ein `https://graph.microsoft.com/` . Dies wird im aktuellen Codebeispiel nicht verwendet.  
-    Ich. Lassen Sie **Bereiche** leer. Die folgende Abbildung ist ein Beispiel:
+    i. Lassen Sie **Bereiche** leer. Die folgende Abbildung ist ein Beispiel:
 
     ![Teams Bots App auth Connection String ADV1](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
@@ -159,7 +159,7 @@ In diesem Verfahren verwenden Sie einen Azure AD Anbieter; Außerdem können and
     ![Teams Bots App auth Connection String ADV1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
 
 1. Wählen Sie **Annehmen** aus.
-1. Anschließend sollten Sie zu einer **Test Verbindung zu \< Ihrer-Connection-Name> erfolgreich gefolgten** Seite umgeleitet werden. Aktualisieren Sie die Seite, wenn Sie eine Fehlermeldung erhalten. Die folgende Abbildung ist ein Beispiel:
+1. Anschließend sollten Sie zu einer **Test Verbindung zu einer \<your-connection-name> erfolgreichen** Seite umgeleitet werden. Aktualisieren Sie die Seite, wenn Sie eine Fehlermeldung erhalten. Die folgende Abbildung ist ein Beispiel:
 
   ![Teams Bots App auth Connection String ADV1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
 
@@ -390,7 +390,7 @@ Dieses Manifest enthält Informationen, die Microsoft Teams benötigt, um eine V
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "",
