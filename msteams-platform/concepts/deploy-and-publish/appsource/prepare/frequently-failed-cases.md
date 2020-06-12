@@ -4,12 +4,12 @@ description: Beschreibt Tipps für die Übermittlung und die meisten fehlgeschla
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 52225bd082059430a9804cf8fb225ac539781b33
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: b2b198068478e6cc1e620d5bf5da9d448b3cf56d
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914574"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704481"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Tipps für eine erfolgreiche App-Übermittlung
 
@@ -70,9 +70,10 @@ Weitere Informationen zur Authentifizierung finden Sie unter:
 
 * Registerkarten sollten fokussierten Inhalt bereitstellen und unnötige Benutzeroberflächenelemente vermeiden. Im Allgemeinen bezieht sich dies in der Regel auf unnötige geschachtelte/schichtige Navigation, auf eine externe oder irrelevante Benutzeroberfläche neben dem Inhalt oder auf Links, die den Benutzer zu nicht verwandten Inhalten führen. Unten sehen Sie beispielsweise eine Registerkartenansicht, in der Navigationsmenüs ausgelassen werden und nur der Hauptinhalt präsentiert wird:
 
-![SharePoint-](~/assets/images/faq/web-sp.png)
-![Webansicht SharePoint-Registerkartenansicht](~/assets/images/faq/tab-sp.png)
+![SharePoint-Webansicht](~/assets/images/faq/web-sp.png)  
+![SharePoint-Registerkartenansicht](~/assets/images/faq/tab-sp.png)
 
+* Registerkarten sollten leicht in der Natur sein und keine komplexe Navigation umfassen.
 * Wenn mehrere Ansichtsoptionen vorhanden sind, sollten Sie ein Tab-Konfigurationsmenü für den Benutzer auswählen. Anstatt beispielsweise ein Menü in die Registerkarte einzubetten, legen Sie das Menü auf der Konfigurationsseite so fest, dass die tatsächliche Registerkartenansicht sauber und fokussiert ist.
 
 ![Seite "Wide idea-Konfiguration"](~/assets/images/faq/wideidea.png)
@@ -80,10 +81,13 @@ Weitere Informationen zur Authentifizierung finden Sie unter:
 ### <a name="9989-tab-configuration-must-happen-in-the-configuration-screen"></a>Auf dem Konfigurationsbildschirm muss &#9989;-Registerkarte konfiguriert sein.
 
 * Auf dem Konfigurationsbildschirm sollte der Wert der Benutzeroberfläche eindeutig erläutert und die Registerkarte konfiguriert werden.
-* Der Konfigurationsprozess sollte nicht die Benutzeroberfläche beenden und immer eine Möglichkeit für Benutzer bieten, den Vorgang fortzusetzen.
+* Der Konfigurationsprozess sollte immer eine Möglichkeit für Benutzer bieten, die Benutzerfreundlichkeit weiterhin nicht zu beenden. Zeigen Sie beispielsweise nicht eine leere Platine an, nachdem der Benutzer die Registerkarte konfiguriert hat.
+* Der Benutzeranmeldeprozess muss Teil des Konfigurationsprozesses sein und in der Registerkarten-Benutzeroberfläche abgeschlossen sein. Nachdem der Benutzer die Konfiguration abgeschlossen und die Registerkarte geladen hat, sollte keine weitere Aktion erforderlich sein.
+* Zeigen Sie die gesamte Webseite nicht im Popupfenster der Anmeldekonfiguration an.
 * Ein Benutzer sollte die Konfigurationsumgebung immer fertig stellen können, auch wenn er nicht sofort den gesuchten Inhalt finden kann.
 * Die Konfigurationsumgebung sollte Optionen für den Benutzer bieten, um den Inhalt zu finden, eine URL zu fixieren oder neue Inhalte zu erstellen, falls diese nicht vorhanden sind.
-* Der Benutzer sollte die Konfigurationsoberfläche nicht verlassen müssen, um Inhalte zu erstellen, und dann zu Microsoft Teams zurückkehren, um ihn zu fixieren.
+* Die Konfigurations Erfahrung muss innerhalb des Teams-Kontexts verbleiben. Der Benutzer sollte die Konfigurationsoberfläche nicht verlassen müssen, um Inhalte zu erstellen und dann zu Microsoft Teams zurückzukehren, um es zu fixieren.
+* Effizientes Verwenden des Bereichs "verfügbare Viewports" Verschwenden Sie es nicht bei der Verwendung von großen Logos innerhalb der Konfiguration Pop-up
 
 ![OneNote ermöglicht Benutzern das Einfügen eines OneNote-Links, falls Notizen nicht gefunden werden können.](~/assets/images/faq/tab-onenote-config.png)
 
@@ -105,26 +109,44 @@ Ihr bot sollte auf alle Befehle reagieren und nicht auf den Endbenutzer. Hier si
 
 * **Fügen Sie Hilfeinhalte oder Anleitungen hinzu, wenn Ihr bot verloren geht**. Wenn Ihr bot die Benutzereingabe nicht verstehen kann, sollte er eine alternative Aktion vorschlagen. Zum Beispiel: "es tut mir *leid, ich verstehe nicht. Geben Sie "Hilfe" ein, um weitere Informationen zu erhalten. "* Reagieren Sie nicht mit einer Fehlermeldung oder einfach: *"Ich verstehe nicht"*. Nutzen Sie diese Möglichkeit, um Ihre Benutzer zu unterrichten.
 
-* **Überdenken Sie alle Bereiche**. Stellen Sie sicher, dass Ihr bot geeignete Antworten bereitstellt`@*botname*`, wenn Sie in einem Kanal und in persönlichen Unterhaltungen erwähnt werden. Wenn Ihr bot keinen sinnvollen Kontext innerhalb des Bereichs Personal oder Teams bereitstellt, deaktivieren Sie diesen Bereich über das Manifest. (Weitere Informationen `bots` finden Sie unter Block in der [Microsoft Teams Manifest-Schemareferenz](~/resources/schema/manifest-schema.md#bots).)
+* **Verwenden Sie Adaptive Karten und Aufgaben Module, um Ihre bot-Antwort übersichtlicher und Umsetz** 
+ barer zu machen. [Adaptive Karten mit Schaltflächen, die Aufgaben Module aufrufen](/task-modules-and-cards/task-modules/task-modules-bots) , verbessern die bot-Benutzeroberfläche. Diese Karten und Schaltflächen sind auf einem mobilen Gerät einfacher zu verwenden, im Gegensatz zu Ihrem Benutzer, der die Befehle tippt.
+
+* **Überdenken Sie alle Bereiche**. Stellen Sie sicher, dass Ihr bot geeignete Antworten bereitstellt, wenn Sie `@*botname*` in einem Kanal und in persönlichen Unterhaltungen erwähnt werden. Wenn Ihr bot keinen sinnvollen Kontext innerhalb des Bereichs Personal oder Teams bereitstellt, deaktivieren Sie diesen Bereich über das Manifest. (Weitere Informationen finden Sie unter `bots` Block in der [Microsoft Teams Manifest-Schemareferenz](~/resources/schema/manifest-schema.md#bots).)
 
 ### <a name="9989-bots-must-send-a-welcome-message-on-first-launch"></a>&#9989; Bots müssen beim ersten Start eine Willkommensnachricht senden
 
-Begrüßungsnachrichten sind die beste Möglichkeit, den Klingelton Ihres bot festzulegen. Dies ist die erste Interaktion, die ein Benutzer mit dem Bot hat. Eine gute Willkommensnachricht kann den Benutzer ermutigen, die APP weiterhin zu erkunden. Wenn die Begrüßung oder einleitende Nachricht verwirrend oder unklar ist, sehen Benutzer den Wert der APP nicht sofort und verlieren ihre Interessen. Die Willkommensnachricht muss Folgendes enthalten:
+Begrüßungsnachrichten sind die beste Möglichkeit, den Klingelton Ihres bot festzulegen. Dies ist die erste Interaktion, die ein Benutzer mit dem Bot hat. Eine gute Willkommensnachricht kann den Benutzer ermutigen, die APP weiterhin zu erkunden. Wenn die Begrüßung oder einleitende Nachricht verwirrend oder unklar ist, sehen Benutzer den Wert der APP nicht sofort und verlieren ihre Interessen.
 
-* Ein Hilfebefehl.
-* Der Wert Vorschlag
-* Alle gültigen Befehle.
+### <a name="welcome-message-requirements"></a>Anforderungen für Willkommensnachrichten
 
-Im folgenden finden Sie einige Überlegungen zum Entwerfen Ihrer Willkommensnachricht:
+* Identifizieren Sie, wer den bot einem Kanal hinzugefügt hat.
+* Einen Wert Vorschlag einbeziehen.
+* Bereitstellen von Anleitungen für die Verwendung des bot.
+* Präsentieren Sie einfach lesbaren Text und einfachen Dialog – vorzugsweise eine Karte mit einer Aktions baren Willkommens Tour-Schaltfläche, die ein Aufgabenmodul lädt.
+* Halten Sie es einfach, vermeiden Sie den Dialog mit Wörtern/Chats.
+* Rufen Sie die Willkommensnachricht mit einem Ping-Befehl auf, nicht mit mindestens zwei gleichzeitigen Pings.
+* Im persönlichen Chat darf die Willkommensnachricht nur dem Benutzer angezeigt werden, der die APP konfiguriert hat.  
+* Senden Sie niemals einen persönlichen Chat an alle Mitglieder des Teams.
+* Senden Sie die Willkommensnachricht niemals mehrmals. Das Wiederholen derselben Willkommensnachricht über regelmäßige Intervalle ist nicht zulässig und wird als Spam betrachtet.
 
-#### <a name="personal-scope"></a>Persönlicher Bereich
+#### <a name="avoid-welcome-message-spamming"></a>Vermeiden von Begrüßungsnachrichten-Spam
 
-* **Machen Sie Ihre Nachricht prägnant und informativ**. Höchstwahrscheinlich sind die Benutzererfahrung mit und das Wissen über Ihre APP unterschiedlich. Möglicherweise haben Sie Ihre APP auf einer anderen Plattform verwendet oder wissen nichts über Ihre APP. Sie möchten Ihre Nachricht an alle Zielgruppen anpassen und in einigen Sätzen erklären, was Ihr bot tut und wie er mit ihm interagieren kann. Sie sollten auch den Wert der APP erläutern und erfahren, wie die Benutzer davon profitieren.
+* **Kanal Nachricht von bot**. Keine Spam-Benutzer durch Erstellen separater neuer Chat Beiträge. Erstellen Sie einen einzelnen Thread Beitrag mit Antworten im gleichen Thread.
+* **Persönlicher Chat von bot**. Senden Sie keine mehrere Nachrichten. Senden Sie eine Nachricht mit vollständigen Informationen.
+
+#### <a name="notification-only-bot-welcome-messages"></a>Willkommens Meldungen nur für Benachrichtigungen
+
+Nur Benachrichtigungs Bots müssen eine Willkommensnachricht senden, die eine Nachricht mit dem Hinweis *"Ich bin ein nur-Benachrichtigungs-bot" ist und nicht auf Ihre Chats Antworten*kann.
+
+#### <a name="welcome-messages-in-the-personal-scope"></a>Begrüßungsnachrichten im persönlichen Bereich
+
+* **Machen Sie Ihre Nachricht prägnant und informativ**.  Höchstwahrscheinlich sind die Benutzerfreundlichkeit und das Wissen über Ihre APP unterschiedlich. Ein Benutzer hat Ihre APP möglicherweise auf einer anderen Plattform verwendet oder hat nichts über Ihre App erfahren. Sie möchten Ihre Nachricht an alle Zielgruppen anpassen und in einigen Sätzen erklären, was Ihr bot tut und wie er mit ihm interagieren kann. Sie sollten auch den Wert der APP erläutern und erfahren, wie die Benutzer davon profitieren.
 ![Cafe und ESS-bot](~/assets/images/faq/cafe-bot.png)
 
 * **Machen Sie Ihre Nachricht Handlungs**bereit. Denken Sie an das erste, was Benutzer nach der Installation Ihrer APP tun sollen. Gibt es einen coolen Befehl, den Sie ausprobieren sollten? Gibt es eine weitere Onboarding-Erfahrung, die Sie kennen sollten? Müssen die Benutzer sich anmelden? Sie können Aktionen auf einer adaptiven Karte hinzufügen oder bestimmte Beispiele wie *"versuchen Sie Fragen...."*, *"Dies ist, was ich tun kann..."* bereitstellen.
 
-#### <a name="team-scope"></a>Team Bereich
+#### <a name="welcome-messages-in-the-teamchannel--scope"></a>Begrüßungsnachrichten im Team/Kanal-Bereich
 
 Die Dinge sind ein bisschen anders, wenn der bot zum ersten Mal einem Kanal hinzugefügt wird. Normalerweise sollten Sie keine 1:1-Nachricht an alle Benutzer im Team senden, aber der Bot kann eine Willkommensnachricht im Kanal senden.
 

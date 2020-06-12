@@ -2,12 +2,12 @@
 title: Leitfaden für den Microsoft Teams-App-Genehmigungsprozess
 description: Beschreibt den Genehmigungsprozess für die Veröffentlichung Ihrer APP im Microsoft Teams-App-Store.
 keywords: Veröffentlichungs AppSource für Microsoft Teams-Veröffentlichungs Speicher
-ms.openlocfilehash: 0f4a93f6c93ab0dd4147d7e6b8dce0beac26ed95
-ms.sourcegitcommit: 5207af18a032763fecf2b932d7e29ced1ee11ccd
+ms.openlocfilehash: e93a17453e514b1e89f3f7070ff1f31000719260
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "43937350"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704488"
 ---
 # <a name="submit-your-app-to-appsource"></a>Übermitteln Ihrer APP an AppSource
 
@@ -16,7 +16,8 @@ ms.locfileid: "43937350"
 Wenn Sie Ihre APP in [AppSource](https://appsource.microsoft.com) veröffentlichen, ist Sie im Microsoft Teams-App-Katalog und im Internet verfügbar. Auf hohem Niveau ist der Prozess für die Übermittlung Ihrer APP an AppSource:
 
 1. Entwickeln Sie Ihre APP nach unseren [Entwurfsrichtlinien](~/concepts/design/understand-use-cases.md). Registerkarten sollten den [Entwurfsrichtlinien für die Registerkarte](~/tabs/design/tabs.md)entsprechen. Bots sollten den [bot-Entwurfsrichtlinien](~/bots/design/bots.md)folgen.
-1. [Richten Sie ein Entwicklerkonto](/office/dev/store/open-a-developer-account) im [Partner Center](https://support.microsoft.com/help/4499930/partner-center-overview)ein.
+1. Stellen Sie sicher, dass Ihre APP die APP- [Validierungsrichtlinien](/legal/marketplace/certification-policies) für Microsoft Teams erfüllt.
+1. [Richten Sie ein Entwicklerkonto](/office/dev/store/open-a-developer-account) im [Partner Center](https://support.microsoft.com/help/4499930/partner-center-overview)ein. *Siehe auch* [wie erstelle ich ein Partner Center-Konto](#how-do-i-create-a-partner-center-account) im Abschnitt häufig gestellte Fragen, unten.
 1. Bereiten Sie Ihre APP für die Übermittlung vor, indem Sie unsere [Zulassungs Checkliste](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)befolgen.
 1. Lesen Sie unsere [Tipps für eine erfolgreiche App-Übermittlung](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md).
 1. Übermitteln Sie Ihr Paket [über das Partner Center an AppSource](/office/dev/store/use-partner-center-to-submit-to-appsource).
@@ -28,7 +29,7 @@ Wenn Sie Ihre APP in [AppSource](https://appsource.microsoft.com) veröffentlich
 >- Wenn Ihre Teams-APP einen bot enthält, müssen Sie den [Code of Conduct für](https://aka.ms/bf-conduct)den bot Developer Framework einhalten.
 >- Wenn Ihre APP einen Office 365 Connector enthält, gelten möglicherweise zusätzliche Bedingungen. *Weitere Informationen finden Sie unter* [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) und [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
 
-## <a name="faqs--teams-apps-and-partner-accounts"></a>FAQs – Microsoft Teams-apps und Partner Konten
+## <a name="faqs--teams-apps-and-partner-accounts"></a>FAQs – Microsoft Teams-apps und Partnerkonten
 
 ## <a name="how-do-i-create-a-partner-center-account"></a>Wie erstelle ich ein Partner Center-Konto?
 
@@ -37,13 +38,9 @@ Es gibt zwei Möglichkeiten, ein Partner Center-Konto zu erstellen:
 - Wenn Sie noch nicht im Partner Center sind und kein Konto im Microsoft-Netzwerk haben, [Erstellen Sie ein Konto über die Seite Partner Center-Registrierung](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 - Wenn Sie bereits im Partnernetzwerk registriert sind, [Erstellen Sie ein Konto direkt im Partner Center unter Verwendung einer vorhandenen Registrierung](/office/dev/store/).
 
-## <a name="how-do-i-add-my-phone-number-to-the-partner-profile-contact-section"></a>Wie füge ich meine Telefonnummer zum Kontaktbereich des Partner Profils hinzu?
-
-Die Telefonnummer besteht aus drei Teilen: Ländervorwahl, Ortsvorwahl und Telefonnummer. Wenn Ihre Telefonnummer keine Ortskennzahl enthält, lassen Sie das zweite Feld leer, und füllen Sie das dritte Feld aus.
-
 ## <a name="what-if-i-cannot-find-my-office-store-account-in-partner-center"></a>Was kann ich tun, wenn ich mein Office Store-Konto im Partner Center nicht finde?
 
-Öffnen Sie ein [Partner Support Ticket](https://partner.microsoft.com/en-US/support/v2/?stage=1) , und wählen Sie in den Dropdownmenüs Folgendes aus:
+Öffnen Sie ein [Partner Center Support Ticket](https://partner.microsoft.com/en-US/support/v2/?stage=1) , und wählen Sie in den Dropdownmenüs Folgendes aus:
 
 | Menü | Option |
 | -------   | -------  |
@@ -51,19 +48,25 @@ Die Telefonnummer besteht aus drei Teilen: Ländervorwahl, Ortsvorwahl und Telef
 | Thema | Allgemeine Marketplace-Hilfe und Vorgehens Fragen |
 | Subtopic| Office-Add-In |
 
-*Siehe auch* [Öffnen eines Partner Center-Support Tickets](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
+## <a name="where-can-i-get-support-for-my-partner-center-issues"></a>Wo erhalte ich Unterstützung für meine Partner Center-Probleme?
 
-## <a name="how-do-i-manage-my-account-settings-and-partner-profile-in-partner-center"></a>Wie verwalte ich meine Kontoeinstellungen und das Partnerprofil im Partner Center?
-
-Auf unserer Seite [Kontoeinstellungen und Profilinformationen verwalten](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) finden Sie Anleitungen zum Verwalten der Einstellungen Ihres Partner Center-Kontos.
+Besuchen Sie die [Seite Publisher-Support](https://aka.ms/marketplacepublishersupport) , um nach Ihrem Problemthema zu suchen und Anleitungen zu finden. Wenn die bereitgestellten Anleitungen nicht hilfreich sind, [Öffnen Sie ein Partner Center-Support Ticket](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
 
 ## <a name="how-do-i-manage-my-office-store-account"></a>Wie kann ich mein Office Store Konto verwalten?
 
 Weitere Informationen zum Verwalten Ihres Office Store-Kontos über das Partner Center finden Sie [in unserem Office Store-Konto verwalten im Partner Center](/office/dev/store/manage-account-settings-and-profile) .
 
+## <a name="how-do-i-add-my-phone-number-to-the-partner-profile-contact-section"></a>Wie füge ich meine Telefonnummer zum Kontaktbereich des Partnerprofils hinzu?
+
+Die Telefonnummer besteht aus drei Teilen: Ländervorwahl, Ortsvorwahl und Telefonnummer. Wenn Ihre Telefonnummer keine Ortskennzahl enthält, lassen Sie das zweite Feld leer, und füllen Sie das dritte Feld aus.
+
+## <a name="how-do-i-manage-my-account-settings-and-partner-profile-in-partner-center"></a>Wie verwalte ich meine Kontoeinstellungen und das Partnerprofil im Partner Center?
+
+Auf unserer Seite [Kontoeinstellungen und Profilinformationen verwalten](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) finden Sie Anleitungen zum Verwalten der Einstellungen Ihres Partner Center-Kontos.
+
 ## <a name="why-do-i-receive-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>Warum erhalte ich die Meldung "dieses Konto ist nicht veröffentlicht?", wenn ich versuche, mein Add-in über das Partner Center zu übermitteln?
 
-Die obige Fehlermeldung wird angezeigt, wenn der [Status Ihrer Kontoüberprüfung](/partner-center/verification-responses) aussteht. Sie können den Status der Kontoüberprüfung im Partner Center- [Dashboard](https://partner.microsoft.com/dashboard) überprüfen, indem Sie die Option **Einstellungen** (Zahnradsymbol) in der oberen rechten Ecke der Seitenkopf Schale auswählen und die Einstellungen für das**Konto**  => **Konto** für **Entwicklereinstellungen** => auswählen.
+Die obige Fehlermeldung wird angezeigt, wenn der [Status Ihrer Kontoüberprüfung](/partner-center/verification-responses) aussteht. Sie können den Status der Kontoüberprüfung im Partner Center- [Dashboard](https://partner.microsoft.com/dashboard) überprüfen, indem Sie die Option **Einstellungen** (Zahnradsymbol) in der oberen rechten Ecke der Seitenkopf Schale auswählen und die Einstellungen für das Konto Konto für **Entwicklereinstellungen**auswählen  =>  **Account**   =>  **Account settings** .
 
 ![Seite "Partner Center-Kontoeinstellungen"](../../../assets/images/partner-center-accts-page.png)
 
@@ -78,7 +81,7 @@ Während des Konto Überprüfungsprozesses wird der Status jedes erforderlichen 
 Während der Überprüfung des **e-Mail-Eigentums** wird eine Bestätigungs-e-Mail an die primäre Kontakt-e-Mail-Adresse gesendet. Überprüfen Sie Ihren primären Kontakt Posteingang auf eine e-Mail von **Maccount@<span>Microsoft</span>. com** mit der *erforderlichen Betreffzeile: Überprüfen Sie Ihr e-Mail-Konto bei Microsoft*, indem Sie den e-Mail-Verifizierungsvorgang abschließen. Die Bestätigungs-e-Mail wird an die e-Mail-Adresse gesendet, die auf der Seite Kontoeinstellungen im Partner Center aufgeführt ist.
 
 > [!NOTE]
- >Der Link zur e-Mail-Überprüfung ist nur 7 Tage gültig. Sie können anfordern, dass wir die e-Mail erneut an Sie senden, indem Sie Ihre Partner Profilseite besuchen und den Link zur über **Prüfung der Bestätigung erneut senden** auswählen. Um sicherzustellen, dass die e-Mail empfangen wird, Listen Sie e-Mails von Microsoft.com als sichere Domäne auf und überprüfen Sie Ihre Junk-e-Mail-Ordner.
+ >Der Link zur e-Mail-Überprüfung ist nur 7 Tage gültig. Sie können anfordern, dass wir die e-Mail erneut an Sie senden, indem Sie Ihre Partnerprofil Seite besuchen und den Link zur über **Prüfung der Bestätigung erneut senden** auswählen. Um sicherzustellen, dass die e-Mail empfangen wird, Listen Sie e-Mails von Microsoft.com als sichere Domäne auf und überprüfen Sie Ihre Junk-e-Mail-Ordner.
 
 ## <a name="how-i-do-get-further-support-for-my-account-related-issues"></a>Wie erhalte ich weitere Unterstützung für meine Konto bezogenen Probleme?
 
@@ -92,7 +95,7 @@ Versuchen Sie Folgendes:
 1. Löschen Sie den Browsercache, wechseln Sie zu Ihrem Partner Center-Konto Dashboard, und wählen Sie den Link Überprüfung der über **Prüfung erneut senden** aus, damit die Bestätigungs-e-Mail an Ihre e-Mail-Adresse gesendet wird
 1. Versuchen Sie, über einen anderen Browser auf den Link zum **erneuten Senden der Überprüfungs e-Mail** zuzugreifen.
 1. Arbeiten Sie mit Ihrer IT-Abteilung zusammen, um sicherzustellen, dass die Überprüfungs e-Mails nicht vom e-Mail-Server blockiert werden.
-1. Passen Sie den Spamfilter Ihres Servers so an, dass alle e-Mails von Maccount@Microsoft zugelassen/Whitelists enthalten sind **.<span> </span> com**.
+1. Passen Sie den Spamfilter Ihres Servers so an, dass alle e-Mails von Maccount@Microsoft zugelassen/Whitelists enthalten sind **. <span></span> com**.
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>Wie lange dauert der Prozess der Überprüfung der Arbeit?
 
@@ -102,9 +105,13 @@ Wenn alle übermittelten Details korrekt sind, wird die Überprüfung der Arbeit
 
 Die Unternehmens Überprüfung dauert 1 bis 2 Werktage, vorausgesetzt, alle erforderlichen Dokumente wurden übermittelt.
 
-## <a name="if-ive-already-reached-out-to-the-support-team-will-my-ticket-be-expedited"></a>Wenn ich das Support Team bereits erreicht habe, wird mein Ticket beschleunigt?
+## <a name="if-i-reach-out-to-the-support-team-will-my-ticket-be-expedited"></a>Wenn ich das Support Team erreiche, wird mein Ticket beschleunigt?
 
 Support Tickets werden innerhalb einer Woche aufgelöst. Suchen Sie nach den Updates, die an die e-Mail gesendet werden, die bei der Erhöhung des Support Tickets angegeben wurde.
+
+## <a name="my-issue-is-not-listed-here--are-there-other-pages-i-can-reference-for-partner-center-issues"></a>Mein Problem wird hier nicht aufgeführt.  Gibt es weitere Seiten, auf die ich für Partner Center-Probleme verweisen kann?
+
+Weitere Informationen finden Sie in der [Dokumentation zum kommerziellen Marktplatz](/azure/marketplace/) .
 
 ## <a name="ive-created-a-support-ticket-it-has-been-7-business-days-and-i-havent-received-an-update-where-can-i-get-additional-help"></a>Ich habe ein Support Ticket erstellt, es war 7 Werktage, und ich habe kein Update erhalten. Wo erhalte ich weitere Hilfe?
 
@@ -118,4 +125,4 @@ Senden Sie eine e-Mail **<teamsubm@microsoft.com>** mit den folgenden Details:
 
 >
 > [!div class="nextstepaction"]
-> [Weitere Informationen zu app-Validierungsrichtlinien für Microsoft Teams](https://docs.microsoft.com/legal/marketplace/certification-policies)
+> [Weitere Informationen zu app-Validierungsrichtlinien für Microsoft Teams](/legal/marketplace/certification-policies)

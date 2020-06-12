@@ -4,12 +4,12 @@ author: clearab
 description: Eine Übersicht über Unterhaltungs Bots in Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a88d516c57faa96e29de3e786910a13c4d65ac84
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 140be426ac789efbf044130b0683f60af9f617d6
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453868"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704467"
 ---
 # <a name="what-are-conversational-bots"></a>Was sind Unterhaltungs Bots?
 
@@ -21,7 +21,7 @@ Die folgende GIF-Datei zeigt einen Benutzer, der sich mit einem bot in einem 1:1
 
 ## <a name="build--a-bot-for-teams-with-the-microsoft-bot-framework"></a>Erstellen eines bot für Teams mit dem Microsoft bot-Framework
 
-Das Microsoft bot Framework] ( https://dev.botframework.com/) ist ein umfangreiches SDK zum Erstellen von Bots mit C#, Java, Python und JavaScript. Wenn Sie bereits einen bot haben, der auf dem bot-Framework basiert, können Sie ihn ganz einfach an die Arbeit in Microsoft Teams anpassen. Es wird empfohlen, dass Sie entweder C# oder Node. js verwenden, um unsere [SDKs](/microsoftteams/platform/#pivot=sdk-tools)nutzen zu können. Diese Pakete erweitern die Klassen und Methoden des Basic bot Builder-SDK wie folgt:
+Das [Microsoft bot-Framework](https://dev.botframework.com/) ist ein umfangreiches SDK zum Erstellen von Bots mithilfe von C#, Java, Python und JavaScript. Wenn Sie bereits einen bot haben, der auf dem bot-Framework basiert, können Sie ihn ganz einfach an die Arbeit in Microsoft Teams anpassen. Es wird empfohlen, dass Sie entweder C# oder Node.js verwenden, um unsere [SDKs](/microsoftteams/platform/#pivot=sdk-tools)zu nutzen. Diese Pakete erweitern die Klassen und Methoden des Basic bot Builder-SDK wie folgt:
 
 * Verwenden Sie spezielle Kartentypen wie die Office 365-Anschluss Karte.
 * Verwenden und Festlegen von Team spezifischen Kanaldaten zu Aktivitäten
