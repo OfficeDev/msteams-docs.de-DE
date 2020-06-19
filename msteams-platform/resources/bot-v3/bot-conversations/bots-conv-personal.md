@@ -4,11 +4,11 @@ description: Beschreibt das End-to-End-Szenario mit einer 1-zu-1-Unterhaltung mi
 keywords: Teams-Szenarien 1on1 1to1 Conversation bot
 ms.date: 05/20/2019
 ms.openlocfilehash: e23bb98160125d7fdbb4521467e2f522d6b6ce40
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674575"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801242"
 ---
 # <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>Haben Sie eine persönliche (eins-zu-eins)-Unterhaltung mit einem Microsoft Teams-bot
 

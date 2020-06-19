@@ -4,11 +4,11 @@ description: Grundlegendes zu wichtigen Anforderungen und Überlegungen im Zusam
 keywords: von der Anwendung gehostete Medien Windows Server Azure VM
 ms.date: 11/16/2018
 ms.openlocfilehash: f5b721edacb11e867d05c8213b74036cb51f419c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674243"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801207"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Anforderungen und Überlegungen für von der Anwendung gehostete Medien Bots
 
@@ -19,7 +19,7 @@ Nicht alle Anleitungen für die Entwicklung von Messaging-und IVR-Bots (Interact
 
 ## <a name="application-hosted-media-bot-development-requires-cnet-and-windows-server"></a>Die von der Anwendung gehostete Medien bot-Entwicklung erfordert C#-/.net und Windows Server
 
-- Für einen von der Anwendung gehosteten Medien `Microsoft.Graph.Communications.Calls.Media` -bot ist die .NET-Bibliothek ([verfügbar](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) für den Zugriff auf die Audio-und Video Mediendatenströme) erforderlich, und der bot muss auf einem Windows Server-Computer (oder Windows Server-Gastbetriebssystem in Azure) bereitgestellt werden. Daher muss der bot in C# entwickelt werden und die Standard .NET Framework und in Microsoft Azure bereitgestellt werden. Sie können nicht C++-oder Node. js-APIs verwenden, um auf Echt Zeit Medien zuzugreifen, und .net Core wird für einen von der Anwendung gehosteten Medien-bot nicht unterstützt.
+- Für einen von der Anwendung gehosteten Medien-bot ist die `Microsoft.Graph.Communications.Calls.Media` .NET-Bibliothek ([verfügbar](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) für den Zugriff auf die Audio-und Video Mediendatenströme) erforderlich, und der bot muss auf einem Windows Server-Computer (oder Windows Server-Gastbetriebssystem in Azure) bereitgestellt werden. Daher muss der bot in C# entwickelt werden und die Standard .NET Framework und in Microsoft Azure bereitgestellt werden. Sie können C++ oder Node.js-APIs nicht verwenden, um auf Echt Zeit Medien zuzugreifen, und .net Core wird für einen von der Anwendung gehosteten Medien-bot nicht unterstützt.
 
 - Ein von der Anwendung gehosteter Medien-bot kann in einer der folgenden Azure-Dienstumgebungen gehostet werden:
   - Cloud-Dienst.
@@ -28,7 +28,7 @@ Nicht alle Anleitungen für die Entwicklung von Messaging-und IVR-Bots (Interact
   
 - Ein von der Anwendung gehosteter Medien-bot kann nicht als Azure-Webanwendung bereitgestellt werden.
 
-- Ein von der `Microsoft.Graph.Communications.Calls.Media` Anwendung gehosteter Medien-bot muss unter einer aktuellen Version der .NET-Bibliothek ausgeführt werden. Der bot sollte entweder die neueste verfügbare Version des [NuGet-Pakets](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)oder eine Version verwenden, die nicht älter als drei Monate ist. Ältere Versionen der Bibliothek sind veraltet und funktionieren nach ein paar Monaten möglicherweise nicht mehr. Wenn Sie `Microsoft.Graph.Communications.Calls.Media` die Bibliothek auf dem neuesten Stand halten, wird die beste Interoperabilität zwischen bot und Microsoft Teams gewährleistet.
+- Ein von der Anwendung gehosteter Medien-bot muss unter einer aktuellen Version der `Microsoft.Graph.Communications.Calls.Media` .NET-Bibliothek ausgeführt werden. Der bot sollte entweder die neueste verfügbare Version des [NuGet-Pakets](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)oder eine Version verwenden, die nicht älter als drei Monate ist. Ältere Versionen der Bibliothek sind veraltet und funktionieren nach ein paar Monaten möglicherweise nicht mehr. Wenn Sie die Bibliothek auf dem `Microsoft.Graph.Communications.Calls.Media` neuesten Stand halten, wird die beste Interoperabilität zwischen bot und Microsoft Teams gewährleistet.
 
 ## <a name="real-time-media-calls-stay-on-the-machine-where-they-were-created"></a>Echt Zeit Medien Anrufe bleiben auf dem Computer, auf dem Sie erstellt wurden.
 

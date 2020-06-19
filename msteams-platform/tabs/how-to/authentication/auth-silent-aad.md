@@ -3,11 +3,11 @@ title: Automatische Authentifizierung
 description: Beschreibung der automatischen Authentifizierung
 keywords: Microsoft Teams Authentication SSO Silent Aad
 ms.openlocfilehash: b8a5b8cb9328635f5730ca089da29140d0a17ac4
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674095"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801219"
 ---
 # <a name="silent-authentication"></a>Automatische Authentifizierung
 
@@ -18,14 +18,14 @@ Bei der automatischen Authentifizierung in Azure Active Directory (Azure AD) wir
 
 Wenn Sie den Code vollständig clientseitig beibehalten möchten, können Sie die [Azure Active Directory-Authentifizierungsbibliothek](/azure/active-directory/develop/active-directory-authentication-libraries) für JavaScript verwenden, um zu versuchen, ein Azure AD Zugriffstoken im Hintergrund abzurufen. Dies bedeutet, dass dem Benutzer möglicherweise kein Popupdialogfeld angezeigt wird, wenn er sich kürzlich angemeldet hat.
 
-Auch wenn die Adal. js-Bibliothek für AngularJS-Anwendungen optimiert ist, funktioniert Sie auch mit reinen JavaScript-Einzelseiten-Anwendungen.
+Auch wenn die ADAL.js Bibliothek für AngularJS-Anwendungen optimiert ist, funktioniert Sie auch mit reinen JavaScript-Einzelseiten-Anwendungen.
 
 > [!NOTE]
 > Derzeit funktioniert die unbeaufsichtigte Authentifizierung nur für Registerkarten. Sie funktioniert noch nicht, wenn Sie sich von einem bot aus anmelden.
 
 ## <a name="how-silent-authentication-works"></a>Funktionsweise der automatischen Authentifizierung
 
-Die Bibliothek Adal. js erstellt einen ausgeblendeten IFRAME für den impliziten Grant-Fluss von OAuth `prompt=none` 2,0, gibt jedoch an, dass Azure Ad die Anmeldeseite nie anzeigt. Wenn Benutzerinteraktionen erforderlich sind, da der Benutzer sich anmelden oder Zugriff auf die Anwendung gewähren muss, gibt Azure AD umgehend einen Fehler zurück, den Adal. js dann an Ihre APP meldet. An dieser Position kann Ihre APP bei Bedarf eine Anmeldeschaltfläche anzeigen.
+Die ADAL.js Bibliothek erstellt einen ausgeblendeten IFRAME für den impliziten Grant Flow von OAuth 2,0, gibt jedoch an `prompt=none` , dass Azure Ad die Anmeldeseite nie anzeigt. Wenn Benutzerinteraktionen erforderlich sind, da der Benutzer sich anmelden oder Zugriff auf die Anwendung gewähren muss, gibt Azure AD umgehend einen Fehler zurück, der ADAL.js dann an Ihre APP meldet. An dieser Position kann Ihre APP bei Bedarf eine Anmeldeschaltfläche anzeigen.
 
 ## <a name="how-to-do-silent-authentication"></a>Vorgehensweise zur automatischen Authentifizierung
 
@@ -33,7 +33,7 @@ Der Code in diesem Artikel stammt aus der Beispiel-APP [Microsoft Teams-Authenti
 
 ### <a name="include-and-configure-adal"></a>einschließen und Konfigurieren von Adal
 
-Schließen Sie die Adal. js-Bibliothek in Ihre Registerkartenseiten ein, und konfigurieren Sie Adal mit Ihrer Client-ID und der Umleitungs-URL:
+Schließen Sie die ADAL.js Bibliothek in Ihre Registerkartenseiten ein, und konfigurieren Sie Adal mit Ihrer Client-ID und der Umleitungs-URL:
 
 ```html
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal.min.js" integrity="sha384-lIk8T3uMxKqXQVVfFbiw0K/Nq+kt1P3NtGt/pNexiDby2rKU6xnDY8p16gIwKqgI" crossorigin="anonymous"></script>
@@ -51,7 +51,7 @@ Schließen Sie die Adal. js-Bibliothek in Ihre Registerkartenseiten ein, und kon
 
 ### <a name="get-the-user-context"></a>Abrufen des Benutzerkontexts
 
-Rufen `microsoftTeams.getContext()` Sie auf der Registerkarte Inhaltsseite einen Anmelde Hinweis für den aktuellen Benutzer ab. Dies wird als login_hint im Aufruf von Azure AD verwendet.
+Rufen Sie auf der Registerkarte Inhaltsseite `microsoftTeams.getContext()` einen Anmelde Hinweis für den aktuellen Benutzer ab. Dies wird als login_hint im Aufruf von Azure AD verwendet.
 
 ```javascript
 // Set up extra query parameters for ADAL
@@ -66,7 +66,7 @@ if (loginHint) {
 
 ### <a name="authenticate"></a>Authentifizieren
 
-Wenn Adal ein nicht abgelaufenes Token für den Benutzer zwischengespeichert hat, verwenden Sie diese. Andernfalls wird versucht, ein Token im Hintergrund abzurufen, indem `acquireToken(resource, callback)`es aufgerufen wird. Adal. js ruft Ihre Rückruffunktion mit dem angeforderten Token auf, oder es tritt ein Fehler auf, wenn die Authentifizierung fehlschlägt.
+Wenn Adal ein nicht abgelaufenes Token für den Benutzer zwischengespeichert hat, verwenden Sie diese. Andernfalls wird versucht, ein Token im Hintergrund abzurufen, indem es aufgerufen wird `acquireToken(resource, callback)` . ADAL.js rufen ihre Rückruffunktion mit dem angeforderten Token auf, oder es tritt ein Fehler auf, wenn die Authentifizierung fehlschlägt.
 
 Wenn Sie in der Rückruffunktion einen Fehler erhalten, zeigen Sie eine Anmeldeschaltfläche an, und greifen Sie auf eine explizite Anmeldung zurück.
 
@@ -101,9 +101,9 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### <a name="process-the-return-value"></a>Verarbeiten des Rückgabewerts
 
-Lassen Sie Adal. js die Analyse des Ergebnisses von Azure AD durch Aufrufen `AuthenticationContext.handleWindowCallback(hash)` der Anmelde Rückruf Seite durchführen.
+Lassen Sie ADAL.js das Ergebnis aus Azure AD analysieren, indem Sie `AuthenticationContext.handleWindowCallback(hash)` die Anmelde Rückruf Seite aufrufen.
 
-Stellen Sie sicher, dass wir über einen gültigen `microsoftTeams.authentication.notifySuccess()` Benutzer `microsoftTeams.authentication.notifyFailure()` verfügen und den Status zurück zur Inhaltsseite des Hauptregisterkarten Berichts aufrufen.
+Stellen Sie sicher, dass wir über einen gültigen Benutzer verfügen und den `microsoftTeams.authentication.notifySuccess()` `microsoftTeams.authentication.notifyFailure()` Status zurück zur Inhaltsseite des Hauptregisterkarten Berichts aufrufen.
 
 ```javascript
 if (authContext.isCallback(window.location.hash)) {

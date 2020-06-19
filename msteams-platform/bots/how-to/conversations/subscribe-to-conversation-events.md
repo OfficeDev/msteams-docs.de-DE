@@ -1,32 +1,32 @@
 ---
-title: Abonnieren von unterhaltungsereignissen
+title: Abonnieren von Unterhaltungsereignissen
 author: WashingtonKayaker
 description: Abonnieren von unterhaltungsereignissen von Ihrem Microsoft Teams-bot.
 ms.topic: overview
 ms.author: anclear
 ms.openlocfilehash: a8c6c39989a7d09a325412438f0d2ace78259cb7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674479"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801218"
 ---
-# <a name="subscribe-to-conversation-events"></a>Abonnieren von unterhaltungsereignissen
+# <a name="subscribe-to-conversation-events"></a>Abonnieren von Unterhaltungsereignissen
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Microsoft Teams sendet Benachrichtigungen an Ihren bot für Ereignisse, die in Bereichen auftreten, in denen Ihr bot aktiv ist. Sie können diese Ereignisse in Ihrem Code erfassen und entsprechende Aktionen ausführen, beispielsweise die folgenden:
+Microsoft Teams sendet Benachrichtigungen an Ihren Bot für Ereignisse, die in Bereichen stattfinden, in denen Ihr Bot aktiv ist. Sie können diese Ereignisse in Ihrem Code erfassen und mit Aktionen darauf reagieren, z. B. wie folgt:
 
 * Auslösen einer Willkommensnachricht, wenn Ihr bot einem Team hinzugefügt wird
 * Auslösen einer Willkommensnachricht beim Hinzufügen oder Entfernen eines neuen Teammitglieds
 * Auslösen einer Benachrichtigung, wenn ein Kanal erstellt, umbenannt oder gelöscht wird
 * Wenn eine bot-Nachricht von einem Benutzer gefällt wird
 
-## <a name="conversation-update-events"></a>Unterhaltungs Update Ereignisse
+## <a name="conversation-update-events"></a>Aktualisierungsereignisse in Unterhaltungen
 
-Ein bot empfängt ein `conversationUpdate` Ereignis, wenn es einer Unterhaltung hinzugefügt wurde, andere Mitglieder wurden einer Unterhaltung hinzugefügt oder daraus entfernt, oder die Unterhaltungs Metadaten wurden geändert.
+Ein Bot empfängt ein `conversationUpdate`-Ereignis, wenn er zu einer Unterhaltung hinzugefügt wurde, andere Mitglieder zu einer Unterhaltung hinzugefügt oder daraus entfernt wurden oder sich die Metadaten einer Unterhaltung geändert haben.
 
-Das `conversationUpdate` Ereignis wird an Ihren bot gesendet, wenn es Informationen über Mitgliedschafts Aktualisierungen für Teams erhält, in denen es hinzugefügt wurde. Es erhält auch ein Update, wenn es zum ersten Mal speziell für persönliche Unterhaltungen hinzugefügt wurde.
+Das `conversationUpdate`-Ereignis wird an Ihren Bot gesendet, wenn er Informationen zu Mitgliedschaftsaktualisierungen für Teams empfängt, denen er hinzugefügt wurde. Er empfängt außerdem eine Aktualisierung, wenn er zum ersten Mal hinzugefügt wurde, speziell für persönliche Unterhaltungen.
 
 Die folgende Tabelle enthält eine Liste der Teams-Unterhaltungs Update Ereignisse mit Links zu weiteren Details.
 
@@ -36,14 +36,14 @@ Die folgende Tabelle enthält eine Liste der Teams-Unterhaltungs Update Ereignis
 | Kanal umbenannt     | channelRenamed    | OnTeamsChannelRenamedAsync | [Ein Kanal wurde umbenannt](#channel-renamed) | Team |
 | Kanal gelöscht     | channelDeleted    | OnTeamsChannelDeletedAsync | [Ein Kanal wurde gelöscht.](#channel-deleted) | Team |
 | hinzugefügte Teammitglieder   | teamMemberAdded   | OnTeamsMembersAddedAsync   | [Ein Mitglied, das Team hinzugefügt wurde](#team-members-added)   | Alle |
-| Teammitglieder entfernt | teamMemberRemoved | OnTeamsMembersRemovedAsync | [Ein Mitglied wurde aus dem Team entfernt.](#team-members-removed) | groupChat #a0 Team |
+| Teammitglieder entfernt | teamMemberRemoved | OnTeamsMembersRemovedAsync | [Ein Mitglied wurde aus dem Team entfernt.](#team-members-removed) | groupChat & Team |
 | Team umbenannt        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Ein Team wurde umbenannt](#team-renamed)       | Team |
 
 ### <a name="channel-created"></a>Erstellter Kanal
 
 Das Ereignis "Channel created" wird an Ihren bot gesendet, wenn ein neuer Kanal in einem Team erstellt wird, in dem Ihr bot installiert ist.
 
-# <a name="cnettabdotnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -53,7 +53,7 @@ protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[Manuskript/Node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
@@ -73,7 +73,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="jsontabjson"></a>[Json](#tab/json)
+# <a name="json"></a>[Json](#tab/json)
 
 ```json
 {
@@ -111,7 +111,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_teams_channel_created_activity(
@@ -130,7 +130,7 @@ async def on_teams_channel_created_activity(
 
 Das Ereignis "Kanal umbenannte" wird an Ihren bot gesendet, wenn ein Kanal in einem Team umbenannt wird, in dem Ihr bot installiert ist.
 
-# <a name="cnettabdotnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -140,7 +140,7 @@ protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[Manuskript/Node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -155,7 +155,7 @@ export class MyBot extends TeamsActivityHandler {
     }
 ```
 
-# <a name="jsontabjson"></a>[Json](#tab/json)
+# <a name="json"></a>[Json](#tab/json)
 
 ```json
 {
@@ -193,7 +193,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_teams_channel_renamed_activity(
@@ -210,7 +210,7 @@ async def on_teams_channel_renamed_activity(
 
 Das Channel Deleted-Ereignis wird an Ihren bot gesendet, wenn ein Kanal in einem Team gelöscht wird, in dem Ihr bot installiert ist.
 
-# <a name="cnettabdotnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -220,7 +220,7 @@ protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[Manuskript/Node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -237,7 +237,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="jsontabjson"></a>[Json](#tab/json)
+# <a name="json"></a>[Json](#tab/json)
 
 ```json
 {
@@ -275,7 +275,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_teams_channel_deleted_activity(
@@ -292,7 +292,7 @@ async def on_teams_channel_deleted_activity(
 
 Das `teamMemberAdded` Ereignis wird an Ihren bot gesendet, wenn es zum ersten Mal zu einer Unterhaltung hinzugefügt wird, und jedes Mal, wenn ein neuer Benutzer einem Team-oder Gruppenchat hinzugefügt wird, in dem der bot installiert ist. Die Benutzerinformationen (ID) sind für Ihren bot eindeutig und können für die zukünftige Verwendung durch ihren Dienst zwischengespeichert werden (beispielsweise das Senden einer Nachricht an einen bestimmten Benutzer).
 
-# <a name="cnettabdotnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMembersAddedAsync(IList<ChannelAccount> membersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -314,7 +314,7 @@ protected override async Task OnTeamsMembersAddedAsync(IList<ChannelAccount> mem
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[Manuskript/Node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -337,7 +337,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="jsontabjson"></a>[Json](#tab/json)
+# <a name="json"></a>[Json](#tab/json)
 
 Dies ist die Nachricht, die ihr bot erhalten wird, wenn der bot **einem Team**hinzugefügt wird.
 
@@ -415,7 +415,7 @@ Dies ist die Nachricht, die ihr bot erhält, wenn der bot **einem 1:1-Chat*hinzu
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_teams_members_added_activity(
@@ -432,9 +432,9 @@ async def on_teams_members_added_activity(
 
 ### <a name="team-members-removed"></a>Team Mitglieder entfernt
 
-Das `teamMemberRemoved` Ereignis wird an Ihren bot gesendet, wenn es aus einem Team entfernt wird und jedes Mal, wenn ein Benutzer aus einem Team entfernt wird, von dem Ihr bot Mitglied ist. Sie können ermitteln, ob das neue Element aus dem bot selbst oder einem Benutzer entfernt wurde, indem `Activity` Sie sich das `turnContext`Objekt von ansehen.  Wenn das `Id` Feld des `MembersRemoved` Objekts mit dem `Id` Feld des `Recipient` Objekts identisch ist, ist das Element entfernt der bot, andernfalls handelt es sich um einen Benutzer.  Der bot `Id` wird im allgemeinen:`28:<MicrosoftAppId>`
+Das `teamMemberRemoved` Ereignis wird an Ihren bot gesendet, wenn es aus einem Team entfernt wird und jedes Mal, wenn ein Benutzer aus einem Team entfernt wird, von dem Ihr bot Mitglied ist. Sie können ermitteln, ob das neue Element aus dem bot selbst oder einem Benutzer entfernt wurde, indem Sie sich das `Activity` Objekt von ansehen `turnContext` .  Wenn das `Id` Feld des Objekts mit dem `MembersRemoved` `Id` Feld des Objekts identisch ist `Recipient` , ist das Element entfernt der bot, andernfalls handelt es sich um einen Benutzer.  Der bot `Id` wird im allgemeinen:`28:<MicrosoftAppId>`
 
-# <a name="cnettabdotnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> membersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -455,7 +455,7 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> m
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[Manuskript/Node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 
@@ -479,7 +479,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="jsontabjson"></a>[Json](#tab/json)
+# <a name="json"></a>[Json](#tab/json)
 
 ```json
 {
@@ -520,7 +520,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_teams_members_removed_activity(
@@ -537,9 +537,9 @@ async def on_teams_members_removed_activity(
 
 ### <a name="team-renamed"></a>Team umbenannt
 
-Ihr bot wird benachrichtigt, wenn das Team, in dem es sich befindet, umbenannt wurde. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamRenamed` im- `channelData` Objekt.
+Ihr bot wird benachrichtigt, wenn das Team, in dem es sich befindet, umbenannt wurde. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamRenamed` im `channelData` -Objekt.
 
-# <a name="cnettabdotnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -549,7 +549,7 @@ protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnCo
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[Manuskript/Node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -565,7 +565,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[Json](#tab/json)
+# <a name="json"></a>[Json](#tab/json)
 
 ```json
 { 
@@ -601,7 +601,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_teams_team_renamed_activity(
@@ -625,7 +625,7 @@ Das `messageReaction` Ereignis wird gesendet, wenn ein Benutzerreaktionen auf ei
 
 ### <a name="reactions-to-a-bot-message"></a>Reaktionen auf eine bot-Nachricht
 
-# <a name="cnettabdotnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -639,7 +639,7 @@ protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messa
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[Manuskript/Node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 <!-- Verify -->
 
@@ -664,7 +664,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="jsontabjson"></a>[Json](#tab/json)
+# <a name="json"></a>[Json](#tab/json)
 
 ```json
 {
@@ -709,7 +709,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_reactions_added(
@@ -734,7 +734,7 @@ async def on_reactions_added(
 
 ### <a name="reactions-removed-from-bot-message"></a>Aus der bot-Nachricht entfernte Reaktionen
 
-# <a name="cnettabdotnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -748,7 +748,7 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[Manuskript/Node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 <!-- Verify -->
 
@@ -771,7 +771,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[Json](#tab/json)
+# <a name="json"></a>[Json](#tab/json)
 
 ```json
 {
@@ -816,7 +816,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_reactions_removed(

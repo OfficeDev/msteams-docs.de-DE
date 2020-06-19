@@ -2,24 +2,24 @@
 title: Ratenbegrenzung
 description: Ratenbegrenzung und bewährte Methoden in Microsoft Teams
 keywords: Teams Bots Ratenbegrenzung
-ms.openlocfilehash: 145f65a7e17b833e11631dfc219d9f5732f43bc6
-ms.sourcegitcommit: 6c692734a382865531a83b9ebd6f604212f484fc
+ms.openlocfilehash: 9b244053d42aaddaf48c798e401438b614b0e1bd
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42371765"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "44801315"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>Optimieren Ihres bot: Ratenbegrenzung und bewährte Methoden in Microsoft Teams
 
 Als allgemeiner Grundsatz sollte Ihre Anwendung die Anzahl der Nachrichten begrenzen, die Sie an eine einzelne Chat-oder Kanal Unterhaltung sendet. Dadurch wird eine optimale Oberfläche gewährleistet, bei der die Endbenutzer nicht "spammy" empfinden.
 
-Um Microsoft Teams und seine Benutzer zu schützen, begrenzen die bot-APIs eingehende Anforderungen. Apps, die diesen Grenzwert überschreiten, `HTTP 429 Too Many Requests` erhalten einen Fehlerstatus. Alle Anforderungen unterliegen der gleichen Richtlinie zur Ratenbegrenzung, einschließlich Senden von Nachrichten, Kanal Aufzählungen und Dienstplan abrufen.
+Um Microsoft Teams und seine Benutzer zu schützen, begrenzen die bot-APIs eingehende Anforderungen. Apps, die diesen Grenzwert überschreiten, erhalten einen `HTTP 429 Too Many Requests` Fehlerstatus. Alle Anforderungen unterliegen der gleichen Richtlinie zur Ratenbegrenzung, einschließlich Senden von Nachrichten, Kanal Aufzählungen und Dienstplan abrufen.
 
-Da die genauen Werte von Raten Grenzwerten geändert werden können, wird empfohlen, dass Ihre Anwendung das entsprechende Backoff-Verhalten implementiert, `HTTP 429 Too Many Requests`wenn die API zurückgegeben wird.
+Da die genauen Werte von Raten Grenzwerten geändert werden können, wird empfohlen, dass Ihre Anwendung das entsprechende Backoff-Verhalten implementiert, wenn die API zurückgegeben wird `HTTP 429 Too Many Requests` .
 
 ## <a name="handling-rate-limits"></a>Grenzwerte für die Handhabungs Rate
 
-Beim Ausgeben eines bot-Generator-SDK-Vorgangs können `Microsoft.Rest.HttpOperationException` Sie den Statuscode verarbeiten und überprüfen.
+Beim Ausgeben eines bot-Generator-SDK-Vorgangs können Sie `Microsoft.Rest.HttpOperationException` den Statuscode verarbeiten und überprüfen.
 
 ```csharp
 try
@@ -38,7 +38,7 @@ catch (HttpOperationException ex)
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
-Im Allgemeinen sollten Sie einfache Vorkehrungen treffen, um den Empfang `HTTP 429` von Antworten zu vermeiden. Vermeiden Sie beispielsweise das ausgeben mehrerer Anforderungen an dieselbe persönliche oder Kanal Unterhaltung. Verwenden Sie stattdessen die Batchverarbeitung der API-Anforderungen.
+Im Allgemeinen sollten Sie einfache Vorkehrungen treffen, um den Empfang von Antworten zu vermeiden `HTTP 429` . Vermeiden Sie beispielsweise das ausgeben mehrerer Anforderungen an dieselbe persönliche oder Kanal Unterhaltung. Verwenden Sie stattdessen die Batchverarbeitung der API-Anforderungen.
 
 Das Verwenden einer exponentiellen Backoff mit einem willkürlichen Jitter ist die empfohlene Vorgehensweise zum Behandeln von 429er. Dadurch wird sichergestellt, dass mehrere Anforderungen keine Kollisionen bei Wiederholungsversuchen einführen.
 
@@ -107,19 +107,19 @@ Dieser Grenzwert steuert den Datenverkehr, den ein bot für eine einzelne Unterh
 
 | **Szenario** | **Zeitraum (Sek.)** | **Max. zulässige Vorgänge** |
 | --- | --- | --- |
-|| 1 | 7 |
-| An Unterhaltung senden | 2 | 8 |
+| An Unterhaltung senden | 1  | 7  |
+| An Unterhaltung senden | 2 | 8  |
 | An Unterhaltung senden | 30 | 60 |
 | An Unterhaltung senden | 3600 | 1800 |
-| Unterhaltung erstellen | 1 | 7 |
-| Unterhaltung erstellen | 2 | 8 |
+| Unterhaltung erstellen | 1  | 7  |
+| Unterhaltung erstellen | 2 | 8  |
 | Unterhaltung erstellen | 30 | 60 |
 | Unterhaltung erstellen | 3600 | 1800 |
-| Abrufen von Unterhaltungs Mitgliedern| 1 | 14  |
+| Abrufen von Unterhaltungs Mitgliedern| 1  | 14  |
 | Abrufen von Unterhaltungs Mitgliedern| 2 | 16  |
 | Abrufen von Unterhaltungs Mitgliedern| 30 | 120 |
 | Abrufen von Unterhaltungs Mitgliedern| 3600 | 3600 |
-| Unterhaltungen abrufen | 1 | 14  |
+| Unterhaltungen abrufen | 1  | 14  |
 | Unterhaltungen abrufen | 2 | 16  |
 | Unterhaltungen abrufen | 30 | 120 |
 | Unterhaltungen abrufen | 3600 | 3600 |
@@ -130,15 +130,15 @@ Dieser Grenzwert steuert den Datenverkehr, den alle Bots in einer einzigen Unter
 
 | **Szenario** | **Zeitraum (Sek.)** | **Max. zulässige Vorgänge** |
 | --- | --- | --- |
-| An Unterhaltung senden | 1 | 14  |
+| An Unterhaltung senden | 1  | 14  |
 | An Unterhaltung senden | 2 | 16  |
-| Unterhaltung erstellen | 1 | 14  |
+| Unterhaltung erstellen | 1  | 14  |
 | Unterhaltung erstellen | 2 | 16  |
-| Createconversation| 1 | 14  |
+| Createconversation| 1  | 14  |
 | Createconversation| 2 | 16  |
-| Abrufen von Unterhaltungs Mitgliedern| 1 | 28 |
+| Abrufen von Unterhaltungs Mitgliedern| 1  | 28 |
 | Abrufen von Unterhaltungs Mitgliedern| 2 | 32 |
-| Unterhaltungen abrufen | 1 | 28 |
+| Unterhaltungen abrufen | 1  | 28 |
 | Unterhaltungen abrufen | 2 | 32 |
 
 ## <a name="bot-per-data-center-limit"></a>Bot pro Rechenzentrums Grenze
@@ -147,6 +147,6 @@ Dieser Grenzwert steuert den Datenverkehr, den ein bot in allen Threads in einem
 
 |**Zeitraum (Sek.)** | **Max. zulässige Vorgänge** |
 | --- | --- |
-| 1 | 20 |
+| 1  | 20 |
 | 1800 | 8000 |
 | 3600 | 15000 |

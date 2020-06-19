@@ -4,13 +4,13 @@ description: Beschreibt das End-to-End-Szenario, dass eine Unterhaltung mit eine
 keywords: Teams Szenarien Kanäle Conversation bot
 ms.date: 06/25/2019
 ms.openlocfilehash: d2d72bdba43de6ebb10c7504dd309459cb09d56c
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228001"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801279"
 ---
-# <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Kanal-und Gruppenchat Unterhaltungen mit einem Microsoft Teams-bot
+# <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Kanal und Gruppenchatunterhaltungen mit einem Microsoft Teams-Bot
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -47,15 +47,15 @@ Für einen bot in einer Gruppe oder einem Kanal erhält Ihr bot zusätzlich zum 
 
 ### <a name="replying-to-messages"></a>Antworten auf Nachrichten
 
-Um auf eine vorhandene Nachricht zu antworten, [`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) rufen Sie .net [`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler) oder Node. js auf. Das Robot Builder SDK verarbeitet alle Details.
+Um auf eine vorhandene Nachricht zu antworten, rufen Sie [`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) .net oder [`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler) Node.js auf. Das Robot Builder SDK verarbeitet alle Details.
 
-Wenn Sie sich für die Verwendung der Rest-API entscheiden, können Sie [`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) auch den Endpunkt aufrufen.
+Wenn Sie sich für die Verwendung der Rest-API entscheiden, können Sie auch den [`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) Endpunkt aufrufen.
 
 In einem Kanal wird eine Antwort auf eine Nachricht als Antwort auf die initiierende Antwort Kette angezeigt. Der `conversation.id` enthält den Kanal und die Nachrichten-ID der obersten Ebene. Obwohl sich das bot-Framework um die Details kümmert, können Sie dieses `conversation.id` bei Bedarf für zukünftige Antworten auf diesen Gesprächs Thread Zwischenspeichern.
 
 ### <a name="best-practice-welcome-messages-in-teams"></a>Bewährte Methode: Willkommensnachrichten in Microsoft Teams
 
-Wenn Ihr bot zum ersten Mal der Gruppe oder dem Team hinzugefügt wird, ist es generell sinnvoll, eine Willkommensnachricht zu senden, die den bot allen Benutzern vorstellt. Die Willkommensnachricht sollte eine Beschreibung der Funktionen und Benutzer Vorteile des bot enthalten. Im Idealfall sollte die Nachricht auch Befehle enthalten, damit der Benutzer mit der APP interagieren können. Stellen Sie dazu sicher, dass Ihr bot auf die `conversationUpdate` Nachricht reagiert, wobei der `teamsAddMembers` EventType im `channelData` Objekt ist. Stellen Sie sicher, `memberAdded` dass die ID die APP-ID des bot selbst ist, da dasselbe Ereignis gesendet wird, wenn ein Benutzer einem Team hinzugefügt wird. Weitere Informationen finden Sie unter [Team Mitglied oder bot-Erweiterung](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) .
+Wenn Ihr bot zum ersten Mal der Gruppe oder dem Team hinzugefügt wird, ist es generell sinnvoll, eine Willkommensnachricht zu senden, die den bot allen Benutzern vorstellt. Die Willkommensnachricht sollte eine Beschreibung der Funktionen und Benutzer Vorteile des bot enthalten. Im Idealfall sollte die Nachricht auch Befehle enthalten, damit der Benutzer mit der APP interagieren können. Stellen Sie dazu sicher, dass Ihr bot auf die `conversationUpdate` Nachricht reagiert, wobei der `teamsAddMembers` eventType im `channelData` Objekt ist. Stellen Sie sicher, dass die `memberAdded` ID die APP-ID des bot selbst ist, da dasselbe Ereignis gesendet wird, wenn ein Benutzer einem Team hinzugefügt wird. Weitere Informationen finden Sie unter [Team Mitglied oder bot-Erweiterung](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) .
 
 Möglicherweise möchten Sie auch eine persönliche Nachricht an jedes Mitglied des Teams senden, wenn der bot hinzugefügt wird. Dazu können Sie [das Team-Dienstplan abrufen](~/resources/bot-v3/bots-context.md#fetching-the-team-roster) und jedem Benutzer eine [direkte Nachricht](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)senden.
 
@@ -72,7 +72,7 @@ Da Bots in einer Gruppe oder einem Kanal nur dann reagieren, wenn Sie in einer N
 
 ### <a name="retrieving-mentions"></a>Abrufen von Erwähnungen
 
-Erwähnungen werden im `entities` Objekt in Payload zurückgegeben und enthalten sowohl die eindeutige ID des Benutzers als auch in den meisten Fällen den Namen des erwähnten Benutzers. Sie können alle Erwähnungen in der Nachricht abrufen, indem Sie `GetMentions` die Funktion im bot Builder SDK für .net aufrufen, wodurch ein Array von `Mentioned` Objekten zurückgegeben wird.
+Erwähnungen werden im `entities` Objekt in Payload zurückgegeben und enthalten sowohl die eindeutige ID des Benutzers als auch in den meisten Fällen den Namen des erwähnten Benutzers. Sie können alle Erwähnungen in der Nachricht abrufen, indem Sie die `GetMentions` Funktion im bot Builder SDK für .net aufrufen, wodurch ein Array von Objekten zurückgegeben wird `Mentioned` .
 
 #### <a name="net-example-code-check-for-and-strip-bot-mention"></a>.NET-Beispielcode: überprüfen und entfernen @bot Erwähnung
 
@@ -93,9 +93,9 @@ for (int i = 0;i < m.Length;i++)
 ```
 
 > [!NOTE]
-> Sie können auch die Microsoft Teams-Erweiterungs `GetTextWithoutMentions`Funktion verwenden, die alle Erwähnungen, einschließlich des bot, abstreift.
+> Sie können auch die Microsoft Teams-Erweiterungsfunktion verwenden `GetTextWithoutMentions` , die alle Erwähnungen, einschließlich des bot, abstreift.
 
-#### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Node. js-Beispielcode: überprüfen und entfernen @bot Erwähnung
+#### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Node.js Beispielcode: überprüfen und entfernen @bot Erwähnung
 
 ```javascript
 var text = message.text;
@@ -109,13 +109,13 @@ if (message.entities) {
 }
 ```
 
-Sie können auch die Microsoft Teams-Erweiterungs `getTextWithoutMentions`Funktion verwenden, die alle Erwähnungen, einschließlich des bot, abstreift.
+Sie können auch die Microsoft Teams-Erweiterungsfunktion verwenden `getTextWithoutMentions` , die alle Erwähnungen, einschließlich des bot, abstreift.
 
 ### <a name="constructing-mentions"></a>Erstellen von Erwähnungen
 
 Ihr Bot kann andere Benutzer in Nachrichten erwähnen, die in Kanälen gepostet wurden. Hierzu muss Ihre Nachricht folgendermaßen vorgehen:
 
-* In `<at>@username</at>` den Nachrichtentext einbeziehen
+* `<at>@username</at>`In den Nachrichtentext einbeziehen
 * Einschließen des `mention` Objekts in die Entities-Auflistung
 
 #### <a name="net-example"></a>.NET-Beispiel
@@ -134,7 +134,7 @@ replyActivity.AddMentionToText(activity.From, MentionTextLocation.AppendText);
 await client.Conversations.ReplyToActivityAsync(replyActivity);
 ```
 
-#### <a name="nodejs-example"></a>Node. js-Beispiel
+#### <a name="nodejs-example"></a>Node.js Beispiel
 
 ```javascript
 // User to mention

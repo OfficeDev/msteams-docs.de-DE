@@ -2,12 +2,12 @@
 title: Karten Referenz
 description: Beschreibt alle Karten-und Karten Aktionen, die Bots in Microsoft Teams zur Verfügung stehen.
 keywords: Referenz zu Bots-Karten
-ms.openlocfilehash: 76b9cb7e2508d300deb2e3cd4f392fdb9850062d
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 9cd868e504e426cbe56ed1c5d05c8e6adc1e1ddf
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674286"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "44801304"
 ---
 # <a name="cards-reference"></a>Karten Referenz
 
@@ -52,7 +52,7 @@ Bilder müssen im Format PNG, JPEG oder GIF maximal 1024 × 1024 und 1 MB sein; 
 | Eigenschaft | Typ  | Beschreibung |
 | --- | --- | --- |
 | url | URL | HTTPS-URL zum Bild |
-| alt | Zeichenfolge | Barrierefreie Beschreibung des Bilds |
+| alt | String | Barrierefreie Beschreibung des Bilds |
 
 ### <a name="buttons"></a>Schaltflächen
 
@@ -66,10 +66,7 @@ Weitere Informationen zur Textformatierung in Karten finden Sie unter [Kartenfor
 
 ## <a name="adaptive-card"></a>Adaptive Karte
 
-> [!NOTE]
-> Nur Version 1,0 von adaptiven Karten wird für alle Benutzer unterstützt. Version 1,2 ist derzeit nur in der Entwicklervorschau verfügbar.
-
-Eine anpassbare Karte, die eine beliebige Kombination aus Text, Sprache, Bildern, Schaltflächen und Eingabefeldern enthalten kann.
+Eine anpassbare Karte, die eine beliebige Kombination aus Text, Sprache, Bildern, Schaltflächen und Eingabefeldern enthalten kann. *Siehe* [Adaptive Cards v 1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
 
 ### <a name="support-for-adaptive-cards"></a>Unterstützung für Adaptive Karten
 
@@ -217,7 +214,7 @@ Eine anpassbare Karte, die eine beliebige Kombination aus Text, Sprache, Bildern
 
 #### <a name="for-more-information-on-adaptive-cards"></a>Weitere Informationen zu adaptiven Karten
 
-* [Übersicht über Adaptive Karten](/adaptive-cards/)
+* [Adaptive Karten – Übersicht](/adaptive-cards/)
 * [Adaptive Karten Aktionen in Microsoft Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 
 ## <a name="hero-card"></a>Hero Card
@@ -393,15 +390,15 @@ Jede Verbindungskarte kann maximal 10 Abschnitte anzeigen, und jeder Abschnitt k
 > [!NOTE]
 > Alle zusätzlichen Abschnitte, Bilder oder Aktionen in einer Nachricht werden nicht angezeigt.
 
-Alle Textfelder unterstützen Abschlag und HTML. Sie können steuern, welche Abschnitte "Abschlag" oder "HTML `markdown` " verwenden, indem Sie die Eigenschaft in einer Nachricht festlegen. Standardmäßig `markdown` ist auf `true`festgelegt; Wenn Sie stattdessen HTML verwenden möchten, legen Sie `markdown` auf `false`fest.
+Alle Textfelder unterstützen Abschlag und HTML. Sie können steuern, welche Abschnitte "Abschlag" oder "HTML" verwenden, indem Sie die `markdown` Eigenschaft in einer Nachricht festlegen. Standardmäßig `markdown` ist auf festgelegt `true` ; Wenn Sie stattdessen HTML verwenden möchten, legen Sie `markdown` auf fest `false` .
 
 Wenn Sie die `themeColor` Eigenschaft angeben, wird die `accentColor` Eigenschaft im App-Manifest überschrieben.
 
-Um das Renderingformat für `activityImage`festzulegen, können Sie `activityImageType` Folgendes festlegen.
+Um das Renderingformat für festzulegen `activityImage` , können Sie `activityImageType` Folgendes festlegen.
 
 | Wert | Beschreibung |
 | --- | --- |
-| `avatar` | Standard `activityImage` wird als Kreis abgeschnitten |
+| `avatar` | Standard `activityImage`wird als Kreis abgeschnitten |
 | `article` | `activityImage`wird als Rechteck angezeigt und behält das Seitenverhältnis bei. |
 
 Weitere Details zu den Eigenschaften von Verbindungskarten finden Sie in der [Referenz zur Nachrichten Karte mit Aktionen](/outlook/actionable-messages/card-reference). Die einzigen Verbindungskarten Eigenschaften, die Microsoft Teams derzeit nicht unterstützt, sind folgende:
@@ -497,7 +494,7 @@ Bot-Framework-Referenz:
 
 ## <a name="signin-card"></a>SignIn-Karte
 
-Eine Karte, mit der ein bot die Anmeldung eines Benutzers anfordern kann. Wird in Microsoft Teams in einer etwas anderen Form als im bot-Framework unterstützt. Die SignIn-Karte in Microsoft Teams ähnelt der SignIn-Karte im bot-Framework mit der Ausnahme, dass die SignIn-Karte in Microsoft Teams nur `signin` zwei `openUrl`Aktionen unterstützt: und.
+Eine Karte, mit der ein bot die Anmeldung eines Benutzers anfordern kann. Wird in Microsoft Teams in einer etwas anderen Form als im bot-Framework unterstützt. Die SignIn-Karte in Microsoft Teams ähnelt der SignIn-Karte im bot-Framework mit der Ausnahme, dass die SignIn-Karte in Microsoft Teams nur zwei Aktionen unterstützt: `signin` und `openUrl` .
 
 Die *SignIn-Aktion* kann von jeder beliebigen Karte in Microsoft Teams und nicht nur von der SignIn-Karte verwendet werden. Weitere Informationen zur Authentifizierung finden Sie im Thema [Microsoft Teams-Authentifizierungs Fluss für Bots](~/bots/how-to/authentication/auth-flow-bot.md) .
 
@@ -594,7 +591,7 @@ Bot-Framework-Referenz:
 
 Kartensammlungen werden in Microsoft Teams unterstützt.
 
-Kartensammlungen werden durch das bot-Framework bereit `builder.AttachmentLayout.carousel` gestellt `builder.AttachmentLayout.list`: und. Diese Sammlungen können Adaptive, Hero oder Thumbnail-Karten enthalten.
+Kartensammlungen werden durch das bot-Framework bereitgestellt: `builder.AttachmentLayout.carousel` und `builder.AttachmentLayout.list` . Diese Sammlungen können Adaptive, Hero oder Thumbnail-Karten enthalten.
 
 ## <a name="carousel-collection"></a>Carousel-Sammlung
 

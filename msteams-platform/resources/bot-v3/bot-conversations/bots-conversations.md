@@ -3,18 +3,18 @@ title: Senden und empfangen von Nachrichten mit einem bot
 description: Beschreibt das Senden und empfangen von Nachrichten mit Bots in Microsoft Teams
 keywords: Teams-Bots-Nachrichten
 ms.date: 05/20/2019
-ms.openlocfilehash: 864473c7f502d96987a48e5837840236c45f59c7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4a15bb9b4ae8c0ede3214d3a534649e2769baf6e
+ms.sourcegitcommit: 2b1fd50466d807869fd173371ba7dfd82a0064ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674570"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "44801324"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Unterhaltung mit einem Microsoft Teams-bot
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Bei einer Unterhaltung handelt es sich um eine Reihe von Nachrichten, die zwischen Ihrem bot und einem oder mehreren Benutzern gesendet werden. Es gibt drei Arten von Unterhaltungen (auch als Bereiche bezeichnet) in Microsoft Teams:
+Eine Unterhaltung ist eine Reihe von Nachrichten, die zwischen Ihrem Bot und einem oder mehreren Benutzern gesendet werden. In Teams gibt es drei Arten von Unterhaltungen (auch als Bereiche bezeichnet):
 
 * `teams`Wird auch als Kanal Unterhaltungen bezeichnet, die für alle Mitglieder des Kanals sichtbar sind.
 * `personal`Unterhaltungen zwischen Bots und einem einzelnen Benutzer.
@@ -31,13 +31,13 @@ Damit der bot in einem bestimmten Bereich funktioniert, sollte er als Unterstüt
 
 Bots können an einer Unterhaltung teilnehmen oder eine initiieren. Die meiste Kommunikation erfolgt als Reaktion auf eine andere Nachricht. Wenn ein bot eine Unterhaltung initiiert, wird er als *proaktive Nachricht*bezeichnet. Beispiele sind:
 
-* Begrüßungsnachrichten
+* Willkommensnachrichten
 * Ereignisbenachrichtigungen
 * Abrufen von Nachrichten
 
 ## <a name="conversation-basics"></a>Grundlagen der Unterhaltung
 
-Jede Nachricht ist ein `Activity` Objekt vom Typ `messageType: message`. Wenn ein Benutzer eine Nachricht sendet, stellt Microsoft Teams die Nachricht an Ihren bot. insbesondere wird ein JSON-Objekt an den Messaging Endpunkt Ihres bot gesendet. Ihr bot überprüft die Nachricht, um den Typ zu bestimmen, und antwortet dementsprechend.
+Jede Nachricht ist ein `Activity`-Objekt vom Typ `messageType: message`. Wenn ein Benutzer eine Nachricht sendet, postet Teams die Nachricht auf Ihrem Bot. Spezifisch erfolgt dies durch Senden eines JSON-Objekts an den Nachrichtenendpunkt des Bots. Ihr bot überprüft die Nachricht, um den Typ zu bestimmen, und antwortet dementsprechend.
 
 Bots unterstützen auch Nachrichten im Ereignis Stil. Weitere Informationen finden Sie unter [Behandeln von bot-Ereignissen in Microsoft Teams](~/resources/bot-v3/bots-notifications.md) . Die Sprache wird derzeit nicht unterstützt.
 
@@ -49,7 +49,7 @@ Grundlegende Unterhaltungen werden über den bot-Framework-Konnektor behandelt, 
 
 Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und Bilder an Ihren bot senden. Sie können den Typ des Inhalts angeben, den Ihr bot auf der Seite Microsoft Teams-Einstellungen für Ihren bot verarbeiten kann.
 
-| Format | Von Benutzer zu bot  | Von bot zu Benutzer |  Notes |
+| Format | Von Benutzer zu bot  | Von bot zu Benutzer |  Anmerkungen |
 | --- | :---: | :---: | --- |
 | Rich-Text  | ✔ | ✔ |  |
 | Bilder | ✔ | ✔ | Maximal 1024 × 1024 und 1 MB im PNG-, JPEG-oder GIF-Format; animierte GIF-Zeichen werden nicht unterstützt |
@@ -57,11 +57,11 @@ Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und
 | Emojis | ✖ | ✔ | Teams unterstützen derzeit Emojis über UTF-16 (wie U + 1F600 für grinsende Fläche) |
 |
 
-Weitere Informationen zu den Typen von bot-Interaktionen, die vom bot-Framework unterstützt werden (die Bots in Microsoft Teams basieren), finden Sie in der Dokumentation zum bot-Framework zu [Unterhaltungs Fluss](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0) und verwandten Konzepten in der Dokumentation für [das bot Builder SDK für .net](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0) und [das bot Builder SDK für Node. js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0).
+Weitere Informationen zu den Typen von bot-Interaktionen, die vom bot-Framework unterstützt werden (die Bots in Microsoft Teams basieren), finden Sie in der Dokumentation zum bot-Framework zu [Unterhaltungs Fluss](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0) und verwandten Konzepten in der Dokumentation für [das bot Builder SDK für .net](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0) und [das bot Builder SDK für Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0).
 
-## <a name="message-formatting"></a>Nachrichtenformatierung
+## <a name="message-formatting"></a>Mitteilungsformatierung
 
-Sie können die optionale [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message) Eigenschaft eines festlegen `message` , um zu steuern, wie der Textinhalt Ihrer Nachricht gerendert wird. Eine detaillierte Beschreibung der unterstützten Formatierung in bot-Nachrichten finden Sie unter [Nachrichtenformatierung](~/resources/bot-v3/bots-message-format.md) .
+Sie können die optionale Eigenschaft eines festlegen [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message) `message` , um zu steuern, wie der Textinhalt Ihrer Nachricht gerendert wird. Eine detaillierte Beschreibung der unterstützten Formatierung in bot-Nachrichten finden Sie unter [Nachrichtenformatierung](~/resources/bot-v3/bots-message-format.md) .
 Sie können die optionale [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message) Eigenschaft festlegen, um zu steuern, wie der Textinhalt Ihrer Nachricht gerendert wird.
 
 Ausführliche Informationen dazu, wie Microsoft Teams Textformatierungen in Microsoft Teams unterstützt, finden Sie unter [Textformatierung in bot-Nachrichten](~/resources/bot-v3/bots-text-formats.md).
@@ -74,10 +74,10 @@ Bilder werden durch Hinzufügen von Anlagen zu einer Nachricht gesendet. Weitere
 
 Bilder können im Format PNG, JPEG oder GIF maximal 1024 × 1024 und 1 MB sein; animierte GIF-Zeichen werden nicht unterstützt.
 
-Es wird empfohlen, die Höhe und Breite jedes Bilds mithilfe von XML anzugeben. Wenn Sie den Abschlag verwenden, beträgt die Bildgröße standardmäßig 256 × 256. Zum Beispiel:
+Es wird empfohlen, die Höhe und Breite jedes Bilds mithilfe von XML anzugeben. Wenn Sie den Abschlag verwenden, beträgt die Bildgröße standardmäßig 256 × 256. Beispiel:
 
 * Verwenden`<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
-* Nicht verwenden `![Duck on a rock](http://aka.ms/Fo983c)`
+* Nicht verwenden`![Duck on a rock](http://aka.ms/Fo983c)`
 
 ## <a name="receiving-messages"></a>Empfangen von Nachrichten
 
@@ -86,9 +86,9 @@ Je nachdem, welche Bereiche deklariert werden, kann Ihr bot Nachrichten in den f
 * **persönlicher Chat** Benutzer können in einer privaten Unterhaltung mit einem bot interagieren, indem Sie einfach den hinzugefügten bot im Chatverlauf auswählen oder den Namen oder die APP-ID in das Feld an: in einem neuen Chat eingeben.
 * **Kanäle** Ein Bot kann ("@_botname_") in einem Kanal erwähnt werden, wenn er dem Team hinzugefügt wurde. Beachten Sie, dass zusätzliche Antworten auf einen bot in einem Kanal den bot erwähnen müssen. Er antwortet nicht auf Antworten, wenn er nicht erwähnt wird.
 
-Bei eingehenden Nachrichten erhält Ihr bot [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0) ein Objekt vom `messageType: message`Typ. Obwohl das `Activity` Objekt andere Arten von Informationen enthalten kann, wie [Kanal Aktualisierungen](~/resources/bot-v3/bots-notifications.md#channel-updates) , die an Ihren bot gesendet `message` werden, stellt der Typ die Kommunikation zwischen bot und Benutzer dar.
+Bei eingehenden Nachrichten erhält Ihr bot ein [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0) Objekt vom Typ `messageType: message` . Obwohl das `Activity` Objekt andere Arten von Informationen enthalten kann, wie [Kanal Aktualisierungen](~/resources/bot-v3/bots-notifications.md#channel-updates) , die an Ihren bot gesendet werden, `message` stellt der Typ die Kommunikation zwischen bot und Benutzer dar.
 
-Ihr bot erhält eine Nutzlast, die die Benutzernachricht `Text` sowie andere Informationen über den Benutzer, die Quelle der Nachricht und die Informationen zu Teams enthält. Hinweis:
+Ihr bot erhält eine Nutzlast, die die Benutzernachricht sowie `Text` andere Informationen über den Benutzer, die Quelle der Nachricht und die Informationen zu Teams enthält. Hinweis:
 
 * `timestamp`Das Datum und die Uhrzeit der Nachricht in koordinierter Weltzeit (Coordinated Universal Time, UTC)
 * `localTimestamp`Das Datum und die Uhrzeit der Nachricht in der Zeitzone des Absenders.
@@ -191,7 +191,7 @@ Ein typisches channelData-Objekt in einer an Ihren bot gesendeten Aktivität ent
 
 ### <a name="net-example"></a>.NET-Beispiel
 
-Das NuGet-Paket " [Microsoft. bot. Connector. Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) " `TeamsChannelData` stellt ein spezielles Objekt bereit, das Eigenschaften für den Zugriff auf Teams-spezifische Informationen verfügbar macht.
+Das NuGet-Paket " [Microsoft. bot. Connector. Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) " stellt ein spezielles `TeamsChannelData` Objekt bereit, das Eigenschaften für den Zugriff auf Teams-spezifische Informationen verfügbar macht.
 
 ```csharp
 TeamsChannelData channelData = activity.GetChannelData<TeamsChannelData>();
@@ -200,13 +200,13 @@ string tenantId = channelData.Tenant.Id;
 
 ## <a name="sending-replies-to-messages"></a>Senden von Antworten an Nachrichten
 
-Um auf eine vorhandene Nachricht zu antworten, [`ReplyToActivity`](/dotnet/api/microsoft.bot.connector.conversationsextensions.replytoactivityasync?view=botbuilder-dotnet-3.0#Microsoft_Bot_Connector_ConversationsExtensions_ReplyToActivityAsync_Microsoft_Bot_Connector_IConversations_System_String_System_String_Microsoft_Bot_Connector_Activity_System_Threading_CancellationToken_) rufen Sie .net [`session.send`](/javascript/api/botbuilder-core/TurnContext?view=botbuilder-ts-latest&viewFallbackFrom=botbuilder-ts-3.0#sendactivities) oder Node. js auf. Das Robot Builder SDK verarbeitet alle Details.
+Um auf eine vorhandene Nachricht zu antworten, rufen Sie [`ReplyToActivity`](/dotnet/api/microsoft.bot.connector.conversationsextensions.replytoactivityasync?view=botbuilder-dotnet-3.0#Microsoft_Bot_Connector_ConversationsExtensions_ReplyToActivityAsync_Microsoft_Bot_Connector_IConversations_System_String_System_String_Microsoft_Bot_Connector_Activity_System_Threading_CancellationToken_) .net oder [`session.send`](/javascript/api/botbuilder-core/TurnContext?view=botbuilder-ts-latest&viewFallbackFrom=botbuilder-ts-3.0#sendactivities) Node.js auf. Das Robot Builder SDK verarbeitet alle Details.
 
-Wenn Sie sich für die Verwendung der Rest-API entscheiden, können Sie [`/v3/conversations/{conversationId}/activities/{activityId}`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?view=azure-bot-service-3.0) auch den Endpunkt aufrufen.
+Wenn Sie sich für die Verwendung der Rest-API entscheiden, können Sie auch den [`/v3/conversations/{conversationId}/activities/{activityId}`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?view=azure-bot-service-3.0) Endpunkt aufrufen.
 
 Der Nachrichteninhalt selbst kann einfachen Text oder einige der bereitgestellten [Karten-und Karten Aktionen](~/task-modules-and-cards/cards/cards-actions.md)für bot-Framework enthalten.
 
-Beachten Sie, dass Sie in Ihrem ausgehenden Schema immer das gleiche `serviceUrl` verwenden sollten, das Sie erhalten haben. Beachten Sie, dass der Wert `serviceUrl` tendenziell stabil ist, sich jedoch ändern kann. Wenn eine neue Nachricht eintrifft, sollte Ihr bot den gespeicherten Wert von `serviceUrl`überprüfen.
+Beachten Sie, dass Sie in Ihrem ausgehenden Schema immer das gleiche verwenden sollten, das `serviceUrl` Sie erhalten haben. Beachten Sie, dass der Wert `serviceUrl` tendenziell stabil ist, sich jedoch ändern kann. Wenn eine neue Nachricht eintrifft, sollte Ihr bot den gespeicherten Wert von überprüfen `serviceUrl` .
 
 ## <a name="updating-messages"></a>Aktualisieren von Nachrichten
 
@@ -219,7 +219,7 @@ Die neue Nachricht muss nicht mit dem Original in Type übereinstimmen. Wenn die
 
 ### <a name="rest-api"></a>REST-API
 
-Um eine Nachrichten Aktualisierung auszugeben, führen Sie einfach eine Put- `/v3/conversations/<conversationId>/activities/<activityId>/` Anforderung für den Endpunkt mithilfe einer bestimmten Aktivitäts-ID aus. Um dieses Szenario abzuschließen, sollten Sie die vom ursprünglichen Post-Aufruf zurückgegebene Aktivitäts-ID Zwischenspeichern.
+Um eine Nachrichten Aktualisierung auszugeben, führen Sie einfach eine PUT-Anforderung für den `/v3/conversations/<conversationId>/activities/<activityId>/` Endpunkt mithilfe einer bestimmten Aktivitäts-ID aus. Um dieses Szenario abzuschließen, sollten Sie die vom ursprünglichen Post-Aufruf zurückgegebene Aktivitäts-ID Zwischenspeichern.
 
 ```json
 PUT /v3/conversations/19%3Aja0cu120i1jod12j%40skype.net/activities/012ujdo0128
@@ -247,7 +247,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 }
 ```
 
-### <a name="nodejs-example"></a>Node. js-Beispiel
+### <a name="nodejs-example"></a>Node.js Beispiel
 
 Sie können die `session.connector.update` -Methode im bot Builder SDK verwenden, um eine vorhandene Nachricht zu aktualisieren.
 

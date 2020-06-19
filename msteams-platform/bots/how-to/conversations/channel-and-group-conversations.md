@@ -1,26 +1,26 @@
 ---
-title: Kanal-und Gruppenunterhaltungen
+title: Kanal- und Gruppenunterhaltungen
 author: clearab
 description: Vorgehensweise zum Senden, empfangen und Verarbeiten von Nachrichten für einen bot in einem Kanal-oder Gruppenchat.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: ada2839ba41e4004b5f48449f4e057830dd841b9
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ccc27d7638820cfa3c2b7cfe12b91b3a3a9fef1d
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674482"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44801340"
 ---
-# <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Kanal-und Gruppenchat Unterhaltungen mit einem Microsoft Teams-bot
+# <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Kanal und Gruppenchatunterhaltungen mit einem Microsoft Teams-Bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Indem Sie den `teams` oder `groupchat` -Bereich zu Ihrem bot hinzufügen, kann er für die Installation in einem Team-oder Gruppenchat zur Verfügung stehen. Auf diese Weise können alle Mitglieder der Unterhaltung mit Ihrem bot interagieren. Sobald die Installation erfolgt ist, hat Sie auch Zugriff auf Metadaten über die Unterhaltung wie die Liste der Unterhaltungs Mitglieder und wenn Sie in einem Teamdetails zu diesem Team und der vollständigen Liste der Kanäle installiert ist.
+Indem Sie den `teams` oder `groupchat` -Bereich zu Ihrem bot hinzufügen, kann er für die Installation in einem Team-oder Gruppenchat zur Verfügung stehen. Dadurch können alle Mitglieder der Unterhaltung mit Ihrem Bot interagieren. Sobald er installiert ist, hat er auch Zugriff auf Metadaten zu der Unterhaltung wie der Liste der Unterhaltungsmitglieder, und wenn er in einem Team installiert wurde, auf Details zu diesem Team sowie die vollständige Liste der Kanäle.
 
 Bots in einer Gruppe oder einem Kanal empfangen nur Nachrichten, wenn Sie erwähnt werden ("@botname"), Sie erhalten keine weiteren Nachrichten, die an die Unterhaltung gesendet werden.
 
 > [!NOTE]
-> Der bot muss direkt @mentioned werden. Ihr bot erhält keine Nachricht, wenn das Team oder der Kanal erwähnt wird oder wenn jemand auf eine Nachricht von Ihrem bot antwortet, ohne Sie zu @mentioning.
+> Der Bot muss direkt @erwähnt werden. Ihr bot erhält keine Nachricht, wenn das Team oder der Kanal erwähnt wird oder wenn jemand auf eine Nachricht von Ihrem bot antwortet, ohne Sie zu @mentioning.
 
 ## <a name="design-considerations"></a>Überlegungen zum Entwurf
 
@@ -30,21 +30,21 @@ Ein bot sollte Informationen bereitstellen, die für alle Mitglieder in einer Gr
 
 Wenn Ihr bot in einem Team installiert ist, kann es manchmal erforderlich sein, einen neuen Unterhaltungsthread zu erstellen, statt einem vorhandenen zu antworten. Dies ist eine Form von [proaktivem Messaging](~/bots/how-to/conversations/send-proactive-messages.md).
 
-## <a name="working-with--mentions"></a>Arbeiten mit @ Mentions
+## <a name="working-with-mentions"></a>Arbeiten mit Erwähnungen
 
-Jede Nachricht an Ihren bot aus einer Gruppe oder einem Kanal enthält eine @mention mit eigenem Namen im Nachrichtentext, daher müssen Sie sicherstellen, dass Ihre Nachrichten Analyse diese behandelt. Ihr Bot kann auch andere in einer Nachricht erwähnte Benutzer abrufen und alle Nachrichten, die er sendet, Erwähnungen hinzufügen.
+Jede Nachricht von einer Gruppe oder einem Kanal an Ihren Bot enthält eine „@Erwähnung“ mit seinem eigenen Namen im Nachrichtentext, weshalb Sie sicherstellen müssen, dass Ihre Nachrichtenanalyse dies verarbeitet. Der Bot kann auch andere in einer Nachricht erwähnte Benutzer abrufen und jeder von ihm gesendeten Nachricht Erwähnungen hinzufügen.
 
 ### <a name="stripping-mentions-from-message-text"></a>Entfernen von Erwähnungen aus dem Nachrichtentext
 
-Möglicherweise ist es erforderlich, den @Mentions aus dem Text der Nachricht, die ihr bot erhält, zu entfernen.
+Möglicherweise halten Sie es für notwendig, die @Erwähnungen aus dem Text der Nachricht zu entfernen, die ihr Bot empfängt.
 
 ### <a name="retrieving-mentions"></a>Abrufen von Erwähnungen
 
-Erwähnungen werden im `entities` Objekt in Payload zurückgegeben und enthalten sowohl die eindeutige ID des Benutzers als auch in den meisten Fällen den Namen des erwähnten Benutzers. Der Text der Nachricht enthält auch die Erwähnung wie `<at>@John Smith<at>`. Sie sollten sich jedoch nicht darauf verlassen, dass der Text in der Nachricht alle Informationen zum Benutzer abruft. Es ist möglich, dass die Person, die die Nachricht sendet, Sie ändert. Verwenden Sie stattdessen das `entities` -Objekt.
+Erwähnungen werden im `entities` Objekt in Payload zurückgegeben und enthalten sowohl die eindeutige ID des Benutzers als auch in den meisten Fällen den Namen des erwähnten Benutzers. Der Text der Nachricht enthält außerdem die Erwähnung ähnlich wie `<at>@John Smith<at>`. Sie sollten sich jedoch nicht darauf verlassen, dass der Text in der Nachricht alle Informationen zum Benutzer abruft. Es ist möglich, dass die Person, die die Nachricht sendet, Sie ändert. Verwenden Sie stattdessen das- `entities` Objekt.
 
-Sie können alle Erwähnungen in der Nachricht abrufen, indem Sie `GetMentions` die Funktion im bot Builder SDK aufrufen, das ein Array `Mention` von Objekten zurückgibt.
+Sie können alle Erwähnungen in der Nachricht abrufen, indem Sie die `GetMentions` Funktion im bot Builder SDK aufrufen, das ein Array von Objekten zurückgibt `Mention` .
 
-# <a name="cnettabdotnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -62,7 +62,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[Manuskript/Node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -78,7 +78,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="jsontabjson"></a>[Json](#tab/json)
+# <a name="json"></a>[Json](#tab/json)
 
 ```json
 {
@@ -120,7 +120,7 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 @staticmethod
@@ -146,7 +146,7 @@ Das `Mention` Objekt verfügt über zwei Eigenschaften, die Sie festlegen müsse
 
 Das bot-Framework-SDK stellt Hilfsmethoden und-Objekte bereit, damit die Erwähnung einfacher gestaltet wird.
 
-# <a name="cnettabdotnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -164,7 +164,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[Manuskript/Node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -183,9 +183,9 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="jsontabjson"></a>[Json](#tab/json)
+# <a name="json"></a>[Json](#tab/json)
 
-Das `text` Feld im Objekt im `entities` Array muss *exakt* mit einem Teil des Nachrichten `text` Felds übereinstimmen. Wenn dies nicht der Fall ist, wird die Erwähnung ignoriert.
+Das `text` Feld im Objekt im `entities` Array muss *exakt* mit einem Teil des Nachrichtenfelds übereinstimmen `text` . Wenn dies nicht der Fall ist, wird die Erwähnung ignoriert.
 
 ```json
 {
@@ -227,7 +227,7 @@ Das `text` Feld im Objekt im `entities` Array muss *exakt* mit einem Teil des Na
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def _mention_activity(self, turn_context: TurnContext):
@@ -246,7 +246,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 ## <a name="sending-a-message-on-installation"></a>Senden einer Nachricht bei der Installation
 
-Wenn Ihr bot zum ersten Mal der Gruppe oder dem Team hinzugefügt wird, kann es hilfreich sein, eine Nachricht mit der Einführung zu senden. Die Nachricht sollte eine kurze Beschreibung der Funktionen des bot enthalten und deren Verwendung. Sie möchten das `conversationUpdate` Ereignis mit dem `teamMemberAdded` EventType abonnieren.  Da das Ereignis gesendet wird, wenn ein neues Teammitglied hinzugefügt wird, müssen Sie überprüfen, ob das hinzugefügte neue Mitglied der Bot ist. Weitere Informationen finden Sie unter [Senden einer Willkommensnachricht an ein neues Teammitglied](~/bots/how-to/conversations/send-proactive-messages.md) .
+Wenn Ihr bot zum ersten Mal der Gruppe oder dem Team hinzugefügt wird, kann es hilfreich sein, eine Nachricht mit der Einführung zu senden. Die Nachricht sollte eine kurze Beschreibung der Funktionen des bot enthalten und deren Verwendung. Sie möchten das `conversationUpdate` Ereignis mit dem `teamMemberAdded` eventType abonnieren.  Da das Ereignis gesendet wird, wenn ein neues Teammitglied hinzugefügt wird, müssen Sie überprüfen, ob das hinzugefügte neue Mitglied der Bot ist. Weitere Informationen finden Sie unter [Senden einer Willkommensnachricht an ein neues Teammitglied](~/bots/how-to/conversations/send-proactive-messages.md) .
 
 Möglicherweise möchten Sie auch eine persönliche Nachricht an jedes Mitglied des Teams senden, wenn der bot hinzugefügt wird. Dazu können Sie das Team-Dienstplan erhalten und jedem Benutzer eine direkte Nachricht senden.
 

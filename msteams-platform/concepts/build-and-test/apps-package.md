@@ -3,12 +3,12 @@ title: Verpacken Ihrer APP
 description: Erfahren Sie, wie Sie Ihre APP zum Testen, hochladen und veröffentlichen in Microsoft Teams verpacken.
 keywords: Apps für Teams-Verpackungen
 ms.topic: conceptual
-ms.openlocfilehash: b76041b129e766dba2b401aaac0e12958a4e9b0d
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 66131f37f9f68c8fd54412d41068f6124da94453
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674451"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44801364"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Erstellen eines App-Pakets für Ihre Microsoft Teams-App
 
@@ -16,19 +16,19 @@ Apps in Microsoft Teams werden durch eine JSON-Datei für App-Manifeste definier
 
 Ein Teams-App-Paket ist eine ZIP-Datei, die Folgendes enthält:
 
-* Eine Manifestdatei mit dem Namen "Manifest. JSON", die Attribute Ihrer APP angibt und auf erforderliche Ressourcen für Ihre Benutzeroberfläche verweist, beispielsweise den Speicherort der Registerkarten-Konfigurationsseite oder die Microsoft App-ID für den bot.
+* Eine Manifestdatei mit dem Namen "manifest.json", die Attribute Ihrer APP angibt und auf erforderliche Ressourcen für Ihre Benutzeroberfläche verweist, beispielsweise den Speicherort der Registerkarten-Konfigurationsseite oder die Microsoft App-ID für den bot.
 * Ein transparentes "Outline"-Symbol und ein vollständiges "Color"-Symbol. Weitere Informationen finden Sie unter [Icons](#icons) weiter unten in diesem Thema.
 
 ## <a name="creating-a-manifest"></a>Erstellen einer Manifestdatei
 
-*Teams App Studio* kann bei der Konfiguration ihres Manifests behilflich sein. Es enthält auch eine Reaktions Steuerungs Bibliothek und konfigurierbare Beispiele für Karten. Siehe [Übersicht über das App-Studio](~/concepts/build-and-test/app-studio-overview.md).
+*Teams App Studio* kann bei der Konfiguration ihres Manifests behilflich sein. App Studio enthält außerdem eine React-Steuerelementbibliothek sowie konfigurierbare Beispiele für Karten. Siehe [Übersicht über das App-Studio](~/concepts/build-and-test/app-studio-overview.md).
 
-Ihre Manifestdatei muss "Manifest. JSON" genannt werden und sich auf der obersten Ebene des Upload-Pakets befinden. Beachten Sie, dass zuvor erstellte Manifeste und Pakete möglicherweise eine ältere Version des Schemas unterstützen. Für Microsoft Teams-apps und insbesondere AppSource (ehemals Office Store)-Übermittlung müssen Sie das aktuelle [Manifest-Schema](~/resources/schema/manifest-schema.md)verwenden.
+Ihre Manifestdatei muss den Namen "manifest.json" tragen und sich auf der obersten Ebene des Upload-Pakets befinden. Beachten Sie, dass zuvor erstellte Manifeste und Pakete möglicherweise eine ältere Version des Schemas unterstützen. Für Microsoft Teams-apps und insbesondere AppSource (ehemals Office Store)-Übermittlung müssen Sie das aktuelle [Manifest-Schema](~/resources/schema/manifest-schema.md)verwenden.
 
 > [!TIP]
 > Geben Sie das Schema am Anfang des Manifests an, um IntelliSense oder ähnliche Unterstützung aus Ihrem Code-Editor zu aktivieren:
 >
-> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",`
+> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",`
 
 ## <a name="icons"></a>Symbole
 
