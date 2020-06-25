@@ -4,12 +4,12 @@ author: clearab
 description: Beschreibt, wie auf die Aufgabenmodul Aktion über einen Aktionsbefehl für die Nachrichten Erweiterung reagiert wird.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6372a683a7c9f08551a9c0d126a0db2ab9212e66
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: 82dad570bac096a9b2fb0d1fbada4ee70ca2a662
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120262"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867111"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Reagieren auf die Aufgabe Modul Submit-Aktion
 
@@ -26,7 +26,7 @@ Sie haben die folgenden Optionen für die Antwort.
 * [Anfordern der Authentifizierung durch den Benutzer](~/messaging-extensions/how-to/add-authentication.md)
 * [Anforderung des Benutzers zur Bereitstellung zusätzlicher Konfiguration](~/messaging-extensions/how-to/add-configuration-page.md)
 
-Die folgende Tabelle zeigt, welche Arten von Antworten basierend auf dem Aufruf Speicherort (`commandContext`) der Messaging Erweiterung zur Verfügung stehen. Wenn der Benutzer den Fluss abgeschlossen hat, wird der ursprüngliche Aufruf für die Authentifizierung oder Konfiguration erneut an den Webdienst gesendet.
+Die folgende Tabelle zeigt, welche Arten von Antworten basierend auf dem Aufruf Speicherort ( `commandContext` ) der Messaging Erweiterung zur Verfügung stehen. Wenn der Benutzer den Fluss abgeschlossen hat, wird der ursprüngliche Aufruf für die Authentifizierung oder Konfiguration erneut an den Webdienst gesendet.
 
 |Antworttyp | Verfassen | Befehlsleiste | Nachricht. |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -39,7 +39,7 @@ Die folgende Tabelle zeigt, welche Arten von Antworten basierend auf dem Aufruf 
 
 Im folgenden finden Sie Beispiele für den Empfang der Invoke-Nachricht.
 
-# <a name="cnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
@@ -48,7 +48,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/Node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -63,7 +63,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # <a name="json"></a>[Json](#tab/json)
 
-Dies ist ein Beispiel für das JSON-Objekt, das Sie erhalten werden. Der `commandContext` Parameter gibt an, woher Ihre Messaging-Erweiterung ausgelöst wurde. Das `data` -Objekt enthält die Felder auf dem Formular als Parameter und die Werte, die der Benutzer übermittelt hat. Das JSON-Objekt wird hier verkürzt, um die relevantesten Felder hervorzuheben.
+Dies ist ein Beispiel für das JSON-Objekt, das Sie erhalten werden. Der `commandContext` Parameter gibt an, woher Ihre Messaging-Erweiterung ausgelöst wurde. Das- `data` Objekt enthält die Felder auf dem Formular als Parameter und die Werte, die der Benutzer übermittelt hat. Das JSON-Objekt wird hier verkürzt, um die relevantesten Felder hervorzuheben.
 
 ```json
 {
@@ -95,7 +95,7 @@ Dies ist ein Beispiel für das JSON-Objekt, das Sie erhalten werden. Der `comman
 
 Die häufigste Möglichkeit zur Reaktion auf die `composeExtension/submitAction` Anforderung ist eine Karte, die in den Bereich zum Verfassen von Nachrichten eingefügt wird. Der Benutzer kann dann beschließen, die Karte an die Unterhaltung zu senden. Weitere Informationen zur Verwendung von Karten finden Sie unter [Cards and Card Actions](~/task-modules-and-cards/cards/cards-actions.md).
 
-# <a name="cnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
@@ -132,7 +132,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/Node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -194,28 +194,28 @@ Sie können beschließen, auf das `submitAction` Ereignis mit einem zusätzliche
 * Wenn Sie die gesammelten Informationen dynamisch basierend auf der Benutzereingabe ändern müssen
 * Wenn Sie die vom Benutzer übermittelten Informationen validieren und das Formular möglicherweise mit einer Fehlermeldung erneut senden müssen, wenn etwas nicht stimmt. 
 
-Die Methode für die Antwort ist identisch mit der Reaktion [auf das `fetchTask` anfängliche Ereignis](~/messaging-extensions/how-to/action-commands/create-task-module.md). Wenn Sie das bot Framework SDK verwenden, wird für beide Submit-Aktionen dasselbe Ereignis ausgelöst. Dies bedeutet, dass Sie unbedingt Logik hinzufügen müssen, die die richtige Antwort bestimmt.
+Die Methode für die Antwort ist identisch mit der Reaktion [auf das anfängliche `fetchTask` Ereignis](~/messaging-extensions/how-to/action-commands/create-task-module.md). Wenn Sie das bot Framework SDK verwenden, wird für beide Submit-Aktionen dasselbe Ereignis ausgelöst. Dies bedeutet, dass Sie unbedingt Logik hinzufügen müssen, die die richtige Antwort bestimmt.
 
 ## <a name="bot-response-with-adaptive-card"></a>Bot-Antwort mit adaptiver Karte
 
 >[!Note]
->Für diesen Fluss ist es erforderlich, `bot` dass Sie das Objekt Ihrem App-Manifest hinzufügen und dass Sie den erforderlichen Bereich für den bot definiert haben. Verwenden Sie dieselbe ID wie Ihre Messaging Erweiterung für Ihren bot.
+>Für diesen Fluss ist es erforderlich, dass Sie das `bot` Objekt Ihrem App-Manifest hinzufügen und dass Sie den erforderlichen Bereich für den bot definiert haben. Verwenden Sie dieselbe ID wie Ihre Messaging Erweiterung für Ihren bot.
 
 Sie können auch auf die Submit-Aktion reagieren, indem Sie eine Nachricht mit einer adaptiven Karte in den Kanal mit einem bot einfügen. Der Benutzer kann die Nachricht in einer Vorschau anzeigen, bevor er ihn sendet, und möglicherweise auch mit ihm bearbeiten/interagieren. Dies kann in Szenarien hilfreich sein, in denen Sie Informationen von Ihren Benutzern sammeln müssen, bevor Sie eine Adaptive Karten Antwort erstellen, oder wenn Sie die Karte aktualisieren müssen, nachdem eine Person mit ihr interagiert. Das folgende Szenario zeigt, wie die APP Polly diesen Fluss verwendet, um eine Umfrage zu konfigurieren, ohne die Konfigurationsschritte in der Kanal Unterhaltung zu unterbinden.
 
 1. Der Benutzer klickt auf die Messaging Erweiterung, um den Aufgabenmodul auszulösen.
 2. Der Benutzer konfiguriert die Umfrage mit dem Aufgabenmodul.
-3. Nach dem Senden des Aufgabenmoduls verwendet die APP die bereitgestellten Informationen, um die Umfrage als Adaptive Karte `botMessagePreview` zu erstellen und sendet sie als Antwort an den Client.
-4. Der Benutzer kann dann eine Vorschau der adaptiven Karten Nachricht anzeigen, bevor der bot ihn in den Kanal einfügt. Wenn die APP noch kein Mitglied des Kanals ist, wird Sie `Send` durch Klicken hinzugefügt.
+3. Nach dem Senden des Aufgabenmoduls verwendet die APP die bereitgestellten Informationen, um die Umfrage als Adaptive Karte zu erstellen und sendet sie als `botMessagePreview` Antwort an den Client.
+4. Der Benutzer kann dann eine Vorschau der adaptiven Karten Nachricht anzeigen, bevor der bot ihn in den Kanal einfügt. Wenn die APP noch kein Mitglied des Kanals ist, `Send` wird Sie durch Klicken hinzugefügt.
    1. Der Benutzer kann auch `Edit` die Nachricht auswählen, die Sie an das ursprüngliche Aufgabenmodul zurückgibt.
 5. Bei der Interaktion mit der adaptiven Karte wird die Nachricht vor dem Senden geändert.
-6. Nachdem der Benutzer auf `Send` den bot geklickt hat, sendet er die Nachricht an den Kanal.
+6. Nachdem der Benutzer `Send` auf den bot geklickt hat, sendet er die Nachricht an den Kanal.
 
 ### <a name="respond-to-initial-submit-action"></a>Reagieren auf die anfängliche Submit-Aktion
 
-Um diesen Fluss zu aktivieren, sollte Ihr Aufgabenmodul auf die `composeExtension/submitAction` anfängliche Nachricht mit einer Vorschau der Karte Antworten, die der bot an den Kanal senden wird. Dies gibt dem Benutzer die Möglichkeit, die Karte vor dem senden zu überprüfen, und versucht außerdem, den bot in der Unterhaltung zu installieren, falls er noch nicht installiert ist.
+Um diesen Fluss zu aktivieren, sollte Ihr Aufgabenmodul auf die anfängliche `composeExtension/submitAction` Nachricht mit einer Vorschau der Karte Antworten, die der bot an den Kanal senden wird. Dies gibt dem Benutzer die Möglichkeit, die Karte vor dem senden zu überprüfen, und versucht außerdem, den bot in der Unterhaltung zu installieren, falls er noch nicht installiert ist.
 
-# <a name="cnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
@@ -256,7 +256,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/Node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -321,9 +321,9 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="the-botmessagepreview-send-and-edit-events"></a>Das botMessagePreview-Ereignis zum Senden und bearbeiten
 
-Die Nachrichten Erweiterung muss nun auf zwei neue Varianten des `composeExtension/submitAction` Invoke-Objektes reagieren, wobei `value.botMessagePreviewAction = "send"`und `value.botMessagePreviewAction = "edit"`ist.
+Die Nachrichten Erweiterung muss nun auf zwei neue Varianten des Invoke-Objektes reagieren `composeExtension/submitAction` , wobei `value.botMessagePreviewAction = "send"` und ist `value.botMessagePreviewAction = "edit"` .
 
-# <a name="cnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewEditAsync(
@@ -340,7 +340,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/Node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -392,15 +392,15 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="respond-to-botmessagepreview-edit"></a>Reagieren auf botMessagePreview Edit
 
-Wenn der Benutzer entscheidet, die Karte vor dem senden zu bearbeiten, **Edit** indem er auf die Schaltfläche Bearbeiten `composeExtension/submitAction` klickt, `value.botMessagePreviewAction = edit`wird ein Invoke mit angezeigt. Sie sollten in der Regel durch Zurückgeben des Aufgabenmoduls Antworten, das Sie `composeExtension/fetchTask` als Antwort auf die anfängliche Invoke gesendet haben, die die Interaktion begann. Dadurch kann der Benutzer den Prozess über die erneute Eingabe der ursprünglichen Informationen starten. Sie sollten auch die Informationen verwenden, die Sie jetzt zur Verfügung haben, um den Aufgabenmodul vorab aufzufüllen, damit der Benutzer nicht alle Informationen aus dem nichts ausfüllt.
+Wenn der Benutzer entscheidet, die Karte vor dem senden zu bearbeiten, indem er auf die Schaltfläche **Bearbeiten** klickt, wird ein `composeExtension/submitAction` Invoke mit angezeigt `value.botMessagePreviewAction = edit` . Sie sollten in der Regel durch Zurückgeben des Aufgabenmoduls Antworten, das Sie als Antwort auf die anfängliche Invoke gesendet haben `composeExtension/fetchTask` , die die Interaktion begann. Dadurch kann der Benutzer den Prozess über die erneute Eingabe der ursprünglichen Informationen starten. Sie sollten auch die Informationen verwenden, die Sie jetzt zur Verfügung haben, um den Aufgabenmodul vorab aufzufüllen, damit der Benutzer nicht alle Informationen aus dem nichts ausfüllt.
 
-Siehe [Antworten auf das `fetchTask` anfängliche Ereignis](~/messaging-extensions/how-to/action-commands/create-task-module.md).
+Siehe [Antworten auf das anfängliche `fetchTask` Ereignis](~/messaging-extensions/how-to/action-commands/create-task-module.md).
 
 ### <a name="respond-to-botmessagepreview-send"></a>Auf botMessagePreview senden Antworten
 
-Nachdem der Benutzer auf die Schaltfläche **senden** geklickt hat, wird `composeExtension/submitAction` ein Aufruf `value.botMessagePreviewAction = send`mit angezeigt. Ihr Webdienst muss eine proaktive Nachricht mit der adaptiven Karte an die Unterhaltung erstellen und senden und auch auf die Invoke Antworten.
+Nachdem der Benutzer auf die Schaltfläche **senden** geklickt hat, wird ein `composeExtension/submitAction` Aufruf mit angezeigt `value.botMessagePreviewAction = send` . Ihr Webdienst muss eine proaktive Nachricht mit der adaptiven Karte an die Unterhaltung erstellen und senden und auch auf die Invoke Antworten.
 
-# <a name="cnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewSendAsync(
@@ -421,13 +421,27 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
   };
   responseActivity.Attachments.Add(attachment);
   
+  // Attribute the message to the user on whose behalf the bot is posting
+  responseActivity.ChannelData = new {
+    OnBehalfOf = new []
+    {
+      new
+      {
+        ItemId = 0,
+        MentionType = "person",
+        Mri = turnContext.Activity.From.Id,
+        DisplayName = turnContext.Activity.From.Name
+      }  
+    }
+  };
+  
   await turnContext.SendActivityAsync(responseActivity);
 
   return new MessagingExtensionActionResponse();
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/Node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -469,7 +483,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
         type: 'AdaptiveCard',
         version: '1.0'
       });
-      const responseActivity = { type: 'message', attachments: [adaptiveCard] };
+      const responseActivity = { type: 'message', attachments: [adaptiveCard], channelData: {
+          onBehalfOf: [
+              { itemId: 0, mentionType: 'person', mri: context.activity.from.id, displayname: context.activity.from.name }
+          ]
+      }};
     
       await context.sendActivity(responseActivity);
     }
@@ -515,6 +533,6 @@ Sie erhalten eine neue `composeExtension/submitAction` Nachricht, die der folgen
 
 Hinzufügen eines Suchbefehls
 
-* [Definieren von Suchbefehlen](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+* [Definition von Suchbefehlen](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
 [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

@@ -2,12 +2,12 @@
 title: Microsoft Teams-App-Vorlagen
 description: Links und Beschreibungen von App-Vorlagen für die Microsoft Teams-Plattform
 keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
-ms.openlocfilehash: 222128596dab2c7795cb15b63cc0520d3be970c4
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+ms.openlocfilehash: 5a84cdce7e63404159f35a97ff8d877a7b4054c6
+ms.sourcegitcommit: 74b544e75f00299653d3405f049e242a9d390106
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44801393"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44873401"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -75,6 +75,23 @@ Es bietet eine Grundlage zum Erstellen benutzerdefinierter, zielorientierter Kom
 
 ![FAQ Plus GIF](../assets/images/CompanyCommunicatorCompose.png)
 
+## <a name="contact-group-lookup-9734"></a>&#9734; für Kontaktgruppen Suche
+
+Die Contact Group Lookup-App bietet eine bequeme und nützliche Methode zum Erstellen, zugreifen und Verwalten der Kontaktgruppen Ihrer Organisation (früher als Verteilerlisten oder Kommunikationsgruppen bezeichnet). Benutzer können Gruppenmitglieder schnell anzeigen und mit Ihnen chatten, den Mitgliedsstatus anzeigen und einen Gruppenchat mit ausgewählten Mitgliedern in der Kontaktgruppe erstellen, die sich innerhalb der Teams-Umgebung befinden.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-contactgrouplookup)
+
+:::row:::
+:::column span="2":::
+    ![Kontaktgruppen Suche angeheftete Favoritenansicht](../assets/images/contact-group-lookup-favorites.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Demo "Contact Group Lookup Start Chat"](../assets/images/contact-group-lookup-chat.png)
+:::column-end:::
+:::row-end:::
+
 ## <a name="crowdsourcer"></a>Crowdsourcing
 
 Crowdsourcing ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , der Teams abgefragte Informationen von Gruppenmitgliedern zusammenstellt. Es ist eine hervorragende Möglichkeit, häufig gestellte Fragen zu beantworten und den Teilnehmern eine aktive Teilnahme an einer nützlichen Informationsressource zu ermöglichen.
@@ -101,7 +118,7 @@ Expert Finder ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , der best
 
 ![Demo zu Suchergebnissen für Experten-Finder](../assets/images/expert-finder.png)
 
-## <a name="faq-plus"></a>FAQ Plus 
+## <a name="faq-plus"></a>FAQ Plus
 
 Conversational Q&ein Bots sind eine einfache Möglichkeit, Antworten auf häufig gestellte Fragen von Benutzern bereitzustellen. Die meisten Bots greifen jedoch nicht auf sinnvolle Weise mit Benutzern in Kontakt, da kein Mensch in der Schleife ist, wenn der bot fehlschlägt. FAQ bot ist ein freundliches Q&ein bot, der einen Menschen in die Schleife bringt, wenn er nicht helfen kann. Man kann dem bot eine Frage stellen, und der bot antwortet mit einer Antwort, wenn er in der Wissensdatenbank enthalten ist. Wenn dies nicht der Fall ist, ermöglicht der bot dem Benutzer, eine Abfrage zu senden, die dann in einem vorkonfigurierten Expertenteam veröffentlicht wird, das Unterstützung bei der Bereitstellung von Support durch die Benachrichtigungen im Team leistet.
 

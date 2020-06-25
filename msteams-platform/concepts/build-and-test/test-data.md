@@ -3,12 +3,12 @@ title: Hinzufügen von Test Daten zum Office 365 Testmandanten
 description: Einrichten Ihres Office 365-Entwicklerprogramm Abonnements für erfolgreiche Tests von Microsoft Teams-apps
 keywords: Testen von apps-Entwicklerprogramm Teams
 ms.date: 11/01/2019
-ms.openlocfilehash: 2d32b0bf4243d540eeb5e2cc89ea2518d737ae17
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 87e9dc280c192f013098c3e9f604f72238bfafdf
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674196"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867093"
 ---
 # <a name="add-test-data-to-your-office-365-test-tenant"></a>Hinzufügen von Test Daten zum Office 365 Testmandanten
 
@@ -22,7 +22,7 @@ Richten Sie Ihr O365-Entwicklerprogramm Abonnement (oder einen anderen Testmanda
 
 Wenn Sie noch nicht über einen Testmandanten verfügen, müssen Sie am Office 365 Entwicklerprogramm teilnehmen und sich für ein Entwickler Abonnement anmelden. Außerdem müssen Sie die erforderlichen PowerShell-Module installieren. Für jeden von Ihnen verwendeten Mandanten benötigen Sie globale Administratorberechtigungen, um die Skripts auszuführen.
 
-1. [Treten Sie dem Office 365-Entwicklerprogramm bei](/office/developer-program/office-365-developer-program)
+1. [Treten Sie dem Office 365 Entwickler Programm bei](/office/developer-program/office-365-developer-program)
 2. [Einrichten eines Microsoft 365-Entwickler Abonnements](/office/developer-program/office-365-developer-program-get-started)
 3. [Verwenden von Beispiel-Datenpaketen mit Ihrem Office 365 Entwickler-Abonnement zum Installieren des Inhaltspakets "Users"](/office/developer-program/install-sample-packs)
 4. [Installieren des PowerShell-Moduls für Teams](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)

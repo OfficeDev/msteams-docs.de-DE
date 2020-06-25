@@ -4,12 +4,12 @@ author: clearab
 description: Fügen Sie modale Popup-Erlebnisse hinzu, um Informationen für Ihre Benutzer aus Ihren Microsoft Teams-apps zu sammeln oder anzuzeigen.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 22fdc7a9dab1ff6f27e2b0d144e54676b6cca50e
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: adf8f3a6fdbf5976296a58d9ffbae5de950ce64c
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801260"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867118"
 ---
 # <a name="what-are-task-modules"></a>Was sind Aufgabenmodule?
 
@@ -54,7 +54,7 @@ Aufgaben Module können von Tabs, Bots oder Deep Links aufgerufen werden und was
 
 ## <a name="the-taskinfo-object"></a>Das taskinfo-Objekt
 
-Das `TaskInfo` Objekt enthält die Metadaten für einen Aufgabenmodul. Die Objektdefinition ist unten. Sie **müssen** entweder `url` (für en eingebettetes IFRAME) oder `card` (für eine Adaptive Karte) definieren.
+Das `TaskInfo` Objekt enthält die Metadaten für einen Aufgabenmodul. Die Objektdefinition ist unten. Sie **müssen** entweder `url` (für ein eingebettetes IFRAME) oder `card` (für eine Adaptive Karte) definieren.
 
 | Attribut | Typ | Beschreibung |
 | --- | --- | --- |

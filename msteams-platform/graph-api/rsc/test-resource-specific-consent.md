@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: How-to
 keywords: Teams Authorization OAuth SSO Aad RSC Postman Graph
-ms.openlocfilehash: 882e2d1e7b85bd90cf9e3b7f6771a29eb8505314
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: c1c02c2ba0051193aa459d0df26fadfc9fa55550
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44801348"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867102"
 ---
 # <a name="test-resource-specific-consent-permissions--in-teams"></a>Testen von Berechtigungen für die ressourcenspezifische Zustimmung in Microsoft Teams
 
@@ -25,43 +25,25 @@ Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams-und Graph-AP
 > - **Anwendungsberechtigungen** – RSC-Berechtigungen für Ihre APP *finden Sie unter* [ressourcenspezifische Berechtigungen](resource-specific-consent.md#resource-specific-permissions).
 
 ```json
-"webApplicationInfo": {
-
-        "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX", 
-
-"resource": "https://AnyString",
-
-        "applicationPermissions": [
-
-    "TeamSettings.Read.Group",
-
-   "ChannelMessage.Read.Group",
-
-  "TeamSettings.Edit.Group",
-
-  "ChannelSettings.Edit.Group",
-
-  "Channel.Create.Group",
-
-  "Channel.Delete.Group",
-
-  "TeamsApp.Read.Group",
-
-  "TeamsTab.Read.Group",
-
-  "TeamsTab.Create.Group",
-
-  "TeamsTab.Edit.Group",
-
-  "TeamsTab.Delete.Group",
-
-  "Member.Read.Group",
-
-  "Owner.Read.Group",
-
-        ]
-
-    }
+"webApplicationInfo":{
+      "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+      "resource":"https://AnyString",
+      "applicationPermissions":[
+         "TeamSettings.Read.Group",
+         "ChannelMessage.Read.Group",
+         "TeamSettings.Edit.Group",
+         "ChannelSettings.Edit.Group",
+         "Channel.Create.Group",
+         "Channel.Delete.Group",
+         "TeamsApp.Read.Group",
+         "TeamsTab.Read.Group",
+         "TeamsTab.Create.Group",
+         "TeamsTab.Edit.Group",
+         "TeamsTab.Delete.Group",
+         "Member.Read.Group",
+         "Owner.Read.Group"
+      ]
+   }
 ```
 
 >[!IMPORTANT]
