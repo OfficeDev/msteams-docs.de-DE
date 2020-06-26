@@ -2,12 +2,12 @@
 title: Microsoft Teams-App-Vorlagen
 description: Links und Beschreibungen von App-Vorlagen für die Microsoft Teams-Plattform
 keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
-ms.openlocfilehash: 5a84cdce7e63404159f35a97ff8d877a7b4054c6
-ms.sourcegitcommit: 74b544e75f00299653d3405f049e242a9d390106
+ms.openlocfilehash: c03d0be2a115dafc13f80e30fd2c3e130e1edbba
+ms.sourcegitcommit: f39b6d39fac806decf9f04bf082b4fcf589e472f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44873401"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44888804"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -131,7 +131,7 @@ Conversational Q&ein Bots sind eine einfache Möglichkeit, Antworten auf häufig
 >
 > &#x2714; den Überarbeitungsverlauf von Q&als nachverfolgen.
 >
-> &#x2714; eine Antwort mit zusätzlichen Details konfigurieren, die als [Adaptive Karte](/task-modules-and-cards/cards/cards-reference#adaptive-card)angezeigt werden sollen.
+> &#x2714; eine Antwort mit zusätzlichen Details konfigurieren, die als [Adaptive Karte](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)angezeigt werden sollen.
 >
 [**Get it on GitHub**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
@@ -296,5 +296,22 @@ Um diese Schmerzen zu lindern, stellen wir Ihnen gerne die Vorlage "Listensuche-
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![Such-App auflisten](../assets/images/list-search-template.png)
+
+## <a name="workplace-awards-9734"></a>Arbeitsplatz Auszeichnungen &#9734;
+
+Workplace Awards ist eine Teams-App-Vorlage, die einen positiven Rahmen bietet, um die Anerkennung zu fördern und die Kultur der Mitarbeiter Anerkennung am modernen Arbeitsplatz zu fördern. Mit der App können Sie ein Employee Rewards-und Recognition (r&r)-Programm einrichten und verwalten, in dem Mitarbeiter Kollegen und ihre r-&r-Führungskraft ganz einfach benennen und unterstützen können, um eingereichte Nominierungen, Grant Awards und announce Recipients anzuzeigen.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards)
+
+:::row:::
+  :::column span="2":::
+    ![Nominierungs Karte für Workplace Awards ](../assets/images/workplace-awards-nominate.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Registerkarte "Workplace Awards List"](../assets/images/workplace-awards-champion-tab.png)
+:::column-end:::
+:::row-end:::
 
 Haben Sie eine Idee für eine APP-Vorlage, die Sie sehen möchten? [Lassen Sie es uns bitte wissen](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
