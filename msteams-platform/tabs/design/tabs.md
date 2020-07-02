@@ -2,12 +2,12 @@
 title: Entwurfsrichtlinien für Registerkarten
 description: Beschreibt die Richtlinien zum Erstellen von Registerkarten für Inhalt und Zusammenarbeit.
 keywords: Teams-Entwurfsrichtlinien Referenz-Framework-Registerkartenkonfiguration
-ms.openlocfilehash: 342e01e348c74eb143391a7d238396a2d866766a
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 51c2d7ac445d03ed993764d964b7a5d8b69399f5
+ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914553"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "45021615"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Inhalte und Unterhaltungen auf einmal mithilfe von Registerkarten
 
@@ -23,8 +23,8 @@ ms.locfileid: "43914553"
 >
 > **Registerkarten für Kanal/Gruppe (konfigurierbar) auf mobilen Geräten:**
 >
-> * Mobile Clients zeigen nur Registerkarten mit einem Wert für `websiteUrl`an. Wenn die Registerkarte auf den mobilen Teams-Clients angezeigt werden soll, müssen Sie den Wert von `websiteUrl`festlegen.
-> * Das standardmäßig geöffnete Verhalten auf mobilen Geräten ist das `websiteUrl`öffnen außerhalb von Browser mithilfe von. Wenn Sie für apps, die im öffentlichen APP-Speicher veröffentlicht werden, die Kanal Registerkarte standardmäßig in Microsoft Teams öffnen möchten, befolgten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md), und wenden Sie sich an Ihren Supportmitarbeiter, um eine weiße Liste zu fordern.
+> * Mobile Clients zeigen nur Registerkarten mit einem Wert für an `websiteUrl` . Wenn die Registerkarte auf den mobilen Teams-Clients angezeigt werden soll, müssen Sie den Wert von festlegen `websiteUrl` .
+> * Das standardmäßig geöffnete Verhalten auf mobilen Geräten ist das Öffnen außerhalb von Browser mithilfe von `websiteUrl` . Wenn Sie für apps, die im öffentlichen APP-Speicher veröffentlicht werden, die Kanal Registerkarte standardmäßig in Microsoft Teams öffnen möchten, befolgten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md), und wenden Sie sich an Ihren Supportmitarbeiter, um eine weiße Liste zu fordern.
 
 Registerkarten sind Ansichtsbilder, die Sie zum Freigeben von Inhalten, halten von Unterhaltungen und Hosten von Drittanbieterdiensten verwenden können, die alle innerhalb des organischen Workflows eines Teams liegen. Wenn Sie eine Registerkarte in Microsoft Teams erstellen, wird Ihre Webanwendungs-Front-und-Mitte platziert, wo Sie leicht von wichtigen Unterhaltungen aus zugänglich ist.
 
@@ -80,7 +80,7 @@ Ihr Tab-Canvas bietet eine großartige Gelegenheit, Ihre Benutzeroberfläche zu 
 Unter Einbeziehung ihrer eigenen Farben und Layouts Twill auch Hilfe bei der Kommunikation Persönlichkeit.
 
 > [!TIP]
-> Arbeiten Sie mit unserem visuellen Stil, damit Ihr Dienst sich wie ein Teil von Microsoft Teams anfühlt. *Siehe*zum Beispiel [Teams Colors] (/Concepts/Design/Components/Typography.MD
+> Arbeiten Sie mit unserem visuellen Stil, damit Ihr Dienst sich wie ein Teil von Microsoft Teams anfühlt. *Siehe*zum Beispiel Microsoft [Teams-Farben](../../concepts/design/components/color.md)
 
 ---
 
@@ -108,7 +108,7 @@ Die Abmessungen der Registerkarten-Konfigurationsseite:
 ### <a name="guidelines-for-tab-configuration-page-format"></a>Richtlinien für das Seitenformat der Registerkartenkonfiguration
 
 * Stützen Sie die minimale Höhe Ihres Inhaltsbereichs auf der Registerkarte Konfigurationsseite auf Grafikelementen mit fester Höhe.
-* Berechnen Sie den verfügbaren vertikalen Raum (die Höhe des Inhaltsbereichs auf der Konfigurations `window.innerHeight`Seite) mithilfe von. Dadurch wird die Größe der, `<iframe>` in der sich die Konfigurationsseite befindet, zurückgegeben, die sich in zukünftigen Versionen ändern kann. Wenn Sie diesen Wert verwenden, wird der Inhalt automatisch an zukünftige Änderungen angepasst.
+* Berechnen Sie den verfügbaren vertikalen Raum (die Höhe des Inhaltsbereichs auf der Konfigurationsseite) mithilfe von `window.innerHeight` . Dadurch wird die Größe der, in der sich die `<iframe>` Konfigurationsseite befindet, zurückgegeben, die sich in zukünftigen Versionen ändern kann. Wenn Sie diesen Wert verwenden, wird der Inhalt automatisch an zukünftige Änderungen angepasst.
 * Zuweisen von vertikalem Abstand zu den Elementen der Variablen Höhe minus was für die Elemente mit fester Höhe benötigt wird.
 * Für den *Anmelde* Status vertikal und horizontal zentrieren Sie den Inhalt.
 * Wenn Sie ein Hintergrundbild wünschen, benötigen Sie ein neues Bild, das an den Bereich angepasst wird (bevorzugt), oder Sie können das gleiche Bild beibehalten und zwischen folgenden Themen wählen:
@@ -142,4 +142,4 @@ Es gibt zwei Benachrichtigungs Modi für Änderungen an Registerkarten Inhalten:
 > * **Verwenden Sie die APP-API, um Benutzer über Änderungen zu informieren**. Diese Meldung wird im Aktivitätsfeed des Benutzers und im Deep-Link zur Registerkarte angezeigt. *Weitere Informationen finden Sie unter*  [Erstellen von Deep Links zu Inhalten und Features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest)
 > * **Verwenden Sie einen bot**. Diese Methode wird vor allem bevorzugt, wenn der Tab-Thread gezielt ist. Das Ergebnis ist, dass die Thread-Unterhaltung der Registerkarte als kürzlich aktiviert in die Ansicht verschoben wird. Diese Methode ermöglicht auch eine gewisse Raffinesse in der Art und Weise, wie die Benachrichtigung gesendet wird.
 
-  Durch das Senden einer Nachricht an einen Tab-Thread wird das Bewusstsein der Aktivität für alle Benutzer erhöht, ohne dass alle Personen explizit benachrichtigt werden. Dies ist die Sensibilisierung ohne Rauschen. Darüber hinaus wird bei `@mention` bestimmten Benutzern die gleiche Benachrichtigung in Ihren Feed eingefügt, indem Sie Sie direkt mit dem Tab-Thread verbindet.
+  Durch das Senden einer Nachricht an einen Tab-Thread wird das Bewusstsein der Aktivität für alle Benutzer erhöht, ohne dass alle Personen explizit benachrichtigt werden. Dies ist die Sensibilisierung ohne Rauschen. Darüber hinaus `@mention` wird bei bestimmten Benutzern die gleiche Benachrichtigung in Ihren Feed eingefügt, indem Sie Sie direkt mit dem Tab-Thread verbindet.

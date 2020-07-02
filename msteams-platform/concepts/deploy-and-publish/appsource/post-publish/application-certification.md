@@ -1,49 +1,54 @@
 ---
 title: App-Zertifizierung
-description: Beschreibt das selbst Bewertungsprogramm von Store-Apps
+description: Beschreibt das Microsoft 365 App Compliance-Programm in Store-Apps
 keywords: Teams Compliance appsource Store App Certification Partner Center
 ms.date: 05/06/2019
-ms.openlocfilehash: ff159f39061dd7073a93d3270d254365db4b2228
-ms.sourcegitcommit: 950e5f9c2a58d3856d026a251c5fe112d4d6121a
+ms.openlocfilehash: c9ba13cb06d513f55ef4a6e41219401dcd8295f8
+ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "44170507"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "45021589"
 ---
-# <a name="microsoft-teams-app-certification"></a>Microsoft Teams-App-Zertifizierung
+# <a name="microsoft-365-app-compliance"></a>Microsoft 365-App-Compliance 
 
-Das Microsoft Teams-App-Zertifizierungsprogramm ist ein Pilotprogramm, mit dem Sie eine freiwillige Selbsteinschätzung der Sicherheits-, Datenverarbeitungs-und Compliance-Praktiken Ihrer APP durchführen können. Die von Ihnen bereitgestellten Informationen werden Ihren potenziellen Kunden verarbeitet und zur Verfügung gestellt, damit Sie Ihre APP besser auswerten können, bevor Sie Sie für Ihre Organisation aktivieren. Im Rahmen des [App-Übermittlungsprozesses](~/concepts/deploy-and-publish/apps-publish.md) haben Sie die Möglichkeit, die Bewertung abzuschließen, die dann kompiliert und den Microsoft Teams-Administratoren zur Verfügung gestellt wird.
+Das Erstellen eines sicheren und vertrauenswürdigen App-Ökosystems ist für Microsoft oberste Priorität. Mehrere Investitionen zielen darauf ab, sicherzustellen, dass apps, die im Microsoft Store verfügbar sind, gültig und sicher sind. 
 
-![Microsoft Teams-App-Zertifizierung](~/assets/images/self-assessment.png)
+  ![3-stufiger Ansatz für die APP-Compliance](../../../../assets/images/3TierImage.png) 
+
+-   [Publisher Verification](https://docs.microsoft.com/azure/active-directory/develop/publisher-verification-overview) – ermöglicht Entwicklern mit einem überprüften [Microsoft Partner Network](https://partner.microsoft.com/membership) (MPN)-Konto das Zuordnen einer Organisations Identität zu ihren apps, die über die [Microsoft Identity-Plattform](https://docs.microsoft.com/azure/active-directory/develop/)registriert wurden.
+-   [Herausgeber Bestätigung](https://docs.microsoft.com/microsoft-365-app-certification/docs/enterprise-app-attestation-guide) – Entwickler führen eine Selbsteinschätzung der Sicherheits-, Compliance-und Datenverarbeitungsmethoden Ihrer Organisation durch. Diese Informationen werden für IT-Administratoren zur Überprüfung zur Verfügung gestellt. 
+-   [M365-Zertifizierung](https://docs.microsoft.com/microsoft-365-app-certification/docs/enterprise-app-certification-guide) – Microsoft verwendet einen Gutachter eines Drittanbieters, um die Sicherheits-und Konformitätsstandards für die Organisation zu überprüfen und zu validieren. Dies ist unsere höchste Zertifizierungsstufe, und es gibt den IT-Administratoren die Gewissheit, dass die Anwendung und Organisation, die Sie empfängt, auf eine Weise arbeitet, die eine sichere Nutzung und Speicherung von Daten fördert.
+
 
 ## <a name="program-benefits"></a>Programmvorteile
 
-Nachdem Sie die Bewertung abgeschlossen haben, werden Ihre Antworten kompiliert, und auf [dieser Website](https://aka.ms/AppCertification)wird eine Seite für Ihre APP erstellt. Anstatt auf individuelle Informationsanfragen zu reagieren, können Sie Ihre Kunden hier auf vollständige Informationen zu den Verfahren für die Datenverarbeitung, die Sicherheit und die Einhaltung Ihrer APP hinweisen. Microsoft Teams-Administratoren wird empfohlen, diesen Katalog zu verwenden, um neue apps zu entdecken, die Sie einfacher einschätzen und in Ihre Organisation einspielen können.
+Jede Ebene im Microsoft 365 App Compliance-Programm bietet ihren Kunden ein anderes Maß an Sicherheit. Durch Abschluss der Publisher-Überprüfung sichern Sie Ihren Kunden, dass Ihr Unternehmen der Herausgeber Ihrer APP ist. Die Herausgeber Bestätigung reduziert die Notwendigkeit, mit ihren Kunden über die Sicherheitspraktiken Ihrer APP hin und her zu wechseln. Wir veröffentlichen ihre Antworten auf häufige Fragen zur Sicherheit und Compliance an einem einzigen Speicherort in einem einheitlichen Format, das Kunden überprüfen können. Die letzte Stufe ist die M365-Zertifizierung. Nach der Fertigstellung werden Ihre Kunden wissen, dass Sie sichere Datenverarbeitung und Sicherheitsverfahren befolgten. Zu den weiteren Vorteilen des Compliance-Programms gehören:
+-   Kostenlos – Microsoft deckt diese Kosten derzeit ab
+-   Erwerben eines Badges in AppSource und in [Compliance-Entwicklungs Dokumentationen](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps)
+-   Differenzierung von anderen apps im Store
+-   Kürzere Zeit bis zur APP-Einführung für Ihre Kunden
+-   Verringern Sie die Zeitspanne, die Sie für das Ausfüllen von Ausschreibungen ausgeben.
+-   Vertrauen in die Sicherheits-und Compliance-Maßnahmen ihrer Anwendung hinzugefügt
 
-## <a name="how-to-join-the-program"></a>Teilnahme am Programm
+## <a name="qualifying-application-types"></a>Qualifizierende Anwendungstypen 
+### <a name="publisher-verification-applies-to-apps-which"></a>Die Überprüfung des Herausgebers gilt für apps, die: 
+- Verwenden von [OAuth 2,0 und OpenID Connect](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-protocols) zum Signieren von Benutzern und anfordern des Zugriffs auf Daten mithilfe von dienstseitigen APIs wie [Microsoft Graph](https://developer.microsoft.com/graph/). 
+- In Azure AD als mehr Mandanten registriert. 
 
-Die Fertigstellung der APP-Zertifizierung ist freiwillig, wird jedoch dringend empfohlen. Lassen Sie uns einfach wissen, dass Sie interessiert sind, und wir führen Sie durch den Prozess.
+### <a name="publisher-attestation"></a>Herausgeber Bescheinigung
+-   Microsoft Teams
+-   Word
+-   Excel
+-   PowerPoint
+-   Outlook
 
-### <a name="for-existing-store-apps"></a>Für vorhandene Store-Apps
+### <a name="m365-certification"></a>M365-Zertifizierung
+-   Microsoft Teams
+-   In Kürze verfügbar: bietet dieselbe Anwendungstyp Abdeckung wie die Herausgeber Bestätigung
 
-Wenn Sie bereits über eine APP im App Store verfügen und an dem Programm teilnehmen möchten, können Sie sich mit uns in Verbindung setzen, indem Sie [dieses Formular](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3oKPRKv815GlRdzCCYPJGZUMzlXMVVIRkhXQUVXT0paQVQ0UUdRWEZSSCQlQCN0PWcu)ausfüllen. Jemand aus unserem Team wird Sie nachverfolgen, um den Prozess gestartet zu bekommen.
+## <a name="how-to-start-the-program"></a>Starten des Programms
 
-### <a name="for-new-or-updated-store-apps"></a>Für neue oder aktualisierte Store-Apps
+Das Abschließen des Microsoft 365 App-Compliance-Programms ist freiwillig, aber sehr ermutigend. Sie können an dem Programm teilnehmen, unabhängig davon, wo Sie eine neu hinzugefügte Anwendung sind oder sich jahrelang im Store befinden. 
 
-Für neu übermittelte Apps oder zum Aktualisieren von Übermittlungen an vorhandene apps werden Sie aufgefordert, während des Genehmigungsprozesses teilzunehmen. Obwohl dies nicht erforderlich ist und die Genehmigung Ihrer APP nicht blockiert, wird dringend empfohlen, dass Sie sich die Zeit nehmen, die Bewertung auszufüllen.
-
-### <a name="information-youll-need-to-provide"></a>Informationen, die Sie bereitstellen müssen
-
-Wenn Sie den Test abgeschlossen haben, benötigen Sie die folgenden Informationstypen.
-
-#### <a name="general"></a>Allgemein
-
-Grundlegende Informationen zu Ihrer APP wie lizenzierungsdetails und Kontaktinformationen.
-
-#### <a name="data-handling"></a>Datenverarbeitung
-
-Informationen darüber, welche Daten Ihre APP sammelt, warum Sie diese Informationen sammeln und ob der Administrator die gesammelten Informationen kontrolliert. Beispiele hierfür sind Daten, auf die über Microsoft Graph zugegriffen wird, alle bot-Funktionen und jede Telemetrie, die Sie sammeln.
-
-#### <a name="security--compliance"></a>Sicherheit & Compliance
-
-Informationen im Zusammenhang mit der Sicherheit und Compliance der gesamten app (nicht nur Ihre Teams-APP, sondern auch die zugrunde liegenden Dienste). Die Informationen werden im Microsoft Cloud App Security-Katalog gespeichert. Weitere Informationen finden Sie auf [dieser Seite](/cloud-app-security/attest-your-app).
+Der erste Schritt besteht darin, die über [Prüfung des Herausgebers](https://docs.microsoft.com/azure/active-directory/develop/publisher-verification-overview)abzuschließen. Der nächste Schritt besteht darin, die [Herausgeber Bestätigung](https://docs.microsoft.com/microsoft-365-app-certification/docs/attestation)abzuschließen. Nachdem Sie die Herausgeber Bestätigung abgeschlossen haben, werden wir Sie mit den nächsten Schritten zur M365-Zertifizierung erreichen.

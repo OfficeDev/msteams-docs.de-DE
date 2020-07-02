@@ -2,20 +2,20 @@
 title: Nach Veröffentlichung
 description: Vorgehensweisen nach dem Veröffentlichen der APP
 keywords: Update Zertifikat für Teams nach Veröffentlichung
-ms.openlocfilehash: 77b74d77546de0ae93b0ae39aec925d2e3dec2cf
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: 887e18ac7e27cf12aa4319ac240e42f21f05fd75
+ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867094"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "45021573"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Verwalten und unterstützen Ihrer veröffentlichten App 
 
-Nachdem Ihre APP genehmigt und im öffentlichen App-Katalog aufgeführt wurde, können Sie Ihre Reichweite erweitern, indem Sie die APP-Zertifizierung erreichen oder eine Download Schaltfläche Ihrer Website hinzufügen.
+Nachdem Ihre APP genehmigt und im öffentlichen App-Katalog aufgeführt wurde, können Sie Ihre Reichweite erweitern, indem Sie das Microsoft 365 App Compliance-Programm ausfüllen oder eine Download Schaltfläche auf Ihrer Website hinzufügen.
 
-## <a name="application-certificate"></a>Anwendungszertifikat
+## <a name="m365-certified"></a>M365 zertifiziert
 
-Microsoft stellt ein [Anwendungs Zertifizierungsprogramm](./application-certification.md) bereit, das Ihre APP-Informationen kompiliert und auf der [Seite Microsoft Teams-App-Sicherheit und-Kompatibilität](https://aka.ms/AppCertification)präsentiert. Diese Informationen sollen Administratoren dabei helfen, Apps auszuwählen, die für Ihre Organisation sicher sind.
+Das [Microsoft 365 App Compliance-Programm](./application-certification.md)ist ein dreistufiger Ansatz für App-Sicherheit und-Compliance. Jede Schicht baut auf dem nächsten auf – bietet ein mehrstufiges Programm, um die Anforderungen Ihrer Kunden zu erfüllen. Weitere Informationen zur Sicherheit und Compliance-Haltung von Teams-apps finden Sie auf der [Seite "Kompatibilität"](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps).
 
 ## <a name="add-a-download-button-to-your-product-site"></a>Hinzufügen einer Schaltfläche zum herunterladen zu ihrer Produkt Website
 
