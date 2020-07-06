@@ -3,16 +3,16 @@ title: JSON-Schemareferenz für Lokalisierungsdatei
 description: Beschreibt das von der Lokalisierungsdatei für Microsoft Teams unterstützte Lokalisierungs Schema.
 keywords: Schema Lokalisierung für Teams-Manifestdatei
 ms.date: 05/20/2019
-ms.openlocfilehash: 14e08c582f065d1b09ff0f4906ca6788037460f1
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: 061729ecb5110c99d8f85f144796f1a78b266c3d
+ms.sourcegitcommit: bac0226d9048c363d96bbaf6f5395388c5f5c45a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44590865"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45039279"
 ---
 # <a name="reference-localization-file-json-schema"></a>Referenz: JSON-Schema der Lokalisierungsdatei
 
-In der Microsoft Teams-Lokalisierungsdatei werden Sprachübersetzungen beschrieben, die basierend auf den Clientspracheinstellungen bedient werden. Die Datei muss dem Schema entsprechen, das unter gehostet wird [`https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json) . Weitere Informationen finden Sie unter [App-Lokalisierung](~/concepts/build-and-test/apps-localization.md).
+In der Microsoft Teams-Lokalisierungsdatei werden Sprachübersetzungen beschrieben, die basierend auf den Clientspracheinstellungen bedient werden. Die Datei muss dem Schema entsprechen, das unter gehostet wird [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.Localization.schema.json) . Weitere Informationen finden Sie unter [App-Lokalisierung](~/concepts/build-and-test/apps-localization.md).
 
 ## <a name="sample"></a>Beispiel
 
