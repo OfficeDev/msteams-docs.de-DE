@@ -1,13 +1,13 @@
 ---
 title: Leitfaden für den Microsoft Teams-App-Genehmigungsprozess
 description: Beschreibt den Genehmigungsprozess für die Veröffentlichung Ihrer APP im Microsoft Teams-App-Store.
-keywords: Veröffentlichungs AppSource für Microsoft Teams-Veröffentlichungs Speicher
-ms.openlocfilehash: e93a17453e514b1e89f3f7070ff1f31000719260
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+keywords: Teams veröffentlichen Store Office Publishing veröffentlichen AppSource Partner Center-Kontoüberprüfung
+ms.openlocfilehash: 00266101f2c417a192ac97daaaa73f397f1bbdf6
+ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704488"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45091305"
 ---
 # <a name="submit-your-app-to-appsource"></a>Übermitteln Ihrer APP an AppSource
 

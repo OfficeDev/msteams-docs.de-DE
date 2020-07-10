@@ -1,19 +1,19 @@
 ---
-title: Verwenden des Teams-Client-SDK
+title: Verwenden des Teams-Client-SDKs
 author: laujan
 description: Vorgehensweise verwenden des Teams-Client-SDK zum Hinzufügen von Teams-fähigen Funktionen zu Ihren benutzerdefinierten Registerkarten
 keywords: Teams Tabs Gruppenkanal konfigurierbares statisches SDK JavaScript Personal
 ms.topic: conceptual
-ms.openlocfilehash: 66d44617b897e44268ae2cee53f7ea64743ad821
-ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
+ms.openlocfilehash: 07903d766ac67f2dbc9fc09268618ac5c2ae33c2
+ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "42928510"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45091298"
 ---
-# <a name="using-the-teams-client-sdk"></a>Verwenden des Teams-Client-SDK
+# <a name="using-the-teams-client-sdk"></a>Verwenden des Teams-Client-SDKs
 
-Das Microsoft Teams-JavaScript- **Client-SDK** und die JavaScript- **Bibliothek für Teams** sind Teil der [Microsoft Teams-Entwicklerplattform](https://msdn.microsoft.com/microsoft-teams) und stellen Tools und Prozesse zur Verfügung, um die Anwendungserstellung für Teams zu vereinfachen. Das Microsoft Teams-Client-SDK wird als NPM-Paket verteilt. Die neueste Version finden Sie hier: <https://www.npmjs.com/package/@microsoft/teams-js>. Die Microsoft Teams-Bibliothek befindet <https://github.com/OfficeDev/microsoft-teams-library-js>sich unter.
+Das Microsoft Teams-JavaScript- **Client-SDK** und die JavaScript- **Bibliothek für Teams** sind Teil der [Microsoft Teams-Entwicklerplattform](/microsoftteams/platform/) und stellen Tools und Prozesse zur Verfügung, um die Anwendungserstellung für Teams zu vereinfachen. Das Microsoft Teams-Client-SDK wird als NPM-Paket verteilt. Die neueste Version finden Sie hier: <https://www.npmjs.com/package/@microsoft/teams-js> . Die Microsoft Teams-Bibliothek befindet sich unter <https://github.com/OfficeDev/microsoft-teams-library-js> .
 
 In der folgenden Tabelle werden die in der Entwicklung von Tabs üblicherweise verwendeten Teams-Bibliotheksfunktionen beschrieben:
 

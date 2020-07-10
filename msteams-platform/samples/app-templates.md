@@ -2,12 +2,12 @@
 title: Microsoft Teams-App-Vorlagen
 description: Links und Beschreibungen von App-Vorlagen für die Microsoft Teams-Plattform
 keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
-ms.openlocfilehash: 5333434d640a4195c3f090851d8589bef3e39bb9
-ms.sourcegitcommit: 704471f7f89ab9685f9fbd0f62468c7a4792f42c
+ms.openlocfilehash: 7e818f18e97da71fee0f51bd7502bedf2de3d465
+ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44943817"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45091341"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -154,6 +154,23 @@ Die Goal Tracker-App ist eine umfassende Lösung für Ihre Organisation zur Unte
 :::column-end:::
 :::row-end:::
 
+## <a name="great-ideas-9734"></a>Großartige Ideen &#9734;
+
+Die app "Great Ideas" unterstützt und stärkt Innovation und Kreativität in Ihrer Organisation. Die APP ermöglicht es Ihren Mitarbeitern, Ideen mit Kollegen und Führungskräften auszutauschen, neue Übermittlungen zu entdecken, Beiträge zur Peer-Überlegung anzusehen und ihre Stimme für die besten Vorschläge in Microsoft Teams abzugeben.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-greatideas)
+
+:::row:::
+  :::column span="2":::
+    ![Übermittelte Ideen anzeigen](../assets/images/great-ideas-all-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Ideen anzeigen](../assets/images/great-ideas-digest-view.png)
+:::column-end:::
+:::row-end:::
+
 ## <a name="group-activities"></a>Gruppenaktivitäten
 
 Group Activities ist eine Microsoft Teams-APP, die Teambesitzern das schnelle Erstellen von Aktivitätsgruppen und das Verwalten von Zusammenarbeits-Workflows im Kontext von Microsoft Teams erleichtert. Aktivitätsautoren können Aktivitäten erstellen, Teammitglieder nach dem Zufallsprinzip in Gruppen verteilen und den bot optional Erinnerungen senden lassen, bis die Aktivitäten abgeschlossen sind.
@@ -168,6 +185,23 @@ Group Activities ist eine Microsoft Teams-APP, die Teambesitzern das schnelle Er
 :::row:::
 :::column span="2":::
     ![Benachrichtigungsnachricht für Gruppenaktivität in einem Kanal](../assets/images/group-activities-2.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="grow-your-skills-9734"></a>Erweitern Sie Ihre Fähigkeiten &#9734;
+
+Die app "Grow Your Skills" unterstützt berufliches Wachstum und Entwicklung, indem Mitarbeiter zu zusätzlichen Projekten für Ihre Organisation beitragen und gleichzeitig neue Fertigkeiten erlernen. Mitarbeiter können die APP verwenden, um Möglichkeiten zu finden, die ihren Interessen entsprechen, eine sinnvolle Zusammenarbeit mit Kollegen zu genießen und neue Ebenen von Fachwissen und Funktionen zu erwerben, die sich innerhalb der Teams-Umgebung befinden.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills)
+
+:::row:::
+  :::column span="2":::
+    ![Ansicht "Verfügbare Projekte"](../assets/images/grow-your-skills-all-projects-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Ansicht "erworbene Fertigkeiten" des Viewers](../assets/images/grow-your-skills-acquired-skills-view.png)
 :::column-end:::
 :::row-end:::
 
@@ -321,6 +355,14 @@ Um diese Schmerzen zu lindern, stellen wir Ihnen gerne die Vorlage "Listensuche-
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![Such-App auflisten](../assets/images/list-search-template.png)
+
+## <a name="staff-check-ins-9734"></a>Mitarbeiter Check-ins &#9734;
+
+Personal Check-ins ist eine APP auf der Grundlage von [Power-apps](/powerapps/powerapps-overview), die die Überwachung der Kommunikation zwischen Ihrem Unternehmen und dem Feld Personal ermöglicht. Mitarbeiter können ganz einfach zeitkritische Informationen und Statusaktualisierungen entweder auf einer geplanten oder Ad-hoc-Basis direkt in Microsoft Teams bereitstellen. Die App unterstützt Echt Zeit Standorte, Fotos und Notizen sowie Erinnerungsbenachrichtigungen und automatisierte Workflows.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
+
+![Eincheck Ansicht erstellen](../assets/images/staff-check-ins-create.png)
 
 ## <a name="visitor-management-9734"></a>Besucher Verwaltungs &#9734;
 
