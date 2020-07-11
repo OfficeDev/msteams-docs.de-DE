@@ -2,12 +2,12 @@
 title: Hochladen Ihrer benutzerdefinierten app in Microsoft Teams
 description: Beschreibt, wie Sie Ihre APP in Microsoft Teams hochladen
 keywords: Upload von Teams-apps
-ms.openlocfilehash: 256a9bea48ed816f2e9912006dd2fe7301743919
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: c130ef48d3ad7476de9ca5afeb7b613197c43f18
+ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453882"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45103026"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Hochladen eines App-Pakets in Microsoft Teams
 
@@ -100,7 +100,7 @@ Wenn die APP im Team oder in der Unterhaltung geladen ist, können Benutzer eine
 
 1. Wechseln Sie zu einem Kanal im Team. Wählen Sie *Weitere Optionen* (*&#8943;*) aus, und wählen Sie *Connectors*aus.
 
-2. Wählen Sie Ihren Connector aus dem Abschnitt **hochgeladene** unten aus.
+2. Wählen Sie den Verbinder im Abschnitt **quer geladene** unten aus.
 
 3. Konfigurieren Sie den Connector über die [Konfigurationsseite](../../webhooks-and-connectors/how-to/connectors-creating.md) , und wählen Sie *Speichern*aus.
 
