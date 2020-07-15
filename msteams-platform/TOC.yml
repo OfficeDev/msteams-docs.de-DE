@@ -7,7 +7,7 @@
       href: whats-new.md
 - name: Lernprogramme und Codebeispiele
   items:
-    - name: 'Erstellen einer App mithilfe von C#'
+    - name: Erstellen einer App mithilfe von C#
       href: tutorials/get-started-dotnet-app-studio.md
     - name: Erstellen einer App mithilfe von Node
       href: tutorials/get-started-nodejs-app-studio.md
@@ -15,12 +15,16 @@
       href: tutorials/get-started-yeoman.md
     - name: Erweitern des Teams-Clients mit benutzerdefinierten Apps
       href: tutorials/code-samples.md
-- name: App-Vorlagen und -Integrationen
+- name: Vorlagen und Integrationen
   items:
     - name: Produktionsfertige App-Vorlagen
       href: samples/app-templates.md
     - name: Produktionsfertige Shifts-Connectors
       href: samples/shifts-wfm-connectors.md
+    - name: Microsoft Teams-Toolkit-Erweiterung
+      items:
+        - name: Teams-Toolkit-Erweiterung für Visual Studio Code
+          href: toolkit/visual-studio-code-overview.md
 - name: Konzepte
   expanded: true
   items:
@@ -112,13 +116,13 @@
               href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
             - name: Erstellen einer persönlichen Registerkarte
               href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: 'C#/ASP.NET Core'
+        - name: C#/ASP.NET Core
           items:
             - name: Erstellen von Kanal- und Gruppen-Registerkarten
               href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
             - name: Erstellen einer persönlichen Registerkarte
               href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: 'C#/ASP.NET MVC'
+        - name: C#/ASP.NET MVC
           items:
             - name: Erstellen von Kanal- und Gruppen-Registerkarten
               href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
@@ -171,7 +175,7 @@
       href: bots/bot-basics.md
     - name: Schnellstarts
       items:
-        - name: 'Teams-Unterhaltungsbot in C#'
+        - name: Teams-Unterhaltungsbot in C#
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot'
         - name: Teams-Unterhaltungsbot in JavaScript
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot'
@@ -248,13 +252,13 @@
       items:
         - name: Mit Aktionsbefehl
           items:
-            - name: 'C#/.NET'
+            - name: C#/.NET
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
             - name: TypeScript/Node.js
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action'
         - name: Mit Suchbefehl
           items:
-            - name: 'C#/.NET'
+            - name: C#/.NET
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
             - name: TypeScript/Node.js
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
