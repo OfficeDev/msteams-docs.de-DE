@@ -2,12 +2,12 @@
 title: Entwurfsrichtlinien für Bots
 description: Beschreibt die Richtlinien zum Erstellen von Bots
 keywords: Teams-Entwurfsrichtlinien Referenz Framework-Bots im Gespräch
-ms.openlocfilehash: 731e36ac3437e22435ea6054ad359d0c6bc2ead3
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 4f474278b37058f61886a620af634780d2e3cb19
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453889"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137675"
 ---
 # <a name="start-talking-with-bots"></a>Gespräch mit Bots beginnen
 
@@ -33,7 +33,7 @@ Grafiken sind eine gute Möglichkeit, eine Geschichte zu erzählen, aber nicht a
 
 ### <a name="onboarding-users"></a>Onboarding-Benutzer
 
-Es ist wichtig, dass sich Bots selbst vorstellen und übermitteln, was Sie Benutzern antun können. Dieser *Wert Exchange* hilft Benutzern zu verstehen, was mit dem bot zu tun ist, wo die Einschränkungen liegen können, und, was am wichtigsten ist, hilft Benutzern, die Interaktion mit einem Computer zu tolerieren, der nicht so intuitiv wie eine reale Person sein wird. Darüber hinaus erteilt es die Berechtigung für Benutzerdaten in Exchange für den tatsächlichen Wert, den der Dienst bereitstellt.
+Es ist wichtig, dass sich Bots selbst vorstellen und übermitteln, was Sie für Benutzer tun können. Dieser *Wert Exchange* hilft Benutzern zu verstehen, was mit dem bot zu tun ist, wo die Einschränkungen liegen können, und, was am wichtigsten ist, hilft Benutzern, die Interaktion mit einem Computer zu tolerieren, der nicht so intuitiv wie eine reale Person sein wird. Darüber hinaus erteilt es die Berechtigung für Benutzerdaten in Exchange für den tatsächlichen Wert, den der Dienst bereitstellt.
 
 #### <a name="welcome-messages"></a>Willkommensnachrichten
 

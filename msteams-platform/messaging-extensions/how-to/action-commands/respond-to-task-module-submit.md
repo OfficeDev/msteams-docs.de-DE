@@ -4,12 +4,12 @@ author: clearab
 description: Beschreibt, wie auf die Aufgabenmodul Aktion über einen Aktionsbefehl für die Nachrichten Erweiterung reagiert wird.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a876275f5f4f9c3a7c1fea275eecb9c26b780fd0
-ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
+ms.openlocfilehash: cc62bd6643fad9b3f2054d6595dd509b75c59680
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "45103015"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137661"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Reagieren auf die Aufgabe Modul Submit-Aktion
 
@@ -28,7 +28,7 @@ Sie haben die folgenden Optionen für die Antwort.
 
 Die folgende Tabelle zeigt, welche Arten von Antworten basierend auf dem Aufruf Speicherort ( `commandContext` ) der Messaging Erweiterung zur Verfügung stehen. Wenn der Benutzer den Fluss abgeschlossen hat, wird der ursprüngliche Aufruf für die Authentifizierung oder Konfiguration erneut an den Webdienst gesendet.
 
-|Antworttyp | Verfassen | Befehlsleiste | Nachricht. |
+|Antworttyp | Verfassen | Befehlsleiste | message |
 |--------------|:-------------:|:-------------:|:---------:|
 |Karten Antwort | x | x | x |
 |Ein weiteres Aufgabenmodul | x | x | x |
@@ -531,7 +531,7 @@ Sie erhalten eine neue `composeExtension/submitAction` Nachricht, die der folgen
 
 ### <a name="user-attribution-for-bots-messages"></a>Benutzerzuordnung für Bots-Nachrichten 
 
-In Szenarien, in denen ein bot Nachrichten im Auftrag eines Benutzers sendet, kann die Nachricht dem Benutzer mit Engagement helfen und einen natürlichen Interaktions Fluss präsentieren. Mit diesem Feature können Sie Nachrichten im Namen des Benutzers senden, der die Nachricht initiiert.
+In Szenarien, in denen ein bot Nachrichten im Auftrag eines Benutzers sendet, kann die Nachricht dem Benutzer mit Engagement helfen und einen natürlichen Interaktions Fluss präsentieren. Mit dieser Funktion können Sie eine Nachricht von Ihrem bot einem Benutzer zuordnen, in dessen Auftrag er gesendet wurde.
 
 Im Bild unten links sehen Sie eine Karten Nachricht, die von einem bot *ohne* Benutzerzuordnung gesendet wurde, und auf der rechten Seite ist eine Karte, die von einem bot *mit* Benutzerzuordnung gesendet wird.
 
@@ -580,9 +580,9 @@ Im folgenden finden Sie eine Beschreibung der Entitäten in der `OnBehalfOf` von
 |Feld|Typ|Beschreibung|
 |:---|:---|:---|
 |`itemId`|Ganze Zahl|Sollte 0 sein.|
-|`mentionType`|String|Sollte "Person" sein|
-|`mri`|String|Nachrichten Ressourcenbezeichner (MRI) der Person, in deren Auftrag die Nachricht gesendet wird. Der Name des Nachrichtenabsenders wird als " \<user\> via \<bot name\> " angezeigt.|
-|`displayName`|String|Der Name der Person. Wird als Fallback verwendet, falls die Namensauflösung nicht verfügbar ist.|
+|`mentionType`|Zeichenfolge|Sollte "Person" sein|
+|`mri`|Zeichenfolge|Nachrichten Ressourcenbezeichner (MRI) der Person, in deren Auftrag die Nachricht gesendet wird. Der Name des Nachrichtenabsenders wird als " \<user\> via \<bot name\> " angezeigt.|
+|`displayName`|Zeichenfolge|Der Name der Person. Wird als Fallback verwendet, falls die Namensauflösung nicht verfügbar ist.|
   
 ## <a name="next-steps"></a>Nächste Schritte
 
