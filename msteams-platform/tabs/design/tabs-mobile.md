@@ -2,14 +2,17 @@
 title: Registerkarten auf mobilen Geräten
 description: Beschreibt die Richtlinien für das Entwerfen von Registerkarten, die auf mobilen Geräten funktionieren.
 keywords: Teams-Entwurfsrichtlinien – Referenzrahmen-Mobile Registerkarten für persönliche apps
-ms.openlocfilehash: 6fe40b9cc5b6e898d0f0bce14b3dfedfd2c14032
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: ac547e74fd56e4f1da6c731959d8bb59dbe48213
+ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455520"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45145928"
 ---
 # <a name="tabs-on-mobile"></a>Registerkarten auf mobilen Geräten
+
+> [!NOTE]
+> Wenn die Registerkarte Kanal/Gruppe auf mobilen Teams-Clients angezeigt werden soll, `setSettings()` muss die Konfiguration über einen Wert für die `websiteUrl` Eigenschaft verfügen (siehe unten). Persönliche Registerkarten sind derzeit in der [Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md)verfügbar. Die vollständige Unterstützung für Registerkarten auf mobilen Clients wird in Kürze veröffentlicht. Zur Vorbereitung des Updates sollten Sie beim Erstellen Ihrer Registerkarten die hier dargestellten Schritte ausführen.
 
 Benutzerdefinierte Registerkarten können Teil eines Kanals, Gruppenchats oder einer persönlichen APP sein (apps, die statische Registerkarten und/oder einen 1:1-bot enthalten).
 
@@ -53,7 +56,7 @@ Dies ist ein großer Bereich, in dem Arbeit erledigt wird. Die wiki-app folgt di
 
 ![einzelnes Canvas-Layout](~/assets/images/mobile-single-canvas.png)
 
-#### <a name="list"></a>Auflisten
+#### <a name="list"></a>Liste
 
 Listen eignen sich hervorragend zum Sortieren und Filtern großer Datenmengen und bieten eine große Rolle, um die wichtigsten Dinge am besten zu halten. Es ist hilfreich, sortierbare Spalten zu verwenden. Im Menü mit den Auslassungspunkten können jedem Listenelementaktionen hinzugefügt werden.
 

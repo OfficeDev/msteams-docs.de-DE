@@ -6,17 +6,17 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams-Autorisierung OAuth SSO Aad RSC Graph
-ms.openlocfilehash: 7d0927fc360d8c005326cdff6453796fb45bf113
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: a9380081e7694a7eae8e2c131e091b108acb051f
+ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867139"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45145914"
 ---
 # <a name="resource-specific-consent-rsc--developer-preview"></a>Ressourcenspezifische Zustimmung (RSC) – Entwicklervorschau
 
 >[!NOTE]
->Die Berechtigungen für die ressourcenspezifische Zustimmung sind nur in Desktop-und Android-Clients verfügbar, nachdem die Entwicklervorschau aktiviert wurde. Weitere Informationen finden Sie unter [How do I enable Developer Preview](../../resources/dev-preview/developer-preview-intro.md) .
+>Die Berechtigungen für die ressourcenspezifische Zustimmung stehen in Desktop-und Webclients zur Verfügung, nachdem die Entwicklervorschau aktiviert wurde. Weitere Informationen finden Sie unter [How do I enable Developer Preview](../../resources/dev-preview/developer-preview-intro.md) .
 
 Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams-und Graph-API-Integration, die es Ihrer APP ermöglicht, API-Endpunkte zum Verwalten bestimmter Teams in einer Organisation zu verwenden. Mit dem Berechtigungsmodell für die ressourcenspezifische Zustimmung (RSC) können *Teambesitzer* einer Anwendung die Zustimmung erteilen, auf die Daten eines Teams zuzugreifen und/oder diese zu ändern. Die detaillierten, Teams-spezifischen RSC-Berechtigungen definieren, was eine Anwendung in einem bestimmten Team tun kann:
 

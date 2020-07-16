@@ -4,12 +4,12 @@ author: laujan
 description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Microsoft Teams-Plattform
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1c4f1e2a62fd9ce3542a229cbcb8d79551caee10
-ms.sourcegitcommit: 214eccbadb7f3a67236b79a041ef487b7bf6dfbd
+ms.openlocfilehash: d8aba99210369bf92ad1e600b13cf1d20984d06f
+ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "44119049"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45145907"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>Was sind benutzerdefinierte Microsoft Teams-Registerkarten?
 
@@ -26,7 +26,7 @@ Es gibt zwei Arten von Registerkarten in Microsoft Teams – Kanal/Gruppe und pe
 >
 > * Wenn einer APP, die auch einen bot enthält, eine Registerkarte hinzugefügt wird, wird der bot ebenfalls dem Team hinzugefügt.
 > * Bekanntheitsgrad der Aad-ID des aktuellen Benutzers.
-> * Gebietsschema Awareness für den Benutzer, um die Sprache anzugeben, `en-us`also. 
+> * Gebietsschema Awareness für den Benutzer, um die Sprache anzugeben, `en-us` also. 
 > * SSO-Funktion, falls unterstützt.
 > * Möglichkeit, Bots oder App-Benachrichtigungen zu verwenden, um Deep Link zur Registerkarte oder zu einer unter Entität innerhalb des Diensts zu erstellen, beispielsweise ein einzelnes Arbeitselement.
 > * Die Möglichkeit, ein Aufgabenmodul über Links in einer Registerkarte zu öffnen.
@@ -45,7 +45,7 @@ Es gibt zwei Arten von Registerkarten in Microsoft Teams – Kanal/Gruppe und pe
 
 ## <a name="how-do-tabs-work"></a>Wie funktionieren Registerkarten?
 
-Eine benutzerdefinierte Registerkarte wird im App-Manifest des App-Pakets deklariert. Für jede Webseite, die als Registerkarte in Ihrer APP enthalten sein soll, definieren Sie eine URL und einen Bereich. Darüber hinaus müssen Sie das Microsoft [Teams-JavaScript-Client-SDK](/javascript/api/overview/msteams-client) zu Ihrer Seite hinzu `microsoftTeams.initialize()` fügen und nach dem Laden der Seite anrufen. Dadurch wird Microsoft Teams mitgeteilt, dass Sie Ihre Seite anzeigen, Ihnen Zugriff auf Teams-spezifische Informationen ermöglichen (beispielsweise, wenn der Team-Client das dunkle Design ausführt) und Ihnen die Möglichkeit geben, basierend auf den Ergebnissen Maßnahmen zu ergreifen.
+Eine benutzerdefinierte Registerkarte wird im App-Manifest des App-Pakets deklariert. Für jede Webseite, die als Registerkarte in Ihrer APP enthalten sein soll, definieren Sie eine URL und einen Bereich. Darüber hinaus müssen Sie das Microsoft [Teams-JavaScript-Client-SDK](/javascript/api/overview/msteams-client) zu Ihrer Seite hinzufügen und nach dem Laden der Seite anrufen `microsoftTeams.initialize()` . Dadurch wird Microsoft Teams mitgeteilt, dass Sie Ihre Seite anzeigen, Ihnen Zugriff auf Teams-spezifische Informationen ermöglichen (beispielsweise, wenn der Team-Client das dunkle Design ausführt) und Ihnen die Möglichkeit geben, basierend auf den Ergebnissen Maßnahmen zu ergreifen.
 
 Unabhängig davon, ob Sie die Registerkarte innerhalb des Kanals/der Gruppe oder des persönlichen Bereichs verfügbar machen möchten, müssen Sie auf Ihrer Registerkarte eine iframed HTML- [Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md) präsentieren. Bei persönlichen Registerkarten wird die Inhalts-URL direkt in ihrem Manifest durch die `contentUrl` -Eigenschaft im `staticTabs` Array festgelegt. Die Inhalte Ihrer Registerkarte sind für alle Benutzer gleich.
 
@@ -55,4 +55,4 @@ Sie können maximal eine (1) Kanal/Gruppen-Registerkarte und bis zu sechzehn (16
 
 ## <a name="mobile-clients"></a>Mobile Clients
 
-Wenn die Registerkarte Kanal/Gruppe auf mobilen Teams-Clients angezeigt werden soll, muss `setSettings()` die Konfiguration über einen Wert für die `websiteUrl` Eigenschaft verfügen (siehe unten). Persönliche Registerkarten sind derzeit in der [Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md)verfügbar. Die vollständige Unterstützung für Registerkarten auf mobilen Clients wird in Kürze veröffentlicht. Zur Vorbereitung des Updates sollten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md) beim Erstellen Ihrer Registerkarten befolgten.
+Wenn die Registerkarte Kanal/Gruppe auf mobilen Teams-Clients angezeigt werden soll, `setSettings()` muss die Konfiguration einen Wert für die `websiteUrl` Eigenschaft besitzen. Persönliche Registerkarten sind derzeit in der [Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md)verfügbar. Die vollständige Unterstützung für Registerkarten auf mobilen Clients wird in Kürze veröffentlicht. Zur Vorbereitung des Updates sollten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md) beim Erstellen Ihrer Registerkarten befolgten.
