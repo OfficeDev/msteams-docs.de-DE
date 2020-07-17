@@ -3,12 +3,12 @@ title: Lokalisierung für Team-apps
 description: Beschreibt Probleme beim Lokalisieren Ihrer APP.
 keywords: Teams veröffentlichen Store Office Publishing AppSource Localization Language
 ms.date: 05/15/2018
-ms.openlocfilehash: 138b6d66808fc5ed212f1cb0eed8579faea6f764
-ms.sourcegitcommit: bac0226d9048c363d96bbaf6f5395388c5f5c45a
+ms.openlocfilehash: 8d14da5c773bcc422081b50fc530a32163260b4a
+ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45039272"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45152679"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Lokalisierung für Microsoft Teams-apps
 
@@ -20,9 +20,9 @@ Beim Lokalisieren Ihrer Microsoft Teams-App gibt es drei wichtige Bereiche, die 
 
 ## <a name="localizing-your-appsource-listing"></a>Lokalisieren Ihres AppSource-Eintrags
 
-Wenn Sie im App Store veröffentlichen, müssen Sie beachten, dass die Lokalisierung Ihres AppSource-Eintrags noch nicht unterstützt wird. In Vorbereitung auf die Unterstützung lokalisierter Auflistungen im App Store können Sie jedoch weitere Sprachen zu Ihrem Angebot hinzufügen. Derzeit werden nur die standardmäßigen (englischsprachigen) Informationen, die Sie im [Partner Center](/dev/store/use-partner-center-to-submit-to-appsource) für Ihr Angebot angeben, im [AppSource-Website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) Eintrag für Ihre APP angezeigt.
+Wenn Sie im App Store veröffentlichen, müssen Sie beachten, dass die Lokalisierung Ihres AppSource-Eintrags noch nicht unterstützt wird. In Vorbereitung auf die Unterstützung lokalisierter Auflistungen im App Store können Sie jedoch weitere Sprachen zu Ihrem Angebot hinzufügen. Derzeit werden nur die standardmäßigen (englischsprachigen) Informationen, die Sie im [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) für Ihr Angebot angeben, im [AppSource-Website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) Eintrag für Ihre APP angezeigt.
 
-Zum Konfigurieren einer zusätzlichen Sprache für Ihre APP wählen Sie im [Partner Center](/dev/store/use-partner-center-to-submit-to-appsource)sowohl Englisch als auch die zusätzliche Sprache der APP aus. In diesem Beispiel wird Französisch verwendet.
+Zum Konfigurieren einer zusätzlichen Sprache für Ihre APP wählen Sie im [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center)sowohl Englisch als auch die zusätzliche Sprache der APP aus. In diesem Beispiel wird Französisch verwendet.
 
 1. Englische Sprache hinzufügen
     * Geben Sie den APP-Namen ein.

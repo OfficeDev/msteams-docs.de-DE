@@ -1,13 +1,14 @@
 ---
 title: Microsoft Teams-App-Vorlagen
 description: Links und Beschreibungen von App-Vorlagen für die Microsoft Teams-Plattform
+ms.topic: reference
 keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
-ms.openlocfilehash: 7e818f18e97da71fee0f51bd7502bedf2de3d465
-ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
+ms.openlocfilehash: 827e6562bdab06b4aa2d44800222d72a10106439
+ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45091341"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45152701"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 

@@ -4,12 +4,12 @@ description: Beschreibt die Richtlinien zum Erstellen von Messaging Erweiterunge
 keywords: Design Guidelines für Teams Referenz Tipps für Messaging-Erweiterungen bewährte Methode
 author: EmilyyC
 ms.author: qinch
-ms.openlocfilehash: cf2862b8c8544efcab21616c420d66937fb7406a
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 5d62646c5757f93cc4f6ae6e089ef3a0918f9eea
+ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801312"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45152686"
 ---
 # <a name="start-sharing-with-powerful-messaging-extensions"></a>Starten der Freigabe mit leistungsstarken Messaging Erweiterungen
 
@@ -46,4 +46,4 @@ Zeigen Sie Benutzern nicht nur Text an. Haben Sie etwas, mit dem Sie interagiere
 
 ### <a name="keep-users-in-the-app-context"></a>Benutzer im App-Kontext behalten
 
-Wenn eine Karte nicht ausreicht und Sie einen Link für weitere Informationen benötigen, können Sie eine Registerkarte öffnen, anstatt einen Browser zu öffnen, um eine bessere Benutzerfreundlichkeit zu erzielen. *Weitere Informationen finden Sie unter* [extend your Teams App Wit a Custom Tab](../../tabs/how-to/add-tab.md)
+Wenn eine Karte nicht ausreicht und Sie einen Link für weitere Informationen benötigen, können Sie eine Registerkarte öffnen, anstatt einen Browser zu öffnen, um eine bessere Benutzerfreundlichkeit zu erzielen. *Weitere Informationen finden Sie unter* [Erweitern Ihrer Teams-App mit einer benutzerdefinierten Registerkarte](../../tabs/how-to/add-tab.md)
