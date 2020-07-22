@@ -21,6 +21,10 @@
       href: samples/app-templates.md
     - name: Produktionsfertige Shifts-Connectors
       href: samples/shifts-wfm-connectors.md
+    - name: Erstellen eines virtuellen Assistenten für Teams
+      href: samples/virtual-assistant.md
+    - name: Integrieren von Power Virtual Agents in Teams
+      href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
     - name: Microsoft Teams-Toolkit-Erweiterung
       items:
         - name: Teams-Toolkit-Erweiterung für Visual Studio Code
