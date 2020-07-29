@@ -6,16 +6,17 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams-Autorisierung OAuth SSO Aad RSC Graph
-ms.openlocfilehash: a9380081e7694a7eae8e2c131e091b108acb051f
-ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
+ms.openlocfilehash: bf449b338e8c0f42dfef776e533fb6b5ff591529
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45145914"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434503"
 ---
 # <a name="resource-specific-consent-rsc--developer-preview"></a>Ressourcenspezifische Zustimmung (RSC) – Entwicklervorschau
 
 >[!NOTE]
+
 >Die Berechtigungen für die ressourcenspezifische Zustimmung stehen in Desktop-und Webclients zur Verfügung, nachdem die Entwicklervorschau aktiviert wurde. Weitere Informationen finden Sie unter [How do I enable Developer Preview](../../resources/dev-preview/developer-preview-intro.md) .
 
 Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams-und Graph-API-Integration, die es Ihrer APP ermöglicht, API-Endpunkte zum Verwalten bestimmter Teams in einer Organisation zu verwenden. Mit dem Berechtigungsmodell für die ressourcenspezifische Zustimmung (RSC) können *Teambesitzer* einer Anwendung die Zustimmung erteilen, auf die Daten eines Teams zuzugreifen und/oder diese zu ändern. Die detaillierten, Teams-spezifischen RSC-Berechtigungen definieren, was eine Anwendung in einem bestimmten Team tun kann:
@@ -24,25 +25,25 @@ Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams-und Graph-AP
 
 |Anwendungsberechtigung| Aktion |
 | ----- | ----- |
-|TeamSettings. Read. Group | Rufen Sie die Einstellungen für dieses Team ab.|
+|TeamSettings.Read.Group | Rufen Sie die Einstellungen für dieses Team ab.|
 |TeamSettings. Edit. Group|Aktualisieren Sie die Einstellungen für dieses Team.|
-|ChannelSettings. Read. Group|Rufen Sie die Kanalnamen, Kanal Beschreibungen und Kanaleinstellungen für dieses Team ab.|
-|ChannelSettings. Edit. Group|Aktualisieren Sie die Kanalnamen, Kanal Beschreibungen und Kanaleinstellungen für dieses Team.|
-|Channel. Create. Group|Erstellen Sie in diesem Team Kanäle.|
-|Kanal. Delete. Group|Löschen Sie Kanäle in diesem Team.|
-|ChannelMessage. Read. Group |Rufen Sie die Kanal Nachrichten dieses Teams ab.|
-|TeamsApp. Read. Group|Rufen Sie eine Liste der installierten apps dieses Teams ab.|
-|TeamsTab. Read. Group|Rufen Sie eine Liste der Registerkarten dieses Teams ab.|
-|TeamsTab. Create. Group|Erstellen von Registerkarten in diesem Team.|
-|TeamsTab. Edit. Group|Aktualisieren Sie die Registerkarten dieses Teams.|
-|TeamsTab. Delete. Group|Löschen Sie die Registerkarten dieses Teams.|
-|Member. Read. Group|Die Mitglieder dieses Teams abrufen.|
-|Owner. Read. Group|Die Besitzer dieses Teams abrufen.|
+|ChannelSettings.Read.Group|Rufen Sie die Kanalnamen, Kanal Beschreibungen und Kanaleinstellungen für dieses Team ab.|
+|ChannelSettings.Edit.Group|Aktualisieren Sie die Kanalnamen, Kanal Beschreibungen und Kanaleinstellungen für dieses Team.|
+|Channel.Create.Group|Erstellen von Kanälen in diesem Team.|
+|Channel.Delete.Group|Löschen Sie Kanäle in diesem Team.|
+|ChannelMessage.Read.Group |Rufen Sie die Kanal Nachrichten dieses Teams ab.|
+|TeamsApp.Read.Group|Rufen Sie eine Liste der installierten apps dieses Teams ab.|
+|TeamsTab.Read.Group|Rufen Sie eine Liste der Registerkarten dieses Teams ab.|
+|TeamsTab.Create.Group|Erstellen von Registerkarten in diesem Team.|
+|TeamsTab.Edit.Group|Aktualisieren Sie die Registerkarten dieses Teams.|
+|TeamsTab.Delete.Group|Löschen der Registerkarten dieses Teams.|
+|Member.Read.Group|Die Mitglieder dieses Teams abrufen.|
+|Owner.Read.Group|Die Besitzer dieses Teams abrufen.|
 
 >[!NOTE]
 >Ressourcenspezifische Berechtigungen stehen nur für Teams-Apps zur Verfügung, die auf dem Microsoft Teams-Client installiert sind und derzeit nicht Teil des Azure Active Directory-Portals sind.
 
-## <a name="enabling-resource-specific-consent-in-your-application"></a>Aktivieren der ressourcenspezifischen Zustimmung in Ihrer Anwendung
+## <a name="enable-resource-specific-consent-in-your-application"></a>Aktivieren der ressourcenspezifischen Zustimmung in Ihrer Anwendung
 
 Die Schritte zum Aktivieren von RSC in Ihrer Anwendung lauten wie folgt:
 
@@ -160,6 +161,14 @@ Nachdem die app in einem Team installiert wurde, können Sie den [Graph-Explorer
 > - Einen **Get** -Aufruf an den folgenden Endpunkt ausführen: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` . Das clientAppId-Feld in der Antwort wird der im Microsoft Teams-App-Manifest angegebenen Anwendungs-ID zugeordnet.
 
  ![Graph-Explorer-Antwort zum Abrufen eines Anrufs.](../../assets/images/graph-permissions.png)
+ 
+## <a name="test-resource-specific-consent"></a>Testen der ressourcenspezifischen Zustimmung
+ 
+> [!div class="nextstepaction"]
+> [**Testen von Berechtigungen für die ressourcenspezifische Zustimmung in Microsoft Teams**](test-resource-specific-consent.md)
+ 
+## <a name="related-topic-for-teams-administrators"></a>Verwandtes Thema für Microsoft Teams-Administratoren
 
- > [!div class="nextstepaction"]
-> [Testen von Berechtigungen für die ressourcenspezifische Zustimmung in Microsoft Teams](test-resource-specific-consent.md)
+> [!div class="nextstepaction"]
+> [**Ressourcenspezifische Zustimmung in Microsoft Teams für Administratoren**](/MicrosoftTeams/resource-specific-consent)
+> 

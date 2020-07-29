@@ -2,23 +2,33 @@
 title: Neuerungen
 description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 keywords: Teams What es New Latest
-ms.openlocfilehash: 527f8fa9a029936f62203136a0891f3815db7ee2
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 28e83375ecbfec7f2adac14a4b5419a6cc40c61e
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137640"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434531"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuerungen für Entwickler in Microsoft Teams
+
+>[!TIP]
+> Schauen Sie sich unsere produktionsfähigen Vorlagen im [**Katalog der Teams-App-Vorlagen**](samples/app-templates.md)an. Der Katalog ist alphabetisch sortiert, und die neuesten Ergänzungen werden mit einem Stern **&#9734;** versehen.
 
 ## <a name="change-log"></a>Änderungsprotokoll
 
 Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und dieser Dokumentenmappe aufgelistet. Gelegentlich können Einträge verwendet werden, um die Aufmerksamkeit auf ein neues Feature zu lenken, das für Entwickler von Teams einfach interessant ist.
 
-| **Date** | **Hinweise** | **Geänderte Themen** |
+| **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
+| 07/22/2020 |Updates für Mobile Gerätefunktionen.|[Anfordern von Geräte Berechtigungen für Ihre Microsoft Teams-Registerkarte](~/tabs/how-to/native-device-permissions.md) |
+|07/15/2020|Erstellen eines virtuellen Assistenten für Teams|[Virtueller Assistent für Microsoft Teams](samples/virtual-assistant.md)|
+|07/14/2020|Dokumentation einer systemeigenen Lade Indikator Dokumentation|[Anzeigen eines systemeigenen Lade Indikators](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 | 07/01/2020 |Erste Schritte beim Erstellen von Microsoft Teams-apps mit dem Visual Studio Code Toolkit.|[Erstellen von apps mit dem Microsoft Teams-Toolkit und Visual Studio Code](toolkit/visual-studio-code-overview.md) |
+|07/01/2020|Einmaliges Anmelden für Tabs GA für Microsoft Teams-Webclients und-Desktop Clients|[Einmaliges Anmelden (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
+|06/05/2020| Manifest-Schema auf Version 1,7 aktualisiert| [Referenz: Manifest-Schema für Microsoft Teams](resources/schema/manifest-schema.md)|
 | 05/20/2020 | Ressourcenspezifische Genehmigungsberechtigungen mit Microsoft Graph-APIs befinden sich in der Entwicklervorschau. |[Ressourcenspezifische Zustimmung (RSC) – Entwicklervorschau](graph-api/rsc/resource-specific-consent.md) |
+|5/18/2020|Integrieren von Power Virtual Agents in Microsoft Teams|[Integrieren einer Power Virtual Agents Chatbot mit Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
+|04/01/2020|Integrieren von WFM-Systemen mit Shifts Connector für Teams|[Microsoft Teams verschiebt WFM-Konnektoren](samples/shifts-wfm-connectors.md)
 | 03/24/2020 | Unterstützung für das Abrufen eines einzelnen Elements einer Unterhaltung und zusätzlicher Unterstützung für das Abrufen von ausgelagerten Elementen hinzugefügt. | [Teams-Kontext für Ihren Bot erhalten](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | Der `replyToId` Parameter in Nutzlasten, die an einen bot gesendet werden, ist nicht mehr verschlüsselt, sodass Sie diesen Wert verwenden können, um Deeplinks für diese Nachrichten zu erstellen. Nachrichten Nutzlasten enthalten die verschlüsselten Werte im Parameter. `legacy.replyToId`.  |
 | 11/5/2019 | Das einmalige Anmelden mit dem Microsoft Teams-JavaScript-SDK in einer Webinhalts Seite befindet sich in der Entwicklervorschau. | [Einmaliges Anmelden](tabs/how-to/authentication/auth-aad-sso.md) |

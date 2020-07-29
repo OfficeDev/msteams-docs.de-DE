@@ -5,24 +5,24 @@ description: ''
 keywords: Teams-Registerkartengruppe Kanal konfigurierbar
 ms.topic: conceptualF
 ms.author: laujan
-ms.openlocfilehash: c7b6b636a342c650667a1131e7899908744beedf
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 55fe1efca4defacf10b9be34f788704b7b4491f5
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674086"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434482"
 ---
 # <a name="create-a-configuration-page"></a>Erstellen einer Konfigurationsseite
 
 Bei einer Konfigurationsseite handelt es sich um einen speziellen Inhaltstyp der [Inhaltsseite](content-page.md) , mit dem Ihre Benutzer einen Aspekt Ihrer Teams-App konfigurieren können. Diese werden normalerweise als Bestandteil von verwendet:
 
-* Eine Kanal-oder Gruppenchat-Registerkarte – auf der Konfigurationsseite können Sie Informationen von Ihren Benutzern sammeln `contentUrl` und die anzuzeigende Inhaltsseite festlegen.
+* Eine Kanal-oder Gruppenchat-Registerkarte – auf der Konfigurationsseite können Sie Informationen von Ihren Benutzern sammeln und die `contentUrl` anzuzeigende Inhaltsseite festlegen.
 * Eine [Messaging Erweiterung](~/messaging-extensions/what-are-messaging-extensions.md)
 * Ein [Office 365 Verbinder](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>Konfigurieren einer Kanal-oder Gruppenchat-Registerkarte
 
-Auf einer Konfigurationsseite wird die Inhaltsseite darüber informiert, wie Sie gerendert werden soll. Ihre Anwendung muss auf das [Microsoft Teams JavaScript Client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) verweisen und `microsoft.initialize()`den Anruf tätigen. Außerdem müssen Ihre URLs sichere HTTPS-Endpunkte und in der Cloud verfügbar sein. Unten sehen Sie ein Beispiel für eine Konfigurationsseite.
+Auf einer Konfigurationsseite wird die Inhaltsseite darüber informiert, wie Sie gerendert werden soll. Ihre Anwendung muss auf das [Microsoft Teams JavaScript Client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) verweisen und den Anruf tätigen `microsoft.initialize()` . Außerdem müssen Ihre URLs sichere HTTPS-Endpunkte und in der Cloud verfügbar sein. Unten sehen Sie ein Beispiel für eine Konfigurationsseite.
 
 ```html
 <head>
@@ -76,11 +76,10 @@ Auf einer Konfigurationsseite wird die Inhaltsseite darüber informiert, wie Sie
             }
         </script>
     </body>
-
 ...
 ```
 
-Hier werden dem Benutzer zwei Optionsschaltflächen angezeigt, **Wählen Sie grau** aus, oder **Wählen Sie Rot aus** , um den Registerkarteninhalt mit einem roten oder grauen Symbol anzuzeigen. Die Auswahl der relativen Schalt `saveGray()` Fläche `saveRed()` wird ausgelöst oder ruft Folgendes auf:
+Hier werden dem Benutzer zwei Optionsschaltflächen angezeigt, **Wählen Sie grau** aus, oder **Wählen Sie Rot aus** , um den Registerkarteninhalt mit einem roten oder grauen Symbol anzuzeigen. Die Auswahl der relativen Schaltfläche wird ausgelöst `saveGray()` oder `saveRed()` Ruft Folgendes auf:
 
 1. Der `settings.setValidityState(true)` ist auf true festgelegt.
 1. Der `microsoftTeams.settings.registerOnSaveHandler()` Ereignishandler wird ausgelöst.
@@ -90,8 +89,8 @@ Mit diesem Code können Teams wissen, dass die Konfigurationsanforderungen erfü
 
 >[!NOTE]
 >
->* Wenn ein Speicher Handler mit `microsoftTeams.settings.registerOnSaveHandler()`registriert wurde, muss der Rückruf aufrufen `saveEvent.notifySuccess()` oder `saveEvent.notifyFailure()` das Ergebnis der Konfiguration angeben.
->* Wenn kein Speicher Handler registriert wurde, wird `saveEvent.notifySuccess()` der Anruf automatisch sofort ausgeführt, sobald der Benutzer die Schaltfläche **Speichern** auswählt.
+>* Wenn ein Speicher Handler mit registriert wurde `microsoftTeams.settings.registerOnSaveHandler()` , muss der Rückruf aufrufen `saveEvent.notifySuccess()` oder `saveEvent.notifyFailure()` das Ergebnis der Konfiguration angeben.
+>* Wenn kein Speicher Handler registriert wurde, `saveEvent.notifySuccess()` wird der Anruf automatisch sofort ausgeführt, sobald der Benutzer die Schaltfläche **Speichern** auswählt.
 
 ### <a name="get-context-data-for-your-tab-settings"></a>Abrufen von Kontextdaten für die Registerkarteneinstellungen
 
@@ -99,13 +98,13 @@ Für Ihre Registerkarte sind möglicherweise Kontextinformationen erforderlich, 
 
 Die [Kontext Schnittstelle](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) für Teams definiert die Eigenschaften, die für Ihre Registerkartenkonfiguration verwendet werden können. Sie können die Werte von Kontextdaten Variablen auf zwei Arten erfassen:
 
-1. Fügen Sie Platzhalter für URL- `configurationURL`Abfragezeichenfolgen in das Manifest ein.
+1. Fügen Sie Platzhalter für URL-Abfragezeichenfolgen in das Manifest ein `configurationURL` .
 
 1. Verwenden Sie die [Teams-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) `microsoftTeams.getContext((context) =>{}` -Methode.
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Einfügen von Platzhaltern im`configurationURL`
 
-Platzhalter für die Kontext Schnittstelle können ihrer Basis `configurationUrl`hinzugefügt werden. Zum Beispiel:
+Platzhalter für die Kontext Schnittstelle können ihrer Basis hinzugefügt werden `configurationUrl` . Zum Beispiel:
 
 ##### <a name="base-url"></a>Basis-URL
 
@@ -136,40 +135,38 @@ Nachdem die Seite hochgeladen wurde, werden die Platzhalter für die Abfragezeic
 //For testing, you can invoke the following to view the pertinent value:
 document.write(getId());
 </script>
-
 ```
 
-### <a name="use-the-getcontext-function-to-retrieve-context"></a>Verwenden der `getContext()` -Funktion zum Abrufen des Kontexts
+### <a name="use-the-getcontext-function-to-retrieve-context"></a>Verwenden der- `getContext()` Funktion zum Abrufen des Kontexts
 
-Wenn die `microsoftTeams.getContext((context) => {})` Funktion aufgerufen wird, ruft Sie die [Kontext Schnittstelle](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest)ab. Sie können diese Funktion zur Konfigurationsseite hinzufügen, um Kontext Werte abzurufen:
+Wenn die Funktion aufgerufen wird, `microsoftTeams.getContext((context) => {})` Ruft Sie die [Kontext Schnittstelle](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest)ab. Sie können diese Funktion zur Konfigurationsseite hinzufügen, um Kontext Werte abzurufen:
 
 ```html
+<!-- `userPrincipalName` will render in the span with the id "user". -->
 
-    <!-- `userPrincipalName` will render in the span with the id "user". -->
-
-    <span id="user"></span>
-    ...
-    <script>
-        microsoftTeams.getContext((context) =>{
-            let userId = document.getElementById('user');
-            userId.innerHTML = context.userPrincipalName;
-        });
-    </script>
-    ...
+<span id="user"></span>
+...
+<script>
+    microsoftTeams.getContext((context) =>{
+        let userId = document.getElementById('user');
+        userId.innerHTML = context.userPrincipalName;
+    });
+</script>
+...
 ```
 
 ## <a name="context-and-authentication"></a>Kontext und Authentifizierung
 
 Möglicherweise benötigen Sie eine Authentifizierung, bevor Sie einem Benutzer die Konfiguration Ihrer APP erlauben, oder Ihre Inhalte können Quellen enthalten, die über eigene Authentifizierungsprotokolle verfügen. Informationen zum Erstellen von Authentifizierungsanforderungen und Autorisierungs Seiten-URLs finden Sie unter [Authentifizieren eines Benutzers in einer Microsoft Teams-Registerkarte](~/tabs/how-to/authentication/auth-flow-tab.md) Kontextinformationen können verwendet werden.
-Stellen Sie sicher, dass alle auf den Registerkartenseiten verwendeten Domänen im `manifest.json` `validDomains` Array aufgelistet sind.
+Stellen Sie sicher, dass alle auf den Registerkartenseiten verwendeten Domänen im Array aufgelistet sind `manifest.json` `validDomains` .
 
 ## <a name="modify-or-remove-a-tab"></a>Ändern oder Entfernen einer Registerkarte
 
-Unterstützte Entfernungsoptionen können die Benutzerfreundlichkeit weiter verfeinern. Sie können Benutzern das ändern, konfigurieren oder Umbenennen einer Gruppe/Kanal-Registerkarte ermöglichen, indem Sie die `canUpdateConfiguration` Eigenschaft des Manifests auf `true`festlegen.  Darüber hinaus können Sie festlegen, was mit dem Inhalt geschieht, wenn eine Registerkarte entfernt wird, indem Sie eine Seite mit den Entfernungsoptionen in Ihrer APP `removeUrl` hinzufügen und `setSettings()` einen Wert für die Eigenschaft in der Konfiguration festlegen (siehe unten). Persönliche Registerkarten können nicht geändert, aber vom Benutzer deinstalliert werden. Weitere Informationen finden Sie unter [Erstellen einer Entfernungs Seite für die Registerkarte](~/tabs/how-to/create-tab-pages/removal-page.md).
+Unterstützte Entfernungsoptionen können die Benutzerfreundlichkeit weiter verfeinern. Sie können Benutzern das ändern, konfigurieren oder Umbenennen einer Gruppe/Kanal-Registerkarte ermöglichen, indem Sie die Eigenschaft des Manifests `canUpdateConfiguration` auf festlegen `true` .  Darüber hinaus können Sie festlegen, was mit dem Inhalt geschieht, wenn eine Registerkarte entfernt wird, indem Sie eine Seite mit den Entfernungsoptionen in Ihrer APP hinzufügen und einen Wert für die `removeUrl` Eigenschaft in der `setSettings()` Konfiguration festlegen (siehe unten). Persönliche Registerkarten können nicht geändert, aber vom Benutzer deinstalliert werden. Weitere Informationen finden Sie unter [Erstellen einer Entfernungs Seite für die Registerkarte](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 ## <a name="mobile-clients"></a>Mobile Clients
 
-Wenn die Registerkarte Kanal/Gruppe auf mobilen Teams-Clients angezeigt werden soll, muss `setSettings()` die Konfiguration über einen Wert für die `websiteUrl` Eigenschaft verfügen (siehe unten). Die vollständige Unterstützung für Registerkarten auf mobilen Clients wird in Kürze veröffentlicht. Zur Vorbereitung des Updates sollten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md) beim Erstellen Ihrer Registerkarten befolgten.
+Wenn die Registerkarte Kanal/Gruppe auf mobilen Teams-Clients angezeigt werden soll, `setSettings()` muss die Konfiguration über einen Wert für die `websiteUrl` Eigenschaft verfügen (siehe unten). Die vollständige Unterstützung für Registerkarten auf mobilen Clients wird in Kürze veröffentlicht. Zur Vorbereitung des Updates sollten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md) beim Erstellen Ihrer Registerkarten befolgten.
 
 Microsoft Teams SetSettings ()-Konfiguration für die Entfernungs Seite und/oder Mobile Clients:
 

@@ -2,12 +2,12 @@
 title: Karten Referenz
 description: Beschreibt alle Karten-und Karten Aktionen, die Bots in Microsoft Teams zur Verfügung stehen.
 keywords: Referenz zu Bots-Karten
-ms.openlocfilehash: 9cd868e504e426cbe56ed1c5d05c8e6adc1e1ddf
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 7bd1cbea0aec03913c9bce205ae68eedba284637
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801304"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434545"
 ---
 # <a name="cards-reference"></a>Karten Referenz
 
@@ -52,7 +52,7 @@ Bilder müssen im Format PNG, JPEG oder GIF maximal 1024 × 1024 und 1 MB sein; 
 | Eigenschaft | Typ  | Beschreibung |
 | --- | --- | --- |
 | url | URL | HTTPS-URL zum Bild |
-| alt | String | Barrierefreie Beschreibung des Bilds |
+| alt | Zeichenfolge | Barrierefreie Beschreibung des Bilds |
 
 ### <a name="buttons"></a>Schaltflächen
 
@@ -74,6 +74,9 @@ Eine anpassbare Karte, die eine beliebige Kombination aus Text, Sprache, Bildern
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
+
+> [!NOTE]
+> Medienelemente werden derzeit in Adaptive Cards v 1.2 auf der Teams-Plattform nicht unterstützt.
 
 ### <a name="example-adaptive-card"></a>Beispiel für eine Adaptive Karte
 

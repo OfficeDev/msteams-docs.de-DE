@@ -2,29 +2,29 @@
 title: Anfordern von Geräte Berechtigungen für Ihre Microsoft Teams-Registerkarte
 description: Aktualisieren des App-Manifests, um Zugriff auf systemeigene Features anzufordern, in denen normalerweise Benutzer Zustimmung erforderlich ist
 keywords: Teams-Registerkarten Entwicklung
-ms.openlocfilehash: e9dc6c6f177e3a87e2846bcb836cc38601c9a50e
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: e69c7540730307e62035c48ac64cd977419ea5f2
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034036"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434555"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Anfordern von Geräte Berechtigungen für Ihre Microsoft Teams-Registerkarte
 
 Möglicherweise möchten Sie die Registerkarte mit Features erweitern, die den Zugriff auf systemeigene Gerätefunktionen erfordern, wie:
 
-* Kamera
-* Mikrofon
-* Standort
-* Benachrichtigungen
-
-![Bildschirm "Geräte Berechtigungseinstellungen"](~/assets/images/tabs/device-permissions.png)
+> [!div class="checklist"]
+>
+> * Kamera
+> * Mikrofon
+> * Standort
+> * Benachrichtigungen
 
 > [!IMPORTANT]
 >
-> Die systemeigene Gerätefunktionalität wird derzeit für Registerkarten auf mobilen Clients nicht unterstützt.
->
-> Die Geolocation-API wird derzeit nicht vollständig auf allen Desktop-Clients unterstützt.
+> * Derzeit unterstützt der Mobile Microsoft Teams `camera` -Client nur und `location` über systemeigene Gerätefunktionen und steht in allen APP-Konstrukten einschließlich Registerkarten zur Verfügung. </br>
+> * Die Unterstützung für `camera` die Bildaufnahme wird von der [**captureImage-API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-)aktiviert.
+> * Die [**Geolocation-API**](../../resources/schema/manifest-schema.md#devicepermissions) wird derzeit nicht vollständig auf allen Desktop-Clients unterstützt.
 
 ## <a name="device-permissions"></a>Geräteberechtigungen
 
@@ -36,9 +36,32 @@ Wenn Sie auf die Geräte Berechtigungen eines Benutzers zugreifen, können Sie v
 
 Während der Zugriff auf diese Funktionen in den meisten modernen Webbrowsern standardmäßig ist, müssen Sie Microsoft Teams mitteilen, welche Funktionen Sie verwenden möchten, indem Sie Ihr App-Manifest aktualisieren. Auf diese Weise können Sie Berechtigungen wie in einem Browser anfordern, während Ihre APP auf dem Desktop-Client von Teams läuft.
 
+## <a name="manage-permissions"></a>
+            Berechtigungen verwalten
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+1. Öffnen Sie Teams.
+1. Wählen Sie in der oberen rechten Ecke des Fensters Ihr Profilsymbol aus.
+1. Wählen **Settings**Sie  ->  im Dropdownmenü Einstellungen**Berechtigungen** aus.
+1. Wählen Sie die gewünschten Einstellungen aus.
+
+![Bildschirm "Geräte Berechtigungen-Desktopeinstellungen"](../../assets/images/tabs/device-permissions.png)
+
+# <a name="mobile"></a>[Mobilgeräte](#tab/mobile)
+
+1. Öffnen Sie Teams.
+1. Wählen Sie in der oberen linken Ecke des Bildschirms das &#9776; Menüsymbol aus.
+1. Wählen Sie **Einstellungen**  ->  **Geräte**aus.
+1. Wählen Sie die gewünschten Einstellungen aus.
+
+![Bildschirm mit den mobilen Einstellungen für Geräte Berechtigungen](../../assets/images/tabs/mobile-device-permissions-screen.png)
+
+---
+
 ## <a name="properties"></a>Eigenschaften
 
-Aktualisieren Sie Ihre APP `manifest.json` , indem `devicePermissions` Sie die fünf Eigenschaften hinzufügen und angeben, die Sie in Ihrer Anwendung verwenden möchten:
+Aktualisieren Sie Ihre APP, `manifest.json` indem `devicePermissions` Sie die fünf Eigenschaften hinzufügen und angeben, die Sie in Ihrer Anwendung verwenden möchten:
 
 ``` json
 "devicePermissions": [
@@ -49,6 +72,9 @@ Aktualisieren Sie Ihre APP `manifest.json` , indem `devicePermissions` Sie die f
     "openExternal"
 ],
 ```
+> [!Note]
+>
+> Medien werden auch für Kamera Berechtigungen in Mobile verwendet.
 
 Mit jeder Eigenschaft können Sie den Benutzer auffordern, seine Zustimmung einzuholen.
 
@@ -62,7 +88,7 @@ Mit jeder Eigenschaft können Sie den Benutzer auffordern, seine Zustimmung einz
 
 ## <a name="checking-permissions-from-your-tab"></a>Überprüfen von Berechtigungen auf der Registerkarte
 
-Nachdem Sie Ihrem APP `devicePermissions` -Manifest hinzugefügt haben, können Sie Berechtigungen mit der HTML5-API "Permissions" überprüfen, ohne eine Eingabeaufforderung zu verursachen.
+Nachdem Sie Ihrem App-Manifest hinzugefügt haben `devicePermissions` , können Sie Berechtigungen mit der HTML5-API "Permissions" überprüfen, ohne eine Eingabeaufforderung zu verursachen.
 
 ``` Javascript
 // Different query options:
@@ -84,16 +110,22 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## <a name="prompting-the-user"></a>Auffordern des Benutzers
 
-Um eine Eingabeaufforderung anzuzeigen, um die Zustimmung zum Zugriff auf Geräte Berechtigungen zu erhalten, müssen Sie die entsprechende HTML5-API nutzen. Um den Benutzer zum Zugreifen auf seine Kamera aufzufordern, müssen Sie beispielsweise`getUserMedia`
+Um eine Eingabeaufforderung anzuzeigen, um die Zustimmung zum Zugriff auf Geräte Berechtigungen zu erhalten, müssen Sie die entsprechende HTML5-oder Teams-API nutzen. Um den Benutzer zum Zugreifen auf seine Kamera aufzufordern, müssen Sie beispielsweise`getCurrentPosition`
+
+```Javascript
+navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
+```
+
+Um die Kamera auf dem Desktop oder im Internet verwenden zu können, wird von Microsoft Teams eine Berechtigungs Aufforderung angezeigt, wenn Sie getUserMedia aufrufen.
 
 ```Javascript
 navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 ```
 
-Geolocation zeigt eine Berechtigungs Aufforderung an, wenn Sie die`getCurrentPosition`
+Um Bilder auf mobilen Geräten zu erfassen, fragt Microsoft Teams Mobile um Erlaubnis, wenn Sie captureImage genannt wird ().
 
-```Javascript
-navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
+```Typescript
+function captureImage(callback: (error: SdkError, files: File[]) => void)
 ```
 
 Benachrichtigungen werden vom Benutzer aufgefordert, wenn Sie anrufen`requestPermission`

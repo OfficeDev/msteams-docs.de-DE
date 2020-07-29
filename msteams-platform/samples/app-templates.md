@@ -3,12 +3,12 @@ title: Microsoft Teams-App-Vorlagen
 description: Links und Beschreibungen von App-Vorlagen für die Microsoft Teams-Plattform
 ms.topic: reference
 keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
-ms.openlocfilehash: 827e6562bdab06b4aa2d44800222d72a10106439
-ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
+ms.openlocfilehash: c244a95c81a6bfd2475648d6578d92f40af407e1
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45152701"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434538"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -359,7 +359,7 @@ Um diese Schmerzen zu lindern, stellen wir Ihnen gerne die Vorlage "Listensuche-
 
 ## <a name="staff-check-ins-9734"></a>Mitarbeiter Check-ins &#9734;
 
-Personal Check-ins ist eine APP auf der Grundlage von [Power-apps](/powerapps/powerapps-overview), die die Überwachung der Kommunikation zwischen Ihrem Unternehmen und dem Feld Personal ermöglicht. Mitarbeiter können ganz einfach zeitkritische Informationen und Statusaktualisierungen entweder auf einer geplanten oder Ad-hoc-Basis direkt in Microsoft Teams bereitstellen. Die App unterstützt Echt Zeit Standorte, Fotos und Notizen sowie Erinnerungsbenachrichtigungen und automatisierte Workflows.
+Personal Check-ins ist eine [Power apps](/powerapps/powerapps-overview)-basierte APP, die die Aufsicht über die Kommunikation zwischen Ihrem Unternehmen und Ihrem Außendienst Personal ermöglicht. Mitarbeiter können ganz einfach zeitkritische Informationen und Statusaktualisierungen entweder auf einer geplanten oder Ad-hoc-Basis direkt in Microsoft Teams bereitstellen. Die App unterstützt Echt Zeit Standorte, Fotos und Notizen sowie Erinnerungsbenachrichtigungen und automatisierte Workflows.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 

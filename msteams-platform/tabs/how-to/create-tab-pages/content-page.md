@@ -5,12 +5,12 @@ description: ''
 keywords: Teams-Registerkartengruppe Kanal konfigurierbar statisch
 ms.topic: conceptual
 ms.author: v-laujan
-ms.openlocfilehash: a9f1fa407c6377daa8bce6a6a6c63b47d50d8100
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 49cd771c45bc3c4f91a7ab5f38beaf01da712544
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137636"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434489"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Erstellen einer Inhaltsseite für die Registerkarte
 
@@ -66,7 +66,7 @@ Ein Aufgabenmodul ist eine modale Popup-ähnliche Erfahrung, die Sie auf der Reg
 
 Stellen Sie sicher, dass die in ihren Registerkarten verwendeten URL-Domänen in dem `validDomains` Array in Ihrem [Manifest](~/concepts/build-and-test/apps-package.md)enthalten sind. Weitere Informationen finden Sie unter [validDomains](~/resources/schema/manifest-schema.md#validdomains) in der Manifest-Schemareferenz. Beachten Sie jedoch, dass die Kernfunktionen Ihrer Registerkarte in Microsoft Teams und nicht außerhalb von Teams vorhanden sind.
 
-## <a name="showing-a-native-loading-indicator"></a>Anzeigen eines systemeigenen Lade Indikators
+## <a name="show-a-native-loading-indicator"></a>Anzeigen eines systemeigenen Lade Indikators
 
 Beginnend mit dem [Manifest-Schema v 1.7](../../../resources/schema/manifest-schema.md)können Sie einen [systemeigenen Lade Indikator](../../../resources/schema/manifest-schema.md#showloadingindicator) bereitstellen, unabhängig davon, wo Ihre Webinhalte in Microsoft Teams geladen werden, beispielsweise [Registerkarteninhalts Seite](#integrate-your-code-with-teams), [Konfigurationsseite](configuration-page.md), [Entfernungs Seite](removal-page.md) und [Aufgaben Module in Registerkarten](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 

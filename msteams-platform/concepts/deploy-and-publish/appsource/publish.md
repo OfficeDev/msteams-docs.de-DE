@@ -2,12 +2,12 @@
 title: Leitfaden für den Microsoft Teams-App-Genehmigungsprozess
 description: Beschreibt den Genehmigungsprozess für die Veröffentlichung Ihrer APP im Microsoft Teams-App-Store.
 keywords: Teams veröffentlichen Store Office Publishing veröffentlichen AppSource Partner Center-Kontoüberprüfung
-ms.openlocfilehash: 00266101f2c417a192ac97daaaa73f397f1bbdf6
-ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
+ms.openlocfilehash: cafbffff46417d692f3b587dda7269ab4b82f6cd
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45091305"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434475"
 ---
 # <a name="submit-your-app-to-appsource"></a>Übermitteln Ihrer APP an AppSource
 
@@ -40,7 +40,7 @@ Es gibt zwei Möglichkeiten, ein Partner Center-Konto zu erstellen:
 
 ## <a name="what-if-i-cannot-find-my-office-store-account-in-partner-center"></a>Was kann ich tun, wenn ich mein Office Store-Konto im Partner Center nicht finde?
 
-Öffnen Sie ein [Partner Center Support Ticket](https://partner.microsoft.com/en-US/support/v2/?stage=1) , und wählen Sie in den Dropdownmenüs Folgendes aus:
+Öffnen Sie ein [Partner Center Support Ticket](https://partner.microsoft.com/support/v2/?stage=1) , und wählen Sie in den Dropdownmenüs Folgendes aus:
 
 | Menü | Option |
 | -------   | -------  |
