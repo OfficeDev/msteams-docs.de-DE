@@ -330,12 +330,18 @@
           href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Teams Graph-REST-APIs
   items:
-    - name: Ressourcenspezifische Einwilligung (RSC)
-      href: graph-api/rsc/resource-specific-consent.md
-    - name: Testen der ressourcenspezifische Einwilligungsberechtigung
-      href: graph-api/rsc/test-resource-specific-consent.md
-    - name: RSC JSON-Testdatei
-      href: graph-api/rsc/test-rsc-json-file.md
+    - name: 'Ressourcenspezifische Einwilligung '
+      items:
+        - name: Ressourcenspezifische Einwilligung aktivieren
+          href: graph-api/rsc/resource-specific-consent.md
+        - name: Testen der ressourcenspezifische Einwilligungsberechtigung
+          href: graph-api/rsc/test-resource-specific-consent.md
+        - name: RSC JSON-Testdatei
+          href: graph-api/rsc/test-rsc-json-file.md
+    - name: Proaktive Bots und proaktive Nachrichten
+      items:
+        - name: Proaktive Bot-Installation und proaktives Messaging aktivieren
+          href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
 - name: Ressourcen
   items:
     - name: Bots – v3 SDK
