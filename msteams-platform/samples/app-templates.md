@@ -3,12 +3,12 @@ title: Microsoft Teams-App-Vorlagen
 description: Links und Beschreibungen von App-Vorlagen für die Microsoft Teams-Plattform
 ms.topic: reference
 keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
-ms.openlocfilehash: c244a95c81a6bfd2475648d6578d92f40af407e1
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: 5ecad6586d4bbe114d732869981d25b3305fa940
+ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434538"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "46531285"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -110,6 +110,23 @@ Diese APP ermöglicht auch die einfache Freigabe von Bildern/GIFs/Aufklebern in 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
 ![Aufkleber-App](../assets/images/stickers.png)
+
+## <a name="e-prescriptions-9734"></a>E-Rezepte &#9734; 
+
+E-Prescription ist eine APP mit [Power apps](/powerapps/maker/canvas-apps/embed-teams-app), die Telemedizin und virtuelle Betreuung verbessert, indem der Prozess der Ausgabe von e-Verschreibungen an Patienten automatisiert wird. Mediziner können Termine schnell überprüfen, e-Rezepte generieren und e-Mails mit e-verschreibungspflichtigen Anlagen an Patienten direkt innerhalb der Teams-Plattform senden.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-eprescription) 
+
+:::row:::
+:::column span="2":::
+    ![Screenshot der APP für E-Rezepte. Zeigt, wie ein Leistungserbringer eine Schaltfläche generieren auswählen kann, um ein Rezept für einen Patienten zu bestellen.](../assets/images/e-prescriptions-app-template.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Screenshot der APP für E-Rezepte. Zeigt, wie Administratoren die Leistungserbringer verwalten können, die die APP verwenden.](../assets/images/e-prescriptions-app-template-admin.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="expert-finder"></a>Experten-Finder
 

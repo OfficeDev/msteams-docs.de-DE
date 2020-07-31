@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: How-to
 keywords: Teams Authorization OAuth SSO Aad RSC Postman Graph
-ms.openlocfilehash: c1c02c2ba0051193aa459d0df26fadfc9fa55550
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
-ms.translationtype: Auto
+ms.openlocfilehash: a7384222e5e4cba164f918186ce53b4c1b702016
+ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867102"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "46531266"
 ---
 # <a name="test-resource-specific-consent-permissions--in-teams"></a>Testen von Berechtigungen für die ressourcenspezifische Zustimmung in Microsoft Teams
 
@@ -29,19 +29,20 @@ Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams-und Graph-AP
       "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
       "resource":"https://AnyString",
       "applicationPermissions":[
-         "TeamSettings.Read.Group",
-         "ChannelMessage.Read.Group",
-         "TeamSettings.Edit.Group",
-         "ChannelSettings.Edit.Group",
          "Channel.Create.Group",
          "Channel.Delete.Group",
+         "ChannelMessage.Read.Group",
+         "ChannelSettings.Read.Group",
+         "ChannelSettings.Edit.Group",
+         "Member.Read.Group",
+         "Owner.Read.Group",
          "TeamsApp.Read.Group",
          "TeamsTab.Read.Group",
          "TeamsTab.Create.Group",
          "TeamsTab.Edit.Group",
          "TeamsTab.Delete.Group",
-         "Member.Read.Group",
-         "Owner.Read.Group"
+         "TeamSettings.Read.Group",
+         "TeamSettings.Edit.Group"
       ]
    }
 ```
@@ -55,6 +56,7 @@ Um zu überprüfen, ob die RSC-Berechtigungen von der API-Anforderungsnutzlast b
 
 1. `azureADAppId`– die Azure AD App-ID Ihrer APP.
 1. `azureADAppSecret`– Ihr geheimer Azure AD-App-Schlüssel (Kennwort)
+1. `token_scope`– der Bereich ist erforderlich, um ein Token zu erhalten – legen Sie den Wert aufhttps://graph.microsoft.com/.default
 1. `teamGroupId`– Sie können die Team Gruppen-ID wie folgt aus dem Microsoft Teams-Client abrufen:
 
 > [!div class="checklist"]
