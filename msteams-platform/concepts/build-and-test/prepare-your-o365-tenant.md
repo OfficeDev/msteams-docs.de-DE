@@ -2,12 +2,12 @@
 title: Vorbereiten Ihres Office 365-Mandanten
 description: Erste Schritte mit Microsoft Teams in Office 365
 keywords: Konfigurieren des Uploads von Office 365 Mandanten Teams
-ms.openlocfilehash: e07ffe7f5325be1293a49934669f36c81613278b
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 447968c9b56010e515fc1d1346eac4d8485c7f80
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914567"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587773"
 ---
 # <a name="prepare-your-office-365-tenant"></a>Vorbereiten Ihres Office 365-Mandanten
 
@@ -31,13 +31,25 @@ Wenn Microsoft Teams nicht für Ihre Organisation aktiviert wurde, müssen Sie d
 
 ## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>Aktivieren benutzerdefinierter Teams-apps und Aktivieren des benutzerdefinierten App-Uploads
 
+Aktivieren Sie wie folgt benutzerdefinierte App-Sideloading für den Entwickler Mandanten:
+
+1. Melden Sie sich bei [Microsoft 365 Admin Center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) mit Ihren Administratoranmeldeinformationen an. 
+
+2. Wählen Sie **alle**  -->  **Teams**anzeigen aus. 
+
+![Bild des Menüs "App-Überlauf"](~/assets/images/prepare-test-tenant/admin-center.png)
+
+3. Navigieren Sie zu **Teams**  -->  -**Setup Richtlinien**für apps  -->  **Global (organisationsweit Standard)**  
+
+![Bild des Menüs "App-Überlauf"](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
+
+4. Schalten Sie **benutzerdefinierte apps** in die Position **on** hoch.
+
+Das ist alles. Der Testmandant lässt jetzt benutzerdefinierte App-Sideloading.
+
 > [!Note] 
-> Wenn Sie die Office 365-Entwicklerplattform zum Erstellen Ihrer APP verwenden, sollten diese Einstellungen bereits so konfiguriert sein, dass Sie Ihre APP erstellen, hochladen und testen können.
+> Es kann bis zu 24 Stunden dauern, bis Sideloading aktiviert ist. Während der Zwischenzeit können Sie **Upload for \<your tenant> ** verwenden, um Ihre APP zu testen.
 
-Es gibt drei Einstellungen, die für die Aktivierung benutzerdefinierter apps und benutzerdefinierter App-Uploads relevant sind:
-
-* **Die organisationsweite benutzerdefinierte app-Einstellung** => ermöglicht die**Interaktion mit benutzerdefinierten apps** => **unter – mit** dieser Einstellung können benutzerdefinierte Apps für Ihre Organisation aktiviert oder deaktiviert werden. Es muss eingeschaltet sein. 
-* **Einstellung** => für die benutzerdefinierte Team-APP**ermöglicht Mitgliedern das Hochladen benutzerdefinierter apps** => **an/aus** – diese Einstellung gilt für jedes einzelne Team in Microsoft Teams. Wenn Sie Ihre APP für ein bestimmtes Team installieren möchten, muss diese für dieses Team eingeschaltet sein.
-* **Benutzer benutzerdefinierte App-Richtlinie** => **Benutzer kann benutzerdefinierte apps** => Hochladen ein **/aus** -diese Einstellung steuert die Berechtigungen für einen einzelnen Benutzer. Sie müssen dies für Personen aktivieren, die benutzerdefinierte apps hochladen dürfen.
+![Bild des Menüs "App-Überlauf"](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
 Umfassende Informationen zur Interaktion dieser Einstellungen *finden Sie unter* [Verwalten benutzerdefinierter App-Richtlinien und-Einstellungen in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) und [Verwalten von App-Setup Richtlinien in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).

@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Microsoft Teams Proactive Messaging Chat-Installations Diagramm
-ms.openlocfilehash: 735dbfa39222f312b4f3714b5c009dfd1bf28b05
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: f1d2c51957eefbc548918210b843e408eb1107c8
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434496"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587741"
 ---
 # <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a>Aktivieren der proaktiven bot-Installation und proaktiver Nachrichten in Microsoft Graph-Teams (öffentliche Vorschau)
 
@@ -20,7 +20,7 @@ ms.locfileid: "45434496"
 
 ## <a name="proactive-messaging-in-teams"></a>Proaktives Messaging in Microsoft Teams
 
-Proaktive Nachrichten werden von Bots initiiert, um Unterhaltungen mit Benutzern zu starten. Sie dienen zahlreichen Zwecken, beispielsweise beim Senden von Begrüßungsnachrichten, durchführen von Umfragen oder Umfragen sowie bei der Ausstrahlung organisationsweiter Benachrichtigungen.  Proaktive Nachrichten in Microsoft Teams können entweder als **Ad-hoc** -oder **dialogbasierte** Unterhaltungen bereitgestellt werden:
+Proaktive Nachrichten werden von Bots initiiert, um Unterhaltungen mit einem Benutzer zu starten. Sie dienen zahlreichen Zwecken, beispielsweise beim Senden von Begrüßungsnachrichten, durchführen von Umfragen oder Umfragen sowie bei der Ausstrahlung organisationsweiter Benachrichtigungen.  Proaktive Nachrichten in Microsoft Teams können entweder als **Ad-hoc** -oder **dialogbasierte** Unterhaltungen bereitgestellt werden:
 
 |Nachrichtentyp | Beschreibung |
 |----------------|-------------- |
@@ -79,7 +79,7 @@ Der `teamsAppId` kann aus dem App-Katalog Ihrer Organisation abgerufen werden:
 **HTTP Get** -Anforderung:
 
 ```http
-GET https://graph.microsoft.com/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
 Die Anforderung gibt ein `teamsApp` -Objekt zurück. Das zurückgegebene Objekt ist `id` die vom Katalog generierte APP-ID der APP und unterscheidet sich von der ID:, die Sie in Ihrem Teams-App-Manifest angegeben haben:
@@ -156,7 +156,7 @@ Die `chatId` kann auch wie folgt abgerufen werden:
 
 **Microsoft Graph-Referenz:** [Chat abrufen](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
 
-**1.** Sie benötigen Ihre APP `{teamsAppInstallationId}` , wenn Sie Sie nicht haben, verwenden Sie Folgendes:
+**1.** Sie benötigen Ihre apps `{teamsAppInstallationId}` . Wenn Sie diesen nicht haben, verwenden Sie Folgendes:
 
 **HTTP Get** -Anforderung:
 

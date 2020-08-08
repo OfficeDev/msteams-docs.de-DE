@@ -3,12 +3,12 @@ title: Text Formatierung in Karten
 description: Beschreibt die Formatierung von Karten Texten in Microsoft Teams
 keywords: Teams-Bots-Kartenformat
 ms.date: 03/29/2018
-ms.openlocfilehash: e857a1250593c135aa23ad38a571a5561bb91431
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: 944e6a69c68d284b3a7309063587bd4b75319bc7
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210687"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587811"
 ---
 # <a name="format-cards-in-teams"></a>Formatieren von Karten in Microsoft Teams
 
@@ -116,7 +116,8 @@ Kartenbasierte Erwähnungen werden in den Netz-, Desktop-und mobilen Clients unt
 Bots und Messaging-Erweiterungen können Erwähnungen innerhalb des Karteninhalts in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) und [FactSet](https://adaptivecards.io/explorer/FactSet.html) -Elementen enthalten.
 
 > [!NOTE]
->[Medienelemente](https://adaptivecards.io/explorer/Media.html) werden derzeit in Adaptive Cards v 1.2 auf der Teams-Plattform nicht unterstützt.
+> * [Medienelemente](https://adaptivecards.io/explorer/Media.html) werden derzeit in Adaptive Cards v 1.2 auf der Teams-Plattform nicht unterstützt.
+> * Kanal & Team Erwähnungen werden in bot-Nachrichten nicht unterstützt.
 
 ### <a name="constructing-mentions"></a>Erstellen von Erwähnungen
 

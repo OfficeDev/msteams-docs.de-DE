@@ -2,12 +2,12 @@
 title: Neuerungen
 description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 keywords: Teams What es New Latest
-ms.openlocfilehash: 28e83375ecbfec7f2adac14a4b5419a6cc40c61e
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: 83fe01f5a34ae0d1f3f3f86699f47139bb630b3e
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434531"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587727"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuerungen für Entwickler in Microsoft Teams
 
@@ -21,9 +21,10 @@ Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und d
 | **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
 | 07/22/2020 |Updates für Mobile Gerätefunktionen.|[Anfordern von Geräte Berechtigungen für Ihre Microsoft Teams-Registerkarte](~/tabs/how-to/native-device-permissions.md) |
+|07/20/2020|Teams-App-Validierungs Tool für AppSource-Übermittlungen.|[Teams-App-Validierungs Tool](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|Erstellen eines virtuellen Assistenten für Teams|[Virtueller Assistent für Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Dokumentation einer systemeigenen Lade Indikator Dokumentation|[Anzeigen eines systemeigenen Lade Indikators](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
-| 07/01/2020 |Erste Schritte beim Erstellen von Microsoft Teams-apps mit dem Visual Studio Code Toolkit.|[Erstellen von apps mit dem Microsoft Teams-Toolkit und Visual Studio Code](toolkit/visual-studio-code-overview.md) |
+|07/01/2020|Erste Schritte beim Erstellen von Microsoft Teams-apps mit dem Visual Studio Code Toolkit.|[Erstellen von apps mit dem Microsoft Teams-Toolkit und Visual Studio Code](toolkit/visual-studio-code-overview.md) |
 |07/01/2020|Einmaliges Anmelden für Tabs GA für Microsoft Teams-Webclients und-Desktop Clients|[Einmaliges Anmelden (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| Manifest-Schema auf Version 1,7 aktualisiert| [Referenz: Manifest-Schema für Microsoft Teams](resources/schema/manifest-schema.md)|
 | 05/20/2020 | Ressourcenspezifische Genehmigungsberechtigungen mit Microsoft Graph-APIs befinden sich in der Entwicklervorschau. |[Ressourcenspezifische Zustimmung (RSC) – Entwicklervorschau](graph-api/rsc/resource-specific-consent.md) |

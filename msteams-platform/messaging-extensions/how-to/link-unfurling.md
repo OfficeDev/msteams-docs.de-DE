@@ -1,21 +1,24 @@
 ---
-title: Link-Entfaltung
+title: Entfalten von Links
 author: clearab
 description: Vorgehensweise durchführen einer Link Entfaltung mit Messaging Erweiterung in einer Microsoft Teams-app.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ccc23f06fbe759dc4c38dfc63dfa356d38352c27
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 32d19fcd44f2475047539350706d2745aeec3691
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279774"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587804"
 ---
-# <a name="link-unfurling"></a>Link-Entfaltung
+# <a name="link-unfurling"></a>Entfalten von Links
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Mit dem Aufheben der Verknüpfung kann Ihre APP registrieren, um `invoke` eine Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Der `invoke` enthält die vollständige URL, die in den Bereich zum Verfassen von Nachrichten eingefügt wurde, und Sie können mit einer Karte Antworten, die der Benutzer *entfalten*kann, indem zusätzliche Informationen oder Aktionen bereitgestellt werden. Dies funktioniert ähnlich wie ein [Suchbefehl](~/messaging-extensions/how-to/search-commands/define-search-command.md), wobei die URL als Suchbegriff dient.
+> [!NOTE]
+> Derzeit wird das Aufrollen von Hyperlinks auf mobilen Clients nicht unterstützt.
+
+Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Der `invoke` enthält die vollständige URL, die in den Bereich zum Verfassen von Nachrichten eingefügt wurde, und Sie können mit einer Karte Antworten, die der Benutzer *entfalten*kann, indem zusätzliche Informationen oder Aktionen bereitgestellt werden. Dies funktioniert ähnlich wie ein [Suchbefehl](~/messaging-extensions/how-to/search-commands/define-search-command.md), wobei die URL als Suchbegriff dient.
 
 Die Azure DevOps-Messaging Erweiterung verwendet Link-Entfaltung, um nach URLs zu suchen, die in den Nachrichtenbereich verfassen eingefügt werden, der auf ein Arbeitselement zeigt. Im folgenden Screenshot wurde ein Benutzer in eine URL für eine Arbeitsaufgabe in Azure DevOps eingefügt, die von der Messaging Erweiterung in eine Karte aufgelöst wurde.
 
@@ -23,7 +26,7 @@ Die Azure DevOps-Messaging Erweiterung verwendet Link-Entfaltung, um nach URLs z
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Hinzufügen eines Links, der Ihrem App-Manifest entrollt
 
-Dazu fügen Sie dem `messageHandlers` `composeExtensions` Abschnitt Ihres App-Manifests JSON ein neues Array hinzu. Sie können dies entweder mit Hilfe von App Studio oder manuell tun. Domänen Auflistungen können beispielsweise `*.example.com`Platzhalterzeichen enthalten. Dies entspricht genau einem Segment der Domäne. Wenn Sie eine Übereinstimmung `a.b.example.com` benötigen, `*.*.example.com`verwenden Sie.
+Dazu fügen Sie `messageHandlers` dem `composeExtensions` Abschnitt Ihres App-Manifests JSON ein neues Array hinzu. Sie können dies entweder mit Hilfe von App Studio oder manuell tun. Domänen Auflistungen können beispielsweise Platzhalterzeichen enthalten `*.example.com` . Dies entspricht genau einem Segment der Domäne. Wenn Sie eine Übereinstimmung benötigen, `a.b.example.com` verwenden Sie `*.*.example.com` .
 
 ### <a name="using-app-studio"></a>Verwenden von App Studio
 
@@ -69,7 +72,7 @@ Wir unterstützen die folgenden Kartentypen:
 
 Eine Übersicht finden Sie unter [Was sind Karten](~/task-modules-and-cards/what-are-cards.md) .
 
-# <a name="cnet"></a>[C#-/.net](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
@@ -89,7 +92,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQue
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/Node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsLinkUnfurlingBot extends TeamsActivityHandler {

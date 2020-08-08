@@ -2,17 +2,14 @@
 title: Einmaliges Anmelden
 description: Beschreibt einmaliges Anmelden (Single Sign-on, SSO)
 keywords: Teams-Authentifizierung SSO Aad Single Sign-on-API
-ms.openlocfilehash: 849e2c357859a1e8980aaa4662a55319cd7b2493
-ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
+ms.openlocfilehash: cf3c33cf9721243936890140d5bcce641c443e2e
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "45021603"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587734"
 ---
 # <a name="single-sign-on-sso"></a>Einmaliges Anmelden (SSO)
-
-> [!NOTE]
-> * Die SSO-API (Single Sign-on, einmaliges Anmelden) ist in der Regel im Internet und auf dem Desktop verfügbar. Mobile steht in Kürze zur Verfügung. In der Zwischenzeit empfehlen wir eine ordnungsgemäße Wiederkehr zu unserer [klassischen Authentifizierungs-API](auth-flow-tab.md) auf mobilen Geräten.
 
 Benutzer melden sich über Ihre Arbeits-, Schul-oder Microsoft-Konten (Office 365, Outlook usw.) bei Microsoft Teams an. Sie können dies nutzen, indem Sie einer einmaligen Anmeldung die Autorisierung Ihrer Microsoft Teams-Registerkarte (oder des Aufgabenmoduls) auf Desktop-oder mobilen Clients ermöglichen. Wenn ein Benutzer also einwilligt, die APP zu verwenden, muss er sich nicht erneut auf einem anderen Gerät einverstanden erklären – er wird automatisch angemeldet. Außerdem rufen wir ihr Zugriffstoken ab, um die Leistung und die Ladezeiten zu verbessern.
 
@@ -87,6 +84,21 @@ Registrieren Sie Ihre Anwendung im[Azure AD Portal](https://azure.microsoft.com/
     * offline_access
     * OpenID
     * profile
+
+13. Navigieren zur **Authentifizierung**
+
+    Wenn der IT-Administrator keine Zustimmung für eine APP erteilt wurde, müssen die Benutzer die Zustimmung erteilen, wenn Sie die APP zum ersten Mal verwenden.
+
+    Festlegen eines Umleitungs-URI:
+    * Wählen Sie **Plattform hinzufügen**aus.
+    * Wählen Sie **Internet**aus.
+    * Geben Sie den **Umleitungs-URI** für Ihre APP ein. Dies ist die Seite, auf der der Benutzer durch einen erfolgreichen impliziten Grant-Fluss umgeleitet wird.
+
+    Aktivieren Sie implizite Gewährung, indem Sie die folgenden Felder überprüfen:  
+    ✔-ID-Token  
+    ✔ Zugriffs Token  
+    
+    
 
 > [!NOTE]
 >

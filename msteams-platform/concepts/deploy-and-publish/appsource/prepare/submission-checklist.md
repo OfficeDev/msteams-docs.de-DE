@@ -2,38 +2,63 @@
 title: Übermittlungscheckliste
 description: Die Prüfliste, die vor der Veröffentlichung Ihrer Microsoft Teams-app in AppSource verwendet werden soll
 keywords: Vorbereiten der Veröffentlichung von Microsoft Teams-Veröffentlichungs Speicher-Prüflisten Übermittlung
-ms.openlocfilehash: 3379fe670c9835c1f2223067592d9574fff83a69
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 86217cef542cc3f3a09e0dc64e429a675011a0c1
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801300"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587752"
 ---
 # <a name="prepare-for-appsource-submission"></a>Vorbereiten der AppSource-Übermittlung  
 
 Um in AppSource aufgeführt zu werden, muss Ihre APP einen Genehmigungsprozess durchlaufen. Hierbei handelt es sich um einen kostenlosen Dienst, der von der Microsoft Teams-Gruppe bereitgestellt wird und überprüft, ob Ihre APP wie beschrieben funktioniert, alle geeigneten Metadaten enthält und Inhalte bereitstellt, die für einen Endbenutzer wertvoll wären. Damit Sie eine schnelle Genehmigung erhalten, müssen Sie sicherstellen, dass Ihre APP die folgenden Anforderungen und Richtlinien erfüllt:
 
-* **Verteilungsmethode:** Stellen Sie sicher, dass Ihre APP für einen Store bestimmt ist. Es gibt [andere Optionen](../../overview.md) zum Verteilen Ihrer APP ohne Veröffentlichung in AppSource.
-* **App-Detailseite:** Ihre APP erfüllt die [Prüfliste für die APP-Detailseite](detail-page-checklist.md)
-* **Tipps und häufig fehlgeschlagene Fälle:** Achten Sie besonders auf diese [Tipps und häufig fehlgeschlagene Fälle](frequently-failed-cases.md) , um Ihre APP-Übermittlung in die Genehmigungszeit zu verbessern.
-* **App-Manifest:** Überprüfen des App-Manifests anhand der [Checkliste](app-manifest-checklist.md) für das App-Manifest und der manifestprüfung in App Studio
-* **Testen und Debuggen:** Sie haben [Ihre APP vollständig getestet und gedebuggt](../../../build-and-test/debug.md).
-* **Validierungsrichtlinien:** Sie muss alle aktuellen [AppSource-Validierungsrichtlinien](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) für Microsoft Teams-Registerkarten und Bots übergeben. Beachten Sie, dass diese Richtlinien Änderungen unterliegen.
-* **Testen von Notizen:** Einschließen [von Test Notizen zur Validierung](#test-notes-for-validation)
+* **Verteilungsmethode:** Stellen Sie sicher, dass Ihre APP für die Veröffentlichung auf einer Store-Plattform vorgesehen ist. Es gibt [andere Optionen](../../overview.md) zum Verteilen Ihrer APP ohne Veröffentlichung in AppSource.
+* **Validierungsrichtlinien:** Ihre APP muss alle aktuellen [AppSource-Validierungsrichtlinien](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams)übergeben. Überprüfen Sie Ihre APP vor der Übermittlung auf das [Validierungstool](#teams-app-validation-tool) . Beachten Sie, dass diese Richtlinien Änderungen unterliegen.
+* **App-Detailseite:** Ihre APP muss mit der [Prüfliste für die APP-Detailseite](detail-page-checklist.md)übereinstimmen.
+* **Tipps und häufig fehlgeschlagene Fälle:** Achten Sie besonders auf die aufgelisteten [Tipps und häufig gescheiterten Fälle](frequently-failed-cases.md) , um Ihre APP-Übermittlung und Genehmigungszeit zu verbessern.
+* **App-Manifest:** Überprüfen des App-Manifests anhand der [Checkliste](app-manifest-checklist.md)für das App-Manifest.
+* **Testen und Debuggen:** Stellen Sie sicher, dass Sie [Ihre APP vollständig getestet und gedebuggt](../../../build-and-test/debug.md)haben.
+* **Testen von Notizen:** Einschließen der [Test Notizen zur Validierung](#test-notes-for-validation)
 * **Datenschutzrichtlinien:** Stellen Sie sicher, dass Ihre [Datenschutzrichtlinien, Nutzungsbedingungen und Support-URLs](#privacy-policy-terms-of-use-and-support-urls) unseren Richtlinien entsprechen.
 
-Nachdem Sie alle oben genannten Anforderungen erfüllt haben, können Sie Ihr Paket über das [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource)an die APP-Quelle übermitteln.
+Wenn Sie alle oben genannten Anforderungen erfüllt haben, senden Sie Ihr Paket über das [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource)an AppSource.
+
+## <a name="teams-app-validation-tool"></a>Teams-App-Validierungs Tool
+
+Das App-Überprüfungstool besteht aus einer [App-Bestätigung](#teams-app-validator) und einer [vorläufigen Prüfliste](#preliminary-checklist). Das Tool repliziert dieselben Testfälle, die von [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) verwendet werden, um Ihre APP-Übermittlung auszuwerten. Daher ist es wichtig, alle Testfälle vor dem Übermitteln Ihrer Lösung an AppSource zur Genehmigung zu übergeben. Das Tool kann in mehreren Bereichen innerhalb der Teams-Plattform gefunden werden:
+
+> [!div class="checklist"]
+>
+> * [**Homepage der APP-Validator**](https://dev.teams.microsoft.com/appvalidation.html)
+> * [**Teams Visual Studio Code Toolkit**](/toolkit/visual-studio-code-overview.md)
+> * [**App Studio**](/concepts/build-and-test/app-studio-overview.md)
+
+### <a name="teams-app-validator"></a>Teams-App-Validator
+
+Auf der Seite über **prüfen** können Sie Ihr App-Paket vor der Übermittlung an AppSource überprüfen. Laden Sie einfach Ihr App-Paket hoch, und das Überprüfungstool überprüft Ihre APP mit allen Manifest-bezogenen Testfällen. Bei jedem fehlgeschlagenen Test enthält die Beschreibung einen Link zur Dokumentation, mit dem Sie den Fehler beheben können.
+
+![Validierungstool](../../../../assets/images/validation-tool/validator.png)
+
+### <a name="preliminary-checklist"></a>Vorläufige Prüfliste
+
+Für Testszenarien, die schwierig zu automatisieren sind, werden in der vorläufigen Prüfliste sieben der am häufigsten fehlgeschlagenen Testfälle behandelt.
+
+![Vorläufige Prüfliste](../../../../assets/images/validation-tool/preliminary-checklist.png)
 
 ## <a name="privacy-policy-terms-of-use-and-support-urls"></a>Datenschutzrichtlinien, Nutzungsbedingungen und Support-URLs
 
 ### <a name="privacy-policy"></a>Datenschutzrichtlinie
 
 Richtlinien zur Datenschutzrichtlinie:
-* Die Datenschutzrichtlinie kann entweder für Ihre APP und/oder für Ihr Add-in spezifisch sein oder für alle Ihre Dienste eine allgemeine Richtlinie. 
-* Wenn Sie eine generische Datenschutzrichtlinie verwenden, muss Sie auf "Dienste/Anwendungen/Plattformen" verweisen, um Ihre Teams-APP und Ihre Website abzudecken. 
-* Es muss einschließen, wie Sie Benutzerdaten Speicherung, Speicherung von Benutzerdaten, Löschungen und Sicherheits Kontrollinformationen behandeln.
-* Sie muss Ihre Kontaktinformationen enthalten.
-* Es sollte keine fehlerhaften Links, Beta-URLs oder Staging-URLs enthalten. 
+
+> [!div class="checklist"]
+>
+> * Die Datenschutzrichtlinie kann für Ihre APP und/oder eine allgemeine Richtlinie für alle Ihre Dienste spezifisch sein.
+> * Wenn Sie eine generische Datenschutzrichtlinie verwenden, muss Sie auf "Dienste", "Anwendungen" und "Plattformen" verweisen, um Ihre Teams-APP und Ihre Website einzubeziehen.
+> * Sie muss einschließen, wie Sie die Speicherung von Benutzerdaten, die Aufbewahrung von Benutzerdaten, Löschungen und Sicherheitskontrollen behandeln.
+> * Sie muss Ihre Kontaktinformationen enthalten.
+> * Es sollte keine fehlerhaften Links, Beta-URLs oder Staging-URLs enthalten.
 
 ### <a name="terms-of-use"></a>Nutzungsbedingungen
 
@@ -64,6 +89,3 @@ Fügen Sie Folgendes ein:
 * **Hinweise zu den App-Features in Microsoft Teams**: detaillierte alle Funktionen, die die app in Microsoft Teams bietet, und Schritte zum Testen der einzelnen Funktionen.
 
 * **Video mit der APP-Funktionalität (optional)**: Sie können eine Videoaufzeichnung des Produkts bereitstellen, damit wir die Funktionalität der APP vollständig verstehen.
-
-
-

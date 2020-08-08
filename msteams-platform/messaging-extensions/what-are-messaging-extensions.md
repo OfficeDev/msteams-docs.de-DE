@@ -4,12 +4,12 @@ author: clearab
 description: Eine Übersicht über Messaging-Erweiterungen auf der Microsoft Teams-Plattform
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2a9fcdbcdda6bb85b6f5edc21253d05327ca5157
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 3ea9649a22ecc134e983037d1ef109be918a26b3
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914602"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587797"
 ---
 # <a name="what-are-messaging-extensions"></a>Was sind Messaging-Erweiterungen?
 
@@ -58,7 +58,7 @@ Sie können aus dem Nachrichtenbereich "Verfassen" oder aus dem Befehlsfeld ausg
 
 ### <a name="link-unfurling"></a>Entfalten von Links
 
-Sie müssen auch die Option zum Aufrufen des Diensts verwenden, wenn eine URL im Bereich zum Verfassen von Nachrichten eingefügt wird. Mit dieser Funktion, die als **Link-Entfaltung**bezeichnet wird, können Sie abonnieren, um einen Aufruf zu erhalten, wenn URLs, die eine bestimmte Domäne enthalten, in den Bereich zum Verfassen von Nachrichten eingefügt werden. Ihr Webdienst kann die URL in eine detaillierte Karte "aufteilen" und bietet mehr Informationen als die standardmäßige Website-Vorschau Karte. Sie können sogar Schaltflächen hinzufügen, damit Ihre Benutzer Sofortaktionen ausführen können, ohne den Microsoft Teams-Client verlassen zu müssen.
+Sie haben auch die Möglichkeit, ihren Dienst aufzurufen, wenn eine URL im Bereich zum Verfassen von Nachrichten eingefügt wird. Mit dieser Funktion, die als **Link-Entfaltung**bezeichnet wird, können Sie abonnieren, um einen Aufruf zu erhalten, wenn URLs, die eine bestimmte Domäne enthalten, in den Bereich zum Verfassen von Nachrichten eingefügt werden. Ihr Webdienst kann die URL in eine detaillierte Karte "aufteilen" und bietet mehr Informationen als die standardmäßige Website-Vorschau Karte. Sie können sogar Schaltflächen hinzufügen, damit Ihre Benutzer Sofortaktionen ausführen können, ohne den Microsoft Teams-Client verlassen zu müssen.
 
 ## <a name="get-started"></a>Erste Schritte
 
