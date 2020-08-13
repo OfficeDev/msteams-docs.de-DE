@@ -2,12 +2,12 @@
 title: Einführung von Karten
 description: Beschreibt Karten und deren Verwendung in Bots, Connectors und Messaging-Erweiterungen
 keywords: Connectors Bots Cards Messaging
-ms.openlocfilehash: a260313c6e9442ce7bd76524e41e6465617bafb5
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6d850f83183f12fa0c228a7a89b23e58f523e15b
+ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674281"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46651656"
 ---
 # <a name="cards"></a>Karten
 
@@ -29,6 +29,15 @@ Microsoft Teams verwendet Karten an drei verschiedenen Orten:
 * Connectors
 * Bots
 * Messaging-Erweiterungen
+
+## <a name="adaptive-cards-and-incoming-webhooks"></a>Adaptive Karten und eingehende webhooks
+
+> [!NOTE]
+> Adaptive Karten werden in eingehenden webhooks als Teil des [öffentlichen Developer Preview-Programms](../resources/dev-preview/developer-preview-intro.md)unterstützt. Öffentliche Vorschauen stehen für den frühzeitigen Zugriff und Feedback zur Verfügung. Obwohl die Version stabil ist und umfangreiche Tests unterzogen wurde, ist Sie nicht für die Verwendung in der Produktion vorgesehen.
+>
+> ✔ In der Entwicklervorschau werden alle systemeigenen adaptiven Karten Schemaelemente, außer `Action.Submit` , vollständig unterstützt.
+>
+> ✔ Die unterstützten Aktionen sind [**Action. OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action. ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)und [**Action. ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
 ## <a name="cards-in-connectors"></a>Karten in Konnektoren
 
