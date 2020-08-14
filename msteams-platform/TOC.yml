@@ -29,6 +29,8 @@
       items:
         - name: Teams-Toolkit-Erweiterung für Visual Studio Code
           href: toolkit/visual-studio-code-overview.md
+        - name: Teams-Toolkit-Erweiterung für Visual Studio
+          href: toolkit/visual-studio-overview.md
 - name: Konzepte
   expanded: true
   items:
