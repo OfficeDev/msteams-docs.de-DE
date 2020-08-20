@@ -6,17 +6,17 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Microsoft Teams Proactive Messaging Chat-Installations Diagramm
-ms.openlocfilehash: f1d2c51957eefbc548918210b843e408eb1107c8
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: b601c5858e5141ce81985dca62968b1713e1d2ba
+ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587741"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "46819161"
 ---
 # <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a>Aktivieren der proaktiven bot-Installation und proaktiver Nachrichten in Microsoft Graph-Teams (öffentliche Vorschau)
 
 >[!IMPORTANT]
-> Öffentliche Vorschaubilder von Microsoft Graph sind für den frühzeitigen Zugriff und Feedback verfügbar. Obwohl diese Version umfangreiche Tests unterzogen wurde, ist Sie nicht für die Verwendung in der Produktion vorgesehen.
+> Microsoft Graph und Microsoft Teams öffentliche Vorschauen stehen für den frühzeitigen Zugriff und das Feedback zur Verfügung. Obwohl diese Version umfangreiche Tests unterzogen wurde, ist Sie nicht für die Verwendung in der Produktion vorgesehen.
 
 ## <a name="proactive-messaging-in-teams"></a>Proaktives Messaging in Microsoft Teams
 
@@ -46,7 +46,7 @@ Um diese Berechtigungen zu verwenden, müssen Sie Ihrem App-Manifest einen [webA
 > [!div class="checklist"]
 > [!div class="checklist"]
 >
-> * **ID** – ihre Azure AD App-ID.
+> * **ID**  – ihre Azure AD App-ID.
 > * **Resource** – die Ressourcen-URL für die app.
 >
 
@@ -70,7 +70,7 @@ Für die ersten Schritte benötigen Sie einen [bot für Teams](../../bots/how-to
 
 ### <a name="-get-the-teamsappid-for-your-app"></a>✔ Abrufen der `teamsAppId` für Ihre APP
 
-**1.** Sie benötigen die `teamsAppId` für die nächsten Schritte.
+**1.** Sie benötigen die `teamsAppId`  für die nächsten Schritte.
 
 Der `teamsAppId` kann aus dem App-Katalog Ihrer Organisation abgerufen werden:
 
@@ -82,7 +82,7 @@ Der `teamsAppId` kann aus dem App-Katalog Ihrer Organisation abgerufen werden:
 GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
-Die Anforderung gibt ein `teamsApp` -Objekt zurück. Das zurückgegebene Objekt ist `id` die vom Katalog generierte APP-ID der APP und unterscheidet sich von der ID:, die Sie in Ihrem Teams-App-Manifest angegeben haben:
+Die Anforderung gibt ein `teamsApp`  -Objekt zurück. Das zurückgegebene Objekt ist `id`  die vom Katalog generierte APP-ID der APP und unterscheidet sich von der ID:, die Sie in Ihrem Teams-App-Manifest angegeben haben:
 
 ```json
 {
@@ -98,14 +98,14 @@ Die Anforderung gibt ein `teamsApp` -Objekt zurück. Das zurückgegebene Objekt 
 }
 ```
 
-**2.** Wenn Ihre APP bereits für einen Benutzer im persönlichen Bereich hochgeladen/quer geladene wurde, können Sie die `teamsAppId` wie folgt abrufen:
+**2.**  Wenn Ihre APP bereits für einen Benutzer im persönlichen Bereich hochgeladen/quer geladene wurde, können Sie die `teamsAppId` wie folgt abrufen:
 
 **Microsoft Graph-Seitenreferenz:** [Auflisten von apps, die für den Benutzer installiert](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http) sind
 
 **HTTP Get** -Anforderung:
 
 ```http
-GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
+GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
 **3.** Wenn Ihre APP bereits für einen Kanal im Teambereich hochgeladen/quer geladene wurde, können Sie die `teamsAppId` wie folgt abrufen:
@@ -115,7 +115,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 **HTTP Get** -Anforderung:
 
 ```http
-GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{manifestId}'
+GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
 >[!TIP]
@@ -176,7 +176,7 @@ Die **ID** -Eigenschaft der Antwort ist die `teamsAppInstallationId` .
 
 Die **ID** -Eigenschaft der Antwort ist die `chatId` .
 
-Alternativ können Sie die `chatId` mit der folgenden Anforderung abrufen, aber Sie erfordert die breitere `Chat.Read.All` Berechtigung:
+Alternativ können Sie die `chatId`  mit der folgenden Anforderung abrufen, aber Sie erfordert die breitere `Chat.Read.All` Berechtigung:
 
 **HTTP Get** -Anforderung (Berechtigung `Chat.Read.All` ):
 

@@ -2,25 +2,25 @@
 title: Nach Veröffentlichung
 description: Vorgehensweisen nach dem Veröffentlichen der APP
 keywords: Update Zertifikat für Teams nach Veröffentlichung
-ms.openlocfilehash: 887e18ac7e27cf12aa4319ac240e42f21f05fd75
-ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
+ms.openlocfilehash: d2cc6c5427c5b4f7320f0ec2e022f2c69467a33d
+ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "45021573"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "46819154"
 ---
-# <a name="maintain-and-support-your-published-app"></a>Verwalten und unterstützen Ihrer veröffentlichten App 
+# <a name="maintain-and-support-your-published-app"></a>Verwalten und Unterstützen Ihrer veröffentlichten App 
 
 Nachdem Ihre APP genehmigt und im öffentlichen App-Katalog aufgeführt wurde, können Sie Ihre Reichweite erweitern, indem Sie das Microsoft 365 App Compliance-Programm ausfüllen oder eine Download Schaltfläche auf Ihrer Website hinzufügen.
 
-## <a name="m365-certified"></a>M365 zertifiziert
+## <a name="microsoft-365-certified"></a>Microsoft 365 zertifiziert
 
 Das [Microsoft 365 App Compliance-Programm](./application-certification.md)ist ein dreistufiger Ansatz für App-Sicherheit und-Compliance. Jede Schicht baut auf dem nächsten auf – bietet ein mehrstufiges Programm, um die Anforderungen Ihrer Kunden zu erfüllen. Weitere Informationen zur Sicherheit und Compliance-Haltung von Teams-apps finden Sie auf der [Seite "Kompatibilität"](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps).
 
 ## <a name="add-a-download-button-to-your-product-site"></a>Hinzufügen einer Schaltfläche zum herunterladen zu ihrer Produkt Website
 
 Wenn Ihre APP im Microsoft Teams Store gespeichert ist, können Sie einen Link für Ihre Website generieren, der Teams startet und eine Zustimmung und ein Installationsdialogfeld für Benutzer zum Hinzufügen der APP anzeigt.
-Das Format lautet: `https://teams.microsoft.com/l/app/<appId>` wobei die ID die GUID ist, die Sie im übermittelten Manifest deklarieren.
+Das Format lautet:  `https://teams.microsoft.com/l/app/<appId>` wobei die ID die GUID ist, die Sie im übermittelten Manifest deklarieren.
 Beispiel: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` ist der Link zum Installieren von Trello.
 
 ## <a name="updating-your-existing-teams-app"></a>Aktualisieren der vorhandenen Teams-App
