@@ -1,21 +1,17 @@
 ---
 title: Features in der Public Developer Preview
-description: Beschreibt die Features in der öffentlichen Entwicklervorschau von Microsoft Teams
+description: Details zu den Features in der Public Developer Preview von Microsoft Teams
 keywords: Entwicklerfeatures in Microsoft Teams Preview
-ms.openlocfilehash: e607a6c65253a5fd94f8a805f1264a567bb8fd24
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.openlocfilehash: 773e0334bddf45b7b86d31329b99607f3b70c534
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819175"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874842"
 ---
 # <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Features in der Public Preview für Entwickler von Microsoft Teams
 
 Die Entwicklervorschau umfasst die folgenden neuen Features:
-
-## <a name="adaptive-cards-v12-support"></a>Adaptive Cards v 1.2-Unterstützung
-
-Die Unterstützung für [Adaptive Karten v 1.2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0) in Microsoft Teams steht nun der allgemeinen Öffentlichkeit zur Verfügung. [Medienelemente](https://adaptivecards.io/explorer/Media.html) werden jedoch derzeit in Adaptive Cards v 1.2 auf der Microsoft Teams-Plattform nicht unterstützt.
 
 ## <a name="tabs-single-sign-on-sso"></a>Registerkarten für einmaliges Anmelden (SSO)
 
@@ -28,3 +24,19 @@ Unsere Entwicklervorschau steht in Manifest-Versionen 1,5 und höher zur Verfüg
 Mit [Microsoft Graph-APIs für Anrufe und Onlinebesprechungen](/graph/api/resources/communications-api-overview?view=graph-rest-beta)können Microsoft Teams-apps nun mithilfe von Sprach-und Videofunktionen auf vielfältige Weise mit Benutzern interagieren. Mit diesen APIs können Sie neue App-Features wie interaktive Sprachantwort (Interactive Voice Response, IVR), Anrufsteuerung und Zugriff auf Echtzeit-Audio-und/oder-Videodatenströme für Anrufe und Besprechungen einschließlich Desktop-und App-Freigaben hinzufügen.
 
 Wir haben einen neuen Abschnitt zum Erstellen und entwickeln von Anrufen und Online-Besprechungs-Bots hinzugefügt, beginnend mit der [Übersicht](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
+
+## <a name="image-enlarge-support"></a>Unterstützung für Bildvergrößerung
+
+Es ist nun möglich, dass Bots anzeigen, welche in Adaptive Cards in Microsoft Teams freigegebenen Bilder vergrößert werden dürfen. Dies ist nützlich für Szenarien wie das Freigeben detaillierter Schritt-für-Schritt-visueller Anleitungen über Bots, die andernfalls für Benutzer schwer lesbar sein können. Um ein Bild erweiterbar zu machen, markieren Sie es einfach `allowExpand: true` wie unten dargestellt.
+
+```json
+    {
+      "type": "Image",
+      "url": "https://picsum.photos/200/200?image=110",
+      "msTeams": {
+        "allowExpand": true
+      }
+    }
+```
+Dadurch wird ein Element des Teams-Webservers/Desktop Clients auf dem Mauszeiger über dem Bild gerendert, damit der Benutzer das Bild erweitern kann.
+

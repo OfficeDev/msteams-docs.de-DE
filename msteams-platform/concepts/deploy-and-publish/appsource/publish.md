@@ -1,13 +1,13 @@
 ---
-title: Leitfaden für den Microsoft Teams-App-Genehmigungsprozess
-description: Beschreibt den Genehmigungsprozess für die Veröffentlichung Ihrer APP im Microsoft Teams-App-Store.
+title: Prozessleitfaden für den Microsoft Teams-App-Genehmigungsantrag
+description: Beschreibt den Prozess der Übermittlungs Genehmigung für die Veröffentlichung Ihrer APP im Microsoft Teams-App-Store.
 keywords: Teams veröffentlichen Store Office Publishing veröffentlichen AppSource Partner Center-Kontoüberprüfung
-ms.openlocfilehash: cafbffff46417d692f3b587dda7269ab4b82f6cd
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: d165ac144926e0a956c211e5a3d55ac67c77fdb8
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434475"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874870"
 ---
 # <a name="submit-your-app-to-appsource"></a>Übermitteln Ihrer APP an AppSource
 
@@ -28,6 +28,7 @@ Wenn Sie Ihre APP in [AppSource](https://appsource.microsoft.com) veröffentlich
 >
 >- Wenn Ihre Teams-APP einen bot enthält, müssen Sie den [Code of Conduct für](https://aka.ms/bf-conduct)den bot Developer Framework einhalten.
 >- Wenn Ihre APP einen Office 365 Connector enthält, gelten möglicherweise zusätzliche Bedingungen. *Weitere Informationen finden Sie unter* [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) und [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
+>- Um Ihre APP für gcc-Benutzer verfügbar zu machen und doppelte App-Auflistungen im Store zu vermeiden, sollte der Authentifizierungsprozess/-Ablauf den Benutzer identifizieren und an die angegebene/erwartete Inhalts-URL für gcc-Benutzer weiterleiten.
 
 ## <a name="faqs--teams-apps-and-partner-accounts"></a>FAQs – Microsoft Teams-apps und Partnerkonten
 
@@ -54,7 +55,7 @@ Besuchen Sie die [Seite Publisher-Support](https://aka.ms/marketplacepublishersu
 
 ## <a name="how-do-i-manage-my-office-store-account"></a>Wie kann ich mein Office Store Konto verwalten?
 
-Weitere Informationen zum Verwalten Ihres Office Store-Kontos über das Partner Center finden Sie [in unserem Office Store-Konto verwalten im Partner Center](/office/dev/store/manage-account-settings-and-profile) .
+Weitere Informationen zum Verwalten Ihres Office Store-Kontos über das Partner Center finden Sie  [in unserem Office Store-Konto verwalten im Partner Center](/office/dev/store/manage-account-settings-and-profile) .
 
 ## <a name="how-do-i-add-my-phone-number-to-the-partner-profile-contact-section"></a>Wie füge ich meine Telefonnummer zum Kontaktbereich des Partnerprofils hinzu?
 
@@ -93,7 +94,7 @@ Versuchen Sie Folgendes:
 
 1. Überprüfen Sie Ihren Junk-Spam-Ordner.
 1. Löschen Sie den Browsercache, wechseln Sie zu Ihrem Partner Center-Konto Dashboard, und wählen Sie den Link Überprüfung der über **Prüfung erneut senden** aus, damit die Bestätigungs-e-Mail an Ihre e-Mail-Adresse gesendet wird
-1. Versuchen Sie, über einen anderen Browser auf den Link zum **erneuten Senden der Überprüfungs e-Mail** zuzugreifen.
+1. Versuchen Sie, über einen anderen Browser auf den Link zum  **erneuten Senden der Überprüfungs e-Mail** zuzugreifen.
 1. Arbeiten Sie mit Ihrer IT-Abteilung zusammen, um sicherzustellen, dass die Überprüfungs e-Mails nicht vom e-Mail-Server blockiert werden.
 1. Passen Sie den Spamfilter Ihres Servers so an, dass alle e-Mails von Maccount@Microsoft zugelassen/Whitelists enthalten sind **. <span></span> com**.
 

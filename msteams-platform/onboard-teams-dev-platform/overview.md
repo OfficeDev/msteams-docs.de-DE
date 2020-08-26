@@ -4,12 +4,12 @@ author: clearab
 description: Übersicht darüber, wie Entwickler Microsoft Teams-Funktionen mithilfe der Teams-Plattform erweitern und anpassen können.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: d127acb33212f23dff9cf0dd83a1936044c10d5e
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.openlocfilehash: 4af4d34ffa4581be6e69f6233d3eb356aa6a2a08
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46651997"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874884"
 ---
 # <a name="building-for-microsoft-teams"></a>Erstellen für Microsoft Teams
 
@@ -84,7 +84,6 @@ Die [Microsoft Graph-Rest-API für Teams](https://docs.microsoft.com/graph/teams
 ## <a name="resources"></a>Ressourcen
 
 * [Hinzufügen einer Freigabe zur Schaltfläche "Teams" zu Ihrer Website](doc-links/share-to-teams.md)
-* [Entwerfen Ihrer App mithilfe empfohlener Richtlinien](doc-links/designing-overview.md)
 * [Fluent-Benutzeroberflächen-Entwurfs System](https://fluentsite.z22.web.core.windows.net/)
 * [Microsoft Teams JavaScript-Client-SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest)
 * [Bot Framework SDK für JavaScript](https://github.com/Microsoft/botbuilder-js) und [bot Framework SDK für .net](https://github.com/Microsoft/botbuilder-dotnet/)

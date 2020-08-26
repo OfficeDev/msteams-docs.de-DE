@@ -2,21 +2,31 @@
 title: Einmaliges Anmelden
 description: Beschreibt einmaliges Anmelden (Single Sign-on, SSO)
 keywords: Teams-Authentifizierung SSO Aad Single Sign-on-API
-ms.openlocfilehash: cf3c33cf9721243936890140d5bcce641c443e2e
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: 503d5ff9779224d922ab0d45c6e2a3b33d7e0de7
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587734"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874856"
 ---
 # <a name="single-sign-on-sso"></a>Einmaliges Anmelden (SSO)
 
 Benutzer melden sich über Ihre Arbeits-, Schul-oder Microsoft-Konten (Office 365, Outlook usw.) bei Microsoft Teams an. Sie können dies nutzen, indem Sie einer einmaligen Anmeldung die Autorisierung Ihrer Microsoft Teams-Registerkarte (oder des Aufgabenmoduls) auf Desktop-oder mobilen Clients ermöglichen. Wenn ein Benutzer also einwilligt, die APP zu verwenden, muss er sich nicht erneut auf einem anderen Gerät einverstanden erklären – er wird automatisch angemeldet. Außerdem rufen wir ihr Zugriffstoken ab, um die Leistung und die Ladezeiten zu verbessern.
 
+>[!NOTE]
+> **Mobile Microsoft Teams-Clientversionen, die SSO unterstützen**  
+>
+> ✔ Teams für Android (1416/1.0.0.2020073101 und höher)
+>
+> ✔ Teams für IOS (_Version_: 2.0.18 und höher)  
+>
+> Um die besten Erfahrungen mit Microsoft Teams zu erhalten, verwenden Sie die neueste Version von IOS und Android.
+
 ## <a name="how-sso-works-at-runtime"></a>Funktionsweise von SSO zur Laufzeit
 
 Das folgende Diagramm zeigt die Funktionsweise des SSO-Prozesses:
 
+<!-- markdownlint-disable MD033 -->
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
 1. Auf der Registerkarte wird ein JavaScript-Aufruf ausgeführt `getAuthToken()` . Dadurch wird Microsoft Teams mitgeteilt, ein Authentifizierungstoken für die Registerkarten Anwendung zu erhalten.
@@ -37,7 +47,7 @@ In diesem Abschnitt werden die Aufgaben im Zusammenhang mit dem Erstellen einer 
 
 ### <a name="1-create-your-azure-active-directory-azure-ad-application"></a>1. Erstellen Ihrer Azure Active Directory (Azure AD)-Anwendung
 
-Registrieren Sie Ihre Anwendung im[Azure AD Portal](https://azure.microsoft.com/features/azure-portal/). Dieser Prozess dauert fünf bis zehn Minuten und umfasst die folgenden Aufgaben:
+#### <a name="registering-your-application-in-theazure-ad-portal-overview"></a>Registrieren der Anwendung in der Übersicht über das[Azure AD Portal](https://azure.microsoft.com/features/azure-portal/) :
 
 1. Rufen Sie Ihre [Azure AD-Anwendungs-ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)ab.
 2. Geben Sie die Berechtigungen an, die Ihre Anwendung für den Azure AD-Endpunkt und optional für Microsoft Graph benötigt.
@@ -52,7 +62,7 @@ Registrieren Sie Ihre Anwendung im[Azure AD Portal](https://azure.microsoft.com/
 > * Wir unterstützen derzeit nicht mehrere Domänen pro app.
 > * Anwendungen, die die Domäne verwenden, werden nicht unterstützt, `azurewebsites.net` da dies zu häufig ist und möglicherweise ein Sicherheitsrisiko darstellt. Wir versuchen jedoch aktiv, diese Einschränkung zu entfernen.
 
-#### <a name="steps"></a>Schritte
+#### <a name="registering-your-app-through-the-azure-active-directory-portal-in-depth"></a>Ausführliches Registrieren Ihrer APP über das Azure Active Directory-Portal:
 
 1. Registrieren Sie eine neue Anwendung im Portal [Azure Active Directory – App-Registrierung](https://go.microsoft.com/fwlink/?linkid=2083908) .
 2. Wählen Sie **neue Registrierung** aus, und legen Sie auf der *Seite Anwendung registrieren*folgende Werte fest:
@@ -64,6 +74,8 @@ Registrieren Sie Ihre Anwendung im[Azure AD Portal](https://azure.microsoft.com/
 4. Wählen Sie unter **Verwalten** die Option **Eine API verfügbar machen** aus. 
 5. Wählen Sie den Link **festlegen** aus, um den Anwendungs-ID-URI in Form von zu generieren `api://{AppID}` . Fügen Sie den vollqualifizierten Domänennamen zwischen den doppelten Schrägstrichen und der GUID (mit einem Schrägstrich "/" am Ende hinzugefügt) ein. Die gesamte ID sollte die Form haben: `api://fully-qualified-domain-name.com/{AppID}` ²
     * Ex: `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` .
+    
+    Der vollqualifizierte Domänenname ist der lesbare Domänenname, von dem Ihre APP bedient wird. Wenn Sie einen Tunnel Dienst wie ngrok verwenden, müssen Sie diesen Wert aktualisieren, sobald sich Ihre ngrok-Unterdomäne ändert. 
 6. Wählen Sie die Schaltfläche**Bereich hinzufügen** aus. Geben Sie im Bereich, der geöffnet wird, `access_as_user` für**Bereichsname** ein.
 7. Legen Sie fest **, wer einwilligen kann.**`Admins and users`
 8. Füllen Sie die Felder für die Konfiguration der Administrator-und Benutzer Zustimmungs Ansagen mit Werten aus, die für den Bereich geeignet sind `access_as_user` :
@@ -72,18 +84,18 @@ Registrieren Sie Ihre Anwendung im[Azure AD Portal](https://azure.microsoft.com/
     * **Benutzer Zustimmungs Titel**: Teams können auf das Benutzerprofil zugreifen und Anforderungen im Namen des Benutzers stellen.
     * **Beschreibung der Benutzer Zustimmung:** Aktivieren Sie Teams, um APIs dieser APP mit denselben Rechten wie der Benutzer aufzurufen.
 9. Sicherstellen, dass der **Status** auf " **aktiviert** " festgelegt ist
-10. **Bereich "hinzufügen** " auswählen
+10. Wählen Sie die Schaltfläche **Bereich hinzufügen** aus, um zu speichern 
     * Der Domänenteil des **Bereichsnamens** , der direkt unterhalb des Textfelds angezeigt wird, sollte automatisch mit dem im vorherigen Schritt festgelegten **Anwendungs-ID** -URI übereinstimmen, wobei der Wert am `/access_as_user` Ende angefügt ist:
         * `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`
-11. Identifizieren Sie im Abschnitt **autorisierte Clientanwendungen** die Anwendungen, die Sie für die Webanwendung Ihrer APP autorisieren möchten. Jeder der folgenden IDs muss eingegeben werden:
-    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`(Mobile Teams/Desktopanwendung)
-    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`(Microsoft Teams-Webanwendung)
-12. Navigieren Sie zu **API-Berechtigungen**, und stellen Sie sicher, dass Sie die folgenden Berechtigungen hinzufügen:
+11. Identifizieren Sie im Abschnitt **autorisierte Clientanwendungen** die Anwendungen, die Sie für die Webanwendung Ihrer APP autorisieren möchten. Wählen Sie *Clientanwendung hinzufügen*aus. Geben Sie die folgenden Client-IDs ein, und wählen Sie den autorisierten Bereich aus, den Sie im vorherigen Schritt erstellt haben:
+    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Mobile Teams/Desktopanwendung)
+    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Microsoft Teams-Webanwendung)
+12. Navigieren Sie zu **API-Berechtigungen**. Wählen Sie *Add a permission*  >  *Microsoft Graph*  >  *Delegierte Berechtigungen*aus, und fügen Sie dann die folgenden Berechtigungen hinzu:
     * User. Read (standardmäßig aktiviert)
-    * email
+    * E-Mail
     * offline_access
     * OpenID
-    * profile
+    * Profil
 
 13. Navigieren zur **Authentifizierung**
 
@@ -92,13 +104,13 @@ Registrieren Sie Ihre Anwendung im[Azure AD Portal](https://azure.microsoft.com/
     Festlegen eines Umleitungs-URI:
     * Wählen Sie **Plattform hinzufügen**aus.
     * Wählen Sie **Internet**aus.
-    * Geben Sie den **Umleitungs-URI** für Ihre APP ein. Dies ist die Seite, auf der der Benutzer durch einen erfolgreichen impliziten Grant-Fluss umgeleitet wird.
+    * Geben Sie den **Umleitungs-URI** für Ihre APP ein. Dies ist die Seite, auf der der Benutzer durch einen erfolgreichen impliziten Grant-Fluss umgeleitet wird. Dabei handelt es sich um denselben vollqualifizierten Domänennamen, den Sie in Schritt 5 eingegeben haben, gefolgt von der API-Route, auf der eine Authentifizierungsantwort gesendet werden soll. Wenn Sie eines der Microsoft Teams-Beispiele befolgen, wird Folgendes verwendet: `https://subdomain.example.com/auth-end`
 
-    Aktivieren Sie implizite Gewährung, indem Sie die folgenden Felder überprüfen:  
+    Aktivieren Sie als nächstes implizite Gewährung, indem Sie die folgenden Felder überprüfen:  
     ✔-ID-Token  
     ✔ Zugriffs Token  
     
-    
+Herzlichen Glückwunsch! Sie haben die APP-Registrierungs prerequsities abgeschlossen, um mit ihrer Tab-SSO-App fortzufahren.     
 
 > [!NOTE]
 >
@@ -174,11 +186,11 @@ Ein weiterer Ansatz für das Aufrufen zusätzlicher Microsoft Graph-Bereiche bes
 
 1. Das mit dem abgerufenen Token verwendete `getAuthToken()` muss serverseitig mit Azure AD [im Auftrag von Flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) ausgetauscht werden, um Zugriff auf diese zusätzlichen Microsoft Graph-APIs zu erhalten.
     * Stellen Sie sicher, dass Sie den Microsoft Graph-Endpunkt v2 für diesen Exchange verwenden.
-2. Wenn der Exchange-Fehler auftritt, gibt Azure AD eine ungültige Grant-Ausnahme zurück. Normalerweise gibt es eine von zwei Fehlermeldungen: `invalid_grant` oder`interaction_required`
+2. Wenn der Exchange-Fehler auftritt, gibt Azure AD eine ungültige Grant-Ausnahme zurück. Normalerweise gibt es eine von zwei Fehlermeldungen: `invalid_grant` oder `interaction_required`
 3. Wenn der Exchange-Fehler auftritt, müssen Sie um zusätzliche Zustimmung bitten. Es wird empfohlen, einige Benutzeroberflächen anzuzeigen, in denen der Benutzer aufgefordert wird, zusätzliche Zustimmung zu erteilen. Diese Benutzeroberfläche sollte eine Schaltfläche enthalten, mit der ein Azure AD Zustimmungsdialogfeld mithilfe unserer [Azure AD-Authentifizierungs-API](~/concepts/authentication/auth-silent-aad.md)ausgelöst wird.
 4. Wenn Sie eine zusätzliche Zustimmung von Azure AD anfordern, müssen Sie den `prompt=consent` [Abfrage-String-Parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) in Azure AD einbeziehen, andernfalls wird Azure AD nicht nach den zusätzlichen Bereichen gefragt.
-    * Statt:`?scope={scopes}`
-    * Verwenden Sie Folgendes:`?prompt=consent&scope={scopes}`
+    * Statt: `?scope={scopes}`
+    * Verwenden Sie Folgendes: `?prompt=consent&scope={scopes}`
     * Stellen Sie sicher, dass `{scopes}` alle Bereiche eingeschlossen sind, für die Sie den Benutzer auffordern (z. b.: Mail. Read oder User. Read).
 5. Nachdem der Benutzer zusätzliche Berechtigungen erteilt hat, wiederholen Sie den Vorgang im Auftrag von Flow, um Zugriff auf diese zusätzlichen APIs zu erhalten.
 

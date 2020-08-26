@@ -3,12 +3,12 @@ title: Erste Schritte mit App Studio für Microsoft Teams
 description: Erste Schritte beim Erstellen von tollen apps in Microsoft Teams mit App Studio
 keywords: Erste Schritte-App Studio Teams
 ms.date: 03/20/2019
-ms.openlocfilehash: 3d6274c204f907bdff19d1b0b9f347414423f2f5
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: b8bae38ae2a3044d87389b4bd5ee3d5a7d1e029d
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453861"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874877"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Schnelles Entwickeln von apps mit App Studio für Microsoft Teams
 
@@ -40,7 +40,7 @@ Hier können Sie sehen, welche [Karten Sie in App Studio](#card-editor) wie in M
 
 ### <a name="manifest-editor"></a>Manifest-Editor
 
-Wie bereits erwähnt, ist der bedeutendste Teil eines Microsoft Teams-App-Pakets die Manifest. JSON-Datei. Diese Datei, die dem Microsoft Teams- [App-Schema](~/resources/schema/manifest-schema.md)entsprechen muss, enthält Metadaten, mit denen Microsoft Teams Ihre APP den Benutzern korrekt präsentieren kann.
+Wie bereits erwähnt, ist der wichtigste Teil eines Microsoft Teams-App-Pakets die Datei manifest.js. Diese Datei, die dem Microsoft Teams- [App-Schema](~/resources/schema/manifest-schema.md)entsprechen muss, enthält Metadaten, mit denen Microsoft Teams Ihre APP den Benutzern korrekt präsentieren kann.
 
 Die Registerkarte Manifest-Editor in App Studio vereinfacht die Erstellung des Manifests, sodass Sie die APP beschreiben, ihre Symbole hochladen, App-Funktionen hinzufügen und eine ZIP-Datei erstellen können, die problemlos in Teams zum Testen hochgeladen oder für andere Benutzer verteilt werden kann. Beachten Sie, dass APP Studio keinen Funktionscode für Ihre APP erstellt oder Ihre APP hostet. Ihre APP muss bereits gehostet sein und unter der im Manifest für den App-Upload-Prozess aufgeführten URL ausgeführt werden, damit eine funktionierende App entsteht.
 
@@ -92,13 +92,16 @@ Jeder Befehl erfordert einen Titel und eine ID. Der Befehl kann optional eine Be
 
 #### <a name="test-and-distribute"></a>Testen und verteilen
 
-Nachdem Sie die Definition Ihrer Anwendung abgeschlossen haben, können Sie im Abschnitt Test and Distribute die Definition Ihrer APP als ZIP-Datei exportieren, die dann zum Testen freigegeben und in den Teams-Client hochgeladen werden kann. Durch Klicken auf Exportieren wird die Zip *-Datei als appname. zip* in Ihrem standardmäßigen Downloadverzeichnis heruntergeladen.
+Nachdem Sie die Definition Ihrer Anwendung abgeschlossen haben, können Sie im Abschnitt Test and Distribute die Definition Ihrer APP als ZIP-Datei exportieren, die dann zum Testen freigegeben und in den Teams-Client hochgeladen werden kann. Durch Klicken auf Exportieren wird die ZIP-Datei als *appname.zip* im standardmäßigen Downloadverzeichnis heruntergeladen.
+
+##### <a name="publish-your-app-to-teams"></a>Veröffentlichen Ihrer APP in Microsoft Teams
+Auf Ihrer Project-Startseite können Sie Ihre APP in ein Team hochladen, Ihre APP für Benutzer in Ihrer Organisation an den benutzerdefinierten APP-Speicher des Unternehmens übermitteln oder Ihre APP an die APP-Quelle für alle Microsoft Teams-Benutzer senden. Ihr IT-Administrator prüft diese Übermittlungen. Sie können zur Seite *veröffentlichen* zurückkehren, um den Übermittlungsstatus zu überprüfen und zu erfahren, ob Ihre APP von Ihrem IT-Administrator genehmigt oder abgelehnt wurde. In diesem Fall können Sie auch Aktualisierungen an Ihre APP übermitteln oder derzeit aktive Übermittlungen kündigen.
 
 ### <a name="card-editor"></a>Karten-Editor
 
 Eine Karte ist ein Container für kurze oder verwandte Informationen. Microsoft Teams unterstützt Karten, die mehrere Eigenschaften und Anlagen aufweisen können. Karten stellen eine wichtige Möglichkeit dar, dass Bots und Connectors umsetzbare Informationen an Benutzer weiterleiten. 
 
-Um diesen Prozess einfacher und fehleranfälliger zu machen, können Sie mit der Registerkarte Karten-Editor Hero-Karten oder thumbnailkarten mithilfe eines Formulars erstellen und die resultierende Karte (genau so wie ein Benutzer Sie sehen würde) über einen bot überprüfen und testen. Außerdem wird der entsprechende JSON-, C#-oder Node. js-Code für die Karte bereitgestellt, die Sie in den Quellcode Ihrer APP kopieren/einfügen können.
+Um diesen Prozess einfacher und fehleranfälliger zu machen, können Sie mit der Registerkarte Karten-Editor Hero-Karten oder thumbnailkarten mithilfe eines Formulars erstellen und die resultierende Karte (genau so wie ein Benutzer Sie sehen würde) über einen bot überprüfen und testen. Außerdem wird der entsprechende JSON-, C#-oder Node.js-Code für die Karte bereitgestellt, die Sie in den Quellcode Ihrer APP kopieren/einfügen können.
 
 Wenn Sie bereits über eine Karte verfügen, die Sie innerhalb von Teams überprüfen möchten, können Sie die JSON für diese Karte in die Registerkarte JSON unter *Karteninfo hinzufügen* einfügen und an sich selbst senden, um zu sehen, wie Sie in einem Chat aussieht.
 
