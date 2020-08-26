@@ -182,11 +182,11 @@
     - name: Schnellstarts
       items:
         - name: Teams-Unterhaltungsbot in C#
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot'
+          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot'
         - name: Teams-Unterhaltungsbot in JavaScript
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot'
+          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot'
         - name: Teams-Unterhaltungsbot in Python
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot'
+          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
     - name: Entwurf Ihres Bots
       items:
         - name: Entwurfsübersicht
@@ -259,15 +259,15 @@
         - name: Mit Aktionsbefehl
           items:
             - name: C#/.NET
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
             - name: TypeScript/Node.js
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action'
         - name: Mit Suchbefehl
           items:
             - name: C#/.NET
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
             - name: TypeScript/Node.js
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search'
     - name: Schrittanleitungen
       expanded: true
       items:
