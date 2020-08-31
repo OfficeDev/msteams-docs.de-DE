@@ -2,17 +2,17 @@
 title: Neuerungen
 description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 keywords: Teams What es New Latest
-ms.openlocfilehash: 83fe01f5a34ae0d1f3f3f86699f47139bb630b3e
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: 46e18dbe385680fea38c98f4396047a8d10a2b9c
+ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587727"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47303717"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuerungen für Entwickler in Microsoft Teams
 
 >[!TIP]
-> Schauen Sie sich unsere produktionsfähigen Vorlagen im [**Katalog der Teams-App-Vorlagen**](samples/app-templates.md)an. Der Katalog ist alphabetisch sortiert, und die neuesten Ergänzungen werden mit einem Stern **&#9734;** versehen.
+> Schauen Sie sich unsere produktionsfähigen Vorlagen im   [**Katalog der Teams-App-Vorlagen**](samples/app-templates.md)an. Der Katalog ist alphabetisch sortiert, und die neuesten Ergänzungen werden mit einem Stern **&#9734;** versehen.
 
 ## <a name="change-log"></a>Änderungsprotokoll
 
@@ -20,6 +20,7 @@ Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und d
 
 | **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
+| 08/12/2020 |Adaptive Kartenunterstützung im eingehenden webhook verschoben in GA.|[Senden von adaptiven Karten mithilfe eines eingehenden Webhooks](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 | 07/22/2020 |Updates für Mobile Gerätefunktionen.|[Anfordern von Geräte Berechtigungen für Ihre Microsoft Teams-Registerkarte](~/tabs/how-to/native-device-permissions.md) |
 |07/20/2020|Teams-App-Validierungs Tool für AppSource-Übermittlungen.|[Teams-App-Validierungs Tool](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|Erstellen eines virtuellen Assistenten für Teams|[Virtueller Assistent für Microsoft Teams](samples/virtual-assistant.md)|
@@ -52,7 +53,7 @@ Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und d
 | 11/11/2018 | Erste Schritte für Node js und .NET/C# wurden für die Verwendung von App Studio in Microsoft Teams aktualisiert, und ein neuer Abschnitt wurde hinzugefügt, um Apps für Node-basierte Teams in Azure zu hosten. | Erste [Schritte mit der Microsoft Teams-Plattform mit C#/.net und App Studio](~/get-started/get-started-dotnet-app-studio.md), erste [Schritte mit der Microsoft Teams-Plattform mit Node js und App Studio](~/get-started/get-started-nodejs-app-studio.md), [Hosten der Node Teams-app in Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | Sie können nun tiefe Links zu privaten Chats zwischen Benutzern erstellen. | [Deep Linking to a Chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 08.11.2018 | SharePoint Framework 1,7 hat und mit ihm ein neues Feature zur Verwendung von Microsoft Teams-Registerkarten als SharePoint-Framework-Webpart ausgeliefert. | [Registerkarten in SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
-| 11/05/2018 | Das Feature "Aufgabenmodul" wurde veröffentlicht. Mithilfe eines Aufgabenmoduls können Sie modale Popup-Erlebnisse in Ihrer Teams-Anwendung von Bots und Registerkarten erstellen. Innerhalb des Popups können Sie Ihren eigenen benutzerdefinierten HTML/JavaScript-Code ausführen, ein `<iframe>` -basiertes Widget wie ein YouTube-oder Microsoft Stream-Video anzeigen oder eine [Adaptive Karte](https://docs.microsoft.com/adaptive-cards/)anzeigen. | [Aufgabenmodul Übersicht](~/concepts/task-modules/task-modules-overview.md), [Aufgabenmodul in Registerkarten](~/concepts/task-modules/task-modules-tabs.md), [Aufgabenmodul in Bots](~/concepts/task-modules/task-modules-bots.md) |
+| 11/05/2018 | Das Feature "Aufgabenmodul" wurde veröffentlicht. Mithilfe eines Aufgabenmoduls können Sie modale Popup-Erlebnisse in Ihrer Teams-Anwendung von Bots und Registerkarten erstellen. Innerhalb des Popups können Sie Ihren eigenen benutzerdefinierten HTML/JavaScript-Code ausführen, ein `<iframe>` -basiertes Widget wie ein YouTube-oder Microsoft Stream-Video anzeigen oder eine [Adaptive Karte](https://docs.microsoft.com/adaptive-cards/)anzeigen. | [Aufgabenmodul Übersicht](~/concepts/task-modules/task-modules-overview.md), [Aufgabenmodul in Registerkarten](~/concepts/task-modules/task-modules-tabs.md),  [Aufgabenmodul in Bots](~/concepts/task-modules/task-modules-bots.md) |
 | 10/05/2018 | Formatierungsinformationen für Karten wurden aktualisiert und auf den Desktop-, IOS-und Android-Clients für Microsoft Teams getestet. | [Karten](~/concepts/cards/cards.md), Karten [Formatierung](~/concepts/cards/cards-format.md) |
 | 09/24/2018 | Anrufe und Onlinebesprechungen-APIs für Microsoft Graph wurden für Beta veröffentlicht, und Microsoft Teams-Apps können jetzt mit Benutzern auf vielfältige Weise mit Sprache und Video interagieren. | [Bots für Anrufe und Onlinebesprechungen](~/concepts/calls-and-meetings/registering-calling-bot.md), [Echt Zeit Medienkonzepte](~/concepts/calls-and-meetings/real-time-media-concepts.md), [Registrieren eines aufrufenden bot](~/concepts/calls-and-meetings/registering-calling-bot.md), [Debuggen und lokale Tests](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md), von der [Anwendung gehostete Medien](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md), [Verarbeiten von Benachrichtigungen über eingehende Anrufe](~/concepts/calls-and-meetings/call-notifications.md) |
 | 09/11/2018 | Die Seiten der Registerkartenkonfiguration sind nun deutlich höher. | [Registerkarten Design](tabs/design/tabs.md) |

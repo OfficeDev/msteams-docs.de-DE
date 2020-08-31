@@ -3,12 +3,12 @@ title: Kanal-und Gruppenchat Unterhaltungen mit Bots
 description: Beschreibt das End-to-End-Szenario, dass eine Unterhaltung mit einem bot in einem Kanal in Microsoft Teams vorliegt.
 keywords: Teams Szenarien Kanäle Conversation bot
 ms.date: 06/25/2019
-ms.openlocfilehash: d2d72bdba43de6ebb10c7504dd309459cb09d56c
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: f44db4a88ab5e6541c52395a58fc643cb07df606
+ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801279"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47303724"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Kanal und Gruppenchatunterhaltungen mit einem Microsoft Teams-Bot
 
@@ -20,16 +20,13 @@ Chat in Kanälen und Gruppenchats unterscheiden sich vom persönlichen Chat dadu
 
 ## <a name="designing-a-great-bot-for-channels-or-groups"></a>Entwerfen eines großen bot für Kanäle oder Gruppen
 
-Bots, die einem Team hinzugefügt werden, werden ein weiteres Teammitglied, das als Teil der Unterhaltung @mentioned werden kann. Bots empfangen tatsächlich nur Nachrichten, wenn Sie @mentioned sind, sodass andere Unterhaltungen im Kanal nicht an den bot gesendet werden.
+Bots, die einem Team hinzugefügt werden, werden ein weiteres Teammitglied und können als Teil der Unterhaltung @mentioned werden. Bots empfangen tatsächlich nur Nachrichten, wenn Sie @mentioned sind, sodass andere Unterhaltungen im Kanal nicht an den bot gesendet werden.
 
-> [!NOTE]
-> Zur Vereinfachung beim Antworten auf bot-Nachrichten in einem Kanal wird der Name des bot automatisch im Meldungsfeld verfassen vorangestellt.
+Ein bot in einer Gruppe oder einem Kanal sollte Informationen enthalten, die für alle Mitglieder relevant und angemessen sind. Während Ihr bot sicherlich alle Informationen zur Verfügung stellen kann, die für die Benutzeroberfläche relevant sind, sollten Sie berücksichtigen, dass die Unterhaltungen für alle sichtbar sind. Ein großer bot in einer Gruppe oder einem Kanal sollte daher allen Benutzern einen Mehrwert geben und sicherlich nicht versehentlich Informationen für eine 1:1-Unterhaltung freigeben.
 
-Ein bot in einer Gruppe oder einem Kanal sollte Informationen enthalten, die für alle Mitglieder relevant und angemessen sind. Während Ihr bot sicherlich alle Informationen zur Verfügung stellen kann, die für die Benutzeroberfläche relevant sind, sollten Sie berücksichtigen, dass die Unterhaltungen für alle sichtbar sind. Ein großer bot in einer Gruppe oder einem Kanal sollte daher allen Benutzern einen Mehrwert geben und sicherlich nicht versehentlich Informationen in einer 1:1-Unterhaltung besser austauschen.
+Ihr Bot kann, so wie er ist, in allen Bereichen ganz relevant sein, ohne dass zusätzliche Arbeit erforderlich ist. In Microsoft Teams wird nicht davon ausgegangen, dass Ihre bot-Funktion in allen Bereichen, aber Sie sollten sicherstellen, dass Ihr bot Benutzerwert in welchem Bereich (n), die Sie zur Unterstützung bereitstellt. Weitere Informationen zu Bereichen finden Sie unter [apps in Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
-Ihr bot ist möglicherweise vollständig relevant in allen Bereichen, und es ist keine nennenswerte zusätzliche Arbeit erforderlich, damit Ihr bot über diese hinweg arbeiten kann. In Microsoft Teams wird nicht davon ausgegangen, dass Ihre bot-Funktion in allen Bereichen, aber Sie sollten sicherstellen, dass Ihr bot Benutzerwert in welchem Bereich (n), die Sie zur Unterstützung bereitstellt. Weitere Informationen zu Bereichen finden Sie unter [apps in Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
-
-Die Entwicklung eines bot, der in Gruppen oder Kanälen funktioniert, verwendet einen Großteil der gleichen Funktionalität aus persönlichen Unterhaltungen. Zusätzliche Ereignisse und Daten in der Nutzlast bieten Teams-Gruppen-und Kanalinformationen. Diese Unterschiede sowie wesentliche Unterschiede in der allgemeinen Funktionalität werden in den folgenden Abschnitten beschrieben.
+Die Entwicklung eines bot, der in Gruppen oder Kanälen funktioniert, verwendet einen Großteil derselben Funktionalität wie persönliche Unterhaltungen. Zusätzliche Ereignisse und Daten in der Nutzlast bieten Teams-Gruppen-und Kanalinformationen. Diese Unterschiede sowie wesentliche Unterschiede in der allgemeinen Funktionalität werden in den folgenden Abschnitten beschrieben.
 
 ### <a name="creating-messages"></a>Erstellen von Nachrichten
 
@@ -39,11 +36,11 @@ Weitere Informationen zu Bots zum Erstellen von Nachrichten in Kanälen finden S
 
 Für einen bot in einer Gruppe oder einem Kanal erhält Ihr bot zusätzlich zum [regulären Nachrichtenschema](https://docs.botframework.com/core-concepts/reference/#activity)auch die folgenden Eigenschaften:
 
-* `channelData`Weitere Informationen finden Sie unter [Teams-Kanaldaten](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). In einem Gruppenchat enthält Informationen, die für diesen Chat spezifisch sind.
-* `conversation.id`Die Antwortketten-ID, bestehend aus Kanal-ID und der ID der ersten Nachricht in der Antwort Kette
-* `conversation.isGroup`Ist `true` für bot-Nachrichten in Kanälen oder Gruppenchats
-* `conversation.conversationType`Entweder `groupChat` oder`channel`
-* `entities`Kann ein oder mehrere Erwähnungen enthalten (siehe [Erwähnungen](#-mentions))
+* `channelData` Weitere Informationen finden Sie unter [Teams-Kanaldaten](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). In einem Gruppenchat enthält Informationen, die für diesen Chat spezifisch sind.
+* `conversation.id` Die Antwortketten-ID, bestehend aus Kanal-ID und der ID der ersten Nachricht in der Antwort Kette
+* `conversation.isGroup` Ist `true` für bot-Nachrichten in Kanälen oder Gruppenchats
+* `conversation.conversationType` Entweder `groupChat` oder `channel`
+* `entities` Kann ein oder mehrere Erwähnungen enthalten (siehe [Erwähnungen](#-mentions))
 
 ### <a name="replying-to-messages"></a>Antworten auf Nachrichten
 

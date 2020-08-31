@@ -2,12 +2,12 @@
 title: Ratenbegrenzung
 description: Ratenbegrenzung und bewährte Methoden in Microsoft Teams
 keywords: Teams Bots Ratenbegrenzung
-ms.openlocfilehash: 9b244053d42aaddaf48c798e401438b614b0e1bd
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 2e401b59df075688cb6d459a881e6b813f2cf8e6
+ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801315"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47303710"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>Optimieren Ihres bot: Ratenbegrenzung und bewährte Methoden in Microsoft Teams
 
@@ -108,19 +108,19 @@ Dieser Grenzwert steuert den Datenverkehr, den ein bot für eine einzelne Unterh
 | **Szenario** | **Zeitraum (Sek.)** | **Max. zulässige Vorgänge** |
 | --- | --- | --- |
 | An Unterhaltung senden | 1  | 7  |
-| An Unterhaltung senden | 2 | 8  |
+| An Unterhaltung senden | 2  | 8  |
 | An Unterhaltung senden | 30 | 60 |
 | An Unterhaltung senden | 3600 | 1800 |
 | Unterhaltung erstellen | 1  | 7  |
-| Unterhaltung erstellen | 2 | 8  |
+| Unterhaltung erstellen | 2  | 8  |
 | Unterhaltung erstellen | 30 | 60 |
 | Unterhaltung erstellen | 3600 | 1800 |
 | Abrufen von Unterhaltungs Mitgliedern| 1  | 14  |
-| Abrufen von Unterhaltungs Mitgliedern| 2 | 16  |
+| Abrufen von Unterhaltungs Mitgliedern| 2  | 16  |
 | Abrufen von Unterhaltungs Mitgliedern| 30 | 120 |
 | Abrufen von Unterhaltungs Mitgliedern| 3600 | 3600 |
 | Unterhaltungen abrufen | 1  | 14  |
-| Unterhaltungen abrufen | 2 | 16  |
+| Unterhaltungen abrufen | 2  | 16  |
 | Unterhaltungen abrufen | 30 | 120 |
 | Unterhaltungen abrufen | 3600 | 3600 |
 
@@ -131,22 +131,12 @@ Dieser Grenzwert steuert den Datenverkehr, den alle Bots in einer einzigen Unter
 | **Szenario** | **Zeitraum (Sek.)** | **Max. zulässige Vorgänge** |
 | --- | --- | --- |
 | An Unterhaltung senden | 1  | 14  |
-| An Unterhaltung senden | 2 | 16  |
+| An Unterhaltung senden | 2  | 16  |
 | Unterhaltung erstellen | 1  | 14  |
-| Unterhaltung erstellen | 2 | 16  |
+| Unterhaltung erstellen | 2  | 16  |
 | Createconversation| 1  | 14  |
-| Createconversation| 2 | 16  |
+| Createconversation| 2  | 16  |
 | Abrufen von Unterhaltungs Mitgliedern| 1  | 28 |
-| Abrufen von Unterhaltungs Mitgliedern| 2 | 32 |
+| Abrufen von Unterhaltungs Mitgliedern| 2  | 32 |
 | Unterhaltungen abrufen | 1  | 28 |
-| Unterhaltungen abrufen | 2 | 32 |
-
-## <a name="bot-per-data-center-limit"></a>Bot pro Rechenzentrums Grenze
-
-Dieser Grenzwert steuert den Datenverkehr, den ein bot in allen Threads in einem Rechenzentrum (in mehreren Mandanten) generieren darf.
-
-|**Zeitraum (Sek.)** | **Max. zulässige Vorgänge** |
-| --- | --- |
-| 1  | 20 |
-| 1800 | 8000 |
-| 3600 | 15000 |
+| Unterhaltungen abrufen | 2  | 32 |
