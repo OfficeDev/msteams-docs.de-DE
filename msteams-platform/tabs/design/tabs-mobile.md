@@ -2,17 +2,17 @@
 title: Registerkarten auf mobilen Geräten
 description: Beschreibt die Richtlinien für das Entwerfen von Registerkarten, die auf mobilen Geräten funktionieren.
 keywords: Teams-Entwurfsrichtlinien – Referenzrahmen-Mobile Registerkarten für persönliche apps
-ms.openlocfilehash: ac547e74fd56e4f1da6c731959d8bb59dbe48213
-ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
+ms.openlocfilehash: d47039c245b8e262af6e1f60bc0c644dc7e65bd6
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45145928"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819046"
 ---
 # <a name="tabs-on-mobile"></a>Registerkarten auf mobilen Geräten
 
 > [!NOTE]
-> Wenn die Registerkarte Kanal/Gruppe auf mobilen Teams-Clients angezeigt werden soll, `setSettings()` muss die Konfiguration über einen Wert für die `websiteUrl` Eigenschaft verfügen (siehe unten). Persönliche Registerkarten sind derzeit in der [Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md)verfügbar. Die vollständige Unterstützung für Registerkarten auf mobilen Clients wird in Kürze veröffentlicht. Zur Vorbereitung des Updates sollten Sie beim Erstellen Ihrer Registerkarten die hier dargestellten Schritte ausführen.
+> Wenn die Registerkarte Kanal/Gruppe auf mobilen Teams-Clients angezeigt werden soll, `setSettings()` muss die Konfiguration über einen Wert für die `websiteUrl` Eigenschaft verfügen (siehe unten).
 
 Benutzerdefinierte Registerkarten können Teil eines Kanals, Gruppenchats oder einer persönlichen APP sein (apps, die statische Registerkarten und/oder einen 1:1-bot enthalten).
 
@@ -92,7 +92,7 @@ Die Verwendung unserer genehmigten neutralen Palette für Hintergründe, Benachr
 
 Die Art und Weise, wie Schaltflächen formatiert werden, hilft bei der Kommunikation, welche Art von Aktion ausgelöst wird. Wir halten eine Vielzahl von Schaltflächen, die formatiert sind, um unterschiedliche Schwerpunkte anzuzeigen. Schaltflächen können Text, ein Symbol oder eine Kombination aus Text und Symbol aufweisen. Um verschiedene Ebenen in einer Hierarchie zu kommunizieren, haben wir die primären und sekundären Schaltflächen innerhalb der einzelnen Kategorien entworfen.
 
-![Schaltflächen](~/assets/images/buttons.png)
+![Schaltflächenbild](~/assets/images/buttons.png)
 
 ![Auswahlsteuerelemente](~/assets/images/selection-controls.png)
 

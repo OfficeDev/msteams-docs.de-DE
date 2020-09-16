@@ -4,13 +4,13 @@ author: laujan
 description: Vorgehensweise zum Bereitstellen Ihrer vorhandenen Teams-Registerkarte in SharePoint als SharePoint-Framework-WebPart.
 keywords: Teams-Registerkarten SharePoint Framework-Entwicklung
 ms.topic: conceptual
-ms.author: ''
-ms.openlocfilehash: b29cd29891779a69a0342f10d383792b3818590a
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 2bdc7ab578be485eee33020b3b0c1a4099fd8ade
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674316"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818941"
 ---
 # <a name="adding-a-microsoft-teams-tab-in-sharepoint-as-an-spfx-web-part"></a>Hinzufügen einer Microsoft Teams-Registerkarte in SharePoint als SPFx-Webpart
 
@@ -29,7 +29,7 @@ Mit der November-Version von Microsoft Teams und SharePoint Framework v. 1,7 hab
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="~/assets/images/tabs/tabs-in-sharepoint/image084.png" />
+                            <img src="~/assets/images/tabs/tabs-in-sharepoint/image084.png" alt="tab-in-sharepoint view"/>
                         </div>
                     </div>
                     <div class="cardText">
@@ -48,7 +48,7 @@ Mit der November-Version von Microsoft Teams und SharePoint Framework v. 1,7 hab
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" />
+                            <img src="~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" alt="web-part-exposed-as-a-tab" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -87,37 +87,37 @@ Die Beispiel-APP, die wir verwenden, ist eine Talent Verwaltungsanwendung. Es ve
 
 Laden Sie das Beispiel-App-Manifest von [**hier**](https://github.com/MicrosoftDocs/msteams-docs/raw/master/msteams-platform/assets/downloads/TalentMgmt-Azure.zip)herunter.
 
-Klicken Sie in Microsoft Teams auf das Store-Symbol unten links und dann auf "benutzerdefinierte App hochladen" unten links. Die Datei, die hochgeladen werden soll, befindet sich im Ordner "Downloads"; Es heißt TalentMgmt-Azure. zip. Wenn alles gut geht, sehen Sie den Bildschirm "Installation/Zustimmung" für die Talent Management-APP. Wählen Sie das Team aus, das Sie installieren möchten, und klicken Sie auf die Schaltfläche installieren. Sie können jetzt mit der APP experimentieren.
+Klicken Sie in Microsoft Teams auf das Store-Symbol unten links und dann auf "benutzerdefinierte App hochladen" unten links. Die Datei, die hochgeladen werden soll, befindet sich im Ordner "Downloads"; Es heißt TalentMgmt-Azure.zip. Wenn alles gut geht, sehen Sie den Bildschirm "Installation/Zustimmung" für die Talent Management-APP. Wählen Sie das Team aus, das Sie installieren möchten, und klicken Sie auf die Schaltfläche installieren. Sie können jetzt mit der APP experimentieren.
 
 ## <a name="step-2-using-the-teams-tab-in-sharepoint"></a>Schritt 2: Verwenden der Registerkarte "Teams" in SharePoint
 
-Laden Sie Ihr Teams-App-Paket in Ihren SharePoint-APP `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`-Katalog hoch `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`, indem Sie beispielsweise einen Besuch durchsuchen.
+Laden Sie Ihr Teams-App-Paket in Ihren SharePoint-App-Katalog hoch, indem Sie beispielsweise einen Besuch durchsuchen. `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`
 
 Wenn Sie dazu aufgefordert werden, aktivieren Sie die Option "Diese Lösung für alle Websites in der Organisation verfügbar machen":
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
+![Registerkarten in der SharePoint-Ansicht](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
 
 Erstellen Sie in Ihrer Website eine neue Seite, indem Sie auf die Schaltfläche Gear oben rechts und dann auf "Seite hinzufügen" klicken:
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
+![SharePoint-Ansicht](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 
 Die Erstellungsumgebung für SharePoint-Seiten wird angezeigt. Nennen Sie Ihre Seite "meine Teams-Registerkarte".
 
 Öffnen Sie die Webpart-Toolbox durch Drücken der +-Schaltfläche, und wählen Sie Ihre Teams-Registerkarte ("Contoso HR" genannt) aus. Webparts werden alphabetisch sortiert; Wenn es sich um eine lange Liste handelt, können Sie die Suchleiste verwenden, um Sie zu finden. Dadurch wird ein Webpart im Canvas-Bereich erstellt, der die Registerkarte Teams enthält:
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
+![Registerkartenansicht](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 
 Drücken Sie die Schaltfläche "veröffentlichen", wenn Sie die Bearbeitung abgeschlossen haben.
 
 Möglicherweise möchten Sie auf "Seite zur Navigation hinzufügen" klicken, um in der linken Navigationsleiste eine Kurzübersicht zu Ihrer Seite zu haben:
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
+![Registerkarte in SharePoint-Bild](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 
 ## <a name="step-3-explore-app-pages-in-sharepoint"></a>Schritt 3: Durchsuchen von App-Seiten in SharePoint
 
 Nachdem Sie Ihre Seite veröffentlicht haben, können Sie [Ihre Teams-app in eine umfassendere Erfahrung in SharePoint umwandeln](/sharepoint/dev/spfx/web-parts/single-part-app-pages). Dadurch wird die aktuelle Seite in eine APP-Seite umgewandelt, die das normale SharePoint-Seitenlayout mit einer ganzseitigen Oberfläche für die Registerkarte "Teams" zeigt:
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
+![Bild von Registerkarten in SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
 ## <a name="more-information"></a>Weitere Informationen
 

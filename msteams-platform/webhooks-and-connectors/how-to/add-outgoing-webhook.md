@@ -1,16 +1,16 @@
 ---
 title: Hinzufügen von benutzerdefinierten Bots zu Microsoft Teams mit ausgehenden webhooks
 author: laujan
-description: ''
+description: Hinzufügen eines ausgehenden webhooks
 keywords: Teams-Registerkarten für ausgehende webhooks *
 ms.topic: conceptual
-ms.author: laujan
-ms.openlocfilehash: 4881dc8768c7c51947f6a80a55affe78c28874d3
-ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
+ms.author: lajanuar
+ms.openlocfilehash: 04fc86fc3df7601235cb7f6bb7e53da59777f49f
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "45102998"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819060"
 ---
 # <a name="add-custom-bots-to-microsoft-teams-with-outgoing-webhooks"></a>Hinzufügen von benutzerdefinierten Bots zu Microsoft Teams mit ausgehenden webhooks
 
@@ -44,7 +44,7 @@ Um sicherzustellen, dass Ihr Dienst nur Anrufe von tatsächlichen Teams-Clients 
 
 Ihr Code sollte immer die HMAC-Signatur validieren, die in der Anforderung enthalten ist:
 
-* *Generieren* Sie das HMAC-Token aus dem Anforderungstext der Nachricht. Auf den meisten Plattformen gibt es Standardbibliotheken (*Siehe* [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js oder *See* [Teams webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C \# ). Microsoft Teams verwendet die standardmäßige SHA256-HMAC-Kryptografie. Sie müssen den Textkörper in ein Byte-Array in UTF8 umwandeln.
+* *Generieren* Sie das HMAC-Token aus dem Anforderungstext der Nachricht. Auf den meisten Plattformen gibt es Standardbibliotheken (*Siehe* [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js oder  *See* [Teams webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C \# ). Microsoft Teams verwendet die standardmäßige SHA256-HMAC-Kryptografie. Sie müssen den Textkörper in ein Byte-Array in UTF8 umwandeln.
 * *Berechnen* Sie den Hash aus dem Bytearray des Sicherheitstokens **, das von Microsoft Teams bereitgestellt wurde** , als Sie den ausgehenden webhook im Microsoft Teams-Client registriert haben.] *Weitere Informationen finden Sie* unter [Erstellen eines ausgehenden webhooks](#create-an-outgoing-webhook).
 * *Konvertieren* Sie den Hash mithilfe der UTF-8-Codierung in eine Zeichenfolge.
 * *Vergleichen* Sie den Zeichenfolgenwert des generierten Hash mit dem in der HTTP-Anforderung angegebenen Wert.

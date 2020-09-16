@@ -1,16 +1,16 @@
 ---
 title: Erstellen einer Inhaltsseite
 author: laujan
-description: ''
+description: Vorgehensweise Erstellen einer Inhaltsseite
 keywords: Teams-Registerkartengruppe Kanal konfigurierbar statisch
 ms.topic: conceptual
-ms.author: v-laujan
-ms.openlocfilehash: 49cd771c45bc3c4f91a7ab5f38beaf01da712544
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.author: lajanuar
+ms.openlocfilehash: 91a7d643d3a631610989e31eae14265cd725dbd0
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434489"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818906"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Erstellen einer Inhaltsseite für die Registerkarte
 
@@ -60,7 +60,7 @@ Sie können tiefe Links zu Entitäten in Microsoft Teams erstellen. Diese werden
 
 ### <a name="task-modules"></a>Aufgaben Module
 
-Ein Aufgabenmodul ist eine modale Popup-ähnliche Erfahrung, die Sie auf der Registerkarte auslösen können. in der Regel auf einer Inhaltsseite möchten Sie nicht über mehrere Seiten in den Benutzer navigieren. Stattdessen verwenden Sie Aufgaben Module zum Darstellen von Formularen zum Sammeln zusätzlicher Informationen, zum Anzeigen der Details eines Elements in einer Liste oder zu einem anderen Zeitpunkt, zu dem Sie dem Benutzer zusätzliche Informationen zur Verfügung stellen müssen. Die Aufgaben Module selbst können zusätzliche Inhaltsseiten sein oder vollständig mit adaptiven Karten erstellt werden. Vollständige Informationen finden Sie unter [Verwenden von Aufgaben Modulen in Registerkarten](~/task-modules-and-cards/task-modules/task-modules-tabs.md) .
+Ein Aufgabenmodul ist eine modale Popup-ähnliche Erfahrung, die Sie auf der Registerkarte auslösen können. Normalerweise möchten Sie auf einer Inhaltsseite nicht durch mehrere Seiten navigieren. Stattdessen verwenden Sie Aufgaben Module zum Darstellen von Formularen zum Sammeln zusätzlicher Informationen, zum Anzeigen der Details eines Elements in einer Liste oder zu einem anderen Zeitpunkt, zu dem Sie dem Benutzer zusätzliche Informationen zur Verfügung stellen müssen. Die Aufgaben Module selbst können zusätzliche Inhaltsseiten sein oder vollständig mit adaptiven Karten erstellt werden. Vollständige Informationen finden Sie unter [Verwenden von Aufgaben Modulen in Registerkarten](~/task-modules-and-cards/task-modules/task-modules-tabs.md) .
 
 ### <a name="valid-domains"></a>Gültige Domänen
 
@@ -71,12 +71,12 @@ Stellen Sie sicher, dass die in ihren Registerkarten verwendeten URL-Domänen in
 Beginnend mit dem [Manifest-Schema v 1.7](../../../resources/schema/manifest-schema.md)können Sie einen [systemeigenen Lade Indikator](../../../resources/schema/manifest-schema.md#showloadingindicator) bereitstellen, unabhängig davon, wo Ihre Webinhalte in Microsoft Teams geladen werden, beispielsweise [Registerkarteninhalts Seite](#integrate-your-code-with-teams), [Konfigurationsseite](configuration-page.md), [Entfernungs Seite](removal-page.md) und [Aufgaben Module in Registerkarten](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
-> Wenn Sie `"showLoadingIndicator : true` in Ihrem App-Manifest angeben, müssen alle Seiten für Registerkartenkonfiguration, Inhalt und Entfernung sowie alle IFRAME-basierten Aufgaben Module dem obligatorischen Protokoll unten entsprechen:
+> Wenn Sie  `"showLoadingIndicator : true`  in Ihrem App-Manifest angeben, müssen alle Seiten für Registerkartenkonfiguration, Inhalt und Entfernung sowie alle IFRAME-basierten Aufgaben Module dem obligatorischen Protokoll unten entsprechen:
 
 1. Um den Lade Indikator anzuzeigen, fügen Sie `"showLoadingIndicator": true` zu ihrem Manifest hinzu. 
 2. Denken Sie daran, anzurufen `microsoftTeams.initialize();` .
-3. **Optional**. Wenn Sie zum Drucken auf dem Bildschirm und zum verzögerten Laden des restlichen Inhalts Ihrer Anwendung fähig sind, können Sie den Lade Indikator manuell ausblenden, indem Sie`microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **Obligatorisch**. Schließlich rufen Sie die Teams darauf hin `microsoftTeams.appInitialization.notifySuccess()` , dass Ihre APP erfolgreich geladen wurde. Teams werden dann den Lade Indikator ausblenden, falls zutreffend. Wenn `notifySuccess` nicht innerhalb von 30 Sekunden aufgerufen wird, wird davon ausgegangen, dass Ihre APP abgelaufen ist und ein Fehlerbildschirm mit einer Wiederholungsoption angezeigt wird.
+3. **Optional**. Wenn Sie zum Drucken auf dem Bildschirm und zum verzögerten Laden des restlichen Inhalts Ihrer Anwendung fähig sind, können Sie den Lade Indikator manuell ausblenden, indem Sie `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Obligatorisch**. Schließlich rufen Sie die Teams darauf hin `microsoftTeams.appInitialization.notifySuccess()` , dass Ihre APP erfolgreich geladen wurde. Teams werden dann den Lade Indikator ausblenden, falls zutreffend. Wenn  `notifySuccess`  nicht innerhalb von 30 Sekunden aufgerufen wird, wird davon ausgegangen, dass Ihre APP abgelaufen ist und ein Fehlerbildschirm mit einer Wiederholungsoption angezeigt wird.
 5. Wenn Ihre Anwendung nicht laden kann, können Sie aufrufen `microsoftTeams.appInitialization.notifyFailure(reason);` , um Microsoft Teams mitzuteilen, dass ein Fehler aufgetreten ist. Dem Benutzer wird dann ein Fehlerbildschirm angezeigt:
 
 ```typescript

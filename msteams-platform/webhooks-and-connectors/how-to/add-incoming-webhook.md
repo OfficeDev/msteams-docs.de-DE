@@ -1,16 +1,16 @@
 ---
 title: Bereitstellen externer Anforderungen an Microsoft Teams mit eingehenden webhooks
 author: laujan
-description: ''
+description: Vorgehensweise Hinzufügen von eingehender webhook zu Teams-App
 keywords: Teams-Registerkarten für ausgehende webhooks *
 ms.topic: conceptual
-ms.author: laujan
-ms.openlocfilehash: c2b3f5dd581441f89aff344c35fe7e110d4d2e68
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 3aa795170af9695fc375043c94e794f814b38646
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674515"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819067"
 ---
 # <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>Bereitstellen externer Anforderungen an Teams mit eingehenden webhooks
 
@@ -30,7 +30,7 @@ Bei eingehenden webhooks handelt es sich um einen speziellen Connectortyp in Mic
 |Sichere Ressourcendefinitionen|Nachrichten werden als JSON-Nutzlast formatiert. Diese deklarative Messaging Struktur verhindert, dass schädlicher Code injiziert wird, da auf dem Client keine Codeausführung ausgeführt wird.|
 |Unterstützung für Nachrichten mit Aktionen|Wenn Sie sich für das Senden von Nachrichten über Karten entscheiden, müssen Sie das **Nachrichten Karten** Format mit Aktionen verwenden. Umsetzbare Nachrichten Karten werden in allen Office 365 Gruppen einschließlich Teams unterstützt. Hier finden Sie Links zu der [Legacy-Nachrichten Karten Referenz für Aktionen](/outlook/actionable-messages/message-card-reference) und zum [Nachrichten Karten-Spielplatz](https://messagecardplayground.azurewebsites.net).|
 |Unterstützung für unabhängige HTTPS-Messaging| Karten sind eine hervorragende Möglichkeit, um Informationen auf klare und konsistente Weise darzustellen. Jedes Tool oder Framework, das HTTPS-POST-Anforderungen senden kann, kann Nachrichten über einen eingehenden webhook an Microsoft Teams senden.|
-|Unterstützung für den Abschlag|Alle Textfelder in umsetzbaren Messaging Karten unterstützen das grundlegende Abschlag. **Verwenden Sie kein HTML-Markup auf ihren Karten**. HTML wird ignoriert und als nur-Text behandelt.|
+|Unterstützung für den Abschlag|Alle Textfelder in umsetzbaren Messaging Karten unterstützen das grundlegende Abschlag. **Verwenden Sie kein HTML-Markup auf ihren Karten**. HTML wird ignoriert und als reiner Text behandelt.|
 
 > [!Note]  
 > Teams-Bots, Messaging-Erweiterungen und das bot-Framework unterstützen Adaptive Karten, ein offenes plattformübergreifendes Plattform-Framework. Microsoft Teams-Connectors unterstützen derzeit keine adaptiven Karten. Es ist jedoch möglich, einen [Flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) zu erstellen, der Adaptive Karten für einen Teams-Kanal bereitstellt.
@@ -38,9 +38,9 @@ Bei eingehenden webhooks handelt es sich um einen speziellen Connectortyp in Mic
 ## <a name="add-an-incoming-webhook-to-a-teams-channel"></a>Hinzufügen eines eingehenden webhooks zu einem Teams-Kanal
 
 > [!Important]  
-> Wenn die **Einstellungen** => des Team**Mitgliedsberechtigungen** => **Mitgliedern das Erstellen, aktualisieren und Entfernen von Connectors gestatten** , können alle Teammitglieder einen Connector hinzufügen, ändern oder löschen.
+> Wenn die **Einstellungen**des Team  =>  **Mitgliedsberechtigungen**  =>  **Mitgliedern das Erstellen, aktualisieren und Entfernen von Connectors gestatten** , können alle Teammitglieder einen Connector hinzufügen, ändern oder löschen.
 
-1. Navigieren Sie zu dem Kanal, dem Sie den webhook hinzufügen möchten, und wählen Sie (#a3) *Weitere Optionen* in der oberen Navigationsleiste aus.
+1. Navigieren Sie zu dem Kanal, dem Sie den webhook hinzufügen möchten, und wählen Sie (&#8226;&#8226;&#8226;) *Weitere Optionen* in der oberen Navigationsleiste aus.
 1. Wählen Sie im Dropdownmenü **Konnektoren** aus, und suchen Sie nach **eingehenden webhooks**.
 1. Wählen Sie die Schaltfläche **configure** aus, geben Sie einen Namen an, und laden Sie optional einen Bild-Avatar für Ihren webhook hoch.
 1. Das Dialogfenster stellt eine eindeutige URL dar, die dem Kanal zugeordnet wird. Stellen Sie sicher, dass Sie **die URL kopieren und speichern**– Sie müssen Sie dem externen Dienst zur Verfügung stellen.
@@ -48,7 +48,7 @@ Bei eingehenden webhooks handelt es sich um einen speziellen Connectortyp in Mic
 
 ## <a name="remove-an-incoming-webhook-from-a-teams-channel"></a>Entfernen eines eingehenden webhooks aus einem Teams-Kanal
 
-1. Navigieren Sie zu dem Kanal, in dem der webhook hinzugefügt wurde, und wählen Sie in der oberen Navigationsleiste (#a3) *Weitere Optionen* aus.
+1. Navigieren Sie zu dem Kanal, in dem der webhook hinzugefügt wurde, und wählen Sie in der oberen Navigationsleiste (&#8226;&#8226;&#8226;) *Weitere Optionen* aus.
 1. Wählen Sie im Dropdownmenü **Verbinder** aus.
 1. Wählen Sie auf der linken Seite unter **Verwalten**die Option **konfiguriert**aus.
 1. Wählen Sie die Nummer aus, die so *konfiguriert* ist, dass eine Liste Ihrer aktuellen Connectors angezeigt wird.

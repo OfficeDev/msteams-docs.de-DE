@@ -4,13 +4,13 @@ author: laujan
 description: Leitfaden zum Erstellen einer Registerkarte
 keywords: Teams-Registerkartengruppe Kanal konfigurierbar
 ms.topic: conceptual
-ms.author: ''
-ms.openlocfilehash: 9f12f9eb39e4dfac4d5b725638bdbd2d7c2b4de6
-ms.sourcegitcommit: b8b06929981ebbeef4ae489f338271bf09d349a2
+ms.author: lajanuar
+ms.openlocfilehash: 0434aabc39900e8f8232ae307a5854b2eb3a756d
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "43537271"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819032"
 ---
 # <a name="extend-your-teams-app-with-a-custom-tab"></a>Erweitern Ihrer Teams-App mit einer benutzerdefinierten Registerkarte
 
@@ -38,9 +38,9 @@ Es gibt drei Arten von Registerkartenseiten. Ausführliche Informationen zum Ers
 Unabhängig vom Typ der Seite müssen Sie die folgenden Anforderungen erfüllen:
 
 * Sie müssen zulassen, dass Ihre Seiten in einem IFRAME, über X-Frame-Options und/oder Inhalts-Security-Policy-HTTP-Antwortheader zugestellt werden.
-  * Kopfzeile festlegen:`Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`        
-  * Für Internet Explorer 11 Kompatibilität, legen `X-Content-Security-Policy` Sie ebenfalls fest.    
-  * Alternativ können Sie Header `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`festlegen. Dieser Header ist veraltet, wird von den meisten Browsern jedoch noch respektiert.
+  * Kopfzeile festlegen: `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`        
+  * Für Internet Explorer 11 Kompatibilität, legen Sie `X-Content-Security-Policy` ebenfalls fest.    
+  * Alternativ können Sie Header festlegen `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/` . Dieser Header ist veraltet, wird von den meisten Browsern jedoch noch respektiert.
 * In der Regel werden Anmeldeseiten als Schutz vor Klick-Jacking nicht in iframes gerendert. Daher muss Ihre Authentifizierungslogik eine andere Methode als Redirect verwenden (beispielsweise die Token-basierte oder die Cookie-basierte Authentifizierung verwenden).
 
 > [!NOTE]
@@ -50,7 +50,7 @@ Unabhängig vom Typ der Seite müssen Sie die folgenden Anforderungen erfüllen:
 
 * Um eine nahtlose Benutzeroberfläche zu erstellen, sollten Sie Ihre Registerkarten auf der Grundlage des Designs, des Designs und der Absicht des Teams-Clients formatieren. Normalerweise funktionieren Registerkarten am besten, wenn Sie für einen bestimmten Bedarf erstellt wurden, und konzentrieren sich auf eine kleine Gruppe von Aufgaben oder eine Teilmenge der Daten, die für den Kanal Speicherort der Registerkarte relevant sind.
 
-* Fügen Sie auf der Inhaltsseite einen Verweis auf [Microsoft Teams JavaScript Client SDK](/javascript/api/overview/msteams-client) mithilfe von Skripttags hinzu. Führen Sie nach dem Laden der Seite einen Anruf `microsoftTeams.initialize()`an. Die Seite wird nicht angezeigt, wenn dies nicht der Fall ist.
+* Fügen Sie auf der Inhaltsseite einen Verweis auf [Microsoft Teams JavaScript Client SDK](/javascript/api/overview/msteams-client) mithilfe von Skripttags hinzu. Führen Sie nach dem Laden der Seite einen Anruf an `microsoftTeams.initialize()` . Die Seite wird nicht angezeigt, wenn dies nicht der Fall ist.
 
 ## <a name="host-your-app-service"></a>Hosten des App-Diensts
 
@@ -58,7 +58,7 @@ Ihre Inhalte müssen in einer öffentlich verfügbaren URL gehostet werden, die 
 
 ## <a name="create-your-app-package-with-app-studio"></a>Erstellen eines App-Pakets mit App Studio
 
-Sie können die APP Studio-app innerhalb des Microsoft Teams-Clients verwenden, um das App-Manifest zu erstellen. Wenn das App-Studio nicht in Microsoft Teams installiert ist, **Apps** ![wählen Sie apps](/microsoftteams/platform/assets/images/tab-images/storeApp.png) Store-App in der unteren linken Ecke der Teams-App aus, und suchen Sie nach App Studio. Nachdem Sie die Kachel gefunden haben, wählen Sie Sie aus, und wählen Sie im Dialogfeld Popupfenster installieren aus.
+Sie können die APP Studio-app innerhalb des Microsoft Teams-Clients verwenden, um das App-Manifest zu erstellen. Wenn das App-Studio nicht in Microsoft Teams installiert ist, wählen Sie **apps** ![ Store ](/microsoftteams/platform/assets/images/tab-images/storeApp.png) -app in der unteren linken Ecke der Teams-App aus, und suchen Sie nach App Studio. Nachdem Sie die Kachel gefunden haben, wählen Sie Sie aus, und wählen Sie im Dialogfeld Popupfenster installieren aus.
 
 1. Öffnen Sie den Microsoft Teams-Client – mithilfe der [webbasierten Version](https://teams.microsoft.com) können Sie den Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md)Ihres Browsers überprüfen.
 1. Öffnen Sie App Studio, und wählen Sie die Registerkarte **Manifest-Editor** aus.
@@ -68,7 +68,7 @@ Sie können die APP Studio-app innerhalb des Microsoft Teams-Clients verwenden, 
     * Wählen Sie für eine persönliche Registerkarte persönliche *Registerkarte hinzufügen* aus, und wählen Sie **Hinzufügen**aus. Ihnen wird ein Popup-Dialogfenster angezeigt, in dem Sie Ihre Registerkarten Details hinzufügen können.
     * Wählen Sie für einen Kanal/eine Gruppe Registerkarte unter *Team Tab* die Registerkarte Details im Popupfenster Team Tab **Hinzufügen** aus, und füllen Sie die Felder aus. Stellen Sie sicher, dass die *Konfiguration aktualisiert werden kann? Team* -und *Gruppenchat* Felder werden überprüft, und wählen Sie **Speichern**aus.
 1. Im Abschnitt *Domains and Permissions* sollte die *Domäne aus Ihrem Registerkarten* Feld die Host-oder Reverse-Proxy-URL ohne das HTTPS-Präfix enthalten.
-1. Auf der Registerkarte **Finish** => **Test und Distribute** können Sie Ihr App-Paket **herunterladen** , das Paket in einem Team **Installieren** oder sich zur Genehmigung an den App-Store von Teams **senden** . *Wenn Sie einen Reverseproxy verwenden, erhalten Sie eine Warnung im Feld **Beschreibung** auf der rechten Seite. Die Warnung kann beim Testen der Registerkarte ignoriert werden*.
+1. Auf der **Finish**  =>  Registerkarte Finish**Test und Distribute** können Sie Ihr App-Paket **herunterladen** , das Paket in einem Team **Installieren** oder sich zur Genehmigung an den App-Store von Teams **senden** . *Wenn Sie einen Reverseproxy verwenden, erhalten Sie eine Warnung im Feld **Beschreibung** auf der rechten Seite. Die Warnung kann beim Testen der Registerkarte ignoriert werden*.
 
 ## <a name="create-your-app-package-manually"></a>Manuelles Erstellen Ihres App-Pakets
 
@@ -76,15 +76,15 @@ Wie bei Bots und Messaging-Erweiterungen aktualisieren Sie das [App-Manifest](~/
 
 ### <a name="personal-tabs"></a>Persönliche Registerkarten
 
-Der angezeigte Inhalt für persönliche Registerkarten ist für alle Benutzer gleich und wird im `staticTabs` Array konfiguriert. Sie können bis zu sechzehn (16) persönliche Registerkarten in einer APP deklarieren.
+Der angezeigte Inhalt für persönliche Registerkarten ist für alle Benutzer gleich und wird im Array konfiguriert `staticTabs` . Sie können bis zu sechzehn (16) persönliche Registerkarten in einer APP deklarieren.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`entityId`|String|64 Zeichen|✔|Ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird.|
-|`name`|String|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanalschnittstelle.|
-|`contentUrl`|String|2048 Zeichen|✔|Die https://-URL, die auf die Benutzeroberfläche der Entität zeigt, die im Canvas "Teams" angezeigt werden soll.|
-|`websiteUrl`|String|2048 Zeichen||Die https://-URL, auf die verwiesen wird, wenn ein Benutzer sich für die Anzeige in einem Browser entscheidet.|
-|`scopes`|Array von Enumerationen|1|✔|Statische Registerkarten unterstützen `personal` nur den Bereich, was bedeutet, dass Sie nur als Teil einer persönlichen App zur Verfügung gestellt werden können.|
+|`name`|Zeichenfolge|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanalschnittstelle.|
+|`contentUrl`|Zeichenfolge|2048 Zeichen|✔|Die https://-URL, die auf die Benutzeroberfläche der Entität zeigt, die im Canvas "Teams" angezeigt werden soll.|
+|`websiteUrl`|Zeichenfolge|2048 Zeichen||Die https://-URL, auf die verwiesen wird, wenn ein Benutzer sich für die Anzeige in einem Browser entscheidet.|
+|`scopes`|Array von Enumerationen|1 |✔|Statische Registerkarten unterstützen nur den `personal` Bereich, was bedeutet, dass Sie nur als Teil einer persönlichen App zur Verfügung gestellt werden können.|
 
 #### <a name="simple-personal-tab-manifest-example"></a>Beispiel für einfaches persönliches Tab-Manifest
 
@@ -105,13 +105,13 @@ Das folgende Beispiel zeigt nur das `staticTabs` Array aus einem App-Manifest.
 
 ### <a name="channelgroup-tabs"></a>Kanal/Gruppenregisterkarten
 
-Im `configurableTabs` Array werden Kanäle/Gruppenregisterkarten hinzugefügt. Sie können im `configurableTabs` Array nur einen Kanal/eine Gruppe-Registerkarte deklarieren.
+Im Array werden Kanäle/Gruppenregisterkarten hinzugefügt `configurableTabs` . Sie können im Array nur einen Kanal/eine Gruppe-Registerkarte deklarieren `configurableTabs` .
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 Zeichen|✔|Die Seite https://URL to Configuration.|
-|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte nach der Erstellung vom Benutzer aktualisiert werden kann. Standard`true`|
-|`scopes`|Array von Enumerationen|1|✔|Konfigurierbare Registerkarten unter `team` stützen `groupchat` nur die und Bereiche. |
+|`configurationUrl`|Zeichenfolge|2048 Zeichen|✔|Die Seite https://URL to Configuration.|
+|`canUpdateConfiguration`|Boolean|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte nach der Erstellung vom Benutzer aktualisiert werden kann. Standard `true`|
+|`scopes`|Array von Enumerationen|1 |✔|Konfigurierbare Registerkarten unterstützen nur die `team` und `groupchat` Bereiche. |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>Beispiel für einfaches Channel/Group-Registerkarten Manifest
 
@@ -133,14 +133,14 @@ Nachdem Sie Ihr `manifest.json` Bundle in einem ZIP-Ordner zusammen mit ihren be
 ### <a name="upload-app-package-directly-to-a-team"></a>Direktes Hochladen des App-Pakets in ein Team
 
 1. Öffnen Sie den Microsoft Teams-Client. Wenn Sie die [webbasierte Version](https://teams.microsoft.com) verwenden, können Sie den Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md)Ihres Browsers überprüfen.
-1. Wählen Sie im *YourTeams* -Bereich auf der linken Seite `...` das Menü neben dem Team aus, das Sie zum Testen der Registerkarte verwenden, und wählen Sie **Team verwalten**aus.
+1. Wählen Sie im *YourTeams* -Bereich auf der linken Seite das `...` Menü neben dem Team aus, das Sie zum Testen der Registerkarte verwenden, und wählen Sie **Team verwalten**aus.
 1. Wählen Sie im Hauptbereich **apps** in der Registerkartenleiste aus, und wählen Sie **eine benutzerdefinierte App hochladen** , die sich in der unteren rechten Ecke der Seite befindet.
 1. Öffnen Sie Ihr Projektverzeichnis, navigieren Sie zum Ordner **./Paket** , wählen Sie den ZIP-Ordner für das App-Paket aus, und wählen Sie **Öffnen**aus. Ihre Registerkarte wird in Teams hochgeladen.
 
 ### <a name="view-your-tab-in-teams"></a>Anzeigen der Registerkarte in Microsoft Teams
 
 1. Anzeigen Ihrer persönlichen Registerkarte:
-    * Wählen Sie in der navbar, die sich auf der linken Seite des Teams-Clients `...` befindet, das Menü aus, und wählen Sie Ihre APP aus der Liste aus.
+    * Wählen Sie in der navbar, die sich auf der linken Seite des Teams-Clients befindet, das `...` Menü aus, und wählen Sie Ihre APP aus der Liste aus.
 
 1. Zeigen Sie die Registerkarte Kanal/Gruppe an:
     * Kehren Sie zu Ihrem Team zurück, wählen Sie den Kanal aus, in dem Sie die Registerkarte anzeigen möchten, wählen Sie in der Registerkartenleiste ➕ aus, und wählen Sie im Katalog die Registerkarte aus.

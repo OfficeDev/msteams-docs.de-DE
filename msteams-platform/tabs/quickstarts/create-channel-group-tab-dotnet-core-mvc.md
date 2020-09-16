@@ -3,13 +3,13 @@ title: Erstellen einer Kanal-und Gruppenregisterkarte mit ASP.net-Kern-MVC
 author: laujan
 description: Eine Schnellstartanleitung zum Erstellen einer benutzerdefinierten Kanal-und Gruppenregisterkarte mit ASP.net Core MVC.
 ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: 57c22d10414eb8ec93249584219488397f0b6b33
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: cda91825ee37da94ee84747c5d2439c2940c728b
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674297"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818927"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>Erstellen einer benutzerdefinierten Kanal-und Gruppenregisterkarte mit ASP.net-Kern-MVC
 
@@ -37,7 +37,7 @@ Drücken Sie zum Erstellen und Ausführen der Anwendung **F5** , oder wählen Si
 
 ### <a name="startupcs"></a>Startup.cs
 
-Dieses Projekt wurde aus einer leeren Vorlage für ASP.net Core 2,2-Webanwendungen erstellt, wobei das Kontrollkästchen *Erweiterte Konfiguration für HTTPS* beim Setup aktiviert ist. Die MVC `ConfigureServices()` -Dienste werden von der Dependency Injection Framework-Methode registriert. Darüber hinaus wird die Bereitstellung statischer Inhalte nicht standardmäßig durch die leere Vorlage aktiviert, sodass der `Configure()` Methode die statische Datei Middleware hinzugefügt wird:
+Dieses Projekt wurde aus einer leeren Vorlage für ASP.net Core 2,2-Webanwendungen erstellt, wobei das Kontrollkästchen *Erweiterte Konfiguration für HTTPS* beim Setup aktiviert ist. Die MVC-Dienste werden von der Dependency Injection Framework- `ConfigureServices()` Methode registriert. Darüber hinaus wird die Bereitstellung statischer Inhalte nicht standardmäßig durch die leere Vorlage aktiviert, sodass der Methode die statische Datei Middleware hinzugefügt wird `Configure()` :
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -61,7 +61,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
 - Ein **vollfarbiges Symbol** , das 192 x 192 Pixel misst.
 - Ein **transparentes Umrisssymbol** , das 32 x 32 Pixel misst.
-- Eine **Manifest. JSON** -Datei, die die Attribute Ihrer APP angibt.
+- Ein **manifest.jsfür** die Datei, die die Attribute Ihrer APP angibt.
 
 Diese Dateien müssen in einem App-Paket gezippt werden, damit Sie Ihre Registerkarte in Microsoft Teams hochladen können.
 
@@ -93,7 +93,7 @@ Klicken Sie im Fenster Visual Studio Projektmappen-Explorer mit der rechten Maus
 
 ### <a name="views"></a>Ansichten
 
-#### <a name="home"></a>Startseite
+#### <a name="home"></a>Home
 
 ASP.net Core behandelt Dateien namens " *Index* " als Standard/Homepage für die Website. Wenn Ihre Browser-URL auf den Stamm der Website zeigt, wird **Index. cshtml** als Startseite für Ihre Anwendung angezeigt.
 
@@ -119,7 +119,7 @@ ngrok http https://localhost:443560 -host-header="localhost:44360"
 
 ## <a name="update-your-application"></a>Aktualisieren Ihrer Anwendung
 
-In **Tab. cshtml** zeigt die Anwendung dem Benutzer zwei Optionsschaltflächen zum Anzeigen der Registerkarte mit einem roten oder grauen Symbol an. Wenn **Sie die Option grau auswählen** oder **Rote** Schalt `saveGray()` Fläche `saveRed()`auswählen auswählen, wird `settings.setValidityState(true)`die Schaltfläche **Speichern** auf der Konfigurationsseite ausgelöst oder aktiviert. Mit diesem Code können Teams wissen, dass Sie die Konfigurationsanforderungen erfüllt haben und die Installation fortgesetzt werden kann. Bei Save werden die Parameter von `settings.setSettings` festgelegt. Schließlich `saveEvent.notifySuccess()` wird aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
+In **Tab. cshtml** zeigt die Anwendung dem Benutzer zwei Optionsschaltflächen zum Anzeigen der Registerkarte mit einem roten oder grauen Symbol an. Wenn **Sie die Option grau auswählen** oder **Rote** Schaltfläche auswählen auswählen, wird `saveGray()` `saveRed()` `settings.setValidityState(true)` die Schaltfläche **Speichern** auf der Konfigurationsseite ausgelöst oder aktiviert. Mit diesem Code können Teams wissen, dass Sie die Konfigurationsanforderungen erfüllt haben und die Installation fortgesetzt werden kann. Bei Save werden die Parameter von `settings.setSettings` festgelegt. Schließlich `saveEvent.notifySuccess()` wird aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 

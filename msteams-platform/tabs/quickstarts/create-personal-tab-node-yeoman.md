@@ -1,17 +1,17 @@
 ---
-title: 'Schnellstart: Erstellen einer benutzerdefinierten persönlichen Registerkarte mit Node. js und dem Generator für Microsoft Teams'
+title: 'Schnellstart: Erstellen einer benutzerdefinierten persönlichen Registerkarte mit Node.js und dem Generator für Microsoft Teams'
 author: laujan
 description: Eine Schnellstartanleitung zum Erstellen einer persönlichen Registerkarte mit dem Landarbeits Generator für Microsoft Teams.
 ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: 2d1b17360b92a161179091c1f6ba06ffa194e958
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: e39878d117b0b1b1f8c0e2450021d9238f5b7877
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674075"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818885"
 ---
-# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Schnellstart: Erstellen einer benutzerdefinierten persönlichen Registerkarte mit Node. js und dem Generator für Microsoft Teams
+# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Schnellstart: Erstellen einer benutzerdefinierten persönlichen Registerkarte mit Node.js und dem Generator für Microsoft Teams
 
 >[!NOTE]
 >Diese Schnellstartleiste folgt den Schritten im Artikel [Erstellen des ersten Microsoft Teams-App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) -Wikis, die im Microsoft officedev GitHub-Repository gefunden wurden.
@@ -27,13 +27,13 @@ Verwenden Sie die Pfeiltasten, um statische Registerkarte auszuwählen.
 >[!IMPORTANT]
 >In der Pfadkomponente *yourDefaultTabNameTab*, auf die in diesem Schnellstart verwiesen wird, handelt es sich um den Wert, den Sie im Generator für den *standardmäßigen Registerkartennamen* sowie die *Register*Karte Word eingegeben haben.
 >
->Beispiel: DefaultTabName: *mytab* => */MyTabTab/*
+>Beispiel: DefaultTabName: *mytab*  =>  */MyTabTab/*
 
 ## <a name="create-your-personal-tab"></a>Erstellen Ihrer persönlichen Registerkarte
 
 Zum Hinzufügen einer persönlichen Registerkarte zu dieser Anwendung erstellen Sie eine Inhaltsseite und aktualisieren vorhandene Dateien:
 
-- Erstellen Sie in Ihrem Code-Editor eine neue HTML-Datei **Personal. html** , und fügen Sie das folgende Markup hinzu:
+- Erstellen Sie in Ihrem Code-Editor eine neue HTML-Datei **personal.html** , und fügen Sie das folgende Markup hinzu:
 
 ```html
 <!DOCTYPE html>
@@ -55,19 +55,19 @@ Zum Hinzufügen einer persönlichen Registerkarte zu dieser Anwendung erstellen 
 </html>
 ```
 
-- Speichern Sie **Personal. html** im **Webordner ihrer** Anwendung:
+- Speichern Sie **personal.html** im **Webordner ihrer** Anwendung:
 
 ```bash
 ./src/app/web/<yourDefaultTabNameTab>/personal.html
 ```
 
-- Öffnen Sie **Manifest. JSON** in Ihrem Code-Editor:
+- Öffnen Sie **manifest.js** im Code-Editor:
 
 ```bash
 ./src/manifest/manifest.json/
 ```
 
-Fügen Sie Folgendes zum leeren `staticTabs` Array hinzu (`staticTabs":[]`), und fügen Sie das folgende JSON-Objekt hinzu:
+Fügen Sie Folgendes zum leeren `staticTabs` Array hinzu ( `staticTabs":[]` ), und fügen Sie das folgende JSON-Objekt hinzu:
 
 ```json
 {
@@ -82,7 +82,7 @@ Fügen Sie Folgendes zum leeren `staticTabs` Array hinzu (`staticTabs":[]`), und
 
 Denken Sie daran, die **"contentURL"** -Pfadkomponente **yourDefaultTabNameTab** mit Ihrem tatsächlichen Registerkartennamen zu aktualisieren.
 
-- Speichern Sie die aktualisierte **Manifest. JSON**.
+- Speichern Sie die aktualisierte **manifest.js**.
 
 - Die Inhaltsseite muss in einem IFRAME bereitgestellt werden. Öffnen Sie **Tab. TS** in Ihrem Code-Editor:
 
@@ -104,7 +104,7 @@ Denken Sie daran, die **"contentURL"** -Pfadkomponente **yourDefaultTabNameTab**
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-Um Ihre persönliche Registerkarte anzuzeigen, wechseln Sie zu`http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
+Um Ihre persönliche Registerkarte anzuzeigen, wechseln Sie zu `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
 
 >![Screenshot der persönlichen Registerkarte](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
@@ -126,10 +126,10 @@ gulp ngrok-serve
 ## <a name="upload-your-application-to-teams"></a>Hochladen Ihrer Anwendung in Microsoft Teams
 
 - Öffnen Sie den Microsoft Teams-Client. Wenn Sie die [webbasierte Version](https://teams.microsoft.com) verwenden, können Sie den Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md)Ihres Browsers überprüfen.
-- Wählen Sie im *YourTeams* -Bereich auf der linken Seite `...` das Menü neben dem Team aus, das Sie zum Testen der Registerkarte verwenden, und wählen Sie **Team verwalten**aus.
+- Wählen Sie im *YourTeams* -Bereich auf der linken Seite das `...` Menü neben dem Team aus, das Sie zum Testen der Registerkarte verwenden, und wählen Sie **Team verwalten**aus.
 - Wählen Sie im Hauptbereich **apps** in der Registerkartenleiste aus, und wählen Sie **eine benutzerdefinierte App hochladen** , die sich in der unteren rechten Ecke der Seite befindet.
 - Öffnen Sie Ihr Projektverzeichnis, navigieren Sie zum Ordner **./Paket** , wählen Sie den Ordner zip aus, klicken Sie mit der rechten Maustaste, und wählen Sie **Öffnen**aus. Ihre Registerkarte wird in Teams hochgeladen.
 
 ## <a name="view-your-personal-tabs"></a>Anzeigen Ihrer persönlichen Registerkarten
 
-Wählen Sie in der navbar, die sich auf der linken Seite des Teams-Clients `...` befindet, das Menü aus, und wählen Sie Ihre APP aus der Liste aus.
+Wählen Sie in der navbar, die sich auf der linken Seite des Teams-Clients befindet, das `...` Menü aus, und wählen Sie Ihre APP aus der Liste aus.

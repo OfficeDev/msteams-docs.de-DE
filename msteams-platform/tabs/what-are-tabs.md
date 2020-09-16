@@ -4,12 +4,12 @@ author: laujan
 description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Microsoft Teams-Plattform
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d8aba99210369bf92ad1e600b13cf1d20984d06f
-ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
+ms.openlocfilehash: c9e76d13c96c48f88b555b3d740912017a8b2d0a
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45145907"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818878"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>Was sind benutzerdefinierte Microsoft Teams-Registerkarten?
 
@@ -49,10 +49,10 @@ Eine benutzerdefinierte Registerkarte wird im App-Manifest des App-Pakets deklar
 
 Unabhängig davon, ob Sie die Registerkarte innerhalb des Kanals/der Gruppe oder des persönlichen Bereichs verfügbar machen möchten, müssen Sie auf Ihrer Registerkarte eine iframed HTML- [Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md) präsentieren. Bei persönlichen Registerkarten wird die Inhalts-URL direkt in ihrem Manifest durch die `contentUrl` -Eigenschaft im `staticTabs` Array festgelegt. Die Inhalte Ihrer Registerkarte sind für alle Benutzer gleich.
 
-Für Channel/Group-Registerkarten müssen Sie auch eine zusätzliche Konfigurationsseite erstellen, mit der Ihre Benutzer ihre Inhaltsseiten-URL konfigurieren können, normalerweise mithilfe von URL-Abfragezeichenfolgenparametern, um den entsprechenden Inhalt für diesen Kontext zu laden. Dies liegt daran, dass die Registerkarte Kanal/Gruppe mehreren verschiedenen Teams oder Gruppenchats hinzugefügt werden kann. Bei jeder nachfolgenden Installation können die Benutzer die Registerkarte so konfigurieren, dass Sie die Umgebung nach Bedarf anpassen können. Wenn Benutzer eine Registerkarte hinzufügen oder eine Registerkarte konfigurieren, wird der Registerkarte, die in der Microsoft Teams-Benutzeroberfläche angezeigt wird, eine URL zugeordnet. Durch das Konfigurieren einer Registerkarte werden einfach zusätzliche Parameter zu dieser URL hinzugefügt. Wenn Sie beispielsweise die Registerkarte Azure DevOps Board hinzufügen, können Sie auf der Konfigurationsseite auswählen, welches Board die Registerkarte laden soll. Die URL der Konfigurationsseite wird durch die `configurationUrl` -Eigenschaft im `configurableTabs` Array in Ihrem App-Manifest angegeben.
+Für Channel/Group-Registerkarten müssen Sie auch eine zusätzliche Konfigurationsseite erstellen, mit der Ihre Benutzer ihre Inhaltsseiten-URL konfigurieren können, normalerweise mithilfe von URL-Abfragezeichenfolgenparametern, um den entsprechenden Inhalt für diesen Kontext zu laden. Dies liegt daran, dass die Registerkarte Kanal/Gruppe mehreren verschiedenen Teams oder Gruppenchats hinzugefügt werden kann. Bei jeder nachfolgenden Installation können die Benutzer die Registerkarte so konfigurieren, dass Sie die Umgebung nach Bedarf anpassen können. Wenn Benutzer eine Registerkarte hinzufügen oder eine Registerkarte konfigurieren, wird der Registerkarte, die in der Microsoft Teams-Benutzeroberfläche angezeigt wird, eine URL zugeordnet. Durch das Konfigurieren einer Registerkarte werden einfach zusätzliche Parameter zu dieser URL hinzugefügt. Wenn Sie beispielsweise die Registerkarte Azure DevOps Board hinzufügen, können Sie auf der Konfigurationsseite auswählen, welches Board die Registerkarte laden soll. Die URL der Konfigurationsseite wird durch die  `configurationUrl` -Eigenschaft im `configurableTabs` Array in Ihrem App-Manifest angegeben.
 
 Sie können maximal eine (1) Kanal/Gruppen-Registerkarte und bis zu sechzehn (16) persönliche Registerkarten pro APP haben.
 
 ## <a name="mobile-clients"></a>Mobile Clients
 
-Wenn die Registerkarte Kanal/Gruppe auf mobilen Teams-Clients angezeigt werden soll, `setSettings()` muss die Konfiguration einen Wert für die `websiteUrl` Eigenschaft besitzen. Persönliche Registerkarten sind derzeit in der [Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md)verfügbar. Die vollständige Unterstützung für Registerkarten auf mobilen Clients wird in Kürze veröffentlicht. Zur Vorbereitung des Updates sollten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md) beim Erstellen Ihrer Registerkarten befolgten.
+Wenn Sie die Registerkarte Kanal/Gruppe/persönliche Registerkarte auf mobilen Microsoft Teams-Clients anzeigen möchten, `setSettings()` muss die Konfiguration einen Wert für die `websiteUrl` Eigenschaft besitzen. Um eine optimale Benutzerfreundlichkeit sicherzustellen, sollten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md) beim Erstellen Ihrer Registerkarten befolgten.

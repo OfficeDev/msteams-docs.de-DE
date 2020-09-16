@@ -1,16 +1,6 @@
 ---
-title: Erstellen einer persönlichen Registerkarte mit ASP.net Core
-author: laujan
-description: Eine Schnellstartanleitung zum Erstellen einer benutzerdefinierten persönlichen Registerkarte mit ASP.net Core.
-ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: b279c96f47265fe1928ae90d661e7dc042085b39
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674545"
----
+Title: "Erstellen einer persönlichen Registerkarte mit ASP.net-Kern" Autor: laujan Description: eine Schnellstartanleitung zum Erstellen einer benutzerdefinierten persönlichen Registerkarte mit ASP.net Core.
+ms. Topic: Schnellstart ms. Author: lajanuar
 # <a name="create-a-custom-personal-tab-with-aspnet-core"></a>Erstellen einer benutzerdefinierten persönlichen Registerkarte mit ASP.net Core
 
 In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten persönlichen Registerkarte mit C#-und ASP.net-Core-Razor-Seiten Schritt halten. Wir verwenden auch [App Studio für Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) , um Ihr App-Manifest abzuschließen und die Registerkarte in Teams bereitzustellen.
@@ -38,7 +28,7 @@ Drücken Sie zum Erstellen und Ausführen der Anwendung **F5** , oder wählen Si
 
 ### <a name="startupcs"></a>Startup.cs
 
-Dieses Projekt wurde aus einer leeren Vorlage für ASP.net Core 2,2-Webanwendungen erstellt, wobei das Kontrollkästchen *Erweiterte Konfiguration für HTTPS* beim Setup aktiviert ist. Die MVC `ConfigureServices()` -Dienste werden von der Dependency Injection Framework-Methode registriert. Darüber hinaus wird die Bereitstellung statischer Inhalte nicht standardmäßig durch die leere Vorlage aktiviert, sodass der `Configure()` Methode die statische Datei Middleware hinzugefügt wird:
+Dieses Projekt wurde aus einer leeren Vorlage für ASP.net Core 2,2-Webanwendungen erstellt, wobei das Kontrollkästchen *Erweiterte Konfiguration für HTTPS* beim Setup aktiviert ist. Die MVC-Dienste werden von der Dependency Injection Framework- `ConfigureServices()` Methode registriert. Darüber hinaus wird die Bereitstellung statischer Inhalte nicht standardmäßig durch die leere Vorlage aktiviert, sodass der Methode die statische Datei Middleware hinzugefügt wird `Configure()` :
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -66,7 +56,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
 - Ein **vollfarbiges Symbol** , das 192 x 192 Pixel misst.
 - Ein **transparentes Umrisssymbol** , das 32 x 32 Pixel misst.
-- Eine **Manifest. JSON** -Datei, die die Attribute Ihrer APP angibt.
+- Ein **manifest.jsfür** die Datei, die die Attribute Ihrer APP angibt.
 
 Diese Dateien müssen in einem App-Paket gezippt werden, damit Sie Ihre Registerkarte in Microsoft Teams hochladen können. Microsoft Teams lädt das `contentUrl` angegebene in ihrem Manifest, bettet es in einen iframe ein und rendert es in ihrer Registerkarte.
 

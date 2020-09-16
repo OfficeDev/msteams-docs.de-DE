@@ -1,16 +1,16 @@
 ---
 title: Erstellen einer Konfigurationsseite
 author: laujan
-description: ''
+description: Vorgehensweise Erstellen einer Konfigurationsseite
 keywords: Teams-Registerkartengruppe Kanal konfigurierbar
 ms.topic: conceptualF
-ms.author: laujan
-ms.openlocfilehash: 55fe1efca4defacf10b9be34f788704b7b4491f5
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.author: lajanuar
+ms.openlocfilehash: 6288fc8c296ebf0aa85ffe8e08234e5faf22a1ef
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434482"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819025"
 ---
 # <a name="create-a-configuration-page"></a>Erstellen einer Konfigurationsseite
 
@@ -102,7 +102,7 @@ Die [Kontext Schnittstelle](/javascript/api/@microsoft/teams-js/microsoftteams.c
 
 1. Verwenden Sie die [Teams-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) `microsoftTeams.getContext((context) =>{}` -Methode.
 
-#### <a name="insert-placeholders-in-the-configurationurl"></a>Einfügen von Platzhaltern im`configurationURL`
+#### <a name="insert-placeholders-in-the-configurationurl"></a>Einfügen von Platzhaltern im `configurationURL`
 
 Platzhalter für die Kontext Schnittstelle können ihrer Basis hinzugefügt werden `configurationUrl` . Zum Beispiel:
 
@@ -162,7 +162,7 @@ Stellen Sie sicher, dass alle auf den Registerkartenseiten verwendeten Domänen 
 
 ## <a name="modify-or-remove-a-tab"></a>Ändern oder Entfernen einer Registerkarte
 
-Unterstützte Entfernungsoptionen können die Benutzerfreundlichkeit weiter verfeinern. Sie können Benutzern das ändern, konfigurieren oder Umbenennen einer Gruppe/Kanal-Registerkarte ermöglichen, indem Sie die Eigenschaft des Manifests `canUpdateConfiguration` auf festlegen `true` .  Darüber hinaus können Sie festlegen, was mit dem Inhalt geschieht, wenn eine Registerkarte entfernt wird, indem Sie eine Seite mit den Entfernungsoptionen in Ihrer APP hinzufügen und einen Wert für die `removeUrl` Eigenschaft in der `setSettings()` Konfiguration festlegen (siehe unten). Persönliche Registerkarten können nicht geändert, aber vom Benutzer deinstalliert werden. Weitere Informationen finden Sie unter [Erstellen einer Entfernungs Seite für die Registerkarte](~/tabs/how-to/create-tab-pages/removal-page.md).
+Unterstützte Entfernungsoptionen können die Benutzerfreundlichkeit weiter verfeinern. Sie können Benutzern das ändern, konfigurieren oder Umbenennen einer Gruppe/Kanal-Registerkarte ermöglichen, indem Sie die Eigenschaft des Manifests `canUpdateConfiguration` auf festlegen `true` .  Darüber hinaus können Sie festlegen, was mit dem Inhalt geschieht, wenn eine Registerkarte entfernt wird, indem Sie eine Seite mit den Entfernungsoptionen in Ihrer APP hinzufügen und einen Wert für die `removeUrl` Eigenschaft in der  `setSettings()` Konfiguration festlegen (siehe unten). Persönliche Registerkarten können nicht geändert, aber vom Benutzer deinstalliert werden. Weitere Informationen finden Sie unter [Erstellen einer Entfernungs Seite für die Registerkarte](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 ## <a name="mobile-clients"></a>Mobile Clients
 

@@ -2,12 +2,12 @@
 title: Entwurfsrichtlinien für Registerkarten
 description: Beschreibt die Richtlinien zum Erstellen von Registerkarten für Inhalt und Zusammenarbeit.
 keywords: Teams-Entwurfsrichtlinien Referenz-Framework-Registerkartenkonfiguration
-ms.openlocfilehash: 51c2d7ac445d03ed993764d964b7a5d8b69399f5
-ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
+ms.openlocfilehash: b6394b164c5d57adfa4c796c89339f1586241396
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "45021615"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819039"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Inhalte und Unterhaltungen auf einmal mithilfe von Registerkarten
 
@@ -16,14 +16,9 @@ ms.locfileid: "45021615"
 >
 > Befolgten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](./tabs-mobile.md) , wenn Sie Ihre Registerkarten erstellen. Wenn Ihre Registerkarte die Authentifizierung verwendet, müssen Sie Ihr Microsoft Teams-JavaScript-SDK auf Version 1.4.1 oder höher aktualisieren, oder die Authentifizierung schlägt fehl.
 >
-> **Persönliche Registerkarten (statisch) auf mobilen Geräten:**
->
-> * Statische Registerkarten (persönliche APP) stehen in der [Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md)zur Verfügung.
-> * Stellen Sie beim Erstellen der statischen Registerkarten sicher, dass Sie den [Anweisungen für Tabs auf mobilen](~/tabs/design/tabs-mobile.md)
->
 > **Registerkarten für Kanal/Gruppe (konfigurierbar) auf mobilen Geräten:**
 >
-> * Mobile Clients zeigen nur Registerkarten mit einem Wert für an `websiteUrl` . Wenn die Registerkarte auf den mobilen Teams-Clients angezeigt werden soll, müssen Sie den Wert von festlegen `websiteUrl` .
+> * Mobile Clients zeigen nur konfigurierbare Registerkarten mit einem Wert für an `websiteUrl` . Wenn die Registerkarte auf den mobilen Teams-Clients angezeigt werden soll, müssen Sie den Wert von festlegen `websiteUrl` .
 > * Das standardmäßig geöffnete Verhalten auf mobilen Geräten ist das Öffnen außerhalb von Browser mithilfe von `websiteUrl` . Wenn Sie für apps, die im öffentlichen APP-Speicher veröffentlicht werden, die Kanal Registerkarte standardmäßig in Microsoft Teams öffnen möchten, befolgten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md), und wenden Sie sich an Ihren Supportmitarbeiter, um eine weiße Liste zu fordern.
 
 Registerkarten sind Ansichtsbilder, die Sie zum Freigeben von Inhalten, halten von Unterhaltungen und Hosten von Drittanbieterdiensten verwenden können, die alle innerhalb des organischen Workflows eines Teams liegen. Wenn Sie eine Registerkarte in Microsoft Teams erstellen, wird Ihre Webanwendungs-Front-und-Mitte platziert, wo Sie leicht von wichtigen Unterhaltungen aus zugänglich ist.
@@ -58,7 +53,7 @@ Teams können in Fenstergrößen so klein wie 720px verwendet werden, damit sich
 
 ### <a name="flat-navigation"></a>Flache Navigation
 
-Wir bitten Entwickler, Ihr gesamtes Portal nicht zu einer Registerkarte hinzuzufügen. die relativ flache Navigation hilft dabei, ein einfacheres Gesprächs Modell beizubehalten. In anderen Worten handelt es sich bei der Unterhaltung um eine Liste von Dingen, wie beispielsweise Arbeitsaufgaben mit drei abgelagerten Elementen oder um eine einzelne Sache wie eine spec.
+Wir bitten Entwickler nicht, Ihr gesamtes Portal einer Registerkarte hinzuzufügen. Die relativ flache Navigation hilft dabei, ein einfacheres Unterhaltungs Modell beizubehalten. In anderen Worten handelt es sich bei der Unterhaltung um eine Liste von Dingen, wie beispielsweise Arbeitsaufgaben mit drei abgelagerten Elementen oder um eine einzelne Sache wie eine spec.
 
 Es gibt inhärente Navigationsprobleme mit der Hierarchie der tiefen Navigation in Thread-Unterhaltungen. Für eine optimale Benutzerfreundlichkeit sollte die Registerkartennavigation auf ein Minimum reduziert und wie folgt gestaltet werden:
 
@@ -103,7 +98,9 @@ Unter Einbeziehung ihrer eigenen Farben und Layouts Twill auch Hilfe bei der Kom
 
 Die Abmessungen der Registerkarten-Konfigurationsseite:
 
-<img width="450px" title="Größen für Konfigurationsregisterkarten" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
+
+<img width="450px" title="Größen für Konfigurationsregisterkarten" src="~/assets/images/tabs/config-dialog-Contoso2.png" alt="sizes for config tabs" />
+
 
 ### <a name="guidelines-for-tab-configuration-page-format"></a>Richtlinien für das Seitenformat der Registerkartenkonfiguration
 
@@ -117,7 +114,7 @@ Die Abmessungen der Registerkarten-Konfigurationsseite:
 
 Bei ordnungsgemäßer Größe sollte Ihre Registerkarten-Konfigurationsseite wie folgt aussehen:
 
-<img width="450px" title="Neue Registerkarte "Konfiguration"" src="~/assets/images/tabs/config-dialog-Contoso.png" />
+<img width="450px" title="Neue Registerkarte "Konfiguration"" src="~/assets/images/tabs/config-dialog-Contoso.png" alt="new config tab"/>
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
@@ -139,7 +136,7 @@ Es gibt zwei Benachrichtigungs Modi für Änderungen an Registerkarten Inhalten:
 
 > [!div class="checklist"]
 >
-> * **Verwenden Sie die APP-API, um Benutzer über Änderungen zu informieren**. Diese Meldung wird im Aktivitätsfeed des Benutzers und im Deep-Link zur Registerkarte angezeigt. *Weitere Informationen finden Sie unter*  [Erstellen von Deep Links zu Inhalten und Features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest)
+> * **Verwenden Sie die APP-API, um Benutzer über Änderungen zu informieren**. Diese Meldung wird im Aktivitätsfeed des Benutzers und im Deep-Link zur Registerkarte angezeigt. *Weitere Informationen finden Sie unter*  [Erstellen von Deep Links zu Inhalten und Features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
 > * **Verwenden Sie einen bot**. Diese Methode wird vor allem bevorzugt, wenn der Tab-Thread gezielt ist. Das Ergebnis ist, dass die Thread-Unterhaltung der Registerkarte als kürzlich aktiviert in die Ansicht verschoben wird. Diese Methode ermöglicht auch eine gewisse Raffinesse in der Art und Weise, wie die Benachrichtigung gesendet wird.
 
-  Durch das Senden einer Nachricht an einen Tab-Thread wird das Bewusstsein der Aktivität für alle Benutzer erhöht, ohne dass alle Personen explizit benachrichtigt werden. Dies ist die Sensibilisierung ohne Rauschen. Darüber hinaus `@mention` wird bei bestimmten Benutzern die gleiche Benachrichtigung in Ihren Feed eingefügt, indem Sie Sie direkt mit dem Tab-Thread verbindet.
+  Durch das Senden einer Nachricht an einen Tab-Thread wird das Bewusstsein der Aktivität für alle Benutzer erhöht, ohne dass alle Personen explizit benachrichtigt werden. Dies ist die Sensibilisierung ohne Rauschen. Darüber hinaus `@mention`  wird bei bestimmten Benutzern die gleiche Benachrichtigung in Ihren Feed eingefügt, indem Sie Sie direkt mit dem Tab-Thread verbindet.

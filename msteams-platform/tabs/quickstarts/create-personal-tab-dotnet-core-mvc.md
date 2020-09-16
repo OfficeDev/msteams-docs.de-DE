@@ -3,13 +3,13 @@ title: Erstellen Sie eine persönliche Registerkarte mit ASP. NET-Core-MVC
 author: laujan
 description: Eine Schnellstartanleitung zum Erstellen einer benutzerdefinierten persönlichen Registerkarte mit ASP. NET-Kern-MVC.
 ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: 3bdd23692eca5ff3f6fc3f82cdaa233d34d4c69f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 7fcb0862647dec15bc93eecf9ce637d52892825c
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674080"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818913"
 ---
 # <a name="create-a-custom-personal-tab-with-asp-net-core-mvc"></a>Erstellen einer benutzerdefinierten persönlichen Registerkarte mit ASP. NET-Core-MVC
 
@@ -37,7 +37,7 @@ Drücken Sie zum Erstellen und Ausführen der Anwendung **F5** , oder wählen Si
 
 ### <a name="startupcs"></a>Startup.cs
 
-Dieses Projekt wurde aus einer ASP. NET Core 2,2-Webanwendung leere Vorlage, wobei das Kontrollkästchen *Erweiterte-configure for HTTPS* beim Setup aktiviert ist. Die MVC `ConfigureServices()` -Dienste werden von der Dependency Injection Framework-Methode registriert. Darüber hinaus wird die Bereitstellung statischer Inhalte nicht standardmäßig durch die leere Vorlage aktiviert, sodass der `Configure()` Methode die statische Datei Middleware hinzugefügt wird:
+Dieses Projekt wurde aus einer ASP. NET Core 2,2-Webanwendung leere Vorlage, wobei das Kontrollkästchen *Erweiterte-configure for HTTPS* beim Setup aktiviert ist. Die MVC-Dienste werden von der Dependency Injection Framework- `ConfigureServices()` Methode registriert. Darüber hinaus wird die Bereitstellung statischer Inhalte nicht standardmäßig durch die leere Vorlage aktiviert, sodass der Methode die statische Datei Middleware hinzugefügt wird `Configure()` :
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -61,7 +61,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
 * Ein **vollfarbiges Symbol** , das 192 x 192 Pixel misst.
 * Ein **transparentes Umrisssymbol** , das 32 x 32 Pixel misst.
-* Eine **Manifest. JSON** -Datei, die die Attribute Ihrer APP angibt.
+* Ein **manifest.jsfür** die Datei, die die Attribute Ihrer APP angibt.
 
 Diese Dateien müssen in einem App-Paket gezippt werden, damit Sie Ihre Registerkarte in Microsoft Teams hochladen können. Microsoft Teams lädt das `contentUrl` angegebene in ihrem Manifest, bettet es in einen iframe ein und rendert es in ihrer Registerkarte.
 
@@ -93,7 +93,7 @@ Klicken Sie im Fenster Visual Studio Projektmappen-Explorer mit der rechten Maus
 
 ### <a name="views"></a>Ansichten
 
-#### <a name="home"></a>Startseite
+#### <a name="home"></a>Home
 
 ASP. NET Core werden Dateien mit dem Namen " *Index* " als Standard/Homepage für die Website behandelt. Wenn Ihre Browser-URL auf den Stamm der Website zeigt, wird *Index. cshtml* als Startseite für Ihre Anwendung angezeigt.
 
