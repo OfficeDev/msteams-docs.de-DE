@@ -1,22 +1,24 @@
 ---
-title: Erstellen einer Kanal Registerkarte für Teams
 author: heath-hamilton
 description: In diesem Artikel erfahren Sie, wie Sie eine Kanal Registerkarte in ihrer ersten Microsoft Teams-app erstellen.
+ms.author: lajanuar
+ms.date: 08/31/2020
 ms.topic: tutorial
-ms.openlocfilehash: f0c59328219b5611efc02c9eb04db6fdc517ca08
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+title: Erstellen einer Kanal Registerkarte für Teams
+ms.openlocfilehash: 2346c67d10ea857bdafbfac6d29a07cb58f5c644
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46652047"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964613"
 ---
 # <a name="create-a-channel-tab-for-teams"></a>Erstellen einer Kanal Registerkarte für Teams
 
 In diesem Lernprogramm erstellen Sie eine einfache *Kanal Registerkarte*, eine Vollbildschirm-Inhaltsseite für einen Teamkanal oder Chat. Im Gegensatz zu einer persönlichen Registerkarte können Benutzer einige Aspekte einer Kanal Registerkarte konfigurieren (beispielsweise benennen Sie die Registerkarte so um, dass Sie für Ihren Kanal sinnvoll ist).
 
-## <a name="before-you-begin"></a>Bevor Sie beginnen
+## <a name="before-you-begin"></a>Bevor Sie beginnen:
 
-Sie benötigen eine grundlegende ausgeführte App für den Einstieg. Wenn Sie noch keinen haben, befolgen Sie die Anweisungen unter [Build, und führen Sie die erste APP für Teams](build-and-run-with-toolkit.md)aus. Wenn Sie Ihr App-Projekt erstellen, wählen Sie nur die **Kanal Registerkarte "Gruppe" oder "Teams"** aus.
+Sie benötigen eine grundlegende ausgeführte App für den Einstieg. Wenn Sie noch keinen haben, folgen Sie den [Anweisungen unter Build, und führen Sie Ihre Teams erste APP](../build-your-first-app/build-and-run.md)aus. Wenn Sie Ihr App-Projekt erstellen, wählen Sie nur die **Kanal Registerkarte "Gruppe" oder "Teams"** aus.
 
 ## <a name="your-assignment"></a>Ihre Zuordnung
 
@@ -28,15 +30,15 @@ Sie können diese Informationen leichter finden, indem Sie eine Kanal Registerka
 
 > [!div class="checklist"]
 >
-> * Identifizieren des App-Manifests und der für Kanal Registerkarten relevanten Gerüst Komponenten
-> * Erstellen von Inhalten für die Registerkarte
+> * Identifizieren der für Kanal Registerkarten relevanten App-Manifest-Eigenschaften und-Gerüste
+> * Erstellen von Registerkarten Inhalten
 > * Erstellen von Inhalten für die Konfigurationsseite einer Registerkarte
-> * Konfigurieren und Installieren der Registerkarte zulassen
+> * Zulassen der Konfiguration und Installation einer Registerkarte
 > * Angeben eines vorgeschlagenen Registerkarten namens
 
-## <a name="identify-relevant-app-manifest-and-scaffolding-components"></a>Identifizieren relevanter App-Manifest-und Gerüstbau-Komponenten
+## <a name="identify-relevant-app-project-components"></a>Identifizieren relevanter App-Projektkomponenten
 
-Ein Großteil der Kanal Registerkarten-App-Gerüste und Manifeste wird automatisch eingerichtet, wenn Sie Ihr Projekt mit dem Teams-Toolkit erstellen. Lassen Sie uns die Hauptkomponenten zum Erstellen einer Kanal Registerkarte betrachten.
+Ein Großteil des App-Manifests und Gerüste werden automatisch eingerichtet, wenn Sie Ihr Projekt mit dem Teams-Toolkit erstellen. Lassen Sie uns die Hauptkomponenten zum Erstellen einer Kanal Registerkarte betrachten.
 
 ### <a name="app-manifest"></a>App-Manifest
 
@@ -141,7 +143,7 @@ Fügen Sie der Konfigurationsseite einige Inhalte hinzu. Wechseln Sie zum Verzei
 
 ## <a name="allow-the-tab-to-be-configured-and-installed"></a>Konfigurieren und Installieren der Registerkarte zulassen
 
-Damit Benutzer die Kanal Registerkarte erfolgreich konfigurieren und installieren können, müssen Sie die Host-URL hinzufügen, die Sie beim [Erstellen und durchführen ihrer ersten App](build-and-run-with-toolkit.md) für die Komponente "Konfigurationsseite" eingerichtet haben.
+Damit Benutzer die Kanal Registerkarte erfolgreich konfigurieren und installieren können, müssen Sie die Host-URL hinzufügen, die Sie beim [Erstellen und durchführen ihrer ersten App](../build-your-first-app/build-and-run.md) für die Komponente "Konfigurationsseite" eingerichtet haben.
 
 Wechseln Sie zu `TabConfig.js` und suchen Sie `microsoftTeams.settings.setSettings` . `"contentUrl"`Ersetzen Sie dabei den `localhost:3000` Teil der URL durch die Domäne, in der Sie den Registerkarteninhalt hosten (siehe Abbildung).
 
@@ -177,11 +179,11 @@ Um die Konfigurations-und Inhaltsseiten Ihrer Kanal Registerkarte anzuzeigen, m�
 1. Wählen Sie **zu einem Team hinzufügen** oder **zu einem Chat hinzufügen** aus, und suchen Sie nach einem Kanal oder Chat, den Sie zum Testen verwenden können.
 1. Wählen Sie **Einrichten einer Registerkarte**aus. Die Konfigurationsseite wird angezeigt.
 
-:::image type="content" source="../doc-links/images/channel-tab-tutorial-content.png" alt-text="Beispiel Screenshot einer Kanal Registerkarten-Konfigurationsseite":::
+:::image type="content" source="../doc-links/images/channel-tab-tutorial-content.png" alt-text="Beispiel Screenshot einer Kanal Registerkarte mit statischem Inhalt.":::
 
 Nachdem Sie **Save** zum Konfigurieren der Registerkarte ausgewählt haben, wird der Inhalt angezeigt.
 
-![Beispiel Screenshot einer Kanal Registerkarte mit statischem Inhalt](../doc-links/images/channel-tab-tutorial-content-installed.png)
+:::image type="content" source="../doc-links/images/channel-tab-tutorial-content-installed.png" alt-text="Beispiel Screenshot der Kanal Registerkarte mit statischem Inhalt.":::
 
 ## <a name="well-done"></a>Gut gemacht
 
@@ -192,4 +194,11 @@ Herzlichen Glückwunsch! Sie verfügen über eine Teams-App mit einer Kanal Regi
 * [Authentifizieren von Registerkarten Benutzern mit SSO](../../tabs/how-to/authentication/auth-aad-sso.md): Wenn Sie nur autorisierte Benutzer Ihrer Registerkarte anzeigen möchten, richten Sie einmaliges Anmelden (Single Sign-on, SSO) über Azure Active Directory (AD) ein.
 * [Einbetten von Inhalten aus einer vorhandenen Web-App oder Webseite](../../tabs/how-to/add-tab.md#tab-requirements): Wir haben gezeigt, wie Sie neue Inhalte für eine persönliche RegisterkarteErstellen, aber Sie können auch Inhalte aus einer externen URL laden.
 * [Erstellen Sie eine nahtlose Benutzeroberfläche für Ihre Registerkarte](../../tabs/design/tabs.md): Lesen Sie die empfohlenen Richtlinien für das Entwerfen von Microsoft Teams-Registerkarten.
-* [Erstellen von Registerkarten für Mobilgeräte](../../tabs/design/tabs-mobile.md): Hier erfahren Sie, wie Sie Registerkarten für Smartphones und Tablets entwickeln.
+* [Erstellen von Registerkarten für Mobilgeräte](../../tabs/design/tabs-mobile.md): Hier erfahren Sie, wie Sie Registerkarten für Telefone und Tablets entwickeln.
+
+## <a name="next-lesson"></a>Nächste Lektion
+
+Sie wissen, wie Sie eine Registerkarte für die Zusammenarbeit erstellen. Möchten Sie versuchen, eine andere Art von Teams-APP zu erstellen?
+
+> [!div class="nextstepaction"]
+> [Erstellen eines bot](../build-your-first-app/add-bot.md)

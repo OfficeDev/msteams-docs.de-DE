@@ -5,12 +5,12 @@ description: Erstellen einer Registerkarten-Entfernungs Seite
 keywords: Teams-Registerkartengruppe Kanal konfigurierbar entfernen löschen
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a8b40911de3e2519d8194415e2d8e467d0766ef2
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 4ee060b8ef1f439ed4f8e4007e63606ce34c3d24
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818899"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964592"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>Ändern oder Entfernen einer Kanalgruppen Registerkarte
 
@@ -39,7 +39,7 @@ Die optionale Entfernungs Seite ist eine HTML-Seite, die Sie hosten und angezeig
 
 ### <a name="register-a-remove-handler"></a>Registrieren eines Remove-Handlers
 
-Optional können Sie in der Logik ihrer Entfernungs Seite den `registerOnRemoveHandler((RemoveEvent) => {}` Ereignishandler aufrufen, wenn der Benutzer eine vorhandene Registerkartenkonfiguration entfernt. Die-Methode nimmt die [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest) Schnittstelle an und führt den Code im Handler aus, wenn ein Benutzer versucht, Inhalte zu entfernen. Es wird verwendet, um Bereinigungsvorgänge wie das Entfernen der zugrunde liegenden Ressource, die die Registerkarteninhalte macht, auszuführen. Nur ein Remove-Handler kann gleichzeitig registriert werden.
+Optional können Sie in der Logik ihrer Entfernungs Seite den `registerOnRemoveHandler((RemoveEvent) => {}` Ereignishandler aufrufen, wenn der Benutzer eine vorhandene Registerkartenkonfiguration entfernt. Die-Methode nimmt die [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) Schnittstelle an und führt den Code im Handler aus, wenn ein Benutzer versucht, Inhalte zu entfernen. Es wird verwendet, um Bereinigungsvorgänge wie das Entfernen der zugrunde liegenden Ressource, die die Registerkarteninhalte macht, auszuführen. Nur ein Remove-Handler kann gleichzeitig registriert werden.
 
 Die `RemoveEvent` Schnittstelle beschreibt ein Objekt mit zwei Methoden:
 
@@ -49,11 +49,11 @@ Die `RemoveEvent` Schnittstelle beschreibt ein Objekt mit zwei Methoden:
 
 #### <a name="use-the-getsettings-function"></a>Verwenden Sie die `getSettings()` Funktion
 
-Sie können `getSettings()` zum Festlegen des zu entfernenden Registerkarteninhalts verwenden. Die `getSettings((Settings) =>{})` -Funktion übernimmt die [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) und stellt die gültigen Einstellungen-Eigenschaftswerte bereit, die abgerufen werden können.
+Sie können `getSettings()` zum Festlegen des zu entfernenden Registerkarteninhalts verwenden. Die `getSettings((Settings) =>{})` -Funktion übernimmt die [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) und stellt die gültigen Einstellungen-Eigenschaftswerte bereit, die abgerufen werden können.
 
 #### <a name="use-the-getcontext-function"></a>Verwenden Sie die `getContext()` Funktion
 
-Sie können `getContext()` zum Abrufen des aktuellen Kontexts verwenden, in dem der Frame gestartet wird. Die `getContext((Context) =>{})` -Funktion übernimmt die [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) und stellt gültige `Context` Eigenschaftswerte bereit, die Sie in ihrer Entfernungs Seitenlogik verwenden können, um den Inhalt zu bestimmen, der auf der Entfernungs Seite angezeigt werden soll.
+Sie können `getContext()` zum Abrufen des aktuellen Kontexts verwenden, in dem der Frame gestartet wird. Die `getContext((Context) =>{})` -Funktion übernimmt die [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) und stellt gültige `Context` Eigenschaftswerte bereit, die Sie in ihrer Entfernungs Seitenlogik verwenden können, um den Inhalt zu bestimmen, der auf der Entfernungs Seite angezeigt werden soll.
 
 #### <a name="include-authentication"></a>Einschließen der Authentifizierung
 

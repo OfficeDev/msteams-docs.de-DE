@@ -1,6 +1,16 @@
 ---
-Title: "Erstellen einer persönlichen Registerkarte mit ASP.net-Kern" Autor: laujan Description: eine Schnellstartanleitung zum Erstellen einer benutzerdefinierten persönlichen Registerkarte mit ASP.net Core.
-ms. Topic: Schnellstart ms. Author: lajanuar
+title: Erstellen einer persönlichen Registerkarte mit ASP.net Core
+author: laujan
+description: Eine Schnellstartanleitung zum Erstellen einer benutzerdefinierten persönlichen Registerkarte mit ASP.net Core.
+ms.topic: quickstart
+ms.author: lajanuar
+ms.openlocfilehash: 21d1de18bfa8b7959cbecfe6eb50430ed8d3f3ec
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964578"
+---
 # <a name="create-a-custom-personal-tab-with-aspnet-core"></a>Erstellen einer benutzerdefinierten persönlichen Registerkarte mit ASP.net Core
 
 In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten persönlichen Registerkarte mit C#-und ASP.net-Core-Razor-Seiten Schritt halten. Wir verwenden auch [App Studio für Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) , um Ihr App-Manifest abzuschließen und die Registerkarte in Teams bereitzustellen.
