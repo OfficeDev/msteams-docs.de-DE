@@ -1,17 +1,17 @@
 ---
-title: Entwerfen einer Microsoft Teams-Registerkarte "in der Besprechung"
+title: Entwerfen einer Microsoft Teams-Registerkarte für Besprechungen
 author: heath-hamilton
 description: Anleitungen und bewährte Methoden für den Entwurf der Registerkarte "in-Meeting" für Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: ec095654f4a0816478b1b32a45c931d74dbb3209
-ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
+ms.openlocfilehash: 91981ab79c8e50483568dd0dc750b4e9b3fdef24
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "48098008"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178323"
 ---
-# <a name="designing-an-in-meeting-tab"></a>Entwerfen einer in-Meeting-Registerkarte
+# <a name="design-an-in-meeting-tab"></a>Entwerfen einer in-Meeting-Registerkarte
 
 Die Registerkarte in-Meeting ist eine Arbeitsfläche zum Erweitern der Zusammenarbeit während Besprechungen. Basierend auf den registerkartenfunktionen von Teams können Teilnehmer App-Inhalte in einem dedizierten Raum außerhalb der Besprechungs Phase über freigegebene oder rollenbasierte Ansichten anzeigen und interagieren.
 
