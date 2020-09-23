@@ -1,16 +1,16 @@
 ---
 title: Erweitern Ihrer Teams-App mit einer benutzerdefinierten Registerkarte
 author: laujan
-description: Leitfaden zum Erstellen einer Registerkarte
+description: Vorgehensweise Erstellen einer Registerkarte für Microsoft Teams mit App Studio oder manuell.
 keywords: Teams-Registerkartengruppe Kanal konfigurierbar
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 0434aabc39900e8f8232ae307a5854b2eb3a756d
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 78077a19c8597826ca6d10a7c1c6240fae3f3fbd
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819032"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209718"
 ---
 # <a name="extend-your-teams-app-with-a-custom-tab"></a>Erweitern Ihrer Teams-App mit einer benutzerdefinierten Registerkarte
 
@@ -81,10 +81,10 @@ Der angezeigte Inhalt für persönliche Registerkarten ist für alle Benutzer gl
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`entityId`|String|64 Zeichen|✔|Ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird.|
-|`name`|Zeichenfolge|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanalschnittstelle.|
-|`contentUrl`|Zeichenfolge|2048 Zeichen|✔|Die https://-URL, die auf die Benutzeroberfläche der Entität zeigt, die im Canvas "Teams" angezeigt werden soll.|
-|`websiteUrl`|Zeichenfolge|2048 Zeichen||Die https://-URL, auf die verwiesen wird, wenn ein Benutzer sich für die Anzeige in einem Browser entscheidet.|
-|`scopes`|Array von Enumerationen|1 |✔|Statische Registerkarten unterstützen nur den `personal` Bereich, was bedeutet, dass Sie nur als Teil einer persönlichen App zur Verfügung gestellt werden können.|
+|`name`|String|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanalschnittstelle.|
+|`contentUrl`|String|2048 Zeichen|✔|Die https://-URL, die auf die Benutzeroberfläche der Entität zeigt, die im Canvas "Teams" angezeigt werden soll.|
+|`websiteUrl`|String|2048 Zeichen||Die https://-URL, auf die verwiesen wird, wenn ein Benutzer sich für die Anzeige in einem Browser entscheidet.|
+|`scopes`|Array von Enumerationen|1|✔|Statische Registerkarten unterstützen nur den `personal` Bereich, was bedeutet, dass Sie nur als Teil einer persönlichen App zur Verfügung gestellt werden können.|
 
 #### <a name="simple-personal-tab-manifest-example"></a>Beispiel für einfaches persönliches Tab-Manifest
 
@@ -109,9 +109,9 @@ Im Array werden Kanäle/Gruppenregisterkarten hinzugefügt `configurableTabs` . 
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`configurationUrl`|Zeichenfolge|2048 Zeichen|✔|Die Seite https://URL to Configuration.|
-|`canUpdateConfiguration`|Boolean|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte nach der Erstellung vom Benutzer aktualisiert werden kann. Standard `true`|
-|`scopes`|Array von Enumerationen|1 |✔|Konfigurierbare Registerkarten unterstützen nur die `team` und `groupchat` Bereiche. |
+|`configurationUrl`|String|2048 Zeichen|✔|Die Seite https://URL to Configuration.|
+|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte nach der Erstellung vom Benutzer aktualisiert werden kann. Standard `true`|
+|`scopes`|Array von Enumerationen|1|✔|Konfigurierbare Registerkarten unterstützen nur die `team` und `groupchat` Bereiche. |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>Beispiel für einfaches Channel/Group-Registerkarten Manifest
 

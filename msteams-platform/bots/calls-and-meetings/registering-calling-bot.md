@@ -2,14 +2,14 @@
 title: Registrieren eines Anruf-und Besprechungs-bot für Microsoft Teams
 description: Informationen zum Registrieren eines neuen bot für Audio/Videoanrufe für Microsoft Teams
 keywords: Aufrufen von bot-Audio/Video-Audio-Video Medien
-ms.openlocfilehash: 9b932e6a330b495aef97e65c7bb1f297fdfc1336
-ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
+ms.openlocfilehash: 4db6c29352aa117e0dd1959826d0560359864d8a
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "45103005"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209753"
 ---
-# <a name="registering-a-calling-bot-for-microsoft-teams"></a>Registrieren eines anrufenden bot für Microsoft Teams
+# <a name="register-a-calling-bot-for-microsoft-teams"></a>Registrieren eines anrufenden bot für Microsoft Teams
 
 Ein bot, der an Audio/Video-anrufen und Onlinebesprechungen teilnimmt, ist ein gewöhnlicher Microsoft Teams-bot mit einigen zusätzlichen Features:
 

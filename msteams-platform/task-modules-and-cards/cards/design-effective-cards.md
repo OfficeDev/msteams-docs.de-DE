@@ -2,14 +2,14 @@
 title: Entwerfen effektiver Karten
 description: Beschreibt die Entwurfsrichtlinien zum Erstellen von Karten.
 keywords: Teams-Entwurfsrichtlinien Referenz-Framework-Karten anpassungsfähiges Leichtgewicht
-ms.openlocfilehash: 33ee0b59a3a5a1490d6e2106f8532094ed852598
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4ec410820e0288d99dacb6944a8096f4f61b9d34
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674522"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209837"
 ---
-# <a name="designing-effective-cards"></a>Entwerfen effektiver Karten
+# <a name="design-effective-cards"></a>Entwerfen effektiver Karten
 
 Karten sind Aktionen-Snippets von Inhalten, die Sie einer Unterhaltung über einen bot, einen Konnektor oder eine APP hinzufügen können. Mithilfe von Text, Grafiken und Schaltflächen können Sie mit Karten mit einer Zielgruppe kommunizieren.
 

@@ -4,12 +4,12 @@ author: laujan
 description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Microsoft Teams-Plattform
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: c9e76d13c96c48f88b555b3d740912017a8b2d0a
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 67b509e7d4f71fe6b597a22bb9141f51dc8284ab
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818878"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209774"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>Was sind benutzerdefinierte Microsoft Teams-Registerkarten?
 
@@ -55,4 +55,4 @@ Sie können maximal eine (1) Kanal/Gruppen-Registerkarte und bis zu sechzehn (16
 
 ## <a name="mobile-clients"></a>Mobile Clients
 
-Wenn Sie die Registerkarte Kanal/Gruppe/persönliche Registerkarte auf mobilen Microsoft Teams-Clients anzeigen möchten, `setSettings()` muss die Konfiguration einen Wert für die `websiteUrl` Eigenschaft besitzen. Um eine optimale Benutzerfreundlichkeit sicherzustellen, sollten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md) beim Erstellen Ihrer Registerkarten befolgten.
+Wenn die Registerkarte Kanal/Gruppe auf mobilen Teams-Clients angezeigt werden soll, `setSettings()` muss die Konfiguration einen Wert für die `websiteUrl` Eigenschaft besitzen. Um eine optimale Benutzerfreundlichkeit sicherzustellen, sollten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md) beim Erstellen Ihrer Registerkarten befolgten.

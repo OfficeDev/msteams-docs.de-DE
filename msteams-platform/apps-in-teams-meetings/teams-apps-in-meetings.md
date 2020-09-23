@@ -5,12 +5,12 @@ description: Übersicht über apps in Microsoft Teams-Besprechungen basierend au
 ms.topic: overview
 ms.author: lajanuar
 keywords: Teams-apps-Besprechungen Benutzer Teilnehmer-Rollen-API
-ms.openlocfilehash: f60f09283827ee8b22db4e77154ee986b26b54f8
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: c1cb894f066ac82b49fe327a3bbf10acf0d750dd
+ms.sourcegitcommit: 71b12e346c43853a99341b13837a44ff9555a5d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "48182006"
+ms.locfileid: "48204024"
 ---
 # <a name="apps-in-teams-meetings-preview"></a>Apps in Teams-Besprechungen (Vorschau)
 
@@ -62,7 +62,7 @@ Auf ✔ Registerkarten-Apps können in Besprechungs **Details** und **Chats** -S
 ✔ Für eine APP können in einer Teams-Besprechung in zwei Bereichen angezeigt werden:
 
 &emsp;&emsp;&#9679; **Seitenbereich**. </br>
-> **Hinweis**: Wenn Ihr _App-Manifest_ angibt, dass Ihre Registerkarte [für den Seitenbereich optimiert](create-apps-for-teams-meetings.md#in-meeting)ist, wird Sie angezeigt. Ich kann auch Teil einer Erfahrung mit Freigabe Schacht sein, die bestimmten Entwurfsrichtlinien unterliegt.
+> **Hinweis**: Wenn Ihr _App-Manifest_ angibt, dass Ihre Registerkarte [für den Seitenbereich optimiert](create-apps-for-teams-meetings.md#in-meeting)ist, wird Sie angezeigt. Es kann auch Teil einer Erfahrung mit Freigabe Schacht sein, die bestimmten Entwurfsrichtlinien unterliegt.
 
 &emsp;&emsp;&#9679; **in-Meeting-Dialog**. Verwenden Sie das in-Meeting-Dialogfeld, um Aktions Inhalte für Besprechungsteilnehmer zu präsentieren. *Siehe* [Erstellen von Apps für Microsoft Teams-Besprechungen](create-apps-for-teams-meetings.md).
 
@@ -120,7 +120,7 @@ Wählen Sie &#11200; in einer Besprechungseinladung die Option **Besprechungsopt
 > Benutzertypen können an Besprechungen teilnehmen und eine der oben beschriebenen Teilnehmerrollen annehmen. Der Benutzertyp wird nicht als Teil der **getParticipantRole** -API verfügbar gemacht.
 
 1. **Im Mandanten**. Diese Benutzer gehören zur Organisation und verfügen über Anmeldeinformationen in Azure Active Directory für den Mandanten. Dabei handelt es sich normalerweise um Vollzeitmitarbeiter, vor-Ort-oder Remotemitarbeiter.
-1. **Gast**. Ein Gast ist ein Teilnehmer einer anderen Organisation, der eingeladen wurde, auf Teams oder andere Ressourcen im Mandanten Ihrer Organisation zuzugreifen. Gäste werden dem Active Directory Ihrer Organisation hinzugefügt und können nahezu alle Teams-Funktionen wie ein systemeigenes Teammitglied mit Vollzugriff auf Team Chats, Besprechungen und Dateien erhalten. _Siehe_ [Guess Access in Microsoft Teams](/microsoftteams/guest-access)
+1. **Gast**. Ein Gast ist ein Teilnehmer einer anderen Organisation, der eingeladen wurde, auf Teams oder andere Ressourcen im Mandanten Ihrer Organisation zuzugreifen. Gäste werden dem Active Directory Ihrer Organisation hinzugefügt und können nahezu alle Teams-Funktionen wie ein systemeigenes Teammitglied mit Vollzugriff auf Team Chats, Besprechungen und Dateien erhalten. _Siehe_ [Gastzugriff in Microsoft Teams](/microsoftteams/guest-access)
 1. **Verbund/extern**. Ein Verbundbenutzer ist ein externer Teams-Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Da diese Benutzer gültige Anmeldeinformationen für Verbundpartner haben, werden Sie von Microsoft Teams authentifiziert, haben aber keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen von Ihrer Organisation. Wenn Sie möchten, dass externe Benutzer Zugriff auf Teams und Kanäle haben, ist der Gastzugriff möglicherweise eine bessere Option. _Siehe_ [Verwalten von externem Zugriff in Microsoft Teams](/microsoftteams/manage-external-access)
 1. **Anonym**. Anonyme Benutzer verfügen nicht über eine Active Directory Identität und sind nicht Verbund mit einem Mandanten. Der anonyme Teilnehmer ist wie ein externer Benutzer, aber seine Identität wird nicht in die Besprechung projiziert. Anonyme Benutzer können nicht auf apps in einem Besprechungsfenster zugreifen.
 
