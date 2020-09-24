@@ -4,12 +4,12 @@ author: clearab
 description: Hier erfahren Sie, wie Sie den spezifischen Kontext des Microsoft Teams für Ihren bot abrufen, einschließlich der Liste der Unterhaltungen, Details und Kanäle.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a29fc192a88534620a463e7e14d383999a7783e7
-ms.sourcegitcommit: 68aeac34a2e585b985eabfae5d160b6b26d43b1a
+ms.openlocfilehash: 55f93a914cdb0f92885ff535424cd823072184aa
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "44801285"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237800"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Abrufen des spezifischen Kontexts des Teams für Ihren bot
 
@@ -35,10 +35,10 @@ public class MyBot : TeamsActivityHandler
         {
             var currentPage = await TeamsInfo.GetPagedMembersAsync(turnContext, 100, continuationToken, cancellationToken);
             continuationToken = currentPage.ContinuationToken;
-            members = members.Concat(currentPage.Members).ToList();
-        }
-        while (continuationToken != null);
-    }
+            members.AddRange(currentPage.Members);
+         }
+         while (continuationToken != null);
+     }
 }
 ```
 

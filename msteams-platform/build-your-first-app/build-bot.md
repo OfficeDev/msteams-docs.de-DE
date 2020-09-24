@@ -5,12 +5,12 @@ description: Hier erfahren Sie, wie Sie einen bot für Ihre erste Microsoft Team
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7d3d1b63aace7fda971fb6ccaddddf631b4b2ad9
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: cc004bd0d86eca1e4e63c2a96a72f9c11d2269db
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210197"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237825"
 ---
 # <a name="build-a-teams-bot"></a>Erstellen eines Teams-bot
 
@@ -34,7 +34,7 @@ Ihr Arbeitsplatz verwendet [Registerkarten](../build-your-first-app/build-person
 
 Wenn Sie noch nicht vorhanden sind, stellen Sie sicher, dass Sie [die Entwicklungsvoraussetzungen für Teams kennen und installieren](build-first-app-overview.md#get-prerequisites).
 
-## <a name="create-your-app-project"></a>Erstellen eines App-Projekts
+## <a name="1-create-your-app-project"></a>1. Erstellen des App-Projekts
 
 Das Microsoft Teams-Toolkit hilft Ihnen, die folgenden Komponenten für Ihre APP einzurichten:
 
@@ -53,7 +53,7 @@ Das Microsoft Teams-Toolkit hilft Ihnen, die folgenden Komponenten für Ihre APP
 1. Optional Geben Sie einen benutzerdefinierten Namen für Ihren bot ein, und wählen Sie **Erstellen**aus. (Denken Sie daran, dies ist der Name für Ihren bot und nicht der Name der Microsoft Teams-APP, die Sie bereits angegeben haben.)
 1. Klicken Sie unten auf dem Bildschirm auf **Fertig stellen** , um Ihr Projekt zu konfigurieren.
 
-## <a name="identify-relevant-app-project-components"></a>Identifizieren relevanter App-Projektkomponenten
+## <a name="2-identify-relevant-app-project-components"></a>2. Identifizieren der relevanten App-Projektkomponenten
 
 Ein Großteil des App-Manifests und Gerüste werden automatisch eingerichtet, wenn Sie Ihr Projekt mit dem Teams-Toolkit erstellen. Lassen Sie uns die Hauptkomponenten zum Erstellen eines bot betrachten.
 
@@ -105,7 +105,7 @@ Das App-Gerüst enthält eine `botActivityHandler.js` Datei, die sich im Stammve
 
 Die `.env` Datei, auch im Stammverzeichnis, speichert Ihre bot-ID und Ihr Kennwort.
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>Einrichten eines sicheren Tunnels für Ihre APP
+## <a name="3-set-up-a-secure-tunnel-to-your-app"></a>3. Einrichten eines sicheren Tunnels für Ihre APP
 
 Zu Testzwecken hosten wir Ihren bot auf einem lokalen Webserver (Port 3978).
 
@@ -116,7 +116,7 @@ Zu Testzwecken hosten wir Ihren bot auf einem lokalen Webserver (Port 3978).
 
 Ihr App-Manifest zeigt auf die Stelle, an der Sie den bot hosten.
 
-## <a name="configuring-your-bot"></a>Konfigurieren Ihres bot
+## <a name="4-configure-your-bot"></a>4. Konfigurieren Ihres bot
 
 Um einen bot in Microsoft Teams zu verwenden, müssen Sie ihn bei dem Azure bot-Dienst registrieren. Glücklicherweise wird dies automatisch durchgeführt, wenn Sie Ihre APP mit dem Teams-Toolkit einrichten.
 
@@ -140,7 +140,7 @@ Sie müssen eine Endpunkt-URL angeben, um Benutzer Nachrichten (d. h., Anforderu
 
 Ihr bot wird in der Lage sein, auf Nachrichten in Microsoft Teams zu antworten.
 
-## <a name="run-your-app"></a>Ausführen der APP
+## <a name="5-run-your-app"></a>5. führen Sie Ihre APP aus.
 
 Sie haben eine URL zum Hosten Ihres bot eingerichtet und für die Verarbeitung von Nachrichten konfiguriert. Es ist an der Zeit, dass Ihr bot in Betrieb geht.
 
@@ -151,19 +151,19 @@ Wenn die Meldung erfolgreich verläuft, wird die folgende Meldung angezeigt, die
 
 `Bot/ME service listening at http://localhost:3978`
 
-## <a name="sideload-your-bot-in-teams"></a>Querladen Ihres bot in Microsoft Teams
+## <a name="6-sideload-your-bot-in-teams"></a>6. querladen Ihres bot in Microsoft Teams
 
 Wenn Ihr bot läuft, können Sie ihn in Microsoft Teams installieren.
 
 > [!TIP]
-> Wenn Sie noch keine Teams-App quer geladene haben und Probleme haben, führen Sie die folgenden [Schritte](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams)aus.
+> Wenn Sie noch keine Teams-App quer geladene haben und Probleme haben, führen Sie die folgenden [Schritte](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams)aus.
 
 1. Melden Sie sich mit Ihrem Konto beim Microsoft Teams-Client an, das App-Sideloading zulässt.
 1. Wählen Sie **apps**aus, und wählen Sie dann **benutzerdefinierte App hochladen**aus.
 1. Wechseln Sie zu Ihrem APP `.publish` -Projektordner, und wählen Sie aus `Development.zip` .
 1. Wählen Sie im modalen Installationsmodus die Option **Hinzufügen** aus, um Ihre APP zu installieren.
 
-## <a name="test-your-bot"></a>Testen des bot
+## <a name="7-test-your-bot"></a>7. Testen Sie Ihren bot
 
 Nun zum spaßigen Teil: sagen wir "Hallo" zu Ihrem bot in einem Einzelchat.
 

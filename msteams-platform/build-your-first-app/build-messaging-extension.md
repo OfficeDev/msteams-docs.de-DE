@@ -5,12 +5,12 @@ description: Hier erfahren Sie, wie Sie eine Messaging Erweiterung für Ihre ers
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 0475fcea7d865849fa60c5b3b23788bf90ee5e25
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 4fd35f6d5cc4b4ba202cb4276386918a5d88d692
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210227"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237818"
 ---
 # <a name="build-a-teams-messaging-extension"></a>Erstellen einer Microsoft Teams-Messaging Erweiterung
 
@@ -36,7 +36,7 @@ Das Helpdesk Ihrer Organisation kommuniziert mit Benutzern über Teams, die Tick
 
 Wenn Sie noch nicht vorhanden sind, stellen Sie sicher, dass Sie [die Entwicklungsvoraussetzungen für Teams kennen und installieren](build-first-app-overview.md#get-prerequisites).
 
-## <a name="create-your-app-project"></a>Erstellen eines App-Projekts
+## <a name="1-create-your-app-project"></a>1. Erstellen des App-Projekts
 
 Das Microsoft Teams-Toolkit hilft Ihnen beim Einrichten der folgenden Komponenten für Ihre Messaging-Erweiterung:
 
@@ -58,7 +58,7 @@ Das Microsoft Teams-Toolkit hilft Ihnen beim Einrichten der folgenden Komponente
 :::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="Abbildung, die zeigt, wie Sie sich im Teams-Toolkit bei Ihrem Microsoft 365-Konto anmelden können, um einen neuen bot für Ihre Messaging Erweiterung zu erstellen.":::
 1. Klicken Sie unten auf dem Bildschirm auf **Fertig stellen** , um Ihr Projekt zu konfigurieren.
 
-## <a name="identify-relevant-app-project-components"></a>Identifizieren relevanter App-Projektkomponenten
+## <a name="2-identify-relevant-app-project-components"></a>2. Identifizieren der relevanten App-Projektkomponenten
 
 Ein Großteil des App-Manifests und Gerüste werden automatisch eingerichtet, wenn Sie Ihr Projekt mit dem Teams-Toolkit erstellen.
 
@@ -108,9 +108,9 @@ Lassen Sie uns einige der Eigenschaften verstehen, die das Toolkit für Sie erst
 
 Das App-Gerüst enthält eine `.env` Datei, die sich im Stammverzeichnis des Projekts befindet und die ID und das Kennwort für den bot Ihrer Messaging Erweiterung speichert.
 
-Auch im Stammverzeichnis gibt es eine Datei, in der `botActivityHandler.js` Sie behandeln können, wie Ihre Messaging Erweiterung (oder der [bot der Messaging Erweiterung](#configuring-the-bot-for-your-messaging-extension)) auf Suchabfragen in Microsoft Teams reagiert.
+Auch im Stammverzeichnis gibt es eine Datei, in der `botActivityHandler.js` Sie behandeln können, wie Ihre Messaging Erweiterung (oder der [bot der Messaging Erweiterung](#4-configure-the-bot-for-your-messaging-extension)) auf Suchabfragen in Microsoft Teams reagiert.
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>Einrichten eines sicheren Tunnels für Ihre APP
+## <a name="3-set-up-a-secure-tunnel-to-your-app"></a>3. Einrichten eines sicheren Tunnels für Ihre APP
 
 Zu Testzwecken hosten wir Ihre Messaging-Erweiterung auf einem lokalen Webserver (Port 3978).
 
@@ -121,7 +121,7 @@ Zu Testzwecken hosten wir Ihre Messaging-Erweiterung auf einem lokalen Webserver
 
 Ihr App-Manifest zeigt auf die Stelle, an der Sie den von der Messaging Erweiterung verwendeten bot hosten.
 
-## <a name="configuring-the-bot-for-your-messaging-extension"></a>Konfigurieren des bot für Ihre Messaging-Erweiterung
+## <a name="4-configure-the-bot-for-your-messaging-extension"></a>4. Konfigurieren des bot für Ihre Messaging-Erweiterung
 
 Messaging-Erweiterungen beruhen darauf, dass Bots Benutzeranforderungen von Teams an den gehosteten Dienst senden und verarbeiten.
 
@@ -145,7 +145,7 @@ Sie müssen eine bot-Endpunkt-URL angeben, um Suchabfragen in Ihrer Messaging-Er
 
 Ihr bot ist in der Lage, Abfragen in Ihrer Messaging-Erweiterung zu verarbeiten.
 
-## <a name="run-your-app"></a>Ausführen der APP
+## <a name="5-run-your-app"></a>5. führen Sie Ihre APP aus.
 
 Sie haben eine URL eingerichtet, die Ihre Messaging-Erweiterung hostet und für die Verarbeitung von Suchvorgängen konfiguriert ist. Es ist an der Zeit, Ihre APP in Betrieb zu nehmen.
 
@@ -156,19 +156,19 @@ Wenn die Meldung erfolgreich verläuft, wird die folgende Meldung angezeigt, die
 
 `Bot/ME service listening at http://localhost:3978`
 
-## <a name="sideload-your-messaging-extension-in-teams"></a>Querladen Ihrer Messaging Erweiterung in Microsoft Teams
+## <a name="6-sideload-your-messaging-extension-in-teams"></a>6. querladen Ihrer Messaging Erweiterung in Microsoft Teams
 
 Wenn Ihre Messaging-Erweiterung aktiv ist, können Sie Sie in Microsoft Teams installieren.
 
 > [!TIP]
-> Wenn Sie noch keine Teams-App quer geladene haben und Probleme haben, führen Sie die folgenden [Schritte](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams)aus.
+> Wenn Sie noch keine Teams-App quer geladene haben und Probleme haben, führen Sie die folgenden [Schritte](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams)aus.
 
 1. Melden Sie sich mit Ihrem Konto beim Microsoft Teams-Client an, das App-Sideloading zulässt.
 1. Wählen Sie **apps**aus, und wählen Sie dann **benutzerdefinierte App hochladen**aus.
 1. Wechseln Sie zu Ihrem APP `.publish` -Projektordner, und wählen Sie aus `Development.zip` .
 1. Wählen Sie im modalen Installationsmodus die Option **Hinzufügen** aus, um Ihre APP zu installieren.
 
-## <a name="test-your-messaging-extension"></a>Testen der Messaging Erweiterung
+## <a name="7-test-your-messaging-extension"></a>7. Testen der Messaging Erweiterung
 
 Erfahren Sie, wie Messaging-Erweiterungen in einem Microsoft Teams-Chat funktionieren.
 

@@ -5,18 +5,18 @@ description: Erstellen Sie die erste Microsoft Teams-APP, und führen Sie Sie au
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: 5be2e8f2932a91ed11137f3a7be544e12bd65559
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 244a899670f71b9446c8c3d3e404c9fd7c7b510c
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210247"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237832"
 ---
 # <a name="build-a-hello-world-teams-app"></a>Erstellen Sie ein "Hello, World!" Teams-App
 
 Sie können direkt in die Microsoft Teams-Plattformentwicklung wechseln, indem Sie eine persönliche RegisterkarteErstellen, in der "Hello, World!" angezeigt wird.
 
-## <a name="create-your-app-project"></a>Erstellen eines App-Projekts
+## <a name="1-create-your-app-project"></a>1. Erstellen des App-Projekts
 
 Verwenden Sie das Microsoft Teams-Toolkit in Visual Studio Code, um Ihr erstes App-Projekt einzurichten.
 
@@ -27,7 +27,7 @@ Verwenden Sie das Microsoft Teams-Toolkit in Visual Studio Code, um Ihr erstes A
 :::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Screenshot, in dem gezeigt wird, wie Ihr App-Projekt mit dem Visual Studio Code Teams-Toolkit konfiguriert wird.":::
 1. Aktivieren Sie die Option **persönliche Registerkarte** , und klicken Sie unten auf dem Bildschirm auf **Fertig stellen** , um Ihr Projekt zu konfigurieren.
 
-## <a name="understand-important-app-project-components"></a>Grundlegendes zu wichtigen App-Projektkomponenten
+## <a name="2-understand-important-app-project-components"></a>2. Grundlegendes zu wichtigen App-Projektkomponenten
 
 Nachdem das Toolkit Ihr Projekt konfiguriert hat, müssen Sie die Komponenten zum Erstellen einer einfachen persönlichen Registerkarte für Teams. Die Projektverzeichnisse und-Dateien werden im Bereich "Explorer" von Visual Studio Code angezeigt.
 
@@ -57,7 +57,7 @@ Hier finden Sie einige Details zu den App-Paketdateien:
 |**Farb Logo**|`.png`|192 &times; 192 Pixel|`icon.color`|`.publish/color.png`|
 |**Gliederungs Logo**|`.png`|32 &times; 32 Pixel|`icon.outline`|`.publish/outline.png`|
 
-## <a name="run-your-app"></a>Ausführen der APP
+## <a name="3-run-your-app"></a>3. führen Sie Ihre APP aus.
 
 Im Interesse der Zeit erstellen und führen Sie Ihre APP lokal aus.
 
@@ -68,7 +68,7 @@ Im Interesse der Zeit erstellen und führen Sie Ihre APP lokal aus.
 1. Öffnen Sie einen Browser, und wechseln Sie zu `https://localhost:3000` , um eine leere Webseite mit dem Namen **Microsoft Teams-Registerkarte**anzuzeigen. (Keine Sorge, dass auf der Seite kein Inhalt angezeigt wird.)<br/>
    :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Screenshot, der zeigt, wie die laufende app in einem Browser angezeigt wird.":::
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>Einrichten eines sicheren Tunnels für Ihre APP
+## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. Einrichten eines sicheren Tunnels für Ihre APP
 
 Ihre APP ist auf Ihrem lokalen Webserver aktiv. Wenn Sie Ihre APP in Microsoft Teams ausführen möchten, müssen Sie den `localhost` Zugriff über HTTPS vornehmen.
 
@@ -82,7 +82,7 @@ Installieren Sie [ngrok](https://ngrok.com/download) , falls noch nicht geschehe
 
 Das App-Manifest zeigt jetzt auf die Stelle, an der Sie die APP hosten.
 
-## <a name="sideload-your-app-in-teams"></a>Querladen ihrer app in Microsoft Teams
+## <a name="5-sideload-your-app-in-teams"></a>5. querladen ihrer app in Microsoft Teams
 
 Wenn Ihre APP über HTTPS läuft und darauf zugegriffen werden kann, sind Sie bereit, Sie in Microsoft Teams hochzuladen.
 

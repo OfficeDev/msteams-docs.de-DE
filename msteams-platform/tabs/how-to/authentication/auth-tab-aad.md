@@ -2,12 +2,12 @@
 title: Authentifizierung für Registerkarten mit Azure Active Directory
 description: Beschreibung der Authentifizierung in Microsoft Teams und ihrer Verwendung in Registerkarten
 keywords: Teams-Authentifizierungs Registerkarten Aad
-ms.openlocfilehash: 211c08ce1a51a8f0f13e622856a808661dc97b39
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: a1d3a96e23706012b643b5827701b49e2306d847
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801266"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237783"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Authentifizieren eines Benutzers auf einer Microsoft Teams-Registerkarte
 
@@ -50,7 +50,7 @@ microsoftTeams.authentication.authenticate({
 });
 ```
 
-### <a name="notes"></a>Anmerkungen
+### <a name="notes"></a>Notes
 
 * Die URL, an die Sie übergeben werden, `microsoftTeams.authentication.authenticate()` ist die Startseite des Authentifizierungs Flusses. In diesem Beispiel ist dies `/tab-auth/simple-start` . Dies sollte mit dem übereinstimmen, was Sie im [Azure AD-Anwendungs Registrierungs Portal](https://apps.dev.microsoft.com)registriert haben.
 
@@ -89,7 +89,7 @@ microsoftTeams.getContext(function (context) {
 
 Nachdem der Benutzer die Autorisierung abgeschlossen hat, wird der Benutzer zur Rückruf Seite umgeleitet, die Sie für Ihre APP unter angegeben haben `/tab-auth/simple-end` .
 
-### <a name="notes"></a>Anmerkungen
+### <a name="notes"></a>Notes
 
 * Informationen zum Erstellen von Authentifizierungsanforderungen und-URLs finden Sie unter [Abrufen von Benutzerkontextinformationen](~/tabs/how-to/access-teams-context.md) . Sie können beispielsweise den Anmeldenamen des Benutzers als `login_hint` Wert für Azure AD Anmeldung verwenden, was bedeutet, dass der Benutzer möglicherweise less eingeben muss. Denken Sie daran, dass Sie diesen Kontext nicht direkt als Identitätsnachweis verwenden sollten, da ein Angreifer die Seite in einen bösartigen Browser laden und ihm alle gewünschten Informationen bereitstellen kann.
 * Obwohl der Registerkartenkontext nützliche Informationen für den Benutzer bereitstellt, verwenden Sie diese Informationen nicht, um den Benutzer zu authentifizieren, unabhängig davon, ob Sie ihn als URL-Parameter zu ihrer Registerkarten-Inhalts-URL oder durch Aufrufen der `microsoftTeams.getContext()` Funktion im Microsoft Teams-Client-SDK erhalten. Ein böswilliger Akteur könnte Ihre Registerkarteninhalts-URL mit seinen eigenen Parametern aufrufen, und eine Webseite, die Microsoft Teams imitiert, kann die URL Ihres Registerkarteninhalts in einen iframe laden und eigene Daten an die Funktion zurückgeben `getContext()` . Sie sollten die identitätsbezogenen Informationen im Registerkartenkontext lediglich als Hinweise behandeln und diese vor der Verwendung validieren.
@@ -134,12 +134,12 @@ if (hashParams["error"]) {
 
 Dieser Code analysiert die Schlüssel-Wert-Paare, die von Azure AD in `window.location.hash` mit der `getHashParameters()` Hilfsfunktion empfangen werden. Wenn er einen findet `access_token` und der Wert mit dem `state` identisch ist, der am Anfang des Authentifizierungs Flusses bereitgestellt wurde, wird das Zugriffstoken durch Aufrufen an die Registerkarte zurückgegeben `notifySuccess()` ; andernfalls meldet er einen Fehler mit `notifyFailure()` .
 
-### <a name="notes"></a>Anmerkungen
+### <a name="notes"></a>Notes
 
-`NotifyFailure()`weist die folgenden vordefinierten Fehlerursachen auf:
+`NotifyFailure()` weist die folgenden vordefinierten Fehlerursachen auf:
 
-* `CancelledByUser`der Benutzer hat das Popupfenster geschlossen, bevor der Authentifizierungs Fluss abgeschlossen wurde.
-* `FailedToOpenWindow`das Popupfenster konnte nicht geöffnet werden. Bei der Ausführung von Microsoft Teams in einem Browser bedeutet dies normalerweise, dass das Fenster von einem Popupblocker blockiert wurde.
+* `CancelledByUser` der Benutzer hat das Popupfenster geschlossen, bevor der Authentifizierungs Fluss abgeschlossen wurde.
+* `FailedToOpenWindow` das Popupfenster konnte nicht geöffnet werden. Bei der Ausführung von Microsoft Teams in einem Browser bedeutet dies normalerweise, dass das Fenster von einem Popupblocker blockiert wurde.
 
 Wenn die Methode erfolgreich verläuft, können Sie die Seite aktualisieren oder neu laden und Inhalte anzeigen, die für den jetzt authentifizierten Benutzer relevant sind. Wenn die Authentifizierung fehlschlägt, wird eine Fehlermeldung angezeigt.
 
@@ -147,6 +147,9 @@ Ihre APP kann ein eigenes Sitzungscookie festlegen, sodass sich der Benutzer nic
 
 > [!NOTE]
 > In Chrome 80, das für die Veröffentlichung Anfang 2020 vorgesehen ist, werden neue Cookiewerte eingeführt und standardmäßig Cookie-Richtlinien auferlegt. Es wird empfohlen, dass Sie die vorgesehene Verwendung für Ihre Cookies festlegen, anstatt sich auf das Standardbrowser Verhalten zu verlassen. *Siehe* [SameSite-Cookie-Attribut (2020 Update)](../../../resources/samesite-cookie-update.md).
+
+>[!NOTE]
+>Um das richtige Token für Microsoft Teams kostenlos und Gastbenutzer zu erhalten, ist es wichtig, dass die apps Mandanten spezifischer Endpunkt https://login.microsoftonline.com/ **{Mandanten**-Nr} verwenden. Sie können die Mandanten-Nr aus der bot-Nachricht oder dem Tab-Kontext abrufen. Wenn die apps verwendet werden https://login.microsoftonline.com/common , erhalten die Benutzer falsche Token und melden sich am "Home"-Mandanten anstelle des Mandanten an, an dem Sie derzeit angemeldet sind.
 
 Weitere Informationen zum einmaligen Anmelden (SSO) finden Sie im Artikel [Silent Authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
 

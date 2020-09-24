@@ -1,24 +1,20 @@
 ---
 author: heath-hamilton
-description: Hier erfahren Sie, wie Sie eine Kanal Registerkarte für Ihre erste Microsoft Teams-app erstellen.
+description: Hier erfahren Sie, wie Sie eine Kanal-und Gruppen-Registerkarte für Ihre erste Microsoft Teams-app erstellen.
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-title: Erstellen einer Microsoft Teams-Kanal Registerkarte
-ms.openlocfilehash: d0846c3af23fd9df6013f989e9f455f711d05a5f
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+title: Erstellen eines Teams-Kanals und einer Gruppenregisterkarte
+ms.openlocfilehash: d97d8c13404077bff999db48b24b773aa4bc04ca
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210256"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237811"
 ---
-# <a name="build-a-teams-channel-tab"></a>Erstellen einer Microsoft Teams-Kanal Registerkarte
+# <a name="build-a-teams-channel-and-group-tab"></a>Erstellen eines Teams-Kanals und einer Gruppenregisterkarte
 
-In diesem Lernprogramm erstellen Sie eine einfache *Kanal Registerkarte*, eine Vollbildschirm-Inhaltsseite für einen Teamkanal oder Chat. Im Gegensatz zu einer persönlichen Registerkarte können Benutzer einige Aspekte einer Kanal Registerkarte konfigurieren (beispielsweise benennen Sie die Registerkarte so um, dass Sie für Ihren Kanal sinnvoll ist).
-
-## <a name="before-you-begin"></a>Bevor Sie beginnen
-
-Sie benötigen eine grundlegende ausgeführte App für den Einstieg. Wenn Sie noch keinen haben, folgen Sie den [Anweisungen unter Build, und führen Sie Ihre Teams erste APP](../build-your-first-app/build-and-run.md)aus. Wenn Sie Ihr App-Projekt erstellen, wählen Sie nur die **Kanal Registerkarte "Gruppe" oder "Teams"** aus.
+In diesem Lernprogramm erstellen Sie eine einfache *Kanal Registerkarte* (auch als *Gruppe Registerkarte*bezeichnet), bei der es sich um eine voll Bild Seite für einen Teamkanal oder Chat handelt. Im Gegensatz zu einer persönlichen Registerkarte können Benutzer einige Aspekte dieser Registerkarte konfigurieren (beispielsweise benennen Sie die Registerkarte so um, dass Sie für Ihren Kanal sinnvoll ist).
 
 ## <a name="your-assignment"></a>Ihre Zuordnung
 
@@ -30,19 +26,33 @@ Sie können diese Informationen leichter finden, indem Sie eine Kanal Registerka
 
 > [!div class="checklist"]
 >
-> * Identifizieren einiger der Eigenschaften des App-Manifests und der für Kanal Registerkarten relevanten Gerüste
+> * Erstellen eines App-Projekts mithilfe des Microsoft Teams-Toolkits für Visual Studio Code
+> * Identifizieren einiger der Eigenschaften des App-Manifests und der für Kanal-und Gruppenregisterkarten relevanten Gerüste
+> * Lokal Hosten einer APP
 > * Erstellen von Registerkarten Inhalten
 > * Erstellen von Inhalten für die Konfigurationsseite einer Registerkarte
 > * Zulassen der Konfiguration und Installation einer Registerkarte
 > * Angeben eines vorgeschlagenen Registerkarten namens
 
-## <a name="identify-relevant-app-project-components"></a>Identifizieren relevanter App-Projektkomponenten
+## <a name="1-create-your-app-project"></a>1. Erstellen des App-Projekts
 
-Ein Großteil des App-Manifests und Gerüste werden automatisch eingerichtet, wenn Sie Ihr Projekt mit dem Teams-Toolkit erstellen. Lassen Sie uns die Hauptkomponenten zum Erstellen einer Kanal Registerkarte betrachten.
+Das Microsoft Teams-Toolkit hilft Ihnen beim Einrichten des App-Manifests und der für Kanal-und Gruppenregisterkarten relevanten Gerüste, einschließlich einer grundlegenden Konfigurationsseite und einer Inhaltsseite, auf der ein "Hello, World!" angezeigt wird. Nachricht.
+
+> [!TIP]
+> Wenn Sie noch kein Teams-App-Projekt erstellt haben, ist es möglicherweise hilfreich, [diese Anweisungen](../build-your-first-app/build-and-run.md) zu befolgen, mit denen Projekte detaillierter erläutert werden.
+
+1. Wählen Sie in Visual Studio Code **Microsoft Teams** in :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: der linken Aktivitäts Leiste aus, und wählen Sie **neue Teams-app erstellen**aus.
+1. Geben Sie einen Namen für Ihre Teams-App ein. (Dies ist der Standardname für Ihre APP und auch der Name des App-Projektverzeichnisses auf Ihrem lokalen Computer.)
+1. Wählen Sie auf dem Bildschirm **Funktionen hinzufügen** die Register **Karte** dann **Gruppe oder Teams Kanal Registerkarte**.
+1. Klicken Sie unten auf dem Bildschirm auf **Fertig stellen** , um Ihr Projekt zu konfigurieren.  
+
+## <a name="2-identify-relevant-app-project-components"></a>2. Identifizieren der relevanten App-Projektkomponenten
+
+Ein Großteil des App-Manifests und Gerüste werden automatisch eingerichtet, wenn Sie Ihr Projekt mit dem Teams-Toolkit erstellen. Lassen Sie uns die Hauptkomponenten zum Erstellen einer Kanal-und Gruppenregisterkarte betrachten.
 
 ### <a name="app-manifest"></a>App-Manifest
 
-Der folgende Ausschnitt aus dem App-Manifest zeigt [`configurableTabs`](../resources/schema/manifest-schema.md#configurabletabs) , der die Eigenschaften und Standardwerte enthält, die für Kanal Registerkarten relevant sind.
+Der folgende Ausschnitt aus dem App-Manifest zeigt [`configurableTabs`](../resources/schema/manifest-schema.md#configurabletabs) , der die Eigenschaften und Standardwerte für Kanal-und Gruppenregisterkarten enthält.
 
 ```JSON
 "configurableTabs": [
@@ -65,7 +75,27 @@ Der folgende Ausschnitt aus dem App-Manifest zeigt [`configurableTabs`](../resou
 
 Das App-Gerüst stellt eine `TabConfig.js` Datei bereit, die sich im `src/components` Verzeichnis des Projekts befindet, um die Konfigurationsseite der Registerkarte zu rendern (Weitere Informationen dazu in Kürze).
 
-## <a name="create-your-tab-content"></a>Erstellen des Registerkarteninhalts
+## <a name="3-run-your-app"></a>3. führen Sie Ihre APP aus.
+
+Im Interesse der Zeit erstellen und führen Sie Ihre APP lokal aus.
+
+1. Wechseln Sie in einem Terminal zum Stammverzeichnis des App-Projekts, und führen Sie es aus `npm install` .
+1. Ausführen `npm start` .
+
+Nach Abschluss des Vorgangs wird ein **erfolgreiches kompiliert!** Nachricht im Terminal.
+
+## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. Einrichten eines sicheren Tunnels für Ihre APP
+
+Für Testzwecke hosten wir die Registerkarte auf einem lokalen Webserver (Port 3000).
+
+1. Führen Sie in einem Terminal aus `ngrok http 3000` .
+1. Kopieren Sie die HTTPS-URL, die Sie bereitgestellt haben.
+1. Öffnen Sie in Ihrem `.publish` Verzeichnis `Development.env` .
+1. Ersetzen Sie den `baseUrl0` Wert durch die kopierte URL. (Ändern Sie beispielsweise `baseUrl0=http://localhost:3000` in `baseUrl0=https://85528b2b3ca5.ngrok.io` .)
+
+Ihr App-Manifest zeigt auf die Stelle, an der Sie die Registerkarte hosten.
+
+## <a name="5-customize-your-tab-content-page"></a>5. Anpassen der Inhaltsseite für Registerkarten
 
 Öffnen Sie das App-Manifest ( `manifest.json` ) im `.publish` Verzeichnis, und legen Sie die folgenden Eigenschaften in fest [`staticTabs`](../resources/schema/manifest-schema.md#statictabs) , die die Inhaltsseite ihrer Registerkarte definiert.
 
@@ -121,9 +151,9 @@ a {
 }
 ```
 
-## <a name="create-your-tab-configuration-page"></a>Erstellen der Seite für die Registerkartenkonfiguration
+## <a name="6-create-your-tab-configuration-page"></a>6. Erstellen Ihrer Registerkarten-Konfigurationsseite
 
-Jede Kanal Registerkarte verfügt über eine Konfigurationsseite, eine modale mit mindestens einer Setup Option, die bei der Installation der App angezeigt wird. Auf der Konfigurationsseite werden Benutzer standardmäßig gefragt, ob Sie den Kanal oder den Chat benachrichtigen möchten, wenn die Registerkarte installiert ist.
+Jede Registerkarte in einem Kanal oder Chat verfügt über eine Konfigurationsseite, eine modale mit mindestens einer Setup Option, die angezeigt wird, wenn Benutzer ihre App installieren. Auf der Konfigurationsseite werden Benutzer standardmäßig gefragt, ob Sie den Kanal oder den Chat benachrichtigen möchten, wenn die Registerkarte installiert ist.
 
 Fügen Sie der Konfigurationsseite einige Inhalte hinzu. Wechseln Sie zum Verzeichnis Ihres Projekts `src/components` , öffnen Sie `TabConfig.js` und fügen Sie einige Inhalte in ein `return()` (siehe Abbildung).
 
@@ -141,9 +171,9 @@ return (
 > [!TIP]
 > Geben Sie mindestens einige kurze Informationen zu Ihrer APP auf dieser Seite, da dies das erste Mal sein kann, dass Benutzer davon erfahren. Sie können auch benutzerdefinierte Konfigurationsoptionen oder einen [Authentifizierungs Workflow](../tabs/how-to/authentication/auth-aad-sso.md)einschließen, was bei Registerkarten-Konfigurationsseiten üblich ist.
 
-## <a name="allow-the-tab-to-be-configured-and-installed"></a>Konfigurieren und Installieren der Registerkarte zulassen
+## <a name="7-allow-the-tab-to-be-configured-and-installed"></a>7. zulassen, dass die Registerkarte konfiguriert und installiert wird
 
-Damit Benutzer die Kanal Registerkarte erfolgreich konfigurieren und installieren können, müssen Sie die Host-URL hinzufügen, die Sie beim [Erstellen und durchführen ihrer ersten App](../build-your-first-app/build-and-run.md) für die Komponente "Konfigurationsseite" eingerichtet haben.
+Damit Benutzer die Registerkarte erfolgreich konfigurieren und installieren können, müssen Sie die [sichere Host-URL](#4-set-up-a-secure-tunnel-to-your-app) hinzufügen, die Sie der Konfigurationsseiten Komponente eingerichtet haben.
 
 Wechseln Sie zu `TabConfig.js` und suchen Sie `microsoftTeams.settings.setSettings` . `"contentUrl"`Ersetzen Sie dabei den `localhost:3000` Teil der URL durch die Domäne, in der Sie den Registerkarteninhalt hosten (siehe Abbildung).
 
@@ -155,7 +185,7 @@ microsoftTeams.settings.setSettings({
 
 Stellen Sie außerdem sicher, dass `microsoftTeams.settings.setValidityState(true);` . Standardmäßig ist `false` die Schaltfläche **Speichern** auf der Konfigurationsseite jedoch deaktiviert, wenn Sie auf festgelegt ist.
 
-## <a name="provide-a-suggested-tab-name"></a>Angeben eines vorgeschlagenen Registerkarten namens
+## <a name="8-provide-a-suggested-tab-name"></a>8. Angeben eines vorgeschlagenen Registerkarten namens
 
 Wenn Sie eine Registerkarte zur persönlichen Verwendung installieren, ist der Anzeigename die `name` Eigenschaft im `staticTabs` Teil des App-Manifests (beispielsweise " **meine Kontakte**"). Wenn Sie eine Kanal Registerkarte installieren, wird standardmäßig der App-Name angezeigt (beispielsweise **First-App**).
 
@@ -170,9 +200,9 @@ microsoftTeams.settings.setSettings({
 });
 ```
 
-## <a name="view-the-channel-tab"></a>Anzeigen der Kanal Registerkarte
+## <a name="9-view-the-tab"></a>9. Anzeigen der Registerkarte
 
-Um die Konfigurations-und Inhaltsseiten Ihrer Kanal Registerkarte anzuzeigen, müssen Sie Sie in einem Kanal oder Chat installieren.
+Um die Konfigurations-und Inhaltsseiten ihrer Registerkarte anzuzeigen, müssen Sie Sie in einem Kanal oder Chat installieren.
 
 1. Wählen Sie im Microsoft Teams-Client **apps**aus.
 1. Wählen Sie **Upload a custom app** aus, und wählen Sie Ihre apps aus `Development.zip` .
@@ -184,7 +214,7 @@ Um die Konfigurations-und Inhaltsseiten Ihrer Kanal Registerkarte anzuzeigen, m�
 
 ## <a name="well-done"></a>Gut gemacht
 
-Herzlichen Glückwunsch! Sie verfügen über eine Teams-App mit einer Kanal Registerkarte, um nützliche Inhalte in Kanälen und Chats anzuzeigen.
+Herzlichen Glückwunsch! Sie verfügen über eine Teams-App mit einer Registerkarte, in der Sie nützliche Inhalte in Kanälen und Chats anzeigen können.
 
 ## <a name="learn-more"></a>Weitere Informationen
 

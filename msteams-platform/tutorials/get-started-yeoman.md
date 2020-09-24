@@ -1,15 +1,15 @@
 ---
 title: Erste Schritte mit dem Landarbeits Generator für Microsoft Teams
 description: Erste Schritte beim Erstellen von tollen apps mit dem Landwirtschafts Generator für Microsoft Teams
-keywords: Erste Schritte Node. js nodejs
+keywords: Erste Schritte node.js nodejs
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: 217c0900e067a61e083e7ffb0b121afdaa51c49f
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: f9b3f165d3b5387f8e7d30563134ed4889920ca5
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034043"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237993"
 ---
 # <a name="build-your-first-microsoft-teams-app"></a>Erstellen Ihrer ersten Microsoft Teams-App
 
@@ -26,7 +26,7 @@ Sie müssen Folgendes auf Ihrem Computer installieren, bevor Sie mit der Verwend
 
 ### <a name="install-node"></a>Installations Knoten
 
-Sie müssen NodeJS auf Ihrem Computer installiert haben. Sie sollten die neueste [LTS-Version](https://nodejs.org/dist/latest-v8.x/)verwenden.
+Sie müssen NodeJS auf Ihrem Computer installiert haben. Sie sollten die neueste [LTS-Version](https://nodejs.org)verwenden.
 
 ### <a name="install-a-code-editor"></a>Installieren eines Code-Editors
 
@@ -60,7 +60,7 @@ npm install generator-teams@preview --global
 
 ## <a name="generate-your-project"></a>Erstellen des Projekts
 
-Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis, in dem Sie Ihr Projekt erstellen möchten, und geben Sie `yo teams`in diesem Verzeichnis den Befehl ein. Dadurch wird der Microsoft Teams-apps-Generator gestartet, und Sie werden eine Reihe von Fragen gestellt.
+Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis, in dem Sie Ihr Projekt erstellen möchten, und geben Sie in diesem Verzeichnis den Befehl ein `yo teams` . Dadurch wird der Microsoft Teams-apps-Generator gestartet, und Sie werden eine Reihe von Fragen gestellt.
 
 ![Yo Teams](~/assets/yeoman-images/teams-first-app-1.png)
 
@@ -68,7 +68,7 @@ Bei der ersten Frage geht es um Ihren Projektnamen, und Sie können ihn unverän
 
 Im folgenden Schritt wird nach einem Titel Ihres Projekts gefragt, dieser Titel wird im Manifest und in der Beschreibung Ihrer APP verwendet. Anschließend werden Sie nach einem Firmennamen gefragt, der auch im Manifest verwendet wird.
 
-In der fünften Frage werden Sie gefragt, welche Version des Manifests Sie verwenden möchten. Wählen Sie `v1.5`für dieses Lernprogramm das aktuelle allgemein verfügbare Schema aus.
+In der fünften Frage werden Sie gefragt, welche Version des Manifests Sie verwenden möchten. Wählen Sie für dieses Lernprogramm das `v1.5` aktuelle allgemein verfügbare Schema aus.
 
 Anschließend werden Sie vom Generator gefragt, welche Elemente dem Projekt hinzugefügt werden sollen. Sie können eine einzelne oder eine beliebige Kombination von Elementen auswählen. Wählen Sie im Moment einfach *eine Registerkarte*aus.
 
@@ -88,7 +88,7 @@ Die nächste Gruppe von Fragen basiert auf Ihrer Auswahl von Elementen, die zuvo
 
 Sobald der Generator fertig ist, können Sie die Lösung in Ihrem bevorzugten Code-Editor öffnen. Nehmen Sie sich ein oder zwei Minuten und machen Sie sich mit der Organisation des Codes vertraut – Sie können mehr darüber in der Dokumentation zur [Projektstruktur](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) lesen.
 
-Die Registerkarte befindet sich in der `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` Datei. Dies ist die auf der Registerkarte basierende Reaktions basierte Klasse. suchen `render()` Sie die-Methode, und fügen Sie eine `<PanelBody>` Codezeile innerhalb des Steuerelements, sodass es wie folgt aussieht:
+Die Registerkarte befindet sich in der `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` Datei. Dies ist die auf der Registerkarte basierende Reaktions basierte Klasse. Suchen Sie die `render()` -Methode, und fügen Sie eine Codezeile innerhalb des `<PanelBody>` Steuerelements, sodass es wie folgt aussieht:
 
 ``` TypeScript
 <PanelBody>
@@ -104,15 +104,15 @@ Speichern Sie die Datei, und kehren Sie zur Eingabeaufforderung zurück.
 
 Sie können nun Ihr Projekt erstellen. Dies erfolgt in zwei Schritten (oder einem Schritt, siehe unten).
 
-Zunächst müssen Sie die Teams-App-Manifestdatei erstellen, die Sie in Microsoft Teams hochladen/querladen. Dies erfolgt durch die Aufgabe `gulp manifest`"schlucken". Dadurch wird das Manifest überprüft und eine ZIP-Datei im `./package` Verzeichnis erstellt.
+Zunächst müssen Sie die Teams-App-Manifestdatei erstellen, die Sie in Microsoft Teams hochladen/querladen. Dies erfolgt durch die Aufgabe "schlucken" `gulp manifest` . Dadurch wird das Manifest überprüft und eine ZIP-Datei im `./package` Verzeichnis erstellt.
 
-Verwenden Sie zum Erstellen der Lösung den `gulp build` Befehl. Dadurch wird die Lösung in den `./dist` Ordner transstapeln. 
+Verwenden Sie zum Erstellen der Lösung den `gulp build` Befehl. Dadurch wird die Lösung in den Ordner transstapeln `./dist` . 
 
 ## <a name="run-your-app"></a>Ausführen der APP
 
 Zum Ausführen der App verwenden Sie den `gulp serve` Befehl. Dadurch wird ein lokaler Webserver erstellt und gestartet, damit Sie Ihre APP testen können. Mit dem Befehl wird die Anwendung auch dann neu erstellt, wenn Sie eine Datei im Projekt speichern. 
 
-Sie sollten jetzt in der Lage sein, `http://localhost:3007/myFirstAppTab/` zu navigieren, um sicherzustellen, dass Ihre Registerkarte gerendert wird. Jedoch noch nicht in Microsoft Teams.
+Sie sollten jetzt in der Lage sein, zu navigieren, um `http://localhost:3007/myFirstAppTab/` sicherzustellen, dass Ihre Registerkarte gerendert wird. Jedoch noch nicht in Microsoft Teams.
 
 ![Anzeigen Ihrer Website in einem Browser](~/assets/yeoman-images/teams-first-app-3.png)
 
@@ -120,13 +120,13 @@ Sie sollten jetzt in der Lage sein, `http://localhost:3007/myFirstAppTab/` zu na
 
 Microsoft Teams lässt nicht zu, dass Ihre APP auf localhost gehostet wird, daher müssen Sie Sie entweder in einer öffentlichen URL veröffentlichen oder einen Proxy wie ngrok verwenden.
 
-Eine gute Nachricht ist, dass das Gerüst Projekt diese integrierte ist. Wenn Sie den `gulp ngrok-serve` ngrok-Dienst ausführen, wird im Hintergrund mit einem eindeutigen und öffentlichen DNS-Eintrag gestartet, und es wird auch das Manifest mit dieser eindeutigen URL Verpacken und dann genau dasselbe tun wie `gulp serve`.
+Eine gute Nachricht ist, dass das Gerüst Projekt diese integrierte ist. Wenn Sie `gulp ngrok-serve` den ngrok-Dienst ausführen, wird im Hintergrund mit einem eindeutigen und öffentlichen DNS-Eintrag gestartet, und es wird auch das Manifest mit dieser eindeutigen URL Verpacken und dann genau dasselbe tun wie `gulp serve` .
 
-Erstellen Sie `gulp ngrok-serve`nach dem Starten ein neues Microsoft Teams-Team, und klicken Sie bei der Erstellung auf den Namen des Teams, um zu den Teams-Einstellungen zu wechseln, und wählen Sie dann *apps*aus. In der unteren rechten Ecke sehen Sie einen Link zum *Hochladen einer benutzerdefinierten App*, wählen Sie Sie aus, und navigieren Sie dann zu Ihrem Projekt `package`Ordner und dem Unterordner mit dem Namen. Wählen Sie die ZIP-Datei in diesem Ordner aus, und wählen Sie öffnen aus. Ihre APP wird nun in Microsoft Teams quer geladene.
+Erstellen Sie nach dem Starten `gulp ngrok-serve` ein neues Microsoft Teams-Team, und klicken Sie bei der Erstellung auf den Namen des Teams, um zu den Teams-Einstellungen zu wechseln, und wählen Sie dann *apps*aus. In der unteren rechten Ecke sehen Sie einen Link zum *Hochladen einer benutzerdefinierten App*, wählen Sie Sie aus, und navigieren Sie dann zu Ihrem Projektordner und dem Unterordner mit dem Namen `package` . Wählen Sie die ZIP-Datei in diesem Ordner aus, und wählen Sie öffnen aus. Ihre APP wird nun in Microsoft Teams quer geladene.
 
 ![quer geladene-App](~/assets/yeoman-images/teams-first-app-4.png)
 
-Wechseln Sie zurück zum Kanal *Allgemein* , und *+* wählen Sie aus, um eine neue Registerkarte hinzuzufügen. Die Registerkarte sollte in der Liste der Registerkarten angezeigt werden.
+Wechseln Sie zurück zum Kanal *Allgemein* , und wählen Sie aus *+* , um eine neue Registerkarte hinzuzufügen. Die Registerkarte sollte in der Liste der Registerkarten angezeigt werden.
 
 ![Registerkarte "Konfigurieren"](~/assets/yeoman-images/teams-first-app-5.png)
 

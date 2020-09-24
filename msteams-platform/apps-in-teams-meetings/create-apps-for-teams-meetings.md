@@ -1,16 +1,16 @@
 ---
-title: Erstellen von Apps für Microsoft Teams-Besprechungen
+title: Apps für Teams-Besprechungen erstellen
 author: laujan
 description: Erstellen von Apps für Microsoft Teams-Besprechungen
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Teams-apps-Besprechungen Benutzer Teilnehmer-Rollen-API
-ms.openlocfilehash: 83e0a5b53e363a090935b4afa9840dd96c5f7381
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: 9ead77e3573510bc9c9415c6f3ac9a6e83f23ece
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48182005"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237986"
 ---
 # <a name="create-apps-for-teams-meetings-preview"></a>Erstellen von Apps für Microsoft Teams-Besprechungen (Vorschau)
 
@@ -27,7 +27,7 @@ ms.locfileid: "48182005"
 
 1. Einige Besprechungs-APIs, wie zum Beispiel, `GetParticipant` erfordern eine [bot-Registrierung und eine bot-APP-ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) zum Generieren von auth-Token.
 
-1. Entwickler müssen sich an die allgemeinen [Entwurfsrichtlinien für Teams-Registerkarten](../tabs/design/tabs.md) für Pre-und Post-Meeting-Szenarien sowie die [in-Meeting-Dialogfeld Richtlinien](designing-in-meeting-dialog.md) für das in-Meeting-Dialogfeld halten, das während einer Teambesprechung ausgelöst wird.
+1. Entwickler müssen sich an die allgemeinen [Entwurfsrichtlinien für Teams-Registerkarten](../tabs/design/tabs.md) für vor-und nach Besprechungen sowie während Besprechungen halten (siehe [in-Meeting-Dialog](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) und Entwurfsrichtlinien für die [in-Meeting-Registerkarten](../apps-in-teams-meetings/design/designing-in-meeting-tab.md) ).
 
 ## <a name="meeting-apps-api-reference"></a>Besprechungs-apps-API-Referenz
 
@@ -269,7 +269,7 @@ Benutzer mit Organizer-und/oder Presenter-Rollen fügen mithilfe der Schaltfläc
 
 #### <a name="in-meeting-dialog"></a>**in-Meeting-Dialog**
 
-✔ Sie die Entwurfsrichtlinien für das [in-Meeting-Dialogfeld](designing-in-meeting-dialog.md)einhalten.
+✔ Sie die Entwurfsrichtlinien für das [in-Meeting-Dialogfeld](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md)einhalten.
 
 ✔ Bezieht sich auf den Microsoft [Teams-Authentifizierungs Fluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md).
 

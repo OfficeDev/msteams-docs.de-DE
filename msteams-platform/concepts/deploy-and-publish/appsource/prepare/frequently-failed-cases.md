@@ -4,12 +4,12 @@ description: Beschreibt Tipps für die Übermittlung und die meisten fehlgeschla
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: b2b198068478e6cc1e620d5bf5da9d448b3cf56d
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+ms.openlocfilehash: 93b772f6868c50df6810c09f06bc9d1c99a00896
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704481"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237860"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Tipps für eine erfolgreiche App-Übermittlung
 
@@ -114,19 +114,22 @@ Ihr bot sollte auf alle Befehle reagieren und nicht auf den Endbenutzer. Hier si
 
 * **Überdenken Sie alle Bereiche**. Stellen Sie sicher, dass Ihr bot geeignete Antworten bereitstellt, wenn Sie `@*botname*` in einem Kanal und in persönlichen Unterhaltungen erwähnt werden. Wenn Ihr bot keinen sinnvollen Kontext innerhalb des Bereichs Personal oder Teams bereitstellt, deaktivieren Sie diesen Bereich über das Manifest. (Weitere Informationen finden Sie unter `bots` Block in der [Microsoft Teams Manifest-Schemareferenz](~/resources/schema/manifest-schema.md#bots).)
 
-### <a name="9989-bots-must-send-a-welcome-message-on-first-launch"></a>&#9989; Bots müssen beim ersten Start eine Willkommensnachricht senden
+### <a name="9989-personal-bots-must-send-a-welcome-message-on-first-launch"></a>&#9989; persönliche Bots müssen beim ersten Start eine Willkommensnachricht senden
 
-Begrüßungsnachrichten sind die beste Möglichkeit, den Klingelton Ihres bot festzulegen. Dies ist die erste Interaktion, die ein Benutzer mit dem Bot hat. Eine gute Willkommensnachricht kann den Benutzer ermutigen, die APP weiterhin zu erkunden. Wenn die Begrüßung oder einleitende Nachricht verwirrend oder unklar ist, sehen Benutzer den Wert der APP nicht sofort und verlieren ihre Interessen.
+Eine Willkommensnachricht ist die beste Möglichkeit, um den Ton für Ihren persönlichen/Chat-bot festzulegen. Dies ist die erste Interaktion, die ein Benutzer mit dem Bot hat. Eine gute Willkommensnachricht kann den Benutzer ermutigen, die APP weiterhin zu erkunden. Wenn die Begrüßung oder einleitende Nachricht verwirrend oder unklar ist, sehen Benutzer den Wert der APP nicht sofort und verlieren ihre Interessen.
+
+> [!Note]
+> Eine Willkommensnachricht ist optional für einen Kanal-bot.
 
 ### <a name="welcome-message-requirements"></a>Anforderungen für Willkommensnachrichten
 
-* Identifizieren Sie, wer den bot einem Kanal hinzugefügt hat.
-* Einen Wert Vorschlag einbeziehen.
+* Fügen Sie einen Wert Vorschlag mit der Willkommens Tour ein.
 * Bereitstellen von Anleitungen für die Verwendung des bot.
-* Präsentieren Sie einfach lesbaren Text und einfachen Dialog – vorzugsweise eine Karte mit einer Aktions baren Willkommens Tour-Schaltfläche, die ein Aufgabenmodul lädt.
+* Präsentieren Sie einfach lesbaren Text und einfachen Dialog – vorzugsweise eine Karte mit einer Aktions baren Willkommens Tour-Schaltfläche, die einen Aufgabenmodul lädt.
 * Halten Sie es einfach, vermeiden Sie den Dialog mit Wörtern/Chats.
+* Integrieren Sie Adaptive Karten und Schaltflächen, um die Begrüßungsnachricht nutzbar zu machen.
 * Rufen Sie die Willkommensnachricht mit einem Ping-Befehl auf, nicht mit mindestens zwei gleichzeitigen Pings.
-* Im persönlichen Chat darf die Willkommensnachricht nur dem Benutzer angezeigt werden, der die APP konfiguriert hat.  
+* Eine Willkommensnachricht darf nur dem Benutzer angezeigt werden, der die APP konfiguriert hat, vorzugsweise in einem 1:1 persönlichen Chat.
 * Senden Sie niemals einen persönlichen Chat an alle Mitglieder des Teams.
 * Senden Sie die Willkommensnachricht niemals mehrmals. Das Wiederholen derselben Willkommensnachricht über regelmäßige Intervalle ist nicht zulässig und wird als Spam betrachtet.
 

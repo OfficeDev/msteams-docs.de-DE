@@ -5,12 +5,12 @@ description: Hier erfahren Sie, wie Sie eine persönliche Registerkarte für Ihr
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 3b54efa9b7ed8019b5d4901eeaaf0864e1afc7ac
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: a86c9e1e46b97c6b265bfa9ad2f618655c524ee4
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210221"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237804"
 ---
 # <a name="build-a-teams-personal-tab"></a>Erstellen einer persönlichen Registerkarte "Teams"
 
@@ -34,7 +34,7 @@ Personen in Ihrer Organisation haben Probleme bei der Suche nach grundlegenden K
 > * Erstellen von Registerkarten Inhalten
 > * Aktualisieren des Farbdesigns einer Registerkarte basierend auf der Benutzereinstellung
 
-## <a name="identify-relevant-app-project-components"></a>Identifizieren relevanter App-Projektkomponenten
+## <a name="1-identify-relevant-app-project-components"></a>1. Identifizieren der relevanten App-Projektkomponenten
 
 Ein Großteil des App-Manifests und Gerüste werden automatisch eingerichtet, wenn Sie Ihr Projekt mit dem Teams-Toolkit erstellen. Lassen Sie uns die Hauptkomponenten für die Erstellung einer persönlichen Registerkarte betrachten.
 
@@ -65,7 +65,7 @@ Das App-Gerüst stellt die Komponenten zum Rendern Ihrer Registerkarte in Micros
 * `Tab.js` Datei im `src/components` Verzeichnis des Projekts
 * Microsoft Teams JavaScript-Client-SDK, das in den Front-End-Komponenten Ihres Projekts vorinstalliert ist
 
-## <a name="create-your-tab-content"></a>Erstellen des Registerkarteninhalts
+## <a name="2-customize-your-tab-content-page"></a>2. Anpassen der Inhaltsseite der Registerkarte
 
 Kompilieren Sie eine Liste wichtiger Kontakte in Ihrer Organisation. Kopieren Sie den folgenden Codeausschnitt, und aktualisieren Sie ihn mit Informationen, die für Sie relevant sind, oder verwenden Sie, um der Zeit Willen, den Code wie es ist.
 
@@ -112,7 +112,7 @@ Speichern Sie Ihre Änderungen. Wechseln Sie zur Registerkarte ihrer app in Micr
 
 :::image type="content" source="../assets/images/tabs/personal-tab-tutorial-content.png" alt-text="Screenshot einer persönlichen Registerkarte mit statischem Inhalt.":::
 
-## <a name="update-the-tab-theme"></a>Aktualisieren des Registerkarten Designs
+## <a name="3-update-the-tab-theme"></a>3. Aktualisieren des Registerkarten Designs
 
 Gute apps fühlen sich nativ für Teams, daher ist es wichtig, dass Ihre Registerkarte mit dem Microsoft Teams-Design kombiniert wird, das Ihre Benutzer bevorzugen: Standard (hell), dunkel oder hoher Kontrast. Wie Sie vielleicht schon im letzten Screenshot bemerkt haben, hat ihre Registerkarte immer noch einen hellen Hintergrund, wenn der Client das dunkle Design verwendet. Dies ist keine empfohlene Benutzeroberfläche.
 
