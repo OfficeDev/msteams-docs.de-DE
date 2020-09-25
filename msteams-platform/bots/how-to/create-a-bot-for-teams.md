@@ -1,16 +1,16 @@
 ---
 title: Erstellen eines Bots für Microsoft Teams
 author: clearab
-description: Erstellen eines Bots für Microsoft Teams.
+description: So erstellen Sie einen Bot für Microsoft Teams mit App Studio, Yeoman-Generator und anderen Tools.
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: b9999fb8fcb39b4cd70789d909fecd9cad13e5d7
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 03196c32e5e1a4b2714a4c916a71c80fc10a5edc
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635298"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209830"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>Erstellen eines Bots für Microsoft Teams
 
@@ -171,7 +171,14 @@ Wenn Sie ein App-Paket erstellen möchten, müssen Sie Ihr App-Manifest und (opt
 
 ## <a name="upload-your-package-to-microsoft-teams"></a>Hochladen Ihres Pakets in Microsoft Teams
 
+> [!NOTE]
+> Um Ihren Bot erfolgreich hochzuladen, muss Ihr Mandantenadministrator zunächst [das Hochladen von Apps von Drittanbietern oder benutzerdefinierten Apps in Teams zulassen](/microsoftteams/manage-apps#manage-org-wide-app-settings).
+
 Wenn Sie App Studio verwendet haben, können Sie die App über die Registerkarte **Testen und Verteilen** im **Manifest-Editor** installieren. Alternativ können Sie Ihr App-Paket installieren, indem Sie auf der linken Navigationsleiste auf das `...`-Überlaufmenü, dann auf **Weitere Apps** und schließlich auf den Link **Benutzerdefinierte App hochladen** klicken. Sie können ein App-Manifest oder App-Paket auch in App Studio importieren, um vor dem Hochladen weitere Aktualisierungen vorzunehmen.
+
+## <a name="bots-in-teams-meetings"></a>Bots in Teams-Besprechungen
+
+Teams unterstützt die Bot-Aufrufe während Besprechungen. Wenn Ihr Bot die Aufforderungsnachricht erhält, kann er Benutzer und Mandanten anhand von `userId` und `tenantId` identifizieren. Die `meetingId`kann als Teil des Objekts `channelData` gefunden werden. Ihr Bot kann die `userId` und `meetingId` für die API-Anforderung `GetParticipant` verwenden, um Benutzerrollen abzurufen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
