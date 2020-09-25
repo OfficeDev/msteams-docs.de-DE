@@ -1,10 +1,25 @@
 - name: Übersicht
   expanded: true
   items:
-    - name: Was sind Microsoft Teams-Apps?
+    - name: Apps für Microsoft Teams erstellen
       href: overview.md
-    - name: Was sind die Neuerungen?
+    - name: Was ist neu?
       href: whats-new.md
+- name: Die erste App erstellen
+  expanded: true
+  items:
+    - name: Übersicht und Voraussetzungen
+      href: build-your-first-app/build-first-app-overview.md
+    - name: 'Erstellen Sie ein "Hallo, Welt!" App'
+      href: build-your-first-app/build-and-run.md
+    - name: Erstellen einer persönlichen Registerkarte
+      href: build-your-first-app/build-personal-tab.md
+    - name: Erstellen einer Kanalregisterkarte
+      href: build-your-first-app/build-channel-tab.md
+    - name: Erstellen eines Bots
+      href: build-your-first-app/build-bot.md
+    - name: Erstellen einer Messaging-Erweiterung
+      href: build-your-first-app/build-messaging-extension.md
 - name: Lernprogramme und Codebeispiele
   items:
     - name: Erstellen einer App mithilfe von C#
@@ -15,8 +30,12 @@
       href: tutorials/get-started-yeoman.md
     - name: Weitere Informationen zu benutzerdefinierten Apps für Teams
       href: tutorials/code-samples.md
-- name: Vorlagen und Integrationen
+- name: Integrationen und Vorlagen
   items:
+    - name: Integrieren von Web-Apps
+      href: samples/integrating-web-apps.md
+    - name: Erstellen von Apps mit geringem Code
+      href: samples/teams-low-code-solutions.md
     - name: Produktionsfertige App-Vorlagen
       href: samples/app-templates.md
     - name: Produktionsfertige Shifts-Connectors
@@ -44,9 +63,9 @@
 - name: Konzepte
   expanded: true
   items:
-    - name: Apps für Microsoft Teams erstellen
-      href: concepts/building-an-app.md
-    - name: Erweiterbarkeitspunkte im Teams-Client
+    - name: App-Funktionen
+      href: concepts/capabilities-overview.md
+    - name: App-Einstiegspunkte
       href: concepts/extensibility-points.md
     - name: Entwerfen Ihrer App
       items:
@@ -171,15 +190,15 @@
               href: tabs/how-to/authentication/auth-tab-aad.md
             - name: Verwenden der automatischen Authentifizierung
               href: tabs/how-to/authentication/auth-silent-aad.md
-            - name: Verwenden der Authentifizierung durch einmaliges Anmelden
+            - name: Authentifizierung mit einmaligem Anmelden
               href: tabs/how-to/authentication/auth-aad-sso.md
         - name: Verwenden des Teams-Client-SDKs
           href: tabs/how-to/using-teams-client-sdk.md
-        - name: Weiteren Kontext zu Teams abrufen
+        - name: Weiteren Teams-Kontext abrufen
           href: tabs/how-to/access-teams-context.md
         - name: Entwicklertools für Microsoft Teams-Registerkarten
           href: tabs/how-to/developer-tools.md
-        - name: SharePoint Ihre benutzerdefinierte Registerkarte hinzufügen
+        - name: Hinzufügen Ihrer benutzerdefinierten Registerkarte zu SharePoint
           href: tabs/how-to/tabs-in-sharepoint.md
         - name: Geräteberechtigungen anfordern
           href: tabs/how-to/native-device-permissions.md
@@ -248,7 +267,7 @@
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
         - name: Echtzeitmedienkonzepte
           href: bots/calls-and-meetings/real-time-media-concepts.md
-        - name: Einen Anrufbot registrieren
+        - name: Registrieren eines anrufenden Bots
           href: bots/calls-and-meetings/registering-calling-bot.md
         - name: Eingehende Anrufbenachrichtigungen
           href: bots/calls-and-meetings/call-notifications.md
@@ -311,9 +330,9 @@
       href: task-modules-and-cards/what-are-cards.md
     - name: Karten
       items:
-        - name: Effektive Karten gestalten
+        - name: Entwerfen von effektiven Karten
           href: task-modules-and-cards/cards/design-effective-cards.md
-        - name: Kartentext formatieren
+        - name: Formatieren von Kartentext
           href: task-modules-and-cards/cards/cards-format.md
         - name: Kartenaktionen hinzufügen und darauf reagieren
           href: task-modules-and-cards/cards/cards-actions.md
@@ -338,7 +357,7 @@
           href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
         - name: Erstellen eines O365-Connectors
           href: webhooks-and-connectors/how-to/connectors-creating.md
-        - name: Senden von Nachrichten an Connectors und Webhooks
+        - name: Senden von Nachrichten an Konnektoren und WebHooks
           href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Apps in Besprechungen
   items:
@@ -390,7 +409,7 @@
           href: resources/bot-v3/bots-notifications.md
         - name: Kontext für Bots
           href: resources/bot-v3/bots-context.md
-        - name: Dateien senden und erhalten
+        - name: Senden und empfangen von Dateien
           href: resources/bot-v3/bots-files.md
         - name: Reine Benachrichtigungsbots
           href: resources/bot-v3/bots-notification-only.md
@@ -398,7 +417,7 @@
           href: resources/bot-v3/bots-menus.md
         - name: Bots mit Registerkarten
           href: resources/bot-v3/bots-with-tabs.md
-        - name: Formatierung von Bot-Mitteilungen
+        - name: Formatieren von Bot-Nachrichten
           href: resources/bot-v3/bots-text-formats.md
         - name: Testen eines Bots
           href: resources/bot-v3/bots-test.md
