@@ -5,12 +5,12 @@ description: Übersicht über apps in Microsoft Teams-Besprechungen basierend au
 ms.topic: overview
 ms.author: lajanuar
 keywords: Teams-apps-Besprechungen Benutzer Teilnehmer-Rollen-API
-ms.openlocfilehash: 6af9cac2040a9301ba2bdf64ddbd7857490a679f
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b5e649f1630ff6c4a120c4b7aefbac1f5f6df06f
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237888"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279715"
 ---
 # <a name="apps-in-teams-meetings-preview"></a>Apps in Teams-Besprechungen (Vorschau)
 
@@ -129,4 +129,4 @@ Wählen Sie &#11200; in einer Besprechungseinladung die Option **Besprechungsopt
 ## <a name="next-steps"></a>Nächste Schritte
 
 > [!div class="nextstepaction"]
-> [Apps in Microsoft Teams-Besprechungen aktivieren] (Apps-in-Teams-Meetings/enable-apps-in-Meetings. MD
+> [Erstellen von Apps für Microsoft Teams-Besprechungen](create-apps-for-teams-meetings.md)

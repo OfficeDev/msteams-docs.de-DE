@@ -3,12 +3,12 @@ title: Microsoft Teams-App-Vorlagen
 description: Links und Beschreibungen von App-Vorlagen für die Microsoft Teams-Plattform
 ms.topic: reference
 keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
-ms.openlocfilehash: 5ecad6586d4bbe114d732869981d25b3305fa940
-ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.openlocfilehash: 1ac0bdcd5e52681ea42483cac04d5da9c34bab12
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "46531285"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279798"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -22,6 +22,18 @@ App-Vorlagen sind produktionsfertige Apps für Microsoft Teams, die Community Dr
 * **Produktions fähiger Code:** Die APP-Vorlagen entsprechen den empfohlenen bewährten Methoden im hinhang auf Sicherheit und Infrastruktur, und alle übermittelten Community-Änderungen werden überprüft, um eine kontinuierliche Konformität sicherzustellen.
 * **Anpassbar und erweiterbar:** Während alle App-Vorlagen bereit bereitgestellt werden, wie Sie sind, stellen wir die gesamte Codebasis und Bereitstellungsskripts bereit, damit Sie Sie ganz einfach an Ihre individuellen Anforderungen anpassen oder erweitern können.
 * **Ausführliche Dokumentation & Support:** Alle App-Vorlagen werden von einer End-to-End-Dokumentation zur Lösungsarchitektur, Bereitstellung und Konfigurationsschritte begleitet. Die Repositories werden ebenfalls überwacht, daher melden Sie bitte alle Probleme, die auftreten, indem Sie ein Problem auf GitHub auslösen.
+
+## <a name="ask-away-9734"></a>Ask Away &#9734;
+
+Ask Away ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , mit dem Benutzer Q&a (Question and Answer)-Sitzungen innerhalb von Teams durchführen können. Mit dem Ask Away-bot können Teammitglieder Fragen übermitteln, die von Kollegen gemeinsam genutzt werden, sodass Q&Hosts ganz einfach Top-of-Mind-Fragen innerhalb eines Kanals oder Chats sammeln kann. Der Bot kann verwendet werden, um eine Echtzeit-Q-&einer Sitzung in einer Teams-Besprechung durchzuführen und den Teilnehmern die Möglichkeit zu geben, Ihre Fragen Live per Chat zu übermitteln.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-askaway)
+
+:::row:::
+  :::column span="2":::
+    ![Ansicht des Popup Dialogfeldes "Leaderboard", in dem Benutzer Fragen abstimmen können](../assets/images/ask-away-app.png)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="associate-insights"></a>Assoziierte Einblicke
 
@@ -74,7 +86,7 @@ Es bietet eine Grundlage zum Erstellen benutzerdefinierter, zielorientierter Kom
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![FAQ Plus GIF](../assets/images/CompanyCommunicatorCompose.png)
+![jCompany Communicator Compose-Feld Ansicht](../assets/images/CompanyCommunicatorCompose.png)
 
 ## <a name="contact-group-lookup-9734"></a>&#9734; für Kontaktgruppen Suche
 
@@ -155,7 +167,7 @@ Conversational Q&ein Bots sind eine einfache Möglichkeit, Antworten auf häufig
 
 ![FAQ Plus GIF](../assets/images/FAQPlusEndUser.gif)
 
-## <a name="goal-tracker-9734"></a>Ziel Verfolgungs &#9734;
+## <a name="goal-tracker"></a>Zielverfolgung
 
 Die Goal Tracker-App ist eine umfassende Lösung für Ihre Organisation zur Unterstützung der Zielsetzung, zur Beobachtung des Fortschritts und zur Anerkennung des Erfolgs in Microsoft Teams. Die APP ermöglicht es Benutzern, Ziele auf fachlicher, persönlicher und Teamebene festzulegen, nachzuverfolgen und zu aktualisieren. Team Mitglieder erhalten außerdem rechtzeitige Erinnerungen und Statusaktualisierungen, um konzentriert zu bleiben und auf dem richtigen Weg zu bleiben.
 
@@ -172,7 +184,7 @@ Die Goal Tracker-App ist eine umfassende Lösung für Ihre Organisation zur Unte
 :::column-end:::
 :::row-end:::
 
-## <a name="great-ideas-9734"></a>Großartige Ideen &#9734;
+## <a name="great-ideas"></a>Großartige Ideen
 
 Die app "Great Ideas" unterstützt und stärkt Innovation und Kreativität in Ihrer Organisation. Die APP ermöglicht es Ihren Mitarbeitern, Ideen mit Kollegen und Führungskräften auszutauschen, neue Übermittlungen zu entdecken, Beiträge zur Peer-Überlegung anzusehen und ihre Stimme für die besten Vorschläge in Microsoft Teams abzugeben.
 
@@ -206,7 +218,7 @@ Group Activities ist eine Microsoft Teams-APP, die Teambesitzern das schnelle Er
 :::column-end:::
 :::row-end:::
 
-## <a name="grow-your-skills-9734"></a>Erweitern Sie Ihre Fähigkeiten &#9734;
+## <a name="grow-your-skills"></a>Erweitern Ihrer Fähigkeiten
 
 Die app "Grow Your Skills" unterstützt berufliches Wachstum und Entwicklung, indem Mitarbeiter zu zusätzlichen Projekten für Ihre Organisation beitragen und gleichzeitig neue Fertigkeiten erlernen. Mitarbeiter können die APP verwenden, um Möglichkeiten zu finden, die ihren Interessen entsprechen, eine sinnvolle Zusammenarbeit mit Kollegen zu genießen und neue Ebenen von Fachwissen und Funktionen zu erwerben, die sich innerhalb der Teams-Umgebung befinden.
 
@@ -249,9 +261,9 @@ Incentives ist eine [Power apps](/powerapps/maker/canvas-apps/embed-teams-app) -
 
 ![Demo zur Incentives-App](../assets/images/incentives-app.png)
 
-## <a name="incident-reporter-9734"></a>Vorfall Reporter &#9734;
+## <a name="incident-reporter"></a>Vorfall Reporter 
 
-Incident Reporter ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , der die Verwaltung von Vorfällen in Ihrer Organisation optimiert. Der bot erleichtert die Erfassung automatischer Vorfall Daten, benutzerdefinierter vorfallberichte, relevanter Benachrichtigungen von Beteiligten und die End-to-End-Vorfall Verfolgung.
+Incident Reporter ist ein [Microsoft Teams-bot](../bots/what-are-bots.md)  , der die Verwaltung von Vorfällen in Ihrer Organisation optimiert. Der bot erleichtert die Erfassung automatischer Vorfall Daten, benutzerdefinierter vorfallberichte, relevanter Benachrichtigungen von Beteiligten und die End-to-End-Vorfall Verfolgung.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-incidentreport)
 
@@ -291,7 +303,7 @@ Schnelle Antworten ist eine Microsoft Teams-APP, die eine robuste Lösung für d
 
 ![Beispielansicht der Antworten](../assets/images/quick-responses.png)
 
-## <a name="remote-support-9734"></a>Remote Unterstützungs &#9734;
+## <a name="remote-support"></a>Remote Unterstützung
 
 Remote Support ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , der eine fokussierte Schnittstelle zwischen Support anfordernden in Ihrer Organisation und dem internen Support Team bereitstellt.  Endbenutzer können Anforderungen zur Unterstützung übermitteln, bearbeiten oder zurückziehen, und das Support Team kann Anforderungen in der Microsoft Teams-Plattform beantworten, verwalten und aktualisieren.
 
@@ -308,7 +320,7 @@ Remote Support ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , der ein
 :::column-end:::
 :::row-end:::
 
-## <a name="request-a-team-9734"></a>Anforderungs-a-Team &#9734;
+## <a name="request-a-team"></a>Anforderungs-a-Team
 
 Request-a-Team ist eine Microsoft Teams-APP, die die neue TEAMERSTELLUNG für Ihre Unternehmensorganisation optimiert. Die App unterstützt die Standardisierung und bewährte Methoden beim Erstellen neuer Team Instanzen durch die Integration eines assistentengestützten Anforderungsformulars, eines eingebetteten Genehmigungsprozesses, eines Anforderungsstatus Dashboards und automatisierter Team Builds.
 
@@ -325,14 +337,14 @@ Request-a-Team ist eine Microsoft Teams-APP, die die neue TEAMERSTELLUNG für Ih
 :::column-end:::
 :::row-end:::
 
-## <a name="scrums-for-channels-9734"></a>Scrums für Channels &#9734;
+## <a name="scrums-for-channels"></a>Scrums für Kanäle
 
 Scrums für Channels ist eine Scrum Assistant-APP, mit der Benutzer Scrums in Kanälen in Microsoft Teams planen und ausführen können. Die APP eignet sich hervorragend für Remoteteams und Teams aus Mitgliedern aus unterschiedlichen geografischen Standorten und Zeitzonen, um tägliche Updates freizugeben und die Teilnahme an Scrum-Stand-up-Besprechungen sicherzustellen.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforchannels)
 
 > [!NOTE]
-> Wenn Sie Scrum-Besprechungen in einem Gruppenchat durchführen möchten, lesen Sie bitte unsere [Scrums für Gruppenchat](#scrums-for-group-chat-) -App-Vorlage.
+> Wenn Sie Scrum-Besprechungen in einem Gruppenchat durchführen möchten, lesen Sie bitte unsere [Scrums für Gruppenchat](#scrums-for-group-chat) -App-Vorlage.
 
 :::row:::
   :::column span="2":::
@@ -345,7 +357,7 @@ Scrums für Channels ist eine Scrum Assistant-APP, mit der Benutzer Scrums in Ka
 :::column-end:::
 :::row-end:::
 
-## <a name="scrums-for-group-chat-9734"></a>Scrums für Gruppen Chat &#9734;
+## <a name="scrums-for-group-chat"></a>Scrums für Gruppen Chat
 
 > [!NOTE]
 > Die Scrums-Status-App-Vorlage wurde aktualisiert und ist jetzt Scrums für Gruppen Chat.
@@ -374,7 +386,7 @@ Um diese Schmerzen zu lindern, stellen wir Ihnen gerne die Vorlage "Listensuche-
 
 ![Such-App auflisten](../assets/images/list-search-template.png)
 
-## <a name="staff-check-ins-9734"></a>Mitarbeiter Check-ins &#9734;
+## <a name="staff-check-ins"></a>Mitarbeiter Check-ins
 
 Personal Check-ins ist eine [Power apps](/powerapps/powerapps-overview)-basierte APP, die die Aufsicht über die Kommunikation zwischen Ihrem Unternehmen und Ihrem Außendienst Personal ermöglicht. Mitarbeiter können ganz einfach zeitkritische Informationen und Statusaktualisierungen entweder auf einer geplanten oder Ad-hoc-Basis direkt in Microsoft Teams bereitstellen. Die App unterstützt Echt Zeit Standorte, Fotos und Notizen sowie Erinnerungsbenachrichtigungen und automatisierte Workflows.
 

@@ -2,12 +2,12 @@
 title: Prozessleitfaden für den Microsoft Teams-App-Genehmigungsantrag
 description: Beschreibt den Prozess der Übermittlungs Genehmigung für die Veröffentlichung Ihrer APP im Microsoft Teams-App-Store.
 keywords: Teams veröffentlichen Store Office Publishing veröffentlichen AppSource Partner Center-Kontoüberprüfung
-ms.openlocfilehash: d165ac144926e0a956c211e5a3d55ac67c77fdb8
-ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
+ms.openlocfilehash: caf7a433158aaf79184d7247b95b5786b61de31f
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "46874870"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279687"
 ---
 # <a name="submit-your-app-to-appsource"></a>Übermitteln Ihrer APP an AppSource
 
@@ -30,7 +30,7 @@ Wenn Sie Ihre APP in [AppSource](https://appsource.microsoft.com) veröffentlich
 >- Wenn Ihre APP einen Office 365 Connector enthält, gelten möglicherweise zusätzliche Bedingungen. *Weitere Informationen finden Sie unter* [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) und [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
 >- Um Ihre APP für gcc-Benutzer verfügbar zu machen und doppelte App-Auflistungen im Store zu vermeiden, sollte der Authentifizierungsprozess/-Ablauf den Benutzer identifizieren und an die angegebene/erwartete Inhalts-URL für gcc-Benutzer weiterleiten.
 
-## <a name="faqs--teams-apps-and-partner-accounts"></a>FAQs – Microsoft Teams-apps und Partnerkonten
+## <a name="faqs--teams-apps-and-partner-account-verification-process-in-partner-center"></a>FAQs – Microsoft Teams-apps und Partnerkonto Verifizierungsprozess im Partner Center
 
 ## <a name="how-do-i-create-a-partner-center-account"></a>Wie erstelle ich ein Partner Center-Konto?
 
@@ -49,11 +49,11 @@ Es gibt zwei Möglichkeiten, ein Partner Center-Konto zu erstellen:
 | Thema | Allgemeine Marketplace-Hilfe und Vorgehens Fragen |
 | Subtopic| Office-Add-In |
 
-## <a name="where-can-i-get-support-for-my-partner-center-issues"></a>Wo erhalte ich Unterstützung für meine Partner Center-Probleme?
+## <a name="where-can-i-get-support-for-my-partner-center-account-issues"></a>Wo erhalte ich Unterstützung für meine Partner Center-Konto Probleme?
 
 Besuchen Sie die [Seite Publisher-Support](https://aka.ms/marketplacepublishersupport) , um nach Ihrem Problemthema zu suchen und Anleitungen zu finden. Wenn die bereitgestellten Anleitungen nicht hilfreich sind, [Öffnen Sie ein Partner Center-Support Ticket](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
 
-## <a name="how-do-i-manage-my-office-store-account"></a>Wie kann ich mein Office Store Konto verwalten?
+## <a name="how-do-i-manage-my-office-store-account-in-partner-center"></a>Wie verwalte ich mein Office Store-Konto im Partner Center?
 
 Weitere Informationen zum Verwalten Ihres Office Store-Kontos über das Partner Center finden Sie  [in unserem Office Store-Konto verwalten im Partner Center](/office/dev/store/manage-account-settings-and-profile) .
 
@@ -77,12 +77,12 @@ Während des Konto Überprüfungsprozesses wird der Status jedes erforderlichen 
 
 ![Partner Center-Überprüfungsfehler](../../../assets/images/partner-center-acct-verification-error.png)
 
-## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-how-should-i-proceed"></a>Der Status "meine Kontoüberprüfung" wurde nicht über den e-Mail-Besitz hinaus erweitert. Wie sollte ich vorgehen?
+## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>Der Status "meine Kontoüberprüfung" wurde nicht über den e-Mail-Besitz im Partner Center hinaus erweitert. Wie sollte ich vorgehen?
 
 Während der Überprüfung des **e-Mail-Eigentums** wird eine Bestätigungs-e-Mail an die primäre Kontakt-e-Mail-Adresse gesendet. Überprüfen Sie Ihren primären Kontakt Posteingang auf eine e-Mail von **Maccount@<span>Microsoft</span>. com** mit der *erforderlichen Betreffzeile: Überprüfen Sie Ihr e-Mail-Konto bei Microsoft*, indem Sie den e-Mail-Verifizierungsvorgang abschließen. Die Bestätigungs-e-Mail wird an die e-Mail-Adresse gesendet, die auf der Seite Kontoeinstellungen im Partner Center aufgeführt ist.
 
 > [!NOTE]
- >Der Link zur e-Mail-Überprüfung ist nur 7 Tage gültig. Sie können anfordern, dass wir die e-Mail erneut an Sie senden, indem Sie Ihre Partnerprofil Seite besuchen und den Link zur über **Prüfung der Bestätigung erneut senden** auswählen. Um sicherzustellen, dass die e-Mail empfangen wird, Listen Sie e-Mails von Microsoft.com als sichere Domäne auf und überprüfen Sie Ihre Junk-e-Mail-Ordner.
+ >Der Link zur e-Mail-Überprüfung ist nur 7 Tage gültig. Sie können anfordern, dass wir die e-Mail erneut an Sie senden, indem Sie Ihre Partnerprofil Seite besuchen und den Link zur über **Prüfung der Bestätigung erneut senden** auswählen. Um sicherzustellen, dass die e-Mail empfangen wird, werden e-Mails von Microsoft.com als sichere Domäne von der e-Mail-Adresse geschützt und Ihre Junk-e-Mail-Ordner überprüft.
 
 ## <a name="how-i-do-get-further-support-for-my-account-related-issues"></a>Wie erhalte ich weitere Unterstützung für meine Konto bezogenen Probleme?
 
@@ -96,7 +96,7 @@ Versuchen Sie Folgendes:
 1. Löschen Sie den Browsercache, wechseln Sie zu Ihrem Partner Center-Konto Dashboard, und wählen Sie den Link Überprüfung der über **Prüfung erneut senden** aus, damit die Bestätigungs-e-Mail an Ihre e-Mail-Adresse gesendet wird
 1. Versuchen Sie, über einen anderen Browser auf den Link zum  **erneuten Senden der Überprüfungs e-Mail** zuzugreifen.
 1. Arbeiten Sie mit Ihrer IT-Abteilung zusammen, um sicherzustellen, dass die Überprüfungs e-Mails nicht vom e-Mail-Server blockiert werden.
-1. Passen Sie den Spamfilter Ihres Servers so an, dass alle e-Mails von Maccount@Microsoft zugelassen/Whitelists enthalten sind **. <span></span> com**.
+1. Passen Sie den Spamfilter Ihres Servers so an, dass alle e-Mails von Maccount@Microsoft zugelassen/geschützt werden **. <span></span> com**.
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>Wie lange dauert der Prozess der Überprüfung der Arbeit?
 

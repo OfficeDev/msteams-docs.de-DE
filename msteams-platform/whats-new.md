@@ -2,12 +2,12 @@
 title: Neuerungen
 description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 keywords: Teams What es New Latest
-ms.openlocfilehash: 46e18dbe385680fea38c98f4396047a8d10a2b9c
-ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
+ms.openlocfilehash: dde75b3d8ca921d15f3a24145035d96a7aca86b8
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47303717"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279659"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuerungen für Entwickler in Microsoft Teams
 
@@ -18,9 +18,15 @@ ms.locfileid: "47303717"
 
 Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und dieser Dokumentenmappe aufgelistet. Gelegentlich können Einträge verwendet werden, um die Aufmerksamkeit auf ein neues Feature zu lenken, das für Entwickler von Teams einfach interessant ist.
 
-| **Date** | **Notizen** | **Geänderte Themen** |
+| **Date** | **Hinweise** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
+|09/22/2020|Leitfaden für neue "erste Schritte mit Teams"|[Erstellen Ihrer ersten Teams-App-Übersicht](build-your-first-app/build-first-app-overview.md)|
+|9/18/2020|Unterstützung für in-Meeting Teams-Apps (öffentliche Vorschau)|[Erstellen von Apps für Microsoft Teams-Besprechungen](apps-in-teams-meetings/create-apps-for-teams-meetings.md) und- [apps in Microsoft Teams-Besprechungen](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|8/19/2020|Importieren von Teams-Nachrichten mit Microsoft Graph|[Plattform-Nachrichten von Drittanbietern mithilfe von Microsoft Graph in Teams importieren](graph-api/import-messages/import-external-messages-to-teams.md)
 | 08/12/2020 |Adaptive Kartenunterstützung im eingehenden webhook verschoben in GA.|[Senden von adaptiven Karten mithilfe eines eingehenden Webhooks](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
+|08/10/2020|Erste Schritte beim Erstellen von Microsoft Teams-apps mit dem Visual Studio Toolkit.|[Erstellen von apps mit dem Microsoft Teams-Toolkit und Visual Studio Code](toolkit/visual-studio-overview.md) |
+|08/06/2020|Unterstützung für Registerkarten-SSO-Authentifizierung|[Entwickeln einer SSO-Microsoft Teams-Registerkarte](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
+|07/27/2020 | Diagramm proaktive Bots und Nachrichten (öffentliche Vorschau)|[Aktivieren der proaktiven bot-Installation und proaktiver Nachrichten in Microsoft Graph-Teams](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 | 07/22/2020 |Updates für Mobile Gerätefunktionen.|[Anfordern von Geräte Berechtigungen für Ihre Microsoft Teams-Registerkarte](~/tabs/how-to/native-device-permissions.md) |
 |07/20/2020|Teams-App-Validierungs Tool für AppSource-Übermittlungen.|[Teams-App-Validierungs Tool](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|Erstellen eines virtuellen Assistenten für Teams|[Virtueller Assistent für Microsoft Teams](samples/virtual-assistant.md)|

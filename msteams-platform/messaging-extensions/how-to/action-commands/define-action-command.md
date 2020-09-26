@@ -4,18 +4,18 @@ author: clearab
 description: Eine Übersicht über Messaging-Erweiterungen auf der Microsoft Teams-Plattform
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7eb734258aa34c69fa34d1413b2d3dab88e0113a
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 89cf92260418701ef4809f5a13750b991b9f7acb
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674141"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279682"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definieren von Aktions Befehlen für die Nachrichten Erweiterung
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Mit Aktions Befehlen können Sie Ihren Benutzern ein modales Popup (als Aufgabenmodul in Teams bezeichnet) zur Verfügung stellen, um Informationen zu sammeln oder anzuzeigen, dann Ihre Interaktion zu verarbeiten und Informationen an Microsoft Teams zurückzusenden. Vor dem Erstellen des Befehls müssen Sie Folgendes entscheiden:
+Aktionsbefehle ermöglichen es Ihnen, Ihren Benutzern ein modales Popup (in Teams als Aufgabenmodul bezeichnet) zu präsentieren, um Informationen zu sammeln oder anzuzeigen, dann ihre Interaktion zu verarbeiten und Informationen in Teams zurückzuschicken. Vor dem Erstellen des Befehls müssen Sie Folgendes entscheiden:
 
 1. Woher kann der Befehl Action ausgelöst werden?
 1. Wie wird das Aufgabenmodul erstellt?
@@ -43,7 +43,7 @@ Wenn Sie Ihr Aufgabenmodul mit einer statischen Liste von Parametern erstellen, 
 
 In den meisten Fällen führt Ihr Aktionsbefehl dazu, dass eine Karte in das Meldungsfeld verfassen eingefügt wird. Ihr Benutzer kann dann beschließen, ihn in den Kanal oder Chat zu senden. Die Nachricht kommt in diesem Fall vom Benutzer, und Ihr Bot kann die Karte nicht weiter bearbeiten oder aktualisieren.
 
-Wenn Ihre Messaging Erweiterung aus dem Feld Verfassen oder direkt aus einer Nachricht ausgelöst wird, kann Ihr Webdienst die abschließende Antwort direkt in den Kanal oder Chat einfügen. In diesem Fall kommt die Adaptive Karte aus dem bot, der Bot kann Sie aktualisieren und kann der bot auch auf den Gesprächsfaden Antworten, falls erforderlich. Sie müssen das `bot` Objekt Ihrem App-Manifest mit derselben ID hinzufügen und die entsprechenden Bereiche definieren.
+Wenn Ihre Messaging Erweiterung aus dem Feld Verfassen oder direkt aus einer Nachricht ausgelöst wird, kann Ihr Webdienst die abschließende Antwort direkt in den Kanal oder Chat einfügen. In diesem Fall kommt die Adaptive Karte aus dem bot, der Bot kann Sie aktualisieren, und der Bot kann bei Bedarf auch auf den Gesprächsfaden Antworten. Sie müssen das `bot` Objekt Ihrem App-Manifest mit derselben ID hinzufügen und die entsprechenden Bereiche definieren.
 
 ## <a name="add-the-command-to-your-app-manifest"></a>Hinzufügen des Befehls zum App-Manifest
 
@@ -66,27 +66,27 @@ In den folgenden Schritten wird davon ausgegangen, dass Sie bereits [eine Messag
 
 ### <a name="manually-create-a-command"></a>Manuelles Erstellen eines Befehls
 
-Wenn Sie den Aktions basierten Messaging Erweiterungs Befehl Ihrem App-Manifest manuell hinzufügen möchten, müssen Sie dem `composeExtension.commands` Array von Objekten die Parameter "folgt" hinzufügen.
+Wenn Sie den Aktions basierten Messaging Erweiterungs Befehl Ihrem App-Manifest manuell hinzufügen möchten, müssen Sie dem Array von Objekten die Parameter "folgt" hinzufügen `composeExtension.commands` .
 
 | Eigenschaftenname | Zweck | Pflichtfeld? | Minimale Manifestversion |
 |---|---|---|---|
 | `id` | Eindeutige ID, die Sie diesem Befehl zuweisen. Diese ID wird von der Benutzeranforderung eingeschlossen. | Ja | 1.0 |
 | `title` | Befehlsname. Dieser Wert wird auf der Benutzeroberfläche angezeigt. | Ja | 1.0 |
 | `type` | Muss `action` sein. | Nein | 1.4 |
-| `fetchTask` | `true`für eine Adaptive Karte oder eingebettete Webansicht für Ihr Aufgabenmodul `false` , für eine statische Liste von Parametern oder beim Laden der Webansicht durch einen`taskInfo` | Nein | 1.4 |
-| `context` | Optionales Array von Werten, das definiert, woher die Messaging Erweiterung aufgerufen werden kann. Mögliche Werte sind `message`, `compose`oder `commandBox`. Der Standardwert lautet `["compose", "commandBox"]`. | Nein | 1,5 |
+| `fetchTask` | `true` für eine Adaptive Karte oder eingebettete Webansicht für Ihr Aufgabenmodul, `false` für eine statische Liste von Parametern oder beim Laden der Webansicht durch einen `taskInfo` | Nein | 1.4 |
+| `context` | Optionales Array von Werten, das definiert, woher die Messaging Erweiterung aufgerufen werden kann. Mögliche Werte sind `message` , `compose` oder `commandBox` . Der Standardwert lautet `["compose", "commandBox"]`. | Nein | 1,5 |
 
 Wenn Sie eine statische Liste von Parametern verwenden, werden Sie ebenfalls hinzugefügt.
 
 | Eigenschaftenname | Zweck | Pflichtfeld? | Minimale Manifestversion |
 |---|---|---|---|
-| `parameters` | Statische Liste von Parametern für den Befehl. Nur verwenden, `fetchTask` wenn`false` | Nein | 1.0 |
+| `parameters` | Statische Liste von Parametern für den Befehl. Nur verwenden, `fetchTask` Wenn `false` | Nein | 1.0 |
 | `parameter.name` | Der Name des Parameters. Dies wird in der Benutzeranforderung an Ihren Dienst gesendet. | Ja | 1.0 |
 | `parameter.description` | Beschreibt den Zweck oder das Beispiel dieses Parameters des Werts, der angegeben werden sollte. Dieser Wert wird auf der Benutzeroberfläche angezeigt. | Ja | 1.0 |
 | `parameter.title` | Kurzer benutzerfreundlicher Parameter Titel oder Bezeichnung. | Ja | 1.0 |
-| `parameter.inputType` | Legt den Typ der erforderlichen Eingabe fest. Mögliche Werte sind `text`: `textarea`, `number`, `date`, `time`, `toggle`,. Default ist auf festgelegt`text` | Nein | 1.4 |
+| `parameter.inputType` | Legt den Typ der erforderlichen Eingabe fest. Mögliche Werte sind `text` :,, `textarea` ,, `number` `date` `time` , `toggle` . Default ist auf festgelegt `text` | Nein | 1.4 |
 
-Wenn Sie eine eingebettete Webansicht verwenden, können Sie optional das `taskInfo` Objekt hinzufügen, um Ihre Webansicht abzurufen, ohne den bot direkt aufzurufen. Wenn Sie diese Option verwenden, ähnelt das Verhalten der Verwendung einer statischen Liste von Parametern darin, dass die erste Interaktion mit Ihrem bot [auf die Aufgabe-Modul-Aktion "Submit" reagiert](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Wenn Sie ein `taskInfo` Objekt verwenden, müssen Sie auch den `fetchTask` Parameter auf `false`festlegen.
+Wenn Sie eine eingebettete Webansicht verwenden, können Sie optional das Objekt hinzufügen, `taskInfo` um Ihre Webansicht abzurufen, ohne den bot direkt aufzurufen. Wenn Sie diese Option verwenden, ähnelt das Verhalten der Verwendung einer statischen Liste von Parametern darin, dass die erste Interaktion mit Ihrem bot [auf die Aufgabe-Modul-Aktion "Submit" reagiert](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Wenn Sie ein Objekt verwenden `taskInfo` , müssen Sie auch den `fetchTask` Parameter auf festlegen `false` .
 
 | Eigenschaftenname | Zweck | Pflichtfeld? | Minimale Manifestversion |
 |---|---|---|---|
@@ -98,7 +98,7 @@ Wenn Sie eine eingebettete Webansicht verwenden, können Sie optional das `taskI
 
 #### <a name="app-manifest-example"></a>Beispiel für ein App-Manifest
 
-Im folgenden sehen Sie ein Beispiel für `composeExtensions` ein Objekt, das zwei Aktionsbefehle definiert. Es ist kein Beispiel für das vollständige Manifest, für das vollständige App-Manifest-Schema Siehe: [App-Manifest-Schema](~/resources/schema/manifest-schema.md).
+Im folgenden sehen Sie ein Beispiel für ein `composeExtensions` Objekt, das zwei Aktionsbefehle definiert. Es ist kein Beispiel für das vollständige Manifest, für das vollständige App-Manifest-Schema Siehe: [App-Manifest-Schema](~/resources/schema/manifest-schema.md).
 
 ```json
 ...
@@ -148,13 +148,13 @@ Im folgenden sehen Sie ein Beispiel für `composeExtensions` ein Objekt, das zwe
 ...
 ```
 
-## <a name="next-steps"></a>Weitere Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 Wenn Sie eine Adaptive Karte oder eine eingebettete Webansicht ohne `taskInfo` Objekt verwenden, sollten Sie Folgendes tun:
 
 * [Erstellen und Antworten mit einem Aufgabenmodul](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-Wenn Sie Parameter oder eine eingebettete Webansicht mit einem `taskInfo` -Objekt verwenden, ist der nächste Schritt für Sie:
+Wenn Sie Parameter oder eine eingebettete Webansicht mit einem- `taskInfo` Objekt verwenden, ist der nächste Schritt für Sie:
 
 * [Auf Aufgabenmodul übermitteln reagieren](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 

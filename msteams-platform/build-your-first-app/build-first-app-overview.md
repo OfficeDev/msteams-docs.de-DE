@@ -5,14 +5,14 @@ description: Übersicht und Voraussetzungen für die Erstellung der ersten Micro
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: bcfbcaa9de85f4b7135483aed3d1d11bf8bffad6
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 7431230487f1644de8b17b0b9e143819395b7527
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210180"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279710"
 ---
-# <a name="building-your-first-teams-app-overview"></a>Erstellen Ihrer ersten Teams-App-Übersicht
+# <a name="build-your-first-teams-app-overview"></a>Erstellen Ihrer ersten Teams-App-Übersicht
 
 In den **ersten App** -Lektionen erstellen Sie grundlegende Teams-apps. In jedem Lernprogramm wird erläutert, wie Sie eine einfache Real-World-Teams-app erstellen, während Sie allgemeine Tools, grundlegende Konzepte und erweiterte Funktionen einführen.
 
@@ -105,6 +105,6 @@ Nachdem Sie Ihr Konto und Ihre Umgebung eingerichtet haben, können Sie mit dem 
 ### <a name="other-tutorials"></a>Andere Lernprogramme
 
 > [!div class="nextstepaction"]
-> [Erstellen eines bot](../build-your-first-app/build-bot.md)
+> [Erstellen eines Bots](../build-your-first-app/build-bot.md)
 > [!div class="nextstepaction"]
-> [Erstellen einer Messaging Erweiterung](../build-your-first-app/build-messaging-extension.md)
+> [Erstellen einer Messaging-Erweiterung](../build-your-first-app/build-messaging-extension.md)
