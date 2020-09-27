@@ -50,16 +50,6 @@
           href: toolkit/visual-studio-code-overview.md
         - name: Teams-Toolkit-Erweiterung für Visual Studio
           href: toolkit/visual-studio-overview.md
-- name: Apps in Besprechungen
-  items:
-    - name: Teams-Apps in Besprechungen
-      href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: Apps für Teams-Besprechungen erstellen
-      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
-    - name: Besprechungs-Dialogfeld entwerfen
-      href: apps-in-teams-meetings/designing-in-meeting-dialog.md
-    - name: Besprechungs-Registerkarte entwerfen
-      href: apps-in-teams-meetings/designing-in-meeting-tab.md
 - name: Konzepte
   expanded: true
   items:
@@ -361,12 +351,16 @@
           href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Apps in Besprechungen
   items:
-    - name: Entwerfen Ihrer App
+    - name: Teams-Apps in Besprechungen
+      href: apps-in-teams-meetings/teams-apps-in-meetings.md
+    - name: Apps für Teams-Besprechungen erstellen
+      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+    - name: Entwerfen Ihrer In-Meeting-App
       items:
         - name: Dialogfeld "Besprechung"
-          href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+          href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
         - name: Registerkarte "Besprechung"
-          href: apps-in-teams-meetings/designing-in-meeting-tab.md
+          href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
 - name: Teams Graph-REST-APIs
   items:
     - name: 'Ressourcenspezifische Einwilligung '
