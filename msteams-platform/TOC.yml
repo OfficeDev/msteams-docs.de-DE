@@ -157,7 +157,7 @@
       items:
         - name: Entwurfsübersicht
           href: tabs/design/tabs.md
-        - name: Registerkarten in mobilen Clients
+        - name: Registerkarten auf mobilen Geräten
           href: tabs/design/tabs-mobile.md
     - name: Schrittanleitungen
       expanded: true
