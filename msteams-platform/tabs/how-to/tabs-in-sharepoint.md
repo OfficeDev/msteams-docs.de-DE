@@ -5,17 +5,14 @@ description: Vorgehensweise zum Bereitstellen Ihrer vorhandenen Teams-Registerka
 keywords: Teams-Registerkarten SharePoint Framework-Entwicklung
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2bdc7ab578be485eee33020b3b0c1a4099fd8ade
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: d7f617f0967743eab84423cd31f78d4700db1c1c
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818941"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326347"
 ---
 # <a name="adding-a-microsoft-teams-tab-in-sharepoint-as-an-spfx-web-part"></a>Hinzufügen einer Microsoft Teams-Registerkarte in SharePoint als SPFx-Webpart
-
-> [!IMPORTANT]
-> Dieses Feature ist derzeit in der Vorschau und kann jederzeit geändert werden. Sie wird für die Verwendung in Produktionsumgebungen nicht unterstützt. Wir freuen uns über Ihr Feedback und Ihre Meinung zu dieser Funktion über die [SharePoint Dev Docs-Problemliste](https://github.com/SharePoint/sp-dev-docs/issues).
 
 ## <a name="rich-integration-between-teams-and-sharepoint"></a>Umfassende Integration zwischen Microsoft Teams und SharePoint
 

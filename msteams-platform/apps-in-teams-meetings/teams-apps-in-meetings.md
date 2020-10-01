@@ -5,17 +5,17 @@ description: Übersicht über apps in Microsoft Teams-Besprechungen basierend au
 ms.topic: overview
 ms.author: lajanuar
 keywords: Teams-apps-Besprechungen Benutzer Teilnehmer-Rollen-API
-ms.openlocfilehash: b5e649f1630ff6c4a120c4b7aefbac1f5f6df06f
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: e7f0f95566347c06a4ab422565c3f49665a5150e
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279715"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326312"
 ---
-# <a name="apps-in-teams-meetings-preview"></a>Apps in Teams-Besprechungen (Vorschau)
+# <a name="apps-in-teams-meetings-release-preview"></a>Apps in Teams-Besprechungen (Veröffentlichungs Vorschau)
 
 >[!IMPORTANT]
-> In der Vorschau von Microsoft Teams enthaltene Features werden nur für frühere Zugriffs-, Test-und Feedback Zwecke bereitgestellt. Sie werden möglicherweise geändert, bevor Sie in der öffentlichen Version verfügbar werden und sollten nicht in Produktionsanwendungen verwendet werden.
+> In der Microsoft Teams-Versions Vorschau hervorgehobene Features werden nur für frühere Einblicke und Feedback Zwecke bereitgestellt. Sie können Änderungen unterziehen, bevor Sie aktiviert werden können.
 
 Besprechungen sind der Schlüssel zur Produktivität in Microsoft Teams. Sie ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikation und gemeinsames Feedback in einem integrativen und aktiven Forum. Als Entwickler können Sie [konfigurierbare Registerkarten](../tabs/what-are-tabs.md#how-do-tabs-work)-, [bot](../bots/what-are-bots.md)-und [Nachrichten Erweiterungs](../messaging-extensions/what-are-messaging-extensions.md) Anwendungen erstellen, um die Besprechungs Erfahrung von Teams zu verbessern und zu bereichern. Besprechungs Benutzer können über den Tab-Katalog auf apps zugreifen, um relevante Szenarien wie das vorab Staging einer Kanban-Karte, das Starten eines in-Meeting-Aktions fähigen Dialogs oder das Erstellen einer Umfrage nach der Besprechung zu ermöglichen. Ihre Besprechungs-App kann eine Benutzeroberfläche für jede Phase des Besprechungs Lebenszyklus basierend auf dem Teilnehmerstatus bereitstellen.
 
@@ -129,4 +129,4 @@ Wählen Sie &#11200; in einer Besprechungseinladung die Option **Besprechungsopt
 ## <a name="next-steps"></a>Nächste Schritte
 
 > [!div class="nextstepaction"]
-> [Erstellen von Apps für Microsoft Teams-Besprechungen](create-apps-for-teams-meetings.md)
+> [Apps für Teams-Besprechungen erstellen](create-apps-for-teams-meetings.md)

@@ -3,12 +3,12 @@ title: Microsoft Teams-App-Vorlagen
 description: Links und Beschreibungen von App-Vorlagen für die Microsoft Teams-Plattform
 ms.topic: reference
 keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
-ms.openlocfilehash: 1ac0bdcd5e52681ea42483cac04d5da9c34bab12
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: a3f9090526a92fba3f6cebe13a973cebeb056889
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279798"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326361"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -67,6 +67,21 @@ Book-a-Room ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , mit dem Be
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
 
 ![Buch-a-room-Demo](../assets/images/book-a-room.png)
+
+## <a name="building-access-9734"></a>Erstellen von Access-&#9734;
+
+Building Access ist eine Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)-basierte APP, die die Verwaltung von Schwellenwerten für die Auslastung von Gebäuden und soziale Distanz Normen unterstützt, indem Facility Directors das Verwalten, nachverfolgen und melden von Mitarbeitern vor Ort ermöglichen. Die APP, die mit Microsoft [Power apps](/powerapps/powerapps-overview)und [Power Automation](/power-automate/getting-started)erstellt wurde, ist tief in Microsoft Teams integriert und ermöglicht es Organisationen, die Erstellungs Bereitschaft zu ermitteln, Berechtigungskriterien für den Zugriff vor Ort festzulegen und Einblicke in die zukünftige Planung zu sammeln.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
+
+:::row:::
+   :::column span="":::
+     ![Erstellen von Access-Reservierungskarten](../assets/images/building-access-reservation.png)
+   :::column-end:::
+   :::column span="":::
+      ![Erstellen der Zugriffstasten Ansicht](../assets/images/building-access-access-key.png)
+   :::column-end:::
+:::row-end:::
 
 ## <a name="celebrations"></a>Feiern
 

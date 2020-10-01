@@ -2,35 +2,31 @@
 title: Microsoft Teams-Entwickler Support und Feedback
 description: Das Microsoft Teams-Produktteam antwortet der Entwicklercommunity über mehrere Feedback-und Supportkanäle.
 keywords: Teams Feedback Entwickler Fragen Probleme Kontakt Supportanfrage Bugs Beiträge
-ms.openlocfilehash: 64ce059357bbe6f5c56c786309492d0e2287be37
-ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
+ms.openlocfilehash: 48b48e58edde009ac85d3bf6f9b3afbe175a0b1e
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "45021580"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326298"
 ---
-# <a name="microsoft-teams-developer-support-and-feedback"></a>Microsoft Teams-Entwickler Support und Feedback
+# <a name="microsoft-teams-developer-community-channels"></a>Microsoft Teams Developer Community-Kanäle
 
 Das Microsoft Teams-Produktteam antwortet der Entwicklercommunity über mehrere Feedback-und Supportkanäle.
 
-## <a name="platform-support-and-feedback-channels"></a>Plattformunterstützung und Feedbackkanäle
 
-- **Allgemeine Fragen zur Microsoft Teams-Entwicklerplattform:** Senden Sie eine e-Mail an den [Microsoft Teams-Entwickler Support](mailto:microsoftteamsdev@microsoft.com). Diese e-Mail-Adresse ist _nicht_ für Kommentare oder Vorschläge zu nicht Platt Form bezogenen Features von Microsoft Teams vorgesehen. Darüber hinaus werden alle e-Mails, die an diese Adresse gesendet werden, nicht auf alle Antworten gelesen.
-
-- **Fragen zur Programmierung:** Wir hören zu und reagieren auf [Stack Overflow](http://stackoverflow.com/questions/tagged/microsoft-teams). Folgen Sie der [Anleitung](http://stackoverflow.com/tour), um herauszufinden, welche Fragen sich gut für Stack Overflow eignen. Markieren Sie Ihre Frage `microsoft-teams` , damit unser Team und die Microsoft Teams-Entwicklercommunity Ihre Frage erkennen können.
-
-- **Dokumentationsfehler:** Wenn Sie einen Fehler in der Microsoft Teams-Entwicklerdokumentation finden, öffnen Sie ein [Problem](https://github.com/MicrosoftDocs/msteams-docs/issues) auf GitHub. Teilen Sie uns mit, welches Thema sachlich falsch oder nicht eindeutig ist. Um das Problem schneller zu beheben, zitieren Sie den Text, der geändert werden soll.
-
-- **Beispiele für Anwendungsfehler:** Wenn Sie einen Fehler in einem unserer Beispiele finden, öffnen Sie ein Problem auf GitHub. Beschreiben Sie möglichst die Schritte, die zum Reproduzieren des Fehlers nötig sind.
-
-- **Feature-Anforderungen:** Wenn Sie von unserer Plattform nicht dazu befähigt werden, das zu tun, was Sie benötigen, machen Sie Ihre Features Vorschläge auf dem [Microsoft Teams-Feedback Portal auf UserVoice](https://aka.ms/microsoftteamsplatformsuggestions).
-
-- **Beiträge:** Wir akzeptieren Pull-Anfragen für die JavaScript-Bibliothek von Microsoft Teams, Dokumentation und Beispiele. Wenn Sie einen Beitrag leisten möchten, lesen Sie den Leitfaden für Mitwirkende in jedem Repo.
-
-  * https://github.com/OfficeDev/microsoft-teams-library-js
-  * https://github.com/MicrosoftDocs/msteams-docs
+|            **Unterstützter Typ**            |               **Contact**                                                                                  |
+|-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         **Communityunterstützung**          | 1. Fragen können bei [Stapelüberlauf](https://stackoverflow.com/questions/tagged/microsoft-teams) mithilfe des `microsoft-teams` -Tags veröffentlicht werden. Beachten Sie, dass Stapelüberlauf Richtlinien wie das Anfordern eines beschreibenden Titels, eine vollständige und prägnante Problemstellung sowie ausreichende Details zur Reproduktion Ihres Problems enthält. Featureanforderungen oder zu allgemeine Fragen sind nicht zulässig. Neue Besucher sollten das [Hilfe-Center für Stack Overflow](https://stackoverflow.com/help/how-to-ask) besuchen, um weitere Informationen zu erhalten.                                                                                                                                                                        2. Fragen können auch unter [Microsoft Q&A]( https://docs.microsoft.com/answers/topics/office-teams-app-dev.html) mithilfe des `office-teams-app-dev` -Tags veröffentlicht werden. Wir lieben Stack Overflow. Wir werden unsere Kunden, die dort Fragen stellen, weiterhin unterstützen. Allerdings hat Stack Overflow spezifische Kriterien, welche Fragen für die Community geeignet sind, und [Microsoft Q&a](/answers/topics/office-teams-app-dev.html) wird eine offene Richtlinie in Bezug auf diese haben.                                                                                                    |
+|        **Probleme/Vorschläge für das Tab-SDK**        |  Senden Sie Probleme und Feature-Anforderungen an die JavaScript-Bibliothek SDK Repo for [Microsoft Teams](https://github.com/OfficeDev/microsoft-teams-library-js). Gewusst-wie-Fragen zum SDK können bei [Stapelüberlauf](https://stackoverflow.com/questions/tagged/microsoft-teams) mithilfe des- `microsoft-teams` Tags veröffentlicht werden.                                                                                                                                                                                                                       |
+|            **SDK-Probleme/Vorschläge für bot & Messaging Erweiterung**             |       Senden Sie Probleme und Feature-Anforderungen an das SDK-Repository für die Sprache Ihres bot ([C#](https://github.com/Microsoft/botbuilder-dotnet/), [JavaScript](https://github.com/Microsoft/botbuilder-js)oder [python](https://github.com/Microsoft/botbuilder-python)). Gewusst-wie-Fragen zum SDK können bei [Stapelüberlauf](https://stackoverflow.com/questions/tagged/botframewor%20microsoft-teams) mithilfe des- `botframework & microsoft-teams` Tags veröffentlicht werden.                                                                                            |
+| **Beispiele** |             Senden Sie Probleme mit Beispielen an entsprechende [Microsoft Teams Samples](/microsoftteams/platform/tutorials/code-samples) Repo.                                                                                                                                                                                            |
+| **Vorschläge für Features**             |      Stellen Sie Ihre Features Vorschläge auf dem [Microsoft Teams-Feedback Portal auf UserVoice](https://microsoftteams.uservoice.com/forums/555103-public-preview/category/182881-developer-platform).                                                                                                                                                            |
+|        **Dokumentationsprobleme**        |                                                                                                                                                                      Wählen Sie `This page` im Abschnitt **Feedback für senden und anzeigen für** die Option Option aus, die unten in der jeweiligen Dokumentation verfügbar ist, um ein [Problem](https://github.com/MicrosoftDocs/msteams-docs/issues) in der Microsoft Teams-Dokumentation GitHub Repo zu öffnen.                                                                                                                                                                      |
+|       **Dokumentationsupdates**        | Wählen Sie den Link bearbeiten in einem Artikel aus, und senden Sie eine Pull-Anforderung an die [Microsoft Teams-Dokumentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) Repo.                                                                                                                                                                      |
+|          **Allgemeine Fragen**         |          Allgemeine Fragen zur Microsoft Teams-Entwicklerplattform: senden Sie eine e-Mail an die [Microsoft Teams-Community-Hilfe](mailto:microsoftteamsdev@microsoft.com). Wir ermutigen Sie, Fragen zu den oben genannten Kanälen zu stellen und nur dann e-Mails zu verwenden, wenn keine der oben genannten zutrifft.                                                                                                                                                                          |
 
 ## <a name="product-support-channels"></a>Produkt Support Kanäle
-- **Microsoft Teams-Produktprobleme/-Fehler:** Der mandantenadministrator kann den [Microsoft 365-Produkt Support](https://docs.microsoft.com/microsoft-365/admin/contact-support-for-business-products?view=o365-worldwide&tabs=online)erreichen.
-
-- **Allgemeine Fragen zu Microsoft Teams:** Stellen Sie Ihre Frage in der [Microsoft Teams-Community](https://answers.microsoft.com/en-us/msteams/forum)bereit.
+|            **Unterstützter Typ**            |               **Contact**                                                                                  |
+|-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         **Microsoft Teams-Produktprobleme/-Fehler**          | Der mandantenadministrator kann den [Microsoft 365-Produkt Support](/microsoft-365/admin/contact-support-for-business-products)erreichen.                                                            |
+|        **Allgemeine Fragen zu Microsoft Teams**        |  Stellen Sie Ihre Frage in der [Microsoft Teams-Community](https://answers.microsoft.com/en-us/msteams/forum)bereit.               |                                                                                                                                                         
