@@ -4,12 +4,12 @@ author: laujan
 description: Integrieren eines Power Virtual Agents Chatbot in die Teams-Plattform
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 0a85738857015e4bce9627333ed6f1a74e489c43
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 125a114cb4775dfe2c9265afefae0257f57282df
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279696"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397687"
 ---
 # <a name="integrate-a-power-virtual-agents-chatbot-with-microsoft-teams"></a>Integrieren einer Power Virtual Agents Chatbot mit Microsoft Teams
 
@@ -39,11 +39,12 @@ Wenn das [Hochladen benutzerdefinierter apps](/microsoftteams/admin-settings) in
 
   * Wählen Sie das App Store-Symbol am unteren Rand der linken Navigationsleiste in Ihrer Teams-Instanz aus, und suchen Sie nach **App Studio**.
 >
-&emsp;&emsp; <img  width="450px" title="Suchen von App Studio im Store" src="../../assets/images/get-started/app-studio-store.png" alt="app in studio store view"/>    
+
+&emsp;&emsp; <img  width="450px" alt="Finding App Studio in the Store" src="/msteams-docs/msteams-platform/assets/images/get-started/app-studio-store.png"/>   
 
   * Wählen Sie die Kachel **App Studio** aus, und wählen Sie im Popupdialogfeld **Installieren** aus.
 >
-&emsp;&emsp; <img  width="450px" title="Installieren von App Studio" src="../../assets/images/get-started/app-studio-install.png" alt="install app studio view"/>
+&emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
 2. **Erstellen Sie das Teams-App-Manifest in App Studio**.  Bots in Microsoft Teams werden durch eine APP-Manifestdatei (JSON) definiert, die grundlegende Informationen zu Ihrem bot und seinen Funktionen bereitstellt. Erstellen Sie in **App Studio** **Manifest-Editor**   =>  **eine neue APP**.
 3. **Fügen Sie Ihre bot-Details hinzu**. Eine vollständige Beschreibung der einzelnen Felder finden Sie unter [Manifest Schema Definition](../../resources/schema/manifest-schema.md). Stellen Sie sicher, dass Sie alle erforderlichen Felder ausfüllen.

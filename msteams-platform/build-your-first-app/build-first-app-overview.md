@@ -5,12 +5,12 @@ description: Übersicht und Voraussetzungen für die Erstellung der ersten Micro
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: 7431230487f1644de8b17b0b9e143819395b7527
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 14776b147309877212f710677ae5941238cf5c0d
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279710"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397694"
 ---
 # <a name="build-your-first-teams-app-overview"></a>Erstellen Ihrer ersten Teams-App-Übersicht
 
@@ -69,7 +69,7 @@ Sie können ein kostenloses Test Konto für Teams erhalten, das App-Sideloading 
 1. Wählen Sie **jetzt beitreten** aus, und folgen Sie den Anweisungen auf dem Bildschirm.
 1. Wenn Sie zum Begrüßungsbildschirm gelangen, wählen Sie **E5-Abonnement einrichten**aus.
 1. Richten Sie Ihr Administratorkonto ein. Wenn Sie fertig sind, sollten Sie einen Bildschirm wie den folgenden sehen.
-:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Beispiel dessen, was nach der Anmeldung für das Microsoft 365-Entwicklerprogramm angezeigt wird.":::
+:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Abbildung zeigt, wo in Microsoft Teams eine benutzerdefinierte App hochgeladen werden kann.":::
 1. Melden Sie sich mit dem soeben eingerichteten Administratorkonto bei Microsoft Teams an.
 1. Überprüfen Sie, ob Sie nun die Option **benutzerdefinierte App hochladen** haben.
 
@@ -85,13 +85,14 @@ Microsoft Teams zeigt App-Inhalte nur über HTTPS-Verbindungen an. Da Sie Ihre e
 1. Installieren Sie [ngrok](https://ngrok.com/download).
 1. Installieren Sie die neueste Version von [Visual Studio-Code](https://code.visualstudio.com/download). (Frühere Versionen funktionieren möglicherweise nicht mit dem Toolkit.)
 1. Wählen Sie in Visual Studio Code in der linken Aktivitäts Leiste die Option **Extensions** aus, :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: und installieren Sie das **Microsoft Teams-Toolkit**.
-    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Abbildung zeigt, wo in Visual Studio Code Sie die Microsoft Teams Toolkit-Erweiterung installieren können.":::
+
+    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Abbildung zeigt, wo in Microsoft Teams eine benutzerdefinierte App hochgeladen werden kann.":::
 
 ## <a name="about-the-tutorials"></a>Informationen zu den Lernprogrammen
 
 Sie können mit einem der Teams beginnen, **Ihre ersten App** -Lektionen zu erstellen. Wenn Sie sich nicht sicher sind, wo Sie zuerst suchen, begeben Sie sich auf unseren anfängerfreundlichen Pfad und erstellen Sie ein "Hello, World!". App.
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Skill Tree mit Lernpfaden für die Lernprogramme zum Erstellen Ihrer ersten app." border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Abbildung zeigt, wo in Microsoft Teams eine benutzerdefinierte App hochgeladen werden kann." border="false":::
 
 ## <a name="next-step"></a>Nächster Schritt
 

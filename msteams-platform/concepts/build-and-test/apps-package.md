@@ -3,12 +3,12 @@ title: Verpacken Ihrer APP
 description: Erfahren Sie, wie Sie Ihre APP zum Testen, hochladen und veröffentlichen in Microsoft Teams verpacken.
 keywords: Apps für Teams-Verpackungen
 ms.topic: conceptual
-ms.openlocfilehash: 66131f37f9f68c8fd54412d41068f6124da94453
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: d2d49dcc5c4ccada0a75de5df6fda29a60e809f6
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801364"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397701"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Erstellen eines App-Pakets für Ihre Microsoft Teams-App
 
@@ -45,6 +45,11 @@ Das `color` Symbol wird in Microsoft Teams verwendet (in App-und Tab-Galerien, B
 
 Das `outline` Symbol wird an diesen Stellen verwendet: die APP-Leiste und die Messaging Erweiterungen, die der Benutzer als Favorit markiert hat. Dieses Symbol muss 32x32 Pixel sein. Das Gliederungssymbol muss nur weiß und Transparenz enthalten (keine anderen Farben). Das Symbol kann weiß mit transparentem Hintergrund oder transparent mit weißem Hintergrund sein. Das Symbol für die Gliederung sollte nicht über einen zusätzlichen Textabstand verfügen, der das Symbol umgibt, und sollte so dicht wie möglich abgeschnitten sein, während die 32x32-Bemaßungen weiterhin beibehalten werden. Hier sind einige gute Beispiele:
 
+> [!TIP]
+>  * Die Farbe muss in RGB "weiß" sein (rot: 255, grün: 255, blau: 255).
+>  * Der gesamte andere Teil des Symbols sollte transparent sein.
+>  * Für die Übergabe muss das kleine Symbol vollständig transparent sein, der Alpha Kanal ist 0, und jeder andere Wert ist ein Fehler.
+
 ![Beispiel-Gliederungssymbole](~/assets/images/icons/sample20x20s.png)
 
 Angenommen, Ihr Unternehmen ist contoso. Sie möchten zwei Symbole übermitteln:
@@ -59,8 +64,8 @@ Hier erfahren Sie, wie die Symbole auf der Benutzeroberfläche angezeigt werden:
 
 #### <a name="flyout"></a>Flyout
 
-![Beispiel-Contoso-Symbole](~/assets/images/icons/flyout.png)
+![Beispiel für Contoso-Flyout](~/assets/images/icons/flyout.png)
 
 #### <a name="app-bar-and-home-screen"></a>App-Leiste und Startbildschirm
 
-![Beispiel-Contoso-Symbole](~/assets/images/icons/appbarhomescreen.png)
+![Beispiel für Contoso-App-Leiste Homescreen](~/assets/images/icons/appbarhomescreen.png)

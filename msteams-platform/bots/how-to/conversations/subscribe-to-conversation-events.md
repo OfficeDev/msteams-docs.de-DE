@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Abonnieren von unterhaltungsereignissen von Ihrem Microsoft Teams-bot.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a8c6c39989a7d09a325412438f0d2ace78259cb7
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: c678690b1dc2c948cceacdf42c95f169fff753bb
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801218"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397680"
 ---
 # <a name="subscribe-to-conversation-events"></a>Abonnieren von Unterhaltungsereignissen
 
@@ -432,7 +432,9 @@ async def on_teams_members_added_activity(
 
 ### <a name="team-members-removed"></a>Team Mitglieder entfernt
 
-Das `teamMemberRemoved` Ereignis wird an Ihren bot gesendet, wenn es aus einem Team entfernt wird und jedes Mal, wenn ein Benutzer aus einem Team entfernt wird, von dem Ihr bot Mitglied ist. Sie können ermitteln, ob das neue Element aus dem bot selbst oder einem Benutzer entfernt wurde, indem Sie sich das `Activity` Objekt von ansehen `turnContext` .  Wenn das `Id` Feld des Objekts mit dem `MembersRemoved` `Id` Feld des Objekts identisch ist `Recipient` , ist das Element entfernt der bot, andernfalls handelt es sich um einen Benutzer.  Der bot `Id` wird im allgemeinen:`28:<MicrosoftAppId>`
+Das `teamMemberRemoved` Ereignis wird an Ihren bot gesendet, wenn es aus einem Team entfernt wird und jedes Mal, wenn ein Benutzer aus einem Team entfernt wird, von dem Ihr bot Mitglied ist. Sie können ermitteln, ob das neue Element aus dem bot selbst oder einem Benutzer entfernt wurde, indem Sie sich das `Activity` Objekt von ansehen `turnContext` .  Wenn das `Id` Feld des Objekts mit dem `MembersRemoved` `Id` Feld des Objekts identisch ist `Recipient` , ist das Element entfernt der bot, andernfalls handelt es sich um einen Benutzer.  Der bot `Id` wird im allgemeinen: `28:<MicrosoftAppId>`
+
+[!Note] Wenn ein Benutzer dauerhaft von einem Mandanten gelöscht wird, `membersRemoved conversationUpdate` wird das Ereignis ausgelöst.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 

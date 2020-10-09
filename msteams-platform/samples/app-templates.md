@@ -3,12 +3,12 @@ title: Microsoft Teams-App-Vorlagen
 description: Links und Beschreibungen von App-Vorlagen für die Microsoft Teams-Plattform
 ms.topic: reference
 keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
-ms.openlocfilehash: a3f9090526a92fba3f6cebe13a973cebeb056889
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: 9bb93ab55d520265645cf999250bfdf6fae75ea6
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326361"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397729"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -90,6 +90,18 @@ Celebrations ist eine Teams-APP, die Teammitgliedern hilft, Geburtstage, Jubilä
 Die APP bietet eine einfache Benutzeroberfläche für alle Teammitglieder, um Ihre Ereignisse persönlich hinzufügen und anzeigen zu können, und ermöglicht es dem Benutzer, die Teams auszuwählen, in denen die Ereignisse freigegeben werden.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
+
+## <a name="checklist-9734"></a>Prüfliste &#9734;
+
+Checklist ist eine benutzerdefinierte Microsoft Teams- [Messaging Erweiterungs](../messaging-extensions/what-are-messaging-extensions.md) -APP, mit der Sie mit Ihrem Team zusammenarbeiten können, indem Sie eine freigegebene Prüfliste in einem Chat oder Kanal erstellen. Die APP wird für alle Teams-Platt Form Clients-Desktop, Browser, IOS und Android-unterstützt und ist bereit für die Bereitstellung als Teil Ihres Microsoft 365-Abonnements.  
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-checklist-app )
+
+:::row:::
+:::column span="2":::
+    ![Prüfliste für die Teamansicht erstellen](../assets/images/checklist-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="company-communicator"></a>Unternehmens-Communicator
 
@@ -276,7 +288,7 @@ Incentives ist eine [Power apps](/powerapps/maker/canvas-apps/embed-teams-app) -
 
 ![Demo zur Incentives-App](../assets/images/incentives-app.png)
 
-## <a name="incident-reporter"></a>Vorfall Reporter 
+## <a name="incident-reporter"></a>Vorfall Reporter
 
 Incident Reporter ist ein [Microsoft Teams-bot](../bots/what-are-bots.md)  , der die Verwaltung von Vorfällen in Ihrer Organisation optimiert. Der bot erleichtert die Erfassung automatischer Vorfall Daten, benutzerdefinierter vorfallberichte, relevanter Benachrichtigungen von Beteiligten und die End-to-End-Vorfall Verfolgung.
 
@@ -307,6 +319,18 @@ Open Badges ist eine Microsoft Teams-APP, mit der Einzelpersonen digitale Lern A
 :::row:::
 :::column span="2":::
     ![Verliehene Abzeichen-Ansicht](../assets/images/open-badges-2.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="poll-9734"></a>Umfrage &#9734;
+
+Poll ist eine benutzerdefinierte Microsoft Teams- [Messaging Erweiterungs](../messaging-extensions/what-are-messaging-extensions.md) Anwendung, mit der Sie Umfragen in einem Chat oder Kanal schnell erstellen und senden können, um Team Meinungen und-Einstellungen zu sammeln. Die APP wird für alle Teams-Platt Form Clients-Desktop, Browser, IOS und Android-unterstützt und ist bereit für die Bereitstellung als Teil Ihres Microsoft 365-Abonnements.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-poll-app)
+
+:::row:::
+  :::column span="1":::
+    ![Ansicht "Umfrage in Teams erstellen"](../assets/images/poll-app-template-compose-view.gif)  
 :::column-end:::
 :::row-end:::
 
@@ -408,6 +432,18 @@ Personal Check-ins ist eine [Power apps](/powerapps/powerapps-overview)-basierte
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 
 ![Eincheck Ansicht erstellen](../assets/images/staff-check-ins-create.png)
+
+## <a name="survey-9734"></a>Umfrage &#9734;
+
+Survey ist eine benutzerdefinierte Microsoft Teams- [Messaging Erweiterungs](../messaging-extensions/what-are-messaging-extensions.md) -APP, mit der Sie eine Umfrage in einem Chat oder einem Kanal erstellen können, um Daten zu sammeln und Einblicke in Aktionen zu erhalten.  Die APP wird für alle Teams-Platt Form Clients-Desktop, Browser, IOS und Android-unterstützt und ist bereit für die Bereitstellung als Teil Ihres Microsoft 365-Abonnements.  
+
+[Get it on GitHub](https://github.com/OfficeDev/Microsoft-Teams-Survey-app)
+
+:::row:::
+  :::column span="2":::
+    ![Ansicht "Umfrage in Teams erstellen"](../assets/images/survey-app-template-compose-view.gif)
+:::column-end:::
+:::row-end:::
 
 ## <a name="visitor-management-9734"></a>Besucher Verwaltungs &#9734;
 
