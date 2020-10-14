@@ -2,12 +2,12 @@
 title: Neuerungen
 description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 keywords: Teams What es New Latest
-ms.openlocfilehash: 87fa50bc374310c2fe5d8081b18268c6298fb515
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: b4e36ab00a784017cef20657e9ee548ed90f3efa
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397666"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452813"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuerungen für Entwickler in Microsoft Teams
 
@@ -18,8 +18,9 @@ ms.locfileid: "48397666"
 
 Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und dieser Dokumentenmappe aufgelistet. Gelegentlich können Einträge verwendet werden, um die Aufmerksamkeit auf ein neues Feature zu lenken, das für Entwickler von Teams einfach interessant ist.
 
-| **Date** | **Hinweise** | **Geänderte Themen** |
+| **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
+|9/30/2020|Das Senden und empfangen von Dateien an Bots auf mobilen Geräten wird nun unterstützt.|[Senden und empfangen von Dateien über Ihren bot](resources/bot-v3/bots-files.md)|
 |09/22/2020|Leitfaden für neue "erste Schritte mit Teams"|[Erstellen Ihrer ersten Teams-App-Übersicht](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|Unterstützung für in-Meeting Teams-Apps (Veröffentlichungs Vorschau)|[Erstellen von Apps für Microsoft Teams-Besprechungen](apps-in-teams-meetings/create-apps-for-teams-meetings.md) und- [apps in Microsoft Teams-Besprechungen](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |8/19/2020|Importieren von Teams-Nachrichten mit Microsoft Graph|[Plattform-Nachrichten von Drittanbietern mithilfe von Microsoft Graph in Teams importieren](graph-api/import-messages/import-external-messages-to-teams.md)

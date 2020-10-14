@@ -1,24 +1,27 @@
 ---
-title: Erstellen einer Nachrichten-Erweiterung
+title: Erstellen einer Messaging Erweiterung für Teams
 author: clearab
-description: Vorgehensweise Erstellen einer Messaging Erweiterung für eine Microsoft Teams-app.
+description: Informationen zum Erstellen einer Microsoft Teams-Messaging Erweiterung
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ca03469b04c9696b26db3512790e03be26ca63af
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: 03fe4463f7e7af0874af4ce4f487f1a01fdd5fe6
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48178309"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452596"
 ---
-# <a name="create-a-messaging-extension-in-microsoft-teams"></a>Erstellen einer Messaging Erweiterung in Microsoft Teams
+# <a name="create-a-messaging-extension-for-microsoft-teams"></a>Erstellen einer Messaging Erweiterung für Microsoft Teams
+
+> [!TIP]
+> Suchen Sie nach einer schnelleren Methode für den Einstieg? Erstellen Sie mithilfe des Microsoft Teams-Toolkits eine [Messaging Erweiterung](../../build-your-first-app/build-messaging-extension.md) .
 
 Auf einer hohen Ebene müssen Sie die folgenden Schritte ausführen, um eine Messaging Erweiterung zu erstellen.
 
 1. Vorbereiten Ihrer Entwicklungsumgebung
 2. Erstellen und Bereitstellen des Webdiensts (bei der Entwicklung verwenden Sie einen Tunnel Dienst wie ngrok, um den Webdienst lokal auszuführen)
 3. Registrieren Ihres Webdiensts bei Bot Framework
-4. Erstellen Ihres App-Pakets
+4. Erstellen Ihres App-Paketes
 5. Hochladen Ihres Pakets in Microsoft Teams
 
 Das Erstellen Ihres Webdiensts, das Erstellen Ihres App-Pakets und das Registrieren des Webdiensts mit dem bot-Framework können in beliebiger Reihenfolge erfolgen. Da diese drei Teile so miteinander verflochten sind, müssen Sie zurückkehren, um die anderen zu aktualisieren, unabhängig davon, in welcher Reihenfolge Sie Sie durchführen. Ihre Registrierung benötigt den Messaging-Endpunkt aus dem bereitgestellten Webdienst, und Ihr Webdienst benötigt die ID und das Kennwort, die aus der Registrierung erstellt wurden. Ihr App-Manifest benötigt auch diese ID, um Teams mit Ihrem Webdienst zu verbinden.
@@ -128,9 +131,9 @@ Sobald eine Besprechung beginnt, können Teams-Teilnehmer während eines Live-An
 
 1. **Location**. Ihre Messaging Erweiterung kann über den Bereich zum Verfassen von Nachrichten, das Befehlsfeld oder @mentioned im Besprechungs Chat aufgerufen werden.
 
-1. **Metadaten**. Wenn Ihre Messaging-Erweiterung aufgerufen wird, kann Sie den Benutzer und den Mandanten aus `userId` und identifizieren `tenantId` . Der `meetingId` kann als Teil des Objekts gefunden werden `channelData` . Ihre APP kann die `userId` und `meetingId`  für die `GetParticipant` API-Anforderung zum Abrufen von Benutzerrollen verwenden.
+1. **Metadaten**. Wenn Ihre Messaging-Erweiterung aufgerufen wird, kann Sie den Benutzer und den Mandanten aus `userId` und identifizieren `tenantId` . Die `meetingId`kann als Teil des Objekts `channelData` gefunden werden. Ihre APP kann die `userId` und `meetingId`  für die `GetParticipant` API-Anforderung zum Abrufen von Benutzerrollen verwenden.
 
-1. **Befehlstyp**. Wenn Ihre Nachrichten Erweiterung [Aktionsbasierte Befehle](../../messaging-extensions/what-are-messaging-extensions.md#action-commands)verwendet, sollte Sie den Registerkarten [für einmaliges Anmelden bei](../../tabs/how-to/authentication/auth-aad-sso.md) der Authentifizierung entsprechen. 
+1. **Befehlstyp**. Wenn Ihre Nachrichten Erweiterung [Aktionsbasierte Befehle](../../messaging-extensions/what-are-messaging-extensions.md#action-commands)verwendet, sollte Sie den Registerkarten [für einmaliges Anmelden bei](../../tabs/how-to/authentication/auth-aad-sso.md) der Authentifizierung entsprechen.
 
 1. **Benutzeroberfläche**. Sie sollten die beabsichtigte Endbenutzererfahrung für Messaging Erweiterungen bestimmen, die während eines Besprechungs Chats aufgerufen wurden.
 

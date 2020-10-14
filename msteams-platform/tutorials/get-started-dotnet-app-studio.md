@@ -5,12 +5,12 @@ keywords: Erste Schritte mit .net c# CSharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: c29fdde23ff6ff0e8269ccaf256c5154c0145a7b
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: 3aca72a43765036c0014a9e16fa585575fe97b2e
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210694"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452848"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-cnet-and-app-studio"></a>Erste Schritte mit der Microsoft Teams-Plattform mit C#/.net und App Studio
 
@@ -107,17 +107,17 @@ Microsoft Azure können Sie Ihre .NET-Anwendung auf einer freien Ebene mit der f
 
 Visual Studio bietet integrierte Unterstützung für die APP-Bereitstellung für unterschiedliche Anbieter, einschließlich Azure.
 
-<img width="530px" src="~/assets/images/get-started/publishtoazure1.png" title="Visual Studio"/>
+<img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 
-[!include[Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
+[!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
 ## <a name="update-the-credentials-for-your-hosted-app"></a>Aktualisieren der Anmeldeinformationen für die gehostete App
 
 Für die Beispiel-App müssen die folgenden Umgebungsvariablen auf die Werte festgelegt werden, auf die Sie zuvor hingewiesen haben.
 
-Öffnen Sie die Datei appSettings. JSON. Aktualisieren Sie den *MicrosoftAppId* -Wert mit ihrer bot-ID, die Sie zuvor gespeichert haben. Aktualisieren Sie das *MicrosoftAppPassword* mit dem zuvor gespeicherten bot-Kennwort.
+Öffnen Sie die Datei appsettings.js. Aktualisieren Sie den *MicrosoftAppId* -Wert mit ihrer bot-ID, die Sie zuvor gespeichert haben. Aktualisieren Sie das *MicrosoftAppPassword* mit dem zuvor gespeicherten bot-Kennwort.
 
-<img width="560px" src="~/assets/images/get-started/get-started-net-azure-add-keys.png" title="Festlegen der Schlüssel"/>
+<img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
 
 Nachdem diese Änderungen vorgenommen wurden, erstellen Sie die APP neu. Wenn Sie ngrok verwenden, führen Sie die APP lokal aus, und wenn Sie in Azure hosten, müssen Sie die APP erneut bereitstellen.
 
@@ -125,22 +125,22 @@ Nachdem diese Änderungen vorgenommen wurden, erstellen Sie die APP neu. Wenn Si
 
 Nachdem Sie die app in einem Team installiert haben, müssen Sie Sie so konfigurieren, dass Inhalte angezeigt werden. Wechseln Sie zu einem Kanal im Team, in dem Sie die Beispiel-App installiert haben, und klicken Sie auf die Schaltfläche **"+"** , um eine neue Registerkarte hinzuzufügen. Sie können dann `Hello World` in der Liste **Registerkarte hinzufügen** auswählen. Anschließend wird ein Konfigurationsdialogfeld angezeigt. In diesem Dialogfeld können Sie auswählen, welche Registerkarte in diesem Kanal angezeigt werden soll. Nachdem Sie die Registerkarte ausgewählt haben und klicken Sie auf `Save` dann können Sie die `Hello World` Registerkarte mit der ausgewählten Registerkarte geladen sehen.
 
-<img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot von configure" />
+<img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
 ### <a name="test-your-bot-in-teams"></a>Testen Sie Ihren bot in Microsoft Teams
 
 Sie können nun mit dem bot in Microsoft Teams interagieren. Wählen Sie einen Kanal in dem Team aus, in dem Sie Ihre APP registriert haben, und geben Sie ein `@your-bot-name` . Dies wird als ** \@ Erwähnung**bezeichnet. Jede Nachricht, die Sie an den bot senden, wird als Antwort an Sie zurückgesendet.
 
-<img width="450px" title="Bot-Antworten" src="~/assets/images/samples-hello-world-bot.png" />
+<img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### <a name="test-your-messaging-extension"></a>Testen der Messaging Erweiterung
 
 Um Ihre Messaging Erweiterung zu testen, können Sie auf die drei Punkte unter dem Eingabefeld in ihrer Unterhaltungsansicht klicken. Ein Menü wird mit der **"Hello World"-** app in diesem Popup angezeigt. Wenn Sie darauf klicken, sehen Sie eine Reihe von zufälligen Texten, die angezeigt werden. Sie können eine von Ihnen auswählen, und Sie wird in Ihre Unterhaltung eingefügt.
 
-<img width="530px" title="Menü "Messaging Erweiterung"" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
+<img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
-<img width="530px" title="Ergebnis der Messaging-Erweiterung" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+<img width="530px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
 Wählen Sie einen der zufälligen Texte aus, und Sie sehen eine Karte, die formatiert und mit ihrer eigenen Nachricht am unteren Rand gesendet werden kann.
 
-<img width="530px" title="Messaging-Durchwahl senden" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+<img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />

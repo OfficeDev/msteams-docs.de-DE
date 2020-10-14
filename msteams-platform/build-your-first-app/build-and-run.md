@@ -1,20 +1,20 @@
 ---
-title: Erstellen und Ausführen eines "Hello, World!" Teams-App
+title: Erste Schritte – erstellen und Ausführen ihrer ersten App
 author: heath-hamilton
-description: Erstellen Sie die erste Microsoft Teams-APP, und führen Sie Sie aus, eine persönliche Registerkarte, auf der "Hello, World!" angezeigt wird.
+description: Erstellen Sie schnell eine Microsoft Teams-APP, die ein "Hello, World!" anzeigt. Nachricht mit dem Microsoft Teams-Toolkit.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: quickstart
-ms.openlocfilehash: 244a899670f71b9446c8c3d3e404c9fd7c7b510c
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 20c9eee14649cda23e1d682940f489e78cba24b9
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237832"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452645"
 ---
-# <a name="build-a-hello-world-teams-app"></a>Erstellen Sie ein "Hello, World!" Teams-App
+# <a name="build-and-run-your-first-microsoft-teams-app"></a>Erstellen und Ausführen ihrer ersten Microsoft Teams-App
 
-Sie können direkt in die Microsoft Teams-Plattformentwicklung wechseln, indem Sie eine persönliche RegisterkarteErstellen, in der "Hello, World!" angezeigt wird.
+Sie können direkt in die Microsoft Teams-Entwicklung wechseln, indem Sie eine persönliche RegisterkarteErstellen, die "Hello, World!" anzeigt.
 
 ## <a name="1-create-your-app-project"></a>1. Erstellen des App-Projekts
 
@@ -24,14 +24,14 @@ Verwenden Sie das Microsoft Teams-Toolkit in Visual Studio Code, um Ihr erstes A
 :::image type="content" source="../assets/images/build-your-first-app/create-teams-app.png" alt-text="Screenshot, der zeigt, wie Sie eine neue APP mit dem Visual Studio Code Teams-Toolkit erstellen.":::
 1. Geben Sie einen Namen für Ihre Teams-App ein. (Dies ist der Standardname für Ihre APP und auch der Name des App-Projektverzeichnisses auf Ihrem lokalen Computer.)
 1. Wählen Sie auf dem Bildschirm **Funktionen hinzufügen** die Option **Tab** und dann dann **weiter**aus.
-:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Screenshot, in dem gezeigt wird, wie Ihr App-Projekt mit dem Visual Studio Code Teams-Toolkit konfiguriert wird.":::
+:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Screenshot, der zeigt, wie Sie eine neue APP mit dem Visual Studio Code Teams-Toolkit erstellen.":::
 1. Aktivieren Sie die Option **persönliche Registerkarte** , und klicken Sie unten auf dem Bildschirm auf **Fertig stellen** , um Ihr Projekt zu konfigurieren.
 
 ## <a name="2-understand-important-app-project-components"></a>2. Grundlegendes zu wichtigen App-Projektkomponenten
 
 Nachdem das Toolkit Ihr Projekt konfiguriert hat, müssen Sie die Komponenten zum Erstellen einer einfachen persönlichen Registerkarte für Teams. Die Projektverzeichnisse und-Dateien werden im Bereich "Explorer" von Visual Studio Code angezeigt.
 
-:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="Screenshot, in dem App-Projektdateien für eine persönliche Registerkarte in Visual Studio Code angezeigt werden.":::
+:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="Screenshot, der zeigt, wie Sie eine neue APP mit dem Visual Studio Code Teams-Toolkit erstellen.":::
 
 Lassen Sie uns einen Moment Zeit nehmen, um einige der wichtigsten Dateien zu verstehen, mit denen Microsoft Teams-App-Entwickler arbeiten.
 
@@ -66,7 +66,7 @@ Im Interesse der Zeit erstellen und führen Sie Ihre APP lokal aus.
 1. Wechseln Sie in einem Terminal zum Stammverzeichnis des App-Projekts, und führen Sie es aus `npm install` .
 1. Ausführen `npm start` . Nach Abschluss des Vorgangs wird ein **erfolgreiches kompiliert!** Nachricht im Terminal.
 1. Öffnen Sie einen Browser, und wechseln Sie zu `https://localhost:3000` , um eine leere Webseite mit dem Namen **Microsoft Teams-Registerkarte**anzuzeigen. (Keine Sorge, dass auf der Seite kein Inhalt angezeigt wird.)<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Screenshot, der zeigt, wie die laufende app in einem Browser angezeigt wird.":::
+   :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Screenshot, der zeigt, wie Sie eine neue APP mit dem Visual Studio Code Teams-Toolkit erstellen.":::
 
 ## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. Einrichten eines sicheren Tunnels für Ihre APP
 
@@ -76,7 +76,7 @@ Installieren Sie [ngrok](https://ngrok.com/download) , falls noch nicht geschehe
 
 1. Öffnen Sie ein neues Terminal, und führen Sie es aus `ngrok http 3000` .
 1. Kopieren Sie die von Ihnen angegebene HTTPS-URL (siehe das folgende Beispiel).
-:::image type="content" source="../assets/images/build-your-first-app/ngrok-running.png" alt-text="Screenshot, in dem ein Terminal mit ngrok-Ausführung angezeigt wird.":::
+:::image type="content" source="../assets/images/build-your-first-app/ngrok-running.png" alt-text="Screenshot, der zeigt, wie Sie eine neue APP mit dem Visual Studio Code Teams-Toolkit erstellen.":::
 1. Öffnen Sie in Ihrem `.publish` Verzeichnis `Development.env` .
 1. Ersetzen Sie den `baseUrl0` Wert durch die kopierte URL. (Ändern Sie beispielsweise `baseUrl0=http://localhost:3000` in `baseUrl0=https://85528b2b3ba5.ngrok.io` .)
 
@@ -92,9 +92,9 @@ Wenn Ihre APP über HTTPS läuft und darauf zugegriffen werden kann, sind Sie be
 1. Melden Sie sich mit Ihrem Konto beim Microsoft Teams-Client an, das App-Sideloading zulässt. (Wenn Sie nicht sicher sind, dass dies der Fall ist, erfahren Sie mehr über das [Einrichten eines Teams-entwicklungskontos](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account).)
 1. Wählen Sie **apps**aus, und wählen Sie dann **benutzerdefinierte App hochladen**aus.
 1. Wechseln Sie zu Ihrem APP `.publish` -Projektordner, und wählen Sie aus `Development.zip` . Eine modale Installation wird angezeigt.
-:::image type="content" source="../assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot mit einem Beispiel für eine Microsoft Teams-App-Installation modal.":::
+:::image type="content" source="../assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot, der zeigt, wie Sie eine neue APP mit dem Visual Studio Code Teams-Toolkit erstellen.":::
 1. Wählen Sie **Hinzufügen** aus, um Ihre APP zu installieren.
-:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Screenshot mit einem Beispiel für die persönliche Tab-app "Hello, World!", die in Microsoft Teams läuft.":::
+:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Screenshot, der zeigt, wie Sie eine neue APP mit dem Visual Studio Code Teams-Toolkit erstellen.":::
 
 🎉 Herzlichen Glückwunsch! Ihre APP wird in Microsoft Teams gestartet.
 
@@ -105,6 +105,6 @@ Erweitern Sie auf der persönlichen Registerkarte, die Sie gerade erstellt haben
 > [!div class="nextstepaction"]
 > [Zu Ihrer persönlichen Registerkarte hinzufügen](../build-your-first-app/build-personal-tab.md)
 > [!div class="nextstepaction"]
-> [Erstellen einer Kanal Registerkarte](../build-your-first-app/build-channel-tab.md)
+> [Erstellen einer Kanalregisterkarte](../build-your-first-app/build-channel-tab.md)
 > [!div class="nextstepaction"]
-> [Erstellen eines bot](../build-your-first-app/build-bot.md)
+> [Erstellen eines Bots](../build-your-first-app/build-bot.md)

@@ -1,20 +1,23 @@
 ---
-title: Erweitern Ihrer Teams-App mit einer benutzerdefinierten Registerkarte
+title: Erstellen einer Registerkarte für Teams
 author: laujan
-description: Vorgehensweise Erstellen einer Registerkarte für Microsoft Teams mit App Studio oder manuell.
+description: Informationen zum Erstellen einer Registerkarte "Teams"
 keywords: Teams-Registerkartengruppe Kanal konfigurierbar
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 78077a19c8597826ca6d10a7c1c6240fae3f3fbd
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 8718bdfe075f8187e41b1b7493ea561498b1c8b7
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209718"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452757"
 ---
-# <a name="extend-your-teams-app-with-a-custom-tab"></a>Erweitern Ihrer Teams-App mit einer benutzerdefinierten Registerkarte
+# <a name="create-a-tab-for-microsoft-teams"></a>Erstellen einer Registerkarte für Microsoft Teams
 
-Mit benutzerdefinierten Registerkarten können Sie Webinhalte bereitstellen, die Sie für Ihren Kanal, Gruppenchat und persönliche Benutzer hosten. Auf einer hohen Ebene müssen Sie die folgenden Schritte ausführen, um eine Registerkarte zu erstellen:
+> [!TIP]
+> Suchen Sie nach einer schnelleren Methode für den Einstieg? Erstellen Sie mithilfe des Microsoft Teams-Toolkits eine [persönliche](../../build-your-first-app/build-personal-tab.md) oder eine [Kanal-und Gruppen](../../build-your-first-app/build-channel-tab.md) Registerkarte.
+
+Über Registerkarten können Sie Webinhalte bereitstellen, die Sie für Ihren Kanal, Gruppenchat und persönliche Benutzer hosten. Auf einer hohen Ebene müssen Sie die folgenden Schritte ausführen, um eine Registerkarte zu erstellen:
 
 1. Vorbereiten Ihrer Entwicklungsumgebung.
 1. Erstellen Sie Ihre Seite (n).
@@ -81,9 +84,9 @@ Der angezeigte Inhalt für persönliche Registerkarten ist für alle Benutzer gl
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`entityId`|String|64 Zeichen|✔|Ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird.|
-|`name`|String|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanalschnittstelle.|
-|`contentUrl`|String|2048 Zeichen|✔|Die https://-URL, die auf die Benutzeroberfläche der Entität zeigt, die im Canvas "Teams" angezeigt werden soll.|
-|`websiteUrl`|String|2048 Zeichen||Die https://-URL, auf die verwiesen wird, wenn ein Benutzer sich für die Anzeige in einem Browser entscheidet.|
+|`name`|Zeichenfolge|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanalschnittstelle.|
+|`contentUrl`|Zeichenfolge|2048 Zeichen|✔|Die https://-URL, die auf die Benutzeroberfläche der Entität zeigt, die im Canvas "Teams" angezeigt werden soll.|
+|`websiteUrl`|Zeichenfolge|2048 Zeichen||Die https://-URL, auf die verwiesen wird, wenn ein Benutzer sich für die Anzeige in einem Browser entscheidet.|
 |`scopes`|Array von Enumerationen|1|✔|Statische Registerkarten unterstützen nur den `personal` Bereich, was bedeutet, dass Sie nur als Teil einer persönlichen App zur Verfügung gestellt werden können.|
 
 #### <a name="simple-personal-tab-manifest-example"></a>Beispiel für einfaches persönliches Tab-Manifest
@@ -109,7 +112,7 @@ Im Array werden Kanäle/Gruppenregisterkarten hinzugefügt `configurableTabs` . 
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 Zeichen|✔|Die Seite https://URL to Configuration.|
+|`configurationUrl`|Zeichenfolge|2048 Zeichen|✔|Die Seite https://URL to Configuration.|
 |`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte nach der Erstellung vom Benutzer aktualisiert werden kann. Standard `true`|
 |`scopes`|Array von Enumerationen|1|✔|Konfigurierbare Registerkarten unterstützen nur die `team` und `groupchat` Bereiche. |
 

@@ -2,12 +2,12 @@
 title: Erstellen einer tollen App-Detailseite
 description: Beschreibung der Seite "Anforderungen für App-Details"
 keywords: Veröffentlichen von Office-Veröffentlichungsrichtlinien für Microsoft Teams AppSource Inhalt
-ms.openlocfilehash: 90ce6962668c6a7a66bb10d33b1315340de29b4d
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: 103f57ba99404b8d7d5fb28c7aeaa0b770db6969
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326326"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452771"
 ---
 # <a name="build-a-great-app-details-page"></a>Erstellen einer tollen App-Detailseite
 
@@ -31,7 +31,7 @@ Die Seite Details stellt den ersten Eindruck ihrer App für Benutzer dar. Jedes 
 >* Verwenden Sie diese Ressourcen für Anleitungen:
 
 * [App-namens Handbuch](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)
-* [Microsoft-Marken-und Markenrichtlinien](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general)
+* [Microsoft-Marken-und Markenrichtlinien](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
 
 **Aufgaben:**
 

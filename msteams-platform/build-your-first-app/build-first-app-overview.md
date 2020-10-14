@@ -1,18 +1,18 @@
 ---
-title: Erste Schritte beim Erstellen der ersten Teams-App
+title: Erste Schritte – Erstellen Ihrer ersten App-Übersicht und Voraussetzungen
 author: heath-hamilton
-description: Übersicht und Voraussetzungen für die Erstellung der ersten Microsoft Teams-App
+description: Erfahren Sie, wie Sie mit der Microsoft Teams-App-Entwicklung beginnen und Ihre Umgebung einrichten.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: quickstart
-ms.openlocfilehash: 14776b147309877212f710677ae5941238cf5c0d
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: c158b7ad925e05e4056769536f5e0d212763942a
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397694"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452603"
 ---
-# <a name="build-your-first-teams-app-overview"></a>Erstellen Ihrer ersten Teams-App-Übersicht
+# <a name="build-your-first-microsoft-teams-app-overview"></a>Erstellen Ihrer ersten Microsoft Teams-App-Übersicht
 
 In den **ersten App** -Lektionen erstellen Sie grundlegende Teams-apps. In jedem Lernprogramm wird erläutert, wie Sie eine einfache Real-World-Teams-app erstellen, während Sie allgemeine Tools, grundlegende Konzepte und erweiterte Funktionen einführen.
 

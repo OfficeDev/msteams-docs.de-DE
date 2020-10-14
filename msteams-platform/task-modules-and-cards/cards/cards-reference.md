@@ -2,12 +2,12 @@
 title: Karten Referenz
 description: Beschreibt alle Karten-und Karten Aktionen, die Bots in Microsoft Teams zur Verfügung stehen.
 keywords: Referenz zu Bots-Karten
-ms.openlocfilehash: 7bd1cbea0aec03913c9bce205ae68eedba284637
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: 0bcc905f3d5b678700a396ff3e5b8b5f0232046f
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434545"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452610"
 ---
 # <a name="cards-reference"></a>Karten Referenz
 
@@ -235,8 +235,8 @@ Eine Karte, die normalerweise ein einzelnes großes Bild, eine oder mehrere Scha
 
 | Eigenschaft | Typ  | Beschreibung |
 | --- | --- | --- |
-| title | Rich-Text  | Titel der Karte. Maximal 2 Zeilen; Formatierung wird derzeit nicht unterstützt |
-| unter | Rich-Text  | Untertitel der Karte. Maximal 2 Zeilen; Formatierung wird derzeit nicht unterstützt |
+| title | Rich-Text  | Titel der Karte. Maximal 2 Zeilen. |
+| unter | Rich-Text  | Untertitel der Karte. Maximal 2 Zeilen.|
 | text | Rich-Text  | Text wird direkt unterhalb des Untertitels angezeigt; Formatierungsoptionen finden Sie unter [Kartenformatierung](~/task-modules-and-cards/cards/cards-format.md) . |
 | Bilder | Array von Bildern | Bild, das oben auf der Karte angezeigt wird. Seitenverhältnis 16:9 |
 | Schaltflächen | Array von Action-Objekten | Eine Gruppe von Aktionen, die für die aktuelle Karte gelten. Maximal 6 |
@@ -281,7 +281,7 @@ Eine Karte, die normalerweise ein einzelnes großes Bild, eine oder mehrere Scha
 Bot-Framework-Referenz:
 
 * [Held-Karten Knoten](https://docs.microsoft.com/javascript/api/botframework-schema/herocard)
-* [Hero Card C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0)
+* [Hero Card C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="list-card"></a>Karte auflisten
 
@@ -298,10 +298,9 @@ Die Listen Karte wurde von Microsoft Teams hinzugefügt, um Funktionen bereitzus
 
 | Eigenschaft | Typ  | Beschreibung |
 | --- | --- | --- |
-| title | Rich-Text  | Titel der Karte. Maximal 2 Zeilen; Formatierung wird derzeit nicht unterstützt |
-| items | Array von Listenelementen  ||
-| Schaltflächen | Array von Action-Objekten | Eine Gruppe von Aktionen, die für die aktuelle Karte gelten. Maximal 6. Wird auf mobilen Geräten nicht gerendert. |
-|
+| title | Rich-Text  | Titel der Karte. Maximal 2 Zeilen.|
+| Elemente | Array von Listenelementen  ||
+| Schaltflächen | Array von Action-Objekten | Eine Gruppe von Aktionen, die für die aktuelle Karte gelten. Maximal 6. |
 
 ### <a name="example-list-card"></a>Beispiel Listen Karte
 
@@ -374,8 +373,8 @@ Die Office 365-Anschluss Karte bietet ein flexibles Layout mit mehreren Abschnit
 
 | Eigenschaft | Typ  | Beschreibung |
 | --- | --- | --- |
-| title | Rich-Text  | Titel der Karte. Maximal 2 Zeilen; Formatierung wird derzeit nicht unterstützt |
-| Zusammenfassung | Rich-Text  | Zusammenfassung der Karte. Maximal 2 Zeilen; Formatierung wird derzeit nicht unterstützt |
+| title | Rich-Text  | Titel der Karte. Maximal 2 Zeilen. |
+| Zusammenfassung | Rich-Text  | Zusammenfassung der Karte. Maximal 2 Zeilen. |
 | text | Rich-Text  | Text wird direkt unterhalb des Untertitels angezeigt; Formatierungsoptionen finden Sie unter [Kartenformatierung](~/task-modules-and-cards/cards/cards-format.md) . |
 | themeColor | Hex-Zeichenfolge | Farbe, die die vom Anwendungsmanifest bereitgestellte accentColor überschreibt |
 
@@ -401,14 +400,14 @@ Um das Renderingformat für festzulegen `activityImage` , können Sie `activityI
 
 | Wert | Beschreibung |
 | --- | --- |
-| `avatar` | Standard `activityImage`wird als Kreis abgeschnitten |
-| `article` | `activityImage`wird als Rechteck angezeigt und behält das Seitenverhältnis bei. |
+| `avatar` | Standard `activityImage` wird als Kreis abgeschnitten |
+| `article` | `activityImage` wird als Rechteck angezeigt und behält das Seitenverhältnis bei. |
 
 Weitere Details zu den Eigenschaften von Verbindungskarten finden Sie in der [Referenz zur Nachrichten Karte mit Aktionen](/outlook/actionable-messages/card-reference). Die einzigen Verbindungskarten Eigenschaften, die Microsoft Teams derzeit nicht unterstützt, sind folgende:
 
 * `heroImage`
 * `hideOriginalBody`
-* `startGroup`(immer wie `true` in Teams behandelt)
+* `startGroup` (immer wie `true` in Teams behandelt)
 * `originator`
 * `correlationId`
 
@@ -492,8 +491,8 @@ Eine Karte, mit der ein bot dem Benutzer eine Quittung zur Verfügung stellen ka
 
 Bot-Framework-Referenz:
 
-* [Zugangskarten Knoten](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest)
-* [Quittungs Karte C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0)
+* [Zugangskarten Knoten](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Quittungs Karte C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="signin-card"></a>SignIn-Karte
 
@@ -512,8 +511,8 @@ Die *SignIn-Aktion* kann von jeder beliebigen Karte in Microsoft Teams und nicht
 
 Bot-Framework-Referenz:
 
-* [SignIn-Karten Knoten](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest)
-* [SignIn-Karte C #](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0)
+* [SignIn-Karten Knoten](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [SignIn-Karte C #](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="thumbnail-card"></a>Miniatur Ansichtskarte
 
@@ -532,8 +531,8 @@ Eine Karte, die in der Regel ein einzelnes Miniaturbild, eine oder mehrere Schal
 
 | Eigenschaft | Typ  | Beschreibung |
 | --- | --- | --- |
-| title | Rich-Text  | Titel der Karte. Maximal 2 Zeilen; Formatierung wird derzeit nicht unterstützt |
-| unter | Rich-Text  | Untertitel der Karte. Maximal 2 Zeilen; Formatierung wird derzeit nicht unterstützt |
+| title | Rich-Text  | Titel der Karte. Maximal 2 Zeilen.|
+| unter | Rich-Text  | Untertitel der Karte. Maximal 2 Zeilen.|
 | text | Rich-Text  | Text wird direkt unterhalb des Untertitels angezeigt; Formatierungsoptionen finden Sie unter [Kartenformatierung](~/task-modules-and-cards/cards/cards-format.md) . |
 | Bilder | Array von Bildern | Bild, das oben auf der Karte angezeigt wird. Seitenverhältnis 1:1 (quadratisch) |
 | Schaltflächen | Array von Action-Objekten | Eine Gruppe von Aktionen, die für die aktuelle Karte gelten. Maximal 6 |
@@ -587,8 +586,8 @@ Eine Karte, die in der Regel ein einzelnes Miniaturbild, eine oder mehrere Schal
 
 Bot-Framework-Referenz:
 
-* [Miniatur Ansichtskarten Knoten](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest)
-* [Miniatur Ansichtskarte C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0)
+* [Miniatur Ansichtskarten Knoten](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Miniatur Ansichtskarte C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="card-collections"></a>Kartensammlungen
 
@@ -598,7 +597,7 @@ Kartensammlungen werden durch das bot-Framework bereitgestellt: `builder.Attachm
 
 ## <a name="carousel-collection"></a>Carousel-Sammlung
 
-Das [Karussell-Layout](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0) zeigt ein Karussell von Karten, optional mit zugeordneten Aktionsschaltflächen.
+Das [Karussell-Layout](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0&preserve-view=true) zeigt ein Karussell von Karten, optional mit zugeordneten Aktionsschaltflächen.
 
 ### <a name="support-for-carousel-collections"></a>Unterstützung für Karussell Sammlungen
 

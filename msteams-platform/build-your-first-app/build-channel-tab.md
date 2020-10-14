@@ -1,18 +1,18 @@
 ---
+title: Erste Schritte – Erstellen einer Kanal-und Gruppenregisterkarte
 author: heath-hamilton
-description: Hier erfahren Sie, wie Sie eine Kanal-und Gruppen-Registerkarte für Ihre erste Microsoft Teams-app erstellen.
+description: Erstellen Sie mit dem Microsoft Teams-Toolkit schnell eine Microsoft Teams-Kanal-und-Gruppen-Registerkarte.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-title: Erstellen eines Teams-Kanals und einer Gruppenregisterkarte
-ms.openlocfilehash: d97d8c13404077bff999db48b24b773aa4bc04ca
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: f890754cdf4ca43f39c25e3ba24fcf47b08c5a9f
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237811"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452855"
 ---
-# <a name="build-a-teams-channel-and-group-tab"></a>Erstellen eines Teams-Kanals und einer Gruppenregisterkarte
+# <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Erstellen einer Kanal-und Gruppenregisterkarte für Microsoft Teams
 
 In diesem Lernprogramm erstellen Sie eine einfache *Kanal Registerkarte* (auch als *Gruppe Registerkarte*bezeichnet), bei der es sich um eine voll Bild Seite für einen Teamkanal oder Chat handelt. Im Gegensatz zu einer persönlichen Registerkarte können Benutzer einige Aspekte dieser Registerkarte konfigurieren (beispielsweise benennen Sie die Registerkarte so um, dass Sie für Ihren Kanal sinnvoll ist).
 
@@ -210,7 +210,7 @@ Um die Konfigurations-und Inhaltsseiten ihrer Registerkarte anzuzeigen, müssen 
 1. Wählen Sie **Einrichten einer Registerkarte**aus. Die Konfigurationsseite wird angezeigt.<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Screenshot einer Kanal Registerkarten-Konfigurationsseite.":::
 1. Wählen Sie **Speichern** aus, um die Registerkarte zu konfigurieren. Der Inhalt wird angezeigt.<br/>
-   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Screenshot einer Kanal Registerkarte mit statischer Inhaltsansicht.":::
+   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Screenshot einer Kanal Registerkarten-Konfigurationsseite.":::
 
 ## <a name="well-done"></a>Gut gemacht
 
@@ -229,4 +229,4 @@ Herzlichen Glückwunsch! Sie verfügen über eine Teams-App mit einer Registerka
 Sie wissen, wie Sie eine Registerkarte für die Zusammenarbeit erstellen. Möchten Sie versuchen, eine andere Art von Teams-APP zu erstellen?
 
 > [!div class="nextstepaction"]
-> [Erstellen eines bot](../build-your-first-app/build-bot.md)
+> [Erstellen eines Bots](../build-your-first-app/build-bot.md)

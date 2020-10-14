@@ -4,16 +4,16 @@ description: Beschreibt das vom Manifest für Microsoft Teams unterstützte Sche
 keywords: Team Manifest-Schema
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: aea75276d37ae0a99ecc55b204d29706cc5a07c8
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b514bbe8e04e674f5aafb3dff3acfe08072d814f
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237979"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452736"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifest-Schema für Microsoft Teams
 
-Das Microsoft Teams-Manifest beschreibt, wie die app in das Microsoft Teams-Produkt integriert wird. Das Manifest muss dem Schema entsprechen, das unter gehostet wird [`https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json) . Frühere Versionen 1.0-1.4 werden ebenfalls unterstützt (mit "v1. x" in der URL).
+Das Microsoft Teams-Manifest beschreibt, wie die app in das Microsoft Teams-Produkt integriert wird. Das Manifest muss dem Schema entsprechen, das unter gehostet wird [`https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json) . Frühere Versionen 1.0-1.6 werden ebenfalls unterstützt (mit "v1. x" in der URL).
 
 Das folgende Schemabeispiel zeigt alle Erweiterungsoptionen.
 
@@ -273,7 +273,7 @@ Die https://-URL, die auf das JSON-Schema für das Manifest verweist.
 
 **Erforderlich** – Zeichenfolge
 
-Die Version des manifest-Schemas, die dieses Manifest verwendet. Es sollte "1,5" sein.
+Die Version des manifest-Schemas, die dieses Manifest verwendet. Es sollte "1,7" sein.
 
 ## <a name="version"></a>Version
 
@@ -384,7 +384,7 @@ Wird verwendet, wenn Ihre APP-Erfahrung eine Team Kanal-registerkartenoberfläch
 |`configurationUrl`|string|2048 Zeichen|✔|Die https://-URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die `team` `groupchat` Bereiche und. |
 |`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte nach der Erstellung vom Benutzer aktualisiert werden kann. Default: **true**.|
-|`sharePointPreviewImage`|string|2048||Ein relativer Dateipfad zu einem Vorschaubild für die Registerkarte für die Verwendung in SharePoint. Größe 1024x768. |
+|`sharePointPreviewImage`|Zeichenfolge|2048||Ein relativer Dateipfad zu einem Vorschaubild für die Registerkarte für die Verwendung in SharePoint. Größe 1024x768. |
 |`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie die Registerkarte in SharePoint zur Verfügung gestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
@@ -398,9 +398,9 @@ Dieses Element ist ein Array (maximal 16 Elemente) mit allen Elementen des Typs 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`entityId`|string|64 Zeichen|✔|Ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird.|
-|`name`|string|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanalschnittstelle.|
-|`contentUrl`|string|2048 Zeichen|✔|Die https://-URL, die auf die Benutzeroberfläche der Entität zeigt, die im Canvas "Teams" angezeigt werden soll.|
-|`websiteUrl`|string|2048 Zeichen||Die https://-URL, auf die verwiesen wird, wenn ein Benutzer sich für die Anzeige in einem Browser entscheidet.|
+|`name`|Zeichenfolge|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanalschnittstelle.|
+|`contentUrl`|Zeichenfolge|2048 Zeichen|✔|Die https://-URL, die auf die Benutzeroberfläche der Entität zeigt, die im Canvas "Teams" angezeigt werden soll.|
+|`websiteUrl`|Zeichenfolge|2048 Zeichen||Die https://-URL, auf die verwiesen wird, wenn ein Benutzer sich für die Anzeige in einem Browser entscheidet.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen statische Registerkarten nur den `personal` Bereich, was bedeutet, dass Sie nur als Teil der persönlichen Benutzeroberfläche vorgesehen werden kann.|
 
 > [!NOTE]
@@ -429,14 +429,14 @@ Eine optionale Liste von Befehlen, die ihr bot Benutzern empfehlen kann. Das Obj
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`items.scopes`|Array von Enumerationen|3|✔|Gibt den Bereich an, für den die Befehlsliste gültig ist. Mögliche Optionen sind `team`, `personal` und `groupchat`.|
-|`items.commands`|Array von Objekten|10  |✔|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: Name des Bot-Befehls (string, 32)<br>`description`: einfache Beschreibung oder Beispiel für die Befehlssyntax und zugehörige Argumente (string, 128)|
+|`items.commands`|Array von Objekten|10 |✔|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: Name des Bot-Befehls (string, 32)<br>`description`: einfache Beschreibung oder Beispiel für die Befehlssyntax und zugehörige Argumente (string, 128)|
 
 ### <a name="botscommandlistscommands"></a>Bots. commandLists. Commands
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |title|string|12 |✔|Der Name des bot-Befehls|
-|description|string|128 Zeichen|✔|Eine einfache Textbeschreibung oder ein Beispiel für die Befehlssyntax und ihre Argumente.|
+|description|Zeichenfolge|128 Zeichen|✔|Eine einfache Textbeschreibung oder ein Beispiel für die Befehlssyntax und ihre Argumente.|
 
 ## <a name="connectors"></a>Connectors
 
@@ -450,7 +450,7 @@ Das Objekt ist ein Array (Maximum of 1-Element) mit allen Elementen des Typs `ob
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 Zeichen|✔|Die https://-URL, die beim Konfigurieren des Connectors verwendet werden soll.|
 |`scopes`|Array von Enumerationen|1|✔|Gibt an, ob der Connector eine Erfahrung im Kontext eines Kanals in a bietet `team` oder ein Erlebnis, das allein auf einen einzelnen Benutzer beschränkt ist ( `personal` ). Derzeit wird nur der `team` Bereich unterstützt.|
-|`connectorId`|string|64 Zeichen|✔|Ein eindeutiger Bezeichner für den Connector, der seiner ID im [Entwickler Dashboard für Connectors](https://aka.ms/connectorsdashboard)entspricht.|
+|`connectorId`|Zeichenfolge|64 Zeichen|✔|Ein eindeutiger Bezeichner für den Connector, der seiner ID im [Entwickler Dashboard für Connectors](https://aka.ms/connectorsdashboard)entspricht.|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -466,10 +466,10 @@ Das Element ist ein Array (Maximum of 1-Element) mit allen Elementen des Typs `o
 |Name| Typ | Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`botId`|string|64|✔|Die eindeutige Microsoft-App-ID für den bot, der die Messaging Erweiterung unterstützt, wie Sie mit dem bot-Framework registriert wurde. Dies kann auch die gesamte APP-ID entsprechen.|
-|`commands`|Array von Objekten|10  |✔|Array von Befehlen, die von der Messaging-Erweiterung unterstützt werden|
+|`commands`|Array von Objekten|10 |✔|Array von Befehlen, die von der Messaging-Erweiterung unterstützt werden|
 |`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob die Konfiguration einer Messaging Erweiterung vom Benutzer aktualisiert werden kann. Standard: **False**.|
 |`messageHandlers`|Array von Objekten|5 ||Eine Liste von Handlern, mit denen apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind. Domänen müssen ebenfalls in aufgeführt sein. `validDomains`|
-|`messageHandlers.type`|string|||Der Typ des Nachrichten Handlers. Muss `"link"` sein.|
+|`messageHandlers.type`|Zeichenfolge|||Der Typ des Nachrichten Handlers. Muss `"link"` sein.|
 |`messageHandlers.value.domains`|Array von Zeichenfolgen|||Array von Domänen, für die der Link Nachrichtenhandler registriert werden kann.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions. Commands
@@ -481,26 +481,26 @@ Jedes Command-Element ist ein Objekt mit der folgenden Struktur:
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`id`|string|64 Zeichen|✔|Die ID für den Befehl.|
-|`title`|string|32 Zeichen|✔|Der benutzerfreundliche Befehlsname.|
-|`type`|string|64 Zeichen||Der Typ des Befehls. Einer von `query` oder `action` . Standard: **Query**.|
-|`description`|string|128 Zeichen||Die Beschreibung, die den Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
+|`title`|Zeichenfolge|32 Zeichen|✔|Der benutzerfreundliche Befehlsname.|
+|`type`|Zeichenfolge|64 Zeichen||Der Typ des Befehls. Einer von `query` oder `action` . Standard: **Query**.|
+|`description`|Zeichenfolge|128 Zeichen||Die Beschreibung, die den Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
 |`initialRun`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt werden soll. Standard: **False**.|
-|`context`|Array von Zeichenfolgen|3||Definiert, woher die Nachrichten Erweiterung aufgerufen werden kann. Eine beliebige Kombination von `compose` , `commandBox` , `message` . Der Standardwert lautet `["compose","commandBox"]`.|
+|`context`|Array von Zeichenfolgen|3||Definiert, woher die Nachrichten Erweiterung aufgerufen werden kann. Eine beliebige Kombination von `compose` , `commandBox` , `message` . Der Standardwert ist `["compose","commandBox"]`.|
 |`fetchTask`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden soll. Standard: **False**.|
 |`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das beim Verwenden eines Messaging Erweiterungs Befehls vorab zu laden ist.|
-|`taskInfo.title`|string|64 Zeichen||Ursprünglicher Dialogtitel.|
-|`taskInfo.width`|string|||Dialog Breite-entweder eine Zahl in Pixel oder ein Standardlayout wie "Large", "Medium" oder "Small".|
-|`taskInfo.height`|string|||Dialog Feld Höhe: entweder eine Zahl in Pixel oder ein Standardlayout wie "Large", "Medium" oder "Small".|
-|`taskInfo.url`|string|||Anfängliche WebView-URL.|
+|`taskInfo.title`|Zeichenfolge|64 Zeichen||Ursprünglicher Dialogtitel.|
+|`taskInfo.width`|Zeichenfolge|||Dialog Breite-entweder eine Zahl in Pixel oder ein Standardlayout wie "Large", "Medium" oder "Small".|
+|`taskInfo.height`|Zeichenfolge|||Dialog Feld Höhe: entweder eine Zahl in Pixel oder ein Standardlayout wie "Large", "Medium" oder "Small".|
+|`taskInfo.url`|Zeichenfolge|||Anfängliche WebView-URL.|
 |`parameters`|Array von Object|5 Elemente|✔|Die Liste der Parameter, die der Befehl benötigt. Minimum: 1; Maximum: 5.|
-|`parameters.name`|string|64 Zeichen|✔|Der Name des Parameters, wie er im Client angezeigt wird. Dies ist in der Benutzeranforderung enthalten.|
-|`parameters.title`|string|32 Zeichen|✔|Benutzerfreundlicher Titel für den Parameter.|
-|`parameters.description`|string|128 Zeichen||Benutzerfreundliche Zeichenfolge, die den Zweck dieses Parameters beschreibt.|
-|`parameters.value`|string|512 Zeichen||Anfangswert für den Parameter.|
-|`parameters.inputType`|string|128 Zeichen||Definiert den Typ des Steuerelements, das in einem Aufgabenmodul für angezeigt wird `fetchTask: true` . Einer von `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.name`|Zeichenfolge|64 Zeichen|✔|Der Name des Parameters, wie er im Client angezeigt wird. Dies ist in der Benutzeranforderung enthalten.|
+|`parameters.title`|Zeichenfolge|32 Zeichen|✔|Benutzerfreundlicher Titel für den Parameter.|
+|`parameters.description`|Zeichenfolge|128 Zeichen||Benutzerfreundliche Zeichenfolge, die den Zweck dieses Parameters beschreibt.|
+|`parameters.value`|Zeichenfolge|512 Zeichen||Anfangswert für den Parameter.|
+|`parameters.inputType`|Zeichenfolge|128 Zeichen||Definiert den Typ des Steuerelements, das in einem Aufgabenmodul für angezeigt wird `fetchTask: true` . Einer von `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|Array von Objekten|10 Elemente||Die Auswahloptionen für `choiceset` . Nur verwenden `parameter.inputType` , wenn ist `choiceset` .|
-|`parameters.choices.title`|string|128 Zeichen|✔|Titel der Auswahl.|
-|`parameters.choices.value`|string|512 Zeichen|✔|Value of the choice.|
+|`parameters.choices.title`|Zeichenfolge|128 Zeichen|✔|Titel der Auswahl.|
+|`parameters.choices.value`|Zeichenfolge|512 Zeichen|✔|Value of the choice.|
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -549,7 +549,7 @@ Geben Sie Ihre Aad-APP-ID und Diagramm Informationen an, damit Benutzer sich nah
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`id`|string|36 Zeichen|✔|Aad-Anwendungs-ID der app. Diese ID muss eine GUID sein.|
-|`resource`|string|2048 Zeichen||Ressourcen-URL der APP zum Abrufen des Authentifizierungstokens für SSO.|
+|`resource`|Zeichenfolge|2048 Zeichen||Ressourcen-URL der APP zum Abrufen des Authentifizierungstokens für SSO.|
 |`applicationPermissions`|array of strings|128 Zeichen||Angeben einer detaillierten [ressourcenspezifischen Zustimmung](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
@@ -582,8 +582,8 @@ Definieren Sie die Eigenschaften, die Ihre APP für die Bereitstellung in einem 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`type`|string|32 Zeichen|✔|Der Typ der Benachrichtigung. *Siehe weiter unten*.|
-|`description`|string|128 Zeichen|✔|Eine kurze Beschreibung der Benachrichtigung. *Siehe weiter unten*.|
-|`templateText`|string|128 Zeichen|✔|Ex: "{Akteur} hat Aufgabe {Task-Nr} für dich erstellt"|
+|`description`|Zeichenfolge|128 Zeichen|✔|Eine kurze Beschreibung der Benachrichtigung. *Siehe weiter unten*.|
+|`templateText`|Zeichenfolge|128 Zeichen|✔|Ex: "{Akteur} hat Aufgabe {Task-Nr} für dich erstellt"|
 
 ```json
 {

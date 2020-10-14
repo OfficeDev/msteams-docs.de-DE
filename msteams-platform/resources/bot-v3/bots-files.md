@@ -3,12 +3,12 @@ title: Senden und empfangen von Dateien von einem bot
 description: Beschreibt, wie Dateien von einem bot gesendet und empfangen werden
 keywords: Teams-Bots-Dateien senden empfangen
 ms.date: 05/20/2019
-ms.openlocfilehash: ee26b4031c6022ab30ec5b2b58b42105c2dc6b0f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b61e7f6934846b3abb1cfc16283cec1d264d7ecc
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674564"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452780"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>Senden und empfangen von Dateien über Ihren bot
 
@@ -25,7 +25,7 @@ Es gibt zwei Möglichkeiten, Dateien an einen bot zu senden:
 
 ## <a name="using-the-microsoft-graph-apis"></a>Verwenden der Microsoft Graph-APIs
 
-Sie können Nachrichten mit Karten Anlagen nach verweisen auf vorhandene SharePoint-Dateien mithilfe der Microsoft Graph-APIs für [OneDrive und SharePoint](/onedrive/developer/rest-api/)bereitstellen. Für die Verwendung der Graph-APIs muss der Zugriff auf den OneDrive-Ordner `personal` eines `groupchat` Benutzers (für und Dateien) oder die Dateien in den Kanälen `channel` eines Teams (für Dateien) über den standardmäßigen OAuth 2,0-Autorisierungs Fluss abgerufen werden. Diese Methode funktioniert in allen Microsoft Teams-Bereichen.
+Sie können Nachrichten mit Karten Anlagen nach verweisen auf vorhandene SharePoint-Dateien mithilfe der Microsoft Graph-APIs für [OneDrive und SharePoint](/onedrive/developer/rest-api/)bereitstellen. Für die Verwendung der Graph-APIs muss der Zugriff auf den OneDrive-Ordner eines Benutzers (für `personal` und `groupchat` Dateien) oder die Dateien in den Kanälen eines Teams (für `channel` Dateien) über den standardmäßigen OAuth 2,0-Autorisierungs Fluss abgerufen werden. Diese Methode funktioniert in allen Microsoft Teams-Bereichen.
 
 ## <a name="using-the-teams-bot-apis"></a>Verwenden der Teams-bot-APIs
 
@@ -38,17 +38,13 @@ In den folgenden Abschnitten wird die Vorgehensweise zum Senden von Dateiinhalte
 
 ### <a name="configure-your-bot-to-support-files"></a>Konfigurieren Ihres bot zur Unterstützung von Dateien
 
-Um Dateien in Ihrem bot zu senden und zu empfangen, müssen Sie die `supportsFiles` -Eigenschaft im Manifest auf `true`festlegen. Diese Eigenschaft wird im Abschnitt [Bots](~/resources/schema/manifest-schema.md#bots) der Manifest-Referenz beschrieben.
+Um Dateien in Ihrem bot zu senden und zu empfangen, müssen Sie die `supportsFiles` -Eigenschaft im Manifest auf festlegen `true` . Diese Eigenschaft wird im Abschnitt [Bots](~/resources/schema/manifest-schema.md#bots) der Manifest-Referenz beschrieben.
 
-Die Definition wird wie folgt aussehen: `"supportsFiles": true`. Wenn Ihr bot nicht aktiviert `supportsFiles`wird, können die folgenden Funktionen nicht verwendet werden.
+Die Definition wird wie folgt aussehen: `"supportsFiles": true` . Wenn Ihr bot nicht aktiviert wird `supportsFiles` , können die folgenden Funktionen nicht verwendet werden.
 
 ### <a name="receiving-files-in-personal-chat"></a>Empfangen von Dateien im persönlichen Chat
 
 Wenn ein Benutzer eine Datei an Ihren bot sendet, wird die Datei zunächst in den OneDrive für Unternehmen Speicher des Benutzers hochgeladen. Ihr bot erhält dann eine Nachrichtenaktivität, in der Sie über den Benutzer Upload benachrichtigt werden. Die Aktivität enthält Datei Metadaten, beispielsweise den Namen und die Inhalts-URL. Sie können direkt aus dieser URL lesen, um den binären Inhalt abzurufen.
-
-### <a name="send-and-receive-files-through-bot-on-teams-mobile-app"></a>Senden und empfangen von Dateien über bot in Microsoft Teams Mobile App
-> [!NOTE] 
-> Das Senden und empfangen von Dateien an Bots auf mobilen Geräten wird nicht unterstützt.
 
 #### <a name="message-activity-with-file-attachment-example"></a>Nachrichtenaktivität mit Beispiel für eine Dateianlage
 
@@ -84,14 +80,18 @@ Das Hochladen einer Datei in einen Benutzer umfasst die folgenden Schritte:
 
 1. Senden Sie eine Nachricht an den Benutzer, der die Berechtigung zum Schreiben der Datei anfordert. Diese Nachricht muss eine `FileConsentCard` Anlage mit dem Namen der hochzuladenden Datei enthalten.
 2. Wenn der Benutzer den Dateidownload akzeptiert, erhält der bot eine *Invoke* -Aktivität mit einer Standort-URL.
-3. Um die Datei zu übertragen, führt Ihr `HTTP POST` bot einen direkt in die angegebene Standort-URL ein.
+3. Um die Datei zu übertragen, führt Ihr bot einen `HTTP POST` direkt in die angegebene Standort-URL ein.
 4. Optional können Sie die ursprüngliche Zustimmungs Karte entfernen, wenn Sie nicht zulassen möchten, dass der Benutzer weitere Uploads derselben Datei akzeptiert.
 
 #### <a name="message-requesting-permission-to-upload"></a>Nachricht, die die Berechtigung zum Hochladen anfordert
 
-Diese Nachricht enthält ein einfaches Attachment-Objekt, das die Benutzerberechtigung zum Hochladen der Datei anfordert.
+Diese Desktop Nachricht enthält ein einfaches Attachment-Objekt, das die Benutzerberechtigung zum Hochladen der Datei anfordert:
 
-![Screenshot der Zustimmungs Karte, die die Benutzerberechtigung zum Hochladen von Dateien anfordert](~/assets/images/bots/bot-file-consent-card.png)
+![Screenshot der Zustimmungs Karte, die die Benutzerberechtigung zum Hochladen von Dateien anfordert](../../assets/images/bots/bot-file-consent-card.png)
+
+Diese Mobile Nachricht enthält ein Attachment-Objekt, das die Benutzerberechtigung zum Hochladen der Datei anfordert:
+
+![Screenshot der Zustimmungs Karte anfordern der Benutzerberechtigung zum Hochladen von Dateien auf mobilen Geräten](../../assets/images/bots/mobile-bot-file-consent-card.png)
 
 ```json
 {
@@ -121,7 +121,7 @@ In der folgenden Tabelle werden die Inhaltseigenschaften der Anlage beschrieben:
 
 #### <a name="invoke-activity-when-the-user-accepts-the-file"></a>Aktivität aufrufen, wenn der Benutzer die Datei akzeptiert
 
-Eine Invoke-Aktivität wird an Ihren bot gesendet, wenn der Benutzer die Datei annimmt. Sie enthält die OneDrive für Unternehmen Platzhalter-URL, über die der bot `PUT` dann eine zum Übertragen der Dateiinhalte ausgeben kann. Informationen zum Hochladen der OneDrive-URL finden Sie in diesem Artikel: [Upload Bytes to the Upload Session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+Eine Invoke-Aktivität wird an Ihren bot gesendet, wenn der Benutzer die Datei annimmt. Sie enthält die OneDrive für Unternehmen Platzhalter-URL, über die der bot dann eine `PUT` zum Übertragen der Dateiinhalte ausgeben kann. Informationen zum Hochladen der OneDrive-URL finden Sie in diesem Artikel: [Upload Bytes to the Upload Session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
 Das folgende Beispiel zeigt eine gekürzte Version der Invoke-Aktivität, die ihr bot empfangen wird:
 
@@ -163,7 +163,7 @@ Wenn der Benutzer die Datei ablehnt, erhält der bot das folgende Ereignis mit d
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Benachrichtigen des Benutzers über eine hochgeladene Datei
 
-Nachdem Sie eine Datei in das OneDrive des Benutzers hochgeladen haben, sollten Sie, unabhängig davon, ob Sie den oben beschriebenen Mechanismus oder OneDrive-Benutzer delegierte APIs verwenden, eine Bestätigungsnachricht an den Benutzer senden. Diese Nachricht sollte eine Anlage `FileCard` enthalten, auf die der Benutzer klicken kann, entweder um eine Vorschau anzuzeigen, Sie in OneDrive zu öffnen oder lokal herunterzuladen.
+Nachdem Sie eine Datei in das OneDrive des Benutzers hochgeladen haben, sollten Sie, unabhängig davon, ob Sie den oben beschriebenen Mechanismus oder OneDrive-Benutzer delegierte APIs verwenden, eine Bestätigungsnachricht an den Benutzer senden. Diese Nachricht sollte eine Anlage enthalten, auf `FileCard` die der Benutzer klicken kann, entweder um eine Vorschau anzuzeigen, Sie in OneDrive zu öffnen oder lokal herunterzuladen.
 
 ```json
 {
@@ -179,7 +179,7 @@ Nachdem Sie eine Datei in das OneDrive des Benutzers hochgeladen haben, sollten 
 }
 ```
 
-In der folgenden Tabelle werden die Inhaltseigenschaften der Anlage beschrieben: 
+In der folgenden Tabelle werden die Inhaltseigenschaften der Anlage beschrieben:
 
 | Eigenschaft | Zweck |
 | --- | --- |

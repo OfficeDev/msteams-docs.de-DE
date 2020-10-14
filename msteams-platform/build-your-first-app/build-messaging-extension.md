@@ -1,18 +1,18 @@
 ---
-title: Erstellen einer Microsoft Teams-Messaging Erweiterung
+title: Erste Schritte – Erstellen einer Messaging Erweiterung
 author: heath-hamilton
-description: Hier erfahren Sie, wie Sie eine Messaging Erweiterung für Ihre erste Microsoft Teams-app erstellen.
+description: Erstellen Sie mit dem Microsoft Teams-Toolkit schnell eine Microsoft Teams-Messaging Erweiterung.
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 4fd35f6d5cc4b4ba202cb4276386918a5d88d692
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b19856eacee866ebbc89f21ac12575f1392918b3
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237818"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452834"
 ---
-# <a name="build-a-teams-messaging-extension"></a>Erstellen einer Microsoft Teams-Messaging Erweiterung
+# <a name="build-a-messaging-extension-for-microsoft-teams"></a>Erstellen einer Messaging Erweiterung für Microsoft Teams
 
 Es gibt zwei Typen von Microsoft Teams- *Messaging Erweiterungen*: [Suchbefehle](../messaging-extensions/how-to/search-commands/define-search-command.md) und [Aktionsbefehle](../messaging-extensions/how-to/action-commands/define-action-command.md).
 
@@ -32,7 +32,7 @@ Das Helpdesk Ihrer Organisation kommuniziert mit Benutzern über Teams, die Tick
 > * Konfigurieren des bot für Ihre Messaging Erweiterung
 > * Querladen und Testen einer Messaging Erweiterung in Microsoft Teams
 
-## <a name="before-you-begin"></a>Bevor Sie beginnen
+## <a name="before-you-begin"></a>Vorabinformationen
 
 Wenn Sie noch nicht vorhanden sind, stellen Sie sicher, dass Sie [die Entwicklungsvoraussetzungen für Teams kennen und installieren](build-first-app-overview.md#get-prerequisites).
 
@@ -173,9 +173,9 @@ Wenn Ihre Messaging-Erweiterung aktiv ist, können Sie Sie in Microsoft Teams in
 Erfahren Sie, wie Messaging-Erweiterungen in einem Microsoft Teams-Chat funktionieren.
 
 1. Starten Sie einen neuen Chat. Wählen Sie im Feld Verfassen die Option **Weitere** aus, :::image type="icon" source="../assets/icons/teams-client-more.png"::: und wählen Sie die soeben quer geladene Messaging-Erweiterungs-App aus.<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Abbildung zeigt, wie Sie im Feld Teams erstellen auf eine suchbasierte Messaging Erweiterung zugreifen können.":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Abbildung, die zeigt, wie Sie sich im Teams-Toolkit bei Ihrem Microsoft 365-Konto anmelden können, um einen neuen bot für Ihre Messaging Erweiterung zu erstellen.":::
 1. Versuchen Sie, nach etwas zu suchen (beispielsweise "Tickets"). Wenn Ihre APP funktioniert, werden Beispiel Suchergebnisse angezeigt (Sie können Sie später hinzufügen).<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Ein Screenshot, der zeigt, wie eine suchbasierte Messaging Erweiterung im Feld "Teams erstellen" verwendet wird.":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Abbildung, die zeigt, wie Sie sich im Teams-Toolkit bei Ihrem Microsoft 365-Konto anmelden können, um einen neuen bot für Ihre Messaging Erweiterung zu erstellen.":::
 
 ## <a name="well-done"></a>Gut gemacht
 

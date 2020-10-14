@@ -1,15 +1,15 @@
 ---
-title: Entwerfen einer Microsoft Teams-Registerkarte für Besprechungen
+title: Besprechungs-Registerkarte entwerfen
 author: heath-hamilton
-description: Anleitungen und bewährte Methoden für den Entwurf der Registerkarte "in-Meeting" für Microsoft Teams.
+description: Hier erfahren Sie, wie Sie eine in-Meeting-Registerkarte für Microsoft Teams effektiv entwerfen.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 4f75591468de41b5d4d3ac62a25b93412b3fccaa
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: a5c4d0cc0d2c61f422ea9bc189f164d02b28aae0
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48243343"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452659"
 ---
 # <a name="design-an-in-meeting-tab"></a>Besprechungs-Registerkarte entwerfen
 
@@ -40,7 +40,7 @@ Auf der Registerkarte in-Meeting werden Ihre APP-Inhalte mit den folgenden Dimen
 * **Breite**: 280 Pixel für den WebView-Bereich. Auf der linken und rechten Seite des Webviews befinden sich 20 Pixel Textabstand.
 * **Höhe**: vollständiges Anfärben am unteren Rand der Registerkarte. Zwischen dem WebView-Bereich und der Registerkartenüberschrift befinden sich 20 Pixelabstand.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="Abbildung der UI-Anatomie einer Besprechungs Erweiterung in der Besprechungs Registerkarte." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="Das Beispiel zeigt, wie die Registerkarte Besprechung in der Besprechung aus der Perspektive eines Besprechungsorganisators aussehen könnte." border="false":::
 
 1. **App-Symbol**: der Einstiegspunkt zur Registerkarte in der Besprechung.
 1. **Kopfzeile**: schließt den Registerkartennamen ein.
@@ -62,13 +62,13 @@ Hier erfahren Sie, was Sie über das Scrollen auf der Registerkarte "in-Meeting"
 * Sie können nur den Inhalt sehen, zu dem Sie einen Bildlauf durchgeführt haben (nichts oberhalb oder unterhalb).
 * Die ScrollBar ist Teil des WebView-Inhalts.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll.png" alt-text="Abbildung zeigt, wie der Bildlauf in der WebView-Inhalt auf der Registerkarte in-Meeting funktioniert." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll.png" alt-text="Das Beispiel zeigt, wie die Registerkarte Besprechung in der Besprechung aus der Perspektive eines Besprechungsorganisators aussehen könnte." border="false":::
 
 ### <a name="navigation"></a>Navigation
 
 Für Szenarien mit Navigationsebenen oder schweren Inhalten empfehlen wir, Benutzern das Navigieren zu einer sekundären Ebene zu ermöglichen. Benutzer müssen in der Lage sein, zur vorherigen Ebene zurückzukehren.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav.png" alt-text="Abbildung, die zeigt, wie die Navigation zu einer sekundären Ebene auf der in-Meeting-Registerkarte funktioniert." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav.png" alt-text="Das Beispiel zeigt, wie die Registerkarte Besprechung in der Besprechung aus der Perspektive eines Besprechungsorganisators aussehen könnte." border="false":::
 
 ## <a name="components"></a>Komponenten
 
@@ -100,7 +100,7 @@ In-Meeting-Registerkarten Layouts sollten in der Lage sein, verschiedene Größe
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-before-meeting.png" alt-text="Abbildung zeigt, dass der Inhalt der Besprechungs Registerkarte vor und nach einer Besprechung wie eine voll Bild Registerkarte aussieht." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-before-meeting.png" alt-text="Das Beispiel zeigt, wie die Registerkarte Besprechung in der Besprechung aus der Perspektive eines Besprechungsorganisators aussehen könnte." border="false":::
 
 #### <a name="before-the-meeting"></a>Vor der Besprechung
 
@@ -108,7 +108,7 @@ Stellen Sie sicher, dass sich das registerkartenlayout an ein rechts-oder links 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-during-meeting.png" alt-text="Abbildung, die zeigt, wie der Inhalt der Registerkarte "Pre-Meeting" auf die Registerkarte "in-Meeting" während einer Besprechung verkürzt wird." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-during-meeting.png" alt-text="Das Beispiel zeigt, wie die Registerkarte Besprechung in der Besprechung aus der Perspektive eines Besprechungsorganisators aussehen könnte." border="false":::
 
 #### <a name="during-the-meeting"></a>Während der Besprechung
 
@@ -121,7 +121,7 @@ Der Inhalt der Registerkarte wird an das Layout und die Position in der Besprech
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-do.png" alt-text="Illustration, die zeigt, wie Sie die in-Meeting-Registerkarte für das dunkle Design entwerfen, das in Microsoft Teams-Besprechungen verwendet wird." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-do.png" alt-text="Das Beispiel zeigt, wie die Registerkarte Besprechung in der Besprechung aus der Perspektive eines Besprechungsorganisators aussehen könnte." border="false":::
 
 #### <a name="do-design-for-a-dark-theme"></a>Do: Design für ein dunkles Design
 
@@ -129,7 +129,7 @@ Microsoft Teams-Besprechungen sind für den dunklen Modus optimiert, um visuelle
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-dont.png" alt-text="Abbildung zeigt, dass Sie keine Farben verwenden sollten, die dem dunklen Design von Teams nicht förderlich sind." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-dont.png" alt-text="Das Beispiel zeigt, wie die Registerkarte Besprechung in der Besprechung aus der Perspektive eines Besprechungsorganisators aussehen könnte." border="false":::
 
 #### <a name="dont-use-unfamiliar-colors"></a>Nicht: Unbekannte Farben verwenden
 
@@ -142,7 +142,7 @@ Farben, die mit der Besprechungs Umgebung kollidieren, sind möglicherweise stö
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-do.png" alt-text="Die Abbildung zeigt, dass Sie auf der Registerkarte "in-Meeting" nur den vertikalen Bildlauf zulassen sollten." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-do.png" alt-text="Das Beispiel zeigt, wie die Registerkarte Besprechung in der Besprechung aus der Perspektive eines Besprechungsorganisators aussehen könnte." border="false":::
 
 #### <a name="do-scroll-vertically"></a>Do: vertikal scrollen
 
@@ -150,7 +150,7 @@ Benutzer erwarten vertikales Scrollen in Microsoft Teams (und anderswo).
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-dont.png" alt-text="Die Abbildung zeigt, dass auf der Registerkarte "in-Meeting" kein horizontaler Bildlauf zulässig ist." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-dont.png" alt-text="Das Beispiel zeigt, wie die Registerkarte Besprechung in der Besprechung aus der Perspektive eines Besprechungsorganisators aussehen könnte." border="false":::
 
 #### <a name="dont-scroll-horizontally"></a>Nicht: horizontal scrollen
 
@@ -163,7 +163,7 @@ Ein horizontaler Bildlauf ist kein erwartetes Verhalten in Microsoft Teams. Ande
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-do.png" alt-text="Abbildung mit dem empfohlenen Layout mit einer einzelnen Spalte auf der Registerkarte "in-Meeting"." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-do.png" alt-text="Das Beispiel zeigt, wie die Registerkarte Besprechung in der Besprechung aus der Perspektive eines Besprechungsorganisators aussehen könnte." border="false":::
 
 #### <a name="do-single-columns"></a>Do: einzelne Spalten
 
@@ -171,7 +171,7 @@ Angesichts der engen Natur in der Besprechungs Registerkarte wird dringend empfo
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-dont.png" alt-text="Abbildung zeigt, wie ein zweispaltiges Layout auf der Registerkarte "in-Meeting" nicht ideal ist." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-dont.png" alt-text="Das Beispiel zeigt, wie die Registerkarte Besprechung in der Besprechung aus der Perspektive eines Besprechungsorganisators aussehen könnte." border="false":::
 
 #### <a name="dont-multiple-columns"></a>Nicht: mehrere Spalten
 
@@ -184,7 +184,7 @@ Aufgrund des begrenzten Speicherplatzes der in-Meeting-Registerkarte werden Layo
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-do.png" alt-text="Abbildung zeigt, dass Sie immer eine Schaltfläche "zurück" bereitstellen sollten, wenn Ihre in-Meeting-Registerkarten-app mehr als eine Navigationsebene aufweist." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-do.png" alt-text="Das Beispiel zeigt, wie die Registerkarte Besprechung in der Besprechung aus der Perspektive eines Besprechungsorganisators aussehen könnte." border="false":::
 
 #### <a name="do-have-a-back-button"></a>Do: verfügen über eine Schaltfläche "zurück"
 
@@ -192,7 +192,7 @@ Wenn Sie mehr als eine Navigations Schicht haben, müssen die Benutzer in der La
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-dont.png" alt-text="Abbildung zeigt, dass das Hinzufügen einer weiteren Schaltfläche Schließen auf der Registerkarte in-Meeting für die Navigation redundant ist und Probleme verursachen könnte." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-dont.png" alt-text="Das Beispiel zeigt, wie die Registerkarte Besprechung in der Besprechung aus der Perspektive eines Besprechungsorganisators aussehen könnte." border="false":::
 
 #### <a name="dont-include-another-close-button"></a>Nicht: Einschließen einer weiteren schließen-Schaltfläche
 
@@ -205,7 +205,7 @@ Das Bereitstelleneiner Option zum Schließen von Inhalten in Besprechungs Regist
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-caution.png" alt-text="Abbildung zeigt, dass Sie bei der Verwendung von modals (also Aufgaben Modulen) auf der Registerkarte "in-Meeting" mit dem begrenzten Platz Vorsicht walten lassen müssen." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-caution.png" alt-text="Das Beispiel zeigt, wie die Registerkarte Besprechung in der Besprechung aus der Perspektive eines Besprechungsorganisators aussehen könnte." border="false":::
 
 #### <a name="caution-using-dialogs-in-a-narrow-space"></a>Vorsicht: Verwenden von Dialogfeldern auf engstem Raum
 

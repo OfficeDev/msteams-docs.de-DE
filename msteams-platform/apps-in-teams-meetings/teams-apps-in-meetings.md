@@ -1,21 +1,21 @@
 ---
-title: Apps für Microsoft Teams-Besprechungen
+title: Apps in Microsoft Teams-Besprechungen
 author: laujan
 description: Übersicht über apps in Microsoft Teams-Besprechungen basierend auf der Rolle des Teilnehmers und Benutzers
 ms.topic: overview
 ms.author: lajanuar
 keywords: Teams-apps-Besprechungen Benutzer Teilnehmer-Rollen-API
-ms.openlocfilehash: e7f0f95566347c06a4ab422565c3f49665a5150e
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: dbf12523d609d47193fb3c07bde2acd184292f64
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326312"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452638"
 ---
-# <a name="apps-in-teams-meetings-release-preview"></a>Apps in Teams-Besprechungen (Veröffentlichungs Vorschau)
+# <a name="apps-in-teams-meetings-developer-preview"></a>Apps in Teams-Besprechungen (Entwicklervorschau)
 
 >[!IMPORTANT]
-> In der Microsoft Teams-Versions Vorschau hervorgehobene Features werden nur für frühere Einblicke und Feedback Zwecke bereitgestellt. Sie können Änderungen unterziehen, bevor Sie aktiviert werden können.
+> In der Entwicklervorschau von Microsoft Teams enthaltene Features werden nur für frühere Zugriffs-, Test-und Feedback Zwecke bereitgestellt. Sie werden möglicherweise geändert, bevor Sie in der öffentlichen Version verfügbar werden und sollten nicht in Produktionsanwendungen verwendet werden.
 
 Besprechungen sind der Schlüssel zur Produktivität in Microsoft Teams. Sie ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikation und gemeinsames Feedback in einem integrativen und aktiven Forum. Als Entwickler können Sie [konfigurierbare Registerkarten](../tabs/what-are-tabs.md#how-do-tabs-work)-, [bot](../bots/what-are-bots.md)-und [Nachrichten Erweiterungs](../messaging-extensions/what-are-messaging-extensions.md) Anwendungen erstellen, um die Besprechungs Erfahrung von Teams zu verbessern und zu bereichern. Besprechungs Benutzer können über den Tab-Katalog auf apps zugreifen, um relevante Szenarien wie das vorab Staging einer Kanban-Karte, das Starten eines in-Meeting-Aktions fähigen Dialogs oder das Erstellen einer Umfrage nach der Besprechung zu ermöglichen. Ihre Besprechungs-App kann eine Benutzeroberfläche für jede Phase des Besprechungs Lebenszyklus basierend auf dem Teilnehmerstatus bereitstellen.
 

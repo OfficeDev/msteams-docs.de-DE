@@ -1,15 +1,15 @@
 ---
-title: Entwerfen eines Besprechungs Dialogfelds in Microsoft Teams
+title: Besprechungs-Dialogfeld entwerfen
 author: heath-hamilton
-description: Anleitungen und bewährte Methoden für das Entwerfen eines in-Meeting-Dialogs für Microsoft Teams.
+description: Hier erfahren Sie, wie Sie ein in-Meeting-Dialogfeld für Microsoft Teams effektiv entwerfen.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 89e532e6dbd83e54269606f6e051fa377de68f62
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: f2ac0df3ce28293d9e3f61f45dd2d460dc01f2e9
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48243327"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452673"
 ---
 # <a name="design-an-in-meeting-dialog"></a>Besprechungs-Dialogfeld entwerfen
 
@@ -36,7 +36,7 @@ Im folgenden Beispiel wird gezeigt, wie der in-Meeting-Dialog aus der Perspektiv
 
 ## <a name="anatomy"></a>Anatomie
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="UI-Anatomie einer in-Meeting-Dialogfeldansicht." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
 1. **App-Symbol**
 1. **App-Name**
@@ -51,7 +51,7 @@ In-Meeting-Dialogfelder können in der Größe variieren, um verschiedene Anwend
 * **Height**: die Höhe des Dialogs wird durch den Inhalt in der WebView bestimmt. Der vertikale Bildlauf übernimmt den Inhalt, der die von Ihnen angegebene maximale Höhe überschreitet.
 * **Width**: die Breite der WebView ist ein absoluter Wert innerhalb des angegebenen Bereichs.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-sizing.png" alt-text="Abbildung mit den möglichen Dimensionen eines in-Meeting-Dialogs. Height: die Höhe des Dialogs wird durch den Inhalt in der WebView bestimmt. Der vertikale Bildlauf übernimmt den Inhalt, der die von Ihnen definierte maximale Höhe überschreitet. Min: keine. Max: 400 Pixel (320 Pixel WebView). Width: die Breite der WebView ist ein absoluter Wert innerhalb des angegebenen Bereichs. Min.: 288 Pixel (256 Pixel WebView). Max: 468 Pixel (436 Pixel WebView)." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-sizing.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
 ## <a name="behavior"></a>Verhalten
 
@@ -61,7 +61,7 @@ Weitere Informationen finden Sie unter Allgemeines in-Meeting-Dialog Verhalten w
 
 In-Meeting-Dialogfelder werden in der Mitte der Besprechungs Phase ausgerichtet. Sie können nicht gezogen werden und arbeiten im Rahmen von Microsoft Teams-Benachrichtigungen auf Systemebene.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-position.png" alt-text="Abbildung der UI-Anatomie eines in-Meeting-Dialogs." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-position.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
 ### <a name="aggregation"></a>Aggregation
 
@@ -76,7 +76,7 @@ Der Bildlauf erfolgt im WebView-Teil eines in-Meeting-Dialogs. Beachten Sie beim
 * Sie sollten nur vertikal scrollen können.
 * Sie können nur den Inhalt sehen, zu dem Sie einen Bildlauf durchgeführt haben (nichts oberhalb oder unterhalb).
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-scroll.png" alt-text="Abbildung zeigt, wie der Bildlauf im WebView-Inhalt im in-Meeting-Dialog funktioniert." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-scroll.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
 ### <a name="buttons"></a>Schaltflächen
 
@@ -114,7 +114,7 @@ Während in-Meeting-Dialoge Anrufe effektiver gestalten können, können Sie auc
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-do.png" alt-text="Abbildung, die zeigt, wie der Inhalt von Besprechungs Dialogen auf einen einzelnen Bildschirm beschränkt wird, damit sich Benutzer auf die Besprechung konzentrieren können." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-do.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
 #### <a name="do-keep-it-contained"></a>Do: enthalten bleiben
 
@@ -122,7 +122,7 @@ Beschränken Sie den Inhalt von Besprechungs Dialogen auf einen einzelnen Bildsc
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-dont.png" alt-text="Abbildung zeigt, wie in-Meeting-Dialogfeldern nicht erforderlich ist, dass Benutzer durch Inhalte navigieren." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-dont.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
 #### <a name="dont-include-multiple-steps"></a>Nicht: mehrere Schritte einschließen
 
@@ -135,18 +135,18 @@ In-Besprechungs Dialogfelder sollten Benutzer nicht durch Inhalte navigieren mü
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-do.png" alt-text="Abbildung, die zeigt, warum Sie unnötige Inhalte entfernen sollten, die Benutzern nicht dabei helfen, schnell etwas zu erreichen." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-do.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-dont.png" alt-text="Eine weitere Abbildung zeigt, warum Sie unnötige Inhalte entfernen sollten, die nicht dazu beitragen, dass Benutzer schnell etwas erreichen." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-dont.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-do.png" alt-text="Abbildung zeigt, dass Sie, wenn Sie komplexe Interaktionen benötigen, stattdessen eine einzelne Spalte im rechten Bereich der Besprechung verwenden sollten." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-do.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
 #### <a name="do-limit-number-of-interactions"></a>Do: Begrenzen der Anzahl von Interaktionen
 
@@ -154,7 +154,7 @@ Entfernen Sie unnötige Inhalte, die nicht dazu beitragen, dass Benutzer schnell
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-dont.png" alt-text="Abbildung zeigt, dass zu viele Interaktionen im Dialogfeld "in-Meeting" von der Besprechung ablenken." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-dont.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
 #### <a name="dont-introduce-unnecessary-elements"></a>Nicht: Einführung unnötiger Elemente
 
@@ -167,7 +167,7 @@ Sie können möglicherweise ein einzelnes Besprechungs Dialogfeld mit mehreren I
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-do.png" alt-text="Abbildung mit einem idealen Layout für in-Meeting-Dialoge." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-do.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
 #### <a name="do-use-single-column-layouts"></a>Do: Verwenden von Einzel Spaltenlayouts
 
@@ -175,7 +175,7 @@ Da sich die Dialogfelder in der Mitte der Besprechungs Phase befinden, sollte di
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-dont.png" alt-text="Abbildung mit Layout für in-Besprechungs Dialogfelder, die nicht empfohlen werden." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-dont.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
 #### <a name="dont-clutter-the-space"></a>Nicht: Übersichtlichkeit des Speicherplatzes
 
@@ -188,7 +188,7 @@ Dichte oder übermäßig strukturierte Inhalte können störend und überwältig
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-do.png" alt-text="Abbildung, die zeigt, wie die Größe des Dialogfelds in der Besprechung immer identisch sein sollte." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-do.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
 #### <a name="do-keep-it-consistent"></a>Vorgehensweise: konsistent halten
 
@@ -196,7 +196,7 @@ Dies ist wichtig, da in-Meeting-Dialogfelder immer am gleichen Speicherort angez
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-dont.png" alt-text="Abbildung zeigt, wie Sie nicht unterschiedliche Dialog Größen verwenden sollten." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-dont.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
 #### <a name="dont-always-fit-to-the-content"></a>Nicht: immer an den Inhalt anpassen
 
@@ -209,7 +209,7 @@ Möglicherweise versuchen Sie, einen horizontalen Bildlauf zu vermeiden, aber me
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-do.png" alt-text="Illustration, in der die Schaltflächen im Dialogfeld "in-Meeting" platziert werden." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-do.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
 #### <a name="do-right-align-the-primary-action"></a>Do: Rechtsbündiges Ausrichten der primären Aktion
 
@@ -217,7 +217,7 @@ Es wird empfohlen, die visuell intensivste Aktion an der am weitesten rechts gel
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-dont.png" alt-text="Illustration, in der die Schaltflächen im Dialogfeld "in-Meeting" nicht platziert werden." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-dont.png" alt-text="Beispiel zeigt, wie der in-Meeting-Dialog aus der Perspektive eines Besprechungsteilnehmers aussehen könnte." border="false":::
 
 #### <a name="dont-left-or-center-align-actions"></a>Nicht: Links oder zentrierte Ausrichtungs Aktionen
 

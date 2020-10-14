@@ -1,24 +1,24 @@
 ---
-title: Erstellen einer persönlichen Registerkarte "Teams"
+title: Erste Schritte – Erstellen einer persönlichen Registerkarte
 author: heath-hamilton
-description: Hier erfahren Sie, wie Sie eine persönliche Registerkarte für Ihre erste Microsoft Teams-app erstellen.
+description: Erstellen Sie mit dem Microsoft Teams-Toolkit schnell eine persönliche Registerkarte von Microsoft Teams.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: a86c9e1e46b97c6b265bfa9ad2f618655c524ee4
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 7c12c87fff5126662f9473ecb0c5838b61f5faf2
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237804"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452743"
 ---
-# <a name="build-a-teams-personal-tab"></a>Erstellen einer persönlichen Registerkarte "Teams"
+# <a name="build-a-personal-tab-for-microsoft-teams"></a>Erstellen einer persönlichen Registerkarte für Microsoft Teams
 
 Registerkarten stellen eine einfache Möglichkeit dar, Inhalte in Ihrer APP zu Oberflächen, indem eine Webseite im Wesentlichen in Microsoft Teams eingebettet wird.
 
 Es gibt zwei Arten von Registerkarten in Microsoft Teams. In diesem Lernprogramm erstellen Sie grundlegende eine *persönliche Registerkarte*, eine voll Bildinhalts Seite für einzelne Benutzer. (Persönliche Registerkarten sind die nächste Sache einer herkömmlichen Website Erfahrung in Microsoft Teams.)
 
-## <a name="before-you-begin"></a>Bevor Sie beginnen
+## <a name="before-you-begin"></a>Vorabinformationen
 
 Für die ersten Schritte benötigen Sie eine grundlegende ausgeführte persönliche Registerkarte. Wenn Sie noch keinen haben, lesen Sie [Erstellen und Ausführen ihrer ersten Teams-App](../build-your-first-app/build-and-run.md).
 
@@ -181,7 +181,7 @@ if (isTheme === "default") {
 
 Überprüfen Sie Ihre Registerkarte in Microsoft Teams. Die Darstellung sollte eng mit dem dunklen Design übereinstimmen.
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Screenshot einer persönlichen Registerkarte mit statischer Inhaltsansicht.":::
+:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Screenshot einer persönlichen Registerkarte mit statischem Inhalt.":::
 
 ## <a name="well-done"></a>Gut gemacht
 
@@ -201,4 +201,4 @@ Herzlichen Glückwunsch! Sie verfügen über eine Teams-App mit einer persönlic
 Sie wissen, wie Sie eine Registerkarte zur persönlichen Verwendung erstellen. Schauen wir uns an, was es braucht, um eine Registerkarte für Team Kanäle und Chats zu erstellen.
 
 > [!div class="nextstepaction"]
-> [Erstellen einer Kanal Registerkarte](../build-your-first-app/build-channel-tab.md)
+> [Erstellen einer Kanalregisterkarte](../build-your-first-app/build-channel-tab.md)
