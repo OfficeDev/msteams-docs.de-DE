@@ -164,7 +164,7 @@
     - name: Schrittanleitungen
       expanded: true
       items:
-        - name: Ihren Apps Registerkarten hinzufügen
+        - name: Erstellen einer Registerkarte für Teams
           href: tabs/how-to/add-tab.md
         - name: Registerkartenseiten erstellen
           items:
@@ -292,7 +292,7 @@
     - name: Schrittanleitungen
       expanded: true
       items:
-        - name: Erstellen einer Nachrichten-Erweiterung
+        - name: Erstellen einer Messaging-Erweiterung für Teams
           href: messaging-extensions/how-to/create-messaging-extension.md
         - name: Aktionsbasierte Befehle
           items:
