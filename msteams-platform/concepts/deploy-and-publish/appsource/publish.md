@@ -1,13 +1,13 @@
 ---
 title: Prozessleitfaden für den Microsoft Teams-App-Genehmigungsantrag
 description: Beschreibt den Prozess der Übermittlungs Genehmigung für die Veröffentlichung Ihrer APP im Microsoft Teams-App-Store.
-keywords: Teams veröffentlichen Store Office Publishing veröffentlichen AppSource Partner Center-Kontoüberprüfung
-ms.openlocfilehash: caf7a433158aaf79184d7247b95b5786b61de31f
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+keywords: Microsoft Teams Publish Store Office Publishing veröffentlichen AppSource Partner Center-Kontoüberprüfung Apps-Konto nicht veröffentlicht berechtigt
+ms.openlocfilehash: 6cc38e29d02935cf023bb26d3a317554493b0fe2
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279687"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465929"
 ---
 # <a name="submit-your-app-to-appsource"></a>Übermitteln Ihrer APP an AppSource
 
@@ -76,6 +76,11 @@ Die obige Fehlermeldung wird angezeigt, wenn der [Status Ihrer Kontoüberprüfun
 Während des Konto Überprüfungsprozesses wird der Status jedes erforderlichen Schritts (e-Mail-Besitz, Überprüfung der Arbeitsplätze und Unternehmens Verifizierung) angezeigt. Nachdem der Überprüfungsvorgang erfolgreich abgeschlossen wurde, ändert sich der Überprüfungsstatus Ihrer Registrierung auf der Profilseite von "Ausstehend" in "autorisiert", und die Prozessschritte werden nicht mehr angezeigt.
 
 ![Partner Center-Überprüfungsfehler](../../../assets/images/partner-center-acct-verification-error.png)
+
+## <a name="what-is-verified-in-partner-center-account-verification-process-and-how-to-respond"></a>Was wird im Verifizierungsprozess des Partner Center-Kontos überprüft und wie Sie darauf reagieren?
+Es gibt drei Überprüfungs Bereiche – e-Mail-Besitz, Beschäftigung und Unternehmen. Informationen dazu, [Was überprüft wird und wie Sie Antworten](/partner-center/verification-responses#what-is-verified-and-how-to-respond) können, wenn Sie der primäre Kontakt (globaler Administrator oder Konto Administrator) sind, wird empfohlen, dass Sie zu Ihrem Partner Profil wechseln, um den Überprüfungsstatus zu überwachen und den Fortschritt nachzuverfolgen.
+
+Sobald der Überprüfungsvorgang abgeschlossen ist, wird der Überprüfungsstatus Ihrer Registrierung auf der Profilseite von *Ausstehend* zu *autorisiert* geändert, und die Prozessschritte mit dem Status, die auf dieser Seite angezeigt werden, werden ausgeblendet. Der primäre Kontakt erhält innerhalb weniger Werktage nach Abschluss der Überprüfung eine e-Mail von Microsoft.
 
 ## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>Der Status "meine Kontoüberprüfung" wurde nicht über den e-Mail-Besitz im Partner Center hinaus erweitert. Wie sollte ich vorgehen?
 

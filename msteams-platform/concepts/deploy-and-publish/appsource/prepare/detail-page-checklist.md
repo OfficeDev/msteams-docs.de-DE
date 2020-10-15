@@ -1,13 +1,13 @@
 ---
 title: Erstellen einer tollen App-Detailseite
 description: Beschreibung der Seite "Anforderungen für App-Details"
-keywords: Veröffentlichen von Office-Veröffentlichungsrichtlinien für Microsoft Teams AppSource Inhalt
-ms.openlocfilehash: 103f57ba99404b8d7d5fb28c7aeaa0b770db6969
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+keywords: Veröffentlichungsrichtlinie für Microsoft Teams Veröffentlichungs Speicher AppSource Inhaltsmetadaten Screenshot Logo Beschreibung App Name Icons Kurzbeschreibung
+ms.openlocfilehash: 98c6ccedb20f43a0bc1a34f5c4ecb30f98150d9a
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452771"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465943"
 ---
 # <a name="build-a-great-app-details-page"></a>Erstellen einer tollen App-Detailseite
 
@@ -91,7 +91,7 @@ Dies ist eine präzise Zusammenfassung Ihrer APP. Diese soll originell und anspr
 **Verbote**
 
 * Wiederholen Sie den Titel nicht.
-* Kürzen Sie Microsoft nicht mit "MS".
+* Kürzen Sie Microsoft nicht mit "MS" oder "MSFT".
 * Verwenden Sie keine Fachsprache oder spezielle Terminologie – Sie können nicht davon ausgehen, dass die Benutzer wissen, wonach Sie suchen sollen.
 * Vermeiden Sie unnötigen Verweis auf Microsoft-Produktnamen, es sei denn unbedingt erforderlich.
 * Geben Sie nicht an oder implizieren Sie, dass die APP ein Angebot von Microsoft ist.

@@ -1,13 +1,13 @@
 ---
 title: Nach Veröffentlichung
 description: Vorgehensweisen nach dem Veröffentlichen der APP
-keywords: Update Zertifikat für Teams nach Veröffentlichung
-ms.openlocfilehash: d2cc6c5427c5b4f7320f0ec2e022f2c69467a33d
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+keywords: Update-App-Update-Manifest für Teams nach Veröffentlichungs Update Zertifizierung
+ms.openlocfilehash: 58e81688ab9a8b55d2b035fc9b43cb58dddb6133
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819154"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465915"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Verwalten und Unterstützen Ihrer veröffentlichten App 
 
@@ -19,7 +19,7 @@ Das [Microsoft 365 App Compliance-Programm](./application-certification.md)ist e
 
 ## <a name="add-a-download-button-to-your-product-site"></a>Hinzufügen einer Schaltfläche zum herunterladen zu ihrer Produkt Website
 
-Wenn Ihre APP im Microsoft Teams Store gespeichert ist, können Sie einen Link für Ihre Website generieren, der Teams startet und eine Zustimmung und ein Installationsdialogfeld für Benutzer zum Hinzufügen der APP anzeigt.
+Wenn Ihre APP im Microsoft Teams Global Store installiert ist, können Sie einen Link für Ihre Website generieren, der Teams startet und eine Zustimmung und ein Installationsdialogfeld für Benutzer zur Verfügung stellt, um die APP hinzuzufügen.
 Das Format lautet:  `https://teams.microsoft.com/l/app/<appId>` wobei die ID die GUID ist, die Sie im übermittelten Manifest deklarieren.
 Beispiel: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` ist der Link zum Installieren von Trello.
 
@@ -27,7 +27,7 @@ Beispiel: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672f
 
 * Verwenden Sie nicht die Schaltfläche *neue APP hinzufügen* , um Ihre APP erneut zu übermitteln. Verwenden Sie stattdessen die Kachel für Ihre APP auf der Registerkarte Übersicht.
 * Die im aktualisierten Manifest enthaltene-ID sollte mit einer erhöhten Versionsnummer im aktuellen Manifest identisch sein.
-* Erhöhen Sie die Versionsnummer im Manifest, wenn Sie Änderungen an ihrer Übermittlung an den Manifesten vornehmen.
+* Erhöhen Sie die Versionsnummer im Manifest, wenn Sie Änderungen an ihrer Übermittlung einschließlich des App-namens oder aller Metadaten im Manifest vornehmen.
 * Aktualisierte Übermittlungen sind erforderlich, um einem neuen Überprüfungs-und Validierungsprozess unterzogen zu werden.
 
 ## <a name="app-updates-and-the-user-consent-flow"></a>APP-Updates und der Benutzer Zustimmungs Fluss

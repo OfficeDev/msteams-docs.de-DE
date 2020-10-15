@@ -1,13 +1,13 @@
 ---
 title: Übermittlungscheckliste
 description: Die Prüfliste, die vor der Veröffentlichung Ihrer Microsoft Teams-app in AppSource verwendet werden soll
-keywords: Vorbereiten der Veröffentlichung von Microsoft Teams-Veröffentlichungs Speicher-Prüflisten Übermittlung
-ms.openlocfilehash: 86217cef542cc3f3a09e0dc64e429a675011a0c1
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+keywords: Microsoft Teams-Veröffentlichungs Speicher für Office-Veröffentlichung Checkliste Einreichung Teams apps appsource-Validierung
+ms.openlocfilehash: 4bbf5adb8594db0f7163db610b192dd8aaec37fb
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587752"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465922"
 ---
 # <a name="prepare-for-appsource-submission"></a>Vorbereiten der AppSource-Übermittlung  
 
@@ -15,8 +15,8 @@ Um in AppSource aufgeführt zu werden, muss Ihre APP einen Genehmigungsprozess d
 
 * **Verteilungsmethode:** Stellen Sie sicher, dass Ihre APP für die Veröffentlichung auf einer Store-Plattform vorgesehen ist. Es gibt [andere Optionen](../../overview.md) zum Verteilen Ihrer APP ohne Veröffentlichung in AppSource.
 * **Validierungsrichtlinien:** Ihre APP muss alle aktuellen [AppSource-Validierungsrichtlinien](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams)übergeben. Überprüfen Sie Ihre APP vor der Übermittlung auf das [Validierungstool](#teams-app-validation-tool) . Beachten Sie, dass diese Richtlinien Änderungen unterliegen.
-* **App-Detailseite:** Ihre APP muss mit der [Prüfliste für die APP-Detailseite](detail-page-checklist.md)übereinstimmen.
-* **Tipps und häufig fehlgeschlagene Fälle:** Achten Sie besonders auf die aufgelisteten [Tipps und häufig gescheiterten Fälle](frequently-failed-cases.md) , um Ihre APP-Übermittlung und Genehmigungszeit zu verbessern.
+* **App-Detailseite:** Ihre APP muss mit der  [Prüfliste für die APP-Detailseite](detail-page-checklist.md)übereinstimmen.
+* **Tipps und häufig fehlgeschlagene Fälle:** Achten Sie besonders auf die aufgelisteten [Tipps und häufig gescheiterten Fälle](frequently-failed-cases.md)  , um Ihre APP-Übermittlung und Genehmigungszeit zu verbessern.
 * **App-Manifest:** Überprüfen des App-Manifests anhand der [Checkliste](app-manifest-checklist.md)für das App-Manifest.
 * **Testen und Debuggen:** Stellen Sie sicher, dass Sie [Ihre APP vollständig getestet und gedebuggt](../../../build-and-test/debug.md)haben.
 * **Testen von Notizen:** Einschließen der [Test Notizen zur Validierung](#test-notes-for-validation)
@@ -82,7 +82,7 @@ Fügen Sie Folgendes ein:
 
 * Sie haben die Möglichkeit, Ihre Test Notizen in SharePoint hochzuladen. Geben Sie in diesem Fall einen öffentlichen Link zur Datei an.
 
-* **Test Konten**. Ein Testkonto ist erforderlich, wenn Ihre APP nur lizenzierte Konten oder Whitelists aus dem Back-End zulässt. Wenn in Ihrer APP ein Team/Gruppenchat Bereich zulässig ist, sind zwei Testkonten in demselben Mandanten erforderlich, um das Team Zusammenarbeitsszenario zu überprüfen.
+* **Test Konten**. Ein Testkonto ist erforderlich, wenn Ihre APP lizenzierte Konten oder safelisting nur über das Back-End zulässt. Wenn in Ihrer APP ein Team/Gruppenchat Bereich zulässig ist, sind zwei Testkonten in demselben Mandanten erforderlich, um das Team Zusammenarbeitsszenario zu überprüfen.
 
 * **Integrationsschritte**. Wenn die Vorkonfiguration durch einen mandantenadministrator erforderlich ist, um die APP zu verwenden, schließen Sie die Schritte ein, und/oder stellen Sie konfigurierte Administrator-und nicht-Administratorkonten zur Validierung bereit. Hinweis: Sie können sich für ein Abonnement für ein [Office 365 Entwicklerprogramm](https://developer.microsoft.com/microsoft-365/dev-program) registrieren. Es ist für 90 Tage *kostenlos* und wird ständig erneuert, solange Sie es für Entwicklungsaktivitäten verwenden.
 
