@@ -5,12 +5,12 @@ description: Erstellen von Apps für Microsoft Teams-Besprechungen
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Teams-apps-Besprechungen Benutzer Teilnehmer-Rollen-API
-ms.openlocfilehash: e80dd50590d9e0828ab094c691a6b8e07ace3b0c
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 74f04ce9420110f721d95045fccee1d455cc7ea8
+ms.sourcegitcommit: b0b2f148add54ccd17fdf863c2f1973a615f8657
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452624"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "48487840"
 ---
 # <a name="create-apps-for-teams-meetings-developer-preview"></a>Erstellen von Apps für Microsoft Teams-Besprechungen (Entwicklervorschau)
 
@@ -88,9 +88,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 #### <a name="query-parameters"></a>Abfrageparameter
 
-**Besprechungs**-Nr. Die Besprechungs-ID ist erforderlich.  
-**Teilnehmer**-Nr. Die Teilnehmer-ID ist erforderlich.  
-**Mandanten**-Nr. [Mandanten-ID](/onedrive/find-your-office-365-tenant-id) des Teilnehmers. Für Mandanten Benutzer erforderlich.
+|Wert|Typ|Erforderlich|Beschreibung|
+|---|---|----|---|
+|**meetingId**| Zeichenfolge | Ja | Die Besprechungs-ID ist über bot Invoke und Microsoft Teams Client SDK verfügbar.|
+|**Teilnehmer-Nr**| Zeichenfolge | Ja | Dieses Feld ist die Benutzer-ID und steht in der Registerkarte "SSO", im bot-Invoke und im Microsoft Teams-Client-SDK zur Verfügung. Die Registerkarte SSO wird dringend empfohlen.|
+|**tenantId**| Zeichenfolge | Ja | Dies ist für Mandanten Benutzer erforderlich. Sie ist in Tab SSO, bot Invoke und Microsoft Teams Client SDK verfügbar. Die Registerkarte SSO wird dringend empfohlen.|
 
 #### <a name="response-payload"></a>Antwort Nutzlast
 <!-- markdownlint-disable MD036 -->
@@ -144,9 +146,10 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="query-parameters"></a>Abfrageparameter
 
-**Conversation**-ID: der Konversationsbezeichner. Erforderlich
-
-**completionBotId**: Dies ist die bot-ID. Optional
+|Wert|Typ|Erforderlich|Beschreibung|
+|---|---|----|---|
+|**conversationId**| Zeichenfolge | Ja | Der convdersation-Bezeichner steht im Rahmen von bot Invoke zur Verfügung. |
+|**completionBotId**| Zeichenfolge | Nein | Dieses Feld ist die im Manifest deklarierte bot-ID. Der bot erhält ein Result-Objekt |
 
 #### <a name="request-payload"></a>Anforderungsnutzlast
 
@@ -188,12 +191,12 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```javascript
 
 const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
-        replyActivity.channelData = {
-            notification: {
-                alertInMeeting: true,
-                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
-            }
-        };
+replyActivity.channelData = {
+    notification: {
+        alertInMeeting: true,
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
+    }
+};
 await context.sendActivity(replyActivity);
 ```
 
