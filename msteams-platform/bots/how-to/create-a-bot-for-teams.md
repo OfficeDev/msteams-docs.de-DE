@@ -1,18 +1,18 @@
 ---
-title: Erstellen eines Bots für Teams
+title: Ein Bot mit App Studio erstellen
 author: clearab
-description: Informationen zum Erstellen Teams-Bots
+description: Erfahren Sie, wie Sie mit App Studio einen Microsoft Teams-Bot erstellen.
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: 86ef162ceee07b1f66992d6943b22336d717c9f7
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 3d4f954afd56bf6ee442b57961c9d6b736ffa4d8
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452799"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796351"
 ---
-# <a name="create-a-bot-for-microsoft-teams"></a>Erstellen eines Bots für Microsoft Teams
+# <a name="create-a-bot-using-app-studio"></a>Ein Bot mit App Studio erstellen
 
 > [!TIP]
 > Suchen Sie nach einer schnelleren Möglichkeit für die ersten Schritte? Erstellen Sie einen [Bot](../../build-your-first-app/build-bot.md) unter Verwendung des Microsoft Teams-Toolkits.
@@ -83,7 +83,7 @@ Sie können Ihren Webdienst auch registrieren, indem Sie im Azure-Portal eine Re
 
 Das [Bot Framework-Portal](https://dev.botframework.com) wurde für die Registrierung von Bots in Microsoft Azure optimiert. Hier sind einige weitere Punkte, die Sie wissen sollten:
 
-* Der Microsoft Teams-Kanal für in Azure registrierte Bots ist **kostenlos**. Über den Teams-Kanal gesendete Nachrichten werden NICHT auf die verbrauchten Nachrichten für den Bot angerechnet.
+* Der Microsoft Teams-Kanal für in Azure registrierte Bots ist **kostenlos** . Über den Teams-Kanal gesendete Nachrichten werden NICHT auf die verbrauchten Nachrichten für den Bot angerechnet.
 * Wenn Sie Ihren Bot bei Microsoft Azure registrieren, muss Ihr Bot-Code nicht in Microsoft Azure *gehostet* werden.
 * Wenn Sie einen Bot über das Microsoft Azure-Portal registrieren, müssen Sie über ein Microsoft Azure-Konto verfügen. Sie können [kostenlos ein Konto erstellen](https://azure.microsoft.com/free/). Zur Überprüfung Ihrer Identität beim Erstellen eines Azure-Kontos müssen Sie eine Kreditkarte angeben, die jedoch nicht belastet wird. In Microsoft Teams ist es stets kostenlos, Bots zu erstellen und zu verwenden.
 
@@ -93,11 +93,11 @@ Ihr [App-Manifest](~/resources/schema/manifest-schema.md) definiert die Metadate
 
 ### <a name="add-using-app-studio"></a>Mit App Studio hinzufügen
 
-1. Öffnen Sie App Studio im Teams-Client aus dem **...**-Überlaufmenü auf der linken Navigationsleiste. Wenn App Studio noch nicht installiert ist, können Sie danach suchen und es installieren.
+1. Öffnen Sie App Studio im Teams-Client aus dem **...** -Überlaufmenü auf der linken Navigationsleiste. Wenn App Studio noch nicht installiert ist, können Sie danach suchen und es installieren.
 2. Wählen Sie auf der Registerkarte **Manifest-Editor** die Option **Neue App erstellen** aus. (Wenn Sie einen Bot zu einer vorhandenen App hinzufügen, können Sie Ihr App-Paket auch importieren.)
 3. Fügen Sie Ihre App-Details hinzu (in der [Manifestschemadefinition](~/resources/schema/manifest-schema.md) finden Sie die vollständigen Beschreibungen der einzelnen Felder).
 4. Wählen Sie auf der Registerkarte **Bots** die Schaltfläche **Setup** aus.
-5. Sie können entweder eine neue Webdienstregistrierung (**Neuer Bot**) erstellen, oder wenn Sie sich bereits registriert haben, **Vorhandener Bot-** auswählen.
+5. Sie können entweder eine neue Webdienstregistrierung ( **Neuer Bot** ) erstellen, oder wenn Sie sich bereits registriert haben, **Vorhandener Bot-** auswählen.
 6. Wählen Sie die für den Bot benötigten Funktionen und Bereiche aus.
 7. Aktualisieren Sie Ihre Bot-Endpunktadresse bei Bedarf so, dass Sie auf Ihren Bot verweist. Dies sollte ungefähr so aussehen: `https://someplace.com/api/messages`.
 8. Optional können Sie [Bot-Befehle](~/bots/how-to/create-a-bot-commands-menu.md) hinzufügen.
