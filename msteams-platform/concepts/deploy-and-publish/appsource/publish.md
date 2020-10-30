@@ -2,12 +2,12 @@
 title: Prozessleitfaden für den Microsoft Teams-App-Genehmigungsantrag
 description: Beschreibt den Prozess der Übermittlungs Genehmigung für die Veröffentlichung Ihrer APP im Microsoft Teams-App-Store.
 keywords: Microsoft Teams Publish Store Office Publishing veröffentlichen AppSource Partner Center-Kontoüberprüfung Apps-Konto nicht veröffentlicht berechtigt
-ms.openlocfilehash: 6cc38e29d02935cf023bb26d3a317554493b0fe2
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: 2879717aebd9d295cdf37cc0371b68f5f695b86b
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465929"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796309"
 ---
 # <a name="submit-your-app-to-appsource"></a>Übermitteln Ihrer APP an AppSource
 
@@ -16,7 +16,8 @@ ms.locfileid: "48465929"
 Wenn Sie Ihre APP in [AppSource](https://appsource.microsoft.com) veröffentlichen, ist Sie im Microsoft Teams-App-Katalog und im Internet verfügbar. Auf hohem Niveau ist der Prozess für die Übermittlung Ihrer APP an AppSource:
 
 1. Entwickeln Sie Ihre APP nach unseren [Entwurfsrichtlinien](~/concepts/design/understand-use-cases.md). Registerkarten sollten den [Entwurfsrichtlinien für die Registerkarte](~/tabs/design/tabs.md)entsprechen. Bots sollten den [bot-Entwurfsrichtlinien](~/bots/design/bots.md)folgen.
-1. Stellen Sie sicher, dass Ihre APP die APP- [Validierungsrichtlinien](/legal/marketplace/certification-policies) für Microsoft Teams erfüllt.
+1. Stellen Sie sicher, dass Ihre APP die APP- [Validierungsrichtlinien](/legal/marketplace/certification-policies) für Microsoft Teams erfüllt. 
+1. Selbst testen Sie Ihre APP mit dem [Manifest Validation-Tool](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist#teams-app-validation-tool) .
 1. [Richten Sie ein Entwicklerkonto](/office/dev/store/open-a-developer-account) im [Partner Center](https://support.microsoft.com/help/4499930/partner-center-overview)ein. *Siehe auch* [wie erstelle ich ein Partner Center-Konto](#how-do-i-create-a-partner-center-account) im Abschnitt häufig gestellte Fragen, unten.
 1. Bereiten Sie Ihre APP für die Übermittlung vor, indem Sie unsere [Zulassungs Checkliste](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)befolgen.
 1. Lesen Sie unsere [Tipps für eine erfolgreiche App-Übermittlung](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md).
@@ -67,7 +68,7 @@ Auf unserer Seite [Kontoeinstellungen und Profilinformationen verwalten](/window
 
 ## <a name="why-do-i-receive-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>Warum erhalte ich die Meldung "dieses Konto ist nicht veröffentlicht?", wenn ich versuche, mein Add-in über das Partner Center zu übermitteln?
 
-Die obige Fehlermeldung wird angezeigt, wenn der [Status Ihrer Kontoüberprüfung](/partner-center/verification-responses) aussteht. Sie können den Status der Kontoüberprüfung im Partner Center- [Dashboard](https://partner.microsoft.com/dashboard) überprüfen, indem Sie die Option **Einstellungen** (Zahnradsymbol) in der oberen rechten Ecke der Seitenkopf Schale auswählen und die Einstellungen für das Konto Konto für **Entwicklereinstellungen**auswählen  =>  **Account**   =>  **Account settings** .
+Die obige Fehlermeldung wird angezeigt, wenn der [Status Ihrer Kontoüberprüfung](/partner-center/verification-responses) aussteht. Sie können den Status der Kontoüberprüfung im Partner Center- [Dashboard](https://partner.microsoft.com/dashboard) überprüfen, indem Sie die Option **Einstellungen** (Zahnradsymbol) in der oberen rechten Ecke der Seitenkopf Schale auswählen und die Einstellungen für das Konto Konto für **Entwicklereinstellungen** auswählen  =>  **Account**   =>  **Account settings** .
 
 ![Seite "Partner Center-Kontoeinstellungen"](../../../assets/images/partner-center-accts-page.png)
 
@@ -84,7 +85,7 @@ Sobald der Überprüfungsvorgang abgeschlossen ist, wird der Überprüfungsstatu
 
 ## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>Der Status "meine Kontoüberprüfung" wurde nicht über den e-Mail-Besitz im Partner Center hinaus erweitert. Wie sollte ich vorgehen?
 
-Während der Überprüfung des **e-Mail-Eigentums** wird eine Bestätigungs-e-Mail an die primäre Kontakt-e-Mail-Adresse gesendet. Überprüfen Sie Ihren primären Kontakt Posteingang auf eine e-Mail von **Maccount@<span>Microsoft</span>. com** mit der *erforderlichen Betreffzeile: Überprüfen Sie Ihr e-Mail-Konto bei Microsoft*, indem Sie den e-Mail-Verifizierungsvorgang abschließen. Die Bestätigungs-e-Mail wird an die e-Mail-Adresse gesendet, die auf der Seite Kontoeinstellungen im Partner Center aufgeführt ist.
+Während der Überprüfung des **e-Mail-Eigentums** wird eine Bestätigungs-e-Mail an die primäre Kontakt-e-Mail-Adresse gesendet. Überprüfen Sie Ihren primären Kontakt Posteingang auf eine e-Mail von **Maccount@ <span>Microsoft</span>. com** mit der *erforderlichen Betreffzeile: Überprüfen Sie Ihr e-Mail-Konto bei Microsoft* , indem Sie den e-Mail-Verifizierungsvorgang abschließen. Die Bestätigungs-e-Mail wird an die e-Mail-Adresse gesendet, die auf der Seite Kontoeinstellungen im Partner Center aufgeführt ist.
 
 > [!NOTE]
  >Der Link zur e-Mail-Überprüfung ist nur 7 Tage gültig. Sie können anfordern, dass wir die e-Mail erneut an Sie senden, indem Sie Ihre Partnerprofil Seite besuchen und den Link zur über **Prüfung der Bestätigung erneut senden** auswählen. Um sicherzustellen, dass die e-Mail empfangen wird, werden e-Mails von Microsoft.com als sichere Domäne von der e-Mail-Adresse geschützt und Ihre Junk-e-Mail-Ordner überprüft.
@@ -101,7 +102,7 @@ Versuchen Sie Folgendes:
 1. Löschen Sie den Browsercache, wechseln Sie zu Ihrem Partner Center-Konto Dashboard, und wählen Sie den Link Überprüfung der über **Prüfung erneut senden** aus, damit die Bestätigungs-e-Mail an Ihre e-Mail-Adresse gesendet wird
 1. Versuchen Sie, über einen anderen Browser auf den Link zum  **erneuten Senden der Überprüfungs e-Mail** zuzugreifen.
 1. Arbeiten Sie mit Ihrer IT-Abteilung zusammen, um sicherzustellen, dass die Überprüfungs e-Mails nicht vom e-Mail-Server blockiert werden.
-1. Passen Sie den Spamfilter Ihres Servers so an, dass alle e-Mails von Maccount@Microsoft zugelassen/geschützt werden **. <span></span> com**.
+1. Passen Sie den Spamfilter Ihres Servers so an, dass alle e-Mails von Maccount@Microsoft zugelassen/geschützt werden **. <span></span> com** .
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>Wie lange dauert der Prozess der Überprüfung der Arbeit?
 
@@ -123,7 +124,7 @@ Weitere Informationen finden Sie in der [Dokumentation zum kommerziellen Marktpl
 
 Senden Sie eine e-Mail **<teamsubm@microsoft.com>** mit den folgenden Details:
 
-1. **Betreffzeile**. *Problem beim Partner Center Konto für <App_Name>* (geben Sie den Namen Ihrer APP an).
+1. **Betreffzeile** . *Problem beim Partner Center Konto für <App_Name>* (geben Sie den Namen Ihrer APP an).
 1. **E-Mail-Text:**
     * Support Ticketnummer:
     * Ihre Verkäufer-ID:

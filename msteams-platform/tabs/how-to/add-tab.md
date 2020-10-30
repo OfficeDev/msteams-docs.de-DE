@@ -1,21 +1,21 @@
 ---
-title: Erstellen einer Registerkarte für Teams
+title: Eine Registerkarte mit App Studio erstellen
 author: laujan
-description: Informationen zum Erstellen einer Registerkarte "Teams"
+description: Informationen zum Erstellen einer Microsoft Teams-Registerkarte mithilfe von App Studio.
 keywords: Teams-Registerkartengruppe Kanal konfigurierbar
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8718bdfe075f8187e41b1b7493ea561498b1c8b7
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 4e6554a3fdba2ee53bf6d76cd6e25a55b14f7bdd
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452757"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796155"
 ---
-# <a name="create-a-tab-for-microsoft-teams"></a>Erstellen einer Registerkarte für Microsoft Teams
+# <a name="create-a-tab-using-app-studio"></a>Eine Registerkarte mit App Studio erstellen
 
 > [!TIP]
-> Suchen Sie nach einer schnelleren Methode für den Einstieg? Erstellen Sie mithilfe des Microsoft Teams-Toolkits eine [persönliche](../../build-your-first-app/build-personal-tab.md) oder eine [Kanal-und Gruppen](../../build-your-first-app/build-channel-tab.md) Registerkarte.
+> Suchen Sie nach einer schnelleren Möglichkeit für die ersten Schritte? Erstellen Sie mithilfe des Microsoft Teams-Toolkits eine [persönliche](../../build-your-first-app/build-personal-tab.md) oder eine [Kanal-und Gruppen](../../build-your-first-app/build-channel-tab.md) Registerkarte.
 
 Über Registerkarten können Sie Webinhalte bereitstellen, die Sie für Ihren Kanal, Gruppenchat und persönliche Benutzer hosten. Auf einer hohen Ebene müssen Sie die folgenden Schritte ausführen, um eine Registerkarte zu erstellen:
 
@@ -67,11 +67,11 @@ Sie können die APP Studio-app innerhalb des Microsoft Teams-Clients verwenden, 
 1. Öffnen Sie App Studio, und wählen Sie die Registerkarte **Manifest-Editor** aus.
 1. Wählen Sie die Kachel **neue APP erstellen** aus.
 1. Fügen Sie Ihre APP-Details hinzu (siehe [Manifest-Schema Definition](~/resources/schema/manifest-schema.md) für eine vollständige Beschreibung der einzelnen Felder).
-1. Wählen Sie im Abschnitt Funktionen die Option **Registerkarten**aus.
-    * Wählen Sie für eine persönliche Registerkarte persönliche *Registerkarte hinzufügen* aus, und wählen Sie **Hinzufügen**aus. Ihnen wird ein Popup-Dialogfenster angezeigt, in dem Sie Ihre Registerkarten Details hinzufügen können.
-    * Wählen Sie für einen Kanal/eine Gruppe Registerkarte unter *Team Tab* die Registerkarte Details im Popupfenster Team Tab **Hinzufügen** aus, und füllen Sie die Felder aus. Stellen Sie sicher, dass die *Konfiguration aktualisiert werden kann? Team* -und *Gruppenchat* Felder werden überprüft, und wählen Sie **Speichern**aus.
+1. Wählen Sie im Abschnitt Funktionen die Option **Registerkarten** aus.
+    * Wählen Sie für eine persönliche Registerkarte persönliche *Registerkarte hinzufügen* aus, und wählen Sie **Hinzufügen** aus. Ihnen wird ein Popup-Dialogfenster angezeigt, in dem Sie Ihre Registerkarten Details hinzufügen können.
+    * Wählen Sie für einen Kanal/eine Gruppe Registerkarte unter *Team Tab* die Registerkarte Details im Popupfenster Team Tab **Hinzufügen** aus, und füllen Sie die Felder aus. Stellen Sie sicher, dass die *Konfiguration aktualisiert werden kann? Team* -und *Gruppenchat* Felder werden überprüft, und wählen Sie **Speichern** aus.
 1. Im Abschnitt *Domains and Permissions* sollte die *Domäne aus Ihrem Registerkarten* Feld die Host-oder Reverse-Proxy-URL ohne das HTTPS-Präfix enthalten.
-1. Auf der **Finish**  =>  Registerkarte Finish**Test und Distribute** können Sie Ihr App-Paket **herunterladen** , das Paket in einem Team **Installieren** oder sich zur Genehmigung an den App-Store von Teams **senden** . *Wenn Sie einen Reverseproxy verwenden, erhalten Sie eine Warnung im Feld **Beschreibung** auf der rechten Seite. Die Warnung kann beim Testen der Registerkarte ignoriert werden*.
+1. Auf der **Finish**  =>  Registerkarte Finish **Test und Distribute** können Sie Ihr App-Paket **herunterladen** , das Paket in einem Team **Installieren** oder sich zur Genehmigung an den App-Store von Teams **senden** . *Wenn Sie einen Reverseproxy verwenden, erhalten Sie eine Warnung im Feld **Beschreibung** auf der rechten Seite. Die Warnung kann beim Testen der Registerkarte ignoriert werden* .
 
 ## <a name="create-your-app-package-manually"></a>Manuelles Erstellen Ihres App-Pakets
 
@@ -113,7 +113,7 @@ Im Array werden Kanäle/Gruppenregisterkarten hinzugefügt `configurableTabs` . 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`configurationUrl`|Zeichenfolge|2048 Zeichen|✔|Die Seite https://URL to Configuration.|
-|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte nach der Erstellung vom Benutzer aktualisiert werden kann. Standard `true`|
+|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte nach der Erstellung vom Benutzer aktualisiert werden kann. Standard `true`|
 |`scopes`|Array von Enumerationen|1|✔|Konfigurierbare Registerkarten unterstützen nur die `team` und `groupchat` Bereiche. |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>Beispiel für einfaches Channel/Group-Registerkarten Manifest
@@ -136,9 +136,9 @@ Nachdem Sie Ihr `manifest.json` Bundle in einem ZIP-Ordner zusammen mit ihren be
 ### <a name="upload-app-package-directly-to-a-team"></a>Direktes Hochladen des App-Pakets in ein Team
 
 1. Öffnen Sie den Microsoft Teams-Client. Wenn Sie die [webbasierte Version](https://teams.microsoft.com) verwenden, können Sie den Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md)Ihres Browsers überprüfen.
-1. Wählen Sie im *YourTeams* -Bereich auf der linken Seite das `...` Menü neben dem Team aus, das Sie zum Testen der Registerkarte verwenden, und wählen Sie **Team verwalten**aus.
+1. Wählen Sie im *YourTeams* -Bereich auf der linken Seite das `...` Menü neben dem Team aus, das Sie zum Testen der Registerkarte verwenden, und wählen Sie **Team verwalten** aus.
 1. Wählen Sie im Hauptbereich **apps** in der Registerkartenleiste aus, und wählen Sie **eine benutzerdefinierte App hochladen** , die sich in der unteren rechten Ecke der Seite befindet.
-1. Öffnen Sie Ihr Projektverzeichnis, navigieren Sie zum Ordner **./Paket** , wählen Sie den ZIP-Ordner für das App-Paket aus, und wählen Sie **Öffnen**aus. Ihre Registerkarte wird in Teams hochgeladen.
+1. Öffnen Sie Ihr Projektverzeichnis, navigieren Sie zum Ordner **./Paket** , wählen Sie den ZIP-Ordner für das App-Paket aus, und wählen Sie **Öffnen** aus. Ihre Registerkarte wird in Teams hochgeladen.
 
 ### <a name="view-your-tab-in-teams"></a>Anzeigen der Registerkarte in Microsoft Teams
 
@@ -149,7 +149,7 @@ Nachdem Sie Ihr `manifest.json` Bundle in einem ZIP-Ordner zusammen mit ihren be
     * Kehren Sie zu Ihrem Team zurück, wählen Sie den Kanal aus, in dem Sie die Registerkarte anzeigen möchten, wählen Sie in der Registerkartenleiste ➕ aus, und wählen Sie im Katalog die Registerkarte aus.
     * Befolgen Sie die Anweisungen zum Hinzufügen einer Registerkarte. Beachten Sie, dass für die Registerkarte Kanal/Gruppe ein benutzerdefiniertes Konfigurationsdialogfeld vorhanden ist. Wählen Sie **Speichern** aus, und ihre Registerkarte wird der Registerkartenleiste des Kanals hinzugefügt.
 
-## <a name="learn-more"></a>Weitere Informationen
+## <a name="learn-more"></a>Mehr erfahren
 
 * [Erstellen einer Inhaltsseite für die Registerkarte](~/tabs/how-to/create-tab-pages/content-page.md)
 * [Erstellen einer Konfigurationsseite für die Registerkarte](~/tabs/how-to/create-tab-pages/configuration-page.md)

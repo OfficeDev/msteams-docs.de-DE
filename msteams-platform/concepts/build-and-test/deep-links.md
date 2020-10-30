@@ -3,11 +3,11 @@ title: Erstellen von Deep-Links
 description: Beschreibt Deep Links und deren Verwendung in ihren apps
 keywords: Teams Deep Link Deeplink
 ms.openlocfilehash: 03580c4d15c82da70402d68d85b0d28f8afa670e
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801243"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796330"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Erstellen von tiefen Links zu Inhalten und Features in Microsoft Teams
 
@@ -27,7 +27,7 @@ Alternativ können Sie auch Deep Links programmgesteuert mit dem Format erstelle
 
 ### <a name="showing-a-deep-link-to-an-item-within-your-tab"></a>Anzeigen einer tiefen Verknüpfung zu einem Element auf der Registerkarte
 
-Wenn Sie ein Dialogfeld mit einer tiefen Verknüpfung zu einem Element in ihrer Registerkarte anzeigen möchten, rufen Sie`microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
+Wenn Sie ein Dialogfeld mit einer tiefen Verknüpfung zu einem Element in ihrer Registerkarte anzeigen möchten, rufen Sie `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
 
 Geben Sie die folgenden Felder an:
 
@@ -58,10 +58,10 @@ Die Abfrageparameter lauten wie folgt:
 
 Beispiele:
 
-* Link zu einer konfigurierbaren Registerkarte selbst:`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* Link zu einem Aufgabenelement auf der konfigurierbaren Registerkarte:`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* Link zu einer statischen Registerkarte selbst:`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
-* Link zu einem Aufgabenelement auf der Registerkarte static:`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+* Link zu einer konfigurierbaren Registerkarte selbst: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+* Link zu einem Aufgabenelement auf der konfigurierbaren Registerkarte: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+* Link zu einer statischen Registerkarte selbst: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
+* Link zu einem Aufgabenelement auf der Registerkarte static: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass alle Abfrageparameter ordnungsgemäß URI-codiert sind. Aus Gründen der Lesbarkeit sind die obigen Beispiele nicht, aber Sie sollten. Verwenden des letzten Beispiels:
@@ -126,7 +126,7 @@ Sie können tiefe Links zum integrierten Planungsdialogfeld des Teams-Clients er
 
 ### <a name="generating-a-deep-link-to-the-scheduling-dialog"></a>Erstellen einer tiefen Verknüpfung zum Planungsdialogfeld
 
-Verwenden Sie dieses Format für einen tiefen Link, den Sie in einer bot-, Connector-oder Messaging Erweiterungskarte verwenden können:`https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
+Verwenden Sie dieses Format für einen tiefen Link, den Sie in einer bot-, Connector-oder Messaging Erweiterungskarte verwenden können: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Beispiel: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 

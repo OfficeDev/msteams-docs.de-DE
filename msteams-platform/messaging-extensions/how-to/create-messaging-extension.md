@@ -1,20 +1,20 @@
 ---
-title: Erstellen einer Messaging Erweiterung für Teams
+title: Eine Messaging-Erweiterung mit App Studio erstellen
 author: clearab
-description: Informationen zum Erstellen einer Microsoft Teams-Messaging Erweiterung
+description: In diesem Artikel erfahren Sie, wie Sie eine Microsoft Teams-Messaging Erweiterung mit App Studio erstellen.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 03fe4463f7e7af0874af4ce4f487f1a01fdd5fe6
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: c3437457f7084d2d768af0f0db5208525c368682
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452596"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796183"
 ---
-# <a name="create-a-messaging-extension-for-microsoft-teams"></a>Erstellen einer Messaging Erweiterung für Microsoft Teams
+# <a name="create-a-messaging-extension-using-app-studio"></a>Eine Messaging-Erweiterung mit App Studio erstellen
 
 > [!TIP]
-> Suchen Sie nach einer schnelleren Methode für den Einstieg? Erstellen Sie mithilfe des Microsoft Teams-Toolkits eine [Messaging Erweiterung](../../build-your-first-app/build-messaging-extension.md) .
+> Suchen Sie nach einer schnelleren Möglichkeit für die ersten Schritte? Erstellen Sie mithilfe des Microsoft Teams-Toolkits eine [Messaging Erweiterung](../../build-your-first-app/build-messaging-extension.md) .
 
 Auf einer hohen Ebene müssen Sie die folgenden Schritte ausführen, um eine Messaging Erweiterung zu erstellen.
 
@@ -57,7 +57,7 @@ Sie können Ihr App-Manifest entweder in App Studio oder manuell erstellen.
 
 Sie können die APP Studio-app innerhalb des Microsoft Teams-Clients verwenden, um das App-Manifest zu erstellen.
 
-1. Öffnen Sie App Studio im Teams-Client aus dem **...**-Überlaufmenü auf der linken Navigationsleiste. Wenn es nicht bereits installiert ist, können Sie dies durchsuchen.
+1. Öffnen Sie App Studio im Teams-Client aus dem **...** -Überlaufmenü auf der linken Navigationsleiste. Wenn es nicht bereits installiert ist, können Sie dies durchsuchen.
 2. Klicken Sie auf der Registerkarte **Manifest-Editor** auf **neue APP erstellen** (oder wenn Sie eine Messaging Erweiterung zu einer vorhandenen APP hinzufügen, können Sie Ihr App-Paket importieren)
 3. Fügen Sie Ihre App-Details hinzu (in der [Manifestschemadefinition](~/resources/schema/manifest-schema.md) finden Sie die vollständigen Beschreibungen der einzelnen Felder).
 4. Klicken Sie auf der Registerkarte **Messaging Erweiterungen** auf die Schaltfläche **Setup** .
@@ -129,13 +129,13 @@ Wenn Ihre Benutzer Ihre Messaging-Erweiterung auslösen, müssen Sie die anfäng
 
 Sobald eine Besprechung beginnt, können Teams-Teilnehmer während eines Live-Anrufs direkt mit Ihrer Messaging-Erweiterung interagieren. Berücksichtigen Sie beim Erstellen Ihrer in-Meeting-Messaging-Erweiterung Folgendes:
 
-1. **Location**. Ihre Messaging Erweiterung kann über den Bereich zum Verfassen von Nachrichten, das Befehlsfeld oder @mentioned im Besprechungs Chat aufgerufen werden.
+1. **Location** . Ihre Messaging Erweiterung kann über den Bereich zum Verfassen von Nachrichten, das Befehlsfeld oder @mentioned im Besprechungs Chat aufgerufen werden.
 
-1. **Metadaten**. Wenn Ihre Messaging-Erweiterung aufgerufen wird, kann Sie den Benutzer und den Mandanten aus `userId` und identifizieren `tenantId` . Die `meetingId`kann als Teil des Objekts `channelData` gefunden werden. Ihre APP kann die `userId` und `meetingId`  für die `GetParticipant` API-Anforderung zum Abrufen von Benutzerrollen verwenden.
+1. **Metadaten** . Wenn Ihre Messaging-Erweiterung aufgerufen wird, kann Sie den Benutzer und den Mandanten aus `userId` und identifizieren `tenantId` . Die `meetingId`kann als Teil des Objekts `channelData` gefunden werden. Ihre APP kann die `userId` und `meetingId`  für die `GetParticipant` API-Anforderung zum Abrufen von Benutzerrollen verwenden.
 
-1. **Befehlstyp**. Wenn Ihre Nachrichten Erweiterung [Aktionsbasierte Befehle](../../messaging-extensions/what-are-messaging-extensions.md#action-commands)verwendet, sollte Sie den Registerkarten [für einmaliges Anmelden bei](../../tabs/how-to/authentication/auth-aad-sso.md) der Authentifizierung entsprechen.
+1. **Befehlstyp** . Wenn Ihre Nachrichten Erweiterung [Aktionsbasierte Befehle](../../messaging-extensions/what-are-messaging-extensions.md#action-commands)verwendet, sollte Sie den Registerkarten [für einmaliges Anmelden bei](../../tabs/how-to/authentication/auth-aad-sso.md) der Authentifizierung entsprechen.
 
-1. **Benutzeroberfläche**. Sie sollten die beabsichtigte Endbenutzererfahrung für Messaging Erweiterungen bestimmen, die während eines Besprechungs Chats aufgerufen wurden.
+1. **Benutzeroberfläche** . Ihre Messaging Erweiterung sollte genauso aussehen und sich Verhalten wie außerhalb einer Besprechung.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -143,7 +143,7 @@ Sobald eine Besprechung beginnt, können Teams-Teilnehmer während eines Live-An
 * [Erstellen von Suchbefehlen](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [Entfalten von Links](~/messaging-extensions/how-to/link-unfurling.md)
 
-## <a name="learn-more"></a>Weitere Informationen
+## <a name="learn-more"></a>Mehr erfahren
 
 Testen Sie es in einem Schnellstart:
 
@@ -154,7 +154,7 @@ Testen Sie es in einem Schnellstart:
   * [Messaging-Erweiterung mit Aktions basierten Befehlen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [Messaging-Erweiterung mit suchbasierten Befehlen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
-Erfahren Sie mehr über Konzepte für Messaging Erweiterungen:
+Erfahren Sie mehr über Entwicklungskonzepte für Teams:
 
-* [Grundlegendes zu Teams-App-Funktionen](~/concepts/extensibility-points.md)
+* [Grundlegendes zu Teams-App-Funktionen](../../concepts/capabilities-overview.md)
 * [Was sind Messaging Erweiterungen?](~/messaging-extensions/what-are-messaging-extensions.md)

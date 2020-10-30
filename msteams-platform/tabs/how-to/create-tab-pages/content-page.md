@@ -5,12 +5,12 @@ description: Vorgehensweise Erstellen einer Inhaltsseite
 keywords: Teams-Registerkartengruppe Kanal konfigurierbar statisch
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 91a7d643d3a631610989e31eae14265cd725dbd0
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 62a398c87b681013c89e540d2bdc463c97877307
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818906"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796316"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Erstellen einer Inhaltsseite für die Registerkarte
 
@@ -28,7 +28,7 @@ Das allgemeine Ziel ihrer Registerkarte sollte es sein, den Zugriff auf aussagek
 
 ## <a name="integrate-your-code-with-teams"></a>Integrieren von Code in Microsoft Teams
 
-Damit Ihre Seite in Teams angezeigt wird, müssen Sie das [Microsoft Teams-JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) einschließen und nach dem Laden einer Seite einen Anruf hinzufügen `microsoftTeams.initialize()` . So kommunizieren Ihre Seite und der Microsoft Teams-Client:
+Damit Ihre Seite in Teams angezeigt wird, müssen Sie das [Microsoft Teams-JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latestadd &preserve-view=true) einschließen und nach dem Laden einer Seite einen Anruf hinzufügen `microsoftTeams.initialize()` . So kommunizieren Ihre Seite und der Microsoft Teams-Client:
 
 ```html
 <!DOCTYPE html>
@@ -52,7 +52,7 @@ Damit Ihre Seite in Teams angezeigt wird, müssen Sie das [Microsoft Teams-JavaS
 
 ### <a name="using-the-sdk-to-interact-with-teams"></a>Verwenden des SDK für die Interaktion mit Microsoft Teams
 
-Das Microsoft [Teams-Client-JavaScript-SDK](~/tabs/how-to/using-teams-client-sdk.md) bietet viele zusätzliche Funktionen, die Sie beim Entwickler Ihrer Inhaltsseite möglicherweise nützlich finden.
+Das Microsoft [Teams-Client-JavaScript-SDK](~/tabs/how-to/using-teams-client-sdk.md) bietet viele zusätzliche Funktionen, die Sie beim Entwickeln Ihrer Inhaltsseite nützlich finden können.
 
 ### <a name="deep-links"></a>Deep-Links
 
@@ -75,8 +75,8 @@ Beginnend mit dem [Manifest-Schema v 1.7](../../../resources/schema/manifest-sch
 
 1. Um den Lade Indikator anzuzeigen, fügen Sie `"showLoadingIndicator": true` zu ihrem Manifest hinzu. 
 2. Denken Sie daran, anzurufen `microsoftTeams.initialize();` .
-3. **Optional**. Wenn Sie zum Drucken auf dem Bildschirm und zum verzögerten Laden des restlichen Inhalts Ihrer Anwendung fähig sind, können Sie den Lade Indikator manuell ausblenden, indem Sie `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **Obligatorisch**. Schließlich rufen Sie die Teams darauf hin `microsoftTeams.appInitialization.notifySuccess()` , dass Ihre APP erfolgreich geladen wurde. Teams werden dann den Lade Indikator ausblenden, falls zutreffend. Wenn  `notifySuccess`  nicht innerhalb von 30 Sekunden aufgerufen wird, wird davon ausgegangen, dass Ihre APP abgelaufen ist und ein Fehlerbildschirm mit einer Wiederholungsoption angezeigt wird.
+3. **Optional** . Wenn Sie zum Drucken auf dem Bildschirm und zum verzögerten Laden des restlichen Inhalts Ihrer Anwendung fähig sind, können Sie den Lade Indikator manuell ausblenden, indem Sie `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Obligatorisch** . Schließlich rufen Sie die Teams darauf hin `microsoftTeams.appInitialization.notifySuccess()` , dass Ihre APP erfolgreich geladen wurde. Teams werden dann den Lade Indikator ausblenden, falls zutreffend. Wenn  `notifySuccess`  nicht innerhalb von 30 Sekunden aufgerufen wird, wird davon ausgegangen, dass Ihre APP abgelaufen ist und ein Fehlerbildschirm mit einer Wiederholungsoption angezeigt wird.
 5. Wenn Ihre Anwendung nicht laden kann, können Sie aufrufen `microsoftTeams.appInitialization.notifyFailure(reason);` , um Microsoft Teams mitzuteilen, dass ein Fehler aufgetreten ist. Dem Benutzer wird dann ein Fehlerbildschirm angezeigt:
 
 ```typescript

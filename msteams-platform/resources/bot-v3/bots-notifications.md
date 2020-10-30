@@ -3,12 +3,13 @@ title: Behandeln von bot-Ereignissen
 description: Beschreibt das Behandeln von Ereignissen in Bots für Microsoft Teams
 keywords: Teams-Bots-Ereignisse
 ms.date: 05/20/2019
-ms.openlocfilehash: 06da5e6b0668e86012d87af3184493cdeb70aecd
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+author: laujan
+ms.openlocfilehash: 5ef37a931d421f245cca4fbb984b69217f779785
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801231"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796176"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Behandeln von bot-Ereignissen in Microsoft Teams
 
@@ -154,11 +155,11 @@ Ihr bot erhält ein `conversationUpdate` mit `membersAdded` , wenn ein Benutzer 
   "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
   "from": {
     "id": "29:<USERID>",
-    "aadObjectId": "***"
+    "aadObjectId": "**_"
   },
   "conversation": {
     "conversationType": "personal",
-    "id": "***"
+    "id": "_*_"
   },
   "recipient": {
     "id": "28:<BOT ID>",
@@ -260,11 +261,11 @@ Ihr bot wird benachrichtigt, wenn das Team, in dem es sich befindet, umbenannt w
 
 ## <a name="channel-updates"></a>Kanal Aktualisierungen
 
-Ihr bot wird benachrichtigt, wenn ein Kanal in einem Team erstellt, umbenannt oder gelöscht wurde, in dem er hinzugefügt wurde. Erneut wird das `conversationUpdate` Ereignis empfangen, und eine Teams-spezifische Ereignis-ID wird als Teil des Objekts gesendet `channelData.eventType` , wobei die Kanaldaten `channel.id` die GUID für den Kanal ist und `channel.name` den Kanalnamen selbst enthält.
+Ihr bot wird benachrichtigt, wenn ein Kanal in einem Team erstellt, umbenannt oder gelöscht wurde, in dem er hinzugefügt wurde. Erneut wird das `conversationUpdate` Ereignis empfangen, und eine Teams-spezifische Ereignis-ID wird als Teil des Objekts gesendet `channelData.eventType` , wobei die Kanaldaten  `channel.id` die GUID für den Kanal ist und `channel.name` den Kanalnamen selbst enthält.
 
 Die Kanal Ereignisse lauten wie folgt:
 
-* **channelCreated** &emsp; Ein Benutzer fügt dem Team einen neuen Kanal hinzu.
+_ **channelCreated** &emsp; ein Benutzer fügt dem Team einen neuen Kanal hinzu
 * **channelRenamed** &emsp; Ein Benutzer benennt einen vorhandenen Kanal um
 * **channelDeleted** &emsp; Ein Benutzer entfernt einen Kanal
 
@@ -348,7 +349,7 @@ Die Kanal Ereignisse lauten wie folgt:
 
 ## <a name="reactions"></a>Reaktionen
 
-Das `messageReaction` Ereignis wird gesendet, wenn ein Benutzer seine Reaktion auf eine Nachricht hinzufügt oder entfernt, die ursprünglich von Ihrem bot gesendet wurde. `replyToId`enthält die ID der jeweiligen Nachricht.
+Das `messageReaction` Ereignis wird gesendet, wenn ein Benutzer seine Reaktion auf eine Nachricht hinzufügt oder entfernt, die ursprünglich von Ihrem bot gesendet wurde. `replyToId` enthält die ID der jeweiligen Nachricht.
 
 ### <a name="schema-example-a-user-likes-a-message"></a>Schema Beispiel: ein Benutzer mag eine Nachricht
 

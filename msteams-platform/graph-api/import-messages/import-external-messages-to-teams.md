@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams Importieren von Nachrichten API Graph Microsoft migrate Migration Post
-ms.openlocfilehash: 0f53e27ec849e18be49f233a754658587343f68b
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: 934e00541773140c90c270a616d6bc50aacac6e1
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465908"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796295"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Plattform-Nachrichten von Drittanbietern mithilfe von Microsoft Graph in Teams importieren
 
@@ -50,7 +50,7 @@ Da vorhandene Daten migriert werden, sind die Beibehaltung der ursprünglichen N
 
 > [Erstellen Sie ein neues Team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) mit einem Back-in-Time-Zeitstempel mithilfe der Team Resource  `createdDateTime`  -Eigenschaft. Platzieren Sie das neue Team in `migration mode` , einem besonderen Status, der Benutzer von den meisten Aktivitäten innerhalb des Teams bis zum Abschluss des Migrationsvorgangs verriegelt. Fügen `teamCreationMode` Sie das Instanz-Attribut mit dem `migration` Wert in die Post-Anforderung ein, um das neue Team explizit als für die Migration erstellt zu identifizieren.  
 
-> **Hinweis**: das `createdDateTime` Feld wird nur für Instanzen eines Teams oder Kanals aufgefüllt, die migriert wurden.
+> **Hinweis** : das `createdDateTime` Feld wird nur für Instanzen eines Teams oder Kanals aufgefüllt, die migriert wurden.
 
 <!-- markdownlint-disable MD001 -->
 
@@ -70,7 +70,7 @@ Content-Type: application/json
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
   "displayName": "My Sample Team",
-  "description": "My Sample Team’s Description"
+  "description": "My Sample Team’s Description",
   "createdDateTime": "2020-03-14T11:22:17.043Z"
 }
 ```
@@ -136,8 +136,9 @@ HTTP/1.1 202 Accepted
    "membershipType":null,
    "moderationSettings":null
 }
+```
 
-#### Error message
+#### <a name="error-message"></a>Fehlermeldung
 
 ```http
 400 Bad Request
@@ -148,7 +149,7 @@ HTTP/1.1 202 Accepted
 
 ## <a name="step-three-import-messages"></a>Schritt 3: Importieren von Nachrichten
 
-Nachdem das Team und der Kanal erstellt wurden, können Sie mit dem Senden von Back-in-Time-Nachrichten mit den `createdDateTime`  und- `from`  Tasten im Anforderungstext beginnen. **Hinweis**: Nachrichten, `createdDateTime` die zuvor mit dem Nachrichtenthread importiert wurden `createdDateTime` , werden nicht unterstützt.
+Nachdem das Team und der Kanal erstellt wurden, können Sie mit dem Senden von Back-in-Time-Nachrichten mit den `createdDateTime`  und- `from`  Tasten im Anforderungstext beginnen. **Hinweis** : Nachrichten, `createdDateTime` die zuvor mit dem Nachrichtenthread importiert wurden `createdDateTime` , werden nicht unterstützt.
 
 > [!NOTE]
 > createdDateTime muss für Nachrichten in demselben Thread eindeutig sein.
@@ -224,7 +225,7 @@ HTTP/1.1 200 OK
 
 #### <a name="request-post-a-message-with-inline-image"></a>Anforderung (Senden einer Nachricht mit Inlinebild)
 
-> **Hinweis**: in diesem Szenario gibt es keine speziellen Berechtigungs Bereiche, da die Anforderung Teil von Chat Message ist; Bereiche für Chat Message gelten auch hier.
+> **Hinweis** : in diesem Szenario gibt es keine speziellen Berechtigungs Bereiche, da die Anforderung Teil von Chat Message ist; Bereiche für Chat Message gelten auch hier.
 
 ```http
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
@@ -349,7 +350,7 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* Sie können Nachrichten von Benutzern importieren, die sich nicht in Microsoft Teams befinden. **Hinweis**: Nachrichten, die für Benutzer importiert werden, die nicht im Mandanten vorhanden sind, können während der öffentlichen Vorschau nicht in den Teams-Client-oder Compliance-Portalen durchsucht werden.
+* Sie können Nachrichten von Benutzern importieren, die sich nicht in Microsoft Teams befinden. **Hinweis** : Nachrichten, die für Benutzer importiert werden, die nicht im Mandanten vorhanden sind, können während der öffentlichen Vorschau nicht in den Teams-Client-oder Compliance-Portalen durchsucht werden.
 
 * Nachdem die `completeMigration` Anforderung gestellt wurde, können Sie keine weiteren Nachrichten in das Team importieren.
 

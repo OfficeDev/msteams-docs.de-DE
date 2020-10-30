@@ -1,13 +1,13 @@
 ---
 title: Entwurfsrichtlinien für Registerkarten
 description: Beschreibt die Richtlinien zum Erstellen von Registerkarten für Inhalt und Zusammenarbeit.
-keywords: Teams-Entwurfsrichtlinien Referenz-Framework-Registerkartenkonfiguration
-ms.openlocfilehash: b6394b164c5d57adfa4c796c89339f1586241396
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+keywords: Teams Design Guidelines Reference Framework Registerkartenkonfiguration Kanal Registerkarte statische Registerkarte einfache Registerkarte Designteams Registerkarte
+ms.openlocfilehash: 7636159e26a4000efb1d89dd8e9921a91cb5aa39
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819039"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796211"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Inhalte und Unterhaltungen auf einmal mithilfe von Registerkarten
 
@@ -59,9 +59,9 @@ Es gibt inhärente Navigationsprobleme mit der Hierarchie der tiefen Navigation 
 
 > [!div class="checklist"]
 >
-> * **Öffnet ein Aufgabenmodul wie eine einzelne Arbeitsaufgabe oder Entität**. Dies schließt einen vollständigen Chat aus und ist die beste Option, um den Chat speziell für die Registerkarte und nicht für die unter Entitäten oder Bearbeitungs Erfahrungen zu halten.
->* **Öffnet ein Pseudo Dialogfeld in einem IFRAME**. Wenn Sie mit einem geschirmten Hintergrund verwendet wird, empfiehlt es sich, die hellere Farbe anstelle der Dunkelheit zu verwenden. Die `app-gray-10 at 30%` Transparenz funktioniert gut.
->* **Öffnet eine Browser Seite**.
+> * **Öffnet ein Aufgabenmodul wie eine einzelne Arbeitsaufgabe oder Entität** . Dies schließt einen vollständigen Chat aus und ist die beste Option, um den Chat speziell für die Registerkarte und nicht für die unter Entitäten oder Bearbeitungs Erfahrungen zu halten.
+>* **Öffnet ein Pseudo Dialogfeld in einem IFRAME** . Wenn Sie mit einem geschirmten Hintergrund verwendet wird, empfiehlt es sich, die hellere Farbe anstelle der Dunkelheit zu verwenden. Die `app-gray-10 at 30%` Transparenz funktioniert gut.
+>* **Öffnet eine Browser Seite** .
 
 ### <a name="personality"></a>Persönlichkeit
 
@@ -75,7 +75,7 @@ Ihr Tab-Canvas bietet eine großartige Gelegenheit, Ihre Benutzeroberfläche zu 
 Unter Einbeziehung ihrer eigenen Farben und Layouts Twill auch Hilfe bei der Kommunikation Persönlichkeit.
 
 > [!TIP]
-> Arbeiten Sie mit unserem visuellen Stil, damit Ihr Dienst sich wie ein Teil von Microsoft Teams anfühlt. *Siehe*zum Beispiel Microsoft [Teams-Farben](../../concepts/design/components/color.md)
+> Arbeiten Sie mit unserem visuellen Stil, damit Ihr Dienst sich wie ein Teil von Microsoft Teams anfühlt. *Siehe* zum Beispiel Microsoft [Teams-Farben](../../concepts/design/components/color.md)
 
 ---
 
@@ -136,7 +136,7 @@ Es gibt zwei Benachrichtigungs Modi für Änderungen an Registerkarten Inhalten:
 
 > [!div class="checklist"]
 >
-> * **Verwenden Sie die APP-API, um Benutzer über Änderungen zu informieren**. Diese Meldung wird im Aktivitätsfeed des Benutzers und im Deep-Link zur Registerkarte angezeigt. *Weitere Informationen finden Sie unter*  [Erstellen von Deep Links zu Inhalten und Features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
-> * **Verwenden Sie einen bot**. Diese Methode wird vor allem bevorzugt, wenn der Tab-Thread gezielt ist. Das Ergebnis ist, dass die Thread-Unterhaltung der Registerkarte als kürzlich aktiviert in die Ansicht verschoben wird. Diese Methode ermöglicht auch eine gewisse Raffinesse in der Art und Weise, wie die Benachrichtigung gesendet wird.
+> * **Verwenden Sie die APP-API, um Benutzer über Änderungen zu informieren** . Diese Meldung wird im Aktivitätsfeed des Benutzers und im Deep-Link zur Registerkarte angezeigt. *Weitere Informationen finden Sie unter*  [Erstellen von Deep Links zu Inhalten und Features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
+> * **Verwenden Sie einen bot** . Diese Methode wird vor allem bevorzugt, wenn der Tab-Thread gezielt ist. Das Ergebnis ist, dass die Thread-Unterhaltung der Registerkarte als kürzlich aktiviert in die Ansicht verschoben wird. Diese Methode ermöglicht auch eine gewisse Raffinesse in der Art und Weise, wie die Benachrichtigung gesendet wird.
 
   Durch das Senden einer Nachricht an einen Tab-Thread wird das Bewusstsein der Aktivität für alle Benutzer erhöht, ohne dass alle Personen explizit benachrichtigt werden. Dies ist die Sensibilisierung ohne Rauschen. Darüber hinaus `@mention`  wird bei bestimmten Benutzern die gleiche Benachrichtigung in Ihren Feed eingefügt, indem Sie Sie direkt mit dem Tab-Thread verbindet.

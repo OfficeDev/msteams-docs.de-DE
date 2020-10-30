@@ -2,23 +2,23 @@
 title: Einmaliges Anmelden
 description: Beschreibt einmaliges Anmelden (Single Sign-on, SSO)
 keywords: Teams-Authentifizierung SSO Aad Single Sign-on-API
-ms.openlocfilehash: 503d5ff9779224d922ab0d45c6e2a3b33d7e0de7
-ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
+ms.openlocfilehash: 011be3fe7fe614bd42f0ee6b88289cf97740a4d3
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "46874856"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796379"
 ---
-# <a name="single-sign-on-sso"></a>Einmaliges Anmelden (SSO)
+# <a name="single-sign-on-sso"></a>Einzelne Sign-On (SSO)
 
-Benutzer melden sich über Ihre Arbeits-, Schul-oder Microsoft-Konten (Office 365, Outlook usw.) bei Microsoft Teams an. Sie können dies nutzen, indem Sie einer einmaligen Anmeldung die Autorisierung Ihrer Microsoft Teams-Registerkarte (oder des Aufgabenmoduls) auf Desktop-oder mobilen Clients ermöglichen. Wenn ein Benutzer also einwilligt, die APP zu verwenden, muss er sich nicht erneut auf einem anderen Gerät einverstanden erklären – er wird automatisch angemeldet. Außerdem rufen wir ihr Zugriffstoken ab, um die Leistung und die Ladezeiten zu verbessern.
+Benutzer melden sich über Ihre Arbeits-, Schul-oder Microsoft-Konten (Office 365, Outlook usw.) bei Microsoft Teams an. Sie können dies nutzen, indem Sie einer einmaligen Anmeldung die Autorisierung Ihrer Microsoft Teams-Registerkarte (oder des Aufgabenmoduls) auf Desktop-oder mobilen Clients ermöglichen. Wenn ein Benutzer also zustimmt, die APP zu verwenden, muss er sich nicht erneut auf einem anderen Gerät einverstanden erklären – er wird automatisch angemeldet. Außerdem rufen wir ihr Zugriffstoken ab, um die Leistung und die Ladezeiten zu verbessern.
 
 >[!NOTE]
 > **Mobile Microsoft Teams-Clientversionen, die SSO unterstützen**  
 >
 > ✔ Teams für Android (1416/1.0.0.2020073101 und höher)
 >
-> ✔ Teams für IOS (_Version_: 2.0.18 und höher)  
+> ✔ Teams für IOS ( _Version_ : 2.0.18 und höher)  
 >
 > Um die besten Erfahrungen mit Microsoft Teams zu erhalten, verwenden Sie die neueste Version von IOS und Android.
 
@@ -52,7 +52,7 @@ In diesem Abschnitt werden die Aufgaben im Zusammenhang mit dem Erstellen einer 
 1. Rufen Sie Ihre [Azure AD-Anwendungs-ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)ab.
 2. Geben Sie die Berechtigungen an, die Ihre Anwendung für den Azure AD-Endpunkt und optional für Microsoft Graph benötigt.
 3. [Erteilen von Berechtigungen](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) für Desktop-, Webanwendungen und Mobile Microsoft Teams-Anwendungen
-4. Vorautorisieren von Teams durch Auswählen der Schaltfläche **Bereich hinzufügen** und Eingeben des `access_as_user` **Bereichsnamens**in das geöffnete Fenster.
+4. Vorautorisieren von Teams durch Auswählen der Schaltfläche **Bereich hinzufügen** und Eingeben des `access_as_user` **Bereichsnamens** in das geöffnete Fenster.
 
 > [!NOTE]
 > Es gibt einige wichtige Einschränkungen, die Sie beachten sollten:
@@ -65,34 +65,34 @@ In diesem Abschnitt werden die Aufgaben im Zusammenhang mit dem Erstellen einer 
 #### <a name="registering-your-app-through-the-azure-active-directory-portal-in-depth"></a>Ausführliches Registrieren Ihrer APP über das Azure Active Directory-Portal:
 
 1. Registrieren Sie eine neue Anwendung im Portal [Azure Active Directory – App-Registrierung](https://go.microsoft.com/fwlink/?linkid=2083908) .
-2. Wählen Sie **neue Registrierung** aus, und legen Sie auf der *Seite Anwendung registrieren*folgende Werte fest:
+2. Wählen Sie **neue Registrierung** aus, und legen Sie auf der *Seite Anwendung registrieren* folgende Werte fest:
     * Legen Sie den **Namen** auf Ihren APP-Namen fest.
     * Wählen Sie die **unterstützten Kontotypen** (jeder Kontotyp ist funktionsfähig) ¹
     * Lassen Sie **URI umleiten** leer.
     * Wählen Sie **Registrieren** aus.
-3. Kopieren und speichern Sie auf der Übersichtsseite die **Anwendungs-ID (Client)**. Sie benötigen Sie später beim Aktualisieren des Teams-Anwendungsmanifests.
+3. Kopieren und speichern Sie auf der Übersichtsseite die **Anwendungs-ID (Client)** . Sie benötigen Sie später beim Aktualisieren des Teams-Anwendungsmanifests.
 4. Wählen Sie unter **Verwalten** die Option **Eine API verfügbar machen** aus. 
 5. Wählen Sie den Link **festlegen** aus, um den Anwendungs-ID-URI in Form von zu generieren `api://{AppID}` . Fügen Sie den vollqualifizierten Domänennamen zwischen den doppelten Schrägstrichen und der GUID (mit einem Schrägstrich "/" am Ende hinzugefügt) ein. Die gesamte ID sollte die Form haben: `api://fully-qualified-domain-name.com/{AppID}` ²
     * Ex: `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` .
     
     Der vollqualifizierte Domänenname ist der lesbare Domänenname, von dem Ihre APP bedient wird. Wenn Sie einen Tunnel Dienst wie ngrok verwenden, müssen Sie diesen Wert aktualisieren, sobald sich Ihre ngrok-Unterdomäne ändert. 
-6. Wählen Sie die Schaltfläche**Bereich hinzufügen** aus. Geben Sie im Bereich, der geöffnet wird, `access_as_user` für**Bereichsname** ein.
+6. Wählen Sie die Schaltfläche **Bereich hinzufügen** aus. Geben Sie im Bereich, der geöffnet wird, `access_as_user` für **Bereichsname** ein.
 7. Legen Sie fest **, wer einwilligen kann.**`Admins and users`
 8. Füllen Sie die Felder für die Konfiguration der Administrator-und Benutzer Zustimmungs Ansagen mit Werten aus, die für den Bereich geeignet sind `access_as_user` :
     * **Titel der Administrator Zustimmung:** Teams können auf das Profil des Benutzers zugreifen.
-    * **Administrator-Zustimmungs Beschreibung**: ermöglicht Teams das Aufrufen der webapin der App als aktueller Benutzer.
-    * **Benutzer Zustimmungs Titel**: Teams können auf das Benutzerprofil zugreifen und Anforderungen im Namen des Benutzers stellen.
+    * **Administrator-Zustimmungs Beschreibung** : ermöglicht Teams das Aufrufen der webapin der App als aktueller Benutzer.
+    * **Benutzer Zustimmungs Titel** : Teams können auf das Benutzerprofil zugreifen und Anforderungen im Namen des Benutzers stellen.
     * **Beschreibung der Benutzer Zustimmung:** Aktivieren Sie Teams, um APIs dieser APP mit denselben Rechten wie der Benutzer aufzurufen.
 9. Sicherstellen, dass der **Status** auf " **aktiviert** " festgelegt ist
 10. Wählen Sie die Schaltfläche **Bereich hinzufügen** aus, um zu speichern 
     * Der Domänenteil des **Bereichsnamens** , der direkt unterhalb des Textfelds angezeigt wird, sollte automatisch mit dem im vorherigen Schritt festgelegten **Anwendungs-ID** -URI übereinstimmen, wobei der Wert am `/access_as_user` Ende angefügt ist:
         * `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`
-11. Identifizieren Sie im Abschnitt **autorisierte Clientanwendungen** die Anwendungen, die Sie für die Webanwendung Ihrer APP autorisieren möchten. Wählen Sie *Clientanwendung hinzufügen*aus. Geben Sie die folgenden Client-IDs ein, und wählen Sie den autorisierten Bereich aus, den Sie im vorherigen Schritt erstellt haben:
+11. Identifizieren Sie im Abschnitt **autorisierte Clientanwendungen** die Anwendungen, die Sie für die Webanwendung Ihrer APP autorisieren möchten. Wählen Sie *Clientanwendung hinzufügen* aus. Geben Sie die folgenden Client-IDs ein, und wählen Sie den autorisierten Bereich aus, den Sie im vorherigen Schritt erstellt haben:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Mobile Teams/Desktopanwendung)
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Microsoft Teams-Webanwendung)
-12. Navigieren Sie zu **API-Berechtigungen**. Wählen Sie *Add a permission*  >  *Microsoft Graph*  >  *Delegierte Berechtigungen*aus, und fügen Sie dann die folgenden Berechtigungen hinzu:
+12. Navigieren Sie zu **API-Berechtigungen** . Wählen Sie *Add a permission*  >  *Microsoft Graph*  >  *Delegierte Berechtigungen* aus, und fügen Sie dann die folgenden Berechtigungen hinzu:
     * User. Read (standardmäßig aktiviert)
-    * E-Mail
+    * email
     * offline_access
     * OpenID
     * Profil
@@ -102,15 +102,15 @@ In diesem Abschnitt werden die Aufgaben im Zusammenhang mit dem Erstellen einer 
     Wenn der IT-Administrator keine Zustimmung für eine APP erteilt wurde, müssen die Benutzer die Zustimmung erteilen, wenn Sie die APP zum ersten Mal verwenden.
 
     Festlegen eines Umleitungs-URI:
-    * Wählen Sie **Plattform hinzufügen**aus.
-    * Wählen Sie **Internet**aus.
+    * Wählen Sie **Plattform hinzufügen** aus.
+    * Wählen Sie **Internet** aus.
     * Geben Sie den **Umleitungs-URI** für Ihre APP ein. Dies ist die Seite, auf der der Benutzer durch einen erfolgreichen impliziten Grant-Fluss umgeleitet wird. Dabei handelt es sich um denselben vollqualifizierten Domänennamen, den Sie in Schritt 5 eingegeben haben, gefolgt von der API-Route, auf der eine Authentifizierungsantwort gesendet werden soll. Wenn Sie eines der Microsoft Teams-Beispiele befolgen, wird Folgendes verwendet: `https://subdomain.example.com/auth-end`
 
     Aktivieren Sie als nächstes implizite Gewährung, indem Sie die folgenden Felder überprüfen:  
     ✔-ID-Token  
     ✔ Zugriffs Token  
     
-Herzlichen Glückwunsch! Sie haben die APP-Registrierungs prerequsities abgeschlossen, um mit ihrer Tab-SSO-App fortzufahren.     
+Herzlichen Glückwunsch! Sie haben die Voraussetzungen für die APP-Registrierung abgeschlossen, um mit ihrer Tab-SSO-App fortzufahren.     
 
 > [!NOTE]
 >

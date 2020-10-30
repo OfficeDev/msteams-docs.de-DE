@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: Teams-apps-Validierung am häufigsten fehlgeschlagene Testfälle schnellgenehmigung appsource veröffentlichen
-ms.openlocfilehash: 97130f7b943fb95b76356aa853e2fddd55d69a83
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: a838d34cabd99ee5d892517c13efc4b91dbd059d
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465936"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796337"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Tipps für eine erfolgreiche App-Übermittlung
 
@@ -60,9 +60,9 @@ Weitere Informationen zur Authentifizierung finden Sie unter:
 
 ### <a name="9989-response-times-must-be-reasonable"></a>&#9989; Antwortzeiten müssen angemessen sein
 
-* **Registerkarten**. Wenn eine Antwort auf eine Aktion mehr als drei Sekunden dauert, müssen Sie eine Lade Nachricht oder eine Warnung angeben.
-* **Bots**. Eine Antwort auf einen Benutzer Befehl muss innerhalb von zwei Sekunden auftreten. Wenn eine längere Verarbeitung erforderlich ist, muss Ihre APP einen Eingabe Indikator anzeigen.
-* **Verfassen von Erweiterungen**. Eine Antwort auf einen Benutzer Befehl muss innerhalb von fünf Sekunden auftreten.
+* **Registerkarten** . Wenn eine Antwort auf eine Aktion mehr als drei Sekunden dauert, müssen Sie eine Lade Nachricht oder eine Warnung angeben.
+* **Bots** . Eine Antwort auf einen Benutzer Befehl muss innerhalb von zwei Sekunden auftreten. Wenn eine längere Verarbeitung erforderlich ist, muss Ihre APP einen Eingabe Indikator anzeigen.
+* **Verfassen von Erweiterungen** . Eine Antwort auf einen Benutzer Befehl muss innerhalb von fünf Sekunden auftreten.
 
 > [!TIP]
 > Stellen Sie sicher, dass Ihre APP einen Lade Indikator oder eine Form von Warnung anzeigt, wenn Ihre APP länger als erwartet reagiert.
@@ -75,6 +75,8 @@ Weitere Informationen zur Authentifizierung finden Sie unter:
 ![SharePoint-Registerkartenansicht](~/assets/images/faq/tab-sp.png)
 
 * Registerkarten sollten leicht in der Natur sein und keine komplexe Navigation umfassen.
+* Registerkarten dürfen keine app-Leiste mit Symbolen in der linken Schiene darstellen, die mit der Navigation der Haupt Teams in Konflikt stehen.
+* Registerkarten mit komplexen Bearbeitungsfunktionen innerhalb der APP sollten die Editoransicht in mehreren Fenstern anstatt auf der Registerkarte öffnen.
 * Wenn mehrere Ansichtsoptionen vorhanden sind, sollten Sie ein Tab-Konfigurationsmenü für den Benutzer auswählen. Anstatt beispielsweise ein Menü in die Registerkarte einzubetten, legen Sie das Menü auf der Konfigurationsseite so fest, dass die tatsächliche Registerkartenansicht sauber und fokussiert ist.
 
 ![Seite "Wide idea-Konfiguration"](~/assets/images/faq/wideidea.png)
@@ -100,20 +102,20 @@ Weitere Informationen zur Authentifizierung finden Sie unter:
 
 Ihr bot sollte auf alle Befehle reagieren und nicht auf den Endbenutzer. Hier sind einige Tipps, die Ihrem bot helfen, intelligent auf Benutzer zu reagieren:
 
-* **Verwenden Sie Befehlslisten**. Das Analysieren von Benutzereingaben oder das Vorhersagen der Benutzerabsicht ist schwierig. Anstatt Benutzer erraten zu lassen, was Ihr bot tun kann, geben Sie eine Liste von Befehlen an, die ihr bot versteht.
+* **Verwenden Sie Befehlslisten** . Das Analysieren von Benutzereingaben oder das Vorhersagen der Benutzerabsicht ist schwierig. Anstatt Benutzer erraten zu lassen, was Ihr bot tun kann, geben Sie eine Liste von Befehlen an, die ihr bot versteht.
 
 ![Fluss Befehlsliste](~/assets/images/faq/flow-bot.png)
 
-* **Einschließen eines Hilfebefehls**. Benutzer werden wahrscheinlich "Hilfe" eingeben, wenn Sie verloren gehen oder wenn Ihr bot nicht wie erwartet reagiert. Fügen Sie einen Hilfebefehl ein, der beschreibt, wie der Wert Ihrer APP zusammen mit allen gültigen Befehlen erfahren wird.
+* **Einschließen eines Hilfebefehls** . Benutzer werden wahrscheinlich "Hilfe" eingeben, wenn Sie verloren gehen oder wenn Ihr bot nicht wie erwartet reagiert. Fügen Sie einen Hilfebefehl ein, der beschreibt, wie der Wert Ihrer APP zusammen mit allen gültigen Befehlen erfahren wird.
 
 ![Befehl "Flow Help"](~/assets/images/faq/flow-help.png)
 
-* **Fügen Sie Hilfeinhalte oder Anleitungen hinzu, wenn Ihr bot verloren geht**. Wenn Ihr bot die Benutzereingabe nicht verstehen kann, sollte er eine alternative Aktion vorschlagen. Zum Beispiel: "es tut mir *leid, ich verstehe nicht. Geben Sie "Hilfe" ein, um weitere Informationen zu erhalten. "* Reagieren Sie nicht mit einer Fehlermeldung oder einfach: *"Ich verstehe nicht"*. Nutzen Sie diese Möglichkeit, um Ihre Benutzer zu unterrichten.
+* **Fügen Sie Hilfeinhalte oder Anleitungen hinzu, wenn Ihr bot verloren geht** . Wenn Ihr bot die Benutzereingabe nicht verstehen kann, sollte er eine alternative Aktion vorschlagen. Zum Beispiel: "es tut mir *leid, ich verstehe nicht. Geben Sie "Hilfe" ein, um weitere Informationen zu erhalten. "* Reagieren Sie nicht mit einer Fehlermeldung oder einfach: *"Ich verstehe nicht"* . Nutzen Sie diese Möglichkeit, um Ihre Benutzer zu unterrichten.
 
 * **Verwenden Sie Adaptive Karten und Aufgaben Module, um Ihre bot-Antwort übersichtlicher und Umsetz** 
  barer zu machen. [Adaptive Karten mit Schaltflächen, die Aufgaben Module aufrufen](/task-modules-and-cards/task-modules/task-modules-bots) , verbessern die bot-Benutzeroberfläche. Diese Karten und Schaltflächen sind auf einem mobilen Gerät einfacher zu verwenden, im Gegensatz zu Ihrem Benutzer, der die Befehle tippt.
 
-* **Überdenken Sie alle Bereiche**. Stellen Sie sicher, dass Ihr bot geeignete Antworten bereitstellt, wenn Sie `@*botname*` in einem Kanal und in persönlichen Unterhaltungen erwähnt werden. Wenn Ihr bot keinen sinnvollen Kontext innerhalb des Bereichs Personal oder Teams bereitstellt, deaktivieren Sie diesen Bereich über das Manifest. (Weitere Informationen finden Sie unter `bots` Block in der [Microsoft Teams Manifest-Schemareferenz](~/resources/schema/manifest-schema.md#bots).)
+* **Überdenken Sie alle Bereiche** . Stellen Sie sicher, dass Ihr bot geeignete Antworten bereitstellt, wenn Sie `@*botname*` in einem Kanal und in persönlichen Unterhaltungen erwähnt werden. Wenn Ihr bot keinen sinnvollen Kontext innerhalb des Bereichs Personal oder Teams bereitstellt, deaktivieren Sie diesen Bereich über das Manifest. (Weitere Informationen finden Sie unter `bots` Block in der [Microsoft Teams Manifest-Schemareferenz](~/resources/schema/manifest-schema.md#bots).)
 
 ### <a name="9989-personal-bots-must-send-a-welcome-message-on-first-launch"></a>&#9989; persönliche Bots müssen beim ersten Start eine Willkommensnachricht senden
 
@@ -136,19 +138,19 @@ Eine Willkommensnachricht ist die beste Möglichkeit, um den Ton für Ihren pers
 
 #### <a name="avoid-welcome-message-spamming"></a>Vermeiden von Begrüßungsnachrichten-Spam
 
-* **Kanal Nachricht von bot**. Keine Spam-Benutzer durch Erstellen separater neuer Chat Beiträge. Erstellen Sie einen einzelnen Thread Beitrag mit Antworten im gleichen Thread.
-* **Persönlicher Chat von bot**. Senden Sie keine mehrere Nachrichten. Senden Sie eine Nachricht mit vollständigen Informationen.
+* **Kanal Nachricht von bot** . Keine Spam-Benutzer durch Erstellen separater neuer Chat Beiträge. Erstellen Sie einen einzelnen Thread Beitrag mit Antworten im gleichen Thread.
+* **Persönlicher Chat von bot** . Senden Sie keine mehrere Nachrichten. Senden Sie eine Nachricht mit vollständigen Informationen.
 
 #### <a name="notification-only-bot-welcome-messages"></a>Willkommens Meldungen nur für Benachrichtigungen
 
-Nur Benachrichtigungs Bots müssen eine Willkommensnachricht senden, die eine Nachricht mit dem Hinweis *"Ich bin ein nur-Benachrichtigungs-bot" ist und nicht auf Ihre Chats Antworten*kann.
+Nur Benachrichtigungs Bots müssen eine Willkommensnachricht senden, die eine Nachricht mit dem Hinweis *"Ich bin ein nur-Benachrichtigungs-bot" ist und nicht auf Ihre Chats Antworten* kann.
 
 #### <a name="welcome-messages-in-the-personal-scope"></a>Begrüßungsnachrichten im persönlichen Bereich
 
-* **Machen Sie Ihre Nachricht prägnant und informativ**.  Höchstwahrscheinlich sind die Benutzerfreundlichkeit und das Wissen über Ihre APP unterschiedlich. Ein Benutzer hat Ihre APP möglicherweise auf einer anderen Plattform verwendet oder hat nichts über Ihre App erfahren. Sie möchten Ihre Nachricht an alle Zielgruppen anpassen und in einigen Sätzen erklären, was Ihr bot tut und wie er mit ihm interagieren kann. Sie sollten auch den Wert der APP erläutern und erfahren, wie die Benutzer davon profitieren.
+* **Machen Sie Ihre Nachricht prägnant und informativ** .  Höchstwahrscheinlich sind die Benutzerfreundlichkeit und das Wissen über Ihre APP unterschiedlich. Ein Benutzer hat Ihre APP möglicherweise auf einer anderen Plattform verwendet oder hat nichts über Ihre App erfahren. Sie möchten Ihre Nachricht an alle Zielgruppen anpassen und in einigen Sätzen erklären, was Ihr bot tut und wie er mit ihm interagieren kann. Sie sollten auch den Wert der APP erläutern und erfahren, wie die Benutzer davon profitieren.
 ![Cafe und ESS-bot](~/assets/images/faq/cafe-bot.png)
 
-* **Machen Sie Ihre Nachricht Handlungs**bereit. Denken Sie an das erste, was Benutzer nach der Installation Ihrer APP tun sollen. Gibt es einen coolen Befehl, den Sie ausprobieren sollten? Gibt es eine weitere Onboarding-Erfahrung, die Sie kennen sollten? Müssen die Benutzer sich anmelden? Sie können Aktionen auf einer adaptiven Karte hinzufügen oder bestimmte Beispiele wie *"versuchen Sie Fragen...."*, *"Dies ist, was ich tun kann..."* bereitstellen.
+* **Machen Sie Ihre Nachricht Handlungs** bereit. Denken Sie an das erste, was Benutzer nach der Installation Ihrer APP tun sollen. Gibt es einen coolen Befehl, den Sie ausprobieren sollten? Gibt es eine weitere Onboarding-Erfahrung, die Sie kennen sollten? Müssen die Benutzer sich anmelden? Sie können Aktionen auf einer adaptiven Karte hinzufügen oder bestimmte Beispiele wie *"versuchen Sie Fragen...."* , *"Dies ist, was ich tun kann..."* bereitstellen.
 
 #### <a name="welcome-messages-in-the-teamchannel--scope"></a>Begrüßungsnachrichten im Team/Kanal-Bereich
 

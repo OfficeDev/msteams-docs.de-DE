@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams-Autorisierung OAuth SSO Aad RSC Graph
-ms.openlocfilehash: 7e3fc3faa111f4ba982c1c79e6b5b873b8773aef
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.openlocfilehash: e7a59497b77b303b6ef06582828f7c5cb36dbb58
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819182"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796193"
 ---
 # <a name="resource-specific-consent-rsc"></a>Ressourcenspezifische Zustimmung (RSC)
 
@@ -25,19 +25,18 @@ Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams-und Graph-AP
 |Anwendungsberechtigung| Aktion |
 | ----- | ----- |
 |TeamSettings.Read.Group | Rufen Sie die Einstellungen für dieses Team ab.|
-|TeamSettings. Edit. Group|Aktualisieren Sie die Einstellungen für dieses Team.|
+|TeamSettings. ReadWrite. Group|Aktualisieren Sie die Einstellungen für dieses Team.|
 |ChannelSettings.Read.Group|Rufen Sie die Kanalnamen, Kanal Beschreibungen und Kanaleinstellungen für dieses Team ab.|
 |ChannelSettings. ReadWrite. Group|Aktualisieren Sie die Kanalnamen, Kanal Beschreibungen und Kanaleinstellungen für dieses Team.|
 |Channel.Create.Group|Erstellen von Kanälen in diesem Team.|
 |Channel.Delete.Group|Löschen Sie Kanäle in diesem Team.|
 |ChannelMessage.Read.Group |Rufen Sie die Kanal Nachrichten dieses Teams ab.|
-|TeamsApp.Read.Group|Rufen Sie eine Liste der installierten apps dieses Teams ab.|
+|TeamsAppInstallation. Read. Group|Rufen Sie eine Liste der installierten apps dieses Teams ab.|
 |TeamsTab.Read.Group|Rufen Sie eine Liste der Registerkarten dieses Teams ab.|
 |TeamsTab.Create.Group|Erstellen von Registerkarten in diesem Team.|
 |TeamsTab. ReadWrite. Group|Aktualisieren Sie die Registerkarten dieses Teams.|
 |TeamsTab.Delete.Group|Löschen der Registerkarten dieses Teams.|
-|Member.Read.Group|Die Mitglieder dieses Teams abrufen.|
-|Owner.Read.Group|Die Besitzer dieses Teams abrufen.|
+|TeamMember. Read. Group|Die Mitglieder dieses Teams abrufen.|
 
 >[!NOTE]
 >Ressourcenspezifische Berechtigungen stehen nur für Teams-Apps zur Verfügung, die auf dem Microsoft Teams-Client installiert sind und derzeit nicht Teil des Azure Active Directory-Portals sind.
@@ -56,21 +55,15 @@ Die Schritte zum Aktivieren von RSC in Ihrer Anwendung lauten wie folgt:
 
 ## <a name="configure-group-owner-consent-settings-in-the-azure-ad-portal"></a>Konfigurieren von Zustimmungs Einstellungen für Gruppenbesitzer im Azure AD Portal
 
-Sie können die Zustimmung des  [Gruppen Besitzers](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) direkt im Azure-Portal aktivieren oder deaktivieren:
+Sie können die Zustimmung des [Gruppen Besitzers](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) direkt im Azure-Portal aktivieren oder deaktivieren:
 
 > [!div class="checklist"]
 >
 >- Melden Sie sich beim [Azure-Portal](https://portal.azure.com) als [globaler Administrator/Unternehmensadministrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator)an.  
- > - Wählen Sie **Azure Active Directory**  => Benutzereinstellungen für**Enterprise**  => **User settings**-Anwendungen aus.
-> - Aktivieren, deaktivieren oder begrenzen der Benutzer Zustimmung mit dem Steuerelement mit der Bezeichnung **Benutzer können apps, die auf Unternehmensdaten zugreifen, für die Gruppen, die Sie besitzen, einwilligen** (diese Funktion ist standardmäßig aktiviert).
+ > - [Wählen Sie](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) **Azure Active Directory**  =>  **Enterprise Applications**  =>  **Einwilligung and Permissions**  =>  **Benutzer Zustimmungs Einstellungen** aus.
+> - Aktivieren, deaktivieren oder begrenzen Sie die Zustimmung des Benutzers mit dem Steuerelement mit der Bezeichnung **Gruppenbesitzer Zustimmung für apps, die auf Daten zugreifen** (Standardmäßig ist die **Zustimmung des Gruppen Besitzers für alle Gruppenbesitzer zulässig** ). Damit ein Teambesitzer eine App mithilfe von RSC installieren kann, muss die Zustimmung des Gruppen Besitzers für diesen Benutzer aktiviert sein.
 
-![Azure RSC-Konfiguration](../../assets/images/azure-rsc-configuration.svg)
-
-| Wert | Beschreibung|
-|--- | --- |
-|Ja | Aktivieren Sie die gruppenspezifische Zustimmung für alle Gruppenbesitzer.|
-|Nein |Deaktivieren Sie die gruppenspezifische Zustimmung für alle Benutzer.| 
-|Beschränkt | Aktivieren Sie die gruppenspezifische Zustimmung für Mitglieder einer ausgewählten Gruppe.|
+![Azure RSC-Konfiguration](../../assets/images/azure-rsc-configuration.png)
 
 Um die Zustimmung des Gruppen Besitzers innerhalb des Azure-Portals mithilfe von PowerShell zu aktivieren oder zu deaktivieren, führen Sie die unter [configure Group Owner Einwilligung using PowerShell](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-using-powershell)beschriebenen Schritte aus.
 
@@ -95,7 +88,7 @@ Um Graph-API-Aufrufe zu erstellen, müssen Sie ein Zugriffstoken für Ihre APP �
 Sie benötigen die folgenden Werte aus dem Azure AD Registrierungsprozess, um ein Zugriffstoken von der Identitäts Plattform abzurufen:
 
 - Die **Anwendungs-ID** , die vom APP-Registrierungs Portal zugewiesen wird. Wenn Ihre APP einmaliges Anmelden (Single Sign-on, SSO) unterstützt, sollten Sie die gleiche Anwendungs-ID für Ihre APP und SSO verwenden.
-- Der  **geheime Client Schlüssel/das Kennwort** oder ein öffentliches/privates Schlüsselpaar (**Certificate**). Dies ist für systemeigene Apps nicht erforderlich.
+- Der  **geheime Client Schlüssel/das Kennwort** oder ein öffentliches/privates Schlüsselpaar ( **Certificate** ). Dies ist für systemeigene Apps nicht erforderlich.
 - Eine **Umleitungs-URI** (oder Antwort-URL) für Ihre APP, um Antworten von Azure AD zu erhalten.
 
  *Siehe* [Abrufen des Zugriffs im Namen eines Benutzers](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token) und [Abrufen des Zugriffs ohne Benutzer](/graph/auth-v2-service)
@@ -154,9 +147,9 @@ Nachdem die app in einem Team installiert wurde, können Sie den [Graph-Explorer
 > - Wählen Sie im Microsoft Teams-Client die Option **Teams** von der ganz linken Navigationsleiste aus.
 > - Wählen Sie im Dropdownmenü das Team aus, in dem die APP installiert ist.
 > - Klicken Sie auf das Symbol **Weitere Optionen** (&#8943;).
-> - Wählen Sie **Get Link to Team**aus.
+> - Wählen Sie **Get Link to Team** aus.
 > - Kopieren Sie den Wert der **Gruppe** , und speichern Sie ihn aus der Zeichenfolge.
-> - Melden Sie sich beim **Graph-Explorer**an.
+> - Melden Sie sich beim **Graph-Explorer** an.
 > - Einen **Get** -Aufruf an den folgenden Endpunkt ausführen: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` . Das clientAppId-Feld in der Antwort wird der im Microsoft Teams-App-Manifest angegebenen Anwendungs-ID zugeordnet.
   ![Graph-Explorer-Antwort zum Abrufen eines Anrufs.](../../assets/images/graph-permissions.png)
  

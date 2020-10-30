@@ -5,12 +5,12 @@ description: Übersicht über apps in Microsoft Teams-Besprechungen basierend au
 ms.topic: overview
 ms.author: lajanuar
 keywords: Teams-apps-Besprechungen Benutzer Teilnehmer-Rollen-API
-ms.openlocfilehash: dbf12523d609d47193fb3c07bde2acd184292f64
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 13fc44e9831cf58f0ab847eab06cc5b99ed8cc70
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452638"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796225"
 ---
 # <a name="apps-in-teams-meetings-developer-preview"></a>Apps in Teams-Besprechungen (Entwicklervorschau)
 
@@ -32,6 +32,9 @@ Die Erweiterungs Center für die Besprechungs-App für Teams werden auf drei Kon
 
 > [!IMPORTANT]
 > Wie bei allen Registerkarten Anwendungen muss Ihre APP dem [SSO-Authentifizierungs Fluss](../tabs/how-to/authentication/auth-aad-sso.md) für Teams für Registerkarten entsprechen.
+
+> [!NOTE]
+> Mobile Clients unterstützen Registerkarten nur in Pre-und Post-Besprechungs Oberflächen. Die in-Meeting-Erlebnisse (in-Meeting-Dialog und-Panel) auf mobilen Geräten werden in Kürze verfügbar sein.
 
 ### <a name="pre-meeting-app-experience"></a>App-Erfahrung vor der Besprechung
 
@@ -61,12 +64,12 @@ Auf ✔ Registerkarten-Apps können in Besprechungs **Details** und **Chats** -S
 
 ✔ Für eine APP können in einer Teams-Besprechung in zwei Bereichen angezeigt werden:
 
-&emsp;&emsp;&#9679; **Seitenbereich**. </br>
+&emsp;&emsp;&#9679; **Seitenbereich** . </br>
 
 > [!NOTE]
 > Wenn Ihr _App-Manifest_ angibt, dass Ihre Registerkarte [für den Seitenbereich optimiert](create-apps-for-teams-meetings.md#in-meeting)ist, wird Sie angezeigt. Es kann auch Teil einer Erfahrung mit Freigabe Schacht sein, die bestimmten Entwurfsrichtlinien unterliegt.
 
-&emsp;&emsp;&#9679; **in-Meeting-Dialog**. Verwenden Sie das in-Meeting-Dialogfeld, um Aktions Inhalte für Besprechungsteilnehmer zu präsentieren. *Siehe* [Erstellen von Apps für Microsoft Teams-Besprechungen](create-apps-for-teams-meetings.md).
+&emsp;&emsp;&#9679; **in-Meeting-Dialog** . Verwenden Sie das in-Meeting-Dialogfeld, um Aktions Inhalte für Besprechungsteilnehmer zu präsentieren. *Siehe* [Erstellen von Apps für Microsoft Teams-Besprechungen](create-apps-for-teams-meetings.md).
 
 **Besprechungs Erfahrung:**
 
@@ -102,29 +105,29 @@ Informationen zur Implementierung von Messaging Erweiterungen finden Sie in der 
 
 Sie können Ihre APP mit Teilnehmer spezifischer Autorisierung entwerfen. Beispielsweise kann nur ein Organisator und/oder Referent eine Umfrage in Besprechungen erstellen. Obwohl die Standardteilnehmer Einstellungen vom IT-Administrator einer Organisation festgelegt werden, kann es sein, dass ein Besprechungsorganisator die Einstellungen für eine bestimmte Besprechung ändern möchte. Organisatoren können diese Änderungen auf der Webseite mit den Besprechungsoptionen vornehmen.
 
-1. **Organisator**. Der Organisator plant eine Besprechung, legt die Besprechungsoptionen fest, ordnet besprechungsrollen zu und startet die Besprechung. Nur Benutzer mit einem M365-Konto (besitzen eine Microsoft Teams-Lizenz) können Organisatoren sein und Berechtigungen für Teilnehmer steuern.
-1. **Referent**. Referenten haben fast die gleichen Funktionen wie Organisatoren; ein Referent kann einen Organisator jedoch nicht aus der Sitzung entfernen oder Besprechungsoptionen für die Sitzung ändern. Standardmäßig haben Teilnehmer, die einer Besprechung beitreten, die Referenten Rolle.
-1. **Teilnehmer**. Ein Teilnehmer ist ein Benutzer, der zur Teilnahme an einer Besprechung eingeladen wurde, aber nicht berechtigt ist, als Referent zu fungieren. Teilnehmer können mit anderen Besprechungs Mitgliedern interagieren, jedoch keine Besprechungseinstellungen verwalten oder Inhalte freigeben.
+1. **Organisator** . Der Organisator plant eine Besprechung, legt die Besprechungsoptionen fest, ordnet besprechungsrollen zu und startet die Besprechung. Nur Benutzer mit einem M365-Konto (besitzen eine Microsoft Teams-Lizenz) können Organisatoren sein und Berechtigungen für Teilnehmer steuern.
+1. **Referent** . Referenten haben fast die gleichen Funktionen wie Organisatoren; ein Referent kann einen Organisator jedoch nicht aus der Sitzung entfernen oder Besprechungsoptionen für die Sitzung ändern. Standardmäßig haben Teilnehmer, die einer Besprechung beitreten, die Referenten Rolle.
+1. **Teilnehmer** . Ein Teilnehmer ist ein Benutzer, der zur Teilnahme an einer Besprechung eingeladen wurde, aber nicht berechtigt ist, als Referent zu fungieren. Teilnehmer können mit anderen Besprechungs Mitgliedern interagieren, jedoch keine Besprechungseinstellungen verwalten oder Inhalte freigeben.
 
 _Anzeigen_ [ **von Rollen in einer Microsoft Teams-Besprechung**](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
 
 Sie können wie folgt auf die Seite  **Besprechungsoptionen** zugreifen:
 
-Wechseln Sie &#11200; in Microsoft Teams zu **Kalender** ![ Kalender Logo ](../assets/images/apps-in-meetings/calendar-logo.png) , wählen Sie eine Besprechung und dann **Besprechungsoptionen**aus.
+Wechseln Sie &#11200; in Microsoft Teams zu **Kalender** ![ Kalender Logo ](../assets/images/apps-in-meetings/calendar-logo.png) , wählen Sie eine Besprechung und dann **Besprechungsoptionen** aus.
 
-Wählen Sie &#11200; in einer Besprechungseinladung die Option **Besprechungsoptionen**aus.
+Wählen Sie &#11200; in einer Besprechungseinladung die Option **Besprechungsoptionen** aus.
 
-&#11200; wählen Sie während einer Besprechung **Show participants** ![ ](../assets/images/apps-in-meetings/show-participants.png) in den Besprechungs Steuerelementen das Symbol Teilnehmer anzeigen aus. Wählen Sie dann oberhalb der Teilnehmerliste die Option **Berechtigungen verwalten**aus.
+&#11200; wählen Sie während einer Besprechung **Show participants** ![ ](../assets/images/apps-in-meetings/show-participants.png) in den Besprechungs Steuerelementen das Symbol Teilnehmer anzeigen aus. Wählen Sie dann oberhalb der Teilnehmerliste die Option **Berechtigungen verwalten** aus.
 
 ### <a name="user-types"></a>Benutzertypen
 
 > [!NOTE]
 > Benutzertypen können an Besprechungen teilnehmen und eine der oben beschriebenen Teilnehmerrollen annehmen. Der Benutzertyp wird nicht als Teil der **getParticipantRole** -API verfügbar gemacht.
 
-1. **Im Mandanten**. Diese Benutzer gehören zur Organisation und verfügen über Anmeldeinformationen in Azure Active Directory für den Mandanten. Dabei handelt es sich normalerweise um Vollzeitmitarbeiter, vor-Ort-oder Remotemitarbeiter.
-1. **Gast**. Ein Gast ist ein Teilnehmer einer anderen Organisation, der eingeladen wurde, auf Teams oder andere Ressourcen im Mandanten Ihrer Organisation zuzugreifen. Gäste werden dem Active Directory Ihrer Organisation hinzugefügt und können nahezu alle Teams-Funktionen wie ein systemeigenes Teammitglied mit Vollzugriff auf Team Chats, Besprechungen und Dateien erhalten. _Siehe_ [Gastzugriff in Microsoft Teams](/microsoftteams/guest-access)
-1. **Verbund/extern**. Ein Verbundbenutzer ist ein externer Teams-Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Da diese Benutzer gültige Anmeldeinformationen für Verbundpartner haben, werden Sie von Microsoft Teams authentifiziert, haben aber keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen von Ihrer Organisation. Wenn Sie möchten, dass externe Benutzer Zugriff auf Teams und Kanäle haben, ist der Gastzugriff möglicherweise eine bessere Option. _Siehe_ [Verwalten von externem Zugriff in Microsoft Teams](/microsoftteams/manage-external-access)
-1. **Anonym**. Anonyme Benutzer verfügen nicht über eine Active Directory Identität und sind nicht Verbund mit einem Mandanten. Der anonyme Teilnehmer ist wie ein externer Benutzer, aber seine Identität wird nicht in die Besprechung projiziert. Anonyme Benutzer können nicht auf apps in einem Besprechungsfenster zugreifen.
+1. **Im Mandanten** . Diese Benutzer gehören zur Organisation und verfügen über Anmeldeinformationen in Azure Active Directory für den Mandanten. Dabei handelt es sich normalerweise um Vollzeitmitarbeiter, vor-Ort-oder Remotemitarbeiter.
+1. **Gast** . Ein Gast ist ein Teilnehmer einer anderen Organisation, der eingeladen wurde, auf Teams oder andere Ressourcen im Mandanten Ihrer Organisation zuzugreifen. Gäste werden dem Active Directory Ihrer Organisation hinzugefügt und können nahezu alle Teams-Funktionen wie ein systemeigenes Teammitglied mit Vollzugriff auf Team Chats, Besprechungen und Dateien erhalten. _Siehe_ [Gastzugriff in Microsoft Teams](/microsoftteams/guest-access)
+1. **Verbund/extern** . Ein Verbundbenutzer ist ein externer Teams-Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Da diese Benutzer gültige Anmeldeinformationen für Verbundpartner haben, werden Sie von Microsoft Teams authentifiziert, haben aber keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen von Ihrer Organisation. Wenn Sie möchten, dass externe Benutzer Zugriff auf Teams und Kanäle haben, ist der Gastzugriff möglicherweise eine bessere Option. _Siehe_ [Verwalten von externem Zugriff in Microsoft Teams](/microsoftteams/manage-external-access)
+1. **Anonym** . Anonyme Benutzer verfügen nicht über eine Active Directory Identität und sind nicht Verbund mit einem Mandanten. Der anonyme Teilnehmer ist wie ein externer Benutzer, aber seine Identität wird nicht in die Besprechung projiziert. Anonyme Benutzer können nicht auf apps in einem Besprechungsfenster zugreifen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
