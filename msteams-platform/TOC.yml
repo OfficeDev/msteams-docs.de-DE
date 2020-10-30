@@ -164,7 +164,7 @@
     - name: Schrittanleitungen
       expanded: true
       items:
-        - name: Erstellen einer Registerkarte für Teams
+        - name: Eine Registerkarte mit App Studio erstellen
           href: tabs/how-to/add-tab.md
         - name: Registerkartenseiten erstellen
           items:
@@ -215,7 +215,7 @@
     - name: Schrittanleitungen
       expanded: true
       items:
-        - name: Erstellen eines Bots für Teams
+        - name: Ein Bot mit App Studio erstellen
           href: bots/how-to/create-a-bot-for-teams.md
         - name: Integrieren Ihres Power Virtual Agent-Chatbots in Teams
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
@@ -292,7 +292,7 @@
     - name: Schrittanleitungen
       expanded: true
       items:
-        - name: Erstellen einer Messaging-Erweiterung für Teams
+        - name: Eine Messaging-Erweiterung mit App Studio erstellen
           href: messaging-extensions/how-to/create-messaging-extension.md
         - name: Aktionsbasierte Befehle
           items:
@@ -363,7 +363,7 @@
           href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
         - name: Registerkarte "Besprechung"
           href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
-- name: Teams Graph-REST-APIs
+- name: Microsoft Graph Rest API-Integration
   items:
     - name: 'Ressourcenspezifische Einwilligung '
       items:
