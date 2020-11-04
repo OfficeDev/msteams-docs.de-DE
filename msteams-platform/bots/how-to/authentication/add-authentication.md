@@ -4,18 +4,18 @@ author: clearab
 description: Vorgehensweise Hinzufügen von OAuth-Authentifizierung zu einem bot in Microsoft Teams.
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 403072efeccdd09e46ac93e2e811ee2d10131668
-ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
+ms.openlocfilehash: 8e396842cb514eb3d3df6b71cafe9e79d9c2957a
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "48097886"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877092"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Hinzufügen von Authentifizierung zu ihren Teams-bot
 
 Es gibt Situationen, in denen Sie möglicherweise Bots in Microsoft Teams erstellen müssen, die im Namen des Benutzers auf Ressourcen zugreifen können, beispielsweise einen e-Mail-Dienst.
 
-In diesem Artikel wird die Verwendung der Azure bot Service V4 SDK-Authentifizierung basierend auf OAuth 2,0. Dies erleichtert die Entwicklung eines bot, der Authentifizierungstoken basierend auf den Anmeldeinformationen des Benutzers verwenden kann. Key in all dies ist die Verwendung von **Identitätsanbietern**, wie wir später sehen werden.
+In diesem Artikel wird die Verwendung der Azure bot Service V4 SDK-Authentifizierung basierend auf OAuth 2,0. Dies erleichtert die Entwicklung eines bot, der Authentifizierungstoken basierend auf den Anmeldeinformationen des Benutzers verwenden kann. Key in all dies ist die Verwendung von **Identitätsanbietern** , wie wir später sehen werden.
 
 OAuth 2.0 ist ein offener Standard für Authentifizierung und Autorisierung, der von Azure Active Directory (Azure AD) und vielen anderen Identitätsanbietern verwendet wird. Ein grundlegendes Verständnis von OAuth 2,0 ist eine Voraussetzung für die Verwendung von Authentifizierung in Microsoft Teams.
 
@@ -50,12 +50,12 @@ Die Ressourcengruppe und der Dienstplan sind nicht unbedingt erforderlich, Sie e
 Sie verwenden eine Ressourcengruppe, um einzelne Ressourcen für das bot-Framework zu erstellen. Stellen Sie für die Leistung sicher, dass sich diese Ressourcen in derselben Azure-Region befinden.
 
 1. Melden Sie sich in Ihrem Browser beim [**Azure-Portal**][azure-portal]an.
-1. Wählen Sie im linken Navigationsbereich **Ressourcengruppen**aus.
+1. Wählen Sie im linken Navigationsbereich **Ressourcengruppen** aus.
 1. Wählen Sie in der oberen linken Ecke des angezeigten Fensters Tab **Hinzufügen** aus, um eine neue Ressourcengruppe zu erstellen. Sie werden aufgefordert, Folgendes bereitzustellen:
-    1. **Abonnement**: Verwenden Sie Ihr vorhandenes Abonnement.
-    1. **Ressourcengruppe**. Geben Sie den Namen für die Ressourcengruppe ein. Ein Beispiel könnte  *TeamsResourceGroup*sein. Beachten Sie, dass der Name eindeutig sein muss.
-    1. Wählen Sie im Dropdownmenü **Region** die Option *West US*oder eine Region, die sich in der Nähe ihrer Anwendungen befindet.
-    1. Klicken Sie auf die Schaltfläche **überprüfen und erstellen** . Es sollte ein Banner angezeigt werden, das die *übergebene Validierung*liest.
+    1. **Abonnement** : Verwenden Sie Ihr vorhandenes Abonnement.
+    1. **Ressourcengruppe**. Geben Sie den Namen für die Ressourcengruppe ein. Ein Beispiel könnte  *TeamsResourceGroup* sein. Beachten Sie, dass der Name eindeutig sein muss.
+    1. Wählen Sie im Dropdownmenü **Region** die Option *West US* oder eine Region, die sich in der Nähe ihrer Anwendungen befindet.
+    1. Klicken Sie auf die Schaltfläche **überprüfen und erstellen** . Es sollte ein Banner angezeigt werden, das die *übergebene Validierung* liest.
     1. Klicken Sie auf die Schaltfläche **Erstellen** . Es kann einige Minuten dauern, bis die Ressourcengruppe erstellt wurde.
 
 > [!TIP]
@@ -63,17 +63,17 @@ Sie verwenden eine Ressourcengruppe, um einzelne Ressourcen für das bot-Framewo
 
 ## <a name="create-the-service-plan"></a>Erstellen des Dienstplans
 
-1. Wählen Sie im [**Azure-Portal**][azure-portal]im linken Navigationsbereich die Option **Ressource erstellen**aus.
-1. Geben Sie im Suchfeld den Text *App-Dienst Plan*ein. Wählen Sie die **App-Service Plan** Karte in den Suchergebnissen aus.
+1. Wählen Sie im [**Azure-Portal**][azure-portal]im linken Navigationsbereich die Option **Ressource erstellen** aus.
+1. Geben Sie im Suchfeld den Text *App-Dienst Plan* ein. Wählen Sie die **App-Service Plan** Karte in den Suchergebnissen aus.
 1. Wählen Sie **Erstellen** aus.
 1. Sie werden aufgefordert, die folgenden Informationen anzugeben:
-    1. **Abonnement**: Sie können ein vorhandenes Abonnement verwenden.
+    1. **Abonnement** : Sie können ein vorhandenes Abonnement verwenden.
     1. **Ressourcengruppe**. Wählen Sie die Gruppe aus, die Sie zuvor erstellt haben.
-    1. **Name**. Geben Sie den Namen für den Service Plan ein. Ein Beispiel könnte  *TeamsServicePlan*sein. Beachten Sie, dass der Name innerhalb der Gruppe eindeutig sein muss.
+    1. **Name**. Geben Sie den Namen für den Service Plan ein. Ein Beispiel könnte  *TeamsServicePlan* sein. Beachten Sie, dass der Name innerhalb der Gruppe eindeutig sein muss.
     1. **Betriebs System**. Wählen Sie *Windows* oder Ihr entsprechendes Betriebssystem aus.
     1. **Region**. Wählen Sie " *West US* " oder eine Region in der Nähe ihrer Anwendungen aus.
     1. **Preisstufe**. Stellen Sie sicher, dass *Standard S1* ausgewählt ist. Dies sollte der Standardwert sein.
-    1. Klicken Sie auf die Schaltfläche **überprüfen und erstellen** . Es sollte ein Banner angezeigt werden, das die *übergebene Validierung*liest.
+    1. Klicken Sie auf die Schaltfläche **überprüfen und erstellen** . Es sollte ein Banner angezeigt werden, das die *übergebene Validierung* liest.
     1. Wählen Sie **Erstellen** aus. Es kann einige Minuten dauern, bis Sie den App-Dienstplan erstellt haben. Der Plan wird in der Ressourcengruppe aufgeführt.
 
 ## <a name="create-the-bot-channels-registration"></a>Erstellen der Registrierung für bot-Kanäle
@@ -95,17 +95,17 @@ Weitere Informationen finden Sie unter [Erstellen eines bot für Teams](../creat
 Sie benötigen einen Identitätsanbieter, der für die Authentifizierung verwendet werden kann.
 In diesem Verfahren verwenden Sie einen Azure AD Anbieter; Außerdem können andere Azure Ad Unterstützte Identitätsanbieter verwendet werden.
 
-1. Wählen Sie im [**Azure-Portal**][azure-portal]im linken Navigationsbereich die Option **Azure Active Directory**aus.
+1. Wählen Sie im [**Azure-Portal**][azure-portal]im linken Navigationsbereich die Option **Azure Active Directory** aus.
     > [!TIP]
     > Sie müssen diese Azure AD Ressource in einem Mandanten erstellen und registrieren, in dem Sie die Berechtigung zum Delegieren von von einer Anwendung angeforderten Berechtigungen erteilen können.
     > Anweisungen zum Erstellen eines Mandanten finden Sie unter [zugreifen auf das Portal und Erstellen eines Mandanten](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
-1. Wählen Sie im linken Bereich **App-Registrierungen**aus.
+1. Wählen Sie im linken Bereich **App-Registrierungen** aus.
 1. Wählen Sie im rechten Bereich die Registerkarte **neue Registrierung** in der oberen linken Ecke aus.
 1. Sie werden aufgefordert, die folgenden Informationen anzugeben:
-   1. **Name**. Geben Sie den Namen der Anwendung ein. Ein Beispiel könnte  *BotTeamsIdentity*sein. Beachten Sie, dass der Name eindeutig sein muss.
+   1. **Name**. Geben Sie den Namen der Anwendung ein. Ein Beispiel könnte  *BotTeamsIdentity* sein. Beachten Sie, dass der Name eindeutig sein muss.
    1. Wählen Sie die **unterstützten Kontotypen** für Ihre Anwendung aus. Wählen Sie *Konten in einem beliebigen Organisations Verzeichnis (beliebige Azure AD Verzeichnis – Multimandanten) und persönliche Microsoft-Konten (beispielsweise Skype, Xbox)* aus.
-   1. Für den **Umleitungs-URI**:<br/>
-       &#x2713;wählen Sie das **Webpart**aus. <br/>
+   1. Für den **Umleitungs-URI** :<br/>
+       &#x2713;wählen Sie das **Webpart** aus. <br/>
        &#x2713; legen Sie die URL auf fest `https://token.botframework.com/.auth/web/redirect` .
    1. Wählen Sie **Registrieren** aus.
 
@@ -116,11 +116,11 @@ In diesem Verfahren verwenden Sie einen Azure AD Anbieter; Außerdem können and
 
 1. Wählen Sie im linken Bereich **Zertifikate & Secrets** aus, um einen geheimen Client Schlüssel für Ihre Anwendung zu erstellen.
 
-   1. Wählen Sie unter **Client Secrets**&#x2795; **neuen geheimen Client Schlüssel**aus.
+   1. Wählen Sie unter **Client Secrets** &#x2795; **neuen geheimen Client Schlüssel** aus.
    1. Fügen Sie eine Beschreibung hinzu, um dieses Geheimnis von anderen Personen zu identifizieren, die Sie für diese APP möglicherweise erstellen müssen, beispielsweise für die *app "bot Identity" in Microsoft Teams*.
    1. Festlegen **läuft** auf Ihre Auswahl ab.
    1. Klicken Sie auf **Hinzufügen**.
-   1. **Notieren Sie den geheimen Schlüssel**, bevor Sie diese Seite verlassen. Diesen Wert verwenden Sie später als _geheimer Client Schlüssel_ , wenn Sie Ihre Azure AD Anwendung mit Ihrem bot registrieren.
+   1. **Notieren Sie den geheimen Schlüssel** , bevor Sie diese Seite verlassen. Diesen Wert verwenden Sie später als _geheimer Client Schlüssel_ , wenn Sie Ihre Azure AD Anwendung mit Ihrem bot registrieren.
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>Konfigurieren Sie die Verbindung mit dem Identitätsanbieter, und registrieren Sie Sie mit dem bot.
 
@@ -130,8 +130,8 @@ Hinweis: Es gibt zwei Optionen für Dienstanbieter hier – Azure AD v1 und Azur
 
 1. Wählen Sie im [**Azure-Portal**][azure-portal]ihre Ressourcengruppe aus dem Dashboard aus.
 1. Wählen Sie Ihren bot-Kanal Registrierungslink aus.
-1. Wählen Sie auf der Seite Ressource die Option **Einstellungen**aus.
-1. Wählen Sie unter **OAuth-Verbindungseinstellungen** am unteren Rand der Seite die Option **Einstellung hinzufügen**aus.
+1. Wählen Sie auf der Seite Ressource die Option **Einstellungen** aus.
+1. Wählen Sie unter **OAuth-Verbindungseinstellungen** am unteren Rand der Seite die Option **Einstellung hinzufügen** aus.
 1. Füllen Sie das Formular wie folgt aus:
 
     1. **Name**. Geben Sie einen Namen für die Verbindung ein. Sie verwenden diesen Namen in Ihrem bot in der `appsettings.json` Datei. Beispiel *BotTeamsAuthADv1*.
@@ -140,41 +140,41 @@ Hinweis: Es gibt zwei Optionen für Dienstanbieter hier – Azure AD v1 und Azur
     1. **Geheimer Client Schlüssel**. Geben Sie den geheimen Schlüssel ein, den Sie in den obigen Schritten für Ihre Azure Identity-Anbieter-App aufgezeichnet haben.
     1. **Grant-Typ**. Geben Sie ein `authorization_code` .
     1. **Anmelde-URL**. Geben Sie ein `https://login.microsoftonline.com` .
-    1. **Mandanten-ID**: Geben Sie die **Verzeichnis (Mandanten-ID)** ein, die Sie zuvor für Ihre Azure Identity-App aufgezeichnet haben, oder **verbreitet** , je nach dem unterstützten Kontotyp, der beim Erstellen der APP für den Identitätsanbieter ausgewählt wurde. Um zu entscheiden, welcher Wert zugewiesen werden soll, befolgen Sie die folgenden Kriterien:
+    1. **Mandanten-ID** : Geben Sie die **Verzeichnis (Mandanten-ID)** ein, die Sie zuvor für Ihre Azure Identity-App aufgezeichnet haben, oder **verbreitet** , je nach dem unterstützten Kontotyp, der beim Erstellen der APP für den Identitätsanbieter ausgewählt wurde. Um zu entscheiden, welcher Wert zugewiesen werden soll, befolgen Sie die folgenden Kriterien:
 
         - Wenn Sie entweder *Konten in diesem Organisations Verzeichnis (nur Microsoft – einzelner Mandant)* oder *Konten in einem Organisations Verzeichnis (Microsoft Aad Directory-Multi Mandant)* ausgewählt haben, geben Sie die **Mandanten-ID** ein, die Sie zuvor für die Aad-App aufgezeichnet haben. Dies ist der Mandant, der den Benutzern zugeordnet ist, die authentifiziert werden können.
 
         - Wenn Sie *Konten in einem beliebigen Organisations Verzeichnis (AAD Directory-Multi Mandanten und persönliche Microsoft-Konten wie Skype, Xbox, Outlook)* ausgewählt haben, geben Sie das Wort " **Common** " anstelle einer Mandanten-ID ein. Andernfalls wird die Aad-App über den Mandanten überprüfen, dessen ID ausgewählt wurde, und persönliche Microsoft-Konten ausschließen.
 
-    h. Geben Sie für **Ressourcen-URL**den Eintrag ein `https://graph.microsoft.com/` . Dies wird im aktuellen Codebeispiel nicht verwendet.  
+    h. Geben Sie für **Ressourcen-URL** den Eintrag ein `https://graph.microsoft.com/` . Dies wird im aktuellen Codebeispiel nicht verwendet.  
     i. Lassen Sie **Bereiche** leer. Die folgende Abbildung ist ein Beispiel:
 
     ![Teams Bots App auth Connection String ADV1 View](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern** aus.
 
 #### <a name="azure-ad-v2"></a>Azure AD v2
 
 1. Wählen Sie im [**Azure-Portal**][azure-portal]ihre Ressourcengruppe aus dem Dashboard aus.
 1. Wählen Sie Ihren bot-Kanal Registrierungslink aus.
-1. Wählen Sie auf der Seite Ressource die Option **Einstellungen**aus.
-1. Wählen Sie unter **OAuth-Verbindungseinstellungen** am unteren Rand der Seite die Option **Einstellung hinzufügen**aus.
+1. Wählen Sie auf der Seite Ressource die Option **Einstellungen** aus.
+1. Wählen Sie unter **OAuth-Verbindungseinstellungen** am unteren Rand der Seite die Option **Einstellung hinzufügen** aus.
 1. Füllen Sie das Formular wie folgt aus:
 
     1. **Name**. Geben Sie einen Namen für die Verbindung ein. Sie verwenden diesen Namen in Ihrem bot in der `appsettings.json` Datei. Beispiel *BotTeamsAuthADv2*.
-    1. **Dienstanbieter**. Wählen Sie **Azure Active Directory v2**aus. Nachdem Sie diese Option ausgewählt haben, werden die Azure AD spezifischen Felder angezeigt.
+    1. **Dienstanbieter**. Wählen Sie **Azure Active Directory v2** aus. Nachdem Sie diese Option ausgewählt haben, werden die Azure AD spezifischen Felder angezeigt.
     1. **Client-ID**. Geben Sie die Anwendungs-ID (Client) ein, die Sie in den obigen Schritten für Ihre Azure Identity Provider-App aufgezeichnet haben.
     1. **Geheimer Client Schlüssel**. Geben Sie den geheimen Schlüssel ein, den Sie in den obigen Schritten für Ihre Azure Identity-Anbieter-App aufgezeichnet haben.
     1. **Token Exchange-URL**. Lassen Sie das Feld leer.
-    1. **Mandanten-ID**: Geben Sie die **Verzeichnis (Mandanten-ID)** ein, die Sie zuvor für Ihre Azure Identity-App aufgezeichnet haben, oder **verbreitet** , je nach dem unterstützten Kontotyp, der beim Erstellen der APP für den Identitätsanbieter ausgewählt wurde. Um zu entscheiden, welcher Wert zugewiesen werden soll, befolgen Sie die folgenden Kriterien:
+    1. **Mandanten-ID** : Geben Sie die **Verzeichnis (Mandanten-ID)** ein, die Sie zuvor für Ihre Azure Identity-App aufgezeichnet haben, oder **verbreitet** , je nach dem unterstützten Kontotyp, der beim Erstellen der APP für den Identitätsanbieter ausgewählt wurde. Um zu entscheiden, welcher Wert zugewiesen werden soll, befolgen Sie die folgenden Kriterien:
 
         - Wenn Sie entweder *Konten in diesem Organisations Verzeichnis (nur Microsoft – einzelner Mandant)* oder *Konten in einem Organisations Verzeichnis (Microsoft Aad Directory-Multi Mandant)* ausgewählt haben, geben Sie die **Mandanten-ID** ein, die Sie zuvor für die Aad-App aufgezeichnet haben. Dies ist der Mandant, der den Benutzern zugeordnet ist, die authentifiziert werden können.
 
         - Wenn Sie *Konten in einem beliebigen Organisations Verzeichnis (AAD Directory-Multi Mandanten und persönliche Microsoft-Konten wie Skype, Xbox, Outlook)* ausgewählt haben, geben Sie das Wort " **Common** " anstelle einer Mandanten-ID ein. Andernfalls wird die Aad-App über den Mandanten überprüfen, dessen ID ausgewählt wurde, und persönliche Microsoft-Konten ausschließen.
 
-    1. Geben Sie für **Bereiche**eine durch Leerzeichen getrennte Liste von Graph-Berechtigungen ein, die diese Anwendung benötigt, beispielsweise: User. Read User. ReadBasic. all Mail. Read 
+    1. Geben Sie für **Bereiche** eine durch Leerzeichen getrennte Liste von Graph-Berechtigungen ein, die diese Anwendung benötigt, beispielsweise: User. Read User. ReadBasic. all Mail. Read 
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern** aus.
 
 ### <a name="test-the-connection"></a>Testen der Verbindung
 
@@ -236,7 +236,7 @@ Nachdem die vorläufigen Einstellungen vorgenommen wurden, konzentrieren wir uns
 # <a name="python"></a>[Python](#tab/python)
 
 1. Clone [py-auth-Sample][teams-auth-bot-py] aus dem GitHub-Repository.
-1. **Config.py**aktualisieren:
+1. **Config.py** aktualisieren:
 
     - Legen `ConnectionName` Sie den Namen der OAuth-Verbindungseinstellung fest, die Sie Ihrem bot hinzugefügt haben.
     - Legen `MicrosoftAppId` `MicrosoftAppPassword` Sie die APP-ID und den App-Schlüssel Ihres bot fest.
@@ -254,7 +254,7 @@ Um den bot bereitzustellen, befolgen Sie die Schritte unter How to [deploy your 
 Alternativ können Sie in Visual Studio die folgenden Schritte ausführen:
 
 1. Wählen Sie im Visual Studio Projekt *Mappen-Explorer* den Projektnamen aus, und halten Sie ihn (oder klicken Sie mit der rechten Maustaste).
-1. Wählen Sie im Dropdownmenü die Option **veröffentlichen**aus.
+1. Wählen Sie im Dropdownmenü die Option **veröffentlichen** aus.
 1. Wählen Sie im angezeigten Fenster den **neuen** Link aus.
 1. Wählen Sie im Dialogfeld **App-Dienst** auf der linken Seite aus, und **Erstellen Sie neu** auf der rechten Seite.
 1. Klicken Sie auf die Schaltfläche **veröffentlichen** .
@@ -270,7 +270,7 @@ Alternativ können Sie in Visual Studio die folgenden Schritte ausführen:
     ![Teams-bot-auth-App-Service-Gruppe](../../../assets/images/authentication/auth-bot-app-service-in-group.png)
 
 1. Wählen Sie in der Gruppe Ressourcen den Namen des bot-Kanal Registrierungs namens (Link) aus.
-1. Wählen Sie im linken Bereich **Einstellungen**aus.
+1. Wählen Sie im linken Bereich **Einstellungen** aus.
 1. Geben Sie im Feld **Messaging-Endpunkt** die oben abgerufene URL ein, gefolgt von `api/messages` . Dies ist ein Beispiel: `https://botteamsauth.azurewebsites.net/api/messages` .
 1. Klicken Sie oben links auf die Schaltfläche **Speichern** .
 
@@ -301,10 +301,10 @@ Nachdem Sie den Authentifizierungsmechanismus konfiguriert haben, können Sie di
 1. Führen Sie das bot-Beispiel lokal auf Ihrem Computer aus, beispielsweise über Visual Studio.
 1. Starten Sie den Emulator.
 1. Klicken Sie auf die Schaltfläche **bot öffnen** .
-1. Geben Sie in der **bot-URL**die lokale URL des bot ein. Normalerweise `http://localhost:3978/api/messages` .
+1. Geben Sie in der **bot-URL** die lokale URL des bot ein. Normalerweise `http://localhost:3978/api/messages` .
 1. Geben Sie in der **Microsoft App-ID** die APP-ID des bot von ein `appsettings.json` .
 1. Geben Sie im **Microsoft App-Kennwort** das App-Kennwort des bot aus dem ein `appsettings.json` .
-1. Wählen Sie **verbinden**aus.
+1. Wählen Sie **verbinden** aus.
 1. Geben Sie nach dem Starten des bot einen beliebigen Text ein, um die Anmeldekarte anzuzeigen.
 1. Wählen Sie die Schaltfläche **Anmelden** aus.
 1. Ein Popupdialogfeld wird angezeigt, um die **geöffnete URL zu bestätigen**. Dadurch kann der Benutzer des bot (Sie) authentifiziert werden.  
@@ -321,14 +321,14 @@ Nachdem Sie den Authentifizierungsmechanismus konfiguriert haben, können Sie di
 
     ![Authentifizierungs-bot-Anmelde Emulator](../../../assets/images/authentication/auth-bot-login-emulator.PNG)
 
-1. Wenn Sie " **Ja** " auswählen, wenn der bot *möchte, dass Ihr Token angezeigt*wird, erhalten Sie eine ähnliche Antwort wie die folgende:
+1. Wenn Sie " **Ja** " auswählen, wenn der bot *möchte, dass Ihr Token angezeigt* wird, erhalten Sie eine ähnliche Antwort wie die folgende:
 
     ![Authentifizierungs-bot-Anmelde Emulator-Token](../../../assets/images/authentication/auth-bot-login-emulator-token.png)
 
 1. Geben Sie **Logout** in das Feld Eingabe Chat ein, um sich abzumelden. Dadurch wird das Benutzertoken freigegeben, und der Bot kann nicht in Ihrem Namen handeln, bis Sie sich erneut anmelden.
 
 > [!NOTE]
-> Für die bot-Authentifizierung ist die Verwendung des **bot Connector-Diensts**erforderlich. Der Dienst greift auf die Registrierungsinformationen für bot-Kanäle für Ihren bot zu.
+> Für die bot-Authentifizierung ist die Verwendung des **bot Connector-Diensts** erforderlich. Der Dienst greift auf die Registrierungsinformationen für bot-Kanäle für Ihren bot zu.
 
 ## <a name="test-the-deployed-bot"></a>Testen des bereitgestellten bot
 
@@ -338,7 +338,7 @@ and when for these, and just reference that from here, along with the set of ste
 1. Navigieren Sie in Ihrem Browser zum [**Azure-Portal**][azure-portal].
 1. Suchen Sie Ihre Ressourcengruppe.
 1. Wählen Sie den Link Ressource aus. Die Seite Ressource wird angezeigt.
-1. Wählen Sie auf der Seite Ressource die Option **Test im Webchat**aus. Der bot startet und zeigt die vordefinierten Begrüßungen an.
+1. Wählen Sie auf der Seite Ressource die Option **Test im Webchat** aus. Der bot startet und zeigt die vordefinierten Begrüßungen an.
 1. Geben Sie im Feld Chat eine beliebige Eingabe ein.
 1. Aktivieren Sie das Kontrollkästchen **Anmelden** .
 1. Ein Popupdialogfeld wird angezeigt, um die **geöffnete URL zu bestätigen**. Dadurch kann der Benutzer des bot (Sie) authentifiziert werden.  
@@ -368,8 +368,8 @@ and when for these, and just reference that from here, along with the set of ste
     1. Weisen Sie diesen Wert zu: `validDomains: [ "token.botframework.com" ]` .
 1. Wählen Sie die Dateien aus, und **zippen** Sie Sie `manifest.json` `outline.png` `color.png` .
 1. Öffnen Sie **Microsoft Teams**.
-1. Wählen Sie im linken Bereich unten das **Symbol apps**aus.
-1. Wählen Sie im rechten Bereich unten die Option **benutzerdefinierte App hochladen**aus.
+1. Wählen Sie im linken Bereich unten das **Symbol apps** aus.
+1. Wählen Sie im rechten Bereich unten die Option **benutzerdefinierte App hochladen** aus.
 1. Navigieren Sie zum `TeamsAppManifest` Ordner, und laden Sie das gezippte Manifest hoch.
 Der folgende Assistent wird angezeigt:
 
@@ -397,11 +397,11 @@ Dadurch wird ngrok gestartet, um den angegebenen Port abzuhören. Im Gegenzug er
 1. Append `/api/messages` zu erhalten `https://dea822bf.ngrok.io/api/messages` . Dies ist der **Nachrichten Endpunkt** für den bot, der lokal auf Ihrem Computer läuft und über das Internet in einem Chat in Microsoft Teams erreichbar ist.
 1. Ein letzter Schritt besteht darin, den Nachrichten Endpunkt des bereitgestellten bot zu aktualisieren. In dem Beispiel haben wir den bot in Azure bereitgestellt. So * * lassen Sie uns diese Schritte ausführen:
     1. Navigieren Sie in Ihrem Browser zum [**Azure-Portal**][azure-portal].
-    1. Wählen Sie Ihre **bot-Kanal Registrierung**aus.
-    1. Wählen Sie im linken Bereich **Einstellungen**aus.
+    1. Wählen Sie Ihre **bot-Kanal Registrierung** aus.
+    1. Wählen Sie im linken Bereich **Einstellungen** aus.
     1. Geben Sie im rechten Bereich im Feld **Messaging-Endpunkt** die ngrok-URL in unserem Beispiel ein `https://dea822bf.ngrok.io/api/messages` .
 1. Starten Sie Ihren bot lokal, beispielsweise in Visual Studio Debugmodus.
-1. Testen Sie den bot, während er lokal mit dem **Test-Webchat**des bot-Framework-Portals läuft. Wie der Emulator erlaubt Ihnen dieser Test nicht den Zugriff auf Teams-spezifische Funktionen.
+1. Testen Sie den bot, während er lokal mit dem **Test-Webchat** des bot-Framework-Portals läuft. Wie der Emulator erlaubt Ihnen dieser Test nicht den Zugriff auf Teams-spezifische Funktionen.
 1. Im Terminal-Fenster, in dem `ngrok` Sie sich befinden, können Sie den HTTP-Datenverkehr zwischen dem bot und dem Chat Client sehen. Wenn Sie eine detailliertere Ansicht wünschen, geben Sie in einem Browserfenster die Daten ein, `http://127.0.0.1:4040` die Sie aus dem vorherigen Terminalfenster erhalten haben. Die folgende Abbildung ist ein Beispiel:
 
     ![Authentifizierungs-bot-Teams ngrok Tests](../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png).
@@ -466,7 +466,7 @@ Bei der Authentifizierung verhält sich Microsoft Teams geringfügig anders als 
 ### <a name="handling-invoke-activity"></a>Behandeln von Invoke-Aktivität
 
 Eine **Invoke-Aktivität** wird an den bot statt an die Ereignisaktivität gesendet, die von anderen Kanälen verwendet wird.
-Dies wird durch Unterklassen für das **ActivityHandler**getan.
+Dies wird durch Unterklassen für das **ActivityHandler** getan.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet-sample)
 

@@ -1,15 +1,15 @@
 ---
-title: Einmaliges Anmelden
+title: Unterstützung für einmaliges Anmelden für Registerkarten
 description: Beschreibt einmaliges Anmelden (Single Sign-on, SSO)
 keywords: Teams-Authentifizierung SSO Aad Single Sign-on-API
-ms.openlocfilehash: 011be3fe7fe614bd42f0ee6b88289cf97740a4d3
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: aa2cdf303c7ae7241b9efe2f771479fbeb58a0de
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796379"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877057"
 ---
-# <a name="single-sign-on-sso"></a>Einzelne Sign-On (SSO)
+# <a name="single-sign-on-sso-support-for-tabs"></a>Unterstützung für einmaliges Anmelden (SSO) für Registerkarten
 
 Benutzer melden sich über Ihre Arbeits-, Schul-oder Microsoft-Konten (Office 365, Outlook usw.) bei Microsoft Teams an. Sie können dies nutzen, indem Sie einer einmaligen Anmeldung die Autorisierung Ihrer Microsoft Teams-Registerkarte (oder des Aufgabenmoduls) auf Desktop-oder mobilen Clients ermöglichen. Wenn ein Benutzer also zustimmt, die APP zu verwenden, muss er sich nicht erneut auf einem anderen Gerät einverstanden erklären – er wird automatisch angemeldet. Außerdem rufen wir ihr Zugriffstoken ab, um die Leistung und die Ladezeiten zu verbessern.
 
@@ -70,7 +70,7 @@ In diesem Abschnitt werden die Aufgaben im Zusammenhang mit dem Erstellen einer 
     * Wählen Sie die **unterstützten Kontotypen** (jeder Kontotyp ist funktionsfähig) ¹
     * Lassen Sie **URI umleiten** leer.
     * Wählen Sie **Registrieren** aus.
-3. Kopieren und speichern Sie auf der Übersichtsseite die **Anwendungs-ID (Client)** . Sie benötigen Sie später beim Aktualisieren des Teams-Anwendungsmanifests.
+3. Kopieren und speichern Sie auf der Übersichtsseite die **Anwendungs-ID (Client)**. Sie benötigen Sie später beim Aktualisieren des Teams-Anwendungsmanifests.
 4. Wählen Sie unter **Verwalten** die Option **Eine API verfügbar machen** aus. 
 5. Wählen Sie den Link **festlegen** aus, um den Anwendungs-ID-URI in Form von zu generieren `api://{AppID}` . Fügen Sie den vollqualifizierten Domänennamen zwischen den doppelten Schrägstrichen und der GUID (mit einem Schrägstrich "/" am Ende hinzugefügt) ein. Die gesamte ID sollte die Form haben: `api://fully-qualified-domain-name.com/{AppID}` ²
     * Ex: `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` .
@@ -90,7 +90,7 @@ In diesem Abschnitt werden die Aufgaben im Zusammenhang mit dem Erstellen einer 
 11. Identifizieren Sie im Abschnitt **autorisierte Clientanwendungen** die Anwendungen, die Sie für die Webanwendung Ihrer APP autorisieren möchten. Wählen Sie *Clientanwendung hinzufügen* aus. Geben Sie die folgenden Client-IDs ein, und wählen Sie den autorisierten Bereich aus, den Sie im vorherigen Schritt erstellt haben:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Mobile Teams/Desktopanwendung)
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Microsoft Teams-Webanwendung)
-12. Navigieren Sie zu **API-Berechtigungen** . Wählen Sie *Add a permission*  >  *Microsoft Graph*  >  *Delegierte Berechtigungen* aus, und fügen Sie dann die folgenden Berechtigungen hinzu:
+12. Navigieren Sie zu **API-Berechtigungen**. Wählen Sie *Add a permission*  >  *Microsoft Graph*  >  *Delegierte Berechtigungen* aus, und fügen Sie dann die folgenden Berechtigungen hinzu:
     * User. Read (standardmäßig aktiviert)
     * email
     * offline_access

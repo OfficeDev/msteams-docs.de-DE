@@ -5,18 +5,18 @@ description: Erstellen Sie mit dem Microsoft Teams-Toolkit schnell eine Microsof
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: b19856eacee866ebbc89f21ac12575f1392918b3
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 68f2bf7c71182499dc8f6f50e03ea3d97f03ded2
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452834"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877082"
 ---
 # <a name="build-a-messaging-extension-for-microsoft-teams"></a>Erstellen einer Messaging Erweiterung für Microsoft Teams
 
-Es gibt zwei Typen von Microsoft Teams- *Messaging Erweiterungen*: [Suchbefehle](../messaging-extensions/how-to/search-commands/define-search-command.md) und [Aktionsbefehle](../messaging-extensions/how-to/action-commands/define-action-command.md).
+Es gibt zwei Typen von Microsoft Teams- *Messaging Erweiterungen* : [Suchbefehle](../messaging-extensions/how-to/search-commands/define-search-command.md) und [Aktionsbefehle](../messaging-extensions/how-to/action-commands/define-action-command.md).
 
-In dieser Lektion erstellen Sie einen *Suchbefehl* (auch als *Suchbasierte Messaging Erweiterung*bezeichnet), bei dem es sich um eine Verknüpfung zum Suchen externer Inhalte und deren Freigabe in Microsoft Teams handelt. Benutzer können über das [Feld Verfassen oder Ausführen des Teams](../messaging-extensions/what-are-messaging-extensions.md)auf Suchbefehle zugreifen.
+In dieser Lektion erstellen Sie einen *Suchbefehl* (auch als *Suchbasierte Messaging Erweiterung* bezeichnet), bei dem es sich um eine Verknüpfung zum Suchen externer Inhalte und deren Freigabe in Microsoft Teams handelt. Benutzer können über das [Feld Verfassen oder Ausführen des Teams](../messaging-extensions/what-are-messaging-extensions.md)auf Suchbefehle zugreifen.
 
 ## <a name="your-assignment"></a>Ihre Zuordnung
 
@@ -32,7 +32,7 @@ Das Helpdesk Ihrer Organisation kommuniziert mit Benutzern über Teams, die Tick
 > * Konfigurieren des bot für Ihre Messaging Erweiterung
 > * Querladen und Testen einer Messaging Erweiterung in Microsoft Teams
 
-## <a name="before-you-begin"></a>Vorabinformationen
+## <a name="before-you-begin"></a>Vorbereitung
 
 Wenn Sie noch nicht vorhanden sind, stellen Sie sicher, dass Sie [die Entwicklungsvoraussetzungen für Teams kennen und installieren](build-first-app-overview.md#get-prerequisites).
 
@@ -46,14 +46,14 @@ Das Microsoft Teams-Toolkit hilft Ihnen beim Einrichten der folgenden Komponente
 > [!TIP]
 > Wenn Sie noch kein Teams-App-Projekt erstellt haben, ist es möglicherweise hilfreich, [diese Anweisungen](../build-your-first-app/build-and-run.md) zu befolgen, mit denen Projekte detaillierter erläutert werden.
 
-1. Wählen Sie in Visual Studio Code **Microsoft Teams** in :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: der linken Aktivitäts Leiste aus, und wählen Sie **neue Teams-app erstellen**aus.
+1. Wählen Sie in Visual Studio Code **Microsoft Teams** in :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: der linken Aktivitäts Leiste aus, und wählen Sie **neue Teams-app erstellen** aus.
 1. Geben Sie einen Namen für Ihre Teams-App ein. (Dies ist der Standardname für Ihre APP und auch der Name des App-Projektverzeichnisses auf Ihrem lokalen Computer.)
-1. Wählen Sie auf dem Bildschirm **Funktionen hinzufügen** die Option **Messaging Erweiterung** und dann dann **weiter**aus.
+1. Wählen Sie auf dem Bildschirm **Funktionen hinzufügen** die Option **Messaging Erweiterung** und dann dann **weiter** aus.
 1. Führen Sie auf dem Bildschirm **Messaging-Erweiterung konfigurieren** die folgenden Aktionen aus:
     1. Wählen Sie nur die **Suchbasierte** Option für den Typ der Messaging Erweiterung aus.
     1. Wählen Sie **Create a New bot** and **Login** aus, um sich mit Ihrem Microsoft 365-entwicklungskonto anzumelden.
     1. Speichern Sie Ihre bot-ID und Ihr Kennwort (Sie benötigen dies ein wenig später).
-    1. Optional Geben Sie einen benutzerdefinierten Namen für Ihren bot ein, und wählen Sie **Erstellen**aus. (Dies ist nicht der Name der Microsoft Teams-APP, die Sie bereits angegeben haben.)
+    1. Optional Geben Sie einen benutzerdefinierten Namen für Ihren bot ein, und wählen Sie **Erstellen** aus. (Dies ist nicht der Name der Microsoft Teams-APP, die Sie bereits angegeben haben.)
     1. Wählen Sie im Moment **Nein** für die Option zum Aufheben der Verknüpfung aus.</br>
 :::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="Abbildung, die zeigt, wie Sie sich im Teams-Toolkit bei Ihrem Microsoft 365-Konto anmelden können, um einen neuen bot für Ihre Messaging Erweiterung zu erstellen.":::
 1. Klicken Sie unten auf dem Bildschirm auf **Fertig stellen** , um Ihr Projekt zu konfigurieren.
@@ -139,7 +139,7 @@ Wenn Ihr bot mit dem Azure bot-Dienst registriert ist, erhält er eine ID und ei
 
 Sie müssen eine bot-Endpunkt-URL angeben, um Suchabfragen in Ihrer Messaging-Erweiterung zu empfangen und zu verarbeiten. Normalerweise sieht die URL wie aus `https://HOST_URL/api/messages` . Sie können dies schnell im Teams-Toolkit konfigurieren.
 
-1. Wählen Sie in Visual Studio Code **Microsoft Teams** in :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: der linken Aktivitäts Leiste aus, und wählen Sie **Microsoft Teams Toolkit öffnen**aus.
+1. Wählen Sie in Visual Studio Code **Microsoft Teams** in :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: der linken Aktivitäts Leiste aus, und wählen Sie **Microsoft Teams Toolkit öffnen** aus.
 1. Wechseln Sie zu **bot Management > vorhandene bot-Registrierungen** , und wählen Sie den bot aus, den Sie während des Setups erstellt haben.
 1. Geben Sie in das Feld **bot-Endpunktadresse** den lokalen Webserver ein, auf dem Sie den bot hosten ( `baseUrl10` Wert), und fügen Sie `/api/messages` ihn hinzu.
 
@@ -164,7 +164,7 @@ Wenn Ihre Messaging-Erweiterung aktiv ist, können Sie Sie in Microsoft Teams in
 > Wenn Sie noch keine Teams-App quer geladene haben und Probleme haben, führen Sie die folgenden [Schritte](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams)aus.
 
 1. Melden Sie sich mit Ihrem Konto beim Microsoft Teams-Client an, das App-Sideloading zulässt.
-1. Wählen Sie **apps**aus, und wählen Sie dann **benutzerdefinierte App hochladen**aus.
+1. Wählen Sie **apps** aus, und wählen Sie dann **benutzerdefinierte App hochladen** aus.
 1. Wechseln Sie zu Ihrem APP `.publish` -Projektordner, und wählen Sie aus `Development.zip` .
 1. Wählen Sie im modalen Installationsmodus die Option **Hinzufügen** aus, um Ihre APP zu installieren.
 
@@ -172,10 +172,9 @@ Wenn Ihre Messaging-Erweiterung aktiv ist, können Sie Sie in Microsoft Teams in
 
 Erfahren Sie, wie Messaging-Erweiterungen in einem Microsoft Teams-Chat funktionieren.
 
-1. Starten Sie einen neuen Chat. Wählen Sie im Feld Verfassen die Option **Weitere** aus, :::image type="icon" source="../assets/icons/teams-client-more.png"::: und wählen Sie die soeben quer geladene Messaging-Erweiterungs-App aus.<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Abbildung, die zeigt, wie Sie sich im Teams-Toolkit bei Ihrem Microsoft 365-Konto anmelden können, um einen neuen bot für Ihre Messaging Erweiterung zu erstellen.":::
+1. Starten Sie einen neuen Chat. Wählen Sie im Feld Verfassen die Option **Weitere** aus, :::image type="icon" source="../assets/icons/teams-client-more.png"::: und wählen Sie die soeben quer geladene Messaging-Erweiterungs-App aus.
 1. Versuchen Sie, nach etwas zu suchen (beispielsweise "Tickets"). Wenn Ihre APP funktioniert, werden Beispiel Suchergebnisse angezeigt (Sie können Sie später hinzufügen).<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Abbildung, die zeigt, wie Sie sich im Teams-Toolkit bei Ihrem Microsoft 365-Konto anmelden können, um einen neuen bot für Ihre Messaging Erweiterung zu erstellen.":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Ein Screenshot, der zeigt, wie eine suchbasierte Messaging Erweiterung im Feld &quot;Teams erstellen&quot; verwendet wird.":::
 
 ## <a name="well-done"></a>Gut gemacht
 
@@ -203,7 +202,7 @@ Hierbei kann es sich um ein Authentifizierungsproblem handeln. Führen Sie die f
 
 ### <a name="bot-isnt-connected-to-teams"></a>Bot ist nicht mit Microsoft Teams verbunden
 
-Wenn Sie Ihre APP installiert haben, aber nicht funktioniert, stellen Sie sicher, dass der bot der Messaging Erweiterung [mit dem Microsoft Teams- *Kanal*des Azure bot-Diensts verbunden](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)ist.
+Wenn Sie Ihre APP installiert haben, aber nicht funktioniert, stellen Sie sicher, dass der bot der Messaging Erweiterung [mit dem Microsoft Teams- *Kanal* des Azure bot-Diensts verbunden](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)ist.
 
 Es ist wichtig zu verstehen, dass dies nicht mit einem Kanal in Microsoft Teams identisch ist. In diesem Fall stellt ein Kanal dar, wie der Azure bot-Dienst Ihren bot mit Teams oder einer anderen [unterstützten Microsoft-oder Drittanbieter-Kommunikations-App](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)verbindet.
 
