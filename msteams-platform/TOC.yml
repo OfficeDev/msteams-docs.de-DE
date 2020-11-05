@@ -243,6 +243,8 @@
               href: bots/how-to/authentication/auth-flow-bot.md
             - name: Ihrem Bot Authentifizierung hinzufügen
               href: bots/how-to/authentication/add-authentication.md
+            - name: Unterstützung für einmaliges Anmelden für Bots
+              href: bots/how-to/authentication/auth-aad-sso-bots.md
         - name: Formatieren Ihrer Bot-Nachricht
           href: bots/how-to/format-your-bot-messages.md
         - name: Bot-Nachrichten aktualisieren und ändern
