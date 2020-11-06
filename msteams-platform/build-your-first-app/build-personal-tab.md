@@ -3,22 +3,22 @@ title: Erste Schritte – Erstellen einer persönlichen Registerkarte
 author: heath-hamilton
 description: Erstellen Sie mit dem Microsoft Teams-Toolkit schnell eine persönliche Registerkarte von Microsoft Teams.
 ms.author: lajanuar
-ms.date: 10/09/2020
+ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7c12c87fff5126662f9473ecb0c5838b61f5faf2
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 17153b9b7cd7e6dd9052fc40073fec60a4d51f81
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452743"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931729"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Erstellen einer persönlichen Registerkarte für Microsoft Teams
 
 Registerkarten stellen eine einfache Möglichkeit dar, Inhalte in Ihrer APP zu Oberflächen, indem eine Webseite im Wesentlichen in Microsoft Teams eingebettet wird.
 
-Es gibt zwei Arten von Registerkarten in Microsoft Teams. In diesem Lernprogramm erstellen Sie grundlegende eine *persönliche Registerkarte*, eine voll Bildinhalts Seite für einzelne Benutzer. (Persönliche Registerkarten sind die nächste Sache einer herkömmlichen Website Erfahrung in Microsoft Teams.)
+Es gibt zwei Arten von Registerkarten in Microsoft Teams. In diesem Lernprogramm erstellen Sie grundlegende eine *persönliche Registerkarte* , eine voll Bildinhalts Seite für einzelne Benutzer. (Persönliche Registerkarten sind die nächste Sache einer herkömmlichen Website Erfahrung in Microsoft Teams.)
 
-## <a name="before-you-begin"></a>Vorabinformationen
+## <a name="before-you-begin"></a>Bevor Sie beginnen
 
 Für die ersten Schritte benötigen Sie eine grundlegende ausgeführte persönliche Registerkarte. Wenn Sie noch keinen haben, lesen Sie [Erstellen und Ausführen ihrer ersten Teams-App](../build-your-first-app/build-and-run.md).
 
@@ -30,40 +30,26 @@ Personen in Ihrer Organisation haben Probleme bei der Suche nach grundlegenden K
 
 > [!div class="checklist"]
 >
-> * Identifizieren einiger der Eigenschaften des App-Manifests und der für persönliche Registerkarten relevanten Gerüste
+> * Identifizieren einiger der für persönliche Registerkarten relevanten App-Konfigurationen und Gerüste
 > * Erstellen von Registerkarten Inhalten
 > * Aktualisieren des Farbdesigns einer Registerkarte basierend auf der Benutzereinstellung
 
 ## <a name="1-identify-relevant-app-project-components"></a>1. Identifizieren der relevanten App-Projektkomponenten
 
-Ein Großteil des App-Manifests und Gerüste werden automatisch eingerichtet, wenn Sie Ihr Projekt mit dem Teams-Toolkit erstellen. Lassen Sie uns die Hauptkomponenten für die Erstellung einer persönlichen Registerkarte betrachten.
+Viele der APP-Konfigurationen und Gerüste werden automatisch eingerichtet, wenn Sie Ihr Projekt mit dem Teams-Toolkit erstellen. Lassen Sie uns die Hauptkomponenten für die Erstellung einer persönlichen Registerkarte betrachten.
 
-### <a name="app-manifest"></a>App-Manifest
+### <a name="app-configurations"></a>App-Konfigurationen
 
-Der folgende Ausschnitt aus dem App-Manifest (die `manifest.json` Datei im Verzeichnis des Projekts `.publish` ) zeigt an [`staticTabs`](../resources/schema/manifest-schema.md#statictabs) , welche Eigenschaften und Standardwerte für persönliche Registerkarten relevant sind.
+Sie können Ihre APP-Konfigurationen mithilfe von App Studio anzeigen und aktualisieren, die im Toolkit enthalten ist.
 
-```JSON
-"staticTabs": [
-    {
-        "entityId": "index",
-        "name": "Personal Tab",
-        "contentUrl": "{baseUrl0}/tab",
-        "scopes": [ "personal" ]
-    }
-],
-```
-
-* `entityId`: Ein eindeutiger Bezeichner für die Seite, die von der Registerkarte angezeigt wird.
-* `name`: Der Anzeigename der Registerkarte (beispielsweise "meine Kontakte").
-* `contentUrl`: Die Host-URL die Registerkarteninhalts Seite (muss https sein).
-* `scopes`: Gibt an, dass die Registerkarte nur zur persönlichen Verwendung verwendet wird.
+Während des Setups hat das Toolkit zunächst die Inhaltsseite für Registerkarten konfiguriert, auf der Sie Ihren primären Inhalt anzeigen können. Wechseln Sie im Toolkit zu **App Studio** , und wählen Sie **Registerkarten** aus, um die Konfiguration anzuzeigen.
 
 ### <a name="app-scaffolding"></a>App-Gerüste
 
-Das App-Gerüst stellt die Komponenten zum Rendern Ihrer Registerkarte in Microsoft Teams bereit. Es gibt eine Menge, mit der Sie arbeiten können, aber im Moment müssen Sie sich nur auf Folgendes konzentrieren:
+Das App-Gerüst stellt die Komponenten zum Rendern Ihrer persönlichen Registerkarte in Microsoft Teams bereit. Es gibt eine Menge, mit der Sie arbeiten können, aber im Moment müssen Sie sich nur auf Folgendes konzentrieren:
 
-* `Tab.js` Datei im `src/components` Verzeichnis des Projekts
-* Microsoft Teams JavaScript-Client-SDK, das in den Front-End-Komponenten Ihres Projekts vorinstalliert ist
+* `Tab.js` Datei im `src/components` Verzeichnis des Projekts. Dies dient zum Rendern Ihrer Registerkarteninhalts Seite.
+* Microsoft Teams JavaScript-Client-SDK, das in den Front-End-Komponenten Ihres Projekts vorinstalliert ist.
 
 ## <a name="2-customize-your-tab-content-page"></a>2. Anpassen der Inhaltsseite der Registerkarte
 
@@ -181,19 +167,19 @@ if (isTheme === "default") {
 
 Überprüfen Sie Ihre Registerkarte in Microsoft Teams. Die Darstellung sollte eng mit dem dunklen Design übereinstimmen.
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Screenshot einer persönlichen Registerkarte mit statischem Inhalt.":::
+:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Screenshot einer persönlichen Registerkarte mit statischer Inhaltsansicht.":::
 
 ## <a name="well-done"></a>Gut gemacht
 
 Herzlichen Glückwunsch! Sie verfügen über eine Teams-App mit einer persönlichen Registerkarte, die es einfacher macht, wichtige Kontakte in Ihrer Organisation zu finden.
 
-## <a name="learn-more"></a>Weitere Informationen
+## <a name="learn-more"></a>Mehr erfahren
 
 * [Authentifizieren von Registerkarten Benutzern mit SSO](../tabs/how-to/authentication/auth-aad-sso.md): Wenn Sie nur autorisierte Benutzer Ihrer Registerkarte anzeigen möchten, richten Sie einmaliges Anmelden (Single Sign-on, SSO) über Azure Active Directory (AD) ein.
 * [Einbetten von Inhalten aus einer vorhandenen Web-App oder Webseite](../tabs/how-to/add-tab.md#tab-requirements): Wir haben gezeigt, wie Sie neue Inhalte für eine persönliche RegisterkarteErstellen, aber Sie können auch Inhalte aus einer externen URL laden.
 * [Erstellen Sie eine nahtlose Benutzeroberfläche für Ihre Registerkarte](../tabs/design/tabs.md): Lesen Sie die empfohlenen Richtlinien für das Entwerfen von Microsoft Teams-Registerkarten.
 * [Erstellen von Registerkarten für Mobilgeräte](../tabs/design/tabs-mobile.md): Hier erfahren Sie, wie Sie Registerkarten für Telefone und Tablets entwickeln.
-* [Integration in die Microsoft Graph-API](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Verwenden von Teams-Daten mit der Microsoft Graph-API](https://docs.microsoft.com/graph/teams-concept-overview)
 * [Erstellen einer Registerkarte ohne Toolkit](../tabs/how-to/add-tab.md)
 
 ## <a name="next-lesson"></a>Nächste Lektion

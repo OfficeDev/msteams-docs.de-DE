@@ -3,14 +3,14 @@ title: Erste Schritte – Erstellen eines bot
 author: heath-hamilton
 description: Erstellen Sie schnell einen Microsoft Teams-bot mithilfe des Microsoft Teams-Toolkits.
 ms.author: lajanuar
-ms.date: 10/09/2020
+ms.date: 11/04/2020
 ms.topic: tutorial
-ms.openlocfilehash: 78fe535137864a72dcacf20857572599a7c2409a
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 1229064ac6b7aab73c50048f0764c6a2353ab54a
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452792"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931739"
 ---
 # <a name="build-a-bot-for-microsoft-teams"></a>Erstellen eines bot für Microsoft Teams
 
@@ -18,19 +18,19 @@ In diesem Lernprogramm erstellen Sie eine einfache *bot* -app. Ein bot fungiert 
 
 ## <a name="your-assignment"></a>Ihre Zuordnung
 
-Ihr Arbeitsplatz verwendet [Registerkarten](../build-your-first-app/build-personal-tab.md) , um wichtige Kontaktinformationen in Microsoft Teams zu Surface. Kollegen haben beispielsweise schnellen Zugriff auf die Telefonnummer des Helpdesks. Aber statt aufzurufen, was wäre, wenn Personen mit einem Chatbot Kontakt zum Helpdesk aufnehmen könnten? Ihr Chef bittet Sie, sich anzusehen, wie schnell Sie einen einfachen Unterhaltungs bot in Microsoft Teams in Betrieb nehmen können.
+Ihr Arbeitsplatz hat eine Teams-App erstellt, die [Registerkarten](../build-your-first-app/build-personal-tab.md) verwendet, um wichtige Kontaktinformationen zu Surface. Kollegen haben beispielsweise schnellen Zugriff auf die Telefonnummer des Helpdesks. Aber statt aufzurufen, was wäre, wenn Personen mit einem Chatbot Kontakt zum Helpdesk aufnehmen könnten? Ihr Chef bittet Sie, sich anzusehen, wie schnell Sie einen einfachen Unterhaltungs bot in Microsoft Teams in Betrieb nehmen können.
 
 ## <a name="what-youll-learn"></a>Was Sie lernen
 
 > [!div class="checklist"]
 >
 > * Erstellen eines App-Projekts und bot mithilfe des Microsoft Teams-Toolkits für Visual Studio Code
-> * Identifizieren der Eigenschaften und Gerüste für App-Manifeste, die für Bots relevant sind
+> * Identifizieren der für Bots relevanten App-Konfigurationen und Gerüste
 > * Lokal Hosten einer APP
 > * Konfigurieren eines bot für Teams
 > * Querladen und Testen eines bot in Microsoft Teams
 
-## <a name="before-you-begin"></a>Vorabinformationen
+## <a name="before-you-begin"></a>Bevor Sie beginnen
 
 Wenn Sie noch nicht vorhanden sind, stellen Sie sicher, dass Sie [die Entwicklungsvoraussetzungen für Teams kennen und installieren](build-first-app-overview.md#get-prerequisites).
 
@@ -38,116 +38,62 @@ Wenn Sie noch nicht vorhanden sind, stellen Sie sicher, dass Sie [die Entwicklun
 
 Das Microsoft Teams-Toolkit hilft Ihnen, die folgenden Komponenten für Ihre APP einzurichten:
 
-* **App-Manifest und** für Bots relevante Gerüste
+* **App-Konfigurationen und** für Bots relevante Gerüste
 * **Bot** , der automatisch beim Microsoft Azure bot-Dienst registriert wird
 
 > [!TIP]
 > Wenn Sie noch kein Teams-App-Projekt erstellt haben, ist es möglicherweise hilfreich, [diese Anweisungen](../build-your-first-app/build-and-run.md) zu befolgen, mit denen Projekte detaillierter erläutert werden.
 
-1. Wählen Sie in Visual Studio Code **Microsoft Teams** in :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: der linken Aktivitäts Leiste aus, und wählen Sie **neue Teams-app erstellen**aus.
+1. Wählen Sie in Visual Studio Code **Microsoft Teams** in :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: der linken Aktivitäts Leiste aus, und wählen Sie **neue Teams-app erstellen** aus.
+1. Wenn Sie dazu aufgefordert werden, melden Sie sich mit Ihrem Microsoft 365-entwicklungskonto an.
+1. Wählen Sie auf dem Bildschirm **Funktionen hinzufügen** die Option **bot** und dann **weiter** aus.
 1. Geben Sie einen Namen für Ihre Teams-App ein. (Dies ist der Standardname für Ihre APP und auch der Name des App-Projektverzeichnisses auf Ihrem lokalen Computer.)
-1. Wählen Sie auf dem Bildschirm **Funktionen hinzufügen** die Option **bot** und dann **weiter**aus.
-1. Wählen Sie **Create a New bot** and **Login** aus, um sich mit Ihrem Microsoft 365-entwicklungskonto anzumelden.<br/>
-:::image type="content" source="../assets/images/build-your-first-app/vsc-create-bot.png" alt-text="Abbildung, die zeigt, wie Sie sich im Teams-Toolkit bei Ihrem Microsoft 365-Konto anmelden können, um einen neuen bot zu erstellen.":::
-1. Speichern Sie Ihre bot-ID und Ihr Kennwort (Sie benötigen dies ein wenig später).
-1. Optional Geben Sie einen benutzerdefinierten Namen für Ihren bot ein, und wählen Sie **Erstellen**aus. (Denken Sie daran, dies ist der Name für Ihren bot und nicht der Name der Microsoft Teams-APP, die Sie bereits angegeben haben.)
-1. Klicken Sie unten auf dem Bildschirm auf **Fertig stellen** , um Ihr Projekt zu konfigurieren.
+1. Wechseln Sie zu **configure bot** , und wählen Sie **Create a New bot** und dann **Create bot Registration** aus. Wenn die Methode erfolgreich verläuft, wird Ihr neuer bot einen **registrierten** Status haben.
+1. Klicken Sie unten auf dem Bildschirm auf **Fertig stellen** , und wählen Sie einen Speicherort aus, um das Projekt zu erstellen.
 
 ## <a name="2-identify-relevant-app-project-components"></a>2. Identifizieren der relevanten App-Projektkomponenten
 
-Ein Großteil des App-Manifests und Gerüste werden automatisch eingerichtet, wenn Sie Ihr Projekt mit dem Teams-Toolkit erstellen. Lassen Sie uns die Hauptkomponenten zum Erstellen eines bot betrachten.
+Viele der APP-Konfigurationen und Gerüste werden automatisch eingerichtet, wenn Sie Ihr Projekt mit dem Teams-Toolkit erstellen. Lassen Sie uns die Hauptkomponenten zum Erstellen eines bot betrachten.
 
-### <a name="app-manifest"></a>App-Manifest
+### <a name="app-configurations"></a>App-Konfigurationen
 
-Im folgenden Codeausschnitt aus dem App-Manifest (die `manifest.json` Datei im Verzeichnis des Projekts `.publish` ) werden die Eigenschaften und Standardwerte für Bots angezeigt.
-
-```JSON
-"bots": [
-    {
-        "botId": "{botId0}",
-        "scopes": [
-            "personal",
-            "groupchat",
-            "team"
-        ],
-        "supportsFiles": false,
-        "isNotificationOnly": false,
-        "commandLists": [
-            {
-                "scopes": [
-                    "personal",
-                    "groupchat",
-                    "team"
-                ],
-                "commands": [
-                    {
-                        "title": "Hello",
-                        "description": "Sends a hello message and @mention the sender"
-                    }
-                ]
-            }
-        ]
-    }
-],
-```
-
-Lassen Sie uns im Moment nur auf die folgenden erforderlichen Eigenschaften konzentrieren. (Weitere Informationen finden Sie in der vollständigen Liste unterstützter [`bots`](../resources/schema/manifest-schema.md#bots) Eigenschaften.)
-
-* `botId`: Die ID des bot, den Sie zum Einrichten Ihres Projekts erstellt haben. (In gespeichert `{botId0}` , können Sie die tatsächliche ID in suchen `Development.env` .)
-* `scopes`: Gibt an, ob Ihr bot in `personal` -, `groupchat` -oder- `team` (also Kanal-) Kontexten verfügbar ist.
-* `commands`: Verfügbare Befehle, die Benutzer an Ihren bot senden können.
-* `title`: Bot-Befehlsname, der im Teams-Client angezeigt wird.
-* `description`: Eine kurze Beschreibung oder ein Beispiel für die Syntax und die Argumente, mit denen Benutzer verstehen, was ein bot-Befehl bewirkt.
+Um Ihre bot-Konfigurationen anzuzeigen oder zu aktualisieren, wählen Sie **App Studio** im Toolkit aus, und wechseln Sie zu **Bots**.
 
 ### <a name="app-scaffolding"></a>App-Gerüste
 
 Das App-Gerüst enthält eine `botActivityHandler.js` Datei, die sich im Stammverzeichnis des Projekts befindet, um zu behandeln, wie Ihr Bot Aktivitäten in Microsoft Teams verarbeitet (beispielsweise, wie der bot auf bestimmte Nachrichten wie "Hello" reagiert).
 
-Die `.env` Datei, auch im Stammverzeichnis, speichert Ihre bot-ID und Ihr Kennwort.
-
 ## <a name="3-set-up-a-secure-tunnel-to-your-app"></a>3. Einrichten eines sicheren Tunnels für Ihre APP
 
-Zu Testzwecken hosten wir Ihren bot auf einem lokalen Webserver (Port 3978).
+Zu Testzwecken hosten wir Ihre APP auf einem lokalen Webserver (Port 3978).
 
+1. Wenn Sie noch nicht vorhanden sind, installieren Sie [ngrok](https://ngrok.com/download).
 1. Führen Sie in einem Terminal aus `ngrok http -host-header=rewrite 3978` .
-1. Kopieren Sie die HTTPS-URL in der Ausgabe, da für Teams HTTPS-Verbindungen erforderlich sind.
-1. Öffnen Sie in Ihrem `.publish` Verzeichnis `Development.env` .
-1. Ersetzen Sie den `baseUrl0` Wert durch die kopierte URL. (Ändern Sie beispielsweise `baseUrl0=http://localhost:3000` in `baseUrl0=https://85528b2b3ca5.ngrok.io` .)
+1. Kopieren Sie die HTTPS-URL in der Ausgabe (beispielsweise `https://468b9ab725e9.ngrok.io` ), da für Teams HTTPS-Verbindungen erforderlich sind.
 
-Ihr App-Manifest zeigt auf die Stelle, an der Sie den bot hosten.
+Mit dieser URL können Teams (für die HTTPS-Verbindungen erforderlich sind) in der Lage sein, zu dem Ort zu gelangen, an dem Sie Ihre APP hosten ( `localhost` auf Port 3978).
 
 ## <a name="4-configure-your-bot"></a>4. Konfigurieren Ihres bot
 
 Um einen bot in Microsoft Teams zu verwenden, müssen Sie ihn bei dem Azure bot-Dienst registrieren. Glücklicherweise wird dies automatisch durchgeführt, wenn Sie Ihre APP mit dem Teams-Toolkit einrichten.
 
-### <a name="specify-your-bot-id-and-password"></a>Geben Sie Ihre bot-ID und Ihr Kennwort ein.
+Sie müssen immer noch eine Endpunktadresse angeben, um Benutzer Nachrichten (d. h., Anforderungen) zu empfangen und zu verarbeiten, die an den bot gesendet werden. Normalerweise sieht die URL wie aus `https://HOST_URL/api/messages` . Sie können diese schnell im Toolkit konfigurieren.
 
-Wenn Ihr bot mit dem Azure bot-Dienst registriert ist, erhält er eine ID und ein Kennwort, über die ihre Teams-App Bescheid wissen muss.
-
-1. Suchen Sie die bot-ID und das Kennwort, die Sie während des Toolkit-Setups gespeichert haben.
-1. Öffnen Sie in Ihrem Stammverzeichnis die `.env` Datei.
-1. Fügen Sie Ihre bot-ID und Ihr Kennwort zu `BotId` bzw `BotPassword` . hinzu.
-
-### <a name="add-the-bot-endpoint-address"></a>Hinzufügen der bot-Endpunktadresse
-
-Sie müssen eine Endpunkt-URL angeben, um Benutzer Nachrichten (d. h., Anforderungen) zu empfangen und zu verarbeiten, die an den bot gesendet werden. Normalerweise sieht die URL wie aus `https://HOST_URL/api/messages` . Sie können dies schnell im Teams-Toolkit konfigurieren.
-
-1. Wählen Sie in Visual Studio Code **Microsoft Teams** in :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: der linken Aktivitäts Leiste aus, und wählen Sie **Microsoft Teams Toolkit öffnen**aus.
-1. Wechseln Sie zu **bot Management > vorhandene bot-Registrierungen** , und wählen Sie den bot aus, den Sie während des Setups erstellt haben.
-1. Geben Sie in das Feld **bot-Endpunktadresse** den lokalen Webserver ein, auf dem Sie den bot hosten ( `baseUrl10` Wert), und fügen Sie `/api/messages` ihn hinzu.
-
-    :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="Abbildung, die zeigt, wie Sie sich im Teams-Toolkit bei Ihrem Microsoft 365-Konto anmelden können, um einen neuen bot zu erstellen.":::
+1. Wählen Sie in Visual Studio Code **Microsoft Teams** in :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: der linken Aktivitäts Leiste aus, und wählen Sie **Microsoft Teams Toolkit öffnen** aus.
+1. Wechseln Sie zu **Bots > vorhandene bot-Registrierungen** , und wählen Sie den bot aus, den Sie während des Setups erstellt haben.
+1. Geben Sie im Feld **bot-Endpunktadresse** die ngrok-URL (beispielsweise) ein, in der `https://468b9ab725e9.ngrok.io` Sie den bot hosten und `/api/messages` an ihn anfügen.<br/>
+    :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="Abbildung zeigt, wo Sie die bot-Endpunkt-URL im Teams-Toolkit konfigurieren können.":::
 
 Ihr bot wird in der Lage sein, auf Nachrichten in Microsoft Teams zu antworten.
 
-## <a name="5-run-your-app"></a>5. führen Sie Ihre APP aus.
+## <a name="5-build-and-run-your-app"></a>5. erstellen und Ausführen der APP
 
-Sie haben eine URL zum Hosten Ihres bot eingerichtet und für die Verarbeitung von Nachrichten konfiguriert. Es ist an der Zeit, dass Ihr bot in Betrieb geht.
+Sie haben eine URL zum Hosten Ihres bot eingerichtet und für die Verarbeitung von Nachrichten konfiguriert. Es ist an der Zeit, Ihre APP in Betrieb zu nehmen.
 
 1. Wechseln Sie in einem Terminal zum Stammverzeichnis des App-Projekts, und führen Sie es aus `npm install` .
 1. Ausführen `npm start` .
 
-Wenn die Meldung erfolgreich verläuft, wird die folgende Meldung angezeigt, die darauf hinweist, dass Ihr bot ihre Aktivität überwacht `localhost` :
+Wenn die Aktion erfolgreich verläuft, wird die folgende Meldung angezeigt, die besagt, dass Ihr bot ihre Aktivität überwacht `localhost` :
 
 `Bot/ME service listening at http://localhost:3978`
 
@@ -156,25 +102,20 @@ Wenn die Meldung erfolgreich verläuft, wird die folgende Meldung angezeigt, die
 Wenn Ihr bot läuft, können Sie ihn in Microsoft Teams installieren.
 
 > [!TIP]
-> Wenn Sie noch keine Teams-App quer geladene haben und Probleme haben, führen Sie die folgenden [Schritte](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams)aus.
+> Wenn Sie noch keine Teams-App quer geladene haben und Probleme haben, führen Sie die folgenden [Schritte](../build-your-first-app/build-and-run.md#4-sideload-your-app-in-teams)aus.
 
-1. Melden Sie sich mit Ihrem Konto beim Microsoft Teams-Client an, das App-Sideloading zulässt.
-1. Wählen Sie **apps**aus, und wählen Sie dann **benutzerdefinierte App hochladen**aus.
-1. Wechseln Sie zu Ihrem APP `.publish` -Projektordner, und wählen Sie aus `Development.zip` .
-1. Wählen Sie im modalen Installationsmodus die Option **Hinzufügen** aus, um Ihre APP zu installieren.
+1. Drücken Sie in Visual Studio Code die **F5** -Taste, um einen Microsoft Teams-WebClient zu starten.
+1. Wählen Sie im Dialogfeld App-Installation die Option **für mich hinzufügen** aus. (Sie können den bot einem Kanal oder Chat hinzufügen, aber er ist für andere nicht störend, um einen bot in einem Einzelchat zu testen.)
 
 ## <a name="7-test-your-bot"></a>7. Testen Sie Ihren bot
 
-Nun zum spaßigen Teil: sagen wir "Hallo" zu Ihrem bot in einem Einzelchat.
+Nun zum spaßigen Teil: sagen wir "Hallo" zu Ihrem bot.
 
-1. Wählen Sie in Microsoft **More** Teams :::image type="icon" source="../assets/icons/teams-client-more.png"::: auf der linken Seite Weitere aus.
-1. Suchen und wählen Sie den bot, den Sie gerade quer geladene.<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/bot-teams-access.png" alt-text="Abbildung, die zeigt, wie Sie sich im Teams-Toolkit bei Ihrem Microsoft 365-Konto anmelden können, um einen neuen bot zu erstellen.":::
 1. Senden Sie im Feld Verfassen eine `Hello` Nachricht.
 
 Ihr bot antwortet mit so etwas wie der folgenden Nachricht.
 
-:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="Abbildung, die zeigt, wie Sie sich im Teams-Toolkit bei Ihrem Microsoft 365-Konto anmelden können, um einen neuen bot zu erstellen.":::
+:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="Ein Screenshot mit einem Benutzer, der &quot;Hello&quot; zu einem Team-bot und einer Antwort ruft.":::
 
 ## <a name="well-done"></a>Gut gemacht
 
@@ -184,22 +125,13 @@ Herzlichen Glückwunsch! Sie haben einen einfachen Teams-bot, der mit Benutzern 
 
 Die folgenden Informationen können hilfreich sein, wenn beim Abschluss dieses Lernprogramms Probleme aufgetreten sind.
 
-### <a name="toolkit-setup-fails"></a>Toolkit-Setup schlägt fehl
-
-Beim Einrichten Ihres App-Projekts mit dem Teams-Toolkit erhalten Sie eine Fehlermeldung, nachdem Sie die Option **neue bot erstellen** ausgewählt und sich mit Ihrem Microsoft 365-entwicklungskonto angemeldet haben.
-
-Hierbei kann es sich um ein Authentifizierungsproblem handeln. Führen Sie die folgenden Schritte aus, um das Einrichten Ihres Projekts abzuschließen.
-
-1. Wählen Sie in Visual Studio Code **Microsoft Teams** in :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: der linken Aktivitäts Leiste aus, und wählen Sie **Abmelden aus**.
-1. Durchlaufen Sie den Setupvorgang erneut, indem Sie sich mit demselben Konto anmelden und einen neuen bot erstellen.
-
 ### <a name="bot-isnt-connected-to-teams"></a>Bot ist nicht mit Microsoft Teams verbunden
 
-Wenn Sie Ihre APP installiert haben, aber der bot nicht funktioniert, stellen Sie sicher, dass der bot [mit dem Microsoft Teams- *Kanal*des Azure bot-Diensts verbunden](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)ist.
+Wenn Sie Ihre APP installiert haben, aber der bot nicht funktioniert, stellen Sie sicher, dass der bot [mit dem Microsoft Teams- *Kanal* des Azure bot-Diensts verbunden](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)ist.
 
 Es ist wichtig zu verstehen, dass dies nicht mit einem Kanal in Microsoft Teams identisch ist. In diesem Fall stellt ein Kanal dar, wie der Azure bot-Dienst Ihren bot mit Teams oder einer anderen [unterstützten Microsoft-oder Drittanbieter-Kommunikations-App](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)verbindet.
 
-## <a name="learn-more"></a>Weitere Informationen
+## <a name="learn-more"></a>Mehr erfahren
 
 * [Sehen Sie sich an, was andere Teams-Bots mit einem unserer Beispiele tun können](https://github.com/microsoft/BotBuilder-Samples#teams-samples)
 * [Grundlegende Informationen zu Bot-Unterhaltungen](../bots/how-to/conversations/conversation-basics.md)

@@ -2,12 +2,12 @@
 title: Entwurfsrichtlinien für Registerkarten
 description: Beschreibt die Richtlinien zum Erstellen von Registerkarten für Inhalt und Zusammenarbeit.
 keywords: Teams Design Guidelines Reference Framework Registerkartenkonfiguration Kanal Registerkarte statische Registerkarte einfache Registerkarte Designteams Registerkarte
-ms.openlocfilehash: 7636159e26a4000efb1d89dd8e9921a91cb5aa39
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 9ce72e97fa92e7d5db0fd51f29b2b905f378e788
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796211"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931799"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Inhalte und Unterhaltungen auf einmal mithilfe von Registerkarten
 
@@ -59,9 +59,9 @@ Es gibt inhärente Navigationsprobleme mit der Hierarchie der tiefen Navigation 
 
 > [!div class="checklist"]
 >
-> * **Öffnet ein Aufgabenmodul wie eine einzelne Arbeitsaufgabe oder Entität** . Dies schließt einen vollständigen Chat aus und ist die beste Option, um den Chat speziell für die Registerkarte und nicht für die unter Entitäten oder Bearbeitungs Erfahrungen zu halten.
->* **Öffnet ein Pseudo Dialogfeld in einem IFRAME** . Wenn Sie mit einem geschirmten Hintergrund verwendet wird, empfiehlt es sich, die hellere Farbe anstelle der Dunkelheit zu verwenden. Die `app-gray-10 at 30%` Transparenz funktioniert gut.
->* **Öffnet eine Browser Seite** .
+> * **Öffnet ein Aufgabenmodul wie eine einzelne Arbeitsaufgabe oder Entität**. Dies schließt einen vollständigen Chat aus und ist die beste Option, um den Chat speziell für die Registerkarte und nicht für die unter Entitäten oder Bearbeitungs Erfahrungen zu halten.
+>* **Öffnet ein Pseudo Dialogfeld in einem IFRAME**. Wenn Sie mit einem geschirmten Hintergrund verwendet wird, empfiehlt es sich, die hellere Farbe anstelle der Dunkelheit zu verwenden. Die `app-gray-10 at 30%` Transparenz funktioniert gut.
+>* **Öffnet eine Browser Seite**.
 
 ### <a name="personality"></a>Persönlichkeit
 
@@ -130,13 +130,71 @@ Wann immer möglich, sollten Karten und Bots einen tiefen Link zu umfangreichere
 
 In vielen Fällen wird der Name Ihrer APP zu einem großen Registerkartennamen. Sie sollten Ihre Registerkarten jedoch auch entsprechend der von Ihnen bereitgestellten Funktionen benennen.
 
+### <a name="multi-window"></a>Multi-Window
+
+Kanal Registerkarten mit komplexen Bearbeitungsfunktionen müssen die Editoransicht in mehreren Fenstern anstatt in einer Registerkarte öffnen.
+
+### <a name="no-horizontal-scrolling"></a>Kein horizontaler Bildlauf
+
+Die Registerkarte sollte keinen horizontalen Bildlauf aufweisen.
+
+### <a name="easy-navigation"></a>Einfache Navigation
+
+Navigation in einer Tab-app muss einfach zu folgen, dh Seiten haben die folgenden, falls erforderlich/zutreffend:
+* Zurück-Schaltflächen
+* Seitenüberschriften
+* Breadcrumbs
+* Hamburger-Menüs
+
+### <a name="undo-last-action"></a>Letzte Aktion rückgängig machen
+
+Der Benutzer muss in der Lage sein, die letzte Aktion in der APP rückgängig zu machen.
+
+### <a name="share-content"></a>Freigeben von Inhalten
+
+Mit persönlichen apps sollten Benutzer Inhalte aus einer persönlichen App-Umgebung mit anderen Teammitgliedern teilen können. Auf der Registerkarte Kanal muss eine Navigation bereitgestellt werden, die die Navigation in den Haupt Teams ergänzt, statt Konflikte mit dieser zu verursachen (beispielsweise linke Schienen Navigationsleisten).
+
+### <a name="single-view"></a>Einzelne Ansicht
+
+Persönliche apps sollten Inhalte aus Gruppen-oder Gruppenchat-Instanzen dieser app in einer einzigen Ansicht präsentieren, beispielsweise sollte ein Trello-Benutzer in der Lage sein, alle Instanzen von Trello-Karten anzuzeigen, an denen Sie teilnehmen, in Ihrer persönlichen app.
+
+### <a name="no-app-bar"></a>Keine app-Leiste
+
+Registerkarten sollten keine app-Leiste mit Symbolen in der linken Schiene bereitstellen, die mit der Navigation in den Haupt Teams in Konflikt stehen.
+
+### <a name="navigation"></a>Navigation
+
+Registerkarten sollten in der APP nicht mehr als 3 Navigationsebenen aufweisen.
+
+### <a name="l2l3-view"></a>L2/L3-Ansicht
+
+Sekundäre und tertiäre Seiten in einer Registerkarte sollten in einer L2/L3-Ansicht im Hauptregister Bereich geöffnet werden, der über die Breadcrumb-Taste navigiert wird.
+
+### <a name="no-link-to-external-browser"></a>Keine Verknüpfung mit externem Browser
+
+Verknüpfungsziele in Registerkarten sollten nicht mit einem externen Browser verknüpft werden, sondern sollten mit div-Elementen in Microsoft Teams verknüpft sein, beispielsweise innerhalb von Aufgaben Modulen, Registerkarten usw.
+
 ## <a name="notifications-for-tabs"></a>Benachrichtigungen für Registerkarten
 
 Es gibt zwei Benachrichtigungs Modi für Änderungen an Registerkarten Inhalten:
 
 > [!div class="checklist"]
 >
-> * **Verwenden Sie die APP-API, um Benutzer über Änderungen zu informieren** . Diese Meldung wird im Aktivitätsfeed des Benutzers und im Deep-Link zur Registerkarte angezeigt. *Weitere Informationen finden Sie unter*  [Erstellen von Deep Links zu Inhalten und Features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
-> * **Verwenden Sie einen bot** . Diese Methode wird vor allem bevorzugt, wenn der Tab-Thread gezielt ist. Das Ergebnis ist, dass die Thread-Unterhaltung der Registerkarte als kürzlich aktiviert in die Ansicht verschoben wird. Diese Methode ermöglicht auch eine gewisse Raffinesse in der Art und Weise, wie die Benachrichtigung gesendet wird.
+> * **Verwenden Sie die APP-API, um Benutzer über Änderungen zu informieren**. Diese Meldung wird im Aktivitätsfeed des Benutzers und im Deep-Link zur Registerkarte angezeigt. *Weitere Informationen finden Sie unter*  [Erstellen von Deep Links zu Inhalten und Features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
 
-  Durch das Senden einer Nachricht an einen Tab-Thread wird das Bewusstsein der Aktivität für alle Benutzer erhöht, ohne dass alle Personen explizit benachrichtigt werden. Dies ist die Sensibilisierung ohne Rauschen. Darüber hinaus `@mention`  wird bei bestimmten Benutzern die gleiche Benachrichtigung in Ihren Feed eingefügt, indem Sie Sie direkt mit dem Tab-Thread verbindet.
+> * **Verwenden Sie einen bot**. Diese Methode wird vor allem bevorzugt, wenn der Tab-Thread gezielt ist. Das Ergebnis ist, dass die Thread-Unterhaltung der Registerkarte als kürzlich aktiviert in die Ansicht verschoben wird. Diese Methode ermöglicht auch eine gewisse Raffinesse in der Art und Weise, wie die Benachrichtigung gesendet wird.
+
+Durch das Senden einer Nachricht an einen Tab-Thread wird das Bewusstsein der Aktivität für alle Benutzer erhöht, ohne dass alle Personen explizit benachrichtigt werden. Dies ist die Sensibilisierung ohne Rauschen. Darüber hinaus `@mention`  wird bei bestimmten Benutzern die gleiche Benachrichtigung in Ihren Feed eingefügt, indem Sie Sie direkt mit dem Tab-Thread verbindet.
+
+### <a name="tab-design-best-practices"></a>Bewährte Methoden für den Tab-Entwurf
+
+* Mithilfe von persönlichen/statischen Registerkarten sollten Benutzer Inhalte aus einer persönlichen App-Umgebung mit anderen Teammitgliedern teilen können.
+* Personenbezogene/statische Registerkarten können Inhalte aus Gruppen-oder Gruppenchat-Instanzen dieser app in einer einzigen Ansicht darstellen.
+* Verknüpfungsziele in Registerkarten sollten nicht mit einem externen Browser verknüpft werden, sondern mit div-Elementen in Microsoft Teams verknüpft werden (Beispiel-innen, Aufgaben Module, Registerkarten usw.).
+* Registerkarten sollten auf die Designs des Teams reagieren. Wenn das Design "Teams" geändert wird, sollte sich das Design innerhalb der APP ebenfalls ändern, um dieses Design widerzuspiegeln.
+* Registerkarten sollten nach Möglichkeit in Teams gestaltete Komponenten verwenden. Dies bedeutet, dass Microsoft Teams-Schriftarten, Typ-Rampen, Farbpaletten, Rastersystem, Bewegung, Ton der Stimme usw. angenommen werden.
+* Registerkarten sollten Interaktionsverhalten von Teams für die in-Page-Navigation, die Position und die Verwendung von Dialogfeldern, Informations Hierarchien usw. verwenden.
+* Registerkarten sollten das standardmäßige Hamburger-Menü von Teams und/oder Breadcrumb für die in-App-Navigation verwenden. Registerkarten sollten keine app-Leiste mit Symbolen in der linken Schiene bereitstellen, die mit der Navigation in den Haupt Teams in Konflikt stehen.
+* Registerkarten sollten in der APP nicht mehr als drei Navigationsebenen aufweisen.
+* Sekundäre und tertiäre Seiten in einer Registerkarte sollten in einer L2/L3-Ansicht im Hauptregister Bereich geöffnet werden, der über die Breadcrumb-Taste navigiert wird.
+* Registerkarten mit komplexen Bearbeitungsfunktionen innerhalb der APP sollten die Editoransicht in mehreren Fenstern anstelle einer Registerkarte (für Desktop und Internet) öffnen.

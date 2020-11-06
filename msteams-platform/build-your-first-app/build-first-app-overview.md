@@ -3,14 +3,14 @@ title: Erste Schritte – Erstellen Ihrer ersten App-Übersicht und Voraussetzun
 author: heath-hamilton
 description: Erfahren Sie, wie Sie mit der Microsoft Teams-App-Entwicklung beginnen und Ihre Umgebung einrichten.
 ms.author: lajanuar
-ms.date: 10/09/2020
+ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: c158b7ad925e05e4056769536f5e0d212763942a
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 7fc3f7e9fd9d3c2a028999be53ba6bdcd5b3ba72
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452603"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931792"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>Erstellen Ihrer ersten Microsoft Teams-App-Übersicht
 
@@ -22,11 +22,11 @@ Hier ist eine Vorstellung davon, was Sie wissen, nachdem Sie die Lektionen durch
 
 > [!div class="checklist"]
   >
-  > * Mit dem Microsoft Teams Toolkit für Visual Studio Code können Sie **schnell mit dem Team-Toolkit in Kontakt**treten, um ein App-Projekt und ein Gerüst zu erstellen, damit Sie in wenigen Minuten eine laufende APP haben.
-  > * **Definieren Sie Ihre APP mit dem Manifest**: im App-Manifest geben Sie die Funktionen und Dienste an, die ihre Teams-App verwendet.
-  > * **Bereich der Benutzergruppe Ihrer APP**: Erstellen einer Teams-App für den persönlichen Gebrauch, die Zusammenarbeit oder beides.
-  > * **Erfahren Sie**mehr über Microsoft Teams-Frameworks: passen Sie Ihre APP an (ändern Sie beispielsweise Ihr Farbschema so, dass Sie mit dem Microsoft Teams-Design übereinstimmt), und helfen Sie dem JavaScript SDK von Teams. Außerdem finden Sie Informationen zu allgemeinen Tools zum Erstellen und Verwalten von Bots.
-  > * **Erweitern Sie Ihre APP**: in den Lektionen finden Sie Verwandte Themen, die Sie wahrscheinlich interessieren (beispielsweise Authentifizierungs-und Entwurfsrichtlinien).
+  > * Mit dem Microsoft Teams Toolkit für Visual Studio Code können Sie **schnell mit dem Team-Toolkit in Kontakt** treten, um ein App-Projekt und ein Gerüst zu erstellen, damit Sie in wenigen Minuten eine laufende APP haben.
+  > * **Konfigurieren Ihrer APP mit App Studio** : Geben Sie die Funktionen und Dienste an, die ihre Teams-App verwendet.
+  > * **Bereich der Benutzergruppe Ihrer APP** : Erstellen einer Teams-App für den persönlichen Gebrauch, die Zusammenarbeit oder beides.
+  > * **Erfahren Sie mehr über Microsoft Teams-Tools und SDKs** : passen Sie Ihre APP an (ändern Sie beispielsweise Ihr Farbschema so, dass Sie mit dem Microsoft Teams-Design übereinstimmt), und helfen Sie dem Microsoft Teams-JavaScript-SDK. Außerdem finden Sie Informationen zu allgemeinen Tools zum Erstellen und Verwalten von Bots.
+  > * **Erweitern Sie Ihre APP** : in den Lektionen finden Sie Verwandte Themen, die Sie wahrscheinlich interessieren (beispielsweise Authentifizierungs-und Entwurfsrichtlinien).
 
 ## <a name="teams-app-fundamentals"></a>Grundlagen der Microsoft Teams-App
 
@@ -34,15 +34,15 @@ Bevor Sie mit den Lernprogrammen beginnen, sollten Sie die folgenden Information
 
 ### <a name="apps-can-have-multiple-capabilities-and-entry-points"></a>Apps können über mehrere Funktionen und Einstiegspunkte verfügen.
 
-Microsoft Teams-apps bestehen aus einer oder mehreren [Plattformfunktionen](../concepts/capabilities-overview.md) und [Einstiegspunkten](../concepts/extensibility-points.md). Sie können Ihre App mithilfe einer Reihe von Teams-spezifischen [UI-Komponenten und Konventionen](../concepts/extensibility-points.md#ui-components)präsentieren, beispielsweise Karten und Aufgaben Module.
+Eine Teams-App besteht aus einer oder mehreren [Plattformfunktionen](../concepts/capabilities-overview.md) (wie die Benutzer die APP verwenden) und [Einstiegspunkten](../concepts/extensibility-points.md) (bei denen Personen die APP entdecken).
 
 ### <a name="teams-doesnt-host-your-app"></a>Ihre APP wird von Microsoft Teams nicht gehostet.
 
-Eine Teams-App umfasst drei wichtige Teile:
+Eine Teams-App umfasst die folgenden wichtigen Teile:
 
 * Die Logik, Datenspeicherung und API-Aufrufe, mit denen Ihre APP versorgt wird. Diese Dienste werden nicht von Microsoft Teams gehostet und müssen über HTTPS zugänglich sein.
 * Der Microsoft Teams-Client ("Internet", "Desktop" oder "Mobil"), auf dem Benutzer Ihre APP verwenden.
-* Ihr App-Paket, mit dem Sie die app in Microsoft Teams installieren. Sie enthält App-Metadaten und Zeiger auf Ihre gehosteten Dienste.
+* Ihre APP-ID, mit der Sie Ihre APP mit App Studio konfigurieren können.
 
 ## <a name="get-prerequisites"></a>Abrufen von Voraussetzungen
 
@@ -53,7 +53,7 @@ Stellen Sie sicher, dass Sie das richtige Konto für die Erstellung von Teams-ap
 Sie benötigen ein Teams-Konto, das benutzerdefinierte App-Sideloading zulässt. (Dies wird möglicherweise bereits von Ihrem Konto bereitgestellt.)
 
 1. Wenn Sie über ein Teams-Konto verfügen, überprüfen Sie, ob Sie apps in Microsoft Teams querladen können:
-    1. Wählen Sie im Microsoft Teams-Client **apps**aus.
+    1. Wählen Sie im Microsoft Teams-Client **apps** aus.
     1. Suchen Sie nach einer Option zum **Hochladen einer benutzerdefinierten App**.
 
     :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Abbildung zeigt, wo in Microsoft Teams eine benutzerdefinierte App hochgeladen werden kann.":::
@@ -67,9 +67,9 @@ Sie können ein kostenloses Test Konto für Teams erhalten, das App-Sideloading 
 
 1. Wechseln Sie zum [Microsoft 365-Entwicklerprogramm](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Wählen Sie **jetzt beitreten** aus, und folgen Sie den Anweisungen auf dem Bildschirm.
-1. Wenn Sie zum Begrüßungsbildschirm gelangen, wählen Sie **E5-Abonnement einrichten**aus.
+1. Wenn Sie zum Begrüßungsbildschirm gelangen, wählen Sie **E5-Abonnement einrichten** aus.
 1. Richten Sie Ihr Administratorkonto ein. Wenn Sie fertig sind, sollten Sie einen Bildschirm wie den folgenden sehen.
-:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Abbildung zeigt, wo in Microsoft Teams eine benutzerdefinierte App hochgeladen werden kann.":::
+:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Beispiel dessen, was nach der Anmeldung für das Microsoft 365-Entwicklerprogramm angezeigt wird.":::
 1. Melden Sie sich mit dem soeben eingerichteten Administratorkonto bei Microsoft Teams an.
 1. Überprüfen Sie, ob Sie nun die Option **benutzerdefinierte App hochladen** haben.
 
@@ -79,20 +79,20 @@ Sie können ein kostenloses Test Konto für Teams erhalten, das App-Sideloading 
 
 Sie können Teams-apps mit Ihren bevorzugten Tools erstellen, doch in diesen Lektionen wird gezeigt, wie Sie mit dem Microsoft Teams-Toolkit für Visual Studio-Code schnell loslegen können.
 
-Microsoft Teams zeigt App-Inhalte nur über HTTPS-Verbindungen an. Da Sie Ihre erste APP lokal hosten, um Zeit zu sparen, erfahren Sie, wie Sie mithilfe von [ngrok einen sicheren Tunnel](../concepts/build-and-test/debug.md#locally-hosted) zwischen Teams und ihrer App einrichten. (Teams auf Produktionsebene in Microsoft-apps werden in der Cloud gehostet.)
+Microsoft Teams zeigt App-Inhalte nur über HTTPS-Verbindungen an. Um bestimmte Arten von apps lokal zu debuggen, beispielsweise einen bot, erfahren Sie, wie Sie [ngrok verwenden, um einen sicheren Tunnel](../concepts/build-and-test/debug.md#locally-hosted) zwischen Teams und ihrer App einzurichten. (Produktions Teams-apps werden in der Cloud gehostet.)
 
 1. Installieren Sie [Node.js](https://nodejs.org/en/).
-1. Installieren Sie [ngrok](https://ngrok.com/download).
+1. Installieren Sie [ngrok](https://ngrok.com/download) , wenn Sie eine bot-oder Messaging-Erweiterung erstellen möchten.
 1. Installieren Sie die neueste Version von [Visual Studio-Code](https://code.visualstudio.com/download). (Frühere Versionen funktionieren möglicherweise nicht mit dem Toolkit.)
 1. Wählen Sie in Visual Studio Code in der linken Aktivitäts Leiste die Option **Extensions** aus, :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: und installieren Sie das **Microsoft Teams-Toolkit**.
 
-    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Abbildung zeigt, wo in Microsoft Teams eine benutzerdefinierte App hochgeladen werden kann.":::
+    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Abbildung zeigt, wo in Visual Studio Code Sie die Microsoft Teams Toolkit-Erweiterung installieren können.":::
 
 ## <a name="about-the-tutorials"></a>Informationen zu den Lernprogrammen
 
 Sie können mit einem der Teams beginnen, **Ihre ersten App** -Lektionen zu erstellen. Wenn Sie sich nicht sicher sind, wo Sie zuerst suchen, begeben Sie sich auf unseren anfängerfreundlichen Pfad und erstellen Sie ein "Hello, World!". App.
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Abbildung zeigt, wo in Microsoft Teams eine benutzerdefinierte App hochgeladen werden kann." border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Skill Tree mit Lernpfaden für die Lernprogramme zum Erstellen Ihrer ersten app." border="false":::
 
 ## <a name="next-step"></a>Nächster Schritt
 

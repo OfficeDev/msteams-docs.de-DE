@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: Teams-apps-Validierung am häufigsten fehlgeschlagene Testfälle schnellgenehmigung appsource veröffentlichen
-ms.openlocfilehash: 095a519d94cd6a19f9f4c8fbabcdb209476965d0
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: 6e3f6e09de68cdb00743c6954b999c35ceefcdf7
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877071"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931806"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Tipps für eine erfolgreiche App-Übermittlung
 
@@ -33,6 +33,10 @@ In diesem Artikel werden häufige Gründe für die Überprüfung von apps-Fehler
 * Bereitstellen von Hilfe-und Supportinformationen Es wird dringend empfohlen, dass Ihre APP einen Link zu Hilfe/FAQ für die Benutzeroberfläche mit der ersten Ausführung enthält. Für alle persönlichen apps wird empfohlen, ihre Hilfeseite als persönliche Registerkarte bereitzustellen, um eine bessere Benutzerfreundlichkeit zu erreichen.
 * Apps dürfen Benutzer nicht aus Teams für Hauptbenutzer Szenarien entfernen. Verwenden von Aufgaben Modulen AMD-Registerkarten werden empfohlen, um Informationen für den Benutzer in Microsoft Teams anzuzeigen.
 * Erhöhen Sie Ihre APP-Versionsnummer im Manifest, wenn Sie an ihrer Übermittlung Manifeste Änderungen vornehmen.
+* Die APP darf keine Benutzer aus Teams für Hauptbenutzer Szenarien entfernen. Verknüpfungsziele in apps dürfen nicht mit einem externen Browser verknüpft werden, sondern sollten mit div-Elementen in Microsoft Teams wie beispielsweise innerhalb von Aufgaben Modulen und Registerkarten verknüpft werden.
+* Mit persönlichen Apps können Benutzer Inhalte aus einer persönlichen App-Umgebung für andere Teammitglieder freigeben.
+* Kanal Registerkarten dürfen keine app-Leiste mit Symbolen in der linken Schiene zur Verfügung stellen, die mit der Navigation in den Haupt Teams in Konflikt stehen.
+* Kanal Registerkarten mit komplexen Bearbeitungsfunktionen innerhalb der APP sollten die Editoransicht in mehreren Fenstern anstelle einer Registerkarte öffnen.
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; bieten eine klare und einfache Anmeldung/abmelden und Anmelde Erfahrung
 
@@ -50,6 +54,7 @@ In diesem Artikel werden häufige Gründe für die Überprüfung von apps-Fehler
   * Autorisieren eines Kontos/Diensts => deaktivieren/verweigern eines Kontos/Diensts.
   * Registrieren eines Kontos/Diensts => Aufheben der Registrierung/kündigen eines Kontos/Diensts.
 * Wenn Ihre APP ein Konto oder einen Dienst benötigt, müssen Sie eine Möglichkeit für den Benutzer bereitstellen, sich anzumelden oder eine Anmeldeanforderung zu erstellen. Eine Ausnahme wird möglicherweise erteilt, wenn Ihre APP eine Unternehmensanwendung ist.
+* Stellen Sie sicher, dass Sie einen neuen Benutzer mit klaren Anleitungen für die Anmeldung zur Verwendung Ihrer APP-Dienste versehen. Wenn keine Ready Sign up-Verknüpfung verfügbar ist, können Sie in der APP-Beschreibungsseite, in der Willkommensnachricht, in der Hilfenachricht und im Anmeldefenster, in dem Sie von einem Benutzer bei Ihren Diensten angemeldet werden, einen klaren Weg nach vorn finden. Apps, die nicht über einen einfachen Registrierungs Fluss verfügen, können auch eine Hilfe-Registerkarte oder einen Link zu einer Webseite enthalten, auf der ein neuer Benutzer detaillierte Anleitungen zum Konfigurieren Ihrer APP mit Microsoft Teams sehen kann.  Dadurch wird sichergestellt, dass für einen neuen Benutzer keine Straßensperre angezeigt wird, wenn die APP zum ersten Mal ausprobiert wird.
 * Die Funktion "Anmelden/Abmelden" muss auf mobilen Clients funktionieren. Stellen Sie sicher, dass Sie das [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js) Version 1.4.1 oder höher verwenden.
 
 Weitere Informationen zur Authentifizierung finden Sie unter:
@@ -114,9 +119,13 @@ Ihr bot sollte auf alle Befehle reagieren und nicht auf den Endbenutzer. Hier si
 * **Fügen Sie Hilfeinhalte oder Anleitungen hinzu, wenn Ihr bot verloren geht**. Wenn Ihr bot die Benutzereingabe nicht verstehen kann, sollte er eine alternative Aktion vorschlagen. Zum Beispiel: "es tut mir *leid, ich verstehe nicht. Geben Sie "Hilfe" ein, um weitere Informationen zu erhalten. "* Reagieren Sie nicht mit einer Fehlermeldung oder einfach: *"Ich verstehe nicht"*. Nutzen Sie diese Möglichkeit, um Ihre Benutzer zu unterrichten.
 
 * **Verwenden Sie Adaptive Karten und Aufgaben Module, um Ihre bot-Antwort übersichtlicher und Umsetz** 
- barer zu machen. [Adaptive Karten mit Schaltflächen, die Aufgaben Module aufrufen](/task-modules-and-cards/task-modules/task-modules-bots) , verbessern die bot-Benutzeroberfläche. Diese Karten und Schaltflächen sind auf einem mobilen Gerät einfacher zu verwenden, im Gegensatz zu Ihrem Benutzer, der die Befehle tippt.
+ barer zu machen. [Adaptive Karten mit Schaltflächen, die Aufgaben Module aufrufen](/task-modules-and-cards/task-modules/task-modules-bots) , verbessern die bot-Benutzeroberfläche. Diese Karten und Schaltflächen sind im Gegensatz zu Ihrem Benutzer, der die Befehle eintippt, einfacher auf einem mobilen Gerät zu verwenden. Auch bot-Antworten sollten nicht Text mit langem Text sein. Bots müssen Adaptive Karten & Aufgaben Modulen anstelle von Konversations Chat-basierter Benutzeroberfläche und langwierigen Textantworten nutzen.
 
 * **Überdenken Sie alle Bereiche**. Stellen Sie sicher, dass Ihr bot geeignete Antworten bereitstellt, wenn Sie `@*botname*` in einem Kanal und in persönlichen Unterhaltungen erwähnt werden. Wenn Ihr bot keinen sinnvollen Kontext innerhalb des Bereichs Personal oder Teams bereitstellt, deaktivieren Sie diesen Bereich über das Manifest. (Weitere Informationen finden Sie unter `bots` Block in der [Microsoft Teams Manifest-Schemareferenz](~/resources/schema/manifest-schema.md#bots).)
+
+* **Vertrauliche Daten nicht pushen**. Bots dürfen keine vertraulichen Daten für ein Team, einen Gruppenchat oder eine 1:1-Unterhaltung pushen, bei denen die Benutzer nicht in der Lage sein sollten, diese Daten anzuzeigen.
+
+* **Geben Sie eine Willkommensnachricht ein**. Bot muss eine Fre-Willkommensnachricht bereitstellen, die ein interaktives Lernprogramm mit Karussell Karten oder "try it"-Schaltflächen enthält, um das Engagement zu fördern.
 
 ### <a name="9989-personal-bots-must-always-send-a-welcome-message-on-first-launch"></a>&#9989; persönliche Bots müssen beim ersten Start immer eine Willkommensnachricht senden.
 

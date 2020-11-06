@@ -4,12 +4,12 @@ author: laujan
 description: Details der verfügbaren Microsoft Low-und No Code-Lösungen für Teams
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 4b112a674df76d0bd33e1b461d6b2f194f764f7b
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 2dc9f6ed17a11407efbd4496439848266fc0a604
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210262"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931757"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Erstellen von benutzerdefinierten Low-Code-Apps für Microsoft Teams
 
@@ -94,3 +94,8 @@ Virtueller Assistent ist eine Open-Source-Vorlage von Microsoft, mit der Sie ein
 [Bekanntgabe von Power Platform-und Microsoft Teams-Updates, um Kunden bei der Anpassung an Remote-Arbeit zu unterstützen](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
 
 [Teams ist die Gestaltung der Zukunft der Arbeit mit Low-Code-Funktionen zur Verbesserung ihrer digitalen Arbeitsbereich](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180)
+
+### <a name="-managing-power-platform-apps"></a>✔ Verwalten von Power Platform-apps
+
+> [!div class="nextstepaction"]
+> [Verwalten von Microsoft Power Platform-apps im Microsoft Teams Admin Center](/microsoftteams/manage-power-platform-apps)

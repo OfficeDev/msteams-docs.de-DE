@@ -1,18 +1,17 @@
 ---
-title: Erste Schritte mit App Studio und Node. js
-description: Erste Schritte beim Erstellen von tollen apps in Microsoft Teams mit Node. js und App Studio
-keywords: Erste Schritte Node. js nodejs App Studio
-ms.date: 11/09/2018
+title: Erste Schritte mit App Studio und Node.js
+description: Erste Schritte beim Erstellen von tollen apps in Microsoft Teams mit Node.js und App Studio
+keywords: Erste Schritte node.js nodejs App Studio
 ms.topic: tutorial
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 92fbbdd30e9cdaf54644b42bf642ca5825bcec51
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: 3d86738d32c049d31a84c6c47746e275db5e6349
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034050"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931813"
 ---
-# <a name="get-started-on-the-microsoft-teams-platform-with-nodejs-and-app-studio"></a>Erste Schritte mit der Microsoft Teams-Plattform mit Node. js und App Studio
+# <a name="get-started-on-the-microsoft-teams-platform-with-nodejs-and-app-studio"></a>Erste Schritte mit der Microsoft Teams-Plattform mit Node.js und App Studio
 
 Die [Microsoft Teams](/microsoftteams/) -Entwicklerplattform erleichtert Ihnen das Erweitern von Teams und die nahtlose Integration ihrer eigenen Anwendungen und Dienste in den Arbeitsbereich "Teams". Diese Apps können dann an Ihr Unternehmen oder für Teams auf der ganzen Welt verteilt werden.
 
@@ -33,10 +32,10 @@ Führen Sie die folgenden Schritte aus, um eine einfache "Hello World"-app in Mi
 Um dieses Lernprogramm abzuschließen, benötigen Sie die folgenden Tools. Wenn Sie diese nicht bereits haben, können Sie Sie über diese Links installieren.
 
 - [Git](https://git-scm.com/downloads)
-- [Node. js und NPM](https://nodejs.org/)
+- [Node.js und NPM](https://nodejs.org/)
 - Abrufen eines beliebigen Text-Editors oder einer IDE. Sie können [Visual Studio-Code](https://code.visualstudio.com/download) kostenlos installieren und verwenden.
 
-Wenn Sie Optionen zum Hinzufügen `git`, `node` `npm`, und `code` dem Pfad während der Installation sehen, wählen Sie, um dies zu tun. Das ist praktisch.
+Wenn Sie Optionen zum Hinzufügen `git` , `node` , `npm` und `code` dem Pfad während der Installation sehen, wählen Sie, um dies zu tun. Das ist praktisch.
 
 Stellen Sie sicher, dass die Tools verfügbar sind, indem Sie Folgendes in einem Terminalfenster ausführen:
 
@@ -54,12 +53,13 @@ $ npm -v
 5.5.1
 
 $ gulp -v
-CLI version 4.0.2
+CLI version 2.3.0
+Local version 4.0.2
 ```
 
 Möglicherweise haben Sie eine andere Version dieser Anwendungen. Dies sollte kein Problem sein, außer für "schlucken". Für Schluck müssen Sie Version 4.0.0 oder höher verwenden.
 
-Wenn Sie keinen Schluck installiert haben (oder die falsche Version installiert haben), tun Sie dies jetzt, `npm install gulp` indem Sie in Ihrem Terminal-Fenster ausführen.
+Wenn Sie keinen Schluck installiert haben (oder die falsche Version installiert haben), tun Sie dies jetzt, indem Sie `npm install gulp` in Ihrem Terminal-Fenster ausführen.
 
 Wenn Sie Visual Studio Code installiert haben, können Sie die Installation überprüfen, indem Sie Folgendes durchführen:
 
@@ -106,7 +106,7 @@ Sie sollten eine Reihe von Abhängigkeiten erhalten, die installiert werden. Nac
 npm start
 ```
 
-Wenn die Hello-World-App gestartet wird, `App started listening on port 3333` wird Sie im Terminalfenster angezeigt.
+Wenn die Hello-World-App gestartet wird, wird Sie `App started listening on port 3333` im Terminalfenster angezeigt.
 
 > [!NOTE]
 > Wenn in der obigen Meldung eine andere Portnummer angezeigt wird, liegt dies daran, dass Sie eine Umgebungsvariable für die Port Umgebung festgelegt haben. Sie können diesen Port weiterhin verwenden oder Ihre Umgebungsvariable in 3333 ändern.
@@ -124,7 +124,7 @@ Nun können Sie ein Browserfenster öffnen und zu den folgenden URLs navigieren,
 
 Beachten Sie, dass apps in Microsoft Teams Webanwendungen sind, die eine oder mehrere Funktionen verfügbar machen. Damit die Microsoft Teams-Plattform Ihre APP lädt, muss Ihre APP über das Internet erreichbar sein. Damit Ihre APP über das Internet erreichbar ist, müssen Sie Ihre APP *hosten* .
 
-Für lokale Tests können Sie die APP auf Ihrem lokalen Computer ausführen und einen Tunnel mit einem Webendpunkt erstellen. [ngrok](https://ngrok.com) ist ein kostenloses Tool, mit dem Sie genau dies tun können. Mit *ngrok* können Sie eine Webadresse wie `https://d0ac14a5.ngrok.io` (diese URL ist nur ein Beispiel) erhalten. Sie können *ngrok* für Ihre Umgebung [herunterladen und installieren](https://ngrok.com/download) . Stellen Sie sicher, dass Sie Sie an einen Speicherort `PATH`in Ihrem hinzufügen.
+Für lokale Tests können Sie die APP auf Ihrem lokalen Computer ausführen und einen Tunnel mit einem Webendpunkt erstellen. [ngrok](https://ngrok.com) ist ein kostenloses Tool, mit dem Sie genau dies tun können. Mit *ngrok* können Sie eine Webadresse wie `https://d0ac14a5.ngrok.io` (diese URL ist nur ein Beispiel) erhalten. Sie können *ngrok* für Ihre Umgebung [herunterladen und installieren](https://ngrok.com/download) . Stellen Sie sicher, dass Sie Sie an einen Speicherort in Ihrem hinzufügen `PATH` .
 
 Nachdem Sie es installiert haben, können Sie ein neues Terminalfenster öffnen und den folgenden Befehl ausführen, um einen Tunnel zu erstellen. Im Beispiel wird Port 3333 verwendet, stellen Sie daher sicher, dass Sie es hier angeben.
 
@@ -132,7 +132,7 @@ Nachdem Sie es installiert haben, können Sie ein neues Terminalfenster öffnen 
 ngrok http 3333 -host-header=localhost:3333
 ```
 
-*Ngrok* wird Anfragen aus dem Internet abhören und diese an Ihre APP weiterleiten, die auf Port 3333 läuft. Sie können überprüfen, ob Sie Ihren Browser öffnen `https://d0ac14a5.ngrok.io/hello` und die Hello-Seite Ihrer App laden. Achten Sie darauf, dass Sie die von *ngrok* in ihrer Konsolensitzung angezeigte Weiterleitungsadresse anstelle dieser URL verwenden.
+*Ngrok* wird Anfragen aus dem Internet abhören und diese an Ihre APP weiterleiten, die auf Port 3333 läuft. Sie können überprüfen, ob Sie Ihren Browser öffnen und die `https://d0ac14a5.ngrok.io/hello` Hello-Seite Ihrer App laden. Achten Sie darauf, dass Sie die von *ngrok* in ihrer Konsolensitzung angezeigte Weiterleitungsadresse anstelle dieser URL verwenden.
 
 > [!NOTE]
 > Wenn Sie einen anderen Port im Schritt " [Build" und "ausführen](#build-and-run-the-sample) " verwendet haben, stellen Sie sicher, dass Sie die gleiche Portnummer zum Einrichten des *ngrok* -Tunnels verwenden.
@@ -201,15 +201,15 @@ NODE_CONFIG_DIR verweist auf das Verzeichnis im Stammverzeichnis des Repositorys
 
 ## <a name="configure-the-app-tab"></a>Konfigurieren der Registerkarte "App"
 
-Nachdem Sie die app in einem Team installiert haben, müssen Sie Sie so konfigurieren, dass Inhalte angezeigt werden. Wechseln Sie zu einem Kanal im Team, und klicken Sie auf die Schaltfläche **"+"** , um eine neue Registerkarte hinzuzufügen. Sie können dann in `Hello World` der Liste **Registerkarte hinzufügen** auswählen. Anschließend wird ein Konfigurationsdialogfeld angezeigt. In diesem Dialogfeld können Sie auswählen, welche Registerkarte in diesem Kanal angezeigt werden soll. Sobald Sie die Registerkarte ausgewählt haben und `Save` auf klicken, können `Hello World` Sie die Registerkarte anzeigen, die mit der ausgewählten Registerkarte geladen wurde.
+Nachdem Sie die app in einem Team installiert haben, müssen Sie Sie so konfigurieren, dass Inhalte angezeigt werden. Wechseln Sie zu einem Kanal im Team, und klicken Sie auf die Schaltfläche **"+"** , um eine neue Registerkarte hinzuzufügen. Sie können dann `Hello World` in der Liste **Registerkarte hinzufügen** auswählen. Anschließend wird ein Konfigurationsdialogfeld angezeigt. In diesem Dialogfeld können Sie auswählen, welche Registerkarte in diesem Kanal angezeigt werden soll. Sobald Sie die Registerkarte ausgewählt haben und auf klicken, `Save` können Sie die Registerkarte anzeigen, die `Hello World` mit der ausgewählten Registerkarte geladen wurde.
 
-<img width="430px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot von configure" />
+<img width="430px" src="~/assets/images/samples-hello-world-tab-configure.png" alt-text="Screenshot of configure" />
 
 ### <a name="test-your-bot-in-teams"></a>Testen Sie Ihren bot in Microsoft Teams
 
-Sie können nun mit dem bot in Microsoft Teams interagieren. Wählen Sie einen Kanal im Team aus, in dem Sie Ihre APP registriert `@your-bot-name`haben, und geben Sie gefolgt von Ihrer Nachricht ein. Dies wird als ** \@Erwähnung**bezeichnet. Jede Nachricht, die Sie an den bot senden, wird als Antwort an Sie zurückgesendet.
+Sie können nun mit dem bot in Microsoft Teams interagieren. Wählen Sie einen Kanal im Team aus, in dem Sie Ihre APP registriert haben, und geben Sie `@your-bot-name` gefolgt von Ihrer Nachricht ein. Dies wird als **\@ Erwähnung** bezeichnet. Jede Nachricht, die Sie an den bot senden, wird als Antwort an Sie zurückgesendet.
 
-<img width="450px" title="Bot-Antworten" src="~/assets/images/samples-hello-world-bot.png" />
+<img width="450px" alt-text="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 <a name="ComposeRichMessages"></a>
 
@@ -217,10 +217,10 @@ Sie können nun mit dem bot in Microsoft Teams interagieren. Wählen Sie einen K
 
 Um Ihre Messaging Erweiterung zu testen, können Sie auf die drei Punkte unter dem Eingabefeld in ihrer Unterhaltungsansicht klicken. Ein Menü wird mit der **"Hello World"-** app in diesem Popup angezeigt. Wenn Sie darauf klicken, wird eine Reihe von zufälligen Texten angezeigt. Sie können eine von Ihnen auswählen, und Sie wird in Ihre Unterhaltung eingefügt.
 
-<img width="430px" title="Menü "Messaging Erweiterung"" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
+<img width="430px" alt-text="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
-<img width="430px" title="Ergebnis der Messaging-Erweiterung" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+<img width="430px" alt-text="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
 Wählen Sie einen der zufälligen Texte aus, und Sie sehen eine Karte, die formatiert und mit ihrer eigenen Nachricht am unteren Rand gesendet werden kann.
 
-<img width="430px" title="Messaging-Durchwahl senden" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+<img width="430px" alt-text="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
