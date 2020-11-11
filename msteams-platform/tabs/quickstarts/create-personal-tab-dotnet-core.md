@@ -4,14 +4,14 @@ author: laujan
 description: Eine Schnellstartanleitung zum Erstellen einer benutzerdefinierten persönlichen Registerkarte mit ASP.net Core.
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: c6b58ffd09f952a6237b765e5457fe7a8e943390
-ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
+ms.openlocfilehash: 3eb0c42bb81ec8b2d906863051bd551c88c35f57
+ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "48097879"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48992631"
 ---
-# <a name="create-a-custom-personal-tab-with-aspnet-core"></a>Erstellen einer benutzerdefinierten persönlichen Registerkarte mit ASP.net Core
+# <a name="create-a-personal-tab-with-aspnet-core"></a>Erstellen einer persönlichen Registerkarte mit ASP.net Core
 
 In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten persönlichen Registerkarte mit C#-und ASP.net-Core-Razor-Seiten Schritt halten. Wir verwenden auch [App Studio für Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) , um Ihr App-Manifest abzuschließen und die Registerkarte in Teams bereitzustellen.
 
@@ -25,7 +25,7 @@ In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten 
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-Nachdem Sie den Quellcode haben, öffnen Sie Visual Studio, und wählen Sie **Projekt oder Lösung öffnen**aus. Navigieren Sie zum Anwendungsverzeichnis der Registerkarte, und öffnen Sie **PersonalTab. sln**.
+Nachdem Sie den Quellcode haben, öffnen Sie Visual Studio, und wählen Sie **Projekt oder Lösung öffnen** aus. Navigieren Sie zum Anwendungsverzeichnis der Registerkarte, und öffnen Sie **PersonalTab. sln**.
 
 Drücken Sie zum Erstellen und Ausführen der Anwendung **F5** , oder wählen Sie im Menü **Debuggen** die Option **Debuggen starten** aus. Navigieren Sie in einem Browser zu den folgenden URLs, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde:
 
@@ -72,7 +72,7 @@ Diese Dateien müssen in einem App-Paket gezippt werden, damit Sie Ihre Register
 
 ### <a name="csproj"></a>. csproj
 
-Klicken Sie im Fenster Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Projektdatei bearbeiten**aus. Unten in der Datei sehen Sie den Code, der Ihren ZIP-Ordner erstellt und aktualisiert, wenn die Anwendung erstellt wird:
+Klicken Sie im Fenster Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Projektdatei bearbeiten** aus. Unten in der Datei sehen Sie den Code, der Ihren ZIP-Ordner erstellt und aktualisiert, wenn die Anwendung erstellt wird:
 
 ```xml
 <PropertyGroup>
