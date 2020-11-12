@@ -4,14 +4,14 @@ description: Beschreibt die ressourcenspezifische Zustimmung in Microsoft Teams 
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
-ms.topic: Overview
+ms.topic: reference
 keywords: Teams-Autorisierung OAuth SSO Aad RSC Graph
-ms.openlocfilehash: e7a59497b77b303b6ef06582828f7c5cb36dbb58
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: cbeb1069f7f80608ec3a65710543b429e6f2908b
+ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796193"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48995023"
 ---
 # <a name="resource-specific-consent-rsc"></a>Ressourcenspezifische Zustimmung (RSC)
 
@@ -25,18 +25,18 @@ Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams-und Graph-AP
 |Anwendungsberechtigung| Aktion |
 | ----- | ----- |
 |TeamSettings.Read.Group | Rufen Sie die Einstellungen für dieses Team ab.|
-|TeamSettings. ReadWrite. Group|Aktualisieren Sie die Einstellungen für dieses Team.|
+|TeamSettings.ReadWrite.Group|Aktualisieren Sie die Einstellungen für dieses Team.|
 |ChannelSettings.Read.Group|Rufen Sie die Kanalnamen, Kanal Beschreibungen und Kanaleinstellungen für dieses Team ab.|
-|ChannelSettings. ReadWrite. Group|Aktualisieren Sie die Kanalnamen, Kanal Beschreibungen und Kanaleinstellungen für dieses Team.|
+|ChannelSettings.ReadWrite.Group|Aktualisieren Sie die Kanalnamen, Kanal Beschreibungen und Kanaleinstellungen für dieses Team.|
 |Channel.Create.Group|Erstellen von Kanälen in diesem Team.|
 |Channel.Delete.Group|Löschen Sie Kanäle in diesem Team.|
 |ChannelMessage.Read.Group |Rufen Sie die Kanal Nachrichten dieses Teams ab.|
-|TeamsAppInstallation. Read. Group|Rufen Sie eine Liste der installierten apps dieses Teams ab.|
+|TeamsAppInstallation.Read.Group|Rufen Sie eine Liste der installierten apps dieses Teams ab.|
 |TeamsTab.Read.Group|Rufen Sie eine Liste der Registerkarten dieses Teams ab.|
 |TeamsTab.Create.Group|Erstellen von Registerkarten in diesem Team.|
-|TeamsTab. ReadWrite. Group|Aktualisieren Sie die Registerkarten dieses Teams.|
+|TeamsTab.ReadWrite.Group|Aktualisieren Sie die Registerkarten dieses Teams.|
 |TeamsTab.Delete.Group|Löschen der Registerkarten dieses Teams.|
-|TeamMember. Read. Group|Die Mitglieder dieses Teams abrufen.|
+|TeamMember.Read.Group|Die Mitglieder dieses Teams abrufen.|
 
 >[!NOTE]
 >Ressourcenspezifische Berechtigungen stehen nur für Teams-Apps zur Verfügung, die auf dem Microsoft Teams-Client installiert sind und derzeit nicht Teil des Azure Active Directory-Portals sind.

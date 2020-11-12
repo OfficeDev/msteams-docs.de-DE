@@ -3,12 +3,12 @@ title: Office 365-Connectors
 description: Beschreibt die ersten Schritte mit Office 365-Konnektoren in Microsoft Teams
 keywords: Teams O365-Connector
 ms.date: 04/19/2019
-ms.openlocfilehash: 9c89463830d46512e622dcf4c256a867d419de83
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: dcd9f7e68dfe834fbcac245941944007beedf478
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137654"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48998021"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Erstellen Office 365 Connectors für Microsoft Teams
 
@@ -42,16 +42,16 @@ Sie können Ihre vorhandene Webkonfigurations Erfahrung wieder verwenden oder ei
 5. Aufruf `microsoftTeams.settings.getSettings()` zum Abrufen von webhook-Eigenschaften, einschließlich der URL selbst. Sie sollten dies zusätzlich zu während des Save-Ereignisses aufrufen, sollten Sie dies auch aufrufen, wenn die Seite beim ersten Mal im Fall einer Neukonfiguration geladen wird.
 6. Optional Registrieren eines `microsoftTeams.settings.registerOnRemoveHandler()` Ereignishandlers, der aufgerufen wird, wenn der Benutzer den Connector entfernt. Dieses Ereignis gibt Ihrem Dienst die Möglichkeit, Bereinigungsaktionen auszuführen.
 
-#### <a name="getsettings-response-properties"></a>`GetSettings()`Antworteigenschaften
+#### <a name="getsettings-response-properties"></a>`GetSettings()` Antworteigenschaften
 
 >[!Note]
->Die Parameter, die durch den `getSettings` Aufruf hier zurückgegeben werden, unterscheiden sich, wenn Sie diese Methode auf einer Registerkarte aufrufen und von den [hier](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest)dokumentierten abweichen.
+>Die Parameter, die durch den `getSettings` Aufruf hier zurückgegeben werden, unterscheiden sich, wenn Sie diese Methode auf einer Registerkarte aufrufen und von den [hier](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true)dokumentierten abweichen.
 
 | Parameter   | Details |
 |-------------|---------|
 | `entityId`       | Die Entitäts-ID, die vom Code beim Aufruf festgelegt wird `setSettings()` . |
 | `configName`  | Der Konfigurationsname, wie vom Code beim Aufruf festgelegt `setSettings()` . |
-| `contentUrl` | Die URL der Konfigurationsseite, die vom Code beim Aufruf festgelegt wird`setSettings()` |
+| `contentUrl` | Die URL der Konfigurationsseite, die vom Code beim Aufruf festgelegt wird `setSettings()` |
 | `webhookUrl` | Die webhook-URL, die für diesen Connector erstellt wurde. Speichern Sie die webhook-URL, und verwenden Sie Sie, um strukturiertes JSON zu veröffentlichen, um Karten an den Kanal zu senden. `webhookUrl` wird nur zurückgegeben, wenn Anwendung erfolgreich zurückgegeben wird. |
 | `appType` | Die zurückgegebenen Werte werden können `mail`, `groups` bzw. `teams` entsprechend Office 365-Mail, Office 365-Gruppen oder Microsoft Teams sein. |
 | `userObjectId` | Dies ist die eindeutige ID, die dem Office 365 Benutzer entspricht, der das Setup des Connectors initiiert hat. Sie sollte gesichert werden. Dieser Wert kann verwendet werden, um den Benutzer in Office 365 zuzuweisen, der die Konfiguration für den Benutzer in Ihrem Dienst eingerichtet hat. |
@@ -65,9 +65,9 @@ Wenn Sie den Benutzer als Teil des Ladens Ihrer Seite in Schritt 2 oben authenti
 
 Der Code sollte wiederkehrenden Benutzern ermöglichen, eine vorhandene Connector-Konfiguration zu bearbeiten. Rufen Sie dazu `microsoftTeams.settings.setSettings()` während der anfänglichen Konfiguration mit den folgenden Parametern auf:
 
-- `entityId`ist die benutzerdefinierte ID, die von Ihrem Dienst verstanden wird, und stellt dar, was der Benutzer konfiguriert hat.
-- `configName`ist ein Anzeigename, den Ihr Konfigurationscode abrufen kann.
-- `contentUrl`ist eine benutzerdefinierte URL, die geladen wird, wenn ein Benutzer eine vorhandene Connector-Konfiguration bearbeitet. Sie können diese URL verwenden, um den Code bei der Bearbeitung des Bearbeitungs Falls zu vereinfachen.
+- `entityId` ist die benutzerdefinierte ID, die von Ihrem Dienst verstanden wird, und stellt dar, was der Benutzer konfiguriert hat.
+- `configName` ist ein Anzeigename, den Ihr Konfigurationscode abrufen kann.
+- `contentUrl` ist eine benutzerdefinierte URL, die geladen wird, wenn ein Benutzer eine vorhandene Connector-Konfiguration bearbeitet. Sie können diese URL verwenden, um den Code bei der Bearbeitung des Bearbeitungs Falls zu vereinfachen.
 
 Normalerweise wird dieser Aufruf als Teil des Save-Ereignishandlers ausgeführt. Dann, wenn die `contentUrl` oben geladen wird, sollte Ihr Code aufrufen `getSettings()` , um alle Einstellungen oder Formulare in ihrer Konfigurationsbenutzeroberfläche aufzufüllen.
 
@@ -91,7 +91,7 @@ Die folgende manifest.JSON-Datei enthält die grundlegenden Elemente, die zum Te
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
@@ -146,7 +146,7 @@ In einigen Fällen möchten Sie die Connector-App möglicherweise nicht im öffe
 Nachdem Sie Ihr App-Paket hochgeladen haben, können Sie den Connector in einem Team konfigurieren und verwenden, indem Sie die folgenden Schritte ausführen, um aus dem App-Katalog der Organisation zu installieren:
 
 1. Wählen Sie das Apps-Symbol in der vertikalen Navigationsleiste ganz links aus.
-1. Wählen Sie im Fenster **apps** die Option **Connectors**aus.
+1. Wählen Sie im Fenster **apps** die Option **Connectors** aus.
 1. Wählen Sie den Connector aus, den Sie hinzufügen möchten, und ein Popupdialogfeld wird angezeigt.
 1. Wählen Sie die Leiste **zu einem Team hinzufügen** aus.
 1. Geben Sie im nächsten Dialogfenster einen Team-oder Kanalnamen ein.

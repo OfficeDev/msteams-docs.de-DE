@@ -4,14 +4,14 @@ description: Details Testen der ressourcenspezifischen Zustimmung in Teams mithi
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
-ms.topic: How-to
+ms.topic: tutorial
 keywords: Teams Authorization OAuth SSO Aad RSC Postman Graph
-ms.openlocfilehash: a7384222e5e4cba164f918186ce53b4c1b702016
-ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.openlocfilehash: f780829100e47ad04a588106e83843876b8d7932
+ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "46531266"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48995009"
 ---
 # <a name="test-resource-specific-consent-permissions--in-teams"></a>Testen von Berechtigungen für die ressourcenspezifische Zustimmung in Microsoft Teams
 
@@ -20,7 +20,7 @@ Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams-und Graph-AP
 > [!NOTE]
 >Um die RSC-Berechtigungen zu testen, muss ihre Teams-App-Manifestdatei einen **webApplicationInfo** -Schlüssel enthalten, der mit den folgenden Feldern aufgefüllt ist:
 >
-> - **ID** – ihre Azure AD App-ID *finden Sie unter* [Registrieren Ihrer APP im Azure AD-Portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
+> - **ID**  – ihre Azure AD App-ID *finden Sie unter* [Registrieren Ihrer APP im Azure AD-Portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
 > - **Resource** – eine beliebige Zeichenfolge *finden Sie* im Hinweis zum [Aktualisieren Ihres Teams-App-Manifests](resource-specific-consent.md#update-your-teams-app-manifest) .
 > - **Anwendungsberechtigungen** – RSC-Berechtigungen für Ihre APP *finden Sie unter* [ressourcenspezifische Berechtigungen](resource-specific-consent.md#resource-specific-permissions).
 
@@ -54,10 +54,10 @@ Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams-und Graph-AP
 
 Um zu überprüfen, ob die RSC-Berechtigungen von der API-Anforderungsnutzlast berücksichtigt werden, müssen Sie den [RSC-JSON-Testcode](test-rsc-json-file.md) in Ihre lokale Umgebung kopieren und die folgenden Werte aktualisieren:
 
-1. `azureADAppId`– die Azure AD App-ID Ihrer APP.
-1. `azureADAppSecret`– Ihr geheimer Azure AD-App-Schlüssel (Kennwort)
-1. `token_scope`– der Bereich ist erforderlich, um ein Token zu erhalten – legen Sie den Wert aufhttps://graph.microsoft.com/.default
-1. `teamGroupId`– Sie können die Team Gruppen-ID wie folgt aus dem Microsoft Teams-Client abrufen:
+1. `azureADAppId`  – die Azure AD App-ID Ihrer APP.
+1. `azureADAppSecret`  – Ihr geheimer Azure AD-App-Schlüssel (Kennwort)
+1. `token_scope`  – der Bereich ist erforderlich, um ein Token zu erhalten – legen Sie den Wert auf https://graph.microsoft.com/.default
+1. `teamGroupId` – Sie können die Team Gruppen-ID wie folgt aus dem Microsoft Teams-Client abrufen:
 
 > [!div class="checklist"]
 >

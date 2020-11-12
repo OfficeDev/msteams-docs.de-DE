@@ -3,17 +3,17 @@ title: Beitrag zur Microsoft Teams-Dokumentation
 description: Schritte zum Erstellen und Veröffentlichen von Microsoft Teams-Dokumentation
 author: laujan
 ms.author: lajanuar
-ms.topic: how to
-ms.openlocfilehash: 5e76c6521792d7db1b589d7e6ad3fe0ac2bd8479
-ms.sourcegitcommit: 6c692734a382865531a83b9ebd6f604212f484fc
+ms.topic: contributor-guide
+ms.openlocfilehash: 80aaf7795a226c0437140fe72e1d74b07fa66775
+ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "44801192"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48995016"
 ---
 # <a name="contributing-to-microsoft-teams-documentation"></a>Beitrag zur Microsoft Teams-Dokumentation
 
-[Teams-Dokumentation](/microsoftteams/platform/overview) ist Bestandteil der technischen Dokumentationsbibliothek von [Microsoft docs](https://docs.microsoft.com/) . Der Inhalt ist in Gruppen mit dem Namen docsets organisiert, die jeweils eine Gruppe verwandter Dokumente darstellen, die als einzelne Entität verwaltet werden. Artikel in derselben DokSet haben dieselbe URL-Pfaderweiterung nach *docs <span></span> . Microsoft.com*.  Ist beispielsweise `/docs.microsoft.com/microsoftteams/...` der Anfang des Dateipfads für Teams DokSet. Microsoft Teams-Artikel sind in der Syntax für den [Abschlag](#markdown-reference) geschrieben und auf [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)gehostet.
+[Teams-Dokumentation](/microsoftteams/platform/overview) ist Bestandteil der technischen Dokumentationsbibliothek von [Microsoft docs](https://docs.microsoft.com/) . Der Inhalt ist in Gruppen mit dem Namen docsets organisiert, die jeweils eine Gruppe verwandter Dokumente darstellen, die als einzelne Entität verwaltet werden. Artikel in derselben DokSet haben dieselbe URL-Pfaderweiterung nach *docs <span></span> . Microsoft.com*.  Ist beispielsweise  `/docs.microsoft.com/microsoftteams/...`   der Anfang des Dateipfads für Teams DokSet. Microsoft Teams-Artikel sind in der Syntax für den  [Abschlag](#markdown-reference) geschrieben und auf [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)gehostet.
 
 ## <a name="set-up-your-workspace"></a>Einrichten Ihres Arbeitsbereichs
 
@@ -22,7 +22,7 @@ ms.locfileid: "44801192"
 > * Installieren Sie [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 > * Installieren Sie [Visual Studio-Code](https://code.visualstudio.com/) (vs-Code).
 > * Installieren von [docs-Erstellungspaket](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) direkt über den vs-Code-Marktplatz
-<br>&emsp;&emsp;oder
+<br>&emsp;&emsp; oder
 
 > [!div class="checklist"]
 >
@@ -58,10 +58,10 @@ Weitere Informationen zu Hyperlinks und Dateipfaden finden Sie *unter* [Use Link
 > So verweisen Sie auf einen Artikel, der Teil der Microsoft Teams *-* Plattform DokSet ist:<br>
 > &emsp;&#x2714; einen relativen Pfad ohne vorangestellten Schrägstrich verwenden.<br>
 > &emsp;&#x2714; die Dateierweiterung "ablegen" hinzufügen.<br>
->Ex: **übergeordnetes Verzeichnis/Verzeichnis/Pfad-zu-Artikel. MD** – >`[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
+>Ex:  **übergeordnetes Verzeichnis/Verzeichnis/Pfad-zu-Artikel. MD** – > `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
 > So verweisen Sie auf einen Microsoft docs <https://docs.microsoft.com/> -Bibliotheks Artikel (), der *nicht Teil* der Teams-Platt Form DokSet ist:<br>
 > &emsp;&#x2714; verwenden Sie einen relativen Pfad, der mit einem Schrägstrich beginnt.<br>
-> &emsp;&#x2714; nicht die Dateierweiterung enthalten. <br> Ex: **/docset/Address-to-File-Location** – >`[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
+> &emsp;&#x2714; nicht die Dateierweiterung enthalten. <br> Ex:  **/docset/Address-to-File-Location** – > `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
 >
 
 ## <a name="code-samples-and-snippets"></a>Code Beispiele und Codeausschnitte

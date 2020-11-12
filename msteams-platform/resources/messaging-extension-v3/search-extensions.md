@@ -3,12 +3,12 @@ title: Suche mit Messaging Erweiterungen
 description: Beschreibt, wie suchbasierte Messaging Erweiterungen entwickelt werden
 keywords: Microsoft Teams Messaging Extensions Messaging Extensions Search
 ms.date: 07/20/2019
-ms.openlocfilehash: b791e7cc8f9a311d0610573f2fa3659578c29c7d
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: f46548d2e7e03ecebd8bc0fb6685aeb82b8eec6e
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801369"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48998000"
 ---
 # <a name="search-with-messaging-extensions"></a>Suche mit Messaging Erweiterungen
 
@@ -30,7 +30,7 @@ Legen Sie für die suchbasierte Messaging Erweiterung den `type` Parameter auf f
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
@@ -87,7 +87,7 @@ Legen Sie für die suchbasierte Messaging Erweiterung den `type` Parameter auf f
 
 Sie können Ihre Messaging Erweiterung testen, indem Sie Ihre APP hochladen.
 
-Um Ihre Messaging Erweiterung zu öffnen, navigieren Sie zu einem beliebigen Chat oder Kanal. Wählen Sie im Feld Verfassen die Schaltfläche **Weitere Optionen** (**&#8943;**) aus, und wählen Sie Ihre Messaging Erweiterung aus.
+Um Ihre Messaging Erweiterung zu öffnen, navigieren Sie zu einem beliebigen Chat oder Kanal. Wählen Sie im Feld Verfassen die Schaltfläche **Weitere Optionen** ( **&#8943;** ) aus, und wählen Sie Ihre Messaging Erweiterung aus.
 
 ## <a name="add-event-handlers"></a>Hinzufügen von Ereignishandlern
 
@@ -125,7 +125,7 @@ Wenn ein Benutzer eine Abfrage ausführt, sendet Microsoft Teams Ihrem Dienst ei
 
 Zusätzlich zu den standardmäßigen bot-Aktivitätseigenschaften enthält die Nutzlast die folgenden Anforderungs Metadaten:
 
-|Eigenschaftsname|Zweck|
+|Eigenschaftenname|Zweck|
 |---|---|
 |`type`| Typ der Anforderung; muss sein `invoke` . |
 |`name`| Der Typ des Befehls, der für den Dienst ausgestellt wird. Derzeit werden die folgenden Typen unterstützt: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
@@ -139,7 +139,7 @@ Zusätzlich zu den standardmäßigen bot-Aktivitätseigenschaften enthält die N
 
 Die Anforderungsparameter selbst werden im Value-Objekt gefunden, das die folgenden Eigenschaften enthält:
 
-| Eigenschaftsname | Zweck |
+| Eigenschaftenname | Zweck |
 |---|---|
 | `commandId` | Der Name des vom Benutzer aufgerufenen Befehls, der einem der im App-Manifest deklarierten Befehle entspricht. |
 | `parameters` | Array von Parametern. Jedes Parameter-Objekt enthält den Namen des Parameters sowie den vom Benutzer bereitgestellten Parameterwert. |
@@ -237,7 +237,7 @@ Wenn der Benutzer eine Abfrage ausführt, gibt Microsoft Teams eine synchrone ht
 
 Ihr Dienst sollte mit den Ergebnissen Antworten, die mit der Benutzerabfrage übereinstimmen. Die Antwort muss einen HTTP-Statuscode `200 OK` und ein gültiges Application/JSON-Objekt mit folgendem Text angeben:
 
-|Eigenschaftsname|Zweck|
+|Eigenschaftenname|Zweck|
 |---|---|
 |`composeExtension`|Antwortumschlag auf oberster Ebene.|
 |`composeExtension.type`|Typ der Antwort. Die folgenden Typen werden unterstützt: <br>`result`: zeigt eine Liste der Suchergebnisse an. <br>`auth`: der Benutzer wird aufgefordert, sich zu authentifizieren. <br>`config`: der Benutzer wird aufgefordert, die Messaging Erweiterung einzurichten. <br>`message`: zeigt eine Nur-Text-Nachricht an. |

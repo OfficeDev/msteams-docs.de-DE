@@ -2,12 +2,12 @@
 title: Initiieren von Aktionen mit Messaging Erweiterungen
 description: Erstellen Aktions basierter Messaging Erweiterungen, um Benutzern das Auslösen externer Dienste zu ermöglichen
 keywords: Microsoft Teams Messaging Extensions Messaging Extensions Search
-ms.openlocfilehash: 4eb5984f4a75f185accfe7ba87e9389361946959
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: dd88360e342788fc0505809c6c8281c64fb7afbb
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801370"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997993"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Initiieren von Aktionen mit Messaging Erweiterungen
 
@@ -29,7 +29,7 @@ Um Aktionen aus einer Messaging Erweiterung zu initiieren `type` , legen Sie den
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
@@ -226,7 +226,7 @@ Unten sehen Sie ein Beispiel für das Objekt, das `value` die Nachrichtendetails
 
 Sie können Ihre Messaging Erweiterung testen, indem Sie Ihre APP hochladen. Weitere Informationen finden Sie unter [Hochladen Ihrer APP in einem Team](~/concepts/deploy-and-publish/apps-upload.md) .
 
-Um Ihre Messaging Erweiterung zu öffnen, navigieren Sie zu einem beliebigen Chat oder Kanal. Wählen Sie im Feld Verfassen die Schaltfläche **Weitere Optionen** (**&#8943;**) aus, und wählen Sie Ihre Messaging Erweiterung aus.
+Um Ihre Messaging Erweiterung zu öffnen, navigieren Sie zu einem beliebigen Chat oder Kanal. Wählen Sie im Feld Verfassen die Schaltfläche **Weitere Optionen** ( **&#8943;** ) aus, und wählen Sie Ihre Messaging Erweiterung aus.
 
 ## <a name="collecting-input-from-users"></a>Sammeln von Eingaben von Benutzern
 
