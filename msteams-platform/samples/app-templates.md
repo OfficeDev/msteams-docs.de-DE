@@ -3,12 +3,14 @@ title: Microsoft Teams-App-Vorlagen
 description: Links und Beschreibungen von App-Vorlagen für die Microsoft Teams-Plattform
 ms.topic: reference
 keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
-ms.openlocfilehash: 9bb93ab55d520265645cf999250bfdf6fae75ea6
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.author: lajanuar
+author: laujan
+ms.openlocfilehash: 5ab38f28cab22011fdcd7109f88663f4159a6356
+ms.sourcegitcommit: 03efdfb2feb115702c40adcd71d6e96eb5888cc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397729"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "49019618"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -302,6 +304,23 @@ Incident Reporter ist ein [Microsoft Teams-bot](../bots/what-are-bots.md)  , der
 :::row:::
 :::column span="2":::
     ![Persönliche Bereichsansicht des Vorfall Reporters](../assets/images/incident-reporter-01.jpg)
+:::column-end:::
+:::row-end:::
+
+## <a name="new-employee-onboarding9734"></a>Neue Onboarding-&#9734; für Mitarbeiter
+
+Das neue Mitarbeiter-Onboarding ist eine integrierte Microsoft Teams-und [SharePoint-neue Onboarding-Lösung](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) , mit der Ihre Organisation eine konsistente, qualitativ hochwertige Onboarding-Erfahrung für Mitarbeiter auf Ihrer Neuvermietungs Reise bereitstellen kann. Die APP kann von Personal Teams und Einstellungs Managern verwendet werden, um relevante Informationen während der Orientierung und des Induktions Prozesses und durch neue Mitarbeiter bereitzustellen, um Feedback zu geben, Einführungen bereitzustellen und Onboarding-Aufgaben abzuschließen.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
+
+:::row:::
+  :::column span="2":::
+    **Neue Willkommens Karte** ![ für Mitarbeiter Bild der neuen Willkommens Karte für Mitarbeiter](../assets/images/new-employee-welcome-card.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    Prüfliste für neue **Mitarbeiter** ![ Bild der Checkliste für neue Mitarbeiter](../assets/images/new-employee-checklist.png)  
 :::column-end:::
 :::row-end:::
 
