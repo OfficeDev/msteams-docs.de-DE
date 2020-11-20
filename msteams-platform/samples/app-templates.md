@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 5ab38f28cab22011fdcd7109f88663f4159a6356
-ms.sourcegitcommit: 03efdfb2feb115702c40adcd71d6e96eb5888cc7
+ms.openlocfilehash: 3bf038b2d62a0805ae3f16fd879664d755108acf
+ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "49019618"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "49358028"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -307,7 +307,7 @@ Incident Reporter ist ein [Microsoft Teams-bot](../bots/what-are-bots.md)  , der
 :::column-end:::
 :::row-end:::
 
-## <a name="new-employee-onboarding9734"></a>Neue Onboarding-&#9734; für Mitarbeiter
+## <a name="new-employee-onboarding-9734"></a>Neue Onboarding-&#9734; für Mitarbeiter
 
 Das neue Mitarbeiter-Onboarding ist eine integrierte Microsoft Teams-und [SharePoint-neue Onboarding-Lösung](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) , mit der Ihre Organisation eine konsistente, qualitativ hochwertige Onboarding-Erfahrung für Mitarbeiter auf Ihrer Neuvermietungs Reise bereitstellen kann. Die APP kann von Personal Teams und Einstellungs Managern verwendet werden, um relevante Informationen während der Orientierung und des Induktions Prozesses und durch neue Mitarbeiter bereitzustellen, um Feedback zu geben, Einführungen bereitzustellen und Onboarding-Aufgaben abzuschließen.
 
@@ -360,6 +360,20 @@ Schnelle Antworten ist eine Microsoft Teams-APP, die eine robuste Lösung für d
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
 ![Beispielansicht der Antworten](../assets/images/quick-responses.png)
+
+## <a name="reflect-9734"></a>Reflektieren &#9734;
+
+Reflect ist eine benutzerdefinierte Microsoft Teams- [Messaging Erweiterungs](../messaging-extensions/what-are-messaging-extensions.md) -APP, die Ihren Teammitgliedern eine sichere und integrative Ressource zur Verfügung stellt, um den Zustand Ihres emotionalen Wohlbefindens mit Kollegen und/oder Gruppenleitern direkt in Microsoft Teams zu teilen. Die APP ist in Kanal-, Gruppen-, Besprechungs-und 1:1-Chats verfügbar, und die Eincheck Antwort kann auf Public, private-to-Sender oder vollständig anonym festgelegt werden.
+
+[Get it on GitHub](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect)
+
+:::row:::
+    :::column:::
+    **Umfrage zum Wohlbefinden**
+    
+    ![Reflektieren der APP-Benutzerumfrage](../assets/images/reflect-app-user-poll.png)
+    :::column-end:::
+:::row-end:::
 
 ## <a name="remote-support"></a>Remote Unterstützung
 

@@ -2,12 +2,12 @@
 title: Unterstützung für einmaliges Anmelden für Bots
 description: Beschreibt, wie ein Benutzertoken abgerufen wird. Derzeit kann ein bot-Entwickler eine Anmeldekarte oder den Azure bot-Dienst mit der OAuth-Kartenunterstützung verwenden.
 keywords: Token, Benutzertoken, SSO-Unterstützung für Bots
-ms.openlocfilehash: 0b896f7e13847f529075b5562a6c3eb2542482bf
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: a056ce1a8bf0e59c9f4f30392df3bce7e8c63e00
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877850"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346854"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Unterstützung für einmaliges Anmelden (SSO) für Bots
 
@@ -22,9 +22,9 @@ OAuth 2.0 ist ein offener Standard für Authentifizierung und Autorisierung, der
 1. Der bot sendet eine Nachricht mit einem OAuthCard, das die `tokenExchangeResource` Eigenschaft enthält. Es weist Microsoft Teams an, ein Authentifizierungstoken für die bot-Anwendung zu erhalten. Der Benutzer empfängt Nachrichten an allen aktiven Endpunkten des Benutzers.
 
 > [!NOTE]
-> ✔ Ein Benutzer gleichzeitig mehr als einen aktiven Endpunkt haben kann.  
-> ✔ Das bot-Token von jedem aktiven Endpunkt des Benutzers empfangen wird.
-> Bei ✔ Unterstützung für einmaliges Anmelden muss die APP derzeit im persönlichen Bereich installiert werden.
+>* Ein Benutzer kann gleichzeitig mehr als einen aktiven Endpunkt aufweisen.  
+>* Das bot-Token wird von jedem aktiven Endpunkt des Benutzers empfangen.
+>* Die Unterstützung für einmaliges Anmelden erfordert derzeit, dass die APP im persönlichen Bereich installiert wird.
 
 2. Wenn der aktuelle Benutzer ihre bot-Anwendung zum ersten Mal verwendet hat, wird eine Anforderungs Aufforderung zur Zustimmung (sofern Zustimmung erforderlich ist) oder zur Behandlung der Step-up-Authentifizierung (beispielsweise zweistufige Authentifizierung) angezeigt.
 
@@ -36,17 +36,17 @@ OAuth 2.0 ist ein offener Standard für Authentifizierung und Autorisierung, der
   
 6. Das Token wird in der bot-Anwendung analysiert, um die erforderlichen Informationen zu extrahieren, beispielsweise die e-Mail-Adresse des Benutzers.
   
-## <a name="develop-an-single-sign-on-microsoft-teams-bot"></a>Entwickeln eines Single Sign-on Microsoft Teams-bot
+## <a name="develop-a-single-sign-on-microsoft-teams-bot"></a>Entwickeln eines Single Sign-on Microsoft Teams-bot
   
 Die folgenden Schritte sind erforderlich, um einen SSO-Microsoft Teams-bot zu entwickeln:
 
-1. [Erstellen eines kostenlosen Azure-Kontos](#create-an-azure-account)
+1. [Erstellen eines freien Azure-Kontos](#create-an-azure-account)
 2. [Aktualisieren des Teams-App-Manifests](#update-your-app-manifest)
 3. [Hinzufügen des Codes zum Anfordern und empfangen des bot-Tokens](#request-a-bot-token)
 
 ### <a name="create-an-azure-account"></a>Erstellen eines Azure-Kontos
 
-Dieser Schritt ähnelt dem [Durchfluss der Registerkarte SSO](../../../tabs/how-to/authentication/auth-aad-sso.md) :
+Dieser Schritt ähnelt dem [Registerkarten-SSO-Fluss](../../../tabs/how-to/authentication/auth-aad-sso.md):
 
 1. Rufen Sie Ihre [Azure AD-Anwendungs-ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)ab.
 2. Geben Sie die Berechtigungen an, die Ihre Anwendung für den Azure AD-Endpunkt und optional für Microsoft Graph benötigt.
@@ -87,7 +87,7 @@ Wenn der bot eine Anmeldeschaltfläche definiert, wird der Anmelde Fluss für Bo
 
 Wenn der bot keine Anmeldeschaltfläche auf der Karte bereitstellt, wird die Benutzer Zustimmung für einen minimalen Satz von Berechtigungen ausgelöst. Dieses Token eignet sich für die Standardauthentifizierung und das erhalten der e-Mail-Adresse des Benutzers.
 
-**C#-Token-Anforderung ohne Anmeldeschaltfläche** :
+**C#-Token-Anforderung ohne Anmeldeschaltfläche**:
 
 ```csharp
 var attachment = new Attachment
@@ -113,7 +113,7 @@ var attachment = new Attachment
 
 Die Antwort mit dem Token wird über eine Invoke-Aktivität mit dem gleichen Schema gesendet wie andere Aktivitäten aufrufen, die die Bots heute empfangen. Der einzige Unterschied besteht darin, dass der Aufruf Name, die **Anmelde-tokenExchange** und das **Wertfeld** die **ID** (eine Zeichenfolge) der anfänglichen Anforderung zum Abrufen des Tokens und des **Token** -Felds (ein Zeichenfolgenwert einschließlich des Tokens) enthalten wird. Beachten Sie, dass Sie möglicherweise mehrere Antworten für eine bestimmte Anforderung erhalten, wenn der Benutzer über mehrere aktive Endpunkte verfügt. Es liegt an Ihnen, die Antworten mit dem Token zu deduplizieren.
 
-**C#-Code zur Reaktion auf die Behandlung der Invoke-Aktivität** :
+**C#-Code zur Reaktion auf die Behandlung der Invoke-Aktivität**:
 
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivity
@@ -158,7 +158,7 @@ Die `turnContext.activity.value` ist vom Typ [TokenExchangeInvokeRequest](/dotne
 >* Verwenden Sie für die Token-Exchange-URL den Bereichswert, der im vorherigen Schritt ihrer Aad-Anwendung definiert wurde. Das vorhanden sein der Token-Exchange-URL zeigt dem SDK an, dass diese Aad-Anwendung für SSO konfiguriert ist.
 >* Geben Sie "Common" als **Mandanten-ID** an.
 >* Fügen Sie alle Bereiche hinzu, die beim Angeben von Berechtigungen für Downstream-APIs für Ihre Aad-Anwendung konfiguriert wurden. Wenn die Client-ID und der geheime Client Schlüssel bereitgestellt werden, tauschen Tokenspeicher das Token für ein Diagramm Token mit definierten Berechtigungen für Sie aus.
->* Wählen Sie **Speichern** aus.
+>* Klicken Sie auf **Speichern**.
 
 ![VuSSOBotConnection-Einstellungsansicht](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
 

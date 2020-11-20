@@ -5,17 +5,14 @@ description: Erstellen von Apps für Microsoft Teams-Besprechungen
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Teams-apps-Besprechungen Benutzer Teilnehmer-Rollen-API
-ms.openlocfilehash: d7dc812f715b6a7edbcc706946b8d80dd692daee
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 30c7a2d6bc3afed28fe0f24a9dd54b67f9b1223c
+ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997972"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "49358014"
 ---
-# <a name="create-apps-for-teams-meetings-developer-preview"></a>Erstellen von Apps für Microsoft Teams-Besprechungen (Entwicklervorschau)
-
->[!IMPORTANT]
-> In der Entwicklervorschau von Microsoft Teams enthaltene Features werden nur für frühere Zugriffs-, Test-und Feedback Zwecke bereitgestellt. Sie werden möglicherweise geändert, bevor Sie in der öffentlichen Version verfügbar werden und sollten nicht in Produktionsanwendungen verwendet werden.
+# <a name="create-apps-for-teams-meetings"></a>Apps für Teams-Besprechungen erstellen
 
 ## <a name="prerequisites-and-considerations"></a>Voraussetzungen und Überlegungen
 
@@ -35,7 +32,7 @@ ms.locfileid: "48997972"
 
 |API|Beschreibung|Anforderung|Quelle|
 |---|---|----|---|
-|**Getusercontext**| Abrufen von Kontextinformationen zum Anzeigen relevanter Inhalte auf einer Registerkarte Teams. |_**verläuft. GetContext (() => {/ *...* / } )**_|Microsoft Teams-Client-SDK|
+|**Getusercontext**| Abrufen von Kontextinformationen zum Anzeigen relevanter Inhalte auf einer Registerkarte Teams. |_**verläuft. GetContext (() => {/*...* / } )**_|Microsoft Teams-Client-SDK|
 |**Getparticipant**|Mit dieser API kann ein bot eine Teilnehmer Information nach Besprechungs-ID und Teilnehmer-ID abrufen.|**GET** _**/V1/Meetings/{meetingId}/participants/{participantId} abrufen? Mandanten-Nr = {Mandanten** -Nr}_ |Microsoft bot Framework SDK|
 |**NotificationSignal** |Besprechungs Signale werden über die folgende vorhandene Benachrichtigungs-API für Unterhaltungen (für Benutzer-bot-Chat) übermittelt. Mit dieser API können Entwickler basierend auf der Endbenutzer Aktion signalisieren, dass eine Dialog Blase in einer Besprechung angezeigt wird.|**Post** _**/V3/Conversations/{conversationId}/Activities**_|Microsoft bot Framework SDK|
 
@@ -43,7 +40,7 @@ ms.locfileid: "48997972"
 
 Eine Anleitung zum Identifizieren und Abrufen von Kontextinformationen für die Registerkarteninhalte finden Sie in der Dokumentation zu [Get Context for your Teams](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) . Im Rahmen der Erweiterbarkeit von Besprechungen wurde für die Antwort Nutzlast ein neuer Wert hinzugefügt:
 
-✔- **Besprechungs** -Nr: wird von einer Registerkarte bei der Ausführung im Besprechungs Kontext verwendet.
+✔- **Besprechungs**-Nr: wird von einer Registerkarte bei der Ausführung im Besprechungs Kontext verwendet.
 
 ### <a name="getparticipant-api"></a>Getparticipant-API
 
@@ -93,14 +90,14 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**meetingId**| string | Ja | Die Besprechungs-ID ist über bot Invoke und Microsoft Teams Client SDK verfügbar.|
-|**Teilnehmer-Nr**| string | Ja | Dieses Feld ist die Benutzer-ID und steht in der Registerkarte "SSO", im bot-Invoke und im Microsoft Teams-Client-SDK zur Verfügung. Die Registerkarte SSO wird dringend empfohlen.|
-|**tenantId**| string | Ja | Dies ist für Mandanten Benutzer erforderlich. Sie ist in Tab SSO, bot Invoke und Microsoft Teams Client SDK verfügbar. Die Registerkarte SSO wird dringend empfohlen.|
+|**meetingId**| Zeichenfolge | Ja | Die Besprechungs-ID ist über bot Invoke und Microsoft Teams Client SDK verfügbar.|
+|**Teilnehmer-Nr**| Zeichenfolge | Ja | Dieses Feld ist die Benutzer-ID und steht in der Registerkarte "SSO", im bot-Invoke und im Microsoft Teams-Client-SDK zur Verfügung. Die Registerkarte SSO wird dringend empfohlen.|
+|**tenantId**| Zeichenfolge | Ja | Dies ist für Mandanten Benutzer erforderlich. Sie ist in Tab SSO, bot Invoke und Microsoft Teams Client SDK verfügbar. Die Registerkarte SSO wird dringend empfohlen.|
 
 #### <a name="response-payload"></a>Antwort Nutzlast
 <!-- markdownlint-disable MD036 -->
 
-**Rolle** unter "Besprechung" kann *Organisator* , *Referent* oder *Teilnehmer* sein.
+**Rolle** unter "Besprechung" kann *Organisator*, *Referent* oder *Teilnehmer* sein.
 
 **Beispiel 1**
 
@@ -131,15 +128,15 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 ```
 #### <a name="response-codes"></a>Antwort Codes
 
-**403** : die APP darf keine Teilnehmer Informationen erhalten. Dies ist die häufigste Fehlerantwort und wird ausgelöst, wenn die APP nicht in der Besprechung installiert ist, beispielsweise wenn Sie vom mandantenadministrator deaktiviert oder während einer Live-Websitemigration blockiert wird.  
-**200** : Teilnehmer Informationen erfolgreich abgerufen.  
-**401** : Ungültiges Token.  
-**404** : Teilnehmer kann nicht gefunden werden. 
-**500** : die Besprechung ist entweder abgelaufen (mehr als 60 Tage seit der Beendigung der Besprechung) oder der Teilnehmer verfügt nicht über die Berechtigungen basierend auf seiner Rolle.
+**403**: die APP darf keine Teilnehmer Informationen erhalten. Dies ist die häufigste Fehlerantwort und wird ausgelöst, wenn die APP nicht in der Besprechung installiert ist, beispielsweise wenn Sie vom mandantenadministrator deaktiviert oder während einer Live-Websitemigration blockiert wird.  
+**200**: Teilnehmer Informationen erfolgreich abgerufen.  
+**401**: Ungültiges Token.  
+**404**: Teilnehmer kann nicht gefunden werden. 
+**500**: die Besprechung ist entweder abgelaufen (mehr als 60 Tage seit der Beendigung der Besprechung) oder der Teilnehmer verfügt nicht über die Berechtigungen basierend auf seiner Rolle.
 
 **Bald verfügbar**
 
-**404** : die Besprechung ist entweder abgelaufen oder der Teilnehmer kann nicht gefunden werden. 
+**404**: die Besprechung ist entweder abgelaufen oder der Teilnehmer kann nicht gefunden werden. 
 
 <!-- markdownlint-disable MD024 -->
 ### <a name="notificationsignal-api"></a>NotificationSignal-API
@@ -157,7 +154,7 @@ POST /v3/conversations/{conversationId}/activities
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**conversationId**| string | Ja | Die Konversations-ID ist im Rahmen von bot Invoke verfügbar |
+|**conversationId**| Zeichenfolge | Ja | Die Konversations-ID ist im Rahmen von bot Invoke verfügbar |
 
 #### <a name="request-payload"></a>Anforderungsnutzlast
 
@@ -222,16 +219,16 @@ await context.sendActivity(replyActivity);
 
 #### <a name="response-codes"></a>Antwort Codes
 
-**201** : Aktivität mit Signal wurde erfolgreich gesendet  
-**401** : Ungültiges Token  
-**403** : die APP darf das Signal nicht senden. In diesem Fall sollte die Nutzlast eine ausführlichere Fehlermeldung enthalten. Es kann viele Gründe geben: app, die vom mandantenadministrator deaktiviert, während einer Live-Standort Minderung blockiert wird, usw.  
-**404** : Besprechungs Chat nicht vorhanden  
+**201**: Aktivität mit Signal wurde erfolgreich gesendet  
+**401**: Ungültiges Token  
+**403**: die APP darf das Signal nicht senden. In diesem Fall sollte die Nutzlast eine ausführlichere Fehlermeldung enthalten. Es kann viele Gründe geben: app, die vom mandantenadministrator deaktiviert, während einer Live-Standort Minderung blockiert wird, usw.  
+**404**: Besprechungs Chat nicht vorhanden  
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Aktivieren Ihrer APP für Microsoft Teams-Besprechungen
 
 ### <a name="update-your-app-manifest"></a>Aktualisieren des App-Manifests
 
-Die APP-Funktionen für Besprechungen werden in Ihrem App-Manifest über die **configurableTabs**  ->  - **Bereiche** und **Kontext** Arrays deklariert. *Scope* definiert, an wen und in welchem *Kontext* definiert wird, wo Ihre app verfügbar sein wird.
+Die APP-Funktionen für Besprechungen werden in Ihrem App-Manifest über die **configurableTabs**  ->  -**Bereiche** und **Kontext** Arrays deklariert. *Scope* definiert, an wen und in welchem *Kontext* definiert wird, wo Ihre app verfügbar sein wird.
 
 > [!NOTE]
 > * Verwenden Sie das [Manifest-Schema für Entwicklervorschau](../resources/schema/manifest-schema-dev-preview.md) , um dieses in Ihrem App-Manifest zu testen.
@@ -260,11 +257,11 @@ Die APP-Funktionen für Besprechungen werden in Ihrem App-Manifest über die **c
 
 Die Registerkarte `context` und die `scopes` Eigenschaften funktionieren in Harmonie, damit Sie bestimmen können, wo Ihre APP angezeigt werden soll. Registerkarten im `team` `groupchat` Bereich oder können mehr als einen Kontext aufweisen. Die möglichen Werte für die Context-Eigenschaft lauten wie folgt:
 
-* **channelTab** : eine Registerkarte in der Kopfzeile eines Team Kanals.
-* **privateChatTab** : eine Registerkarte in der Kopfzeile eines Gruppenchats zwischen einer Gruppe von Benutzern, die sich nicht im Kontext eines Teams oder einer Besprechung befinden.
-* **meetingChatTab** : eine Registerkarte in der Kopfzeile eines Gruppenchats zwischen einer Gruppe von Benutzern im Kontext einer geplanten Besprechung.
-* **meetingDetailsTab** : eine Registerkarte in der Kopfzeile der Ansicht "Besprechungsdetails" des Kalenders.
-* **meetingSidePanel** : ein in-Meeting-Bereich, der über den einheitlichen Balken geöffnet wird (u-Leiste).
+* **channelTab**: eine Registerkarte in der Kopfzeile eines Team Kanals.
+* **privateChatTab**: eine Registerkarte in der Kopfzeile eines Gruppenchats zwischen einer Gruppe von Benutzern, die sich nicht im Kontext eines Teams oder einer Besprechung befinden.
+* **meetingChatTab**: eine Registerkarte in der Kopfzeile eines Gruppenchats zwischen einer Gruppe von Benutzern im Kontext einer geplanten Besprechung.
+* **meetingDetailsTab**: eine Registerkarte in der Kopfzeile der Ansicht "Besprechungsdetails" des Kalenders.
+* **meetingSidePanel**: ein in-Meeting-Bereich, der über den einheitlichen Balken geöffnet wird (u-Leiste).
 
 > [!NOTE]
 > Die Eigenschaft "Context" wird derzeit nicht unterstützt und wird daher auf mobilen Clients ignoriert.
@@ -284,7 +281,7 @@ Benutzer mit Organizer-und/oder Presenter-Rollen fügen mithilfe der Schaltfläc
 
  ✔ Basierend auf der Benutzerrolle kann die App nun rollenspezifische Erlebnisse vorlegen. Beispielsweise kann eine Polling-app nur Organisatoren und Referenten das Erstellen einer neuen Umfrage gestatten.
 
-> **Hinweis** : Rollenzuweisungen können geändert werden, während eine Besprechung ausgeführt wird.  *Siehe* [roles in a Teams Meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019). 
+> **Hinweis**: Rollenzuweisungen können geändert werden, während eine Besprechung ausgeführt wird.  *Siehe* [roles in a Teams Meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019). 
 
 ### <a name="in-meeting"></a>In-Meeting
 
@@ -292,11 +289,15 @@ Benutzer mit Organizer-und/oder Presenter-Rollen fügen mithilfe der Schaltfläc
 
 ✔ In Ihrem App-Manifest fügen Sie **sidePanel** dem **Kontext** Array hinzu, wie oben beschrieben.
 
-✔ In der Besprechung als auch in allen Szenarien wird die app in einer in-Meeting-Registerkarte gerendert, die 320 Pixel groß in der Breite ist. Die Registerkarte muss dafür optimiert werden. *Siehe* , [framecontext-Schnittstelle](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
+✔ In der Besprechung als auch in allen Szenarien wird die app in einer in-Meeting-Registerkarte gerendert, die 320 Pixel groß in der Breite ist. Die Registerkarte muss dafür optimiert werden. *Siehe*, [framecontext-Schnittstelle](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
 
 ✔ Sie im Microsoft [Teams-SDK](../tabs/how-to/access-teams-context.md#user-context) nach, um die **benutzercontext** -API zu verwenden, um Anforderungen entsprechend weiterzuleiten.
 
-✔ Bezieht sich auf den Microsoft [Teams-Authentifizierungs Fluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md). Der Authentifizierungs Fluss für Registerkarten ähnelt dem auth-Fluss für Websites. Daher können Registerkarten OAuth 2,0 direkt verwenden. *Siehe auch* , [Microsoft Identity Platform und OAuth 2,0-Autorisierungscode Fluss](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+✔ Bezieht sich auf den Microsoft [Teams-Authentifizierungs Fluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md). Der Authentifizierungs Fluss für Registerkarten ähnelt dem auth-Fluss für Websites. Daher können Registerkarten OAuth 2,0 direkt verwenden. *Siehe auch*, [Microsoft Identity Platform und OAuth 2,0-Autorisierungscode Fluss](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+
+✔ Nachrichten Erweiterung sollte wie erwartet funktionieren, wenn sich ein Benutzer in einer Besprechungs Ansicht befindet und in der Lage sein sollte, Verfassen von Nachrichten Erweiterungskarten bereitzustellen.
+
+✔ AppName in-Meeting-ToolTip sollte den APP-Namen in der Besprechungs-U-Leiste angeben.
 
 #### <a name="in-meeting-dialog"></a>**in-Meeting-Dialog**
 
@@ -307,6 +308,8 @@ Benutzer mit Organizer-und/oder Presenter-Rollen fügen mithilfe der Schaltfläc
 ✔ Verwenden Sie die [Benachrichtigungs](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) -API, um zu signalisieren, dass eine Blasen Benachrichtigung ausgelöst werden muss.
 
 ✔ Als Teil der Nutzlast der Benachrichtigungsanforderung enthalten die URL, in der der zu präsentierende Inhalt gehostet wird.
+
+✔ In-Meeting-Dialogfeld darf nicht Aufgabenmodul verwenden.
 
 > [!NOTE]
 >

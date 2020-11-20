@@ -5,18 +5,18 @@ description: Erstellen Sie mit dem Microsoft Teams-Toolkit schnell eine persönl
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 17153b9b7cd7e6dd9052fc40073fec60a4d51f81
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: a82d3dcfd9529d88160c4193d27105c3468fe654
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931729"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346805"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Erstellen einer persönlichen Registerkarte für Microsoft Teams
 
 Registerkarten stellen eine einfache Möglichkeit dar, Inhalte in Ihrer APP zu Oberflächen, indem eine Webseite im Wesentlichen in Microsoft Teams eingebettet wird.
 
-Es gibt zwei Arten von Registerkarten in Microsoft Teams. In diesem Lernprogramm erstellen Sie grundlegende eine *persönliche Registerkarte* , eine voll Bildinhalts Seite für einzelne Benutzer. (Persönliche Registerkarten sind die nächste Sache einer herkömmlichen Website Erfahrung in Microsoft Teams.)
+Es gibt zwei Arten von Registerkarten in Microsoft Teams. In diesem Lernprogramm erstellen Sie grundlegende eine *persönliche Registerkarte*, eine voll Bildinhalts Seite für einzelne Benutzer. (Persönliche Registerkarten sind die nächste Sache einer herkömmlichen Website Erfahrung in Microsoft Teams.)
 
 ## <a name="before-you-begin"></a>Bevor Sie beginnen
 
@@ -106,7 +106,7 @@ Das Microsoft [Teams-JavaScript-Client-SDK](https://docs.microsoft.com/javascrip
 
 ### <a name="get-context-about-the-teams-client"></a>Abrufen des Kontexts zum Microsoft Teams-Client
 
-In Ihrer `Tab.js` Datei gibt es einen `microsoftTeams.getContext()` Anruf, [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) der einige Informationen zu dem konfigurierten Client Design enthält, unter anderem. Dank des App-Gerüsts verwenden Sie diesen Code wie für den Zugriff auf die `context` Schnittstelle und ihre Eigenschaften.
+In Ihrer `Tab.js` Datei gibt es einen `microsoftTeams.getContext()` Anruf, [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) der einige Informationen zu dem konfigurierten Client Design enthält, unter anderem. Dank des App-Gerüsts verwenden Sie diesen Code wie für den Zugriff auf die `context` Schnittstelle und ihre Eigenschaften.
 
 ```JavaScript
 componentDidMount(){
@@ -173,7 +173,7 @@ if (isTheme === "default") {
 
 Herzlichen Glückwunsch! Sie verfügen über eine Teams-App mit einer persönlichen Registerkarte, die es einfacher macht, wichtige Kontakte in Ihrer Organisation zu finden.
 
-## <a name="learn-more"></a>Mehr erfahren
+## <a name="learn-more"></a>Weitere Informationen
 
 * [Authentifizieren von Registerkarten Benutzern mit SSO](../tabs/how-to/authentication/auth-aad-sso.md): Wenn Sie nur autorisierte Benutzer Ihrer Registerkarte anzeigen möchten, richten Sie einmaliges Anmelden (Single Sign-on, SSO) über Azure Active Directory (AD) ein.
 * [Einbetten von Inhalten aus einer vorhandenen Web-App oder Webseite](../tabs/how-to/add-tab.md#tab-requirements): Wir haben gezeigt, wie Sie neue Inhalte für eine persönliche RegisterkarteErstellen, aber Sie können auch Inhalte aus einer externen URL laden.

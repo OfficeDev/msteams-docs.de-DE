@@ -3,12 +3,12 @@ title: Text Formatierung in Karten
 description: Beschreibt die Formatierung von Karten Texten in Microsoft Teams
 keywords: Teams-Bots-Kartenformat
 ms.date: 03/29/2018
-ms.openlocfilehash: 944e6a69c68d284b3a7309063587bd4b75319bc7
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: fcf0692fe033cd3c30ea1e3ac7bda8ddd06297ca
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587811"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346707"
 ---
 # <a name="format-cards-in-teams"></a>Formatieren von Karten in Microsoft Teams
 
@@ -18,7 +18,7 @@ Karten unterstützen die Formatierung nur in der Text-Eigenschaft, nicht in den 
 
 Die Formatierungsunterstützung unterscheidet sich zwischen verschiedenen Kartentypen, und das Rendering der Karte kann sich geringfügig zwischen dem Desktop und den Clients für Mobile Teams sowie Microsoft Teams im Desktop Browser unterscheiden.
 
-Sie können ein Inlinebild mit einer beliebigen Teams-Karte einfügen. Bilder werden als `.png` , `.jpg` oder `.gif` Dateien formatiert und dürfen nicht mehr als 1024 × 1024 px oder 1 MB betragen. Animierte GIF-Zeichen werden nicht offiziell unterstützt. *Siehe* [Karten Referenz](./cards-reference.md#inline-card-images)
+Sie können ein Inlinebild mit einer beliebigen Teams-Karte einfügen. Bilder werden als  `.png` , `.jpg` oder `.gif` Dateien formatiert und dürfen nicht mehr als 1024 × 1024 px oder 1 MB betragen. Animierte GIF-Zeichen werden nicht offiziell unterstützt. *Siehe* [Karten Referenz](./cards-reference.md#inline-card-images)
 
 ## <a name="formatting-cards-with-markdown"></a>Formatieren von Karten mit Abschlag
 
@@ -42,7 +42,7 @@ Es gibt zwei Kartentypen, die das Abschlag in Microsoft Teams unterstützen:
 
 Die folgenden Abschlag Tags werden nicht unterstützt:
 
-* Header
+* Überschriften
 * Tabellen
 * Bilder
 * Vorformatierter Text
@@ -79,7 +79,7 @@ Auf Android wird die Formatierung für Adaptive Karten Abschriften wie folgt ang
 
 ``` json
 {
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "type": "AdaptiveCard",
     "version": "1.0",
     "body": [
@@ -103,7 +103,7 @@ Auf Android wird die Formatierung für Adaptive Karten Abschriften wie folgt ang
         },
         {
             "type": "TextBlock",
-            "text": "Check out [Adaptive Cards](http://adaptivecards.io)"
+            "text": "Check out [Adaptive Cards](https://adaptivecards.io)"
         }
     ]
 }
@@ -123,7 +123,7 @@ Bots und Messaging-Erweiterungen können Erwähnungen innerhalb des Karteninhalt
 
 Um eine Erwähnung in eine Adaptive Karte aufzunehmen, muss Ihre APP die folgenden Elemente enthalten:
 
-* `<at>username</at>`in den unterstützten Adaptive Card-Elementen
+* `<at>username</at>` in den unterstützten Adaptive Card-Elementen
 * Das `mention` Objekt innerhalb einer `msteams` Eigenschaft im Karteninhalt, das die Teams-Benutzer-ID des erwähnten Benutzers enthält
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>Beispiel Adaptive Karte mit Erwähnung
@@ -139,7 +139,7 @@ Um eine Erwähnung in eine Adaptive Karte aufzunehmen, muss Ihre APP die folgend
         "text": "Hi <at>John Doe</at>"
       }
     ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.0",
     "msteams": {
       "entities": [
@@ -202,7 +202,7 @@ Auf Android sieht die Abschläge für Verbindungskarten wie folgt aus:
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
     "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
+    "@context": "https://schema.org/extensions",
     "summary": "Summary",
     "title": "Connector Card Markdown formatting",
     "sections": [
@@ -225,7 +225,7 @@ Auf Android sieht die Abschläge für Verbindungskarten wie folgt aus:
             "text": "Link: [Bing](https://www.bing.com)"
         },
         {
-            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
+            "text": "embedded image link: ![Duck on a rock](https://aka.ms/Fo983c)"
         },
         {
             "text": "`preformatted text`"
@@ -261,7 +261,7 @@ Connectorkarten unterstützen beschränkte Abschlag-und HTML-Formatierung. Das A
 | Vorformatierter Text | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | Link | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| Bild Link | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| Bild Link | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 In connectorkarten werden die Neubuchungen in HTML mithilfe des- `<p>` Tags gerendert.
 
@@ -291,7 +291,7 @@ Auf Android sieht HTML-Formatierung wie folgt aus:
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
     "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
+    "@context": "https://schema.org/extensions",
     "summary": "Summary",
     "title": "Connector Card HTML formatting",
     "sections": [
@@ -317,7 +317,7 @@ Auf Android sieht HTML-Formatierung wie folgt aus:
             "text": "hyperlink <a href=\"https://www.bing.com/\">Bing</a>"
         },
         {
-            "text": "embedded image <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
+            "text": "embedded image <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
         },
         {
             "text": "preformatted text <pre>text</pre>"
@@ -349,7 +349,7 @@ HTML-Tags werden für einfache Karten wie die Hero-und die Thumbnail-Karte unter
 | Vorformatierter Text | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | Link | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| Bild Link |<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| Bild Link |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops für einfache Karten
 
@@ -377,6 +377,6 @@ Zeichenformatierungen wie Fett und kursiv werden auf Android korrekt angezeigt.
 
 Diese Screenshots wurden mit Microsoft Teams AppStudio erstellt, wobei die Text-Eigenschaft einer Hero Card auf die folgende Zeichenfolge festgelegt wurde. Sie können die Formatierung in ihren eigenen Karten testen, indem Sie diesen Code ändern.
 
-`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
+`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
 ---

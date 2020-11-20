@@ -2,12 +2,12 @@
 title: Registrieren eines Anruf-und Besprechungs-bot für Microsoft Teams
 description: Informationen zum Registrieren eines neuen bot für Audio/Videoanrufe für Microsoft Teams
 keywords: Aufrufen von bot-Audio/Video-Audio-Video Medien
-ms.openlocfilehash: 4db6c29352aa117e0dd1959826d0560359864d8a
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: d38b9584440bcff664bd3a2d4b57e52bc695f1b5
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209753"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346847"
 ---
 # <a name="register-a-calling-bot-for-microsoft-teams"></a>Registrieren eines anrufenden bot für Microsoft Teams
 
@@ -37,7 +37,7 @@ Wenn Sie möchten, dass die IDE die manifest.jsdes Schemas für Ihren anrufenden
 Das Erstellen eines neuen bot wird im Thema [Erstellen eines bot für Microsoft Teams](../how-to/create-a-bot-for-teams.md) ausführlicher behandelt, aber wir werden hier einiges wiederholen:
 
 1. Verwenden Sie diesen Link, um einen neuen bot zu erstellen: `https://dev.botframework.com/bots/new` . Wenn Sie stattdessen die Schaltfläche " *bot erstellen* " im bot-Framework-Portal auswählen, erstellen Sie Ihren bot in Microsoft Azure, für die Sie ein Azure-Konto benötigen.
-1. Fügen Sie den Microsoft Teams-Kanal hinzu. Klicken Sie auf der Microsoft Teams-Kanalseite auf die Registerkarte "anrufen", und wählen Sie **Anruf aktivieren**aus, und aktualisieren Sie dann **webhook (zum Aufrufen)** mit ihrer HTTPS-URL, über die Sie eingehende Benachrichtigungen erhalten, Beispiels `https://contoso.com/teamsapp/api/calling` Weise. Weitere Informationen zum Konfigurieren von Kanälen erhalten Sie unter [Configuring Channels](/bot-framework/portal-configure-channels) .
+1. Fügen Sie den Microsoft Teams-Kanal hinzu. Klicken Sie auf der Microsoft Teams-Kanalseite auf die Registerkarte "anrufen", und wählen Sie **Anruf aktivieren** aus, und aktualisieren Sie dann **webhook (zum Aufrufen)** mit ihrer HTTPS-URL, über die Sie eingehende Benachrichtigungen erhalten, Beispiels `https://contoso.com/teamsapp/api/calling` Weise. Weitere Informationen zum Konfigurieren von Kanälen erhalten Sie unter [Configuring Channels](/bot-framework/portal-configure-channels) .
   ![Konfigurieren von Microsoft Teams-Kanalinformationen](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
 ## <a name="add-microsoft-graph-permissions"></a>Hinzufügen von Microsoft Graph-Berechtigungen
@@ -50,8 +50,8 @@ Microsoft Graph macht granulare Berechtigungen verfügbar, die den Zugriff steue
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 |_Calls.Initiate.All_|Ausgehende 1:1-Anrufe aus der App initiieren (Vorschau)|Ermöglicht der App, ausgehende Anrufe an einen einzelnen Benutzer zu tätigen und Anrufe an Benutzer im Organisationsverzeichnis zu übertragen (ohne angemeldeten Benutzer).|Ja|
 |_Calls.InitiateGroupCall.All_|Ausgehende Gruppenanrufe aus der App initiieren (Vorschau)|Ermöglicht der App, ausgehende Anrufe an mehrere Benutzer zu tätigen und Teilnehmer in Ihrer Organisation zu Besprechungen hinzufügen (ohne angemeldeten Benutzer).|Ja|
-|_Calls.JoinGroupCall.All_|Gruppenanrufe und Besprechungen als App verknüpfen (Vorschau)|Ermöglicht der App, Gruppenanrufe und geplante Besprechungen in Ihrer Organisation ohne einen angemeldeten Benutzer zu verknüpfen. Die App wird mit den Berechtigungen eines Verzeichnisbenutzers und Besprechungen in Ihrem Mandanten verknüpft.|Ja|
-|_Calls.JoinGroupCallasGuest.All_|Verknüpfen von Gruppenanrufen und Besprechungen als Gast (Vorschau)|Ermöglicht der App, Gruppenanrufe und geplante Besprechungen in Ihrer Organisation ohne einen angemeldeten Benutzer anonym zu verknüpfen. Die App wird als Gast mit Besprechungen in Ihrem Mandanten verknüpft.|Ja|
+|_Calls.JoinGroupCall.All_|Gruppenanrufe und Besprechungen als App verknüpfen (Vorschau)|Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your tenant.|Ja|
+|_Calls.JoinGroupCallasGuest.All_|Verknüpfen von Gruppenanrufen und Besprechungen als Gast (Vorschau)|Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined as a guest to meetings in your tenant.|Ja|
 |_Calls. AccessMedia. all_ <sup> _siehe unten_</sup>|Auf Medienstreams in einem Anruf als App zugreifen (Vorschau)|Ermöglicht der App, direkten Zugriff auf Medienstreams in einem Anruf ohne einen angemeldeten Benutzer zu erhalten.|Ja|
 
 > [!IMPORTANT]
@@ -66,7 +66,7 @@ Microsoft Graph macht granulare Berechtigungen verfügbar, die den Zugriff steue
 
 ### <a name="assigning-permissions"></a>Zuweisen von Berechtigungen
 
-Sie müssen die Anwendungsberechtigungen für Ihren bot im Voraus konfigurieren. Wir empfehlen die Verwendung des [Microsoft-App-Registrierungs Portals](https://apps.dev.microsoft.com/) , wie [hier](/graph/auth_register_app_v2) beschrieben, da Ihr bot konfiguriert wurde; Sie können jedoch weiterhin das Azure- [Portal](https://aka.ms/aadapplist) verwenden, wenn Sie den [Azure AD v1-Endpunkt](/azure/active-directory/develop/azure-ad-endpoint-comparison)verwenden möchten.
+Sie müssen die Anwendungsberechtigungen für Ihren bot im Voraus mithilfe des Azure- [Portals](https://aka.ms/aadapplist) konfigurieren, wenn Sie den [Azure AD v1-Endpunkt](/azure/active-directory/develop/azure-ad-endpoint-comparison)verwenden möchten.
 
 ### <a name="getting-tenant-administrator-consent"></a>Zustimmung zum mandantenadministrator wird abgerufen
 

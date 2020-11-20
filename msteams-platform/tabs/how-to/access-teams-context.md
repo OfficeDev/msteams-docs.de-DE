@@ -2,12 +2,12 @@
 title: Kontext für die Registerkarte abrufen
 description: Beschreibt, wie Benutzerkontext auf Ihre Registerkarten abgerufen wird.
 keywords: Teams-Registerkarten Benutzerkontext
-ms.openlocfilehash: 01919999e38d6b659f014b0f05b76d3f332db9ab
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 8c94c4fd895896186ddda20bfaafd1d6ccdc1e73
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801224"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346798"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Kontext für Ihre Microsoft Teams-Registerkarte abrufen
 
@@ -47,6 +47,36 @@ Verwenden Sie Platzhalter in Ihren Konfigurations-oder Inhalts-URLs. Microsoft T
 * {Gruppenkennung}: die ID der Office 365 Gruppe, in der sich die Registerkarte befindet.
 * {TID}: die Azure AD Mandanten-ID des aktuellen Benutzers.
 * {locale}: das aktuelle Gebietsschema des Benutzers, der als sprach-Country-Format formatiert ist (beispielsweise "en-US").
+* {osLocaleInfo}: detailliertere Gebietsschemainformationen aus dem Betriebssystem des Benutzers, sofern verfügbar. Kann zusammen mit folgendem verwendet werden:
+    * das @Microsoft/Globe NPM-Paket, um sicherzustellen, dass Ihre APP das Betriebssystem Datum des Benutzers respektiert und
+    * Zeitformat Konfiguration.
+* {SessionID}: eindeutige ID für die aktuelle Teams-Sitzung zur Verwendung in korrelierenden Telemetrie-Daten.
+* {Kanalkennung}: die Microsoft Teams-ID für den Kanal, dem der Inhalt zugeordnet ist.
+* {ChannelName}: der Name des Kanals, dem der Inhalt zugeordnet ist.
+* {Chat Kennung}: die Microsoft Teams-ID für den Chat, dem der Inhalt zugeordnet ist.
+* {URL}: Inhalts-URL dieser Registerkarte.
+* {websiteUrl}: Website-URL dieser Registerkarte.
+* {favoriteChannelsOnly}: Flag, das nur bevorzugte Kanäle auswählen lässt.
+* {favoriteTeamsOnly}: Flag, das nur bevorzugte Teams auswählen lässt.
+* {userTeamRole}: Rolle des aktuellen Benutzers im Team.
+* {Team Type}: der Typ des Teams.
+* {isTeamLocked}: der gesperrte Status des Teams.
+* {isTeamArchived}: der archivierte Status des Teams.
+* {IsFullScreen}: Angabe, ob die Registerkarte sich im Vollbildmodus befindet.
+* {teamSiteUrl}: die SharePoint-Stammwebsite, die dem Team zugeordnet ist.
+* {teamSiteDomain}: die Domäne der SharePoint-Stammwebsite, die dem Team zugeordnet ist.
+* {teamSitePath}: der relative Pfad zu der SharePoint-Website, die dem Team zugeordnet ist.
+* {channelRelativeUrl}: der relative Pfad zum SharePoint-Ordner, der dem Kanal zugeordnet ist.
+* {tenantSKU}: der Typ der Lizenz für den aktuellen Benutzer Mandanten.
+* {Klingelton}: aktuelle Ring-ID.
+* {appSessionId}: eindeutige ID für die aktuelle Sitzung zur Verwendung in korrelierenden Telemetrie-Daten.
+* {completionBotId}: gibt eine bot-ID an, um das Ergebnis der Interaktion des Benutzers mit dem Aufgabenmodul zu senden.
+* {Konversations Kennung}: die ID der Unterhaltung.
+* {hostClientType}: Typ des Host Clients. (Mögliche Werte sind: Android, Ios, Internet, Desktop und Rigel.)
+* {framecontext}: der Kontext, in dem die Registerkarten-URL geladen wird (Inhalt, Aufgabe, Einstellung, entfernen, sidePanel).
+* {SharePoint}: Dies ist nur verfügbar, wenn es in SharePoint gehostet wird.
+* {Besprechungs-Nr}: Sie wird von der Registerkarte bei der Ausführung im Besprechungs Kontext verwendet.
+* {userLicenseType} Der Lizenztyp für den aktuellen Benutzer.
 
 >[!NOTE]
 >Der vorherige `{upn}` Platzhalter ist jetzt veraltet. Aus Gründen der Abwärtskompatibilität ist es derzeit ein Synonym für `{loginHint}` .
@@ -102,12 +132,12 @@ Die Kontextvariable wird wie im folgenden Beispiel aussehen.
 
 Wenn Ihre Inhaltsseite in einen privaten Kanal geladen wird, werden die Daten, die Sie aus dem Aufruf erhalten, `getContext` verschleiert, um die Datenschutzfunktion des Kanals zu schützen. Die folgenden Felder werden geändert, wenn sich die Inhaltsseite in einem privaten Kanal befindet. Wenn Ihre Seite einen der unten aufgeführten Werte verwendet, müssen Sie das Feld überprüfen, `channelType` um festzustellen, ob Ihre Seite in einen privaten Kanal geladen wird, und entsprechend reagieren.
 
-* `groupId`-Undefined für private Kanäle
-* `teamId`-Auf die Thread-Nr des privaten Kanals festlegen
-* `teamName`-Auf den Namen des privaten Kanals festlegen
-* `teamSiteUrl`-Festlegen der URL einer eindeutigen, eindeutigen SharePoint-Website für den privaten Kanal
-* `teamSitePath`-Festlegen des Pfads einer eindeutigen, eindeutigen SharePoint-Website für den privaten Kanal
-* `teamSiteDomain`-Festlegung auf die Domäne einer eindeutigen, eindeutigen SharePoint-Website Domäne für den privaten Kanal
+* `groupId` -Undefined für private Kanäle
+* `teamId` -Auf die Thread-Nr des privaten Kanals festlegen
+* `teamName` -Auf den Namen des privaten Kanals festlegen
+* `teamSiteUrl` -Festlegen der URL einer eindeutigen, eindeutigen SharePoint-Website für den privaten Kanal
+* `teamSitePath` -Festlegen des Pfads einer eindeutigen, eindeutigen SharePoint-Website für den privaten Kanal
+* `teamSiteDomain` -Festlegung auf die Domäne einer eindeutigen, eindeutigen SharePoint-Website Domäne für den privaten Kanal
 
 ## <a name="theme-change-handling"></a>Behandlung von Designänderungen
 

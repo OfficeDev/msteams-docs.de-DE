@@ -2,12 +2,12 @@
 title: Unterstützung für einmaliges Anmelden für Registerkarten
 description: Beschreibt einmaliges Anmelden (Single Sign-on, SSO)
 keywords: Teams-Authentifizierung SSO Aad Single Sign-on-API
-ms.openlocfilehash: aa2cdf303c7ae7241b9efe2f771479fbeb58a0de
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: 9691c4190697b3f53a9ce76921375101e762263a
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877057"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346791"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Unterstützung für einmaliges Anmelden (SSO) für Registerkarten
 
@@ -18,7 +18,7 @@ Benutzer melden sich über Ihre Arbeits-, Schul-oder Microsoft-Konten (Office 36
 >
 > ✔ Teams für Android (1416/1.0.0.2020073101 und höher)
 >
-> ✔ Teams für IOS ( _Version_ : 2.0.18 und höher)  
+> ✔ Teams für IOS (_Version_: 2.0.18 und höher)  
 >
 > Um die besten Erfahrungen mit Microsoft Teams zu erhalten, verwenden Sie die neueste Version von IOS und Android.
 
@@ -80,8 +80,8 @@ In diesem Abschnitt werden die Aufgaben im Zusammenhang mit dem Erstellen einer 
 7. Legen Sie fest **, wer einwilligen kann.**`Admins and users`
 8. Füllen Sie die Felder für die Konfiguration der Administrator-und Benutzer Zustimmungs Ansagen mit Werten aus, die für den Bereich geeignet sind `access_as_user` :
     * **Titel der Administrator Zustimmung:** Teams können auf das Profil des Benutzers zugreifen.
-    * **Administrator-Zustimmungs Beschreibung** : ermöglicht Teams das Aufrufen der webapin der App als aktueller Benutzer.
-    * **Benutzer Zustimmungs Titel** : Teams können auf das Benutzerprofil zugreifen und Anforderungen im Namen des Benutzers stellen.
+    * **Administrator-Zustimmungs Beschreibung**: ermöglicht Teams das Aufrufen der webapin der App als aktueller Benutzer.
+    * **Benutzer Zustimmungs Titel**: Teams können auf das Benutzerprofil zugreifen und Anforderungen im Namen des Benutzers stellen.
     * **Beschreibung der Benutzer Zustimmung:** Aktivieren Sie Teams, um APIs dieser APP mit denselben Rechten wie der Benutzer aufzurufen.
 9. Sicherstellen, dass der **Status** auf " **aktiviert** " festgelegt ist
 10. Wählen Sie die Schaltfläche **Bereich hinzufügen** aus, um zu speichern 
@@ -90,9 +90,9 @@ In diesem Abschnitt werden die Aufgaben im Zusammenhang mit dem Erstellen einer 
 11. Identifizieren Sie im Abschnitt **autorisierte Clientanwendungen** die Anwendungen, die Sie für die Webanwendung Ihrer APP autorisieren möchten. Wählen Sie *Clientanwendung hinzufügen* aus. Geben Sie die folgenden Client-IDs ein, und wählen Sie den autorisierten Bereich aus, den Sie im vorherigen Schritt erstellt haben:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Mobile Teams/Desktopanwendung)
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Microsoft Teams-Webanwendung)
-12. Navigieren Sie zu **API-Berechtigungen**. Wählen Sie *Add a permission*  >  *Microsoft Graph*  >  *Delegierte Berechtigungen* aus, und fügen Sie dann die folgenden Berechtigungen hinzu:
+12. Navigieren Sie zu **API-Berechtigungen**. Wählen Sie *Add a permission*  >  *Microsoft Graph*  >  *Delegierte Berechtigungen* aus, und fügen Sie dann die folgenden Berechtigungen von der Microsoft Graph-API hinzu:
     * User. Read (standardmäßig aktiviert)
-    * email
+    * E-Mail
     * offline_access
     * OpenID
     * Profil
@@ -147,7 +147,7 @@ Hier sehen Sie, wie die Authentifizierungs-API aussieht:
 ```javascript
 var authTokenRequest = {
   successCallback: function(result) { console.log("Success: " + result); },
-  failureCallback: function(error) { console.log("Failure: " + error); },
+  failureCallback: function(error) { console.log("Failure: " + error); }
 };
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```

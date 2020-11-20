@@ -4,12 +4,12 @@ author: heath-hamilton
 description: Hier erfahren Sie, wie Sie eine in-Meeting-Registerkarte für Microsoft Teams effektiv entwerfen.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 402d25e543494636af287bcc2e8a308765b4cea9
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: fc10c5b60672d243ac2e330ce93b4e01c2e7a278
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877029"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346672"
 ---
 # <a name="design-an-in-meeting-tab"></a>Besprechungs-Registerkarte entwerfen
 
@@ -37,16 +37,16 @@ Das folgende Beispiel zeigt die Registerkarte in der Besprechung, in der Umfrage
 
 Auf der Registerkarte in-Meeting werden Ihre APP-Inhalte mit den folgenden Dimensionen angezeigt:
 
-* **Breite** : 280 Pixel für den WebView-Bereich. Auf der linken und rechten Seite des Webviews befinden sich 20 Pixel Textabstand.
-* **Höhe** : vollständiges Anfärben am unteren Rand der Registerkarte. Zwischen dem WebView-Bereich und der Registerkartenüberschrift befinden sich 20 Pixelabstand.
+* **Breite**: 280 Pixel für den WebView-Bereich. Auf der linken und rechten Seite des Webviews befinden sich 20 Pixel Textabstand.
+* **Höhe**: vollständiges Anfärben am unteren Rand der Registerkarte. Zwischen dem WebView-Bereich und der Registerkartenüberschrift befinden sich 20 Pixelabstand.
 
 :::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="Abbildung der UI-Anatomie einer Besprechungs Erweiterung in der Besprechungs Registerkarte." border="false":::
 
-1. **App-Symbol** : der Einstiegspunkt zur Registerkarte in der Besprechung.
-1. **Kopfzeile** : schließt den Registerkartennamen ein.
-1. **Name** : der Name der Registerkarten Instanz.
-1. **Entlassen** : die Registerkarte wird geschlossen. Verwenden Sie immer das obere rechte Schließsymbol anstelle einer Aktion in der Fußzeile.
-1. **WebView** : zeigt alle Inhalte von Drittanbieter-apps an.
+1. **App-Symbol**: der Einstiegspunkt zur Registerkarte in der Besprechung.
+1. **Kopfzeile**: schließt den Registerkartennamen ein.
+1. **Name**: der Name der Registerkarten Instanz.
+1. **Entlassen**: die Registerkarte wird geschlossen. Verwenden Sie immer das obere rechte Schließsymbol anstelle einer Aktion in der Fußzeile.
+1. **WebView**: zeigt alle Inhalte von Drittanbieter-apps an.
 
 ## <a name="behavior"></a>Verhalten
 
@@ -125,7 +125,7 @@ Der Inhalt der Registerkarte wird an das Layout und die Position in der Besprech
 
 #### <a name="do-design-for-a-dark-theme"></a>Do: Design für ein dunkles Design
 
-Microsoft Teams-Besprechungen sind für den dunklen Modus optimiert, um visuelles und kognitives Rauschen zu reduzieren, sodass sich Benutzer auf die Diskussion und den freigegebenen Inhalt konzentrieren können.
+Microsoft Teams-Besprechungen sind für den dunklen Modus optimiert, um visuelles und kognitives Rauschen zu reduzieren, sodass sich Benutzer auf die Diskussion und den freigegebenen Inhalt konzentrieren können. Auf der Registerkarte "in-Meeting" sollte ein dunkles Design angewendet werden, und die Richtlinien für die Besprechung sollten befolgt werden.
 
    :::column-end:::
    :::column span="":::

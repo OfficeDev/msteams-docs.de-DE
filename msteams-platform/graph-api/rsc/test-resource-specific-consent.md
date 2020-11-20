@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Teams Authorization OAuth SSO Aad RSC Postman Graph
-ms.openlocfilehash: f780829100e47ad04a588106e83843876b8d7932
-ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
+ms.openlocfilehash: f50f61e7eb62e3bcc6af2dafc1c7c781ff2145de
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48995009"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366854"
 ---
 # <a name="test-resource-specific-consent-permissions--in-teams"></a>Testen von Berechtigungen für die ressourcenspezifische Zustimmung in Microsoft Teams
 
@@ -91,4 +91,5 @@ Führen Sie die gesamte Permissions-Auflistung für jeden API-Aufruf aus. Die Be
 
 > [!div class="nextstepaction"]
 >
-> [Weitere Informationen zur Graph-API und zu Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+> [Weitere Informationen: Microsoft Graph-API und Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+

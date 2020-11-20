@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie mit der Microsoft Teams-App-Entwicklung begin
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 7fc3f7e9fd9d3c2a028999be53ba6bdcd5b3ba72
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: e2e73e755c45fa3bff3b6320dfbf0999a575fe99
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931792"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346812"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>Erstellen Ihrer ersten Microsoft Teams-App-Übersicht
 
@@ -23,10 +23,10 @@ Hier ist eine Vorstellung davon, was Sie wissen, nachdem Sie die Lektionen durch
 > [!div class="checklist"]
   >
   > * Mit dem Microsoft Teams Toolkit für Visual Studio Code können Sie **schnell mit dem Team-Toolkit in Kontakt** treten, um ein App-Projekt und ein Gerüst zu erstellen, damit Sie in wenigen Minuten eine laufende APP haben.
-  > * **Konfigurieren Ihrer APP mit App Studio** : Geben Sie die Funktionen und Dienste an, die ihre Teams-App verwendet.
-  > * **Bereich der Benutzergruppe Ihrer APP** : Erstellen einer Teams-App für den persönlichen Gebrauch, die Zusammenarbeit oder beides.
-  > * **Erfahren Sie mehr über Microsoft Teams-Tools und SDKs** : passen Sie Ihre APP an (ändern Sie beispielsweise Ihr Farbschema so, dass Sie mit dem Microsoft Teams-Design übereinstimmt), und helfen Sie dem Microsoft Teams-JavaScript-SDK. Außerdem finden Sie Informationen zu allgemeinen Tools zum Erstellen und Verwalten von Bots.
-  > * **Erweitern Sie Ihre APP** : in den Lektionen finden Sie Verwandte Themen, die Sie wahrscheinlich interessieren (beispielsweise Authentifizierungs-und Entwurfsrichtlinien).
+  > * **Konfigurieren Ihrer APP mit App Studio**: Geben Sie die Funktionen und Dienste an, die ihre Teams-App verwendet.
+  > * **Bereich der Benutzergruppe Ihrer APP**: Erstellen einer Teams-App für den persönlichen Gebrauch, die Zusammenarbeit oder beides.
+  > * **Erfahren Sie mehr über Microsoft Teams-Tools und SDKs**: passen Sie Ihre APP an (ändern Sie beispielsweise Ihr Farbschema so, dass Sie mit dem Microsoft Teams-Design übereinstimmt), und helfen Sie dem Microsoft Teams-JavaScript-SDK. Außerdem finden Sie Informationen zu allgemeinen Tools zum Erstellen und Verwalten von Bots.
+  > * **Erweitern Sie Ihre APP**: in den Lektionen finden Sie Verwandte Themen, die Sie wahrscheinlich interessieren (beispielsweise Authentifizierungs-und Entwurfsrichtlinien).
 
 ## <a name="teams-app-fundamentals"></a>Grundlagen der Microsoft Teams-App
 
@@ -74,6 +74,9 @@ Sie können ein kostenloses Test Konto für Teams erhalten, das App-Sideloading 
 1. Überprüfen Sie, ob Sie nun die Option **benutzerdefinierte App hochladen** haben.
 
 </details>
+
+> [!Note]
+> Wenn Sie weiterhin keine apps querladen können, lesen Sie die Informationen unter [Aktivieren von benutzerdefinierten Microsoft Teams-apps und Aktivieren der benutzerdefinierten App-Uploads](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 ### <a name="install-your-development-tools"></a>Installieren der Entwicklungstools
 

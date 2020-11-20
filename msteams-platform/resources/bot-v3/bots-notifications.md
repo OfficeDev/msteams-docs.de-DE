@@ -5,12 +5,12 @@ keywords: Teams-Bots-Ereignisse
 ms.date: 05/20/2019
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: cb3463b8cfb14920644f16f84a09260739a82ede
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: e15629ef2f178c0498e33518f5976ff2b2bdf776
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877043"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346728"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Behandeln von bot-Ereignissen in Microsoft Teams
 
@@ -185,7 +185,7 @@ Das `conversationUpdate` Ereignis mit dem `membersAdded` Objekt in der Nutzlast 
 Ihr bot erhält ein `conversationUpdate` mit `membersAdded` , wenn ein Benutzer es direkt für persönlichen Chat hinzufügt. In diesem Fall enthält die von Ihrem bot empfangene Nutzlast das `channelData.team` Objekt nicht. Sie sollten dies als Filter verwenden, falls Ihr bot je nach Bereich eine andere [Willkommensnachricht](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) anbieten soll.
 
 > [!NOTE]
-> Für Bots mit persönlicher Reichweite empfängt Ihr bot das `conversationUpdate` Ereignis nur ein einziges Mal, auch wenn der bot entfernt und erneut hinzugefügt wird. Für die Entwicklung und das Testen kann es hilfreich sein, eine Hilfsfunktion hinzuzufügen, mit der Sie Ihren bot vollständig zurücksetzen können. Weitere Informationen zur Implementierung dieses Beispiels finden Sie unter [Node.js Beispiel](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) oder [C#-Beispiel](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) .
+> Für Bots mit persönlicher Reichweite empfängt Ihr bot das `conversationUpdate` Ereignis mehrmals, auch wenn der bot entfernt und erneut hinzugefügt wird. Für die Entwicklung und das Testen kann es hilfreich sein, eine Hilfsfunktion hinzuzufügen, mit der Sie Ihren bot vollständig zurücksetzen können. Weitere Informationen zur Implementierung dieses Beispiels finden Sie unter [Node.js Beispiel](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) oder [C#-Beispiel](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) .
 
 #### <a name="schema-example-bot-added-to-personal-context"></a>Schema Beispiel: bot zum persönlichen Kontext hinzugefügt
 

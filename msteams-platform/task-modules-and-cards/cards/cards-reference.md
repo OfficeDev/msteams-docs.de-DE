@@ -2,12 +2,12 @@
 title: Karten Referenz
 description: Beschreibt alle Karten-und Karten Aktionen, die Bots in Microsoft Teams zur Verfügung stehen.
 keywords: Referenz zu Bots-Karten
-ms.openlocfilehash: 0bcc905f3d5b678700a396ff3e5b8b5f0232046f
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 7c37d05ae4cfd07049eaec6dec5eda0f3312cefa
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452610"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346742"
 ---
 # <a name="cards-reference"></a>Karten Referenz
 
@@ -47,7 +47,7 @@ Ihre Karte kann ein Inlinebild enthalten, indem Sie einen Link zu Ihrem öffentl
 
 Bilder werden in der Größe nach oben oder unten skaliert, wobei das Seitenverhältnis zum Abdecken des Bildbereichs beibehalten und dann vom Center abgeschnitten wurde, um das entsprechende Seitenverhältnis für die Karte zu erreichen.
 
-Bilder müssen im Format PNG, JPEG oder GIF maximal 1024 × 1024 und 1 MB sein; animierte GIF-Zeichen werden nicht offiziell unterstützt.
+Bilder müssen im Format PNG, JPEG oder GIF maximal 1024 × 1024 sein; animierte GIF-Zeichen werden nicht offiziell unterstützt.
 
 | Eigenschaft | Typ  | Beschreibung |
 | --- | --- | --- |
@@ -70,7 +70,7 @@ Eine anpassbare Karte, die eine beliebige Kombination aus Text, Sprache, Bildern
 
 ### <a name="support-for-adaptive-cards"></a>Unterstützung für Adaptive Karten
 
-| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot-Framework |
+| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -226,7 +226,7 @@ Eine Karte, die normalerweise ein einzelnes großes Bild, eine oder mehrere Scha
 
 ### <a name="support-for-hero-cards"></a>Unterstützung für Hero Cards
 
-| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot-Framework |
+| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -289,7 +289,7 @@ Die Listen Karte wurde von Microsoft Teams hinzugefügt, um Funktionen bereitzus
 
 ### <a name="support-for-list-cards"></a>Unterstützung für Listen Karten
 
-| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot-Framework |
+| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 |
@@ -299,7 +299,7 @@ Die Listen Karte wurde von Microsoft Teams hinzugefügt, um Funktionen bereitzus
 | Eigenschaft | Typ  | Beschreibung |
 | --- | --- | --- |
 | title | Rich-Text  | Titel der Karte. Maximal 2 Zeilen.|
-| Elemente | Array von Listenelementen  ||
+| items | Array von Listenelementen  ||
 | Schaltflächen | Array von Action-Objekten | Eine Gruppe von Aktionen, die für die aktuelle Karte gelten. Maximal 6. |
 
 ### <a name="example-list-card"></a>Beispiel Listen Karte
@@ -364,7 +364,7 @@ Die Office 365-Anschluss Karte bietet ein flexibles Layout mit mehreren Abschnit
 
 ### <a name="support-for-office-365-connector-cards"></a>Unterstützung für Office 365-Anschlusskarten
 
-| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot-Framework |
+| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
 |
@@ -482,7 +482,7 @@ Eine Karte, mit der ein bot dem Benutzer eine Quittung zur Verfügung stellen ka
 
 ### <a name="support-for-receipts-cards"></a>Unterstützung für Empfangs Karten
 
-| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot-Framework |
+| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -502,7 +502,7 @@ Die *SignIn-Aktion* kann von jeder beliebigen Karte in Microsoft Teams und nicht
 
 ### <a name="support-for-signin-cards"></a>Unterstützung für SignIn-Karten
 
-| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot-Framework |
+| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 |
@@ -520,7 +520,7 @@ Eine Karte, die in der Regel ein einzelnes Miniaturbild, eine oder mehrere Schal
 
 ### <a name="support-for-thumbnail-cards"></a>Unterstützung für Miniatur Ansichtskarten
 
-| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot-Framework |
+| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -601,7 +601,7 @@ Das [Karussell-Layout](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-car
 
 ### <a name="support-for-carousel-collections"></a>Unterstützung für Karussell Sammlungen
 
-| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot-Framework |
+| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 |
@@ -625,7 +625,7 @@ Eigenschaften entsprechen denen für die Hero-oder Thumbnail-Karte.
 
 Das Listenlayout zeigt eine vertikal gestapelte Liste von Karten, optional mit zugeordneten Aktionsschaltflächen.
 
-| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot-Framework |
+| Bots in Microsoft Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
