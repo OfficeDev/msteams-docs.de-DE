@@ -229,8 +229,6 @@
               href: bots/how-to/conversations/channel-and-group-conversations.md
             - name: Versenden proaktiver Nachrichten
               href: bots/how-to/conversations/send-proactive-messages.md
-            - name: Dateien senden und erhalten
-              href: bots/how-to/conversations/send-and-receive-files.md
         - name: Ihren Bot debuggen
           items:
             - name: Lokal mit einer IDE debuggen
