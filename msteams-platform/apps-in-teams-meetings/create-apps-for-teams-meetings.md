@@ -5,12 +5,12 @@ description: Erstellen von Apps für Microsoft Teams-Besprechungen
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Teams-apps-Besprechungen Benutzer Teilnehmer-Rollen-API
-ms.openlocfilehash: 30c7a2d6bc3afed28fe0f24a9dd54b67f9b1223c
-ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
+ms.openlocfilehash: f448885e3664209858eb90fa9f0853c3d31e015a
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "49358014"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409113"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Apps für Teams-Besprechungen erstellen
 
@@ -30,7 +30,7 @@ ms.locfileid: "49358014"
 
 ## <a name="meeting-apps-api-reference"></a>Besprechungs-apps-API-Referenz
 
-|API|Beschreibung|Anforderung|Quelle|
+|API|Beschreibung|Anforderung|Source|
 |---|---|----|---|
 |**Getusercontext**| Abrufen von Kontextinformationen zum Anzeigen relevanter Inhalte auf einer Registerkarte Teams. |_**verläuft. GetContext (() => {/*...* / } )**_|Microsoft Teams-Client-SDK|
 |**Getparticipant**|Mit dieser API kann ein bot eine Teilnehmer Information nach Besprechungs-ID und Teilnehmer-ID abrufen.|**GET** _**/V1/Meetings/{meetingId}/participants/{participantId} abrufen? Mandanten-Nr = {Mandanten** -Nr}_ |Microsoft bot Framework SDK|
@@ -90,9 +90,9 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**meetingId**| Zeichenfolge | Ja | Die Besprechungs-ID ist über bot Invoke und Microsoft Teams Client SDK verfügbar.|
-|**Teilnehmer-Nr**| Zeichenfolge | Ja | Dieses Feld ist die Benutzer-ID und steht in der Registerkarte "SSO", im bot-Invoke und im Microsoft Teams-Client-SDK zur Verfügung. Die Registerkarte SSO wird dringend empfohlen.|
-|**tenantId**| Zeichenfolge | Ja | Dies ist für Mandanten Benutzer erforderlich. Sie ist in Tab SSO, bot Invoke und Microsoft Teams Client SDK verfügbar. Die Registerkarte SSO wird dringend empfohlen.|
+|**meetingId**| string | Ja | Die Besprechungs-ID ist über bot Invoke und Microsoft Teams Client SDK verfügbar.|
+|**Teilnehmer-Nr**| string | Ja | Dieses Feld ist die Benutzer-ID und steht in der Registerkarte "SSO", im bot-Invoke und im Microsoft Teams-Client-SDK zur Verfügung. Die Registerkarte SSO wird dringend empfohlen.|
+|**tenantId**| string | Ja | Dies ist für Mandanten Benutzer erforderlich. Sie ist in Tab SSO, bot Invoke und Microsoft Teams Client SDK verfügbar. Die Registerkarte SSO wird dringend empfohlen.|
 
 #### <a name="response-payload"></a>Antwort Nutzlast
 <!-- markdownlint-disable MD036 -->
@@ -154,7 +154,7 @@ POST /v3/conversations/{conversationId}/activities
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**conversationId**| Zeichenfolge | Ja | Die Konversations-ID ist im Rahmen von bot Invoke verfügbar |
+|**conversationId**| string | Ja | Die Konversations-ID ist im Rahmen von bot Invoke verfügbar |
 
 #### <a name="request-payload"></a>Anforderungsnutzlast
 
@@ -289,7 +289,8 @@ Benutzer mit Organizer-und/oder Presenter-Rollen fügen mithilfe der Schaltfläc
 
 ✔ In Ihrem App-Manifest fügen Sie **sidePanel** dem **Kontext** Array hinzu, wie oben beschrieben.
 
-✔ In der Besprechung als auch in allen Szenarien wird die app in einer in-Meeting-Registerkarte gerendert, die 320 Pixel groß in der Breite ist. Die Registerkarte muss dafür optimiert werden. *Siehe*, [framecontext-Schnittstelle](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
+✔ In der Besprechung als auch in allen Szenarien wird die app in einer in-Meeting-Registerkarte gerendert, die 320 Pixel groß in der Breite ist. Die Registerkarte muss dafür optimiert werden. *Siehe*, [framecontext-Schnittstelle](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
+)
 
 ✔ Sie im Microsoft [Teams-SDK](../tabs/how-to/access-teams-context.md#user-context) nach, um die **benutzercontext** -API zu verwenden, um Anforderungen entsprechend weiterzuleiten.
 

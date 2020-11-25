@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: Teams-apps-Validierung am häufigsten fehlgeschlagene Testfälle schnellgenehmigung appsource veröffentlichen
-ms.openlocfilehash: 180a12563d11f9089f8350521a40937edb2e6b3e
-ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
+ms.openlocfilehash: b1333448eb8b8e1e2310114bf95404b74aa95b58
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48992649"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409106"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Tipps für eine erfolgreiche App-Übermittlung
 
@@ -176,7 +176,7 @@ Nur Benachrichtigungs Bots müssen eine Willkommensnachricht senden, die eine Na
 * **Machen Sie Ihre Nachricht prägnant und informativ**.  Höchstwahrscheinlich sind die Benutzerfreundlichkeit und das Wissen über Ihre APP unterschiedlich. Ein Benutzer hat Ihre APP möglicherweise auf einer anderen Plattform verwendet oder hat nichts über Ihre App erfahren. Sie möchten Ihre Nachricht an alle Zielgruppen anpassen und in einigen Sätzen erklären, was Ihr bot tut und wie er mit ihm interagieren kann. Sie sollten auch den Wert der APP erläutern und erfahren, wie die Benutzer davon profitieren.
 ![Cafe und ESS-bot](../../../../assets/images/faq/cafe-bot.png)
 
-* **Machen Sie Ihre Nachricht Handlungs** bereit. Denken Sie an das erste, was Benutzer nach der Installation Ihrer APP tun sollen. Gibt es einen coolen Befehl, den Sie ausprobieren sollten? Gibt es eine weitere Onboarding-Erfahrung, die Sie kennen sollten? Müssen die Benutzer sich anmelden? Sie können Aktionen auf einer adaptiven Karte hinzufügen oder bestimmte Beispiele wie *"versuchen Sie Fragen...."* , *"Dies ist, was ich tun kann..."* bereitstellen.
+* **Machen Sie Ihre Nachricht Handlungs** bereit. Denken Sie an das erste, was Benutzer nach der Installation Ihrer APP tun sollen. Gibt es einen coolen Befehl, den Sie ausprobieren sollten? Gibt es eine weitere Onboarding-Erfahrung, die Sie kennen sollten? Müssen die Benutzer sich anmelden? Sie können Aktionen auf einer adaptiven Karte hinzufügen oder bestimmte Beispiele wie *"versuchen Sie Fragen...."*, *"Dies ist, was ich tun kann..."* bereitstellen.
 
 #### <a name="welcome-messages-in-the-teamchannel--scope"></a>Begrüßungsnachrichten im Team/Kanal-Bereich
 
@@ -209,19 +209,6 @@ Warnen Sie die Benutzer, bevor Ihre APP Dateien oder ausführbare Dateien ( `.ex
 * Aufgaben Module müssen ein Symbol und einen Kurznamen enthalten, die in der App enthalten oder erstellt wurden.
 * Die `@mention` ausführbaren Dateien für die Nachrichten Erweiterung sollten klar, leicht verständlich und leicht lesbar sein.
 ![Nachrichten Erweiterung](../../../../assets/images/faq/message-extension.png)
-
-## <a name="app-category-mapping"></a>Zuordnung von App-Kategorien
-
-| Kategorie "Teams"       | PC-Kategorien  |
-|:---------------------|:---------------|
-| Analytik und BI | Analyse, Datenvisualisierung und BI |
-| Entwickler und IT | Entwickler Tools, IT-Administrator |
-| Education | Education |
-| Personalabteilung | Personalwesen und Rekrutierung |
-| Produktivität | Inhaltsverwaltung, Dateien und Dokumente, Produktivität, Schulungen und Lernprogramme sowie Dienstprogramme |
-| Projektmanagement | Kommunikation, Projektmanagement, Workflow und Unternehmensverwaltung |
-| Vertrieb und Support | Kunden-und Kontaktverwaltung, Kundenbetreuung, Finanzverwaltung, Vertrieb und Marketing |
-| Soziales und Spaß | Bild-und Video Galerien, Lifestyle, Nachrichten und Wetter, Soziales, Reisen und Navigation |
 
 > [!div class="nextstepaction"]
 > [Weitere Informationen zu Teams-App-Genehmigungsrichtlinien](/legal/marketplace/certification-policies#1140-teams)

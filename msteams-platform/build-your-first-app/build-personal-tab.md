@@ -5,12 +5,12 @@ description: Erstellen Sie mit dem Microsoft Teams-Toolkit schnell eine persönl
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: a82d3dcfd9529d88160c4193d27105c3468fe654
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 89d9a2109a863402dd7641d0882c530a0c2e6f66
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346805"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409071"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Erstellen einer persönlichen Registerkarte für Microsoft Teams
 
@@ -18,7 +18,7 @@ Registerkarten stellen eine einfache Möglichkeit dar, Inhalte in Ihrer APP zu O
 
 Es gibt zwei Arten von Registerkarten in Microsoft Teams. In diesem Lernprogramm erstellen Sie grundlegende eine *persönliche Registerkarte*, eine voll Bildinhalts Seite für einzelne Benutzer. (Persönliche Registerkarten sind die nächste Sache einer herkömmlichen Website Erfahrung in Microsoft Teams.)
 
-## <a name="before-you-begin"></a>Bevor Sie beginnen
+## <a name="before-you-begin"></a>Vorbereitung
 
 Für die ersten Schritte benötigen Sie eine grundlegende ausgeführte persönliche Registerkarte. Wenn Sie noch keinen haben, lesen Sie [Erstellen und Ausführen ihrer ersten Teams-App](../build-your-first-app/build-and-run.md).
 
@@ -173,7 +173,7 @@ if (isTheme === "default") {
 
 Herzlichen Glückwunsch! Sie verfügen über eine Teams-App mit einer persönlichen Registerkarte, die es einfacher macht, wichtige Kontakte in Ihrer Organisation zu finden.
 
-## <a name="learn-more"></a>Weitere Informationen
+## <a name="learn-more"></a>Mehr erfahren
 
 * [Authentifizieren von Registerkarten Benutzern mit SSO](../tabs/how-to/authentication/auth-aad-sso.md): Wenn Sie nur autorisierte Benutzer Ihrer Registerkarte anzeigen möchten, richten Sie einmaliges Anmelden (Single Sign-on, SSO) über Azure Active Directory (AD) ein.
 * [Einbetten von Inhalten aus einer vorhandenen Web-App oder Webseite](../tabs/how-to/add-tab.md#tab-requirements): Wir haben gezeigt, wie Sie neue Inhalte für eine persönliche RegisterkarteErstellen, aber Sie können auch Inhalte aus einer externen URL laden.

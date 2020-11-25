@@ -2,12 +2,12 @@
 title: Referenz zu Entwurfsrichtlinien
 description: Beschreibt die Richtlinien für die Verwendung von Farbe in den apps
 keywords: Teams-Entwurfsrichtlinien Referenzkomponenten Farbe
-ms.openlocfilehash: c6c0a421abbfc23959c7873d95aa89ca7cc685f2
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: dab223891e88615b52386d3692d4a98607d6d449
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674190"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409064"
 ---
 # <a name="color"></a>Farbe
 
@@ -25,7 +25,7 @@ Unsere am häufigsten verwendeten Textfarben. Wir verwenden Sie auf fünf Ebenen
 4. 52%-Zeitstempel
 5. 36%-deaktivierter Text
 
-Für einige Benutzer `$app-black` Oberflächenelemente verwenden wir auch andere Trübungs Bereiche:
+`$app-black`Für einige Benutzeroberflächenelemente verwenden wir auch andere Trübungs Bereiche:
 
 [!include[Appblack color and text](~/includes/design/color-image-appblack-ui.html)]
 
@@ -52,6 +52,9 @@ Weitere Informationen finden Sie unter Pen [Microsoft Teams Design Guidelines-Da
 
 <iframe height='798' scrolling='no' title='Microsoft Teams-Entwurfsrichtlinien-dunkles Design Color Ramp' src='//codepen.io/msteams/embed/BmBwjx/?height=846&theme-id=31655&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Weitere Informationen finden Sie unter Pen <a href='https://codepen.io/msteams/pen/BmBwjx/'>Microsoft Teams Design Guidelines-Dark Theme colour Ramp</a> by Microsoft Teams (<a href='https://codepen.io/msteams'>@msteams</a>) auf <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+
+> **Hinweis:** Die msteams-UI-Styles-Core-Bibliothek hat die tatsächlichen Werte als Variablen codiert. Diese Variablen werden hilfreich sein, wenn die Farben immer aktualisiert werden.
+
 
 ### <a name="other-dark-theme-colors"></a>Andere dunkle Designfarben
 

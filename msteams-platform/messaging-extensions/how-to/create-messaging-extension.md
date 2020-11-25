@@ -4,12 +4,12 @@ author: clearab
 description: In diesem Artikel erfahren Sie, wie Sie eine Microsoft Teams-Messaging Erweiterung mit App Studio erstellen.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c3437457f7084d2d768af0f0db5208525c368682
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 24d5736fcc7c88d903d30c6f1103a95154143058
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796183"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409057"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Eine Messaging-Erweiterung mit App Studio erstellen
 
@@ -57,7 +57,7 @@ Sie können Ihr App-Manifest entweder in App Studio oder manuell erstellen.
 
 Sie können die APP Studio-app innerhalb des Microsoft Teams-Clients verwenden, um das App-Manifest zu erstellen.
 
-1. Öffnen Sie App Studio im Teams-Client aus dem **...** -Überlaufmenü auf der linken Navigationsleiste. Wenn es nicht bereits installiert ist, können Sie dies durchsuchen.
+1. Öffnen Sie App Studio im Teams-Client aus dem **...**-Überlaufmenü auf der linken Navigationsleiste. Wenn es nicht bereits installiert ist, können Sie dies durchsuchen.
 2. Klicken Sie auf der Registerkarte **Manifest-Editor** auf **neue APP erstellen** (oder wenn Sie eine Messaging Erweiterung zu einer vorhandenen APP hinzufügen, können Sie Ihr App-Paket importieren)
 3. Fügen Sie Ihre App-Details hinzu (in der [Manifestschemadefinition](~/resources/schema/manifest-schema.md) finden Sie die vollständigen Beschreibungen der einzelnen Felder).
 4. Klicken Sie auf der Registerkarte **Messaging Erweiterungen** auf die Schaltfläche **Setup** .
@@ -127,15 +127,18 @@ Wenn Ihre Benutzer Ihre Messaging-Erweiterung auslösen, müssen Sie die anfäng
 
 ## <a name="messaging-extensions-in-teams-meetings"></a>Messaging Erweiterungen in Microsoft Teams-Besprechungen
 
+> [!NOTE]
+> Wenn ein Besprechungs-oder Gruppenchat Verbundbenutzer in der Liste hat, unterdrückt Microsoft Teams den Zugriff auf Messaging Erweiterungen für alle Benutzer, einschließlich des Organisators.
+
 Sobald eine Besprechung beginnt, können Teams-Teilnehmer während eines Live-Anrufs direkt mit Ihrer Messaging-Erweiterung interagieren. Berücksichtigen Sie beim Erstellen Ihrer in-Meeting-Messaging-Erweiterung Folgendes:
 
-1. **Location** . Ihre Messaging Erweiterung kann über den Bereich zum Verfassen von Nachrichten, das Befehlsfeld oder @mentioned im Besprechungs Chat aufgerufen werden.
+1. **Location**. Ihre Messaging Erweiterung kann über den Bereich zum Verfassen von Nachrichten, das Befehlsfeld oder @mentioned im Besprechungs Chat aufgerufen werden.
 
-1. **Metadaten** . Wenn Ihre Messaging-Erweiterung aufgerufen wird, kann Sie den Benutzer und den Mandanten aus `userId` und identifizieren `tenantId` . Die `meetingId`kann als Teil des Objekts `channelData` gefunden werden. Ihre APP kann die `userId` und `meetingId`  für die `GetParticipant` API-Anforderung zum Abrufen von Benutzerrollen verwenden.
+1. **Metadaten**. Wenn Ihre Messaging-Erweiterung aufgerufen wird, kann Sie den Benutzer und den Mandanten aus `userId` und identifizieren `tenantId` . Die `meetingId`kann als Teil des Objekts `channelData` gefunden werden. Ihre APP kann die `userId` und `meetingId`  für die `GetParticipant` API-Anforderung zum Abrufen von Benutzerrollen verwenden.
 
-1. **Befehlstyp** . Wenn Ihre Nachrichten Erweiterung [Aktionsbasierte Befehle](../../messaging-extensions/what-are-messaging-extensions.md#action-commands)verwendet, sollte Sie den Registerkarten [für einmaliges Anmelden bei](../../tabs/how-to/authentication/auth-aad-sso.md) der Authentifizierung entsprechen.
+1. **Befehlstyp**. Wenn Ihre Nachrichten Erweiterung [Aktionsbasierte Befehle](../../messaging-extensions/what-are-messaging-extensions.md#action-commands)verwendet, sollte Sie den Registerkarten [für einmaliges Anmelden bei](../../tabs/how-to/authentication/auth-aad-sso.md) der Authentifizierung entsprechen.
 
-1. **Benutzeroberfläche** . Ihre Messaging Erweiterung sollte genauso aussehen und sich Verhalten wie außerhalb einer Besprechung.
+1. **Benutzeroberfläche**. Ihre Messaging Erweiterung sollte genauso aussehen und sich Verhalten wie außerhalb einer Besprechung.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -2,12 +2,12 @@
 title: Unterstützung für einmaliges Anmelden für Bots
 description: Beschreibt, wie ein Benutzertoken abgerufen wird. Derzeit kann ein bot-Entwickler eine Anmeldekarte oder den Azure bot-Dienst mit der OAuth-Kartenunterstützung verwenden.
 keywords: Token, Benutzertoken, SSO-Unterstützung für Bots
-ms.openlocfilehash: a056ce1a8bf0e59c9f4f30392df3bce7e8c63e00
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: f2f04cefdea874c42961404339f54b8eb581c7ee
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346854"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409099"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Unterstützung für einmaliges Anmelden (SSO) für Bots
 
@@ -48,13 +48,16 @@ Die folgenden Schritte sind erforderlich, um einen SSO-Microsoft Teams-bot zu en
 
 Dieser Schritt ähnelt dem [Registerkarten-SSO-Fluss](../../../tabs/how-to/authentication/auth-aad-sso.md):
 
-1. Rufen Sie Ihre [Azure AD-Anwendungs-ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)ab.
+1. Rufen Sie Ihre [Azure AD-Anwendungs-ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) für Microsoft Teams-Desktop,-Webdienste oder Mobile Clients ab.
 2. Geben Sie die Berechtigungen an, die Ihre Anwendung für den Azure AD-Endpunkt und optional für Microsoft Graph benötigt.
 3. [Erteilen von Berechtigungen](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) für Desktop-, Webanwendungen und Mobile Microsoft Teams-Anwendungen
-4. Vorautorisieren von Teams durch Auswählen der Schaltfläche **Bereich hinzufügen** und Eingeben des `access_as_user` **Bereichsnamens** in das geöffnete Fenster.
+4. Fügen Sie eine Client-App hinzu, indem Sie die Schaltfläche **Bereich hinzufügen** auswählen und im geöffneten Bereich `access_as_user` als **Bereichsnamen** eingeben.
+
+>[!NOTE]
+> Der Bereich "access_as_user", der zum Hinzufügen einer Client-App verwendet wird, ist für "Administratoren und Benutzer".
 
 > [!IMPORTANT]
-> * Wenn Sie einen eigenständigen bot erstellen, legen Sie den Anwendungs-ID-URI auf fest `api://botid-{YourBotId}` .
+> * Wenn Sie einen eigenständigen bot erstellen, legen Sie den Anwendungs-ID-URI auf `api://botid-{YourBotId}` hier fest, **YourBotId** verweist auf Ihre Azure AD Anwendungs-ID.
 > * Wenn Sie eine APP mit einem bot und einer RegisterkarteErstellen, legen Sie den Anwendungs-ID-URI auf fest `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
 
 ### <a name="update-your-app-manifest"></a>Aktualisieren des App-Manifests
@@ -78,6 +81,9 @@ Fügen Sie Ihrem Microsoft Teams-Manifest neue Eigenschaften hinzu:
 ### <a name="request-a-bot-token"></a>Anfordern eines bot-Tokens
 
 Die Anforderung zum Abrufen des Tokens ist eine normale Post-Nachrichtenanforderung (unter Verwendung des vorhandenen Nachrichtenschemas). Sie ist in den Anlagen eines OAuthCard enthalten. Das Schema für die OAuthCard-Klasse ist im [Microsoft-bot-Schema 4,0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) definiert und ähnelt einer Anmeldekarte. Diese Anforderung wird von Microsoft Teams als automatische Token-Übernahme behandelt, wenn die `TokenExchangeResource` Eigenschaft auf der Karte aufgefüllt ist. Für den Teams-Kanal honorieren wir nur die `Id` Eigenschaft, die eine Token-Anforderung eindeutig identifiziert.
+
+>[!NOTE]
+> Das bot `OAuthPrompt` -Framework oder das `MultiProviderAuthDialog` wird für die SSO-Authentifizierung (Single Sign-on, einmaliges Anmelden) unterstützt.
 
 Wenn der Benutzer Ihre Anwendung zum ersten Mal verwendet und die Zustimmung des Benutzers erforderlich ist, wird dem Benutzer ein Dialogfeld angezeigt, in dem die Zustimmungs Erfahrung ähnlich wie unten fortgesetzt werden kann. Wenn der Benutzer **Continue** auswählt, treten zwei verschiedene Dinge auf, je nachdem, ob der bot definiert ist oder nicht, und eine Anmeldeschaltfläche auf dem OAuthCard.
 
@@ -116,14 +122,14 @@ Die Antwort mit dem Token wird über eine Invoke-Aktivität mit dem gleichen Sch
 **C#-Code zur Reaktion auf die Behandlung der Invoke-Aktivität**:
 
 ```csharp
-protected override async Task<InvokeResponse> OnInvokeActivity
+protected override async Task<InvokeResponse> OnInvokeActivityAsync
   (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
             try
             {
                 if (turnContext.Activity.Name == SignInConstants.TokenExchangeOperationName && turnContext.Activity.ChannelId == Channels.Msteams)
                 {
-                    await OnTokenResponse(turnContext, cancellationToken);
+                    await OnTokenResponseEventAsync(turnContext, cancellationToken);
                     return new InvokeResponse() { Status = 200 };
                 }
                 else
@@ -155,6 +161,10 @@ Die `turnContext.activity.value` ist vom Typ [TokenExchangeInvokeRequest](/dotne
 > * Geben Sie einen Namen für die neue Verbindungseinstellung ein. Dies ist der Name, auf den innerhalb der Einstellungen Ihres bot-Dienstcodes in **Schritt 5** verwiesen wird.
 > * Wählen Sie in der Dropdownliste Dienstanbieter die Option **Azure Active Directory v2** aus.
 >* Geben Sie die Clientanmeldeinformationen für die Aad-Anwendung ein.
+
+>[!NOTE]
+> **Implizite Zuwendungen** sind in der Aad-Anwendung möglicherweise erforderlich.
+
 >* Verwenden Sie für die Token-Exchange-URL den Bereichswert, der im vorherigen Schritt ihrer Aad-Anwendung definiert wurde. Das vorhanden sein der Token-Exchange-URL zeigt dem SDK an, dass diese Aad-Anwendung für SSO konfiguriert ist.
 >* Geben Sie "Common" als **Mandanten-ID** an.
 >* Fügen Sie alle Bereiche hinzu, die beim Angeben von Berechtigungen für Downstream-APIs für Ihre Aad-Anwendung konfiguriert wurden. Wenn die Client-ID und der geheime Client Schlüssel bereitgestellt werden, tauschen Tokenspeicher das Token für ein Diagramm Token mit definierten Berechtigungen für Sie aus.
