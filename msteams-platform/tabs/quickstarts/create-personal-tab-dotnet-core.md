@@ -4,16 +4,16 @@ author: laujan
 description: Eine Schnellstartanleitung zum Erstellen einer benutzerdefinierten persönlichen Registerkarte mit ASP.net Core.
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 3eb0c42bb81ec8b2d906863051bd551c88c35f57
-ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
+ms.openlocfilehash: 39f45dd79606d1416f3924d01f75c5bedc11bfba
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48992631"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49476939"
 ---
 # <a name="create-a-personal-tab-with-aspnet-core"></a>Erstellen einer persönlichen Registerkarte mit ASP.net Core
 
-In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten persönlichen Registerkarte mit C#-und ASP.net-Core-Razor-Seiten Schritt halten. Wir verwenden auch [App Studio für Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) , um Ihr App-Manifest abzuschließen und die Registerkarte in Teams bereitzustellen.
+In diesem Schnellstart erhalten Sie eine schrittweise Anleitung zum Erstellen einer benutzerdefinierten persönlichen Registerkarte mit C#-und ASP.net-Core-Rasier Seiten. Wir verwenden auch [App Studio für Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) , um Ihr App-Manifest abzuschließen und die Registerkarte in Teams bereitzustellen.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -68,7 +68,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 - Ein **transparentes Umrisssymbol** , das 32 x 32 Pixel misst.
 - Ein **manifest.jsfür** die Datei, die die Attribute Ihrer APP angibt.
 
-Diese Dateien müssen in einem App-Paket gezippt werden, damit Sie Ihre Registerkarte in Microsoft Teams hochladen können. Microsoft Teams lädt das `contentUrl` angegebene in ihrem Manifest, bettet es in einen iframe ein und rendert es in ihrer Registerkarte.
+Diese Dateien müssen in einem App-Paket gezippt werden, damit Sie Ihre Registerkarte in Microsoft Teams hochladen können. Microsoft Teams lädt das `contentUrl` angegebene in ihrem Manifest, bettet es in ein <IFRAME ein \> und rendert es in der Registerkarte.
 
 ### <a name="csproj"></a>. csproj
 

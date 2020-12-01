@@ -3,22 +3,23 @@ title: Erstellen von apps mit dem Microsoft Teams-Toolkit und Visual Studio
 description: Erste Schritte beim Erstellen großartiger benutzerdefinierter apps direkt in Visual Studio mit dem Microsoft Teams-Toolkit
 keywords: Teams Visual Studio Toolkit
 ms.topic: overview
-ms.openlocfilehash: 79ea22cfd154313247132c22684d444c0813c66f
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.author: lajanuar
+ms.openlocfilehash: 5ba3cd8b5714876a96595aec295ff6d0066e115f
+ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819203"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "49476986"
 ---
-# <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio"></a>Erstellen von apps mit dem Microsoft Teams-Toolkit und Visual Studio
+# <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Erstellen von apps mit dem Teams-Toolkit und Visual Studio
 
-Mit dem Microsoft Teams-Toolkit können Sie benutzerdefinierte Teams-apps direkt in der Visual Studio integrierten Entwicklungsumgebung (IDE) erstellen. Das Microsoft Teams-Toolkit führt Sie durch den Prozess und bietet alles, was Sie zum Erstellen, Debuggen und starten ihrer Teams-App benötigen.
+Mithilfe des Microsoft Teams-Toolkits können Sie benutzerdefinierte Teams-Apps direkt innerhalb der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio erstellen. Das Microsoft Teams-Toolkit führt Sie durch den Vorgang und bietet alles, was Sie zum Erstellen, Debuggen und Starten Ihrer Teams-App benötigen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 1. [Entwicklervorschau aktivieren](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview)
 
-1. Stellen Sie sicher, dass das ** <span>ASP.ne</span>T-und das Webentwicklungs Modul** zu Ihrer Visual Studio-Instanz hinzugefügt wurde. Sie können überprüfen, indem Sie die Schritte im [Visual Studio ändern durch Hinzufügen oder Entfernen von Arbeitslasten und Komponenten](/visualstudio/install/modify-visual-studio?view=vs-2019) Dokumentation durchführen.
+1. Stellen Sie sicher, dass das **<span>ASP.ne</span>T-und das Webentwicklungs Modul** zu Ihrer Visual Studio-Instanz hinzugefügt wurde. Sie können überprüfen, indem Sie die Schritte im [Visual Studio ändern durch Hinzufügen oder Entfernen von Arbeitslasten und Komponenten](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true) Dokumentation durchführen.
 
 ![Visual Studio-ASP.NET-Modul](../assets/images/visual-studio-web-dev-module.png)
 
@@ -41,9 +42,9 @@ Das Microsoft Teams-Toolkit für Visual Studio steht im [Visual Studio Marketpla
 
 ## <a name="set-up-a-new-teams-project"></a>Einrichten eines neuen Teams-Projekts
 
-1. Wählen Sie **Neues Projekt erstellen**aus.
-1. Klicken Sie auf **Microsoft Teams-App** , und wählen Sie **weiter**aus.
-1. Sie gelangen auf den Bildschirm **configure your New Project** , in dem Sie den **Projektnamen**, den **Speicherort**und den **Lösungsnamen**auswählen können.
+1. Wählen Sie **Neues Projekt erstellen** aus.
+1. Klicken Sie auf **Microsoft Teams-App** , und wählen Sie **weiter** aus.
+1. Sie gelangen auf den Bildschirm **configure your New Project** , in dem Sie den **Projektnamen**, den **Speicherort** und den **Lösungsnamen** auswählen können.
 1. Aktivieren Sie das Kontrollkästchen **Projektmappe und Projekt in demselben Verzeichnis platzieren**.
 1. Mit einem Popupfenster mit der Bezeichnung **Add-Funktionen** können Sie eine oder mehrere Funktionen für Ihr Projekt-Setup auswählen.
 1. Klicken Sie auf die Schaltfläche **weiter** , um den Konfigurationsprozess abzuschließen.
@@ -75,17 +76,17 @@ Wenn eine APP installiert ist, analysiert der Microsoft Teams-Client die Manifes
 ### <a name="configuration-steps"></a>Konfigurationsschritte 
 
 1. Um Ihre APP zu konfigurieren, wählen Sie auf der Startseite des **Microsoft Teams Toolkit** die Option **App-Paket bearbeiten** aus.
-1. Wählen Sie im Dropdownmenü **meine Umgebungen** die Option **Entwicklung**aus.
+1. Wählen Sie im Dropdownmenü **meine Umgebungen** die Option **Entwicklung** aus.
 1. Sie landen auf der Seite mit den **App-Details** , auf der Sie die Eigenschaften Felder Ihrer APP bearbeiten können.
 1. Durch das Bearbeiten der Felder auf der Seite mit den App-Details wird der Inhalt der manifest.jsauf Datei aktualisiert, die letztendlich als Teil des App-Pakets ausgeliefert wird. [Weitere Informationen](https://aka.ms/teams-toolkit-manifest)
 
 ## <a name="package-your-app"></a>Verpacken Ihrer APP
 
-Wenn Sie die Seite " **App-Details** " ändern oder das **Manifest**oder **. env** -Dateien im Ordner "  **. Publish** " Ihrer APP aktualisieren, wird die **Development.zip** Datei automatisch generiert. Die Development.zip Datei enthält drei erforderliche Dateien – die Dateien **manifest.js** und [zwei Symboldateien](../concepts/build-and-test/apps-package.md#icons).
+Wenn Sie die Seite " **App-Details** " ändern oder das **Manifest** oder **. env** -Dateien im Ordner "  **. Publish** " Ihrer APP aktualisieren, wird die **Development.zip** Datei automatisch generiert. Die Development.zip Datei enthält drei erforderliche Dateien – die Dateien **manifest.js** und [zwei Symboldateien](../concepts/build-and-test/apps-package.md#icons).
 
 ## <a name="install-and-run-your-app-locally"></a>Lokal installieren und Ausführen der APP
 
-1. Wählen Sie im Dropdownmenü **Lösungs Konfigurationen** die Option **Bereitstellen**aus.
+1. Wählen Sie im Dropdownmenü **Lösungs Konfigurationen** die Option **Bereitstellen** aus.
 
 ![Menü "Lösungs Konfigurationen"](../assets/images/solution-configurations.png)
 
