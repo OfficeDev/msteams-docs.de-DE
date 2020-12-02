@@ -1,34 +1,40 @@
-1. Wählen Sie im [Azure-Portal](https://ms.portal.azure.com/#home)unter Azure Services die Option **Ressource erstellen**aus.
-1. Geben Sie in das Suchfeld "bot" ein. Wählen Sie in der Dropdownliste die Option **bot Channels Registration**aus.
-1. Klicken Sie auf die Schaltfläche **Erstellen** .
-1. Geben Sie im Blade für die **bot-Kanal Registrierung** die angeforderten Informationen zu Ihrem bot an.
-1. Lassen Sie das Feld **Messaging-Endpunkt** jetzt leer, geben Sie nach der Bereitstellung des bot die erforderliche URL ein. Die folgende Abbildung zeigt ein Beispiel für die Registrierungseinstellungen:
+1. Wählen Sie im [Azure-Portal](https://ms.portal.azure.com/#home) unter "Azure-Dienste" **Ressource erstellen** aus.
+1. Geben Sie "bot" in das Suchfeld ein. Und wählen Sie in der Dropdownliste **Registrierung von Bot-Kanälen** aus.
+1. Wählen Sie die Schaltfläche **Erstellen** aus.
+1. Geben Sie im Bereich **Registrierung von Bot-Kanälen** die angeforderten Informationen zu Ihrem Bot ein.
+1. Lassen Sie das Feld **Messaging-Endpunkt** im Moment leer; Sie werden die erforderliche URL nach der Bereitstellung des Bots eingeben. Die folgende Abbildung zeigt ein Beispiel für die Registrierungseinstellungen:
 
-    ![Registrierung von bot-App-Kanälen](../../assets/images/authentication/auth-bot-channels-registration.png)
+    ![Registrierung von Bot-App-Kanälen](../../assets/images/authentication/auth-bot-channels-registration.png)
 
-1. Klicken Sie auf **Microsoft App-ID und Kennwort** , und erstellen Sie dann **neue**.
-1. Klicken Sie **im Link zum App-Registrierungs Portal auf APP-ID erstellen** .
-1. Klicken Sie im Fenster angezeigte **App-Registrierung** oben links auf die Registerkarte **neue Registrierung** .
-1. Geben Sie den Namen der bot-Anwendung ein, die Sie registrieren, wir haben *BotTeamsAuth* verwendet (Sie müssen ihren eigenen eindeutigen Namen auswählen).
-1. Wählen Sie für die **unterstützten Kontotypen** *Konten in einem beliebigen Organisations Verzeichnis (Azure AD Verzeichnis – Multimandanten) und persönliche Microsoft-Konten (beispielsweise Skype, Xbox)* aus.
-1. Klicken Sie auf die Schaltfläche **registrieren** . Sobald abgeschlossen, zeigt Azure die Übersichts *Seite für die Anwendung* an.
-1. Kopieren und speichern Sie den Wert der **Anwendungs-ID (Client)** in einer Datei.
-1. Klicken Sie im linken Bereich auf **Zertifikat und Geheimnisse**.
-    1. Klicken Sie unter *Client Geheimnisse*auf **neuer geheimer Client Schlüssel**.
-    1. Fügen Sie eine Beschreibung hinzu, um dieses Geheimnis von anderen Personen zu identifizieren, die Sie für diese APP möglicherweise erstellen müssen.
-    1. Festlegen *läuft* auf Ihre Auswahl ab.
+1. Klicken Sie auf **Microsoft App-ID und Kennwort** und dann auf **Neu erstellen**.
+
+    ![Erstellen einer Microsoft App-ID](../../assets/images/authentication/CreateMicrosoftAppID.png) ![Erstellen einer neuen Microsoft-App-ID](../../assets/images/authentication/CreateNewMicrosoftAppID.png)    
+
+1. Klicken Sie auf **App-ID im App-Registrierungsportal erstellen**.
+
+   ![App-Registrierungen](../../assets/images/authentication/AppRegistration.png)
+   
+1. Klicken Sie im angezeigten Fenster **App-Registrierung** oben links auf die Registerkarte **Neue Registrierung**.
+1. Geben Sie den Namen der Bot-Anwendung ein, die Sie registrieren möchten; wir haben *BotTeamsAuth* verwendet (Sie müssen einen eigenen eindeutigen Namen eingeben).
+1. Wählen Sie für **Unterstützte Kontotypen** die Option *Konten in allen Organisationsverzeichnissen (alle Azure AD-Verzeichnisse – mehrinstanzenfähig) und persönliche Microsoft-Konten (z. B. Skype, Xbox)* aus.
+1. Klicken Sie auf die **Start**-Schaltfläche. Wenn der Vorgang abgeschlossen ist, wird in Azure die *Übersichtsseite* für die Anwendung angezeigt.
+1. Kopieren Sie den **Application (client) ID**-Wert und speichern Sie ihn in einer Datei.
+1. Klicken Sie im linken Bereich auf **Zertifikat und geheime Schlüssel**.
+    1. Klicken Sie unter *Geheime Clientschlüssel* auf **Neuer geheimer Clientschlüssel**.
+    1. Fügen Sie eine Beschreibung hinzu, um diesen Schlüssel von anderen zu unterscheiden, die Sie möglicherweise für diese App erstellen müssen.
+    1. Legen Sie das *Ablaufdatum* auf das gewünschte Datum fest.
     1. Klicken Sie auf **Hinzufügen**.
-    1. Kopieren Sie den geheimen Client Schlüssel, und speichern Sie ihn in einer Datei.
-1. Wechseln Sie zurück zum **Fenster bot-Kanal Registrierung** , und kopieren Sie die *App-ID* und den *geheimen Client Schlüssel* in die Felder **Microsoft App-ID** und **Kennwort** .
+    1. Kopieren Sie den geheimen Clientschlüssel, und speichern Sie ihn in einer Datei.
+1. Wechseln Sie zurück zum Fenster **Registrierung von Bot-Kanälen**, und kopieren Sie die *App-ID* und den *geheimen Clientschlüssel* jeweils in die Felder **Microsoft App-ID** und **Kennwort**.
 1. Klicken Sie auf **OK**.
-1. Klicken Sie schließlich auf **Erstellen**.
+1. Klicken Sie abschließend auf **Erstellen**.
 
-Nachdem Azure die Registrierungs Ressource erstellt hat, wird es in die Liste Ressourcengruppe aufgenommen.  
+Nachdem Azure die Registrierungsressource erstellt hat, wird diese in der Liste der Ressourcengruppen aufgeführt.  
 
-![App Channels-Registrierungsgruppe für bot](~/assets/images/authentication/auth-bot-channels-registration-group.PNG)
+![Registrierungsgruppe von Bot-App-Kanälen](~/assets/images/authentication/auth-bot-channels-registration-group.PNG)
 
-Nachdem Sie Ihre bot-Kanal Registrierung erstellt haben, müssen Sie den Microsoft Teams-Kanal aktivieren.
+Sobald Ihre Bot-Kanalregistrierung erstellt wurde, müssen Sie den Microsoft Teams-Kanal aktivieren.
 
-1. Wählen Sie im [Azure-Portal](https://ms.portal.azure.com/#home)unter Azure Services die soeben erstellte bot- **Kanal Registrierung** aus.
+1. Wählen Sie im [Azure-Portal](https://ms.portal.azure.com/#home) unter "Azure-Dienste" die soeben erstellte **Bot-Kanalregistrierung** aus.
 1. Klicken Sie im linken Bereich auf **Kanäle**.
-1. Klicken Sie auf das Microsoft Teams-Symbol, und wählen Sie dann **Speichern**aus.
+1. Klicken Sie auf das Microsoft Teams-Symbol, und wählen Sie dann **Speichern** aus.
