@@ -2,12 +2,12 @@
 title: Erstellen von Deep-Links
 description: Beschreibt Deep Links und deren Verwendung in ihren apps
 keywords: Teams Deep Link Deeplink
-ms.openlocfilehash: 03580c4d15c82da70402d68d85b0d28f8afa670e
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: a3d5dac3fc83510ae47d91bd70390b9ca2860120
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796330"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552563"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Erstellen von tiefen Links zu Inhalten und Features in Microsoft Teams
 
@@ -15,6 +15,22 @@ Sie können Links zu Informationen und Features innerhalb des Teams-Clients erst
 
 * Navigieren des Benutzers zu Inhalten in einer der Registerkarten Ihrer APP. Beispielsweise kann Ihre APP einen bot haben, der Nachrichten sendet, die den Benutzer über eine wichtige Aktivität informieren. Wenn der Benutzer die Benachrichtigung antippt, navigiert der Deep Link zur Registerkarte, damit der Benutzer weitere Details zur Aktivität anzeigen kann.
 * Ihre APP automatisiert oder vereinfacht bestimmte Benutzer Aufgaben, wie das Erstellen eines Chats oder das Planen einer Besprechung, indem die tiefen Verknüpfungen mit den erforderlichen Parametern vorab aufgefüllt werden. Dadurch wird vermieden, dass Benutzerinformationen manuell eingeben müssen.
+
+> [!NOTE]
+>
+> Ein Deeplink startet den Browser zuerst, bevor er wie folgt zu Inhalten und Informationen navigiert:
+>
+> **Tab**:  
+> ✔ Navigiert direkt zur Deeplink-URL.
+>
+> **Bot**:  
+> ✔ Deeplink im Kartentext – wird zuerst im Browser geöffnet.  
+> ✔ Deeplink, die OpenURL-Aktion in Adaptive Karte hinzugefügt wurde, navigiert direkt zur Deeplink-URL.  
+> ✔ Hyperlink-Abschlag Text in der Karte-wird zuerst im Browser geöffnet.  
+>
+> **Chat**:  
+> ✔ Text Nachrichten Hyperlink-Abschlag: navigiert direkt zu Deeplink-URL.  
+> ✔ In der allgemeinen Chat Unterhaltung eingefügter Link navigiert direkt zu Deeplink-URL.
 
 ## <a name="deep-linking-to-your-tab"></a>Tiefes verknüpfen mit ihrer Registerkarte
 
@@ -24,6 +40,9 @@ Alternativ können Sie auch Deep Links programmgesteuert mit dem Format erstelle
 
 > [!NOTE]
 > Dies unterscheidet sich von den Links, die im Menüelement **Copy Link to Tab** zur Verfügung gestellt werden, das lediglich einen tiefen Link generiert, der auf diese Registerkarte zeigt.
+
+>[!NOTE]
+> Derzeit kann shareDeepLink nicht auf mobilen Plattformen verwendet werden.
 
 ### <a name="showing-a-deep-link-to-an-item-within-your-tab"></a>Anzeigen einer tiefen Verknüpfung zu einem Element auf der Registerkarte
 
@@ -45,6 +64,10 @@ Geben Sie die folgenden Felder an:
 Verwenden Sie dieses Format für einen tiefen Link, den Sie in einer bot-, Connector-oder Messaging Erweiterungskarte verwenden können:
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
+
+> [!NOTE]
+> Wenn der bot eine Nachricht `TextBlock` mit einem Deep-Link sendet, wird eine neue Browserregister Karte geöffnet, wenn der Benutzer den Link auswählt. Dies geschieht in Chrome und in der Microsoft Teams-Desktop-App, die beide unter Linux ausgeführt werden.
+> Wenn der bot die gleiche Deep Link-URL in einen sendet `Action.OpenUrl` , wird die Registerkarte "Teams" auf der aktuellen Browserregister Karte geöffnet, wenn der Benutzer auf den Link klickt. Es wird keine neue Browserregister Karte geöffnet.
 
 Die Abfrageparameter lauten wie folgt:
 

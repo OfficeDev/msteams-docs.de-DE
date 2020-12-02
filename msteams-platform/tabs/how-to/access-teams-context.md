@@ -2,12 +2,12 @@
 title: Kontext für die Registerkarte abrufen
 description: Beschreibt, wie Benutzerkontext auf Ihre Registerkarten abgerufen wird.
 keywords: Teams-Registerkarten Benutzerkontext
-ms.openlocfilehash: 8c94c4fd895896186ddda20bfaafd1d6ccdc1e73
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 5c52e6eea21f0c059f3cd650770e1076f903fb8e
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346798"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552437"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Kontext für Ihre Microsoft Teams-Registerkarte abrufen
 
@@ -25,7 +25,7 @@ Der Kontext über den Benutzer, das Team oder das Unternehmen kann besonders hil
 * Sie möchten einen Authentifizierungs Fluss für Azure Active Directory oder einen anderen Identitätsanbieter initiieren, und Sie möchten nicht, dass der Benutzer seinen Benutzernamen erneut eingeben muss. (Weitere Informationen zur Authentifizierung auf der Registerkarte Microsoft Teams finden Sie unter [Authentifizieren eines Benutzers auf Ihrer Microsoft Teams-Registerkarte](~/concepts/authentication/authentication.md).)
 
 > [!IMPORTANT]
-> Diese Benutzerinformationen können zwar eine reibungslose Benutzeroberfläche bieten, Sie sollten Sie jedoch *nicht* als Identitätsnachweis verwenden. Ein Angreifer kann beispielsweise die Seite in einen "schlechten Browser" Laden und ihm alle gewünschten Informationen bereitstellen.
+> Diese Benutzerinformationen können zwar eine reibungslose Benutzeroberfläche bieten, Sie sollten Sie jedoch *nicht* als Identitätsnachweis verwenden. Beispielsweise könnte ein Angreifer die Seite in einen "schlechten Browser" Laden und schädliche Informationen oder Anforderungen rendern.
 
 ## <a name="accessing-context"></a>Zugreifen auf Kontext
 
@@ -36,7 +36,7 @@ Sie können auf zwei Arten auf Kontextinformationen zugreifen:
 
 ### <a name="getting-context-by-inserting-url-placeholder-values"></a>Kontext wird abgerufen, indem URL-Platzhalterwerte eingefügt werden
 
-Verwenden Sie Platzhalter in Ihren Konfigurations-oder Inhalts-URLs. Microsoft Teams ersetzt die Platzhalter durch die entsprechenden Werte beim Bestimmen der tatsächlichen Konfigurations-oder Inhalts-URL, zu der navigiert werden soll. Die verfügbaren Platzhalter enthalten alle Felder im [Kontext](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) Objekt. Zu den allgemeinen Platzhaltern zählen folgende:
+Verwenden Sie Platzhalter in Ihren Konfigurations-oder Inhalts-URLs. Microsoft Teams ersetzt die Platzhalter durch die entsprechenden Werte, wenn die tatsächliche Konfigurations-oder Inhalts-URL ermittelt wird. Die verfügbaren Platzhalter enthalten alle Felder im [Kontext](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) Objekt. Zu den allgemeinen Platzhaltern zählen folgende:
 
 * {Entitäts Kennung}: die ID, die Sie beim ersten [Konfigurieren der Registerkarte](~/tabs/how-to/create-tab-pages/configuration-page.md)für das Element auf dieser Registerkarte angegeben haben.
 * {subentity-ID}: die ID, die Sie beim Generieren einer [tiefen Verknüpfung](~/concepts/build-and-test/deep-links.md) für ein _bestimmtes Element auf_ dieser Registerkarte angegeben haben. Dies sollte verwendet werden, um in einem bestimmten Zustand innerhalb einer Entität wiederherzustellen. beispielsweise scrollen zu einem bestimmten Inhaltselement oder Aktivieren dieses.
@@ -47,36 +47,6 @@ Verwenden Sie Platzhalter in Ihren Konfigurations-oder Inhalts-URLs. Microsoft T
 * {Gruppenkennung}: die ID der Office 365 Gruppe, in der sich die Registerkarte befindet.
 * {TID}: die Azure AD Mandanten-ID des aktuellen Benutzers.
 * {locale}: das aktuelle Gebietsschema des Benutzers, der als sprach-Country-Format formatiert ist (beispielsweise "en-US").
-* {osLocaleInfo}: detailliertere Gebietsschemainformationen aus dem Betriebssystem des Benutzers, sofern verfügbar. Kann zusammen mit folgendem verwendet werden:
-    * das @Microsoft/Globe NPM-Paket, um sicherzustellen, dass Ihre APP das Betriebssystem Datum des Benutzers respektiert und
-    * Zeitformat Konfiguration.
-* {SessionID}: eindeutige ID für die aktuelle Teams-Sitzung zur Verwendung in korrelierenden Telemetrie-Daten.
-* {Kanalkennung}: die Microsoft Teams-ID für den Kanal, dem der Inhalt zugeordnet ist.
-* {ChannelName}: der Name des Kanals, dem der Inhalt zugeordnet ist.
-* {Chat Kennung}: die Microsoft Teams-ID für den Chat, dem der Inhalt zugeordnet ist.
-* {URL}: Inhalts-URL dieser Registerkarte.
-* {websiteUrl}: Website-URL dieser Registerkarte.
-* {favoriteChannelsOnly}: Flag, das nur bevorzugte Kanäle auswählen lässt.
-* {favoriteTeamsOnly}: Flag, das nur bevorzugte Teams auswählen lässt.
-* {userTeamRole}: Rolle des aktuellen Benutzers im Team.
-* {Team Type}: der Typ des Teams.
-* {isTeamLocked}: der gesperrte Status des Teams.
-* {isTeamArchived}: der archivierte Status des Teams.
-* {IsFullScreen}: Angabe, ob die Registerkarte sich im Vollbildmodus befindet.
-* {teamSiteUrl}: die SharePoint-Stammwebsite, die dem Team zugeordnet ist.
-* {teamSiteDomain}: die Domäne der SharePoint-Stammwebsite, die dem Team zugeordnet ist.
-* {teamSitePath}: der relative Pfad zu der SharePoint-Website, die dem Team zugeordnet ist.
-* {channelRelativeUrl}: der relative Pfad zum SharePoint-Ordner, der dem Kanal zugeordnet ist.
-* {tenantSKU}: der Typ der Lizenz für den aktuellen Benutzer Mandanten.
-* {Klingelton}: aktuelle Ring-ID.
-* {appSessionId}: eindeutige ID für die aktuelle Sitzung zur Verwendung in korrelierenden Telemetrie-Daten.
-* {completionBotId}: gibt eine bot-ID an, um das Ergebnis der Interaktion des Benutzers mit dem Aufgabenmodul zu senden.
-* {Konversations Kennung}: die ID der Unterhaltung.
-* {hostClientType}: Typ des Host Clients. (Mögliche Werte sind: Android, Ios, Internet, Desktop und Rigel.)
-* {framecontext}: der Kontext, in dem die Registerkarten-URL geladen wird (Inhalt, Aufgabe, Einstellung, entfernen, sidePanel).
-* {SharePoint}: Dies ist nur verfügbar, wenn es in SharePoint gehostet wird.
-* {Besprechungs-Nr}: Sie wird von der Registerkarte bei der Ausführung im Besprechungs Kontext verwendet.
-* {userLicenseType} Der Lizenztyp für den aktuellen Benutzer.
 
 >[!NOTE]
 >Der vorherige `{upn}` Platzhalter ist jetzt veraltet. Aus Gründen der Abwärtskompatibilität ist es derzeit ein Synonym für `{loginHint}` .
@@ -138,6 +108,9 @@ Wenn Ihre Inhaltsseite in einen privaten Kanal geladen wird, werden die Daten, d
 * `teamSiteUrl` -Festlegen der URL einer eindeutigen, eindeutigen SharePoint-Website für den privaten Kanal
 * `teamSitePath` -Festlegen des Pfads einer eindeutigen, eindeutigen SharePoint-Website für den privaten Kanal
 * `teamSiteDomain` -Festlegung auf die Domäne einer eindeutigen, eindeutigen SharePoint-Website Domäne für den privaten Kanal
+
+> [!Note]
+>  teamSiteUrl funktioniert auch für Standardkanäle.
 
 ## <a name="theme-change-handling"></a>Behandlung von Designänderungen
 

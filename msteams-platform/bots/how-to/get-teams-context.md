@@ -4,12 +4,12 @@ author: laujan
 description: Hier erfahren Sie, wie Sie den spezifischen Kontext des Microsoft Teams für Ihren bot abrufen, einschließlich der Liste der Unterhaltungen, Details und Kanäle.
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 36ec992e009a7f45064021ae1235b159d100b9cd
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 7f3b2fbea33f64659dcd5d9d39bb95e2d953dbea
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796344"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552472"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Abrufen des spezifischen Kontexts des Teams für Ihren bot
 
@@ -19,7 +19,7 @@ Ein Bot kann auf zusätzliche Kontextdaten zu einem Team oder Chat zugreifen, in
 
 ## <a name="fetching-the-roster-or-user-profile"></a>Abrufen des Dienstplan-oder Benutzerprofils
 
-Ihr Bot kann eine Abfrage nach der Liste der Mitglieder und ihren grundlegenden Profilen durchführen, einschließlich Microsoft Teams-Benutzer-IDs und Azure Active Directory Informationen (Azure AD) wie Name und ObjectID. Sie können diese Informationen verwenden, um Benutzeridentitäten zu korrelieren, beispielsweise um zu überprüfen, ob ein Benutzer, der bei einer Registerkarte über Azure AD Anmeldeinformationen angemeldet ist, Mitglied des Teams ist. Im folgenden Beispielcode wird der ausgelagerte Endpunkt zum Abrufen der Liste verwendet. Obwohl Sie die nicht ausgelagerte Version möglicherweise weiterhin verwenden, ist Sie in großen Teams unzuverlässig und sollte nicht verwendet werden. Weitere Informationen finden Sie in [diesem Artikel](~/resources/team-chat-member-api-changes.md) .
+Ihr Bot kann eine Abfrage nach der Liste der Mitglieder und ihren grundlegenden Profilen durchführen, einschließlich Microsoft Teams-Benutzer-IDs und Azure Active Directory Informationen (Azure AD) wie Name und ObjectID. Sie können diese Informationen verwenden, um Benutzeridentitäten zu korrelieren, beispielsweise um zu überprüfen, ob ein Benutzer, der bei einer Registerkarte über Azure AD Anmeldeinformationen angemeldet ist, Mitglied des Teams ist. Im folgenden Beispielcode wird der ausgelagerte Endpunkt zum Abrufen der Liste verwendet. Für GET CONVERSATION-Mitglieder ist die minimale oder maximale Seitengröße von der Implementierung abhängig. Die Seitengröße kleiner als 50, werden als 50 und die Seitengröße größer als 500 behandelt, sind auf 500 begrenzt. Obwohl Sie die nicht ausgelagerte Version möglicherweise weiterhin verwenden, ist Sie in großen Teams unzuverlässig und sollte nicht verwendet werden. Weitere Informationen *finden Sie unter* [Änderungen an Teams-bot-APIs zum Abrufen von Team/Chat-Mitgliedern](~/resources/team-chat-member-api-changes.md) .
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 

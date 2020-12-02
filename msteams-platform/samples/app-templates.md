@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 3bf038b2d62a0805ae3f16fd879664d755108acf
-ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
+ms.openlocfilehash: 87361e8c6be068b932400d97379db8f182afd499
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "49358028"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552577"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -166,6 +166,23 @@ E-Prescription ist eine APP mit [Power apps](/powerapps/maker/canvas-apps/embed-
 :::row:::
 :::column span="2":::
     ![Screenshot der APP für E-Rezepte. Zeigt, wie Administratoren die Leistungserbringer verwalten können, die die APP verwenden.](../assets/images/e-prescriptions-app-template-admin.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="employee-training-9734"></a>Schulungs &#9734; für Mitarbeiter
+
+Employee Training ist eine Microsoft Teams-APP, mit der Organisatoren Lern-und Schulungs Ereignisse für Ihre Organisation ganz einfach veröffentlichen, nachverfolgen und fördern können.  Mit der App können Ereignisplaner Erinnerungen und Benachrichtigungen an Ereignis Registrierungsstellen senden und Mitarbeiter können Interesse an bevorstehenden Ereignissen anzeigen, über aktuelle Ereignisse informiert bleiben und Ereignisdetails mit Kollegen über die Microsoft Teams-Messaging Erweiterung freigeben.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-employeetraining)
+
+:::row:::
+:::column span="2":::
+    **Anzeigen von Schulungs Ereignissen** ![ für Mitarbeiter Image der Registerkarte "Employee Training"](../assets/images/employee-training-discover-tab.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    **Erstellen eines Schulungs Ereignisses** ![ für Mitarbeiter Employee Training Create Event-Formular](../assets/images/employee-training-create-event.jpg)
 :::column-end:::
 :::row-end:::
 

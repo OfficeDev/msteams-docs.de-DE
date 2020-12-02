@@ -3,12 +3,12 @@ title: Verpacken Ihrer APP
 description: Erfahren Sie, wie Sie Ihre APP zum Testen, hochladen und veröffentlichen in Microsoft Teams verpacken.
 keywords: Apps für Teams-Verpackungen
 ms.topic: conceptual
-ms.openlocfilehash: aec25d3346a93e15f704435f3c6aa3ddca9fd435
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 4c20e2c1b3c8d7ef13d16b354449887b3c0f1147
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997986"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552570"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Erstellen eines App-Pakets für Ihre Microsoft Teams-App
 
@@ -45,12 +45,13 @@ Das `color` Symbol wird in Microsoft Teams verwendet (in App-und Tab-Galerien, B
 
 Das `outline` Symbol wird an diesen Stellen verwendet: die APP-Leiste und die Messaging Erweiterungen, die der Benutzer als Favorit markiert hat. Dieses Symbol muss 32x32 Pixel sein. Das Gliederungssymbol muss nur weiß und Transparenz enthalten (keine anderen Farben). Das Symbol kann weiß mit transparentem Hintergrund oder transparent mit weißem Hintergrund sein. Das Symbol für die Gliederung sollte nicht über einen zusätzlichen Textabstand verfügen, der das Symbol umgibt, und sollte so dicht wie möglich abgeschnitten sein, während die 32x32-Bemaßungen weiterhin beibehalten werden. Hier sind einige gute Beispiele:
 
-> [!TIP]
->  * Die Farbe muss in RGB "weiß" sein (rot: 255, grün: 255, blau: 255).
->  * Der gesamte andere Teil des Symbols sollte transparent sein.
->  * Für die Übergabe muss das kleine Symbol vollständig transparent sein, der Alpha Kanal ist 0, und jeder andere Wert ist ein Fehler.
-
 ![Beispiel-Gliederungssymbole](~/assets/images/icons/sample20x20s.png)
+
+[! Tipp zum Erstellen eines transparenten Symbols]
+
+* Die Farbe muss in RGB "weiß" sein (rot: 255, grün: 255, blau: 255).
+* Der gesamte andere Teil des Symbols sollte transparent sein.
+* Für die Übergabe muss das kleine Symbol vollständig transparent sein, mit einem Alphakanalwert von 0 – ein beliebiger anderer Wert ist ein Fehler.
 
 Angenommen, Ihr Unternehmen ist contoso. Sie möchten zwei Symbole übermitteln:
 

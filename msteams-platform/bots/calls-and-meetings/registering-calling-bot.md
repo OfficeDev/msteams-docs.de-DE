@@ -2,12 +2,12 @@
 title: Registrieren eines Anruf-und Besprechungs-bot für Microsoft Teams
 description: Informationen zum Registrieren eines neuen bot für Audio/Videoanrufe für Microsoft Teams
 keywords: Aufrufen von bot-Audio/Video-Audio-Video Medien
-ms.openlocfilehash: d38b9584440bcff664bd3a2d4b57e52bc695f1b5
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 5a832646d4fa622f746f88a3a969ae4ad3ce69a6
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346847"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552444"
 ---
 # <a name="register-a-calling-bot-for-microsoft-teams"></a>Registrieren eines anrufenden bot für Microsoft Teams
 
@@ -50,12 +50,12 @@ Microsoft Graph macht granulare Berechtigungen verfügbar, die den Zugriff steue
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 |_Calls.Initiate.All_|Ausgehende 1:1-Anrufe aus der App initiieren (Vorschau)|Ermöglicht der App, ausgehende Anrufe an einen einzelnen Benutzer zu tätigen und Anrufe an Benutzer im Organisationsverzeichnis zu übertragen (ohne angemeldeten Benutzer).|Ja|
 |_Calls.InitiateGroupCall.All_|Ausgehende Gruppenanrufe aus der App initiieren (Vorschau)|Ermöglicht der App, ausgehende Anrufe an mehrere Benutzer zu tätigen und Teilnehmer in Ihrer Organisation zu Besprechungen hinzufügen (ohne angemeldeten Benutzer).|Ja|
-|_Calls.JoinGroupCall.All_|Gruppenanrufe und Besprechungen als App verknüpfen (Vorschau)|Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your tenant.|Ja|
-|_Calls.JoinGroupCallasGuest.All_|Verknüpfen von Gruppenanrufen und Besprechungen als Gast (Vorschau)|Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined as a guest to meetings in your tenant.|Ja|
+|_Calls.JoinGroupCall.All_|Gruppenanrufe und Besprechungen als App verknüpfen (Vorschau)|Ermöglicht der App, Gruppenanrufe und geplante Besprechungen in Ihrer Organisation ohne einen angemeldeten Benutzer zu verknüpfen. Die App wird mit den Berechtigungen eines Verzeichnisbenutzers und Besprechungen in Ihrem Mandanten verknüpft.|Ja|
+|_Calls.JoinGroupCallasGuest.All_|Verknüpfen von Gruppenanrufen und Besprechungen als Gast (Vorschau)|Ermöglicht der App, Gruppenanrufe und geplante Besprechungen in Ihrer Organisation ohne einen angemeldeten Benutzer anonym zu verknüpfen. Die App wird als Gast mit Besprechungen in Ihrem Mandanten verknüpft.|Ja|
 |_Calls. AccessMedia. all_ <sup> _siehe unten_</sup>|Auf Medienstreams in einem Anruf als App zugreifen (Vorschau)|Ermöglicht der App, direkten Zugriff auf Medienstreams in einem Anruf ohne einen angemeldeten Benutzer zu erhalten.|Ja|
 
 > [!IMPORTANT]
-> Sie **können** die Microsoft. Graph. Calls. Media-API nicht verwenden, um Medieninhalte aus anrufen oder Besprechungen, auf die ihr bot zugreift, aufzuzeichnen oder anderweitig beizubehalten.
+> Sie **können** die Medien Zugriffs-API nicht verwenden, um Medieninhalte aus anrufen oder Besprechungen, auf die Ihre Anwendung zugreift, oder Daten, die von diesem Medieninhalt ("Record" oder "Recording") stammen, aufzuzeichnen oder anderweitig beizubehalten, ohne zuerst die [ `updateRecordingStatus` API](/graph/api/call-updaterecordingstatus) aufzurufen, um anzugeben, dass die Aufzeichnung begonnen hat, und eine Erfolgsantwort von dieser API erhalten. Wenn Ihre Anwendung mit der Aufzeichnung einer Besprechung/eines Anrufs beginnt, muss Sie die Aufzeichnung beenden, bevor Sie die API aufruft, `updateRecordingStatus` um anzugeben, dass die Aufzeichnung beendet wurde.
 
 ### <a name="application-permissions-online-meetings"></a>Anwendungsberechtigungen: Onlinebesprechungen
 

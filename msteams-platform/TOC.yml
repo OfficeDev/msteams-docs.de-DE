@@ -20,6 +20,17 @@
       href: build-your-first-app/build-bot.md
     - name: Erstellen einer Messaging-Erweiterung
       href: build-your-first-app/build-messaging-extension.md
+- name: Microsoft Teams-Toolkit-Erweiterung
+  expanded: true
+  items:
+    - name: Teams-Toolkit-Erweiterung für Visual Studio Code
+      href: toolkit/visual-studio-code-overview.md
+    - name: Teams-Toolkit-Erweiterung für Visual Studio
+      href: toolkit/visual-studio-overview.md
+    - name: Registerkarten SSO mit Toolkit-Erweiterung für Visual Studio Code
+      href: toolkit/visual-studio-code-tab-sso.md
+- name: Produktionsfertige App-Vorlagen
+  href: samples/app-templates.md
 - name: Lernprogramme und Codebeispiele
   items:
     - name: Erstellen einer App mithilfe von C#
@@ -36,20 +47,12 @@
       href: samples/integrating-web-apps.md
     - name: Erstellen von Apps mit geringem Code
       href: samples/teams-low-code-solutions.md
-    - name: Produktionsfertige App-Vorlagen
-      href: samples/app-templates.md
     - name: Produktionsfertige Shifts-Connectors
       href: samples/shifts-wfm-connectors.md
     - name: Erstellen eines virtuellen Assistenten für Teams
       href: samples/virtual-assistant.md
     - name: Integrieren von Power Virtual Agents in Teams
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-    - name: Microsoft Teams-Toolkit-Erweiterung
-      items:
-        - name: Teams-Toolkit-Erweiterung für Visual Studio Code
-          href: toolkit/visual-studio-code-overview.md
-        - name: Teams-Toolkit-Erweiterung für Visual Studio
-          href: toolkit/visual-studio-overview.md
 - name: Konzepte
   expanded: true
   items:

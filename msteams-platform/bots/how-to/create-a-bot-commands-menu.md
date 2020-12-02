@@ -4,12 +4,12 @@ author: clearab
 description: Vorgehensweise Erstellen eines Befehlsmenüs für Ihren Microsoft Teams-bot
 ms.topic: overview, command menu
 ms.author: anclear
-ms.openlocfilehash: 81efb94fc882aa4653ab162863d5d973aeae87b9
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ccbacc6ec6f18a38512d81dc898d0b14357d6ef7
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674221"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552486"
 ---
 # <a name="bot-command-menus"></a>Bot-Befehlsmenüs
 
@@ -18,7 +18,7 @@ ms.locfileid: "41674221"
 > [!Note]
 > Bot-Menüs werden nicht auf mobilen Clients angezeigt.
 
-Mit dem Befehl Menü hinzufügen für Ihren bot können Sie eine Reihe von Kern Befehlen definieren, auf die ihr bot immer Antworten kann. Die Liste der Befehle wird dem Benutzer über dem Bereich zum Verfassen von Nachrichten angezeigt, wenn Sie mit Ihrem bot in Kontakt kommen. Wenn Sie einen Befehl aus der Liste auswählen, wird die Befehlszeichenfolge in das Meldungsfeld verfassen eingefügt, dann müssen alle Benutzer die Option **senden**auswählen.
+Mit dem Befehl Menü hinzufügen für Ihren bot können Sie eine Reihe von Kern Befehlen definieren, auf die ihr bot immer Antworten kann. Die Liste der Befehle wird dem Benutzer über dem Bereich zum Verfassen von Nachrichten angezeigt, wenn Sie mit Ihrem bot in Kontakt kommen. Wenn Sie einen Befehl aus der Liste auswählen, wird die Befehlszeichenfolge in das Meldungsfeld verfassen eingefügt, dann müssen alle Benutzer die Option **senden** auswählen.
 
 ![Bot-Befehlsmenü](./conversations/media/bot-menu-sample.png)
 
@@ -48,7 +48,7 @@ In den hier beschriebenen Anweisungen wird davon ausgegangen, dass Sie ein vorha
 
     ![Schaltfläche "App Studio-Befehlsmenü hinzufügen"](./conversations/media/AppStudio-NewCommandMenu.png)
 
-### <a name="creating-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Erstellen eines Befehlsmenüs für Ihren bot durch Bearbeiten von **Manifest. JSON**
+### <a name="creating-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Erstellen eines Befehlsmenüs für Ihren bot durch Bearbeiten von **Manifest.jsauf**
 
 Ein weiterer gültiger Ansatz zum Erstellen eines Befehlsmenüs besteht darin, es beim Entwickeln Ihres bot-Quellcodes direkt in der Manifestdatei zu erstellen. Hier sind einige Punkte, die Sie bei der Verwendung dieses Ansatzes beachten sollten:
 
@@ -148,26 +148,28 @@ Ein weiterer gültiger Ansatz zum Erstellen eines Befehlsmenüs besteht darin, e
 
 Bots in einer Gruppe oder einem Kanal reagieren nur, wenn Sie in einer Nachricht erwähnt werden ("@botname"). Daher werden alle Nachrichten, die von einem bot empfangen werden, wenn Sie sich in einer Gruppe oder einem Kanalbereich befinden, im zurückgegebenen Nachrichtentext einen eigenen Namen enthalten. Sie müssen sicherstellen, dass Ihre Nachrichten Analyse diese behandelt, bevor der zurückgegebene Befehl verarbeitet wird.
 
-# <a name="cnettabdotnet"></a>[C#-/.net](#tab/dotnet)
+> **Hinweis:** Um die Befehle im Code zu behandeln, werden Sie als reguläre Nachricht an Ihren bot gesendet. Sie müssen diese wie für jede andere Nachricht von Ihren Benutzern behandeln. Es handelt sich lediglich um eine Benutzeroberflächen Behandlung, die vorkonfigurierten Text in das Textfeld einfügt. Der Benutzer muss diesen Text dann wie für jede andere Nachricht senden.
 
-Sie können den ** \@mention** -Teil des Nachrichtentexts mithilfe einer statischen mit dem Microsoft bot Framework bereitgestellten Methode analysieren – eine Methode `Activity` der benannten `RemoveRecipientMention`Klasse.
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+Sie können den **\@ mention** -Teil des Nachrichtentexts mithilfe einer statischen mit dem Microsoft bot Framework bereitgestellten Methode analysieren – eine Methode der `Activity` benannten Klasse `RemoveRecipientMention` .
 
 ```csharp
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/Node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
-Sie können den ** \@mention** -Teil des Nachrichtentexts mithilfe einer statischen mit dem Microsoft bot Framework bereitgestellten Methode analysieren – eine Methode `TurnContext` der benannten `removeMentionText`Klasse.
+Sie können den **\@ mention** -Teil des Nachrichtentexts mithilfe einer statischen mit dem Microsoft bot Framework bereitgestellten Methode analysieren – eine Methode der `TurnContext` benannten Klasse `removeMentionText` .
 
 ```javascript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 
-Sie können den **@mention** Teil des Nachrichtentexts mithilfe einer statischen mit dem Microsoft bot Framework bereitgestellten Methode analysieren – eine Methode der `TurnContext` benannten `remove_recipient_mention`Klasse.
+Sie können den **@mention** Teil des Nachrichtentexts mithilfe einer statischen mit dem Microsoft bot Framework bereitgestellten Methode analysieren – eine Methode der `TurnContext` benannten Klasse `remove_recipient_mention` .
 
 ```python
 modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
@@ -180,3 +182,5 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 * **Halten Sie es einfach**: das bot-Menü soll die Hauptfunktionen Ihres bot präsentieren.
 * **Halten Sie es kurz**: Menü Optionen sollten nicht extrem lang und komplexe natürliche Sprachanweisungen sein – Sie sollten einfache Befehle sein.
 * **Keep it aufrufbaren**: bot-Menü Aktionen/-Befehle sollten immer verfügbar sein, unabhängig vom Status der Unterhaltung oder des Dialogs, in dem sich der bot befindet.
+
+> **Hinweis:** Wenn Sie Befehle aus ihrem Manifest entfernen, müssen Sie Ihre APP erneut bereitstellen, damit die Änderungen wirksam werden. Im Allgemeinen ist dies für alle Änderungen am Manifest erforderlich.

@@ -2,12 +2,12 @@
 title: Authentifizierungs Fluss für Registerkarten
 description: Beschreibt den Authentifizierungs Fluss in Registerkarten
 keywords: Registerkarten für Teams-Authentifizierungs Fluss
-ms.openlocfilehash: de5e0312e4523c3adef211dc03b0349c205f92cb
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 5ecd4d7d3a2658d17a8c6dea5d73cbd98eb2dfde
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346679"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552542"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams-Authentifizierungs Fluss für Registerkarten
 
@@ -17,7 +17,7 @@ ms.locfileid: "49346679"
 
 OAuth 2,0 ist ein offener Standard für Authentifizierung und Autorisierung, der von Azure AD und vielen anderen Identitätsanbietern verwendet wird. Ein grundlegendes Verständnis von OAuth 2,0 ist eine Voraussetzung für die Verwendung von Authentifizierung in Microsoft Teams. [hier finden Sie eine gute Übersicht](https://aaronparecki.com/oauth-2-simplified/) , die einfacher zu befolgen ist als die [formale Spezifikation](https://oauth.net/2/). Der Authentifizierungs Fluss für Registerkarten und Bots ist ein wenig anders, da Registerkarten sehr ähnlich zu Websites sind, sodass Sie OAuth 2,0 direkt verwenden können. Bots sind nicht und müssen ein paar Dinge unterschiedlich tun, aber die Kernkonzepte sind identisch.
 
-ein Beispiel zur Veranschaulichung des Authentifizierungs Flusses für Registerkarten und Bots mithilfe von Node mithilfe des [impliziten Grant-Typs OAuth 2,0](https://oauth.net/2/grant-types/implicit/).
+Unter [Initiieren des Authentifizierungs Flusses für Registerkarten](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow) *finden Sie* ein Beispiel für einen Authentifizierungsablauf für Registerkarten und Bots mit Knoten und den [impliziten Grant-Typ OAuth 2,0](https://oauth.net/2/grant-types/implicit/).
 
 ![Tab-Authentifizierungs-Sequenzdiagramm](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
@@ -35,7 +35,7 @@ ein Beispiel zur Veranschaulichung des Authentifizierungs Flusses für Registerk
 
 ## <a name="treat-tab-context-as-hints"></a>Behandeln des Registerkarten Kontexts als Hinweise
 
-Obwohl der Registerkartenkontext nützliche Informationen für den Benutzer bereitstellt, verwenden Sie diese Informationen nicht, um den Benutzer zu authentifizieren, unabhängig davon, ob Sie ihn als URL-Parameter zu ihrer Registerkarten-Inhalts-URL oder durch Aufrufen der `microsoftTeams.getContext()` Funktion im Microsoft Teams-Client-SDK erhalten. Ein böswilliger Akteur könnte Ihre Registerkarteninhalts-URL mit seinen eigenen Parametern aufrufen, und eine Webseite, die Microsoft Teams imitiert, kann die URL Ihres Registerkarteninhalts in einen iframe laden und eigene Daten an die Funktion zurückgeben `getContext()` . Sie sollten die identitätsbezogenen Informationen im Registerkartenkontext lediglich als Hinweise behandeln und diese vor der Verwendung validieren.
+Obwohl der Registerkartenkontext hilfreiche Informationen für den Benutzer bereitstellt, verwenden Sie diese Informationen nicht, um den Benutzer zu authentifizieren, unabhängig davon, ob Sie ihn als URL-Parameter zu ihrer Registerkarten-Inhalts-URL oder durch Aufrufen der `microsoftTeams.getContext()` Funktion im Microsoft Teams-Client-SDK erhalten. Ein böswilliger Akteur könnte Ihre Registerkarteninhalts-URL mit seinen eigenen Parametern aufrufen, und eine Webseite, die Microsoft Teams imitiert, kann die URL Ihres Registerkarteninhalts in einen iframe laden und eigene Daten an die Funktion zurückgeben `getContext()` . Sie sollten die identitätsbezogenen Informationen im Registerkartenkontext lediglich als Hinweise behandeln und diese vor der Verwendung validieren. Lesen Sie die Hinweise unter [Navigieren zur Autorisierungs Seite von ihrer Popupseite aus](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page).
 
 ## <a name="samples"></a>Beispiele
 

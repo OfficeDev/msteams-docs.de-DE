@@ -2,12 +2,12 @@
 title: Entwurfsrichtlinien für Registerkarten
 description: Beschreibt die Richtlinien zum Erstellen von Registerkarten für Inhalt und Zusammenarbeit.
 keywords: Teams Design Guidelines Reference Framework Registerkartenkonfiguration Kanal Registerkarte statische Registerkarte einfache Registerkarte Designteams Registerkarte
-ms.openlocfilehash: 9ce72e97fa92e7d5db0fd51f29b2b905f378e788
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: ad4d79608364cc2d37c5e02bd3c98a03deb886cf
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931799"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552549"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Inhalte und Unterhaltungen auf einmal mithilfe von Registerkarten
 
@@ -172,7 +172,7 @@ Sekundäre und tertiäre Seiten in einer Registerkarte sollten in einer L2/L3-An
 
 ### <a name="no-link-to-external-browser"></a>Keine Verknüpfung mit externem Browser
 
-Verknüpfungsziele in Registerkarten sollten nicht mit einem externen Browser verknüpft werden, sondern sollten mit div-Elementen in Microsoft Teams verknüpft sein, beispielsweise innerhalb von Aufgaben Modulen, Registerkarten usw.
+Verknüpfungsziele in Registerkarten sollten nicht mit einem externen Browser verknüpft werden, sondern mit div-Elementen in Microsoft Teams verknüpft werden. Beispielsweise innerhalb von Aufgaben Modulen, Registerkarten usw.
 
 ## <a name="notifications-for-tabs"></a>Benachrichtigungen für Registerkarten
 
@@ -198,3 +198,4 @@ Durch das Senden einer Nachricht an einen Tab-Thread wird das Bewusstsein der Ak
 * Registerkarten sollten in der APP nicht mehr als drei Navigationsebenen aufweisen.
 * Sekundäre und tertiäre Seiten in einer Registerkarte sollten in einer L2/L3-Ansicht im Hauptregister Bereich geöffnet werden, der über die Breadcrumb-Taste navigiert wird.
 * Registerkarten mit komplexen Bearbeitungsfunktionen innerhalb der APP sollten die Editoransicht in mehreren Fenstern anstelle einer Registerkarte (für Desktop und Internet) öffnen.
+* Für eine verbesserte Benutzerfreundlichkeit gehört ein persönlicher bot, der beim ersten Ausführen eine Willkommensnachricht an den Benutzer sendet und auf die Befehle **Hi**, **Help** und **Hello** antwortet. Weitere Unterstützung finden Sie in der Dokumentation zu [Unterhaltungs Bots](../../bots/what-are-bots#in-a-one-to-one-chat) .
