@@ -4,12 +4,12 @@ author: laujan
 description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Microsoft Teams-Plattform
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 7400d5d2c7ffb1d56ec6dec01261e08de597fcdd
-ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
+ms.openlocfilehash: e89f07133f86b6c0700e6a71d8e53bf6d9831196
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "49366875"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576848"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>Was sind benutzerdefinierte Microsoft Teams-Registerkarten?
 
@@ -56,3 +56,9 @@ Sie können maximal eine (1) Kanal/Gruppen-Registerkarte und bis zu sechzehn (16
 ## <a name="mobile-clients"></a>Mobile Clients
 
 Wenn die Registerkarte Kanal/Gruppe auf mobilen Teams-Clients angezeigt werden soll, `setSettings()` muss die Konfiguration einen Wert für die `websiteUrl` Eigenschaft besitzen. Um eine optimale Benutzerfreundlichkeit sicherzustellen, sollten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md) beim Erstellen Ihrer Registerkarten befolgten.
+
+> [!div class="nextstepaction"]
+> [Weitere Informationen: Anfordern von Geräte Berechtigungen](/concepts/device-capabilities/native-device-permissions.md)
+
+> [!div class="nextstepaction"]
+>[Weitere Informationen: Berechtigungen für Kamera und Bildergalerie](/concepts/device-capabilities/mobile-camera-image-permissions.md)

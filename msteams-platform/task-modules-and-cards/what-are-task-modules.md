@@ -4,12 +4,12 @@ author: clearab
 description: Fügen Sie modale Popup-Erlebnisse hinzu, um Informationen für Ihre Benutzer aus Ihren Microsoft Teams-apps zu sammeln oder anzuzeigen.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: adf8f3a6fdbf5976296a58d9ffbae5de950ce64c
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: 44d4e308614763b9da36c2abb7dd150778484c56
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867118"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576855"
 ---
 # <a name="what-are-task-modules"></a>Was sind Aufgabenmodule?
 
@@ -214,7 +214,7 @@ Hier finden Sie die folgenden `APP_ID` Informationen `BOT_APP_ID` :
 | Wert | Typ | Pflichtfeld? | Beschreibung |
 | --- | --- | --- | --- |
 | `APP_ID` | string | Ja | Die [ID](~/resources/schema/manifest-schema.md#id) der APP, die den Aufgabenmodul aufruft. Das [validDomains-Array](~/resources/schema/manifest-schema.md#validdomains) im Manifest für `APP_ID` muss die Domäne für `url` if `url` in der URL enthalten. (Die APP-ID ist bereits bekannt, wenn ein Aufgabenmodul von einer Registerkarte oder einem bot aufgerufen wird, weshalb Sie nicht in enthalten ist `TaskInfo` .) |
-| `BOT_APP_ID` | string | Nein | Wenn ein Wert für `completionBotId` angegeben ist, `result` wird das Objekt über eine a- `task/submit invoke` Nachricht an den angegebenen bot gesendet. `BOT_APP_ID`muss im Manifest der App als bot angegeben werden, d. h., Sie können Sie nicht einfach an einen bot senden. |
+| `BOT_APP_ID` | string | Nein | Wenn ein Wert für `completionBotId` angegeben ist, `result` wird das Objekt über eine a- `task/submit invoke` Nachricht an den angegebenen bot gesendet. `BOT_APP_ID` muss im Manifest der App als bot angegeben werden, d. h., Sie können Sie nicht einfach an einen bot senden. |
 
 Beachten Sie, dass es gültig für `APP_ID` und `BOT_APP_ID` identisch ist und in vielen Fällen sein wird, wenn eine APP einen Bot hat, da es empfehlenswert ist, dies als APP-ID zu verwenden, wenn eine vorhanden ist.
 
@@ -238,5 +238,11 @@ Microsoft Teams stellt sicher, dass die Tastaturnavigation ordnungsgemäß in de
 
 ## <a name="task-module-samples"></a>Aufgabenmodul Beispiele
 
-* [Node.js/typescript-Beispiel](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
+* [Node.js/TypeScript-Beispiel](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
 * [C#-/.NET-Beispiel](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp)
+
+> [!div class="nextstepaction"]
+> [Weitere Informationen: Anfordern von Geräte Berechtigungen](/concepts/device-capabilities/native-device-permissions.md)
+
+> [!div class="nextstepaction"]
+>[Weitere Informationen: Berechtigungen für Kamera und Bildergalerie](/concepts/device-capabilities/mobile-camera-image-permissions.md)

@@ -2,12 +2,12 @@
 title: Entwurfsrichtlinien für Registerkarten
 description: Beschreibt die Richtlinien zum Erstellen von Registerkarten für Inhalt und Zusammenarbeit.
 keywords: Teams Design Guidelines Reference Framework Registerkartenkonfiguration Kanal Registerkarte statische Registerkarte einfache Registerkarte Designteams Registerkarte
-ms.openlocfilehash: ad4d79608364cc2d37c5e02bd3c98a03deb886cf
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 2d4e809e3ac11a5742113bf65125848a922c0207
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552549"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576862"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Inhalte und Unterhaltungen auf einmal mithilfe von Registerkarten
 
@@ -198,4 +198,4 @@ Durch das Senden einer Nachricht an einen Tab-Thread wird das Bewusstsein der Ak
 * Registerkarten sollten in der APP nicht mehr als drei Navigationsebenen aufweisen.
 * Sekundäre und tertiäre Seiten in einer Registerkarte sollten in einer L2/L3-Ansicht im Hauptregister Bereich geöffnet werden, der über die Breadcrumb-Taste navigiert wird.
 * Registerkarten mit komplexen Bearbeitungsfunktionen innerhalb der APP sollten die Editoransicht in mehreren Fenstern anstelle einer Registerkarte (für Desktop und Internet) öffnen.
-* Für eine verbesserte Benutzerfreundlichkeit gehört ein persönlicher bot, der beim ersten Ausführen eine Willkommensnachricht an den Benutzer sendet und auf die Befehle **Hi**, **Help** und **Hello** antwortet. Weitere Unterstützung finden Sie in der Dokumentation zu [Unterhaltungs Bots](../../bots/what-are-bots#in-a-one-to-one-chat) .
+* Für eine verbesserte Benutzerfreundlichkeit gehört ein persönlicher bot, der beim ersten Ausführen eine Willkommensnachricht an den Benutzer sendet und auf die Befehle **Hi**, **Help** und **Hello** antwortet. Weitere Unterstützung finden Sie in der Dokumentation zu [Unterhaltungs Bots](../../bots/what-are-bots.md#in-a-one-to-one-chat) .
