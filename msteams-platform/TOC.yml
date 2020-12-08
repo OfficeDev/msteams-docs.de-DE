@@ -134,6 +134,12 @@
           href: concepts/authentication/authentication.md
         - name: Identitätsanbieter konfigurieren
           href: concepts/authentication/configure-identity-provider.md
+    - name: Gerätefunktionen aktivieren
+      items:
+        - name: Geräteberechtigungen anfordern
+          href: concepts/device-capabilities/native-device-permissions.md
+        - name: Kamera und Galerie
+          href: concepts/device-capabilities/mobile-camera-image-permissions.md
 - name: Registerkarten – Eingebettete Weboberflächen
   items:
     - name: Was sind benutzerdefinierte Registerkarten?
@@ -195,8 +201,6 @@
           href: tabs/how-to/developer-tools.md
         - name: Hinzufügen Ihrer benutzerdefinierten Registerkarte zu SharePoint
           href: tabs/how-to/tabs-in-sharepoint.md
-        - name: Geräteberechtigungen anfordern
-          href: tabs/how-to/native-device-permissions.md
 - name: Bots – Konversationsbasierte Interaktionen
   items:
     - name: Was sind Bots in Microsoft Teams?
