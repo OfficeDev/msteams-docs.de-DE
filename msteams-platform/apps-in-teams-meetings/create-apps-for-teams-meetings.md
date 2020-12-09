@@ -5,12 +5,12 @@ description: Erstellen von Apps für Microsoft Teams-Besprechungen
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Teams-apps-Besprechungen Benutzer Teilnehmer-Rollen-API
-ms.openlocfilehash: 1be9763bdd81bdff7fa2a6f5b44d936dced6755a
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+ms.openlocfilehash: a086050b7cdef671fcbd187b68d707280e8df359
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576827"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605231"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Apps für Teams-Besprechungen erstellen
 
@@ -24,7 +24,7 @@ ms.locfileid: "49576827"
 
 1. Einige Besprechungs-APIs, wie zum Beispiel, `GetParticipant` erfordern eine [bot-Registrierung und eine bot-APP-ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) zum Generieren von auth-Token.
 
-1. Als Entwickler müssen Sie sich an die allgemeinen [Entwurfsrichtlinien für Teams-Registerkarten](../tabs/design/tabs.md) für vor-und nach Besprechungen sowie an die [in-Meeting-Dialogfeld Richtlinien](design/designing-in-meeting-dialog.md) für das in-Meeting-Dialogfeld halten, das während einer Teams-Besprechung ausgelöst wurde.
+1. Als Entwickler müssen Sie sich an die allgemeinen [Entwurfsrichtlinien für Teams-Registerkarten](../tabs/design/tabs.md) für vor-und nach Besprechungen sowie an die [in-Meeting-Dialogfeld Richtlinien](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) für das in-Meeting-Dialogfeld halten, das während einer Teams-Besprechung ausgelöst wurde.
 
 1. Beachten Sie, dass die app in der Regel auf dem neuesten Stand sein muss, damit Ihre APP in Echtzeit aktualisiert werden kann, wenn Sie auf den Ereignis Aktivitäten in der Besprechung basiert. Diese Ereignisse können sich innerhalb des in-Meeting-Dialogs befinden (siehe completion- `bot Id` Parameter in `Notification Signal API` ) und andere Oberflächen im gesamten Besprechungs Lebenszyklus.
 
@@ -111,7 +111,8 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
    }
 }
 ```
-#### <a name="response-codes"></a>Antwort Codes
+
+#### <a name="response-codes"></a>Antwortcodes
 
 **403**: die APP darf keine Teilnehmer Informationen erhalten. Dies ist die häufigste Fehlerantwort und wird ausgelöst, wenn die APP nicht in der Besprechung installiert ist, beispielsweise wenn Sie vom mandantenadministrator deaktiviert oder während einer Live-Websitemigration blockiert wird.  
 **200**: Teilnehmer Informationen erfolgreich abgerufen.  
@@ -146,7 +147,7 @@ POST /v3/conversations/{conversationId}/activities
 > [!NOTE]
 >
 > *  In der angeforderten Nutzlast unten `completionBotId` ist der Parameter des-Parameters `externalResourceUrl` ein optional. Es ist das `Bot ID` , das im Manifest deklariert wird. Der bot erhält ein Result-Objekt.
-> * Die externalResourceUrl-Parameter width und Height müssen in Pixel angegeben werden. Lesen Sie die [Entwurfsrichtlinien](design/designing-in-meeting-dialog.md) , um sicherzustellen, dass sich die Dimensionen innerhalb der zulässigen Grenzen befinden.
+> * Die externalResourceUrl-Parameter width und Height müssen in Pixel angegeben werden. Lesen Sie die [Entwurfsrichtlinien](design/designing-apps-in-meetings.md) , um sicherzustellen, dass sich die Dimensionen innerhalb der zulässigen Grenzen befinden.
 > * Die URL ist die Seite, die als `<iframe>` innerhalb des in-Meeting-Dialogs geladen wird. Die Domäne der URL muss sich in Ihrem App-Manifest im APP- `validDomains` Array befinden.
 
 
@@ -256,9 +257,9 @@ Die Registerkarte `context` und die `scopes` Eigenschaften funktionieren in Harm
 > [!NOTE]
 > * Damit Ihre APP im Registerkarten Katalog sichtbar ist, muss Sie **konfigurierbare Registerkarten** und den **Gruppenchat Bereich** unterstützen.
 >
-> * Mobile Clients unterstützen Registerkarten nur in Pre-und Post-Besprechungs Oberflächen. Die in-Meeting-Erlebnisse (in-Meeting-Dialog und-Panel) auf mobilen Geräten werden in Kürze verfügbar sein. Befolgten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](../tabs/design/tabs-mobile.md) beim Erstellen Ihrer Registerkarten für mobile Geräte. 
+> * Mobile Clients unterstützen Registerkarten nur in Pre-und Post-Besprechungs Oberflächen. Die in-Meeting-Erlebnisse (in-Meeting-Dialog und Tab) auf mobilen Geräten werden in Kürze verfügbar sein. Befolgten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](../tabs/design/tabs-mobile.md) beim Erstellen Ihrer Registerkarten für mobile Geräte.
 
-### <a name="pre-meeting"></a>Pre-Meeting
+### <a name="before-a-meeting"></a>Vor einer Besprechung
 
 Benutzer mit Organizer-und/oder Presenter-Rollen fügen mithilfe der Schaltfläche Plus ➕ auf der Seite Besprechungs- **Chat** und Besprechungs **Details** Registerkarten zu einer Besprechung hinzu. Messaging Erweiterungen werden über das Menü Ellipsen/Überlauf hinzugefügt, &#x25CF;&#x25CF;&#x25CF; unterhalb des Bereichs zum Verfassen von Nachrichten im Chat angezeigt wird. Bots werden mit der Taste "" zu einem Besprechungs Chat hinzugefügt **@** und die Option **Bots abrufen** ausgewählt.
 
@@ -268,7 +269,7 @@ Benutzer mit Organizer-und/oder Presenter-Rollen fügen mithilfe der Schaltfläc
 
 > **Hinweis**: Rollenzuweisungen können geändert werden, während eine Besprechung ausgeführt wird.  *Siehe* [roles in a Teams Meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019). 
 
-### <a name="in-meeting"></a>In-Meeting
+### <a name="during-a-meeting"></a>Während einer Besprechung
 
 #### <a name="sidepanel"></a>**sidePanel**
 
@@ -285,9 +286,9 @@ Benutzer mit Organizer-und/oder Presenter-Rollen fügen mithilfe der Schaltfläc
 
 ✔ AppName in-Meeting-ToolTip sollte den APP-Namen in der Besprechungs-U-Leiste angeben.
 
-#### <a name="in-meeting-dialog"></a>**in-Meeting-Dialog**
+#### <a name="in-meeting-dialog"></a>**Dialogfeld "Besprechung"**
 
-✔ Sie die Entwurfsrichtlinien für das [in-Meeting-Dialogfeld](design/designing-in-meeting-dialog.md)einhalten.
+✔ Sie die Entwurfsrichtlinien für das [in-Meeting-Dialogfeld](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)einhalten.
 
 ✔ Bezieht sich auf den Microsoft [Teams-Authentifizierungs Fluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -303,7 +304,7 @@ Benutzer mit Organizer-und/oder Presenter-Rollen fügen mithilfe der Schaltfläc
 >
 > * Wenn Ihre APP anonyme Benutzer unterstützen soll, muss ihre anfängliche Anforderungsnutzlast auf die `from.id`  (ID der Benutzer)-Anforderungs Metadaten im `from` Objekt und nicht auf die `from.aadObjectId` Anforderungs Metadaten (Azure Active Directory ID des Benutzers) zurückgreifen. *Weitere Informationen finden Sie unter* [Verwenden von Aufgaben Modulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
-### <a name="post-meeting"></a>Nachbesprechung
+### <a name="after-a-meeting"></a>Nach einer Besprechung
 
 Die Konfigurationen nach der Besprechung und vor der Besprechung sind äquivalent.
 

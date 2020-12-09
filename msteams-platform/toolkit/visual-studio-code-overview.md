@@ -4,12 +4,12 @@ description: Erste Schritte beim Erstellen großartiger benutzerdefinierter apps
 keywords: Teams Visual Studio Code Toolkit
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 41b0eeaeef1c7094fc9c8cbdc05c2db899245fc6
-ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
+ms.openlocfilehash: 350da030d15e72e2cad51c5967afab9b6f29fe9e
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "49476930"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604473"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Erstellen von apps mit dem Teams-Toolkit und Visual Studio Code
 
@@ -70,7 +70,9 @@ Wenn eine APP installiert ist, analysiert der Microsoft Teams-Client die Manifes
 
 ## <a name="package-your-app"></a>Verpacken Ihrer APP
 
-Wenn Sie die Seite " **App-Details** " ändern oder das **Manifest** oder **. env** -Dateien im Ordner "  **. Publish** " Ihrer APP aktualisieren, wird die **Development.zip** Datei automatisch generiert. Sie müssen [zwei Symbole](../concepts/build-and-test/apps-package.md#icons) in den gleichen Ordner einschließen.
+Durch Ändern der **App-Detail** Seite, des **Manifests** oder der **env** -Dateien im Ordner "  **. Publish** " Ihrer APP wird die **Development.zip** Datei automatisch generiert. Sie müssen [zwei Symbole](../concepts/build-and-test/apps-package.md#app-icons) in den gleichen Ordner einschließen.
+
+## <a name="install-and-run-your-app-locally"></a>Lokal installieren und Ausführen der APP
 
 ## <a name="run-your-app"></a>Ausführen der APP
 

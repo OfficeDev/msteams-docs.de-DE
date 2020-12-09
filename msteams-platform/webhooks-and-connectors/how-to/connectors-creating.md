@@ -3,12 +3,12 @@ title: Office 365-Connectors
 description: Beschreibt die ersten Schritte mit Office 365-Konnektoren in Microsoft Teams
 keywords: Teams O365-Connector
 ms.date: 04/19/2019
-ms.openlocfilehash: dcd9f7e68dfe834fbcac245941944007beedf478
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 374e5058d2041d43f675d643e5b830bf72ad79c2
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48998021"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605342"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Erstellen Office 365 Connectors für Microsoft Teams
 
@@ -79,7 +79,7 @@ Sie können optional einen Ereignishandler ausführen, wenn der Benutzer eine vo
 
 Sie können das automatisch generierte Teams-App-Manifest aus dem Portal herunterladen. Bevor Sie es verwenden können, um Ihre APP zu testen oder zu veröffentlichen, müssen Sie jedoch folgende Schritte ausführen:
 
-- Schließen Sie zwei Symbole ein, indem Sie den Anweisungen in [Symbole](~/concepts/build-and-test/apps-package.md#icons) folgen.
+- [Schließen Sie zwei Symbole](../../concepts/build-and-test/apps-package.md#app-icons)ein.
 - Ändern Sie den `icons`-Teil des Manifests so, dass er auf die Dateinamen der Symbole anstelle von URLs verweist.
 
 Die folgende manifest.JSON-Datei enthält die grundlegenden Elemente, die zum Testen und Übermitteln Ihrer APP erforderlich sind.

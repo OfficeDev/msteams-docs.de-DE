@@ -5,12 +5,12 @@ description: Vorgehensweise Erstellen einer Konfigurationsseite
 keywords: Teams-Registerkartengruppe Kanal konfigurierbar
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 591e1aa91bd33d1a61e9d70b35fd1561368fcda4
-ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
+ms.openlocfilehash: f217ce39f234b3058607d81f418fa29da318ff21
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "47964606"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605325"
 ---
 # <a name="create-a-configuration-page"></a>Erstellen einer Konfigurationsseite
 
@@ -85,7 +85,7 @@ Hier werden dem Benutzer zwei Optionsschaltflächen angezeigt, **Wählen Sie gra
 1. Der `microsoftTeams.settings.registerOnSaveHandler()` Ereignishandler wird ausgelöst.
 1. Die Schaltfläche **Speichern** auf der Konfigurationsseite der APP, die in Teams hochgeladen wurde, ist aktiviert.
 
-Mit diesem Code können Teams wissen, dass die Konfigurationsanforderungen erfüllt wurden und die Installation fortgesetzt werden kann. Bei **Save**werden die Parameter von `settings.setSettings()` festgelegt, wie durch die `Settings` Schnittstelle für die aktuelle Instanz definiert (siehe [Einstellungen-Schnittstelle](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) ). Schließlich `saveEvent.notifySuccess()` wird aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
+Mit diesem Code können Teams wissen, dass die Konfigurationsanforderungen erfüllt wurden und die Installation fortgesetzt werden kann. Bei **Save** werden die Parameter von `settings.setSettings()` festgelegt, wie durch die `Settings` Schnittstelle für die aktuelle Instanz definiert (siehe [Einstellungen-Schnittstelle](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) ). Schließlich `saveEvent.notifySuccess()` wird aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
 
 >[!NOTE]
 >
@@ -104,7 +104,7 @@ Die [Kontext Schnittstelle](/javascript/api/@microsoft/teams-js/microsoftteams.c
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Einfügen von Platzhaltern im `configurationURL`
 
-Platzhalter für die Kontext Schnittstelle können ihrer Basis hinzugefügt werden `configurationUrl` . Zum Beispiel:
+Platzhalter für die Kontext Schnittstelle können ihrer Basis hinzugefügt werden `configurationUrl` . Beispiel:
 
 ##### <a name="base-url"></a>Basis-URL
 
@@ -166,7 +166,7 @@ Unterstützte Entfernungsoptionen können die Benutzerfreundlichkeit weiter verf
 
 ## <a name="mobile-clients"></a>Mobile Clients
 
-Wenn die Registerkarte Kanal/Gruppe auf mobilen Teams-Clients angezeigt werden soll, `setSettings()` muss die Konfiguration über einen Wert für die `websiteUrl` Eigenschaft verfügen (siehe unten). Die vollständige Unterstützung für Registerkarten auf mobilen Clients wird in Kürze veröffentlicht. Zur Vorbereitung des Updates sollten Sie die [Anleitungen für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md) beim Erstellen Ihrer Registerkarten befolgten.
+Wenn die Registerkarte Kanal/Gruppe auf mobilen Teams-Clients angezeigt werden soll, `setSettings()` muss die Konfiguration über einen Wert für die `websiteUrl` Eigenschaft verfügen (siehe unten). Siehe [Leitfaden für Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md).
 
 Microsoft Teams SetSettings ()-Konfiguration für die Entfernungs Seite und/oder Mobile Clients:
 

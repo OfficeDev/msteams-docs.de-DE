@@ -1,135 +1,138 @@
 ---
-title: Entwerfen effektiver Karten
-description: Beschreibt die Entwurfsrichtlinien zum Erstellen von Karten.
-keywords: Teams-Entwurfsrichtlinien Referenz-Framework-Karten anpassungsfähiges Leichtgewicht
-ms.openlocfilehash: 4ec410820e0288d99dacb6944a8096f4f61b9d34
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+title: Entwerfen von adaptiven Karten für Ihre APP
+description: Hier erfahren Sie, wie Sie Adaptive Karten für Teams entwerfen und das Microsoft Teams UI Kit erhalten.
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: bd48846284620415cc8cadabc59f2ab7b61d5189
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209837"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604522"
 ---
-# <a name="design-effective-cards"></a>Entwerfen effektiver Karten
+# <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Entwerfen von adaptiven Karten für Ihre Microsoft Teams-App
 
-Karten sind Aktionen-Snippets von Inhalten, die Sie einer Unterhaltung über einen bot, einen Konnektor oder eine APP hinzufügen können. Mithilfe von Text, Grafiken und Schaltflächen können Sie mit Karten mit einer Zielgruppe kommunizieren.
+Eine Adaptive Karte enthält einen Freihandform Körper mit Kartenelementen und optionalen Aktionen. Adaptive Karten sind Aktions fähige Snippets von Inhalten, die Sie einer Unterhaltung über eine bot-oder Messaging-Erweiterung hinzufügen können. Mithilfe von Text, Grafiken und Schaltflächen bieten diese Karten eine umfassende Kommunikation mit Ihrem Publikum.
 
-Mit unserem Karten Framework entfällt die Last des Designs einer voll funktionsfähigen UX. Wir haben verschiedene standardmäßige Kartentypen entwickelt, die jeweils in unsere unterstützten Plattformen passen. Dies bedeutet, dass für das Layout vollständig gesorgt ist, und Sie müssen keine unterschiedlichen Karten Iterationen auf Plattformen entwickeln. Stattdessen können Sie sich auf das Einwählen von Inhalten konzentrieren.
+Das Adaptive Karten Framework wird in vielen Microsoft-Produkten, einschließlich Teams, verwendet. Sie können Karten innerhalb von Nachrichten an Benutzer über Bots oder Messaging-Erweiterungen senden. Benutzer können Aktionen auf Karten durchführen, wenn diese vorhanden sind.
 
----
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Beispiel zeigt eine Adaptive Karte." border="false":::
 
-## <a name="guidelines"></a>Anleitungen
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
-Denken Sie an eine Karte als Antwort auf eine Benutzerfrage oder eine Einstellung. Eine Karte kann auf eine direkte Frage (beispielsweise "wie viele geöffnete Fehler ich habe?") oder auf eine Bedingung (wie "eine Liste mit meinen geöffneten Fehlern an 9 Uhr täglich senden") Antworten.
+Ausführlichere Entwurfsrichtlinien für Adaptive Karten in Microsoft Teams, einschließlich der Elemente, die Sie nach Bedarf abrufen und ändern können, finden Sie im Microsoft Teams UI Kit. Das UI-Kit umfasst auch wichtige Themen wie Design, Barrierefreiheit und reaktionsschnelle Größenanpassung.
 
-> [!TIP]
-> Die Verwendung eines unserer Standardkarten Typen bedeutet, dass Sie bereits wissen, dass alle Ihre Antworten auf jeder unterstützten Plattform gut gerendert werden.
+> [!div class="nextstepaction"]
+> [Abrufen des Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-Eine Karte kann eines der folgenden Elemente enthalten:<br />
+## <a name="adaptive-cards-designer"></a>Adaptive Cards-Designer
 
-[!include[Card anatomy](~/includes/design/card-image-anatomy.html)]
+Sie können auch mit dem Entwerfen Ihrer adaptiven Karten direkt im Browser beginnen.
 
-1. **Umschlagtext**: am besten für Chatnachrichten verwendet. Wenn Sie beispielsweise einen bot sagen möchten: "hier ist, was ich gefunden habe!" oder "time for your 1:00 News Digest" ist, wird diese Nachricht am besten im Umschlagtext angezeigt.
+> [!div class="nextstepaction"]
+> [Testen des Adaptive Cards-Designers](https://adaptivecards.io/designer/)
 
-   Briefumschlag Text ist eine großartige Möglichkeit, um eine kleine Persönlichkeit in ihren Dienst einzufügen – denken Sie daran, Sie relativ kurz zu halten.
-
-2. **Title**: Ihr Titel ist immer der größte Text auf Ihrer Karte. Es dient auch als "Hook", also versuchen Sie, den Titel kurz zu halten, einprägsam und einfach zu scannen.
-
-3. Unter **Titel**: am besten für Attribution, Slogans oder als sekundäre Direktive verwendet. Diese Komponente wird direkt unter Ihrem Titel angezeigt.
-
-4. **Bild**: Bilder skalieren, um ihren Container anzupassen. Hero Cards haben eine maximale Breite von 420px, Miniaturansichten haben eine maximale Breite von 100px, und Listenansichten ermöglichen nur Bund im Desktopmodus.
-
-5. **Text**: am besten für nur-Text im Textkörper Ihrer Karte verwendet. Die maximale Länge hängt vom ausgewählten Kartentyp ab.
-
-6. **Schaltflächen**: wird am besten zum Öffnen von Webseiten, Registerkarten oder zusätzlichen Chat Inhalten verwendet. Achten Sie darauf, den Text der Schaltfläche kurz zu halten.
-
-   Sie können bis zu 6 Schaltflächen pro Karte einbeziehen, aber wir empfehlen Ihnen hier eine "Less is more"-Philosophie.
-
-7. **Tippen**Sie auf Region: Dies ist der klickable Bereich Ihrer Karte. Die meisten Benutzer möchten automatisch auf Bilder klicken, damit Sie wissen, wo Sie tippen oder klicken sollten.
-
-> [!TIP]
-> Es ist nicht erforderlich, jedes Element in jede von Ihnen erstellte Karte einzubeziehen. Lassen Sie Ihre Inhalte ihre Elemente diktieren.
-
----
-
-## <a name="types-of-cards"></a>Kartentypen
+## <a name="types-of-adaptive-cards"></a>Arten von adaptiven Karten
 
 ### <a name="hero"></a>Hero
 
-Unsere größte Karte. Eignet sich am besten für Artikel, lange Beschreibungen oder Szenarien, in denen das Bild den größten Teil der Geschichte erzählt.
+Unsere größte Karte. Verwenden Sie für die Freigabe von Artikeln oder Szenarien, in denen ein Bild die meiste Geschichte erzählt.
 
-[!include[Card anatomy](~/includes/design/card-image-hero.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Beispiel zeigt eine Adaptive Karte." border="false":::
 
 ### <a name="thumbnail"></a>Minaturansicht
 
-Kurz und bündig. Diese Karten sind ideal für kurze Antworten, oder wenn Sie mehrere Karten gleichzeitig zurückgeben möchten, sodass der Benutzer aus einer Reihe von Optionen auswählen kann. Wir glauben, dass dies eine großartige Möglichkeit zum Deep Link zu einer anderen Registerkarte oder einem Webdienst ist.
+Verwenden Sie zum Senden einer einfachen Aktion-Nachricht.
 
-[!include[Card anatomy](~/includes/design/card-image-thumbnail.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Beispiel zeigt eine Adaptive Karte." border="false":::
 
-### <a name="sign-in"></a>Anmelden
+### <a name="list"></a>List
 
-Bei einigen Diensten müssen sich Benutzer unabhängig von unserer Authentifizierung anmelden. In diesem Fall würden Sie eine Anmeldekarte vorlegen, bevor der Benutzer eine Verbindung mit Ihrem Dienst herstellen kann.
+Verwenden Sie in Szenarien, in denen der Benutzer ein Element aus einer Liste auswählen soll, aber für die Elemente keine große Erklärung erforderlich ist.
 
-[!include[Card anatomy](~/includes/design/card-image-signin.html)]
-
-> [!TIP]
-> Begrenzen Sie das Vorkommen einer zusätzlichen Anmeldekarte, da Sie eine erhebliche Geschwindigkeits Beule für neue Benutzer darstellen.
-
----
-
-## <a name="card-collections"></a>Kartensammlungen
-
-Wir haben auch standardmäßige Kartentypen, die am besten verwendet werden, wenn Sie mehrere Teile des inhaltsgleich zeitig oder in schneller Folge präsentieren möchten. Zu diesem Zweck haben wir ein Karussell, einen Digest, eine Liste und eine "Bubble Merge".
-
-### <a name="carousel"></a>Karussell
-
-Am besten geeignet für Artikel, Shopping und Browsen durch Karten.
-
-[!include[Card anatomy](~/includes/design/card-image-carousel.html)]
-
-> [!TIP]
-> Das Karussell ist die maximale Höhe der größten Karte. Es wird empfohlen, die gleichen Kartentypen und Inhaltsfelder zu verwenden.
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Beispiel zeigt eine Adaptive Karte." border="false":::
 
 ### <a name="digest"></a>Digest
 
-Eignet sich am besten für Nachrichten, Digests und immer dann, wenn der Benutzer mehrere Karten gleichzeitig anzeigen soll. Wir empfehlen die Verwendung von Miniatur Ansichtskarten für Digest.
+Verwenden Sie für Nachrichtenübersichten und Round-up-Beiträge. Hinweis: Wir empfehlen die thumbnailkarte für ein einzelnes Update oder ein neues Element.
 
-[!include[Card anatomy](~/includes/design/card-image-digest.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Beispiel zeigt eine Adaptive Karte." border="false":::
 
-### <a name="lists"></a>Listen
+### <a name="media"></a>Medien
 
-Listen stellen eine hervorragende Möglichkeit dar, einen scannable-Objektsatz in einem der folgenden Szenarien darzustellen. Listen werden am besten für Elemente verwendet, die nicht viele Erklärungen benötigen.
+Verwenden Sie diese Funktion, wenn Sie Text und Medien wie Audio oder Video kombinieren möchten.
 
-[!include[Card anatomy](~/includes/design/card-image-list.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Beispiel zeigt eine Adaptive Karte." border="false":::
 
-### <a name="bubble-merge"></a>Blasen Zusammenführung
+### <a name="people"></a>Personen
 
-Einige interessante Effekte können erzielt werden, indem ein Held und mehrere Miniaturansichten schnell hintereinander gesendet werden. Diese Vorgehensweise wird empfohlen, wenn Sie ein Hauptergebnis bereitstellen möchten, aber einige weitere verwandte Elemente enthalten sollen.
+Am besten geeignet, wenn Sie effizient vermitteln möchten, wer eine Aufgabe eingeht.
 
-[!include[Card anatomy](~/includes/design/card-image-bubble-merge.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Beispiel zeigt eine Adaptive Karte." border="false":::
 
----
+### <a name="request-ticket"></a>Ticket anfordern
+
+Wird verwendet, um schnelle Eingaben eines Benutzers zu erhalten, um automatisch eine Aufgabe oder ein Ticket zu erstellen.
+
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Beispiel zeigt eine Adaptive Karte." border="false":::
+
+### <a name="imageset"></a>ImageSet
+
+Verwenden Sie, um mehrere Bildminiaturansichten zu senden.
+
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Beispiel zeigt eine Adaptive Karte." border="false":::
+
+### <a name="actionset"></a>Für actionset
+
+Verwenden Sie diese Option, wenn Sie möchten, dass der Benutzer eine Schaltfläche wählt und dann zusätzlich Benutzereingaben von derselben Karte sammelt.
+
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Beispiel zeigt eine Adaptive Karte." border="false":::
+
+### <a name="choiceset"></a>Choiceset
+
+Verwenden Sie, um mehrere Eingaben des Benutzers zu erfassen.
+
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Beispiel zeigt eine Adaptive Karte." border="false":::
+
+## <a name="anatomy"></a>Anatomie
+
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="Illustration mit der UI-Anatomie einer adaptiven Karte." border="false":::
+
+Adaptive Karten haben eine große Flexibilität. Es wird jedoch dringend empfohlen, die folgenden Komponenten auf jeder Karte einzubinden:
+
+|Leistungsindikator|Beschreibung|
+|----------|-----------|
+|A|**Kopfzeile**: transparente und prägnante Kopfzeilen, aber dennoch aussagekräftig.|
+|B|**Body Copy**: Verwenden Sie, um Details zu übermitteln, die entweder zu lang oder nicht wichtig genug sind, um in die Kopfzeile einzubeziehen.|
+|C|**Primäre Aktionen**: Fügen Sie als bewährte Methode 1-3 primäre Aktionen hinzu. Es sind maximal sechs zulässig.|
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
-### <a name="keep-the-noise-down"></a>Rauschen nach unten aufbewahren
+### <a name="primary-and-secondary-actions"></a>Primäre und sekundäre Aktionen
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Beispiel mit einer bewährten Methode für Adaptive Karten." border="false":::
+
+#### <a name="do-use-up-to-six-primary-actions"></a>Do: Verwenden Sie bis zu sechs primäre Aktionen.
+
+Während Adaptive Karten sechs primäre Aktionen unterstützen können, benötigen die meisten Karten dies nicht. Aktionen sollten klar, prägnant und geradlinig sein. Weniger ist mehr.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Beispiel mit einer bewährten Methode für Adaptive Karten." border="false":::
+
+#### <a name="dont-use-more-than-six-primary-actions"></a>Nicht: mehr als sechs primäre Aktionen verwenden
+
+Adaptive Karten sollten schnelle, umsetzbare Inhalte darstellen. Zu viele Aktionen können einen Benutzer überwältigen.
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="frequency"></a>Häufigkeit
+
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Beispiel mit einer bewährten Methode für Adaptive Karten." border="false":::
+
+#### <a name="do-be-concise"></a>Do: prägnant sein
 
 Es ist ganz einfach, mehrere Karten in eine Unterhaltung zu senden, aber sobald die Karten aus dem Blickfeld geraten, werden Sie nicht mehr so nützlich. Versuchen Sie, sich auf das Wesentliche zu beschränken. Dies gilt insbesondere für einen Kanal, in dem Benutzer eine geringere Toleranz für das als "Rauschen" wahrgenommene haben.
-
-### <a name="test-on-mobile"></a>Test auf mobilen Geräten
-
-Mobile Umgebungen sind Platz-und Bandbreitenabhängig, daher sollten Sie vorsichtig sein, wenn Sie überdimensionierte Bilder und große Datensätze in Listen und Karussells einschließen. Außerdem werden Titel breiten und Textlängen auf dem Mobiltelefon abgeschnitten, sodass dies eine andere Sache ist, die Sie im Auge behalten.
-
-### <a name="check-your-graphics"></a>Überprüfen der Grafiken
-
-Grafiken werden skaliert, daher sollten Sie Sie auf allen Plattformen in einer Vorschau anzeigen.
-
-### <a name="avoid-including-text-in-a-graphic"></a>Vermeiden des Einbindens von Text in eine Grafik
-
-Alle Elemente, die von einem Benutzer gelesen werden müssen, sollten in ein Textfeld eingeschlossen werden. Wenn ein Bild dynamisch skaliert wird, kann jeder Text, den Sie einer Grafik hinzufügen, nicht mehr verständlich sein.
-
-### <a name="use-mentions-if-you-want-the-attention-of-specific-users"></a>Verwenden von Erwähnungen, wenn Sie die Aufmerksamkeit bestimmter Benutzer wünschen
-
-> [!NOTE]
-> Die Erwähnung der Unterstützung in Cards wird derzeit nur in der [Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md) unterstützt.
-
-Erwähnungen sind eine hervorragende Möglichkeit, bestimmte Benutzer in einem Team-oder Gruppenchat zu benachrichtigen. Sie können eine Erwähnung in der Karte in Szenarien wie, eine Aufgabe, die einem Benutzer zugewiesen ist oder Lob an einen Teamkollegen hinzufügen. Hier erfahren Sie, wie Sie in Karten auf der [Seite Kartenformatierung](~/task-modules-and-cards/cards/cards-format.md)Erwähnungen hinzufügen. 

@@ -5,18 +5,21 @@ description: Übersicht darüber, wie Entwickler Microsoft Teams-Features mit be
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: c430add71e7c23a44a552270c5e3c1bacbe650e4
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 6f5f3454885320669ef42383529d39fcfcfdfee8
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209799"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604787"
 ---
-# <a name="build-apps-for-microsoft-teams"></a>Erstellen von Apps für Microsoft Teams
+# <a name="build-apps-for-microsoft-teams"></a>Apps für Microsoft Teams erstellen
 
 Microsoft Teams-apps bringen wichtige Informationen, gemeinsame Tools und vertrauenswürdige Prozesse dazu, wo Personen zunehmend sammeln, lernen und arbeiten.
 
 Mit apps erweitern Sie Teams entsprechend Ihren Anforderungen. Erstellen Sie etwas ganz neues für Teams oder integrieren Sie eine vorhandene app.
+
+> [!div class="nextstepaction"]
+> [Beginnen Sie hier](build-your-first-app/build-first-app-overview.md)
 
 ## <a name="what-are-teams-apps"></a>Was sind Microsoft Teams-apps?
 
@@ -139,7 +142,7 @@ Wechseln Sie direkt mit unseren ersten App-Lernprogrammen, oder erfahren Sie, wi
 ## <a name="resources"></a>Ressourcen
 
 * [Hinzufügen einer Freigabe zur Schaltfläche "Teams" zu Ihrer Website](concepts/build-and-test/share-to-teams.md)
-* [Fluent-Entwurfs System](https://fluentsite.z22.web.core.windows.net/)
+* <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent-Benutzeroberfläche</a>
 * [Microsoft Teams JavaScript-Client-SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * [Bot Framework SDK für JavaScript](https://github.com/Microsoft/botbuilder-js) und [bot Framework SDK für .net](https://github.com/Microsoft/botbuilder-dotnet/)
 * [Veröffentlichen Ihrer APP in einer Organisation oder AppSource](concepts/deploy-and-publish/overview.md)

@@ -4,12 +4,12 @@ description: Erste Schritte beim Erstellen großartiger benutzerdefinierter apps
 keywords: Teams Visual Studio Toolkit
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 5ba3cd8b5714876a96595aec295ff6d0066e115f
-ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
+ms.openlocfilehash: a1221945659b2dd0f45bdd3a966d9b029ddcde09
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "49476986"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604487"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Erstellen von apps mit dem Teams-Toolkit und Visual Studio
 
@@ -82,7 +82,7 @@ Wenn eine APP installiert ist, analysiert der Microsoft Teams-Client die Manifes
 
 ## <a name="package-your-app"></a>Verpacken Ihrer APP
 
-Wenn Sie die Seite " **App-Details** " ändern oder das **Manifest** oder **. env** -Dateien im Ordner "  **. Publish** " Ihrer APP aktualisieren, wird die **Development.zip** Datei automatisch generiert. Die Development.zip Datei enthält drei erforderliche Dateien – die Dateien **manifest.js** und [zwei Symboldateien](../concepts/build-and-test/apps-package.md#icons).
+Wenn Sie die Seite " **App-Details** " ändern oder das **Manifest** oder **. env** -Dateien im Ordner "  **. Publish** " Ihrer APP aktualisieren, wird die **Development.zip** Datei automatisch generiert. Die Development.zip Datei enthält drei erforderliche Dateien – die **manifest.js** und [zwei Symbole](../concepts/build-and-test/apps-package.md#app-icons).
 
 ## <a name="install-and-run-your-app-locally"></a>Lokal installieren und Ausführen der APP
 

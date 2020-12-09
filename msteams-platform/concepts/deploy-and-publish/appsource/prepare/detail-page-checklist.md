@@ -2,12 +2,12 @@
 title: Erstellen einer tollen App-Detailseite
 description: Beschreibung der Seite "Anforderungen für App-Details"
 keywords: Veröffentlichungsrichtlinie für Microsoft Teams Veröffentlichungs Speicher AppSource Inhaltsmetadaten Screenshot Logo Beschreibung App Name Icons Kurzbeschreibung
-ms.openlocfilehash: 98c6ccedb20f43a0bc1a34f5c4ecb30f98150d9a
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: aa12cab0bb89349b4d9d613a9c533773fa593283
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465943"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605318"
 ---
 # <a name="build-a-great-app-details-page"></a>Erstellen einer tollen App-Detailseite
 
@@ -65,7 +65,7 @@ Dies ist eines der ersten Elemente, die Benutzern angezeigt werden. Es sollte at
 
 ## <a name="outline-icon"></a>Gliederungssymbol
 
-Dies wird in Messaging Erweiterungen, apps, die vom Benutzer als Favorit markiert sind, und im linken Navigationsmenü verwendet. Stellen Sie sicher, dass Sie einfach und erkennbar ist. Das Gliederungssymbol muss nur weiße Farbe enthalten und transparent sein. Die erforderlichen Spezifikationen *finden Sie unter* [Erstellen eines App-Pakets für Ihre Microsoft Teams-App-Symbole](../../../build-and-test/apps-package.md#icons).
+Dieses Symbol wird für angeheftete Messaging Erweiterungen verwendet und wenn Ihre APP auf der linken Seite von Microsoft Teams angezeigt wird. Siehe [Entwurfs Anleitung für das Gliederungssymbol](../../../../concepts/build-and-test/apps-package.md#outline-icon).
 
 ![App-Symbol Gliederungs Speicheransicht ](../../../../assets/images/store-detail-page/AppIconOutline-02.png)
  ![ App-Symbol Übersicht App Studio-Ansicht](../../../../assets/images/store-detail-page/AppIconOutline-01.png)
@@ -83,7 +83,7 @@ Dies ist eine präzise Zusammenfassung Ihrer APP. Diese soll originell und anspr
 
 * Die wichtigsten Informationen kommen an erster Stelle.
 * Schließen Sie Stichwörter ein, nach denen Kunden wahrscheinlich suchen.
-* Wenn Sie Microsoft Teams erwähnen müssen, sollte die erste Erwähnung von Microsoft Teams in vollem Umfang als *Microsoft Teams*geschrieben werden. Wenn in derselben Beschreibung Teams erneut erwähnt werden, kann der Name in Microsoft *Teams*verkürzt werden.
+* Wenn Sie Microsoft Teams erwähnen müssen, sollte die erste Erwähnung von Microsoft Teams in vollem Umfang als *Microsoft Teams* geschrieben werden. Wenn in derselben Beschreibung Teams erneut erwähnt werden, kann der Name in Microsoft *Teams* verkürzt werden.
 * Alle Verweise auf Microsoft Teams können Teil der Beschreibung sein und den Microsoft-Markenstandards und-Richtlinien entsprechen.
 * Alle Beschreibungen müssen grammatikalisch korrekt sein, ohne dass Sprachfehler vorliegen.
 * Vermeiden Sie unnötige Nutzung von Großschreibungen, beispielsweise unter Angabe von "Benutzern" anstelle von "Users".
@@ -215,7 +215,7 @@ Wenn ein Bild mehr als tausend Worte sagt, ist ein Video mehr als tausend Bilder
 
 Denken Sie daran, Ihre Präsentation kurz und bündig zu halten – irgendwo zwischen 30-90 Sekunden.
 
-## <a name="learn-more"></a>Weitere Informationen
+## <a name="learn-more"></a>Mehr erfahren
 
 [Prüfliste für App-Übermittlung](~/concepts/deploy-and-publish/appsource/publish.md).  
 [Erstellen Sie ein App-Paket für Ihre Microsoft Teams-App](~/concepts/build-and-test/apps-package.md).  
