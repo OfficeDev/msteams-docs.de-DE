@@ -3,12 +3,12 @@ title: Senden von Nachrichten an Connectors und Webhooks
 description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Teams
 localization_priority: Priority
 keywords: Teams O365-Connector
-ms.openlocfilehash: 913e441e6953102eeef2295625ce3e0734934bd9
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: e14b02a5a93d10feca49b6dcd653979aa9a94370
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48998007"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604480"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Senden von Nachrichten an Connectors und Webhooks
 
@@ -135,8 +135,8 @@ Weitere Details zu den Aktionen in Connectorkarten finden Sie unter **[Aktionen]
 
 Führen Sie die folgenden Schritte aus, um zu erfahren, wie Sie eine einfache Karte an einen Connector senden können.
 
-1. Wählen Sie in Microsoft Teams **Weitere Optionen** ( **&#8943;** ) neben dem Kanalnamen aus, und wählen Sie dann **Connectors** aus.
-2. Scrollen Sie durch die Liste der Connectors bis zu **Eingehender Webhook** , und wählen Sie **Hinzufügen** aus.
+1. Wählen Sie in Microsoft Teams **Weitere Optionen** (**&#8943;**) neben dem Kanalnamen aus, und wählen Sie dann **Connectors** aus.
+2. Scrollen Sie durch die Liste der Connectors bis zu **Eingehender Webhook**, und wählen Sie **Hinzufügen** aus.
 3. Geben Sie einen Namen für den Webhook ein, laden Sie ein Bild hoch, das mit Daten aus dem Webhook verknüpft werden soll, und wählen Sie **Erstellen** aus.
 4. Kopieren Sie den Webhook in die Zwischenablage, und speichern Sie ihn. Sie benötigen die Webhook-URL zum Senden von Informationen an Microsoft Teams.
 5. Klicken Sie auf **Fertig**.
@@ -173,7 +173,7 @@ In den folgenden Schritten wird PowerShell verwendet. Wir gehen davon aus, dass 
 2. Wenn die POST-Anforderung erfolgreich ist, sollte eine einfache **1** durch `Invoke-RestMethod` ausgegeben werden.
 3. Überprüfen Sie den Microsoft Teams-Kanal, der der Webhook-URL zugeordnet ist. Die neue Karte sollte nun im Kanal bereitgestellt werden.
 
-- Schließen Sie zwei Symbole ein, indem Sie den Anweisungen in [Symbole](~/concepts/build-and-test/apps-package.md#icons) folgen.
+- [Zwei Symbole einschließen](../../concepts/build-and-test/apps-package.md#app-icons).
 - Ändern Sie den `icons`-Teil des Manifests so, dass er auf die Dateinamen der Symbole anstelle von URLs verweist.
 
 Die folgende manifest.JSON-Datei enthält die grundlegenden Elemente, die zum Testen und Übermitteln Ihrer APP erforderlich sind.

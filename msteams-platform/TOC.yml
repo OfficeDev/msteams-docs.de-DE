@@ -60,26 +60,10 @@
       href: concepts/capabilities-overview.md
     - name: App-Einstiegspunkte
       href: concepts/extensibility-points.md
-    - name: Entwerfen Ihrer App
-      items:
-        - name: Grundlegendes zu Ihren Anwendungsfällen
-          href: concepts/design/understand-use-cases.md
-        - name: Zuordnen von Anwendungsfällen zu Features
-          href: concepts/design/map-use-cases.md
-        - name: Persönliche Apps
-          href: concepts/design/personal-apps.md
-        - name: Komponenten der Benutzeroberfläche
-          items:
-            - name: Farben
-              href: concepts/design/components/color.md
-            - name: 'Schaltflächen, Links und Steuerelemente'
-              href: concepts/design/components/buttons.md
-            - name: Typografie
-              href: concepts/design/components/typography.md
-            - name: Felder und Flyouts
-              href: concepts/design/components/fields.md
-            - name: Dialoge
-              href: concepts/design/components/dialogs.md
+    - name: Grundlegendes zu Ihren Anwendungsfällen
+      href: concepts/design/understand-use-cases.md
+    - name: Zuordnen von Anwendungsfällen zu Features
+      href: concepts/design/map-use-cases.md
     - name: Erstellen und Testen Ihrer App
       items:
         - name: Vorbereiten Ihres Office 365-Mandanten
@@ -140,6 +124,34 @@
           href: concepts/device-capabilities/native-device-permissions.md
         - name: Kamera und Galerie
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
+- name: Entwerfen Ihrer App
+  items:
+    - name: Übersicht
+      href: concepts/design/design-teams-app-overview.md
+    - name: Grundlagen
+      href: concepts/design/design-teams-app-fundamentals.md
+    - name: Grundlegende Benutzeroberflächenkomponenten
+      href: concepts/design/design-teams-app-basic-ui-components.md
+    - name: Vorlagen für Benutzeroberflächen
+      href: concepts/design/design-teams-app-ui-templates.md
+    - name: Persönliche Apps
+      href: concepts/design/personal-apps.md
+    - name: Registerkarten
+      items:
+        - name: Desktop und Web
+          href: tabs/design/tabs.md
+        - name: Mobilgeräte
+          href: tabs/design/tabs-mobile.md
+    - name: Messaging-Erweiterungen
+      href: messaging-extensions/design/messaging-extension-design.md
+    - name: Bots
+      href: bots/design/bots.md
+    - name: Besprechungserweiterungen
+      href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
+    - name: Aufgabenmodule
+      href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+    - name: Adaptive Karten
+      href: task-modules-and-cards/cards/design-effective-cards.md
 - name: Registerkarten – Eingebettete Weboberflächen
   items:
     - name: Was sind benutzerdefinierte Registerkarten?
@@ -164,12 +176,6 @@
               href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
             - name: Erstellen einer persönlichen Registerkarte
               href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: Entwerfen Sie Ihre Registerkarten
-      items:
-        - name: Entwurfsübersicht
-          href: tabs/design/tabs.md
-        - name: Registerkarten auf mobilen Geräten
-          href: tabs/design/tabs-mobile.md
     - name: Schrittanleitungen
       expanded: true
       items:
@@ -215,10 +221,6 @@
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot'
         - name: Teams-Unterhaltungsbot in Python
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
-    - name: Entwurf Ihres Bots
-      items:
-        - name: Entwurfsübersicht
-          href: bots/design/bots.md
     - name: Schrittanleitungen
       expanded: true
       items:
@@ -278,10 +280,6 @@
   items:
     - name: Was sind Messaging-Erweiterungen?
       href: messaging-extensions/what-are-messaging-extensions.md
-    - name: Entwurf
-      items:
-        - name: Entwurfsrichtlinien für Messagingerweiterungen
-          href: messaging-extensions/design/messaging-extension-design.md
     - name: Schnellstarts
       items:
         - name: Mit Aktionsbefehl
@@ -329,8 +327,6 @@
       href: task-modules-and-cards/what-are-cards.md
     - name: Karten
       items:
-        - name: Entwerfen von effektiven Karten
-          href: task-modules-and-cards/cards/design-effective-cards.md
         - name: Formatieren von Kartentext
           href: task-modules-and-cards/cards/cards-format.md
         - name: Kartenaktionen hinzufügen und darauf reagieren
@@ -364,12 +360,6 @@
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
     - name: Apps für Teams-Besprechungen erstellen
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
-    - name: Entwerfen Ihrer In-Meeting-App
-      items:
-        - name: Dialogfeld "Besprechung"
-          href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
-        - name: Registerkarte "Besprechung"
-          href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
 - name: Microsoft Graph Rest API-Integration
   items:
     - name: 'Ressourcenspezifische Einwilligung '
