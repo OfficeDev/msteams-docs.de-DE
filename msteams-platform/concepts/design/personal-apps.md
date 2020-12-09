@@ -1,73 +1,178 @@
 ---
-title: Referenz zu Entwurfsrichtlinien
-description: Beschreibt die Richtlinien für das Entwerfen einer persönlichen app.
-keywords: Teams-Entwurfsrichtlinien – Referenzrahmen für persönliche apps
-ms.openlocfilehash: f66691234149afa56a6753dd51379c9f2355318e
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+title: Entwerfen Ihrer persönlichen App
+description: Erfahren Sie, wie Sie eine persönliche Teams-App entwerfen und das Microsoft Teams UI Kit erhalten.
+author: heath-hamilton
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: 971071be9f345815f5461646d7970efdf05fd5c4
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455499"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604990"
 ---
-# <a name="personal-apps"></a><span data-ttu-id="0b6b6-104">Persönliche Apps</span><span class="sxs-lookup"><span data-stu-id="0b6b6-104">Personal apps</span></span>
+# <a name="designing-your-personal-app-for-microsoft-teams"></a><span data-ttu-id="3d2db-103">Entwerfen Ihrer persönlichen App für Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="3d2db-103">Designing your personal app for Microsoft Teams</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="0b6b6-105">Die vollständige Unterstützung für Registerkarten auf mobilen Clients wird in Microsoft Teams unterstützt.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-105">Full support for tabs on mobile clients is supported in Teams.</span></span> <span data-ttu-id="0b6b6-106">Beachten Sie beim Erstellen von Registerkarten für mobile Plattformen die [Anleitungen für Registerkarten auf mobilen Geräten](../../tabs/design/tabs-mobile.md) .</span><span class="sxs-lookup"><span data-stu-id="0b6b6-106">You should follow the [guidance for tabs on mobile](../../tabs/design/tabs-mobile.md) when creating tabs for mobile platforms.</span></span>
+<span data-ttu-id="3d2db-104">Eine persönliche App kann ein bot, ein privater Arbeitsbereich oder beides sein.</span><span class="sxs-lookup"><span data-stu-id="3d2db-104">A personal app can be a bot, private workspace, or both.</span></span> <span data-ttu-id="3d2db-105">Manchmal funktioniert es wie ein Ort zum Erstellen oder Anzeigen von Inhalten, ein anderes Mal bietet es dem Benutzer eine Vogelperspektive auf alles, was Ihnen gehört, wenn die APP als Registerkarte in mehreren Kanälen konfiguriert wurde.</span><span class="sxs-lookup"><span data-stu-id="3d2db-105">Sometimes it functions like a place to create or view content, other times it offers the user a bird’s eye view of everything that’s theirs when the app has been configured as a tab in multiple channels.</span></span>
 
-<span data-ttu-id="0b6b6-107">Eine persönliche APP ist eine Microsoft Teams-Anwendung mit einem persönlichen Bereich.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-107">A personal app is a Teams application with a personal scope.</span></span>  <span data-ttu-id="0b6b6-108">Als App-Entwickler haben Sie die Möglichkeit, eine Version Ihrer APP bereitzustellen, die sich auf Interaktionen mit einem einzelnen Benutzer konzentriert.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-108">As an app developer, you have the option to provide a version of your app that focuses on interactions with a single user.</span></span> <span data-ttu-id="0b6b6-109">Es kann sich um einen [Unterhaltungs bot](../../bots/what-are-bots.md) handeln, der sich mit einem Benutzer oder einer [persönlichen Registerkarte](../../tabs/what-are-tabs.md) , die ein eingebettetes Weberlebnis bereitstellt, in eins-zu-eins-Gesprächen beschäftigt.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-109">It can be a [conversational bot](../../bots/what-are-bots.md) to engage in one-to-one conversations with a user or a [personal tab](../../tabs/what-are-tabs.md) providing an embedded web experience.</span></span> <span data-ttu-id="0b6b6-110">Mit persönlichen Apps können Benutzer Ihre ausgewählten Inhalte an einer Stelle anzeigen.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-110">Personal apps enable users to view their select content in one place.</span></span> <span data-ttu-id="0b6b6-111">Im folgenden Screenshot ist Contoso eine persönliche App im Flyout für persönliche apps.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-111">In the following screenshot, Contoso is a personal app in the personal app flyout.</span></span>
+<span data-ttu-id="3d2db-106">Um Ihr App-Design zu führen, werden in den folgenden Informationen beschrieben und veranschaulicht, wie personenbezogene apps in Microsoft Teams hinzugefügt, verwendet und verwaltet werden können.</span><span class="sxs-lookup"><span data-stu-id="3d2db-106">To guide your app design, the following information describes and illustrates how people can add, use, and manage personal apps in Teams.</span></span>
 
-![Bild des Menüs "App-Überlauf"](~/assets/images/Personal-apps-App-flyout.png)
+## <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="3d2db-107">Microsoft Teams-UI-Kit</span><span class="sxs-lookup"><span data-stu-id="3d2db-107">Microsoft Teams UI Kit</span></span>
 
----
+<span data-ttu-id="3d2db-108">Umfassende persönliche App-Entwurfsrichtlinien, einschließlich der Elemente, die Sie nach Bedarf abrufen und ändern können, finden Sie im Microsoft Teams UI Kit.</span><span class="sxs-lookup"><span data-stu-id="3d2db-108">You can find comprehensive personal app design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.</span></span> <span data-ttu-id="3d2db-109">Das UI Kit enthält auch wichtige Themen wie Barrierefreiheit und Anpassungsfähigkeit, die hier nicht behandelt werden.</span><span class="sxs-lookup"><span data-stu-id="3d2db-109">The UI kit also has essential topics such as accessibility and responsive sizing that aren't covered here.</span></span>
 
-## <a name="guidelines"></a><span data-ttu-id="0b6b6-113">Anleitungen</span><span class="sxs-lookup"><span data-stu-id="0b6b6-113">Guidelines</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="3d2db-110">Abrufen des Microsoft Teams UI Kit (Figma)</span><span class="sxs-lookup"><span data-stu-id="3d2db-110">Get the Microsoft Teams UI Kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
 
-<span data-ttu-id="0b6b6-114">Eine persönliche app enthält normalerweise die folgenden Registerkarten:</span><span class="sxs-lookup"><span data-stu-id="0b6b6-114">A personal app typically contains the following tabs:</span></span>
+## <a name="add-a-personal-app"></a><span data-ttu-id="3d2db-111">Hinzufügen einer persönlichen App</span><span class="sxs-lookup"><span data-stu-id="3d2db-111">Add a personal app</span></span>
 
-### <a name="your-tab"></a><span data-ttu-id="0b6b6-115">Ihre Registerkarte</span><span class="sxs-lookup"><span data-stu-id="0b6b6-115">Your tab</span></span>
+<span data-ttu-id="3d2db-112">Sie können eine persönliche App aus dem teamstore (AppSource) oder dem App-Flyout hinzufügen, indem Sie das Symbol **Weitere** auf der linken Seite von Teams auswählen (siehe folgendes Beispiel).</span><span class="sxs-lookup"><span data-stu-id="3d2db-112">You can add a personal app from the Teams store (AppSource) or the app flyout by selecting the **More** icon on the left side of Teams (shown in the following example).</span></span>
 
-<span data-ttu-id="0b6b6-116">Hier werden Ihre Benutzer alle Ihre Inhalte sehen.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-116">This is where your users will see all their stuff.</span></span> <span data-ttu-id="0b6b6-117">Es ist Ihr persönlicher Raum.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-117">It's their personal space.</span></span> <span data-ttu-id="0b6b6-118">Die Registerkarte kann als Liste, als Raster, als Spalten oder als einzelne Leinwand angeordnet werden... Was auch immer am besten für Ihre Anwendung geeignet ist.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-118">The tab can be arranged as a list, a grid, columns, or a single canvas...whatever works best for your application.</span></span> <span data-ttu-id="0b6b6-119">Weitere Informationen zum Entwerfen effektiver Registerkarten finden Sie unter: [Tabs Design](../../tabs/design/tabs.md).</span><span class="sxs-lookup"><span data-stu-id="0b6b6-119">For additional information on designing effective tabs see: [Tabs design](../../tabs/design/tabs.md).</span></span>
+:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="Beispiel zeigt, wie Sie eine persönliche App aus dem App-Flyout hinzufügen." border="false":::
 
-<span data-ttu-id="0b6b6-120">Da auf dieser Registerkarte Elemente aus mehreren Kanälen angezeigt werden können, sollte jedes Element ein eigenes Team, einen eigenen Kanal und eine eigene Registerkarte anzeigen, damit der Benutzer leicht erkennen kann, woher er stammt.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-120">Since this tab can show items from multiple channels, each item should display its own team, channel, and tab so the user can easily see where it originated.</span></span>
+## <a name="use-a-personal-app-private-workspace"></a><span data-ttu-id="3d2db-114">Verwenden einer persönlichen app (privater Arbeitsbereich)</span><span class="sxs-lookup"><span data-stu-id="3d2db-114">Use a personal app (private workspace)</span></span>
 
-![Registerkarte "persönliche Vorgänge"](~/assets/images/Personal-apps-MY-tab.png)
+<span data-ttu-id="3d2db-115">Mit einem privaten Arbeitsbereich können Sie für Sie bedeutsame App-Inhalte an einem zentralen Ort anzeigen, ohne Teams zu verlassen.</span><span class="sxs-lookup"><span data-stu-id="3d2db-115">With a private workspace, you can view app content that's meaningful to you in a central location without leaving Teams.</span></span>
 
-### <a name="recent"></a><span data-ttu-id="0b6b6-122">Neuesten</span><span class="sxs-lookup"><span data-stu-id="0b6b6-122">Recent</span></span>
+<span data-ttu-id="3d2db-116">(Implementierungs Hinweis: der private Arbeitsbereich basiert auf der [*persönlichen Registerkarten*](../../build-your-first-app/build-personal-tab.md) Funktion.)</span><span class="sxs-lookup"><span data-stu-id="3d2db-116">(Implementation note: The private workspace is based on the [*personal tab*](../../build-your-first-app/build-personal-tab.md) capability.)</span></span>
 
-<span data-ttu-id="0b6b6-123">Auf der Registerkarte " **zuletzt** verwendet" kann ein Benutzer alle zuletzt in Ihrer APP angezeigten Elemente durchsuchen.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-123">The **Recent** tab lets someone browse everything they've recently viewed in your app.</span></span> <span data-ttu-id="0b6b6-124">Er wird in chronologischer Reihenfolge (von den meisten bis zuletzt jüngsten) aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-124">It's listed in chronological order (from most to least recent).</span></span> <span data-ttu-id="0b6b6-125">Durch Klicken auf ein Element in dieser Liste wird der Benutzer zum Kanal und zur Registerkarte des Elements navigiert.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-125">Clicking on an item in this list will navigate the user to that item's channel and tab.</span></span>
+### <a name="anatomy-personal-app-private-workspace"></a><span data-ttu-id="3d2db-117">Anatomie: persönliche app (privater Arbeitsbereich)</span><span class="sxs-lookup"><span data-stu-id="3d2db-117">Anatomy: Personal app (private workspace)</span></span>
 
-![Registerkarte "zuletzt verwendet"](~/assets/images/Personal-apps-Recent-tab.png)
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Beispiel zeigt die Komponenten Anatomie der persönlichen Registerkarte." border="false":::
 
-### <a name="all"></a><span data-ttu-id="0b6b6-127">Alle</span><span class="sxs-lookup"><span data-stu-id="0b6b6-127">All</span></span>
+|<span data-ttu-id="3d2db-119">Leistungsindikator</span><span class="sxs-lookup"><span data-stu-id="3d2db-119">Counter</span></span>|<span data-ttu-id="3d2db-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3d2db-120">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="3d2db-121">A</span><span class="sxs-lookup"><span data-stu-id="3d2db-121">A</span></span>|<span data-ttu-id="3d2db-122">**App-Attribution**: Ihr App-Logo und Name.</span><span class="sxs-lookup"><span data-stu-id="3d2db-122">**App attribution**: Your app logo and name.</span></span>|
+|<span data-ttu-id="3d2db-123">B</span><span class="sxs-lookup"><span data-stu-id="3d2db-123">B</span></span>|<span data-ttu-id="3d2db-124">**Tabs**: bietet Navigation für Ihre persönliche app.</span><span class="sxs-lookup"><span data-stu-id="3d2db-124">**Tabs**: Provides navigation for your personal app.</span></span> <span data-ttu-id="3d2db-125">Fügen Sie beispielsweise eine Registerkarte **Info** oder **Help** hinzu.</span><span class="sxs-lookup"><span data-stu-id="3d2db-125">For example, include an **About** or **Help** tab.</span></span>|
+|<span data-ttu-id="3d2db-126">C</span><span class="sxs-lookup"><span data-stu-id="3d2db-126">C</span></span>|<span data-ttu-id="3d2db-127">**Popout-Ansicht**: verschiebt Ihre APP-Inhalte aus einem übergeordneten Fenster in ein eigenständiges untergeordnetes Fenster.</span><span class="sxs-lookup"><span data-stu-id="3d2db-127">**Popout view**: Pushes your app content from a parent window to a standalone child window.</span></span>|
+|<span data-ttu-id="3d2db-128">D</span><span class="sxs-lookup"><span data-stu-id="3d2db-128">D</span></span>|<span data-ttu-id="3d2db-129">**Weiteres Menü**: enthält zusätzliche APP-Informationen und-Optionen.</span><span class="sxs-lookup"><span data-stu-id="3d2db-129">**More menu**: Includes additional app information and options.</span></span> <span data-ttu-id="3d2db-130">(Sie können **Einstellungen** auch als Registerkarte festlegen.)</span><span class="sxs-lookup"><span data-stu-id="3d2db-130">(You could alternatively make **Settings** a tab.)</span></span>|
 
-<span data-ttu-id="0b6b6-128">Hierbei handelt es sich um eine Liste aller Registerkarten in der Organisation der Person (auf die Sie Zugriff haben, auf jeden Fall).</span><span class="sxs-lookup"><span data-stu-id="0b6b6-128">This is a list of all your tabs in the person's organization (the ones they have access to, anyway).</span></span> <span data-ttu-id="0b6b6-129">Das heißt, Sie werden überall angezeigt, wo die APP verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-129">In other words, it shows them everywhere the app is being used.</span></span> <span data-ttu-id="0b6b6-130">Wie bei der **letzten** Registerkarte wird der Benutzer durch Auswählen eines Elements in der Liste direkt auf den entsprechenden Kanal und die entsprechende Registerkarte gebracht.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-130">As with the **Recent** tab, selecting something in the list will bring the user straight to the relevant channel and tab.</span></span>
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Beispiel zeigt die strukturelle Anatomie der persönlichen Registerkarte." border="false":::
 
-### <a name="bot"></a><span data-ttu-id="0b6b6-131">Bot</span><span class="sxs-lookup"><span data-stu-id="0b6b6-131">Bot</span></span>
+|<span data-ttu-id="3d2db-132">Leistungsindikator</span><span class="sxs-lookup"><span data-stu-id="3d2db-132">Counter</span></span>|<span data-ttu-id="3d2db-133">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3d2db-133">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="3d2db-134">A</span><span class="sxs-lookup"><span data-stu-id="3d2db-134">A</span></span>|<span data-ttu-id="3d2db-135">**Tabs**: bietet Navigation für Ihre persönliche app.</span><span class="sxs-lookup"><span data-stu-id="3d2db-135">**Tabs**: Provides navigation for your personal app.</span></span>|
+|<span data-ttu-id="3d2db-136">1 </span><span class="sxs-lookup"><span data-stu-id="3d2db-136">1</span></span>|<span data-ttu-id="3d2db-137">**iframe**: zeigt den App-Inhalt an.</span><span class="sxs-lookup"><span data-stu-id="3d2db-137">**iframe**: Displays your app content.</span></span>|
 
-<span data-ttu-id="0b6b6-132">Ein Bot ist nicht erforderlich, ist aber eine großartige Möglichkeit, direkt und privat mit ihren Benutzern zu kommunizieren.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-132">A bot isn't required, but it's a great way to communicate directly and privately with your users.</span></span> <span data-ttu-id="0b6b6-133">Die Benachrichtigung ist eine der wichtigsten Funktionen einer persönlichen APP, und welche bessere Möglichkeit gibt es, als bei der direkten Kommunikation zu Benachrichtigen?</span><span class="sxs-lookup"><span data-stu-id="0b6b6-133">Notification is one of the most important functions of a personal app, and what better way to notify than with direct communication?</span></span>
+### <a name="designing-with-ui-templates"></a><span data-ttu-id="3d2db-138">Entwerfen mit Benutzeroberflächenvorlagen</span><span class="sxs-lookup"><span data-stu-id="3d2db-138">Designing with UI templates</span></span>
 
-<span data-ttu-id="0b6b6-134">Bots liefern Nachrichten in Form von Karten, die spezifische Informationen (wie eine Warnung, dass neue Inhalte verfügbar sind) oder umfassende Updates (wie eine tägliche to-do-Liste) bereitstellen können.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-134">Bots deliver messages in the form of cards, which can provide specific information (like an alert that new content is available) or broad updates (like a daily to-do list).</span></span> <span data-ttu-id="0b6b6-135">Weitere Informationen zum Entwerfen effektiver Bots finden Sie unter: [bot-Design](../../bots/design/bots.md).</span><span class="sxs-lookup"><span data-stu-id="0b6b6-135">For additional information on designing effective bots see: [Bot design](../../bots/design/bots.md).</span></span>
+<span data-ttu-id="3d2db-139">Verwenden Sie eine der folgenden Microsoft Teams-Benutzeroberflächenvorlagen, um die Gestaltung Ihrer persönlichen Registerkarte zu unterstützen:</span><span class="sxs-lookup"><span data-stu-id="3d2db-139">Use one of the following Teams UI templates to help design your personal tab:</span></span>
 
-![Bot-Begrüßung](~/assets/images/Personal-apps-Bot.png)
+* <span data-ttu-id="3d2db-140">[List](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem scannable-Format anzeigen und Benutzern das Ausführen von Aktionen für eine gesamte Liste oder einzelne Elemente gestatten.</span><span class="sxs-lookup"><span data-stu-id="3d2db-140">[List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.</span></span>
+* <span data-ttu-id="3d2db-141">[Task Board](../../concepts/design/design-teams-app-ui-templates.md#task-board): ein Aufgaben Gremium, das manchmal als Kanban-Board oder als Swim Lanes bezeichnet wird, ist eine Sammlung von Karten, die häufig zum Nachverfolgen des Status von Arbeitsaufgaben oder Tickets verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="3d2db-141">[Task board](../../concepts/design/design-teams-app-ui-templates.md#task-board): A task board, sometimes called a kanban board or swim lanes, is a collection of cards often used to track the status of work items or tickets.</span></span>
+* <span data-ttu-id="3d2db-142">[Dashboard](../../concepts/design/design-teams-app-ui-templates.md#dashboard): ein Dashboard ist eine Leinwand mit mehreren Karten, die eine Übersicht über Daten oder Inhalte bieten.</span><span class="sxs-lookup"><span data-stu-id="3d2db-142">[Dashboard](../../concepts/design/design-teams-app-ui-templates.md#dashboard): A dashboard is a canvas containing multiple cards that provide an overview of data or content.</span></span>
+* <span data-ttu-id="3d2db-143">[Formular](../../concepts/design/design-teams-app-ui-templates.md#form): Formulare dienen zum Sammeln, validieren und Übermitteln von Benutzereingaben in strukturierter Form.</span><span class="sxs-lookup"><span data-stu-id="3d2db-143">[Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.</span></span>
+* <span data-ttu-id="3d2db-144">[Leer State](../../concepts/design/design-teams-app-ui-templates.md#empty-state): die leere Statusvorlage kann für viele Szenarien verwendet werden, einschließlich Anmeldung, Erstausführung, Fehlermeldungen und mehr.</span><span class="sxs-lookup"><span data-stu-id="3d2db-144">[Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.</span></span>
+* <span data-ttu-id="3d2db-145">[Linker NAV](../../concepts/design/design-teams-app-ui-templates.md#left-nav): die linke Navigationsvorlage kann hilfreich sein, wenn Ihre Registerkarte eine Navigation erfordert.</span><span class="sxs-lookup"><span data-stu-id="3d2db-145">[Left nav](../../concepts/design/design-teams-app-ui-templates.md#left-nav): The left nav template can help if your tab requires some navigation.</span></span> <span data-ttu-id="3d2db-146">Im Allgemeinen sollten Sie die Registerkartennavigation auf ein Minimum beschränken.</span><span class="sxs-lookup"><span data-stu-id="3d2db-146">In general, you should keep tab navigation to a minimum.</span></span>
 
-### <a name="help-and-settings"></a><span data-ttu-id="0b6b6-137">Hilfe und Einstellungen</span><span class="sxs-lookup"><span data-stu-id="0b6b6-137">Help and Settings</span></span>
+## <a name="use-a-personal-app-bot"></a><span data-ttu-id="3d2db-147">Verwenden einer persönlichen app (bot)</span><span class="sxs-lookup"><span data-stu-id="3d2db-147">Use a personal app (bot)</span></span>
 
-<span data-ttu-id="0b6b6-138">Mithilfe von Inhalten können Benutzer die Nuancen ihrer App ermitteln.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-138">Help content enables users to discover the nuances of your app.</span></span> <span data-ttu-id="0b6b6-139">Fügen Sie eine Registerkarte **Einstellungen** hinzu, damit Sie Sie weiter anpassen können.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-139">Add a **Settings** tab to give them the ability to further customize it.</span></span>
+<span data-ttu-id="3d2db-148">Persönliche Apps können einen bot für Einzelgespräche und private Benachrichtigungen umfassen (beispielsweise, wenn ein Kollege einen Kommentar auf Ihrer Zeichenfläche veröffentlicht).</span><span class="sxs-lookup"><span data-stu-id="3d2db-148">Personal apps can include a bot for one-on-one conversations and private notifications (for instance, when a colleague posts a comment on your artboard).</span></span> <span data-ttu-id="3d2db-149">Der Bot ist auf einer von Ihnen angegebenen Registerkarte verfügbar.</span><span class="sxs-lookup"><span data-stu-id="3d2db-149">The bot is available in a tab you specify.</span></span>
 
-### <a name="about"></a><span data-ttu-id="0b6b6-140">Info</span><span class="sxs-lookup"><span data-stu-id="0b6b6-140">About</span></span>
+### <a name="anatomy-personal-app-bot"></a><span data-ttu-id="3d2db-150">Anatomie: persönliche app (bot)</span><span class="sxs-lookup"><span data-stu-id="3d2db-150">Anatomy: Personal app (bot)</span></span>
 
-<span data-ttu-id="0b6b6-141">Schließen Sie die Registerkarte **Info** ein, um Informationen wie Versionsnummer, Funktionen, Datenschutz und Berechtigungs Links bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-141">Include an **About** tab to provide information like version number, capabilities, privacy, and permissions links.</span></span>
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Beispiel zeigt die Anatomie des persönlichen bot-Komponenten." border="false":::
 
-## <a name="best-practices"></a><span data-ttu-id="0b6b6-142">Bewährte Methoden</span><span class="sxs-lookup"><span data-stu-id="0b6b6-142">Best practices</span></span>
+|<span data-ttu-id="3d2db-152">Leistungsindikator</span><span class="sxs-lookup"><span data-stu-id="3d2db-152">Counter</span></span>|<span data-ttu-id="3d2db-153">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3d2db-153">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="3d2db-154">A</span><span class="sxs-lookup"><span data-stu-id="3d2db-154">A</span></span>|<span data-ttu-id="3d2db-155">**Bot-Registerkarte**: Fügen Sie beispielsweise eine Registerkarte **Chat** hinzu, um auf bot-Unterhaltungen und-Benachrichtigungen zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="3d2db-155">**Bot tab**: For example, include a **Chat** tab to access bot conversations and notifications.</span></span>|
+|<span data-ttu-id="3d2db-156">B</span><span class="sxs-lookup"><span data-stu-id="3d2db-156">B</span></span>|<span data-ttu-id="3d2db-157">**Bot-Nachricht**: Bots senden häufig Nachrichten und Benachrichtigungen in Form einer Karte (beispielsweise eine Adaptive Karte).</span><span class="sxs-lookup"><span data-stu-id="3d2db-157">**Bot message**: Bots often send messages and notifications in the form of a card (such as an Adaptive Card).</span></span>|
+|<span data-ttu-id="3d2db-158">C</span><span class="sxs-lookup"><span data-stu-id="3d2db-158">C</span></span>|<span data-ttu-id="3d2db-159">**Feld "Verfassen"**: Eingabefeld zum Senden von Nachrichten an den bot.</span><span class="sxs-lookup"><span data-stu-id="3d2db-159">**Compose box**: Input field for sending messages to the bot.</span></span>|
 
-### <a name="communicate-directly-with-your-users"></a><span data-ttu-id="0b6b6-143">Direkte Kommunikation mit ihren Benutzern</span><span class="sxs-lookup"><span data-stu-id="0b6b6-143">Communicate directly with your users</span></span>
+## <a name="best-practices"></a><span data-ttu-id="3d2db-160">Bewährte Methoden</span><span class="sxs-lookup"><span data-stu-id="3d2db-160">Best practices</span></span>
 
-<span data-ttu-id="0b6b6-144">Verwenden Sie einen bot, um Benutzer über Änderungen und neue Features zu informieren.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-144">Use a bot to notify users of changes and new features.</span></span>
+### <a name="tab-priority"></a><span data-ttu-id="3d2db-161">Tab-Priorität</span><span class="sxs-lookup"><span data-stu-id="3d2db-161">Tab priority</span></span>
 
-### <a name="customize-your-tabs"></a><span data-ttu-id="0b6b6-145">Passen Sie Ihre Registerkarten an...</span><span class="sxs-lookup"><span data-stu-id="0b6b6-145">Customize your tabs...</span></span>
+#### <a name="do-show-the-most-relevant-content-in-the-first-tab"></a><span data-ttu-id="3d2db-162">Do: Anzeigen der relevantesten Inhalte auf der ersten Registerkarte</span><span class="sxs-lookup"><span data-stu-id="3d2db-162">Do: Show the most relevant content in the first tab</span></span>
 
-<span data-ttu-id="0b6b6-146">Fühlen Sie sich frei, weitere Registerkarten hinzuzufügen, die Ihre Benutzer bei der Ausführung bestimmter Aufgaben unterstützen sollen.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-146">Feel free to add other tabs that will help your users accomplish specific tasks.</span></span>
+<span data-ttu-id="3d2db-163">Bei angepasster Größenanpassung können Registerkarten auf der rechten Seite abgeschnitten oder nicht mehr angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="3d2db-163">With responsive sizing, tabs on the right may become truncated or out of view.</span></span>
 
-### <a name="and-make-them-relevant-to-every-user"></a><span data-ttu-id="0b6b6-147">... und Sie für jeden Benutzer relevant zu machen.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-147">...and make them relevant to every user</span></span>
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche app." border="false":::
 
-<span data-ttu-id="0b6b6-148">Jede Registerkarte, die Sie in Ihrem App-Manifest deklarieren, ist für alle Benutzer sichtbar.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-148">Every tab you declare in your app manifest will be visible to all users.</span></span> <span data-ttu-id="0b6b6-149">Wenn es sich bei Ihrer persönlichen App beispielsweise um ein Spesen abrechnungstool handelt, das sowohl von Managern als auch von Mitarbeitern verwendet wird, sollte eine **Genehmigungs** Registerkarte Inhalte bereitstellen, die für beide Rollen sinnvoll sind.</span><span class="sxs-lookup"><span data-stu-id="0b6b6-149">For example, if your personal app is an expense reporting tool that is used by both managers and employees, an **Approval** tab should provide content that is meaningful to both roles.</span></span>
+#### <a name="dont-lead-with-secondary-content-or-metadata"></a><span data-ttu-id="3d2db-165">Nicht: Lead mit sekundärem Inhalt oder Metadaten</span><span class="sxs-lookup"><span data-stu-id="3d2db-165">Don’t: Lead with secondary content or metadata</span></span>
+
+<span data-ttu-id="3d2db-166">Wie bei einer standardmäßigen Webanwendung sollte die Tab-Navigation in einer Reihenfolge fortgeschritten sein, die den Sinn der primären Features Ihrer APP erleichtert.</span><span class="sxs-lookup"><span data-stu-id="3d2db-166">Like a standard web app, tab navigation should progress in an order that helps make sense of your app’s primary features.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche app." border="false":::
+
+### <a name="tab-hierarchy"></a><span data-ttu-id="3d2db-168">Tab-Hierarchie</span><span class="sxs-lookup"><span data-stu-id="3d2db-168">Tab hierarchy</span></span>
+
+#### <a name="do-tabs-should-be-of-equal-hierarchy-and-represent-key-app-pages"></a><span data-ttu-id="3d2db-169">Do: Registerkarten sollten der gleichen Hierarchie entsprechen und wichtige App-Seiten darstellen</span><span class="sxs-lookup"><span data-stu-id="3d2db-169">Do: Tabs should be of equal hierarchy and represent key app pages</span></span>
+
+<span data-ttu-id="3d2db-170">Ihre Registerkarten sollten die primären Features und Inhalte Ihrer APP kategorisieren.</span><span class="sxs-lookup"><span data-stu-id="3d2db-170">Your tabs should categorize your app’s primary features and content.</span></span> <span data-ttu-id="3d2db-171">Durch die reaktionsschnelle Größenanpassung können Inhalte auf der rechten Seite abgeschnitten oder nicht mehr angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="3d2db-171">With responsive sizing, content on the right may become truncated or out of view.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche app." border="false":::
+
+#### <a name="dont-include-different-levels-of-hierarchy"></a><span data-ttu-id="3d2db-173">Nicht: unterschiedliche Hierarchieebenen einbeziehen</span><span class="sxs-lookup"><span data-stu-id="3d2db-173">Don't: Include different levels of hierarchy</span></span>
+
+<span data-ttu-id="3d2db-174">Ihre Inhalte sollten in einer logischen Reihenfolge weiterentwickelt werden, die es Benutzern ermöglicht, diese zu verstehen.</span><span class="sxs-lookup"><span data-stu-id="3d2db-174">Your content should progress in a logical order that helps users make sense of it.</span></span> <span data-ttu-id="3d2db-175">Wenn Sie zwei Registerkarten haben, die eng miteinander verbunden sind, sollten Sie diese in einer Registerkarte kombinieren.</span><span class="sxs-lookup"><span data-stu-id="3d2db-175">If you have two tabs that are closely related, consider combining them into one tab.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche app." border="false":::
+
+### <a name="first-run-experience"></a><span data-ttu-id="3d2db-177">Erste Ausführung</span><span class="sxs-lookup"><span data-stu-id="3d2db-177">First-run experience</span></span>
+
+#### <a name="do-include-a-first-run-experience"></a><span data-ttu-id="3d2db-178">Do: Einschließen einer ersten Ausführung</span><span class="sxs-lookup"><span data-stu-id="3d2db-178">Do: Include a first-run experience</span></span>
+
+<span data-ttu-id="3d2db-179">Es sollte mindestens einen Willkommensbildschirm geben, wenn Sie das erste Mal eine persönliche App verwenden.</span><span class="sxs-lookup"><span data-stu-id="3d2db-179">There should be at least a welcome screen the first time you use a personal app.</span></span> <span data-ttu-id="3d2db-180">Beschreiben Sie für Bots, was Ihr bot tun kann, und geben Sie schnell Aktionen an, beispielsweise eine Anmeldeschaltfläche.</span><span class="sxs-lookup"><span data-stu-id="3d2db-180">For bots, describe what your bot can do and provide quick actions, such as a sign-in button.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche app." border="false":::
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche app." border="false":::
+
+#### <a name="dont-start-with-a-blank-screen"></a><span data-ttu-id="3d2db-183">Nicht: mit einem leeren Bildschirm beginnen</span><span class="sxs-lookup"><span data-stu-id="3d2db-183">Don't: Start with a blank screen</span></span>
+
+<span data-ttu-id="3d2db-184">Benutzer können verwechselt werden, wenn nichts angezeigt wird, wenn Sie Ihre APP zum ersten Mal ausführen.</span><span class="sxs-lookup"><span data-stu-id="3d2db-184">Users might be confused if nothing displays the first time they run your app.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche app." border="false":::
+
+### <a name="personalized-content"></a><span data-ttu-id="3d2db-186">Personalisierter Inhalt</span><span class="sxs-lookup"><span data-stu-id="3d2db-186">Personalized content</span></span>
+
+#### <a name="do-aggregate-app-content-relevant-to-a-user"></a><span data-ttu-id="3d2db-187">Do: aggregierter App-Inhalt, der für einen Benutzer relevant ist</span><span class="sxs-lookup"><span data-stu-id="3d2db-187">Do: Aggregate app content relevant to a user</span></span>
+
+<span data-ttu-id="3d2db-188">Unabhängig davon, ob es sich um eine persönliche Registerkarte oder einen bot handelt, werden Inhalte angezeigt, die sich nur auf die Aktivität eines Benutzers in Ihrer APP beziehen.</span><span class="sxs-lookup"><span data-stu-id="3d2db-188">Whether it's a personal tab or bot, display content related to only a user's activity in your app.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche app." border="false":::
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche app." border="false":::
+
+#### <a name="dont-show-unrelated-or-overly-broad-content"></a><span data-ttu-id="3d2db-191">Nicht: Anzeigen von nicht verwandten oder übermäßig großen Inhalten</span><span class="sxs-lookup"><span data-stu-id="3d2db-191">Don’t: Show unrelated or overly broad content</span></span>
+
+<span data-ttu-id="3d2db-192">Zeigen Sie in persönlichen Kontexten keine Inhalte für Teams an, zu denen ein Benutzer nicht gehört.</span><span class="sxs-lookup"><span data-stu-id="3d2db-192">In personal contexts, don’t display content for teams a user isn't part of.</span></span> <span data-ttu-id="3d2db-193">Der persönliche bot-Inhalt sollte sich auf das Individuum konzentrieren – nicht auf eine Gruppe.</span><span class="sxs-lookup"><span data-stu-id="3d2db-193">Personal bot content should focus on the individual—not a group.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche app." border="false":::
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche app." border="false":::
+
+### <a name="complex-app-features"></a><span data-ttu-id="3d2db-196">Komplexe App-Features</span><span class="sxs-lookup"><span data-stu-id="3d2db-196">Complex app features</span></span>
+
+#### <a name="do-allow-users-to-access-complex-features-in-a-browser"></a><span data-ttu-id="3d2db-197">Do: Benutzern den Zugriff auf komplexe Features in einem Browser ermöglichen</span><span class="sxs-lookup"><span data-stu-id="3d2db-197">Do: Allow users to access complex features in a browser</span></span>
+
+<span data-ttu-id="3d2db-198">Ihre APP sollte sich auf Kernaufgaben in Microsoft Teams konzentrieren, aber Sie können die vollständige eigenständige app in einem Browser anzeigen.</span><span class="sxs-lookup"><span data-stu-id="3d2db-198">Your app should focus on core tasks in Teams, but you can still view the full, standalone app in a browser.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche app." border="false":::
+
+#### <a name="dont-include-your-entire-app"></a><span data-ttu-id="3d2db-200">Nicht: einschließen der gesamten App</span><span class="sxs-lookup"><span data-stu-id="3d2db-200">Don’t: Include your entire app</span></span>
+
+<span data-ttu-id="3d2db-201">Wenn Sie Ihre APP nicht speziell für Teams erstellt haben, haben Sie wahrscheinlich Features, die in einem Tool für die Zusammenarbeit keinen Sinn ergeben.</span><span class="sxs-lookup"><span data-stu-id="3d2db-201">Unless you created your app specifically for Teams, you probably have features that don’t make sense in a collaboration tool.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche app." border="false":::
+
+## <a name="manage-a-personal-tab"></a><span data-ttu-id="3d2db-203">Verwalten einer persönlichen Registerkarte</span><span class="sxs-lookup"><span data-stu-id="3d2db-203">Manage a personal tab</span></span>
+
+<span data-ttu-id="3d2db-204">Auf der linken Seite der Teams können Benutzer mit der rechten Maustaste auf die persönliche App klicken, um andere App-Optionen zu fixieren, zu entfernen und zu konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="3d2db-204">On the left side of Teams, users can right click the personal app to pin, remove, and configure other app options.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Beispiel zeigt Optionen zum Verwalten einer persönlichen app." border="false":::
+
+## <a name="learn-more"></a><span data-ttu-id="3d2db-206">Mehr erfahren</span><span class="sxs-lookup"><span data-stu-id="3d2db-206">Learn more</span></span>
+
+<span data-ttu-id="3d2db-207">Diese anderen Entwurfsrichtlinien können abhängig vom Umfang ihrer persönlichen App hilfreich sein:</span><span class="sxs-lookup"><span data-stu-id="3d2db-207">These other design guidelines may help depending on the scope of your personal app:</span></span>
+
+* [<span data-ttu-id="3d2db-208">Entwerfen der Registerkarte</span><span class="sxs-lookup"><span data-stu-id="3d2db-208">Designing your tab</span></span>](../../tabs/design/tabs.md)
+* [<span data-ttu-id="3d2db-209">Entwerfen von Ihnen bot</span><span class="sxs-lookup"><span data-stu-id="3d2db-209">Designing you bot</span></span>](../../bots/design/bots.md)
+
+## <a name="validate-your-design"></a><span data-ttu-id="3d2db-210">Überprüfen des Designs</span><span class="sxs-lookup"><span data-stu-id="3d2db-210">Validate your design</span></span>
+
+<span data-ttu-id="3d2db-211">Wenn Sie Ihre APP in AppSource veröffentlichen möchten, sollten Sie sich mit den Entwurfsproblemen vertraut machen, die häufig dazu führen, dass apps während der Übermittlung fehlschlagen.</span><span class="sxs-lookup"><span data-stu-id="3d2db-211">If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="3d2db-212">Überprüfen der Entwurfs Validierungsrichtlinien</span><span class="sxs-lookup"><span data-stu-id="3d2db-212">Check design validation guidelines</span></span>](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
