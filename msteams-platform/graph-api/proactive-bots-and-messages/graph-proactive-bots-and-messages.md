@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Microsoft Teams Proactive Messaging Chat-Installations Diagramm
-ms.openlocfilehash: b601c5858e5141ce81985dca62968b1713e1d2ba
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.openlocfilehash: ee1620c8fdcaeeecf0e8b0992017bf6f2fbacbf9
+ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819161"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "49731972"
 ---
 # <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a>Aktivieren der proaktiven bot-Installation und proaktiver Nachrichten in Microsoft Graph-Teams (öffentliche Vorschau)
 
@@ -27,7 +27,7 @@ Proaktive Nachrichten werden von Bots initiiert, um Unterhaltungen mit einem Ben
 |Ad-hoc-proaktive Nachricht| Der bot interject eine Nachricht, ohne den Unterhaltungs Fluss zu unterbrechen.|
 |Dialog basierte proaktive Nachricht | Der bot erstellt einen neuen Dialog-Thread, übernimmt die Steuerung einer Unterhaltung, liefert die proaktive Nachricht, schließt und gibt die Steuerung an das vorherige Dialogfeld zurück.|
 
-*Siehe*, [senden proaktiver Benachrichtigungen an Benutzer SDK V4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp)
+*Siehe*, [senden proaktiver Benachrichtigungen an Benutzer SDK V4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 
 ## <a name="proactive-app-installation-in-teams"></a>Proaktive App-Installation in Microsoft Teams
 
@@ -35,12 +35,12 @@ Bevor Ihr bot einen Benutzer proaktiv Nachrichten kann, muss er entweder als per
 
 ## <a name="permissions"></a>Berechtigungen
 
-Mit den [Ressourcentypen](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0) Berechtigungen von Microsoft Graph teamsAppInstallation können Sie den Installationslebenszyklus Ihrer APP für alle Benutzer (persönlichen) oder Team (Kanal) Bereiche innerhalb der Microsoft Teams-Plattform verwalten:
+Mit den [Ressourcentypen](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) Berechtigungen von Microsoft Graph teamsAppInstallation können Sie den Installationslebenszyklus Ihrer APP für alle Benutzer (persönlichen) oder Team (Kanal) Bereiche innerhalb der Microsoft Teams-Plattform verwalten:
 
 |Anwendungsberechtigung | Beschreibung|
 |------------------|---------------------|
-|`TeamsAppInstallation.ReadWriteSelfForUser.All`|Ermöglicht einer Teams-APP, sich selbst für einen beliebigen **Benutzer**ohne vorherige Anmeldung oder Verwendung zu lesen, zu installieren, zu aktualisieren und zu deinstallieren.|
-|`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Ermöglicht einer Teams-APP, sich selbst in jedem **Team**zu lesen, zu installieren, zu aktualisieren und zu deinstallieren, ohne vorherige Anmeldung oder Verwendung.|
+|`TeamsAppInstallation.ReadWriteSelfForUser.All`|Ermöglicht einer Teams-APP, sich selbst für einen beliebigen **Benutzer** ohne vorherige Anmeldung oder Verwendung zu lesen, zu installieren, zu aktualisieren und zu deinstallieren.|
+|`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Ermöglicht einer Teams-APP, sich selbst in jedem **Team** zu lesen, zu installieren, zu aktualisieren und zu deinstallieren, ohne vorherige Anmeldung oder Verwendung.|
 
 Um diese Berechtigungen zu verwenden, müssen Sie Ihrem App-Manifest einen [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) -Schlüssel mit den folgenden Werten hinzufügen:
 > [!div class="checklist"]
@@ -74,7 +74,7 @@ Für die ersten Schritte benötigen Sie einen [bot für Teams](../../bots/how-to
 
 Der `teamsAppId` kann aus dem App-Katalog Ihrer Organisation abgerufen werden:
 
-**Microsoft Graph-Seitenreferenz:** [teamsApp Resource Type](/graph/api/resources/teamsapp?view=graph-rest-1.0)
+**Microsoft Graph-Seitenreferenz:** [teamsApp Resource Type](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true)
 
 **HTTP Get** -Anforderung:
 
@@ -100,7 +100,7 @@ Die Anforderung gibt ein `teamsApp`  -Objekt zurück. Das zurückgegebene Objekt
 
 **2.**  Wenn Ihre APP bereits für einen Benutzer im persönlichen Bereich hochgeladen/quer geladene wurde, können Sie die `teamsAppId` wie folgt abrufen:
 
-**Microsoft Graph-Seitenreferenz:** [Auflisten von apps, die für den Benutzer installiert](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http) sind
+**Microsoft Graph-Seitenreferenz:** [Auflisten von apps, die für den Benutzer installiert](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true) sind
 
 **HTTP Get** -Anforderung:
 
@@ -110,7 +110,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 
 **3.** Wenn Ihre APP bereits für einen Kanal im Teambereich hochgeladen/quer geladene wurde, können Sie die `teamsAppId` wie folgt abrufen:
 
-**Microsoft Graph-Seitenreferenz:** [Auflisten von apps im Team](/graph/api/teamsappinstallation-list?view=graph-rest-beta&tabs=http)
+**Microsoft Graph-Seitenreferenz:** [Auflisten von apps im Team](/graph/api/team-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 **HTTP Get** -Anforderung:
 
@@ -119,11 +119,11 @@ GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teams
 ```
 
 >[!TIP]
-> Sie können nach einem der Felder des [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0) -Objekts filtern, um die Ergebnisliste einzugrenzen.
+> Sie können nach einem der Felder des [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true) -Objekts filtern, um die Ergebnisliste einzugrenzen.
 
 ### <a name="-determine-whether-your-bot-is-currently-installed-for-a-message-recipient"></a>✔ Bestimmen, ob Ihr bot derzeit für einen Nachrichtenempfänger installiert ist
 
-**Microsoft Graph-Seitenreferenz:** [Auflisten von apps, die für den Benutzer installiert](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http) sind
+**Microsoft Graph-Seitenreferenz:** [Auflisten von apps, die für den Benutzer installiert](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true) sind
 
 **HTTP Get** -Anforderung:
 
@@ -131,11 +131,11 @@ GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teams
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-Diese Anforderung gibt ein leeres Array zurück, wenn die APP nicht installiert ist, oder ein Array mit einem einzelnen [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta) -Objekt, wenn es installiert wurde.
+Diese Anforderung gibt ein leeres Array zurück, wenn die APP nicht installiert ist, oder ein Array mit einem einzelnen [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta&preserve-view=true) -Objekt, wenn es installiert wurde.
 
 ### <a name="-install-your-app"></a>✔ Installieren Ihrer APP
 
-**Microsoft Graph-Referenz:** [Installieren der APP für den Benutzer](/graph/api/user-add-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Microsoft Graph-Seitenreferenz:** [Installieren der APP für den Benutzer](/graph/api/userteamwork-post-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 **Http Post** -Anforderung:
 
@@ -154,7 +154,7 @@ Wenn Ihre APP für den Benutzer installiert ist, erhält der bot eine `conversat
 
 Die `chatId` kann auch wie folgt abgerufen werden:
 
-**Microsoft Graph-Referenz:** [Chat abrufen](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
+**Microsoft Graph Page Reference:** [Chat abrufen](/graph/api/chat-get?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 **1.** Sie benötigen Ihre apps `{teamsAppInstallationId}` . Wenn Sie diesen nicht haben, verwenden Sie Folgendes:
 
@@ -186,7 +186,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps
 
 ### <a name="-send-proactive-messages"></a>✔ Senden von proaktiven Nachrichten
 
-Sobald Ihr bot für einen Benutzer oder ein Team hinzugefügt wurde und die erforderlichen Benutzerinformationen erworben hat, kann er mit dem [senden proaktiver Nachrichten](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp)beginnen.
+Sobald Ihr bot für einen Benutzer oder ein Team hinzugefügt wurde und die erforderlichen Benutzerinformationen erworben hat, kann er mit dem [senden proaktiver Nachrichten](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)beginnen.
 
 # <a name="c--net"></a>[C#/.net](#tab/csharp)
 
@@ -307,7 +307,7 @@ module.exports.ProactiveBot = ProactiveBot;
 ## <a name="related-topic-for-teams-administrators"></a>Verwandtes Thema für Microsoft Teams-Administratoren
 >
 > [!div class="nextstepaction"]
-> [**Verwalten von App-Setup Richtlinien in Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+> [**Verwalten von Richtlinien für App-Setup in Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 
 ## <a name="view-additional-code-samples"></a>Anzeigen zusätzlicher Codebeispiele
 >

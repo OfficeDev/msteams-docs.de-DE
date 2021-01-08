@@ -2,13 +2,14 @@
 title: Office 365-Connectors
 description: Beschreibt die ersten Schritte mit Office 365-Konnektoren in Microsoft Teams
 keywords: Teams O365-Connector
+ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: 374e5058d2041d43f675d643e5b830bf72ad79c2
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 62a27e8f7b218491682ff0b9216e428f51264d0a
+ms.sourcegitcommit: 5f1d6c12d80d48f403b73586f68bacf15785c855
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605342"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "49739049"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Erstellen Office 365 Connectors für Microsoft Teams
 
@@ -41,6 +42,64 @@ Sie können Ihre vorhandene Webkonfigurations Erfahrung wieder verwenden oder ei
 4. Aufrufen `microsoftTeams.settings.setSettings()` , um die Connectoreinstellungen zu speichern. Was hier gespeichert wird, ist auch, was im Konfigurationsdialogfeld angezeigt wird, wenn der Benutzer versucht, eine vorhandene Konfiguration für den Connector zu aktualisieren.
 5. Aufruf `microsoftTeams.settings.getSettings()` zum Abrufen von webhook-Eigenschaften, einschließlich der URL selbst. Sie sollten dies zusätzlich zu während des Save-Ereignisses aufrufen, sollten Sie dies auch aufrufen, wenn die Seite beim ersten Mal im Fall einer Neukonfiguration geladen wird.
 6. Optional Registrieren eines `microsoftTeams.settings.registerOnRemoveHandler()` Ereignishandlers, der aufgerufen wird, wenn der Benutzer den Connector entfernt. Dieses Ereignis gibt Ihrem Dienst die Möglichkeit, Bereinigungsaktionen auszuführen.
+
+Hier ist ein Beispiel-HTML zum Erstellen einer Connector-Konfigurationsseite ohne CSS:
+
+```html
+<h2>Send notifications when tasks are:</h2>
+<div class="col-md-8">
+    <section id="configSection">
+        <form id="configForm">
+            <input type="radio" name="notificationType" value="Create" onclick="onClick()"> Created
+            <br>
+            <br>
+            <input type="radio" name="notificationType" value="Update" onclick="onClick()"> Updated
+        </form>
+    </section>
+</div>
+
+<script src="https://statics.teams.microsoft.com/sdk/v1.5.2/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
+<script src="/Scripts/jquery-1.10.2.js"></script>
+
+<script type="text/javascript">
+
+        function onClick() {
+            microsoftTeams.settings.setValidityState(true);
+        }
+
+        microsoftTeams.initialize();
+        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+            var radios = document.getElementsByName('notificationType');
+
+            var eventType = '';
+            if (radios[0].checked) {
+                eventType = radios[0].value;
+            } else {
+                eventType = radios[1].value;
+            }
+
+            microsoftTeams.settings.setSettings({
+                 entityId: eventType,
+                contentUrl: "https://YourSite/Connector/Setup",
+                removeUrl:"https://YourSite/Connector/Setup",
+                 configName: eventType
+                });
+
+            microsoftTeams.settings.getSettings(function (settings) {
+                // We get the Webhook URL in settings.webhookUrl which needs to be saved. 
+                // This can be used later to send notification.
+            });
+
+            saveEvent.notifySuccess();
+        });
+
+        microsoftTeams.settings.registerOnRemoveHandler(function (removeEvent) {
+            var removeCalled = true;
+            alert("Removed" + JSON.stringify(removeEvent));
+        });
+
+</script>
+```
 
 #### <a name="getsettings-response-properties"></a>`GetSettings()` Antworteigenschaften
 
@@ -79,7 +138,7 @@ Sie können optional einen Ereignishandler ausführen, wenn der Benutzer eine vo
 
 Sie können das automatisch generierte Teams-App-Manifest aus dem Portal herunterladen. Bevor Sie es verwenden können, um Ihre APP zu testen oder zu veröffentlichen, müssen Sie jedoch folgende Schritte ausführen:
 
-- [Schließen Sie zwei Symbole](../../concepts/build-and-test/apps-package.md#app-icons)ein.
+- [Zwei Symbole einschließen](../../concepts/build-and-test/apps-package.md#app-icons).
 - Ändern Sie den `icons`-Teil des Manifests so, dass er auf die Dateinamen der Symbole anstelle von URLs verweist.
 
 Die folgende manifest.JSON-Datei enthält die grundlegenden Elemente, die zum Testen und Übermitteln Ihrer APP erforderlich sind.

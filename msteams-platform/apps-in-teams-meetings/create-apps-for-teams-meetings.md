@@ -5,12 +5,12 @@ description: Erstellen von Apps für Microsoft Teams-Besprechungen
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Teams-apps-Besprechungen Benutzer Teilnehmer-Rollen-API
-ms.openlocfilehash: a086050b7cdef671fcbd187b68d707280e8df359
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: e768c2dc6722d006c89927adfe60e03243a076d0
+ms.sourcegitcommit: f0dfae429385ef02f61896ad49172c4803ef6622
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605231"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "49740871"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Apps für Teams-Besprechungen erstellen
 
@@ -33,7 +33,7 @@ ms.locfileid: "49605231"
 |API|Beschreibung|Anforderung|Source|
 |---|---|----|---|
 |**Getusercontext**| Abrufen von Kontextinformationen zum Anzeigen relevanter Inhalte auf einer Registerkarte Teams. |_**verläuft. GetContext (() => {/*...* / } )**_|Microsoft Teams-Client-SDK|
-|**Getparticipant**|Mit dieser API kann ein bot eine Teilnehmer Information nach Besprechungs-ID und Teilnehmer-ID abrufen.|**GET** _**/V1/Meetings/{meetingId}/participants/{participantId} abrufen? Mandanten-Nr = {Mandanten** -Nr}_ |Microsoft bot Framework SDK|
+|**Getparticipant**|Mit dieser API kann ein bot eine Teilnehmer Information nach Besprechungs-ID und Teilnehmer-ID abrufen.| _**/V1/Meetings/{meetingId}/participants/{participantId} abrufen? Mandanten-Nr = {Mandanten** -Nr}_ |Microsoft bot Framework SDK|
 |**NotificationSignal** |Besprechungs Signale werden über die folgende vorhandene Benachrichtigungs-API für Unterhaltungen (für Benutzer-bot-Chat) übermittelt. Mit dieser API können Entwickler basierend auf der Endbenutzer Aktion signalisieren, dass eine Dialog Blase in einer Besprechung angezeigt wird.|**Post** _**/V3/Conversations/{conversationId}/Activities**_|Microsoft bot Framework SDK|
 
 ### <a name="getusercontext"></a>Getusercontext
@@ -49,56 +49,72 @@ Eine Anleitung zum Identifizieren und Abrufen von Kontextinformationen für die 
 > * Sie sollten keine Teilnehmerrollen Zwischenspeichern, da der Besprechungsorganisator zu einem beliebigen Zeitpunkt eine Rolle ändern kann.
 >
 > * Microsoft Teams unterstützt derzeit keine großen Verteilerlisten oder Dienstplan Größen von mehr als 350 Teilnehmern für die `GetParticipant` API.
->
-> * Die Unterstützung für das bot Framework SDK wird in Kürze verfügbar sein.
-
-
-#### <a name="request"></a>Anforderung
-
-```http
-GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
-```
-
-*Siehe* [bot Framework-API-Referenz](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true).
-
-<!-- markdownlint-disable MD025 -->
-
-**C#-Beispiel**
-
-```csharp
-   // Get role for the user who sent a message to your bot
-   var senderRole = await TeamsInfo.GetMeetingParticipantAsync(turnContext);
-```
-
-* * *
-<!-- markdownlint-disable MD001 -->
 
 #### <a name="query-parameters"></a>Abfrageparameter
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**meetingId**| string | Ja | Die Besprechungs-ID ist über bot Invoke und Microsoft Teams Client SDK verfügbar.|
-|**Teilnehmer-Nr**| string | Ja | Dieses Feld ist die Benutzer-ID und steht in der Registerkarte "SSO", im bot-Invoke und im Microsoft Teams-Client-SDK zur Verfügung. Die Registerkarte SSO wird dringend empfohlen.|
-|**tenantId**| string | Ja | Dies ist für Mandanten Benutzer erforderlich. Sie ist in Tab SSO, bot Invoke und Microsoft Teams Client SDK verfügbar. Die Registerkarte SSO wird dringend empfohlen.|
+|**meetingId**| Zeichenfolge | Ja | Die Besprechungs-ID steht über bot Invoke und Microsoft Teams Client SDK zur Verfügung.|
+|**Teilnehmer-Nr**| Zeichenfolge | Ja | Die Teilnehmerkennung ist die Benutzer-ID. Sie ist in Tab SSO, bot Invoke und Microsoft Teams Client SDK verfügbar. Es wird dringend empfohlen, eine Teilnehmer-Nr aus der Registerkarte SSO zu erhalten. |
+|**tenantId**| Zeichenfolge | Ja | Die Mandanten-Nr ist für die Mandanten Benutzer erforderlich. Sie ist in Tab SSO, bot Invoke und Microsoft Teams Client SDK verfügbar. Es wird dringend empfohlen, eine Mandanten-Nr aus der Registerkarte SSO zu erhalten. |
 
-#### <a name="response-payload"></a>Antwort Nutzlast
-<!-- markdownlint-disable MD036 -->
+#### <a name="example"></a>Beispiel
 
-**Rolle** unter "Besprechung" kann *Organisator*, *Referent* oder *Teilnehmer* sein.
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-**Beispiel 1**
+```csharp
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+  TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+  TeamsChannelAccount member = participant.User;
+  MeetingParticipantInfo meetingInfo = participant.Meeting;
+  ConversationAccount conversation = participant.Conversation;
+
+  await turnContext.SendActivityAsync(MessageFactory.Text($"The participant role is: {meetingInfo.Role}"), cancellationToken);
+}
+
+```
+
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
+
+```typescript
+
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onMessage(async (context, next) => {
+            TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+            let member = participant.user;
+            let meetingInfo = participant.meeting;
+            let conversation = participant.conversation;
+            
+            await context.sendActivity(`The participant role is: '${meetingInfo.role}'`);
+            await next();
+        });
+    }
+}
+
+```
+
+# <a name="json"></a>[Json](#tab/json)
+
+```http
+GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
+```
+
+Der Antworttext lautet wie folgt:
 
 ```json
 {
    "user":{
       "id":"29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
-      "aadObjectId":"6aebbad0-e5a5-424a-834a-20fb051f3c1a",
-      "name":"Allan Deyoung",
-      "givenName":"Allan",
-      "surname":"Deyoung",
-      "email":"Allan.Deyoung@microsoft.com",
-      "userPrincipalName":"Allan.Deyoung@microsoft.com",
-      "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "aadObjectId":"e236c4bf-88b1-4f3a-b1d7-8891dfc332b5",
+      "name":"Bob Young",
+      "givenName":"Bob",
+      "surname":"Young",
+      "email":"Bob.young@microsoft.com",
+      "userPrincipalName":"Bob.young@microsoft.com",
+      "tenantId":"2fe477ab-0efc-4dfd-bde2-484374e2c373",
       "userRole":"user"
    },
    "meeting":{
@@ -112,61 +128,40 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 }
 ```
 
+* * *
+
 #### <a name="response-codes"></a>Antwortcodes
 
-**403**: die APP darf keine Teilnehmer Informationen erhalten. Dies ist die häufigste Fehlerantwort und wird ausgelöst, wenn die APP nicht in der Besprechung installiert ist, beispielsweise wenn Sie vom mandantenadministrator deaktiviert oder während einer Live-Websitemigration blockiert wird.  
-**200**: Teilnehmer Informationen erfolgreich abgerufen.  
-**401**: Ungültiges Token.  
-**404**: Teilnehmer kann nicht gefunden werden. 
-**500**: die Besprechung ist entweder abgelaufen (mehr als 60 Tage seit der Beendigung der Besprechung) oder der Teilnehmer verfügt nicht über die Berechtigungen basierend auf seiner Rolle.
+* **403**: die APP darf keine Teilnehmer Informationen erhalten.  Dies ist die häufigste Fehlerantwort und wird ausgelöst, wenn die APP nicht in der Besprechung installiert ist. Wenn die APP beispielsweise vom mandantenadministrator deaktiviert oder während einer Live-Websitemigration blockiert wird.
+* **200**: Teilnehmer Informationen erfolgreich abgerufen.
+* **401**: Ungültiges Token.
+* **404**: Teilnehmer kann nicht gefunden werden.
+* **500**: die Besprechung ist entweder abgelaufen (mehr als 60 Tage seit der Beendigung der Besprechung) oder der Teilnehmer verfügt nicht über die Berechtigungen basierend auf seiner Rolle.
+
 
 **Bald verfügbar**
 
-**404**: die Besprechung ist entweder abgelaufen oder der Teilnehmer kann nicht gefunden werden. 
+* **404**: die Besprechung ist entweder abgelaufen oder der Teilnehmer kann nicht gefunden werden.
 
-<!-- markdownlint-disable MD024 -->
+
 ### <a name="notificationsignal-api"></a>NotificationSignal-API
 
 > [!NOTE]
 > Wenn ein in-Meeting-Dialogfeld aufgerufen wird, wird derselbe Inhalt auch als Chatnachricht angezeigt.
 
-#### <a name="request"></a>Anforderung
-
-```http
-POST /v3/conversations/{conversationId}/activities
-```
-
 #### <a name="query-parameters"></a>Abfrageparameter
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**conversationId**| string | Ja | Die Konversations-ID ist im Rahmen von bot Invoke verfügbar |
+|**conversationId**| Zeichenfolge | Ja | Die Konversations-ID ist im Rahmen von bot Invoke verfügbar |
 
-#### <a name="request-payload"></a>Anforderungsnutzlast
+#### <a name="example"></a>Beispiel
 
 > [!NOTE]
 >
-> *  In der angeforderten Nutzlast unten `completionBotId` ist der Parameter des-Parameters `externalResourceUrl` ein optional. Es ist das `Bot ID` , das im Manifest deklariert wird. Der bot erhält ein Result-Objekt.
+Der `completionBotId` Parameter von `externalResourceUrl` ist im angeforderten Payload-Beispiel optional. `Bot ID` wird im Manifest deklariert, und der bot erhält ein Result-Objekt.
 > * Die externalResourceUrl-Parameter width und Height müssen in Pixel angegeben werden. Lesen Sie die [Entwurfsrichtlinien](design/designing-apps-in-meetings.md) , um sicherzustellen, dass sich die Dimensionen innerhalb der zulässigen Grenzen befinden.
-> * Die URL ist die Seite, die als `<iframe>` innerhalb des in-Meeting-Dialogs geladen wird. Die Domäne der URL muss sich in Ihrem App-Manifest im APP- `validDomains` Array befinden.
-
-
-# <a name="json"></a>[Json](#tab/json)
-
-```json
-{
-    "type": "message",
-    "text": "John Phillips assigned you a weekly todo",
-    "summary": "Don't forget to meet with Marketing next week",
-    "channelData": {
-        "notification": {
-            "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-        }
-    },
-    "replyToId": "1493070356924"
-}
-```
+> * Die URL ist die Seite, die `<iframe>` im Dialogfeld in der Besprechung geladen wird. Die Domäne muss sich im APP- `validDomains` Array im App-Manifest befinden.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -198,17 +193,36 @@ replyActivity.channelData = {
 await context.sendActivity(replyActivity);
 ```
 
-* * *
+# <a name="json"></a>[Json](#tab/json)
 
-> [!IMPORTANT]
-> Die URL in der Inhalts Blase (taskInfo-URL) muss in der Liste [gültiger Domänen](../resources/schema/manifest-schema.md#validdomains) enthalten sein, die im App-Manifest für Teams enthalten ist.
+```http
+POST /v3/conversations/{conversationId}/activities
+
+{
+    "type": "message",
+    "text": "John Phillips assigned you a weekly todo",
+    "summary": "Don't forget to meet with Marketing next week",
+    "channelData": {
+        "notification": {
+            "alertInMeeting": true,
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+        }
+    },
+    "replyToId": "1493070356924"
+}
+```
+
+* * *
 
 #### <a name="response-codes"></a>Antwort Codes
 
-**201**: Aktivität mit Signal wurde erfolgreich gesendet  
-**401**: Ungültiges Token  
-**403**: die APP darf das Signal nicht senden. In diesem Fall sollte die Nutzlast eine ausführlichere Fehlermeldung enthalten. Es kann viele Gründe geben: app, die vom mandantenadministrator deaktiviert, während einer Live-Standort Minderung blockiert wird, usw.  
-**404**: Besprechungs Chat nicht vorhanden  
+* **201**: Aktivität mit Signal wurde erfolgreich gesendet  
+* **401**: Ungültiges Token  
+* **201**: die Aktivität mit dem Signal wurde erfolgreich gesendet. 
+* **401**: Ungültiges Token.
+* **403**: die APP kann das Signal nicht senden. Dies kann auf verschiedene Ursachen zurückzuführen sein, beispielsweise, wenn der mandantenadministrator die APP deaktiviert, die APP während einer Live-Websitemigration blockiert wird usw. In diesem Fall enthält die Nutzlast eine ausführliche Fehlermeldung. 
+* **404**: der Besprechungs Chat ist nicht vorhanden.
+ 
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Aktivieren Ihrer APP für Microsoft Teams-Besprechungen
 
@@ -217,9 +231,10 @@ await context.sendActivity(replyActivity);
 Die APP-Funktionen für Besprechungen werden in Ihrem App-Manifest über die **configurableTabs**  ->  -**Bereiche** und **Kontext** Arrays deklariert. *Scope* definiert, an wen und in welchem *Kontext* definiert wird, wo Ihre app verfügbar sein wird.
 
 > [!NOTE]
-> * Verwenden Sie das [Manifest-Schema für Entwicklervorschau](../resources/schema/manifest-schema-dev-preview.md) , um dieses in Ihrem App-Manifest zu testen.
+> Verwenden Sie das [Manifest-Schema für Entwicklervorschau](../resources/schema/manifest-schema-dev-preview.md) , um dieses in Ihrem App-Manifest zu testen.
 
 ```json
+
 "configurableTabs": [
     {
       "configurationUrl": "https://contoso.com/teamstab/configure",

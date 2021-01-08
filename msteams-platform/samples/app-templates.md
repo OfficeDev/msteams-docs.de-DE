@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 87361e8c6be068b932400d97379db8f182afd499
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 2135180a91d7cf123c4b456ac6ab4c236687ae87
+ms.sourcegitcommit: b9771f8f4be9ac1ff8c85c2d7bd8d5c5408bc653
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552577"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49768092"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -25,7 +25,7 @@ App-Vorlagen sind produktionsfertige Apps für Microsoft Teams, die Community Dr
 * **Anpassbar und erweiterbar:** Während alle App-Vorlagen bereit bereitgestellt werden, wie Sie sind, stellen wir die gesamte Codebasis und Bereitstellungsskripts bereit, damit Sie Sie ganz einfach an Ihre individuellen Anforderungen anpassen oder erweitern können.
 * **Ausführliche Dokumentation & Support:** Alle App-Vorlagen werden von einer End-to-End-Dokumentation zur Lösungsarchitektur, Bereitstellung und Konfigurationsschritte begleitet. Die Repositories werden ebenfalls überwacht, daher melden Sie bitte alle Probleme, die auftreten, indem Sie ein Problem auf GitHub auslösen.
 
-## <a name="ask-away-9734"></a>Ask Away &#9734;
+## <a name="ask-away"></a>Ask Away
 
 Ask Away ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , mit dem Benutzer Q&a (Question and Answer)-Sitzungen innerhalb von Teams durchführen können. Mit dem Ask Away-bot können Teammitglieder Fragen übermitteln, die von Kollegen gemeinsam genutzt werden, sodass Q&Hosts ganz einfach Top-of-Mind-Fragen innerhalb eines Kanals oder Chats sammeln kann. Der Bot kann verwendet werden, um eine Echtzeit-Q-&einer Sitzung in einer Teams-Besprechung durchzuführen und den Teilnehmern die Möglichkeit zu geben, Ihre Fragen Live per Chat zu übermitteln.
 
@@ -70,7 +70,7 @@ Book-a-Room ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , mit dem Be
 
 ![Buch-a-room-Demo](../assets/images/book-a-room.png)
 
-## <a name="building-access-9734"></a>Erstellen von Access-&#9734;
+## <a name="building-access"></a>Erstellen von Access
 
 Building Access ist eine Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)-basierte APP, die die Verwaltung von Schwellenwerten für die Auslastung von Gebäuden und soziale Distanz Normen unterstützt, indem Facility Directors das Verwalten, nachverfolgen und melden von Mitarbeitern vor Ort ermöglichen. Die APP, die mit Microsoft [Power apps](/powerapps/powerapps-overview)und [Power Automation](/power-automate/getting-started)erstellt wurde, ist tief in Microsoft Teams integriert und ermöglicht es Organisationen, die Erstellungs Bereitschaft zu ermitteln, Berechtigungskriterien für den Zugriff vor Ort festzulegen und Einblicke in die zukünftige Planung zu sammeln.
 
@@ -93,7 +93,7 @@ Die APP bietet eine einfache Benutzeroberfläche für alle Teammitglieder, um Ih
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
 
-## <a name="checklist-9734"></a>Prüfliste &#9734;
+## <a name="checklist"></a>Prüfliste
 
 Checklist ist eine benutzerdefinierte Microsoft Teams- [Messaging Erweiterungs](../messaging-extensions/what-are-messaging-extensions.md) -APP, mit der Sie mit Ihrem Team zusammenarbeiten können, indem Sie eine freigegebene Prüfliste in einem Chat oder Kanal erstellen. Die APP wird für alle Teams-Platt Form Clients-Desktop, Browser, IOS und Android-unterstützt und ist bereit für die Bereitstellung als Teil Ihres Microsoft 365-Abonnements.  
 
@@ -104,6 +104,14 @@ Checklist ist eine benutzerdefinierte Microsoft Teams- [Messaging Erweiterungs](
     ![Prüfliste für die Teamansicht erstellen](../assets/images/checklist-app-template-compose-view.gif)  
 :::column-end:::
 :::row-end:::
+
+## <a name="classroom-drop-in-9734"></a>Klassenzimmer-Drop-in &#9734;
+
+Das Classroom-Drop-in ist eine Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)-basierte APP, mit der System Leiter nach Bedarf Klassen Teams (virtuelle Klassenräume) finden und sich selbst oder andere diesen Klassen Teams für einen bestimmten Zeitraum hinzufügen können. Die mit Microsoft [Power apps](/powerapps/powerapps-overview) und [Power Automation](/power-automate/getting-started)erstellte app integriert sich tief in Microsoft Teams, um sicherzustellen, dass Bildungseinrichtungen Ihre Vorgänge in einer hybriden Lernumgebung optimieren können, indem Sie den relevanten Beteiligten für Klassen Teams pro Geschäftsanforderungen Zugriff gewähren.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-classroom-dropin)
+
+![Klassenzimmer-Drop-in-Anforderung](../assets/images/classroom-drop-in-request.png)
 
 ## <a name="company-communicator"></a>Unternehmens-Communicator
 
@@ -117,7 +125,7 @@ Es bietet eine Grundlage zum Erstellen benutzerdefinierter, zielorientierter Kom
 
 ![jCompany Communicator Compose-Feld Ansicht](../assets/images/CompanyCommunicatorCompose.png)
 
-## <a name="contact-group-lookup-9734"></a>&#9734; für Kontaktgruppen Suche
+## <a name="contact-group-lookup"></a>Kontaktgruppen Suche
 
 Die Contact Group Lookup-App bietet eine bequeme und nützliche Methode zum Erstellen, zugreifen und Verwalten der Kontaktgruppen Ihrer Organisation (früher als Verteilerlisten oder Kommunikationsgruppen bezeichnet). Benutzer können Gruppenmitglieder schnell anzeigen und mit Ihnen chatten, den Mitgliedsstatus anzeigen und einen Gruppenchat mit ausgewählten Mitgliedern in der Kontaktgruppe erstellen, die sich innerhalb der Teams-Umgebung befinden.
 
@@ -133,6 +141,14 @@ Die Contact Group Lookup-App bietet eine bequeme und nützliche Methode zum Erst
     ![Demo "Contact Group Lookup Start Chat"](../assets/images/contact-group-lookup-chat.png)
 :::column-end:::
 :::row-end:::
+
+## <a name="co-worker-appreciation-9734"></a>Mitarbeiterin – Anerkennung &#9734;
+
+Mithilfe der Vorlage "Kollegen-Anerkennung" in Microsoft Teams können Benutzer die Leistungen Ihrer Kollegen im Kontext der Teams erkennen. Wenn Mitarbeiter auswählen, um einen Kollegen zu belohnen, werden Empfänger und andere Teammitglieder in einer Kanal Unterhaltung markiert und erhalten eine Benachrichtigung über die Prämien Details des Kanals. Die Auszeichnungen werden in der Teams-App aufgezeichnet, die sicher, portabel und einfach zu teilen ist. Dies kann als die PowerApps-basierte Version der Open Badges-App-Vorlage mit einer Rangliste betrachtet werden.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
+
+![Gesamt](../assets/images/coworker-appreciation-1.png)
 
 ## <a name="crowdsourcer"></a>Crowdsourcing
 
@@ -152,7 +168,26 @@ Diese APP ermöglicht auch die einfache Freigabe von Bildern/GIFs/Aufklebern in 
 
 ![Aufkleber-App](../assets/images/stickers.png)
 
-## <a name="e-prescriptions-9734"></a>E-Rezepte &#9734; 
+## <a name="employee-ideas-9734"></a>Ideen &#9734; für Mitarbeiter
+
+Die Mitarbeiter Ideen-APP ist die PowerApps-Version der Azure based Great Ideas App-Vorlage. Die APP ermöglicht es den Teams-Benutzern, eine Ideen Kampagne einzurichten und zu konfigurieren. Eine idea-Kampagne ist eine Kategorie für die Gruppierung von Ideen in allgemeinen Themen.
+
+Microsoft Teams-Benutzer können auch folgende Aktivitäten ausführen:
+* Konfigurieren Sie ein Standardmäßiges Übermittlungsformular, das Mitarbeiter für jede Idee übermitteln müssen. 
+* Überprüfen und verwalten Sie die Ideen und die Liste der Kampagnen.
+* Kampagnen ändern und löschen.
+* Überprüfen der Führungsgremien von Ideen.
+* Vote für und Teile priorisierte Ideen.
+* Ideen für eine Kampagne übermitteln.
+* Zeigen Sie die Idee anderer Teammitglieder an.
+* Stimmen Sie über die meisten gemochten Ideen ab.
+* Überprüfen Sie die Leistung Ihrer Ideen im Vergleich zu anderen innerhalb einer Kampagne.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-employeeideas)
+
+![Kampagnenansicht verwalten](../assets/images/employee-ideas-manage-campaigns.png) 
+
+## <a name="e-prescriptions"></a>E-Rezepte 
 
 E-Prescription ist eine APP mit [Power apps](/powerapps/maker/canvas-apps/embed-teams-app), die Telemedizin und virtuelle Betreuung verbessert, indem der Prozess der Ausgabe von e-Verschreibungen an Patienten automatisiert wird. Mediziner können Termine schnell überprüfen, e-Rezepte generieren und e-Mails mit e-verschreibungspflichtigen Anlagen an Patienten direkt innerhalb der Teams-Plattform senden.
 
@@ -169,7 +204,7 @@ E-Prescription ist eine APP mit [Power apps](/powerapps/maker/canvas-apps/embed-
 :::column-end:::
 :::row-end:::
 
-## <a name="employee-training-9734"></a>Schulungs &#9734; für Mitarbeiter
+## <a name="employee-training"></a>Mitarbeiterschulung 
 
 Employee Training ist eine Microsoft Teams-APP, mit der Organisatoren Lern-und Schulungs Ereignisse für Ihre Organisation ganz einfach veröffentlichen, nachverfolgen und fördern können.  Mit der App können Ereignisplaner Erinnerungen und Benachrichtigungen an Ereignis Registrierungsstellen senden und Mitarbeiter können Interesse an bevorstehenden Ereignissen anzeigen, über aktuelle Ereignisse informiert bleiben und Ereignisdetails mit Kollegen über die Microsoft Teams-Messaging Erweiterung freigeben.
 
@@ -209,7 +244,7 @@ Conversational Q&ein Bots sind eine einfache Möglichkeit, Antworten auf häufig
 >
 > &#x2714; eine Antwort mit zusätzlichen Details konfigurieren, die als [Adaptive Karte](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)angezeigt werden sollen.
 >
-[**Get it on GitHub**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
 ![FAQ Plus GIF](../assets/images/FAQPlusEndUser.gif)
 
@@ -324,7 +359,30 @@ Incident Reporter ist ein [Microsoft Teams-bot](../bots/what-are-bots.md)  , der
 :::column-end:::
 :::row-end:::
 
-## <a name="new-employee-onboarding-9734"></a>Neue Onboarding-&#9734; für Mitarbeiter
+## <a name="inspection-9734"></a>Inspektions &#9734;
+
+ Inspection ist eine Microsoft Teams-APP, mit deren Hilfe Front-Work-Mitarbeiter alles von Orten bis hin zu Objekten und Geräten überprüfen können. Beispielsweise ein Einzelhandelsgeschäft, eine Produktionsstätte oder Fahrzeuge und Maschinen. Es gibt zwei apps in dieser Lösung, die jeweils für unterschiedliche Benutzertypen vorgesehen sind.
+
+Die APP ermächtigt die Mitarbeiter der ersten Reihe, ein Objekt oder einen Bereich zu inspizieren, die Qualität von Produkten und Diensten zu verwalten oder die Sicherheit am Arbeitsplatz aufrechtzuerhalten. Es erleichtert die Kommunikation zwischen Teammitgliedern, um während der Überprüfung gefundene Probleme zu beheben. Die APP stellt Managern einfache Berichte zur Verfügung, um die Problembehebung zu beschleunigen und Trends hervorzuheben.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-inspection)
+
+ ![Übersicht über die Inspektion](../assets/images/inspection-app.png)  
+
+
+## <a name="issue-reporting-9734"></a>Problemberichterstattung &#9734;
+
+Die Problem Berichterstattungs-App ermöglicht es den Mitarbeitern und Führungskräften, Probleme zu lösen und zu verwalten. Es besteht aus zwei apps, Problem Berichterstattungs-App für BerichtersTELLUNGSprobleme und Verwalten von Problemen in der APP zum Verwalten von Problemen.
+
+Die Team Manager verwenden die app "Probleme verwalten" zum Konfigurieren der App-Benutzeroberfläche, einschließlich des Kanals, in dem Microsoft Teams-Nachrichten und Planer-Aufgaben von der App erstellt werden. Manager verwenden die APP auch zum Erstellen von Vorlagen Formularen, um Details zu sammeln, wenn ein Benutzer ein Problem meldet. Beispielsweise können Sie Formulare für Problem Vorlagen überprüfen, bearbeiten oder löschen. Die APP kann auch verwendet werden, um Team Probleme zu überprüfen, den Problemverlauf zu melden und die Problembehebung effizient zu verwalten.
+
+Die Mitarbeiter verwenden die Problem Berichterstattungs-APP, um Probleme und Details zu protokollieren, die für die Lösung erforderlich sind. Die APP wird auch verwendet, um vorhandene Probleme zu ändern und zu beheben und eine allgemeine Übersicht über einzelne oder Teambezogene Probleme zu erhalten.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-issuereporting)
+
+![Teamansicht für Problemberichterstattung](../assets/images/issue-reporting-team-view.png)  
+
+## <a name="new-employee-onboarding"></a>Neues Mitarbeiter-Onboarding 
 
 Das neue Mitarbeiter-Onboarding ist eine integrierte Microsoft Teams-und [SharePoint-neue Onboarding-Lösung](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) , mit der Ihre Organisation eine konsistente, qualitativ hochwertige Onboarding-Erfahrung für Mitarbeiter auf Ihrer Neuvermietungs Reise bereitstellen kann. Die APP kann von Personal Teams und Einstellungs Managern verwendet werden, um relevante Informationen während der Orientierung und des Induktions Prozesses und durch neue Mitarbeiter bereitzustellen, um Feedback zu geben, Einführungen bereitzustellen und Onboarding-Aufgaben abzuschließen.
 
@@ -358,7 +416,7 @@ Open Badges ist eine Microsoft Teams-APP, mit der Einzelpersonen digitale Lern A
 :::column-end:::
 :::row-end:::
 
-## <a name="poll-9734"></a>Umfrage &#9734;
+## <a name="poll"></a>Umfrage 
 
 Poll ist eine benutzerdefinierte Microsoft Teams- [Messaging Erweiterungs](../messaging-extensions/what-are-messaging-extensions.md) Anwendung, mit der Sie Umfragen in einem Chat oder Kanal schnell erstellen und senden können, um Team Meinungen und-Einstellungen zu sammeln. Die APP wird für alle Teams-Platt Form Clients-Desktop, Browser, IOS und Android-unterstützt und ist bereit für die Bereitstellung als Teil Ihres Microsoft 365-Abonnements.
 
@@ -378,7 +436,22 @@ Schnelle Antworten ist eine Microsoft Teams-APP, die eine robuste Lösung für d
 
 ![Beispielansicht der Antworten](../assets/images/quick-responses.png)
 
-## <a name="reflect-9734"></a>Reflektieren &#9734;
+## <a name="rapid-assist-9734"></a>Schnelle Unterstützung &#9734;
+
+Rapid Assist ist eine Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) -basierte APP, die es den Kunden gegenüber Mitarbeitern ermöglicht, schnell eine Verbindung mit den Experten herzustellen, um schnelle Antworten zu erhalten, Informationen zu suchen, offene Anforderungen zu verfolgen und Experten das Empfangen von Benachrichtigungen zu ermöglichen, damit Sie schnell einen Anruf erhalten, um Hilfe bei der Beantwortung von Fragen zu erhalten. Die APP, die mit Microsoft [Power apps](/powerapps/powerapps-overview) und [Power Automation](/power-automate/getting-started)erstellt wurde, ist tief in Microsoft Teams integriert, sodass Unternehmen problemlos Frontline-Mitarbeiter mit Unternehmenskontakten verbinden können, um Kundenanfragen zu lösen und eine großartige Kundenerfahrung zu liefern. 
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-rapid-assist)
+
+:::row:::
+   :::column span="":::
+     ![Benutzeroberflächen-Anforderungs Schnittstelle](../assets/images/EndUserHome.png)
+   :::column-end:::
+   :::column span="":::
+      ![Ansicht "Sachverständigen Anforderung"](../assets/images/ExpertViewRequests.png)
+   :::column-end:::
+:::row-end:::
+
+## <a name="reflect"></a>Reflektieren 
 
 Reflect ist eine benutzerdefinierte Microsoft Teams- [Messaging Erweiterungs](../messaging-extensions/what-are-messaging-extensions.md) -APP, die Ihren Teammitgliedern eine sichere und integrative Ressource zur Verfügung stellt, um den Zustand Ihres emotionalen Wohlbefindens mit Kollegen und/oder Gruppenleitern direkt in Microsoft Teams zu teilen. Die APP ist in Kanal-, Gruppen-, Besprechungs-und 1:1-Chats verfügbar, und die Eincheck Antwort kann auf Public, private-to-Sender oder vollständig anonym festgelegt werden.
 
@@ -457,7 +530,7 @@ Scrums für Gruppenchat ist ein unterstützter Scrum-Assistent, mit dem Gruppenc
 
 ![Demo für Scrums für Gruppen Chat](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
-## <a name="share-now-9734"></a>Jetzt freigeben &#9734;
+## <a name="share-now"></a>Jetzt freigeben 
 
 Die Share now-App fördert den positiven Austausch von Informationen zwischen Kollegen, indem Sie Ihren Benutzern das einfache Freigeben von Inhalten in der Teams-Umgebung ermöglicht. Benutzer greifen die APP an, um für Teammitglieder interessante Elemente freizugeben, neue freigegebene Inhalte zu ermitteln, Einstellungen festzulegen und Favoriten für die spätere Lektüre zu bookmarken.
 
@@ -483,7 +556,7 @@ Personal Check-ins ist eine [Power apps](/powerapps/powerapps-overview)-basierte
 
 ![Eincheck Ansicht erstellen](../assets/images/staff-check-ins-create.png)
 
-## <a name="survey-9734"></a>Umfrage &#9734;
+## <a name="survey"></a>Umfrage
 
 Survey ist eine benutzerdefinierte Microsoft Teams- [Messaging Erweiterungs](../messaging-extensions/what-are-messaging-extensions.md) -APP, mit der Sie eine Umfrage in einem Chat oder einem Kanal erstellen können, um Daten zu sammeln und Einblicke in Aktionen zu erhalten.  Die APP wird für alle Teams-Platt Form Clients-Desktop, Browser, IOS und Android-unterstützt und ist bereit für die Bereitstellung als Teil Ihres Microsoft 365-Abonnements.  
 
@@ -495,7 +568,17 @@ Survey ist eine benutzerdefinierte Microsoft Teams- [Messaging Erweiterungs](../
 :::column-end:::
 :::row-end:::
 
-## <a name="visitor-management-9734"></a>Besucher Verwaltungs &#9734;
+## <a name="virtual-rounding-9734"></a>Virtueller Rundungs &#9734;
+
+Krankenhaus-und Notruf Raum Anbieter machen Dutzende und oft hunderte von "Runden" pro Tag. Diese Quick Check-ins für Patienten sollen eine Statusüberprüfung für den Patienten ermöglichen und sicherstellen, dass die Belange des Patienten berücksichtigt werden. Das Runden ist eine wesentliche Vorgehensweise, um sicherzustellen, dass Patienten von mehreren Arten von Anbietern überwacht werden, Sie stellen jedoch einen großen Abfluss an PSA dar, da für jeden Besuch von jedem Anbieter eine neue Maske und neue Handschuhe verwendet werden müssen. Mit diesen app-Vorlagen können medizinische Mitarbeiter problemlos runden virtuell durchführen, und zwar über eine Microsoft Teams-Besprechung zwischen dem Anbieter und dem Patienten.
+
+Die virtuelle Rundungs Lösung wird auch im Microsoft Health and Life Sciences- [Blogbeitrag](https://aka.ms/teamsvirtualrounding)referenziert.
+
+[Get it on GitHub](https://github.com/SmartterHealth/Virtual-Rounding)
+
+![Virtuelle Rundung](../assets/images/virtual-rounding-overview.png)
+
+## <a name="visitor-management"></a>Besucherverwaltung
 
 Die Visitor Management-APP ermöglicht Ihrer Organisation und ihren Mitarbeitern das einfache und effiziente Verwalten des vor-Ort-Besucher Prozesses direkt von Microsoft Teams aus. Die APP ermöglicht es Mitarbeitern, Besucher Anforderungen zu erstellen, einen Anforderungsstatus über das Besucher Dashboard zentral nachzuverfolgen und Echtzeitbenachrichtigungen zu erhalten, wenn ein Besucher ankommt.
 
@@ -512,7 +595,7 @@ Die Visitor Management-APP ermöglicht Ihrer Organisation und ihren Mitarbeitern
 :::column-end:::
 :::row-end:::
 
-## <a name="workplace-awards-9734"></a>Arbeitsplatz Auszeichnungen &#9734;
+## <a name="workplace-awards"></a>Workplace Awards
 
 Workplace Awards ist eine Teams-App-Vorlage, die einen positiven Rahmen bietet, um die Anerkennung zu fördern und die Kultur der Mitarbeiter Anerkennung am modernen Arbeitsplatz zu fördern. Mit der App können Sie ein Employee Rewards-und Recognition (r&r)-Programm einrichten und verwalten, in dem Mitarbeiter Kollegen und ihre r-&r-Führungskraft ganz einfach benennen und unterstützen können, um eingereichte Nominierungen, Grant Awards und announce Recipients anzuzeigen.
 

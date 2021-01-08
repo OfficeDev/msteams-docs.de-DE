@@ -2,12 +2,12 @@
 title: Neuerungen
 description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 keywords: Teams What es New Latest
-ms.openlocfilehash: 29101e45a317268d1eacf00273a98bc30593d5bd
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: da2378446f39ab8398cdc569987d14f5c6095330
+ms.sourcegitcommit: 5f1d6c12d80d48f403b73586f68bacf15785c855
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49604466"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "49739042"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuerungen für Entwickler in Microsoft Teams
 
@@ -21,8 +21,7 @@ Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und d
 | **Date** | **Hinweise** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
 |11/30/2020|Neu: Identitäts Plattformintegration mit Teams Toolkit und Visual Studio Code für Registerkarten|[Authentifizierung mit einmaligem Anmelden mit Microsoft Teams Toolkit und Visual Studio Code für Registerkarten](toolkit/visual-studio-code-tab-sso.md)|
-|11/16/2020|Teams-App-Manifest auf Version 1,8 aktualisiert|Referenz: Manifest-Schema für Microsoft Teams|[Referenz: Manifest-Schema für Microsoft Teams](resources/schema/manifest-schema.md)|
-|11/11/2020| Manifest-Schema auf Version 1,8 aktualisiert| [Referenz: Manifest-Schema für Microsoft Teams](resources/schema/manifest-schema.md)|
+|11/16/2020|Teams-App-Manifest auf Version 1,8 aktualisiert|[Referenz: Manifest-Schema für Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/10/2020|Teams-bot-Entwurfsrichtlinien|[Richtlinien für bot-Designs](bots/design/bots.md)|
 |9/30/2020|Das Senden und empfangen von Dateien an Bots auf mobilen Geräten wird nun unterstützt.|[Senden und empfangen von Dateien über Ihren bot](resources/bot-v3/bots-files.md)|
 |09/22/2020|Leitfaden für neue "erste Schritte mit Teams"|[Erstellen Ihrer ersten Teams-App-Übersicht](build-your-first-app/build-first-app-overview.md)|
@@ -82,7 +81,7 @@ Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und d
 | 05/29/2018 | Adaptive Karten werden jetzt in Microsoft Teams in den [Aktionen für Adaptive Karten in Microsoft Teams](task-modules-and-cards/cards/cards-reference.md)unterstützt. |
 | 05/29/2018 | Wenn Sie die Vorschau des [Entwicklers](~/resources/dev-preview/developer-preview-intro.md)verwenden, kann Ihr bot nun Dateien senden und empfangen.| [Senden und empfangen von Dateien über Ihren bot](~/concepts/bots/bots-files.md), [Features in der Public Developer Preview für Microsoft Teams](~/resources/dev-preview/developer-preview-features.md)|
 | 04/17/2018 | replyToID wurde zur Nutzlast für die `Invoke` -und Karten Aktionen hinzugefügt `MessageBack` . Dies ist besonders nützlich, wenn Sie die Nachricht aktualisieren müssen, aus der die Karten Aktion stammt. | [Karten Aktionen](~/concepts/cards/cards-actions.md)|
-| 04/12/2018 | Dieses Thema wurde hinzugefügt, um Änderungen an der Microsoft Teams-Programmierschnittstelle und diesen Dokumentations Sätzen nachzuverfolgen. | [Neuigkeiten](~/whats-new.md)|
+| 04/12/2018 | Dieses Thema wurde hinzugefügt, um Änderungen an der Microsoft Teams-Programmierschnittstelle und diesen Dokumentations Sätzen nachzuverfolgen. | [Neuerungen](~/whats-new.md)|
 | 04/10/2018 | Die Authentifizierungs-URLs wurden geändert, um die Mandanten-ID im Pfad konsistent zu verwenden. | [Authentifizierungsablauf für Registerkarten](~/concepts/authentication/auth-flow-tab.md), [Aad-Registerkarten Authentifizierung](~/concepts/authentication/auth-tab-AAD.md)|
 | 04/06/2018 | Entwurfsrichtlinien für die Verwendung des Befehlsfelds hinzugefügt. |[Befehlsfeld](~/resources/design/framework/command-box.md)|
 | 04/02/2018 | Verwenden von Bots zum Senden von Benachrichtigungen für Ihre APP. |[Reine Benachrichtigungsbots](~/concepts/bots/bots-notification-only.md)|

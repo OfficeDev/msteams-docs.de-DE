@@ -2,12 +2,12 @@
 title: Unterstützung für einmaliges Anmelden für Registerkarten
 description: Beschreibt einmaliges Anmelden (Single Sign-on, SSO)
 keywords: Teams-Authentifizierung SSO Aad Single Sign-on-API
-ms.openlocfilehash: 08ad1ab55a06ccb887755322fbd572f745952d8e
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 3eff1cd1d73573c8eaade63580516f432fe082a1
+ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552451"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "49731986"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Unterstützung für einmaliges Anmelden (SSO) für Registerkarten
 
@@ -168,7 +168,7 @@ Nachdem Sie das Zugriffstoken im success-Rückruf erhalten haben, können Sie da
 
 ## <a name="sample-code"></a>Beispielcode
 
-Besuchen Sie unsere Beispielanwendung: [MSTeams Tabs SSO Sample-Nodejs](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs)
+Besuchen Sie unsere Beispielanwendung: [MSTeams PNP SSO Sample](https://github.com/pnp/teams-dev-samples/tree/master/samples/tab-sso)
 
 In der Infodatei wird erklärt, wie Sie Ihre Entwicklungsumgebung einrichten und wie Sie Ihre Anwendung in Azure AD konfigurieren. Weitere Informationen zur Strukturierung des Beispiels im [Abschnitt App-Struktur](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs#app-structure) finden Sie auch, um sich mit der CodeBase vertraut zu machen.
 

@@ -2,16 +2,16 @@
 title: Hinzufügen von Karten Aktionen in einem bot
 description: Beschreibt Karten Aktionen in Microsoft Teams und deren Verwendung in ihren Bots
 keywords: Teams Bots Cards Aktionen
-ms.openlocfilehash: f4db5d137051fa8d557d8a060adae6f15b4769c3
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 2bee1072405d91cd29d1aa227884516a87d10bde
+ms.sourcegitcommit: b9771f8f4be9ac1ff8c85c2d7bd8d5c5408bc653
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346777"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49768074"
 ---
 # <a name="card-actions"></a>Karten Aktionen
 
-Von Bots und Messaging Erweiterungen in Microsoft Teams verwendete Karten unterstützen die folgenden Aktivitäts [`CardAction`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) Typen. Beachten Sie, dass sich diese Aktionen von `potentialActions` für Office 365-connectorkarten unterscheiden, wenn Sie von Connectors verwendet werden.
+Von Bots und Messaging Erweiterungen in Microsoft Teams verwendete Karten unterstützen die folgenden Aktivitäts [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) Typen. Beachten Sie, dass sich diese Aktionen von `potentialActions` für Office 365-connectorkarten unterscheiden, wenn Sie von Connectors verwendet werden.
 
 | Typ | Aktion |
 | --- | --- |
@@ -24,7 +24,7 @@ Von Bots und Messaging Erweiterungen in Microsoft Teams verwendete Karten unters
 > [!NOTE]
 >* In Microsoft Teams werden keine Typen unterstützt `CardAction` , die nicht in der obigen Tabelle aufgeführt sind.
 >* Die-Eigenschaft wird von Microsoft Teams nicht unterstützt `potentialActions` .
->* Karten Aktionen unterscheiden sich von [vorgeschlagenen Aktionen](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) im bot-Framework/Azure-bot-Dienst. Vorgeschlagene Aktionen werden in Microsoft Teams nicht unterstützt: Wenn Sie möchten, dass Schaltflächen in einer Team-bot-Nachricht angezeigt werden, verwenden Sie eine Karte.
+>* Karten Aktionen unterscheiden sich von [vorgeschlagenen Aktionen](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) im bot-Framework/Azure-bot-Dienst. Vorgeschlagene Aktionen werden in Microsoft Teams nicht unterstützt: Wenn Sie möchten, dass Schaltflächen in einer Team-bot-Nachricht angezeigt werden, verwenden Sie eine Karte.
 >* Wenn Sie eine Karten Aktion als Teil einer Messaging Erweiterung verwenden, werden die Aktionen erst ausgeführt, wenn die Karte an den Kanal gesendet wird (Sie funktionieren nicht, wenn sich die Karte im Meldungsfeld verfassen befindet).
 
 Teams unterstützen auch [Aktionen für Adaptive Karten](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions), die nur von adaptiven Karten verwendet werden. Diese Aktionen werden am Ende dieser Referenz in einem eigenen Abschnitt aufgeführt.
@@ -304,6 +304,44 @@ Um eine `signin` Aktion mit einer adaptiven Karte einzubeziehen, schließen Sie 
         "type": "signin",
         "value": "https://signin.com"
     }
+  }
+}
+```
+
+### <a name="adaptive-cards-with-invoke-action"></a>Adaptive Karten mit Invoke-Aktion
+ 
+Um eine `invoke` Aktion mit einer adaptiven Karte einzubeziehen, schließen Sie die folgenden Details in das `msteams` Objekt ein. Beachten Sie, dass Sie bei Bedarf zusätzliche verborgene Eigenschaften in das Objekt einschließen können `data` .
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `type` | Auf festlegen `task/fetch` |
+| `data` | Festlegen des Werts  |
+
+#### <a name="example"></a>Beispiel
+
+```json
+{
+  "type": "Action.Submit",
+  "title": "submit"
+  "data": {
+    "msteams": {
+        "type": "task/fetch"
+    }
+  }
+}
+```
+
+#### <a name="example-2-with-additional-payload-data"></a>Beispiel 2 (mit zusätzlichen Nutzlast-Daten)
+
+```json
+{
+  "type": "Action.Submit",
+  "title": "submit"
+  "data": {
+    "msteams": {
+        "type": "task/fetch"
+    },
+    "Value1": "some value"
   }
 }
 ```
