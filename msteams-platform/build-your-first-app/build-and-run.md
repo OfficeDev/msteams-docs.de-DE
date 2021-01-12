@@ -1,82 +1,78 @@
 ---
-title: Erste Schritte – erstellen und Ausführen ihrer ersten App
+title: Erste Schritte – Erstellen und Ausführen Ihrer ersten App
 author: heath-hamilton
-description: Erstellen Sie schnell eine Microsoft Teams-APP, die ein "Hello, World!" anzeigt. Nachricht mit dem Microsoft Teams-Toolkit.
+description: Erstellen Sie schnell eine Microsoft Teams-App, die "Hello, World!" anzeigt. -Nachricht mithilfe des Microsoft Teams Toolkits.
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 2d357ef71bfc4c498b54d94f9d0717cf886df17d
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: bc5d18dd887cbdbf56b8d6d013f53c21d1540370
+ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552479"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "49795468"
 ---
-# <a name="build-and-run-your-first-microsoft-teams-app"></a>Erstellen und Ausführen ihrer ersten Microsoft Teams-App
+# <a name="build-and-run-your-first-microsoft-teams-app"></a>Erstellen und Ausführen Ihrer ersten Microsoft Teams-App
 
-Sie können direkt in die Microsoft Teams-Entwicklung wechseln, indem Sie eine persönliche RegisterkarteErstellen, die "Hello, World!" anzeigt.
+Sie können direkt in die Entwicklung von Microsoft Teams einspringen, indem Sie eine persönliche Registerkarte erstellen, auf der "Hello, World!" angezeigt wird.
 
-## <a name="1-create-your-app-project"></a>1. Erstellen des App-Projekts
+## <a name="1-create-your-app-project"></a>1. Erstellen Ihres App-Projekts
 
-Verwenden Sie das Microsoft Teams-Toolkit in Visual Studio Code, um Ihr erstes App-Projekt einzurichten.
+Verwenden Sie das Microsoft Teams Toolkit in Visual Studio Code, um Ihr erstes App-Projekt einrichten.
 
-1. Wählen Sie in Visual Studio Code **Microsoft Teams** in :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: der linken Aktivitäts Leiste aus, und wählen Sie **neue Teams-app erstellen** aus.
-1. Wenn Sie dazu aufgefordert werden, melden Sie sich mit Ihrem Microsoft 365-entwicklungskonto an.
-1. Wählen Sie auf dem Bildschirm **Funktionen hinzufügen** die Option **Tab** und dann dann **weiter** aus.
-:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Screenshot, in dem gezeigt wird, wie Ihr App-Projekt mit dem Visual Studio Code Teams-Toolkit konfiguriert wird.":::
-1. Geben Sie einen Namen für Ihre Teams-App ein. (Dies ist der Standardname für Ihre APP und auch der Name des App-Projektverzeichnisses auf Ihrem lokalen Computer.)
-1. Aktivieren Sie nur die Option **persönliche Registerkarte** , und klicken Sie unten auf dem Bildschirm auf **Fertig stellen** , um Ihr Projekt zu konfigurieren.
+1. In Visual Studio Code, select **Microsoft Teams** on the left Activity Bar and choose Create a new Teams :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: **app**.
+1. Wenn Sie dazu aufgefordert werden, melden Sie sich mit Ihrem Microsoft 365-Entwicklungskonto an.
+1. Wählen Sie **auf dem Bildschirm** "Funktionen hinzufügen" die Option **"Tab"** und dann **"Weiter" aus.**
+:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Screenshot, der zeigt, wie Sie Ihr App-Projekt mit dem Visual Studio Code Teams Toolkit konfigurieren.":::
+1. Geben Sie einen Namen für Ihre Teams-App ein. (Dies ist der Standardname für Ihre App und auch der Name des App-Projektverzeichnisses auf dem lokalen Computer.)
+1. Aktivieren Sie nur die Registerkarte "Persönlich", und **wählen** Sie "Fertig stellen" am unteren Rand des Bildschirms aus, um Ihr Projekt zu konfigurieren. 
 
-> [!NOTE]
+## <a name="2-understand-important-app-project-components"></a>2. Verstehen wichtiger Komponenten des App-Projekts
 
-> Um Ihr App-Paket zu installieren, nachdem Sie ein neues Projekt im Toolkit erstellt haben, drücken Sie F5/Run. Chrome wird gestartet, und Ihr Paket wird installiert. Das Paket wird in App Studio gespeichert und mit dem installiert `appId` .
+Nachdem Das Toolkit Ihr Projekt konfiguriert hat, verfügen Sie über die Komponenten zum Erstellen einer einfachen persönlichen Registerkarte für Teams. Die Projektverzeichnissen und Dateien werden im Explorerbereich von Visual Studio Code angezeigt.
 
-## <a name="2-understand-important-app-project-components"></a>2. Grundlegendes zu wichtigen App-Projektkomponenten
+:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="Screenshot showing app project files for a personal tab in Visual Studio Code.":::
 
-Nachdem das Toolkit Ihr Projekt konfiguriert hat, müssen Sie die Komponenten zum Erstellen einer einfachen persönlichen Registerkarte für Teams. Die Projektverzeichnisse und-Dateien werden im Bereich "Explorer" von Visual Studio Code angezeigt.
+### <a name="app-scaffolding"></a>App-Gerüst
 
-:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="Screenshot, in dem App-Projektdateien für eine persönliche Registerkarte in Visual Studio Code angezeigt werden.":::
+Das Toolkit erstellt automatisch ein Gerüst für Sie im Verzeichnis basierend auf den `src` Funktionen, die Sie während des Setups hinzugefügt haben.
 
-### <a name="app-scaffolding"></a>App-Gerüste
-
-Das Toolkit erstellt automatisch ein Gerüst für Sie im `src` Verzeichnis basierend auf den Funktionen, die Sie während der Installation hinzugefügt haben.
-
-Wenn Sie beispielsweise während des Setups eine RegisterkarteErstellen, `App.js` ist die Datei im `src/components` Verzeichnis wichtig, da Sie die Initialisierung und das Routing Ihrer APP übernimmt. Das [Microsoft Teams SDK](../tabs/how-to/using-teams-client-sdk.md) wird aufgerufen, um die Kommunikation zwischen Ihrer APP und ihren Teams herzustellen.
+Wenn Sie beispielsweise während des Setups eine Registerkarte erstellen, ist die Datei im Verzeichnis wichtig, da sie die Initialisierung und das Routing `App.js` `src/components` Ihrer App behandelt. Es ruft das [Microsoft Teams JavaScript-Client-SDK auf,](../tabs/how-to/using-teams-client-sdk.md) um die Kommunikation zwischen Ihrer App und Teams zu herstellen.
 
 ### <a name="app-id"></a>App-ID
 
-Ihre Teams-APP-ID wird benötigt, um Ihre APP mit App Studio zu konfigurieren. Sie finden die ID im `teamsAppId` Objekt, das sich in der Datei des Projekts befindet `package.json` .
+Ihre Teams-App-ID wird benötigt, um Ihre App mit App Studio zu konfigurieren. Sie finden die ID im `teamsAppId` Objekt, das sich in der Projektdatei `package.json` befindet.
 
-## <a name="3-build-and-run-your-app"></a>3. erstellen und Ausführen der APP
+## <a name="3-build-and-run-your-app"></a>3. Erstellen und Ausführen Ihrer App
 
-Im Interesse der Zeit erstellen und führen Sie Ihre APP lokal aus.
+Im Interesse der Zeit erstellen und führen Sie Ihre App lokal aus.
 
-(Diese Informationen sind auch im Toolkit verfügbar `README` .)
+(Diese Informationen sind auch im Toolkit `README` verfügbar.)
 
-1. Wechseln Sie in einem Terminal zum Stammverzeichnis des App-Projekts, und führen Sie es aus `npm install` .
+1. Wechseln Sie in einem Terminal zum Stammverzeichnis Ihres App-Projekts, und führen Sie es `npm install` aus.
 1. Ausführen `npm start` .
 
-Nach Abschluss des Vorgangs wird ein **erfolgreiches kompiliert!** Nachricht im Terminal. Ihre APP wird gestartet `https://localhost:3000` .
+Nach Abschluss des Vorgangs wird ein **kompiliertes Programm erfolgreich erstellt.** im Terminal zu senden. Ihre App wird unter `https://localhost:3000` ausgeführt.
 
-## <a name="4-sideload-your-app-in-teams"></a>4. querladen ihrer app in Microsoft Teams
+## <a name="4-sideload-your-app-in-teams"></a>4. Querladen Ihrer App in Teams
 
-Ihre APP ist zum Testen in Microsoft Teams verfügbar. Hierzu benötigen Sie ein Konto, das App-Sideloading zulässt. (Wenn Sie nicht sicher sind, dass dies der Fall ist, erfahren Sie mehr über das [Einrichten eines Teams-entwicklungskontos](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account).)
+Ihre App kann in Teams testbereit sein. Dazu müssen Sie über ein Konto verfügen, das das Querladen von Apps ermöglicht. (Wenn Sie nicht sicher sind, ob Sie dies haben, erfahren Sie mehr über das Abrufen eines [Teams-Entwicklungskontos.)](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account)
 
 > [!TIP]
-> Überprüfen Sie vor dem Sideloading Ihrer APP auf Probleme mit der [Überprüfungsfunktion in App Studio](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool), die im Toolkit enthalten ist. Fehler müssen behoben sein, damit die APP erfolgreich querladen.
+> Überprüfen Sie vor dem Querladen Ihrer App, ob Probleme mit dem Validierungsfeature [in App Studio](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)auftreten, das im Toolkit enthalten ist. Fehler müssen behoben werden, um die App erfolgreich querladen zu können.
 
-1. Drücken Sie in Visual Studio Code die **F5** -Taste, um einen Microsoft Teams-WebClient zu starten.
-1. Um Ihre APP-Inhalte in Microsoft Teams anzuzeigen, geben Sie an, wo Ihre APP aktiv ist ( `localhost` ) vertrauenswürdig ist:
-   1. Öffnen Sie eine neue Registerkarte in demselben Browserfenster (standardmäßig Google Chrome), die nach Drücken von **F5** geöffnet wurde.
-   1. Wechseln Sie zu `https://localhost:3000/tab` der Seite, und fahren Sie fort.
-1. Wechseln Sie zurück zu Microsoft Teams. Wählen Sie im Dialogfeld **hinzufügen aus** , um Ihre APP zu installieren.
-:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Screenshot mit einem Beispiel für die persönliche Tab-app &quot;Hello, World!&quot;, die in Microsoft Teams läuft.":::
+1. Drücken Visual Studio Code die **F5-TASTE,** um einen Teams-Webclient zu starten.
+1. Um Ihre App-Inhalte in Teams anzuzeigen, geben Sie an, dass der Ort, an dem Ihre App ausgeführt wird ( `localhost` ) vertrauenswürdig ist:
+   1. Öffnen Sie eine neue Registerkarte im selben Browserfenster (standardmäßig Google Chrome), das nach drücken von **F5 geöffnet wurde.**
+   1. Wechseln Sie `https://localhost:3000/tab` zu der Seite, und fahren Sie mit der Seite fort.
+1. Wechseln Sie zurück zu Teams. Wählen Sie im Dialogfeld **"Hinzufügen" aus, um** Ihre App zu installieren.
+:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Screenshot mit einem Beispiel für eine persönliche Registerkarten-App &quot;Hello, World!&quot;, die in Teams ausgeführt wird.":::
 
-🎉 Herzlichen Glückwunsch! Ihre APP wird in Microsoft Teams gestartet.
+🎉 Herzlichen Glückwunsch! Ihre App wird in Teams ausgeführt.
 
 ## <a name="next-step"></a>Nächster Schritt
 
-Erweitern Sie auf der persönlichen Registerkarte, die Sie gerade erstellt haben, oder erstellen Sie eine andere Art von Teams-app.
+Erweitern Sie die persönliche Registerkarte, die Sie gerade erstellt haben, oder erstellen Sie einen anderen Typ von Teams-App.
 
 > [!div class="nextstepaction"]
 > [Zu Ihrer persönlichen Registerkarte hinzufügen](../build-your-first-app/build-personal-tab.md)

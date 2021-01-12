@@ -2,257 +2,268 @@
 title: Microsoft Teams-App-Vorlagen
 description: Links und Beschreibungen von App-Vorlagen für die Microsoft Teams-Plattform
 ms.topic: reference
-keywords: Demo zu Microsoft Teams-Vorlagen – Beispiele
+keywords: Demo zu Microsoft Teams-Vorlagenbeispielen
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 2135180a91d7cf123c4b456ac6ab4c236687ae87
-ms.sourcegitcommit: b9771f8f4be9ac1ff8c85c2d7bd8d5c5408bc653
+ms.openlocfilehash: 4a9b2ee9a5fadfa86dead4a15f49a6cea67d4963
+ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "49768092"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "49795496"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
-App-Vorlagen sind produktionsfertige Apps für Microsoft Teams, die Community Driven, Open-Source und auf GitHub verfügbar sind. Jedes enthält detaillierte Anweisungen zum Bereitstellen und Installieren dieser APP für Ihre Organisation, die eine Soforteinsatz fähige App bereitstellt, die Sie sofort installieren und verwenden können. Der vollständige Quellcode steht ebenfalls zur Verfügung, sodass Sie ihn detailliert erkunden oder den Code abzweigen und an Ihre spezifischen Anforderungen anpassen können.
+Bei den App-Vorlagen handelt es sich um produktionsbereite Apps für Microsoft Teams, die communitygesteuert, Open Source und auf GitHub verfügbar sind. Jede enthält ausführliche Anweisungen zum Bereitstellen und Installieren dieser App für Ihre Organisation, die eine einsatzbereite App zur Verfügung stellt, die Sie sofort installieren und verwenden können. Der vollständige Quellcode steht ebenfalls zur Verfügung, sodass Sie ihn im Detail untersuchen oder den Code ver forken und an Ihre spezifischen Anforderungen anpassen können.
 
-**&#9734; zeigt neu veröffentlichte App-Vorlagen an.**
+**&#9734; Gibt neu veröffentlichte App-Vorlagen an.**
 
 ### <a name="key-benefits"></a>Wichtige Vorteile
 
-* **Plug & Play-Erfahrung:** Alle App-Vorlagen umfassen Bereitstellungsskripts, mit denen Sie alle erforderlichen Dienste in Microsoft Azure hosten können. Für die Bereitstellung der apps ist keine Codierung erforderlich.
-* **Produktions fähiger Code:** Die APP-Vorlagen entsprechen den empfohlenen bewährten Methoden im hinhang auf Sicherheit und Infrastruktur, und alle übermittelten Community-Änderungen werden überprüft, um eine kontinuierliche Konformität sicherzustellen.
-* **Anpassbar und erweiterbar:** Während alle App-Vorlagen bereit bereitgestellt werden, wie Sie sind, stellen wir die gesamte Codebasis und Bereitstellungsskripts bereit, damit Sie Sie ganz einfach an Ihre individuellen Anforderungen anpassen oder erweitern können.
-* **Ausführliche Dokumentation & Support:** Alle App-Vorlagen werden von einer End-to-End-Dokumentation zur Lösungsarchitektur, Bereitstellung und Konfigurationsschritte begleitet. Die Repositories werden ebenfalls überwacht, daher melden Sie bitte alle Probleme, die auftreten, indem Sie ein Problem auf GitHub auslösen.
+* **Plug -and-Play-Erfahrung:** Alle App-Vorlagen enthalten Bereitstellungsskripts, mit denen Sie alle erforderlichen Dienste in Microsoft Azure hosten können. Für die Bereitstellung der Apps ist kein Code erforderlich.
+* **Produktionsbereiter Code:** Die App-Vorlagen entsprechen den empfohlenen bewährten Methoden für Sicherheit und Infrastruktur, und alle von der Community übermittelten Änderungen werden überprüft, um eine kontinuierliche Konformität sicherzustellen.
+* **Anpassbar und erweiterbar:** Obwohl alle App-Vorlagen bereit für die Bereitstellung sind, stellen wir die gesamte Codebasis und Bereitstellungsskripts bereit, sodass Sie sie ganz einfach an Ihre individuellen Anforderungen anpassen oder erweitern können.
+* **Ausführliche Dokumentation & Support:** Alle App-Vorlagen werden von einer End-to-End-Dokumentation zu Lösungsarchitektur, Bereitstellung und Konfigurationsschritten begleitet. Die Repositorys werden ebenfalls überwacht. Melden Sie daher alle Probleme, die auftreten, indem Sie ein Problem auf GitHub lösen.
+
+## <a name="appointment-manager-9734"></a>Termin-Manager-&#9734;
+
+Der Terminmanager ist eine Teams-App-Vorlage, mit der Unternehmen virtuelle Termine mit Kunden über Teams erstellen, verwalten und durchführen können. Neue Terminanfragen von Kunden sind in den Teams-Kanälen sichtbar, in denen sie schnell zugewiesen und Mitarbeitern in einem Team neu zugewiesen werden können. Terminanfragen können auf Team- oder persönlichen Ebenen über benutzerdefinierte Registerkarten angezeigt werden. Jeder Termin ist einer Onlinebe besprechung in Teams zugeordnet, daher können mitarbeiter und Verbraucher einfach zur geplanten Zeit an der Besprechung teilnehmen.
+
+Die App-Vorlage wird zur einfachen Terminverwaltung in Microsoft Bookings integriert. Geplante Termine werden automatisch in den Kalendern der zugewiesenen Mitarbeiter angezeigt, und Benutzer erhalten anpassbare E-Mail-Benachrichtigungen und Erinnerungen mit eingebetteten Besprechungslinks.
+
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-appointment-manager)
+
+![Appointment Manager Overview ](../assets/images/appointment-manager-overview.png)
+ ![ Appointment Manager in Teams](../assets/images/appointment-manager-2.png)
 
 ## <a name="ask-away"></a>Ask Away
 
-Ask Away ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , mit dem Benutzer Q&a (Question and Answer)-Sitzungen innerhalb von Teams durchführen können. Mit dem Ask Away-bot können Teammitglieder Fragen übermitteln, die von Kollegen gemeinsam genutzt werden, sodass Q&Hosts ganz einfach Top-of-Mind-Fragen innerhalb eines Kanals oder Chats sammeln kann. Der Bot kann verwendet werden, um eine Echtzeit-Q-&einer Sitzung in einer Teams-Besprechung durchzuführen und den Teilnehmern die Möglichkeit zu geben, Ihre Fragen Live per Chat zu übermitteln.
+"Abfragen" ist [ein Microsoft Teams-Bot,](../bots/what-are-bots.md) mit dem Benutzer Fragen und antworten&Fragen und Antworten in Teams durchführen können. Mit dem Bot "Abfragen" können Teammitglieder Von Kollegen geteilte Fragen übermitteln und abstimmen, sodass Q&A-Hosts ganz einfach die wichtigsten Fragen in einem Kanal oder Chat sammeln können. Der Bot kann verwendet werden, um eine Echtzeit-Q-&einer Sitzung in einer Teams-Besprechung zu führen, und ermöglicht Teilnehmern, Fragen per Chat live zu übermitteln.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-askaway)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-askaway)
 
 :::row:::
   :::column span="2":::
-    ![Ansicht des Popup Dialogfeldes "Leaderboard", in dem Benutzer Fragen abstimmen können](../assets/images/ask-away-app.png)  
+    ![Ansicht des Popupdialogfelds "Bestenliste", in dem Benutzer über Fragen abstimmen können](../assets/images/ask-away-app.png)  
 :::column-end:::
 :::row-end:::
 
 ## <a name="associate-insights"></a>Assoziierte Einblicke
 
-Associate Insights ist eine [Power apps](/powerapps/maker/canvas-apps/embed-teams-app) -Vorlage, die First-Workern die Möglichkeit gibt, Kundenmeinungen, Gefühle und Wahrnehmungen direkt zu erfassen und zu übermitteln. First-work-Mitarbeiter sind häufig der erste Unternehmensvertreter, der sich mit Kunden in einer 1:1-Anlaufstelle beschäftigt. Die gesammelten Daten können gemeinsam von Geschäftsteams verwendet werden, beispielsweise über eine Power BI Teams-Registerkarte, um die Produktverbesserung zu verbessern und die Benutzerfreundlichkeit zu verbessern.
+Associate Insights ist eine [Power Apps-Vorlage,](/powerapps/maker/canvas-apps/embed-teams-app) mit der Mitarbeiter in Service und Service mitarbeiter direkt Kundenmeinungen, -stimmungen und -wahrnehmungen erfassen und übermitteln können. Mitarbeiter in Erstunternehmen sind häufig der erste Unternehmensmitarbeiter, der sich an einer 1:1-Kontaktstelle mit Kunden in Verbindung setzt. Die gesammelten Daten können gemeinsam von Geschäftsteams freigegeben und verwendet werden, z. B. über eine Power BI Teams-Registerkarte, um die Produktverbesserung zu verbessern und die Kundenerfahrung zu verbessern.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
 
 :::row:::
   :::column span="2":::
-    ![Feedback Ansicht der von der APP generierten Einblicke](../assets/images/associate-insights-app.png)  
+    ![Feedbackansicht der von der App generierten Einblicke](../assets/images/associate-insights-app.png)  
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Power BI-Ansicht der generierten Einblicke in die APP](../assets/images/associate-insights-app2.png)
+    ![Power BI-Ansicht der von der App generierten Einblicke](../assets/images/associate-insights-app2.png)
 :::column-end:::
 :::row-end:::
 
 ## <a name="attendance"></a>Anwesenheit
 
-Die Anwesenheits-APP ist eine [Power apps](/powerapps/maker/canvas-apps/embed-teams-app) -Registerkarte, die in einem Team fixiert werden kann. Es wurde entwickelt, um die Anwesenheit zu erfassen, in der Regel in Einstellungen wie Lern-und Schulungsumgebungen. Benutzer können Teilnahme an bis zu 30 Tagen in der Vergangenheit markieren oder bearbeiten und zusammengefasste anwesenheitsberichte für eine ganze Gruppe oder einzelne Teilnehmer anzeigen.
+Die Anwesenheits-App ist [eine Power Apps-Registerkarte,](/powerapps/maker/canvas-apps/embed-teams-app) die in einem Team angeheftet werden kann. Es ist so konzipiert, dass Anwesenheitsdaten aufgezeichnet werden, in der Regel in Einstellungen wie z. B. Lern- und Schulungsumgebungen. Benutzer können die Teilnahme in der Vergangenheit bis zu 30 Tage lang markieren oder bearbeiten und zusammenfassende Anwesenheitsberichte für eine ganze Gruppe oder einzelne Teilnehmer anzeigen.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
 
-![Teilnahme-App-Demo](../assets/images/attendance-app.png)
+![Demo zur Teilnahme-App](../assets/images/attendance-app.png)
 
-## <a name="book-a-room"></a>Book-a-room
+## <a name="book-a-room"></a>Buch-a-Raum
 
-Book-a-Room ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , mit dem Benutzer einen Besprechungsraum für 30 (Standard), 60 oder 90 Minuten ab der aktuellen Uhrzeit schnell finden und reservieren können. Die book-a-room-bot-Bereiche für persönliche oder 1:1-Unterhaltungen.
+Book-a-room ist ein [Microsoft Teams-Bot,](../bots/what-are-bots.md) mit dem Benutzer schnell einen Besprechungsraum für 30 (Standard), 60 oder 90 Minuten ab der aktuellen Uhrzeit finden und reservieren können. Der Bot "Buch-a-Raum" ist auf persönliche Unterhaltungen oder 1:1-Unterhaltungen begrenzt.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
 
-![Buch-a-room-Demo](../assets/images/book-a-room.png)
+![Demo "Buch-a-Raum"](../assets/images/book-a-room.png)
 
-## <a name="building-access"></a>Erstellen von Access
+## <a name="building-access"></a>Gebäudezugriff
 
-Building Access ist eine Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)-basierte APP, die die Verwaltung von Schwellenwerten für die Auslastung von Gebäuden und soziale Distanz Normen unterstützt, indem Facility Directors das Verwalten, nachverfolgen und melden von Mitarbeitern vor Ort ermöglichen. Die APP, die mit Microsoft [Power apps](/powerapps/powerapps-overview)und [Power Automation](/power-automate/getting-started)erstellt wurde, ist tief in Microsoft Teams integriert und ermöglicht es Organisationen, die Erstellungs Bereitschaft zu ermitteln, Berechtigungskriterien für den Zugriff vor Ort festzulegen und Einblicke in die zukünftige Planung zu sammeln.
+Building Access ist eine Microsoft [Power Platform-basierte](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)App, die die Verwaltung von Schwellenwerten für die Belegung von Belegungen und sozialen Distancing-Normen unterstützt, indem es Einrichtungsleitern ermöglicht wird, die Anwesenheit von Mitarbeitern vor Ort zu verwalten, nachzuververwalten und zu melden. Die App, die mit Microsoft [Power Apps](/powerapps/powerapps-overview)und [Power Automate](/power-automate/getting-started)erstellt wurde, ist tief in Microsoft Teams integriert und ermöglicht Es Organisationen, die Erstellungsbereitschaft zu bestimmen, Berechtigungskriterien für den Zugriff auf die Website festzulegen und Erkenntnisse für die zukünftige Planung zu sammeln.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
 
 :::row:::
    :::column span="":::
-     ![Erstellen von Access-Reservierungskarten](../assets/images/building-access-reservation.png)
+     ![Erstellen einer Zugriffsreservierungskarte](../assets/images/building-access-reservation.png)
    :::column-end:::
    :::column span="":::
-      ![Erstellen der Zugriffstasten Ansicht](../assets/images/building-access-access-key.png)
+      ![Zugriffstastenansicht erstellen](../assets/images/building-access-access-key.png)
    :::column-end:::
 :::row-end:::
 
 ## <a name="celebrations"></a>Feiern
 
-Celebrations ist eine Teams-APP, die Teammitgliedern hilft, Geburtstage, Jubiläen und andere wiederkehrende Ereignisse für andere zu feiern. Es erinnert sich an besondere Anlässe aller Teammitglieder und sendet eine freundliche Nachricht in allen Teams, die zum Zeitpunkt der Ereigniserstellung ausgewählt wurden, damit die Teammitglieder an Ihrem Tag ein besonderes Gefühl haben.
+Bei Geburtstagen handelt es sich um eine Teams-App, die Teammitgliedern dabei hilft, ihre Geburtstage, Jubiläen und anderen wiederkehrenden Ereignisse miteinander zu vermischen. Er erinnert sich an besondere Anlässe aller Teammitglieder und sendet eine benutzerfreundliche Nachricht in allen Teams, die zum Zeitpunkt der Ereigniserstellung ausgewählt wurden, damit sich die Teammitglieder an ihrem Tag besonders fühlen.
 
-Die APP bietet eine einfache Benutzeroberfläche für alle Teammitglieder, um Ihre Ereignisse persönlich hinzufügen und anzeigen zu können, und ermöglicht es dem Benutzer, die Teams auszuwählen, in denen die Ereignisse freigegeben werden.
+Die App bietet eine einfache Schnittstelle für alle Teammitglieder zum persönlichen Hinzufügen und Anzeigen ihrer Ereignisse und ermöglicht es dem Benutzer, die Teams auszuwählen, in denen die Ereignisse freigegeben werden.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
 
 ## <a name="checklist"></a>Prüfliste
 
-Checklist ist eine benutzerdefinierte Microsoft Teams- [Messaging Erweiterungs](../messaging-extensions/what-are-messaging-extensions.md) -APP, mit der Sie mit Ihrem Team zusammenarbeiten können, indem Sie eine freigegebene Prüfliste in einem Chat oder Kanal erstellen. Die APP wird für alle Teams-Platt Form Clients-Desktop, Browser, IOS und Android-unterstützt und ist bereit für die Bereitstellung als Teil Ihres Microsoft 365-Abonnements.  
+Die Prüfliste ist [](../messaging-extensions/what-are-messaging-extensions.md) eine benutzerdefinierte Microsoft Teams-Messaging-Erweiterungs-App, mit der Sie mit Ihrem Team zusammenarbeiten können, indem Sie eine freigegebene Prüfliste in einem Chat oder Kanal erstellen. Die App wird auf allen Microsoft Teams-Plattformclients unterstützt – Desktop, Browser, iOS und Android – und kann im Rahmen Ihres Microsoft 365-Abonnements zur Verfügung stehen.  
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-checklist-app )
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-checklist-app )
 
 :::row:::
 :::column span="2":::
-    ![Prüfliste für die Teamansicht erstellen](../assets/images/checklist-app-template-compose-view.gif)  
+    ![Erstellen einer Prüfliste in der Ansicht "Teams"](../assets/images/checklist-app-template-compose-view.gif)  
 :::column-end:::
 :::row-end:::
 
-## <a name="classroom-drop-in-9734"></a>Klassenzimmer-Drop-in &#9734;
+## <a name="classroom-drop-in-9734"></a>Drop-In-&#9734;
 
-Das Classroom-Drop-in ist eine Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)-basierte APP, mit der System Leiter nach Bedarf Klassen Teams (virtuelle Klassenräume) finden und sich selbst oder andere diesen Klassen Teams für einen bestimmten Zeitraum hinzufügen können. Die mit Microsoft [Power apps](/powerapps/powerapps-overview) und [Power Automation](/power-automate/getting-started)erstellte app integriert sich tief in Microsoft Teams, um sicherzustellen, dass Bildungseinrichtungen Ihre Vorgänge in einer hybriden Lernumgebung optimieren können, indem Sie den relevanten Beteiligten für Klassen Teams pro Geschäftsanforderungen Zugriff gewähren.
+Classroom Drop-in ist eine Microsoft [Power Platform-basierte](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)App, mit der Systemleiter Kursteams (virtuelle Kursräume) finden und sich selbst oder andere zu diesen Kursteams für einen bestimmten Drop-In-Zeitraum hinzufügen können, je nach Bedarf. Die App, die mit Microsoft [Power Apps](/powerapps/powerapps-overview) und [Power Automate](/power-automate/getting-started)erstellt wurde, ist tief in Microsoft Teams integriert, um sicherzustellen, dass Bildungseinrichtungen ihre Vorgänge in einer hybriden Lernumgebung optimieren können, indem sie den relevanten Beteiligten Zugriff für Kursteams nach Geschäftlichen Anforderungen bietet.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-classroom-dropin)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-classroom-dropin)
 
-![Klassenzimmer-Drop-in-Anforderung](../assets/images/classroom-drop-in-request.png)
+![Drop-In-Anforderung für Kursraum](../assets/images/classroom-drop-in-request.png)
 
 ## <a name="company-communicator"></a>Unternehmens-Communicator
 
-Mit der Communicator-APP von Unternehmen können Unternehmensteams Nachrichten erstellen und senden, die für mehrere Teams oder eine große Anzahl von Mitarbeitern im Chat vorgesehen sind, sodass die Organisation Mitarbeiter direkt dort erreichen, wo Sie zusammenarbeiten. Verwenden Sie diese Vorlage für mehrere Szenarien, beispielsweise für Ankündigungen neuer Initiativen, für das Onboarding von Mitarbeitern, für moderne Lern-und Entwicklungsprozesse oder für unternehmensweite Übertragungen.
+Die Unternehmens-Communicator-App ermöglicht Unternehmensteams das Erstellen und Senden von Nachrichten, die für mehrere Teams oder eine große Anzahl von Mitarbeitern im Chat vorgesehen sind, sodass die Organisation mitarbeiter direkt dort erreichen kann, wo sie zusammenarbeiten. Verwenden Sie diese Vorlage für mehrere Szenarien, z. B. Ankündigungen neuer Initiativen, Mitarbeiter-Onboarding, modernes Lernen und Entwicklung oder organisationsweite Übertragungen.
 
-Die APP bietet eine einfache Oberfläche für bestimmte Benutzer zum Erstellen, Anzeigen einer Vorschau, Zusammenarbeit und Senden von Nachrichten.
+Die App bietet eine einfache Schnittstelle für designierte Benutzer zum Erstellen, Anzeigen einer Vorschau, Zusammenarbeit und Senden von Nachrichten.
 
-Es bietet eine Grundlage zum Erstellen benutzerdefinierter, zielorientierter Kommunikationsfunktionen wie benutzerdefinierte Telemetrie, um zu erfahren, wie viele Benutzer eine Nachricht bestätigt oder mit ihr interagiert haben.
+Es bietet eine Grundlage für die Erstellung benutzerdefinierter gezielter Kommunikationsfunktionen wie benutzerdefinierte Telemetrie darüber, wie viele Benutzer eine Nachricht bestätigt oder mit dieser interagiert haben.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![jCompany Communicator Compose-Feld Ansicht](../assets/images/CompanyCommunicatorCompose.png)
+![jCompany Communicator Verfassenfeldansicht](../assets/images/CompanyCommunicatorCompose.png)
 
-## <a name="contact-group-lookup"></a>Kontaktgruppen Suche
+## <a name="contact-group-lookup"></a>Kontaktgruppen-Nachschlage
 
-Die Contact Group Lookup-App bietet eine bequeme und nützliche Methode zum Erstellen, zugreifen und Verwalten der Kontaktgruppen Ihrer Organisation (früher als Verteilerlisten oder Kommunikationsgruppen bezeichnet). Benutzer können Gruppenmitglieder schnell anzeigen und mit Ihnen chatten, den Mitgliedsstatus anzeigen und einen Gruppenchat mit ausgewählten Mitgliedern in der Kontaktgruppe erstellen, die sich innerhalb der Teams-Umgebung befinden.
+Die Kontaktgruppen-Nachschlage-App bietet einen praktischen und nützlichen Ansatz zum Erstellen, Zugreifen auf und Verwalten der Kontaktgruppen Ihrer Organisation (früher als Verteilerlisten oder Kommunikationsgruppen bekannt). Benutzer können schnell Gruppenmitglieder anzeigen und chatten, den Mitgliederstatus anzeigen und einen Gruppenchat mit ausgewählten Mitgliedern in der Kontaktgruppe erstellen, und dies alles innerhalb der Teams-Umgebung.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-contactgrouplookup)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-app-contactgrouplookup)
 
 :::row:::
 :::column span="2":::
-    ![Kontaktgruppen Suche angeheftete Favoritenansicht](../assets/images/contact-group-lookup-favorites.png)  
+    ![Kontaktgruppen-Nachschlageansicht für angeheftierte Favoriten](../assets/images/contact-group-lookup-favorites.png)  
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Demo "Contact Group Lookup Start Chat"](../assets/images/contact-group-lookup-chat.png)
+    ![Demo zum Starten des Chats durch die Kontaktgruppen-Suche](../assets/images/contact-group-lookup-chat.png)
 :::column-end:::
 :::row-end:::
 
-## <a name="co-worker-appreciation-9734"></a>Mitarbeiterin – Anerkennung &#9734;
+## <a name="co-worker-appreciation-9734"></a>Arbeitsverdingungs-&#9734;
 
-Mithilfe der Vorlage "Kollegen-Anerkennung" in Microsoft Teams können Benutzer die Leistungen Ihrer Kollegen im Kontext der Teams erkennen. Wenn Mitarbeiter auswählen, um einen Kollegen zu belohnen, werden Empfänger und andere Teammitglieder in einer Kanal Unterhaltung markiert und erhalten eine Benachrichtigung über die Prämien Details des Kanals. Die Auszeichnungen werden in der Teams-App aufgezeichnet, die sicher, portabel und einfach zu teilen ist. Dies kann als die PowerApps-basierte Version der Open Badges-App-Vorlage mit einer Rangliste betrachtet werden.
+Mithilfe der Vorlage "Arbeitskollegen" in Microsoft Teams können Benutzer die Erfolge ihrer Kollegen im Kontext von Teams erkennen. Wenn Kollegen einen Kollegen belohnen, werden Empfänger und andere Teammitglieder in einer Kanalgespräch gekennzeichnet und erhalten eine Benachrichtigung über die Preisdetails des Kanals. Die Preise werden in der Teams-App aufgezeichnet, die sicher, portabel und einfach freigabefähig ist. Dies kann als powerApps-basierte Version der Open Badges-App-Vorlage mit einer Bestenliste betrachtet werden.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
 
 ![Gesamt](../assets/images/coworker-appreciation-1.png)
 
-## <a name="crowdsourcer"></a>Crowdsourcing
+## <a name="crowdsourcer"></a>CrowdSourcer
 
-Crowdsourcing ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , der Teams abgefragte Informationen von Gruppenmitgliedern zusammenstellt. Es ist eine hervorragende Möglichkeit, häufig gestellte Fragen zu beantworten und den Teilnehmern eine aktive Teilnahme an einer nützlichen Informationsressource zu ermöglichen.
+CrowdSourcer ist ein [Microsoft Teams-Bot,](../bots/what-are-bots.md) der teams abgefragte Informationen liefert, die gemeinsam von Gruppenmitgliedern stammen. Es ist eine hervorragende Möglichkeit, häufig gestellte Fragen zu beantworten, während teilnehmer aktiv an einer unterhaltungs- und hilfreichen Informationsressource mitwirken können.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app)
 
-![Crowdsourcing-Endbenutzer Interaktion](../assets/images/crowdsourcer.png)
+![Interaktion von Endbenutzern mit Crowdsource](../assets/images/crowdsourcer.png)
 
 ## <a name="custom-stickers"></a>Custom Stickers
 
-Self-Expression ist Kern einer gesunden Teamkultur. Diese APP-Vorlage ist eine [Messaging Erweiterung](~/messaging-extensions/what-are-messaging-extensions.md) , mit der Benutzer benutzerdefinierte Aufkleber und GIFs in Microsoft Teams verwenden können. Diese Vorlage bietet eine einfache webbasierte Konfigurations Erfahrung, bei der jeder Benutzer mit Konfigurationszugriff die GIFs/Aufkleber/Bilder hochladen kann, die er seinen Endbenutzern zur Verfügung stellen möchte, sodass das gesamte Team einen beliebigen von Ihnen ausgewählten Aufkleber verwenden kann.
+Selbstausdruck ist der Kern einer gesunden Teamkultur. Diese App-Vorlage ist eine [Messaging-Erweiterung,](~/messaging-extensions/what-are-messaging-extensions.md) mit der Ihre Benutzer benutzerdefinierte Aufkleber und GIFs in Microsoft Teams verwenden können. Diese Vorlage bietet eine einfache webbasierte Konfigurationserfahrung, bei der jeder Benutzer mit Konfigurationszugriff die GIFs/Aufkleber/Bilder hochladen kann, die die Endbenutzer haben möchten, sodass Ihr gesamtes Team alle von Ihnen gewählten Aufkleber verwenden kann.
 
-Diese APP ermöglicht auch die einfache Freigabe von Bildern/GIFs/Aufklebern in Microsoft Teams, ohne dass der Zugriff auf SharePoint-Websites oder einzelne Kanäle als Speicher-und Freigabemechanismus erforderlich ist. Beispielsweise können Produktteams problemlos Produktbilder und GIFs für soziale Netzwerke, Marketing-und Vertriebsteams programmgesteuert freigeben. Sie können diese APP auch erweitern, indem Sie einen Benachrichtigungs Fluss für bestimmte Teams/Einzelpersonen auslösen, wenn neue Bilder/GIFs zur Verfügung gestellt werden.
+Diese App ermöglicht auch die einfache Freigabe von Bildern/GIFs/Aufklebern in Teams, ohne zugriff auf SharePoint-Websites oder einzelne Kanäle als Speicher- und Freigabemechanismen zu benötigen. Beispielsweise können Produktteams Produktbilder und GIFs ganz einfach programmgesteuert für soziale Medien, Marketing- und Vertriebsteams freigeben. Sie können diese App auch erweitern, indem sie einen Benachrichtigungsfluss für bestimmte Teams/Einzelpersonen auslöst, wenn neue Bilder/GIFs verfügbar gemacht werden.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-stickers-app)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
 ![Aufkleber-App](../assets/images/stickers.png)
 
-## <a name="employee-ideas-9734"></a>Ideen &#9734; für Mitarbeiter
+## <a name="employee-ideas-9734"></a>Mitarbeiterideen &#9734;
 
-Die Mitarbeiter Ideen-APP ist die PowerApps-Version der Azure based Great Ideas App-Vorlage. Die APP ermöglicht es den Teams-Benutzern, eine Ideen Kampagne einzurichten und zu konfigurieren. Eine idea-Kampagne ist eine Kategorie für die Gruppierung von Ideen in allgemeinen Themen.
+Die App "Mitarbeiterideen" ist die PowerApps-Version der Azure-basierten App-Vorlage "Großartige Ideen". Mit der App können die Benutzer von Teams eine Ideenkampagne einrichten und konfigurieren. Eine Ideenkampagne ist eine Kategorie zum Gruppieren von Ideen zu gängigen Designs.
 
-Microsoft Teams-Benutzer können auch folgende Aktivitäten ausführen:
-* Konfigurieren Sie ein Standardmäßiges Übermittlungsformular, das Mitarbeiter für jede Idee übermitteln müssen. 
+Benutzer von Teams können auch folgende Aktivitäten ausführen:
+* Konfigurieren Sie ein Standardübermittlungsformular, das Mitarbeiter für jede Idee übermitteln müssen. 
 * Überprüfen und verwalten Sie die Ideen und die Liste der Kampagnen.
-* Kampagnen ändern und löschen.
-* Überprüfen der Führungsgremien von Ideen.
-* Vote für und Teile priorisierte Ideen.
-* Ideen für eine Kampagne übermitteln.
-* Zeigen Sie die Idee anderer Teammitglieder an.
-* Stimmen Sie über die meisten gemochten Ideen ab.
-* Überprüfen Sie die Leistung Ihrer Ideen im Vergleich zu anderen innerhalb einer Kampagne.
+* Ändern und Löschen von Kampagnen.
+* Überprüfen Sie Die Bestenlisten mit Ideen.
+* Stimmen Sie für priorisierte Ideen, und teilen Sie sie mit.
+* Übermitteln Sie Ideen für eine Kampagne.
+* Zeigen Sie die Idee eines anderen Teammitglieds an.
+* Stimmen Sie über die meisten "Gefällt mir"-Ideen ab.
+* Überprüfen Sie die Leistung ihrer Ideen im Vergleich zu anderen in einer Kampagne.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-employeeideas)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-employeeideas)
 
-![Kampagnenansicht verwalten](../assets/images/employee-ideas-manage-campaigns.png) 
+![Verwalten der Kampagnenansicht](../assets/images/employee-ideas-manage-campaigns.png) 
 
-## <a name="e-prescriptions"></a>E-Rezepte 
+## <a name="e-prescriptions"></a>E-Prescriptions 
 
-E-Prescription ist eine APP mit [Power apps](/powerapps/maker/canvas-apps/embed-teams-app), die Telemedizin und virtuelle Betreuung verbessert, indem der Prozess der Ausgabe von e-Verschreibungen an Patienten automatisiert wird. Mediziner können Termine schnell überprüfen, e-Rezepte generieren und e-Mails mit e-verschreibungspflichtigen Anlagen an Patienten direkt innerhalb der Teams-Plattform senden.
+E-Prescriptions ist eine [Power Apps-basierte](/powerapps/maker/canvas-apps/embed-teams-app)App, die die Telemedikierung und die virtuelle Behandlung verbessert, indem der Prozess der Ausgabe von E-Rezepten für Patienten automatisiert wird. Medical professionals can quickly review appointments, generate e-prescriptions, and send emails with e-prescription attachments to patients directly within the Teams platform.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-eprescription) 
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-eprescription) 
 
 :::row:::
 :::column span="2":::
-    ![Screenshot der APP für E-Rezepte. Zeigt, wie ein Leistungserbringer eine Schaltfläche generieren auswählen kann, um ein Rezept für einen Patienten zu bestellen.](../assets/images/e-prescriptions-app-template.png)  
+    ![Screenshot der App "E-Prescriptions". Zeigt, wie ein Gesundheitsdienstleister eine Schaltfläche zum Generieren auswählen kann, um ein Rezept für einen Patienten zu bestellen.](../assets/images/e-prescriptions-app-template.png)  
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Screenshot der APP für E-Rezepte. Zeigt, wie Administratoren die Leistungserbringer verwalten können, die die APP verwenden.](../assets/images/e-prescriptions-app-template-admin.png)
+    ![Screenshot der App "E-Prescriptions". Zeigt, wie Administratoren die Gesundheitsdienstleister verwalten können, die die App verwenden.](../assets/images/e-prescriptions-app-template-admin.png)
 :::column-end:::
 :::row-end:::
 
 ## <a name="employee-training"></a>Mitarbeiterschulung 
 
-Employee Training ist eine Microsoft Teams-APP, mit der Organisatoren Lern-und Schulungs Ereignisse für Ihre Organisation ganz einfach veröffentlichen, nachverfolgen und fördern können.  Mit der App können Ereignisplaner Erinnerungen und Benachrichtigungen an Ereignis Registrierungsstellen senden und Mitarbeiter können Interesse an bevorstehenden Ereignissen anzeigen, über aktuelle Ereignisse informiert bleiben und Ereignisdetails mit Kollegen über die Microsoft Teams-Messaging Erweiterung freigeben.
+Mitarbeiterschulungen sind eine Microsoft Teams-App, die es Organisatoren ermöglicht, Lern- und Schulungsereignisse für Ihre Organisation einfach zu veröffentlichen, nachverfolgt und zu fördern.  Mit der App können Ereignisplaner Erinnerungen und Benachrichtigungen an Ereignisregistranten senden, und Mitarbeiter können Interesse an bevorstehenden Ereignissen anzeigen, über die Messagingerweiterung Teams über aktuelle Ereignisse auf dem Laufenden bleiben und Ereignisdetails mit Kollegen teilen.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-employeetraining)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-employeetraining)
 
 :::row:::
 :::column span="2":::
-    **Anzeigen von Schulungs Ereignissen** ![ für Mitarbeiter Image der Registerkarte "Employee Training"](../assets/images/employee-training-discover-tab.png)  
+    **Anzeigen von Schulungsereignissen für Mitarbeiter** ![ Abbildung der Registerkarte "Mitarbeiterschulung"](../assets/images/employee-training-discover-tab.png)  
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    **Erstellen eines Schulungs Ereignisses** ![ für Mitarbeiter Employee Training Create Event-Formular](../assets/images/employee-training-create-event.jpg)
+    **Mitarbeiterschulungsereignis erstellen** ![ Formular zum Erstellen eines Ereignisses für Mitarbeiterschulungen](../assets/images/employee-training-create-event.jpg)
 :::column-end:::
 :::row-end:::
 
 ## <a name="expert-finder"></a>Experten-Finder
 
-Expert Finder ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , der bestimmte Organisationsmitglieder basierend auf ihren Fähigkeiten, Interessen und Bildungs Attributen identifiziert. Mitglieder finden Experten in einer Organisation, die einer Stichwortsuche in Azure Active Directory Benutzerprofilen entsprechen.
+Expert Finder ist ein [Microsoft Teams-Bot,](../bots/what-are-bots.md) der bestimmte Organisationsmitglieder basierend auf ihren Fähigkeiten, Interessen und Bildungsattributen identifiziert. Mitglieder finden Experten in einer Organisation, die einer Stichwortsuche von Azure Active Directory-Benutzerprofilen entsprechen.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-expertfinder)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-expertfinder)
 
-![Demo zu Suchergebnissen für Experten-Finder](../assets/images/expert-finder.png)
+![Demo zu Suchergebnissen der Expertensuche](../assets/images/expert-finder.png)
 
 ## <a name="faq-plus"></a>FAQ Plus
 
-Conversational Q&ein Bots sind eine einfache Möglichkeit, Antworten auf häufig gestellte Fragen von Benutzern bereitzustellen. Die meisten Bots greifen jedoch nicht auf sinnvolle Weise mit Benutzern in Kontakt, da kein Mensch in der Schleife ist, wenn der bot fehlschlägt. FAQ bot ist ein freundliches Q&ein bot, der einen Menschen in die Schleife bringt, wenn er nicht helfen kann. Man kann dem bot eine Frage stellen, und der bot antwortet mit einer Antwort, wenn er in der Wissensdatenbank enthalten ist. Wenn dies nicht der Fall ist, ermöglicht der bot dem Benutzer, eine Abfrage zu senden, die dann in einem vorkonfigurierten Expertenteam veröffentlicht wird, das Unterstützung bei der Bereitstellung von Support durch die Benachrichtigungen im Team leistet.
+Unterhaltungs-F&Bots sind eine einfache Möglichkeit, Antworten auf häufig gestellte Fragen von Benutzern zur Verfügung zu stellen. Die meisten Bots können jedoch nicht sinnvoll mit Benutzern interagieren, da kein Benutzer in der Schleife ist, wenn der Bot ausfällt. Faq bot is a friendly Q&A bot that brings a human in the loop when it is unable to help. Einer kann dem Bot eine Frage stellen, und der Bot antwortet mit einer Antwort, wenn er in der Wissensdatenbank enthalten ist. Wenn nicht, ermöglicht der Bot dem Benutzer, eine Abfrage zu übermitteln, die dann an ein vorkonfiguriertes Expertenteam gesendet wird, das bei der Unterstützung hilft, indem er auf die Benachrichtigungen innerhalb des Teams selbst einwirken kann.
 
 > [!NOTE]
-> Die neueste Version von **FAQ Plus** unterstützt die Verbesserung von Q&einer Lösung, indem ein Expertenteam Folgendes ermöglicht:
+> Die neueste Version von **FAQ Plus** unterstützt verbesserte Q&A-Lösungen, indem ein Expertenteam folgendes abschließen kann:
 >
-> &#x2714; neue Q-&direkt zur Knowledge Base mithilfe von Nachrichten Erweiterungen hinzufügen.
+> &#x2714; Hinzufügen neuer Fragen&Direkt zur Wissensdatenbank mithilfe von Nachrichtenerweiterungen.
 >
-> &#x2714; bearbeiten und löschen Q&von einem bot hinzugefügte Paare.
+> &#x2714; Bearbeiten und Löschen von Q&A pairs, die von einem Bot hinzugefügt wurden.
 >
-> &#x2714; den Überarbeitungsverlauf von Q&als nachverfolgen.
+> &#x2714; Verfolgen des Überarbeitungsverlaufs von Fragen&A0
 >
-> &#x2714; eine Antwort mit zusätzlichen Details konfigurieren, die als [Adaptive Karte](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)angezeigt werden sollen.
+> &#x2714; Konfigurieren Sie eine Antwort mit zusätzlichen Details, die als adaptive [Karte angezeigt werden.](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 >
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
-![FAQ Plus GIF](../assets/images/FAQPlusEndUser.gif)
+![HÄUFIG gestellte Fragen plus GIF](../assets/images/FAQPlusEndUser.gif)
 
 ## <a name="goal-tracker"></a>Zielverfolgung
 
-Die Goal Tracker-App ist eine umfassende Lösung für Ihre Organisation zur Unterstützung der Zielsetzung, zur Beobachtung des Fortschritts und zur Anerkennung des Erfolgs in Microsoft Teams. Die APP ermöglicht es Benutzern, Ziele auf fachlicher, persönlicher und Teamebene festzulegen, nachzuverfolgen und zu aktualisieren. Team Mitglieder erhalten außerdem rechtzeitige Erinnerungen und Statusaktualisierungen, um konzentriert zu bleiben und auf dem richtigen Weg zu bleiben.
+Die Zielverfolgungs-App ist eine umfassende Lösung für Ihre Organisation, um das Einrichten von Zielen, das Beobachten des Fortschritts und die Anerkennung des Erfolgs in Microsoft Teams zu unterstützen. Mit der App können Benutzer Ziele auf professioneller, persönlicher und Teamebene festlegen, nachverfolgen und aktualisieren. Teammitglieder erhalten außerdem zeitnahe Erinnerungen und Statusupdates, um konzentriert zu bleiben und auf dem neuesten Stand zu bleiben.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-goaltracker)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-app-goaltracker)
 
 :::row:::
   :::column span="2":::
@@ -261,49 +272,49 @@ Die Goal Tracker-App ist eine umfassende Lösung für Ihre Organisation zur Unte
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Anzeigen von Zielvorgaben](../assets/images/goal-tracker-your-goals-view.png)
+    ![Ziele des Ansichtssatzes](../assets/images/goal-tracker-your-goals-view.png)
 :::column-end:::
 :::row-end:::
 
 ## <a name="great-ideas"></a>Großartige Ideen
 
-Die app "Great Ideas" unterstützt und stärkt Innovation und Kreativität in Ihrer Organisation. Die APP ermöglicht es Ihren Mitarbeitern, Ideen mit Kollegen und Führungskräften auszutauschen, neue Übermittlungen zu entdecken, Beiträge zur Peer-Überlegung anzusehen und ihre Stimme für die besten Vorschläge in Microsoft Teams abzugeben.
+Die App "Großartige Ideen" unterstützt und fördert Innovation und Kreativität in Ihrer Organisation. Die App ermöglicht Es Ihren Mitarbeitern, Ideen mit Kollegen und Führungskräften auszutauschen, neue Übermittlungen zu entdecken, Beiträge zu Peers ins Blickpunkt zu stellen und ihre Stimme für die besten Vorschläge in Microsoft Teams zu geben.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-greatideas)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-greatideas)
 
 :::row:::
   :::column span="2":::
-    ![Übermittelte Ideen anzeigen](../assets/images/great-ideas-all-view.png)  
+    ![Anzeigen übermittelter Ideen](../assets/images/great-ideas-all-view.png)  
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Ideen anzeigen](../assets/images/great-ideas-digest-view.png)
+    ![Anzeigen von Ideen](../assets/images/great-ideas-digest-view.png)
 :::column-end:::
 :::row-end:::
 
 ## <a name="group-activities"></a>Gruppenaktivitäten
 
-Group Activities ist eine Microsoft Teams-APP, die Teambesitzern das schnelle Erstellen von Aktivitätsgruppen und das Verwalten von Zusammenarbeits-Workflows im Kontext von Microsoft Teams erleichtert. Aktivitätsautoren können Aktivitäten erstellen, Teammitglieder nach dem Zufallsprinzip in Gruppen verteilen und den bot optional Erinnerungen senden lassen, bis die Aktivitäten abgeschlossen sind.
+Gruppenaktivitäten ist eine Microsoft Teams-App, mit der Teambesitzer schnell Aktivitätsgruppen erstellen und Workflows für die Zusammenarbeit im Kontext von Microsoft Teams verwalten können. Aktivitätsautoren können Aktivitäten erstellen, Teammitglieder nach dem Zufallsprinzip in Gruppen verteilen und optional vom Bot Erinnerungen senden, bis die Aktivitäten abgeschlossen sind.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-groupactivities)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-groupactivities)
 
 :::row:::
   :::column span="2":::
-    ![Liste der Gruppenaktivitäten in Microsoft Teams](../assets/images/group-activities-1.png)  
+    ![Liste der Gruppenaktivitäten in Teams](../assets/images/group-activities-1.png)  
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Benachrichtigungsnachricht für Gruppenaktivität in einem Kanal](../assets/images/group-activities-2.png)
+    ![Gruppenaktivitätsbenachrichtigung in einem Kanal](../assets/images/group-activities-2.png)
 :::column-end:::
 :::row-end:::
 
 ## <a name="grow-your-skills"></a>Erweitern Ihrer Fähigkeiten
 
-Die app "Grow Your Skills" unterstützt berufliches Wachstum und Entwicklung, indem Mitarbeiter zu zusätzlichen Projekten für Ihre Organisation beitragen und gleichzeitig neue Fertigkeiten erlernen. Mitarbeiter können die APP verwenden, um Möglichkeiten zu finden, die ihren Interessen entsprechen, eine sinnvolle Zusammenarbeit mit Kollegen zu genießen und neue Ebenen von Fachwissen und Funktionen zu erwerben, die sich innerhalb der Teams-Umgebung befinden.
+Die App "Grow Your Skills" unterstützt das berufliche Wachstum und die Entwicklung, indem Mitarbeiter an ergänzenden Projekten für Ihre Organisation mit beitragen und gleichzeitig neue Fähigkeiten erlernen können. Mitarbeiter können die App verwenden, um Möglichkeiten zu finden, die ihren Interessen entsprechen, eine sinnvolle Zusammenarbeit mit Gleichgesinnten zu genießen und neue Fachkenntnisse und Funktionen in der Teams-Umgebung zu erwerben.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills)
 
 :::row:::
   :::column span="2":::
@@ -312,201 +323,201 @@ Die app "Grow Your Skills" unterstützt berufliches Wachstum und Entwicklung, in
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Ansicht "erworbene Fertigkeiten" des Viewers](../assets/images/grow-your-skills-acquired-skills-view.png)
+    ![Ansicht der erworbenen Fähigkeiten des Betrachters](../assets/images/grow-your-skills-acquired-skills-view.png)
 :::column-end:::
 :::row-end:::
 
 ## <a name="hr-support"></a>HR Support
 
-HR Support bot ist ein freundliches Q&ein bot, der einen Support Experten aus dem HR-Team in der Schleife bringt, wenn er nicht helfen kann. Man kann dem bot eine Frage stellen, und der bot antwortet mit einer Antwort, wenn er in der Wissensdatenbank enthalten ist. Wenn dies nicht der Fall ist, ermöglicht der bot dem Benutzer, eine Abfrage zu senden, die dann in einem vorkonfigurierten Team von Experten veröffentlicht wird, die Hilfe bei der Bereitstellung von Unterstützung durch das Handeln auf die Benachrichtigungen innerhalb des Teams selbst leisten. Darüber hinaus schlägt der bot Links zu empfohlenen HR-Richtlinien/Fragen vor, indem er nach vorkonfigurierten Tags in der Frage sucht. Diese Kacheln befinden sich auch auf der zugehörigen Registerkarte als Kurzübersicht. Die HR-Unterstützung eignet sich gut für leichte QnA und bietet schnelle Unterstützung beim Starten neuer Projekte/Initiativen in der Organisation.
+Hr Support Bot ist ein freundlicher Q&Ein Bot, der einen Supportexperten/Experten aus dem Personalteam in die Schleife bringt, wenn er nicht helfen kann. Einer kann dem Bot eine Frage stellen, und der Bot antwortet mit einer Antwort, wenn er in der Wissensdatenbank enthalten ist. Wenn nicht, ermöglicht der Bot dem Benutzer, eine Abfrage zu übermitteln, die dann in einem vorkonfigurierten Team von Experten veröffentlicht wird, die bei der Unterstützung helfen, indem er auf die Benachrichtigungen innerhalb des Teams selbst einwirken kann. Darüber hinaus schlägt der Bot Links zu empfohlenen Personalrichtlinien/Fragen vor, indem er nach vorkonfigurierten Tags in der Frage sucht. Diese Kacheln befinden sich auch auf der zugeordneten Registerkarte als Kurzübersicht. Der Personalsupport funktioniert gut für QnA mit geringem Gewicht und bietet schnellen Support beim Starten neuer Projekte/Initiativen in der Organisation.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
 
 ![HR Support](../assets/images/expert-user.png)
 
 ## <a name="icebreaker"></a>Icebreaker
 
-Icebreaker ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , der Ihr Team näher rückt, indem zwei zufällige Teammitglieder jede Woche in einer Besprechung zusammenpassen. Der bot vereinfacht die Planung, indem er automatisch angibt, dass für beide Mitglieder freie Zeiten möglich sind. Stärken Sie persönliche Verbindungen und erstellen Sie eine eng verbundene Community mit dieser app.
+Icebreaker ist ein [Microsoft Teams-Bot,](../bots/what-are-bots.md) der Ihrem Team dabei hilft, sich näher zu kommen, indem es jede Woche zwei zufällige Teammitglieder zu treffen paart. Der Bot erleichtert die Planung, indem automatisch kostenlose Zeiten vorschlagen werden, die für beide Mitglieder funktionieren. Stärken Sie persönliche Verbindungen, und schaffen Sie mit dieser App eine enge Community.
 
-Zusätzlich zur Förderung persönlicher Verbindungen in Ihrem gesamten Team kann die APP von Icebreaker bei der Pflege von interessenbasierten Communities in Ihrer Organisation helfen. Beispielsweise können Sie diese APP für eine DevOps-Interessengruppe verwenden, um Ideen und bewährte Methoden, die sich organisch in Ihrer Organisation ausbreiten, zu unterstützen.
+Die Icebreaker-App fördert nicht nur persönliche Verbindungen im gesamten Team, sondern kann auch dazu beitragen, interessenbasierte Communitys in Ihrer Organisation zu fördern. Beispielsweise können Sie diese App für eine DevOps-Interessengruppe verwenden, um Ideen und bewährte Methoden zu unterstützen, die organisch in Ihrer Organisation verteilt werden.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
 ![Icebreaker-App](../assets/images/icebreaker.png)
 
-## <a name="incentives"></a>Anreize
+## <a name="incentives"></a>Incentives
 
-Incentives ist eine [Power apps](/powerapps/maker/canvas-apps/embed-teams-app) -Vorlage, die lohnen Mitarbeiterbeteiligung an bestimmten Aktivitäten wie Schulungen und Change Management-Initiativen verwaltet und nachverfolgt. Administratoren verwenden die APP zum Einrichten von bestimmten Aktivitäten, zum Zuweisen von Punkten zur Fertigstellung und zum Angeben der erforderlichen Berechtigungs Punkt Stufen für Belohnungen. Mitarbeiter verwenden die APP, um Ihre gesammelten Punkte anzuzeigen und bei Erreichen der Berechtigung einlösbare Prämien anzufordern und zu fordern.
+Incentives ist eine [Power Apps-Vorlage,](/powerapps/maker/canvas-apps/embed-teams-app) die die förderungsbewachte Mitarbeiterteilnahme an bestimmten Aktivitäten wie Schulungen und Change Management Initiative verwaltet und verfolgt. Administratoren verwenden die App, um festgelegte Aktivitäten festzulegen, Punkte für den Abschluss zuzuordnen und erforderliche Berechtigungspunktstufen für Preise anzugeben. Mitarbeiter verwenden die App, um ihre gesammelten Punkte zu sehen und, wenn sie die Berechtigung erreicht haben, einlösbare Preise anfordert und in Anspruch zu bekommen.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-incentives)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-incentives)
 
-![Demo zur Incentives-App](../assets/images/incentives-app.png)
+![Demo zur Anreiz-App](../assets/images/incentives-app.png)
 
-## <a name="incident-reporter"></a>Vorfall Reporter
+## <a name="incident-reporter"></a>Incident Reporter
 
-Incident Reporter ist ein [Microsoft Teams-bot](../bots/what-are-bots.md)  , der die Verwaltung von Vorfällen in Ihrer Organisation optimiert. Der bot erleichtert die Erfassung automatischer Vorfall Daten, benutzerdefinierter vorfallberichte, relevanter Benachrichtigungen von Beteiligten und die End-to-End-Vorfall Verfolgung.
+Incident Reporter ist ein [Microsoft Teams-Bot,](../bots/what-are-bots.md)  der die Verwaltung von Vorfällen in Ihrer Organisation optimiert. Der Bot vereinfacht die automatisierte Erfassung von Vorfalldaten, angepasste Vorfallberichte, relevante Benachrichtigungen von Beteiligten und die End-to-End-Nachverfolgung von Vorfällen.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-incidentreport)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-incidentreport)
 
 :::row:::
   :::column span="2":::
-    ![Bereichsansicht der Vorfall Reportergruppe](../assets/images/incident-reporter-02.png)  
+    ![Bereichsansicht der Vorfallberichtsgruppe](../assets/images/incident-reporter-02.png)  
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Persönliche Bereichsansicht des Vorfall Reporters](../assets/images/incident-reporter-01.jpg)
+    ![Vorfallberichtsansicht für persönlichen Bereich](../assets/images/incident-reporter-01.jpg)
 :::column-end:::
 :::row-end:::
 
-## <a name="inspection-9734"></a>Inspektions &#9734;
+## <a name="inspection-9734"></a>&#9734;
 
- Inspection ist eine Microsoft Teams-APP, mit deren Hilfe Front-Work-Mitarbeiter alles von Orten bis hin zu Objekten und Geräten überprüfen können. Beispielsweise ein Einzelhandelsgeschäft, eine Produktionsstätte oder Fahrzeuge und Maschinen. Es gibt zwei apps in dieser Lösung, die jeweils für unterschiedliche Benutzertypen vorgesehen sind.
+ Bei der Überprüfung handelt es sich um eine Microsoft Teams-App, mit der Front-Line-Mitarbeiter alles von Standorten bis hin zu Ressourcen und Geräten überprüfen können. Beispiel: Einzelhandel, Produktionsbetrieb oder Autos und Maschinen. Es gibt zwei Apps in dieser Lösung, die jeweils für verschiedene Benutzertypen vorgesehen sind.
 
-Die APP ermächtigt die Mitarbeiter der ersten Reihe, ein Objekt oder einen Bereich zu inspizieren, die Qualität von Produkten und Diensten zu verwalten oder die Sicherheit am Arbeitsplatz aufrechtzuerhalten. Es erleichtert die Kommunikation zwischen Teammitgliedern, um während der Überprüfung gefundene Probleme zu beheben. Die APP stellt Managern einfache Berichte zur Verfügung, um die Problembehebung zu beschleunigen und Trends hervorzuheben.
+Die App ermöglicht es den Front-Line-Mitarbeitern, ein Objekt oder einen Bereich zu überprüfen, die Qualität von Produkten und Diensten zu verwalten oder die Sicherheit am Arbeitsplatz zu gewährleisten. Es erleichtert die Kommunikation zwischen Teammitgliedern, um während der Überprüfung gefundene Probleme zu beheben. Die App bietet einfachen Berichten für Manager, um die Problemlösung zu beschleunigen und Trends zu hervorheben.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-inspection)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-inspection)
 
- ![Übersicht über die Inspektion](../assets/images/inspection-app.png)  
+ ![Übersicht über die Überprüfung](../assets/images/inspection-app.png)  
 
 
-## <a name="issue-reporting-9734"></a>Problemberichterstattung &#9734;
+## <a name="issue-reporting-9734"></a>Problemberichterstattungsberichte &#9734;
 
-Die Problem Berichterstattungs-App ermöglicht es den Mitarbeitern und Führungskräften, Probleme zu lösen und zu verwalten. Es besteht aus zwei apps, Problem Berichterstattungs-App für BerichtersTELLUNGSprobleme und Verwalten von Problemen in der APP zum Verwalten von Problemen.
+Mit der App "Problemberichterstattung" können Mitarbeiter und Manager Probleme lösen und verwalten. Sie besteht aus zwei Apps, der App "Problembericht" für die Berichterstellung und der App "Probleme verwalten" zum Verwalten von Problemen.
 
-Die Team Manager verwenden die app "Probleme verwalten" zum Konfigurieren der App-Benutzeroberfläche, einschließlich des Kanals, in dem Microsoft Teams-Nachrichten und Planer-Aufgaben von der App erstellt werden. Manager verwenden die APP auch zum Erstellen von Vorlagen Formularen, um Details zu sammeln, wenn ein Benutzer ein Problem meldet. Beispielsweise können Sie Formulare für Problem Vorlagen überprüfen, bearbeiten oder löschen. Die APP kann auch verwendet werden, um Team Probleme zu überprüfen, den Problemverlauf zu melden und die Problembehebung effizient zu verwalten.
+Die Teammanager verwenden die App "Probleme verwalten", um die App zu konfigurieren, einschließlich des Kanals, in dem Microsoft Teams-Nachrichten und -Planner-Aufgaben von der App erstellt werden. Manager verwenden die App auch zum Erstellen von Vorlagenformularen, um Details zu sammeln, wenn ein Benutzer ein Problem meldet. Beispiel: Überprüfen, Bearbeiten oder Löschen von Formularen für Problemvorlagen. Die App kann auch verwendet werden, um Teamprobleme zu überprüfen, einen Bericht zum Problemverlauf zu erstellen und die Problemlösung effizient zu verwalten.
 
-Die Mitarbeiter verwenden die Problem Berichterstattungs-APP, um Probleme und Details zu protokollieren, die für die Lösung erforderlich sind. Die APP wird auch verwendet, um vorhandene Probleme zu ändern und zu beheben und eine allgemeine Übersicht über einzelne oder Teambezogene Probleme zu erhalten.
+Die Mitarbeiter verwenden die App "Problemberichterstattung", um Probleme und Details zu protokollieren, die zur Behebung dieser Probleme erforderlich sind. Die App wird auch verwendet, um vorhandene Probleme zu ändern und zu beheben und eine hohe Ansicht von Einzel- oder Teamproblemen zu erhalten.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-issuereporting)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-issuereporting)
 
-![Teamansicht für Problemberichterstattung](../assets/images/issue-reporting-team-view.png)  
+![Problemberichtsteamansicht](../assets/images/issue-reporting-team-view.png)  
 
-## <a name="new-employee-onboarding"></a>Neues Mitarbeiter-Onboarding 
+## <a name="new-employee-onboarding"></a>Onboarding neuer Mitarbeiter 
 
-Das neue Mitarbeiter-Onboarding ist eine integrierte Microsoft Teams-und [SharePoint-neue Onboarding-Lösung](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) , mit der Ihre Organisation eine konsistente, qualitativ hochwertige Onboarding-Erfahrung für Mitarbeiter auf Ihrer Neuvermietungs Reise bereitstellen kann. Die APP kann von Personal Teams und Einstellungs Managern verwendet werden, um relevante Informationen während der Orientierung und des Induktions Prozesses und durch neue Mitarbeiter bereitzustellen, um Feedback zu geben, Einführungen bereitzustellen und Onboarding-Aufgaben abzuschließen.
+Das Onboarding neuer Mitarbeiter ist eine integrierte Microsoft Teams- und [SharePoint New Employee Onboarding-Lösung,](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) die es Ihrer Organisation ermöglicht, Mitarbeitern auf ihrer Reise nach Neueinstellungen eine konsistente, qualitativ hochwertige Onboardingerfahrung zu bieten. Die App kann von Personalteams und Einstellungsmanagern verwendet werden, um während des gesamten Orientierungs- und Einstellungsprozesses relevante Informationen zur Verfügung zu stellen und von Neueinstellungen Feedback zu teilen, Einführungen zu geben und Onboardingaufgaben auszuführen.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
 
 :::row:::
   :::column span="2":::
-    **Neue Willkommens Karte** ![ für Mitarbeiter Bild der neuen Willkommens Karte für Mitarbeiter](../assets/images/new-employee-welcome-card.png)
+    **Willkommenskarte für neue Mitarbeiter** ![ Abbildung der Willkommenskarte für neue Mitarbeiter](../assets/images/new-employee-welcome-card.png)
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    Prüfliste für neue **Mitarbeiter** ![ Bild der Checkliste für neue Mitarbeiter](../assets/images/new-employee-checklist.png)  
+    **Prüfliste für neue Mitarbeiter** ![ Abbildung der Prüfliste für neue Mitarbeiter](../assets/images/new-employee-checklist.png)  
 :::column-end:::
 :::row-end:::
 
-## <a name="open-badges"></a>Abzeichen öffnen
+## <a name="open-badges"></a>Öffnen von Signalen
 
-Open Badges ist eine Microsoft Teams-APP, mit der Einzelpersonen digitale Lern Anmeldeinformationen im Kontext von Teams erwerben und überall freigeben können. Mithilfe von Funktionen aus der ausstellenden Autorität des Drittanbieters für digitale Abzeichen werden [Badgr](https://badgr.org/), verliehene Abzeichen im Badgr-Profil eines Empfängers aufgezeichnet und zur Verfügung gestellt, um ein reichhaltiges Bild von lebenslangen Lern Reisen zu erstellen und zu teilen.
+Open Badges ist eine Microsoft Teams-App, mit der Einzelpersonen digitale Lernanmeldeinformationen im Kontext von Teams erhalten und überall freigeben können. Mithilfe von Funktionen der Drittanbieter-Zertifizierungsstelle für digitale Badges, [Badgr](https://badgr.org/), werden die vergebenen Badges im Badgr-Profil eines Empfängers aufgezeichnet und stehen zur Verfügung, um ein umfassendes Bild der lebensl.n-Lernerfahrungen zu erstellen und frei zu geben.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-openbadges)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-openbadges)
 
 :::row:::
   :::column span="2":::
-    ![Bild der verfügbaren Abzeichen](../assets/images/open-badges-1.png)  
+    ![Abbildung der verfügbaren Badges](../assets/images/open-badges-1.png)  
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Verliehene Abzeichen-Ansicht](../assets/images/open-badges-2.png)
+    ![Ansicht "Vergebene Badges"](../assets/images/open-badges-2.png)
 :::column-end:::
 :::row-end:::
 
 ## <a name="poll"></a>Umfrage 
 
-Poll ist eine benutzerdefinierte Microsoft Teams- [Messaging Erweiterungs](../messaging-extensions/what-are-messaging-extensions.md) Anwendung, mit der Sie Umfragen in einem Chat oder Kanal schnell erstellen und senden können, um Team Meinungen und-Einstellungen zu sammeln. Die APP wird für alle Teams-Platt Form Clients-Desktop, Browser, IOS und Android-unterstützt und ist bereit für die Bereitstellung als Teil Ihres Microsoft 365-Abonnements.
+Bei "Umfrage" [](../messaging-extensions/what-are-messaging-extensions.md) handelt es sich um eine benutzerdefinierte Microsoft Teams-Messaging-Erweiterungs-App, mit der Sie schnell Umfragen in einem Chat oder kanal erstellen und senden können, um Die meinungs- und präferenzen des Teams zu sammeln. Die App wird auf allen Microsoft Teams-Plattformclients unterstützt – Desktop, Browser, iOS und Android – und kann im Rahmen Ihres Microsoft 365-Abonnements zur Verfügung stehen.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-poll-app)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-poll-app)
 
 :::row:::
   :::column span="1":::
-    ![Ansicht "Umfrage in Teams erstellen"](../assets/images/poll-app-template-compose-view.gif)  
+    ![Erstellen einer Umfrage in der Ansicht "Teams"](../assets/images/poll-app-template-compose-view.gif)  
 :::column-end:::
 :::row-end:::
 
 ## <a name="quick-responses"></a>Schnelle Antworten
 
-Schnelle Antworten ist eine Microsoft Teams-APP, die eine robuste Lösung für die effektive Beantwortung häufig gestellter Fragen von Benutzern (FAQs) bietet. Anstatt jede Abfrage manuell zu beantworten und ständig wiederkehrende Informationen zu erhalten, erstellt die APP eine Bibliothek mit Antworten für eine interaktive Benutzeroberfläche über Microsoft Teams- [Messaging Erweiterungen](../messaging-extensions/what-are-messaging-extensions.md).
+Schnelle Antworten ist eine Microsoft Teams-App, die eine robuste Lösung für die effektive Beantwortung häufig gestellter Fragen (FAQs) der Benutzer bietet. Anstatt jede Abfrage manuell und fortlaufend wiederholte Informationen zu beantworten, erstellt die App eine Bibliothek mit Antworten für eine interaktive Benutzererfahrung über [Teams-Messaging-Erweiterungen.](../messaging-extensions/what-are-messaging-extensions.md)
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
-![Beispielansicht der Antworten](../assets/images/quick-responses.png)
+![Beispielansicht von Antworten](../assets/images/quick-responses.png)
 
-## <a name="rapid-assist-9734"></a>Schnelle Unterstützung &#9734;
+## <a name="rapid-assist-9734"></a>Rapid Assist &#9734;
 
-Rapid Assist ist eine Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) -basierte APP, die es den Kunden gegenüber Mitarbeitern ermöglicht, schnell eine Verbindung mit den Experten herzustellen, um schnelle Antworten zu erhalten, Informationen zu suchen, offene Anforderungen zu verfolgen und Experten das Empfangen von Benachrichtigungen zu ermöglichen, damit Sie schnell einen Anruf erhalten, um Hilfe bei der Beantwortung von Fragen zu erhalten. Die APP, die mit Microsoft [Power apps](/powerapps/powerapps-overview) und [Power Automation](/power-automate/getting-started)erstellt wurde, ist tief in Microsoft Teams integriert, sodass Unternehmen problemlos Frontline-Mitarbeiter mit Unternehmenskontakten verbinden können, um Kundenanfragen zu lösen und eine großartige Kundenerfahrung zu liefern. 
+Rapid Assist ist eine Microsoft [Power Platform-basierte](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) App, mit der sich kundenorientierte Mitarbeiter schnell mit den Experten in Verbindung bringen können, um schnell Antworten zu erhalten, nach Informationen zu suchen, offene Anfragen zu verfolgen und Experten zu ermöglichen, Benachrichtigungen zu erhalten, um schnell einen Anruf zu erhalten, um Fragen zu beantworten. Die App, die mit Microsoft [Power Apps](/powerapps/powerapps-overview) und [Power Automate](/power-automate/getting-started)erstellt wurde, ist tief in Microsoft Teams integriert, damit Organisationen problemlos Front-Line-Mitarbeiter mit Unternehmenskontakten verbinden können, um Kundenanfragen zu lösen und eine großartige Kundenerfahrung zu bieten. 
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-rapid-assist)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-rapid-assist)
 
 :::row:::
    :::column span="":::
-     ![Benutzeroberflächen-Anforderungs Schnittstelle](../assets/images/EndUserHome.png)
+     ![Anforderungsschnittstelle für Endbenutzer](../assets/images/EndUserHome.png)
    :::column-end:::
    :::column span="":::
-      ![Ansicht "Sachverständigen Anforderung"](../assets/images/ExpertViewRequests.png)
+      ![Ansicht der Expertenanfrage](../assets/images/ExpertViewRequests.png)
    :::column-end:::
 :::row-end:::
 
-## <a name="reflect"></a>Reflektieren 
+## <a name="reflect"></a>Spiegeln 
 
-Reflect ist eine benutzerdefinierte Microsoft Teams- [Messaging Erweiterungs](../messaging-extensions/what-are-messaging-extensions.md) -APP, die Ihren Teammitgliedern eine sichere und integrative Ressource zur Verfügung stellt, um den Zustand Ihres emotionalen Wohlbefindens mit Kollegen und/oder Gruppenleitern direkt in Microsoft Teams zu teilen. Die APP ist in Kanal-, Gruppen-, Besprechungs-und 1:1-Chats verfügbar, und die Eincheck Antwort kann auf Public, private-to-Sender oder vollständig anonym festgelegt werden.
+Reflect ist eine [](../messaging-extensions/what-are-messaging-extensions.md) benutzerdefinierte Microsoft Teams-Messaging-Erweiterungs-App, die ihren Teammitgliedern eine sichere und inklusive Ressource bietet, um den Zustand ihres gefühlsmäßigen Wohlbefindens mit Kollegen und/oder Gruppenleitern direkt in Teams zu teilen. Die App ist in Kanal-, Gruppen-, Besprechungs- und 1:1-Chats verfügbar, und die Eincheckantwort kann auf öffentlich, privat-zu-absender oder vollständig anonym festgelegt werden.
 
-[Get it on GitHub](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect)
+[Abrufen auf GitHub](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect)
 
 :::row:::
     :::column:::
-    **Umfrage zum Wohlbefinden**
+    **Well-Being-Umfrage**
     
-    ![Reflektieren der APP-Benutzerumfrage](../assets/images/reflect-app-user-poll.png)
+    ![Spiegeln sie die Benutzerumfrage der App wider](../assets/images/reflect-app-user-poll.png)
     :::column-end:::
 :::row-end:::
 
-## <a name="remote-support"></a>Remote Unterstützung
+## <a name="remote-support"></a>Remoteunterstützung
 
-Remote Support ist ein [Microsoft Teams-bot](../bots/what-are-bots.md) , der eine fokussierte Schnittstelle zwischen Support anfordernden in Ihrer Organisation und dem internen Support Team bereitstellt.  Endbenutzer können Anforderungen zur Unterstützung übermitteln, bearbeiten oder zurückziehen, und das Support Team kann Anforderungen in der Microsoft Teams-Plattform beantworten, verwalten und aktualisieren.
+Remote support is a [Microsoft Teams bot](../bots/what-are-bots.md) that provides a focused interface between support requesters throughout your organization and the internal support team.  Endbenutzer können Supportanfragen übermitteln, bearbeiten oder zurückziehen, und das Supportteam kann alle Anfragen innerhalb der Teams-Plattform beantworten, verwalten und aktualisieren.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-remotesupport)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-remotesupport)
 
 :::row:::
   :::column span="2":::
-    ![Support Formular anfordern](../assets/images/remote-support-request-form.png)  
+    ![Supportformular anfordern](../assets/images/remote-support-request-form.png)  
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Anfordern von Supportdetails](../assets/images/remote-support-request-details.jpg)
+    ![Supportdetails anfordern](../assets/images/remote-support-request-details.jpg)
 :::column-end:::
 :::row-end:::
 
-## <a name="request-a-team"></a>Anforderungs-a-Team
+## <a name="request-a-team"></a>Request-a-team
 
-Request-a-Team ist eine Microsoft Teams-APP, die die neue TEAMERSTELLUNG für Ihre Unternehmensorganisation optimiert. Die App unterstützt die Standardisierung und bewährte Methoden beim Erstellen neuer Team Instanzen durch die Integration eines assistentengestützten Anforderungsformulars, eines eingebetteten Genehmigungsprozesses, eines Anforderungsstatus Dashboards und automatisierter Team Builds.
+"Team anfordern" ist eine Microsoft Teams-App, die die Erstellung neuer Teams für Ihre Unternehmensorganisation optimiert. Die App unterstützt Standardisierung und bewährte Methoden beim Erstellen neuer Teaminstanzen durch die Integration eines assistentengesteuerten Anforderungsformulars, eines eingebetteten Genehmigungsprozesses, eines Anforderungsstatusdashboards und automatisierter Teambuilds.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-requestateam)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-requestateam)
 
 :::row:::
   :::column span="2":::
-    ![Ansicht "Startseite" des Anforderungs-a-Teams](../assets/images/request-a-team-two.jpg)
+    ![Ansicht der Startseite "Team anfordern"](../assets/images/request-a-team-two.jpg)
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Page-Ansicht des Assistenten für Anforderungs-a-Team](../assets/images/request-a-team-three.png)
+    ![Seitenansicht des Assistenten zum Anfordern eines Teams](../assets/images/request-a-team-three.png)
 :::column-end:::
 :::row-end:::
 
 ## <a name="scrums-for-channels"></a>Scrums für Kanäle
 
-Scrums für Channels ist eine Scrum Assistant-APP, mit der Benutzer Scrums in Kanälen in Microsoft Teams planen und ausführen können. Die APP eignet sich hervorragend für Remoteteams und Teams aus Mitgliedern aus unterschiedlichen geografischen Standorten und Zeitzonen, um tägliche Updates freizugeben und die Teilnahme an Scrum-Stand-up-Besprechungen sicherzustellen.
+Scrums für Kanäle ist eine Scrum-Assistenten-App, mit der Benutzer Scrums in Kanälen in Microsoft Teams planen und ausführen können. Die App ist ideal für Remoteteams und Teams, die aus Mitgliedern aus verschiedenen geografischen Standorten und Zeitzonen bestehen, um tägliche Updates gemeinsam zu nutzen und die Teilnahme an besprechungsgesteuerten Stand-up-Besprechungen sicherzustellen.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforchannels)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforchannels)
 
 > [!NOTE]
-> Wenn Sie Scrum-Besprechungen in einem Gruppenchat durchführen möchten, lesen Sie bitte unsere [Scrums für Gruppenchat](#scrums-for-group-chat) -App-Vorlage.
+> Informationen zum Durchführen von Scrumbesprechungen in einem Gruppenchat finden Sie in der [Appvorlage "Scrums für Gruppenchat".](#scrums-for-group-chat)
 
 :::row:::
   :::column span="2":::
@@ -515,101 +526,101 @@ Scrums für Channels ist eine Scrum Assistant-APP, mit der Benutzer Scrums in Ka
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Scrums für Channels-Teammitglieder-Statusansicht](../assets/images/scrum-for-channels-status.png)
+    ![Scrums für Die Statusansicht des Kanalteammitglieds](../assets/images/scrum-for-channels-status.png)
 :::column-end:::
 :::row-end:::
 
-## <a name="scrums-for-group-chat"></a>Scrums für Gruppen Chat
+## <a name="scrums-for-group-chat"></a>Scrums für Gruppenchat
 
 > [!NOTE]
-> Die Scrums-Status-App-Vorlage wurde aktualisiert und ist jetzt Scrums für Gruppen Chat.
+> Die Vorlage "Scrums Status"-App wurde aktualisiert und heißt jetzt Scrums für Gruppenchat.
 
-Scrums für Gruppenchat ist ein unterstützter Scrum-Assistent, mit dem Gruppenchat Mitglieder asynchrone Stand-up-Besprechungen ausführen und ihre täglichen Aktualisierungen problemlos freigeben können. Damit können alle Mitglieder des Gruppenchats an Scrum mitwirken und die von anderen Benutzern im laufenden Scrum vorgenommenen Aktualisierungen anzeigen.
+Scrums für Gruppenchat ist ein unterstützender Scrum-Assistent, mit dem Gruppenchatmitglieder asynchrone Stand-up-Besprechungen ausführen und ihre täglichen Updates problemlos freigeben können. Es ermöglicht allen Mitgliedern des Gruppenchats, zum Scrum beizutragen und die Von anderen im ausgeführten Scrum vorgenommenen Updates zu sehen.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforgroupchat)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforgroupchat)
 
-![Demo für Scrums für Gruppen Chat](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
+![Scrums für Gruppenchatdemo](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
 ## <a name="share-now"></a>Jetzt freigeben 
 
-Die Share now-App fördert den positiven Austausch von Informationen zwischen Kollegen, indem Sie Ihren Benutzern das einfache Freigeben von Inhalten in der Teams-Umgebung ermöglicht. Benutzer greifen die APP an, um für Teammitglieder interessante Elemente freizugeben, neue freigegebene Inhalte zu ermitteln, Einstellungen festzulegen und Favoriten für die spätere Lektüre zu bookmarken.
+Die App "Jetzt freigeben" fördert den positiven Austausch von Informationen zwischen Kollegen, indem Ihren Benutzern das einfache Freigeben von Inhalten in der Teams-Umgebung ermöglicht wird. Benutzer interagieren mit der App, um elemente von Interesse mit Teammitgliedern zu teilen, neue freigegebene Inhalte zu entdecken, Einstellungen und Lesezeichenfavoriten zum späteren Lesen zu setzen.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-sharenow)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-sharenow)
 
 ![Auswählen der Inhaltsansicht](../assets/images/share-now-suggested-content.png)
 
 ## <a name="sharepoint-list-search"></a>SharePoint-Listensuche
 
-Die Zusammenarbeit in Microsoft Teams verweist häufig auf Informationen, die in Elementen in einer SharePoint-Liste enthalten sind. Wenn Sie einfach einen Link zu dem fraglichen Element einfügen, wird jeder dazu gezwungen, den Kontext von der Unterhaltung Weg zu wechseln, die benötigten Informationen zu finden und dann zu Teams zurückzukehren, um die Unterhaltung fortzusetzen. Während die Unterhaltung in der Regel fortgesetzt wird, müssen die Benutzer mehrmals zurück zum Referenzelement wechseln, um neue Kommentare zu überprüfen und ihre Erinnerungen an die im Element enthaltenen Informationen zu aktualisieren. Dieser Kontextwechsel schafft ein Hindernis für eine reibungslose Zusammenarbeit und ist ein Rezept für Dinge, die durch die Risse fallen.
+Die Zusammenarbeit in Microsoft Teams verweist häufig auf Informationen, die in Elementen in einer SharePoint-Liste enthalten sind. Durch das einfache Einf?nen eines Links zu dem in Frage stehenden Element wird jeder dazu verf?ungen, den Kontext von der Unterhaltung weg zu wechseln, die erforderlichen Informationen zu finden und dann zu Teams zurückzukehren, um die Unterhaltung fortzufahren. Wenn die Unterhaltung fortgesetzt wird, müssen Die Benutzer in der Regel mehrmals zum Referenzelement wechseln, um neue Kommentare zu überprüfen und die darin enthaltenen Informationen zu aktualisieren. Dieser Kontextwechsel schafft eine Barriere für eine reibungslose Zusammenarbeit und ist ein Rezept für Dinge, die durch die Risse fallen.
 
-Um diese Schmerzen zu lindern, stellen wir Ihnen gerne die Vorlage "Listensuche-app" zur Verfügung. Millionen von Benutzern verwenden SharePoint, um einige der wichtigsten Workflows in ihren Organisationen zu nutzen. Die Zusammenarbeit in Listen kann jedoch besonders mühsam sein. Mithilfe der Vorlage "Listensuche-app" in Microsoft Teams können Benutzerinformationen aus SharePoint-Listenelementen direkt in einer Chat Unterhaltung einfügen, um die Kontext Umstellung zu lindern, die beim einfachen Einfügen eines Links in einen Chat verursacht wird. Die Informationen werden als leicht lesbare automatisch formatierte Karte eingefügt, sodass Ihre Benutzer in der Unterhaltung aktiv bleiben können.
+Um diese Probleme zu mindern, freuen wir uns, Ihnen die App-Vorlage "Listensuche" zur Hilfe zu bringen. Millionen von Benutzern verwenden SharePoint, um einige der wichtigsten Workflows in ihren Organisationen zu unterstützen. Die Zusammenarbeit an Listen kann jedoch besonders mühsam sein. Mithilfe der Listensuche-App-Vorlage in Microsoft Teams können Benutzer Informationen aus SharePoint-Listenelementen direkt in eine Chat unterhaltung einfügen, um den Kontextwechsel zu mindern, der beim einfachen Einfügen eines Links in einen Chat verursacht wird. Die Informationen werden als leicht lesbare, automatisch formatierte Karte eingefügt, die Ihren Benutzern dabei hilft, an der Unterhaltung zu bleiben.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![Such-App auflisten](../assets/images/list-search-template.png)
 
-## <a name="staff-check-ins"></a>Mitarbeiter Check-ins
+## <a name="staff-check-ins"></a>Einchecken von Mitarbeitern
 
-Personal Check-ins ist eine [Power apps](/powerapps/powerapps-overview)-basierte APP, die die Aufsicht über die Kommunikation zwischen Ihrem Unternehmen und Ihrem Außendienst Personal ermöglicht. Mitarbeiter können ganz einfach zeitkritische Informationen und Statusaktualisierungen entweder auf einer geplanten oder Ad-hoc-Basis direkt in Microsoft Teams bereitstellen. Die App unterstützt Echt Zeit Standorte, Fotos und Notizen sowie Erinnerungsbenachrichtigungen und automatisierte Workflows.
+Bei Den Einchecken von Mitarbeitern handelt es sich um [eine Power Apps-basierte](/powerapps/powerapps-overview)App, die die Aufsichtskommunikation zwischen Ihrem Geschäfts- und Außenpersonal ermöglicht. Mitarbeiter können auf einfache Weise zeitkritische Informationen und Statusaktualisierungen entweder geplant oder ad-hoc direkt aus Teams bereitstellen. Die App unterstützt Echtzeitspeicherort, Fotos und Notizen sowie Erinnerungsbenachrichtigungen und automatisierte Workflows.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 
-![Eincheck Ansicht erstellen](../assets/images/staff-check-ins-create.png)
+![Erstellen der Eincheckansicht](../assets/images/staff-check-ins-create.png)
 
 ## <a name="survey"></a>Umfrage
 
-Survey ist eine benutzerdefinierte Microsoft Teams- [Messaging Erweiterungs](../messaging-extensions/what-are-messaging-extensions.md) -APP, mit der Sie eine Umfrage in einem Chat oder einem Kanal erstellen können, um Daten zu sammeln und Einblicke in Aktionen zu erhalten.  Die APP wird für alle Teams-Platt Form Clients-Desktop, Browser, IOS und Android-unterstützt und ist bereit für die Bereitstellung als Teil Ihres Microsoft 365-Abonnements.  
+Umfrage ist eine [](../messaging-extensions/what-are-messaging-extensions.md) benutzerdefinierte Microsoft Teams-Messaging-Erweiterungs-App, mit der Sie eine Umfrage in einem Chat oder kanal erstellen können, um Daten zu sammeln und einblicke zu erhalten.  Die App wird auf allen Microsoft Teams-Plattformclients unterstützt – Desktop, Browser, iOS und Android – und kann im Rahmen Ihres Microsoft 365-Abonnements zur Verfügung stehen.  
 
-[Get it on GitHub](https://github.com/OfficeDev/Microsoft-Teams-Survey-app)
+[Abrufen auf GitHub](https://github.com/OfficeDev/Microsoft-Teams-Survey-app)
 
 :::row:::
   :::column span="2":::
-    ![Ansicht "Umfrage in Teams erstellen"](../assets/images/survey-app-template-compose-view.gif)
+    ![Erstellen einer Umfrage in der Ansicht "Teams"](../assets/images/survey-app-template-compose-view.gif)
 :::column-end:::
 :::row-end:::
 
-## <a name="virtual-rounding-9734"></a>Virtueller Rundungs &#9734;
+## <a name="virtual-rounding-9734"></a>Virtuelles Rundungs&#9734;
 
-Krankenhaus-und Notruf Raum Anbieter machen Dutzende und oft hunderte von "Runden" pro Tag. Diese Quick Check-ins für Patienten sollen eine Statusüberprüfung für den Patienten ermöglichen und sicherstellen, dass die Belange des Patienten berücksichtigt werden. Das Runden ist eine wesentliche Vorgehensweise, um sicherzustellen, dass Patienten von mehreren Arten von Anbietern überwacht werden, Sie stellen jedoch einen großen Abfluss an PSA dar, da für jeden Besuch von jedem Anbieter eine neue Maske und neue Handschuhe verwendet werden müssen. Mit diesen app-Vorlagen können medizinische Mitarbeiter problemlos runden virtuell durchführen, und zwar über eine Microsoft Teams-Besprechung zwischen dem Anbieter und dem Patienten.
+Krankenhaus- und Notaufnahmeanbieter nehmen Dutzende und häufig Hunderte von "Runden" pro Tag vor. Diese schnellen Einchecken für Patienten sollen eine Statusüberprüfung der Behandlung des Patienten ermöglichen und sicherstellen, dass die Bedenken des Patienten behoben werden. Die Rundung ist zwar eine wesentliche Methode, um sicherzustellen, dass Patienten von mehreren Anbietertypen überwacht werden, sie stellen jedoch eine große Ppe dar, da für jeden Besuch, von jedem Anbieter eine neue Maske und neue Abläufe verwendet werden müssen. Mit diesen App-Vorlagen können Medizinischer Mitarbeiter über eine Microsoft Teams-Besprechung zwischen dem Anbieter und dem Patienten auf einfache Weise Runden durchführen.
 
-Die virtuelle Rundungs Lösung wird auch im Microsoft Health and Life Sciences- [Blogbeitrag](https://aka.ms/teamsvirtualrounding)referenziert.
+Auf die virtuelle Rundungslösung wird auch im Microsoft Health and Life [Science-Blogbeitrag verwiesen.](https://aka.ms/teamsvirtualrounding)
 
-[Get it on GitHub](https://github.com/SmartterHealth/Virtual-Rounding)
+[Abrufen auf GitHub](https://github.com/SmartterHealth/Virtual-Rounding)
 
-![Virtuelle Rundung](../assets/images/virtual-rounding-overview.png)
+![Virtuelles Runden](../assets/images/virtual-rounding-overview.png)
 
 ## <a name="visitor-management"></a>Besucherverwaltung
 
-Die Visitor Management-APP ermöglicht Ihrer Organisation und ihren Mitarbeitern das einfache und effiziente Verwalten des vor-Ort-Besucher Prozesses direkt von Microsoft Teams aus. Die APP ermöglicht es Mitarbeitern, Besucher Anforderungen zu erstellen, einen Anforderungsstatus über das Besucher Dashboard zentral nachzuverfolgen und Echtzeitbenachrichtigungen zu erhalten, wenn ein Besucher ankommt.
+Mit der Besucherverwaltungs-App können Ihre Organisation und Ihre Mitarbeiter den Besucherprozess vor Ort ganz einfach und effizient direkt in Microsoft Teams verwalten. Die App ermöglicht Mitarbeitern das Erstellen von Besucheranfragen, das zentrale Nachverfolgen eines Anforderungsstatus über das Besucherdashboard und das Empfangen von Echtzeitbenachrichtigungen, wenn ein Besucher eintrifft.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-visitormanagement)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-app-visitormanagement)
 
 :::row:::
   :::column span="2":::
-    ![Erstellen einer Anforderungs Ansicht](../assets/images/visitor-management-create-request.png)
+    ![Erstellen einer Anforderungsansicht](../assets/images/visitor-management-create-request.png)
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Benachrichtigung über Besucher Ankünfte](../assets/images/visitor-management-notify-host.png)
+    ![Benachrichtigung über besucherantreffende Besucher](../assets/images/visitor-management-notify-host.png)
 :::column-end:::
 :::row-end:::
 
-## <a name="workplace-awards"></a>Workplace Awards
+## <a name="workplace-awards"></a>Workplace Award
 
-Workplace Awards ist eine Teams-App-Vorlage, die einen positiven Rahmen bietet, um die Anerkennung zu fördern und die Kultur der Mitarbeiter Anerkennung am modernen Arbeitsplatz zu fördern. Mit der App können Sie ein Employee Rewards-und Recognition (r&r)-Programm einrichten und verwalten, in dem Mitarbeiter Kollegen und ihre r-&r-Führungskraft ganz einfach benennen und unterstützen können, um eingereichte Nominierungen, Grant Awards und announce Recipients anzuzeigen.
+Workplace Award ist eine Teams-App-Vorlage, die einen positiven Rahmen bietet, um die Erkennung zu fördern und die Kultur der Anerkennung von Mitarbeitern am modernen Arbeitsplatz zu fördern. Mit der App können Sie ein Mitarbeiterpreis- und Anerkennungsprogramm (R&R) einrichten und verwalten, bei dem Mitarbeiter Kollegen problemlos ernennen und unterstützen können und Ihr R&R-Leiter eingereichte Benennungen anzeigen, Preise gewähren und Empfänger ankündigen kann.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards)
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards)
 
 :::row:::
   :::column span="2":::
-    ![Nominierungs Karte für Workplace Awards ](../assets/images/workplace-awards-nominate.png)
+    ![Workplace-Preis-Benennungskarte ](../assets/images/workplace-awards-nominate.png)
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Registerkarte "Workplace Awards List"](../assets/images/workplace-awards-champion-tab.png)
+    ![Registerkarte "Workplace-Preisliste"](../assets/images/workplace-awards-champion-tab.png)
 :::column-end:::
 :::row-end:::
 
-Haben Sie eine Idee für eine APP-Vorlage, die Sie sehen möchten? [Lassen Sie es uns bitte wissen](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
+Haben Sie eine Idee für eine App-Vorlage, die Sie sehen möchten? [Teilen Sie uns dies bitte mit.](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)
