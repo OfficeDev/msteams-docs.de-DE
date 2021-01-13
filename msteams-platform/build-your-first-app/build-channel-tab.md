@@ -5,12 +5,12 @@ description: Erstellen Sie mithilfe des Microsoft Teams Toolkits schnell einen M
 ms.author: lajanuar
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 2ad0474859118f302a39e823f7669dc54061d525
-ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
+ms.openlocfilehash: ae06217cf9ffd99ce94aff981fbbec19136d4aeb
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "49795454"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797876"
 ---
 # <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Erstellen eines Kanals und einer Gruppenregisterkarte für Microsoft Teams
 
@@ -183,8 +183,8 @@ Herzlichen Glückwunsch! Sie verfügen über eine Teams-App mit einer Registerka
 * [Einbetten von Inhalten](../tabs/how-to/add-tab.md#tab-requirements)aus einer vorhandenen Web-App oder Webseite: Wir haben gezeigt, wie Sie neue Inhalte für eine Registerkarte erstellen, Aber Sie können auch Inhalte aus einer externen URL laden.
 * [Erstellen Sie eine nahtlose Registerkartenerfahrung:](../tabs/design/tabs.md)Lesen Sie die empfohlenen Richtlinien für das Entwerfen von Teams-Registerkarten.
 * [Erstellen von Registerkarten für Mobilgeräte:](../tabs/design/tabs-mobile.md)Hier erfahren Sie, wie Sie Registerkarten für Smartphones und Tablets entwickeln.
-* [Nutzen von Microsoft Teams-Daten mit der Microsoft Graph-API](https://docs.microsoft.com/graph/teams-concept-overview)
-* [Erstellen einer Registerkarte ohne das Toolkit](../tabs/how-to/add-tab.md)
+* [Erstellen einer Registerkarte ohne das Toolkit](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
+* [Nutzen von Microsoft Teams-Daten mit Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
 
 ## <a name="next-lesson"></a>Nächste Lektion
 

@@ -5,12 +5,12 @@ description: Erstellen Sie mithilfe des Microsoft Teams Toolkits schnell eine pe
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: ae64e2a8216d2b91ec08bd9f4418f7d640d5b189
-ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
+ms.openlocfilehash: 86be39503ec4e4fde5fafe63f83b3a4fb6d956bf
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "49795447"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797806"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Erstellen einer persönlichen Registerkarte für Microsoft Teams
 
@@ -177,11 +177,11 @@ Herzlichen Glückwunsch! Sie verfügen über eine Teams-App mit einer persönlic
 ## <a name="learn-more"></a>Weitere Informationen
 
 * [Authentifizieren von Registerkartenbenutzern mit SSO:](../tabs/how-to/authentication/auth-aad-sso.md)Wenn Nur autorisierte Benutzer Ihre Registerkarte anzeigen möchten, richten Sie einmaliges Anmelden (Single Sign-On, SSO) über Azure Active Directory (AD) ein.
-* [Einbetten von Inhalten](../tabs/how-to/add-tab.md#tab-requirements)aus einer vorhandenen Web-App oder Webseite: Wir haben gezeigt, wie Sie neue Inhalte für eine persönliche Registerkarte erstellen, Aber Sie können auch Inhalte von einer externen URL laden.
+* [Einbetten von Inhalten](../tabs/how-to/tab-requirements.md)aus einer vorhandenen Web-App oder Webseite: Wir haben gezeigt, wie Sie neue Inhalte für eine persönliche Registerkarte erstellen, Aber Sie können auch Inhalte von einer externen URL laden.
 * [Erstellen Sie eine nahtlose Erfahrung für Ihre Registerkarte:](../tabs/design/tabs.md)Lesen Sie die empfohlenen Richtlinien für das Entwerfen von Teams-Registerkarten.
 * [Erstellen von Registerkarten für Mobilgeräte:](../tabs/design/tabs-mobile.md)Hier erfahren Sie, wie Sie Registerkarten für Smartphones und Tablets entwickeln.
-* [Nutzen von Microsoft Teams-Daten mit der Microsoft Graph-API](https://docs.microsoft.com/graph/teams-concept-overview)
-* [Erstellen einer Registerkarte ohne das Toolkit](../tabs/how-to/add-tab.md)
+* [Nutzen von Microsoft Teams-Daten mit Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Erstellen einer Registerkarte ohne das Toolkit](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
 
 ## <a name="next-lesson"></a>Nächste Lektion
 

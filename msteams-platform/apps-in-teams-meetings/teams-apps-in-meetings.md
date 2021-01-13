@@ -1,106 +1,106 @@
 ---
-title: Apps in Microsoft Teams-Besprechungen
+title: Apps in Teams-Besprechungen
 author: laujan
-description: Übersicht über apps in Microsoft Teams-Besprechungen basierend auf der Rolle des Teilnehmers und Benutzers
+description: Übersicht über Apps in Teams-Besprechungen basierend auf der Teilnehmer- und Benutzerrolle
 ms.topic: overview
 ms.author: lajanuar
-keywords: Teams-apps-Besprechungen Benutzer Teilnehmer-Rollen-API
-ms.openlocfilehash: 8a1b5b7d95e91273c794a2aa86a51e0ddeb1c610
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+keywords: Teams-Apps-Besprechungen – Benutzerteilnehmer-Rollen-API
+ms.openlocfilehash: 217737cbbf73104d4d78cf817e6df0244229c53c
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605170"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797757"
 ---
-# <a name="apps-in-teams-meetings"></a>Apps in Microsoft Teams-Besprechungen
+# <a name="apps-in-teams-meetings"></a>Apps in Teams-Besprechungen
 
-Besprechungen sind der Schlüssel zur Produktivität in Microsoft Teams. Sie ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikation und gemeinsames Feedback in einem integrativen und aktiven Forum. Als Entwickler können Sie [konfigurierbare Registerkarten](../tabs/what-are-tabs.md#how-do-tabs-work)-, [bot](../bots/what-are-bots.md)-und [Nachrichten Erweiterungs](../messaging-extensions/what-are-messaging-extensions.md) Anwendungen erstellen, um die Besprechungs Erfahrung von Teams zu verbessern und zu bereichern. Besprechungs Benutzer können über den Tab-Katalog auf apps zugreifen, um relevante Szenarien wie das vorab Staging einer Kanban-Karte, das Starten eines in-Meeting-Aktions fähigen Dialogs oder das Erstellen einer Umfrage nach der Besprechung zu ermöglichen. Ihre Besprechungs-App kann eine Benutzeroberfläche für jede Phase des Besprechungs Lebenszyklus basierend auf dem Teilnehmerstatus bereitstellen.
+Besprechungen sind für die Produktivität in Teams entscheidend. Sie ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikation und geteiltes Feedback in einem inklusiven und aktiven Forum. Als Entwickler können Sie konfigurierbare Anwendungen für [](../messaging-extensions/what-are-messaging-extensions.md) [Registerkarten,](../tabs/what-are-tabs.md#how-do-tabs-work) [Bots](../bots/what-are-bots.md)und Nachrichtenerweiterungen erstellen, um eine Besprechungserfahrung in Teams zu verbessern und zu erweitern. Besprechungsbenutzer können über den Registerkartenkatalog auf Apps zugreifen, um relevante Szenarien wie die Vorabbereitstellung eines Kanban-Board, das Starten eines Dialogfelds mit Aktionen in Besprechungen oder das Erstellen einer Umfrage nach der Besprechung zu ermöglichen. Ihre Besprechungs-App kann eine Benutzererfahrung für jede Phase des Besprechungslebenszyklus basierend auf dem Teilnehmerstatus bereitstellen.
 
-Die Erweiterungs Center für die Besprechungs-App für Teams werden auf drei Konzepte umstellen:
+Die Erweiterbarkeit der Besprechungs-App von Teams zentriert sich auf drei Konzepte:
 
-✔ **Besprechungs Lebenszyklus** – vor, während und nach dem Besprechungszeit Rahmen.  
-✔ **Teilnehmerrolle** : Besprechungsorganisator, Referent oder Teilnehmer.  
-✔ **Benutzertyp** – Benutzer im Mandanten, im Gast, im Verbund oder im anonymen Team.
+✔ **Besprechungslebenszyklus** – vor, während und nach Besprechungszeitrahmen.  
+✔ Rolle **"Teilnehmer"** – Besprechungsorganisator, Organisator oder Teilnehmer.  
+✔ **Benutzertyp –** Mandanten-, Gast-, Verbund- oder anonymer Teams-Benutzer.
 
 <!-- markdownlint-disable MD001 -->
-### <a name="meeting-lifecycle-scenarios"></a>Besprechungs Lebenszyklus-Szenarien
+### <a name="meeting-lifecycle-scenarios"></a>Szenarien für den Besprechungslebenszyklus
 
 ## <a name="tabs"></a>Registerkarten
 
 > [!IMPORTANT]
-> Wie bei allen Registerkarten Anwendungen muss Ihre APP dem [SSO-Authentifizierungs Fluss](../tabs/how-to/authentication/auth-aad-sso.md) für Teams für Registerkarten entsprechen.
+> Wie bei allen Registerkartenanwendungen muss Ihre App den [Teams-SSO-Authentifizierungsfluss](../tabs/how-to/authentication/auth-aad-sso.md) für Registerkarten befolgen.
 
 > [!NOTE]
-> Mobile Clients unterstützen Registerkarten nur in Pre-und Post-Besprechungs Oberflächen. Die in-Meeting-Erlebnisse (in-Meeting-Dialog und-Panel) auf mobilen Geräten werden in Kürze verfügbar sein.
+> Mobile Clients unterstützen Registerkarten nur in Oberflächen vor und nach Besprechungen. Die Besprechungserfahrungen (Dialogfeld und Bereich in Besprechungen) auf mobilgeräten werden in Kürze verfügbar sein.
 
 ### <a name="pre-meeting-app-experience"></a>App-Erfahrung vor der Besprechung
 
-**Erfahrung vor der Besprechung:**
+**Vor der Besprechung:**
 
-![Erfahrung vor der Besprechung](../assets/images/apps-in-meetings/PreMeeting.png)
+![Benutzererfahrung vor der Besprechung](../assets/images/apps-in-meetings/PreMeeting.png)
 
-**Registerkarte "Pre-Meeting":**
+**Registerkarte "Pre-meeting":**
 
 ![Registerkartenansicht vor der Besprechung](../assets/images/apps-in-meetings/PreMeetingTab.png)
 
-✔ Berechtigte Benutzer können über den Tab-Katalog auf zwei Arten apps zu einer Besprechung hinzufügen:
+✔ Benutzer mit Berechtigung können apps zu einer Besprechung über den Registerkartenkatalog auf zwei Arten hinzufügen:
 
-&emsp;&emsp;&#9679; über die Registerkarte **Details** im Planungsformular für Teams.
+&emsp;&emsp;&#9679; Über die Registerkarte **"Details"** im Teams-Planungsformular.
 
-&emsp;&emsp;&#9679; über die Registerkarte Besprechungs **Chat** in einer vorhandenen Besprechung.</br> </br>
+&emsp;&emsp;&#9679; Über die Registerkarte **"Besprechungschat"** in einer vorhandenen Besprechung.</br> </br>
 
-Auf ✔ Registerkarten-Apps können in Besprechungs **Details** und **Chats** -Seiten mithilfe einer Plus-Symbolschaltfläche (➕) zugegriffen werden. |
+✔ Registerkarten-Apps können auf  **Besprechungsdetails-** und Chatseiten über eine Schaltfläche für ein Pluszeichen (➕) zugegriffen werden.|
 
-✔ Registerkartenlayout sollte in einem organisierten Zustand sein, wenn es mehr als zehn Umfragen oder Umfragen gibt.
+✔ Registerkartenlayout sollte sich in einem organisierten Zustand befinden, wenn mehr als zehn Umfragen oder Umfragen durchgeführt werden.
 
 ### <a name="in-meeting-app-experience"></a>In-Meeting-App-Erfahrung
 
-✔ Besprechungs-apps werden in der oberen oberen Leiste des Chatfensters und als in-Meeting-Registerkarten Darstellung über die Registerkarte "in-Meeting" gehostet. Wenn Benutzer eine Registerkarte zu einer Besprechung über den Registerkarten Katalog hinzufügen, werden apps, die **während der Besprechungs** Erfahrung sind, angezeigt.
+✔ Besprechungs-Apps werden in der oberen oberen Leiste des Chatfensters und als Registerkartenerfahrung in Besprechungen über die Registerkarte "In-Meeting" gehostet. Wenn Benutzer einer Besprechung über den Registerkartenkatalog  eine Registerkarte hinzufügen, werden Apps angezeigt, die sich während der Besprechungsoberfläche befinden.
 
-✔ Berechtigte Benutzer können während der Besprechung apps hinzufügen.
+✔ Berechtigte Benutzer können während der Besprechung Apps hinzufügen.
 
-✔, Wenn Sie im Kontext einer Besprechung geladen werden, können apps das Microsoft Teams-Client-SDK nutzen, um auf die `meetingId` `userMri` zu zugreifen und `frameContext` die Benutzeroberfläche entsprechend zu rendern.
+✔ Im Kontext einer Besprechung geladen werden, können Apps das Teams-Client-SDK verwenden, um auf das zu greifen und die Erfahrung entsprechend `meetingId` `userMri` zu `frameContext` rendern.
 
-✔ Das Exportieren eines Ergebnisses einer Umfrage oder Umfragen sollte den Benutzern mitteilen, dass die Ergebnisse erfolgreich heruntergeladen wurden.
+✔ Exportieren eines Ergebnisses einer Umfrage oder Umfrage sollte die Benutzer darüber informieren, dass die Ergebnisse erfolgreich heruntergeladen wurden.
 
-✔, Dass eine app in einer Teams-Besprechung in zwei Bereichen angezeigt wird:
+✔, damit eine App in einer Besprechung in Teams in zwei Bereichen sichtbar ist:
 
-&emsp;&emsp;&#9679; **Seitenbereich**. </br>
+&emsp;&emsp;&#9679; **Seitenbereich .** </br>
 
 > [!NOTE]
-> Wenn Ihr _App-Manifest_ angibt, dass Ihre Registerkarte [für den Seitenbereich optimiert](create-apps-for-teams-meetings.md#during-a-meeting)ist, wird Sie angezeigt. Es kann auch Teil einer Erfahrung mit Freigabe Schacht sein, die bestimmten Entwurfsrichtlinien unterliegt.
+> Wenn Ihr _App-Manifest_ angibt, dass Ihre Registerkarte für [den](create-apps-for-teams-meetings.md#during-a-meeting)Seitenbereich optimiert ist, wird sie dort angezeigt. Sie kann auch Teil einer Share-Tray-Erfahrung sein, die bestimmten Entwurfsrichtlinien unterliegt.
 
-&emsp;&emsp;&#9679; **in-Meeting-Dialog**. Verwenden Sie das in-Meeting-Dialogfeld, um Aktions Inhalte für Besprechungsteilnehmer zu präsentieren. *Siehe* [Erstellen von Apps für Microsoft Teams-Besprechungen](create-apps-for-teams-meetings.md).
+&emsp;&emsp;&#9679; **In-Meeting-Dialogfeld .** Verwenden Sie das Dialogfeld in der Besprechung, um Aktionen für Besprechungsteilnehmer anzuzeigen. *Siehe "Erstellen* [von Apps für Teams-Besprechungen".](create-apps-for-teams-meetings.md)
 
-**Besprechungs Erfahrung:**
+**In-Meeting-Erfahrung:**
 
-![Besprechungs Erfahrung](../assets/images/apps-in-meetings/in-meeting-experience.png)
+![In-Meeting-Erfahrung](../assets/images/apps-in-meetings/in-meeting-experience.png)
 
-![In-Meeting-Dialog Ansicht](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+![Ansicht "Besprechungsdialog"](../assets/images/apps-in-meetings/in-meeting-dialog.png)
 
-**In-Meeting-Aktion-Dialogfeld für Benutzer:**
+**Dialogfeld mit Aktionen in Besprechungen für Benutzer:**
 
-![Dialog Ansicht](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
+![Dialogansicht](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
 ### <a name="post-meeting-app-experience"></a>App-Erfahrung nach der Besprechung
 
-**Erfahrung nach der Besprechung:**
+**Nach der Besprechung:**
 
-![Post-Besprechungs Ansicht](../assets/images/apps-in-meetings/PostMeeting.png)
+![Ansicht nach der Besprechung](../assets/images/apps-in-meetings/PostMeeting.png)
 
-✔ Das Szenario für die Post-Meeting-App ähnelt der aktuellen Post-Meeting-Erfahrung mit dem zusätzlichen Vorteil, dass Registerkarten innerhalb der Oberfläche vorhanden sind. 
+✔ das Post-Meeting-App-Szenario ähnelt der aktuellen Oberfläche nach der Besprechung mit dem zusätzlichen Vorteil, dass Registerkarten innerhalb der Oberfläche vorhanden sind. 
 
-✔ Benutzer mit Berechtigungen können Apps aus dem Registerkarten Katalog einer Besprechung über die Registerkarte **Details** im Planungsformular für Teams und die Registerkarte Besprechungs **Chat** in einer vorhandenen Besprechung hinzufügen.
+✔ berechtigten Benutzern können Apps aus dem Registerkartenkatalog über die Registerkarte **"Details"**  im Planungsformular von Teams und die Registerkarte "Besprechungschat" in einer vorhandenen Besprechung zu einer Besprechung hinzufügen.
 
-✔ Registerkartenlayout sollte in einem organisierten Zustand sein, wenn es mehr als zehn Umfragen oder Umfragen gibt.
+✔ Registerkartenlayout sollte sich in einem organisierten Zustand befinden, wenn mehr als zehn Umfragen oder Umfragen durchgeführt werden.
 
 ### <a name="bots"></a>Bots
 
-Informationen zur bot-Implementierung finden Sie in der Dokumentation zu den [Bots in Microsoft Teams-Besprechungen](../bots/how-to/create-a-bot-for-teams.md#bots-in-teams-meetings) .
+Informationen zur Botimplementierung finden Sie in der [Dokumentation zu Bots in Teams-Besprechungen.](../bots/how-to/create-a-bot-for-teams.md#bots-in-teams-meetings)
 
 ### <a name="messaging-extensions"></a>Messaging-Erweiterungen
 
-Informationen zur Implementierung von Messaging Erweiterungen finden Sie in der Dokumentation zu Microsoft [Teams-Besprechungen unter Messaging Extensions](../messaging-extensions/how-to/create-messaging-extension.md#messaging-extensions-in-teams-meetings) .
+Informationen zur Implementierung von Messagingerweiterungen finden Sie in der Dokumentation zu [Messagingerweiterungen in Teams-Besprechungen.](../messaging-extensions/how-to/create-messaging-extension.md#messaging-extensions-in-teams-meetings)
 
 ## <a name="participant-roles-and-user-types-in-a-meeting"></a>Teilnehmerrollen und Benutzertypen in einer Besprechung
 
@@ -108,33 +108,35 @@ Informationen zur Implementierung von Messaging Erweiterungen finden Sie in der 
 
 ### <a name="participant-roles"></a>Teilnehmerrollen
 
-Sie können Ihre APP mit Teilnehmer spezifischer Autorisierung entwerfen. Beispielsweise kann nur ein Organisator und/oder Referent eine Umfrage in Besprechungen erstellen. Obwohl die Standardteilnehmer Einstellungen vom IT-Administrator einer Organisation festgelegt werden, kann es sein, dass ein Besprechungsorganisator die Einstellungen für eine bestimmte Besprechung ändern möchte. Organisatoren können diese Änderungen auf der Webseite mit den Besprechungsoptionen vornehmen.
+Sie können Ihre App mit teilnehmerspezifischer Autorisierung entwerfen. Beispielsweise kann nur ein Organisator und/oder Organisator eine Umfrage in Besprechungen erstellen. Obwohl die Standardeinstellungen für Teilnehmer vom IT-Administrator einer Organisation bestimmt werden, kann ein Besprechungsorganisator die Einstellungen für eine bestimmte Besprechung ändern. Organisatoren können diese Änderungen auf der Webseite für Besprechungsoptionen vornehmen.
 
-1. **Organisator**. Der Organisator plant eine Besprechung, legt die Besprechungsoptionen fest, ordnet besprechungsrollen zu und startet die Besprechung. Nur Benutzer mit einem M365-Konto (besitzen eine Microsoft Teams-Lizenz) können Organisatoren sein und Berechtigungen für Teilnehmer steuern.
-1. **Referent**. Referenten haben fast die gleichen Funktionen wie Organisatoren; ein Referent kann einen Organisator jedoch nicht aus der Sitzung entfernen oder Besprechungsoptionen für die Sitzung ändern. Standardmäßig haben Teilnehmer, die einer Besprechung beitreten, die Referenten Rolle.
-1. **Teilnehmer**. Ein Teilnehmer ist ein Benutzer, der zur Teilnahme an einer Besprechung eingeladen wurde, aber nicht berechtigt ist, als Referent zu fungieren. Teilnehmer können mit anderen Besprechungs Mitgliedern interagieren, jedoch keine Besprechungseinstellungen verwalten oder Inhalte freigeben.
+1. **Organizer**. Der Organisator plant eine Besprechung, legt die Besprechungsoptionen fest, weist Besprechungsrollen zu und startet die Besprechung. Nur Benutzer mit einem M365-Konto (besitzen eine Teams-Lizenz) können Organisatoren sein und die Teilnehmerberechtigungen steuern.
+1. **Presenter**. Organisatoren verfügen nahezu über die gleichen Funktionen wie Organisator. Ein Organisator kann jedoch keinen Organisator aus der Sitzung entfernen oder Besprechungsoptionen für die Sitzung ändern. Standardmäßig haben Teilnehmer, die einer Besprechung beitreten, die Rolle des Moderators.
+1. **Teilnehmer**. Ein Teilnehmer ist ein Benutzer, der zur Teilnahme an einer Besprechung eingeladen wurde, aber nicht berechtigt ist, als Moderator zu fungieren. Teilnehmer können mit anderen Besprechungsmitgliedern interagieren, aber keine Besprechungseinstellungen verwalten oder Inhalte freigeben.
 
-_Anzeigen_ [ **von Rollen in einer Microsoft Teams-Besprechung**](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
+_Siehe_ [ **"Rollen in einer Teams-Besprechung"**](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
 
-Sie können wie folgt auf die Seite  **Besprechungsoptionen** zugreifen:
+Sie können wie folgt auf die Seite  **"Besprechungsoptionen"** zugreifen:
 
-Wechseln Sie &#11200; in Microsoft Teams zu **Kalender** ![ Kalender Logo ](../assets/images/apps-in-meetings/calendar-logo.png) , wählen Sie eine Besprechung und dann **Besprechungsoptionen** aus.
+&#11200; In Teams wechseln Sie zum **Kalenderlogo** des Kalenders, wählen Sie eine Besprechung ![ und dann ](../assets/images/apps-in-meetings/calendar-logo.png) **Besprechungsoptionen aus.**
 
-Wählen Sie &#11200; in einer Besprechungseinladung die Option **Besprechungsoptionen** aus.
+&#11200; Wählen Sie in einer Besprechungseinladung **Besprechungsoptionen aus.**
 
-&#11200; wählen Sie während einer Besprechung **Show participants** ![ ](../assets/images/apps-in-meetings/show-participants.png) in den Besprechungs Steuerelementen das Symbol Teilnehmer anzeigen aus. Wählen Sie dann oberhalb der Teilnehmerliste die Option **Berechtigungen verwalten** aus.
+&#11200; Wählen Sie während einer Besprechung das Symbol **"Teilnehmer** ![ anzeigen" in den ](../assets/images/apps-in-meetings/show-participants.png) Besprechungssteuerelementen aus. Wählen Sie dann über der Liste der Teilnehmer die Option **"Berechtigungen verwalten" aus.**
 
 ### <a name="user-types"></a>Benutzertypen
 
 > [!NOTE]
-> Benutzertypen können an Besprechungen teilnehmen und eine der oben beschriebenen Teilnehmerrollen annehmen. Der Benutzertyp wird nicht als Teil der **getParticipantRole** -API verfügbar gemacht.
+> Benutzertypen können an Besprechungen teilnehmen und eine der oben beschriebenen Teilnehmerrollen übernehmen. Der Benutzertyp wird nicht als Teil der **getParticipantRole-API verfügbar** gemacht.
 
-1. **Im Mandanten**. Diese Benutzer gehören zur Organisation und verfügen über Anmeldeinformationen in Azure Active Directory für den Mandanten. Dabei handelt es sich normalerweise um Vollzeitmitarbeiter, vor-Ort-oder Remotemitarbeiter.
-1. **Gast**. Ein Gast ist ein Teilnehmer einer anderen Organisation, der eingeladen wurde, auf Teams oder andere Ressourcen im Mandanten Ihrer Organisation zuzugreifen. Gäste werden dem Active Directory Ihrer Organisation hinzugefügt und können nahezu alle Teams-Funktionen wie ein systemeigenes Teammitglied mit Vollzugriff auf Team Chats, Besprechungen und Dateien erhalten. _Siehe_ [Gastzugriff in Microsoft Teams](/microsoftteams/guest-access)
-1. **Verbund/extern**. Ein Verbundbenutzer ist ein externer Teams-Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Da diese Benutzer gültige Anmeldeinformationen für Verbundpartner haben, werden Sie von Microsoft Teams authentifiziert, haben aber keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen von Ihrer Organisation. Wenn Sie möchten, dass externe Benutzer Zugriff auf Teams und Kanäle haben, ist der Gastzugriff möglicherweise eine bessere Option. _Siehe_ [Verwalten von externem Zugriff in Microsoft Teams](/microsoftteams/manage-external-access)
-1. **Anonym**. Anonyme Benutzer verfügen nicht über eine Active Directory Identität und sind nicht Verbund mit einem Mandanten. Der anonyme Teilnehmer ist wie ein externer Benutzer, aber seine Identität wird nicht in die Besprechung projiziert. Anonyme Benutzer können nicht auf apps in einem Besprechungsfenster zugreifen.
+1. **Mandanteninte mandant**. Diese Benutzer gehören zur Organisation und verfügen über Anmeldeinformationen in Azure Active Directory für den Mandanten. Sie sind in der Regel Vollzeit-, Standort- oder Remotemitarbeiter.
+1. **Gast**. Ein Gast ist ein Teilnehmer aus einer anderen Organisation, der eingeladen wurde, auf Teams oder andere Ressourcen im Mandanten Ihrer Organisation zu zugreifen. Gäste werden dem Active Directory Ihrer Organisation hinzugefügt und können nahezu dieselben Funktionen wie ein systemeigenes Teammitglied mit Vollzugriff auf Teamchats, Besprechungen und Dateien erhalten. _Siehe Gastzugriff_ [in Microsoft Teams](/microsoftteams/guest-access)
+1. **Partner/Extern**. Ein Verbundbenutzer ist ein externer Teams-Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Da diese Benutzer über gültige Anmeldeinformationen bei Verbundpartnern verfügen, werden sie als von Teams authentifiziert behandelt, haben jedoch keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen aus Ihrer Organisation. Wenn Externe Benutzer Zugriff auf Teams und Kanäle haben sollen, ist der Gastzugriff möglicherweise die bessere Option. _Siehe "Verwalten_ [des externen Zugriffs in Microsoft Teams"](/microsoftteams/manage-external-access)
+1. **Anonym**. Anonyme Benutzer verfügen nicht über eine Active Directory-Identität und sind nicht mit einem Mandanten im Verbund. Der anonyme Teilnehmer ist wie ein externer Benutzer, aber seine Identität wird nicht in die Besprechung projiziert. Anonyme Benutzer können in einem Besprechungsfenster nicht auf Apps zugreifen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 > [!div class="nextstepaction"]
-> [Apps für Teams-Besprechungen erstellen](create-apps-for-teams-meetings.md)
+> [Entwerfen Ihrer App](create-apps-for-teams-meetings.md)
+> [!div class="nextstepaction"]
+> [Erstellen Sie Ihre Anwendung](create-apps-for-teams-meetings.md)

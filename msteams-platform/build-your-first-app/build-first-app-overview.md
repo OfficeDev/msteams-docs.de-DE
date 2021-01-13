@@ -5,16 +5,16 @@ description: Erfahren Sie, wie Sie mit der Entwicklung von Microsoft Teams-Apps 
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 06e26c57e6f6d3fd0bbeb981ef7ab46c8217bb4a
-ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
+ms.openlocfilehash: 4288efdbfada5f1a51fa1d4aeccdd6cdf9c64382
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "49795461"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797897"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>Erstellen Einer Übersicht über Ihre erste Microsoft Teams-App
 
-In der **Erstellung Ihrer ersten App-Lektionen** erstellen Sie grundlegende Teams-Apps. Jedes Lernprogramm führt Sie durch das Erstellen einer einfachen, realen Teams-App und führt Sie gleichzeitig mit gängigen Tools, grundlegenden Konzepten und erweiterten Features ein.
+In den **ersten Lektionen** erfahren Sie, wie Sie grundlegende Teams-Apps erstellen. Jedes Lernprogramm führt Sie durch das Erstellen einer einfachen, realen Teams-App und führt Sie gleichzeitig mit gängigen Tools, grundlegenden Konzepten und erweiterten Features ein.
 
 ## <a name="what-youll-learn"></a>Was Sie lernen werden
 
@@ -34,7 +34,7 @@ Bevor Sie mit den Lernprogrammen beginnen, sollten Sie Folgendes zum Erstellen v
 
 ### <a name="apps-can-have-multiple-capabilities-and-entry-points"></a>Apps können über mehrere Funktionen und Einstiegspunkte verfügen
 
-Eine Teams-App besteht aus einer oder mehreren Plattformfunktionen [(wie](../concepts/capabilities-overview.md) Personen die App verwenden) und Einstiegspunkten [(wo](../concepts/extensibility-points.md) Personen die App entdecken).
+Eine Teams-App besteht aus einer oder mehreren Plattformfunktionen [(wie](../concepts/capabilities-overview.md) Personen die App verwenden) und Einstiegspunkten [(wo](../concepts/extensibility-points.md) Personen die App verwenden).
 
 ### <a name="teams-doesnt-host-your-app"></a>Teams hosten Ihre App nicht
 
@@ -93,9 +93,9 @@ Teams zeigt den Inhalt von Apps nur über HTTPS-Verbindungen an. Um bestimmte Ar
 
 ## <a name="about-the-tutorials"></a>Informationen zu den Lernprogrammen
 
-Sie können mit jedem der Teams beginnen, **Ihre ersten App-Lektionen zu** erstellen. Wenn Sie nicht sicher sind, wo Sie zuerst hingehen sollten, folgen Sie unserem anfängerfreundlichen Pfad, und erstellen Sie ein "Hello, World!" app.
+Sie können mit jeder der Ersten **Schritte** in Teams beginnen. Wenn Sie nicht sicher sind, wo Sie zuerst hingehen sollten, folgen Sie unserem anfängerfreundlichen Pfad, und erstellen Sie ein "Hello, World!" app.
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Fertigkeitenstruktur mit Lernpfaden für die Lernprogramme zum Erstellen Ihrer ersten App in Teams." border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Fertigkeitenstruktur, die Lernpfade für die Teams &quot;Erste Schritte&quot; zeigt." border="false":::
 
 ## <a name="next-step"></a>Nächster Schritt
 
