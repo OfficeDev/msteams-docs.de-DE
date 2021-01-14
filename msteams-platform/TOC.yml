@@ -34,19 +34,19 @@
       items:
         - name: Chatbot mit C# (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot'
-        - name: Chatbot mit JavaScript (GitHub)
+        - name: Chatbot mit Node.js (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot'
         - name: Chatbot mit Python (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
     - name: Beispiele für Messaging-Erweiterungen
       items:
-        - name: Aktionsbefehle mit C#/.NET (GitHub)
+        - name: Aktionsbefehle mit C# (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-        - name: Aktionsbefehle mit TypeScript/Node.js (GitHub)
+        - name: Aktionsbefehle mit Node.js (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action'
-        - name: Suchbefehle mit C#/.NET (GitHub)
+        - name: Suchbefehle mit C# (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-        - name: Suchbefehle mit TypeScript/Node.js (GitHub)
+        - name: Suchbefehle mit Node.js (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search'
 - name: App-Grundlagen
   items:
@@ -74,7 +74,7 @@
       href: samples/app-templates.md
     - name: Produktionsfertige Shifts-Connectors
       href: samples/shifts-wfm-connectors.md
-    - name: Installieren von Moodle LMS
+    - name: Moodle LMS installieren
       href: resources/moodleInstructions.md
     - name: Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
       href: concepts/build-and-test/share-to-teams.md
@@ -124,14 +124,16 @@
       href: toolkit/visual-studio-overview.md
     - name: Yeoman Generator für Microsoft Teams (GitHub)
       href: 'https://github.com/pnp/generator-teams'
-    - name: App Studio
+    - name: App-Studio
       href: concepts/build-and-test/app-studio-overview.md
+    - name: Microsoft Teams JavaScript-Client-SDK
+      href: tabs/how-to/using-teams-client-sdk.md
     - name: Node.js Bot Framework für Bots und Messaging-Erweiterungen (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: .NET Bot Framework für Bots und Messaging-Erweiterungen (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
     - name: Microsoft Graph-SDKs
-      href: 'https://docs.microsoft.com/en-us/graph/sdks/sdks-overview'
+      href: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
     - name: Veraltete SDKs
       items:
         - name: Bots-SDK (v3)
@@ -182,17 +184,17 @@
       href: tabs/what-are-tabs.md
     - name: Schnellstarts
       items:
-        - name: Persönliche Registerkarte mit Node.js/React
+        - name: Persönliche Registerkarte mit Node.js
           href: tabs/quickstarts/create-personal-tab-node-yeoman.md
         - name: Persönliche Registerkarte mit C#/ASP.NET Core
           href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: Persönliche Registerkarte mit C#/ASP.NET MVC
+        - name: Persönliche Registerkarte mit C#/ASP.NET Core MVC
           href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-        - name: Kanal-Registerkarte mit Node.js/React
+        - name: Kanalregisterkarte mit Node.js
           href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-        - name: Kanal-Registerkarte mit C#/ASP.NET Core
+        - name: Kanalregisterkarte mit C#/ASP.NET Core
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-        - name: Kanal-Registerkarte mit C#/ASP.NET MVC
+        - name: Kanalregisterkarte mit C#/ASP.NET Core MVC
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
     - name: Erstellen einer Inhaltsseite
       href: tabs/how-to/create-tab-pages/content-page.md
@@ -200,9 +202,7 @@
       href: tabs/how-to/create-tab-pages/configuration-page.md
     - name: Erstellen einer Seite zum Entfernen
       href: tabs/how-to/create-tab-pages/removal-page.md
-    - name: Verwenden des Microsoft Teams-Client-SDKs
-      href: tabs/how-to/using-teams-client-sdk.md
-    - name: Weiteren Kontext abrufen
+    - name: Kontext für Ihre Registerkarte erhalten
       href: tabs/how-to/access-teams-context.md
 - name: Erstellen von Bots
   items:
