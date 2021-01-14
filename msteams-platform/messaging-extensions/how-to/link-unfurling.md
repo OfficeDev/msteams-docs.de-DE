@@ -1,43 +1,46 @@
 ---
 title: Entfalten von Links
 author: clearab
-description: Vorgehensweise durchführen einer Link Entfaltung mit Messaging Erweiterung in einer Microsoft Teams-app.
+description: So führen Sie in einer Microsoft Teams-App das Aufblinken von Links mit der Messagingerweiterung aus.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 32d19fcd44f2475047539350706d2745aeec3691
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: 0d488638e63b8ec78bfa5bed8cf6f4f037883fb1
+ms.sourcegitcommit: bf61ae5ad2afa4efdb0311158184d0cbb9c40174
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587804"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49845637"
 ---
 # <a name="link-unfurling"></a>Entfalten von Links
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 > [!NOTE]
-> Derzeit wird das Aufrollen von Hyperlinks auf mobilen Clients nicht unterstützt.
+> Derzeit wird das Entf?nden von Links auf mobilen Clients nicht unterstützt.
 
-Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Der `invoke` enthält die vollständige URL, die in den Bereich zum Verfassen von Nachrichten eingefügt wurde, und Sie können mit einer Karte Antworten, die der Benutzer *entfalten*kann, indem zusätzliche Informationen oder Aktionen bereitgestellt werden. Dies funktioniert ähnlich wie ein [Suchbefehl](~/messaging-extensions/how-to/search-commands/define-search-command.md), wobei die URL als Suchbegriff dient.
+Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Die enthält die vollständige URL, die in den Bereich zum Verfassen von Nachrichten eingegeben wurde, und Sie können mit einer Karte antworten, die der Benutzer ausf?nnen kann, um zusätzliche Informationen oder `invoke` Aktionen zur Verfügung zu stellen.  Dies funktioniert ähnlich wie bei einem [Suchbefehl,](~/messaging-extensions/how-to/search-commands/define-search-command.md)bei dem die URL als Suchbegriff dient.
 
-Die Azure DevOps-Messaging Erweiterung verwendet Link-Entfaltung, um nach URLs zu suchen, die in den Nachrichtenbereich verfassen eingefügt werden, der auf ein Arbeitselement zeigt. Im folgenden Screenshot wurde ein Benutzer in eine URL für eine Arbeitsaufgabe in Azure DevOps eingefügt, die von der Messaging Erweiterung in eine Karte aufgelöst wurde.
+Die Azure DevOps-Messaging-Erweiterung verwendet das Wiederverteilen von Links, um nach URLs zu suchen, die in den Bereich zum Verfassen von Nachrichten, die auf eine Arbeitsaufgabe zeigen, eingef?ndert sind. Im folgenden Screenshot hat ein Benutzer eine URL für eine Arbeitsaufgabe in Azure DevOps eingegeben, die die Messagingerweiterung in eine Karte aufgelöst hat.
 
-![Beispiel für eine Link-Entfaltung](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+![Beispiel für die Verknüpfungsentbündelung](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
-## <a name="add-link-unfurling-to-your-app-manifest"></a>Hinzufügen eines Links, der Ihrem App-Manifest entrollt
+## <a name="add-link-unfurling-to-your-app-manifest"></a>Hinzufügen der Linkentleierung zu Ihrem App-Manifest
 
-Dazu fügen Sie `messageHandlers` dem `composeExtensions` Abschnitt Ihres App-Manifests JSON ein neues Array hinzu. Sie können dies entweder mit Hilfe von App Studio oder manuell tun. Domänen Auflistungen können beispielsweise Platzhalterzeichen enthalten `*.example.com` . Dies entspricht genau einem Segment der Domäne. Wenn Sie eine Übereinstimmung benötigen, `a.b.example.com` verwenden Sie `*.*.example.com` .
+ Fügen Sie zum Hinzufügen von Links zum Entfingen ihres App-Manifests dem Abschnitt ihres `messageHandlers` `composeExtensions` App-Manifest-JSON ein neues Array hinzu. Sie können das Array mithilfe von App Studio oder manuell hinzufügen. Domänenauflistungen können Platzhalter enthalten, z. B. `*.example.com` . Dies entspricht genau einem Segment der Domäne. Wenn Sie übereinstimmen müssen, `a.b.example.com` verwenden Sie `*.*.example.com` .
+
+> [!NOTE]
+> Fügen Sie keine Domänen hinzu, die sich außerhalb Ihres Steuerelements befinden, entweder direkt oder über Platzhalter. Beispielsweise ist yourapp.onmicrosoft.com gültig, *.onmicrosoft.com ist jedoch ungültig. Außerdem sind Domänen auf oberster Ebene unzulässig. Beispiel: *.com, *.org.
 
 ### <a name="using-app-studio"></a>Verwenden von App Studio
 
-1. Laden Sie in App Studio auf der Registerkarte Manifest-Editor Ihr App-Manifest.
-1. Fügen Sie auf der Seite **Messaging Erweiterung** im Abschnitt **Nachrichtenhandler** die Domäne hinzu, nach der Sie suchen möchten (siehe Screenshot unten).
+1. Laden Sie in App Studio auf der Registerkarte "Manifest-Editor" Ihr App-Manifest.
+1. Fügen Sie **auf der Seite "Messagingerweiterung"** die Domäne hinzu, nach der Sie suchen möchten, im Abschnitt **"Nachrichtenhandler",** wie im folgenden Screenshot dargestellt.
 
-![Abschnitt "Nachrichtenhandler" in App Studio](~/assets/images/link-unfurling.png)
+![Abschnitt "Message Handlers" in App Studio](~/assets/images/link-unfurling.png)
 
 ### <a name="manually"></a>Manuell
 
-Damit Ihre Messaging Erweiterung auf diese Weise mit Links interagieren kann, müssen Sie zuerst das `messageHandlers` Array wie im folgenden Beispiel zu Ihrem App-Manifest hinzufügen. Dieses Beispiel ist nicht das vollständige Manifest, siehe [Manifest-Referenz](~/resources/schema/manifest-schema.md) für ein vollständiges Manifest-Beispiel.
+Damit Ihre Messagingerweiterung auf diese Weise mit Links interagieren kann, müssen Sie zuerst das Array zu Ihrem App-Manifest hinzufügen, wie im folgenden `messageHandlers` Beispiel gezeigt. Dieses Beispiel ist nicht das vollständige Manifest, siehe [Manifestreferenz](~/resources/schema/manifest-schema.md) für ein vollständiges Manifestbeispiel.
 
 ```json
 ...
@@ -61,16 +64,16 @@ Damit Ihre Messaging Erweiterung auf diese Weise mit Links interagieren kann, m�
 
 ## <a name="handle-the-composeextensionquerylink-invoke"></a>Behandeln des `composeExtension/queryLink` Aufrufs
 
-Nachdem Sie die Domäne zum Überwachen des App-Manifests hinzugefügt haben, müssen Sie den Webdienstcode aktualisieren, um die Invoke-Anforderung zu verarbeiten. Verwenden Sie die URL, die Sie erhalten, um Ihren Dienst zu durchsuchen und eine Karten Antwort zu erstellen. Wenn Sie mit mehr als einer Karte Antworten, wird nur der erste verwendet.
+Nachdem Sie die Domäne zum Abhören des App-Manifests hinzugefügt haben, müssen Sie Ihren Webdienstcode aktualisieren, um die Aufrufanforderung zu verarbeiten. Verwenden Sie die URL, die Sie erhalten, um Ihren Dienst zu durchsuchen und eine Kartenantwort zu erstellen. Wenn Sie mit mehr als einer Karte antworten, wird nur die erste Karte verwendet.
 
 Wir unterstützen die folgenden Kartentypen:
 
-* [Miniatur Ansichtskarte](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [Hero Card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365-Anschluss Karte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Miniaturansichtkarte](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [Herokarte](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [Office 365-Connectorkarte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Karte](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Eine Übersicht finden Sie unter [Was sind Karten](~/task-modules-and-cards/what-are-cards.md) .
+Eine [Übersicht finden Sie unter "Was sind](~/task-modules-and-cards/what-are-cards.md) Karten".
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -117,7 +120,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[Json](#tab/json)
 
-Dies ist ein Beispiel für die `invoke` an Ihren bot gesendet.
+Dies ist ein Beispiel für das an `invoke` Ihren Bot gesendete.
 
 ```json
 {
@@ -129,7 +132,7 @@ Dies ist ein Beispiel für die `invoke` an Ihren bot gesendet.
 }
 ```
 
-Unten sehen Sie ein Beispiel für die Antwort.
+Ein Beispiel für die Antwort ist unten dargestellt.
 
 ```json
 {

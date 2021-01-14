@@ -4,12 +4,12 @@ description: Beschreibt das Manifestschema für Microsoft Teams
 keywords: Teams-Manifestschema
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: 17626df3aa4b076190413c67d9a0ecd7cd2eed31
-ms.sourcegitcommit: 4275a502f9f7742da2900c79e19551e481c9e48a
+ms.openlocfilehash: cf80251abd22f0c89388cbe5a6287a02dedce1fb
+ms.sourcegitcommit: bf61ae5ad2afa4efdb0311158184d0cbb9c40174
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797052"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49845630"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -491,9 +491,9 @@ Das Element ist ein Array (maximal 1 Element) mit allen Elementen vom `object` T
 |`botId`|string|64|✔|Die eindeutige Microsoft-App-ID für den Bot, der die Messagingerweiterung unterstützt, wie beim Bot Framework registriert. Dies kann mit der allgemeinen App-ID identisch sein.|
 |`commands`|Array von Objekten|10 |✔|Array von Befehlen, die von der Messagingerweiterung unterstützt werden|
 |`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob die Konfiguration einer Messagingerweiterung vom Benutzer aktualisiert werden kann. Standard: **False**.|
-|`messageHandlers`|Array von Objekten|5 ||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind. Domänen müssen auch in `validDomains`|
+|`messageHandlers`|Array von Objekten|5 ||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind.|
 |`messageHandlers.type`|string|||Der Typ des Nachrichtenhandlers. Muss `"link"` sein.|
-|`messageHandlers.value.domains`|Array von Zeichenfolgen|||array of domains that the link message handler can register for.|
+|`messageHandlers.value.domains`|Array von Zeichenfolgen|||Array von Domänen, für die sich der Linknachrichtenhandler registrieren kann.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
