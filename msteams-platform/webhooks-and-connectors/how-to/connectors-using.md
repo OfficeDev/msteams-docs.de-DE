@@ -3,12 +3,12 @@ title: Senden von Nachrichten an Connectors und Webhooks
 description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Teams
 localization_priority: Priority
 keywords: Teams O365-Connector
-ms.openlocfilehash: 871253e6c902b1e07e002a7c94dbf3ab11dea29c
-ms.sourcegitcommit: 4275a502f9f7742da2900c79e19551e481c9e48a
+ms.openlocfilehash: 55cfbc870ed8b04a8fbac58fdfa9b40110410ad7
+ms.sourcegitcommit: 5e1300d6f4f2ea23beb3cdbbf4bd46999eef4e87
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797045"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "49875014"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Senden von Nachrichten an Connectors und Webhooks
 
@@ -25,7 +25,7 @@ Sie können diesen JSON-Code auch zum Erstellen von Karten mit umfassenden Einga
     "themeColor": "0076D7",
     "summary": "Larry Bryant created a new task",
     "sections": [{
-        "activityTitle": "![TestImage](https://47a92947.ngrok.io/Content/Images/default.png)Larry Bryant created a new task",
+        "activityTitle": "Larry Bryant created a new task",
         "activitySubtitle": "On Project Tango",
         "activityImage": "https://teamsnodesample.azurewebsites.net/static/img/image5.png",
         "facts": [{
@@ -52,7 +52,7 @@ Sie können diesen JSON-Code auch zum Erstellen von Karten mit umfassenden Einga
         "actions": [{
             "@type": "HttpPOST",
             "name": "Add comment",
-            "target": "http://..."
+            "target": "https://docs.microsoft.com/outlook/actionable-messages"
         }]
     }, {
         "@type": "ActionCard",
@@ -65,13 +65,15 @@ Sie können diesen JSON-Code auch zum Erstellen von Karten mit umfassenden Einga
         "actions": [{
             "@type": "HttpPOST",
             "name": "Save",
-            "target": "http://..."
+            "target": "https://docs.microsoft.com/outlook/actionable-messages"
         }]
-        {
-            "@type": "OpenUri",
-            "name": "Learn More",
-            "targets": [{ "os": "default", "uri": "https://docs.microsoft.com/outlook/actionable-messages" }]
-        }
+    }, {
+        "@type": "OpenUri",
+        "name": "Learn More",
+        "targets": [{
+            "os": "default",
+            "uri": "https://docs.microsoft.com/outlook/actionable-messages"
+        }]
     }, {
         "@type": "ActionCard",
         "name": "Change status",
@@ -94,7 +96,7 @@ Sie können diesen JSON-Code auch zum Erstellen von Karten mit umfassenden Einga
         "actions": [{
             "@type": "HttpPOST",
             "name": "Save",
-            "target": "http://..."
+            "target": "https://docs.microsoft.com/outlook/actionable-messages"
         }]
     }]
 }
