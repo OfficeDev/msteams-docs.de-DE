@@ -1,23 +1,23 @@
 ---
-title: Hinzufügen von Authentifizierung zu Ihrer Messaging Erweiterung
+title: Hinzufügen von Authentifizierung zu Ihrer Messagingerweiterung
 author: clearab
-description: Hinzufügen einer Authentifizierung zu einer Messaging Erweiterung
+description: Hinzufügen der Authentifizierung zu einer Messagingerweiterung
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f7ebbcd99b1ec35900de7ec2f54f93263918e945
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4ebe65af06240d13ceb99fe3b7640ab402d716c5
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674145"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911870"
 ---
-# <a name="add-authentication-to-your-messaging-extension"></a>Hinzufügen von Authentifizierung zu Ihrer Messaging Erweiterung
+# <a name="add-authentication-to-your-messaging-extension"></a>Hinzufügen von Authentifizierung zu Ihrer Messagingerweiterung
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 ## <a name="identify-the-user"></a>Identifizieren des Benutzers
 
-Jede Anforderung an ihre Dienste umfasst die verborgene ID des Benutzers, der die Anforderung ausgeführt hat, sowie den Anzeigenamen des Benutzers und die Azure Active Directory Objekt-ID.
+Jede Anforderung an Ihre Dienste enthält die verschleierte ID des Benutzers, der die Anforderung ausgeführt hat, sowie den Anzeigenamen des Benutzers und die Azure Active Directory-Objekt-ID.
 
 ```json
 "from": {
@@ -27,26 +27,26 @@ Jede Anforderung an ihre Dienste umfasst die verborgene ID des Benutzers, der di
 },
 ```
 
-Die `id` Werte `aadObjectId` und sind garantiert die des authentifizierten Teams-Benutzers. Sie können als Schlüssel zum Nachschlagen von Anmeldeinformationen oder einem beliebigen zwischengespeicherten Zustand in Ihrem Dienst verwendet werden. Darüber hinaus enthält jede Anforderung die Azure Active Directory Mandanten-ID des Benutzers, die zum Identifizieren der Organisation des Benutzers verwendet werden kann. Wenn zutreffend, enthält die Anforderung auch die Team-und Kanal-IDs, aus denen die Anforderung stammt.
+Die `id` Werte und Werte sind garantiert die des `aadObjectId` authentifizierten Teams-Benutzers. Sie können als Schlüssel verwendet werden, um Anmeldeinformationen oder einen beliebigen zwischengespeicherten Status in Ihrem Dienst nach zu suchen. Darüber hinaus enthält jede Anforderung die Azure Active Directory-Mandanten-ID des Benutzers, die verwendet werden kann, um die Organisation des Benutzers zu identifizieren. Falls zutreffend, enthält die Anforderung auch die Team- und Kanal-IDs, von denen die Anforderung stammt.
 
 ## <a name="authentication"></a>Authentifizierung
 
-Wenn Ihr Dienst eine Benutzerauthentifizierung erfordert, müssen Sie sich beim Benutzer anmelden, bevor er die Messaging Erweiterung verwenden kann. Wenn Sie einen bot oder eine Registerkarte geschrieben haben, die den Benutzer signiert, sollte dieser Abschnitt vertraut sein.
+Wenn für Ihren Dienst eine Benutzerauthentifizierung erforderlich ist, müssen Sie sich beim Benutzer anmelden, bevor er die Messagingerweiterung verwenden kann. Wenn Sie einen Bot oder eine Registerkarte geschrieben haben, die sich beim Benutzer meldet, sollte dieser Abschnitt vertraut sein.
 
-Die Sequenz lautet wie folgt:
+Die Reihenfolge lautet wie folgt:
 
-1. Der Benutzer gibt eine Abfrage aus, oder die Standardabfrage wird automatisch an den Dienst gesendet.
-2. Der Dienst überprüft, ob der Benutzer zuerst authentifiziert wurde, indem er die Benutzer-ID des Teams überprüft.
-3. Wenn der Benutzer nicht authentifiziert wurde, senden Sie eine `auth` Antwort mit einer `openUrl` vorgeschlagenen Aktion einschließlich der Authentifizierungs-URL zurück.
-4. Der Microsoft Teams-Client startet ein Popupfenster, das Ihre Webseite unter Verwendung der angegebenen Authentifizierungs-URL hostet.
-5. Nachdem sich der Benutzer angemeldet hat, sollten Sie das Fenster schließen und einen "Authentifizierungscode" an den Microsoft Teams-Client senden.
-6. Der Microsoft Teams-Client gibt dann die Abfrage erneut an Ihren Dienst aus, der den in Schritt 5 übergebenen Authentifizierungscode enthält.
+1. Der Benutzer gibt eine Abfrage aus, oder die Standardabfrage wird automatisch an Ihren Dienst gesendet.
+2. Ihr Dienst überprüft, ob sich der Benutzer zuerst authentifiziert hat, indem er die Teams-Benutzer-ID überprüft.
+3. Wenn sich der Benutzer nicht authentifiziert hat, senden Sie eine Antwort mit einer vorgeschlagenen Aktion einschließlich der `auth` `openUrl` Authentifizierungs-URL zurück.
+4. Der Microsoft Teams-Client startet ein Popupfenster, in dem Ihre Webseite mit der angegebenen Authentifizierungs-URL hosten wird.
+5. Nach der Anmeldung des Benutzers sollten Sie Ihr Fenster schließen und einen "Authentifizierungscode" an den Client von Teams senden.
+6. Der Microsoft Teams-Client gibt die Abfrage dann erneut an Ihren Dienst weiter, der den in Schritt 5 übergebenen Authentifizierungscode enthält.
 
-Ihr Dienst sollte überprüfen, ob der in Schritt 6 empfangene Authentifizierungscode mit dem in Schritt 5 übereinstimmt. Dadurch wird sichergestellt, dass ein böswilliger Benutzer nicht versucht, den Anmelde Ablauf vorzutäuschen oder zu gefährden. Dies effektiv "schließt die Schleife", um die sichere Authentifizierungssequenz abzuschließen.
+Ihr Dienst sollte überprüfen, ob der in Schritt 6 empfangene Authentifizierungscode mit dem aus Schritt 5 entspricht. Dadurch wird sichergestellt, dass ein böswilliger Benutzer nicht versucht, den Anmeldeablauf zu spoofen oder zu täuschen. Dadurch wird die Schleife geschlossen, um die sichere Authentifizierungssequenz zu beenden.
 
 ### <a name="respond-with-a-sign-in-action"></a>Reagieren mit einer Anmeldeaktion
 
-Um einen nicht authentifizierten Benutzer zur Anmeldung aufzufordern, Antworten Sie mit einer vorgeschlagenen Aktion `openUrl` vom Typ, die die Authentifizierungs-URL enthält.
+Um einen nicht authentifizierten Benutzer zur Anmeldung auffordert, antworten Sie mit einer vorgeschlagenen Aktion vom Typ, die `openUrl` die Authentifizierungs-URL enthält.
 
 #### <a name="response-example-for-a-sign-in-action"></a>Antwortbeispiel für eine Anmeldeaktion
 
@@ -68,24 +68,24 @@ Um einen nicht authentifizierten Benutzer zur Anmeldung aufzufordern, Antworten 
 ```
 
 > [!NOTE]
-> Damit die Anmelde Umgebung in einem Teams-Popup gehostet werden kann, muss der Domänenteil der URL in der Liste der gültigen Domänen in Ihrer APP aufgeführt sein. (Weitere Informationen finden Sie unter [validDomains](~/resources/schema/manifest-schema.md#validdomains) im Manifest-Schema.)
+> Damit die Anmeldeerfahrung in einem Teams-Popup gehostet wird, muss sich der Domänenteil der URL in der Liste der gültigen Domänen Ihrer App befinden. (Siehe ["validDomains"](~/resources/schema/manifest-schema.md#validdomains) im Manifestschema.)
 
-### <a name="start-the-sign-in-flow"></a>Starten des Anmelde Flusses
+### <a name="start-the-sign-in-flow"></a>Starten des Anmeldeflusses
 
-Ihre Anmelde Erfahrung sollte reagieren und in ein Popupfenster passt. Sie sollte in das [Microsoft Teams JavaScript Client SDK](/javascript/api/overview/msteams-client)integriert werden, das die Nachrichtenübergabe verwendet.
+Ihre Anmeldeerfahrung sollte reaktionsfähig sein und in ein Popupfenster passen. Es sollte in das [JavaScript-Client-SDK](/javascript/api/overview/msteams-client)von Microsoft Teams integriert werden, das die Nachrichtenübertragung verwendet.
 
-Wie bei anderen eingebetteten Erfahrungen, die in Microsoft Teams durchführen, muss der Code im Fenster zuerst `microsoftTeams.initialize()`aufgerufen werden. Wenn Ihr Code einen OAuth-Fluss ausführt, können Sie die Benutzer-ID des Teams an das Fenster übergeben, das dann an die OAuth-Anmelde-URL übergeben werden kann.
+Wie bei anderen eingebetteten Erfahrungen, die in Microsoft Teams ausgeführt werden, muss Ihr Code innerhalb des Fensters zuerst `microsoftTeams.initialize()` aufrufen. Wenn Ihr Code einen OAuth-Fluss durchführt, können Sie die Teams-Benutzer-ID an Ihr Fenster übergeben, die sie dann an die OAuth-Anmelde-URL übergeben kann.
 
-### <a name="complete-the-sign-in-flow"></a>Abschließen des Anmelde Flusses
+### <a name="complete-the-sign-in-flow"></a>Abschließen des Anmeldeflusses
 
-Wenn die Anmeldeanforderung abgeschlossen wird und zu Ihrer Seite zurückgeleitet wird, sollten Sie die folgenden Schritte ausführen:
+Wenn die Anmeldeanforderung abgeschlossen ist und zurück zu Ihrer Seite umgeleitet wird, sollten sie die folgenden Schritte ausführen:
 
-1. Generieren Sie einen Sicherheitscode. (Dies kann eine Zufallszahl sein.) Sie müssen diesen Code in Ihrem Dienst Zwischenspeichern, zusammen mit den Anmeldeinformationen, die über den Anmelde Fluss abgerufen werden (beispielsweise OAuth 2,0-Token).
-2. Rufen `microsoftTeams.authentication.notifySuccess` Sie den Sicherheitscode an, und übergeben Sie ihn.
+1. Generieren Sie einen Sicherheitscode. (Dies kann eine Zufallszahl sein.) Sie müssen diesen Code zusammen mit den über den Anmeldefluss (z. B. OAuth 2.0-Token) erhaltenen Anmeldeinformationen in Ihrem Dienst zwischenspeichern.
+2. Rufen Sie `microsoftTeams.authentication.notifySuccess` den Sicherheitscode auf, und übergeben Sie ihn.
 
-Zu diesem Zeitpunkt wird das Fenster geschlossen, und die Steuerung wird an den Microsoft Teams-Client übergeben. Der Client kann jetzt die ursprüngliche Benutzerabfrage erneut ausgeben, zusammen mit dem Sicherheitscode in der `state` -Eigenschaft. Ihr Code kann den Sicherheitscode verwenden, um die zuvor gespeicherten Anmeldeinformationen nachzuschlagen, um die Authentifizierungssequenz abzuschließen und dann die Benutzeranforderung abzuschließen.
+An diesem Punkt wird das Fenster geschlossen, und die Steuerung wird an den Teams-Client übergeben. Der Client kann nun die ursprüngliche Benutzerabfrage zusammen mit dem Sicherheitscode in der Eigenschaft erneut `state` ausführen. Ihr Code kann den Sicherheitscode verwenden, um die zuvor gespeicherten Anmeldeinformationen nach zu suchen, um die Authentifizierungssequenz zu vervollständigen und dann die Benutzeranforderung zu stellen.
 
-#### <a name="reissued-request-example"></a>Beispiel für eine erneut aufgegebene Anforderung
+#### <a name="reissued-request-example"></a>Beispiel für eine erneut ausgestellte Anforderung
 
 ```json
 {
@@ -134,3 +134,9 @@ Zu diesem Zeitpunkt wird das Fenster geschlossen, und die Steuerung wird an den 
 }
 ```
 
+## <a name="samples"></a>Beispiele
+Beispielcode, der den Authentifizierungsprozess für Messagingerweiterungen zeigt, finden Sie unter:
+
+[Beispiel für die Authentifizierung mit Microsoft Teams-Messagingerweiterungen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)
+
+ 

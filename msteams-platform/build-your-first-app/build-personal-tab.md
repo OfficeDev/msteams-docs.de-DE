@@ -5,12 +5,12 @@ description: Erstellen Sie mithilfe des Microsoft Teams Toolkits schnell eine pe
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 86be39503ec4e4fde5fafe63f83b3a4fb6d956bf
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 17263303207ffb5bee333f1ec0e655096b1062ee
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797806"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911912"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Erstellen einer persönlichen Registerkarte für Microsoft Teams
 
@@ -18,7 +18,7 @@ Registerkarten sind eine einfache Möglichkeit, Inhalte in Ihrer App anzuzeigen,
 
 Es gibt zwei Arten von Registerkarten in Teams. In diesem Lernprogramm erstellen Sie eine einfache persönliche *Registerkarte,* eine Vollbildinhaltsseite für einzelne Benutzer. (Persönliche Registerkarten sind der traditionellen Websiteerfahrung in Teams am nächsten.)
 
-## <a name="before-you-begin"></a>Bevor Sie beginnen
+## <a name="before-you-begin"></a>Vorabinformationen
 
 Für die ersten Schritte benötigen Sie eine einfache, ausgeführte persönliche Registerkarte. Wenn Sie nicht über eine verfügen, lesen Sie die Informationen zum [Erstellen und Ausführen Ihrer ersten Teams-App.](../build-your-first-app/build-and-run.md)
 
@@ -84,7 +84,7 @@ render() {
 }
 ```
 
-Fügen Sie die folgende Regel hinzu, damit die E-Mail-Links leichter zu lesen `App.css` sind, unabhängig davon, welches Design verwendet wird.
+Fügen Sie die folgende Regel hinzu, damit die E-Mail-Links unabhängig vom verwendeten `App.css` Design leichter zu lesen sind.
 
 ```CSS
 a {
@@ -145,7 +145,7 @@ Speichern Sie in der Funktion den Zustand, der `render()` vom Designänderungsha
   const isTheme = this.state.theme
 ```
 
-Nachdem Sie den vom Designänderungshandler bereitgestellten Zustand gespeichert haben, stellen Sie eine bedingte Logik bereit, um die Formatvorlagen Ihrer Registerkarte basierend auf dem aktuellen Design zu rendern. Das folgende Beispiel zeigt eine grundlegende Möglichkeit dazu:
+Nachdem Sie den vom Designänderungshandler bereitgestellten Status gespeichert haben, stellen Sie eine bedingte Logik bereit, um die Formatvorlagen Ihrer Registerkarte basierend auf dem aktuellen Design zu rendern. Das folgende Beispiel zeigt eine grundlegende Möglichkeit dazu:
 1. Überprüfen Sie das aktuelle Design in `isTheme` .
 2. Erstellen Sie `newTheme` ein Objekt mit CSS-Eigenschaften, die für das aktuelle Design relevant sind.
 3. Wenden Sie das CSS auf das Stamm-HTML-Element ( ) des Registerkarteninhalts an. `<div>`
@@ -176,12 +176,11 @@ Herzlichen Glückwunsch! Sie verfügen über eine Teams-App mit einer persönlic
 
 ## <a name="learn-more"></a>Weitere Informationen
 
-* [Authentifizieren von Registerkartenbenutzern mit SSO:](../tabs/how-to/authentication/auth-aad-sso.md)Wenn Nur autorisierte Benutzer Ihre Registerkarte anzeigen möchten, richten Sie einmaliges Anmelden (Single Sign-On, SSO) über Azure Active Directory (AD) ein.
-* [Einbetten von Inhalten](../tabs/how-to/tab-requirements.md)aus einer vorhandenen Web-App oder Webseite: Wir haben gezeigt, wie Sie neue Inhalte für eine persönliche Registerkarte erstellen, Aber Sie können auch Inhalte von einer externen URL laden.
-* [Erstellen Sie eine nahtlose Erfahrung für Ihre Registerkarte:](../tabs/design/tabs.md)Lesen Sie die empfohlenen Richtlinien für das Entwerfen von Teams-Registerkarten.
-* [Erstellen von Registerkarten für Mobilgeräte:](../tabs/design/tabs-mobile.md)Hier erfahren Sie, wie Sie Registerkarten für Smartphones und Tablets entwickeln.
-* [Nutzen von Microsoft Teams-Daten mit Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
-* [Erstellen einer Registerkarte ohne das Toolkit](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
+* Folgen Sie [unseren Entwurfsrichtlinien,](../tabs/design/tabs.md) und erstellen Sie mit [produktionsbereiten](../concepts/design/design-teams-app-ui-templates.md) Benutzeroberflächenvorlagen, um eine nahtlose Benutzeroberfläche zu erstellen.
+* Informationen [zu mobilen Überlegungen](../tabs/design/tabs-mobile.md) für Registerkarten.
+* [Fügen Sie ihrer Registerkarte die SSO-Authentifizierung hinzu.](../tabs/how-to/authentication/auth-aad-sso.md)
+* Nutzen von Microsoft Teams-Daten [mit Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview).
+* [Erstellen Sie eine Registerkarte ohne das Toolkit.](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
 ## <a name="next-lesson"></a>Nächste Lektion
 

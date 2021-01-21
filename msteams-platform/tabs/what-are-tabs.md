@@ -1,22 +1,22 @@
 ---
 title: Was sind benutzerdefinierte Registerkarten in Teams?
 author: laujan
-description: Übersicht über benutzerdefinierte Registerkarten auf der Plattform "Teams"
+description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Teams-Plattform
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 64c6e44177f1fb598895f748dbd0ec1c0b1e3aa1
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 18981955374a892e45ad5ec1e5ec087ae75cb007
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797890"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911954"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>Was sind Microsoft Teams-Registerkarten?
 
 Registerkarten sind in Microsoft Teams eingebettete Teams- aware Webseiten. Es handelt sich um einfache HTML-<-iframe-Tags, die auf im App-Manifest deklarierte Domänen verweisen und als Teil eines Kanals innerhalb eines Teams, eines Gruppenchats oder einer persönlichen App für einen einzelnen Benutzer hinzugefügt werden \> können. Sie können benutzerdefinierte Registerkarten in Ihre App integrieren, um Ihre eigenen Webinhalte in Teams einzubetten oder Teams-spezifische Funktionen zu Ihren Webinhalten hinzuzufügen. *Weitere Informationen* [finden Sie im JavaScript-Client-SDK für Teams.](/javascript/api/overview/msteams-client)
 
 > [!NOTE]
-> Chrome 80, das Anfang 2020 veröffentlicht werden soll, führt neue Cookiewerte ein und legt standardmäßig Cookierichtlinien fest. Es wird empfohlen, die beabsichtigte Verwendung für Ihre Cookies zu verwenden, anstatt sich auf das Standardverhalten des Browsers zu verlassen. *Siehe* [SameSite cookie attribute (2020 update)](../resources/samesite-cookie-update.md).
+> Chrome 80, das Anfang 2020 veröffentlicht werden soll, führt neue Cookiewerte ein und legt standardmäßig Cookierichtlinien fest. Es wird empfohlen, dass Sie die beabsichtigte Verwendung für Ihre Cookies festlegen, anstatt sich auf das Standardverhalten des Browsers zu verlassen. *Siehe* [SameSite cookie attribute (2020 update)](../resources/samesite-cookie-update.md).
 
 Es gibt zwei Arten von Registerkarten in Teams: Kanal/Gruppe und persönlich. Kanal-/Gruppenregisterkarten liefern Inhalte an Kanäle und Gruppenchats und stellen eine hervorragende Möglichkeit zum Erstellen von Gemeinsamen Räumen für dedizierte webbasierte Inhalte zur Verfügung. Persönliche Registerkarten sind zusammen mit persönlichen Bots Teil von persönlichen Apps und sind auf einen einzelnen Benutzer begrenzt. Sie können für einfachen Zugriff an die linke Navigationsleiste angeheftet werden.
 
@@ -28,7 +28,7 @@ Es gibt zwei Arten von Registerkarten in Teams: Kanal/Gruppe und persönlich. Ka
 > * Bewusstsein der Azure Active Directory (Azure AD)-ID des aktuellen Benutzers.
 > * Locale awareness for the user to indicate language, d. h. `en-us` . 
 > * Funktion für einmaliges Anmelden (Single Sign-On, SSO), sofern unterstützt.
-> * Möglichkeit zur Verwendung von Bots oder App-Benachrichtigungen, um einen DeepLink zur Registerkarte oder zu einer Unterentität innerhalb des Diensts zu verwenden, z. B. eine einzelne Arbeitsaufgabe.
+> * Möglichkeit zur Verwendung von Bots oder App-Benachrichtigungen, um einen Deep-Link zur Registerkarte oder zu einer Unterentität innerhalb des Diensts zu verwenden, z. B. eine einzelne Arbeitsaufgabe.
 > * Die Möglichkeit, ein Aufgabenmodul über Links auf einer Registerkarte zu öffnen.
 > * Wiederverwendung von SharePoint-Webparts auf der Registerkarte.
 
@@ -55,9 +55,9 @@ Sie können maximal eine (1) Kanal-/Gruppenregisterkarte und bis zu 16 (16) pers
 
 ## <a name="mobile-clients"></a>Mobile Clients
 
-Wenn Sie ihre Kanal- oder Gruppenregisterkarte auf mobilen Teams-Clients anzeigen möchten, muss die Konfiguration `setSettings()` einen Wert für die Eigenschaft `websiteUrl` haben. Um eine optimale Benutzererfahrung zu gewährleisten, müssen Sie die Anleitungen für Registerkarten auf [mobilen](~/tabs/design/tabs-mobile.md) Geräten befolgen, wenn Sie Ihre Registerkarten erstellen. Apps, die [über Appsource verteilt werden,](~/concepts/deploy-and-publish/appsource/publish.md) verfügen über einen separaten Genehmigungsprozess für mobile Clients. Das Standardverhalten solcher Apps lautet wie folgt:
+Wenn Sie ihre Kanal- oder Gruppenregisterkarte auf mobilen Teams-Clients anzeigen möchten, muss die Konfiguration `setSettings()` einen Wert für die Eigenschaft `websiteUrl` haben. Um eine optimale Benutzererfahrung zu gewährleisten, müssen Sie beim Erstellen ihrer Registerkarten die Anleitungen für Registerkarten [auf mobilen](~/tabs/design/tabs-mobile.md) Geräten befolgen. Apps, die [über Appsource verteilt werden,](~/concepts/deploy-and-publish/appsource/publish.md) verfügen über einen separaten Genehmigungsprozess für mobile Clients. Das Standardverhalten solcher Apps lautet wie folgt:
 
-| **App-Funktion** | **Verhalten, wenn die App genehmigt wurde** | **Verhalten, wenn die App nicht genehmigt wurde** |
+| **App-Funktion** | **Verhalten, wenn die App genehmigt wurde** | **Verhalten, wenn die App nicht genehmigt ist** |
 | --- | --- | --- |
 | **Statische Registerkarten** | Die App wird in der unteren Leiste der mobilen Clients angezeigt. Registerkarten werden im Teams-Client geöffnet. | Die App wird nicht in der unteren Leiste der mobilen Clients angezeigt. |
 | **Konfigurierbare Registerkarten** | Die Registerkarte wird im Teams-Client mit `contentUrl` geöffnet. | Die Registerkarte wird in einem Browser außerhalb des Teams-Clients mit `websiteUrl` geöffnet. |
@@ -65,12 +65,11 @@ Wenn Sie ihre Kanal- oder Gruppenregisterkarte auf mobilen Teams-Clients anzeige
 
 >[!NOTE]
 >
->- Das Standardverhalten der Apps gilt nur, wenn sie über AppSource verteilt werden. Es gibt keinen Genehmigungsprozess für Apps, die über andere [Verteilungsmethoden verteilt werden.](~/concepts/deploy-and-publish/overview.md) Standardmäßig werden alle Registerkarten im Teams-Client geöffnet.
+>- Das Standardverhalten der Apps gilt nur, wenn sie über den Teams Store (AppSource) verteilt werden. Es gibt keinen Genehmigungsprozess für Apps, die über andere [Verteilungsmethoden verteilt werden.](~/concepts/deploy-and-publish/overview.md) Standardmäßig werden alle Registerkarten im Teams-Client geöffnet.
 >- Um eine Auswertung Ihrer App für mobile Geräte zu initiieren, wenden Sie sich an teamsubm@microsoft.com Ihre App-Details.
 
+> [!div class="nextstepaction"]
+> [Weitere Informationen: Anfordern von Geräteberechtigungen](../concepts/device-capabilities/native-device-permissions.md)
 
 > [!div class="nextstepaction"]
-> [Weitere Informationen: Anfordern von Geräteberechtigungen](/concepts/device-capabilities/native-device-permissions.md)
-
-> [!div class="nextstepaction"]
->[Weitere Informationen: Berechtigungen für Kamera und Bildergalerie](/concepts/device-capabilities/mobile-camera-image-permissions.md)
+>[Weitere Informationen: Berechtigungen für Kamera und Bildergalerie](../concepts/device-capabilities/mobile-camera-image-permissions.md)

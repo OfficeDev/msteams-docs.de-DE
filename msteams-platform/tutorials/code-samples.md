@@ -1,90 +1,90 @@
 ---
-title: Microsoft Teams-Codebeispiele
+title: Codebeispiele für Microsoft Teams
 description: Links und Beschreibungen von Beispielanwendungen für die Microsoft Teams-Entwicklerplattform
-keywords: Microsoft Teams-Entwickler Beispiele
-ms.openlocfilehash: 7a81494d7808c27c495c660b5d58f7779ba87c83
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+keywords: Microsoft Teams – Entwicklerbeispiele
+ms.openlocfilehash: 665d3565f4f453d263fef6a17cb27f5060111468
+ms.sourcegitcommit: 6d9c60cce1f2e5204e680c074ce77a8376233b59
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237958"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49912316"
 ---
 # <a name="tutorials-and-code-samples-for-the-microsoft-teams-developer-platform"></a>Lernprogramme und Codebeispiele für die Microsoft Teams-Entwicklerplattform
 
-Hier finden Sie eine Liste der Lernprogramme und Codebeispiele, die veranschaulichen, wie Sie die Teams-Entwicklerplattform-Funktionen erweitern können, indem Sie benutzerdefinierte Apps erstellen.
+Hier finden Sie eine Liste von Lernprogrammen und Codebeispielen, die veranschaulichen, wie Sie die Funktionen der Entwicklerplattform von Teams erweitern können, indem Sie benutzerdefinierte Apps erstellen.
 
 ## <a name="getting-started-with-microsoft-learn"></a>Erste Schritte mit Microsoft Learn
 
-| Funktion| Lern Modul|
+| Funktion| Lernmodul|
 |--------|-------------|
-| Registerkarten – eingebettete Webanwendungen  |  [Erstellen einer eingebetteten Weboberfläche mit Registerkarten für Microsoft Teams](https://docs.microsoft.com/learn/modules/embedded-web-experiences/) |
+| Registerkarten – eingebettete Weberfahrungen  |  [Erstellen einer eingebetteten Weboberfläche mit Registerkarten für Microsoft Teams](https://docs.microsoft.com/learn/modules/embedded-web-experiences/) |
 | Webhooks und Connectors  |  [Verbinden von Webdiensten mit Microsoft Teams mit Webhooks und Office 365-Connectors](https://docs.microsoft.com/learn/modules/msteams-webhooks-connectors/) |
 |Messaging-Erweiterungen  | [Aufgabenorientierte Interaktionen in Microsoft Teams mit Messaging-Erweiterungen](https://docs.microsoft.com/learn/modules/msteams-messaging-extensions/)  |
-| Aufgabenmodule |  [Sammeln von Eingaben in Microsoft Teams mit Aufgaben Modulen](https://docs.microsoft.com/learn/modules/msteams-task-modules/) |
-| Unterhaltungs Bots  | [Erstellen von interaktiven Unterhaltungsbots für Microsoft Teams](https://docs.microsoft.com/learn/modules/msteams-conversation-bots/)  |
+| Aufgabenmodule |  [Sammeln von Eingaben in Microsoft Teams mit Aufgabenmodulen](https://docs.microsoft.com/learn/modules/msteams-task-modules/) |
+| Unterhaltungsbots  | [Erstellen von interaktiven Unterhaltungsbots für Microsoft Teams](https://docs.microsoft.com/learn/modules/msteams-conversation-bots/)  |
 
 ## <a name="getting-started-with-code-samples"></a>Erste Schritte mit Codebeispielen
 
 So laden Sie unsere Beispiele von GitHub herunter:
 
 1. Wählen Sie eines der unten aufgeführten Projekte aus, und öffnen Sie das Projekt in GitHub.
-2. Klicken Sie auf die Schaltfläche **Klonen oder herunterladen** und kopieren Sie die URL
+2. Klicken Sie auf die **Schaltfläche "Klonen"** oder "Herunterladen", und kopieren Sie die URL.
 3. Öffnen Sie eine Eingabeaufforderung im übergeordneten Verzeichnis, in dem Sie das Beispielprojekt installieren möchten.
 4. Ausführen `git clone <pasted url>`
 
 ### <a name="for-netc-samples"></a>Für .NET/C#-Beispiele
 
-Jedes unserer .net-Beispiele enthält eine Visual Studio Lösungsdatei, mit der die Lösung vollständig erstellt werden kann, einschließlich der Wiederherstellung der NuGet-Pakete.
+Jedes unserer .NET-Beispiele enthält eine Visual Studio Lösungsdatei, die die Lösung vollständig erstellen kann, einschließlich der Wiederherstellung der NuGet-Pakete.
 
-### <a name="for-nodejs-samples"></a>Node.js Beispiele
+### <a name="for-nodejs-samples"></a>For Node.js samples
 
-Wir stellen eine Datei packages.jsbereit, in der alle erforderlichen Pakete für ein Beispiel aufgelistet sind. Führen Sie einfach `npm install` von der Befehlszeile in Ihrem Node.js Projektverzeichnis aus, um die erforderlichen Pakete zu installieren. Nun können Sie das Projekt in Visual Studio Code öffnen und mit dem Experimentieren beginnen.
+Wir bieten eine packages.jsdatei, die alle erforderlichen Pakete für ein Beispiel auflistet. Führen Sie einfach die Befehlszeile in Ihrem Node.js aus, um `npm install` die erforderlichen Pakete zu installieren. Jetzt können Sie das Projekt in Visual Studio Code öffnen und mit dem Experimentieren beginnen.
 
 ### <a name="for-other-samples"></a>Für andere Beispiele
 
-Wie immer sollte die Readme-Datei des Projekts weitere Informationen zu spezifischen Anforderungen für bestimmte Beispiele enthalten.
+Wie immer sollte die README-Datei des Projekts über weitere Informationen zu bestimmten Anforderungen für bestimmte Beispiele verfügen.
 
-## <a name="bots-using-the-v4-sdk"></a>Bots (mit dem V4-SDK)
+## <a name="bots-using-the-v4-sdk"></a>Bots (mit dem v4 SDK)
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
 >[!TIP]
->Besuchen Sie das [bot-Framework Samples Repository](https://github.com/Microsoft/BotBuilder-Samples) , um Microsoft bot Framework V4 SDK aufgabenorientierte Beispiele für C#, JavaScript, Schreibweise und python anzuzeigen.
+>Besuchen Sie [das Bot Framework-Beispielrepository,](https://github.com/Microsoft/BotBuilder-Samples) um aufgabenorientierte Microsoft Bot Framework v4 SDK-Beispiele für C#, JavaScript, TypeScript und Python zu sehen.
 
-## <a name="messaging-extensions-using-the-v4-sdk"></a>Messaging Erweiterungen (mithilfe des V4-SDK)
+## <a name="messaging-extensions-using-the-v4-sdk"></a>Messagingerweiterungen (mit dem v4 SDK)
 
 | Beispiel | Beschreibung | .NET Core | JavaScript | Python|
 |--------|------------- |---|---|----|
-| Messaging Extensions – Suche | Messaging-Erweiterung, die Suchanforderungen akzeptiert und Ergebnisse zurückgibt. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
-| Messaging Extensions – Aktion | Messaging-Erweiterung, die Parameter akzeptiert und eine Karte zurückgibt. Außerdem erhalten Sie Informationen darüber, wie eine weitergeleitete Nachricht als Parameter in einer Messaging Erweiterung empfangen wird. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
-| Messaging Extensions – auth und config | Messaging-Erweiterung, die eine Konfigurationsseite aufweist, Suchanforderungen akzeptiert und Ergebnisse zurückgibt, nachdem sich der Benutzer angemeldet hat. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) |
-| Messaging Extensions – Aktions Vorschau | Veranschaulicht, wie ein Vorschau-und Bearbeitungsablauf für eine Messaging Erweiterung erstellt wird. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/53.teams-messaging-extensions-action-preview) |
-| Entfalten von Links | Messaging-Erweiterung, die das Aufrollen von Links ausführt. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/55.teams-link-unfurling) |
+| Messagingerweiterungen – Suche | Messaging-Erweiterung, die Suchanforderungen akzeptiert und Ergebnisse zurückgibt. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+| Messagingerweiterungen – Aktion | Messaging-Erweiterung, die Parameter akzeptiert und eine Karte zurückgibt. Außerdem erfahren Sie, wie Sie eine weitergeleitete Nachricht als Parameter in einer Messagingerweiterung empfangen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
+| Messagingerweiterungen – Authentifizierung und Konfiguration | Messaging extension that has a configuration page, accepts search requests and returns results after the user has signed in. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) |
+| Messagingerweiterungen – Aktionsvorschau | Veranschaulicht das Erstellen eines Vorschau- und Bearbeitungsflusses für eine Messaging-Erweiterung. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/53.teams-messaging-extensions-action-preview) |
+| Entfalten von Links | Messaging-Erweiterung, die das Verfausen von Links durchführt. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/55.teams-link-unfurling) |
 
 
-## <a name="outgoing-webhooks"></a>Ausgehende webhooks
+## <a name="outgoing-webhooks"></a>Ausgehende Webhooks
 
 | Beispiel | Beschreibung
 |--------|-------------
-| [Ausgehende webhook für C#-/.net](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook) | Veranschaulicht das Erstellen eines **ausgehenden webhooks** für Microsoft Teams in C#/.net.
-| [Ausgehende webhook für Node.js](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs) | Zeigt, wie Sie einen einfachen **ausgehenden webhook** für Microsoft Teams in ~ 50 Zeilen Node.js Code erstellen.
+| [Ausgehender Webhook für C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook) | Veranschaulicht das Erstellen eines **ausgehenden Webhooks** für Microsoft Teams in C#/.NET.
+| [Ausgehender Webhook für Node.js](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs) | Veranschaulicht, wie sie einen einfachen ausgehenden **Webhook** für Microsoft Teams in ca. 50 Zeilen Node.js erstellen.
 
 ## <a name="connectors"></a>Connectors
 
 | Beispiel | Beschreibung
 |--------|-------------
-| [Beispiel-Konnektor für Node.js](https://github.com/OfficeDev/microsoft-teams-sample-connector-nodejs) | In diesem Beispiel, das in Node.js geschrieben wurde, wird gezeigt, wie Sie einen Connector für Microsoft Teams mit GitHub als Beispiel zum Generieren von Connector-Benachrichtigungen erstellen.
-| [Beispiel für Connector für C#-/.net](https://github.com/OfficeDev/microsoft-teams-sample-connector-csharp) | In diesem in C# geschriebenen Beispiel wird gezeigt, wie Sie einen Connector für Microsoft Teams mithilfe einer Beispiel-Aufgabenlisten-App als Beispiel zum Generieren von Connector-Benachrichtigungen erstellen.
+| [Beispielconnector für Node.js](https://github.com/OfficeDev/microsoft-teams-sample-connector-nodejs) | In diesem beispiel, das in Node.js geschrieben wurde, wird gezeigt, wie Sie einen Connector für Microsoft Teams erstellen, indem Sie GitHub als Beispiel zum Generieren von Connectorbenachrichtigungen verwenden.
+| [Beispielconnector für C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-connector-csharp) | In diesem in C# geschriebenen Beispiel wird gezeigt, wie Ein Connector für Microsoft Teams mithilfe einer Beispiel-Aufgabenlisten-App als Beispiel zum Generieren von Connectorbenachrichtigungen erstellt wird. In diesem Beispiel wird auch gezeigt, wie die Anmeldefunktionalität auf der Connectorkonfigurationsseite implementiert wird. 
 
 ## <a name="graph-api"></a>Graph-API
 
 | Beispiel | Beschreibung
 |--------|-------------
-| [Microsoft Graph-API-Beispiele](https://github.com/OfficeDev/microsoft-teams-sample-graph) | In diesen Beispielen wird veranschaulicht, wie Sie mithilfe von Microsoft Graph-API-aufrufen Aufgaben wie das Abfragen von Teams und Kanälen von einem Webdienst ausführen, der außerhalb von Microsoft Teams ausgeführt wird.
+| [Microsoft Graph-API-Beispiele](https://github.com/OfficeDev/microsoft-teams-sample-graph) | Diese Beispiele veranschaulichen die Verwendung von Microsoft Graph-API-Aufrufen, um Aufgaben auszuführen, z. B. das Abfragen von Teams und Kanälen von einem Webdienst, der außerhalb von Microsoft Teams ausgeführt wird.
 
-### <a name="bot-framework-sdk-v3-samples"></a>Beispiele für bot Framework SDK v3
+### <a name="bot-framework-sdk-v3-samples"></a>Bot Framework SDK v3-Beispiele
 
 | Beispiel | Beschreibung |
 |--------|------------- |
-| [Beispiel bot für C#-/.net](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/CSharp/Samples/Microsoft.Bot.Connector.Teams.SampleBot) | Beispiele für bot Framework V3|
-| [Beispiel bot für Node.js](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/Node/samples) | Beispiele für bot Framework V3 |
+| [Beispielbot für C#/.NET](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/CSharp/Samples/Microsoft.Bot.Connector.Teams.SampleBot) | Bot Framework v3-Beispiele|
+| [Beispielbot für Node.js](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/Node/samples) | Bot Framework v3-Beispiele |
