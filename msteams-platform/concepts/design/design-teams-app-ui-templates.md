@@ -1,180 +1,199 @@
 ---
-title: Entwerfen Ihrer APP mit Benutzeroberflächenvorlagen
+title: Entwerfen Ihrer App mit Benutzeroberflächenvorlagen
 author: heath-hamilton
-description: Entwerfen Sie Ihre APP schneller mit standardisierten Benutzeroberflächenkomponenten, Layouts und Mustern, die häufig in Microsoft Teams zu sehen sind.
+description: Entwerfen Sie Ihre App schneller mit standardisierten Benutzeroberflächenkomponenten, Layouts und Mustern, die in Microsoft Teams häufig verwendet werden.
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 144c18ab03d76e442a4de64a5c61af76cb2b8b5f
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: b4d244bbf78ac85042d5caf8ec84afe42e79b3c7
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49606083"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911926"
 ---
-# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a><span data-ttu-id="f175e-103">Entwerfen Ihrer Microsoft Teams-App mit Benutzeroberflächenvorlagen</span><span class="sxs-lookup"><span data-stu-id="f175e-103">Designing your Microsoft Teams app with UI templates</span></span>
+# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a><span data-ttu-id="dcefc-103">Entwerfen Ihrer Microsoft Teams-App mit Benutzeroberflächenvorlagen</span><span class="sxs-lookup"><span data-stu-id="dcefc-103">Designing your Microsoft Teams app with UI templates</span></span>
 
-<span data-ttu-id="f175e-104">Entwerfen Sie Ihre Microsoft Teams-App schneller mit Benutzeroberflächenvorlagen.</span><span class="sxs-lookup"><span data-stu-id="f175e-104">Design your Microsoft Teams app faster with UI templates.</span></span> <span data-ttu-id="f175e-105">Bei den Vorlagen handelt es sich um eine Sammlung Fluent UI-basierter Komponenten, die in gängigen Microsoft Teams-Anwendungsfällen funktionieren, sodass Sie mehr Zeit haben, um die optimale Benutzerfreundlichkeit zu ermitteln.</span><span class="sxs-lookup"><span data-stu-id="f175e-105">The templates are a collection of Fluent UI-based components that work across common Teams use cases, giving you more time to figure out the best experience for your users.</span></span>
+<span data-ttu-id="dcefc-104">Entwerfen Sie Ihre Microsoft Teams-App schneller mit Benutzeroberflächenvorlagen.</span><span class="sxs-lookup"><span data-stu-id="dcefc-104">Design your Microsoft Teams app faster with UI templates.</span></span> <span data-ttu-id="dcefc-105">Die Vorlagen sind eine Sammlung von Fluent-UI-basierten Komponenten, die in gängigen Teams-Verwendungsfällen funktionieren, um Ihnen mehr Zeit zu geben, um die beste Erfahrung für Ihre Benutzer zu finden.</span><span class="sxs-lookup"><span data-stu-id="dcefc-105">The templates are a collection of Fluent UI-based components that work across common Teams use cases, giving you more time to figure out the best experience for your users.</span></span>
 
-## <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="f175e-106">Microsoft Teams-UI-Kit</span><span class="sxs-lookup"><span data-stu-id="f175e-106">Microsoft Teams UI Kit</span></span>
+## <a name="getting-started-with-tools-and-samples"></a><span data-ttu-id="dcefc-106">Erste Schritte mit Tools und Beispielen</span><span class="sxs-lookup"><span data-stu-id="dcefc-106">Getting started with tools and samples</span></span>
 
-<span data-ttu-id="f175e-107">Sie können Benutzeroberflächenvorlagen aus dem Microsoft Teams UI Kit abrufen, das auch umfassende Informationen zur Verwendung, zur Anatomie, zur Barrierefreiheit und zu bewährten Methoden enthält.</span><span class="sxs-lookup"><span data-stu-id="f175e-107">You can grab UI templates from the Microsoft Teams UI Kit, which also includes extensive information about usage, anatomy, accessibility, and best practices.</span></span>
+<span data-ttu-id="dcefc-107">Die folgenden Ressourcen können Sie beim Entwerfen und Entwickeln Ihrer App mithilfe von Benutzeroberflächenvorlagen unterstützen.</span><span class="sxs-lookup"><span data-stu-id="dcefc-107">The following resources can help you design and develop your app using UI templates.</span></span>
+
+### <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="dcefc-108">Microsoft Teams UI Kit</span><span class="sxs-lookup"><span data-stu-id="dcefc-108">Microsoft Teams UI Kit</span></span>
+
+<span data-ttu-id="dcefc-109">Greifen Sie ui templates for your app design from the Microsoft Teams UI Kit, which also includes extensive information about usage, anatomy, accessibility, and best practices.</span><span class="sxs-lookup"><span data-stu-id="dcefc-109">Grab UI templates for your app design from the Microsoft Teams UI Kit, which also includes extensive information about usage, anatomy, accessibility, and best practices.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="f175e-108">Abrufen des Microsoft Teams UI Kit (Figma)</span><span class="sxs-lookup"><span data-stu-id="f175e-108">Get the Microsoft Teams UI Kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
+> [<span data-ttu-id="dcefc-110">Benutzeroberflächenkit (Bissma)</span><span class="sxs-lookup"><span data-stu-id="dcefc-110">Get the UI kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
 
-## <a name="list"></a><span data-ttu-id="f175e-109">List</span><span class="sxs-lookup"><span data-stu-id="f175e-109">List</span></span>
+### <a name="microsoft-teams-ui-library"></a><span data-ttu-id="dcefc-111">Microsoft Teams UI Library</span><span class="sxs-lookup"><span data-stu-id="dcefc-111">Microsoft Teams UI Library</span></span>
 
-<span data-ttu-id="f175e-110">Sie können eine Liste verwenden, um verwandte Elemente in einem scannable-Format anzuzeigen und Benutzern das Ausführen von Aktionen für eine gesamte Liste oder einzelne Elemente zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="f175e-110">You can use a list to display related items in a scannable format and allow users to take actions on an entire list or individual items.</span></span>
+<span data-ttu-id="dcefc-112">Anzeigen und Testen einzelner Benutzeroberflächenvorlagen und zugehöriger Komponenten von Teams in Ihrem Browser.</span><span class="sxs-lookup"><span data-stu-id="dcefc-112">View and test individual Teams UI templates and related components in your browser.</span></span>
 
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Beispiel zeigt eine Listen Benutzeroberflächen Vorlage." border="false":::
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="dcefc-113">Probieren Sie die Benutzeroberflächenbibliothek (Playground) aus.</span><span class="sxs-lookup"><span data-stu-id="dcefc-113">Try the UI library (playground)</span></span>](https://dev-int.teams.microsoft.com/storybook/main/index.html)
 
-### <a name="top-use-cases"></a><span data-ttu-id="f175e-112">Wichtigste Anwendungsfälle</span><span class="sxs-lookup"><span data-stu-id="f175e-112">Top use cases</span></span>
+<span data-ttu-id="dcefc-114">Importieren Sie diese Vorlagen und zugehörigen Komponenten direkt in Ihr Teams-App-Projekt.</span><span class="sxs-lookup"><span data-stu-id="dcefc-114">Import these templates and related components directly into your Teams app project.</span></span>
 
-* <span data-ttu-id="f175e-113">Anzeigen von Daten</span><span class="sxs-lookup"><span data-stu-id="f175e-113">Display data</span></span>
-* <span data-ttu-id="f175e-114">Kontextbezogene Aktionen für App-Inhalte</span><span class="sxs-lookup"><span data-stu-id="f175e-114">Contextual actions on app content</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="dcefc-115">Abrufen der Benutzeroberflächenbibliothek (GitHub)</span><span class="sxs-lookup"><span data-stu-id="dcefc-115">Get the UI library (GitHub)</span></span>](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
 
-## <a name="dashboard"></a><span data-ttu-id="f175e-115">Dashboard</span><span class="sxs-lookup"><span data-stu-id="f175e-115">Dashboard</span></span>
+### <a name="sample-app"></a><span data-ttu-id="dcefc-116">Beispiel-App</span><span class="sxs-lookup"><span data-stu-id="dcefc-116">Sample app</span></span>
 
-<span data-ttu-id="f175e-116">In einem Dashboard werden unterschiedliche Inhaltstypen an einem zentralen Ort angezeigt (persönliche Teams-APP oder-Registerkarte).</span><span class="sxs-lookup"><span data-stu-id="f175e-116">A dashboard displays different types of content in a central location (Teams personal app or tab).</span></span> <span data-ttu-id="f175e-117">Benutzer sollten in der Lage sein, zumindest einiges von dem, was Sie in einem Dashboard sehen, anzupassen.</span><span class="sxs-lookup"><span data-stu-id="f175e-117">Users should be able to customize at least some of what they see on a dashboard.</span></span>
+<span data-ttu-id="dcefc-117">Installieren Sie eine Beispiel-App, um zu sehen, wie Benutzeroberflächenvorlagen im Kontext von Teams aussehen und sich verhalten.</span><span class="sxs-lookup"><span data-stu-id="dcefc-117">Install a sample app to see how UI templates look and behave within Teams contexts.</span></span>
 
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Beispiel zeigt eine Dashboard-Benutzeroberflächen Vorlage." border="false":::
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="dcefc-118">Abrufen der Beispiel-App (GitHub)</span><span class="sxs-lookup"><span data-stu-id="dcefc-118">Get the sample app (GitHub)</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
-### <a name="top-use-cases"></a><span data-ttu-id="f175e-119">Wichtigste Anwendungsfälle</span><span class="sxs-lookup"><span data-stu-id="f175e-119">Top use cases</span></span>
+## <a name="list"></a><span data-ttu-id="dcefc-119">List</span><span class="sxs-lookup"><span data-stu-id="dcefc-119">List</span></span>
 
-* <span data-ttu-id="f175e-120">Analysieren von Daten</span><span class="sxs-lookup"><span data-stu-id="f175e-120">Analyze data</span></span>
-* <span data-ttu-id="f175e-121">Berichts Metriken</span><span class="sxs-lookup"><span data-stu-id="f175e-121">Report metrics</span></span>
-* <span data-ttu-id="f175e-122">Organisieren unterschiedlicher Informationen an einer Stelle</span><span class="sxs-lookup"><span data-stu-id="f175e-122">Organize different information in one place</span></span>
+<span data-ttu-id="dcefc-120">Sie können eine Liste verwenden, um verwandte Elemente in einem scannierbaren Format anzeigen und Benutzern das Ausführen von Aktionen für eine gesamte Liste oder einzelne Elemente zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="dcefc-120">You can use a list to display related items in a scannable format and allow users to take actions on an entire list or individual items.</span></span>
 
-## <a name="form"></a><span data-ttu-id="f175e-123">Formular</span><span class="sxs-lookup"><span data-stu-id="f175e-123">Form</span></span>
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Beispiel zeigt eine Listenbenutzeroberflächenvorlage." border="false":::
 
-<span data-ttu-id="f175e-124">Formulare werden verwendet, um Benutzereingaben auf strukturierte Weise zu erfassen, zu validieren und zu übermitteln.</span><span class="sxs-lookup"><span data-stu-id="f175e-124">Forms are used to collect, validate, and submit user input in a structured way.</span></span> <span data-ttu-id="f175e-125">Klare Bezeichnungen und logische Gruppierungen von Eingabefeldern sind für eine gute Benutzerfreundlichkeit wichtig.</span><span class="sxs-lookup"><span data-stu-id="f175e-125">Clear labeling and logical groupings of input fields are critical for a good user experience.</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="dcefc-122">Die am besten verwendeten Fälle</span><span class="sxs-lookup"><span data-stu-id="dcefc-122">Top use cases</span></span>
 
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Beispiel zeigt eine Formular Benutzeroberflächen Vorlage." border="false":::
+* <span data-ttu-id="dcefc-123">Anzeigen von Daten</span><span class="sxs-lookup"><span data-stu-id="dcefc-123">Display data</span></span>
+* <span data-ttu-id="dcefc-124">Kontextbezogene Aktionen zu App-Inhalten</span><span class="sxs-lookup"><span data-stu-id="dcefc-124">Contextual actions on app content</span></span>
 
-### <a name="top-use-cases"></a><span data-ttu-id="f175e-127">Wichtigste Anwendungsfälle</span><span class="sxs-lookup"><span data-stu-id="f175e-127">Top use cases</span></span>
+## <a name="dashboard"></a><span data-ttu-id="dcefc-125">Dashboard</span><span class="sxs-lookup"><span data-stu-id="dcefc-125">Dashboard</span></span>
 
-* <span data-ttu-id="f175e-128">Anmelden</span><span class="sxs-lookup"><span data-stu-id="f175e-128">Sign in</span></span>
-* <span data-ttu-id="f175e-129">Benutzerprofile</span><span class="sxs-lookup"><span data-stu-id="f175e-129">User profiles</span></span>
-* <span data-ttu-id="f175e-130">Einstellungen</span><span class="sxs-lookup"><span data-stu-id="f175e-130">Settings</span></span>
-* <span data-ttu-id="f175e-131">Benutzereingabe Sammlung</span><span class="sxs-lookup"><span data-stu-id="f175e-131">User input collection</span></span>
+<span data-ttu-id="dcefc-126">Ein Dashboard zeigt verschiedene Arten von Inhalten an einem zentralen Ort an (persönliche Teams-App oder Registerkarte).</span><span class="sxs-lookup"><span data-stu-id="dcefc-126">A dashboard displays different types of content in a central location (Teams personal app or tab).</span></span> <span data-ttu-id="dcefc-127">Benutzer sollten in der Lage sein, zumindest einige der auf einem Dashboard angezeigten Funktionen anzupassen.</span><span class="sxs-lookup"><span data-stu-id="dcefc-127">Users should be able to customize at least some of what they see on a dashboard.</span></span>
 
-## <a name="sign-in"></a><span data-ttu-id="f175e-132">Anmelden</span><span class="sxs-lookup"><span data-stu-id="f175e-132">Sign in</span></span>
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Beispiel zeigt eine Dashboard-UI-Vorlage." border="false":::
 
-<span data-ttu-id="f175e-133">Sie können APP-Anmeldedaten Flüsse für unterschiedliche Teams-Kontexte und Identitätsanbieter entwerfen.</span><span class="sxs-lookup"><span data-stu-id="f175e-133">You can design app sign-in flows for different Teams contexts and identity providers.</span></span> <span data-ttu-id="f175e-134">Das folgende Beispiel enthält einmaliges Anmelden (Single Sign-on, SSO), das wir für die einfachste Authentifizierungs Erfahrung empfehlen.</span><span class="sxs-lookup"><span data-stu-id="f175e-134">The following example includes single sign-on (SSO), which we recommend for the simplest authentication experience.</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="dcefc-129">Die am besten verwendeten Fälle</span><span class="sxs-lookup"><span data-stu-id="dcefc-129">Top use cases</span></span>
 
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Beispiel zeigt eine Vorlage für eine Anmeldebenutzeroberfläche." border="false":::
+* <span data-ttu-id="dcefc-130">Analysieren von Daten</span><span class="sxs-lookup"><span data-stu-id="dcefc-130">Analyze data</span></span>
+* <span data-ttu-id="dcefc-131">Berichtsmetriken</span><span class="sxs-lookup"><span data-stu-id="dcefc-131">Report metrics</span></span>
+* <span data-ttu-id="dcefc-132">Organisieren unterschiedlicher Informationen an einem Ort</span><span class="sxs-lookup"><span data-stu-id="dcefc-132">Organize different information in one place</span></span>
 
-### <a name="top-use-case"></a><span data-ttu-id="f175e-136">Oberer Anwendungsfall</span><span class="sxs-lookup"><span data-stu-id="f175e-136">Top use case</span></span>
+## <a name="form"></a><span data-ttu-id="dcefc-133">Formular</span><span class="sxs-lookup"><span data-stu-id="dcefc-133">Form</span></span>
 
-* <span data-ttu-id="f175e-137">Authentifizieren von Benutzern</span><span class="sxs-lookup"><span data-stu-id="f175e-137">Authenticate users</span></span>
+<span data-ttu-id="dcefc-134">Formulare werden verwendet, um Benutzereingaben auf strukturierte Weise zu sammeln, zu überprüfen und zu übermitteln.</span><span class="sxs-lookup"><span data-stu-id="dcefc-134">Forms are used to collect, validate, and submit user input in a structured way.</span></span> <span data-ttu-id="dcefc-135">Klare Bezeichnungen und logische Gruppierungen von Eingabefeldern sind für eine gute Benutzererfahrung entscheidend.</span><span class="sxs-lookup"><span data-stu-id="dcefc-135">Clear labeling and logical groupings of input fields are critical for a good user experience.</span></span>
 
-## <a name="task-board"></a><span data-ttu-id="f175e-138">Aufgaben Ausschuss</span><span class="sxs-lookup"><span data-stu-id="f175e-138">Task board</span></span>
+:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Beispiel zeigt eine Formular-UI-Vorlage." border="false":::
 
-<span data-ttu-id="f175e-139">Ein Aufgaben Gremium, das manchmal als Kanban-Board oder als Swim Lanes bezeichnet wird, ist eine Sammlung von Karten, die häufig zum Nachverfolgen des Status von Arbeitsaufgaben oder Tickets verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f175e-139">A task board, sometimes called a kanban board or swim lanes, is a collection of cards often used to track the status of work items or tickets.</span></span> <span data-ttu-id="f175e-140">Es kann auch verwendet werden, um jeden Inhaltstyp in Kategorien zu sortieren.</span><span class="sxs-lookup"><span data-stu-id="f175e-140">It can also be used to sort any type of content into categories.</span></span> <span data-ttu-id="f175e-141">Sie können die Karten zwischen den Spalten bearbeiten und verlagern.</span><span class="sxs-lookup"><span data-stu-id="f175e-141">You can edit and move the cards between columns.</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="dcefc-137">Die am meisten verwendeten Fälle</span><span class="sxs-lookup"><span data-stu-id="dcefc-137">Top use cases</span></span>
 
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Beispiel zeigt eine Benutzeroberflächen Vorlage für das Task Board." border="false":::
+* <span data-ttu-id="dcefc-138">Anmelden</span><span class="sxs-lookup"><span data-stu-id="dcefc-138">Sign in</span></span>
+* <span data-ttu-id="dcefc-139">Benutzerprofile</span><span class="sxs-lookup"><span data-stu-id="dcefc-139">User profiles</span></span>
+* <span data-ttu-id="dcefc-140">Einstellungen</span><span class="sxs-lookup"><span data-stu-id="dcefc-140">Settings</span></span>
+* <span data-ttu-id="dcefc-141">Benutzereingabesammlung</span><span class="sxs-lookup"><span data-stu-id="dcefc-141">User input collection</span></span>
 
-### <a name="top-use-cases"></a><span data-ttu-id="f175e-143">Wichtigste Anwendungsfälle</span><span class="sxs-lookup"><span data-stu-id="f175e-143">Top use cases</span></span>
+## <a name="sign-in"></a><span data-ttu-id="dcefc-142">Anmelden</span><span class="sxs-lookup"><span data-stu-id="dcefc-142">Sign in</span></span>
 
-* <span data-ttu-id="f175e-144">Projektmanagement</span><span class="sxs-lookup"><span data-stu-id="f175e-144">Project management.</span></span> <span data-ttu-id="f175e-145">Zuweisen von Vorgängen und nachverfolgungsstatus</span><span class="sxs-lookup"><span data-stu-id="f175e-145">Assigning tasks and tracking status</span></span>
-* <span data-ttu-id="f175e-146">Brainstorming.</span><span class="sxs-lookup"><span data-stu-id="f175e-146">Brainstorming.</span></span> <span data-ttu-id="f175e-147">Hinzufügen von Ideen in verschiedenen Kategorien</span><span class="sxs-lookup"><span data-stu-id="f175e-147">Adding ideas in different categories</span></span>
-* <span data-ttu-id="f175e-148">Sortier Übungen.</span><span class="sxs-lookup"><span data-stu-id="f175e-148">Sorting exercises.</span></span> <span data-ttu-id="f175e-149">Organisieren aller Arten von Informationen in Buckets</span><span class="sxs-lookup"><span data-stu-id="f175e-149">Organizing any kind of information into buckets</span></span>
+<span data-ttu-id="dcefc-143">Sie können App-Anmeldeabläufe für verschiedene Kontexte und Identitätsanbieter von Teams entwerfen.</span><span class="sxs-lookup"><span data-stu-id="dcefc-143">You can design app sign-in flows for different Teams contexts and identity providers.</span></span> <span data-ttu-id="dcefc-144">Das folgende Beispiel enthält einmaliges Anmelden (Single Sign-On, SSO), was für die einfachste Authentifizierungserfahrung empfohlen wird.</span><span class="sxs-lookup"><span data-stu-id="dcefc-144">The following example includes single sign-on (SSO), which we recommend for the simplest authentication experience.</span></span>
 
-## <a name="data-visualization"></a><span data-ttu-id="f175e-150">Datenvisualisierung</span><span class="sxs-lookup"><span data-stu-id="f175e-150">Data visualization</span></span>
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Beispiel zeigt eine Vorlage für die Anmeldung der Benutzeroberfläche." border="false":::
 
-<span data-ttu-id="f175e-151">Sie können unterschiedliche Kartengrößen (Einzel, doppelt und vollständig) verwenden, um Datenvisualisierungen auf derselben Seite zu stapeln und zu organisieren.</span><span class="sxs-lookup"><span data-stu-id="f175e-151">You can use different card sizes (single, double, and full) to stack and organize data visualizations on the same page.</span></span> <span data-ttu-id="f175e-152">Die Karten werden so skaliert, dass Sie in das Spaltenlayout passt und Leerzeichen eingeben.</span><span class="sxs-lookup"><span data-stu-id="f175e-152">The cards scale to fit the column layout and fill in blank spaces.</span></span>
+### <a name="top-use-case"></a><span data-ttu-id="dcefc-146">Der am besten zu verwendende Fall</span><span class="sxs-lookup"><span data-stu-id="dcefc-146">Top use case</span></span>
 
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Beispiel zeigt eine Benutzeroberflächen Vorlage für die Datenvisualisierung." border="false":::
+* <span data-ttu-id="dcefc-147">Authentifizieren von Benutzern</span><span class="sxs-lookup"><span data-stu-id="dcefc-147">Authenticate users</span></span>
 
-### <a name="top-use-cases"></a><span data-ttu-id="f175e-154">Wichtigste Anwendungsfälle</span><span class="sxs-lookup"><span data-stu-id="f175e-154">Top use cases</span></span>
+## <a name="task-board"></a><span data-ttu-id="dcefc-148">Task Board</span><span class="sxs-lookup"><span data-stu-id="dcefc-148">Task board</span></span>
 
-* <span data-ttu-id="f175e-155">Anzeigen komplexer Informationen</span><span class="sxs-lookup"><span data-stu-id="f175e-155">Display complex information</span></span>
-* <span data-ttu-id="f175e-156">Erstellen eines Dashboards</span><span class="sxs-lookup"><span data-stu-id="f175e-156">Create a dashboard</span></span>
+<span data-ttu-id="dcefc-149">Ein Task Board, manchmal auch als Kanban Board oder Rettungsweg bezeichnet, ist eine Sammlung von Karten, die häufig verwendet werden, um den Status von Arbeitsaufgaben oder Tickets nachverfolgt.</span><span class="sxs-lookup"><span data-stu-id="dcefc-149">A task board, sometimes called a kanban board or swim lanes, is a collection of cards often used to track the status of work items or tickets.</span></span> <span data-ttu-id="dcefc-150">Es kann auch verwendet werden, um jeden Inhaltstyp in Kategorien zu sortieren.</span><span class="sxs-lookup"><span data-stu-id="dcefc-150">It can also be used to sort any type of content into categories.</span></span> <span data-ttu-id="dcefc-151">Sie können die Karten bearbeiten und zwischen Spalten verschieben.</span><span class="sxs-lookup"><span data-stu-id="dcefc-151">You can edit and move the cards between columns.</span></span>
 
-## <a name="wizard"></a><span data-ttu-id="f175e-157">Assistent</span><span class="sxs-lookup"><span data-stu-id="f175e-157">Wizard</span></span>
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Beispiel zeigt eine Task Board-UI-Vorlage." border="false":::
 
-<span data-ttu-id="f175e-158">Ein Assistent führt einen Benutzer durch mehrere Bildschirme, um eine Aufgabe abzuschließen (beispielsweise einen Setupvorgang).</span><span class="sxs-lookup"><span data-stu-id="f175e-158">A wizard guides a user through several screens to complete a task (such as a setup process).</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="dcefc-153">Die am meisten verwendeten Fälle</span><span class="sxs-lookup"><span data-stu-id="dcefc-153">Top use cases</span></span>
 
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Beispiel zeigt eine Assistenten-Benutzeroberflächen Vorlage." border="false":::
+* <span data-ttu-id="dcefc-154">Projektmanagement</span><span class="sxs-lookup"><span data-stu-id="dcefc-154">Project management.</span></span> <span data-ttu-id="dcefc-155">Zuweisen von Aufgaben und Nachverfolgungsstatus</span><span class="sxs-lookup"><span data-stu-id="dcefc-155">Assigning tasks and tracking status</span></span>
+* <span data-ttu-id="dcefc-156">Brainstorming.</span><span class="sxs-lookup"><span data-stu-id="dcefc-156">Brainstorming.</span></span> <span data-ttu-id="dcefc-157">Hinzufügen von Ideen in verschiedenen Kategorien</span><span class="sxs-lookup"><span data-stu-id="dcefc-157">Adding ideas in different categories</span></span>
+* <span data-ttu-id="dcefc-158">Sortierübungen.</span><span class="sxs-lookup"><span data-stu-id="dcefc-158">Sorting exercises.</span></span> <span data-ttu-id="dcefc-159">Organisieren aller Arten von Informationen in Buckets</span><span class="sxs-lookup"><span data-stu-id="dcefc-159">Organizing any kind of information into buckets</span></span>
 
-### <a name="top-use-cases"></a><span data-ttu-id="f175e-160">Wichtigste Anwendungsfälle</span><span class="sxs-lookup"><span data-stu-id="f175e-160">Top use cases</span></span>
+## <a name="data-visualization"></a><span data-ttu-id="dcefc-160">Datenvisualisierung</span><span class="sxs-lookup"><span data-stu-id="dcefc-160">Data visualization</span></span>
 
-* <span data-ttu-id="f175e-161">Setup</span><span class="sxs-lookup"><span data-stu-id="f175e-161">Setup</span></span>
-* <span data-ttu-id="f175e-162">Onboarding</span><span class="sxs-lookup"><span data-stu-id="f175e-162">Onboarding</span></span>
-* <span data-ttu-id="f175e-163">Erste Ausführungs Erfahrungen</span><span class="sxs-lookup"><span data-stu-id="f175e-163">First-run experiences</span></span>
+<span data-ttu-id="dcefc-161">Sie können verschiedene Kartengrößen (einzel, doppelt und vollständig) verwenden, um Datenvisualisierungen auf derselben Seite zu stapeln und zu organisieren.</span><span class="sxs-lookup"><span data-stu-id="dcefc-161">You can use different card sizes (single, double, and full) to stack and organize data visualizations on the same page.</span></span> <span data-ttu-id="dcefc-162">Die Karten passen sich an das Spaltenlayout an und füllen Leerzeichen aus.</span><span class="sxs-lookup"><span data-stu-id="dcefc-162">The cards scale to fit the column layout and fill in blank spaces.</span></span>
 
-## <a name="empty-state"></a><span data-ttu-id="f175e-164">Leerer Zustand</span><span class="sxs-lookup"><span data-stu-id="f175e-164">Empty state</span></span>
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Beispiel zeigt eine Benutzeroberflächenvorlage für die Datenvisualisierung." border="false":::
 
-<span data-ttu-id="f175e-165">Die leere Statusvorlage kann für viele Szenarien verwendet werden, einschließlich Anmeldung, Erstausführung, Fehlermeldungen und mehr.</span><span class="sxs-lookup"><span data-stu-id="f175e-165">The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.</span></span> <span data-ttu-id="f175e-166">Es ist sehr flexibel – passen Sie es an, ein, einige oder alle Komponenten im folgenden Design zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="f175e-166">It’s highly flexible⁠—adapt it to use one, a few, or all of the components in the following design.</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="dcefc-164">Die am meisten verwendeten Fälle</span><span class="sxs-lookup"><span data-stu-id="dcefc-164">Top use cases</span></span>
 
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Beispiel zeigt eine Assistenten-Benutzeroberflächen Vorlage." border="false":::
+* <span data-ttu-id="dcefc-165">Anzeigen komplexer Informationen</span><span class="sxs-lookup"><span data-stu-id="dcefc-165">Display complex information</span></span>
+* <span data-ttu-id="dcefc-166">Erstellen eines Dashboards</span><span class="sxs-lookup"><span data-stu-id="dcefc-166">Create a dashboard</span></span>
 
-### <a name="top-use-cases"></a><span data-ttu-id="f175e-168">Wichtigste Anwendungsfälle</span><span class="sxs-lookup"><span data-stu-id="f175e-168">Top use cases</span></span>
+## <a name="wizard"></a><span data-ttu-id="dcefc-167">Assistent</span><span class="sxs-lookup"><span data-stu-id="dcefc-167">Wizard</span></span>
 
-* <span data-ttu-id="f175e-169">Anmelden</span><span class="sxs-lookup"><span data-stu-id="f175e-169">Sign in</span></span>
-* <span data-ttu-id="f175e-170">Begrüßungsnachrichten und erste Ausführungs Erfahrungen</span><span class="sxs-lookup"><span data-stu-id="f175e-170">Welcome messages and first-run experiences</span></span>
-* <span data-ttu-id="f175e-171">Success-Nachrichten</span><span class="sxs-lookup"><span data-stu-id="f175e-171">Success messages</span></span>
-* <span data-ttu-id="f175e-172">Fehlermeldungen</span><span class="sxs-lookup"><span data-stu-id="f175e-172">Error messages</span></span>
+<span data-ttu-id="dcefc-168">Ein Assistent führt einen Benutzer durch mehrere Bildschirme, um eine Aufgabe auszuführen (z. B. einen Einrichtungsprozess).</span><span class="sxs-lookup"><span data-stu-id="dcefc-168">A wizard guides a user through several screens to complete a task (such as a setup process).</span></span>
 
-## <a name="notification-bar"></a><span data-ttu-id="f175e-173">Benachrichtigungsleiste</span><span class="sxs-lookup"><span data-stu-id="f175e-173">Notification bar</span></span>
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Beispiel zeigt eine Assistenten-UI-Vorlage." border="false":::
 
-<span data-ttu-id="f175e-174">Eine Benachrichtigungsleiste ist ein dedizierter Bereich für die Anzeige von kurzen wichtigen Nachrichten, für die der Benutzer keine sofortige Aktion ausführen muss.</span><span class="sxs-lookup"><span data-stu-id="f175e-174">A notification bar is a dedicated area for displaying a brief, important messages that do not require the user to take immediate action.</span></span> <span data-ttu-id="f175e-175">Bestimmte Hintergrundfarben und Symbole sind bestimmten Nachrichtentypen zugeordnet (siehe unten).</span><span class="sxs-lookup"><span data-stu-id="f175e-175">Specific background colors and icons are associated with specific types of messages (see below).</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="dcefc-170">Die am besten verwendeten Fälle</span><span class="sxs-lookup"><span data-stu-id="dcefc-170">Top use cases</span></span>
 
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Beispiel werden Benachrichtigungs leisten Vorlagen angezeigt." border="false":::
+* <span data-ttu-id="dcefc-171">Setup</span><span class="sxs-lookup"><span data-stu-id="dcefc-171">Setup</span></span>
+* <span data-ttu-id="dcefc-172">Onboarding</span><span class="sxs-lookup"><span data-stu-id="dcefc-172">Onboarding</span></span>
+* <span data-ttu-id="dcefc-173">Erfahrungen bei der ersten Ausführung</span><span class="sxs-lookup"><span data-stu-id="dcefc-173">First-run experiences</span></span>
 
-### <a name="top-use-cases"></a><span data-ttu-id="f175e-177">Wichtigste Anwendungsfälle</span><span class="sxs-lookup"><span data-stu-id="f175e-177">Top use cases</span></span>
+## <a name="empty-state"></a><span data-ttu-id="dcefc-174">Leerer Zustand</span><span class="sxs-lookup"><span data-stu-id="dcefc-174">Empty state</span></span>
 
-* <span data-ttu-id="f175e-178">Wichtige Nachrichten, Fehler und Warnungen</span><span class="sxs-lookup"><span data-stu-id="f175e-178">Critical messages, errors, and warnings</span></span>
-* <span data-ttu-id="f175e-179">Success-Nachrichten</span><span class="sxs-lookup"><span data-stu-id="f175e-179">Success messages</span></span>
-* <span data-ttu-id="f175e-180">Informations-oder Werbenachrichten</span><span class="sxs-lookup"><span data-stu-id="f175e-180">Informational or promotional messages</span></span>
+<span data-ttu-id="dcefc-175">Die Vorlage "Leerer Zustand" kann für viele Szenarien verwendet werden, z. B. anmeldung, Erste Ausführung, Fehlermeldungen und vieles mehr.</span><span class="sxs-lookup"><span data-stu-id="dcefc-175">The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.</span></span> <span data-ttu-id="dcefc-176">Es ist äußerst flexibel – passen Sie es an, um eine, einige oder alle Komponenten im folgenden Design zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="dcefc-176">It’s highly flexible⁠—adapt it to use one, a few, or all of the components in the following design.</span></span>
 
-## <a name="left-nav"></a><span data-ttu-id="f175e-181">Linker NAV</span><span class="sxs-lookup"><span data-stu-id="f175e-181">Left nav</span></span>
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Beispiel zeigt eine leere Zustands-UI-Vorlage." border="false":::
 
-<span data-ttu-id="f175e-182">Verwenden Sie den linken Navigationsbereich, um mehrere Seiten innerhalb Ihrer Teams-Registerkarte zu durchsuchen. Im folgenden Beispiel befindet sich der linke Navigationsbereich zwischen der Kanalliste und dem Inhalt der Registerkarte.</span><span class="sxs-lookup"><span data-stu-id="f175e-182">Use the left nav to browse multiple pages within your Teams tab. In the following example, the left nav is between the channel list and tab content.</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="dcefc-178">Die am besten verwendeten Fälle</span><span class="sxs-lookup"><span data-stu-id="dcefc-178">Top use cases</span></span>
+
+* <span data-ttu-id="dcefc-179">Anmelden</span><span class="sxs-lookup"><span data-stu-id="dcefc-179">Sign in</span></span>
+* <span data-ttu-id="dcefc-180">Willkommensnachrichten und Erfahrungen bei der ersten Ausführung</span><span class="sxs-lookup"><span data-stu-id="dcefc-180">Welcome messages and first-run experiences</span></span>
+* <span data-ttu-id="dcefc-181">Erfolgsmeldungen</span><span class="sxs-lookup"><span data-stu-id="dcefc-181">Success messages</span></span>
+* <span data-ttu-id="dcefc-182">Fehlermeldungen</span><span class="sxs-lookup"><span data-stu-id="dcefc-182">Error messages</span></span>
+
+## <a name="notification-bar"></a><span data-ttu-id="dcefc-183">Benachrichtigungsleiste</span><span class="sxs-lookup"><span data-stu-id="dcefc-183">Notification bar</span></span>
+
+<span data-ttu-id="dcefc-184">Eine Benachrichtigungsleiste ist ein dedizierter Bereich zum Anzeigen kurzer, wichtiger Meldungen, für die der Benutzer keine sofortige Aktion ergreifen muss.</span><span class="sxs-lookup"><span data-stu-id="dcefc-184">A notification bar is a dedicated area for displaying a brief, important messages that do not require the user to take immediate action.</span></span> <span data-ttu-id="dcefc-185">Bestimmte Hintergrundfarben und Symbole sind bestimmten Nachrichtentypen zugeordnet (siehe unten).</span><span class="sxs-lookup"><span data-stu-id="dcefc-185">Specific background colors and icons are associated with specific types of messages (see below).</span></span>
+
+:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Beispiel zeigt Vorlagen für Benachrichtigungsleisten." border="false":::
+
+### <a name="top-use-cases"></a><span data-ttu-id="dcefc-187">Die am besten verwendeten Fälle</span><span class="sxs-lookup"><span data-stu-id="dcefc-187">Top use cases</span></span>
+
+* <span data-ttu-id="dcefc-188">Wichtige Meldungen, Fehler und Warnungen</span><span class="sxs-lookup"><span data-stu-id="dcefc-188">Critical messages, errors, and warnings</span></span>
+* <span data-ttu-id="dcefc-189">Erfolgsmeldungen</span><span class="sxs-lookup"><span data-stu-id="dcefc-189">Success messages</span></span>
+* <span data-ttu-id="dcefc-190">Informations- oder Werbenachrichten</span><span class="sxs-lookup"><span data-stu-id="dcefc-190">Informational or promotional messages</span></span>
+
+## <a name="left-nav"></a><span data-ttu-id="dcefc-191">Linke Navigationsleiste</span><span class="sxs-lookup"><span data-stu-id="dcefc-191">Left nav</span></span>
+
+<span data-ttu-id="dcefc-192">Verwenden Sie die linke Navigationsleiste, um mehrere Seiten auf Ihrer Registerkarte "Teams" zu durchsuchen. Im folgenden Beispiel befindet sich die linke Navigationsleiste zwischen der Kanalliste und dem Registerkarteninhalt.</span><span class="sxs-lookup"><span data-stu-id="dcefc-192">Use the left nav to browse multiple pages within your Teams tab. In the following example, the left nav is between the channel list and tab content.</span></span>
 
 :::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Beispiel zeigt eine linke Navigationsvorlage." border="false":::
 
-### <a name="top-use-cases"></a><span data-ttu-id="f175e-184">Wichtigste Anwendungsfälle</span><span class="sxs-lookup"><span data-stu-id="f175e-184">Top use cases</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="dcefc-194">Die am meisten verwendeten Fälle</span><span class="sxs-lookup"><span data-stu-id="dcefc-194">Top use cases</span></span>
 
-* <span data-ttu-id="f175e-185">Durchsuchen mehrerer Seiten auf einer Registerkarte "Teams"</span><span class="sxs-lookup"><span data-stu-id="f175e-185">Browse multiple pages within a Teams tab</span></span>
-* <span data-ttu-id="f175e-186">Aufschlüsseln komplexer apps in mehrere Seiten</span><span class="sxs-lookup"><span data-stu-id="f175e-186">Break down complex apps into multiple pages</span></span>
+* <span data-ttu-id="dcefc-195">Durchsuchen mehrerer Seiten auf einer Registerkarte "Teams"</span><span class="sxs-lookup"><span data-stu-id="dcefc-195">Browse multiple pages within a Teams tab</span></span>
+* <span data-ttu-id="dcefc-196">Aufbrechen komplexer Apps in mehrere Seiten</span><span class="sxs-lookup"><span data-stu-id="dcefc-196">Break down complex apps into multiple pages</span></span>
 
-## <a name="breadcrumb"></a><span data-ttu-id="f175e-187">Breadcrumb</span><span class="sxs-lookup"><span data-stu-id="f175e-187">Breadcrumb</span></span>
+## <a name="breadcrumb"></a><span data-ttu-id="dcefc-197">Breadcrumb</span><span class="sxs-lookup"><span data-stu-id="dcefc-197">Breadcrumb</span></span>
 
-<span data-ttu-id="f175e-188">Breadcrumbs sind eine Navigationshilfe, die die Hierarchie Ihrer APP vermittelt.</span><span class="sxs-lookup"><span data-stu-id="f175e-188">Breadcrumbs are a navigational aid that convey your app’s hierarchy.</span></span> <span data-ttu-id="f175e-189">Sie helfen Benutzern zu verstehen, wie die von Ihnen angezeigte Seite in die allgemeine Benutzeroberfläche passt, und ermöglichen den Zugriff auf höhere Ebenen in dieser Hierarchie mit einem Mausklick.</span><span class="sxs-lookup"><span data-stu-id="f175e-189">They help users understand how the page they’re viewing fits into the overall experience and afford one-click access to higher levels in that hierarchy.</span></span>
+<span data-ttu-id="dcefc-198">Breadcrumbs sind eine Navigationshilfe, die die Hierarchie Ihrer App vermittelt.</span><span class="sxs-lookup"><span data-stu-id="dcefc-198">Breadcrumbs are a navigational aid that convey your app’s hierarchy.</span></span> <span data-ttu-id="dcefc-199">Sie helfen Benutzern zu verstehen, wie die Seite, die sie anzeigen, in die Gesamterfahrung passt, und bieten mit einem Klick Zugriff auf höhere Ebenen in dieser Hierarchie.</span><span class="sxs-lookup"><span data-stu-id="dcefc-199">They help users understand how the page they’re viewing fits into the overall experience and afford one-click access to higher levels in that hierarchy.</span></span>
 
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="Beispiel zeigt eine Breadcrumb-Vorlage." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="Beispiel zeigt eine Breadcrumbvorlage." border="false":::
 
-### <a name="top-use-cases"></a><span data-ttu-id="f175e-191">Wichtigste Anwendungsfälle</span><span class="sxs-lookup"><span data-stu-id="f175e-191">Top use cases</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="dcefc-201">Die am meisten verwendeten Fälle</span><span class="sxs-lookup"><span data-stu-id="dcefc-201">Top use cases</span></span>
 
-* <span data-ttu-id="f175e-192">Hierarchie kommunizieren</span><span class="sxs-lookup"><span data-stu-id="f175e-192">Communicate hierarchy</span></span>
-* <span data-ttu-id="f175e-193">Navigation</span><span class="sxs-lookup"><span data-stu-id="f175e-193">Navigation</span></span>
+* <span data-ttu-id="dcefc-202">Hierarchie kommunizieren</span><span class="sxs-lookup"><span data-stu-id="dcefc-202">Communicate hierarchy</span></span>
+* <span data-ttu-id="dcefc-203">Navigation</span><span class="sxs-lookup"><span data-stu-id="dcefc-203">Navigation</span></span>
 
-## <a name="toolbar"></a><span data-ttu-id="f175e-194">Symbolleiste</span><span class="sxs-lookup"><span data-stu-id="f175e-194">Toolbar</span></span>
+## <a name="toolbar"></a><span data-ttu-id="dcefc-204">Symbolleiste</span><span class="sxs-lookup"><span data-stu-id="dcefc-204">Toolbar</span></span>
 
-<span data-ttu-id="f175e-195">Eine Symbolleiste ist ein Container für die Gruppierung einer Gruppe von Steuerelementen.</span><span class="sxs-lookup"><span data-stu-id="f175e-195">A toolbar is a container for grouping a set of controls.</span></span>
+<span data-ttu-id="dcefc-205">Eine Symbolleiste ist ein Container zum Gruppieren einer Gruppe von Steuerelementen.</span><span class="sxs-lookup"><span data-stu-id="dcefc-205">A toolbar is a container for grouping a set of controls.</span></span>
 
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="Beispiel zeigt eine Symbolleisten Vorlage." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="Beispiel zeigt eine Symbolleistenvorlage." border="false":::
 
-### <a name="top-use-cases"></a><span data-ttu-id="f175e-197">Wichtigste Anwendungsfälle</span><span class="sxs-lookup"><span data-stu-id="f175e-197">Top use cases</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="dcefc-207">Die am meisten verwendeten Fälle</span><span class="sxs-lookup"><span data-stu-id="dcefc-207">Top use cases</span></span>
 
-* <span data-ttu-id="f175e-198">Kontextbezogene Aktionen für App-Inhalte</span><span class="sxs-lookup"><span data-stu-id="f175e-198">Contextual actions on app content</span></span>
-* <span data-ttu-id="f175e-199">Kontextfilter und-Suche</span><span class="sxs-lookup"><span data-stu-id="f175e-199">Contextual filter and find</span></span>
-* <span data-ttu-id="f175e-200">Navigation und Breadcrumbs</span><span class="sxs-lookup"><span data-stu-id="f175e-200">Navigation and breadcrumbs</span></span>
+* <span data-ttu-id="dcefc-208">Kontextbezogene Aktionen zu App-Inhalten</span><span class="sxs-lookup"><span data-stu-id="dcefc-208">Contextual actions on app content</span></span>
+* <span data-ttu-id="dcefc-209">Kontextfilter und -suche</span><span class="sxs-lookup"><span data-stu-id="dcefc-209">Contextual filter and find</span></span>
+* <span data-ttu-id="dcefc-210">Navigation und Breadcrumbs</span><span class="sxs-lookup"><span data-stu-id="dcefc-210">Navigation and breadcrumbs</span></span>
 
-## <a name="stage"></a><span data-ttu-id="f175e-201">Stufe</span><span class="sxs-lookup"><span data-stu-id="f175e-201">Stage</span></span>
+## <a name="stage"></a><span data-ttu-id="dcefc-211">Stufe 1</span><span class="sxs-lookup"><span data-stu-id="dcefc-211">Stage</span></span>
 
-<span data-ttu-id="f175e-202">Stage bietet Benutzern die Möglichkeit, eine Entität – wie ein Bild, eine Datei oder eine Website – in Microsoft Teams zu öffnen, anstatt Sie in einer anderen APP oder in einem anderen Browser zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="f175e-202">Stage offers a way for users to open an entity—like an image, file, or website—in Teams instead of opening it in another app or browser.</span></span> <span data-ttu-id="f175e-203">Der primäre Anwendungsfall von Stage ist die Anzeige; die Oberfläche sollte nicht für komplexe Interaktionen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f175e-203">The primary use case of stage is viewing; the surface should not be used for complex interactions.</span></span>
+<span data-ttu-id="dcefc-212">Die Phase bietet Benutzern eine Möglichkeit, eine Entität wie ein Bild, eine Datei oder eine Website in Teams zu öffnen, anstatt sie in einer anderen App oder einem anderen Browser zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="dcefc-212">Stage offers a way for users to open an entity—like an image, file, or website—in Teams instead of opening it in another app or browser.</span></span> <span data-ttu-id="dcefc-213">Der primäre Verwendungsfall der Phase ist das Anzeigen. Die Oberfläche sollte nicht für komplexe Interaktionen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="dcefc-213">The primary use case of stage is viewing; the surface should not be used for complex interactions.</span></span>
 
-<span data-ttu-id="f175e-204">(Implementierungs Hinweis: Erstellen Sie Ihre Bühne mithilfe eines großen [Aufgabenmoduls](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).)</span><span class="sxs-lookup"><span data-stu-id="f175e-204">(Implementation note: Build your stage using a large [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).)</span></span>
+<span data-ttu-id="dcefc-214">(Implementierungshinweis: Erstellen Sie Ihre Phase mithilfe eines großen [Aufgabenmoduls.)](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)</span><span class="sxs-lookup"><span data-stu-id="dcefc-214">(Implementation note: Build your stage using a large [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).)</span></span>
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Beispiel zeigt eine Bühnen Vorlage." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Beispiel zeigt eine Stage-Vorlage." border="false":::
 
-### <a name="top-use-cases"></a><span data-ttu-id="f175e-206">Wichtigste Anwendungsfälle</span><span class="sxs-lookup"><span data-stu-id="f175e-206">Top use cases</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="dcefc-216">Die am meisten verwendeten Fälle</span><span class="sxs-lookup"><span data-stu-id="dcefc-216">Top use cases</span></span>
 
-* <span data-ttu-id="f175e-207">Öffnen einer Entität in Microsoft Teams anstelle einer anderen APP oder eines anderen Browsers</span><span class="sxs-lookup"><span data-stu-id="f175e-207">Open an entity in Teams instead of another app or browser</span></span>
-* <span data-ttu-id="f175e-208">Spotlight-Medien oder andere Inhalte</span><span class="sxs-lookup"><span data-stu-id="f175e-208">Spotlight media or other content</span></span>
-
-## <a name="microsoft-teams-ui-library-coming-soon"></a><span data-ttu-id="f175e-209">Microsoft Teams-Benutzeroberflächenbibliothek (demnächst verfügbar)</span><span class="sxs-lookup"><span data-stu-id="f175e-209">Microsoft Teams UI Library (coming soon)</span></span>
-
-<span data-ttu-id="f175e-210">In der Microsoft Teams-Benutzeroberflächenbibliothek können Sie diese produktionsfähigen Benutzeroberflächenvorlagen direkt in das App-Projekt importieren.</span><span class="sxs-lookup"><span data-stu-id="f175e-210">The Microsoft Teams UI Library will allow you to import these production-ready UI templates directly into your app project.</span></span>
+* <span data-ttu-id="dcefc-217">Öffnen einer Entität in Teams anstelle einer anderen App oder eines anderen Browsers</span><span class="sxs-lookup"><span data-stu-id="dcefc-217">Open an entity in Teams instead of another app or browser</span></span>
+* <span data-ttu-id="dcefc-218">Spotlightmedien oder andere Inhalte</span><span class="sxs-lookup"><span data-stu-id="dcefc-218">Spotlight media or other content</span></span>
