@@ -5,16 +5,16 @@ description: Übersicht über Apps in Teams-Besprechungen basierend auf der Teil
 ms.topic: overview
 ms.author: lajanuar
 keywords: Teams-Apps-Besprechungen – Benutzerteilnehmer-Rollen-API
-ms.openlocfilehash: 217737cbbf73104d4d78cf817e6df0244229c53c
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 63c383f1bc7eaa92e2bd4ff378756064ee85ed70
+ms.sourcegitcommit: 92fa912a51f295bb8a2dc1593a46ce103752dcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797757"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "49917597"
 ---
 # <a name="apps-in-teams-meetings"></a>Apps in Teams-Besprechungen
 
-Besprechungen sind für die Produktivität in Teams entscheidend. Sie ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikation und geteiltes Feedback in einem inklusiven und aktiven Forum. Als Entwickler können Sie konfigurierbare Anwendungen für [](../messaging-extensions/what-are-messaging-extensions.md) [Registerkarten,](../tabs/what-are-tabs.md#how-do-tabs-work) [Bots](../bots/what-are-bots.md)und Nachrichtenerweiterungen erstellen, um eine Besprechungserfahrung in Teams zu verbessern und zu erweitern. Besprechungsbenutzer können über den Registerkartenkatalog auf Apps zugreifen, um relevante Szenarien wie die Vorabbereitstellung eines Kanban-Board, das Starten eines Dialogfelds mit Aktionen in Besprechungen oder das Erstellen einer Umfrage nach der Besprechung zu ermöglichen. Ihre Besprechungs-App kann eine Benutzererfahrung für jede Phase des Besprechungslebenszyklus basierend auf dem Teilnehmerstatus bereitstellen.
+Besprechungen sind für die Produktivität in Teams entscheidend. Sie ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikation und geteiltes Feedback in einem inklusiven und aktiven Forum. Als Entwickler können Sie konfigurierbare Anwendungen für [](../messaging-extensions/what-are-messaging-extensions.md) [Registerkarten,](../tabs/what-are-tabs.md#how-do-tabs-work) [Bots](../bots/what-are-bots.md)und Nachrichtenerweiterungen erstellen, um eine Besprechungserfahrung in Teams zu verbessern und zu erweitern. Besprechungsbenutzer können über den Registerkartenkatalog auf Apps zugreifen, um relevante Szenarien wie das Vorabszenieren eines Kanban-Board, das Starten eines Dialogfelds mit Aktionen in der Besprechung oder das Erstellen einer Umfrage nach der Besprechung zu ermöglichen. Ihre Besprechungs-App kann eine Benutzererfahrung für jede Phase des Besprechungslebenszyklus basierend auf dem Teilnehmerstatus bereitstellen.
 
 Die Erweiterbarkeit der Besprechungs-App von Teams zentriert sich auf drei Konzepte:
 
@@ -28,7 +28,7 @@ Die Erweiterbarkeit der Besprechungs-App von Teams zentriert sich auf drei Konze
 ## <a name="tabs"></a>Registerkarten
 
 > [!IMPORTANT]
-> Wie bei allen Registerkartenanwendungen muss Ihre App den [Teams-SSO-Authentifizierungsfluss](../tabs/how-to/authentication/auth-aad-sso.md) für Registerkarten befolgen.
+> Wie bei allen Registerkartenanwendungen muss Ihre [](../tabs/how-to/authentication/auth-aad-sso.md) App den Teams-SSO-Authentifizierungsfluss für Registerkarten befolgen.
 
 > [!NOTE]
 > Mobile Clients unterstützen Registerkarten nur in Oberflächen vor und nach Besprechungen. Die Besprechungserfahrungen (Dialogfeld und Bereich in Besprechungen) auf mobilgeräten werden in Kürze verfügbar sein.
@@ -45,7 +45,7 @@ Die Erweiterbarkeit der Besprechungs-App von Teams zentriert sich auf drei Konze
 
 ✔ Benutzer mit Berechtigung können apps zu einer Besprechung über den Registerkartenkatalog auf zwei Arten hinzufügen:
 
-&emsp;&emsp;&#9679; Über die Registerkarte **"Details"** im Teams-Planungsformular.
+&emsp;&emsp;&#9679; Über die Registerkarte **"Details"** im Planungsformular für Teams.
 
 &emsp;&emsp;&#9679; Über die Registerkarte **"Besprechungschat"** in einer vorhandenen Besprechung.</br> </br>
 
@@ -59,7 +59,7 @@ Die Erweiterbarkeit der Besprechungs-App von Teams zentriert sich auf drei Konze
 
 ✔ Berechtigte Benutzer können während der Besprechung Apps hinzufügen.
 
-✔ Im Kontext einer Besprechung geladen werden, können Apps das Teams-Client-SDK verwenden, um auf das zu greifen und die Erfahrung entsprechend `meetingId` `userMri` zu `frameContext` rendern.
+✔ Im Kontext einer Besprechung geladen, können Apps das Teams-Client-SDK verwenden, um auf das zu greifen und die Besensung `meetingId` `userMri` entsprechend zu `frameContext` rendern.
 
 ✔ Exportieren eines Ergebnisses einer Umfrage oder Umfrage sollte die Benutzer darüber informieren, dass die Ergebnisse erfolgreich heruntergeladen wurden.
 
@@ -68,11 +68,11 @@ Die Erweiterbarkeit der Besprechungs-App von Teams zentriert sich auf drei Konze
 &emsp;&emsp;&#9679; **Seitenbereich .** </br>
 
 > [!NOTE]
-> Wenn Ihr _App-Manifest_ angibt, dass Ihre Registerkarte für [den](create-apps-for-teams-meetings.md#during-a-meeting)Seitenbereich optimiert ist, wird sie dort angezeigt. Sie kann auch Teil einer Share-Tray-Erfahrung sein, die bestimmten Entwurfsrichtlinien unterliegt.
+> Wenn Ihr _App-Manifest_ angibt, dass Ihre Registerkarte für den Seitenbereich optimiert [ist,](create-apps-for-teams-meetings.md#during-a-meeting)wird sie dort angezeigt. Es kann auch Teil einer Share-Tray-Erfahrung sein, vorbehaltlich der angegebenen Entwurfsrichtlinien.
 
 &emsp;&emsp;&#9679; **In-Meeting-Dialogfeld .** Verwenden Sie das Dialogfeld in der Besprechung, um Aktionen für Besprechungsteilnehmer anzuzeigen. *Siehe "Erstellen* [von Apps für Teams-Besprechungen".](create-apps-for-teams-meetings.md)
 
-**In-Meeting-Erfahrung:**
+**Besprechungserfahrung:**
 
 ![In-Meeting-Erfahrung](../assets/images/apps-in-meetings/in-meeting-experience.png)
 
@@ -122,7 +122,7 @@ Sie können wie folgt auf die Seite  **"Besprechungsoptionen"** zugreifen:
 
 &#11200; Wählen Sie in einer Besprechungseinladung **Besprechungsoptionen aus.**
 
-&#11200; Wählen Sie während einer Besprechung das Symbol **"Teilnehmer** ![ anzeigen" in den ](../assets/images/apps-in-meetings/show-participants.png) Besprechungssteuerelementen aus. Wählen Sie dann über der Liste der Teilnehmer die Option **"Berechtigungen verwalten" aus.**
+&#11200; Wählen Sie während einer Besprechung das Symbol **"Teilnehmer** ![ anzeigen" in den ](../assets/images/apps-in-meetings/show-participants.png) Besprechungssteuerelementen aus. Wählen Sie dann über der Liste der Teilnehmer die Option "Berechtigungen **verwalten" aus.**
 
 ### <a name="user-types"></a>Benutzertypen
 
@@ -137,6 +137,6 @@ Sie können wie folgt auf die Seite  **"Besprechungsoptionen"** zugreifen:
 ## <a name="next-steps"></a>Nächste Schritte
 
 > [!div class="nextstepaction"]
-> [Entwerfen Ihrer App](create-apps-for-teams-meetings.md)
+> [Entwerfen Ihrer App](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 > [!div class="nextstepaction"]
 > [Erstellen Sie Ihre Anwendung](create-apps-for-teams-meetings.md)
