@@ -1,48 +1,49 @@
 ---
-title: Hinzufügen von Test Daten zum Office 365 Testmandanten
-description: Einrichten Ihres Office 365-Entwicklerprogramm Abonnements für erfolgreiche Tests von Microsoft Teams-apps
-keywords: Testen von apps-Entwicklerprogramm Teams
+title: Hinzufügen von Testdaten zu Ihrem Office 365-Test-Mandanten
+description: Einrichten Ihres Office 365-Entwicklerprogrammabonnements für erfolgreiche Tests von Microsoft Teams-Apps
+ms.topic: how-to
+keywords: Testen von Teams des Entwicklerprogramms für Apps
 ms.date: 11/01/2019
-ms.openlocfilehash: 87e9dc280c192f013098c3e9f604f72238bfafdf
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: 97eeb9c35b22adf75ad7f630fb2a621f0330e060
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867093"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014439"
 ---
-# <a name="add-test-data-to-your-office-365-test-tenant"></a>Hinzufügen von Test Daten zum Office 365 Testmandanten
+# <a name="add-test-data-to-your-office-365-test-tenant"></a>Hinzufügen von Testdaten zu Ihrem Office 365-Test-Mandanten
 
-Richten Sie Ihr O365-Entwicklerprogramm Abonnement (oder einen anderen Testmandanten) ein, damit Sie die von Ihnen erstellten Apps einfach testen können.  Es hilft Ihnen:
+Richten Sie Ihr Abonnement für das O365-Entwicklerprogramm (oder einen anderen Test-Mandanten) ein, damit Sie die von Ihnen erstellten Apps einfach testen können.  Es hilft Ihnen:
 
 - Erstellen neuer Teams und Kanäle in Ihrer Organisation
 
-- Fügen Sie die Benutzer, die über das Benutzerinhalts Paket erstellt wurden, diesen Teams hinzu.
+- Fügen Sie die Benutzer, die über das Benutzerinhaltspaket erstellt werden, diesen Teams hinzu.
 
 ## <a name="before-you-start"></a>Vor der Bereitstellung
 
-Wenn Sie noch nicht über einen Testmandanten verfügen, müssen Sie am Office 365 Entwicklerprogramm teilnehmen und sich für ein Entwickler Abonnement anmelden. Außerdem müssen Sie die erforderlichen PowerShell-Module installieren. Für jeden von Ihnen verwendeten Mandanten benötigen Sie globale Administratorberechtigungen, um die Skripts auszuführen.
+Wenn Sie noch keinen Test mandanten haben, müssen Sie am Office 365-Entwicklerprogramm teilnehmen und sich für ein Entwicklerabonnement registrieren. Sie müssen auch die erforderlichen PowerShell-Module installieren. Für den von Ihnen verwendeten Mandanten benötigen Sie globale Administratorberechtigungen, um die Skripts ausführen zu können.
 
 1. [Treten Sie dem Office 365 Entwickler Programm bei](/office/developer-program/office-365-developer-program)
-2. [Einrichten eines Microsoft 365-Entwickler Abonnements](/office/developer-program/office-365-developer-program-get-started)
-3. [Verwenden von Beispiel-Datenpaketen mit Ihrem Office 365 Entwickler-Abonnement zum Installieren des Inhaltspakets "Users"](/office/developer-program/install-sample-packs)
-4. [Installieren des PowerShell-Moduls für Teams](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
-5. [Installieren des Azure AD PowerShell-Moduls](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
+2. [Einrichten eines Microsoft 365-Entwicklerabonnements](/office/developer-program/office-365-developer-program-get-started)
+3. [Verwenden von Beispieldatenpaketen mit Ihrem Office 365-Entwicklerabonnement zum Installieren des Inhaltspakets "Benutzer"](/office/developer-program/install-sample-packs)
+4. [Installieren des Teams -PowerShell-Moduls](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
+5. [Installieren des Azure AD -PowerShell-Moduls](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
 
-### <a name="optional-step-allow-upload-of-custom-apps"></a>Optionaler Schritt: Hochladen von benutzerdefinierten apps zulassen
+### <a name="optional-step-allow-upload-of-custom-apps"></a>Optionaler Schritt: Hochladen benutzerdefinierter Apps zulassen
 
-Standardmäßig können nur globale Administratoren oder Teams-Dienstadministratoren benutzerdefinierte apps in den Mandanten-App-Katalog hochladen.  Sie können auch allen Benutzern die Möglichkeit geben, benutzerdefinierte Apps für Ihre eigene Verwendung oder für Tests in Teams hochzuladen.
+Standardmäßig können nur globale Administratoren oder Teamdienstadministratoren benutzerdefinierte Apps in den Mandanten-App-Katalog hochladen.  Sie können auch allen Benutzern das Hochladen benutzerdefinierter Apps zur eigenen Verwendung oder in Teams zu Testzwecken ermöglichen.
 
-Um diese Einstellung zu aktivieren, müssen Sie die globale App-Setup Richtlinie im Team-Verwaltungs Portal aktualisieren.
+Um diese Einstellung zu aktivieren, müssen Sie die globale App-Setup-Richtlinie in Ihrem Teams Admin Portal aktualisieren.
 
-<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" title="Screenshot der APP-Setup Richtlinie" />
+<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" title="Screenshot der App-Setup-Richtlinie" />
 
 Weitere Informationen finden Sie unter:
 
- - [Verwalten von App-Setup Richtlinien in Microsoft Teams](/microsoftteams/teams-app-setup-policies)
+ - [Verwalten von Richtlinien für App-Setup in Teams](/microsoftteams/teams-app-setup-policies)
 
 ## <a name="create-teams-and-channels"></a>Erstellen von Teams und Kanälen
 
-Speichern Sie den folgenden Codeausschnitt als XML (. Xml), und notieren Sie, wo Sie es gespeichert haben.  Dieser XML-Code definiert die Struktur der Teams und Kanäle, die erstellt werden-zusammen mit seinen Mitgliedern.
+Speichern Sie den folgenden Codeausschnitt als XML (XML), und notieren Sie sich, wo Sie ihn gespeichert haben.  Dieser XML definiert die Struktur der Teams und Kanäle, die erstellt werden , zusammen mit den Mitgliedern.
 
 ```xml
 <?xml version="1.0"?>
@@ -156,7 +157,7 @@ Speichern Sie den folgenden Codeausschnitt als XML (. Xml), und notieren Sie, wo
 </Teams>
 ```
 
-Speichern Sie den folgenden Codeausschnitt als PowerShell-Skript (. ps1), und notieren Sie, wo Sie es gespeichert haben.  Dieses Skript führt die Schritte zum Erstellen der Teams und Kanäle und zum Hinzufügen von Mitgliedern zu diesen aus.
+Speichern Sie den folgenden Codeausschnitt als PowerShell-Skript (PS1), und notieren Sie sich, wo Sie es gespeichert haben.  Dieses Skript führt die Schritte aus, um die Teams und Kanäle zu erstellen und Ihnen Mitglieder hinzuzufügen.
 
 ```powershell
 Param(
@@ -247,9 +248,9 @@ else {
 }
 ```
 
-Öffnen Sie eine Windows PowerShell Sitzung im Administrator Modus.  Führen Sie das soeben gespeicherte Skript aus.  Sie werden aufgefordert, die Anmeldeinformationen anzugeben – verwenden Sie die Anmeldeinformationen des globalen Administrators, die Sie beim ersten Anmelden für Ihr Entwickler Abonnement erhalten haben.
+Öffnen Sie Windows PowerShell Sitzung im Administratormodus.  Führen Sie das Skript aus, das Sie gerade gespeichert haben.  Sie werden aufgefordert, die Anmeldeinformationen ein- verwenden Sie die Anmeldeinformationen des globalen Administrators, die Sie bei der ersten Anmeldung für Ihr Entwicklerabonnement erhalten haben.
 
 > [!Note]
-> Das Skript dauert einige Minuten, bis die PowerShell-Sitzung geschlossen wird.  Wenn Sie die Benutzer in Ihrem Abonnement von dem, was im Standardinhalts Paket erstellt wurde, geändert haben, werden einige Benutzer möglicherweise nicht zu Microsoft Teams hinzugefügt.  Während das Skript ausgeführt wird, werden erfolgreiche oder fehlgeschlagene Aktionen ausgegeben.
+> Die Ausführung des Skripts dauert einige Minuten. Schließen Sie die PowerShell-Sitzung nicht.  Wenn Sie die Benutzer in Ihrem Abonnement von dem geändert haben, was im Standardinhaltspaket erstellt wurde, werden einige Benutzer möglicherweise nicht zu Teams hinzugefügt.  Während der Ausführung des Skripts werden erfolgreiche oder fehlgeschlagene Aktionen ausgegeben.
 
-Nachdem die Ausführung des Skripts abgeschlossen ist, können Sie sich mit einem der Benutzerkonten beim Microsoft Teams-Client anmelden und die neu erstellten Teams anzeigen.
+Sobald das Skript ausgeführt wurde, können Sie sich mit einem der Benutzerkonten beim Teams-Client anmelden und die neu erstellten Teams anzeigen.

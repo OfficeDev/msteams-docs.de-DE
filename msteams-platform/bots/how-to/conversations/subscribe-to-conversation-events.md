@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Abonnieren von Unterhaltungsereignissen von Ihrem Microsoft Teams-Bot.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 17d13d51ab26aba60defb962dd425c1aed5b4133
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: b4dc70e4619043bd0b675206770093b086fc5ec6
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911961"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014320"
 ---
 # <a name="subscribe-to-conversation-events"></a>Abonnieren von Unterhaltungsereignissen
 
@@ -44,8 +44,10 @@ Die folgende Tabelle enthält eine Liste der Aktualisierungsereignisse für Team
 | Hinzugefügte Mitglieder   | membersAdded   | OnTeamsMembersAddedAsync   | [Ein hinzugefügtes Mitglied](#team-members-added)   | Alle |
 | entfernte Mitglieder | membersRemoved | OnTeamsMembersRemovedAsync | [Ein Mitglied wurde entfernt](#team-members-removed) | groupChat & Team |
 | Team umbenannt        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Ein Team wurde umbenannt](#team-renamed)       | Team |
+| Team gelöscht        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Ein Team wurde gelöscht](#team-deleted)       | Team |
 | Team archiviert        | teamArchived       | OnTeamsTeamArchivedAsync    | [Ein Team wurde archiviert](#team-archived)       | Team |
-| Team wiederhergestellt        | teamRestored      | OnTeamsTeamRestoredAsync    | [Ein Team wurde umbenannt](#team-renamed)       | Team |
+| team unarchived        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [Ein Team wurde nicht archiviert](#team-unarchived)       | Team |
+| Team wiederhergestellt        | teamRestored      | OnTeamsTeamRestoredAsync    | [Ein Team wurde wiederhergestellt](#team-restored)       | Team |
 
 ### <a name="channel-created"></a>Erstellter Kanal
 
@@ -216,7 +218,7 @@ async def on_teams_channel_renamed(
 
 ### <a name="channel-deleted"></a>Kanal gelöscht
 
-Das Ereignis "Kanal gelöscht" wird an Ihren Bot gesendet, wenn ein Kanal in einem Team gelöscht wird, in dem Ihr Bot installiert ist.
+Das gelöschte Kanalereignis wird an Ihren Bot gesendet, wenn ein Kanal in einem Team gelöscht wird, in dem Ihr Bot installiert ist.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -434,7 +436,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[Json](#tab/json)
 
-Dies ist die Nachricht, die Ihr Bot erhält, wenn der Bot **zu einem Team hinzugefügt wird.**
+Dies ist die Nachricht, die Ihr Bot erhält, wenn der Bot **einem Team hinzugefügt wird.**
 
 ```json
 {
@@ -712,6 +714,158 @@ async def on_teams_team_renamed(
 
 * * *
 
+### <a name="team-deleted"></a>Team gelöscht
+
+Ihr Bot wird benachrichtigt, wenn das Team, in dem er sich befindet, gelöscht wurde. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamDeleted` dem `channelData` Objekt.
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    //handle delete event
+}
+```
+
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+
+```typescript
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsTeamDeletedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            //handle delete event
+            await next();
+        });
+    }
+}
+```
+
+# <a name="json"></a>[Json](#tab/json)
+
+```json
+{ 
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:35:56.825Z",
+    "localTimestamp": "2017-02-23T12:35:56.825-07:00",
+    "id": "f:1406033e",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/", 
+    "from": { 
+        "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+    }, 
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": { 
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterLocal"
+    },
+    "channelData": {
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
+            "name": "Team Name"
+        },
+        "eventType": "teamDeleted",
+        "tenant": { 
+           "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+# <a name="python"></a>[Python](#tab/python)
+
+```python
+async def on_teams_team_deleted(
+    self, team_info: TeamInfo, turn_context: TurnContext
+):
+    //handle delete event
+    )
+```
+
+* * *
+
+### <a name="team-restored"></a>Team wiederhergestellt
+
+Der Bot erhält eine Benachrichtigung, wenn er nach dem Löschen wiederhergestellt wird. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamrestored` dem `channelData` Objekt.
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var heroCard = new HeroCard(text: $"{teamInfo.Name} is the team name");
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+}
+```
+
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+
+```typescript
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsTeamrestoredEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Team restored', `${teamInfo.name} is the team name`);
+            const message = MessageFactory.attachment(card);
+            await turnContext.sendActivity(message);
+            await next();
+        });
+    }
+}
+```
+
+# <a name="json"></a>[Json](#tab/json)
+
+```json
+{ 
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:35:56.825Z",
+    "localTimestamp": "2017-02-23T12:35:56.825-07:00",
+    "id": "f:1406033e",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/", 
+    "from": { 
+        "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+    }, 
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": { 
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterLocal"
+    },
+    "channelData": {
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
+            "name": "Team Name"
+        },
+        "eventType": "teamrestored",
+        "tenant": { 
+           "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+# <a name="python"></a>[Python](#tab/python)
+
+```python
+async def on_teams_team_restored(
+    self, team_info: TeamInfo, turn_context: TurnContext
+):
+    return await turn_context.send_activity(
+        MessageFactory.text(f"The team name is {team_info.name}")
+    )
+```
+
+* * *
+
 ### <a name="team-archived"></a>Team archiviert
 
 Der Bot erhält eine Benachrichtigung, wenn das Team archiviert wird, in dem er installiert ist. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamarchived` dem `channelData` Objekt.
@@ -790,14 +944,15 @@ async def on_teams_team_archived(
 
 * * *
 
-### <a name="team-restored"></a>Team wiederhergestellt
 
-Der Bot erhält eine Benachrichtigung, wenn das Team, in dem er installiert ist, wiederhergestellt wird. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamrestored` dem `channelData` Objekt.
+### <a name="team-unarchived"></a>Team wurde archiviert
+
+Der Bot erhält eine Benachrichtigung, wenn das Team, in dem er installiert ist, nicht mehr archiviert wird. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamUnarchived` dem `channelData` Objekt.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
     var heroCard = new HeroCard(text: $"{teamInfo.Name} is the team name");
     await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
@@ -810,8 +965,8 @@ protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnC
 export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
-        this.onTeamsTeamrestoredEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
-            const card = CardFactory.heroCard('Team restored', `${teamInfo.name} is the team name`);
+        this.onTeamsTeamUnarchivedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Team archived', `${teamInfo.name} is the team name`);
             const message = MessageFactory.attachment(card);
             await turnContext.sendActivity(message);
             await next();
@@ -847,7 +1002,7 @@ export class MyBot extends TeamsActivityHandler {
             "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
             "name": "Team Name"
         },
-        "eventType": "teamrestored",
+        "eventType": "teamUnarchived",
         "tenant": { 
            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
         }
@@ -858,7 +1013,7 @@ export class MyBot extends TeamsActivityHandler {
 # <a name="python"></a>[Python](#tab/python)
 
 ```python
-async def on_teams_team_restored(
+async def on_teams_team_unarchived(
     self, team_info: TeamInfo, turn_context: TurnContext
 ):
     return await turn_context.send_activity(

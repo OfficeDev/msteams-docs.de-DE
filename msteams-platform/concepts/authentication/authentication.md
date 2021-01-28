@@ -1,44 +1,45 @@
 ---
-title: Authentifizieren eines Benutzers in Microsoft Teams
-description: Beschreibung der Authentifizierung in Microsoft Teams und ihrer Verwendung in ihren apps
-keywords: Teams-Authentifizierung OAuth SSO-Aad
-ms.openlocfilehash: d3ae57d9937c6794fb743b44ca8210a5afd181bf
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+title: Authentifizieren von App-Benutzern
+description: Beschreibt die Authentifizierung in Teams und deren Verwendung in Ihren Apps
+ms.topic: conceptual
+keywords: Teams authentication OAuth SSO AAD
+ms.openlocfilehash: 6ddcd8a9e847d9216b7e2dcc12733a6cd413b48e
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674200"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014292"
 ---
-# <a name="authentication-in-teams"></a>Authentifizierung in Microsoft Teams
+# <a name="authenticating-users-in-microsoft-teams"></a>Authentifizieren von Benutzern in Microsoft Teams
 
 > [!Note]
-> Die webbasierte Authentifizierung auf mobilen Clients erfordert Version 1.4.1 oder höher des Teams-JavaScript-SDK.
+> Die webbasierte Authentifizierung auf mobilen Clients erfordert Version 1.4.1 oder höher des JavaScript SDK für Teams.
 
-Damit Ihre APP auf Benutzerinformationen zugreifen kann, die durch Azure Active Directory geschützt sind, sowie auf Daten anderer Dienste wie Facebook und Twitter zugreifen, muss Ihre APP eine vertrauenswürdige Verbindung mit diesen Anbietern herstellen. Wenn Ihre APP Microsoft Graph-APIs im Benutzerbereich verwenden muss, müssen Sie den Benutzer auch authentifizieren, um die entsprechenden Authentifizierungstoken abzurufen.
+Damit Ihre App auf Benutzerinformationen zugreifen kann, die durch Azure Active Directory geschützt sind, und auf Daten von anderen Diensten wie Facebook und Twitter zugreifen kann, muss Ihre App eine vertrauenswürdige Verbindung mit diesen Anbietern herstellen. Wenn Ihre App Microsoft Graph-APIs im Benutzerbereich verwenden muss, müssen Sie den Benutzer auch authentifizieren, um die entsprechenden Authentifizierungstoken abzurufen.
 
-In Microsoft Teams gibt es zwei verschiedene Authentifizierungs Flüsse, die Ihre APP nutzen kann. Sie können einen herkömmlichen webbasierten Authentifizierungs Fluss auf einer [Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md) ausführen, die in einer Registerkarte, einer Konfigurationsseite oder einem Aufgabenmodul eingebettet ist. Wenn Ihre APP einen Unterhaltungs-bot enthält, können Sie den OAuthPrompt-Fluss (und optional den Tokendienst des Azure bot-Frameworks) verwenden, um einen Benutzer als Teil einer Unterhaltung zu authentifizieren.
+In Microsoft Teams gibt es zwei verschiedene Authentifizierungsflüsse, die Ihre App nutzen kann. Sie können einen herkömmlichen webbasierten [](~/tabs/how-to/create-tab-pages/content-page.md) Authentifizierungsfluss auf einer Inhaltsseite ausführen, die in eine Registerkarte, eine Konfigurationsseite oder ein Aufgabenmodul eingebettet ist. Wenn Ihre App einen Unterhaltungsbot enthält, können Sie den OAuthPrompt-Fluss (und optional den Tokendienst des Azure Bot Framework) verwenden, um einen Benutzer im Rahmen einer Unterhaltung zu authentifizieren.
 
-## <a name="web-based-authentication-flow"></a>Webbasierter Authentifizierungs Fluss
+## <a name="web-based-authentication-flow"></a>Webbasierter Authentifizierungsfluss
 
-Sie müssen den webbasierten Authentifizierungs Fluss für [Registerkarten](~/tabs/what-are-tabs.md)verwenden, und Sie können ihn mit [Unterhaltungs Bots](~/bots/what-are-bots.md) oder [Messaging-Erweiterungen](~/messaging-extensions/what-are-messaging-extensions.md)verwenden. Sie verwenden das [Microsoft Teams-JavaScript-Client-SDK](/javascript/api/overview/msteams-client) auf einer Webinhalts Seite, um die Authentifizierung zu aktivieren und dann diese Inhaltsseite in eine Registerkarte, eine Konfigurationsseite oder ein Aufgabenmodul einzubetten. Wenn Sie den webbasierten Authentifizierungs Fluss mit einem Unterhaltungs-bot verwenden möchten, müssen Sie [ein Aufgabenmodul mit einem bot verwenden](~/task-modules-and-cards/task-modules/task-modules-bots.md).
+Sie müssen den webbasierten Authentifizierungsfluss [](~/tabs/what-are-tabs.md)für Registerkarten verwenden und können ihn mit [Unterhaltungsbots oder](~/bots/what-are-bots.md) [Messagingerweiterungen verwenden.](~/messaging-extensions/what-are-messaging-extensions.md) Sie verwenden das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client) auf einer Webinhaltsseite, um die Authentifizierung zu aktivieren, und betten dann diese Inhaltsseite in eine Registerkarte, eine Konfigurationsseite oder ein Aufgabenmodul ein. Wenn Sie den webbasierten Authentifizierungsfluss mit einem Unterhaltungsbot verwenden möchten, müssen Sie ein Aufgabenmodul [mit einem Bot verwenden.](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 
-* [Authentifizierungs Fluss in Registerkarten](~/tabs/how-to/authentication/auth-flow-tab.md) beschreibt die Funktionsweise der Tab-Authentifizierung in Microsoft Teams. Dies zeigt einen typischen webbasierten Authentifizierungs Fluss, der für Registerkarten verwendet wird.
-* [In Registerkarten für Azure AD Authentifizierung](~/tabs/how-to/authentication/auth-tab-AAD.md) wird beschrieben, wie Sie eine Verbindung mit Azure Active Directory innerhalb einer Registerkarte in ihrer app in Microsoft Teams herstellen.
-* In der [automatischen Authentifizierung (Azure AD)](~/tabs/how-to/authentication/auth-silent-AAD.md) wird beschrieben, wie Sie die Anmelde-und Zustimmungs Ansagen in ihrer App mithilfe von Azure Active Directory reduzieren.
-* Webbasierte Authentifizierung in [dotnet/C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) oder [JavaScript/Node. js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
+* [Der Authentifizierungsfluss auf Registerkarten](~/tabs/how-to/authentication/auth-flow-tab.md) beschreibt, wie die Registerkartenauthentifizierung in Teams funktioniert. Dies zeigt einen typischen webbasierten Authentifizierungsfluss, der für Registerkarten verwendet wird.
+* [Azure AD authentication in tabs](~/tabs/how-to/authentication/auth-tab-AAD.md) describes how to connect to Azure Active Directory from within a tab in your app in Teams.
+* [Die automatische Authentifizierung (Azure AD)](~/tabs/how-to/authentication/auth-silent-AAD.md) beschreibt, wie Anmelde-/Zustimmungsaufforderungen in Ihrer App mithilfe von Azure Active Directory reduziert werden.
+* Webbasierte Authentifizierung in [dotnet/C# oder](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) [JavaScript/Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 
-## <a name="the-oauthprompt-flow-for-conversational-bots"></a>Der OAuthPrompt-Ablauf für Unterhaltungs Bots
+## <a name="the-oauthprompt-flow-for-conversational-bots"></a>Der OAuthPrompt-Fluss für Unterhaltungsbots
 
-Die OAuthPrompt des Azure bot-Frameworks erleichtert die Authentifizierung für apps mit Unterhaltungs Bots. Sie können den Tokendienst des Azure bot-Frameworks nutzen, um auch bei der Token-Zwischenspeicherung behilflich zu sein.
+Das OAuthPrompt des Azure Bot Framework erleichtert die Authentifizierung für Apps, die unterhaltungsbasierte Bots verwenden. Sie können den Tokendienst von Azure Bot Framework nutzen, um auch beim Zwischenspeichern von Token zu helfen.
 
-Weitere Informationen zur Verwendung des OAuthPrompt finden Sie unter:
+Weitere Informationen zur Verwendung von OAuthPrompt finden Sie unter:
 
-* [Übersicht über den bot-Authentifizierungs Fluss](~/bots/how-to/authentication/auth-flow-bot.md) beschreibt die Funktionsweise der Authentifizierung innerhalb eines bot in ihrer app in Microsoft Teams. Dies zeigt einen nicht webbasierten Authentifizierungs Fluss, der für Bots in allen Versionen von Teams verwendet wird (Webanwendung, Desktop-App und Mobile Apps)
-* [Bot-Authentifizierung](~/bots/how-to/authentication/add-authentication.md)
-* Beispiel für bot-Authentifizierung (V3 SDK) in [dotnet/C#](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) oder [JavaScript/Node. js](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth)
+* [Übersicht über den Ablauf der](~/bots/how-to/authentication/auth-flow-bot.md) Botauthentifizierung beschreibt, wie die Authentifizierung in einem Bot in Ihrer App in Teams funktioniert. Dies zeigt einen nicht webbasierten Authentifizierungsfluss, der für Bots in allen Versionen von Teams (Web, Desktop-App und mobile Apps) verwendet wird.
+* [Botauthentifizierung](~/bots/how-to/authentication/add-authentication.md)
+* Beispiel für #A0 (v3 SDK) in [dotnet/C#](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) oder [JavaScript/Node.js](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth)
 
-## <a name="configure-your-identity-provider"></a>Konfigurieren Ihres Identitätsanbieters
+## <a name="configure-your-identity-provider"></a>Konfigurieren des Identitätsanbieters
 
-Unabhängig davon, welchen Authentifizierungs Fluss Ihre APP verwendet (Sie verwenden möglicherweise sogar beides), müssen Sie Ihren Identitätsanbieter so konfigurieren, dass er mit ihrer Teams-App kommuniziert. Die Mehrzahl der Beispiele und exemplarischen Vorgehensweisen, die Sie hier finden, befassen sich hauptsächlich mit der Verwendung von Azure Active Directory als Identitätsanbieter. Die Konzepte gelten jedoch unabhängig davon, welchen Identitätsanbieter Sie verwenden.
+Unabhängig davon, welchen Authentifizierungsfluss Ihre App verwendet (möglicherweise verwenden Sie sogar beide), müssen Sie Ihren Identitätsanbieter für die Kommunikation mit Ihrer Teams-App konfigurieren. Die meisten Beispiele und exemplarischen Vorgehensweisen, die Sie hier finden, befassen sich hauptsächlich mit der Verwendung von Azure Active Directory als Identitätsanbieter. Die Konzepte gelten jedoch unabhängig davon, welchen Identitätsanbieter Sie verwenden.
 
-Weitere Informationen finden Sie unter [Konfigurieren eines Identitätsanbieters](~/concepts/authentication/configure-identity-provider.md) .
+Weitere Informationen finden Sie unter [Konfigurieren eines Identitätsanbieters](~/concepts/authentication/configure-identity-provider.md)

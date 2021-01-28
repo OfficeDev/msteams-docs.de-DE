@@ -3,12 +3,12 @@ title: Unterstützung für einmaliges Anmelden für Bots
 description: Beschreibt, wie sie ein Benutzertoken erhalten. Derzeit kann ein Botentwickler eine Anmeldekarte oder den Azure -Bot-Dienst mit der Unterstützung der OAuth-Karte verwenden.
 keywords: Token, Benutzertoken, SSO-Unterstützung für Bots
 ms.topic: conceptual
-ms.openlocfilehash: 55b930ba50eede6ac970fbe0f901d418605f3f91
-ms.sourcegitcommit: 5662bf23fafdbcc6d06f826a647f3696cd17f5e5
+ms.openlocfilehash: 8669e00fcfcfb69844c4d63c9e7aa06b47567705
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "49935254"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014495"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Unterstützung für einmaliges Anmelden (Single Sign-On, SSO) für Bots
 
@@ -38,7 +38,7 @@ Führen Sie die folgenden Schritte aus, um Authentifizierungs- und Botanwendungs
 
 4. AAD sendet das Botanwendungstoken an die Teams-Anwendung.
 
-5. Teams sendet das Token als Teil des Wertobjekts, das von der Aufrufaktivität mit dem Namen **sign-in/tokenExchange zurückgegeben wird, an den Bot.**
+5. Teams sendet das Token als Teil des Wertobjekts, das von der Aufrufaktivität mit dem Namen **"sign-in/tokenExchange" zurückgegeben wird, an den Bot.**
   
 6. Das analysierte Token in der Botanwendung stellt die erforderlichen Informationen zur Verfügung, z. B. die E-Mail-Adresse des Benutzers.
   
@@ -75,10 +75,10 @@ Die Schritte zum Registrieren Ihrer App über das AAD-Portal ähneln dem [Regist
 5. Wählen Sie die Berechtigungen aus, die Ihre Anwendung für den AAD-Endpunkt und optional für Microsoft Graph benötigt.
 6. [Erteilen von Berechtigungen](/azure/active-directory/develop/v2-permissions-and-consent) für Desktop-, Web- und mobile Anwendungen von Teams.
 7. Wählen Sie **Bereich hinzufügen**.
-8. Fügen Sie im Bereich, der geöffnet wird, eine Client-App hinzu, indem Sie `access_as_user` den **Bereichsnamen eingeben.**
+8. Fügen Sie in dem Bereich, der geöffnet wird, eine Client-App hinzu, indem Sie `access_as_user` den **Bereichsnamen eingeben.**
 
     >[!NOTE]
-    > Der "access_as_user"-Bereich, der zum Hinzufügen einer Client-App verwendet wird, ist für "Administratoren und Benutzer".
+    > Der bereich "access_as_user" zum Hinzufügen einer Client-App ist für "Administratoren und Benutzer".
     >
     > Beachten Sie die folgenden wichtigen Einschränkungen:
     >
@@ -91,7 +91,7 @@ Die Schritte zum Registrieren Ihrer App über das AAD-Portal ähneln dem [Regist
 
 Führen Sie die folgenden Schritte aus, um das Azure-Portal mit der OAuth-Verbindung zu aktualisieren:
 
-1. Navigieren Sie im Azure Portal zu **"Bot Channels Registration".**
+1. Navigieren Sie im Azure Portal zu **App-Registrierungen.**
 
 2. Wechseln Sie zu **"API-Berechtigungen".** Wählen **Sie "Delegierte Berechtigungen für** Microsoft Graph hinzufügen" aus, und fügen Sie dann die folgenden Berechtigungen aus der Microsoft  >    >  Graph-API hinzu:
     * User.Read (standardmäßig aktiviert)
@@ -100,22 +100,24 @@ Führen Sie die folgenden Schritte aus, um das Azure-Portal mit der OAuth-Verbin
     * OpenId
     * Profil
 
-3. Wählen **Sie im** linken Bereich "Einstellungen" und dann "Einstellung hinzufügen" im Abschnitt  **"OAuth-Verbindungseinstellungen"** aus.
+3. Navigieren Sie im Azure Portal zu **"Bot Channels Registration".**
+
+4. Wählen **Sie im** linken Bereich "Einstellungen" und dann "Einstellung hinzufügen" im Abschnitt  **"OAuth-Verbindungseinstellungen"** aus.
 
     ![Ansicht SSOBotHandle2](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
 
-4. Führen Sie die folgenden Schritte aus, um das Formular für neue **Verbindungseinstellungen** auszufüllen:
+5. Führen Sie die folgenden Schritte aus, um das Formular für neue **Verbindungseinstellungen** auszufüllen:
 
     >[!NOTE]
     > **In der** AAD-Anwendung ist möglicherweise eine implizite Gewährung erforderlich.
 
-    1. Geben Sie **auf der Seite "Neue** **Verbindungseinstellung" einen Namen** ein. Dies ist der Name, auf den in den Einstellungen Ihres Botdienstcodes in Schritt *5* von Bot SSO zur Laufzeit [verwiesen wird.](#bot-sso-at-runtime)
+    1. Geben Sie **auf der Seite "Neue** **Verbindungseinstellung" einen Namen** ein. Dies ist der Name, auf den in den Einstellungen Ihres Botdienstcodes in Schritt *5* von Bot SSO zur [Laufzeit verwiesen wird.](#bot-sso-at-runtime)
     2. Wählen Sie **in der** Dropdownliste "Dienstanbieter" Azure Active **Directory v2 aus.**
     3. Geben Sie die Clientanmeldeinformationen ein, z. **B. Client-ID** und **geheimer Client für** die AAD-Anwendung.
     4. Verwenden Sie **für die Token-Exchange-URL** den Bereichswert, der in [Update your Teams application manifest for your bot definiert ist.](#update-your-teams-application-manifest-for-your-bot) Die Token-Exchange-URL gibt dem SDK an, dass diese AAD-Anwendung für SSO konfiguriert ist.
     5. Geben Sie **im Feld "Mandanten-ID"** eine *gemeinsame ein.*
     6. Fügen Sie alle **Bereiche hinzu,** die beim Angeben von Berechtigungen für downstream-APIs für Ihre AAD-Anwendung konfiguriert wurden. Wenn die Client-ID und der geheime Clientgeheimnis angegeben sind, tauscht der Tokenspeicher das Token gegen ein Diagrammtoken mit definierten Berechtigungen aus.
-    7. Klicken Sie auf **Speichern**.
+    7. Wählen Sie **Speichern** aus.
 
     ![Einstellungsansicht für VuSSOBotConnection](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
 
@@ -222,7 +224,7 @@ Der `turnContext.activity.value` ist vom Typ [TokenExchangeInvokeRequest](/dotne
 
 ### <a name="update-the-auth-sample"></a>Aktualisieren des Authentifizierungsbeispiels
 
-Öffnen [Sie das Authentifizierungsbeispiel für Teams,](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) und führen Sie dann die folgenden Schritte aus, um es zu aktualisieren:
+Öffnen [Sie das Beispiel für die](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) Teams-Authentifizierung, und führen Sie dann die folgenden Schritte aus, um es zu aktualisieren:
 
 1. Aktualisieren Sie den TeamsBot, um die Deduplikung der eingehenden Anforderung zu verarbeiten, indem Sie den folgenden Code verwenden:
 

@@ -1,20 +1,21 @@
 ---
 title: Erstellen von Tiefenlinks zu Inhalten
 description: Beschreibt Deep Links und deren Verwendung in Ihren Apps
+ms.topic: how-to
 keywords: Teams deep link deeplink
-ms.openlocfilehash: 35aceba4b569baac9283a3355ee5719273145652
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 96e6fc0a47eb64b9e1c6c03721d386ce4dfbb51d
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797785"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014313"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Erstellen von Tiefenlinks zu Inhalten und Features in Microsoft Teams
 
 Sie können Links zu Informationen und Features in Teams erstellen. Beispiele dafür, wo dies nützlich sein kann:
 
 * Navigieren des Benutzers zu Inhalten auf einer der Registerkarten Ihrer App. Beispielsweise kann Ihre App über einen Bot verfügen, der Nachrichten sendet, die den Benutzer über eine wichtige Aktivität benachrichtigen. Wenn der Benutzer auf die Benachrichtigung tippt, navigiert der Deep-Link zur Registerkarte, damit der Benutzer weitere Details zur Aktivität anzeigen kann.
-* Ihre App automatisiert oder vereinfacht bestimmte Benutzeraufgaben, z. B. das Erstellen eines Chats oder das Planen einer Besprechung, indem sie die Deep-Links vorab mit den erforderlichen Parametern auffüllt. Dies vermeidet, dass Benutzer Informationen manuell eingeben müssen.
+* Ihre App automatisiert oder vereinfacht bestimmte Benutzeraufgaben, z. B. das Erstellen eines Chats oder das Planen einer Besprechung, indem die Deep-Links vorab mit den erforderlichen Parametern auffüllt. Dies vermeidet, dass Benutzer Informationen manuell eingeben müssen.
 
 > [!NOTE]
 >
@@ -34,7 +35,7 @@ Sie können Links zu Informationen und Features in Teams erstellen. Beispiele da
 
 ## <a name="deep-linking-to-your-tab"></a>Deep linking to your tab
 
-Sie können Deep-Links zu Entitäten in Teams erstellen. In der Regel wird dies zum Erstellen von Links verwendet, die zu Inhalten und Informationen auf Ihrer Registerkarte navigieren. Wenn Ihre Registerkarte beispielsweise eine Aufgabenliste enthält, können Teammitglieder Links zu einzelnen Vorgängen erstellen und freigeben. Wenn sie darauf klicken, navigiert der Link zu Ihrer Registerkarte, die sich auf das bestimmte Element konzentriert. Um dies zu implementieren, fügen Sie jedem Element eine "Link kopieren"-Aktion hinzu, ganz gleich, wie dies für Ihre Benutzeroberfläche am besten geeignet ist. Wenn der Benutzer diese Aktion ergreift, rufen Sie ein Dialogfeld mit einem Link auf, den der Benutzer in die `shareDeepLink()` Zwischenablage kopieren kann. Wenn Sie diesen Aufruf machen, übergeben Sie auch eine ID [](~/tabs/how-to/access-teams-context.md) für Ihr Element, die Sie wieder im Kontext erhalten, wenn der Link gefolgt wird und Die Registerkarte neu geladen wird.
+Sie können Deep-Links zu Entitäten in Teams erstellen. In der Regel wird dies zum Erstellen von Links verwendet, die zu Inhalten und Informationen auf Ihrer Registerkarte navigieren. Wenn Ihre Registerkarte beispielsweise eine Aufgabenliste enthält, können Teammitglieder Links zu einzelnen Vorgängen erstellen und freigeben. Wenn sie darauf klicken, navigiert der Link zu Ihrer Registerkarte, die sich auf das bestimmte Element konzentriert. Um dies zu implementieren, fügen Sie jedem Element eine "Link kopieren"-Aktion hinzu, ganz gleich, wie dies für Ihre Benutzeroberfläche am besten geeignet ist. Wenn der Benutzer diese Aktion ergreift, rufen Sie ein Dialogfeld mit einem Link auf, den der Benutzer in die `shareDeepLink()` Zwischenablage kopieren kann. Wenn Sie diesen Aufruf machen, übergeben Sie auch eine ID [](~/tabs/how-to/access-teams-context.md) für Ihr Element, die Sie wieder im Kontext erhalten, wenn der Link folgt und Die Registerkarte neu geladen wird.
 
 Alternativ können Sie auch mit dem weiter unten in diesem Thema angegebenen Format programmgesteuert Deep-Links generieren. Sie können diese in [](~/bots/what-are-bots.md) Bot- und Connectornachrichten verwenden, die Benutzer über Änderungen an Ihrer Registerkarte oder an Elementen in der Registerkarte informieren. [](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
@@ -73,7 +74,7 @@ Verwenden Sie dieses Format für einen Deep-Link, den Sie in einer Bot-, Connect
 Die Abfrageparameter sind:
 
 * `appId`&emsp;Die ID aus Ihrem Manifest; Beispiel: "fe4a8eba-2a31-4737-8e33-e5fae6fee194"
-* `entityId`&emsp;Die ID für das Element auf der Registerkarte, die Sie beim Konfigurieren der [Registerkarte angegeben haben;](~/tabs/how-to/create-tab-pages/configuration-page.md) Beispiel: "tasklist123"
+* `entityId`&emsp;Die ID für das Element auf der Registerkarte, die Sie beim Konfigurieren [der Registerkarte angegeben haben;](~/tabs/how-to/create-tab-pages/configuration-page.md) Beispiel: "tasklist123"
 * `entityWebUrl`oder ein optionales Feld mit `subEntityWebUrl` &emsp; einer Fallback-URL, die verwendet werden soll, wenn der Client das Rendern der Registerkarte nicht unterstützt, z. B. " https://tasklist.example.com/123 oder https://tasklist.example.com/list123/task456 "
 * `entityLabel`oder eine Bezeichnung für das Element auf Ihrer Registerkarte, die beim Anzeigen des #A0 verwendet werden soll, z. B. `subEntityLabel` &emsp; "Aufgabenliste 123" oder "Aufgabe 456"
 * `context`&emsp;Ein JSON-Objekt, das die folgenden Felder enthält:
@@ -103,7 +104,7 @@ Der Aufruf gibt einen Kontext zurück, der das Feld enthält, wenn die Registerk
 
 ## <a name="deep-linking-from-your-tab"></a>Deep linking from your tab
 
-Sie können von Ihrer Registerkarte aus eine Verknüpfung zu Inhalten in Teams erstellen. Dies ist hilfreich, wenn Ihre Registerkarte mit anderen Inhalten in Teams verknüpfen muss, z. B. mit einem Kanal, einer Nachricht, einer anderen Registerkarte oder sogar zum Öffnen eines Planungsdialogfelds. Um einen Deeplink von Ihrer Registerkarte aus auszulösen, sollten Sie dies aufrufen:
+Sie können von Ihrer Registerkarte aus eine Verknüpfung zu Inhalten in Teams erstellen. Dies ist hilfreich, wenn Ihre Registerkarte einen Link zu anderen Inhalten in Teams erstellen muss, z. B. mit einem Kanal, einer Nachricht, einer anderen Registerkarte oder sogar zum Öffnen eines Planungsdialogfelds. Um einen Deeplink von Ihrer Registerkarte aus auszulösen, sollten Sie dies aufrufen:
 
 ```Javascript
 microsoftTeams.executeDeepLink(/*deepLink*/);
@@ -121,7 +122,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ## <a name="deep-linking-to-a-chat"></a>Tiefe Verknüpfung mit einem Chat
 
-Sie können deep-Links zu privaten Chats zwischen Benutzern erstellen, indem Sie den Teilnehmersatz angeben. Wenn kein Chat mit den angegebenen Teilnehmern vorhanden ist, navigiert der Link den Benutzer zu einem leeren neuen Chat. Neue Chats werden im Entwurfsstatus erstellt, bis der Benutzer die erste Nachricht sendet. Optional können Sie den Namen des Chats (sofern er noch nicht vorhanden ist) zusammen mit Text angeben, der in das Feld zum Verfassen des Benutzers eingefügt werden soll. Sie können sich dieses Feature als Verknüpfung für den Benutzer ausmalen, der die manuelle Aktion zum Navigieren oder Erstellen des Chats und anschließenden Eingeben der Nachricht vornimmt.
+Sie können deep-Links zu privaten Chats zwischen Benutzern erstellen, indem Sie den Teilnehmersatz angeben. Wenn kein Chat mit den angegebenen Teilnehmern vorhanden ist, navigiert der Link den Benutzer zu einem leeren neuen Chat. Neue Chats werden im Entwurfsstatus erstellt, bis der Benutzer die erste Nachricht sendet. Optional können Sie den Namen des Chats (sofern er noch nicht vorhanden ist) zusammen mit Text angeben, der in das Feld zum Verfassen des Benutzers eingefügt werden soll. Sie können sich dieses Feature als Verknüpfung für den Benutzer ausmalen, der manuell zu dem Chat navigiert oder den Chat erstellt und dann die Nachricht eintippt.
 
 Wenn Sie beispielsweise ein Office 365-Benutzerprofil von Ihrem Bot als Karte zurückgeben, kann dieser Deep Link dem Benutzer ermöglichen, einfach mit dieser Person zu chatten.
 

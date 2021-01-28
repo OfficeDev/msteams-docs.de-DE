@@ -1,52 +1,53 @@
 ---
-title: Authentifizierungs Fluss für Registerkarten
-description: Beschreibt den Authentifizierungs Fluss in Registerkarten
-keywords: Registerkarten für Teams-Authentifizierungs Fluss
-ms.openlocfilehash: 5ecd4d7d3a2658d17a8c6dea5d73cbd98eb2dfde
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+title: Authentifizierungsfluss für Registerkarten
+description: Beschreibt den Authentifizierungsfluss auf Registerkarten
+ms.topic: conceptual
+keywords: Registerkarten für den Authentifizierungsfluss von Teams
+ms.openlocfilehash: 9505419a6594529bcf8d19a90d029705e573c67b
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552542"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014586"
 ---
-# <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams-Authentifizierungs Fluss für Registerkarten
+# <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams-Authentifizierungsfluss für Registerkarten
 
 > [!Note]
-> Damit die Authentifizierung für Ihre Registerkarte auf mobilen Clients funktioniert, müssen Sie sicherstellen, dass Sie mindestens die Version 1.4.1 von Microsoft Teams JavaScript SDK verwenden.
-> Microsoft Teams SDK startet ein separates Fenster für den Authentifizierungs Fluss und daher kann SameSite-Attribut auf "Lax" festgelegt werden. Derzeit wird SameSite = None nicht vom Microsoft Teams-Desktop Client oder älteren Versionen von Chrome oder Safari unterstützt.
+> Damit die Authentifizierung für Ihre Registerkarte auf mobilen Clients funktioniert, müssen Sie sicherstellen, dass Sie mindestens die Version 1.4.1 des JavaScript SDK für Teams verwenden.
+> Das Teams SDK startet ein separates Fenster für den Authentifizierungsfluss, und daher kann dasselbe Standortattribut auf "Lax" festgelegt werden. Derzeit wird SameSite=None vom Desktopclient von Teams oder älteren Versionen von Chrome oder Safari nicht unterstützt.
 
-OAuth 2,0 ist ein offener Standard für Authentifizierung und Autorisierung, der von Azure AD und vielen anderen Identitätsanbietern verwendet wird. Ein grundlegendes Verständnis von OAuth 2,0 ist eine Voraussetzung für die Verwendung von Authentifizierung in Microsoft Teams. [hier finden Sie eine gute Übersicht](https://aaronparecki.com/oauth-2-simplified/) , die einfacher zu befolgen ist als die [formale Spezifikation](https://oauth.net/2/). Der Authentifizierungs Fluss für Registerkarten und Bots ist ein wenig anders, da Registerkarten sehr ähnlich zu Websites sind, sodass Sie OAuth 2,0 direkt verwenden können. Bots sind nicht und müssen ein paar Dinge unterschiedlich tun, aber die Kernkonzepte sind identisch.
+OAuth 2.0 ist ein offener Standard für die Authentifizierung und Autorisierung, der von Azure AD und vielen anderen Identitätsanbietern verwendet wird. Ein grundlegendes Verständnis von OAuth 2.0 ist eine Voraussetzung für die Arbeit mit der Authentifizierung in Teams; [Hier finden Sie eine gute Übersicht,](https://aaronparecki.com/oauth-2-simplified/) die einfacher zu befolgen ist als die [formale Spezifikation.](https://oauth.net/2/) Der Authentifizierungsfluss für Registerkarten und Bots ist etwas anders, da Registerkarten Websites sehr ähnlich sind, sodass sie OAuth 2.0 direkt verwenden können. Bots sind nicht und müssen einige Dinge anders tun, aber die Kernkonzepte sind identisch.
 
-Unter [Initiieren des Authentifizierungs Flusses für Registerkarten](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow) *finden Sie* ein Beispiel für einen Authentifizierungsablauf für Registerkarten und Bots mit Knoten und den [impliziten Grant-Typ OAuth 2,0](https://oauth.net/2/grant-types/implicit/).
+*Unter* ["Initiieren des Authentifizierungsflusses](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow) für Registerkarten" finden Sie ein Beispiel für den Authentifizierungsfluss für Registerkarten und Bots, die Node und den impliziten [OAuth 2.0-Gewährungstyp verwenden.](https://oauth.net/2/grant-types/implicit/)
 
-![Tab-Authentifizierungs-Sequenzdiagramm](~/assets/images/authentication/tab_auth_sequence_diagram.png)
+![Diagramm der Registerkartenauthentifizierungssequenz](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
-1. Der Benutzer interagiert mit dem Inhalt auf der Registerkarte Konfiguration oder Inhaltsseite, häufig eine Schaltfläche mit der Bezeichnung "Anmelden" oder "Anmelden".
-2. Die Registerkarte erstellt die URL für Ihre Authentifizierungs Startseite, optional mithilfe von Informationen aus URL-Platzhaltern oder durch Aufrufen der `microsoftTeams.getContext()` Teams-Client-SDK-Methode, um die Authentifizierungs Erfahrung für den Benutzer zu rationalisieren. Wenn der Parameter beispielsweise bei der Authentifizierung mit Azure AD `login_hint` auf die e-Mail-Adresse des Benutzers festgelegt ist, muss sich der Benutzer möglicherweise nicht mehr anmelden, wenn er dies kürzlich getan hat, da Azure Ad die zwischengespeicherten Anmeldeinformationen des Benutzers nach Möglichkeit verwenden wird: das Popup blinkt kurz und wird dann ausgeblendet.
+1. Der Benutzer interagiert mit dem Inhalt auf der Registerkartenkonfiguration oder Inhaltsseite, in der Regel eine Schaltfläche mit der Bezeichnung "Anmelden" oder "Anmelden".
+2. Die Registerkarte erstellt die URL für die Startseite der Authentifizierung, optional mithilfe von Informationen von URL-Platzhaltern oder durch Aufrufen der Teams-Client-SDK-Methode, um die Authentifizierungserfahrung für den Benutzer `microsoftTeams.getContext()` zu optimieren. Wenn der Parameter beispielsweise bei der Authentifizierung mit Azure AD auf die E-Mail-Adresse des Benutzers festgelegt ist, muss sich der Benutzer möglicherweise nicht einmal anmelden, wenn er dies kürzlich getan hat, da Azure AD die zwischengespeicherten Anmeldeinformationen des Benutzers nach Möglichkeit verwendet: Das Popup blinkt kurz und verschwindet `login_hint` dann.
 3. Auf der Registerkarte wird dann die `microsoftTeams.authentication.authenticate()`-Methode aufgerufen und die `successCallback`- und die `failureCallback`-Funktion registriert.
-4. Teams öffnet die Startseite in einem IFRAME in einem Popupfenster. Auf der Startseite werden zufällige `state` Daten generiert, für die zukünftige Validierung gespeichert und an den Endpunkt des Identitätsanbieters umgeleitet `/authorize` (beispielsweise `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` für Azure AD). Ersetzen `<tenant id>` Sie durch ihre eigene Mandanten-ID (Context. TID).
-    * Wie bei anderen Anwendungs Authentifizierungs Bewegungen in Microsoft Teams muss sich die Startseite in einer Domäne befinden, die sich in `validDomains` der Liste befindet, und in derselben Domäne wie die Umleitungsseite nach der Anmeldung.
-    * **Wichtig**: der implizite Grant-Fluss von OAuth 2,0 Ruft einen `state` Parameter in der Authentifizierungsanforderung ab, der eindeutige Sitzungsdaten enthält, um einen [Fälschungs Angriff auf standortübergreifendes anfordern](https://en.wikipedia.org/wiki/Cross-site_request_forgery)zu verhindern. In den folgenden Beispielen wird eine zufällig generierte GUID für die `state` Daten verwendet.
-5. Der Benutzer meldet sich auf der Website des Anbieters an und erteilt Zugriff auf die Registerkarte.
-6. Der Anbieter führt den Benutzer zur Umleitungsseite der Registerkarte OAuth 2,0 mit einem Zugriffstoken.
-7. Auf der Registerkarte wird überprüft, ob der zurückgegebene Wert mit dem `state` zuvor gespeicherten übereinstimmt, und Aufrufe `microsoftTeams.authentication.notifySuccess()` , die wiederum die `successCallback` in Schritt 3 registrierte Funktion aufrufen.
-8. Das Popupfenster wird von Microsoft Teams geschlossen.
-9. Auf der Registerkarte wird entweder die Konfigurationsbenutzeroberfläche angezeigt oder der Inhalt der Registerkarten aktualisiert oder neu geladen, je nachdem, von wo aus der Benutzer gestartet hat.
+4. Teams öffnet die Startseite in einem iframe in einem Popupfenster. Die Startseite generiert zufällige Daten, speichert sie für die zukünftige Überprüfung und leitet sie an den Endpunkt des Identitätsanbieters um, z. B. `state` `/authorize` für Azure `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` AD. Ersetzen `<tenant id>` Sie diese durch Ihre eigene Mandanten-ID (context.tid).
+    * Wie bei anderen Authentifizierungsflüssen in Teams muss sich die Startseite in einer Domäne befinden, die sich in ihrer Liste und in derselben Domäne wie die Umleitungsseite nach der Anmeldung `validDomains` befinden.
+    * **WICHTIG:** Der implizite OAuth 2.0-Genehmigungsfluss ruft einen Parameter in der Authentifizierungsanforderung auf, der eindeutige Sitzungsdaten enthält, um einen angriffsübergreifenden Angriff auf `state` Anforderungsfälscher [zu verhindern.](https://en.wikipedia.org/wiki/Cross-site_request_forgery) In den folgenden Beispielen wird eine zufällig generierte GUID für die Daten `state` verwendet.
+5. Auf der Website des Anbieters meldet sich der Benutzer an und gewährt Zugriff auf die Registerkarte.
+6. Der Anbieter leitet den Benutzer mit einem Zugriffstoken zur OAuth 2.0-Umleitungsseite der Registerkarte.
+7. Die Registerkarte überprüft, ob der zurückgegebene Wert dem entspricht, was zuvor gespeichert wurde, und ruft auf, wodurch wiederum die in Schritt 3 registrierte `state` `microsoftTeams.authentication.notifySuccess()` Funktion `successCallback` aufruft.
+8. Teams schließt das Popupfenster.
+9. Auf der Registerkarte wird entweder die Konfigurationsbenutzeroberfläche angezeigt oder der Inhalt der Registerkarten aktualisiert oder neu geladen, je nachdem, wo der Benutzer begonnen hat.
 
-## <a name="treat-tab-context-as-hints"></a>Behandeln des Registerkarten Kontexts als Hinweise
+## <a name="treat-tab-context-as-hints"></a>Behandeln des Registerkartenkontexts als Hinweise
 
-Obwohl der Registerkartenkontext hilfreiche Informationen für den Benutzer bereitstellt, verwenden Sie diese Informationen nicht, um den Benutzer zu authentifizieren, unabhängig davon, ob Sie ihn als URL-Parameter zu ihrer Registerkarten-Inhalts-URL oder durch Aufrufen der `microsoftTeams.getContext()` Funktion im Microsoft Teams-Client-SDK erhalten. Ein böswilliger Akteur könnte Ihre Registerkarteninhalts-URL mit seinen eigenen Parametern aufrufen, und eine Webseite, die Microsoft Teams imitiert, kann die URL Ihres Registerkarteninhalts in einen iframe laden und eigene Daten an die Funktion zurückgeben `getContext()` . Sie sollten die identitätsbezogenen Informationen im Registerkartenkontext lediglich als Hinweise behandeln und diese vor der Verwendung validieren. Lesen Sie die Hinweise unter [Navigieren zur Autorisierungs Seite von ihrer Popupseite aus](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page).
+Obwohl der Registerkartenkontext hilfreiche Informationen zum Benutzer enthält, sollten Sie diese Informationen nicht verwenden, um den Benutzer zu authentifizieren, unabhängig davon, ob Sie sie als URL-Parameter für Ihre Registerkarteninhalts-URL oder durch Aufrufen der Funktion im `microsoftTeams.getContext()` Microsoft Teams-Client-SDK erhalten. Ein böswilliger Akteur könnte die URL des Registerkarteninhalts mit seinen eigenen Parametern aufrufen, und eine Webseite, die microsoft Teams als Identitätswechsel antsprecht, könnte die URL des Registerkarteninhalts in einem iframe laden und eigene Daten an die Funktion `getContext()` zurückgeben. Sie sollten die identitätsbezogenen Informationen im Registerkartenkontext einfach als Hinweise behandeln und vor der Verwendung überprüfen. Lesen Sie die Hinweise unter [Navigieren zur Autorisierungsseite von Ihrer Popupseite aus.](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)
 
 ## <a name="samples"></a>Beispiele
 
-Beispielcode zum Anzeigen des Registerkarten Authentifizierungsprozesses finden Sie unter:
+Beispielcode für den Prozess der Registerkartenauthentifizierung finden Sie unter:
 
-* [Beispiel für Microsoft Teams-Registerkarten Authentifizierung (Knoten)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Microsoft Teams-Registerkarten Authentifizierung (Beispiel) (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Beispiel für die Microsoft Teams-Registerkartenauthentifizierung (Knoten)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
+* [Beispiel für die Registerkartenauthentifizierung in Microsoft Teams (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
 
 ## <a name="more-details"></a>Weitere Details
 
-Eine ausführliche Implementierungs Exemplarische Vorgehensweise für die Registerkarten Authentifizierung für Azure Active Directory finden Sie unter:
+Eine ausführliche implementierungs exemplarische Vorgehensweise für die Registerkartenauthentifizierung für Azure Active Directory finden Sie unter:
 
 * [Authentifizieren eines Benutzers auf einer Microsoft Teams-Registerkarte](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Automatische Authentifizierung](~/tabs/how-to/authentication/auth-silent-AAD.md)

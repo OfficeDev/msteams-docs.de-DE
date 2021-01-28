@@ -1,13 +1,14 @@
 ---
-title: Anfordern von Geräteberechtigungen für Ihre Microsoft Teams-Registerkarte
+title: Anfordern von Geräteberechtigungen für Ihre Registerkarte
 description: So aktualisieren Sie Ihr App-Manifest, um Zugriff auf systemeigene Features an fordern, für die in der Regel die Zustimmung des Benutzers erforderlich ist
+ms.topic: how-to
 keywords: Entwicklung von Teams-Registerkarten
-ms.openlocfilehash: b021ae4ae8b50ddd1f3603f696922c129eb25f10
-ms.sourcegitcommit: 84f408aa2854aa7a5cefaa66ce9a373b19e0864a
+ms.openlocfilehash: a2893fb2905584eac4b398287d431f406c23b12b
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "49886744"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014530"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Anfordern von Geräteberechtigungen für Ihre Microsoft Teams-Registerkarte
 
@@ -37,7 +38,7 @@ Wenn Sie auf die Geräteberechtigungen eines Benutzers zugreifen, können Sie vi
 * Aufzeichnen kurzer Audionotizen und Speichern für später
 * Verwenden von Benutzerstandortinformationen zum Anzeigen relevanter Informationen
 
-Während der Zugriff auf diese Features in den meisten modernen Webbrowsern standard ist, müssen Sie Teams wissen lassen, welche Features Sie verwenden möchten, indem Sie Ihr App-Manifest aktualisieren. Auf diese Weise können Sie berechtigungen wie in einem Browser ein verlangen, während Ihre App auf dem Desktopclient von Teams ausgeführt wird.
+Während der Zugriff auf diese Features in den meisten modernen Webbrowsern standard ist, müssen Sie Teams durch Aktualisieren Ihres App-Manifests wissen lassen, welche Features Sie verwenden möchten. Auf diese Weise können Sie berechtigungen wie in einem Browser ein verlangen, während Ihre App auf dem Desktopclient von Teams ausgeführt wird.
 
 ## <a name="manage-permissions"></a>
             Berechtigungen verwalten
@@ -54,7 +55,7 @@ Während der Zugriff auf diese Features in den meisten modernen Webbrowsern stan
 # <a name="mobile"></a>[Mobilgeräte](#tab/mobile)
 
 1. Öffnen Sie Teams.
-1. Wechseln Sie zu  ->  **"Einstellungen-App-Berechtigungen".**
+1. Wechseln Sie zu   ->  **"Einstellungen-App-Berechtigungen".**
 1. Wählen Sie die App aus, für die Sie Einstellungen auswählen müssen.
 1. Wählen Sie die gewünschten Einstellungen aus.
 
@@ -64,7 +65,7 @@ Während der Zugriff auf diese Features in den meisten modernen Webbrowsern stan
 
 ## <a name="properties"></a>Eigenschaften
 
-Aktualisieren Sie Ihre App, indem Sie die fünf Eigenschaften hinzufügen und angeben, die Sie `manifest.json` in Ihrer Anwendung verwenden `devicePermissions` möchten:
+Aktualisieren Sie die App, indem Sie die fünf Eigenschaften hinzufügen und angeben, die Sie `manifest.json` in Ihrer Anwendung verwenden `devicePermissions` möchten:
 
 ``` json
 "devicePermissions": [
@@ -115,7 +116,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 Um eine Aufforderung zum Einholen der Zustimmung zum Zugriff auf Geräteberechtigungen zu erhalten, müssen Sie die entsprechende HTML5- oder Teams-API nutzen. 
 
-Um den Benutzer z. B. zum Zugriff auf seinen Standort aufforderen, müssen Sie den folgenden Anruf `getCurrentPosition` aufrufen:
+Um den Benutzer z. B. zum Zugreifen auf seinen Standort aufforderen, müssen Sie den folgenden Anruf `getCurrentPosition` aufrufen:
 
 ```Javascript
 navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
@@ -141,7 +142,7 @@ Benachrichtigungen fordern den Benutzer auf, wenn Sie `requestPermission` anrufe
 Notification.requestPermission(function(result) { /* ... */ });
 ```
 
-Um kamera- oder zugriffsfotokataloge verwenden zu können, fordert Teams Mobile die Berechtigung an, wenn Sie `selectMedia()` anrufen:
+Um kamera- oder zugriffsfotokataloge zu verwenden, fragt Teams Mobile die Berechtigung, wenn Sie `selectMedia()` anrufen:
 
 ```JavaScript
 microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
@@ -167,7 +168,7 @@ microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-![Eingabeaufforderung für Registerkarten-Desktopgeräte](~/assets/images/tabs/device-permissions-prompt.png)
+![Eingabeaufforderung für Registerkarten für Desktopgeräte](~/assets/images/tabs/device-permissions-prompt.png)
 
 # <a name="mobile"></a>[Mobilgeräte](#tab/mobile)
 
@@ -176,4 +177,4 @@ microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }
 
 ## <a name="permission-behavior-across-login-sessions"></a>Berechtigungsverhalten in allen Anmeldesitzungen
 
-Systemeigene Geräteberechtigungen werden für jede Anmeldesitzung gespeichert. Wenn Sie sich bei einer anderen Instanz von Teams (z. B. auf einem anderen Computer) anmelden, stehen Ihre Geräteberechtigungen aus Ihren vorherigen Sitzungen nicht zur Verfügung. Stattdessen müssen Sie den Geräteberechtigungen für die neue Anmeldesitzung erneut zustimmen. Das bedeutet auch, dass Ihre Geräteberechtigungen für diese vorherige Anmeldesitzung gelöscht werden, wenn Sie sich von Teams abmelden (oder Mandanten innerhalb von Teams wechseln). Beachten Sie dies beim Entwickeln systemeigener Geräteberechtigungen: Die systemeigenen Funktionen, denen Sie zustimmen, sind nur für Ihre _aktuelle Anmeldesitzung._
+Systemeigene Geräteberechtigungen werden für jede Anmeldesitzung gespeichert. Wenn Sie sich bei einer anderen Instanz von Teams (z. B. auf einem anderen Computer) anmelden, stehen Ihre Geräteberechtigungen aus Ihren vorherigen Sitzungen nicht zur Verfügung. Stattdessen müssen Sie den Geräteberechtigungen für die neue Anmeldesitzung erneut zustimmen. Dies bedeutet auch, dass Ihre Geräteberechtigungen für diese vorherige Anmeldesitzung gelöscht werden, wenn Sie sich von Teams abmelden (oder Mandanten innerhalb von Teams wechseln). Beachten Sie dies beim Entwickeln systemeigener Geräteberechtigungen: Die systemeigenen Funktionen, denen Sie zustimmen, sind nur für Ihre _aktuelle Anmeldesitzung._

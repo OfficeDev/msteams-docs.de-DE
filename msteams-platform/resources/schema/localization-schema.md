@@ -1,18 +1,19 @@
 ---
-title: JSON-Schemareferenz für Lokalisierungsdatei
-description: Beschreibt das von der Lokalisierungsdatei für Microsoft Teams unterstützte Lokalisierungs Schema.
-keywords: Schema Lokalisierung für Teams-Manifestdatei
+title: Lokalisierungsdatei – JSON-Schemareferenz
+description: Beschreibt das Lokalisierungsschema, das von der Lokalisierungsdatei für Microsoft Teams unterstützt wird
+ms.topic: reference
+keywords: Manifestschemalokalisierung von Teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 2c0f449ef0b018e0ed377ea8f5d79b285b36e829
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 696a65de70a63e767f8fcdb040364fe90cde8716
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997965"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014600"
 ---
-# <a name="reference-localization-file-json-schema"></a>Referenz: JSON-Schema der Lokalisierungsdatei
+# <a name="reference-localization-file-json-schema"></a>Referenz: Lokalisierungsdatei -JSON-Schema
 
-In der Microsoft Teams-Lokalisierungsdatei werden Sprachübersetzungen beschrieben, die basierend auf den Clientspracheinstellungen bedient werden. Die Datei muss dem Schema entsprechen, das unter gehostet wird [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) . Weitere Informationen finden Sie unter [App-Lokalisierung](~/concepts/build-and-test/apps-localization.md).
+Die Lokalisierungsdatei von Microsoft Teams beschreibt Sprachübersetzungen, die basierend auf den Clientspracheinstellungen bedient werden. Ihre Datei muss dem Schema entsprechen, das unter [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) gehostet wird. Weitere Informationen finden Sie unter ["App-Lokalisierung".](~/concepts/build-and-test/apps-localization.md)
 
 ## <a name="sample"></a>Beispiel
 
@@ -37,91 +38,91 @@ Das Schema definiert die folgenden Eigenschaften:
 
 **uri**
 
-Die https://-URL, die auf das JSON-Schema für das Manifest verweist.
+Die https:// URL, die auf das JSON-Schema für das Manifest verweist.
 
 > [!TIP]
-> Geben Sie das Schema am Anfang des Manifests an, um IntelliSense oder ähnliche Unterstützung aus Ihrem Code-Editor zu aktivieren: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
+> Geben Sie das Schema am Anfang des Manifests an, um IntelliSense oder ähnliche Unterstützung von Ihrem Codeeditor zu aktivieren: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
-## <a name="nameshort"></a>Name. Short
+## <a name="nameshort"></a>name.short
 
-**Zeichenfolge, maximale Länge 30**
-
-Ersetzt die entsprechende Zeichenfolge aus dem App-Manifest durch den hier angegebenen Wert.
-
-## <a name="namefull"></a>Name. Full
-
-**Zeichenfolge, maximale Länge 100**
+**Zeichenfolge, Max. Länge 30**
 
 Ersetzt die entsprechende Zeichenfolge aus dem App-Manifest durch den hier angegebenen Wert.
 
-## <a name="descriptionshort"></a>Description. Short
+## <a name="namefull"></a>name.full
 
-**Zeichenfolge, maximale Länge 80**
-
-Ersetzt die entsprechende Zeichenfolge aus dem App-Manifest durch den hier angegebenen Wert.
-
-## <a name="descriptionfull"></a>Description. Full
-
-**Zeichenfolge, maximale Länge 4000**
+**Zeichenfolge, Max. Länge 100**
 
 Ersetzt die entsprechende Zeichenfolge aus dem App-Manifest durch den hier angegebenen Wert.
 
-## <a name="statictabs0-910-5name"></a>staticTabs \\ [([0-9] | 1 [0-5]) \\ ] \\ . Name
+## <a name="descriptionshort"></a>description.short
 
-**Zeichenfolge, maximale Länge 128**
+**Zeichenfolge, Max. Länge 80**
 
-Ersetzt die entsprechenden Zeichenfolgen (en) aus dem App-Manifest durch den hier angegebenen Wert.
+Ersetzt die entsprechende Zeichenfolge aus dem App-Manifest durch den hier angegebenen Wert.
 
-## <a name="bots0commandlists0-2commands0-9title"></a>Bots \\ [0 \\ ] \\ . commandLists \\ [[0-2] \\ ] \\ . Commands \\ [[0-9] \\ ] \\ . Title
+## <a name="descriptionfull"></a>description.full
 
-**Zeichenfolge, maximale Länge 32**
+**Zeichenfolge, Max. Länge 4000**
 
-Ersetzt die entsprechenden Zeichenfolgen (en) aus dem App-Manifest durch den hier angegebenen Wert.
+Ersetzt die entsprechende Zeichenfolge aus dem App-Manifest durch den hier angegebenen Wert.
 
-## <a name="bots0commandlists0-2commands0-9description"></a>Bots \\ [0 \\ ] \\ . commandLists \\ [[0-2] \\ ] \\ . Commands \\ [[0-9] \\ ] \\ . Description
+## <a name="statictabs0-910-5name"></a>staticTabs \\ [([0-9]|1[0-5]) \\ ] \\ .name
 
-**Zeichenfolge, maximale Länge 128**
+**Zeichenfolge, Max. Länge 128**
 
-Ersetzt die entsprechenden Zeichenfolgen (en) aus dem App-Manifest durch den hier angegebenen Wert.
+Ersetzt die entsprechenden Zeichenfolgen aus dem App-Manifest durch den hier angegebenen Wert.
 
-## <a name="composeextensions0commands0-9title"></a>composeExtensions \\ [0 \\ ] \\ . Commands \\ [[0-9] \\ ] \\ . Title
+## <a name="bots0commandlists0-2commands0-9title"></a>Bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ ] \\ .title
 
-**Zeichenfolge, maximale Länge 32**
+**Zeichenfolge, Max. Länge 32**
 
-Ersetzt die entsprechenden Zeichenfolgen (en) aus dem App-Manifest durch den hier angegebenen Wert.
+Ersetzt die entsprechenden Zeichenfolgen aus dem App-Manifest durch den hier angegebenen Wert.
 
-## <a name="composeextensions0commands0-9description"></a>composeExtensions \\ [0 \\ ] \\ . Commands \\ [[0-9] \\ ] \\ . Description
+## <a name="bots0commandlists0-2commands0-9description"></a>Bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ ] \\ .description
 
-**Zeichenfolge, maximale Länge 128**
+**Zeichenfolge, Max. Länge 128**
 
-Ersetzt die entsprechenden Zeichenfolgen (en) aus dem App-Manifest durch den hier angegebenen Wert.
+Ersetzt die entsprechenden Zeichenfolgen aus dem App-Manifest durch den hier angegebenen Wert.
 
-## <a name="composeextensions0commands0-9parameters0-4title"></a>composeExtensions \\ [0 \\ ] \\ . Commands \\ [[0-9] \\ ] \\ . Parameters \\ [[0-4] \\ ] \\ . Title
+## <a name="composeextensions0commands0-9title"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .title
 
-**Zeichenfolge, maximale Länge 32**
+**Zeichenfolge, Max. Länge 32**
 
-Ersetzt die entsprechenden Zeichenfolgen (en) aus dem App-Manifest durch den hier angegebenen Wert.
+Ersetzt die entsprechenden Zeichenfolgen aus dem App-Manifest durch den hier angegebenen Wert.
 
-## <a name="composeextensions0commands0-9parameters0-4description"></a>composeExtensions \\ [0 \\ ] \\ . Commands \\ [[0-9] \\ ] \\ . Parameters \\ [[0-4] \\ ] \\ . Description
+## <a name="composeextensions0commands0-9description"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .description
 
-**Zeichenfolge, maximale Länge 128**
+**Zeichenfolge, Max. Länge 128**
 
-Ersetzt die entsprechenden Zeichenfolgen (en) aus dem App-Manifest durch den hier angegebenen Wert.
+Ersetzt die entsprechenden Zeichenfolgen aus dem App-Manifest durch den hier angegebenen Wert.
 
-## <a name="composeextensions0commands0-9parameters0-4value"></a>composeExtensions \\ [0 \\ ] \\ . Commands \\ [[0-9] \\ ] \\ . Parameters \\ [[0-4] \\ ] \\ . Value
+## <a name="composeextensions0commands0-9parameters0-4title"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .title
 
-**Zeichenfolge, maximale Länge 512**
+**Zeichenfolge, Max. Länge 32**
 
-Ersetzt die entsprechenden Zeichenfolgen (en) aus dem App-Manifest durch den hier angegebenen Wert.
+Ersetzt die entsprechenden Zeichenfolgen aus dem App-Manifest durch den hier angegebenen Wert.
 
-## <a name="composeextensions0commands0-9parameters0-4choices0-9title"></a>composeExtensions \\ [0 \\ ] \\ . Commands \\ [[0-9] \\ ] \\ . Parameters \\ [[0-4] \\ ] \\ . Choices \\ [[0-9] \\ ] \\ . Title
+## <a name="composeextensions0commands0-9parameters0-4description"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .description
 
-**Zeichenfolge, maximale Länge 128**
+**Zeichenfolge, Max. Länge 128**
 
-Ersetzt die entsprechenden Zeichenfolgen (en) aus dem App-Manifest durch den hier angegebenen Wert.
+Ersetzt die entsprechenden Zeichenfolgen aus dem App-Manifest durch den hier angegebenen Wert.
 
-## <a name="composeextensions0commands0-9taskinfotitle"></a>composeExtensions \\ [0 \\ ] \\ . Commands \\ [[0-9] \\ ] \\ . taskInfo \\ . Title
+## <a name="composeextensions0commands0-9parameters0-4value"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .value
 
-**Zeichenfolge, maximale Länge 64**
+**Zeichenfolge, Max. Länge 512**
 
-Ersetzt die entsprechenden Zeichenfolgen (en) aus dem App-Manifest durch den hier angegebenen Wert.
+Ersetzt die entsprechenden Zeichenfolgen aus dem App-Manifest durch den hier angegebenen Wert.
+
+## <a name="composeextensions0commands0-9parameters0-4choices0-9title"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .choices \\ [[0-9] \\ ] \\ .title
+
+**Zeichenfolge, Max. Länge 128**
+
+Ersetzt die entsprechenden Zeichenfolgen aus dem App-Manifest durch den hier angegebenen Wert.
+
+## <a name="composeextensions0commands0-9taskinfotitle"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .taskInfo \\ .title
+
+**Zeichenfolge, Max. Länge 64**
+
+Ersetzt die entsprechenden Zeichenfolgen aus dem App-Manifest durch den hier angegebenen Wert.

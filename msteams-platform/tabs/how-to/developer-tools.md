@@ -1,48 +1,49 @@
 ---
-title: DevTools für Microsoft Teams-Registerkarten
-description: Beschreibt, wie Sie bei Verwendung des Microsoft Teams-Desktop Clients zum devtools gelangen
-keywords: DevTools Debugging Mobile Chrome Desktop Client Developer Tools
-ms.openlocfilehash: 6c8ac15caf64c979b23155be847e8791988486e6
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+title: Entwicklertools für Microsoft Teams-Registerkarten
+description: Beschreibt, wie Sie bei Verwendung des Microsoft Teams-Desktopclients zu den DevTools kommen
+ms.topic: how-to
+keywords: Devtools debuggen Entwicklertools für mobile Chrome-Desktopclients
+ms.openlocfilehash: 8f23a5d56faa00d40451d2bbeadde32f6a5d0f7f
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674330"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014579"
 ---
-# <a name="devtools-for-microsoft-teams-tabs"></a>DevTools für Microsoft Teams-Registerkarten
+# <a name="devtools-for-microsoft-teams-tabs"></a>Entwicklertools für Microsoft Teams-Registerkarten
 
-Wenn Microsoft Teams in einem Browser läuft, können Sie ganz einfach auf die devtools des Browsers zugreifen: F12 (unter Windows) oder Command-Option-I (unter MacOS). Die devtools ermöglicht den Zugriff auf:
+Wenn Teams in einem Browser ausgeführt wird, ist es einfach, auf devTools des Browsers zu zugreifen: F12 (unter Windows) oder Command-Option-I (unter MacOS). Die DevTools bietet Ihnen Zugriff auf:
 
-1. Anzeigen von Konsolen Protokollen
-1. Anzeigen/Ändern von HTML-, CSS-und Netzwerkanforderungen während der Laufzeit.
-1. Fügen Sie Ihrem JavaScript-Code Haltepunkte hinzu, und führen Sie ein interaktives Debugging aus.
+1. Anzeigen von Konsolenprotokollen.
+1. Html-, CSS- und Netzwerkanforderungen während der Laufzeit anzeigen/ändern.
+1. Fügen Sie Ihrem JavaScript-Code Haltepunkte hinzu, und führen Sie ein interaktives Debuggen aus.
 
-Das Feature steht nur in Desktop-und Android-Clients zur Verfügung, nachdem die Entwicklervorschau aktiviert wurde. Weitere Informationen finden Sie unter [How do I enable Developer Preview](~/resources/dev-preview/developer-preview-intro.md) .
+Das Feature ist nur in Desktop- und Android-Clients verfügbar, Developer Preview aktiviert wurde. Weitere [Informationen finden Sie unter "Developer Preview](~/resources/dev-preview/developer-preview-intro.md) aktivieren".
 
-## <a name="accessing-devtools-in-the-desktop"></a>Zugreifen auf devtools auf dem Desktop
+## <a name="accessing-devtools-in-the-desktop"></a>Zugreifen auf DevTools auf dem Desktop
 
-Während die Webversion von Teams und die Desktop Version von Microsoft Teams nahezu identisch sind, gibt es einige Unterschiede, insbesondere im Hinblick auf die Authentifizierung. Manchmal ist die Verwendung der devtools die einzige Möglichkeit, um herauszufinden, was vor sich geht. Hier erfahren Sie, wie Sie vom Microsoft Teams-Desktop Client aus dorthin gelangen. So verwenden Sie devtools im Desktop Client:
+Obwohl die Webversion von Teams und die Desktopversion von Teams fast identisch sind, gibt es einige Unterschiede, insbesondere im Hinblick auf die Authentifizierung. Manchmal ist die einzige Möglichkeit, herauszufinden, was vor sich geht, die Verwendung der DevTools. Hier erfahren Sie, wie Sie über den Teams-Desktopclient zu ihnen kommen. So verwenden Sie DevTools im Desktopclient:
 
-1. Stellen Sie sicher, dass Sie die [Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md) aktiviert haben
-1. Öffnen Sie eine Registerkarte, damit Sie mit dem devtools etwas zu inspizieren haben.
-1. Öffnen des devtools
-    * Unter Windows öffnen Sie devtools über das Microsoft Teams-Symbol in der Desktop Ablage:
+1. Stellen Sie sicher, dass Sie die [Entwicklervorschau aktiviert haben.](~/resources/dev-preview/developer-preview-intro.md)
+1. Öffnen Sie eine Registerkarte, damit Sie etwas mit devTools überprüfen können.
+1. Öffnen der DevTools
+    * Unter Windows öffnen Sie DevTools über das Microsoft Teams-Symbol in der Taskleiste des Desktops:
 
-  ![Klicken Sie mit der rechten Maustaste, um devtools zu öffnen](~/assets/images/dev-preview/devtools-right-click.png)
+  ![Klicken Sie mit der rechten Maustaste, um DevTools zu öffnen.](~/assets/images/dev-preview/devtools-right-click.png)
 
-    * Klicken Sie unter MacOS auf das Microsoft Teams-Symbol im Dock.
+    * Klicken Sie unter MacOS im Dock auf das Microsoft Teams-Symbol.
 
-Hier sehen Sie, wie eine Beispielregisterkarte aussieht, wenn das devtools geöffnet und ein Element ausgewählt ist:
+So sieht eine Beispielregisterkarte aus, wenn devTools geöffnet und ein Element ausgewählt ist:
 
-![Tab-und DevTools](~/assets/images/dev-preview/tab-and-devtools.png)
+![Registerkarte und DevTools](~/assets/images/dev-preview/tab-and-devtools.png)
 
-## <a name="accessing-devtools-from-an-android-client"></a>Zugriff auf devtools von einem Android-Client aus
+## <a name="accessing-devtools-from-an-android-client"></a>Zugreifen auf DevTools über einen Android-Client
 
-Sie können die devtools auch über den Android-Client von Teams aktivieren. Gehen Sie hierzu folgendermaßen vor:
+Sie können die DevTools auch über den Teams -Android-Client aktivieren. Gehen Sie hierzu folgendermaßen vor:
 
-1. Stellen Sie sicher, dass Sie die [Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md) aktiviert haben
-1. Verbinden des Geräts mit dem Desktopcomputer und Einrichten des Android-Geräts für das [Remote Debugging](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/)
-1. Öffnen `chrome://inspect/#devices`Sie in Ihrem Chrome-Browser.
-1. Klicken Sie auf über **prüfen** unter der Registerkarte, die Sie debuggen möchten, wie im Screenshot unten beschrieben.
+1. Stellen Sie sicher, dass Sie die [Entwicklervorschau aktiviert haben.](~/resources/dev-preview/developer-preview-intro.md)
+1. Verbinden Sie Ihr Gerät mit Ihrem Desktopcomputer, und richten Sie Ihr Android-Gerät für remote [debuggen ein.](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/)
+1. Öffnen Sie in Ihrem Browser Chrome `chrome://inspect/#devices` .
+1. Klicken **Sie unterhalb** der Registerkarte, die Sie debuggen möchten, auf "Überprüfen", wie im folgenden Screenshot dargestellt.
 
-![Android-devtools](~/assets/images/android-devtools.png)
+![Android DevTools](~/assets/images/android-devtools.png)

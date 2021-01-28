@@ -1,90 +1,91 @@
 ---
 title: Registerkarten auf mobilen Geräten
 description: Beschreibt die Richtlinien für das Entwerfen von Registerkarten, die auf mobilen Geräten funktionieren.
-keywords: Teams-Entwurfsrichtlinien – Referenzrahmen-Mobile Registerkarten für persönliche apps
-ms.openlocfilehash: a1939465b04a1fe4b803efaf83402852ca536059
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.topic: conceptual
+keywords: Teams Design guidelines reference framework personal apps mobile tabs
+ms.openlocfilehash: 462228daa2179482110e2deb42f0f16ab2f5d5ec
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279776"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014173"
 ---
 # <a name="tabs-on-mobile"></a>Registerkarten auf mobilen Geräten
 
 > [!NOTE]
-> Wenn die Registerkarte Kanal/Gruppe auf mobilen Teams-Clients angezeigt werden soll, `setSettings()` muss die Konfiguration über einen Wert für die `websiteUrl` Eigenschaft verfügen (siehe unten).
+> Wenn Sie ihre Kanal-/Gruppenregisterkarte auf mobilen Teams-Clients anzeigen möchten, muss die Konfiguration einen Wert für die Eigenschaft haben `setSettings()` `websiteUrl` (siehe unten).
 
-Benutzerdefinierte Registerkarten können Teil eines Kanals, Gruppenchats oder einer persönlichen APP sein (apps, die statische Registerkarten und/oder einen 1:1-bot enthalten).
+Benutzerdefinierte Registerkarten können Teil eines Kanals, Eines Gruppenchats oder einer persönlichen App sein (Apps, die statische Registerkarten und/oder einen 1:1-Bot enthalten).
 
-Persönliche apps sind auf mobilen Clients in der APP-Schublade verfügbar. Die APP kann nur von einem Desktop-oder WebClient installiert werden, und es kann bis zu 24 Stunden dauern, bis Sie auf mobilen Clients angezeigt wird.
+Persönliche Apps sind auf mobilen Clients in der App-Drawer verfügbar. Die App kann nur von einem Desktop- oder Webclient installiert werden und kann bis zu 24 Stunden dauern, bis sie auf mobilen Clients angezeigt wird.
 
-Kanal Registerkarten sind auch auf mobilen Geräten verfügbar. Das Standardverhalten besteht derzeit darin, dass Sie Ihre `websiteUrl` Registerkarte in einem Browserfenster starten können. Sie können jedoch auf einem mobilen Client geladen werden, indem Sie auf das `...` Überlaufmenü neben der Registerkarte und dann auf **Öffnen**klicken, mit dem Sie `contentUrl` die Registerkarte in den mobilen Microsoft Teams-Client laden.
+Kanalregisterkarten sind auch für Mobilgeräte verfügbar. Das Standardverhalten besteht derzeit in der Verwendung ihrer Registerkarte, um die `websiteUrl` Registerkarte in einem Browserfenster zu starten. Sie können jedoch auf einem mobilen Client geladen werden, indem Sie auf das Überlaufmenü neben der Registerkarte klicken und "Öffnen" auswählen, wodurch Sie die Registerkarte im mobilen Client von `...` Teams  `contentUrl` laden.
 
 ## <a name="accessing-personal-tabs"></a>Zugreifen auf persönliche Registerkarten
 
-In der folgenden Abbildung wird gezeigt, wie Sie auf eine persönliche Registerkarte in Mobile zugreifen.
+Die folgende Abbildung zeigt, wie Sie auf eine persönliche Registerkarte auf mobilen Geräten zugreifen.
 
-:::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="Abbildung mit den Teams Mobile App Schublade." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="Illustration showing the Teams mobile app drawer." border="false":::
 
-## <a name="accessing-channel-tabs"></a>Zugreifen auf Kanal Registerkarten
+## <a name="accessing-channel-tabs"></a>Zugreifen auf Kanalregisterkarten
 
-In der folgenden Abbildung wird gezeigt, wie Sie auf eine Kanal Registerkarte in Mobile zugreifen.
+Die folgende Abbildung zeigt, wie Sie auf eine Kanalregisterkarte auf mobilen Geräten zugreifen.
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="Abbildung mit einer mobilen Teams-Registerkarte." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="Abbildung einer mobilen Registerkarte &quot;Teams&quot;." border="false":::
 
 ## <a name="design-considerations"></a>Überlegungen zum Entwurf
 
-Mit unserer mobilen Plattform können apps eine immersive Erfahrung mit dem App-Inhalt sein, der den gesamten Bildschirm außer der Navigation in den Haupt Teams aufnimmt. Befolgen Sie diese Richtlinien, um eine immersive Umgebung zu erstellen, die in Microsoft Teams passt.
+Unsere mobile Plattform ermöglicht Apps eine immersive Erfahrung mit den App-Inhalten, die den ganzen Bildschirm neben der Hauptnavigation von Teams nutzen. Befolgen Sie diese Richtlinien, um ein immersives Erlebnis zu erstellen, das zu Teams passt.
 
 ### <a name="responsive-design"></a>Dynamisches Designs
 
-Da die Registerkarte auf Geräten mit einer großen Bandbreite von Bildschirmgrößen geöffnet werden kann, muss Sie den Grundsätzen für das [reagieren auf Designs](https://www.w3schools.com/html/html_responsive.asp) entsprechen. Auf alle Schlüssel Konstrukte sollte auf mobilen Geräten zugegriffen werden können, und die Ansichten sollten nicht verzerrt werden. Stellen Sie sicher, dass beim Laden der Registerkarte auf einem mobilen Gerät alle Schaltflächen und Links leicht über die Finger basierte Navigation zugänglich sind.
+Da Ihre Registerkarte auf Geräten mit einer vielzahl von Bildschirmgrößen geöffnet werden kann, muss sie den Prinzipien des [reaktionsschnellen Designs](https://www.w3schools.com/html/html_responsive.asp) entsprechen. Alle wichtigen Konstrukte sollten auf mobilen Geräten zugänglich sein, und die Ansichten sollten nicht verzerrt sein. Stellen Sie sicher, dass beim Laden der Registerkarte auf einem mobilen Gerät alle Schaltflächen und Links über die fingerbasierte Navigation leicht zugänglich sind.
 
 ### <a name="layouts"></a>Layouts
 
-Die Auswahl des richtigen Layouts für Ihre Registerkarte ist wichtig. Sie sollten die Art von Informationen berücksichtigen, die Sie präsentieren, und ein Layout auswählen, das es für einen einfachen Verbrauch organisiert. Einige potenzielle Optionen werden unten erläutert.
+Die Auswahl des richtigen Layouts für Ihre Registerkarte ist wichtig. Sie sollten die Art von Informationen berücksichtigen, die Sie präsentieren, und ein Layout auswählen, das sie für einen einfachen Verbrauch organisiert. Im Folgenden werden einige mögliche Optionen beschrieben.
 
-#### <a name="single-canvas"></a>Einzelne Leinwand
+#### <a name="single-canvas"></a>Einzelner Zeichenbereich
 
-Dies ist ein großer Bereich, in dem Arbeit erledigt wird. Die wiki-app "Teams" folgt diesem Muster. Wenn Sie über eine APP verfügen, die Inhalte nicht in kleinere Komponenten unterteilt, wäre dies gut geeignet.
+Dies ist ein großer Bereich, in dem Arbeit erledigt wird. Die Teams-Wiki-App folgt diesem Muster. Wenn Sie über eine App verfügen, die Inhalte nicht in kleinere Komponenten aufteilen, ist dies gut geeignet.
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-single-canvas.png" alt-text="Abbildung mit einer mobilen Teams-Registerkarte mit einer einzelnen Leinwand." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-single-canvas.png" alt-text="Abbildung einer mobilen Registerkarte mit einem einzelnen Zeichenbereich in Teams." border="false":::
 
-#### <a name="list"></a>Liste
+#### <a name="list"></a>List
 
-Listen eignen sich hervorragend zum Sortieren und Filtern großer Datenmengen und bieten eine große Rolle, um die wichtigsten Dinge am besten zu halten. Es ist hilfreich, sortierbare Spalten zu verwenden. Im Menü mit den Auslassungspunkten können jedem Listenelementaktionen hinzugefügt werden.
+Listen sind ideal zum Sortieren und Filtern großer Datenmengen und sind gut dafür, die wichtigsten Dinge ganz oben zu behalten. Es ist hilfreich, sortierbare Spalten zu verwenden. Aktionen können jedem Listenelement unter dem Auslassungspunktmenü hinzugefügt werden.
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-list.png" alt-text="Abbildung mit einer mobilen Teams-Listen Registerkarte." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-list.png" alt-text="Abbildung einer Registerkarte für mobile Teams-Listen." border="false":::
 
 #### <a name="grid"></a>Raster
 
-Raster sind nützlich, um Elemente anzuzeigen, die sehr visuell sind. Es hilft, ein Filter-oder Suchsteuerelement am oberen Rand einzuschließen.
+Raster sind nützlich zum Anzeigen von Elementen, die hochgradig visuell sind. Es hilft, oben einen Filter oder ein Suchsteuerelement zu verwenden.
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="Abbildung zeigt eine Mobile Teams-Registerkarte mit einem Rasterlayout." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="Abbildung einer mobilen Registerkarte von Teams mit einem Rasterlayout." border="false":::
 
-### <a name="tabs-with-bots-on-mobile"></a>Tabs mit Bots auf mobilen Geräten
+### <a name="tabs-with-bots-on-mobile"></a>Registerkarten mit Bots auf Mobilgeräten
 
-Das folgende Beispiel ist eine persönliche APP, die über Registerkarten und einen bot verfügt.
+Das folgende Beispiel ist eine persönliche App mit Registerkarten und einem Bot.
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="Abbildung, die zeigt, wie Mobile Teams-App mit Registerkarten und bot." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="Illustration showing how mobile Teams app that has tabs and a bot." border="false":::
 
 ## <a name="ui-components"></a>Benutzeroberflächenkomponenten
 
 ### <a name="color-palettes"></a>Farbpaletten
 
-Die Verwendung unserer genehmigten neutralen Palette für Hintergründe, Benachrichtigungen, Text und Schaltflächen hilft Ihrer APP, sich in Microsoft Teams zu Hause zu fühlen. Da Teams Mobile zwei Farbdesigns (hell und dunkel) aufweist, sollten Sie sicherstellen, dass Ihre APP in beiden Farben gut aussieht.
+Die Verwendung unserer genehmigten neutralen Palette für Hintergründe, Benachrichtigungen, Text und Schaltflächen hilft Ihrer App, sich in Teams besser zu hause zu fühlen. Da Teams Mobile zwei helle Designs (hell und dunkel) hat, sollten Sie sicherstellen, dass Ihre App in beiden Designs gut aussieht.
 
 #### <a name="light-color"></a>Helle Farbe
 
-![helle Farbpalette](../../assets/images/light-color.png)
+![Helle Farbpalette](../../assets/images/light-color.png)
 
 #### <a name="dark-color"></a>Dunkle Farbe
 
-![dunkle Farbpalette](../../assets/images/dark-color.png)
+![Dunkle Farbpalette](../../assets/images/dark-color.png)
 
 ### <a name="buttons-and-controls"></a>Schaltflächen und Steuerelemente
 
-Die Art und Weise, wie Schaltflächen formatiert werden, hilft bei der Kommunikation, welche Art von Aktion ausgelöst wird. Wir halten eine Vielzahl von Schaltflächen, die formatiert sind, um unterschiedliche Schwerpunkte anzuzeigen. Schaltflächen können Text, ein Symbol oder eine Kombination aus Text und Symbol aufweisen. Um verschiedene Ebenen in einer Hierarchie zu kommunizieren, haben wir die primären und sekundären Schaltflächen innerhalb der einzelnen Kategorien entworfen.
+Die Art und Weise, wie Schaltflächen formatiert werden, hilft zu kommunizieren, welche Art von Aktion sie auslösen. Wir verwalten eine Vielzahl von Schaltflächen, die so formatiert sind, dass sie unterschiedliche Schwerpunktstufen anzeigen. Schaltflächen können Text, ein Symbol oder eine Kombination aus Text und einem Symbol enthalten. Um verschiedene Ebenen in einer Hierarchie zu kommunizieren, haben wir primäre und sekundäre Schaltflächen innerhalb jeder Kategorie entworfen.
 
 #### <a name="buttons"></a>Schaltflächen
 
@@ -98,19 +99,19 @@ Optionsfelder, Kontrollkästchen und Umschaltflächen.
 
 ![Auswahlsteuerelemente](../../assets/images/selection-controls.png)
 
-#### <a name="chiclets-and-pills"></a>Chiclets und Pillen
+#### <a name="chiclets-and-pills"></a>Kapseln und Kapseln
 
-![Chiclets und Pillen](../../assets/images/chiclets-and-pills.png)
+![- und -kapseln](../../assets/images/chiclets-and-pills.png)
 
 ### <a name="typography"></a>Typografie
 
-Typografie sollte eindeutig und zielgerichtet sein. Betonen Sie wichtige Informationen, und vermeiden Sie die Verwendung mehrerer Schriftarten und Größen zur Verringerung von Verwirrung. Wir empfehlen die Verwendung von satzfall und vermeiden die Verwendung aller Caps für Lokalisierung und Lesbarkeit.
+Typografie sollte klar und zielvoll sein. Heben Sie wichtige Informationen hervor, und vermeiden Sie die Verwendung mehrerer Schriftarten und Größen, um Verwirrung zu vermeiden. Es wird empfohlen, die Groß-/B0-Sätze zu verwenden und die Verwendung von Großbuchstaben für die Lokalisierung und Lesbarkeit zu vermeiden.
 
-![Mobile Typograph](../../assets/images/mobile-typography.png)
+![Mobile Typografie](../../assets/images/mobile-typography.png)
 
 ### <a name="fields-and-flyouts"></a>Felder und Flyouts
 
-Felder sind Bereiche, in denen Benutzer Text eingeben können. Flyouts sind leichter als Dialogfelder und werden aus dem oberen Bereich angezeigt.
+Felder sind Bereiche, in denen Benutzer Text eingeben können. Flyouts sind einfacher als Dialogfelder und werden im oberen Bereich angezeigt.
 
 #### <a name="list-controls"></a>Steuerelemente auflisten
 
@@ -120,18 +121,18 @@ Felder sind Bereiche, in denen Benutzer Text eingeben können. Flyouts sind leic
 
 ![Mobile Feldsteuerelemente](../../assets/images/mobile-field-controls.png)
 
-## <a name="developer-considerations"></a>Entwickler Überlegungen
+## <a name="developer-considerations"></a>Überlegungen für Entwickler
 
-Wenn Sie eine APP erstellen, die eine Registerkarte enthält, müssen Sie prüfen (und testen), wie Ihre Registerkarte sowohl auf den Android-als auch IOS-Microsoft Teams-Clients funktioniert. In den folgenden Abschnitten werden einige der wichtigsten Szenarien beschrieben, die Sie in diesem Punkt behandeln müssen.
+Wenn Sie eine App erstellen, die eine Registerkarte enthält, müssen Sie berücksichtigen (und testen), wie Ihre Registerkarte auf den Android- und iOS Microsoft Teams-Clients funktioniert. In den folgenden Abschnitten werden einige der wichtigsten Szenarien beschrieben, die Sie berücksichtigen müssen.
 
 ### <a name="testing-on-mobile-clients"></a>Testen auf mobilen Clients
 
-Sie müssen überprüfen, ob Ihre Registerkarte auf mobilen Geräten in verschiedenen Größen und Qualitäten ordnungsgemäß funktioniert. Für Android-Geräte können Sie die [devtools](~/tabs/how-to/developer-tools.md) verwenden, um Ihre Registerkarte während der Ausführung zu debuggen. Es wird empfohlen, sowohl auf High-als auch auf niedrig leistungsfähigen Geräten sowie auf einem Tablet zu testen.
+Sie müssen überprüfen, ob Ihre Registerkarte auf mobilen Geräten verschiedener Größen und Qualitäten ordnungsgemäß funktioniert. Für Android-Geräte können Sie [die DevTools](~/tabs/how-to/developer-tools.md) verwenden, um Ihre Registerkarte während der Ausführung zu debuggen. Es wird empfohlen, sowohl auf Geräten mit hoher und niedriger Leistung als auch auf einem Tablet zu testen.
 
 ### <a name="authentication"></a>Authentifizierung
 
-Damit die Authentifizierung auf mobilen Clients funktioniert, müssen Sie Microsoft Teams JavaScript SDK auf mindestens Version 1.4.1 aktualisieren.
+Damit die Authentifizierung auf mobilen Clients funktioniert, müssen Sie Das JavaScript SDK für Teams auf mindestens Version 1.4.1 aktualisieren.
 
-### <a name="low-bandwidth-and-intermittent-connections"></a>Niedrige Bandbreite und zeitweilige Verbindungen
+### <a name="low-bandwidth-and-intermittent-connections"></a>Geringe Bandbreite und zeitweilige Verbindungen
 
-Mobile Clients müssen regelmäßig mit niedriger Bandbreite und zeitweiligen Verbindungen arbeiten. Ihre APP sollte alle Timeouts entsprechend behandeln, indem Sie dem Benutzer eine Kontext Meldung bereitstellt. Sie sollten auch Benutzer Fortschrittsindikatoren angeben, um Ihren Benutzern Feedback für alle langwierigen Prozesse zur Verfügung zu stellen.
+Mobile Clients müssen regelmäßig mit geringer Bandbreite und zeitweilig unterbrochenen Verbindungen funktionieren. Ihre App sollte alle Timeouts entsprechend behandeln, indem sie dem Benutzer eine Kontextnachricht zur Verfügung stellt. Sie sollten auch Statusindikatoren für Benutzer verwenden, um Ihren Benutzern Feedback für lang dauernde Prozesse zu geben.
