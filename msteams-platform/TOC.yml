@@ -122,7 +122,7 @@
       href: toolkit/visual-studio-code-overview.md
     - name: Microsoft Teams-Toolkit-Erweiterung für Visual Studio
       href: toolkit/visual-studio-overview.md
-    - name: Yeoman Generator für Microsoft Teams (GitHub)
+    - name: Yeoman-Generator für Microsoft Teams (GitHub)
       href: 'https://github.com/pnp/generator-teams'
     - name: App-Studio
       href: concepts/build-and-test/app-studio-overview.md
@@ -230,6 +230,8 @@
           href: bots/how-to/update-and-delete-bot-messages.md
     - name: Kontext für Ihren Bot erhalten
       href: bots/how-to/get-teams-context.md
+    - name: Dateien senden und erhalten
+      href: bots/how-to/bots-filesv4.md
     - name: Umgang mit der Begrenzung der Datenübertragungsrate für Bots
       href: bots/how-to/rate-limit.md
     - name: Anruf- und Besprechungs-Bots
