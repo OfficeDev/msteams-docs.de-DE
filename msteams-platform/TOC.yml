@@ -20,9 +20,9 @@
       href: build-your-first-app/build-bot.md
     - name: Erstellen einer Messaging-Erweiterung
       href: build-your-first-app/build-messaging-extension.md
-- name: Lernprogramme und Beispiele
+- name: Lernprogramme und Codebeispiele
   items:
-    - name: Übersicht
+    - name: Lernprogramme
       href: tutorials/code-samples.md
     - name: Erstellen einer App mithilfe von C#
       href: tutorials/get-started-dotnet-app-studio.md
@@ -30,24 +30,8 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Erstellen einer App mit dem Yeoman-Generator
       href: tutorials/get-started-yeoman.md
-    - name: Bot-Beispiele
-      items:
-        - name: Chatbot mit C# (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot'
-        - name: Chatbot mit Node.js (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot'
-        - name: Chatbot mit Python (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
-    - name: Beispiele für Messaging-Erweiterungen
-      items:
-        - name: Aktionsbefehle mit C# (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-        - name: Aktionsbefehle mit Node.js (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action'
-        - name: Suchbefehle mit C# (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-        - name: Suchbefehle mit Node.js (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search'
+    - name: Codebeispiele
+      href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: App-Grundlagen
   items:
     - name: Microsoft Teams-App-Funktionen
