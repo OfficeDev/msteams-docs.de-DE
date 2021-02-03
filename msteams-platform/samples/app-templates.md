@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demo zu Microsoft Teams-Vorlagenbeispielen
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 4a9b2ee9a5fadfa86dead4a15f49a6cea67d4963
-ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
+ms.openlocfilehash: 573291a9747b3df3cbdd11c52fe8f1d71525f0f6
+ms.sourcegitcommit: ce74f821660b1258c72b3c3f71c1cf177e7e92ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "49795496"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "50072889"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -214,6 +214,18 @@ E-Prescriptions ist eine [Power Apps-basierte](/powerapps/maker/canvas-apps/embe
     ![Screenshot der App "E-Prescriptions". Zeigt, wie Administratoren die Gesundheitsdienstleister verwalten können, die die App verwenden.](../assets/images/e-prescriptions-app-template-admin.png)
 :::column-end:::
 :::row-end:::
+
+
+## <a name="emergency-button-power-9734"></a>Notruftasten-&#9734;
+
+Die Notfalltasten-Power-App kann von Organisationen verwendet werden, die Microsoft Teams verwenden, um es allen Benutzern zu ermöglichen, Unterstützung von Vorgesetzten an zu fordern. Diese App enthält verschiedene Features, z. B.:
+-   Anfordern von Unterstützung für verschiedene Kategorien von einer Power App
+-   Benachrichtigungen, die an Ansgeber gesendet werden und sie darüber informieren, wer zugewiesen wurde 
+-   Benachrichtigungen, die an zugewiesene Vorgesetzte gesendet werden und sie darüber informieren, wer Unterstützung benötigt 
+-   Anzeigen von Überwachungsprotokollen in SharePoint
+
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-emergency-button-app)
+
 
 ## <a name="employee-training"></a>Mitarbeiterschulung 
 

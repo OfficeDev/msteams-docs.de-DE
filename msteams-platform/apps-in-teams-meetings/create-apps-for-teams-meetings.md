@@ -5,12 +5,12 @@ description: Erstellen von Apps für Teambesprechungen
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Teams-Apps-Besprechungen – Benutzerteilnehmer-Rollen-API
-ms.openlocfilehash: 82327eca86dcdac5c47f5f4471bc91d55484d07e
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 7f6d8fec735aa21033c6bcb2462c20458634f10a
+ms.sourcegitcommit: 843da1730443ff8474a05295f60a6b376ed140da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797764"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "50073096"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Apps für Teams-Besprechungen erstellen
 
@@ -30,7 +30,7 @@ ms.locfileid: "49797764"
 
 ## <a name="meeting-apps-api-reference"></a>Referenz zur Besprechungs-Apps-API
 
-|API|Beschreibung|Anforderung|Source|
+|API|Beschreibung|Anforderung|Quelle|
 |---|---|----|---|
 |**GetUserContext**| Erhalten Sie kontextbezogene Informationen, um relevante Inhalte auf einer Registerkarte "Teams" anzuzeigen. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams client SDK|
 |**GetParticipant**|Diese API ermöglicht einem Bot das Abrufen von Teilnehmerinformationen nach Besprechungs-ID und Teilnehmer-ID.|**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
@@ -54,9 +54,9 @@ Informationen zum Identifizieren und Abrufen kontextbezogener Informationen für
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**meetingId**| string | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
-|**participantId**| string | Ja | Die participantId ist die Benutzer-ID. Sie ist im SSO-, Bot Invoke- und Teams-Client-SDK verfügbar. Es wird dringend empfohlen, eine participantId vom Registerkarten-SSO zu erhalten. |
-|**tenantId**| string | Ja | Die tenantId ist für die Mandantenbenutzer erforderlich. Sie ist im SSO-, Bot Invoke- und Teams-Client-SDK verfügbar. Es wird dringend empfohlen, eine TenantId vom Registerkarten-SSO zu erhalten. |
+|**meetingId**| Zeichenfolge | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
+|**participantId**| Zeichenfolge | Ja | Die participantId ist die Benutzer-ID. Sie ist im SSO-, Bot Invoke- und Teams-Client-SDK verfügbar. Es wird dringend empfohlen, eine participantId vom Registerkarten-SSO zu erhalten. |
+|**tenantId**| Zeichenfolge | Ja | Die tenantId ist für die Mandantenbenutzer erforderlich. Sie ist im SSO-, Bot Invoke- und Teams-Client-SDK verfügbar. Es wird dringend empfohlen, eine TenantId vom Registerkarten-SSO zu erhalten. |
 
 #### <a name="example"></a>Beispiel
 
@@ -153,7 +153,7 @@ Der Antworttext ist:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**conversationId**| string | Ja | Der Unterhaltungsbezeichner ist als Teil des Botaufrufs verfügbar. |
+|**conversationId**| Zeichenfolge | Ja | Der Unterhaltungsbezeichner ist als Teil des Botaufrufs verfügbar. |
 
 #### <a name="example"></a>Beispiel
 
@@ -307,7 +307,7 @@ Benutzer mit Organisator- und/oder Organisatorrollen fügen registerkarten zu ei
 
 ✔ Sie den Authentifizierungsfluss [von Teams für Registerkarten.](../tabs/how-to/authentication/auth-flow-tab.md)
 
-✔ Verwenden Sie die [Benachrichtigungs-API,](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) um zu signalisieren, dass eine Blasenbenachrichtigung ausgelöst werden muss.
+✔ Verwenden Sie die [NotificationSignal-API,](create-apps-for-teams-meetings.md#notificationsignal-api) um zu signalisieren, dass eine Blasenbenachrichtigung ausgelöst werden muss.
 
 ✔ Als Teil der Benachrichtigungsanforderungsnutzlast die URL ein, unter der der zu präsentierende Inhalt gehostet wird.
 
