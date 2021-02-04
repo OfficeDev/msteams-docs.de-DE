@@ -2,13 +2,13 @@
 title: Registerkarten auf mobilen Geräten
 description: Beschreibt die Richtlinien für das Entwerfen von Registerkarten, die auf mobilen Geräten funktionieren.
 ms.topic: conceptual
-keywords: Teams Design guidelines reference framework personal apps mobile tabs
-ms.openlocfilehash: 462228daa2179482110e2deb42f0f16ab2f5d5ec
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+keywords: Teams Design Guidelines reference framework personal apps mobile tabs
+ms.openlocfilehash: 70ff46e446b146b134f34830e8867133cbeeca14
+ms.sourcegitcommit: f74b74d5bed1df193e59f46121ada443fb57277b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014173"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093288"
 ---
 # <a name="tabs-on-mobile"></a>Registerkarten auf mobilen Geräten
 
@@ -53,13 +53,13 @@ Dies ist ein großer Bereich, in dem Arbeit erledigt wird. Die Teams-Wiki-App fo
 
 #### <a name="list"></a>List
 
-Listen sind ideal zum Sortieren und Filtern großer Datenmengen und sind gut dafür, die wichtigsten Dinge ganz oben zu behalten. Es ist hilfreich, sortierbare Spalten zu verwenden. Aktionen können jedem Listenelement unter dem Auslassungspunktmenü hinzugefügt werden.
+Listen n nen sich gut zum Sortieren und Filtern großer Datenmengen nnen und sind gut dafür, die wichtigsten Dinge ganz oben zu behalten. Es ist hilfreich, sortierbare Spalten zu verwenden. Aktionen können jedem Listenelement unter dem Auslassungspunktmenü hinzugefügt werden.
 
 :::image type="content" source="../../assets/images/tabs/mobile-tab-list.png" alt-text="Abbildung einer Registerkarte für mobile Teams-Listen." border="false":::
 
 #### <a name="grid"></a>Raster
 
-Raster sind nützlich zum Anzeigen von Elementen, die hochgradig visuell sind. Es hilft, oben einen Filter oder ein Suchsteuerelement zu verwenden.
+Raster sind nützlich, um Elemente zu zeigen, die hochgradig visuell sind. Es hilft, oben einen Filter oder ein Suchsteuerelement zu verwenden.
 
 :::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="Abbildung einer mobilen Registerkarte von Teams mit einem Rasterlayout." border="false":::
 
@@ -85,7 +85,7 @@ Die Verwendung unserer genehmigten neutralen Palette für Hintergründe, Benachr
 
 ### <a name="buttons-and-controls"></a>Schaltflächen und Steuerelemente
 
-Die Art und Weise, wie Schaltflächen formatiert werden, hilft zu kommunizieren, welche Art von Aktion sie auslösen. Wir verwalten eine Vielzahl von Schaltflächen, die so formatiert sind, dass sie unterschiedliche Schwerpunktstufen anzeigen. Schaltflächen können Text, ein Symbol oder eine Kombination aus Text und einem Symbol enthalten. Um verschiedene Ebenen in einer Hierarchie zu kommunizieren, haben wir primäre und sekundäre Schaltflächen innerhalb jeder Kategorie entworfen.
+Die Art und Weise, wie Schaltflächen formatiert werden, hilft zu kommunizieren, welche Art von Aktion sie auslösen. Wir verwalten eine Vielzahl von Schaltflächen, die so formatiert sind, dass sie unterschiedliche Akzentstufen anzeigen. Schaltflächen können Text, ein Symbol oder eine Kombination aus Text und einem Symbol enthalten. Um verschiedene Ebenen in einer Hierarchie zu kommunizieren, haben wir primäre und sekundäre Schaltflächen innerhalb jeder Kategorie entworfen.
 
 #### <a name="buttons"></a>Schaltflächen
 
@@ -105,7 +105,7 @@ Optionsfelder, Kontrollkästchen und Umschaltflächen.
 
 ### <a name="typography"></a>Typografie
 
-Typografie sollte klar und zielvoll sein. Heben Sie wichtige Informationen hervor, und vermeiden Sie die Verwendung mehrerer Schriftarten und Größen, um Verwirrung zu vermeiden. Es wird empfohlen, die Groß-/B0-Sätze zu verwenden und die Verwendung von Großbuchstaben für die Lokalisierung und Lesbarkeit zu vermeiden.
+Typografie sollte klar und zielvoll sein. Heben Sie wichtige Informationen hervor, und vermeiden Sie die Verwendung mehrerer Schriftarten und Größen, um Verwirrung zu vermeiden. Wir empfehlen die Verwendung von Groß-/B0 und die Verwendung von Großbuchstaben für die Lokalisierung und Lesbarkeit.
 
 ![Mobile Typografie](../../assets/images/mobile-typography.png)
 
@@ -136,3 +136,6 @@ Damit die Authentifizierung auf mobilen Clients funktioniert, müssen Sie Das Ja
 ### <a name="low-bandwidth-and-intermittent-connections"></a>Geringe Bandbreite und zeitweilige Verbindungen
 
 Mobile Clients müssen regelmäßig mit geringer Bandbreite und zeitweilig unterbrochenen Verbindungen funktionieren. Ihre App sollte alle Timeouts entsprechend behandeln, indem sie dem Benutzer eine Kontextnachricht zur Verfügung stellt. Sie sollten auch Statusindikatoren für Benutzer verwenden, um Ihren Benutzern Feedback für lang dauernde Prozesse zu geben.
+
+> [!NOTE]
+> Registerkarten werden auf mobilen Geräten nur aktiviert, nachdem die Anwendung basierend auf der Eingabe des Genehmigungsteams einer Zulassungsliste hinzugefügt wurde. Um die Reaktionsfähigkeit mobiler Geräte zu überprüfen, greifen Sie auf teamsubm@microsoft.com. 

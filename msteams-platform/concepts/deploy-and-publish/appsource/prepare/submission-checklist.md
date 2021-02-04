@@ -3,12 +3,12 @@ title: Prüfliste für Die Übermittlung an den Store
 description: Die Prüfliste, die vor der Veröffentlichung Ihrer Microsoft Teams-App in AppSource verwendet werden soll
 ms.topic: reference
 keywords: Teams veröffentlichen Prüfliste für die Veröffentlichungscheckliste für die Veröffentlichung von Teams-Apps– AppSource-Überprüfung
-ms.openlocfilehash: 7cb9192c159e7d65aad188c9746de3de7947a42b
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 02490d7a020b8887589c65840a0abe597887527f
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014215"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093936"
 ---
 # <a name="prepare-for-appsource-submission"></a>Vorbereiten der AppSource-Übermittlung  
 
@@ -31,23 +31,23 @@ Sobald Sie alle oben genannten Anforderungen erfüllt haben, übermitteln Sie Ih
 
 ## <a name="teams-app-validation-tool"></a>Teams-App-Validierungstool
 
-Das Tool für die App-Überprüfung besteht aus einem [App-Validator](#teams-app-validator) und einer [vorläufigen Prüfliste.](#preliminary-checklist) Das Tool repliziert dieselben Testfälle, die von [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) zum Auswerten der App-Übermittlung verwendet werden. Daher ist es wichtig, alle Testfälle zu bestehen, bevor Ihre Lösung zur Genehmigung an AppSource übermittelt wird. Das Tool ist in verschiedenen Bereichen der Teams-Plattform zu finden:
+Das Tool für die App-Überprüfung besteht aus einem [App-Validator](#teams-app-validator) und einer [vorläufigen Prüfliste.](#preliminary-checklist) Das Tool repliziert dieselben Testfälle, die [von AppSource](/office/dev/store/submit-to-appsource-via-partner-center) zum Auswerten der App-Übermittlung verwendet werden. Daher ist es wichtig, alle Testfälle zu bestehen, bevor Ihre Lösung zur Genehmigung an AppSource übermittelt wird. Das Tool ist in verschiedenen Bereichen der Teams-Plattform zu finden:
 
 > [!div class="checklist"]
 >
 > * [**Startseite der App-Validator**](https://dev.teams.microsoft.com/appvalidation.html)
 > * [**Teams Visual Studio Code Toolkit**](/toolkit/visual-studio-code-overview.md)
-> * [**App-Studio**](/concepts/build-and-test/app-studio-overview.md)
+> * [**App-Studio**](../../../build-and-test/app-studio-overview.md)
 
 ### <a name="teams-app-validator"></a>Validator der Teams-App
 
-Auf **der Seite "Überprüfen"** können Sie Ihr App-Paket vor der Übermittlung an AppSource überprüfen. Laden Sie einfach Ihr App-Paket hoch, und das Validierungstool überprüft Ihre App mit allen Manifest-bezogenen Testfällen. Für jeden fehlgeschlagenen Test enthält die Beschreibung einen Dokumentationslink, der Ihnen bei der Behebung des Fehlers hilft.
+Auf **der Seite "Überprüfen"** können Sie Ihr App-Paket vor der Übermittlung an AppSource überprüfen. Laden Sie einfach Ihr App-Paket hoch, und das Validierungstool überprüft Ihre App mit allen manifestbezogenen Testfällen. Für jeden fehlgeschlagenen Test enthält die Beschreibung einen Dokumentationslink, der Ihnen bei der Behebung des Fehlers hilft.
 
 ![Überprüfungstool](../../../../assets/images/validation-tool/validator.png)
 
 ### <a name="preliminary-checklist"></a>Vorläufige Prüfliste
 
-Für Testszenarien, die nur schwer zu automatisieren sind, werden in der vorläufigen Prüfliste sieben der am häufigsten fehlgeschlagenen Testfälle aufgeführt.
+Für Testszenarien, die nur schwer automatisiert werden können, werden in der vorläufigen Prüfliste sieben der am häufigsten fehlgeschlagenen Testfälle aufgeführt.
 
 ![Vorläufige Prüfliste](../../../../assets/images/validation-tool/preliminary-checklist.png)
 

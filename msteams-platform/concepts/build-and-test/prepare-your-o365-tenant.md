@@ -3,16 +3,16 @@ title: Vorbereiten des Microsoft 365-Mandanten
 description: Erste Schritte mit Teams in Microsoft 365
 ms.topic: how-to
 keywords: Konfigurieren des Hochladens von Microsoft 365-Mandantenteams
-ms.openlocfilehash: bfeb1a5d39b8a6ad8d1dd4d631f984ecec4e26f1
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 50765271b93edd380d1c23672289b618baf1d346
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014453"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093943"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Vorbereiten des Microsoft 365-Mandanten
 
-Wenn Sie ein Microsoft 365-Abonnent sind, können Sie Apps für Microsoft Teams mit einem der folgenden Pläne [entwickeln:](https://products.office.com/business/compare-more-office-365-for-business-plans)
+Als Microsoft 365-Abonnent können Sie Apps für Microsoft Teams mit einem der folgenden Pläne [entwickeln:](https://products.office.com/business/compare-more-office-365-for-business-plans)
 
 * Standard
 * Standard
@@ -24,15 +24,15 @@ Microsoft Teams steht auch Kunden zur Verfügung, die E4 vor der Dehierung [abon
 
 ## <a name="just-need-a-development-environment"></a>Benötigen Sie nur eine Entwicklungsumgebung?
 
-Wenn Sie derzeit kein Microsoft 365-Konto haben, können Sie sich für ein Abonnement des [Microsoft 365-Entwicklerprogramms](https://developer.microsoft.com/microsoft-365/dev-program) registrieren. Es ist *90* Tage lang kostenlos und wird kontinuierlich verlängert, solange Sie es für Entwicklungsaktivitäten verwenden. Wenn Sie über ein Visual Studio  *Enterprise-* oder Professional-Abonnement verfügen, enthalten beide Programme ein kostenloses Microsoft 365-Entwicklerabonnement, das für die Lebensdauer Ihres Visual Studio ist. [](https://aka.ms/MyVisualStudioBenefits) *Siehe* ["Einrichten eines Microsoft 365-Entwicklerabonnements".](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)
+Wenn Sie derzeit kein Microsoft 365-Konto haben, können Sie sich für ein Abonnement des [Microsoft 365-Entwicklerprogramms](https://developer.microsoft.com/microsoft-365/dev-program) registrieren. Es ist *90* Tage lang kostenlos und wird kontinuierlich verlängert, solange Sie es für Entwicklungsaktivitäten verwenden. Wenn Sie über ein Visual Studio  *Enterprise-* oder Professional-Abonnement verfügen, enthalten beide Programme ein kostenloses Microsoft 365-Entwicklerabonnement, das für die Lebensdauer Ihres Visual Studio ist. [](https://aka.ms/MyVisualStudioBenefits) *Weitere Informationen* finden Sie unter Einrichten [eines Microsoft 365-Entwicklerabonnements.](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)
 
 ## <a name="enable-microsoft-teams-for-your-organization"></a>Aktivieren von Microsoft Teams für Ihre Organisation 
 
 Wenn Microsoft Teams für Ihre Organisation nicht aktiviert wurde, müssen Sie dies zuerst tun. Sehen Sie sich unsere detaillierten Anleitungen zum Aktivieren [von Teams für Ihre Organisation an.](/microsoftteams/enable-features-office-365)
 
-## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>Aktivieren benutzerdefinierter Teams-Apps und Aktivieren des Hochladens benutzerdefinierter Apps
+## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>Aktivieren von benutzerdefinierten Teams-Apps und Aktivieren des Hochladens benutzerdefinierter Apps
 
-Aktivieren Sie das Sideloading von benutzerdefinierten Apps für Ihren Entwickler mandanten wie folgt:
+Aktivieren Sie das Sideloading von benutzerdefinierten Apps für Ihren Entwickler-Mandanten wie folgt:
 
 1. Melden Sie [sich mit Ihren Administratoranmeldeinformationen beim Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) Admin Center an. 
 
@@ -47,7 +47,9 @@ Aktivieren Sie das Sideloading von benutzerdefinierten Apps für Ihren Entwickle
 
 ![Aktivieren der Querladenansicht](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 
-4. Schalten Sie **benutzerdefinierte Apps in** die "On"-Position hoch. 
+4. **Umschalten des Hochladens benutzerdefinierter Apps** in die **On-Position.**
+
+5. Wählen Sie **"Speichern"** aus, um die Änderungen zu speichern.
 
 Das ist alles. Ihr Test mandant lässt jetzt das Querladen benutzerdefinierter Apps zu.
 

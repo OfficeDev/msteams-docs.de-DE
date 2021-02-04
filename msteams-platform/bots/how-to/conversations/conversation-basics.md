@@ -1,30 +1,32 @@
 ---
 title: Grundlagen zu Unterhaltungen
-author: clearab
-description: So führen Sie eine Unterhaltung mit einem Microsoft Teams-Bot
+description: beschreibt Möglichkeiten für eine Unterhaltung mit einem Microsoft Teams-Bot
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6f7e7a4d1be08126c96dff07ddbc3e1156700a90
-ms.sourcegitcommit: 94ad961ecd002805b4e0424601d1c0ec191ff376
+keyword: conversations basics receive message send message picture message channel data adaptive cards
+ms.openlocfilehash: a045f02a146782ebdbbbb14fe5f4187cb517a109
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "50075693"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093957"
 ---
 # <a name="conversation-basics"></a>Grundlagen zu Unterhaltungen
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Eine Unterhaltung ist eine Reihe von Nachrichten, die zwischen Ihrem Bot und einem oder mehreren Benutzern gesendet werden. In Teams gibt es drei Arten von Unterhaltungen (auch als Bereiche bezeichnet):
+Eine Unterhaltung ist eine Reihe von Nachrichten, die zwischen Ihrem Bot und einem oder mehreren Benutzern gesendet werden. Es gibt drei Arten von Unterhaltungen, die auch als Bereiche in Teams bezeichnet werden:
 
-* `teams` Auch Kanalunterhaltungen genannt, die für alle Mitglieder des Kanals sichtbar sind.
-* `personal` Unterhaltungen zwischen Bots und einem einzelnen Benutzer.
-* `groupChat` Chatten zwischen einem Bot und zwei oder mehr Benutzern. Aktiviert auch Ihren Bot in Besprechungschats.
+| Unterhaltungstyp | Beschreibung |
+| ------- | ----------- |
+|  `teams` | Auch Kanalunterhaltungen genannt, die für alle Mitglieder des Kanals sichtbar sind. |
+| `personal` | Unterhaltungen zwischen Bots und einem einzelnen Benutzer. |
+| `groupChat` | Chatten zwischen einem Bot und zwei oder mehr Benutzern. Aktiviert auch Ihren Bot in Besprechungschats. |
 
 Ein Bot verhält sich etwas anders, je nachdem, an welcher Art von Unterhaltung er beteiligt ist:
 
 * Bots in Kanal- und Gruppenchatunterhaltungen erfordern, dass der Benutzer den Bot @ erwähnt, um ihn in einem Kanal aufrief.
-* Bots in einer 1:1-Unterhaltung erfordern keine @-Erwähnung. Alle vom Benutzer gesendeten Nachrichten werden an Ihren Bot geleitet.
+* Bots in einer 1:1-Unterhaltung erfordern keine @-Erwähnung. Alle Nachrichten, die vom Benutzer gesendet werden, werden an Ihren Bot weitergeschickt.
 
 Um Ihren Bot in einem bestimmten Bereich zu aktivieren, fügen Sie diesen Bereich ihrem [App-Manifest hinzu.](~/resources/schema/manifest-schema.md)
 
@@ -32,13 +34,13 @@ Um Ihren Bot in einem bestimmten Bereich zu aktivieren, fügen Sie diesen Bereic
 
 Jede Nachricht ist ein `Activity`-Objekt vom Typ `messageType: message`. Wenn ein Benutzer eine Nachricht sendet, postet Teams die Nachricht auf Ihrem Bot. Spezifisch erfolgt dies durch Senden eines JSON-Objekts an den Nachrichtenendpunkt des Bots. Ihr Bot untersucht die Nachricht, um ihren Typ zu ermitteln, und antwortet entsprechend.
 
-Die grundlegende Unterhaltung wird über den Bot Framework Connector, eine einzelne REST-API, verarbeitet, damit Ihr Bot mit Teams und anderen Kanälen kommunizieren kann. Das Bot Builder SDK bietet einfachen Zugriff auf diese API, zusätzliche Funktionen zum Verwalten des Unterhaltungsflusses und -zustands sowie einfache Möglichkeiten zur Integration kognitiver Dienste wie die Verarbeitung natürlicher Sprache (Natural Language Processing, NLP).
+Grundlegende Unterhaltungen werden über den Bot Framework Connector, eine einzelne REST-API, behandelt. Diese API ermöglicht Es Ihrem Bot, mit Teams und anderen Kanälen zu kommunizieren. Das Bot Builder SDK bietet einfachen Zugriff auf diese API, zusätzliche Funktionen zum Verwalten des Unterhaltungsflusses und -zustands sowie einfache Möglichkeiten zur Integration kognitiver Dienste wie der Verarbeitung natürlicher Sprache (Natural Language Processing, NLP).
 
 ## <a name="receive-a-message"></a>Empfangen einer Nachricht
 
 Um eine Textnachricht zu empfangen, verwenden Sie die `Text`-Eigenschaft des `Activity`-Objekts. Verwenden Sie im Aktivitäts-Handler des Bots die `Activity` des Turn-Kontextobjekts, um eine einzelne Nachrichtenanforderung zu lesen.
 
-Der folgende Code zeigt ein Beispiel.
+Im folgenden Code ist ein Beispiel dargestellt:
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -123,7 +125,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="send-a-message"></a>Senden einer Nachricht
 
-Um eine Textnachricht zu senden, geben Sie die Zeichenfolge an, die Sie als Aktivität senden möchten. Verwenden Sie in den Aktivitäts-Handlern des Bots die `SendActivityAsync`-Methode des Turn-Kontextobjekts, um eine einzelne Nachrichtenantwort zu senden. Sie können die Methode des Objekts auch verwenden, `SendActivitiesAsync` um mehrere Antworten auf einmal zu senden. Der folgende Code zeigt ein Beispiel für das Senden einer Nachricht, wenn eine Person zu einer Unterhaltung hinzugefügt wird  
+Um eine Textnachricht zu senden, geben Sie die Zeichenfolge an, die Sie als Aktivität senden möchten. Verwenden Sie im Aktivitätshandler des Bots die Methode des Turn-Kontextobjekts, `SendActivityAsync` um eine einzelne Nachrichtenantwort zu senden. Verwenden Sie die Methode des `SendActivitiesAsync` Objekts, um mehrere Antworten auf einmal zu senden. Der folgende Code zeigt ein Beispiel für das Senden einer Nachricht, wenn einer Unterhaltung eine Person hinzugefügt wird.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -212,19 +214,19 @@ async def on_members_added_activity(
 
 ## <a name="teams-channel-data"></a>Teams-Kanaldaten
 
-Das `channelData` Objekt enthält Teams-spezifische Informationen und ist die definitive Quelle für Team- und Kanal-IDs. Möglicherweise müssen Sie diese IDs zwischenspeichern und als Schlüssel für den lokalen Speicher verwenden. Im SDK werden in der Regel wichtige Informationen aus dem Objekt entfernt, um den Zugriff auf das Objekt zu einfacher zu machen. Sie können jedoch immer über das Objekt auf die ursprünglichen `TeamsActivityHandler` `channelData` Informationen `turnContext` zugreifen.
+Das `channelData` Objekt enthält Teams-spezifische Informationen und ist eine definitive Quelle für Team- und Kanal-IDs. Möglicherweise müssen Sie diese IDs zwischenspeichern und als Schlüssel für den lokalen Speicher verwenden. Im SDK werden in der Regel wichtige Informationen aus dem Objekt herausgezieht, um `TeamsActivityHandler` `channelData` einen einfachen Zugriff zu erreichen. Sie können jedoch immer über das Objekt auf die ursprünglichen Daten `turnContext` zugreifen.
 
 Das `channelData` Objekt ist nicht in Nachrichten in persönlichen Unterhaltungen enthalten, da diese außerhalb eines Kanals stattfinden.
 
 Ein typisches channelData-Objekt in einer Aktivität, die an Ihren Bot gesendet wird, enthält die folgenden Informationen:
 
-* `eventType` #A0 Nur bei [Kanaländerungsereignissen übergeben](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-* `tenant.id` Azure Active Directory-Mandanten-ID; In allen Kontexten übergeben
+* `eventType`#A0 nur bei [Kanaländerungsereignissen übergeben.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* `tenant.id` Azure Active Directory-Mandanten-ID, die in allen Kontexten übergeben wird.
 * `team` Wird nur im Kanalkontext übergeben, nicht im persönlichen Chat.
-  * `id` GUID für den Kanal
-  * `name` Name des Teams; Wird nur bei Ereignissen zur [Teambenennung übergeben](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-* `channel` Wird nur in Kanalkontexten übergeben, wenn der Bot erwähnt wird, oder für Ereignisse in Kanälen in Teams, in denen der Bot hinzugefügt wurde
-  * `id` GUID für den Kanal
+  * `id` GUID für den Kanal.
+  * `name`Name des Teams; wird nur in Fällen von [Teambenennungsereignissen übergeben.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* `channel` Wird nur in Kanalkontexten übergeben, wenn der Bot erwähnt wird, oder für Ereignisse in Kanälen in Teams, in denen der Bot hinzugefügt wurde.
+  * `id` GUID für den Kanal.
   * `name`Kanalname; nur bei [Kanaländerungsereignissen übergeben.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * `channelData.teamsTeamId` Veraltet. Diese Eigenschaft ist nur aus Abwärtskompatibilität enthalten.
 * `channelData.teamsChannelId` Veraltet. Diese Eigenschaft ist nur aus Abwärtskompatibilität enthalten.
@@ -260,7 +262,7 @@ Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text- un
 
 ## <a name="adding-notifications-to-your-message"></a>Hinzufügen von Benachrichtigungen zu Ihrer Nachricht
 
-Benachrichtigungen warnen Benutzer über neue Aufgaben, Erwähnungen und Kommentare im Zusammenhang mit dem, wofür sie arbeiten, oder sie müssen sich damit in Verbindung setzen, indem sie einen Hinweis in ihren Aktivitätsfeed einfügen. Sie können festlegen, dass Benachrichtigungen von Ihrer Botnachricht ausgelöst werden, indem Sie die `TeamsChannelData` Eigenschaft `Notification.Alert` "objects" auf "true" festlegen. Ob eine Benachrichtigung ausgelöst wird, hängt letztendlich von den Teams-Einstellungen des jeweiligen Benutzers ab, und Sie können diese Einstellungen nicht programmgesteuert außer Kraft setzen. Der Typ der Benachrichtigung ist entweder ein Banner oder ein Banner und eine E-Mail.
+Benachrichtigungen warnen Benutzer über neue Aufgaben, Erwähnungen und Kommentare im Zusammenhang mit dem, wofür sie arbeiten oder die sie betrachten müssen, indem sie einen Hinweis in ihren Aktivitätsfeed einfügen. Sie können festlegen, dass Benachrichtigungen von Ihrer Botnachricht ausgelöst werden, indem Sie die `TeamsChannelData` Eigenschaft `Notification.Alert` "objects" auf "true" festlegen. Ob eine Benachrichtigung ausgelöst wird oder nicht, hängt letztlich von den Teams-Einstellungen des jeweiligen Benutzers ab, und Sie können diese Einstellungen nicht programmgesteuert außer Kraft setzen. Die Art der Benachrichtigung ist entweder ein Banner oder ein Banner und eine E-Mail.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -335,17 +337,48 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="picture-messages"></a>Bildmeldungen
 
-Bilder werden durch Hinzufügen von Anlagen zu einer Nachricht gesendet. Weitere Informationen zu Anlagen finden Sie in der [Bot Framework-Dokumentation.](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true)
+Bilder werden durch Hinzufügen von Anlagen zu einer Nachricht gesendet. Weitere Informationen zu Anlagen finden Sie in der [Bot Framework-Dokumentation.](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments)
 
-Bilder können im PNG-, JPEG- oder #A0 bis zu 1024×1024 und 1 MB groß sein. Animierte GIF wird nicht unterstützt.
+Bilder können mindestens 1024×1024 und 1 MB im PNG-, JPEG- oder GIF-Format sein. Animierte GIF wird nicht unterstützt.
 
-Es wird empfohlen, die Höhe und Breite der einzelnen Bilder mithilfe von XML anzugeben. Wenn Sie Markdown verwenden, ist die Bildgröße standardmäßig auf 256×256 festgelegt. Beispiel:
+Geben Sie immer die Höhe und Breite jedes Bilds mithilfe von XML an. In Markdown ist die Bildgröße standardmäßig auf 256×256 festgelegt. Zum Beispiel:
 
 * Verwenden – `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * Nicht verwenden – `![Duck on a rock](http://aka.ms/Fo983c)`
 
+## <a name="adaptive-cards"></a>Adaptive Karten
+
+Verwenden Sie den folgenden Code, um eine einfache adaptive Karte zu senden:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+    {
+        "items": [
+        {
+            "size": "large",
+            "text": " Simple Adaptivecard Example with a Textbox",
+            "type": "TextBlock",
+            "weight": "bolder",
+            "wrap": true
+        },
+        ],
+        "spacing": "extraLarge",
+        "type": "Container",
+        "verticalContentAlignment": "center"
+    }
+    ]
+}
+```
+
+Weitere Informationen zu Karten und Karten in Bots finden Sie in [der Kartendokumentation.](~/task-modules-and-cards/what-are-cards.md)
+Wenn eine Antwort Textnachrichten und Anlagen enthält, werden beide Antworten separat gesendet. Die Anlage wird nach der Textnachricht gesendet.
+
 ## <a name="code-sample"></a>Codebeispiel
-|**Beispielname** | **Beschreibung** | **. NETCore** | **Javascript** | **Python**|
+|**Beispielname** | **Beschreibung** | **. NETCore** | **JavaScript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
 | Teams Conversation Bot | Behandlung von Nachrichten- und Unterhaltungsereignis. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 

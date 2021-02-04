@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demo zu Microsoft Teams-Vorlagenbeispielen
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 573291a9747b3df3cbdd11c52fe8f1d71525f0f6
-ms.sourcegitcommit: ce74f821660b1258c72b3c3f71c1cf177e7e92ef
+ms.openlocfilehash: 401d1e5878a026b2ff066114e4d41a0a54c0cf09
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "50072889"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093964"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -24,6 +24,12 @@ Bei den App-Vorlagen handelt es sich um produktionsbereite Apps für Microsoft T
 * **Produktionsbereiter Code:** Die App-Vorlagen entsprechen den empfohlenen bewährten Methoden für Sicherheit und Infrastruktur, und alle von der Community übermittelten Änderungen werden überprüft, um eine kontinuierliche Konformität sicherzustellen.
 * **Anpassbar und erweiterbar:** Obwohl alle App-Vorlagen bereit für die Bereitstellung sind, stellen wir die gesamte Codebasis und Bereitstellungsskripts bereit, sodass Sie sie ganz einfach an Ihre individuellen Anforderungen anpassen oder erweitern können.
 * **Ausführliche Dokumentation & Support:** Alle App-Vorlagen werden von einer End-to-End-Dokumentation zu Lösungsarchitektur, Bereitstellung und Konfigurationsschritten begleitet. Die Repositorys werden ebenfalls überwacht. Melden Sie daher alle Probleme, die auftreten, indem Sie ein Problem auf GitHub lösen.
+
+## <a name="adoption-bot-9734"></a>Einführungsbot-&#9734;
+
+Der Einführungsbot ist ein Chat-Bot, der mit Power Virtual Agent für Teams (PVA) erstellt wurde. Sie kann als die PVA-Version von FAQPlus betrachtet werden. Der Einführungsbot beantwortet mehr als 100 allgemeine Fragen zu Microsoft 365 und Teams. Sie können die enthaltenen Themen bearbeiten, eigene Themen hinzufügen und vorhandene häufig gestellte Fragen (FAQs) eingesten. Wenn Benutzer zusätzliche Hilfe benötigen, kann der Einführungsbot sie mit Experten verbinden oder sogar auf offene Servicetickets mit Premium-Flow-Connectors erweitert werden.
+
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
 ## <a name="appointment-manager-9734"></a>Termin-Manager-&#9734;
 
