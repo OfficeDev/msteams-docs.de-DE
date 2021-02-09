@@ -5,12 +5,12 @@ description: Erstellen Sie mithilfe des Microsoft Teams Toolkits schnell einen M
 ms.author: lajanuar
 ms.date: 11/04/2020
 ms.topic: tutorial
-ms.openlocfilehash: fbabd5130f0b7eb648a980f5f143792cc4c17933
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 3e07c148e1b03431dc419a4e3679abac0229ff72
+ms.sourcegitcommit: e08f309f62db2cf0f505f2aadfe728e5b46c17a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911947"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "50140468"
 ---
 # <a name="build-a-bot-for-microsoft-teams"></a>Erstellen eines Bots für Microsoft Teams
 
@@ -18,7 +18,7 @@ In diesem Lernprogramm  erstellen Sie eine einfache Bot-App. Ein Bot fungiert al
 
 ## <a name="your-assignment"></a>Ihre Zuordnung
 
-Ihr Arbeitsplatz hat eine Teams-App erstellt, die [Registerkarten](../build-your-first-app/build-personal-tab.md) zum Anzeigen wichtiger Kontaktinformationen verwendet. Kollegen haben beispielsweise schnellen Zugriff auf die Telefonnummer des Helpdesks. Aber was passiert, wenn sich Personen über einen Chatbot an den Helpdesk wenden können, anstatt zu anrufen? Ihr Chef bittet Sie, zu sehen, wie schnell Sie einen einfachen Unterhaltungsbot in Teams einrichten können.
+Ihr Arbeitsplatz hat eine Teams-App erstellt, die [Registerkarten](../build-your-first-app/build-personal-tab.md) verwendet, um wichtige Kontaktinformationen verfügbar zu machen. Kollegen haben beispielsweise schnellen Zugriff auf die Telefonnummer des Helpdesks. Aber was passiert, wenn sich Personen über einen Chatbot an den Helpdesk wenden können, anstatt zu anrufen? Ihr Chef bittet Sie, zu sehen, wie schnell Sie einen einfachen Unterhaltungsbot in Teams einrichten können.
 
 ## <a name="what-youll-learn"></a>Was Sie lernen werden
 
@@ -30,7 +30,7 @@ Ihr Arbeitsplatz hat eine Teams-App erstellt, die [Registerkarten](../build-your
 > * Konfigurieren eines Bots für Teams
 > * Querladen und Testen eines Bots in Teams
 
-## <a name="before-you-begin"></a>Vorabinformationen
+## <a name="before-you-begin"></a>Bevor Sie beginnen
 
 Falls noch nicht, stellen Sie sicher, dass Sie die Voraussetzungen für die Entwicklung von Teams verstehen und [installieren.](build-first-app-overview.md#get-prerequisites)
 
@@ -42,7 +42,7 @@ Das Microsoft Teams Toolkit hilft Ihnen beim Einrichten der folgenden Komponente
 * **Bot,** der automatisch beim Microsoft Azure Bot Service registriert wird
 
 > [!TIP]
-> Wenn Sie noch kein Teams-App-Projekt erstellt haben, ist [](../build-your-first-app/build-and-run.md) es möglicherweise hilfreich, diese Anweisungen zu befolgen, in der Projekte ausführlicher erläutert werden.
+> Wenn Sie noch kein Teams-App-Projekt erstellt haben, ist [](../build-your-first-app/build-and-run.md) es möglicherweise hilfreich, diesen Anweisungen zu folgen, die Projekte ausführlicher erläutern.
 
 1. Wählen Visual Studio Code auf der linken Aktivitätsleiste **Microsoft Teams** aus, und wählen :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: Sie **"Neue Teams-App erstellen" aus.**
 1. Wenn Sie dazu aufgefordert werden, melden Sie sich mit Ihrem Microsoft 365-Entwicklungskonto an.
@@ -77,11 +77,11 @@ Mit dieser URL kann Teams (für das HTTPS-Verbindungen erforderlich sind) an den
 
 Um einen Bot in Teams zu verwenden, müssen Sie ihn beim Azure Bot Service registrieren. Dies erfolgt automatisch, wenn Sie Ihre App mit dem Teams Toolkit einrichten.
 
-Sie müssen dennoch eine Endpunktadresse angeben, um Benutzernachrichten (d. h. Anforderungen) zu empfangen und zu verarbeiten, die an den Bot gesendet werden. In der Regel sieht die URL wie `https://HOST_URL/api/messages` . Sie können dies im Toolkit schnell konfigurieren.
+Sie müssen dennoch eine Endpunktadresse angeben, um Benutzernachrichten (d. h. Anforderungen) zu empfangen und zu verarbeiten, die an den Bot gesendet werden. In der Regel sieht die URL wie `https://HOST_URL/api/messages` aus. Sie können dies im Toolkit schnell konfigurieren.
 
 1. In Visual Studio Code, select **Microsoft Teams** on the left Activity Bar and choose Open Microsoft Teams :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: **Toolkit**.
 1. Wechseln Sie **zu Bots > vorhandenen Botregistrierungen,** und wählen Sie den Bot aus, den Sie während des Setups erstellt haben.
-1. Geben Sie **im Adressfeld des** Bot-Endpunkts die ngrok-URL ein (z. B. ), in der Sie den Bot hosten, `https://468b9ab725e9.ngrok.io` und fügen Sie ihn `/api/messages` an.<br/>
+1. Geben Sie **im Feld für die** Adresse des Botendpunkts die ngrok-URL ein (z. B. ), in der Sie den Bot hosten, und fügen Sie ihn `https://468b9ab725e9.ngrok.io` `/api/messages` an.<br/>
     :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="Illustration showing where you can configure the bot endpoint URL in the Teams Toolkit.":::
 
 Ihr Bot kann auf Nachrichten in Teams reagieren.
@@ -115,7 +115,7 @@ Jetzt zum spaßig-Teil: Lassen Sie uns "Hello" zu Ihrem Bot sagen.
 
 Ihr Bot antwortet mit einer Nachricht wie der folgenden.
 
-:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="Ein Screenshot, der zeigt, wie ein Benutzer &quot;Hello&quot; zu einem Teams-Bot sagt und eine Antwort erhalten.":::
+:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="Ein Screenshot, der zeigt, dass ein Benutzer &quot;Hello&quot; zu einem Teams-Bot sagt und eine Antwort erhalten.":::
 
 ## <a name="well-done"></a>Gut gemacht
 
@@ -133,9 +133,9 @@ Es ist wichtig zu wissen, dass dies nicht mit einem Kanal in Teams identisch ist
 
 ## <a name="learn-more"></a>Weitere Informationen
 
-* [Erfahren Sie, was Teams Bots sonst noch mit einem unserer Beispiele tun können.](https://github.com/microsoft/BotBuilder-Samples#teams-samples)
+* [Sehen Sie sich an, was Teams Bots sonst noch mit einem unserer Beispiele tun können.](https://github.com/microsoft/BotBuilder-Samples#teams-samples)
 * [Grundlegende Informationen zu Bot-Unterhaltungen](../bots/how-to/conversations/conversation-basics.md)
 * Folgen Sie [unseren Entwurfsrichtlinien,](../bots/design/bots.md) und erstellen Sie mit [produktionsbereiten](../concepts/design/design-teams-app-ui-templates.md) Benutzeroberflächenvorlagen, um eine nahtlose Benutzeroberfläche zu erstellen.
 * [Botauthentifizierung in Teams](../bots/how-to/authentication/auth-flow-bot.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
-* [Erstellen eines Bots ohne das Toolkit](../bots/how-to/create-a-bot-for-teams.md)
+* [Erstellen eines Bots ohne das Toolkit](../resources/bot-v3/bots-create.md)
