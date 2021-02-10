@@ -5,12 +5,12 @@ description: Erstellen Sie mithilfe des Microsoft Teams Toolkits schnell eine pe
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 17263303207ffb5bee333f1ec0e655096b1062ee
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 083d1425fe43a9b150732aa35bef34e2349c6ea6
+ms.sourcegitcommit: b99ed616db734371e4af4594b7e895c5b05737c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911912"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "50162901"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Erstellen einer persönlichen Registerkarte für Microsoft Teams
 
@@ -18,7 +18,7 @@ Registerkarten sind eine einfache Möglichkeit, Inhalte in Ihrer App anzuzeigen,
 
 Es gibt zwei Arten von Registerkarten in Teams. In diesem Lernprogramm erstellen Sie eine einfache persönliche *Registerkarte,* eine Vollbildinhaltsseite für einzelne Benutzer. (Persönliche Registerkarten sind der traditionellen Websiteerfahrung in Teams am nächsten.)
 
-## <a name="before-you-begin"></a>Vorabinformationen
+## <a name="before-you-begin"></a>Bevor Sie beginnen
 
 Für die ersten Schritte benötigen Sie eine einfache, ausgeführte persönliche Registerkarte. Wenn Sie nicht über eine verfügen, lesen Sie die Informationen zum [Erstellen und Ausführen Ihrer ersten Teams-App.](../build-your-first-app/build-and-run.md)
 
@@ -46,12 +46,12 @@ Wechseln Sie im Toolkit zu **App Studio,** um Ihre App-Konfigurationen zu sehen 
 
 Das Gerüst der App enthält die Komponenten zum Rendern Ihrer persönlichen Registerkarte in Teams. Es gibt eine Menge, mit der Sie arbeiten können, aber derzeit müssen Sie sich nur auf Folgendes konzentrieren:
 
-* `Tab.js` im Verzeichnis `src/components` Ihres Projekts. Dies ist für das Rendern der Registerkarteninhaltsseite.
+* `Tab.js` im Verzeichnis `src/components` Ihres Projekts. Dies ist für das Rendern ihrer Registerkarteninhaltsseite.
 * Microsoft Teams JavaScript-Client-SDK, das vorab in den Front-End-Komponenten Ihres Projekts geladen wird.
 
 ## <a name="2-customize-your-tab-content-page"></a>2. Anpassen der Registerkarteninhaltsseite
 
-Kompilieren Sie eine Liste wichtiger Kontakte in Ihrer Organisation. Kopieren und aktualisieren Sie den folgenden Codeausschnitt mit Informationen, die für Sie relevant sind, oder verwenden Sie den Code der Zeit nach belieben.
+Kompilieren Sie eine Liste wichtiger Kontakte in Ihrer Organisation. Kopieren und aktualisieren Sie den folgenden Codeausschnitt mit Informationen, die für Sie relevant sind, oder verwenden Sie den Code der Zeit nach wie vor.
 
 ```JSX
 <div>
@@ -104,7 +104,7 @@ Das [JavaScript-Client-SDK](https://docs.microsoft.com/javascript/api/@microsoft
 
 ### <a name="get-context-about-the-teams-client"></a>Kontext zum Client "Teams" erhalten
 
-In Ihrer Datei gibt es einen Aufruf, der einige Informationen zum konfigurierten `Tab.js` `microsoftTeams.getContext()` [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) Clientdesign enthält. Verwenden Sie diesen Code dank des App-Gerüsts, um auf die `context` Benutzeroberfläche und deren Eigenschaften zu zugreifen.
+In Ihrer Datei gibt es einen Aufruf, der einige Informationen zum konfigurierten `Tab.js` `microsoftTeams.getContext()` [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) Clientdesign enthält. Verwenden Sie dank des Gerüsts der App diesen Code, um auf die `context` Benutzeroberfläche und deren Eigenschaften zu zugreifen.
 
 ```JavaScript
 componentDidMount(){
@@ -137,7 +137,7 @@ Sie benötigen einen Handler, damit sich der Zustand Ihrer App mit dem Design ä
 Ihr Designänderungshandler ist eingerichtet, Aber Sie benötigen Code, der auf diese Änderungen reagiert und die Farben Ihrer Registerkarte am aktuellen Design ausgerichtet.
 
 > [!NOTE]
-> Das folgende Beispiel ist nur eine Möglichkeit, Formatvorlagen auf Ihre Registerkarte anzuwenden. Verwenden Sie den Code so, wie er ist, erweitern Sie ihn, oder schreiben Sie Ihren eigenen Code.
+> Das folgende Beispiel ist nur eine Möglichkeit, Formatvorlagen auf Ihre Registerkarte anzuwenden. Verwenden Sie den Code so, wie er ist, erweitern Sie ihn, oder schreiben Sie Einen eigenen.
 
 Speichern Sie in der Funktion den Zustand, der `render()` vom Designänderungshandler bereitgestellt wird, in `isTheme` .
 
@@ -148,7 +148,7 @@ Speichern Sie in der Funktion den Zustand, der `render()` vom Designänderungsha
 Nachdem Sie den vom Designänderungshandler bereitgestellten Status gespeichert haben, stellen Sie eine bedingte Logik bereit, um die Formatvorlagen Ihrer Registerkarte basierend auf dem aktuellen Design zu rendern. Das folgende Beispiel zeigt eine grundlegende Möglichkeit dazu:
 1. Überprüfen Sie das aktuelle Design in `isTheme` .
 2. Erstellen Sie `newTheme` ein Objekt mit CSS-Eigenschaften, die für das aktuelle Design relevant sind.
-3. Wenden Sie das CSS auf das Stamm-HTML-Element ( ) des Registerkarteninhalts an. `<div>`
+3. Wenden Sie das CSS auf das Stamm-HTML-Element ( ) des Registerkarteninhalts an. `<div style={newTheme}>`
 
 ```JavaScript
 let newTheme
