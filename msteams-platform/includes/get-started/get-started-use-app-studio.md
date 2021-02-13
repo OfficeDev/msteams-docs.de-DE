@@ -1,20 +1,20 @@
-### <a name="use-app-studio-to-update-the-app-package"></a>Aktualisieren des App-Pakets mithilfe von App Studio
+### <a name="use-app-studio-to-update-the-app-package"></a>Verwenden von App Studio zum Aktualisieren des App-Pakets
 
-App Studio ist eine Teams-APP, die Sie im Microsoft Teams Store installieren können. Es vereinfacht das Erstellen und Registrieren einer App.
+App Studio ist eine Teams-App, die Sie aus dem Teams Store installieren können. Dies vereinfacht das Erstellen und Registrieren einer App.
 
-Wenn Sie App Studio in Microsoft Teams installieren möchten, klicken Sie auf das App Store-Symbol unten in der linken Leiste, und suchen Sie nach App Studio.
+Um App Studio in Teams zu installieren, wählen Sie das Symbol **"Apps"** am unteren Rand der linken Leiste aus, und suchen Sie nach **App Studio.**
 
 <img  width="450px" alt="Finding App Studio in the Store View" src="~/assets/images/get-started/searchforAppStudio.png"/>
 
-Wenn Sie die Kachel für App Studio gefunden haben, klicken Sie darauf, und wählen Sie im Dialogfeld *Installieren* aus, das eingeblendet wird.
+Wählen Sie die **Kachel "App Studio"** und dann **"Installieren" aus.** App Studio ist installiert.
 
 <img  width="450px" alt="Installing App Studio" src="~/assets/images/get-started/InstallingAppStudio.png"/>
 
-Sobald App Studio installiert ist, klicken Sie auf die Registerkarte Manifest-Editor, um mit der Erstellung des App-Pakets für Ihre Teams-APP zu beginnen.
+Wählen Sie die **Registerkarte "Manifest-Editor"** aus, um das App-Paket für Ihre Teams-App zu erstellen.
 
 <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-Das Beispiel enthält ein eigenes vordefiniertes Manifest und wurde entwickelt, um ein App-Paket zu erstellen, wenn das Projekt erstellt wird. In .net erfolgt dies in Visual Studio und auf Node js erfolgt dies durch Eingabe `gulp` an der Befehlszeile im Stammverzeichnis des Projekts.
+Das Beispiel enthält ein eigenes vordefiniertes Manifest und ist so konzipiert, dass beim Erstellen des Projekts ein App-Paket erstellt wird. In .NET erfolgt dies in Visual Studio, und auf Knoten JS erfolgt dies durch Eingabe an der Befehlszeile im Stammverzeichnis `gulp` des Projekts.
 
 ```bash
 $ gulp
@@ -28,127 +28,129 @@ Build completed. Output in manifest folder
 [13:39:27] Finished 'default' after 62 μs
 ```
 
-Der Name des generierten App-Pakets lautet *helloworldapp.zip*. Sie können nach dieser Datei suchen, wenn der Speicherort im verwendeten Tool nicht eindeutig ist.
+Der Name des generierten App-Pakets **isthelloworldapp.zip**. Sie können nach dieser Datei suchen, wenn der Speicherort im verwendeten Tool nicht eindeutig ist.
 
-Im nächsten Teil dieser exemplarischen Vorgehensweise ändern Sie dieses app-Paket, indem Sie die Kachel *Importieren einer vorhandenen APP* im Manifest-Editor auswählen.
+Um nun dieses App-Paket zu ändern, wählen Sie die **Kachel "Vorhandene** App importieren" im **Manifest-Editor aus.**
 
 <img  width="450px" alt="Importing an existing app" src="~/assets/images/get-started/Importinganapp.png"/>
 
-Wenn das App-Paket importiert wurde, sollte App Studio wie folgt aussehen:
-
-<img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
-
-Klicken Sie auf die Kachel für Ihre neu importierte APP, *Hello World*.
+Klicken Sie **auf die Kachel "Hello World"** für Ihre neu importierte App.
 
 <img  width="450px" alt="Newly imported app view" src="~/assets/images/get-started/HelloWorldappdetails.png"/>
 
-Es gibt eine Liste der Schritte auf der linken Seite des Manifest-Editors und rechts eine Liste von Eigenschaften, die für jeden dieser Schritte ausgefüllt werden müssen. Da Sie mit einer Beispiel-App begonnen haben, sind viele der Informationen bereits ausgefüllt. Die nächsten Schritte führen Sie durch die Änderung der Teile, die noch aktualisiert werden müssen.
+Die folgende Abbildung zeigt das importierte App-Paket in App Studio:
 
-#### <a name="app-details"></a>App-Details
+<img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
 
-Klicken Sie unter *Details*auf den Eintrag *App-Details* . Klicken Sie auf die Schaltfläche *generieren* , um eine neue APP-ID zu erstellen.
+Es gibt eine Liste der Schritte auf der linken Seite des Manifest-Editors und auf der rechten Seite eine Liste der Eigenschaften, die für jeden dieser Schritte ausgefüllt werden müssen. Seit Sie mit einer Beispiel-App begonnen haben, sind viele der Informationen bereits ausgefüllt. In den nächsten Schritten werden Sie durch das Ändern der Noch zu aktualisierenden Teile gehen.
 
-Die neue APP-ID sollte etwa wie folgt aussehen: `2322041b-72bf-459d-b107-f4f335bc35bd` .
+#### <a name="app-details"></a>Details zur App
 
-Sehen Sie sich die restlichen App-Details im rechten Bereich an, und machen Sie sich mit einigen Einträgen wie *Entwickler Informationen* und *Branding*vertraut. Diese Abschnitte sind wichtig, wenn Sie eine neue APP für die Verteilung schreiben.
+Klicken Sie unter *"Details" auf* den Eintrag *"App-Details".* Klicken *Sie* auf die Schaltfläche "Generieren", um eine neue App-ID zu erstellen.
+
+Ihre neue App-ID sollte in etwa so aussehen: `2322041b-72bf-459d-b107-f4f335bc35bd` .
+
+Sehen Sie sich die restlichen Details der App im rechten Bereich an,  und machen Sie sich mit einigen Einträgen wie Entwicklerinformationen und *Branding vertraut.* Diese Abschnitte sind wichtig, wenn Sie eine neue App für die Verteilung schreiben.
 
 #### <a name="capabilities-tabs"></a>Funktionen: Registerkarten
 
-Registerkarten gehören zu den einfachsten Elementen, die einer Teams-app hinzugefügt werden. Die Beispiel-App unterstützt bereits mehrere Registerkarten, und Sie können Sie wie folgt aktivieren.
+Registerkarten gehören zu den einfachsten Elementen, die einer Teams-App hinzugefügt werden können. Die Beispiel-App unterstützt bereits mehrere Registerkarten, und Sie können sie wie folgt aktivieren.
 
 ##### <a name="team-tab"></a>Registerkarte "Team"
 
-Ihre APP kann nur eine Team Registerkarte haben.
+Ihre App kann nur eine Teamregisterkarte haben.
 
 <img  width="450px" alt="Adding a Teams tab" src="~/assets/images/get-started/TeamTab.png"/>
 
-In diesem Beispiel wird auf der Registerkarte "Team" die Konfigurationsseite angezeigt. Klicken Sie am Ende des Eintrags auf das Symbol *...* , und wählen Sie im Dropdownmenü *Bearbeiten* aus. Ändern Sie die URL `https://yourteamsapp.ngrok.io/configure` dahin, wo `yourteamsapp.ngrok.io` Sie durch die URL ersetzt werden soll, die Sie beim Hosten Ihrer APP oben verwendet haben.
+In diesem Beispiel wird auf der Registerkarte "Team" die Konfigurationsseite angezeigt. Klicken Sie am *Ende* des Eintrags auf das Symbol ..., und wählen Sie *in* der Dropdownliste "Bearbeiten" aus. Ändern Sie die URL so, dass sie durch die URL ersetzt werden soll, die Sie oben beim `https://yourteamsapp.ngrok.io/configure` `yourteamsapp.ngrok.io` Hosten Ihrer App verwendet haben.
 
 ##### <a name="personal-tabs"></a>Persönliche Registerkarten
 
-Ihre APP kann bis zu 16 Registerkarten haben, einschließlich der Registerkarte Team.
+Ihre App kann bis zu 16 Registerkarten haben, einschließlich der Registerkarte "Team".
 
-Persönliche Registerkarten werden auf der Registerkarte Team unterschiedlich dargestellt. Die *Registerkarte "Hello"* sollte bereits in der Liste "persönliche Registerkarten" angezeigt werden. Im Moment verfügt er über einen Platzhalterwert `com.contoso.helloworld.hellotab` . Klicken Sie am Ende des Eintrags auf das Symbol *...* , und wählen Sie im Dropdownmenü *Bearbeiten* aus. Das folgende Dialogfeld wird angezeigt.
+Persönliche Registerkarten werden anders dargestellt als die Registerkarte "Team". Die Registerkarte *"Hello" sollte* bereits in der Liste der persönlichen Registerkarten aufgeführt sein. Zurzeit hat sie einen `com.contoso.helloworld.hellotab` Platzhalterwert. Klicken Sie am *Ende* des Eintrags auf das Symbol ..., und wählen Sie *in* der Dropdownliste "Bearbeiten" aus. Das folgende Dialogfeld wird angezeigt.
 
 <img  width="450px" alt="Adding a personal tab dialog" src="~/assets/images/get-started/PersonalTab.png"/>
 
-Es gibt zwei Felder, die Sie mit ihrer App-URL aktualisieren müssen.
+Es gibt zwei Felder, die Sie mit Ihrer App-URL aktualisieren müssen.
 
 - Ändern der Inhalts-URL in `https://yourteamsapp.ngrok.io/hello`
-- Website-URL ändern in `https://yourteamsapp.ngrok.io/hello`
+- Ändern der Website-URL in `https://yourteamsapp.ngrok.io/hello`
 
-Wo `yourteamsapp.ngrok.io` sollte durch die URL ersetzt werden, die Sie beim Hosten Ihrer APP oben verwendet haben.
+Wo `yourteamsapp.ngrok.io` sollte die URL ersetzt werden, die Sie oben beim Hosten Ihrer App verwendet haben.
 
 #### <a name="bots"></a>Bots
 
-Bots sind die gängigste Methode zum Hinzufügen von Funktionen zu Ihrer APP. Das Beispiel "Hello World" verfügt bereits über einen bot als Teil des Beispiels, wurde aber noch nicht bei Microsoft registriert.
+Bots sind die am häufigsten verwendeten Möglichkeit, Ihrer App Funktionen hinzuzufügen. Das Beispiel "Hello World" hat bereits einen Bot als Teil des Beispiels, wurde aber noch nicht bei Microsoft registriert.
 
 <img  width="450px" alt="Adding a bot" src="~/assets/images/get-started/Bots.png"/>
 
-Dem bot, der aus dem Beispiel importiert wurde, ist noch keine APP-ID zugeordnet. Sie müssen einen neuen bot erstellen, damit App Studio eine neue APP-ID erstellen und bei Microsoft registrieren kann. Beachten Sie, dass dies die APP-ID für den Bot ist, die sich von der APP-ID unterscheidet, die wir in einem früheren Schritt für die App erstellt haben. Jeder bot in einer APP benötigt eine eigene APP-ID.
+Dem Bot, der aus dem Beispiel importiert wurde, ist noch keine App-ID zugeordnet. Sie müssen einen neuen Bot erstellen, damit App Studio eine neue App-ID erstellen und bei Microsoft registrieren kann. Beachten Sie, dass dies die App-ID für den Bot ist, die sich von der für die App erstellten App-ID abh?nt. Jeder Bot in einer App benötigt eine eigene App-ID.
 
-Klicken Sie in der Liste bot neben dem *importierten bot* auf die Schaltfläche *Löschen* .
+Klicken Sie *auf die Schaltfläche* "Löschen" neben dem *importierten Bot* in der Botliste.
 
-Jetzt sind keine Bots mehr verfügbar, die angezeigt werden sollen. Klicken Sie auf *Setup*. Dadurch wird das Dialogfeld " *bot einrichten* " angezeigt.
+Jetzt gibt es keine Bots mehr, die sie anzeigen können. Klicken Sie *auf Setup*. Dadurch wird das Dialogfeld *"Bot einrichten"* angezeigt.
 
 <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
-Fügen Sie einen bot-Namen wie ein `Contoso bot` , und wählen Sie alle drei Schaltflächen unter *Bereich*.
+Fügen Sie einen Botnamen wie hinzu, und wählen Sie unter Bereich `Contoso bot` alle drei **Schaltflächen aus.**
 
-Wählen Sie *Create bot* aus, um das Dialogfeld zu schließen. App Studio wird einen Moment Zeit damit verbringen, ihren bot bei Microsoft zu registrieren, und sollte dann Ihren neuen bot in der bot-Liste anzeigen. Jetzt wäre ein guter Zeitpunkt, eine Textdatei im Editor zu öffnen und ihre neue bot-ID zu kopieren und in diese einzufügen. Sie benötigen die ID später.
+Choose *Create bot* to exit the dialog. App Studio registriert Ihren Bot bei Microsoft und zeigt den neuen Bot in der Botliste an. Jetzt wäre es ein guter Zeitpunkt, eine Textdatei im Editor zu öffnen und Ihre neue Bot-ID zu kopieren und in sie zu einfügen. Sie benötigen diese ID später.
 
-Klicken Sie auf *Neues Kennwort generieren*, und notieren Sie sich das Kennwort in derselben Textdatei, in der Sie Ihre bot-APP-ID notiert haben. Dies ist das einzige Mal, wenn Ihr Kennwort angezeigt wird, deshalb sollten Sie dies jetzt tun.
+Klicken *Sie auf "Neues Kennwort generieren",* und notieren Sie sich das Kennwort in derselben Textdatei, in der Sie Ihre Bot-App-ID notiert haben. Dies ist das einzige Mal, dass Ihr Kennwort angezeigt wird. Stellen Sie daher sicher, dass Sie dies jetzt tun.
 
-Aktualisieren Sie die *bot-Endpunktadresse* auf `https://yourteamsapp.ngrok.io/api/messages` , wobei `yourteamsapp.ngrok.io` die URL ersetzt werden soll, die Sie beim Hosten Ihrer APP oben verwendet haben.
+Aktualisieren Sie die *Adresse des Bot-Endpunkts* auf , wo sie durch die URL ersetzt werden sollte, die Sie oben beim `https://yourteamsapp.ngrok.io/api/messages` `yourteamsapp.ngrok.io` Hosten Ihrer App verwendet haben.
 
-Jetzt wäre ein guter Zeitpunkt, um Ihre Textdatei zu speichern, wenn Sie dies noch nicht getan haben. Sie werden diese Informationen später in dieser exemplarischen Vorgehensweise zu ihrer gehosteten app hinzufügen, um eine sichere Kommunikation mit Ihrem bot zu ermöglichen.
+Jetzt wäre es ein guter Zeitpunkt, Ihre Textdatei zu speichern, wenn Sie dies noch nicht getan haben. Sie fügen diese Informationen später in dieser exemplarischen Vorgehensweise zu Ihrer gehosteten App hinzu, was eine sichere Kommunikation mit Ihrem Bot ermöglicht.
 
 #### <a name="messaging-extensions"></a>Messaging-Erweiterungen
 
-Mithilfe von Messaging Erweiterungen können Benutzer nach Informationen von Ihrem Dienst Fragen und diese Informationen in Form von Karten direkt in die Kanal Unterhaltung Posten. Messaging Erweiterungen werden am unteren Rand des Felds verfassen angezeigt.
+Mit Messagingerweiterungen können Benutzer Informationen von Ihrem Dienst ein- und ausstellen und diese Informationen in Form von Karten direkt in der Kanal unterhaltung veröffentlichen. Messagingerweiterungen werden am unteren Rand des Felds zum Verfassen angezeigt.
 
-Klicken Sie unter *Funktionen* in der linken Spalte von App Studio auf *Messaging Erweiterungen* , um mit der Konfiguration der Messaging Erweiterung zu beginnen.
+Wählen **Sie messaging extensions** under **Capabilities** in the left-hand column of App Studio to configure the messaging extension.
 
 <img  width="450px" alt="Adding a messaging extension" src="~/assets/images/get-started/Messagingextensions.png"/>
 
-Die Beispiel-Messaging-Erweiterung wird im rechten Bereich unter *Messaging Extensions*aufgeführt. Klicken Sie erneut auf *Löschen* , um diesen Eintrag zu entfernen, und klicken Sie dann auf die Schaltfläche *Einrichten* , indem Sie die gleichen Schritte ausführen, die Sie für Bots befolgt haben. Dadurch wird das Dialogfeld *Messaging Erweiterung* angezeigt.
+Die Beispiel-Messaging-Erweiterung ist im rechten Bereich unter **"Messaging Extensions" aufgeführt.** Wählen **Sie erneut** "Löschen" aus,  um diesen Eintrag zu entfernen, und klicken Sie dann auf die Schaltfläche "Einrichten", indem Sie die gleichen Schritte wie für Bots ausführen. Dadurch wird das Dialogfeld *"Messagingerweiterung"* angezeigt.
 
-Wählen Sie die Registerkarte *vorhandenen bot verwenden* aus, und *Wählen Sie dann eines meiner vorhandenen Bots aus*. Wählen Sie im Dropdownmenü den bot aus, den Sie im obigen Abschnitt erstellt haben. Fügen Sie einen *bot-Namen* hinzu, und klicken Sie auf *Speichern* , um das Dialogfeld zu schließen.
+Wählen Sie *die Registerkarte "Vorhandenen Bot verwenden"* aus, und wählen Sie dann aus einem meiner *vorhandenen Bots aus.* Wählen Sie im Dropdownmenü den Bot aus, den Sie im abschnitt oben erstellt haben. Fügen Sie einen *Botnamen hinzu,* und klicken *Sie auf "Speichern",* um das Dialogfeld zu schließen.
 
-Klicken Sie im Abschnitt *Command* auf *Hinzufügen*. Wir fügen einen suchbasierten Befehl hinzu, wählen Sie also die Option *Benutzer können Ihren Dienst Abfragen* ... aus.
+Klicken Sie *im Befehlsabschnitt* auf *"Hinzufügen".* We're adding a search-based command, so choose the *Allow users to query your service...* option.
 
-Geben Sie im Dialogfeld *neuer Befehl* die folgenden Werte ein.
+Geben Sie **im Dialogfeld "Neu"** die folgenden Werte ein.
 
-Unter *neuer Befehl*:
+Under *New command*:
 
 - *Befehls-ID*  = getRandomText
-- *Title*       = Abrufen von zufälligen Texten zum Spaß
-- *Description* = ruft einige zufällige Text und Bilder
+- *Title*       = Get some random text for fun
+- *Beschreibung* = Ruft zufälligen Text und Bilder ab
 
-Unter *Parameter*:
+Under *Parameter*:
 
 - *Name*        = cardTitle
-- *Title*       = Kartentitel
-- *Description* = zu verwendender Kartentitel
+- *Titel*       = Kartentitel
+- *Beschreibung* = Zu verwendende Kartentitel
 
-Nachdem Sie die Informationen eingegeben haben, klicken Sie auf *Speichern* , um das Dialogfeld zu schließen.
+Nachdem Sie die Informationen eingegeben haben, klicken Sie auf *"Speichern",* um das Dialogfeld zu schließen.
 
-#### <a name="register-your-app-in-teams"></a>Registrieren Ihrer APP in Microsoft Teams
+#### <a name="register-your-app-in-teams"></a>Registrieren Ihrer App in Teams
 
-Sie haben nun die Eingabe der Details Ihrer APP abgeschlossen, jedoch bleiben zwei Schritte. Zunächst müssen Sie den Abschnitt Test and Distribute von App Studio verwenden, um Ihre APP in Microsoft Teams zu installieren, und zweitens müssen Sie die gehostete Anwendung mit der APP-ID und dem Kennwort für Ihren bot aktualisieren. Beachten Sie, dass im Beispiel die gleiche APP-ID und das gleiche Kennwort für die bot-und die Messaging-Erweiterung verwendet werden.
+Sie haben nun die Eingabe der Details Ihrer App abgeschlossen, aber die folgenden beiden Schritte bleiben bestehen:
+1. Verwenden Sie den Abschnitt "Testen und Verteilen" von App Studio, um Ihre App in Teams zu installieren.
+1. Aktualisieren Sie Ihre gehostete Anwendung mit der App-ID und dem Kennwort für Ihren Bot. Denken Sie daran, dass im Beispiel davon ausging, die gleiche App-ID und dasselbe Kennwort sowohl für den Bot als auch für die Messagingerweiterung zu verwenden.
 
-Klicken Sie in der linken Spalte von App Studio auf das Element *Testen und verteilen* unter *Fertig stellen* .
+Wählen Sie das Element  **"Testen" und "Verteilen"** unter "Fertig stellen" in der linken Spalte von App Studio aus.
 
 <img  width="450px" alt="Testing your app" src="~/assets/images/get-started/Testanddistribute.png"/>
 
-Um Ihre APP in Teams hochzuladen, klicken Sie unter *Test and Distribute*auf die Schaltfläche *Installieren* .
+Um Ihre App in Teams hochzuladen, klicken Sie unter "Testen" und "Verteilen" auf *die Schaltfläche "Installieren".* 
 
 <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
 
-Klicken Sie im Abschnitt *zu einem Team hinzufügen* auf das *Suchfeld* , und wählen Sie ein Team aus, dem Sie die Beispiel-app hinzufügen möchten. Normalerweise möchten Sie ein spezielles Team für Tests einrichten.
+Wählen Sie **im Abschnitt "Zu** einem Team hinzufügen" das Suchfeld **aus,** und wählen Sie ein Team aus, dem die Beispiel-App hinzugefügt werden soll. In der Regel können Sie ein spezielles Team für Tests einrichten.
 
-Klicken Sie unten im Dialogfeld auf die Schaltfläche *Installieren* .
+Klicken Sie **unten** im Dialogfeld auf die Schaltfläche "Installieren".
 
-Dadurch wird der APP Studio-Teil dieser exemplarischen Vorgehensweise abgeschlossen. Ihre APP sollte jetzt in Microsoft Teams ausgeführt werden, die bot-und die Messaging-Erweiterung funktionieren jedoch erst, wenn Sie die Umgebung für gehostete Anwendungen so aktualisieren, dass Sie wissen, was die APP-IDs und Kennwörter sind.
+Damit wird der App Studio-Teil dieser exemplarischen Vorgehensweise abgeschlossen. Nun sollte Ihre App in Teams ausgeführt werden, der Bot und die Messagingerweiterung funktionieren jedoch erst, wenn Sie die Umgebung für gehostete Anwendungen aktualisieren, um zu erfahren, was die App-IDs und Kennwörter sind.
 
 <img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>

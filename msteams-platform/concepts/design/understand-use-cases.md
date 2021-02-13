@@ -1,57 +1,57 @@
 ---
-title: Grundlegendes zu den Anwendungsfällen
+title: Grundlegendes zu Ihren Anwendungsfällen
 author: clearab
-description: Entscheiden, wie Ihre APP verteilt werden soll
+description: Grundlegendes zu Ihren Anwendungsfällen
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ef1007c21e79cd69155b64f02d2980bcf6a708b9
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 270771ecc47bbfc03a33d1603f680bc3424989ad
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674406"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231617"
 ---
-# <a name="understand-your-use-cases"></a>Grundlegendes zu den Anwendungsfällen
+# <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
 
-Die Microsoft Teams-Plattform bietet eine Vielzahl von [Erweiterbarkeitspunkten und Benutzeroberflächenelementen,](~/concepts/extensibility-points.md) die Ihre APP nutzen kann. Wenn Sie nicht bereits ein gutes Verständnis dafür haben, was auf der Microsoft Teams-Plattform möglich ist, sollten Sie diesen Artikel zuerst lesen.
+Die Microsoft Teams-Plattform bietet eine Vielzahl von [Erweiterbarkeitspunkten](~/concepts/extensibility-points.md) und Benutzeroberflächenelementen, die Ihre App nutzen kann. Wenn Sie noch nicht genau wissen, was auf der Plattform Teams möglich ist, sollten Sie diesen Artikel zuerst lesen.
 
-Jede Methode der Interaktion mit ihren Benutzern hat ihre eigenen Stärken und Schwächen. Beim Erstellen einer awesome Teams-App geht es darum, die richtige Kombination zu finden, um die Anforderungen Ihrer Benutzer zu erfüllen. Wenn Sie diese Anforderungen erfüllen möchten, müssen Sie diese zunächst verstehen.
+Jede Methode der Interaktion mit Ihren Benutzern hat ihre eigenen Stärken und Schwächen. Beim Erstellen einer großartigen Teams-App geht es darum, die richtige Kombination zu finden, um die Anforderungen Ihres Benutzers zu erfüllen. Wenn Sie diese Anforderungen erfüllen, müssen Sie diese zunächst verstehen.
 
 ## <a name="what-problem-are-you-trying-to-solve"></a>Welches Problem versuchen Sie zu lösen?
 
-Jede gute APP hat ein Kernproblem (oder müssen), das Sie lösen möchte – bevor Sie mit dem Erstellen beginnen, müssen Sie das Problem artikulieren. In seinem Herzen ist Microsoft Teams eine Plattform für die Zusammenarbeit, sodass apps, die sich mit der Lösung von Zusammenarbeits Problemen besprechen, eine große Größe haben. Es ist auch eine soziale Plattform, nativ plattformübergreifend, liegt im Herzen von Office 365 und bietet eine persönliche Leinwand, auf der Sie Apps erstellen können. Es gibt eine unglaubliche Vielzahl von Anforderungen, die mit einer Teams-App gelöst werden können, stellen Sie einfach sicher, dass Sie verstehen, welche Sie lösen möchten.
+Jede gute App hat ein Kernproblem (oder eine Notwendigkeit), das sie zu lösen versucht – bevor Sie mit dem Erstellen beginnen, müssen Sie das Problem enignen. Im Kern ist Teams eine Plattform für die Zusammenarbeit, sodass Apps, die Probleme mit der Zusammenarbeit lösen wollen, gut geeignet sind. Es handelt sich auch um eine soziale Plattform, ist nativ plattformübergreifende, befindet sich im Zentrum von Office 365 und bietet eine persönliche Canvas, auf der Sie Apps erstellen können. Es gibt eine unglaublich vielzahl von Anforderungen, die mit einer Teams-App gelöst werden können. Stellen Sie einfach sicher, dass Sie wissen, welche Sie lösen möchten.
 
-## <a name="who-are-you-solving-it-for"></a>Für wen lösen Sie die Lösung?
+## <a name="who-are-you-solving-it-for"></a>Für wen lösen Sie es?
 
-Dies kann manchmal offensichtlich sein: "das Überwachungssystem meines Teams muss Benachrichtigungen an einen beliebigen Ort senden, wir müssen in der Lage sein, diese wirklich schnell zu besprechen, und keiner von uns möchte unsere e-Mails überprüfen." Manchmal kann Ihre Zielgruppe im Laufe der Zeit wachsen-"unser Schwesterteam ist wirklich eifersüchtig auf unser Warnungssystem, und jetzt möchten Sie in der Aktion." Wenn Sie wissen, wer Ihre Benutzer sind, können Sie das richtige Verteilungsmodell ermitteln, aber noch wichtiger ist, dass Sie die Verwendung von Microsoft *Teams*leichter bestimmen können. Sind Sie in erster Linie Mitarbeiter von Front-Work auf mobilen Clients? Erwarten Sie, dass viele Gastbenutzer Zugriff auf Ihre APP benötigen? Verwenden Sie Teams und Kanäle oder hauptsächlich Gruppenchats? Wie technisch ausgereift sind Sie? Benötigen Sie eine gründliche on-Boarding-Erfahrung oder werden einige wenige Zeiger verwenden?
+Manchmal kann dies offensichtlich sein: "Das Überwachungssystem meines Teams muss Benachrichtigungen an einen anderen Ort senden, wir müssen in der Lage sein, sie wirklich schnell zu besprechen, und keiner von uns möchte unsere E-Mails überprüfen." Manchmal kann Ihre Zielgruppe im Laufe der Zeit anwachsen– "Unser Team ist wirklich neidisch auf unser Benachrichtigungssystem, und jetzt möchten sie die Aktion ergreifen." Wenn Sie wissen, wer Ihre Benutzer sind, können Sie das richtige Verteilungsmodell identifizieren, aber noch wichtiger ist, wie *sie Teams verwenden.* Sind sie in erster Linie Front-Line-Mitarbeiter auf mobilen Clients? Erwarten Sie, dass viele Gastbenutzer Zugriff auf Ihre App benötigen? Verwenden sie Teams und Kanäle oder in erster Linie Gruppenchats? Wie technisch ausgefeilt sind sie? Benötigen Sie eine sorgfältige Einstiegserfahrung, oder werden einige Zeiger dies tun?
 
-Manchmal lautet die Antwort: "Wir möchten dieses Problem für alle Benutzer des Teams überall lösen." Wenn dies der Fall ist, sollten Sie einige Zeit damit verbringen, zu verstehen, was für die [Veröffentlichung in AppSource benötigt](~/concepts/deploy-and-publish/appsource/prepare/overview.md)wird.
+Manchmal lautet die Antwort "Wir möchten dieses Problem für alle Benutzer des Teams überall lösen". Wenn dies für Sie der Fall ist, sollten Sie einige Zeit damit verbringen, zu verstehen, was für die Veröffentlichung [in AppSource benötigt wird.](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 
 ## <a name="do-you-need-authentication"></a>Benötigen Sie eine Authentifizierung?
 
-Sie sollten frühzeitig erkennen, ob Sie die Dienste, die Sie verfügbar machen, und auf welcher Ebene schützen müssen. Denken Sie daran, dass die Webdienste, die Sie in Ihrer Teams-app verfügbar machen, öffentlich über das Internet zur Verfügung stehen, wenn Sie Sie also sichern müssen, denken Sie darüber nach, wie es jetzt weiter geht.
+Sie sollten frühzeitig erkennen, ob Sie die dienste, die Sie verfügbar machen, und auf welcher Ebene schützen müssen. Denken Sie daran, dass die Webdienste, die Sie in Ihrer Teams-App verfügbar machen werden, über das Internet öffentlich verfügbar sind. Wenn Sie also sichern müssen, denken Sie darüber nach, wie sie jetzt sind.
 
-## <a name="should-the-entire-app-be-in-teams"></a>Sollte die gesamte app in Microsoft Teams sein?
+## <a name="should-the-entire-app-be-in-teams"></a>Sollte die gesamte App in Teams installiert sein?
 
-Unabhängig davon, ob Sie etwas ganz neues erstellen oder eine vorhandene Lösung in Microsoft Teams integrieren, ist es wichtig zu entscheiden, ob sich die gesamte APP innerhalb des Teams-Clients befindet oder ob es sinnvoll ist, nur einen Teil der Erfahrung einzubringen. Mit einer Kombination aus Registerkarten, Messaging Erweiterungen, Aufgaben Modulen, interaktiven Karten und Unterhaltungs Bots können Sie komplexe apps vollständig innerhalb von Teams erstellen. Das macht jedoch nicht immer Sinn. Denken Sie daran, wer Ihre Benutzer sind und welches Problem Sie lösen möchten. Verfügen Sie bereits über ein System zur Lösung der meisten Probleme, und Sie müssen lediglich eine Untergruppe der Funktionen in Microsoft Teams erweitern? Wenn Sie in der Regel nur einen Teil ihrer Lösung einbringen möchten, sollten Sie sich auf die Freigabe, Zusammenarbeit und das initiieren und Überwachen von Workflows konzentrieren.
+Unabhängig davon, ob Sie etwas ganz Neues erstellen oder eine vorhandene Lösung in Teams bringen, ist es wichtig zu entscheiden, ob sich die gesamte App im Client von Teams befindet oder ob es sinnvoll ist, nur einen Teil der Erfahrung mit sich zu bringen. Mit einer Kombination aus Registerkarten, Messagingerweiterungen, Aufgabenmodulen, interaktiven Karten und Unterhaltungsbots können Sie komplexe Apps vollständig in Teams erstellen. Das ist jedoch nicht immer sinnvoll. Denken Sie daran, wer Ihre Benutzer sind, und das Problem, das Sie lösen möchten. Verfügen sie bereits über ein System zur Lösung des großteils des Problems, und Sie müssen nur einen Untersatz der Funktionalität in Teams erweitern? Wenn Sie nur einen Teil Ihrer Lösung integrieren möchten, sollten Sie sich in der Regel auf die Freigabe, Zusammenarbeit sowie das Initiieren und Überwachen von Workflows konzentrieren.
 
-## <a name="what-will-the-onboarding-experience-be-like"></a>Wie sieht die Onboarding-Umgebung aus?
+## <a name="what-will-the-onboarding-experience-be-like"></a>Wie sieht die Onboardingerfahrung aus?
 
-Ihre Onboarding-Erfahrung kann der Unterschied zwischen Erfolg oder Misserfolg für Ihre APP sein. Für jede Funktion Ihrer APP und für jeden Kontext, in dem die Funktion installiert werden kann, sollten Sie einen Plan für die Vorgehensweise bereitstellen. Wie Sie Ihren Unterhaltungs-bot einführen, wenn er in einem Kanal mit tausend Personen installiert wird, ist wahrscheinlich anders als bei der Installation in einem 1:1-Chat. Was geschieht, wenn ein Benutzer die Registerkarte zunächst in einem Kanal konfiguriert? Wenn Sie Karten mit einer Messaging Erweiterung teilen, ist es sinnvoll, eine kleine Verknüpfung zu einer Seite "Weitere Informationen" hinzuzufügen, um Benutzern zu helfen, was Ihre APP sonst noch kann?
+Ihre Onboardingerfahrung kann der Unterschied zwischen Erfolg oder Misserfolg für Ihre App sein. Für jede Funktion Ihrer App und für jeden Kontext, in dem diese Funktion installiert werden kann, sollten Sie einen Plan für die Einführung haben. Wie Sie Ihren Unterhaltungsbot einführen, wenn er in einem Kanal mit tausend Personen installiert wird, ist wahrscheinlich anders als bei der Installation in einem 1:1-Chat. Was geschieht, wenn ein Benutzer ihre Registerkarte zum ersten Mal in einem Kanal konfiguriert? Wenn Sie Karten mit einer Messagingerweiterung teilen, ist es sinnvoll, einen kleinen Link zu einer Seite "Weitere Informationen" hinzuzufügen, um Benutzern die weiteren Funktionen Ihrer App zu ermöglichen?
 
-Wenn Sie wissen, wer Ihre Benutzer sind, können Sie die richtige Erfahrung machen. Erwarten Sie, dass die meisten Benutzer bereits einen Kontext für Ihre APP haben oder ihre Dienste bereits in einem anderen Kontext verwendet haben? Oder kommen Sie ohne vorheriges Wissen zu Ihrer APP? Machen Sie Ihre Onboarding-Erfahrung mit ihren Hauptbenutzern im Hinterkopf.
+Wenn Sie wissen, wer Ihre Benutzer sind, können Sie die richtige Erfahrung machen. Erwarten Sie, dass die meisten Personen bereits einen Kontext für Ihre App haben oder Ihre Dienste bereits in einem anderen Kontext genutzt haben? Oder kommen sie ohne Vorkenntnisse zu Ihrer App? Stellen Sie Ihre Onboardingerfahrung mit Den wichtigsten Benutzern zusammen.
 
-Denken Sie auch daran, dass Benutzer Ihre APP auf vielfältige Weise entdecken können-Sie sind es möglicherweise diejenigen, die Sie installieren, oder Sie werden möglicherweise zu ihrer app hinzugefügt, wenn ein anderes Teammitglied es verwendet, um Inhalte freizugeben. Wenn Sie Ihre APP verbreiten möchten, sollten Sie nach Möglichkeiten suchen, sich an alle Personen zu wenden.
+Denken Sie auch daran, dass Benutzer Ihre App auf unterschiedliche Weise entdecken können – möglicherweise installieren sie sie, oder sie werden in Ihre App eingeführt, wenn sie von einem anderen Teammitglied zum Freigeben von Inhalten verwendet werden. Wenn Sie möchten, dass Ihre App verbreitet wird, sollten Sie nach Möglichkeiten suchen, sich für jeden zu öffnen.
 
-Denken Sie vor allem daran, dass niemand Spam mag. Das Strahlen mit persönlichen und Kanal Nachrichten ist ein guter Weg, um schnell auf die schnelle Installation zu kommen!
+Denken Sie vor allem daran, dass niemand Spam mag. Das Löschen von persönlichen Nachrichten und Kanalnachrichten ist eine gute Möglichkeit, um die Installation schnell zu entsenden!
 
-## <a name="next-steps"></a>Weitere Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
-* [Zuordnen von Anwendungsfällen zu Funktionen](~/concepts/design/map-use-cases.md)
-* [Auswählen, wie Ihre APP verteilt werden soll](~/concepts/deploy-and-publish/apps-publish.md)
+* [Ordnen Sie Ihre Verwendungsfälle der Funktionalität zu.](~/concepts/design/map-use-cases.md)
+* [Auswählen, wie Ihre App verbreitet werden soll](../deploy-and-publish/overview.md)
 
 ## <a name="learn-more"></a>Weitere Informationen
 
 * [Entwerfen effektiver Registerkarten](~/tabs/design/tabs.md)
-* [Erstellen erstaunlicher Bots](~/bots/design/bots.md)
+* [Erstellen beeindruckender Bots](~/bots/design/bots.md)
 

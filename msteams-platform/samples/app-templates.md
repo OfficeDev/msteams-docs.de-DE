@@ -5,25 +5,28 @@ ms.topic: reference
 keywords: Demo zu Microsoft Teams-Vorlagenbeispielen
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 43181f6de30cfd811701edf22e4bd7aefd467027
-ms.sourcegitcommit: e08f309f62db2cf0f505f2aadfe728e5b46c17a5
+ms.openlocfilehash: 21721848ba7893380ac217b5f47ce6a6e669e869
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "50140479"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231638"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
-Bei den App-Vorlagen handelt es sich um produktionsbereite Apps für Microsoft Teams, die von der Community gesteuert und open Source sind und auf GitHub verfügbar sind. Jede enthält ausführliche Anweisungen zum Bereitstellen und Installieren dieser App für Ihre Organisation, die eine einsatzbereite App zur Verfügung stellt, die Sie sofort installieren und verwenden können. Der vollständige Quellcode steht ebenfalls zur Verfügung, sodass Sie ihn im Detail untersuchen oder den Code ver forken und an Ihre spezifischen Anforderungen anpassen können.
+App-Vorlagen sind Beispiele für vollständige Apps für Microsoft Teams, die Open Source sind und auf GitHub verfügbar sind. Jede App-Vorlage enthält ausführliche Anweisungen zum Bereitstellen und Installieren dieser App für Ihre Organisation. Es bietet auch eine Beispiel-App, die Sie installieren und sofort verwenden können. Der vollständige Quellcode ist ebenfalls verfügbar, mit dem Sie ihn im Detail untersuchen oder den Code ver forken und an Ihre spezifischen Anforderungen anpassen können.
+Alle App-Vorlagen werden unter den [Mit-Lizenzbedingungen](https://github.com/OfficeDev/microsoft-teams-apps-eprescription/blob/master/LICENSE) bereitgestellt.
+>[!NOTE] 
+>Microsoft muss Apps, die aus Denkvorlagen für Ihre Benutzer und Organisationen erstellt wurden, nicht lizenz- und unterstützen.
 
 **&#9734; Gibt neu veröffentlichte App-Vorlagen an.**
 
 ### <a name="key-benefits"></a>Wichtige Vorteile
 
-* **Plug -and-Play-Erfahrung:** Alle App-Vorlagen enthalten Bereitstellungsskripts, mit denen Sie alle erforderlichen Dienste in Microsoft Azure hosten können. Für die Bereitstellung der Apps ist kein Code erforderlich.
-* **Produktionsbereiter Code:** Die App-Vorlagen entsprechen den empfohlenen bewährten Methoden für Sicherheit und Infrastruktur, und alle von der Community übermittelten Änderungen werden überprüft, um eine kontinuierliche Konformität sicherzustellen.
-* **Anpassbar und erweiterbar:** Obwohl alle App-Vorlagen bereit für die Bereitstellung sind, stellen wir die gesamte Codebasis und Bereitstellungsskripts bereit, sodass Sie sie ganz einfach an Ihre individuellen Anforderungen anpassen oder erweitern können.
-* **Ausführliche Dokumentation & Support:** Alle App-Vorlagen werden von einer End-to-End-Dokumentation zu Lösungsarchitektur, Bereitstellung und Konfigurationsschritten begleitet. Die Repositorys werden ebenfalls überwacht. Melden Sie daher alle Probleme, die auftreten, indem Sie ein Problem auf GitHub lösen.
+* **Direktes Bereitstellen in der Cloud:** Alle App-Vorlagen enthalten Bereitstellungsskripts, mit dem Sie alle erforderlichen Dienste in Microsoft Azure oder der Power Platform hosten können. 
+* **Empfohlener Beispielcode:** Die App-Vorlagen entsprechen den empfohlenen bewährten Methoden für Sicherheit und Infrastruktur. Alle von der Community übermittelten Änderungen an den App-Vorlagen werden überprüft, um die Konformität sicherzustellen.
+* **Anpassbar und erweiterbar:** Obwohl alle App-Vorlagen mit minimaler Konfiguration bereitgestellt werden können, stellen wir die gesamte Codebasis und Bereitstellungsskripts bereit, sodass Sie sie ganz einfach an Ihre individuellen Anforderungen anpassen oder erweitern können.
+* **Ausführliche Dokumentation:** Alle App-Vorlagen werden von einer End-to-End-Dokumentation zu Lösungsarchitektur, Bereitstellung und Konfigurationsschritten begleitet.  
 
 ## <a name="adoption-bot-9734"></a>Einführungsbot-&#9734;
 

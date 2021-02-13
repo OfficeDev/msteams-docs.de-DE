@@ -4,12 +4,12 @@ author: laujan
 description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Teams-Plattform
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 18981955374a892e45ad5ec1e5ec087ae75cb007
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 7e256423ad713b81f9d4bc3760c33903ef91b179
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911954"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231666"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>Was sind Microsoft Teams-Registerkarten?
 
@@ -41,11 +41,11 @@ Es gibt zwei Arten von Registerkarten in Teams: Kanal/Gruppe und persönlich. Ka
 **Beispiel:** Sie erstellen persönliche Registerkarten, die Informationen *und* Hilfe *zu* Webseiteninhalten für Benutzer bereitstellen.
 
 **Szenario:** Bereitstellen des Zugriffs auf Elemente, mit denen Ihre Benutzer regelmäßig interagieren, um einen kooperativen Dialog und eine zusammenarbeit zu ermöglichen. \
-**Beispiel:** Sie erstellen eine Kanal-/Gruppenregisterkarte mit einer tiefen Verknüpfung mit einzelnen Elementen.
+**Beispiel:** Sie erstellen eine Kanal-/Gruppenregisterkarte mit einer tiefen Verknüpfung zu einzelnen Elementen.
 
 ## <a name="how-do-tabs-work"></a>Wie funktionieren Registerkarten?
 
-Eine benutzerdefinierte Registerkarte wird im App-Manifest Ihres App-Pakets deklariert. Für jede Webseite, die sie als Registerkarte in Ihre App einfügen möchten, definieren Sie eine URL und einen Bereich. Darüber hinaus müssen Sie das [JavaScript-Client-SDK](/javascript/api/overview/msteams-client) für Teams zu Ihrer Seite hinzufügen und nach dem `microsoftTeams.initialize()` Laden der Seite aufrufen. Auf diese Weise wird Teams an die Anzeige Ihrer Seite informiert, Ihnen Zugriff auf Teams-spezifische Informationen (z. B. wenn auf dem Client für Teams das dunkle Design ausgeführt *wird)* und Ihnen ermöglichen, basierend auf den Ergebnissen Maßnahmen zu ergreifen.
+Eine benutzerdefinierte Registerkarte wird im App-Manifest Ihres App-Pakets deklariert. Für jede Webseite, die sie als Registerkarte in Ihre App einfügen möchten, definieren Sie eine URL und einen Bereich. Darüber hinaus müssen Sie das [JavaScript-Client-SDK](/javascript/api/overview/msteams-client) für Teams zu Ihrer Seite hinzufügen und nach dem `microsoftTeams.initialize()` Laden der Seite aufrufen. Auf diese Weise wird Teams an die Anzeige Ihrer Seite informiert, Sie erhalten Zugriff auf Teams-spezifische Informationen (z. B. wenn der Teams-Client das dunkle Design *verwendet),* und Sie können basierend auf den Ergebnissen Maßnahmen ergreifen.
 
 Unabhängig davon, ob Sie Ihre Registerkarte im Kanal-/Gruppenbereich oder im persönlichen Bereich verfügbar machen möchten, müssen Sie eine <iframe-HTML-Inhaltsseite \> auf Ihrer Registerkarte präsentieren. [](~/tabs/how-to/create-tab-pages/content-page.md) Bei persönlichen Registerkarten wird die Inhalts-URL direkt in Ihrem Teams-App-Manifest durch die `contentUrl` Eigenschaft im Array `staticTabs` festgelegt. Der Inhalt Ihrer Registerkarte ist für alle Benutzer identisch.
 
@@ -55,7 +55,7 @@ Sie können maximal eine (1) Kanal-/Gruppenregisterkarte und bis zu 16 (16) pers
 
 ## <a name="mobile-clients"></a>Mobile Clients
 
-Wenn Sie ihre Kanal- oder Gruppenregisterkarte auf mobilen Teams-Clients anzeigen möchten, muss die Konfiguration `setSettings()` einen Wert für die Eigenschaft `websiteUrl` haben. Um eine optimale Benutzererfahrung zu gewährleisten, müssen Sie beim Erstellen ihrer Registerkarten die Anleitungen für Registerkarten [auf mobilen](~/tabs/design/tabs-mobile.md) Geräten befolgen. Apps, die [über Appsource verteilt werden,](~/concepts/deploy-and-publish/appsource/publish.md) verfügen über einen separaten Genehmigungsprozess für mobile Clients. Das Standardverhalten solcher Apps lautet wie folgt:
+Wenn Sie ihre Kanal- oder Gruppenregisterkarte auf mobilen Teams-Clients anzeigen möchten, muss die Konfiguration `setSettings()` einen Wert für die Eigenschaft `websiteUrl` haben. Um eine optimale Benutzererfahrung zu gewährleisten, müssen Sie beim Erstellen ihrer Registerkarten die Anleitungen für Registerkarten [auf mobilen](~/tabs/design/tabs-mobile.md) Geräten befolgen. Apps, die [über Appsource verteilt](~/concepts/deploy-and-publish/appsource/publish.md) werden, verfügen über einen separaten Genehmigungsprozess für mobile Clients. Das Standardverhalten solcher Apps lautet wie folgt:
 
 | **App-Funktion** | **Verhalten, wenn die App genehmigt wurde** | **Verhalten, wenn die App nicht genehmigt ist** |
 | --- | --- | --- |
@@ -72,4 +72,4 @@ Wenn Sie ihre Kanal- oder Gruppenregisterkarte auf mobilen Teams-Clients anzeige
 > [Weitere Informationen: Anfordern von Geräteberechtigungen](../concepts/device-capabilities/native-device-permissions.md)
 
 > [!div class="nextstepaction"]
->[Weitere Informationen: Berechtigungen für Kamera und Bildergalerie](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+> [Weitere Informationen: Integrieren von Medienfunktionen](../concepts/device-capabilities/mobile-camera-image-permissions.md)

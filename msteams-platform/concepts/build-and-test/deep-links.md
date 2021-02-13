@@ -3,18 +3,18 @@ title: Erstellen von Tiefenlinks zu Inhalten
 description: Beschreibt Deep Links und deren Verwendung in Ihren Apps
 ms.topic: how-to
 keywords: Teams deep link deeplink
-ms.openlocfilehash: 96e6fc0a47eb64b9e1c6c03721d386ce4dfbb51d
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: d6efe7332035320d2114e0e834d1c971ccc7108c
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014313"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231561"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Erstellen von Tiefenlinks zu Inhalten und Features in Microsoft Teams
 
-Sie können Links zu Informationen und Features in Teams erstellen. Beispiele dafür, wo dies nützlich sein kann:
+Sie können Links zu Informationen und Features in Teams erstellen. Beispiele, in denen das Erstellen von Deep Links hilfreich ist, sind die folgenden:
 
-* Navigieren des Benutzers zu Inhalten auf einer der Registerkarten Ihrer App. Beispielsweise kann Ihre App über einen Bot verfügen, der Nachrichten sendet, die den Benutzer über eine wichtige Aktivität benachrichtigen. Wenn der Benutzer auf die Benachrichtigung tippt, navigiert der Deep-Link zur Registerkarte, damit der Benutzer weitere Details zur Aktivität anzeigen kann.
+* Navigieren des Benutzers zu Inhalten auf einer der Registerkarten Ihrer App. Beispielsweise kann Ihre App über einen Bot verfügen, der Nachrichten sendet, die den Benutzer über eine wichtige Aktivität informieren. Wenn der Benutzer auf die Benachrichtigung tippt, navigiert der Deep-Link zur Registerkarte, damit der Benutzer weitere Details zur Aktivität anzeigen kann.
 * Ihre App automatisiert oder vereinfacht bestimmte Benutzeraufgaben, z. B. das Erstellen eines Chats oder das Planen einer Besprechung, indem die Deep-Links vorab mit den erforderlichen Parametern auffüllt. Dies vermeidet, dass Benutzer Informationen manuell eingeben müssen.
 
 > [!NOTE]
@@ -26,28 +26,28 @@ Sie können Links zu Informationen und Features in Teams erstellen. Beispiele da
 >
 > **Bot:**  
 > ✔ Deeplink im Kartentext - Wird zuerst im Browser geöffnet.  
-> ✔ der OpenURL-Aktion in adaptiver Karte hinzugefügte Deeplink - Navigiert direkt zur Deeplink-URL.  
+> ✔ Der Aktion "OpenURL" in der adaptiven Karte hinzugefügte Deeplink - Navigiert direkt zur Deeplink-URL.  
 > ✔ Link-Markdown-Text auf der Karte – Wird zuerst im Browser geöffnet.  
 >
 > **Chat:**  
 > ✔ Link "Markdown" für Textnachricht: Navigiert direkt zu deeplink-URL.  
-> ✔ in allgemeine Chat-Unterhaltungen einfügenden Link – Navigiert direkt zu deeplink-URL.
+> ✔ in allgemeine Chat-Unterhaltungen einfügenden Link – Navigiert direkt zur Deeplink-URL.
 
 ## <a name="deep-linking-to-your-tab"></a>Deep linking to your tab
 
-Sie können Deep-Links zu Entitäten in Teams erstellen. In der Regel wird dies zum Erstellen von Links verwendet, die zu Inhalten und Informationen auf Ihrer Registerkarte navigieren. Wenn Ihre Registerkarte beispielsweise eine Aufgabenliste enthält, können Teammitglieder Links zu einzelnen Vorgängen erstellen und freigeben. Wenn sie darauf klicken, navigiert der Link zu Ihrer Registerkarte, die sich auf das bestimmte Element konzentriert. Um dies zu implementieren, fügen Sie jedem Element eine "Link kopieren"-Aktion hinzu, ganz gleich, wie dies für Ihre Benutzeroberfläche am besten geeignet ist. Wenn der Benutzer diese Aktion ergreift, rufen Sie ein Dialogfeld mit einem Link auf, den der Benutzer in die `shareDeepLink()` Zwischenablage kopieren kann. Wenn Sie diesen Aufruf machen, übergeben Sie auch eine ID [](~/tabs/how-to/access-teams-context.md) für Ihr Element, die Sie wieder im Kontext erhalten, wenn der Link folgt und Die Registerkarte neu geladen wird.
+Sie können Deep-Links zu Entitäten in Teams erstellen. In der Regel wird dies zum Erstellen von Links verwendet, die zu Inhalten und Informationen auf Ihrer Registerkarte navigieren. Wenn Ihre Registerkarte beispielsweise eine Aufgabenliste enthält, können Teammitglieder Links zu einzelnen Vorgängen erstellen und freigeben. Wenn Sie den Link auswählen, navigiert er zu Ihrer Registerkarte, die sich auf das bestimmte Element konzentriert. Um dies zu implementieren, fügen Sie jedem Element eine "Link kopieren"-Aktion hinzu, ganz gleich, wie dies für Ihre Benutzeroberfläche am besten geeignet ist. Wenn der Benutzer diese Aktion ergreift, rufen Sie ein Dialogfeld mit einem Link auf, den der Benutzer in die `shareDeepLink()` Zwischenablage kopieren kann. Wenn Sie diesen Aufruf machen, übergeben Sie auch eine ID [](~/tabs/how-to/access-teams-context.md) für Ihr Element, die Sie wieder im Kontext erhalten, wenn der Link folgt und Die Registerkarte neu geladen wird.
 
-Alternativ können Sie auch mit dem weiter unten in diesem Thema angegebenen Format programmgesteuert Deep-Links generieren. Sie können diese in [](~/bots/what-are-bots.md) Bot- und Connectornachrichten verwenden, die Benutzer über Änderungen an Ihrer Registerkarte oder an Elementen in der Registerkarte informieren. [](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+Alternativ können Sie auch mit dem weiter unten in diesem Thema angegebenen Format programmgesteuert Deep-Links generieren. Sie können diese in [Bot-](~/bots/what-are-bots.md) und [Connectornachrichten](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) verwenden, die Benutzer über Änderungen an Ihrer Registerkarte oder an Elementen in der Registerkarte informieren.
 
 > [!NOTE]
-> Dies ist anders als  bei den Links, die vom Link zum Registerkartenmenüelement "Kopieren" bereitgestellt werden, das nur einen Deep-Link generiert, der auf diese Registerkarte verweist.
+> Dieser Deep Link ist anders als  der Link zum Registerkartenmenüelement zum Kopieren, der nur einen Deep-Link generiert, der auf diese Registerkarte verweist.
 
 >[!NOTE]
 > ShareDeepLink funktioniert derzeit nicht auf mobilen Plattformen.
 
 ### <a name="showing-a-deep-link-to-an-item-within-your-tab"></a>Anzeigen eines Deep-Links zu einem Element auf ihrer Registerkarte
 
-Um ein Dialogfeld anzuzeigen, das einen Deep-Link zu einem Element auf Ihrer Registerkarte enthält, rufen Sie `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
+Um ein Dialogfeld anzuzeigen, das einen DeepLink zu einem Element auf Ihrer Registerkarte enthält, rufen Sie `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
 
 Geben Sie die folgenden Felder an:
 
@@ -63,13 +63,13 @@ Geben Sie die folgenden Felder an:
 > [!NOTE]
 > Deep Links funktionieren nur ordnungsgemäß, wenn die Registerkarte mit der Bibliothek v0.4 oder höher konfiguriert wurde und daher eine Entitäts-ID hat. Deep-Links zu Registerkarten ohne Entitäts-IDs navigieren weiterhin zur Registerkarte, können jedoch die Unterentitäts-ID nicht auf der Registerkarte bereitstellen.
 
-Verwenden Sie dieses Format für einen Deep-Link, den Sie in einer Bot-, Connector- oder Messaging-Erweiterungskarte verwenden können:
+Verwenden Sie das folgende Format für einen Deep-Link, den Sie in einer Bot-, Connector- oder Messaging-Erweiterungskarte verwenden können:
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
 > Wenn der Bot eine Nachricht mit einem Deep-Link sendet, wird eine neue Browserregisterkarte geöffnet, wenn der Benutzer `TextBlock` den Link auswählt. Dies geschieht in Chrome und in der Microsoft Teams-Desktop-App, die beide unter Linux ausgeführt werden.
-> Wenn der Bot dieselbe Deep-Link-URL an eine sendet, wird die Registerkarte "Teams" auf der aktuellen Browserregisterkarte geöffnet, wenn der Benutzer auf `Action.OpenUrl` den Link klickt. Es wird keine neue Browserregisterkarte geöffnet.
+> Wenn der Bot dieselbe Deep-Link-URL an eine sendet, wird die Registerkarte "Teams" auf der aktuellen Browserregisterkarte geöffnet, wenn der Benutzer `Action.OpenUrl` den Link auswählt. Es wird keine neue Browserregisterkarte geöffnet.
 
 Die Abfrageparameter sind:
 
@@ -79,7 +79,7 @@ Die Abfrageparameter sind:
 * `entityLabel`oder eine Bezeichnung für das Element auf Ihrer Registerkarte, die beim Anzeigen des #A0 verwendet werden soll, z. B. `subEntityLabel` &emsp; "Aufgabenliste 123" oder "Aufgabe 456"
 * `context`&emsp;Ein JSON-Objekt, das die folgenden Felder enthält:
   * `subEntityId`&emsp;Eine ID für das Element _auf_ der Registerkarte; Beispiel: "task456"
-  * `channelId`&emsp;Die Microsoft Teams-Kanal-ID [](~/tabs/how-to/access-teams-context.md)(verfügbar über den Registerkartenkontext, z. B. "19:cbe3683f25094106b826c9cada3afbe0@thread.skype". Diese Eigenschaft ist nur auf konfigurierbaren Registerkarten mit dem Bereich "Team" verfügbar. Es ist nicht in statischen Registerkarten verfügbar, die den Bereich "persönlich" haben.
+  * `channelId`&emsp;Die Microsoft Teams-Kanal-ID, die im Registerkartenkontext verfügbar [ist;](~/tabs/how-to/access-teams-context.md) Beispiel: "19:cbe3683f25094106b826c9cada3afbe0@thread.skype". Diese Eigenschaft ist nur auf konfigurierbaren Registerkarten mit dem Bereich "Team" verfügbar. Es ist nicht in statischen Registerkarten verfügbar, die den Bereich "persönlich" haben.
 
 Beispiele:
 
@@ -89,7 +89,7 @@ Beispiele:
 * Link zu einem Aufgabenelement auf der statischen Registerkarte: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass alle Abfrageparameter ordnungsgemäß URI-codiert sind. Zur besseren Lesbarkeit sind die obigen Beispiele nicht, aber Sie sollten dies auch. Verwenden des letzten Beispiels:
+> Stellen Sie sicher, dass alle Abfrageparameter ordnungsgemäß URI-codiert sind. Sie müssen die voransenden Beispiele anhand des letzten Beispiels befolgen:
 > ```javascript
 > var encodedWebUrl = encodeURI('https://tasklist.example.com/123/456&label=Task 456');
 > var encodedContext = encodeURI('{"subEntityId": "task456"}');
@@ -98,19 +98,19 @@ Beispiele:
 
 ### <a name="consuming-a-deep-link-from-a-tab"></a>Verwenden eines Deep-Links von einer Registerkarte
 
-Beim Navigieren zu einem Deep-Link navigiert Microsoft Teams einfach zur Registerkarte und stellt einen Mechanismus über die Microsoft Teams-JavaScript-Bibliothek zum Abrufen der Unterentitäts-ID (sofern vorhanden) zur Verfügung.
+Beim Navigieren zu einem Deep-Link navigiert Microsoft Teams einfach zur Registerkarte und stellt einen Mechanismus über die Microsoft Teams-JavaScript-Bibliothek zum Abrufen der Id der Unterentität zur Verfügung, falls vorhanden.
 
-Der Aufruf gibt einen Kontext zurück, der das Feld enthält, wenn die Registerkarte über einen [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) `subEntityId` Deep-Link navigiert wurde.
+Der [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) Aufruf gibt einen Kontext zurück, der das Feld `subEntityId` enthält, wenn die Registerkarte über einen Deep-Link navigiert wird.
 
 ## <a name="deep-linking-from-your-tab"></a>Deep linking from your tab
 
-Sie können von Ihrer Registerkarte aus eine Verknüpfung zu Inhalten in Teams erstellen. Dies ist hilfreich, wenn Ihre Registerkarte einen Link zu anderen Inhalten in Teams erstellen muss, z. B. mit einem Kanal, einer Nachricht, einer anderen Registerkarte oder sogar zum Öffnen eines Planungsdialogfelds. Um einen Deeplink von Ihrer Registerkarte aus auszulösen, sollten Sie dies aufrufen:
+Sie können von Ihrer Registerkarte aus eine Verknüpfung zu Inhalten in Teams erstellen. Dies ist hilfreich, wenn Ihre Registerkarte eine Verknüpfung zu anderen Inhalten in Teams erstellen muss, z. B. zu einem Kanal, einer Nachricht, einer anderen Registerkarte oder sogar zum Öffnen eines Planungsdialogfelds. Um einen Deeplink von Ihrer Registerkarte aus auszulösen, sollten Sie dies aufrufen:
 
 ```Javascript
 microsoftTeams.executeDeepLink(/*deepLink*/);
 ```
 
-Dadurch werden Sie zur richtigen URL navigiert oder eine Clientaktion ausgelöst, z. B. das Öffnen eines Planungs- oder App-Installationsdialogfelds. Beispiel:
+Dieser Aufruf navigiert Sie zur richtigen URL oder löst eine Clientaktion aus, z. B. das Öffnen eines Planungs- oder App-Installationsdialogfelds. Sehen Sie sich das folgende Beispiel an:
 
 ```Javascript
 // Open a scheduling dialog from your tab
@@ -120,9 +120,9 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-4f12-872d-c737b174bcb4");
 ```
 
-## <a name="deep-linking-to-a-chat"></a>Tiefe Verknüpfung mit einem Chat
+## <a name="deep-linking-to-a-chat"></a>Deep linking to a chat
 
-Sie können deep-Links zu privaten Chats zwischen Benutzern erstellen, indem Sie den Teilnehmersatz angeben. Wenn kein Chat mit den angegebenen Teilnehmern vorhanden ist, navigiert der Link den Benutzer zu einem leeren neuen Chat. Neue Chats werden im Entwurfsstatus erstellt, bis der Benutzer die erste Nachricht sendet. Optional können Sie den Namen des Chats (sofern er noch nicht vorhanden ist) zusammen mit Text angeben, der in das Feld zum Verfassen des Benutzers eingefügt werden soll. Sie können sich dieses Feature als Verknüpfung für den Benutzer ausmalen, der manuell zu dem Chat navigiert oder den Chat erstellt und dann die Nachricht eintippt.
+Sie können deep-Links zu privaten Chats zwischen Benutzern erstellen, indem Sie den Teilnehmersatz angeben. Wenn kein Chat mit den angegebenen Teilnehmern vorhanden ist, navigiert der Link den Benutzer zu einem leeren neuen Chat. Neue Chats werden im Entwurfsstatus erstellt, bis der Benutzer die erste Nachricht sendet. Andernfalls können Sie den Namen des Chats, sofern er noch nicht vorhanden ist, zusammen mit Text angeben, der in das Feld zum Verfassen des Benutzers eingefügt werden soll. Sie können sich dieses Feature als Verknüpfung für den Benutzer ausmalen, der manuell zu dem Chat navigiert oder den Chat erstellt und dann die Nachricht eintippt.
 
 Wenn Sie beispielsweise ein Office 365-Benutzerprofil von Ihrem Bot als Karte zurückgeben, kann dieser Deep Link dem Benutzer ermöglichen, einfach mit dieser Person zu chatten.
 
@@ -136,11 +136,23 @@ Beispiel: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@cont
 
 Die Abfrageparameter sind:
 
-* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Chats darstellen. Der Benutzer, der die Aktion ausführen, ist immer als Teilnehmer enthalten. Das Feld "Benutzer-ID" unterstützt derzeit nur den Azure AD UserPrincipalName (in der Regel eine E-Mail-Adresse).
-* `topicName`: Ein optionales Feld für den Anzeigenamen des Chats bei einem Chat mit 3 oder mehr Benutzern. Wenn dieses Feld nicht angegeben ist, basiert der Anzeigename des Chats auf den Namen der Teilnehmer.
+* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Chats darstellen. Der Benutzer, der die Aktion ausführt, ist immer als Teilnehmer enthalten. Derzeit unterstützt das Feld "Benutzer-ID" den Azure AD UserPrincipalName, in der Regel nur eine E-Mail-Adresse.
+* `topicName`: Ein optionales Feld für den Anzeigenamen des Chats bei einem Chat mit drei oder mehr Benutzern. Wenn dieses Feld nicht angegeben ist, basiert der Anzeigename des Chats auf den Namen der Teilnehmer.
 * `message`: Ein optionales Feld für den Nachrichtentext, den Sie in das Feld zum Verfassen des aktuellen Benutzers einfügen möchten, während sich der Chat im Entwurfszustand befindet.
 
 Um diesen Deep-Link mit Ihrem Bot zu verwenden, können Sie dies als das URL-Ziel in der Schaltfläche Ihrer Karte angeben oder auf die Aktion durch den `openUrl` Aktionstyp tippen.
+
+### <a name="generating-a-deep-link-to-a-call"></a>Generieren eines DeepLinks zu einem Anruf
+
+Verwenden Sie dieses Format für einen Deep-Link, den Sie in einer Bot-, Connector- oder Messaging-Erweiterungskarte verwenden können:
+
+`https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>`
+
+Beispiel: `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
+
+Die Abfrageparameter sind:
+
+* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Anrufs darstellen. Der Benutzer, der die Aktion ausführt, ist immer als Teilnehmer enthalten. Derzeit unterstützt das Feld "Benutzer-ID" den Azure AD UserPrincipalName, in der Regel nur eine E-Mail-Adresse.
 
 ## <a name="linking-to-the-scheduling-dialog"></a>Verknüpfen mit dem Planungsdialogfeld
 
@@ -151,18 +163,18 @@ Sie können Deep-Links zum integrierten Planungsdialogfeld von Teams erstellen. 
 
 ### <a name="generating-a-deep-link-to-the-scheduling-dialog"></a>Generieren eines DeepLinks zum Planungsdialogfeld
 
-Verwenden Sie dieses Format für einen Deep-Link, den Sie in einer Bot-, Connector- oder Messaging-Erweiterungskarte verwenden können: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
+Verwenden Sie das folgende Format für einen Deep-Link, den Sie in einer Bot-, Connector- oder Messaging-Erweiterungskarte verwenden können: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Beispiel: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
 Die Abfrageparameter sind:
 
-* `attendees`: Die optionale durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer der Besprechung darstellen. Der Benutzer, der die Aktion ausführen, ist der Besprechungsorganisator. Das Feld "Benutzer-ID" unterstützt derzeit nur den Azure AD UserPrincipalName (in der Regel eine E-Mail-Adresse).
+* `attendees`: Die optionale durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer der Besprechung darstellen. Der Benutzer, der die Aktion ausführen, ist der Besprechungsorganisator. Das Feld "Benutzer-ID" unterstützt derzeit nur den Azure AD UserPrincipalName, in der Regel eine E-Mail-Adresse.
 * `startTime`: Die optionale Startzeit des Ereignisses. Dies sollte im langen [ISO 8601-Format](https://en.wikipedia.org/wiki/ISO_8601)vorliegen, z. B. "2018-03-12T23:55:25+02:00".
 * `endTime`: Die optionale Endzeit des Ereignisses, auch im ISO 8601-Format.
 * `subject`: Ein optionales Feld für den Besprechungsthema.
 * `content`: Ein optionales Feld für das Feld "Besprechungsdetails".
 
-Derzeit wird die Angabe des Speicherorts nicht unterstützt. Achten Sie beim Generieren der Start- und Endzeiten darauf, den UTC-Offset (Zeitzonen) anzugeben.
+Derzeit wird die Angabe des Speicherorts nicht unterstützt. Sie müssen den UTC-Offset angeben, d. h. Zeitzonen beim Generieren der Start- und Endzeiten.
 
 Um diesen Deep-Link mit Ihrem Bot zu verwenden, können Sie dies als das URL-Ziel in der Schaltfläche Ihrer Karte angeben oder auf die Aktion durch den `openUrl` Aktionstyp tippen.
