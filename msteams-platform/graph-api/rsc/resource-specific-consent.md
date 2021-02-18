@@ -6,16 +6,16 @@ author: laujan
 ms.author: lajanuar
 ms.topic: reference
 keywords: Teams Authorization OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 1b5c0f645d93ed33c11bf3279e70133f35f53a2c
-ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
+ms.openlocfilehash: 97f642b203a1f7fb4cd9332b61265c0b27788e2b
+ms.sourcegitcommit: 6caf503de5544fb8b9c8c6bef8eff4ff5a46068c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "50093929"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "50270798"
 ---
 # <a name="resource-specific-consent-rsc"></a>Ressourcenspezifische Zustimmung (RSC)
 
-Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams- und Microsoft Graph-API-Integration, mit der Ihre App bestimmte Teams innerhalb einer Organisation mithilfe von API-Endpunkten verwalten kann. Mit dem ressourcenspezifischen Berechtigungsmodell (RSC) können Teambesitzer einer Anwendung die Zustimmung erteilen, auf die Daten eines Teams zu zugreifen und/oder diese zu ändern.  Die differenzierten, Teams-spezifischen RSC-Berechtigungen definieren, was eine Anwendung in einem bestimmten Team tun kann:
+Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams- und Microsoft Graph-API-Integration, die es Ihrer App ermöglicht, bestimmte Teams innerhalb einer Organisation mithilfe von API-Endpunkten zu verwalten. Das ressourcenspezifische Berechtigungsmodell (RSC)  ermöglicht Teambesitzern, einer Anwendung die Zustimmung zum Zugriff auf und/oder zum Ändern der Daten eines Teams zu erteilen. Die differenzierten, Teams-spezifischen RSC-Berechtigungen definieren, was eine Anwendung in einem bestimmten Team tun kann:
 
 ## <a name="resource-specific-permissions"></a>Ressourcenspezifische Berechtigungen
 
@@ -58,7 +58,7 @@ Sie können die Zustimmung des [Gruppenbesitzers direkt](/azure/active-directory
 >
 >- Melden Sie sich beim [Azure-Portal](https://portal.azure.com) als [globaler Administrator/Unternehmensadministrator an.](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator)  
  > - [Wählen Sie](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) **Azure Active Directory**  =>  **-Enterprise-Anwendungen**  =>  **Zustimmungs- und Berechtigungseinstellungen**  =>  **für die Zustimmung des Benutzers aus.**
-> - Aktivieren, Deaktivieren oder Einschränken der Zustimmung des Benutzers mit der Zustimmung des Steuerelements mit der Bezeichnung "Gruppenbesitzer" für Apps, die auf Daten zugreifen **(Die** Standardeinstellung ist "Gruppenbesitzer-Zustimmung für **alle Gruppenbesitzer zulassen").** Damit ein Teambesitzer eine App mit RSC installieren kann, muss die Zustimmung des Gruppenbesitzers für den Benutzer aktiviert sein.
+> - Aktivieren, Deaktivieren oder Einschränken der Zustimmung des Benutzers mit der Mit der Bezeichnung "Gruppenbesitzer-Zustimmung" gekennzeichneten Zustimmung für Apps, die auf Daten zugreifen **(Die** Standardeinstellung ist "Zustimmung des Gruppenbesitzers für **alle Gruppenbesitzer zulassen").** Damit ein Teambesitzer eine App mit RSC installieren kann, muss die Zustimmung des Gruppenbesitzers für den Benutzer aktiviert sein.
 
 ![Azure rsc-Konfiguration](../../assets/images/azure-rsc-configuration.png)
 
@@ -66,7 +66,7 @@ Um die Zustimmung des Gruppenbesitzers mithilfe von PowerShell zu aktivieren ode
 
 ## <a name="register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal"></a>Registrieren Ihrer App bei Microsoft Identity Platform über das Azure AD-Portal
 
-Das Azure Active Directory-Portal bietet eine zentrale Plattform zum Registrieren und Konfigurieren Ihrer Apps. Ihre App muss im Azure AD-Portal registriert sein, damit sie in die Microsoft Identity Platform integriert werden kann und Microsoft Graph-APIs aufrufen kann. *Weitere Informationen* [finden Sie unter Registrieren einer Anwendung bei der Microsoft Identity Platform.](/graph/auth-register-app-v2)
+Das Azure Active Directory-Portal bietet eine zentrale Plattform zum Registrieren und Konfigurieren Ihrer Apps. Ihre App muss im Azure AD-Portal registriert sein, damit sie in die Microsoft Identity Platform integriert werden kann und Microsoft Graph-APIs aufrufen kann. *Siehe* [Registrieren einer Anwendung bei der Microsoft Identity Platform](/graph/auth-register-app-v2).
 
 >[!WARNING]
 >Registrieren Sie nicht mehrere Teams-Apps für dieselbe Azure AD-App-ID. Die App-ID muss für jede App eindeutig sein. Versuche, mehrere Apps unter derselben App-ID zu installieren, können nicht verwendet werden.
@@ -96,7 +96,7 @@ Die RsC-Berechtigungen werden in Ihrer App-Manifestdatei (JSON) deklariert.  Fü
 
 > [!div class="checklist"]
 >
-> - **id** – Ihre Azure AD-App-ID. *Weitere* Informationen finden Sie unter [Registrieren Ihrer App im Azure AD-Portal.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)
+> - **id** – Ihre Azure AD-App-ID. *Siehe* [Registrieren Ihrer App im Azure AD-Portal.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)
 > - **-Ressource**  – eine beliebige Zeichenfolge. Dieses Feld hat keine Operation in RSC, muss jedoch hinzugefügt werden und einen Wert haben, um eine Fehlerantwort zu vermeiden. Eine beliebige Zeichenfolge wird verwendet.
 > - **Anwendungsberechtigungen** – RSC-Berechtigungen für Ihre App. *Siehe Ressourcenspezifische* [Berechtigungen](resource-specific-consent.md#resource-specific-permissions).
 
@@ -129,7 +129,7 @@ Die RsC-Berechtigungen werden in Ihrer App-Manifestdatei (JSON) deklariert.  Fü
 
 ## <a name="install-your-app-directly-in-teams"></a>Installieren Ihrer App direkt in Teams
 
-Nachdem Sie Ihre App erstellt haben, können Sie [Ihr App-Paket](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) direkt in ein bestimmtes Team hochladen.  Dazu muss die **Richtlinieneinstellung** "Benutzerdefinierte Apps hochladen" im Rahmen der Benutzerdefinierten App-Setup-Richtlinien aktiviert sein. *Weitere Informationen finden* Sie unter ["Richtlinieneinstellungen für benutzerdefinierte Apps".](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings)
+Nachdem Sie Ihre App erstellt haben, können Sie [Ihr App-Paket](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) direkt in ein bestimmtes Team hochladen.  Dazu muss die **Richtlinieneinstellung** "Benutzerdefinierte Apps hochladen" im Rahmen der Benutzerdefinierten App-Setup-Richtlinien aktiviert sein. Weitere Informationen finden Sie unter *"Richtlinieneinstellungen* [für benutzerdefinierte Apps".](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings)
 
 ## <a name="check-your-app-for-added-rsc-permissions"></a>Überprüfen Sie Ihre App auf hinzugefügte RSC-Berechtigungen.
 
@@ -141,15 +141,20 @@ Nachdem die App in einem Team installiert wurde, können Sie [graph-Explorer](ht
 > [!div class="checklist"]
 >
 >- Holen Sie sich die **groupId des Teams** vom Teams-Client.
-> - Wählen Sie im Teams-Client **teams** in der Navigationsleiste ganz links aus.
+> - Wählen Sie im Client **"Teams" in** der Navigationsleiste ganz links "Teams" aus.
 > - Wählen Sie im Dropdownmenü das Team aus, in dem die App installiert ist.
 > - Wählen Sie das **Symbol "Weitere** Optionen" (&#8943;).
 > - Wählen Sie **"Link zum Team erhalten" aus.**
-> - Kopieren Sie den **GroupId-Wert,** und speichern Sie den Wert aus der Zeichenfolge.
+> - Kopieren und speichern Sie den **groupId-Wert** aus der Zeichenfolge.
 > - Melden Sie sich beim **Graph Explorer an.**
 > - Stellen Sie **einen GET-Aufruf** an den folgenden Endpunkt: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` . Das Feld "clientAppId" in der Antwort wird der im Teams-App-Manifest angegebenen appId zuordnung.
   ![Antwort des Graph-Explorers auf GET-Aufruf.](../../assets/images/graph-permissions.png)
- 
+
+## <a name="code-sample"></a>Codebeispiel
+| **Beispielname** | **Beschreibung** | **C#** |
+|-----------------|-----------------|----------------|
+| Ressourcenspezifische Zustimmung (RSC) | Verwenden Sie RSC zum Aufrufen von Graph-APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|
+
 ## <a name="test-resource-specific-consent"></a>Testen der ressourcenspezifischen Zustimmung
  
 > [!div class="nextstepaction"]
@@ -160,3 +165,4 @@ Nachdem die App in einem Team installiert wurde, können Sie [graph-Explorer](ht
 > [!div class="nextstepaction"]
 > [**Ressourcenspezifische Zustimmung in Microsoft Teams für Administratoren**](/MicrosoftTeams/resource-specific-consent)
 > 
+
