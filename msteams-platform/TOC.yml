@@ -74,6 +74,8 @@
           href: concepts/device-capabilities/native-device-permissions.md
         - name: Integrieren von Medienfunktionen
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
+        - name: QR- oder Barcode-Scannerfunktion integrieren
+          href: concepts/device-capabilities/qr-barcode-scanner-capability.md
 - name: Entwerfen Ihrer App
   items:
     - name: Übersicht
