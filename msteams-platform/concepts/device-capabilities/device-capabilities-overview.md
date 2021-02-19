@@ -1,40 +1,40 @@
 ---
 title: Übersicht über Gerätefunktionen
 description: Übersicht über systemeigene Gerätefunktionen.
-keywords: Kamerabild medienmikrofonfunktionen systemeigene Geräteberechtigungen
+keywords: Kamerabild medienmikromi qr code qrcode strichcode strichcode scan scanner funktionen systemeigene Geräteberechtigungen
 ms.topic: overview
-ms.openlocfilehash: 8b2f92cb4586d646bde02742883122bb009847ea
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: 03ce0267f7160772e30ec88de2c29f81886b5280
+ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50232849"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "50294726"
 ---
 # <a name="device-capabilities"></a>Gerätefunktionen 
 
-Die Microsoft Teams-Plattform verbessert kontinuierlich die Entwicklerfunktionen, die auf die integrierten Erfahrungen von Erstentwicklern ausgerichtet sind. Die erweiterte Teams-Plattform ermöglicht Partnern die Integration von Gerätefunktionen wie Kamera, Fotogalerie, Mikrofon und Standort in ihre Web-Apps. Diese Integration verringert die Barriere für die App-Entwicklung, beschleunigt den Entwicklungszyklus und erstellt neue Szenarien oder Anwendungsfälle für die Entwickler-Community.
+Die Microsoft Teams-Plattform verbessert kontinuierlich die Entwicklerfunktionen, die auf integrierte Erfahrungen von Erstentwicklern ausgerichtet sind. Mit der erweiterten Teams-Plattform können Partner Gerätefunktionen wie Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort in ihre Web-Apps integrieren. Diese Integration verringert die Barriere für die App-Entwicklung, beschleunigt den Entwicklungszyklus und erstellt neue Szenarien oder Anwendungsfälle für die Entwicklergemeinschaft.
 
 ## <a name="native-device-capabilities"></a>Systemeigene Gerätefunktionen
 
-Ein Mobiles oder Desktopgerät verfügt über integrierte Geräte, z. B. eine Kamera und ein Mikrofon, die als Funktionen bezeichnet werden. Sie können auf die folgenden Gerätefunktionen auf Mobilgeräten oder Desktops über dedizierte APIs zugreifen, die im [JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)von Microsoft Teams verfügbar sind:
+Ein Mobiles oder Desktopgerät verfügt über integrierte Geräte, z. B. eine Kamera und ein Mikrofon, die als Funktionen bezeichnet werden. Sie können auf die folgenden Gerätefunktionen auf Mobilgeräten oder Desktops über dedizierte APIs zugreifen, die im [Microsoft Teams JavaScript-Client-SDK verfügbar sind:](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
 * Medienfunktionen, z. B.
-    * Kamera
+    * Camera
     * Mikrofon
     * Katalog
-* Ort
+    * QR- oder Strichcodescanner
+* Standort
 
-Nachdem Sie Zugriff auf die Gerätefunktionen erhalten haben, können Sie sie in die Plattform "Teams" integrieren, um die Zusammenarbeit zu verbessern. 
+Nachdem Sie Zugriff auf die Gerätefunktionen erhalten haben, können Sie sie in die Teams-Plattform integrieren, um die Zusammenarbeit zu verbessern. 
 
 ## <a name="request-device-permissions"></a>Geräteberechtigungen anfordern
 
-Verwenden Sie die Tools im [JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) von Microsoft Teams, um die erforderlichen Berechtigungen für den Zugriff auf die systemeigenen Gerätefunktionen an fordern. [](native-device-permissions.md) Während der Zugriff auf diese Funktionen in modernen Webbrowsern standard ist, müssen Sie Teams über die Funktionen informieren, die Sie verwenden, indem Sie Ihr App-Manifest aktualisieren. Mit diesem Update können Sie Berechtigungen anfordern, während Ihre App auf mobilen Teams- oder Desktopclients ausgeführt wird.
+Verwenden Sie die Tools im [Microsoft Teams JavaScript-Client-SDK,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) um die erforderlichen Berechtigungen für den Zugriff auf die systemeigenen Gerätefunktionen an fordern. [](native-device-permissions.md) Während der Zugriff auf diese Funktionen in modernen Webbrowsern standard ist, müssen Sie Teams über die Funktionen informieren, die Sie verwenden, indem Sie Ihr App-Manifest aktualisieren. Mit diesem Update können Sie Berechtigungen anfordern, während Ihre App auf mobilen Teams- oder Desktopclients ausgeführt wird.
  
  ## <a name="integrate-device-capabilities"></a>Integrieren von Gerätefunktionen
 
-Nachdem Sie Zugriff auf Gerätefunktionen erhalten haben, verwenden Sie die APIs für **die Medienfunktionen** von Teams, um die Funktionen in die Teams-Plattform zu integrieren, um die Benutzerfreundlichkeit zu verbessern. [](mobile-camera-image-permissions.md) Diese integrierten Funktionen ermöglichen Ihrer App:
+Nachdem Sie Zugriff auf Gerätefunktionen erhalten haben, verwenden Sie Die Medienfunktionen-APIs von Teams, um [Medienfunktionen](mobile-camera-image-permissions.md) in die Teams-Plattform zu integrieren, um die Benutzerfreundlichkeit zu verbessern. Diese integrierten Funktionen ermöglichen Ihrer App:
 
 * Erfassen und Freigeben von Bildern
-* Aufzeichnen von Audio über mikrofon
+* Scannen von QR- oder Barcodes mithilfe [eines Scannersteuerelements](qr-barcode-scanner-capability.md)
+* Aufzeichnen von Audio über Mikrofon
 * Freigeben der Standortinformationen
-
-
