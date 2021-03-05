@@ -3,12 +3,12 @@ title: Anfordern von Geräteberechtigungen für Ihre Microsoft Teams-App
 keywords: Berechtigungen für teams-Apps-Funktionen
 description: So aktualisieren Sie Ihr App-Manifest, um Zugriff auf systemeigene Features anzuholen, für die in der Regel die Zustimmung des Benutzers erforderlich ist
 ms.topic: how-to
-ms.openlocfilehash: 60c28e1170e8bbdf664145bde7f7de585bd55a45
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: e7c5f7ff477bc193924cdf11700c77ae620cd1c0
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294747"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449436"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Anfordern von Geräteberechtigungen für Ihre Microsoft Teams-App
 
@@ -16,7 +16,8 @@ Sie können Ihre Teams-App mit systemeigenen Gerätefunktionen wie Kamera, Mikro
 
 > [!NOTE]
 > * Informationen zur Integration von Medienfunktionen in Ihre mobile Microsoft Teams-App finden Sie [unter Integrieren von Medienfunktionen](mobile-camera-image-permissions.md).
-> * Informationen zur Integration von QR- oder Barcodescannerfunktionen in Ihre mobile Microsoft Teams-App finden Sie unter Integrieren der QR- oder [Barcodescannerfunktion in Teams.](qr-barcode-scanner-capability.md)
+> * Informationen zur Integration von QR- oder Strichcodescannerfunktionen in Ihre mobile Microsoft Teams-App finden Sie unter Integrieren der QR- oder [Barcodescannerfunktion in Teams.](qr-barcode-scanner-capability.md)
+> * Informationen zur Integration von Standortfunktionen in Ihre mobile Microsoft Teams-App finden Sie [unter Integrieren von Standortfunktionen](location-capability.md).
 
 ## <a name="native-device-permissions"></a>Berechtigungen für systemeigene Geräte
 
@@ -116,7 +117,7 @@ Nutzen Sie die entsprechende HTML5- oder Teams-API, um eine Eingabeaufforderung 
 > * Unterstützung für `camera` , und wird über die `gallery` `microphone` [**selectMedia-API aktiviert.**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true) Verwenden [**Sie die captureImage-API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) für eine einzelne Bildaufnahme.
 > * Die Unterstützung `location` für wird über die [**getLocation-API aktiviert.**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) Sie müssen dies `getLocation API` für den Standort verwenden, da die HTML5-Geolocation-API derzeit nicht vollständig auf dem Teams-Desktopclient unterstützt wird.
 
-Zum Beispiel:
+Beispiel:
  * Um den Benutzer zum Zugriff auf seinen Standort aufforderen zu können, müssen Sie `getCurrentPosition()` anrufen:
 
     ```Javascript
@@ -193,3 +194,6 @@ Geräteberechtigungen werden für jede Anmeldesitzung gespeichert. Wenn Sie sich
 
 > [!div class="nextstepaction"]
 > [Integrieren von QR- oder Barcodescannerfunktionen in Teams](qr-barcode-scanner-capability.md)
+
+> [!div class="nextstepaction"]
+> [Integrieren von Standortfunktionen in Teams](location-capability.md)

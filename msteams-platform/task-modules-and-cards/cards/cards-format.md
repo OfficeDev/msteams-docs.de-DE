@@ -1,46 +1,46 @@
 ---
-title: Text Formatierung in Karten
-description: Beschreibt die Formatierung von Karten Texten in Microsoft Teams
+title: Textformatierung in Karten
+description: Beschreibt die Formatierung von Kartentexten in Microsoft Teams
 keywords: Teams-Bots-Kartenformat
 ms.date: 03/29/2018
-ms.openlocfilehash: fcf0692fe033cd3c30ea1e3ac7bda8ddd06297ca
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 1221693ab9ae002ee982ef34a05ead1feb8b1f27
+ms.sourcegitcommit: 47cf0d05e15e5c23616b18ae4e815fd871bbf827
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346707"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50455396"
 ---
-# <a name="format-cards-in-teams"></a>Formatieren von Karten in Microsoft Teams
+# <a name="format-cards-in-teams"></a>Formatieren von Karten in Teams
 
-Je nach Kartentyp können Sie Ihren Karten Rich-Text-Formatierungen hinzufügen, indem Sie entweder "Abschlag" oder "HTML" verwenden.
+Je nach Kartentyp können Sie Ihren Karten mithilfe von Markdown oder HTML Rich-Text-Formatierungen hinzufügen.
 
-Karten unterstützen die Formatierung nur in der Text-Eigenschaft, nicht in den Eigenschaften Title oder subtitle. Die Formatierung kann anhand einer Teilmenge der XML-Formatierung (HTML) oder eines Abschlags je nach Kartentyp angegeben werden. Für die aktuelle und zukünftige Entwicklung werden Adaptive Karten mit Abschlag Formatierung empfohlen.
+Karten unterstützen nur die Formatierung in der Texteigenschaft, nicht in den Eigenschaften titeln oder untertiteln. Die Formatierung kann mit einer Teilmenge der XML-Formatierung (HTML) oder Markdown je nach Kartentyp angegeben werden. Für die aktuelle und zukünftige Entwicklung wird adaptive Karten mit Markdown-Formatierung empfohlen.
 
-Die Formatierungsunterstützung unterscheidet sich zwischen verschiedenen Kartentypen, und das Rendering der Karte kann sich geringfügig zwischen dem Desktop und den Clients für Mobile Teams sowie Microsoft Teams im Desktop Browser unterscheiden.
+Die Formatierungsunterstützung unterscheidet sich zwischen verschiedenen Kartentypen, und das Rendern der Karte kann zwischen dem Desktop und den mobilen Teams-Clients sowie Teams im Desktopbrowser geringfügig variieren.
 
-Sie können ein Inlinebild mit einer beliebigen Teams-Karte einfügen. Bilder werden als  `.png` , `.jpg` oder `.gif` Dateien formatiert und dürfen nicht mehr als 1024 × 1024 px oder 1 MB betragen. Animierte GIF-Zeichen werden nicht offiziell unterstützt. *Siehe* [Karten Referenz](./cards-reference.md#inline-card-images)
+Sie können ein Inlinebild mit einer beliebigen Teams-Karte verwenden. Bilder, die als , oder Dateien formatiert werden und  `.png` `.jpg` dürfen `.gif` 1024 ×1024 px oder 1 MB nicht überschreiten. Animierte GIF wird offiziell nicht unterstützt. *Siehe Kartenreferenz* [](./cards-reference.md#inline-card-images)
 
-## <a name="formatting-cards-with-markdown"></a>Formatieren von Karten mit Abschlag
+## <a name="formatting-cards-with-markdown"></a>Formatieren von Karten mit Markdown
 
-Es gibt zwei Kartentypen, die das Abschlag in Microsoft Teams unterstützen:
+Es gibt zwei Kartentypen, die Markdown in Teams unterstützen:
 
 > [!div class="checklist"]
-> * **Adaptive Karten**: das Abschlag wird sowohl im Feld Adaptive Karten `Textblock` als auch unterstützt `Fact.Title` `Fact.Value` . HTML wird in adaptiven Karten nicht unterstützt.
-> * **O365-connectorkarten**: Abschlag und limitierter HTML-Code werden in Office 365-connectorkarten in den Textfeldern unterstützt.
+> * **Adaptive Karten:** Markdown wird im Feld Adaptive Karte sowie `Textblock` und `Fact.Title` `Fact.Value` unterstützt. HTML wird in adaptiven Karten nicht unterstützt.
+> * **O365 Connector Cards**: Markdown und eingeschränkter HTML-Code werden in Office 365 Connector-Karten in den Textfeldern unterstützt.
 
-# <a name="markdown-formatting-adaptive-cards"></a>[**Abschlag Formatierung: Adaptive Karten**](#tab/adaptive-md)
+# <a name="markdown-formatting-adaptive-cards"></a>[**Markdownformatierung: Adaptive Karten**](#tab/adaptive-md)
 
- Die unterstützten Formatvorlagen für `Textblock` `Fact.Title` und `Fact.Value` sind:
+ Die unterstützten Formatvorlagen für `Textblock` und `Fact.Title` `Fact.Value` sind:
 
 | Format | Beispiel | Markdown |
 | --- | --- | --- |
 | bold | **Bold** | ```**Bold**``` |
 | italic | _Italic_ | ```_Italic_``` |
-| Unsortierte Liste | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
-| sortierte Liste | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
+| Ungeordnete Liste | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| geordnete Liste | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | Hyperlinks |[Bing](https://www.bing.com/)| ```[Title](url)``` |
 
-Die folgenden Abschlag Tags werden nicht unterstützt:
+Die folgenden Markdown-Tags werden nicht unterstützt:
 
 * Überschriften
 * Tabellen
@@ -51,31 +51,31 @@ Die folgenden Abschlag Tags werden nicht unterstützt:
 > [!IMPORTANT]
 > Adaptive Karten unterstützen keine HTML-Formatierung.
 
-### <a name="newlines-for-adaptive-cards"></a>Neugliederungen für Adaptive Karten
+### <a name="newlines-for-adaptive-cards"></a>Newlines für adaptive Karten
 
-In Listen können Sie die `\r` oder `\n` Escape-Sequenzen für "reinlines" verwenden. `\n\n`Die Verwendung in einer Liste bewirkt, dass das nächste Element in der Liste eingerückt wird. Wenn Sie an einer anderen Stelle im TextBlock eine Umrisse benötigen, verwenden Sie `\n\n` .
+In Listen können Sie die `\r` Escapesequenzen für `\n` Newlines verwenden. Wenn Sie in einer Liste verwenden, wird das nächste Element in der Liste `\n\n` eingezogen. Wenn Sie Newlines an anderer Stelle im Textblock benötigen, verwenden Sie `\n\n` .
 
-### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops für Adaptive Karten
+### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>Unterschiede zwischen Mobilen und Desktops für adaptive Karten
 
-Die Formatierung unterscheidet sich geringfügig zwischen dem Desktop und den mobilen Versionen von Microsoft Teams.
+Die Formatierung ist zwischen dem Desktop und den mobilen Versionen von Teams geringfügig unterschiedlich.
 
-Auf dem Desktop wird die Formatierung für das Abgleichen von adaptiven Karten in beiden Webbrowsern und in der Microsoft Teams-Clientanwendung wie folgt angezeigt:
+Auf dem Desktop wird die Formatierung der adaptiven Karten-Markdown in webbrowsern und in der Teams-Clientanwendung wie dies angezeigt:
 
-![Formatieren von adaptiven Karten Abschlägen im Desktop Client](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
+![Formatierung der adaptiven Karte Markdown im Desktopclient](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
-Auf IOS wird die Formatierung für Adaptive Karten Abschriften wie folgt angezeigt:
+Unter iOS sieht die Formatierung der adaptiven Karten-Markdown wie dies aus:
 
-![Formatierung von adaptiven Karten Abschriften in ios](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
+![Formatierung der adaptiven Karte Markdown in iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
-Auf Android wird die Formatierung für Adaptive Karten Abschriften wie folgt angezeigt:
+Unter Android wird die Formatierung der adaptiven Karten-Markdown wie dies angezeigt:
 
-![Formatierung von adaptiven Karten Abschriften in Android](../../assets/images/cards/Adaptive-markdown-Android.png)
+![Adaptive Karten-Markdown-Formatierung in Android](../../assets/images/cards/Adaptive-markdown-Android.png)
 
 ### <a name="more-information-on-adaptive-cards"></a>Weitere Informationen zu adaptiven Karten
 
-[Text Features in adaptiven Karten](/adaptive-cards/create/textfeatures) Die in diesem Thema erwähnten Datums-und Lokalisierungsfeatures werden in Microsoft Teams nicht unterstützt.
+[Textfeatures in adaptiven Karten](/adaptive-cards/create/textfeatures) Die in diesem Thema erwähnten Datums- und Lokalisierungsfeatures werden in Teams nicht unterstützt.
 
-### <a name="formatting-sample-for-adaptive-cards"></a>Formatierungs Beispiel für Adaptive Karten
+### <a name="formatting-sample-for-adaptive-cards"></a>Formatierungsbeispiel für adaptive Karten
 
 ``` json
 {
@@ -109,24 +109,24 @@ Auf Android wird die Formatierung für Adaptive Karten Abschriften wie folgt ang
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards-v12"></a>Erwähnung der Unterstützung in Adaptive Cards v 1.2
+### <a name="mention-support-within-adaptive-cards-v12"></a>Erwähnen der Unterstützung in adaptiven Karten v1.2
 
-Kartenbasierte Erwähnungen werden in den Netz-, Desktop-und mobilen Clients unterstützt. Sie können @ Mentions in einem adaptiven Kartentext für Bots und Messaging-Erweiterungs Antworten hinzufügen.  Um @ Mentions in Cards hinzuzufügen, befolgten Sie die gleiche Benachrichtigungslogik und die gleiche Darstellung wie die nachrichtenbasierte [Erwähnungen in Kanal-und Gruppenchat Unterhaltungen](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions ).
+Kartenbasierte Erwähnungen werden in Web-, Desktop- und mobilen Clients unterstützt. Sie können @-Erwähnungen in einem adaptiven Kartentext für Bots und Nachrichtenerweiterungsantworten hinzufügen.  Um @-Erwähnungen in Karten hinzuzufügen, folgen Sie derselben Benachrichtigungslogik und dem Rendern wie nachrichtenbasierte Erwähnungen in Kanal- und [Gruppenchatunterhaltungen.](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions )
 
-Bots und Messaging-Erweiterungen können Erwähnungen innerhalb des Karteninhalts in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) und [FactSet](https://adaptivecards.io/explorer/FactSet.html) -Elementen enthalten.
+Bots und Messagingerweiterungen können Erwähnungen innerhalb des Karteninhalts in [TextBlock-](https://adaptivecards.io/explorer/TextBlock.html) und [FactSet-Elementen](https://adaptivecards.io/explorer/FactSet.html) enthalten.
 
 > [!NOTE]
-> * [Medienelemente](https://adaptivecards.io/explorer/Media.html) werden derzeit in Adaptive Cards v 1.2 auf der Teams-Plattform nicht unterstützt.
-> * Kanal & Team Erwähnungen werden in bot-Nachrichten nicht unterstützt.
+> * [Medienelemente](https://adaptivecards.io/explorer/Media.html) werden derzeit in adaptiven Karten v1.2 auf der Teams-Plattform nicht unterstützt.
+> * Channel & Team erwähnungen werden in Botnachrichten nicht unterstützt.
 
-### <a name="constructing-mentions"></a>Erstellen von Erwähnungen
+#### <a name="constructing-mentions"></a>Erstellen von Erwähnungen
 
-Um eine Erwähnung in eine Adaptive Karte aufzunehmen, muss Ihre APP die folgenden Elemente enthalten:
+Um eine Erwähnung in einer adaptiven Karte zu verwenden, muss Ihre App die folgenden Elemente enthalten:
 
-* `<at>username</at>` in den unterstützten Adaptive Card-Elementen
-* Das `mention` Objekt innerhalb einer `msteams` Eigenschaft im Karteninhalt, das die Teams-Benutzer-ID des erwähnten Benutzers enthält
+* `<at>username</at>` in den unterstützten adaptiven Kartenelementen
+* Das Objekt innerhalb einer Eigenschaft im Karteninhalt, die die `mention` `msteams` Teams-Benutzer-ID des erwähnten Benutzers enthält
 
-### <a name="sample-adaptive-card-with-a-mention"></a>Beispiel Adaptive Karte mit Erwähnung
+#### <a name="sample-adaptive-card-with-a-mention"></a>Beispiel für adaptive Karte mit erwähnung
 
 ``` json
 {
@@ -157,45 +157,106 @@ Um eine Erwähnung in eine Adaptive Karte aufzunehmen, muss Ihre APP die folgend
 }
 ```
 
-# <a name="markdown-formatting-o365-connector-cards"></a>[**Abschlag Formatierung: O365-Verbindungskarten**](#tab/connector-md)
 
-Connectorkarten unterstützen beschränkte Abschlag-und HTML-Formatierung. Die HTML-Unterstützung wird im letzten Abschnitt beschrieben.
+### <a name="information-masking-in-adaptive-cards"></a>Informationsmasken in adaptiven Karten
+Verwenden Sie die Informationsmaskeneigenschaft, um bestimmte Informationen zu maskieren, z. B. Kennwort oder vertrauliche Informationen von Benutzern.
+
+> [!NOTE]
+> Die Informationsmaskeneigenschaft ist derzeit nur in der Entwicklervorschau verfügbar.
+
+#### <a name="mask-information"></a>Maskeninformationen
+Um Informationen in adaptiven Karten zu maskieren, fügen Sie die Eigenschaft zum Eingeben `isMasked`  `Input.Text` hinzu, und legen Sie den Wert auf *true .*
+
+#### <a name="sample-adaptive-card-with-masking-property"></a>Beispiel für adaptive Karte mit Maskierungseigenschaft
+
+```json
+{
+    "type": "Input.Text",
+    "id": "secretThing",
+    "style": "password",
+    "isMasked": true
+  },
+```
+
+Die folgende Abbildung ist ein Beispiel für die Maskierung von Informationen in adaptiven Karten:
+
+![Maskieren eines Informationsbilds](../../assets/images/cards/masking-information-view.png)
+
+### <a name="full-width-adaptive-card"></a>Adaptive Karte mit voller Breite
+Sie können die Eigenschaft verwenden, um die Breite einer adaptiven Karte zu erweitern und `msteams` zusätzlichen Canvasbereich zu nutzen. Informationen zur Verwendung der Eigenschaft finden Sie im folgenden Beispiel:
+
+#### <a name="constructing-full-width-cards"></a>Erstellen von Karten mit voller Breite
+Um eine adaptive Karte mit voller Breite zu erstellen, muss das Objekt in der Eigenschaft im Karteninhalt `width` `msteams` auf festgelegt `Full` werden.
+Darüber hinaus muss Ihre App die folgenden Elemente enthalten:
+
+#### <a name="sample-adaptive-card-with-full-width"></a>Beispiel für adaptive Karte mit voller Breite
+
+``` json
+{
+    "type": "AdaptiveCard",
+    "body": [{
+        "type": "Container",
+        "items": [{
+            "type": "TextBlock",
+            "text": "Digest card",
+            "size": "Large",
+            "weight": "Bolder"
+        }]
+    }],
+    
+    "msteams": {
+        "width": "Full"
+    },
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+
+Eine adaptive Karte mit voller Breite wird wie folgt ![ angezeigt: Adaptive Kartenansicht mit voller Breite](../../assets/images/cards/full-width-adaptive-card.png)
+
+Wenn Sie die Eigenschaft nicht auf Vollständig festgelegt haben, lautet die Standardansicht der adaptiven Karte wie folgt: Adaptive Kartenansicht mit geringer `width`  ![ Breite](../../assets/images/cards/small-width-adaptive-card.png)
+
+
+
+# <a name="markdown-formatting-o365-connector-cards"></a>[**Markdownformatierung: O365 Connector Cards**](#tab/connector-md)
+
+Connectorkarten unterstützen eine eingeschränkte Markdown- und HTML-Formatierung. Die HTML-Unterstützung wird im letzten Abschnitt beschrieben.
 
 | Format | Beispiel | Markdown |
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
 | Kopfzeile (Ebenen 1 &ndash; 3) | **Text** | `### Text`|
-| durchgestrichen | ~~text~~ | `~~text~~` |
-| Unsortierte Liste | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
-| sortierte Liste | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
-| Vorformatierter Text | `text` | ``preformatted text`` |
-| blockquote | >blockquote-Text | `>blockquote text` |
+| strikethrough | ~~text~~ | `~~text~~` |
+| Ungeordnete Liste | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| geordnete Liste | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
+| vorformatierter Text | `text` | ``preformatted text`` |
+| blockquote | >blockquote text | `>blockquote text` |
 | Link | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
-| Bild Link |![Duck on a Rock](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
+| Bildlink |![Ente auf einem Felchen](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
-In connectorkarten werden für die neureihen für `\n\n` , jedoch nicht für `\n` oder gerendert `\r` .
+In Connectorkarten werden Newlines für `\n\n` gerendert, aber nicht für `\n` oder `\r` .
 
-### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>Unterschiede bei Mobiltelefonen und Desktops für connectorkarten mit Abschlag
+### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>Unterschiede zwischen Mobilen und Desktops für Connectorkarten mithilfe von Markdown
 
-Auf dem Desktop sieht die Abschlag Formatierung für connectorkarten wie folgt aus:
+Auf dem Desktop sieht die Markdownformatierung für Connectorkarten wie dies aus:
 
-![Abschlag Formatierung für connectorkarten im Desktop Client](../../assets/images/cards/connector-desktop-markdown-combined.png)
+![Markdownformatierung für Connectorkarten im Desktopclient](../../assets/images/cards/connector-desktop-markdown-combined.png)
 
-Auf IOS sieht die Abschläge für Verbindungskarten wie folgt aus:
+Unter iOS sieht die Markdownformatierung für Connectorkarten wie dies aus:
 
-![Abschlag Formatierung für connectorkarten im IOS-Client](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
+![Markdownformatierung für Connectorkarten im iOS-Client](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
 
 Probleme:
 
-* Der IOS-Client für Microsoft Teams rendert keine Abschlag-oder HTML-Inline Bilder in Steckkarten.
-* Block Zitate werden als Einzüge, jedoch ohne grauen Hintergrund gerendert.
+* Der iOS-Client für Teams rendert keine Markdown- oder HTML-Inlinebilder in Connectorkarten.
+* Blockquotes werden als eingezogen gerendert, aber ohne grauen Hintergrund.
 
-Auf Android sieht die Abschläge für Verbindungskarten wie folgt aus:
+Unter Android sieht die Markdownformatierung für Connectorkarten wie dies aus:
 
-![Abschlag Formatierung für connectorkarten im Android-Client](../../assets/images/cards/connector-android-markdown-combined.png)
+![Markdownformatierung für Connectorkarten im Android-Client](../../assets/images/cards/connector-android-markdown-combined.png)
 
-### <a name="formatting-example-for-markdown-connector-cards"></a>Formatierungs Beispiel für Abschlag-konnektorkarten
+### <a name="formatting-example-for-markdown-connector-cards"></a>Formatierungsbeispiel für Markdown Connector Cards
 
 ``` json
 {
@@ -246,45 +307,45 @@ Auf Android sieht die Abschläge für Verbindungskarten wie folgt aus:
 
 ## <a name="formatting-cards-with-html"></a>Formatieren von Karten mit HTML
 
-# <a name="html-formatting-o365-connector-cards"></a>[**HTML-Formatierung: O365-Verbindungskarten**](#tab/connector-html)
+# <a name="html-formatting-o365-connector-cards"></a>[**HTML-Formatierung: O365 Connector Cards**](#tab/connector-html)
 
-Connectorkarten unterstützen beschränkte Abschlag-und HTML-Formatierung. Das Abschlag wird im nächsten Abschnitt beschrieben.
+Connectorkarten unterstützen eine eingeschränkte Markdown- und HTML-Formatierung. Markdown wird im nächsten Abschnitt beschrieben.
 
 | Format | Beispiel | HTML |
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
 | Kopfzeile (Ebenen 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
-| durchgestrichen | ~~text~~ | `<strike>text</strike>` |
-| Unsortierte Liste | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
-| sortierte Liste | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| Vorformatierter Text | `text` | `<pre>text</pre>` |
+| strikethrough | ~~text~~ | `<strike>text</strike>` |
+| Ungeordnete Liste | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| geordnete Liste | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
+| vorformatierter Text | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | Link | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| Bild Link | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| Bildlink | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-In connectorkarten werden die Neubuchungen in HTML mithilfe des- `<p>` Tags gerendert.
+In Connectorkarten werden Newlines mithilfe des Tags in HTML `<p>` gerendert.
 
-### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a>Unterschiede zwischen Mobiltelefonen und Desktops für connectorkarten mithilfe von HTML
+### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a>Unterschiede zwischen Mobilen und Desktops für Connectorkarten mithilfe von HTML
 
-Auf dem Desktop sieht die HTML-Formatierung für Verbindungskarten wie folgt aus:
+Auf dem Desktop sieht die HTML-Formatierung für Connectorkarten wie dies aus:
 
-![HTML-Formatierung für Verbindungskarten im Desktop Client](../../assets/images/cards/Connector-desktop-html-combined.png)
+![HTML-Formatierung für Connectorkarten im Desktopclient](../../assets/images/cards/Connector-desktop-html-combined.png)
 
-Auf IOS sieht HTML-Formatierung wie folgt aus:
+Unter iOS sieht die HTML-Formatierung wie dies aus:
 
-![HTML-Formatierung für Verbindungskarten im IOS-Client](../../assets/images/cards/connector-iphone-html-combined-80.png)
+![HTML-Formatierung für Connectorkarten im iOS-Client](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
 Probleme:
 
-* Inline Bilder werden nicht in ios unter Verwendung von "Abschlag" oder "HTML in"-Steckkarten gerendert.
-* Vorformatierter Text wird gerendert, weist jedoch keinen grauen Hintergrund auf.
+* Inlinebilder werden unter iOS nicht mit Markdown oder HTML in ConnectorKarten gerendert.
+* Vorformatierter Text wird gerendert, hat jedoch keinen grauen Hintergrund.
 
-Auf Android sieht HTML-Formatierung wie folgt aus:
+Unter Android sieht die HTML-Formatierung wie dies aus:
 
-![HTML-Formatierung für Verbindungskarten im Android-Client](../../assets/images/cards/connector-android-html-combined.png)
+![HTML-Formatierung für Connectorkarten im Android-Client](../../assets/images/cards/connector-android-html-combined.png)
 
-### <a name="formatting-sample-for-html-connector-cards"></a>Formatierungs Beispiel für HTML-Verbindungskarten
+### <a name="formatting-sample-for-html-connector-cards"></a>Formatierungsbeispiel für HTML-Connectorkarten
 
 ``` json
 {
@@ -334,48 +395,48 @@ Auf Android sieht HTML-Formatierung wie folgt aus:
 
 ```
 
-# <a name="html-formatting-hero-and-thumbnail-cards"></a>[**HTML-Formatierung: Hero-und Miniatur Ansichtskarten**](#tab/simple-html)
+# <a name="html-formatting-hero-and-thumbnail-cards"></a>[**HTML-Formatierung: Hero- und Miniaturansichtskarten**](#tab/simple-html)
 
-HTML-Tags werden für einfache Karten wie die Hero-und die Thumbnail-Karte unterstützt. Abschläge werden nicht unterstützt.
+HTML-Tags werden für einfache Karten wie die Held- und Miniaturansichtskarte unterstützt. Markdown wird nicht unterstützt.
 
 | Format | Beispiel | HTML |
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
 | Kopfzeile (Ebenen 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
-| durchgestrichen | ~~text~~ | `<strike>text</strike>` |
-| Unsortierte Liste | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
-| sortierte Liste | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| Vorformatierter Text | `text` | `<pre>text</pre>` |
+| strikethrough | ~~text~~ | `<strike>text</strike>` |
+| Ungeordnete Liste | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| geordnete Liste | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
+| vorformatierter Text | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | Link | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| Bild Link |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| Bildlink |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-### <a name="mobile-and-desktop-differences-for-simple-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops für einfache Karten
+### <a name="mobile-and-desktop-differences-for-simple-cards"></a>Unterschiede zwischen Mobilen und Desktops für einfache Karten
 
-Aufgrund der Unterschiede zwischen Desktop und mobiler Plattform unterscheidet sich die Formatierung zwischen dem Desktop und der mobilen Version von Microsoft Teams.
+Aufgrund von Auflösungsunterschieden zwischen dem Desktop und der mobilen Plattform unterscheiden sich die Formatierungen zwischen dem Desktop und der mobilen Version von Teams.
 
-Auf dem Desktop wird die HTML-Formatierung wie folgt angezeigt:
+Auf dem Desktop wird die HTML-Formatierung wie dies angezeigt:
 
-![HTML-Formatierung im Desktop Client](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
+![HTML-Formatierung im Desktopclient](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
 
-Auf IOS wird die HTML-Formatierung wie folgt angezeigt:
+Unter iOS wird die HTML-Formatierung wie dies angezeigt:
 
-![HTML-Formatierung im IOS-Client](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
+![HTML-Formatierung im iOS-Client](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
 
 Probleme:
 
-* Zeichenformatierungen wie Fett und kursiv werden auf IOS nicht gerendert.
+* Zeichenformatierungen wie fett und italisch werden unter iOS nicht gerendert.
 
-Auf Android wird die HTML-Formatierung wie folgt angezeigt:
+Unter Android wird die HTML-Formatierung wie dies angezeigt:
 
 ![HTML-Formatierung im Android-Client](../../assets/images/cards/card-formatting-xml-android-60.png)
 
-Zeichenformatierungen wie Fett und kursiv werden auf Android korrekt angezeigt.
+Zeichenformatierung wie fett und italisch wird unter Android korrekt angezeigt.
 
-### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a>Formatierungs Beispiel für HTML-Formatierung in einfachen Karten
+### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a>Formatierungsbeispiel für die HTML-Formatierung in einfachen Karten
 
-Diese Screenshots wurden mit Microsoft Teams AppStudio erstellt, wobei die Text-Eigenschaft einer Hero Card auf die folgende Zeichenfolge festgelegt wurde. Sie können die Formatierung in ihren eigenen Karten testen, indem Sie diesen Code ändern.
+Diese Screenshots wurden mit Teams AppStudio erstellt, wobei die Texteigenschaft einer Heldenkarte auf die folgende Zeichenfolge festgelegt wurde. Sie können die Formatierung in Ihren eigenen Karten testen, indem Sie diesen Code ändern.
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 

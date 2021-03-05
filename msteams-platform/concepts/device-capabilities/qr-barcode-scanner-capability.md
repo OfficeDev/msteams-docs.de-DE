@@ -1,22 +1,26 @@
 ---
-title: Integrieren von QR- oder Barcodescannerfunktionen
+title: QR- oder Barcode-Scannerfunktion integrieren
 description: Verwenden des Teams JavaScript-Client-SDK zum Nutzen der QR- oder Barcodescannerfunktion
-keywords: Kameramedien qr code qrcode Strichcode Strichcode Scanner ScanFunktionen systemeigene Geräteberechtigungen
+keywords: Kameramedien qr code qrcode Strichcode Barcodescanner Scanfunktionen systemeigene Geräteberechtigungen
 ms.author: lajanuar
-ms.openlocfilehash: 048c6b58fc126d1dd08867605784b6a150737195
-ms.sourcegitcommit: 0bb6efb3003a1949288e4601e3301b69e67d4c26
+ms.openlocfilehash: 1a13de1a4d9e03f0f36f03af0fdd948cf74a0392
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50295089"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449416"
 ---
-# <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrieren von QR- oder Barcodescannerfunktionen 
+# <a name="integrate-qr-or-barcode-scanner-capability"></a>QR- oder Barcode-Scannerfunktion integrieren 
 
-Barcode ist eine Methode zum Darstellen von Daten in einem visuellen und maschinenlesbaren Format. Der Strichcode enthält Informationen zu einem Produkt, z. B. einen Typ, eine Größe, einen Hersteller und ein Ursprungsland in Form von Balken und Leerzeichen. Der Code wird mithilfe des optischen Scanners auf der nativen Gerätekamera gelesen. Für eine reichhaltigere Zusammenarbeit können Sie die QR- oder Strichcodescannerfunktion, die in der Teams-Plattform bereitgestellt wird, in Ihre Teams-App integrieren. In diesem Dokument erfahren Sie, wie Sie die Funktion integrieren.  
+In diesem Dokument erfahren Sie, wie Sie die QR- oder Strichcodescannerfunktion integrieren. 
+
+Barcode ist eine Methode zum Darstellen von Daten in einem visuellen und maschinenlesbaren Format. Der Strichcode enthält Informationen zu einem Produkt, z. B. einen Typ, eine Größe, einen Hersteller und ein Ursprungsland in Form von Balken und Leerzeichen. Der Code wird mithilfe des optischen Scanners auf der nativen Gerätekamera gelesen. Für eine reichhaltigere Zusammenarbeit können Sie die QR- oder Strichcodescannerfunktion, die in der Teams-Plattform bereitgestellt wird, in Ihre Teams-App integrieren.   
 
 Sie können [das Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)verwenden, das die tools zur Verfügung stellt, die Für Ihre App erforderlich sind, um auf die systemeigenen Gerätefunktionen des Benutzers zu [zugreifen.](native-device-permissions.md) Verwenden Sie die `scanBarCode` API, um die Scannerfunktion in Ihre App zu integrieren. 
 
 ## <a name="advantage-of-integrating-qr-or-barcode-scanner-capability"></a>Vorteile der Integration von QR- oder Barcodescannerfunktionen
+
+Nachfolgend finden Sie die Vorteile der Integration von QR- oder Barcodescannerfunktionen: 
 
 * Die Integration ermöglicht Es Web-App-Entwicklern auf der Teams-Plattform, QR- oder Barcodescanfunktionen mit dem Teams JavaScript-Client-SDK zu nutzen.
 * Bei diesem Feature muss der Benutzer nur einen QR- oder Strichcode in einem Frame in der Mitte der Scannerbenutzeroberfläche ausrichten, und der Code wird automatisch gescannt. Die gespeicherten Daten werden mit der aufrufenden Web-App wieder freigegeben. Dadurch werden Unannehmlichkeiten und menschliche Fehler vermieden, wenn Sie langwierige Produktcodes oder andere relevante Informationen manuell eingeben.
@@ -105,3 +109,6 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 > [!div class="nextstepaction"]
 > [Integrieren von Medienfunktionen in Teams](mobile-camera-image-permissions.md)
+
+> [!div class="nextstepaction"]
+> [Integrieren von Standortfunktionen in Teams](location-capability.md)

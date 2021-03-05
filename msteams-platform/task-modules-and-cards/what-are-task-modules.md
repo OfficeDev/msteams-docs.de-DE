@@ -4,12 +4,12 @@ author: clearab
 description: Fügen Sie modale Popuperfahrungen hinzu, um Informationen zu Ihren Benutzern aus Ihren Microsoft Teams-Apps zu sammeln oder ihren Benutzern zu zeigen.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: bd353e8330f2587e2504d6c00346feeff89d6a4d
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: 3920d3ae71857dcc7673c4c27449b71009c7f07e
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294733"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449549"
 ---
 # <a name="what-are-task-modules"></a>Was sind Aufgabenmodule?
 
@@ -45,9 +45,9 @@ Aufgabenmodule können von Registerkarten, Bots oder Tiefenlinks aufgerufen werd
 
 | **Aufgerufen über...** | **Aufgabenmodul ist HTML/JavaScript** | **Aufgabenmodul ist adaptive Karte** |
 | --- | --- | --- |
-| **JavaScript auf einer Registerkarte** | 1. Verwenden der Teams-Client-SDK-Funktion `tasks.startTask()` mit einer optionalen `submitHandler(err, result)` Rückruffunktion <br/><br/> 2. Rufen Sie im Aufgabenmodulcode nach Abschluss des Benutzers die Teams SDK-Funktion mit einem `tasks.submitTask()` `result` Objekt als Parameter auf. Wenn ein `submitHandler` Rückruf in angegeben `tasks.startTask()` wurde, ruft Teams ihn mit als `result` Parameter auf.<br/><br/> 3. Wenn beim Aufrufen ein Fehler aufgetreten ist, wird die Funktion stattdessen `tasks.startTask()` `submitHandler` mit einer Zeichenfolge `err` aufgerufen. <br/><br/> 4. Sie können auch beim Aufrufen einen angeben – in diesem `completionBotId` Fall wird stattdessen an den Bot `teams.startTask()` `result` gesendet. | 1. Rufen Sie die Teams-Client-SDK-Funktion mit einem TaskInfo-Objekt auf und enthält das JSON für die adaptive Karte, die im Popup `tasks.startTask()` des [](#the-taskinfo-object) `TaskInfo.card` Aufgabenmoduls angezeigt werden soll. <br/><br/> 2. Wenn ein Rückruf in angegeben wurde, ruft Teams ihn mit einer Zeichenfolge auf, wenn beim Aufrufen ein Fehler aufgetreten ist oder wenn der Benutzer das Popup des Aufgabenmoduls mit dem X oben rechts `submitHandler` `tasks.startTask()` `err` `tasks.startTask()` schließt. <br/><br/> 3. Wenn der Benutzer eine Action.Submit-Schaltfläche drückt, wird sein Objekt als `data` Wert von `result` zurückgegeben. |
+| **JavaScript auf einer Registerkarte** | 1. Verwenden der Teams-Client-SDK-Funktion `tasks.startTask()` mit einer optionalen `submitHandler(err, result)` Rückruffunktion <br/><br/> 2. Rufen Sie im Aufgabenmodulcode nach Abschluss des Benutzers die Teams SDK-Funktion mit einem `tasks.submitTask()` `result` Objekt als Parameter auf. Wenn ein `submitHandler` Rückruf in angegeben `tasks.startTask()` wurde, ruft Teams ihn mit als `result` Parameter auf.<br/><br/> 3. Wenn beim Aufrufen ein Fehler aufgetreten ist, wird die Funktion stattdessen `tasks.startTask()` `submitHandler` mit einer Zeichenfolge `err` aufgerufen. <br/><br/> 4. Sie können auch beim Aufrufen einen angeben – in diesem `completionBotId` Fall wird stattdessen an den Bot `teams.startTask()` `result` gesendet. | 1. Rufen Sie die Teams-Client-SDK-Funktion mit einem TaskInfo-Objekt auf und enthält das JSON für die adaptive Karte, die im Popup des `tasks.startTask()` [](#the-taskinfo-object) `TaskInfo.card` Aufgabenmoduls angezeigt werden soll. <br/><br/> 2. Wenn ein Rückruf in angegeben wurde, ruft Teams ihn mit einer Zeichenfolge auf, wenn beim Aufrufen ein Fehler aufgetreten ist oder wenn der Benutzer das Popup des Aufgabenmoduls mit dem X oben rechts `submitHandler` `tasks.startTask()` `err` `tasks.startTask()` schließt. <br/><br/> 3. Wenn der Benutzer eine Action.Submit-Schaltfläche drückt, wird sein Objekt als `data` Wert von `result` zurückgegeben. |
 | **Botkartenschaltfläche** | 1. Bot-Kartenschaltflächen können je nach Schaltflächentyp aufgabenmodule auf zwei Arten aufrufen: eine Deep Link-URL oder durch Senden einer `task/fetch` Nachricht. Wie deep link URLs funktionieren, erfahren Sie unten. <br/><br/> 2. Wenn die Aktion der Schaltfläche ist ( Schaltflächentyp für adaptive Karten), wird ein Ereignis (http POST unter den Deckeln) an den Bot gesendet, und der Bot antwortet auf den POST mit `type` `task/fetch` HTTP 200 und den Antworttext, der einen Wrapper um das `Action.Submit` `task/fetch invoke` [TaskInfo-Objekt](#the-taskinfo-object)enthält. Dies wird im Aufrufen eines Aufgabenmoduls über [task/fetch ausführlich erläutert.](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoking-a-task-module-via-taskfetch)<br/><br/> 3. Teams zeigt das Aufgabenmodul an. Wenn der Benutzer fertig ist, rufen Sie die Teams SDK-Funktion `tasks.submitTask()` mit einem Objekt als Parameter `result` auf. <br/><br/> 4. Der Bot empfängt eine `task/submit invoke` Nachricht, die das Objekt `result` enthält. Sie haben drei verschiedene Möglichkeiten, auf die Nachricht zu reagieren: indem Sie nichts tun (die Aufgabe wurde erfolgreich abgeschlossen), indem Sie dem Benutzer eine Nachricht in einem Popupfenster anzeigen oder ein anderes Aufgabenmodulfenster aufrufen (d. h. eine Assistentenerfahrung `task/submit` erstellen). Diese drei Optionen werden in der ausführlichen Diskussion zu [Aufgabe/Absenden ausführlicher behandelt.](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit) | 1. Wie Schaltflächen auf Bot Framework-Karten unterstützen Schaltflächen auf adaptiven Karten zwei Methoden zum Aufrufen von Aufgabenmodulen: Deep Link-URLs mit Schaltflächen und über die Verwendung von `Action.openUrl` `task/fetch` `Action.Submit` Schaltflächen. <br/><br/> 2. Aufgabenmodule mit adaptiven Karten funktionieren sehr ähnlich wie der HTML/JavaScript-Fall (siehe links). Der Hauptunterschied besteht in dem, dass es keine Möglichkeit zum Aufrufen gibt, da es kein JavaScript gibt, wenn Sie adaptive Karten `tasks.submitTask()` verwenden. Stattdessen übernimmt Teams das Objekt und gibt es als Nutzlast `data` `Action.Submit` des Ereignisses `task/submit` zurück, wie hier [beschrieben.](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit) |
-| **URL für tiefe Verknüpfungen** <br/>[#A0](#task-module-deep-link-syntax) | 1. Teams ruft das Aufgabenmodul auf. die URL, die im angegebenen Parameter des Deep-Links `<iframe>` `url` angezeigt wird. Es gibt keinen `submitHandler` Rückruf. <br/><br/> 2. Rufen Sie im JavaScript der Seite im Aufgabenmodul auf, um es mit einem Objekt als Parameter zu schließen, genauso wie beim Aufrufen von einer Registerkarte oder einer Botkartenschaltfläche. `tasks.submitTask()` `result` Die Fertigstellungslogik ist jedoch etwas anders. Wenn sich Ihre Fertigstellungslogik auf dem Client befindet (d. h. wenn kein Bot enthalten ist), gibt es keinen Rückruf, daher muss sich jede Abschlusslogik im Code vor dem Aufruf von `submitHandler` `tasks.submitTask()` befinden. Aufruffehler werden nur über die Konsole gemeldet. Wenn Sie über einen Bot verfügen, können Sie einen Parameter in der Tiefenverknüpfung angeben, um das Objekt über `completionBotId` `result` ein Ereignis zu `task/submit` senden. | 1. Teams ruft das Aufgabenmodul auf. Der Textkörper der JSON-Karte der adaptiven Karte wird als URL-codierter Wert des Parameters des `card` Deep-Links angegeben. <br/><br/> 2. Der Benutzer schließt das Aufgabenmodul, indem er oben rechts im Aufgabenmodul auf das X klickt oder eine Schaltfläche `Action.Submit` auf der Karte drückt. Da kein Anruf verfügbar ist, müssen Sie über einen Bot verfügen, um den Wert der Felder für `submitHandler` adaptive Karten zu senden. Verwenden Sie den Parameter im deep-Link, um den Bot anzugeben, an den `completionBotId` die Daten über ein Ereignis gesendet `task/submit invoke` werden. |
+| **URL für tiefe Verknüpfungen** <br/>[#A0](#task-module-deep-link-syntax) | 1. Teams ruft das Aufgabenmodul auf. die URL, die im angegebenen Parameter des Deep-Links `<iframe>` `url` angezeigt wird. Es gibt keinen `submitHandler` Rückruf. <br/><br/> 2. Rufen Sie im JavaScript der Seite im Aufgabenmodul auf, um es mit einem Objekt als Parameter zu schließen, genauso wie beim Aufrufen von einer Registerkarte oder einer Botkartenschaltfläche. `tasks.submitTask()` `result` Die Fertigstellungslogik ist jedoch etwas anders. Wenn sich Ihre Fertigstellungslogik auf dem Client befindet (d. h. wenn kein Bot enthalten ist), gibt es keinen Rückruf, daher muss sich jede Abschlusslogik im Code vor dem Aufruf von `submitHandler` `tasks.submitTask()` befinden. Aufruffehler werden nur über die Konsole gemeldet. Wenn Sie über einen Bot verfügen, können Sie einen Parameter in der Tiefenverknüpfung angeben, um das Objekt über `completionBotId` `result` ein Ereignis zu `task/submit` senden. | 1. Teams ruft das Aufgabenmodul auf. Der Textkörper der JSON-Karte der adaptiven Karte wird als URL-codierter Wert des Parameters des `card` Deep-Links angegeben. <br/><br/> 2. Der Benutzer schließt das Aufgabenmodul, indem er oben rechts im Aufgabenmodul auf das X klickt oder eine Schaltfläche `Action.Submit` auf der Karte drückt. Da kein Anruf besteht, müssen Sie über einen Bot verfügen, um den Wert der Felder für `submitHandler` adaptive Karten an zu senden. Verwenden Sie den Parameter im deep-Link, um den Bot anzugeben, an den `completionBotId` die Daten über ein Ereignis gesendet `task/submit invoke` werden. |
 
 > [!NOTE]
 > Das Aufrufen eines Aufgabenmoduls aus JavaScript wird auf Mobilgeräten nicht unterstützt.
@@ -171,7 +171,7 @@ Wenn Sie von einer Registerkarte aufrufen, müssen Sie eine adaptive Karte verwe
 }
 ```
 
-Wenn Sie von einem Bot aufrufen, müssen Sie eine Adaptive Karten-Bot-Kartenanlage wie im folgenden Beispiel verwenden:
+Wenn Sie von einem Bot aufrufen, müssen Sie eine adaptive Karten-Bot-Kartenanlage wie im folgenden Beispiel verwenden:
 
 ```json
 {
@@ -222,7 +222,7 @@ Beachten Sie, dass es gültig für und gleich ist, und in vielen Fällen ist, we
 
 Bei HTML/JavaScript-basierten Aufgabenmodulen liegt es in Ihrer Verantwortung, sicherzustellen, dass das Aufgabenmodul Ihrer App mit einer Tastatur verwendet werden kann. Sprachausgabeprogramme hängen auch von der Möglichkeit ab, über die Tastatur zu navigieren. Praktisch bedeutet dies zwei Dinge:
 
-1. Verwenden Sie [das tabindex-Attribut](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) in Ihren HTML-Tags, um zu steuern, welche Elemente fokussiert werden können und ob/wo es an der sequenziellen Tastaturnavigation (in der Regel mit den <kbd>Tab-</kbd> und <kbd>Umschalttasten)</kbd> beteiligt ist.
+1. Verwenden Sie [das tabindex-Attribut](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) in Ihren HTML-Tags, um zu steuern, welche Elemente fokussiert werden können und ob/wo es an der sequenziellen Tastaturnavigation (in der Regel mit den <kbd>Tab-</kbd> und Umschalttasten) beteiligt ist. <kbd></kbd>
 2. Behandeln des <kbd>Esc-Schlüssels</kbd> im JavaScript für Ihr Aufgabenmodul. Im Folgenden finden Sie ein Codebeispiel, das dies zeigt:
 
   ```javascript
@@ -236,10 +236,13 @@ Bei HTML/JavaScript-basierten Aufgabenmodulen liegt es in Ihrer Verantwortung, s
 
 Microsoft Teams stellt sicher, dass die Tastaturnavigation vom Aufgabenmodulheader in Ihren HTML ordnungsgemäß funktioniert und umgekehrt.
 
-## <a name="task-module-samples"></a>Aufgabenmodulbeispiele
+## <a name="code-sample"></a>Codebeispiel
+|**Beispielname** | **Beschreibung** | **.NET** | **Node.js**|
+|----------------|-----------------|--------------|----------------|
+|Aufgabenmodulbeispiel (Bots-V4) | Beispiele zum Erstellen von Aufgabenmodulen. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+|Aufgabenmodulbeispiel (Tabs + Bots-V3) | Beispiele zum Erstellen von Aufgabenmodulen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
 
-* [Node.js/TypeScript-Beispiel](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
-* [C#/.NET-Beispiel](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp)
+
 
 > [!div class="nextstepaction"]
 > [Weitere Informationen: Anfordern von Geräteberechtigungen](../concepts/device-capabilities/native-device-permissions.md)
@@ -249,3 +252,6 @@ Microsoft Teams stellt sicher, dass die Tastaturnavigation vom Aufgabenmodulhead
 
 > [!div class="nextstepaction"]
 > [Weitere Informationen: Integrieren von QR- oder Barcodescannerfunktionen in Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+
+> [!div class="nextstepaction"]
+> [Weitere Informationen: Integrieren von Standortfunktionen in Teams](../concepts/device-capabilities/location-capability.md)
