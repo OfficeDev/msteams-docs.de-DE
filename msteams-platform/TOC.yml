@@ -24,12 +24,14 @@
   items:
     - name: Lernprogramme
       href: tutorials/code-samples.md
-    - name: Erstellen einer App mithilfe von C#
+    - name: Erstellen einer App mithilfe von C# oder .NET
       href: tutorials/get-started-dotnet-app-studio.md
     - name: Erstellen einer App mithilfe von Node.js
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Erstellen einer App mit dem Yeoman-Generator
       href: tutorials/get-started-yeoman.md
+    - name: Aktualisieren von Microsoft Teams mit dem Yeoman-Generator
+      href: tutorials/UpgradeTeamsUsingYeoman.md
     - name: Codebeispiele
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: App-Grundlagen
@@ -76,6 +78,8 @@
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
         - name: QR- oder Barcode-Scannerfunktion integrieren
           href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+        - name: Integration von Standortfunktionen
+          href: concepts/device-capabilities/location-capability.md
 - name: Entwerfen Ihrer App
   items:
     - name: Übersicht
@@ -334,7 +338,7 @@
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
     - name: Ressourcenspezifische Einwilligung aktivieren
       href: graph-api/rsc/resource-specific-consent.md
-    - name: Proaktive Bot-Installation und Messaging aktivieren
+    - name: Proaktive Installation von Apps über die Graph-API und Senden von Nachrichten
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     - name: Importieren von Drittanbieter-Nachrichten
       href: graph-api/import-messages/import-external-messages-to-teams.md
@@ -408,6 +412,8 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: Features
           href: resources/dev-preview/developer-preview-features.md
+    - name: Änderungen am Registerkartenrand
+      href: resources/removing-tab-margins.md
     - name: SameSite-Cookie-Attribut (Update von 2020)
       href: resources/samesite-cookie-update.md
     - name: Zur Microsoft Teams-Dokumentation beitragen
