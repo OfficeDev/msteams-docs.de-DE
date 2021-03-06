@@ -3,12 +3,12 @@ title: Neuerungen
 description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 ms.topic: reference
 keywords: Teams, was neu ist
-ms.openlocfilehash: c8271a1d3cd442301016874fbb364b697c4f7c73
-ms.sourcegitcommit: 47cf0d05e15e5c23616b18ae4e815fd871bbf827
+ms.openlocfilehash: 62504b076fb8e4b0523a4a223301c9f031f03e7c
+ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50455385"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "50479854"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neues für Entwickler in Microsoft Teams
 
@@ -21,6 +21,9 @@ Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und d
 
 | **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
+|03/05/2021|Hinweis: Registerkarten haben keine Ränder mehr um ihre Erfahrungen. Registerkartenentwickler sollten ihre Apps überprüfen und aktualisieren. | [Entfernen von Registerkartenrändern](resources/removing-tab-margins.md) |
+|03/05/2021 | Der Standardinstallationsbereich und die Gruppenfunktion werden in der Entwicklervorschau angezeigt.| [Standardinstallationsbereich und Gruppenfunktion](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
+|03/05/2021|Neu anordnen von registerkarten für persönliche Apps|[Neu anordnen der Registerkarte Chat in persönlichen Apps](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
 |03/04/2021|Informationsmasken in adaptiven Karten finden Sie in der Entwicklervorschau.| [Informationsmasken in adaptiven Karten](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|Neu: Standortfunktionen hinzugefügt. <br/> Update: Informationen zu Standortfunktionen werden in der Übersicht über die Gerätefunktionen, systemeigene Geräteberechtigungen, Integrieren von Medienfunktionen und QR- oder Barcodescannerfunktionen hinzugefügt.|[Übersicht,](concepts/device-capabilities/device-capabilities-overview.md) [Geräteberechtigungen anfordern,](concepts/device-capabilities/native-device-permissions.md) [Medienfunktionen integrieren,](concepts/device-capabilities/mobile-camera-image-permissions.md) [QR- oder Strichcodescannerfunktion](concepts/device-capabilities/qr-barcode-scanner-capability.md)integrieren, [Standortfunktionen integrieren](concepts/device-capabilities/location-capability.md) |
 |02/18/2021|Neu: Qr- oder Strichcodescannerfunktion hinzugefügt. <br/> Update: Informationen zu QR- oder Strichcodescannerfunktionen werden in der Übersicht über geräteeigene Gerätefunktionen, systemeigene Geräteberechtigungen und Integrieren von Medienfunktionen hinzugefügt.|[Übersicht](concepts/device-capabilities/device-capabilities-overview.md), [Geräteberechtigungen anfordern,](concepts/device-capabilities/native-device-permissions.md) [Medienfunktionen integrieren,](concepts/device-capabilities/mobile-camera-image-permissions.md) [QR- oder Strichcodescannerfunktion integrieren](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
@@ -86,7 +89,7 @@ Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und d
 | 05/29/2018 | Adaptive Karten werden jetzt in Teams in den [Aktionen für adaptive Karten in Teams unterstützt.](task-modules-and-cards/cards/cards-reference.md) |
 | 05/29/2018 | Wenn Sie die Entwicklervorschau [verwenden,](~/resources/dev-preview/developer-preview-intro.md)kann Ihr Bot jetzt Dateien senden und empfangen.| [Senden und Empfangen von Dateien über Ihren Bot](~/concepts/bots/bots-files.md), Features im [öffentlichen Developer Preview für Microsoft Teams](~/resources/dev-preview/developer-preview-features.md)|
 | 04/17/2018 | replyToID wurde der Nutzlast für die `Invoke` `MessageBack` Und-Kartenaktionen hinzugefügt. Dies ist besonders hilfreich, wenn Sie die Nachricht aktualisieren müssen, aus der die Kartenaktion stammt. | [Kartenaktionen](~/concepts/cards/cards-actions.md)|
-| 04/12/2018 | Dieses Thema wurde hinzugefügt, um Änderungen an der Programmierschnittstelle von Teams und diesem Dokumentationssatz nachverfolgt zu haben. | [Neuigkeiten](~/whats-new.md)|
+| 04/12/2018 | Dieses Thema wurde hinzugefügt, um Änderungen an der Programmierschnittstelle von Teams und diesem Dokumentationssatz nachverfolgt zu haben. | [Neuerungen](~/whats-new.md)|
 | 04/10/2018 | Die Authentifizierungs-URLs wurden geändert, um die Mandanten-ID im Pfad konsistent zu verwenden. | [Authentifizierungsfluss für Registerkarten](~/concepts/authentication/auth-flow-tab.md), [AAD-Registerkartenauthentifizierung](~/concepts/authentication/auth-tab-AAD.md)|
 | 04/06/2018 | Entwurfsrichtlinien für die Verwendung des Befehlsfelds hinzugefügt. |[Befehlsfeld](~/resources/design/framework/command-box.md)|
 | 04/02/2018 | Verwenden von Bots zum Senden von Benachrichtigungen für Ihre App. |[Reine Benachrichtigungsbots](~/concepts/bots/bots-notification-only.md)|
