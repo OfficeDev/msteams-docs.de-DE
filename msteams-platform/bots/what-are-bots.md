@@ -1,107 +1,107 @@
 ---
-title: Was sind Unterhaltungsbots?
+title: Was sind Unterhaltungs-Bots?
 author: clearab
-description: Eine Übersicht über Unterhaltungsbots in Microsoft Teams.
+description: Überblick über Unterhaltungs-Bots in Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
 ms.openlocfilehash: 0304ae436b54db0d111eaed507beb350f1ca4632
 ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/12/2021
 ms.locfileid: "49797869"
 ---
-# <a name="what-are-conversational-bots-in-microsoft-teams"></a>Was sind Unterhaltungsbots in Microsoft Teams?
+# <a name="what-are-conversational-bots-in-microsoft-teams"></a>Was sind Unterhaltungs-Bots in Microsoft Teams?
 
-Unterhaltungsbots ermöglichen Benutzern, mit Ihrem Webdienst über Text, interaktive Karten und Aufgabenmodule zu interagieren. Sie sind unglaublich flexibel– Unterhaltungsbots können auf die Verarbeitung von wenigen einfachen Befehlen oder komplexen virtuellen Assistenten für die Verarbeitung von künstlicher Intelligenz und natürlicher Sprache begrenzt werden. Sie können ein Aspekt einer größeren Anwendung oder vollständig eigenständige Sein.
+Unterhaltungs-Bots ermöglichen Benutzern, mit Ihrem Webdienst über Text, interaktive Karten und Aufgabenmodule zu interagieren. Unterhaltungs-Bots können darauf zugeschnitten werden, mit nur wenigen einfachen Befehlen oder komplexen, KI-gestützten und natürliche Sprache verarbeitenden virtuellen Assistenten zu arbeiten. Sie können ein Element einer umfassenderen Anwendung darstellen oder vollkommen eigenständig sein.
 
-Die folgende GIF zeigt einen Benutzer, der mit einem Bot in einem 1:1-Chat mit Text und interaktiven Karten konversiert. Die suche nach der richtigen Mischung aus Karten, Text und Aufgabenmodulen ist der Schlüssel zum Erstellen eines nützlichen Bots. Vergessen Sie nicht, Bots sind viel mehr als nur Text!
+Das GIF unten zeigt einen Benutzer, der sich in einem 1:1-Chat mit einem Bot unterhält, wobei sowohl Text als auch interaktive Karten verwendet werden. Die richtige Mischung aus Karten, Text und Aufgabenmodulen zu finden, ist der Schlüssel zur Erstellung eines nützlichen Bots. Vergessen Sie nicht: Bots sind viel mehr als nur Text!
 
-![HÄUFIG gestellte Fragen plus GIF](~/assets/images/FAQPlusEndUser.gif)
+![FAQ Plus GIF](~/assets/images/FAQPlusEndUser.gif)
 
-## <a name="build--a-bot-for-teams-with-the-microsoft-bot-framework"></a>Erstellen eines Bots für Teams mit dem Microsoft Bot Framework
+## <a name="build--a-bot-for-teams-with-the-microsoft-bot-framework"></a>Erstellen eines Bots für Teams mit Microsoft Bot Framework
 
-Das [Microsoft Bot Framework](https://dev.botframework.com/) ist ein umfangreiches SDK zum Erstellen von Bots mit C#, Java, Python und JavaScript. Wenn Sie bereits über einen Bot verfügen, der auf dem Bot Framework basiert, können Sie ihn problemlos an die Arbeit in Microsoft Teams anpassen. Es wird empfohlen, entweder C# oder Node.js zu verwenden, um unsere [SDKs zu nutzen.](/microsoftteams/platform/#pivot=sdk-tools) Diese Pakete erweitern die grundlegenden Bot Builder -SDK-Klassen und -Methoden wie folgt:
+[Microsoft Bot Framework](https://dev.botframework.com/) ist ein umfangreiches SDK zur Erstellung von Bots mit C#, Java, Python und JavaScript. Wenn Sie bereits über einen Bot verfügen, der auf Bot Framework basiert, können Sie ihn problemlos für Microsoft Teams anpassen. Microsoft empfiehlt die Verwendung von C# oder Node.js, um unsere [SDKs](/microsoftteams/platform/#pivot=sdk-tools) nutzen zu können. Diese Pakete erweitern die grundlegenden Klassen und Methoden des Bot Builder-SDKs folgendermaßen:
 
-* Verwenden Sie spezielle Kartentypen wie die Office 365 Connector-Karte.
-* Nutzen und Festlegen von Teams-spezifischen Kanaldaten zu Aktivitäten.
-* Verarbeiten von Messagingerweiterungsanforderungen.
+* Verwenden Sie spezielle Kartentypen wie die Office 365-Connector-Karte.
+* Sie können Teams-spezifische Kanaldaten zu Aktivitäten verarbeiten und festlegen.
+* Verarbeiten Sie Messaging-Erweiterungsanforderungen.
 
-Ihr Teams Bot besteht aus drei Elementen:
+Ihr Teams-Bot besteht aus drei Elementen:
 
 * Einem öffentlich zugänglichen Webdienst, der von Ihnen betrieben wird.
-* Ihre Botregistrierung beim Bot Framework.
-* Ihr Teams-App-Paket mit Ihrem App-Manifest. Dies wird von Ihren Benutzern installiert und mit Ihrem Webdienst verbunden, der über den Botdienst geroutet wird.
+* Ihrer Bot-Registrierung bei Bot Framework.
+* Ihrem Teams-App-Paket mit Ihrem App-Manifest. Dies ist das Element, das von Ihren Benutzer installiert wird und das, geroutet durch den Bot-Dienst, die Verbindung Ihres Teams-Client mit Ihrem Webdienst herstellt.
 
 > [!IMPORTANT]
-> Sie können Teams-Apps in jeder Webprogrammiertechnologie entwickeln und die [Bot Framework-REST-APIs](/bot-framework/rest-api/bot-framework-rest-overview) direkt aufrufen, aber Sie müssen die tokenverarbeitung selbst durchführen.
+> Sie können Teams-Apps in jeder beliebigen Webprogrammiertechnologie entwickeln und die [Bot Framework-REST-APIs](/bot-framework/rest-api/bot-framework-rest-overview) direkt aufrufen, aber Sie müssen die gesamte Tokenverarbeitung selbst vornehmen.
 
 > [!TIP]
-> Teams App Studio* hilft Ihnen beim Erstellen und Konfigurieren Ihres App-Manifests und kann Ihren Webdienst als Bot im Bot Framework registrieren. Es enthält auch eine React-Steuerelementbibliothek und einen interaktiven Karten-Generator. *Weitere Informationen* [finden Sie unter "Erste Schritte mit Teams App Studio".](~/concepts/build-and-test/app-studio-overview.md)
+> Teams App Studio* hilft Ihnen bei der Erstellung und Konfiguration Ihres App-Manifests und kann Ihren Webdienst als Bot bei Bot Framework registrieren. Es enthält auch eine React-Steuerungsbibliothek sowie einen Generator für interaktive Karten. *Siehe* [Erste Schritte mit Teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
 ## <a name="create-a-chatbot-for-teams-with-microsoft-power-virtual-agents"></a>Erstellen eines Chatbots für Teams mit Microsoft Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) ist ein Chatbot-Dienst, der auf der Microsoft Power Platform und dem Bot Framework aufgebaut ist.  Der Entwicklungsprozess von Power Virtual Agent verwendet einen geführten, codegesteuerten, grafischen Schnittstellenansatz, mit dem jedes Mitglied Ihres Teams problemlos einen intelligenten virtuellen Agent erstellen und verwalten kann.  Sobald Sie die Erstellung ihres Chatbots im [Power Virtual](https://powervirtualagents.microsoft.com)Agents-Portal abgeschlossen haben, können Sie Ihren Power [Virtual Agents-Chatbot](how-to/add-power-virtual-agents-bot-to-teams.md)ganz einfach in Teams integrieren. Informationen zu den ersten Schritte beim Erstellen Ihres Power Virtual Agents-Chatbots finden Sie *in* der [Dokumentation zu Power Virtual Agents.](https://docs.microsoft.com/power-virtual-agents/)
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) ist ein Chatbot-Dienst, der auf der Microsoft Power-Plattform und Bot Framework aufbaut.  Der Power Virtual Agent-Entwicklungsprozess verwendet einen geführten, Ansatz ohne Code über eine grafische Schnittstelle, um jedes Mitglied Ihres Teams in die Lage zu versetzen, mühelos einen intelligenten virtuellen Agent zu erstellen und zu pflegen.  Sobald Sie Ihre Chatbot im [Power Virtual Agents-Portal](https://powervirtualagents.microsoft.com) erstellt haben, können Sie Ihren [Power Virtual Agents-Chatbot einfach in Teams integrieren](how-to/add-power-virtual-agents-bot-to-teams.md). Um mit der Erstellung Ihres Power Virtual Agents-Chatbots zu beginnen, *lesen* Sie die [Power Virtual Agents-Dokumentation](https://docs.microsoft.com/power-virtual-agents/).
 
 ## <a name="webhooks-and-connectors"></a>Webhooks und Connectors
 
-Mit Webhooks und Connectors können Sie einen einfachen Bot für grundlegende Interaktionen erstellen, z. B. einen Workflow oder andere einfache Befehle starten. Sie befinden sich nur in dem Team, in dem Sie sie erstellen, und sind für einfache Prozesse vorgesehen, die für den Workflow Ihres Unternehmens spezifisch sind. *Weitere Informationen* [finden Sie unter Was sind Webhooks und Connectors?](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+Mit Webhooks und Connectors können Sie einen einfachen Bot für grundlegende Interaktionen erstellen, wie das Starten eines Workflows oder andere einfache Befehle. Diese sind nur in dem Team verfügbar, in dem Sie sie erstellen, und sind für einfache, auf den Workflow Ihres Unternehmens zugeschnittene Prozesse gedacht. *Unter* [Was sind Webhooks und Connectors?](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) finden Sie weitere Informationen.
 
 ## <a name="where-bots-work-best"></a>Wo Bots am besten funktionieren
 
-Bots in Microsoft Teams können Teil einer 1:1-Unterhaltung, eines Gruppenchats oder eines Kanals in einem Team sein. Jeder Bereich bietet einzigartige Möglichkeiten und Herausforderungen für Ihren Unterhaltungsbot.
+Bots in Microsoft Teams können Teil einer 1:1-Unterhaltung, eines Gruppenchats oder eines Kanals in einem Team sein. Jeder Bereich bietet für Ihren Unterhaltungs-Bot besondere Chancen und Herausforderungen.
 
 ### <a name="in-a-channel"></a>In einem Kanal
 
-Kanäle enthalten Threadunterhaltungen zwischen mehreren Personen – potenziell viele Personen (derzeit bis zu 2.000). Dadurch erhält Ihr Bot potenziell eine enorme Reichweite, die einzelnen Interaktionen müssen aber präzise sein. Herkömmliche dialogartige Interaktionen mit vielen Fragen und Antworten funktionieren wahrscheinlich nicht gut. Versuchen Sie stattdessen, interaktive Karten oder Aufgabenmodule einzusetzen, oder lagern Sie die Unterhaltung in eine 1:1-Unterhaltung aus, wenn Sie viele Informationen sammeln müssen. Ihr Bot hat auch nur Zugriff auf Nachrichten, in denen er direkt ist, obwohl Sie zusätzliche Nachrichten aus der Unterhaltung mit Microsoft Graph und erhöhten Berechtigungen auf `@mentioned` Organisationsebene abrufen können.
+Kanäle enthalten Unterhaltungsthreads zwischen mehreren Personen – potenziell einer großen Anzahl von Personen (derzeit bis zu 2.000). Dadurch erhält Ihr Bot potenziell eine enorme Reichweite, die einzelnen Interaktionen müssen aber präzise sein. Herkömmliche dialogartige Interaktionen mit vielen Fragen und Antworten funktionieren wahrscheinlich nicht gut. Versuchen Sie stattdessen, interaktive Karten oder Aufgabenmodule einzusetzen, oder lagern Sie die Unterhaltung in eine 1:1-Unterhaltung aus, wenn Sie viele Informationen sammeln müssen. Ihr Bot hat nur Zugriff auf die Nachrichten, in denen er direkt @erwähnt (`@mentioned`) wird. Sie können allerdings mithilfe von Microsoft Graph und erhöhten Berechtigungen auf Organisationsebene auch weitere Nachrichten aus der Unterhaltung abrufen.
 
 Dies sind einige Szenarien, in denen Bots in einem Kanal glänzen können:
 
 * **Benachrichtigungen**, insbesondere, wenn Sie eine interaktive Karte für die Benutzer bereitstellen, die weitere Informationen aufnimmt.
-* **Feedbackszenarien** wie Umfragen und Umfragen.
+* **Feedbackszenarien** wie Abstimmungen und Umfragen.
 * Interaktionen, die in einem **einzelnen Anfrage/Antwortzyklus** gelöst werden können, und deren Ergebnis für mehrere Mitglieder der Unterhaltung nützlich ist.
-* **Social/Fun-Bots** – Erhalten Sie ein großartiges Cat-Bild, wählen Sie nach dem Zufallsprinzip einen Gewinn aus usw.
+* **Soziale/Spaß-Bots** – Holen Sie sich ein tolles Katzenbild, wählen Sie zufällig einen Gewinner aus, usw.
 
 ### <a name="in-a-group-chat"></a>In einem Gruppenchat
 
-Gruppenchats sind Unterhaltungen ohne Threading zwischen drei oder mehr Personen. Sie haben in der Regel weniger Mitglieder als ein Kanal und sind vorübergehender. Ähnlich wie bei einem Kanal hat Ihr Bot nur Zugriff auf Nachrichten, in denen er direkt `@mentioned` enthalten ist.
+Gruppenchats sind Unterhaltungen ohne Threads zwischen drei oder mehr Personen. Sie weisen tendenziell weniger Mitglieder auf als ein Kanal und sind kurzlebiger. Ähnlich wie bei einem Kanal hat ihr Bot nur Zugriff auf Nachrichten, in denen er direkt @erwähnt (`@mentioned`) wird.
 
-Szenarien, die in einem Kanal gut funktionieren, funktionieren in der Regel genauso gut in einem Gruppenchat.
+Szenarien, die in einem Kanal gut funktionieren, können in der Regel auch genau so gut in einem Gruppenchat verwendet werden.
 
-### <a name="in-a-one-to-one-chat"></a>In einem 1:1-Chat
+### <a name="in-a-one-to-one-chat"></a>In einem 1:1-Chat.
 
-Dies ist das herkömmliche Interaktionsverfahren eines Unterhaltungs-Bots mit einem Benutzer. Sie können unglaublich unterschiedliche Workloads ermöglichen. Q&A-Bots, Bots, die Arbeitsabläufe in anderen Systemen auslösen, Bots, die Witze erzählen, und Bots, die Notizen erfassen, sind nur ein paar Beispiele. Denken Sie daran, zu überlegen, ob eine unterhaltungsbasierte Schnittstelle die beste Möglichkeit ist, Ihre Funktionalität zu präsentieren.
+Dies ist das herkömmliche Interaktionsverfahren eines Unterhaltungs-Bots mit einem Benutzer. Bots eignen sich für unglaublich vielfältige Workloads. Q&A-Bots, Bots, die Arbeitsabläufe in anderen Systemen auslösen, Bots, die Witze erzählen, und Bots, die Notizen erfassen, sind nur ein paar Beispiele. Überprüfen Sie aber auch stets, ob eine unterhaltungsbasierte Oberfläche die beste Möglichkeit ist, Ihre Funktionalität darzustellen.
 
 ## <a name="bot-fails"></a>Bot schlägt fehl
 
-### <a name="having-multi-turn-experiences-in-chat"></a>Multi-Turn-Erfahrungen im Chat
+### <a name="having-multi-turn-experiences-in-chat"></a>Komplexe Aufgaben im Chat
 
-Ein umfangreiches Dialogfeld zwischen Ihrem Bot und dem Benutzer ist eine langsame und zu komplexe Methode, um eine Aufgabe fertig zu machen. Außerdem muss der Entwickler den Zustand beibehalten. Um diesen Zustand zu beenden, muss ein Benutzer entweder ein Zeit-Out verwenden oder *"Abbrechen"* eingeben. Vor allem ist der Prozess unnötig mühsam:
+Ein umfangreicher Dialog zwischen Ihrem Bot und dem Benutzer ist ein langsamer und übermäßig komplexer Weg, um eine Aufgabe zu erledigen, und er erfordert außerdem, dass der Entwickler den Zustand aufrechterhält. Um den Zustand zu verlassen, muss ein Benutzer entweder ein Timeout überschreiten oder *Abbrechen* eingeben. Vor allem aber ist der Prozess unnötig langwierig:
 
-USER: Planen Sie eine Besprechung mit Megan.
+BENUTZER: Plane eine Besprechung mit Marie.
 
-BOT: Ich habe 200 Ergebnisse gefunden, geben Sie bitte einen Vor- und Nachnamen an.
+BOT: Ich habe 200 Ergebnisse gefunden, bitte geben Sie einen Vor- und Nachnamen an.
 
-USER: Planen Sie eine Besprechung mit Megan Bowen.
+BENUTZER: Plane eine Besprechung mit Marie Krause.
 
-BOT: OK, wie lange möchten Sie sich mit Megan Bowen treffen?
+BOT: OK, Wann möchten Sie sich mit Marie Krause treffen?
 
-BENUTZER: 13:00 Uhr.
+BENUTZER: um 13:00 Uhr.
 
 BOT: An welchem Tag?
 
-### <a name="supporting-too-many-commands"></a>Unterstützen zu vieler Befehle
+### <a name="supporting-too-many-commands"></a>Unterstützung zu vieler Befehle
 
-Ein Bot, der übermäßig viele Befehle unterstützt, insbesondere eine breite Palette von Befehlen, wird von Benutzern nicht erfolgreich oder positiv gesehen. Da nur sechs sichtbare Befehle im aktuellen Botmenü enthalten sind, ist es unwahrscheinlich, dass etwas mehr mit beliebiger Häufigkeit verwendet wird. Bots, die tief in einen bestimmten Bereich gehen, anstatt zu versuchen, ein breiter Assistent zu sein, funktionieren und gehen besser.
+Ein Bot, der zu viele Befehle unterstützt, insbesondere eine zu große Anzahl von Befehlen, wird nicht erfolgreich sein oder von Benutzern nicht positiv gesehen werden. Da es im aktuellen Bot-Menü nur 6 sichtbare Befehle gibt, wird alles andere wahrscheinlich nicht häufig verwendet. Bots, die detailliert auf einen bestimmten Bereich eingehen, anstatt zu versuchen, ein allgemeiner Assistent zu sein, werden besser funktionieren und besser abschneiden.
 
-### <a name="maintaining-a-large-retrieval-knowledge-base-with-unranked-responses"></a>Verwalten einer großen Wissensdatenbank mit nicht getrunkenen Antworten
+### <a name="maintaining-a-large-retrieval-knowledge-base-with-unranked-responses"></a>Verwalten einer großen Retrieval-Knowledge Base mit Antworten ohne Rangfolge
 
-Bots eignen sich am besten für kurze, schnelle Interaktionen, ohne lange Listen zu durchsuchen, die nach einer Antwort suchen.
+Bots sind am besten für kurze, schnelle Interaktionen geeignet, nicht für das Durchsuchen langer Listen auf der Suche nach einer Antwort.
 
 ## <a name="get-started"></a>Erste Schritte
 
-* [#A0 in C#/dotnet](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)
-* [Teams-Unterhaltungsbot in JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)
+* [Teams-Unterhaltungs-Bot in C#/dotnet](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)
+* [Teams-Unterhaltungs-Bot in JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)
 
 ## <a name="learn-more"></a>Weitere Informationen
 
