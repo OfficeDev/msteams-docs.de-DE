@@ -5,14 +5,14 @@ description: Beschreibt, wie das Entfernen von Registerkartenrändern die Erfahr
 keywords: Tabulatoren entfernen Ränderabstand
 ms.topic: reference
 ms.author: lomeybur
-ms.openlocfilehash: 87766a40730fdaa2da80c2e0031eab655a993c33
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: 57e6b15999ffc41c0a3e09897ba565f9b3bf3705
+ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479956"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "50753518"
 ---
-# <a name="tab-margin-changes"></a>Änderungen am Tabrand
+# <a name="tab-margin-changes"></a>Änderungen am Registerkartenrand
 
 In diesem Dokument wird beschrieben, wie das Entfernen von Rändern um alle Registerkarten in Microsoft Teams die Erfahrung des Entwicklers beim Erstellen von Apps verbessert. Dies ist eine Verbesserung, die in Microsoft Teams in 2021 eingeführt wurde.
 Wenn Sie die Ränder um alle Registerkarten entfernen, können Entwickler Apps erstellen, die für Teams systemeigener aussehen. Dies entspricht auch unseren [Ui Kit-Designs.](~/tabs/design/tabs.md) Die meisten Apps sehen ohne die Ränder, die ihre Erfahrungen umgeben, bereits besser aus. Einige Registerkarten sind jedoch visuell von dieser Änderung betroffen, und Entwickler müssen die erforderlichen Änderungen vornehmen.
@@ -26,7 +26,7 @@ Wenn Sie die Ränder um alle Registerkarten entfernen, können Entwickler Apps e
 
 ## <a name="guidelines"></a>Anleitungen
 
-Microsoft Teams-Apps, die Registerkarten verwenden, sind von dieser Änderung betroffen. Entwickler sollten zu [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) wechseln, um zu bestimmen, wie ihre Registerkarten betroffen sind, und die erforderlichen Änderungen vornehmen.
+Microsoft Teams-Apps, die Registerkarten verwenden, sind von dieser Änderung betroffen. Entwickler müssen zu [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) wechseln, um zu bestimmen, wie ihre Registerkarten betroffen sind, und die erforderlichen Änderungen vornehmen.
 
 Registerkartenentwickler dürfen sich nicht darauf verlassen, dass Teams Ränder für ihre Registerkarten zur Verfügung stellt. Entwickler werden ermutigt, Ränder um ihre Registerkartendesigns hinzuzufügen, wo dies erforderlich ist. App-Designs in der Produktion können wie zusätzliche Abstände aussehen, d. h. Ränder, die von Teams bereitgestellt werden, und Ränder, die von der Registerkarte bereitgestellt werden. Der zusätzliche Abstand ist jedoch nur temporär und wird in ein paar Wochen weg sein, und nur der von der App bereitgestellte Abstand bleibt erhalten.
 

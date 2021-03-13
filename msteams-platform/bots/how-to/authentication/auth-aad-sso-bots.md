@@ -3,12 +3,12 @@ title: Unterstützung für einmaliges Anmelden für Bots
 description: Beschreibt, wie Sie ein Benutzertoken erhalten. Derzeit kann ein Botentwickler eine Anmeldekarte oder den azure bot-Dienst mit der OAuth-Kartenunterstützung verwenden.
 keywords: Token, Benutzertoken, SSO-Unterstützung für Bots
 ms.topic: conceptual
-ms.openlocfilehash: a023c232186ce855c0b262f8cb535ec9d05db95a
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: dad36f52a3e23c00f8725e2e906308339629bb05
+ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449486"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "50753532"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Unterstützung für einmaliges Anmelden (Single Sign-On, SSO) für Bots
 
@@ -82,7 +82,7 @@ Die Schritte zum Registrieren Ihrer App über das AAD-Portal ähneln dem [Regist
     >
     > Beachten Sie die folgenden wichtigen Einschränkungen:
     >
-    > * Es werden nur Microsoft Graph-API-Berechtigungen auf Benutzerebene unterstützt, z. B. E-Mail, Profil, offline_access und OpenId. Wenn Sie Zugriff auf andere Microsoft Graph-Bereiche benötigen, z. B. oder , finden Sie `User.Read` `Mail.Read` unter empfohlene [Problemumgehung](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes).
+    > * Es werden nur Microsoft Graph-API-Berechtigungen auf Benutzerebene unterstützt, z. B. E-Mail, Profil, offline_access und OpenId. Wenn Sie Zugriff auf andere Microsoft Graph-Bereiche benötigen, z. B. oder , finden Sie `User.Read` `Mail.Read` unter empfohlene [Problemumgehung](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-graph-scopes).
     > * Der Domänenname Ihrer Anwendung muss mit dem Domänennamen identisch sein, den Sie für Ihre AAD-Anwendung registriert haben.
     > * Mehrere Domänen pro App werden derzeit nicht unterstützt.
     > * Anwendungen, die die Domäne verwenden, werden `azurewebsites.net` nicht unterstützt, da sie häufig verwendet werden und möglicherweise ein Sicherheitsrisiko darstellen.
@@ -95,7 +95,7 @@ Führen Sie die folgenden Schritte aus, um das Azure-Portal mit der OAuth-Verbin
 
 2. Wechseln Sie zu **API-Berechtigungen**. Wählen **Sie Microsoft** Graph Delegierte Berechtigungen hinzufügen aus, und fügen Sie dann die folgenden Berechtigungen aus der Microsoft  >    >  Graph-API hinzu:
     * User.Read (standardmäßig aktiviert)
-    * E-Mail
+    * email
     * offline_access
     * OpenId
     * Profil
@@ -117,7 +117,7 @@ Führen Sie die folgenden Schritte aus, um das Azure-Portal mit der OAuth-Verbin
     4. Verwenden Sie **für die Token Exchange-URL** den unter [Update your Teams application manifest for your bot definierten Bereichswert.](#update-your-teams-application-manifest-for-your-bot) Die Token-Exchange-URL gibt dem SDK an, dass diese AAD-Anwendung für SSO konfiguriert ist.
     5. Geben Sie **im Feld Mandanten-ID** gemeinsame *ein.*
     6. Fügen Sie alle **Bereiche hinzu,** die beim Angeben von Berechtigungen für downstream-APIs für Ihre AAD-Anwendung konfiguriert sind. Wenn die Client-ID und der geheime Clientgeheimnis angegeben sind, tauscht der Tokenspeicher das Token durch ein Diagrammtoken mit definierten Berechtigungen aus.
-    7. Klicken Sie auf **Speichern**.
+    7. Wählen Sie **Speichern** aus.
 
     ![VuSSOBotConnection-Einstellungsansicht](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
 

@@ -3,17 +3,17 @@ title: Neuerungen
 description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 ms.topic: reference
 keywords: Teams, was neu ist
-ms.openlocfilehash: 62504b076fb8e4b0523a4a223301c9f031f03e7c
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: d1a6a0532a857d02e7188c42282f1d0727d6f309
+ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479854"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "50753546"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neues für Entwickler in Microsoft Teams
 
 >[!TIP]
-> Sehen Sie sich unsere produktionsbereiten Vorlagen im [**Katalog der Teams-App-Vorlagen an.**](samples/app-templates.md) Der Katalog ist alphabetisch, und die neuesten Ergänzungen sind mit einem Stern **gekennzeichnet,**&#9734;.
+> Sehen Sie sich Beispiellösungen für allgemeine Teamszenarien im [**Vorlagenkatalog der Teams-App an!**](samples/app-templates.md) Der Katalog ist alphabetisiert, und die neuesten Ergänzungen sind mit einem Stern "/" gekennzeichnet.
 
 ## <a name="change-log"></a>Änderungsprotokoll
 
@@ -89,7 +89,7 @@ Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und d
 | 05/29/2018 | Adaptive Karten werden jetzt in Teams in den [Aktionen für adaptive Karten in Teams unterstützt.](task-modules-and-cards/cards/cards-reference.md) |
 | 05/29/2018 | Wenn Sie die Entwicklervorschau [verwenden,](~/resources/dev-preview/developer-preview-intro.md)kann Ihr Bot jetzt Dateien senden und empfangen.| [Senden und Empfangen von Dateien über Ihren Bot](~/concepts/bots/bots-files.md), Features im [öffentlichen Developer Preview für Microsoft Teams](~/resources/dev-preview/developer-preview-features.md)|
 | 04/17/2018 | replyToID wurde der Nutzlast für die `Invoke` `MessageBack` Und-Kartenaktionen hinzugefügt. Dies ist besonders hilfreich, wenn Sie die Nachricht aktualisieren müssen, aus der die Kartenaktion stammt. | [Kartenaktionen](~/concepts/cards/cards-actions.md)|
-| 04/12/2018 | Dieses Thema wurde hinzugefügt, um Änderungen an der Programmierschnittstelle von Teams und diesem Dokumentationssatz nachverfolgt zu haben. | [Neuerungen](~/whats-new.md)|
+| 04/12/2018 | Dieses Thema wurde hinzugefügt, um Änderungen an der Programmierschnittstelle von Teams und diesem Dokumentationssatz nachverfolgt zu haben. | [Neuigkeiten](~/whats-new.md)|
 | 04/10/2018 | Die Authentifizierungs-URLs wurden geändert, um die Mandanten-ID im Pfad konsistent zu verwenden. | [Authentifizierungsfluss für Registerkarten](~/concepts/authentication/auth-flow-tab.md), [AAD-Registerkartenauthentifizierung](~/concepts/authentication/auth-tab-AAD.md)|
 | 04/06/2018 | Entwurfsrichtlinien für die Verwendung des Befehlsfelds hinzugefügt. |[Befehlsfeld](~/resources/design/framework/command-box.md)|
 | 04/02/2018 | Verwenden von Bots zum Senden von Benachrichtigungen für Ihre App. |[Reine Benachrichtigungsbots](~/concepts/bots/bots-notification-only.md)|
