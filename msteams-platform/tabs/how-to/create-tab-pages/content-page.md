@@ -5,12 +5,12 @@ description: Erstellen einer Inhaltsseite
 keywords: teams tabs group channel configurable static
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 619ca1079fcdb5a44eec2fa63d6687a0eb65cd4d
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: c33f58197e8b49ac7122178e154724cc5186bcb1
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479872"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034698"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Erstellen einer Inhaltsseite für Ihre Registerkarte
 
@@ -28,7 +28,7 @@ Das übergeordnete Ziel Ihrer Registerkarte sollte es sein, Zugriff auf aussagek
 
 ## <a name="integrate-your-code-with-teams"></a>Integrieren von Code in Teams
 
-Damit Ihre Seite in Teams angezeigt werden kann, müssen Sie das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) und einen Aufruf nach dem Laden `microsoftTeams.initialize()` der Seite hinzufügen. So kommunizieren Ihre Seite und der Teams-Client:
+Damit Ihre Seite in Teams angezeigt werden kann, müssen Sie das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) und einen Aufruf nach dem Laden `microsoftTeams.initialize()` der Seite hinzufügen. So kommunizieren Ihre Seite und der Teams-Client:
 
 ```html
 <!DOCTYPE html>
@@ -93,7 +93,7 @@ Wenn Sie einen Bot  mit einem persönlichen Bereich erstellen, wird er standardm
 Ab [Manifestschema v1.7](../../../resources/schema/manifest-schema.md)können Sie [](../../../resources/schema/manifest-schema.md#showloadingindicator) eine systemeigene Ladeanzeige überall dort bereitstellen, wo Ihre Webinhalte in [](removal-page.md) Teams geladen werden, z. B. Registerkarteninhaltsseite, [](#integrate-your-code-with-teams)Konfigurationsseite, [](configuration-page.md) [Entfernungsseite](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)und Aufgabenmodule in Registerkarten .
 
 > [!NOTE]
-> 1. Die systemeigene Ladeanzeige wird auf mobilen Geräten noch nicht unterstützt.
+> 1. Das Verhalten auf mobilen Clients kann nicht über diese Manifesteigenschaft konfiguriert werden. Mobile Clients zeigen standardmäßig einen systemeigenen Ladeindikator für Inhaltsseiten und iframebasierte Aufgabenmodule an. Dieser Indikator auf Mobilgeräten wird angezeigt, wenn eine Anforderung zum Abrufen von Inhalten gestellt wird, und wird verworfen, sobald die Anforderung abgeschlossen ist.
 > 2. Wenn Sie im App-Manifest angeben, müssen alle Registerkartenkonfigurations-, Inhalts- und Entfernungsseiten sowie alle iframebasierten Aufgabenmodule dem obligatorischen Protokoll folgen, das unten  `"showLoadingIndicator : true`  aufgeführt ist:
 
 

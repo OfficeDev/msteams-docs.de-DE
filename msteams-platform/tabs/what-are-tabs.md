@@ -4,12 +4,12 @@ author: laujan
 description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Teams-Plattform
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: af6d0a87fbbb87ae4abf09a2ff53319299f452df
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: c99d1e0d54c6fc1eded3ad1be1957c99a131ea6f
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449220"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034649"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>Was sind Microsoft Teams-Registerkarten?
 
@@ -57,16 +57,16 @@ Sie können maximal eine (1) Kanal-/Gruppenregisterkarte und bis zu sechzehn (16
 
 Wenn Sie den Kanal oder die Registerkarte "Gruppe" auf mobilen Teams-Clients anzeigen möchten, muss die Konfiguration `setSettings()` einen Wert für die Eigenschaft `websiteUrl` haben. Um eine optimale Benutzererfahrung sicherzustellen, müssen Sie beim Erstellen Ihrer Registerkarten die Anleitungen für Registerkarten auf [Mobilgeräten](~/tabs/design/tabs-mobile.md) befolgen. Apps, die [über Appsource verteilt](~/concepts/deploy-and-publish/appsource/publish.md) werden, verfügen über einen separaten Genehmigungsprozess für mobile Clients. Das Standardverhalten solcher Apps lautet wie folgt:
 
-| **App-Funktion** | **Verhalten, wenn die App genehmigt wird** | **Verhalten, wenn die App nicht genehmigt wurde** |
-| --- | --- | --- |
-| **Statische Registerkarten** | Die App wird in der unteren Leiste der mobilen Clients angezeigt. Registerkarten werden im Teams-Client geöffnet. | App wird nicht in der unteren Leiste der mobilen Clients angezeigt. |
-| **Konfigurierbare Registerkarten** | Die Registerkarte wird im Teams-Client mit `contentUrl` geöffnet. | Die Registerkarte wird in einem Browser außerhalb des Teams-Clients mit `websiteUrl` geöffnet. |
+| **Registerkartentyp** | **Verhalten von App, wenn es für mobile Clients optimiert ist** | **Verhalten von App, wenn es nicht für mobile Clients optimiert ist** |
+|:-----|:-----|:-----|
+| **Statische Registerkarten** oder **persönliche Registerkarten**|Die App wird in der unteren Leiste der mobilen Clients angezeigt. Die Registerkarten werden in einer In-App-Webview im Teams-Client geöffnet. | App wird nicht in mobilen Clients angezeigt. |
+| **Konfigurierbare Registerkarten** | Die Registerkarten werden in einer In-App-Webview innerhalb des Teams-Clients mithilfe der `contentUrl` geöffnet. | Wenn **Sie Tab** auswählen, wird der Inhalt im `websiteUrl` Standardwebbrowser auf dem Gerät geöffnet. |
 
 
->[!NOTE]
+> [!NOTE]
 >
->- Das Standardverhalten der Apps gilt nur, wenn sie über den Teams Store (AppSource) verteilt werden. Es gibt keinen Genehmigungsprozess für Apps, die über andere [Verteilungsmethoden verteilt werden.](~/concepts/deploy-and-publish/overview.md) Standardmäßig werden alle Registerkarten im Teams-Client geöffnet.
->- Um eine Auswertung Ihrer App für die Mobile-Freundlichkeit zu initiieren, wenden Sie sich an teamsubm@microsoft.com Ihre App-Details.
+> * [Apps, die zur Veröffentlichung ](../concepts/deploy-and-publish/overview.md#publish-to-appsource) in Teams an die AppSource übermittelt werden, werden automatisch auf mobile Reaktionsfähigkeit ausgewertet. Für alle Abfragen erreichen Sie die teamsubm@microsoft.com.
+> * Für alle Apps, die nicht über [appSource](../concepts/deploy-and-publish/overview.md)verteilt werden, werden die Registerkarten standardmäßig in einer In-App-Webview innerhalb der Teams-Clients geöffnet, und es ist kein separater Genehmigungsprozess erforderlich.
 
 > [!div class="nextstepaction"]
 > [Weitere Informationen: Anfordern von Geräteberechtigungen](../concepts/device-capabilities/native-device-permissions.md)
