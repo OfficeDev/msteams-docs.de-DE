@@ -4,12 +4,12 @@ author: laujan
 description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Teams-Plattform
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: c99d1e0d54c6fc1eded3ad1be1957c99a131ea6f
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: d72d70ac97a7da427f22ef7e84c73f235dc395c6
+ms.sourcegitcommit: f6e4a303828224a702138753a8e5e27c8a094c82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034649"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51176963"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>Was sind Microsoft Teams-Registerkarten?
 
@@ -51,7 +51,7 @@ Unabhängig davon, ob Sie Ihre Registerkarte im Kanal-/Gruppen- oder persönlich
 
 Für Kanal-/Gruppenregisterkarten müssen Sie auch eine zusätzliche Konfigurationsseite erstellen, auf der Benutzer die URL ihrer Inhaltsseite konfigurieren können, in der Regel mithilfe von URL-Abfragezeichenfolgenparametern, um den entsprechenden Inhalt für diesen Kontext zu laden. Dies liegt daran, dass Ihre Kanal-/Gruppenregisterkarte mehreren verschiedenen Teams oder Gruppenchats hinzugefügt werden kann. Bei jeder nachfolgenden Installation können Ihre Benutzer die Registerkarte konfigurieren, sodass Sie die Benutzererfahrung nach Bedarf anpassen können. Wenn Benutzer eine Registerkarte hinzufügen oder konfigurieren, wird der Registerkarte, die auf der Benutzeroberfläche von Teams angezeigt wird, eine URL zugeordnet. Wenn Sie eine Registerkarte konfigurieren, fügen Sie einfach zusätzliche Parameter zu dieser URL hinzu. Wenn Sie beispielsweise die Registerkarte Azure Boards hinzufügen, können Sie auf der Konfigurationsseite auswählen, welches Board die Registerkarte laden soll. Die URL der Konfigurationsseite wird durch die  `configurationUrl` Eigenschaft im Array im `configurableTabs` App-Manifest angegeben.
 
-Sie können maximal eine (1) Kanal-/Gruppenregisterkarte und bis zu sechzehn (16) persönliche Registerkarten pro App verwenden.
+Sie können über mehrere Kanäle oder Gruppenregisterkarten und bis zu 16 persönliche Registerkarten pro App verfügen.
 
 ## <a name="mobile-clients"></a>Mobile Clients
 
