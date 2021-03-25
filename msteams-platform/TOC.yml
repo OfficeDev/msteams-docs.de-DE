@@ -334,6 +334,8 @@
   items:
     - name: Übersicht
       href: 'https://docs.microsoft.com/graph/teams-concept-overview'
+    - name: Microsoft Graph-Toolkit
+      href: 'https://docs.microsoft.com/graph/toolkit/overview'
     - name: Erste Schritte
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
     - name: Ressourcenspezifische Einwilligung aktivieren
