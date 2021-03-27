@@ -5,12 +5,12 @@ description: Erstellen einer Konfigurationsseite
 keywords: Gruppenkanal für Teams-Registerkarten konfigurierbar
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b6da8437b6988f863288d77aedc1acb786c12d4b
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 9407e4afc0b52f1b16f2d6b5a55e824f484a1870
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034678"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382376"
 ---
 # <a name="create-a-configuration-page"></a>Erstellen einer Konfigurationsseite
 
@@ -22,7 +22,15 @@ Eine Konfigurationsseite ist ein spezieller Typ von [Inhaltsseite](content-page.
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>Konfigurieren einer Registerkarte "Kanal" oder "Gruppenchat"
 
-Die Anwendung muss auf das [Microsoft Teams JavaScript-Client-SDK verweisen und](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoft.initialize()` aufrufen. Außerdem müssen die verwendeten URLs gesicherte HTTPS-Endpunkte sein und in der Cloud verfügbar sein. Der folgende Code ist ein Beispiel für eine Konfigurationsseite:
+Die Anwendung muss auf das [Microsoft Teams JavaScript-Client-SDK verweisen und](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoft.initialize()` aufrufen. Außerdem müssen die verwendeten URLs gesicherte HTTPS-Endpunkte sein und in der Cloud verfügbar sein. 
+
+### <a name="example"></a>Beispiel
+
+Ein Beispiel für eine Konfigurationsseite ist in der folgenden Abbildung dargestellt: 
+
+<img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
+
+Der entsprechende Code für die Konfigurationsseite wird im folgenden Abschnitt angezeigt:
 
 ```html
 <head>
@@ -79,7 +87,17 @@ Die Anwendung muss auf das [Microsoft Teams JavaScript-Client-SDK verweisen und]
 ...
 ```
 
-Wählen Sie **auf der** Konfigurationsseite die Schaltfläche **Grau** auswählen oder Rot auswählen aus, um den Registerkarteninhalt mit einem grauen oder roten Symbol anzuzeigen. Wenn Sie die relative Schaltfläche auswählen, wird entweder `saveGray()` oder `saveRed()` und folgendes aufgerufen:
+Wählen Sie **auf der** Konfigurationsseite die Schaltfläche **Grau** auswählen oder Rot auswählen aus, um den Registerkarteninhalt mit einem grauen oder roten Symbol anzuzeigen. 
+
+In der folgenden Abbildung wird der Registerkarteninhalt mit einem grauen Symbol angezeigt:
+
+<img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
+
+In der folgenden Abbildung wird der Registerkarteninhalt mit rotem Symbol angezeigt:
+
+<img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
+
+Wenn Sie die relative Schaltfläche auswählen, wird entweder `saveGray()` oder `saveRed()` ausgelöst, und folgendes wird aufgerufen:
 
 1. Die `settings.setValidityState(true)` ist auf true festgelegt.
 1. Der `microsoftTeams.settings.registerOnSaveHandler()` Ereignishandler wird ausgelöst.
@@ -104,7 +122,7 @@ Weitere Informationen zu den Eigenschaften, die für die Registerkartenkonfigura
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Einfügen von Platzhaltern in das `configurationUrl`
 
-Fügen Sie Ihrer Basis Kontextschnittstellenplatzhalter `configurationUrl` hinzu. Zum Beispiel:
+Fügen Sie Ihrer Basis Kontextschnittstellenplatzhalter `configurationUrl` hinzu. Beispiel:
 
 ##### <a name="base-url"></a>Basis-URL
 

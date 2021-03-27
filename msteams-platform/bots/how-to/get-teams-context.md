@@ -1,25 +1,25 @@
 ---
-title: Abrufen des spezifischen Kontexts des Teams für Ihren bot
+title: Get Team's specific context for your bot
 author: laujan
-description: Hier erfahren Sie, wie Sie den spezifischen Kontext des Microsoft Teams für Ihren bot abrufen, einschließlich der Liste der Unterhaltungen, Details und Kanäle.
+description: Hier erfahren Sie, wie Sie den spezifischen Kontext von Microsoft Team für Ihren Bot, einschließlich Unterhaltungsliste, Details und Kanalliste, erhalten.
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 7f3b2fbea33f64659dcd5d9d39bb95e2d953dbea
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: dfbf5e1638a2397492714b1e1945721450428d63
+ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552472"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51378336"
 ---
-# <a name="get-teams-specific-context-for-your-bot"></a>Abrufen des spezifischen Kontexts des Teams für Ihren bot
+# <a name="get-teams-specific-context-for-your-bot"></a>Get Team's specific context for your bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Ein Bot kann auf zusätzliche Kontextdaten zu einem Team oder Chat zugreifen, in dem es installiert ist. Diese Informationen können verwendet werden, um die Funktionalität des bot zu bereichern und eine personalisierte Erfahrung zu bieten.
+Ein Bot kann auf zusätzliche Kontextdaten zu einem Team oder Chat zugreifen, in dem er installiert ist. Diese Informationen können verwendet werden, um die Funktionalität des Bots zu erweitern und eine personalisiertere Benutzererfahrung zu bieten.
 
-## <a name="fetching-the-roster-or-user-profile"></a>Abrufen des Dienstplan-oder Benutzerprofils
+## <a name="fetching-the-roster-or-user-profile"></a>Abrufen des Dienstplans oder Benutzerprofils
 
-Ihr Bot kann eine Abfrage nach der Liste der Mitglieder und ihren grundlegenden Profilen durchführen, einschließlich Microsoft Teams-Benutzer-IDs und Azure Active Directory Informationen (Azure AD) wie Name und ObjectID. Sie können diese Informationen verwenden, um Benutzeridentitäten zu korrelieren, beispielsweise um zu überprüfen, ob ein Benutzer, der bei einer Registerkarte über Azure AD Anmeldeinformationen angemeldet ist, Mitglied des Teams ist. Im folgenden Beispielcode wird der ausgelagerte Endpunkt zum Abrufen der Liste verwendet. Für GET CONVERSATION-Mitglieder ist die minimale oder maximale Seitengröße von der Implementierung abhängig. Die Seitengröße kleiner als 50, werden als 50 und die Seitengröße größer als 500 behandelt, sind auf 500 begrenzt. Obwohl Sie die nicht ausgelagerte Version möglicherweise weiterhin verwenden, ist Sie in großen Teams unzuverlässig und sollte nicht verwendet werden. Weitere Informationen *finden Sie unter* [Änderungen an Teams-bot-APIs zum Abrufen von Team/Chat-Mitgliedern](~/resources/team-chat-member-api-changes.md) .
+Ihr Bot kann die Liste der Mitglieder und deren grundlegende Profile abfragen, einschließlich Teams-Benutzer-IDs und Azure Active Directory (Azure AD)-Informationen wie Name und objectId. Sie können diese Informationen verwenden, um Benutzeridentitäten zu korrelieren, z. B. um zu überprüfen, ob ein Benutzer, der über Azure AD-Anmeldeinformationen bei einer Registerkarte angemeldet ist, Mitglied des Teams ist. Der folgende Beispielcode verwendet den seitenseitigen Endpunkt zum Abrufen der Liste. Zum Erhalten von Unterhaltungsmitgliedern hängt die minimale oder maximale Seitengröße von der Implementierung ab. Seitengröße kleiner als 50, werden als 50 behandelt, und die Seitengröße größer als 500 ist auf 500 begrenzt. Obwohl Sie die nicht aus seiteierte Version weiterhin verwenden können, ist sie in großen Teams unzuverlässig und sollte nicht verwendet werden. *Weitere* [Informationen finden Sie unter Changes to Teams Bot APIs for Fetching Team/Chat Members.](~/resources/team-chat-member-api-changes.md)
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -79,7 +79,7 @@ async def _show_members(
 
 # <a name="json"></a>[Json](#tab/json)
 
-Sie können eine GET-Anforderung direkt unter `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` Verwendung des Werts von `serviceUrl` als Endpunkt ausgeben. Der Wert von `serviceUrl` neigt dazu, stabil zu sein, aber kann sich ändern. Wenn eine neue Nachricht eingeht, sollte Ihr bot den gespeicherten Wert für überprüfen `serviceUrl` . Die Antwort Nutzlast gibt außerdem an, ob der Benutzer ein normaler oder anonymer Benutzer ist.
+Sie können eine GET-Anforderung direkt auf `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` aus, indem Sie den Wert von `serviceUrl` als Endpunkt verwenden. Der Wert von `serviceUrl` ist in der Regel stabil, kann sich jedoch ändern. Wenn eine neue Nachricht eintrifft, sollte Ihr Bot seinen gespeicherten Wert für `serviceUrl` überprüfen. Die Antwortnutzlast gibt außerdem an, ob der Benutzer ein regulärer oder anonymer Benutzer ist.
 
 ```http
 GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
@@ -120,9 +120,9 @@ Response body
 
 * * *
 
-## <a name="get-single-member-details"></a>Einzelne Element Details abrufen
+## <a name="get-single-member-details"></a>Details zu einzelnen Membern erhalten
 
-Sie können die Details eines bestimmten Benutzers auch mithilfe der jeweiligen Teams-Benutzer-ID, UPN-oder Aad-Objekt-ID abrufen.
+Sie können auch die Details eines bestimmten Benutzers mithilfe der Teams-Benutzer-ID, des UPN oder der AAD-Objekt-ID abrufen.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -164,9 +164,9 @@ async def _show_members(
 
 # <a name="json"></a>[Json](#tab/json)
 
-Sie können eine GET-Anforderung direkt unter `/v3/conversations/{conversationId}/members/{userId}` Verwendung des Werts von `serviceUrl` als Endpunkt ausgeben. Der Wert von `serviceUrl` neigt dazu, stabil zu sein, aber kann sich ändern. Wenn eine neue Nachricht eingeht, sollte Ihr bot den gespeicherten Wert für überprüfen `serviceUrl` . Dies kann für Benutzer und anonyme Benutzer verwendet werden.
+Sie können eine GET-Anforderung direkt auf `/v3/conversations/{conversationId}/members/{userId}` aus, indem Sie den Wert von `serviceUrl` als Endpunkt verwenden. Der Wert von `serviceUrl` ist in der Regel stabil, kann sich jedoch ändern. Wenn eine neue Nachricht eintrifft, sollte Ihr Bot seinen gespeicherten Wert für `serviceUrl` überprüfen. Dies kann für reguläre und anonyme Benutzer verwendet werden.
 
-Im folgenden finden Sie ein Antwortbeispiel für reguläre Benutzer.
+Nachfolgend finden Sie ein Antwortbeispiel für reguläre Benutzer
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc
@@ -184,7 +184,7 @@ Response body
 }
 ```
 
-Unten ist die Antwort für anonyme Benutzer
+Nachfolgend finden Sie die Antwort für anonymen Benutzer
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/<anonymous user id>"
@@ -200,9 +200,9 @@ Response body
 
 * * *
 
-## <a name="get-teams-details"></a>Teamdetails abrufen
+## <a name="get-teams-details"></a>Details des Teams erhalten
 
-Wenn Ihr bot in einem Team installiert ist, kann er Metadaten zu diesem Teamabfragen, einschließlich der Azure Ad Gruppen-Nr.
+Bei der Installation in einem Team kann Ihr Bot Metadaten zu diesem Team abfragen, einschließlich der Azure AD groupId.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -256,7 +256,7 @@ async def _show_details(self, turn_context: TurnContext):
 
 # <a name="json"></a>[Json](#tab/json)
 
-Sie können eine GET-Anforderung direkt unter `/v3/teams/{teamId}` Verwendung des Werts von `serviceUrl` als Endpunkt ausgeben. Der Wert von `serviceUrl` neigt dazu, stabil zu sein, aber kann sich ändern. Wenn eine neue Nachricht eingeht, sollte Ihr bot den gespeicherten Wert für überprüfen `serviceUrl` .
+Sie können eine GET-Anforderung direkt auf `/v3/teams/{teamId}` aus, indem Sie den Wert von `serviceUrl` als Endpunkt verwenden. Der Wert von `serviceUrl` ist in der Regel stabil, kann sich jedoch ändern. Wenn eine neue Nachricht eintrifft, sollte Ihr Bot seinen gespeicherten Wert für `serviceUrl` überprüfen.
 
 ```http
 GET /v3/teams/19:ja0cu120i1jod12j@skype.net
@@ -271,14 +271,14 @@ Response body
 
 * * *
 
-## <a name="get-the-list-of-channels-in-a-team"></a>Abrufen der Liste der Kanäle in einem Team
+## <a name="get-the-list-of-channels-in-a-team"></a>Liste der Kanäle in einem Team erhalten
 
-Ihr Bot kann die Liste der Kanäle in einem Teamabfragen.
+Ihr Bot kann die Liste der Kanäle in einem Team abfragen.
 
 > [!NOTE]
 >
->* Der Name des standardmäßigen allgemeinen Kanals wird zurückgegeben `null` , um die Lokalisierung zu ermöglichen.
->* Die Kanal-ID für den allgemeinen Kanal stimmt immer mit der Team-ID überein.
+>* Der Name des standardmäßigen allgemeinen Kanals wird zurückgegeben, `null` um die Lokalisierung zu ermöglichen.
+>* Die Kanal-ID für den allgemeinen Kanal entspricht immer der Team-ID.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -327,7 +327,7 @@ async def _show_channels(
 
 # <a name="json"></a>[Json](#tab/json)
 
-Sie können eine GET-Anforderung direkt unter `/v3/teams/{teamId}/conversations` Verwendung des Werts von `serviceUrl` als Endpunkt ausgeben. Der Wert von `serviceUrl` neigt dazu, stabil zu sein, aber kann sich ändern. Wenn eine neue Nachricht eingeht, sollte Ihr bot den gespeicherten Wert für überprüfen `serviceUrl` .
+Sie können eine GET-Anforderung direkt auf `/v3/teams/{teamId}/conversations` aus, indem Sie den Wert von `serviceUrl` als Endpunkt verwenden. Der Wert von `serviceUrl` ist in der Regel stabil, kann sich jedoch ändern. Wenn eine neue Nachricht eintrifft, sollte Ihr Bot seinen gespeicherten Wert für `serviceUrl` überprüfen.
 
 ```http
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations

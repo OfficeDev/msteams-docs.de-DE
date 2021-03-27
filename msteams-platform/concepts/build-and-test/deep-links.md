@@ -3,12 +3,12 @@ title: Erstellen von tiefen Links zu Inhalten
 description: Beschreibt tiefe Links und deren Verwendung in Ihren Apps
 ms.topic: how-to
 keywords: deep link deeplink für Teams
-ms.openlocfilehash: ec6357998c5d5aa60d0f512bf35514f8aa76a0ed
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: 493f9a010f7076ec97fc7da7110244645e76cfe8
+ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753511"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51378329"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Erstellen von tiefen Links zu Inhalten und Features in Microsoft Teams
 
@@ -141,6 +141,23 @@ Die Abfrageparameter sind:
 * `message`: Ein optionales Feld für den Nachrichtentext, den Sie in das Verfassenfeld des aktuellen Benutzers einfügen möchten, während sich der Chat im Entwurfszustand befindet.
 
 Um diesen tiefen Link mit Ihrem Bot zu verwenden, können Sie dies als URL-Ziel in der Schaltfläche Ihrer Karte angeben oder über den `openUrl` Aktionstyp auf Aktion tippen.
+
+## <a name="deep-links-for-sharepoint-framework-tabs"></a>Tiefe Links für SharePoint Framework-Registerkarten
+
+Das folgende Deep Link-Format kann in einer Bot-, Connector- oder Messagingerweiterungskarte verwendet werden: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+
+> [!NOTE]
+> Wenn ein Bot eine TextBlock-Nachricht mit einem tiefen Link sendet, wird eine neue Browserregisterkarte geöffnet, wenn Benutzer den Link auswählen. Dies geschieht in Chrome- und Microsoft Teams-Desktop-App, die unter Linux ausgeführt wird.
+> Wenn der Bot dieselbe Deep Link-URL an eine sendet, wird die Registerkarte Teams im aktuellen Browser geöffnet, wenn der Benutzer `Action.OpenUrl` den Link auswählt. Es wird keine neue Browserregisterkarte geöffnet.
+
+Die Abfrageparameter sind:
+
+* `appID` - Ihre Manifest-ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
+* `entityID` - Die Element-ID, die Sie beim [Konfigurieren der Registerkarte angegeben haben.](~/tabs/how-to/create-tab-pages/configuration-page.md) Beispiel: **tasklist123**.
+* `entityWebUrl` - Ein optionales Feld mit einer Fallback-URL, die verwendet werden soll, wenn der Client das Rendern der Registerkarte nicht unterstützt – https://tasklist.example.com/123 oder https://tasklist.example.com/list123/task456 .
+* `entityName` - Eine Bezeichnung für das Element auf Ihrer Registerkarte, die beim Anzeigen des Tiefenlinks, aufgabenliste 123 oder Aufgabe 456 verwendet werden soll.
+
+Beispiel: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
 ## <a name="linking-to-the-scheduling-dialog"></a>Verknüpfen mit dem Planungsdialogfeld
 

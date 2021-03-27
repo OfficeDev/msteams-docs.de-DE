@@ -3,12 +3,12 @@ title: Automatische Authentifizierung
 description: Beschreibt die automatische Authentifizierung
 ms.topic: conceptual
 keywords: teams authentication SSO silent AAD
-ms.openlocfilehash: db8409cd4a6edface6d5dc3b3de6698852eaaa24
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 7facaef0941ff7602b3e23444653ef41415c3396
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449228"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382345"
 ---
 # <a name="silent-authentication"></a>Automatische Authentifizierung
 
@@ -67,7 +67,7 @@ if (loginHint) {
 
 ### <a name="authenticate"></a>Authentifizieren
 
-Wenn ADAL ein nicht gefundenes Token für den Benutzer zwischengespeichert hat, verwenden Sie das Token. Versuchen Sie alternativ, ein Token im Hintergrund abzurufen, indem Sie `acquireToken(resource, callback)` aufrufen. ADAL.js aufruft die Rückruffunktion mit dem angeforderten Token oder gibt einen Fehler aus, wenn die Authentifizierung fehlschlägt.
+Wenn ADAL ein Token für den Benutzer zwischengespeichert hat, das nicht abgelaufen ist, verwenden Sie dieses Token. Versuchen Sie alternativ, ein Token im Hintergrund abzurufen, indem Sie `acquireToken(resource, callback)` aufrufen. ADAL.js ruft die Rückruffunktion mit dem angeforderten Token auf oder gibt einen Fehler zurück, wenn die Authentifizierung fehlschlägt.
 
 Wenn sie einen Fehler in der Rückruffunktion erhalten, zeigen Sie eine Anmeldeschaltfläche an, und stürzen Sie auf eine explizite Anmeldung zurück.
 
@@ -116,5 +116,19 @@ if (authContext.isCallback(window.location.hash)) {
             microsoftTeams.authentication.notifyFailure(authContext.getLoginError());
         }
     }
+}
+```
+
+### <a name="handle-sign-out-flow"></a>Behandeln des Abmeldeflusses
+
+Verwenden Sie den folgenden Code, um den Abmeldefluss in AAD Auth zu behandeln:
+
+> [!NOTE]
+> Während die Anmeldung für die Registerkarte oder den Bot von Teams erfolgt ist, wird die aktuelle Sitzung ebenfalls geräumt.
+
+```javascript
+function logout() {
+localStorage.clear();
+window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
