@@ -4,12 +4,12 @@ description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Te
 ms.topic: how-to
 localization_priority: Priority
 keywords: Teams O365-Connector
-ms.openlocfilehash: edf84ad8902fa3b4a1827ffde415097aac978532
-ms.sourcegitcommit: 843da1730443ff8474a05295f60a6b376ed140da
+ms.openlocfilehash: 6554a9cc1db0ffdae65f1cb875ca7a4c47c21259
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "50073089"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382331"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Senden von Nachrichten an Connectors und Webhooks
 
@@ -132,10 +132,12 @@ Die `ActionCard`-Aktion unterstützt drei Eingabetypen:
 
 Wenn Sie möchten, dass eine Liste mit Mehrfachauswahl zuerst kompakt angezeigt wird, müssen Sie sowohl `"isMultiSelect": true` als auch `"style": true` angeben.
 
+Weitere Informationen zu Aktionen der Connectorkarte finden Sie unter **[Aktionen]**(/outlook/actionable-messages/card-reference#actions) in der Referenz der verwertbaren Nachrichtenkarte.
+
 > [!NOTE]
 > Die Angabe von `compact` für die `style`-Eigenschaft in Microsoft Teams entspricht der Angabe von `normal` für die `style`-Eigenschaft in Microsoft Outlook.
-
-Weitere Details zu den Aktionen in Connectorkarten finden Sie unter **[Aktionen](/outlook/actionable-messages/card-reference#actions)** in der Referenz zu Nachrichtenkarten mit Aktionen.
+> 
+> Bei der HttpPOST-Aktion ist das Bearertoken in den Anforderungen enthalten. Dieses Token enthält die Azure AD-Identität des Office 365-Benutzers, der die Aktion ausgeführt hat.
 
 ## <a name="setting-up-a-custom-incoming-webhook"></a>Einrichten eines benutzerdefinierten eingehenden Webhooks
 
