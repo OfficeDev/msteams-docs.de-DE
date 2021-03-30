@@ -329,7 +329,11 @@
         - name: Verwenden von SSO-Authentifizierung (einmaliges Anmelden)
           href: bots/how-to/authentication/auth-aad-sso-bots.md
     - name: Messaging-Erweiterungen
-      href: messaging-extensions/how-to/add-authentication.md
+      items:
+        - name: Hinzufügen einer Authentifizierung zu Ihrer Messaging-Erweiterung
+          href: messaging-extensions/how-to/add-authentication.md
+        - name: Aktivieren von SSO für Messaging-Erweiterungen
+          href: messaging-extensions/how-to/enable-SSO-auth-me.md
 - name: Nutzung von Microsoft Teams-Daten mit Microsoft Graph
   items:
     - name: Übersicht
