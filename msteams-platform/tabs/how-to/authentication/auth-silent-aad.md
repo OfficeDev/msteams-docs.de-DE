@@ -3,12 +3,12 @@ title: Automatische Authentifizierung
 description: Beschreibt die automatische Authentifizierung
 ms.topic: conceptual
 keywords: teams authentication SSO silent AAD
-ms.openlocfilehash: 7facaef0941ff7602b3e23444653ef41415c3396
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 7a68c532cadf181b15c16d6bc4d4ab861d5c9922
+ms.sourcegitcommit: 2bf651dfbaf5dbab6d466788f668e7a6c5d69c36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382345"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "51421608"
 ---
 # <a name="silent-authentication"></a>Automatische Authentifizierung
 
@@ -32,7 +32,9 @@ Die ADAL.js erstellt einen ausgeblendeten iframe für den impliziten OAuth 2.0-E
 
 Der Code in diesem Artikel stammt aus der Teams-Beispiel-App, bei der es sich um [den Beispielknoten für die Teams-Authentifizierung handelt.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)
 
-### <a name="include-and-configure-adal"></a>Include and configure ADAL
+[Initiieren Sie die konfigurierbare Registerkarte](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) für die automatische und einfache Authentifizierung mithilfe von AAD, und befolgen Sie die Anweisungen zum Ausführen des Beispiels auf Dem lokalen Computer.
+
+### <a name="include-and-configure-adal"></a>Ein- und Konfigurieren von ADAL
 
 Fügen Sie die ADAL.js in Ihre Registerkartenseiten ein, und konfigurieren Sie ADAL mit Ihrer Client-ID und Umleitungs-URL:
 

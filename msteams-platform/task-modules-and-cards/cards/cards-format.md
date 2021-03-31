@@ -3,12 +3,12 @@ title: Textformatierung in Karten
 description: Beschreibt die Formatierung von Kartentexten in Microsoft Teams
 keywords: Teams-Bots-Kartenformat
 ms.date: 03/29/2018
-ms.openlocfilehash: 1221693ab9ae002ee982ef34a05ead1feb8b1f27
-ms.sourcegitcommit: 47cf0d05e15e5c23616b18ae4e815fd871bbf827
+ms.openlocfilehash: 240481f6deaa9246692ca297712bd311fbd9405d
+ms.sourcegitcommit: 2bf651dfbaf5dbab6d466788f668e7a6c5d69c36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50455396"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "51421622"
 ---
 # <a name="format-cards-in-teams"></a>Formatieren von Karten in Teams
 
@@ -159,12 +159,14 @@ Um eine Erwähnung in einer adaptiven Karte zu verwenden, muss Ihre App die folg
 
 
 ### <a name="information-masking-in-adaptive-cards"></a>Informationsmasken in adaptiven Karten
-Verwenden Sie die Informationsmaskeneigenschaft, um bestimmte Informationen zu maskieren, z. B. Kennwort oder vertrauliche Informationen von Benutzern.
+Verwenden Sie die Informationsmaskeneigenschaft, um bestimmte Informationen zu maskieren, z. B. Kennwort oder vertrauliche Informationen von Benutzern innerhalb des Eingabeelements [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) adaptiver Karten. 
+
+> [!NOTE]
+> Das Feature unterstützt nur die clientseitige Informationsmaske, der maskierte Eingabetext wird als Klartext an die https-Endpunktadresse gesendet, die während der [Botkonfiguration angegeben wurde.](../../build-your-first-app/build-bot.md#4-configure-your-bot) 
 
 > [!NOTE]
 > Die Informationsmaskeneigenschaft ist derzeit nur in der Entwicklervorschau verfügbar.
 
-#### <a name="mask-information"></a>Maskeninformationen
 Um Informationen in adaptiven Karten zu maskieren, fügen Sie die Eigenschaft zum Eingeben `isMasked`  `Input.Text` hinzu, und legen Sie den Wert auf *true .*
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>Beispiel für adaptive Karte mit Maskierungseigenschaft
@@ -203,7 +205,7 @@ Darüber hinaus muss Ihre App die folgenden Elemente enthalten:
             "weight": "Bolder"
         }]
     }],
-    
+
     "msteams": {
         "width": "Full"
     },
@@ -216,7 +218,60 @@ Eine adaptive Karte mit voller Breite wird wie folgt ![ angezeigt: Adaptive Kart
 
 Wenn Sie die Eigenschaft nicht auf Vollständig festgelegt haben, lautet die Standardansicht der adaptiven Karte wie folgt: Adaptive Kartenansicht mit geringer `width`  ![ Breite](../../assets/images/cards/small-width-adaptive-card.png)
 
+### <a name="typeahead-support"></a>Typeahead-Unterstützung
 
+Innerhalb des Schemaelements kann das Durchfiltern und Auswählen durch eine ansehnliche Anzahl von Auswahlmöglichkeiten den [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) Aufgabenabschluss erheblich verlangsamen. Die Typaheadunterstützung in adaptiven Karten kann die Eingabeauswahl vereinfachen, indem die Eingabeauswahl beim Eingeben durch einen Benutzer ein- oder gefiltert wird. 
+
+#### <a name="enable-typeahead-in-adaptive-cards"></a>Aktivieren von Typeahead in adaptiven Karten
+
+So aktivieren Sie typeahead innerhalb der `Input.Choiceset` Gruppe `style` `filtered` auf, und stellen Sie sicher, `isMultiSelect` dass auf festgelegt `false` ist. 
+
+#### <a name="sample-adaptive-card-with-typeahead-support"></a>Beispiel für adaptive Karte mit Typaheadunterstützung
+
+``` json
+{
+   "type": "Input.ChoiceSet",
+   "label": "Select a user",
+   "isMultiSelect": false,
+   "choices":  [
+      { "title": "User 1", "value": "User1" },
+      { "title": "User 2", "value": "User2" }
+    ],
+   "style": "filtered"
+}
+``` 
+
+### <a name="stage-view-for-images-in-adaptive-cards"></a>Schrittansicht für Bilder in adaptiven Karten
+In einer adaptiven Karte können Sie die Eigenschaft verwenden, um die Möglichkeit zum selektiven Anzeigen von Bildern `msteams` in der Ansicht der Stufe hinzuzufügen. Wenn Benutzer den Mauszeiger auf die Bilder zeigen, wird ein Erweiterungssymbol angezeigt, für das das `allowExpand` Attribut auf festgelegt `true` ist. Informationen zur Verwendung der Eigenschaft finden Sie im folgenden Beispiel:
+
+``` json
+{
+    "type": "AdaptiveCard",
+     "body": [
+          {
+            "type": "Image",
+            "url": "https://picsum.photos/200/200?image=110",
+            "msTeams": {
+              "allowExpand": true
+            }
+          },
+     ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+
+Wenn Benutzer auf das Bild zeigen, wird oben rechts im Bild ein Erweiterungssymbol ![ angezeigt: Adaptive Karte mit erweiterbaren Bildern](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+
+Das Bild wird in der Ansicht "Stage" angezeigt, wenn der Benutzer die Schaltfläche "Erweitern" auswählt: Bild wird in ![ die Ansicht "Stage" erweitert.](../../assets/images/cards/adaptivecard-expand-image.png)
+
+In der Abschnittsansicht können Benutzer das Bild vergrößern und verkleinern. Sie können auswählen, welche Bilder auf Ihrer adaptiven Karte über diese Funktion verfügen müssen.
+
+> [!NOTE]
+> Die Zoom- und Zoom-Out-Funktion gilt nur für die Bildelemente (Bildtyp) in einer adaptiven Karte.
+
+> [!NOTE]
+> Für mobile Teams-Apps sind die Funktionen für die Stage View für Bilder in adaptiven Karten standardmäßig verfügbar, und Benutzer können adaptive Kartenbilder in der Ansicht der Stufe anzeigen, indem sie einfach auf das Bild tippen, unabhängig davon, ob das Attribut vorhanden ist `allowExpand` oder nicht.
 
 # <a name="markdown-formatting-o365-connector-cards"></a>[**Markdownformatierung: O365 Connector Cards**](#tab/connector-md)
 

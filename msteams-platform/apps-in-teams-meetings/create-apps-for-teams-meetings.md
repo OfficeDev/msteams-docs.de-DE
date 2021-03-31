@@ -5,12 +5,12 @@ description: Erstellen von Apps für Teams-Besprechungen
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Rollen-API für Teams-Apps-Besprechungen für Benutzerteilnehmer
-ms.openlocfilehash: 78b7791deb61354ab93fa108f8bb2e134dc86080
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: ac0d3dee30e82cde51651f7eab3b05e569b820f7
+ms.sourcegitcommit: 94b1d3e50563b31c1ff01c52d563c112a2553611
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382352"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "51435036"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Apps für Teams-Besprechungen erstellen
 
@@ -289,6 +289,8 @@ Vor einer Besprechung können Benutzer Einer Besprechung Registerkarten, Bots un
     ![Pre-Meeting-Erfahrung](../assets/images/apps-in-meetings/PreMeeting.png)
 
 1. Wählen Sie im Registerkartenkatalog die App aus, die Sie hinzufügen möchten, und führen Sie die erforderlichen Schritte aus. Die App wird als Registerkarte installiert.
+    > [!NOTE] 
+    > Derzeit wird das Abrufen von Besprechungsdetails und Teilnehmerinformationen auf der Registerkarte Besprechungen nicht unterstützt.
 
 **So fügen Sie einer Besprechung eine Messagingerweiterung hinzu**
 
@@ -336,7 +338,7 @@ Die Konfigurationen nach der Besprechung und vor der Besprechung sind äquivalen
 | Erweiterbarkeit von Besprechungen | Beispiel für die Erweiterbarkeit von Microsoft Teams-Besprechungen zum Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) |
 | Besprechungsinhaltsblasen-Bot | Beispiel für die Erweiterbarkeit von Microsoft Teams-Besprechungen für die Interaktion mit dem Inhaltsblasenbot in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 > [!div class="nextstepaction"]
 > [Entwurfsrichtlinien für Besprechungsdialogdialog](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
