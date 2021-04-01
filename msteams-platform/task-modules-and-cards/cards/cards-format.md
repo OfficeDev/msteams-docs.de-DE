@@ -3,12 +3,12 @@ title: Textformatierung in Karten
 description: Beschreibt die Formatierung von Kartentexten in Microsoft Teams
 keywords: Teams-Bots-Kartenformat
 ms.date: 03/29/2018
-ms.openlocfilehash: 240481f6deaa9246692ca297712bd311fbd9405d
-ms.sourcegitcommit: 2bf651dfbaf5dbab6d466788f668e7a6c5d69c36
+ms.openlocfilehash: d7016f8b954e885221c55bd6c29309fd90a1dcfc
+ms.sourcegitcommit: d41da0b608327829b902aded6bc85c0d0016d068
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "51421622"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "51474999"
 ---
 # <a name="format-cards-in-teams"></a>Formatieren von Karten in Teams
 
@@ -242,6 +242,10 @@ So aktivieren Sie typeahead innerhalb der `Input.Choiceset` Gruppe `style` `filt
 ``` 
 
 ### <a name="stage-view-for-images-in-adaptive-cards"></a>Schrittansicht für Bilder in adaptiven Karten
+
+> [!NOTE]
+> Dieses Feature ist derzeit nur in der Entwicklervorschau verfügbar.
+ 
 In einer adaptiven Karte können Sie die Eigenschaft verwenden, um die Möglichkeit zum selektiven Anzeigen von Bildern `msteams` in der Ansicht der Stufe hinzuzufügen. Wenn Benutzer den Mauszeiger auf die Bilder zeigen, wird ein Erweiterungssymbol angezeigt, für das das `allowExpand` Attribut auf festgelegt `true` ist. Informationen zur Verwendung der Eigenschaft finden Sie im folgenden Beispiel:
 
 ``` json

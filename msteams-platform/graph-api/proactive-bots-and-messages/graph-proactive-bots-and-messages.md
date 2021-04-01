@@ -6,14 +6,14 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Proaktive Messagingchatinstallation von Teams Graph
-ms.openlocfilehash: ac59f3408096993379cae490cd555d3b913cc827
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 4f9c1c2e73fc89d37792e59153affc398bb87044
+ms.sourcegitcommit: 3bd2627b7a334568f61ccc606395e3d89aa521d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449402"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "51475935"
 ---
-# <a name="proactive-installation-of-apps-using-graph-api-and-send-messages"></a>Proaktive Installation von Apps mithilfe der Graph-API und Senden von Nachrichten
+# <a name="proactive-installation-of-apps-using-graph-api-and-send-messages"></a>Proaktive Installation von Apps über die Graph-API und Senden von Nachrichten
 
 >[!IMPORTANT]
 > Öffentliche Vorschauen von Microsoft Graph und Microsoft Teams stehen für frühzeitigen Zugriff und Feedback zur Verfügung. Obwohl diese Version umfangreichen Tests unterzogen wurde, ist sie nicht für die Verwendung in der Produktion vorgesehen.
@@ -140,6 +140,8 @@ Diese Anforderung gibt ein leeres Array zurück, wenn die App nicht installiert 
 
 ```http
 POST https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps
+Content-Type: application/json
+
 {
    "teamsApp@odata.bind" : "https://graph.microsoft.com/v1.0/appCatalogs/teamsApps/{teamsAppId}"
 }
@@ -170,7 +172,7 @@ Die **id-Eigenschaft** der Antwort ist die `teamsAppInstallationId` .
 **HTTP GET-Anforderung** (Berechtigung — `TeamsAppInstallation.ReadWriteSelfForUser.All` ):  
 
 ```http
- GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
+GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
 ```
 
 Die **id-Eigenschaft** der Antwort ist die `chatId` .

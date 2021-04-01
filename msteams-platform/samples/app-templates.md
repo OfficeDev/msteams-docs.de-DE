@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Beispielbeispiele für Microsoft Teams-Vorlagen
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: fffacb567f4b74f282020d61aea07e142256c84a
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: ac2062e8f62ee52a53c6e129301e2a5615110789
+ms.sourcegitcommit: 3bd2627b7a334568f61ccc606395e3d89aa521d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034736"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "51475963"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -468,6 +468,19 @@ Quick Responses ist eine Microsoft Teams-App, die eine stabile Lösung für die 
 
 ![Beispielansicht von Antworten](../assets/images/quick-responses.png)
 
+
+## <a name="quiz--9734"></a>Quiz &#9734;
+
+Quiz ist [](../messaging-extensions/what-are-messaging-extensions.md) eine benutzerdefinierte Teams-Messaging-Erweiterungs-App, mit der Sie ein Quiz in einem Chat oder einem Kanal für Wissensüberprüfung und sofortige Ergebnisse erstellen können. Sie können Quiz für, Klassen- und Offlineprüfungen, Wissensprüfungen innerhalb des Teams und für lustige Quizfragen innerhalb eines Teams verwenden. Quiz-App wird auf mehreren Plattformen unterstützt, z. B. Teams-Desktop-, Browser-, iOS- und Android-Clients. Diese App ist bereit für die Bereitstellung als Teil Ihres vorhandenen Microsoft 365-Abonnements.
+
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quiz)
+
+:::row:::
+  :::column span="1":::
+    ![Erstellen von Quiz in der Teams-Ansicht](../assets/images/quiz-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
+
 ## <a name="rapid-assist"></a>Rapid Assist
 
 Rapid Assist ist eine Microsoft [Power Platform-basierte](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) App, mit der kundenorientierte Mitarbeiter schnell eine Verbindung mit den Experten herstellen können, um schnelle Antworten zu erhalten, nach Informationen zu suchen, offene Anfragen zu verfolgen und Experten zu ermöglichen, Benachrichtigungen zu erhalten, um schnell einen Anruf zu erhalten, um Fragen zu beantworten. Die app, die mit Microsoft [Power Apps](/powerapps/powerapps-overview) und [Power Automate](/power-automate/getting-started)erstellt wurde, integriert sich tief in Microsoft Teams, damit Organisationen problemlos Mitarbeiter an der Front mit Unternehmenskontakten verbinden können, um Kundenanfragen zu lösen und eine großartige Kundenerfahrung zu bieten. 
@@ -608,6 +621,18 @@ Ein Projekt kann mehrere Aufgaben enthalten, und mitarbeitern können verschiede
 
 ![Zeit als Tally](../assets/images/11zon_gif.gif)
 
+
+## <a name="training--9734"></a>Schulungs&#9734;
+
+Schulung ist [](../messaging-extensions/what-are-messaging-extensions.md) eine benutzerdefinierte Teams-Messaging-Erweiterungs-App, mit der Benutzer eine Schulung in einem Chat oder einem Kanal für die Freigabe von Offlinewissen und Upskilling veröffentlichen können. Die App wird auf mehreren Teams-Plattformclients unterstützt, z. B. Desktop, Browser, iOS und Android. Diese App ist bereit für die Bereitstellung im Rahmen Ihres Microsoft 365-Abonnements.
+
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-training)
+
+:::row:::
+  :::column span="1":::
+    ![Erstellen der Ansicht "Schulungen in Teams"](../assets/images/training-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="virtual-rounding"></a>Virtuelle Rundung
 
