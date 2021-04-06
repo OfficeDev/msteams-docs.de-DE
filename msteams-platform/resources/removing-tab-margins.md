@@ -5,12 +5,12 @@ description: Beschreibt, wie das Entfernen von Registerkartenrändern die Erfahr
 keywords: Tabulatoren entfernen Ränderabstand
 ms.topic: reference
 ms.author: lomeybur
-ms.openlocfilehash: f26701b2c432ba35ce6f069eabd3b401aae8e369
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: 953dcf0a0edd47a0bf65bbd0db5901c5b98b11c3
+ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827928"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "51585820"
 ---
 # <a name="tab-margin-changes"></a>Änderungen am Registerkartenrand
 
@@ -18,6 +18,9 @@ In diesem Dokument wird beschrieben, wie das Entfernen von Rändern um alle Regi
 Wenn Sie die Ränder um alle Registerkarten entfernen, können Entwickler Apps erstellen, die für Teams systemeigener aussehen. Dies entspricht auch unseren [Ui Kit-Designs.](~/tabs/design/tabs.md) Die meisten Apps sehen ohne die Ränder, die ihre Erfahrungen umgeben, bereits besser aus. Einige Registerkarten sind jedoch visuell von dieser Änderung betroffen, und Entwickler müssen die erforderlichen Änderungen vornehmen.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tabstopp-Witz und ohne Ränder" border="false":::
+
+> [!NOTE]
+> Dieses Feature gilt nicht für mobile Clients, da die in den mobilen Clients angezeigten Registerkarten keine Ränder haben. 
 
 ## <a name="timelines"></a>Zeitpläne
 

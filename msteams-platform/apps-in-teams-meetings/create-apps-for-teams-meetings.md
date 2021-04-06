@@ -5,12 +5,12 @@ description: Erstellen von Apps für Teams-Besprechungen
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Rollen-API für Teams-Apps-Besprechungen für Benutzerteilnehmer
-ms.openlocfilehash: ac0d3dee30e82cde51651f7eab3b05e569b820f7
-ms.sourcegitcommit: 94b1d3e50563b31c1ff01c52d563c112a2553611
+ms.openlocfilehash: ba00a2dc78cefb167f1bef8507f32dad5e38452c
+ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "51435036"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "51585848"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Apps für Teams-Besprechungen erstellen
 
@@ -56,9 +56,9 @@ Informationen zum Identifizieren und Abrufen von Kontextinformationen für Ihre 
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**meetingId**| Zeichenfolge | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
-|**participantId**| Zeichenfolge | Ja | Die Teilnehmer-ID ist die Benutzer-ID. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Teilnehmer-ID aus dem Tab-SSO zu erhalten. |
-|**tenantId**| Zeichenfolge | Ja | Die Mandanten-ID ist für die Mandantenbenutzer erforderlich. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Mandanten-ID aus dem Tab-SSO zu erhalten. |
+|**meetingId**| string | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
+|**participantId**| string | Ja | Die Teilnehmer-ID ist die Benutzer-ID. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Teilnehmer-ID aus dem Tab-SSO zu erhalten. |
+|**tenantId**| string | Ja | Die Mandanten-ID ist für die Mandantenbenutzer erforderlich. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Mandanten-ID aus dem Tab-SSO zu erhalten. |
 
 #### <a name="example"></a>Beispiel
 
@@ -154,7 +154,7 @@ Alle Benutzer in einer Besprechung erhalten die über die API gesendeten `Notifi
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**conversationId**| Zeichenfolge | Ja | Die Unterhaltungs-ID ist als Teil des Botaufrufs verfügbar. |
+|**conversationId**| string | Ja | Die Unterhaltungs-ID ist als Teil des Botaufrufs verfügbar. |
 
 #### <a name="example"></a>Beispiel
 
@@ -233,6 +233,7 @@ Die Funktionen der Besprechungs-App werden in Ihrem App-Manifest mit `configurab
 
 > [!NOTE]
 > Versuchen Sie, Ihr App-Manifest mit dem [Manifestschema zu aktualisieren.](../resources/schema/manifest-schema-dev-preview.md)
+> Apps in Besprechungen benötigen *Gruppenchatbereich.* Der *Teambereich* funktioniert nur für Registerkarten in Kanälen.
 
 ```json
 
@@ -249,11 +250,14 @@ Die Funktionen der Besprechungs-App werden in Ihrem App-Manifest mit `configurab
         "privateChatTab",
         "meetingChatTab",
         "meetingDetailsTab",
-        "meetingSidePanel"
+        "meetingSidePanel",
+        "meetingStage"
      ]
     }
   ]
 ```
+> [!NOTE]
+> `meetingStage` ist derzeit nur in der Entwicklervorschau verfügbar.
 
 ### <a name="context-property"></a>Context-Eigenschaft
 
@@ -266,6 +270,7 @@ Mit der `context` Registerkarte und den Eigenschaften können Sie `scopes` besti
 | **meetingChatTab** | Eine Registerkarte in der Kopfzeile eines Gruppenchats zwischen einer Gruppe von Benutzern im Kontext einer geplanten Besprechung. |
 | **meetingDetailsTab** | Eine Registerkarte in der Kopfzeile der Besprechungsdetailsansicht des Kalenders. |
 | **meetingSidePanel** | Ein In-Meeting-Panel, das über die einheitliche Leiste (U-Leiste) geöffnet wird. |
+| **meetingStage** | Eine App aus der Sidepanel kann für die Besprechungsphase freigegeben werden. |
 
 > [!NOTE]
 > `Context` wird derzeit auf mobilen Clients nicht unterstützt.
@@ -326,6 +331,18 @@ Im Besprechungsdialogfeld darf kein Aufgabenmodul verwendet werden. Das Aufgaben
 > [!NOTE]
 > * Sie müssen die [submitTask()-Funktion](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) aufrufen, um automatisch zu schließen, nachdem ein Benutzer eine Aktion in der Webansicht ausgeführt hat. Dies ist eine Anforderung für die App-Übermittlung. Weitere Informationen finden Sie unter [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss die Nutzlast der ursprünglichen Aufrufanforderung auf den Anforderungsmetadaten im Objekt und nicht auf den `from.id` `from` `from.aadObjectId` Anforderungsmetadaten beruhen. `from.id` ist die Benutzer-ID und `from.aadObjectId` die Azure Active Directory (AAD)-ID des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
+
+#### <a name="share-to-stage"></a>Freigeben in der Phase 
+
+> [!NOTE]
+> Diese Funktion ist nur in der Insider Dev Preview verfügbar
+
+
+Mit dieser Funktion können Entwickler eine App für die Besprechungsphase freigeben. Durch aktivieren der Freigabe für die Besprechungsphase können Besprechungsteilnehmer in Echtzeit zusammenarbeiten. 
+
+Der erforderliche Kontext ist meetingStage im App-Manifest. Eine Voraussetzung dafür ist, dass der Kontext meetingSidePanel verwendet wird. Dadurch wird die Schaltfläche "Freigeben" in der Sidepanel wie unten beschrieben aktiviert.
+
+
 
 ### <a name="after-a-meeting"></a>Nach einer Besprechung
 
