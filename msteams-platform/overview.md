@@ -5,12 +5,12 @@ description: Erhalten Sie eine Übersicht darüber, wie Entwickler Microsoft Tea
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: e40d2b0d8b0d12e6275b97f79d103310d22f9720
-ms.sourcegitcommit: 3bd2627b7a334568f61ccc606395e3d89aa521d9
+ms.openlocfilehash: b4f5d5fa3014d2acc5e4178a89c84ddb5a250132
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "51475928"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596210"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Apps für Microsoft Teams erstellen
 
@@ -74,9 +74,8 @@ Einige Apps sind einfach (Benachrichtigungen senden), während andere komplex si
 :::row-end:::
 
 :::row:::
+
    :::column span="":::
-   :::column-end:::
-:::row-end:::
 
 ### <a name="microsoft-graph-for-teams"></a>Microsoft Graph für Teams
 
@@ -85,25 +84,20 @@ Einige Apps sind einfach (Benachrichtigungen senden), während andere komplex si
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Konzeptionelle Darstellung der Microsoft Graph-API für Teams." border="false":::
 
    :::column-end:::
-   :::column span="":::
 
-:::row:::
-   :::column span="2":::
+   :::column span="":::
    :::column-end:::
 :::row-end:::
 
-## <a name="build-solutions-for-microsoft-teams-apps"></a>Erstellen von Lösungen für Microsoft Teams-Apps
- 
-Microsoft bietet ein Erweiterbarkeits-Look-Buch, eine Szenariobibliothek für Teams-Apps, die nach Branche organisiert sind. Dieses Buch hilft Ihnen, Apps auf der Teams-Plattform zu erstellen und verschiedene mögliche Szenarien mit verschiedenen Funktionen der Teams-Plattform zu verstehen. Die Look Book-Szenarien beginnen mit einem Geschäftsproblem, den beteiligten Personen und ihren Herausforderungen und enden mit einer Teams-App-Lösung, die die Geschäftlichen Anforderungen erfüllt.
-
-Jedes Szenario in dieser Bibliothek wird von einer Reihe von Designkonzepten mit hoher Genauigkeit begleitet, die als Inspiration für das Entwerfen Ihrer Apps und die Verbesserung der Benutzerfreundlichkeit dienen können. Darüber hinaus werden im Look Book die bewährten Methoden für Design und Architektur hervorgehoben, die beim Erstellen der einzelnen Apps befolgt werden. Weitere Informationen finden Sie im Erweiterungs-Look-Buch. Weitere Informationen finden Sie unter [Extensibility Look Book](https://adoption.microsoft.com/extensibility-look-book/scenarios/). 
+:::row:::
+   :::column span="2":::
 
 ## <a name="start-building"></a>Erstellen beginnen
 
-Machen Sie sich schnell mit dem Erstellen von Teams vertraut, indem Sie eine einfache App erstellen und einige häufig verwendete Funktionen hinzufügen.
+Machen Sie sich schnell mit dem Erstellen von Teams vertraut, indem Sie Ihre Umgebung einrichten und eine einfache App erstellen.
 
 > [!div class="nextstepaction"]
-> [Erstellen Ihrer ersten App jetzt](build-your-first-app/build-first-app-overview.md)
+> [Die erste App erstellen](build-your-first-app/build-first-app-overview.md)
 
    :::column-end:::
    :::column span="":::
@@ -143,7 +137,23 @@ Sie müssen kein erfahrener Programmierer sein, um eine großartige Teams-App zu
    :::column-end:::
 :::row-end:::
 
-## <a name="resources"></a>Ressourcen
+:::row:::
+   :::column span="2":::
+
+## <a name="get-ideas-for-your-app"></a>Ideen für Ihre App erhalten
+
+Suchen Sie nach Inspiration für die App-Entwicklung? Durchsuchen Sie unsere Liste der realen Szenarien und Branchenlösungen mit Konzepten mit hoher Genauigkeit, um die verschiedenen Möglichkeiten zu verstehen, mit denen Teams-Apps Ihren Benutzern helfen können.
+
+> [!div class="nextstepaction"]
+> [Siehe App-Szenarien](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="see-also"></a>Siehe auch
 
 * [Hinzufügen einer Share-to-Teams-Schaltfläche zu Ihrer Website](concepts/build-and-test/share-to-teams.md)
 * [Entwerfen Ihrer Teams-App](concepts/design/design-teams-app-overview.md)

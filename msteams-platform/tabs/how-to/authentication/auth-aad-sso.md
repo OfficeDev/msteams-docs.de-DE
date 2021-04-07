@@ -3,12 +3,12 @@ title: Unterstützung für einmaliges Anmelden für Registerkarten
 description: Beschreibt einmaliges Anmelden (Single Sign-On, SSO)
 ms.topic: how-to
 keywords: teams authentication SSO AAD single sign-on api
-ms.openlocfilehash: e5f79aaf62d195144dd9b34cfbce601c94478191
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: e6bf278e446861556da8362905916cc030df723e
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753539"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596681"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Unterstützung für einmaliges Anmelden (Single Sign-On, SSO) für Registerkarten
 
@@ -35,12 +35,12 @@ Die folgende Abbildung zeigt, wie der SSO-Prozess funktioniert:
 <!-- markdownlint-disable MD033 -->
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
-1. Auf der Registerkarte wird ein JavaScript-Aufruf an `getAuthToken()` vorgenommen. Dies weist Teams an, ein Authentifizierungstoken für die Registerkartenanwendung abzurufen.
+1. In der Registerkarte wird ein JavaScript-Aufruf an `getAuthToken()` durchgeführt. Dies weist Teams an, ein Authentifizierungstoken für die Registerkartenanwendung abzurufen.
 2. Wenn dies das erste Mal ist, dass der aktuelle Benutzer Ihre Registerkartenanwendung verwendet hat, gibt es eine Anforderungsaufforderung zur Zustimmung, wenn eine Zustimmung erforderlich ist, oder zur Verarbeitung der mehrstufigen Authentifizierung, z. B. der zweistufigen Authentifizierung.
 3. Teams fordert das Registerkartenanwendungstoken vom Azure Active Directory (AAD)-Endpunkt für den aktuellen Benutzer an.
 4. AAD sendet das Registerkartenanwendungstoken an die Teams-Anwendung.
 5. Teams sendet das Registerkartenanwendungstoken als Teil des vom Aufruf zurückgegebenen Ergebnisobjekts an die `getAuthToken()` Registerkarte.
-6. Das Token wird in der Registerkartenanwendung mithilfe von JavaScript analysiert, um erforderliche Informationen zu extrahieren, z. B. die E-Mail-Adresse des Benutzers.
+6. Das Token wird in der Registerkartenanwendung mithilfe von JavaScript analysiert, um die erforderlichen Informationen wie die E-Mail-Adresse des Benutzers zu extrahieren.
 
 > [!NOTE]
 > Der ist nur gültig für die Zustimmung zu einer begrenzten Gruppe von APIs auf Benutzerebene, d. h. `getAuthToken()` E-Mail, Profil, offline_access und OpenId. Es wird nicht für weitere Graph-Bereiche wie oder `User.Read` `Mail.Read` verwendet. Mögliche Problemumgehungen finden Sie [unter zusätzliche Graph-Bereiche](#apps-that-require-additional-graph-scopes).
@@ -83,10 +83,10 @@ In diesem Abschnitt werden die Aufgaben beim Erstellen einer Registerkarte Teams
 7. Wählen Sie **Bereich hinzufügen**. Geben Sie im geöffneten Bereich **access_as_user** als **Bereichsnamen ein.**
 8. Geben Sie **im Feld Wer kann zustimmen?** **Admins und Benutzer ein.**
 9. Geben Sie die Details in die Felder für die Konfiguration der Administrator- und Benutzer-Zustimmungsaufforderungen mit Werten ein, die für den Bereich geeignet `access_as_user` sind:
-    * **Administrator-Zustimmungstitel:** Teams können auf das Benutzerprofil zugreifen.
+    * **Titel der Administratoreinwilligung**: Teams kann auf das Benutzerprofil zugreifen.
     * **Administrator-Zustimmungsbeschreibung:** Teams kann die Web-APIs der App als aktuellen Benutzer aufrufen.
-    * **Benutzer-Zustimmungstitel:** Teams kann auf das Benutzerprofil zugreifen und Anforderungen im Namen des Benutzers stellen.
-    * **Benutzer-Zustimmungsbeschreibung:** Teams kann die APIs dieser App mit denselben Rechten wie der Benutzer aufrufen.
+    * **Benutzer-Zustimmungstitel:** Teams kann auf Ihr Profil zugreifen und Anforderungen in Ihrem Namen stellen.
+    * **Benutzer-Zustimmungsbeschreibung:** Teams kann die APIs dieser App mit denselben Rechten aufrufen wie Sie.
 10. Stellen Sie sicher, **Zustand** auf **Aktiviert** festgelegt ist.
 11. Wählen **Sie Bereich hinzufügen aus,** um die Details zu speichern. Der Domänenteil  des Bereichsnamens, der unterhalb des Textfelds angezeigt wird, muss automatisch mit dem **anwendungs-ID-URI** übereinstimmen, der im vorherigen Schritt festgelegt wurde, und am Ende `/access_as_user` angefügt `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` werden.
 12. Identifizieren Sie im Abschnitt Autorisierte **Clientanwendungen** die Anwendungen, die Sie für die Webanwendung Ihrer App autorisieren möchten. Wählen **Sie Clientanwendung hinzufügen aus.** Geben Sie die folgenden Client-IDs ein, und wählen Sie den autorisierten Bereich aus, den Sie im vorherigen Schritt erstellt haben:
@@ -97,7 +97,7 @@ In diesem Abschnitt werden die Aufgaben beim Erstellen einer Registerkarte Teams
     * email
     * offline_access
     * OpenId
-    * Profil
+    * profile
 
 14. Navigieren Sie zu **Authentifizierung**.
 

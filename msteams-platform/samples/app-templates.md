@@ -5,19 +5,19 @@ ms.topic: reference
 keywords: Beispielbeispiele für Microsoft Teams-Vorlagen
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 098325d973ad1fa5306761cd60c6504d808cea9d
-ms.sourcegitcommit: 0628a85293f7e26de3490e4dd23a54e586cdfeca
+ms.openlocfilehash: 53355b4a22ae9ace5dec36a97183ddc1f6bf05fb
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "51493055"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596688"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
 App-Vorlagen sind Beispiele für vollständige Apps für Microsoft Teams, die open-source sind und auf GitHub verfügbar sind. Jede App-Vorlage enthält ausführliche Anweisungen zum Bereitstellen und Installieren dieser App für Ihre Organisation. Es bietet auch eine Beispiel-App, die Sie installieren und sofort verwenden können. Der vollständige Quellcode ist ebenfalls verfügbar, mit dem Sie ihn detailliert untersuchen oder den Code forken und an Ihre spezifischen Anforderungen anpassen können.
 Alle App-Vorlagen werden unter den [MIT-Lizenzbedingungen](https://github.com/OfficeDev/microsoft-teams-apps-eprescription/blob/master/LICENSE) bereitgestellt.
->[!NOTE] 
->Nicht Microsoft muss Apps, die aus App-Vorlagen für Ihre Benutzer und Organisationen erstellt wurden, lizenz- und unterstützen.
+> [!NOTE] 
+> Sie müssen Apps, die aus App-Vorlagen für Ihre Benutzer und Organisationen erstellt wurden, lizenz- und unterstützen. Microsoft ist nicht für Lizenzen und Support verantwortlich.
 
 **&#9734; Gibt neu veröffentlichte App-Vorlagen an.**
 
@@ -28,13 +28,29 @@ Alle App-Vorlagen werden unter den [MIT-Lizenzbedingungen](https://github.com/Of
 * **Anpassbar und erweiterbar:** Während alle App-Vorlagen mit minimaler Konfiguration bereitgestellt werden können, stellen wir die gesamte Codebasis und Bereitstellungsskripts bereit, damit Sie sie ganz einfach an Ihre individuellen Anforderungen anpassen oder erweitern können.
 * **Ausführliche Dokumentation:** Alle App-Vorlagen werden von einer End-to-End-Dokumentation zu Lösungsarchitektur, Bereitstellung und Konfigurationsschritten begleitet.  
 
-## <a name="adoption-bot-9734"></a>Einführungsbot-&#9734;
+## <a name="adoption-bot"></a>Adoption Bot 
 
 Adoption Bot ist ein Mit Power Virtual Agent für Teams (PVA) erstellter User Care Chat Bot. Es kann als die PVA-Version von FAQPlus betrachtet werden. Adoption Bot beantwortet mehr als 100 häufig gestellte Fragen zu Microsoft 365 und Teams. Sie können die vorhandenen Themen bearbeiten, eigene Themen hinzufügen und vorhandene FAQs hinzufügen. Wenn Benutzer zusätzliche Hilfe benötigen, kann Adoption Bot sie mit Experten verbinden oder sogar auf das Öffnen von Diensttickets mit Premium-Flussconnectors erweitert werden. Dieser Bot kann selbst installiert oder in eine benutzerdefinierte App wie den [Adoption Hub integrierte werden.](https://github.com/akporzondek/adoption_hub)
 
 [Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
-## <a name="appointment-manager-9734"></a>Appointment Manager &#9734;
+## <a name="adoption-tool-9734"></a>Einführungstool &#9734;
+
+Das Einführungstool besteht aus den folgenden beiden App-Vorlagen:
+
+### <a name="champion-management-platform"></a>Champion-Verwaltungsplattform
+
+Mit der #A0 (Champion Management Platform) können Sie Ihre Teamarbeits-Champions verwalten, skalieren und inspirieren, um mehr zu erreichen. Diese App-Vorlage basiert auf dem SharePoint Framework und wird in eine Registerkarte innerhalb eines Teams geladen. Gruppen können dieses Tool nutzen, um die Programmmitgliedschaft zu verwalten, eine Bestenliste und Ereignistypen für die Protokollierung sowie Tools zum Überlagern digitaler Badges für Programmteilnehmer zur Verfügung zu stellen.
+
+[Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
+
+### <a name="get-started"></a>Erste Schritte
+
+Mit der App-Vorlage Erste Schritte können Sie die Leistung von Microsoft 365-Lernpfaden in Microsoft Teams nutzen. Mit dieser App-Vorlage können Sie einfachen Zugriff auf bestimmte Schulungsseiten oder andere Intranetressourcen gewähren und die Inhalte direkt in Teams laden. Sie können den Namen oder das Logo der App auch so ändern, dass sie Ihrem Unternehmensbranding entsprechen.
+
+[Abrufen auf GitHub](https://github.com/msft-teams/tools/tree/master/M365%20Learning%20Pathways)
+
+## <a name="appointment-manager"></a>Appointment Manager 
 
 Appointment Manager ist eine Teams-App-Vorlage, mit der Unternehmen virtuelle Termine mit Kunden über Teams erstellen, verwalten und durchführen können. Neue Terminanfragen von Kunden sind in Teams-Kanälen sichtbar, in denen sie schnell zugewiesen und mitarbeitern in einem Team zugewiesen werden können. Terminanfragen können auf Team- oder persönlichen Ebenen über benutzerdefinierte Registerkarten angezeigt werden. Jeder Termin ist einer Teams-Onlinebetreff zugeordnet, daher können Mitarbeiter und Verbraucher problemlos zur geplanten Zeit an der Besprechung teilnehmen.
 
@@ -125,7 +141,7 @@ Prüfliste ist eine [](../messaging-extensions/what-are-messaging-extensions.md)
 :::column-end:::
 :::row-end:::
 
-## <a name="classroom-drop-in-9734"></a>Drop-In-&#9734;
+## <a name="classroom-drop-in"></a>Classroom-Drop-In 
 
 Das Classroom-Drop-In ist eine Microsoft [Power Platform-basierte](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)App, mit der Systemleiter Klassenteams (virtuelle Kursräume) finden und sich selbst oder andere zu diesen Kursteams für einen angegebenen Drop-In-Zeitraum hinzufügen können, je nach Bedarf. Die app built using Microsoft [Power Apps](/powerapps/powerapps-overview) and [Power Automate](/power-automate/getting-started), deeply integration in Microsoft Teams to ensure educational institute can optimize their operations in a hybrid learning environment by providing access to relevant stakeholders for class teams per business requirements.
 
@@ -162,7 +178,7 @@ Die App Contact Group Lookup bietet einen praktischen und nützlichen Ansatz zum
 :::column-end:::
 :::row-end:::
 
-## <a name="co-worker-appreciation-9734"></a>Bewertung der Kollegen &#9734;
+## <a name="co-worker-appreciation"></a>Kollegen danken 
 
 Mithilfe der Vorlage "Kollegen-Bewertung" in Microsoft Teams können Benutzer die Erfolge ihrer Kollegen im Kontext von Teams erkennen. Wenn Kollegen einen Kollegen belohnen, werden Empfänger und andere Teammitglieder in einer Kanalgespräch markiert und erhalten eine Benachrichtigung über die Preisdetails des Kanals. Die Preise werden in der Teams-App aufgezeichnet, die sicher, portabel und einfach gemeinsam verwendet werden kann. Dies kann als powerApps-basierte Version der Open Badges-App-Vorlage mit einer Bestenliste betrachtet werden.
 
@@ -268,7 +284,7 @@ Conversational Q&A bots sind eine einfache Möglichkeit, Antworten auf häufig g
 
 ![FAQ Plus GIF](../assets/images/FAQPlusEndUser.gif)
 
-## <a name="get-support-app-9734"></a>Support-App-&#9734;
+## <a name="get-support-app"></a>Support-App erhalten
 
 Die App Support anfordern kann von Organisationen verwendet werden, die Microsoft Teams verwenden, um allen Benutzern die Möglichkeit zu ermöglichen, Unterstützung von Vorgesetzten an zu fordern. Diese App enthält verschiedene Features, z. B.:
 -   Anfordern von Unterstützung für verschiedene Kategorien von einer Power App
@@ -391,7 +407,7 @@ Incident Reporter ist ein [Microsoft Teams-Bot,](../bots/what-are-bots.md)  der 
 :::column-end:::
 :::row-end:::
 
-## <a name="inspection-9734"></a>&#9734;
+## <a name="inspection"></a>Inspektion 
 
  Bei der Überprüfung handelt es sich um eine Microsoft Teams-App, mit der Mitarbeiter an der Frontlinie alles von Standorten bis hin zu Ressourcen und Geräten überprüfen können. Beispielsweise ein Einzelhandelsgeschäft, eine Produktionsanlage oder Fahrzeuge und Maschinen. Diese Lösung bietet zwei Apps, die jeweils für verschiedene Benutzertypen vorgesehen sind.
 
@@ -601,7 +617,7 @@ Survey ist eine [](../messaging-extensions/what-are-messaging-extensions.md) ben
 :::column-end:::
 :::row-end:::
 
-## <a name="time-tally-9734"></a>Zeit als &#9734;
+## <a name="time-tally"></a>Zeit als Tally 
 
 Ein Projekt kann mehrere Aufgaben enthalten, und mitarbeitern können verschiedene Projekte zugewiesen werden. Manager müssen den Projektfortschritt durch die Zeit verstehen, die die Mitarbeiter für diese Aufgaben auf sich haben. Dies kann eine umständliche Aktivität sein, da die Mitarbeiter die Arbeitszeittabellen ausfüllen müssen. Die Time -Tally-App ermöglicht Mitarbeitern, ihre Arbeitszeittabellen schnell mit dem mobilen Gerät zu füllen, und Manager müssen mitarbeiter beim Eintrag in der Arbeitszeittabelle nicht weiter verfolgen. Manager können die Projektauslastung basierend auf Ressourcen anzeigen und die Einträge genehmigen oder ablehnen. Erinnerungsbenachrichtigungen werden gesendet, um die Einhaltung der Arbeitszeittabelle sicherzustellen. Außerdem stehen verlaufshistorische Daten und Auslastungen für analysen zur Verfügung.
 

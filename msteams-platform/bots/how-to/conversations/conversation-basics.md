@@ -4,12 +4,12 @@ description: Beschreibt Möglichkeiten für eine Unterhaltung mit einem Microsof
 ms.topic: overview
 ms.author: anclear
 keyword: conversations basics receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 3cf11b5b96a1504ddb3fb8c9fc5814c5131d072f
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 193a93dbf775389383e0385207fa4112440bffe5
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585855"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596674"
 ---
 # <a name="conversation-basics"></a>Grundlagen zu Unterhaltungen
 
@@ -283,6 +283,9 @@ Sie können ihrer Nachricht auch mithilfe der -Eigenschaft Benachrichtigungen `N
 
 Benachrichtigungen warnen Benutzer über neue Aufgaben, Erwähnungen und Kommentare. Diese Warnungen stehen im Zusammenhang mit dem, wofür Benutzer arbeiten oder was sie sehen müssen, indem sie einen Hinweis in ihren Aktivitätsfeed einfügen. Damit Benachrichtigungen von Ihrer Botnachricht ausgelöst werden, legen Sie die `TeamsChannelData` `Notification.Alert` Objects-Eigenschaft auf true. Ob eine Benachrichtigung ausgelöst wird, hängt von den Teams-Einstellungen des einzelnen Benutzers ab, und Sie können diese Einstellungen nicht außer Kraft setzen. Der Benachrichtigungstyp ist entweder ein Banner oder ein Banner und eine E-Mail.
 
+> [!NOTE]
+> Im **Feld Zusammenfassung** wird ein beliebiger Text des Benutzers als Benachrichtigung im Feed angezeigt.
+
 Der folgende Code zeigt ein Beispiel für das Hinzufügen von Benachrichtigungen zu Ihrer Nachricht:
 
 # <a name="c"></a>[C#](#tab/dotnet)
@@ -364,7 +367,7 @@ Bilder werden durch Hinzufügen von Anlagen zu einer Nachricht gesendet. Weitere
 
 Bilder können im PNG-, JPEG- oder GIF-Format mindestens 1024×1024 und 1 MB groß sein. Animierte GIF wird nicht unterstützt.
 
-Geben Sie die Höhe und Breite der einzelnen Bilder mithilfe von XML an. In markdown ist die Bildgröße standardmäßig auf 256×256 festgelegt. Beispiel:
+Geben Sie die Höhe und Breite der einzelnen Bilder mithilfe von XML an. In markdown ist die Bildgröße standardmäßig auf 256×256 festgelegt. Zum Beispiel:
 
 * Verwenden Sie: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` .
 * Verwenden Sie nicht: `![Duck on a rock](http://aka.ms/Fo983c)` .

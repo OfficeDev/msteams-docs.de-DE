@@ -1,76 +1,76 @@
 ---
-title: Kontext für die Registerkarte abrufen
-description: Beschreibt, wie Benutzerkontext auf Ihre Registerkarten abgerufen wird.
-keywords: Teams-Registerkarten Benutzerkontext
-ms.openlocfilehash: 5c52e6eea21f0c059f3cd650770e1076f903fb8e
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
-ms.translationtype: MT
+title: Kontext für Ihre Registerkarte erhalten
+description: Beschreibt, wie Sie Benutzerkontext zu Ihren Registerkarten abrufen
+keywords: Teams Registerkarten Benutzerkontext
+ms.openlocfilehash: 18c8541e948f206fcdddc3a942325e2f5d6e3e5c
+ms.sourcegitcommit: 309823e6911b4e8e307493cbd59880fe69a4dca3
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552437"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "49727163"
 ---
-# <a name="get-context-for-your-microsoft-teams-tab"></a>Kontext für Ihre Microsoft Teams-Registerkarte abrufen
+# <a name="get-context-for-your-microsoft-teams-tab"></a>Abrufen von Kontext zu Ihrer Microsoft Teams-Registerkarte
 
-Für Ihre Registerkarte sind möglicherweise Kontextinformationen erforderlich, um relevante Inhalte anzuzeigen.
+Auf der Registerkarte sind möglicherweise Kontextinformationen zum Anzeigen relevanter Inhalte erforderlich.
 
-* Auf Ihrer Registerkarte sind möglicherweise grundlegende Informationen zum Benutzer, Team oder Unternehmen erforderlich.
-* Auf Ihrer Registerkarte sind möglicherweise Gebietsschema-und Designinformationen erforderlich.
-* Möglicherweise müssen Sie die Registerkarte Lesen `entityId` oder das `subEntityId` kennzeichnet, was auf dieser Registerkarte angezeigt wird.
+* Möglicherweise benötigt Ihre Registerkarte auch grundlegende Informationen zu Benutzern, Teams oder Unternehmen.
+* Die Registerkarte muss möglicherweise Informationen zu Gebietsschemas und Designs aufweisen.
+* Ihre Registerkarte muss vielleicht die `entityId` oder die `subEntityId` lesen, die angibt, was sich auf dieser Registerkarte befindet.
 
 ## <a name="user-context"></a>Benutzerkontext
 
-Der Kontext über den Benutzer, das Team oder das Unternehmen kann besonders hilfreich sein, wenn
+Kontext über den Benutzer, das Team oder das Unternehmen kann in folgenden Fällen besonders nützlich sein:
 
-* Sie müssen Ressourcen in Ihrer APP mit dem angegebenen Benutzer oder Team erstellen oder zuordnen.
-* Sie möchten einen Authentifizierungs Fluss für Azure Active Directory oder einen anderen Identitätsanbieter initiieren, und Sie möchten nicht, dass der Benutzer seinen Benutzernamen erneut eingeben muss. (Weitere Informationen zur Authentifizierung auf der Registerkarte Microsoft Teams finden Sie unter [Authentifizieren eines Benutzers auf Ihrer Microsoft Teams-Registerkarte](~/concepts/authentication/authentication.md).)
+* Sie müssen Ressourcen in Ihrer App erstellen bzw. mit dem angegebenen Benutzer oder Team verknüpfen.
+* Sie möchten einen Authentifizierungsfluss für Azure Active Directory oder einen anderen Identitätsanbieter initiieren und den Benutzer nicht zur erneuten Eingabe seines Benutzernamens auffordern. (Weitere Informationen zur Authentifizierung innerhalb Ihrer Microsoft Teams-Registerkarte finden Sie unter [Authentifizieren eines Benutzers auf Ihrer Microsoft Teams-Registerkarte](~/concepts/authentication/authentication.md).)
 
 > [!IMPORTANT]
-> Diese Benutzerinformationen können zwar eine reibungslose Benutzeroberfläche bieten, Sie sollten Sie jedoch *nicht* als Identitätsnachweis verwenden. Beispielsweise könnte ein Angreifer die Seite in einen "schlechten Browser" Laden und schädliche Informationen oder Anforderungen rendern.
+> Diese Benutzerinformationen können zwar zu einer reibungslosen Benutzererfahrung beitragen, Sie sollten sie aber *nicht* als Identitätsnachweis verwenden. Beispielsweise könnte ein Angreifer Ihre Seite in einem „Bad Browser“ laden und schädliche Informationen oder Anforderungen rendern.
 
-## <a name="accessing-context"></a>Zugreifen auf Kontext
+## <a name="accessing-context"></a>Zugreifen auf den Kontext
 
 Sie können auf zwei Arten auf Kontextinformationen zugreifen:
 
 * Einfügen von URL-Platzhalterwerten
-* Verwenden des [Microsoft Teams-JavaScript-Client-SDK](/javascript/api/overview/msteams-client)
+* Verwenden des [JavaScript-Client-SDK für Microsoft Teams](/javascript/api/overview/msteams-client)
 
-### <a name="getting-context-by-inserting-url-placeholder-values"></a>Kontext wird abgerufen, indem URL-Platzhalterwerte eingefügt werden
+### <a name="getting-context-by-inserting-url-placeholder-values"></a>Abrufen von Kontext durch Einfügen von URL-Platzhalterwerten
 
-Verwenden Sie Platzhalter in Ihren Konfigurations-oder Inhalts-URLs. Microsoft Teams ersetzt die Platzhalter durch die entsprechenden Werte, wenn die tatsächliche Konfigurations-oder Inhalts-URL ermittelt wird. Die verfügbaren Platzhalter enthalten alle Felder im [Kontext](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) Objekt. Zu den allgemeinen Platzhaltern zählen folgende:
+Verwenden Sie Platzhalter in Ihren Konfigurations-oder Inhalts-URLs. Microsoft Teams ersetzt die Platzhalter durch die relevanten Werte, wenn die tatsächliche Konfigurations- oder Inhalts-URL ermittelt wird. Die verfügbaren Platzhalter umfassen alle Felder des [Context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true)-Objekts. Häufige Platzhalter sind folgende:
 
-* {Entitäts Kennung}: die ID, die Sie beim ersten [Konfigurieren der Registerkarte](~/tabs/how-to/create-tab-pages/configuration-page.md)für das Element auf dieser Registerkarte angegeben haben.
-* {subentity-ID}: die ID, die Sie beim Generieren einer [tiefen Verknüpfung](~/concepts/build-and-test/deep-links.md) für ein _bestimmtes Element auf_ dieser Registerkarte angegeben haben. Dies sollte verwendet werden, um in einem bestimmten Zustand innerhalb einer Entität wiederherzustellen. beispielsweise scrollen zu einem bestimmten Inhaltselement oder Aktivieren dieses.
-* {loginHint}: ein Wert, der als Anmelde Hinweis für Azure AD geeignet ist. Dies ist normalerweise der Anmeldename des aktuellen Benutzers in seinem Home-Mandanten.
-* {userPrincipalName}: der Benutzerprinzipal Name des aktuellen Benutzers im aktuellen Mandanten.
-* {userObjectId}: die Azure AD Objekt-ID des aktuellen Benutzers im aktuellen Mandanten.
-* {Theme}: das aktuelle Benutzeroberflächendesign wie `default` , `dark` , oder `contrast` .
-* {Gruppenkennung}: die ID der Office 365 Gruppe, in der sich die Registerkarte befindet.
-* {TID}: die Azure AD Mandanten-ID des aktuellen Benutzers.
-* {locale}: das aktuelle Gebietsschema des Benutzers, der als sprach-Country-Format formatiert ist (beispielsweise "en-US").
+* {entityId}: Die ID, die Sie für das Element auf dieser Registerkarte beim ersten [Konfigurieren der Registerkarte](~/tabs/how-to/create-tab-pages/configuration-page.md) angegeben haben.
+* {subEntityId}: Die ID, die Sie beim Generieren eines [Deep-Links](~/concepts/build-and-test/deep-links.md) für ein bestimmtes Element _innerhalb_ dieser Registerkarte angegeben haben. Diese sollte verwendet werden, um einen bestimmten Zustand innerhalb einer Entität wiederherzustellen, z: B., um zu einem bestimmten Inhalt zu blättern oder diesen zu aktivieren.
+* {loginHint}: Ein Wert, der sich als Anmeldehinweis für Azure AD eignet. Dies ist in der Regel der Anmeldename des aktuellen Benutzers in seinem Basismandanten.
+* {userPrincipalName}: Der Benutzerprinzipalname des aktuellen Benutzers im aktuellen Mandanten.
+* {userObjectId}: Die Azure AD-Objekt-ID des aktuellen Benutzers im aktuellen Mandanten.
+* {theme}: Das aktuelle UI-Design, z. B. `default`, `dark` oder `contrast`.
+* {groupId}: Die ID der Office 365-Gruppe, in der sich die Registerkarte befindet.
+* {tid}: Die Azure AD-Mandanten-ID des aktuellen Benutzers.
+* {locale}: Das aktuelle Gebietsschema des Benutzers, formatiert als „languageId-countryId“ (z. B. „en-us“).
 
 >[!NOTE]
->Der vorherige `{upn}` Platzhalter ist jetzt veraltet. Aus Gründen der Abwärtskompatibilität ist es derzeit ein Synonym für `{loginHint}` .
+>Der bisherige Platzhalter `{upn}` ist nun veraltet. Aus Gründen der Abwärtskompatibilität ist es derzeit ein Synonym für `{loginHint}`.
 
-Angenommen, in Ihrem Tab-Manifest legen Sie das- `configURL` Attribut auf
+Nehmen wir zum Beispiel an, dass Sie in Ihrem Registerkartenmanifest das Attribut `configURL` festlegen auf
 
 `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`
 
-Und der angemeldete Benutzer verfügt über die folgenden Attribute:
+Und der angemeldete Benutzer hat die folgenden Attribute:
 
-* Ihr Benutzername ist "user@example.com"
-* Die Mandanten-ID des Unternehmens lautet "e2653c-etc".
-* Sie sind Mitglied der Office 365 Gruppe mit der ID "00209384-etc".
-* Der Benutzer hat sein Microsoft Teams-Design auf "dunkel" festgelegt.
+* Sein Benutzername lautet „user@example.com“
+* Seine Mandanten-ID Ihres Unternehmens lautet „e2653c-etc“.
+* Er ist Mitglied der Office 365-Gruppe mit der ID „00209384-etc“.
+* Der Benutzer hat sein Teams-Design auf „dunkel“ festgelegt.
 
-Bei der Konfiguration Ihrer Registerkarte ruft Microsoft Teams diese URL auf:
+Wenn er Ihre Registerkarte konfiguriert, ruft Teams diese URL auf:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
-### <a name="getting-context-by-using-the-microsoft-teams-javascript-library"></a>Kontext wird mithilfe der JavaScript-Bibliothek von Microsoft Teams abgerufen.
+### <a name="getting-context-by-using-the-microsoft-teams-javascript-library"></a>Abrufen von Kontext durch Verwendung der JavaScript-Bibliothek von Microsoft Teams
 
-Sie können die oben aufgeführten Informationen auch mithilfe des [Microsoft Teams JavaScript Client SDK](/javascript/api/overview/msteams-client) durch Aufrufen abrufen `microsoftTeams.getContext(function(context) { /* ... */ })` .
+Sie können die zuvor aufgeführten Informationen auch mithilfe des [JavaScript-Client-SDKs von Microsoft Teams](/javascript/api/overview/msteams-client) abrufen, indem Sie `microsoftTeams.getContext(function(context) { /* ... */ })` aufrufen.
 
-Die Kontextvariable wird wie im folgenden Beispiel aussehen.
+Die Kontextvariable sieht wie im folgenden Beispiel dargestellt aus.
 
 ```json
 {
@@ -78,20 +78,37 @@ Die Kontextvariable wird wie im folgenden Beispiel aussehen.
     "teamName": "The name of the current team",
     "channelId": "The channel ID in the format 19:[id]@thread.skype",
     "channelName": "The name of the current channel",
-    "chatId": "The chat ID in the in the format 19:[id]@thread.skype",
+    "chatId": "The chat ID in the format 19:[id]@thread.skype",
     "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
     "entityId": "The developer-defined unique ID for the entity this content points to",
     "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
     "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
-    "userPrincipalName": "The User Principal Name of the current user, in the current tenant",
+    "userPrincipalName": "The principal name of the current user, in the current tenant",
     "userObjectId": "The Azure AD object id of the current user, in the current tenant",
     "tid": "The Azure AD tenant ID of the current user",
     "groupId": "Guid identifying the current O365 Group ID",
     "theme": "The current UI theme: default | dark | contrast",
-    "isFullScreen": "Indicates whether the tab is in full-screen mode",
-    "userLicenseType": "Indicates the user licence type in the given SKU (for example, student or teacher)",
-    "tenantSKU": "Indicates the SKU category of the tenant (for example, EDU)",
-    "channelType": "microsoftTeams.ChannelType.Private | microsoftTeams.ChannelType.Regular"
+    "isFullScreen": "Indicates if the tab is in full-screen",
+    "teamType": "The type of team",
+    "teamSiteUrl": "The root SharePoint site associated with the team",
+    "teamSiteDomain": "The domain of the root SharePoint site associated with the team",
+    "teamSitePath": "The relative path to the SharePoint site associated with the team",
+    "channelRelativeUrl": "The relative path to the SharePoint folder associated with the channel",
+    "sessionId": "The unique ID for the current Teams session for use in correlating telemetry data",
+    "userTeamRole": "The user's role in the team",
+    "isTeamArchived": "Indicates if team is archived",
+    "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, rigel",
+    "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
+    "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
+    "tenantSKU": "The license type for the current user tenant",
+    "userLicenseType": "The license type for the current user",
+    "parentMessageId": "The parent message ID from which this task module is launched",
+    "ringId": "The current ring ID",
+    "appSessionId": "The unique ID for the current session used for correlating telemetry data",
+    "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
+    "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
+    "meetingId": "The meeting ID used by tab when running in meeting context",
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel"
 }
 ```
 
@@ -100,20 +117,20 @@ Die Kontextvariable wird wie im folgenden Beispiel aussehen.
 > [!Note]
 > Private Kanäle befinden sich derzeit in der privaten Entwicklervorschau.
 
-Wenn Ihre Inhaltsseite in einen privaten Kanal geladen wird, werden die Daten, die Sie aus dem Aufruf erhalten, `getContext` verschleiert, um die Datenschutzfunktion des Kanals zu schützen. Die folgenden Felder werden geändert, wenn sich die Inhaltsseite in einem privaten Kanal befindet. Wenn Ihre Seite einen der unten aufgeführten Werte verwendet, müssen Sie das Feld überprüfen, `channelType` um festzustellen, ob Ihre Seite in einen privaten Kanal geladen wird, und entsprechend reagieren.
+Wenn Ihre Inhaltsseite in einem privaten Kanal geladen wird, werden die Daten, die Sie vom `getContext`-Aufruf erhalten, verschleiert, um den Datenschutz des Kanals zu gewährleisten. Die folgenden Felder werden geändert, wenn sich Ihre Inhaltsseite in einem privaten Kanal befindet. Wenn Ihre Seite einen der unten aufgeführten Werte verwendet, müssen Sie das Feld `channelType` überprüfen, um festzustellen, ob Ihre Seite in einem privaten Kanal geladen wird, und entsprechend reagieren.
 
-* `groupId` -Undefined für private Kanäle
-* `teamId` -Auf die Thread-Nr des privaten Kanals festlegen
-* `teamName` -Auf den Namen des privaten Kanals festlegen
-* `teamSiteUrl` -Festlegen der URL einer eindeutigen, eindeutigen SharePoint-Website für den privaten Kanal
-* `teamSitePath` -Festlegen des Pfads einer eindeutigen, eindeutigen SharePoint-Website für den privaten Kanal
-* `teamSiteDomain` -Festlegung auf die Domäne einer eindeutigen, eindeutigen SharePoint-Website Domäne für den privaten Kanal
+* `groupId` – Undefiniert für private Kanäle
+* `teamId` – Auf die „threadId“ des privaten Kanals festgelegt
+* `teamName` – Auf den Namen des privaten Kanals festgelegt
+* `teamSiteUrl` – Auf die URL einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal festgelegt
+* `teamSitePath` – Auf den Pfad einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal festgelegt
+* `teamSiteDomain` – Auf die Domäne einer bestimmten, eindeutigen SharePoint-Websitedomäne für den privaten Kanal festgelegt
 
 > [!Note]
->  teamSiteUrl funktioniert auch für Standardkanäle.
+>  „teamSiteUrl“ funktioniert auch für Standardkanäle gut.
 
-## <a name="theme-change-handling"></a>Behandlung von Designänderungen
+## <a name="theme-change-handling"></a>Verarbeitung von Designänderungen
 
-Sie können Ihre APP so registrieren, dass Sie mitgeteilt wird, wenn sich das Design durch Aufrufen ändert `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })` .
+Sie können Ihre App für eine Benachrichtigung, wenn sich das Design ändert, registrieren, indem Sie `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })` aufrufen.
 
-Das `theme` Argument in der-Funktion ist eine Zeichenfolge mit dem Wert `default` , `dark` oder `contrast` .
+Das Argument `theme` in der Funktion ist eine Zeichenfolge mit einem Wert von `default`, `dark` oder `contrast`.

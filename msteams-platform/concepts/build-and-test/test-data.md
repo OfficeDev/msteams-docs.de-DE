@@ -1,49 +1,37 @@
 ---
-title: Hinzufügen von Testdaten zu Ihrem Office 365-Test-Mandanten
-description: Einrichten Ihres Office 365-Entwicklerprogrammabonnements für erfolgreiche Tests von Microsoft Teams-Apps
+title: Hinzufügen von Testdaten zu Ihrem Microsoft 365-Test-Mandanten
+description: Einrichten Ihres Office 365-Entwicklerprogrammabonnements für erfolgreiche Tests von Microsoft Teams Apps
 ms.topic: how-to
-keywords: Testen von Teams des Entwicklerprogramms für Apps
+keywords: Testen von Entwicklerprogrammteams für Apps
 ms.date: 11/01/2019
-ms.openlocfilehash: 97eeb9c35b22adf75ad7f630fb2a621f0330e060
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 863f1d9843bb3ebe968ca180ee70a5b6bfa6cd7a
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014439"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596189"
 ---
-# <a name="add-test-data-to-your-office-365-test-tenant"></a>Hinzufügen von Testdaten zu Ihrem Office 365-Test-Mandanten
+# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Hinzufügen von Testdaten zu Ihrem Microsoft 365-Test-Mandanten
 
-Richten Sie Ihr Abonnement für das O365-Entwicklerprogramm (oder einen anderen Test-Mandanten) ein, damit Sie die von Ihnen erstellten Apps einfach testen können.  Es hilft Ihnen:
+Mit einem Microsoft 365-Entwicklerabonnement können Sie Ihre Microsoft Teams-App mit Testteams, Kanälen und Benutzern verwenden.
 
-- Erstellen neuer Teams und Kanäle in Ihrer Organisation
+## <a name="before-you-start"></a>Vor dem Start
 
-- Fügen Sie die Benutzer, die über das Benutzerinhaltspaket erstellt werden, diesen Teams hinzu.
+Wenn Sie noch keinen Test-Mandanten haben, müssen Sie am Office 365-Entwicklerprogramm teilnehmen und sich für ein Entwicklerabonnement registrieren. Sie müssen auch die erforderlichen PowerShell-Module installieren. Für jeden Mandanten, den Sie verwenden, benötigen Sie globale Administratorberechtigungen, um die Skripts ausführen zu können.
 
-## <a name="before-you-start"></a>Vor der Bereitstellung
-
-Wenn Sie noch keinen Test mandanten haben, müssen Sie am Office 365-Entwicklerprogramm teilnehmen und sich für ein Entwicklerabonnement registrieren. Sie müssen auch die erforderlichen PowerShell-Module installieren. Für den von Ihnen verwendeten Mandanten benötigen Sie globale Administratorberechtigungen, um die Skripts ausführen zu können.
-
-1. [Treten Sie dem Office 365 Entwickler Programm bei](/office/developer-program/office-365-developer-program)
+1. [Teilnehmen am Microsoft 365-Entwicklerprogramm](/office/developer-program/office-365-developer-program)
 2. [Einrichten eines Microsoft 365-Entwicklerabonnements](/office/developer-program/office-365-developer-program-get-started)
-3. [Verwenden von Beispieldatenpaketen mit Ihrem Office 365-Entwicklerabonnement zum Installieren des Inhaltspakets "Benutzer"](/office/developer-program/install-sample-packs)
-4. [Installieren des Teams -PowerShell-Moduls](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
-5. [Installieren des Azure AD -PowerShell-Moduls](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
+3. [Verwenden von Beispieldatenpaketen mit Ihrem Microsoft 365-Entwicklerabonnement zum Installieren des Inhaltspakets "Benutzer"](/office/developer-program/install-sample-packs)
+4. [Installieren des Teams PowerShell-Moduls](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
+5. [Installieren des Azure AD PowerShell-Moduls](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)
 
-### <a name="optional-step-allow-upload-of-custom-apps"></a>Optionaler Schritt: Hochladen benutzerdefinierter Apps zulassen
+## <a name="optional-enable-custom-app-sideloading"></a>(Optional) Aktivieren des Querladens von benutzerdefinierten Apps
 
-Standardmäßig können nur globale Administratoren oder Teamdienstadministratoren benutzerdefinierte Apps in den Mandanten-App-Katalog hochladen.  Sie können auch allen Benutzern das Hochladen benutzerdefinierter Apps zur eigenen Verwendung oder in Teams zu Testzwecken ermöglichen.
-
-Um diese Einstellung zu aktivieren, müssen Sie die globale App-Setup-Richtlinie in Ihrem Teams Admin Portal aktualisieren.
-
-<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" title="Screenshot der App-Setup-Richtlinie" />
-
-Weitere Informationen finden Sie unter:
-
- - [Verwalten von Richtlinien für App-Setup in Teams](/microsoftteams/teams-app-setup-policies)
+Standardmäßig können nur globale Administratoren oder Teams-Dienstadministratoren benutzerdefinierte Apps in den Mandanten-App-Katalog hochladen. Sie können Benutzern auch erlauben, benutzerdefinierte Apps in Teams hochzuladen. Weitere Informationen finden Sie [unter Verwalten von App-Setuprichtlinien in Teams](/microsoftteams/teams-app-setup-policies).
 
 ## <a name="create-teams-and-channels"></a>Erstellen von Teams und Kanälen
 
-Speichern Sie den folgenden Codeausschnitt als XML (XML), und notieren Sie sich, wo Sie ihn gespeichert haben.  Dieser XML definiert die Struktur der Teams und Kanäle, die erstellt werden , zusammen mit den Mitgliedern.
+Speichern Sie den folgenden Codeausschnitt als XML (XML), und notieren Sie sich, wo Sie ihn gespeichert haben.  Diese XML definiert die Struktur der Teams und Kanäle, die erstellt werden , zusammen mit ihren Mitgliedern.
 
 ```xml
 <?xml version="1.0"?>
@@ -157,7 +145,7 @@ Speichern Sie den folgenden Codeausschnitt als XML (XML), und notieren Sie sich,
 </Teams>
 ```
 
-Speichern Sie den folgenden Codeausschnitt als PowerShell-Skript (PS1), und notieren Sie sich, wo Sie es gespeichert haben.  Dieses Skript führt die Schritte aus, um die Teams und Kanäle zu erstellen und Ihnen Mitglieder hinzuzufügen.
+Speichern Sie den folgenden Codeausschnitt als PowerShell-Skript (PS1), und notieren Sie sich, wo Sie ihn gespeichert haben.  Dieses Skript führt die Schritte aus, um die Teams und Kanäle zu erstellen und ihnen Mitglieder hinzuzufügen.
 
 ```powershell
 Param(
@@ -248,9 +236,9 @@ else {
 }
 ```
 
-Öffnen Sie Windows PowerShell Sitzung im Administratormodus.  Führen Sie das Skript aus, das Sie gerade gespeichert haben.  Sie werden aufgefordert, die Anmeldeinformationen ein- verwenden Sie die Anmeldeinformationen des globalen Administrators, die Sie bei der ersten Anmeldung für Ihr Entwicklerabonnement erhalten haben.
+Öffnen Sie eine Windows PowerShell im Administratormodus.  Führen Sie das Skript aus, das Sie gerade gespeichert haben.  Sie werden aufgefordert, die Anmeldeinformationen zur Verfügung zu stellen – verwenden Sie die Anmeldeinformationen des globalen Administrators, die Sie bei der ersten Anmeldung für Ihr Entwicklerabonnement erhalten haben.
 
 > [!Note]
-> Die Ausführung des Skripts dauert einige Minuten. Schließen Sie die PowerShell-Sitzung nicht.  Wenn Sie die Benutzer in Ihrem Abonnement von dem geändert haben, was im Standardinhaltspaket erstellt wurde, werden einige Benutzer möglicherweise nicht zu Teams hinzugefügt.  Während der Ausführung des Skripts werden erfolgreiche oder fehlgeschlagene Aktionen ausgegeben.
+> Die Ausführung des Skripts dauert einige Minuten – schließen Sie ihre PowerShell-Sitzung nicht.  Wenn Sie die Benutzer in Ihrem Abonnement von dem geändert haben, was im Standardinhaltspaket erstellt wurde, werden einige Benutzer möglicherweise nicht zu Teams hinzugefügt.  Wenn das Skript ausgeführt wird, werden erfolgreiche oder fehlgeschlagene Aktionen ausgegeben.
 
-Sobald das Skript ausgeführt wurde, können Sie sich mit einem der Benutzerkonten beim Teams-Client anmelden und die neu erstellten Teams anzeigen.
+Nachdem das Skript ausgeführt wurde, können Sie sich mit einem der Benutzerkonten beim Teams-Client anmelden und die neu erstellten Teams anzeigen.

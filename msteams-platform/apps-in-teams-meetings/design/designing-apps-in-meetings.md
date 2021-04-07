@@ -4,12 +4,12 @@ author: heath-hamilton
 description: Erfahren Sie, wie Sie Apps in Teams-Besprechungen entwerfen und das Microsoft Teams UI Kit erhalten.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 83dfaf3f92c00c420f758b66488b4a6b09c75717
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: e4e7bb05fbc9717a4eb8323302d1a10eac4c77dd
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827949"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596252"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen Ihrer Microsoft Teams-Besprechungserweiterung
 
@@ -152,11 +152,10 @@ Es gibt zwei Kopfzeilenvarianten. Verwenden Sie nach Möglichkeit die Variante m
 
 Besprechungsdialogfelder können in der Größe variieren, um unterschiedliche Szenarien zu berücksichtigen. Achten Sie darauf, abstands- und komponentengrößen zu erhalten.
 
-* **Width**: Die Breite des iframe des Dialogfelds ist ein absoluter Wert innerhalb des angegebenen Bereichs.
-* **Height**: Die iframe-Höhe des Dialogfelds ist ein absoluter Wert innerhalb des angegebenen Bereichs.
+* **Width**: Sie können die Breite des iframe des Dialogfelds an einer beliebigen Stelle innerhalb des unterstützten Größenbereichs angeben.
+* **Height**: Sie können die Höhe des iframe des Dialogfelds an einer beliebigen Stelle innerhalb des unterstützten Größenbereichs angeben. Sie können Benutzern auch erlauben, vertikal zu scrollen, wenn Ihre App-Inhalte die maximale Höhe überschreitet.
 
-> [!NOTE]
-> Die Werte, die Sie für die Breite und Höhe definieren, werden im `externalResourceURL` Besprechungsdialogfeld verwendet.
+Geben Sie zum Implementieren die Breite und Höhe mithilfe des Schlüssels [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) an.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Beispiel zeigt das Dialogfeld in der Besprechung. Breite: Min--280 Pixel (248 Pixel iframe). Max.-460 Pixel (428 Pixel iframe). Höhe: 300 Pixel (iframe)." border="false":::
 
@@ -164,7 +163,7 @@ Besprechungsdialogfelder können in der Größe variieren, um unterschiedliche S
 
 Sie können nach dem Ende zu einer Besprechung wechseln und App-Inhalte anzeigen. In diesem Beispiel kann der Besprechungsorganisator die Umfrageergebnisse auf der Registerkarte **Contoso** anzeigen. (Hinweis: Aus Entwurfs sicht gibt es keinen Unterschied zwischen der Registerkartenerfahrung vor und nach der Besprechung.)
 
-:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Beispiel zeigt eine Registerkarte nach der Besprechung." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Die Beispielillustration zeigt eine Registerkarte nach der Besprechung." border="false":::
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
