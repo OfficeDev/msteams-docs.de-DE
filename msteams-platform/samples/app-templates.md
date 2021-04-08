@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Beispielbeispiele für Microsoft Teams-Vorlagen
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 53355b4a22ae9ace5dec36a97183ddc1f6bf05fb
-ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
+ms.openlocfilehash: 47fb1748f0c88edd2233c4e17aa50d235818d609
+ms.sourcegitcommit: 2de062dd2258147cff8d6a3cadd8839890d9791a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596688"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "51612650"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -34,17 +34,13 @@ Adoption Bot ist ein Mit Power Virtual Agent für Teams (PVA) erstellter User Ca
 
 [Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
-## <a name="adoption-tool-9734"></a>Einführungstool &#9734;
-
-Das Einführungstool besteht aus den folgenden beiden App-Vorlagen:
-
-### <a name="champion-management-platform"></a>Champion-Verwaltungsplattform
+## <a name="adoption-tool--champion-management-platform-9734"></a>Einführungstool – Champion Management Platform &#9734;
 
 Mit der #A0 (Champion Management Platform) können Sie Ihre Teamarbeits-Champions verwalten, skalieren und inspirieren, um mehr zu erreichen. Diese App-Vorlage basiert auf dem SharePoint Framework und wird in eine Registerkarte innerhalb eines Teams geladen. Gruppen können dieses Tool nutzen, um die Programmmitgliedschaft zu verwalten, eine Bestenliste und Ereignistypen für die Protokollierung sowie Tools zum Überlagern digitaler Badges für Programmteilnehmer zur Verfügung zu stellen.
 
 [Abrufen auf GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
 
-### <a name="get-started"></a>Erste Schritte
+## <a name="adoption-tool--microsoft-365-learning-pathways-get-started-9734"></a>Einführungstool – Microsoft 365 Learning Pathways (Get Started) &#9734;
 
 Mit der App-Vorlage Erste Schritte können Sie die Leistung von Microsoft 365-Lernpfaden in Microsoft Teams nutzen. Mit dieser App-Vorlage können Sie einfachen Zugriff auf bestimmte Schulungsseiten oder andere Intranetressourcen gewähren und die Inhalte direkt in Teams laden. Sie können den Namen oder das Logo der App auch so ändern, dass sie Ihrem Unternehmensbranding entsprechen.
 
