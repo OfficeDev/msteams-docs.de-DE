@@ -350,7 +350,9 @@
       href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: Testen eigener Apps
   items:
-    - name: Vorbereiten des Microsoft 365-Mandanten
+    - name: Übersicht
+      href: concepts/build-and-test/test-app-overview.md
+    - name: Vorbereiten Ihres Microsoft 365-Mandanten
       href: concepts/build-and-test/prepare-your-o365-tenant.md
     - name: Auswählen eines Test-Setups
       href: concepts/build-and-test/debug.md
