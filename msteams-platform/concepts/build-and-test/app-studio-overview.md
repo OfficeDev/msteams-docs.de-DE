@@ -3,12 +3,12 @@ title: Erste Schritte mit App Studio für Microsoft Teams
 description: Erste Schritte zum Erstellen von großartigen Apps in Microsoft Teams mit App Studio
 keywords: Erste Schritte mit App Studio-Teams
 ms.topic: overview
-ms.openlocfilehash: ca7d777458c8c8f9646d7e862f7a5b83059c21f3
-ms.sourcegitcommit: 098d38dd947e87e69d289b99e807bea2d95c42f9
+ms.openlocfilehash: f9b1763fdd616485a08a059a89f6792cbabfce54
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "49713396"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634509"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Entwickeln Sie schnell Apps mit App Studio für Microsoft Teams
 
@@ -34,6 +34,8 @@ Klicken Sie in App Studio auf die Registerkarte *Manifest-Editor*, auf der Sie e
 
 ## <a name="app-studio-features"></a>App Studio-Features
 
+In diesem Abschnitt werden Features wie Unterhaltung, Manifesteditor, Details und Funktionen behandelt. Sie können Ihre Funktionen mithilfe von App-Anpassungen anpassen.
+
 ### <a name="conversation"></a>Unterhaltung
 
 Hier können Sie sehen, wie die [in App Studio erstellten Karten](#card-editor) in Teams aussehen, indem Sie diese zum Test an sich selbst senden.
@@ -52,6 +54,12 @@ Der Detailabschnitt des Manifest-Editors definiert die allgemeine Beschreibung d
 
 Im Abschnitt "Funktionen" des Manifest-Editors werden die Funktionen der App definiert und Details zu den einzelnen Funktionen aufgelistet.
 
+> [!NOTE]
+> Die App-Anpassungsfunktion ist derzeit nur in der Entwicklervorschau verfügbar.
+> 
+> Als bewährte Methode müssen Sie Anpassungsrichtlinien für App-Benutzer und -Kunden bereitstellen, die sie beim Anpassen Ihrer App befolgen müssen. Weitere Informationen finden Sie unter [Anpassen von Apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+
+
 ##### <a name="tabs"></a>Registerkarten
 
 * **Teamregisterkarten.** Eine Teamregisterkarte wird Teil eines Kanals und ermöglicht den schnellen Zugriff auf Teaminformationen und -ressourcen. Beispielsweise enthält die Registerkarte Planner einen einzelnen Plan für einen Kanal. Die Registerkarte Power BI wird einem bestimmten Bericht zugeordnet. Benutzer können einen Drilldown zum relevanten Kontext durchführen, sollten jedoch nicht in der Lage sein, außerhalb der Registerkarte zu navigieren. Auf der Registerkarte Power BI wird beispielsweise nicht die Navigation zu anderen Power BI-Berichten aktiviert, sondern die Schaltfläche *Zur Website wechseln*, mit welcher der Bericht auf der Power BI-Hauptwebsite gestartet wird.
@@ -68,13 +76,17 @@ In diesem Abschnitt können Sie Ihrer App einen [Unterhaltungs-Bot](~/bots/what-
 
 Wenn Sie noch keinen Bot beim Bot Framework registriert haben, klicken Sie auf *Registrieren*, um einen neuen Bot zu erstellen. Wenn Sie mit der Registrierung Ihres Bots fertig sind, kehren Sie zu diesem Abschnitt des Manifest-Editors zurück, um dessen Namen und Bot Framework-ID einzugeben.
 
-Nachdem Sie die Informationen Ihres Bots eingegeben haben, können Sie jetzt optional eine Liste von Befehlen definieren, die Ihr Bot den Benutzern vorschlagen kann. Fügen Sie den Befehlsnamen, eine Befehlsbeschreibung mit Angaben zu dessen Syntax und Argumenten sowie die Bereiche hinzu, für die dieser Befehl gelten soll.
+Nachdem Sie die Informationen Ihres Bots bereitgestellt haben, können Sie nun optional eine Liste von Befehlen definieren, die Ihr Bot Benutzern vorschlagen kann. Fügen Sie den Befehlsnamen, eine Befehlsbeschreibung mit Angaben zu dessen Syntax und Argumenten sowie die Bereiche hinzu, für die dieser Befehl gelten soll.
 
 Beachten Sie, dass Befehle, die für den nicht unterstützten Bereich angegeben wurden, ignoriert werden, wenn Sie Ihren Bot so definiert haben, dass er nur einen Bereich unterstützt. Sie können die vom Bot unterstützten Bereiche jederzeit bearbeiten.
 
 ##### <a name="connectors"></a>Connectors
 
 In diesem Abschnitt können Sie Ihrer App einen Connector hinzufügen. Wenn Sie bereits einen Office 365-Connector registriert haben, wählen Sie *Einrichten* und geben Sie den Namen und die ID des Konnektors ein. Wenn Sie einen neuen Konnektor möchten, klicken Sie auf *Registrieren*, um zum Connector Developer Dashboard in Ihrem Browser zu gelangen.
+
+> [!NOTE]
+> Mithilfe der App-Anpassung können Administratoren das Aussehen und Die-Gefühl der Apps ändern, die über Bots, Messagingerweiterungen, Registerkarten und Connectors geladen werden. Wenn der Teams-Administrator beispielsweise den Namen einer App von *Contoso* in *Contoso Agent* anpasst, wird die App benutzern mit dem neuen Namen *Contoso Agent* angezeigt. Beim Hinzufügen eines Connectors zu einem Chat wird in der Liste der Connectors jedoch weiterhin der Name der App als *Contoso angezeigt.*
+
 
 ##### <a name="messaging-extensions"></a>Messaging-Erweiterungen
 

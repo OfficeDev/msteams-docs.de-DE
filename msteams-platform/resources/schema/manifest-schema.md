@@ -4,12 +4,12 @@ description: Beschreibt das Manifestschema für Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
 keywords: Teams-Manifestschema
-ms.openlocfilehash: fc7af73dd90ae74d76645281d9e761b91678873b
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 8c77d2e82c65a11b67eb6a223313f477238517d9
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585841"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634523"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -277,7 +277,11 @@ Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen.
     ]
   },
   "defaultInstallScope": "meetings",
-  "defaultGroupCapability": {"meetings": "tab" , "team": "bot", "groupchat": "bot"}
+  "defaultGroupCapability": {
+    "meetings": "tab", 
+    "team": "bot", 
+    "groupchat": "bot"
+  }
 }
 ```
 
@@ -658,5 +662,5 @@ Definieren Sie die Eigenschaften, die Ihre App zum Posten eines Benutzeraktivit�
 ```
 
 ***
->
->
+
+

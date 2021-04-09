@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Abonnieren von Unterhaltungsereignissen von Ihrem Microsoft Teams-Bot.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: b4dc70e4619043bd0b675206770093b086fc5ec6
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: bc4ae36d8cffe5b19ee778a71e1c7b1c00c5e88c
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014320"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634502"
 ---
 # <a name="subscribe-to-conversation-events"></a>Abonnieren von Unterhaltungsereignissen
 
@@ -19,37 +19,37 @@ Microsoft Teams sendet Benachrichtigungen an Ihren Bot für Ereignisse, die in B
 
 * Auslösen einer Willkommensnachricht, wenn Ihr Bot zu einem Team hinzugefügt wird
 * Auslösen einer Willkommensnachricht, wenn ein neues Teammitglied hinzugefügt oder entfernt wird
-* Auslösen einer Benachrichtigung, wenn ein Kanal erstellt, umbenannt oder gelöscht wird
-* Wenn eine Botnachricht von einem Benutzer mit "Gefällt mir" gefällt
+* Auslösen einer Benachrichtigung beim Erstellen, Umbenennen oder Löschen eines Kanals
+* Wenn eine Botnachricht von einem Benutzer gemocht wird
 
 ## <a name="conversation-update-events"></a>Aktualisierungsereignisse in Unterhaltungen
 
 > [!Important]
 > Neue Ereignisse können jederzeit hinzugefügt werden, und Ihr Bot beginnt, sie zu empfangen.
-> Sie müssen die Möglichkeit, unerwartete Ereignisse zu empfangen, entwerfen.
-> Wenn Sie das Bot Framework SDK verwenden, antwortet Ihr Bot automatisch mit einem auf Ereignisse, die Sie `200 - OK` nicht behandeln möchten.
+> Sie müssen entwerfen, ob unerwartete Ereignisse empfangen werden können.
+> Wenn Sie das Bot Framework SDK verwenden, antwortet Ihr Bot automatisch mit einem auf Ereignisse, die Sie nicht `200 - OK` behandeln möchten.
 
 Ein Bot empfängt ein `conversationUpdate`-Ereignis, wenn er zu einer Unterhaltung hinzugefügt wurde, andere Mitglieder zu einer Unterhaltung hinzugefügt oder daraus entfernt wurden oder sich die Metadaten einer Unterhaltung geändert haben.
 
 Das `conversationUpdate`-Ereignis wird an Ihren Bot gesendet, wenn er Informationen zu Mitgliedschaftsaktualisierungen für Teams empfängt, denen er hinzugefügt wurde. Er empfängt außerdem eine Aktualisierung, wenn er zum ersten Mal hinzugefügt wurde, speziell für persönliche Unterhaltungen.
 
-Die folgende Tabelle enthält eine Liste der Aktualisierungsereignisse für Teams-Unterhaltungen mit Links zu weiteren Details.
+In der folgenden Tabelle ist eine Liste der Unterhaltungsaktualisierungsereignisse von Teams mit Links zu weiteren Details aufgeführt.
 
-| Ergriffene Aktion        | EventType         | Aufgerufene Methode              | Beschreibung                | Bereich |
+| Ergriffene Aktion        | EventType         | Methode aufgerufen              | Beschreibung                | Bereich |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
 | Kanal erstellt     | channelCreated    | OnTeamsChannelCreatedAsync | [Ein Kanal wurde erstellt](#channel-created) | Team |
 | Kanal umbenannt     | channelRenamed    | OnTeamsChannelRenamedAsync | [Ein Kanal wurde umbenannt](#channel-renamed) | Team |
 | Kanal gelöscht     | channelDeleted    | OnTeamsChannelDeletedAsync | [Ein Kanal wurde gelöscht](#channel-deleted) | Team |
 | Kanal wiederhergestellt    | channelRestored    | OnTeamsChannelRestoredAsync | [Ein Kanal wurde wiederhergestellt](#channel-deleted) | Team |
-| Hinzugefügte Mitglieder   | membersAdded   | OnTeamsMembersAddedAsync   | [Ein hinzugefügtes Mitglied](#team-members-added)   | Alle |
-| entfernte Mitglieder | membersRemoved | OnTeamsMembersRemovedAsync | [Ein Mitglied wurde entfernt](#team-members-removed) | groupChat & Team |
+| hinzugefügte Mitglieder   | membersAdded   | OnTeamsMembersAddedAsync   | [Ein hinzugefügtes Mitglied](#team-members-added)   | Alle |
+| Entfernte Mitglieder | membersRemoved | OnTeamsMembersRemovedAsync | [Ein Mitglied wurde entfernt](#team-members-removed) | groupChat & Team |
 | Team umbenannt        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Ein Team wurde umbenannt](#team-renamed)       | Team |
 | Team gelöscht        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Ein Team wurde gelöscht](#team-deleted)       | Team |
 | Team archiviert        | teamArchived       | OnTeamsTeamArchivedAsync    | [Ein Team wurde archiviert](#team-archived)       | Team |
-| team unarchived        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [Ein Team wurde nicht archiviert](#team-unarchived)       | Team |
+| Team wird nicht archiviert        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [Ein Team wurde nicht archiviert](#team-unarchived)       | Team |
 | Team wiederhergestellt        | teamRestored      | OnTeamsTeamRestoredAsync    | [Ein Team wurde wiederhergestellt](#team-restored)       | Team |
 
-### <a name="channel-created"></a>Erstellter Kanal
+### <a name="channel-created"></a>Kanal erstellt
 
 Das vom Kanal erstellte Ereignis wird an Ihren Bot gesendet, wenn ein neuer Kanal in einem Team erstellt wird, in dem Ihr Bot installiert ist.
 
@@ -138,7 +138,7 @@ async def on_teams_channel_created(
 
 ### <a name="channel-renamed"></a>Kanal umbenannt
 
-Das kanalbenannte Ereignis wird an Ihren Bot gesendet, wenn ein Kanal in einem Team umbenannt wird, in dem Ihr Bot installiert ist.
+Das umbenannte Kanalereignis wird an Ihren Bot gesendet, wenn ein Kanal in einem Team umbenannt wird, in dem Ihr Bot installiert ist.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -218,7 +218,7 @@ async def on_teams_channel_renamed(
 
 ### <a name="channel-deleted"></a>Kanal gelöscht
 
-Das gelöschte Kanalereignis wird an Ihren Bot gesendet, wenn ein Kanal in einem Team gelöscht wird, in dem Ihr Bot installiert ist.
+Das Kanal gelöschte Ereignis wird an Ihren Bot gesendet, wenn ein Kanal in einem Team gelöscht wird, in dem Ihr Bot installiert ist.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -300,7 +300,7 @@ async def on_teams_channel_deleted(
 
 ### <a name="channel-restored"></a>Kanal wiederhergestellt
 
-Das Kanal-wiederhergestellte Ereignis wird an Ihren Bot gesendet, wenn ein Kanal, der zuvor gelöscht wurde, in einem Team wiederhergestellt wird, in dem Ihr Bot bereits installiert ist.
+Das kanalwiederherstellende Ereignis wird an Ihren Bot gesendet, wenn ein kanal, der zuvor gelöscht wurde, in einem Team wiederhergestellt wird, in dem Ihr Bot bereits installiert ist.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -436,7 +436,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[Json](#tab/json)
 
-Dies ist die Nachricht, die Ihr Bot erhält, wenn der Bot **einem Team hinzugefügt wird.**
+Dies ist die Nachricht, die Ihr Bot erhält, wenn der Bot zu **einem Team hinzugefügt wird.**
 
 ```json
 {
@@ -475,7 +475,7 @@ Dies ist die Nachricht, die Ihr Bot erhält, wenn der Bot **einem Team hinzugef�
 }
 ```
 
-Dies ist die Nachricht, die Ihr Bot erhält, wenn der Bot zu einem *1:1-Chat hinzugefügt wird.*
+Dies ist die Nachricht, die Ihr Bot erhält, wenn der Bot zu einem *1:1-Chat* hinzugefügt wird.
 
 ```json
 {
@@ -494,11 +494,11 @@ Dies ist die Nachricht, die Ihr Bot erhält, wenn der Bot zu einem *1:1-Chat hin
   "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
   "from": {
     "id": "29:<USERID>",
-    "aadObjectId": "**_"
+    "aadObjectId": "***"
   },
   "conversation": {
     "conversationType": "personal",
-    "id": "_*_"
+    "id": "***"
   },
   "recipient": {
     "id": "28:<BOT ID>",
@@ -525,11 +525,11 @@ async def on_teams_members_added(
     return
 ```
 
-_ * *
+* * *
 
 ### <a name="team-members-removed"></a>Entfernte Teammitglieder
 
-Das Ereignis wird an Ihren Bot gesendet, wenn es aus einem Team entfernt wird und jedes Mal, wenn ein Benutzer aus einem Team entfernt wird, in dem Ihr Bot `teamMemberRemoved` Mitglied ist. Sie können feststellen, ob das neue Element der Bot selbst oder ein Benutzer war, indem Sie sich das `Activity` Objekt des . `turnContext`  Wenn das Feld des Objekts mit dem Feld des Objekts identisch ist, ist das entfernte Element der Bot, andernfalls handelt es sich `Id` `MembersRemoved` um einen `Id` `Recipient` Benutzer.  Die Bots `Id` sind im Allgemeinen: `28:<MicrosoftAppId>`
+Das Ereignis wird an Ihren Bot gesendet, wenn es aus einem Team entfernt wird und jedes Mal, wenn ein Benutzer aus einem Team entfernt wird, in dem Ihr Bot `teamMemberRemoved` Mitglied ist. Sie können ermitteln, ob das entfernte neue Mitglied der Bot selbst oder ein Benutzer war, indem Sie sich das `Activity` Objekt des anschauen. `turnContext`  Wenn das Feld des Objekts mit dem Feld des Objekts identisch ist, ist das entfernte Element der Bot, andernfalls handelt es sich `Id` `MembersRemoved` um einen `Id` `Recipient` Benutzer.  Die Bots `Id` sind in der Regel: `28:<MicrosoftAppId>`
 
 [!Note] Wenn ein Benutzer dauerhaft aus einem Mandanten gelöscht wird, `membersRemoved conversationUpdate` wird das Ereignis ausgelöst.
 
@@ -638,7 +638,7 @@ async def on_teams_members_removed(
 
 ### <a name="team-renamed"></a>Team umbenannt
 
-Ihr Bot wird benachrichtigt, wenn das Team, in dem er sich befindet, umbenannt wurde. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamRenamed` dem `channelData` Objekt.
+Ihr Bot wird benachrichtigt, wenn das Team, in dem er sich befindet, umbenannt wurde. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamRenamed` im `channelData` Objekt.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -716,7 +716,7 @@ async def on_teams_team_renamed(
 
 ### <a name="team-deleted"></a>Team gelöscht
 
-Ihr Bot wird benachrichtigt, wenn das Team, in dem er sich befindet, gelöscht wurde. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamDeleted` dem `channelData` Objekt.
+Ihr Bot wird benachrichtigt, wenn das Team, in dem er sich befindet, gelöscht wurde. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamDeleted` im `channelData` Objekt.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -790,7 +790,7 @@ async def on_teams_team_deleted(
 
 ### <a name="team-restored"></a>Team wiederhergestellt
 
-Der Bot erhält eine Benachrichtigung, wenn er nach dem Löschen wiederhergestellt wird. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamrestored` dem `channelData` Objekt.
+Der Bot erhält eine Benachrichtigung, wenn das Team nach dem Löschen wiederhergestellt wird. Der Bot empfängt `conversationUpdate` ein Ereignis mit im `eventType.teamrestored` `channelData` Objekt.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -868,7 +868,7 @@ async def on_teams_team_restored(
 
 ### <a name="team-archived"></a>Team archiviert
 
-Der Bot erhält eine Benachrichtigung, wenn das Team archiviert wird, in dem er installiert ist. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamarchived` dem `channelData` Objekt.
+Der Bot empfängt eine Benachrichtigung, wenn das Team archiviert wird, in dem er installiert ist. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamarchived` im `channelData` Objekt.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -945,9 +945,9 @@ async def on_teams_team_archived(
 * * *
 
 
-### <a name="team-unarchived"></a>Team wurde archiviert
+### <a name="team-unarchived"></a>Team wird nicht archiviert
 
-Der Bot erhält eine Benachrichtigung, wenn das Team, in dem er installiert ist, nicht mehr archiviert wird. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamUnarchived` dem `channelData` Objekt.
+Der Bot empfängt eine Benachrichtigung, wenn das Team, in dem er installiert ist, nicht archiviert ist. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamUnarchived` im `channelData` Objekt.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -1025,9 +1025,9 @@ async def on_teams_team_unarchived(
 
 ## <a name="message-reaction-events"></a>Nachrichtenreaktionsereignisse
 
-Das Ereignis wird gesendet, wenn ein Benutzer Reaktionen auf eine Nachricht hinzufügt oder entfernt, die `messageReaction` von Ihrem Bot gesendet wurde. Die `replyToId` enthält die ID der bestimmten Nachricht, und die ist die Art der Reaktion im `Type` Textformat.  Die Reaktionstypen sind: "Heiter", "Herz", "Heiter", "Gefällt mir", "Sad", "Überrascht". Dieses Ereignis enthält nicht den Inhalt der ursprünglichen Nachricht. Wenn also die Verarbeitung von Reaktionen auf Ihre Nachrichten für Ihren Bot wichtig ist, müssen Sie die Nachrichten speichern, wenn Sie sie senden.
+Das Ereignis wird gesendet, wenn ein Benutzer Reaktionen auf eine Nachricht hinzufügt oder entfernt, die von Ihrem `messageReaction` Bot gesendet wurde. Der enthält die ID der bestimmten Nachricht, und die ist die Art der Reaktion `replyToId` im `Type` Textformat.  Die Reaktionstypen sind: "verärgert", "herz", "heiter", "gefällt mir", "Sad", "überrascht". Dieses Ereignis enthält nicht den Inhalt der ursprünglichen Nachricht. Wenn also die Verarbeitung von Reaktionen auf Ihre Nachrichten für Ihren Bot wichtig ist, müssen Sie die Nachrichten speichern, wenn Sie sie senden.
 
-| EventType       | Payload (Objekt)   | Beschreibung                                                             | Bereich |
+| EventType       | Payload-Objekt   | Beschreibung                                                             | Bereich |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
 | messageReaction | reactionsAdded   | [Reaktion auf Botnachricht](#reactions-to-a-bot-message)                   | Alle   |
 | messageReaction | reactionsRemoved | [Reaktion aus Botnachricht entfernt](#reactions-removed-from-bot-message) | Alle   |
@@ -1249,9 +1249,10 @@ async def on_reactions_removed(
 * * *
 
 ## <a name="samples"></a>Beispiele
-Beispielcode, der die Unterhaltungsereignisse der Bots zeigt, finden Sie unter:
 
-[Beispiel für Unterhaltungsereignisse für Microsoft Teams-Bots](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)
+Beispielcode, der die Bots-Unterhaltungsereignisse zeigt, finden Sie unter:
+
+[Beispiel für Unterhaltungsereignisse in Microsoft Teams bots](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)
 
 
 
