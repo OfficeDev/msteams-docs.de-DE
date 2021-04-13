@@ -202,21 +202,25 @@
   items:
     - name: Übersicht
       href: bots/what-are-bots.md
-    - name: Wie Bots funktionieren
+    - name: Tools und SDKs
+      href: bots/bot-features.md
+    - name: Bot-Aktivitätenhandler
       href: bots/bot-basics.md
     - name: Bot-Unterhaltungen
       items:
-        - name: Grundlagen zu Unterhaltungen
+        - name: Übersicht
           href: bots/how-to/conversations/conversation-basics.md
+        - name: Meldungen in Bot-Unterhaltungen
+          href: bots/how-to/conversations/conversation-messages.md
         - name: Ein Befehlsmenü für Ihren Bot erstellen
           href: bots/how-to/create-a-bot-commands-menu.md
         - name: Kanal- und Gruppenunterhaltungen
           href: bots/how-to/conversations/channel-and-group-conversations.md
-        - name: Abonnieren von Unterhaltungsereignissen
+        - name: Unterhaltungsereignisse in Ihrem Teams-Bot
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
-        - name: Versenden proaktiver Nachrichten
+        - name: Senden proaktiver Nachrichten
           href: bots/how-to/conversations/send-proactive-messages.md
-        - name: Formatierung von Bot-Mitteilungen
+        - name: Formatieren von Bot-Nachrichten
           href: bots/how-to/format-your-bot-messages.md
         - name: Bot-Nachrichten aktualisieren und löschen
           href: bots/how-to/update-and-delete-bot-messages.md
@@ -224,13 +228,13 @@
       href: bots/how-to/get-teams-context.md
     - name: Dateien senden und erhalten
       href: bots/how-to/bots-filesv4.md
-    - name: Umgang mit der Begrenzung der Datenübertragungsrate für Bots
+    - name: Optimieren eines Bots mit Ratenbegrenzung in Teams
       href: bots/how-to/rate-limit.md
-    - name: Anruf- und Besprechungs-Bots
+    - name: Anrufe und Besprechungsbots
       items:
         - name: Übersicht
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
-        - name: Echtzeitmedienkonzepte
+        - name: Medienanrufe und Besprechungen in Echtzeit
           href: bots/calls-and-meetings/real-time-media-concepts.md
         - name: Registrieren eines anrufenden Bots
           href: bots/calls-and-meetings/registering-calling-bot.md
@@ -246,7 +250,7 @@
   items:
     - name: Übersicht
       href: messaging-extensions/what-are-messaging-extensions.md
-    - name: Erstellen von Aktionsbefehlen
+    - name: Aktionsbefehle
       items:
         - name: Definieren von Aktionsbefehlen
           href: messaging-extensions/how-to/action-commands/define-action-command.md
@@ -254,13 +258,13 @@
           href: messaging-extensions/how-to/action-commands/create-task-module.md
         - name: Antworten auf Aktionsbefehle
           href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-    - name: Erstellen von Suchbefehlen
+    - name: Suchbefehle
       items:
         - name: Eine Konfigurationsseite hinzufügen
           href: messaging-extensions/how-to/add-configuration-page.md
         - name: Definition von Suchbefehlen
           href: messaging-extensions/how-to/search-commands/define-search-command.md
-        - name: Suchanfragen erhalten und darauf reagieren
+        - name: Antworten auf Suchbefehle
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
     - name: Linkausweitung hinzufügen
       href: messaging-extensions/how-to/link-unfurling.md
