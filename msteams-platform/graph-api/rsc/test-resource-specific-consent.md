@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Teams-Autorisierung OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 0d3d1c895c77bb417a9fdd84e319103485aa8944
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: ea764ec2cbca653221d7194d0759ac39f93ec802
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634708"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654426"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Testen ressourcenspezifischer Zustimmungsberechtigungen in Teams
 
@@ -21,7 +21,7 @@ Resource-specific consent (RSC) ist eine Microsoft Teams- und Graph-API-Integrat
 > Zum Testen der RSC-Berechtigungen muss Ihre Teams-App-Manifestdatei einen **webApplicationInfo-Schlüssel** enthalten, der mit den folgenden Feldern gefüllt ist:
 >
 > - **id**: Ihre Azure AD-App-ID finden Sie [unter Registrieren Ihrer App im Azure AD-Portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
-> - **resource**: Any string, see the note in  [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest)
+> - **resource**: Any string, see the note in  [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest).
 > - **Anwendungsberechtigungen**: RSC-Berechtigungen für Ihre App finden Sie unter [Ressourcenspezifische Berechtigungen](resource-specific-consent.md#resource-specific-permissions).
 
 ```json
@@ -54,18 +54,16 @@ Resource-specific consent (RSC) ist eine Microsoft Teams- und Graph-API-Integrat
 
 Um zu überprüfen, ob die RSC-Berechtigungen von der API-Anforderungsnutzlast berücksichtigt werden, müssen Sie den [RSC-JSON-Testcode](test-rsc-json-file.md) in Ihre lokale Umgebung kopieren und die folgenden Werte aktualisieren:
 
-* `azureADAppId`: Azure AD-App-ID Ihrer App
-* `azureADAppSecret`: Ihr geheimer Azure AD-App-Schlüssel (Kennwort)
-* `token_scope`: Der Bereich ist erforderlich, um ein Token abzurufen – legen Sie den Wert auf https://graph.microsoft.com/.default
+* `azureADAppId`: Die Azure AD-App-ID Ihrer App.
+* `azureADAppSecret`: Ihr Azure AD-App-Kennwort.
+* `token_scope`: Der Bereich ist erforderlich, um ein Token abzurufen. legen Sie den Wert auf https://graph.microsoft.com/.default .
 * `teamGroupId`: Sie können die Teamgruppen-ID wie folgt vom Teams-Client erhalten:
 
-  > [!div class="checklist"]
-  >
-  > * Wählen Sie im Teams-Client **in der Navigationsleiste** ganz links Teams aus.
-  > * Wählen Sie im Dropdownmenü das Team aus, in dem die App installiert ist.
-  > * Wählen Sie **das Symbol Weitere Optionen** aus (&#8943;)
-  > * Wählen **Sie Link zum Team erhalten aus.** 
-  > * Kopieren Und speichern Sie den **groupId-Wert** aus der Zeichenfolge.
+    1. Wählen Sie im Teams-Client **in der Navigationsleiste** ganz links Teams aus.
+    2. Wählen Sie im Dropdownmenü das Team aus, in dem die App installiert ist.
+    3. Wählen Sie **das Symbol Weitere Optionen** (&#8943;).
+    4. Wählen **Sie Link zum Team erhalten aus.** 
+    5. Kopieren Und speichern Sie den **groupId-Wert** aus der Zeichenfolge.
 
 ### <a name="use-postman"></a>Verwenden von Postman
 

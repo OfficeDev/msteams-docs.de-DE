@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie ngrok auch zum Entwickeln von Anrufen und Onl
 ms.topic: how-to
 keywords: ngrok-Tunnel für lokale Entwicklung
 ms.date: 11/18/2018
-ms.openlocfilehash: d61c380fda941618a769ad3fffa053b2a4800de9
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: b764e41302ab569e40c9dacd374a31e6abb1d642
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634727"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654286"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>Entwickeln von Anruf- und Online-Besprechungsbots auf Ihrem lokalen PC
 

@@ -1,38 +1,48 @@
 ---
-title: Grundlegendes zu den Funktionen von Teams-Apps
+title: Verstehen von App-Funktionen
 author: heath-hamilton
 description: Erläuterte Funktionen der Teams-App
 ms.topic: conceptual
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 5336b36b52cf81be414f18ccaaf9e235c079e626
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 6d08d06c55aed4b531fba4bb533c896c13073cfc
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034705"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654433"
 ---
-# <a name="understanding-teams-app-capabilities"></a>Grundlegendes zu den Funktionen von Teams-Apps
+# <a name="understand-microsoft-teams-app-capabilities"></a>Verstehen der Microsoft Teams-App-Funktionen
 
-*Funktionen* sind die Erweiterungspunkte für das Erstellen von Apps auf der Microsoft Teams-Plattform.
+Erweiterbarkeits- oder Einstiegspunkte sind unterschiedliche Möglichkeiten, wie sich eine App für einen Benutzer manifestieren kann. Ein Benutzer kann z. B. mit einer App auf einer Canvas-Registerkarte interagieren, um eine Aktivität zu tun, oder er kann dies auch mithilfe eines Unterhaltungsbots tun. Die verschiedenen Funktionen zum Erstellen Ihrer Teams-App ermöglichen es Ihnen, den Nutzungsbereich zu erhöhen.
 
-Es gibt mehrere Möglichkeiten, Teams zu erweitern, sodass jede App einzigartig ist: Einige haben nur eine Funktion (z. B. einen Webhook), während andere über einige Möglichkeiten verfügen, benutzern Optionen zu geben. Beispielsweise könnte Ihre App Daten an einem zentralen Ort (Registerkarte) anzeigen und dieselben Informationen über eine Unterhaltungsschnittstelle (Bot) präsentieren.
+Es gibt mehrere Möglichkeiten, Teams zu erweitern, sodass jede App eindeutig ist. Einige verfügen nur über eine Funktion, z. B. einen Webhook, während andere über mehr als ein Feature verfügen, um Benutzern verschiedene Optionen zu bieten. Beispielsweise kann Ihre App Daten an einem zentralen Ort, d. h. der Registerkarte, anzeigen und dieselben Informationen über eine Unterhaltungsschnittstelle, d. h. den **Bot, präsentieren.** 
+
+## <a name="app-capabilities"></a>App-Funktionen
 
 Ihre Teams-App verfügt über eine oder alle der folgenden Kernfunktionen:
 
-* [Registerkarten](../tabs/what-are-tabs.md)
+* [Tabs](../tabs/what-are-tabs.md)
 * [Messaging-Erweiterungen](../messaging-extensions/what-are-messaging-extensions.md)
 * [Bots](../bots/what-are-bots.md)
 * [Webhooks und Connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
 Ihre App kann auch erweiterte Funktionen nutzen, z. B. die [Microsoft Graph-API für Teams.](https://docs.microsoft.com/graph/teams-concept-overview)
 
-In der folgenden Abbildung finden Sie eine Vorstellung davon, welche Funktionen die features bereitstellen würden, die Sie in Ihrer App wünschen.
+In der folgenden Abbildung erhalten Sie eine Vorstellung davon, welche Funktionen die features bereitstellen, die Sie in Ihrer App benötigen.
 
 :::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Mindmap, die zeigt, welche Teams-App-Funktionen es gibt.":::
 
-## <a name="doing-whats-best-for-your-users"></a>Tun, was für Ihre Benutzer am besten ist
+## <a name="always-consider-your-user"></a>Berücksichtigen Sie immer Ihren Benutzer
 
-Wenn Sie sich mit der Entwicklung von Teams-Apps vertraut machen, beginnen Sie, ihre Feinheiten zu verstehen. Es gibt mehr als eine Möglichkeit, bestimmte Features zu erstellen (z. B. das Sammeln von Benutzereingaben). Beispielsweise können Sie ein webbasiertes Formular mithilfe einer in eine Registerkarte `<iframe>` einbetten. Sie können dies auch auf einer Registerkarte mithilfe eines Aufgabenmoduls, einer Teams-UI-Konvention, tun, um eine systemeigenere Oberfläche zu erhalten, die Ihren Benutzern vielleicht lieber ist.
+Während Sie sich mit der Entwicklung von Teams-Apps vertraut machen, verstehen Sie die grundlegenden Grundlagen von Teams. Sie wissen, dass es mehr als eine Möglichkeit gibt, bestimmte Features zu erstellen. Überlegen Sie in solchen Szenarien, wie Sie Ihrem Benutzer eine nativere Benutzeroberfläche bereitstellen können.
+Beispielsweise können Sie Benutzereingaben in einem Formular erfassen, das als Registerkarte in der App erstellt wurde. Sie können dies auch mithilfe eines Aufgabenmoduls tun, ohne Ansichten zu wechseln und den Arbeitsfluss des Benutzers zu unterbrechen. Es ist wichtig, Erweiterungspunkte zu wählen, die die geringste Abweichung vom regulären Arbeitsfluss eines Benutzers bieten.
 
-Die Auswahl der richtigen Funktionen und des richtigen Designs kommt dazu, zunächst die Verwendungsfälle [Ihrer Zielgruppe zu verstehen.](../concepts/design/understand-use-cases.md)
+## <a name="see-also"></a>Siehe auch
+
+> [!div class="nextstepaction"]
+> [Erstellen von Apps für Teams](../overview.md)
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Microsoft Teams-App-Einstiegspunkte](../concepts/extensibility-points.md)

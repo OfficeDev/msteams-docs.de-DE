@@ -7,7 +7,7 @@ ms.author: lajanuar
 ms.date: 09/22/2020
 ms.openlocfilehash: 72ce2620160f854bbe458821db01e91d2d9f62cd
 ms.sourcegitcommit: 098d38dd947e87e69d289b99e807bea2d95c42f9
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/18/2020
 ms.locfileid: "49713627"

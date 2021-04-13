@@ -5,12 +5,12 @@ description: Erstellen von Apps für Teams-Besprechungen
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Rollen-API für Teams-Apps-Besprechungen für Benutzerteilnehmer
-ms.openlocfilehash: d9356e37a0c2b5b70d23fc6805b0af5340a1efc6
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: 267c90792e07b483c92965bc61e46fca33573841
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596231"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654373"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Apps für Teams-Besprechungen erstellen
 
@@ -335,12 +335,35 @@ Im Besprechungsdialogfeld darf kein Aufgabenmodul verwendet werden. Das Aufgaben
 #### <a name="share-to-stage"></a>Freigeben in der Phase 
 
 > [!NOTE]
-> Diese Funktion ist nur in der Insider Dev Preview verfügbar
+> * Diese Funktion ist derzeit nur in der Entwicklervorschau verfügbar.
+> * Um dieses Feature verwenden zu können, muss die App eine Besprechungs-Sidepanel unterstützen.
 
 
 Mit dieser Funktion können Entwickler eine App für die Besprechungsphase freigeben. Durch aktivieren der Freigabe für die Besprechungsphase können Besprechungsteilnehmer in Echtzeit zusammenarbeiten. 
 
-Der erforderliche Kontext ist meetingStage im App-Manifest. Eine Voraussetzung dafür ist, dass der Kontext meetingSidePanel verwendet wird. Dadurch wird die Schaltfläche "Freigeben" in der Sidepanel wie unten beschrieben aktiviert.
+Der erforderliche Kontext befindet `meetingStage` sich im App-Manifest. Voraussetzung dafür ist der `meetingSidePanel` Kontext. Dadurch wird die **Schaltfläche Freigeben** im Sidepanel wie in der folgenden Abbildung depeziiert aktiviert:
+
+  ![share_to_stage_during_meeting-Erfahrung](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
+
+Die manifeste Änderung, die zum Aktivieren dieser Funktion erforderlich ist, lautet wie folgt: 
+
+```json
+
+"configurableTabs": [
+    {
+      "configurationUrl": "https://contoso.com/teamstab/configure",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "groupchat"
+      ],
+      "context":[
+        
+        "meetingSidePanel",
+        "meetingStage"
+     ]
+    }
+  ]
+```
 
 
 

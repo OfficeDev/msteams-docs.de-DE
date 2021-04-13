@@ -4,12 +4,12 @@ author: clearab
 description: Testen und Debuggen des Bots lokal mit einer IDE
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 449d6dd5e10a72538e6443c9d17f998ebc662379
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: 5a35419564f87617ee5d590e2a604e970caa16b3
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634769"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654470"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Testen und Debuggen des Bots lokal
 
@@ -20,7 +20,7 @@ Beim Testen Ihres Bots müssen Sie sowohl die Kontexte berücksichtigen, in dene
 Die umfassendste Methode zum Testen Ihres Bots ist das Erstellen eines App-Pakets und das Hochladen in Teams. Dies ist die einzige Methode zum Testen der vollständigen Funktionalität, die Ihrem Bot für alle Bereiche zur Verfügung steht.
 
 Es gibt zwei Methoden zum Hochladen Ihrer App:
-* Verwenden [von App Studio](~/concepts/build-and-test/app-studio-overview.md)
+* Verwenden [von App Studio](~/concepts/build-and-test/app-studio-overview.md).
 * [Erstellen Sie ein App-Paket](~/concepts/build-and-test/apps-package.md) manuell, und laden Sie [dann Ihre App hoch.](~/concepts/deploy-and-publish/apps-upload.md)
 
 > [!NOTE]
