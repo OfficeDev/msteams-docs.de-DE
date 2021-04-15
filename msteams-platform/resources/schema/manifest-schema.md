@@ -4,12 +4,12 @@ description: Beschreibt das Manifestschema für Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
 keywords: Teams-Manifestschema
-ms.openlocfilehash: 8c77d2e82c65a11b67eb6a223313f477238517d9
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: fa1c1cfd732fe5a30fc5fc32b693dd21b2e8ee82
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634523"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696045"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -313,7 +313,7 @@ Diese Versionszeichenfolge muss dem [semver-Standard](http://semver.org/) (MAJOR
 
 **Erforderlich** – Microsoft-App-ID
 
-Die ID ist ein eindeutiger von Microsoft generierter Bezeichner für die App. Sie haben eine ID, wenn Ihr Bot über das Microsoft Bot Framework registriert ist oder sich die Web-App Ihrer Registerkarte bereits bei Microsoft angemeldet hat. Sie müssen hier die ID eingeben. Andernfalls müssen Sie eine neue ID im Microsoft Application Registration Portal ( Meine Anwendungen )[generieren.](https://apps.dev.microsoft.com) Verwenden Sie dieselbe ID, wenn Sie einen Bot hinzufügen.
+Die ID ist ein eindeutiger von Microsoft generierter Bezeichner für die App. Sie haben eine ID, wenn Ihr Bot über das Microsoft Bot Framework registriert ist oder sich die Web-App Ihrer Registerkarte bereits bei Microsoft angemeldet hat. Sie müssen hier die ID eingeben. Andernfalls müssen Sie eine neue ID im [Microsoft Application Registration Portal generieren.](https://aka.ms/appregistrations) Verwenden Sie dieselbe ID, wenn Sie einen Bot hinzufügen.
 
 > [!NOTE]
 > Wenn Sie ein Update an Ihre vorhandene App in AppSource übermitteln, darf die ID in Ihrem Manifest nicht geändert werden.

@@ -1,34 +1,35 @@
 ---
-title: Hinzufügen eines bot-Menüs
+title: Hinzufügen eines Botmenüs
 description: Beschreibt das Erstellen von Menüs für Bots in Microsoft Teams
 keywords: Erstellen von Teams-Bots-Menüs
+ms.topic: how-to
 ms.date: 05/20/2019
-ms.openlocfilehash: 36a224dc21cccc5fcd1047e45e3d749e7ca19ea7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 3623d85c1531b9942633af940c5e41ac1c574441
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674119"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696143"
 ---
-# <a name="add-a-bot-menu-in-microsoft-teams"></a>Hinzufügen eines bot-Menüs in Microsoft Teams
+# <a name="add-a-bot-menu-in-microsoft-teams"></a>Hinzufügen eines Botmenüs in Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Um die Suche zu unterstützen und die Benutzer über die Funktionalität Ihres bot zu informieren, können Sie jetzt Menüs hinzufügen, die immer dann angezeigt werden, wenn der Benutzer mit Ihrem bot interagiert. Im Menü wird der Befehlstext angezeigt und auch Hilfetext bereitgestellt, beispielsweise ein Verwendungsbeispiel oder eine Beschreibung des Befehls zwecks.
+Um die Suche zu unterstützen und Benutzer über die Funktionalität Ihres Bots aufzuklären, können Sie jetzt Menüs hinzufügen, die angezeigt werden, wenn der Benutzer mit Ihrem Bot interagiert. Das Menü zeigt den Befehlstext an und enthält auch Hilfetext, z. B. ein Verwendungsbeispiel oder eine Beschreibung des Zwecks des Befehls.
 
-![Screenshot des bot-Menüs](~/assets/images/bots/bot-menus-bot-menu-sample.png)
+![Screenshot des Botmenüs](~/assets/images/bots/bot-menus-bot-menu-sample.png)
 
-Wenn ein Benutzer ein Menüelement auswählt, wird die Befehlszeichenfolge in das Textfeld eingefügt, um den Benutzer beim Abschluss der bot-Nachricht zu unterstützen.
+Wenn ein Benutzer ein Menüelement auswählt, wird die Befehlszeichenfolge in das Textfeld eingefügt, um den Benutzer beim Ausfüllen der Botnachricht zu helfen.
 
-## <a name="bot-menu-support-on-teams-mobile-app"></a>Unterstützung von bot-Menüs in Microsoft Teams Mobile App
+## <a name="bot-menu-support-on-teams-mobile-app"></a>Bot-Menüunterstützung in mobilen Teams-Apps
 > [!NOTE] 
-> Bot-Menüs werden auf mobilen Geräten nicht angezeigt
+> Botmenüs werden auf mobilen Geräten nicht angezeigt
 
 ## <a name="app-manifest"></a>App-Manifest
 
-Um ein bot-Menü zu erstellen, fügen [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) Sie dem App-Manifest im Abschnitt bot ein neues Objekt hinzu. Sie können einzelne Menüs mit separaten Befehlen für jeden Bereich deklarieren, den Ihr bot`personal`unter `groupChat` stützt `team`(, oder) unterstützt jedes Menü bis zu 10 Befehle.
+Um ein Botmenü zu erstellen, fügen Sie ihrem App-Manifest unter dem [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) Bot-Abschnitt ein neues Objekt hinzu. Sie können einzelne Menüs mit separaten Befehlen für jeden Bereich deklarieren, den Ihr Bot unterstützt ( oder ) Jedes Menü unterstützt bis `personal` `groupChat` zu `team` 10 Befehle.
 
-### <a name="manifest-excerpt---single-menu-for-both-scopes"></a>Manifest-Ausschnitt – einzelnes Menü für beide Bereiche
+### <a name="manifest-excerpt---single-menu-for-both-scopes"></a>Manifestauszug – einzelnes Menü für beide Bereiche
 
 ```json
 {
@@ -72,7 +73,7 @@ Um ein bot-Menü zu erstellen, fügen [`commandLists`](~/resources/schema/manife
 }
 ```
 
-### <a name="manifest-excerpt---separate-menu-per-scope"></a>Manifest-Auszug – separates Menü pro Bereich
+### <a name="manifest-excerpt---separate-menu-per-scope"></a>Manifestauszug – separates Menü pro Bereich
 
 ```json
 {
@@ -116,6 +117,6 @@ Um ein bot-Menü zu erstellen, fügen [`commandLists`](~/resources/schema/manife
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
-* Halten Sie es einfach: das bot-Menü soll die Hauptfunktionen Ihres bot präsentieren.
-* Halten Sie es kurz: Menü Optionen sollten nicht extrem lang und komplexe natürliche Sprachanweisungen-Sie sollten einfache Befehle sein.
-* Immer verfügbar: Aktionen/Befehle im bot-Menü sollten immer aufrufbaren sein, unabhängig vom Status der Unterhaltung oder des Dialogs, in dem sich der bot befindet.
+* Halten Sie es einfach: Das Botmenü soll die wichtigsten Funktionen Ihres Bots präsentieren.
+* Kurz: Menüoptionen sollten keine extrem langen und komplexen Anweisungen für natürliche Sprachen sein , sie sollten einfache Befehle sein.
+* Immer verfügbar: Bot-Menüaktionen/-befehle sollten unabhängig vom Status der Unterhaltung oder des Dialogfelds, in dem sich der Bot befindet, immer zur Verfügung stehen.

@@ -1,64 +1,70 @@
 ---
-title: Erstellen eines Befehlsmenüs für Ihren bot
+title: Erstellen eines Befehlsmenüs für Ihren Bot
 author: clearab
-description: Vorgehensweise Erstellen eines Befehlsmenüs für Ihren Microsoft Teams-bot
-ms.topic: overview, command menu
+description: Erstellen eines Befehlsmenüs für Ihren Microsoft Teams-Bot
+ms.topic: how-to
 ms.author: anclear
-ms.openlocfilehash: ccbacc6ec6f18a38512d81dc898d0b14357d6ef7
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 839c01f870f026744dfe5fa1331835f5f6b6890f
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552486"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697030"
 ---
 # <a name="bot-command-menus"></a>Bot-Befehlsmenüs
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 > [!Note]
-> Bot-Menüs werden nicht auf mobilen Clients angezeigt.
+> Botmenüs werden auf mobilen Clients nicht angezeigt.
 
-Mit dem Befehl Menü hinzufügen für Ihren bot können Sie eine Reihe von Kern Befehlen definieren, auf die ihr bot immer Antworten kann. Die Liste der Befehle wird dem Benutzer über dem Bereich zum Verfassen von Nachrichten angezeigt, wenn Sie mit Ihrem bot in Kontakt kommen. Wenn Sie einen Befehl aus der Liste auswählen, wird die Befehlszeichenfolge in das Meldungsfeld verfassen eingefügt, dann müssen alle Benutzer die Option **senden** auswählen.
+Um eine Reihe von Kernbefehlen zu definieren, auf die Ihr Bot reagieren kann, können Sie ein Befehlsmenü mit einer Dropdownliste mit Befehlen für Ihren Bot hinzufügen. Die Liste der Befehle wird den Benutzern im Bereich Verfassen von Nachrichten angezeigt, wenn sie mit Ihrem Bot in Unterhaltung sind. Wählen Sie einen Befehl aus der Liste aus, um die Befehlszeichenfolge in das Meldungsfeld verfassen ein, und wählen Sie **Senden aus.**
 
-![Bot-Befehlsmenü](./conversations/media/bot-menu-sample.png)
+![Befehlsmenü "Bot"](./conversations/media/bot-menu-sample.png)
 
-## <a name="create-a-command-menu-for-your-bot"></a>Erstellen eines Befehlsmenüs für Ihren bot
+## <a name="create-a-command-menu-for-your-bot"></a>Erstellen eines Befehlsmenüs für Ihren Bot
 
-Befehlsmenüs werden in Ihrem App-Manifest definiert. Sie können entweder App Studio verwenden, um Sie bei der Erstellung zu unterstützen, oder diese manuell hinzufügen.
+Befehlsmenüs werden in Ihrem App-Manifest definiert. Sie können app **Studio** verwenden, um sie zu erstellen, oder sie manuell im App-Manifest hinzufügen.
 
-### <a name="creating-a-command-menu-for-your-bot-using-app-studio"></a>Erstellen eines Befehlsmenüs für Ihren bot mithilfe von App Studio
+### <a name="create-a-command-menu-for-your-bot-using-app-studio"></a>Erstellen eines Befehlsmenüs für Ihren Bot mithilfe von App Studio
 
-In den hier beschriebenen Anweisungen wird davon ausgegangen, dass Sie ein vorhandenes App-Manifest bearbeiten. Die Schritte zum Hinzufügen eines Befehlsmenüs sind identisch, unabhängig davon, ob Sie ein neues Manifest erstellen oder ein vorhandenes bearbeiten.
+Eine Voraussetzung zum Erstellen eines Befehlsmenüs für Ihren Bot ist, dass Sie ein vorhandenes App-Manifest bearbeiten müssen. Die Schritte zum Hinzufügen eines Befehlsmenüs sind identisch, unabhängig davon, ob Sie ein neues Manifest erstellen oder ein vorhandenes bearbeiten.
 
-1. Öffnen Sie App Studio aus dem... Überlaufmenü auf der linken Navigations Schiene. Wenn Sie kein App-Studio zur Verfügung haben, können Sie es herunterladen. Weitere Informationen zur Verwendung von App Studio finden Sie unter [Installing App Studio](https://aka.ms/teams-app-studio#installing-app-studio) .
+**So erstellen Sie ein Befehlsmenü für Ihren Bot mithilfe von App Studio**
 
-    ![App Studio](./conversations/media/AppStudio.png)
+1. Öffnen Sie Teams, und wählen **Sie apps** im linken Bereich aus. Suchen Sie **auf** der Seite Apps nach **App Studio,** und wählen Sie **Öffnen aus.** 
+   > [!NOTE]
+   > Wenn Sie nicht über **App Studio verfügen,** können Sie es herunterladen. Weitere Informationen finden Sie unter [Installieren von App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
 
-2. Klicken Sie in App Studio auf die Registerkarte **Manifest-Editor** .
+    ![App-Studio](./conversations/media/AppStudio.png)
 
-3. Wählen Sie in der linken Spalte der Manifest-Editor-Ansicht im Abschnitt " **Funktionen** " die Option " **Bots**" aus.
+2. Wählen **Sie in App Studio** die Registerkarte **Manifest-Editor** aus. Wenn Sie nicht über ein vorhandenes App-Paket verfügen, können Sie eine vorhandene App erstellen oder importieren. Weitere Informationen finden Sie unter [Update an app package](~/tutorials/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).
 
-4. Klicken Sie in der rechten Spalte der Manifest-Editor-Ansicht im Abschnitt **Befehle** auf die Schaltfläche **Hinzufügen** .
+3. Wählen Sie im linken Bereich des **Manifest-Editors** und im Abschnitt **Funktionen** die Option **Bots aus.**
 
-    ![Schaltfläche "App Studio-Befehlsmenü hinzufügen"](./conversations/media/AppStudio-CommandMenu-Add.png)
+4. Wählen Sie im rechten Bereich des **Manifest-Editors** und im Abschnitt **Befehle** die Option **Hinzufügen aus.** Der **Bildschirm Neuer Befehl** wird angezeigt.
 
-5. Der Bildschirm **neuer Befehl** wird angezeigt. Geben Sie den **Befehlstext** ein, der als Menübefehl angezeigt werden soll, und der **Hilfetext** , den Sie direkt unter dem Befehlstext im Menü anzeigen möchten. Dies sollte eine kurze Erläuterung des Zwecks des Befehls sein.
+    ![App Studio-Befehlsmenü Schaltfläche hinzufügen](./conversations/media/AppStudio-CommandMenu-Add.png)
 
-6. Wählen Sie als nächstes die Bereiche aus, in denen dieses Befehlsmenü angezeigt werden soll, und wählen Sie dann die Schaltfläche **Speichern** aus.
+5. Geben Sie den **Befehlstext** ein, der als Befehlsmenü für Ihren Bot angezeigt werden muss.
 
-    ![Schaltfläche "App Studio-Befehlsmenü hinzufügen"](./conversations/media/AppStudio-NewCommandMenu.png)
+6. Geben Sie den **Hilfetext ein,** der im Menü unter dem Befehlstext angezeigt werden muss. **Hilfetext** muss eine kurze Erläuterung des Zwecks des Befehls sein.
 
-### <a name="creating-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Erstellen eines Befehlsmenüs für Ihren bot durch Bearbeiten von **Manifest.jsauf**
+7. Aktivieren Sie **die Kontrollkästchen** Bereich, um auszuwählen, wo dieses Befehlsmenü angezeigt werden muss, und wählen Sie **Speichern aus.**
 
-Ein weiterer gültiger Ansatz zum Erstellen eines Befehlsmenüs besteht darin, es beim Entwickeln Ihres bot-Quellcodes direkt in der Manifestdatei zu erstellen. Hier sind einige Punkte, die Sie bei der Verwendung dieses Ansatzes beachten sollten:
+    ![Menüschaltfläche für neue Befehle in App Studio](./conversations/media/AppStudio-NewCommandMenu.png)
 
-1. Jedes Menü unterstützt bis zu 10 Befehle.
+### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Erstellen eines Befehlsmenüs für Ihren Bot durch Bearbeiten Manifest.js
 
-2. Sie können ein einzelnes Befehlsmenü erstellen, das in allen Bereichen verwendet werden kann.
+Eine weitere Möglichkeit zum Erstellen eines Befehlsmenüs besteht in der direkten Erstellung in der Manifestdatei während der Entwicklung des Bot-Quellcodes. Gehen Sie wie folgt vor, um diese Methode zu verwenden:
 
-3. Sie können für jeden Bereich ein anderes Befehlsmenü erstellen.
+* Jedes Menü unterstützt bis zu zehn Befehle.
+* Erstellen Sie ein einzelnes Befehlsmenü, das in allen Bereich funktioniert.
+* Erstellen Sie für jeden Bereich ein anderes Befehlsmenü.
 
-#### <a name="manifest-example---single-menu-for-both-scopes"></a>Manifest-Beispiel – einzelnes Menü für beide Bereiche
+#### <a name="manifest-example-for-single-menu-for-both-scopes"></a>Manifestbeispiel für ein einzelnes Menü für beide Bereiche
+
+Der Manifestbeispielcode für ein einzelnes Menü für beide Bereiche lautet wie folgt:
 
 ```json
 {
@@ -102,7 +108,9 @@ Ein weiterer gültiger Ansatz zum Erstellen eines Befehlsmenüs besteht darin, e
 }
 ```
 
-#### <a name="manifest-example---menu-for-each-scope"></a>Manifest-Beispielmenü für jeden Bereich
+#### <a name="manifest-example-for-the-menu-for-each-scope"></a>Manifestbeispiel für das Menü für jeden Bereich
+
+Der Manifestbeispielcode für das Menü für jeden Bereich lautet wie folgt:
 
 ```json
 {
@@ -144,23 +152,30 @@ Ein weiterer gültiger Ansatz zum Erstellen eines Befehlsmenüs besteht darin, e
 }
 ```
 
-## <a name="handling-menu-commands-in-your-bot-code"></a>Behandeln von Menübefehlen in Ihrem bot-Code
+Sie müssen Menübefehle in Ihrem Botcode behandeln, während Sie alle Nachrichten von Benutzern verarbeiten. Sie können Menübefehle in Ihrem Botcode verarbeiten, indem Sie den Abschnitt **\@ Erwähnung** des Nachrichtentexts aussingen.
 
-Bots in einer Gruppe oder einem Kanal reagieren nur, wenn Sie in einer Nachricht erwähnt werden ("@botname"). Daher werden alle Nachrichten, die von einem bot empfangen werden, wenn Sie sich in einer Gruppe oder einem Kanalbereich befinden, im zurückgegebenen Nachrichtentext einen eigenen Namen enthalten. Sie müssen sicherstellen, dass Ihre Nachrichten Analyse diese behandelt, bevor der zurückgegebene Befehl verarbeitet wird.
+## <a name="handle-menu-commands-in-your-bot-code"></a>Behandeln von Menübefehlen in Ihrem Botcode
 
-> **Hinweis:** Um die Befehle im Code zu behandeln, werden Sie als reguläre Nachricht an Ihren bot gesendet. Sie müssen diese wie für jede andere Nachricht von Ihren Benutzern behandeln. Es handelt sich lediglich um eine Benutzeroberflächen Behandlung, die vorkonfigurierten Text in das Textfeld einfügt. Der Benutzer muss diesen Text dann wie für jede andere Nachricht senden.
+Bots in einer Gruppe oder einem Kanal reagieren nur, wenn sie in einer `@botname` Nachricht erwähnt werden. Jede Nachricht, die von einem Bot empfangen wird, wenn sie sich in einem Gruppen- oder Kanalbereich befindet, enthält ihren Namen im zurückgegebenen Nachrichtentext. Vor der Verarbeitung des zurückgegebenen Befehls muss ihre Nachrichten parsing die Nachricht behandeln, die von einem Bot mit seinem Namen empfangen wurde.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+> [!NOTE]
+> Um die Befehle im Code zu verarbeiten, werden sie als reguläre Nachricht an Ihren Bot gesendet. Sie müssen sie wie jede andere Nachricht von Ihren Benutzern behandeln. Die Befehle im Code fügen vorkonfigurierten Text in das Textfeld ein. Der Benutzer muss dann den Text wie für jede andere Nachricht senden.
 
-Sie können den **\@ mention** -Teil des Nachrichtentexts mithilfe einer statischen mit dem Microsoft bot Framework bereitgestellten Methode analysieren – eine Methode der `Activity` benannten Klasse `RemoveRecipientMention` .
+# <a name="c"></a>[C#](#tab/dotnet)
+
+Sie können den Abschnitt **\@ Erwähnung** des Nachrichtentexts mithilfe einer statischen Methode analysieren, die im Microsoft Bot Framework bereitgestellt wird. Es handelt sich um eine Methode der `Activity` Klasse namens `RemoveRecipientMention` .
+
+Der C# Code zum Analysieren des Abschnitts **\@ Erwähnung** des Nachrichtentexts lautet wie folgt:
 
 ```csharp
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-Sie können den **\@ mention** -Teil des Nachrichtentexts mithilfe einer statischen mit dem Microsoft bot Framework bereitgestellten Methode analysieren – eine Methode der `TurnContext` benannten Klasse `removeMentionText` .
+Sie können den Abschnitt **\@ Erwähnung** des Nachrichtentexts mithilfe einer statischen Methode analysieren, die im Bot Framework bereitgestellt wird. Es handelt sich um eine Methode der `TurnContext` Klasse namens `removeMentionText` .
+
+Der JavaScript-Code zum Analysieren des **\@ Abschnitts Erwähnung** des Nachrichtentexts lautet wie folgt:
 
 ```javascript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
@@ -168,8 +183,9 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # <a name="python"></a>[Python](#tab/python)
 
+Sie können den **@Mention** des Nachrichtentexts mithilfe einer statischen Methode analysieren, die im Bot Framework bereitgestellt wird. Es handelt sich um eine Methode der `TurnContext` Klasse namens `remove_recipient_mention` .
 
-Sie können den **@mention** Teil des Nachrichtentexts mithilfe einer statischen mit dem Microsoft bot Framework bereitgestellten Methode analysieren – eine Methode der `TurnContext` benannten Klasse `remove_recipient_mention` .
+Der Python-Code zum Analysieren des **\@ Abschnitts Erwähnung** des Nachrichtentexts lautet wie folgt:
 
 ```python
 modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
@@ -177,10 +193,20 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 
 * * *
 
+Um eine reibungslose Funktionsweise Ihres Botcodes zu ermöglichen, müssen Sie einige bewährte Methoden befolgen.
+
 ## <a name="command-menu-best-practices"></a>Bewährte Methoden im Befehlsmenü
 
-* **Halten Sie es einfach**: das bot-Menü soll die Hauptfunktionen Ihres bot präsentieren.
-* **Halten Sie es kurz**: Menü Optionen sollten nicht extrem lang und komplexe natürliche Sprachanweisungen sein – Sie sollten einfache Befehle sein.
-* **Keep it aufrufbaren**: bot-Menü Aktionen/-Befehle sollten immer verfügbar sein, unabhängig vom Status der Unterhaltung oder des Dialogs, in dem sich der bot befindet.
+Im Folgenden finden Sie die bewährten Methoden für das Befehlsmenü:
 
-> **Hinweis:** Wenn Sie Befehle aus ihrem Manifest entfernen, müssen Sie Ihre APP erneut bereitstellen, damit die Änderungen wirksam werden. Im Allgemeinen ist dies für alle Änderungen am Manifest erforderlich.
+* Halten Sie es einfach: Das Botmenü soll die wichtigsten Funktionen Ihres Bots präsentieren.
+* Kurz halten: Menüoptionen dürfen nicht lang sein und dürfen keine komplexen Anweisungen für natürliche Sprachen sein. Es müssen einfache Befehle sein.
+* Lassen Sie es unanfehlbar: Bot-Menüaktionen oder -befehle müssen immer verfügbar sein, unabhängig vom Status der Unterhaltung oder des Dialogfelds, in dem sich der Bot befindet.
+
+> [!NOTE]
+> Wenn Sie Befehle aus Ihrem Manifest entfernen, müssen Sie Ihre App erneut bereitstellen, um die Änderungen zu implementieren. Im Allgemeinen erfordern Änderungen am Manifest, dass Sie Ihre App erneut bereitstellen müssen.
+
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Kanal- und Gruppenunterhaltungen](~/bots/how-to/conversations/channel-and-group-conversations.md)

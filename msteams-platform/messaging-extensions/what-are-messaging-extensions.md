@@ -1,80 +1,82 @@
 ---
-title: Was sind Messaging-Erweiterungen?
+title: Messaging-Erweiterungen
 author: clearab
-description: Eine Übersicht über Messaging-Erweiterungen auf der Microsoft Teams-Plattform
+description: Übersicht über Messagingerweiterungen auf der Microsoft Teams-Plattform
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 3ea9649a22ecc134e983037d1ef109be918a26b3
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: 2d82202c72584927fc705813151d91510a7f12c9
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587797"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696753"
 ---
-# <a name="what-are-messaging-extensions"></a>Was sind Messaging-Erweiterungen?
+# <a name="messaging-extensions"></a>Messaging-Erweiterungen
 
-Messaging-Erweiterungen ermöglichen Benutzern die Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams-Client. Sie können in einem externen System über dem Feld zum Verfassen der Nachricht, das Befehlsfeld oder direkt aus einer Nachricht heraus suchen oder Aktionen auslösen. Sie können dann die Ergebnisse dieser Interaktion an den Microsoft Teams-Client zurücksenden, normalerweise in Form einer reich formatierten Karte.
+Messagingerweiterungen ermöglichen benutzern die Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams-Client. Sie können Aktionen in einem externen System aus dem Bereich "Nachricht verfassen", dem Befehlsfeld oder direkt aus einer Nachricht durchsuchen oder initiieren. Sie können die Ergebnisse dieser Interaktion in Form einer reicher formatierten Karte an den Microsoft Teams-Client senden. Dieses Dokument bietet eine Übersicht über die Messagingerweiterung, Aufgaben, die in verschiedenen Szenarien ausgeführt werden, das Arbeiten mit Messagingerweiterungen, Aktions- und Suchbefehlen sowie das Lösen von Verknüpfungen.
 
-Der folgende Screenshot zeigt die Orte, von denen aus Messaging Erweiterungen aufgerufen werden können.
+In der folgenden Abbildung werden die Speicherorte angezeigt, an denen Messagingerweiterungen aufgerufen werden:
 
-![Speicherorte für Messaging Erweiterungs Aufrufe](~/assets/images/messaging-extension-invoke-locations.png)
+![Messagingerweiterung ruft Speicherorte auf](~/assets/images/messaging-extension-invoke-locations.png)
 
-## <a name="what-kinds-of-tasks-are-they-good-for"></a>Für welche Arten von Aufgaben sind Sie geeignet?
+## <a name="scenarios-where-messaging-extensions-are-used"></a>Szenarien, in denen Messagingerweiterungen verwendet werden
 
-**Szenario:** Ich benötige ein externes System, um etwas zu tun, und ich möchte, dass das Ergebnis der Aktion an meine Unterhaltung zurückgesendet wird. \
-**Beispiel:** Reservieren Sie eine Ressource, und lassen Sie den Kanal wissen, für welchen Tag/welche Zeit Sie ihn reserviert haben.
+| Szenario | Beispiel |
+|:-----------------|:-----------------|
+|Sie möchten, dass ein externes System eine Aktion und das Ergebnis der Aktion an Ihre Unterhaltung zurücksennen.|Reservieren Sie eine Ressource, und ermöglichen Sie dem Kanal, den reservierten Zeitfenster zu kennen.|
+|Sie möchten etwas in einem externen System finden und die Ergebnisse für die Unterhaltung freigeben.|Suchen Sie nach einer Arbeitsaufgabe in Azure DevOps, und geben Sie sie für die Gruppe als adaptive Karte frei.|
+|Sie möchten eine komplexe Aufgabe ausführen, die mehrere Schritte oder viele Informationen in einem externen System enthält, und die Ergebnisse für eine Unterhaltung freigeben.|Erstellen Sie einen Fehler in Ihrem Nachverfolgungssystem basierend auf einer #A0 , weisen Sie ihn Bob zu, und senden Sie eine Karte mit den Details des Fehlers an den Unterhaltungsthread.|
 
-**Szenario:** Ich muss etwas in einem externen System finden, und ich möchte die Ergebnisse mit meiner Unterhaltung teilen. \
-**Beispiel:**  Suchen Sie in Azure DevOps nach einer Arbeitsaufgabe, und teilen Sie Sie mit der Gruppe als Adaptive Karte.
+## <a name="understand-how-messaging-extensions-work"></a>Verstehen der Funktionsweise von Messagingerweiterungen
 
-**Szenario:** Ich muss eine komplexe Aufgabe mit mehreren Schritten (oder vielen Informationen) in einem externen System ausführen, und die Ergebnisse sollten für eine Unterhaltung freigegeben werden. \
-**Beispiel:** Erstellen Sie einen Fehler in Ihrem Tracking System basierend auf einer Microsoft Teams-Nachricht, weisen Sie diesen Fehler Bob zu, und senden Sie dann eine Karte an den Unterhaltungsthread mit den Details des Fehlers.
+Eine Messagingerweiterung besteht aus einem Webdienst, den Sie hosten, und einem App-Manifest, das definiert, von wo aus Ihr Webdienst im Microsoft Teams-Client aufgerufen wird. Der Webdienst nutzt das Messagingschema und das sichere Kommunikationsprotokoll des Bot Framework, sodass Sie Ihren Webdienst als Bot im Bot Framework registrieren müssen. 
 
-## <a name="how-do-messaging-extensions-work"></a>Wie funktionieren Messaging-Erweiterungen?
+> [!NOTE]
+> Obwohl Sie den Webdienst manuell erstellen können, verwenden Sie [bot Framework SDK,](https://github.com/microsoft/botframework) um mit dem Protokoll zu arbeiten.
 
-Eine Messaging Erweiterung besteht aus einem Webdienst, den Sie hosten, und dem App-Manifest, das definiert, wo Ihr Webdienst aus dem Microsoft Teams-Client aufgerufen werden kann. Sie nutzen das Messaging-Schema und das sichere Kommunikationsprotokoll des Bot-Frameworks, so dass Sie Ihren Webdienst auch als Bot im Bot-Framework registrieren müssen. Sie können den Webdienst zwar vollständig manuell erstellen, aber es wird empfohlen, dass Sie das [bot Framework SDK](https://github.com/microsoft/botframework) nutzen, um das Arbeiten mit dem Protokoll zu vereinfachen.
+Im App-Manifest für Microsoft Teams-App wird eine einzelne Messagingerweiterung mit bis zu zehn verschiedenen Befehlen definiert. Jeder Befehl definiert einen Typ, z. B. Aktion oder Suche, und die Speicherorte im Client, von dem aus er aufgerufen wird. Die aufruften Speicherorte sind verfassen Nachrichtenbereich, Befehlsleiste und Nachricht. Beim Aufrufen empfängt der Webdienst eine HTTPS-Nachricht mit einer JSON-Nutzlast, die alle relevanten Informationen enthält. Reagieren Sie mit einer JSON-Nutzlast, sodass der Teams-Client die nächste zu aktivierende Interaktion kennen kann. 
 
-Im App-Manifest für Ihre Microsoft Teams-app definieren Sie eine einzelne Messaging Erweiterung mit bis zu zehn unterschiedlichen Befehlen. Jeder Befehl definiert einen Typ (Aktion oder Suche) und die Speicherorte im Client, aus dem er aufgerufen werden kann (Verfassen des Nachrichtenbereichs, der Befehlsleiste und/oder der Nachricht). Nachdem der Webdienst aufgerufen wurde, erhält er eine HTTPS-Nachricht mit einer JSON-Nutzlast einschließlich aller relevanten Informationen. Sie Antworten mit einer JSON-Nutzlast, sodass der Microsoft Teams-Client wissen kann, welche Interaktion als nächstes aktiviert werden soll.
+## <a name="types-of-messaging-extension-commands"></a>Typen von Messagingerweiterungsbefehlen
 
-## <a name="types-of-messaging-extension-commands"></a>Typen von Messaging Erweiterungs Befehlen
-
-Der Typ des Messaging Erweiterungs Befehls definiert die Benutzeroberflächenelemente und Interaktions Flüsse, die Ihrem Webdienst zur Verfügung stehen. Einige Interaktionen, wie Authentifizierung und Konfiguration, stehen für beide Befehlstypen zur Verfügung.
+Es gibt zwei Arten von Messagingerweiterungsbefehlen, Aktionsbefehl und Suchbefehl. Der Befehlstyp für die Messagingerweiterung definiert die Benutzeroberflächenelemente und Interaktionsflüsse, die für Ihren Webdienst verfügbar sind. Einige Interaktionen, z. B. Authentifizierung und Konfiguration, sind für beide Befehlstypen verfügbar.
 
 ### <a name="action-commands"></a>Aktionsbefehle
 
-Mit Aktions Befehlen können Sie Ihren Benutzern ein modales Popup-Fenster zum Erfassen oder Anzeigen von Informationen präsentieren. Wenn Sie das Formular übermitteln, kann Ihr Webdienst Antworten, indem er eine Nachricht direkt in die Unterhaltung einfügt, oder indem er eine Nachricht in den Bereich zum Verfassen von Nachrichten einfügt und es dem Benutzer ermöglicht, die Nachricht zu übermitteln. Sie können sogar mehrere Formulare für komplexere Workflows miteinander verketten.
+Aktionsbefehle werden verwendet, um den Benutzern ein modales Popup zum Sammeln oder Anzeigen von Informationen zu präsentieren. Wenn der Benutzer das Formular übermittelt, antwortet ihr Webdienst, indem er eine Nachricht direkt in die Unterhaltung einfüge oder eine Nachricht in den Bereich verfassen einer Nachricht einfüge. Danach kann der Benutzer die Nachricht übermitteln. Sie können mehrere Formulare für komplexere Workflows verketten.
 
-Sie können aus dem Bereich zum Verfassen von Nachrichten, dem Befehlsfeld oder aus einer Nachricht ausgelöst werden. Wenn Sie aus einer Nachricht aufgerufen wird, enthält die anfängliche JSON-Nutzlast, die an Ihren bot gesendet wird, die gesamte Nachricht, von der Sie aufgerufen wurde.
-
-![Befehls Aufgabenmodul für Messaging Erweiterungsaktionen](~/assets/images/task-module.png)
+Die Aktionsbefehle werden aus dem Bereich "Nachricht verfassen", dem Befehlsfeld oder einer Nachricht ausgelöst. Wenn der Befehl über eine Nachricht aufgerufen wird, enthält die anfängliche JSON-Nutzlast, die an Ihren Bot gesendet wurde, die gesamte Nachricht, von der aus er aufgerufen wurde. In der folgenden Abbildung wird das Befehls-Aufgabenmodul für die Messagingerweiterungsaktion angezeigt: Befehlsmodul für Die ![ Messagingerweiterungsaktion](~/assets/images/task-module.png)
 
 ### <a name="search-commands"></a>Suchbefehle
 
-Suchbefehle ermöglichen es Ihren Benutzern, ein externes System nach Informationen zu durchsuchen (entweder manuell über ein Suchfeld oder durch Einfügen eines Links zu einer überwachten Domäne in den Nachrichtenbereich „Verfassen“) und anschließend die Ergebnisse der Suche in eine Nachricht einzufügen. Im einfachsten Suchbefehlsfluss enthält die anfängliche „invoke“-Nachricht die vom Benutzer übermittelte Suchzeichenfolge. Sie antworten mit einer Liste von Karten und Kartenvorschauen. Der Microsoft Teams-Client rendert die Kartenvorschau in einer Liste, aus der der Endbenutzer auswählen kann. Wenn der Benutzer eine Karte auswählt, wird sie in voller Größe in den Nachrichtenbereich „Verfassen“ eingefügt.
+Mit Suchbefehlen können Benutzer ein externes System entweder manuell über ein Suchfeld oder durch Einfügen eines Links zu einer überwachten Domäne in den Bereich "Verfassen von Nachrichten" nach Informationen durchsuchen und die Ergebnisse der Suche in eine Nachricht einfügen. Im grundlegendsten Suchbefehlsfluss enthält die anfängliche Aufrufnachricht die Suchzeichenfolge, die der Benutzer übermittelt hat. Sie antworten mit einer Liste von Karten und Kartenvorschauen. Der Teams-Client rendert eine Liste der Kartenvorschauen für den Benutzer. Wenn der Benutzer eine Karte aus der Liste auswählt, wird die Karte in voller Größe in den Bereich Zum Verfassen von Nachrichten eingefügt.
 
-Sie können aus dem Nachrichtenbereich "Verfassen" oder aus dem Befehlsfeld ausgelöst werden. Im Gegensatz zu Aktions Befehlen können Sie nicht aus einer Nachricht ausgelöst werden.
+Die Karten werden aus dem Bereich "Nachricht verfassen" oder dem Befehlsfeld ausgelöst und nicht von einer Nachricht ausgelöst. Sie können nicht von einer Nachricht ausgelöst werden.
+In der folgenden Abbildung wird das Aufgabenmodul für den Befehlsbefehl für die Nachrichtenerweiterung angezeigt:
 
-![Suchbefehl für Messaging Erweiterung](~/assets/images/search-extension.png)
+![Suchbefehl für Messagingerweiterungen](~/assets/images/search-extension.png)
 
-### <a name="link-unfurling"></a>Entfalten von Links
+> [!NOTE]
+> Weitere Informationen zu Karten finden Sie unter [Was sind Karten.](../task-modules-and-cards/what-are-cards.md)
 
-Sie haben auch die Möglichkeit, ihren Dienst aufzurufen, wenn eine URL im Bereich zum Verfassen von Nachrichten eingefügt wird. Mit dieser Funktion, die als **Link-Entfaltung**bezeichnet wird, können Sie abonnieren, um einen Aufruf zu erhalten, wenn URLs, die eine bestimmte Domäne enthalten, in den Bereich zum Verfassen von Nachrichten eingefügt werden. Ihr Webdienst kann die URL in eine detaillierte Karte "aufteilen" und bietet mehr Informationen als die standardmäßige Website-Vorschau Karte. Sie können sogar Schaltflächen hinzufügen, damit Ihre Benutzer Sofortaktionen ausführen können, ohne den Microsoft Teams-Client verlassen zu müssen.
+## <a name="link-unfurling"></a>Entfalten von Links
 
-## <a name="get-started"></a>Erste Schritte
+Ein Webdienst wird aufgerufen, wenn eine URL im Bereich verfassen von Nachrichten eingegeben wird. Diese Funktion wird als Linkentfurling bezeichnet. Sie können einen Aufruf abonnieren, wenn URLs, die eine bestimmte Domäne enthalten, in den Bereich "Verfassen von Nachrichten" eingedungen werden. Ihr Webdienst kann die URL in einer detaillierten Karte "entfurlen", was mehr Informationen als die Standardvorschaukarte der Website enthält. Sie können Schaltflächen hinzufügen, damit die Benutzer sofort Maßnahmen ergreifen können, ohne den Microsoft Teams-Client zu verlassen.
+In den folgenden Bildern wird die Funktion zum Entfingen eines Links angezeigt, wenn ein Link in die Messagingerweiterung einfügbares Feature enthält:
+ 
+![unfurl link](../assets/images/messaging-extension/unfurl-link.png)
 
-Können Sie mit dem Erstellen beginnen? Versuchen Sie es mit einem unserer Schnellstarts:
+![link unfurling](../assets/images/messaging-extension/link-unfurl.gif)
 
-* **C#**
-  * [Messaging-Erweiterung mit Aktions basierten Befehlen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
-  * [Messaging-Erweiterung mit suchbasierten Befehlen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
-* **JavaScript**
-  * [Messaging-Erweiterung mit Aktions basierten Befehlen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
-  * [Messaging-Erweiterung mit suchbasierten Befehlen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
-## <a name="learn-more"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
-Erstellen Sie eine Messaging Erweiterung:
+> [!div class="nextstepaction"]
+> [Erstellen einer Messaging-Erweiterung](../build-your-first-app/build-messaging-extension.md)
 
-* [Erstellen einer Nachrichten-Erweiterung](~/messaging-extensions/how-to/create-messaging-extension.md)
-* [Aktions-Messaging-Erweiterungs Befehl definieren](~/messaging-extensions/how-to/action-commands/define-action-command.md)
-* [Definieren des Befehls für die Suchnachrichten Erweiterung](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Definieren des Befehls für die Aktions-Messaging-Erweiterung](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+
+> [!div class="nextstepaction"]
+> [Definieren des Befehls für die Suchnachrichtenerweiterung](~/messaging-extensions/how-to/search-commands/define-search-command.md)

@@ -4,12 +4,12 @@ description: Einrichten Ihres Office 365-Entwicklerprogrammabonnements für erfo
 ms.topic: how-to
 keywords: Testen von Entwicklerprogrammteams für Apps
 ms.date: 11/01/2019
-ms.openlocfilehash: 9e23b9054f45ccff6c08b97c72f4d5375fef58ea
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: c702921b1c55570ca8e2869b95c00ae6ae4ebdf4
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634720"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696864"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Hinzufügen von Testdaten zu Ihrem Microsoft 365-Test-Mandanten
 
@@ -26,7 +26,15 @@ Mit einem Microsoft 365-Entwicklerabonnement können Sie Ihre Microsoft Teams-Ap
 > [!NOTE]
 > Für jeden mandanten, den Sie verwenden, müssen Sie die globalen Administratorberechtigungen zum Ausführen der Skripts erhalten.
 
-## <a name="enable-custom-app-sideloading"></a>Aktivieren des Querladens von benutzerdefinierten Apps
+### <a name="optional-step-to-allow-upload-of-custom-apps"></a>Optionaler Schritt zum Hochladen benutzerdefinierter Apps
+
+Standardmäßig können nur globale Administratoren oder Teamdienstadministratoren benutzerdefinierte Apps in den Mandanten-App-Katalog hochladen. Sie können auch allen Benutzern das Hochladen benutzerdefinierter Apps für ihre eigene Verwendung oder für Teams zu Testzwecken ermöglichen.
+
+Um diese Einstellung zu aktivieren, müssen Sie die globale App-Setuprichtlinie in Ihrem Teams Admin Portal aktualisieren.
+
+<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" alt="Screenshot of App Setup Policy"/>
+
+## <a name="optional-step-to-enable-custom-app-sideloading"></a>Optionaler Schritt zum Aktivieren des Querladens benutzerdefinierter Apps
 
 Das Aktivieren der benutzerdefinierten App-Querladen ist optional. Standardmäßig können nur globale Administratoren oder Teams-Dienstadministratoren benutzerdefinierte Apps in den Mandanten-App-Katalog hochladen. Sie können Benutzern auch erlauben, benutzerdefinierte Apps in Teams hochzuladen. Weitere Informationen finden Sie unter [Verwalten von App-Setuprichtlinien in Teams](/microsoftteams/teams-app-setup-policies).
 
@@ -245,7 +253,7 @@ Das Aktivieren der benutzerdefinierten App-Querladen ist optional. Standardmäß
 
 5. Nachdem das Skript ausgeführt wurde, können Sie sich beim Teams-Client mit einem der Benutzerkonten anmelden und die neu erstellten Teams anzeigen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 > [!div class="nextstepaction"]
 > [Debuggen Ihrer Registerkarte](~/tabs/how-to/developer-tools.md)

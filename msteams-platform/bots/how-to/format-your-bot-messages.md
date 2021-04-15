@@ -1,76 +1,89 @@
 ---
-title: Formatieren von bot-Nachrichten
+title: Formatieren von Bot-Nachrichten
 author: clearab
-description: Hinzufügen von Rich-Formatierung zu ihren bot-Nachrichten
-ms.topic: overview
+description: Hinzufügen von reichhaltigen Formatierungen zu Botnachrichten
+ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a11d01233481371c66562e0fa27ab805b06e9391
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 39b82e78e061653eaa3e3b66c10a611d005924bd
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674226"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697004"
 ---
-# <a name="format-your-bot-messages"></a>Formatieren von bot-Nachrichten
+# <a name="format-your-bot-messages"></a>Formatieren von Bot-Nachrichten
 
-Sie können die optionale [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) Eigenschaft festlegen, um zu steuern, wie der Textinhalt Ihrer Nachricht gerendert wird.
+Mit der Nachrichtenformatierung können Sie das Beste in Botnachrichten herausbringen. Sie können Ihre Botnachrichten so formatieren, dass sie umfangreiche Karten enthalten, die Anlagen sind, die interaktive Elemente enthalten, z. B. Schaltflächen, Text, Bilder, Audio, Video und so weiter.
+
+## <a name="format-text-content"></a>Formatieren von Textinhalten
+
+Zum Formatieren Ihrer Botnachrichten können Sie die optionale Eigenschaft festlegen, um zu steuern, wie der Textinhalt Ihrer Botnachricht [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) gerendert wird.
 
 Microsoft Teams unterstützt die folgenden Formatierungsoptionen:
 
-| Textformat-Wert | Beschreibung |
+| `TextFormat` value | Beschreibung |
 | --- | --- |
-| nur | Der Text sollte als unformatierter Text ohne angewendete Formatierung behandelt werden.|
-| markdown | Der Text sollte als Abschlag Formatierung behandelt und entsprechend auf dem Kanal gerendert werden. *Siehe* [Formatieren von Textinhalten](#formatting-text-content) für unterstützte Formatvorlagen. |
-| XML | Der Text ist einfaches XML-Markup. *Siehe* [Formatieren von Textinhalten](#formatting-text-content) für unterstützte Formatvorlagen. |
+| plain | Der Text muss als Unformatierung ohne Formatierung behandelt werden.|
+| MARKDOWN | Der Text muss als Markdownformatierung behandelt und entsprechend auf dem Kanal gerendert werden. |
+| xml | Der Text ist einfaches XML-Markup. |
 
-## <a name="formatting-text-content"></a>Formatieren von Textinhalten
+Teams unterstützt eine Teilmenge von Markdown- und XML- oder HTML-Formatierungstags.
 
-Microsoft Teams unterstützt eine Teilmenge von Abschlags-und XML-Formatierungstags (HTML).
+Derzeit gelten die folgenden Einschränkungen für die Formatierung:
 
-Derzeit gelten die folgenden Einschränkungen:
+* Nur Textnachrichten unterstützen keine Tabellenformatierung.
+* Rich Cards unterstützen nur die Formatierung in der Texteigenschaft, nicht in den Eigenschaften titeln oder untertiteln.
+* Rich Cards unterstützen keine Markdown- oder Tabellenformatierung.
 
-* Nur-Text-Nachrichten unterstützen keine Tabellenformatierung.
-* Rich Cards unterstützen nur die Formatierung in der Text-Eigenschaft, nicht in den Eigenschaften Title oder subtitle.
-* Umfangreiche Karten unterstützen keine Abschlag-oder Tabellenformatierung.
+Nachdem Sie Textinhalte formatiert haben, stellen Sie sicher, dass Ihre Formatierung auf allen von Microsoft Teams unterstützten Plattformen funktioniert.
 
 ## <a name="cross-platform-support"></a>Plattformübergreifende Unterstützung
 
-Um sicherzustellen, dass ihre Formatierung auf allen Plattformen funktioniert, die von Microsoft Teams unterstützt werden, sollten Sie beachten, dass einige Formatvorlagen derzeit nicht auf allen Plattformen unterstützt werden.
+Einige Formatvorlagen werden derzeit nicht auf allen Plattformen unterstützt. Die folgende Tabelle enthält eine Liste der Formatvorlagen und welche dieser Formatvorlagen in nur Textnachrichten und Rich Cards unterstützt werden:
 
-| Format                     | Nur-Text-Nachrichten | Rich Cards (nur XML) |
+| Format                     | Nur-Text-Nachrichten | Rich Cards – nur XML |
 | ---                       | :---: | :---: |
-| bold                      | ✔ | ✖ |
-| italic                    | ✔ | ✔ |
-| Kopfzeile (Ebenen 1&ndash;3) | ✖ | ✔ |
-| durchgestrichen             | ✖ | ✔ |
-| Horizontale Regel           | ✖ | ✖ |
+| Fett                      | ✔ | ✖ |
+| Kursiv                    | ✔ | ✔ |
+| Kopfzeile (Ebenen 1 &ndash; 3) | ✖ | ✔ |
+| Durchgestrichen             | ✖ | ✔ |
+| Horizontales Lineal           | ✖ | ✖ |
 | Unsortierte Liste            | ✖ | ✔ |
-| sortierte Liste              | ✖ | ✔ |
+| Sortierte Liste              | ✖ | ✔ |
 | Vorformatierter Text         | ✔ | ✔ |
-| blockquote                | ✔ | ✔ |
-| Link                 | ✔ | ✔ |
-| Bild Link                | ✔ | ✖ |
+| Blockquote                | ✔ | ✔ |
+| Hyperlink                 | ✔ | ✔ |
+| Bildlink                | ✔ | ✖ |
+
+Stellen Sie nach dem Überprüfen der plattformübergreifenden Unterstützung sicher, dass auch die Unterstützung durch einzelne Plattformen verfügbar ist.
 
 ## <a name="support-by-individual-platform"></a>Unterstützung durch einzelne Plattform
 
-Die Unterstützung für die Textformatierung variiert je nach Nachrichtentyp und Plattform.
+Die Unterstützung für die Textformatierung variiert je nach Art der Nachricht und Plattform.
 
 ### <a name="text-only-messages"></a>Nur-Text-Nachrichten
 
+Die folgende Tabelle enthält eine Liste der Formatvorlagen und welche dieser Formatvorlagen auf Desktop, iOS und Android unterstützt werden:
+
 | Format                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
-| bold                      | ✔ | ✔ | ✔ |
-| italic                    | ✔ | ✔ | ✔ |
-| Kopfzeile (Ebenen 1&ndash;3) | ✖ | ✖ | ✖ |
-| durchgestrichen             | ✔ | ✔ | ✖ |
-| Horizontale Regel           | ✖ | ✖ | ✖ |
+| Fett                      | ✔ | ✔ | ✔ |
+| Kursiv                    | ✔ | ✔ | ✔ |
+| Kopfzeile (Ebenen 1 &ndash; 3) | ✖ | ✖ | ✖ |
+| Durchgestrichen             | ✔ | ✔ | ✖ |
+| Horizontales Lineal           | ✖ | ✖ | ✖ |
 | Unsortierte Liste            | ✔ | ✖ | ✖ |
-| sortierte Liste              | ✔ | ✖ | ✖ |
+| Sortierte Liste              | ✔ | ✖ | ✖ |
 | Vorformatierter Text         | ✔ | ✔ | ✔ |
-| blockquote                | ✔ | ✔ | ✔ |
-| Link                 | ✔ | ✔ | ✔ |
-| Bild Link                | ✔ | ✔ | ✔ |
+| Blockquote                | ✔ | ✔ | ✔ |
+| Hyperlink                 | ✔ | ✔ | ✔ |
+| Bildlink                | ✔ | ✔ | ✔ |
 
 ### <a name="cards"></a>Karten
 
-Siehe Karten [Formatierung](~/task-modules-and-cards/cards/cards-format.md) für die Unterstützung von Karten.
+Kartenunterstützung finden Sie unter [Kartenformatierung](~/task-modules-and-cards/cards/cards-format.md).
+
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Bot-Nachrichten aktualisieren und löschen](~/bots/how-to/update-and-delete-bot-messages.md)

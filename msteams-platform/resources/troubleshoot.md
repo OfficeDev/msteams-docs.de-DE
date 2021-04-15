@@ -1,95 +1,96 @@
 ---
-title: Problembehandlung bei Ihrer APP
+title: Problembehandlung für Ihre App
 description: Behandeln von Problemen oder Fehlern beim Erstellen von Apps für Microsoft Teams
-keywords: Microsoft Teams-apps-Entwicklung-Problembehandlung
+keywords: Problembehandlung bei der Entwicklung von Teams-Apps
+ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: 5f6c8b2d5496d1c49ea35b069c16f4ede507f5e1
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: a870a19eac9295f841b44b3b0364c46ffbc2d1d5
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210708"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696507"
 ---
 # <a name="troubleshoot-your-microsoft-teams-app"></a>Problembehandlung für Ihre Microsoft Teams-App
 
-## <a name="troubleshooting-tabs"></a>Problem Behandlungs Registerkarten
+## <a name="troubleshooting-tabs"></a>Problembehandlung bei Registerkarten
 
-### <a name="accessing-the-devtools"></a>Zugreifen auf das devtools
+### <a name="accessing-the-devtools"></a>Zugreifen auf devTools
 
-Sie können [devtools im Teams-Client](~/tabs/how-to/developer-tools.md) öffnen, um eine ähnliche Erfahrung wie das Drücken von F12 (unter Windows) oder Command-Option-I (auf MacOS) in einem Browser zu erreichen.
+Sie können [DevTools](~/tabs/how-to/developer-tools.md) im Teams-Client öffnen, um eine ähnliche Erfahrung wie das Drücken von F12 (unter Windows) oder Command-Option-I (unter MacOS) in einem Browser zu erhalten.
 
-### <a name="blank-tab-screen"></a>Leerer Registerkarten Bildschirm
+### <a name="blank-tab-screen"></a>Leerer Registerkartenbildschirm
 
-Wenn Ihre Inhalte nicht in der Registerkartenansicht angezeigt werden, kann dies wie folgt lauten:
+Wenn Ihre Inhalte nicht in der Registerkartenansicht angezeigt werden, kann es sich um:
 
-* Ihre Inhalte können nicht in einer angezeigt werden `<iframe>` .
-* die inhaltsdomäne befindet sich nicht in der [validDomains](~/resources/schema/manifest-schema.md#validdomains) -Liste im Manifest.
+* Ihre Inhalte können nicht in einer angezeigt `<iframe>` werden.
+* die Inhaltsdomäne befindet sich nicht in der [Liste validDomains](~/resources/schema/manifest-schema.md#validdomains) im Manifest.
 
-### <a name="the-save-button-isnt-enabled-on-the-settings-dialog"></a>Die Schaltfläche "Speichern" ist im Dialogfeld "Einstellungen" nicht aktiviert.
+### <a name="the-save-button-isnt-enabled-on-the-settings-dialog"></a>Die Schaltfläche Speichern ist im Dialogfeld Einstellungen nicht aktiviert.
 
-Stellen Sie sicher, dass Sie einen Anruf tätigen, `microsoftTeams.settings.setValidityState(true)` nachdem der Benutzereingaben vorgenommen oder alle erforderlichen Daten auf der Seite mit den Einstellungen ausgewählt hat, um die Schaltfläche Speichern zu aktivieren.
+Rufen Sie unbedingt auf, sobald der Benutzer eingaben oder alle erforderlichen Daten auf ihrer Einstellungsseite ausgewählt `microsoftTeams.settings.setValidityState(true)` hat, um die Schaltfläche speichern zu aktivieren.
 
 ### <a name="after-selecting-the-save-button-the-tab-settings-cannot-be-saved"></a>Nachdem Sie die Schaltfläche Speichern ausgewählt haben, können die Registerkarteneinstellungen nicht gespeichert werden.
 
-Wenn Sie beim Hinzufügen einer Registerkarte auf die Schaltfläche Speichern klicken, aber eine Fehlermeldung angezeigt wird, die besagt, dass die Einstellungen nicht gespeichert werden können, kann das Problem eine von zwei Problemen sein:
+Wenn Sie beim Hinzufügen einer Registerkarte auf die Schaltflächen speichern klicken, aber eine Fehlermeldung angezeigt wird, die angibt, dass die Einstellungen nicht gespeichert werden können, kann das Problem eine von zwei Klassen von Problemen sein:
 
-* Die Nachricht zum Speichern des Erfolgs wurde nie empfangen. Wenn ein Speicher Handler mit registriert wurde `microsoftTeams.settings.registerOnSaveHandler(handler)` , muss der Rückruf aufrufen `saveEvent.notifySuccess()` . Wenn der Rückruf dies nicht innerhalb von 30 Sekunden oder stattdessen Aufrufe aufruft `saveEvent.notifyFailure(reason)` , wird dieser Fehler angezeigt.
+* Die Erfolgsnachricht zum Speichern wurde nie empfangen. Wenn ein Speicherhandler mit registriert `microsoftTeams.settings.registerOnSaveHandler(handler)` wurde, muss der Rückruf `saveEvent.notifySuccess()` aufrufen. Wenn der Rückruf dies nicht innerhalb von 30 Sekunden aufruft oder stattdessen aufruft, wird `saveEvent.notifyFailure(reason)` dieser Fehler angezeigt.
 
-* Wenn kein Speicher Handler registriert wurde, `saveEvent.notifySuccess()` wird der Anruf automatisch sofort ausgeführt, sobald der Benutzer die Schaltfläche Speichern auswählt.
+* Wenn kein Speicherhandler registriert wurde, wird der Aufruf automatisch sofort ausgeführt, nachdem der Benutzer `saveEvent.notifySuccess()` die Schaltfläche Speichern ausgewählt hat.
 
-* Die bereitgestellten Einstellungen waren ungültig. Der andere Grund, warum die Einstellungen möglicherweise nicht gespeichert werden, ist, ob der Aufruf zur `microsoftTeams.setSettings(settings)` Bereitstellungeines ungültiges Settings-Objekts oder überhaupt nicht erfolgt ist. Im nächsten Abschnitt finden Sie häufige Probleme mit dem Settings-Objekt.
+* Die bereitgestellten Einstellungen waren ungültig. Der andere Grund, warum die Einstellungen möglicherweise nicht gespeichert werden, ist, wenn der Aufruf ein ungültiges Einstellungsobjekt bereitgestellt hat oder der Aufruf überhaupt `microsoftTeams.setSettings(settings)` nicht erfolgt ist. Weitere Informationen finden Sie im nächsten Abschnitt Allgemeine Probleme mit dem Settings-Objekt.
 
-### <a name="common-problems-with-the-settings-object"></a>Häufige Probleme mit dem Settings-Objekt
+### <a name="common-problems-with-the-settings-object"></a>Häufige Probleme mit dem Einstellungsobjekt
 
-* `settings.entityId`fehlt. Dieses Feld ist obligatorisch.
-* `settings.contentUrl`fehlt. Dieses Feld ist obligatorisch.
-* `settings.contentUrl`oder optional `settings.removeUrl` , oder `settings.websiteUrl` werden bereitgestellt, sind jedoch ungültig. Die URLs müssen HTTPS verwenden und müssen entweder dieselbe Domäne wie die Seite "Einstellungen" oder in der Liste des Manifests angegeben sein `validDomains` .
+* `settings.entityId` fehlt. Dieses Feld ist obligatorisch.
+* `settings.contentUrl` fehlt. Dieses Feld ist obligatorisch.
+* `settings.contentUrl` oder optional `settings.removeUrl` oder `settings.websiteUrl` werden bereitgestellt, aber nicht gültig. Die URLs müssen HTTPS verwenden und müssen entweder dieselbe Domäne wie die Einstellungsseite sein oder in der Liste des Manifests angegeben `validDomains` sein.
 
-### <a name="cant-authenticate-the-user-or-display-your-auth-provider-in-your-tab"></a>Der Benutzer kann nicht authentifiziert werden, oder der Authentifizierungsanbieter wird auf der Registerkarte angezeigt.
+### <a name="cant-authenticate-the-user-or-display-your-auth-provider-in-your-tab"></a>Der Benutzer kann nicht authentifiziert werden oder der Authentifizierungsanbieter kann nicht auf Ihrer Registerkarte angezeigt werden.
 
-Wenn Sie keine automatische Authentifizierung durchführen, müssen Sie dem Authentifizierungsprozess folgen, der vom [Microsoft Teams JavaScript Client SDK](/javascript/api/overview/msteams-client.md)bereitgestellt wird.
+Wenn Sie keine automatische Authentifizierung verwenden, müssen Sie den Authentifizierungsprozess befolgen, der vom [Microsoft Teams JavaScript-Client-SDK bereitgestellt wird.](/javascript/api/overview/msteams-client.md)
 
 > [!NOTE]
->Wir fordern, dass der gesamte Authentifizierungs Fluss in Ihrer Domäne beginnt und endet, die im `validDomains` Objekt in ihrem Manifest aufgeführt werden muss.
+>Wir benötigen den Authentifizierungsfluss, um ihre Domäne zu starten und zu beenden, die im Objekt `validDomains` in Ihrem Manifest aufgeführt werden muss.
 
-Weitere Informationen zur Authentifizierung finden Sie unter [Authentifizieren eines Benutzers](~/concepts/authentication/authentication.md).
+Weitere Informationen zur Authentifizierung finden Sie unter [Authenticate a user](~/concepts/authentication/authentication.md).
 
 ### <a name="static-tabs-not-showing-up"></a>Statische Registerkarten werden nicht angezeigt
 
-Es gibt ein bekanntes Problem, bei dem beim Aktualisieren einer vorhandenen bot-App mit einer neuen oder aktualisierten statischen Registerkarte die Registerkarten Änderung beim Zugriff auf die APP aus einer persönlichen Chat Unterhaltung nicht angezeigt wird.  Um die Änderung anzuzeigen, sollten Sie einen neuen Benutzer oder eine Testinstanz testen oder über das App-Flyout auf den bot zugreifen.
+Es gibt ein bekanntes Problem, bei dem das Aktualisieren einer vorhandenen Bot-App mit einer neuen oder aktualisierten statischen Registerkarte beim Zugriff auf die App aus einer persönlichen Chat-Unterhaltung nicht angezeigt wird.  Um die Änderung zu sehen, sollten Sie einen neuen Benutzer oder eine neue Testinstanz testen oder über das Flyout Apps auf den Bot zugreifen.
 
 ## <a name="troubleshooting-bots"></a>Problembehandlung bei Bots
 
-### <a name="cant-add-my-bot"></a>Mein bot kann nicht hinzugefügt werden
+### <a name="cant-add-my-bot"></a>Mein Bot kann nicht hinzugefügt werden
 
-Apps müssen vom Office 365 mandantenadministrator aktiviert sein, damit Sie von Endbenutzern geladen werden können. Beachten Sie, dass in einigen Fällen dem Office 365-Mandanten möglicherweise mehrere SKUs zugeordnet sind und dass Bots in allen SKUs aktiviert werden müssen. Weitere Informationen finden Sie unter [Vorbereiten des Office 365 Mandanten](~/concepts/build-and-test/prepare-your-o365-tenant.md) .
+Apps müssen vom Office 365-Mandantenadministrator aktiviert sein, damit sie von Endbenutzern geladen werden können. Beachten Sie, dass dem Office 365-Mandanten in einigen Fällen möglicherweise mehrere SKUs zugeordnet sind, und damit Bots in einem Beliebigen funktionieren, müssen sie in allen SKUs aktiviert sein. Weitere Informationen finden Sie unter [Prepare your Office 365 tenant.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
-### <a name="cant-add-bot-as-a-member-of-a-team"></a>Bot kann nicht als Mitglied eines Teams hinzugefügt werden
+### <a name="cant-add-bot-as-a-member-of-a-team"></a>Bot kann nicht als Teammitglied hinzugefügt werden
 
-Bots müssen zuerst in ein Team hochgeladen werden, bevor Sie innerhalb eines beliebigen Kanals dieses Teams zugänglich sind. Weitere Informationen zu diesem Prozess finden Sie unter [Hochladen Ihrer APP in einem Team](~/concepts/deploy-and-publish/apps-upload.md) .
+Bots müssen zuerst in ein Team hochgeladen werden, bevor innerhalb eines beliebigen Kanals dieses Teams darauf zugegriffen werden kann. Weitere Informationen zu diesem Prozess finden Sie unter Hochladen Ihrer [App in](~/concepts/deploy-and-publish/apps-upload.md) einem Team.
 
-### <a name="my-bot-doesnt-get-my-message-in-a-channel"></a>Mein bot erhält meine Nachricht nicht in einem Kanal
+### <a name="my-bot-doesnt-get-my-message-in-a-channel"></a>My bot doesn't get my message in a channel
 
-Bots in Kanälen empfangen Nachrichten nur dann, wenn Sie explizit @mentioned werden, selbst wenn Sie auf eine vorherige bot-Nachricht antworten. Die einzige Ausnahme, bei der der Bot-Name in einer Nachricht möglicherweise nicht angezeigt wird, ist, wenn der bot eine `imBack` Aktion als Ergebnis einer von ihm ursprünglich gesendeten Karte erhält.
+Bots in Kanälen empfangen Nachrichten nur, wenn sie explizit @mentioned werden, auch wenn Sie auf eine vorherige Botnachricht antworten. Die einzige Ausnahme, in der der Botname in einer Nachricht möglicherweise nicht angezeigt wird, ist, wenn der Bot eine Aktion als Ergebnis einer cardAction empfängt, die `imBack` er ursprünglich gesendet hat.
 
-### <a name="my-bot-doesnt-understand-my-commands-when-in-a-channel"></a>Mein bot versteht meine Befehle nicht, wenn Sie sich in einem Kanal befinden.
+### <a name="my-bot-doesnt-understand-my-commands-when-in-a-channel"></a>My bot doesn't understand my commands when in a channel
 
-Da Bots in Kanälen nur Nachrichten empfangen, wenn Sie @mentioned sind, enthalten alle Nachrichten, die ihr bot in einem Kanal erhält, diese @mention in das Textfeld. Es ist eine bewährte Methode, den bot-Namen selbst aus allen eingehenden Textnachrichten zu entfernen, bevor Sie an die Analyselogik übergeben werden. Überprüfen Sie [Erwähnungen](../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions) für Tipps zur Behandlung dieses Falls.
+Da Bots in Kanälen nachrichten nur empfangen, wenn sie @mentioned, enthalten alle Nachrichten, die Ihr Bot in einem Kanal empfängt, @mention im Textfeld enthalten. Es ist eine bewährte Methode, den Botnamen selbst aus allen eingehenden Textnachrichten zu löschen, bevor Sie an Ihre Analyselogik übergeben. Lesen [Sie Erwähnungen](../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions) für Tipps, wie Sie diesen Fall behandeln.
 
-## <a name="issues-with-packaging-and-uploading"></a>Probleme beim Verpacken und hochladen
+## <a name="issues-with-packaging-and-uploading"></a>Probleme beim Packen und Hochladen
 
-### <a name="error-while-reading-manifestjson"></a>Fehler beim Lesen von Manifest. JSON
+### <a name="error-while-reading-manifestjson"></a>Fehler beim Lesen manifest.jsein
 
-Die meisten manifestfehler bieten einen Hinweis darauf, was ein bestimmtes Feld fehlt oder ungültig ist. Wenn die JSON-Datei jedoch überhaupt nicht als JSON gelesen werden kann, wird diese generische Fehlermeldung verwendet.
+Die meisten Manifestfehler geben einen Hinweis darauf, welches bestimmte Feld fehlt oder ungültig ist. Wenn die JSON-Datei jedoch überhaupt nicht als JSON gelesen werden kann, wird diese allgemeine Fehlermeldung verwendet.
 
 Häufige Gründe für Fehler beim Lesen von Manifesten:
 
-* Ungültige JSON. Verwenden Sie eine IDE wie [Visual Studio Code](https://code.visualstudio.com) oder [Visual Studio](https://www.visualstudio.com/vs/) , die die JSON-Syntax automatisch überprüft.
-* Codierungsprobleme. Verwenden Sie UTF-8 für die Datei *Manifest. JSON* . Andere Codierungen, insbesondere mit der Stückliste, sind möglicherweise nicht lesbar.
-* Ungültiges ZIP-Paket. Die Datei " *Manifest. JSON* " muss sich auf der obersten Ebene der ZIP-Datei befinden. Beachten Sie, dass die standardmäßige Mac-Dateikomprimierung das *Manifest. JSON* in einem Unterverzeichnis platzieren kann, das in Microsoft Teams nicht ordnungsgemäß laden wird.
+* Ungültiger JSON-Fehler. Verwenden Sie eine IDE, [Visual Studio Code](https://code.visualstudio.com) [oder](https://www.visualstudio.com/vs/) Visual Studio, die die #A0 automatisch überprüft.
+* Codierungsprobleme. Verwenden Sie UTF-8 fürmanifest.js *on-Datei.* Andere Codierungen, insbesondere mit der Bom, sind möglicherweise nicht lesbar.
+* Falsch formatiertes ZIP-Paket. Die *manifest.json-Datei* muss auf der obersten Ebene der ZIP-Datei sein. Beachten Sie, dass die Standardmäßige Mac-Dateikomprimierung dasmanifest.js *in* einem Unterverzeichnis platzieren kann, das in Microsoft Teams nicht ordnungsgemäß geladen wird.
 
-### <a name="another-extension-with-same-id-exists"></a>Eine andere Erweiterung mit derselben ID ist vorhanden.
+### <a name="another-extension-with-same-id-exists"></a>Eine weitere Erweiterung mit derselben ID ist vorhanden.
 
-Wenn Sie versuchen, ein aktualisiertes Paket mit derselben ID erneut hochzuladen, wählen Sie das Symbol **ersetzen** am Ende der Tabellenzeile der Registerkarte anstelle der Schaltfläche **hochladen** aus.
+Wenn Sie versuchen, ein aktualisiertes Paket mit derselben ID  erneut hochzuladen, wählen Sie das Symbol Ersetzen am Ende der Tabellenzeile der Registerkarte anstelle der Schaltfläche **Hochladen** aus.
 
-Wenn Sie kein aktualisiertes Paket erneut hochladen, stellen Sie sicher, dass die ID eindeutig ist.
+Wenn Sie ein aktualisiertes Paket nicht erneut hochladen, stellen Sie sicher, dass die ID eindeutig ist.

@@ -1,58 +1,77 @@
 ---
 title: Anforderungen und Überlegungen für von der Anwendung gehostete Medienbots
-description: Informationen zu wichtigen Anforderungen und Überlegungen im Zusammenhang mit der Erstellung von von Anwendungen gehosteten Medienbots für Microsoft Teams.
+description: Informationen zu wichtigen Anforderungen und Überlegungen im Zusammenhang mit dem Erstellen von von Anwendungen gehosteten Medienbots für Microsoft Teams.
 ms.topic: conceptual
-keywords: Von der Anwendung gehostete Medien windows server azure vm
+keywords: von der Anwendung gehostete Medien windows server azure vm
 ms.date: 11/16/2018
-ms.openlocfilehash: bf75b7f689713f16cb3ff9ff4313ab829b5cc2d6
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: dfd0b3a2ba9020622a2926c4fc395c060599afb6
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014488"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697081"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Anforderungen und Überlegungen für von der Anwendung gehostete Medienbots
 
-Nicht alle Anleitungen für die Entwicklung von Messaging- und Interactive Voice Response (IVR)-Bots gelten gleichermaßen für das Erstellen von von Anwendungen gehosteten Medienbots. In diesem Artikel werden einige der wichtigen Anforderungen und Überlegungen für die Entwicklung und Ausführung eines in einer Anwendung gehosteten Medienbots beschrieben.
+Für einen anwendungsgehostten Medienbot muss [ `Microsoft.Graph.Communications.Calls.Media` die .NET-Bibliothek](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) auf die Audio- und Videomedienstreams zugreifen. Der Bot muss auf einem Windows Server-Computer oder Windows Server-Gastbetriebssystem (Os) in Azure bereitgestellt werden.
 
 > [!NOTE]
-> Da sich die Microsoft Real-time Media Platform für Bots in der Entwicklervorschau befindet, kann die Anleitung in diesem Artikel geändert werden.
+> * Die Anleitungen für die Entwicklung von Messaging- und Interactive Voice Response (IVR)-Bots gelten nicht vollständig für das Erstellen von von Anwendungen gehosteten Medienbots.
+> * Da sich die Microsoft Real-time Media Platform für Bots in der Entwicklervorschau befindet, können die Anleitungen in diesem Dokument geändert werden.
 
-## <a name="application-hosted-media-bot-development-requires-cnet-and-windows-server"></a>Für die Entwicklung von von der Anwendung gehosteten Medienbots sind C#/.NET und Windows Server erforderlich.
+## <a name="c-or-net-and-windows-server-for-development"></a>C# oder .NET und Windows Server für die Entwicklung
 
-- Ein von einer Anwendung gehosteter Medienbot erfordert die .NET-Bibliothek (hier verfügbar für den Zugriff auf die Audio- und Videomedienstreams, und der Bot muss auf einem Windows Server-Computer (oder Windows Server-Gastbetriebssystem in Azure) bereitgestellt `Microsoft.Graph.Communications.Calls.Media` werden.[](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) Daher muss der Bot in C# und dem standardmäßigen .NET Framework entwickelt und in Microsoft Azure bereitgestellt werden. Sie können C++ oder Node.js-APIs nicht für den Zugriff auf Echtzeitmedien verwenden, und .NET Core wird für einen in der Anwendung gehosteten Medienbot nicht unterstützt.
+Für einen in der Anwendung gehosteten Medienbot ist Folgendes erforderlich:
 
-- Ein von einer Anwendung gehosteter Medienbot kann in einer der folgenden Azure-Dienstumgebungen gehostet werden:
-  - Clouddienst.
-  - Service Fabric mit VmSS (Virtual Machine Scale Sets).
-  - Infrastructure as a Service (IaaS) Virtual Machine (VM).  
+- Der Bot muss in der C# und der Standard-.NET Framework entwickelt und in Microsoft Azure bereitgestellt werden. Sie können C++ oder Node.js-APIs nicht verwenden, um auf Echtzeitmedien zu zugreifen, und .NET Core wird für einen in der Anwendung gehosteten Medienbot nicht unterstützt.
+
+- Der Bot kann in einer der folgenden Azure-Dienstumgebungen gehostet werden:
+    - CloudDienst.
+    - Service Fabric mit VMSS (Virtual Machine Scale Sets).
+    - Infrastructure as a Service (IaaS) Virtual Machine (VM).  
   
-- Ein in der Anwendung gehosteter Medienbot kann nicht als Azure Web App bereitgestellt werden.
+- Der Bot kann nicht als Azure-Web-App bereitgestellt werden.
 
-- Ein in der Anwendung gehosteter Medienbot muss auf einer aktuellen Version der `Microsoft.Graph.Communications.Calls.Media` .NET-Bibliothek ausgeführt werden. Der Bot sollte entweder die neueste verfügbare Version des [NuGet-Pakets](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)oder eine Version verwenden, die nicht mehr als drei Monate alt ist. Ältere Versionen der Bibliothek sind veraltet und funktionieren nach einigen Monaten möglicherweise nicht mehr. Wenn Sie die Bibliothek auf dem neuesten Stand halten, wird `Microsoft.Graph.Communications.Calls.Media` die beste Interoperabilität zwischen dem Bot und Microsoft Teams sichergestellt.
+- Der Bot muss auf einer aktuellen Version der `Microsoft.Graph.Communications.Calls.Media` .NET-Bibliothek ausgeführt werden. Der Bot muss entweder die neueste verfügbare Version des [NuGet-Pakets](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)oder eine Version verwenden, die nicht länger als drei Monate alt ist. Ältere Versionen der Bibliothek sind veraltet und funktionieren nach einigen Monaten nicht mehr. Die Bibliothek auf dem neuesten Stand `Microsoft.Graph.Communications.Calls.Media` zu halten, stellt die beste Interoperabilität zwischen dem Bot und Microsoft Teams sicher.
 
-## <a name="real-time-media-calls-stay-on-the-machine-where-they-were-created"></a>Echtzeitmedienanrufe bleiben auf dem Computer, auf dem sie erstellt wurden
+Der nächste Abschnitt enthält Details dazu, wo sich Medienanrufe in Echtzeit befinden.
 
-- Ein Echtzeitmedienanruf wird an die Instanz des virtuellen Computers (VM) angeheftet, die den Anruf angenommen oder gestartet hat. Medien aus einem Microsoft Teams-Anruf oder einer Besprechung fließen zu dieser VM-Instanz, und Medien, die der Bot an Microsoft Teams zurücksendet, müssen ebenfalls von diesem virtuellen Computer stammen.
-- Wenn beim Beenden des virtuellen Computers Echtzeitmedienanrufe ausgeführt werden, werden diese Anrufe abrupt beendet. Wenn der Bot bereits über Kenntnisse des ausstehenden Herunterfahrens von virtuellen Computer verfügt, kann er versuchen, die Anrufe "anständig" zu beenden.
+## <a name="real-time-media-calls-stay-where-they-are-created"></a>Echtzeitmedienanrufe bleiben dort, wo sie erstellt werden
 
-## <a name="application-hosted-media-bots-must-be-directly-accessible-on-the-internet"></a>Auf von der Anwendung gehostete Medienbots muss direkt über das Internet zugegriffen werden können.
+Echtzeitmedienanrufe bleiben auf dem Computer, auf dem sie erstellt wurden. Ein Echtzeitmedienanruf wird an die Vm-Instanz angeheftet, die den Anruf angenommen oder gestartet hat. Medien aus einem Microsoft Teams-Anruf oder einer Besprechung fließen an diese VM-Instanz, und Medien, die der Bot an Microsoft Teams zurücksendet, müssen ebenfalls von diesem virtuellen Computer stammen. Wenn beim Beenden des virtuellen Computers Echtzeitmedienanrufe ausgeführt werden, werden diese Anrufe abrupt beendet. Wenn der Bot über Vorkenntnisse des ausstehenden Herunterfahrens von virtuellen Computer verfügt, kann er die Aufrufe beenden.
 
-- Jede VM-Instanz, die einen in der Anwendung gehosteten Medienbot in Azure hosten, muss direkt über das Internet über eine öffentliche ILPIP (Instance-Level Public IP Address) auf Instanzebene zugänglich sein.
-  - Informationen zum Abrufen und Konfigurieren eines ILPIP für einen Azure Cloud Service finden Sie in der Übersicht über öffentliche [IP (Classic) auf Instanzebene.](/azure/virtual-network/virtual-networks-instance-level-public-ip)
-  - Informationen zum Konfigurieren eines ILPIP für einen Skalierungssatz für virtuelle Computer finden Sie unter [Öffentliches IPv4 pro virtuellem Computer.](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-networking#public-ipv4-per-virtual-machine)
-- Der Dienst, der einen in der Anwendung gehosteten Medienbot hosten soll, muss außerdem jede VM-Instanz mit einem öffentlich zugänglichen Port konfigurieren, der der jeweiligen Instanz zugeordnet ist.
-  - Für einen Azure Cloud Service ist dafür ein Instanzeingabeendpunkt erforderlich. Siehe ["Kommunikation für Rolleninstanzen in Azure aktivieren".](/azure/cloud-services/cloud-services-enable-communication-role-instances)
-  - Für einen #A0 muss eine #A1 im Lastenausgleich konfiguriert werden. siehe [Virtuelle Netzwerke und virtuelle Computer in Azure](/azure/virtual-machines/windows/network-overview).
-- Von der Anwendung gehostete Medienbots werden vom Bot -Framework-Emulator nicht unterstützt.
+Der nächste Abschnitt enthält Details zur Barrierefreiheit von von Anwendungen gehosteten Medienbots.
+
+## <a name="application-hosted-media-bots-accessible-on-the-internet"></a>Anwendungsgehostte Medienbots, auf die im Internet zugegriffen werden kann
+
+Anwendungsgehostte Medienbots müssen direkt über das Internet zugänglich sein. Diese Bots müssen die folgenden Features enthalten:
+
+- Jede VM-Instanz, die einen von einer Anwendung gehosteten Medienbot in Azure hosten, muss über eine öffentliche IP-Adresse (ILPIP) auf Instanzebene direkt über das Internet zugänglich sein.
+    - Informationen zum Abrufen und Konfigurieren eines ILPIP für einen Azure Cloud Service finden Sie unter klassische Übersicht über öffentliche [IP-Adressen auf Instanzebene.](/azure/virtual-network/virtual-networks-instance-level-public-ip)
+    - Informationen zum Konfigurieren eines ILPIP für einen VM-Skalierungssatz finden Sie unter [Public IPv4 per virtual machine](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-networking#public-ipv4-per-virtual-machine).
+- Der Dienst, der einen von einer Anwendung gehosteten Medienbot hosten soll, muss auch jede VM-Instanz mit einem öffentlich zugänglichen Port konfigurieren, der der jeweiligen Instanz zugeordnet ist.
+    - Für einen Azure Cloud Service erfordert dies einen Instanzeingabeendpunkt. Weitere Informationen finden Sie unter [Aktivieren der Kommunikation für Rolleninstanzen in Azure](/azure/cloud-services/cloud-services-enable-communication-role-instances).
+    - Für einen VM-Skalierungssatz muss eine NAT-Regel für den Lastenausgleich konfiguriert werden. Weitere Informationen finden Sie unter [virtuelle Netzwerke und virtuelle Computer in Azure](/azure/virtual-machines/windows/network-overview).
+- Von Anwendungen gehostete Medienbots werden vom Bot-Framework-Emulator nicht unterstützt.
+
+Der nächste Abschnitt enthält Details zu Skalierbarkeits- und Leistungsaspekten von anwendungsgehostten Medienbots.
 
 ## <a name="scalability-and-performance-considerations"></a>Überlegungen zu Skalierbarkeit und Leistung
 
-- In der Anwendung gehostete Medienbots erfordern eine höhere Rechen- und Netzwerkkapazität (Bandbreite) als Messaging-Bots und können deutlich höhere Betriebskosten verursachen. Ein Entwickler eines Medienbots in Echtzeit muss die Skalierbarkeit des Bots sorgfältig messen und sicherstellen, dass der Bot nicht mehr gleichzeitige Anrufe akzeptiert, als er verwalten kann. Ein videofähiger Bot kann möglicherweise nur eine oder zwei gleichzeitige Mediensitzungen pro PROZESSORkern unterstützen (bei Verwendung der "rohen" RGB24- oder NV12-Videoformate).
-- Die Echtzeitmedienplattform nutzt derzeit keine auf dem virtuellen Computer verfügbaren Grafikprozessoren (Gpu), um die H.264-Videocodierung/-decodierung zu deaktivieren. Stattdessen erfolgt die Videocodierung und -decodierung in der Software auf der CPU. Wenn eine GPU verfügbar ist, kann der Bot sie für das eigene Grafikrendering nutzen (z. B. wenn der Bot ein 3D-Grafikmodul verwendet).
-- Die VM-Instanz, die den Echtzeitmedienbot hosten, muss mindestens 2 Prozessorkerne haben. Für Azure wird ein virtueller Computer der Dv2-Serie empfohlen. Für andere Azure -VM-Typen ist ein System mit 4 virtuellen CPUs (vCPU) die erforderliche Mindestgröße. Ausführliche Informationen zu Azure -VM-Typen finden Sie in der [Azure-Dokumentation.](/azure/virtual-machines/windows/sizes-general)
+Anwendungsgehostte Medienbots erfordern die folgenden Skalierbarkeits- und Leistungsüberlegungen:
+
+- Die Bots erfordern mehr Rechen- und Netzwerkbandbreite als Messagingbots und verursachen deutlich höhere Betriebskosten. Ein Entwickler eines Medienbots in Echtzeit muss die Skalierbarkeit des Bots sorgfältig messen und sicherstellen, dass der Bot nicht mehr gleichzeitige Anrufe akzeptiert, als er verwalten kann. Ein videofähiger Bot kann nur ein oder zwei gleichzeitige Mediensitzungen pro CPU-Kern unterstützen, wenn die rohen RGB24- oder NV12-Videoformate verwendet werden.
+- Die Echtzeitmedienplattform nutzt derzeit keine auf dem virtuellen Computer verfügbaren Grafikverarbeitungseinheiten (Gpu), um die H.264-Videocodierung oder -decodierung zu deaktivieren. Stattdessen erfolgt die Videocodierung und -decodierung in der Software auf der CPU. Wenn eine GPU verfügbar ist, nutzt der Bot sie für ein eigenes Grafikrendering, z. B. wenn der Bot ein 3D-Grafikmodul verwendet.
+- Die VM-Instanz, die den Echtzeitmedienbot hosten, muss über mindestens 2 CPU-Kerne verfügen. Für Azure wird ein virtueller Computer der Dv2-Reihe empfohlen. Für andere Azure VM-Typen ist ein System mit 4 virtuellen CPUs (vCPU) die erforderliche Mindestgröße. Weitere Informationen zu Azure VM-Typen finden Sie in [der Azure-Dokumentation](/azure/virtual-machines/windows/sizes-general).
+
+Der nächste Abschnitt enthält Beispiele, die verschiedene lokale Medienszenarien veranschaulichen.
 
 ## <a name="samples-and-additional-resources"></a>Beispiele und zusätzliche Ressourcen
 
 - [Beispielanwendungen](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples)
-- [Dokumentation zum Graph Calling SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
+- [Dokumentation zum Aufrufen von Graph-SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
+
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Unterstützte Medienformate](~/resources/media-formats.md)

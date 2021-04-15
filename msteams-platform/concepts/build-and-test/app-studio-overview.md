@@ -3,12 +3,12 @@ title: Erste Schritte mit App Studio für Microsoft Teams
 description: Erste Schritte zum Erstellen von großartigen Apps in Microsoft Teams mit App Studio
 keywords: Erste Schritte mit App Studio-Teams
 ms.topic: overview
-ms.openlocfilehash: f9b1763fdd616485a08a059a89f6792cbabfce54
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: d275e78909fe35a6032bf67cb7454396f3dbd7af
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634509"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696304"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Entwickeln Sie schnell Apps mit App Studio für Microsoft Teams
 
@@ -101,6 +101,9 @@ Jeder Befehl erfordert einen Titel und eine ID. Der Befehl kann optional eine Be
 * Der Name des Parameters, wie er im Teams-Client angezeigt wird und in der Benutzeranforderung enthalten ist
 * Ein benutzerfreundlicher Titel
 * Eine optionale Beschreibung.
+
+> [!NOTE]
+> Informationen zum Erstellen einer Messagingerweiterung mithilfe von App Studio finden Sie unter [Create messaging extension using app studio](~/resources/create-messaging-extension-using-appstudio.md).
 
 #### <a name="test-and-distribute"></a>Testen und Verteilen
 

@@ -5,24 +5,24 @@ keywords: Bewährte Methode für Teams-Entwurfsrichtlinien zur Referenz von Mess
 author: heath-hamilton
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: 747b48e3aeb803f91cfb8d4412c98cb6d52c1fd1
-ms.sourcegitcommit: f6e4a303828224a702138753a8e5e27c8a094c82
+ms.openlocfilehash: c616d8e3e7c40ae124f96cb80a42873f9aaa7865
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51176977"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697011"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>Entwerfen Ihrer Microsoft Teams-Messagingerweiterung
 
 Messagingerweiterungen sind Verknüpfungen zum Einfügen von App-Inhalten oder zum Handeln in einer Nachricht, ohne aus der Unterhaltung zu navigieren.
 Um Ihr App-Design zu leiten, wird in den folgenden Informationen beschrieben und veranschaulicht, wie Benutzer Messagingerweiterungen in Teams hinzufügen, verwenden und verwalten können.
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
 Im Microsoft Teams UI Kit finden Sie umfassende Entwurfsrichtlinien für Messagingerweiterungen, einschließlich Elementen, die Sie bei Bedarf packen und ändern können.
 
 > [!div class="nextstepaction"]
-> [Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-messaging-extension"></a>Hinzufügen einer Messagingerweiterung
 
@@ -55,7 +55,7 @@ Mithilfe von Suchbefehlen können Benutzer Ihre Messagingerweiterung verwenden, 
 
 #### <a name="compose-box-layout-options"></a>Layoutoptionen für Verfassen von Schachteln
 
-Sie haben einige Optionen zum Anzeigen von Suchergebnissen der Messagingerweiterung, einschließlich [Listen- und Rasteransichten.](../../messaging-Ask about extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)
+Sie haben einige Optionen zum Anzeigen von Suchergebnissen der Messagingerweiterung, einschließlich [Listen- und Rasteransichten.](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)
 
 :::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Abbildungen mit Layoutoptionen für Suchergebnisse für Messagingerweiterungen." border="false":::
 
@@ -112,7 +112,7 @@ In den folgenden Szenarien wird die primäre Verwendung von Messagingerweiterung
 
 **2. Führen Sie die Aktion aus.** Ihre App kann alle von der Nachrichtenaktion gesendeten Inhalte oder Daten empfangen und verarbeiten. Dies ermöglicht Benutzern, in ihrer Unterhaltung zu bleiben und sich im folgenden Beispiel keine Gedanken über die direkte Eingabe von Informationen in Ihrer App zu machen.
 
-:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Beispiel zeigt einen Benutzer, der nach Inhalt sucht, der aus dem Verfassenfeld eingefügt werden soll." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Beispiel zum Ergreifen von Aktionen für eine Nachricht." border="false":::
 
 ### <a name="preview-links"></a>Vorschaulinks
 
@@ -164,7 +164,7 @@ Das folgende Beispiel ist eine Messagingerweiterung, die über das Verfassenfeld
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Beispiel für eine bewährte Methode für eine Messagingerweiterung." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Beispiel zur Einrichtung und allgemeinen Verwendung." border="false":::
 
 #### <a name="do-integrate-with-single-sign-on"></a>Do: Integration in einmaliges Anmelden
 
@@ -172,7 +172,7 @@ SSO erleichtert, schneller und sicherer den Anmeldevorgang. Wenn sich ein Benutz
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Beispiel für eine bewährte Methode für eine Messagingerweiterung." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Beispiel für die Integration mit einmaligem Anmelden." border="false":::
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>Don't: Take users away from the conversation
 
@@ -189,7 +189,7 @@ Messagingerweiterungen sind nicht immer einfach zu finden. Fügen Sie Screenshot
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Beispiel für eine bewährte Methode für eine Messagingerweiterung." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Beispiel für templating." border="false":::
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Do: Lassen Sie Teams einen Teil der Entwurfsarbeit nach Möglichkeit behandeln
 
@@ -197,7 +197,7 @@ Wenn es für Ihre Verwendungsfälle sinnvoll ist, sollten Sie eine suchbasierte 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Beispiel für eine bewährte Methode für eine Messagingerweiterung." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Beispiel für die Verarbeitung von Entwurfsarbeiten." border="false":::
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>Don't: Embed your entire app in a task module
 
@@ -210,7 +210,7 @@ Wenn ihre Messagingerweiterung Aktionsbefehle erfordert, halten Sie das Aufgaben
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Beispiel für eine bewährte Methode für eine Messagingerweiterung." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Beispiel für das Thema." border="false":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: Nutzen von Teams-Farbtoken
 
@@ -218,7 +218,7 @@ Jedes Teams-Design verfügt über ein eigenes Farbschema. Verwenden Sie Farbtoke
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="Beispiel für eine bewährte Methode für eine Messagingerweiterung." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="Beispiel für Farbtoken." border="false":::
 
 #### <a name="dont-hard-code-color-values"></a>Don't: Hartcodefarbwerte
 
@@ -231,7 +231,7 @@ Wenn Sie keine Teams-Farbtoken verwenden, sind Ihre Designs weniger skalierbar u
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="Beispiel für eine bewährte Methode für eine Messagingerweiterung." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="Beispiel für Aktionen." border="false":::
 
 #### <a name="do-include-action-commands-that-make-sense-in-context"></a>Do: Fügen Sie Aktionsbefehle ein, die im Kontext sinnvoll sind
 
@@ -239,7 +239,7 @@ Nachrichtenaktionen sollten sich darauf beziehen, was ein Benutzer anschaut. Ste
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="Beispiel für eine bewährte Methode für eine Messagingerweiterung." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="Beispiel für Aktionsbefehle." border="false":::
 
 #### <a name="dont-include-actions-commands-that-arent-contextual"></a>Don't: Include actions commands that aren't contextual
 
@@ -262,9 +262,9 @@ Sie können benutzer eine Taste drücken oder eine Schaltfläche auswählen, um 
 
 Bevor ein Benutzer beispielsweise etwas in das Suchfeld schreibt, zeigen Sie an, was er zuletzt in Ihrer App angezeigt hat. Es ist möglich, dass sie diese Inhalte in ihre Unterhaltung einfügen möchten.
 
-## <a name="validate-your-design"></a>Überprüfen Des Entwurfs
+## <a name="validate-your-design"></a>Validieren Ihres Designs
 
-Wenn Sie planen, Ihre App in AppSource zu veröffentlichen, sollten Sie die Entwurfsprobleme verstehen, die häufig dazu führen, dass Apps während der Übermittlung fehlschlagen.
+Wenn Sie Ihre App in AppSource veröffentlichen möchten, sollten Sie die Entwurfsprobleme verstehen, die häufig dazu führen, dass Apps während der Übermittlung fehlschlagen.
 
 > [!div class="nextstepaction"]
-> [Überprüfen der Richtlinien für die Entwurfsüberprüfung](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
+> [Überprüfen der Richtlinien zur Designvalidierung](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

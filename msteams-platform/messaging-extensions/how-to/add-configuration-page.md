@@ -1,23 +1,29 @@
 ---
-title: Hinzufügen einer Konfigurationsseite zu Ihrer Messaging Erweiterung
+title: Hinzufügen einer Konfigurationsseite zu Ihrer Messagingerweiterung
 author: clearab
-description: Vorgehensweise Hinzufügen einer Konfigurationsseite zu einer Messaging Erweiterung
+description: Hinzufügen einer Konfigurationsseite zu einer Messagingerweiterung
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 4d3ccf000f5a0a0296f970650d63bd978b1eaaa5
-ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
+ms.openlocfilehash: e927e9753ad998ecc748e7b71fddd230f0b264d1
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42896513"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696206"
 ---
-# <a name="add-a-configuration-page-to-your-messaging-extension"></a>Hinzufügen einer Konfigurationsseite zu Ihrer Messaging Erweiterung
+# <a name="add-a-configuration-page-to-your-messaging-extension"></a>Hinzufügen einer Konfigurationsseite zu Ihrer Messagingerweiterung
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-## <a name="bot-framework-samples"></a>Beispiele für bot-Framework
+In diesem Dokument erfahren Sie, wie Sie Messagingerweiterungen erstellen, die eine Konfigurationsseite und die Bot Service-Authentifizierung mit Bot Framework Teams-Suchkonfigurationsbeispielen enthalten. In den Beispielen wird auch gezeigt, wie Nachrichtenerweiterungen erstellt werden, die Suchanforderungen akzeptieren und die Ergebnisse zurückgeben, nachdem sich der Benutzer angemeldet hat.
 
-Die Microsoft Teams Search auth config for [**JavaScript/Node. js**](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) -und [**C-Sharp/DotNetCore**](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) -Beispielprojekte auf GitHub veranschaulichen das Erstellen von Messaging Erweiterungen, die eine Konfigurationsseite und eine bot-Dienstauthentifizierung enthalten. In den Beispielen wird außerdem gezeigt, wie Sie Nachrichten Erweiterungen erstellen, die Suchanforderungen akzeptieren und die Ergebnisse zurückgeben, nachdem sich der Benutzer angemeldet hat.
+## <a name="code-sample"></a>Codebeispiel
+
+| Beispielname | Beschreibung | .NET | Node.js|   
+|:---------------------|:--------------|:---------|:--------|
+| Beispiele für die Suche nach Authentifizierungskonfigurationsbeispielen in Bot Framework Teams  | Veranschaulichen Sie, wie Sie Messagingerweiterungen erstellen, die eine Konfigurationsseite und die Bot Service-Authentifizierung enthalten. In den Beispielen wird auch gezeigt, wie Nachrichtenerweiterungen erstellt werden, die Suchanforderungen akzeptieren und die Ergebnisse zurückgeben, nachdem sich der Benutzer angemeldet hat.|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|
+
+## <a name="additional-code-sample"></a>Zusätzliches Codebeispiel
 
 > [!div class="nextstepaction"]
-> [Anzeigen weiterer bot-Framework-Beispiele auf GitHub](https://github.com/microsoft/BotBuilder-Samples)
+> [Weitere Bot Framework-Beispiele auf GitHub anzeigen](https://github.com/microsoft/BotBuilder-Samples)

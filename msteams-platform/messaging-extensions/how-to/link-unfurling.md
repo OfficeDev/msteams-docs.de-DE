@@ -1,46 +1,48 @@
 ---
 title: Entfalten von Links
 author: clearab
-description: So führen Sie in einer Microsoft Teams-App das Aufblinken von Links mit der Messagingerweiterung aus.
+description: So führen Sie die Verknüpfungsentschnappung mit der Messagingerweiterung in einer Microsoft Teams-App aus.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0d488638e63b8ec78bfa5bed8cf6f4f037883fb1
-ms.sourcegitcommit: bf61ae5ad2afa4efdb0311158184d0cbb9c40174
+ms.openlocfilehash: 628c5e760a4bc038443a20714e6960f1ffe8a2ad
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "49845637"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696230"
 ---
 # <a name="link-unfurling"></a>Entfalten von Links
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-> [!NOTE]
-> Derzeit wird das Entf?nden von Links auf mobilen Clients nicht unterstützt.
-
-Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Die enthält die vollständige URL, die in den Bereich zum Verfassen von Nachrichten eingegeben wurde, und Sie können mit einer Karte antworten, die der Benutzer ausf?nnen kann, um zusätzliche Informationen oder `invoke` Aktionen zur Verfügung zu stellen.  Dies funktioniert ähnlich wie bei einem [Suchbefehl,](~/messaging-extensions/how-to/search-commands/define-search-command.md)bei dem die URL als Suchbegriff dient.
-
-Die Azure DevOps-Messaging-Erweiterung verwendet das Wiederverteilen von Links, um nach URLs zu suchen, die in den Bereich zum Verfassen von Nachrichten, die auf eine Arbeitsaufgabe zeigen, eingef?ndert sind. Im folgenden Screenshot hat ein Benutzer eine URL für eine Arbeitsaufgabe in Azure DevOps eingegeben, die die Messagingerweiterung in eine Karte aufgelöst hat.
-
-![Beispiel für die Verknüpfungsentbündelung](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
-
-## <a name="add-link-unfurling-to-your-app-manifest"></a>Hinzufügen der Linkentleierung zu Ihrem App-Manifest
-
- Fügen Sie zum Hinzufügen von Links zum Entfingen ihres App-Manifests dem Abschnitt ihres `messageHandlers` `composeExtensions` App-Manifest-JSON ein neues Array hinzu. Sie können das Array mithilfe von App Studio oder manuell hinzufügen. Domänenauflistungen können Platzhalter enthalten, z. B. `*.example.com` . Dies entspricht genau einem Segment der Domäne. Wenn Sie übereinstimmen müssen, `a.b.example.com` verwenden Sie `*.*.example.com` .
+In diesem Dokument erfahren Sie, wie Sie ihrem App-Manifest mithilfe von App Studio und manuell link unfurling hinzufügen. Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Der enthält die vollständige URL, die in den Bereich "Verfassen von Nachrichten" eingegeben wurde, und Sie können mit einer Karte antworten, die der Benutzer entfurlen kann, und zusätzliche Informationen oder `invoke` Aktionen bereitstellen. Dies funktioniert ähnlich wie bei einem Suchbefehl, bei dem die URL als Suchbegriff dient.
 
 > [!NOTE]
-> Fügen Sie keine Domänen hinzu, die sich außerhalb Ihres Steuerelements befinden, entweder direkt oder über Platzhalter. Beispielsweise ist yourapp.onmicrosoft.com gültig, *.onmicrosoft.com ist jedoch ungültig. Außerdem sind Domänen auf oberster Ebene unzulässig. Beispiel: *.com, *.org.
+> Derzeit wird die Verknüpfungsentfurling auf mobilen Clients nicht unterstützt.
 
-### <a name="using-app-studio"></a>Verwenden von App Studio
+Die Azure DevOps-Messagingerweiterung verwendet die Verknüpfungsentwennung, um nach URLs zu suchen, die in den Bereich verfassen von Nachrichten, die auf eine Arbeitsaufgabe zeigen, eingefügt wurden. In der folgenden Abbildung hat ein Benutzer eine URL für eine Arbeitsaufgabe in Azure DevOps eingegeben, die die Messagingerweiterung in eine Karte aufgelöst hat:
 
-1. Laden Sie in App Studio auf der Registerkarte "Manifest-Editor" Ihr App-Manifest.
-1. Fügen Sie **auf der Seite "Messagingerweiterung"** die Domäne hinzu, nach der Sie suchen möchten, im Abschnitt **"Nachrichtenhandler",** wie im folgenden Screenshot dargestellt.
+![Beispiel für die Verknüpfungsentfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
-![Abschnitt "Message Handlers" in App Studio](~/assets/images/link-unfurling.png)
+## <a name="add-link-unfurling-to-your-app-manifest"></a>Hinzufügen der Verknüpfungsentfurling zu Ihrem App-Manifest
 
-### <a name="manually"></a>Manuell
+Fügen Sie dem Abschnitt Ihres App-Manifests JSON ein neues Array hinzu, um dem App-Manifest ein neues Array `messageHandlers` `composeExtensions` hinzuzufügen. Sie können das Array entweder mithilfe von App Studio oder manuell hinzufügen. Domänenauflistungen können Platzhalter enthalten, z. B. `*.example.com` . Dies entspricht genau einem Abschnitt der Domäne. wenn Sie übereinstimmen müssen, `a.b.example.com` verwenden Sie `*.*.example.com` .
 
-Damit Ihre Messagingerweiterung auf diese Weise mit Links interagieren kann, müssen Sie zuerst das Array zu Ihrem App-Manifest hinzufügen, wie im folgenden `messageHandlers` Beispiel gezeigt. Dieses Beispiel ist nicht das vollständige Manifest, siehe [Manifestreferenz](~/resources/schema/manifest-schema.md) für ein vollständiges Manifestbeispiel.
+> [!NOTE]
+> Fügen Sie keine Domänen hinzu, die sich weder direkt noch über Platzhalter in Ihrem Steuerelement befinden. Beispielsweise ist `yourapp.onmicrosoft.com` gültig, aber `*.onmicrosoft.com` nicht gültig. Außerdem sind Domänen auf oberster Ebene verboten. Beispiel: `*.com` , `*.org` .
+
+### <a name="add-link-unfurling-using-app-studio"></a>Hinzufügen der Verknüpfungsentfurling mithilfe von App Studio
+
+1. Öffnen **Sie App Studio** im Microsoft Teams-Client, und wählen Sie die Registerkarte **Manifest-Editor** aus.
+1. Laden Sie Ihr App-Manifest.
+1. Fügen Sie **auf der** Seite Messagingerweiterung die Domäne hinzu, nach der Sie suchen möchten, im Abschnitt **Nachrichtenhandler.** In der folgenden Abbildung wird der Vorgang erläutert:
+
+    ![Abschnitt "message handlers" in App Studio](~/assets/images/link-unfurling.png)
+    
+### <a name="add-link-unfurling-manually"></a>Manuelles Hinzufügen der Verknüpfungsentfurling
+
+Damit Ihre Messagingerweiterung mit Links interagieren kann, müssen Sie zuerst das `messageHandlers` Array zu Ihrem App-Manifest hinzufügen. Im folgenden Beispiel wird erläutert, wie Sie die Verknüpfung manuell entfernen: 
+
 
 ```json
 ...
@@ -62,18 +64,20 @@ Damit Ihre Messagingerweiterung auf diese Weise mit Links interagieren kann, mü
 ...
 ```
 
+Ein vollständiges Manifestbeispiel finden Sie unter [Manifestreferenz](~/resources/schema/manifest-schema.md).
+
 ## <a name="handle-the-composeextensionquerylink-invoke"></a>Behandeln des `composeExtension/queryLink` Aufrufs
 
-Nachdem Sie die Domäne zum Abhören des App-Manifests hinzugefügt haben, müssen Sie Ihren Webdienstcode aktualisieren, um die Aufrufanforderung zu verarbeiten. Verwenden Sie die URL, die Sie erhalten, um Ihren Dienst zu durchsuchen und eine Kartenantwort zu erstellen. Wenn Sie mit mehr als einer Karte antworten, wird nur die erste Karte verwendet.
+Nachdem Sie die Domäne zum App-Manifest hinzugefügt haben, müssen Sie den Webdienstcode aktualisieren, um die Aufrufanforderung zu verarbeiten. Verwenden Sie die empfangene URL, um Ihren Dienst zu durchsuchen und eine Kartenantwort zu erstellen. Wenn Sie mit mehreren Karten antworten, wird nur die erste Kartenantwort verwendet.
 
-Wir unterstützen die folgenden Kartentypen:
+Die folgenden Kartentypen werden unterstützt:
 
-* [Miniaturansichtkarte](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [Herokarte](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365-Connectorkarte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Miniaturansichtskarte](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [Heldenkarte](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [Office 365 Connector-Karte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Karte](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Eine [Übersicht finden Sie unter "Was sind](~/task-modules-and-cards/what-are-cards.md) Karten".
+### <a name="example"></a>Beispiel
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -120,7 +124,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[Json](#tab/json)
 
-Dies ist ein Beispiel für das an `invoke` Ihren Bot gesendete.
+Im Folgenden finden Sie ein Beispiel für die an `invoke` Ihren Bot gesendeten:
 
 ```json
 {
@@ -132,7 +136,7 @@ Dies ist ein Beispiel für das an `invoke` Ihren Bot gesendete.
 }
 ```
 
-Ein Beispiel für die Antwort ist unten dargestellt.
+Im Folgenden finden Sie ein Beispiel für die Antwort:
 
 ```json
 {
@@ -146,14 +150,14 @@ Ein Beispiel für die Antwort ist unten dargestellt.
           "sections": [
             {
               "activityTitle": "[85069]: Create a cool app",
-              "activityImage": "https://placekitten.com/200/200"
+              "activityImage&quot;: &quot;https://placekitten.com/200/200"
             },
             {
               "title": "Details",
               "facts": [
                 {
                   "name": "Assigned to:",
-                  "value": "[Larry Brown](mailto:larryb@example.com)"
+                  "value&quot;: &quot;[Larry Brown](mailto:larryb@example.com)"
                 },
                 {
                   "name": "State:",
@@ -170,3 +174,8 @@ Ein Beispiel für die Antwort ist unten dargestellt.
 ```
 
 * * *
+
+## <a name="see-also"></a>Weitere Informationen 
+
+> [!div class="nextstepaction"]
+> [Was sind Karten?](~/task-modules-and-cards/what-are-cards.md)

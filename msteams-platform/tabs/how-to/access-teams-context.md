@@ -1,13 +1,14 @@
 ---
 title: Kontext für Ihre Registerkarte erhalten
 description: Beschreibt, wie Sie Benutzerkontext zu Ihren Registerkarten abrufen
+ms.topic: how-to
 keywords: Teams Registerkarten Benutzerkontext
-ms.openlocfilehash: 18c8541e948f206fcdddc3a942325e2f5d6e3e5c
-ms.sourcegitcommit: 309823e6911b4e8e307493cbd59880fe69a4dca3
-ms.translationtype: HT
+ms.openlocfilehash: 88a9c8ac5b2bca539b931147e6f6feb1483a3b6c
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "49727163"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696479"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Abrufen von Kontext zu Ihrer Microsoft Teams-Registerkarte
 
