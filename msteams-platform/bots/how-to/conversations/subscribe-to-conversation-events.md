@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: So arbeiten Sie mit Unterhaltungsereignissen aus Ihrem Microsoft Teams-Bot.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: af06dba58b3784a03dbcbbc627fa38fce681eeb8
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: af1724620ede44f8d0f7739e265ef1ebd1e3afd8
+ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696346"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51762032"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Unterhaltungsereignisse in Ihrem Teams-Bot
 
@@ -1060,10 +1060,10 @@ Das Ereignis wird gesendet, wenn ein Benutzer Reaktionen auf eine Nachricht hinz
 
 | EventType       | Payload-Objekt   | Beschreibung                                                             | Bereich |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reaktionen auf eine Botnachricht](#reactions-to-a-bot-message)                   | Alle   |
-| messageReaction | reactionsRemoved | [Aus bot-Nachricht entfernte Reaktionen](#reactions-removed-from-bot-message) | Alle   |
+| messageReaction | reactionsAdded   | [Reaktionen, die bot-Nachricht hinzugefügt wurden.](#reactions-added-to-bot-message)           | Alle   |
+| messageReaction | reactionsRemoved | [Aus bot-Nachricht entfernte Reaktionen.](#reactions-removed-from-bot-message) | Alle |
 
-### <a name="reactions-to-a-bot-message"></a>Reaktionen auf eine Botnachricht
+### <a name="reactions-added-to-bot-message"></a>Zu Botnachricht hinzugefügte Reaktionen
 
 Der folgende Code zeigt ein Beispiel für Reaktionen auf eine Botnachricht:
 
@@ -1283,13 +1283,104 @@ async def on_reactions_removed(
 
 * * *
 
+## <a name="installation-update-event"></a>Installationsupdateereignis
+
+Der Bot empfängt ein `installationUpdate` Ereignis, wenn Sie einen Bot in einem Unterhaltungsthread installieren. Die Deinstallation des Bots aus dem Thread löst auch das Ereignis aus. Bei der Installation  eines Bots ist das Aktionsfeld im Ereignis auf  *Hinzufügen* festgelegt, und wenn der Bot deinstalliert wird, wird das Aktionsfeld auf *entfernen festgelegt.*
+ 
+> [!NOTE]
+> Wenn Sie eine Anwendung aktualisieren und dann einen Bot hinzufügen oder entfernen, löst die Aktion auch das Ereignis `installationUpdate` aus. Das **Aktionsfeld** ist auf *Add-Upgrade* festgelegt, wenn Sie einen Bot oder ein *Remove-Upgrade* hinzufügen, wenn Sie einen Bot entfernen. 
+
+> [!IMPORTANT]
+> Installation update events are in developer preview today and will be Generally Available (GA) in March 2021. Um die Installationsupdateereignisse anzuzeigen, können Sie Ihren Teams-Client in die Öffentliche Entwicklervorschau verschieben und Ihre App persönlich oder zu einem Team oder Chat hinzufügen.
+
+### <a name="install-update-event"></a>Updateereignis installieren
+Verwenden Sie `installationUpdate` das Ereignis, um eine Einführungsnachricht von Ihrem Bot bei der Installation zu senden. Dieses Ereignis hilft Ihnen, Ihre Datenschutz- und Datenaufbewahrungsanforderungen zu erfüllen. Sie können auch Benutzer- oder Threaddaten bereinigen und löschen, wenn der Bot deinstalliert wird.
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task
+OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken) {
+var activity = turnContext.Activity; if
+(string.Equals(activity.Action, "Add",
+StringComparison.InvariantCultureIgnoreCase)) {
+// TO:DO Installation workflow }
+else
+{ // TO:DO Uninstallation workflow
+} return; }
+```
+
+Sie können auch einen dedizierten Handler zum *Hinzufügen* oder Entfernen *von* Szenarien als alternative Methode zum Erfassen eines Ereignisses verwenden.
+
+```csharp
+protected override async Task
+OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity>
+turnContext, CancellationToken cancellationToken) {
+// TO:DO Installation workflow return;
+}
+```
+
+# <a name="json"></a>[Json](#tab/json)
+
+```json
+{ 
+  "action": "add", 
+  "type": "installationUpdate", 
+  "timestamp": "2020-10-20T22:08:07.869Z", 
+  "id": "f:3033745319439849398", 
+  "channelId": "msteams", 
+  "serviceUrl": "https://smba.trafficmanager.net/amer/", 
+  "from": { 
+    "id": "sample id", 
+    "aadObjectId": "sample AAD Object ID" 
+  },
+  "conversation": { 
+    "isGroup": true, 
+    "conversationType": "channel", 
+    "tenantId": "sample tenant ID", 
+    "id": "sample conversation Id@thread.skype" 
+  }, 
+
+  "recipient": { 
+    "id": "sample reciepent bot ID", 
+    "name": "bot name" 
+  }, 
+  "entities": [ 
+    { 
+      "locale": "en", 
+      "platform": "Windows", 
+      "type": "clientInfo" 
+    } 
+  ], 
+  "channelData": { 
+    "settings": { 
+      "selectedChannel": { 
+        "id": "sample channel ID@thread.skype" 
+      } 
+    }, 
+    "channel": { 
+      "id": "sample channel ID" 
+    }, 
+    "team": { 
+      "id": "sample team ID" 
+    }, 
+    "tenant": { 
+      "id": "sample tenant ID" 
+    }, 
+    "source": { 
+      "name": "message" 
+    } 
+  }, 
+  "locale": "en" 
+}
+```
+* * *
+
 ## <a name="code-sample"></a>Codebeispiel
 
-Die folgende Tabelle enthält ein einfaches Codebeispiel, das Bots-Unterhaltungsereignisse in eine Teams-Anwendung integriert:
-
-| Beispiel | Beschreibung | .NET Core |
-|--------|------------- |---|
-| Beispiel für Teams-Bots-Unterhaltungsereignisse | Bot Framework v4 conversation bot sample for Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|
+| **Beispielname** | **Beschreibung** | **.NET** |
+|-----------------|-----------------|---------|
+|Unterhaltungsereignisse in Microsoft Teams bots | Beispiel für Botereignisse. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Nächster Schritt
 
