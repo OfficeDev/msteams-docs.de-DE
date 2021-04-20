@@ -3,12 +3,12 @@ title: Unterstützung für einmaliges Anmelden für Registerkarten
 description: Beschreibt einmaliges Anmelden (Single Sign-On, SSO)
 ms.topic: how-to
 keywords: teams authentication SSO AAD single sign-on api
-ms.openlocfilehash: e6bf278e446861556da8362905916cc030df723e
-ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
+ms.openlocfilehash: 6be04617961d45763e5c812149d47a126fc4dae3
+ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596681"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51885066"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Unterstützung für einmaliges Anmelden (Single Sign-On, SSO) für Registerkarten
 
@@ -66,7 +66,6 @@ In diesem Abschnitt werden die Aufgaben beim Erstellen einer Registerkarte Teams
 > * Es werden nur Graph-API-Berechtigungen auf Benutzerebene unterstützt, d. h. E-Mail, Profil, offline_access, OpenId. Wenn Sie Zugriff auf andere Graph-Bereiche wie oder haben `User.Read` `Mail.Read` müssen, lesen Sie [empfohlene Problemumgehung](#apps-that-require-additional-graph-scopes).
 > * Es ist wichtig, dass der Domänenname Ihrer Anwendung mit dem Domänennamen identisch ist, den Sie für Ihre AAD-Anwendung registriert haben.
 > * Derzeit werden mehrere Domänen pro App nicht unterstützt.
-> * Anwendungen, die die Domäne verwenden, werden nicht unterstützt, da sie zu häufig sind `azurewebsites.net` und ein Sicherheitsrisiko darstellen können.
 
 **So registrieren Sie Ihre App über das AAD-Portal**
 
@@ -97,7 +96,7 @@ In diesem Abschnitt werden die Aufgaben beim Erstellen einer Registerkarte Teams
     * email
     * offline_access
     * OpenId
-    * profile
+    * Profil
 
 14. Navigieren Sie zu **Authentifizierung**.
 

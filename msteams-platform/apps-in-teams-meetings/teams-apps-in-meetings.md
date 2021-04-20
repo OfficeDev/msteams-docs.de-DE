@@ -5,12 +5,12 @@ description: Übersicht über Apps in Teams-Besprechungen basierend auf Teilnehm
 ms.topic: overview
 ms.author: lajanuar
 keywords: Rollen-API für Teams-Apps-Besprechungen für Benutzerteilnehmer
-ms.openlocfilehash: ac4e270090dd89d370d37de88b8cba552b77a5cb
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 201fa58cc375440cf6c495028135e32fd51f740c
+ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382338"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51885080"
 ---
 # <a name="apps-in-teams-meetings"></a>Apps in Teams-Besprechungen
 
@@ -74,11 +74,11 @@ Registerkarten ermöglichen Teammitgliedern den Zugriff auf Dienste und Inhalte 
 
 ✔ Berechtigte Benutzer können Apps während der Besprechung hinzufügen.
 
-✔ Wenn apps im Kontext einer Besprechung geladen werden, können Sie das Teams Client SDK nutzen, um auf das zu zugreifen und die Erfahrung entsprechend `meetingId` `userMri` zu `frameContext` rendern.
+✔ Wenn sie im Kontext einer Besprechung geladen werden, können Apps das Teams-Client-SDK nutzen, um auf das zu zugreifen und die Benutzererfahrung entsprechend `meetingId` `userMri` zu `frameContext` rendern.
 
 ✔ Exportieren eines Ergebnisses einer Umfrage oder Umfrage benachrichtigt die Benutzer, dass die Ergebnisse erfolgreich heruntergeladen wurden.
 
-✔ Eine App wird in einer Teams-Besprechung im Seitenbereich oder im Dialogfeld in der Besprechung angezeigt. Verwenden Sie das Dialogfeld in der Besprechung, um Inhalte mit Aktionen für Besprechungsteilnehmer anzuzeigen. *Weitere Informationen* [finden Sie unter Erstellen von Apps für Teams-Besprechungen.](create-apps-for-teams-meetings.md)
+✔ Eine App wird in einer Teams-Besprechung im Seitenbereich oder im Dialogfeld in der Besprechung angezeigt. Verwenden Sie das Dialogfeld in der Besprechung, um aktionenfähige Inhalte für Besprechungsteilnehmer anzuzeigen. Weitere Informationen finden Sie unter [Erstellen von Apps für Teams-Besprechungen](create-apps-for-teams-meetings.md).
 
    > [!NOTE]
    > Ihr App-Manifest gibt an, dass Ihre Registerkarte [für den Seitenbereich](create-apps-for-teams-meetings.md#during-a-meeting)optimiert ist, d. h. an der Stelle, an der sie angezeigt wird. Sie kann auch Teil einer Share-Tray-Erfahrung sein, die den angegebenen Entwurfsrichtlinien unterliegt.
@@ -145,9 +145,20 @@ Die folgenden Benutzertypen bestimmen, was jeder Benutzer tun kann und worauf er
 * **Mandantenin-mandant:** Mandantenbenutzer gehören der Organisation an und verfügen über Anmeldeinformationen in Azure Active Directory (AAD) für den Mandanten. Es handelt sich in der Regel um Vollzeit-, Standort- oder Remotemitarbeiter. Ein Mandantenbenutzer kann ein Organisator, Organisator oder Teilnehmer sein.
 * **Gast**: Ein Gast ist ein Teilnehmer aus einer anderen Organisation, der eingeladen ist, auf Teams oder andere Ressourcen im Mandanten der Organisation zu zugreifen. Gäste werden dem AAD Ihrer Organisation hinzugefügt und verfügen über dieselben Teams-Funktionen wie ein systemeigenes Teammitglied mit Zugriff auf Teamchats, Besprechungen und Dateien. Ein Gastbenutzer kann ein Organisator, Organisator oder Teilnehmer sein. Weitere Informationen finden Sie unter [Gastzugriff in Teams](/microsoftteams/guest-access).
 * **Verbund oder extern:** Ein Verbundbenutzer ist ein externer Teams-Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Diese Benutzer verfügen über gültige Anmeldeinformationen bei Verbundpartnern und sind von Teams autorisiert. Sie haben keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen aus Ihrer Organisation. Der Gastzugriff ist eine bessere Option für externe Benutzer, um Zugriff auf Teams und Kanäle zu haben. Weitere Informationen finden Sie unter [Verwalten des externen Zugriffs in Teams](/microsoftteams/manage-external-access).
-* **Anonym:** Anonyme Benutzer verfügen nicht über eine AAD-Identität und sind nicht mit einem Mandanten in Verbindung. Der anonyme Teilnehmer ist wie ein externer Benutzer, aber seine Identität wird in der Besprechung nicht projiziert. Anonyme Benutzer können in einem Besprechungsfenster nicht auf Apps zugreifen. Ein anonymer Benutzer kann kein Organisator sein, aber ein Organisator oder Teilnehmer sein.
+* **Anonym:** Anonyme Benutzer verfügen nicht über eine AAD-Identität und sind nicht mit einem Mandanten in Verbindung. Der anonyme Teilnehmer ist wie ein externer Benutzer, aber seine Identität wird in der Besprechung nicht projiziert. Ein anonymer Benutzer kann kein Organisator sein, aber ein Organisator oder Ein Teilnehmer sein.
 
-## <a name="see-also"></a>Weitere Informationen
+> [!NOTE]
+> Anonyme Benutzer erben die globale Standardmäßige App-Berechtigungsrichtlinie auf Benutzerebene. Weitere Informationen finden Sie unter [Manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
+
+Die folgende Tabelle enthält die Benutzertypen und die Features, auf die jeder Benutzer zugreifen kann:
+
+| Benutzertyp | Registerkarten | Bots | Messaging-Erweiterungen | Adaptive Karten | Aufgabenmodule | Dialogfeld "Besprechung" |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| Anonymer Benutzer | Nicht verfügbar | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat von einer adaptiven Karte sind zulässig. | Nicht verfügbar |
+| Gast, der Teil des Mandanten-AAD ist | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat von einer adaptiven Karte sind zulässig. | Available |
+| Verbund | Nicht verfügbar | Nicht verfügbar | Nicht verfügbar | Nicht verfügbar | Nicht verfügbar | Nicht verfügbar |
+
+## <a name="see-also"></a>Siehe auch
 
 > [!div class="nextstepaction"]
 > [Tab](../tabs/what-are-tabs.md#how-do-tabs-work)
