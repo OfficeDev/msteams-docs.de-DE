@@ -2,14 +2,15 @@
 title: Textformatierung in Karten
 description: Beschreibt die Formatierung von Kartentexten in Microsoft Teams
 keywords: Teams-Bots-Kartenformat
+localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: e6b8cc835780e03cf4e23eae31fa447c8a03c002
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: b50109ad664bda2fc130e08c53dd7fca2a3d54ef
+ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696535"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51922517"
 ---
 # <a name="format-cards-in-teams"></a>Formatieren von Karten in Teams
 
@@ -122,10 +123,11 @@ Bots und Messagingerweiterungen können Erwähnungen innerhalb des Karteninhalts
 
 #### <a name="constructing-mentions"></a>Erstellen von Erwähnungen
 
-Um eine Erwähnung in einer adaptiven Karte zu verwenden, muss Ihre App die folgenden Elemente enthalten:
+Um eine Erwähnung in einer adaptiven Karte zu erhalten, muss Ihre App die folgenden Elemente enthalten:
 
-* `<at>username</at>` in den unterstützten adaptiven Kartenelementen
-* Das Objekt innerhalb einer Eigenschaft im Karteninhalt, die die `mention` `msteams` Teams-Benutzer-ID des erwähnten Benutzers enthält
+* `<at>username</at>` in den unterstützten adaptiven Kartenelementen.
+* Das Objekt innerhalb einer Eigenschaft im Karteninhalt, die `mention` `msteams` die Teams-Benutzer-ID des erwähnten Benutzers enthält.
+* Die `userId` ist für Ihre Bot-ID und einen bestimmten Benutzer eindeutig. Es kann zum @mention eines bestimmten Benutzers verwendet werden. Der kann mithilfe einer der unter Abrufen der Benutzer-ID genannten `userId` [Optionen abgerufen werden.](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)
 
 #### <a name="sample-adaptive-card-with-a-mention"></a>Beispiel für adaptive Karte mit erwähnung
 
@@ -157,7 +159,6 @@ Um eine Erwähnung in einer adaptiven Karte zu verwenden, muss Ihre App die folg
   }
 }
 ```
-
 
 ### <a name="information-masking-in-adaptive-cards"></a>Informationsmasken in adaptiven Karten
 Verwenden Sie die Informationsmaskeneigenschaft, um bestimmte Informationen zu maskieren, z. B. Kennwort oder vertrauliche Informationen von Benutzern innerhalb des Eingabeelements [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) adaptiver Karten. 

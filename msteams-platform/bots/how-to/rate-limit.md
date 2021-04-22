@@ -3,12 +3,12 @@ title: Optimieren eines Bots mit Ratenbegrenzung in Teams
 description: Geschwindigkeitsbegrenzung und bewährte Methoden in Microsoft Teams
 ms.topic: conceptual
 keywords: Beschränkung der Rate von Teams-Bots
-ms.openlocfilehash: 245c51fc736e5f888299535c3e50ec6232183623
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 690d09e4a3b611c024f32d3776ca73e42d63ee7f
+ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696997"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51922503"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimieren eines Bots mit Ratenbegrenzung in Teams
 
@@ -113,10 +113,12 @@ Sie können auch die Geschwindigkeitsbegrenzung mithilfe der Pro-Bot-Pro-Thread-
 
 ## <a name="per-bot-per-thread-limit"></a>Pro Bot pro Threadgrenzwert
 
->[!NOTE]
-> Die Nachrichtenteilung auf Dienstebene führt zu höheren Anforderungen pro Sekunde (RPS). Wenn Sie sich Sorgen machen, die Grenzwerte zu überschreiten, müssen Sie die [Backoff-Strategie implementieren.](#backoff-example) Die in diesem Abschnitt angegebenen Werte sind nur zur Schätzung vorgesehen.
+Der Grenzwert pro Bot pro Thread steuert den Datenverkehr, den ein Bot in einer einzigen Unterhaltung generieren darf. Eine Unterhaltung zwischen Bot und Benutzer, einem Gruppenchat oder einem Kanal in einem Team ist 1:1. Wenn die Anwendung also eine Botnachricht an jeden Benutzer sendet, wird der Threadgrenzwert nicht gedrosselt.
 
-Der Grenzwert pro Bot pro Thread steuert den Datenverkehr, den ein Bot für eine einzelne Unterhaltung generieren darf. Eine Unterhaltung hier ist 1:1 zwischen Bot und Benutzer, einem Gruppenchat oder einem Kanal in einem Team.
+>[!NOTE]
+> * Der Threadgrenzwert von 3600 Sekunden und 1800 Vorgängen gilt nur, wenn mehrere Botnachrichten an einen einzelnen Benutzer gesendet werden. 
+> * Der globale Grenzwert pro App pro Mandant beträgt 30 Anforderungen pro Sekunde (RPS). Daher darf die Gesamtzahl der Botnachrichten pro Sekunde nicht die Threadbegrenzung überschreiten.
+> * Die Nachrichtenteilung auf Dienstebene führt zu einem höheren RpS als erwartet. Wenn Sie sich Sorgen machen, die Grenzwerte zu überschreiten, müssen Sie die [Backoff-Strategie implementieren.](#backoff-example) Die in diesem Abschnitt angegebenen Werte sind nur zur Schätzung vorgesehen.
 
 In der folgenden Tabelle sind die Grenzwerte pro Bot pro Thread aufgeführt:
 
