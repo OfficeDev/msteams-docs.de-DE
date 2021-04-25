@@ -4,12 +4,12 @@ description: Beschreibt, wie Sie Ihre App in Microsoft Teams hochladen
 ms.topic: how-to
 ms.author: lajanuar
 keywords: Hochladen von Teams-Apps
-ms.openlocfilehash: 3ca086cf8dbb992de84b22b7499f739d7c80b9d6
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: c9102fa5b7056dda0db8d3e260bfb3e94b7f4e56
+ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479882"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "51946480"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Hochladen eines App-Pakets in Microsoft Teams
 
@@ -116,21 +116,6 @@ Eine hochgeladene App mit einer Messagingerweiterung wird automatisch im Menü W
 
 ![Messaging-Erweiterungen](../../assets/images/compose-extensions/cesampleapp.png)
 
-## <a name="add-a-default-install-scope-and-group-capability"></a>Hinzufügen eines Standardinstallationsbereichs und einer Gruppenfunktion
-
-> [!NOTE]
-> Der Standardinstallationsbereich und die Gruppenfunktion sind derzeit nur in der Entwicklervorschau verfügbar.
-
-Obwohl das Installieren einer App im persönlichen Bereich für die meisten Apps funktioniert, unterstützen einige Apps im Teams Store sowohl persönliche als auch Teambereiche.
-Einige dieser Apps sind für die Arbeit in einem Team, in Besprechungen oder in einem Groupchat vorgesehen, bei dem die persönliche App-Erfahrung sekundär ist.
-Mit der Standardauswahl für den Installationsbereich können Sie die für die von Ihnen `defaultInstallScope` veröffentlichten Apps angeben. Die App-Installationserfahrung stellt dem Benutzer die Standardoptionen zur Verfügung, während der Rest wie im Bild hervorgehoben unter das Chevron verschoben wird.
-
-![Eine App hinzufügen](../../assets/images/compose-extensions/addanapp.png)
-
-Die `defaultInstallScope` Eigenschaft unterstützt Werte wie persönliche, Team-, Gruppenchat- oder Besprechungsgespräche.
-
-> [!NOTE]
->`defaultGroupCapability` stellt die Standardfunktion zur Verfügung, die dem Team, dem Gruppenchat oder besprechungen hinzugefügt wird. Wählen Sie eine Registerkarte, einen Bot oder einen Connector als Standardfunktion für Ihre App aus, Sie müssen jedoch sicherstellen, dass Sie die ausgewählte Funktion in Ihrer App-Definition bereitgestellt haben.
 
 ## <a name="remove-or-update-your-app"></a>Entfernen oder Aktualisieren Ihrer App
 

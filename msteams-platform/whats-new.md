@@ -3,12 +3,12 @@ title: Neuerungen
 description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 ms.topic: reference
 keywords: Teams, was neu ist
-ms.openlocfilehash: 298305f11788963817ddacfabbc052297d3eaabe
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: 8d38c5a4f79b557209eedab6747517e689248874
+ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634530"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "51946459"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neues für Entwickler in Microsoft Teams
 
@@ -19,12 +19,12 @@ ms.locfileid: "51634530"
 
 Im Änderungsprotokoll werden Änderungen an der Microsoft Teams-Plattform und diesem Dokumentsatz aufgeführt. Manchmal können Einträge verwendet werden, um auf ein neues Feature aufmerksam zu machen, das für Teams-Entwickler einfach von Interesse ist.
 
-| **Date** | **Hinweise** | **Geänderte Themen** |
+| **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
 |04/08/2021| Die App-Anpassungsfunktion ist jetzt in der Entwicklervorschau verfügbar.|[Übersicht über die Entwurfsteams-App,](concepts/design/design-teams-app-overview.md#app-customization) [Übersicht über App Studio](concepts/build-and-test/app-studio-overview.md#connectors)und [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
-|03/18/2021|Hinweis: **Aktualisieren Sie auf Version 4.10** oder höher des Bot Framework SDK, da wir mit dem Veraltetkeitsprozess für und begonnen `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` haben. | [Bot API-Änderungen für Team-/Chatmitglieder](resources/team-chat-member-api-changes.md) |
+|03/18/2021|Hinweis: Aktualisieren Sie auf Version 4.10 oder höher des Bot Framework SDK, wie wir mit dem Veraltetkeitsprozess für `TeamsInfo.getMembers` und begonnen `TeamsInfo.GetMembersAsync` haben. | [Bot API-Änderungen für Team-/Chatmitglieder](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Hinweis: Registerkarten haben keine Ränder mehr um ihre Erfahrungen. Registerkartenentwickler sollten ihre Apps überprüfen und aktualisieren. | [Entfernen von Registerkartenrändern](resources/removing-tab-margins.md) |
-|03/05/2021 | Der Standardinstallationsbereich und die Gruppenfunktion werden in der Entwicklervorschau angezeigt.| [Standardinstallationsbereich und Gruppenfunktion](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
+|03/05/2021|Der Standardinstallationsbereich und die Gruppenfunktion werden in der Entwicklervorschau angezeigt.| [Standardinstallationsbereich und Gruppenfunktion](concepts/deploy-and-publish/add-default-install-scope.md) |
 |03/05/2021|Neu anordnen von registerkarten für persönliche Apps|[Neu anordnen der Registerkarte Chat in persönlichen Apps](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
 |03/04/2021|Informationsmasken in adaptiven Karten finden Sie in der Entwicklervorschau.| [Informationsmasken in adaptiven Karten](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|Neu: Standortfunktionen hinzugefügt. <br/> Update: Informationen zu Standortfunktionen werden in der Übersicht über die Gerätefunktionen, systemeigene Geräteberechtigungen, Integrieren von Medienfunktionen und QR- oder Barcodescannerfunktionen hinzugefügt.|[Übersicht,](concepts/device-capabilities/device-capabilities-overview.md) [Geräteberechtigungen anfordern,](concepts/device-capabilities/native-device-permissions.md) [Medienfunktionen integrieren,](concepts/device-capabilities/mobile-camera-image-permissions.md) [QR- oder Strichcodescannerfunktion](concepts/device-capabilities/qr-barcode-scanner-capability.md)integrieren, [Standortfunktionen integrieren](concepts/device-capabilities/location-capability.md) |
