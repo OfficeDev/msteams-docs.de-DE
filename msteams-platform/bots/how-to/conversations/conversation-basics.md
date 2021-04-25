@@ -4,12 +4,12 @@ description: Einführung in Unterhaltungen
 ms.topic: overview
 ms.author: anclear
 keyword: conversations basics messages
-ms.openlocfilehash: cf42cd0c8096c27768660bc2502060ed92712bdc
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: eff1c6fe18f7b2ba082b5075b6c1806f41b68a6b
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697060"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51996037"
 ---
 # <a name="conversation-basics"></a>Grundlagen zu Unterhaltungen
 
@@ -17,7 +17,7 @@ ms.locfileid: "51697060"
 
 Eine Unterhaltung ist eine Reihe von Nachrichten, die zwischen Ihrem Microsoft Teams-Bot und einem oder mehreren Benutzern gesendet werden. Die folgende Tabelle enthält die drei Arten von Unterhaltungen, die auch als Bereiche in Teams bezeichnet werden:
 
-| Unterhaltungstyp | Beschreibung |
+| Unterhaltungstyp | Description |
 | ------- | ----------- |
 | `channel` | Dieser Unterhaltungstyp ist für alle Mitglieder des Kanals sichtbar. |
 | `personal` | Dieser Unterhaltungstyp enthält Unterhaltungen zwischen Bots und einem einzelnen Benutzer. |

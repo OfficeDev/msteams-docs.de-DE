@@ -4,12 +4,12 @@ author: clearab
 description: So reagieren Sie auf den Suchbefehl über eine Messagingerweiterung in einer Microsoft Teams-App.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 2cc53796deddb47e8dbce86a5b02f4d80a1b91e0
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 4dff59d0bd923618a3079c81cbb6f9e7aea2bab4
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696192"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51996009"
 ---
 # <a name="respond-to-search-command"></a>Antworten auf Suchbefehl
 
@@ -110,6 +110,7 @@ Die Ergebnisliste wird in der Benutzeroberfläche von Microsoft Teams mit einer 
 
 * Verwenden der `preview` Eigenschaft innerhalb des `attachment` Objekts. Die `preview` Anlage kann nur eine Hero- oder Miniaturansichtskarte sein.
 * Extrahiert aus den grundlegenden `title` Eigenschaften , und der `text` `image` Anlage. Diese werden nur verwendet, wenn `preview` die Eigenschaft nicht festgelegt ist und diese Eigenschaften verfügbar sind.
+* Die Schaltfläche "Held" oder "Miniaturansicht" und "Tippen" (außer aufrufen) werden auf der Vorschaukarte nicht unterstützt.
 
 Sie können eine Vorschau einer adaptiven Karte oder einer Office 365 Connector-Karte in der Ergebnisliste mit der Vorschaueigenschaft anzeigen. Die Preview-Eigenschaft ist nicht erforderlich, wenn die Ergebnisse bereits Hero- oder Miniaturansichtskarten sind. Wenn Sie die Vorschauanlage verwenden, muss es sich entweder um eine Hero- oder Miniaturansichtskarte geben. Wenn keine Vorschaueigenschaft angegeben ist, schlägt die Vorschau der Karte fehl, und es wird nichts angezeigt.
 
@@ -339,12 +340,12 @@ Die Standardabfrage hat dieselbe Struktur wie jede normale Benutzerabfrage, und 
 
 ## <a name="code-sample"></a>Codebeispiel
 
-| Beispielname           | Beschreibung | .NET    | Node.js   |   
+| Beispielname           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Messagingerweiterungsaktion für Teams| Beschreibt, wie Sie Aktionsbefehle definieren, Aufgabenmodul erstellen und auf Die Absendenaktion des Aufgabenmoduls reagieren. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Suche nach Messagingerweiterungen in Teams   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchbefehle reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 > [!div class="nextstepaction"]
 > [Hinzufügen einer Konfiguration zu einer Messagingerweiterung](~/messaging-extensions/how-to/add-configuration-page.md)

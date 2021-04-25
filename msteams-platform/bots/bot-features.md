@@ -4,19 +4,19 @@ author: clearab
 description: Bots und SDKs in Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c76a3300229e038e0d6a93d2701b3b3c5a1286da
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: b38a40cfd88c9b5879f6d777f50b919125ce9ec9
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697242"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995974"
 ---
 # <a name="bots-and-sdks"></a>Tools und SDKs
 
 Zum Erstellen eines Bots, der in Microsoft Teams funktioniert, können Sie einen der folgenden Optionen verwenden:
-* Ein vorhandener Bot, der auf dem Microsoft Bot Framework SDK baut
-* Power Virtual Agents-Chatbotdienst
-* Webhooks und Connectors
+* Ein vorhandener Bot, der auf dem Microsoft Bot Framework SDK baut.
+* Power Virtual Agents-Chatbotdienst.
+* Webhooks und Connectors.
 
 ## <a name="bots-and-the-microsoft-bot-framework"></a>Bots und das Microsoft Bot Framework
 
@@ -107,7 +107,7 @@ Einer der Nachteile von Bots ist, dass es schwierig ist, eine große Wissensdate
 
 ## <a name="code-sample"></a>Codebeispiel
 
-|Beispielname | Beschreibung | . NETCore | Node.js |
+|Beispielname | Description | . NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Teams-Unterhaltungsbot | Nachrichten- und Unterhaltungsereignisbehandlung. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
 

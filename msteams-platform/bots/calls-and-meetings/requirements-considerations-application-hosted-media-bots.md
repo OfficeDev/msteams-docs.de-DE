@@ -4,12 +4,12 @@ description: Informationen zu wichtigen Anforderungen und Überlegungen im Zusam
 ms.topic: conceptual
 keywords: von der Anwendung gehostete Medien windows server azure vm
 ms.date: 11/16/2018
-ms.openlocfilehash: dfd0b3a2ba9020622a2926c4fc395c060599afb6
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 4a191bbde6b592c74930069d794ff37273785c1b
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697081"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995953"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Anforderungen und Überlegungen für von der Anwendung gehostete Medienbots
 
@@ -60,6 +60,18 @@ Der nächste Abschnitt enthält Details zu Skalierbarkeits- und Leistungsaspekte
 
 Anwendungsgehostte Medienbots erfordern die folgenden Skalierbarkeits- und Leistungsüberlegungen:
 
+## <a name="code-sample"></a>Codebeispiel
+
+Anwendungsgehostte Medienbots-Beispiele lauten wie folgt:
+
+| **Beispielname** | **Beschreibung** | **Graph** |
+|------------|-------------|-----------|
+| Beispiel für lokale Medien | Beispiele, die verschiedene lokale Medienszenarien veranschaulichen. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
+| Remotemedienbeispiel | Beispiele, die verschiedene Remotemedienszenarien veranschaulichen. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+
+## <a name="see-also"></a>Siehe auch
+
+- [Dokumentation zu Graph Calling SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 - Die Bots erfordern mehr Rechen- und Netzwerkbandbreite als Messagingbots und verursachen deutlich höhere Betriebskosten. Ein Entwickler eines Medienbots in Echtzeit muss die Skalierbarkeit des Bots sorgfältig messen und sicherstellen, dass der Bot nicht mehr gleichzeitige Anrufe akzeptiert, als er verwalten kann. Ein videofähiger Bot kann nur ein oder zwei gleichzeitige Mediensitzungen pro CPU-Kern unterstützen, wenn die rohen RGB24- oder NV12-Videoformate verwendet werden.
 - Die Echtzeitmedienplattform nutzt derzeit keine auf dem virtuellen Computer verfügbaren Grafikverarbeitungseinheiten (Gpu), um die H.264-Videocodierung oder -decodierung zu deaktivieren. Stattdessen erfolgt die Videocodierung und -decodierung in der Software auf der CPU. Wenn eine GPU verfügbar ist, nutzt der Bot sie für ein eigenes Grafikrendering, z. B. wenn der Bot ein 3D-Grafikmodul verwendet.
 - Die VM-Instanz, die den Echtzeitmedienbot hosten, muss über mindestens 2 CPU-Kerne verfügen. Für Azure wird ein virtueller Computer der Dv2-Reihe empfohlen. Für andere Azure VM-Typen ist ein System mit 4 virtuellen CPUs (vCPU) die erforderliche Mindestgröße. Weitere Informationen zu Azure VM-Typen finden Sie in [der Azure-Dokumentation](/azure/virtual-machines/windows/sizes-general).

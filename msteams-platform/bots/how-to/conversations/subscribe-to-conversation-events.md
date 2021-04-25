@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: So arbeiten Sie mit Unterhaltungsereignissen aus Ihrem Microsoft Teams-Bot.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: af1724620ede44f8d0f7739e265ef1ebd1e3afd8
-ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
+ms.openlocfilehash: 0736ce07f91f0f33505c5ac3fa031a201d01c2f9
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51762032"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51996030"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Unterhaltungsereignisse in Ihrem Teams-Bot
 
@@ -41,7 +41,7 @@ Das `conversationUpdate`-Ereignis wird an Ihren Bot gesendet, wenn er Informatio
 
 Die folgende Tabelle enthält eine Liste der Ereignisse für Das Aktualisieren von Teams-Unterhaltungen mit weiteren Details:
 
-| Ergriffene Aktion        | EventType         | Methode aufgerufen              | Beschreibung                | Bereich |
+| Ergriffene Aktion        | EventType         | Methode aufgerufen              | Description                | Bereich |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
 | Kanal erstellt     | channelCreated    | OnTeamsChannelCreatedAsync | [Ein Kanal wird erstellt.](#channel-created) | Team |
 | Kanal umbenannt     | channelRenamed    | OnTeamsChannelRenamedAsync | [Ein Kanal wird umbenannt.](#channel-renamed) | Team |
@@ -1058,7 +1058,7 @@ Nachdem Sie nun mit den Unterhaltungsaktualisierungsereignissen gearbeitet haben
 
 Das Ereignis wird gesendet, wenn ein Benutzer Reaktionen auf eine Nachricht hinzufügt oder entfernt, die von Ihrem `messageReaction` Bot gesendet wurde. Der `replyToId` enthält die ID der Nachricht, und der ist der Typ der Reaktion im `Type` Textformat. Die Arten von Reaktionen sind z. B. "empörend", "Herz", "Gelächter", "Gefällt mir", "Betrübt" und "überrascht". Dieses Ereignis enthält nicht den Inhalt der ursprünglichen Nachricht. Wenn die Verarbeitung von Reaktionen auf Ihre Nachrichten für Ihren Bot wichtig ist, müssen Sie die Nachrichten speichern, wenn Sie sie senden. Die folgende Tabelle enthält weitere Informationen zum Ereignistyp und zu Nutzlastobjekten:
 
-| EventType       | Payload-Objekt   | Beschreibung                                                             | Bereich |
+| EventType       | Payload-Objekt   | Description                                                             | Bereich |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
 | messageReaction | reactionsAdded   | [Reaktionen, die bot-Nachricht hinzugefügt wurden.](#reactions-added-to-bot-message)           | Alle   |
 | messageReaction | reactionsRemoved | [Aus bot-Nachricht entfernte Reaktionen.](#reactions-removed-from-bot-message) | Alle |
@@ -1296,7 +1296,7 @@ Der Bot empfängt ein `installationUpdate` Ereignis, wenn Sie einen Bot in einem
 ### <a name="install-update-event"></a>Updateereignis installieren
 Verwenden Sie `installationUpdate` das Ereignis, um eine Einführungsnachricht von Ihrem Bot bei der Installation zu senden. Dieses Ereignis hilft Ihnen, Ihre Datenschutz- und Datenaufbewahrungsanforderungen zu erfüllen. Sie können auch Benutzer- oder Threaddaten bereinigen und löschen, wenn der Bot deinstalliert wird.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task
@@ -1378,9 +1378,9 @@ turnContext, CancellationToken cancellationToken) {
 
 ## <a name="code-sample"></a>Codebeispiel
 
-| **Beispielname** | **Beschreibung** | **.NET** |
-|-----------------|-----------------|---------|
-|Unterhaltungsereignisse in Microsoft Teams bots | Beispiel für Botereignisse. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) |
+| **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
+|----------|-----------------|----------|
+| Unterhaltungsbot | Beispielcode für Bots-Unterhaltungsereignisse. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

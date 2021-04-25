@@ -3,12 +3,12 @@ title: Bots für Anrufe und Onlinebesprechungen
 description: Erfahren Sie, wie Ihre Microsoft Teams-Apps mithilfe von Sprach- und Videonachrichten mithilfe von Microsoft Graph-APIs für Anrufe und Onlinebesprechungen mit Benutzern interagieren können.
 ms.topic: conceptual
 keywords: Anrufanrufe Audiovideo-IVR-Sprach-Onlinebesprechungen
-ms.openlocfilehash: cac9e31c39f35aeb3ea72e5e8964441f0a1c38f5
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: be3286afe739c8b1d99af896ad64a3963875768d
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697109"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995981"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots für Anrufe und Onlinebesprechungen
 
@@ -86,7 +86,13 @@ Echtzeitmedien beziehen sich auf Szenarien, in denen Medien in Echtzeit verarbei
 
 * **Von der Anwendung gehostete Medien:** Damit ein Bot direkten Zugriff auf die Medien erhalten kann, benötigt er eine bestimmte Graph-Berechtigung. Nachdem Ihr Bot über die Berechtigung verfügt, können Sie mit der [Echtzeitmedienbibliothek](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)und dem [Graph calling SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) umfangreiche Echtzeitmedien und aufrufende Bots erstellen. Ein in der Anwendung gehosteter Bot muss in einer Windows-Umgebung gehostet werden. Weitere Informationen finden Sie unter [application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="code-sample"></a>Codebeispiel
+
+| **Beispielname** | **Beschreibung** | **Graph** |
+|---------------|----------|--------|
+| Graph-Kommunikation | Graph communications to interact with Microsoft's communications platform. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
+
+## <a name="see-also"></a>Siehe auch
 
 > [!div class="nextstepaction"]
 > [Graph-API-Referenz](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)

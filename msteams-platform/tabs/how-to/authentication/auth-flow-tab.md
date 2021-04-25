@@ -3,12 +3,12 @@ title: Authentifizierungsfluss für Registerkarten
 description: Beschreibt den Authentifizierungsfluss in Registerkarten
 ms.topic: conceptual
 keywords: Registerkarten für den Authentifizierungsfluss von Teams
-ms.openlocfilehash: ddd9ea1ee907b154005445613fd3d09de2158766
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: ccc507c08007c72e5393d9175d69ea3672d73609
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449563"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995848"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams-Authentifizierungsfluss für Registerkarten
 
@@ -44,12 +44,13 @@ Ein Beispiel für den Authentifizierungsfluss für Registerkarten und Bots mit N
 
 Obwohl der Registerkartenkontext hilfreiche Informationen zum Benutzer enthält, verwenden Sie diese Informationen nicht, um den Benutzer zu authentifizieren. Authentifizieren Sie den Benutzer auch dann, wenn Sie die Informationen als URL-Parameter zu Ihrer Registerkarteninhalts-URL oder durch Aufrufen der Funktion `microsoftTeams.getContext()` im Microsoft Teams-Client-SDK erhalten. Ein böswilliger Akteur kann ihre Registerkarteninhalts-URL mit eigenen Parametern aufrufen. Der Akteur kann auch eine Webseite aufrufen, die die Identität von Microsoft Teams übertrüssig gibt, um ihre Registerkarteninhalts-URL in einem iframe zu laden und eigene Daten an die Funktion `getContext()` zurückzukehren. Sie müssen die identitätsbezogenen Informationen im Registerkartenkontext einfach als Hinweise behandeln und vor der Verwendung überprüfen. Verweisen Sie auf die Notizen im [Navigieren zur Autorisierungsseite von Ihrer Popupseite](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page).
 
-## <a name="samples"></a>Beispiele
+## <a name="code-sample"></a>Codebeispiel
 
-Beispielcode, der den Vorgang der Registerkartenauthentifizierung zeigt, finden Sie unter:
+Beispielcode, der den Tabauthentifizierungsprozess zeigt.
 
-* [Beispiel für die Registerkartenauthentifizierung von Teams (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Beispiel für die Registerkartenauthentifizierung von Teams (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+| **Beispielname** | **Beschreibung** | **C#** | **Node.js** |
+|-----------------|-----------------|-------------|------------|
+| Teams-Registerkartenauthentifizierung | Authentifizierungsprozess für Registerkarten mit AAD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
 ## <a name="more-details"></a>Weitere Details
 

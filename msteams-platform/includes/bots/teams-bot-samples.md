@@ -1,8 +1,8 @@
-## <a name="teams-bot-samples"></a>Teams-Botbeispiele
+## <a name="code-sample"></a>Codebeispiel
 
 Vollständige Arbeitsbeispiele, die die Funktionalität demonstrieren, finden Sie in den folgenden Teams-Beispielen für Bot Framework:
 
-| Beispiel | Beschreibung | .NET Core | Node.js | Python |
+| **Beispiel** | **Beschreibung** | **.NET** | **JavaScript** | **Python** |
 |--------|------------- |---|---|---|
 | Teams-Unterhaltungsbot | Nachrichten- und Unterhaltungsereignisbehandlung. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot) |
 | Authentifizierung mit OAuthPrompt| Authentifizierung und grundlegendes Messaging in Bot Framework v4. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/46.teams-auth) |

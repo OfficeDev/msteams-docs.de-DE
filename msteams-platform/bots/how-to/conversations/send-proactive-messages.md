@@ -4,12 +4,12 @@ description: Beschreibt das Senden proaktiver Nachrichten mit Ihrem Microsoft Te
 ms.topic: conceptual
 ms.author: anclear
 Keywords: 'Senden einer Nachricht: Benutzer-ID-Kanal-ID-Unterhaltungs-ID erhalten'
-ms.openlocfilehash: 25d5c6a1b51240c87ff0d8610a965d30f6b01095
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 44e8f3335b7ade4f4a8b1e6192802d932cbd39ed
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697053"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995841"
 ---
 # <a name="send-proactive-messages"></a>Senden proaktiver Nachrichten
 
@@ -31,6 +31,8 @@ Das Senden einer proaktiven Nachricht ist anders als das Senden einer regulären
 1. [Erstellen Sie die Unterhaltung](#create-the-conversation), falls erforderlich.
 1. [Die Unterhaltungs-ID erhalten.](#get-the-conversation-id)
 1. [Senden Sie die Nachricht](#send-the-message).
+
+Die Codeausschnitte im [Abschnitt Beispiele](#samples) sind zum Erstellen einer 1:1-Unterhaltung. Links zum Abschließen von Arbeitsbeispielen für 1:1-Unterhaltungen und Gruppen oder Kanäle finden Sie unter [Codebeispiel](#code-sample).
 
 Informationen zur effektiven Verwendung proaktiver Nachrichten finden Sie [unter Best Practices for proactive messaging](#best-practices-for-proactive-messaging). In bestimmten Szenarien müssen Sie Ihre App [proaktiv mithilfe von Graph installieren.](#proactively-install-your-app-using-graph) Die Codeausschnitte im [Abschnitt Beispiele](#samples) sind zum Erstellen einer 1:1-Unterhaltung. Vollständige Arbeitsbeispiele für 1:1-Unterhaltungen und Gruppen oder Kanäle finden Sie unter [Codebeispiel](#code-sample).
 
@@ -63,6 +65,8 @@ Verwenden Sie entweder `conversationReference` das Objekt oder und um die Nachri
 Nachdem Sie die entsprechenden Adressinformationen erhalten haben, können Sie Ihre Nachricht senden.
 
 ## <a name="send-the-message"></a>Senden der Nachricht
+
+Nachdem Sie nun über die richtigen Adressinformationen verfügen, können Sie Ihre Nachricht senden. Wenn Sie das SDK verwenden, verwenden Sie dazu die -Methode und und einen direkten `continueConversation` `conversationId` `tenantId` API-Aufruf. Sie müssen die korrekt `conversationParameters` festlegen, damit Ihre Nachricht erfolgreich gesendet wird. Lesen Sie [den Abschnitt](#samples) Beispiele, oder verwenden Sie eines der Im [Codebeispielabschnitt aufgeführten](#code-sample) Beispiele.
 
 Wenn Sie das SDK verwenden, müssen Sie die -Methode und das und verwenden, um einen direkten API-Aufruf zum Senden `continueConversation` `conversationId` der Nachricht zu `tenantId` erstellen. Sie müssen die korrekt `conversationParameters` festlegen, damit Ihre Nachricht erfolgreich gesendet wird.
 
@@ -98,8 +102,8 @@ Um Nachrichten an eine große Gruppe von Benutzern zu senden, z. B. an Ihre Orga
 
 Wenn Sie proaktives Messaging zum Senden geplanter Nachrichten an Benutzer verwenden, stellen Sie sicher, dass Ihre Zeitzone auf ihre Zeitzone aktualisiert wird. Dadurch wird sichergestellt, dass die Nachrichten zum entsprechenden Zeitpunkt an die Benutzer zugestellt werden. Zu den Geplanten Nachrichten gehören im Allgemeinen:
 
-* **Warum empfängt der Benutzer die Nachricht:** Machen Sie es Ihren Benutzern leicht, den Grund zu verstehen, warum sie die Nachricht empfangen.
-* **Wie kann der Benutzer als Nächstes** vorgehen: Benutzer können die erforderliche Aktion basierend auf dem Nachrichteninhalt ergreifen.
+* Warum empfängt der Benutzer die Nachricht: Machen Sie es Ihren Benutzern leicht, den Grund zu verstehen, warum sie die Nachricht empfangen.
+* Was der Benutzer als Nächstes tun kann: Benutzer können die erforderliche Aktion basierend auf dem Nachrichteninhalt ergreifen.
 
 ## <a name="proactively-install-your-app-using-graph"></a>Proaktive Installation Ihrer App mithilfe von Graph
 
@@ -262,10 +266,10 @@ Sie müssen die Benutzer-ID und die Mandanten-ID liefern. Wenn der Aufruf erfolg
 
 Die folgende Tabelle enthält ein einfaches Codebeispiel, das grundlegenden Unterhaltungsfluss in eine Teams-Anwendung integriert und wie Sie einen neuen Unterhaltungsthread in einem Kanal in Teams erstellen:
 
-| Beispielname           | Beschreibung                                                                      | .NET    | Node.js   | Python  |
-|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
-|Grundlagen der Teams-Unterhaltung  | Veranschaulicht grundlagen von Unterhaltungen in Teams, einschließlich des Sendens von proaktiven 1:1-Nachrichten.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot)|
-|Starten eines neuen Threads in einem Kanal     | Veranschaulicht das Erstellen eines neuen Threads in einem Kanal. |[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
+| **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
+|---------------|--------------|--------|-------------|--------|
+| Grundlagen für Teams-Unterhaltungen  | Veranschaulicht grundlagen von Unterhaltungen in Teams, einschließlich des Sendens von proaktiven 1:1-Nachrichten.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
+| Starten eines neuen Threads in einem Kanal | Veranschaulicht das Erstellen eines neuen Threads in einem Kanal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 
 ### <a name="additional-code-sample"></a>Zusätzliches Codebeispiel
 
@@ -275,4 +279,5 @@ Die folgende Tabelle enthält ein einfaches Codebeispiel, das grundlegenden Unte
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Formatieren von Bot-Nachrichten](~/bots/how-to/format-your-bot-messages.md)
+> [**Proaktive Messagingcodebeispiele für Teams**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp) 
+>  [Formatieren von Botnachrichten](~/bots/how-to/format-your-bot-messages.md)

@@ -1,16 +1,16 @@
 ---
-title: Registrieren eines Anruf- und Besprechungsbots für Microsoft Teams
+title: Registrieren von Anrufen und Besprechungen für Microsoft Teams
 description: Informationen zum Registrieren eines neuen Audio-/Videoanruf-Bots für Microsoft Teams
 ms.topic: conceptual
 keywords: Aufrufen von Audio-/Videovideomedien für Bots
-ms.openlocfilehash: 6cbba3f63a97e47fd9cca6dbeea6595cc3bdc9d7
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 4f4f1fdf0c33685e146081085aa7ff8e07f1a87d
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696356"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995862"
 ---
-# <a name="register-a-calls-and-meetings-bot-for-microsoft-teams"></a>Registrieren eines Anruf- und Besprechungsbots für Microsoft Teams
+# <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrieren von Anrufen und Besprechungen für Microsoft Teams
 
 Ein Bot, der an Audio- oder Videoanrufen und Onlinebesprechungen teil nimmt, ist ein regulärer Microsoft Teams-Bot mit den folgenden zusätzlichen Funktionen, die zum Registrieren des Bots verwendet werden:
 
@@ -55,7 +55,7 @@ Das Diagramm bietet detaillierte Berechtigungen zum Steuern des Zugriffs, den Ap
 
 Die folgende Tabelle enthält eine Liste der Anwendungsberechtigungen für Aufrufe:
 
-|Berechtigung    |Anzeigezeichenfolge   |Beschreibung |Administrator-Zustimmung erforderlich |
+|Berechtigung    |Anzeigezeichenfolge   |Description |Administrator-Zustimmung erforderlich |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |Initiieren sie ausgehende 1:1-Anrufe aus der App-Vorschau. |Ermöglicht der App, ausgehende Anrufe an einen einzelnen Benutzer zu tätigen und Anrufe an Benutzer im Organisationsverzeichnis zu übertragen (ohne angemeldeten Benutzer).|Ja|
 | Calls.InitiateGroupCall.All |Initiieren von ausgehenden Gruppenanrufen aus der App-Vorschau. |Ermöglicht der App, ausgehende Anrufe an mehrere Benutzer zu tätigen und Teilnehmer in Ihrer Organisation zu Besprechungen hinzufügen (ohne angemeldeten Benutzer).|Ja|
@@ -70,7 +70,7 @@ Die folgende Tabelle enthält eine Liste der Anwendungsberechtigungen für Aufru
 
 Die folgende Tabelle enthält eine Liste der Anwendungsberechtigungen für Onlinebesprechungen:
 
-|Berechtigung    |Anzeigezeichenfolge   |Beschreibung |Administrator-Zustimmung erforderlich |
+|Berechtigung    |Anzeigezeichenfolge   |Description |Administrator-Zustimmung erforderlich |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | OnlineMeetings.Read.All |Lesen von Onlinebetreffdetails aus der App-Vorschau|Ermöglicht der App das Lesen von Online-Besprechungsdetails in Ihrer Organisation, ohne dass ein Benutzer angemeldet ist.|Ja|
 | OnlineMeetings.ReadWrite.All |Lesen und Erstellen von Onlinebesprechungen aus der App-Vorschau im Namen eines Benutzers|Ermöglicht der App das Erstellen von Onlinebesprechungen in Ihrer Organisation im Namen eines Benutzers, ohne dass ein Benutzer angemeldet ist.|Ja|

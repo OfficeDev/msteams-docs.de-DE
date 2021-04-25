@@ -4,12 +4,12 @@ author: clearab
 description: Erstellen eines Befehlsmenüs für Ihren Microsoft Teams-Bot
 ms.topic: how-to
 ms.author: anclear
-ms.openlocfilehash: 839c01f870f026744dfe5fa1331835f5f6b6890f
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: a4d53d8287d425120d24f559b8ffffabebdbcfb4
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697030"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995897"
 ---
 # <a name="bot-command-menus"></a>Bot-Befehlsmenüs
 

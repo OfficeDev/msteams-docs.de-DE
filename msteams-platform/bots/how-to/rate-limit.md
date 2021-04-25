@@ -3,12 +3,12 @@ title: Optimieren eines Bots mit Ratenbegrenzung in Teams
 description: Geschwindigkeitsbegrenzung und bewährte Methoden in Microsoft Teams
 ms.topic: conceptual
 keywords: Beschränkung der Rate von Teams-Bots
-ms.openlocfilehash: 690d09e4a3b611c024f32d3776ca73e42d63ee7f
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: 9a30d86a82a591c4a1125632fa7409780effb269
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922503"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995855"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimieren eines Bots mit Ratenbegrenzung in Teams
 
@@ -48,6 +48,9 @@ Im Allgemeinen müssen Sie einfache Vorsichtsmaßnahmen ergreifen, um den Empfan
 Die Verwendung eines exponentiellen Backoffs mit einem zufälligen Jitter ist die empfohlene Methode zum Verarbeiten von 429s. Dadurch wird sichergestellt, dass bei Wiederholungsversuchen bei mehreren Anforderungen keine Kollisionen auftut.
 
 Nachdem Sie Antworten behandeln, können Sie das Beispiel `HTTP 429` zum Erkennen vorübergehender Ausnahmen durchgehen.
+
+> [!NOTE]
+> Zusätzlich zum Retyringfehlercode **429** müssen auch die Fehlercodes **412,** **502** und **504** wiederholt werden.
 
 ## <a name="detect-transient-exceptions-example"></a>Erkennen vorübergehender Ausnahmen (Beispiel)
 
