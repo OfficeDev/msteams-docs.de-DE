@@ -238,7 +238,7 @@
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
         - name: Medienanrufe und Besprechungen in Echtzeit
           href: bots/calls-and-meetings/real-time-media-concepts.md
-        - name: Registrieren eines anrufenden Bots
+        - name: Bot für das Registrieren von Anrufen und Besprechungen
           href: bots/calls-and-meetings/registering-calling-bot.md
         - name: Eingehende Anrufbenachrichtigungen
           href: bots/calls-and-meetings/call-notifications.md
