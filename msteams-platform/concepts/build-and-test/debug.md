@@ -2,13 +2,14 @@
 title: Auswählen eines Setups zum Testen und Debuggen Ihrer App
 description: Beschreibt Optionen zum Testen und Debuggen von Microsoft Teams-Apps
 keywords: Teams führen Debug-Apps aus
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: fde8a5907e0815ff798a3acc316cba8336ab8704
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: 8b80f988ed44ed04492356366362b0221717b292
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634734"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019951"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Auswählen eines Setups zum Testen und Debuggen Ihrer Microsoft Teams-App
 
@@ -69,7 +70,7 @@ Sie können einen beliebigen extern adressierbaren Dienst verwenden, um Ihren En
 
 ## <a name="load-and-run-your-experience"></a>Laden und Ausführen Der Benutzererfahrung
 
-Zum Laden und Ausführen Ihrer Erfahrung in Microsoft Teams müssen Sie ein Paket erstellen und in Teams hochladen. Weitere Informationen finden Sie unter:
+Zum Laden und Ausführen Ihrer Erfahrung in Microsoft Teams müssen Sie ein Paket erstellen und in Teams hochladen. Weitere Informationen finden Sie hier:
 
 * [Erstellen des Pakets für Ihre Microsoft Teams-App](~/concepts/build-and-test/apps-package.md)
 * [Hochladen Ihrer App in Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md)

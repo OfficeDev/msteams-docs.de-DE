@@ -2,13 +2,14 @@
 title: Vorbereiten Ihres Microsoft 365-Mandanten
 description: Erste Schritte mit Teams in Microsoft 365
 ms.topic: how-to
+localization_priority: Normal
 keywords: Konfigurieren des Hochladens von Microsoft 365-Mandantenteams
-ms.openlocfilehash: 4fbe1dcc7ba202aff0b46c7fc50d9aebc0278c38
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 45d6dfb57fd2faa5bb303aac1dff86be142d0dc2
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946466"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019944"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Vorbereiten Ihres Microsoft 365-Mandanten
 
@@ -51,7 +52,7 @@ Aktivieren von Teams für Ihre Organisation und weitere Informationen finden Sie
 
 4. **Umschalten Sie benutzerdefinierte Apps hochladen** auf die **Ein-Position.**
 
-5. Klicken Sie auf **Speichern**. Ihr Test-Mandant kann das Querladen benutzerdefinierter Apps zulassen.
+5. Wählen Sie **Speichern** aus. Ihr Test-Mandant kann das Querladen benutzerdefinierter Apps zulassen.
 
     > [!Note]
     > Es kann bis zu 24 Stunden dauern, bis das Querladen aktiv ist. In der Zwischenzeit können Sie upload **\<your tenant> für verwenden,** um Ihre App zu testen. Informationen zum Hochladen der ZIP-Paketdatei der App finden Sie unter [Hochladen benutzerdefinierter Apps.](/microsoftteams/upload-custom-apps#upload)

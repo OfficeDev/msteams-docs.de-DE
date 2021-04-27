@@ -1,15 +1,17 @@
 ---
 title: QR- oder Barcode-Scannerfunktion integrieren
+author: Rajeshwari-v
 description: Verwenden des Teams JavaScript-Client-SDK zum Nutzen der QR- oder Barcodescannerfunktion
 keywords: Kameramedien qr code qrcode Strichcode Barcodescanner Scanfunktionen systemeigene Geräteberechtigungen
+localization_priority: Normal
 ms.topic: conceptual
-ms.author: lajanuar
-ms.openlocfilehash: 956d56c9d52785820f95ca2df323d61dcacc586b
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.author: surbhigupta
+ms.openlocfilehash: 579137f31dd929a6105dd7bcc2d46d84c145ef50
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696290"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020737"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR- oder Barcode-Scannerfunktion integrieren 
 
@@ -106,7 +108,7 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 }, config);
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 > [!div class="nextstepaction"]
 > [Integrieren von Medienfunktionen in Teams](mobile-camera-image-permissions.md)

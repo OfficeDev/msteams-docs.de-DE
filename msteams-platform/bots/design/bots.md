@@ -3,13 +3,14 @@ title: Entwerfen Ihres Bots
 description: Erfahren Sie, wie Sie einen Teams-Bot entwerfen und das Microsoft Teams UI Kit erhalten.
 author: heath-hamilton
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 1323d1070d29a501a6a87812a666c3a08b76ae74
-ms.sourcegitcommit: 098d38dd947e87e69d289b99e807bea2d95c42f9
-ms.translationtype: HT
+ms.openlocfilehash: 2739bd4baaf68be90a62924601b0628c3d9b0f2c
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "49713597"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020133"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Entwerfen Ihres Microsoft Teams-Bots
 
@@ -99,10 +100,10 @@ Sie können Bots in den folgenden Kontexten verwenden:
 |1|**App-Name und -Symbol**|
 |2|**Chat-Registerkarte**: Öffnet den Bereich für Gespräche mit Ihrem Bot (gilt nur für persönliche Apps).|
 |3|**Benutzerdefinierte Registerkarten**: Öffnet weitere Inhalte zu Ihrer App.|
-|4|**Info-Registerkarte**: Zeigt grundlegende Informationen zu Ihrer App an.|
-|5|**Chat-Blase**: Bot-Unterhaltungen verwenden das Team-Messaging-Framework.|
-|6|**Adaptive Karte**: Wenn die Antworten Ihres Bots adaptive Karten enthalten, nimmt die Karte die gesamte Breite der Chat-Blase ein.|
-|7|**Befehlsmenü**: Zeigt die von Ihnen definierten Standardbefehle Ihres Bots an.
+|4 |**Info-Registerkarte**: Zeigt grundlegende Informationen zu Ihrer App an.|
+|5 |**Chat-Blase**: Bot-Unterhaltungen verwenden das Team-Messaging-Framework.|
+|6 |**Adaptive Karte**: Wenn die Antworten Ihres Bots adaptive Karten enthalten, nimmt die Karte die gesamte Breite der Chat-Blase ein.|
+|7 |**Befehlsmenü**: Zeigt die von Ihnen definierten Standardbefehle Ihres Bots an.
 
 ### <a name="command-menu"></a>Befehlszeile
 
@@ -208,7 +209,7 @@ Weitere Informationen zum Schreiben für Bots finden Sie im <a href="https://www
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Beispiel für eine bewährte Methode eines Bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Beispiel für bewährte Methode für Bots." border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>Do: Vermitteln Sie eindeutig, was Ihr Bot alles kann.
 
@@ -216,7 +217,7 @@ Willkommensnachrichten und Touren helfen den Benutzern zu verstehen, was sie mit
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Beispiel für eine bewährte Methode eines Bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Ein Beispiel zeigt eine bewährte Methode des Bots." border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>Don‘t: Verschleiern der Features Ihres Bots
 
@@ -227,7 +228,7 @@ Der erste Eindruck zählt. Personen sind wahrscheinlich verwirrt oder misstrauis
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Beispiel für eine bewährte Methode eines Bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Beispiel für die bewährte Vorgehensweise eines Bots." border="false":::
 
 #### <a name="do-recognize-non-questions"></a>Do: Nicht-Fragen erkennen
 
@@ -235,7 +236,7 @@ Ihr Bot sollte in der Lage sein, auf Nachrichten wie "Hallo", "Hilfe" und "Danke
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Beispiel für eine bewährte Methode eines Bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für bot." border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>Don‘t: Keine Gelegenheit verpassen, die Freude schenkt
 
@@ -248,7 +249,7 @@ Einige Personen erwarten, dass Gespräche auf natürliche Weise ablaufen, so wie
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Beispiel für eine bewährte Methode eines Bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Beispiel für eine bewährte Methode des Bots." border="false":::
 
 #### <a name="do-provide-help"></a>Do: Hilfe anbieten
 
@@ -256,7 +257,7 @@ Wenn Ihr Bot eine Anfrage nicht erfüllen kann, bieten Sie einem Benutzer Mögli
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Beispiel für eine bewährte Methode eines Bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für den Bot an." border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>Don‘t: Lassen Sie Benutzer nicht hängen
 
@@ -269,7 +270,7 @@ Benutzer werden Ihren Bot schnell verlassen, wenn er keine Probleme beheben kann
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Beispiel für eine bewährte Methode eines Bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Beispiel zum Anzeigen einer bewährten Bot-Methode." border="false":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>Do: Verwenden Sie Aufgabenmodule oder Registerkarten
 
@@ -277,7 +278,7 @@ Wenn Ihr Bot eine Antwort liefert, die einige weitere Schritte erfordert, könne
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Beispiel für eine bewährte Methode eines Bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Siehe Beispiel für eine bewährte Methode für bot." border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>Don‘t: Machen Sie Mehrfach-Interaktionen nicht langweilig
 
@@ -290,7 +291,7 @@ Eine umfassende Unterhaltung zum Abschließen einer einzelnen Aufgabe ist langsa
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Beispiel für eine bewährte Methode eines Bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Beispiel zeigt eine bewährte Methode für bot." border="false":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>Do: Zeigen Sie vertrauliche Informationen nur in einem persönlichen Kontext an
 
@@ -298,7 +299,7 @@ Wenn sich Ihr Bot in einem Gruppenchat oder -kanal befindet, empfehlen wir, Benu
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Beispiel für eine bewährte Methode eines Bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Abbildung einer bewährten Bot-Methode." border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>Don‘t: Einige Inhalte sollten nicht für alle einsehbar sein
 

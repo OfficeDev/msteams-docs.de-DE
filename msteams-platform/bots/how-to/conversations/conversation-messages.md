@@ -3,13 +3,14 @@ title: Meldungen in Bot-Unterhaltungen
 description: Beschreibt Möglichkeiten für eine Unterhaltung mit einem Microsoft Teams-Bot
 ms.topic: overview
 ms.author: anclear
+localization_priority: Normal
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: e3239d8ae7a9950e7b66d552fee2c739ca61d76b
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 5944cc299a8ad4bebdaf034d803919a54868e41f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697236"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020926"
 ---
 # <a name="messages-in-bot-conversations"></a>Meldungen in Bot-Unterhaltungen
 
@@ -346,7 +347,7 @@ Bilder werden durch Hinzufügen von Anlagen zu einer Nachricht gesendet. Weitere
 
 Bilder können im PNG-, JPEG- oder GIF-Format mindestens 1024×1024 und 1 MB groß sein. Animierte GIF wird nicht unterstützt.
 
-Geben Sie die Höhe und Breite der einzelnen Bilder mithilfe von XML an. In markdown ist die Bildgröße standardmäßig auf 256×256 festgelegt. Zum Beispiel:
+Geben Sie die Höhe und Breite der einzelnen Bilder mithilfe von XML an. In markdown ist die Bildgröße standardmäßig auf 256×256 festgelegt. Beispiel:
 
 * Verwenden Sie: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` .
 * Verwenden Sie nicht: `![Duck on a rock](http://aka.ms/Fo983c)` .
@@ -406,7 +407,7 @@ Im Folgenden finden Sie die Statuscodes und deren Fehlercode- und Meldungswerte:
 |----------------|-----------------|--------------|----------------|-----------|
 | Teams-Unterhaltungsbot | Nachrichten- und Unterhaltungsereignisbehandlung. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 > [!div class="nextstepaction"]
 > [Senden proaktiver Nachrichten](~/bots/how-to/conversations/send-proactive-messages.md)

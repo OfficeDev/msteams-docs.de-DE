@@ -1,16 +1,19 @@
 ---
-title: Übersicht über Gerätefunktionen
+title: Gerätefunktionen – Übersicht
+author: Rajeshwari-v
 description: Übersicht über systemeigene Gerätefunktionen.
+ms.author: surbhigupta
 keywords: Kamerabild medienmikromi qr code qrcode strichcode barcode scan scanner location map funktionen systemeigene Geräteberechtigungen
+localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 4c826d1705dfeea1feea21b02e7be51789817e48
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 7d214e5011abdc83d2f6b5b49c2261359259035e
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449591"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020751"
 ---
-# <a name="device-capabilities"></a>Gerätefunktionen 
+# <a name="device-capabilities---overview"></a>Gerätefunktionen – Übersicht
 
 Die Microsoft Teams-Plattform verbessert kontinuierlich die Entwicklerfunktionen, die auf integrierte Erfahrungen von Erstentwicklern ausgerichtet sind. Mit der erweiterten Teams-Plattform können Partner Gerätefunktionen wie Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort in ihre Web-Apps integrieren. Diese Integration verringert die Barriere für die App-Entwicklung, beschleunigt den Entwicklungszyklus und erstellt neue Szenarien oder Anwendungsfälle für die Entwicklergemeinschaft.
 
@@ -22,7 +25,7 @@ Ein Mobiles oder Desktopgerät verfügt über integrierte Geräte, z. B. eine Ka
     * Mikrofon
     * Katalog
     * QR- oder Strichcodescanner
-* Standort
+* Speicherort
 
 Nachdem Sie Zugriff auf die Gerätefunktionen erhalten haben, können Sie sie in die Teams-Plattform integrieren, um die Zusammenarbeit zu verbessern. 
 

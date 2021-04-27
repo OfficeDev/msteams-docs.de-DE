@@ -2,14 +2,15 @@
 title: Kanal- und Gruppenchatunterhaltungen mit Bots
 description: Beschreibt das End-to-End-Szenario einer Unterhaltung mit einem Bot in einem Kanal in Microsoft Teams
 keywords: teams scenarios channels conversation bot
+localization_priority: Normal
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: be4610f45ab5891edcc6a9683ec994d2ba5c505c
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 2eac067a75fc75c9991e8b30ec5d693d89ed8228
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696178"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019797"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Kanal und Gruppenchatunterhaltungen mit einem Microsoft Teams-Bot
 

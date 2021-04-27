@@ -1,30 +1,31 @@
 ---
 title: Erste Schritte – Erstellen einer persönlichen Registerkarte
 author: heath-hamilton
-description: Erstellen Sie mithilfe des Microsoft Teams Toolkits schnell eine persönliche Microsoft Teams-Registerkarte.
+description: Erstellen Sie schnell eine persönliche Microsoft Teams-Registerkarte mithilfe des Microsoft Teams Toolkits.
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 083d1425fe43a9b150732aa35bef34e2349c6ea6
-ms.sourcegitcommit: b99ed616db734371e4af4594b7e895c5b05737c3
+ms.openlocfilehash: dabe427142dd3e6a1d2f01f83601cbffd4a20dbd
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "50162901"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019979"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Erstellen einer persönlichen Registerkarte für Microsoft Teams
 
-Registerkarten sind eine einfache Möglichkeit, Inhalte in Ihrer App anzuzeigen, indem Sie im Wesentlichen eine Webseite in Teams einbetten.
+Registerkarten sind eine einfache Möglichkeit, Inhalte in Ihrer App anzuzeigen, indem sie im Wesentlichen eine Webseite in Teams einbetten.
 
-Es gibt zwei Arten von Registerkarten in Teams. In diesem Lernprogramm erstellen Sie eine einfache persönliche *Registerkarte,* eine Vollbildinhaltsseite für einzelne Benutzer. (Persönliche Registerkarten sind der traditionellen Websiteerfahrung in Teams am nächsten.)
+Es gibt zwei Arten von Registerkarten in Teams. In diesem Lernprogramm erstellen Sie eine einfache persönliche *Registerkarte*, eine Vollbildinhaltsseite für einzelne Benutzer. (Persönliche Registerkarten sind der herkömmlichen Websiteerfahrung in Teams am nächsten.)
 
 ## <a name="before-you-begin"></a>Bevor Sie beginnen
 
-Für die ersten Schritte benötigen Sie eine einfache, ausgeführte persönliche Registerkarte. Wenn Sie nicht über eine verfügen, lesen Sie die Informationen zum [Erstellen und Ausführen Ihrer ersten Teams-App.](../build-your-first-app/build-and-run.md)
+Für die ersten Schritte benötigen Sie eine einfache, ausgeführte persönliche Registerkarte. Wenn Sie nicht über eine verfügen, lesen Sie [Erstellen und Ausführen Ihrer ersten Teams-App](../build-your-first-app/build-and-run.md).
 
 ## <a name="your-assignment"></a>Ihre Zuordnung
 
-Personen in Ihrer Organisation haben Probleme bei der Suche nach grundlegenden Kontaktinformationen für wichtige Funktionen (Helpdesk, Personalwesen usw.). Sie sind dafür verantwortlich, sicherzustellen, dass sie diese Informationen schnell an einem Ort finden können. Wie würden Sie das tun? Natürlich eine persönliche Registerkarte für Teams.
+Personen in Ihrer Organisation haben Probleme, grundlegende Kontaktinformationen für wichtige Funktionen (Helpdesk, Personalwesen usw.) zu finden. Sie sind dafür verantwortlich, sicherzustellen, dass diese Informationen schnell an einem Ort gefunden werden können. Wie würden Sie das tun? Natürlich eine persönliche Registerkarte für Teams.
 
 ## <a name="what-youll-learn"></a>Was Sie lernen werden
 
@@ -34,9 +35,9 @@ Personen in Ihrer Organisation haben Probleme bei der Suche nach grundlegenden K
 > * Erstellen von Registerkarteninhalten
 > * Aktualisieren des Farbdesigns einer Registerkarte basierend auf den Benutzereinstellungen
 
-## <a name="1-identify-relevant-app-project-components"></a>1. Identifizieren relevanter Komponenten des App-Projekts
+## <a name="1-identify-relevant-app-project-components"></a>1. Identifizieren relevanter App-Projektkomponenten
 
-Ein Teil der App-Konfigurationen und -Gerüste werden automatisch eingerichtet, wenn Sie Ihr Projekt mit dem Teams Toolkit erstellen. Sehen wir uns die Hauptkomponenten zum Erstellen einer persönlichen Registerkarte an.
+Viele der App-Konfigurationen und Gerüste werden automatisch eingerichtet, wenn Sie Ihr Projekt mit dem Teams Toolkit erstellen. Sehen wir uns die Hauptkomponenten zum Erstellen einer persönlichen Registerkarte an.
 
 ### <a name="app-configurations"></a>App-Konfigurationen
 
@@ -44,14 +45,14 @@ Wechseln Sie im Toolkit zu **App Studio,** um Ihre App-Konfigurationen zu sehen 
 
 ### <a name="app-scaffolding"></a>App-Gerüst
 
-Das Gerüst der App enthält die Komponenten zum Rendern Ihrer persönlichen Registerkarte in Teams. Es gibt eine Menge, mit der Sie arbeiten können, aber derzeit müssen Sie sich nur auf Folgendes konzentrieren:
+Das App-Gerüst bietet die Komponenten zum Rendern Ihrer persönlichen Registerkarte in Teams. Es gibt eine Menge, mit der Sie arbeiten können, aber derzeit müssen Sie sich nur auf Folgendes konzentrieren:
 
-* `Tab.js` im Verzeichnis `src/components` Ihres Projekts. Dies ist für das Rendern ihrer Registerkarteninhaltsseite.
-* Microsoft Teams JavaScript-Client-SDK, das vorab in den Front-End-Komponenten Ihres Projekts geladen wird.
+* `Tab.js` datei im `src/components` Verzeichnis Ihres Projekts. Dies ist für das Rendern der Registerkarteninhaltsseite.
+* Microsoft Teams JavaScript-Client-SDK, das in den Front-End-Komponenten Ihres Projekts vorinstalliert ist.
 
 ## <a name="2-customize-your-tab-content-page"></a>2. Anpassen der Registerkarteninhaltsseite
 
-Kompilieren Sie eine Liste wichtiger Kontakte in Ihrer Organisation. Kopieren und aktualisieren Sie den folgenden Codeausschnitt mit Informationen, die für Sie relevant sind, oder verwenden Sie den Code der Zeit nach wie vor.
+Kompilieren Sie eine Liste wichtiger Kontakte in Ihrer Organisation. Kopieren und aktualisieren Sie den folgenden Codeausschnitt mit Informationen, die für Sie relevant sind, oder verwenden Sie den Code aus Zeitgründen wie folgt.
 
 ```JSX
 <div>
@@ -64,7 +65,7 @@ Kompilieren Sie eine Liste wichtiger Kontakte in Ihrer Organisation. Kopieren un
 </div>
 ```
 
-Wechseln Sie zum `src/components` Verzeichnis, und öffnen Sie `Tab.js` . Suchen Sie die `render()` Funktion, und fügen Sie Ihren Inhalt `return()` ein (wie dargestellt).
+Wechseln Sie zum `src/components` Verzeichnis, und öffnen Sie `Tab.js` . Suchen Sie die `render()` Funktion, und fügen Sie Den Inhalt ein `return()` (wie dargestellt).
 
 ```JavaScript
 render() {
@@ -84,7 +85,7 @@ render() {
 }
 ```
 
-Fügen Sie die folgende Regel hinzu, damit die E-Mail-Links unabhängig vom verwendeten `App.css` Design leichter zu lesen sind.
+Fügen Sie die folgende Regel hinzu, damit die E-Mail-Links unabhängig vom `App.css` verwendeten Design leichter zu lesen sind.
 
 ```CSS
 a {
@@ -100,11 +101,11 @@ Speichern Sie Ihre Änderungen. Wechseln Sie zur Registerkarte Ihrer App in Team
 
 Gute Apps sind für Teams nativ. Daher ist es wichtig, dass Ihre Registerkarte mit dem von Ihren Benutzern bevorzugten Teams-Design kombiniert wird: Standard (hell), dunkel oder hoher Kontrast. Wie Sie vielleicht im letzten Screenshot bemerkt haben, hat Ihre Registerkarte immer noch einen hellen Hintergrund, wenn der Client das dunkle Design verwendet. Dies ist keine empfohlene Benutzeroberfläche.
 
-Das [JavaScript-Client-SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) für Teams kann Ihre App auf Designänderungen im Client aufmerksam machen und darauf reagieren. Hier erfahren Sie, wie Sie dies tun.
+Das [JavaScript-Client-SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) von Teams kann Ihre App auf Designänderungen im Client aufmerksam machen und darauf reagieren. Gehen wir nun durch die Funktionsweise.
 
-### <a name="get-context-about-the-teams-client"></a>Kontext zum Client "Teams" erhalten
+### <a name="get-context-about-the-teams-client"></a>Kontext zum Teams-Client erhalten
 
-In Ihrer Datei gibt es einen Aufruf, der einige Informationen zum konfigurierten `Tab.js` `microsoftTeams.getContext()` [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) Clientdesign enthält. Verwenden Sie dank des Gerüsts der App diesen Code, um auf die `context` Benutzeroberfläche und deren Eigenschaften zu zugreifen.
+In Ihrer Datei gibt es einen Aufruf, der einige Informationen unter anderem zum konfigurierten `Tab.js` `microsoftTeams.getContext()` [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) Clientdesign enthält. Verwenden Sie diesen Code dank des App-Gerüsts so, wie er für den Zugriff auf `context` die Schnittstelle und ihre Eigenschaften ist.
 
 ```JavaScript
 componentDidMount(){
@@ -120,7 +121,7 @@ componentDidMount(){
 
 ### <a name="create-a-theme-change-handler"></a>Erstellen eines Designänderungshandlers
 
-Mit den Eigenschaften in der Hand hat Ihre App ein solides Verständnis dafür, was in `context` Teams um sie herum passiert. Aber die App weiß immer noch nicht, dass ihre Darstellung das Design widerspiegeln sollte, das ein Benutzer aus wählt.
+Mit den eigenschaften in der Hand hat Ihre App ein solides Verständnis davon, was um sie `context` herum in Teams passiert. Aber die App weiß immer noch nicht, dass ihre Darstellung das design widerspiegeln soll, das ein Benutzer wählt.
 
 Sie benötigen einen Handler, damit sich der Zustand Ihrer App mit dem Design ändert. Fügen Sie den folgenden Designänderungshandler unmittelbar nach dem Aufruf `microsoftTeams.getContext()` ein.
 
@@ -132,14 +133,14 @@ Sie benötigen einen Handler, damit sich der Zustand Ihrer App mit dem Design ä
   });
 ```
 
-### <a name="match-theme-styles"></a>Übereinstimmung mit Designstilen
+### <a name="match-theme-styles"></a>Übereinstimmung von Designformatvorlagen
 
-Ihr Designänderungshandler ist eingerichtet, Aber Sie benötigen Code, der auf diese Änderungen reagiert und die Farben Ihrer Registerkarte am aktuellen Design ausgerichtet.
+Ihr Designänderungshandler ist eingerichtet, Sie benötigen jedoch Code, der auf diese Änderungen reagiert und die Farben Ihrer Registerkarte am aktuellen Design ausgerichtet.
 
 > [!NOTE]
-> Das folgende Beispiel ist nur eine Möglichkeit, Formatvorlagen auf Ihre Registerkarte anzuwenden. Verwenden Sie den Code so, wie er ist, erweitern Sie ihn, oder schreiben Sie Einen eigenen.
+> Das folgende Beispiel ist nur eine Möglichkeit, Formatvorlagen auf Ihre Registerkarte anzuwenden. Verwenden Sie den Code wie folgt, erweitern Sie ihn, oder schreiben Sie Eigenes.
 
-Speichern Sie in der Funktion den Zustand, der `render()` vom Designänderungshandler bereitgestellt wird, in `isTheme` .
+Speichern Sie `render()` in der Funktion den vom Designänderungshandler bereitgestellten Status in `isTheme` .
 
 ```JavaScript
   const isTheme = this.state.theme
@@ -148,7 +149,7 @@ Speichern Sie in der Funktion den Zustand, der `render()` vom Designänderungsha
 Nachdem Sie den vom Designänderungshandler bereitgestellten Status gespeichert haben, stellen Sie eine bedingte Logik bereit, um die Formatvorlagen Ihrer Registerkarte basierend auf dem aktuellen Design zu rendern. Das folgende Beispiel zeigt eine grundlegende Möglichkeit dazu:
 1. Überprüfen Sie das aktuelle Design in `isTheme` .
 2. Erstellen Sie `newTheme` ein Objekt mit CSS-Eigenschaften, die für das aktuelle Design relevant sind.
-3. Wenden Sie das CSS auf das Stamm-HTML-Element ( ) des Registerkarteninhalts an. `<div style={newTheme}>`
+3. Wenden Sie das CSS auf das Stamm-HTML-Element Ihres Registerkarteninhalts an ( `<div style={newTheme}>` ).
 
 ```JavaScript
 let newTheme
@@ -172,15 +173,15 @@ if (isTheme === "default") {
 
 ## <a name="well-done"></a>Gut gemacht
 
-Herzlichen Glückwunsch! Sie verfügen über eine Teams-App mit einer persönlichen Registerkarte, die die Suche nach wichtigen Kontakten in Ihrer Organisation erleichtert.
+Glückwunsch! Sie verfügen über eine Teams-App mit einer persönlichen Registerkarte, die die Suche nach wichtigen Kontakten in Ihrer Organisation erleichtert.
 
 ## <a name="learn-more"></a>Weitere Informationen
 
-* Folgen Sie [unseren Entwurfsrichtlinien,](../tabs/design/tabs.md) und erstellen Sie mit [produktionsbereiten](../concepts/design/design-teams-app-ui-templates.md) Benutzeroberflächenvorlagen, um eine nahtlose Benutzeroberfläche zu erstellen.
+* Befolgen Sie [unsere Entwurfsrichtlinien,](../tabs/design/tabs.md) und erstellen Sie mit [produktionsbereiten](../concepts/design/design-teams-app-ui-templates.md) Benutzeroberflächenvorlagen, um eine nahtlose Oberfläche zu erstellen.
 * Informationen [zu mobilen Überlegungen](../tabs/design/tabs-mobile.md) für Registerkarten.
 * [Fügen Sie ihrer Registerkarte die SSO-Authentifizierung hinzu.](../tabs/how-to/authentication/auth-aad-sso.md)
-* Nutzen von Microsoft Teams-Daten [mit Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview).
-* [Erstellen Sie eine Registerkarte ohne das Toolkit.](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
+* Verwenden von Teams-Daten [mit Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview).
+* [Erstellen Sie eine Registerkarte ohne das Toolkit](../tabs/quickstarts/create-personal-tab-node-yeoman.md).
 
 ## <a name="next-lesson"></a>Nächste Lektion
 

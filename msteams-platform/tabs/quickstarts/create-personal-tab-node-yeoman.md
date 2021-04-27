@@ -1,39 +1,40 @@
 ---
-title: 'Schnellstart: Erstellen einer benutzerdefinierten persönlichen Registerkarte mit Node.js und dem Generator für Microsoft Teams'
+title: 'Schnellstart: Erstellen einer benutzerdefinierten persönlichen Registerkarte mit Node.js und dem Yeoman-Generator für Microsoft Teams'
 author: laujan
-description: Eine Schnellstartanleitung zum Erstellen einer persönlichen Registerkarte mit dem Landarbeits Generator für Microsoft Teams.
+description: Eine Schnellstartanleitung zum Erstellen einer persönlichen Registerkarte mit dem Yeoman-Generator für Microsoft Teams.
+localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: e39878d117b0b1b1f8c0e2450021d9238f5b7877
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 30143fa3c84a68ae6c34176b252badaa4cef9613
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818885"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019552"
 ---
-# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Schnellstart: Erstellen einer benutzerdefinierten persönlichen Registerkarte mit Node.js und dem Generator für Microsoft Teams
+# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Schnellstart: Erstellen einer benutzerdefinierten persönlichen Registerkarte mit Node.js und dem Yeoman-Generator für Microsoft Teams
 
 >[!NOTE]
->Diese Schnellstartleiste folgt den Schritten im Artikel [Erstellen des ersten Microsoft Teams-App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) -Wikis, die im Microsoft officedev GitHub-Repository gefunden wurden.
+>Dieser Schnellstart folgt den Schritten im [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki im Microsoft OfficeDev GitHub-Repository.
 
-In diesem Schnellstart werden Sie durch das Erstellen einer benutzerdefinierten persönlichen Registerkarte mithilfe des Teams-Landarbeits- [Generators](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)gehen. Wir laden die Anwendung auch in Team hoch.
+In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten persönlichen Registerkarte mithilfe des [Teams Yeoman-Generators gehen.](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wir laden die Anwendung auch in Team hoch.
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
-**Möchten Sie eine konfigurierbare oder statische RegisterkarteErstellen?**
+**Möchten Sie eine konfigurierbare oder statische Registerkarte erstellen?**
 
-Verwenden Sie die Pfeiltasten, um statische Registerkarte auszuwählen.
+Verwenden Sie die Pfeiltasten, um die statische Registerkarte auszuwählen.
 
 >[!IMPORTANT]
->In der Pfadkomponente *yourDefaultTabNameTab*, auf die in diesem Schnellstart verwiesen wird, handelt es sich um den Wert, den Sie im Generator für den *standardmäßigen Registerkartennamen* sowie die *Register*Karte Word eingegeben haben.
+>Die Pfadkomponente *yourDefaultTabNameTab*, auf die in diesem Schnellstart verwiesen wird, ist der Wert, den Sie im Generator für *Standardregisterkartenname* plus das Wort *Tab eingegeben haben.*
 >
->Beispiel: DefaultTabName: *mytab*  =>  */MyTabTab/*
+>Beispiel: DefaultTabName: *MyTab*  =>  */MyTabTab/*
 
 ## <a name="create-your-personal-tab"></a>Erstellen Ihrer persönlichen Registerkarte
 
-Zum Hinzufügen einer persönlichen Registerkarte zu dieser Anwendung erstellen Sie eine Inhaltsseite und aktualisieren vorhandene Dateien:
+Um dieser Anwendung eine persönliche Registerkarte hinzuzufügen, erstellen Sie eine Inhaltsseite und aktualisieren vorhandene Dateien:
 
-- Erstellen Sie in Ihrem Code-Editor eine neue HTML-Datei **personal.html** , und fügen Sie das folgende Markup hinzu:
+- Erstellen Sie im Code-Editor eine neue HTML-Datei, **personal.html,** und fügen Sie das folgende Markup hinzu:
 
 ```html
 <!DOCTYPE html>
@@ -55,19 +56,19 @@ Zum Hinzufügen einer persönlichen Registerkarte zu dieser Anwendung erstellen 
 </html>
 ```
 
-- Speichern Sie **personal.html** im **Webordner ihrer** Anwendung:
+- Speichern **personal.html** im Webordner Ihrer **Anwendung:**
 
 ```bash
 ./src/app/web/<yourDefaultTabNameTab>/personal.html
 ```
 
-- Öffnen Sie **manifest.js** im Code-Editor:
+- Öffnen **manifest.jsim** Code-Editor:
 
 ```bash
 ./src/manifest/manifest.json/
 ```
 
-Fügen Sie Folgendes zum leeren `staticTabs` Array hinzu ( `staticTabs":[]` ), und fügen Sie das folgende JSON-Objekt hinzu:
+Fügen Sie dem leeren Array ( ) Folgendes `staticTabs` `staticTabs":[]` hinzu, und fügen Sie das folgende JSON-Objekt hinzu:
 
 ```json
 {
@@ -80,56 +81,56 @@ Fügen Sie Folgendes zum leeren `staticTabs` Array hinzu ( `staticTabs":[]` ), u
 
 ```
 
-Denken Sie daran, die **"contentURL"** -Pfadkomponente **yourDefaultTabNameTab** mit Ihrem tatsächlichen Registerkartennamen zu aktualisieren.
+Denken Sie daran, die **Pfadkomponente "contentURL"** **yourDefaultTabNameTab** mit ihrem tatsächlichen Registerkartennamen zu aktualisieren.
 
-- Speichern Sie die aktualisierte **manifest.js**.
+- Speichern Sie die **aktualisiertemanifest.jsunter**.
 
-- Die Inhaltsseite muss in einem IFRAME bereitgestellt werden. Öffnen Sie **Tab. TS** in Ihrem Code-Editor:
+- Ihre Inhaltsseite muss in einem IFrame bedient werden. Öffnen **Sie Tab.ts** im Code-Editor:
 
  ```bash
 ./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
 ```
 
-- Fügen Sie der Liste der iframe-Dekorateure Folgendes hinzu:
+- Fügen Sie der Liste der IFrame-Verzierer Folgendes hinzu:
 
 ```typescript
  @PreventIframe("/<yourDefaultAppName>TabNameTab>/personal.html")
 ```
 
-- Achten Sie darauf, die aktualisierte **Registerkarte. TS** -Datei zu speichern. Der Tab-Code ist abgeschlossen.
+- Stellen Sie sicher, dass Sie die aktualisierte **Tab.ts-Datei** speichern. Der Registerkartencode ist vollständig.
 
-## <a name="build-and-run-your-application"></a>Erstellen und Ausführen der Anwendung
+## <a name="build-and-run-your-application"></a>Erstellen und Ausführen Der Anwendung
 
-Öffnen Sie im Projektverzeichnis eine Eingabeaufforderung, um die nächsten Aufgaben abzuschließen.
+Öffnen Sie eine Eingabeaufforderung in Ihrem Projektverzeichnis, um die nächsten Aufgaben auszuführen.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-Um Ihre persönliche Registerkarte anzuzeigen, wechseln Sie zu `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
+Um Ihre persönliche Registerkarte zu sehen, wechseln Sie zu `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
 
 >![Screenshot der persönlichen Registerkarte](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
-## <a name="establish-a-secure-tunnel-to-your-tab"></a>Einrichten eines sicheren Tunnels für die Registerkarte
+## <a name="establish-a-secure-tunnel-to-your-tab"></a>Einrichten eines sicheren Tunnels für Ihre Registerkarte
 
-Microsoft Teams ist ein vollständig Cloud-basiertes Produkt und erfordert, dass Ihre Registerkarteninhalte über HTTPS-Endpunkte in der Cloud verfügbar sind. Teams nicht zulassen lokales Hosting daher müssen Sie entweder Ihre Registerkarte in einer öffentlichen URL veröffentlichen oder einen Proxy verwenden, der den lokalen Port einer URL mit Internetverbindung verfügbar macht.
+Microsoft Teams ist ein vollständig cloudbasiertes Produkt und erfordert, dass Ihre Registerkarteninhalte über HTTPS-Endpunkte in der Cloud verfügbar sind. Teams lässt kein lokales Hosting zu, daher müssen Sie Ihre Registerkarte entweder in einer öffentlichen URL veröffentlichen oder einen Proxy verwenden, der Ihren lokalen Port für eine mit dem Internet zugängliche URL verfügbar macht.
 
-Um Ihre Tab-Erweiterung zu testen, verwenden Sie [ngrok](https://ngrok.com/docs), das in diese Anwendung integriert ist. Ngrok ist ein Reverse-Proxy-Software Tool, mit dem ein Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten des lokal ausgeführten Webservers erstellt wird. Die Webendpunkte Ihres Servers sind während der aktuellen Sitzung auf Ihrem lokalen Computer verfügbar. Wenn der Computer heruntergefahren wird oder in den Standbymodus wechselt, steht der Dienst nicht mehr zur Verfügung.
+Zum Testen der Tabulatorerweiterung verwenden Sie [ngrok](https://ngrok.com/docs), das in diese Anwendung integrierte. Ngrok ist ein Reverseproxy-Softwaretool, das einen Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten Ihres lokal ausgeführten Webservers erstellt. Die Webendpunkte Ihres Servers stehen während der aktuellen Sitzung auf Dem lokalen Computer zur Verfügung. Wenn der Computer heruntergefahren wird oder in den Ruhezustand geht, ist der Dienst nicht mehr verfügbar.
 
-Beenden Sie in der Eingabeaufforderung localhost, und geben Sie Folgendes ein:
+Beenden Sie localhost in der Eingabeaufforderung, und geben Sie Folgendes ein:
 
 ```bash
 gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> Nachdem die Registerkarte über *ngrok*in Microsoft Teams hochgeladen und erfolgreich gespeichert wurde, können Sie Sie in Teams anzeigen, bis Ihre Tunnelsitzung endet.
+> Nachdem Ihre Registerkarte in Microsoft Teams hochgeladen, über *ngrok* und erfolgreich gespeichert wurde, können Sie sie in Teams anzeigen, bis Ihre Tunnelsitzung endet.
 
-## <a name="upload-your-application-to-teams"></a>Hochladen Ihrer Anwendung in Microsoft Teams
+## <a name="upload-your-application-to-teams"></a>Hochladen Ihrer Anwendung in Teams
 
-- Öffnen Sie den Microsoft Teams-Client. Wenn Sie die [webbasierte Version](https://teams.microsoft.com) verwenden, können Sie den Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md)Ihres Browsers überprüfen.
-- Wählen Sie im *YourTeams* -Bereich auf der linken Seite das `...` Menü neben dem Team aus, das Sie zum Testen der Registerkarte verwenden, und wählen Sie **Team verwalten**aus.
-- Wählen Sie im Hauptbereich **apps** in der Registerkartenleiste aus, und wählen Sie **eine benutzerdefinierte App hochladen** , die sich in der unteren rechten Ecke der Seite befindet.
-- Öffnen Sie Ihr Projektverzeichnis, navigieren Sie zum Ordner **./Paket** , wählen Sie den Ordner zip aus, klicken Sie mit der rechten Maustaste, und wählen Sie **Öffnen**aus. Ihre Registerkarte wird in Teams hochgeladen.
+- Öffnen Sie den Microsoft Teams-Client. Wenn Sie die [webbasierte Version verwenden,](https://teams.microsoft.com) können Sie Ihren Front-End-Code mithilfe der Entwicklertools Ihres Browsers [überprüfen.](~/tabs/how-to/developer-tools.md)
+- Wählen Sie *im Bereich YourTeams* auf der linken Seite das Menü neben dem Team aus, das Sie zum Testen Ihrer Registerkarte verwenden, und `...` wählen Sie Team verwalten **aus.**
+- Wählen Sie im Hauptbereich **apps** aus der Registerkartenleiste aus, und wählen Sie Hochladen einer benutzerdefinierten **App** in der unteren rechten Ecke der Seite aus.
+- Öffnen Sie Ihr Projektverzeichnis, navigieren Sie zum **Ordner ./package,** wählen Sie den Ordner "ZIP" aus, klicken Sie mit der rechten Maustaste, und wählen Sie **Öffnen aus.** Ihre Registerkarte wird in Teams hochgeladen.
 
 ## <a name="view-your-personal-tabs"></a>Anzeigen Ihrer persönlichen Registerkarten
 
-Wählen Sie in der navbar, die sich auf der linken Seite des Teams-Clients befindet, das `...` Menü aus, und wählen Sie Ihre APP aus der Liste aus.
+Wählen Sie in der Navigationsleiste ganz links neben dem Teams-Client das Menü aus, und wählen Sie Ihre `...` App aus der Liste aus.

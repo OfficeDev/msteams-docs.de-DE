@@ -3,13 +3,14 @@ title: Tools und SDKs
 author: clearab
 description: Bots und SDKs in Microsoft Teams.
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b38a40cfd88c9b5879f6d777f50b919125ce9ec9
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 2a77b629a645625398fccfd6a18eb1ed3f09844e
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995974"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020183"
 ---
 # <a name="bots-and-sdks"></a>Tools und SDKs
 
@@ -107,7 +108,7 @@ Einer der Nachteile von Bots ist, dass es schwierig ist, eine große Wissensdate
 
 ## <a name="code-sample"></a>Codebeispiel
 
-|Beispielname | Description | . NETCore | Node.js |
+|Beispielname | Beschreibung | . NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Teams-Unterhaltungsbot | Nachrichten- und Unterhaltungsereignisbehandlung. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
 

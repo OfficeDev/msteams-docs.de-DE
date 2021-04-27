@@ -3,14 +3,15 @@ title: Entwerfen Ihrer Messagingerweiterung
 description: Erfahren Sie, wie Sie eine Microsoft Teams-Messagingerweiterung entwerfen und das Microsoft Teams UI Kit erhalten.
 keywords: Bewährte Methode für Teams-Entwurfsrichtlinien zur Referenz von Messagingerweiterungen
 author: heath-hamilton
+localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: c616d8e3e7c40ae124f96cb80a42873f9aaa7865
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: e3e4197e461f6d13f0c45ba2ce8bfb93b01b5e0f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697011"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020723"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>Entwerfen Ihrer Microsoft Teams-Messagingerweiterung
 

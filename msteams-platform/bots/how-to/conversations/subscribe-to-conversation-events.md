@@ -3,13 +3,14 @@ title: Unterhaltungsereignisse
 author: WashingtonKayaker
 description: So arbeiten Sie mit Unterhaltungsereignissen aus Ihrem Microsoft Teams-Bot.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 0736ce07f91f0f33505c5ac3fa031a201d01c2f9
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 23f58a0544b317f7532ff12bc7f30b6eb6cd670a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51996030"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020028"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Unterhaltungsereignisse in Ihrem Teams-Bot
 
@@ -41,7 +42,7 @@ Das `conversationUpdate`-Ereignis wird an Ihren Bot gesendet, wenn er Informatio
 
 Die folgende Tabelle enthält eine Liste der Ereignisse für Das Aktualisieren von Teams-Unterhaltungen mit weiteren Details:
 
-| Ergriffene Aktion        | EventType         | Methode aufgerufen              | Description                | Bereich |
+| Ergriffene Aktion        | EventType         | Methode aufgerufen              | Beschreibung                | Bereich |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
 | Kanal erstellt     | channelCreated    | OnTeamsChannelCreatedAsync | [Ein Kanal wird erstellt.](#channel-created) | Team |
 | Kanal umbenannt     | channelRenamed    | OnTeamsChannelRenamedAsync | [Ein Kanal wird umbenannt.](#channel-renamed) | Team |
@@ -1058,7 +1059,7 @@ Nachdem Sie nun mit den Unterhaltungsaktualisierungsereignissen gearbeitet haben
 
 Das Ereignis wird gesendet, wenn ein Benutzer Reaktionen auf eine Nachricht hinzufügt oder entfernt, die von Ihrem `messageReaction` Bot gesendet wurde. Der `replyToId` enthält die ID der Nachricht, und der ist der Typ der Reaktion im `Type` Textformat. Die Arten von Reaktionen sind z. B. "empörend", "Herz", "Gelächter", "Gefällt mir", "Betrübt" und "überrascht". Dieses Ereignis enthält nicht den Inhalt der ursprünglichen Nachricht. Wenn die Verarbeitung von Reaktionen auf Ihre Nachrichten für Ihren Bot wichtig ist, müssen Sie die Nachrichten speichern, wenn Sie sie senden. Die folgende Tabelle enthält weitere Informationen zum Ereignistyp und zu Nutzlastobjekten:
 
-| EventType       | Payload-Objekt   | Description                                                             | Bereich |
+| EventType       | Payload-Objekt   | Beschreibung                                                             | Bereich |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
 | messageReaction | reactionsAdded   | [Reaktionen, die bot-Nachricht hinzugefügt wurden.](#reactions-added-to-bot-message)           | Alle   |
 | messageReaction | reactionsRemoved | [Aus bot-Nachricht entfernte Reaktionen.](#reactions-removed-from-bot-message) | Alle |

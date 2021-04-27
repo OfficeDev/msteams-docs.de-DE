@@ -2,13 +2,14 @@
 title: Unterstützung für einmaliges Anmelden für Registerkarten
 description: Beschreibt einmaliges Anmelden (Single Sign-On, SSO)
 ms.topic: how-to
+localization_priority: Normal
 keywords: teams authentication SSO AAD single sign-on api
-ms.openlocfilehash: 6be04617961d45763e5c812149d47a126fc4dae3
-ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
+ms.openlocfilehash: 65e8d5e5387ec727e9ce02967516d8672bf67931
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51885066"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019608"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Unterstützung für einmaliges Anmelden (Single Sign-On, SSO) für Registerkarten
 

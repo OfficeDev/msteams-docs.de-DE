@@ -3,14 +3,15 @@ title: Erste Schritte – Erstellen Der ersten App-Übersicht und der voraussetz
 author: heath-hamilton
 description: Erfahren Sie, wie Sie mit der Entwicklung von Microsoft Teams-Apps beginnen und Ihre Umgebung einrichten.
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 6594ac175cd8ad92c5db399bb675ef3a6b271321
-ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
+ms.openlocfilehash: d975383022089579a04317de73595106e7920c56
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51762039"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019993"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>Erstellen Der ersten Microsoft Teams-App-Übersicht
 

@@ -1,19 +1,20 @@
 ---
 title: Was sind Aufgabenmodule?
 author: clearab
-description: Fügen Sie modale Popuperfahrungen hinzu, um Informationen zu Ihren Benutzern aus Ihren Microsoft Teams-Apps zu sammeln oder ihren Benutzern zu zeigen.
+description: Hinzufügen modaler Popuperfahrungen zum Sammeln oder Anzeigen von Informationen zu Ihren Benutzern aus Ihren Microsoft Teams-Apps
+localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 3920d3ae71857dcc7673c4c27449b71009c7f07e
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 5472f07a8183e6f06ce6cb4fa2a9c048e083dcca
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449549"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019517"
 ---
 # <a name="what-are-task-modules"></a>Was sind Aufgabenmodule?
 
-Aufgabenmodule ermöglichen Ihnen das Erstellen von modalen Popup-Erlebnissen in Ihrer Teams-Anwendung. Innerhalb des Popups können Sie Ihren eigenen benutzerdefinierten HTML/JavaScript-Code ausführen, ein -basiertes Widget wie ein YouTube- oder Microsoft Stream-Video anzeigen oder eine `<iframe>` [adaptive Karte anzeigen.](/adaptive-cards/) Sie eignen sich besonders für das Initiieren und Fertigstellen von Aufgaben oder das Anzeigen von Multimedia-Informationen wie Videos oder Power BI-Dashboards. Eine Popup-Oberfläche wirkt für Benutzer, die Aufgaben initiieren und fertigstellen, im Vergleich zu einer Registerkarte oder einer auf einer Unterhaltung basierenden Bot-Umgebung, häufig natürlicher.
+Aufgabenmodule ermöglichen Ihnen das Erstellen von modalen Popup-Oberflächen in Ihrer Teams-Anwendung. Innerhalb des Popups können Sie Ihren eigenen benutzerdefinierten HTML/JavaScript-Code ausführen, ein -basiertes Widget wie ein YouTube- oder Microsoft Stream-Video anzeigen oder eine `<iframe>` [adaptive Karte anzeigen.](/adaptive-cards/) Sie eignen sich besonders für das Initiieren und Fertigstellen von Aufgaben oder das Anzeigen von Multimedia-Informationen wie Videos oder Power BI-Dashboards. Eine Popup-Oberfläche wirkt für Benutzer, die Aufgaben initiieren und fertigstellen, im Vergleich zu einer Registerkarte oder einer auf einer Unterhaltung basierenden Bot-Umgebung, häufig natürlicher.
 
 Aufgabenmodule, die auf den Registerkarten von Microsoft Teams aufbauen; Sie sind im Wesentlichen eine Registerkarte innerhalb eines Popupfensters. Sie verwenden dasselbe SDK. Wenn Sie also eine Registerkarte erstellt haben, sind Sie bereits zu 90 % in der Lage, ein Aufgabenmodul zu erstellen.
 
@@ -61,10 +62,10 @@ Das `TaskInfo` Objekt enthält die Metadaten für ein Aufgabenmodul. Die Objektd
 | `title` | string | Wird unterhalb des App-Namens und rechts neben dem App-Symbol angezeigt. |
 | `height` | Zahl oder Zeichenfolge | Dies kann eine Zahl sein, die die Höhe des Aufgabenmoduls in Pixel oder `small` , `medium` oder `large` darstellt. [Siehe unten, wie Höhe und Breite behandelt werden.](#task-module-sizing) |
 | `width` | Zahl oder Zeichenfolge | Dies kann eine Zahl sein, die die Breite des Aufgabenmoduls in Pixel oder `small` , `medium` oder `large` darstellt. [Siehe unten, wie Höhe und Breite behandelt werden.](#task-module-sizing) |
-| `url` | string | Die URL der Seite, die als innerhalb des `<iframe>` Aufgabenmoduls geladen wurde. Die Domäne der URL muss sich im [validDomains-Array](~/resources/schema/manifest-schema.md#validdomains) der App im Manifest Ihrer App befinden. |
+| `url` | Zeichenfolge | Die URL der Seite, die als innerhalb des `<iframe>` Aufgabenmoduls geladen wurde. Die Domäne der URL muss sich im [validDomains-Array](~/resources/schema/manifest-schema.md#validdomains) der App im Manifest Ihrer App befinden. |
 | `card` | Adaptive Karte oder adaptive Karten-Bot-Kartenanlage | Die JSON für die adaptive Karte, die im Aufgabenmodul angezeigt werden soll. Wenn Sie von einem Bot aufrufen, müssen Sie die adaptive Karten-JSON in einem Bot Framework-Objekt `attachment` verwenden. Auf einer Registerkarte verwenden Sie nur eine adaptive Karte. [Hier ist ein Beispiel.](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-| `fallbackUrl` | string | Wenn ein Client das Aufgabenmodulfeature nicht unterstützt, wird diese URL auf einer Browserregisterkarte geöffnet. |
-| `completionBotId` | string | Gibt eine Bot-App-ID an, an die das Ergebnis der Benutzerinteraktion mit dem Aufgabenmodul gesendet werden soll. Wenn angegeben, erhält der Bot ein `task/submit invoke` Ereignis mit einem JSON-Objekt in der Ereignisnutzlast. |
+| `fallbackUrl` | Zeichenfolge | Wenn ein Client das Aufgabenmodulfeature nicht unterstützt, wird diese URL auf einer Browserregisterkarte geöffnet. |
+| `completionBotId` | Zeichenfolge | Gibt eine Bot-App-ID an, an die das Ergebnis der Benutzerinteraktion mit dem Aufgabenmodul gesendet werden soll. Wenn angegeben, erhält der Bot ein `task/submit invoke` Ereignis mit einem JSON-Objekt in der Ereignisnutzlast. |
 
 > [!NOTE]
 > Das Aufgabenmodulfeature erfordert, dass die Domänen aller URLs, die Sie laden möchten, im Array im Manifest Ihrer `validDomains` App enthalten sind.
@@ -214,7 +215,7 @@ Hier sind die Informationen zu `APP_ID` und `BOT_APP_ID` :
 | Wert | Typ | Pflichtfeld? | Beschreibung |
 | --- | --- | --- | --- |
 | `APP_ID` | string | Ja | Die [ID](~/resources/schema/manifest-schema.md#id) der App, die das Aufgabenmodul aufrufen. Das [validDomains-Array](~/resources/schema/manifest-schema.md#validdomains) im Manifest für muss die Domäne für `APP_ID` if in der URL `url` `url` enthalten. (Die App-ID ist bereits bekannt, wenn ein Aufgabenmodul von einer Registerkarte oder einem Bot aufgerufen wird, weshalb sie nicht in `TaskInfo` enthalten ist.) |
-| `BOT_APP_ID` | string | Nein | Wenn ein Wert für angegeben wird, wird das Objekt über eine `completionBotId` `result` Nachricht an den `task/submit invoke` angegebenen Bot gesendet. `BOT_APP_ID` muss im Manifest der App als Bot angegeben werden, d. h. Sie können ihn nicht einfach an einen bot senden. |
+| `BOT_APP_ID` | Zeichenfolge | Nein | Wenn ein Wert für angegeben wird, wird das Objekt über eine `completionBotId` `result` Nachricht an den `task/submit invoke` angegebenen Bot gesendet. `BOT_APP_ID` muss im Manifest der App als Bot angegeben werden, d. h. Sie können ihn nicht einfach an einen bot senden. |
 
 Beachten Sie, dass es gültig für und gleich ist, und in vielen Fällen ist, wenn eine App über einen Bot verfügt, da es empfohlen wird, dies als ID einer App zu verwenden, wenn es einen `APP_ID` `BOT_APP_ID` gibt.
 

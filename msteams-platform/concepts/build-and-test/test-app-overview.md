@@ -2,23 +2,24 @@
 title: Testen der App-Übersicht
 description: Beschreibt den Prozess zum Testen Ihrer benutzerdefinierten Teams-App in Microsoft 365
 ms.topic: how-to
+localization_priority: Normal
 keywords: Konfigurieren der Microsoft 365-Mandantenteams zum Hochladen der Test-App
-ms.openlocfilehash: b199ca4be31b546364091b754cdb890c8c0dd7d0
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: 8815e73c054cb75782660ef4afb3ae583b4f40fa
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634779"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019937"
 ---
 # <a name="test-your-app"></a>Testen eigener Apps
 
 Nachdem Sie Ihre App in Microsoft Teams integriert haben, müssen Sie Ihre App testen, bevor Sie sie veröffentlichen. Das letztendliche Ziel ist es, so viele Benutzer für Ihre App zu erhalten, dass Sie die App auf mehreren Geräten testen, die Benutzer verwenden können. Zum Testen Ihrer App:
 
-* Vorbereiten des Microsoft 365-Mandanten
+* Vorbereiten Ihres Microsoft 365-Mandanten
 * Auswählen eines Arbeitsbereichs zum Testen und Debuggen Ihrer App
 * Hinzufügen von Testdaten zu Ihrem Microsoft 365-Mandanten
 
-## <a name="prepare-your-microsoft-365-tenant"></a>Vorbereiten des Microsoft 365-Mandanten
+## <a name="prepare-your-microsoft-365-tenant"></a>Vorbereiten Ihres Microsoft 365-Mandanten
 
 Bevor Sie mit dem Testen Ihrer App beginnen, bereiten Sie Ihren Microsoft 365-Test-Mandanten vor, und aktivieren Sie die benutzerdefinierte Teams-App, mit der Sie Ihre App hochladen können. Sie müssen sich für das Microsoft 365-Entwicklerprogramm registrieren und die Teams-Einstellungen für Ihre Organisation verwalten. Richten Sie Ihr Entwicklerabonnement ein, und konfigurieren Sie es, wenn [Sie Ihren Microsoft 365-Mandanten vorbereiten.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
@@ -48,4 +49,4 @@ Fügen Sie die Testdaten dem Microsoft 365-Test-Mandanten hinzu. Weitere Informa
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Vorbereiten des Microsoft 365-Mandanten](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+> [Vorbereiten Ihres Microsoft 365-Mandanten](~/concepts/build-and-test/prepare-your-o365-tenant.md)

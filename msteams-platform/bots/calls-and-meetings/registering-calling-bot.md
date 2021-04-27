@@ -2,13 +2,14 @@
 title: Registrieren von Anrufen und Besprechungen für Microsoft Teams
 description: Informationen zum Registrieren eines neuen Audio-/Videoanruf-Bots für Microsoft Teams
 ms.topic: conceptual
+localization_priority: Normal
 keywords: Aufrufen von Audio-/Videovideomedien für Bots
-ms.openlocfilehash: 4f4f1fdf0c33685e146081085aa7ff8e07f1a87d
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: a11350a3c5bae0b2eb3a36b9e1233ed92e1705c8
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995862"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020148"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrieren von Anrufen und Besprechungen für Microsoft Teams
 
@@ -55,7 +56,7 @@ Das Diagramm bietet detaillierte Berechtigungen zum Steuern des Zugriffs, den Ap
 
 Die folgende Tabelle enthält eine Liste der Anwendungsberechtigungen für Aufrufe:
 
-|Berechtigung    |Anzeigezeichenfolge   |Description |Administrator-Zustimmung erforderlich |
+|Berechtigung    |Anzeigezeichenfolge   |Beschreibung |Administrator-Zustimmung erforderlich |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |Initiieren sie ausgehende 1:1-Anrufe aus der App-Vorschau. |Ermöglicht der App, ausgehende Anrufe an einen einzelnen Benutzer zu tätigen und Anrufe an Benutzer im Organisationsverzeichnis zu übertragen (ohne angemeldeten Benutzer).|Ja|
 | Calls.InitiateGroupCall.All |Initiieren von ausgehenden Gruppenanrufen aus der App-Vorschau. |Ermöglicht der App, ausgehende Anrufe an mehrere Benutzer zu tätigen und Teilnehmer in Ihrer Organisation zu Besprechungen hinzufügen (ohne angemeldeten Benutzer).|Ja|
@@ -70,7 +71,7 @@ Die folgende Tabelle enthält eine Liste der Anwendungsberechtigungen für Aufru
 
 Die folgende Tabelle enthält eine Liste der Anwendungsberechtigungen für Onlinebesprechungen:
 
-|Berechtigung    |Anzeigezeichenfolge   |Description |Administrator-Zustimmung erforderlich |
+|Berechtigung    |Anzeigezeichenfolge   |Beschreibung |Administrator-Zustimmung erforderlich |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | OnlineMeetings.Read.All |Lesen von Onlinebetreffdetails aus der App-Vorschau|Ermöglicht der App das Lesen von Online-Besprechungsdetails in Ihrer Organisation, ohne dass ein Benutzer angemeldet ist.|Ja|
 | OnlineMeetings.ReadWrite.All |Lesen und Erstellen von Onlinebesprechungen aus der App-Vorschau im Namen eines Benutzers|Ermöglicht der App das Erstellen von Onlinebesprechungen in Ihrer Organisation im Namen eines Benutzers, ohne dass ein Benutzer angemeldet ist.|Ja|

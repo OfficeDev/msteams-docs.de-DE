@@ -3,13 +3,14 @@ title: Übersicht über die Grundlagen der App-Entwicklung
 author: heath-hamilton
 description: Beschreiben der grundlegenden Konzepte der Teams-Plattformentwicklung.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 4af23e06cbf7a3f630b77ee1693e0931c9c9c03e
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: b52eebf2b8e0884cd225298ae557bb7ac65d4a68
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654272"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020863"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Grundlagen der Microsoft Teams-App-Entwicklung
 

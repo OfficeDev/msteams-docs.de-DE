@@ -3,14 +3,15 @@ title: Bot-API-Änderungen für Team- und Chatmitglieder
 author: ojasvichoudhary
 description: Beschreibt bevorstehende und in Bearbeitung ausgeführte Änderungen an den Bot-APIs, die zum Abrufen von Mitgliedern von Teams und Chats verwendet werden.
 keywords: Bot-Framework-Apis-Teammitgliederliste
+localization_priority: Normal
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: 38ccdd1d3052e906ceacaa47fa0cd14a1be7a41d
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: ad03d14ca1c38eb810d43027e901e01199858992
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696520"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019678"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Änderungen der Teams-Bot-API zum Abrufen von Team- oder Chatmitgliedern
 

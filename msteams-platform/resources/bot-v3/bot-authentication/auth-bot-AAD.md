@@ -2,14 +2,15 @@
 title: Authentifizierung für Bots mit Azure Active Directory
 description: Beschreibt die Azure AD-Authentifizierung in Teams und deren Verwendung in Ihren Bots
 keywords: Teams-Authentifizierungsbots AAD
+localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
-ms.openlocfilehash: f772ef84282c3b8e1ee3e6aa96b47bf12caaa4dd
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: c3f2f7fe3eb6b10faef2b24b3212081a881d6f8f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696682"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020688"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>Authentifizieren eines Benutzers in einem Microsoft Teams-Bot
 

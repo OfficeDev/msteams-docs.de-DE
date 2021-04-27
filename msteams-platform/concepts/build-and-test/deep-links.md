@@ -1,25 +1,26 @@
 ---
-title: Erstellen von tiefen Links zu Inhalten
+title: Erstellen von Deep-Links
 description: Beschreibt tiefe Links und deren Verwendung in Ihren Apps
 ms.topic: how-to
+localization_priority: Normal
 keywords: deep link deeplink für Teams
-ms.openlocfilehash: afcb079873f97055c4af43323d12846294861f74
-ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
+ms.openlocfilehash: 26423a52c1bd2f643a40222eafdb4b9c1087a1a1
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51885059"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020835"
 ---
-# <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Erstellen von tiefen Links zu Inhalten und Features in Microsoft Teams
+# <a name="create-deep-links"></a>Erstellen von Deep-Links 
 
-Sie können Links zu Informationen und Features in Teams erstellen. Beispiele, in denen das Erstellen von Tiefenlinks hilfreich ist, sind die folgenden:
+Sie können Links zu Informationen und Features in Teams erstellen. Die folgenden Szenarien sind hilfreich, in denen das Erstellen von Tiefenverknüpfungen hilfreich ist:
 
 * Navigieren des Benutzers zu Inhalten auf einer der Registerkarten Ihrer App. Beispielsweise kann Ihre App über einen Bot verfügen, der Nachrichten sendet, die den Benutzer über eine wichtige Aktivität benachrichtigen. Wenn der Benutzer auf die Benachrichtigung tippt, navigiert der Deep Link zur Registerkarte, damit der Benutzer weitere Details zur Aktivität anzeigen kann.
-* Ihre App automatisiert oder vereinfacht bestimmte Benutzeraufgaben, z. B. das Erstellen eines Chats oder das Planen einer Besprechung, indem sie die tiefen Links mit den erforderlichen Parametern vorab auffüllt. Dadurch wird vermieden, dass Benutzer Manuell Informationen eingeben müssen.
+* Ihre App automatisiert oder vereinfacht bestimmte Benutzeraufgaben, z. B. das Erstellen eines Chats oder das Planen einer Besprechung, indem sie die Tiefenlinks mit den erforderlichen Parametern auffüllt. Dadurch wird vermieden, dass Benutzer Manuell Informationen eingeben müssen.
 
 > [!NOTE]
 >
-> Ein Deeplink startet den Browser zuerst, bevor er wie folgt zu Inhalten und Informationen navigiert:
+> Ein Deeplink startet den Browser zuerst, bevor er zu Inhalt navigiert. Das Verhalten von tiefen Links auf Teams-Entitäten lautet wie folgt:
 >
 > **Registerkarte**:  
 > ✔ Navigiert direkt zur Deeplink-URL.
@@ -35,9 +36,9 @@ Sie können Links zu Informationen und Features in Teams erstellen. Beispiele, i
 
 ## <a name="deep-linking-to-your-tab"></a>Tiefe Verknüpfung mit Ihrer Registerkarte
 
-Sie können tiefe Links zu Entitäten in Teams erstellen. In der Regel wird dies zum Erstellen von Links verwendet, die zu Inhalten und Informationen auf Ihrer Registerkarte navigieren. Wenn Ihre Registerkarte beispielsweise eine Aufgabenliste enthält, können Teammitglieder Links zu einzelnen Aufgaben erstellen und freigeben. Wenn Sie den Link auswählen, navigiert er zu Ihrer Registerkarte, die sich auf das bestimmte Element konzentriert. Um dies zu implementieren, fügen Sie jedem Element eine "Kopierlink"-Aktion hinzu, unabhängig davon, wie die Benutzeroberfläche am besten geeignet ist. Wenn der Benutzer diese Aktion ergreift, rufen Sie ein Dialogfeld mit einem Link auf, den der Benutzer in die `shareDeepLink()` Zwischenablage kopieren kann. Wenn Sie diesen Aufruf machen, übergeben Sie auch eine ID [](~/tabs/how-to/access-teams-context.md) für Ihr Element, die Sie im Kontext erhalten, wenn der Link gefolgt wird und Ihre Registerkarte neu geladen wird.
+Sie können tiefe Links zu Entitäten in Teams erstellen. Dies wird verwendet, um Links zu Erstellen, die zu Inhalten und Informationen auf Ihrer Registerkarte navigieren. Wenn Ihre Registerkarte beispielsweise eine Aufgabenliste enthält, können Teammitglieder Links zu einzelnen Aufgaben erstellen und freigeben. Wenn Sie den Link auswählen, navigiert er zu Ihrer Registerkarte, die sich auf das bestimmte Element konzentriert. Um dies zu  implementieren, fügen Sie jedem Element eine Kopierlinkaktion hinzu, unabhängig davon, wie die Benutzeroberfläche am besten geeignet ist. Wenn der Benutzer diese Aktion ergreift, rufen Sie ein Dialogfeld mit einem Link auf, den der Benutzer in die `shareDeepLink()` Zwischenablage kopieren kann. Wenn Sie diesen Aufruf machen, übergeben Sie auch eine ID [](~/tabs/how-to/access-teams-context.md) für Ihr Element, die Sie im Kontext erhalten, wenn der Link gefolgt wird und Ihre Registerkarte neu geladen wird.
 
-Alternativ können Sie mithilfe des weiter unten in diesem Thema angegebenen Formats auch programmgesteuert DeepLinks generieren. Sie können diese in [Bot-](~/bots/what-are-bots.md) und [Connectornachrichten](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) verwenden, die Benutzer über Änderungen an Ihrer Registerkarte oder an Elementen in der Registerkarte informieren.
+Alternativ können Sie mithilfe des weiter unten in diesem Thema angegebenen Formats auch programmgesteuert DeepLinks generieren. Sie können DeepLinks in [Bot-](~/bots/what-are-bots.md) und [Connectornachrichten](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) verwenden, die Benutzer über Änderungen an Ihrer Registerkarte oder an Elementen in der Registerkarte informieren.
 
 > [!NOTE]
 > Dieser deep link ist anders als  die Links, die durch den Link zum Registerkartenmenüelement kopieren bereitgestellt werden, wodurch nur ein tiefer Link generiert wird, der auf diese Registerkarte verweist.
@@ -49,11 +50,11 @@ Alternativ können Sie mithilfe des weiter unten in diesem Thema angegebenen For
 
 Rufen Sie auf, um ein Dialogfeld anzuzeigen, das einen tiefen Link zu einem Element auf Ihrer Registerkarte enthält. `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
 
-Stellen Sie die folgenden Felder zur Verfügung:
+Geben Sie die folgenden Felder an:
 
-* `subEntityId`&emsp;Ein eindeutiger Bezeichner für das Element auf Ihrer Registerkarte, mit dem Sie eine tiefe Verknüpfung verwenden
-* `subEntityLabel`&emsp;Eine Bezeichnung für das Element, das zum Anzeigen des Tiefenlinks verwendet werden soll
-* `subEntityWebUrl`&emsp;Ein optionales Feld mit einer Fallback-URL, die verwendet werden soll, wenn der Client das Rendern der Registerkarte nicht unterstützt
+* `subEntityId`: Ein eindeutiger Bezeichner für das Element auf Ihrer Registerkarte, mit dem Sie eine tiefe Verknüpfung verwenden.
+* `subEntityLabel`: Eine Bezeichnung für das Element, das zum Anzeigen des Tiefenlinks verwendet werden soll.
+* `subEntityWebUrl`: Ein optionales Feld mit einer Fallback-URL, die verwendet werden soll, wenn der Client das Rendern der Registerkarte nicht unterstützt.
 
 ### <a name="generating-a-deep-link-to-your-tab"></a>Generieren eines tiefen Links zu Ihrer Registerkarte
 
@@ -69,17 +70,19 @@ Verwenden Sie das folgende Format für einen tiefen Link, den Sie auf einer Bot-
 
 > [!NOTE]
 > Wenn der Bot eine Nachricht mit einem deep link sendet, wird eine neue Browserregisterkarte geöffnet, wenn der Benutzer `TextBlock` den Link auswählt. Dies geschieht in Chrome und in der Microsoft Teams-Desktop-App, die beide unter Linux ausgeführt werden.
-> Wenn der Bot dieselbe Deep-Link-URL an sendet, wird die Registerkarte Teams auf der aktuellen Browserregisterkarte geöffnet, wenn der Benutzer `Action.OpenUrl` den Link auswählt. Es wird keine neue Browserregisterkarte geöffnet.
+> Wenn der Bot dieselbe Deep-Link-URL an sendet, wird die Registerkarte Teams auf der aktuellen Browserregisterkarte geöffnet, wenn der Benutzer `Action.OpenUrl` den Link auswählt. Eine neue Browserregisterkarte wird nicht geöffnet.
 
 Die Abfrageparameter sind:
 
-* `appId`&emsp;Die ID aus Ihrem Manifest; beispiel: "fe4a8eba-2a31-4737-8e33-e5fae6fee194"
-* `entityId`&emsp;Die ID für das Element auf der Registerkarte, die Sie beim Konfigurieren der [Registerkarte angegeben haben;](~/tabs/how-to/create-tab-pages/configuration-page.md) beispiel: "tasklist123"
-* `entityWebUrl`oder `subEntityWebUrl` &emsp; Ein optionales Feld mit einer Fallback-URL, das verwendet werden soll, wenn der Client das Rendern der Registerkarte nicht unterstützt, z. B. https://tasklist.example.com/123 " oder https://tasklist.example.com/list123/task456 "
-* `entityLabel`oder eine Bezeichnung für das Element auf Ihrer Registerkarte, die beim Anzeigen des #A0 verwendet werden soll, z. B. `subEntityLabel` &emsp; "Aufgabenliste 123" oder "Aufgabe 456"
-* `context`&emsp;Ein JSON-Objekt mit den folgenden Feldern:
-  * `subEntityId`&emsp;Eine ID für das Element _auf_ der Registerkarte; beispiel: "task456"
-  * `channelId`&emsp;Die Microsoft Teams-Kanal-ID, die im Registerkartenkontext verfügbar [ist;](~/tabs/how-to/access-teams-context.md) Beispiel: "19:cbe3683f25094106b826c9cada3afbe0@thread.skype". Diese Eigenschaft ist nur auf konfigurierbaren Registerkarten mit dem Bereich "Team" verfügbar. Sie ist nicht in statischen Registerkarten verfügbar, die einen Bereich von "persönlich" haben.
+| Parametername | Beschreibung | Beispiel |
+|:------------|:--------------|:---------------------|
+| `appId`&emsp; | Die ID aus Ihrem Manifest. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
+| `entityId`&emsp; | Die ID für das Element auf der Registerkarte, die Sie beim Konfigurieren der [Registerkarte angegeben haben.](~/tabs/how-to/create-tab-pages/configuration-page.md)|Tasklist123|
+| `entityWebUrl` oder `subEntityWebUrl`&emsp; | Ein optionales Feld mit einer Fallback-URL, die verwendet werden soll, wenn der Client das Rendern der Registerkarte nicht unterstützt. | https://tasklist.example.com/123 oder https://tasklist.example.com/list123/task456 |
+| `entityLabel` oder `subEntityLabel`&emsp; | Eine Bezeichnung für das Element auf Ihrer Registerkarte, die beim Anzeigen des Tiefenlinks verwendet werden soll. | Aufgabenliste 123 oder "Aufgabe 456 |
+| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| Ein JSON-Objekt mit den folgenden Feldern</br></br> * Eine ID für das Element auf der Registerkarte. </br></br> * Die Microsoft Teams-Kanal-ID, die im Registerkartenkontext verfügbar [ist.](~/tabs/how-to/access-teams-context.md) | 
+| `subEntityId`&emsp; | Eine ID für das Element auf der Registerkarte. |Task456 |
+| `channelId`&emsp; | Die Microsoft Teams-Kanal-ID, die im Registerkartenkontext verfügbar [ist.](~/tabs/how-to/access-teams-context.md) Diese Eigenschaft ist nur auf konfigurierbaren Registerkarten mit teamfähigem **Bereich verfügbar.** Es ist nicht in statischen Registerkarten verfügbar, die einen Bereich von **persönlichen haben.**| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 
 Beispiele:
 
@@ -90,6 +93,7 @@ Beispiele:
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass alle Abfrageparameter ordnungsgemäß URI codiert sind. Sie müssen den voran folgenden Beispielen folgen, indem Sie das letzte Beispiel verwenden:
+
 > ```javascript
 > var encodedWebUrl = encodeURI('https://tasklist.example.com/123/456&label=Task 456');
 > var encodedContext = encodeURI('{"subEntityId": "task456"}');
@@ -136,11 +140,11 @@ Beispiel: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@cont
 
 Die Abfrageparameter sind:
 
-* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Chats darstellen. Der Benutzer, der die Aktion ausführt, ist immer als Teilnehmer enthalten. Derzeit unterstützt das Feld Benutzer-ID den Azure AD UserPrincipalName, in der Regel nur eine E-Mail-Adresse.
+* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Chats darstellen. Der Benutzer, der die Aktion ausführt, ist immer als Teilnehmer enthalten. Derzeit unterstützt das Feld Benutzer-ID den Azure AD UserPrincipalName, z. B. nur eine E-Mail-Adresse.
 * `topicName`: Ein optionales Feld für den Anzeigenamen des Chats, bei einem Chat mit 3 oder mehr Benutzern. Wenn dieses Feld nicht angegeben ist, basiert der Anzeigename des Chats auf den Namen der Teilnehmer.
 * `message`: Ein optionales Feld für den Nachrichtentext, den Sie in das Verfassenfeld des aktuellen Benutzers einfügen möchten, während sich der Chat im Entwurfszustand befindet.
 
-Um diesen tiefen Link mit Ihrem Bot zu verwenden, können Sie dies als URL-Ziel in der Schaltfläche Ihrer Karte angeben oder über den `openUrl` Aktionstyp auf Aktion tippen.
+Um diesen tiefen Link mit Ihrem Bot zu verwenden, geben Sie dies als URL-Ziel in der Schaltfläche Ihrer Karte an, oder tippen Sie über den `openUrl` Aktionstyp auf Aktion.
 
 ## <a name="generate-deep-links-to-file-in-channel"></a>Generieren von tiefen Links zu Dateien im Kanal
 
@@ -184,7 +188,8 @@ Das folgende Deep Link-Format kann in einer Bot-, Connector- oder Messagingerwei
 
 Die Abfrageparameter sind:
 
-* `appID`: Ihre Manifest-ID fe4a8eba-2a31-4737-8e33-e5fae6fee194.
+* `appID`: Ihre Manifest-ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
+
 * `entityID`: Die Element-ID, die Sie beim [Konfigurieren der Registerkarte angegeben haben.](~/tabs/how-to/create-tab-pages/configuration-page.md) Beispiel: **tasklist123**.
 * `entityWebUrl`: Ein optionales Feld mit einer Fallback-URL, die verwendet werden soll, wenn der Client das Rendern der Registerkarte nicht unterstützt – https://tasklist.example.com/123 oder https://tasklist.example.com/list123/task456 .
 * `entityName`: Eine Bezeichnung für das Element auf Ihrer Registerkarte, die beim Anzeigen des Tiefenlinks, Aufgabenliste 123 oder Aufgabe 456 verwendet werden soll.
@@ -193,10 +198,10 @@ Beispiel: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee
 
 ## <a name="linking-to-the-scheduling-dialog"></a>Verknüpfen mit dem Planungsdialogfeld
 
-> [!Note]
+> [!NOTE]
 > Dieses Feature befindet sich derzeit in der Entwicklervorschau.
 
-Sie können tiefe Links zum integrierten Planungsdialogfeld von Teams erstellen. Dies ist besonders hilfreich, wenn Ihre App dem Benutzer dabei hilft, Kalender- oder Zeitplanungsaufgaben auszuführen.
+Sie können tiefe Links zum integrierten Planungsdialogfeld von Teams erstellen. Dies ist besonders hilfreich, wenn Ihre App dem Benutzer dabei hilft, kalender- oder terminbezogene Aufgaben auszuführen.
 
 ### <a name="generating-a-deep-link-to-the-scheduling-dialog"></a>Generieren eines tiefen Links zum Planungsdialogfeld
 
@@ -216,3 +221,8 @@ Die Abfrageparameter sind:
 > Derzeit wird das Angeben des Speicherorts nicht unterstützt. Sie müssen den UTC-Offset angeben, d. h. Zeitzonen beim Generieren der Start- und Endzeiten.
 
 Um diesen tiefen Link mit Ihrem Bot zu verwenden, können Sie dies als URL-Ziel in der Schaltfläche Ihrer Karte angeben oder über den `openUrl` Aktionstyp auf Aktion tippen.
+
+## <a name="see-also"></a>Siehe auch
+
+> [!div class="nextstepaction"]
+> [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)

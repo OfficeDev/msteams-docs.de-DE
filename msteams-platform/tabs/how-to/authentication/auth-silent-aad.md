@@ -2,13 +2,14 @@
 title: Automatische Authentifizierung
 description: Beschreibt die automatische Authentifizierung
 ms.topic: conceptual
+localization_priority: Normal
 keywords: teams authentication SSO silent AAD
-ms.openlocfilehash: 7a68c532cadf181b15c16d6bc4d4ab861d5c9922
-ms.sourcegitcommit: 2bf651dfbaf5dbab6d466788f668e7a6c5d69c36
+ms.openlocfilehash: 0c75c6d50fd1191b6ea8548d65c9df4ce8453898
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "51421608"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019601"
 ---
 # <a name="silent-authentication"></a>Automatische Authentifizierung
 

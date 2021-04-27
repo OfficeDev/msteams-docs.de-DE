@@ -2,13 +2,14 @@
 title: Erstellen einer großartigen App-Detailseite
 description: Beschreibt die Anforderungen für die Seite "App-Details"
 ms.topic: reference
+localization_priority: Normal
 keywords: teams publish store office publishing policy AppSource content Metadata screenshot logo description app name icons short description
-ms.openlocfilehash: e7513fbb4ed2e56844931d1a587b6ee062e014a4
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: 6b763180cc2beb1cef6095110af0f37169e1f7c8
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634544"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020793"
 ---
 # <a name="build-a-great-app-details-page"></a>Erstellen einer großartigen App-Detailseite
 

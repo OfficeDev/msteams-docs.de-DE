@@ -1,146 +1,147 @@
 ---
-title: Entwerfen der Registerkarte für Desktop und Webdienste
-description: Hier erfahren Sie, wie Sie eine Registerkarte "Teams" (Desktop und Internet) entwerfen und das Microsoft Teams UI Kit abrufen.
+title: Entwerfen Ihrer Registerkarte für Desktop und Web
+description: Erfahren Sie, wie Sie eine Registerkarte Teams (Desktop und Web) entwerfen und das Microsoft Teams UI Kit erhalten.
 author: heath-hamilton
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 692a21c78dc86cbca5bf248e55d0332bd71c6b92
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 840cb9f65f867358615ea006594433d8a1099111
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49604671"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019685"
 ---
-# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>Entwerfen der Registerkarte für Microsoft Teams Desktop und Internet
+# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>Entwerfen Ihrer Registerkarte für Microsoft Teams Desktop und Web
 
-Eine Registerkarte ist eine große Leinwand für Inhalte, die die Zusammenarbeit erleichtert. Um Ihr App-Design zu führen, werden in den folgenden Informationen beschrieben und veranschaulicht, wie Benutzer Registerkarten in Microsoft Teams hinzufügen, verwenden und verwalten können.
+Eine Registerkarte ist ein großer Canvas-Bereich für Ihre Inhalte. Um Ihr App-Design zu leiten, wird in den folgenden Informationen beschrieben und veranschaulicht, wie Benutzer Registerkarten in Teams hinzufügen, verwenden und verwalten können.
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
-Umfassende Registerkarten-Entwurfsrichtlinien, einschließlich der Elemente, die Sie nach Bedarf abrufen und ändern können, finden Sie im Microsoft Teams UI Kit. Das UI Kit enthält auch wichtige Themen wie Barrierefreiheit und Anpassungsfähigkeit, die hier nicht behandelt werden.
+Im Microsoft Teams UI Kit finden Sie umfassende Richtlinien für den Registerkartenentwurf, einschließlich Elemente, die Sie bei Bedarf packen und ändern können. Das Benutzeroberflächenkit enthält auch wichtige Themen wie Barrierefreiheit und reaktionsschnelle Größenanpassung, die hier nicht behandelt werden.
 
 > [!div class="nextstepaction"]
-> [Abrufen des Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-tab"></a>Registerkarte hinzufügen
 
-Sie können eine Registerkarte aus dem Microsoft Teams Store (AppSource) oder einen der folgenden Kontexte hinzufügen:
+Sie können eine Registerkarte aus dem Teams Store (AppSource) oder in einem der folgenden Kontexte hinzufügen:
 
 * Chat
 * Kanal
 * Besprechung (vor, während oder nach der Besprechung)
 
-Im folgenden Beispiel wird gezeigt, wie eine Registerkarte in einem Kanal hinzugefügt wird.
+Das folgende Beispiel zeigt, wie eine Registerkarte in einem Kanal hinzugefügt wird.
 
 :::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Beispiel zeigt eine Registerkarte, die in einem Kanal hinzugefügt wird." border="false":::
 
 ## <a name="set-up-a-tab"></a>Einrichten einer Registerkarte
 
-Es gibt einen kurzen Einrichtungsprozess, um eine App als Kanal, Chat oder Besprechungs Registerkarte hinzuzufügen. Die Erfahrung liegt weitgehend an Ihnen. Sie können beispielsweise eine Beschreibung der Verwendung der APP und einiger optionaler Einstellungen haben. Fügen Sie hier einen Anmelde Schritt ein, wenn Sie Benutzer authentifizieren müssen.
+Es gibt einen kurzen Einrichtungsprozess zum Hinzufügen einer App als Kanal, Chat oder Besprechungsregisterkarte. Die Erfahrung liegt weitgehend bei Ihnen. Sie könnten beispielsweise eine Beschreibung der Verwendung der App und einige optionale Einstellungen haben. Schließen Sie hier einen Anmeldeschritt ein, wenn Sie Benutzer authentifizieren müssen.
 
-### <a name="tab-configuration-modal"></a>Modale Konfiguration der Registerkarte
+### <a name="tab-configuration-modal"></a>Modale Registerkartenkonfiguration
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Beispiel zeigt eine modale Registerkartenkonfiguration." border="false":::
 
-### <a name="anatomy-tab-configuration-modal"></a>Anatomie: modale Konfiguration der Registerkarte
+### <a name="anatomy-tab-configuration-modal"></a>Anatomie: Modale Tabkonfiguration
 
-:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Abbildung der Benutzeroberflächen Anatomie einer Registerkartenkonfiguration mit modaler Darstellung." border="false":::
+:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Abbildung der Ui-Anatomie einer modalen Registerkartenkonfiguration." border="false":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
-|1|**App-Logo**: vollfarbiges App-Logo Ihrer APP.|
-|2 |**App-Name**: vollständiger Name Ihrer APP.|
-|3 |**iframe**: reaktionsfähiger Speicherplatz für den Inhalt Ihrer APP (beispielsweise Registerkarteneinstellungen oder Authentifizierung).|
-|4 |**Info über Link**: öffnet ein Dialogfeld mit weiteren Informationen zur APP, beispielsweise eine vollständige Beschreibung, Berechtigungen, die für die APP erforderlich sind, sowie Links zu ihren Datenschutzrichtlinien und Nutzungsbedingungen.
-|5 |**Schließen-Schaltfläche**: schließt den modal.|
-|6 |**Teammitglieder Benachrichtigen Option**: das modale fragt, ob Sie einen Beitrag erstellen lassen möchten, bei dem andere wissen, dass Sie eine Registerkarte hinzugefügt haben.|
-|7 |**Zurück-Schaltfläche**: wechselt zum vorherigen Schritt basierend auf der Stelle, an der das Dialogfeld geöffnet wurde.|
-|8 |**Schaltfläche Speichern**: schließt das Registerkarten Setup ab.|
+|1|**App-Logo:** Vollfarbiges App-Logo Ihrer App.|
+|2|**App-Name**: Vollständiger Name Ihrer App.|
+|3|**iframe**: Responsive space for your app's content (for example, tab settings or authentication).|
+|4 |**Über Link**: Öffnet ein Dialogfeld, in dem weitere Informationen zur App angezeigt werden, z. B. eine vollständige Beschreibung, von der App erforderliche Berechtigungen und Links zu Ihrer Datenschutzrichtlinie und den Nutzungsbedingungen.
+|5 |**Schaltfläche Schließen**: Schließt den modalen.|
+|6 |**Option Teammitglieder benachrichtigen:** Der Modal fragt, ob Sie einen Beitrag erstellen möchten, der andere darüber informiert, dass Sie eine Registerkarte hinzugefügt haben.|
+|7 |**Schaltfläche "Zurück":** Geht zum vorherigen Schritt, basierend auf dem Ort, an dem das Dialogfeld geöffnet wurde.|
+|8 |**Schaltfläche "Speichern":** Schließt die Registerkarteneinrichtung ab.|
 
-### <a name="tab-authentication-with-single-sign-on"></a>Tab-Authentifizierung mit einmaligem Anmelden
+### <a name="tab-authentication-with-single-sign-on"></a>Registerkartenauthentifizierung mit einmaligem Anmelden
 
-Sie können einen Schritt hinzufügen, in dem sich Benutzer zunächst mit Ihren Microsoft-Anmeldeinformationen anmelden müssen. Diese Authentifizierungsmethode wird als einmaliges Anmelden (Single Sign-on, SSO) bezeichnet.
+Sie können einen Schritt hinzufügen, in dem sich Benutzer zuerst mit ihren Microsoft-Anmeldeinformationen anmelden müssen. Diese Authentifizierungsmethode wird als einmaliges Anmelden (Single Sign-On, SSO) bezeichnet.
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Beispiel zeigt einen Bildschirm für die Registerkarten Authentifizierung." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Beispiel zeigt einen Registerkartenauthentifizierungsbildschirm." border="false":::
 
-### <a name="designing-a-tab-setup-with-ui-templates"></a>Entwerfen eines Registerkarten-Setups mit Benutzeroberflächenvorlagen
+### <a name="designing-a-tab-setup-with-ui-templates"></a>Entwerfen einer Registerkarteneinrichtung mit Benutzeroberflächenvorlagen
 
-Verwenden Sie eine der folgenden Microsoft Teams-Benutzeroberflächenvorlagen, die Ihnen bei der Gestaltung ihrer Registerkarten Einrichtung helfen:
+Verwenden Sie eine der folgenden Teams-UI-Vorlagen, um die Einrichtung ihrer Registerkarten zu gestalten:
 
-* [List](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem scannable-Format anzeigen und Benutzern das Ausführen von Aktionen für eine gesamte Liste oder einzelne Elemente gestatten.
-* [Formular](../../concepts/design/design-teams-app-ui-templates.md#form): Formulare dienen zum Sammeln, validieren und Übermitteln von Benutzereingaben in strukturierter Form.
-* [Leer State](../../concepts/design/design-teams-app-ui-templates.md#empty-state): die leere Statusvorlage kann für viele Szenarien verwendet werden, einschließlich Anmeldung, Erstausführung, Fehlermeldungen und mehr.
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem scannierbaren Format anzeigen und Benutzern das Ausführen von Aktionen für eine gesamte Liste oder einzelne Elemente ermöglichen.
+* [Formular](../../concepts/design/design-teams-app-ui-templates.md#form): Formulare sind für die strukturierte Erfassung, Validierung und Übermittlung von Benutzereingaben.
+* [Leerer](../../concepts/design/design-teams-app-ui-templates.md#empty-state)Zustand: Die Vorlage für den leeren Zustand kann für viele Szenarien verwendet werden, z. B. für die Anmeldung, die Erstlauferfahrung, Fehlermeldungen und vieles mehr.
 
 ## <a name="view-a-tab"></a>Anzeigen einer Registerkarte
 
-Registerkarten bieten eine Vollbildfunktion in Microsoft Teams, in der Sie kollaborativen Inhalt anzeigen können – solche Aufgaben Bretter und Dashboards – und wichtige Informationen.
+Registerkarten bieten eine Vollbildweberfahrung in Teams, in der Sie gemeinsame Inhalte wie Aufgabenboards und Dashboards sowie wichtige Informationen anzeigen können.
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Beispiel zeigt eine Registerkarte mit einem Task Board." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Beispiel zeigt eine Registerkarte mit einem Aufgabenboard." border="false":::
 
 ### <a name="anatomy-tab"></a>Anatomie: Registerkarte
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Abbildung der Benutzeroberflächen Anatomie einer Registerkarte." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Abbildung der Ui-Anatomie einer Registerkarte." border="false":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
-|1|**Tab Name**: Navigations Bezeichnung für die Registerkarte.|
-|2 |**Registerkarten Überlauf**: Öffnet Registerkarten Aktionen wie umbenennen und entfernen.|
-|3 |**Tab Chat**: öffnet einen Chat-Thread auf der rechten Seite, sodass Benutzer eine Unterhaltung neben dem Inhalt haben.|
-|4 |**iframe**: zeigt den Inhalt Ihrer Registerkarte an.
+|1|**Registerkartenname:** Navigationsbezeichnung für Ihre Registerkarte.|
+|2|**Registerkartenüberlauf**: Öffnet Registerkartenaktionen, z. B. Umbenennen und Entfernen.|
+|3|**Tab-Chat:** Öffnet rechts einen Chatthread, sodass Benutzer neben dem Inhalt eine Unterhaltung führen können.|
+|4 |**iframe**: Zeigt den Inhalt Ihrer Registerkarte an.
 
 ### <a name="designing-a-tab-with-ui-templates"></a>Entwerfen einer Registerkarte mit Benutzeroberflächenvorlagen
 
-Verwenden Sie eine der folgenden Teams-Benutzeroberflächenvorlagen, um die Gestaltung ihrer Tab-Oberfläche zu unterstützen:
+Verwenden Sie eine der folgenden Teams-UI-Vorlagen, um die Registerkartenoberfläche zu entwerfen:
 
-* [List](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem scannable-Format anzeigen und Benutzern das Ausführen von Aktionen für eine gesamte Liste oder einzelne Elemente gestatten.
-* [Task Board](../../concepts/design/design-teams-app-ui-templates.md#task-board): ein Aufgaben Gremium, das manchmal als Kanban-Board oder als Swim Lanes bezeichnet wird, ist eine Sammlung von Karten, die häufig zum Nachverfolgen des Status von Arbeitsaufgaben oder Tickets verwendet werden.
-* [Dashboard](../../concepts/design/design-teams-app-ui-templates.md#dashboard): ein Dashboard ist eine Leinwand mit mehreren Karten, die eine Übersicht über Daten oder Inhalte bieten.
-* [Formular](../../concepts/design/design-teams-app-ui-templates.md#form): Formulare dienen zum Sammeln, validieren und Übermitteln von Benutzereingaben in strukturierter Form.
-* [Leer State](../../concepts/design/design-teams-app-ui-templates.md#empty-state): die leere Statusvorlage kann für viele Szenarien verwendet werden, einschließlich Anmeldung, Erstausführung, Fehlermeldungen und mehr.
-* [Linker NAV](../../concepts/design/design-teams-app-ui-templates.md#left-nav): die linke Navigationsvorlage kann hilfreich sein, wenn Ihre Registerkarte eine Navigation erfordert. Im Allgemeinen sollten Sie die Registerkartennavigation auf ein Minimum beschränken.
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem scannierbaren Format anzeigen und Benutzern das Ausführen von Aktionen für eine gesamte Liste oder einzelne Elemente ermöglichen.
+* [Task board:](../../concepts/design/design-teams-app-ui-templates.md#task-board)Ein Task Board, manchmal auch als Kanbanboard oder Schwimmstreifen bezeichnet, ist eine Sammlung von Karten, die häufig zum Nachverfolgen des Status von Arbeitselementen oder Tickets verwendet werden.
+* [Dashboard:](../../concepts/design/design-teams-app-ui-templates.md#dashboard)Ein Dashboard ist ein Canvas mit mehreren Karten, die eine Übersicht über Daten oder Inhalte bieten.
+* [Formular](../../concepts/design/design-teams-app-ui-templates.md#form): Formulare sind für die strukturierte Erfassung, Validierung und Übermittlung von Benutzereingaben.
+* [Leerer](../../concepts/design/design-teams-app-ui-templates.md#empty-state)Zustand: Die Vorlage für den leeren Zustand kann für viele Szenarien verwendet werden, z. B. für die Anmeldung, die Erstlauferfahrung, Fehlermeldungen und vieles mehr.
+* [Linkes](../../concepts/design/design-teams-app-ui-templates.md#left-nav)Navigationsmenü: Die linke Navigationsvorlage kann hilfreich sein, wenn Ihre Registerkarte eine Navigation erfordert. Im Allgemeinen sollten Sie die Registerkartennavigation auf ein Minimum beschränken.
 
 ## <a name="use-a-tab-to-collaborate"></a>Verwenden einer Registerkarte für die Zusammenarbeit
 
-Mithilfe von Registerkarten können Unterhaltungen zu Inhalten an einem zentralen Ort erleichtert werden.
+Registerkarten erleichtern Unterhaltungen über Inhalte an einem zentralen Ort.
 
-### <a name="thread-discussion"></a>Thread Diskussion
+### <a name="thread-discussion"></a>Threaddiskussion
 
-Benutzer können automatisch in einem Kanal oder Chat Posten, nachdem Sie eine neue Registerkarte hinzugefügt haben. Dies benachrichtigt nicht nur Teammitglieder über den neuen Inhalt und stellt einen Link zur Registerkarte zur Verfügung, damit die Benutzer über die Registerkarte sprechen können.
+Benutzer können automatisch in einem Kanal oder Chat posten, nachdem sie eine neue Registerkarte hinzugefügt haben. Dies benachrichtigt nicht nur Teammitglieder über den neuen Inhalt und stellt einen Link zur Registerkarte zur Seite, sondern ermöglicht es Benutzern, über die Registerkarte zu sprechen.
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Beispiel zeigt eine Registerkarte, die in einem Kanal Thread erörtert wird." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Beispiel zeigt eine Registerkarte, die in einem Kanalthread behandelt wird." border="false":::
 
-### <a name="side-by-side-discussion"></a>Parallele Diskussionen
+### <a name="side-by-side-discussion"></a>Side-by-Side-Diskussion
 
-Benutzer können beim Anzeigen des Inhalts der Registerkarte eine Unterhaltung als nächstes haben.
+Benutzer können als Nächstes eine Unterhaltung führen, während sie den Inhalt der Registerkarte anzeigen.
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Beispiel zeigt eine Registerkarte mit geöffnetem Chat auf der rechten Seite." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Beispiel zeigt eine Registerkarte mit einem auf der rechten Seite geöffneten Chat." border="false":::
 
 ### <a name="permissions-and-role-based-views"></a>Berechtigungen und rollenbasierte Ansichten
 
-Die Registerkarte kann für Benutzer je nach Ihren Berechtigungen unterschiedlich sein. Beispielsweise kann ein Benutzer auf die Registerkarte zugreifen, ohne sich anzumelden. Ein anderer Benutzer muss jedoch leicht unterschiedliche Inhalte unterzeichnen und sehen.
+Die Registerkartenerfahrung kann für Benutzer je nach ihren Berechtigungen unterschiedlich sein. Beispielsweise kann ein Benutzer auf die Registerkarte zugreifen, ohne sich anmelden zu müssen. Ein anderer Benutzer muss sich jedoch signieren und sieht leicht andere Inhalte.
 
 ## <a name="manage-a-tab"></a>Verwalten einer Registerkarte
 
-Sie können Optionen einschließen, um eine Registerkarte umzubenennen, zu entfernen oder zu ändern.
+Sie können Optionen zum Umbenennen, Entfernen oder Ändern einer Registerkarte hinzufügen.
 
-### <a name="anatomy-tab-menu"></a>Anatomie: Register Menü
+### <a name="anatomy-tab-menu"></a>Anatomie: Registerkartenmenü
 
-:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Abbildung der Benutzeroberflächen Anatomie eines Registerkarten Menüs" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Abbildung der Ui-Anatomie eines Registerkartenmenüs." border="false":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
-|1|**Settings**: (optional) ermöglicht Benutzern, die Einstellungen einer Registerkarte zu ändern, nachdem Sie hinzugefügt wurde.|
-|2 |**Umbenennen**: ermöglicht Benutzern, der Registerkarte einen Namen zu geben, der für das Team aussagekräftiger ist.|
-|3 |**Remove**: entfernt die Registerkarte aus dem Kanal, dem Chat oder der Besprechung.|
+|1|**Einstellungen**: (Optional) Ermöglicht Benutzern das Ändern der Einstellungen einer Registerkarte nach dem Hinzufügen.|
+|2|**Rename**: Ermöglicht Benutzern, der Registerkarte einen Namen zu geben, der für das Team aussagekräftiger ist.|
+|3|**Remove**: Entfernt die Registerkarte aus dem Kanal, Chat oder besprechung.|
 
-## <a name="tab-notifications-and-deep-linking"></a>Registerkarten Benachrichtigungen und Deep Linking
+## <a name="tab-notifications-and-deep-linking"></a>Registerkartenbenachrichtigungen und tiefe Verknüpfungen
 
-Sie können eine Nachricht mit einem Deep-Link an Ihre Registerkarte senden. Beispielsweise zeigt eine Karte eine Zusammenfassung der Fehlerdaten an, die ein Benutzer auswählen kann, um den gesamten Fehler auf einer Registerkarte anzuzeigen. Durch das Senden von Nachrichten zur Tab-Aktivität wird die Bekanntheit erhöht, ohne dass alle Personen explizit benachrichtigt werden (also Aktivität ohne Rauschen). Bei Bedarf können Sie auch bestimmte Benutzer @mention.
+Sie können eine Nachricht mit einem tiefen Link zu Ihrer Registerkarte senden. Beispielsweise zeigt eine Karte eine Zusammenfassung der Fehlerdaten an, die ein Benutzer auswählen kann, um den gesamten Fehler auf einer Registerkarte zu sehen. Das Senden von Nachrichten zu Registerkartenaktivitäten erhöht das Bewusstsein, ohne dass alle Benutzer (d. h. Aktivitäten ohne Geräusche) explizit benachrichtigt werden. Sie können auch @mention benutzer bei Bedarf.
 
-Benutzer von Tab-Aktivität auf eine der folgenden Arten Benachrichtigen:
+Benachrichtigen Sie Die Benutzer über die Registerkartenaktivität auf eine der folgenden Weisen:
 
-* **Bot**: Diese Methode wird vor allem bevorzugt, wenn der Tab-Thread gezielt ist. Die threaded-Unterhaltung der Registerkarte wird als kürzlich aktiviert in die Ansicht verschoben. Diese Methode ermöglicht auch eine gewisse Raffinesse in der Art und Weise, wie die Benachrichtigung gesendet wird.
-* **Meldung**: eine Nachricht wird im Aktivitätsfeed des Benutzers mit einem [tiefen Link zur Registerkarte](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true)angezeigt.
+* **Bot**: Diese Methode wird vor allem dann bevorzugt, wenn der Registerkartenthread gezielt ist. Die Thread-Unterhaltung der Registerkarte wird als zuletzt aktiv angezeigt. Diese Methode ermöglicht auch eine gewisse Raffinesse in der Art und Weise, wie die Benachrichtigung gesendet wird.
+* **Nachricht**: Eine Nachricht wird im Aktivitätsfeed des Benutzers mit einem tiefen [Link zur Registerkarte angezeigt.](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true)
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
@@ -148,19 +149,19 @@ Benutzer von Tab-Aktivität auf eine der folgenden Arten Benachrichtigen:
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Abbildung, die zeigt, was mit dem Design der Registerkartennavigation zu tun ist." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Abbildung zeigt, was mit dem Registerkartennavigationsdesign zu tun ist." border="false":::
 
-#### <a name="do-facilitate-conversation"></a>Do: Unterstützung für Unterhaltungen
+#### <a name="do-facilitate-conversation"></a>Do: Unterhaltung erleichtern
 
-Inhalte und Komponenten einbeziehen, über die Menschen sprechen können. Wenn er nicht in den Kontext eines Chats, Kanals oder einer Besprechung passt, gehört er nicht in Ihre Registerkarte.
+Fügen Sie Inhalte und Komponenten ein, über die Personen sprechen können. Wenn sie nicht in den Kontext eines Chats, Kanals oder einer Besprechung passt, gehört sie nicht zu Ihrer Registerkarte.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="Illustration, die zeigt, was nicht mit dem Design der Registerkartennavigation zu tun ist." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="Beispiel zeigt, was nicht mit dem Design der Registerkartennavigation zu tun ist." border="false":::
 
-#### <a name="dont-treat-your-tab-like-any-other-webpage"></a>Nicht: behandeln ihrer Registerkarte wie jede andere Webseite
+#### <a name="dont-treat-your-tab-like-any-other-webpage"></a>Don't: Behandeln Ihrer Registerkarte wie jede andere Webseite
 
-Eine Registerkarte ist keine Webseite, die von jemand einmal angezeigt werden kann. Auf einer Registerkarte sollten Ihre wichtigsten, relevanten Inhalte angezeigt werden, die die Benutzer benötigen, um gemeinsam etwas zu erreichen.
+Eine Registerkarte ist keine Webseite, die jemand einmal anzeigen kann. Auf einer Registerkarte sollten Ihre wichtigsten, relevanten Inhalte angezeigt werden, die die Personen benötigen, um gemeinsam etwas zu erreichen.
 
    :::column-end:::
 :::row-end:::
@@ -169,19 +170,19 @@ Eine Registerkarte ist keine Webseite, die von jemand einmal angezeigt werden ka
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Abbildung, die zeigt, was mit dem Design der Registerkartennavigation zu tun ist." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Beispiel, in dem gezeigt wird, was mit dem Registerkartennavigationsdesign zu tun ist." border="false":::
 
-#### <a name="do-limit-tasks-and-data"></a>Do: begrenzen von Vorgängen und Daten
+#### <a name="do-limit-tasks-and-data"></a>Do: Einschränken von Aufgaben und Daten
 
-Registerkarten funktionieren am besten, wenn Sie bestimmte Anforderungen erfüllen. Einschließen einer begrenzten Gruppe von Aufgaben und Daten, die für das Team oder die Gruppe relevant sind.
+Registerkarten funktionieren am besten, wenn sie bestimmte Anforderungen erfüllen. Schließen Sie eine begrenzte Anzahl von Aufgaben und Daten ein, die für das Team oder die Gruppe relevant sind.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Illustration, die zeigt, was nicht mit dem Design der Registerkartennavigation zu tun ist." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Abbildung, die zeigt, was nicht mit dem Design der Registerkartennavigation zu tun ist." border="false":::
 
-#### <a name="dont-embed-your-entire-app"></a>Nicht: Einbetten der gesamten App
+#### <a name="dont-embed-your-entire-app"></a>Don't: Embed your entire app
 
-Die Verwendung einer Registerkarte zum Anzeigen einer ganzen app mit mehrstufiger Navigation und komplexen Interaktionen führt zu Informationsüberlastung.
+Die Verwendung einer Registerkarte zum Anzeigen einer gesamten App mit mehrstufiger Navigation und komplexen Interaktionen führt zu Einer Informationsüberlastung.
 
    :::column-end:::
 :::row-end:::
@@ -190,17 +191,17 @@ Die Verwendung einer Registerkarte zum Anzeigen einer ganzen app mit mehrstufige
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Abbildung, die zeigt, was mit dem Design der Registerkarten Einrichtung geschieht." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Abbildung, die zeigt, was mit dem Design der Registerkarteneinrichtung zu tun ist." border="false":::
 
-#### <a name="do-keep-it-simple"></a>Do: einfache Aufbewahrung
+#### <a name="do-keep-it-simple"></a>Do: Keep it simple
 
-Wenn Ihre APP eine Authentifizierung erfordert, versuchen Sie, Microsoft Single Sign-on (SSO) zu integrieren, um eine nahtlose Anmeldung zu erzielen. Schließen Sie außerdem nur wichtige Informationen und Schritte zum Hinzufügen der Registerkarte ein.
+Wenn Ihre App eine Authentifizierung erfordert, versuchen Sie, Microsoft single sign-on (SSO) zu integrieren, um eine nahtlose Anmeldung zu ermöglichen. Fügen Sie außerdem nur wichtige Informationen und Schritte zum Hinzufügen der Registerkarte hinzu.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Abbildung zeigt, was mit dem Design der Registerkarten Einrichtung nicht getan werden kann." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Abbildung, die zeigt, was nicht mit dem Design der Registerkarteneinrichtung zu tun ist." border="false":::
 
-#### <a name="dont-have-too-many-steps"></a>Nicht: zu viele Schritte
+#### <a name="dont-have-too-many-steps"></a>Don't: Have too many steps
 
 Entfernen Sie alle unnötigen Schritte zum Hinzufügen einer Registerkarte.
 
@@ -211,26 +212,26 @@ Entfernen Sie alle unnötigen Schritte zum Hinzufügen einer Registerkarte.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Illustration, die zeigt, was mit der Tab-Funktion zu tun ist." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Abbildung, die zeigt, was mit dem Registerkarten-Theming zu tun ist." border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: nutzen Sie die Vorteile von Microsoft Teams-Farb Token
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: Nutzen von Teams-Farbtoken
 
-Jedes Microsoft Teams-Design verfügt über ein eigenes Farbschema. Um Designänderungen automatisch zu behandeln, verwenden Sie <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">Farb Token (Fluent UI)</a> in Ihrem Design.
+Jedes Teams-Design verfügt über ein eigenes Farbschema. Verwenden Sie Farbtoken <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">(Fluent UI)</a> in Ihrem Entwurf, um Designänderungen automatisch zu verarbeiten.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Illustration, die zeigt, was mit der Tab-Funktion nicht getan werden kann." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Abbildung, die zeigt, was nicht mit Registerkarten-Theming zu tun ist." border="false":::
 
-#### <a name="dont-hard-code-color-values"></a>Nicht: Farb Werte mit festem Code
+#### <a name="dont-hard-code-color-values"></a>Don't: Hartcodefarbwerte
 
-Wenn Sie keine Microsoft Teams-Farb Token verwenden, sind Ihre Designs weniger skalierbar und benötigen mehr Zeit zum Verwalten.
+Wenn Sie keine Teams-Farbtoken verwenden, sind Ihre Designs weniger skalierbar und brauchen mehr Zeit für die Verwaltung.
 
    :::column-end:::
 :::row-end:::
 
-## <a name="validate-your-design"></a>Überprüfen des Designs
+## <a name="validate-your-design"></a>Validieren Ihres Designs
 
-Wenn Sie Ihre APP in AppSource veröffentlichen möchten, sollten Sie sich mit den Entwurfsproblemen vertraut machen, die häufig dazu führen, dass apps während der Übermittlung fehlschlagen.
+Wenn Sie Ihre App in AppSource veröffentlichen möchten, sollten Sie die Entwurfsprobleme verstehen, die häufig dazu führen, dass Apps während der Übermittlung fehlschlagen.
 
 > [!div class="nextstepaction"]
-> [Überprüfen der Entwurfs Validierungsrichtlinien](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
+> [Überprüfen der Richtlinien zur Designvalidierung](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

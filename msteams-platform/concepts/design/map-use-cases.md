@@ -3,13 +3,14 @@ title: Ordnen Sie Ihre Anwendungsfälle den Funktionen der Teams-App zu.
 author: clearab
 description: Auswählen des richtigen App-Bereichs
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 3ade254d4042e80ea13201bd5936fd6bd326a0b2
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: 693adaae96cdf65a04c591d51c57d4bf7fe972b1
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654300"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019874"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Ordnen Sie Ihre Anwendungsfälle den Funktionen der Teams-App zu.
 

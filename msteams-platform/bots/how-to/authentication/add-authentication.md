@@ -3,13 +3,14 @@ title: Hinzufügen der Authentifizierung zu Ihrem Teams-Bot
 author: clearab
 description: Hinzufügen der OAuth-Authentifizierung zu einem Bot in Microsoft Teams.
 ms.topic: how-to
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 71a24dad47b3686d207df3f4e3521bbe46508cb9
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: d54d7fadb13626bb38de3a907b966f026cc6c485
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585869"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020956"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Hinzufügen der Authentifizierung zu Ihrem Teams-Bot
 
@@ -151,7 +152,7 @@ Hinweis: Es gibt zwei Optionen für Dienstanbieter hier- Azure AD V1 und Azure A
 
     ![teams bots app auth connection string adv1 view](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern** aus.
 
 #### <a name="azure-ad-v2"></a>Azure AD V2
 
@@ -174,7 +175,7 @@ Hinweis: Es gibt zwei Optionen für Dienstanbieter hier- Azure AD V1 und Azure A
 
     1. Geben **Sie für** Bereiche eine durch Leerzeichen getrennte Liste von Graphberechtigungen ein, die für diese Anwendung erforderlich sind, z. B.: User.Read User.ReadBasic.All Mail.Read 
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern** aus.
 
 ### <a name="test-the-connection"></a>Testen der Verbindung
 

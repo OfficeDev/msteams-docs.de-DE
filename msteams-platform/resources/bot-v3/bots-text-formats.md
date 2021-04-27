@@ -3,13 +3,14 @@ title: Unterstützte Textformatierung in Unterhaltungen
 description: Beschreibt die Unterstützung der Textformatierung in Botunterhaltungen
 keywords: Bots Unterhaltungen Messaging
 ms.topic: how-to
+localization_priority: Normal
 ms.date: 03/29/2018
-ms.openlocfilehash: d8cb4ffd18871737ed4a64443800938f424910c9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 9e89e1171907929eebb9f9eb3809f4ab920583a4
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696059"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019748"
 ---
 # <a name="formatting-bot-messages"></a>Formatierung von Bot-Mitteilungen
 

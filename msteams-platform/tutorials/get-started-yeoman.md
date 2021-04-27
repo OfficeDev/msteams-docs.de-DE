@@ -2,14 +2,15 @@
 title: Lernprogramm – Erstellen Ihrer ersten App mithilfe des Yeoman-Generators
 description: Erfahren Sie, wie Sie mit dem Erstellen von Microsoft Teams-Apps mit dem Yeoman-Generator beginnen.
 keywords: erste Schritte node.js nodejs yeoman
+localization_priority: Normal
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: 81cbdbfa213f415eebae9bb63d76c39599b56c01
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: 9efbe6f6e6502120f1afdadb9b538182f1406c56
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654411"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018432"
 ---
 # <a name="create-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Erstellen Ihrer ersten Microsoft Teams-App mithilfe des Yeoman-Generators
 

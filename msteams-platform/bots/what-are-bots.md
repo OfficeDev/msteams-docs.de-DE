@@ -3,13 +3,14 @@ title: Bots in Microsoft Teams
 author: clearab
 description: Eine Übersicht über Bots in Microsoft Teams.
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 08777e6d678bd75b56072412af46e3eb974c3678
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 70240b7396fc5e7a77749dc4e7326bfb30ea4415
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696894"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020891"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots in Microsoft Teams
 
@@ -45,7 +46,7 @@ Mit Microsoft Graph-APIs für Anrufe und Onlinebesprechungen können Microsoft T
 
 Sie können die Teams-Bot-APIs verwenden, um Informationen für ein oder mehrere Mitglieder eines Chats oder Teams zu erhalten. Weitere Informationen finden Sie [unter Änderungen an Teams-Bot-APIs zum Abrufen von Team- oder Chatmitgliedern.](~/resources/team-chat-member-api-changes.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 > [!div class="nextstepaction"]
 > [Erstellen eines Bots für Teams](~/bots/how-to/create-a-bot-for-teams.md)

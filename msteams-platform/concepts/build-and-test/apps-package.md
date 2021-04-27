@@ -1,13 +1,14 @@
 ---
 title: Packen Ihrer App
 description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App zum Testen, Hochladen und Speichern der Veröffentlichung packen.
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 222ea5459b3496c00b1186f15a68c3288ce419f7
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: c8341f3d83b5e6610e44276d6732affa1d1c1e91
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922510"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020140"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Erstellen eines App-Pakets für Ihre Microsoft Teams-App
 
@@ -42,7 +43,7 @@ Die Farbversion Ihres Symbols wird in den meisten Teams-Szenarien angezeigt und 
 
 Teams ackert Ihr Symbol automatisch, um ein Quadrat mit abgerundeten Ecken in mehreren Szenarien und eine hexagonale Form in Botszenarien zu zeigen. Schließen Sie 48 Pixel Abstand um das Symbol ein, damit diese Kulturen ohne Detailverlust hergestellt werden können.
 
-:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Designanleitungen für Teams-Farbsymbole." border="false":::
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams-Farbsymbol und Designanleitung." border="false":::
 
 ### <a name="outline-icon"></a>Gliederungssymbol
 

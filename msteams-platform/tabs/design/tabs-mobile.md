@@ -2,13 +2,14 @@
 title: Registerkarten auf mobilen Geräten
 description: Beschreibt die Richtlinien für das Entwerfen von Registerkarten, die auf Mobilen funktionieren.
 ms.topic: conceptual
+localization_priority: Normal
 keywords: teams design guidelines reference framework personal apps mobile tabs
-ms.openlocfilehash: 72d1cf4623a9f4c1b5c993f1477f755b51d9fe64
-ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
+ms.openlocfilehash: 6459d6af7899859f25b28587021e26ce6440fbef
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51762025"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020408"
 ---
 # <a name="tabs-on-mobile"></a>Registerkarten auf mobilen Geräten
 

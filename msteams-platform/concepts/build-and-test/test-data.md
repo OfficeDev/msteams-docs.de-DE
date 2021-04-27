@@ -2,14 +2,15 @@
 title: Hinzufügen von Testdaten zu Ihrem Microsoft 365-Test-Mandanten
 description: Einrichten Ihres Office 365-Entwicklerprogrammabonnements für erfolgreiche Tests von Microsoft Teams Apps
 ms.topic: how-to
+localization_priority: Normal
 keywords: Testen von Entwicklerprogrammteams für Apps
 ms.date: 11/01/2019
-ms.openlocfilehash: c702921b1c55570ca8e2869b95c00ae6ae4ebdf4
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: cc8125cdd8678c84aa6733b71d37adeee98abdd9
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696864"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020814"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Hinzufügen von Testdaten zu Ihrem Microsoft 365-Test-Mandanten
 
@@ -253,7 +254,7 @@ Das Aktivieren der benutzerdefinierten App-Querladen ist optional. Standardmäß
 
 5. Nachdem das Skript ausgeführt wurde, können Sie sich beim Teams-Client mit einem der Benutzerkonten anmelden und die neu erstellten Teams anzeigen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 > [!div class="nextstepaction"]
 > [Debuggen Ihrer Registerkarte](~/tabs/how-to/developer-tools.md)

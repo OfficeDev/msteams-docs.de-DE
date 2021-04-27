@@ -4,13 +4,14 @@ author: laujan
 description: Beschreibt, wie das Entfernen von Registerkartenrändern die Erfahrung von Entwicklern verbessert.
 keywords: Tabulatoren entfernen Ränderabstand
 ms.topic: reference
+localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 953dcf0a0edd47a0bf65bbd0db5901c5b98b11c3
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 78d97dca73e7fce2bf4b911f5ea4588525667378
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585820"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019713"
 ---
 # <a name="tab-margin-changes"></a>Änderungen am Registerkartenrand
 

@@ -3,13 +3,14 @@ title: Developer Preview Manifestschemareferenz
 description: Beschreibt das vom Manifest für Microsoft Teams unterstützte Schema
 ms.topic: reference
 keywords: teams manifest schema Developer Preview
+localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: adb178000d909c9031e4b4df187bbf6f74f6e783
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 1cfa25949024e03ef4c6e5737396e75aff8bd50b
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946473"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019699"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Entwicklervorschaumanifestschema für Microsoft Teams
 
@@ -328,7 +329,7 @@ Das Objekt ist ein Array mit allen Elementen des Typs `object` . Dieser Block is
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`configurationUrl`|Zeichenfolge|2048 Zeichen|✔|Die https:// URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
-|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: `true`|
+|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: `true`|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die `team` Bereiche `groupchat` und. |
 |`sharePointPreviewImage`|Zeichenfolge|2048||Ein relativer Dateipfad zu einem Registerkartenvorschaubild zur Verwendung in SharePoint. Größe 1024 x 768. |
 |`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint verfügbar gemacht wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
@@ -402,7 +403,7 @@ Das Objekt ist ein Array (maximal 1 Element) mit allen Elementen vom Typ `object
 |Name| Typ | Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`botId`|Zeichenfolge|64|✔|Die eindeutige Microsoft-App-ID für den Bot, der die Messagingerweiterung unterstützt, wie beim Bot Framework registriert. Dies kann mit der allgemeinen [App-ID identisch sein.](#id)|
-|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob die Konfiguration einer Messagingerweiterung vom Benutzer aktualisiert werden kann. Der Standardwert lautet `false`.|
+|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob die Konfiguration einer Messagingerweiterung vom Benutzer aktualisiert werden kann. Der Standardwert lautet `false`.|
 |`commands`|Array des Objekts|10  |✔|Array von Befehlen, die von der Messagingerweiterung unterstützt werden|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -417,9 +418,9 @@ Jedes Befehlselement ist ein Objekt mit der folgenden Struktur:
 |`type`|String|64 Zeichen||Typ des Befehls. Einer oder `query` `action` . Standard: `query`|
 |`title`|Zeichenfolge|32 Zeichen|✔|Der benutzerfreundliche Befehlsname|
 |`description`|Zeichenfolge|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
-|`initialRun`|Boolesch|||Ein boolescher Wert, der angibt, ob der Befehl zunächst ohne Parameter ausgeführt werden soll. Standard: `false`|
+|`initialRun`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob der Befehl zunächst ohne Parameter ausgeführt werden soll. Standard: `false`|
 |`context`|Array von Zeichenfolgen|3||Definiert, von wo aus die Nachrichtenerweiterung aufgerufen werden kann. Beliebige Kombination aus `compose` , `commandBox` , `message` . Standard ist `["compose", "commandBox"]`|
-|`fetchTask`|Boolesch|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden soll|
+|`fetchTask`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden soll|
 |`taskInfo`|Object|||Angeben des Aufgabenmoduls, das beim Verwenden eines Befehls für die Messagingerweiterung vorladen werden soll|
 |`taskInfo.title`|Zeichenfolge|64||Titel des ersten Dialogfelds|
 |`taskInfo.width`|Zeichenfolge|||Dialogbreite – entweder eine Zahl in Pixel oder ein Standardlayout wie "groß", "mittel" oder "klein"|

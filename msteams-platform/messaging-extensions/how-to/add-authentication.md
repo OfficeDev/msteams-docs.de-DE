@@ -2,14 +2,15 @@
 title: Hinzufügen einer Authentifizierung zu Ihrer Messaging-Erweiterung
 author: clearab
 description: Hinzufügen der Authentifizierung zu einer Messagingerweiterung
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 04ece6fe6f5e824873ed6e69385bce017df6927d
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 1670bcd68def5470f2a590b11f7c25a00ccd06b7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696773"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020709"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Hinzufügen einer Authentifizierung zu Ihrer Messaging-Erweiterung
 

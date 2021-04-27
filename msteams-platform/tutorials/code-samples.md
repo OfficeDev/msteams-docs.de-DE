@@ -1,18 +1,19 @@
 ---
 title: App-Codebeispiele
 description: Links und Beschreibungen von Beispielanwendungen für die Microsoft Teams-Entwicklerplattform
+localization_priority: Normal
 ms.topic: reference
-keywords: Microsoft Teams – Entwicklerbeispiele
-ms.openlocfilehash: 44e5f5dda096bdfa0a214c1b7439d13c28c146c6
-ms.sourcegitcommit: 6caf503de5544fb8b9c8c6bef8eff4ff5a46068c
+keywords: Microsoft Teams-Entwicklerbeispiele
+ms.openlocfilehash: 99a30d78a1e8dad6f2147e66ed67f7b08eeaef04
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "50270777"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018369"
 ---
 # <a name="tutorials-for-the-microsoft-teams-developer-platform"></a>Lernprogramme für die Microsoft Teams-Entwicklerplattform
 
-Hier finden Sie eine Liste von Lernprogrammen, die veranschaulichen, wie Sie die Funktionen der Entwicklerplattform von Teams erweitern können, indem Sie benutzerdefinierte Apps erstellen.
+Hier finden Sie eine Liste von Lernprogrammen, die zeigen, wie Sie die Funktionen der Teams-Entwicklerplattform durch Erstellen benutzerdefinierter Apps erweitern können.
 
 ## <a name="getting-started-with-microsoft-learn"></a>Erste Schritte mit Microsoft Learn
 

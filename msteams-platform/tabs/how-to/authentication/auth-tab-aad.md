@@ -2,13 +2,14 @@
 title: Authentifizierung für Registerkarten mit Azure Active Directory
 description: Beschreibt die Authentifizierung in Teams und deren Verwendung in Registerkarten
 ms.topic: how-to
+localization_priority: Normal
 keywords: Teams-Authentifizierungsregisterkarten AAD
-ms.openlocfilehash: f2429653fe875406870ba82e27fce3d643ff69f6
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 2fdfc4448abb6980cca97e90951d7772611108da
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995904"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020387"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Authentifizieren eines Benutzers auf einer Microsoft Teams-Registerkarte
 

@@ -2,13 +2,14 @@
 title: Authentifizieren von App-Benutzern
 description: Beschreibt die Authentifizierung in Teams und deren Verwendung in den Apps
 ms.topic: conceptual
+localization_priority: Normal
 keywords: Teams-Authentifizierung OAuth SSO AAD
-ms.openlocfilehash: 33ef0c55842c495ca44495bc0653a47b147ebbfc
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 23e0e500ee041afa191e9381b6f69b4c3881c391
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995995"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019972"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Authentifizieren von Benutzern in Microsoft Teams
 

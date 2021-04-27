@@ -3,13 +3,14 @@ title: Grundlegendes zu Ihren Anwendungsfällen
 author: clearab
 description: Grundlegendes zu Ihren Anwendungsfällen
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: a873c3030ee4ed5f5fc98229c058583e64c38de5
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: 748e40c712af7fb0095edd4f6ffe67ed253decec
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654279"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019867"
 ---
 # <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
 

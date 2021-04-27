@@ -2,13 +2,14 @@
 title: Anfordern von Geräteberechtigungen für Ihre Microsoft Teams-App
 keywords: Berechtigungen für teams-Apps-Funktionen
 description: So aktualisieren Sie Ihr App-Manifest, um Zugriff auf systemeigene Features anzuholen, für die in der Regel die Zustimmung des Benutzers erforderlich ist
+localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: e7c5f7ff477bc193924cdf11700c77ae620cd1c0
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 452840c5809da32a79c231f85cd1de9f8746367a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449436"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019853"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Anfordern von Geräteberechtigungen für Ihre Microsoft Teams-App
 
@@ -52,7 +53,7 @@ Ein Benutzer kann Geräteberechtigungen in  den Teams-Einstellungen verwalten, i
 
    ![Bildschirm "Desktopeinstellungen für Geräteberechtigungen"](../../assets/images/tabs/device-permissions.png)
 
-# <a name="mobile"></a>[Mobilgeräte](#tab/mobile)
+# <a name="mobile"></a>[Mobil](#tab/mobile)
 
 1. Öffnen Sie Teams.
 1. Wechseln Sie zu **Einstellungen**  >  **App-Berechtigungen**.
@@ -174,7 +175,7 @@ Beispiel:
 
    ![Eingabeaufforderung für Registerkarten für Desktopgeräteberechtigungen](~/assets/images/tabs/device-permissions-prompt.png)
 
-# <a name="mobile"></a>[Mobilgeräte](#tab/mobile)
+# <a name="mobile"></a>[Mobil](#tab/mobile)
 
    ![Eingabeaufforderung für Mobile Geräteberechtigungen für Registerkarten](../../assets/images/tabs/MobileLocationPermission.png)
 

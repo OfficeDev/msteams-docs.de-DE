@@ -2,17 +2,18 @@
 title: Unterstützung für einmaliges Anmelden für Bots
 description: Beschreibt, wie Sie ein Benutzertoken erhalten. Derzeit kann ein Botentwickler eine Anmeldekarte oder den azure bot-Dienst mit der OAuth-Kartenunterstützung verwenden.
 keywords: Token, Benutzertoken, SSO-Unterstützung für Bots
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: dad36f52a3e23c00f8725e2e906308339629bb05
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: 8da2591c3685b5bd3dffd272abd77babe94ab04c
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753532"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020049"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Unterstützung für einmaliges Anmelden (Single Sign-On, SSO) für Bots
 
-Die einmalige Anmeldungsauthentifizierung in Azure Active Directory (AAD) minimiert die Anzahl der Benutzer, die ihre Anmeldeinformationen eingeben müssen, indem das Authentifizierungstoken automatisch aktualisiert wird. Wenn Benutzer der Verwendung Ihrer App zustimmen, müssen sie nicht erneut auf einem anderen Gerät zustimmen und können sich automatisch anmelden. Der Ablauf ähnelt dem der [Microsoft Teams-Registerkarten-SSO-Unterstützung,](../../../tabs/how-to/authentication/auth-aad-sso.md)der Unterschied besteht jedoch im Protokoll, wie ein Bot Token [anfordert](#request-a-bot-token) und Antworten [empfängt.](#receive-the-bot-token)
+Die einmalige Anmeldungsauthentifizierung in Azure Active Directory (AAD) minimiert die Anzahl der Benutzer, die ihre Anmeldeinformationen eingeben müssen, indem das Authentifizierungstoken automatisch aktualisiert wird. Wenn Benutzer der Verwendung Ihrer App zustimmen, müssen sie auf einem anderen Gerät keine erneute Zustimmung erteilen und können sich automatisch anmelden. Der Ablauf ähnelt dem der [Microsoft Teams-Registerkarten-SSO-Unterstützung,](../../../tabs/how-to/authentication/auth-aad-sso.md)der Unterschied besteht jedoch im Protokoll, wie ein Bot Token [anfordert](#request-a-bot-token) und Antworten [empfängt.](#receive-the-bot-token)
 
 >[!NOTE]
 > OAuth 2.0 ist ein offener Standard für Authentifizierung und Autorisierung, der von AAD und vielen anderen Identitätsanbietern verwendet wird. Ein grundlegendes Verständnis von OAuth 2.0 ist eine Voraussetzung für die Arbeit mit der Authentifizierung in Teams.
@@ -23,16 +24,16 @@ Die einmalige Anmeldungsauthentifizierung in Azure Active Directory (AAD) minimi
 
 Führen Sie die folgenden Schritte aus, um Authentifizierungs- und Botanwendungstoken abzurufen:
 
-1. Der Bot sendet eine Nachricht mit einer OAuthCard, die die Eigenschaft `tokenExchangeResource` enthält. Es weist Teams an, ein Authentifizierungstoken für die Botanwendung abzurufen. Der Benutzer empfängt Nachrichten an allen aktiven Benutzerendpunkten.
+1. Der Bot sendet eine Nachricht mit einer OAuthCard, welche die `tokenExchangeResource`-Eigenschaft enthält. Es weist Teams an, ein Authentifizierungstoken für die Botanwendung abzurufen. Der Benutzer erhält auf allen aktiven Benutzerendpunkten Nachrichten.
 
     > [!NOTE]
     >* Ein Benutzer kann mehrere aktive Endpunkte gleichzeitig haben.
-    >* Das Bottoken wird von jedem aktiven Benutzerendpunkt empfangen.
-    >* Die App muss im persönlichen Bereich für den SSO-Support installiert werden.
+    >* Der Bot-Token wird von jedem aktiven Benutzerendpunkt erhalten.
+    >* Die App muss für SSO-Support im persönlichen Bereich installiert sein.
 
 2. Wenn der aktuelle Benutzer Ihre Botanwendung zum ersten Mal verwendet, wird eine Anforderungsaufforderung angezeigt, in der der Benutzer aufgefordert wird, eine der folgenden Schritte zu tun:
     * Geben Sie bei Bedarf ihre Zustimmung ein.
-    * Behandeln Sie die Step-Up-Authentifizierung, z. B. die zweistufige Authentifizierung.
+    * Erhöhte Authentifizierung durchführen, z. B. die zweistufige Authentifizierung.
 
 3. Teams fordert das Botanwendungstoken vom AAD-Endpunkt für den aktuellen Benutzer an.
 
@@ -40,7 +41,7 @@ Führen Sie die folgenden Schritte aus, um Authentifizierungs- und Botanwendungs
 
 5. Teams sendet das Token an den Bot als Teil des Wertobjekts, das von der Aufrufaktivität mit dem Namen **sign-in/tokenExchange zurückgegeben wird.**
   
-6. Das analysierte Token in der Botanwendung enthält die erforderlichen Informationen, z. B. die E-Mail-Adresse des Benutzers.
+6. Das analysierte Token in der Bot-Anwendung stellt die erforderlichen Informationen zur Verfügung, wie z. B. die E-Mail-Adresse des Benutzers.
   
 ## <a name="develop-an-sso-teams-bot"></a>Entwickeln eines SSO Teams-Bots
   
@@ -160,7 +161,7 @@ Wenn der Benutzer die Anwendung zum ersten Mal verwendet und die Zustimmung des 
 
 ![Dialogfeld "Zustimmung"](../../../assets/images/bots/bots-consent-dialogbox.png)
 
-Wenn der Benutzer Weiter **auswählt,** treten die folgenden Ereignisse auf:
+Wenn der Benutzer **Weiter** auswählt, treten die folgenden Ereignisse auf:
 
 * Wenn der Bot eine Anmeldeschaltfläche definiert, wird der Anmeldefluss für Bots ähnlich wie der Anmeldefluss von einer OAuth-Kartenschaltfläche in einem Nachrichtenstrom ausgelöst. Der Entwickler muss entscheiden, welche Berechtigungen die Zustimmung des Benutzers erfordern. Dieser Ansatz wird empfohlen, wenn Sie ein Token mit Berechtigungen benötigen, die über `openId` hinausgehen. Wenn Sie beispielsweise das Token gegen Graphressourcen austauschen möchten.
 

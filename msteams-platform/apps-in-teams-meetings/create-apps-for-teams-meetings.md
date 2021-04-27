@@ -4,13 +4,14 @@ author: laujan
 description: Erstellen von Apps für Teams-Besprechungen
 ms.topic: conceptual
 ms.author: lajanuar
+localization_priority: Normal
 keywords: Rollen-API für Teams-Apps-Besprechungen für Benutzerteilnehmer
-ms.openlocfilehash: c9410e142c6831fa0aa1b1f5307d92d67739be0e
-ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
+ms.openlocfilehash: c733f89208e82c032f581109f9c3887f20c104b9
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51885073"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018376"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Apps für Teams-Besprechungen erstellen
 
@@ -36,7 +37,7 @@ Bevor Sie Apps für Teams-Besprechungen erstellen, müssen Sie folgendes wissen:
 
 ## <a name="meeting-apps-api-reference"></a>Apireferenz für Besprechungs-Apps
 
-|API|Beschreibung|Anforderung|Source|
+|API|Beschreibung|Anforderung|Quelle|
 |---|---|----|---|
 |**GetUserContext**| Mit dieser API können Sie Kontextinformationen abrufen, um relevante Inhalte auf einer Registerkarte Teams anzuzeigen. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams client SDK|
 |**GetParticipant**| Mit dieser API kann ein Bot Teilnehmerinformationen nach Besprechungs-ID und Teilnehmer-ID abrufen. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|

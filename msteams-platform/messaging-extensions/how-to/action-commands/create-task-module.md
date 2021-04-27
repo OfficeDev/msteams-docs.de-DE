@@ -2,14 +2,15 @@
 title: Erstellen und Senden des Aufgabenmoduls
 author: clearab
 description: Behandeln der anfänglichen Aufrufaktion und Reagieren mit einem Aufgabenmodul über einen Befehl zur Aktionserweiterung
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 12af2d788c0579414b544e7e2fd7f07a77d45919
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 1245edba88dcd256f77c55cfe049ec2e846522c2
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696276"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019846"
 ---
 # <a name="create-and-send-the-task-module"></a>Erstellen und Senden des Aufgabenmoduls
 
@@ -943,7 +944,7 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 |Messagingerweiterungsaktion für Teams| Beschreibt, wie Sie Aktionsbefehle definieren, Aufgabenmodul erstellen und auf Die Absendenaktion des Aufgabenmoduls reagieren. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Suche nach Messagingerweiterungen in Teams   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchbefehle reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 > [!div class="nextstepaction"] 
 > [Definieren von Aktionsbefehlen](~/messaging-extensions/how-to/action-commands/define-action-command.md)

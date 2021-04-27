@@ -2,13 +2,14 @@
 title: Echtzeitmedienanrufe und Onlinebesprechungen mit Microsoft Teams
 description: Grundlegendes zu den wichtigsten Konzepten beim Erstellen von Bots, die Audio- und Videoanrufe und Onlinebesprechungen in Echtzeit durchführen können.
 ms.topic: conceptual
+localization_priority: Normal
 keywords: Audiostream video stream audio/video calling meeting real-time media application-hosted media service-hosted media media
-ms.openlocfilehash: 997fcedd2cd2d536a4c413c8f8ef2dd355d5a7e3
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: deedc47f67fe6848cf7f84457247d2271257e3f0
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697088"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020155"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Echtzeitmedienanrufe und Besprechungen mit Microsoft Teams
 

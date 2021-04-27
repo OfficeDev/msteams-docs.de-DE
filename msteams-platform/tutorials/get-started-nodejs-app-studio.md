@@ -3,13 +3,14 @@ title: Lernprogramm – Erstellen Ihrer ersten App mithilfe Node.js
 description: Erfahren Sie, wie Sie mit dem Erstellen von Microsoft Teams-Apps mit Node.js.
 keywords: Erste Schritte node.js nodejs App Studio
 ms.topic: tutorial
+localization_priority: Normal
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 61be1056a07952c6cf166dbe183fa257ceaf7227
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: ae1b8b2b5b671488ff6f86a3a3295f448ebb6006
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294761"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020961"
 ---
 # <a name="create-your-first-microsoft-teams-app-using-nodejs"></a>Erstellen Sie Ihre erste Microsoft Teams-App mithilfe Node.js
 
@@ -130,7 +131,7 @@ Nach der Installation können Sie ein neues Terminalfenster öffnen und den folg
 ngrok http 3333 -host-header=localhost:3333
 ```
 
-*Ngrok* lauscht Anfragen aus dem Internet und führt sie an Ihre App weiter, die an Port 3333 ausgeführt wird. Sie können dies überprüfen, indem Sie Ihren Browser öffnen und die `https://d0ac14a5.ngrok.io/hello` Hello-Seite Ihrer App laden. Verwenden Sie unbedingt die Weiterleitungsadresse, die *von ngrok* in Ihrer Konsolensitzung angezeigt wird, anstelle dieser URL.
+*Ngrok* lauscht Anfragen aus dem Internet und führt sie an Ihre App weiter, die an Port 3333 ausgeführt wird. Sie können dies überprüfen, indem Sie Ihren Browser öffnen und die `https://d0ac14a5.ngrok.io/hello` Hello-Seite Ihrer App laden. Verwenden Sie unbedingt die Weiterleitungsadresse, die *ngrok* in Ihrer Konsolensitzung anstelle dieser URL angezeigt hat.
 
 > [!NOTE]
 > Wenn Sie im obigen [](#build-and-run-the-sample) Build- und Ausführungsschritt einen anderen Port verwendet haben, stellen Sie sicher, dass Sie zum Einrichten des *ngrok-Tunnels* dieselbe Portnummer verwenden.
@@ -147,7 +148,7 @@ Notieren Sie sich die URL Ihrer App, da Sie dies später benötigen, wenn Sie di
 
 An diesem Punkt haben Sie eine App im Internet gehostet, aber Sie haben noch keine Möglichkeit, Teams mitzuteilen, wo sie suchen soll, oder auch nicht, wie Ihre App heißt. Dazu müssen Sie jetzt ein App-Paket erstellen. Dies ist wenig mehr als eine Textdatei, die das App-Manifest und einige Symbole enthält, die der Teams-Client zum ordnungsgemäßen Anzeigen und Branden Ihrer App verwendet. Sie können dieses App-Paket manuell erstellen oder App Studio verwenden, ein Tool, das in Teams ausgeführt wird, das das Registrieren der App vereinfacht. App Studio ist die empfohlene Methode zum Erstellen und Aktualisieren des App-Pakets.
 
-Für beide Methoden benötigen Sie Folgendes:
+Für eine der beiden Methoden benötigen Sie Folgendes:
 
 - Die URL, unter der Ihre App im Internet gefunden werden kann.
 - Symbole, die Teams zum Branden Ihrer App verwendet. Das Beispiel enthält Platzhaltersymbole in "src\static\images". App Studio stellt bei Bedarf auch Standardsymbole zur Verfügung.
@@ -186,7 +187,7 @@ Wenn Sie die App mit ngrok ausführen, müssen Sie einige lokale Umgebungsvariab
 }
 ```
 
-Dabei gilt Folgendes:
+Dabei gilt:
 
 MICROSOFT_APP_ID und MICROSOFT_APP_PASSWORD ist die ID bzw. das Kennwort für Ihren Bot.
 NODE_DEBUG zeigt Ihnen, was in Ihrem Bot geschieht, in der Visual Studio Codedebuggerkonsole.

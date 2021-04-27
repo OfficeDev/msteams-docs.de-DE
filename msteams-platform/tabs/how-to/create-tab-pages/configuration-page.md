@@ -3,14 +3,15 @@ title: Erstellen einer Konfigurationsseite
 author: laujan
 description: Erstellen einer Konfigurationsseite
 keywords: Gruppenkanal für Teams-Registerkarten konfigurierbar
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 9407e4afc0b52f1b16f2d6b5a55e824f484a1870
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 0866d11442f79cee33d4454dbd4ed4d6b4b1a840
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382376"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019594"
 ---
 # <a name="create-a-configuration-page"></a>Erstellen einer Konfigurationsseite
 
@@ -112,7 +113,7 @@ Der Konfigurationsseitencode informiert Teams darüber, dass die Konfigurationsa
 
 ### <a name="get-context-data-for-your-tab-settings"></a>Get context data for your tab settings
 
-Ihre Registerkarte erfordert möglicherweise Kontextinformationen, um relevante Inhalte anzuzeigen. Kontextbezogene Informationen verbessern die Ansinnen Ihrer Registerkarte weiter, indem sie eine angepasste Benutzeroberfläche bereitstellen.
+Auf der Registerkarte sind möglicherweise Kontextinformationen zum Anzeigen relevanter Inhalte erforderlich. Kontextbezogene Informationen verbessern die Ansinnen Ihrer Registerkarte weiter, indem sie eine angepasste Benutzeroberfläche bereitstellen.
 
 Weitere Informationen zu den Eigenschaften, die für die Registerkartenkonfiguration verwendet werden, finden Sie unter [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true). Sammeln Sie die Werte von Kontextdatenvariablen auf die folgenden zwei Arten:
 

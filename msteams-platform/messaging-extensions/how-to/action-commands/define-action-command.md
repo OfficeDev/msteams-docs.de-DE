@@ -2,14 +2,15 @@
 title: Definieren von Befehlen für Nachrichtenerweiterungsaktion
 author: clearab
 description: Übersicht über Messagingerweiterungsaktionsbefehle
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 51c2ce5ac3b8ab265d9bec0b1101ba18138a9365
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: f49e821ecb98659b4cfd68f93b37f1a8f611a9fb
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696951"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020716"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definieren von Befehlen für Nachrichtenerweiterungsaktion
 
@@ -113,7 +114,7 @@ In der folgenden Abbildung wird die Befehlserweiterung für die Messagingerweite
 
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern** aus.
 1. Um weitere Parameter hinzuzufügen, wählen Sie **im** Abschnitt Parameter **die** Schaltfläche Hinzufügen aus.
 
 ### <a name="create-an-action-command-manually"></a>Manuelles Erstellen eines Aktionsbefehls

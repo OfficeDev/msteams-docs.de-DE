@@ -3,14 +3,15 @@ title: Erstellen von Apps für die Microsoft Teams-Plattform
 author: heath-hamilton
 description: Erhalten Sie eine Übersicht darüber, wie Entwickler Microsoft Teams-Features mit benutzerdefinierten Apps erweitern können.
 ms.topic: overview
+localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: b4f5d5fa3014d2acc5e4178a89c84ddb5a250132
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: 5009427fc3cdde11de45a55cb0f6216ae36b0d66
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596210"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019811"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Apps für Microsoft Teams erstellen
 
@@ -42,7 +43,7 @@ Einige Apps sind einfach (Benachrichtigungen senden), während andere komplex si
 
 ### <a name="bots"></a>Bots
 
-**Machen Sie Wörter in Aktionen:** Unterhaltungen führen häufig zu der Notwendigkeit, etwas zu tun (Eine Bestellung generieren, meinen Code überprüfen, Ticketstatus überprüfen usw.). Ein [Bot](bots/what-are-bots.md) kann diese Arten von Workflows direkt in Teams starten.
+**Wörter in Aktionen verwandeln:** Unterhaltungen führen häufig dazu, dass sie etwas tun müssen (Eine Bestellung generieren, meinen Code überprüfen, ticketstatus überprüfen und so weiter). Ein [Bot](bots/what-are-bots.md) kann diese Arten von Workflows direkt in Teams starten.
 
 :::image type="content" source="assets/images/overview-bots.png" alt-text="Konzeptionelle Darstellung, wie Bots im Teams-Client aussehen." border="false":::
 

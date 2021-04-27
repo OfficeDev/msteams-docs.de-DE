@@ -3,14 +3,15 @@ title: Erste Schritte – Erstellen einer Messagingerweiterung
 author: heath-hamilton
 description: Erstellen Sie schnell eine Microsoft Teams-Messagingerweiterung mithilfe des Microsoft Teams Toolkits.
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/04/2020
 ms.topic: tutorial
-ms.openlocfilehash: 09e851820314efd3dc114b926a0111603cac18a4
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: f3b5bc9c749d5e5276c0c7af7ff92f4ff5a00d0b
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696878"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020870"
 ---
 # <a name="build-a-messaging-extension-for-microsoft-teams"></a>Erstellen einer Messagingerweiterung für Microsoft Teams
 

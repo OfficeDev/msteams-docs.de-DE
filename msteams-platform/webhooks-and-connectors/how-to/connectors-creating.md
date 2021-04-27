@@ -2,14 +2,15 @@
 title: Office 365-Connectors
 description: Beschreibt, wie Sie mit Office 365 Connectors in Microsoft Teams beginnen
 keywords: Teams O365-Connector
+localization_priority: Normal
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: d0fe380cd168b8dcbddc5af0de96160e0bc259a9
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: 8091f71e22fcbdc297e2f7b54665b47e597e670e
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827921"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018397"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Erstellen von Office 365 Connectors für Microsoft Teams
 

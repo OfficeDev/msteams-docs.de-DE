@@ -1,19 +1,20 @@
 ---
-title: Lokalisierungsdatei – JSON-Schemareferenz
-description: Beschreibt das Lokalisierungsschema, das von der Lokalisierungsdatei für Microsoft Teams unterstützt wird
+title: JSON-Schemareferenz für Lokalisierungsdatei
+description: Beschreibt das lokalisierungsschema, das von der Lokalisierungsdatei für Microsoft Teams unterstützt wird.
 ms.topic: reference
+localization_priority: Normal
 keywords: Manifestschemalokalisierung von Teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 696a65de70a63e767f8fcdb040364fe90cde8716
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 3e4207fb3e862eac18c80ffc49e7c5648ae05c28
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014600"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019706"
 ---
-# <a name="reference-localization-file-json-schema"></a>Referenz: Lokalisierungsdatei -JSON-Schema
+# <a name="reference-localization-file-json-schema"></a>Referenz: JSON-Schema der Lokalisierungsdatei
 
-Die Lokalisierungsdatei von Microsoft Teams beschreibt Sprachübersetzungen, die basierend auf den Clientspracheinstellungen bedient werden. Ihre Datei muss dem Schema entsprechen, das unter [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) gehostet wird. Weitere Informationen finden Sie unter ["App-Lokalisierung".](~/concepts/build-and-test/apps-localization.md)
+In der Microsoft Teams-Lokalisierungsdatei werden Sprachübersetzungen beschrieben, die basierend auf den Clientspracheneinstellungen bedient werden. Ihre Datei muss dem schema entsprechen, das unter gehostet [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) wird. Weitere Informationen finden Sie unter [App-Lokalisierung](~/concepts/build-and-test/apps-localization.md).
 
 ## <a name="sample"></a>Beispiel
 
@@ -38,10 +39,10 @@ Das Schema definiert die folgenden Eigenschaften:
 
 **uri**
 
-Die https:// URL, die auf das JSON-Schema für das Manifest verweist.
+Die https://-URL, die auf das JSON-Schema für das Manifest verweist.
 
 > [!TIP]
-> Geben Sie das Schema am Anfang des Manifests an, um IntelliSense oder ähnliche Unterstützung von Ihrem Codeeditor zu aktivieren: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
+> Geben Sie das Schema am Anfang des Manifests an, um IntelliSense oder ähnliche Unterstützung von Ihrem Code-Editor zu aktivieren: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
 ## <a name="nameshort"></a>name.short
 
@@ -73,13 +74,13 @@ Ersetzt die entsprechende Zeichenfolge aus dem App-Manifest durch den hier angeg
 
 Ersetzt die entsprechenden Zeichenfolgen aus dem App-Manifest durch den hier angegebenen Wert.
 
-## <a name="bots0commandlists0-2commands0-9title"></a>Bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ ] \\ .title
+## <a name="bots0commandlists0-2commands0-9title"></a>bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ ] \\ .title
 
 **Zeichenfolge, Max. Länge 32**
 
 Ersetzt die entsprechenden Zeichenfolgen aus dem App-Manifest durch den hier angegebenen Wert.
 
-## <a name="bots0commandlists0-2commands0-9description"></a>Bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ ] \\ .description
+## <a name="bots0commandlists0-2commands0-9description"></a>bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ ] \\ .description
 
 **Zeichenfolge, Max. Länge 128**
 

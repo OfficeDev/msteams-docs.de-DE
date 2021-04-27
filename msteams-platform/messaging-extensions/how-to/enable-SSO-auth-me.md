@@ -2,14 +2,15 @@
 title: SSO-Unterstützung für Ihre Messagingerweiterungen
 author: KirtiPereira
 description: Aktivieren der SSO-Unterstützung für Ihre Messagingerweiterungen
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: a5f75ef59a3d6fa3fe190b4dba4a1e5736a87562
-ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
+ms.openlocfilehash: f7dc689da3f0e3e06b8f9c68836b6449c2ae9120
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51378346"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020702"
 ---
 # <a name="single-sign-on-sso-support-for-messaging-extensions"></a>Unterstützung für einmaliges Anmelden (Single Sign-On, SSO) für Messagingerweiterungen
  
@@ -113,7 +114,7 @@ Nachdem die voraussetzungen erfüllt sind, können Sie SSO für Messagingerweite
     
     ```    
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 > [!div class="nextstepaction"]
 > [Hinzufügen der Authentifizierung zu Ihren Messagingerweiterungen](add-authentication.md)

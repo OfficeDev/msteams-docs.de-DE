@@ -1,107 +1,108 @@
 ---
-title: Entwerfen von Aufgaben Modulen
+title: Entwerfen von Aufgabenmodulen
 author: heath-hamilton
-description: Hier erfahren Sie, wie Sie Aufgaben Module für Teams-apps entwerfen und das Microsoft Teams UI Kit abrufen.
+description: Erfahren Sie, wie Sie Aufgabenmodule für Teams-Apps entwerfen und das Microsoft Teams UI Kit erhalten.
+localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 41584ecf58ca7718290e58e5845549e4579dac64
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 3502a705bfe1bf99a5dc0edff5c5a54265cc6ca1
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49606199"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019545"
 ---
-# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Entwerfen von Aufgaben Modulen für Ihre Microsoft Teams-App
+# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Entwerfen von Aufgabenmodulen für Ihre Microsoft Teams-App
 
-Sie können modale Popup-Erlebnisse in Ihrer Teams-App mit Aufgaben Modulen erstellen. Verwenden Sie diese Funktion, um Rich-Medien und-Informationen anzuzeigen oder eine komplexe Aufgabe abzuschließen.
+Sie können modale Popuperfahrungen in Ihrer Teams-App mit Aufgabenmodulen erstellen. Verwenden Sie diese Funktion zum Anzeigen von Rich Media und Informationen oder zum Abschließen einer komplexen Aufgabe.
 
 :::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Beispiel zeigt ein Aufgabenmodul." border="false":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
-Ausführlichere Entwurfsrichtlinien für Aufgaben Module, einschließlich der Elemente, die Sie nach Bedarf erfassen und ändern können, finden Sie im Microsoft Teams UI Kit.
+Umfassendere Entwurfsrichtlinien für Aufgabenmodule, einschließlich Elemente, die Sie bei Bedarf packen und ändern können, finden Sie im Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
-> [Abrufen des Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="open-a-task-module"></a>Öffnen eines Aufgabenmoduls
 
-Aufgaben Module können von fast überall in Ihrer APP gestartet werden.
+Aufgabenmodule können von fast überall in Ihrer App gestartet werden.
 
-* **Tab**: ein Aufgabenmodul kann von einem beliebigen Link innerhalb einer Registerkarte oder eines IFRAME gestartet werden. Verwenden Sie in Szenarien, in denen der Benutzer sich auf eine Interaktion konzentrieren soll.
-* **Bot**: ein Aufgabenmodul kann über einen Link in einer bot-Nachricht gestartet werden.
-* **Adaptive Karte**: ein Aufgabenmodul kann von einer adaptiven Karte gestartet werden (mit einer Messaging Erweiterung oder einem bot gesendet), wenn ein Benutzer eine Schaltfläche auswählt.
-* **Messaging-Erweiterung (Aktionsbefehle)**: mit Messaging Erweiterungen können Sie eine bestimmte Aktion für Nachrichteninhalte durchführen. Durch Auswählen einer Aktion wird ein Aufgabenmodul geöffnet.
-* **Messaging Erweiterung (Kontext des verfassen-Felds)**: im Feld Verfassen können Sie eine Messaging Erweiterung entwerfen, um anstelle des typischen Flyouts ein Aufgabenmodul zu öffnen. Reservieren Sie Aufgaben Module für komplexe Interaktionen, beispielsweise das Ausfüllen eines Formulars.
+* **Registerkarte**: Ein Aufgabenmodul kann über einen beliebigen Link innerhalb einer Registerkarte gestartet werden. Wird in Szenarien verwendet, in denen der Benutzer sich auf eine Interaktion konzentrieren soll.
+* **Bot**: Ein Aufgabenmodul kann über einen Link innerhalb einer Botnachricht gestartet werden.
+* **Adaptive Karte:** Ein Aufgabenmodul kann von einer adaptiven Karte (gesendet mit einer Messagingerweiterung oder von einem Bot) gestartet werden, wenn ein Benutzer eine Schaltfläche auswählt.
+* **Messagingerweiterung (Aktionsbefehle):** Mit Messagingerweiterungen können Sie eine bestimmte Aktion für Nachrichteninhalte ausführen. Wenn Sie eine Aktion auswählen, wird ein Aufgabenmodul geöffnet.
+* **Messagingerweiterung (Kontext des Verfassenfelds):** Im Verfassenfeld können Sie eine Messagingerweiterung entwerfen, um ein Aufgabenmodul anstelle des typischen Flyouts zu öffnen. Reservieren Sie Aufgabenmodule für komplexe Interaktionen, z. B. das Ausfüllen eines Formulars.
 
 ## <a name="anatomy"></a>Anatomie
 
-:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Illustration, die die Benutzeroberflächen Anatomie eines Aufgabenmoduls veranschaulicht." border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Abbildung der Ui-Anatomie eines Aufgabenmoduls." border="false":::
 
-Aufgaben Module sind sehr flexible Oberflächen. Sie können mit iframes erstellt werden, indem Sie andere Benutzeroberflächenvorlagen einziehen, um von Partnern erstellte Erfahrungen zu hosten. Dies wird für die meiste polierte Erfahrung bevorzugt.
+Aufgabenmodule sind sehr flexible Oberflächen. Sie können mit iframes erstellt werden, indem sie in andere Benutzeroberflächenvorlagen einziehen, um partnerintehte Erfahrungen zu hosten. Dies wird für die am besten aufpolierte Erfahrung bevorzugt.
 
-Sie können auch mit dem [Adaptive Card](../../task-modules-and-cards/cards/design-effective-cards.md) -Framework erstellt werden, was eine einfachere und schnellere Möglichkeit zur Ausführung häufig auftretender Szenarien (beispielsweise Formulare) darstellen kann.
+Sie können auch mit dem [Adaptive Card-Framework](../../task-modules-and-cards/cards/design-effective-cards.md) erstellt werden, das eine einfachere und schnellere Möglichkeit zum Ausführen gängiger Szenarien (z. B. Formulare) sein kann.
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
 |1|**App-Symbol**|
-|2 |**App-Name**: vollständiger Name Ihrer APP.|
-|3 |**Kopfzeile**: machen Sie Kopfzeilen klar und prägnant. Beschreiben Sie die Aufgabe, die die Benutzer ausführen sollen.
-|4 |**Schaltfläche Schließen**: ermöglicht Benutzern das Auffinden von App-Inhalten, die Sie einfügen möchten.|
-|5 |**iframe**: reaktionsfähiger Speicherplatz, der Ihre APP-Inhalte hostet.|
-|6 |**Aktionen (optional)**: Schaltflächen im Zusammenhang mit Ihrem App-Inhalt.|
+|2|**App-Name**: Vollständiger Name Ihrer App.|
+|3|**Kopfzeile**: Kopfzeilen klar und prägnant machen. Beschreiben Sie die Aufgabe, die Benutzer abschließen möchten.
+|4 |**Schaltfläche Schließen**: Ermöglicht Benutzern das Suchen von App-Inhalten, die sie einfügen möchten.|
+|5 |**iframe**: Responsive space that hosts your app content.|
+|6 |**Aktionen (optional):** Schaltflächen im Zusammenhang mit Ihrem App-Inhalt.|
 
 ## <a name="designing-with-ui-templates"></a>Entwerfen mit Benutzeroberflächenvorlagen
 
-Sie sollten Vorlagen für allgemeine Layouts in ihren Aufgaben Modulen verwenden. Jeder besteht aus kleineren Komponenten, um ein elegantes, reaktionsfähiges Design zu erstellen, das aus dem Karton oder für Ihr Szenario oder ihr Marken-Erscheinungsbild verwendet werden kann.
+Erwägen Sie die Verwendung von Vorlagen für allgemeine Layouts in Ihren Aufgabenmodulen. Jede besteht aus kleineren Komponenten, um ein elegantes, ansprechendes Design zu erstellen, das von vorn oder für Ihr Szenario oder Ihr Markendesign angepasst werden kann.
 
-* [List](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem scannable-Format anzeigen und Benutzern das Ausführen von Aktionen für eine gesamte Liste oder einzelne Elemente gestatten.
-* [Formular](../../concepts/design/design-teams-app-ui-templates.md#form): Formulare dienen zum Sammeln, validieren und Übermitteln von Benutzereingaben in strukturierter Form.
-* [Leer State](../../concepts/design/design-teams-app-ui-templates.md#empty-state): die leere Statusvorlage kann für viele Szenarien verwendet werden, einschließlich Anmeldung, Erstausführung, Fehlermeldungen und mehr.
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem scannierbaren Format anzeigen und Benutzern das Ausführen von Aktionen für eine gesamte Liste oder einzelne Elemente ermöglichen.
+* [Formular](../../concepts/design/design-teams-app-ui-templates.md#form): Formulare sind für die strukturierte Erfassung, Validierung und Übermittlung von Benutzereingaben.
+* [Leerer](../../concepts/design/design-teams-app-ui-templates.md#empty-state)Zustand: Die Vorlage für den leeren Zustand kann für viele Szenarien verwendet werden, z. B. für die Anmeldung, die Erstlauferfahrung, Fehlermeldungen und vieles mehr.
 
 ## <a name="examples"></a>Beispiele
 
-### <a name="list"></a>List
+### <a name="list"></a>Liste
 
-Listen funktionieren in einem Aufgabenmodul gut, da Sie einfach zu überprüfen sind.
+Listen funktionieren in einem Aufgabenmodul gut, da sie einfach zu scannen sind.
 
 :::image type="content" source="../../assets/images/task-module/list.png" alt-text="Beispielliste in einem Aufgabenmodul." border="false":::
 
 ### <a name="form"></a>Formular
 
-Aufgaben Module eignen sich hervorragend zum Aufstellen von Formularen mit sequenziellen Benutzereingaben und Inline Überprüfung. Sie können Adaptive Karten als Möglichkeit zum Einbetten von Formularelementen nutzen.
+Aufgabenmodule sind ein hervorragender Ort, um Formulare mit sequenziellen Benutzereingaben und Inlineüberprüfungen zu benutzeroberflächen. Sie können adaptive Karten als Möglichkeit zum Einbetten von Formularelementen verwenden.
 
 :::image type="content" source="../../assets/images/task-module/form.png" alt-text="Beispielformular in einem Aufgabenmodul." border="false":::
 
 ### <a name="sign-in"></a>Anmelden
 
-Erstellen Sie einen fokussierten Anmelde-oder Registrierungs Fluss mit einer Reihe von Aufgaben Modulen, sodass Benutzer problemlos durch sequenzielle Schritte navigieren können.
+Erstellen Sie einen fokussierten Anmelde- oder Anmeldefluss mit einer Reihe von Aufgabenmodulen, mit der benutzer sich problemlos durch sequenzielle Schritte bewegen können.
 
-:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Beispiel für ein anmeldeerlebnis in einem Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Beispiel für die Anmeldeerfahrung in einem Aufgabenmodul." border="false":::
 
 ### <a name="media"></a>Medien
 
-Einbetten von Medieninhalten in einen Aufgabenmodul für eine fokussierte Anzeigeoberfläche.
+Einbetten von Medieninhalten in ein Aufgabenmodul für eine fokussierte Anzeige.
 
-:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Beispiel Medieninhalte in einem Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Beispiel für Medieninhalte in einem Aufgabenmodul." border="false":::
 
-### <a name="empty-state"></a>Leerer Zustand
+### <a name="empty-state"></a>Leerer Status
 
-Verwenden Sie für Willkommens-, Fehler-und Erfolgsmeldungen.
+Wird für Willkommens-, Fehler- und Erfolgsmeldungen verwendet.
 
-:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Beispiel für einen leeren Zustand in einem Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Beispiel leerer Zustand in einem Aufgabenmodul." border="false":::
 
 ### <a name="image-gallery"></a>Bildergalerie
 
-Einbetten eines Galerie Karussells in einen iframe.
+Betten Sie ein Katalogkarussell in einen iframe ein.
 
-:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Beispielbild Galerie in einem Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Beispielbildkatalog in einem Aufgabenmodul." border="false":::
 
 ### <a name="poll"></a>Umfrage
 
-In diesem Beispiel werden Umfrageergebnisse angezeigt, die von einer adaptiven Karte gestartet wurden.
+In diesem Beispiel werden Umfrageergebnisse gezeigt, die von einer adaptiven Karte gestartet wurden. Die Abfrage kann auch in einem Aufgabenmodul platziert werden.
 
-:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Beispielabfrage in einem Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Beispielumfrage in einem Aufgabenmodul." border="false":::
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
@@ -109,19 +110,19 @@ In diesem Beispiel werden Umfrageergebnisse angezeigt, die von einer adaptiven K
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Beispiel mit einem Aufgabenmodul bewährte Methode." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Beispiel, in dem bewährte Vorgehensweisen für ein Aufgabenmodul gezeigt werden." border="false":::
 
-#### <a name="do-use-one-task-module-at-a-time"></a>Do: Gleichzeitiges verwenden eines Aufgabenmoduls
+#### <a name="do-use-one-task-module-at-a-time"></a>Do: Verwenden eines Aufgabenmoduls gleichzeitig
 
-Das Ziel besteht darin, den Benutzer darauf zu konzentrieren, eine Aufgabe abzuschließen.
+Ziel ist es, den Benutzer auf das Abschließen einer Aufgabe zu konzentrieren.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Beispiel mit einem Aufgabenmodul bewährte Methode." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul." border="false":::
 
-#### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>Nicht: Pop ein Dialogfeld oberhalb eines Aufgabenmoduls
+#### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>Don't: Pop a dialog on top of a task module
 
-Dadurch entsteht eine unfokussierte, verwirrende Benutzeroberfläche.
+Dies führt zu einer unkonzentrierten, verwirrenden Benutzeroberfläche.
 
    :::column-end:::
 :::row-end:::
@@ -130,19 +131,19 @@ Dadurch entsteht eine unfokussierte, verwirrende Benutzeroberfläche.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Beispiel mit einem Aufgabenmodul bewährte Methode." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Beispiel zeigt bewährte Vorgehensweise für das Aufgabenmodul." border="false":::
 
-#### <a name="do-make-sure-the-content-is-responsive"></a>Do: sicherstellen, dass der Inhalt reagiert
+#### <a name="do-make-sure-the-content-is-responsive"></a>Do: Stellen Sie sicher, dass der Inhalt reaktionsfähig ist
 
-Während Adaptive Karten, die in einem Aufgabenmodul gehostet werden, auf mobilen Geräten gut gerendert werden, sollten Sie, wenn Sie einen IFRAME zum Hosten von App-Inhalten auswählen, sicherstellen, dass die Benutzeroberfläche reagiert und auf allen Geräten gut funktioniert.
+Während adaptive Karten, die in einem Aufgabenmodul gehostet werden, auf mobilen Geräten gut gerendert werden, stellen Sie sicher, dass die Benutzeroberfläche reaktionsfähig ist und geräteübergreifend gut funktioniert, wenn Sie einen iframe zum Hosten von App-Inhalten verwenden möchten.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Beispiel mit einem Aufgabenmodul bewährte Methode." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Beispiel zeigt bewährte Methode für ein Aufgabenmodul an." border="false":::
 
-#### <a name="dont-use-horizontal-scrollbars"></a>Nicht: horizontale Bildlaufleisten verwenden
+#### <a name="dont-use-horizontal-scroll-bars"></a>Don't: Verwenden horizontaler Bildlaufleisten
 
-Es ist eine bewährte Methode, Inhalte konzentriert und nicht zu lang zu halten. Wenn ein Bildlauf erforderlich ist, Scrollen Sie vertikal und nicht horizontal.
+Es ist eine bewährte Methode, inhalte fokussiert und nicht zu langwierig zu halten. Wenn ein Bildlauf erforderlich ist, scrollen Sie vertikal und nicht horizontal.
 
    :::column-end:::
 :::row-end:::
@@ -151,19 +152,19 @@ Es ist eine bewährte Methode, Inhalte konzentriert und nicht zu lang zu halten.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Beispiel mit einem Aufgabenmodul bewährte Methode." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Beispiel zeigt bewährte Methode des Aufgabenmoduls an." border="false":::
 
-#### <a name="do-keep-it-short"></a>Do: kurz halten
+#### <a name="do-keep-it-short"></a>Do: Keep it short
 
-Sie können ganz einfach einen mehrstufigen Assistenten erstellen, aber das bedeutet nicht unbedingt, dass Sie dies sollten! Ein Aufgabenmodul mit mehreren Bildschirmen kann problematisch sein, da eingehende Nachrichten ablenken und Benutzer zum Beenden verleiten. Wenn Ihre Aufgabe wirklich involviert ist, gehen Sie zu einer vollständigen Webseite anstelle eines Aufgabenmoduls.
+Sie können ganz einfach einen mehrstufigen Assistenten erstellen, aber das bedeutet nicht unbedingt, dass Sie es sollten! Ein Aufgabenmodul mit mehreren Bildschirmen kann problematisch sein, da eingehende Nachrichten abgelenkt werden und Benutzer zum Beenden verleiten. Wenn Ihre Aufgabe wirklich beteiligt ist, wird anstelle eines Aufgabenmoduls eine vollständige Webseite angezeigt.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Beispiel mit einem Aufgabenmodul bewährte Methode." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Abbildung der bewährten Vorgehensweise für ein Aufgabenmodul." border="false":::
 
-#### <a name="dont-do-long-interactions"></a>Nicht: lange Interaktionen ausführen
+#### <a name="dont-do-long-interactions"></a>Don't: Lange Interaktionen
 
-Versuchen Sie, ihre Interaktionen kurz und auf den neuesten Stand zu bringen.
+Versuchen Sie, Ihre Interaktionen kurz und auf den Punkt zu halten.
 
    :::column-end:::
 :::row-end:::
@@ -172,19 +173,19 @@ Versuchen Sie, ihre Interaktionen kurz und auf den neuesten Stand zu bringen.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Beispiel mit einem Aufgabenmodul bewährte Methode." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Abbildung zeigt eine bewährte Methode für ein Aufgabenmodul." border="false":::
 
-#### <a name="do-use-inline-error-messages"></a>Do: Verwenden von Inline Fehlermeldungen
+#### <a name="do-use-inline-error-messages"></a>Do: Verwenden von Inlinefehlermeldungen
 
-Anleitungen zur Inline Fehlerbehandlung finden Sie in der Forms-Benutzeroberflächen Vorlage.
+Richtlinien zur Inlinefehlerbehandlung finden Sie in der Formularbenutzeroberflächenvorlage.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Beispiel mit einem Aufgabenmodul bewährte Methode." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="In der Abbildung wird die bewährte Methode für ein Aufgabenmodul angezeigt." border="false":::
 
-#### <a name="dont-put-error-messages-in-dialogs"></a>Nicht: Put-Fehlermeldungen in Dialogfeldern
+#### <a name="dont-put-error-messages-in-dialogs"></a>Don't: Setzen von Fehlermeldungen in Dialogfelder
 
-Keine Fehlermeldung in einem Dialogfeld oberhalb eines Aufgabenmoduls Pop. Dadurch wird eine verwirrende Benutzeroberfläche erstellt.
+Geben Sie in einem Dialogfeld über einem Aufgabenmodul keine Fehlermeldung ein. Dadurch wird eine verwirrende Benutzeroberfläche erstellt.
 
    :::column-end:::
 :::row-end:::

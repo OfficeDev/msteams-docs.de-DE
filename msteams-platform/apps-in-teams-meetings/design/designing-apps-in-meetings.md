@@ -3,24 +3,25 @@ title: Entwerfen der Besprechungserweiterung
 author: heath-hamilton
 description: Erfahren Sie, wie Sie Apps in Teams-Besprechungen entwerfen und das Microsoft Teams UI Kit erhalten.
 ms.author: lajanuar
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: e4e7bb05fbc9717a4eb8323302d1a10eac4c77dd
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: 022ffdd7341f60a9c6732948a0914383ddb248a8
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596252"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018474"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen Ihrer Microsoft Teams-Besprechungserweiterung
 
 Sie können Apps erstellen, um Besprechungen produktiver zu gestalten. Bitten Sie z. B. Personen, während eines Anrufs eine Umfrage zu führen, oder senden Sie eine kurze Erinnerung, die den Ablauf der Besprechung nicht unterbricht.
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
 Umfassendere Entwurfsrichtlinien, einschließlich Elemente, die Sie bei Bedarf packen und ändern können, finden Sie im Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
-> [Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Hinzufügen einer Besprechungserweiterung
 
@@ -346,9 +347,9 @@ Modale (auch als Aufgabenmodule bezeichnet) auf der bereits schmalen Registerkar
    :::column-end:::
 :::row-end:::
 
-## <a name="validate-your-design"></a>Überprüfen Des Entwurfs
+## <a name="validate-your-design"></a>Validieren Ihres Designs
 
-Wenn Sie planen, Ihre App in AppSource zu veröffentlichen, sollten Sie die Entwurfsprobleme verstehen, die häufig dazu führen, dass Apps während der Übermittlung fehlschlagen.
+Wenn Sie Ihre App in AppSource veröffentlichen möchten, sollten Sie die Entwurfsprobleme verstehen, die häufig dazu führen, dass Apps während der Übermittlung fehlschlagen.
 
 > [!div class="nextstepaction"]
-> [Überprüfen der Richtlinien für die Entwurfsüberprüfung](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
+> [Überprüfen der Richtlinien zur Designvalidierung](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

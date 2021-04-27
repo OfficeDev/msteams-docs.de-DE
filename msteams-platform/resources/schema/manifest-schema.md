@@ -3,13 +3,14 @@ title: Manifestschemareferenz
 description: Beschreibt das Manifestschema für Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
+localization_priority: Normal
 keywords: Teams-Manifestschema
-ms.openlocfilehash: d4dd299a9e848820e81f87361460b5b8b14f15b7
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 03740bb12e849126dcd43b8628521928d060a80f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946445"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019692"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 

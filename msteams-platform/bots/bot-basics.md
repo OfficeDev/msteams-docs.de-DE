@@ -3,13 +3,14 @@ title: Bot-Aktivitätenhandler
 author: clearab
 description: Verstehen der Botaktivitätshandler in Teams.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 22f4c3f3addcf87b3fb34a1b7b3d40d2092b8a44
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: da770d930ca6d00503c0102f1e683a60161636fd
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696430"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020190"
 ---
 # <a name="bot-activity-handlers"></a>Bot-Aktivitätenhandler
 
@@ -64,7 +65,7 @@ Aktivitätshandler unterscheiden sich im Kontext eines Teams, in dem dem Team an
 
 Die Liste der in definierten Handler `ActivityHandler` umfasst Folgendes:
 
-| Ereignis | Handler | Beschreibung |
+| Event | Handler | Beschreibung |
 | :-- | :-- | :-- |
 | Jeder empfangene Aktivitätstyp | `OnTurnAsync` | Diese Methode ruft einen der anderen Handler auf, basierend auf dem Typ der empfangenen Aktivität. |
 | Empfangene Nachrichtenaktivität | `OnMessageActivityAsync` | Diese Methode kann überschrieben werden, um eine Aktivität zu `Message` verarbeiten. |
@@ -80,7 +81,7 @@ Die Liste der in definierten Handler `ActivityHandler` umfasst Folgendes:
 
 Der `TeamsActivityHandler` erweitert die Liste der Handler im Hauptabschnitt Bot Framework-Handler, um Folgendes zu umfassen:
 
-| Ereignis | Handler | Beschreibung |
+| Event | Handler | Beschreibung |
 | :-- | :-- | :-- |
 | channelCreated | `OnTeamsChannelCreatedAsync` | Diese Methode kann überschrieben werden, um einen zu erstellenden Teams-Kanal zu verarbeiten. Weitere Informationen finden Sie unter [Kanal, der](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) in [Unterhaltungsaktualisierungsereignissen erstellt wurde.](https://aka.ms/azure-bot-subscribe-to-conversation-events) |
 | channelDeleted | `OnTeamsChannelDeletedAsync` | Diese Methode kann überschrieben werden, um einen zu löschenden Teams-Kanal zu verarbeiten. Weitere Informationen finden Sie unter [Kanal](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) gelöscht in [Unterhaltungsaktualisierungsereignissen](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
@@ -117,7 +118,7 @@ Aktivitätshandler unterscheiden sich im Kontext eines Teams, in dem das neue Mi
 
 Die Liste der in definierten Handler `ActivityHandler` umfasst Folgendes:
 
-| Ereignis | Handler | Beschreibung |
+| Event | Handler | Beschreibung |
 | :-- | :-- | :-- |
 | Jeder empfangene Aktivitätstyp | `onTurn` | Diese Methode ruft einen der anderen Handler auf, basierend auf dem Typ der empfangenen Aktivität. |
 | Empfangene Nachrichtenaktivität | `onMessage` | Diese Methode hilft beim Behandeln einer `Message` Aktivität. |
@@ -132,7 +133,7 @@ Die Liste der in definierten Handler `ActivityHandler` umfasst Folgendes:
 
 Der `TeamsActivityHandler` erweitert die Liste der Handler im Hauptabschnitt Bot Framework-Handler, um Folgendes zu umfassen:
 
-| Ereignis | Handler | Beschreibung |
+| Event | Handler | Beschreibung |
 | :-- | :-- | :-- |
 | channelCreated | `OnTeamsChannelCreatedAsync` | Diese Methode kann überschrieben werden, um einen zu erstellenden Teams-Kanal zu verarbeiten. Weitere Informationen finden Sie unter [Kanal, der](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) in [Unterhaltungsaktualisierungsereignissen erstellt wurde.](https://aka.ms/azure-bot-subscribe-to-conversation-events) |
 | channelDeleted | `OnTeamsChannelDeletedAsync` | Diese Methode kann überschrieben werden, um einen zu löschenden Teams-Kanal zu verarbeiten. Weitere Informationen finden Sie unter [Kanal](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) gelöscht in [Unterhaltungsaktualisierungsereignissen](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
@@ -169,7 +170,7 @@ Aktivitätshandler unterscheiden sich im Kontext eines Teams, in dem das neue Mi
 
 Die Liste der in definierten Handler `ActivityHandler` umfasst Folgendes:
 
-| Ereignis | Handler | Beschreibung |
+| Event | Handler | Beschreibung |
 | :-- | :-- | :-- |
 | Jeder empfangene Aktivitätstyp | `on_turn` | Diese Methode ruft einen der anderen Handler auf, basierend auf dem Typ der empfangenen Aktivität. |
 | Empfangene Nachrichtenaktivität | `on_message_activity` | Diese Methode kann überschrieben werden, um eine Aktivität zu `Message` verarbeiten. |
@@ -185,7 +186,7 @@ Die Liste der in definierten Handler `ActivityHandler` umfasst Folgendes:
 
 Der erweitert die Liste der Handler aus dem `TeamsActivityHandler` Hauptabschnitt Bot Framework-Handler, um Folgendes zu umfassen:
 
-| Ereignis | Handler | Beschreibung |
+| Event | Handler | Beschreibung |
 | :-- | :-- | :-- |
 | channelCreated | `on_teams_channel_created` | Diese Methode kann überschrieben werden, um einen zu erstellenden Teams-Kanal zu verarbeiten. Weitere Informationen finden Sie unter [Kanal, der](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) in [Unterhaltungsaktualisierungsereignissen erstellt wurde.](https://aka.ms/azure-bot-subscribe-to-conversation-events) |
 | channelDeleted | `on_teams_channel_deleted` | Diese Methode kann überschrieben werden, um einen zu löschenden Teams-Kanal zu verarbeiten. Weitere Informationen finden Sie unter [Kanal](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) gelöscht in [Unterhaltungsaktualisierungsereignissen](https://aka.ms/azure-bot-subscribe-to-conversation-events).|

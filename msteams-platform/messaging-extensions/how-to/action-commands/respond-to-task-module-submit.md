@@ -2,14 +2,15 @@
 title: Reagieren auf die Absendenaktion des Aufgabenmoduls
 author: clearab
 description: Beschreibt, wie sie auf die Aktion zum Übermitteln des Aufgabenmoduls über einen Befehl für die Messagingerweiterungsaktion reagieren.
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: af2bbbbe6ffff224f5b74c9b1472ba3cb21effc0
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 3ed682eadde410a545f73768943a51ef95123e49
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696216"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019832"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Reagieren auf die Absendenaktion des Aufgabenmoduls
 
@@ -586,9 +587,9 @@ Der folgende Abschnitt enthält eine Beschreibung der Entitäten im `OnBehalfOf`
 |Feld|Typ|Beschreibung|
 |:---|:---|:---|
 |`itemId`|Ganze Zahl|Beschreibt die Identifikation des Elements. Der Wert muss `0` sein.|
-|`mentionType`|String|Beschreibt die Erwähnung einer "Person".|
-|`mri`|String|MrI (Message Resource Identifier) der Person, in deren Auftrag die Nachricht gesendet wird. Der Name des Absenders der Nachricht würde als " bis " \<user\> \<bot name\> angezeigt.|
-|`displayName`|String|Name der Person. Wird als Fallback verwendet, wenn die Namensauflösung nicht verfügbar ist.|
+|`mentionType`|Zeichenfolge|Beschreibt die Erwähnung einer "Person".|
+|`mri`|Zeichenfolge|MrI (Message Resource Identifier) der Person, in deren Auftrag die Nachricht gesendet wird. Der Name des Absenders der Nachricht würde als " bis " \<user\> \<bot name\> angezeigt.|
+|`displayName`|Zeichenfolge|Name der Person. Wird als Fallback verwendet, wenn die Namensauflösung nicht verfügbar ist.|
   
 ## <a name="code-sample"></a>Codebeispiel
 

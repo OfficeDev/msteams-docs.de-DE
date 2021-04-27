@@ -3,13 +3,14 @@ title: Hinzufügen benutzerdefinierter Bots zu Microsoft Teams mit ausgehenden W
 description: beschreibt das Hinzufügen eines ausgehenden Webhooks
 ms.topic: conceptual
 ms.author: lajanuar
+localization_priority: Normal
 keywords: Teams tabs outgoing webhook actionable message verify webhook
-ms.openlocfilehash: b7c587816a32e650009cdbfcd4dcf9028fb87392
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: cfa8bd550eaf1f198b83cdcc1ee699c75ac1d34d
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449542"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020211"
 ---
 # <a name="add-custom-bots-to-teams-with-outgoing-webhooks"></a>Hinzufügen benutzerdefinierter Bots zu Teams mit ausgehenden Webhooks
 

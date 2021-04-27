@@ -1,14 +1,15 @@
 ---
 title: Initiieren von Aktionen mit Messagingerweiterungen
 description: Erstellen von aktionsbasierten Messagingerweiterungen, damit Benutzer externe Dienste auslösen können
+localization_priority: Normal
 ms.topic: how-to
 keywords: Suche nach Messagingerweiterungen für Teams-Messagingerweiterungen
-ms.openlocfilehash: c95139cea22569901e04effb0b1283c6979454b9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: a3122dbaf79f57054cfec2e8aef2ed4f687338be
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696094"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019734"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Initiieren von Aktionen mit Messagingerweiterungen
 

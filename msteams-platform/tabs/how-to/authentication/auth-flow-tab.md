@@ -2,13 +2,14 @@
 title: Authentifizierungsfluss für Registerkarten
 description: Beschreibt den Authentifizierungsfluss in Registerkarten
 ms.topic: conceptual
+localization_priority: Normal
 keywords: Registerkarten für den Authentifizierungsfluss von Teams
-ms.openlocfilehash: ccc507c08007c72e5393d9175d69ea3672d73609
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 012e38b0fa689527999237ccc07b7352fc00ae71
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995848"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020394"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams-Authentifizierungsfluss für Registerkarten
 

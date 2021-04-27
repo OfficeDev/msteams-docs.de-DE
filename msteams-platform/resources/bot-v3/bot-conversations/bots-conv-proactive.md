@@ -2,13 +2,14 @@
 title: Proaktive Nachrichten
 description: Beschreibt, wie Bots eine Unterhaltung in Microsoft Teams starten können
 ms.topic: conceptual
+localization_priority: Normal
 keywords: teams scenarios proactive messaging conversation bot
-ms.openlocfilehash: ee0d2900818a587e447e17ae3111bee621fa8de9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: a13c565c8abe8c78fe6402d76796381b6a837393
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696164"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019790"
 ---
 # <a name="proactive-messaging-for-bots"></a>Proaktives Messaging für Bots
 

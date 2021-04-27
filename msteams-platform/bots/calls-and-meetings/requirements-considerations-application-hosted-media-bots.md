@@ -2,14 +2,15 @@
 title: Anforderungen und Überlegungen für von der Anwendung gehostete Medienbots
 description: Informationen zu wichtigen Anforderungen und Überlegungen im Zusammenhang mit dem Erstellen von von Anwendungen gehosteten Medienbots für Microsoft Teams.
 ms.topic: conceptual
+localization_priority: Normal
 keywords: von der Anwendung gehostete Medien windows server azure vm
 ms.date: 11/16/2018
-ms.openlocfilehash: 4a191bbde6b592c74930069d794ff37273785c1b
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 731cc53573d5c2b65eaed36d75793901fde86e54
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995953"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020056"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Anforderungen und Überlegungen für von der Anwendung gehostete Medienbots
 

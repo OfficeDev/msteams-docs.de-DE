@@ -1,15 +1,17 @@
 ---
 title: Integration von Standortfunktionen
+author: Rajeshwari-v
 description: Verwenden des Teams JavaScript-Client-SDK zum Nutzen von Standortfunktionen
 keywords: Standortzuordnungsfunktionen Systemeigene Geräteberechtigungen
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: de699d4edbf1c95f283cead9d12dcd2c98f8d3b9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 98d37c4f34f638f129c07b012d98ec54c7c8e44f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696857"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019860"
 ---
 # <a name="integrate-location-capabilities"></a>Integration von Standortfunktionen 
 
@@ -101,7 +103,7 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 });
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 > [!div class="nextstepaction"]
 > [Integrieren von Medienfunktionen in Teams](mobile-camera-image-permissions.md)

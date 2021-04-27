@@ -3,13 +3,14 @@ title: Testen und Debuggen des Bots
 description: Beschreibt das Testen von Bots in Microsoft Teams
 keywords: Teams-Bots-Tests
 ms.topic: how-to
+localization_priority: Normal
 ms.date: 03/20/2019
-ms.openlocfilehash: 6403d9ba16510860492735944899285058d9c0f3
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 0f44a88bcf054f4e0f4112ddc8bd3fbfdc18117d
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696605"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020632"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Testen und Debuggen Ihres Microsoft Teams-Bots
 

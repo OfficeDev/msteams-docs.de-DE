@@ -1,41 +1,42 @@
 ---
-title: Erstellen einer benutzerdefinierten Kanal-und Gruppenregisterkarte mit Node.js und dem Erzeuger Generator für Microsoft Teams
+title: Erstellen eines benutzerdefinierten Kanals und einer Gruppenregisterkarte mit Node.js und dem Yeoman-Generator für Microsoft Teams
 author: laujan
-description: Eine Schnellstartanleitung zum Erstellen einer Kanal-und Gruppenregisterkarte mit dem Landarbeits Generator für Microsoft Teams.
+description: Eine Schnellstartanleitung zum Erstellen eines Kanals und einer Gruppenregisterkarte mit dem Yeoman-Generator für Microsoft Teams.
+localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 77081f83c753f812032ccfebe2accd3cb8859f99
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 962a558014a3bc84010860082df6891bb48c7715
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818934"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020303"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Erstellen einer benutzerdefinierten Kanal-und Gruppenregisterkarte mit Node.js und dem Erzeuger Generator für Microsoft Teams
+# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Erstellen eines benutzerdefinierten Kanals und einer Gruppe mit Node.js und dem Yeoman-Generator für Microsoft Teams
 
 >[!NOTE]
->Diese Schnellstartleiste folgt den Schritten im Artikel [Erstellen des ersten Microsoft Teams-App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) -Wikis, die im Microsoft officedev GitHub-Repository gefunden wurden.
+>Dieser Schnellstart folgt den Schritten im [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki im Microsoft OfficeDev GitHub-Repository.
 
-In diesem Schnellstart werden Sie durch das Erstellen einer benutzerdefinierten Kanal-und Gruppenregisterkarte mithilfe des Teams-Landarbeits [Generators](https://github.com/OfficeDev/generator-teams/)durchlaufen.
+In dieser Schnellstartanleitung wird das Erstellen eines benutzerdefinierten Kanals und einer Registerkarte für Gruppen mithilfe des [Teams Yeoman-Generators exemplarisch durchgestartet.](https://github.com/OfficeDev/generator-teams/)
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
-**Möchten Sie eine konfigurierbare oder statische RegisterkarteErstellen?**
+**Möchten Sie eine konfigurierbare oder statische Registerkarte erstellen?**
 
-Verwenden Sie die Pfeiltasten, um die Registerkarte konfigurierbar auszuwählen.
+Verwenden Sie die Pfeiltasten, um die konfigurierbare Registerkarte auszuwählen.
 
 **Welche Bereiche möchten Sie für Ihre Registerkarte verwenden?**
 
-Sie können ein Team und/oder einen Gruppenchat auswählen.
+Sie können einen Team- und/oder Gruppenchat auswählen
 
-**Soll diese Registerkarte in SharePoint Online verfügbar sein? (J/n)** 
+**Soll diese Registerkarte in SharePoint Online verfügbar sein? (Y/n)** 
 
-Wählen Sie **n**aus.
+Wählen **Sie n** aus.
 
 >[!IMPORTANT]
->In der Pfadkomponente **yourDefaultTabNameTab**, auf die in diesem Schnellstart verwiesen wird, handelt es sich um den Wert, den Sie im Generator für den **standardmäßigen Registerkartennamen** sowie die **Register**Karte Word eingegeben haben.
+>Die Pfadkomponente **yourDefaultTabNameTab**, auf die in diesem Schnellstart verwiesen wird, ist der Wert, den Sie im Generator für **Standardregisterkartenname** plus das Wort **Tab eingegeben haben.**
 >
->Beispiel: DefaultTabName: **mytab**  =>  **/MyTabTab/**
+>Beispiel: DefaultTabName: **MyTab**  =>  **/MyTabTab/**
 
 Navigieren Sie in Ihrem Projektverzeichnis zu folgendem:
 
@@ -43,7 +44,7 @@ Navigieren Sie in Ihrem Projektverzeichnis zu folgendem:
 ./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx
 ```
 
-Hier finden Sie Ihre Tab-Logik. Suchen `render()` Sie die-Methode, und fügen Sie das folgende `<div>` Tag und den Inhalt oben im `<PanelBody>` Container Code hinzu:
+Hier finden Sie Ihre Registerkartenlogik. Suchen Sie die Methode, und fügen Sie dem Containercode das folgende Tag und `render()` `<div>` den folgenden Inhalt `<PanelBody>` hinzu:
 
 ```html
     <PanelBody>
@@ -53,39 +54,39 @@ Hier finden Sie Ihre Tab-Logik. Suchen `render()` Sie die-Methode, und fügen Si
     </PanelBody>
 ```
 
-Stellen Sie sicher, dass Sie die aktualisierte Datei speichern.
+Stellen Sie sicher, dass die aktualisierte Datei gespeichert wird.
 
-## <a name="build-and-run-your-application"></a>Erstellen und Ausführen der Anwendung
+## <a name="build-and-run-your-application"></a>Erstellen und Ausführen Der Anwendung
 
-Öffnen Sie im Projektverzeichnis eine Eingabeaufforderung, um die nächsten Aufgaben abzuschließen.
+Öffnen Sie eine Eingabeaufforderung in Ihrem Projektverzeichnis, um die nächsten Aufgaben auszuführen.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-Um Ihre Registerkarten-Konfigurationsseite anzuzeigen, wechseln Sie zu `https://localhost:3007/<yourDefaultAppNameTab>/config.html` . Folgendes sollte angezeigt werden:
+Wechseln Sie zum Anzeigen der Registerkartenkonfigurationsseite zu `https://localhost:3007/<yourDefaultAppNameTab>/config.html` . Folgendes sollte angezeigt werden:
 
 ![Screenshot der Konfigurationsseite](~/assets/images/tab-images/configurationPage.png)
 
-## <a name="establish-a-secure-tunnel-to-your-tab"></a>Einrichten eines sicheren Tunnels für die Registerkarte
+## <a name="establish-a-secure-tunnel-to-your-tab"></a>Einrichten eines sicheren Tunnels für Ihre Registerkarte
 
-Microsoft Teams ist ein vollständig Cloud-basiertes Produkt und erfordert, dass Ihre Registerkarteninhalte über HTTPS-Endpunkte in der Cloud verfügbar sind. Teams nicht zulassen lokales Hosting daher müssen Sie entweder Ihre Registerkarte in einer öffentlichen URL veröffentlichen oder einen Proxy verwenden, der den lokalen Port einer URL mit Internetverbindung verfügbar macht.
+Microsoft Teams ist ein vollständig cloudbasiertes Produkt und erfordert, dass Ihre Registerkarteninhalte über HTTPS-Endpunkte in der Cloud verfügbar sind. Teams lässt kein lokales Hosting zu, daher müssen Sie Ihre Registerkarte entweder in einer öffentlichen URL veröffentlichen oder einen Proxy verwenden, der Ihren lokalen Port für eine mit dem Internet zugängliche URL verfügbar macht.
 
-Um Ihre Tab-Erweiterung zu testen, verwenden Sie [ngrok](https://ngrok.com/docs), das in diese Anwendung integriert ist. Ngrok ist ein Reverse-Proxy-Software Tool, mit dem ein Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten des lokal ausgeführten Webservers erstellt wird. Die Webendpunkte Ihres Servers sind während der aktuellen Sitzung auf Ihrem lokalen Computer verfügbar. Wenn der Computer heruntergefahren wird oder in den Standbymodus wechselt, steht der Dienst nicht mehr zur Verfügung.
+Zum Testen der Tabulatorerweiterung verwenden Sie [ngrok](https://ngrok.com/docs), das in diese Anwendung integrierte. Ngrok ist ein Reverseproxy-Softwaretool, das einen Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten Ihres lokal ausgeführten Webservers erstellt. Die Webendpunkte Ihres Servers stehen während der aktuellen Sitzung auf Dem lokalen Computer zur Verfügung. Wenn der Computer heruntergefahren wird oder in den Ruhezustand geht, ist der Dienst nicht mehr verfügbar.
 
-Beenden Sie in der Eingabeaufforderung localhost, und geben Sie Folgendes ein:
+Beenden Sie localhost in der Eingabeaufforderung, und geben Sie Folgendes ein:
 
 ```bash
 gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> Nachdem die Registerkarte in Microsoft Teams hochgeladen und erfolgreich gespeichert wurde, können Sie Sie im Registerkarten Katalog anzeigen, der Registerkartenleiste hinzufügen und mit ihr interagieren, bis die ngrok-Tunnelsitzung endet. Wenn Sie die ngrok-Sitzung neu starten, müssen Sie Ihre APP mit der neuen URL aktualisieren.
+> Nachdem Ihre Registerkarte in Microsoft Teams hochgeladen und erfolgreich gespeichert wurde, können Sie sie im Registerkartenkatalog anzeigen, der Registerkartenleiste hinzufügen und mit ihr interagieren, bis Ihre ngrok-Tunnelsitzung endet. Wenn Sie Ihre ngrok-Sitzung neu starten, müssen Sie Ihre App mit der neuen URL aktualisieren.
 
-## <a name="upload-your-application-to-teams"></a>Hochladen Ihrer Anwendung in Microsoft Teams
+## <a name="upload-your-application-to-teams"></a>Hochladen Ihrer Anwendung in Teams
 
-- Öffnen Sie den Microsoft Teams-Client. Wenn Sie die [webbasierte Version](https://teams.microsoft.com) verwenden, können Sie den Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md)Ihres Browsers überprüfen.
-- Wählen Sie im *YourTeams* -Bereich auf der linken Seite das `...` Menü neben dem Team aus, das Sie zum Testen der Registerkarte verwenden, und wählen Sie **Team verwalten**aus.
-- Wählen Sie im Hauptbereich **apps** in der Registerkartenleiste aus, und wählen Sie **eine benutzerdefinierte App hochladen** , die sich in der unteren rechten Ecke der Seite befindet.
-- Öffnen Sie Ihr Projektverzeichnis, navigieren Sie zum Ordner **./Paket** , wählen Sie den ZIP-Ordner für das App-Paket aus, und wählen Sie **Öffnen**aus. Ihre Registerkarte wird in Teams hochgeladen.
-- Kehren Sie zu Ihrem Team zurück, wählen Sie den Kanal aus, in dem Sie die Registerkarte anzeigen möchten, wählen Sie in der Registerkartenleiste ➕ aus, und wählen Sie im Katalog die Registerkarte aus.
-- Befolgen Sie die Anweisungen zum Hinzufügen einer Registerkarte. Beachten Sie, dass für die Registerkarte Kanal/Gruppe ein benutzerdefiniertes Konfigurationsdialogfeld vorhanden ist.
-- Wählen Sie **Speichern** aus, und ihre Registerkarte wird der Registerkartenleiste des Kanals hinzugefügt.
+- Öffnen Sie den Microsoft Teams-Client. Wenn Sie die [webbasierte Version verwenden,](https://teams.microsoft.com) können Sie Ihren Front-End-Code mithilfe der Entwicklertools Ihres Browsers [überprüfen.](~/tabs/how-to/developer-tools.md)
+- Wählen Sie *im Bereich YourTeams* auf der linken Seite das Menü neben dem Team aus, das Sie zum Testen Ihrer Registerkarte verwenden, und `...` wählen Sie Team verwalten **aus.**
+- Wählen Sie im Hauptbereich **apps** aus der Registerkartenleiste aus, und wählen Sie Hochladen einer benutzerdefinierten **App** in der unteren rechten Ecke der Seite aus.
+- Öffnen Sie Ihr Projektverzeichnis, navigieren Sie zum **Ordner ./package,** wählen Sie den Ordner app package zip aus, und wählen Sie **Öffnen aus.** Ihre Registerkarte wird in Teams hochgeladen.
+- Kehren Sie zu Ihrem Team zurück, wählen Sie den Kanal aus, in dem Sie die Registerkarte anzeigen möchten, wählen ➕ in der Registerkartenleiste aus, und wählen Sie ihre Registerkarte aus dem Katalog aus.
+- Befolgen Sie die Anweisungen zum Hinzufügen einer Registerkarte. Beachten Sie, dass es ein benutzerdefiniertes Konfigurationsdialogfeld für Die Registerkarte Kanal/Gruppe gibt.
+- Wählen **Sie Speichern** aus, und Ihre Registerkarte wird der Registerkartenleiste des Kanals hinzugefügt.

@@ -3,14 +3,15 @@ title: Grundlegendes zu Registerkartenanforderungen
 author: laujan
 description: Jede Registerkarte in Microsoft Teams muss diese Anforderungen erfüllen.
 keywords: Gruppenkanal für Teams-Registerkarten konfigurierbar
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 087f894bd2a0a2c7a79e683f504e2c2f5a50c287
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 8013c10050ae81ada0f2a27576cd43077eafe1e0
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034663"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019580"
 ---
 # <a name="tab-requirements"></a>Registerkartenanforderungen
 

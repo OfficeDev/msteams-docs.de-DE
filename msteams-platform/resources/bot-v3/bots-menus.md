@@ -3,13 +3,14 @@ title: Hinzufügen eines Botmenüs
 description: Beschreibt das Erstellen von Menüs für Bots in Microsoft Teams
 keywords: Erstellen von Teams-Bots-Menüs
 ms.topic: how-to
+localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: 3623d85c1531b9942633af940c5e41ac1c574441
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: f4190d0b21abbe00994e082000202b7bc65b917c
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696143"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019769"
 ---
 # <a name="add-a-bot-menu-in-microsoft-teams"></a>Hinzufügen eines Botmenüs in Microsoft Teams
 

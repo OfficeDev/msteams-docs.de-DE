@@ -2,14 +2,15 @@
 title: Entwerfen Ihrer benutzerdefinierten App
 author: heath-hamilton
 description: Erfahren Sie, wie Sie Microsoft Teams-Apps entwerfen. Zu den Ressourcen gehören das Microsoft Teams UI Kit, bewährte Methoden, Beispiele und vieles mehr.
+localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 7a6786cdf9091b04f89ebd6c8bb03799eb7d127a
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: d7f3e89ce5ad51fb1a8cecddf0b22d59544ecc09
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634495"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019881"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Entwerfen Ihrer Microsoft Teams-App
 

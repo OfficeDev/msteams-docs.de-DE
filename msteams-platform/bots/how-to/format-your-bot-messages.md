@@ -3,13 +3,14 @@ title: Formatieren von Bot-Nachrichten
 author: clearab
 description: Hinzufügen von reichhaltigen Formatierungen zu Botnachrichten
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 39b82e78e061653eaa3e3b66c10a611d005924bd
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 7dc082f4b17e123c9fa000552f02fc913c66dcf7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697004"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020905"
 ---
 # <a name="format-your-bot-messages"></a>Formatieren von Bot-Nachrichten
 

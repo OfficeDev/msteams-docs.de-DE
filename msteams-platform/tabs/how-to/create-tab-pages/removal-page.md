@@ -1,63 +1,64 @@
 ---
 title: Erstellen einer Seite zum Entfernen von Registerkarten
 author: laujan
-description: So erstellen Sie eine Seite zum Entfernen von Registerkarten
-keywords: Teams-Registerkarten-Gruppenkanal konfigurierbare Löschung entfernen
+description: Erstellen einer Seite zum Entfernen von Registerkarten
+keywords: teams tabs group channel configurable remove delete
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 49e2df47095999e9f9eea76ea341a44215bfacb3
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 8f01780dce9aa0450169d4c699471bb2ac5bd9a0
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797883"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019587"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>Ändern oder Entfernen einer Kanalgruppenregisterkarte
 
-Sie können die Benutzererfahrung erweitern und verbessern, indem Sie Entfernungs- und Änderungsoptionen in Ihrer App unterstützen. Teams ermöglicht Benutzern das Umbenennen oder Entfernen einer Kanal-/Gruppenregisterkarte, und Sie können Benutzern erlauben, ihre Registerkarte nach der Installation neu zu konfigurieren. Darüber hinaus können Sie beim Entfernen von Registerkarten festlegen, was mit dem Inhalt geschieht, wenn die Registerkarte entfernt wird, oder benutzern Optionen nach dem Entfernen zur Verfügung stellen, z. B. löschen oder archivieren.
+Sie können die Benutzeroberfläche erweitern und verbessern, indem Sie Entfernungs- und Änderungsoptionen in Ihrer App unterstützen. Mit Teams können Benutzer eine Kanal-/Gruppenregisterkarte umbenennen oder entfernen, und Sie können Benutzern erlauben, Ihre Registerkarte nach der Installation neu zu konfigurieren. Darüber hinaus kann ihre Registerkartenentfernungserfahrung das Festlegen der Inhalte beim Entfernen der Registerkarte oder das Festlegen von Optionen nach dem Entfernen von Inhalten wie löschen oder Archivieren des Inhalts umfassen.
 
-## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Aktivieren der Neukonfiguration der Registerkarte nach der Installation
+## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Aktivieren der Neukonfiguration ihrer Registerkarte nach der Installation
 
-Ihr **manifest.jsdefiniert** die Features und Funktionen Ihrer Registerkarte. Die Eigenschaft der Registerkarteninstanz verwendet einen booleschen Wert, der angibt, ob ein Benutzer die Registerkarte ändern oder neu konfigurieren kann, nachdem `canUpdateConfiguration` sie erstellt wurde:
+Ihre **manifest.jsdefiniert** die Features und Funktionen Ihrer Registerkarte. Die Tab-Instanz-Eigenschaft verwendet einen booleschen Wert, der angibt, ob ein Benutzer die Registerkarte ändern oder neu konfigurieren `canUpdateConfiguration` kann, nachdem sie erstellt wurde:
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Boolean|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: `true`|
+|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: `true`|
 
 Wenn Ihre Registerkarte in einen Kanal- oder Gruppenchat hochgeladen wird, fügt Teams ein Dropdownmenü mit der rechten Maustaste für Ihre Registerkarte hinzu. Die verfügbaren Optionen werden durch die Einstellung `canUpdateConfiguration` bestimmt:
 
-| `canUpdateConfiguration`| true   | False | description |
+| `canUpdateConfiguration`| true   | false | description |
 | ----------------------- | :----: | ----- | ----------- |
-|     Einstellungen            |   √    |       |Die Seite wird in einem IFrame neu geladen, sodass der Benutzer die `configurationUrl` Registerkarte neu konfigurieren kann.  |
+|     Einstellungen            |   √    |       |Die Seite wird in einem IFrame neu `configurationUrl` geladen, sodass der Benutzer die Registerkarte neu konfigurieren kann.  |
 |     Umbenennen              |   √    |   √   | Der Benutzer kann den Namen der Registerkarte ändern, wie er in der Registerkartenleiste angezeigt wird.          |
-|     Entfernen              |   √    |   √   |  Wenn die Eigenschaft und der Wert in der Konfigurationsseite enthalten sind, wird die Seite zum Entfernen in einen IFrame geladen und `removeURL` dem Benutzer angezeigt.   Wenn keine Seite zum Entfernen enthalten ist, wird dem Benutzer ein Bestätigungsdialogfeld angezeigt.          |
+|     Entfernen              |   √    |   √   |  Wenn die Eigenschaft und der Wert auf der Konfigurationsseite enthalten sind, wird die Seite zum Entfernen in einen IFrame geladen und dem `removeURL` Benutzer angezeigt.   Wenn keine Entfernungsseite enthalten ist, wird dem Benutzer ein Bestätigungsdialogfeld angezeigt.          |
 |||||
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Erstellen einer Seite zum Entfernen von Registerkarten für Ihre Anwendung
 
-Die optionale Seite zum Entfernen ist eine HTML-Seite, die Sie hosten und die angezeigt wird, wenn die Registerkarte entfernt wird. Die URL der Entfernungsseite wird durch die `setSettings()` Methode auf der Konfigurationsseite festgelegt. Wie bei allen Seiten in Ihrer App muss die Seite zum Entfernen den [Registerkartenanforderungen](../../../tabs/how-to/tab-requirements.md)für Teams entsprechen.
+Die optionale Seite zum Entfernen ist eine HTML-Seite, die Sie hosten und die angezeigt wird, wenn die Registerkarte entfernt wird. Die URL der Entfernungsseite wird von der `setSettings()` Methode auf der Konfigurationsseite festgelegt. Wie bei allen Seiten in Ihrer App muss die Seite zum Entfernen den [Registerkartenanforderungen von Teams entsprechen.](../../../tabs/how-to/tab-requirements.md)
 
-### <a name="register-a-remove-handler"></a>Registrieren eines Removehandlers
+### <a name="register-a-remove-handler"></a>Registrieren eines Remove-Handlers
 
-Optional können Sie innerhalb der Logik für die Entfernungsseite den Ereignishandler aufrufen, wenn der Benutzer `registerOnRemoveHandler((RemoveEvent) => {}` eine vorhandene Registerkartenkonfiguration entfernt. Die Methode übernimmt die Schnittstelle und führt den Code im Handler aus, wenn ein Benutzer [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) versucht, Inhalte zu entfernen. Es wird zum Ausführen von Bereinigungsvorgängen verwendet, z. B. zum Entfernen der zugrunde liegenden Ressource, die den Registerkarteninhalt an die Macht macht. Es kann immer nur ein Removehandler registriert werden.
+Optional können Sie innerhalb der Logik der Entfernungsseite den Ereignishandler aufrufen, wenn der Benutzer `registerOnRemoveHandler((RemoveEvent) => {}` eine vorhandene Registerkartenkonfiguration entfernt. Die -Methode übernimmt die Schnittstelle und führt den Code im Handler aus, wenn ein Benutzer versucht, [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) Inhalte zu entfernen. Es wird verwendet, um Bereinigungsvorgänge durchzuführen, z. B. das Entfernen der zugrunde liegenden Ressource, die den Registerkarteninhalt nutzt. Es kann immer nur ein Remove-Handler registriert werden.
 
 Die `RemoveEvent` Schnittstelle beschreibt ein Objekt mit zwei Methoden:
 
-* Die `notifySuccess()` Funktion ist erforderlich. Es gibt an, dass das Entfernen der zugrunde liegenden Ressource erfolgreich war und der inhalt entfernt werden kann.
+* Die `notifySuccess()` Funktion ist erforderlich. Es gibt an, dass das Entfernen der zugrunde liegenden Ressource erfolgreich war und deren Inhalt entfernt werden kann.
 
-* Die `notifyFailure(string)` Funktion ist optional. Es weist darauf hin, dass beim Entfernen der zugrunde liegenden Ressource ein Fehler aufting, und der Inhalt kann nicht entfernt werden. Der optionale Zeichenfolgenparameter gibt einen Grund für den Fehler an. Wenn angegeben, wird diese Zeichenfolge dem Benutzer angezeigt. andernfalls wird ein allgemeiner Fehler angezeigt.
+* Die `notifyFailure(string)` Funktion ist optional. Es gibt an, dass das Entfernen der zugrunde liegenden Ressource fehlgeschlagen ist und deren Inhalt nicht entfernt werden kann. Der optionale String-Parameter gibt einen Grund für den Fehler an. Wenn angegeben, wird diese Zeichenfolge dem Benutzer angezeigt. Andernfalls wird ein allgemeiner Fehler angezeigt.
 
 #### <a name="use-the-getsettings-function"></a>Verwenden der `getSettings()` Funktion
 
-Sie können den `getSettings()` zu entfernende Registerkarteninhalt festlegen. Die `getSettings((Settings) =>{})` Funktion übernimmt die [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) gültigen Einstellungseigenschaftswerte, die abgerufen werden können.
+Sie können den `getSettings()` zu entfernende Registerkarteninhalt festlegen. Die `getSettings((Settings) =>{})` Funktion übernimmt [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) die und stellt die gültigen Einstellungseigenschaftswerte zur Verfügung, die abgerufen werden können.
 
 #### <a name="use-the-getcontext-function"></a>Verwenden der `getContext()` Funktion
 
-Sie können den `getContext()` aktuellen Kontext abrufen, in dem der Frame ausgeführt wird. Die Funktion übernimmt die gültigen Eigenschaftswerte, die Sie in Der Entfernungsseitenlogik verwenden können, um den Inhalt zu bestimmen, der auf der Seite zum Entfernen `getContext((Context) =>{})` [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) angezeigt werden `Context` soll.
+Sie können den `getContext()` aktuellen Kontext abrufen, in dem der Frame ausgeführt wird. Die Funktion übernimmt die und stellt gültige Eigenschaftswerte zur Verfügung, die Sie in der Logik der Entfernungsseite verwenden können, um den Inhalt zu bestimmen, der auf der `getContext((Context) =>{})` [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) Entfernungsseite angezeigt werden `Context` soll.
 
-#### <a name="include-authentication"></a>Authentifizierung mit ein- und ein-
+#### <a name="include-authentication"></a>Schließen Sie die Authentifizierung ein
 
-Möglicherweise benötigen Sie eine Authentifizierung, bevor Sie einem Benutzer das Löschen des Registerkarteninhalts erlauben. Kontextinformationen können zum Erstellen von URLs für Authentifizierungsanforderungen und Autorisierungsseiten verwendet werden. Weitere [Informationen finden Sie unter Microsoft Teams-Authentifizierungsfluss für Registerkarten.](~/tabs/how-to/authentication/auth-flow-tab.md) Stellen Sie sicher, dass alle auf Ihren Registerkartenseiten verwendeten Domänen im Array aufgeführt `manifest.json` `validDomains` sind.
+Möglicherweise benötigen Sie eine Authentifizierung, bevor ein Benutzer den Registerkarteninhalt löschen kann. Kontextinformationen können zum Erstellen von Authentifizierungsanforderungen und Autorisierungsseiten-URLs verwendet werden. Registerkarten finden Sie unter [Microsoft Teams-Authentifizierungsfluss.](~/tabs/how-to/authentication/auth-flow-tab.md) Stellen Sie sicher, dass alle auf Ihren Registerkartenseiten verwendeten Domänen im Array `manifest.json` `validDomains` aufgeführt sind.
 
 Nachfolgend finden Sie einen Beispielcodeblock zum Entfernen von Registerkarten:
 
@@ -82,11 +83,11 @@ Nachfolgend finden Sie einen Beispielcodeblock zum Entfernen von Registerkarten:
 
 ```
 
-Wenn ein Benutzer  aus dem Dropdownmenü der Registerkarte "Entfernen" auswählt, wird die optionale Seite (auf Der Konfigurationsseite festgelegt) von Teams in einen `removeUrl` IFrame geladen.  Hier wird dem Benutzer eine Schaltfläche angezeigt, die mit der Funktion geladen ist, die die Schaltfläche "Entfernen" aufruft und aktiviert, die sich am unteren Rand des IFrames zum Entfernen `onClick()` `microsoftTeams.settings.setValidityState(true)` befindet. 
+Wenn ein Benutzer  im Dropdownmenü der Registerkarte Entfernen auswählt, wird die optionale Seite (die auf Der Konfigurationsseite angegeben ist) von Teams in einen `removeUrl` IFrame geladen.  Hier wird dem Benutzer eine Schaltfläche angezeigt, die mit der Funktion geladen ist, die die Schaltfläche Entfernen aufruft und aktiviert, die sich am unteren Rand der `onClick()` `microsoftTeams.settings.setValidityState(true)` Entfernungsseite IFrame befindet. 
 
-Nach der Ausführung des Removehandlers oder benachrichtigen Sie Teams über das Ergebnis `removeEvent.notifySuccess()` `removeEvent.notifyFailure()` des Entfernens von Inhalten.
+Nach der Ausführung des Remove-Handlers oder benachrichtigt Teams über das Ergebnis der `removeEvent.notifySuccess()` `removeEvent.notifyFailure()` Inhaltsentfernung.
 
 >[!NOTE]
->Um sicherzustellen, dass die Kontrolle eines autorisierten Benutzers über eine Registerkarte nicht behindert wird, entfernt Teams die Registerkarte sowohl in Erfolgs- als auch in Fehlerfällen.\
->Teams aktiviert die **Schaltfläche "Entfernen"** nach 5 Sekunden, auch wenn Ihre Registerkarte ".\ " nicht aufgerufen `setValidityState()` hat.
->Wenn der Benutzer **"Teams** entfernen" auswählt, wird die Registerkarte nach 30 Sekunden entfernt, unabhängig davon, ob Ihre Aktionen abgeschlossen wurden.
+>Um sicherzustellen, dass das Steuerelement eines autorisierten Benutzers über eine Registerkarte nicht gehemmt wird, entfernt Teams die Registerkarte sowohl in Erfolgs- als auch in Fehlerfällen.\
+>Teams aktiviert die **Schaltfläche Entfernen** nach 5 Sekunden, auch wenn Ihre Registerkarte nicht aufgerufen `setValidityState()` wurde.\
+>Wenn der Benutzer Teams **entfernen** auswählt, wird die Registerkarte nach 30 Sekunden entfernt, unabhängig davon, ob Ihre Aktionen abgeschlossen wurden.

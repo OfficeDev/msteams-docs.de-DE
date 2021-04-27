@@ -2,14 +2,15 @@
 title: Messaging-Erweiterungen
 author: clearab
 description: Übersicht über Messagingerweiterungen auf der Microsoft Teams-Plattform
+localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a6d4f478541724cd2643068d9e1615a15b03fd13
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: fcd5661a2e0b601579fc5af843935d64ab487cef
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995883"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020695"
 ---
 # <a name="messaging-extensions"></a>Messaging-Erweiterungen
 
