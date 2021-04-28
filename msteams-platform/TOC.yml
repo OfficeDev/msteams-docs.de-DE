@@ -46,6 +46,8 @@
       href: concepts/design/map-use-cases.md
 - name: Integration in Microsoft Teams
   items:
+    - name: Übersicht
+      href: samples/integrate-web-apps-overview.md
     - name: Web-Apps
       href: samples/integrating-web-apps.md
     - name: Power Plattform-Apps
@@ -60,7 +62,7 @@
       href: samples/app-templates.md
     - name: Produktionsfertige Shifts-Connectors
       href: samples/shifts-wfm-connectors.md
-    - name: Moodle LMS installieren
+    - name: Installieren von Moodle LMS
       href: resources/moodleInstructions.md
     - name: Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
       href: concepts/build-and-test/share-to-teams.md
