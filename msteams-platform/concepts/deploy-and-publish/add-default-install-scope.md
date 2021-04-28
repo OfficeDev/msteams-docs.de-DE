@@ -4,12 +4,12 @@ description: Beschreibt, wie Sie die Standardinstallationsoptionen Ihrer App ang
 ms.topic: how-to
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: a4b70df70c7b9442e29953dae8a8c4e892cb72c1
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 0afcce50a4779421016c23c4ec4e3d25cc3401d1
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946490"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058614"
 ---
 # <a name="add-a-default-install-scope-and-group-capability"></a>Hinzufügen eines Standardinstallationsbereichs und einer Gruppenfunktion
 
@@ -17,7 +17,7 @@ Es ist üblich, dass eine App mehrere Szenarien in Teams unterstützt, aber Sie 
 
 ![Eine App hinzufügen](../../assets/images/compose-extensions/addanapp.png)
 
-Wenn die primäre Funktion Ihrer App ein Bot ist, können Sie den Bot auch zur Standardfunktion machen, wenn ein Benutzer Ihre App in einem Team installiert. 
+Wenn die primäre Funktion Ihrer App ein Bot ist, können Sie den Bot auch zur Standardfunktion machen, wenn ein Benutzer Ihre App in einem Team installiert.
 
 ## <a name="configure-your-apps-default-install-scope"></a>Konfigurieren des Standardinstallationsbereichs Ihrer App
 
@@ -26,7 +26,7 @@ Konfigurieren Sie den Standardinstallationsbereich für Ihre App. Sie können im
 **So konfigurieren Sie den Standardinstallationsbereich in Ihrem App-Manifest**
 
 1. Öffnen Sie Ihr App-Manifest, und fügen Sie die Eigenschaft `defaultInstallScope` hinzu.
-2. Legen Sie einen Wert von `personal` , , , oder `team` `groupchat` `meetings` (siehe ein Beispiel unten)
+2. Legen Sie den Standardinstallationsbereichswert als `personal` , `team` , oder `groupchat` . `meetings`
 
     ```json
     "defaultInstallScope": "meetings",
@@ -37,14 +37,19 @@ Konfigurieren Sie den Standardinstallationsbereich für Ihre App. Sie können im
 
 ## <a name="configure-the-default-capability-for-shared-scopes"></a>Konfigurieren der Standardfunktion für freigegebene Bereiche
 
-Konfigurieren Sie die Standardfunktion, wenn Ihre App für ein Team, eine Besprechung oder einen Chat installiert ist.
+Konfigurieren Sie die Standardfunktion, wenn Ihre App für ein Team, eine Besprechung oder einen Gruppenchat installiert ist.
+
+> [!NOTE]
+> `defaultGroupCapability` bietet die Standardfunktion, die dem Team, dem Groupchat oder der Besprechung hinzugefügt wird. Wählen Sie eine Registerkarte, einen Bot oder einen Connector als Standardfunktion für Ihre App aus, Sie müssen jedoch sicherstellen, dass Sie die ausgewählte Funktion in Ihrer App-Definition bereitgestellt haben.
 
 **So konfigurieren Sie Details im App-Manifest**
 
 1. Öffnen Sie Ihr App-Manifest, und fügen Sie `defaultGroupCapability` die -Eigenschaft hinzu.
-2. Speichern Sie die Updates.
+2. Legen Sie den Wert `team` , `groupchat` oder . `meetings`
+3. Für die ausgewählte Gruppenfunktion sind die verfügbaren Gruppenfunktionen , `bot` `tab` oder `connector` . 
 
-    Es folgt ein JSON-Beispiel:
+    > [!NOTE]
+    > Sie können nur eine Standardfunktion, `bot` , , oder für die ausgewählte `tab` `connector` Gruppenfunktion auswählen.
 
     ```json
     "defaultGroupCapability": {
@@ -53,8 +58,9 @@ Konfigurieren Sie die Standardfunktion, wenn Ihre App für ein Team, eine Bespre
         "meetings": "tab"
     }
     ```
+
 > [!NOTE]
-> Informationen zum vollständigen Schema finden Sie unter [Manifestschema](~/resources/schema/manifest-schema.md).
+> Weitere Informationen finden Sie im [App-Manifestschema](~/resources/schema/manifest-schema.md).
 
 ## <a name="next-step"></a>Nächster Schritt
 

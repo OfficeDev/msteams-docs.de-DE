@@ -6,12 +6,12 @@ keywords: Kameramedien qr code qrcode Strichcode Barcodescanner Scanfunktionen s
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 579137f31dd929a6105dd7bcc2d46d84c145ef50
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ede791a6cd566a0fc725a04e0b615ae1b8eeb0eb
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020737"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058341"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR- oder Barcode-Scannerfunktion integrieren 
 
@@ -110,8 +110,6 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Integrieren von Medienfunktionen in Teams](mobile-camera-image-permissions.md)
+- [Integrieren von Medienfunktionen in Teams](mobile-camera-image-permissions.md)
 
-> [!div class="nextstepaction"]
-> [Integrieren von Standortfunktionen in Teams](location-capability.md)
+- [Integrieren von Standortfunktionen in Teams](location-capability.md)

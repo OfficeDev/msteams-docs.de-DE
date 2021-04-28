@@ -4,12 +4,12 @@ description: Beschreibt den Prozess zum Testen Ihrer benutzerdefinierten Teams-A
 ms.topic: how-to
 localization_priority: Normal
 keywords: Konfigurieren der Microsoft 365-Mandantenteams zum Hochladen der Test-App
-ms.openlocfilehash: 8815e73c054cb75782660ef4afb3ae583b4f40fa
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d95d65961b060ff1938d51c0f3fafc2b1e56fa7e
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019937"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058607"
 ---
 # <a name="test-your-app"></a>Testen eigener Apps
 
@@ -37,14 +37,11 @@ Fügen Sie die Testdaten dem Microsoft 365-Test-Mandanten hinzu. Weitere Informa
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Debuggen Ihrer Registerkarte](~/tabs/how-to/developer-tools.md)
+- [Debuggen Ihrer Registerkarte](~/tabs/how-to/developer-tools.md)
  
-> [!div class="nextstepaction"]
-> [Debuggen Ihrer Bots](~/bots/how-to/debug/locally-with-an-ide.md)
+- [Debuggen Ihrer Bots](~/bots/how-to/debug/locally-with-an-ide.md)
 
-> [!div class="nextstepaction"]
-> [Testen von RSC-Berechtigungen](~/graph-api/rsc/test-resource-specific-consent.md)
+- [Testen von RSC-Berechtigungen](~/graph-api/rsc/test-resource-specific-consent.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

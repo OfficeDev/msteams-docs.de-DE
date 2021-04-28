@@ -5,12 +5,12 @@ description: Auswählen des richtigen App-Bereichs
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 693adaae96cdf65a04c591d51c57d4bf7fe972b1
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a3d9ec8f1a5c18025cffc0f97285e1ec764becb8
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019874"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058453"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Ordnen Sie Ihre Anwendungsfälle den Funktionen der Teams-App zu.
 
@@ -105,7 +105,6 @@ Die besten Apps kombinieren in der Regel mehrere Features und erstellen eine App
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Apps für Microsoft Teams erstellen](../../overview.md)
+- [Apps für Microsoft Teams erstellen](../../overview.md)
  
 

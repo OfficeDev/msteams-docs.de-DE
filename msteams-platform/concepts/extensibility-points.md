@@ -5,12 +5,12 @@ description: Hier wird beschrieben, wo Benutzer Ihre App in Microsoft Teams find
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: f3f4af191400b6c04c41827ce689b4250c105ce0
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f2bdb35c76bdb7487e66a0e6b9ad01c6da9e04f8
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019839"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058320"
 ---
 # <a name="entry-points-for-teams-apps"></a>Einstiegspunkte für Microsoft Teams-Apps
 
@@ -47,8 +47,7 @@ Die folgende Liste zeigt, wie Teams-Funktionen häufig in persönlichen Kontexte
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Richtlinien zum Entwerfen von Teams-Apps](../concepts/design/design-teams-app-overview.md)
+- [Richtlinien zum Entwerfen von Teams-Apps](../concepts/design/design-teams-app-overview.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

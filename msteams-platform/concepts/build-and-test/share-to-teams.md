@@ -4,12 +4,12 @@ description: Hinzufügen der eingebetteten Schaltfläche "Zu Teams freigeben" au
 ms.topic: reference
 localization_priority: Normal
 keywords: Freigeben von Teams-Share-to-Teams
-ms.openlocfilehash: c77c4149c95685e17e8f789a9536b4d81e05d13f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c8bbb371e2d68bf063c3aa5e02c7cf3ec911c0b8
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020823"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058474"
 ---
 # <a name="create-share-to-teams-button"></a>Schaltfläche "Share-to-Teams erstellen"
 
@@ -94,12 +94,12 @@ Für Lehrkräfte, die die Schaltfläche Für Teams freigeben verwenden, gibt es 
 
 | Eigenschaft | HTML-Attribut | Typ | Standard | Beschreibung |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | Zeichenfolge | n/v | Der Href des inhalts, der gemeinsam verwendet werden soll. |
+| href | `data-href` | string | n/v | Der Href des inhalts, der gemeinsam verwendet werden soll. |
 | Vorschau | `data-preview` | boolean (als Zeichenfolge) | `true` | Gibt an, ob eine Vorschau des zu teilende Inhalts angezeigt werden soll. |
 | iconPxSize | `data-icon-px-size` | Zahl (als Zeichenfolge) | `32` | Die Größe der zu rendernde Schaltfläche "Share-to-Teams" in Pixeln. |
-| msgText | `data-msg-text` | Zeichenfolge | n/v | Standardtext, der vor dem Link im Feld Zum Verfassen von Nachrichten eingefügt werden soll. Die maximale Anzahl von Zeichen beträgt 200. |
-| assignInstr | `data-assign-instr` | Zeichenfolge | n/v | Standardtext, der in das Feld "Anweisungen" eingefügt werden soll. Die maximale Anzahl von Zeichen beträgt 200. |
-| assignTitle | `data-assign-title` | Zeichenfolge | n/v | Standardtext, der in das Feld Zuordnungen "Titel" eingefügt werden soll. Die maximale Anzahl von Zeichen ist 50. |
+| msgText | `data-msg-text` | string | n/v | Standardtext, der vor dem Link im Feld Zum Verfassen von Nachrichten eingefügt werden soll. Die maximale Anzahl von Zeichen beträgt 200. |
+| assignInstr | `data-assign-instr` | string | n/v | Standardtext, der in das Feld "Anweisungen" eingefügt werden soll. Die maximale Anzahl von Zeichen beträgt 200. |
+| assignTitle | `data-assign-title` | string | n/v | Standardtext, der in das Feld Zuordnungen "Titel" eingefügt werden soll. Die maximale Anzahl von Zeichen ist 50. |
 
 ### <a name="methods"></a>Methoden
 
@@ -133,5 +133,4 @@ Sie können die Standardwerte für die folgenden Felder im Formular Für Teams f
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
+- [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)

@@ -6,12 +6,12 @@ keywords: Teams registerkarten sharepoint framework development
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 08a4aef329d0e5e1d063f05959f0a589581c9c03
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a2ea6c470f094a9d7b8617a210559e911f5f81c9
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020330"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058481"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Hinzufügen der Registerkarte Teams zu SharePoint 
 
@@ -143,11 +143,8 @@ Die folgende Abbildung zeigt die vollständige Erfahrung der Teams-App in Sharep
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Erstellen von Microsoft Teams-Registerkarten mit SharePoint Framework – Lernprogramm](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+- [Erstellen von Microsoft Teams-Registerkarten mit SharePoint Framework – Lernprogramm](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
-> [!div class="nextstepaction"]
-> [Verwenden von App-Seiten mit einem einzelne Part in SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+- [Verwenden von App-Seiten mit einem einzelne Part in SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
 
-> [!div class="nextstepaction"]
-> [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
+- [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)

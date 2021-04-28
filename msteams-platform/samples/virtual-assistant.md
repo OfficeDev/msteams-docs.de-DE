@@ -4,12 +4,12 @@ description: Erstellen von virtuellen Assistenten-Bots und -Fähigkeiten für di
 localization_priority: Normal
 ms.topic: how-to
 keywords: teams Virtual Assistant Bots
-ms.openlocfilehash: 65d9b90dacd6ca653ce22b7170651423a2ac9425
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 80a308050317e8a211b8f7a9e2dd459c1572af18
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019647"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058677"
 ---
 # <a name="create-virtual-assistant"></a>Erstellen des virtuellen Assistenten 
 
@@ -577,11 +577,8 @@ Sie können auch vorhandene Fähigkeiten aus dem [Bot Framework Solutions-Reposi
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
+- [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
 
-> [!div class="nextstepaction"]
-> [Book-a-room](app-templates.md#book-a-room)
+- [Book-a-room](app-templates.md#book-a-room)
 
-> [!div class="nextstepaction"]
-> [Microsoft Teams-Bot](../bots/what-are-bots.md)
+- [Microsoft Teams-Bot](../bots/what-are-bots.md)

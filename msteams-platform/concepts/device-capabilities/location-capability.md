@@ -6,12 +6,12 @@ keywords: Standortzuordnungsfunktionen Systemeigene Geräteberechtigungen
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 98d37c4f34f638f129c07b012d98ec54c7c8e44f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d10f2df48ee5b75252508fbc51e5a31df9ea083f
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019860"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058369"
 ---
 # <a name="integrate-location-capabilities"></a>Integration von Standortfunktionen 
 
@@ -105,8 +105,6 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Integrieren von Medienfunktionen in Teams](mobile-camera-image-permissions.md)
+- [Integrieren von Medienfunktionen in Teams](mobile-camera-image-permissions.md)
 
-> [!div class="nextstepaction"]
-> [Integrieren von QR- oder Barcodescannerfunktionen in Teams](qr-barcode-scanner-capability.md)
+- [Integrieren von QR- oder Barcodescannerfunktionen in Teams](qr-barcode-scanner-capability.md)

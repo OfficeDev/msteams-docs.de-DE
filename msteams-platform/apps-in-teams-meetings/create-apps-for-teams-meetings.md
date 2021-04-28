@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Rollen-API für Teams-Apps-Besprechungen für Benutzerteilnehmer
-ms.openlocfilehash: c733f89208e82c032f581109f9c3887f20c104b9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 741f39c2aca6e99fb7bdfaa1171de4e2bb1e7755
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018376"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058348"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Apps für Teams-Besprechungen erstellen
 
@@ -57,9 +57,9 @@ Informationen zum Identifizieren und Abrufen von Kontextinformationen für Ihre 
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**meetingId**| Zeichenfolge | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
-|**participantId**| Zeichenfolge | Ja | Die Teilnehmer-ID ist die Benutzer-ID. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Teilnehmer-ID aus dem Tab-SSO zu erhalten. |
-|**tenantId**| Zeichenfolge | Ja | Die Mandanten-ID ist für die Mandantenbenutzer erforderlich. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Mandanten-ID aus dem Tab-SSO zu erhalten. |
+|**meetingId**| string | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
+|**participantId**| string | Ja | Die Teilnehmer-ID ist die Benutzer-ID. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Teilnehmer-ID aus dem Tab-SSO zu erhalten. |
+|**tenantId**| string | Ja | Die Mandanten-ID ist für die Mandantenbenutzer erforderlich. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Mandanten-ID aus dem Tab-SSO zu erhalten. |
 
 #### <a name="example"></a>Beispiel
 
@@ -155,7 +155,7 @@ Alle Benutzer in einer Besprechung erhalten die über die API gesendeten `Notifi
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**conversationId**| Zeichenfolge | Ja | Die Unterhaltungs-ID ist als Teil des Botaufrufs verfügbar. |
+|**conversationId**| string | Ja | Die Unterhaltungs-ID ist als Teil des Botaufrufs verfügbar. |
 
 #### <a name="example"></a>Beispiel
 
@@ -324,7 +324,7 @@ Informationen zur Verwendung der `userContext` API zum Entsprechend routen von A
 Die Messagingerweiterung funktioniert wie erwartet, wenn sich ein Benutzer in einer Besprechungsansicht befindet und der Benutzer Nachrichtenerweiterungskarten verfassen kann. AppName in-meeting ist eine QuickInfo, in der der App-Name in der Besprechungs-U-Leiste steht.
 
 > [!NOTE]
-> Verwenden Sie Version 1.9.0 des [Teams SDK,](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) um seitenseitige Panel hochzuladen, da Versionen vor dem System keine Seitenleiste unterstützen.
+> Verwenden Sie Version 1.7.0 oder höher von [Teams SDK,](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)da Versionen vor dem System den Seitenbereich nicht unterstützen.
 
 #### <a name="in-meeting-dialog"></a>Dialogfeld "Besprechung"
 

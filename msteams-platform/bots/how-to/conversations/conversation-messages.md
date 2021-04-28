@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 localization_priority: Normal
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 5944cc299a8ad4bebdaf034d803919a54868e41f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 5b23e3b2548e3d0eab98fae73d37316063fe60c1
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020926"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058600"
 ---
 # <a name="messages-in-bot-conversations"></a>Meldungen in Bot-Unterhaltungen
 
@@ -409,10 +409,9 @@ Im Folgenden finden Sie die Statuscodes und deren Fehlercode- und Meldungswerte:
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Senden proaktiver Nachrichten](~/bots/how-to/conversations/send-proactive-messages.md)
-> [!div class="nextstepaction"]
-> [Abonnieren von Unterhaltungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+- [Senden proaktiver Nachrichten](~/bots/how-to/conversations/send-proactive-messages.md)
+
+- [Abonnieren von Unterhaltungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

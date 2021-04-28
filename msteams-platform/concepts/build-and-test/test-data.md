@@ -5,12 +5,12 @@ ms.topic: how-to
 localization_priority: Normal
 keywords: Testen von Entwicklerprogrammteams für Apps
 ms.date: 11/01/2019
-ms.openlocfilehash: cc8125cdd8678c84aa6733b71d37adeee98abdd9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f224ad8b97cd5dd1a4349039824abaf551ef362e
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020814"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058467"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Hinzufügen von Testdaten zu Ihrem Microsoft 365-Test-Mandanten
 
@@ -256,12 +256,9 @@ Das Aktivieren der benutzerdefinierten App-Querladen ist optional. Standardmäß
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Debuggen Ihrer Registerkarte](~/tabs/how-to/developer-tools.md)
+- [Debuggen Ihrer Registerkarte](~/tabs/how-to/developer-tools.md)
  
-> [!div class="nextstepaction"]
-> [Debuggen Ihrer Bots](~/bots/how-to/debug/locally-with-an-ide.md)
+- [Debuggen Ihrer Bots](~/bots/how-to/debug/locally-with-an-ide.md)
 
-> [!div class="nextstepaction"]
-> [Testen von RSC-Berechtigungen](~/graph-api/rsc/test-resource-specific-consent.md)
+- [Testen von RSC-Berechtigungen](~/graph-api/rsc/test-resource-specific-consent.md)
 

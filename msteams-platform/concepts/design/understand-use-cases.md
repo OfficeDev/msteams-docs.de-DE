@@ -5,12 +5,12 @@ description: Grundlegendes zu Ihren Anwendungsfällen
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 748e40c712af7fb0095edd4f6ffe67ed253decec
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 9afb7ffb9ef6c07857f4452ce41a7b86782d50cd
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019867"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058663"
 ---
 # <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
 
@@ -79,14 +79,11 @@ Ermitteln Sie, welche neuen Features der Benutzer in der aktuellen Lösung bevor
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Auswählen, wie Ihre App verbreitet werden soll](../deploy-and-publish/overview.md)
+- [Auswählen, wie Ihre App verbreitet werden soll](../deploy-and-publish/overview.md)
 
-> [!div class="nextstepaction"]
-> [Entwerfen effektiver Registerkarten](../../tabs/design/tabs.md)
+- [Entwerfen effektiver Registerkarten](../../tabs/design/tabs.md)
 
-> [!div class="nextstepaction"]
-> [Entwerfen von tollen Bots](../../bots/design/bots.md)
+- [Entwerfen von tollen Bots](../../bots/design/bots.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

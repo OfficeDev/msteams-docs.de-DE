@@ -7,12 +7,12 @@ ms.date: 03/09/2020
 localization_priority: Normal
 keywords: Microsoft Teams Connectors kronos
 ms.author: lajanuar
-ms.openlocfilehash: 94e0b2b61998510ea9dd054d118e856eadc49b2d
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d17e3e18cfd39fec8117ce46aa99cb99da6927bc
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019617"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058698"
 ---
 # <a name="production-ready-shifts-connectors"></a>Produktionsfertige Shifts-Connectors  
 
@@ -72,5 +72,4 @@ Weitere Informationen zu Beitrag und Vorschlag finden Sie unter [Get it on GitHu
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
+- [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)

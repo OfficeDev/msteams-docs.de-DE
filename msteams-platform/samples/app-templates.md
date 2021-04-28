@@ -6,12 +6,12 @@ keywords: Beispielbeispiele für Microsoft Teams-Vorlagen
 localization_priority: Normal
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 58cda9f400081a47bb9bebf20ba509ee3623dc0b
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ceec7e05ae08ff147fb87005403ec8264e0ec313
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020481"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058670"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -693,5 +693,4 @@ Weitere Informationen zur App-Vorlage finden Sie unter [App-Vorlage](https://for
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
+- [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)

@@ -5,12 +5,12 @@ description: Testen und Debuggen des Bots lokal mit einer IDE
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 495e4dd2a3f29dbe0be61e8b42827bfc8c8a6f94
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 52676d35599560704e5bb72d85e09860174fdaf1
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020021"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058376"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Testen und Debuggen des Bots lokal
 
@@ -95,8 +95,6 @@ Um Ihren Bot vollständig aus Teams zu entfernen, wechseln Sie zu Ihrem **Bot-Da
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class=nextstep]
-> [Bot mit Inspektions-Middleware debuggen](/azure/bot-service/bot-service-debug-inspection-middleware)
+- [Bot mit Inspektions-Middleware debuggen](/azure/bot-service/bot-service-debug-inspection-middleware)
 
-> [!div class=nextstep]
-> [Anruf- und Besprechungsbot lokal debuggen](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
+- [Anruf- und Besprechungsbot lokal debuggen](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

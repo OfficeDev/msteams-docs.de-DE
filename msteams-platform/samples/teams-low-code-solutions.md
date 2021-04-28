@@ -5,12 +5,12 @@ description: Detaillierte Informationen zu verfügbaren Microsoft Low- und No-Co
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: c3fa4fb1792579a344596cbb080d96015292f7c4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 78386c310ee4a82e5fdc6832f0cd288181674dbb
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020415"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058684"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Erstellen von benutzerdefinierten Apps mit geringem Code für Microsoft Teams
 
@@ -83,5 +83,4 @@ Der virtuelle Assistent ist eine Open-Source-Vorlage von Microsoft, mit der Sie 
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
+- [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)

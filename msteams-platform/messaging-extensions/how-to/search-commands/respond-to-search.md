@@ -4,12 +4,12 @@ author: clearab
 description: So reagieren Sie auf den Suchbefehl über eine Messagingerweiterung in einer Microsoft Teams-App.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 4dff59d0bd923618a3079c81cbb6f9e7aea2bab4
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 044c6eebe9489ed404c9fa89b29c306cde8c7363
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51996009"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058586"
 ---
 # <a name="respond-to-search-command"></a>Antworten auf Suchbefehl
 
@@ -340,15 +340,14 @@ Die Standardabfrage hat dieselbe Struktur wie jede normale Benutzerabfrage, und 
 
 ## <a name="code-sample"></a>Codebeispiel
 
-| Beispielname           | Description | .NET    | Node.js   |   
+| Beispielname           | Beschreibung | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Messagingerweiterungsaktion für Teams| Beschreibt, wie Sie Aktionsbefehle definieren, Aufgabenmodul erstellen und auf Die Absendenaktion des Aufgabenmoduls reagieren. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Suche nach Messagingerweiterungen in Teams   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchbefehle reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Hinzufügen einer Konfiguration zu einer Messagingerweiterung](~/messaging-extensions/how-to/add-configuration-page.md)
+- [Hinzufügen einer Konfiguration zu einer Messagingerweiterung](~/messaging-extensions/how-to/add-configuration-page.md)
  
 ## <a name="next-step"></a>Nächster Schritt
 

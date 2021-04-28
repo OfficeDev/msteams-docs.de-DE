@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: Eine Übersicht über die Integration von Webanwendungen und Gerätefunktionen in die Microsoft Teams-App.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 6493f493b2bfc67a23aebfb5142aff60cf0afe93
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 01977e22d79f7e39986367e647a2d48ea9b2905c
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020242"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058656"
 ---
 # <a name="integrate-web-apps"></a>Integrieren von Web-Apps
 
@@ -79,41 +79,28 @@ Die Microsoft Teams-Plattform verbessert kontinuierlich die Entwicklerfunktionen
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Ordnen Sie die Anwendungsfälle Ihrer App den Funktionen der Teams-Plattform zu.](~/concepts/design/map-use-cases.md)
+- [Ordnen Sie die Anwendungsfälle Ihrer App den Funktionen der Teams-Plattform zu.](~/concepts/design/map-use-cases.md)
 
-> [!div class="nextstepaction"]
-> [Bestimmen der Einstiegspunkte Ihrer App](~/concepts/extensibility-points.md)
+- [Bestimmen der Einstiegspunkte Ihrer App](~/concepts/extensibility-points.md)
 
-> [!div class="nextstepaction"]
-> [Integrieren von Web-Apps](~/samples/integrating-web-apps.md)
+- [Integrieren von Web-Apps](~/samples/integrating-web-apps.md)
 
-> [!div class="nextstepaction"]
-> [Erstellen von benutzerdefinierten Apps mit geringem Code für Microsoft Teams](~/samples/teams-low-code-solutions.md)
+- [Erstellen von benutzerdefinierten Apps mit geringem Code für Microsoft Teams](~/samples/teams-low-code-solutions.md)
 
-> [!div class="nextstepaction"]
-> [Hinzufügen eines Power Virtual Agent-Chatbots](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
+- [Hinzufügen eines Power Virtual Agent-Chatbots](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 
-> [!div class="nextstepaction"]
-> [Erstellen eines virtuellen Assistenten](~/samples/virtual-assistant.md)
+- [Erstellen eines virtuellen Assistenten](~/samples/virtual-assistant.md)
 
-> [!div class="nextstepaction"]
-> [App-Vorlagen für Microsoft Teams](~/samples/app-templates.md)
+- [App-Vorlagen für Microsoft Teams](~/samples/app-templates.md)
 
-> [!div class="nextstepaction"]
-> [Produktionsbereite Umschaltconnectors](~/samples/shifts-wfm-connectors.md)
+- [Produktionsbereite Umschaltconnectors](~/samples/shifts-wfm-connectors.md)
 
-> [!div class="nextstepaction"]
-> [Installieren von Moodle LMS](~/resources/moodleinstructions.md)
+- [Installieren von Moodle LMS](~/resources/moodleinstructions.md)
 
-> [!div class="nextstepaction"]
-> [Erstellen einer Schaltfläche zum Teilen in Microsoft Teams](~/concepts/build-and-test/share-to-teams.md)
+- [Erstellen einer Schaltfläche zum Teilen in Microsoft Teams](~/concepts/build-and-test/share-to-teams.md)
 
-> [!div class="nextstepaction"]
-> [Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
+- [Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 
-> [!div class="nextstepaction"]
-> [Erstellen von Deep-Links](~/concepts/build-and-test/deep-links.md)
+- [Erstellen von Deep-Links](~/concepts/build-and-test/deep-links.md)
 
-> [!div class="nextstepaction"]
-> [Gerätefunktionen](~/concepts/device-capabilities/device-capabilities-overview.md)
+- [Gerätefunktionen](~/concepts/device-capabilities/device-capabilities-overview.md)

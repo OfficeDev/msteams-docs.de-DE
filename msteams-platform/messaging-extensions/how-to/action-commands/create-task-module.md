@@ -5,12 +5,12 @@ description: Behandeln der anfänglichen Aufrufaktion und Reagieren mit einem Au
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1245edba88dcd256f77c55cfe049ec2e846522c2
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f13b2e099fa04ac950491e0b1fbc2ed09345e651
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019846"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058628"
 ---
 # <a name="create-and-send-the-task-module"></a>Erstellen und Senden des Aufgabenmoduls
 
@@ -946,8 +946,7 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"] 
-> [Definieren von Aktionsbefehlen](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+- [Definieren von Aktionsbefehlen](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
 
 ## <a name="next-step"></a>Nächster Schritt
