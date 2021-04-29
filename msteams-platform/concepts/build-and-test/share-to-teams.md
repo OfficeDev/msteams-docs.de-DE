@@ -1,17 +1,17 @@
 ---
-title: Schaltfläche "Share-to-Teams erstellen"
+title: Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
 description: Hinzufügen der eingebetteten Schaltfläche "Zu Teams freigeben" auf Ihrer Website
 ms.topic: reference
 localization_priority: Normal
 keywords: Freigeben von Teams-Share-to-Teams
-ms.openlocfilehash: c8bbb371e2d68bf063c3aa5e02c7cf3ec911c0b8
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: d3e23c50cbaa38a53fa02c19cec69061478d9a57
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058474"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075647"
 ---
-# <a name="create-share-to-teams-button"></a>Schaltfläche "Share-to-Teams erstellen"
+# <a name="create-share-to-teams-button"></a>Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
 
 Websites von Drittanbietern können das Startstartskript verwenden, um Share-to-Teams-Schaltflächen auf ihren Webseiten einzubetten. Wenn Sie diese Option auswählen, wird die Share-to-Teams-Erfahrung in einem Popupfenster gestartet. Auf diese Weise können Sie einen Link direkt mit jeder Person oder einem Microsoft Teams-Kanal teilen, ohne den Kontext zu wechseln. In diesem Dokument erfahren Sie, wie Sie eine Share-to-Teams-Schaltfläche für Ihre Website erstellen und einbetten, ihre Websitevorschau erstellen und Share-to-Teams for Education erweitern.
 
@@ -133,4 +133,4 @@ Sie können die Standardwerte für die folgenden Felder im Formular Für Teams f
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
+[Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)

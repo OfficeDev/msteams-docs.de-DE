@@ -4,33 +4,26 @@ description: Beschreibt die Richtlinien für das Entwerfen von Registerkarten, d
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams design guidelines reference framework personal apps mobile tabs
-ms.openlocfilehash: 6459d6af7899859f25b28587021e26ce6440fbef
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: cdcaddf5ba0fb18537e87daa4b459c7377225f76
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020408"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075696"
 ---
 # <a name="tabs-on-mobile"></a>Registerkarten auf mobilen Geräten
 
-> [!NOTE]
-> Wenn Sie ihre Kanal-/Gruppenregisterkarte auf mobilen Teams-Clients anzeigen möchten, muss die Konfiguration einen Wert für die Eigenschaft `setSettings()` `websiteUrl` haben (siehe unten).
-
-Benutzerdefinierte Registerkarten können Teil eines Kanals, Eines Gruppenchats oder einer persönlichen App sein (Apps, die statische Registerkarten und/oder einen 1:1-Bot enthalten).
-
-Persönliche Apps sind auf mobilen Clients in der App-Schublade verfügbar. Die App kann nur von einem Desktop- oder Webclient installiert werden und kann bis zu 24 Stunden dauern, bis sie auf mobilen Clients angezeigt wird. Alternativ können Sie ein Erneutes Laden auf dem mobilen Client erzwingen, indem Sie sich ab- und anmelden. Dadurch sollte die mobile App sofort verfügbar gemacht werden.
-
-Kanalregisterkarten sind auch auf Mobilgeräten verfügbar. Das Standardverhalten besteht derzeit in der Verwendung Von zum Starten `websiteUrl` Ihrer Registerkarte in einem Browserfenster. Sie können jedoch auf einem mobilen Client geladen werden, indem Sie auf das Überlaufmenü neben der Registerkarte klicken und Öffnen auswählen, mit dem Sie die Registerkarte im mobilen `...`  `contentUrl` Teams-Client laden.
+Sie können Registerkarten in mobilen Teams-Kanälen, Chats und persönlichen Apps hinzufügen.
 
 ## <a name="accessing-personal-tabs"></a>Zugreifen auf persönliche Registerkarten
 
-Die folgende Abbildung zeigt, wie Sie auf eine persönliche Registerkarte auf mobilen Geräten zugreifen.
+Sie können auf persönliche Registerkarten in der App-Schublade zugreifen.
 
 :::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="Abbildung der Mobile -App-Schublade von Teams." border="false":::
 
 ## <a name="accessing-channel-tabs"></a>Zugreifen auf Kanalregisterkarten
 
-Die folgende Abbildung zeigt, wie Sie auf eine Kanalregisterkarte auf mobilen Geräten zugreifen.
+Sie können auf Kanal- und Gruppenregisterkarten zugreifen, indem Sie die Schaltfläche **Mehr** im Kanal oder Chat auswählen, in dem sie hinzugefügt wurden.
 
 :::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="Abbildung einer mobilen Registerkarte &quot;Teams&quot;." border="false":::
 
@@ -126,10 +119,6 @@ Felder sind Bereiche, in denen Benutzer Text eingeben können. Flyouts sind leic
 
 Wenn Sie eine App erstellen, die eine Registerkarte enthält, müssen Sie berücksichtigen (und testen), wie Ihre Registerkarte sowohl auf den Android- als auch auf iOS Microsoft Teams-Clients funktioniert. In den folgenden Abschnitten werden einige der wichtigsten Szenarien beschrieben, die Sie berücksichtigen müssen.
 
-### <a name="testing-on-mobile-clients"></a>Testen auf mobilen Clients
-
-Sie müssen überprüfen, ob Ihre Registerkarte auf mobilen Geräten unterschiedlicher Größe und Qualität ordnungsgemäß funktioniert. Für Android-Geräte können Sie [devTools](~/tabs/how-to/developer-tools.md) verwenden, um Ihre Registerkarte während der Ausführung zu debuggen. Es wird empfohlen, sowohl auf Geräten mit hoher und niedriger Leistung als auch auf einem Tablet zu testen.
-
 ### <a name="authentication"></a>Authentifizierung
 
 Damit die Authentifizierung auf mobilen Clients funktioniert, müssen Sie das Teams JavaScript SDK auf mindestens Version 1.4.1 aktualisieren.
@@ -139,4 +128,26 @@ Damit die Authentifizierung auf mobilen Clients funktioniert, müssen Sie das Te
 Mobile Clients müssen regelmäßig mit geringer Bandbreite und zeitweiligen Verbindungen funktionieren. Ihre App sollte timeouts entsprechend behandeln, indem sie dem Benutzer eine kontextbezogene Nachricht zur Verfügung stellt. Sie sollten auch Fortschrittsindikatoren der Benutzer verwenden, um Ihren Benutzern Feedback für alle lang laufenden Prozesse zu geben.
 
 > [!NOTE]
-> Registerkarten werden auf mobilen Geräten nur aktiviert, nachdem die Anwendung einer Zulassungsliste hinzugefügt wurde, basierend auf der Eingabe des Genehmigungsteams. Um die Reaktionsfähigkeit mobiler Geräte zu überprüfen, erreichen Sie die teamsubm@microsoft.com. 
+> Registerkarten werden auf mobilen Geräten nur aktiviert, nachdem die Anwendung einer Zulassungsliste hinzugefügt wurde, basierend auf der Eingabe des Genehmigungsteams. Um die Reaktionsfähigkeit mobiler Geräte zu überprüfen, erreichen Sie die teamsubm@microsoft.com.
+
+### <a name="testing-on-mobile-clients"></a>Testen auf mobilen Clients
+
+Sie müssen überprüfen, ob Ihre Registerkarte auf mobilen Geräten unterschiedlicher Größe und Qualität ordnungsgemäß funktioniert. Für Android-Geräte können Sie [devTools](~/tabs/how-to/developer-tools.md) verwenden, um Ihre Registerkarte während der Ausführung zu debuggen. Es wird empfohlen, sowohl auf Geräten mit hoher und niedriger Leistung als auch auf einem Tablet zu testen.
+
+### <a name="distribution"></a>Verteilung
+
+Apps, die im Teams Store aufgeführt sind, müssen für die mobile Verwendung genehmigt werden, damit sie im mobilen Teams-Client ordnungsgemäß funktionieren. Das Verhalten von Registerkarten hängt davon ab, ob Ihre App genehmigt ist.
+
+#### <a name="channel-and-group-tab-behavior"></a>Kanal- und Gruppenregisterkartenverhalten
+
+* **Verhalten bei Genehmigung:** Wird im mobilen Teams-Client mithilfe der Konfiguration Ihrer App `contentUrl` geöffnet.
+* **Verhalten bei nicht genehmigter** Genehmigung : Wird im Standardbrowser des Geräts mithilfe der Konfiguration Ihrer App geöffnet (die auch in der Quellcodefunktion `websiteUrl` enthalten sein `setSettings()` muss). Benutzer können die Registerkarte jedoch weiterhin im mobilen Teams-Client laden, indem sie neben der App Weitere auswählen und **Öffnen** auswählen, wodurch die Konfiguration Ihrer App ausgelöst  `contentUrl` wird.
+
+#### <a name="personal-app-behavior"></a>Verhalten von persönlichen Apps
+
+* **Verhalten bei Genehmigung:** Jede Registerkarte in der persönlichen App wird im mobilen Teams-Client mit der entsprechenden Konfiguration `contentUrl` angezeigt.
+* **Verhalten bei nicht genehmigter** Genehmigung: Die persönliche App ist im mobilen Teams-Client nicht verfügbar.
+
+#### <a name="non-teams-store-app-behavior"></a>Verhalten von Nicht-Teams-Store-Apps
+
+Wenn Sie Ihre App oder Veröffentlichung querladen im App-Katalog einer Organisation, ist das Registerkartenverhalten mit den von Microsoft für Mobile genehmigten Microsoft Store-Apps identisch.

@@ -5,12 +5,12 @@ keywords: Teams-Bots-Kartenformat
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: b50109ad664bda2fc130e08c53dd7fca2a3d54ef
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: d2806271f99af53139c76dcbd1090a96adcd0f31
+ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922517"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52068822"
 ---
 # <a name="format-cards-in-teams"></a>Formatieren von Karten in Teams
 
@@ -164,7 +164,7 @@ Um eine Erwähnung in einer adaptiven Karte zu erhalten, muss Ihre App die folge
 Verwenden Sie die Informationsmaskeneigenschaft, um bestimmte Informationen zu maskieren, z. B. Kennwort oder vertrauliche Informationen von Benutzern innerhalb des Eingabeelements [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) adaptiver Karten. 
 
 > [!NOTE]
-> Das Feature unterstützt nur die clientseitige Informationsmaske, der maskierte Eingabetext wird als Klartext an die https-Endpunktadresse gesendet, die während der [Botkonfiguration angegeben wurde.](../../build-your-first-app/build-bot.md#4-configure-your-bot) 
+> Das Feature unterstützt nur die clientseitige Informationsmaske, der maskierte Eingabetext wird als Klartext an die https-Endpunktadresse gesendet, die während der [Botkonfiguration angegeben wurde.](../../build-your-first-app/build-bot.md) 
 
 > [!NOTE]
 > Die Informationsmaskeneigenschaft ist derzeit nur in der Entwicklervorschau verfügbar.

@@ -4,12 +4,12 @@ author: clearab
 description: So reagieren Sie auf den Suchbefehl über eine Messagingerweiterung in einer Microsoft Teams-App.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 044c6eebe9489ed404c9fa89b29c306cde8c7363
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 76bccc10763b99d7373e98e6e153c4f4aa51373a
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058586"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075633"
 ---
 # <a name="respond-to-search-command"></a>Antworten auf Suchbefehl
 
@@ -347,7 +347,7 @@ Die Standardabfrage hat dieselbe Struktur wie jede normale Benutzerabfrage, und 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Hinzufügen einer Konfiguration zu einer Messagingerweiterung](~/messaging-extensions/how-to/add-configuration-page.md)
+[Hinzufügen einer Konfiguration zu einer Messagingerweiterung](~/messaging-extensions/how-to/add-configuration-page.md)
  
 ## <a name="next-step"></a>Nächster Schritt
 

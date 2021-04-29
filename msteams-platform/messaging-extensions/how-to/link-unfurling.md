@@ -5,12 +5,12 @@ description: So führen Sie die Verknüpfungsentschnappung mit der Messagingerwe
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ec4ac7329b2c0df64237692d450977148789eff8
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 352de159871069896088559487df2fb94c83e2f9
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058516"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075717"
 ---
 # <a name="link-unfurling"></a>Entfalten von Links
 
@@ -178,4 +178,4 @@ Im Folgenden finden Sie ein Beispiel für die Antwort:
 
 ## <a name="see-also"></a>Siehe auch 
 
-- [Was sind Karten?](~/task-modules-and-cards/what-are-cards.md)
+[Karten](~/task-modules-and-cards/what-are-cards.md)
