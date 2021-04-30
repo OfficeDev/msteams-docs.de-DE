@@ -8,17 +8,17 @@
 - name: Erste Schritte
   expanded: true
   items:
-    - name: Übersicht und Voraussetzungen
+    - name: Übersicht
       href: build-your-first-app/build-first-app-overview.md
-    - name: Erstellen einer "Hallo Welt!" App
+    - name: 'Erstellen Sie ein "Hallo, Welt!" App'
       href: build-your-first-app/build-and-run.md
-    - name: Erstellen einer persönlichen Registerkarte
+    - name: Erstellen einer einfachen persönlichen Registerkarte
       href: build-your-first-app/build-personal-tab.md
-    - name: Erstellen von Kanal- und Gruppen-Registerkarten
+    - name: Erstellen Sie Ihre erste Kanal- und Gruppen-Registerkarte
       href: build-your-first-app/build-channel-tab.md
-    - name: Erstellen eines Bots
+    - name: Erstellen Sie Ihren ersten Bot
       href: build-your-first-app/build-bot.md
-    - name: Erstellen einer Messaging-Erweiterung
+    - name: Erstellen Sie Ihre erste Messaging-Erweiterung
       href: build-your-first-app/build-messaging-extension.md
 - name: Lernprogramme und Codebeispiele
   items:
