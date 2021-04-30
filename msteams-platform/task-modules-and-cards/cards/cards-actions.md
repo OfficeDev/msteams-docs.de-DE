@@ -1,19 +1,19 @@
 ---
 title: Hinzufügen von Kartenaktionen in einem Bot
-description: Beschreibt Kartenaktionen in Microsoft Teams und deren Verwendung in Bots
+description: Beschreibt Kartenaktionen in Microsoft Teams und deren Verwendung in Ihren Bots
 localization_priority: Normal
 ms.topic: conceptual
 keywords: Aktionen für Teams-Bots-Karten
-ms.openlocfilehash: 84f47540cee99738204007fd107743f922552e60
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 75dcd6e1de1968f021a1ebe66c6770c4f641c94d
+ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019538"
+ms.lasthandoff: 04/29/2021
+ms.locfileid: "52088794"
 ---
 # <a name="card-actions"></a>Kartenaktionen
 
-Karten, die von Bots und Messagingerweiterungen in Teams verwendet werden, unterstützen die folgenden Aktivitätstypen ( [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ). Beachten Sie, dass sich diese Aktionen von `potentialActions` office 365 Connector-Karten unterscheiden, wenn sie von Connectors verwendet werden.
+Karten, die von Bots und Messagingerweiterungen in Teams verwendet werden, unterstützen die folgenden Aktivitätstypen ( [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ). Beachten Sie, dass sich diese Aktionen von Office 365 Connectorkarten unterscheiden, wenn `potentialActions` sie von Connectors verwendet werden.
 
 | Typ | Aktion |
 | --- | --- |
@@ -24,9 +24,9 @@ Karten, die von Bots und Messagingerweiterungen in Teams verwendet werden, unter
 | `signin` | Initiiert den OAuth-Fluss, sodass Bots eine Verbindung mit sicheren Diensten herstellen können. |
 
 > [!NOTE]
->* In Teams werden typen `CardAction` nicht unterstützt, die in der vorherigen Tabelle nicht aufgeführt sind.
->* Die Eigenschaft wird von Teams nicht `potentialActions` unterstützt.
->* Kartenaktionen unterscheiden sich von den [vorgeschlagenen Aktionen](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework/Azure Bot Service. Vorgeschlagene Aktionen werden in Microsoft Teams nicht unterstützt: Wenn Schaltflächen in einer Teams-Botnachricht angezeigt werden sollen, verwenden Sie eine Karte.
+>* Teams unterstützt keine `CardAction` Typen, die in der vorherigen Tabelle nicht aufgeführt sind.
+>* Teams unterstützt die Eigenschaft `potentialActions` nicht.
+>* Kartenaktionen unterscheiden sich von den [vorgeschlagenen Aktionen](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework/Azure Bot Service. Vorgeschlagene Aktionen werden in Microsoft Teams nicht unterstützt: Wenn Schaltflächen in einer Teams angezeigt werden sollen, verwenden Sie eine Karte.
 >* Wenn Sie eine Kartenaktion als Teil einer Messagingerweiterung verwenden, funktionieren die Aktionen erst, wenn die Karte an den Kanal übermittelt wird (sie funktionieren nicht, während sich die Karte im Meldungsfeld Verfassen befindet).
 
 Teams unterstützt auch [adaptive Kartenaktionen,](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)die nur von adaptiven Karten verwendet werden. Diese Aktionen werden in ihrem eigenen Abschnitt am Ende dieses Verweises aufgeführt.
@@ -223,11 +223,12 @@ Initiiert einen OAuth-Fluss, sodass Bots eine Verbindung mit sicheren Diensten h
 
 ## <a name="adaptive-cards-actions"></a>Aktionen mit adaptiven Karten
 
-Adaptive Karten unterstützen drei Aktionstypen:
+Adaptive Karten unterstützen vier Aktionstypen:
 
 * [Action.OpenUrl](http://adaptivecards.io/explorer/Action.OpenUrl.html)
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
+* [Action.Execute](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
 Zusätzlich zu den oben genannten Aktionen können Sie die Nutzlast der adaptiven Karte so ändern, dass vorhandene Bot Framework-Aktionen mithilfe einer Eigenschaft `Action.Submit` im Objekt von unterstützt `msteams` `data` `Action.Submit` werden. In den folgenden Abschnitten erfahren Sie, wie Sie vorhandene Bot Framework-Aktionen mit adaptiven Karten verwenden.
 
