@@ -10,7 +10,7 @@
   items:
     - name: Übersicht
       href: build-your-first-app/build-first-app-overview.md
-    - name: 'Erstellen Sie ein "Hallo, Welt!" App'
+    - name: 'Erstellen Sie eine "Hallo, Welt!" Anwendung'
       href: build-your-first-app/build-and-run.md
     - name: Erstellen einer einfachen persönlichen Registerkarte
       href: build-your-first-app/build-personal-tab.md
@@ -302,6 +302,18 @@
           href: task-modules-and-cards/cards/cards-actions.md
         - name: Karten-Referenz
           href: task-modules-and-cards/cards/cards-reference.md
+        - name: Universal-Aktionen für adaptive Karten
+          items:
+            - name: Übersicht
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
+            - name: Mit Universal-Aktionen für adaptive Karten arbeiten
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
+            - name: Benutzerspezifische Ansichten
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
+            - name: Sequenzielle Workflows
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Sequential-Workflows.md
+            - name: Aktuelle Karten
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
     - name: Erstellen von Aufgabenmodulen
       items:
         - name: Übersicht
