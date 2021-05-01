@@ -1,130 +1,64 @@
 ---
 title: Hochladen Ihrer benutzerdefinierten App
-description: Beschreibt, wie Sie Ihre App in Microsoft Teams hochladen
+description: Erfahren Sie, wie Sie Ihre App in einem Microsoft Teams. Das Querladen ist beim Testen und Debuggen einer App während der Entwicklung üblich.
 ms.topic: how-to
-localization_priority: Normal
-ms.author: lajanuar
-keywords: Hochladen von Teams-Apps
-ms.openlocfilehash: 3fa6a3ef00cbb55b5c663891deaabcc908de95d5
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: KirtiPereira
+ms.author: surbhigupta
+ms.openlocfilehash: a82f7d6498db4cceb69f1b7f5ff53b1646371ce8
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020807"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101569"
 ---
-# <a name="upload-an-app-package-to-microsoft-teams"></a><span data-ttu-id="c972f-104">Hochladen eines App-Pakets in Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="c972f-104">Upload an app package to Microsoft Teams</span></span>
+# <a name="upload-your-app-in-microsoft-teams"></a><span data-ttu-id="d5a72-104">Hochladen Ihrer App in Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="d5a72-104">Upload your app in Microsoft Teams</span></span>
 
-<span data-ttu-id="c972f-105">Um Ihre App-Erfahrung in Microsoft Teams zu testen, müssen Sie Ihre App in Teams hochladen.</span><span class="sxs-lookup"><span data-stu-id="c972f-105">To test your app experience within Microsoft Teams, you need to upload your app to Teams.</span></span> <span data-ttu-id="c972f-106">Beim Hochladen wird die App zum ausgewählten Team hinzufügt, und alle Teammitglieder können wie Endbenutzer damit interagieren.</span><span class="sxs-lookup"><span data-stu-id="c972f-106">Uploading adds the app to the selected team and all the team members can interact with it like end users.</span></span>
+<span data-ttu-id="d5a72-105">Sie können apps querladen Microsoft Teams, ohne sie in Ihrer Organisation oder im Teams veröffentlichen zu müssen.</span><span class="sxs-lookup"><span data-stu-id="d5a72-105">You can sideload Microsoft Teams apps without having to publish to your organization or the Teams store.</span></span> <span data-ttu-id="d5a72-106">Dies ist in den folgenden Szenarien sinnvoll:</span><span class="sxs-lookup"><span data-stu-id="d5a72-106">This makes sense in the following scenarios:</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="c972f-107">Beim Hochladen eines aktualisierten Pakets für eine vorhandene App mit einem Bot werden möglicherweise keine Registerkartenänderungen angezeigt, wenn sie über das Unterhaltungsfenster angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="c972f-107">Uploading an updated package for an existing app with a bot might not show tab changes when viewed through the conversations window.</span></span> <span data-ttu-id="c972f-108">Sie können über das Fly-Out oder testen in einer sauberen Umgebung auf die App zugreifen.</span><span class="sxs-lookup"><span data-stu-id="c972f-108">You can access the app through the apps fly-out or test in a clean environment.</span></span>
+* <span data-ttu-id="d5a72-107">Sie möchten eine App lokal selbst oder mit anderen Entwicklern testen und debuggen.</span><span class="sxs-lookup"><span data-stu-id="d5a72-107">You want to test and debug an app locally yourself or with other developers.</span></span>
+* <span data-ttu-id="d5a72-108">Sie haben eine App nur für sich selbst erstellt (z. B. zum Automatisieren eines Workflows).</span><span class="sxs-lookup"><span data-stu-id="d5a72-108">You built an app just for yourself (for example, to automate a workflow).</span></span>
+* <span data-ttu-id="d5a72-109">Sie haben eine App für eine kleine Gruppe von Benutzern (z. B. Ihre Arbeitsgruppe) erstellt.</span><span class="sxs-lookup"><span data-stu-id="d5a72-109">You built an app for a small set of users (such as your work group).</span></span>
 
-## <a name="create-your-upload-package"></a><span data-ttu-id="c972f-109">Erstellen des Uploadpakets</span><span class="sxs-lookup"><span data-stu-id="c972f-109">Create your upload package</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="d5a72-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="d5a72-110">Prerequisites</span></span>
 
-<span data-ttu-id="c972f-110">Für die Entwicklung und AppSource-Übermittlung müssen Sie ein Paket erstellen, das Sie hochladen können.</span><span class="sxs-lookup"><span data-stu-id="c972f-110">For development and AppSource submission, you must create a package that you can upload.</span></span> <span data-ttu-id="c972f-111">Das Paket muss die Informationen enthalten, um Ihre Erfahrung zu beschreiben.</span><span class="sxs-lookup"><span data-stu-id="c972f-111">The package must contain the information to describe your experience.</span></span> <span data-ttu-id="c972f-112">Das Paket ist eine ZIP-Datei, die das Anwendungsmanifest und Symbole enthält, die Ihre Erfahrung eindeutig definieren.</span><span class="sxs-lookup"><span data-stu-id="c972f-112">The package is a .zip file that contains the application manifest and icons that uniquely define your experience.</span></span>
+* <span data-ttu-id="d5a72-111">Erstellen Sie Ihr [App-Paket,](~/concepts/build-and-test/apps-package.md) [und überprüfen Sie es](https://dev.teams.microsoft.com/appvalidation.html) auf Fehler.</span><span class="sxs-lookup"><span data-stu-id="d5a72-111">Create your [app package](~/concepts/build-and-test/apps-package.md) and [validate it](https://dev.teams.microsoft.com/appvalidation.html) for errors.</span></span>
+* <span data-ttu-id="d5a72-112">[Aktivieren Sie das Hochladen benutzerdefinierter](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) Teams.</span><span class="sxs-lookup"><span data-stu-id="d5a72-112">[Enable custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) in Teams.</span></span>
+* <span data-ttu-id="d5a72-113">Stellen Sie sicher, dass Ihre App ausgeführt wird und über HTTPs darauf zugegriffen werden kann.</span><span class="sxs-lookup"><span data-stu-id="d5a72-113">Make sure that your app is running and accessible via HTTPs.</span></span>
 
-<span data-ttu-id="c972f-113">Informationen zum Erstellen eines Uploadpakets finden Sie unter [Erstellen des Pakets für Ihre Microsoft Teams-App.](../build-and-test/apps-package.md)</span><span class="sxs-lookup"><span data-stu-id="c972f-113">To create an upload package, see [Create the package for your Microsoft Teams app](../build-and-test/apps-package.md).</span></span>
+## <a name="upload-your-app"></a><span data-ttu-id="d5a72-114">Hochladen Ihrer App</span><span class="sxs-lookup"><span data-stu-id="d5a72-114">Upload your app</span></span>
 
-<span data-ttu-id="c972f-114">Nachdem Sie das Paket erstellt haben, laden Sie es in ein Team hoch.</span><span class="sxs-lookup"><span data-stu-id="c972f-114">After you create the package, upload it into a team.</span></span> <span data-ttu-id="c972f-115">Das hochgeladene Paket steht nur den Benutzern des ausgewählten Teams zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="c972f-115">The uploaded package is only available to the users of the selected team.</span></span>
+<span data-ttu-id="d5a72-115">Sie können Ihre App in abhängigkeit davon, wie Sie den Bereich Ihrer App konfiguriert haben, in ein Team, einen Chat, eine Besprechung oder zur persönlichen Verwendung querladen.</span><span class="sxs-lookup"><span data-stu-id="d5a72-115">You can sideload your app to a team, chat, meeting, or for personal use depending on how you configured your app's scope.</span></span>
 
-## <a name="load-your-package-into-teams"></a><span data-ttu-id="c972f-116">Laden Des Pakets in Teams</span><span class="sxs-lookup"><span data-stu-id="c972f-116">Load your package into Teams</span></span>
+1. <span data-ttu-id="d5a72-116">Melden Sie sich beim Teams-Client mit Ihrem [Microsoft 365 an.](~/build-your-first-app/build-and-run.md#prerequisites)</span><span class="sxs-lookup"><span data-stu-id="d5a72-116">Log in to the Teams client with your [Microsoft 365 development account](~/build-your-first-app/build-and-run.md#prerequisites).</span></span>
+1. <span data-ttu-id="d5a72-117">Wählen **Sie Apps** und Hochladen eine **benutzerdefinierte App aus.**</span><span class="sxs-lookup"><span data-stu-id="d5a72-117">Select **Apps** and choose **Upload a custom app**.</span></span>
+1. <span data-ttu-id="d5a72-118">Wählen Sie Ihr App-.zip aus.</span><span class="sxs-lookup"><span data-stu-id="d5a72-118">Select your app package .zip file.</span></span> <span data-ttu-id="d5a72-119">Ein Installationsdialogfeld wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="d5a72-119">An install dialog displays.</span></span>
+:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot mit einem Beispiel für ein Teams-App-Installationsdialogfeld.":::
+1. <span data-ttu-id="d5a72-121">Fügen Sie Ihre App zu Teams.</span><span class="sxs-lookup"><span data-stu-id="d5a72-121">Add your app to Teams.</span></span>
 
-<span data-ttu-id="c972f-117">Sie können Ihr Paket testen, indem Sie es in Teams hochladen.</span><span class="sxs-lookup"><span data-stu-id="c972f-117">You can test your package by uploading it into Teams.</span></span>
+## <a name="troubleshoot-upload-issues"></a><span data-ttu-id="d5a72-122">Behandeln von Problemen beim Hochladen</span><span class="sxs-lookup"><span data-stu-id="d5a72-122">Troubleshoot upload issues</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="c972f-118">Damit das Hochladen funktioniert, muss Ihr Mandantenadministrator zuerst [das Hochladen von Apps aktivieren.](/microsoftteams/admin-settings)</span><span class="sxs-lookup"><span data-stu-id="c972f-118">For uploading to work, your tenant admin must first [enable uploading of apps](/microsoftteams/admin-settings).</span></span>
+<span data-ttu-id="d5a72-123">Wenn ihre App nicht querladen kann, gehen Sie wie folgt vor, bis das Problem behoben ist:</span><span class="sxs-lookup"><span data-stu-id="d5a72-123">If your app fails to sideload, do the following until the issue resolves:</span></span>
 
-<span data-ttu-id="c972f-119">Es gibt zwei Möglichkeiten, Ihre App in Teams hochzuladen:</span><span class="sxs-lookup"><span data-stu-id="c972f-119">There are two ways to upload your app to Teams:</span></span>
+1. <span data-ttu-id="d5a72-124">Gehen Sie zurück durch die Anweisungen zum [Erstellen Ihres App-Pakets.](../../concepts/build-and-test/apps-package.md)</span><span class="sxs-lookup"><span data-stu-id="d5a72-124">Go back through the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).</span></span>
+1. <span data-ttu-id="d5a72-125">[Überprüfen Sie Ihr App-Paket](https://dev.teams.microsoft.com/appvalidation.html) erneut.</span><span class="sxs-lookup"><span data-stu-id="d5a72-125">[Validate your app package](https://dev.teams.microsoft.com/appvalidation.html) again.</span></span>
+1. <span data-ttu-id="d5a72-126">Stellen Sie sicher, dass Ihr App-Manifest dem neuesten Schema [entspricht.](../../resources/schema/manifest-schema.md)</span><span class="sxs-lookup"><span data-stu-id="d5a72-126">Make sure your app manifest matches the latest [schema](../../resources/schema/manifest-schema.md).</span></span>
 
-* <span data-ttu-id="c972f-120">Verwenden des Store</span><span class="sxs-lookup"><span data-stu-id="c972f-120">Using the Store</span></span>
-* <span data-ttu-id="c972f-121">Verwenden der Registerkarte Apps</span><span class="sxs-lookup"><span data-stu-id="c972f-121">Using the Apps tab</span></span>
+## <a name="access-your-app"></a><span data-ttu-id="d5a72-127">Zugreifen auf Ihre App</span><span class="sxs-lookup"><span data-stu-id="d5a72-127">Access your app</span></span>
 
-## <a name="upload-your-package-into-a-team-or-conversation-using-the-store"></a><span data-ttu-id="c972f-122">Hochladen Ihres Pakets in ein Team oder eine Unterhaltung mithilfe des Store</span><span class="sxs-lookup"><span data-stu-id="c972f-122">Upload your package into a team or conversation using the Store</span></span>
+<span data-ttu-id="d5a72-128">Teams bietet verschiedene Möglichkeiten zum Öffnen von Apps.</span><span class="sxs-lookup"><span data-stu-id="d5a72-128">Teams provides several ways to open apps.</span></span> <span data-ttu-id="d5a72-129">Weitere Informationen finden Sie unter [Zugreifen auf Ihre Apps in Teams.](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a)</span><span class="sxs-lookup"><span data-stu-id="d5a72-129">For more information, see [access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).</span></span>
 
-1. <span data-ttu-id="c972f-123">Wählen Sie in der unteren linken Ecke von Teams das **Symbol Store** aus.</span><span class="sxs-lookup"><span data-stu-id="c972f-123">In the lower left corner of Teams, choose the **Store** icon.</span></span> <span data-ttu-id="c972f-124">Wählen Sie auf der Seite Store die Option **Benutzerdefinierte App hochladen aus.**</span><span class="sxs-lookup"><span data-stu-id="c972f-124">On the Store page, choose **Upload a custom app**.</span></span>
+## <a name="update-your-app"></a><span data-ttu-id="d5a72-130">Aktualisieren Ihrer App</span><span class="sxs-lookup"><span data-stu-id="d5a72-130">Update your app</span></span>
 
-  ![Team anzeigen](../../assets/images/store-upload-a-custom-app2.png)
+<span data-ttu-id="d5a72-131">Sie müssen Ihre App nicht erneut querladen, wenn Sie Codeänderungen vornehmen (diese werden in Teams in Echtzeit widergespiegelt).</span><span class="sxs-lookup"><span data-stu-id="d5a72-131">You don't have to sideload your app again if you make code changes (these are reflected in Teams in real-time).</span></span> <span data-ttu-id="d5a72-132">Sie müssen jedoch neu installieren, wenn Sie app-Konfigurationen ändern.</span><span class="sxs-lookup"><span data-stu-id="d5a72-132">However, you must reinstall if you change any app configurations.</span></span>
 
-2. <span data-ttu-id="c972f-126">Navigieren Sie **im** Dialogfeld Öffnen zu dem Paket, das Sie hochladen möchten, und wählen Sie Öffnen aus.</span><span class="sxs-lookup"><span data-stu-id="c972f-126">In the **Open** dialog, navigate to the package you want to upload and choose Open.</span></span>
+## <a name="remove-your-app"></a><span data-ttu-id="d5a72-133">Entfernen Ihrer App</span><span class="sxs-lookup"><span data-stu-id="d5a72-133">Remove your app</span></span>
 
-   ![Menü hinzufügen](../../assets/images/NewappAddmenudropdown.png)
-
-<span data-ttu-id="c972f-128">Das hochgeladene Paket muss für die Verwendung im Team oder der Im Zustimmungsdialogfeld angegebenen Unterhaltung verfügbar sein.</span><span class="sxs-lookup"><span data-stu-id="c972f-128">The uploaded package must be available for use in the team or conversation specified in the consent dialog.</span></span> <span data-ttu-id="c972f-129">Wenn Ihre App nicht angezeigt wird, ist der häufigste Grund ein Fehler im Manifest, insbesondere IDs für die App- und Bot- und Messagingerweiterungen.</span><span class="sxs-lookup"><span data-stu-id="c972f-129">If your app does not appear, the most common reason is an error in the manifest, particularly IDs for the app, bot, and messaging extensions.</span></span> <span data-ttu-id="c972f-130">Wenn die App nicht für Unterhaltungen begrenzt ist, wird diese Option nicht angezeigt.</span><span class="sxs-lookup"><span data-stu-id="c972f-130">If the app is not scoped for conversations that option does not appear.</span></span>
-
->[!NOTE]
-> <span data-ttu-id="c972f-131">Apps in Unterhaltungen befinden sich derzeit in [Developer Preview](../../resources/dev-preview/developer-preview-intro.md), und die Option wird nicht angezeigt, wenn Teams nicht in diesem Modus ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="c972f-131">Apps in conversations is currently in [Developer Preview](../../resources/dev-preview/developer-preview-intro.md), and the option does not appear if Teams is not running in that mode.</span></span>
-
-![Beispiel für bot in der Liste der hochgeladenen Bots](../../assets/images/botinlist.jpg)
-
-## <a name="upload-your-package-into-a-team-using-the-apps-tab"></a><span data-ttu-id="c972f-133">Hochladen Ihres Pakets in ein Team mithilfe der Registerkarte Apps</span><span class="sxs-lookup"><span data-stu-id="c972f-133">Upload your package into a team using the Apps tab</span></span>
-
-1. <span data-ttu-id="c972f-134">Wählen Sie im Zielteam **weitere Optionen** (**&#8943;**) aus, und wählen Sie Team **verwalten aus.**</span><span class="sxs-lookup"><span data-stu-id="c972f-134">In the target team, choose **More options** (**&#8943;**) and select **Manage team**.</span></span>
-
-   > [!NOTE]
-   > <span data-ttu-id="c972f-135">Sie müssen der Teambesitzer sein, oder der Besitzer muss Benutzern Zugriff geben, um die entsprechenden App-Typen hinzuzufügen, damit diese Funktionalität angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="c972f-135">You must be the team owner or the owner must give access to users to add the appropriate app types for this functionality to appear.</span></span>
-
-2. <span data-ttu-id="c972f-136">Wählen Sie die **Registerkarte Apps** aus, und wählen Sie unten rechts **Hochladen** einer benutzerdefinierten App aus.</span><span class="sxs-lookup"><span data-stu-id="c972f-136">Select the **Apps** tab and choose **Upload a custom app** on the lower right.</span></span>
-
-   ![Einstiegspunkt hochladen](../../assets/images/UploadACustomApp.png)
-
-3. <span data-ttu-id="c972f-138">Wählen Sie ihr .zip-Paket vom Computer aus.</span><span class="sxs-lookup"><span data-stu-id="c972f-138">Select your .zip package from the computer.</span></span>
-
-4. <span data-ttu-id="c972f-139">Die hochgeladene App wird in der Liste angezeigt.</span><span class="sxs-lookup"><span data-stu-id="c972f-139">You can see your uploaded app in the list.</span></span>
-
-   ![Beispiel für bot in der Liste der hochgeladenen Bots](../../assets/images/botinlist.jpg)
-
-<span data-ttu-id="c972f-141">Wenn Ihre App nicht geladen wird, ist der häufigste Grund ein Fehler im Manifest, insbesondere IDs für die App- und Bot- und Messagingerweiterungen.</span><span class="sxs-lookup"><span data-stu-id="c972f-141">If your app does not load, the most common reason is an error in the manifest, particularly IDs for the app, bot, and messaging extensions.</span></span>
-
-## <a name="access-your-uploaded-configurable-tab"></a><span data-ttu-id="c972f-142">Zugreifen auf ihre hochgeladene konfigurierbare Registerkarte</span><span class="sxs-lookup"><span data-stu-id="c972f-142">Access your uploaded configurable tab</span></span>
-
-<span data-ttu-id="c972f-143">Wenn die App Registerkarten enthält, können Benutzer sie mithilfe des standardmäßigen Registerkartenkatalogflusses an alle Unterhaltungen oder Teamkanäle anheften:</span><span class="sxs-lookup"><span data-stu-id="c972f-143">If the app contains tabs, users can pin them to any conversation or team channel using the standard tab gallery flow:</span></span>
-
-1. <span data-ttu-id="c972f-144">Wechseln Sie zu einem Kanal im Team.</span><span class="sxs-lookup"><span data-stu-id="c972f-144">Go to a channel in the team.</span></span> <span data-ttu-id="c972f-145">Wählen Sie aus, um rechts neben den vorhandenen Registerkarten eine **+** Registerkarte hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="c972f-145">Choose **+** to add a tab to the right of the existing tabs.</span></span>
-
-2. <span data-ttu-id="c972f-146">Wählen Sie ihre Registerkarte aus dem angezeigten Katalog aus.</span><span class="sxs-lookup"><span data-stu-id="c972f-146">Select your tab from the gallery that appears.</span></span>
-
-3. <span data-ttu-id="c972f-147">Akzeptieren Sie die Zustimmungsaufforderung.</span><span class="sxs-lookup"><span data-stu-id="c972f-147">Accept the consent prompt.</span></span>
-
-4. <span data-ttu-id="c972f-148">Konfigurieren Sie Ihre Registerkarte über die [Konfigurationsseite,](../../tabs/how-to/create-tab-pages/configuration-page.md) und wählen Sie **Speichern aus.**</span><span class="sxs-lookup"><span data-stu-id="c972f-148">Configure your tab through its [configuration page](../../tabs/how-to/create-tab-pages/configuration-page.md) and select **Save**.</span></span>
-
-  ![Das Dialogfeld Registerkarte hinzufügen mit einem Katalog verfügbarer Registerkarten](../../assets/images/tab_gallery.png)
-
-## <a name="access-your-uploaded-bot"></a><span data-ttu-id="c972f-150">Zugreifen auf ihren hochgeladenen Bot</span><span class="sxs-lookup"><span data-stu-id="c972f-150">Access your uploaded bot</span></span>
-
-<span data-ttu-id="c972f-151">Nach dem Hinzufügen des Bots zu einem Team muss er je nach Definition des Botbereichs von jedem Benutzer in diesem Team innerhalb und außerhalb der Teamkanäle verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="c972f-151">After adding the bot to a team, it must be usable by anyone on that team, inside and outside the team channels, depending on bot scope definition.</span></span> <span data-ttu-id="c972f-152">Allen Teammitgliedern wird ein Beitrag im Kanal **Allgemein** angezeigt, der angibt, dass der Bot dem Team hinzugefügt wurde.</span><span class="sxs-lookup"><span data-stu-id="c972f-152">All team members can see a post in the **General** channel indicating that the bot has been added to the team.</span></span>
-
-<span data-ttu-id="c972f-153">Für einen Teams-Bot können Sie ihren Bot zunächst aufrufen, indem @mentioning Namen des Bots eingeben.</span><span class="sxs-lookup"><span data-stu-id="c972f-153">For a Teams bot, you can start by invoking your bot by @mentioning the name of the bot.</span></span>
-
-<span data-ttu-id="c972f-154">Um direkte Chats mit Ihrem Bot zu testen, können Sie entweder über die App-Startseite darauf zugreifen, @mention in einem Kanal darauf zugreifen oder im Fenster Neuer **Chat** nach ihm suchen.</span><span class="sxs-lookup"><span data-stu-id="c972f-154">To test direct chats with your bot, you can either access it through the App home, @mention it in a channel, or search for it in the **New Chat** window.</span></span>
-
-<span data-ttu-id="c972f-155">Sie können @mention bot in einer Unterhaltung anzeigen oder im Fenster Neuer **Chat** suchen, um direkte Chats mit Ihrem Bot zu testen.</span><span class="sxs-lookup"><span data-stu-id="c972f-155">You can @mention the bot in a conversation or search for it in the **New Chat** window to test direct chats with your bot.</span></span>
-
-## <a name="access-your-uploaded-connector"></a><span data-ttu-id="c972f-156">Zugreifen auf ihren hochgeladenen Connector</span><span class="sxs-lookup"><span data-stu-id="c972f-156">Access your uploaded Connector</span></span>
-
-<span data-ttu-id="c972f-157">Wenn die App in das Team oder die Unterhaltung geladen ist, können Benutzer einen Connector mithilfe des standardmäßigen Connectors-Katalogflusses einrichten:</span><span class="sxs-lookup"><span data-stu-id="c972f-157">With the app loaded in the team or conversation, users can set up a Connector using the standard Connectors gallery flow:</span></span>
-
-1. <span data-ttu-id="c972f-158">Wechseln Sie zu einem Kanal im Team.</span><span class="sxs-lookup"><span data-stu-id="c972f-158">Go to a channel in the team.</span></span> <span data-ttu-id="c972f-159">Wählen **Sie Weitere Optionen** (*&#8943;*) aus, und wählen Sie **Connectors aus.**</span><span class="sxs-lookup"><span data-stu-id="c972f-159">Choose **More options** (*&#8943;*) and choose **Connectors**.</span></span>
-
-2. <span data-ttu-id="c972f-160">Wählen Sie den Connector im **Abschnitt Sideloaded** unten aus.</span><span class="sxs-lookup"><span data-stu-id="c972f-160">Select your Connector from the **Sideloaded** section at the bottom.</span></span>
-
-3. <span data-ttu-id="c972f-161">Konfigurieren Sie den Connector über die [Konfigurationsseite,](../../webhooks-and-connectors/how-to/connectors-creating.md) und wählen Sie **Speichern aus.**</span><span class="sxs-lookup"><span data-stu-id="c972f-161">Configure your connector through its [configuration page](../../webhooks-and-connectors/how-to/connectors-creating.md) and select **Save**.</span></span>
-
-  ![Das Dialogfeld Registerkarte hinzufügen mit einem Katalog verfügbarer Registerkarten.](../../assets/images/connector_gallery.png)
-
-## <a name="access-your-uploaded-messaging-extension"></a><span data-ttu-id="c972f-163">Zugreifen auf ihre hochgeladene Messagingerweiterung</span><span class="sxs-lookup"><span data-stu-id="c972f-163">Access your uploaded messaging extension</span></span>
-
-<span data-ttu-id="c972f-164">Eine hochgeladene App mit einer Messagingerweiterung wird automatisch im Menü Weitere Optionen **(** *&#8943;*) im Verfassenfeld angezeigt.</span><span class="sxs-lookup"><span data-stu-id="c972f-164">An uploaded app with a messaging extension automatically appears in the **More options** (*&#8943;*) menu in the compose box.</span></span>
-
-![Messaging-Erweiterungen](../../assets/images/compose-extensions/cesampleapp.png)
-
-
-## <a name="remove-or-update-your-app"></a><span data-ttu-id="c972f-166">Entfernen oder Aktualisieren Ihrer App</span><span class="sxs-lookup"><span data-stu-id="c972f-166">Remove or update your app</span></span>
-
-<span data-ttu-id="c972f-167">Um Ihre App zu entfernen, wählen Sie das Löschsymbol neben dem App-Namen in der **Liste Teams-Bots** anzeigen aus.</span><span class="sxs-lookup"><span data-stu-id="c972f-167">To remove your app, select the delete icon next to the app name in the **View Teams** bots list.</span></span> <span data-ttu-id="c972f-168">Wenn Sie Manifestinformationen ändern, entfernen Sie zuerst die App, und fügen Sie dann das aktualisierte Paket hinzu. Weitere Informationen finden Sie unter [Load your package into a team](#load-your-package-into-teams).</span><span class="sxs-lookup"><span data-stu-id="c972f-168">If you change manifest information, first remove the app and then add the updated package, see [Load your package into a team](#load-your-package-into-teams).</span></span> <span data-ttu-id="c972f-169">Codeänderungen an Ihrem Dienst erfordern nicht, dass Sie Ihr Manifest erneut hochladen.</span><span class="sxs-lookup"><span data-stu-id="c972f-169">Code changes on your service do not require you to upload your manifest again.</span></span> <span data-ttu-id="c972f-170">Wenn die Codeänderungen jedoch Manifestupdates erfordern, z. B. Änderungen an der URL oder der Microsoft-App-ID für den Bot, müssen Sie das Manifest erneut hochladen.</span><span class="sxs-lookup"><span data-stu-id="c972f-170">However, if the code changes require manifest updates, such as changes to the URL or the Microsoft app ID for its bot, you must upload the manifest again.</span></span>
+<span data-ttu-id="d5a72-134">Klicken Sie zum Entfernen Ihrer App mit der rechten Maustaste auf das Teams und **wählen Sie Deinstallieren aus.**</span><span class="sxs-lookup"><span data-stu-id="d5a72-134">To remove your app, right click the app icon in Teams and select **Uninstall**.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="c972f-171">Sie können einen Bot nicht vollständig aus einem persönlichen Kontext entfernen.</span><span class="sxs-lookup"><span data-stu-id="c972f-171">You cannot remove a bot from a personal context entirely.</span></span> <span data-ttu-id="c972f-172">Wenn der Bot entfernt und erneut hinzugefügt wird, wird der vorherigen Unterhaltung zusätzliche Kommunikation mit dem Bot hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="c972f-172">If the bot is removed and added again, additional communication with the bot appends to the previous conversation.</span></span>
+> <span data-ttu-id="d5a72-135">Persönliche Botaktivitäten können nicht vollständig entfernt werden.</span><span class="sxs-lookup"><span data-stu-id="d5a72-135">You can't remove personal bot activity entirely.</span></span> <span data-ttu-id="d5a72-136">Wenn Sie die App entfernen und erneut hinzufügen, wird die neue Kommunikation mit dem Bot an die vorherige Unterhaltung angefügt.</span><span class="sxs-lookup"><span data-stu-id="d5a72-136">If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.</span></span>
 
-## <a name="troubleshooting-notes"></a><span data-ttu-id="c972f-173">Hinweise zur Problembehandlung</span><span class="sxs-lookup"><span data-stu-id="c972f-173">Troubleshooting notes</span></span>
+## <a name="next-step"></a><span data-ttu-id="d5a72-137">Nächster Schritt</span><span class="sxs-lookup"><span data-stu-id="d5a72-137">Next step</span></span>
 
-<span data-ttu-id="c972f-174">Wenn das Manifest nicht geladen werden kann, überprüfen Sie, ob Sie alle Anweisungen in [Erstellen](../../concepts/build-and-test/apps-package.md) des Pakets befolgt und Ihr Manifest anhand des Schemas [überprüft haben.](../../resources/schema/manifest-schema.md)</span><span class="sxs-lookup"><span data-stu-id="c972f-174">If the manifest fails to load, check if you have followed all the instructions in [Create the package](../../concepts/build-and-test/apps-package.md) and validated your manifest against the [schema](../../resources/schema/manifest-schema.md).</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="d5a72-138">Verwenden Ihrer Teams App</span><span class="sxs-lookup"><span data-stu-id="d5a72-138">Use your Teams app</span></span>](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)
