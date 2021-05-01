@@ -1,39 +1,39 @@
 ---
 title: Entwerfen Ihrer persönlichen App
-description: Erfahren Sie, wie Sie eine persönliche Microsoft Teams-App entwerfen und das Microsoft Teams UI Kit erhalten.
+description: Erfahren Sie, wie Sie Teams persönliche App entwerfen und das Microsoft Teams UI Kit erhalten.
 author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 8302f3768034014ef5a446effeee0603afe4a5f4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b3f08c39a7900b80fb46d167fae8d9e8bdbcc574
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020758"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101555"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Entwerfen Ihrer persönlichen App für Microsoft Teams
 
 Eine persönliche App kann ein Bot, ein privater Arbeitsbereich oder beides sein. Manchmal funktioniert es wie ein Ort zum Erstellen oder Anzeigen von Inhalten, andere Mal bietet sie dem Benutzer eine Vogelperspektive über alles, was ihnen selbst ist, wenn die App als Registerkarte in mehreren Kanälen konfiguriert wurde.
 
-Um Ihr App-Design zu leiten, wird in den folgenden Informationen beschrieben und veranschaulicht, wie Personen persönliche Apps in Teams hinzufügen, verwenden und verwalten können.
+Um Ihr App-Design zu leiten, wird in den folgenden Informationen beschrieben und veranschaulicht, wie Personen persönliche Apps hinzufügen, verwenden und verwalten Teams.
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
-Im Microsoft Teams UI Kit finden Sie umfassende Richtlinien für das Design persönlicher Apps, einschließlich Elemente, die Sie bei Bedarf packen und ändern können. Das Benutzeroberflächenkit enthält auch wichtige Themen wie Barrierefreiheit und reaktionsschnelle Größenanpassung, die hier nicht behandelt werden.
+Umfassende Richtlinien für das Design persönlicher Apps, einschließlich Elemente, die Sie bei Bedarf packen und ändern können, finden Sie im Microsoft Teams UI Kit. Das Benutzeroberflächenkit enthält auch wichtige Themen wie Barrierefreiheit und reaktionsschnelle Größenanpassung, die hier nicht behandelt werden.
 
 > [!div class="nextstepaction"]
 > [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-personal-app"></a>Hinzufügen einer persönlichen App
 
-Sie können eine persönliche App aus dem Teams Store (AppSource)  oder dem App-Flyout hinzufügen, indem Sie auf der linken Seite von Teams das Symbol Mehr auswählen (im folgenden Beispiel gezeigt).
+Sie können eine persönliche App aus dem Teams Store (AppSource) oder  dem App-Flyout hinzufügen, indem Sie auf der linken Seite von Teams das Symbol Mehr auswählen (siehe das folgende Beispiel).
 
 :::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="Beispiel zeigt, wie Sie eine persönliche App aus dem App-Flyout hinzufügen." border="false":::
 
 ## <a name="use-a-personal-app-private-workspace"></a>Verwenden einer persönlichen App (privater Arbeitsbereich)
 
-Mit einem privaten Arbeitsbereich können Sie App-Inhalte anzeigen, die für Sie an einem zentralen Ort von Bedeutung sind, ohne Teams zu verlassen.
+Mit einem privaten Arbeitsbereich können Sie App-Inhalte anzeigen, die für Sie an einem zentralen Ort von Bedeutung sind, ohne Teams.
 
 (Implementierungshinweis: Der private Arbeitsbereich basiert auf der [*persönlichen Registerkartenfunktion.)*](../../build-your-first-app/build-personal-tab.md)
 
@@ -46,7 +46,7 @@ Mit einem privaten Arbeitsbereich können Sie App-Inhalte anzeigen, die für Sie
 |A|**App-Attributierung:** Ihr App-Logo und -Name.|
 |B|**Registerkarten**: Bietet Navigation für Ihre persönliche App. Fügen Sie z. B. eine **Registerkarte Informationen** oder **Hilfe** ein.|
 |C|**Popupansicht:** Pusht Ihre App-Inhalte aus einem übergeordneten Fenster in ein eigenständiges untergeordnetes Fenster.|
-|D|**Weitere Menü**: Enthält zusätzliche App-Informationen und -Optionen. (Alternativ können Sie Einstellungen **als** Registerkarte festlegen.)|
+|D|**Weitere Menü**: Enthält zusätzliche App-Informationen und -Optionen. (Alternativ können Sie **Einstellungen** Registerkarte erstellen.)|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Beispiel zeigt die Strukturanatomie der persönlichen Registerkarte." border="false":::
 
@@ -57,7 +57,7 @@ Mit einem privaten Arbeitsbereich können Sie App-Inhalte anzeigen, die für Sie
 
 ### <a name="designing-with-ui-templates"></a>Entwerfen mit Benutzeroberflächenvorlagen
 
-Verwenden Sie eine der folgenden Teams-UI-Vorlagen, um Ihre persönliche Registerkarte zu entwerfen:
+Verwenden Sie eine der folgenden Teams, um Ihre persönliche Registerkarte zu entwerfen:
 
 * [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem scannierbaren Format anzeigen und Benutzern das Ausführen von Aktionen für eine gesamte Liste oder einzelne Elemente ermöglichen.
 * [Task board:](../../concepts/design/design-teams-app-ui-templates.md#task-board)Ein Task Board, manchmal auch als Kanbanboard oder Schwimmstreifen bezeichnet, ist eine Sammlung von Karten, die häufig zum Nachverfolgen des Status von Arbeitselementen oder Tickets verwendet werden.
@@ -80,7 +80,15 @@ Persönliche Apps können einen Bot für Einzelunterhaltungen und private Benach
 |B|**Bot-Nachricht:** Bots senden häufig Nachrichten und Benachrichtigungen in Form einer Karte (z. B. einer adaptiven Karte).|
 |C|**Verfassenfeld**: Eingabefeld zum Senden von Nachrichten an den Bot.|
 
+## <a name="manage-a-personal-tab"></a>Verwalten einer persönlichen Registerkarte
+
+Auf der linken Seite Teams Benutzer mit der rechten Maustaste auf die persönliche App klicken, um andere App-Optionen anheften, entfernen und konfigurieren.
+
+:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Beispiel zeigt Optionen zum Verwalten einer persönlichen App." border="false":::
+
 ## <a name="best-practices"></a>Bewährte Methoden
+
+Verwenden Sie diese Empfehlungen, um eine hochwertige App-Erfahrung zu erstellen.
 
 ### <a name="tab-priority"></a>Registerkartenpriorität
 
@@ -88,13 +96,13 @@ Persönliche Apps können einen Bot für Einzelunterhaltungen und private Benach
 
 Bei einer reaktionsschnellen Größenanpassung können Registerkarten auf der rechten Seite abgeschnitten oder nicht mehr angezeigt werden.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche Apps." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="Beispiel zeigt eine persönliche App, in der die relevantesten Inhalte auf der ersten Registerkarte angezeigt werden." border="false":::
 
 #### <a name="dont-lead-with-secondary-content-or-metadata"></a>Don't: Lead with secondary content or metadata
 
 Wie bei einer standardmäßigen Web-App sollte die Registerkartennavigation in einer Reihenfolge ausgeführt werden, die die primären Features Ihrer App sinnvoll macht.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="Beispiel für eine bewährte Methode für eine persönliche App." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="Beispiel zeigt eine persönliche App, die mit sekundären Inhalten oder Metadaten führt." border="false":::
 
 ### <a name="tab-hierarchy"></a>Registerkartenhierarchie
 
@@ -102,13 +110,13 @@ Wie bei einer standardmäßigen Web-App sollte die Registerkartennavigation in e
 
 Ihre Registerkarten sollten die primären Features und Inhalte Ihrer App kategorisieren. Bei einer reaktionsschnellen Größenanpassung können Inhalte auf der rechten Seite abgeschnitten oder nicht mehr angezeigt werden.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="Beispiel zeigt bewährte Vorgehensweisen für persönliche Apps." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="Beispiel zeigt eine persönliche App mit Registerkarten gleicher Hierarchie." border="false":::
 
 #### <a name="dont-include-different-levels-of-hierarchy"></a>Don't: Include different levels of hierarchy
 
 Ihre Inhalte sollten in einer logischen Reihenfolge ausgeführt werden, die Benutzern dabei hilft, den Inhalt sinnvoll zu nutzen. Wenn Sie über zwei Registerkarten verfügen, die eng miteinander verbunden sind, sollten Sie sie in einer Registerkarte kombinieren.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche Apps an." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="Beispiel zeigt eine persönliche App mit unterschiedlichen Hierarchieebenen." border="false":::
 
 ### <a name="first-run-experience"></a>Erste Ausführung
 
@@ -116,15 +124,15 @@ Ihre Inhalte sollten in einer logischen Reihenfolge ausgeführt werden, die Benu
 
 Bei der ersten Verwendung einer persönlichen App sollte mindestens ein Willkommensbildschirm angezeigt werden. Beschreiben Sie für Bots, was Ihr Bot tun kann, und stellen Sie schnelle Aktionen wie z. B. eine Anmeldeschaltfläche zur Verfügung.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="Abbildung zeigt eine bewährte Methode für persönliche Apps." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="Beispiel zeigt, was während einer persönlichen App beim ersten Ausführen zu tun ist." border="false":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="Illustration einer bewährten Methode für eine persönliche App." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="Ein weiteres Beispiel zeigt, was während einer persönlichen App-Erstlauferfahrung zu tun ist." border="false":::
 
 #### <a name="dont-start-with-a-blank-screen"></a>Don't: Start with a blank screen
 
 Benutzer sind möglicherweise verwirrt, wenn beim ersten Ausführen Ihrer App nichts angezeigt wird.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="Abbildung zeigt eine bewährte Methode für persönliche Apps an." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="Beispiel zeigt, was während der ersten Ausführung einer persönlichen App nicht zu tun ist." border="false":::
 
 ### <a name="personalized-content"></a>Personalisierte Inhalte
 
@@ -132,48 +140,35 @@ Benutzer sind möglicherweise verwirrt, wenn beim ersten Ausführen Ihrer App ni
 
 Unabhängig davon, ob es sich um eine persönliche Registerkarte oder einen persönlichen Bot handele, zeigen Sie Inhalte an, die sich nur auf die Aktivitäten eines Benutzers in Ihrer App bezogen haben.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="Beispiel bietet eine bewährte Methode für persönliche Apps." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="Beispiel zeigt, was mit einer persönlichen App und personalisierten Inhalten zu tun ist." border="false":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="Das Beispiel zeigt eine bewährte Methode für persönliche Apps." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="Ein weiteres Beispiel zeigt, was mit einer persönlichen App und personalisierten Inhalten zu tun ist." border="false":::
 
 #### <a name="dont-show-unrelated-or-overly-broad-content"></a>Don't: Unrelated or overly broad content anzeigen
 
 Zeigen Sie in persönlichen Kontexten keine Inhalte für Teams an, zu der ein Benutzer nicht gehört. Persönliche Botinhalte sollten sich auf die Person konzentrieren, nicht auf eine Gruppe.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="Offengelegt ist ein Beispiel für eine bewährte Methode für persönliche Apps." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="Beispiel zeigt, was nicht mit einer persönlichen App und personalisierten Inhalten zu tun ist." border="false":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für persönliche Apps." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="Ein weiteres Beispiel zeigt, was nicht mit einer persönlichen App und personalisierten Inhalten zu tun ist." border="false":::
 
 ### <a name="complex-app-features"></a>Komplexe App-Features
 
 #### <a name="do-allow-users-to-access-complex-features-in-a-browser"></a>Do: Benutzern den Zugriff auf komplexe Features in einem Browser erlauben
 
-Ihre App sollte sich auf die Kernaufgaben in Teams konzentrieren, Sie können jedoch weiterhin die vollständige, eigenständige App in einem Browser anzeigen.
+Ihre App sollte sich auf Kernaufgaben in Teams konzentrieren, Sie können jedoch weiterhin die vollständige, eigenständige App in einem Browser anzeigen.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="Beispiel zeigt bewährte Vorgehensweisen für persönliche Apps." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="Beispiel zeigt, wie Komplexe App-Features mit einer persönlichen App verwendet werden." border="false":::
 
 #### <a name="dont-include-your-entire-app"></a>Don't: Include your entire app
 
 Wenn Sie Ihre App nicht speziell für Teams erstellt haben, verfügen Sie wahrscheinlich über Features, die in einem Tool für die Zusammenarbeit keinen Sinn machen.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="Illustration bietet bewährte Vorgehensweisen für persönliche Apps." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="Beispiel zeigt, wie komplexe App-Features nicht mit einer persönlichen App zu verarbeiten sind." border="false":::
 
-## <a name="manage-a-personal-tab"></a>Verwalten einer persönlichen Registerkarte
-
-Auf der linken Seite von Teams können Benutzer mit der rechten Maustaste auf die persönliche App klicken, um andere App-Optionen anheften, entfernen und konfigurieren.
-
-:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Beispiel zeigt Optionen zum Verwalten einer persönlichen App." border="false":::
-
-## <a name="learn-more"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 Diese anderen Entwurfsrichtlinien können je nach Umfang Ihrer persönlichen App hilfreich sein:
 
 * [Entwerfen Ihrer Registerkarte](../../tabs/design/tabs.md)
 * [Entwerfen eines Bots](../../bots/design/bots.md)
-
-## <a name="validate-your-design"></a>Validieren Ihres Designs
-
-Wenn Sie Ihre App in AppSource veröffentlichen möchten, sollten Sie die Entwurfsprobleme verstehen, die häufig dazu führen, dass Apps während der Übermittlung fehlschlagen.
-
-> [!div class="nextstepaction"]
-> [Überprüfen der Richtlinien zur Designvalidierung](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

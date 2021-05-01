@@ -5,12 +5,12 @@ keywords: Bots Unterhaltungen Messaging
 ms.topic: how-to
 localization_priority: Normal
 ms.date: 03/29/2018
-ms.openlocfilehash: 9e89e1171907929eebb9f9eb3809f4ab920583a4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c43ce8697e5b3b2748416c3382ad6e34feb42d2b
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019748"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101821"
 ---
 # <a name="formatting-bot-messages"></a>Formatierung von Bot-Mitteilungen
 
@@ -38,7 +38,7 @@ Informationen zum Formatieren von Karten finden Sie unter [Teams Card Reference]
 
 ### <a name="cross-platform-support"></a>Plattformübergreifende Unterstützung
 
-Um sicherzustellen, dass Ihre Formatierung auf allen von Microsoft Teams unterstützten Plattformen funktioniert, beachten Sie, dass einige Formatvorlagen derzeit nicht auf allen Plattformen unterstützt werden.
+Beachten Sie, dass einige Formatvorlagen derzeit nicht auf allen Plattformen unterstützt werden, um sicherzustellen, dass Ihre Formatierung auf allen plattformen funktioniert, die von Microsoft Teams unterstützt werden.
 
 | Format                     | Nur-Text-Nachrichten | Karten (nur XML) |
 |---------------------------|--------------------|------------------|
@@ -87,4 +87,4 @@ Die Unterstützung für die Textformatierung variiert je nach Nachrichtentyp und
 | vorformatierter Text | `text` | `` `text` `` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |
 | Link | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
-| Bildlink | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| Bildlink | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |

@@ -1,59 +1,61 @@
 ---
 title: Verwalten und Unterstützen Ihrer veröffentlichten App
-description: Was tun, nachdem Sie Ihre App veröffentlicht haben
-ms.topic: how-to
+description: Was Sie sich überlegen sollten, sobald Ihr Store im Teams und AppSource aufgeführt ist.
+ms.topic: conceptual
 localization_priority: Normal
-keywords: Updateupdateupdateupdatemanifest für Teams nach der Veröffentlichung
-ms.openlocfilehash: 11c32ce61664f34a246905124b767e17d3c6f536
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: heath-hamilton
+ms.author: surbhigupta
+ms.openlocfilehash: 57b57e268a4f2eafc14d0372b8b8383e410a80d5
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020800"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101751"
 ---
-# <a name="maintain-and-support-your-published-app"></a>Verwalten und Unterstützen Ihrer veröffentlichten App 
+# <a name="maintain-your-published-microsoft-teams-app"></a>Verwalten Der veröffentlichten Microsoft Teams App
 
-Nachdem Ihre App genehmigt und im öffentlichen App-Katalog aufgeführt wurde, können Sie Ihre Reichweite erhöhen, indem Sie das Microsoft 365 App Compliance Program abschließen oder eine Downloadschaltfläche auf Ihrer Website hinzufügen.
+Wenn Ihre App im Microsoft Teams aufgeführt ist, überlegen Sie, wie Sie die App in Zukunft verwalten und Downloads und Nutzung erhöhen.
 
-## <a name="microsoft-365-certified"></a>Microsoft 365 Certified
+## <a name="publish-updates-to-your-app"></a>Veröffentlichen von Updates für Ihre App
 
-Das [Microsoft 365 App Compliance Program](./application-certification.md)ist ein dreistufiger Ansatz für die Sicherheit und Compliance von Apps. Jede Ebene baut auf der nächsten auf – und bietet ein mehrschichtiges Programm, das den Anforderungen Ihres Kunden entspricht. Weitere Informationen zur Sicherheits- und Compliancehaltung von Teams-Apps finden Sie auf der Seite ["Compliance".](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps)
+Sie können Änderungen an Ihrer App (z. B. neue Features oder sogar Metadaten) im Partner Center übermitteln. Diese Änderungen erfordern einen neuen Überprüfungsprozess.
 
-## <a name="add-a-download-button-to-your-product-site"></a>Hinzufügen einer Downloadschaltfläche zu Ihrer Produktwebsite
+Stellen Sie beim Veröffentlichen von Updates Folgendes sicher:
 
-Wenn Sich Ihre App im globalen Microsoft Teams Store befindet, können Sie einen Link für Ihre Website generieren, der Teams startet und ein Zustimmungs- und Installationsdialogfeld für Benutzer zum Hinzufügen der App zeigt.
-Das Format ist:  `https://teams.microsoft.com/l/app/<appId>` dabei ist appID die GUID, die sie im übermittelten Manifest deklarieren.
-Beispiel: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` ist der Link zum Installieren von Trello.
+* Ändern Sie ihre App-ID nicht.
+* Erhöhen Sie die Versionsnummer Ihrer App.
+* Wählen Sie im Partner Center keine Option **Neue App hinzufügen aus, um** das Update zu tun. Wechseln Sie stattdessen zur Seite Ihrer App.
 
-## <a name="updating-your-existing-teams-app"></a>Aktualisieren Ihrer vorhandenen Teams-App
+### <a name="app-updates-requiring-user-consent"></a>App-Updates, die die Zustimmung des Benutzers erfordern
 
-* Verwenden Sie nicht die *Schaltfläche Neue App hinzufügen,* um Ihre App erneut zu übermitteln. Verwenden Sie stattdessen die Kachel für Ihre App auf der Registerkarte Übersicht.
-* Die appId im aktualisierten Manifest sollte mit der im aktuellen Manifest identisch sein, mit einer inkrementierten Versionsnummer.
-* Erhöhen Sie Ihre Versionsnummer im Manifest, wenn Sie Änderungen an Ihrer Übermittlung vornehmen, einschließlich des App-Namens oder metadaten im Manifest.
-* Aktualisierte Übermittlungen sind erforderlich, um einen neuen Überprüfungs- und Überprüfungsprozess durchlaufen zu können.
+Wenn ein Benutzer Ihre App installiert, muss er der App die Berechtigung zum Zugriff auf die Dienste und Informationen erteilen, die die App zum Funktionieren benötigt. In den meisten Fällen müssen Benutzer dies nur einmal tun, und neue Versionen Ihrer App werden automatisch installiert.
 
-## <a name="app-updates-and-the-user-consent-flow"></a>App-Updates und der Benutzer-Zustimmungsfluss
+Wenn Sie jedoch eine der folgenden Änderungen an Ihrer App vornehmen, müssen Ihre vorhandenen Benutzer eine andere Berechtigungsanforderung akzeptieren, um das Update zu installieren:
 
-Wenn ein Benutzer Ihre Anwendung installiert, ist eine der ersten Aufgaben die Zustimmung, der App die Berechtigung zum Zugriff auf die Dienste und Informationen zu erteilen, die die App benötigt, um ihre Aufgabe zu erfüllen. In den meisten Fällen wird die neue Version nach Abschluss eines App-Updates automatisch für Endbenutzer angezeigt. Es gibt jedoch einige Updates für das [Teams-App-Manifest,](../../../../resources/schema/manifest-schema.md) für die die Benutzerakzeptanz erforderlich ist und dieses Zustimmungsverhalten erneut auslösen kann:
+* Hinzufügen oder Entfernen eines Bots.
+* Ändern Sie die Bot-ID.
+* Ändern sie die Konfiguration der one-way-Benachrichtigung eines Bots.
+* Ändern sie die Unterstützung eines Bots für das Hochladen und Herunterladen von Dateien.
+* Hinzufügen oder Entfernen einer Messagingerweiterung.
+* Fügen Sie eine persönliche Registerkarte hinzu.
+* Fügen Sie einen Kanal und eine Gruppenregisterkarte hinzu.
+* Fügen Sie einen Connector hinzu.
+* Ändern von Konfigurationen im Zusammenhang mit Azure Active Directory (Azure AD)-App-Registrierung. Weitere Informationen finden Sie unter [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
- >[!div class="checklist"]
->
-> * Ein Bot wird hinzugefügt oder entfernt.
-> * Der eindeutige Wert eines vorhandenen `botId` Bots wird geändert.
-> * Der boolesche Wert eines `isNotificationOnly` vorhandenen Bots wird geändert.
-> * Der oder der boolesche Wert eines vorhandenen `supportsFiles` `supportsCalling` Bots wird geändert.
-> * Eine Messagingerweiterung `composeExtensions` wird hinzugefügt oder entfernt.
-> * Es wird ein neuer Connector hinzugefügt.
-> * Eine neue statische oder persönliche Registerkarte wird hinzugefügt.
-> * Eine neue konfigurierbare Gruppe oder Kanalregisterkarte wird hinzugefügt.
-> * Die Darin enthaltenen `webApplicationInfo` Eigenschaften werden geändert. Für Änderungen `webApplicationInfo` an ist die Zustimmung nur im Bereich Teams erforderlich.
+## <a name="fix-issues-with-your-published-app"></a>Beheben von Problemen mit ihrer veröffentlichten App
 
-### <a name="images-of-user-consent-flow"></a>Bilder des Benutzer-Zustimmungsflusses:
+Microsoft führt tägliche Automatisierungstests für Apps durch, die im Teams sind. Wenn Probleme mit Ihrer App identifiziert werden, wenden wir uns an Sie mit einem detaillierten Bericht darüber, wie Sie die Probleme und Empfehlungen reproduzieren, um sie zu beheben. Wenn Sie die Probleme innerhalb einer angegebenen Zeitachse nicht beheben können, wird Ihr App-Eintrag möglicherweise aus dem Store entfernt.
 
-**Einrichten eines Connectors** – Dieser Bildschirm wird nur für Teams-Benutzer angezeigt.
+## <a name="promote-your-app-on-another-site"></a>Bewerben Ihrer App auf einer anderen Website
 
-![Einrichten eines Konnektordiagramms für den Zustimmungsfluss](../../../../assets/images/connector-teams-consentflow.png)
+Wenn Ihre App im Teams aufgeführt ist, können Sie einen Link erstellen, der Teams startet und ein Dialogfeld zum Installieren Der App anzeigt. Sie können diesen Link beispielsweise mit einer Downloadschaltfläche auf der Marketingseite Ihres Produkts hinzufügen.
 
-**Benutzer-Zustimmungsfluss–** Dieser Bildschirm ist sowohl für persönliche als auch für Gruppenbereiche üblich. Aktivieren Sie hier das **Kontrollkästchen Zustimmung im** Namen Ihrer Organisation, und wählen Sie Akzeptieren **aus.**
+Erstellen Sie den Link mit der folgenden URL, die mit Ihrer App-ID angefügt ist: `https://teams.microsoft.com/l/app/<your-app-id>` .
 
-![Berechtigungsdiagramm](../../../../assets/images/user-consent-flow.png)
+## <a name="complete-microsoft-365-certification"></a>Vollständige Microsoft 365 Zertifizierung
+
+[Microsoft 365 Zertifizierung](/microsoft-365-app-certification/docs/certification) bietet die Garantie, dass Daten und Datenschutz angemessen gesichert und geschützt werden, wenn ein Drittanbieter-Office-App oder -Add-In in Ihrem Microsoft 365 installiert wird. Die Zertifizierung bestätigt, dass Ihre App mit Microsoft-Technologien kompatibel, mit bewährten Methoden für die Cloud-App-Sicherheit kompatibel und von Microsoft unterstützt wird.
+
+## <a name="see-also"></a>Siehe auch
+
+* [Monetarisieren Sie Ihre App über den Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

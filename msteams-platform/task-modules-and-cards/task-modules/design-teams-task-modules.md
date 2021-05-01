@@ -1,20 +1,20 @@
 ---
 title: Entwerfen von Aufgabenmodulen
 author: heath-hamilton
-description: Erfahren Sie, wie Sie Aufgabenmodule für Teams-Apps entwerfen und das Microsoft Teams UI Kit erhalten.
+description: Erfahren Sie, wie Sie Aufgabenmodule für Teams entwerfen und das Microsoft Teams UI Kit erhalten.
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 3502a705bfe1bf99a5dc0edff5c5a54265cc6ca1
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 347ce42c41706f698e2f8897a0518aae0850a275
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019545"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101730"
 ---
-# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Entwerfen von Aufgabenmodulen für Ihre Microsoft Teams-App
+# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Entwerfen von Aufgabenmodulen für Microsoft Teams App
 
-Sie können modale Popuperfahrungen in Ihrer Teams-App mit Aufgabenmodulen erstellen. Verwenden Sie diese Funktion zum Anzeigen von Rich Media und Informationen oder zum Abschließen einer komplexen Aufgabe.
+Sie können modale Popuperfahrungen in Ihrer Teams mit Aufgabenmodulen erstellen. Verwenden Sie diese Funktion zum Anzeigen von Rich Media und Informationen oder zum Abschließen einer komplexen Aufgabe.
 
 :::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Beispiel zeigt ein Aufgabenmodul." border="false":::
 
@@ -106,11 +106,13 @@ In diesem Beispiel werden Umfrageergebnisse gezeigt, die von einer adaptiven Kar
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
+Verwenden Sie diese Empfehlungen, um eine hochwertige App-Erfahrung zu erstellen.
+
 ### <a name="usability"></a>Benutzerfreundlichkeit
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Beispiel, in dem bewährte Vorgehensweisen für ein Aufgabenmodul gezeigt werden." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Beispiel für eine bewährte Methode für ein Aufgabenmodul (ein Aufgabenmodul nach dem anderen)." border="false":::
 
 #### <a name="do-use-one-task-module-at-a-time"></a>Do: Verwenden eines Aufgabenmoduls gleichzeitig
 
@@ -118,7 +120,7 @@ Ziel ist es, den Benutzer auf das Abschließen einer Aufgabe zu konzentrieren.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Beispiel für eine bewährte Methode für ein Aufgabenmodul (Öffnen eines Dialogfelds über einem Aufgabenmodul)." border="false":::
 
 #### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>Don't: Pop a dialog on top of a task module
 
@@ -131,7 +133,7 @@ Dies führt zu einer unkonzentrierten, verwirrenden Benutzeroberfläche.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Beispiel zeigt bewährte Vorgehensweise für das Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Beispiel für eine bewährte Methode für ein Aufgabenmodul (Stellen Sie sicher, dass der Inhalt reaktionsfähig ist)." border="false":::
 
 #### <a name="do-make-sure-the-content-is-responsive"></a>Do: Stellen Sie sicher, dass der Inhalt reaktionsfähig ist
 
@@ -139,7 +141,7 @@ Während adaptive Karten, die in einem Aufgabenmodul gehostet werden, auf mobile
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Beispiel zeigt bewährte Methode für ein Aufgabenmodul an." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Beispiel für eine bewährte Methode für ein Aufgabenmodul (verwenden Sie keine horizontalen Bildlaufleisten)." border="false":::
 
 #### <a name="dont-use-horizontal-scroll-bars"></a>Don't: Verwenden horizontaler Bildlaufleisten
 
@@ -152,7 +154,7 @@ Es ist eine bewährte Methode, inhalte fokussiert und nicht zu langwierig zu hal
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Beispiel zeigt bewährte Methode des Aufgabenmoduls an." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Beispiel für eine bewährte Methode für ein Aufgabenmodul (kurz)." border="false":::
 
 #### <a name="do-keep-it-short"></a>Do: Keep it short
 
@@ -160,9 +162,9 @@ Sie können ganz einfach einen mehrstufigen Assistenten erstellen, aber das bede
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Abbildung der bewährten Vorgehensweise für ein Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Beispiel für bewährte Vorgehensweise für ein Aufgabenmodul (keine langen Interaktionen)." border="false":::
 
-#### <a name="dont-do-long-interactions"></a>Don't: Lange Interaktionen
+#### <a name="dont-have-long-interactions"></a>Don't: Have long interactions
 
 Versuchen Sie, Ihre Interaktionen kurz und auf den Punkt zu halten.
 
@@ -173,7 +175,7 @@ Versuchen Sie, Ihre Interaktionen kurz und auf den Punkt zu halten.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Abbildung zeigt eine bewährte Methode für ein Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Beispiel für eine bewährte Methode für ein Aufgabenmodul (Verwenden von Inlinefehlermeldungen)." border="false":::
 
 #### <a name="do-use-inline-error-messages"></a>Do: Verwenden von Inlinefehlermeldungen
 
@@ -181,7 +183,7 @@ Richtlinien zur Inlinefehlerbehandlung finden Sie in der Formularbenutzeroberfl�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="In der Abbildung wird die bewährte Methode für ein Aufgabenmodul angezeigt." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Beispiel für eine bewährte Methode für ein Aufgabenmodul (Setzen Sie Fehlermeldungen in Dialogfelder ein)." border="false":::
 
 #### <a name="dont-put-error-messages-in-dialogs"></a>Don't: Setzen von Fehlermeldungen in Dialogfelder
 

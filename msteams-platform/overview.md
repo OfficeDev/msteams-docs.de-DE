@@ -1,41 +1,41 @@
 ---
-title: Erstellen von Apps für die Microsoft Teams-Plattform
+title: Erstellen von Apps für die Microsoft Teams Plattform
 author: heath-hamilton
-description: Erhalten Sie eine Übersicht darüber, wie Entwickler Microsoft Teams-Features mit benutzerdefinierten Apps erweitern können.
+description: Erhalten Sie eine Übersicht darüber, wie Entwickler Microsoft Teams features mit benutzerdefinierten Apps erweitern können.
 ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 5009427fc3cdde11de45a55cb0f6216ae36b0d66
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 69c36cf5f925bdb9802e7ec081a7765187a06128
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019811"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101842"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Apps für Microsoft Teams erstellen
 
-Microsoft Teams-Apps bringen wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse an die Stelle, an der Personen zunehmend sammeln, lernen und arbeiten.
+Microsoft Teams apps bringen wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse an die Stelle, an der Die Menschen zunehmend sammeln, lernen und arbeiten.
 
-Apps sind die Art und Weise, wie Sie Teams an Ihre Anforderungen anpassen. Erstellen Sie etwas ganz Neues für Teams, oder integrieren Sie eine vorhandene App.
+Apps sind die Art und Weise, Teams Ihre Anforderungen erfüllen. Erstellen Sie etwas neues für Teams oder integrieren Sie eine vorhandene App.
 
 > [!div class="nextstepaction"]
 > [Beginnen Sie hier](build-your-first-app/build-first-app-overview.md)
 
-## <a name="what-are-teams-apps"></a>Was sind Teams-Apps?
+## <a name="what-are-teams-apps"></a>Was sind Teams Apps?
 
-Teams-Apps sind eine Kombination aus [Funktionen und](concepts/capabilities-overview.md) [Einstiegspunkten.](concepts/extensibility-points.md) Beispielsweise können Benutzer mit dem Bot *(Funktion)* Ihrer App in einem *Kanal* (Einstiegspunkt) chatten.
+Teams Apps sind eine Kombination aus [Funktionen und](concepts/capabilities-overview.md) [Einstiegspunkten.](concepts/extensibility-points.md) Beispielsweise können Benutzer mit dem Bot *(Funktion)* Ihrer App in einem *Kanal* (Einstiegspunkt) chatten.
 
-Einige Apps sind einfach (Benachrichtigungen senden), während andere komplex sind (Patientendatensätze verwalten). Denken Sie bei der Planung Ihrer App daran, dass Teams ein Hub für die Zusammenarbeit ist. Die besten Teams-Apps helfen, sich selbst zu ausdrücken und besser zusammen zu arbeiten.
+Einige Apps sind einfach (Benachrichtigungen senden), während andere komplex sind (Patientendatensätze verwalten). Beachten Sie beim Planen Ihrer App, dass Teams ein Hub für die Zusammenarbeit ist. Die besten Teams helfen, sich selbst zu ausdrücken und besser zusammen zu arbeiten.
 
 :::row:::
    :::column span="":::
 
 ### <a name="tabs"></a>Registerkarten
 
-**Einfachere Informationen:** Manchmal müssen Sie die Suche vereinfachen. Zeigen Sie eine wichtige Webseite auf einer [Registerkarte an,](tabs/what-are-tabs.md)die eine Vollbildweberfahrung für statische und dynamische Inhalte in Teams bietet.
+**Einfachere Informationen:** Manchmal müssen Sie die Suche vereinfachen. Zeigen Sie eine wichtige Webseite auf einer [Registerkarte an,](tabs/what-are-tabs.md)die eine Vollbildweberfahrung für statische und dynamische Inhalte in Teams.
 
-:::image type="content" source="assets/images/overview-tabs.png" alt-text="Konzeptionelle Darstellung, wie Registerkarten im Teams-Client aussehen." border="false":::
+:::image type="content" source="assets/images/overview-tabs.png" alt-text="Konzeptionelle Darstellung des Aussehens von Registerkarten im Teams Client." border="false":::
 
    :::column-end:::
 
@@ -43,9 +43,9 @@ Einige Apps sind einfach (Benachrichtigungen senden), während andere komplex si
 
 ### <a name="bots"></a>Bots
 
-**Wörter in Aktionen verwandeln:** Unterhaltungen führen häufig dazu, dass sie etwas tun müssen (Eine Bestellung generieren, meinen Code überprüfen, ticketstatus überprüfen und so weiter). Ein [Bot](bots/what-are-bots.md) kann diese Arten von Workflows direkt in Teams starten.
+**Wörter in Aktionen verwandeln:** Unterhaltungen führen häufig dazu, dass sie etwas tun müssen (Eine Bestellung generieren, meinen Code überprüfen, ticketstatus überprüfen und so weiter). Ein [Bot](bots/what-are-bots.md) kann diese Arten von Workflows direkt innerhalb der Teams.
 
-:::image type="content" source="assets/images/overview-bots.png" alt-text="Konzeptionelle Darstellung, wie Bots im Teams-Client aussehen." border="false":::
+:::image type="content" source="assets/images/overview-bots.png" alt-text="Konzeptionelle Darstellung des Aussehens von Bots im Teams Client." border="false":::
 
    :::column-end:::
 
@@ -59,7 +59,7 @@ Einige Apps sind einfach (Benachrichtigungen senden), während andere komplex si
 
 **Vereinfachen Sie multitask:** Mit [Messagingerweiterungen](messaging-extensions/what-are-messaging-extensions.md)können Sie externe Informationen in einer Unterhaltung schnell freigeben. Sie können auch eine Nachricht verwenden, z. B. das Erstellen eines Hilfetickets basierend auf dem Inhalt eines Kanalbeitrags.
 
-:::image type="content" source="assets\images\overview-messaging.png" alt-text="Konzeptionelle Darstellung, wie Messagingerweiterungen im Teams-Client aussehen." border="false":::
+:::image type="content" source="assets\images\overview-messaging.png" alt-text="Konzeptionelle Darstellung des Aussehens von Messagingerweiterungen im Teams Client." border="false":::
 
    :::column-end:::
 
@@ -67,9 +67,9 @@ Einige Apps sind einfach (Benachrichtigungen senden), während andere komplex si
 
 ### <a name="webhooks"></a>Webhooks
 
-**Kommunikation mit externen Apps:** [Eingehende Webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sind eine einfache Möglichkeit, Benachrichtigungen von einer anderen App automatisch an einen Teams-Kanal zu senden. Mit [ausgehenden Webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)wird der Webdienst mit einem @mention.
+**Kommunikation mit externen Apps:** [Eingehende Webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sind eine einfache Möglichkeit, Benachrichtigungen von einer anderen App automatisch an einen Teams senden. Mit [ausgehenden Webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)wird der Webdienst mit einem @mention.
 
-:::image type="content" source="assets/images/overview-connectors.png" alt-text="Konzeptionelle Darstellung, wie Connectors im Teams-Client aussehen." border="false":::
+:::image type="content" source="assets/images/overview-connectors.png" alt-text="Konzeptionelle Darstellung des Aussehens von Connectors im Teams Client." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -80,7 +80,7 @@ Einige Apps sind einfach (Benachrichtigungen senden), während andere komplex si
 
 ### <a name="microsoft-graph-for-teams"></a>Microsoft Graph für Teams
 
-**Nutzen von Teams-Daten:** Die [Microsoft Graph-API für Teams](https://docs.microsoft.com/graph/teams-concept-overview) bietet Zugriff auf Informationen zu Teams, Kanälen, Benutzern und Nachrichten, mit deren Hilfe Sie Features für Ihre App erstellen oder verbessern können.
+**Nutzen Teams** Daten: Die [Microsoft Graph-API für Teams](https://docs.microsoft.com/graph/teams-concept-overview) bietet Zugriff auf Informationen zu Teams, Kanälen, Benutzern und Nachrichten, mit deren Hilfe Sie Features für Ihre App erstellen oder verbessern können.
 
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Konzeptionelle Darstellung der Microsoft Graph-API für Teams." border="false":::
 
@@ -111,7 +111,7 @@ Machen Sie sich schnell mit dem Erstellen von Teams vertraut, indem Sie Ihre Umg
 
 ## <a name="integrate-with-teams"></a>Integration in Microsoft Teams
 
-Vermischen Sie die Features, die Benutzer an einer vorhandenen Web-App, einem Dienst oder system lieben, mit den gemeinsamen Features von Teams.
+Vermischen Sie die Features, die Benutzer an einer vorhandenen Web-App, einem Dienst oder system lieben, mit den features für die Zusammenarbeit Teams.
 
 > [!div class="nextstepaction"]
 > [Integrieren einer vorhandenen App](samples/integrating-web-apps.md)
@@ -127,7 +127,7 @@ Vermischen Sie die Features, die Benutzer an einer vorhandenen Web-App, einem Di
 
 ## <a name="a-little-code-goes-a-long-way"></a>Ein wenig Code geht weit
 
-Sie müssen kein erfahrener Programmierer sein, um eine großartige Teams-App zu erstellen. Testen Sie eine von mehreren Low-Code-Lösungen.
+Sie müssen kein erfahrener Programmierer sein, um eine großartige app Teams erstellen. Testen Sie eine von mehreren Low-Code-Lösungen.
 
 > [!div class="nextstepaction"]
 > [Erstellen einer Low-Code-App](samples/teams-low-code-solutions.md)
@@ -143,7 +143,7 @@ Sie müssen kein erfahrener Programmierer sein, um eine großartige Teams-App zu
 
 ## <a name="get-ideas-for-your-app"></a>Ideen für Ihre App erhalten
 
-Suchen Sie nach Inspiration für die App-Entwicklung? Durchsuchen Sie unsere Liste der realen Szenarien und Branchenlösungen mit Konzepten mit hoher Genauigkeit, um die verschiedenen Möglichkeiten zu verstehen, mit denen Teams-Apps Ihren Benutzern helfen können.
+Suchen Sie nach Inspiration für die App-Entwicklung? Durchsuchen Sie unsere Liste mit realen Szenarien und Branchenlösungen mit Konzepten mit hoher Genauigkeit, um die verschiedenen Möglichkeiten zu verstehen, Teams Apps Ihren Benutzern helfen können.
 
 > [!div class="nextstepaction"]
 > [Siehe App-Szenarien](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
@@ -157,7 +157,7 @@ Suchen Sie nach Inspiration für die App-Entwicklung? Durchsuchen Sie unsere Lis
 ## <a name="see-also"></a>Siehe auch
 
 * [Hinzufügen einer Share-to-Teams-Schaltfläche zu Ihrer Website](concepts/build-and-test/share-to-teams.md)
-* [Entwerfen Ihrer Teams-App](concepts/design/design-teams-app-overview.md)
-* [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* [Entwerfen Ihrer Teams App](concepts/design/design-teams-app-overview.md)
+* [Microsoft Teams JavaScript-Client-SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * Bot Framework SDK für [JavaScript](https://github.com/Microsoft/botbuilder-js) und [.NET](https://github.com/Microsoft/botbuilder-dotnet/)
-* [Veröffentlichen Ihrer Teams-App](concepts/deploy-and-publish/overview.md)
+* [Verteilen Ihrer Teams App](concepts/deploy-and-publish/apps-publish-overview.md)

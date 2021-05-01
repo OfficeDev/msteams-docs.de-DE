@@ -1,234 +1,194 @@
 ---
-title: Erstellen einer großartigen App-Detailseite
-description: Beschreibt die Anforderungen für die Seite "App-Details"
-ms.topic: reference
+title: Erstellen eines Storeeintrags für Ihre App
+description: Beschreibt, wie Sie einen Storeeintrag für Ihre Microsoft Teams erstellen.
+ms.topic: how-to
 localization_priority: Normal
-keywords: teams publish store office publishing policy AppSource content Metadata screenshot logo description app name icons short description
-ms.openlocfilehash: 6b763180cc2beb1cef6095110af0f37169e1f7c8
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: heath-hamilton
+ms.author: surbhigupta
+ms.openlocfilehash: 270936ca967c17caaa8a56f85057b20ca3d6a409
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020793"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101429"
 ---
-# <a name="build-a-great-app-details-page"></a>Erstellen einer großartigen App-Detailseite
+# <a name="create-a-store-listing-for-your-microsoft-teams-app"></a>Erstellen eines Storeeintrags für Ihre Microsoft Teams App
 
-Auf der Detailseite wird benutzern der erste Eindruck Ihrer App angezeigt. Jedes Element Ihrer Detailseite kann verwendet werden, um Ihre Vision zu vermitteln und Downloads zu fördern – überlegen Sie, wie Sie Ihre App auf einem begrenzten Platz präsentieren möchten. Hier finden Sie einige Tipps und Tricks, mit deren Hilfe Sie Ihre Benutzer gewinnen können, bevor sie Ihre App installieren.
+Die informationen, die Sie an [Partner Center](https://partner.microsoft.com)&#8212;einschließlich Ihres Namens, Beschreibungen, Symbole und Bilder&#8212;wird der Microsoft Teams-Store und Microsoft AppSource-Eintrag für Ihre App.
 
-> [!NOTE]
-> Stellen Sie sicher, dass Ihre App-Informationen unseren [AppSource-Anleitungen zum Erstellen eines effektiven Storeeintrags folgen.](/office/dev/store/create-effective-office-store-listings)
+Ein Storeeintrag kann der erste Eindruck ihrer App sein. Erhöhen Sie Ihre Installationen mit einem Eintrag, der die Vorteile, Funktionalität und Marke Ihrer App effektiv vermittelt.
 
-## <a name="app-name"></a>App-Name
+## <a name="specify-a-short-name"></a>Angeben eines kurzen Namens
 
-> [!div class="checklist"]
->
-> * Der Name einer App spielt eine wichtige Rolle bei der Benutzerentkung im AppSource-App-Store. Der Kurzname Ihrer App wird auf der Detailseite angezeigt.
->* Der App-Name sollte Ihre App ohne Verweis auf Microsoft- oder Microsoft-Produkte widerspiegeln.
->
+Der Name Ihrer App (insbesondere der kurz bezeichnete [*Name)*](~/resources/schema/manifest-schema.md#name)spielt eine entscheidende Rolle bei der Benutzerentkung im Store.
 
-> **Hinweis**: Wenn Ihre App eine offizielle Partnerschaft mit Microsoft ist, muss der Name der Drittanbieter-App zuerst sein, z. B. *Salesforce Connector für Microsoft Teams*.
+Im folgenden Beispiel wird hervorgehoben, wo der kurze Name einer App in einem Storeeintrag angezeigt wird.
 
-> [!div class="checklist"]
->
->* Verwenden Sie diese Ressourcen als Anleitung:
+:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Beispiel screenshot highlights where an app's short name displays in a store listing.":::
 
-* [Leitfaden für App-Namen](#app-name)
-* [Richtlinien für Marken und Marken von Microsoft](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
+### <a name="best-practices-for-names"></a>Bewährte Methoden für Namen
 
-**Do's:**
+**Dos:**
 
 * Wählen Sie einen einfachen, einprägsamen Namen aus, der darauf hinweist, was Ihre App macht.
 * Unterscheiden Sie sich.
-* Verwenden Sie bei Bedarf Microsoft 365-Verweise anstelle von Office 365.
+* Vermeiden Sie Tippfehler und grammatikalische Fehler.
 
-**Don'ts:**
+**Don’ts:**
 
-* Lassen Sie keine Leerzeichen aus, haben Sie einen falschen Fall oder enthalten Sie Sprachfehler im App-Namen.
-* Verwenden Sie keine generischen Begriffe oder Namen, die vorhandenen Apps ähneln.
-* Verwenden Sie "Teams", "Microsoft", vorhandene/anstehende Microsoft-Produktnamen oder "App" nicht in Ihrem App-Namen.
-* Verwenden Sie keine Klammern, um Microsoft-Produkte wie z. B. *Your-App-Name (für Microsoft Teams) zu enthalten.*
+* Verwenden Sie profane oder abfällige Begriffe.
+* Verwenden Sie rassisch oder kulturell unempfindliche Sprache.
+* Verwenden Sie generische Begriffe oder Namen, die vorhandenen Apps ähnlich sind.
+* Fügen Sie "Teams", "Microsoft", vorhandene/bevorstehende Microsoft-Produktnamen oder "App" in den Namen ein.
 
-![Ansicht des App-Namensspeichers](../../../../assets/images/store-detail-page/AppName-02.png)
+> [!NOTE]
+> Wenn Ihre App Teil einer offiziellen Partnerschaft mit Microsoft ist, muss der Name Ihrer App zuerst sein (z. B. *Salesforce Connector für Microsoft Teams*).
 
-![App-Name App Studio-Ansicht](../../../../assets/images/store-detail-page/AppName-01.png)
+## <a name="write-descriptions"></a>Schreibbeschreibungen
 
-## <a name="color-icon"></a>Farbsymbol
+Sie benötigen eine kurze und lange Beschreibung Ihrer App.
 
-Dies ist eines der ersten Elemente, die Benutzer sehen. Es sollte ansprechend und auffallend sein, wenn Sie durch den App Store scrollen. Stellen Sie sicher, dass sie einen guten ersten Eindruck macht und auch das Image und den Zweck Ihrer Marke kommuniziert. AppSource bietet weitere Tipps zum [Erstellen einer konsistenten visuellen Identität.](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity)
+### <a name="short-description"></a>Kurzbeschreibung
 
-![Ansicht des App-Symbolspeichers](~/assets/images/store-detail-page/AppIcon-02.png)
+Eine kurze Zusammenfassung Ihrer App, die ursprünglich, mitreißend und an Ihre Zielgruppe gerichtet sein sollte. Im Idealfall behalten Sie die kurz beschriebene Beschreibung auf einen Satz bei.
 
-![App-Symbol App Studio-Ansicht](~/assets/images/store-detail-page/AppIcon-01.png)
+Im folgenden Beispiel wird hervorgehoben, wo die kurze Beschreibung einer App in einem Storeeintrag angezeigt wird:
 
-**Don'ts:**
+:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Beispiel screenshot highlights where an app's short description displays in a store listing.":::
 
-* Ihr Symbol darf keine urheberrechtlich geschützten Produkte imitieren, die Sie nicht besitzen.
-* Ihr Symbol darf keinem Microsoft-Produkt bzw. jeder Microsoft-Marke ähnlich aussehen.
+#### <a name="best-practices-for-short-descriptions"></a>Bewährte Methoden für kurze Beschreibungen
 
-## <a name="outline-icon"></a>Gliederungssymbol
-
-Dieses Symbol wird für angeheftet messaging-Erweiterungen und wenn Ihre App auf der linken Seite von Teams angezeigt wird. Siehe [Entwurfsanleitung für das Gliederungssymbol](../../../../concepts/build-and-test/apps-package.md#outline-icon).
-
-![App-Symbol-Gliederungsspeicheransicht ](../../../../assets/images/store-detail-page/AppIconOutline-02.png)
- ![ App-Symbolgliederung App Studio-Ansicht](../../../../assets/images/store-detail-page/AppIconOutline-01.png)
-
-**Don'ts:**
-
-* Ihr Symbol darf keine urheberrechtlich geschützten Produkte imitieren, die Sie nicht besitzen.
-* Ihr Symbol darf keinem Microsoft-Produkt bzw. jeder Microsoft-Marke ähnlich aussehen.
-
-## <a name="short-description"></a>Kurzbeschreibung
-
-Dies ist eine kurze Zusammenfassung Ihrer App. Diese soll originell und ansprechend und an Ihre Zielgruppe gerichtet sein. Versuchen Sie im Idealfall, Ihre Lösung und ihren Wert für Ihre Benutzer in einem Satz zu beschreiben.
-
-**Do's:**
+**Dos:**
 
 * Die wichtigsten Informationen kommen an erster Stelle.
 * Schließen Sie Schlüsselwörter ein, nach deren Suche Kunden wahrscheinlich suchen.
-* Wenn Sie Microsoft Teams erwähnen müssen, sollte die erste Erwähnung von Microsoft Teams vollständig als *Microsoft Teams geschrieben werden.* Wenn Teams erneut in derselben Beschreibung erwähnt wird, kann der Name in *Teams verkürzt werden.*
-* Alle Verweise auf Microsoft oder Microsoft Teams können Teil der Beschreibung sein und sollten den Markenstandards und Richtlinien von Microsoft entsprechen.
-* Alle Beschreibungen müssen grammatikalisch korrekt sein, ohne dass Sprachfehler auftreten.
-* Vermeiden Sie unnötige Großbuchstaben, z. B. "Benutzer" anstelle von "Benutzer".
 
-**Don'ts:**
+**Don’ts:**
 
-* Wiederholen Sie den Titel nicht.
-* Lassen Sie Microsoft nicht auf "MS" oder "MSFT" abkürzen.
-* Verwenden Sie keinen Jargon oder spezielle Terminologie– Sie können nicht davon ausgehen, dass Benutzer wissen, wofür sie suchen sollten.
-* Vermeiden Sie unnötigen Verweis auf Microsoft-Produktnamen, sofern dies nicht unbedingt erforderlich ist.
-* Geben Sie nicht an oder implizieren Sie nicht, dass die App ein Angebot von Microsoft ist.
-* Verwenden Sie keine urheberrechtlich geschützten Markennamen, die Sie nicht besitzen.
-* Verwenden Sie "für Teams" nicht in einem kurzen Namen.
+* Wiederholen Sie Ihren App-Namen.
+* Verlassen Sie sich auf Jargon oder spezielle Terminologie. (Sie können nicht davon ausgehen, dass Benutzer wissen, wofür sie suchen müssen.)
 
-![Kurzbeschreibung Speicheransicht](~/assets/images/store-detail-page/ShortDescription-02.png)
+### <a name="long-description"></a>Lange Beschreibung
 
-Hier ist eine Ansicht in [App Studio:](https://aka.ms/InstallTeamsAppStudio)
+Die lange Beschreibung kann ein ansprechendes Narrativ bieten, das die Wichtigsten Features Ihrer App, die probleme, die sie löst, und ihre Zielgruppe hervorhebt. Diese Beschreibung kann zwar bis zu 4.000 Zeichen lang sein, die meisten Benutzer lesen jedoch nur zwischen 300 und 500 Wörter.
 
-![Kurzbeschreibung App Studio-Ansicht](~/assets/images/store-detail-page/ShortDescription-01.png)
+Im folgenden Beispiel wird hervorgehoben, wo die lange Beschreibung einer App in einem Storeeintrag angezeigt wird:
 
-## <a name="long-description"></a>Lange Beschreibung
+:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Beispiel screenshot highlights where an app's long description displays in a store listing.":::
 
-> [!div class="checklist"]
->
->* Dies bietet ein ansprechendes Narrativ, das die Wichtigsten Features Ihrer Lösung, die probleme, die sie löst, und die Zielgruppe hervorhebt. Zeichnen Sie Ihre Zielgruppe mit dem ersten Satz ein, indem Sie die einzigartigen Features Ihrer App kommunizieren. Ihre Beschreibung muss unter 4.000 Zeichen sein. Die meisten Benutzer lesen nur zwischen 300 und 500 Wörter.
->* Was ist zulässig?
+#### <a name="usage-examples"></a>Verwendungsbeispiele
 
-* `<your_app>`  "Funktioniert mit Microsoft Teams"
-* `<for users>`  "Arbeiten mit Microsoft Teams"
-* `<for tasks>`  "innerhalb von Microsoft Teams"
-* `<an app>`  "für Microsoft Teams"
-* `<your_app>`  "Integriert in Microsoft Teams"
+Die folgenden Ausdrücke sind Beispiele dafür, was beim Schreiben langer Beschreibungen zulässig ist:
+
+* "<Ihr *App-Name*> funktioniert mit Microsoft Teams"
+* "... ein <*von App->* für Microsoft Teams"
+* "<Ihr *App-Name*> in Microsoft Teams"
 * "... integriert in Microsoft Teams"
-* "... built on..."
-* "... wird ausgeführt..."
-* "... aktiviert von..."
-* "... entwickelt für..."
-* "... entwickelt für..."
+* "... für Benutzer, die mit Microsoft Teams"
+* "... for <*specific task*> within Microsoft Teams"
+* "... built on ..."
+* "... wird auf ..." ausgeführt.
+* "... aktiviert von ..."
+* "... entwickelt für ..."
+* "... entwickelt für ..."
 
-> **Hinweis:** Die obigen Bedingungen gelten auch für die Verwendung von Microsoft 365. Office 365 heißt jetzt Microsoft 365. Aktualisieren Sie ihre App-Beschreibungen, um dies wider zuspiegeln.
+#### <a name="best-practices-for-long-descriptions"></a>Bewährte Methoden für lange Beschreibungen
 
->[!IMPORTANT]
-> Kopieren Sie unbedingt genau die Beschreibungen, die Sie in Ihrem AppSource-Eintrag in Ihr App-Manifest geschrieben haben – die Werte müssen übereinstimmen. Microsoft Teams verwendet nur die Beschreibungen, die Sie im App-Manifest bereitstellen.
+**Dos:**
 
-**Do's:**
+* Verwenden [Sie Markdown,](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) um Ihre Beschreibung zu formatieren.
+* Auflisten von Features mit Aufzählungspunkten, damit die Beschreibung leichter gescannt werden kann.
+* Verwenden Sie aktive Stimme, und sprechen Sie direkt mit Benutzern (z. B. *Sie können ...*).
+* Fügen Sie einen Hilfe- oder Supportlink ein.
+* Identifizieren Sie ggf. Folgendes: Einschränkungen, Einrichten von Informationen, Kontoabhängigkeiten und Releaseupdates.
 
-* Verwenden [Sie markdown-Formatierung,](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) um Ihre Beschreibung zu beleuchten.  
-* Auflisten von Features, mit deren Hilfe Leser Ihre Beschreibung prüfen können.
-* Verwenden Sie aktive Stimme, und sprechen Sie direkt mit Benutzern.
-* Verwenden Sie Aufzählungszeichen, um Ihre Features auflisten.
-* Fügen Sie einen Hilfe- oder Supportlink ein, damit Ihre Benutzer wissen, wie sie Sie erreichen können, wenn sie Fragen haben.
-* Stellen Sie sicher, dass die erste Erwähnung von Microsoft Teams vollständig als *"Microsoft Teams" geschrieben* ist. Wenn Teams später erneut in derselben Beschreibung erwähnt wird, kann der Name in " Teams "*verkürzt* werden.
-* Verweise auf Microsoft oder Microsoft Teams (nur bei Bedarf) können Teil der langen Beschreibung sein und sollten den Markenstandards und Richtlinien von Microsoft entsprechen.
-* Alle Beschreibungen müssen grammatikalisch korrekt sein, ohne dass Sprachfehler auftreten.
-* Vermeiden Sie unnötige Groß-/Großbuchstaben für Begriffe in Ihrer Beschreibung (Beispiel: Angeben von "Benutzer" anstelle von "Benutzern".
+**Don’ts:**
+
+* Mehr als 500 Wörter.
+* Schließen Sie zu viele Schlüsselwörter ein. (Es lenkt ab und hilft den Personen nicht, Ihre App zu finden.)
+* Verwenden Sie die folgende Sprache, es sei denn, die App hat einen offiziellen Zertifizierungsprozess durchgegangen:
+  * "... zertifiziert für ..."
+  * " ... powered by ..."
+
+### <a name="best-practices-for-all-descriptions"></a>Bewährte Methoden für alle Beschreibungen
+
+**Dos:**
+
+* Verweisen Sie nur bei Bedarf auf Microsoft-Produktnamen. Weitere Informationen zu den Richtlinien finden Sie unter [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
+* Wenn Sie auf Teams **verweisen** müssen, schreiben Sie den ersten Verweis als **Microsoft Teams**. Nachfolgende Verweise können auf **"Teams" verkürzt Teams.**
+* Verweisen Sie **auf Microsoft 365** anstatt **Office 365**.
+* Vermeiden Sie Tippfehler und grammatikalische Fehler.
+* Vermeiden Sie unnötige Großbuchstaben (z. B. **Benutzer** statt **Benutzer).**
 * Vermeiden Sie Akronyme.
-* Stellen Sie sicher, dass Sie Einschränkungen, Kontoabhängigkeit, Konfigurationseinstellungen, zukünftige Updates in Versionen oder Nutzungseinschränkungen aufrufen.
 
->[!NOTE]
-> Microsoft Teams unterstützt die folgende Markdown-Syntax:  
-> **Links**. `[title](url/address/here)`.  
->**Bilder**. `![alt text](url/address/here)` .  
-> **Fett**. `**bold text**`   `__bold text__`.  
-> **Italisch**. `*italicized text*`  `_italicized text`.  
->**[Geordnete Listen](https://www.markdownguide.org/basic-syntax/#ordered-lists)**<br>
->`1. first` 
-<br>` 1. second ` 
-<br>`1.third`<br>
->**[Ungeordnete Liste](https://www.markdownguide.org/basic-syntax/#unordered-lists)**<br>
-` - short` <br>`- bulleted` <br>`- list`<br>
->**Newline**. Verwenden Sie ein `\n` Zeichen, um eine Newline zu bestimmen.
- >**Escape.** Verwenden Sie einen inline-umgekehrten Schrägstrich, um Sonderzeichen zu entweichen. `\*asterisk`.
+**Don’ts:**
 
-**Beispiel im Markdown-Format**
+* Abkürzen von Microsoft als **MS** oder **MSFT**.
+* Geben Sie an, dass die App ein Angebot von Microsoft ist, einschließlich der Verwendung von Microsoft-Parolen oder -Taglines.
+* Verwenden Sie urheberrechtlich geschützte Markennamen, die Sie nicht besitzen.
 
-|Markdownformat für |Markdown-Format |Angezeigter Text|
-|:---------|:---------------|:-------------|
-|Linkdatenbank  |` [App name guide](#app-name)`| [Leitfaden für App-Namen](#app-name) |
-|Bild |` ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)`| ![App-lange Beschreibungsspeicheransicht](~/assets/images/store-detail-page/LongDescription-02.png)|
-|Fett |` **HR Tools**` | **HR Tools**  |
-|Kursiv |`*HR Tools*` |*HR Tools*|
-|Newline |` HR Tools provide wide range of solutions that help your organization to manage day-to-day HR activities effectively. <br> No more flipping through paper records or juggling among 5 different apps.` |Hr Tools bieten eine breite Palette von Lösungen, mit deren Hilfe Ihre Organisation die täglichen Hr-Aktivitäten effektiv verwalten kann. <br>  Kein Durchblättern von Papierdatensätzen mehr oder Jonglieren zwischen 5 verschiedenen Apps.|
-|Escape|`\*Payroll tools that help you manage your payroll and tax documents.` |\*Lohnabrechnungstools, mit deren Hilfe Sie Ihre Lohn- und Steuerdokumente verwalten können. 
+## <a name="adhere-to-icon-design-guidelines"></a>Einhalten von Richtlinien für das Symboldesign
 
-**Don'ts:**
+Symbole sind eines der Wichtigsten Elemente, die Benutzern beim Durchsuchen des Informationsspeichers angezeigt werden. Ihre Symbole sollten den Markenzweck Ihrer App kommunizieren und gleichzeitig Teams erfüllen.
 
-* Legen Sie nicht zu viele Schlüsselwörter in Ihre Beschreibung ein– dies lenkt ab und hilft nicht bei der Aufschlüsselung Ihrer App.
-* Verwenden Sie nicht "*Teams*" oder "*Microsoft Teams*" in einem kurzen Namen.
-* Vermeiden Sie unnötigen Verweis auf Microsoft-Produktnamen, sofern dies nicht unbedingt erforderlich ist.
-* Geben Sie nicht an, dass die App ein Angebot von Microsoft ist.
-* Verwenden Sie keine urheberrechtlich geschützten Markennamen, die Sie nicht besitzen.
-* Verwenden Sie die folgende Sprache nur, wenn die App einen offiziellen Zertifizierungsprozess durchgegangen ist:
+Weitere Informationen finden Sie unter [spezifische Anleitungen zum Entwerfen Teams App-Symbole](~/concepts/build-and-test/apps-package.md#app-icons).
 
-  * "... zertifiziert für..."
-  * "... Powered by..."
+## <a name="capture-screenshots"></a>Screenshots erfassen
 
-* Not abbreviate "Microsoft" to "MS" or "MSFT" — write Microsoft out in full.
-* Kein Teil der Beschreibung oder Metadaten kann die App als offizielles Microsoft-Angebot angeben.
-* Partner dürfen keine Microsoft-Tagline verwenden oder imitieren oder den Namen eines Microsoft-Produkts oder -Diensts im Slogan oder in der Tagline verwenden.
-* Logo darf die App nicht falsch als offizielles Microsoft-Produkt/-Feature darstellen oder vorhandene oder anstehende Microsoft-Produkte imitieren.
+Screenshots bieten eine prominente visuelle Vorschau Ihrer App, um Ihren App-Namen, Ihr Symbol und Ihre Beschreibungen zu ergänzen.
 
-![App-lange Beschreibungsspeicheransicht](~/assets/images/store-detail-page/LongDescription-02.png)
+### <a name="requirements-for-screenshots"></a>Anforderungen für Screenshots
 
-Hier ist eine Ansicht in [App Studio:](https://aka.ms/InstallTeamsAppStudio)
+* Bis zu fünf Screenshots pro Eintrag.
+* Unterstützte Dateitypen sind PNG, JPEG und GIF.
+* Die Abmessungen sollten 1366 x 768 Pixel betragen.
+* Maximale Größe von 1.024 KB.
 
-![App-lange Beschreibung App Studio-Ansicht](~/assets/images/store-detail-page/LongDescription-01.png)
+### <a name="best-practices-for-screenshots"></a>Bewährte Methoden für Screenshots
 
-## <a name="screenshots"></a>Screenshots
+**Dos:**
 
-Die im [Partner Center](https://partner.microsoft.com) hochgeladenen Screenshots werden sowohl in AppSource als auch in Ihrem [App-Eintrag](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) im Teams-Client angezeigt. Sie bieten eine visuelle Vorschau Ihrer App zusammen mit Ihrer App-Beschreibung.
-Sie können ein bis fünf Screenshots bereitstellen, die als PNG-, JPG- oder GIF-Dateien formatiert sind. Screenshots sollten 1366 x 768 Pixel mit einer maximalen Größe von 1024 KB haben.
+* Konzentrieren Sie sich auf die Funktionen Ihrer App (z. B. wie Personen mit Ihrem Bot kommunizieren können).
+* Fügen Sie Inhalte ein, die Ihre App genau darstellt.
+* Verwenden Sie Text mit Bedacht.
+* Frame screenshots with a color that reflects your brand and include marketing content, similar to the following [Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) example (dimensions requirements apply to the whole image and not just the screenshot):   :::image type="content" source="../../../../assets/images/freshdesk.png" alt-text="Screenshot example of third-party app Freshdesk":::
 
-**Do's:**
+**Don’ts:**
 
-* Konzentrieren Sie sich auf die Hervorhebung aller Funktionen Ihrer App.
-* Inhalte sollten Ihre App genau darstellen.
-* Text sollte gut gefüllt sein, ohne übermäßig zu sein.
-* Sie können Ihre Screenshots mit einer Hintergrundfarbe umgeben und Marketinginhalte ähnlich dem [Freshdesk-Beispiel](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) hinzufügen. Die Dimensionen sind jedoch nicht allein vom Screenshot, sondern enthalten das Gesamtbild.
+* Zeigen Sie bestimmte Geräte an, z. B. Smartphones oder Laptops.
+* Zeigt Chrom oder Benutzeroberfläche an, die sich nicht in Ihrer App befindet.
+* Capture any Teams or browser UI in your screenshots.
+* Fügen Sie Mockups ein, die die tatsächliche Benutzeroberfläche Ihrer App ungenau widerspiegeln, z. B. die Anzeige Ihrer App in einem Browser anstelle Teams Registerkarte.
 
-<img width="800px" alt="Freshdesk screenshot" src="../../../../assets/images/freshdesk.png" />
+Weitere bewährte Methoden finden Sie unter [Erstellen effektiver Bilder für Microsoft App Stores](/office/dev/store/craft-effective-appsource-store-images).
 
-**Don'ts:**
+## <a name="create-a-video"></a>Erstellen eines Videos
 
-* Zeigen Sie keine bestimmten Geräte an, z. B. Smartphones oder Laptops.
-* Zeigen Sie keine Chrom-/UI-Elemente von außerhalb Ihrer App an.
-* Erfassen Sie keine Teams- oder Browserbenutzeroberfläche in Ihren Screenshots.
-* Fügen Sie keine Mock-Ups ein, die die tatsächliche Benutzeroberfläche Ihrer Apps ungenau widerspiegeln, z. B. die Anzeige Ihrer Website anstelle Ihrer Registerkarte Teams.
+Ein Video kann die effektivste Möglichkeit sein, um zu kommunizieren, warum Personen Ihre App verwenden sollten. Sie sollten die folgenden Fragen in einem Video beantworten:
 
-Weitere bewährte Methoden finden Sie *unter*: [Crafting effective AppSource store images](/office/dev/store/craft-effective-appsource-store-images).
+* Wer ist Ihre App für?
+* Welche Probleme kann Ihre App lösen?
+* Wie funktioniert Ihre App?
+* Welche weiteren Vorteile bietet ihnen die Verwendung Ihrer App?
 
-## <a name="videos"></a>Videos
+Wenn Sie ein Video hinzufügen, wird es vor Ihren Screenshots im Eintrag angezeigt.
 
-Wenn ein Bild tausend Wörter wert ist, ist ein Video tausend Bilder wert. Videos sind die effektivste Möglichkeit, die Vorteile der Verwendung Ihrer App zu kommunizieren. Es wird vor allen Screenshots auf der Seite mit den App-Details platziert. Stellen Sie sicher, dass Sie Folgendes erwähnen:
+### <a name="best-practices-for-videos"></a>Bewährte Methoden für Videos
 
-* Funktionsweise Ihrer App.
-* Was mit Ihrer App erreicht werden kann.
-* Die Vorteile der Verwendung Ihrer App.
-* Wen Sie haben?
+* Halten Sie Ihr Video zwischen 30 und 90 Sekunden.
+* Zielen Sie auf Qualität ab. In einem Eintrag sehen Benutzer Ihr Video vor Screenshots.
 
-Denken Sie daran, Ihre Präsentation kurz und süß zu halten – zwischen 30 und 90 Sekunden.
+## <a name="localize-your-store-listing"></a>Lokalisieren Des Store-Eintrags
 
-## <a name="learn-more"></a>Weitere Informationen
+Partner Center unterstützt [lokalisierte Store-Einträge](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions). Weitere Informationen finden Sie unter [Localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md).
 
-[Prüfliste für die App-Übermittlung](~/concepts/deploy-and-publish/appsource/publish.md).  
-[Erstellen Sie ein App-Paket für Ihre Microsoft Teams-App.](~/concepts/build-and-test/apps-package.md)  
-[Verwenden Sie Partner Center, um Ihre Lösung an AppSource zu übermitteln.](/office/dev/store/use-partner-center-to-submit-to-appsource)
+## <a name="see-also"></a>Siehe auch
+
+* [Erstellen effektiver Microsoft 365 Speichern von Einträgen](/office/dev/store/create-effective-office-store-listings)
+* Teams-App-Entwurfsrichtlinien für [Kopie, Inhalt und](~/concepts/design/design-teams-app-fundamentals.md#copy-and-content) [Markenausdruck](~/concepts/design/design-teams-app-fundamentals.md#brand-expression)
+* [Richtlinien für Marken und Marken von Microsoft](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
+
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Vorbereiten der Store-Übermittlung](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)

@@ -1,23 +1,26 @@
 ---
 title: Tipps zur App-Übermittlung und häufig fehlgeschlagene Fälle
-description: Beschreibt Tipps für eine erfolgreiche Übermittlung des Teams-Speichers und häufige Gründe, warum Übermittlungen fehlschlagen
+description: beschreibt Tipps für eine erfolgreiche Teams und häufige Gründe, warum Übermittlungen fehlschlagen
 ms.topic: reference
 localization_priority: Normal
 ms.author: lajanuar
 keywords: Richtlinien für die Überprüfung von Fällen bei häufig fehlgeschlagenen Anwendungsübermittlungstipps
-ms.openlocfilehash: a5e03f6ac7afb949cb94824fde3514a14869b291
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b00beb084b8ca9d149e46f1cc661b8d52e308cc4
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019916"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101688"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Tipps für eine erfolgreiche Microsoft Teams-App-Übermittlung
+
+>[!NOTE]
+>Diese Seite ist bis Mai 2021 veraltet. Weitere Informationen zur erfolgreichen Veröffentlichung Ihrer App finden Sie in den [richtlinien Teams store validation](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 Dieser Artikel befasst sich mit häufigen Gründen, warum übermittelte Apps die Überprüfung nicht erfolgreich waren. Es ist zwar nicht beabsichtigt, eine vollständige Liste aller potenziellen Probleme mit Ihrer App zu erstellen, aber wenn Sie dieses Handbuch folgen, erhöht sich die Wahrscheinlichkeit, dass Ihre App-Übermittlung das erste Mal besteht. Eine [umfassende Liste der Validierungsrichtlinien finden](/legal/marketplace/certification-policies) Sie unter Commercial marketplace certification policies.
 
 >[!NOTE]
->**[Abschnitt 1140](/legal/marketplace/certification-policies#1140-teams)** ist spezifisch für Microsoft Teams, und unter **[Abschnitt 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** werden die Funktionalitätsanforderungen für Teams-Apps behandelt.
+>**[Abschnitt 1140](/legal/marketplace/certification-policies#1140-teams)** ist spezifisch für Microsoft Teams und Unterabschnitt **[1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** behandelt die Funktionalitätsanforderungen für Teams Apps.
 
 ## <a name="validation-guidelines--most-failed-test-cases"></a>Validierungsrichtlinien & den meisten fehlgeschlagenen Testfällen
 
@@ -38,14 +41,14 @@ Siehe auch [Abschnitt 100 – Allgemein](/legal/marketplace/certification-polici
     * Metadaten der App-Quelle.
     * Connectorkonfigurationsbildschirm.
 
-* Die visuelle Tour kann ein Video, screenshot, ein Link zu einer statischen Registerkarte mit App-Details sein. Alle diese Verweise müssen in der Teams-Umgebung enthalten sein.
+* Die visuelle Tour kann ein Video, screenshot, ein Link zu einer statischen Registerkarte mit App-Details sein. Alle diese Verweise müssen sich innerhalb der Teams enthalten.
 
     ![Beispiel-App 1 ](../../../../assets/images/faq/Sampleapp1.png) ![ Beispiel-App 2](../../../../assets/images/faq/Sampleapp2.png)
 
 * Erhöhen Sie Ihre App-Versionsnummer im Manifest, wenn Sie Manifeständerungen an Ihrer Übermittlung vornehmen.
-* Die App darf Benutzer nicht für Kernbenutzerszenarien aus Teams nehmen. Linkziele in Apps dürfen nicht mit einem externen Browser verknüpfen. Linkziele müssen mit div-Elementen in Teams, z. B. Aufgabenmodulen und Registerkarten, verknüpfen. 
-* Die Verwendung von Aufgabenmodulen oder Registerkarten wird vorgeschlagen, um Benutzern in Teams Informationen anzeigen zu können.
-* Alle Kern- und Nicht-Kernszenarien müssen in der Teams-Umgebung abgeschlossen werden, mit Ausnahme von:
+* Die App darf Benutzer nicht aus der Teams für Kernbenutzerszenarien nehmen. Linkziele in Apps dürfen nicht mit einem externen Browser verknüpfen. Linkziele müssen mit div-Elementen in Teams, z. B. Aufgabenmodulen und Registerkarten, verknüpfen. 
+* Die Verwendung von Aufgabenmodulen oder Registerkarten wird vorgeschlagen, um Benutzern innerhalb von Teams.
+* Alle Kern- und Nichtkernszenarien müssen innerhalb der Teams abgeschlossen werden, mit Ausnahme von:
   * Datenschutzrichtlinie
   * Nutzungsbedingungen (TOU)
   * Link zur Website
@@ -59,13 +62,13 @@ Siehe auch [Abschnitt 1100.5 – Kundensteuerung](/legal/marketplace/certificati
 
 * Wenn Ihre App oder Ihr Add-In von externen Konten oder Diensten abhängt, muss die Anmelde-, Abmelde- und Anmeldeerfahrung für alle Funktionen in Ihrer App sichtbar und erreichbar sein.
 * Wenn dem Benutzer eine explizite Anmeldeoption bereitgestellt wird, muss eine entsprechende Abmeldeoption vorhanden sein (auch wenn die App die automatische Authentifizierung [verwendet).](../../../../tabs/how-to/authentication/auth-silent-aad.md)
-* Die Abmeldeoption darf den Benutzer nur aus der Funktion Ihrer App und nicht aus dem Teams-Client abmelden.
+* Die Abmeldeoption darf den Benutzer nur von der Funktion Ihrer App und nicht vom Client Teams abmelden.
 * Die Abmeldeoption muss den Benutzer mindestens von denselben Funktionen abmelden, auf die mit der Anmeldeoption zugegriffen wird. Wenn die Anmeldeoption beispielsweise sowohl die Messagingerweiterung als auch die Registerkarte enthält, muss die Abmeldeoption sowohl die Messagingerweiterung als auch die Registerkarte enthalten.
 
 * Stellen Sie sicher, dass es immer eine Möglichkeit gibt, die folgenden (oder ähnlichen) Verhaltensweisen umzukehren:
   * Anmeldung => abmelden.
   * Verknüpfen eines Kontos/Diensts => die Verknüpfung eines Kontos/Diensts auf.
-  * Verbinden Eines Kontos/Diensts => Konto/Dienst trennen.
+  * Verbinden Konto/Dienst => Konto/Dienst trennen.
   * Autorisieren eines Kontos/Diensts => deauthorize/deny an account/service.
   * Registrieren eines Kontos/Diensts => Registrierung/Kündigen eines Kontos/Diensts.
 * Wenn Ihre App ein Konto oder einen Dienst erfordert, müssen Sie dem Benutzer eine Möglichkeit bieten, sich zu registrieren oder eine Anmeldeanforderung zu erstellen. Eine Ausnahme kann gewährt werden, wenn Ihre App eine Lizenz benötigt. Geben Sie in solchen Szenarien klare Anweisungen für einen neuen Benutzer zur Anmeldung.
@@ -78,8 +81,8 @@ Siehe auch [Abschnitt 1100.5 – Kundensteuerung](/legal/marketplace/certificati
 > * in der Hilfenachricht Ihrer App.
 > * im Fenster, in dem Sie einen Benutzer bitten, sich bei Ihren Diensten zu registrieren.
 
-* Apps ohne einen einfachen Anmeldefluss müssen auch eine Hilferegisterkarte oder einen Link zu einer Webseite enthalten, auf der ein neuer Benutzer detaillierte Anleitungen zum Konfigurieren Ihrer Teams-App sehen kann. Geben Sie detaillierte Informationen an, um sicherzustellen, dass ein neuer Benutzer nicht blockiert wird, wenn Sie Ihre App zum ersten Mal ausprobieren.
-* Die Anmelde- und Abmeldefunktionen müssen auf mobilen Clients funktionieren. Stellen Sie sicher, dass [Sie das Microsoft Teams SDK,](https://www.npmjs.com/package/@microsoft/teams-js) Version 1.4.1 oder höher, verwenden.
+* Apps ohne einen einfachen Anmeldefluss müssen auch eine Hilferegisterkarte oder einen Link zu einer Webseite enthalten, auf der ein neuer Benutzer detaillierte Anleitungen zum Konfigurieren Ihrer Teams sehen kann. Geben Sie detaillierte Informationen an, um sicherzustellen, dass ein neuer Benutzer nicht blockiert wird, wenn Sie Ihre App zum ersten Mal ausprobieren.
+* Die Anmelde- und Abmeldefunktionen müssen auf mobilen Clients funktionieren. Stellen Sie sicher, [dass Microsoft Teams SDK,](https://www.npmjs.com/package/@microsoft/teams-js) Version 1.4.1 oder höher, verwendet wird.
 
 Weitere Informationen zur Authentifizierung finden Sie unter:
 
@@ -101,17 +104,17 @@ Weitere Informationen zur Authentifizierung finden Sie unter:
 
 * Registerkarten müssen fokussierte Inhalte bereitstellen und unnötige Benutzeroberflächenelemente vermeiden. Dies bezieht sich in der Regel auf unnötige geschachtelte oder mehrschichtige Navigation, eine überflüssige oder irrelevante Benutzeroberfläche neben dem Inhalt oder links, die den Benutzer zu nicht zusammenhängenden Inhalten führen. Die folgende Registerkartenansicht lässt beispielsweise Navigationsmenüs aus und zeigt nur den Hauptinhalt an:
 
-![SharePoint-Webansicht](../../../../assets/images/faq/web-sp.png)  
-![SharePoint-Registerkartenansicht](../../../../assets/images/faq/tab-sp.png)
+![SharePoint Webansicht](../../../../assets/images/faq/web-sp.png)  
+![SharePoint Registerkartenansicht](../../../../assets/images/faq/tab-sp.png)
 
 * Registerkarten müssen hell sein und keine komplexe Navigation enthalten.
 * Kanalregisterkarten mit komplexen Bearbeitungsfunktionen innerhalb der App müssen die Editoransicht in einem Mehrfenster und nicht in einer Registerkarte öffnen.
-* Kanalregisterkarten dürfen keine App-Leiste mit Symbolen in der linken Schiene bereitstellen, die mit der Hauptnavigation von Teams in Konflikt stehen.
-* Registerkarten dürfen keine App-Leiste mit Symbolen auf der linken Schiene anzeigen, die mit der Hauptnavigation von Teams in Konflikt stehen.
+* Kanalregisterkarten dürfen keine App-Leiste mit Symbolen in der linken Schiene bereitstellen, die mit der Hauptnavigation Teams sind.
+* Registerkarten dürfen keine App-Leiste mit Symbolen auf der linken Schiene anzeigen, die mit der Hauptnavigation Teams sind.
 * Registerkarten mit komplexen Bearbeitungsfunktionen innerhalb der App müssen die Editoransicht in einem Mehrfenster öffnen und nicht auf der Registerkarte.
 * Wenn mehrere Ansichtsoptionen verfügbar sind, sollten Sie ein Menü für die Registerkartenkonfiguration verwenden, aus dem der Benutzer auswählen kann. Anstatt beispielsweise ein Menü in die Registerkarte einzubetten, legen Sie das Menü auf der Konfigurationsseite ein, damit die tatsächliche Registerkartenansicht sauber und fokussiert ist.
 * Fügen Sie eine *Registerkarte Hilfe* als statische Registerkarte ein, um Benutzern zu zeigen, wie Sie Ihre App konfigurieren, registrieren und verwenden.
-* Fügen Sie eine *Registerkarte Einstellungen* ein, die in der App-Kopfzeile verfügbar ist.
+* Fügen Sie *eine* Einstellungen ein, die in der App-Kopfzeile verfügbar ist.
 
 ![Konfigurationsseite für breite Ideen](../../../../assets/images/faq/wideidea.png)
 
@@ -123,10 +126,10 @@ Weitere Informationen zur Authentifizierung finden Sie unter:
 * Zeigen Sie ihre gesamte Webseite nicht im Popupfenster für die Anmeldekonfiguration an.
 * Ein Benutzer muss immer in der Lage sein, die Konfigurationserfahrung zu beenden, auch wenn er nicht sofort den gesuchten Inhalt finden kann.
 * Die Konfigurationserfahrung muss dem Benutzer Optionen zum Suchen nach inhalten, zum Anheften einer URL oder zum Erstellen neuer Inhalte bereitstellen, wenn er nicht vorhanden ist.
-* Die Konfigurationserfahrung muss im Kontext von Teams verbleiben. Der Benutzer sollte die Konfigurationserfahrung nicht verlassen müssen, um Inhalte zu erstellen und dann zu Teams zurückzukehren, um ihn anheften zu können.
+* Die Konfigurationserfahrung muss im kontextbezogenen Teams bleiben. Der Benutzer sollte die Konfigurationserfahrung nicht verlassen müssen, um Inhalte zu erstellen, und dann zu Teams, um ihn anheften.
 * Verwenden Sie den verfügbaren Viewportbereich effizient. Verwenden Sie keine großen Logos im Konfigurationspop-up.
 
-![OneNote ermöglicht Benutzern das Einfügen eines OneNote-Links, falls keine Notizen gefunden werden können](../../../../assets/images/faq/tab-onenote-config.png)
+![OneNote benutzern das Einfügen eines OneNote, falls keine Notizen gefunden werden können](../../../../assets/images/faq/tab-onenote-config.png)
 
 ![Benutzer können immer einen neuen Plan im Planer erstellen, falls keine vorhandenen pläne vorhanden sind](../../../../assets/images/faq/tab-planner-config.png)
 
@@ -143,11 +146,11 @@ Ihr Bot muss auf jeden Befehl und nicht auf den Benutzer reagieren. Hier sind ei
 
 * **Verwenden von Befehlslisten**. Die Analyse von Benutzereingaben oder die Vorhersage von Benutzerabsichten ist schwierig. Anstatt Benutzern zu erraten, was Ihr Bot tun kann, geben Sie eine Liste der Befehle an, die Ihr Bot versteht.
 
-![Flussbefehlsliste](../../../../assets/images/faq/flow-bot.png)
+![Flow Befehlsliste](../../../../assets/images/faq/flow-bot.png)
 
 * **Fügen Sie einen Hilfebefehl ein.** Benutzer geben wahrscheinlich "Hilfe" ein, wenn sie verloren gehen oder wenn Ihr Bot nicht wie erwartet reagiert. Fügen Sie einen Hilfebefehl ein, der beschreibt, wie der Wert Ihrer App zusammen mit allen gültigen Befehlen angezeigt wird.
 
-![Befehl zur Flusshilfe](../../../../assets/images/faq/flow-help.png)
+![Flow-Hilfebefehl](../../../../assets/images/faq/flow-help.png)
 
 * **Fügen Sie Hilfeinhalte oder Anleitungen ein, wenn Ihr Bot verloren geht.** Wenn Ihr Bot die Benutzereingaben nicht verstehen kann, muss er eine alternative Aktion vorschlagen. Beispiel: *"Es tut mir leid, ich kann es nicht verstehen. Geben Sie "Hilfe" ein, um weitere Informationen zu erhalten."* Antworten Sie nicht mit einer Fehlermeldung oder einfach *mit "Ich verstehe nicht"*.
 
@@ -161,7 +164,7 @@ Ihr Bot muss auf jeden Befehl und nicht auf den Benutzer reagieren. Hier sind ei
 * **Verwenden von adaptiven Karten und Aufgabenmodulen, um Ihre Botantwort klar und umsetzbar zu machen** 
  [Adaptive Karten mit Schaltflächen, die Aufgabenmodule aufrufen,](/task-modules-and-cards/task-modules/task-modules-bots) verbessern die Benutzerfreundlichkeit des Bots. Diese Karten und Schaltflächen sind auf einem mobilen Gerät einfacher zu verwenden, als dass Der Benutzer die Befehle eintippt. Botantworten dürfen auch nicht textuell mit Langtext sein. Bots müssen adaptive Karten und Aufgabenmodule anstelle von benutzeroberflächenbasiertem Unterhaltungschat und langen Textantworten verwenden.
 
-* **Denken Sie durch alle Bereiche**. Stellen Sie sicher, dass Ihr Bot entsprechende Antworten liefert, wenn sie in einem Kanal und `@*botname*` in persönlichen Unterhaltungen erwähnt werden ( ). Wenn Ihr Bot keinen aussagekräftigen Kontext innerhalb des Persönlichen oder Teams-Bereichs bietet, deaktivieren Sie diesen Bereich über das Manifest. (Siehe den `bots` Block in der Microsoft [Teams-Manifestschemareferenz](../../../../resources/schema/manifest-schema.md#bots).)
+* **Denken Sie durch alle Bereiche**. Stellen Sie sicher, dass Ihr Bot entsprechende Antworten liefert, wenn sie in einem Kanal und `@*botname*` in persönlichen Unterhaltungen erwähnt werden ( ). Wenn Ihr Bot keinen aussagekräftigen Kontext innerhalb des Persönlichen oder Teams-Bereichs bietet, deaktivieren Sie diesen Bereich über das Manifest. (Siehe den `bots` Block im [Microsoft Teams Manifestschemareferenz](../../../../resources/schema/manifest-schema.md#bots).)
 
 * **Schließen Sie Team-, Gruppenchat- oder 1:1-Unterhaltungen ein.** Botbenachrichtigungen müssen ein Team, einen Gruppenchat oder eine 1:1-Unterhaltung mit relevanten Inhalten für Ihre Zielgruppe enthalten.
 
@@ -214,18 +217,18 @@ Beim ersten Hinzufügen des Bots zu einem Kanal sind die Dinge ein wenig anders.
 ### <a name="9989-mobile-responsiveness-no-direct-upsell-or-payment"></a>&#9989; Mobile Reaktionsfähigkeit, kein direkter Upsell oder Zahlung
 
 * Ihre Registerkarten, adaptiven Karten, Botnachrichten und Inhalte in Aufgabenmodulen müssen für eine Vielzahl von Bildschirmgrößen für mobile Geräte reaktionsfähig sein.
-* Apps, die iOS unterstützen, müssen auf dem neuesten iPad-Gerät mit der neuesten Version von iOS voll funktionsfähig sein.
-* Darf keine direkten Verweise auf In-App-Käufe, Testangebote, Angebote für kostenpflichtige Versionen oder Links zu Onlinespeichern enthalten, in denen Benutzer andere Inhalte, Apps oder Add-Ins von Ihrer Teams-App unter mobilem Betriebssystem (Android, iOS) erwerben oder erwerben können.
+* Apps, die iOS unterstützen, müssen auf dem neuesten IPad mit der neuesten Version von iOS voll funktionsfähig sein.
+* Darf keine direkten Verweise auf In-App-Käufe, Testangebote, Angebote für kostenpflichtige Versionen oder Links zu Onlinespeichern enthalten, in denen Benutzer andere Inhalte, Apps oder Add-Ins über Ihre Teams-App unter mobilem Betriebssystem (Android, iOS) erwerben oder erwerben können.
 * Die iOS- oder Android-Version des Add-Ins darf keine Benutzeroberfläche oder Sprache oder Links zu anderen Apps, Add-Ins oder Websites anzeigen, die den Benutzer zur Zahlung bitten.
-* Die zugehörigen Seiten für Datenschutzrichtlinien und Nutzungsbedingungen müssen auch frei von Beliebigen Commerce UI- oder Store-Links sein.
+* Die zugehörigen Seiten für Datenschutzrichtlinien und Nutzungsbedingungen müssen auch frei von beliebigen Benutzeroberflächen oder links Store sein.
 
 ### <a name="9989-do-not-post-sensitive-data-to-an-audience-not-intended-to-view-the-data"></a>&#9989; Vertrauliche Daten nicht an eine Zielgruppe veröffentlichen, die nicht zum Anzeigen der Daten vorgesehen ist
 
-Ihre Teams-App darf keine vertraulichen Daten wie Kreditkarte oder Finanzzahlungsinstrument, PERSÖNLICHE Identifizierbare Informationen (PIN), Integrität oder Kontaktablaufverfolgungsinformationen an eine Zielgruppe posten, die diese Daten nicht anzeigen soll.
+Ihre Teams-App darf keine vertraulichen Daten wie Kreditkarten- oder Finanzdaten, PIN (Personal Identifiable Information), Integrität oder Kontaktablaufverfolgungsinformationen an eine Zielgruppe posten, die diese Daten nicht anzeigen soll.
 
-### <a name="9989-do-not-transmit-financial-payment-details-or-complete-financial-transactions-via-your-teams-app"></a>&#9989; Übertragen von Finanziellen Zahlungsdetails oder Abschließen von Finanztransaktionen über Ihre Teams-App
+### <a name="9989-do-not-transmit-financial-payment-details-or-complete-financial-transactions-via-your-teams-app"></a>&#9989; Übertragen von Zahlungsdetails oder abschließen von Finanztransaktionen nicht über Ihre Teams App
 
-* Ihre Teams-App darf Benutzer nicht bitten, eine Zahlung direkt über die Teams-Schnittstelle zu bezahlen.
+* Ihre Teams-App darf Benutzer nicht bitten, eine Zahlung direkt innerhalb der Teams zu machen.
 * Apps übertragen möglicherweise keine Finanzinstrumentdetails über den Benutzer auf der App-Schnittstelle. Apps dürfen Nur dann Links zu sicheren Zahlungsdiensten an Benutzer übertragen, wenn dies in den Nutzungsbedingungen der App, den Datenschutzrichtlinien und jeder Profilseite oder -website für die App offengelegt wird, bevor ein Benutzer der Verwendung der App zustimmt.
 
 ### <a name="9989-clear-warning-before-downloading-any-files-or-executable-exe-into-a-users-environment"></a>&#9989; Warnung löschen, bevor Sie Dateien oder ausführbare Dateien ( `.exe` ) in die Umgebung eines Benutzers herunterladen
@@ -241,12 +244,12 @@ Bitte warnen Sie die Benutzer, bevor Ihre App Dateien oder ausführbare Dateien 
 
 ## <a name="m365-publisher-attestation"></a>M365 Publisher Attestation
 
-### <a name="9989-complete-the-publisher-attestation-in-partner-center"></a>&#9989; Publisher Attestation im Partner Center abschließen
+### <a name="9989-complete-the-publisher-attestation-in-partner-center"></a>&#9989; Abschließen des Publisher-Attests im Partner Center
 
-* Weitere Informationen finden Sie in der Dokumentation zum Complete [Publisher Attestation-Programm.](/microsoft-365-app-certification/docs/attestation)
-* Führen Sie die Schritte im [Abschnitt Publisher Attestation Workflow](/microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow) aus, um den Herausgeberbescheinigungsprozess zu abschließen. Schreiben Sie in appcert@microsoft.com fragen.
+* Weitere Informationen finden Sie in Publisher Dokumentation zum Complete [Publisher Attestation-Programm.](/microsoft-365-app-certification/docs/attestation)
+* Führen Sie die Schritte im Abschnitt [Publisher Attestation Workflow](/microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow) aus, um den Herausgeberbescheinigungsprozess zu abschließen. Schreiben Sie in appcert@microsoft.com fragen.
 * Weitere Informationen finden Sie [im Handbuch zur](/azure/active-directory/develop/troubleshoot-publisher-verification) Problembehandlung.
 * Schließen Sie die Selbstbescheinigung über das Partner Center ab. Füllen Sie den Self-Assessment unter **App Compliance aus.**
 
 > [!div class="nextstepaction"]
-> [Weitere Informationen zu Genehmigungsrichtlinien für Teams-Apps](/legal/marketplace/certification-policies#1140-teams)
+> [Weitere Informationen zu Teams App-Genehmigungsrichtlinien](/legal/marketplace/certification-policies#1140-teams)

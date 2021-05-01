@@ -1,28 +1,28 @@
 ---
-title: Grundlegendes zu Ihren Anwendungsfällen
-author: clearab
-description: Grundlegendes zu Ihren Anwendungsfällen
+title: Grundlegendes zu den Anwendungsfällen Ihrer App
+author: heath-hamilton
+description: Wenn Sie Ihre Microsoft Teams planen, sollten Sie zuerst wissen, welche Probleme Ihre App zu lösen versucht.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 9afb7ffb9ef6c07857f4452ce41a7b86782d50cd
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: b1d51dd126f237584b5c53ca053cdd13bc470d0b
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058663"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101786"
 ---
 # <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
 
-Die Microsoft Teams-Plattform bietet eine Vielzahl von Einstiegspunkten und [Benutzeroberflächenelementen,](../../concepts/extensibility-points.md) die Ihre App nutzen kann.
+Die Microsoft Teams bietet eine Vielzahl von Einstiegspunkten und [Benutzeroberflächenelementen,](../../concepts/extensibility-points.md) die Ihre App nutzen kann.
 > [!NOTE]
-> Bevor Sie mit dem Erstellen Ihrer Verwendungsfälle beginnen, müssen Sie über ein gutes Verständnis der Funktionen von Teams und deren Verwendung auf der Teams-Plattform verfügen.
+> Bevor Sie mit dem Erstellen Ihrer Verwendungsfälle beginnen, müssen Sie über ein gutes Verständnis der Teams-Funktionen und der möglichkeiten auf der Teams verfügen.
 
-Jede Methode der Interaktion mit Ihren Benutzern hat ihre Stärken und Schwächen. Beim Erstellen einer großartigen Teams-App geht es darum, die richtige Kombination zu finden, um die Anforderungen Ihres Benutzers zu erfüllen. Wenn Sie diese Anforderungen erfüllen möchten, müssen Sie sie zuerst verstehen.
+Jede Methode der Interaktion mit Ihren Benutzern hat ihre Stärken und Schwächen. Beim Erstellen einer Teams-App geht es darum, die richtige Kombination zu finden, um die Anforderungen Ihres Benutzers zu erfüllen. Wenn Sie diese Anforderungen erfüllen möchten, müssen Sie sie zuerst verstehen.
 
 ## <a name="understand-the-problem"></a>Verstehen des Problems
 
-Jede gute App hat ein Kernproblem oder eine Notwendigkeit, die sie zu lösen versucht. Bevor Sie mit dem Erstellen einer App beginnen, müssen Sie artikulieren, was dieses Problem ist. Im Kern ist Teams eine Plattform für die Zusammenarbeit, sodass Apps, die Lücken beim Erreichen einer effektiven Zusammenarbeit überbrücken, gut geeignet sind. Sie ist auch eine plattformübergreifende Plattform für soziale Netzwerke, befindet sich im Herzen von Office 365 und bietet eine persönliche Canvas zum Erstellen von Apps. In dieser plattform für soziale Netzwerke gibt es eine Vielzahl von Anforderungen, die mit einer Teams-App gelöst werden können. Sie können eine Vielzahl von Problemen lösen, vorausgesetzt, Sie wissen, welches Problem Sie lösen möchten. Stellen Sie vor dem Erstellen einer App relevante Fragen, z. B.:
+Jede gute App hat ein Kernproblem oder eine Notwendigkeit, die sie zu lösen versucht. Bevor Sie mit dem Erstellen einer App beginnen, müssen Sie artikulieren, was dieses Problem ist. Im Kern ist Teams eine Plattform für die Zusammenarbeit, sodass Apps, die Lücken beim Erreichen einer effektiven Zusammenarbeit überbrücken, gut geeignet sind. Sie ist auch eine plattformübergreifende Plattform für soziale Netzwerke, befindet sich im Herzen von Office 365 und bietet eine persönliche Canvas zum Erstellen von Apps. In dieser plattform für soziale Netzwerke gibt es eine Vielzahl von Anforderungen, die mit einer app Teams werden können. Sie können eine Vielzahl von Problemen lösen, vorausgesetzt, Sie wissen, welches Problem Sie lösen möchten. Stellen Sie vor dem Erstellen einer App relevante Fragen, z. B.:
 
 * Was sind die Vor- und Nachteile des aktuellen Zustandssystems, das von Ihren Benutzern verwendet wird?
 * Welche Probleme haben Ihre Benutzer ab heute, die Sie ansprechen möchten?
@@ -30,7 +30,7 @@ Jede gute App hat ein Kernproblem oder eine Notwendigkeit, die sie zu lösen ver
 
 ## <a name="understand-your-user"></a>Verstehen Ihres Benutzers
 
-Verstehen Sie, wer Ihr Benutzer ist, und Sie können das richtige Verteilungsmodell identifizieren, aber vor allem hilft es Ihnen, zu identifizieren, wie Benutzer Teams verwenden. Stellen Sie relevante Fragen, z. B.:
+Verstehen Sie, wer Ihr Benutzer ist, und Sie können das richtige Verteilungsmodell identifizieren, aber vor allem hilft es Ihnen, zu identifizieren, wie Benutzer Teams. Stellen Sie relevante Fragen, z. B.:
 
 * Sind die Benutzer in erster Linie Front-Line-Mitarbeiter auf mobilen Clients?
 * Erwarten Sie, dass viele Gastbenutzer Zugriff auf Ihre App benötigen?
@@ -38,30 +38,30 @@ Verstehen Sie, wer Ihr Benutzer ist, und Sie können das richtige Verteilungsmod
 * Wie technisch ausgefeilt sind Ihre primären Benutzer?
 * Benötigen Sie eine sorgfältige Onboarding-Erfahrung, oder können einige Zeiger verwendet werden?
 
-Manchmal lautet die Antwort: Wir möchten dieses Problem für *alle Teams-Benutzer überall lösen.* Wenn dies für Sie der Fall ist, sollten Sie einige Zeit damit verbringen, zu verstehen, was für die Veröffentlichung [in AppSource benötigt wird.](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+Manchmal lautet die Antwort: Wir möchten dieses Problem für alle Benutzer Teams *lösen.* Wenn dies für Sie der Fall ist, sollten Sie einige Zeit damit verbringen, zu verstehen, was für die Veröffentlichung [in AppSource benötigt wird.](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 
 ## <a name="understand-the-limitations-of-the-app"></a>Verstehen der Einschränkungen der App
 
 Wenn Sie die Einschränkungen der Apps im Hinblick auf die Datenbarrierefreiheit und die Datenresidenzanforderungen kennen, können Sie bessere Apps entwerfen. Dies ist wichtig, da informationen darüber, wem die Daten und die Verfügbarkeit von APIs gehört, auswirkungen auf die Lösungsarchitektur haben. Stellen Sie erneut relevante Fragen, z. B.:
 
 * Was sind die Herausforderungen bei der Back-End-Integration der aktuellen App?
-* Wem sind die Back-End-Daten zu eigen? In-house oder Drittanbieter.
+* Wer die Back-End-Daten besitzen? In-house oder Drittanbieter.
 * Gibt es Firewalls, die sich auf die Funktionsweise der App auswirken?
 * Gibt es APIs für den Zugriff auf die Daten, die Sie für die Funktionsweise Ihrer App benötigen? 
 
 ## <a name="provide-authentication"></a>Bereitstellen der Authentifizierung
 
-Sie müssen frühzeitig erkennen, ob Sie die dienste, die Sie verfügbar machen, und auf welcher Ebene schützen müssen. Denken Sie daran, dass die in Ihrer Teams-App verfügbar gemachten Webdienste über das Internet öffentlich verfügbar sind. Wenn Sie also sichern müssen, denken Sie jetzt darüber nach. Wenn Sie eine Lösung benötigen, für die Sie Gastzugriff für Benutzer außerhalb des Mandanten bereitstellen müssen, müssen Zugriffseinschränkungen und Berechtigungen zum Schutz vertraulicher Informationen erteilt werden. Sie müssen Apps unter Berücksichtigung der Einschränkungen entwerfen, die mit dem Gastbenutzerzugriff gelten. Stellen Sie daher Fragen, z. B.: 
+Sie müssen frühzeitig erkennen, ob Sie die dienste, die Sie verfügbar machen, und auf welcher Ebene schützen müssen. Denken Sie daran, dass die webdienste, die in Ihrer Teams-App verfügbar sind, über das Internet öffentlich verfügbar sind. Wenn Sie also sichern müssen, denken Sie jetzt darüber nach. Wenn Sie eine Lösung benötigen, für die Sie Gastzugriff für Benutzer außerhalb des Mandanten bereitstellen müssen, müssen Zugriffseinschränkungen und Berechtigungen zum Schutz vertraulicher Informationen erteilt werden. Sie müssen Apps unter Berücksichtigung der Einschränkungen entwerfen, die mit dem Gastbenutzerzugriff gelten. Stellen Sie daher Fragen, z. B.: 
 
 * Greifen die Benutzer auf unterschiedliche Ansichten von Daten basierend auf ihren Rollen zu?
 * Ist piI beteiligt?
 * Basieren die Interaktionen auch auf den Benutzerrollen?
 * Greifen externe Benutzer auf die App zu?
 
-## <a name="decide-what-goes-in-teams"></a>Entscheiden, was in Teams passiert
+## <a name="decide-what-goes-in-teams"></a>Entscheiden Sie, was in Teams
 
-Unabhängig davon, ob Sie etwas Neues erstellen oder eine vorhandene Lösung in Teams bringen, ist es wichtig zu entscheiden, ob sich die gesamte App im Teams-Client befindet. Überprüfen Sie, ob es sinnvoll ist, nur einen Teil der Erfahrung ein-/aus zu holen. Mit einer Kombination aus Registerkarten, Messagingerweiterungen, Aufgabenmodulen, adaptiven Karten und Unterhaltungsbots können Sie komplexe Apps vollständig in Teams erstellen.
-Denken Sie daran, wer Ihre Benutzer sind und welche Probleme Sie zu lösen versuchen. Verfügen sie bereits über ein System zur Lösung des großteils des Problems, oder müssen Sie lediglich einen Untersatz der Funktionalität auf Teams erweitern? Wenn Sie einen Teil Ihrer Lösung einbinden möchten, müssen Sie sich in der Regel auf die Freigabe, Zusammenarbeit, Initiierung und Überwachung von Workflows konzentrieren.
+Unabhängig davon, ob Sie etwas Neues erstellen oder eine vorhandene Lösung in Teams, ist es wichtig zu entscheiden, ob sich die gesamte App innerhalb des Teams befindet. Überprüfen Sie, ob es sinnvoll ist, nur einen Teil der Erfahrung ein-/aus zu holen. Mit einer Kombination aus Registerkarten, Messagingerweiterungen, Aufgabenmodulen, adaptiven Karten und Unterhaltungsbots können Sie komplexe Apps vollständig in einem Teams.
+Denken Sie daran, wer Ihre Benutzer sind und welche Probleme Sie zu lösen versuchen. Verfügen sie bereits über ein System zur Lösung des großteils des Problems, oder müssen Sie lediglich einen Untersatz der Funktionalität auf Teams? Wenn Sie einen Teil Ihrer Lösung einbinden möchten, müssen Sie sich in der Regel auf die Freigabe, Zusammenarbeit, Initiierung und Überwachung von Workflows konzentrieren.
 
 ## <a name="plan-the-onboarding-experience"></a>Planen der Onboardingerfahrung
 
@@ -79,11 +79,9 @@ Ermitteln Sie, welche neuen Features der Benutzer in der aktuellen Lösung bevor
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Auswählen, wie Ihre App verbreitet werden soll](../deploy-and-publish/overview.md)
-
-- [Entwerfen effektiver Registerkarten](../../tabs/design/tabs.md)
-
-- [Entwerfen von tollen Bots](../../bots/design/bots.md)
+* [Auswählen, wie Ihre App verbreitet werden soll](../deploy-and-publish/overview.md)
+* [Entwurfsregisterkarten](../../tabs/design/tabs.md)
+* [Designbots](../../bots/design/bots.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

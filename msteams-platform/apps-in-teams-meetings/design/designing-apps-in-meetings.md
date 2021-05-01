@@ -1,18 +1,18 @@
 ---
 title: Entwerfen der Besprechungserweiterung
 author: heath-hamilton
-description: Erfahren Sie, wie Sie Apps in Teams-Besprechungen entwerfen und das Microsoft Teams UI Kit erhalten.
+description: Erfahren Sie, wie Sie Apps in Teams entwerfen und das Microsoft Teams UI Kit erhalten.
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 022ffdd7341f60a9c6732948a0914383ddb248a8
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3f12ed711b14d2ea6d9fee541b98f20012d6cf21
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018474"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101450"
 ---
-# <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen Ihrer Microsoft Teams-Besprechungserweiterung
+# <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen ihrer Microsoft Teams Besprechungserweiterung
 
 Sie können Apps erstellen, um Besprechungen produktiver zu gestalten. Bitten Sie z. B. Personen, während eines Anrufs eine Umfrage zu führen, oder senden Sie eine kurze Erinnerung, die den Ablauf der Besprechung nicht unterbricht.
 
@@ -25,7 +25,7 @@ Umfassendere Entwurfsrichtlinien, einschließlich Elemente, die Sie bei Bedarf p
 
 ## <a name="add-a-meeting-extension"></a>Hinzufügen einer Besprechungserweiterung
 
-Sie können eine Besprechungserweiterung vor und während Besprechungen hinzufügen. Sie können auch eine App für eine bestimmte Besprechung direkt aus dem Teams Store (AppSource) hinzufügen.
+Sie können eine Besprechungserweiterung vor und während Besprechungen hinzufügen. Sie können auch eine App für eine bestimmte Besprechung direkt aus dem Teams (AppSource) hinzufügen.
 
 ### <a name="add-before-a-meeting"></a>Hinzufügen vor einer Besprechung
 
@@ -57,7 +57,7 @@ Vor Ihrer Besprechung können Sie Inhalte auf der Registerkarte hinzufügen. Das
 
 ### <a name="designing-with-ui-templates"></a>Entwerfen mit Benutzeroberflächenvorlagen
 
-Verwenden Sie eine der folgenden Teams-UI-Vorlagen, um Ihre Besprechungsregisterkarte zu entwerfen:
+Verwenden Sie eine der folgenden Teams-UI-Vorlagen, um Die Besprechungsregisterkarte zu entwerfen:
 
 * [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem scannierbaren Format anzeigen und Benutzern das Ausführen von Aktionen für eine gesamte Liste oder einzelne Elemente ermöglichen.
 * [Task board:](../../concepts/design/design-teams-app-ui-templates.md#task-board)Ein Task Board, manchmal auch als Kanbanboard oder Schwimmstreifen bezeichnet, ist eine Sammlung von Karten, die häufig zum Nachverfolgen des Status von Arbeitselementen oder Tickets verwendet werden.
@@ -113,7 +113,7 @@ Für Szenarien mit Navigationsebenen oder hohen Inhalten wird empfohlen, benutze
 
 ## <a name="use-an-in-meeting-dialog"></a>Verwenden eines Besprechungsdialogfelds
 
-Dialoge in Besprechungen werden in der Besprechungsphase von Teams angezeigt. Sie erfordern die Aufmerksamkeit, Bestätigung oder Interaktion eines Benutzers, sind jedoch subtil und unterbrechen die Besprechung nicht. Sie sollten diese sparsam und für Szenarien verwenden, die leicht und aufgabenorientiert sind.
+Besprechungsdialogfelder werden in der Teams angezeigt. Sie erfordern die Aufmerksamkeit, Bestätigung oder Interaktion eines Benutzers, sind jedoch subtil und unterbrechen die Besprechung nicht. Sie sollten diese sparsam und für Szenarien verwenden, die leicht und aufgabenorientiert sind.
 
 ### <a name="use-cases"></a>Anwendungsfälle
 
@@ -167,6 +167,8 @@ Sie können nach dem Ende zu einer Besprechung wechseln und App-Inhalte anzeigen
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Die Beispielillustration zeigt eine Registerkarte nach der Besprechung." border="false":::
 
 ## <a name="best-practices"></a>Bewährte Methoden
+
+Verwenden Sie diese Empfehlungen, um eine hochwertige App-Erfahrung zu erstellen.
 
 ### <a name="interactions"></a>Interaktionen
 
@@ -245,7 +247,7 @@ Es wird empfohlen, die visuell schwerste Aktion am rechten Ort zu positionieren.
 
 #### <a name="dont-left-or-center-align-actions"></a>Don't: Aktionen links oder zentriert ausrichten
 
-Dies weicht vom standardmäßigen Teams-Muster für die Steuerelementplatzierung in einem Dialogfeld ab und kann mit einem Dialogfeld hinter dem oberen in Konflikt stehen.
+Dies weicht vom Standardmuster Teams für die Platzierung von Steuerelementen in einem Dialogfeld ab und kann mit einem Dialogfeld hinter dem oberen Dialogfeld in Konflikt stehen.
 
    :::column-end:::
 :::row-end:::
@@ -266,7 +268,7 @@ Benutzer erwarten vertikalen Bildlauf in Teams (und an anderer Stelle).
 
 #### <a name="dont-scroll-horizontally"></a>Don't: Horizontal scrollen
 
-Horizontaler Bildlauf ist in Teams kein erwartetes Verhalten. Andere Canvases in der Besprechungsumgebung scrollen vertikal.
+Horizontaler Bildlauf ist kein erwartetes Verhalten in Teams. Andere Canvases in der Besprechungsumgebung scrollen vertikal.
 
    :::column-end:::
 :::row-end:::
@@ -298,9 +300,9 @@ Besprechungsdialogfelder sind für kurze Interaktionen vorgesehen.
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Beispiel für eine Besprechungserweiterung mit dem dunklen Design." border="false":::
 
-#### <a name="do-use-teams-color-tokens"></a>Do: Verwenden von Teams-Farbtoken
+#### <a name="do-use-teams-color-tokens"></a>Do: Verwenden Teams Farbtoken
 
-Teams-Besprechungen sind für den dunklen Modus optimiert, um visuelles und kognitives Rauschen zu reduzieren, damit benutzer sich auf die Diskussion und freigegebene Inhalte konzentrieren können. Erfahren Sie mehr <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">über die Verwendung von Farbtoken (Fluent UI).</a>
+Teams Besprechungen sind für den dunklen Modus optimiert, um visuelles und kognitives Rauschen zu reduzieren, damit benutzer sich auf die Diskussion und freigegebene Inhalte konzentrieren können. Erfahren Sie mehr <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">über die Verwendung von Farbtoken (Fluent UI).</a>
 
    :::column-end:::
    :::column span="":::
@@ -308,7 +310,7 @@ Teams-Besprechungen sind für den dunklen Modus optimiert, um visuelles und kogn
 
 #### <a name="dont-hard-code-hex-values"></a>Don't: Hexwerte für Hartcode
 
-Wenn Sie keine Teams-Farbtoken verwenden, sind Ihre Designs weniger skalierbar und brauchen mehr Zeit für die Verwaltung.
+Wenn Sie keine Teams verwenden, sind Ihre Designs weniger skalierbar und nehmen sich mehr Zeit für die Verwaltung.
 
    :::column-end:::
 :::row-end:::
@@ -346,10 +348,3 @@ Modale (auch als Aufgabenmodule bezeichnet) auf der bereits schmalen Registerkar
 
    :::column-end:::
 :::row-end:::
-
-## <a name="validate-your-design"></a>Validieren Ihres Designs
-
-Wenn Sie Ihre App in AppSource veröffentlichen möchten, sollten Sie die Entwurfsprobleme verstehen, die häufig dazu führen, dass Apps während der Übermittlung fehlschlagen.
-
-> [!div class="nextstepaction"]
-> [Überprüfen der Richtlinien zur Designvalidierung](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

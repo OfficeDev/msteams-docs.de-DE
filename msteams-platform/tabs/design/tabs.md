@@ -1,31 +1,31 @@
 ---
 title: Entwerfen Ihrer Registerkarte für Desktop und Web
-description: Erfahren Sie, wie Sie eine Registerkarte Teams (Desktop und Web) entwerfen und das Microsoft Teams UI Kit erhalten.
+description: Erfahren Sie, wie Sie Teams Registerkarte (Desktop und Web) entwerfen und das Microsoft Teams UI Kit erhalten.
 author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 840cb9f65f867358615ea006594433d8a1099111
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 9dc5489f4a6a4c6f0e1188250a9e2a9bc5793690
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019685"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101849"
 ---
 # <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>Entwerfen Ihrer Registerkarte für Microsoft Teams Desktop und Web
 
-Eine Registerkarte ist ein großer Canvas-Bereich für Ihre Inhalte. Um Ihr App-Design zu leiten, wird in den folgenden Informationen beschrieben und veranschaulicht, wie Benutzer Registerkarten in Teams hinzufügen, verwenden und verwalten können.
+Eine Registerkarte ist ein großer Canvas-Bereich für Ihre Inhalte. Um Ihr App-Design zu leiten, wird in den folgenden Informationen beschrieben und veranschaulicht, wie Benutzer Registerkarten hinzufügen, verwenden und verwalten Teams.
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
-Im Microsoft Teams UI Kit finden Sie umfassende Richtlinien für den Registerkartenentwurf, einschließlich Elemente, die Sie bei Bedarf packen und ändern können. Das Benutzeroberflächenkit enthält auch wichtige Themen wie Barrierefreiheit und reaktionsschnelle Größenanpassung, die hier nicht behandelt werden.
+Umfassende Richtlinien für das Registerkartendesign, einschließlich Elemente, die Sie bei Bedarf packen und ändern können, finden Sie im Microsoft Teams UI Kit. Das Benutzeroberflächenkit enthält auch wichtige Themen wie Barrierefreiheit und reaktionsschnelle Größenanpassung, die hier nicht behandelt werden.
 
 > [!div class="nextstepaction"]
 > [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-tab"></a>Registerkarte hinzufügen
 
-Sie können eine Registerkarte aus dem Teams Store (AppSource) oder in einem der folgenden Kontexte hinzufügen:
+Sie können eine Registerkarte aus dem Teams (AppSource) oder in einem der folgenden Kontexte hinzufügen:
 
 * Chat
 * Kanal
@@ -66,7 +66,7 @@ Sie können einen Schritt hinzufügen, in dem sich Benutzer zuerst mit ihren Mic
 
 ### <a name="designing-a-tab-setup-with-ui-templates"></a>Entwerfen einer Registerkarteneinrichtung mit Benutzeroberflächenvorlagen
 
-Verwenden Sie eine der folgenden Teams-UI-Vorlagen, um die Einrichtung ihrer Registerkarten zu gestalten:
+Verwenden Sie eine der folgenden Teams- und Benutzeroberflächenvorlagen, um beim Entwerfen der Registerkarteneinrichtung zu helfen:
 
 * [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem scannierbaren Format anzeigen und Benutzern das Ausführen von Aktionen für eine gesamte Liste oder einzelne Elemente ermöglichen.
 * [Formular](../../concepts/design/design-teams-app-ui-templates.md#form): Formulare sind für die strukturierte Erfassung, Validierung und Übermittlung von Benutzereingaben.
@@ -74,7 +74,7 @@ Verwenden Sie eine der folgenden Teams-UI-Vorlagen, um die Einrichtung ihrer Reg
 
 ## <a name="view-a-tab"></a>Anzeigen einer Registerkarte
 
-Registerkarten bieten eine Vollbildweberfahrung in Teams, in der Sie gemeinsame Inhalte wie Aufgabenboards und Dashboards sowie wichtige Informationen anzeigen können.
+Registerkarten bieten eine Vollbildweberfahrung in Teams, in der Sie gemeinsamen Inhalt ( z. B. Aufgabenboards und Dashboards ) und wichtige Informationen anzeigen können.
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Beispiel zeigt eine Registerkarte mit einem Aufgabenboard." border="false":::
 
@@ -91,7 +91,7 @@ Registerkarten bieten eine Vollbildweberfahrung in Teams, in der Sie gemeinsame 
 
 ### <a name="designing-a-tab-with-ui-templates"></a>Entwerfen einer Registerkarte mit Benutzeroberflächenvorlagen
 
-Verwenden Sie eine der folgenden Teams-UI-Vorlagen, um die Registerkartenoberfläche zu entwerfen:
+Verwenden Sie eine der folgenden benutzeroberflächenvorlagen Teams, um die Registerkartenoberfläche zu entwerfen:
 
 * [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem scannierbaren Format anzeigen und Benutzern das Ausführen von Aktionen für eine gesamte Liste oder einzelne Elemente ermöglichen.
 * [Task board:](../../concepts/design/design-teams-app-ui-templates.md#task-board)Ein Task Board, manchmal auch als Kanbanboard oder Schwimmstreifen bezeichnet, ist eine Sammlung von Karten, die häufig zum Nachverfolgen des Status von Arbeitselementen oder Tickets verwendet werden.
@@ -130,7 +130,7 @@ Sie können Optionen zum Umbenennen, Entfernen oder Ändern einer Registerkarte 
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
-|1|**Einstellungen**: (Optional) Ermöglicht Benutzern das Ändern der Einstellungen einer Registerkarte nach dem Hinzufügen.|
+|1|**Einstellungen**: (Optional) Ermöglicht Benutzern das Ändern der Einstellungen einer Registerkarte, nachdem sie hinzugefügt wurde.|
 |2|**Rename**: Ermöglicht Benutzern, der Registerkarte einen Namen zu geben, der für das Team aussagekräftiger ist.|
 |3|**Remove**: Entfernt die Registerkarte aus dem Kanal, Chat oder besprechung.|
 
@@ -144,6 +144,8 @@ Benachrichtigen Sie Die Benutzer über die Registerkartenaktivität auf eine der
 * **Nachricht**: Eine Nachricht wird im Aktivitätsfeed des Benutzers mit einem tiefen [Link zur Registerkarte angezeigt.](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true)
 
 ## <a name="best-practices"></a>Bewährte Methoden
+
+Verwenden Sie diese Empfehlungen, um eine hochwertige App-Erfahrung zu erstellen.
 
 ### <a name="collaboration"></a>Zusammenarbeit
 
@@ -214,9 +216,9 @@ Entfernen Sie alle unnötigen Schritte zum Hinzufügen einer Registerkarte.
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Abbildung, die zeigt, was mit dem Registerkarten-Theming zu tun ist." border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: Nutzen von Teams-Farbtoken
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: Nutzen Teams Farbtoken
 
-Jedes Teams-Design verfügt über ein eigenes Farbschema. Verwenden Sie Farbtoken <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">(Fluent UI)</a> in Ihrem Entwurf, um Designänderungen automatisch zu verarbeiten.
+Jedes Teams design verfügt über ein eigenes Farbschema. Verwenden Sie Farbtoken <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">(Fluent UI)</a> in Ihrem Entwurf, um Designänderungen automatisch zu verarbeiten.
 
    :::column-end:::
    :::column span="":::
@@ -224,14 +226,7 @@ Jedes Teams-Design verfügt über ein eigenes Farbschema. Verwenden Sie Farbtoke
 
 #### <a name="dont-hard-code-color-values"></a>Don't: Hartcodefarbwerte
 
-Wenn Sie keine Teams-Farbtoken verwenden, sind Ihre Designs weniger skalierbar und brauchen mehr Zeit für die Verwaltung.
+Wenn Sie keine Teams verwenden, sind Ihre Designs weniger skalierbar und nehmen sich mehr Zeit für die Verwaltung.
 
    :::column-end:::
 :::row-end:::
-
-## <a name="validate-your-design"></a>Validieren Ihres Designs
-
-Wenn Sie Ihre App in AppSource veröffentlichen möchten, sollten Sie die Entwurfsprobleme verstehen, die häufig dazu führen, dass Apps während der Übermittlung fehlschlagen.
-
-> [!div class="nextstepaction"]
-> [Überprüfen der Richtlinien zur Designvalidierung](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

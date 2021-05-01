@@ -1,33 +1,33 @@
 ---
 title: Entwerfen Ihrer Messagingerweiterung
-description: Erfahren Sie, wie Sie eine Microsoft Teams-Messagingerweiterung entwerfen und das Microsoft Teams UI Kit erhalten.
+description: Erfahren Sie, wie Sie Teams Messagingerweiterung entwerfen und das Microsoft Teams UI Kit erhalten.
 keywords: Bewährte Methode für Teams-Entwurfsrichtlinien zur Referenz von Messagingerweiterungen
 author: heath-hamilton
 localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: e3e4197e461f6d13f0c45ba2ce8bfb93b01b5e0f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 8b918c59910cbdc560fe415354d2c62c0fdd443c
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020723"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101576"
 ---
-# <a name="designing-your-microsoft-teams-messaging-extension"></a>Entwerfen Ihrer Microsoft Teams-Messagingerweiterung
+# <a name="designing-your-microsoft-teams-messaging-extension"></a>Entwerfen ihrer Microsoft Teams Messagingerweiterung
 
 Messagingerweiterungen sind Verknüpfungen zum Einfügen von App-Inhalten oder zum Handeln in einer Nachricht, ohne aus der Unterhaltung zu navigieren.
-Um Ihr App-Design zu leiten, wird in den folgenden Informationen beschrieben und veranschaulicht, wie Benutzer Messagingerweiterungen in Teams hinzufügen, verwenden und verwalten können.
+Um Ihr App-Design zu leiten, wird in den folgenden Informationen beschrieben und veranschaulicht, wie Benutzer Messagingerweiterungen hinzufügen, verwenden und verwalten Teams.
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
-Im Microsoft Teams UI Kit finden Sie umfassende Entwurfsrichtlinien für Messagingerweiterungen, einschließlich Elementen, die Sie bei Bedarf packen und ändern können.
+Umfassende Entwurfsrichtlinien für Messagingerweiterungen, einschließlich Elemente, die Sie bei Bedarf packen und ändern können, finden Sie im Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
 > [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-messaging-extension"></a>Hinzufügen einer Messagingerweiterung
 
-Sie können eine Messagingerweiterung in den folgenden Teams-Kontexten hinzufügen:
+Sie können eine Messagingerweiterung in den folgenden kontextbezogenen Teams hinzufügen:
 
 * Aus dem Teams Store (AppSource).
 * In einem Kanal, Chat oder einer Besprechung (vor, während und nach) in der Nähe des Verfassenfelds. Es ist erwähnenswert, wenn Sie eine Messagingerweiterung an einem dieser Orte hinzufügen, nur Sie können sie in diesem Kontext verwenden.
@@ -40,17 +40,17 @@ Das folgende Beispiel zeigt, wie Sie eine Messagingerweiterung in einem Kanal hi
 
 Die Authentifizierung ist nicht zwingend erforderlich, aber wenn Ihre App so etwas wie ein Ticketverfolgungstool ist, müssen Sie sich möglicherweise anmelden, um die Messagingerweiterung zu verwenden.
 
-Aus Gründen der Konsistenz in teams-Apps können Sie den Anmeldebildschirm nicht anpassen. Wenn Sie die einmalige Anmeldung (Single Sign-On, SSO)-Authentifizierung verwenden, werden Benutzer automatisch angemeldet.
+Aus Gründen der Konsistenz Teams Apps können Sie den Anmeldebildschirm nicht anpassen. Wenn Sie die einmalige Anmeldung (Single Sign-On, SSO)-Authentifizierung verwenden, werden Benutzer automatisch angemeldet.
 
 :::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="Beispiel zeigt den Setupbildschirm der Messagingerweiterung mit einer Anmeldeschaltfläche." border="false":::
 
 ## <a name="types-of-messaging-extensions"></a>Arten von Messagingerweiterungen
 
-Messagingerweiterungen können Suchbefehle, Aktionsbefehle oder beides enthalten. Ihre Befehle hängen von den Features Ihrer App ab und davon, wie diese in Teams passen.
+Messagingerweiterungen können Suchbefehle, Aktionsbefehle oder beides enthalten. Ihre Befehle hängen von den Features Ihrer App und davon ab, wie diese in Teams passen.
 
 ### <a name="search-commands"></a>Suchbefehle
 
-Mithilfe von Suchbefehlen können Benutzer Ihre Messagingerweiterung verwenden, um schnell externe Inhalte zu finden und in eine Nachricht zu einfügen. Suchbefehle werden häufig im Verfassenfeld verfügbar gemacht. Sie können beispielsweise eine Diskussion starten oder einer Diskussion hinzufügen, indem Sie einen Teil des Inhalts freigeben – ohne Teams jemals zu verlassen.
+Mithilfe von Suchbefehlen können Benutzer Ihre Messagingerweiterung verwenden, um schnell externe Inhalte zu finden und in eine Nachricht zu einfügen. Suchbefehle werden häufig im Verfassenfeld verfügbar gemacht. Sie können z. B. eine Diskussion starten oder hinzufügen, indem Sie einen Teil des Inhalts freigeben – ohne jemals Teams.
 
 :::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="Beispiel zeigt eine suchbasierte Messagingerweiterung, die über das Verfassenfeld gestartet wird." border="false":::
 
@@ -62,7 +62,7 @@ Sie haben einige Optionen zum Anzeigen von Suchergebnissen der Messagingerweiter
 
 ### <a name="action-commands"></a>Aktionsbefehle
 
-Mit Aktionsbefehlen können Benutzer Aktionen auslösen und Anforderungen in externen Diensten in Teams verarbeiten. Wenn Ihre App beispielsweise Bestellungen verfolgt, kann ein Benutzer eine neue Bestellung erstellen, indem er den Inhalt der Nachricht eines Kollegen direkt in seinem Chat verwendet.
+Mit Aktionsbefehlen können Benutzer Aktionen auslösen und Anforderungen in externen Diensten innerhalb Teams. Wenn Ihre App beispielsweise Bestellungen verfolgt, kann ein Benutzer eine neue Bestellung erstellen, indem er den Inhalt der Nachricht eines Kollegen direkt in seinem Chat verwendet.
 
 Für aktionsbasierte Messagingerweiterungen müssen Benutzer häufig ein Formular oder eine andere Art von Konfiguration innerhalb eines modalen Formulars abschließen. Sie können diese Erfahrungen mit [Aufgabenmodulen erstellen.](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 
@@ -81,7 +81,7 @@ Nach dem Hinzufügen können Benutzer Ihre Messagingerweiterung öffnen, indem s
 Nach dem Hinzufügen können Benutzer das Symbol **Mehr** in der Chatnachricht oder dem Kanalbeitrag auswählen, um die :::image type="icon" source="../../assets/icons/teams-client-more.png"::: Aktionsbefehle Ihrer Erweiterung zu finden. Ihre Erweiterung kann unter **Weitere Aktionen basierend auf der** Verwendung aufgeführt werden.
 
 > [!NOTE]
-> Unterstützung für weitere Aktionen aus einer Chatnachricht oder einem Kanalbeitrag ist auf der mobilen Microsoft Teams-Plattform nicht verfügbar. 
+> Die Unterstützung für weitere Aktionen aus einer Chatnachricht oder einem Kanalbeitrag ist auf der Microsoft Teams nicht verfügbar. 
 
 #### <a name="chat-message"></a>Chatnachricht
 
@@ -161,6 +161,8 @@ Das folgende Beispiel ist eine Messagingerweiterung, die über das Verfassenfeld
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
+Verwenden Sie diese Empfehlungen, um eine hochwertige App-Erfahrung zu erstellen.
+
 ### <a name="setup-and-general-usage"></a>Setup und allgemeine Verwendung
 
 :::row:::
@@ -177,7 +179,7 @@ SSO erleichtert, schneller und sicherer den Anmeldevorgang. Wenn sich ein Benutz
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>Don't: Take users away from the conversation
 
-Messagingerweiterungen sind Verknüpfungen, die den Kontextwechsel reduzieren sollen. Ihre Erweiterung sollte z. B. Benutzer nicht an eine Webseite außerhalb von Teams weiterverdingen.
+Messagingerweiterungen sind Verknüpfungen, die den Kontextwechsel reduzieren sollen. Ihre Erweiterung sollte z. B. Benutzer nicht an eine Webseite außerhalb von Teams.
 
    :::column-end:::
 :::row-end:::
@@ -192,9 +194,9 @@ Messagingerweiterungen sind nicht immer einfach zu finden. Fügen Sie Screenshot
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Beispiel für templating." border="false":::
 
-#### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Do: Lassen Sie Teams einen Teil der Entwurfsarbeit nach Möglichkeit behandeln
+#### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Do: Lassen Sie Teams, wenn möglich, einen Teil der Entwurfsarbeit zu verarbeiten.
 
-Wenn es für Ihre Verwendungsfälle sinnvoll ist, sollten Sie eine suchbasierte Messagingerweiterung erstellen. Teams rendert diese Arten von Erweiterungen mit integriertem Theming und Barrierefreiheit.
+Wenn es für Ihre Verwendungsfälle sinnvoll ist, sollten Sie eine suchbasierte Messagingerweiterung erstellen. Teams werden diese Arten von Erweiterungen mit integriertem Theming und Barrierefreiheit gerendert.
 
    :::column-end:::
    :::column span="":::
@@ -213,9 +215,9 @@ Wenn ihre Messagingerweiterung Aktionsbefehle erfordert, halten Sie das Aufgaben
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Beispiel für das Thema." border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: Nutzen von Teams-Farbtoken
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: Nutzen Teams Farbtoken
 
-Jedes Teams-Design verfügt über ein eigenes Farbschema. Verwenden Sie Farbtoken <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">(Fluent UI)</a> in Ihrem Entwurf, um Designänderungen automatisch zu verarbeiten.
+Jedes Teams design verfügt über ein eigenes Farbschema. Verwenden Sie Farbtoken <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">(Fluent UI)</a> in Ihrem Entwurf, um Designänderungen automatisch zu verarbeiten.
 
    :::column-end:::
    :::column span="":::
@@ -223,7 +225,7 @@ Jedes Teams-Design verfügt über ein eigenes Farbschema. Verwenden Sie Farbtoke
 
 #### <a name="dont-hard-code-color-values"></a>Don't: Hartcodefarbwerte
 
-Wenn Sie keine Teams-Farbtoken verwenden, sind Ihre Designs weniger skalierbar und brauchen mehr Zeit für die Verwaltung.
+Wenn Sie keine Teams verwenden, sind Ihre Designs weniger skalierbar und nehmen sich mehr Zeit für die Verwaltung.
 
    :::column-end:::
 :::row-end:::
@@ -262,10 +264,3 @@ Sie können benutzer eine Taste drücken oder eine Schaltfläche auswählen, um 
 #### <a name="do-consider-zero-term-queries"></a>Do: Berücksichtigen von Zero-Term-Abfragen
 
 Bevor ein Benutzer beispielsweise etwas in das Suchfeld schreibt, zeigen Sie an, was er zuletzt in Ihrer App angezeigt hat. Es ist möglich, dass sie diese Inhalte in ihre Unterhaltung einfügen möchten.
-
-## <a name="validate-your-design"></a>Validieren Ihres Designs
-
-Wenn Sie Ihre App in AppSource veröffentlichen möchten, sollten Sie die Entwurfsprobleme verstehen, die häufig dazu führen, dass Apps während der Übermittlung fehlschlagen.
-
-> [!div class="nextstepaction"]
-> [Überprüfen der Richtlinien zur Designvalidierung](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

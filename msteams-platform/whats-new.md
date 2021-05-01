@@ -4,12 +4,12 @@ description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: Teams, was neu ist
-ms.openlocfilehash: 5193c77a33ea53007c5292af7c7c3c343a48be36
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 94e8e573ac806fdfce0933129708be9bcdc82c45
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088787"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101394"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neues für Entwickler in Microsoft Teams
 
@@ -22,8 +22,9 @@ Im Änderungsprotokoll werden Änderungen an der Microsoft Teams und diesem Doku
 
 | **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
-| 04/29/2021 | Neu: Universelle Aktionen für adaptive Karten. | [Universelle Aktionen für adaptive Karten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/08/2021| Die App-Anpassungsfunktion ist jetzt in der Entwicklervorschau verfügbar.|[Übersicht über die Entwurfsteams-App,](concepts/design/design-teams-app-overview.md#app-customization) [Übersicht über App Studio](concepts/build-and-test/app-studio-overview.md#connectors)und [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
+|04/30/2021|Neue Anleitung zum Veröffentlichen von Apps im Teams Store.|[Veröffentlichen Ihrer App im Teams Store](concepts/deploy-and-publish/appsource/publish.md), Teams Richtlinien für die [Storeüberprüfung](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
+| 04/29/2021 | Neu: Universelle Aktionen für adaptive Karten. | [Universal-Aktionen für adaptive Karten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/08/2021| Die App-Anpassungsfunktion ist jetzt in der Entwicklervorschau verfügbar.|[Entwerfen Teams App-Übersicht,](concepts/design/design-teams-app-overview.md#app-customization) [App Studio-Übersicht](concepts/build-and-test/app-studio-overview.md#connectors)und [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|Hinweis: Aktualisieren Sie auf Version 4.10 oder höher des Bot Framework SDK, wie wir mit dem Veraltetkeitsprozess für `TeamsInfo.getMembers` und begonnen `TeamsInfo.GetMembersAsync` haben. | [Bot API-Änderungen für Team-/Chatmitglieder](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Hinweis: Registerkarten haben keine Ränder mehr um ihre Erfahrungen. Registerkartenentwickler sollten ihre Apps überprüfen und aktualisieren. | [Entfernen von Registerkartenrändern](resources/removing-tab-margins.md) |
 |03/05/2021|Der Standardinstallationsbereich und die Gruppenfunktion werden in der Entwicklervorschau angezeigt.| [Standardinstallationsbereich und Gruppenfunktion](concepts/deploy-and-publish/add-default-install-scope.md) |
@@ -44,7 +45,7 @@ Im Änderungsprotokoll werden Änderungen an der Microsoft Teams und diesem Doku
 |08/06/2020|Unterstützung der Tabs-SSO-Authentifizierung|[Entwickeln einer SSO-Microsoft Teams Registerkarte](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Graph proaktive Bots und Nachrichten (Öffentliche Vorschau)|[Aktivieren einer proaktiven Botinstallation und proaktivem Messaging in Teams microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 | 07/22/2020 |Updates für mobile Gerätefunktionen.|[Anfordern von Geräteberechtigungen für Microsoft Teams Registerkarte](concepts/device-capabilities/native-device-permissions.md) |
-|07/20/2020|Teams App Validation Tool für AppSource-Übermittlungen.|[Teams App-Validierungstool](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
+|07/20/2020|Teams App Validation Tool für AppSource-Übermittlungen.|[Teams App-Paketüberprüfungstool](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#validate-your-app-package)
 |07/15/2020|Erstellen eines virtuellen Assistenten für Teams|[Virtueller Assistent für Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Erstellen einer Dokumentation zu systemeigenen Ladeanzeigen|[Anzeigen eines systemeigenen Ladeindikators](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|Erste Schritte beim Erstellen Teams Apps mit dem Visual Studio Code Toolkit.|[Erstellen von Apps mit dem Microsoft Teams Toolkit und Visual Studio Code](toolkit/visual-studio-code-overview.md) |

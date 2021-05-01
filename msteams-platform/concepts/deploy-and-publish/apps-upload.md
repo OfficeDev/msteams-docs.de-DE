@@ -1,130 +1,64 @@
 ---
 title: Hochladen Ihrer benutzerdefinierten App
-description: Beschreibt, wie Sie Ihre App in Microsoft Teams hochladen
+description: Erfahren Sie, wie Sie Ihre App in einem Microsoft Teams. Das Querladen ist beim Testen und Debuggen einer App während der Entwicklung üblich.
 ms.topic: how-to
-localization_priority: Normal
-ms.author: lajanuar
-keywords: Hochladen von Teams-Apps
-ms.openlocfilehash: 3fa6a3ef00cbb55b5c663891deaabcc908de95d5
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: KirtiPereira
+ms.author: surbhigupta
+ms.openlocfilehash: a82f7d6498db4cceb69f1b7f5ff53b1646371ce8
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020807"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101569"
 ---
-# <a name="upload-an-app-package-to-microsoft-teams"></a>Hochladen eines App-Pakets in Microsoft Teams
+# <a name="upload-your-app-in-microsoft-teams"></a>Hochladen Ihrer App in Microsoft Teams
 
-Um Ihre App-Erfahrung in Microsoft Teams zu testen, müssen Sie Ihre App in Teams hochladen. Beim Hochladen wird die App zum ausgewählten Team hinzufügt, und alle Teammitglieder können wie Endbenutzer damit interagieren.
+Sie können apps querladen Microsoft Teams, ohne sie in Ihrer Organisation oder im Teams veröffentlichen zu müssen. Dies ist in den folgenden Szenarien sinnvoll:
 
-> [!NOTE]
-> Beim Hochladen eines aktualisierten Pakets für eine vorhandene App mit einem Bot werden möglicherweise keine Registerkartenänderungen angezeigt, wenn sie über das Unterhaltungsfenster angezeigt werden. Sie können über das Fly-Out oder testen in einer sauberen Umgebung auf die App zugreifen.
+* Sie möchten eine App lokal selbst oder mit anderen Entwicklern testen und debuggen.
+* Sie haben eine App nur für sich selbst erstellt (z. B. zum Automatisieren eines Workflows).
+* Sie haben eine App für eine kleine Gruppe von Benutzern (z. B. Ihre Arbeitsgruppe) erstellt.
 
-## <a name="create-your-upload-package"></a>Erstellen des Uploadpakets
+## <a name="prerequisites"></a>Voraussetzungen
 
-Für die Entwicklung und AppSource-Übermittlung müssen Sie ein Paket erstellen, das Sie hochladen können. Das Paket muss die Informationen enthalten, um Ihre Erfahrung zu beschreiben. Das Paket ist eine ZIP-Datei, die das Anwendungsmanifest und Symbole enthält, die Ihre Erfahrung eindeutig definieren.
+* Erstellen Sie Ihr [App-Paket,](~/concepts/build-and-test/apps-package.md) [und überprüfen Sie es](https://dev.teams.microsoft.com/appvalidation.html) auf Fehler.
+* [Aktivieren Sie das Hochladen benutzerdefinierter](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) Teams.
+* Stellen Sie sicher, dass Ihre App ausgeführt wird und über HTTPs darauf zugegriffen werden kann.
 
-Informationen zum Erstellen eines Uploadpakets finden Sie unter [Erstellen des Pakets für Ihre Microsoft Teams-App.](../build-and-test/apps-package.md)
+## <a name="upload-your-app"></a>Hochladen Ihrer App
 
-Nachdem Sie das Paket erstellt haben, laden Sie es in ein Team hoch. Das hochgeladene Paket steht nur den Benutzern des ausgewählten Teams zur Verfügung.
+Sie können Ihre App in abhängigkeit davon, wie Sie den Bereich Ihrer App konfiguriert haben, in ein Team, einen Chat, eine Besprechung oder zur persönlichen Verwendung querladen.
 
-## <a name="load-your-package-into-teams"></a>Laden Des Pakets in Teams
+1. Melden Sie sich beim Teams-Client mit Ihrem [Microsoft 365 an.](~/build-your-first-app/build-and-run.md#prerequisites)
+1. Wählen **Sie Apps** und Hochladen eine **benutzerdefinierte App aus.**
+1. Wählen Sie Ihr App-.zip aus. Ein Installationsdialogfeld wird angezeigt.
+:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot mit einem Beispiel für ein Teams-App-Installationsdialogfeld.":::
+1. Fügen Sie Ihre App zu Teams.
 
-Sie können Ihr Paket testen, indem Sie es in Teams hochladen.
+## <a name="troubleshoot-upload-issues"></a>Behandeln von Problemen beim Hochladen
 
-> [!NOTE]
-> Damit das Hochladen funktioniert, muss Ihr Mandantenadministrator zuerst [das Hochladen von Apps aktivieren.](/microsoftteams/admin-settings)
+Wenn ihre App nicht querladen kann, gehen Sie wie folgt vor, bis das Problem behoben ist:
 
-Es gibt zwei Möglichkeiten, Ihre App in Teams hochzuladen:
+1. Gehen Sie zurück durch die Anweisungen zum [Erstellen Ihres App-Pakets.](../../concepts/build-and-test/apps-package.md)
+1. [Überprüfen Sie Ihr App-Paket](https://dev.teams.microsoft.com/appvalidation.html) erneut.
+1. Stellen Sie sicher, dass Ihr App-Manifest dem neuesten Schema [entspricht.](../../resources/schema/manifest-schema.md)
 
-* Verwenden des Store
-* Verwenden der Registerkarte Apps
+## <a name="access-your-app"></a>Zugreifen auf Ihre App
 
-## <a name="upload-your-package-into-a-team-or-conversation-using-the-store"></a>Hochladen Ihres Pakets in ein Team oder eine Unterhaltung mithilfe des Store
+Teams bietet verschiedene Möglichkeiten zum Öffnen von Apps. Weitere Informationen finden Sie unter [Zugreifen auf Ihre Apps in Teams.](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a)
 
-1. Wählen Sie in der unteren linken Ecke von Teams das **Symbol Store** aus. Wählen Sie auf der Seite Store die Option **Benutzerdefinierte App hochladen aus.**
+## <a name="update-your-app"></a>Aktualisieren Ihrer App
 
-  ![Team anzeigen](../../assets/images/store-upload-a-custom-app2.png)
+Sie müssen Ihre App nicht erneut querladen, wenn Sie Codeänderungen vornehmen (diese werden in Teams in Echtzeit widergespiegelt). Sie müssen jedoch neu installieren, wenn Sie app-Konfigurationen ändern.
 
-2. Navigieren Sie **im** Dialogfeld Öffnen zu dem Paket, das Sie hochladen möchten, und wählen Sie Öffnen aus.
+## <a name="remove-your-app"></a>Entfernen Ihrer App
 
-   ![Menü hinzufügen](../../assets/images/NewappAddmenudropdown.png)
-
-Das hochgeladene Paket muss für die Verwendung im Team oder der Im Zustimmungsdialogfeld angegebenen Unterhaltung verfügbar sein. Wenn Ihre App nicht angezeigt wird, ist der häufigste Grund ein Fehler im Manifest, insbesondere IDs für die App- und Bot- und Messagingerweiterungen. Wenn die App nicht für Unterhaltungen begrenzt ist, wird diese Option nicht angezeigt.
-
->[!NOTE]
-> Apps in Unterhaltungen befinden sich derzeit in [Developer Preview](../../resources/dev-preview/developer-preview-intro.md), und die Option wird nicht angezeigt, wenn Teams nicht in diesem Modus ausgeführt wird.
-
-![Beispiel für bot in der Liste der hochgeladenen Bots](../../assets/images/botinlist.jpg)
-
-## <a name="upload-your-package-into-a-team-using-the-apps-tab"></a>Hochladen Ihres Pakets in ein Team mithilfe der Registerkarte Apps
-
-1. Wählen Sie im Zielteam **weitere Optionen** (**&#8943;**) aus, und wählen Sie Team **verwalten aus.**
-
-   > [!NOTE]
-   > Sie müssen der Teambesitzer sein, oder der Besitzer muss Benutzern Zugriff geben, um die entsprechenden App-Typen hinzuzufügen, damit diese Funktionalität angezeigt wird.
-
-2. Wählen Sie die **Registerkarte Apps** aus, und wählen Sie unten rechts **Hochladen** einer benutzerdefinierten App aus.
-
-   ![Einstiegspunkt hochladen](../../assets/images/UploadACustomApp.png)
-
-3. Wählen Sie ihr .zip-Paket vom Computer aus.
-
-4. Die hochgeladene App wird in der Liste angezeigt.
-
-   ![Beispiel für bot in der Liste der hochgeladenen Bots](../../assets/images/botinlist.jpg)
-
-Wenn Ihre App nicht geladen wird, ist der häufigste Grund ein Fehler im Manifest, insbesondere IDs für die App- und Bot- und Messagingerweiterungen.
-
-## <a name="access-your-uploaded-configurable-tab"></a>Zugreifen auf ihre hochgeladene konfigurierbare Registerkarte
-
-Wenn die App Registerkarten enthält, können Benutzer sie mithilfe des standardmäßigen Registerkartenkatalogflusses an alle Unterhaltungen oder Teamkanäle anheften:
-
-1. Wechseln Sie zu einem Kanal im Team. Wählen Sie aus, um rechts neben den vorhandenen Registerkarten eine **+** Registerkarte hinzuzufügen.
-
-2. Wählen Sie ihre Registerkarte aus dem angezeigten Katalog aus.
-
-3. Akzeptieren Sie die Zustimmungsaufforderung.
-
-4. Konfigurieren Sie Ihre Registerkarte über die [Konfigurationsseite,](../../tabs/how-to/create-tab-pages/configuration-page.md) und wählen Sie **Speichern aus.**
-
-  ![Das Dialogfeld Registerkarte hinzufügen mit einem Katalog verfügbarer Registerkarten](../../assets/images/tab_gallery.png)
-
-## <a name="access-your-uploaded-bot"></a>Zugreifen auf ihren hochgeladenen Bot
-
-Nach dem Hinzufügen des Bots zu einem Team muss er je nach Definition des Botbereichs von jedem Benutzer in diesem Team innerhalb und außerhalb der Teamkanäle verwendet werden können. Allen Teammitgliedern wird ein Beitrag im Kanal **Allgemein** angezeigt, der angibt, dass der Bot dem Team hinzugefügt wurde.
-
-Für einen Teams-Bot können Sie ihren Bot zunächst aufrufen, indem @mentioning Namen des Bots eingeben.
-
-Um direkte Chats mit Ihrem Bot zu testen, können Sie entweder über die App-Startseite darauf zugreifen, @mention in einem Kanal darauf zugreifen oder im Fenster Neuer **Chat** nach ihm suchen.
-
-Sie können @mention bot in einer Unterhaltung anzeigen oder im Fenster Neuer **Chat** suchen, um direkte Chats mit Ihrem Bot zu testen.
-
-## <a name="access-your-uploaded-connector"></a>Zugreifen auf ihren hochgeladenen Connector
-
-Wenn die App in das Team oder die Unterhaltung geladen ist, können Benutzer einen Connector mithilfe des standardmäßigen Connectors-Katalogflusses einrichten:
-
-1. Wechseln Sie zu einem Kanal im Team. Wählen **Sie Weitere Optionen** (*&#8943;*) aus, und wählen Sie **Connectors aus.**
-
-2. Wählen Sie den Connector im **Abschnitt Sideloaded** unten aus.
-
-3. Konfigurieren Sie den Connector über die [Konfigurationsseite,](../../webhooks-and-connectors/how-to/connectors-creating.md) und wählen Sie **Speichern aus.**
-
-  ![Das Dialogfeld Registerkarte hinzufügen mit einem Katalog verfügbarer Registerkarten.](../../assets/images/connector_gallery.png)
-
-## <a name="access-your-uploaded-messaging-extension"></a>Zugreifen auf ihre hochgeladene Messagingerweiterung
-
-Eine hochgeladene App mit einer Messagingerweiterung wird automatisch im Menü Weitere Optionen **(** *&#8943;*) im Verfassenfeld angezeigt.
-
-![Messaging-Erweiterungen](../../assets/images/compose-extensions/cesampleapp.png)
-
-
-## <a name="remove-or-update-your-app"></a>Entfernen oder Aktualisieren Ihrer App
-
-Um Ihre App zu entfernen, wählen Sie das Löschsymbol neben dem App-Namen in der **Liste Teams-Bots** anzeigen aus. Wenn Sie Manifestinformationen ändern, entfernen Sie zuerst die App, und fügen Sie dann das aktualisierte Paket hinzu. Weitere Informationen finden Sie unter [Load your package into a team](#load-your-package-into-teams). Codeänderungen an Ihrem Dienst erfordern nicht, dass Sie Ihr Manifest erneut hochladen. Wenn die Codeänderungen jedoch Manifestupdates erfordern, z. B. Änderungen an der URL oder der Microsoft-App-ID für den Bot, müssen Sie das Manifest erneut hochladen.
+Klicken Sie zum Entfernen Ihrer App mit der rechten Maustaste auf das Teams und **wählen Sie Deinstallieren aus.**
 
 > [!NOTE]
-> Sie können einen Bot nicht vollständig aus einem persönlichen Kontext entfernen. Wenn der Bot entfernt und erneut hinzugefügt wird, wird der vorherigen Unterhaltung zusätzliche Kommunikation mit dem Bot hinzugefügt.
+> Persönliche Botaktivitäten können nicht vollständig entfernt werden. Wenn Sie die App entfernen und erneut hinzufügen, wird die neue Kommunikation mit dem Bot an die vorherige Unterhaltung angefügt.
 
-## <a name="troubleshooting-notes"></a>Hinweise zur Problembehandlung
+## <a name="next-step"></a>Nächster Schritt
 
-Wenn das Manifest nicht geladen werden kann, überprüfen Sie, ob Sie alle Anweisungen in [Erstellen](../../concepts/build-and-test/apps-package.md) des Pakets befolgt und Ihr Manifest anhand des Schemas [überprüft haben.](../../resources/schema/manifest-schema.md)
+> [!div class="nextstepaction"]
+> [Verwenden Ihrer Teams App](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 2739bd4baaf68be90a62924601b0628c3d9b0f2c
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d2967abdc6c0055eca8c94ed4e4a7fdf1bdba322
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020133"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101695"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Entwerfen Ihres Microsoft Teams-Bots
 
@@ -197,9 +197,11 @@ Benutzer sollten in der Lage sein, die Einstellungen eines Bots zu ändern. Sie 
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
+Verwenden Sie diese Empfehlungen, um eine hochwertige App-Erfahrung zu erstellen.
+
 ### <a name="content"></a>Inhalt
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Beispiel für eine bewährte Methode eines Bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Beispiel für eine bewährte Methode eines Bots zum Einrichten einer eindeutigen Persona." border="false":::
 
 #### <a name="do-establish-a-clear-persona"></a>Do: Erstellen einer eindeutigen Persona
 
@@ -209,7 +211,7 @@ Weitere Informationen zum Schreiben für Bots finden Sie im <a href="https://www
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Beispiel für bewährte Methode für Bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Beispiel, das zeigt, was Ihr Bot tun kann." border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>Do: Vermitteln Sie eindeutig, was Ihr Bot alles kann.
 
@@ -217,7 +219,7 @@ Willkommensnachrichten und Touren helfen den Benutzern zu verstehen, was sie mit
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Ein Beispiel zeigt eine bewährte Methode des Bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Beispiel, das zeigt, dass die Funktionen Ihres Bots nicht verhüllt werden sollen." border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>Don‘t: Verschleiern der Features Ihres Bots
 
@@ -228,7 +230,7 @@ Der erste Eindruck zählt. Personen sind wahrscheinlich verwirrt oder misstrauis
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Beispiel für die bewährte Vorgehensweise eines Bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Beispiel, in dem Ihr Bot keine Fragen erkennt." border="false":::
 
 #### <a name="do-recognize-non-questions"></a>Do: Nicht-Fragen erkennen
 
@@ -236,7 +238,7 @@ Ihr Bot sollte in der Lage sein, auf Nachrichten wie "Hallo", "Hilfe" und "Danke
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Beispiel, in dem Sie ungeschickte Antworten auf einfache Botnachrichten vermeiden sollten." border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>Don‘t: Keine Gelegenheit verpassen, die Freude schenkt
 
@@ -249,7 +251,7 @@ Einige Personen erwarten, dass Gespräche auf natürliche Weise ablaufen, so wie
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Beispiel für eine bewährte Methode des Bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Ein Beispiel für Bots sollte Benutzern dabei helfen, die Verwendung von Bots zu verstehen." border="false":::
 
 #### <a name="do-provide-help"></a>Do: Hilfe anbieten
 
@@ -257,7 +259,7 @@ Wenn Ihr Bot eine Anfrage nicht erfüllen kann, bieten Sie einem Benutzer Mögli
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für den Bot an." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Beispiel, in dem Der Bot benutzer nicht litzen sollte." border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>Don‘t: Lassen Sie Benutzer nicht hängen
 
@@ -270,7 +272,7 @@ Benutzer werden Ihren Bot schnell verlassen, wenn er keine Probleme beheben kann
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Beispiel zum Anzeigen einer bewährten Bot-Methode." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Beispiel, in dem Sie Aufgabenmodule oder Registerkarten mit Ihrem Bot für komplexe Interaktionen verwenden können." border="false":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>Do: Verwenden Sie Aufgabenmodule oder Registerkarten
 
@@ -278,7 +280,7 @@ Wenn Ihr Bot eine Antwort liefert, die einige weitere Schritte erfordert, könne
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Siehe Beispiel für eine bewährte Methode für bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Beispiel, in dem gezeigt wird, wie Ihr Bot Interaktionen mit mehreren Drehungen vermeiden sollte." border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>Don‘t: Machen Sie Mehrfach-Interaktionen nicht langweilig
 
@@ -291,7 +293,7 @@ Eine umfassende Unterhaltung zum Abschließen einer einzelnen Aufgabe ist langsa
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Beispiel zeigt eine bewährte Methode für bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Beispiel, in dem gezeigt wird, wie Bots nur private Informationen in einem persönlichen Kontext anzeigen sollten." border="false":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>Do: Zeigen Sie vertrauliche Informationen nur in einem persönlichen Kontext an
 
@@ -299,7 +301,7 @@ Wenn sich Ihr Bot in einem Gruppenchat oder -kanal befindet, empfehlen wir, Benu
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Abbildung einer bewährten Bot-Methode." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Beispiel, in dem gezeigt wird, wie Bots keine vertraulichen Informationen für eine Gruppe oder Personen anzeigen sollten." border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>Don‘t: Einige Inhalte sollten nicht für alle einsehbar sein
 
@@ -308,17 +310,10 @@ Ihr Bot sollte keine vertraulichen Informationen an Personen in einer Gruppe wei
    :::column-end:::
 :::row-end:::
 
-## <a name="learn-more"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 Diese weiteren Richtlinien könnten bei Ihrem Bot-Design hilfreich sein:
 
 * [Entwerfen Ihrer persönlichen App](../../concepts/design/personal-apps.md)
 * [Entwerfen Adaptiver Karten](../../task-modules-and-cards/cards/design-effective-cards.md)
 * [Entwerfen von Aufgabenmodulen](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-
-## <a name="validate-your-design"></a>Validieren Ihres Designs
-
-Wenn Sie Ihre App in AppSource veröffentlichen möchten, sollten Sie die Entwurfsprobleme verstehen, die häufig dazu führen, dass Apps während der Übermittlung fehlschlagen.
-
-> [!div class="nextstepaction"]
-> [Überprüfen der Richtlinien zur Designvalidierung](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

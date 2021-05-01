@@ -1,21 +1,21 @@
 ---
 title: 'Lernprogramm – Erstellen Ihrer ersten App mithilfe von C #'
-description: Erfahren Sie, wie Sie mit dem Erstellen von Microsoft Teams-Apps mit C# oder .NET beginnen.
+description: Erfahren Sie, wie Sie mit dem Erstellen Microsoft Teams apps mit C# oder .NET beginnen.
 keywords: Erste Schritte .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 localization_priority: Normal
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 52af53d61215e41a885e21081a9f6148e81a0fdf
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: be6c5865da04125b159792364bbd80ac219d9fd9
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020227"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101856"
 ---
-# <a name="create-your-first-teams-app-using-c-or-net"></a>Erstellen Ihrer ersten Teams-App mithilfe C# oder .NET
+# <a name="create-your-first-teams-app-using-c"></a>Erstellen Ihrer ersten Teams-App mit C #
 
-Dieses Lernprogramm hilft Ihnen beim Erstellen einer Microsoft Teams-App mit C# oder .NET. Dazu müssen Sie Folgendes tun:
+Dieses Lernprogramm hilft Ihnen beim Erstellen einer Microsoft Teams App mithilfe C#. Dazu müssen Sie Folgendes tun:
 
 * Vorbereiten der Umgebung
 * Erforderliche Komponenten erhalten
@@ -62,13 +62,13 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> Sie können dieses [](https://github.com/OfficeDev/Microsoft-Teams-Samples) Repository [forken,](https://help.github.com/articles/fork-a-repo/) um Ihre Änderungen an GitHub zu ändern und zu speichern.
+> Sie können [dieses Repository forken,](https://help.github.com/articles/fork-a-repo/) [um](https://github.com/OfficeDev/Microsoft-Teams-Samples) Ihre Änderungen zu ändern und zu speichern, GitHub.
 
 <a name="BuildRun"></a>
 
 ## <a name="build-and-run-the-sample"></a>Erstellen und Ausführen des Beispiels
 
-Nachdem das Repository geklont wurde, öffnen Sie mithilfe von Visual Studio die Lösungsdatei **Microsoft.Teams.Samples.HelloWorld.sln** aus dem **Microsoft-Teams-Samples/samples/app-hello-world/csharp-Verzeichnis** des Beispiels. Wählen Sie dann **im Menü Build** die Option Lösung erstellen aus.  Drücken Sie zum Ausführen des Beispiels **F5,** oder wählen Sie **Debuggen starten** im Menü **Debuggen** aus.
+Nachdem das Repository geklont wurde, Visual Studio Sie die Lösungsdatei **Microsoft.Teams. Samples.HelloWorld.sln** aus dem **Microsoft-Teams-Samples/samples/app-hello-world/csharp-Verzeichnis** des Beispiels. Wählen Sie dann **im Menü Build** die Option Lösung erstellen aus.  Drücken Sie zum Ausführen des Beispiels **F5,** oder wählen Sie **Debuggen starten** im Menü **Debuggen** aus.
 
 Wenn die App gestartet wird, wird ein Browserfenster geöffnet, in dem der Stamm der App gestartet wird. Sie können zu den folgenden URLs wechseln, um zu überprüfen, ob alle App-URLs geladen werden:
 
@@ -84,9 +84,9 @@ Wenn die App gestartet wird, wird ein Browserfenster geöffnet, in dem der Stamm
 
 ## <a name="host-the-sample-app"></a>Hosten der Beispiel-App
 
-Apps in Microsoft Teams sind Webanwendungen, die eine oder mehrere Funktionen bereitstellen. Damit die Teams-Plattform Ihre App laden kann, muss Ihre App im Internet verfügbar sein. Dazu müssen Sie Ihre App hosten. Sie können sie entweder kostenlos in Microsoft Azure hosten oder mithilfe von einen Tunnel für den lokalen Prozess auf Ihrem Computer `ngrok` erstellen. Notieren Sie sich nach dem Hosten Ihrer App die Stamm-URL, z. B. `https://yourteamsapp.ngrok.io` oder `https://yourteamsapp.azurewebsites.net` .
+Apps in Microsoft Teams sind Webanwendungen, die eine oder mehrere Funktionen bereitstellen. Damit die Teams Ihre App laden kann, muss Ihre App im Internet verfügbar sein. Dazu müssen Sie Ihre App hosten. Sie können sie entweder kostenlos in Microsoft Azure hosten oder einen Tunnel für den lokalen Prozess auf Ihrem Computer mit `ngrok` erstellen. Notieren Sie sich nach dem Hosten Ihrer App die Stamm-URL, z. B. `https://yourteamsapp.ngrok.io` oder `https://yourteamsapp.azurewebsites.net` .
 
-### <a name="tunnel-using-ngrok"></a>Tunnel mit ngrok
+### <a name="tunnel-using-ngrok"></a>Tunnel verwenden von ngrok
 
 Für schnelle Tests können Sie die App auf Ihrem Computer ausführen und über einen Webendpunkt einen Tunnel dafür erstellen. [`ngrok`](https://ngrok.com) ist ein kostenloses Tool, mit dem Sie eine Webadresse erhalten können, z. B. `https://d0ac14a5.ngrok.io` . Sie können [ngrok herunterladen und](https://ngrok.com/download) installieren und an einem Speicherort in Ihrer `PATH` hinzufügen.
 
@@ -134,7 +134,7 @@ Nachdem Sie die App in einem Team installiert haben, müssen Sie sie so konfigur
 
 ### <a name="test-your-bot-in-teams"></a>Testen Des Bots in Teams
 
-Jetzt können Sie den Bot in Teams testen. Wählen Sie einen Kanal im Team aus, in dem Sie Ihre App registriert haben, und geben Sie `@your-bot-name` ein. Dies wird als Erwähnung **\@ bezeichnet.** Der Bot antwortet auf jede nachricht, die Sie senden.
+Jetzt können Sie den Bot in der Teams. Wählen Sie einen Kanal im Team aus, in dem Sie Ihre App registriert haben, und geben Sie `@your-bot-name` ein. Dies wird als Erwähnung **\@ bezeichnet.** Der Bot antwortet auf jede nachricht, die Sie senden.
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
