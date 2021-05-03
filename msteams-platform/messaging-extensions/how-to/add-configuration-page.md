@@ -18,7 +18,7 @@ ms.locfileid: "52019825"
 
 ## <a name="code-sample"></a>Codebeispiel
 
-In der Teams Search Auth Config für Beispielprojekte auf GitHub wird gezeigt, wie Sie Messagingerweiterungen erstellen, die eine Konfigurationsseite und botdienstbasierte Authentifizierung enthalten. In den Beispielen wird auch gezeigt, wie Nachrichtenerweiterungen erstellt werden, die Suchanforderungen akzeptieren und die Ergebnisse zurückgeben, nachdem sich der Benutzer angemeldet hat.
+In Teams Search Auth Config for sample projects on GitHub wird gezeigt, wie Sie Messagingerweiterungen erstellen, die eine Konfigurationsseite und botdienstbasierte Authentifizierung enthalten. In den Beispielen wird auch gezeigt, wie Nachrichtenerweiterungen erstellt werden, die Suchanforderungen akzeptieren und die Ergebnisse zurückgeben, nachdem sich der Benutzer angemeldet hat.
 
 | **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
 |-----------------|-----------------|-------------|--------------|
@@ -27,4 +27,4 @@ In der Teams Search Auth Config für Beispielprojekte auf GitHub wird gezeigt, w
 ## <a name="additional-code-sample"></a>Zusätzliches Codebeispiel
 
 > [!div class="nextstepaction"]
-> [Weitere Bot Framework-Beispiele auf GitHub anzeigen](https://github.com/microsoft/BotBuilder-Samples)
+> [Weitere Bot Framework-Beispiele auf GitHub](https://github.com/microsoft/BotBuilder-Samples)

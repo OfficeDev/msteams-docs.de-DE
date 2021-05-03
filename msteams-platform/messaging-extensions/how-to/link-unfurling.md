@@ -1,7 +1,7 @@
 ---
 title: Entfalten von Links
 author: clearab
-description: So führen Sie die Verknüpfungsentschnappung mit der Messagingerweiterung in einer Microsoft Teams-App aus.
+description: Ausführen der Verknüpfungsentschnappung mit der Messagingerweiterung in einer Microsoft Teams App.
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
@@ -21,7 +21,7 @@ In diesem Dokument erfahren Sie, wie Sie ihrem App-Manifest mithilfe von App Stu
 > [!NOTE]
 > Derzeit wird die Verknüpfungsentfurling auf mobilen Clients nicht unterstützt.
 
-Die Azure DevOps-Messagingerweiterung verwendet die Verknüpfungsentwennung, um nach URLs zu suchen, die in den Bereich verfassen von Nachrichten, die auf eine Arbeitsaufgabe zeigen, eingefügt wurden. In der folgenden Abbildung hat ein Benutzer eine URL für eine Arbeitsaufgabe in Azure DevOps eingegeben, die die Messagingerweiterung in eine Karte aufgelöst hat:
+Die Azure DevOps messaging-Erweiterung verwendet die Verknüpfungsentwennung, um nach URLs zu suchen, die in den Bereich verfassen von Nachrichten, die auf eine Arbeitsaufgabe zeigen, eingefügt werden. In der folgenden Abbildung hat ein Benutzer eine URL für eine Arbeitsaufgabe in Azure DevOps, die die Messagingerweiterung in eine Karte aufgelöst hat:
 
 ![Beispiel für die Verknüpfungsentfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -34,7 +34,7 @@ Fügen Sie dem Abschnitt Ihres App-Manifests JSON ein neues Array hinzu, um dem 
 
 ### <a name="add-link-unfurling-using-app-studio"></a>Hinzufügen der Verknüpfungsentfurling mithilfe von App Studio
 
-1. Öffnen **Sie App Studio** im Microsoft Teams-Client, und wählen Sie die Registerkarte **Manifest-Editor** aus.
+1. Öffnen **Sie App Studio** im Microsoft Teams Client, und wählen Sie die Registerkarte **Manifest-Editor** aus.
 1. Laden Sie Ihr App-Manifest.
 1. Fügen Sie **auf der** Seite Messagingerweiterung die Domäne hinzu, nach der Sie suchen möchten, im Abschnitt **Nachrichtenhandler.** In der folgenden Abbildung wird der Vorgang erläutert:
 
@@ -75,7 +75,7 @@ Die folgenden Kartentypen werden unterstützt:
 
 * [Miniaturansichtskarte](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Heldenkarte](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 Connector-Karte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365 Connectorkarte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Karte](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 ### <a name="example"></a>Beispiel

@@ -1,5 +1,5 @@
 ---
-title: Anfordern von Geräteberechtigungen für Ihre Microsoft Teams-App
+title: Anfordern von Geräteberechtigungen für Microsoft Teams App
 keywords: Berechtigungen für teams-Apps-Funktionen
 description: So aktualisieren Sie Ihr App-Manifest, um Zugriff auf systemeigene Features anzuholen, für die in der Regel die Zustimmung des Benutzers erforderlich ist
 localization_priority: Normal
@@ -11,19 +11,19 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52019853"
 ---
-# <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Anfordern von Geräteberechtigungen für Ihre Microsoft Teams-App
+# <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Anfordern von Geräteberechtigungen für Microsoft Teams App
 
-Sie können Ihre Teams-App mit systemeigenen Gerätefunktionen wie Kamera, Mikrofon und Standort bereichern. In diesem Dokument erfahren Sie, wie Sie die Zustimmung des Benutzers anfordern und auf die systemeigenen Geräteberechtigungen zugreifen können.
+Sie können Ihre Teams mit systemeigenen Gerätefunktionen wie Kamera, Mikrofon und Standort bereichern. In diesem Dokument erfahren Sie, wie Sie die Zustimmung des Benutzers anfordern und auf die systemeigenen Geräteberechtigungen zugreifen können.
 
 > [!NOTE]
-> * Informationen zur Integration von Medienfunktionen in Ihre mobile Microsoft Teams-App finden Sie [unter Integrieren von Medienfunktionen](mobile-camera-image-permissions.md).
-> * Informationen zur Integration von QR- oder Strichcodescannerfunktionen in Ihre mobile Microsoft Teams-App finden Sie unter Integrieren der QR- oder [Barcodescannerfunktion in Teams.](qr-barcode-scanner-capability.md)
-> * Informationen zur Integration von Standortfunktionen in Ihre mobile Microsoft Teams-App finden Sie [unter Integrieren von Standortfunktionen](location-capability.md).
+> * Informationen zur Integration von Medienfunktionen in Microsoft Teams Mobile App finden Sie [unter Integrieren von Medienfunktionen](mobile-camera-image-permissions.md).
+> * Informationen zur Integration von QR- oder Barcodescannerfunktionen in Microsoft Teams Mobile App finden Sie unter Integrieren von QR- oder [Barcodescannerfunktionen in Teams](qr-barcode-scanner-capability.md)
+> * Informationen zur Integration von Standortfunktionen in Microsoft Teams Mobile App finden Sie [unter Integrieren von Standortfunktionen](location-capability.md).
 
 ## <a name="native-device-permissions"></a>Berechtigungen für systemeigene Geräte
 
-Sie müssen die Geräteberechtigungen anfordern, um auf systemeigene Gerätefunktionen zu zugreifen. Die Geräteberechtigungen funktionieren ähnlich für alle App-Konstrukte, z. B. Registerkarten, Aufgabenmodule oder Messagingerweiterungen. Der Benutzer muss zur Seite Berechtigungen in den Teams-Einstellungen wechseln, um Geräteberechtigungen zu verwalten.
-Durch den Zugriff auf die Gerätefunktionen können Sie auf der Teams-Plattform vielfältigere Erfahrungen erstellen, z. B.:
+Sie müssen die Geräteberechtigungen anfordern, um auf systemeigene Gerätefunktionen zu zugreifen. Die Geräteberechtigungen funktionieren ähnlich für alle App-Konstrukte, z. B. Registerkarten, Aufgabenmodule oder Messagingerweiterungen. Der Benutzer muss zur Seite Berechtigungen in den Teams wechseln, um Geräteberechtigungen zu verwalten.
+Durch den Zugriff auf die Gerätefunktionen können Sie auf der plattform Teams, z. B.:
 * Erfassen und Anzeigen von Bildern.
 * Scannen Sie QR oder Barcode.
 * Aufzeichnen und Freigeben von kurzen Videos.
@@ -32,31 +32,31 @@ Durch den Zugriff auf die Gerätefunktionen können Sie auf der Teams-Plattform 
 
 ## <a name="access-device-permissions"></a>Zugreifen auf Geräteberechtigungen
 
-Das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) bietet die Tools, die [](#manage-permissions) Für Ihre mobile Teams-App erforderlich sind, um auf die Geräteberechtigungen des Benutzers zu zugreifen und eine reichhaltigere Umgebung zu schaffen.
+Das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) bietet die Tools, die für Ihre Teams [](#manage-permissions) mobile App erforderlich sind, um auf die Geräteberechtigungen des Benutzers zu zugreifen und eine reichhaltigere Umgebung zu erstellen.
 
-Während der Zugriff auf diese Features in modernen Webbrowsern standard ist, müssen Sie Teams über die Features informieren, die Sie durch Aktualisieren Ihres App-Manifests verwenden. Dieses Update ermöglicht es Ihnen, Berechtigungen zu fordern, während Ihre App auf dem Teams-Desktopclient ausgeführt wird.
+Während der Zugriff auf diese Features in modernen Webbrowsern standard ist, müssen Sie Teams über die Features informieren, die Sie verwenden, indem Sie Ihr App-Manifest aktualisieren. Mit diesem Update können Sie Berechtigungen bitten, während Ihre App auf dem Teams ausgeführt wird.
 
 > [!NOTE] 
-> Derzeit ist Microsoft Teams nur für mobile Clients verfügbar, die Medienfunktionen und QR-Strichcodescanner unterstützen.
+> Derzeit ist Microsoft Teams Unterstützung für Medienfunktionen und QR-Strichcodescanner nur für mobile Clients verfügbar.
 
 ## <a name="manage-permissions"></a>
             Berechtigungen verwalten
 
-Ein Benutzer kann Geräteberechtigungen in  den Teams-Einstellungen verwalten, indem er Berechtigungen für bestimmte Apps zulassen **oder** verweigern aus.
+Ein Benutzer kann Geräteberechtigungen in Teams  verwalten,  indem er Berechtigungen für bestimmte Apps zulassen oder verweigern aus.
  
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-1. Öffnen Sie Ihre Teams-App.
+1. Öffnen Sie ihre Teams App.
 1. Wählen Sie ihr Profilsymbol in der oberen rechten Ecke des Fensters aus.
-1. Wählen **Sie**  >  **im** Dropdownmenü Einstellungen Berechtigungen aus.
+1. Wählen **Einstellungen**  >  **Berechtigungen** im Dropdownmenü aus.
 1. Wählen Sie die gewünschten Einstellungen aus.
 
    ![Bildschirm "Desktopeinstellungen für Geräteberechtigungen"](../../assets/images/tabs/device-permissions.png)
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
-1. Öffnen Sie Teams.
-1. Wechseln Sie zu **Einstellungen**  >  **App-Berechtigungen**.
+1. Öffnen Teams.
+1. Wechseln Sie **zu Einstellungen**  >  **App Permissions**.
 1. Wählen Sie die App aus, für die Sie die Einstellungen auswählen müssen.
 1. Wählen Sie die gewünschten Einstellungen aus.
 
@@ -110,15 +110,15 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 });
 ```
 
-## <a name="use-teams-apis-to-get-device-permissions"></a>Verwenden von Teams-APIs zum Erhalten von Geräteberechtigungen
+## <a name="use-teams-apis-to-get-device-permissions"></a>Verwenden Teams-APIs zum Erhalten von Geräteberechtigungen
 
-Nutzen Sie die entsprechende HTML5- oder Teams-API, um eine Eingabeaufforderung für den Zugriff auf Geräteberechtigungen einzuholen.
+Verwenden Sie die entsprechende HTML5- oder Teams-API, um eine Eingabeaufforderung für den Zugriff auf Geräteberechtigungen einzuholen.
 
 > [!IMPORTANT]
 > * Unterstützung für `camera` , und wird über die `gallery` `microphone` [**selectMedia-API aktiviert.**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true) Verwenden [**Sie die captureImage-API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) für eine einzelne Bildaufnahme.
-> * Die Unterstützung `location` für wird über die [**getLocation-API aktiviert.**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) Sie müssen dies `getLocation API` für den Standort verwenden, da die HTML5-Geolocation-API derzeit nicht vollständig auf dem Teams-Desktopclient unterstützt wird.
+> * Die Unterstützung `location` für wird über die [**getLocation-API aktiviert.**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) Sie müssen dies für den Standort verwenden, da die HTML5-Geolocation-API derzeit nicht vollständig auf dem `getLocation API` Teams unterstützt wird.
 
-Beispiel:
+Zum Beispiel:
  * Um den Benutzer zum Zugriff auf seinen Standort aufforderen zu können, müssen Sie `getCurrentPosition()` anrufen:
 
     ```Javascript
@@ -131,7 +131,7 @@ Beispiel:
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
     ```
 
- * Um das Bild auf mobilen Geräten zu erfassen, bittet Teams mobile um Erlaubnis, wenn Sie `captureImage()` anrufen:
+ * Um das Bild auf mobilen Geräten zu erfassen, Teams Mobile beim Anruf um Erlaubnis `captureImage()` bitten:
 
     ```Javascript
     microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
@@ -148,7 +148,7 @@ Beispiel:
 
 
 
-* Zum Verwenden der Kamera oder des Zugriffsfotokatalogs fragt Teams mobile die Berechtigung an, wenn Sie `selectMedia()` anrufen:
+* Um die Kamera oder den Fotokatalog zu verwenden, Teams Mobile die Berechtigung, wenn Sie `selectMedia()` anrufen:
 
     ```JavaScript
     microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
@@ -156,7 +156,7 @@ Beispiel:
     );
     ```
 
-* Um das Mikrofon zu verwenden, fordert Teams mobile die Berechtigung an, wenn Sie `selectMedia()` anrufen:
+* Um das Mikrofon zu verwenden, Teams Mobile beim Anruf die Berechtigung `selectMedia()` ein:
 
     ```JavaScript 
     microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
@@ -164,7 +164,7 @@ Beispiel:
     });
     ```
 
-* Um den Benutzer zum Freigeben des Speicherorts auf der Kartenschnittstelle auffordern zu können, fordert Teams mobile die Berechtigung auf, wenn Sie `getLocation()` anrufen:
+* Um den Benutzer zum Freigeben des Speicherorts auf der Kartenschnittstelle auffordern, fordert Teams Mobile beim Anruf die Berechtigung `getLocation()` an:
 
     ```JavaScript 
     microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
@@ -183,7 +183,7 @@ Beispiel:
 
 ## <a name="permission-behavior-across-login-sessions"></a>Berechtigungsverhalten in Anmeldesitzungen
 
-Geräteberechtigungen werden für jede Anmeldesitzung gespeichert. Wenn Sie sich bei einer anderen Instanz von Teams anmelden, z. B. auf einem anderen Computer, sind Ihre Geräteberechtigungen aus ihren vorherigen Sitzungen nicht verfügbar. Daher müssen Sie den Geräteberechtigungen für die neue Sitzung erneut zustimmen. Dies bedeutet auch, dass Ihre Geräteberechtigungen aus der vorherigen Anmeldesitzung gelöscht werden, wenn Sie sich bei Teams abmelden oder Mandanten in Teams wechseln.  
+Geräteberechtigungen werden für jede Anmeldesitzung gespeichert. Wenn Sie sich bei einer anderen Instanz von Teams, z. B. auf einem anderen Computer, anmelden, sind Ihre Geräteberechtigungen aus ihren vorherigen Sitzungen nicht verfügbar. Daher müssen Sie den Geräteberechtigungen für die neue Sitzung erneut zustimmen. Dies bedeutet auch, dass Ihre Geräteberechtigungen aus der vorherigen Anmeldesitzung gelöscht werden, Teams sie sich abmelden oder mandanten in Teams wechseln.  
 
 > [!NOTE]
 > Wenn Sie den berechtigungen für systemeigene Geräte zustimmen, ist sie nur für Ihre _aktuelle Anmeldesitzung_ gültig.

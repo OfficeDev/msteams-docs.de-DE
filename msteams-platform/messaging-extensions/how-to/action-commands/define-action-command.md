@@ -16,7 +16,7 @@ ms.locfileid: "52020716"
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Mit Aktionsbefehlen können Sie Ihren Benutzern ein modales Popup präsentieren, das als Aufgabenmodul in Teams bezeichnet wird. Das Aufgabenmodul sammelt oder zeigt Informationen an, verarbeitet die Interaktion und sendet die Informationen zurück an Teams. In diesem Dokument erfahren Sie, wie Sie Aktionsbefehlsaufrufe auswählen, Ihr Aufgabenmodul erstellen, endgültige Nachrichten oder Karten senden, Aktionsbefehle mithilfe von App Studio erstellen oder manuell erstellen. 
+Mit Aktionsbefehlen können Sie Ihren Benutzern ein modales Popup präsentieren, das als Aufgabenmodul bezeichnet wird, Teams. Das Aufgabenmodul sammelt oder zeigt Informationen an, verarbeitet die Interaktion und sendet die Informationen zurück an Teams. In diesem Dokument erfahren Sie, wie Sie Aktionsbefehlsaufrufe auswählen, Ihr Aufgabenmodul erstellen, endgültige Nachrichten oder Karten senden, Aktionsbefehle mithilfe von App Studio erstellen oder manuell erstellen. 
 
 Bevor Sie den Aktionsbefehl erstellen, müssen Sie die folgenden Faktoren festlegen:
 
@@ -45,7 +45,7 @@ In der folgenden Abbildung werden die Speicherorte angezeigt, an denen der Aktio
 
 Sie müssen nicht nur auswählen, von wo aus Der Befehl aufgerufen werden kann, sondern auch auswählen, wie das Formular im Aufgabenmodul für Ihre Benutzer auffüllt werden soll. Sie haben die folgenden drei Optionen zum Erstellen des Formulars, das innerhalb des Aufgabenmoduls gerendert wird:   
 
-* **Statische Liste der Parameter:** Dies ist die einfachste Methode. Sie können eine Liste der Parameter in Ihrem App-Manifest definieren, das der Teams-Client rendert, die Formatierung in diesem Fall jedoch nicht steuern.
+* **Statische Liste der Parameter:** Dies ist die einfachste Methode. Sie können eine Liste von Parametern im App-Manifest definieren, Teams client rendert, aber die Formatierung in diesem Fall nicht steuern kann.
 * **Adaptive Karte**: Sie können eine adaptive Karte verwenden, die eine bessere Kontrolle über die Benutzeroberfläche bietet, Sie jedoch weiterhin die verfügbaren Steuerelemente und Formatierungsoptionen einschränkt.
 * **Eingebettete Webansicht:** Sie können eine benutzerdefinierte Webansicht in das Aufgabenmodul einbetten, um eine vollständige Kontrolle über die Benutzeroberfläche und die Steuerelemente zu erhalten. 
 
@@ -71,7 +71,7 @@ Zum Hinzufügen des Aktionsbefehls zum App-Manifest müssen Sie der obersten Ebe
 
 **So erstellen Sie einen Aktionsbefehl**
 
-1. Öffnen **Sie App Studio** im Microsoft Teams-Client, und wählen Sie die Registerkarte **Manifest-Editor** aus.
+1. Öffnen **Sie App Studio** im Microsoft Teams Client, und wählen Sie die Registerkarte **Manifest-Editor** aus.
 1. Wenn Sie Ihr App-Paket bereits in **App Studio erstellt haben,** wählen Sie es aus der Liste aus. Wenn Sie kein App-Paket erstellt haben, importieren Sie ein vorhandenes.
 1. Wählen Sie nach dem Importieren eines App-Pakets unter Funktionen die Option **Messagingerweiterungen** **aus.** Sie erhalten ein Popupfenster zum Einrichten der Messagingerweiterung.
 1. Wählen **Sie Einrichten** im Fenster aus, um die Messagingerweiterung in Ihre App-Umgebung zu verwenden. In der folgenden Abbildung wird das Einrichtungsfenster der Messagingerweiterung angezeigt:
@@ -87,7 +87,7 @@ In der folgenden Abbildung wird die Befehlserweiterung für die Messagingerweite
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
 
-1. Wählen **Sie Benutzer zulassen aus, um Aktionen in externen Diensten innerhalb von Teams auszulösen.** In der folgenden Abbildung wird die Aktionsbefehlsauswahl angezeigt:
+1. Wählen **Sie Benutzer zulassen aus, um Aktionen in externen Diensten innerhalb von** Teams . In der folgenden Abbildung wird die Aktionsbefehlsauswahl angezeigt:
 
     <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
     
@@ -205,8 +205,8 @@ Der folgende Abschnitt ist ein Beispiel für ein `composeExtensions` Objekt, das
 
 | Beispielname           | Beschreibung | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Messagingerweiterungsaktion für Teams| Beschreibt, wie Sie Aktionsbefehle definieren, Aufgabenmodul erstellen und auf Die Absendenaktion des Aufgabenmoduls reagieren. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Suche nach Messagingerweiterungen in Teams   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchbefehle reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams Messagingerweiterungsaktion| Beschreibt, wie Sie Aktionsbefehle definieren, Aufgabenmodul erstellen und auf Die Absendenaktion des Aufgabenmoduls reagieren. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams messaging extension search   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchbefehle reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Nächster Schritt
 

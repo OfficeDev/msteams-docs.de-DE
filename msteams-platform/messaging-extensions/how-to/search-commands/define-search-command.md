@@ -1,7 +1,7 @@
 ---
 title: Definieren von Befehlen für die Suche nach Nachrichtenerweiterungen
 author: clearab
-description: Definieren von Befehlen für die Suche nach Nachrichtenerweiterungen für Microsoft Teams-Apps.
+description: Definieren von Suchbefehlen für Messagingerweiterungen für Microsoft Teams Apps.
 ms.topic: conceptual
 ms.author: anclear
 ms.openlocfilehash: 19f1fdf7bd4efdbb0de11d1abad341ec24bc27bd
@@ -43,7 +43,7 @@ Voraussetzung für das Erstellen eines Suchbefehls ist, dass Sie bereits eine Me
 
 **So erstellen Sie einen Suchbefehl**
 
-1. Öffnen **Sie App Studio** im Microsoft Teams-Client, und wählen Sie die Registerkarte **Manifest-Editor** aus.
+1. Öffnen **Sie App Studio** im Microsoft Teams Client, und wählen Sie die Registerkarte **Manifest-Editor** aus.
 1.  Wenn Sie Ihr App-Paket bereits in **App Studio erstellt haben,** wählen Sie aus der Liste aus. Wenn Sie kein App-Paket erstellt haben, importieren Sie ein vorhandenes.
 1. Wählen Sie nach dem Importieren des App-Pakets die Option **Messagingerweiterungen** unter **Funktionen aus.** Sie erhalten ein Popupfenster zum Einrichten der Messagingerweiterung.
 1. Wählen **Sie Einrichten** im Fenster aus, um die Messagingerweiterung in Ihre App-Umgebung zu verwenden. In der folgenden Abbildung wird die Seite zum Einrichten der Messagingerweiterung angezeigt: 
@@ -80,9 +80,9 @@ Zum manuellen Hinzufügen des Suchbefehls für die Messagingerweiterung zu Ihrem
 | `description` | Diese Eigenschaft ist ein Hilfetext, der angibt, was dieser Befehl macht. Dieser Wert wird auf der Benutzeroberfläche angezeigt. | Ja | 1.0 |
 | `type` | Diese Eigenschaft muss eine `query` sein. | Nein | 1.4 |
 |`initialRun` | Wenn diese Eigenschaft auf **true** festgelegt ist, gibt sie an, dass dieser Befehl ausgeführt werden soll, sobald der Benutzer diesen Befehl auf der Benutzeroberfläche auswählt. | Nein | 1.0 |
-| `context` | Diese Eigenschaft ist ein optionales Array von Werten, das den Kontext definiert, in dem die Suchaktion verfügbar ist. Die möglichen Werte sind `message`, `compose` oder `commandBox`. Der Standardwert ist `["compose", "commandBox"]` . | Nein | 1,5 |
+| `context` | Diese Eigenschaft ist ein optionales Array von Werten, das den Kontext definiert, in dem die Suchaktion verfügbar ist. Die möglichen Werte sind `message`, `compose` oder `commandBox`. Der Standardwert lautet `["compose", "commandBox"]`. | Nein | 1,5 |
 
-Sie müssen die Details des Suchparameters hinzufügen, der den Text definiert, der für Den Benutzer im Teams-Client sichtbar ist.
+Sie müssen die Details des Suchparameters hinzufügen, der den text definiert, der für Den Benutzer im Client Teams wird.
 
 | Eigenschaftenname | Zweck | Ist erforderlich? | Minimale Manifestversion |
 |---|---|---|---|
@@ -126,8 +126,8 @@ Das vollständige App-Manifest finden Sie unter [App-Manifestschema](~/resources
 
 | Beispielname           | Beschreibung | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Messagingerweiterungsaktion für Teams| Beschreibt, wie Sie Aktionsbefehle definieren, Aufgabenmodul erstellen und auf Die Absendenaktion des Aufgabenmoduls reagieren. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Suche nach Messagingerweiterungen in Teams   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchbefehle reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams Messagingerweiterungsaktion| Beschreibt, wie Sie Aktionsbefehle definieren, Aufgabenmodul erstellen und auf Die Absendenaktion des Aufgabenmoduls reagieren. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams messaging extension search   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchbefehle reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Nächster Schritt
 

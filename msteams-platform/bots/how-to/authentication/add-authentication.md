@@ -154,7 +154,7 @@ In der folgenden Abbildung wird die entsprechende Auswahl auf der Ressourcenseit
 
     ![teams bots app auth connection string adv1 view](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern** aus.
 
 #### <a name="azure-ad-v2"></a>Azure AD V2
 
@@ -180,7 +180,7 @@ In der folgenden Abbildung wird die entsprechende Auswahl auf der Ressourcenseit
 
     1. Geben **Sie für** Bereiche eine durch Leerzeichen getrennte Liste von Graphberechtigungen ein, die für diese Anwendung erforderlich sind, z. B.: User.Read User.ReadBasic.All Mail.Read 
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern** aus.
 
 ### <a name="test-the-connection"></a>Testen der Verbindung
 

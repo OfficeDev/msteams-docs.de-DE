@@ -220,4 +220,4 @@ Die folgenden Ressourcen können auch helfen:
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Vorbereiten der Store-Übermittlung](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+> [Vorbereiten der Übermittlung an den Store](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)

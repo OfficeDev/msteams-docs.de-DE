@@ -30,7 +30,7 @@ Bei der ersten Aufrufanforderung empfängt Ihr Dienst ein Objekt vom Typ , und S
 |`name`| Typ des Befehls, der für Ihren Dienst ausgegeben wird. Es muss `composeExtension/fetchTask` sein. |
 |`from.id`| ID des Benutzers, der die Anforderung gesendet hat. |
 |`from.name`| Name des Benutzers, der die Anforderung gesendet hat. |
-|`from.aadObjectId`| Azure Active Directory-Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
+|`from.aadObjectId`| Azure Active Directory Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 |`channelData.tenant.id`| Azure Active Directory Mandanten-ID. |
 |`channelData.channel.id`| Kanal-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
 |`channelData.team.id`| Team-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
@@ -80,7 +80,7 @@ Die Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul aus dem 1:1-Cha
 |`name`| Typ des Befehls, der für Ihren Dienst ausgegeben wird. Es muss `composeExtension/fetchTask` sein. |
 |`from.id`| ID des Benutzers, der die Anforderung gesendet hat. |
 |`from.name`| Name des Benutzers, der die Anforderung gesendet hat. |
-|`from.aadObjectId`| Azure Active Directory-Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
+|`from.aadObjectId`| Azure Active Directory Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 |`channelData.tenant.id`| Azure Active Directory Mandanten-ID. |
 |`channelData.source.name`| Der Quellname, von dem aus das Aufgabenmodul aufgerufen wird. |
 |`ChannelData.legacy. replyToId`| Ruft die ID der Nachricht ab, auf die diese Nachricht eine Antwort ist, oder legt sie fest. |
@@ -130,7 +130,7 @@ Die Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul aus einem Grupp
 |`name`| Typ des Befehls, der für Ihren Dienst ausgegeben wird. Es muss `composeExtension/fetchTask` sein. |
 |`from.id`| ID des Benutzers, der die Anforderung gesendet hat. |
 |`from.name`| Name des Benutzers, der die Anforderung gesendet hat. |
-|`from.aadObjectId`| Azure Active Directory-Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
+|`from.aadObjectId`| Azure Active Directory Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 |`channelData.tenant.id`| Azure Active Directory Mandanten-ID. |
 |`channelData.source.name`| Der Quellname, von dem aus das Aufgabenmodul aufgerufen wird. |
 |`ChannelData.legacy. replyToId`| Ruft die ID der Nachricht ab, auf die diese Nachricht eine Antwort ist, oder legt sie fest. |
@@ -187,7 +187,7 @@ Die Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul von einem Kanal
 |`name`| Typ des Befehls, der für Ihren Dienst ausgegeben wird. Es muss `composeExtension/fetchTask` sein. |
 |`from.id`| ID des Benutzers, der die Anforderung gesendet hat. |
 |`from.name`| Name des Benutzers, der die Anforderung gesendet hat. |
-|`from.aadObjectId`| Azure Active Directory-Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
+|`from.aadObjectId`| Azure Active Directory Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 |`channelData.tenant.id`| Azure Active Directory Mandanten-ID. |
 |`channelData.channel.id`| Kanal-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
 |`channelData.team.id`| Team-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
@@ -253,7 +253,7 @@ Die Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul über einen Kan
 |`name`| Typ des Befehls, der für Ihren Dienst ausgegeben wird. Es muss `composeExtension/fetchTask` sein. |
 |`from.id`| ID des Benutzers, der die Anforderung gesendet hat. |
 |`from.name`| Name des Benutzers, der die Anforderung gesendet hat. |
-|`from.aadObjectId`| Azure Active Directory-Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
+|`from.aadObjectId`| Azure Active Directory Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 |`channelData.tenant.id`| Azure Active Directory Mandanten-ID. |
 |`channelData.channel.id`| Kanal-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
 |`channelData.team.id`| Team-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
@@ -362,7 +362,7 @@ Die Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul über ein Befeh
 |`name`| Typ des Befehls, der für Ihren Dienst ausgegeben wird. Es muss `composeExtension/fetchTask` sein. |
 |`from.id`| ID des Benutzers, der die Anforderung gesendet hat. |
 |`from.name`| Name des Benutzers, der die Anforderung gesendet hat. |
-|`from.aadObjectId`| Azure Active Directory-Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
+|`from.aadObjectId`| Azure Active Directory Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 |`channelData.tenant.id`| Azure Active Directory Mandanten-ID. |
 |`channelData.source.name`| Der Quellname, von dem aus das Aufgabenmodul aufgerufen wird. |
 |`value.commandId` | Enthält die ID des Befehls, der aufgerufen wurde. |
@@ -628,7 +628,7 @@ Der folgende Codeabschnitt ist ein Beispiel für die `fetchTask` Antwort mit ein
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-In diesem Beispiel wird zusätzlich zum Bot Framework SDK das [AdaptiveCards-NuGet-Paket](https://www.nuget.org/packages/AdaptiveCards) verwendet.
+In diesem Beispiel wird das [AdaptiveCards-NuGet](https://www.nuget.org/packages/AdaptiveCards) zusätzlich zum Bot Framework SDK verwendet.
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -941,8 +941,8 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 | Beispielname           | Beschreibung | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Messagingerweiterungsaktion für Teams| Beschreibt, wie Sie Aktionsbefehle definieren, Aufgabenmodul erstellen und auf Die Absendenaktion des Aufgabenmoduls reagieren. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Suche nach Messagingerweiterungen in Teams   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchbefehle reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams Messagingerweiterungsaktion| Beschreibt, wie Sie Aktionsbefehle definieren, Aufgabenmodul erstellen und auf Die Absendenaktion des Aufgabenmoduls reagieren. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams messaging extension search   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchbefehle reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>Siehe auch
 

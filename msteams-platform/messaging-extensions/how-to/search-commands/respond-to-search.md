@@ -1,7 +1,7 @@
 ---
 title: Antworten auf Suchbefehl
 author: clearab
-description: So reagieren Sie auf den Suchbefehl über eine Messagingerweiterung in einer Microsoft Teams-App.
+description: So reagieren Sie auf den Suchbefehl aus einer Messagingerweiterung in einer Microsoft Teams App.
 ms.topic: conceptual
 ms.author: anclear
 ms.openlocfilehash: 76bccc10763b99d7373e98e6e153c4f4aa51373a
@@ -20,7 +20,7 @@ Nachdem der Benutzer den Suchbefehl übermittelt hat, empfängt ihr Webdienst ei
 * As characters are entered into the search box.
 * `initialRun` in Ihrem App-Manifest auf true festgelegt ist, erhalten Sie die Aufrufnachricht, sobald der Suchbefehl aufgerufen wird. Weitere Informationen finden Sie unter [Standardabfrage](#default-query).
 
-In diesem Dokument erfahren Sie, wie Sie auf Benutzeranforderungen in Form von Karten und Vorschauen reagieren und unter welchen Bedingungen Microsoft Teams eine Standardabfrage aust.
+In diesem Dokument erfahren Sie, wie Sie auf Benutzeranforderungen in Form von Karten und Vorschauen reagieren, und die Bedingungen, unter denen Microsoft Teams standardabfragen.
 
 Die Anforderungsparameter befinden sich im `value` Objekt in der Anforderung, das die folgenden Eigenschaften enthält:
 
@@ -78,7 +78,7 @@ Die folgende JSON wird verkürzt, um die relevantesten Abschnitte zu markieren.
 
 ## <a name="respond-to-user-requests"></a>Reagieren auf Benutzeranforderungen
 
-Wenn der Benutzer eine Abfrage ausführt, stellt Microsoft Teams eine synchrone HTTP-Anforderung an Ihren Dienst aus. An diesem Punkt verfügt Ihr Code über `5` Sekunden, um eine HTTP-Antwort auf die Anforderung zu senden. Während dieser Zeit kann Ihr Dienst zusätzliche Nachschlage- oder sonstige Geschäftslogik ausführen, die für die Anforderung erforderlich ist.
+Wenn der Benutzer eine Abfrage ausführt, Microsoft Teams eine synchrone HTTP-Anforderung an Ihren Dienst aus. An diesem Punkt verfügt Ihr Code über `5` Sekunden, um eine HTTP-Antwort auf die Anforderung zu senden. Während dieser Zeit kann Ihr Dienst zusätzliche Nachschlage- oder sonstige Geschäftslogik ausführen, die für die Anforderung erforderlich ist.
 
 Ihr Dienst muss mit den Ergebnissen antworten, die mit der Benutzerabfrage übereinstimmen. Die Antwort muss einen HTTP-Statuscode von und eine gültige Anwendung oder `200 OK` ein JSON-Objekt mit den folgenden Eigenschaften angeben:
 
@@ -97,22 +97,22 @@ Teams unterstützt die folgenden Kartentypen:
 
 * [Miniaturansichtskarte](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Heldenkarte](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 Connector-Karte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365 Connectorkarte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Karte](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 Ein besseres Verständnis und eine bessere Übersicht über Karten finden Sie unter [Was sind Karten.](~/task-modules-and-cards/what-are-cards.md)
 
 Informationen zur Verwendung der Miniaturansichts- und Heldenkartentypen finden Sie unter [Hinzufügen von Karten und Kartenaktionen.](~/task-modules-and-cards/cards/cards-actions.md)
 
-Weitere Informationen zur Office 365 Connector-Karte finden Sie unter [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+Weitere Informationen zur Office 365 Connectorkarte finden Sie unter [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-Die Ergebnisliste wird in der Benutzeroberfläche von Microsoft Teams mit einer Vorschau der einzelnen Elemente angezeigt. Die Vorschau wird auf eine der beiden Arten generiert:
+Die Ergebnisliste wird in der benutzeroberfläche Microsoft Teams mit einer Vorschau der einzelnen Elemente angezeigt. Die Vorschau wird auf eine der beiden Arten generiert:
 
 * Verwenden der `preview` Eigenschaft innerhalb des `attachment` Objekts. Die `preview` Anlage kann nur eine Hero- oder Miniaturansichtskarte sein.
 * Extrahiert aus den grundlegenden `title` Eigenschaften , und der `text` `image` Anlage. Diese werden nur verwendet, wenn `preview` die Eigenschaft nicht festgelegt ist und diese Eigenschaften verfügbar sind.
 * Die Schaltfläche "Held" oder "Miniaturansicht" und "Tippen" (außer aufrufen) werden auf der Vorschaukarte nicht unterstützt.
 
-Sie können eine Vorschau einer adaptiven Karte oder einer Office 365 Connector-Karte in der Ergebnisliste mit der Vorschaueigenschaft anzeigen. Die Preview-Eigenschaft ist nicht erforderlich, wenn die Ergebnisse bereits Hero- oder Miniaturansichtskarten sind. Wenn Sie die Vorschauanlage verwenden, muss es sich entweder um eine Hero- oder Miniaturansichtskarte geben. Wenn keine Vorschaueigenschaft angegeben ist, schlägt die Vorschau der Karte fehl, und es wird nichts angezeigt.
+Sie können eine Vorschau einer adaptiven Karte oder einer Office 365 in der Ergebnisliste anzeigen, indem Sie die Vorschaueigenschaft verwenden. Die Preview-Eigenschaft ist nicht erforderlich, wenn die Ergebnisse bereits Hero- oder Miniaturansichtskarten sind. Wenn Sie die Vorschauanlage verwenden, muss es sich entweder um eine Hero- oder Miniaturansichtskarte geben. Wenn keine Vorschaueigenschaft angegeben ist, schlägt die Vorschau der Karte fehl, und es wird nichts angezeigt.
 
 ### <a name="response-example"></a>Anforderungsbeispiel
 
@@ -313,7 +313,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## <a name="default-query"></a>Standardabfrage
 
-Wenn Sie im Manifest auf festlegen, gibt Microsoft Teams eine Standardabfrage aus, wenn der Benutzer die `initialRun` `true` Messagingerweiterung zum ersten Mal öffnet.  Ihr Dienst kann auf diese Abfrage mit einer Reihe von vorab ausgefüllten Ergebnissen reagieren. Dies ist hilfreich, wenn ihr Suchbefehl eine Authentifizierung oder Konfiguration erfordert und zuletzt angezeigte Elemente, Favoriten oder andere Informationen, die nicht von benutzereingaben abhängig sind, angezeigt wird.
+Wenn Sie im Manifest auf festgelegt Microsoft Teams eine Standardabfrage aus, wenn der Benutzer die `initialRun` `true` Messagingerweiterung zum ersten Mal öffnet.  Ihr Dienst kann auf diese Abfrage mit einer Reihe von vorab ausgefüllten Ergebnissen reagieren. Dies ist hilfreich, wenn ihr Suchbefehl eine Authentifizierung oder Konfiguration erfordert und zuletzt angezeigte Elemente, Favoriten oder andere Informationen, die nicht von benutzereingaben abhängig sind, angezeigt wird.
 
 Die Standardabfrage hat dieselbe Struktur wie jede normale Benutzerabfrage, und das Feld wird wie im folgenden Objekt dargestellt auf `name` `initialRun` festgelegt und auf `value` `true` festgelegt:
 
@@ -342,8 +342,8 @@ Die Standardabfrage hat dieselbe Struktur wie jede normale Benutzerabfrage, und 
 
 | Beispielname           | Beschreibung | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Messagingerweiterungsaktion für Teams| Beschreibt, wie Sie Aktionsbefehle definieren, Aufgabenmodul erstellen und auf Die Absendenaktion des Aufgabenmoduls reagieren. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Suche nach Messagingerweiterungen in Teams   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchbefehle reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams Messagingerweiterungsaktion| Beschreibt, wie Sie Aktionsbefehle definieren, Aufgabenmodul erstellen und auf Die Absendenaktion des Aufgabenmoduls reagieren. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams messaging extension search   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchbefehle reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>Siehe auch
 

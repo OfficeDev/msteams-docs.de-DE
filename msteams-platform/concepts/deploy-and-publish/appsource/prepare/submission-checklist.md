@@ -1,5 +1,5 @@
 ---
-title: Vorbereiten der Store-Übermittlung
+title: Vorbereiten der Übermittlung an den Store
 description: Beschreibt die letzten Schritte vor dem Übermitteln Microsoft Teams App, die im Store aufgeführt werden soll.
 ms.topic: how-to
 localization_priority: Normal

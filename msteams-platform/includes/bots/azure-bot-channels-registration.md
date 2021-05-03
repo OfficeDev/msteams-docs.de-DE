@@ -29,7 +29,7 @@ ms.locfileid: "52020949"
    
 1. Klicken Sie im angezeigten **App-Registrierungsfenster** **oben** links auf die Registerkarte Neue Registrierung.
 1. Geben Sie den Namen der Botanwendung ein, die Sie registrieren, wir haben *BotTeamsAuth* verwendet (Sie müssen Ihren eigenen eindeutigen Namen auswählen).
-1. Wählen Sie für die unterstützten **Kontotypen** Konten in einem beliebigen Organisationsverzeichnis *(Beliebiges Azure AD-Verzeichnis - Multitenant) und persönlichen Microsoft-Konten (z. B. Skype, Xbox) aus.*
+1. Wählen Sie **für** die unterstützten Kontotypen Konten in einem beliebigen Organisationsverzeichnis *(Beliebiges Azure AD-Verzeichnis - Multitenant) und persönlichen Microsoft-Konten (z. B. Skype, Xbox) aus.*
 1. Klicken Sie auf **die Schaltfläche Registrieren.** Nach Abschluss zeigt Azure die Seite *Übersicht* für die Anwendung an.
 1. Kopieren und speichern Sie in einer Datei den **Application (client)-ID-Wert.**
 1. Klicken Sie im linken Bereich auf **Zertifikat und geheime Schlüssel.**
@@ -46,8 +46,8 @@ Nachdem Azure die Registrierungsressource erstellt hat, wird sie in die Ressourc
 
 ![Registrierungsgruppe für Bot-App-Kanäle](~/assets/images/authentication/auth-bot-channels-registration-group.PNG)
 
-Nachdem Die Registrierung Ihrer Botkanäle erstellt wurde, müssen Sie den Teams-Kanal aktivieren.
+Nachdem Die Registrierung Ihrer Botkanäle erstellt wurde, müssen Sie den Teams aktivieren.
 
 1. Wählen Sie [im Azure-Portal](https://ms.portal.azure.com/#home)unter Azure Services die gerade erstellte **Botkanalregistrierung** aus.
 1. Klicken Sie im linken Bereich auf **Kanäle**.
-1. Klicken Sie auf das Microsoft Teams-Symbol, und wählen Sie **dann Speichern aus.**
+1. Klicken Sie auf Microsoft Teams Symbol, und wählen Sie dann **Speichern aus.**

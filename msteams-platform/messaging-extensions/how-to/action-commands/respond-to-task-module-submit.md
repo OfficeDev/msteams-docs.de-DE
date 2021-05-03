@@ -17,7 +17,7 @@ ms.locfileid: "52019832"
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 In diesem Dokument erfahren Sie, wie Ihre App auf die Aktionsbefehle reagiert, z. B. die Absendenaktion des Aufgabenmoduls des Benutzers.
-Nachdem ein Benutzer das Aufgabenmodul übermittelt hat, empfängt ihr Webdienst eine Aufrufnachricht mit der Befehls-ID `composeExtension/submitAction` und den Parameterwerten. Ihre App hat fünf Sekunden Zeit, um auf den Aufruf zu antworten, andernfalls erhält der Benutzer eine Fehlermeldung Nicht erreichen, und alle Antworten auf den Aufruf werden vom Teams-Client ignoriert.
+Nachdem ein Benutzer das Aufgabenmodul übermittelt hat, empfängt ihr Webdienst eine Aufrufnachricht mit der Befehls-ID `composeExtension/submitAction` und den Parameterwerten. Ihre App hat fünf Sekunden Zeit, um auf den Aufruf zu antworten, andernfalls erhält der Benutzer eine Fehlermeldung Nicht erreichbar, und alle Antworten auf den Aufruf werden vom client-Client Teams ignoriert.
 
 Sie haben die folgenden Optionen, um zu antworten:
 
@@ -544,7 +544,7 @@ In der folgenden Abbildung ist links eine Kartennachricht, die von einem Bot ohn
 
 ![Benutzer-Attributionsbots](../../../assets/images/messaging-extension/user-attribution-bots.png)
 
-Um die Benutzerzuschreibung in Teams zu verwenden, müssen Sie die Erwähnungsentität zu Ihrer Nutzlast hinzufügen, `OnBehalfOf` die an Teams gesendet `ChannelData` `Activity` wird.
+Um die Benutzerzuschreibung in Teams zu verwenden, müssen Sie die Erwähnungsentität in Ihrer Nutzlast hinzufügen, die an `OnBehalfOf` `ChannelData` `Activity` Teams.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet-1)
 
@@ -587,16 +587,16 @@ Der folgende Abschnitt enthält eine Beschreibung der Entitäten im `OnBehalfOf`
 |Feld|Typ|Beschreibung|
 |:---|:---|:---|
 |`itemId`|Ganze Zahl|Beschreibt die Identifikation des Elements. Der Wert muss `0` sein.|
-|`mentionType`|Zeichenfolge|Beschreibt die Erwähnung einer "Person".|
-|`mri`|Zeichenfolge|MrI (Message Resource Identifier) der Person, in deren Auftrag die Nachricht gesendet wird. Der Name des Absenders der Nachricht würde als " bis " \<user\> \<bot name\> angezeigt.|
-|`displayName`|Zeichenfolge|Name der Person. Wird als Fallback verwendet, wenn die Namensauflösung nicht verfügbar ist.|
+|`mentionType`|String|Beschreibt die Erwähnung einer "Person".|
+|`mri`|String|MrI (Message Resource Identifier) der Person, in deren Auftrag die Nachricht gesendet wird. Der Name des Absenders der Nachricht würde als " bis " \<user\> \<bot name\> angezeigt.|
+|`displayName`|String|Name der Person. Wird als Fallback verwendet, wenn die Namensauflösung nicht verfügbar ist.|
   
 ## <a name="code-sample"></a>Codebeispiel
 
 | Beispielname           | Beschreibung | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Messagingerweiterungsaktion für Teams| Beschreibt, wie Sie Aktionsbefehle definieren, Aufgabenmodul erstellen und auf Die Absendenaktion des Aufgabenmoduls reagieren. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Suche nach Messagingerweiterungen in Teams   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchbefehle reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams Messagingerweiterungsaktion| Beschreibt, wie Sie Aktionsbefehle definieren, Aufgabenmodul erstellen und auf Die Absendenaktion des Aufgabenmoduls reagieren. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams messaging extension search   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchbefehle reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Nächster Schritt
 

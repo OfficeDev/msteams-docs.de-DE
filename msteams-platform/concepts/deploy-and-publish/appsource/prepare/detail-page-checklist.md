@@ -191,4 +191,4 @@ Partner Center unterstützt [lokalisierte Store-Einträge](https://docs.microsof
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Vorbereiten der Store-Übermittlung](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+> [Vorbereiten der Übermittlung an den Store](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
