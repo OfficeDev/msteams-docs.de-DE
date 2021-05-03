@@ -1,7 +1,7 @@
 ---
 title: Entfalten von Links
 author: clearab
-description: So führen Sie die Verknüpfungsentschnappung mit der Messagingerweiterung in einer Microsoft Teams-App aus.
+description: Ausführen der Verknüpfungsentschnappung mit der Messagingerweiterung in einer Microsoft Teams App.
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
@@ -12,37 +12,37 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2021
 ms.locfileid: "52075717"
 ---
-# <a name="link-unfurling"></a><span data-ttu-id="a3f69-103">Entfalten von Links</span><span class="sxs-lookup"><span data-stu-id="a3f69-103">Link unfurling</span></span>
+# <a name="link-unfurling"></a><span data-ttu-id="9e32f-103">Entfalten von Links</span><span class="sxs-lookup"><span data-stu-id="9e32f-103">Link unfurling</span></span>
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-<span data-ttu-id="a3f69-104">In diesem Dokument erfahren Sie, wie Sie ihrem App-Manifest mithilfe von App Studio und manuell link unfurling hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="a3f69-104">This document guides you on how to add link unfurling to your app manifest using App studio and manually.</span></span> <span data-ttu-id="a3f69-105">Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden.</span><span class="sxs-lookup"><span data-stu-id="a3f69-105">With link unfurling your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area.</span></span> <span data-ttu-id="a3f69-106">Der enthält die vollständige URL, die in den Bereich "Verfassen von Nachrichten" eingegeben wurde, und Sie können mit einer Karte antworten, die der Benutzer entfurlen kann, und zusätzliche Informationen oder `invoke` Aktionen bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="a3f69-106">The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions.</span></span> <span data-ttu-id="a3f69-107">Dies funktioniert ähnlich wie bei einem Suchbefehl, bei dem die URL als Suchbegriff dient.</span><span class="sxs-lookup"><span data-stu-id="a3f69-107">This works similar to a search command with the URL serving as the search term.</span></span>
+<span data-ttu-id="9e32f-104">In diesem Dokument erfahren Sie, wie Sie ihrem App-Manifest mithilfe von App Studio und manuell link unfurling hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="9e32f-104">This document guides you on how to add link unfurling to your app manifest using App studio and manually.</span></span> <span data-ttu-id="9e32f-105">Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden.</span><span class="sxs-lookup"><span data-stu-id="9e32f-105">With link unfurling your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area.</span></span> <span data-ttu-id="9e32f-106">Der enthält die vollständige URL, die in den Bereich "Verfassen von Nachrichten" eingegeben wurde, und Sie können mit einer Karte antworten, die der Benutzer entfurlen kann, und zusätzliche Informationen oder `invoke` Aktionen bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="9e32f-106">The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions.</span></span> <span data-ttu-id="9e32f-107">Dies funktioniert ähnlich wie bei einem Suchbefehl, bei dem die URL als Suchbegriff dient.</span><span class="sxs-lookup"><span data-stu-id="9e32f-107">This works similar to a search command with the URL serving as the search term.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a3f69-108">Derzeit wird die Verknüpfungsentfurling auf mobilen Clients nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="a3f69-108">Currently, link unfurling is not supported on Mobile clients.</span></span>
+> <span data-ttu-id="9e32f-108">Derzeit wird die Verknüpfungsentfurling auf mobilen Clients nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="9e32f-108">Currently, link unfurling is not supported on Mobile clients.</span></span>
 
-<span data-ttu-id="a3f69-109">Die Azure DevOps-Messagingerweiterung verwendet die Verknüpfungsentwennung, um nach URLs zu suchen, die in den Bereich verfassen von Nachrichten, die auf eine Arbeitsaufgabe zeigen, eingefügt wurden.</span><span class="sxs-lookup"><span data-stu-id="a3f69-109">The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item.</span></span> <span data-ttu-id="a3f69-110">In der folgenden Abbildung hat ein Benutzer eine URL für eine Arbeitsaufgabe in Azure DevOps eingegeben, die die Messagingerweiterung in eine Karte aufgelöst hat:</span><span class="sxs-lookup"><span data-stu-id="a3f69-110">In the following image, a user has pasted a URL for a work item in Azure DevOps, which the messaging extension has resolved into a card:</span></span>
+<span data-ttu-id="9e32f-109">Die Azure DevOps messaging-Erweiterung verwendet die Verknüpfungsentwennung, um nach URLs zu suchen, die in den Bereich verfassen von Nachrichten, die auf eine Arbeitsaufgabe zeigen, eingefügt werden.</span><span class="sxs-lookup"><span data-stu-id="9e32f-109">The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item.</span></span> <span data-ttu-id="9e32f-110">In der folgenden Abbildung hat ein Benutzer eine URL für eine Arbeitsaufgabe in Azure DevOps, die die Messagingerweiterung in eine Karte aufgelöst hat:</span><span class="sxs-lookup"><span data-stu-id="9e32f-110">In the following image, a user has pasted a URL for a work item in Azure DevOps, which the messaging extension has resolved into a card:</span></span>
 
 ![Beispiel für die Verknüpfungsentfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
-## <a name="add-link-unfurling-to-your-app-manifest"></a><span data-ttu-id="a3f69-112">Hinzufügen der Verknüpfungsentfurling zu Ihrem App-Manifest</span><span class="sxs-lookup"><span data-stu-id="a3f69-112">Add link unfurling to your app manifest</span></span>
+## <a name="add-link-unfurling-to-your-app-manifest"></a><span data-ttu-id="9e32f-112">Hinzufügen der Verknüpfungsentfurling zu Ihrem App-Manifest</span><span class="sxs-lookup"><span data-stu-id="9e32f-112">Add link unfurling to your app manifest</span></span>
 
-<span data-ttu-id="a3f69-113">Fügen Sie dem Abschnitt Ihres App-Manifests JSON ein neues Array hinzu, um dem App-Manifest ein neues Array `messageHandlers` `composeExtensions` hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="a3f69-113">To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON.</span></span> <span data-ttu-id="a3f69-114">Sie können das Array entweder mithilfe von App Studio oder manuell hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="a3f69-114">You can add the array either with the help of App Studio or manually.</span></span> <span data-ttu-id="a3f69-115">Domänenauflistungen können Platzhalter enthalten, z. B. `*.example.com` .</span><span class="sxs-lookup"><span data-stu-id="a3f69-115">Domain listings can include wildcards, for example `*.example.com`.</span></span> <span data-ttu-id="a3f69-116">Dies entspricht genau einem Abschnitt der Domäne. wenn Sie übereinstimmen müssen, `a.b.example.com` verwenden Sie `*.*.example.com` .</span><span class="sxs-lookup"><span data-stu-id="a3f69-116">This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.</span></span>
+<span data-ttu-id="9e32f-113">Fügen Sie dem Abschnitt Ihres App-Manifests JSON ein neues Array hinzu, um dem App-Manifest ein neues Array `messageHandlers` `composeExtensions` hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="9e32f-113">To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON.</span></span> <span data-ttu-id="9e32f-114">Sie können das Array entweder mithilfe von App Studio oder manuell hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="9e32f-114">You can add the array either with the help of App Studio or manually.</span></span> <span data-ttu-id="9e32f-115">Domänenauflistungen können Platzhalter enthalten, z. B. `*.example.com` .</span><span class="sxs-lookup"><span data-stu-id="9e32f-115">Domain listings can include wildcards, for example `*.example.com`.</span></span> <span data-ttu-id="9e32f-116">Dies entspricht genau einem Abschnitt der Domäne. wenn Sie übereinstimmen müssen, `a.b.example.com` verwenden Sie `*.*.example.com` .</span><span class="sxs-lookup"><span data-stu-id="9e32f-116">This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a3f69-117">Fügen Sie keine Domänen hinzu, die sich weder direkt noch über Platzhalter in Ihrem Steuerelement befinden.</span><span class="sxs-lookup"><span data-stu-id="a3f69-117">Donot add domains that are not in your control, either directly or through wildcards.</span></span> <span data-ttu-id="a3f69-118">Beispielsweise ist `yourapp.onmicrosoft.com` gültig, aber `*.onmicrosoft.com` nicht gültig.</span><span class="sxs-lookup"><span data-stu-id="a3f69-118">For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.</span></span> <span data-ttu-id="a3f69-119">Außerdem sind Domänen auf oberster Ebene verboten.</span><span class="sxs-lookup"><span data-stu-id="a3f69-119">Also, the top-level domains are prohibited.</span></span> <span data-ttu-id="a3f69-120">Beispiel: `*.com` , `*.org` .</span><span class="sxs-lookup"><span data-stu-id="a3f69-120">For example, `*.com`, `*.org`.</span></span>
+> <span data-ttu-id="9e32f-117">Fügen Sie keine Domänen hinzu, die sich weder direkt noch über Platzhalter in Ihrem Steuerelement befinden.</span><span class="sxs-lookup"><span data-stu-id="9e32f-117">Donot add domains that are not in your control, either directly or through wildcards.</span></span> <span data-ttu-id="9e32f-118">Beispielsweise ist `yourapp.onmicrosoft.com` gültig, aber `*.onmicrosoft.com` nicht gültig.</span><span class="sxs-lookup"><span data-stu-id="9e32f-118">For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.</span></span> <span data-ttu-id="9e32f-119">Außerdem sind Domänen auf oberster Ebene verboten.</span><span class="sxs-lookup"><span data-stu-id="9e32f-119">Also, the top-level domains are prohibited.</span></span> <span data-ttu-id="9e32f-120">Beispiel: `*.com` , `*.org` .</span><span class="sxs-lookup"><span data-stu-id="9e32f-120">For example, `*.com`, `*.org`.</span></span>
 
-### <a name="add-link-unfurling-using-app-studio"></a><span data-ttu-id="a3f69-121">Hinzufügen der Verknüpfungsentfurling mithilfe von App Studio</span><span class="sxs-lookup"><span data-stu-id="a3f69-121">Add link unfurling using App Studio</span></span>
+### <a name="add-link-unfurling-using-app-studio"></a><span data-ttu-id="9e32f-121">Hinzufügen der Verknüpfungsentfurling mithilfe von App Studio</span><span class="sxs-lookup"><span data-stu-id="9e32f-121">Add link unfurling using App Studio</span></span>
 
-1. <span data-ttu-id="a3f69-122">Öffnen **Sie App Studio** im Microsoft Teams-Client, und wählen Sie die Registerkarte **Manifest-Editor** aus.</span><span class="sxs-lookup"><span data-stu-id="a3f69-122">Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.</span></span>
-1. <span data-ttu-id="a3f69-123">Laden Sie Ihr App-Manifest.</span><span class="sxs-lookup"><span data-stu-id="a3f69-123">Load your app manifest.</span></span>
-1. <span data-ttu-id="a3f69-124">Fügen Sie **auf der** Seite Messagingerweiterung die Domäne hinzu, nach der Sie suchen möchten, im Abschnitt **Nachrichtenhandler.**</span><span class="sxs-lookup"><span data-stu-id="a3f69-124">On the **Messaging Extension** page, add the domain that you want to look for in the **Message handlers** section.</span></span> <span data-ttu-id="a3f69-125">In der folgenden Abbildung wird der Vorgang erläutert:</span><span class="sxs-lookup"><span data-stu-id="a3f69-125">The following image explains the process:</span></span>
+1. <span data-ttu-id="9e32f-122">Öffnen **Sie App Studio** im Microsoft Teams Client, und wählen Sie die Registerkarte **Manifest-Editor** aus.</span><span class="sxs-lookup"><span data-stu-id="9e32f-122">Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.</span></span>
+1. <span data-ttu-id="9e32f-123">Laden Sie Ihr App-Manifest.</span><span class="sxs-lookup"><span data-stu-id="9e32f-123">Load your app manifest.</span></span>
+1. <span data-ttu-id="9e32f-124">Fügen Sie **auf der** Seite Messagingerweiterung die Domäne hinzu, nach der Sie suchen möchten, im Abschnitt **Nachrichtenhandler.**</span><span class="sxs-lookup"><span data-stu-id="9e32f-124">On the **Messaging Extension** page, add the domain that you want to look for in the **Message handlers** section.</span></span> <span data-ttu-id="9e32f-125">In der folgenden Abbildung wird der Vorgang erläutert:</span><span class="sxs-lookup"><span data-stu-id="9e32f-125">The following image explains the process:</span></span>
 
     ![Abschnitt "message handlers" in App Studio](~/assets/images/link-unfurling.png)
     
-### <a name="add-link-unfurling-manually"></a><span data-ttu-id="a3f69-127">Manuelles Hinzufügen der Verknüpfungsentfurling</span><span class="sxs-lookup"><span data-stu-id="a3f69-127">Add link unfurling manually</span></span>
+### <a name="add-link-unfurling-manually"></a><span data-ttu-id="9e32f-127">Manuelles Hinzufügen der Verknüpfungsentfurling</span><span class="sxs-lookup"><span data-stu-id="9e32f-127">Add link unfurling manually</span></span>
 
-<span data-ttu-id="a3f69-128">Damit Ihre Messagingerweiterung mit Links interagieren kann, müssen Sie zuerst das `messageHandlers` Array zu Ihrem App-Manifest hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="a3f69-128">To enable your messaging extension to interact with links, first you must add the `messageHandlers` array to your app manifest.</span></span> <span data-ttu-id="a3f69-129">Im folgenden Beispiel wird erläutert, wie Sie die Verknüpfung manuell entfernen:</span><span class="sxs-lookup"><span data-stu-id="a3f69-129">The following example explains how to add link unfurling manually:</span></span> 
+<span data-ttu-id="9e32f-128">Damit Ihre Messagingerweiterung mit Links interagieren kann, müssen Sie zuerst das `messageHandlers` Array zu Ihrem App-Manifest hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="9e32f-128">To enable your messaging extension to interact with links, first you must add the `messageHandlers` array to your app manifest.</span></span> <span data-ttu-id="9e32f-129">Im folgenden Beispiel wird erläutert, wie Sie die Verknüpfung manuell entfernen:</span><span class="sxs-lookup"><span data-stu-id="9e32f-129">The following example explains how to add link unfurling manually:</span></span> 
 
 
 ```json
@@ -65,22 +65,22 @@ ms.locfileid: "52075717"
 ...
 ```
 
-<span data-ttu-id="a3f69-130">Ein vollständiges Manifestbeispiel finden Sie unter [Manifestreferenz](~/resources/schema/manifest-schema.md).</span><span class="sxs-lookup"><span data-stu-id="a3f69-130">For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).</span></span>
+<span data-ttu-id="9e32f-130">Ein vollständiges Manifestbeispiel finden Sie unter [Manifestreferenz](~/resources/schema/manifest-schema.md).</span><span class="sxs-lookup"><span data-stu-id="9e32f-130">For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).</span></span>
 
-## <a name="handle-the-composeextensionquerylink-invoke"></a><span data-ttu-id="a3f69-131">Behandeln des `composeExtension/queryLink` Aufrufs</span><span class="sxs-lookup"><span data-stu-id="a3f69-131">Handle the `composeExtension/queryLink` invoke</span></span>
+## <a name="handle-the-composeextensionquerylink-invoke"></a><span data-ttu-id="9e32f-131">Behandeln des `composeExtension/queryLink` Aufrufs</span><span class="sxs-lookup"><span data-stu-id="9e32f-131">Handle the `composeExtension/queryLink` invoke</span></span>
 
-<span data-ttu-id="a3f69-132">Nachdem Sie die Domäne zum App-Manifest hinzugefügt haben, müssen Sie den Webdienstcode aktualisieren, um die Aufrufanforderung zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="a3f69-132">After adding the domain to the app manifest, you must update your web service code to handle the invoke request.</span></span> <span data-ttu-id="a3f69-133">Verwenden Sie die empfangene URL, um Ihren Dienst zu durchsuchen und eine Kartenantwort zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="a3f69-133">Use the received URL to search your service and create a card response.</span></span> <span data-ttu-id="a3f69-134">Wenn Sie mit mehreren Karten antworten, wird nur die erste Kartenantwort verwendet.</span><span class="sxs-lookup"><span data-stu-id="a3f69-134">If you respond with more than one card, only the first card response is used.</span></span>
+<span data-ttu-id="9e32f-132">Nachdem Sie die Domäne zum App-Manifest hinzugefügt haben, müssen Sie den Webdienstcode aktualisieren, um die Aufrufanforderung zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="9e32f-132">After adding the domain to the app manifest, you must update your web service code to handle the invoke request.</span></span> <span data-ttu-id="9e32f-133">Verwenden Sie die empfangene URL, um Ihren Dienst zu durchsuchen und eine Kartenantwort zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="9e32f-133">Use the received URL to search your service and create a card response.</span></span> <span data-ttu-id="9e32f-134">Wenn Sie mit mehreren Karten antworten, wird nur die erste Kartenantwort verwendet.</span><span class="sxs-lookup"><span data-stu-id="9e32f-134">If you respond with more than one card, only the first card response is used.</span></span>
 
-<span data-ttu-id="a3f69-135">Die folgenden Kartentypen werden unterstützt:</span><span class="sxs-lookup"><span data-stu-id="a3f69-135">The following card types are supported:</span></span>
+<span data-ttu-id="9e32f-135">Die folgenden Kartentypen werden unterstützt:</span><span class="sxs-lookup"><span data-stu-id="9e32f-135">The following card types are supported:</span></span>
 
-* [<span data-ttu-id="a3f69-136">Miniaturansichtskarte</span><span class="sxs-lookup"><span data-stu-id="a3f69-136">Thumbnail card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [<span data-ttu-id="a3f69-137">Heldenkarte</span><span class="sxs-lookup"><span data-stu-id="a3f69-137">Hero card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [<span data-ttu-id="a3f69-138">Office 365 Connector-Karte</span><span class="sxs-lookup"><span data-stu-id="a3f69-138">Office 365 Connector card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
-* [<span data-ttu-id="a3f69-139">Adaptive Karte</span><span class="sxs-lookup"><span data-stu-id="a3f69-139">Adaptive Card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+* [<span data-ttu-id="9e32f-136">Miniaturansichtskarte</span><span class="sxs-lookup"><span data-stu-id="9e32f-136">Thumbnail card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [<span data-ttu-id="9e32f-137">Heldenkarte</span><span class="sxs-lookup"><span data-stu-id="9e32f-137">Hero card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [<span data-ttu-id="9e32f-138">Office 365 Connectorkarte</span><span class="sxs-lookup"><span data-stu-id="9e32f-138">Office 365 Connector card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [<span data-ttu-id="9e32f-139">Adaptive Karte</span><span class="sxs-lookup"><span data-stu-id="9e32f-139">Adaptive Card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-### <a name="example"></a><span data-ttu-id="a3f69-140">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a3f69-140">Example</span></span>
+### <a name="example"></a><span data-ttu-id="9e32f-140">Beispiel</span><span class="sxs-lookup"><span data-stu-id="9e32f-140">Example</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="a3f69-141">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="a3f69-141">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="9e32f-141">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="9e32f-141">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
@@ -100,7 +100,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQue
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="a3f69-142">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="a3f69-142">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="9e32f-142">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="9e32f-142">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
@@ -123,9 +123,9 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="a3f69-143">Json</span><span class="sxs-lookup"><span data-stu-id="a3f69-143">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="9e32f-143">Json</span><span class="sxs-lookup"><span data-stu-id="9e32f-143">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="a3f69-144">Im Folgenden finden Sie ein Beispiel für die an `invoke` Ihren Bot gesendeten:</span><span class="sxs-lookup"><span data-stu-id="a3f69-144">Following is an example of the `invoke` sent to your bot:</span></span>
+<span data-ttu-id="9e32f-144">Im Folgenden finden Sie ein Beispiel für die an `invoke` Ihren Bot gesendeten:</span><span class="sxs-lookup"><span data-stu-id="9e32f-144">Following is an example of the `invoke` sent to your bot:</span></span>
 
 ```json
 {
@@ -137,7 +137,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 }
 ```
 
-<span data-ttu-id="a3f69-145">Im Folgenden finden Sie ein Beispiel für die Antwort:</span><span class="sxs-lookup"><span data-stu-id="a3f69-145">Following is an example of the response:</span></span>
+<span data-ttu-id="9e32f-145">Im Folgenden finden Sie ein Beispiel für die Antwort:</span><span class="sxs-lookup"><span data-stu-id="9e32f-145">Following is an example of the response:</span></span>
 
 ```json
 {
@@ -176,6 +176,6 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 * * *
 
-## <a name="see-also"></a><span data-ttu-id="a3f69-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a3f69-146">See also</span></span> 
+## <a name="see-also"></a><span data-ttu-id="9e32f-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9e32f-146">See also</span></span> 
 
-[<span data-ttu-id="a3f69-147">Karten</span><span class="sxs-lookup"><span data-stu-id="a3f69-147">Cards</span></span>](~/task-modules-and-cards/what-are-cards.md)
+[<span data-ttu-id="9e32f-147">Karten</span><span class="sxs-lookup"><span data-stu-id="9e32f-147">Cards</span></span>](~/task-modules-and-cards/what-are-cards.md)
