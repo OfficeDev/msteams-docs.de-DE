@@ -5,12 +5,12 @@ ms.topic: how-to
 localization_priority: Normal
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: d46d21c3d984b5688c00857e485210b0f0fcf2c7
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: f73e36ca0587768421daf60229d0a241cae171e1
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101681"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230939"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Vorbereiten der Microsoft Teams Speicherübermittlung
 

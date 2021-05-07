@@ -4,18 +4,18 @@ description: Geschwindigkeitsbegrenzung und bewährte Methoden in Microsoft Team
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Beschränkung der Rate von Teams-Bots
-ms.openlocfilehash: 23d75e7df021a5c746c4dd23d848ac085294c160
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3b8f80efa50d2fbf44162aec13994b747b9bd7ac
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020898"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230960"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimieren eines Bots mit Ratenbegrenzung in Teams
 
 Die Geschwindigkeitsbegrenzung ist eine Methode, um Nachrichten auf eine bestimmte maximale Häufigkeit zu beschränken. Als allgemeines Prinzip muss Ihre Anwendung die Anzahl der Von ihr gesendeten Nachrichten auf eine einzelne Chat- oder Kanal unterhaltung beschränken. Dadurch wird eine optimale Benutzererfahrung sichergestellt, und Nachrichten werden ihren Benutzern nicht als Spam angezeigt.
 
-Zum Schutz von Microsoft Teams und seinen Benutzern bieten die Bot-APIs eine Geschwindigkeitsbeschränkung für eingehende Anforderungen. Apps, die diesen Grenzwert überschreiten, erhalten einen `HTTP 429 Too Many Requests` Fehlerstatus. Alle Anforderungen unterliegen der gleichen Richtlinie zur Begrenzung der Rate, einschließlich des Sendens von Nachrichten, Kanalaufzählungen und Abrufen von Dienstplans.
+Zum Schutz Microsoft Teams und seiner Benutzer bieten die Bot-APIs eine Geschwindigkeitsbegrenzung für eingehende Anforderungen. Apps, die diesen Grenzwert überschreiten, erhalten einen `HTTP 429 Too Many Requests` Fehlerstatus. Alle Anforderungen unterliegen der gleichen Richtlinie zur Begrenzung der Rate, einschließlich des Sendens von Nachrichten, Kanalaufzählungen und Abrufen von Dienstplans.
 
 Da sich die genauen Werte der Zinsgrenzen ändern können, muss Ihre Anwendung das entsprechende Backoff-Verhalten implementieren, wenn die API `HTTP 429 Too Many Requests` zurückgibt.
 
@@ -80,7 +80,7 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
     }
 ```
 
-Sie können Backoff- und Wiederholungsversuche mithilfe der [vorübergehenden Fehlerbehandlung ausführen.](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29) Richtlinien zum Abrufen und Installieren des NuGet-Pakets finden Sie unter Hinzufügen des Anwendungsblocks für die vorübergehende [Fehlerbehandlung zu Ihrer Lösung.](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN) Siehe auch [vorübergehende Fehlerbehandlung](/azure/architecture/best-practices/transient-faults).
+Sie können Backoff- und Wiederholungsversuche mithilfe der [vorübergehenden Fehlerbehandlung ausführen.](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29) Richtlinien zum Abrufen und Installieren des NuGet finden Sie unter Hinzufügen des Anwendungsblocks für vorübergehende Fehlerbehandlung [zu Ihrer Lösung](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN). Siehe auch [vorübergehende Fehlerbehandlung](/azure/architecture/best-practices/transient-faults).
 
 Nachdem Sie das Beispiel zum Erkennen vorübergehender Ausnahmen durchgehen, gehen Sie durch das exponentielle Backoff-Beispiel. Sie können exponentielles Backoff verwenden, anstatt Fehler erneut zu wiederholen.
 
@@ -109,7 +109,7 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 Sie können auch eine Methodenausführung mit der in diesem Abschnitt beschriebenen `System.Action` Wiederholungsrichtlinie ausführen. Mit der referenzierten Bibliothek können Sie auch ein festes Intervall oder einen linearen Backoffmechanismus angeben.
 
-Speichern Sie den Wert und die Strategie in einer Konfigurationsdatei, um Werte zur Laufzeit zu optimieren und zu optimieren.
+Store wert und strategie in einer Konfigurationsdatei, um Werte zur Laufzeit zu optimieren und zu optimieren.
 
 Weitere Informationen finden Sie unter [Wiederholungsmuster](/azure/architecture/patterns/retry).
 
@@ -121,7 +121,7 @@ Der Grenzwert pro Bot pro Thread steuert den Datenverkehr, den ein Bot in einer 
 
 >[!NOTE]
 > * Der Threadgrenzwert von 3600 Sekunden und 1800 Vorgängen gilt nur, wenn mehrere Botnachrichten an einen einzelnen Benutzer gesendet werden. 
-> * Der globale Grenzwert pro App pro Mandant beträgt 30 Anforderungen pro Sekunde (RPS). Daher darf die Gesamtzahl der Botnachrichten pro Sekunde nicht die Threadbegrenzung überschreiten.
+> * Der globale Grenzwert pro App pro Mandant beträgt 50 Anforderungen pro Sekunde (RPS). Daher darf die Gesamtzahl der Botnachrichten pro Sekunde nicht die Threadbegrenzung überschreiten.
 > * Die Nachrichtenteilung auf Dienstebene führt zu einem höheren RpS als erwartet. Wenn Sie sich Sorgen machen, die Grenzwerte zu überschreiten, müssen Sie die [Backoff-Strategie implementieren.](#backoff-example) Die in diesem Abschnitt angegebenen Werte sind nur zur Schätzung vorgesehen.
 
 In der folgenden Tabelle sind die Grenzwerte pro Bot pro Thread aufgeführt:

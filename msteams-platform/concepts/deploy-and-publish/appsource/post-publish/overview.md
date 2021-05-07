@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 57b57e268a4f2eafc14d0372b8b8383e410a80d5
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 8e4656ea7ca9f373123026a50ecb837d1a64e3fa
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101751"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230917"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Verwalten Der veröffentlichten Microsoft Teams App
 
@@ -58,4 +58,4 @@ Erstellen Sie den Link mit der folgenden URL, die mit Ihrer App-ID angefügt ist
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Monetarisieren Sie Ihre App über den Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)
+[Monetarisieren Sie Ihre App über den Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

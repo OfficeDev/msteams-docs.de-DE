@@ -4,12 +4,12 @@ description: Beschreibt die Optionen für die Veröffentlichung Microsoft Teams 
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: 81a266d0bdaf2a65651dc1beca171b72cf1a20a6
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: b321fee132b23556dcc8299cdbbf6fb5d6ccd3cf
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101900"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230911"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Verteilen Ihrer Microsoft Teams App
 
@@ -47,4 +47,4 @@ Weitere Informationen finden Sie unter [Publish to the Teams store](~/concepts/d
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Erstellen Ihres App-Pakets](~/concepts/build-and-test/apps-package.md)
+> [Konfigurieren der Standardmäßigen Installationsoptionen der App](~/concepts/deploy-and-publish/add-default-install-scope.md)

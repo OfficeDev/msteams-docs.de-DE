@@ -4,12 +4,12 @@ description: Beschreibt die Richtlinien, die jede an den Teams (AppSource) über
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: b4b9260be2a92c3a9029acf89b2eadae60a8fc7a
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: df60cf9e4a173186fbacacc90621c2efb23ba17f
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101919"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230925"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams richtlinien für die Speicherüberprüfung
 
@@ -31,6 +31,7 @@ Der Name einer App spielt eine wichtige Rolle bei der Benutzerentkung im Store. 
 * Wenn Ihre App Teil einer offiziellen Partnerschaft mit Microsoft ist, muss der Name Ihrer App zuerst kommen (z. B. **Contoso Connector für Microsoft Teams**).
 * Darf nicht den Namen einer App kopieren, die im Store oder in einem anderen Angebot auf dem kommerziellen Marktplatz aufgeführt ist.
 * Darf keine profanen oder abfälligen Begriffe enthalten. Der Name darf auch keine rassistisch oder kulturell unempfindliche Sprache enthalten.
+* Muss eindeutig sein. Sie können beispielsweise nicht mehrere Apps für verschiedene Regionen mit demselben Namen und derselben Funktionalität auflisten.
 
 Siehe auch: [4.0-App-Paket und Store-Eintrag](#40-app-package-and-store-listing)
 

@@ -4,18 +4,26 @@ description: Beschreibt, wie Sie die Standardinstallationsoptionen Ihrer App ang
 ms.topic: how-to
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 0afcce50a4779421016c23c4ec4e3d25cc3401d1
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 561a4f2910e703db5ffce6176f6177dfd661d2ce
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058614"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230932"
 ---
-# <a name="add-a-default-install-scope-and-group-capability"></a>Hinzufügen eines Standardinstallationsbereichs und einer Gruppenfunktion
+# <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>Konfigurieren von Standardinstallationsoptionen für Ihre Microsoft Teams App
 
 Es ist üblich, dass eine App mehrere Szenarien in Teams unterstützt, aber Sie haben sie möglicherweise mit einem bestimmten Umfang und einer bestimmten Funktion entworfen. Wenn Ihre App z. B. hauptsächlich für die Team- oder Kanalnutzung bestimmt ist, können Sie sicherstellen, dass die erste Installationsoption, die Benutzern im Store angezeigt wird, Zu einem Team **hinzufügen ist.**
 
-![Eine App hinzufügen](../../assets/images/compose-extensions/addanapp.png)
+:::row:::
+   :::column span="2":::
+
+![Hinzufügen eines App-Dropdownbeispiels](../../assets/images/compose-extensions/addanapp.png)
+
+   :::column-end:::
+   :::column span="2":::
+   :::column-end:::
+:::row-end:::
 
 Wenn die primäre Funktion Ihrer App ein Bot ist, können Sie den Bot auch zur Standardfunktion machen, wenn ein Benutzer Ihre App in einem Team installiert.
 
@@ -65,4 +73,4 @@ Konfigurieren Sie die Standardfunktion, wenn Ihre App für ein Team, eine Bespre
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Auswählen, wie Ihre App verbreitet werden soll](overview.md)
+> [Erstellen Ihres App-Pakets](~/concepts/build-and-test/apps-package.md)
