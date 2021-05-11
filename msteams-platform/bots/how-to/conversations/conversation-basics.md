@@ -16,7 +16,7 @@ ms.locfileid: "52020035"
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Eine Unterhaltung ist eine Reihe von Nachrichten, die zwischen Ihrem Microsoft Teams-Bot und einem oder mehreren Benutzern gesendet werden. Die folgende Tabelle enthält die drei Arten von Unterhaltungen, die auch als Bereiche in Teams bezeichnet werden:
+Eine Unterhaltung ist eine Reihe von Nachrichten, die zwischen Ihrem Microsoft Teams und einem oder mehreren Benutzern gesendet werden. Die folgende Tabelle enthält die drei Arten von Unterhaltungen, die auch als Bereiche in der Teams:
 
 | Unterhaltungstyp | Beschreibung |
 | ------- | ----------- |
@@ -31,7 +31,7 @@ Ein Bot verhält sich abhängig von der Unterhaltung, an der er beteiligt ist, u
 
 Damit der Bot in einer bestimmten Unterhaltung oder einem bestimmten Bereich funktioniert, fügen Sie diesem Bereich unterstützung im [App-Manifest hinzu.](~/resources/schema/manifest-schema.md)
 
-Jede Nachricht in einer Bot-Unterhaltung ist ein `Activity` Objekt vom Typ `messageType: message` . Wenn ein Benutzer eine Nachricht sendet, sendet Teams die Nachricht an Ihren Bot, und der Bot verarbeitet die Nachricht. Darüber hinaus können Sie ein Befehlsmenü mit einer Dropdownliste mit Befehlen für Ihren Bot hinzufügen, um kerne Befehle zu definieren, auf die Ihr Bot antwortet. Bots in einer Gruppe oder einem Kanal empfangen nachrichten nur, wenn sie @botname. Teams sendet Benachrichtigungen an Ihren Bot für Unterhaltungsereignisse, die in Bereiche auftreten, in denen Ihr Bot aktiv ist. Sie können diese Ereignisse in Ihrem Code erfassen und Aktionen für diese Ereignisse ergreifen. 
+Jede Nachricht in einer Bot-Unterhaltung ist ein `Activity` Objekt vom Typ `messageType: message` . Wenn ein Benutzer eine Nachricht sendet, sendet Teams die Nachricht an Ihren Bot, und der Bot verarbeitet die Nachricht. Darüber hinaus können Sie ein Befehlsmenü mit einer Dropdownliste mit Befehlen für Ihren Bot hinzufügen, um kerne Befehle zu definieren, auf die Ihr Bot antwortet. Bots in einer Gruppe oder einem Kanal empfangen nachrichten nur, wenn sie @botname. Teams sendet Benachrichtigungen an Ihren Bot für Unterhaltungsereignisse, die in Denkbereiche auftreten, in denen Ihr Bot aktiv ist. Sie können diese Ereignisse in Ihrem Code erfassen und Aktionen für diese Ereignisse ergreifen. 
 
 Ein Bot kann auch proaktive Nachrichten an Benutzer senden. Eine proaktive Nachricht ist jede Nachricht, die von einem Bot gesendet wird, die nicht auf eine Anforderung eines Benutzers reagiert. Sie können Ihre Botnachrichten so formatieren, dass sie umfangreiche Karten enthalten, die interaktive Elemente wie Schaltflächen, Text, Bilder, Audio, Video und so weiter enthalten. Bot kann Nachrichten nach dem Senden dynamisch aktualisieren, anstatt Ihre Nachrichten als statische Momentaufnahmen von Daten zu verwenden. Nachrichten können auch mit der Bot Framework-Methode gelöscht `DeleteActivity` werden.
 

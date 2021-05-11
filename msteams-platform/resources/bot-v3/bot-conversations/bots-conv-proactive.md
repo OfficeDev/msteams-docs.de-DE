@@ -1,6 +1,6 @@
 ---
 title: Proaktive Nachrichten
-description: Beschreibt, wie Bots eine Unterhaltung in Microsoft Teams starten können
+description: Beschreibt, wie Bots eine Unterhaltung in einem Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams scenarios proactive messaging conversation bot
@@ -49,29 +49,29 @@ Wenn Sie proaktives Messaging zum Senden von Benachrichtigungen verwenden, müss
 
 * **Was ist passiert.** Ein eindeutiger Hinweis darauf, was die Benachrichtigung verursacht hat.
 * **Was passiert ist.** Es sollte klar sein, welche Elemente/Elemente aktualisiert wurden, um die Benachrichtigung zu verursachen.
-* **Wer hat es gemacht.** Die Aktion, die dazu führte, dass die Benachrichtigung gesendet wurde.
+* **Wer hat es getan.** Wer die Aktion, die dazu führte, dass die Benachrichtigung gesendet wurde.
 * **Was sie dazu tun können.** Machen Sie es Ihren Benutzern leicht, Aktionen basierend auf Ihren Benachrichtigungen zu ergreifen.
 * **Wie sie sich abmelden können.** Sie müssen einen Pfad für Benutzer bereitstellen, um zusätzliche Benachrichtigungen abmelden zu können.
 
 ## <a name="obtain-necessary-user-information"></a>Abrufen der erforderlichen Benutzerinformationen
 
-Bots können neue Unterhaltungen mit einem einzelnen Microsoft Teams-Benutzer erstellen, indem sie die eindeutige ID und *Mandanten-ID* des Benutzers *abrufen.* Sie können diese Werte mithilfe einer der folgenden Methoden abrufen:
+Bots können neue Unterhaltungen mit einem Microsoft Teams erstellen, indem sie die eindeutige ID und *Mandanten-ID* des Benutzers *abrufen.* Sie können diese Werte mithilfe einer der folgenden Methoden abrufen:
 
 * Durch [Abrufen der Teamliste](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) aus einem Kanal, in dem Ihre App installiert ist.
 * Durch Zwischenspeichern, wenn ein Benutzer [mit Ihrem Bot in einem Kanal interagiert.](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)
 * Wenn ein Benutzer @mentioned [in einer Kanal unterhaltung](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions) ist, ist der Bot Ein Teil davon.
 * Durch Zwischenspeichern, wenn Sie [das Ereignis `conversationUpdate` ](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) empfangen, wenn Ihre App in einem persönlichen Bereich installiert ist, oder neue Mitglieder zu einem Kanal oder Gruppenchat hinzugefügt werden, der
 
-### <a name="proactively-install-your-app-using-graph"></a>Proaktive Installation Ihrer App mithilfe von Graph
+### <a name="proactively-install-your-app-using-graph"></a>Proaktiv installieren Sie Ihre App mithilfe Graph
 
 > [!Note]
 > Die proaktive Installation von Apps mithilfe von Graph befindet sich derzeit in der Betaversion.
 
-Gelegentlich ist es möglicherweise erforderlich, Benutzer proaktiv zu entsenden, die ihre App zuvor nicht installiert oder mit ihr interagiert haben. Beispielsweise möchten Sie den Unternehmens [communicator](~/samples/app-templates.md#company-communicator) verwenden, um Nachrichten an Ihre gesamte Organisation zu senden. In diesem Szenario können Sie die Graph-API verwenden, um Ihre App proaktiv für Ihre Benutzer zu installieren, und dann die erforderlichen Werte aus dem Ereignis zwischenspeichern, das Ihre App bei der Installation `conversationUpdate` erhält.
+Gelegentlich ist es möglicherweise erforderlich, Benutzer proaktiv zu entsenden, die ihre App zuvor nicht installiert oder mit ihr interagiert haben. Beispielsweise möchten Sie den Unternehmens [communicator](~/samples/app-templates.md#company-communicator) verwenden, um Nachrichten an Ihre gesamte Organisation zu senden. Für dieses Szenario können Sie die Graph-API verwenden, um Ihre App proaktiv für Ihre Benutzer zu installieren, und dann die erforderlichen Werte aus dem Ereignis zwischenspeichern, das Ihre App bei der Installation `conversationUpdate` erhält.
 
-Sie können nur Apps installieren, die sich im Katalog Ihrer Organisations-App oder im Teams-App-Store befinden.
+Sie können nur Apps installieren, die sich im App-Katalog Ihrer Organisation oder im Teams befinden.
 
-Ausführliche [Informationen finden Sie unter Installieren](/graph/teams-proactive-messaging) von Apps für Benutzer in der Graph-Dokumentation. Es gibt auch ein [Beispiel in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
+Ausführliche Informationen finden Sie unter Install [apps for users](/graph/teams-proactive-messaging) in Graph dokumentation. Es gibt auch ein [Beispiel in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
 ## <a name="examples"></a>Beispiele
 
@@ -109,7 +109,7 @@ Diese ID ist die eindeutige Unterhaltungs-ID des persönlichen Chats. Speichern 
 
 ### <a name="using-net"></a>Verwenden von .NET
 
-In diesem Beispiel wird das [Microsoft.Bot.Connector.Teams-NuGet-Paket](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) verwendet.
+In diesem Beispiel wird das [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet verwendet.
 
 ```csharp
 // Create or get existing chat conversation with user

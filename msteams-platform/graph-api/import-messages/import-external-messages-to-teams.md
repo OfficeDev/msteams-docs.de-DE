@@ -1,6 +1,6 @@
 ---
-title: Importieren externer Plattformnachrichten in Teams mithilfe von Microsoft Graph
-description: Beschreibt die Verwendung von Microsoft Graph zum Importieren von Nachrichten von einer externen Plattform in Teams
+title: Verwenden von Microsoft Graph zum Importieren externer Plattformnachrichten in Teams
+description: Beschreibt, wie Sie Microsoft Graph verwenden, um Nachrichten von einer externen Plattform zu Teams
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
@@ -15,7 +15,7 @@ ms.locfileid: "51403969"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Plattform-Nachrichten von Drittanbietern mithilfe von Microsoft Graph in Teams importieren
 
-Mit Microsoft Graph können Sie den vorhandenen Nachrichtenverlauf und die Daten von Benutzern aus einem externen System in einen Teams-Kanal migrieren. Durch die Aktivierung der Neugestaltung einer Drittanbieterplattform-Messaginghierarchie in Teams können Benutzer ihre Kommunikation nahtlos fortsetzen und ohne Unterbrechung fortfahren.
+Mit Microsoft Graph können Sie den vorhandenen Nachrichtenverlauf und die Daten von Benutzern aus einem externen System in einen Teams migrieren. Durch die Aktivierung der Neugestaltung einer Drittanbieterplattform-Messaginghierarchie innerhalb von Teams können Benutzer ihre Kommunikation nahtlos fortsetzen und ohne Unterbrechung fortfahren.
 
 > [!NOTE] 
 > Microsoft kann in Zukunft von Ihnen oder Ihren Kunden fordern, basierend auf der Menge der importierten Daten, zusätzliche Gebühren zu zahlen.
@@ -36,13 +36,13 @@ Auf einer hohen Ebene besteht der Importvorgang aus folgendem:
 
 ✔ Überprüfen Sie die Daten von Drittanbietern, um zu entscheiden, was migriert wird.  
 ✔ Die ausgewählten Daten aus dem Drittanbieterchatsystem extrahieren.  
-✔ Ordnen Sie die Chatstruktur eines Drittanbieters der Teams-Struktur zu.  
+✔ Ordnen Sie die Chatstruktur eines Drittanbieters der Teams zu.  
 ✔ Importieren von Daten in das für die Migration benötigte Format konvertieren.  
 
 ### <a name="set-up-your-office-365-tenant"></a>Einrichten des Office 365-Mandanten
 
-✔ Stellen Sie sicher, dass ein Office 365-Mandant für die Importdaten vorhanden ist. Weitere Informationen zum Einrichten eines Office 365-Mandanten für Teams finden Sie *unter* Prepare [your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
-✔ Stellen Sie sicher, dass sich Teammitglieder in Azure Active Directory (AAD) befinden.  Weitere Informationen finden *Sie unter* [Hinzufügen eines neuen Benutzers](/azure/active-directory/fundamentals/add-users-azure-active-directory) zu Azure Active Directory.
+✔ Stellen Sie sicher, dass Office 365 Mandanten für die Importdaten vorhanden ist. Weitere Informationen zum Einrichten eines mandanten Office 365 Mandanten für Teams finden Sie unter *Prepare* your [Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
+✔ Stellen Sie sicher, dass sich Teammitglieder in Azure Active Directory (AAD) befinden.  Weitere Informationen finden *Sie unter* Hinzufügen eines [neuen Benutzers](/azure/active-directory/fundamentals/add-users-azure-active-directory) zu Azure Active Directory.
 
 ## <a name="step-one-create-a-team"></a>Schritt 1: Erstellen eines Teams
 
@@ -318,7 +318,7 @@ HTTP/1.1 204 NoContent
 
 ## <a name="step-five-add-team-members"></a>Schritt 5: Hinzufügen von Teammitgliedern
 
-Sie können einem Team ein Mitglied mithilfe der [Teams-UI](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) oder der Microsoft Graph [Add-Mitglieds-API](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) hinzufügen hinzufügen:
+Sie können einem Team [](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) ein Mitglied mithilfe der benutzeroberfläche Teams oder microsoft Graph [Hinzufügen von Mitglied-API](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) hinzufügen:
 
 #### <a name="request-add-member"></a>Anforderung (Mitglied hinzufügen)
 
@@ -372,6 +372,6 @@ HTTP/1.1 204 No Content
 ||Übergreifende Beiträge zwischen Kanälen|
 
 
-## <a name="see-also"></a>Mehr dazu
+## <a name="see-also"></a>Siehe auch
 > [!div class="nextstepaction"]
-> [Weitere Informationen zur Integration von Microsoft Graph und Teams](/graph/teams-concept-overview)
+> [Erfahren Sie mehr über microsoft Graph und Teams Integration](/graph/teams-concept-overview)

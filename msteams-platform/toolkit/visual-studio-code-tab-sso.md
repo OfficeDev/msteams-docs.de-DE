@@ -1,6 +1,6 @@
 ---
 title: Einmalige Anmeldung mit Teams Toolkit und Visual Studio Code für Registerkarten
-description: Erstellen einer Registerkarte, die einmaliges Anmelden und Microsoft Graph-Aufrufe direkt in Visual Studio Code mit dem Microsoft Teams Toolkit unterstützt
+description: Erstellen einer Registerkarte, die einmaliges Anmelden unterstützt, und Microsoft Graph aufruft direkt innerhalb Visual Studio Code mit dem Microsoft Teams Toolkit
 keywords: Registerkarten des visual studio code toolkits sso graph authentication Azure identity platform
 localization_priority: Normal
 ms.topic: how-to
@@ -14,7 +14,7 @@ ms.locfileid: "52018425"
 ---
 # <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>Einmalige Anmeldung mit Teams Toolkit und Visual Studio Code für Registerkarten
 
-Mit dem Microsoft Teams Toolkit können Sie die einmalige Anmeldung (Single Sign-On, SSO)-Authentifizierung für Registerkarten-Apps direkt innerhalb Visual Studio erstellen. Das Toolkit führt Sie durch den Prozess und bietet alles, was Sie benötigen, einschließlich der Bereitstellung Ihrer Microsoft Identity Platform-Registrierung im Azure-Portal.
+Mit Microsoft Teams Toolkit können Sie die einmalige Anmeldung (Single Sign-On, SSO)-Authentifizierung für Registerkarten-Apps direkt innerhalb Visual Studio Code. Das Toolkit führt Sie durch den Prozess und bietet alles, was Sie benötigen, einschließlich der Bereitstellung Microsoft Identity Platform Registrierung im Azure-Portal.
 
 ## <a name="get-started--create-a-project"></a>Erste Schritte – Erstellen eines Projekts
 
@@ -23,11 +23,11 @@ Mit dem Microsoft Teams Toolkit können Sie die einmalige Anmeldung (Single Sign
 1. Wählen Sie die Option aus, um SSO zu unterstützen.
 
 > [!TIP]
-> Nach der Installation sollte das Teams Toolkit in der Visual Studio Code-Aktivitätsleiste angezeigt werden. Wenn nicht, klicken Sie mit der rechten Maustaste in der Aktivitätsleiste, und wählen **Sie Microsoft Teams aus,** um das Toolkit für den einfachen Zugriff anheften.
+> Nach der Installation sollte das Teams Toolkit in der Visual Studio Code angezeigt werden. Wenn nicht, klicken Sie mit der  rechten Maustaste in der Aktivitätsleiste, und wählen Microsoft Teams, um das Toolkit für den einfachen Zugriff anheften.
 
 ## <a name="configure-your-project"></a>Konfigurieren Ihres Projekts
 
-1. Um SSO in Teams zu aktivieren, muss Ihre App über eine Azure-App-Registrierungsressource verfügen. Das Teams Toolkit stellt die App-Registrierung in Ihrem Namen zur Bereitstellung.
+1. Um SSO innerhalb Teams zu aktivieren, muss Ihre App über eine Azure-App-Registrierungsressource verfügen. Das Teams Toolkit stellt die App-Registrierung in Ihrem Namen zur Bereitstellung.
 1. Geben Sie die URL ein, in der Ihre App gehostet wird, und wählen Sie als **Nächstes aus.** Ihre App-Registrierung wird mithilfe der bereitgestellten URL konfiguriert.
 1. Die Konfigurationsdetails der App-Registrierung werden in den Dateien im Quellcode Ihres `.env` Projekts gespeichert.
 
@@ -41,7 +41,7 @@ Wenn Sie mehr darüber erfahren möchten, wie Ihre Azure-App-Registrierung berei
 1. Wählen **Sie npm install** aus dem Ordner `api-server` aus. Starten Sie **dann npm.**
 1. Wählen **Sie npm install** aus dem Ordner `.src` aus. Starten Sie **dann npm.**
 1. Wenn Sie einen Tunneldienst wie [ngrok](https://ngrok.com/)verwenden, führen Sie ihn aus, und stellen Sie sicher, dass die URL mit dem entspricht, was Sie im Assistenten zum Erstellen des Projekts eingegeben haben. Andern falls nicht, müssen Sie Ihren _API-URI_ aktualisieren und _die URL_ in der app-Registrierung umleiten, die in Azure erstellt wurde.
-1. Navigieren Sie zur Aktivitätsleiste auf der linken Seite des Visual Studio Codefensters.
+1. Navigieren Sie zur Aktivitätsleiste auf der linken Seite des Visual Studio Code Fensters.
 1. Wählen Sie das **Symbol Ausführen** aus, um die Ansicht Ausführen **und Debuggen anzeigen.**
 1. Sie können auch die Tastenkombination **STRG+Umschalt+D verwenden.**
 

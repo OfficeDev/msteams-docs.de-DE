@@ -1,7 +1,7 @@
 ---
 title: Eine Messaging-Erweiterung mit App Studio erstellen
 author: clearab
-description: Erfahren Sie, wie Sie eine Microsoft Teams-Messagingerweiterung mit App Studio erstellen.
+description: Erfahren Sie, wie Sie eine Microsoft Teams mit App Studio erstellen.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
@@ -25,7 +25,7 @@ Auf einer hohen Ebene müssen Sie die folgenden Schritte ausführen, um eine Mes
 4. Erstellen Ihres App-Pakets
 5. Hochladen Ihres Pakets in Microsoft Teams
 
-Das Erstellen Ihres Webdiensts, das Erstellen Ihres App-Pakets und die Registrierung Ihres Webdiensts beim Bot Framework können in beliebiger Reihenfolge durchgeführt werden. Da diese drei Teile so miteinander verwoben sind, müssen Sie unabhängig von der Reihenfolge, in der Sie sie tun, zurückkehren, um die anderen zu aktualisieren. Ihre Registrierung benötigt den Messagingendpunkt von Ihrem bereitgestellten Webdienst, und Ihr Webdienst benötigt die ID und das Kennwort, die aus Ihrer Registrierung erstellt wurden. Ihr App-Manifest benötigt diese ID auch, um Teams mit Ihrem Webdienst zu verbinden.
+Das Erstellen Ihres Webdiensts, das Erstellen Ihres App-Pakets und die Registrierung Ihres Webdiensts beim Bot Framework können in beliebiger Reihenfolge durchgeführt werden. Da diese drei Teile so miteinander verwoben sind, müssen Sie unabhängig von der Reihenfolge, in der Sie sie tun, zurückkehren, um die anderen zu aktualisieren. Ihre Registrierung benötigt den Messagingendpunkt von Ihrem bereitgestellten Webdienst, und Ihr Webdienst benötigt die ID und das Kennwort, die aus Ihrer Registrierung erstellt wurden. Ihr App-Manifest benötigt diese ID auch, um Teams Webdienst zu verbinden.
 
 Während Sie Ihre Messagingerweiterung erstellen, wechseln Sie regelmäßig zwischen dem Ändern des App-Manifests und der Bereitstellung von Code in Ihrem Webdienst. Beachten Sie bei der Arbeit mit dem App-Manifest, dass Sie die JSON-Datei manuell bearbeiten oder Änderungen über App Studio vornehmen können. So oder so müssen Sie Ihre App in Teams erneut bereitstellen (hochladen), wenn Sie eine Änderung am Manifest vornehmen. Dies ist jedoch nicht nötig, wenn Sie Änderungen an Ihrem Webdienst bereitstellen.
 
@@ -37,16 +37,16 @@ Das Herzstück Ihrer Messagingerweiterung ist Ihr Webdienst. Es wird eine einzel
 
 * Verwenden Sie eines unserer [Schnellstart-Lernprogramme,](#learn-more) die Sie durch die Erstellung Ihres Webdiensts führen.
 * Wählen Sie eines der Messagingerweiterungsbeispiele aus, die im Bot Framework-Beispielrepository zum Starten verfügbar sind. [](https://github.com/Microsoft/BotBuilder-Samples)
-* Wenn Sie JavaScript verwenden, verwenden Sie den [Yeoman-Generator für Microsoft Teams,](https://github.com/OfficeDev/generator-teams) um Ihre Teams-App einschließlich Ihres Webdiensts zu gerüsten.
+* Wenn Sie JavaScript verwenden, verwenden Sie den [Yeoman-Generator](https://github.com/OfficeDev/generator-teams) für Microsoft Teams, um Ihre Teams-App, einschließlich Ihres Webdiensts, zu gerüsten.
 * Erstellen Sie Ihren Webdienst von Grund auf neu. Sie können das Bot Framework-SDK für Ihre Sprache hinzufügen oder direkt mit den JSON-Nutzlasten arbeiten.
 
 ## <a name="register-your-web-service-with-the-bot-framework"></a>Registrieren Ihres Webdiensts bei Bot Framework
 
-Messagingerweiterungen nutzen das Messagingschema und das sichere Kommunikationsprotokoll von Bot Framework. Wenn Sie noch nicht über einen verfügen, müssen Sie Ihren Webdienst im Bot Framework registrieren. Die Microsoft App-ID (wir bezeichnen dies als Ihre Bot-ID von innerhalb von Teams, um sie von anderen App-IDs zu identifizieren, mit der Sie möglicherweise arbeiten) und der Messagingendpunkt, mit dem Sie sich beim Bot Framework registrieren, werden in Ihrer Messagingerweiterung zum Empfangen und Beantworten von Anforderungen verwendet. Wenn Sie eine vorhandene Registrierung verwenden, stellen Sie sicher, dass Sie [den Microsoft Teams-Kanal aktivieren.](/azure/bot-service/bot-service-manage-channels.md?view=azure-bot-service-4.0&preserve-view=true)
+Messagingerweiterungen nutzen das Messagingschema und das sichere Kommunikationsprotokoll von Bot Framework. Wenn Sie noch nicht über einen verfügen, müssen Sie Ihren Webdienst im Bot Framework registrieren. Die Microsoft App-ID (wir bezeichnen dies als Ihre Bot-ID von innen von Teams, um sie von anderen App-IDs zu identifizieren, mit der Sie möglicherweise arbeiten) und der Messagingendpunkt, mit dem Sie sich beim Bot Framework registrieren, wird in Ihrer Messagingerweiterung zum Empfangen und Beantworten von Anforderungen verwendet. Wenn Sie eine vorhandene Registrierung verwenden, stellen Sie sicher, dass Sie [den Microsoft Teams aktivieren.](/azure/bot-service/bot-service-manage-channels.md?view=azure-bot-service-4.0&preserve-view=true)
 
 Wenn Sie einem der Schnellstarts folgen oder von einem der verfügbaren Beispiele starten, werden Sie durch die Registrierung Ihres Webdiensts geführt. Wenn Sie Ihren Dienst manuell registrieren möchten, haben Sie drei Möglichkeiten dazu. Wenn Sie sich ohne Verwendung eines Azure-Abonnements registrieren möchten, können Sie den vereinfachten OAuth-Authentifizierungsfluss, der vom Bot Framework bereitgestellt wird, nicht nutzen. Sie können Ihre Registrierung nach der Erstellung zu Azure migrieren.
 
-* Wenn Sie über ein Azure-Abonnement verfügen (oder ein neues erstellen möchten), können Sie Ihren Webdienst manuell über das Azure-Portal registrieren. Erstellen Sie eine Ressource "Bot Channels Registration". Sie können die kostenlose Preisebene auswählen, da Nachrichten von Microsoft Teams nicht auf Ihre zulässigen Gesamtnachrichten pro Monat gezählt werden.
+* Wenn Sie über ein Azure-Abonnement verfügen (oder ein neues erstellen möchten), können Sie Ihren Webdienst manuell über das Azure-Portal registrieren. Erstellen Sie eine Ressource "Bot Channels Registration". Sie können die kostenlose Preisebene auswählen, da Nachrichten von Microsoft Teams nicht auf Ihre zulässigen Gesamtnachrichten pro Monat angezählt werden.
 * Wenn Sie kein Azure-Abonnement verwenden möchten, können Sie das [Legacyregistrierungsportal verwenden.](https://dev.botframework.com/bots/new)
 * App Studio kann Ihnen auch bei der Registrierung Ihres Webdiensts (Bot) helfen. Webdienste, die über App Studio registriert sind, sind nicht in Azure registriert. Mit dem [Legacyportal können](https://dev.botframework.com/bots) Sie Ihre Registrierungen anzeigen, verwalten und migrieren.
 
@@ -56,7 +56,7 @@ Sie können Ihr App-Manifest entweder in App Studio oder manuell erstellen.
 
 ### <a name="create-your-app-manifest-using-app-studio"></a>Erstellen Ihres App-Manifests mithilfe von App Studio
 
-Sie können die App Studio-App aus dem Microsoft Teams-Client verwenden, um Ihr App-Manifest zu erstellen.
+Sie können die App Studio-App innerhalb des Microsoft Teams verwenden, um Ihr App-Manifest zu erstellen.
 
 1. Öffnen Sie App Studio im Teams-Client aus dem **...**-Überlaufmenü auf der linken Navigationsleiste. Wenn es noch nicht installiert ist, können Sie dies tun, indem Sie danach suchen.
 2. Wählen Sie **auf der Registerkarte Manifest-Editor** die Option **Neue** App erstellen aus (oder wenn Sie einer vorhandenen App eine Messagingerweiterung hinzufügen, können Sie Ihr App-Paket importieren)
@@ -71,7 +71,7 @@ Auf der Registerkarte Finish => Test  and **distribute** können Sie Ihr App-Pak
 
 ### <a name="create-your-app-manifest-manually"></a>Manuelles Erstellen des App-Manifests
 
-Wie bei Bots und Registerkarten aktualisieren Sie das [App-Manifest](~/resources/schema/manifest-schema.md#composeextensions) Ihrer App so, dass die Nachrichtenerweiterungseigenschaften enthalten sind. Diese Eigenschaften steuern, wie Ihre Messagingerweiterung angezeigt wird und wie sie sich im Microsoft Teams-Client verhält. Messagingerweiterungen werden ab Version 1.0 des Manifests unterstützt.
+Wie bei Bots und Registerkarten aktualisieren Sie das [App-Manifest](~/resources/schema/manifest-schema.md#composeextensions) Ihrer App so, dass die Nachrichtenerweiterungseigenschaften enthalten sind. Diese Eigenschaften steuern, wie Ihre Messagingerweiterung angezeigt wird und sich im Microsoft Teams verhält. Messagingerweiterungen werden ab Version 1.0 des Manifests unterstützt.
 
 #### <a name="declare-your-messaging-extension"></a>Deklarieren der Messagingerweiterung
 
@@ -84,8 +84,8 @@ Die Erweiterungsdefinition ist ein Objekt mit der folgenden Struktur:
 
 | Eigenschaftenname | Zweck | Pflichtfeld? |
 |---|---|---|
-| `botId` | Die eindeutige Microsoft-App-ID für den Bot, wie bei Bot Framework registriert. Dies sollte in der Regel mit der ID ihrer gesamten Teams-App identisch sein. | Ja |
-| `canUpdateConfiguration` | Aktiviert **das Menüelement** Einstellungen. | Nein |
+| `botId` | Die eindeutige Microsoft-App-ID für den Bot, wie bei Bot Framework registriert. Dies sollte in der Regel identisch mit der ID für Ihre Teams sein. | Ja |
+| `canUpdateConfiguration` | Aktiviert **Einstellungen** Menüelement. | Nein |
 | `commands` | Array von Befehlen, die von dieser Messagingerweiterung unterstützt werden. Sie sind auf 10 Befehle beschränkt. | Ja |
 
 #### <a name="define-your-commands"></a>Definieren von Befehlen
@@ -227,12 +227,12 @@ Das folgende Beispiel ist ein einfaches Messagingerweiterungsobjekt im App-Manif
 
 Wenn Ihre Benutzer Ihre Messagingerweiterung auslösen, müssen Sie die anfängliche Aufrufnachricht verarbeiten, einige Informationen vom Benutzer sammeln, diese Informationen verarbeiten und entsprechend reagieren. Zu diesem Schritt müssen Sie zunächst entscheiden, welche Art von BefehlEn Sie [](~/messaging-extensions/how-to/action-commands/define-action-command.md) Ihrer Messagingerweiterung hinzufügen möchten, und entweder einen Aktionsbefehl hinzufügen oder [suchbefehle hinzufügen.](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
-## <a name="messaging-extensions-in-teams-meetings"></a>Messagingerweiterungen in Teams-Besprechungen
+## <a name="messaging-extensions-in-teams-meetings"></a>Messagingerweiterungen in Teams Besprechungen
 
 > [!NOTE]
-> Wenn in einem Besprechungs- oder Gruppenchat Verbundbenutzer im Dienstplan stehen, unterdrückt Teams den Zugriff auf Messagingerweiterungen für alle Benutzer, einschließlich des Organisators.
+> Wenn ein Besprechungs- oder Gruppenchat Verbundbenutzer im Teams, unterdrückt Teams Zugriff auf Messagingerweiterungen für alle Benutzer, einschließlich des Organisators.
 
-Sobald eine Besprechung beginnt, können Teams-Teilnehmer während eines Liveanrufs direkt mit Ihrer Messagingerweiterung interagieren. Berücksichtigen Sie beim Erstellen Der Messagingerweiterung in Besprechungen Folgendes:
+Sobald eine Besprechung beginnt, Teams Teilnehmer während eines Liveanrufs direkt mit Ihrer Messagingerweiterung interagieren. Berücksichtigen Sie beim Erstellen Der Messagingerweiterung in Besprechungen Folgendes:
 
 1. **Location**. Ihre Messagingerweiterung kann aus dem Bereich "Nachricht verfassen", dem Befehlsfeld oder @mentioned besprechungschat aufgerufen werden.
 
@@ -259,7 +259,7 @@ Testen Sie es in einem Schnellstart:
   * [Messagingerweiterung mit aktionsbasierten Befehlen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [Messagingerweiterung mit suchbasierten Befehlen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
-Weitere Informationen zu Teams-Entwicklungskonzepten:
+Erfahren Sie mehr über Teams Entwicklungskonzepte:
 
-* [Verstehen der Funktionen von Teams-Apps](../concepts/capabilities-overview.md)
+* [Verstehen Teams App-Funktionen](../concepts/capabilities-overview.md)
 * [Was sind Messaging-Erweiterungen?](../messaging-extensions/what-are-messaging-extensions.md)

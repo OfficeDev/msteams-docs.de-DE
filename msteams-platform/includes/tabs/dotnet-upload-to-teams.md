@@ -1,67 +1,67 @@
-## <a name="upload-your-tab-to-teams-with-app-studio"></a>Hochladen der Registerkarte in Microsoft Teams mit App Studio
+## <a name="upload-your-tab-to-teams-with-app-studio"></a>Hochladen Ihrer Registerkarte, um Teams App Studio zu verwenden
 
 >[!NOTE]
-> Wir verwenden App Studio, um Ihre **Manifest. JSON** -Datei zu bearbeiten und das abgeschlossene Paket in Microsoft Teams hochzuladen. Sie können die Datei " **Manifest. JSON** " auch manuell bearbeiten, wenn Sie dies bevorzugen. Wenn Sie dies tun, müssen Sie die Lösung erneut erstellen, um die Datei **"Tab. zip"** zu erstellen, die hochgeladen werden soll.
+> Wir verwenden App Studio, um Ihre **manifest.jsdatei zu** bearbeiten und das fertige Paket in das Teams. Sie können die Datei auch manuellmanifest.js **on-Datei** bearbeiten, wenn Sie es vorziehen. Wenn Sie dies tun, stellen Sie sicher, dass Sie die Lösung erneut erstellen, um die **tab.zip** hochzuladen.
 
-- Öffnen Sie den Microsoft Teams-Client. Wenn Sie die [webbasierte Version](https://teams.microsoft.com) verwenden, können Sie den Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md)Ihres Browsers überprüfen.
+- Öffnen Sie den Microsoft Teams Client. Wenn Sie die [webbasierte Version verwenden,](https://teams.microsoft.com) können Sie Ihren Front-End-Code mithilfe der Entwicklertools Ihres Browsers [überprüfen.](~/tabs/how-to/developer-tools.md)
 
-- Öffnen Sie die APP Studio-app, und wählen Sie die Registerkarte **Manifest-Editor** aus.
+- Öffnen Sie die App Studio-App, und wählen Sie die **Registerkarte Manifest-Editor** aus.
 
-- Wählen Sie die Kachel **Importieren einer vorhandenen APP** im Manifest-Editor aus, um mit der Aktualisierung des App-Pakets für Ihre Registerkarte zu beginnen. Der Quellcode enthält ein eigenes teilweise vollständiges Manifest. Der Name Ihres App-Pakets lautet **Tab. zip**. Es sollte hier gefunden werden:
+- Wählen Sie **die Kachel Vorhandene App importieren** im Manifest-Editor aus, um mit der Aktualisierung des App-Pakets für Ihre Registerkarte zu beginnen. Der Quellcode verfügt über ein eigenes teilweise vollständiges Manifest. Der Name Ihres App-Pakets **isttab.zip.** Sie sollte hier gefunden werden:
 
 ```bash
 /bin/Debug/netcoreapp2.2/tab.zip
 ```
 
-- Upload **Tab. zip** in App Studio.
+- Hochladen **tab.zip** App Studio.
 
-### <a name="update-your-app-package-with-manifest-editor"></a>Aktualisieren des App-Pakets mit dem Manifest-Editor
+### <a name="update-your-app-package-with-manifest-editor"></a>Aktualisieren Des App-Pakets mit dem Manifest-Editor
 
-Nachdem Sie Ihr App-Paket in App Studio hochgeladen haben, müssen Sie die Konfiguration fertig stellen.
+Nachdem Sie Ihr App-Paket in App Studio hochgeladen haben, müssen Sie die Konfiguration abgeschlossen haben.
 
-- Wählen Sie die Kachel für Ihre neu importierte Registerkarte im rechten Bereich der Willkommensseite des Manifest-Editors aus.
+- Wählen Sie die Kachel für die neu importierte Registerkarte im rechten Bereich der Willkommensseite des Manifest-Editors aus.
 
-Auf der linken Seite des Manifest-Editors finden Sie eine Liste mit Schritten und auf der rechten Seite eine Liste mit Eigenschaften, die für jeden dieser Schritte Werte enthalten müssen. Ein Großteil der Informationen wurde von Ihrem *Manifest. JSON* bereitgestellt, aber es gibt ein paar Felder, die Sie aktualisieren müssen:
+Es gibt eine Liste der Schritte auf der linken Seite des Manifest-Editors und auf der rechten Seite eine Liste der Eigenschaften, die Werte für jeden dieser Schritte aufweisen müssen. Viele der Informationen wurden von Ihremmanifest.js *bereitgestellt,* aber es gibt einige Felder, die Sie aktualisieren müssen:
 
 #### <a name="details-app-details"></a>Details: App-Details
 
-- Wählen Sie unter *Identifikation* **generieren** aus, um eine neue APP-ID für Ihre APP zu generieren.
+- Wählen *Sie unter Identifikation* die Option **Generieren** aus, um eine neue App-ID für Ihre App zu generieren.
 
-- Aktualisieren Sie unter *Entwickler Informationen* das Feld **Website-URL** mit Ihrer *ngrok* -HTTPS-URL.
+- Aktualisieren *Sie unter Entwicklerinformationen* das **Feld Website-URL** mit Ihrer *ngrok-HTTPS-URL.*
 
-- Aktualisieren Sie unter *App* `https://<yourngrokurl>/privacy` -URLs die **Datenschutzbestimmungen** und **Nutzungsbedingungen** für `https://<yourngrokurl>/tou`>.
+- Aktualisieren *Sie unter App-URLs* **die Datenschutzerklärung** auf `https://<yourngrokurl>/privacy` und die **Nutzungsbedingungen** für `https://<yourngrokurl>/tou`>.
 
 #### <a name="capabilities-tabs"></a>Funktionen: Registerkarten
 
-Im Abschnitt *Tabs* :
+Im Abschnitt *Registerkarten:*
 
-- Wählen Sie unter *Team Tab* die Option **Hinzufügen**aus.
+- Wählen *Sie unter Registerkarte Team* die Option Hinzufügen **aus.**
 
-- Aktualisieren Sie im Popupfenster der Registerkarte "Team" die Konfigurations `https://<yourngrokurl>/tab`- *URL* auf.
+- Aktualisieren Sie im Popupfenster team tab die *Konfigurations-URL auf* `https://<yourngrokurl>/tab` .
 
-- Stellen Sie schließlich sicher, dass die *Konfiguration aktualisiert werden kann? Team*-und *Gruppenchat* Felder werden überprüft, und wählen Sie **Speichern**aus.
+- Stellen Sie schließlich sicher, dass *die Konfiguration aktualisiert werden kann? Die Chatfelder Team* und *Gruppe* werden aktiviert, und wählen Sie **Speichern aus.**
 
-#### <a name="finish-domains-and-permissions"></a>Fertig stellen: Domänen und Berechtigungen
+#### <a name="finish-domains-and-permissions"></a>Finish: Domänen und Berechtigungen
 
-Im Abschnitt *Domains and Permissions* sollte die *Domäne aus Ihrem Registerkarten* Feld Ihre ngrok- `<yourngrokurl>.ngrok.io/`URL ohne das Präfix "https" enthalten.
+Im Abschnitt *Domänen und Berechtigungen* sollte das Feld Domänen aus Ihrem *Registerkartenfeld* Ihre ngrok-URL ohne das HTTPS-Präfix - `<yourngrokurl>.ngrok.io/` enthalten.
 
-#### <a name="finish-test-and-distribute"></a>Fertig stellen: Testen und verteilen
+#### <a name="finish-test-and-distribute"></a>Finish: Testen und Verteilen
 
 >[!IMPORTANT]
->Im Feld **Beschreibung** auf der rechten Seite wird die folgende Warnung angezeigt:
+>Im **Feld Beschreibung** auf der rechten Seite wird die folgende Warnung angezeigt:
 >
->&#9888; "**das Array" validDomains "kann keine Tunneling-Website enthalten...**"
+>&#9888; "**The 'validDomains' array cannot contain a tunneling site...**"
 >
->Diese Warnung kann beim Testen der Registerkarte ignoriert werden.
+>Diese Warnung kann beim Testen ihrer Registerkarte ignoriert werden.
 
-Im Abschnitt *Testen und verteilen* :
+Im Abschnitt *Test and distribute:*
 
-- **Installieren** auswählen.
+- Wählen Sie **Installieren** aus.
 
-- Geben Sie in das Popupfenster *Hinzufügen zu einem Team oder Chat* Feld Ihr Team ein, und wählen Sie **Installieren**aus.
+- Geben Sie im Popupfenster Hinzufügen zu einem Team oder *Chatfeld* Ihr Team ein, und wählen Sie **Installieren aus.**
 
-- Wählen Sie im nächsten Popupfenster den Team Kanal aus, in dem die Registerkarte angezeigt werden soll, und wählen Sie **Einrichten**aus.
+- Wählen Sie im nächsten Popupfenster den Teamkanal aus, in dem die Registerkarte angezeigt werden soll, und wählen **Sie Einrichten aus.**
 
-- Wählen Sie im letzten Popupfenster einen Wert für die Registerkartenseite aus (entweder ein rotes oder graues Symbol), und wählen Sie **Speichern**aus.
+- Wählen Sie im letzten Popupfenster einen Wert für die Registerkarte aus (entweder ein rotes oder graues Symbol), und wählen Sie **Speichern aus.**
 
-Navigieren Sie zum Anzeigen der Registerkarte zu dem Team, auf dem Sie es installiert haben, und wählen Sie es in der Registerkartenleiste aus. Die Seite, die Sie während der Konfiguration ausgewählt haben, sollte angezeigt werden.
+Navigieren Sie zum Anzeigen Ihrer Registerkarte zu dem Team, in dem Sie sie installiert haben, und wählen Sie sie in der Registerkartenleiste aus. Die Seite, die Sie während der Konfiguration ausgewählt haben, sollte angezeigt werden.

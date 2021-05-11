@@ -15,9 +15,9 @@ ms.locfileid: "52019552"
 # <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Schnellstart: Erstellen einer benutzerdefinierten persönlichen Registerkarte mit Node.js und dem Yeoman-Generator für Microsoft Teams
 
 >[!NOTE]
->Dieser Schnellstart folgt den Schritten im [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki im Microsoft OfficeDev GitHub-Repository.
+>Dieser Schnellstart folgt den Schritten, die im Wiki zum Erstellen der ersten [Microsoft Teams-App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) im Microsoft OfficeDev-Repository GitHub sind.
 
-In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten persönlichen Registerkarte mithilfe des [Teams Yeoman-Generators gehen.](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wir laden die Anwendung auch in Team hoch.
+In dieser Schnellstartanleitung werden wir durch das Erstellen einer benutzerdefinierten persönlichen Registerkarte mithilfe des Teams [Yeoman-Generators gehen.](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wir laden die Anwendung auch in Team hoch.
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
@@ -111,7 +111,7 @@ Um Ihre persönliche Registerkarte zu sehen, wechseln Sie zu `http://localhost:3
 
 ## <a name="establish-a-secure-tunnel-to-your-tab"></a>Einrichten eines sicheren Tunnels für Ihre Registerkarte
 
-Microsoft Teams ist ein vollständig cloudbasiertes Produkt und erfordert, dass Ihre Registerkarteninhalte über HTTPS-Endpunkte in der Cloud verfügbar sind. Teams lässt kein lokales Hosting zu, daher müssen Sie Ihre Registerkarte entweder in einer öffentlichen URL veröffentlichen oder einen Proxy verwenden, der Ihren lokalen Port für eine mit dem Internet zugängliche URL verfügbar macht.
+Microsoft Teams ist ein vollständig cloudbasiertes Produkt und erfordert, dass Ihre Registerkarteninhalte über HTTPS-Endpunkte in der Cloud verfügbar sind. Teams lokales Hosting ist nicht zulässig, daher müssen Sie Ihre Registerkarte entweder in einer öffentlichen URL veröffentlichen oder einen Proxy verwenden, der Ihren lokalen Port für eine mit dem Internet zugängliche URL verfügbar macht.
 
 Zum Testen der Tabulatorerweiterung verwenden Sie [ngrok](https://ngrok.com/docs), das in diese Anwendung integrierte. Ngrok ist ein Reverseproxy-Softwaretool, das einen Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten Ihres lokal ausgeführten Webservers erstellt. Die Webendpunkte Ihres Servers stehen während der aktuellen Sitzung auf Dem lokalen Computer zur Verfügung. Wenn der Computer heruntergefahren wird oder in den Ruhezustand geht, ist der Dienst nicht mehr verfügbar.
 
@@ -122,15 +122,15 @@ gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> Nachdem Ihre Registerkarte in Microsoft Teams hochgeladen, über *ngrok* und erfolgreich gespeichert wurde, können Sie sie in Teams anzeigen, bis Ihre Tunnelsitzung endet.
+> Nachdem Ihre Registerkarte in Microsoft Teams hochgeladen, über *ngrok* und erfolgreich gespeichert wurde, können Sie sie in der Teams, bis Ihre Tunnelsitzung endet.
 
-## <a name="upload-your-application-to-teams"></a>Hochladen Ihrer Anwendung in Teams
+## <a name="upload-your-application-to-teams"></a>Hochladen Ihre Anwendung zu Teams
 
-- Öffnen Sie den Microsoft Teams-Client. Wenn Sie die [webbasierte Version verwenden,](https://teams.microsoft.com) können Sie Ihren Front-End-Code mithilfe der Entwicklertools Ihres Browsers [überprüfen.](~/tabs/how-to/developer-tools.md)
+- Öffnen Sie den Microsoft Teams Client. Wenn Sie die [webbasierte Version verwenden,](https://teams.microsoft.com) können Sie Ihren Front-End-Code mithilfe der Entwicklertools Ihres Browsers [überprüfen.](~/tabs/how-to/developer-tools.md)
 - Wählen Sie *im Bereich YourTeams* auf der linken Seite das Menü neben dem Team aus, das Sie zum Testen Ihrer Registerkarte verwenden, und `...` wählen Sie Team verwalten **aus.**
-- Wählen Sie im Hauptbereich **apps** aus der Registerkartenleiste aus, und wählen Sie Hochladen einer benutzerdefinierten **App** in der unteren rechten Ecke der Seite aus.
-- Öffnen Sie Ihr Projektverzeichnis, navigieren Sie zum **Ordner ./package,** wählen Sie den Ordner "ZIP" aus, klicken Sie mit der rechten Maustaste, und wählen Sie **Öffnen aus.** Ihre Registerkarte wird in Teams hochgeladen.
+- Wählen Sie im Hauptbereich **apps** aus der Registerkartenleiste aus, und wählen **Hochladen** eine benutzerdefinierte App in der unteren rechten Ecke der Seite aus.
+- Öffnen Sie Ihr Projektverzeichnis, navigieren Sie zum **Ordner ./package,** wählen Sie den Ordner "ZIP" aus, klicken Sie mit der rechten Maustaste, und wählen Sie **Öffnen aus.** Ihre Registerkarte wird in Teams.
 
 ## <a name="view-your-personal-tabs"></a>Anzeigen Ihrer persönlichen Registerkarten
 
-Wählen Sie in der Navigationsleiste ganz links neben dem Teams-Client das Menü aus, und wählen Sie Ihre `...` App aus der Liste aus.
+Wählen Sie in der Navigationsleiste ganz links neben dem client Teams das Menü aus, und wählen Sie ihre `...` App aus der Liste aus.

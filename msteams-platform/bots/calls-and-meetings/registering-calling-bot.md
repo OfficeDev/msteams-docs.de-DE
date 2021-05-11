@@ -1,6 +1,6 @@
 ---
 title: Registrieren von Anrufen und Besprechungen für Microsoft Teams
-description: Informationen zum Registrieren eines neuen Audio-/Videoanruf-Bots für Microsoft Teams
+description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanruf-Bot für Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Aufrufen von Audio-/Videovideomedien für Bots
@@ -15,16 +15,16 @@ ms.locfileid: "52020148"
 
 Ein Bot, der an Audio- oder Videoanrufen und Onlinebesprechungen teil nimmt, ist ein regulärer Microsoft Teams-Bot mit den folgenden zusätzlichen Funktionen, die zum Registrieren des Bots verwendet werden:
 
-* Es gibt eine neue Version des Teams-App-Manifests mit zwei zusätzlichen Einstellungen `supportsCalling` und `supportsVideo` . Diese Einstellungen sind in der [Entwicklervorschauversion](../../resources/dev-preview/developer-preview-intro.md) des Teams-App-Manifests enthalten.
-* [Microsoft Graph-Berechtigungen](./registering-calling-bot.md#add-graph-permissions) müssen für die Microsoft App-ID Ihres Bots konfiguriert werden.
-* Die Zugriffsberechtigungen für Graph-Anrufe und Onlinebesprechungen erfordern die Zustimmung des Mandantenadministrators.
+* Es gibt eine neue Version des Teams-App-Manifests mit zwei zusätzlichen `supportsCalling` Einstellungen und `supportsVideo` . Diese Einstellungen sind in der [Entwicklervorschauversion](../../resources/dev-preview/developer-preview-intro.md) des Teams-App-Manifests enthalten.
+* [Microsoft Graph Berechtigungen](./registering-calling-bot.md#add-graph-permissions) müssen für die Microsoft App-ID Ihres Bots konfiguriert werden.
+* Die Graph- und Onlinebesprechungs-APIs erfordern die Zustimmung des Mandantenadministrators.
 
 ## <a name="new-manifest-settings"></a>Neue Manifesteinstellungen
 
-Anrufe und Onlinebesprechungsbots verfügen über die folgenden zwei zusätzlichen Einstellungen manifest.js, die Audio oder Video für Ihren Bot in Teams aktivieren.
+Anrufe und Onlinebesprechungsbots verfügen über die folgenden zwei zusätzlichen Einstellungen im manifest.js, die Audio oder Video für Ihren Bot in Teams.
 
-* `bots[0].supportsCalling`. Wenn vorhanden und auf festgelegt, ermöglicht Teams Ihrem Bot die Teilnahme an Anrufen `true` und Onlinebesprechungen.
-* `bots[0].supportsVideo`. Wenn vorhanden und auf `true` festgelegt, weiß Teams, dass Ihr Bot Video unterstützt.
+* `bots[0].supportsCalling`. Wenn vorhanden und auf festgelegt, Teams Der Bot kann an Anrufen `true` und Onlinebesprechungen teilnehmen.
+* `bots[0].supportsVideo`. Wenn vorhanden und auf `true` festgelegt, Teams, dass Ihr Bot Video unterstützt.
 
 Wenn Sie möchten, dass ihre IDE die manifest.jsfür Ihre Anrufe und Besprechungsbots ordnungsgemäß auf diese Werte überprüft, können Sie das `$schema` Attribut wie folgt ändern:
 
@@ -40,17 +40,17 @@ Informationen zum Erstellen von Bots finden Sie unter [Create a bot for Teams](.
 
 **So erstellen Sie einen neuen Bot für Teams**
 
-1. Verwenden Sie diesen Link, um einen neuen Bot zu erstellen, `https://dev.botframework.com/bots/new` . Wenn Sie im Bot Framework-Portal alternativ die Schaltfläche Bot **erstellen** auswählen, erstellen Sie Ihren Bot in Microsoft Azure, für den Sie über ein Azure-Konto verfügen müssen.
-1. Fügen Sie den Teams-Kanal hinzu.
-1. Wählen Sie **auf der** Seite Teams-Kanal die Registerkarte Anruf aus. Wählen **Sie Anruf aktivieren** aus, und aktualisieren Sie dann **Webhook (für Anrufe)** mit Ihrer HTTPS-URL, in der Sie eingehende Benachrichtigungen erhalten, z. B. `https://contoso.com/teamsapp/api/calling` . Weitere Informationen finden Sie unter [Konfigurieren von Kanälen](/bot-framework/portal-configure-channels).
+1. Verwenden Sie diesen Link, um einen neuen Bot zu erstellen, `https://dev.botframework.com/bots/new` . Wenn Sie im Bot  Framework-Portal alternativ die Schaltfläche Bot erstellen auswählen, erstellen Sie Ihren Bot in Microsoft Azure, für den Sie über ein Azure-Konto verfügen müssen.
+1. Fügen Sie den Teams hinzu.
+1. Wählen Sie **die Registerkarte** Anruf auf der Teams Kanalseite aus. Wählen **Sie Anruf aktivieren** aus, und aktualisieren Sie dann **Webhook (für Anrufe)** mit Ihrer HTTPS-URL, in der Sie eingehende Benachrichtigungen erhalten, z. B. `https://contoso.com/teamsapp/api/calling` . Weitere Informationen finden Sie unter [Konfigurieren von Kanälen](/bot-framework/portal-configure-channels).
 
-    ![Konfigurieren von Teams-Kanalinformationen](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
+    ![Konfigurieren Teams Kanalinformationen](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
 Der nächste Abschnitt enthält eine Liste der Anwendungsberechtigungen, die für Anrufe und Onlinebesprechungen unterstützt werden.
 
-## <a name="add-graph-permissions"></a>Hinzufügen von Graph-Berechtigungen
+## <a name="add-graph-permissions"></a>Hinzufügen Graph Berechtigungen
 
-Das Diagramm bietet detaillierte Berechtigungen zum Steuern des Zugriffs, den Apps auf Ressourcen haben. Sie entscheiden, welche Berechtigungen für Graph Ihre App-Anforderungen hat. Die graph-aufrufenden APIs unterstützen Anwendungsberechtigungen, die von Apps verwendet werden, die ohne angemeldeten Benutzer ausgeführt werden. Ein Mandantenadministrator muss anwendungsberechtigungen zustimmen.
+Die Graph bietet präzise Berechtigungen zur Steuerung des Zugriffs, den Apps auf Ressourcen haben. Sie entscheiden, welche Berechtigungen für Graph App-Anforderungen verwendet werden. Die Graph aufrufenden APIs unterstützen Anwendungsberechtigungen, die von Apps verwendet werden, die ohne angemeldeten Benutzer ausgeführt werden. Ein Mandantenadministrator muss anwendungsberechtigungen zustimmen.
 
 ### <a name="application-permissions-for-calls"></a>Anwendungsberechtigungen für Anrufe
 

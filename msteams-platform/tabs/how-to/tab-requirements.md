@@ -15,7 +15,7 @@ ms.locfileid: "52019580"
 ---
 # <a name="tab-requirements"></a>Registerkartenanforderungen
 
-Teams-Registerkarten müssen die folgenden Anforderungen erfüllen:
+Teams Registerkarten müssen die folgenden Anforderungen erfüllen:
 
 * Sie müssen zulassen, dass Ihre Registerkartenseiten in einem iFrame über X-Frame-Optionen und/oder Content-Security-Policy-HTTP-Antwortheader bedient werden.
   * Kopfzeile festlegen: `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
@@ -28,10 +28,10 @@ Teams-Registerkarten müssen die folgenden Anforderungen erfüllen:
 
 * Browser halten sich an eine Richtlinieneinschränkung mit demselben Ursprung, die verhindert, dass eine Webseite Anforderungen an eine andere Domäne als die einer Webseite anfordert. Möglicherweise müssen Sie die Konfigurations- oder Inhaltsseite jedoch zu einer anderen Domäne oder Unterdomäne umleiten. Ihre domänenübergreifende Navigationslogik sollte es dem Teams-Client ermöglichen, den Ursprung anhand einer statischen validDomains-Liste im App-Manifest zu überprüfen, wenn die Registerkarte geladen oder mit ihr kommuniziert wird.
 
-* Um eine nahtlose Benutzererfahrung zu ermöglichen, sollten Sie Ihre Registerkarten basierend auf design, design und intent des Teams-Clients formatiert haben. In der Regel funktionieren Registerkarten am besten, wenn sie für eine bestimmte Notwendigkeit erstellt wurden und sich auf eine kleine Gruppe von Aufgaben oder eine Teilmenge von Daten konzentrieren, die für den Kanalspeicherort der Registerkarte relevant sind.
+* Um eine nahtlose Benutzererfahrung zu erstellen, sollten Sie Ihre Registerkarten basierend auf Teams Design, Design und Absicht des Clients formatiert haben. In der Regel funktionieren Registerkarten am besten, wenn sie für eine bestimmte Notwendigkeit erstellt wurden und sich auf eine kleine Gruppe von Aufgaben oder eine Teilmenge von Daten konzentrieren, die für den Kanalspeicherort der Registerkarte relevant sind.
 
-* Fügen Sie auf Ihrer Inhaltsseite mithilfe von Skripttags einen Verweis auf [das Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client) hinzu. Rufen Sie nach dem Laden der Seite auf `microsoftTeams.initialize()` . Ihre Seite wird nicht angezeigt, wenn Sie dies nicht tun.
+* Fügen Sie auf Ihrer Inhaltsseite mithilfe von Skripttags einen Verweis [auf Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client) hinzu. Rufen Sie nach dem Laden der Seite auf `microsoftTeams.initialize()` . Ihre Seite wird nicht angezeigt, wenn Sie dies nicht tun.
 
-* Damit die Authentifizierung auf mobilen Clients funktioniert, müssen Sie das Teams JavaScript SDK auf mindestens Version 1.4.1 aktualisieren.
+* Damit die Authentifizierung auf mobilen Clients funktioniert, müssen Sie Teams JavaScript SDK auf mindestens Version 1.4.1 aktualisieren.
 
-* Wenn Sie den Kanal oder die Registerkarte "Gruppe" auf mobilen Teams-Clients anzeigen möchten, muss die Konfiguration `setSettings()` einen Wert für die Eigenschaft `websiteUrl` haben.
+* Wenn Sie ihre Kanal- oder Gruppenregisterkarte auf mobilen Clients Teams, muss die Konfiguration einen `setSettings()` Wert für die Eigenschaft `websiteUrl` haben.

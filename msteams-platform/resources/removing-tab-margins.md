@@ -15,8 +15,8 @@ ms.locfileid: "52019713"
 ---
 # <a name="tab-margin-changes"></a>Änderungen am Registerkartenrand
 
-In diesem Dokument wird beschrieben, wie das Entfernen von Rändern um alle Registerkarten in Microsoft Teams die Erfahrung des Entwicklers beim Erstellen von Apps verbessert. Dies ist eine Verbesserung, die in Microsoft Teams in 2021 eingeführt wurde.
-Wenn Sie die Ränder um alle Registerkarten entfernen, können Entwickler Apps erstellen, die für Teams systemeigener aussehen. Dies entspricht auch unseren [Ui Kit-Designs.](~/tabs/design/tabs.md) Die meisten Apps sehen ohne die Ränder, die ihre Erfahrungen umgeben, bereits besser aus. Einige Registerkarten sind jedoch visuell von dieser Änderung betroffen, und Entwickler müssen die erforderlichen Änderungen vornehmen.
+In diesem Dokument wird beschrieben, wie das Entfernen von Rändern um alle Registerkarten in Microsoft Teams die Erfahrung des Entwicklers beim Erstellen von Apps verbessert. Dies ist eine Verbesserung, die in Microsoft Teams 2021 eingeführt wurde.
+Wenn Sie die Ränder um alle Registerkarten entfernen, können Entwickler Apps erstellen, die nativ für Teams. Dies entspricht auch unseren [Ui Kit-Designs.](~/tabs/design/tabs.md) Die meisten Apps sehen ohne die Ränder, die ihre Erfahrungen umgeben, bereits besser aus. Einige Registerkarten sind jedoch visuell von dieser Änderung betroffen, und Entwickler müssen die erforderlichen Änderungen vornehmen.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tabstopp-Witz und ohne Ränder" border="false":::
 
@@ -28,11 +28,11 @@ Wenn Sie die Ränder um alle Registerkarten entfernen, können Entwickler Apps e
 * 5. März 2021 – Ränder in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 * 15. Juni 2021 – Ränder werden in der Produktion entfernt.
 
-## <a name="guidelines"></a>Anleitungen
+## <a name="guidelines"></a>Richtlinien
 
-Microsoft Teams-Apps, die Registerkarten verwenden, sind von dieser Änderung betroffen. Entwickler müssen zu [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) wechseln, um zu bestimmen, wie ihre Registerkarten betroffen sind, und die erforderlichen Änderungen vornehmen.
+Microsoft Teams Apps, die Registerkarten verwenden, sind von dieser Änderung betroffen. Entwickler müssen zu [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) wechseln, um zu bestimmen, wie ihre Registerkarten betroffen sind, und die erforderlichen Änderungen vornehmen.
 
-Registerkartenentwickler dürfen sich nicht darauf verlassen, dass Teams Ränder für ihre Registerkarten zur Verfügung stellt. Entwickler werden ermutigt, Ränder um ihre Registerkartendesigns hinzuzufügen, wo dies erforderlich ist. App-Designs in der Produktion können wie zusätzliche Abstände aussehen, d. h. Ränder, die von Teams bereitgestellt werden, und Ränder, die von der Registerkarte bereitgestellt werden. Der zusätzliche Abstand ist jedoch nur temporär und wird in ein paar Wochen weg sein, und nur der von der App bereitgestellte Abstand bleibt erhalten.
+Registerkartenentwickler dürfen sich nicht auf Teams verlassen, um Ränder für ihre Registerkarten zur Verfügung zu stellen. Entwickler werden ermutigt, Ränder um ihre Registerkartendesigns hinzuzufügen, wo dies erforderlich ist. App-Designs in der Produktion können so aussehen, als ob zusätzliche Abstände vorhanden sind, d. h. Ränder, die von Teams und Rändern bereitgestellt werden, die von der Registerkarte bereitgestellt werden. Der zusätzliche Abstand ist jedoch nur temporär und wird in ein paar Wochen weg sein, und nur der von der App bereitgestellte Abstand bleibt erhalten.
 
 ## <a name="faq"></a>Häufig gestellte Fragen
 
@@ -44,7 +44,7 @@ Ja, dies ist in Ordnung und wird ermutigt. Dies hilft der App, sich systemeigene
 
 Nein, Sie müssen links und rechts von allen App-Inhalten einen eigenen Abstand oder Ränder bereitstellen, um sicherzustellen, dass die Ränder der Benutzeroberfläche nicht berührt werden. Sie können bei Bedarf auch Ränder oben auf Ihrer Registerkarte hinzufügen.
 
-**Wie groß sind die Ränder, die Teams zuvor angewendet hat?**
+**Wie groß sind die Ränder, die Teams angewendet wurden?**
 
 * Links und rechts: 20px
 * Top: 16px
@@ -53,4 +53,4 @@ Nein, Sie müssen links und rechts von allen App-Inhalten einen eigenen Abstand 
 > [!IMPORTANT]
 > * Alle Registerkarten haben ihre Ränder entfernt: persönliche Registerkarten, (Gruppen-) Chatregisterkarten, Besprechungsregisterkarten und Kanalregisterkarten.
 > * Es gibt keine Möglichkeit, sich für diese Änderung zu entscheiden oder abmelden. Sie gilt für alle Registerkarten.
-> * Diese Änderung kann sich auf Registerkarten auswirken, die auf Microsoft Teams angewiesen sind, um Ränder für die Benutzeroberfläche zur Verfügung zu stellen.
+> * Diese Änderung kann sich auf Registerkarten auswirken, die Microsoft Teams, um Ränder für ihre Benutzeroberfläche zur Verfügung zu stellen.

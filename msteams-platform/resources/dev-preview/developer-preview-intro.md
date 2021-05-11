@@ -1,6 +1,6 @@
 ---
 title: Developer Preview
-description: Beschreibt die Features im öffentlichen Developer Preview von Microsoft Teams
+description: Beschreibt die Features in der öffentlichen Developer Preview von Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams vorschau entwicklerfeatures
@@ -16,7 +16,7 @@ ms.locfileid: "52019720"
 >[!NOTE]
 >Features, die in der Vorschau enthalten sind, sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie in der öffentlichen Version verfügbar werden. Sie werden nur zu Test- und Explorationszwecken bereitgestellt. Sie sollten nicht in Produktionsanwendungen verwendet werden.
 
-Developer Preview ist ein öffentliches Programm für Entwickler, das frühzeitigen Zugriff auf nicht freigegebene Features in Microsoft Teams bietet. Auf diese Weise können Sie anstehende Features für die mögliche Integration in Ihre Microsoft Teams-App erkunden und testen. Wir freuen uns auch [über Feedback](~/feedback.md) zu allen Features in der Entwicklervorschau. Die Entwicklervorschau ist pro Microsoft Teams-Client aktiviert, sodass Sie sich keine Gedanken über die Auswirkungen auf Ihre gesamte Organisation machen müssen.
+Developer Preview ist ein öffentliches Programm für Entwickler, das frühzeitigen Zugriff auf unveröffentlichte Features in Microsoft Teams. Auf diese Weise können Sie anstehende Features für die mögliche Integration in Ihre app Microsoft Teams testen. Wir freuen uns auch [über Feedback](~/feedback.md) zu allen Features in der Entwicklervorschau. Die Entwicklervorschau ist pro Microsoft Teams aktiviert, sodass Sie sich keine Gedanken über die Auswirkungen auf Ihre gesamte Organisation machen müssen.
 
 ## <a name="developer-preview-app-manifest"></a>Entwicklervorschau-App-Manifest
 
@@ -35,7 +35,7 @@ Die Verwendung einer App, die Entwicklervorschaufeatures enthält, kann dazu fü
 Zum Aktivieren der öffentlichen Entwicklervorschau auf einem Desktop- oder Webclient müssen Sie die folgenden Schritte tun:
 
 1. Aktivieren des Hochladens von Apps in der Verwaltungskonsole Ihres Mandanten, wie hier [beschrieben.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
-1. Klicken Sie auf Ihr Profil (entweder oben rechts oder unten links auf der Teams-Schnittstelle), um das Menü Teams anzuzeigen.
+1. Klicken Sie auf Ihr Profil (entweder in der oberen rechten oder unteren linken Ecke der Teams), um das Teams anzuzeigen.
 1. Wählen Sie Informationen → Entwicklervorschau aus.
 1. Wählen **Sie Switch to Developer preview aus.**
 
@@ -44,7 +44,7 @@ Zum Aktivieren der öffentlichen Entwicklervorschau auf einem Desktop- oder Webc
 Gehen Sie wie folgt vor, um die Öffentliche Entwicklervorschau auf einem mobilen Client zu aktivieren:
 
 1. Aktivieren des Hochladens von Apps in der Verwaltungskonsole Ihres Mandanten, wie hier [beschrieben.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
-1. Öffnen Sie das Menü Hamburger oben links, und wählen Sie dann **Einstellungen aus.**
+1. Öffnen Sie das Menü Hamburger oben links, und wählen Sie **dann Einstellungen**.
 1. Wählen Sie **Informationen aus.**
 1. Klicken Sie auf den Umschalter Entwicklervorschau.
 

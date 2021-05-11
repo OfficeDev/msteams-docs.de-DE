@@ -1,6 +1,6 @@
 ---
 title: Reine Benachrichtigungsbots
-description: Beschreibt, was nur Benachrichtigungsbots in Microsoft Teams sind
+description: Beschreibt, welche Nur-Benachrichtigungs-Bots in Microsoft Teams
 keywords: Teams-Bots-Benachrichtigung
 ms.topic: conceptual
 localization_priority: Normal

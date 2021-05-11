@@ -1,6 +1,6 @@
 ---
 title: JSON-Schemareferenz für Lokalisierungsdatei
-description: Beschreibt das lokalisierungsschema, das von der Lokalisierungsdatei für Microsoft Teams unterstützt wird.
+description: Beschreibt das lokalisierungsschema, das von der Lokalisierungsdatei für Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: Manifestschemalokalisierung von Teams
@@ -14,7 +14,7 @@ ms.locfileid: "52019706"
 ---
 # <a name="reference-localization-file-json-schema"></a>Referenz: JSON-Schema der Lokalisierungsdatei
 
-In der Microsoft Teams-Lokalisierungsdatei werden Sprachübersetzungen beschrieben, die basierend auf den Clientspracheneinstellungen bedient werden. Ihre Datei muss dem schema entsprechen, das unter gehostet [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) wird. Weitere Informationen finden Sie unter [App-Lokalisierung](~/concepts/build-and-test/apps-localization.md).
+In Microsoft Teams werden Sprachübersetzungen beschrieben, die basierend auf den Clientspracheneinstellungen bedient werden. Ihre Datei muss dem schema entsprechen, das unter gehostet [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) wird. Weitere Informationen finden Sie unter [App-Lokalisierung](~/concepts/build-and-test/apps-localization.md).
 
 ## <a name="sample"></a>Beispiel
 
@@ -42,7 +42,7 @@ Das Schema definiert die folgenden Eigenschaften:
 Die https://-URL, die auf das JSON-Schema für das Manifest verweist.
 
 > [!TIP]
-> Geben Sie das Schema am Anfang des Manifests an, um IntelliSense oder ähnliche Unterstützung von Ihrem Code-Editor zu aktivieren: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
+> Geben Sie das Schema am Anfang des Manifests an, um IntelliSense oder ähnliche Unterstützung von Ihrem Code-Editor zu aktivieren:`"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
 ## <a name="nameshort"></a>name.short
 

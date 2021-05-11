@@ -1,6 +1,6 @@
 ---
 title: SaaS-Angebot für Ihre Teams-App erstellen
-description: Beschreibt die erforderlichen Schritte, um ein SaaS-Angebot teil einer Teams App-Erfahrung eines Drittanbieters zu machen.
+description: Beschreibt die erforderlichen Schritte, um ein SaaS-Angebot teil einer App-Teams eines Drittanbieters zu machen
 keywords: teams app SaaS offer partner center marketplace software service
 author: laujan
 localization_priority: Normal
@@ -15,7 +15,7 @@ ms.locfileid: "52019921"
 ---
 # <a name="create-a-saas-offer-for-your-teams-app"></a>SaaS-Angebot für Ihre Teams-App erstellen
 
-Durch das Hinzufügen eines Software as a Service (SaaS)-Angebots zu Ihrer App-Lösung können Sie Ihre cloudbasierte App problemlos bereitstellen und die Benutzerfreundlichkeit verbessern, indem Sie automatisierte Upgrades bereitstellen und den Zugriff auf plattformenübergreifend erhöhen. Microsoft Teams-Apps können kostenlos in der Microsoft Teams-Umgebung installiert werden, einige erfordern jedoch möglicherweise, dass Benutzer ein SaaS-Abonnement erwerben, um die volle Funktionalität und den Umfang der App zu nutzen. SaaS-Abonnements können von einem Clouddienstanbieter erworben werden, oder Sie können ein monetarisiertes SaaS-Abonnement für Ihre Teams-App direkt über das Partner Center oder den Kommerziellen Marketplace erstellen.
+Durch das Hinzufügen eines Software as a Service (SaaS)-Angebots zu Ihrer App-Lösung können Sie Ihre cloudbasierte App problemlos bereitstellen und die Benutzerfreundlichkeit verbessern, indem Sie automatisierte Upgrades bereitstellen und den Zugriff auf plattformenübergreifend erhöhen. Microsoft Teams apps können kostenlos in der Teams-Umgebung installiert werden, aber einige erfordern möglicherweise, dass Benutzer ein SaaS-Abonnement erwerben, um die volle Funktionalität und den Umfang der App zu nutzen. SaaS-Abonnements können von einem Clouddienstanbieter erworben werden, oder Sie können ein monetarisiertes SaaS-Abonnement für Ihre Teams-App direkt über das Partner Center oder den kommerziellen Marketplace erstellen.
 
 ## <a name="getting-started-with-saas-offers"></a>Erste Schritte mit SaaS-Angeboten
 
@@ -26,9 +26,9 @@ Durch das Hinzufügen eines Software as a Service (SaaS)-Angebots zu Ihrer App-L
 |**SaaS-Angebotserstellung: Prüfliste für Entwickler**| Details und Anleitungen zum Erstellen eines SaaS-Angebots im Partner Center.| [Dokumentation](/azure/marketplace/partner-center-portal/offer-creation-checklist)|
 |**Kommerzielles Marketplace-Angebot: Bewährte Methoden** |Einblicke zum Erstellen effektiver SaaS-Angebote.|[Dokumentation](/azure/marketplace/gtm-offer-listing-best-practices)|
 |**Microsoft SaaS fulfillment API (V2)** | Erkunden Sie die APIs, mit denen Entwickler SaaS-Angebote mit Microsoft erstellen können.| [Dokumentation](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2) |
-|**Implementieren des SaaS Fulfillment SDK**| Implementieren der erforderlichen Komponenten zum Aktivieren des SDK, einschließlich der SaaS Fulfillment API (v2) und der Marketplace Metering Service API.| [Abrufen auf GitHub](https://github.com/Azure/Microsoft-commercial-marketplace-transactable-SaaS-offer-SDK/blob/master/docs/Installation-Instructions.md) |
-|**Beispielcode für SaaS-Angebote**| Sehen Sie sich unsere SaaS-Angebotscodebeispiele und das SDK an.| [Abrufen auf GitHub](https://github.com/Azure/Microsoft-commercial-marketplace-transactable-SaaS-offer-SDK)|
+|**Implementieren des SaaS Fulfillment SDK**| Implementieren der erforderlichen Komponenten zum Aktivieren des SDK, einschließlich der SaaS Fulfillment API (v2) und der Marketplace Metering Service API.| [Get it on GitHub](https://github.com/Azure/Microsoft-commercial-marketplace-transactable-SaaS-offer-SDK/blob/master/docs/Installation-Instructions.md) |
+|**Beispielcode für SaaS-Angebote**| Sehen Sie sich unsere SaaS-Angebotscodebeispiele und das SDK an.| [Get it on GitHub](https://github.com/Azure/Microsoft-commercial-marketplace-transactable-SaaS-offer-SDK)|
 | **Häufig gestellte Fragen: SaaS-API-UX-Abfragen** | Hier finden Sie Antworten auf allgemeine Endbenutzererfahrungsthemen.| [Dokumentation](/azure/marketplace/partner-center-portal/saas-fulfillment-apis-faq) |
 
 > [!div class="nextstepaction"]
-> [Erfahren Sie, wie Teams Admins Ihre App für ihre Organisation erwerben können](/MicrosoftTeams/purchase-third-party-apps)
+> [Erfahren Sie, Teams Administratoren Ihre App für ihre Organisation erwerben können](/MicrosoftTeams/purchase-third-party-apps)

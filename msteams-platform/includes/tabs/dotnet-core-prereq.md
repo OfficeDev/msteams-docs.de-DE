@@ -1,12 +1,12 @@
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Um diesen Schnellstart abzuschließen, benötigen Sie einen Microsoft 365-Mandanten und ein Team, das so konfiguriert ist, *dass das Hochladen benutzerdefinierter apps* aktiviert ist. Weitere Informationen finden Sie unter [Vorbereiten Ihres Microsoft 365-Mandanten](~/concepts/build-and-test/prepare-your-o365-tenant.md).
-  - Wenn Sie derzeit kein Microsoft 365-Konto haben, können Sie sich über das [Microsoft-Entwicklerprogramm](https://developer.microsoft.com/en-us/microsoft-365/dev-program)für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die laufende Entwicklung verwenden.
+- Zum Abschließen dieses Schnellstarts benötigen Sie einen Microsoft 365 Mandanten und ein Team, das mit aktivierter Aktivierung des *Hochladens benutzerdefinierter Apps konfiguriert* ist. Weitere Informationen finden Sie unter [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+  - Wenn Sie derzeit nicht über ein Microsoft 365 verfügen, können Sie sich über das Microsoft Developer Program für ein [kostenloses Abonnement registrieren.](https://developer.microsoft.com/en-us/microsoft-365/dev-program) Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden.
 
-- Sie verwenden App Studio, um Ihre Anwendung in Microsoft Teams zu importieren. Um App Studio zu installieren, wählen Sie **apps** ![ Store ](~/assets/images/tab-images/storeApp.png) -app in der unteren linken Ecke der Teams-App aus, und suchen Sie nach App Studio. Nachdem Sie die Kachel gefunden haben, wählen Sie Sie aus, und wählen Sie im Dialogfeld Popupfenster installieren aus.
+- Sie verwenden App Studio, um Ihre Anwendung in eine Teams. Zum Installieren von App Studio wählen **Sie Apps** Store App in der unteren linken Ecke der ![ Teams-App aus, und suchen Sie ](~/assets/images/tab-images/storeApp.png) nach App Studio. Sobald Sie die Kachel finden, wählen Sie sie aus, und wählen Sie im Dialogfeld Popupfenster installieren aus.
 
-Dieses Projekt erfordert außerdem, dass in Ihrer Entwicklungsumgebung Folgendes installiert ist:
+Darüber hinaus erfordert dieses Projekt, dass Sie folgendes in Ihrer Entwicklungsumgebung installiert haben:
 
-- Die aktuelle Version die Visual Studio-IDE mit installierter **.net-Kern plattformübergreifender Entwicklungs** Arbeitslast. Wenn Sie noch nicht über Visual Studio verfügen, können Sie die neueste [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) -Version kostenlos herunterladen und installieren.
+- Die aktuelle Version der Visual Studio IDE mit **installierter plattformübergreifender .NET CORE-Entwicklungsarbeitsauslastung.** Wenn Sie noch nicht über eine Visual Studio, können Sie die neueste version Microsoft Visual Studio Community kostenlos herunterladen [und](https://visualstudio.microsoft.com/downloads) installieren.
 
-- Das [ngrok](https://ngrok.com) -Reverseproxy-Tool. Sie verwenden ngrok, um einen Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten des lokal ausgeführten Webservers zu erstellen. Sie können [es hier herunterladen](https://ngrok.com/download).
+- Das [ngrok-Reverseproxytool.](https://ngrok.com) Sie verwenden ngrok, um einen Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten Ihres lokal ausgeführten Webservers zu erstellen. Sie können [es hier herunterladen.](https://ngrok.com/download)

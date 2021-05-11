@@ -95,7 +95,7 @@ Um Ihre Messagingerweiterung zu öffnen, navigieren Sie zu ihren Chats oder Kan�
 
 Der Großteil Ihrer Arbeit umfasst das `onQuery` Ereignis, das alle Interaktionen im Messagingerweiterungsfenster behandelt.
 
-Wenn Sie im Manifest auf festgelegt sind, aktivieren Sie das Menüelement Einstellungen für Ihre Messagingerweiterung und müssen auch `canUpdateConfiguration` `true` mit und  `onQuerySettingsUrl` `onSettingsUpdate` umgehen.
+Wenn Sie im Manifest auf festgelegt haben, aktivieren Sie Einstellungen Menüelement für Ihre Messagingerweiterung und müssen auch `canUpdateConfiguration` `true` und  `onQuerySettingsUrl` `onSettingsUpdate` behandeln.
 
 ### <a name="handle-onquery-events"></a>Behandeln von onQuery-Ereignissen
 
@@ -111,9 +111,9 @@ Der Rest ihres Handlers fordert den Benutzer auf, Informationen zu erhalten, zei
 
 ### <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>Behandeln von OnQuerySettingsUrl- und onSettingsUpdate-Ereignissen
 
-The `onQuerySettingsUrl` and events work together to enable the `onSettingsUpdate` **Settings** menu item.
+The `onQuerySettingsUrl` and events work together to enable the `onSettingsUpdate` **Einstellungen** menu item.
 
-![Screenshots der Speicherorte des Menüelements Einstellungen](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
+![Screenshots der Speicherorte Einstellungen Menüelements](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
 Der Handler für gibt die URL für die Konfigurationsseite zurück. Nachdem die Konfigurationsseite geschlossen wurde, akzeptiert und speichert der Handler für den `onQuerySettingsUrl` `onSettingsUpdate` zurückgegebenen Status. (Dies ist der fall, in dem `onQuery` *erhält die Antwort* nicht von der Konfigurationsseite.)
 
@@ -123,7 +123,7 @@ Jede Anforderung an Ihre Messagingerweiterung erfolgt über ein `Activity` Objek
 
 ### <a name="receive-user-requests"></a>Empfangen von Benutzeranforderungen
 
-Wenn ein Benutzer eine Abfrage ausführt, sendet Microsoft Teams Ihrem Dienst ein Standardmäßiges Bot `Activity` Framework-Objekt. Ihr Dienst sollte seine Logik für einen Dienst ausführen, der auf einen unterstützten Typ festgelegt und auf diesen festgelegt ist, wie `Activity` in der folgenden Tabelle `type` `invoke` `name` `composeExtension` dargestellt.
+Wenn ein Benutzer eine Abfrage ausführt, sendet Microsoft Teams Dienst ein standard Bot `Activity` Framework-Objekt. Ihr Dienst sollte seine Logik für einen Dienst ausführen, der auf einen unterstützten Typ festgelegt und auf diesen festgelegt ist, wie `Activity` in der folgenden Tabelle `type` `invoke` `name` `composeExtension` dargestellt.
 
 Zusätzlich zu den Standardmäßigen Botaktivitätseigenschaften enthält die Nutzlast die folgenden Anforderungsmetadaten:
 
@@ -133,7 +133,7 @@ Zusätzlich zu den Standardmäßigen Botaktivitätseigenschaften enthält die Nu
 |`name`| Typ des Befehls, der für Ihren Dienst ausgegeben wird. Derzeit werden die folgenden Typen unterstützt: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
 |`from.id`| ID des Benutzers, der die Anforderung gesendet hat. |
 |`from.name`| Name des Benutzers, der die Anforderung gesendet hat. |
-|`from.aadObjectId`| Azure Active Directory-Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
+|`from.aadObjectId`| Azure Active Directory Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 |`channelData.tenant.id`| Azure Active Directory Mandanten-ID. |
 |`channelData.channel.id`| Kanal-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
 |`channelData.team.id`| Team-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
@@ -195,7 +195,7 @@ Die Anforderungsparameter selbst befinden sich im Value-Objekt, das die folgende
 
 ### <a name="receive-requests-from-links-inserted-into-the-compose-message-box"></a>Empfangen von Anforderungen von Links, die in das Meldungsfeld verfassen eingefügt wurden
 
-Als Alternative (oder zusätzlich) zum Durchsuchen Ihres externen Diensts können Sie eine in das Meldungsfeld verfassen eingefügte URL verwenden, um Ihren Dienst zu abfragen und eine Karte zurückzukehren. Im folgenden Screenshot hat ein Benutzer eine URL für eine Arbeitsaufgabe in Azure DevOps eingegeben, die die Messagingerweiterung in eine Karte aufgelöst hat.
+Als Alternative (oder zusätzlich) zum Durchsuchen Ihres externen Diensts können Sie eine in das Meldungsfeld verfassen eingefügte URL verwenden, um Ihren Dienst zu abfragen und eine Karte zurückzukehren. Im folgenden Screenshot hat ein Benutzer eine URL für eine Arbeitsaufgabe in Azure DevOps die die Messagingerweiterung in eine Karte aufgelöst hat.
 
 ![Beispiel für die Verknüpfungsentfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -235,7 +235,7 @@ Wenn Ihre App mehrere Elemente zurückgibt, wird nur das erste verwendet.
 
 ### <a name="respond-to-user-requests"></a>Reagieren auf Benutzeranforderungen
 
-Wenn der Benutzer eine Abfrage ausführt, stellt Microsoft Teams eine synchrone HTTP-Anforderung an Ihren Dienst aus. An diesem Punkt hat Ihr Code 5 Sekunden Zeit, um eine HTTP-Antwort auf die Anforderung zu senden. Während dieser Zeit kann Ihr Dienst zusätzliche Nachschlage- oder sonstige Geschäftslogik ausführen, die für die Anforderung erforderlich ist.
+Wenn der Benutzer eine Abfrage ausführt, Microsoft Teams eine synchrone HTTP-Anforderung an Ihren Dienst aus. An diesem Punkt hat Ihr Code 5 Sekunden Zeit, um eine HTTP-Antwort auf die Anforderung zu senden. Während dieser Zeit kann Ihr Dienst zusätzliche Nachschlage- oder sonstige Geschäftslogik ausführen, die für die Anforderung erforderlich ist.
 
 Ihr Dienst sollte mit den Ergebnissen antworten, die mit der Benutzerabfrage übereinstimmen. Die Antwort muss einen HTTP-Statuscode von und ein `200 OK` gültiges Application/json-Objekt mit dem folgenden Textkörper angeben:
 
@@ -254,21 +254,21 @@ Wir unterstützen die folgenden Anlagentypen:
 
 * [Miniaturansichtskarte](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Heldenkarte](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 Connector-Karte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365 Connectorkarte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Karte](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 Eine [Übersicht finden Sie unter Karten.](~/task-modules-and-cards/what-are-cards.md)
 
 Informationen zur Verwendung der Miniaturansichts- und Heldenkartentypen finden Sie unter [Hinzufügen von Karten und Kartenaktionen.](~/task-modules-and-cards/cards/cards-actions.md)
 
-Weitere Informationen zur Office 365 Connector-Karte finden Sie unter [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+Eine zusätzliche Dokumentation zur Office 365 Connectorkarte finden Sie unter [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-Die Ergebnisliste wird in der Benutzeroberfläche von Microsoft Teams mit einer Vorschau der einzelnen Elemente angezeigt. Die Vorschau wird auf zwei Arten generiert:
+Die Ergebnisliste wird in der benutzeroberfläche Microsoft Teams mit einer Vorschau der einzelnen Elemente angezeigt. Die Vorschau wird auf zwei Arten generiert:
 
 * Verwenden der `preview` Eigenschaft innerhalb des `attachment` Objekts. Die `preview` Anlage kann nur eine Hero- oder Miniaturansichtskarte sein.
 * Extrahiert aus den grundlegenden `title` Eigenschaften , und der `text` `image` Anlage. Diese werden nur verwendet, wenn `preview` die Eigenschaft nicht festgelegt ist und diese Eigenschaften verfügbar sind.
 
-Sie können eine Vorschau einer Adaptiven oder Office 365 Connector-Karte in der Ergebnisliste anzeigen, indem Sie einfach die Vorschaueigenschaft festlegen. dies ist nicht erforderlich, wenn es sich bei den Ergebnissen bereits um Hero- oder Miniaturansichtskarten handelt. Wenn Sie die Vorschauanlage verwenden, muss es sich entweder um eine Hero- oder Miniaturansichtskarte geben. Wenn keine Vorschaueigenschaft angegeben ist, wird bei der Vorschau der Karte ein Fehler angezeigt, und es wird nichts angezeigt.
+Sie können eine Vorschau einer adaptiven oder Office 365 Connectorkarte in der Ergebnisliste anzeigen, indem Sie einfach die Vorschaueigenschaft festlegen. dies ist nicht erforderlich, wenn es sich bei den Ergebnissen bereits um Hero- oder Miniaturansichtskarten handelt. Wenn Sie die Vorschauanlage verwenden, muss es sich entweder um eine Hero- oder Miniaturansichtskarte geben. Wenn keine Vorschaueigenschaft angegeben ist, wird bei der Vorschau der Karte ein Fehler angezeigt, und es wird nichts angezeigt.
 
 #### <a name="response-example"></a>Anforderungsbeispiel
 
@@ -406,7 +406,7 @@ In diesem Beispiel wird eine Antwort mit zwei Ergebnissen gezeigt, bei der versc
 
 ### <a name="default-query"></a>Standardabfrage
 
-Wenn Sie im Manifest auf festlegen, gibt Microsoft Teams eine "Standardabfrage" aus, wenn der Benutzer die `initialRun` `true` Messagingerweiterung zum ersten Mal öffnet. Ihr Dienst kann auf diese Abfrage mit einer Reihe von vorab aufgefüllten Ergebnissen reagieren. Dies kann z. B. nützlich sein, um zuletzt angezeigte Elemente, Favoriten oder andere Informationen, die nicht von benutzereingaben abhängig sind, angezeigt zu werden.
+Wenn Sie im Manifest auf festgelegt Microsoft Teams eine `initialRun` "Standardabfrage" aus, wenn der Benutzer die Messagingerweiterung zum ersten `true` Mal öffnet. Ihr Dienst kann auf diese Abfrage mit einer Reihe von vorab aufgefüllten Ergebnissen reagieren. Dies kann z. B. nützlich sein, um zuletzt angezeigte Elemente, Favoriten oder andere Informationen, die nicht von benutzereingaben abhängig sind, angezeigt zu werden.
 
 Die Standardabfrage hat dieselbe Struktur wie jede normale Benutzerabfrage, mit Ausnahme eines Parameters, `initialRun` dessen Zeichenfolgenwert `true` ist .
 
@@ -435,7 +435,7 @@ Die Standardabfrage hat dieselbe Struktur wie jede normale Benutzerabfrage, mit 
 
 ## <a name="identify-the-user"></a>Identifizieren des Benutzers
 
-Jede Anforderung an Ihre Dienste enthält die verschleierte ID des Benutzers, der die Anforderung ausgeführt hat, sowie den Anzeigenamen des Benutzers und die Azure Active Directory-Objekt-ID.
+Jede Anforderung an Ihre Dienste enthält die verschleierte ID des Benutzers, der die Anforderung ausgeführt hat, sowie den Anzeigenamen des Benutzers und Azure Active Directory Objekt-ID.
 
 ```json
 "from": {
@@ -445,7 +445,7 @@ Jede Anforderung an Ihre Dienste enthält die verschleierte ID des Benutzers, de
 },
 ```
 
-Die `id` Werte und sind garantiert der des `aadObjectId` authentifizierten Teams-Benutzers. Sie können als Schlüssel verwendet werden, um Anmeldeinformationen oder einen beliebigen zwischengespeicherten Status in Ihrem Dienst nach zu suchen. Darüber hinaus enthält jede Anforderung die Azure Active Directory-Mandanten-ID des Benutzers, mit der die Organisation des Benutzers identifiziert werden kann. Falls zutreffend, enthält die Anforderung auch die Team- und Kanal-IDs, von denen die Anforderung stammt.
+Die Werte und sind garantiert der des authentifizierten `id` `aadObjectId` Teams. Sie können als Schlüssel verwendet werden, um Anmeldeinformationen oder einen beliebigen zwischengespeicherten Status in Ihrem Dienst nach zu suchen. Darüber hinaus enthält jede Anforderung die Azure Active Directory Mandanten-ID des Benutzers, die zum Identifizieren der Organisation des Benutzers verwendet werden kann. Falls zutreffend, enthält die Anforderung auch die Team- und Kanal-IDs, von denen die Anforderung stammt.
 
 ## <a name="authentication"></a>Authentifizierung
 
@@ -454,11 +454,11 @@ Wenn ihr Dienst eine Benutzerauthentifizierung erfordert, müssen Sie sich beim 
 Die Reihenfolge lautet wie folgt:
 
 1. Der Benutzer gibt eine Abfrage aus, oder die Standardabfrage wird automatisch an Ihren Dienst gesendet.
-2. Ihr Dienst überprüft, ob sich der Benutzer zuerst authentifiziert hat, indem er die Teams-Benutzer-ID überprüft.
+2. Ihr Dienst überprüft, ob sich der Benutzer zuerst authentifiziert hat, indem er die Teams überprüft.
 3. Wenn sich der Benutzer nicht authentifiziert hat, senden Sie eine Antwort mit einer vorgeschlagenen `auth` `openUrl` Aktion zurück, einschließlich der Authentifizierungs-URL.
-4. Der Microsoft Teams-Client startet ein Popupfenster, in dem Ihre Webseite mit der angegebenen Authentifizierungs-URL hosten wird.
-5. Nach der Anmeldung des Benutzers sollten Sie ihr Fenster schließen und einen "Authentifizierungscode" an den Teams-Client senden.
-6. Der Teams-Client gibt die Abfrage dann erneut an Ihren Dienst weiter, der den in Schritt 5 übergebenen Authentifizierungscode enthält.
+4. Der Microsoft Teams startet ein Popupfenster, in dem Ihre Webseite mit der angegebenen Authentifizierungs-URL hosten wird.
+5. Nach der Anmeldung des Benutzers sollten Sie das Fenster schließen und einen "Authentifizierungscode" an den Teams senden.
+6. Der Teams dann die Abfrage erneut an Ihren Dienst weiter, der den in Schritt 5 übergebenen Authentifizierungscode enthält.
 
 Ihr Dienst sollte überprüfen, ob der in Schritt 6 empfangene Authentifizierungscode mit dem aus Schritt 5 entspricht. Dadurch wird sichergestellt, dass ein böswilliger Benutzer nicht versucht, den Anmeldefluss zu spoofen oder zu schädlich zu machen. Dadurch wird die Schleife geschlossen, um die sichere Authentifizierungssequenz zu beenden.
 
@@ -486,13 +486,13 @@ Um einen nicht authentifizierten Benutzer zur Anmeldung auffordert, antworten Si
 ```
 
 > [!NOTE]
-> Damit die Anmeldeerfahrung in einem Teams-Popup gehostet wird, muss sich der Domänenteil der URL in der Liste der gültigen Domänen Ihrer App befinden. (Siehe [validDomains](~/resources/schema/manifest-schema.md#validdomains) im Manifestschema.)
+> Damit die Anmeldeerfahrung in einem Teams gehostet werden kann, muss sich der Domänenteil der URL in der Liste der gültigen Domänen ihrer App befinden. (Siehe [validDomains](~/resources/schema/manifest-schema.md#validdomains) im Manifestschema.)
 
 ### <a name="start-the-sign-in-flow"></a>Starten des Anmeldeflusses
 
-Ihre Anmeldeerfahrung sollte reaktionsfähig sein und in ein Popupfenster passen. Es sollte in das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client)integriert werden, das die Nachrichtenübertragung verwendet.
+Ihre Anmeldeerfahrung sollte reaktionsfähig sein und in ein Popupfenster passen. Es sollte in das [javascript Microsoft Teams-Client-SDK](/javascript/api/overview/msteams-client)integriert werden, das die Nachrichtenübertragung verwendet.
 
-Wie bei anderen eingebetteten Erfahrungen, die in Microsoft Teams ausgeführt werden, muss Ihr Code im Fenster zuerst `microsoftTeams.initialize()` aufrufen. Wenn Ihr Code einen OAuth-Fluss ausführt, können Sie die Teams-Benutzer-ID an Ihr Fenster übergeben, die sie dann an die OAuth-Anmelde-URL übergeben kann.
+Wie bei anderen eingebetteten Erfahrungen, die in Microsoft Teams ausgeführt werden, muss Ihr Code innerhalb des Fensters zuerst `microsoftTeams.initialize()` aufrufen. Wenn Ihr Code einen OAuth-Fluss ausführt, können Sie die Teams-Benutzer-ID an Ihr Fenster übergeben, die sie dann an die OAuth-Anmelde-URL übergeben kann.
 
 ### <a name="complete-the-sign-in-flow"></a>Abschließen des Anmeldeflusses
 
@@ -501,7 +501,7 @@ Wenn die Anmeldeanforderung abgeschlossen ist und wieder zu Ihrer Seite umgeleit
 1. Generieren Sie einen Sicherheitscode. (Dies kann eine Zufallszahl sein.) Sie müssen diesen Code in Ihrem Dienst zusammen mit den Anmeldeinformationen zwischenspeichern, die über den Anmeldefluss (z. B. OAuth 2.0-Token) erhalten wurden.
 2. Rufen `microsoftTeams.authentication.notifySuccess` Sie den Sicherheitscode auf, und übergeben Sie ihn.
 
-An diesem Punkt wird das Fenster geschlossen, und das Steuerelement wird an den Teams-Client übergeben. Der Client kann nun die ursprüngliche Benutzerabfrage zusammen mit dem Sicherheitscode in der Eigenschaft erneut `state` ausführen. Ihr Code kann den Sicherheitscode verwenden, um die zuvor gespeicherten Anmeldeinformationen nach zu suchen, um die Authentifizierungssequenz zu vervollständigen und dann die Benutzeranforderung zu vervollständigen.
+An diesem Punkt wird das Fenster geschlossen, und das Steuerelement wird an den Teams übergeben. Der Client kann nun die ursprüngliche Benutzerabfrage zusammen mit dem Sicherheitscode in der Eigenschaft erneut `state` ausführen. Ihr Code kann den Sicherheitscode verwenden, um die zuvor gespeicherten Anmeldeinformationen nach zu suchen, um die Authentifizierungssequenz zu vervollständigen und dann die Benutzeranforderung zu vervollständigen.
 
 #### <a name="reissued-request-example"></a>Beispiel für neu ausgestellte Anforderung
 

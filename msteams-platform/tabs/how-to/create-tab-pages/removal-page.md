@@ -15,7 +15,7 @@ ms.locfileid: "52019587"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>Ändern oder Entfernen einer Kanalgruppenregisterkarte
 
-Sie können die Benutzeroberfläche erweitern und verbessern, indem Sie Entfernungs- und Änderungsoptionen in Ihrer App unterstützen. Mit Teams können Benutzer eine Kanal-/Gruppenregisterkarte umbenennen oder entfernen, und Sie können Benutzern erlauben, Ihre Registerkarte nach der Installation neu zu konfigurieren. Darüber hinaus kann ihre Registerkartenentfernungserfahrung das Festlegen der Inhalte beim Entfernen der Registerkarte oder das Festlegen von Optionen nach dem Entfernen von Inhalten wie löschen oder Archivieren des Inhalts umfassen.
+Sie können die Benutzeroberfläche erweitern und verbessern, indem Sie Entfernungs- und Änderungsoptionen in Ihrer App unterstützen. Teams ermöglicht Benutzern das Umbenennen oder Entfernen einer Kanal-/Gruppenregisterkarte, und Sie können Benutzern erlauben, Ihre Registerkarte nach der Installation neu zu konfigurieren. Darüber hinaus kann ihre Registerkartenentfernungserfahrung das Festlegen der Inhalte beim Entfernen der Registerkarte oder das Festlegen von Optionen nach dem Entfernen von Inhalten wie löschen oder Archivieren des Inhalts umfassen.
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Aktivieren der Neukonfiguration ihrer Registerkarte nach der Installation
 
@@ -25,7 +25,7 @@ Ihre **manifest.jsdefiniert** die Features und Funktionen Ihrer Registerkarte. D
 |---|---|---|---|---|
 |`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: `true`|
 
-Wenn Ihre Registerkarte in einen Kanal- oder Gruppenchat hochgeladen wird, fügt Teams ein Dropdownmenü mit der rechten Maustaste für Ihre Registerkarte hinzu. Die verfügbaren Optionen werden durch die Einstellung `canUpdateConfiguration` bestimmt:
+Wenn Ihre Registerkarte in einen Kanal- oder Gruppenchat hochgeladen wird, Teams sie ein Dropdownmenü mit der rechten Maustaste für Ihre Registerkarte hinzufügen. Die verfügbaren Optionen werden durch die Einstellung `canUpdateConfiguration` bestimmt:
 
 | `canUpdateConfiguration`| true   | false | description |
 | ----------------------- | :----: | ----- | ----------- |
@@ -36,7 +36,7 @@ Wenn Ihre Registerkarte in einen Kanal- oder Gruppenchat hochgeladen wird, fügt
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Erstellen einer Seite zum Entfernen von Registerkarten für Ihre Anwendung
 
-Die optionale Seite zum Entfernen ist eine HTML-Seite, die Sie hosten und die angezeigt wird, wenn die Registerkarte entfernt wird. Die URL der Entfernungsseite wird von der `setSettings()` Methode auf der Konfigurationsseite festgelegt. Wie bei allen Seiten in Ihrer App muss die Seite zum Entfernen den [Registerkartenanforderungen von Teams entsprechen.](../../../tabs/how-to/tab-requirements.md)
+Die optionale Seite zum Entfernen ist eine HTML-Seite, die Sie hosten und die angezeigt wird, wenn die Registerkarte entfernt wird. Die URL der Entfernungsseite wird von der `setSettings()` Methode auf der Konfigurationsseite festgelegt. Wie bei allen Seiten in Ihrer App muss die Seite zum Entfernen die Teams [erfüllen.](../../../tabs/how-to/tab-requirements.md)
 
 ### <a name="register-a-remove-handler"></a>Registrieren eines Remove-Handlers
 
@@ -58,7 +58,7 @@ Sie können den `getContext()` aktuellen Kontext abrufen, in dem der Frame ausge
 
 #### <a name="include-authentication"></a>Schließen Sie die Authentifizierung ein
 
-Möglicherweise benötigen Sie eine Authentifizierung, bevor ein Benutzer den Registerkarteninhalt löschen kann. Kontextinformationen können zum Erstellen von Authentifizierungsanforderungen und Autorisierungsseiten-URLs verwendet werden. Registerkarten finden Sie unter [Microsoft Teams-Authentifizierungsfluss.](~/tabs/how-to/authentication/auth-flow-tab.md) Stellen Sie sicher, dass alle auf Ihren Registerkartenseiten verwendeten Domänen im Array `manifest.json` `validDomains` aufgeführt sind.
+Möglicherweise benötigen Sie eine Authentifizierung, bevor ein Benutzer den Registerkarteninhalt löschen kann. Kontextinformationen können zum Erstellen von Authentifizierungsanforderungen und Autorisierungsseiten-URLs verwendet werden. Weitere [Microsoft Teams finden Sie unter Authentifizierungsfluss für Registerkarten](~/tabs/how-to/authentication/auth-flow-tab.md). Stellen Sie sicher, dass alle auf Ihren Registerkartenseiten verwendeten Domänen im Array `manifest.json` `validDomains` aufgeführt sind.
 
 Nachfolgend finden Sie einen Beispielcodeblock zum Entfernen von Registerkarten:
 
@@ -83,11 +83,11 @@ Nachfolgend finden Sie einen Beispielcodeblock zum Entfernen von Registerkarten:
 
 ```
 
-Wenn ein Benutzer  im Dropdownmenü der Registerkarte Entfernen auswählt, wird die optionale Seite (die auf Der Konfigurationsseite angegeben ist) von Teams in einen `removeUrl` IFrame geladen.  Hier wird dem Benutzer eine Schaltfläche angezeigt, die mit der Funktion geladen ist, die die Schaltfläche Entfernen aufruft und aktiviert, die sich am unteren Rand der `onClick()` `microsoftTeams.settings.setValidityState(true)` Entfernungsseite IFrame befindet. 
+Wenn ein Benutzer  aus dem Dropdownmenü der Registerkarte entfernen auswählt, wird Teams die optionale Seite (auf Ihrer Konfigurationsseite festgelegt) in einen `removeUrl` IFrame geladen.  Hier wird dem Benutzer eine Schaltfläche angezeigt, die mit der Funktion geladen ist, die die Schaltfläche Entfernen aufruft und aktiviert, die sich am unteren Rand der `onClick()` `microsoftTeams.settings.setValidityState(true)` Entfernungsseite IFrame befindet. 
 
-Nach der Ausführung des Remove-Handlers oder benachrichtigt Teams über das Ergebnis der `removeEvent.notifySuccess()` `removeEvent.notifyFailure()` Inhaltsentfernung.
+Nach der Ausführung des Remove-Handlers oder benachrichtigt Teams das Ergebnis `removeEvent.notifySuccess()` `removeEvent.notifyFailure()` der Inhaltsentfernung.
 
 >[!NOTE]
->Um sicherzustellen, dass das Steuerelement eines autorisierten Benutzers über eine Registerkarte nicht gehemmt wird, entfernt Teams die Registerkarte sowohl in Erfolgs- als auch in Fehlerfällen.\
+>Um sicherzustellen, dass das Steuerelement eines autorisierten Benutzers über eine Registerkarte nicht gehemmt wird, Teams die Registerkarte sowohl in Erfolgs- als auch in Fehlerfällen entfernt.\
 >Teams aktiviert die **Schaltfläche Entfernen** nach 5 Sekunden, auch wenn Ihre Registerkarte nicht aufgerufen `setValidityState()` wurde.\
->Wenn der Benutzer Teams **entfernen** auswählt, wird die Registerkarte nach 30 Sekunden entfernt, unabhängig davon, ob Ihre Aktionen abgeschlossen wurden.
+>Wenn der Benutzer Remove **Teams** entfernt die Registerkarte nach 30 Sekunden, unabhängig davon, ob Ihre Aktionen abgeschlossen wurden.

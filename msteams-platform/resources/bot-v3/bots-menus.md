@@ -22,7 +22,7 @@ Um die Suche zu unterstützen und Benutzer über die Funktionalität Ihres Bots 
 
 Wenn ein Benutzer ein Menüelement auswählt, wird die Befehlszeichenfolge in das Textfeld eingefügt, um den Benutzer beim Ausfüllen der Botnachricht zu helfen.
 
-## <a name="bot-menu-support-on-teams-mobile-app"></a>Bot-Menüunterstützung in mobilen Teams-Apps
+## <a name="bot-menu-support-on-teams-mobile-app"></a>Botmenüunterstützung für Teams mobile App
 > [!NOTE] 
 > Botmenüs werden auf mobilen Geräten nicht angezeigt
 

@@ -1,7 +1,7 @@
 ---
 title: Unterhaltungsereignisse
 author: WashingtonKayaker
-description: So arbeiten Sie mit Unterhaltungsereignissen aus Ihrem Microsoft Teams-Bot.
+description: So arbeiten Sie mit Unterhaltungsereignissen aus Ihrem Microsoft Teams Bot.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
@@ -16,7 +16,7 @@ ms.locfileid: "52020028"
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Beim Erstellen Ihrer Unterhaltungsbots für Microsoft Teams können Sie mit Unterhaltungsereignissen arbeiten. Teams sendet Benachrichtigungen an Ihren Bot für Unterhaltungsereignisse, die in Bereiche auftreten, in denen Ihr Bot aktiv ist. Sie können diese Ereignisse in Ihrem Code erfassen und die folgenden Aktionen ausführen:
+Wenn Sie Ihre Unterhaltungsbots für Microsoft Teams erstellen, können Sie mit Unterhaltungsereignissen arbeiten. Teams sendet Benachrichtigungen an Ihren Bot für Unterhaltungsereignisse, die in Denkbereiche auftreten, in denen Ihr Bot aktiv ist. Sie können diese Ereignisse in Ihrem Code erfassen und die folgenden Aktionen ausführen:
 
 * Auslösen einer Willkommensnachricht, wenn Ihr Bot einem Team hinzugefügt wird.
 * Auslösen einer Willkommensnachricht, wenn ein neues Teammitglied hinzugefügt oder entfernt wird.
@@ -40,7 +40,7 @@ Ein Bot empfängt `conversationUpdate` in einem der folgenden Fälle ein Ereigni
 
 Das `conversationUpdate`-Ereignis wird an Ihren Bot gesendet, wenn er Informationen zu Mitgliedschaftsaktualisierungen für Teams empfängt, denen er hinzugefügt wurde. Es erhält auch ein Update, wenn es zum ersten Mal für persönliche Unterhaltungen hinzugefügt wurde.
 
-Die folgende Tabelle enthält eine Liste der Ereignisse für Das Aktualisieren von Teams-Unterhaltungen mit weiteren Details:
+Die folgende Tabelle enthält eine Liste Teams Unterhaltungsaktualisierungsereignissen mit weiteren Details:
 
 | Ergriffene Aktion        | EventType         | Methode aufgerufen              | Beschreibung                | Bereich |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
@@ -1292,7 +1292,7 @@ Der Bot empfängt ein `installationUpdate` Ereignis, wenn Sie einen Bot in einem
 > Wenn Sie eine Anwendung aktualisieren und dann einen Bot hinzufügen oder entfernen, löst die Aktion auch das Ereignis `installationUpdate` aus. Das **Aktionsfeld** ist auf *Add-Upgrade* festgelegt, wenn Sie einen Bot oder ein *Remove-Upgrade* hinzufügen, wenn Sie einen Bot entfernen. 
 
 > [!IMPORTANT]
-> Installation update events are in developer preview today and will be Generally Available (GA) in March 2021. Um die Installationsupdateereignisse anzuzeigen, können Sie Ihren Teams-Client in die Öffentliche Entwicklervorschau verschieben und Ihre App persönlich oder zu einem Team oder Chat hinzufügen.
+> Installation update events are in developer preview today and will be Generally Available (GA) in March 2021. Um die Installationsupdateereignisse anzuzeigen, können Sie Ihren Teams-Client in die öffentliche Entwicklervorschau verschieben und Ihre App persönlich oder einem Team oder einem Chat hinzufügen.
 
 ### <a name="install-update-event"></a>Updateereignis installieren
 Verwenden Sie `installationUpdate` das Ereignis, um eine Einführungsnachricht von Ihrem Bot bei der Installation zu senden. Dieses Ereignis hilft Ihnen, Ihre Datenschutz- und Datenaufbewahrungsanforderungen zu erfüllen. Sie können auch Benutzer- oder Threaddaten bereinigen und löschen, wenn der Bot deinstalliert wird.

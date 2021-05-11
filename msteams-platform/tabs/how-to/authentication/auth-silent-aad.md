@@ -16,7 +16,7 @@ ms.locfileid: "52019601"
 > [!NOTE]
 > Damit die Authentifizierung für Ihre Registerkarte auf mobilen Clients funktioniert, stellen Sie sicher, dass Sie mindestens die Version 1.4.1 des Teams JavaScript SDK verwenden.
 
-Die automatische Authentifizierung in Azure Active Directory (AAD) minimiert die Anzahl der Anmeldeinformationen, mit der ein Benutzer seine Anmeldeinformationen einzahlt, indem das Authentifizierungstoken automatisch aktualisiert wird. Eine echte Unterstützung für einmaliges Anmelden finden Sie in [der SSO-Dokumentation](~/tabs/how-to/authentication/auth-aad-sso.md).
+Die automatische Authentifizierung in Azure Active Directory (AAD) minimiert die Anzahl, mit der ein Benutzer seine Anmeldeinformationen einzahlt, indem das Authentifizierungstoken automatisch aktualisiert wird. Eine echte Unterstützung für einmaliges Anmelden finden Sie in [der SSO-Dokumentation](~/tabs/how-to/authentication/auth-aad-sso.md).
 
 Wenn Sie Ihren Code vollständig clientseitig halten möchten, können Sie die AAD-Authentifizierungsbibliothek für JavaScript verwenden, um im Hintergrund ein AAD-Zugriffstoken abzurufen. [](/azure/active-directory/develop/active-directory-authentication-libraries) Wenn sich der Benutzer kürzlich angemeldet hat, wird nie ein Popupdialogfeld angezeigt.
 
@@ -31,7 +31,7 @@ Die ADAL.js erstellt einen ausgeblendeten iframe für den impliziten OAuth 2.0-E
 
 ## <a name="how-to-do-silent-authentication"></a>So gehen Sie zur automatischen Authentifizierung
 
-Der Code in diesem Artikel stammt aus der Teams-Beispiel-App, bei der es sich um [den Beispielknoten für die Teams-Authentifizierung handelt.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)
+Der Code in diesem Artikel stammt aus Teams Beispiel-App, die Teams [Authentifizierungsbeispielknoten ist.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)
 
 [Initiieren Sie die konfigurierbare Registerkarte](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) für die automatische und einfache Authentifizierung mithilfe von AAD, und befolgen Sie die Anweisungen zum Ausführen des Beispiels auf Dem lokalen Computer.
 
@@ -127,7 +127,7 @@ if (authContext.isCallback(window.location.hash)) {
 Verwenden Sie den folgenden Code, um den Abmeldefluss in AAD Auth zu behandeln:
 
 > [!NOTE]
-> Während die Anmeldung für die Registerkarte oder den Bot von Teams erfolgt ist, wird die aktuelle Sitzung ebenfalls geräumt.
+> Während die Anmeldung für Teams oder Bot erfolgt ist, wird die aktuelle Sitzung ebenfalls geräumt.
 
 ```javascript
 function logout() {

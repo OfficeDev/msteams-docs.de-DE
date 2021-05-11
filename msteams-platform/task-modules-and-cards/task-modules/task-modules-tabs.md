@@ -1,6 +1,6 @@
 ---
-title: Verwenden von Aufgabenmodulen in Microsoft Teams-Registerkarten
-description: Erläutert das Aufrufen von Aufgabenmodulen von Microsoft Teams-Registerkarten mithilfe des Microsoft Teams-Client-SDK
+title: Verwenden von Aufgabenmodulen in Microsoft Teams Registerkarten
+description: Erläutert das Aufrufen von Aufgabenmodulen Teams Registerkarten mithilfe des Microsoft Teams-Client-SDK
 localization_priority: Normal
 ms.topic: how-to
 keywords: task modules teams tabs client sdk
@@ -13,9 +13,9 @@ ms.locfileid: "52019524"
 ---
 # <a name="using-task-modules-in-tabs"></a>Verwenden von Aufgabenmodulen in Registerkarten
 
-Das Hinzufügen eines Aufgabenmoduls zu Ihrer Registerkarte kann die Benutzererfahrung für Workflows, für die Dateneingaben erforderlich sind, erheblich vereinfachen. Mit Aufgabenmodulen können Sie ihre Eingaben in einem Teams-bewussten Popup erfassen. Ein gutes Beispiel hierin ist die Bearbeitung von Planner-Karten. Sie können Aufgabenmodule verwenden, um eine ähnliche Erfahrung zu erstellen.
+Das Hinzufügen eines Aufgabenmoduls zu Ihrer Registerkarte kann die Benutzererfahrung für Workflows, für die Dateneingaben erforderlich sind, erheblich vereinfachen. Mit Aufgabenmodulen können Sie ihre Eingaben in einem Teams Popup erfassen. Ein gutes Beispiel hierin ist die Bearbeitung von Planner-Karten. Sie können Aufgabenmodule verwenden, um eine ähnliche Erfahrung zu erstellen.
 
-Zur Unterstützung des Aufgabenmodulfeatures wurden dem [Microsoft Teams-Client-SDK](/javascript/api/overview/msteams-client)zwei neue Funktionen hinzugefügt:
+Zur Unterstützung des Aufgabenmodulfeatures wurden dem client-SDK zwei [Microsoft Teams hinzugefügt:](/javascript/api/overview/msteams-client)
 
 ```typescript
 microsoftTeams.tasks.startTask(
@@ -76,9 +76,9 @@ Wenn kein Aufruffehler auftritt und der Benutzer X nicht drückt, um ihn zu schl
 
 ### <a name="htmljavascript-taskinfourl"></a>HTML/JavaScript ( `TaskInfo.url` )
 
-Nachdem Sie überprüft haben, was der Benutzer eingegeben hat, rufen Sie die SDK-Funktion auf (im Folgenden als zu `microsoftTeams.tasks.submitTask()` `submitTask()` Lesbarkeitszwecken bezeichnet). Sie können ohne Parameter aufrufen, wenn Sie nur möchten, dass Teams das Aufgabenmodul schließt, aber meistens möchten Sie ein Objekt oder eine Zeichenfolge an `submitTask()` Ihre `submitHandler` übergeben.
+Nachdem Sie überprüft haben, was der Benutzer eingegeben hat, rufen Sie die SDK-Funktion auf (im Folgenden als zu `microsoftTeams.tasks.submitTask()` `submitTask()` Lesbarkeitszwecken bezeichnet). Sie können ohne Parameter aufrufen, wenn Sie nur Teams Aufgabenmodul schließen möchten, aber meistens möchten Sie ein Objekt oder eine Zeichenfolge an `submitTask()` Ihre `submitHandler` übergeben.
 
-Übergeben Sie Ihr Ergebnis als ersten Parameter. Teams ruft das Objekt/die Zeichenfolge auf, das Sie `submitHandler` `err` an übergeben `null` `result` `submitTask()` haben. Wenn Sie einen Parameter aufrufen, müssen Sie ein oder ein Array von Zeichenfolgen übergeben: Auf diese Weise kann Teams überprüfen, ob die App, die das Ergebnis sendet, dieselbe ist, die das Aufgabenmodul aufgerufen `submitTask()` `result`  `appId` `appId` hat.
+Übergeben Sie Ihr Ergebnis als ersten Parameter. Teams ruft das Objekt/die Zeichenfolge auf, das Sie `submitHandler` `err` an übergeben `null` `result` `submitTask()` haben. Wenn Sie einen Parameter aufrufen, müssen Sie ein oder ein Array von Zeichenfolgen übergeben: Dadurch kann Teams überprüfen, ob die App, die das Ergebnis sendet, dieselbe ist, die das Aufgabenmodul aufgerufen `submitTask()` `result`  `appId` `appId` hat.
 
 ### <a name="adaptive-card-taskinfocard"></a>Adaptive Karte ( `TaskInfo.card` )
 

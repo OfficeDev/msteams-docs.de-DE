@@ -12,13 +12,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020429"
 ---
-# <a name="troubleshoot-your-microsoft-teams-app"></a>Problembehandlung für Ihre Microsoft Teams-App
+# <a name="troubleshoot-your-microsoft-teams-app"></a>Problembehandlung für Ihre Microsoft Teams App
 
 ## <a name="troubleshooting-tabs"></a>Problembehandlung bei Registerkarten
 
 ### <a name="accessing-the-devtools"></a>Zugreifen auf devTools
 
-Sie können [DevTools](~/tabs/how-to/developer-tools.md) im Teams-Client öffnen, um eine ähnliche Erfahrung wie das Drücken von F12 (unter Windows) oder Command-Option-I (unter MacOS) in einem Browser zu erhalten.
+Sie können [DevTools](~/tabs/how-to/developer-tools.md) im Teams-Client öffnen, um eine ähnliche Erfahrung wie das Drücken von F12 (auf Windows) oder Command-Option-I (unter MacOS) in einem Browser zu erhalten.
 
 ### <a name="blank-tab-screen"></a>Leerer Registerkartenbildschirm
 
@@ -64,7 +64,7 @@ Es gibt ein bekanntes Problem, bei dem das Aktualisieren einer vorhandenen Bot-A
 
 ### <a name="cant-add-my-bot"></a>Mein Bot kann nicht hinzugefügt werden
 
-Apps müssen vom Office 365-Mandantenadministrator aktiviert sein, damit sie von Endbenutzern geladen werden können. Beachten Sie, dass dem Office 365-Mandanten in einigen Fällen möglicherweise mehrere SKUs zugeordnet sind, und damit Bots in einem Beliebigen funktionieren, müssen sie in allen SKUs aktiviert sein. Weitere Informationen finden Sie unter [Prepare your Office 365 tenant.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+Apps müssen vom Office 365-Mandantenadministrator aktiviert werden, damit sie von Endbenutzern geladen werden können. Beachten Sie, dass dem mandanten Office 365 in einigen Fällen mehrere SKUs zugeordnet sind, und damit Bots in einem beliebigen verwendet werden können, müssen sie in allen SKUs aktiviert sein. Weitere Informationen finden Sie unter Prepare [your Office 365 tenant.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
 ### <a name="cant-add-bot-as-a-member-of-a-team"></a>Bot kann nicht als Teammitglied hinzugefügt werden
 
@@ -86,12 +86,12 @@ Die meisten Manifestfehler geben einen Hinweis darauf, welches bestimmte Feld fe
 
 Häufige Gründe für Fehler beim Lesen von Manifesten:
 
-* Ungültiger JSON-Fehler. Verwenden Sie eine IDE, [Visual Studio Code](https://code.visualstudio.com) [oder](https://www.visualstudio.com/vs/) Visual Studio, die die #A0 automatisch überprüft.
+* Ungültiger JSON-Fehler. Verwenden Sie eine IDE wie [Visual Studio Code](https://code.visualstudio.com) oder [Visual Studio,](https://www.visualstudio.com/vs/) die die #A0 automatisch überprüft.
 * Codierungsprobleme. Verwenden Sie UTF-8 fürmanifest.js *on-Datei.* Andere Codierungen, insbesondere mit der Bom, sind möglicherweise nicht lesbar.
-* Falsch formatiertes ZIP-Paket. Die *manifest.json-Datei* muss auf der obersten Ebene der ZIP-Datei sein. Beachten Sie, dass die Standardmäßige Mac-Dateikomprimierung dasmanifest.js *in* einem Unterverzeichnis platzieren kann, das in Microsoft Teams nicht ordnungsgemäß geladen wird.
+* Falsch formatiertes .zip Paket. Die *manifest.json-Datei* muss sich auf der obersten Ebene der datei .zip sein. Beachten Sie, dass die Standardmäßige Mac-Dateikomprimierung dasmanifest.js *in* einem Unterverzeichnis platzieren kann, das nicht ordnungsgemäß in einem Microsoft Teams.
 
 ### <a name="another-extension-with-same-id-exists"></a>Eine weitere Erweiterung mit derselben ID ist vorhanden.
 
-Wenn Sie versuchen, ein aktualisiertes Paket mit derselben ID  erneut hochzuladen, wählen Sie das Symbol Ersetzen am Ende der Tabellenzeile der Registerkarte anstelle der Schaltfläche **Hochladen** aus.
+Wenn Sie versuchen, ein aktualisiertes Paket mit derselben ID  erneut hochzuladen, wählen Sie das Symbol Ersetzen am Ende der Tabellenzeile der Registerkarte anstelle der Schaltfläche Hochladen **aus.**
 
 Wenn Sie ein aktualisiertes Paket nicht erneut hochladen, stellen Sie sicher, dass die ID eindeutig ist.

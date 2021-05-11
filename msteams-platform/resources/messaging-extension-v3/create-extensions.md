@@ -15,7 +15,7 @@ ms.locfileid: "52019734"
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-Aktionsbasierte Messagingerweiterungen ermöglichen Es Benutzern, Aktionen in externen Diensten innerhalb von Teams auszulösen.
+Aktionsbasierte Messagingerweiterungen ermöglichen Benutzern das Auslösen von Aktionen in externen Diensten innerhalb Teams.
 
 ![Beispiel für Eine Messaging-Erweiterungskarte](~/assets/images/compose-extensions/ceexample.png)
 
@@ -232,11 +232,11 @@ Um Ihre Messagingerweiterung zu öffnen, navigieren Sie zu ihren Chats oder Kan�
 
 ## <a name="collecting-input-from-users"></a>Sammeln von Eingaben von Benutzern
 
-Es gibt drei Möglichkeiten, Informationen von einem Endbenutzer in Teams zu sammeln.
+Es gibt drei Möglichkeiten zum Sammeln von Informationen von einem Endbenutzer in Teams.
 
 ### <a name="static-parameter-list"></a>Statische Parameterliste
 
-In dieser Methode müssen Sie nur eine statische Liste von Parametern im Manifest definieren, wie oben im Befehl "To Do erstellen" gezeigt. Um diese Methode zu verwenden, stellen Sie sicher, dass auf festgelegt ist und Dass `fetchTask` Sie Ihre Parameter im Manifest `false` definieren.
+Bei dieser Methode müssen Sie nur eine statische Liste von Parametern im Manifest definieren, wie oben im Befehl "Create To Do" gezeigt. Um diese Methode zu verwenden, stellen Sie sicher, dass auf festgelegt ist und Dass `fetchTask` Sie Ihre Parameter im Manifest `false` definieren.
 
 Wenn ein Benutzer einen Befehl mit statischen Parametern aus wählt, generiert Teams ein Formular in einem Aufgabenmodul mit den im Manifest definierten Parametern. Beim Drücken von Submit a `composeExtension/submitAction` wird an den Bot gesendet. Weitere Informationen zum erwarteten Satz von Antworten finden Sie im Thema [Antworten](#responding-to-submit) auf Absenden.
 

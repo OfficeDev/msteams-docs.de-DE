@@ -1,10 +1,10 @@
 ### <a name="use-app-studio-to-update-the-app-package"></a>Aktualisieren des App-Pakets mithilfe von App Studio
 
-App Studio ist eine Teams-App, die Sie im Teams Store installieren können. Es vereinfacht die Erstellung und Registrierung einer App.
+App Studio ist eine Teams App, die Sie über den Teams installieren können. Es vereinfacht die Erstellung und Registrierung einer App.
 
 Führen Sie die folgenden Schritte aus, um das App-Paket zu aktualisieren:
 
-1. Um App Studio in Teams zu installieren, wählen Sie das **Symbol Apps** unten auf der linken Leiste aus, und suchen Sie nach **App Studio**.
+1. Wenn Sie App Studio in Teams installieren möchten, wählen Sie unten auf der linken Leiste das Symbol **Apps** aus, und suchen Sie nach **App Studio**.
 
 <img  width="450px" alt="Finding App Studio in the Store View" src="~/assets/images/get-started/searchforAppStudio.png"/>
 
@@ -12,7 +12,7 @@ Führen Sie die folgenden Schritte aus, um das App-Paket zu aktualisieren:
 
 <img  width="450px" alt="Installing App Studio" src="~/assets/images/get-started/InstallingAppStudio.png"/>
 
-3. Wählen Sie zum Erstellen des App-Pakets für Ihre Teams-App die Registerkarte **Manifest-Editor** in **App Studio aus.**
+3. Um das App-Paket für Ihre Teams zu erstellen, wählen Sie in App Studio die **Registerkarte Manifesteditor** **aus.**
 
 <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
@@ -56,7 +56,7 @@ Gehen Sie im rechten Bereich durch die App-Details, einschließlich **Entwickler
 
 #### <a name="tabs"></a>Registerkarten
 
-Es ist einfach, einer Teams-App Registerkarten hinzuzufügen. Die Beispiel-App unterstützt bereits mehrere Registerkarten, und Sie können sie aktivieren.
+Das Hinzufügen von Registerkarten zu einer Teams ist einfach. Die Beispiel-App unterstützt bereits mehrere Registerkarten, und Sie können sie aktivieren.
 
 ##### <a name="team-tab"></a>Registerkarte "Team"
 
@@ -138,23 +138,23 @@ Unter **Parameter**:
 
 7. Nachdem Sie die Informationen eingeben, wählen **Sie Speichern** aus, um das Dialogfeld zu schließen.
 
-#### <a name="register-your-app-in-teams"></a>Registrieren Ihrer App in Teams
+#### <a name="register-your-app-in-teams"></a>Registrieren Sie Ihre App in Teams
 
-Führen Sie nach der Eingabe der Details Ihrer App die folgenden Schritte aus, um Ihre App in Teams zu registrieren:
+Führen Sie nach der Eingabe der Details Ihrer App die folgenden Schritte aus, um Ihre App in Teams:
 
-1. Verwenden **Sie Testen und Verteilen von** App Studio, um Ihre App in Teams zu installieren. 
+1. Verwenden **Sie Testen und Verteilen** von App Studio, um Ihre App in einem Teams. 
 2. Aktualisieren Sie Ihre gehostete Anwendung mit der App-ID und dem Kennwort für Ihren Bot. Verwenden Sie für die Beispiel-App die gleiche App-ID und dasselbe Kennwort für Bot- und Messagingerweiterung. 
 3. Wählen **Sie Testen und Verteilen**  unter **Fertig** stellen im linken Bereich von App Studio aus.
 
 <img  width="450px" alt="Testing your app" src="~/assets/images/get-started/Testanddistribute.png"/>
 
-4. Um Ihre App in Teams hochzuladen, wählen Sie unter **Testen** und Verteilen die Schaltfläche **Installieren aus.**
+4. Um Ihre App in Teams hochzuladen, wählen Sie unter Testen und Verteilen **die** Schaltfläche **Installieren aus.**
 
 <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
 
 5. Wählen Sie **im Abschnitt** **Zu** einem Team hinzufügen das Feld Suchen aus, und wählen Sie ein Team aus, um die Beispiel-App hinzuzufügen. Sie können ein spezielles Team für Tests einrichten.
 6. Wählen Sie **unten** im Dialogfeld die Schaltfläche Installieren aus.
 
-Ihre App ist jetzt in Teams verfügbar. Der Bot und die Messagingerweiterung funktionieren jedoch erst, wenn Sie die gehostete Anwendungsumgebung mit den App-IDs und Kennwörtern aktualisieren.
+Ihre App ist jetzt in Teams. Der Bot und die Messagingerweiterung funktionieren jedoch erst, wenn Sie die gehostete Anwendungsumgebung mit den App-IDs und Kennwörtern aktualisieren.
 
 <img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>

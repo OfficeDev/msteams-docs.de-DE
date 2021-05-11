@@ -14,7 +14,7 @@ ms.locfileid: "52019573"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core"></a>Erstellen eines benutzerdefinierten Kanals und einer Registerkarte "Gruppe" mit ASP.NET Core
 
-In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten Kanal-/Gruppenregisterkarte mit C# und ASP.Net Core -Gestochenseite gehen. Außerdem verwenden wir [App Studio für Microsoft Teams,](~/concepts/build-and-test/app-studio-overview.md) um Ihr App-Manifest zu finalisieren und Ihre Registerkarte in Teams zu bereitstellen.
+In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten Kanal-/Gruppenregisterkarte mit C# und ASP.Net Core -Gestochenseite gehen. Außerdem verwenden wir [App Studio für Microsoft Teams,](~/concepts/build-and-test/app-studio-overview.md) um Ihr App-Manifest zu finalisieren und Ihre Registerkarte für die Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -26,7 +26,7 @@ In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten 
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-Sobald Sie den Quellcode haben, öffnen Sie Visual Studio, und wählen **Sie Projekt oder Projektmappe öffnen aus.** Navigieren Sie zum Verzeichnis der Registerkartenanwendung, und öffnen **Sie ChannelGroupTab.sln**.
+Nachdem Sie den Quellcode verwendet haben, öffnen Sie Visual Studio, und wählen **Sie Projekt oder Projektmappe öffnen aus.** Navigieren Sie zum Verzeichnis der Registerkartenanwendung, und öffnen **Sie ChannelGroupTab.sln**.
 
 Drücken Sie **F5,** um die Anwendung zu erstellen und auszuführen, oder wählen Sie **Debuggen starten** im Menü **Debuggen** aus. Navigieren Sie in einem Browser zu den folgenden URLs, und überprüfen Sie, ob die Anwendung ordnungsgemäß geladen wurde:
 
@@ -38,7 +38,7 @@ Drücken Sie **F5,** um die Anwendung zu erstellen und auszuführen, oder wähle
 
 ### <a name="startupcs"></a>Startup.cs
 
-Dieses Projekt wurde aus einer leeren ASP.NET Core 2.2-Webanwendung erstellt, deren Kontrollkästchen *Erweitert – Konfigurieren* für HTTPS beim Setup aktiviert ist. Die MVC-Dienste werden von der Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage die Standardmäßige Entladung statischer Inhalte nicht, sodass die Middleware für statische Dateien der Methode hinzugefügt `Configure()` wird:
+Dieses Projekt wurde aus einer leeren ASP.NET Core 2.2-Webanwendung erstellt, deren Kontrollkästchen *Advanced – Configure for HTTPS* beim Setup aktiviert ist. Die MVC-Dienste werden von der Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage die Standardmäßige Entladung statischer Inhalte nicht, sodass die Middleware für statische Dateien der Methode hinzugefügt `Configure()` wird:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -54,7 +54,7 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="wwwroot-folder"></a>Ordner "wwwroot"
 
-In ASP.NET Core befindet sich der Webstammordner, in dem die Anwendung nach statischen Dateien sucht.
+In ASP.NET Core ist der Webstammordner der Ort, in dem die Anwendung nach statischen Dateien sucht.
 
 ### <a name="indexcshtml"></a>Index.cshtml
 
@@ -72,11 +72,11 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 - Ein **transparentes Gliederungssymbol** mit einer Breite von 32 x 32 Pixeln.
 - Eine **manifest.json-Datei,** die die Attribute Ihrer App angibt.
 
-Diese Dateien müssen in einem App-Paket für die Verwendung beim Hochladen Ihrer Registerkarte in Teams gezippt werden. Wenn ein Benutzer Ihre Registerkarte hinzufügen oder aktualisieren möchte, wird das in Ihrem Manifest angegebene Von Microsoft Teams geladen, in einen IFrame eingebettet und auf Ihrer Registerkarte `configurationUrl` gerendert.
+Diese Dateien müssen in einem App-Paket gezippt werden, damit sie zum Hochladen Ihrer Registerkarte in das Teams. Wenn ein Benutzer ihre Registerkarte hinzufügen oder aktualisieren möchte, wird Microsoft Teams in Ihr Manifest geladen, in einen IFrame eingebettet und auf Ihrer Registerkarte `configurationUrl` gerendert.
 
 ### <a name="csproj"></a>.csproj
 
-Klicken Sie Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Projektdatei bearbeiten aus.** Unten in der Datei wird der Code angezeigt, mit dem Ihr ZIP-Ordner erstellt und aktualisiert wird, wenn die Anwendung erstellt:
+Klicken Sie Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Bearbeiten Project Datei aus.** Unten in der Datei wird der Code angezeigt, mit dem Ihr ZIP-Ordner erstellt und aktualisiert wird, wenn die Anwendung erstellt:
 
 ```xml
 <PropertyGroup>
@@ -110,7 +110,7 @@ ngrok http https://localhost:44355 -host-header="localhost:44355"
 
 ## <a name="update-your-application"></a>Aktualisieren Ihrer Anwendung
 
-In *Tab.cshtml* stellt die Anwendung dem Benutzer zwei Optionsschaltflächen zum Anzeigen der Registerkarte mit einem roten oder einem grauen Symbol zur Auswahl. Wenn Sie die  Schaltfläche **Grau auswählen** oder Rot auswählen aktivieren, wird bzw. wird die Schaltfläche Speichern auf der `saveGray()` `saveRed()` `settings.setValidityState(true)` Konfigurationsseite aktiviert.  Dieser Code informiert Teams, dass Sie die Konfigurationsanforderungen erfüllt haben und die Installation fortgesetzt werden kann. Beim Speichern werden die Parameter `settings.setSettings` von festgelegt. Schließlich wird `saveEvent.notifySuccess()` aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
+In *Tab.cshtml* stellt die Anwendung dem Benutzer zwei Optionsschaltflächen zum Anzeigen der Registerkarte mit einem roten oder einem grauen Symbol zur Auswahl. Wenn Sie die  Schaltfläche **Grau auswählen** oder Rot auswählen aktivieren, wird bzw. wird die Schaltfläche Speichern auf der `saveGray()` `saveRed()` `settings.setValidityState(true)` Konfigurationsseite aktiviert.  Dieser Code Teams, dass Sie die Konfigurationsanforderungen erfüllt haben und die Installation fortgesetzt werden kann. Beim Speichern werden die Parameter `settings.setSettings` von festgelegt. Schließlich wird `saveEvent.notifySuccess()` aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 

@@ -14,7 +14,7 @@ ms.locfileid: "52019566"
 ---
 # <a name="create-a-custom-personal-tab-with-asp-net-core-mvc"></a>Erstellen Sie eine benutzerdefinierte persönliche Registerkarte mit ASP. NET Core MVC
 
-In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten persönlichen Registerkarte mit C# ASP gehen. Net Core MVC. Außerdem verwenden wir [App Studio für Microsoft Teams,](~/concepts/build-and-test/app-studio-overview.md) um Ihr App-Manifest zu finalisieren und Ihre Registerkarte in Teams zu bereitstellen.
+In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten persönlichen Registerkarte mit C# ASP gehen. Net Core MVC. Außerdem verwenden wir [App Studio für Microsoft Teams,](~/concepts/build-and-test/app-studio-overview.md) um Ihr App-Manifest zu finalisieren und Ihre Registerkarte für die Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -26,7 +26,7 @@ In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten 
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-Sobald Sie den Quellcode haben, öffnen Sie Visual Studio, und wählen **Sie Projekt oder Projektmappe öffnen aus.** Navigieren Sie zum Verzeichnis der Registerkartenanwendung, und öffnen **Sie PersonalTabMVC.sln**.
+Nachdem Sie den Quellcode verwendet haben, öffnen Sie Visual Studio, und wählen **Sie Projekt oder Projektmappe öffnen aus.** Navigieren Sie zum Verzeichnis der Registerkartenanwendung, und öffnen **Sie PersonalTabMVC.sln**.
 
 Drücken Sie **F5,** um die Anwendung zu erstellen und auszuführen, oder wählen Sie **Debuggen starten** im Menü **Debuggen** aus. Navigieren Sie in einem Browser zu den folgenden URLs, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde:
 
@@ -64,11 +64,11 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 * Ein **transparentes Gliederungssymbol** mit einer Breite von 32 x 32 Pixeln.
 * Eine **manifest.json-Datei,** die die Attribute Ihrer App angibt.
 
-Diese Dateien müssen in einem App-Paket für die Verwendung beim Hochladen Ihrer Registerkarte in Teams gezippt werden. Microsoft Teams laden das in Ihrem Manifest angegebene, betten es `contentUrl` in einen IFrame ein und rendern es auf Ihrer Registerkarte.
+Diese Dateien müssen in einem App-Paket gezippt werden, damit sie zum Hochladen Ihrer Registerkarte in das Teams. Microsoft Teams laden das in Ihrem Manifest angegebene, betten Sie es in einen `contentUrl` IFrame ein, und rendern Sie es auf Ihrer Registerkarte.
 
 ### <a name="csproj"></a>.csproj
 
-Klicken Sie Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Projektdatei bearbeiten aus.** Unten in der Datei wird der Code angezeigt, mit dem Ihr ZIP-Ordner erstellt und aktualisiert wird, wenn die Anwendung erstellt:
+Klicken Sie Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Bearbeiten Project Datei aus.** Unten in der Datei wird der Code angezeigt, mit dem Ihr ZIP-Ordner erstellt und aktualisiert wird, wenn die Anwendung erstellt:
 
 ``` xml
 <PropertyGroup>
@@ -100,7 +100,7 @@ ASP. NET Core behandelt Dateien mit dem Namen *Index* als Standard-/Homepage fü
 
 #### <a name="shared"></a>Shared
 
-Das Teilansichts *markup _Layout.cshtml* enthält die allgemeine Seitenstruktur der Anwendung und freigegebene visuelle Elemente. Außerdem wird auf die Teams Library verwiesen.
+Das Teilansichts *markup _Layout.cshtml* enthält die allgemeine Seitenstruktur der Anwendung und freigegebene visuelle Elemente. Außerdem wird auf die Teams verwiesen.
 
 ### <a name="controllers"></a>Controller
 

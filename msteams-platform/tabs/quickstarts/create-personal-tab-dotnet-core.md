@@ -14,7 +14,7 @@ ms.locfileid: "52020296"
 ---
 # <a name="create-a-personal-tab-with-aspnet-core"></a>Erstellen einer persönlichen Registerkarte mit ASP.NET Core
 
-In dieser Schnellstartanleitung wird eine benutzerdefinierte persönliche Registerkarte mit C# und ASP.Net erstellt. Außerdem verwenden wir [App Studio für Microsoft Teams,](~/concepts/build-and-test/app-studio-overview.md) um Ihr App-Manifest zu finalisieren und Ihre Registerkarte in Teams zu bereitstellen.
+In dieser Schnellstartanleitung wird eine benutzerdefinierte persönliche Registerkarte mit C# und ASP.Net erstellt. Außerdem verwenden wir [App Studio für Microsoft Teams,](~/concepts/build-and-test/app-studio-overview.md) um Ihr App-Manifest zu finalisieren und Ihre Registerkarte für die Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -26,7 +26,7 @@ In dieser Schnellstartanleitung wird eine benutzerdefinierte persönliche Regist
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-Sobald Sie den Quellcode haben, öffnen Sie Visual Studio, und wählen **Sie Projekt oder Projektmappe öffnen aus.** Navigieren Sie zum Verzeichnis der Registerkartenanwendung, und öffnen **Sie PersonalTab.sln**.
+Nachdem Sie den Quellcode verwendet haben, öffnen Sie Visual Studio, und wählen **Sie Projekt oder Projektmappe öffnen aus.** Navigieren Sie zum Verzeichnis der Registerkartenanwendung, und öffnen **Sie PersonalTab.sln**.
 
 Drücken Sie **F5,** um die Anwendung zu erstellen und auszuführen, oder wählen Sie **Debuggen starten** im Menü **Debuggen** aus. Navigieren Sie in einem Browser zu den folgenden URLs, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde:
 
@@ -39,7 +39,7 @@ Drücken Sie **F5,** um die Anwendung zu erstellen und auszuführen, oder wähle
 
 ### <a name="startupcs"></a>Startup.cs
 
-Dieses Projekt wurde aus einer leeren ASP.NET Core 2.2-Webanwendung erstellt, deren Kontrollkästchen *Erweitert – Konfigurieren* für HTTPS beim Setup aktiviert ist. Die MVC-Dienste werden von der Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage die Standardmäßige Entladung statischer Inhalte nicht, sodass die Middleware für statische Dateien der Methode hinzugefügt `Configure()` wird:
+Dieses Projekt wurde aus einer leeren ASP.NET Core 2.2-Webanwendung erstellt, deren Kontrollkästchen *Advanced – Configure for HTTPS* beim Setup aktiviert ist. Die MVC-Dienste werden von der Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage die Standardmäßige Entladung statischer Inhalte nicht, sodass die Middleware für statische Dateien der Methode hinzugefügt `Configure()` wird:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -55,7 +55,7 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="wwwroot-folder"></a>Ordner "wwwroot"
 
-In ASP.NET Core befindet sich der Webstammordner, in dem die Anwendung nach statischen Dateien sucht.
+In ASP.NET Core ist der Webstammordner der Ort, in dem die Anwendung nach statischen Dateien sucht.
 
 ### <a name="indexcshtml"></a>Index.cshtml
 
@@ -69,11 +69,11 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 - Ein **transparentes Gliederungssymbol** mit einer Breite von 32 x 32 Pixeln.
 - Eine **manifest.json-Datei,** die die Attribute Ihrer App angibt.
 
-Diese Dateien müssen in einem App-Paket für die Verwendung beim Hochladen Ihrer Registerkarte in Teams gezippt werden. Microsoft Teams laden das in Ihrem Manifest angegebene, betten es in einen <ein und rendern ihn `contentUrl` \> auf Ihrer Registerkarte.
+Diese Dateien müssen in einem App-Paket gezippt werden, damit sie zum Hochladen Ihrer Registerkarte in das Teams. Microsoft Teams laden sie das in Ihrem Manifest angegebene, betten sie in einen iframe <ein, und rendern Sie ihn `contentUrl` \> auf Ihrer Registerkarte.
 
 ### <a name="csproj"></a>.csproj
 
-Klicken Sie Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Projektdatei bearbeiten aus.** Unten in der Datei wird der Code angezeigt, mit dem Ihr ZIP-Ordner erstellt und aktualisiert wird, wenn die Anwendung erstellt:
+Klicken Sie Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Bearbeiten Project Datei aus.** Unten in der Datei wird der Code angezeigt, mit dem Ihr ZIP-Ordner erstellt und aktualisiert wird, wenn die Anwendung erstellt:
 
 ```xml
 <PropertyGroup>

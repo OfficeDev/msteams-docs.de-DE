@@ -14,17 +14,17 @@ ms.locfileid: "52020176"
 ---
 # <a name="incoming-call-notifications"></a>Eingehende Anrufbenachrichtigungen
 
-Bei [der Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)wird der Webhook für das Aufrufen der URL erwähnt. Diese URL ist der Webhook-Endpunkt für alle eingehenden Anrufe an Ihren Bot.
+Bei der Registrierung eines Anruf- und [Besprechungsbots für Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)wird der Webhook für das Aufrufen der URL erwähnt. Diese URL ist der Webhook-Endpunkt für alle eingehenden Anrufe an Ihren Bot.
 
 ## <a name="protocol-determination"></a>Protokollermittlung
 
-Die eingehende Benachrichtigung wird im Legacyformat bereitgestellt, um die Kompatibilität mit dem vorherigen [Skype-Protokoll zu gewährleisten.](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true) Um den Aufruf an das Microsoft Graph-Protokoll zu konvertieren, muss Ihr Bot ermitteln, ob die Benachrichtigung ein Älteres Format hat, und die folgende Antwort bereitstellen:
+Die eingehende Benachrichtigung wird aus Kompatibilität mit dem vorherigen Skype [bereitgestellt.](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true) Um den Aufruf an das Microsoft Graph-Protokoll zu konvertieren, muss Ihr Bot ermitteln, ob die Benachrichtigung im Legacyformat enthalten ist, und die folgende Antwort bereitstellen:
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-Ihr Bot empfängt die Benachrichtigung erneut, dieses Mal jedoch im Microsoft Graph-Protokoll.
+Ihr Bot empfängt die Benachrichtigung erneut, aber dieses Mal im Microsoft Graph Protokoll.
 
 In einer zukünftigen Version der Echtzeitmedienplattform können Sie das von Der Anwendung unterstützte Protokoll konfigurieren, um den anfänglichen Rückruf im Legacyformat zu vermeiden.
 
@@ -68,7 +68,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-Das OAuth-Token hat die folgenden Werte und wird von Skype signiert:
+Das OAuth-Token hat die folgenden Werte und wird von einem Skype:
 
 ```json
 {
