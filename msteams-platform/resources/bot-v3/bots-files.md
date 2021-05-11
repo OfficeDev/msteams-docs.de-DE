@@ -18,7 +18,7 @@ ms.locfileid: "52020653"
 
 Es gibt zwei Möglichkeiten zum Senden von Dateien an und von einem Bot:
 
-* Verwenden der Microsoft Graph-APIs. Diese Methode funktioniert für Bots in allen Bereiche in Teams:
+* Verwenden der Microsoft-Graph-APIs. Diese Methode funktioniert für Bots in allen Teams:
   * `personal`
   * `channel`
   * `groupchat`
@@ -27,16 +27,16 @@ Es gibt zwei Möglichkeiten zum Senden von Dateien an und von einem Bot:
 
 ## <a name="using-the-microsoft-graph-apis"></a>Verwenden der Microsoft Graph-APIs
 
-Sie können Nachrichten mit Kartenanlagen posten, die auf vorhandene #A0 verweisen, indem Sie die Microsoft Graph-APIs für [OneDrive und SharePoint verwenden.](/onedrive/developer/rest-api/) Die Verwendung der Graph-APIs erfordert den Zugriff auf den #A0 eines Benutzers (für und Dateien) oder die Dateien in den Kanälen eines Teams (für Dateien) über den standardmäßigen `personal` `groupchat` `channel` OAuth 2.0-Autorisierungsfluss. Diese Methode funktioniert in allen Teams-Bereich.
+Sie können Nachrichten mit Kartenanlagen posten, die auf vorhandene SharePoint verweisen, indem Sie die Microsoft Graph-APIs für OneDrive [und SharePoint.](/onedrive/developer/rest-api/) Die Verwendung der Graph-APIs erfordert den Zugriff auf den OneDrive-Ordner (für und Dateien) oder die Dateien in den Kanälen eines Teams (für Dateien) über den standardmäßigen `personal` `groupchat` `channel` OAuth 2.0-Autorisierungsfluss. Diese Methode funktioniert in allen Teams Bereiche.
 
 ## <a name="using-the-teams-bot-apis"></a>Verwenden der Teams Bot-APIs
 
 > [!NOTE]
 > Diese Methode funktioniert nur im `personal` Kontext. Es funktioniert nicht im `channel` `groupchat` Oder-Kontext.
 
-Ihr Bot kann Dateien mit Benutzern im Kontext, auch als persönliche Chats bezeichnet, mithilfe von `personal` Teams-APIs direkt senden und empfangen. Auf diese Weise können Sie Spesenabrechnung, Bilderkennung, Dateiarchivierung, E-Signaturen und andere Szenarien implementieren, in denen Dateiinhalte direkt manipuliert werden. In Teams freigegebene Dateien werden in der Regel als Karten angezeigt und ermöglichen eine umfassende Anzeige in der App.
+Ihr Bot kann dateien direkt mit Benutzern im Kontext senden und empfangen, auch als persönliche Chats bezeichnet, mithilfe von `personal` Teams APIs. Auf diese Weise können Sie Spesenabrechnung, Bilderkennung, Dateiarchivierung, E-Signaturen und andere Szenarien implementieren, in denen Dateiinhalte direkt manipuliert werden. Dateien, die in Teams werden in der Regel als Karten angezeigt und ermöglichen eine umfassende Anzeige in der App.
 
-In den folgenden Abschnitten wird beschrieben, wie Sie dies tun, um Dateiinhalte als Ergebnis einer direkten Benutzerinteraktion, z. B. das Senden einer Nachricht, zu senden. Diese API wird als Teil der Microsoft Teams Bot Platform bereitgestellt.
+In den folgenden Abschnitten wird beschrieben, wie Sie dies tun, um Dateiinhalte als Ergebnis einer direkten Benutzerinteraktion, z. B. das Senden einer Nachricht, zu senden. Diese API wird als Teil der Microsoft Teams bereitgestellt.
 
 ### <a name="configure-your-bot-to-support-files"></a>Konfigurieren des Bots für die Unterstützung von Dateien
 
@@ -46,7 +46,7 @@ Die Definition sieht wie dies aus: `"supportsFiles": true` . Wenn Ihr Bot nicht 
 
 ### <a name="receiving-files-in-personal-chat"></a>Empfangen von Dateien in persönlichen Chats
 
-Wenn ein Benutzer eine Datei an Ihren Bot sendet, wird die Datei zuerst in den OneDrive for #A0 des Benutzers hochgeladen. Ihr Bot erhält dann eine Nachrichtenaktivität, die Sie über den Benutzerupload informiert. Die Aktivität enthält Dateimetadaten, z. B. den Namen und die Inhalts-URL. Sie können direkt aus dieser URL lesen, um den binären Inhalt zu abrufen.
+Wenn ein Benutzer eine Datei an Ihren Bot sendet, wird die Datei zuerst in den Speicher des Benutzers OneDrive for Business hochgeladen. Ihr Bot erhält dann eine Nachrichtenaktivität, die Sie über den Benutzerupload informiert. Die Aktivität enthält Dateimetadaten, z. B. den Namen und die Inhalts-URL. Sie können direkt aus dieser URL lesen, um den binären Inhalt zu abrufen.
 
 #### <a name="message-activity-with-file-attachment-example"></a>Beispiel für Nachrichtenaktivität mit Dateianlage
 
@@ -70,8 +70,8 @@ In der folgenden Tabelle werden die Inhaltseigenschaften der Anlage beschrieben:
 
 | Eigenschaft | Zweck |
 | --- | --- |
-| `downloadUrl` | OneDrive-URL zum Abrufen des Inhalts der Datei. Sie können eine direkt `HTTP GET` von dieser URL aus aus. |
-| `uniqueId` | Eindeutige Datei-ID. Dies ist die OneDrive-Laufwerkelement-ID, wenn der Benutzer eine Datei an Ihren Bot sendet. |
+| `downloadUrl` | OneDrive URL zum Abrufen des Inhalts der Datei. Sie können eine direkt `HTTP GET` von dieser URL aus aus. |
+| `uniqueId` | Eindeutige Datei-ID. Dies ist die OneDrive Laufwerkelement-ID, wenn der Benutzer eine Datei an Ihren Bot sendet. |
 | `fileType` | Dateierweiterungstyp, z. B. pdf oder docx. |
 
 Als bewährte Methode sollten Sie den Dateiupload bestätigen, indem Sie eine Nachricht an den Benutzer senden.
@@ -117,13 +117,13 @@ In der folgenden Tabelle werden die Inhaltseigenschaften der Anlage beschrieben:
 | Eigenschaft | Zweck |
 | --- | --- |
 | `description` | Beschreibung der Datei. Kann dem Benutzer angezeigt werden, um seinen Zweck zu beschreiben oder seinen Inhalt zusammenzufassen. |
-| `sizeInBytes` | Stellt dem Benutzer eine Schätzung der Dateigröße und des Speicherplatzes in OneDrive zur Verfügung. |
+| `sizeInBytes` | Stellt dem Benutzer eine Schätzung der Dateigröße und des Speicherplatzes zur Verfügung, der in diesem OneDrive. |
 | `acceptContext` | Zusätzlicher Kontext, der automatisch an Ihren Bot übermittelt wird, wenn der Benutzer die Datei akzeptiert. |
 | `declineContext` | Zusätzlicher Kontext, der automatisch an Ihren Bot übermittelt wird, wenn der Benutzer die Datei zurückgibt. |
 
 #### <a name="invoke-activity-when-the-user-accepts-the-file"></a>Aufrufen von Aktivitäten, wenn der Benutzer die Datei akzeptiert
 
-Eine Aufrufaktivität wird an Ihren Bot gesendet, wenn und wann der Benutzer die Datei akzeptiert. Sie enthält die OneDrive for Business-Platzhalter-URL, in die Ihr Bot dann eine ausgibt, um den `PUT` Dateiinhalt zu übertragen. Informationen zum Hochladen in die OneDrive-URL finden Sie in diesem Artikel: [Hochladen von Bytes in die Uploadsitzung](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+Eine Aufrufaktivität wird an Ihren Bot gesendet, wenn und wann der Benutzer die Datei akzeptiert. Sie enthält die OneDrive for Business Platzhalter-URL, in die Ihr Bot dann eine `PUT` ausgibt, um den Dateiinhalt zu übertragen. Weitere Informationen zum Hochladen in die OneDrive-URL finden Sie in diesem Artikel: [Hochladen Bytes zur Uploadsitzung hinzufügen.](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session)
 
 Das folgende Beispiel zeigt eine gekürzte Version der Aufrufaktivität, die Ihr Bot erhält:
 
@@ -165,7 +165,7 @@ Wenn der Benutzer die Datei zurückgibt, erhält ihr Bot das folgende Ereignis m
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Benachrichtigen des Benutzers über eine hochgeladene Datei
 
-Nach dem Hochladen einer Datei in das OneDrive des Benutzers, unabhängig davon, ob Sie den oben beschriebenen Mechanismus oder delegierte #A0 verwenden, sollten Sie eine Bestätigungsnachricht an den Benutzer senden. Diese Nachricht sollte eine Anlage enthalten, auf die der Benutzer klicken kann, um eine Vorschau anzuzeigen, sie in OneDrive zu öffnen `FileCard` oder lokal herunterzuladen.
+Nach dem Hochladen einer Datei in die Benutzerdatei OneDrive, unabhängig davon, ob Sie den oben beschriebenen Mechanismus oder OneDrive vom Benutzer delegierte APIs verwenden, sollten Sie eine Bestätigungsnachricht an den Benutzer senden. Diese Nachricht sollte eine Anlage enthalten, auf die der Benutzer klicken kann, um eine Vorschau anzuzeigen, OneDrive öffnen oder lokal `FileCard` herunterladen.
 
 ```json
 {
@@ -185,7 +185,7 @@ In der folgenden Tabelle werden die Inhaltseigenschaften der Anlage beschrieben:
 
 | Eigenschaft | Zweck |
 | --- | --- |
-| `uniqueId` | OneDrive/SharePoint-Laufwerkelement-ID. |
+| `uniqueId` | OneDrive/SharePoint Laufwerkelement-ID. |
 | `fileType` | Dateityp, z. B. pdf oder docx. |
 
 ### <a name="basic-example-in-c"></a>Grundlegendes Beispiel in C #

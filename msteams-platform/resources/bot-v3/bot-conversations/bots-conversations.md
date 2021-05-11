@@ -12,7 +12,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020667"
 ---
-# <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Führen einer Unterhaltung mit einem Microsoft Teams-Bot
+# <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Führen einer Unterhaltung mit einem Microsoft Teams Bot
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -41,7 +41,7 @@ Bots können an einer Unterhaltung teilnehmen oder eine Unterhaltung initiieren.
 
 Jede Nachricht ist ein `Activity`-Objekt vom Typ `messageType: message`. Wenn ein Benutzer eine Nachricht sendet, postet Teams die Nachricht auf Ihrem Bot. Spezifisch erfolgt dies durch Senden eines JSON-Objekts an den Nachrichtenendpunkt des Bots. Ihr Bot untersucht die Nachricht, um ihren Typ zu bestimmen, und antwortet entsprechend.
 
-Bots unterstützen auch Nachrichten im Ereignisformat. Weitere Informationen finden Sie unter Behandeln von [Botereignissen in Microsoft Teams.](~/resources/bot-v3/bots-notifications.md) Die Sprache wird derzeit nicht unterstützt.
+Bots unterstützen auch Nachrichten im Ereignisformat. Weitere [Informationen finden Sie unter Handle bot events in Microsoft Teams.](~/resources/bot-v3/bots-notifications.md) Die Sprache wird derzeit nicht unterstützt.
 
 Nachrichten sind in allen Bereiche zum größten Teil identisch, es gibt jedoch Unterschiede beim Zugriff auf den Bot auf der Benutzeroberfläche und Unterschiede hinter den Kulissen, die Sie kennen müssen.
 
@@ -49,14 +49,14 @@ Grundlegende Unterhaltungen werden über den Bot Framework Connector, eine einze
 
 ## <a name="message-content"></a>Nachrichteninhalt
 
-Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und Bilder an Ihren Bot senden. Sie können den Inhaltstyp angeben, den Ihr Bot auf der Seite Microsoft Teams-Einstellungen für Ihren Bot verarbeiten kann.
+Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und Bilder an Ihren Bot senden. Sie können den Inhaltstyp angeben, den Ihr Bot auf der Seite Microsoft Teams Einstellungen für Ihren Bot verarbeiten kann.
 
-| Format | Vom Benutzer zum Bot  | Vom Bot zum Benutzer |  Notes |
+| Format | Vom Benutzer zum Bot  | Vom Bot zum Benutzer |  Anmerkungen |
 | --- | :---: | :---: | --- |
 | Rich-Text  | ✔ | ✔ |  |
 | Bilder | ✔ | ✔ | Maximal 1024×1024 und 1 MB im PNG-, JPEG- oder GIF-Format; animierte GIF werden nicht unterstützt |
-| Karten | ✖ | ✔ | Informationen zu unterstützten Karten finden Sie in [der Teams-Kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md) |
-| Emojis | ✖ | ✔ | Teams unterstützt derzeit Emojis über UTF-16 (z. B. U+1F600 zum Schmunzeln des Gesichts) |
+| Karten | ✖ | ✔ | Weitere Informationen [finden Teams kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md) für unterstützte Karten |
+| Emojis | ✖ | ✔ | Teams unterstützt derzeit Emojis über UTF-16 (z. B. U+1F600 für schmunzelende Gesichter) |
 |
 
 Weitere Informationen zu den vom Bot Framework unterstützten Botinteraktionen (auf denen Bots in [](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) Teams basieren) finden Sie in der Bot Framework-Dokumentation zu Unterhaltungsfluss und verwandten Konzepten in der Dokumentation für das [Bot Builder SDK für .NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true) und das Bot Builder SDK [für Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true).
@@ -66,7 +66,7 @@ Weitere Informationen zu den vom Bot Framework unterstützten Botinteraktionen (
 Sie können die optionale Eigenschaft von a festlegen, um zu steuern, wie der Textinhalt Ihrer Nachricht [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message&preserve-view=true) `message` gerendert wird. Eine [detaillierte Beschreibung der unterstützten](~/resources/bot-v3/bots-message-format.md) Formatierung in Botnachrichten finden Sie unter Nachrichtenformatierung.
 Sie können die optionale Eigenschaft festlegen, um zu steuern, wie der Textinhalt Ihrer Nachricht [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message&preserve-view=true) gerendert wird.
 
-Ausführliche Informationen dazu, wie Teams die Textformatierung in Teams unterstützt, finden Sie unter [Textformatierung in Botnachrichten](~/resources/bot-v3/bots-text-formats.md).
+Ausführliche Informationen zur Unterstützung Teams Textformatierung in Teams finden Sie unter [Textformatierung in Botnachrichten](~/resources/bot-v3/bots-text-formats.md).
 
 Informationen zum Formatieren von Karten in Nachrichten finden Sie unter [Kartenformatierung](~/task-modules-and-cards/cards/cards-format.md).
 
@@ -90,7 +90,7 @@ Je nachdem, welche Bereiche deklariert werden, kann Ihr Bot Nachrichten in den f
 
 Für eingehende Nachrichten empfängt Ihr Bot ein [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0&preserve-view=true) Objekt vom Typ `messageType: message` . Obwohl das Objekt andere Arten von Informationen enthalten kann, z. B. Kanalupdates, die an Ihren Bot gesendet werden, stellt der Typ die Kommunikation `Activity` zwischen Bot und Benutzer [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` dar.
 
-Ihr Bot empfängt eine Nutzlast, die die Benutzernachricht sowie andere Informationen über den Benutzer, die Quelle der Nachricht und `Text` Teams-Informationen enthält. Beachten Sie:
+Ihr Bot empfängt eine Nutzlast, die die Benutzernachricht sowie weitere Informationen über den Benutzer, die Quelle der Nachricht und Teams `Text` enthält. Beachten Sie:
 
 * `timestamp` Datum und Uhrzeit der Nachricht in koordinierter Weltzeit (COORDINATED Universal Time, UTC)
 * `localTimestamp` Datum und Uhrzeit der Nachricht in der Zeitzone des Absenders
@@ -154,16 +154,16 @@ Bei der Interaktion in einem Kanal sollte Ihr Bot intelligent sein, bestimmte Un
 > [!NOTE]
 > Das Textfeld für eingehende Nachrichten enthält manchmal Erwähnungen. Achten Sie darauf, diese ordnungsgemäß zu überprüfen und zu bestreifen. Weitere Informationen finden Sie unter [Erwähnungen](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions).
 
-## <a name="teams-channel-data"></a>Teams-Kanaldaten
+## <a name="teams-channel-data"></a>Teams Kanaldaten
 
-Das `channelData` Objekt enthält Teams-spezifische Informationen und ist die endgültige Quelle für Team- und Kanal-IDs. Sie sollten diese IDs zwischenspeichern und als Schlüssel für den lokalen Speicher verwenden.
+Das `channelData` Objekt enthält Teams-spezifischen Informationen und ist die endgültige Quelle für Team- und Kanal-IDs. Sie sollten diese IDs zwischenspeichern und als Schlüssel für den lokalen Speicher verwenden.
 
 Das `channelData` Objekt ist nicht in Nachrichten in persönlichen Unterhaltungen enthalten, da diese außerhalb eines Kanals stattfinden.
 
 Ein typisches channelData-Objekt in einer Aktivität, die an Ihren Bot gesendet wird, enthält die folgenden Informationen:
 
-* `eventType` #A0 Nur bei [Kanaländerungsereignissen übergeben](~/resources/bot-v3/bots-notifications.md#channel-updates)
-* `tenant.id` Azure Active #A0 in allen Kontexten übergeben
+* `eventType`Teams Ereignistyp; Nur bei [Kanaländerungsereignissen übergeben](~/resources/bot-v3/bots-notifications.md#channel-updates)
+* `tenant.id`Azure Active Directory Mandanten-ID; in allen Kontexten übergeben
 * `team` Wird nur in Kanalkontexten übergeben, nicht in persönlichen Chats.
   * `id` GUID für den Kanal
   * `name` Name des Teams; Nur bei [Teambenennungsereignissen übergeben](~/resources/bot-v3/bots-notifications.md#team-name-updates)
@@ -193,7 +193,7 @@ Ein typisches channelData-Objekt in einer Aktivität, die an Ihren Bot gesendet 
 
 ### <a name="net-example"></a>.NET-Beispiel
 
-Das [Microsoft.Bot.Connector.Teams-NuGet-Paket](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) stellt ein spezielles Objekt zur Verfügung, das Eigenschaften für den Zugriff auf `TeamsChannelData` teamsspezifische Informationen verfügbar macht.
+Das [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet-Paket stellt ein spezielles Objekt zur Verfügung, das Eigenschaften für den Zugriff `TeamsChannelData` Teams spezifischen Informationen verfügbar macht.
 
 ```csharp
 TeamsChannelData channelData = activity.GetChannelData<TeamsChannelData>();

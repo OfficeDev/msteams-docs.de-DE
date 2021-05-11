@@ -1,6 +1,6 @@
 ---
 title: Entwerfen Ihrer App – Grundlegendes zu verstehen
-description: Erfahren Sie mehr über die Grundlagen des Entwerfens Ihrer Microsoft Teams-App, einschließlich Layout, Farbschema und mehr.
+description: Erfahren Sie mehr über die Grundlagen des Entwerfens Microsoft Teams App, einschließlich Layout, Farbschema und mehr.
 author: heath-hamilton
 localization_priority: Normal
 ms.author: lajanuar
@@ -22,7 +22,7 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
    :::column span="3":::
 
-      Teams basiert auf einem Rasterlayout, um konsistente und elegante Beziehungen zwischen Entwurfskomponenten sicherzustellen. Mit der 4-Pixel-Basiseinheit des Rasters können Komponenten konsistent über alle Anzeigegrößen in Teams skaliert werden.
+      Teams basiert auf einem Rasterlayout, um konsistente und elegante Beziehungen zwischen Entwurfskomponenten sicherzustellen. Die 4-Pixel-Basiseinheit des Rasters ermöglicht komponenten eine durchgängige Skalierung über alle Anzeigegrößen in Teams.
 
       <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Siehe vollständige Layoutrichtlinien (Figma)</a>
 
@@ -57,7 +57,7 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
    :::column span="3":::
 
-      Teams web and desktop supports default (light), dark, and high-contrast themes, while Teams mobile supports light and dark themes. Jedes Design verfügt über ein eigenes Farbschema.
+      Teams Web und Desktop unterstützt Standardmäßige Designs (hell), dunkel und mit hohem Kontrast, während Teams Mobile helle und dunkle Designs unterstützt. Jedes Design verfügt über ein eigenes Farbschema.
 
       <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Vollständige Farbrichtlinien und verfügbare Farbtoken (Figma)</a>
 
@@ -74,13 +74,13 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
    :::column span="3":::
 
-      Teams-Apps verwenden Symbole, die von der Fluent-Benutzeroberfläche bereitgestellt werden.
+      Teams apps use icons provided by Fluent UI.
 
 ### <a name="resources"></a>Ressourcen
 
       * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Siehe die neuesten Fluent-Symbole (Figma)</a>
       * <a href="https://aka.ms/fluent-ui-icons" target="_blank">Ausprobieren von Fluent-Symbolen (Fluent UI)</a>
-      * <a href="https://github.com/microsoft/fluentui-system-icons" target="_blank">Abrufen der Fluent-Symbolbibliothek (GitHub)</a>
+      * <a href="https://github.com/microsoft/fluentui-system-icons" target="_blank">Get the Fluent icon library (GitHub)</a>
 
    :::column-end:::
    :::column span="1":::
@@ -96,7 +96,7 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
    :::column span="3":::
 
-      Teams verwendet die Segoe-Benutzeroberfläche für die Typ-Rampe und unterschiedliche Schriftgrößen und -gewichtungen, um hierarchie- und lesbare Elemente zu erstellen.
+      Teams verwendet die Segoe-Benutzeroberfläche für die Typauflauf und unterschiedliche Schriftgrößen und -gewichtungen, um eine Hierarchie zu erstellen und die Lesbarkeit sicherzustellen.
 
       <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Vollständige Typografierichtlinien (Figma)</a>
 
@@ -114,7 +114,7 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
    :::column span="3":::
 
-      Um teil von Teams zu sein, sollte [](https://docs.microsoft.com/style-guide/brand-voice-above-all-simple-human)Ihre App-Kopie im Allgemeinen den folgenden Microsoft-Sprachprinzipien folgen: warm und entspannt, knackig und klar und bereit, Hand zu geben.
+      Um teil der Teams zu sein, sollte Ihre [](https://docs.microsoft.com/style-guide/brand-voice-above-all-simple-human)App-Kopie im Allgemeinen die folgenden Microsoft-Sprachprinzipien befolgen: warm und entspannt, knackig und klar und bereit, Hand zu geben.
 
       <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Vollständige Kopier- und Inhaltsrichtlinien anzeigen– einschließlich schreiben für Bots (Figma)</a>
 
@@ -132,7 +132,7 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
    :::column span="3":::
 
-      Ihr App-Symbol kann bei der Vermittlung Ihrer Marke an Teams-Benutzer einen großen Weg gehen. Das Richtige des Symboldesigns ist auch wichtig, um [Ihre App in](../../concepts/build-and-test/apps-package.md) AppSource zu veröffentlichen.
+      Ihr App-Symbol kann bei der Vermittlung Ihrer Marke an die Benutzer Teams werden. Das Richtige des Symboldesigns ist auch wichtig, um [Ihre App in](../../concepts/build-and-test/apps-package.md) AppSource zu veröffentlichen.
 
       <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Siehe vollständige Richtlinien für Markenausdruck (Figma)</a>
 

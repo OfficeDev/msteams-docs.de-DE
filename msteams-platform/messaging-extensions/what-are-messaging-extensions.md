@@ -1,7 +1,7 @@
 ---
 title: Messaging-Erweiterungen
 author: clearab
-description: Übersicht über Messagingerweiterungen auf der Microsoft Teams-Plattform
+description: Eine Übersicht über Messagingerweiterungen auf der Microsoft Teams Plattform
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
@@ -14,7 +14,7 @@ ms.locfileid: "52075668"
 ---
 # <a name="messaging-extensions"></a>Messaging-Erweiterungen
 
-Messagingerweiterungen ermöglichen benutzern die Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams-Client. Sie können Aktionen in einem externen System aus dem Bereich "Nachricht verfassen", dem Befehlsfeld oder direkt aus einer Nachricht durchsuchen oder initiieren. Sie können die Ergebnisse dieser Interaktion in Form einer reicher formatierten Karte an den Microsoft Teams-Client senden. Dieses Dokument bietet eine Übersicht über die Messagingerweiterung, Aufgaben, die in verschiedenen Szenarien ausgeführt werden, das Arbeiten mit Messagingerweiterungen, Aktions- und Suchbefehlen sowie das Lösen von Verknüpfungen.
+Messagingerweiterungen ermöglichen benutzern die Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams Client. Sie können Aktionen in einem externen System aus dem Bereich "Nachricht verfassen", dem Befehlsfeld oder direkt aus einer Nachricht durchsuchen oder initiieren. Sie können die Ergebnisse dieser Interaktion in Form einer Microsoft Teams an den Client senden. Dieses Dokument bietet eine Übersicht über die Messagingerweiterung, Aufgaben, die in verschiedenen Szenarien ausgeführt werden, das Arbeiten mit Messagingerweiterungen, Aktions- und Suchbefehlen sowie das Lösen von Verknüpfungen.
 
 In der folgenden Abbildung werden die Speicherorte angezeigt, an denen Messagingerweiterungen aufgerufen werden:
 
@@ -25,17 +25,17 @@ In der folgenden Abbildung werden die Speicherorte angezeigt, an denen Messaging
 | Szenario | Beispiel |
 |:-----------------|:-----------------|
 |Sie möchten, dass ein externes System eine Aktion und das Ergebnis der Aktion an Ihre Unterhaltung zurücksennen.|Reservieren Sie eine Ressource, und ermöglichen Sie dem Kanal, den reservierten Zeitfenster zu kennen.|
-|Sie möchten etwas in einem externen System finden und die Ergebnisse für die Unterhaltung freigeben.|Suchen Sie nach einer Arbeitsaufgabe in Azure DevOps, und geben Sie sie für die Gruppe als adaptive Karte frei.|
-|Sie möchten eine komplexe Aufgabe ausführen, die mehrere Schritte oder viele Informationen in einem externen System enthält, und die Ergebnisse für eine Unterhaltung freigeben.|Erstellen Sie einen Fehler in Ihrem Nachverfolgungssystem basierend auf einer #A0 , weisen Sie ihn Bob zu, und senden Sie eine Karte mit den Details des Fehlers an den Unterhaltungsthread.|
+|Sie möchten etwas in einem externen System finden und die Ergebnisse für die Unterhaltung freigeben.|Suchen Sie nach einer Arbeitsaufgabe in Azure DevOps, und geben Sie sie für die Gruppe als adaptive Karte weiter.|
+|Sie möchten eine komplexe Aufgabe ausführen, die mehrere Schritte oder viele Informationen in einem externen System enthält, und die Ergebnisse für eine Unterhaltung freigeben.|Erstellen Sie einen Fehler in Ihrem Nachverfolgungssystem basierend auf einer Teams-Nachricht, weisen Sie ihn Bob zu, und senden Sie eine Karte mit den Details des Fehlers an den Unterhaltungsthread.|
 
 ## <a name="understand-how-messaging-extensions-work"></a>Verstehen der Funktionsweise von Messagingerweiterungen
 
-Eine Messagingerweiterung besteht aus einem Webdienst, den Sie hosten, und einem App-Manifest, das definiert, von wo aus Ihr Webdienst im Microsoft Teams-Client aufgerufen wird. Der Webdienst nutzt das Messagingschema und das sichere Kommunikationsprotokoll des Bot Framework, sodass Sie Ihren Webdienst als Bot im Bot Framework registrieren müssen. 
+Eine Messagingerweiterung besteht aus einem Webdienst, den Sie hosten, und einem App-Manifest, das definiert, von wo aus der Webdienst im Client Microsoft Teams wird. Der Webdienst nutzt das Messagingschema und das sichere Kommunikationsprotokoll des Bot Framework, sodass Sie Ihren Webdienst als Bot im Bot Framework registrieren müssen. 
 
 > [!NOTE]
 > Obwohl Sie den Webdienst manuell erstellen können, verwenden Sie [bot Framework SDK,](https://github.com/microsoft/botframework) um mit dem Protokoll zu arbeiten.
 
-Im App-Manifest für Microsoft Teams-App wird eine einzelne Messagingerweiterung mit bis zu zehn verschiedenen Befehlen definiert. Jeder Befehl definiert einen Typ, z. B. Aktion oder Suche, und die Speicherorte im Client, von dem aus er aufgerufen wird. Die aufruften Speicherorte sind verfassen Nachrichtenbereich, Befehlsleiste und Nachricht. Beim Aufrufen empfängt der Webdienst eine HTTPS-Nachricht mit einer JSON-Nutzlast, die alle relevanten Informationen enthält. Reagieren Sie mit einer JSON-Nutzlast, sodass der Teams-Client die nächste zu aktivierende Interaktion kennen kann. 
+Im App-Manifest für Microsoft Teams App wird eine einzelne Messagingerweiterung mit bis zu zehn verschiedenen Befehlen definiert. Jeder Befehl definiert einen Typ, z. B. Aktion oder Suche, und die Speicherorte im Client, von dem aus er aufgerufen wird. Die aufruften Speicherorte sind verfassen Nachrichtenbereich, Befehlsleiste und Nachricht. Beim Aufrufen empfängt der Webdienst eine HTTPS-Nachricht mit einer JSON-Nutzlast, die alle relevanten Informationen enthält. Reagieren Sie mit einer JSON-Nutzlast, sodass der Teams die nächste zu aktivierende Interaktion kennen kann. 
 
 ## <a name="types-of-messaging-extension-commands"></a>Typen von Messagingerweiterungsbefehlen
 
@@ -61,7 +61,7 @@ In der folgenden Abbildung wird das Aufgabenmodul für den Befehlsbefehl für di
 
 ## <a name="link-unfurling"></a>Entfalten von Links
 
-Ein Webdienst wird aufgerufen, wenn eine URL im Bereich verfassen von Nachrichten eingegeben wird. Diese Funktion wird als Linkentfurling bezeichnet. Sie können einen Aufruf abonnieren, wenn URLs, die eine bestimmte Domäne enthalten, in den Bereich "Verfassen von Nachrichten" eingedungen werden. Ihr Webdienst kann die URL in einer detaillierten Karte "entfurlen", was mehr Informationen als die Standardvorschaukarte der Website enthält. Sie können Schaltflächen hinzufügen, damit die Benutzer sofort Maßnahmen ergreifen können, ohne den Microsoft Teams-Client zu verlassen.
+Ein Webdienst wird aufgerufen, wenn eine URL im Bereich verfassen von Nachrichten eingegeben wird. Diese Funktion wird als Linkentfurling bezeichnet. Sie können einen Aufruf abonnieren, wenn URLs, die eine bestimmte Domäne enthalten, in den Bereich "Verfassen von Nachrichten" eingedungen werden. Ihr Webdienst kann die URL in einer detaillierten Karte "entfurlen", was mehr Informationen als die Standardvorschaukarte der Website enthält. Sie können Schaltflächen hinzufügen, damit die Benutzer sofort Maßnahmen ergreifen können, ohne den Microsoft Teams verlassen.
 In den folgenden Bildern wird die Funktion zum Entfingen eines Links angezeigt, wenn ein Link in die Messagingerweiterung einfügbares Feature enthält:
  
 ![unfurl link](../assets/images/messaging-extension/unfurl-link.png)

@@ -1,9 +1,9 @@
 ---
 title: Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
-description: Hinzufügen der eingebetteten Schaltfläche "Zu Teams freigeben" auf Ihrer Website
+description: Hinzufügen der Schaltfläche Share to Teams auf Ihrer Website
 ms.topic: reference
 localization_priority: Normal
-keywords: Freigeben von Teams-Share-to-Teams
+keywords: Freigeben Teams share-to-Teams
 ms.openlocfilehash: d3e23c50cbaa38a53fa02c19cec69061478d9a57
 ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
@@ -13,17 +13,17 @@ ms.locfileid: "52075647"
 ---
 # <a name="create-share-to-teams-button"></a>Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
 
-Websites von Drittanbietern können das Startstartskript verwenden, um Share-to-Teams-Schaltflächen auf ihren Webseiten einzubetten. Wenn Sie diese Option auswählen, wird die Share-to-Teams-Erfahrung in einem Popupfenster gestartet. Auf diese Weise können Sie einen Link direkt mit jeder Person oder einem Microsoft Teams-Kanal teilen, ohne den Kontext zu wechseln. In diesem Dokument erfahren Sie, wie Sie eine Share-to-Teams-Schaltfläche für Ihre Website erstellen und einbetten, ihre Websitevorschau erstellen und Share-to-Teams for Education erweitern.
+Websites von Drittanbietern können das Startstartskript verwenden, um Share-to-Teams-Schaltflächen auf ihren Webseiten einzubetten. Wenn Sie diese Option auswählen, wird die Share-to-Teams in einem Popupfenster gestartet. Auf diese Weise können Sie einen Link direkt für jede Person oder jeden kanal Microsoft Teams, ohne den Kontext zu wechseln. In diesem Dokument erfahren Sie, wie Sie eine Share-to-Teams-Schaltfläche für Ihre Website erstellen und einbetten, ihre Websitevorschau erstellen und Share-to-Teams für Bildungseinrichtungen erweitern.
 
 > [!NOTE]
 > * Nur die Desktopversionen von Edge und Chrome werden unterstützt.
 > * Die Verwendung von Freemium- oder Gastkonten wird nicht unterstützt.  
 
-In der folgenden Abbildung wird die Popuperfahrung "Share-to-Teams" angezeigt:
+In der folgenden Abbildung wird die Share-to-Teams-Popup-Erfahrung angezeigt:
 
-![Share-to-Teams-Popup](~/assets/images/share-to-teams-popup.png)
+![Share-to-Teams Popup](~/assets/images/share-to-teams-popup.png)
 
-## <a name="embed-a-share-to-teams-button"></a>Einbetten einer Schaltfläche Für Teams freigeben
+## <a name="embed-a-share-to-teams-button"></a>Einbetten einer Freigabe in Teams Schaltfläche
 
 1. Fügen Sie `launcher.js` das Skript auf Ihrer Webseite hinzu.
 
@@ -40,11 +40,11 @@ In der folgenden Abbildung wird die Popuperfahrung "Share-to-Teams" angezeigt:
     </div>
     ```
 
-    Nachdem Sie dies abgeschlossen haben, wird das Microsoft Teams-Symbol zu Ihrer Website hinzugefügt. Die folgende Abbildung zeigt das Share-to-Teams-Symbol:
+    Nachdem Sie dies abgeschlossen haben, wird Microsoft Teams-Symbol zu Ihrer Website hinzugefügt. Die folgende Abbildung zeigt das Share-to-Teams-Symbol:
 
-    ![Symbol "Für Teams freigeben"](~/assets/icons/share-to-teams-icon.png)
+    ![Freigeben für Teams Symbol](~/assets/icons/share-to-teams-icon.png)
 
-1. Wenn Sie eine andere Symbolgröße für die Schaltfläche Für Teams freigeben möchten, verwenden Sie alternativ das `data-icon-px-size` Attribut.
+1. Wenn Sie eine andere Symbolgröße für die Schaltfläche Share-to-Teams möchten, verwenden Sie das `data-icon-px-size` Attribut.
 
     ```html
     <div
@@ -53,7 +53,7 @@ In der folgenden Abbildung wird die Popuperfahrung "Share-to-Teams" angezeigt:
       data-icon-px-size="64">
     </div>
     ```
-1. Wenn für den freigegebenen Link die Benutzerauthentifizierung erforderlich ist und die URL-Vorschau ihres links, der freigegeben werden soll, in Teams nicht gut gerendert wird, können Sie die URL-Vorschau deaktivieren, indem Sie das Attribut hinzufügen, das auf `data-preview` festgelegt `false` ist.
+1. Wenn für den freigegebenen Link die Benutzerauthentifizierung erforderlich ist und die URL-Vorschau ihres links, der freigegeben werden soll, in Teams nicht gut gerendert wird, können Sie die URL-Vorschau deaktivieren, indem Sie das Attribut hinzufügen, das auf festgelegt `data-preview` `false` ist.
 
     ```html
     <div
@@ -76,30 +76,30 @@ Wenn Ihre Website für Teams freigegeben wird, enthält die Karte, die in den au
 
 In der folgenden Tabelle sind die erforderlichen Tags aufgeführt:
 
-|Wert|Metatag| Öffnen von Graph|
+|Wert|Metatag| Öffnen Graph|
 |----|----|----|
 |Titel|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
 |Beschreibung|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |Miniaturansicht| none. |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
-Sie können entweder die Html-Standardversionen oder die Open Graph-Version verwenden.
+Sie können entweder die Html-Standardversionen oder die Open-Graph verwenden.
 
-## <a name="share-to-teams-for-education"></a>Freigeben für Teams for Education
+## <a name="share-to-teams-for-education"></a>Freigeben an Teams für Bildungseinrichtungen
 
-Für Lehrkräfte, die die Schaltfläche Für Teams freigeben verwenden, gibt es eine zusätzliche Option zu `Create an Assignment` . Auf diese Weise können Sie schnell eine Zuordnung im ausgewählten Team basierend auf dem freigegebenen Link erstellen. Die folgende Abbildung zeigt Share-to-Teams für Bildungseinrichtungen: 
+Für Lehrkräfte, die die Schaltfläche Teams freigeben verwenden, gibt es eine zusätzliche Option zu `Create an Assignment` . Auf diese Weise können Sie schnell eine Zuordnung im ausgewählten Team basierend auf dem freigegebenen Link erstellen. Die folgende Abbildung zeigt Share-to-Teams für Bildungseinrichtungen: 
 
-![Freigeben für Teams-Popup-Bildungseinrichtungen](~/assets/images/share-to-teams-popup-edu.png)
+![Freigeben für Teams Popup-Bildungseinrichtungen](~/assets/images/share-to-teams-popup-edu.png)
 
 ## <a name="full-launcherjs-definition"></a>Vollständige launcher.js Definition
 
 | Eigenschaft | HTML-Attribut | Typ | Standard | Beschreibung |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | string | n/v | Der Href des inhalts, der gemeinsam verwendet werden soll. |
+| href | `data-href` | Zeichenfolge | n/v | Der Href des inhalts, der gemeinsam verwendet werden soll. |
 | Vorschau | `data-preview` | boolean (als Zeichenfolge) | `true` | Gibt an, ob eine Vorschau des zu teilende Inhalts angezeigt werden soll. |
-| iconPxSize | `data-icon-px-size` | Zahl (als Zeichenfolge) | `32` | Die Größe der zu rendernde Schaltfläche "Share-to-Teams" in Pixeln. |
-| msgText | `data-msg-text` | string | n/v | Standardtext, der vor dem Link im Feld Zum Verfassen von Nachrichten eingefügt werden soll. Die maximale Anzahl von Zeichen beträgt 200. |
-| assignInstr | `data-assign-instr` | string | n/v | Standardtext, der in das Feld "Anweisungen" eingefügt werden soll. Die maximale Anzahl von Zeichen beträgt 200. |
-| assignTitle | `data-assign-title` | string | n/v | Standardtext, der in das Feld Zuordnungen "Titel" eingefügt werden soll. Die maximale Anzahl von Zeichen ist 50. |
+| iconPxSize | `data-icon-px-size` | Zahl (als Zeichenfolge) | `32` | Die Größe der zu rendernde Share-to-Teams in Pixeln. |
+| msgText | `data-msg-text` | Zeichenfolge | n/v | Standardtext, der vor dem Link im Feld Zum Verfassen von Nachrichten eingefügt werden soll. Die maximale Anzahl von Zeichen beträgt 200. |
+| assignInstr | `data-assign-instr` | Zeichenfolge | n/v | Standardtext, der in das Feld "Anweisungen" eingefügt werden soll. Die maximale Anzahl von Zeichen beträgt 200. |
+| assignTitle | `data-assign-title` | Zeichenfolge | n/v | Standardtext, der in das Feld Zuordnungen "Titel" eingefügt werden soll. Die maximale Anzahl von Zeichen ist 50. |
 
 ### <a name="methods"></a>Methoden
 
@@ -111,7 +111,7 @@ Derzeit werden alle Freigabeschaltflächen auf der Seite gerendert. Wenn ein opt
 
 ### <a name="set-default-form-values"></a>Festlegen von Standardformularwerten
 
-Sie können die Standardwerte für die folgenden Felder im Formular Für Teams freigeben festlegen:
+Sie können die Standardwerte für die folgenden Felder im Formular Freigeben auf Teams festlegen:
 
 * Sagen Sie dazu etwas: `msgText`
 * Zuweisungsanweisungen: `assignInstr`

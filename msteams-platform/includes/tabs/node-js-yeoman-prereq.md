@@ -1,12 +1,12 @@
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Zum Abschließen dieses Schnellstarts benötigen Sie einen Office 365-Mandanten und ein Team, das mit aktivierter Aktivierung des *Hochladens benutzerdefinierter Apps konfiguriert* ist. Weitere Informationen finden Sie unter [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- Zum Abschließen dieses Schnellstarts benötigen Sie einen Office 365 Mandanten und ein Team, das mit aktivierter Aktivierung des *Hochladens benutzerdefinierter Apps konfiguriert* ist. Weitere Informationen finden Sie unter [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
-  - Wenn Sie derzeit kein Office 365-Konto haben, können Sie sich über das Office 365-Entwicklerprogramm für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden. Weitere [Informationen finden Sie unter Welcome to the Office 365 Developer Program](https://docs.microsoft.com/office/developer-program/microsoft-365-developer-program).
+  - Wenn Sie derzeit kein Office 365 haben, können Sie sich über das Office 365 für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden. Weitere [Informationen finden Sie unter Welcome to the Office 365 Developer Program](https://docs.microsoft.com/office/developer-program/microsoft-365-developer-program).
 
 Darüber hinaus erfordert dieses Projekt, dass Sie folgendes in Ihrer Entwicklungsumgebung installiert haben:
 
-- Beliebiger Texteditor oder IDE. Sie können den Code Visual Studio [kostenlos](https://code.visualstudio.com/download) installieren und verwenden.
+- Beliebiger Texteditor oder IDE. Sie können die Visual Studio Code [kostenlos](https://code.visualstudio.com/download) installieren und verwenden.
 
 - [Node.js/npm](https://nodejs.org/en/). Sie sollten die neueste LTS-Version verwenden. Der Knoten Paket-Manager (npm) wird mit der Installation von Node.js.
 
@@ -16,7 +16,7 @@ Darüber hinaus erfordert dieses Projekt, dass Sie folgendes in Ihrer Entwicklun
 npm install yo gulp-cli --global
 ```
 
-- Installieren Sie den Microsoft Teams Apps-Generator, indem Sie in der Eingabeaufforderung Folgendes eingeben:
+- Installieren Sie den Microsoft Teams-Apps-Generator, indem Sie in der Eingabeaufforderung Folgendes eingeben:
 
 ```bash
 npm install generator-teams --global

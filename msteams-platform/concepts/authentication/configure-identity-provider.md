@@ -13,7 +13,7 @@ ms.locfileid: "52020856"
 ---
 # <a name="configure-identity-providers"></a>Identitätsanbieter konfigurieren
 
-## <a name="configuring-an-application-to-use-azure-active-directory-as-an-identity-provider"></a>Konfigurieren einer Anwendung für die Verwendung von Azure Active Directory als Identitätsanbieter
+## <a name="configuring-an-application-to-use-azure-active-directory-as-an-identity-provider"></a>Konfigurieren einer Anwendung zur Verwendung von Azure Active Directory als Identitätsanbieter
 
 Identitätsanbieter, die OAuth 2.0 unterstützen, authentifizieren keine Anforderungen unbekannter Anwendungen. Anwendungen müssen im Voraus registriert werden. Führen Sie die folgenden Schritte aus, um dies mit Azure AD zu tun:
 
@@ -21,7 +21,7 @@ Identitätsanbieter, die OAuth 2.0 unterstützen, authentifizieren keine Anforde
 
 2. Wählen Sie Ihre App aus, um ihre Eigenschaften anzeigen zu können, oder klicken Sie auf die Schaltfläche "Neue Registrierung". Suchen Sie **den Abschnitt Umleitungs-URI** für die App.
 
-3. Stellen Sie im Dropdownmenü sicher, dass **Web** ausgewählt ist. Aktualisieren Sie die URL auf Ihren Authentifizierungsendpunkt. Für die TypeScript/Node.js und C# Beispiel-Apps auf GitHub sind die Umleitungs-URLs wie die folgenden:
+3. Stellen Sie im Dropdownmenü sicher, dass **Web** ausgewählt ist. Aktualisieren Sie die URL auf Ihren Authentifizierungsendpunkt. Für die TypeScript/Node.js- und C#-Beispiel-Apps auf GitHub sind die Umleitungs-URLs wie die folgenden:
 
     Umleitungs-URLs: `https://<hostname>/bot-auth/simple-start`
 

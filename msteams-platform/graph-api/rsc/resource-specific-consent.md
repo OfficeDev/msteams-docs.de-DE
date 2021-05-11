@@ -19,7 +19,7 @@ Die ressourcenspezifische Zustimmung (Resource-Specific Consent, RSC) ist eine M
 
 ## <a name="resource-specific-permissions"></a>Ressourcenspezifische Berechtigungen
 
-|Anwendungsberechtigung| Aktion |
+|Anwendungsberechtigung| Maßnahme |
 | ----- | ----- |
 |TeamSettings.Read.Group | Hier erhalten Sie die Einstellungen für dieses Team.|
 |TeamSettings.ReadWrite.Group|Aktualisieren Sie die Einstellungen für dieses Team.|

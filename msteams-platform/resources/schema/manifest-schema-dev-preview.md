@@ -1,26 +1,26 @@
 ---
 title: Developer Preview Manifestschemareferenz
-description: Beschreibt das vom Manifest für Microsoft Teams unterstützte Schema
+description: Beschreibt das schema, das vom Manifest für die Microsoft Teams
 ms.topic: reference
 keywords: teams manifest schema Developer Preview
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: 1cfa25949024e03ef4c6e5737396e75aff8bd50b
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 05a1becbd021a67e2a843a8ddb5f58ea76cf444e
+ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019699"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52304019"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Entwicklervorschaumanifestschema für Microsoft Teams
 
 > [!NOTE]
 > Weitere [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) zum Programm und zur Teilnahme finden Sie unter Developer Preview.
-> Wenn Sie die Entwicklervorschau nicht verwenden, sollten Sie diese Version des Manifests nicht verwenden. Informationen zur öffentlichen Version des Manifests finden Sie unter [Referenz: Manifestschema](~/resources/schema/manifest-schema.md) für Microsoft Teams.
+> Wenn Sie die Entwicklervorschau nicht verwenden, sollten Sie diese Version des Manifests nicht verwenden. Informationen [zur öffentlichen Version des Manifests finden Microsoft Teams Referenz:](~/resources/schema/manifest-schema.md) Manifestschema.
 
-Das Microsoft Teams-Manifest beschreibt, wie die App in das Microsoft Teams-Produkt integriert wird. Ihr Manifest muss dem schema entsprechen, das unter gehostet [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) wird.
+Das Microsoft Teams-Manifest beschreibt, wie die App in das Microsoft Teams integriert wird. Ihr Manifest muss dem schema entsprechen, das unter gehostet [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) wird.
 
-Weitere Informationen zu den verfügbaren Features finden Sie unter: [Features in the Public Developer Preview for Microsoft Teams](~/resources/dev-preview/developer-preview-features.md).
+Weitere Informationen zu den verfügbaren Features finden Sie unter Features [in the Public Developer Preview for Microsoft Teams](~/resources/dev-preview/developer-preview-features.md).
 
 ## <a name="sample-full-manifest"></a>Beispiel für vollständiges Manifest
 
@@ -279,7 +279,7 @@ Ein Array von Objekten, die zusätzliche Sprachübersetzungen angeben.
 
 **Required**
 
-Der Name Ihrer App-Erfahrung, der Benutzern in der Teams-Erfahrung angezeigt wird. Für apps submitted to AppSource, these values must match the information in your AppSource entry. Die Werte von `short` und sollten nicht identisch `full` sein.
+Der Name Ihrer App-Erfahrung, der Benutzern in der Teams angezeigt wird. Für apps submitted to AppSource, these values must match the information in your AppSource entry. Die Werte von `short` und sollten nicht identisch `full` sein.
 
 |Name| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|
@@ -303,7 +303,7 @@ Stellen Sie sicher, dass Ihre Beschreibung Ihre Erfahrung genau beschreibt und I
 
 **Required**
 
-Symbole, die in der Teams-App verwendet werden. Die Symboldateien müssen als Teil des Uploadpakets enthalten sein.
+Symbole, die innerhalb der Teams werden. Die Symboldateien müssen als Teil des Uploadpakets enthalten sein.
 
 |Name| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|
@@ -332,7 +332,7 @@ Das Objekt ist ein Array mit allen Elementen des Typs `object` . Dieser Block is
 |`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: `true`|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die `team` Bereiche `groupchat` und. |
 |`sharePointPreviewImage`|Zeichenfolge|2048||Ein relativer Dateipfad zu einem Registerkartenvorschaubild zur Verwendung in SharePoint. Größe 1024 x 768. |
-|`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint verfügbar gemacht wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
+|`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in der SharePoint. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -346,7 +346,7 @@ Das Objekt ist ein Array (maximal 16 Elemente) mit allen Elementen des Typs `obj
 |---|---|---|---|---|
 |`entityId`|String|64 Zeichen|✔|Ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird.|
 |`name`|Zeichenfolge|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanalschnittstelle.|
-|`contentUrl`|Zeichenfolge|2048 Zeichen|✔|Die https://-URL, die auf die Entitätsbenutzeroberfläche verweist, die im Teams-Canvas angezeigt werden soll.|
+|`contentUrl`|Zeichenfolge|2048 Zeichen|✔|Die https://-URL, die auf die Entitätsbenutzeroberfläche verweist, die im Zeichenbereich Teams werden soll.|
 |`websiteUrl`|Zeichenfolge|2048 Zeichen||Die https:// URL, auf die verweisen soll, wenn sich ein Benutzer für die Anzeige in einem Browser entscheidet.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen statische Registerkarten nur den Bereich, d. h., er kann nur als Teil der `personal` persönlichen Erfahrung bereitgestellt werden.|
 
@@ -478,7 +478,7 @@ Das Objekt ist ein Array mit allen Elementen des Typs `string` .
 
 **Optional**
 
-Geben Sie Ihre AAD-App-ID und Graph-Informationen an, um Benutzern die nahtlose Anmeldung bei Ihrer AAD-App zu ermöglichen.
+Geben Sie Ihre AAD-App-ID Graph, um Benutzern die nahtlose Anmeldung bei Ihrer AAD-App zu ermöglichen.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
@@ -489,7 +489,7 @@ Geben Sie Ihre AAD-App-ID und Graph-Informationen an, um Benutzern die nahtlose 
 
 **Optional** – Array
 
-Der `configurableProperties` Block definiert die App-Eigenschaften, die der Teams-Administrator anpassen kann. Weitere Informationen finden Sie unter [Anpassen von Apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+Der `configurableProperties` Block definiert die App-Eigenschaften, die Teams Administrator anpassen kann. Weitere Informationen finden Sie unter [Anpassen von Apps in Microsoft Teams.](/MicrosoftTeams/customize-apps)
 
 > [!NOTE]
 > Mindestens eine Eigenschaft muss definiert werden. Sie können in diesem Block maximal neun Eigenschaften definieren.
@@ -499,10 +499,10 @@ Sie können eine der folgenden Eigenschaften definieren:
 * `name`: Ermöglicht administratoren das Ändern des Anzeigenamens der App.
 * `shortDescription`: Ermöglicht Administratoren das Ändern der Kurzbeschreibung der App.
 * `longDescription`: Ermöglicht Administratoren das Ändern der detaillierten Beschreibung der App.
-* `smallImageUrl`: Es handelt `outline` sich um eine Eigenschaft im Block des `icons` Manifests.
+* `smallImageUrl`: Es handelt sich `outline` um die Eigenschaft im Block des `icons` Manifests.
 * `largeImageUrl`: Es handelt sich `color` um die Eigenschaft im Block des `icons` Manifests.
 * `accentColor`: Es ist die Farbe, die in Verbindung mit und als Hintergrund für Ihre Gliederungssymbole verwendet werden soll.
-* `developerUrl`: Es ist die https://-URL zur Website des Entwicklers.
+* `websiteUrl`: Es ist die https://-URL zur Website des Entwicklers.
 * `privacyUrl`: Es ist die https://-URL zur Datenschutzrichtlinie des Entwicklers.
 * `termsOfUseUrl`: Es ist die https:// URL zu den Nutzungsbedingungen des Entwicklers.
 

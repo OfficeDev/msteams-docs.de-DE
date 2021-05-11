@@ -14,7 +14,7 @@ ms.locfileid: "52020702"
 ---
 # <a name="single-sign-on-sso-support-for-messaging-extensions"></a>Unterstützung für einmaliges Anmelden (Single Sign-On, SSO) für Messagingerweiterungen
  
-Die Unterstützung für einmaliges Anmelden ist jetzt für Messagingerweiterungen und die Verknüpfungsentfurling verfügbar. Wenn Sie einmaliges Anmelden (Single Sign-On, SSO) für Messagingerweiterungen aktivieren, wird das Authentifizierungstoken automatisch aktualisiert, wodurch die Anzahl der Anmeldeinformationen für Microsoft Teams minimiert wird.
+Die Unterstützung für einmaliges Anmelden ist jetzt für Messagingerweiterungen und die Verknüpfungsentfurling verfügbar. Wenn Sie einmaliges Anmelden (Single Sign-On, SSO) für Messagingerweiterungen aktivieren, wird das Authentifizierungstoken automatisch aktualisiert, wodurch die Anzahl der Anmeldeinformationen für die Anmeldung minimiert Microsoft Teams.
 
 In diesem Dokument erfahren Sie, wie Sie den SSO aktivieren und Ihr Authentifizierungstoken bei Bedarf speichern.
 
@@ -22,7 +22,7 @@ In diesem Dokument erfahren Sie, wie Sie den SSO aktivieren und Ihr Authentifizi
 
 Die Voraussetzungen für die Aktivierung von SSO für Messagingerweiterungen und das Entf?nden von Links sind wie folgt:
 * Sie müssen über ein [Azure-Konto](https://azure.microsoft.com/en-us/free/) verfügen.
-* Sie müssen Ihre App über das AAD-Portal konfigurieren und Ihr Teams-Anwendungsmanifest für Ihren Bot aktualisieren, wie in der Registrierung Ihrer App über [das AAD-Portal definiert.](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)
+* Sie müssen Ihre App über das AAD-Portal konfigurieren und Ihr Teams-Anwendungsmanifest für Ihren Bot aktualisieren, wie in der Registrierung Ihrer App über das [AAD-Portal definiert.](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)
 
 > [!NOTE]
 > Weitere Informationen zum Erstellen eines Azure-Kontos und zum Aktualisieren Ihres App-Manifests finden Sie unter [Single Sign-On (SSO) support for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).

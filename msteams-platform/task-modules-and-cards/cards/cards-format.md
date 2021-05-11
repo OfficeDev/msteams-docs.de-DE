@@ -20,15 +20,15 @@ Karten unterstützen nur die Formatierung in der Texteigenschaft, nicht in den E
 
 Die Formatierungsunterstützung unterscheidet sich zwischen verschiedenen Kartentypen, und das Rendern der Karte kann zwischen dem Desktop und den mobilen Teams-Clients sowie Teams im Desktopbrowser geringfügig variieren.
 
-Sie können ein Inlinebild mit einer beliebigen Teams-Karte verwenden. Bilder, die als , oder Dateien formatiert werden und  `.png` `.jpg` dürfen `.gif` 1024 ×1024 px oder 1 MB nicht überschreiten. Animierte GIF wird offiziell nicht unterstützt. *Siehe Kartenreferenz* [](./cards-reference.md#inline-card-images)
+Sie können ein Inlinebild mit einer beliebigen Teams verwenden. Bilder, die als , oder Dateien formatiert werden und  `.png` `.jpg` dürfen `.gif` 1024 ×1024 px oder 1 MB nicht überschreiten. Animierte GIF wird offiziell nicht unterstützt. *Siehe Kartenreferenz* [](./cards-reference.md#inline-card-images)
 
 ## <a name="formatting-cards-with-markdown"></a>Formatieren von Karten mit Markdown
 
-Es gibt zwei Kartentypen, die Markdown in Teams unterstützen:
+Es gibt zwei Kartentypen, die Markdown in Teams:
 
 > [!div class="checklist"]
 > * **Adaptive Karten:** Markdown wird im Feld Adaptive Karte sowie `Textblock` und `Fact.Title` `Fact.Value` unterstützt. HTML wird in adaptiven Karten nicht unterstützt.
-> * **O365 Connector Cards**: Markdown und eingeschränkter HTML-Code werden in Office 365 Connector-Karten in den Textfeldern unterstützt.
+> * **O365-Connectorkarten:** Markdown und eingeschränkter HTML-Code werden in Office 365 In-Connector-Karten in den Textfeldern unterstützt.
 
 # <a name="markdown-formatting-adaptive-cards"></a>[**Markdownformatierung: Adaptive Karten**](#tab/adaptive-md)
 
@@ -45,7 +45,7 @@ Es gibt zwei Kartentypen, die Markdown in Teams unterstützen:
 Die folgenden Markdown-Tags werden nicht unterstützt:
 
 * Überschriften
-* Tabellen
+* Tables
 * Bilder
 * Vorformatierter Text
 * Blockquotes
@@ -59,9 +59,9 @@ In Listen können Sie die `\r` Escapesequenzen für `\n` Newlines verwenden. Wen
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>Unterschiede zwischen Mobilen und Desktops für adaptive Karten
 
-Die Formatierung ist zwischen dem Desktop und den mobilen Versionen von Teams geringfügig unterschiedlich.
+Die Formatierung ist zwischen dem Desktop und den mobilen Versionen von Teams.
 
-Auf dem Desktop wird die Formatierung der adaptiven Karten-Markdown in webbrowsern und in der Teams-Clientanwendung wie dies angezeigt:
+Auf dem Desktop wird die Formatierung der adaptiven Karte Markdown in webbrowsern und in der Teams wie die Teams angezeigt:
 
 ![Formatierung der adaptiven Karte Markdown im Desktopclient](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
@@ -75,7 +75,7 @@ Unter Android wird die Formatierung der adaptiven Karten-Markdown wie dies angez
 
 ### <a name="more-information-on-adaptive-cards"></a>Weitere Informationen zu adaptiven Karten
 
-[Textfeatures in adaptiven Karten](/adaptive-cards/create/textfeatures) Die in diesem Thema erwähnten Datums- und Lokalisierungsfeatures werden in Teams nicht unterstützt.
+[Textfeatures in adaptiven Karten](/adaptive-cards/create/textfeatures) Die in diesem Thema erwähnten Datums- und Lokalisierungsfeatures werden in der Teams.
 
 ### <a name="formatting-sample-for-adaptive-cards"></a>Formatierungsbeispiel für adaptive Karten
 
@@ -118,7 +118,7 @@ Kartenbasierte Erwähnungen werden in Web-, Desktop- und mobilen Clients unterst
 Bots und Messagingerweiterungen können Erwähnungen innerhalb des Karteninhalts in [TextBlock-](https://adaptivecards.io/explorer/TextBlock.html) und [FactSet-Elementen](https://adaptivecards.io/explorer/FactSet.html) enthalten.
 
 > [!NOTE]
-> * [Medienelemente](https://adaptivecards.io/explorer/Media.html) werden derzeit in adaptiven Karten v1.2 auf der Teams-Plattform nicht unterstützt.
+> * [Medienelemente](https://adaptivecards.io/explorer/Media.html) werden derzeit in adaptiven Karten v1.2 auf der Teams unterstützt.
 > * Channel & Team erwähnungen werden in Botnachrichten nicht unterstützt.
 
 #### <a name="constructing-mentions"></a>Erstellen von Erwähnungen
@@ -126,7 +126,7 @@ Bots und Messagingerweiterungen können Erwähnungen innerhalb des Karteninhalts
 Um eine Erwähnung in einer adaptiven Karte zu erhalten, muss Ihre App die folgenden Elemente enthalten:
 
 * `<at>username</at>` in den unterstützten adaptiven Kartenelementen.
-* Das Objekt innerhalb einer Eigenschaft im Karteninhalt, die `mention` `msteams` die Teams-Benutzer-ID des erwähnten Benutzers enthält.
+* Das Objekt innerhalb einer Eigenschaft im Karteninhalt, die die Teams `mention` `msteams` benutzer-ID des erwähnten Benutzers enthält.
 * Die `userId` ist für Ihre Bot-ID und einen bestimmten Benutzer eindeutig. Es kann zum @mention eines bestimmten Benutzers verwendet werden. Der kann mithilfe einer der unter Abrufen der Benutzer-ID genannten `userId` [Optionen abgerufen werden.](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)
 
 #### <a name="sample-adaptive-card-with-a-mention"></a>Beispiel für adaptive Karte mit erwähnung
@@ -277,7 +277,7 @@ In der Abschnittsansicht können Benutzer das Bild vergrößern und verkleinern.
 > Die Zoom- und Zoom-Out-Funktion gilt nur für die Bildelemente (Bildtyp) in einer adaptiven Karte.
 
 > [!NOTE]
-> Für mobile Teams-Apps sind die Funktionen für die Stage View für Bilder in adaptiven Karten standardmäßig verfügbar, und Benutzer können adaptive Kartenbilder in der Ansicht der Stufe anzeigen, indem sie einfach auf das Bild tippen, unabhängig davon, ob das Attribut vorhanden ist `allowExpand` oder nicht.
+> Bei Teams mobilen Apps sind die Funktionen für die Stage View für Bilder in adaptiven Karten standardmäßig verfügbar, und Benutzer können adaptive Kartenbilder in der Ansicht der Stufe anzeigen, indem sie einfach auf das Bild tippen, unabhängig davon, ob das Attribut vorhanden ist oder `allowExpand` nicht.
 
 # <a name="markdown-formatting-o365-connector-cards"></a>[**Markdownformatierung: O365 Connector Cards**](#tab/connector-md)
 
@@ -475,7 +475,7 @@ HTML-Tags werden für einfache Karten wie die Held- und Miniaturansichtskarte un
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>Unterschiede zwischen Mobilen und Desktops für einfache Karten
 
-Aufgrund von Auflösungsunterschieden zwischen dem Desktop und der mobilen Plattform unterscheiden sich die Formatierungen zwischen dem Desktop und der mobilen Version von Teams.
+Aufgrund von Auflösungsunterschieden zwischen dem Desktop und der mobilen Plattform unterscheiden sich die Formatierungen zwischen dem Desktop und der mobilen Version Teams.
 
 Auf dem Desktop wird die HTML-Formatierung wie dies angezeigt:
 

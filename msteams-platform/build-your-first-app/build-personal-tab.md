@@ -1,7 +1,7 @@
 ---
 title: Erste Schritte – Erstellen einer persönlichen Registerkarte
 author: girliemac
-description: Erstellen Sie schnell eine persönliche Microsoft Teams-Registerkarte mithilfe des Microsoft Teams Toolkits.
+description: Erstellen Sie schnell Microsoft Teams persönliche Registerkarte mit dem Microsoft Teams Toolkit.
 ms.author: timura
 ms.date: 03/16/2020
 ms.topic: tutorial
@@ -14,7 +14,7 @@ ms.locfileid: "52068583"
 ---
 # <a name="build-a-basic-personal-tab-for-microsoft-teams"></a>Erstellen einer einfachen persönlichen Registerkarte für Microsoft Teams
 
-In diesem Lernprogramm lernen Sie, eine grundlegende persönliche Registerkarte in Microsoft Teams zu erstellen. Registerkarten sind eine einfache Möglichkeit, Informationen in Ihrer App durch Hosten von Webinhalten in Teams anzuzeigen. Registerkarten sind ein gängiges Feature von persönlichen Apps, die einen privaten Arbeitsbereich für einzelne Benutzer bereitstellen. Persönliche Registerkarten sind der herkömmlichen Weberfahrung in Teams am nächsten. 
+In diesem Lernprogramm lernen Sie, eine grundlegende persönliche Registerkarte in Microsoft Teams. Registerkarten sind eine einfache Möglichkeit, Informationen in Ihrer App anzuzeigen, indem Sie Webinhalte in einer Teams. Registerkarten sind ein gängiges Feature von persönlichen Apps, die einen privaten Arbeitsbereich für einzelne Benutzer bereitstellen. Persönliche Registerkarten sind die am nächsten zu einer herkömmlichen Weberfahrung in Teams. 
 
 ## <a name="what-youll-learn"></a>Was Sie lernen werden
 
@@ -24,19 +24,19 @@ In diesem Lernprogramm lernen Sie, eine grundlegende persönliche Registerkarte 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Stellen Sie sicher, dass Sie wissen, wie Sie eine einfache Teams-App einrichten und erstellen. Weitere Informationen finden Sie unter [Erstellen Ihrer ersten Microsoft Teams "Hello, World!"-App.](../build-your-first-app/build-and-run.md)
+Stellen Sie sicher, dass Sie verstehen, wie Sie eine einfache App Teams erstellen. Weitere Informationen finden Sie unter [Create your first Microsoft Teams "Hello, World!" app](../build-your-first-app/build-and-run.md).
 
 ## <a name="1-understand-your-app-project-components"></a>1. Verstehen ihrer App-Projektkomponenten
 
-Nachdem Sie eine einfache persönliche Registerkarte erstellt haben, stellt das generierte App-Gerüst die Komponenten zum Rendern Ihrer persönlichen Registerkarte in Teams zur Seite. Es gibt eine Menge, mit der Sie arbeiten können, aber lassen Sie uns uns jetzt auf Folgendes konzentrieren: 
+Nachdem Sie eine einfache persönliche Registerkarte erstellt haben, stellt das generierte App-Gerüst die Komponenten zum Rendern Ihrer persönlichen Registerkarte in Teams. Es gibt eine Menge, mit der Sie arbeiten können, aber lassen Sie uns uns jetzt auf Folgendes konzentrieren: 
 
 * `Tab.js` datei im `src/components` Verzeichnis Ihres Projekts. Dies ist für das Rendern der Registerkarteninhaltsseite.
 * Microsoft Teams JavaScript-Client-SDK, das in den Front-End-Komponenten Ihres Projekts vorinstalliert ist.
 
-Wie Sie im Abschnitt oben in der Datei feststellen können, verwendet der Beispielcode React , eine `import` `Tabs.js` Open-Source-JavaScript-Bibliothek [](https://reactjs.org/)zum Erstellen der Benutzeroberfläche. 
+Wie Sie im Abschnitt oben in der Datei feststellen können, verwendet der Beispielcode React , eine `import` `Tabs.js` Open-Source-JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen. [](https://reactjs.org/) 
 
 > [!NOTE]
-> Obwohl die Verwendung von React _für_ die Teams-Entwicklung nicht erforderlich ist, werden Sie in diesem Lernprogramm mit React unterrichtet.
+> Obwohl die React _für die_ Teams nicht erforderlich ist, werden Sie in diesem Lernprogramm React.
 
 ## <a name="2-customize-your-tab-content-page"></a>2. Anpassen der Registerkarteninhaltsseite
 
@@ -79,17 +79,17 @@ Sie können Ihre Registerkarteninhaltsseite anpassen, um eine Liste wichtiger Ko
     ```
 1. Speichern Sie Ihre Änderungen. 
 
-   Sie können die neuen Inhalte auf der Registerkarte Ihrer App in Teams anzeigen.
+   Sie können den neuen Inhalt auf der Registerkarte Ihrer App in der Teams.
 
    :::image type="content" source="../assets/images/build-your-first-app/personal-tab-tutorial-content.png" alt-text="Screenshot einer persönlichen Registerkarte mit statischem Inhalt.":::
 
 ## <a name="3-update-your-tab-theme"></a>3. Aktualisieren Des Registerkartendesigns
 
-Es ist wichtig, dass Ihre Registerkarte ein Design hat, das sich für Teams nativ anfühlt. Sie müssen Ihre Registerkarte mit dem Teams-Design vermischen. Ihre Benutzer bevorzugen in der Regel Standard-Designs (hell), dunkel oder mit hohem Kontrast. Wie Sie vielleicht im letzten Screenshot bemerkt haben, hat Ihre Registerkarte immer noch einen hellen Hintergrund, wenn Ihr Benutzer das dunkle Design verwendet. Dies ist keine empfohlene Benutzeroberfläche.
+Es ist wichtig, dass Ihre Registerkarte ein Design hat, das sich für die Teams. Sie müssen Ihre Registerkarte mit dem Teams mischen. Ihre Benutzer bevorzugen in der Regel Standard-Designs (hell), dunkel oder mit hohem Kontrast. Wie Sie vielleicht im letzten Screenshot bemerkt haben, hat Ihre Registerkarte immer noch einen hellen Hintergrund, wenn Ihr Benutzer das dunkle Design verwendet. Dies ist keine empfohlene Benutzeroberfläche.
 
-Das JavaScript-Client-SDK von Teams kann Ihre App auf Designänderungen im Client aufmerksam machen und darauf reagieren. Gehen Sie dazu wie folgt vor:
+Das Teams JavaScript-Client-SDK kann Ihre App auf Designänderungen im Client aufmerksam machen und darauf reagieren. Gehen Sie dazu wie folgt vor:
 
-1. **Kontext zum konfigurierten Teams-Clientdesign erhalten** Der Aufruf in Ihrer Datei bietet einen Kontext zum konfigurierten Clientdesign (z. B. `microsoftTeams.getContext()` `Tab.js` dunkles Design). Der folgende Code zugrifft `context` auf die Schnittstelle und ihre Eigenschaften:
+1. **Get context about the configured Teams client theme** Der Aufruf in Ihrer Datei bietet einen Kontext zum konfigurierten Clientdesign (z. B. `microsoftTeams.getContext()` `Tab.js` dunkles Design). Der folgende Code zugrifft `context` auf die Schnittstelle und ihre Eigenschaften:
 
     ```JavaScript
     componentDidMount(){
@@ -102,7 +102,7 @@ Das JavaScript-Client-SDK von Teams kann Ihre App auf Designänderungen im Clien
       });
     }
     ```
-1. **Erstellen eines Designänderungshandlers** Mit den eigenschaften in der Hand hat Ihre App ein solides Verständnis davon, was um sie `context` herum in Teams passiert. Die App hat jedoch immer noch keine Darstellung, die das Design wiederspiegelt, wenn ein Benutzer sie aktualisiert.
+1. **Erstellen eines Designänderungshandlers** Mit den eigenschaften in der Hand hat Ihre App ein solides Verständnis der Vorgänge um sie `context` herum in Teams. Die App hat jedoch immer noch keine Darstellung, die das Design wiederspiegelt, wenn ein Benutzer sie aktualisiert.
 
    Sie benötigen einen Handler, um den Zustand Ihrer App mit dem Design zu aktualisieren. Um einen Handler zu erstellen, fügen Sie den folgenden Designänderungshandler unmittelbar nach dem Aufruf `microsoftTeams.getContext()` ein:
 
@@ -150,7 +150,7 @@ Das JavaScript-Client-SDK von Teams kann Ihre App auf Designänderungen im Clien
           }
         ```
 
-       Überprüfen Sie Ihre Registerkarte in Teams. Das Erscheinungsbild entspricht nun eng mit dem dunklen Design.
+       Überprüfen Sie ihre Registerkarte in Teams. Das Erscheinungsbild entspricht nun eng mit dem dunklen Design.
 
        :::image type="content" source="../assets/images/build-your-first-app/personal-tab-tutorial-updated-theme.png" alt-text="Screenshot einer persönlichen Registerkarte mit statischer Inhaltsansicht.":::
 
@@ -163,7 +163,7 @@ Das JavaScript-Client-SDK von Teams kann Ihre App auf Designänderungen im Clien
 * [Registerkarten auf mobilen Geräten](../tabs/design/tabs-mobile.md)
 * [Unterstützung für einmaliges Anmelden (Single Sign-On, SSO) für Registerkarten](../tabs/how-to/authentication/auth-aad-sso.md)
 * [Übersicht über Microsoft Teams-APIs](https://docs.microsoft.com/graph/teams-concept-overview)
-* [Erstellen einer benutzerdefinierten persönlichen Registerkarte mit Node.js und dem Yeoman-Generator für Microsoft Teams](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
+* [Erstellen Sie eine benutzerdefinierte persönliche Registerkarte mit Node.js und dem Yeoman Generator für Microsoft Teams](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

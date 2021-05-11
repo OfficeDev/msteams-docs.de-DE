@@ -15,7 +15,7 @@ ms.locfileid: "52088794"
 
 Karten, die von Bots und Messagingerweiterungen in Teams verwendet werden, unterstützen die folgenden Aktivitätstypen ( [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ). Beachten Sie, dass sich diese Aktionen von Office 365 Connectorkarten unterscheiden, wenn `potentialActions` sie von Connectors verwendet werden.
 
-| Typ | Aktion |
+| Typ | Maßnahme |
 | --- | --- |
 | `openUrl` | Öffnet eine URL im Standardbrowser. |
 | `messageBack` | Sendet eine Nachricht und Nutzlast an den Bot (vom Benutzer, der auf die Schaltfläche geklickt oder auf die Karte getippt hat) und sendet eine separate Nachricht an den Chatstream. |

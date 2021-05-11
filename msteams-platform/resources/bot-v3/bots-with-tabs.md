@@ -20,10 +20,10 @@ Bots und Registerkarten funktionieren gut und werden häufig in einem einzigen B
 
 ## <a name="associating-user-identities-across-bot-and-tab"></a>Zuordnen von Benutzeridentitäten über Bot und Registerkarte
 
-Beispiel: Angenommen, Ihre Registerkartenanwendung verwendet ein proprietäres ID-System, um den Inhalt zu sichern. Angenommen, Sie haben auch einen Bot, der mit dem Benutzer interagieren kann. In der Regel möchten Sie Inhalte auf der Registerkarte anzeigen, die für den Anzeigebenutzer spezifisch sind. Die Herausforderung besteht darin, dass die Benutzer-ID in Ihrem System wahrscheinlich von der Microsoft Teams-Benutzer-ID abhing. Wie ordnen Sie diese beiden Identitäten zu?
+Beispiel: Angenommen, Ihre Registerkartenanwendung verwendet ein proprietäres ID-System, um den Inhalt zu sichern. Angenommen, Sie haben auch einen Bot, der mit dem Benutzer interagieren kann. In der Regel möchten Sie Inhalte auf der Registerkarte anzeigen, die für den Anzeigebenutzer spezifisch sind. Die Herausforderung besteht darin, dass sich die Benutzer-ID in Ihrem System wahrscheinlich von der Microsoft Teams unterscheiden. Wie ordnen Sie diese beiden Identitäten zu?
 Im Allgemeinen wird empfohlen, den Benutzer mit dem Bot mit demselben Identitätssystem zu signieren, das zum Bereitstellen der Authentifizierung für die Registerkarteninhalte verwendet wird. Sie können dies über die Anmeldeaktion implementieren, die sich in der Regel über einen OAuth-Fluss beim Benutzer anmeldet.
 
-Dieser Fluss funktioniert am besten, wenn Ihr Identitätsanbieter das OAuth 2.0-Protokoll implementiert. Anschließend können Sie die Benutzer-ID von Teams den Anmeldeinformationen des Benutzers aus Ihrem eigenen Identitätsdienst zuordnen.
+Dieser Fluss funktioniert am besten, wenn Ihr Identitätsanbieter das OAuth 2.0-Protokoll implementiert. Anschließend können Sie die Teams Benutzer-ID den Anmeldeinformationen des Benutzers aus Ihrem eigenen Identitätsdienst zuordnen.
 
    ![Zuordnen von Identitäten](~/assets/images/bots/associating_contexts.png)
 

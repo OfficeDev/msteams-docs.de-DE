@@ -127,4 +127,4 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 * [Adaptive Kartenaktionen in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [Wie Bots funktionieren](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
-* [Arbeiten mit universellen Aktionen für adaptive Karten](Work-with-universal-actions-for-adaptive-cards.md)
+* [Mit Universal-Aktionen für adaptive Karten arbeiten](Work-with-universal-actions-for-adaptive-cards.md)

@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit universellen Aktionen für adaptive Karten
+title: Mit Universal-Aktionen für adaptive Karten arbeiten
 description: Arbeiten Sie mit den universellen Aktionen für adaptive Karten.
 ms.topic: conceptual
 localization_priority: Normal
@@ -10,7 +10,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/29/2021
 ms.locfileid: "52088838"
 ---
-# <a name="work-with-universal-actions-for-adaptive-cards"></a>Arbeiten mit universellen Aktionen für adaptive Karten
+# <a name="work-with-universal-actions-for-adaptive-cards"></a>Mit Universal-Aktionen für adaptive Karten arbeiten
 
 Universelle Aktionen für adaptive Karten bieten eine Möglichkeit, adaptive Kartenszenarien sowohl für Teams als auch für Outlook. Dieses Dokument behandelt Folgendes:
 

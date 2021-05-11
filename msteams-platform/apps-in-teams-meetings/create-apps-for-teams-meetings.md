@@ -17,19 +17,19 @@ ms.locfileid: "52075654"
 
 ## <a name="prerequisites-and-considerations"></a>Voraussetzungen und Überlegungen
 
-Bevor Sie Apps für Teams-Besprechungen erstellen, müssen Sie folgendes wissen:
+Bevor Sie Apps für Teams erstellen, müssen Sie folgendes wissen:
 
-* Sie müssen wissen, wie Sie Teams-Apps entwickeln. Weitere Informationen finden Sie unter [Teams app development](../overview.md).
+* Sie müssen wissen, wie Sie apps Teams entwickeln. Weitere Informationen finden Sie unter [Teams App Development](../overview.md).
 
 * Sie müssen das Teams-App-Manifest aktualisieren, um anzugeben, dass die App für Besprechungen verfügbar ist. Weitere Informationen finden Sie unter [App-Manifest](#update-your-app-manifest).
 
 * Damit Ihre App im Besprechungslebenszyklus als Registerkarte funktioniert, muss sie konfigurierbare Registerkarten im Gruppenchatbereich unterstützen. Weitere Informationen finden Sie unter [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) und [build a group tab](../build-your-first-app/build-channel-tab.md).
 
-* Sie müssen die allgemeinen Richtlinien zum Entwerfen von Teams-Registerkarten für Szenarien vor und nach Besprechungen einhalten. Informationen zu Erfahrungen während Besprechungen finden Sie in den Entwurfsrichtlinien für Besprechungsdialogfeldern und Besprechungsdialogfeldern. Weitere Informationen finden Sie unter [Richtlinien für das Entwerfen von Teams-Registerkarten,](../tabs/design/tabs.md)Richtlinien für den Entwurf von Registerkarten [in](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) Besprechungen und Entwurfsrichtlinien für [Besprechungsdialogdialog.](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
+* Sie müssen die allgemeinen Richtlinien Teams Registerkartendesigns für Szenarien vor und nach Besprechungen einhalten. Informationen zu Erfahrungen während Besprechungen finden Sie in den Entwurfsrichtlinien für Besprechungsdialogfeldern und Besprechungsdialogfeldern. Weitere Informationen finden Sie unter [Teams Richtlinien](../tabs/design/tabs.md)für den Registerkartenentwurf, Richtlinien für das Design von Registerkarten [in](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) Besprechungen und Entwurfsrichtlinien für [Besprechungsdialogdialog.](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 
 * Sie müssen den Bereich `groupchat` unterstützen, um Ihre App in Chats vor und nach besprechungen zu aktivieren. Mit der App vor der Besprechung können Sie Besprechungs-Apps finden und hinzufügen und Aufgaben vor besprechungen ausführen. Mit der App nach der Besprechung können Sie die Ergebnisse der Besprechung anzeigen, z. B. Umfrageergebnisse oder Feedback.
 
-* Die Parameter für die Besprechungs-API-URL müssen `meetingId` über `userId` , und `tenantId` verfügen. Diese sind im Rahmen der Teams-Client-SDK- und Botaktivität verfügbar. Darüber hinaus können zuverlässige Informationen für Benutzer-ID und Mandanten-ID mithilfe der [Tab-SSO-Authentifizierung abgerufen werden.](../tabs/how-to/authentication/auth-aad-sso.md)
+* Die Parameter für die Besprechungs-API-URL müssen `meetingId` über `userId` , und `tenantId` verfügen. Diese sind im Rahmen der Client-SDK- Teams Bot-Aktivität verfügbar. Darüber hinaus können zuverlässige Informationen für Benutzer-ID und Mandanten-ID mithilfe der [Tab-SSO-Authentifizierung abgerufen werden.](../tabs/how-to/authentication/auth-aad-sso.md)
 
 * Die `GetParticipant` API muss über eine Botregistrierung und -ID verfügen, um Authentifizierungstoken zu generieren. Weitere Informationen finden Sie unter [Botregistrierung und ID](../build-your-first-app/build-bot.md).
 
@@ -37,15 +37,15 @@ Bevor Sie Apps für Teams-Besprechungen erstellen, müssen Sie folgendes wissen:
 
 ## <a name="meeting-apps-api-reference"></a>Apireferenz für Besprechungs-Apps
 
-|API|Beschreibung|Anforderung|Quelle|
+|API|Beschreibung|Anforderung|Source|
 |---|---|----|---|
-|**GetUserContext**| Mit dieser API können Sie Kontextinformationen abrufen, um relevante Inhalte auf einer Registerkarte Teams anzuzeigen. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams client SDK|
+|**GetUserContext**| Mit dieser API können Sie Kontextinformationen abrufen, um relevante Inhalte auf einer Registerkarte Teams anzuzeigen. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams Client SDK|
 |**GetParticipant**| Mit dieser API kann ein Bot Teilnehmerinformationen nach Besprechungs-ID und Teilnehmer-ID abrufen. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | Mit dieser API können Sie Besprechungssignale bereitstellen, die mithilfe der vorhandenen Unterhaltungsbenachrichtigungs-API für den Benutzer-Bot-Chat übermittelt werden. Damit können Sie basierend auf der Benutzeraktion, die ein Dialogfeld in der Besprechung zeigt, ein Signal senden. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 
 ### <a name="getusercontext"></a>GetUserContext
 
-Informationen zum Identifizieren und Abrufen von Kontextinformationen für Ihre Registerkarteninhalte finden Sie unter [Abrufen des Kontexts für Ihre Registerkarte Teams](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library). `meetingId` wird von einer Registerkarte verwendet, wenn sie im Besprechungskontext ausgeführt wird, und wird für die Antwortnutzlast hinzugefügt.
+Informationen zum Identifizieren und Abrufen von Kontextinformationen für Ihre Registerkarteninhalte finden Sie unter [Abrufen des Kontexts für Teams Registerkarte](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library). `meetingId`wird von einer Registerkarte verwendet, wenn sie im Besprechungskontext ausgeführt wird, und wird für die Antwortnutzlast hinzugefügt.
 
 ### <a name="getparticipant-api"></a>GetParticipant-API
 
@@ -57,9 +57,9 @@ Informationen zum Identifizieren und Abrufen von Kontextinformationen für Ihre 
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**meetingId**| string | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
-|**participantId**| string | Ja | Die Teilnehmer-ID ist die Benutzer-ID. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Teilnehmer-ID aus dem Tab-SSO zu erhalten. |
-|**tenantId**| string | Ja | Die Mandanten-ID ist für die Mandantenbenutzer erforderlich. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Mandanten-ID aus dem Tab-SSO zu erhalten. |
+|**meetingId**| Zeichenfolge | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
+|**participantId**| Zeichenfolge | Ja | Die Teilnehmer-ID ist die Benutzer-ID. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Teilnehmer-ID aus dem Tab-SSO zu erhalten. |
+|**tenantId**| Zeichenfolge | Ja | Die Mandanten-ID ist für die Mandantenbenutzer erforderlich. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Mandanten-ID aus dem Tab-SSO zu erhalten. |
 
 #### <a name="example"></a>Beispiel
 
@@ -155,7 +155,7 @@ Alle Benutzer in einer Besprechung erhalten die über die API gesendeten `Notifi
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**conversationId**| string | Ja | Die Unterhaltungs-ID ist als Teil des Botaufrufs verfügbar. |
+|**conversationId**| Zeichenfolge | Ja | Die Unterhaltungs-ID ist als Teil des Botaufrufs verfügbar. |
 
 #### <a name="example"></a>Beispiel
 
@@ -226,7 +226,7 @@ POST /v3/conversations/{conversationId}/activities
 | **403** | Die App kann das Signal nicht senden. Dies kann aus verschiedenen Gründen geschehen, z. B. wenn der Mandantenadministrator die App deaktiviert, die App während der Livewebsitemigration blockiert wird und so weiter. In diesem Fall enthält die Nutzlast eine detaillierte Fehlermeldung. |
 | **404** | Der Besprechungschat ist nicht vorhanden. |
 
-## <a name="enable-your-app-for-teams-meetings"></a>Aktivieren Ihrer App für Teams-Besprechungen
+## <a name="enable-your-app-for-teams-meetings"></a>Aktivieren Ihrer App für Teams Besprechungen
 
 ### <a name="update-your-app-manifest"></a>Aktualisieren Des App-Manifests
 
@@ -310,7 +310,7 @@ Geben Sie in einem Besprechungschat den **@** Schlüssel ein, und wählen **Sie 
 > [!NOTE]
 > * Die Benutzeridentität muss mithilfe von [Tabs SSO bestätigt werden.](../tabs/how-to/authentication/auth-aad-sso.md) Nach der Authentifizierung kann die App die Benutzerrolle mithilfe der `GetParticipant` API abrufen.
 > * Basierend auf der Benutzerrolle kann die App rollenspezifische Benutzeroberflächen bereitstellen. Beispielsweise ermöglicht eine Abruf-App nur Organisatoren und Organisatoren, eine neue Umfrage zu erstellen.
-> * Rollenzuweisungen können geändert werden, während eine Besprechung ausgeführt wird. Weitere Informationen finden Sie [unter Rollen in einer Teams-Besprechung](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+> * Rollenzuweisungen können geändert werden, während eine Besprechung ausgeführt wird. Weitere Informationen finden Sie unter [Rollen in einer Teams Besprechung](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 ### <a name="during-a-meeting"></a>Während einer Besprechung
 
@@ -319,12 +319,12 @@ Geben Sie in einem Besprechungschat den **@** Schlüssel ein, und wählen **Sie 
 Mit dem sidePanel können Sie die Erfahrungen in einer Besprechung anpassen, mit denen Organisatoren und Organisatoren unterschiedliche Ansichten und Aktionen ermöglichen. In Ihrem App-Manifest müssen Sie dem Kontextarray sidePanel hinzufügen. In der Besprechung und in allen Szenarien wird die App auf einer Registerkarte in der Besprechung gerendert, die 320 Pixel breit ist. Weitere Informationen finden Sie unter [FrameContext-Schnittstelle](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
 ).
 
-Informationen zur Verwendung der `userContext` API zum Entsprechend routen von Anforderungen finden Sie unter Teams [SDK](../tabs/how-to/access-teams-context.md#user-context). Registerkarten finden Sie unter [Teams-Authentifizierungsfluss.](../tabs/how-to/authentication/auth-flow-tab.md) Der Authentifizierungsfluss für Registerkarten ähnelt dem Authentifizierungsfluss für Websites. Registerkarten können also OAuth 2.0 direkt verwenden. Siehe Microsoft [Identity Platform und OAuth 2.0 Authorization Code Flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+Informationen zur Verwendung der `userContext` API zum Entsprechend routen von Anforderungen finden Sie unter Teams [SDK](../tabs/how-to/access-teams-context.md#user-context). Weitere [Teams finden Sie unter Authentifizierungsfluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md). Der Authentifizierungsfluss für Registerkarten ähnelt dem Authentifizierungsfluss für Websites. Registerkarten können also OAuth 2.0 direkt verwenden. Siehe, [Microsoft Identity Platform und OAuth 2.0 Autorisierungscodefluss](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
 Die Messagingerweiterung funktioniert wie erwartet, wenn sich ein Benutzer in einer Besprechungsansicht befindet und der Benutzer Nachrichtenerweiterungskarten verfassen kann. AppName in-meeting ist eine QuickInfo, in der der App-Name in der Besprechungs-U-Leiste steht.
 
 > [!NOTE]
-> Verwenden Sie Version 1.7.0 oder höher von [Teams SDK,](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)da Versionen vor dem System den Seitenbereich nicht unterstützen.
+> Verwenden Sie Version 1.7.0 oder höher von [Teams SDK,](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)da die Versionen zuvor die Seitenleiste nicht unterstützen.
 
 #### <a name="in-meeting-dialog"></a>Dialogfeld "Besprechung"
 
@@ -333,8 +333,8 @@ Das Dialogfeld in der Besprechung kann verwendet werden, um Teilnehmer während 
 Im Besprechungsdialogfeld darf kein Aufgabenmodul verwendet werden. Das Aufgabenmodul wird in einem Besprechungschat nicht aufgerufen. Eine externe Ressourcen-URL wird zum Anzeigen von Inhaltsblasen in einer Besprechung verwendet. Sie können die Methode `submitTask` verwenden, um Daten in einem Besprechungschat zu übermitteln.
 
 > [!NOTE]
-> * Sie müssen die [submitTask()-Funktion](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) aufrufen, um automatisch zu schließen, nachdem ein Benutzer eine Aktion in der Webansicht ausgeführt hat. Dies ist eine Anforderung für die App-Übermittlung. Weitere Informationen finden Sie unter [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
-> * Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss die Nutzlast der ursprünglichen Aufrufanforderung auf den Anforderungsmetadaten im Objekt und nicht auf den `from.id` `from` `from.aadObjectId` Anforderungsmetadaten beruhen. `from.id` ist die Benutzer-ID und `from.aadObjectId` die Azure Active Directory (AAD)-ID des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
+> * Sie müssen die [submitTask()-Funktion](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) aufrufen, um automatisch zu schließen, nachdem ein Benutzer eine Aktion in der Webansicht ausgeführt hat. Dies ist eine Anforderung für die App-Übermittlung. Weitere Informationen finden Sie unter [Teams SDK Task Module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+> * Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss die Nutzlast der ursprünglichen Aufrufanforderung auf den Anforderungsmetadaten im Objekt und nicht auf den `from.id` `from` `from.aadObjectId` Anforderungsmetadaten beruhen. `from.id`ist die Benutzer-ID und `from.aadObjectId` Azure Active Directory (AAD)-ID des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
 
 #### <a name="share-to-stage"></a>Freigeben in der Phase 
 
@@ -379,13 +379,13 @@ Die Konfigurationen nach der Besprechung und vor der Besprechung sind äquivalen
 
 |Beispielname | Beschreibung | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Erweiterbarkeit von Besprechungen | Beispiel für die Erweiterbarkeit von Microsoft Teams-Besprechungen zum Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | |
-| Besprechungsinhaltsblasen-Bot | Beispiel für die Erweiterbarkeit von Microsoft Teams-Besprechungen für die Interaktion mit dem Inhaltsblasenbot in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Meeting SidePanel | Beispiel für die Erweiterbarkeit von Microsoft Teams-Besprechungen für die Iteracting mit dem Seitenbereich in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |
+| Erweiterbarkeit von Besprechungen | Microsoft Teams Beispiel für die Besprechungsergehnbarkeit zum Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | |
+| Besprechungsinhaltsblasen-Bot | Microsoft Teams beispiel für die Besprechungsergehnbarkeit für die Interaktion mit dem Inhaltsblasenbot in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| Meeting SidePanel | Microsoft Teams beispiel für die Besprechungsergehnbarkeit für die Iteracting mit dem Seitenbereich in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |
 
 ## <a name="see-also"></a>Siehe auch
 
 > [!div class="nextstepaction"]
 > [Entwurfsrichtlinien für Besprechungsdialogdialog](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 > [!div class="nextstepaction"]
-> [Teams-Authentifizierungsfluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md)
+> [Teams Authentifizierungsfluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md)

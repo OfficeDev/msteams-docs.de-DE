@@ -1,6 +1,6 @@
 ---
 title: Lernprogramm – Erstellen Ihrer ersten App mithilfe Node.js
-description: Erfahren Sie, wie Sie mit dem Erstellen von Microsoft Teams-Apps mit Node.js.
+description: Erfahren Sie, wie Sie mit dem Erstellen Microsoft Teams apps with Node.js.
 keywords: Erste Schritte node.js nodejs App Studio
 ms.topic: tutorial
 localization_priority: Normal
@@ -14,7 +14,7 @@ ms.locfileid: "52020961"
 ---
 # <a name="create-your-first-microsoft-teams-app-using-nodejs"></a>Erstellen Sie Ihre erste Microsoft Teams-App mithilfe Node.js
 
-Dieses Lernprogramm hilft Ihnen, mit dem Erstellen einer Microsoft Teams-App mithilfe von Node.js.
+Dieses Lernprogramm hilft Ihnen, mit dem Erstellen einer Microsoft Teams app mithilfe von Node.js.
 
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
@@ -22,7 +22,7 @@ Dieses Lernprogramm hilft Ihnen, mit dem Erstellen einer Microsoft Teams-App mit
 
 ## <a name="download-and-host-your-app"></a>Herunterladen und Hosten Ihrer App
 
-Führen Sie die folgenden Schritte aus, um eine einfache "Hello World"-App in Teams herunterzuladen und zu hosten.
+Führen Sie die folgenden Schritte aus, um eine einfache "Hello World"-App in Teams.
 
 <a name="GetPrerequisites"></a>
 
@@ -32,7 +32,7 @@ Zum Abschließen dieses Lernprogramms benötigen Sie die folgenden Tools. Wenn s
 
 - [Git](https://git-scm.com/downloads)
 - [Node.js und NPM](https://nodejs.org/)
-- Get any text editor or IDE. Sie können den Code Visual Studio [kostenlos](https://code.visualstudio.com/download) installieren und verwenden.
+- Get any text editor or IDE. Sie können die Visual Studio Code [kostenlos](https://code.visualstudio.com/download) installieren und verwenden.
 
 Wenn während der Installation Optionen zum Hinzufügen von , , , und zum PFAD angezeigt werden, wählen Sie `git` `node` `npm` `code` dies aus. Es ist praktisch.
 
@@ -81,7 +81,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> Sie können dieses [](https://github.com/OfficeDev/Microsoft-Teams-Samples) Repository [forken,](https://help.github.com/articles/fork-a-repo/) wenn Sie Ihre Änderungen an Ihrem GitHub-Repository ändern und einchecken möchten, um eine zukünftige Referenz zu erhalten.
+> Sie können dieses [](https://github.com/OfficeDev/Microsoft-Teams-Samples) Repository [forken,](https://help.github.com/articles/fork-a-repo/) wenn Sie Ihre Änderungen an Ihrem GitHub für zukünftige Referenz ändern und einchecken möchten.
 
 <a name="BuildRun"></a>
 
@@ -121,7 +121,7 @@ An diesem Punkt können Sie ein Browserfenster öffnen und zu den folgenden URLs
 
 ### <a name="host-the-sample-app"></a>Hosten der Beispiel-App
 
-Denken Sie daran, dass Apps in Microsoft Teams Webanwendungen sind, die eine oder mehrere Funktionen verfügbar machen. Damit die Teams-Plattform Ihre App laden kann, muss Ihre App über das Internet erreichbar sein. Damit Ihre App über das Internet erreichbar ist, müssen Sie *Ihre App* hosten.
+Denken Sie daran, dass apps in Microsoft Teams Webanwendungen sind, die eine oder mehrere Funktionen verfügbar machen. Damit die Teams App geladen werden kann, muss Ihre App über das Internet erreichbar sein. Damit Ihre App über das Internet erreichbar ist, müssen Sie *Ihre App* hosten.
 
 Für lokale Tests können Sie die App auf Ihrem lokalen Computer ausführen und einen Tunnel mit einem Webendpunkt erstellen. [ngrok](https://ngrok.com) ist ein kostenloses Tool, mit dem Sie genau dies tun können. Mit *ngrok* können Sie eine Webadresse wie z. B. `https://d0ac14a5.ngrok.io` erhalten (diese URL ist nur ein Beispiel). Sie können *ngrok* [für](https://ngrok.com/download) Ihre Umgebung herunterladen und installieren. Stellen Sie sicher, dass Sie es einem Speicherort in Ihrer `PATH` hinzufügen.
 
@@ -140,18 +140,18 @@ ngrok http 3333 -host-header=localhost:3333
 
 Es gibt eine kostenpflichtige Version von *ngrok,* die dauerhafte Namen zulässt. Wenn Sie die kostenlose Version verwenden, ist Ihre App nur während der aktuellen Sitzung auf Ihrem Entwicklungscomputer verfügbar. Wenn der Computer heruntergefahren wird oder in den Ruhezustand geht, ist der Dienst nicht mehr verfügbar. Denken Sie daran, wenn Sie die App für Tests durch andere Benutzer freigeben. Wenn Sie den Dienst neu starten müssen, gibt er eine neue Adresse zurück, und Sie müssen jeden Ort aktualisieren, der diese Adresse verwendet.
 
-Notieren Sie sich die URL Ihrer App, da Sie dies später benötigen, wenn Sie die App mit App Studio bei Teams registrieren. Editor funktioniert zu diesem Zweck gut.
+Notieren Sie sich die URL Ihrer App, da Sie dies später benötigen, wenn Sie die App mit Teams App studio registrieren. Editor funktioniert zu diesem Zweck gut.
 
 <a name="DeployToTeams"></a>
 
-## <a name="deploy-your-app-to-microsoft-teams"></a>Bereitstellen Ihrer App in Microsoft Teams
+## <a name="deploy-your-app-to-microsoft-teams"></a>Bereitstellen Ihrer App für Microsoft Teams
 
-An diesem Punkt haben Sie eine App im Internet gehostet, aber Sie haben noch keine Möglichkeit, Teams mitzuteilen, wo sie suchen soll, oder auch nicht, wie Ihre App heißt. Dazu müssen Sie jetzt ein App-Paket erstellen. Dies ist wenig mehr als eine Textdatei, die das App-Manifest und einige Symbole enthält, die der Teams-Client zum ordnungsgemäßen Anzeigen und Branden Ihrer App verwendet. Sie können dieses App-Paket manuell erstellen oder App Studio verwenden, ein Tool, das in Teams ausgeführt wird, das das Registrieren der App vereinfacht. App Studio ist die empfohlene Methode zum Erstellen und Aktualisieren des App-Pakets.
+An diesem Punkt haben Sie eine App im Internet gehostet, aber Sie haben noch keine Möglichkeit zu sagen, Teams wo sie suchen soll, oder sogar, was Ihre App heißt. Dazu müssen Sie jetzt ein App-Paket erstellen. Dies ist wenig mehr als eine Textdatei, die das App-Manifest und einige Symbole enthält, die der Teams-Client verwendet, um Ihre App ordnungsgemäß zu anzeigen und zu brandmarken. Sie können dieses App-Paket manuell erstellen, oder Sie können App Studio verwenden, ein Tool, das in Teams ausgeführt wird, das das Registrieren der App vereinfacht. App Studio ist die empfohlene Methode zum Erstellen und Aktualisieren des App-Pakets.
 
 Für eine der beiden Methoden benötigen Sie Folgendes:
 
 - Die URL, unter der Ihre App im Internet gefunden werden kann.
-- Symbole, die Teams zum Branden Ihrer App verwendet. Das Beispiel enthält Platzhaltersymbole in "src\static\images". App Studio stellt bei Bedarf auch Standardsymbole zur Verfügung.
+- Symbole, die Teams verwenden, um Ihre App zu brandmarken. Das Beispiel enthält Platzhaltersymbole in "src\static\images". App Studio stellt bei Bedarf auch Standardsymbole zur Verfügung.
 
 [!include[Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
@@ -190,11 +190,11 @@ Wenn Sie die App mit ngrok ausführen, müssen Sie einige lokale Umgebungsvariab
 Dabei gilt:
 
 MICROSOFT_APP_ID und MICROSOFT_APP_PASSWORD ist die ID bzw. das Kennwort für Ihren Bot.
-NODE_DEBUG zeigt Ihnen, was in Ihrem Bot geschieht, in der Visual Studio Codedebuggerkonsole.
+NODE_DEBUG zeigt Ihnen, was in Ihrem Bot in der Visual Studio Code passiert.
 NODE_CONFIG_DIR auf das Verzeichnis im Stammverzeichnis des Repositorys (standardmäßig wird die App lokal ausgeführt, wird sie im Ordner src nach ihr sucht).
 
 > [!Note]
-> Wenn Sie npm weiter oben im Lernprogramm nicht beendet haben, müssen Sie ausführen, damit Visual Studio Code ihre Startkonfigurationsvariablen `npm stop` richtig anfordert.
+> Wenn Sie npm weiter oben im Lernprogramm nicht beendet haben, müssen Sie ausgeführt werden, damit Visual Studio Code Startkonfigurationsvariablen `npm stop` richtig abhören können.
 
 <a name="ConfigureTheAppTab"></a>
 
@@ -206,7 +206,7 @@ Nachdem Sie die App in einem Team installiert haben, müssen Sie sie so konfigur
 
 ### <a name="test-your-bot-in-teams"></a>Testen Des Bots in Teams
 
-Sie können jetzt mit dem Bot in Teams interagieren. Wählen Sie einen Kanal im Team aus, in dem Sie Ihre App registriert haben, und geben Sie `@your-bot-name` ein, gefolgt von Ihrer Nachricht. Dies wird als Erwähnung **\@ bezeichnet.** Alle Nachrichten, die Sie an den Bot senden, werden als Antwort an Sie zurückgeschickt.
+Sie können jetzt mit dem Bot in der Teams. Wählen Sie einen Kanal im Team aus, in dem Sie Ihre App registriert haben, und geben Sie `@your-bot-name` ein, gefolgt von Ihrer Nachricht. Dies wird als Erwähnung **\@ bezeichnet.** Alle Nachrichten, die Sie an den Bot senden, werden als Antwort an Sie zurückgeschickt.
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png"/>
 

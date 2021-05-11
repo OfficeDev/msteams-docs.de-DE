@@ -4,12 +4,12 @@ description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: Teams, was neu ist
-ms.openlocfilehash: b1a78166b64d6f3c9c8e2b097822d874591a956c
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 449df27aaa28b0ba15c98efa78f93f74b8446920
+ms.sourcegitcommit: 20e623a82f9676dd036cf6a350dd480885e0ea2c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230883"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52300570"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neues für Entwickler in Microsoft Teams
 
@@ -27,9 +27,9 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
+|05/07/2021| Tiefe Links für Audio- und Videoanrufe im Chat. |[Deep-Links](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call)
 |04/30/2021|Neue Anleitung zum Veröffentlichen von Apps im Teams Store.|[Veröffentlichen Ihrer App im Teams Store](concepts/deploy-and-publish/appsource/publish.md), Teams Richtlinien für die [Storeüberprüfung](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |04/29/2021 | Neu: Universelle Aktionen für adaptive Karten. | [Universal-Aktionen für adaptive Karten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/08/2021| Die App-Anpassungsfunktion ist jetzt in der Entwicklervorschau verfügbar.|[Entwerfen Teams App-Übersicht,](concepts/design/design-teams-app-overview.md#app-customization) [App Studio-Übersicht](concepts/build-and-test/app-studio-overview.md#connectors)und [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|Hinweis: Aktualisieren Sie auf Version 4.10 oder höher des Bot Framework SDK, wie wir mit dem Veraltetkeitsprozess für `TeamsInfo.getMembers` und begonnen `TeamsInfo.GetMembersAsync` haben. | [Bot API-Änderungen für Team-/Chatmitglieder](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Hinweis: Registerkarten haben keine Ränder mehr um ihre Erfahrungen. Registerkartenentwickler sollten ihre Apps überprüfen und aktualisieren. | [Entfernen von Registerkartenrändern](resources/removing-tab-margins.md) |
 |03/05/2021|Der Standardinstallationsbereich und die Gruppenfunktion werden in der Entwicklervorschau angezeigt.| [Standardinstallationsbereich und Gruppenfunktion](concepts/deploy-and-publish/add-default-install-scope.md) |
@@ -154,6 +154,7 @@ Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff auf
 
 | **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
+|04/08/2021| Die App-Anpassungsfunktion ist jetzt in der Entwicklervorschau verfügbar.|[Entwerfen Teams App-Übersicht,](concepts/design/design-teams-app-overview.md#app-customization) [App Studio-Übersicht](concepts/build-and-test/app-studio-overview.md#connectors)und [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
 |03/05/2021| Registerkarten verfügen nicht mehr über Ränder, die ihre Erfahrungen umgeben. Registerkartenentwickler sollten ihre Apps überprüfen und aktualisieren. | [Entfernen von Registerkartenrändern](resources/removing-tab-margins.md) |
 
 Weitere Informationen finden Sie unter [Public Developer Preview for Teams](~/resources/dev-preview/developer-preview-intro.md).

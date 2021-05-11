@@ -1,7 +1,7 @@
 ---
 title: Erstellen eines Befehlsmenüs für Ihren Bot
 author: clearab
-description: Erstellen eines Befehlsmenüs für Ihren Microsoft Teams-Bot
+description: Erstellen eines Befehlsmenüs für ihren Microsoft Teams Bot
 ms.topic: how-to
 localization_priority: Normal
 ms.author: anclear
@@ -33,7 +33,7 @@ Eine Voraussetzung zum Erstellen eines Befehlsmenüs für Ihren Bot ist, dass Si
 
 **So erstellen Sie ein Befehlsmenü für Ihren Bot mithilfe von App Studio**
 
-1. Öffnen Sie Teams, und wählen **Sie apps** im linken Bereich aus. Suchen Sie **auf** der Seite Apps nach **App Studio,** und wählen Sie **Öffnen aus.** 
+1. Öffnen Teams, und wählen **Sie im** linken Bereich Apps aus. Suchen Sie **auf** der Seite Apps nach **App Studio,** und wählen Sie **Öffnen aus.** 
    > [!NOTE]
    > Wenn Sie nicht über **App Studio verfügen,** können Sie es herunterladen. Weitere Informationen finden Sie unter [Installieren von App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
 
@@ -164,7 +164,7 @@ Bots in einer Gruppe oder einem Kanal reagieren nur, wenn sie in einer `@botname
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
-Sie können den Abschnitt **\@ Erwähnung** des Nachrichtentexts mithilfe einer statischen Methode analysieren, die im Microsoft Bot Framework bereitgestellt wird. Es handelt sich um eine Methode der `Activity` Klasse namens `RemoveRecipientMention` .
+Sie können den Abschnitt **\@ Erwähnung** des Nachrichtentexts mithilfe einer statischen Methode analysieren, die mit dem Microsoft Bot Framework. Es handelt sich um eine Methode der `Activity` Klasse namens `RemoveRecipientMention` .
 
 Der C# Code zum Analysieren des Abschnitts **\@ Erwähnung** des Nachrichtentexts lautet wie folgt:
 

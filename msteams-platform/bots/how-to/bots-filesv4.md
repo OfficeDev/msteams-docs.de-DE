@@ -19,32 +19,32 @@ ms.locfileid: "52020940"
 
 Es gibt zwei Möglichkeiten zum Senden und Empfangen von Dateien von einem Bot:
 
-* [**Verwenden Sie die Microsoft Graph-APIs:**](#use-the-graph-apis) Diese Methode funktioniert für Bots in allen Microsoft Teams-Bereiche:
+* [**Verwenden Sie die Microsoft Graph-APIs:**](#use-the-graph-apis) Diese Methode funktioniert für Bots in allen Microsoft Teams:
   * `personal`
   * `channel`
   * `groupchat`
 
-* [**Verwenden Sie die Teams-Bot-APIs:**](#use-the-teams-bot-apis) Diese unterstützen nur Dateien im `personal` Kontext.
+* [**Verwenden Sie die Teams Bot-APIs:**](#use-the-teams-bot-apis) Diese unterstützen nur Dateien im `personal` Kontext.
 
 ## <a name="use-the-graph-apis"></a>Verwenden der Graph-APIs
 
-Posten von Nachrichten mit Kartenanlagen, die auf vorhandene #A0 verweisen, mithilfe der Graph-APIs für [OneDrive und SharePoint](/onedrive/developer/rest-api/). Um die Graph-APIs zu verwenden, erhalten Sie über den standardmäßigen OAuth 2.0-Autorisierungsfluss Zugriff auf eine der folgenden:
+Post messages with card attachments that refer to existing SharePoint files, using the Graph APIs for [OneDrive and SharePoint](/onedrive/developer/rest-api/). Um die Graph zu verwenden, erhalten Sie über den standardmäßigen OAuth 2.0-Autorisierungsfluss Zugriff auf eine der folgenden ApIs:
 
-* Der #A0 eines Benutzers für `personal` und `groupchat` Dateien.
+* Der Ordner OneDrive und Dateien `personal` eines `groupchat` Benutzers.
 * Die Dateien im Kanal eines Teams für `channel` Dateien.
 
-Graph-APIs funktionieren in allen Teams-Bereich. Weitere Informationen finden Sie unter [Senden von Chatnachrichtendateianlagen](/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-4-file-attachments&preserve-view=true).
+Graph APIs funktionieren in allen Teams Bereiche. Weitere Informationen finden Sie unter [Senden von Chatnachrichtendateianlagen](/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-4-file-attachments&preserve-view=true).
 
-Alternativ können Sie Dateien mithilfe der Teams-Bot-APIs an einen Bot senden und von diesem empfangen.
+Alternativ können Sie Dateien an einen Bot senden und von diesem empfangen, indem Sie die Teams bot-APIs verwenden.
 
-## <a name="use-the-teams-bot-apis"></a>Verwenden der Teams-Bot-APIs
+## <a name="use-the-teams-bot-apis"></a>Verwenden der Teams Bot-APIs
 
 > [!NOTE]
-> Teams-Bot-APIs funktionieren nur im `personal` Kontext. Sie funktionieren nicht im `channel` `groupchat` Oder-Kontext.
+> Teams Bot-APIs funktionieren nur im `personal` Kontext. Sie funktionieren nicht im `channel` `groupchat` Oder-Kontext.
 
-Mithilfe von Teams-APIs kann der Bot Dateien direkt mit Benutzern im Kontext senden und empfangen, auch als `personal` persönliche Chats bezeichnet. Implementieren Sie Features, z. B. Spesenabrechnung, Bilderkennung, Dateiarchivierung und E-Signaturen, die die Bearbeitung von Dateiinhalten enthalten. In Teams freigegebene Dateien werden in der Regel als Karten angezeigt und ermöglichen eine umfassende Anzeige in der App.
+Mithilfe Teams APIs kann der Bot Dateien direkt mit Benutzern im Kontext senden und empfangen, auch als `personal` persönliche Chats bezeichnet. Implementieren Sie Features, z. B. Spesenabrechnung, Bilderkennung, Dateiarchivierung und E-Signaturen, die die Bearbeitung von Dateiinhalten enthalten. Dateien, die in Teams werden in der Regel als Karten angezeigt und ermöglichen eine umfassende Anzeige in der App.
 
-In den nächsten Abschnitten wird beschrieben, wie Dateiinhalte als direkte Benutzerinteraktion gesendet werden, z. B. das Senden einer Nachricht. Diese API wird als Teil der Teams-Bot-Plattform bereitgestellt.
+In den nächsten Abschnitten wird beschrieben, wie Dateiinhalte als direkte Benutzerinteraktion gesendet werden, z. B. das Senden einer Nachricht. Diese API wird als Teil der Teams bereitgestellt.
 
 ### <a name="configure-the-bot-to-support-files"></a>Konfigurieren des Bots für die Unterstützung von Dateien
 
@@ -54,7 +54,7 @@ Die Definition sieht wie dies aus: `"supportsFiles": true` . Wenn der Bot nicht 
 
 ### <a name="receive-files-in-personal-chat"></a>Empfangen von Dateien in persönlichen Chats
 
-Wenn ein Benutzer eine Datei an den Bot sendet, wird die Datei zuerst in den OneDrive for Business-Speicher des Benutzers hochgeladen. Der Bot empfängt dann eine Nachrichtenaktivität, die den Benutzer über den Benutzerupload informiert. Die Aktivität enthält Dateimetadaten, z. B. den Namen und die Inhalts-URL. Der Benutzer kann direkt aus dieser URL lesen, um seinen binären Inhalt zu abrufen.
+Wenn ein Benutzer eine Datei an den Bot sendet, wird die Datei zuerst in die OneDrive des Benutzers hochgeladen. Der Bot empfängt dann eine Nachrichtenaktivität, die den Benutzer über den Benutzerupload informiert. Die Aktivität enthält Dateimetadaten, z. B. den Namen und die Inhalts-URL. Der Benutzer kann direkt aus dieser URL lesen, um seinen binären Inhalt zu abrufen.
 
 #### <a name="message-activity-with-file-attachment-example"></a>Beispiel für Nachrichtenaktivität mit Dateianlage
 
@@ -80,9 +80,9 @@ In der folgenden Tabelle werden die Inhaltseigenschaften der Anlage beschrieben:
 
 | Eigenschaft | Zweck |
 | --- | --- |
-| `downloadUrl` | OneDrive-URL zum Abrufen des Inhalts der Datei. Der Benutzer kann eine direkt `HTTP GET` von dieser URL aus aus. |
-| `uniqueId` | Eindeutige Datei-ID. Dies ist die OneDrive-Laufwerkselement-ID, falls der Benutzer eine Datei an den Bot sendet. |
-| `fileType` | Dateityp, z. B. PDF oder DOCX. |
+| `downloadUrl` | OneDrive URL zum Abrufen des Inhalts der Datei. Der Benutzer kann eine direkt `HTTP GET` von dieser URL aus aus. |
+| `uniqueId` | Eindeutige Datei-ID. Dies ist die OneDrive Laufwerkelement-ID, falls der Benutzer eine Datei an den Bot sendet. |
+| `fileType` | Dateityp, z. B. .pdf oder .docx. |
 
 Als bewährte Methode bestätigen Sie den Dateiupload, indem Sie eine Nachricht zurück an den Benutzer senden.
 
@@ -127,13 +127,13 @@ In der folgenden Tabelle werden die Inhaltseigenschaften der Anlage beschrieben:
 | Eigenschaft | Zweck |
 | --- | --- |
 | `description` | Beschreibt den Zweck der Datei oder fasst den Inhalt zusammen. |
-| `sizeInBytes` | Stellt dem Benutzer eine Schätzung der Dateigröße und des Speicherplatzes in OneDrive zur Verfügung. |
+| `sizeInBytes` | Stellt dem Benutzer eine Schätzung der Dateigröße und des Speicherplatzes zur Verfügung, der in diesem OneDrive. |
 | `acceptContext` | Zusätzlicher Kontext, der automatisch an den Bot übermittelt wird, wenn der Benutzer die Datei akzeptiert. |
 | `declineContext` | Zusätzlicher Kontext, der automatisch an den Bot übermittelt wird, wenn der Benutzer die Datei zurückgibt. |
 
 #### <a name="invoke-activity-when-the-user-accepts-the-file"></a>Aufrufen von Aktivitäten, wenn der Benutzer die Datei akzeptiert
 
-Eine Aufrufaktivität wird an den Bot gesendet, wenn und wann der Benutzer die Datei akzeptiert. Sie enthält die OneDrive for Business-Platzhalter-URL, die der Bot dann ausgibt, `PUT` um den Dateiinhalt zu übertragen. Informationen zum Hochladen in die OneDrive-URL finden Sie unter [Upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+Eine Aufrufaktivität wird an den Bot gesendet, wenn und wann der Benutzer die Datei akzeptiert. Sie enthält die OneDrive for Business Platzhalter-URL, die der Bot dann ausgibt, `PUT` um den Dateiinhalt zu übertragen. Informationen zum Hochladen in die OneDrive-URL finden Sie unter [Upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
 Der folgende Code zeigt ein Beispiel für eine prägnante Version der Aufrufaktivität, die der Bot empfängt:
 
@@ -173,7 +173,7 @@ Wenn der Benutzer die Datei zurückgibt, empfängt der Bot das folgende Ereignis
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Benachrichtigen des Benutzers über eine hochgeladene Datei
 
-Nachdem Sie eine Datei auf das OneDrive des Benutzers hochgeladen haben, senden Sie eine Bestätigungsnachricht an den Benutzer. Die Nachricht muss die folgende Anlage enthalten, die der Benutzer auswählen kann, um eine Vorschau anzuzeigen oder sie in OneDrive zu öffnen `FileCard` oder lokal herunterzuladen:
+Nachdem Sie eine Datei in die OneDrive des Benutzers hochgeladen haben, senden Sie eine Bestätigungsnachricht an den Benutzer. Die Nachricht muss die folgende Anlage enthalten, die der Benutzer auswählen kann, um sie entweder in einer Vorschau anzuzeigen oder `FileCard` OneDrive oder lokal herunterzuladen:
 
 ```json
 {
@@ -193,8 +193,8 @@ In der folgenden Tabelle werden die Inhaltseigenschaften der Anlage beschrieben:
 
 | Eigenschaft | Zweck |
 | --- | --- |
-| `uniqueId` | OneDrive- oder SharePoint-Laufwerkelement-ID. |
-| `fileType` | Dateityp, z. B. PDF oder DOCX. |
+| `uniqueId` | OneDrive oder SharePoint Laufwerkelement-ID. |
+| `fileType` | Dateityp, z. B. .pdf oder .docx. |
 
 ### <a name="fetch-inline-images-from-message"></a>Abrufen von Inlinebildern aus einer Nachricht
 
@@ -319,11 +319,11 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 
 ## <a name="code-sample"></a>Codebeispiel
 
-Das folgende Codebeispiel veranschaulicht, wie Sie die Zustimmung der Datei erhalten und Dateien von einem Bot in Teams hochladen:
+Im folgenden Codebeispiel wird veranschaulicht, wie Sie die Zustimmung der Datei einholen und Dateien Teams bot hochladen:
 
 |**Beispielname** | **Beschreibung** | **.NET** | **Javascript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
-| File upload | Zeigt, wie Sie die Zustimmung der Datei erhalten und Dateien von einem Bot in Teams hochladen. Außerdem erfahren Sie, wie Sie eine an einen Bot gesendete Datei empfangen. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
+| File upload | Zeigt, wie Sie die Zustimmung der Datei einholen und Dateien in Teams Bot hochladen. Außerdem erfahren Sie, wie Sie eine an einen Bot gesendete Datei empfangen. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

@@ -1,6 +1,6 @@
 ---
-title: Kontext für Ihren Microsoft Teams-Bot erhalten
-description: Beschreibt, wie Sie Kontext für Bots in Microsoft Teams erhalten
+title: Kontext für Ihren Microsoft Teams erhalten
+description: Beschreibt, wie Sie Kontext für Bots in Microsoft Teams
 keywords: teams bots context
 ms.topic: conceptual
 localization_priority: Normal
@@ -12,7 +12,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020660"
 ---
-# <a name="get-context-for-your-microsoft-teams-bot"></a>Kontext für Ihren Microsoft Teams-Bot erhalten
+# <a name="get-context-for-your-microsoft-teams-bot"></a>Kontext für Ihren Microsoft Teams erhalten
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -20,13 +20,13 @@ Ihr Bot kann auf zusätzlichen Kontext über das Team oder den Chat zugreifen, z
 
 > [!NOTE]
 >
-> * Microsoft Teams-spezifische Bot-APIs werden am besten über unsere Erweiterungen für das Bot Builder SDK zugegriffen.
-> * Für C# oder .NET laden Sie unser [Microsoft.Bot.Connector.Teams-NuGet-Paket](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) herunter.
-> * Für Node.js Entwicklung ist die Bot Builder für Teams-Funktionalität in [das Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6 integriert.
+> * Microsoft Teams bot-APIs werden am besten über unsere Erweiterungen für das Bot Builder SDK zugegriffen.
+> * Für C# oder .NET laden Sie unser [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet herunter.
+> * Für Node.js Entwicklung ist der Bot Builder für Teams in [das Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6 integriert.
 
 ## <a name="fetch-the-team-roster"></a>Abrufen der Teamliste
 
-Ihr Bot kann die Liste der Teammitglieder und deren Basisprofile abfragen. Die grundlegenden Profile umfassen Teams-Benutzer-IDs und Azure Active Directory (AAD)-Informationen wie Name und Objekt-ID. Sie können diese Informationen verwenden, um Benutzeridentitäten zu korrelieren. Überprüfen Sie beispielsweise, ob ein Benutzer, der sich über AAD-Anmeldeinformationen bei einer Registerkarte angemeldet hat, ein Teammitglied ist.
+Ihr Bot kann die Liste der Teammitglieder und deren Basisprofile abfragen. Die grundlegenden Profile umfassen Teams Benutzer-IDs und Azure Active Directory (AAD) wie Name und Objekt-ID. Sie können diese Informationen verwenden, um Benutzeridentitäten zu korrelieren. Überprüfen Sie beispielsweise, ob ein Benutzer, der sich über AAD-Anmeldeinformationen bei einer Registerkarte angemeldet hat, ein Teammitglied ist.
 
 ### <a name="rest-api-example"></a>REST-API-Beispiel
 
@@ -167,7 +167,7 @@ Response body
 
 #### <a name="net-example"></a>.NET-Beispiel
 
-Im folgenden Beispiel wird der `FetchChannelList` Aufruf der [Teams-Erweiterungen für das Bot Builder SDK für .NET verwendet:](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)
+Im folgenden Beispiel wird der Aufruf aus den Teams für das `FetchChannelList` Bot Builder SDK für [.NET verwendet:](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)
 
 ```csharp
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
@@ -175,7 +175,7 @@ ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelL
 
 #### <a name="nodejs-example"></a>Node.js Beispiel
 
-Im folgenden Beispiel wird `fetchChannelList` der Aufruf der [Teams-Erweiterungen für das Bot Builder SDK für Node.js: ](https://www.npmjs.com/package/botbuilder-teams)
+Im folgenden Beispiel wird der Aufruf der Teams für das `fetchChannelList` Bot Builder SDK für [Node.js: ](https://www.npmjs.com/package/botbuilder-teams)
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;

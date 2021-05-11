@@ -1,5 +1,5 @@
 ---
-title: Erstellen des virtuellen Assistenten
+title: Erstellen eines virtuellen Assistenten
 description: Erstellen von virtuellen Assistenten-Bots und -Fähigkeiten für die Verwendung in Microsoft Teams
 localization_priority: Normal
 ms.topic: how-to
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/27/2021
 ms.locfileid: "52058677"
 ---
-# <a name="create-virtual-assistant"></a>Erstellen des virtuellen Assistenten 
+# <a name="create-virtual-assistant"></a>Erstellen eines virtuellen Assistenten 
 
-Der virtuelle Assistent ist eine Open-Source-Vorlage von Microsoft, mit der Sie eine stabile Unterhaltungslösung erstellen und gleichzeitig die vollständige Kontrolle über die Benutzeroberfläche, das Unternehmensbranding und die erforderlichen Daten beibehalten können. Die [Kernvorlage](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) des virtuellen Assistenten ist der grundlegende Baustein, der die zum Erstellen eines virtuellen Assistenten erforderlichen Microsoft-Technologien zusammen bringt, einschließlich [bot Framework SDK,](https://github.com/microsoft/botframework-sdk)Language Understanding [(LUS)](https://www.luis.ai/)und [QnA Maker.](https://www.qnamaker.ai/) Außerdem werden die wesentlichen Funktionen wie die Registrierung von Fähigkeiten, verknüpfte Konten und grundlegende Unterhaltungsabsichten zusammengekoppelt, um Benutzern eine Reihe nahtloser Interaktionen und Erfahrungen zu bieten. Darüber hinaus enthalten die Vorlagenfunktionen umfassende Beispiele für wiederverwendbare [Unterhaltungskenntnisse.](https://microsoft.github.io/botframework-solutions/overview/skills)  Individuelle Fähigkeiten werden in eine Virtual Assistant-Lösung integriert, um mehrere Szenarien zu ermöglichen. Mithilfe des Bot Framework SDK werden Die Fähigkeiten im Quellcode dargestellt, sodass Sie die Funktionen nach Bedarf anpassen und erweitern können. Weitere Informationen zu den Fähigkeiten von Bot Framework finden Sie unter [What is a Bot Framework skill](https://microsoft.github.io/botframework-solutions/overview/skills/). Dieses Dokument führt Sie zu Überlegungen zur Implementierung des virtuellen Assistenten für Organisationen, zum Erstellen eines teamsorientierten virtuellen Assistenten, zugehörigen Beispielen, Codebeispielen und Einschränkungen des virtuellen Assistenten.
+Der virtuelle Assistent ist eine Open-Source-Vorlage von Microsoft, mit der Sie eine stabile Unterhaltungslösung erstellen und gleichzeitig die vollständige Kontrolle über die Benutzeroberfläche, das Unternehmensbranding und die erforderlichen Daten beibehalten können. Die [Kernvorlage](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) des virtuellen Assistenten ist der grundlegende Baustein, der die zum Erstellen eines virtuellen Assistenten erforderlichen Microsoft-Technologien zusammen bringt, einschließlich [bot Framework SDK,](https://github.com/microsoft/botframework-sdk)Language Understanding [(LUS)](https://www.luis.ai/)und [QnA Maker.](https://www.qnamaker.ai/) Außerdem werden die wesentlichen Funktionen wie die Registrierung von Fähigkeiten, verknüpfte Konten und grundlegende Unterhaltungsabsichten zusammengekoppelt, um Benutzern eine Reihe nahtloser Interaktionen und Erfahrungen zu bieten. Darüber hinaus enthalten die Vorlagenfunktionen umfassende Beispiele für wiederverwendbare [Unterhaltungskenntnisse.](https://microsoft.github.io/botframework-solutions/overview/skills)  Individuelle Fähigkeiten werden in eine Virtual Assistant-Lösung integriert, um mehrere Szenarien zu ermöglichen. Mithilfe des Bot Framework SDK werden Die Fähigkeiten im Quellcode dargestellt, sodass Sie die Funktionen nach Bedarf anpassen und erweitern können. Weitere Informationen zu den Fähigkeiten von Bot Framework finden Sie unter [What is a Bot Framework skill](https://microsoft.github.io/botframework-solutions/overview/skills/). Dieses Dokument führt Sie zu Überlegungen zur Implementierung des virtuellen Assistenten für Organisationen, wie Sie einen Teams-fokussierten virtuellen Assistenten erstellen, ein entsprechendes Beispiel, Codebeispiele und Einschränkungen des virtuellen Assistenten.
 Die folgende Abbildung zeigt die Übersicht über den virtuellen Assistenten:
 
 ![Übersichtsdiagramm des virtuellen Assistenten](../assets/images/bots/virtual-assistant/overview.png)
@@ -32,9 +32,9 @@ In der folgenden Abbildung werden die Geschäftsfunktionen des virtuellen Assist
 
 ![Zentrales Team pflegt den Assistenten, und Geschäftsfunktionsteams tragen Fähigkeiten bei](../assets/images/bots/virtual-assistant/business-functions.png)
 
-## <a name="create-a-teams-focused-virtual-assistant"></a>Erstellen eines teamsorientierten virtuellen Assistenten
+## <a name="create-a-teams-focused-virtual-assistant"></a>Erstellen eines Teams virtuellen Assistenten
 
-Microsoft hat eine Visual Studio [zum](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) Erstellen virtueller Assistenten und Fähigkeiten veröffentlicht. Mit der Visual Studio können Sie einen virtuellen Assistenten erstellen, der von einer textbasierten Erfahrung mit Unterstützung für eingeschränkte Rich Cards mit Aktionen unterstützt wird. Wir haben die Basisvorlage Visual Studio erweitert, um Microsoft Teams-Plattformfunktionen und großartige Teams-App-Erfahrungen zu bieten. Einige der Funktionen umfassen unterstützung für umfangreiche adaptive Karten, Aufgabenmodule, Teams oder Gruppenchats und Messagingerweiterungen. Weitere Informationen zum Erweitern des virtuellen Assistenten auf Microsoft Teams finden Sie unter [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).    
+Microsoft hat eine Visual Studio [zum](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) Erstellen virtueller Assistenten und Fähigkeiten veröffentlicht. Mit der Visual Studio können Sie einen virtuellen Assistenten erstellen, der von einer textbasierten Erfahrung mit Unterstützung für eingeschränkte Rich Cards mit Aktionen unterstützt wird. Wir haben die Basisvorlage Visual Studio erweitert, um Microsoft Teams Plattformfunktionen und die Teams zu erweitern. Einige der Funktionen umfassen unterstützung für umfangreiche adaptive Karten, Aufgabenmodule, Teams oder Gruppenchats und Messagingerweiterungen. Weitere Informationen zum Erweitern des virtuellen Assistenten auf Microsoft Teams finden Sie unter [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).    
 Die folgende Abbildung zeigt das Diagramm auf hoher Ebene einer Virtuellen Assistentenlösung:
 
 ![Diagramm einer virtuellen Assistentenlösung auf hoher Ebene](../assets/images/bots/virtual-assistant/high-level-diagram.png)
@@ -223,7 +223,7 @@ Darüber hinaus müssen Sie alle Kompetenzdomänen in den Abschnitt in die Manif
 
 ### <a name="handle-collaborative-app-scopes"></a>Behandeln kollaborativer App-Bereiche
 
-Teams-Apps können in mehreren Bereiche vorhanden sein, einschließlich 1:1-Chat, Gruppenchat und Kanälen. Die zentrale Vorlage für den virtuellen Assistenten ist für 1:1-Chats konzipiert. Im Rahmen der Onboardingerfahrung fordert der virtuelle Assistent Benutzer zum Namen auf und behält den Benutzerstatus bei. Da diese Onboardingerfahrung nicht für Gruppenchat- oder Kanalbereiche geeignet ist, wurde sie entfernt.
+Teams apps can exist in multiple scopes including 1:1 chat, group chat, and channels. Die zentrale Vorlage für den virtuellen Assistenten ist für 1:1-Chats konzipiert. Im Rahmen der Onboardingerfahrung fordert der virtuelle Assistent Benutzer zum Namen auf und behält den Benutzerstatus bei. Da diese Onboardingerfahrung nicht für Gruppenchat- oder Kanalbereiche geeignet ist, wurde sie entfernt.
 
 Fähigkeiten sollten Aktivitäten in mehreren Bereich behandeln, z. B. 1:1-Chat, Gruppenchat und Kanalunterhaltung. Wenn einer dieser Bereiche nicht unterstützt wird, müssen Die Qualifikationen mit einer entsprechenden Nachricht antworten.
 
@@ -333,7 +333,7 @@ Einige Messagingerweiterungsaktivitäten enthalten nicht die Befehls-ID. Enthäl
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie die App-Vorlage "Buch-a-Raum" in eine Virtuelle Assistent-Fähigkeit konvertieren: "Book-a-room" ist ein Microsoft Teams,mit dem Benutzer einen Besprechungsraum für 30, 60 oder 90 Minuten ab der aktuellen Zeit schnell finden und reservieren können. Die Standardzeit beträgt 30 Minuten. Der Book-a-room-Bot bietet Bereiche für persönliche o**r 1:1-Unterhaltungen. In der folgenden Abbildung wird ein virtueller Assistent mit einem **Buch mit Raumfertigkeit** angezeigt:
+Im folgenden Beispiel wird gezeigt, wie Sie die App-Vorlage "Book-a-room" in eine Virtuelle Assistent-Fähigkeit konvertieren: "Book-a-room" ist ein Microsoft Teams, mit dem Benutzer einen Besprechungsraum für 30, 60 oder 90 Minuten ab der aktuellen Zeit schnell finden und reservieren können. Die Standardzeit beträgt 30 Minuten. Der Book-a-room-Bot bietet Bereiche für persönliche o**r 1:1-Unterhaltungen. In der folgenden Abbildung wird ein virtueller Assistent mit einem **Buch mit Raumfertigkeit** angezeigt:
 
 ![Virtueller Assistent mit einer "Raum reservieren"-Fähigkeit](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
 
@@ -341,7 +341,7 @@ Nachfolgend finden Sie die delta-Änderungen, die eingeführt wurden, um sie in 
 
 ### <a name="skill-manifest"></a>Kompetenzmanifest
 
-Ein Kompetenzmanifest ist eine JSON-Datei, die den Messagingendpunkt, die ID, den Namen und andere relevante Metadaten einer Fähigkeit verfügbar macht. Dieses Manifest ist anders als das Manifest, das zum Querladen einer App in Microsoft Teams verwendet wird. Ein virtueller Assistent erfordert einen Pfad zu dieser Datei als Eingabe, um eine Fähigkeit anfügen zu können. Wir haben das folgende Manifest zum Wwwroot-Ordner des Bots hinzugefügt.
+Ein Kompetenzmanifest ist eine JSON-Datei, die den Messagingendpunkt, die ID, den Namen und andere relevante Metadaten einer Fähigkeit verfügbar macht. Dieses Manifest ist anders als das Manifest, das zum Querladen einer App in einem Microsoft Teams. Ein virtueller Assistent erfordert einen Pfad zu dieser Datei als Eingabe, um eine Fähigkeit anfügen zu können. Wir haben das folgende Manifest zum Wwwroot-Ordner des Bots hinzugefügt.
 
 ```bash
 botskills connect --remoteManifest "<url to skill's manifest>" ..
@@ -581,4 +581,4 @@ Sie können auch vorhandene Fähigkeiten aus dem [Bot Framework Solutions-Reposi
 
 - [Book-a-room](app-templates.md#book-a-room)
 
-- [Microsoft Teams-Bot](../bots/what-are-bots.md)
+- [Microsoft Teams Bot](../bots/what-are-bots.md)

@@ -1,11 +1,11 @@
 ---
-title: Testen ressourcenspezifischer Zustimmungsberechtigungen in Teams
-description: Details zum Testen der ressourcenspezifischen Zustimmung in Teams mithilfe von Postman
+title: Testen von ressourcenspezifischen Zustimmungsberechtigungen in Teams
+description: Details zum Testen der ressourcenspezifischen Zustimmung in Teams Postman
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
-keywords: Teams-Autorisierung OAuth SSO AAD rsc Postman Graph
+keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 ms.openlocfilehash: 328be5b4f1e3597457afb9ce1413eb35aa2df71e
 ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
@@ -13,15 +13,15 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2021
 ms.locfileid: "52075619"
 ---
-# <a name="test-resource-specific-consent-permissions-in-teams"></a>Testen ressourcenspezifischer Zustimmungsberechtigungen in Teams
+# <a name="test-resource-specific-consent-permissions-in-teams"></a>Testen von ressourcenspezifischen Zustimmungsberechtigungen in Teams
 
-Resource-specific consent (RSC) ist eine Microsoft Teams- und Graph-API-Integration, mit der Ihre App API-Endpunkte verwenden kann, um bestimmte Teams innerhalb einer Organisation zu verwalten. Weitere Informationen finden Sie unter [Resource-specific consent (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
+Die ressourcenspezifische Zustimmung (Resource-Specific Consent, RSC) ist eine Microsoft Teams- und Graph-API-Integration, mit der Ihre App API-Endpunkte verwenden kann, um bestimmte Teams innerhalb einer Organisation zu verwalten. Weitere Informationen finden Sie unter [Resource-specific consent (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
 
 > [!NOTE]
-> Zum Testen der RSC-Berechtigungen muss Ihre Teams-App-Manifestdatei einen **webApplicationInfo-Schlüssel** enthalten, der mit den folgenden Feldern gefüllt ist:
+> Zum Testen der RSC-Berechtigungen muss Teams App-Manifestdatei einen **webApplicationInfo-Schlüssel** enthalten, der mit den folgenden Feldern gefüllt ist:
 >
 > - **id**: Ihre Azure AD-App-ID finden Sie [unter Registrieren Ihrer App im Azure AD-Portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
-> - **resource**: Any string, see the note in  [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest).
+> - **resource**: Any string, see the note in [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest).
 > - **Anwendungsberechtigungen**: RSC-Berechtigungen für Ihre App finden Sie unter [Ressourcenspezifische Berechtigungen](resource-specific-consent.md#resource-specific-permissions).
 
 ```json
@@ -57,9 +57,9 @@ Um zu überprüfen, ob die RSC-Berechtigungen von der API-Anforderungsnutzlast b
 * `azureADAppId`: Die Azure AD-App-ID Ihrer App.
 * `azureADAppSecret`: Ihr Azure AD-App-Kennwort.
 * `token_scope`: Der Bereich ist erforderlich, um ein Token abzurufen. legen Sie den Wert auf https://graph.microsoft.com/.default .
-* `teamGroupId`: Sie können die Teamgruppen-ID wie folgt vom Teams-Client erhalten:
+* `teamGroupId`: Sie können die Teamgruppen-ID wie folgt Teams client:
 
-    1. Wählen Sie im Teams-Client **in der Navigationsleiste** ganz links Teams aus.
+    1. Wählen Sie Teams-Client **Teams** der Navigationsleiste ganz links aus.
     2. Wählen Sie im Dropdownmenü das Team aus, in dem die App installiert ist.
     3. Wählen Sie **das Symbol Weitere Optionen** (&#8943;).
     4. Wählen **Sie Link zum Team erhalten aus.** 
@@ -85,5 +85,5 @@ Führen Sie die gesamte Berechtigungssammlung für jeden API-Aufruf aus. Die Ber
 
 ## <a name="see-also"></a>Siehe auch
 
-[Microsoft Graph-API und Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
+[Microsoft Graph API und Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
 

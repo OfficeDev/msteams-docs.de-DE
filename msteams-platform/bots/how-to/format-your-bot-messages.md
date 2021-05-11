@@ -36,7 +36,7 @@ Derzeit gelten die folgenden Einschränkungen für die Formatierung:
 * Rich Cards unterstützen nur die Formatierung in der Texteigenschaft, nicht in den Eigenschaften titeln oder untertiteln.
 * Rich Cards unterstützen keine Markdown- oder Tabellenformatierung.
 
-Nachdem Sie Textinhalte formatiert haben, stellen Sie sicher, dass Ihre Formatierung auf allen von Microsoft Teams unterstützten Plattformen funktioniert.
+Stellen Sie nach dem Formatieren von Textinhalten sicher, dass Ihre Formatierung auf allen Plattformen funktioniert, die von Microsoft Teams.
 
 ## <a name="cross-platform-support"></a>Plattformübergreifende Unterstützung
 

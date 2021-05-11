@@ -16,7 +16,7 @@ ms.locfileid: "52075752"
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Um den Microsoft Teams-Bot in einem Team- oder Gruppenchat zu installieren, fügen Sie dem Bot den `teams` `groupchat` Oder-Bereich hinzu. Dadurch können alle Mitglieder der Unterhaltung mit Ihrem Bot interagieren. Nachdem der Bot installiert wurde, hat er Zugriff auf Metadaten zur Unterhaltung, z. B. auf die Liste der Unterhaltungsmitglieder. Wenn er in einem Team installiert ist, hat der Bot außerdem Zugriff auf Details zu diesem Team und die vollständige Liste der Kanäle.
+Um den Microsoft Teams in einem Team- oder Gruppenchat zu installieren, fügen Sie dem Bot den Bereich oder `teams` `groupchat` den Bereich hinzu. Dadurch können alle Mitglieder der Unterhaltung mit Ihrem Bot interagieren. Nachdem der Bot installiert wurde, hat er Zugriff auf Metadaten zur Unterhaltung, z. B. auf die Liste der Unterhaltungsmitglieder. Wenn er in einem Team installiert ist, hat der Bot außerdem Zugriff auf Details zu diesem Team und die vollständige Liste der Kanäle.
 
 Bots in einer Gruppe oder einem Kanal empfangen nur Nachrichten, wenn sie erwähnt `@botname` werden. Sie erhalten keine weiteren Nachrichten, die an die Unterhaltung gesendet werden.
 

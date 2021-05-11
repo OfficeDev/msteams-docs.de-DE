@@ -15,25 +15,25 @@ ms.locfileid: "52058362"
 ---
 # <a name="integrate-media-capabilities"></a>Integrieren von Medienfunktionen 
 
-In diesem Dokument erfahren Sie, wie Sie Medienfunktionen integrieren. Diese Integration kombiniert die systemeigenen Gerätefunktionen, z. B. Kamera **und** **Mikrofon,** mit der Teams-Plattform.  
+In diesem Dokument erfahren Sie, wie Sie Medienfunktionen integrieren. Bei dieser Integration werden die systemeigenen  Gerätefunktionen wie Kamera und Mikrofon mit der Teams kombiniert.   
 
-Sie können [das Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)verwenden, das die tools zur Verfügung stellt, die für Ihre App für den Zugriff auf die [Geräteberechtigungen](native-device-permissions.md)eines Benutzers erforderlich sind. Verwenden Sie geeignete APIs für Medienfunktionen, um  die  systemeigenen Gerätefunktionen wie Kamera und Mikrofon in die Microsoft Teams-Plattform in Ihrer mobilen Microsoft Teams-App zu integrieren und eine reichhaltigere Erfahrung zu erstellen. 
+Sie können das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)verwenden, das die tools zur Verfügung stellt, die für Ihre App für den Zugriff auf die [Geräteberechtigungen](native-device-permissions.md)eines Benutzers erforderlich sind. Verwenden Sie geeignete Medienfunktions-APIs, um  die  systemeigenen Gerätefunktionen wie Kamera und Mikrofon in die Teams-Plattform in Ihrer Microsoft Teams mobilen App zu integrieren und eine reichhaltigere Erfahrung zu erstellen. 
 
 ## <a name="advantage-of-integrating-media-capabilities"></a>Vorteile der Integration von Medienfunktionen
 
-Der Hauptvorteil der Integration von Gerätefunktionen in Ihre Teams-Apps besteht in der Nutzung systemeigener Teams-Steuerelemente, um Ihren Benutzern eine umfassende und immersive Benutzererfahrung zu bieten.
+Der Hauptvorteil der Integration von Gerätefunktionen in Ihre Teams-Apps ist, dass sie systemeigene Teams verwendet, um Ihren Benutzern eine umfassende und immersive Benutzererfahrung zu bieten.
 Zum Integrieren von Medienfunktionen müssen Sie die App-Manifestdatei aktualisieren und die APIs für Medienfunktionen aufrufen. 
 
 Für eine effektive Integration benötigen Sie [](#code-snippets) ein gutes Verständnis von Codeausschnitten zum Aufrufen der entsprechenden APIs, mit denen Sie systemeigene Medienfunktionen verwenden können.
 
-Es ist wichtig, sich mit den API-Antwortfehlern vertraut zu [machen,](#error-handling) um die Fehler in Ihrer Teams-App zu behandeln.
+Es ist wichtig, sich [](#error-handling) mit den API-Antwortfehlern vertraut zu machen, um die Fehler in Ihrer app Teams behandeln.
 
 > [!NOTE] 
-> Derzeit ist Die Unterstützung für Medienfunktionen von Microsoft Teams nur für mobile Clients verfügbar.
+> Derzeit ist Microsoft Teams Medienfunktionen nur für mobile Clients verfügbar.
 
 ## <a name="update-manifest"></a>Updatemanifest
 
-Aktualisieren Sie Ihre [ Teamsmanifest.js-App-Datei,](../../resources/schema/manifest-schema.md#devicepermissions) indem Sie die `devicePermissions` -Eigenschaft hinzufügen und `media` angeben. Sie ermöglicht es Ihrer App, die erforderlichen Berechtigungen  von Benutzern zu fordern, bevor sie mit der Kamera beginnen,  das Bild zu erfassen, den Katalog öffnen, um ein Bild auszuwählen, das als Anlage gesendet werden soll, oder das Mikrofon zum Aufzeichnen der Unterhaltung verwenden.
+Aktualisieren Sie Teams [Appmanifest.jsdatei,](../../resources/schema/manifest-schema.md#devicepermissions) indem Sie die `devicePermissions` Eigenschaft hinzufügen und `media` angeben. Sie ermöglicht es Ihrer App, die erforderlichen Berechtigungen  von Benutzern zu fordern, bevor sie mit der Kamera beginnen,  das Bild zu erfassen, den Katalog öffnen, um ein Bild auszuwählen, das als Anlage gesendet werden soll, oder das Mikrofon zum Aufzeichnen der Unterhaltung verwenden.
 
 ``` json
 "devicePermissions": [
@@ -42,7 +42,7 @@ Aktualisieren Sie Ihre [ Teamsmanifest.js-App-Datei,](../../resources/schema/man
 ```
 
 > [!NOTE]
-> Die **Anforderungsberechtigungsaufforderung** wird automatisch angezeigt, wenn eine relevante Teams-API initiiert wird. Weitere Informationen finden Sie unter [Anfordern von Geräteberechtigungen](native-device-permissions.md).
+> Die **Anforderungsberechtigungsaufforderung** wird automatisch angezeigt, wenn eine Teams-API initiiert wird. Weitere Informationen finden Sie unter [Anfordern von Geräteberechtigungen](native-device-permissions.md).
 
 ## <a name="media-capability-apis"></a>APIs für Medienfunktionen
 
@@ -57,7 +57,7 @@ Mit [den selectMedia-,](/javascript/api/@microsoft/teams-js/media?view=msteams-c
   * Scannen Sie Dokument-, Whiteboard- und Visitenkarten über die Kamera.
   
 > [!IMPORTANT]
-> * Die APIs , und können von mehreren Teams-Oberflächen aufgerufen werden, z. B. Aufgabenmodulen, `selectMedia` `getMedia` `viewImages` Registerkarten und persönlichen Apps. Weitere Informationen finden Sie unter [Einstiegspunkte für Teams-Apps](../extensibility-points.md).
+> * Die APIs , und können von mehreren Teams aufgerufen werden, z. B. Aufgabenmodule, Registerkarten `selectMedia` `getMedia` und persönliche `viewImages` Apps. Weitere Informationen finden Sie unter [Einstiegspunkte für Teams Apps](../extensibility-points.md).
 > * `selectMedia` Die API wurde erweitert, um Mikrofon- und Audioeigenschaften zu unterstützen.
 
 Sie müssen die folgenden APIs verwenden, um die Medienfunktionen Ihres Geräts zu aktivieren:
@@ -78,7 +78,7 @@ Sie müssen die folgenden APIs verwenden, um die Medienfunktionen Ihres Geräts 
 
 ## <a name="error-handling"></a>Fehlerbehandlung
 
-Sie müssen sicherstellen, dass diese Fehler in Ihrer Teams-App angemessen umgangen werden. In der folgenden Tabelle sind die Fehlercodes und die Bedingungen aufgeführt, unter denen die Fehler generiert werden: 
+Sie müssen sicherstellen, dass diese Fehler in Ihrer App Teams werden. In der folgenden Tabelle sind die Fehlercodes und die Bedingungen aufgeführt, unter denen die Fehler generiert werden: 
 
 
 |Fehlercode |  Fehlername     | Bedingung|

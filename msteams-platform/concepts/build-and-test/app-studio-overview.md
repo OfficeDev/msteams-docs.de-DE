@@ -4,12 +4,12 @@ description: Erste Schritte zum Erstellen von großartigen Apps in Microsoft Tea
 keywords: Erste Schritte mit App Studio-Teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: aa55abb6a4acd4220c2988d1a42c2a2bddc89042
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0e6a00921b3f24381758b13bd6042da18a3ac2c1
+ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019965"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52304033"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Entwickeln Sie schnell Apps mit App Studio für Microsoft Teams
 
@@ -56,9 +56,7 @@ Der Detailabschnitt des Manifest-Editors definiert die allgemeine Beschreibung d
 Im Abschnitt "Funktionen" des Manifest-Editors werden die Funktionen der App definiert und Details zu den einzelnen Funktionen aufgelistet.
 
 > [!NOTE]
-> Die App-Anpassungsfunktion ist derzeit nur in der Entwicklervorschau verfügbar.
-> 
-> Als bewährte Methode müssen Sie Anpassungsrichtlinien für App-Benutzer und -Kunden bereitstellen, die sie beim Anpassen Ihrer App befolgen müssen. Weitere Informationen finden Sie unter [Anpassen von Apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+> Als bewährte Methode müssen Sie Anpassungsrichtlinien für App-Benutzer und -Kunden bereitstellen, die sie beim Anpassen Ihrer App befolgen müssen. Weitere Informationen finden Sie unter [Anpassen von Apps in Microsoft Teams.](/MicrosoftTeams/customize-apps)
 
 
 ##### <a name="tabs"></a>Registerkarten
@@ -86,7 +84,7 @@ Beachten Sie, dass Befehle, die für den nicht unterstützten Bereich angegeben 
 In diesem Abschnitt können Sie Ihrer App einen Connector hinzufügen. Wenn Sie bereits einen Office 365-Connector registriert haben, wählen Sie *Einrichten* und geben Sie den Namen und die ID des Konnektors ein. Wenn Sie einen neuen Konnektor möchten, klicken Sie auf *Registrieren*, um zum Connector Developer Dashboard in Ihrem Browser zu gelangen.
 
 > [!NOTE]
-> Mithilfe der App-Anpassung können Administratoren das Aussehen und Die-Gefühl der Apps ändern, die über Bots, Messagingerweiterungen, Registerkarten und Connectors geladen werden. Wenn der Teams-Administrator beispielsweise den Namen einer App von *Contoso* in *Contoso Agent* anpasst, wird die App benutzern mit dem neuen Namen *Contoso Agent* angezeigt. Beim Hinzufügen eines Connectors zu einem Chat wird in der Liste der Connectors jedoch weiterhin der Name der App als *Contoso angezeigt.*
+> Mithilfe der App-Anpassung können Administratoren das Aussehen und Die-Gefühl der Apps ändern, die über Bots, Messagingerweiterungen, Registerkarten und Connectors geladen werden. Wenn der Administrator Teams den Namen einer App von *Contoso* in *Contoso Agent* anpasst, wird die App benutzern mit dem neuen Namen *Contoso Agent* angezeigt. Beim Hinzufügen eines Connectors zu einem Chat wird in der Liste der Connectors jedoch weiterhin der Name der App als *Contoso angezeigt.*
 
 
 ##### <a name="messaging-extensions"></a>Messaging-Erweiterungen

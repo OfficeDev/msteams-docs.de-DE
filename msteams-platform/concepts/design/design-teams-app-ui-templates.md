@@ -1,7 +1,7 @@
 ---
 title: Entwerfen Ihrer App mit Benutzeroberflächenvorlagen
 author: heath-hamilton
-description: Entwerfen Sie Ihre App schneller mit standardisierten Benutzeroberflächenkomponenten, Layouts und Mustern, die häufig in Microsoft Teams angezeigt werden.
+description: Entwerfen Sie Ihre App schneller mit standardisierten Benutzeroberflächenkomponenten, Layouts und Mustern, die häufig in verschiedenen Microsoft Teams.
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
@@ -14,7 +14,7 @@ ms.locfileid: "52020765"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Entwerfen Ihrer Microsoft Teams-App mit Benutzeroberflächenvorlagen
 
-Entwerfen Sie Ihre Microsoft Teams-App schneller mit Benutzeroberflächenvorlagen. Die Vorlagen sind eine Sammlung von Benutzeroberflächenbasierten Fluent-Komponenten, die in gängigen Teams-Verwendungsfällen funktionieren und Ihnen mehr Zeit geben, die beste Benutzererfahrung zu finden.
+Entwerfen Sie Microsoft Teams App schneller mit Benutzeroberflächenvorlagen. Bei den Vorlagen handelt es sich um eine Sammlung von Benutzeroberflächenbasierten Fluent-Komponenten, die Teams gängigen Verwendungsfällen funktionieren und Ihnen mehr Zeit zum Herausfinden der besten Benutzererfahrung bieten.
 
 ## <a name="getting-started-with-tools-and-samples"></a>Erste Schritte mit Tools und Beispielen
 
@@ -27,24 +27,24 @@ Greifen Sie ui templates for your app design from the Microsoft Teams UI Kit, wh
 > [!div class="nextstepaction"]
 > [Benutzeroberflächenkit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Benutzeroberflächenbibliothek von Microsoft Teams
+### <a name="microsoft-teams-ui-library"></a>Microsoft Teams Benutzeroberflächenbibliothek
 
-Anzeigen und Testen einzelner Teams-UI-Vorlagen und zugehöriger Komponenten in Ihrem Browser.
+Anzeigen und Testen einzelner Teams benutzeroberflächenvorlagen und zugehörigen Komponenten in Ihrem Browser.
 
 > [!div class="nextstepaction"]
 > [Probieren Sie die Benutzeroberflächenbibliothek (Playground) aus.](https://dev-int.teams.microsoft.com/storybook/main/index.html)
 
-Importieren Sie diese Vorlagen und zugehörigen Komponenten direkt in Ihr Teams-App-Projekt.
+Importieren Sie diese Vorlagen und zugehörigen Komponenten direkt in Teams App-Projekt.
 
 > [!div class="nextstepaction"]
-> [Abrufen der Benutzeroberflächenbibliothek (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
+> [Benutzeroberflächenbibliothek (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
 
 ### <a name="sample-app"></a>Beispiel-App
 
-Installieren Sie eine Beispiel-App, um zu sehen, wie Benutzeroberflächenvorlagen in Teams-Kontexten aussehen und sich verhalten.
+Installieren Sie eine Beispiel-App, um zu sehen, wie Benutzeroberflächenvorlagen in Teams aussehen und verhalten.
 
 > [!div class="nextstepaction"]
-> [Abrufen der Beispiel-App (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
+> [Die Beispiel-App (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
 ## <a name="list"></a>Liste
 
@@ -59,7 +59,7 @@ Sie können eine Liste verwenden, um verwandte Elemente in einem scannierbaren F
 
 ## <a name="dashboard"></a>Dashboard
 
-Ein Dashboard zeigt verschiedene Inhaltstypen an einem zentralen Speicherort an (persönliche Teams-App oder Registerkarte). Benutzer sollten in der Lage sein, zumindest einige der auf einem Dashboard angezeigten Informationen anzupassen.
+Ein Dashboard zeigt unterschiedliche Inhaltstypen an einem zentralen Speicherort an (Teams persönliche App oder Registerkarte). Benutzer sollten in der Lage sein, zumindest einige der auf einem Dashboard angezeigten Informationen anzupassen.
 
 :::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Beispiel zeigt eine Dashboardbenutzeroberflächenvorlage." border="false":::
 
@@ -84,7 +84,7 @@ Formulare werden verwendet, um Benutzereingaben strukturiert zu erfassen, zu üb
 
 ## <a name="sign-in"></a>Anmelden
 
-Sie können App-Anmeldeflüsse für verschiedene Teams-Kontexte und Identitätsanbieter entwerfen. Das folgende Beispiel enthält einmaliges Anmelden (Single Sign-On, SSO), das für die einfachste Authentifizierung empfohlen wird.
+Sie können App-Anmeldeflüsse für unterschiedliche Teams und Identitätsanbieter entwerfen. Das folgende Beispiel enthält einmaliges Anmelden (Single Sign-On, SSO), das für die einfachste Authentifizierung empfohlen wird.
 
 :::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Beispiel zeigt eine Benutzeroberflächenvorlage für die Anmeldung." border="false":::
 
@@ -154,13 +154,13 @@ Eine Benachrichtigungsleiste ist ein dedizierter Bereich zum Anzeigen einer kurz
 
 ## <a name="left-nav"></a>Linkes Navigationsgerät
 
-Verwenden Sie das linke Navigations navi, um mehrere Seiten auf Ihrer Registerkarte Teams zu durchsuchen. Im folgenden Beispiel befindet sich das linke Navigationsgerät zwischen der Kanalliste und dem Registerkarteninhalt.
+Verwenden Sie das linke Navigations navi, um mehrere Seiten innerhalb ihrer Registerkarte Teams durchsuchen. Im folgenden Beispiel befindet sich das linke Navigationsgerät zwischen der Kanalliste und dem Registerkarteninhalt.
 
 :::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Beispiel zeigt eine linke Navigationsvorlage." border="false":::
 
 ### <a name="top-use-cases"></a>Die am besten verwendeten Fälle
 
-* Durchsuchen mehrerer Seiten auf einer Registerkarte "Teams"
+* Durchsuchen mehrerer Seiten innerhalb einer Teams Registerkarte
 * Aufbrechen komplexer Apps in mehrere Seiten
 
 ## <a name="breadcrumb"></a>Breadcrumb

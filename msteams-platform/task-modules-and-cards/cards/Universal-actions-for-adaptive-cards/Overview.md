@@ -10,7 +10,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/29/2021
 ms.locfileid: "52088915"
 ---
-# <a name="universal-actions-for-adaptive-cards"></a>Universelle Aktionen für adaptive Karten
+# <a name="universal-actions-for-adaptive-cards"></a>Universal-Aktionen für adaptive Karten
 
 Universelle Aktionen für adaptive Karten entwickelten sich aus entwicklerfeedback, dass das Layout und Rendering für adaptive Karten zwar universell war, die Aktionsbehandlung jedoch nicht war. Auch wenn ein Entwickler dieselbe Karte an verschiedene Orte senden wollte, muss er die Aktionen anders behandeln.
 
@@ -105,4 +105,4 @@ Adaptive Karten sind eine Kombination aus Inhalten, z. B. Text und Grafiken, und
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Arbeiten mit universellen Aktionen für adaptive Karten](Work-with-universal-actions-for-adaptive-cards.md)
+> [Mit Universal-Aktionen für adaptive Karten arbeiten](Work-with-universal-actions-for-adaptive-cards.md)

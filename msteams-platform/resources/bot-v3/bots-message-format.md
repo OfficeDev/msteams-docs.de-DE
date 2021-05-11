@@ -38,7 +38,7 @@ Derzeit gelten die folgenden Einschränkungen:
 
 ## <a name="cross-platform-support"></a>Plattformübergreifende Unterstützung
 
-Um sicherzustellen, dass Ihre Formatierung auf allen von Microsoft Teams unterstützten Plattformen funktioniert, beachten Sie, dass einige Formatvorlagen derzeit nicht auf allen Plattformen unterstützt werden.
+Beachten Sie, dass einige Formatvorlagen derzeit nicht auf allen Plattformen unterstützt werden, um sicherzustellen, dass Ihre Formatierung auf allen plattformen funktioniert, die von Microsoft Teams unterstützt werden.
 
 | Format                     | Nur-Text-Nachrichten | Rich Cards (nur XML) |
 | ---                       | :---: | :---: |

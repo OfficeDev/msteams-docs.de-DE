@@ -261,5 +261,5 @@ Der folgende Code enthält ein Beispiel für adaptive Karten, die als Antwort au
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Arbeiten mit universellen Aktionen für adaptive Karten](Work-with-universal-actions-for-adaptive-cards.md)
+* [Mit Universal-Aktionen für adaptive Karten arbeiten](Work-with-universal-actions-for-adaptive-cards.md)
 * [Benutzerspezifische Ansichten](User-Specific-Views.md)

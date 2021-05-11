@@ -14,14 +14,14 @@ ms.locfileid: "52058320"
 ---
 # <a name="entry-points-for-teams-apps"></a>Einstiegspunkte für Microsoft Teams-Apps
 
-Die Teams-Plattform bietet eine flexible Reihe von Einstiegspunkten, z. B. Team, Kanal und Chat, in denen Benutzer Ihre App entdecken und verwenden können. Ihre App kann etwas so Einfachem dienen wie dem Einbetten von vorhandenem Webinhalt in eine Registerkarte, oder eine komplexe Lösung sein, mit der Benutzer in verschiedenen Kontexten interagieren.
-Die erfolgreichsten Apps sind in Teams nativ, wählen Sie daher die Einstiegspunkte Ihrer App sorgfältig aus.
+Die Teams bietet eine flexible Reihe von Einstiegspunkten, z. B. Team, Kanal und Chat, in denen Benutzer Ihre App entdecken und verwenden können. Ihre App kann etwas so Einfachem dienen wie dem Einbetten von vorhandenem Webinhalt in eine Registerkarte, oder eine komplexe Lösung sein, mit der Benutzer in verschiedenen Kontexten interagieren.
+Die erfolgreichsten Apps sind nativ für Teams, wählen Sie daher die Einstiegspunkte Ihrer App sorgfältig aus.
 
 ## <a name="shared-app-experiences"></a>Freigegebene App-Erfahrungen
 
 Team, Kanal und Chat sind Räume für die Zusammenarbeit. Apps in diesen Kontexten stehen allen in diesem Bereich zur Verfügung. Bereiche für die Zusammenarbeit konzentrieren sich in der Regel auf zusätzliche Workflows oder das Entsperren neuer Interaktionen mit sozialen Netzwerken.
 
-Die folgende Liste zeigt, wie Funktionen von Teams-Apps häufig in kontextbezogenen Kontexten verwendet werden:
+Die folgende Liste zeigt, wie Teams-App-Funktionen häufig in kontextbezogenen Kontexten verwendet werden:
 
 * [**Registerkarten**](~/tabs/what-are-tabs.md) bieten ein eingebettetes Web-Erlebnis im Vollbildmodus, das für das jeweilige Team bzw. den Kanal oder Gruppenchat konfiguriert ist. Alle Mitglieder interagieren mit demselben webbasierten Inhalt, daher ist eine zustandslose Einseiten-App typisch.
 
@@ -39,7 +39,7 @@ Die folgende Liste zeigt, wie Funktionen von Teams-Apps häufig in kontextbezoge
 
 [Persönliche Apps](../concepts/design/personal-apps.md) sind auf Interaktionen mit einem einzelnen Benutzer ausgerichtet. Die Benutzererfahrung ist in diesem Kontext für jeden Benutzer einmalig.
 
-Die folgende Liste zeigt, wie Teams-Funktionen häufig in persönlichen Kontexten verwendet werden:
+Die folgende Liste zeigt, Teams funktionen häufig in persönlichen Kontexten verwendet werden:
 
 * [**Bots**](~/bots/what-are-bots.md) führen persönliche Unterhaltungen mit Benutzern. Bots, die mehrstufige Unterhaltungen erfordern oder Benachrichtigungen bereitstellen, die nur für einen bestimmten Benutzer relevant sind, eignen sich am besten für persönliche Apps.
 
@@ -47,7 +47,7 @@ Die folgende Liste zeigt, wie Teams-Funktionen häufig in persönlichen Kontexte
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Richtlinien zum Entwerfen von Teams-Apps](../concepts/design/design-teams-app-overview.md)
+- [Teams-App-Entwurfsrichtlinien](../concepts/design/design-teams-app-overview.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

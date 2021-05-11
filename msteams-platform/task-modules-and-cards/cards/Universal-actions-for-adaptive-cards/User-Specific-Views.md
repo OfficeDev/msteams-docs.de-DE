@@ -192,5 +192,5 @@ Richtlinien für den Kartenentwurf, die beim Entwerfen benutzerspezifischer Ansi
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Arbeiten mit universellen Aktionen für adaptive Karten](Work-with-universal-actions-for-adaptive-cards.md)
+* [Mit Universal-Aktionen für adaptive Karten arbeiten](Work-with-universal-actions-for-adaptive-cards.md)
 * [Aktuelle Ansichten](Up-To-Date-Views.md)

@@ -4,12 +4,12 @@ description: Beschreibt tiefe Links und deren Verwendung in Ihren Apps
 ms.topic: how-to
 localization_priority: Normal
 keywords: deep link deeplink für Teams
-ms.openlocfilehash: eadd576debaa63586597bd8c7dcb27fb14aa6fb1
-ms.sourcegitcommit: d272fce50af0fa3e2de0094522f294141cae511c
+ms.openlocfilehash: ccad5c6cc8daa513b12185efa2ed57e02438fd89
+ms.sourcegitcommit: 20e623a82f9676dd036cf6a350dd480885e0ea2c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "52278152"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52300556"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links 
 
@@ -178,7 +178,7 @@ threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
 groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
-## <a name="deep-links-for-sharepoint-framework-tabs"></a>Tiefe Links für SharePoint-Framework Registerkarten
+## <a name="deep-linking-for-sharepoint-framework-tabs"></a>Tiefe Verknüpfung für SharePoint-Framework Registerkarten
 
 Das folgende Deep Link-Format kann in einer Bot-, Connector- oder Messagingerweiterungskarte verwendet werden: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
@@ -196,7 +196,7 @@ Die Abfrageparameter sind:
 
 Beispiel: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
-## <a name="deep-link-to-the-scheduling-dialog"></a>Tiefer Link zum Planungsdialogfeld
+## <a name="deep-linking-to-the-scheduling-dialog"></a>Tiefe Verknüpfung mit dem Planungsdialogfeld
 
 > [!NOTE]
 > Dieses Feature befindet sich derzeit in der Entwicklervorschau.

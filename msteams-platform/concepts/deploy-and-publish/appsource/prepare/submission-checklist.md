@@ -169,7 +169,7 @@ Während der Übermittlung werden Sie aufgefordert, Ihre App zu kategorisieren. 
 |:---------------------|:---------------|
 | Analytics und BI | Analyse, Datenvisualisierung und BI |
 | Entwickler und IT | Entwicklertools, IT-Administrator |
-| Schulung und Weiterbildung | Schulung und Weiterbildung |
+| Bildung | Bildung |
 | Personalwesen | Personalwesen und Personalwerbung |
 | Produktivität | Inhaltsverwaltung, Dateien und Dokumente, Produktivität, Schulungen und Lernprogramme und Dienstprogramme |
 | Projektmanagement | Kommunikation, Project, Workflow und Unternehmensverwaltung |

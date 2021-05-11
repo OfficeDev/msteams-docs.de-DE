@@ -38,13 +38,13 @@ Darüber hinaus sind Bots Apps, die über eine Unterhaltungsschnittstelle verfü
 
 Ihr Bot erfordert Kontextinformationen, z. B. Benutzerprofildetails, um auf relevante Inhalte zu zugreifen und die Boterfahrung zu verbessern. Weitere Informationen finden Sie unter [Get Teams context](~/bots/how-to/get-teams-context.md). 
 
-Sie können Dateien auch über den Bot mithilfe von Graph-APIs oder Teams-Bot-APIs senden und empfangen. Weitere Informationen finden Sie unter [Senden und Empfangen von Dateien über den Bot](~/bots/how-to/bots-filesv4.md).
+Sie können dateien auch über den Bot senden und empfangen, Graph APIs oder Teams Bot-APIs verwenden. Weitere Informationen finden Sie unter [Senden und Empfangen von Dateien über den Bot](~/bots/how-to/bots-filesv4.md).
 
-Darüber hinaus wird die Geschwindigkeitsbegrenzung verwendet, um Bots zu optimieren, die für Ihre Teams-Anwendung verwendet werden. Zum Schutz von Microsoft Teams und seinen Benutzern bieten die Bot-APIs eine Geschwindigkeitsbeschränkung für eingehende Anforderungen. Weitere Informationen finden Sie unter [Optimieren Ihres Bots mit Der Geschwindigkeitsbegrenzung in Teams](~/bots/how-to/rate-limit.md).
+Darüber hinaus wird die Geschwindigkeitsbegrenzung verwendet, um Bots zu optimieren, die für Ihre Teams werden. Zum Schutz Microsoft Teams und seiner Benutzer bieten die Bot-APIs eine Geschwindigkeitsbegrenzung für eingehende Anforderungen. Weitere Informationen finden Sie unter Optimieren Ihres Bots mit einer [Geschwindigkeitsbegrenzung in Teams.](~/bots/how-to/rate-limit.md)
 
-Mit Microsoft Graph-APIs für Anrufe und Onlinebesprechungen können Microsoft Teams-Apps jetzt mithilfe von Sprach- und Videonachrichten mit Benutzern interagieren. Weitere Informationen finden Sie unter [Anrufe und Besprechungsbots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md). 
+Mit Microsoft Graph-APIs für Anrufe und Onlinebesprechungen können Microsoft Teams-Apps jetzt mit Benutzern mithilfe von Sprach- und Videonachrichten interagieren. Weitere Informationen finden Sie unter [Anrufe und Besprechungsbots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md). 
 
-Sie können die Teams-Bot-APIs verwenden, um Informationen für ein oder mehrere Mitglieder eines Chats oder Teams zu erhalten. Weitere Informationen finden Sie [unter Änderungen an Teams-Bot-APIs zum Abrufen von Team- oder Chatmitgliedern.](~/resources/team-chat-member-api-changes.md)
+Sie können die Teams-Bot-APIs verwenden, um Informationen für ein oder mehrere Mitglieder eines Chats oder Teams zu erhalten. Weitere Informationen finden Sie [unter Änderungen an Teams Bot-APIs zum Abrufen von Team- oder Chatmitgliedern](~/resources/team-chat-member-api-changes.md).
 
 ## <a name="see-also"></a>Siehe auch
 

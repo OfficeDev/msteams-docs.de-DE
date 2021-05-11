@@ -1,7 +1,7 @@
 ---
-title: Erstellen von Optionen für die Entwicklung von Microsoft Teams-Apps
+title: Erstellen von Optionen für Microsoft Teams App-Entwicklung
 author: heath-hamilton
-description: Beschreiben Sie die SDKs, Tools und APIs, die Sie zum Erstellen aller Arten von Teams-Apps verwenden können.
+description: Beschreiben Sie die SDKs, Tools und APIs, die Sie zum Erstellen aller Arten von apps Teams können.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
@@ -12,6 +12,6 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020842"
 ---
-# <a name="build-options-for-microsoft-teams-app-development"></a>Erstellen von Optionen für die Entwicklung von Microsoft Teams-Apps
+# <a name="build-options-for-microsoft-teams-app-development"></a>Erstellen von Optionen für Microsoft Teams App-Entwicklung
 
 Demnächst...

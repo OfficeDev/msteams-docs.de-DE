@@ -52,4 +52,4 @@ Wenn Sie das Gefühl haben, dass Ihre App produktionsbereit ist, können Sie dam
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Überprüfen der Richtlinien für die Speicherüberprüfung](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+> [Überprüfen der Richtlinien zur Store-Validierung](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

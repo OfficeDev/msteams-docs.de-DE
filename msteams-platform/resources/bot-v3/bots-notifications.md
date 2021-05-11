@@ -1,6 +1,6 @@
 ---
 title: Behandeln von Botereignissen
-description: Beschreibt, wie Ereignisse in Bots für Microsoft Teams behandelt werden
+description: Beschreibt das Behandeln von Ereignissen in Bots für Microsoft Teams
 keywords: teams bots-Ereignisse
 ms.date: 05/20/2019
 ms.topic: how-to
@@ -18,7 +18,7 @@ ms.locfileid: "52020639"
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft Teams sendet Benachrichtigungen an Ihren Bot für Änderungen oder Ereignisse, die in Denkbereiche auftreten, in denen Ihr Bot aktiv ist. Sie können diese Ereignisse verwenden, um Dienstlogik auszulösen, z. B.:
+Microsoft Teams sendet Benachrichtigungen an Ihren Bot für Änderungen oder Ereignisse, die in Bereiche auftreten, in denen Ihr Bot aktiv ist. Sie können diese Ereignisse verwenden, um Dienstlogik auszulösen, z. B.:
 
 * Auslösen einer Willkommensnachricht, wenn Ihr Bot zu einem Team hinzugefügt wird
 * Abfragen und Zwischenspeichern von Gruppeninformationen beim Hinzufügen des Bots zu einem Gruppenchat
@@ -28,7 +28,7 @@ Microsoft Teams sendet Benachrichtigungen an Ihren Bot für Änderungen oder Ere
 
 Jedes Bot-Ereignis wird als Objekt gesendet, in dem definiert wird, welche `Activity` Informationen im Objekt enthalten `messageType` sind. Informationen zu Nachrichten vom Typ `message` finden Sie unter Senden und Empfangen von [Nachrichten](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
-Teams- und Gruppenereignisse, die in der Regel vom Typ ausgelöst werden, verfügen über zusätzliche `conversationUpdate` Teams-Ereignisinformationen, die als Teil des Objekts übergeben werden. Daher muss ihr Ereignishandler die Nutzlast für die Teams und zusätzliche ereignisspezifische Metadaten `channelData` `channelData` `eventType` abfragen.
+Teams und Gruppenereignisse, die in der Regel vom Typ ausgelöst werden, werden zusätzliche `conversationUpdate` Teams-Ereignisinformationen als Teil des Objekts übergeben. Daher muss der Ereignishandler die Nutzlast für die Teams und zusätzliche ereignisspezifische Metadaten `channelData` `channelData` `eventType` abfragen.
 
 In der folgenden Tabelle sind die Ereignisse aufgeführt, die Ihr Bot empfangen und Aktionen ergreifen kann.
 
@@ -362,7 +362,7 @@ Ihr Bot wird benachrichtigt, wenn das Team, in dem er sich befindet, umbenannt w
 
 ## <a name="channel-updates"></a>Kanalupdates
 
-Ihr Bot wird benachrichtigt, wenn ein Kanal in einem Team erstellt, umbenannt oder gelöscht wird, in dem er hinzugefügt wurde. Auch hier wird das Ereignis empfangen, und ein Teams-spezifischer Ereignisbezeichner wird als Teil des Objekts gesendet, wobei die Kanaldaten die GUID für den Kanal sind und den Kanalnamen selbst `conversationUpdate` `channelData.eventType`  `channel.id` `channel.name` enthält.
+Ihr Bot wird benachrichtigt, wenn ein Kanal in einem Team erstellt, umbenannt oder gelöscht wird, in dem er hinzugefügt wurde. Auch hier wird das Ereignis empfangen, und ein Teams-spezifischer Ereignisbezeichner wird als Teil des Objekts gesendet, wobei die Kanaldaten die GUID für den Kanal sind und den Kanalnamen selbst `conversationUpdate` `channelData.eventType` `channel.id` `channel.name` enthält.
 
 Die Kanalereignisse sind wie folgt:
 

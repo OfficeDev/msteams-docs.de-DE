@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Teams-Manifestschema
-ms.openlocfilehash: 984a5de5b2c8e24f79269e62c3a7fd422ecce63f
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: eeffd97c5cbe62b66cab343bfe650b7f617ce9f2
+ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101807"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52304012"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
-Das Teams beschreibt, wie die App in das Microsoft Teams integriert wird. Ihr Manifest muss dem schema entsprechen, das unter gehostet [`https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json) wird. Frühere Versionen 1.0-1.4 werden ebenfalls unterstützt (unter Verwendung von "v1.x" in der URL).
+Das Teams beschreibt, wie die App in das Microsoft Teams integriert wird. Ihr Manifest muss dem schema entsprechen, das unter gehostet [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) wird. Frühere Versionen 1.0-1.4 werden ebenfalls unterstützt (unter Verwendung von "v1.x" in der URL).
 
 Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen.
 
@@ -22,8 +22,8 @@ Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen.
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.9",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.10",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -282,7 +282,18 @@ Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen.
     "meetings": "tab", 
     "team": "bot", 
     "groupchat": "bot"
-  }
+  },
+  "configurableProperties": [
+     "name",
+     "shortDescription",
+     "longDescription",
+     "smallImageUrl", 
+     "largeImageUrl", 
+     "accentColor",
+     "websiteUrl",
+     "privacyUrl",
+     "termsOfUseUrl"        
+  ]              
 }
 ```
 
@@ -298,7 +309,7 @@ Die https://-URL, die auf das JSON-Schema für das Manifest verweist.
 
 **Erforderlich** – Zeichenfolge
 
-Die Version des Manifestschemas, das dieses Manifest verwendet. Er muss 1,9 sein.
+Die Version des Manifestschemas, das dieses Manifest verwendet. Er muss 1,10 sein.
 
 ## <a name="version"></a>Version
 
@@ -689,5 +700,26 @@ Wenn ein Gruppeninstallationsbereich ausgewählt ist, wird die Standardfunktion 
 |`team`|string|||Wenn der ausgewählte Installationsbereich ausgewählt ist, gibt `team` dieses Feld die verfügbare Standardfunktion an. Optionen: `tab` , `bot` oder `connector` .|
 |`groupchat`|Zeichenfolge|||Wenn der ausgewählte Installationsbereich ausgewählt ist, gibt `groupchat` dieses Feld die verfügbare Standardfunktion an. Optionen: `tab` , `bot` oder `connector` .|
 |`meetings`|Zeichenfolge|||Wenn der ausgewählte Installationsbereich ausgewählt ist, gibt `meetings` dieses Feld die verfügbare Standardfunktion an. Optionen: `tab` , `bot` oder `connector` .|
+
+## <a name="configurableproperties"></a>configurableProperties
+
+**Optional** – Array
+
+Der `configurableProperties` Block definiert die App-Eigenschaften, die Teams Administrator anpassen kann. Weitere Informationen finden Sie unter [Anpassen von Apps in Microsoft Teams.](/MicrosoftTeams/customize-apps)
+
+> [!NOTE]
+> Mindestens eine Eigenschaft muss definiert werden. Sie können in diesem Block maximal neun Eigenschaften definieren.
+> Als bewährte Methode müssen Sie Anpassungsrichtlinien für App-Benutzer und -Kunden bereitstellen, die sie beim Anpassen Ihrer App befolgen müssen.
+
+Sie können eine der folgenden Eigenschaften definieren:
+* `name`: Ermöglicht administratoren das Ändern des Anzeigenamens der App.
+* `shortDescription`: Ermöglicht Administratoren das Ändern der Kurzbeschreibung der App.
+* `longDescription`: Ermöglicht Administratoren das Ändern der detaillierten Beschreibung der App.
+* `smallImageUrl`: Es handelt sich `outline` um die Eigenschaft im Block des `icons` Manifests.
+* `largeImageUrl`: Es handelt sich `color` um die Eigenschaft im Block des `icons` Manifests.
+* `accentColor`: Es ist die Farbe, die in Verbindung mit und als Hintergrund für Ihre Gliederungssymbole verwendet werden soll.
+* `websiteUrl`: Es ist die https://-URL zur Website des Entwicklers.
+* `privacyUrl`: Es ist die https://-URL zur Datenschutzrichtlinie des Entwicklers.
+* `termsOfUseUrl`: Es ist die https:// URL zu den Nutzungsbedingungen des Entwicklers.
 
 
