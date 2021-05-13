@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Teams-Manifestschema
-ms.openlocfilehash: eeffd97c5cbe62b66cab343bfe650b7f617ce9f2
-ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
+ms.openlocfilehash: c0b8b6f5baa163d2292227f7d361b6d12849edec
+ms.sourcegitcommit: 3475927e1c7964dc25c363d0d2026e5c898c97c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "52304012"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "52336517"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
-Das Teams beschreibt, wie die App in das Microsoft Teams integriert wird. Ihr Manifest muss dem schema entsprechen, das unter gehostet [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) wird. Frühere Versionen 1.0-1.4 werden ebenfalls unterstützt (unter Verwendung von "v1.x" in der URL).
+Das Teams beschreibt, wie die App in das Microsoft Teams integriert wird. Ihr Manifest muss dem schema entsprechen, das unter gehostet [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) wird. Frühere Versionen 1.0, 1.1,..., 1.6 und so weiter werden ebenfalls unterstützt (unter Verwendung von "v1.x" in der URL).
 
 Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen.
 
@@ -474,7 +474,7 @@ Eine optionale Liste von Befehlen, die Ihr Bot Benutzern empfehlen kann. Das Obj
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`items.scopes`|Array von Enumerationen|3|✔|Gibt den Bereich an, für den die Befehlsliste gültig ist. Mögliche Optionen sind `team`, `personal` und `groupchat`.|
-|`items.commands`|Array von Objekten|10  |✔|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: Name des Bot-Befehls (string, 32)<br>`description`: einfache Beschreibung oder Beispiel für die Befehlssyntax und zugehörige Argumente (string, 128)|
+|`items.commands`|Array von Objekten|10|✔|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: Name des Bot-Befehls (string, 32)<br>`description`: einfache Beschreibung oder Beispiel für die Befehlssyntax und zugehörige Argumente (string, 128)|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
 
@@ -511,7 +511,7 @@ Das Element ist ein Array (maximal 1 Element) mit allen Elementen vom Typ `objec
 |Name| Typ | Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`botId`|string|64|✔|Die eindeutige Microsoft-App-ID für den Bot, der die Messagingerweiterung unterstützt, wie beim Bot Framework registriert. Dies kann mit der allgemeinen App-ID identisch sein.|
-|`commands`|Array von Objekten|10  |✔|Array von Befehlen, die von der Messagingerweiterung unterstützt werden|
+|`commands`|Array von Objekten|10|✔|Array von Befehlen, die von der Messagingerweiterung unterstützt werden|
 |`canUpdateConfiguration`|boolean|||Ein Wert, der angibt, ob die Konfiguration einer Messagingerweiterung vom Benutzer aktualisiert werden kann. Standard: **False**.|
 |`messageHandlers`|Array von Objekten|5 ||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind.|
 |`messageHandlers.type`|Zeichenfolge|||Der Typ des Nachrichtenhandlers. Muss `"link"` sein.|
