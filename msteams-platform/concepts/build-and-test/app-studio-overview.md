@@ -4,12 +4,12 @@ description: Erste Schritte zum Erstellen von großartigen Apps in Microsoft Tea
 keywords: Erste Schritte mit App Studio-Teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 0e6a00921b3f24381758b13bd6042da18a3ac2c1
-ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
+ms.openlocfilehash: 391086b85f0e68e1a864c3d4254bdbe62b5eaa1a
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "52304033"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565200"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Entwickeln Sie schnell Apps mit App Studio für Microsoft Teams
 
@@ -17,7 +17,7 @@ Mit App Studio können Sie ganz einfach mit dem Erstellen oder Integrieren Ihrer
 
 ## <a name="installing-app-studio"></a>Installieren von App Studio
 
-App Studio ist eine Teams-App und verfügbar im Teams Store. Folgen Sie diesem Link zum direkten Download: [App Studio](https://aka.ms/InstallTeamsAppStudio) (Sie finden die App auch im App Store).
+App Studio ist eine Teams-App und verfügbar im Teams Store. Folgen Sie diesem Link für den direkten Download [App Studio](https://aka.ms/InstallTeamsAppStudio). Sie können die App auch im App Store finden.
 
 Suchen Sie im Store nach App Studio.
 
@@ -27,15 +27,15 @@ Wählen Sie die App Studio-Kachel aus, um die App-Installationsseite zu öffnen:
 
 ![Konfigurieren der App-Suite](~/assets/images/get-started/teamsappstudioconfiguration.png)
 
-Wählen Sie *Installieren*.
+Wählen Sie **Installieren**.
 
 ![App Studio](~/assets/images/get-started/teamsappstudio.png)
 
-Klicken Sie in App Studio auf die Registerkarte *Manifest-Editor*, auf der Sie entweder eine vorhandene App importieren oder eine neue App erstellen können.
+Klicken Sie in App Studio auf die Registerkarte **Manifest-Editor**, auf der Sie entweder eine vorhandene App importieren oder eine neue App erstellen können.
 
 ## <a name="app-studio-features"></a>App Studio-Features
 
-In diesem Abschnitt werden Features wie Unterhaltung, Manifesteditor, Details und Funktionen behandelt. Sie können Ihre Funktionen mithilfe von App-Anpassungen anpassen.
+In diesem Abschnitt werden Features wie Unterhaltung, Manifesteditor, Details und Funktionen behandelt. Sie können Ihre Funktionen mithilfe der App-Anpassung anpassen.
 
 ### <a name="conversation"></a>Unterhaltung
 
@@ -56,7 +56,7 @@ Der Detailabschnitt des Manifest-Editors definiert die allgemeine Beschreibung d
 Im Abschnitt "Funktionen" des Manifest-Editors werden die Funktionen der App definiert und Details zu den einzelnen Funktionen aufgelistet.
 
 > [!NOTE]
-> Als bewährte Methode müssen Sie Anpassungsrichtlinien für App-Benutzer und -Kunden bereitstellen, die sie beim Anpassen Ihrer App befolgen müssen. Weitere Informationen finden Sie unter [Anpassen von Apps in Microsoft Teams.](/MicrosoftTeams/customize-apps)
+> Als bewährte Methode müssen Sie Anpassungsrichtlinien für App-Benutzer und -Kunden bereitstellen, die Sie beim Anpassen Ihrer App befolgen müssen. Weitere Informationen finden Sie unter [Anpassen von Apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 
 ##### <a name="tabs"></a>Registerkarten
@@ -67,42 +67,43 @@ Im Abschnitt "Funktionen" des Manifest-Editors werden die Funktionen der App def
 
   Sie müssen auch alle zusätzlichen Domänen angeben, von denen die Registerkarte erwartet, dass sie geladen werden oder mit denen sie verlinkt wird.
 
-* **Persönliche Registerkarten.** In diesem Abschnitt können Sie eine Reihe von Registerkarten definieren, die standardmäßig in der persönlichen App-Erfahrung angezeigt werden (d. h. Die Erfahrung, die ein Benutzer mit Ihrer App außerhalb des Kontexts eines Teams oder Kanals hat). Geben Sie in diesem Abschnitt den Registerkartennamen an, ein eindeutiger Bezeichner, die URL, die auf die Benutzeroberfläche verweist und in Teams angezeigt werden soll, und optional die URL, die verwendet werden soll, wenn ein Benutzer die Registerkarte in einem Browser anzeigen möchte. Geben Sie wie bei Teams-Registerkarten üblich alle zusätzlichen Domänen an, von denen die Registerkarte voraussichtlich geladen oder verlinkt wird.
+* **Persönliche Registerkarten.** In diesem Abschnitt können Sie eine Reihe von Registerkarten definieren, die standardmäßig in der persönlichen App-Erfahrung angezeigt werden (Erfahrung, die ein Benutzer mit Ihrer App außerhalb des Kontexts eines Teams oder Kanals hat). Geben Sie in diesem Abschnitt den Registerkartennamen an, ein eindeutiger Bezeichner, die URL, die auf die Benutzeroberfläche verweist und in Teams angezeigt werden soll, und optional die URL, die verwendet werden soll, wenn ein Benutzer die Registerkarte in einem Browser anzeigen möchte. Geben Sie mit Teams Registerkarten alle zusätzlichen Domänen an, von denen die Registerkarte erwartet, dass sie geladen oder eine Verknüpfung zu ihnen besteht.
 
 ##### <a name="bots"></a>Bots
 
 In diesem Abschnitt können Sie Ihrer App einen [Unterhaltungs-Bot](~/bots/what-are-bots.md) hinzufügen. Wenn Sie bereits einen Bot bei Bot Framework registriert haben, können Sie diesen Bot hinzufügen, indem Sie auf *Einrichten* klicken, den Bot-Namen und die Bot Framework-ID angeben und die Bereiche definieren, in denen der Bot arbeiten soll.
 
-Wenn Sie noch keinen Bot beim Bot Framework registriert haben, klicken Sie auf *Registrieren*, um einen neuen Bot zu erstellen. Wenn Sie mit der Registrierung Ihres Bots fertig sind, kehren Sie zu diesem Abschnitt des Manifest-Editors zurück, um dessen Namen und Bot Framework-ID einzugeben.
+Wenn Sie noch keinen Bot beim Bot Framework registriert haben, klicken Sie auf **Registrieren**, um einen neuen Bot zu erstellen. Wenn Sie mit der Registrierung Ihres Bots fertig sind, kehren Sie zu diesem Abschnitt des Manifest-Editors zurück, um dessen Namen und Bot Framework-ID einzugeben.
 
-Nachdem Sie die Informationen Ihres Bots bereitgestellt haben, können Sie nun optional eine Liste von Befehlen definieren, die Ihr Bot Benutzern vorschlagen kann. Fügen Sie den Befehlsnamen, eine Befehlsbeschreibung mit Angaben zu dessen Syntax und Argumenten sowie die Bereiche hinzu, für die dieser Befehl gelten soll.
+Nachdem Sie die Informationen Ihres Bots angegeben haben, können Sie jetzt optional eine Liste von Befehlen definieren, die Ihr Bot Benutzern vorschlagen kann. Fügen Sie den Befehlsnamen, eine Befehlsbeschreibung mit Angaben zu dessen Syntax und Argumenten sowie die Bereiche hinzu, für die dieser Befehl gelten soll.
 
-Beachten Sie, dass Befehle, die für den nicht unterstützten Bereich angegeben wurden, ignoriert werden, wenn Sie Ihren Bot so definiert haben, dass er nur einen Bereich unterstützt. Sie können die vom Bot unterstützten Bereiche jederzeit bearbeiten.
+> [!NOTE]
+> Wenn Sie Ihren Bot so definiert haben, dass er nur einen Bereich unterstützt, werden die für den nicht unterstützten Bereich angegebenen Befehle ignoriert. Sie können die vom Bot unterstützten Bereiche jederzeit bearbeiten.
 
 ##### <a name="connectors"></a>Connectors
 
-In diesem Abschnitt können Sie Ihrer App einen Connector hinzufügen. Wenn Sie bereits einen Office 365-Connector registriert haben, wählen Sie *Einrichten* und geben Sie den Namen und die ID des Konnektors ein. Wenn Sie einen neuen Konnektor möchten, klicken Sie auf *Registrieren*, um zum Connector Developer Dashboard in Ihrem Browser zu gelangen.
+In diesem Abschnitt können Sie Ihrer App einen Connector hinzufügen. Wenn Sie bereits einen Office 365-Connector registriert haben, wählen Sie **Einrichten** und geben Sie den Namen und die ID des Konnektors ein. Wenn Sie einen neuen Konnektor möchten, klicken Sie auf **Registrieren**, um zum Connector Developer Dashboard in Ihrem Browser zu gelangen.
 
 > [!NOTE]
-> Mithilfe der App-Anpassung können Administratoren das Aussehen und Die-Gefühl der Apps ändern, die über Bots, Messagingerweiterungen, Registerkarten und Connectors geladen werden. Wenn der Administrator Teams den Namen einer App von *Contoso* in *Contoso Agent* anpasst, wird die App benutzern mit dem neuen Namen *Contoso Agent* angezeigt. Beim Hinzufügen eines Connectors zu einem Chat wird in der Liste der Connectors jedoch weiterhin der Name der App als *Contoso angezeigt.*
+> Die App-Anpassung ermöglicht es Administratoren, das Erscheinungsbild der Apps zu ändern, die über Bots, Messagingerweiterungen, Registerkarten und Connectors geladen werden. Wenn der Teams Administrator beispielsweise den Namen einer App von **Contoso** in **Contoso Agent** anpasst, wird die App mit dem neuen Namen **Contoso Agent** für Benutzer angezeigt. Beim Hinzufügen eines Connectors zu einem Chat werden in der Liste jedoch immer noch der Name der App als **Contoso** angezeigt.
 
 
 ##### <a name="messaging-extensions"></a>Messaging-Erweiterungen
 
 [Messaging-Erweiterungen](~/messaging-extensions/what-are-messaging-extensions.md) bieten Benutzern eine leistungsstarke Möglichkeit, mit Ihrer App in Microsoft Teams zu agieren. Benutzer können Informationen von Ihrem Dienst abfragen und diese Informationen in Form von Karten direkt im Kanal oder in der Chat-Unterhaltung veröffentlichen.
 
-Messaging-Erweiterungen werden von Bot Framework-Bots unterstützt, sodass für den Betrieb ein konfigurierter Bot erforderlich ist. Wenn über Sie den Namen und die Bot Framework-ID des Bots verfügen, für den Sie die Messaging-Erweiterung aktivieren möchten, geben Sie ihn ein. Andernfalls klicken Sie auf *Registrieren*, um den Namen zu erstellen, und geben Sie anschließend die Informationen ein. Wählen Sie aus, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann.
+Messaging-Erweiterungen werden von Bot Framework-Bots unterstützt, sodass für den Betrieb ein konfigurierter Bot erforderlich ist. Wenn über Sie den Namen und die Bot Framework-ID des Bots verfügen, für den Sie die Messaging-Erweiterung aktivieren möchten, geben Sie ihn ein. Andernfalls klicken Sie auf **Registrieren**, um den Namen zu erstellen, und geben Sie anschließend die Informationen ein. Wählen Sie aus, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann.
 
 Nachdem Sie den zugrunde liegenden Bot konfiguriert haben, definieren Sie die Befehle und Parameter, welche die Messaging-Erweiterung akzeptieren soll.
 
 Jeder Befehl erfordert einen Titel und eine ID. Der Befehl kann optional eine Beschreibung für den Benutzer enthalten. Jeder Befehl kann bis zu fünf Parameter unterstützen, für die jeweils Folgendes erforderlich ist:
 
-* Der Name des Parameters, wie er im Teams-Client angezeigt wird und in der Benutzeranforderung enthalten ist
-* Ein benutzerfreundlicher Titel
+* Der Name des Parameters, wie er im Teams Client angezeigt wird und in der Benutzeranforderung enthalten ist.
+* Ein benutzerfreundlicher Titel.
 * Eine optionale Beschreibung.
 
 > [!NOTE]
-> Informationen zum Erstellen einer Messagingerweiterung mithilfe von App Studio finden Sie unter [Create messaging extension using app studio](~/resources/create-messaging-extension-using-appstudio.md).
+> Informationen zum Erstellen einer Messagingerweiterung mit App Studio finden Sie unter [Erstellen einer Messagingerweiterung mit App Studio](~/resources/create-messaging-extension-using-appstudio.md).
 
 #### <a name="test-and-distribute"></a>Testen und Verteilen
 
@@ -115,14 +116,14 @@ Auf Ihrer Projekthomepage können Sie Ihre App in ein Team hochladen, Ihre App f
 
 Bei einer Karte handelt es sich um einen Container für kurze oder verknüpfte Informationen. Microsoft Teams unterstützt Karten, die mehrere Eigenschaften und Anhänge haben können. Karten sind eine wichtige Methode, mit der Bots und Konnektoren verwertbare Informationen an Benutzer weitergeben. 
 
-Um diesen Vorgang zu vereinfachen und weniger fehleranfällig zu machen, können Sie auf der Registerkarte Karten-Editor mithilfe eines Formulars Hero-Karten oder Miniaturkarten erstellen und die letztendliche Karte (genau so, wie ein Benutzer sie sehen würde) mit einem Bot überprüfen und testen. Er enthält auch den entsprechenden JSON-, C#- oder Node.js-Code für die Karte, die Sie in den Quellcode Ihrer App kopieren/einfügen können.
+Um diesen Prozess einfacher und weniger fehleranfällig zu machen, können Sie auf der Registerkarte Karteneditor Heldenkarten oder Miniaturkarten mithilfe eines Formulars erstellen und die resultierende Karte (genau so, wie ein Benutzer sie sehen würde) über einen Bot überprüfen und testen. Er enthält auch den entsprechenden JSON-, C#- oder Node.js-Code für die Karte, die Sie in den Quellcode Ihrer App kopieren/einfügen können.
 
 Wenn Sie bereits über eine Karte verfügen, die Sie in Teams überprüfen möchten, können Sie den JSON für diese Karte in die Registerkarte JSON unter *Karteninformationen hinzufügen* einfügen und an sich selbst senden, um zu sehen, wie er in einem Chat aussieht.
 
 ### <a name="react-control-library"></a>React-Steuerelementbibliothek
 
 >[!Note]
-> Diese React-Steuerelementbibliothek wird in Zukunft nicht mehr angezeigt. Erwägen Sie die Verwendung der [Fluent-UI-Reaktionssteuerung als Alternative](https://microsoft.github.io/fluent-ui-react/) (früher Stardust UI).
+> Diese React Steuerbibliothek ist in Zukunft veraltet. Erwägen Sie die Verwendung der [Fluent-UI-Reaktionssteuerelemente als Alternative,](https://microsoft.github.io/fluent-ui-react/) die zuvor Stardust-Benutzeroberfläche verwendet hat.
 
 Das Erstellen einer App, die Teams‘ Bewährte Methoden befolgt, ist eine hervorragende Möglichkeit, Ihrer App ein Erscheinungsbild zu verleihen, das sich nahtlos in die Kundenerfahrung in Teams einfügt. Die von Ihnen verwendeten UI-Steuerelemente sind entscheidend, um dieses Ziel zu erreichen. Um das Erstellen einer konsistenten Benutzeroberfläche zu vereinfachen, bietet App Studio verschiedene Kategorien von Steuerelementen für die Benutzeroberfläche, die den Entwurfsprinzipien von Teams entsprechen.
 

@@ -1,59 +1,59 @@
 ---
-title: Behandeln von Botereignissen
-description: Beschreibt das Behandeln von Ereignissen in Bots für Microsoft Teams
-keywords: teams bots-Ereignisse
+title: Behandeln von Bot-Ereignissen
+description: Beschreibt den Umgang mit Ereignissen in Bots für Microsoft Teams
+keywords: Teams Bots-Events
 ms.date: 05/20/2019
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 5a7f7971d7f58af315222933f1c1f192868a4171
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: da624ea0e92e193f4ad7f334d958349d542dd6e0
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020639"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566467"
 ---
-# <a name="handle-bot-events-in-microsoft-teams"></a>Behandeln von Botereignissen in Microsoft Teams
+# <a name="handle-bot-events-in-microsoft-teams"></a>Behandeln von Bot-Ereignissen in Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft Teams sendet Benachrichtigungen an Ihren Bot für Änderungen oder Ereignisse, die in Bereiche auftreten, in denen Ihr Bot aktiv ist. Sie können diese Ereignisse verwenden, um Dienstlogik auszulösen, z. B.:
+Microsoft Teams sendet Benachrichtigungen an Ihren Bot für Änderungen oder Ereignisse, die in Bereichen passieren, in denen Ihr Bot aktiv ist. Sie können diese Ereignisse verwenden, um Dienstlogik auszulösen, z. B. die folgenden:
 
-* Auslösen einer Willkommensnachricht, wenn Ihr Bot zu einem Team hinzugefügt wird
-* Abfragen und Zwischenspeichern von Gruppeninformationen beim Hinzufügen des Bots zu einem Gruppenchat
-* Aktualisieren zwischengespeicherter Informationen zu Teammitgliedschafts- oder Kanalinformationen
-* Entfernen zwischengespeicherter Informationen für ein Team, wenn der Bot entfernt wird
-* Wenn eine Botnachricht von einem Benutzer gemocht wird
+* Lösen Sie eine Willkommensnachricht aus, wenn Ihr Bot einem Team hinzugefügt wird.
+* Abfrage- und Cachegruppeninformationen, wenn der Bot einem Gruppenchat hinzugefügt wird.
+* Aktualisieren Sie zwischengespeicherte Informationen über Teammitgliedschaften oder Kanalinformationen.
+* Entfernen Sie zwischengespeicherte Informationen für ein Team, wenn der Bot entfernt wird.
+* Wenn eine Bot-Nachricht von einem Benutzer gemocht wird.
 
-Jedes Bot-Ereignis wird als Objekt gesendet, in dem definiert wird, welche `Activity` Informationen im Objekt enthalten `messageType` sind. Informationen zu Nachrichten vom Typ `message` finden Sie unter Senden und Empfangen von [Nachrichten](~/resources/bot-v3/bot-conversations/bots-conversations.md).
+Jedes Bot-Ereignis wird als `Activity` Objekt gesendet, in dem `messageType` definiert wird, welche Informationen sich im Objekt befinden. Nachrichten vom Typ finden Sie unter Senden und Empfangen von `message` [Nachrichten](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
-Teams und Gruppenereignisse, die in der Regel vom Typ ausgelöst werden, werden zusätzliche `conversationUpdate` Teams-Ereignisinformationen als Teil des Objekts übergeben. Daher muss der Ereignishandler die Nutzlast für die Teams und zusätzliche ereignisspezifische Metadaten `channelData` `channelData` `eventType` abfragen.
+Teams- und Gruppenereignissen, die normalerweise vom Typ ausgelöst `conversationUpdate` werden, haben zusätzliche Teams Ereignisinformationen als Teil des `channelData` Objekts übergeben, und daher muss der Ereignishandler die `channelData` Nutzlast für die Teams `eventType` und zusätzliche ereignisspezifische Metadaten abfragen.
 
-In der folgenden Tabelle sind die Ereignisse aufgeführt, die Ihr Bot empfangen und Aktionen ergreifen kann.
+In der folgenden Tabelle sind die Ereignisse aufgeführt, die Ihr Bot empfangen und ausführen kann.
 
-|Typ|Payload-Objekt|Teams eventType |Beschreibung|Bereich|
+|Typ|Nutzlastobjekt|Teams eventType |Beschreibung|Bereich|
 |---|---|---|---|---|
-| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[Mitglied zum Team hinzugefügt](#team-member-or-bot-addition)| all |
-| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[Mitglied wurde aus Dem Team entfernt](#team-member-or-bot-removed)| `groupChat` & `team` |
+| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[Mitglied zum Team hinzugefügt](#team-member-or-bot-addition)| Alle |
+| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[Mitglied wurde aus dem Team entfernt](#team-member-or-bot-removed)| `groupChat` & `team` |
 | `conversationUpdate` | |`teamRenamed`| [Team wurde umbenannt](#team-name-updates)| `team` |
 | `conversationUpdate` | |`channelCreated`| [Ein Kanal wurde erstellt](#channel-updates)|`team` |
 | `conversationUpdate` | |`channelRenamed`| [Ein Kanal wurde umbenannt](#channel-updates)|`team` |
 | `conversationUpdate` | |`channelDeleted`| [Ein Kanal wurde gelöscht](#channel-updates)|`team` |
-| `messageReaction` |`reactionsAdded`|| [Reaktion auf Botnachricht](#reactions)| all |
-| `messageReaction` |`reactionsRemoved`|| [Reaktion aus Botnachricht entfernt](#reactions)| all |
+| `messageReaction` |`reactionsAdded`|| [Reaktion auf Bot-Nachricht](#reactions)| Alle |
+| `messageReaction` |`reactionsRemoved`|| [Reaktion aus Bot-Nachricht entfernt](#reactions)| Alle |
 
-## <a name="team-member-or-bot-addition"></a>Teammitglied oder Bot-Ergänzung
+## <a name="team-member-or-bot-addition"></a>Teammitglied oder Bot-Zusatz
 
-Das Ereignis wird an Ihren Bot gesendet, wenn es Informationen zu Mitgliedschaftsupdates für Teams empfängt, in [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) denen es hinzugefügt wurde. Er empfängt außerdem eine Aktualisierung, wenn er zum ersten Mal hinzugefügt wurde, speziell für persönliche Unterhaltungen. Beachten Sie, dass die Benutzerinformationen ( ) für Ihren Bot eindeutig sind und für die zukünftige Verwendung durch Ihren Dienst zwischengespeichert werden können (z. B. senden einer Nachricht an `Id` einen bestimmten Benutzer).
+Das [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) Ereignis wird an Ihren Bot gesendet, wenn er Informationen über Mitgliedschaftsaktualisierungen für Teams erhält, in denen es hinzugefügt wurde. Er empfängt außerdem eine Aktualisierung, wenn er zum ersten Mal hinzugefügt wurde, speziell für persönliche Unterhaltungen. Beachten Sie, dass die Benutzerinformationen ( ) für Ihren Bot eindeutig sind und für die `Id` zukünftige Verwendung durch Ihren Dienst zwischengespeichert werden können, z. B. das Senden einer Nachricht an einen bestimmten Benutzer.
 
-### <a name="bot-or-user-added-to-a-team"></a>Einem Team hinzugefügter Bot oder Benutzer
+### <a name="bot-or-user-added-to-a-team"></a>Bot oder Benutzer zu einem Team hinzugefügt
 
-Das Ereignis mit dem Objekt in der Nutzlast wird gesendet, wenn einem Team entweder ein Bot hinzugefügt oder einem Team, in dem ein Bot hinzugefügt wurde, ein neuer `conversationUpdate` `membersAdded` Benutzer hinzugefügt wird. Microsoft Teams fügt auch `eventType.teamMemberAdded` das Objekt `channelData` hinzu.
+Das `conversationUpdate` Ereignis mit dem Objekt in der `membersAdded` Nutzlast wird gesendet, wenn entweder ein Bot zu einem Team oder ein neuer Benutzer zu einem Team hinzugefügt wird, in dem ein Bot hinzugefügt wurde. Microsoft Teams fügt `eventType.teamMemberAdded` auch in das Objekt `channelData` hinzu.
 
-Da dieses Ereignis in beiden Fällen gesendet wird, sollten Sie das Objekt analysieren, um zu bestimmen, ob es sich bei der Ergänzung um einen Benutzer `membersAdded` oder den Bot selbst handelt. Bei letzterem ist es eine [](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) bewährte Methode, eine Willkommensnachricht an den Kanal zu senden, damit Benutzer die Features verstehen können, die Ihr Bot bietet.
+Da dieses Ereignis in beiden Fällen gesendet wird, sollten Sie das `membersAdded` Objekt analysieren, um festzustellen, ob es sich bei dem Zusatz um einen Benutzer oder den Bot selbst handelte. Für letztere ist es eine bewährte Methode, eine [Willkommensnachricht](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) an den Kanal zu senden, damit Benutzer die Funktionen Ihres Bots verstehen können.
 
-#### <a name="example-code-checking-whether-bot-was-the-added-member"></a>Beispielcode: Überprüfen, ob bot das hinzugefügte Mitglied war
+#### <a name="example-code-checking-whether-bot-was-the-added-member"></a>Beispielcode: Überprüfen, ob Bot das hinzugefügte Member war
 
 ##### <a name="net"></a>.NET
 
@@ -93,7 +93,7 @@ bot.on('conversationUpdate', (msg) => {
 });
 ```
 
-#### <a name="schema-example-bot-added-to-team"></a>Schemabeispiel: Dem Team hinzugefügter Bot
+#### <a name="schema-example-bot-added-to-team"></a>Schemabeispiel: Bot zum Team hinzugefügt
 
 ```json
 {
@@ -132,16 +132,16 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-### <a name="user-added-to-a-meeting"></a>Zu einer Besprechung hinzugefügter Benutzer
+### <a name="user-added-to-a-meeting"></a>Benutzer zu einer Besprechung hinzugefügt
 
-Das Ereignis mit dem Objekt in der Nutzlast wird gesendet, wenn ein Benutzer einer privaten geplanten `conversationUpdate` `membersAdded` Besprechung hinzugefügt wird. Die Ereignisdetails werden auch dann gesendet, wenn anonyme Benutzer an der Besprechung teilnehmen. 
+Das `conversationUpdate` Ereignis mit dem Objekt in der `membersAdded` Nutzlast wird gesendet, wenn ein Benutzer einer privaten geplanten Besprechung hinzugefügt wird. Die Ereignisdetails werden auch dann gesendet, wenn anonyme Benutzer an der Besprechung teilnehmen. 
 
 > [!NOTE]
 >
->* Wenn einer Besprechung ein anonymer Benutzer hinzugefügt wird, verfügt membersAdded payload-Objekt nicht über ein `aadObjectId` Feld.
->* Wenn einer Besprechung ein anonymer Benutzer hinzugefügt wird, hat das Objekt in der Nutzlast immer die ID des Besprechungsorganisators, auch wenn der anonyme Benutzer von einem anderen `from` Organisator hinzugefügt wurde.
+>* Wenn ein anonymer Benutzer zu einer Besprechung hinzugefügt wird, hat membersAdded Nutzlastobjekt kein `aadObjectId` Feld.
+>* Wenn einem Besprechungsteilnehmer ein anonymer Benutzer hinzugefügt wird, `from` hat das Objekt in der Nutzlast immer die ID des Besprechungsorganisators, auch wenn der anonyme Benutzer von einem anderen Referenten hinzugefügt wurde.
 
-#### <a name="schema-example-user-added-to-meeting"></a>Schemabeispiel: Benutzer zu Besprechung hinzugefügt
+#### <a name="schema-example-user-added-to-meeting"></a>Schemabeispiel: Benutzer, der der Besprechung hinzugefügt wurde
 
 ```json
 {
@@ -184,12 +184,12 @@ Das Ereignis mit dem Objekt in der Nutzlast wird gesendet, wenn ein Benutzer ein
 
 ### <a name="bot-added-for-personal-context-only"></a>Bot nur für persönlichen Kontext hinzugefügt
 
-Ihr Bot empfängt `conversationUpdate` ein `membersAdded` with, wenn ein Benutzer es direkt für persönlichen Chat hinzufügt. In diesem Fall enthält die Nutzlast, die Ihr Bot empfängt, das Objekt `channelData.team` nicht. Sie sollten dies als Filter verwenden, falls Ihr [](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) Bot je nach Umfang eine andere Willkommensnachricht anbieten soll.
+Ihr Bot erhält eine `conversationUpdate` `membersAdded` mit, wenn ein Benutzer es direkt für den persönlichen Chat hinzufügt. In diesem Fall enthält die Nutzlast, die Ihr Bot empfängt, das `channelData.team` Objekt nicht. Sie sollten dies als Filter verwenden, falls Ihr Bot je nach Umfang eine andere [Willkommensnachricht](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) bieten soll.
 
 > [!NOTE]
-> Bei persönlichen Bots mit Bereichsumfang erhält Ihr Bot das Ereignis mehrmals, auch wenn der Bot entfernt und `conversationUpdate` erneut hinzugefügt wird. Für entwicklung und tests finden Sie es möglicherweise nützlich, eine Hilfsfunktion hinzuzufügen, mit der Sie Ihren Bot vollständig zurücksetzen können. Weitere Informationen [ zur ImplementierungNode.js beispiel](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) oder [C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) finden Sie in einem Beispiel.
+> Bei persönlichen Bots erhält Ihr Bot das `conversationUpdate` Ereignis mehrmals, auch wenn der Bot entfernt und erneut hinzugefügt wird. Für Entwicklung und Tests können Sie es nützlich finden, eine Hilfsfunktion hinzuzufügen, mit der Sie Ihren Bot vollständig zurücksetzen können. Weitere Informationen zum Implementieren finden Sie in [einemNode.js-Beispiel](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) oder in einem Beispiel für [die Implementierung.](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238)
 
-#### <a name="schema-example-bot-added-to-personal-context"></a>Schemabeispiel: Dem persönlichen Kontext hinzugefügter Bot
+#### <a name="schema-example-bot-added-to-personal-context"></a>Schemabeispiel: Bot, der dem persönlichen Kontext hinzugefügt wurde
 
 ```json
 {
@@ -228,7 +228,7 @@ Ihr Bot empfängt `conversationUpdate` ein `membersAdded` with, wenn ein Benutze
 
 ## <a name="team-member-or-bot-removed"></a>Teammitglied oder Bot entfernt
 
-Das Ereignis mit dem Objekt in der Nutzlast wird gesendet, wenn ihr Bot aus einem Team entfernt wird oder ein Benutzer aus einem Team entfernt wird, in dem ein Bot `conversationUpdate` `membersRemoved` hinzugefügt wurde. Microsoft Teams fügt auch `eventType.teamMemberRemoved` das Objekt `channelData` hinzu. Wie beim Objekt sollten Sie das Objekt für die App-ID Ihres Bots analysieren, um `membersAdded` zu bestimmen, `membersRemoved` wer entfernt wurde.
+Das `conversationUpdate` Ereignis mit dem Objekt in der `membersRemoved` Nutzlast wird gesendet, wenn entweder Ihr Bot aus einem Team entfernt wird oder ein Benutzer aus einem Team entfernt wird, in dem ein Bot hinzugefügt wurde. Microsoft Teams fügt `eventType.teamMemberRemoved` auch in das Objekt `channelData` hinzu. Wie beim `membersAdded` Objekt sollten Sie das Objekt für die `membersRemoved` App-ID Ihres Bots analysieren, um zu bestimmen, wer entfernt wurde.
 
 ### <a name="schema-example-team-member-removed"></a>Schemabeispiel: Teammitglied entfernt
 
@@ -272,12 +272,12 @@ Das Ereignis mit dem Objekt in der Nutzlast wird gesendet, wenn ihr Bot aus eine
 
 ### <a name="user-removed-from-a-meeting"></a>Benutzer aus einer Besprechung entfernt
 
-Das Ereignis mit dem Objekt in der Nutzlast wird gesendet, wenn ein `conversationUpdate` Benutzer aus einer privaten `membersRemoved` geplanten Besprechung entfernt wird. Die Ereignisdetails werden auch dann gesendet, wenn anonyme Benutzer an der Besprechung teilnehmen. 
+Das `conversationUpdate` Ereignis mit dem Objekt in der `membersRemoved` Nutzlast wird gesendet, wenn ein Benutzer aus einer privaten geplanten Besprechung entfernt wird. Die Ereignisdetails werden auch dann gesendet, wenn anonyme Benutzer an der Besprechung teilnehmen. 
 
 > [!NOTE]
 >
->* Wenn ein anonymer Benutzer aus einer Besprechung entfernt wird, verfügt membersRemoved-Nutzlastobjekt nicht über ein `aadObjectId` Feld.
->* Wenn ein anonymer Benutzer aus einer Besprechung entfernt wird, hat das Objekt in der Nutzlast immer die ID des Besprechungsorganisators, auch wenn der anonyme Benutzer von einem anderen `from` Organisator entfernt wurde.
+>* Wenn ein anonymer Benutzer aus einer Besprechung entfernt wird, verfügt membersRemoved nutzlastobjekt nicht über ein `aadObjectId` Feld.
+>* Wenn ein anonymer Benutzer aus einer Besprechung entfernt wird, `from` hat das Objekt in der Nutzlast immer die ID des Besprechungsorganisators, auch wenn der anonyme Benutzer von einem anderen Referenten entfernt wurde.
 
 #### <a name="schema-example-user-removed-from-meeting"></a>Schemabeispiel: Benutzer aus Besprechung entfernt
 
@@ -318,12 +318,12 @@ Das Ereignis mit dem Objekt in der Nutzlast wird gesendet, wenn ein `conversatio
 }
 ```
 
-## <a name="team-name-updates"></a>Aktualisierungen des Teamnamens
+## <a name="team-name-updates"></a>Teamnamenaktualisierungen
 
 > [!NOTE]
 > Es gibt keine Funktionalität zum Abfragen aller Teamnamen, und der Teamname wird nicht in Nutzlasten von anderen Ereignissen zurückgegeben.
 
-Ihr Bot wird benachrichtigt, wenn das Team, in dem er sich befindet, umbenannt wurde. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamRenamed` im `channelData` Objekt. Bitte beachten Sie, dass es keine Benachrichtigungen zum Erstellen oder Löschen von Teams gibt, da Bots nur als Teil von Teams vorhanden sind und keine Sichtbarkeit außerhalb des Bereichs haben, in dem sie hinzugefügt wurden.
+Ihr Bot wird benachrichtigt, wenn das Team, in dem er sich befindet, umbenannt wurde. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamRenamed` im `channelData` Objekt. Bitte beachten Sie, dass es keine Benachrichtigungen für die Teamerstellung oder -löschung gibt, da Bots nur als Teil von Teams existieren und keine Sichtbarkeit außerhalb des Bereichs haben, in dem sie hinzugefügt wurden.
 
 ### <a name="schema-example-team-renamed"></a>Schemabeispiel: Team umbenannt
 
@@ -360,15 +360,15 @@ Ihr Bot wird benachrichtigt, wenn das Team, in dem er sich befindet, umbenannt w
 }
 ```
 
-## <a name="channel-updates"></a>Kanalupdates
+## <a name="channel-updates"></a>Kanalaktualisierungen
 
-Ihr Bot wird benachrichtigt, wenn ein Kanal in einem Team erstellt, umbenannt oder gelöscht wird, in dem er hinzugefügt wurde. Auch hier wird das Ereignis empfangen, und ein Teams-spezifischer Ereignisbezeichner wird als Teil des Objekts gesendet, wobei die Kanaldaten die GUID für den Kanal sind und den Kanalnamen selbst `conversationUpdate` `channelData.eventType` `channel.id` `channel.name` enthält.
+Ihr Bot wird benachrichtigt, wenn ein Kanal in einem Team erstellt, umbenannt oder gelöscht wird, in dem er hinzugefügt wurde. Auch hier wird das `conversationUpdate` Ereignis empfangen, und ein Teams-spezifischer Ereignisbezeichner wird als Teil des `channelData.eventType` Objekts gesendet, wobei die Kanaldaten `channel.id` die GUID für den Kanal sind und den `channel.name` Kanalnamen selbst enthalten.
 
 Die Kanalereignisse sind wie folgt:
 
-* **channelCreated** &emsp; Ein Benutzer fügt dem Team einen neuen Kanal hinzu
-* **channelRenamed** &emsp; Ein Benutzer benennt einen vorhandenen Kanal um
-* **channelDeleted** &emsp; Ein Benutzer entfernt einen Kanal
+* **channelCreated** &emsp; Ein Benutzer fügt dem Team einen neuen Kanal hinzu.
+* **channelRenamed** &emsp; Ein Benutzer benennt einen vorhandenen Kanal um.
+* **channelGelöscht** &emsp; Ein Benutzer entfernt einen Kanal.
 
 ### <a name="full-schema-example-channelcreated"></a>Vollständiges Schemabeispiel: channelCreated
 
@@ -450,9 +450,9 @@ Die Kanalereignisse sind wie folgt:
 
 ## <a name="reactions"></a>Reaktionen
 
-Das Ereignis wird gesendet, wenn ein Benutzer seine Reaktion auf eine Nachricht hinzufügt oder entfernt, die ursprünglich von Ihrem `messageReaction` Bot gesendet wurde. `replyToId` enthält die ID der bestimmten Nachricht.
+Das `messageReaction` Ereignis wird gesendet, wenn ein Benutzer seine Reaktion auf eine Nachricht hinzufügt oder entfernt, die ursprünglich von Ihrem Bot gesendet wurde. `replyToId` enthält die ID der jeweiligen Nachricht.
 
-### <a name="schema-example-a-user-likes-a-message"></a>Schemabeispiel: Einem Benutzer gefällt eine Nachricht
+### <a name="schema-example-a-user-likes-a-message"></a>Schemabeispiel: Ein Benutzer mag eine Nachricht
 
 ```json
 {
@@ -494,7 +494,7 @@ Das Ereignis wird gesendet, wenn ein Benutzer seine Reaktion auf eine Nachricht 
 }
 ```
 
-### <a name="schema-example-a-user-un-likes-a-message"></a>Schemabeispiel: Einem Benutzer gefällt eine Nachricht nicht
+### <a name="schema-example-a-user-un-likes-a-message"></a>Schemabeispiel: Ein Benutzer weist eine Nachricht auf.
 
 ```json
 {

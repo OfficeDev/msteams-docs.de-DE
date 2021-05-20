@@ -6,120 +6,120 @@ ms.date: 08/26/2020
 localization_priority: Normal
 ms.topic: conceptual
 title: Web-Apps
-ms.openlocfilehash: 6227964fdf114fe4e4cd38f18fd1932db8bc5960
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 6783a05079f876cf3c2475a0ad5ca0e1f6687fc4
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075731"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566222"
 ---
 # <a name="web-apps"></a>Web-Apps 
 
-Sie können Web-Apps mit den features Teams sozialen und zusammenarbeiten von Apps geeignet machen, indem Sie sie ordnungsgemäß in die Teams.
+Sie können Web-Apps mit den sozialen und kollaborativen Funktionen von Teams für geeignet machen, indem Sie sie ordnungsgemäß in Teams integrieren.
   
 Die verschiedenen Arten von Apps, die Sie in Teams integrieren können, sind wie folgt:
-* **Eigenständige Apps:** Eine eigenständige App ist eine einzelne oder große und komplexe App. Der Benutzer kann einige Aspekte davon in der Teams.
-* **Apps für die** Zusammenarbeit: Eine App, die bereits für die features für soziale netzwerke und zusammenarbeiten inhärent für Teams.
-* **SharePoint**: Eine SharePoint, die sie in einem Teams.
+* **Eigenständige Apps:** Eine eigenständige App ist eine einseitige oder große und komplexe App. Der Benutzer kann einige Aspekte davon in Teams verwenden.
+* **Collaboration-Apps**: Eine App, die bereits für die sozialen und kollaborativen Funktionen entwickelt wurde, die Teams innewohnen.
+* **SharePoint**: Eine SharePoint Seite, die sie in Teams anzeigen möchten.
 
-Sie können die für Ihr Integrationsszenario geltenden Richtlinien zuordnungen und befolgen.
-Dieses Dokument bietet eine Übersicht über Teams Funktionen, Freigabepunktanforderungen für Datei- und Datenspeicherung, API-Anforderungen, Authentifizierung und Tiefenverknüpfung Ihrer App mit Teams.
+Sie können die entsprechende Richtlinie für Ihr Integrationsszenario zuordnen und befolgen.
+Dieses Dokument gibt einen Überblick über Teams Funktionen, Anforderungen an Freigabepunkte für Datei- und Datenspeicherung, API-Anforderungen, Authentifizierung und Deep-Linking Ihrer App mit Teams.
  
-## <a name="get-to-know-teams-platform-capabilities"></a>Kennenlernen Teams Plattformfunktionen
+## <a name="get-to-know-teams-platform-capabilities"></a>Lernen Sie Teams Plattformfunktionen kennen
 
-***Integrationsszenarien:** Eigenständige Apps, Apps für die Zusammenarbeit, SharePoint*
+***Integrationsszenarien**: Eigenständige Apps, Collaboration-Apps, SharePoint*
 
-Ihre Teams-App muss erforderliche und erwartete Features für die Zusammenarbeit enthalten. Um mit der App-Integration zu arbeiten, ist es wichtig, sich mit der Teams vertraut zu machen.
+Ihre Teams-App muss erforderliche und erwartete kollaborative Funktionen enthalten. Um mit der App-Integration zu arbeiten, ist es wichtig, sich mit Teams Entwicklungsterminologie vertraut zu machen.
 
-|Allgemeine App-Features   |Teams Plattformfunktionen   |
+|Gemeinsame App-Funktionen   |Teams Plattformfunktionen   |
 |----------|-----------|
-|Eingebettete Webseite, Homepage oder Webview  |[Tabs](../tabs/what-are-tabs.md)  |
+|Eingebettete Webseite, Homepage oder Webview  |[Registerkarten](../tabs/what-are-tabs.md)  |
 |Freigeben von Verknüpfungen und Erweiterungen  |[Messaging-Erweiterungen](../messaging-extensions/what-are-messaging-extensions.md)  |
-|Aktionsverknüpfungen und -erweiterungen  |[Messaging-Erweiterungen](../messaging-extensions/what-are-messaging-extensions.md)  |
+|Aktionsverknüpfungen und Erweiterungen  |[Messaging-Erweiterungen](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Chatbots  |[Bots](../bots/what-are-bots.md) |
 |Kanalbenachrichtigungen  |[Bots](../bots/what-are-bots.md)<br/>[Eingehende Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Office 365-Connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
-|Externe Nachrichtendienste  |[Bots](../bots/what-are-bots.md)<br/>[Ausgehende Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
-|Modale  |[Aufgabenmodule](../task-modules-and-cards/what-are-task-modules.md)  |
+|Nachricht externe Dienste  |[Bots](../bots/what-are-bots.md)<br/>[Ausgehende Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
+|Modals  |[Aufgabenmodule](../task-modules-and-cards/what-are-task-modules.md)  |
 |Inhaltsreiche Karten  |[Adaptive Karten](../task-modules-and-cards/what-are-cards.md)  |
 
 ## <a name="determine-a-subset-of-functionality"></a>Bestimmen einer Teilmenge der Funktionalität
 
-***Integrationsszenarien:** Eigenständige Apps*
+***Integrationsszenarien**: Eigenständige Apps*
 
-Die Integration aller Features einer vorhandenen Anwendung in Teams führt häufig zu einer erzwungenen oder unnatürlichen Benutzeroberfläche, insbesondere in größeren Apps. Beginnen Sie mit den auswirkungenreichsten Features und den Features, die sich besser in die Teams. Sie können Benutzern das Starten der Haupt-App und den Zugriff auf den vollständigen Satz von Features ermöglichen.
+Die Integration aller Funktionen einer vorhandenen Anwendung in Teams führt häufig zu einer erzwungenen oder unnatürlichen Benutzererfahrung, insbesondere in größeren Apps. Beginnen Sie mit den wirkungsvollsten Funktionen und solchen, die sich natürlicher in Teams integrieren. Sie können Benutzern erlauben, die Haupt-App zu starten und auf den vollständigen Satz von Funktionen zuzugreifen.
 
-**Voraussetzungen für die Integration Ihrer App in Teams** Nachfolgend finden Sie die Voraussetzungen für die Integration Ihrer App in Teams. 
+**Voraussetzungen für die Integration Ihrer App in Teams** Im Folgenden finden Sie die Voraussetzungen für die Integration Ihrer App in Teams. 
 
-1. [Ordnen Sie die Anwendungsfälle Ihrer App Teams Plattformfunktionen zu.](../concepts/design/map-use-cases.md)
-1. [Bestimmen Sie die Einstiegspunkte Ihrer App.](../concepts/extensibility-points.md) Ist dies für den persönlichen Gebrauch, die Zusammenarbeit oder beides?
+1. Ordnen Sie die [Anwendungsfälle Ihrer App Teams Plattformfunktionen zu.](../concepts/design/map-use-cases.md)
+1. [Bestimmen Sie die Einstiegspunkte Ihrer App](../concepts/extensibility-points.md). Ist es für den persönlichen Gebrauch, Zusammenarbeit oder beides?
 
 ## <a name="understand-sharepoint-requirements-and-options"></a>Verstehen SharePoint Anforderungen und Optionen
 
 ***Integrationsszenarien**: SharePoint*
 
-Um eine vorhandene SharePoint [als](https://docs.microsoft.com/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites) Registerkarte Teams zu integrieren, müssen Sie Folgendes berücksichtigen:
+Um eine vorhandene [SharePoint Seite](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites) als Teams Registerkarte zu integrieren, müssen Sie Folgendes berücksichtigen:
 
-* Es muss eine moderne *SharePoint* sein.
-* Es werden nur persönliche Registerkarten unterstützt. Sie können Ihre Seite nicht als Kanalregisterkarte integrieren.
+* Es muss eine *moderne* SharePoint Online-Seite sein.
+* Es werden nur persönliche Registerkarten unterstützt. Sie können Ihre Seite nicht als Kanal-Registerkarte integrieren.
 
-Alternativ können Sie mithilfe der Teams eine [Registerkarte SharePoint-Framework.](https://docs.microsoft.com/sharepoint/dev/spfx/integrate-with-teams-introduction)
+Alternativ können Sie eine Teams Registerkarte [mit dem SharePoint-Framework](/sharepoint/dev/spfx/integrate-with-teams-introduction)erstellen.
 
-## <a name="aim-towards-multi-tenancy"></a>Ziel von Mehr-Mandanz
+## <a name="aim-towards-multi-tenancy"></a>Ziel für Multi-Tenancy
 
-***Integrationsszenarien:** Eigenständige Apps, Apps für die Zusammenarbeit, SharePoint*
+***Integrationsszenarien**: Eigenständige Apps, Collaboration-Apps, SharePoint*
 
-Wenn Ihre App von mehreren Organisationen verwendet wird, sollten Sie das Mehr-Mandanten-Hosting in Betracht ziehen, das Ihr Produkt skalierbar macht und die Verteilung erheblich vereinfacht.
+Wenn Ihre App von mehreren Organisationen verwendet wird, sollten Sie ein mehrinstanzenfähiges Hosting in Betracht ziehen, das Ihr Produkt skalierbar macht und die Verteilung erheblich vereinfacht.
 
-## <a name="review-your-apis"></a>Überprüfen Ihrer APIs
+## <a name="review-your-apis"></a>Überprüfen Sie Ihre APIs
 
-***Integrationsszenarien:** Eigenständige Apps, Apps für die Zusammenarbeit*
+***Integrationsszenarien**: Eigenständige Apps, Collaboration-Apps*
 
-Sie müssen sicherstellen, dass die vorhandenen APIs und Datenstrukturen Ihrer App die App bei der Integration in Teams. Um die Unterstützung zu erweitern, müssen Sie die APIs und Datenstrukturen um kontextbezogene Informationen zu Teams für die [Identitätszuordnung,](../concepts/authentication/configure-identity-provider.md)die Unterstützung von [DeepLinks](../concepts/build-and-test/deep-links.md)und die Integration von Microsoft [Graph](https://docs.microsoft.com/graph/teams-concept-overview).
+Sie müssen die vorhandenen APIs und Datenstrukturen Ihrer App bei der Integration in Teams unterstützen. Um die Unterstützung zu erweitern, müssen Sie die APIs und Datenstrukturen um kontextbezogene Informationen über Teams für [Identitätszuordnung,](../concepts/authentication/configure-identity-provider.md) [Deeplink-Unterstützung](../concepts/build-and-test/deep-links.md)und [DieIntegration von Microsoft Graph](/graph/teams-concept-overview)erweitern.
 
-Erfahren Sie mehr über das Abrufen des Kontexts für Teams [Oder](../tabs/how-to/access-teams-context.md) [Bot](../bots/how-to/get-teams-context.md).
+Erfahren Sie mehr über das Abrufen von Kontext für Ihre Teams [Registerkarte](../tabs/how-to/access-teams-context.md) oder [Bot](../bots/how-to/get-teams-context.md).
 
 ## <a name="understand-authentication-options"></a>Verstehen von Authentifizierungsoptionen
 
-***Integrationsszenarien:** Eigenständige Apps, Apps für die Zusammenarbeit, SharePoint*
+***Integrationsszenarien**: Eigenständige Apps, Collaboration-Apps, SharePoint*
 
-Azure Active Directory (AD) ist der Identitätsanbieter für Teams. Wenn Ihre App einen anderen Identitätsanbieter verwendet, müssen Sie entweder eine Identitätszuordnungsübung oder azure AD kombinieren.
+Azure Active Directory (AD) ist der Identitätsanbieter für Teams. Wenn Ihre App einen anderen Identitätsanbieter verwendet, müssen Sie entweder eine Identitätszuordnungsübung durchführen oder mit Azure AD kombinieren.
 
-Teams verfügt über Mechanismen für einmaliges Anmelden (Single Sign-On, SSO) mit Azure AD für Drittanbieter-Apps. Darüber hinaus enthält sie Anleitungen für Authentifizierungsflüsse zu anderen Identitätsanbietern mithilfe von Standards wie OAuth und Open ID Verbinden, bekannt als OIDC.
+Teams verfügt über Single Sign-On(SSO)-Mechanismen mit Azure AD für Drittanbieter-Apps. Es bietet auch die Anleitung für Authentifizierungsflüsse an andere Identitätsanbieter, die Standards wie OAuth und Open ID Verbinden verwenden, die als OIDC bezeichnet werden.
 
-Für SharePoint Seiten können Sie nur SSO verwenden und keine weitere Azure AD-ID hinzufügen, wenn SSO für eine andere App verwendet werden soll, da die ID die SharePoint ist.
+Für SharePoint Seiten können Sie SSO nur verwenden und keine weitere Azure AD-ID hinzufügen, wenn SSO für eine andere App funktionieren soll, da die ID die SharePoint-App ist.
 
-Erfahren Sie mehr über [die Authentifizierung in Teams.](../concepts/authentication/authentication.md)
+Weitere Informationen [zur Authentifizierung finden Sie in Teams](../concepts/authentication/authentication.md).
 
-## <a name="follow-teams-design-guidelines"></a>Befolgen Teams Entwurfsrichtlinien
+## <a name="follow-teams-design-guidelines"></a>Befolgen Sie Teams Designrichtlinien
 
-***Integrationsszenarien:** Eigenständige Apps, Apps für die Zusammenarbeit*
+***Integrationsszenarien**: Eigenständige Apps, Collaboration-Apps*
 
-Befolgen Sie die [Teams,](../concepts/design/understand-use-cases.md) damit Ihre App für die Anwendung nativ Teams. Sie können einen vorhandenen App-Inhalt nicht auf eine registerkarte Teams migrieren. Weitere Informationen zum App-Design finden Sie unter [Fluent Design System](https://fluentsite.z22.web.core.windows.net/).
+Befolgen Sie [Teams Entwurfsrichtlinien,](../concepts/design/understand-use-cases.md) um Ihre App auf Teams zu sonnieren. Sie können einen vorhandenen App-Inhalt nicht auf eine Teams-Registerkarte migrieren. Weitere Informationen zum App-Design finden Sie unter [Fluent Design System](https://fluentsite.z22.web.core.windows.net/).
 
-## <a name="maximize-deep-linking"></a>Maximieren der tiefen Verknüpfung
+## <a name="maximize-deep-linking"></a>Maximierung der tiefen Verknüpfung
 
-***Integrationsszenarien:** Eigenständige Apps, Apps für die Zusammenarbeit, SharePoint*
+***Integrationsszenarien**: Eigenständige Apps, Collaboration-Apps, SharePoint*
 
-Sie können Links zu Informationen und Features innerhalb von Teams. Verwenden [Sie tiefe Links,](../concepts/build-and-test/deep-links.md) um Ihre App mit Teams zu verknüpfen, wenn sie mehrere Teile einer App verbinden, um eine nativere Teams zu ermöglichen.
+Sie können Links zu Informationen und Features innerhalb Teams erstellen. Verwenden Sie [Deep Links,](../concepts/build-and-test/deep-links.md) um Ihre App mit Teams zu verknüpfen, da sie mehrere Teile einer App für eine nativere Teams-Erfahrung miteinander verknüpfen.
 
-## <a name="be-smart-when-messaging-users"></a>Smart sein, wenn Messagingbenutzer
+## <a name="be-smart-when-messaging-users"></a>Seien Sie intelligent, wenn Sie Messaging-Benutzer
 
-***Integrationsszenarien:** Eigenständige Apps, Apps für die Zusammenarbeit, SharePoint*
+***Integrationsszenarien**: Eigenständige Apps, Collaboration-Apps, SharePoint*
 
-Verwenden Sie einen [Bot](../bots/what-are-bots.md) in Teams App für Unterhaltungen mit mehreren Threads, da er mehr Flexibilität bietet als ein [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+Verwenden Sie einen [Bot](../bots/what-are-bots.md) in Ihrer Teams-App für Multithread-Gespräche, da er mehr Flexibilität bietet als ein [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-Mit Bots können Sie auch proaktive Nachrichten **an** einzelne Benutzer oder Kanäle senden. Bei den proaktiven Nachrichten handelt es sich um nicht gesendete Nachrichten, die durch ein externes Ereignis ausgelöst werden, und nicht um eine Nachricht, die an einen Bot gesendet wird. Beispielsweise sendet Ihr Bot eine Willkommensnachricht, wenn er installiert ist oder ein neuer Benutzer einem Kanal beitritt. 
+Bots ermöglichen es Ihnen auch, **proaktive Nachrichten** an einzelne Benutzer oder Kanäle zu senden. Die proaktiven Nachrichten sind nicht aufgeforderte Nachrichten, die durch ein externes Ereignis ausgelöst werden, und keine Nachricht, die an einen Bot gesendet wird. Beispielsweise sendet Ihr Bot eine Willkommensnachricht, wenn er installiert ist oder ein neuer Benutzer einem Kanal beitritt. 
 
-Das Senden proaktiver Nachrichten erfordert Teams-spezifischen Bezeichner. Sie können die Informationen erfassen, indem [Sie](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)Dienstplan- oder Benutzerprofildaten [abrufen,](../bots/how-to/conversations/subscribe-to-conversation-events.md)Unterhaltungsereignisse abonnieren oder [Microsoft Graph.](https://docs.microsoft.com/graph/teams-proactive-messaging)
+Das Senden proaktiver Nachrichten erfordert Teams-spezifische Bezeichner. Sie können die Informationen erfassen, indem [Sie Dienstplan- oder Benutzerprofildaten abrufen,](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile) [Unterhaltungsereignisse abonnieren](../bots/how-to/conversations/subscribe-to-conversation-events.md)oder [Microsoft Graph](/graph/teams-proactive-messaging)verwenden.
 
-Spamen Sie Benutzer nicht mit übermäßigen Nachrichten. Wenn die Teams unterstützt, können die Benutzer Benachrichtigungseinstellungen für Ihre App konfigurieren.   
-Es folgt ein Beispiel für eine Benachrichtigung: Senden Sie mir keine **nicht gesendeten Nachrichten.**
+Spam-Benutzer mit übermäßigen Nachrichten. Wenn die Teams-Funktion dies unterstützt, können die Benutzer Benachrichtigungseinstellungen für Ihre App konfigurieren.   
+Im Folgenden finden Sie ein Beispiel für eine Benachrichtigung: **Senden Sie mir keine unaufgeforderten Nachrichten**.
 
-## <a name="use-sharepoint-for-file-and-data-storage"></a>Verwenden SharePoint für Datei- und Datenspeicherung
+## <a name="use-sharepoint-for-file-and-data-storage"></a>Verwenden SharePoint für die Datei- und Datenspeicherung
 
-***Integrationsszenarien:** Eigenständige Apps, Apps für die Zusammenarbeit, SharePoint Seiten*
+***Integrationsszenarien:** Eigenständige Apps, Collaboration-Apps SharePoint Seiten*
 
-Wenn ein Team erstellt wird, wird [SharePoint websitesammlung](https://docs.microsoft.com/microsoftteams/sharepoint-onedrive-interact) bereitgestellt, um Datei- und Datenspeicherung für dieses Team zu unterstützen. Ihre App muss dieses Feature nutzen, wenn sie mit Dateien interagiert. Verwenden Sie die Websitesammlung zum Speichern von Rohdaten in SharePoint Listen und Excel.
+Wenn ein Team erstellt wird, wird auch eine [SharePoint Websitesammlung](/microsoftteams/sharepoint-onedrive-interact) bereitgestellt, um die Datei- und Datenspeicherung für dieses Team zu unterstützen. Ihre App muss diese Funktion nutzen, wenn sie mit Dateien interagiert. Verwenden Sie die Websitesammlung, um Rohdaten in SharePoint Listen und Excel zu speichern.
 
 ## <a name="see-also"></a>Siehe auch
 

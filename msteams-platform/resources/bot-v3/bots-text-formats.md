@@ -1,88 +1,88 @@
 ---
 title: Unterstützte Textformatierung in Unterhaltungen
-description: Beschreibt die Unterstützung der Textformatierung in Botunterhaltungen
+description: Beschreibt die Unterstützung der Textformatierung in Bot-Unterhaltungen
 keywords: Bots Unterhaltungen Messaging
 ms.topic: how-to
 localization_priority: Normal
 ms.date: 03/29/2018
-ms.openlocfilehash: c43ce8697e5b3b2748416c3382ad6e34feb42d2b
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: dfb91e18a2ad895ae5b48c905046a22449304fc6
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101821"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566747"
 ---
 # <a name="formatting-bot-messages"></a>Formatierung von Bot-Mitteilungen
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Sie können die optionale Eigenschaft festlegen, um zu steuern, wie der Textinhalt Ihrer Nachricht [`TextFormat`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) gerendert wird.
+Sie können die optionale [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) Eigenschaft festlegen, um zu steuern, wie der Textinhalt Ihrer Nachricht gerendert wird.
 
 Microsoft Teams unterstützt die folgenden Formatierungsoptionen:
 
 | TextFormat-Wert | Beschreibung |
 | --- | --- |
-| plain | Der Text sollte als Unformatierung ohne Formatierung behandelt werden |
-| MARKDOWN | Der Text sollte als Markdownformatierung behandelt und entsprechend auf dem Kanal gerendert werden. weitere [Informationen finden Sie unter Formatieren von Textinhalten](#formatting-text-content) für unterstützte Formatvorlagen |
-| xml | Der Text ist einfaches XML-Markup. weitere [Informationen finden Sie unter Formatieren von Textinhalten](#formatting-text-content) für unterstützte Formatvorlagen |
+| einfach | Der Text sollte als Rohtext behandelt werden, ohne dass eine Formatierung angewendet wird. |
+| MARKDOWN | Der Text sollte als Markdown-Formatierung behandelt und entsprechend auf dem Kanal gerendert werden. Siehe [Formatieren von Textinhalten](#formatting-text-content) für unterstützte Formatvorlagen. |
+| Xml | Der Text ist ein einfaches XML-Markup; Siehe [Formatieren von Textinhalten](#formatting-text-content) für unterstützte Formatvorlagen. |
 
 ## <a name="formatting-text-content"></a>Formatieren von Textinhalten
 
-Microsoft Teams unterstützt eine Teilmenge der Formatierungstags Markdown und XML (HTML).
+Microsoft Teams unterstützt eine Teilmenge von Markdown- und XML-Formatierungstags (HTML).
 
 Derzeit gelten die folgenden Einschränkungen:
 
-* Nur-Text-Nachrichten unterstützen keine Tabellenformatierung
+* Nur Textnachrichten unterstützen keine Tabellenformatierung
 
-Informationen zum Formatieren von Karten finden Sie unter [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md).
+Informationen zum Formatieren in Karten finden Sie [unter Teams Kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md).
 
 ### <a name="cross-platform-support"></a>Plattformübergreifende Unterstützung
 
-Beachten Sie, dass einige Formatvorlagen derzeit nicht auf allen Plattformen unterstützt werden, um sicherzustellen, dass Ihre Formatierung auf allen plattformen funktioniert, die von Microsoft Teams unterstützt werden.
+Um sicherzustellen, dass Ihre Formatierung auf allen Plattformen funktioniert, die von Microsoft Teams unterstützt werden, beachten Sie, dass einige Formatvorlagen derzeit nicht auf allen Plattformen unterstützt werden.
 
-| Format                     | Nur-Text-Nachrichten | Karten (nur XML) |
+| Format                     | Nur Textnachrichten | Karten (nur XML) |
 |---------------------------|--------------------|------------------|
 | bold                      | ✔                  | ✖                |
 | italic                    | ✔                  | ✔                |
-| Kopfzeile (Ebenen 1 &ndash; 3) | ✖                  | ✔                |
-| strikethrough             | ✖                  | ✔                |
-| horizontale Regel           | ✖                  | ✖                |
-| Ungeordnete Liste            | ✖                  | ✔                |
+| Header (Ebenen 1 &ndash; 3) | ✖                  | ✔                |
+| Durchgestrichen             | ✖                  | ✔                |
+| Horizontale Regel           | ✖                  | ✖                |
+| ungeordnete Liste            | ✖                  | ✔                |
 | geordnete Liste              | ✖                  | ✔                |
 | vorformatierter Text         | ✔                  | ✔                |
 | blockquote                | ✔                  | ✔                |
 | Link                 | ✔                  | ✔                |
 | Bildlink                | ✔                  | ✖                |
 
-### <a name="support-by-individual-platform"></a>Unterstützung durch einzelne Plattform
+### <a name="support-by-individual-platform"></a>Unterstützung durch individuelle Plattform
 
 Die Unterstützung für die Textformatierung variiert je nach Nachrichtentyp und Plattform.
 
-#### <a name="text-only-messages"></a>Nur-Text-Nachrichten
+#### <a name="text-only-messages"></a>Nur Textnachrichten
 
 | Format                     | Desktop | iOS | Android |
 |---------------------------|---------|-----|---------|
 | bold                      | ✔       | ✔   | ✔       |
 | italic                    | ✔       | ✔   | ✔       |
-| Kopfzeile (Ebenen 1 &ndash; 3) | ✖       | ✖   | ✖       |
-| strikethrough             | ✔       | ✔   | ✖       |
-| horizontale Regel           | ✖       | ✖   | ✖       |
-| Ungeordnete Liste            | ✔       | ✖   | ✖       |
+| Header (Ebenen 1 &ndash; 3) | ✖       | ✖   | ✖       |
+| Durchgestrichen             | ✔       | ✔   | ✖       |
+| Horizontale Regel           | ✖       | ✖   | ✖       |
+| ungeordnete Liste            | ✔       | ✖   | ✖       |
 | geordnete Liste              | ✔       | ✖   | ✖       |
 | vorformatierter Text         | ✔       | ✔   | ✔       |
 | blockquote                | ✔       | ✔   | ✔       |
 | Link                 | ✔       | ✔   | ✔       |
 | Bildlink                | ✔       | ✔   | ✔       |
 
-### <a name="examples-of-text-formatting"></a>Beispiele für die Textformatierung
+### <a name="examples-of-text-formatting"></a>Beispiele für Textformatierung
 
 | Format | Beispiel | Markdown | XML (HTML) |
 | --- | --- | --- | --- |
 | bold | **text** | `**text**` | `<strong>text</strong>` |
 | italic | *text* | `*text*` | `<em>text</em>` |
-| Kopfzeile (Ebenen 1 &ndash; 3) | **Text** | `### Text` | `<h3>Text</h3>` |
-| strikethrough | ~~text~~ | `~~text~~` | `<strike>text</strike>` |
-| Ungeordnete Liste | <ul><li>text</li><li>text</li></ul> | `* text`<br>`* text` | `<ul><li>text</li><li>text</li></ul>` |
+| Header (Ebenen 1 &ndash; 3) | **Text** | `### Text` | `<h3>Text</h3>` |
+| Durchgestrichen | ~~text~~ | `~~text~~` | `<strike>text</strike>` |
+| ungeordnete Liste | <ul><li>text</li><li>text</li></ul> | `* text`<br>`* text` | `<ul><li>text</li><li>text</li></ul>` |
 | geordnete Liste | <ol><li>text</li><li>text</li></ol> | `1. text`<br>`2. text` | `<ol><li>text</li><li>text</li></ol>` |
 | vorformatierter Text | `text` | `` `text` `` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |

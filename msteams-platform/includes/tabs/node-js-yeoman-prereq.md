@@ -1,85 +1,85 @@
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Zum Abschließen dieses Schnellstarts benötigen Sie einen Office 365 Mandanten und ein Team, das mit aktivierter Aktivierung des *Hochladens benutzerdefinierter Apps konfiguriert* ist. Weitere Informationen finden Sie unter [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- Um diese Schnellstartanleitung abzuschließen, benötigen Sie einen Office 365 Mandanten und ein Team, das mit *aktiviertem Hochladen benutzerdefinierter Apps* zulassen konfiguriert ist. Weitere Informationen finden Sie unter [Vorbereiten des Office 365 Mandanten](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
-  - Wenn Sie derzeit kein Office 365 haben, können Sie sich über das Office 365 für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden. Weitere [Informationen finden Sie unter Welcome to the Office 365 Developer Program](https://docs.microsoft.com/office/developer-program/microsoft-365-developer-program).
+  - Wenn Sie derzeit kein Office 365 Konto haben, können Sie sich über das Office 365 Developer Program für ein kostenloses Abonnement anmelden. Das Abonnement bleibt aktiv, solange Sie es für die laufende Entwicklung verwenden. Siehe [Willkommen im Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 
 Darüber hinaus erfordert dieses Projekt, dass Sie folgendes in Ihrer Entwicklungsumgebung installiert haben:
 
-- Beliebiger Texteditor oder IDE. Sie können die Visual Studio Code [kostenlos](https://code.visualstudio.com/download) installieren und verwenden.
+- Jeder Texteditor oder IDE. Sie können [Visual Studio Code](https://code.visualstudio.com/download) kostenlos installieren und verwenden.
 
-- [Node.js/npm](https://nodejs.org/en/). Sie sollten die neueste LTS-Version verwenden. Der Knoten Paket-Manager (npm) wird mit der Installation von Node.js.
+- [Node.js/npm](https://nodejs.org/en/). Sie sollten die neueste LTS-Version verwenden. Der Knoten Paket-Manager (npm) wird mit der Installation von Node.js in Ihr System installiert.
 
-- Nachdem Sie die Node.js installiert haben, installieren Sie die [Pakete Yeoman](https://yeoman.io/) und [gulp-cli,](https://www.npmjs.com/package/gulp-cli) indem Sie folgendes in die Eingabeaufforderung eingeben:
+- Nachdem Sie Node.js erfolgreich installiert haben, installieren Sie die [Pakete Yeoman](https://yeoman.io/) und [gulp-cli,](https://www.npmjs.com/package/gulp-cli) indem Sie in Ihrer Eingabeaufforderung Folgendes eingeben:
 
-```bash
-npm install yo gulp-cli --global
-```
+    ```bash
+    npm install yo gulp-cli --global
+    ```
 
-- Installieren Sie den Microsoft Teams-Apps-Generator, indem Sie in der Eingabeaufforderung Folgendes eingeben:
+- Installieren Sie den Microsoft Teams Apps-Generator, indem Sie in der Eingabeaufforderung Folgendes eingeben:
 
-```bash
-npm install generator-teams --global
-```
+    ```bash
+    npm install generator-teams --global
+    ```
 
-## <a name="generate-your-project"></a>Generieren Ihres Projekts
+## <a name="generate-your-project"></a>Generieren Sie Ihr Projekt
 
 - Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis für Ihr Registerkartenprojekt.
 
-- Navigieren Sie zum Starten des Generators zu Ihrem neuen Verzeichnis, und geben Sie den folgenden Befehl ein:
+- Um den Generator zu starten, navigieren Sie zu Ihrem neuen Verzeichnis und geben Sie den folgenden Befehl ein:
 
-```bash
-yo teams
-```
+    ```bash
+    yo teams
+    ```
 
-- Als Nächstes stellen Sie eine Reihe von Werten zur Verfügung, die in der Datei ihrer Anwendungmanifest.js **werden:**
+- Als Nächstes stellen Sie eine Reihe von Werten bereit, die in der **manifest.js** Ihrer Anwendung verwendet werden:
 
-![Screenshot zum Öffnen des Generators](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+    ![Generator-Eröffnungs-Screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
-**Wie ist Ihr Lösungsname?**
+    **Wie lautet Ihr Lösungsname?**
 
-Dies ist Ihr Projektname. Sie können den vorgeschlagenen Namen akzeptieren, indem Sie die EINGABETASTE drücken.
+    Dies ist Ihr Projektname. Sie können den vorgeschlagenen Namen akzeptieren, indem Sie die Eingabetaste drücken.
 
-**Wohin möchten Sie die Daten verschieben?**
+    **Wohin möchten Sie die Daten verschieben?**
 
-Sie befinden sich derzeit im Projektverzeichnis. Drücken Sie die EINGABETASTE.
+    Sie befinden sich derzeit in Ihrem Projektverzeichnis. Drücken Sie die Eingabetaste.
 
-**Titel Ihres Microsoft Teams-App-Projekts?**
+    **Titel Ihres Microsoft Teams App-Projekts?**
 
-Dies ist der Name Ihres App-Pakets und wird im App-Manifest und in der Beschreibung verwendet.
+    Dies ist Ihr App-Paketname und wird im App-Manifest und in der Beschreibung verwendet.
 
-**Ihr (Firmen)-Name? (max. 32 Zeichen)**
+    **Ihr (Firmen-)Name? (max. 32 Zeichen)**
 
-Ihr Firmenname wird im App-Manifest verwendet.
+    Ihr Firmenname wird im App-Manifest verwendet.
 
-<br>**Welche Manifestversion möchten Sie verwenden?**
+    **Welche Manifestversion möchten Sie verwenden?**
 
-Wählen Sie das Standardschema aus.
+    Wählen Sie das Standardschema aus.
 
-**Schnelles Gerüst? (Y/n)**
+    **Schnelles Gerüst? (Y/n)**
 
-Der Standardwert ist Ja. Geben **Sie n** ein, um Ihre Microsoft Partner-ID ein eingeben.
+    Der Standardwert ist yes; Geben Sie **n** ein, um Ihre Microsoft-Partner-ID einzugeben.
 
-**Geben Sie Ihre Microsoft Partner-ID ein, wenn Sie über eine verfügen? (Leer lassen, um zu überspringen)**
+    **Geben Sie Ihre Microsoft-Partner-ID ein, wenn Sie eine haben? (Leer lassen, um zu überspringen)**
 
-Dieses Feld ist nicht erforderlich und sollte nur verwendet werden, wenn Sie bereits Teil des [Microsoft Partner Network sind.](https://partner.microsoft.com)
+    Dieses Feld ist nicht erforderlich und sollte nur verwendet werden, wenn Sie bereits Teil des [Microsoft Partner Network](https://partner.microsoft.com)sind.
 
-**Was möchten Sie Ihrem Projekt hinzufügen?**
+    **Was möchten Sie Ihrem Projekt hinzufügen?**
 
-Wählen Sie ( &ast; ) Eine Registerkarte aus.
+    Wählen Sie ( &ast; ) Eine Registerkarte aus.
 
-**Die URL, in der Sie diese Lösung hosten?**
+    **Die URL, unter der Sie diese Lösung hosten werden?**
 
-Standardmäßig schlägt der Generator eine Azure-Website-URL vor. Sie testen Ihre App nur lokal, daher ist für diesen Schnellstart keine gültige URL erforderlich.
+    Standardmäßig schlägt der Generator eine Azure-Website-URL vor. Sie testen Ihre App nur lokal, daher ist keine gültige URL erforderlich, um diese Schnellstartanleitung abzuschließen.
 
-**Möchten Sie das Testframework und die ersten Tests enthalten? (y/N)**
+    **Möchten Sie Testframework und erste Tests einschließen? (y/N)**
 
-Wählen **Sie aus,** kein Testframework für dieses Projekt zu enthalten. Der Standardwert ist Ja. Geben **Sie n** ein.
+    Wählen Sie **aus,** dass kein Testframework für dieses Projekt enthalten sein soll. Der Standardwert ist yes; geben Sie **n** ein.
 
-**Möchten Sie Azure Applications Insights für telemetrie verwenden? (y/N)**
+    **Möchten Sie Azure Applications Insights für Telemetriedaten verwenden? (y/N)**
 
-Wählen **Sie aus,** dass [Azure Application Insights nicht enthalten ist.](/azure-docs/articles/azure-monitor/app/app-insights-overview.md) Der Standardwert ist nein. Geben **Sie n** ein.
+    Wählen Sie **aus,** [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md)nicht einzuschließen. Der Standardwert ist nein; geben Sie **n** ein.
 
-**Standardregisterkartenname (max. 16 Zeichen)?**
+    **Standard-Tabname (max. 16 Zeichen)?**
 
-Nennen Sie Ihre Registerkarte. Dieser Registerkartenname wird im gesamten Projekt als Datei-/URL-Pfadkomponente verwendet.
+    Benennen Sie Ihre Registerkarte. Dieser Registerkartenname wird im gesamten Projekt als Datei-/URL-Pfadkomponente verwendet.

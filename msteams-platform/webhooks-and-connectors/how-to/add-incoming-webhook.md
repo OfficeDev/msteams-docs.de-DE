@@ -2,16 +2,16 @@
 title: Senden externer Anfragen an Microsoft Teams mit eingehenden Webhooks
 author: laujan
 description: Hinzufügen eines eingehenden Webhooks zur Teams-App
-keywords: Teams tabs outgoing webhook
+keywords: Teams Tabs ausgehenden Webhook
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: bc4d768751d34ccf305ef99e126159123a83ef3f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: bb2306cb57c069d3bed06702495da2775694643a
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018418"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566817"
 ---
 # <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>Senden externer Anfragen an Microsoft Teams mit eingehenden Webhooks
 
@@ -27,7 +27,7 @@ Bei eingehenden Webhooks handelt es sich um eine spezielle Art von Connectors in
 
 | Feature | Beschreibung |
 | ------- | ----------- |
-|Konfigurationsbereich|Eingehende Webhooks werden auf Kanalebene festgelegt und konfiguriert (im Gegensatz zu ausgehenden Webhooks, die auf Teamebene festgelegt und konfiguriert werden).|
+|Konfigurationsbereich|Eingehende Webhooks werden auf Kanalebene konfiguriert und konfiguriert. Beispielsweise werden ausgehende Webhooks auf Teamebene konfiguriert und konfiguriert.|
 |Sichere Ressourcendefinitionen|Nachrichten werden als JSON-Nutzlast formatiert. Diese deklarative Nachrichtenstruktur verhindert die Einschleusung von bösartigem Code, da auf dem Client keine Codeausführung stattfindet.|
 |Unterstützung für Aktion erfordernde Nachrichten|Wenn Sie festlegen, dass Nachrichten als Karten gesendet werden sollen, müssen Sie das Format für **Aktion erfordernde Nachrichtenkarten** verwenden. Aktion erfordernde Nachrichtenkarten werden in allen Office 365-Gruppen einschließlich Microsoft Teams unterstützt. Hier sind Links zur [Referenz zu Legacy-Nachrichtenkarten mit Aktionen](/outlook/actionable-messages/message-card-reference)und zum [Nachrichtenkarten-Playground](https://messagecardplayground.azurewebsites.net).|
 |Unabhängige HTTPS-Messaging-Unterstützung| Karten sind eine großartige Möglichkeit, Informationen in einer übersichtlichen und einheitlichen Weise darzustellen. Jedes Tool oder Framework, das HTTPS-POST-Anforderungen senden kann, kann über einen eingehenden Webhook Nachrichten an Microsoft Teams senden.|
@@ -41,6 +41,8 @@ Bei eingehenden Webhooks handelt es sich um eine spezielle Art von Connectors in
 > [!Important]  
 > Wenn in Ihrem Team unter **Einstellungen** => **Mitgliederberechtigungen** => **Mitgliedern das Erstellen, Aktualisieren und Entfernen von Connectors erlauben** ausgewählt ist, kann jedes Teammitglied einen Connector hinzufügen, ändern oder löschen.
 
+**So fügen Sie einen eingehenden Webhook hinzu**
+
 1. Navigieren Sie zu dem Kanal, dem Sie den Webhook hinzufügen möchten, und wählen Sie (&#8226;&#8226;&#8226;) *Weitere Optionen* in der oberen Navigationsleiste aus.
 1. Suchen Sie im Dropdownmenü **Connectors** nach **Eingehender Webhook**.
 1. Wählen Sie die Schaltfläche **Konfigurieren** aus, geben Sie einen Namen ein, und laden Sie optional einen Avatar für Ihren Webhook hoch.
@@ -48,6 +50,8 @@ Bei eingehenden Webhooks handelt es sich um eine spezielle Art von Connectors in
 1. Klicken Sie auf die Schaltfläche **Fertig**. Der Webhook ist nun im Teamkanal verfügbar.
 
 ## <a name="remove-an-incoming-webhook-from-a-teams-channel"></a>Entfernen eines eingehenden Webhooks aus einem Teams-Kanal
+
+**So entfernen Sie einen eingehenden Webhook**
 
 1. Navigieren Sie zu dem Kanal, dem der Webhook hinzugefügt wurde, und wählen Sie (&#8226;&#8226;&#8226;) *Weitere Optionen* in der oberen Navigationsleiste aus.
 1. Wählen Sie im Dropdownmenü die Option **Connectors** aus.
@@ -65,6 +69,6 @@ Sie haben drei Möglichkeiten, Ihren eingehenden Webhook zu verteilen:
 * Fügen Sie eine Konfigurationsseite hinzu, und verpacken Sie Ihren eingehenden Webhook in einen [O365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md).
 * Verpacken und veröffentlichen Sie Ihren Connector als Teil Ihrer [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md)-Übermittlung.
 
-## <a name="learn-more"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-* [Senden von Nachrichten an Connectors und Webhooks](~/webhooks-and-connectors/how-to/connectors-using.md)
+[Senden von Nachrichten an Connectors und Webhooks](~/webhooks-and-connectors/how-to/connectors-using.md)
