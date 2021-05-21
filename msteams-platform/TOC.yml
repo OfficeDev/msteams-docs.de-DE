@@ -61,8 +61,12 @@
       href: samples/app-templates.md
     - name: Produktionsfertige Shifts-Connectors
       href: samples/shifts-wfm-connectors.md
-    - name: Installieren von Moodle LMS
-      href: resources/moodleInstructions.md
+    - name: Moodle LMS
+      items:
+        - name: Übersicht
+          href: resources/moodle-overview.md
+        - name: Installieren von Moodle LMS
+          href: resources/moodleInstructions.md
     - name: Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
       href: concepts/build-and-test/share-to-teams.md
     - name: Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint
