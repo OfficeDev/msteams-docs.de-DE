@@ -1,9 +1,9 @@
 ---
 title: Initiieren von Aktionen mit Messagingerweiterungen
-description: Erstellen aktionsbasierter Messagingerweiterungen, damit Benutzer externe Dienste auslösen können
+description: Erstellen von aktionsbasierten Messagingerweiterungen, damit Benutzer externe Dienste auslösen können
 localization_priority: Normal
 ms.topic: how-to
-keywords: Teams Messaging-Erweiterungen Messaging-Erweiterungen Suche
+keywords: Suche nach Messagingerweiterungen für Teams-Messagingerweiterungen
 ms.openlocfilehash: bfb3295726c355164f080c15e3759ea36a99d914
 ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
@@ -15,19 +15,19 @@ ms.locfileid: "52566740"
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-Aktionsbasierte Messagingerweiterungen ermöglichen es Benutzern, Aktionen in externen Diensten auszulösen, während sie sich innerhalb Teams.
+Aktionsbasierte Messagingerweiterungen ermöglichen Benutzern das Auslösen von Aktionen in externen Diensten innerhalb Teams.
 
-![Beispiel für Messaging-Erweiterungskarte](~/assets/images/compose-extensions/ceexample.png)
+![Beispiel für Eine Messaging-Erweiterungskarte](~/assets/images/compose-extensions/ceexample.png)
 
-In den folgenden Abschnitten wird beschrieben, wie Sie dies tun.
+In den folgenden Abschnitten wird dies beschrieben.
 
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
-### <a name="action-type-message-extensions"></a>Aktionstyp-Nachrichtenerweiterungen
+### <a name="action-type-message-extensions"></a>Nachrichtenerweiterungen des Aktionstyps
 
-Um Aktionen aus einer Messagingerweiterung zu initiieren, legen Sie den `type` Parameter auf `action` . Im Folgenden finden Sie ein Beispiel für ein Manifest mit einem Such- und einem Create-Befehl. Eine einzelne Messagingerweiterung kann bis zu 10 verschiedene Befehle haben. Dies kann sowohl mehrere Such- als auch mehrere aktionsbasierte Befehle umfassen.
+Legen Sie zum Initiieren von Aktionen aus einer Messagingerweiterung den `type` Parameter auf . `action` Im Folgenden finden Sie ein Beispiel für ein Manifest mit einem Such- und einem Create-Befehl. Eine einzelne Messagingerweiterung kann über bis zu 10 verschiedene Befehle verfügen. Dies kann sowohl mehrere Suchbefehle als auch mehrere aktionsbasierte Befehle umfassen.
 
-#### <a name="complete-app-manifest-example"></a>Vollständiges App-Manifestbeispiel
+#### <a name="complete-app-manifest-example"></a>Vollständiges Beispiel für das App-Manifest
 
 ```json
 {
@@ -130,11 +130,11 @@ Um Aktionen aus einer Messagingerweiterung zu initiieren, legen Sie den `type` P
 
 ### <a name="initiate-actions-from-messages"></a>Initiieren von Aktionen aus Nachrichten
 
-Zusätzlich zum Initiieren von Aktionen aus dem Nachrichtenbereich zum Verfassen können Sie auch die Messagingerweiterung verwenden, um eine Aktion aus einer Nachricht zu initiieren. Auf diese Weise können Sie den Inhalt der Nachricht zur Verarbeitung an Ihren Bot senden und optional auf diese Nachricht mit einer Antwort mit der unter [Antworten auf Senden](#responding-to-submit)beschriebenen Methode antworten. Die Antwort wird als Antwort auf die Nachricht eingefügt, die Ihre Benutzer vor dem Absenden bearbeiten können. Ihre Benutzer können über das Überlaufmenü auf Ihre Messagingerweiterung zugreifen `...` und dann wie in der folgenden Abbildung `Take action` auswählen:
+Zusätzlich zum Initiieren von Aktionen aus dem Bereich zum Verfassen von Nachrichten können Sie auch Ihre Messagingerweiterung verwenden, um eine Aktion aus einer Nachricht zu initiieren. Auf diese Weise können Sie den Inhalt der Nachricht zur Verarbeitung an Ihren Bot senden und optional auf diese Nachricht mit einer Antwort antworten, indem Sie die unter Antworten auf Absenden beschriebene Methode [verwenden.](#responding-to-submit) Die Antwort wird als Antwort auf die Nachricht eingefügt, die Ihre Benutzer vor der Übermittlung bearbeiten können. Ihre Benutzer können über das Überlaufmenü auf Ihre Messagingerweiterung zugreifen und dann `...` wie in der folgenden Abbildung `Take action` auswählen:
 
-![Beispiel für das Anleiten einer Aktion aus einer Nachricht](~/assets/images/compose-extensions/messageextensions_messageaction.png)
+![Beispiel für das Initiieren einer Aktion aus einer Nachricht](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
-Damit Ihre Messagingerweiterung von einer Nachricht aus funktioniert, müssen Sie den `context` Parameter dem Objekt Ihrer Messagingerweiterung in Ihrem App-Manifest hinzufügen, `commands` wie im folgenden Beispiel. Gültige Zeichenfolgen für das `context` Array sind , und `"message"` `"commandBox"` `"compose"` . Der Standardwert ist `["compose", "commandBox"]`. Ausführliche Informationen zum Parameter finden Sie im Abschnitt [Befehle](#define-commands) `context` definieren.
+Damit Ihre Messagingerweiterung von einer Nachricht aus funktioniert, müssen Sie den Parameter dem Objekt Ihrer Messagingerweiterung in Ihrem App-Manifest wie im folgenden `context` `commands` Beispiel hinzufügen. Gültige Zeichenfolgen für `context` das Array sind , und `"message"` `"commandBox"` `"compose"` . Der Standardwert ist `["compose", "commandBox"]`. Vollständige Details [zum](#define-commands) Parameter finden Sie im Abschnitt Befehle `context` definieren.
 
 ```json
 "composeExtensions": [
@@ -154,7 +154,7 @@ Damit Ihre Messagingerweiterung von einer Nachricht aus funktioniert, müssen Si
 
 ```
 
-Im Folgenden finden Sie ein Beispiel für das `value` Objekt, das die Nachrichtendetails enthält, die als Teil der `composeExtension` Anforderung an Ihren Bot gesendet werden.
+Nachfolgend sehen Sie ein Beispiel für das Objekt, das die Nachrichtendetails enthält, die als Teil der Anforderung an Ihren `value` `composeExtension` Bot gesendet werden.
 
 ```json
 {
@@ -224,27 +224,27 @@ Im Folgenden finden Sie ein Beispiel für das `value` Objekt, das die Nachrichte
   ...
 ```
 
-### <a name="test-via-uploading"></a>Test über Upload
+### <a name="test-via-uploading"></a>Testen über Hochladen
 
-Sie können Ihre Messaging-Erweiterung testen, indem Sie Ihre App hochladen. Weitere Informationen finden Sie unter [Hochladen Ihrer App in einem Team](~/concepts/deploy-and-publish/apps-upload.md).
+Sie können Ihre Messagingerweiterung testen, indem Sie Ihre App hochladen. Weitere Informationen finden Sie unter [Hochladen Ihrer App in einem Team](~/concepts/deploy-and-publish/apps-upload.md).
 
-Um Ihre Messaging-Erweiterung zu öffnen, navigieren Sie zu einem Ihrer Chats oder Kanäle. Wählen Sie im Feld Verfassen die Schaltfläche **Weitere Optionen** (**&#8943;**) aus, und wählen Sie Ihre Messaging-Erweiterung aus.
+Um Ihre Messagingerweiterung zu öffnen, navigieren Sie zu ihren Chats oder Kanälen. Wählen Sie **die** Schaltfläche Weitere Optionen (**&#8943;**) im Verfassenfeld aus, und wählen Sie Ihre Messagingerweiterung aus.
 
 ## <a name="collecting-input-from-users"></a>Sammeln von Eingaben von Benutzern
 
-Es gibt drei Möglichkeiten, Informationen von einem Endbenutzer in Teams zu sammeln.
+Es gibt drei Möglichkeiten zum Sammeln von Informationen von einem Endbenutzer in Teams.
 
 ### <a name="static-parameter-list"></a>Statische Parameterliste
 
-Bei dieser Methode müssen Sie lediglich eine statische Liste von Parametern im Manifest definieren, wie oben im Befehl "erstellen To Do" gezeigt. Um diese Methode zu verwenden, stellen `fetchTask` Sie sicher, dass auf festgelegt ist `false` und dass Sie Ihre Parameter im Manifest definieren.
+Bei dieser Methode müssen Sie nur eine statische Liste von Parametern im Manifest definieren, wie oben im Befehl "Create To Do" gezeigt. Um diese Methode zu verwenden, stellen Sie sicher, dass auf festgelegt ist und Dass `fetchTask` Sie Ihre Parameter im Manifest `false` definieren.
 
-Wenn ein Benutzer einen Befehl mit statischen Parametern auswählt, generiert Teams ein Formular in einem Taskmodul mit den im Manifest definierten Parametern. Beim Schlagen wird Ein `composeExtension/submitAction` sende per Bot gesendet. Weitere Informationen zu den erwarteten Antworten finden Sie unter [Antworten zum Senden](#responding-to-submit).
+Wenn ein Benutzer einen Befehl mit statischen Parametern aus wählt, generiert Teams ein Formular in einem Aufgabenmodul mit den im Manifest definierten Parametern. Beim Drücken von Submit a `composeExtension/submitAction` wird an den Bot gesendet. Weitere Informationen zum erwarteten Satz von Antworten finden Sie unter [Responding to submit](#responding-to-submit).
 
-### <a name="dynamic-input-using-an-adaptive-card"></a>Dynamischer Eingang mit einer adaptiven Karte
+### <a name="dynamic-input-using-an-adaptive-card"></a>Dynamische Eingabe mithilfe einer adaptiven Karte
 
-Bei dieser Methode kann Ihr Dienst eine benutzerdefinierte adaptive Karte definieren, um die Endbenutzereingabe zu erfassen. Legen Sie für diesen Ansatz den `fetchTask` Parameter `true` im Manifest fest. Beachten Sie, dass, wenn Sie auf statische Parameter festlegen, `fetchTask` die für den Befehl definiert `true` sind, ignoriert werden.
+Bei dieser Methode kann Ihr Dienst eine benutzerdefinierte adaptive Karte definieren, um die Endbenutzereingaben zu erfassen. Legen Sie für diesen Ansatz den `fetchTask` Parameter im `true` Manifest auf. Beachten Sie, dass beim Festlegen auf statische Parameter, die für den Befehl `fetchTask` `true` definiert sind, ignoriert wird.
 
-Bei dieser Methode erhält Ihr Dienst ein `composeExtension/fetchTask` Ereignis und muss mit einer adaptiven kartenbasierten [Aufgabenmodulantwort](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)antworten. Im Folgenden finden Sie eine Beispielantwort mit einer adaptiven Karte:
+Bei dieser Methode erhält Ihr Dienst ein Ereignis und muss mit einer `composeExtension/fetchTask` adaptiven kartenbasierten [Aufgabenmodulantwort antworten.](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object) Nachfolgend finden Sie eine Beispielantwort mit einer adaptiven Karte:
 
 ```json
 {
@@ -289,13 +289,13 @@ Bei dieser Methode erhält Ihr Dienst ein `composeExtension/fetchTask` Ereignis 
 }
 ```
 
-Der Bot kann auch mit einer auth/config-Antwort antworten, wenn der Benutzer die Erweiterung authentifizieren oder konfigurieren muss, bevor er die Benutzereingabe erhält.
+Der Bot kann auch mit einer Authentifizierungs-/Konfigurationsantwort antworten, wenn der Benutzer die Erweiterung authentifizieren oder konfigurieren muss, bevor er die Benutzereingabe erhalten kann.
 
-### <a name="dynamic-input-using-a-web-view"></a>Dynamische Eingabe über eine Webansicht
+### <a name="dynamic-input-using-a-web-view"></a>Dynamische Eingabe mithilfe einer Webansicht
 
-Bei dieser Methode kann Ihr Dienst ein basiertes Widget anzeigen, `<iframe>` um jede benutzerdefinierte Benutzeroberfläche anzuzeigen und Benutzereingaben zu sammeln. Legen Sie für diesen Ansatz den `fetchTask` Parameter `true` im Manifest fest.
+In dieser Methode kann Ihr Dienst ein basiertes Widget anzeigen, um `<iframe>` benutzerdefinierte Benutzeroberflächen anzuzeigen und Benutzereingaben zu erfassen. Legen Sie für diesen Ansatz den `fetchTask` Parameter im `true` Manifest auf.
 
-Genau wie im adaptiven Kartenfluss wird Ihr Dienst ein Ereignis senden `fetchTask` und muss mit einer URL-basierten [Taskmodulantwort](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)antworten. Im Folgenden finden Sie eine Beispielantwort mit einer adaptiven Karte:
+Wie beim adaptiven Kartenfluss wird Ihr Dienst ein Ereignis senden und muss mit einer URL-basierten `fetchTask` [Aufgabenmodulantwort antworten.](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object) Nachfolgend finden Sie eine Beispielantwort mit einer adaptiven Karte:
 
 ```json
 {
@@ -308,11 +308,11 @@ Genau wie im adaptiven Kartenfluss wird Ihr Dienst ein Ereignis senden `fetchTas
 }
 ```
 
-### <a name="request-to-install-your-conversational-bot"></a>Anfrage zur Installation Ihres Konversationsbots
+### <a name="request-to-install-your-conversational-bot"></a>Anforderung zum Installieren des Unterhaltungsbots
 
-Wenn Ihre App auch einen Konversationsbot enthält, kann es erforderlich sein, sicherzustellen, dass Ihr Bot in der Unterhaltung installiert ist, bevor Sie Ihr Aufgabenmodul laden. Dies kann in Situationen nützlich sein, in denen Sie zusätzlichen Kontext für Ihr Aufgabenmodul abrufen müssen. Sie müssen z. B. den Dienstplan abrufen, um ein Personenauswahlsteuerelement oder die Liste der Kanäle in einem Team aufzufüllen.
+Wenn Ihre App auch einen Unterhaltungsbot enthält, muss vor dem Laden des Aufgabenmoduls möglicherweise sichergestellt werden, dass Ihr Bot in der Unterhaltung installiert ist. Dies kann in Situationen hilfreich sein, in denen Sie zusätzlichen Kontext für Ihr Aufgabenmodul erhalten müssen. Sie müssen z. B. die Liste abrufen, um ein Personenauswahlsteuerelement oder die Liste der Kanäle in einem Team auffüllen zu können.
 
-Um diesen Fluss zu erleichtern, wenn Ihre Messagingerweiterung zum ersten Mal die `composeExtension/fetchTask` Aufrufprüfung empfängt, um zu sehen, ob Ihr Bot im aktuellen Kontext installiert ist. Sie können dies erreichen, indem Sie den Abrufen von Dienstplanaufrufen versuchen, z. B. Wenn Ihr Bot nicht installiert ist, geben Sie eine Adaptive Karte mit einer Aktion zurück, die den Benutzer auffordert, Ihren Bot zu installieren. Siehe das Beispiel unten. Beachten Sie, dass der Benutzer über die Berechtigung zum Installieren von Apps an diesem Speicherort verfügt. Wenn sie dies nicht können, wird ihnen eine Meldung angezeigt, in der sie aufgefordert werden, sich an ihren Administrator zu wenden.
+Um diesen Fluss zu erleichtern, erhält Ihre Messagingerweiterung zuerst die Aufrufüberprüfung, um zu sehen, ob Ihr `composeExtension/fetchTask` Bot im aktuellen Kontext installiert ist. Sie können dies erreichen, indem Sie den Aufruf des Abrufplans ausführen, z. B. wenn Ihr Bot nicht installiert ist, geben Sie eine adaptive Karte mit einer Aktion zurück, die den Benutzer zum Installieren des Bots anfordert Siehe das folgende Beispiel. Beachten Sie, dass der Benutzer über die Berechtigung zum Installieren von Apps an diesem Speicherort verfügen muss. Wenn dies nicht möglich ist, wird ihnen eine Meldung angezeigt, in der sie aufgefordert werden, sich an ihren Administrator zu wenden.
 
 Hier ist ein Beispiel für die Antwort:
 
@@ -340,7 +340,7 @@ Hier ist ein Beispiel für die Antwort:
 }
 ```
 
-Sobald der Benutzer die Installation abgeschlossen hat, erhält Ihr Bot eine weitere Aufrufnachricht mit `name = composeExtension/submitAction` . und `value.data.msteams.justInTimeInstall = true` .
+Sobald der Benutzer die Installation abgeschlossen hat, erhält ihr Bot eine weitere Aufrufnachricht mit `name = composeExtension/submitAction` , und `value.data.msteams.justInTimeInstall = true` .
 
 Hier ist ein Beispiel für den Aufruf:
 
@@ -366,25 +366,25 @@ Hier ist ein Beispiel für den Aufruf:
 }
 ```
 
-Sie sollten auf diesen Aufruf mit derselben Taskantwort antworten, mit der Sie geantwortet hätten, wenn der Bot bereits installiert war.
+Sie sollten auf diesen Aufruf mit derselben Aufgabenantwort reagieren, mit der Sie geantwortet hätten, wenn der Bot bereits installiert wurde.
 
-## <a name="responding-to-submit"></a>Reagieren auf Dieübermittlung
+## <a name="responding-to-submit"></a>Reagieren auf Absenden
 
-Sobald ein Benutzer die Eingabe seiner Eingabe abgeschlossen hat, erhält Ihr Bot ein `composeExtension/submitAction` Ereignis mit der Befehls-ID und den Parameterwerten.
+Sobald ein Benutzer seine Eingabe abgeschlossen hat, erhält der Bot ein Ereignis mit der Befehls-ID `composeExtension/submitAction` und den festgelegten Parameterwerten.
 
 Dies sind die unterschiedlichen erwarteten Antworten auf eine `submitAction` .
 
-### <a name="task-module-response"></a>Task-Modul-Antwort
+### <a name="task-module-response"></a>Antwort des Aufgabenmoduls
 
-Dies wird verwendet, wenn Ihre Erweiterung Dialoge miteinander verketten muss, um weitere Informationen zu erhalten. Die Antwort ist genau die gleiche wie `fetchTask` zuvor erwähnt.
+Dies wird verwendet, wenn Ihre Erweiterung Dialogfelder miteinander verketten muss, um weitere Informationen zu erhalten. Die Antwort ist genau die gleiche wie `fetchTask` zuvor erwähnt.
 
-### <a name="compose-extension-authconfig-response"></a>Komponieren der Erweiterung auth/config-Antwort
+### <a name="compose-extension-authconfig-response"></a>Antwort der Verfassenerweiterung auth/config
 
-Dies wird verwendet, wenn ihre Erweiterung sich authentifizieren oder konfigurieren muss, um fortzufahren. Weitere Informationen finden Sie im [Abschnitt Authentifizierung](~/resources/messaging-extension-v3/search-extensions.md#authentication) im Suchabschnitt.
+Dies wird verwendet, wenn Ihre Erweiterung entweder authentifiziert oder konfiguriert werden muss, um fortzufahren. Weitere Informationen finden Sie im [Abschnitt Authentifizierung](~/resources/messaging-extension-v3/search-extensions.md#authentication) im Abschnitt Suche.
 
-### <a name="compose-extension-result-response"></a>Komponieren der Antwort auf die Erweiterungsergebnisantwort
+### <a name="compose-extension-result-response"></a>Antwort zum Verfassen des Erweiterungsergebniss
 
-Dadurch wurde eine Karte als Ergebnis eines Befehls in das Verfassenfeld eingefügt. Es ist die gleiche Antwort, die im Suchbefehl verwendet wird, aber es ist auf eine Karte oder ein Ergebnis im Array beschränkt.
+Dies wurde zum Einfügen einer Karte in das Verfassenfeld als Ergebnis eines Befehls verwendet. Es ist dieselbe Antwort, die im Suchbefehl verwendet wird, aber sie ist auf eine Karte oder ein Ergebnis im Array beschränkt.
 
 ```json
 {
@@ -432,21 +432,21 @@ Dadurch wurde eine Karte als Ergebnis eines Befehls in das Verfassenfeld eingef�
 }
 ```
 
-### <a name="respond-with-an-adaptive-card-message-sent-from-a-bot"></a>Reagieren mit einer adaptiven Kartennachricht, die von einem Bot gesendet wurde
+### <a name="respond-with-an-adaptive-card-message-sent-from-a-bot"></a>Antworten mit einer adaptiven Kartennachricht, die von einem Bot gesendet wurde
 
-Sie können auch auf die Sendeaktion reagieren, indem Sie eine Nachricht mit einer Adaptive Card mit einem Bot in den Kanal einfügen. Der Benutzer kann die Nachricht vor dem Absenden in der Vorschau anzeigen und möglicherweise auch bearbeiten/interagieren. Dies kann in Szenarien sehr nützlich sein, in denen Sie Informationen von Benutzern sammeln müssen, bevor Sie eine adaptive Kartenantwort erstellen. Das folgende Szenario zeigt, wie Sie diesen Flow verwenden können, um eine Umfrage zu konfigurieren, ohne die Konfigurationsschritte in die Kanalnachricht einzuschließen.
+Sie können auch auf die Submit-Aktion reagieren, indem Sie eine Nachricht mit einer adaptiven Karte mit einem Bot in den Kanal einfügen. Ihr Benutzer kann eine Vorschau der Nachricht anzeigen, bevor er sie übermittelt, und möglicherweise auch bearbeiten/interagieren. Dies kann in Szenarien sehr nützlich sein, in denen Sie Informationen von Ihren Benutzern sammeln müssen, bevor Sie eine adaptive Kartenantwort erstellen. Das folgende Szenario zeigt, wie Sie diesen Fluss verwenden können, um eine Abfrage zu konfigurieren, ohne die Konfigurationsschritte in die Kanalnachricht zu verwenden.
 
-1. Der Benutzer klickt auf die Messagingerweiterung, um das Taskmodul auszulösen.
-1. Der Benutzer verwendet das Taskmodul, um die Abfrage zu konfigurieren.
-1. Nach dem Absenden des Konfigurationsaufgabenmoduls verwendet die App die im Aufgabenmodul bereitgestellten Informationen, um eine adaptive Karte zu erstellen, und sendet sie als `botMessagePreview` Antwort an den Client.
-1. Der Benutzer kann dann eine Vorschau der adaptiven Kartennachricht anzeigen, bevor der Bot sie in den Kanal einfügt. Wenn der Bot noch kein Mitglied des Kanals ist, wird der Bot durch Klicken `Send` hinzugefügt.
+1. Der Benutzer klickt auf die Messagingerweiterung, um das Aufgabenmodul auszulösen.
+1. Der Benutzer verwendet das Aufgabenmodul, um die Abfrage zu konfigurieren.
+1. Nach dem Übermitteln des Konfigurationsaufgabesmoduls verwendet die App die im Aufgabenmodul bereitgestellten Informationen, um eine adaptive Karte zu erstellen und sie als Antwort an `botMessagePreview` den Client zu senden.
+1. Der Benutzer kann dann eine Vorschau der adaptiven Kartennachricht anzeigen, bevor der Bot sie in den Kanal einfüge. Wenn der Bot nicht bereits Mitglied des Kanals ist, wird durch Klicken `Send` auf den Bot der Bot hinzugefügt.
 1. Durch die Interaktion mit der adaptiven Karte wird die Nachricht vor dem Senden geändert.
-1. Sobald der Benutzer `Send` klickt, wird der Bot die Nachricht an den Kanal senden.
+1. Sobald der Benutzer auf `Send` den Bot klickt, wird die Nachricht an den Kanal gesendet.
 
-Um diesen Flow zu aktivieren, sollte Ihr Aufgabenmodul wie im folgenden Beispiel antworten, in dem dem Benutzer die Vorschaunachricht angezeigt wird.
+Um diesen Fluss zu aktivieren, sollte Ihr Aufgabenmodul wie im folgenden Beispiel antworten, in dem dem Benutzer die Vorschaunachricht angezeigt wird.
 
 >[!Note]
->Der `activityPreview` muss eine Aktivität mit genau 1 `message` adaptivem Kartenanhang enthalten.
+>Der `activityPreview` muss eine Aktivität mit genau `message` 1 adaptiver Kartenanlage enthalten.
 
 ```json
 {
@@ -465,7 +465,7 @@ Um diesen Flow zu aktivieren, sollte Ihr Aufgabenmodul wie im folgenden Beispiel
 }
 ```
 
-Ihre Nachrichtenerweiterung muss nun auf zwei neue Arten von Interaktionen reagieren, `value.botMessagePreviewAction = "send"` und `value.botMessagePreviewAction = "edit"` . Im Folgenden finden Sie ein Beispiel für das `value` Objekt, das Sie verarbeiten müssen:
+Ihre Nachrichtenerweiterung muss nun auf zwei neue Arten von Interaktionen `value.botMessagePreviewAction = "send"` reagieren, und `value.botMessagePreviewAction = "edit"` . Im Folgenden finden Sie ein Beispiel für `value` das Objekt, das Sie verarbeiten müssen:
 
 ```json
 {
@@ -496,7 +496,7 @@ Ihre Nachrichtenerweiterung muss nun auf zwei neue Arten von Interaktionen reagi
 }
 ```
 
-Wenn Sie auf die Anforderung antworten, `edit` sollten Sie mit einer Antwort mit den Werten antworten, die mit den Informationen aufgefüllt sind, die der Benutzer bereits übermittelt `task` hat. Wenn Sie auf die Anforderung antworten, `send` sollten Sie eine Nachricht an den Kanal senden, der die abgeschlossene adaptive Karte enthält.
+Wenn Sie auf die Anforderung antworten, sollten Sie mit einer Antwort mit den Werten antworten, die mit den Informationen gefüllt sind, die der Benutzer `edit` `task` bereits übermittelt hat. Wenn Sie auf die Anforderung antworten, sollten Sie eine Nachricht an den Kanal senden, `send` der die endgültige adaptive Karte enthält.
 
 # <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
@@ -560,7 +560,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-Dieses Beispiel zeigt diesen Flow mit dem [Microsoft.Bot.Connector.Teams SDK (v3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams).
+In diesem Beispiel wird dieser Fluss mithilfe des [Microsoft.Bot.Connector.Teams SDK (v3) veranschaulicht.](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)
 
 ```csharp
 public class MessagesController : ApiController

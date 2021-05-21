@@ -5,12 +5,12 @@ description: Eine Schnellstartanleitung zum Erstellen eines benutzerdefinierten 
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 9d89fd98bae9732a8f9e2d34b82d7fc0e6985e01
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ea929edf5a281a4bb80a37b2d5c6e19c82fce6e4
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020310"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52580462"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>Erstellen eines benutzerdefinierten Kanals und einer Registerkarte "Gruppe" mit ASP.NET Core MVC
 
@@ -110,9 +110,9 @@ Die Controller verwenden die ViewBag-Eigenschaft, um Werte dynamisch in die Ansi
 
 - Öffnen Sie eine Eingabeaufforderung im Stammverzeichnis Ihres Projektverzeichnisses, und führen Sie den folgenden Befehl aus:
 
-```bash
-ngrok http https://localhost:443560 -host-header="localhost:44360"
-```
+    ```bash
+    ngrok http https://localhost:443560 -host-header="localhost:44360"
+    ```
 
 - Ngrok lauscht Anforderungen aus dem Internet und führt sie an Ihre Anwendung weiter, wenn sie an Port 44355 ausgeführt wird.  Es sollte so `https://y8rCgT2b.ngrok.io/` aussehen, *dass y8rCgT2b* durch Ihre ngrok-alphanumerische HTTPS-URL ersetzt wird.
 
@@ -123,5 +123,3 @@ ngrok http https://localhost:443560 -host-header="localhost:44360"
 In **Tab.cshtml** stellt die Anwendung dem Benutzer zwei Optionsschaltflächen zum Anzeigen der Registerkarte mit einem roten oder einem grauen Symbol zur Auswahl. Wenn Sie die  Schaltfläche **Grau auswählen** oder Rot auswählen aktivieren, wird bzw. wird die Schaltfläche Speichern auf der `saveGray()` `saveRed()` `settings.setValidityState(true)` Konfigurationsseite aktiviert.  Dieser Code Teams, dass Sie die Konfigurationsanforderungen erfüllt haben und die Installation fortgesetzt werden kann. Beim Speichern werden die Parameter `settings.setSettings` von festgelegt. Schließlich wird `saveEvent.notifySuccess()` aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
-
-[!INCLUDE [dotnet-upload-to-teams](~/includes/tabs/dotnet-upload-to-teams.md)]

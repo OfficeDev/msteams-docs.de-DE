@@ -41,7 +41,7 @@ Es ist wichtig, dass sich Ihr Bot vorstellt und beschreibt, was er kann. Dieser 
 
 ### <a name="welcome-message-in-a-one-on-one-chat"></a>Willkommensnachricht in einem 1:1-Chat
 
-In persönlichen Kontexten geben Willkommensnachrichten den Ton Ihres Bots an. Die Nachricht enthält eine Begrüßung, was der Bot tun kann, und einige Vorschläge für die Interaktion. Zum Beispiel, "Versuchen Sie, mich nach ...". Wenn möglich, sollten diese Vorschläge gespeicherte Antworten zurückgeben, ohne sich anmelden zu müssen.
+In persönlichen Kontexten geben Willkommensnachrichten den Ton Ihres Bots an. Die Nachricht enthält eine Begrüßung, was der Bot tun kann, und einige Vorschläge für die Interaktion. Beispiel: "Versuchen Sie, mich nach ..." zu fragen. Wenn möglich, sollten diese Vorschläge gespeicherte Antworten zurückgeben, ohne sich anmelden zu müssen.
 
 :::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="Beispiel zeigt eine Bot-Einführung in einer persönlichen App." border="false":::
 
@@ -61,14 +61,14 @@ Vergessen Sie nicht: Im Bot-Befehlsmenü (**Was kann ich tun?**) müssen Sie auc
 
 ### <a name="tours"></a>Touren
 
-Sie können eine Tour mit Begrüßungsnachrichten einfügen und wenn der Bot auf so etwas wie einen Hilfebefehl reagiert. Eine Tour ist der effektivste Weg, um zu beschreiben, was Ihr Bot tun kann. Gegebenenfalls sind sie auch ideal, um die anderen Funktionen Ihrer App zu beschreiben. Fügen Sie beispielsweise Screenshots Ihrer Messaging-Erweiterung hinzu.
+Sie können eine Tour mit Begrüßungsnachrichten einfügen und wenn der Bot auf so etwas wie einen Hilfebefehl reagiert. Eine Tour ist der effektivste Weg, um zu beschreiben, was Ihr Bot tun kann. Falls zutreffend, n nen sie auch für die Beschreibung der anderen Features Ihrer App geeignet sein. Fügen Sie z. B. Screenshots ihrer Messagingerweiterung hinzu.
 
 > [!IMPORTANT]
 > Touren sollten zugänglich sein, ohne sich anmelden zu müssen.
 
 #### <a name="one-on-one-chats"></a>1:1-Chats
 
-In einer persönlichen App bietet ein Karussell einen effektiven Überblick über Ihren Bot und alle anderen Features Ihrer App. Das Einschließen von Schaltflächen, die Benutzer bot-Befehle ausprobieren lassen, wird empfohlen. Erstellen Sie z. **B. eine Aufgabe**.
+In einer persönlichen App bietet ein Karussell einen effektiven Überblick über Ihren Bot und alle anderen Features Ihrer App. Das Verwenden von Schaltflächen, mit denen Benutzer Botbefehle ausprobieren können, wird empfohlen. Beispiel: **Erstellen einer Aufgabe**.
 
 :::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="Beispiel zeigt eine Bot-Tour in einem 1:1-Chat." border="false":::
 
@@ -134,7 +134,7 @@ Verwenden Sie einen Thesaurus und arbeiten Sie mit Personen mit möglichst viele
 
 Entwerfen Sie Ihren Bot so, dass er Absichten erkennt, die erfassen, was jemand von einem Bot als Antwort auf eine Nachricht oder eine Anfrage erwartet. Intent klassifiziert eine Nachricht oder Abfrage als eine einzelne Aktion mit einem oder mehreren Datenobjekten, die von der Aktion betroffen sind. 
 
-In den folgenden Beispielen werden die Benutzerabsicht und die Daten in Nachrichten beschrieben, die an Bots gesendet werden:
+In den folgenden Beispielen werden die Benutzerabsichten und Daten in Nachrichten, die an Bots gesendet werden, erläutert:
 
 :::row:::
    :::column span="":::
@@ -167,7 +167,7 @@ Bots bieten eine genaue Übereinstimmung mit einer Abfrage oder einer Gruppe ver
 
 Während Ihr Bot vollständige Anfragen und Fragen unterstützen kann, sollte er auch in der Lage sein, Interaktionen mit mehreren Runden zu verarbeiten. Das Vorhersehen möglicher nächster Schritte erleichtert es den Mitarbeitern erheblich, einen vollständigen Aufgabenablauf durchzuführen (anstatt von ihnen zu erwarten, dass sie eine umfassende Anfrage erstellen).
 
-Im folgenden Beispiel antwortet der Bot auf jede Nachricht mit Optionen für das, was als nächstes tun möchte:
+Im folgenden Beispiel antwortet der Bot auf jede Nachricht mit Optionen für die nächsten Schritte:
 
 :::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="Beispiel zeigt eine Mehrfach-Interaktion mit einem Bot." border="false":::
 
@@ -175,7 +175,7 @@ Im folgenden Beispiel antwortet der Bot auf jede Nachricht mit Optionen für das
 
 Mit proaktiven Nachrichten kann sich Ihr Bot wie ein Digest verhalten, der mit einer bestimmten Häufigkeit Benachrichtigungen sendet, die für eine Person, einen Gruppenchat oder einen Kanal relevant sind. Ein Bot kann eine Nachricht senden, wenn sich etwas in einem Dokument geändert hat oder ein Arbeitselement geschlossen wird.
 
-Im folgenden Beispiel erhält ein Benutzer eine Popupbenachrichtigung, die ein Bot in einem anderen Kanal angezeigt hat:
+Im folgenden Beispiel ruft ein Benutzer eine Popupbenachrichtigung ab, dass ein Bot sie in einem anderen Kanal benachrichtigt hat:
 
 :::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="Das Beispiel zeigt ein Popup eines Bots, der einen Benutzer proaktiv von einem anderen Kanal aus benachrichtigt." border="false":::
 
@@ -185,7 +185,7 @@ Nun kann der Benutzer in diesem Kanal seine Nachricht des Bots lesen.
 
 ### <a name="use-tabs-with-bots"></a>Verwenden von Registerkarten mit Bots
 
-Eine Registerkarte kann die Verwendung Ihres Bots vereinfachen. Wenn Ihr Bot beispielsweise Arbeitsaufgaben erstellen kann, wäre es schön, alle diese Elemente an einem zentralen Ort innerhalb einer Registerkarte anzuzeigen. Weitere Informationen finden Sie unter Entwerfen von [Registerkarten](../../tabs/design/tabs.md).
+Eine Registerkarte kann die Verwendung Ihres Bots vereinfachen. Wenn Ihr Bot beispielsweise Arbeitselemente erstellen kann, wäre es schön, alle diese Elemente an einem zentralen Ort in einer Registerkarte zu zeigen. Weitere Informationen finden Sie unter [Entwerfen von Registerkarten](../../tabs/design/tabs.md).
 
 :::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="Beispiel zeigt, wie eine Registerkarte beim Organisieren von Bot-Inhalten helfen kann." border="false":::
 
@@ -201,7 +201,7 @@ Verwenden Sie diese Empfehlungen, um eine hochwertige App-Erfahrung zu erstellen
 
 ### <a name="content"></a>Inhalt
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Beispiel für die bewährte Methode eines Bots zum Einrichten einer klaren Persona." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Beispiel für eine bewährte Methode eines Bots zum Einrichten einer eindeutigen Persona." border="false":::
 
 #### <a name="do-establish-a-clear-persona"></a>Do: Erstellen einer eindeutigen Persona
 
@@ -211,7 +211,7 @@ Weitere Informationen zum Schreiben für Bots finden Sie im <a href="https://www
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Beispiel, das zeigt, um deutlich zu vermitteln, was Ihr Bot tun kann." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Beispiel, das zeigt, was Ihr Bot tun kann." border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>Do: Vermitteln Sie eindeutig, was Ihr Bot alles kann.
 
@@ -219,7 +219,7 @@ Willkommensnachrichten und Touren helfen den Benutzern zu verstehen, was sie mit
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Beispiel, das zeigt, dass die Funktionen Ihres Bots nicht verschleiert werden." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Beispiel, das zeigt, dass die Funktionen Ihres Bots nicht verhüllt werden sollen." border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>Don‘t: Verschleiern der Features Ihres Bots
 
@@ -230,7 +230,7 @@ Der erste Eindruck zählt. Personen sind wahrscheinlich verwirrt oder misstrauis
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Beispiel, das zeigt, dass Ihr Bot Nicht-Fragen erkennen sollte." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Beispiel, in dem Ihr Bot keine Fragen erkennt." border="false":::
 
 #### <a name="do-recognize-non-questions"></a>Do: Nicht-Fragen erkennen
 
@@ -238,7 +238,7 @@ Ihr Bot sollte in der Lage sein, auf Nachrichten wie "Hallo", "Hilfe" und "Danke
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Beispiel, das zeigt, dass Sie ungeschickte Antworten auf einfache Bot-Nachrichten vermeiden sollten." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Beispiel, in dem Sie ungeschickte Antworten auf einfache Botnachrichten vermeiden sollten." border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>Don‘t: Keine Gelegenheit verpassen, die Freude schenkt
 
@@ -251,7 +251,7 @@ Einige Personen erwarten, dass Gespräche auf natürliche Weise ablaufen, so wie
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Ein Beispiel für das Anzeigen von Bots sollte Benutzern helfen, zu verstehen, wie bots verwendet werden." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Ein Beispiel für Bots sollte Benutzern dabei helfen, die Verwendung von Bots zu verstehen." border="false":::
 
 #### <a name="do-provide-help"></a>Do: Hilfe anbieten
 
@@ -259,7 +259,7 @@ Wenn Ihr Bot eine Anfrage nicht erfüllen kann, bieten Sie einem Benutzer Mögli
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Beispiel, das zeigt, dass Ihr Bot Benutzer nicht stranden sollte." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Beispiel, in dem Der Bot benutzer nicht litzen sollte." border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>Don‘t: Lassen Sie Benutzer nicht hängen
 
@@ -272,7 +272,7 @@ Benutzer werden Ihren Bot schnell verlassen, wenn er keine Probleme beheben kann
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Beispiel, das zeigt, dass Sie Task-Module oder Registerkarten mit Ihrem Bot für komplexe Interaktionen verwenden können." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Beispiel, in dem Sie Aufgabenmodule oder Registerkarten mit Ihrem Bot für komplexe Interaktionen verwenden können." border="false":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>Do: Verwenden Sie Aufgabenmodule oder Registerkarten
 
@@ -280,7 +280,7 @@ Wenn Ihr Bot eine Antwort liefert, die einige weitere Schritte erfordert, könne
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Beispiel, wie Ihr Bot Interaktionen mit mehreren Drehen vermeiden sollte." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Beispiel, in dem gezeigt wird, wie Ihr Bot Interaktionen mit mehreren Drehungen vermeiden sollte." border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>Don‘t: Machen Sie Mehrfach-Interaktionen nicht langweilig
 
@@ -293,7 +293,7 @@ Eine umfassende Unterhaltung zum Abschließen einer einzelnen Aufgabe ist langsa
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Beispiel, das zeigt, wie Bots private Informationen nur in einem persönlichen Kontext anzeigen sollten." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Beispiel, in dem gezeigt wird, wie Bots nur private Informationen in einem persönlichen Kontext anzeigen sollten." border="false":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>Do: Zeigen Sie vertrauliche Informationen nur in einem persönlichen Kontext an
 
@@ -301,7 +301,7 @@ Wenn sich Ihr Bot in einem Gruppenchat oder -kanal befindet, empfehlen wir, Benu
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Beispiel, das zeigt, wie Bots keine vertraulichen Informationen an eine Gruppe oder Personen weiterleiten sollten." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Beispiel, in dem gezeigt wird, wie Bots keine vertraulichen Informationen für eine Gruppe oder Personen anzeigen sollten." border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>Don‘t: Einige Inhalte sollten nicht für alle einsehbar sein
 

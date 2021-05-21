@@ -1,7 +1,7 @@
 ---
 title: Verwenden von Karten in Bots
-description: Beschreibt Karten und deren Verwendung in Bot-Nachrichten
-keywords: Bots-Karten-Messaging
+description: Beschreibt Karten und deren Verwendung in Botnachrichten
+keywords: Bots Cards Messaging
 ms.topic: reference
 localization_priority: Normal
 ms.date: 03/29/2018
@@ -12,14 +12,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52566782"
 ---
-# <a name="cards-in-bot-conversations"></a>Karten in Bot-Gesprächen
+# <a name="cards-in-bot-conversations"></a>Karten in Botunterhaltungen
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Eine *Karte* ist ein Benutzeroberflächencontainer für kurze oder verwandte Informationen. Karten können mehrere Eigenschaften und Anhänge aufweisen. Teams Unterstützen Sie Karten in Bots, Connectors und Messaging-Erweiterungen. Siehe [Karten](~/task-modules-and-cards/what-are-cards.md) für eine Übersicht darüber, was Karten sind und wie Teams sie verwendet.
+Eine *Karte* ist ein Benutzeroberflächencontainer für kurze oder verwandte Informationen. Karten können mehrere Eigenschaften und Anlagen aufweisen. Teams unterstützen Karten in Bots, Connectors und Messagingerweiterungen. Unter [Karten](~/task-modules-and-cards/what-are-cards.md) finden Sie eine Übersicht darüber, was Karten sind und wie Teams verwendet werden.
 
-Bots verwenden Karten als Teil von Gesprächen. Weitere Informationen finden Sie unter [Bot-Unterhaltungen](~/resources/bot-v3/bot-conversations/bots-conversations.md).
+Bots verwenden Karten als Teil von Unterhaltungen. Weitere Informationen finden Sie unter [Bot Conversations](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
-Die [Teams Kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md) listet alle von Bots unterstützten Karten auf und diskutiert, wie sie verwendet werden.
+In [Teams Kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md) werden alle von Bots unterstützten Karten aufgeführt und die Verwendung erläutert.
 
-[Kartenaktionen](~/task-modules-and-cards/cards/cards-actions.md) listen alle Aktionen auf, die von Karten unterstützt werden, und besprechen deren Verwendung.
+[Kartenaktionen](~/task-modules-and-cards/cards/cards-actions.md) listet alle aktionen auf, die von Karten unterstützt werden, und erläutert deren Verwendung.

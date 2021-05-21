@@ -1,6 +1,6 @@
 ---
-title: Testen Der App-Übersicht
-description: Beschreibt den Prozess zum Testen der Teams benutzerdefinierten App in Microsoft 365
+title: Testen der App-Übersicht
+description: Beschreibt den Prozess zum Testen Teams benutzerdefinierten Apps in Microsoft 365
 ms.topic: how-to
 localization_priority: Normal
 keywords: Konfigurieren Microsoft 365 Mandanten Teams Hochladen der Test-App
@@ -13,35 +13,35 @@ ms.locfileid: "52565186"
 ---
 # <a name="test-your-app"></a>Testen eigener Apps
 
-Nachdem Sie Ihre App in Microsoft Teams integriert haben, müssen Sie ihre App testen, bevor Sie sie veröffentlichen. Das ultimative Ziel besteht darin, so viele Benutzer für Ihre App zu erhalten, daher stellen Sie sicher, dass die App auf mehreren Geräten getestet wird, die Benutzer verwenden könnten. Zum Testen Ihrer App:
+Nachdem Sie Ihre App in Microsoft Teams integriert haben, müssen Sie Ihre App testen, bevor Sie sie veröffentlichen. Das letztendliche Ziel ist es, so viele Benutzer für Ihre App zu erhalten, dass Sie die App auf mehreren Geräten testen, die Benutzer verwenden können. Zum Testen Ihrer App:
 
-* Bereiten Sie Ihren Microsoft 365 Mandanten vor.
+* Bereiten Sie Microsoft 365 Mandanten vor.
 * Wählen Sie einen Arbeitsbereich aus, um Ihre App zu testen und zu debuggen.
-* Fügen Sie Ihrem Microsoft 365 Mandanten Testdaten hinzu.
+* Fügen Sie Ihrem Mandanten testdaten Microsoft 365 hinzu.
 
 ## <a name="prepare-your-microsoft-365-tenant"></a>Vorbereiten Ihres Microsoft 365-Mandanten
 
-Bevor Sie mit dem Testen Ihrer App beginnen, bereiten Sie Ihren Microsoft 365 Testmandanten vor und aktivieren Sie benutzerdefinierte Teams App, mit der Sie Ihre App hochladen können. Sie müssen sich für Microsoft 365 Entwicklerprogramm anmelden und die Teams Einstellungen für Ihre Organisation verwalten. Richten Sie Ihr Entwicklerabonnement ein, und konfigurieren Sie es, indem [Sie Ihre Microsoft 365 Mandanten vorbereiten.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+Bevor Sie mit dem Testen Ihrer App beginnen, bereiten Sie Microsoft 365 Test-Mandant vor, und aktivieren Sie benutzerdefinierte Teams App, mit der Sie Ihre App hochladen können. Sie müssen sich für Microsoft 365-Entwicklerprogramm registrieren und die Teams für Ihre Organisation verwalten. Richten Sie Ihr Entwicklerabonnement ein, und konfigurieren Sie es, wenn [Sie Ihren Microsoft 365 vorbereiten.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
 ## <a name="test-and-debug"></a>Testen und Debuggen
 
-Zum Testen und Debuggen Ihrer App müssen Sie mindestens einen Arbeitsbereich erstellen. Sie können ein Test-Setup auswählen, z. B. einen lokalen oder cloudbasierten Host, um die App zu testen und zu debuggen. Anleitungzum Debuggen Ihrer Teams-App wird zum Laden und Ausführen ihrer App-Erfahrung bereitgestellt. Weitere Informationen finden [Sie unter Auswählen eines Setups und Ausführen ihrer Microsoft Teams-App](~/concepts/build-and-test/debug.md).
+Zum Testen und Debuggen Ihrer App müssen Sie mindestens einen Arbeitsbereich erstellen. Sie können eine Testeinrichtung auswählen, z. B. einen lokalen Host oder einen cloudbasierten Host, um die App zu testen und zu debuggen. Anleitungen zum Debuggen Teams app wird bereitgestellt, um Ihre App-Erfahrung zu laden und ausführen. Weitere Informationen finden Sie unter Auswählen einer Einrichtung und Ausführen ihrer [Microsoft Teams App.](~/concepts/build-and-test/debug.md)
 
-Testen Sie Ihren Bot lokal. Weitere Informationen finden Sie unter [Debuggen des Bots lokal mit einer IDE](~/bots/how-to/debug/locally-with-an-ide.md). Sie können Ihren Bot auch mit [Inspektionsmiddleware](/azure/bot-service/bot-service-debug-inspection-middleware?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) und [adaptiven Tools](/azure/bot-service/bot-service-debug-adaptive-tools?view=azure-bot-service-4.0&preserve-view=true)debuggen. 
+Testen Sie Ihren Bot lokal. Weitere Informationen finden Sie unter [Debuggen Des Bots lokal mit einer IDE](~/bots/how-to/debug/locally-with-an-ide.md). Sie können Ihren Bot auch mit [Prüf-Middleware und](/azure/bot-service/bot-service-debug-inspection-middleware?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) [adaptiven Tools debuggen.](/azure/bot-service/bot-service-debug-adaptive-tools?view=azure-bot-service-4.0&preserve-view=true) 
 
-Um die Konsolenprotokolle anzuzeigen, HTML-, css- und Netzwerkanforderungen während der Laufzeit anzuzeigen oder zu ändern, fügen Sie Ihrem JavaScript-Code Haltepunkte hinzu, und führen Sie interaktiven Debugzugriff auf die DevTools durch. Weitere Informationen finden [Sie unter Zugriff auf die DevTools für Teams Registerkarten](~/tabs/how-to/developer-tools.md). 
+Wenn Sie die Konsolenprotokolle anzeigen, html-, css- und Netzwerkanforderungen während der Laufzeit anzeigen oder ändern möchten, fügen Sie Ihrem JavaScript-Code Haltepunkte hinzu, und führen Sie interaktiven Debugzugriff auf devTools aus. Weitere Informationen finden Sie unter [Access the DevTools for Teams tabs](~/tabs/how-to/developer-tools.md). 
 
 ## <a name="add-test-data-to-your-microsoft-365-tenant"></a>Hinzufügen von Testdaten zu Ihrem Microsoft 365 Mandanten
 
-Fügen Sie die Testdaten Microsoft 365 Testmandanten hinzu. Weitere Informationen finden Sie unter [Hinzufügen von Testdaten zu Ihrem Office 365 Testmandanten](~/concepts/build-and-test/test-data.md), und schließen Sie alle Voraussetzungen ab, bevor Sie mit dem Hochladen der Testdaten beginnen.
+Fügen Sie die Testdaten dem Microsoft 365 hinzu. Weitere Informationen finden Sie unter Hinzufügen von Testdaten zu Office 365 [Test-Mandant,](~/concepts/build-and-test/test-data.md)und füllen Sie alle erforderlichen Komponenten aus, bevor Sie mit dem Hochladen der Testdaten beginnen.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen Sie Ihre Registerkarte](~/tabs/how-to/developer-tools.md)
+- [Debuggen Ihrer Registerkarte](~/tabs/how-to/developer-tools.md)
  
-- [Debuggen Sie Ihre Bots](~/bots/how-to/debug/locally-with-an-ide.md)
+- [Debuggen Ihrer Bots](~/bots/how-to/debug/locally-with-an-ide.md)
 
-- [RSC-Berechtigungen testen](~/graph-api/rsc/test-resource-specific-consent.md)
+- [Testen von RSC-Berechtigungen](~/graph-api/rsc/test-resource-specific-consent.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

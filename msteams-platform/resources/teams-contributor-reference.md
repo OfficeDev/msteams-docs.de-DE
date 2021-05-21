@@ -1,5 +1,5 @@
 ---
-title: Beitrag zur Microsoft Teams Dokumentation
+title: Mitwirken an Microsoft Teams Dokumentation
 description: Schritte zum Erstellen und Veröffentlichen Teams Dokumentation
 author: laujan
 ms.author: lajanuar
@@ -12,67 +12,67 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52566229"
 ---
-# <a name="contributing-to-microsoft-teams-documentation"></a>Beitrag zur Microsoft Teams Dokumentation
+# <a name="contributing-to-microsoft-teams-documentation"></a>Mitwirken an Microsoft Teams Dokumentation
 
-[Teams Dokumentation](/microsoftteams/platform/overview) ist Teil der technischen [Dokumentationsbibliothek von Microsoft Docs.](https://docs.microsoft.com/) Der Inhalt ist in Gruppen organisiert, die als Docsets bezeichnet werden und jeweils eine Gruppe verwandter Dokumente darstellen, die als eine einzelne Entität verwaltet werden. Artikel im gleichen Docset haben nach *Docs <span></span> .microsoft.com* dieselbe URL-Pfaderweiterung.  `/docs.microsoft.com/microsoftteams/...`Der Anfang des Teams docset-Dateipfad ist z. B. der Anfang. Teams Artikel werden in [Der MarkDown-Syntax](#markdown-reference) geschrieben und auf [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)gehostet.
+[Teams Dokumentation](/microsoftteams/platform/overview) ist Teil der [technischen Dokumentationsbibliothek von Microsoft Docs.](https://docs.microsoft.com/) Der Inhalt ist in Gruppen mit dem Namen docsets organisiert, die jeweils eine Gruppe verwandter Dokumente darstellen, die als einzelne Entität verwaltet werden. Artikel im gleichen docset haben die gleiche URL-Pfaderweiterung nach *docs <span></span> .microsoft.com*.  Ist z. `/docs.microsoft.com/microsoftteams/...` B. der Anfang des Teams docset-Dateipfads. Teams Artikel werden in der [#A0](#markdown-reference) geschrieben und auf [GitHub.](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
 
-## <a name="set-up-your-workspace"></a>Einrichten Ihres Arbeitsbereichs
-
-> [!div class="checklist"]
->
-> * Installieren Sie [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-> * Installieren Sie [Visual Studio Code](https://code.visualstudio.com/) (VS Code).
-> * Installieren Sie [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) direkt aus dem VS Code Marketplace.
-<br>&emsp;&emsp; Oder
+## <a name="set-up-your-workspace"></a>Einrichten ihres Arbeitsbereichs
 
 > [!div class="checklist"]
 >
-> * Installieren sie von VS Code:
+> * Installieren [sie Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+> * Installieren [Visual Studio Code](https://code.visualstudio.com/) (VS Code).
+> * Installieren [Sie Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) direkt aus dem VS Code Marketplace.
+<br>&emsp;&emsp; oder
 
-   1. Wählen Sie das **Symbol Erweiterungen** auf der Seitenaktivitätsleiste aus, oder verwenden Sie den Befehl **Ansicht => Erweiterungen** (Strg+Umschalt+X) und suchen Sie nach dem *Docs Authoring Pack* (Microsoft).
+> [!div class="checklist"]
+>
+> * Installieren von innerhalb VS Code:
+
+   1. Wählen Sie **das Symbol** Erweiterungen auf der seitenseitigen Aktivitätsleiste aus, oder verwenden Sie den Befehl View = **> Extensions** (STRG+Umschalt+X), und suchen Sie nach dem *Dokumenterstellungspaket* (Microsoft).
    1. Wählen Sie die **Schaltfläche Installieren** aus.
-   1. Sobald die Installation abgeschlossen ist, wechselt die **Schaltfläche Installieren** zur Schaltfläche Getriebe **verwalten.**
+   1. Sobald die Installation abgeschlossen ist, wird die Schaltfläche **Installieren** auf die Schaltfläche **Zahnrad** verwalten geändert.
 
-## <a name="review-the-microsoft-docs-contributors-guide"></a>Lesen Sie das Microsoft Docs Contributors Guide
+## <a name="review-the-microsoft-docs-contributors-guide"></a>Überprüfen des Microsoft Docs Contributors Guide
 
-Das [Teilnehmerhandbuch](/contribute) bietet Anweisungen zum Erstellen, Veröffentlichen und Aktualisieren technischer Inhalte auf der Microsoft Docs-Plattform.
+Das [Mitwirkendehandbuch bietet](/contribute) Eine Anleitung zum Erstellen, Veröffentlichen und Aktualisieren von technischen Inhalten auf der Microsoft Docs-Plattform.
 
-## <a name="microsoft-writing-style-and-content-guides"></a>Microsoft-Schrift-, Stil- und Inhaltshandbücher
+## <a name="microsoft-writing-style-and-content-guides"></a>Microsoft Writing, Style, and Content Guides
 
-* **[Microsoft Writing Style Guide](/style-guide/welcome)**. Erwägen Sie, diese Online-Anleitung zum Favoritenmenü Ihres **Browsers** hinzuzufügen. Es ist eine umfassende Ressource für das heutige technische Schreiben und spiegelt Microsofts modernen Ansatz in Bezug auf Sprache und Stil wider.
+* **[Microsoft Writing Style Guide](/style-guide/welcome)**. Erwägen Sie das Hinzufügen dieses Onlineleitfadens zum **Menü Favoriten Ihres** Browsers. Es ist eine umfassende Ressource für das heutige technische Schreiben und spiegelt den modernen Ansatz von Microsoft für Sprache und Stil wider.
 
-* **[Schreiben von Entwicklerinhalten](/style-guide/developer-content/)**. Teams-spezifische Inhalte richten sich an ein Entwicklerpublikum mit einem grundlegenden Verständnis von Programmierkonzepten und -prozessen. Es ist wichtig, dass Sie klare, technisch genaue Informationen auf überzeugende Weise bereitstellen und gleichzeitig den Ton und Stil von Microsoft beibehalten.
+* **[Schreiben von Entwicklerinhalten](/style-guide/developer-content/)**. Teams-spezifischen Inhalt richtet sich an eine Entwicklerpublikum mit grundlegendem Verständnis von Programmierkonzepten und -prozessen. Es ist wichtig, dass Sie klare, technisch genaue Informationen auf überzeugende Weise bereitstellen und dabei den Ton und stil von Microsoft beibehalten.
 
-* **[Schritt-für-Schritt-Anleitungen](/style-guide/procedures-instructions/writing-step-by-step-instructions)**. Angewandte und interaktive Erlebnisse sind eine hervorragende Möglichkeit für Entwickler, sich über Microsoft-Produkte und -Technologien zu informieren. Komplexe oder einfache Verfahren in einem progressiven Format zu präsentieren, ist natürlich und benutzerfreundlich.
+* **[Schrittweises Schreiben von Anweisungen](/style-guide/procedures-instructions/writing-step-by-step-instructions)**. Angewandte und interaktive Erfahrungen sind eine hervorragende Möglichkeit für Entwickler, mehr über Microsoft-Produkte und -Technologien zu erfahren. Komplexe oder einfache Prozeduren in einem progressiven Format zu präsentieren, ist natürlich und benutzerfreundlich.
 
 ## <a name="markdown-reference"></a>MarkDown-Referenz
 
- Microsoft Docs-Seiten werden in MarkDown-Syntax geschrieben und über ein [Markdig-Modul](https://github.com/lunet-io/markdig) analysiert. Weitere Informationen finden Sie *unter* [Docs Markdown-Referenz](/contribute/markdown-reference) für bestimmte Tags und Formatierungskonventionen.
+ Microsoft #A0 werden in der MarkDown-Syntax geschrieben und über ein [#A1](https://github.com/lunet-io/markdig) analysiert. Informationen *zu bestimmten* [Tags und Formatierungskonventionen](/contribute/markdown-reference) finden Sie unter Docs Markdown reference.
 
 ## <a name="file-paths"></a>Dateipfade
 
-Das Festlegen eines gültigen Dateipfads für Hyperlinks in der Dokumentation kann eine Herausforderung darstellen, insbesondere wenn Sie relative Pfade verwenden und Links zu anderen Dokumenten erstellen.  Ihr Build wird auf GitHub nicht erfolgreich sein, wenn der Dateipfad falsch oder ungültig ist.
+Das Festlegen eines gültigen Dateipfads für Hyperlinks in Der Dokumentation kann eine Herausforderung darstellen, insbesondere bei der Verwendung relativer Pfade und beim Erstellen von Links zu anderen Dokumenten.  Der Build kann nicht erfolgreich GitHub, wenn der Dateipfad falsch oder ungültig ist.
 
-Weitere Informationen zu Hyperlinks und Dateipfaden finden Sie unter Verwenden von [Links in der Dokumentation](/contribute/how-to-write-links).
+Weitere Informationen zu Hyperlinks und Dateipfaden finden Sie unter [Verwenden von Links in der Dokumentation](/contribute/how-to-write-links).
 
 >[!IMPORTANT]
-> So verweisen Sie auf einen Artikel, *der Teil des* Teams Plattform-Docset ist:<br>
-> &emsp;&#x2714; Verwenden Sie einen relativen Pfad ohne einen führenden Schrägstrich.<br>
-> &emsp;&#x2714; Die Markdown-Dateierweiterung einschließen.<br>
->Ex:  **übergeordnetes Verzeichnis/Verzeichnis/Pfad-zu-article.md** —> `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
-> So verweisen Sie auf einen Microsoft Docs-Bibliotheksartikel, der nicht Teil des Teams-Plattformdokumentsatz *ist:*<br>
+> So verweisen Sie auf einen *Artikel,* der Teil des Teams ist:<br>
+> &emsp;&#x2714; Verwenden Sie einen relativen Pfad ohne führenden Schrägstrich.<br>
+> &emsp;&#x2714; Schließen Sie die Dateierweiterung Markdown ein.<br>
+>Beispiel:  **übergeordnetes Verzeichnis/Verzeichnis/Pfad-zu-Article.md** -> `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
+> So verweisen Sie auf einen  Microsoft Docs-Bibliotheksartikel, der nicht Teil des Teams ist:<br>
 > &emsp;&#x2714; Verwenden Sie einen relativen Pfad, der mit einem Schrägstrich beginnt.<br>
-> &emsp;&#x2714; Die Dateierweiterung nicht einschließen. <br> Ex:  **/docset/address-to-file-location** —> `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`<br><br>
-> Um auf eine Seite außerhalb der Microsoft Docs-Bibliothek zu verweisen, z. B. GitHub, verwenden Sie den vollständigen `https` Dateipfad.<br>
+> &emsp;&#x2714; Schließen Sie die Dateierweiterung nicht ein. <br> Ex:  **/docset/address-to-file-location** –> `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`<br><br>
+> Verwenden Sie den vollständigen Dateipfad, um auf eine Seite außerhalb der Microsoft Docs-Bibliothek zu verweisen, z. B. GitHub. `https`<br>
 
-## <a name="code-samples-and-snippets"></a>Codebeispiele und Ausschnitte
+## <a name="code-samples-and-snippets"></a>Codebeispiele und Codeausschnitte
 
-Codebeispiele spielen eine wichtige Rolle bei der erfolgreichen Verwendung von APIs und SDKs. Gut präsentierte Codebeispiele können klarer kommunizieren, wie Die Dinge funktionieren, als beschreibender Text und Lehrinformationen allein. Ihre Codebeispiele sollten genau, prägnant, gut dokumentiert und vor allem leserfreundlich sein. Code, der leicht zu lesen ist, ist auch leicht zu verstehen, zu testen, zu debuggen, zu warten, zu ändern und zu erweitern. Weitere Informationen finden Sie unter [So fügen Sie Code in Dokumente](/contribute/code-in-docs)ein.
+Codebeispiele spielen eine wichtige Rolle bei der erfolgreichen Verwendung von APIs und SDKs durch Entwickler. Gut dargestellte Codebeispiele können vermitteln, wie die Dinge besser funktionieren als beschreibender Text und Anweisungen allein. Ihre Codebeispiele sollten präzise, präzise, gut dokumentiert und vor allem leserfreundlich sein. Leicht lesbarer Code ist auch leicht zu verstehen, zu testen, zu debuggen, zu warten, zu ändern und zu erweitern. Weitere Informationen finden Sie unter [How to include code in docs](/contribute/code-in-docs).
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Docs Stil und Stimme Schnellstart](/contribute/style-quick-start)
+* [Schnellstart der Dokumentformatvorlage und -sprache](/contribute/style-quick-start)
 * [Cutting Edge : Source Code Readability Tipps](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips).
 
 > [!div class="nextstepaction"]
-> [Abrufen von Microsoft Docs-Updates und den neuesten Ankündigungen](/teamblog)
+> [Herunterladen von Microsoft Docs-Updates und den neuesten Ankündigungen](/teamblog)

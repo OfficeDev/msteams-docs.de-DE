@@ -4,12 +4,12 @@ description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Te
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams O365-Connector
-ms.openlocfilehash: f9546b3550b3c53452c5856cfb87fdc6d71f2ad0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 96092e4589f218a96f31ce05339b89acb82f1fd7
+ms.sourcegitcommit: 20764037458026e5870ee3975b966404103af650
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566523"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "52583736"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Senden von Nachrichten an Connectors und Webhooks
 
@@ -184,7 +184,7 @@ In den folgenden Schritten wird PowerShell verwendet. Wir gehen davon aus, dass 
 - [Zwei Symbole einschließen](../../concepts/build-and-test/apps-package.md#app-icons).
 - Ändern Sie den `icons`-Teil des Manifests so, dass er auf die Dateinamen der Symbole anstelle von URLs verweist.
 
-Die folgende manifest.jsin der Datei enthält die grundlegenden Elemente, die zum Testen und Übermitteln Ihrer App erforderlich sind:
+Die folgende manifest.json-Datei enthält die grundlegenden Elemente, die zum Testen und Übermitteln Ihrer App erforderlich sind:
 
 > [!NOTE]
 > Ersetzen Sie im folgenden Beispiel `id` und `connectorId` mit der GUID des Connectors.
@@ -239,8 +239,8 @@ Die folgende manifest.jsin der Datei enthält die grundlegenden Elemente, die zu
 
 ### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a>Der Datenstrom zum Senden von [adaptiven Karten](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) über einen eingehenden Webhook lautet wie folgt:
 
-1. [Richten Sie einen benutzerdefinierten Webhook](#setting-up-a-custom-incoming-webhook) in Teams ein.</br></br>
-1. Erstellen Sie Ihre JSON-Datei mit adaptiver Karte:
+1. [Richten Sie einen benutzerdefinierten Webhook](#setting-up-a-custom-incoming-webhook) in Teams.
+1. Erstellen Der JSON-Datei für adaptive Karten:
 
     ```json
     {
@@ -281,9 +281,9 @@ Sie können Ihre adaptive Karte mithilfe von [Postman](https://www.postman.com) 
 
 ## <a name="testing-your-connector"></a>Testen des Connectors
 
-Um den Connector zu testen, laden Sie ihn wie jede andere App in ein Team hoch. Sie können ein .zip Paket mithilfe der Manifestdatei aus dem Connectors Developer Dashboard erstellen, das wie im vorherigen Abschnitt und den beiden Symboldateien geändert wurde.
+Um den Connector zu testen, laden Sie ihn wie jede andere App in ein Team hoch. Sie können ein .zip mithilfe der Manifestdatei aus dem Connectors Developer Dashboard erstellen, das wie im vorherigen Abschnitt und den beiden Symboldateien geändert wurde.
 
-Nachdem Sie die App hochgeladen haben, öffnen Sie die Liste der Connectors von einem beliebigen Kanal aus. Scrollen Sie nach unten, um Ihre App im Abschnitt **Hochgeladen** anzuzeigen:
+Nachdem Sie die App hochgeladen haben, öffnen Sie die Liste der Connectors von einem beliebigen Kanal aus. Scrollen Sie nach unten, um Ihre App im **Abschnitt Hochgeladen zu** sehen:
 
 ![Screenshot des Abschnitts "Hochgeladen" im Connector-Dialogfeld](~/assets/images/connectors/connector_dialog_uploaded.png)
 
@@ -327,4 +327,4 @@ Diese Limits haben den Zweck, das Spamming eines Kanals durch einen Connector zu
 
 ## <a name="see-also"></a>Siehe auch
 
-[Office 365 Steckverbinder — Microsoft Teams](/connectors/teams/)
+[Office 365 Connectors – Microsoft Teams](/connectors/teams/)

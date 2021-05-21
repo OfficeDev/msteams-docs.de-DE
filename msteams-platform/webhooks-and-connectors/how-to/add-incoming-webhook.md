@@ -2,7 +2,7 @@
 title: Senden externer Anfragen an Microsoft Teams mit eingehenden Webhooks
 author: laujan
 description: Hinzufügen eines eingehenden Webhooks zur Teams-App
-keywords: Teams Tabs ausgehenden Webhook
+keywords: Teams tabs outgoing webhook
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
@@ -27,7 +27,7 @@ Bei eingehenden Webhooks handelt es sich um eine spezielle Art von Connectors in
 
 | Feature | Beschreibung |
 | ------- | ----------- |
-|Konfigurationsbereich|Eingehende Webhooks werden auf Kanalebene konfiguriert und konfiguriert. Beispielsweise werden ausgehende Webhooks auf Teamebene konfiguriert und konfiguriert.|
+|Konfigurationsbereich|Eingehende Webhooks werden auf Kanalebene begrenzt und konfiguriert. Ausgehende Webhooks werden beispielsweise auf Teamebene bereichs- und konfiguriert.|
 |Sichere Ressourcendefinitionen|Nachrichten werden als JSON-Nutzlast formatiert. Diese deklarative Nachrichtenstruktur verhindert die Einschleusung von bösartigem Code, da auf dem Client keine Codeausführung stattfindet.|
 |Unterstützung für Aktion erfordernde Nachrichten|Wenn Sie festlegen, dass Nachrichten als Karten gesendet werden sollen, müssen Sie das Format für **Aktion erfordernde Nachrichtenkarten** verwenden. Aktion erfordernde Nachrichtenkarten werden in allen Office 365-Gruppen einschließlich Microsoft Teams unterstützt. Hier sind Links zur [Referenz zu Legacy-Nachrichtenkarten mit Aktionen](/outlook/actionable-messages/message-card-reference)und zum [Nachrichtenkarten-Playground](https://messagecardplayground.azurewebsites.net).|
 |Unabhängige HTTPS-Messaging-Unterstützung| Karten sind eine großartige Möglichkeit, Informationen in einer übersichtlichen und einheitlichen Weise darzustellen. Jedes Tool oder Framework, das HTTPS-POST-Anforderungen senden kann, kann über einen eingehenden Webhook Nachrichten an Microsoft Teams senden.|

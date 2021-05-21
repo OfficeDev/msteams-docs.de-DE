@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie eine persönliche Registerkarte mit ASP. NET Core MVC
+title: Erstellen sie eine persönliche Registerkarte mit ASP. NET Core MVC
 author: laujan
 description: Eine Schnellstartanleitung zum Erstellen einer benutzerdefinierten persönlichen Registerkarte mit ASP. NET Core MVC.
 localization_priority: Normal
@@ -14,21 +14,21 @@ ms.locfileid: "52566628"
 ---
 # <a name="create-a-custom-personal-tab-with-aspnet-core-mvc"></a>Erstellen einer benutzerdefinierten persönlichen Registerkarte mit ASP.NET Core MVC
 
-In dieser Schnellstartanleitung werden wir eine benutzerdefinierte persönliche Registerkarte mit C- und ASP.Net Core MVC erstellen. Wir verwenden App Studio auch [für Microsoft Teams,](~/concepts/build-and-test/app-studio-overview.md) um Ihr App-Manifest fertigzustellen und Ihre Registerkarte auf Teams bereitzustellen.
+In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten persönlichen Registerkarte mit C# und ASP.Net Core MVC gehen. Außerdem verwenden wir [App Studio für Microsoft Teams,](~/concepts/build-and-test/app-studio-overview.md) um Ihr App-Manifest zu finalisieren und Ihre Registerkarte für die Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
-## <a name="get-the-source-code"></a>Abrufen des Quellcodes
+## <a name="get-the-source-code"></a>Den Quellcode erhalten
 
-Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis für Ihr Registerkartenprojekt. Wir haben ein einfaches Projekt zur Verfügung gestellt, um Ihnen den Einstieg zu erleichtern. Um den Quellcode abzurufen, können Sie den ZIP-Ordner herunterladen und die Dateien extrahieren oder das Beispiel-Repository in Ihr neues Verzeichnis klonen:
+Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis für Ihr Registerkartenprojekt. Wir haben ein einfaches Projekt bereitgestellt, mit dem Sie beginnen können. Zum Abrufen des Quellcodes können Sie den Zip-Ordner herunterladen und die Dateien extrahieren oder das Beispielrepository in Ihr neues Verzeichnis klonen:
 
 ``` bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-Sobald Sie den Quellcode haben, öffnen Sie Visual Studio und wählen Sie **Projekt oder Projektmappe öffnen** aus. Navigieren Sie zum Registerkartenanwendungsverzeichnis, und öffnen **Sie PersonalTabMVC.sln**.
+Nachdem Sie den Quellcode verwendet haben, öffnen Sie Visual Studio, und wählen **Sie Projekt oder Projektmappe öffnen aus.** Navigieren Sie zum Verzeichnis der Registerkartenanwendung, und öffnen **Sie PersonalTabMVC.sln**.
 
-Um Ihre Anwendung zu erstellen und auszuführen, drücken Sie **F5** oder wählen Sie **Debuggen** starten im **Debugmenü** aus. Navigieren Sie in einem Browser zu den folgenden URLs, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde:
+Drücken Sie **F5,** um die Anwendung zu erstellen und auszuführen, oder wählen Sie **Debuggen starten** im Menü **Debuggen** aus. Navigieren Sie in einem Browser zu den folgenden URLs, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde:
 
 * `http://localhost:44335`
 * `http://localhost:44335/privacy`
@@ -38,7 +38,7 @@ Um Ihre Anwendung zu erstellen und auszuführen, drücken Sie **F5** oder wähle
 
 ### <a name="startupcs"></a>Startup.cs
 
-Dieses Projekt wurde aus einem ASP erstellt. Net Core 2.2 Leere Vorlage für Webanwendung mit dem Kontrollkästchen *Erweitert - Konfigurieren für HTTPS,* das bei Setup ausgewählt wurde. Die MVC-Dienste werden von der Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage standardmäßig nicht die Bereitstellung statischer Inhalte, sodass die Middleware für statische Dateien der Methode hinzugefügt `Configure()` wird:
+Dieses Projekt wurde aus einem ASP erstellt. Leere Vorlage für NET Core 2.2-Webanwendung mit dem Kontrollkästchen Erweitert – Konfigurieren für *HTTPS,* das beim Setup aktiviert ist. Die MVC-Dienste werden von der Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage die Standardmäßige Entladung statischer Inhalte nicht, sodass die Middleware für statische Dateien der Methode hinzugefügt `Configure()` wird:
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -52,23 +52,23 @@ public void Configure(IApplicationBuilder app)
   }
 ```
 
-### <a name="wwwroot-folder"></a>wwwroot-Ordner
+### <a name="wwwroot-folder"></a>Ordner "wwwroot"
 
-In ASP. NET Core, der Webstammordner ist der Ort, an dem die Anwendung nach statischen Dateien sucht.
+In ASP. NET Core: Im Webstammordner sucht die Anwendung nach statischen Dateien.
 
-### <a name="appmanifest-folder"></a>AppManifest-Ordner
+### <a name="appmanifest-folder"></a>Ordner "AppManifest"
 
 Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
-* Ein **Vollfarbsymbol** mit 192 x 192 Pixeln.
-* Ein **transparentes Umrisssymbol** mit 32 x 32 Pixeln.
-* Eine **manifest.jsin der** Datei, die die Attribute Ihrer App angibt.
+* Ein **Vollfarbsymbol** mit einer Breite von 192 x 192 Pixeln.
+* Ein **transparentes Gliederungssymbol** mit einer Breite von 32 x 32 Pixeln.
+* Eine **manifest.json-Datei,** die die Attribute Ihrer App angibt.
 
-Diese Dateien müssen in einem App-Paket gezippt werden, damit Sie Ihre Registerkarte in Teams hochladen können. Microsoft Teams lädt das `contentUrl` in Ihrem Manifest angegebene, bettet es in ein IFrame ein und rendert es in Ihrer Registerkarte.
+Diese Dateien müssen in einem App-Paket gezippt werden, damit sie zum Hochladen Ihrer Registerkarte in das Teams. Microsoft Teams laden das in Ihrem Manifest angegebene, betten Sie es in einen `contentUrl` IFrame ein, und rendern Sie es auf Ihrer Registerkarte.
 
 ### <a name="csproj"></a>.csproj
 
-Klicken Sie im Fenster Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Project Datei bearbeiten** aus. Am unteren Rand der Datei sehen Sie den Code, der Ihren ZIP-Ordner erstellt und aktualisiert, wenn die Anwendung erstellt wird:
+Klicken Sie Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Bearbeiten Project Datei aus.** Unten in der Datei wird der Code angezeigt, mit dem Ihr ZIP-Ordner erstellt und aktualisiert wird, wenn die Anwendung erstellt:
 
 ``` xml
 <PropertyGroup>
@@ -96,11 +96,11 @@ Klicken Sie im Fenster Visual Studio Projektmappen-Explorer mit der rechten Maus
 
 #### <a name="home"></a>Start
 
-Asp. NET Core behandelt Dateien, die **Index** genannt werden, als Standard- oder Homepage für die Website. Wenn Ihre Browser-URL auf den Stamm der Website verweist, wird **Index.cshtml** als Homepage für Ihre Anwendung angezeigt.
+ASP. NET Core behandelt Dateien mit dem Namen **Index** als Standard- oder Homepage für die Website. Wenn Ihre Browser-URL auf den Stamm der Website verweist, wird **Index.cshtml** als Homepage für Ihre Anwendung angezeigt.
 
 #### <a name="shared"></a>Shared
 
-Das Partansichtsmarkup *_Layout.cshtml* enthält die gesamte Seitenstruktur der Anwendung und freigegebene visuelle Elemente. Sie wird auch auf die Teams Library verweisen.
+Das Teilansichts *markup _Layout.cshtml* enthält die allgemeine Seitenstruktur der Anwendung und freigegebene visuelle Elemente. Außerdem wird auf die Teams verwiesen.
 
 ### <a name="controllers"></a>Controller
 
@@ -116,22 +116,22 @@ Die Controller verwenden die ViewBag-Eigenschaft, um Werte dynamisch in die Ansi
     ngrok http https://localhost:44345 -host-header="localhost:44345"
     ```
 
-* Ngrok hört Anfragen aus dem Internet ab und leitet sie an Ihre Anwendung weiter, wenn sie auf Port 44325 ausgeführt wird.  Es sollte der Stelle ähneln, an der `https://y8rPrT2b.ngrok.io/` *y8rPrT2b* durch Ihre alphanumerische HTTPS-URL von ngrok ersetzt wird.
+* Ngrok lauscht Anforderungen aus dem Internet und führt sie an Ihre Anwendung weiter, wenn sie an Port 44325 ausgeführt wird.  Es sollte so `https://y8rPrT2b.ngrok.io/` aussehen, *dass y8rPrT2b* durch Ihre ngrok-alphanumerische HTTPS-URL ersetzt wird.
 
-* Achten Sie darauf, die Eingabeaufforderung zu halten, wenn ngrok ausgeführt wird, und notieren Sie sich die URL – Sie werden sie später benötigen.
+* Achten Sie darauf, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und notieren Sie sich die URL – Sie benötigen sie später.
 
-* Stellen Sie sicher, dass **ngrok** ordnungsgemäß ausgeführt wird und ordnungsgemäß funktioniert, indem Sie Ihren Browser öffnen und über die ngrok HTTPS-URL, die in Ihrem Eingabeaufforderungsfenster bereitgestellt wurde, zur Inhaltsseite wechseln.
+* Stellen Sie sicher, dass **ngrok** ordnungsgemäß ausgeführt und funktioniert, indem Sie Ihren Browser öffnen und über die ngrok-HTTPS-URL, die im Eingabeaufforderungsfenster bereitgestellt wurde, zu Ihrer Inhaltsseite wechseln.
 
 > [!TIP]
-> Sie müssen sowohl Ihre Anwendung in Visual Studio als auch ngrok ausführen, um diese Schnellstartanleitung abzuschließen. Wenn Sie die Ausführung Ihrer Anwendung in Visual Studio beenden müssen, um daran zu arbeiten, **führen Sie ngrok aus.** Sie wird weiterhin überwacht und die Weiterleitung der Anforderung Ihrer Anwendung fortgesetzt, wenn sie in Visual Studio neu gestartet wird. Wenn Sie den ngrok-Dienst neu starten müssen, wird eine neue URL zurückgegeben, und Sie müssen jeden Ort aktualisieren, der diese URL verwendet.
+> Sie müssen ihre Anwendung in Visual Studio und ngrok ausführen, um diesen Schnellstart ausführen zu können. Wenn Sie die Ausführung Ihrer Anwendung in Visual Studio ausführen müssen, halten Sie **ngrok am Laufen.** Sie lauscht weiterhin und setzt das Routing der Anforderung Ihrer Anwendung fort, wenn sie in einem Visual Studio. Wenn Sie den ngrok-Dienst neu starten müssen, gibt er eine neue URL zurück, und Sie müssen jeden Ort aktualisieren, der diese URL verwendet.
 
-### <a name="run-your-application"></a>Führen Sie Ihre Anwendung aus
+### <a name="run-your-application"></a>Ausführen der Anwendung
 
-* Drücken Sie Visual Studio **F5** oder wählen Sie **Debuggen** starten aus dem **Debug-Menü** Ihrer Anwendung aus.
+* Drücken Visual Studio **F5,** oder wählen Sie **Debuggen starten** im Menü **Debuggen** Ihrer Anwendung aus.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Erstellen Sie eine benutzerdefinierte Kanal- und Gruppenregisterkarte mit Node.js und dem Yeoman Generator für Microsoft Teams](~/tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
+> [Erstellen Sie einen benutzerdefinierten Kanal und eine Node.js mit dem Yeoman Generator für Microsoft Teams](~/tabs/quickstarts/create-channel-group-tab-node-yeoman.md)

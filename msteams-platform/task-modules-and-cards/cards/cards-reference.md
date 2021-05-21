@@ -1,8 +1,8 @@
 ---
 title: Karten-Referenz
-description: Beschreibt alle Karten und Kartenaktionen, die Bots in Teams
+description: Beschreibt alle Karten und Kartenaktionen, die Bots in der Teams
 localization_priority: Normal
-keywords: Bots-Karten-Referenz
+keywords: Bots-Kartenreferenz
 ms.topic: reference
 ms.openlocfilehash: cab7f1659759f40beb1aba59531ee6c1a84662c1
 ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
@@ -13,56 +13,56 @@ ms.locfileid: "52566859"
 ---
 # <a name="cards-reference"></a>Karten-Referenz
 
-Die in diesem Dokument aufgeführten Karten werden in Bots für Microsoft Teams unterstützt. Sie basieren auf Karten, die vom Bot Framework definiert sind, aber Teams nicht alle Bot Framework-Karten unterstützt und stattdessen einige Teams Karten hinzugefügt wurden. Unterschiede werden in den Verweisen in diesem Dokument herausgestellt.
+Die in diesem Dokument aufgeführten Karten werden in Bots für Microsoft Teams. Sie basieren auf Karten, die vom Bot Framework definiert wurden, aber Teams unterstützt nicht alle Bot Framework-Karten, sondern einige Teams hinzugefügt wurden. Unterschiede werden in den Verweisen in diesem Dokument aufgerufen.
 
 ## <a name="card-examples"></a>Kartenbeispiele
 
-Weitere Informationen zur Verwendung von Karten finden Sie in der Dokumentation für das Bot Builder SDK v3. Codebeispiele sind auch im Microsoft/BotBuilder-Samples-Repository auf GitHub verfügbar.
+Weitere Informationen zur Verwendung von Karten finden Sie in der Dokumentation für das Bot Builder SDK v3. Codebeispiele sind auch im Microsoft/BotBuilder-Samples-Repository auf GitHub.
 
 * .NET
-  * [Fügen Sie Karten als Anlagen zu Nachrichten hinzu.](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
-  * [Karten Beispielcode Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards).
+  * [Hinzufügen von Karten als Anlagen zu Nachrichten](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true).
+  * [Kartenbeispielcode Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards).
 
 * Node.js
-  * [Fügen Sie Karten als Anlagen zu Nachrichten hinzu.](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
-  * [Karten Beispielcode Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards).
+  * [Hinzufügen von Karten als Anlagen zu Nachrichten](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true).
+  * [Kartenbeispielcode Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards).
 
 ## <a name="types-of-cards"></a>Kartentypen
 
-Diese Tabelle zeigt die Kartentypen, die Ihnen zur Verfügung stehen:
+In dieser Tabelle sind die verfügbaren Kartentypen aufgeführt:
 
 | Kartentyp | Beschreibung |
 | --- | --- |
 | [Adaptive Karte](#adaptive-card) | Diese Karte ist eine hochgradig anpassbare Karte, die eine beliebige Kombination aus Text, Sprache, Bildern, Schaltflächen und Eingabefeldern enthalten kann. |
-| [Heldenkarte](#hero-card) | Diese Karte enthält in der Regel ein einzelnes großes Bild, eine oder mehrere Schaltflächen und eine kleine Menge Text. |
-| [Listenkarte](#list-card) | Diese Karte ist eine Bildlaufliste von Elementen. |
-| [Office 365-Anschlusskarte](#office-365-connector-card) | Diese Karte verfügt über ein flexibles Layout mit mehreren Abschnitten, Feldern, Bildern und Aktionen. |
-| [Empfangskarte](#receipt-card) | Diese Karte stellt dem Benutzer eine Quittung zur Verfügung. |
-| [Signin-Karte](#signin-card) | Diese Karte ermöglicht es einem Bot, anzufordern, dass sich ein Benutzer anmeldet. |
-| [Thumbnail-Karte](#thumbnail-card) | Diese Karte enthält in der Regel ein einzelnes Miniaturbild, einen kurzen Text und eine oder mehrere Schaltflächen. |
-| [Kartensammlungen](#card-collections) | Diese Karten werden verwendet, um mehrere Elemente in einer einzigen Antwort zurückzugeben. |
+| [Heldenkarte](#hero-card) | Diese Karte enthält in der Regel ein einzelnes großes Bild, eine oder mehrere Schaltflächen und eine kleine Textmenge. |
+| [Listenkarte](#list-card) | Diese Karte ist eine Bildlaufliste mit Elementen. |
+| [Office 365 Connectorkarte](#office-365-connector-card) | Diese Karte verfügt über ein flexibles Layout mit mehreren Abschnitten, Feldern, Bildern und Aktionen. |
+| [Belegkarte](#receipt-card) | Diese Karte bietet dem Benutzer eine Quittung. |
+| [Signin-Karte](#signin-card) | Mit dieser Karte kann ein Bot anfordern, dass sich ein Benutzer meldet. |
+| [Miniaturansichtskarte](#thumbnail-card) | Diese Karte enthält in der Regel ein einzelnes Miniaturbild, einen kurzen Text und eine oder mehrere Schaltflächen. |
+| [Kartensammlungen](#card-collections) | Diese Karten werden verwendet, um mehrere Elemente in einer einzigen Antwort zurück zu geben. |
 
-## <a name="common-properties-for-all-cards"></a>Gemeinsame Eigenschaften für alle Karten
+## <a name="common-properties-for-all-cards"></a>Allgemeine Eigenschaften für alle Karten
 
-### <a name="inline-card-images"></a>Inline-Kartenbilder
+### <a name="inline-card-images"></a>Inlinekartenbilder
 
-Die Karte kann ein Inlinebild enthalten, indem sie einen Link zum öffentlich zugänglichen Bild enthält. Aus Leistungsgründen wird dringend empfohlen, das Image in einem öffentlichen Content-Delivery-Netzwerk (CDN) zu hosten.
+Die Karte kann ein Inlinebild enthalten, indem sie einen Link zum öffentlich verfügbaren Bild enthält. Aus Leistungsgründen wird dringend empfohlen, das Bild in einem öffentlichen Netzwerk für die Inhaltszustellung (CDN).
 
-Bilder werden nach oben oder unten skaliert, während das Seitenverhältnis beibehalten wird, um den Bildbereich abzudecken. Bilder werden dann von der Mitte abgeschnitten, um das entsprechende Seitenverhältnis für die Karte zu erreichen.
+Bilder werden in der Größe nach oben oder unten skaliert, wobei das Seitenverhältnis beibehalten wird, um den Bildbereich zu abdecken. Bilder werden dann aus der Mitte zugeschnitten, um das entsprechende Seitenverhältnis für die Karte zu erreichen.
 
-Bilder müssen höchstens 1024×1024 im PNG-, JPEG- oder GIF-Format vorliegen und animiertes GIF nicht unterstützen.
+Bilder müssen mindestens 1024×1024 im PNG-, JPEG- oder GIF-Format vorliegen und keine animierte GIF unterstützen.
 
 | Eigenschaft | Typ  | Beschreibung |
 | --- | --- | --- |
 | url | URL | HTTPS-URL zum Bild. |
-| alt | Zeichenfolge | Zugängliche Beschreibung des Bildes. |
+| alt | String | Barrierefreie Beschreibung des Bilds. |
 
 > [!NOTE]
-> Wenn eine Karte eine Bild-URL enthält, die eine Umleitung vor dem endgültigen Bild durchläuft, wird die Umleitung in der Bild-URL nicht unterstützt. Dies tritt bei Bildern auf, die in der öffentlichen Cloud freigegeben wurden.
+> Wenn eine Karte eine Bild-URL enthält, die eine Umleitung vor dem endgültigen Bild durchgeht, wird die Umleitung in der Bild-URL nicht unterstützt. Dies tritt für Bilder auf, die in der öffentlichen Cloud freigegeben werden.
 
 ### <a name="buttons"></a>Schaltflächen
 
-An der Unterseite der Karte werden Schaltflächen gestapelt angezeigt. Schaltflächentext befindet sich immer in einer einzelnen Zeile und wird abgeschnitten, wenn der Text die Schaltflächenbreite überschreitet. Zusätzliche Schaltflächen, die über die von der Karte unterstützte maximale Anzahl hinausgehen, werden nicht angezeigt.
+Schaltflächen werden am unteren Rand der Karte gestapelt angezeigt. Der Text der Schaltfläche befindet sich immer in einer einzigen Zeile und wird abgeschnitten, wenn der Text die Breite der Schaltfläche überschreitet. Alle zusätzlichen Schaltflächen, die über die maximale Anzahl hinausgehen, die von der Karte unterstützt wird, werden nicht angezeigt.
 
 Weitere Informationen finden Sie unter [Kartenaktionen](~/task-modules-and-cards/cards/cards-actions.md).
 
@@ -72,7 +72,7 @@ Weitere Informationen zur Textformatierung in Karten finden Sie unter [Kartenfor
 
 ## <a name="adaptive-card"></a>Adaptive Karte
 
-Eine adaptive Karte ist eine anpassbare Karte, die eine beliebige Kombination aus Text, Sprache, Bildern, Schaltflächen und Eingabefeldern enthalten kann. Weitere Informationen finden Sie unter [Adaptive Karten v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
+Eine adaptive Karte ist eine anpassbare Karte, die eine beliebige Kombination aus Text, Sprache, Bildern, Schaltflächen und Eingabefeldern enthalten kann. Weitere Informationen finden Sie unter [adaptive Karten v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
 
 ### <a name="support-for-adaptive-cards"></a>Unterstützung für adaptive Karten
 
@@ -81,8 +81,8 @@ Eine adaptive Karte ist eine anpassbare Karte, die eine beliebige Kombination au
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
-> * Teams Plattform unterstützt v1.2 oder früher adaptive Kartenfunktionen.
-> * Medienelemente werden derzeit in adaptivecard v1.2 auf der Teams Plattform nicht unterstützt.
+> * Teams Plattform unterstützt v1.2 oder früher adaptive Kartenfeatures.
+> * Medienelemente werden derzeit in der adaptiven Karte v1.2 auf der Teams unterstützt.
 
 ### <a name="example-of-an-adaptive-card"></a>Beispiel für eine adaptive Karte
 
@@ -223,7 +223,7 @@ Eine adaptive Karte ist eine anpassbare Karte, die eine beliebige Kombination au
 
 #### <a name="additional-information-on-adaptive-cards"></a>Zusätzliche Informationen zu adaptiven Karten
 
-Referenz für Bot Framework:
+Bot Framework-Referenz:
 
 * [Adaptive Karten Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
 * [Adaptive Karte C #](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
@@ -243,11 +243,11 @@ Eine Karte, die in der Regel ein einzelnes großes Bild, eine oder mehrere Schal
 | Eigenschaft | Typ  | Beschreibung |
 | --- | --- | --- |
 | title | Rich-Text  | Titel der Karte. Maximal 2 Zeilen. |
-| Untertitel | Rich-Text  | Untertitel der Karte. Maximal 2 Zeilen.|
+| subtitle | Rich-Text  | Untertitel der Karte. Maximal 2 Zeilen.|
 | text | Rich-Text  | Text wird unter dem Untertitel angezeigt. Formatierungsoptionen finden Sie unter [Kartenformatierung](~/task-modules-and-cards/cards/cards-format.md). |
-| Bilder | Array von Bildern | Bild oben auf der Karte angezeigt. Seitenverhältnis 16:9. |
-| Schaltflächen | Array von Aktionsobjekten | Satz von Aktionen, die für die aktuelle Karte gelten. Maximal 6. |
-| Tippen | Action-Objekt | Aktiviert, wenn der Benutzer auf die Karte selbst tippt. |
+| Bilder | Array von Bildern | Bild, das oben auf der Karte angezeigt wird. Seitenverhältnis 16:9. |
+| Schaltflächen | Array von Aktionsobjekten | Aktionssatz, der auf die aktuelle Karte anwendbar ist. Maximal 6. |
+| tippen | Action-Objekt | Wird aktiviert, wenn der Benutzer auf die Karte selbst tippt. |
 
 ### <a name="example-of-a-hero-card"></a>Beispiel für eine Heldenkarte
 
@@ -284,14 +284,14 @@ Eine Karte, die in der Regel ein einzelnes großes Bild, eine oder mehrere Schal
 
 ### <a name="additional-information-on-hero-cards"></a>Zusätzliche Informationen zu Heldenkarten
 
-Referenz für Bot Framework:
+Bot Framework-Referenz:
 
-* [Heldenkarte Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
+* [Hero card Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
 * [Heldenkarte C #](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-hero-card&preserve-view=true)
 
 ## <a name="list-card"></a>Listenkarte
 
-Die Listenkarte wurde von Teams hinzugefügt, um Funktionen bereitzustellen, die über das hinausgehen, was die Listensammlung bereitstellen kann. Die Listenkarte enthält eine Bildlaufliste der Elemente.
+Die Listenkarte wurde von Teams hinzugefügt, um Funktionen zu bieten, die über das hinaus gehen, was die Listensammlung bereitstellen kann. Die Listenkarte enthält eine Bildlaufliste mit Elementen.
 
 ### <a name="support-for-list-cards"></a>Unterstützung für Listenkarten
 
@@ -305,7 +305,7 @@ Die Listenkarte wurde von Teams hinzugefügt, um Funktionen bereitzustellen, die
 | --- | --- | --- |
 | title | Rich-Text  | Titel der Karte. Maximal 2 Zeilen.|
 | Elemente | Array von Listenelementen ||
-| Schaltflächen | Array von Aktionsobjekten | Satz von Aktionen, die für die aktuelle Karte gelten. Maximal 6. |
+| Schaltflächen | Array von Aktionsobjekten | Aktionssatz, der auf die aktuelle Karte anwendbar ist. Maximal 6. |
 
 ### <a name="example-of-a-list-card"></a>Beispiel für eine Listenkarte
 
@@ -361,59 +361,59 @@ Die Listenkarte wurde von Teams hinzugefügt, um Funktionen bereitzustellen, die
 }
 ```
 
-## <a name="office-365-connector-card"></a>Office 365-Anschlusskarte
+## <a name="office-365-connector-card"></a>Office 365 Connectorkarte
 
-Die Office 365-Connectorkarte wird in Teams und nicht in Bot Framework unterstützt. Diese Karte bietet ein flexibles Layout mit mehreren Abschnitten, Feldern, Bildern und Aktionen. Diese Karte kapselt eine Connector-Karte, so dass sie von Bots verwendet werden kann. Unterschiede zwischen Anschlusskarten und O365-Karte finden Sie [unter Hinweise auf der Office 365-Anschlusskarte](#notes-on-the-office-365-connector-card).
+Die Office 365 connector card wird in Teams, nicht in Bot Framework unterstützt. Diese Karte bietet ein flexibles Layout mit mehreren Abschnitten, Feldern, Bildern und Aktionen. Diese Karte kapselt eine Connectorkarte, sodass sie von Bots verwendet werden kann. Unterschiede zwischen Connectorkarten und der O365-Karte finden Sie unter [Hinweise auf der Office 365 Connectorkarte](#notes-on-the-office-365-connector-card).
 
-### <a name="support-for-office-365-connector-cards"></a>Unterstützung für Office 365-Anschlusskarten
+### <a name="support-for-office-365-connector-cards"></a>Unterstützung für Office 365 Connectorkarten
 
 | Bots in Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
 
-### <a name="properties-of-the-office-365-connector-card"></a>Eigenschaften der Office 365-Anschlusskarte
+### <a name="properties-of-the-office-365-connector-card"></a>Eigenschaften der Office 365 Connectorkarte
 
 | Eigenschaft | Typ  | Beschreibung |
 | --- | --- | --- |
 | title | Rich-Text  | Titel der Karte. Maximal 2 Zeilen. |
 | Zusammenfassung | Rich-Text  | Zusammenfassung der Karte. Maximal 2 Zeilen. |
 | text | Rich-Text  | Text wird unter dem Untertitel angezeigt. Formatierungsoptionen finden Sie unter [Kartenformatierung](~/task-modules-and-cards/cards/cards-format.md). |
-| themeColor | HEX-String | Farbe, die die aus dem Anwendungsmanifest bereitgestellte accentColor überschreibt. |
+| themeColor | HEX-Zeichenfolge | Farbe, die die im Anwendungsmanifest bereitgestellte accentColor überschreibt. |
 
-### <a name="notes-on-the-office-365-connector-card"></a>Hinweise auf der Office 365-Anschlusskarte
+### <a name="notes-on-the-office-365-connector-card"></a>Hinweise auf der Office 365 Connectorkarte
 
-Office 365-Anschlusskarten funktionieren in Microsoft Teams ordnungsgemäß, einschließlich [ActionCard-Aktionen](/outlook/actionable-messages/card-reference#actioncard-action).
+Office 365 Connectorkarten funktionieren ordnungsgemäß in Microsoft Teams, einschließlich [ActionCard-Aktionen](/outlook/actionable-messages/card-reference#actioncard-action).
 
-Ein wichtiger Unterschied zwischen der Verwendung von Anschlusskarten von einem Stecker und der Verwendung von Anschlusskarten in Ihrem Bot ist die Handhabung von Kartenaktionen.
+Ein wichtiger Unterschied zwischen der Verwendung von Connectorkarten von einem Connector und der Verwendung von Connectorkarten in Ihrem Bot ist die Behandlung von Kartenaktionen.
 
-* Bei einem Connector empfängt der Endpunkt die Kartennutzlast über HTTP POST.
-* Bei einem Bot löst die `HttpPOST` Aktion eine Aktivität aus, die nur die `invoke` Aktions-ID und den Körper an den Bot sendet.
+* Für einen Connector empfängt der Endpunkt die Kartennutzlast über HTTP POST.
+* Bei einem Bot löst die Aktion eine Aktivität aus, die nur die `HttpPOST` `invoke` Aktions-ID und den Textkörper an den Bot sendet.
 
-Jede Anschlusskarte kann maximal zehn Abschnitte anzeigen, und jeder Abschnitt kann maximal fünf Bilder und fünf Aktionen enthalten.
+Jede Connectorkarte kann maximal zehn Abschnitte anzeigen, und jeder Abschnitt kann maximal fünf Bilder und fünf Aktionen enthalten.
 
 > [!NOTE]
-> Zusätzliche Abschnitte, Bilder oder Aktionen in einer Nachricht werden nicht angezeigt.
+> Alle zusätzlichen Abschnitte, Bilder oder Aktionen in einer Nachricht werden nicht angezeigt.
 
-Alle Textfelder unterstützen Markdown und HTML. Sie können steuern, welche Abschnitte Markdown oder HTML verwenden, indem Sie die `markdown` Eigenschaft in einer Nachricht festlegen. Standardmäßig `markdown` ist auf `true` festgelegt. Wenn Sie stattdessen HTML verwenden möchten, setzen Sie `markdown` auf `false` .
+Alle Textfelder unterstützen Markdown und HTML. Sie können steuern, welche Abschnitte Markdown oder HTML verwenden, indem Sie `markdown` die Eigenschaft in einer Nachricht festlegen. Standardmäßig ist `markdown` auf `true` festgelegt. Wenn Sie stattdessen HTML verwenden möchten, legen Sie auf `markdown` . `false`
 
-Wenn Sie die `themeColor` Eigenschaft angeben, wird die `accentColor` Eigenschaft im App-Manifest überschrieben.
+Wenn Sie die Eigenschaft `themeColor` angeben, überschreibt sie die `accentColor` Eigenschaft im App-Manifest.
 
-Um den Renderstil für `activityImage` anzugeben, können Sie `activityImageType` wie folgt festlegen:
+Zum Angeben des Renderingstils für `activityImage` können Sie `activityImageType` folgendes festlegen:
 
 | Wert | Beschreibung |
 | --- | --- |
-| `avatar` | Standard; `activityImage` wird als Kreis beschnitten. |
-| `article` | `activityImage` wird als Rechteck angezeigt und behält sein Seitenverhältnis bei. |
+| `avatar` | Standard; `activityImage` wird als Kreis zugeschnitten. |
+| `article` | `activityImage` wird als Rechteck angezeigt und behält das Seitenverhältnis bei. |
 
-Weitere Informationen zu den Eigenschaften der Connectorkarte finden Sie unter [Verwertbare Meldungskartenreferenz](/outlook/actionable-messages/card-reference). Die einzigen Connectorkarteneigenschaften, die Microsoft Teams derzeit nicht unterstützt, sind:
+Weitere Informationen zu den Eigenschaften von Connectorkarten finden Sie unter [Referenz zu Nachrichtenkarten mit Aktionen.](/outlook/actionable-messages/card-reference) Die einzigen Connectorkarteneigenschaften, die Microsoft Teams derzeit nicht unterstützen, sind:
 
 * `heroImage`
 * `hideOriginalBody`
-* `startGroup`immer wie in Teams behandelt `true`
+* `startGroup`immer wie `true` in Teams
 * `originator`
 * `correlationId`
 
-### <a name="example-of-an-office-365-connector-card"></a>Beispiel für eine Office 365-Anschlusskarte
+### <a name="example-of-an-office-365-connector-card"></a>Beispiel für eine Office 365 Connectorkarte
 
 ```json
 {
@@ -476,19 +476,19 @@ Weitere Informationen zu den Eigenschaften der Connectorkarte finden Sie unter [
 }
 ```
 
-## <a name="receipt-card"></a>Empfangskarte
+## <a name="receipt-card"></a>Belegkarte
 
-Teams unterstützt die Empfangskarte. Es ist eine Karte, die es einem Bot ermöglicht, dem Benutzer eine Quittung zu geben. Sie enthält in der Regel die Liste der Artikel, die in den Wareneingang aufgenommen werden sollen, z. B. Steuern und Gesamtinformationen.
+Teams unterstützt die Belegkarte. Es handelt sich um eine Karte, mit der ein Bot dem Benutzer eine Quittung bereitstellen kann. Sie enthält in der Regel die Liste der Elemente, die in den Beleg aufgenommen werden sollen, z. B. Steuer- und Gesamtinformationen.
 
-### <a name="support-for-receipt-cards"></a>Unterstützung für Empfangskarten
+### <a name="support-for-receipt-cards"></a>Unterstützung für Belegkarten
 
 | Bots in Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
-### <a name="example-of-a-receipt-card"></a>Beispiel für eine Empfangskarte
+### <a name="example-of-a-receipt-card"></a>Beispiel für eine Belegkarte
 
-![Beispiel für eine Empfangskarte](~/assets/images/cards/receipt.png)
+![Beispiel für eine Belegkarte](~/assets/images/cards/receipt.png)
 
 ```json
 {
@@ -537,20 +537,20 @@ Teams unterstützt die Empfangskarte. Es ist eine Karte, die es einem Bot ermög
 }
 ```
 
-### <a name="additional-information-on-receipt-cards"></a>Zusätzliche Informationen zu Denobkarten
+### <a name="additional-information-on-receipt-cards"></a>Zusätzliche Informationen zu Belegkarten
 
-Referenz für Bot Framework:
+Bot Framework-Referenz:
 
-* [Empfangskarte Node.js](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
-* [Empfangskarte C #](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Belegkarten Node.js](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Belegkarte C #](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="signin-card"></a>Signin-Karte
 
-Mit der Anmeldekarte kann ein Bot einen Benutzer auffordern, sich anzumelden. Es wird in Teams in einer etwas anderen Form unterstützt, als es im Bot Framework zu finden ist. Die Anmeldekarte in Teams ähnelt der Anmeldekarte im Bot Framework, mit der Ausnahme, dass die Anmeldekarte in Teams nur zwei Aktionen unterstützt: `signin` und `openUrl` .
+Mit der Anmeldekarte kann ein Bot einen Benutzer zur Anmeldung anfordern. Es wird in Teams in einer etwas anderen Form als im Bot Framework unterstützt. Die Anmeldekarte in Teams ähnelt der Anmeldekarte im Bot Framework, mit der Ausnahme, dass die Anmeldekarte in Teams nur zwei Aktionen `signin` unterstützt: und `openUrl` .
 
-Die Signin-Aktion kann von jeder Karte in Teams verwendet werden, nicht nur von der Anmeldekarte. Weitere Informationen zur Authentifizierung finden Sie unter [Microsoft Teams Authentifizierungsablauf für Bots](~/bots/how-to/authentication/auth-flow-bot.md).
+Die Anmeldeaktion kann von jeder beliebigen Karte in Teams verwendet werden, nicht nur von der Anmeldekarte. Weitere Informationen zur Authentifizierung finden Sie [unter Microsoft Teams Authentifizierungsfluss für Bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
-### <a name="support-for-signin-cards"></a>Unterstützung für Signin-Karten
+### <a name="support-for-signin-cards"></a>Unterstützung für Anmeldekarten
 
 | Bots in Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
@@ -558,16 +558,16 @@ Die Signin-Aktion kann von jeder Karte in Teams verwendet werden, nicht nur von 
 
 ### <a name="additional-information-on-signin-cards"></a>Zusätzliche Informationen zu Anmeldekarten
 
-Referenz für Bot Framework:
+Bot Framework-Referenz:
 
-* [Anmeldekarte Node.js](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
-* [Anmeldekarte C #](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Signin card Node.js](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [Signin-Karte C #](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
 
-## <a name="thumbnail-card"></a>Thumbnail-Karte
+## <a name="thumbnail-card"></a>Miniaturansichtskarte
 
 Eine Karte, die in der Regel ein einzelnes Miniaturbild, eine oder mehrere Schaltflächen und Text enthält.
 
-### <a name="support-for-thumbnail-cards"></a>Unterstützung für Miniaturkarten
+### <a name="support-for-thumbnail-cards"></a>Unterstützung für Miniaturansichtskarten
 
 | Bots in Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
@@ -580,11 +580,11 @@ Eine Karte, die in der Regel ein einzelnes Miniaturbild, eine oder mehrere Schal
 | Eigenschaft | Typ  | Beschreibung |
 | --- | --- | --- |
 | title | Rich-Text  | Titel der Karte. Maximal 2 Zeilen.|
-| Untertitel | Rich-Text  | Untertitel der Karte. Maximal 2 Zeilen.|
+| subtitle | Rich-Text  | Untertitel der Karte. Maximal 2 Zeilen.|
 | text | Rich-Text  | Text wird unter dem Untertitel angezeigt. Formatierungsoptionen finden Sie unter [Kartenformatierung](~/task-modules-and-cards/cards/cards-format.md). |
-| Bilder | Array von Bildern | Bild oben auf der Karte angezeigt. Seitenverhältnis 1:1 Quadrat. |
-| Schaltflächen | Array von Aktionsobjekten | Satz von Aktionen, die für die aktuelle Karte gelten. Maximal 6. |
-| Tippen | Action-Objekt | Aktiviert, wenn der Benutzer auf die Karte selbst tippt. |
+| Bilder | Array von Bildern | Bild, das oben auf der Karte angezeigt wird. Seitenverhältnis 1:1 quadratisch. |
+| Schaltflächen | Array von Aktionsobjekten | Aktionssatz, der auf die aktuelle Karte anwendbar ist. Maximal 6. |
+| tippen | Action-Objekt | Wird aktiviert, wenn der Benutzer auf die Karte selbst tippt. |
 
 ### <a name="example-of-a-thumbnail-card"></a>Beispiel für eine Miniaturansichtskarte
 
@@ -631,22 +631,22 @@ Eine Karte, die in der Regel ein einzelnes Miniaturbild, eine oder mehrere Schal
 
 ### <a name="additional-information"></a>Weitere Informationen
 
-Referenz für Bot Framework:
+Bot Framework-Referenz:
 
-* [Thumbnail-Karte Node.js](/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
-* [Thumbnail-Karte C #](/dotnet/api/microsoft.bot.schema.thumbnailcard?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Miniaturansichtskarten Node.js](/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Miniaturansichtskarte C #](/dotnet/api/microsoft.bot.schema.thumbnailcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="card-collections"></a>Kartensammlungen
 
 Teams unterstützt Kartensammlungen.
 
-Kartensammlungen umfassen `builder.AttachmentLayout.carousel` und `builder.AttachmentLayout.list` . Diese Sammlungen enthalten adaptive, Helden- oder Miniaturkarten.
+Kartensammlungen umfassen `builder.AttachmentLayout.carousel` und `builder.AttachmentLayout.list` . Diese Sammlungen enthalten adaptive, Hero- oder Miniaturansichtskarten.
 
-## <a name="carousel-collection"></a>Karussell-Kollektion
+## <a name="carousel-collection"></a>Karussellsammlung
 
-Das [Karussell-Layout](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) zeigt ein Karussell von Karten, optional mit zugehörigen Aktionstasten.
+Das [Karusselllayout](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) zeigt ein Karussell mit Karten, optional mit zugeordneten Aktionsschaltflächen.
 
-### <a name="support-for-carousel-collections"></a>Unterstützung für Karussell-Sammlungen
+### <a name="support-for-carousel-collections"></a>Unterstützung für Karussellsammlungen
 
 | Bots in Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
@@ -657,11 +657,11 @@ Das [Karussell-Layout](/azure/bot-service/bot-builder-howto-add-media-attachment
 
 ### <a name="properties-of-a-carousel-card"></a>Eigenschaften einer Karussellkarte
 
-Die Eigenschaften einer Karussellkarte sind mit denen der Helden- und Miniaturkarten identisch.
+Die Eigenschaften einer Karussellkarte sind mit denen der Hero- und Miniaturansichtskarten identisch.
 
-### <a name="example-of-a-carousel-collection"></a>Beispiel einer Karussellsammlung
+### <a name="example-of-a-carousel-collection"></a>Beispiel für eine Karussellsammlung
 
-![Beispiel für ein Kartenkarussell](~/assets/images/cards/carousel.png)
+![Beispiel für ein Karussell von Karten](~/assets/images/cards/carousel.png)
 
 ```json
 {
@@ -836,30 +836,30 @@ Die Eigenschaften einer Karussellkarte sind mit denen der Helden- und Miniaturka
 
 ### <a name="support-for-list-collections"></a>Unterstützung für Listensammlungen
 
-Das Listenlayout zeigt eine vertikal gestapelte Kartenliste, optional mit zugehörigen Aktionsschaltflächen.
+Das Listenlayout zeigt eine vertikal gestapelte Liste von Karten, optional mit zugeordneten Aktionsschaltflächen.
 
 | Bots in Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
-### <a name="example-of-a-list-collection"></a>Beispiel für eine Listenauflistung
+### <a name="example-of-a-list-collection"></a>Beispiel für eine Listensammlung
 
-![Beispiel für eine Kartenliste](~/assets/images/cards/list.png)
+![Beispiel für eine Liste von Karten](~/assets/images/cards/list.png)
 
-Die Eigenschaften sind die gleichen wie für die Helden- oder Miniaturansichtskarte.
+Die Eigenschaften sind identisch mit der Hero- oder Miniaturansichtskarte.
 
 Eine Liste kann maximal zehn Karten pro Nachricht anzeigen.
 
 > [!NOTE]
-> Einige Kombinationen von Listenkarten werden auf iOS und Android noch nicht unterstützt.
+> Einige Kombinationen von Listenkarten werden unter iOS und Android noch nicht unterstützt.
 
 ### <a name="syntax-for-list-collections"></a>Syntax für Listensammlungen
 
 `builder.AttachmentLayout.list` ist die Syntax für Listensammlungen.
 
-## <a name="cards-not-supported-in-teams"></a>Karten, die in Teams nicht unterstützt werden
+## <a name="cards-not-supported-in-teams"></a>Karten werden in der Teams
 
-Die folgenden Karten werden vom Bot Framework implementiert, werden jedoch nicht von Teams unterstützt:
+Die folgenden Karten werden vom Bot Framework implementiert, aber nicht von Teams:
 
 * Animationskarten
 * Audiokarten

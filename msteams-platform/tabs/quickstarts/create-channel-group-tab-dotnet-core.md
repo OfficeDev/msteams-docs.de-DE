@@ -5,14 +5,14 @@ description: Eine Schnellstartanleitung zum Erstellen eines benutzerdefinierten 
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 8271e2d225d5ae3f6458b17b9595c4d23c3ca6c9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f748335b621e9bc93272aaeb8d7e12ecc3ebbee0
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019573"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52580451"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-aspnet-core"></a>Erstellen eines benutzerdefinierten Kanals und einer Registerkarte "Gruppe" mit ASP.NET Core
+# <a name="create-a-custom-channel-and-group-tab-with-aspnetcore"></a>Erstellen eines benutzerdefinierten Kanals und einer Registerkarte "Gruppe" mit ASP.NETCore
 
 In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten Kanal-/Gruppenregisterkarte mit C# und ASP.Net Core -Gestochenseite gehen. Außerdem verwenden wir [App Studio für Microsoft Teams,](~/concepts/build-and-test/app-studio-overview.md) um Ihr App-Manifest zu finalisieren und Ihre Registerkarte für die Teams.
 
@@ -100,9 +100,9 @@ Klicken Sie Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf d
 
 - Öffnen Sie eine Eingabeaufforderung im Stammverzeichnis Ihres Projektverzeichnisses, und führen Sie den folgenden Befehl aus:
 
-```bash
-ngrok http https://localhost:44355 -host-header="localhost:44355"
-```
+    ```bash
+    ngrok http https://localhost:44355 -host-header="localhost:44355"
+    ```
 
 - Ngrok lauscht Anforderungen aus dem Internet und führt sie an Ihre Anwendung weiter, wenn sie an Port 44355 ausgeführt wird. Es sollte so `https://y8rCgT2b.ngrok.io/` aussehen, *dass y8rCgT2b* durch Ihre ngrok-alphanumerische HTTPS-URL ersetzt wird.
 
@@ -114,3 +114,7 @@ In *Tab.cshtml* stellt die Anwendung dem Benutzer zwei Optionsschaltflächen zum
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Erstellen einer benutzerdefinierten Kanal- und Gruppenregisterkarte mit ASP.NETCore MVC](~/tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md)

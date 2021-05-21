@@ -4,10 +4,10 @@ Damit Ihre Registerkarte in Teams angezeigt werden kann, müssen Sie das Microso
 
 - Navigieren Sie zum **Freigegebenen** Ordner, öffnen **Sie _Layout.cshtml**, und fügen Sie dem Tag Folgendes `<head>` hinzu:
 
-```html
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
-```
+    ```html
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    ```
 
 >[!IMPORTANT]
 >Kopieren/einfügen Sie die URLs nicht von dieser Seite, da `<script src="...">` sie möglicherweise nicht die neueste Version darstellen. Um die neueste Version des SDK zu erhalten, wechseln Sie immer zu: [Microsoft Teams JavaScript-API](https://www.npmjs.com/package/@microsoft/teams-js).
@@ -59,7 +59,7 @@ Stellen Sie sicher, dass Sie die aktualisierte **Tab.cshtml -Datei speichern.**
 >[!TIP]
 >Sie müssen ihre Anwendung in Visual Studio und ngrok ausführen, um diesen Schnellstart ausführen zu können. Wenn Sie die Ausführung Ihrer Anwendung in Visual Studio, damit sie funktioniert, **halten Sie ngrok am Laufen.** Sie lauscht weiterhin und setzt das Routing der Anforderung Ihrer Anwendung fort, wenn sie in einem Visual Studio. Wenn Sie den ngrok-Dienst neu starten müssen, gibt er eine neue URL zurück, und Sie müssen Ihre Anwendung mit der neuen URL aktualisieren.
 
-## <a name="upload-your-tab-to-teams-with-app-studio"></a>Hochladen Ihrer Registerkarte, um Teams App Studio zu verwenden
+## <a name="upload-your-tab-to-teams"></a>Hochladen Registerkarte zum Teams
 
 >[!Note]
 > Wir verwenden App Studio, um Ihre **manifest.jsdatei zu** bearbeiten und das fertige Paket in das Teams. Sie können die Datei auch manuellmanifest.js **on-Datei** bearbeiten, wenn Sie es vorziehen. Wenn Sie dies tun, stellen Sie sicher, dass Sie die Lösung erneut erstellen, um die **tab.zip** hochzuladen.
@@ -70,9 +70,9 @@ Stellen Sie sicher, dass Sie die aktualisierte **Tab.cshtml -Datei speichern.**
 
 - Wählen Sie **die Kachel Vorhandene App importieren** im Manifest-Editor aus, um mit der Aktualisierung des App-Pakets für Ihre Registerkarte zu beginnen. Der Quellcode verfügt über ein eigenes teilweise vollständiges Manifest. Der Name Ihres App-Pakets **isttab.zip.** Sie sollte hier gefunden werden:
 
-```bash
-/bin/Debug/netcoreapp2.2/tab.zip
-```
+    ```bash
+    /bin/Debug/netcoreapp2.2/tab.zip
+    ```
 
 - Hochladen **tab.zip** App Studio.
 
@@ -86,17 +86,19 @@ Es gibt eine Liste der Schritte auf der linken Seite des Manifest-Editors und au
 
 #### <a name="details-app-details"></a>Details: App-Details
 
-- Wählen *Sie unter Identifikation* ***Generieren** _ aus, um die Platzhalter-ID durch die erforderliche GUID für Ihre Registerkarte zu ersetzen.
+Im Abschnitt *App-Details:*
 
-- Aktualisieren _Developer Informationen* das **Feld Website-URL** mit Ihrer *ngrok-HTTPS-URL.*
+- *Identifikation:* Wählen Sie **Generieren** aus, um die Platzhalter-ID durch die erforderliche GUID für Ihre Registerkarte zu ersetzen.
 
-- Aktualisieren *Sie unter App-URLs* die Felder **Datenschutzbestimmungen** und **Nutzungsbedingungen-URL** mit Ihrer *ngrok-HTTPS-URL.* Denken Sie daran, die *Pfade /privacy* und */tou* am Ende der URLs zu verwenden.
+- *Entwicklerinformationen:* Aktualisieren Sie das **Feld Website-URL** mit Ihrer *ngrok-HTTPS-URL.*
+
+- *App-URLs*: Aktualisieren Sie **die Datenschutzbestimmungen** `https://<yourngrokurl>/privacy` auf und die **Nutzungsbedingungen** auf `https://<yourngrokurl>/tou`>.
 
 #### <a name="capabilities-tabs"></a>Funktionen: Registerkarten
 
 Im Abschnitt *Registerkarten:*
 
-- Wählen *Sie unter Registerkarte Team* die Option Hinzufügen **aus.**
+- *Registerkarte Team*: wählen Sie **Hinzufügen aus.**
 
 - Aktualisieren Sie im Popupfenster team tab die *Konfigurations-URL auf* `https://<yourngrokurl>/tab` .
 
@@ -104,9 +106,11 @@ Im Abschnitt *Registerkarten:*
 
 #### <a name="finish-domains-and-permissions"></a>Finish: Domänen und Berechtigungen
 
-Im Abschnitt *Domänen und Berechtigungen* sollte das Feld Domänen aus Ihrem *Registerkartenfeld* Ihre ngrok-URL ohne das HTTPS-Präfix - `<yourngrokurl>.ngrok.io/` enthalten.
+Im Abschnitt *Domänen und Berechtigungen:*
 
-#### <a name="test-and-distribute-test-and-distribute"></a>Testen und Verteilen: Testen und Verteilen
+- The *Domains from your tabs* field should contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/` .
+
+#### <a name="finish-test-and-distribute"></a>Finish: Testen und Verteilen
 
 >[!IMPORTANT]
 >Im **Feld Beschreibung** auf der rechten Seite wird die folgende Warnung angezeigt:

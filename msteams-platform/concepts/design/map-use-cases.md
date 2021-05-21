@@ -1,7 +1,7 @@
 ---
-title: Ordnen Sie Ihre Anwendungsfälle Teams App-Funktionen zu
+title: Ordnen Sie Ihre Anwendungsfälle Teams App-Funktionen zu.
 author: clearab
-description: Identifizieren Sie, wie die Anwendungsfälle Ihrer App innerhalb der Teams-Erfahrung funktionieren können.
+description: Identifizieren Sie, wie die Anwendungsfälle Ihrer App innerhalb der Teams werden können.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
@@ -12,95 +12,95 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52566110"
 ---
-# <a name="map-your-use-cases-to-teams-app-capabilities"></a>Ordnen Sie Ihre Anwendungsfälle Teams App-Funktionen zu
+# <a name="map-your-use-cases-to-teams-app-capabilities"></a>Ordnen Sie Ihre Anwendungsfälle Teams App-Funktionen zu.
 
-Nachdem Sie festgestellt *haben, wer* der Benutzer ist und *welches* Problem Sie lösen werden, ist es an der Zeit zu entscheiden, *wie* das Problem zu lösen ist. Der *wer*, *was* und *wie* der Prozess des Verstehens und Zuordnens Ihrer Anwendungsfälle zu Teams App-Funktionen abgeschlossen. Sie müssen den Umfang der App basierend auf den Antworten definieren, die Sie vom Benutzer auf Ihre Abfragen erhalten haben, und dann entscheiden, welche Funktion zum Erstellen Ihrer App am besten geeignet ist.
+Nachdem Sie identifiziert *haben,*  wer der Benutzer ist und welches Problem Sie lösen werden, ist es an der Zeit, zu entscheiden, *wie* das Problem gelöst werden soll. *Wer,* *was* und *wie* wird der Prozess des Verstehens und Zuordnens Ihrer Anwendungsfälle zu den Teams abgeschlossen. Sie müssen den Bereich der App basierend auf den Antworten definieren, die Sie vom Benutzer auf Ihre Abfragen erhalten haben, und dann entscheiden, welche Funktion am besten zum Erstellen Ihrer App geeignet ist.
 
 > [!NOTE]
-> Sie müssen über ein gutes Verständnis der [Einstiegspunkte und UI-Elemente](../../concepts/extensibility-points.md) verfügen, die für Ihre App verfügbar sind. Sie müssen auch sicherstellen, dass Sie [Ihre Anwendungsfälle](../../concepts/design/understand-use-cases.md) sorgfältig berücksichtigt haben.
+> Sie müssen über ein gutes Verständnis der Einstiegspunkte und [Benutzeroberflächenelemente](../../concepts/extensibility-points.md) verfügen, die für Ihre App verfügbar sind. Sie müssen auch sicherstellen, dass Sie [Ihre Verwendungsfälle sorgfältig geprüft](../../concepts/design/understand-use-cases.md) haben.
 
-## <a name="choose-the-correct-scope-for-your-app"></a>Wählen Sie den richtigen Bereich für Ihre App
+## <a name="choose-the-correct-scope-for-your-app"></a>Auswählen des richtigen Bereichs für Ihre App
 
 Berücksichtigen Sie bei der Auswahl des App-Bereichs Folgendes:
 
 * Eine App kann bereichsübergreifend vorhanden sein.
-* App-Funktionen, z. B. Messagingerweiterungen, folgen Benutzern über alle Bereiche hinweg.
-* Benutzer sind oft zögerlich, Apps zu Teams oder Kanälen hinzuzufügen.
+* App-Funktionen, z. B. Messagingerweiterungen, folgen Benutzern über bereiche hinweg.
+* Benutzer sind häufig zögerlich, Apps zu Teams oder Kanälen hinzuzufügen.
 * Gastbenutzer können auf Inhalte zugreifen, die in Teams oder Kanälen verfügbar gemacht werden.
 
-Sie können je nach Denier zwischen persönlichem Bereich und Team- oder Kanalbereich für Ihre App wählen:
+Abhängig von den folgenden Kriterien können Sie zwischen persönlichem Bereich und Team- oder Kanalbereich für Ihre App wählen:
 
-* Stellen Sie für den persönlichen Umfang die folgenden Fragen:
-  * Gibt es Einzelinteraktionen mit der App, die aus Datenschutzgründen oder aus anderen Gründen erforderlich sind? Zum Beispiel die Überprüfung des Reststandes oder anderer privater Informationen.
-  * Wird es eine Zusammenarbeit zwischen Benutzern geben, die möglicherweise keine gemeinsamen Teams haben? Suchen Sie z. B. anstehende organisationsweite Ereignisse in einem Unternehmen.
-  * Gibt es personalisierte Benachrichtigungen oder Nachrichten, die während der gesamten Teams App an einen Benutzer gesendet werden müssen? Beispielsweise Erinnerungen für Genehmigungen oder Registrierungen.
+* Für persönlichen Bereich stellen Sie die folgenden Fragen:
+  * Gibt es 1:1-Interaktionen mit der App, die aus Datenschutz- oder anderen Gründen erforderlich sind? Beispiel: Überprüfen des Restbetrags oder anderer privater Informationen.
+  * Gibt es eine Zusammenarbeit zwischen Benutzern, die möglicherweise keine gemeinsamen Teams? Beispielsweise das Suchen anstehender organisationsweiter Ereignisse in einem Unternehmen.
+  * Gibt es personalisierte Benachrichtigungen oder Nachrichten, die während der gesamten App-Teams an einen Benutzer gesendet werden müssen? Beispielsweise Erinnerungen für Genehmigungen oder Registrierungen.
 * Stellen Sie für einen freigegebenen Bereich (Team, Kanal oder Chat) die folgenden Fragen:
-  * Sind die von der App angezeigten Informationen entweder in der Registerkarte oder über einen Bot relevant und nützlich für die meisten Mitglieder in einem Team? Beispiel: Scrum-App.
-  * Könnte sich der Kontext der App je nach team, dem sie hinzugefügt wird, ändern? Beispielsweise unterscheiden sich die Aufgaben von Planner in verschiedenen Teams. 
-  * Ist es möglich, dass alle Mitglieder in einer Persona, die zusammenarbeiten müssen, Teil eines einzelnen Teams sind? Beispielsweise Agenten, die an einem Ticket arbeiten.
+  * Sind die informationen, die von der App entweder auf der Registerkarte oder über einen Bot angezeigt werden, für die meisten Mitglieder in einem Team relevant und nützlich? Beispiel: Scrum-App.
+  * Kann sich der Kontext der App je nach Team ändern, dem sie hinzugefügt wird? Beispielsweise unterscheiden sich die Aufgaben von Planner in verschiedenen Teams. 
+  * Ist es möglich, dass alle Mitglieder in einer Persona, die zusammenarbeiten müssen, Teil eines einzelnen Teams sind? Beispielsweise Agents, die an einem Ticket arbeiten.
 
-Die folgenden Szenarien führen Sie beim Verständnis der Auswahl von Einstiegspunkten und UI-Elementen, die mit Teams App-Funktionen gut funktionieren:
+Die folgenden Szenarien helfen Ihnen dabei, die Auswahl von Einstiegspunkten und Benutzeroberflächenelementen zu verstehen, die gut mit den funktionen Teams funktionieren:
 
 > [!NOTE]
-> Es ist keine erschöpfende Liste, aber wird Ihnen helfen, einige der Möglichkeiten, die Ihnen zur Verfügung stehen, durchzudenken.
+> Es handelt sich nicht um eine vollständige Liste, sie hilft Ihnen jedoch, einige der ihnen zur Verfügung en nen Möglichkeiten zu durchdenken.
 
-## <a name="create-share-and-collaborate-on-items-in-an-external-system"></a>Erstellen, Freigeben und Zusammenarbeiten von Elementen in einem externen System
+## <a name="create-share-and-collaborate-on-items-in-an-external-system"></a>Erstellen, Freigeben und Zusammenarbeit an Elementen in einem externen System
 
-App for Microsoft Teams ist eine großartige Möglichkeit, mit Ihren Daten zu interagieren und es gibt eine Vielzahl von Integrationspunkten zur Auswahl.
+App für Microsoft Teams ist eine hervorragende Möglichkeit, mit Ihren Daten zu interagieren, und es stehen eine Vielzahl von Integrationspunkten zur Auswahl.
 
-* **Messaging-Erweiterungen mit Suchbefehlen**: Suchen Sie externe Systeme und teilen Sie die Ergebnisse als interaktive Karte.
+* **Messagingerweiterungen mit Suchbefehlen:** Durchsuchen Sie externe Systeme, und geben Sie die Ergebnisse als interaktive Karte weiter.
 
-* **Messagingerweiterungen mit Aktionsbefehlen:** Sammeln Sie Informationen, die in einen Datenspeicher eingefügt werden sollen, oder führen Sie erweiterte Suchvorgänge durch.
+* **Messagingerweiterungen mit Aktionsbefehlen:** Sammeln von Informationen zum Einfügen in einen Datenspeicher oder ausführen erweiterter Suchen.
 
-* **Registerkarten**: Erstellen Sie eingebettete Web-Erlebnisse zum Anzeigen, Arbeiten mit und Freigeben von Daten.
+* **Registerkarten:** Erstellen eingebetteter Weberfahrungen zum Anzeigen, Arbeiten mit und Freigeben von Daten.
 
-* **Connectors und Webhooks**: Eine einfache Möglichkeit, Daten zu übertragen und Daten aus dem Teams Client zu senden.
+* **Connectors und Webhooks:** Eine einfache Möglichkeit zum Pushen von Daten und Senden von Daten aus dem Teams Client.
 
-* **Aufgabenmodule**: Interaktive modale Formulare von überall aus, wo Sie sie zum Sammeln oder Anzeigen von Informationen benötigen.
+* **Aufgabenmodule:** Interaktive modale Formulare von überall, wo Sie sie zum Sammeln oder Anzeigen von Informationen benötigen.
 
 ## <a name="initiate-workflows-and-processes"></a>Initiieren von Workflows und Prozessen
 
-Manchmal benötigen Sie nur eine schnelle Möglichkeit, einen Prozess oder Workflow in einem externen System zu starten.
+Manchmal benötigen Sie nur eine schnelle Möglichkeit, um einen Prozess oder Workflow in einem externen System zu starten.
 
-* **Aktionsbefehle für Messagingerweiterungen:** Auslösen von Nachrichten, sodass Ihre Benutzer den Inhalt einer Nachricht schnell an Ihre Webdienste senden können.
+* **Aktionsbefehle** für Messagingerweiterungen: Auslösen von Nachrichten, sodass Ihre Benutzer den Inhalt einer Nachricht schnell an Ihre Webdienste senden können.
 
-* **Task-Module**: Öffnen Sie sie über eine Registerkarte, einen Bot oder eine Messaging-Erweiterung, um Informationen zu sammeln, bevor Sie einen Workflow einleiten.
+* **Aufgabenmodule:** Öffnen Sie sie über eine Registerkarte, einen Bot oder eine Messagingerweiterung, um Informationen zu sammeln, bevor Sie einen Workflow initiieren.
 
-* **Konversationsbots**: Interagieren Sie mit Ihren Benutzern durch Text und Rich Cards.
+* **Unterhaltungsbots:** Interagieren Sie mit Ihren Benutzern über Text und Rich Cards.
 
-* **Outgoing Webhooks**: Eine gute Wahl für eine einfache Hin- und Her-Interaktion, wenn Sie nicht einen ganzen Konversationsbot erstellen müssen.
+* **Ausgehende Webhooks:** Eine gute Wahl für eine einfache Hin-und-Her-Interaktion, wenn Sie keinen gesamten Unterhaltungsbot erstellen müssen.
 
-## <a name="send-notifications-and-alerts"></a>Senden von Benachrichtigungen und Benachrichtigungen
+## <a name="send-notifications-and-alerts"></a>Senden von Benachrichtigungen und Warnungen
 
-Senden Sie asynchrone Benachrichtigungen und Benachrichtigungen an Ihre Benutzer in Teams. Verwenden Sie interaktive Karten, um schnellen Zugriff auf häufig verwendete Aktionen und Links zu zusätzlichen Informationen zu ermöglichen.
+Senden asynchroner Benachrichtigungen und Benachrichtigungen an Ihre Benutzer in Teams. Verwenden Sie interaktive Karten, um schnellen Zugriff auf häufig verwendete Aktionen und Links zu zusätzlichen Informationen zu ermöglichen.
 
-* **Konversationsbots**: Senden Sie proaktive Nachrichten an Gruppen, Kanäle oder einzelne Benutzer.
+* **Unterhaltungsbots:** Proaktive Nachrichten an Gruppen, Kanäle oder einzelne Benutzer senden.
 
-* **Connectors und eingehende Webhooks**: Erlauben Sie einem Kanal, Nachrichten zu abonnieren. Mit einem Connector können Benutzer das Abonnement mit einer Konfigurationsseite anpassen.
+* **Connectors und eingehende Webhooks:** Zulassen, dass ein Kanal Nachrichten abonniert. Mit einem Connector können Benutzer das Abonnement mit einer Konfigurationsseite anpassen.
 
-## <a name="ask-questions-and-get-answers"></a>Stellen Sie Fragen und erhalten Sie Antworten
+## <a name="ask-questions-and-get-answers"></a>Fragen stellen und Antworten erhalten
 
-Die Leute haben Fragen und Sie haben wahrscheinlich eine Menge der Antworten irgendwo gespeichert. Leider ist es oft ziemlich schwierig, die beiden zu verbinden.
+Die Personen haben Fragen, und Sie haben wahrscheinlich eine Menge der Antworten erhalten, die an einem anderen Ort gespeichert sind. Leider ist es oft recht schwierig, die beiden zu verbinden.
 
-* **Konversationsbots**: Natürliche Sprachverarbeitung, KI, maschinelles Lernen und alle Schlagworte. Verwenden Sie einen Bot, der von der intelligenten Cloud angetrieben wird, um Ihre Benutzer mit den Antworten zu verbinden, die sie benötigen.
+* **Conversational bots**: Natural language processing, AI, machine learning, and all the buzzwords. Verwenden Sie einen Bot, der von der intelligenten Cloud unterstützt wird, um Ihre Benutzer mit den antworten zu verbinden, die sie benötigen.
 
-* **Registerkarten**: Betten Sie Ihr vorhandenes Webportal in Teams ein, oder erstellen Sie eine Teams-spezifische Version für zusätzliche Funktionen.
+* **Registerkarten**: Betten Sie Ihr vorhandenes Webportal in Teams ein, oder erstellen Teams-spezifische Version für zusätzliche Funktionen.
 
-## <a name="get-social"></a>Holen Sie sich soziale
+## <a name="get-social"></a>Soziale Netzwerke erhalten
 
-Eine Kollaborationsplattform ist von Natur aus eine soziale Plattform. Lassen Sie Ihre kreative Seite frei sein und fügen Sie etwas Spaß in Ihrem Arbeitsplatz. Alle Benutzer müssen in der Lage sein, Witze zu senden, Kudos zu geben, einige Meme zu bekommen, einige Emojis herauszuschmeisenden, oder irgendetwas anderes, das Ihre Phantasie trifft.
+Eine Plattform für die Zusammenarbeit ist inhärent eine soziale Plattform. Lassen Sie Ihre kreative Seite frei und fügen Sie Ihrem Arbeitsplatz etwas Spaß hinzu. Alle Benutzer müssen in der Lage sein, Witze zu senden, Kudos zu geben, memes zu erhalten, einige Emojis oder andere Emojis zu verstreichen.
 
 ## <a name="think-in-terms-of-a-single-page-app"></a>Denken Sie an eine einseitige App
 
-Registerkarten sind eingebettete Webseiten. So ziemlich alles, was Sie in einem SPA tun können, können Sie in einem Tab in Teams tun. Achten Sie nur auf den Umfang. Gruppen- und Kanalregisterkarten sind für gemeinsame Erlebnisse und persönliche Registerkarten für persönliche Erlebnisse. Die Liste der Dinge des Teams geht auf dem Kanal-Tab und die Liste Ihrer Sachen geht in der persönlichen Registerkarte.
+Registerkarten sind eingebettete Webseiten. So ziemlich alles, was Sie in einem SPA tun können, können Sie auf einer Registerkarte in Teams. Achten Sie darauf, den Bereich zu beachten. Gruppen- und Kanalregisterkarten sind für freigegebene Erfahrungen und persönliche Registerkarten für persönliche Erfahrungen. Die Liste der Zeugs des Teams wird auf der Kanalregisterkarte angezeigt, und die Liste Ihrer Zeugs wird auf der persönlichen Registerkarte angezeigt.
 
-## <a name="start-small"></a>Starten Sie klein
+## <a name="start-small"></a>Klein starten
 
-Sie sind sich nicht sicher, wo Sie anfangen sollen? Fühlen Sie sich ein wenig überwältigt von der tollen Vielfalt an Optionen, die Ihnen zur Verfügung stehen? Sie müssen eine Kernfunktion Ihrer App auswählen und dort starten. Nachdem Sie ein Gefühl für den Informationsfluss durch die verschiedenen Kontexte in Teams erhalten haben, ist es viel einfacher, sich eine komplexere Interaktion vorzustellen.
+Nicht sicher, wo sie beginnen soll? Fühlen Sie sich ein wenig überwältigt von der großartigen Auswahl an Optionen, die Ihnen zur Verfügung stehen? Sie müssen ein Kernfeature Ihrer App auswählen und dort beginnen. Nachdem Sie ein Gefühl für den Fluss von Informationen durch die verschiedenen Kontexte in Teams erhalten haben, ist es viel einfacher, eine komplexere Interaktion zu sehen.
 
-## <a name="put-it-all-together"></a>Setzen Sie alles zusammen
+## <a name="put-it-all-together"></a>Alles zusammen
 
-Davon abgesehen, die besten Apps kombinieren in der Regel mehrere Funktionen, eine App zu schaffen, die Benutzer im richtigen Kontext mit der richtigen Funktionalität zur richtigen Zeit einbindet. Sie dürfen keine Funktionalität an einen Ort erzwingen, zu dem sie nicht gehört. Nur weil Sie einen guten Eins-zu-Eins-Gesprächsbot haben, bedeutet das nicht, dass Sie ihn einem Team hinzufügen. Verschiedene Erweiterbarkeitspunkte sind gut für verschiedene Dinge, spielen ihre Stärken für die Schaffung einer erfolgreichen App.
+Die besten Apps kombinieren in der Regel mehrere Features und erstellen eine App, die Benutzer im richtigen Kontext mit der richtigen Funktionalität zum richtigen Zeitpunkt ansprecht. Sie dürfen keine Funktionalität an einem Ort erzwingen, zu dem sie nicht gehört. Nur weil Sie über einen guten 1:1-Unterhaltungsbot verfügen, bedeutet dies nicht, dass Sie ihn einem Team hinzufügen. Verschiedene Erweiterbarkeitspunkte nen für verschiedene Dinge nen, ihre Stärken für die Erstellung einer erfolgreichen App nutzen.
 
 ## <a name="see-also"></a>Siehe auch
 
