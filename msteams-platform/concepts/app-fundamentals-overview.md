@@ -5,12 +5,12 @@ description: Beschreiben der grundlegenden Konzepte Teams Plattformentwicklung.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 6d0c22049e828426cfe963da6631b4c289566bf0
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 1ecae34c38950f16e49fc123f73bdc746c4b28cc
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058460"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630158"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams der App-Entwicklung
 
@@ -33,11 +33,10 @@ Sie können Benutzerprobleme erkennen und die Antworten auf einige häufige Prob
 
 [Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Es werden Informationen zur Freigabe Ihrer App und zur Zusammenarbeit an Elementen in einem externen System bereitgestellt. Sie können auch erfahren, wie Sie Workflows initiieren und Benachrichtigungen an Benutzer senden. Erhalten Sie zusätzliche Tipps, wo Sie beginnen können, wie Sie soziale Netzwerke mit Benutzern, Unterhaltungsbots und die Kombination mehrerer Features erhalten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
 
-- [Integrieren von Web-Apps in Teams](../samples/integrating-web-apps.md)
-
-- [Erstellen Ihrer ersten Microsoft Teams App](../build-your-first-app/build-first-app-overview.md)
+* [Integrieren von Web-Apps in Teams](../samples/integrating-web-apps.md)
+* [Erstellen Ihrer ersten Microsoft Teams App](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

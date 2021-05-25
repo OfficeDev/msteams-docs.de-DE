@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Aufgabenmodule für Teams entwerfen und das M
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 347ce42c41706f698e2f8897a0518aae0850a275
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 48e47a6c0bde0f0a3fefb8fcbfb362687ce58947
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101730"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629921"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Entwerfen von Aufgabenmodulen für Microsoft Teams App
 
@@ -37,20 +37,36 @@ Aufgabenmodule können von fast überall in Ihrer App gestartet werden.
 
 ## <a name="anatomy"></a>Anatomie
 
+Aufgabenmodule bieten eine flexible Oberfläche für gehostete App-Oberflächen. Sie werden mit einem iframe (Desktop) oder webview (mobil) erstellt, sodass Sie Aufgabenmodule mit unseren Benutzeroberflächenvorlagen (empfohlen) oder von Grund auf neu entwerfen können.
+
+Sie können auch mit dem [Adaptive Cards-Framework](../../task-modules-and-cards/cards/design-effective-cards.md) erstellt werden. Dies kann eine einfachere und schnellere Möglichkeit sein, gängige Szenarien (z. B. Formulare) zu erleichtern.
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Abbildung der Ui-Anatomie eines Aufgabenmoduls." border="false":::
-
-Aufgabenmodule sind sehr flexible Oberflächen. Sie können mit iframes erstellt werden, indem sie in andere Benutzeroberflächenvorlagen einziehen, um partnerintehte Erfahrungen zu hosten. Dies wird für die am besten aufpolierte Erfahrung bevorzugt.
-
-Sie können auch mit dem [Adaptive Card-Framework](../../task-modules-and-cards/cards/design-effective-cards.md) erstellt werden, das eine einfachere und schnellere Möglichkeit zum Ausführen gängiger Szenarien (z. B. Formulare) sein kann.
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
 |1|**App-Symbol**|
 |2|**App-Name**: Vollständiger Name Ihrer App.|
 |3|**Kopfzeile**: Kopfzeilen klar und prägnant machen. Beschreiben Sie die Aufgabe, die Benutzer abschließen möchten.
-|4 |**Schaltfläche Schließen**: Ermöglicht Benutzern das Suchen von App-Inhalten, die sie einfügen möchten.|
+|4 |**Schaltfläche Schließen**: Schließt das Aufgabenmodul. Nicht gespeicherte Änderungen werden nicht in den App-Inhalten angewendet.|
 |5 |**iframe**: Responsive space that hosts your app content.|
 |6 |**Aktionen (optional):** Schaltflächen im Zusammenhang mit Ihrem App-Inhalt.|
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Abbildung der Benutzeroberflächenanatomie eines Aufgabenmoduls auf mobilen Geräten." border="false":::
+
+|Leistungsindikator|Beschreibung|
+|----------|-----------|
+|1|**Kopfzeile**: Kopfzeilen klar und prägnant machen. Beschreiben Sie die Aufgabe, die Benutzer abschließen möchten.
+|2|**App-Name**: Vollständiger Name Ihrer App.|
+|3|**Schaltfläche Schließen**: Schließt das Aufgabenmodul. Nicht gespeicherte Änderungen werden nicht in den App-Inhalten angewendet.|
+|4 |**webview**: Responsive space that hosts your app content.|
+|5 |**Aktionen (optional):** Schaltflächen im Zusammenhang mit Ihrem App-Inhalt.|
+
+---
 
 ## <a name="designing-with-ui-templates"></a>Entwerfen mit Benutzeroberflächenvorlagen
 
@@ -66,43 +82,99 @@ Erwägen Sie die Verwendung von Vorlagen für allgemeine Layouts in Ihren Aufgab
 
 Listen funktionieren in einem Aufgabenmodul gut, da sie einfach zu scannen sind.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/list.png" alt-text="Beispielliste in einem Aufgabenmodul." border="false":::
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="Beispielliste in einem Aufgabenmodul auf Mobilgeräten." border="false":::
+
+---
 
 ### <a name="form"></a>Formular
 
 Aufgabenmodule sind ein hervorragender Ort, um Formulare mit sequenziellen Benutzereingaben und Inlineüberprüfungen zu benutzeroberflächen. Sie können adaptive Karten als Möglichkeit zum Einbetten von Formularelementen verwenden.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/form.png" alt-text="Beispielformular in einem Aufgabenmodul." border="false":::
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Beispielformular in einem Aufgabenmodul auf mobilen Geräten." border="false":::
+
+---
 
 ### <a name="sign-in"></a>Anmelden
 
 Erstellen Sie einen fokussierten Anmelde- oder Anmeldefluss mit einer Reihe von Aufgabenmodulen, mit der benutzer sich problemlos durch sequenzielle Schritte bewegen können.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Beispiel für die Anmeldeerfahrung in einem Aufgabenmodul." border="false":::
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Beispiel für die Anmeldeerfahrung in einem Aufgabenmodul auf Mobilgeräten." border="false":::
+
+---
 
 ### <a name="media"></a>Medien
 
 Einbetten von Medieninhalten in ein Aufgabenmodul für eine fokussierte Anzeige.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/media.png" alt-text="Beispiel für Medieninhalte in einem Aufgabenmodul." border="false":::
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="Beispiel für Medieninhalte in einem Aufgabenmodul auf Mobilgeräten." border="false":::
+
+---
 
 ### <a name="empty-state"></a>Leerer Status
 
 Wird für Willkommens-, Fehler- und Erfolgsmeldungen verwendet.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Beispiel leerer Zustand in einem Aufgabenmodul." border="false":::
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="Beispiel leerer Zustand in einem Aufgabenmodul auf mobilen Geräten." border="false":::
+
+---
 
 ### <a name="image-gallery"></a>Bildergalerie
 
-Betten Sie ein Katalogkarussell in einen iframe ein.
+Ein Katalog karussell in einen iframe (Desktop) oder webview (mobil) einbetten.
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Beispielbildkatalog in einem Aufgabenmodul." border="false":::
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="Beispielbildkatalog in einem Aufgabenmodul auf Mobilgeräten." border="false":::
+
+---
 
 ### <a name="poll"></a>Umfrage
 
 In diesem Beispiel werden Umfrageergebnisse gezeigt, die von einer adaptiven Karte gestartet wurden. Die Abfrage kann auch in einem Aufgabenmodul platziert werden.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Beispielumfrage in einem Aufgabenmodul." border="false":::
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="Beispielumfrage in einem Aufgabenmodul auf Mobilgeräten." border="false":::
+
+---
 
 ## <a name="best-practices"></a>Bewährte Methoden
 

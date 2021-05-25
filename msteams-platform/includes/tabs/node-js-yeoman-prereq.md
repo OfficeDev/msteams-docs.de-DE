@@ -78,7 +78,7 @@ Darüber hinaus erfordert dieses Projekt, dass Sie folgendes in Ihrer Entwicklun
 
     **Möchten Sie Azure Applications Insights für telemetrie verwenden? (y/N)**
 
-    Wählen **Sie aus,** dass [Azure Application Insights nicht enthalten ist.](/azure-docs/articles/azure-monitor/app/app-insights-overview.md) Der Standardwert ist nein. Geben **Sie n** ein.
+    Wählen **Sie aus,** dass [Azure Application Insights nicht enthalten ist.](/azure/azure-monitor/app/app-insights-overview) Der Standardwert ist nein. Geben **Sie n** ein.
 
     **Standardregisterkartenname (max. 16 Zeichen)?**
 

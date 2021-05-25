@@ -3,20 +3,26 @@ title: Entwerfen Ihrer benutzerdefinierten App
 author: heath-hamilton
 description: Erfahren Sie, wie Sie Microsoft Teams entwerfen. Zu den Ressourcen gehören Microsoft Teams UI Kit, bewährte Methoden, Beispiele und vieles mehr.
 localization_priority: Normal
-ms.author: lajanuar
+ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 2f21872bd8c37026528ff6fde282e8c433d5e052
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 19b8f8cbcbc52aa02ccd5d94f5bc4c088f2ae28a
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565116"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644875"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Entwerfen Ihrer Microsoft Teams App
 
 :::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="Konzeptionelles Bild, in dem Microsoft Teams Entwurfsrichtlinien vorgestellt werden.":::
 
 Unabhängig davon, ob Sie Designer, Produktmanager, Entwickler oder Hersteller sind, die Tools mit niedrigem Code verwenden, können diese Richtlinien Ihnen helfen, schnell die richtigen Entwurfsentscheidungen für Ihre Microsoft Teams treffen.
+
+## <a name="creating-a-cohesive-experience"></a>Erstellen einer gemeinsamen Erfahrung
+
+Das Entwerfen Teams app ist wie das Entwerfen einer herkömmlichen Web-App – aber auch ein wenig anders. Ein effektives Design hebt die eindeutigen Attribute Ihrer App hervor und passt sich natürlich Teams Features und Kontexten an.
+
+Diese Richtlinien und Ressourcen können Ihnen dabei helfen, dieses Gleichgewicht zu finden. Sie wissen, was Sie beim Entwerfen Ihrer Teams -App (z. B. mehrstufige Navigation auf einer Registerkarte) vermeiden sollten.
 
 ## <a name="teams-app-design-principles"></a>Teams von App-Designprinzipien
 
@@ -107,27 +113,9 @@ Text, Symbole und Bilder machen deutlich, wofür die App steht und wie sie verwe
    :::column-end:::
 :::row-end:::
 
-## <a name="creating-a-cohesive-experience"></a>Erstellen einer gemeinsamen Erfahrung
-
-Das Entwerfen Teams app ist wie das Entwerfen einer herkömmlichen Web-App – aber auch ein wenig anders. Ein effektives Design hebt die eindeutigen Attribute Ihrer App hervor und passt sich natürlich Teams Features und Kontexten an.
-
-Diese Richtlinien und Ressourcen können Ihnen dabei helfen, dieses Gleichgewicht zu finden. Sie wissen, was Sie beim Entwerfen Ihrer Teams -App (z. B. mehrstufige Navigation auf einer Registerkarte) vermeiden sollten.
-
-## <a name="planning-your-app"></a>Planen Ihrer App
-
-Zum Entwerfen einer qualitativ hochwertigen Teams müssen Sie zunächst wissen, was Ihre App tun soll und wie Sie denken, dass die App von den Personen verwendet wird. Wenn Sie dies noch nicht gemacht haben, nehmen Sie sich etwas Zeit, um Ihre [App ordnungsgemäß zu planen.](../../concepts/extensibility-points.md)
-
-## <a name="design-fundamentals"></a>Grundlegendes zur Gestaltung
+## <a name="teams-design-system"></a>Teams-Designsystem
 
 Lernen Sie [die Grundlagen des Teams-App-Designs,](design-teams-app-fundamentals.md)einschließlich Layout, Farbschemas und vieles mehr.
-
-## <a name="basic-fluent-ui-components-for-teams"></a>Grundlegende Komponenten der Fluent-benutzeroberfläche für Teams
-
-Basierend auf der Fluent-Benutzeroberfläche sind dies die [Kernelemente zum Erstellen vertrauter Teams Schnittstellen.](design-teams-app-basic-ui-components.md)
-
-## <a name="ui-templates"></a>Vorlagen für Benutzeroberflächen
-
-Erstellen Sie schnell komplexe Designs mit hoher Genauigkeit mit Vorlagen für [Teams und Workflows](design-teams-app-ui-templates.md).
 
 ## <a name="app-capabilities"></a>App-Funktionen
 
@@ -138,17 +126,14 @@ Erfahren Sie, wie Personen apps hinzufügen, Teams verwenden und verwalten, um d
 * [Messaging-Erweiterungen](../../messaging-extensions/design/messaging-extension-design.md)
 * [Bots](../../bots/design/bots.md)
 * [Besprechungserweiterungen](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Aufgabenmodule](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [Adaptive Karten](../../task-modules-and-cards/cards/design-effective-cards.md)
 
-## <a name="app-customization"></a>App-Anpassung
+## <a name="ui-templates"></a>Vorlagen für Benutzeroberflächen
 
-Erfahren Sie, Teams Administrator die App je nach Bedarf der Organisation anpassen oder neu umbranden kann. Diese Anpassung ist aktiviert, wenn Sie die `configurableProperties` im Manifestschema definieren. Weitere Informationen finden Sie unter [Anpassen von Apps in Microsoft Teams.](/MicrosoftTeams/customize-apps)
+Erstellen Sie schnell komplexe Designs mit hoher Genauigkeit mit Vorlagen für [Teams und Workflows](design-teams-app-ui-templates.md).
 
-> [!NOTE]
-> Mithilfe der App-Anpassung können Administratoren das Aussehen und Die-Gefühl der Apps ändern, die über Bots, Messagingerweiterungen, Registerkarten und Connectors geladen werden. Wenn der Administrator Teams den Namen einer App von *Contoso* in *Contoso Agent* anpasst, wird die App benutzern mit dem neuen Namen *Contoso Agent* angezeigt. Beim Hinzufügen eines Connectors zu einem Chat wird in der Liste der Connectors jedoch weiterhin der Name der App als *Contoso angezeigt.*
-> 
-> Als bewährte Methode müssen Sie Anpassungsrichtlinien für App-Benutzer und -Kunden bereitstellen, die sie beim Anpassen Ihrer App befolgen müssen. Weitere Informationen finden Sie unter [Anpassen von Apps in Microsoft Teams.](/MicrosoftTeams/customize-apps)
+## <a name="basic-ui-components"></a>Grundlegende Benutzeroberflächenkomponenten
+
+Basierend auf der Fluent-Benutzeroberfläche sind dies die [Kernelemente,](design-teams-app-basic-ui-components.md) die Sie verwenden können, um Teams von Grund auf neu zu erstellen.
 
 ## <a name="tools-and-samples"></a>Tools und Beispiele
 
@@ -175,7 +160,7 @@ Importieren Sie diese Vorlagen und zugehörigen Komponenten direkt in Teams App-
 
 ### <a name="sample-app"></a>Beispiel-App
 
-Installieren Sie eine Beispiel-App, um zu sehen, wie Benutzeroberflächenvorlagen in Teams aussehen und verhalten.
+Sie können eine Beispiel-App hochladen, um zu sehen, wie Apps im Client aussehen und sich Teams verhalten sollen.
 
 > [!div class="nextstepaction"]
 > [Die Beispiel-App (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
@@ -186,7 +171,7 @@ Weitere Informationen finden Sie in einer der folgenden Ressourcen:
 
 ### <a name="fluent-ui-documentation"></a>Dokumentation zur Fluent-Benutzeroberfläche
 
-Hier finden Sie Codebeispiele und Implementierungsdetails für die Fluent-UI-basierten Komponenten, die zum Erstellen von Teams verwendet werden.
+Hier finden Sie Codebeispiele und Implementierungsdetails für die grundlegenden Fluent UI-Komponenten, die zum Erstellen Teams werden.
 
 > [!div class="nextstepaction"]
 > [Testen Teams Benutzeroberflächenkomponenten (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)

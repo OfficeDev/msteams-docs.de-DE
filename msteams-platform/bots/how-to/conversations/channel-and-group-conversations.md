@@ -5,12 +5,12 @@ description: Senden, Empfangen und Behandeln von Nachrichten für einen Bot in e
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 2d7eece1fc74781456024f6dcb9414fefbadb8f4
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: ef5cf8464fa0e93d5ea3840003a2b0c04a4a5ef5
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075752"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630999"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Kanal- und Gruppenchatunterhaltungen mit einem Bot
 
@@ -18,10 +18,12 @@ ms.locfileid: "52075752"
 
 Um den Microsoft Teams in einem Team- oder Gruppenchat zu installieren, fügen Sie dem Bot den Bereich oder `teams` `groupchat` den Bereich hinzu. Dadurch können alle Mitglieder der Unterhaltung mit Ihrem Bot interagieren. Nachdem der Bot installiert wurde, hat er Zugriff auf Metadaten zur Unterhaltung, z. B. auf die Liste der Unterhaltungsmitglieder. Wenn er in einem Team installiert ist, hat der Bot außerdem Zugriff auf Details zu diesem Team und die vollständige Liste der Kanäle.
 
-Bots in einer Gruppe oder einem Kanal empfangen nur Nachrichten, wenn sie erwähnt `@botname` werden. Sie erhalten keine weiteren Nachrichten, die an die Unterhaltung gesendet werden.
+Bots in einer Gruppe oder einem Kanal empfangen nachrichten nur, wenn sie @botname. Sie erhalten keine weiteren Nachrichten, die an die Unterhaltung gesendet werden. Der Bot muss direkt @erwähnt werden. Ihr Bot erhält keine Nachricht, wenn das Team oder der Kanal erwähnt wird oder wenn jemand auf eine Nachricht von Ihrem Bot antwortet, ohne @mentioning senden.
 
 > [!NOTE]
-> Der Bot muss direkt `@mentioned` sein. Ihr Bot erhält keine Nachricht, wenn das Team oder der Kanal erwähnt wird oder wenn jemand auf eine Nachricht von Ihrem Bot antwortet, ohne @mentioning senden.
+> Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../../../resources/dev-preview/developer-preview-intro.md) verfügbar.
+>
+> Mithilfe der ressourcenspezifischen Zustimmung (RSC) können Bots alle Kanalnachrichten in Teams empfangen, in dem sie installiert sind, ohne dass @mentioned. Weitere Informationen finden Sie unter [Empfangen aller Kanalnachrichten mit RSC](channel-messages-with-rsc.md).
 
 ## <a name="design-guidelines"></a>Richtlinien für den Entwurf
 
@@ -37,7 +39,7 @@ Als Nächstes können Sie Erwähnungen mithilfe des Objekts abrufen und Ihren Na
 
 ## <a name="work-with-mentions"></a>Arbeiten mit Erwähnungen
 
-Jede Nachricht an Ihren Bot aus einer Gruppe oder einem Kanal enthält eine @mention deren Name im Nachrichtentext enthalten ist. Stellen Sie sicher, dass die Nachrichten parsing @mention. Ihr Bot kann auch andere Benutzer abrufen, die in einer Nachricht erwähnt werden, und Allen nachrichten, die er sendet, Erwähnungen hinzufügen.
+Jede Nachricht an Ihren Bot aus einer Gruppe oder einem Kanal enthält eine @mention deren Name im Nachrichtentext enthalten ist. Ihr Bot kann auch andere Benutzer abrufen, die in einer Nachricht erwähnt werden, und Allen nachrichten, die er sendet, Erwähnungen hinzufügen.
 
 Sie müssen auch die @mentions aus dem Inhalt der Nachricht, die Ihr Bot empfängt, herausstreifen.
 
@@ -268,7 +270,7 @@ Senden Sie in den folgenden Fällen keine Nachricht:
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
 
 [Get Teams context](~/bots/how-to/get-teams-context.md)
 

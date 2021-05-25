@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: teams manifest schema Developer Preview
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: b52d52f96312dc2978844b07a0f7ebb1d817166d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 333ed556ba8ba59c66f66d7eaa41dd0ea66dca0a
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566705"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629865"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Entwicklervorschaumanifestschema für Microsoft Teams
 
@@ -186,6 +186,27 @@ Weitere Informationen zu den verfügbaren Features finden Sie unter Features [in
      "mysite.someplace.com",
      "othersite.someplace.com"
   ],
+  "webApplicationInfo": {
+    "id": "AAD App ID",
+    "resource": "Resource URL for acquiring auth token for SSO",
+    "applicationPermissions": [
+      "TeamSettings.Read.Group",
+      "ChannelSettings.Read.Group",
+      "ChannelSettings.Edit.Group",
+      "Channel.Create.Group",
+      "Channel.Delete.Group",
+      "ChannelMessage.Read.Group",
+      "TeamsApp.Read.Group",
+      "TeamsTab.Read.Group",
+      "TeamsTab.Create.Group",
+      "TeamsTab.Edit.Group",
+      "TeamsTab.Delete.Group",
+      "Member.Read.Group",
+      "Owner.Read.Group",
+      "Member.ReadWrite.Group",
+      "Owner.ReadWrite.Group"
+    ],
+  },
    "configurableProperties": [
      "name",
      "shortDescription",
@@ -286,7 +307,7 @@ Der Name Ihrer App-Erfahrung, der Benutzern in der Teams angezeigt wird. Für ap
 |`short`|30 Zeichen|✔|Der kurze Anzeigename für die App.|
 |`full`|100 Zeichen||Der vollständige Name der App, der verwendet wird, wenn der vollständige Name der App 30 Zeichen überschreitet.|
 
-## <a name="description"></a>description
+## <a name="description"></a>Beschreibung
 
 **Required**
 
@@ -329,7 +350,7 @@ Das Objekt ist ein Array mit allen Elementen des Typs `object` . Dieser Block is
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 Zeichen|✔|Die https:// URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
-|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: `true`|
+|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: `true`|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die `team` Bereiche `groupchat` und. |
 |`sharePointPreviewImage`|String|2048||Ein relativer Dateipfad zu einem Registerkartenvorschaubild zur Verwendung in SharePoint. Größe 1024 x 768. |
 |`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in der SharePoint. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
@@ -403,7 +424,7 @@ Das Objekt ist ein Array (maximal 1 Element) mit allen Elementen vom Typ `object
 |Name| Typ | Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`botId`|String|64|✔|Die eindeutige Microsoft-App-ID für den Bot, der die Messagingerweiterung unterstützt, wie beim Bot Framework registriert. Dies kann mit der allgemeinen [App-ID identisch sein.](#id)|
-|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob die Konfiguration einer Messagingerweiterung vom Benutzer aktualisiert werden kann. Der Standardwert lautet `false`.|
+|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob die Konfiguration einer Messagingerweiterung vom Benutzer aktualisiert werden kann. Der Standardwert lautet `false`.|
 |`commands`|Array des Objekts|10|✔|Array von Befehlen, die von der Messagingerweiterung unterstützt werden|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -418,10 +439,10 @@ Jedes Befehlselement ist ein Objekt mit der folgenden Struktur:
 |`type`|String|64 Zeichen||Typ des Befehls. Einer oder `query` `action` . Standard: `query`|
 |`title`|String|32 Zeichen|✔|Der benutzerfreundliche Befehlsname.|
 |`description`|String|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
-|`initialRun`|Boolesch|||Ein boolescher Wert, der angibt, ob der Befehl zunächst ohne Parameter ausgeführt werden soll. Standard: `false`|
+|`initialRun`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob der Befehl zunächst ohne Parameter ausgeführt werden soll. Standard: `false`|
 |`context`|Array von Zeichenfolgen|3||Definiert, von wo aus die Nachrichtenerweiterung aufgerufen werden kann. Beliebige Kombination aus `compose` , `commandBox` , `message` . Standard ist `["compose", "commandBox"]`|
-|`fetchTask`|Boolesch|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden soll.|
-|`taskInfo`|Object|||Geben Sie das Aufgabenmodul an, das beim Verwenden eines Befehls für die Messagingerweiterung vorab geladen werden soll.|
+|`fetchTask`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden soll.|
+|`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das beim Verwenden eines Befehls für die Messagingerweiterung vorab geladen werden soll.|
 |`taskInfo.title`|String|64||Titel des ersten Dialogfelds.|
 |`taskInfo.width`|String|||Dialogbreite – entweder eine Zahl in Pixel oder ein Standardlayout wie "groß", "mittel" oder "klein".|
 |`taskInfo.height`|String|||Dialoghöhe – entweder eine Zahl in Pixel oder ein Standardlayout wie "groß", "mittel" oder "klein".|
@@ -484,6 +505,7 @@ Geben Sie Ihre AAD-App-ID Graph, um Benutzern die nahtlose Anmeldung bei Ihrer A
 |---|---|---|---|---|
 |`id`|String|36 Zeichen|✔|AAD-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
 |`resource`|String|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für SSO.|
+|`applicationPermissions`|Array|Maximal 100 Elemente|✔|Ressourcenberechtigungen für die Anwendung.|
 
 ## <a name="configurableproperties"></a>configurableProperties
 

@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: Eine Übersicht über die Integration von Webanwendungen und Gerätefunktionen in Microsoft Teams App.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 01977e22d79f7e39986367e647a2d48ea9b2905c
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 5136c598a3640b5cce92969ea3468c42a7a801db
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058656"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630446"
 ---
 # <a name="integrate-web-apps"></a>Integrieren von Web-Apps
 
@@ -37,7 +37,7 @@ Plattformen mit geringem Code bieten einen intuitiven Ansatz für die Softwareen
 
 Die Microsoft Power-Plattform kombiniert vier robuste Microsoft-Technologien, z. B. Power BI, Power Apps, Power Automate und Power Virtual Agents in einer leistungsstarken Anwendungsplattform. Mit diesen Technologien können Sie Lösungen erstellen, Prozesse automatisieren, Daten analysieren und virtuelle Agents in einer einheitlichen und integrierten Umgebung erstellen.
 
-### <a name="power-apps"></a>Power Apps
+### <a name="power-apps"></a>Power-Apps
 
 Mit Power Apps können Sie Geschäfts-Apps erstellen, die eine Verbindung mit Ihren Geschäftsdaten herstellen und auf die Anforderungen Ihrer Organisation zugeschnitten sind. Power Apps eine Vielzahl von App-Szenarien ermöglichen, um geschäftliche Herausforderungen mithilfe von Canvas-Apps zu lösen. Nach dem Erstellen der App können Sie sie aus dem Power Apps-Maker-Portal exportieren und in Microsoft Teams.
 
@@ -77,30 +77,18 @@ Sie können tiefe Links zu den Entitäten in Teams. Sie können Links zu Informa
 
 Microsoft Teams Plattform verbessert kontinuierlich die Entwicklerfunktionen, die auf integrierte Erfahrungen von Erstentwicklern ausgerichtet sind. Die erweiterte Teams-Plattform ermöglicht Partnern den Zugriff und die Integration der systemeigenen Gerätefunktionen, z. B. Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort mithilfe dedizierter APIs, die in Microsoft Teams JavaScript-Client-SDK verfügbar sind. 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
 
-- [Ordnen Sie die Anwendungsfälle Ihrer App Teams Plattformfunktionen zu.](~/concepts/design/map-use-cases.md)
-
-- [Bestimmen der Einstiegspunkte Ihrer App](~/concepts/extensibility-points.md)
-
-- [Integrieren von Web-Apps](~/samples/integrating-web-apps.md)
-
-- [Erstellen von benutzerdefinierten Apps mit geringem Code für Microsoft Teams](~/samples/teams-low-code-solutions.md)
-
-- [Hinzufügen eines Power Virtual Agent-Chatbots](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
-
-- [Erstellen eines virtuellen Assistenten](~/samples/virtual-assistant.md)
-
-- [App-Vorlagen für Microsoft Teams](~/samples/app-templates.md)
-
-- [Produktionsbereite Umschaltconnectors](~/samples/shifts-wfm-connectors.md)
-
-- [Installieren von Moodle LMS](~/resources/moodleinstructions.md)
-
-- [Erstellen einer Schaltfläche zum Teilen in Microsoft Teams](~/concepts/build-and-test/share-to-teams.md)
-
-- [Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
-
-- [Erstellen von Deep-Links](~/concepts/build-and-test/deep-links.md)
-
-- [Gerätefunktionen](~/concepts/device-capabilities/device-capabilities-overview.md)
+* [Ordnen Sie die Anwendungsfälle Ihrer App Teams Plattformfunktionen zu.](~/concepts/design/map-use-cases.md)
+* [Bestimmen der Einstiegspunkte Ihrer App](~/concepts/extensibility-points.md)
+* [Integrieren von Web-Apps](~/samples/integrating-web-apps.md)
+* [Erstellen von benutzerdefinierten Apps mit geringem Code für Microsoft Teams](~/samples/teams-low-code-solutions.md)
+* [Hinzufügen eines Power Virtual Agent-Chatbots](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
+* [Erstellen eines virtuellen Assistenten](~/samples/virtual-assistant.md)
+* [App-Vorlagen für Microsoft Teams](~/samples/app-templates.md)
+* [Produktionsbereite Umschaltconnectors](~/samples/shifts-wfm-connectors.md)
+* [Installieren von Moodle LMS](~/resources/moodleinstructions.md)
+* [Erstellen einer Schaltfläche zum Teilen in Microsoft Teams](~/concepts/build-and-test/share-to-teams.md)
+* [Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
+* [Erstellen von Deep-Links](~/concepts/build-and-test/deep-links.md)
+* [Gerätefunktionen](~/concepts/device-capabilities/device-capabilities-overview.md)

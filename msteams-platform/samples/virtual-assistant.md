@@ -4,12 +4,12 @@ description: Erstellen von virtuellen Assistenten-Bots und -Fähigkeiten für di
 localization_priority: Normal
 ms.topic: how-to
 keywords: teams Virtual Assistant Bots
-ms.openlocfilehash: 072d9cb5742cd39101587cad32e3048bd36cc1d8
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: dea62a69a08c8d216a17dbd58558435f3cc623e8
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566873"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630733"
 ---
 # <a name="create-virtual-assistant"></a>Erstellen eines virtuellen Assistenten 
 
@@ -411,7 +411,7 @@ Der Book-a-Room-Bot verfügt über zwei Hauptbefehle für Benutzer:
 - `Book room`
 - `Manage Favorites`
 
-Wir haben ein MODELL ERSTELLT, indem wir diese beiden Befehle verstehen. Entsprechende Geheim geheime Schlüssel müssen in aufgefüllt `cognitivemodels.json` werden. Die entsprechende LUSS-JSON-Datei finden Sie [hier](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/book-a-meeting.json).
+Wir haben ein MODELL ERSTELLT, indem wir diese beiden Befehle verstehen. Entsprechende Geheim geheime Schlüssel müssen in aufgefüllt `cognitivemodels.json` werden. Die entsprechende LUSS-JSON-Datei finden Sie [hier](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/en-us/book-a-meeting.json).
 Die entsprechende `.lu` Datei wird im folgenden Abschnitt angezeigt:
 
 ```
@@ -534,7 +534,7 @@ Aktualisierungsaktivitäten, z. B. Kartenaktualisierung, werden noch nicht über
 Um Kartenaktions- oder Aufgabenmodulaktivitäten an eine zugeordnete Fähigkeit weiter zu weiterleiten, muss die Fähigkeit darin `skillId` eingebettet werden.
 `Book-a-room` bot card action, task module fetch and submit action payloads are modified to contain `skillId` as a parameter. 
 
-Weitere Informationen finden Sie [in diesem](https://msteams-captain.visualstudio.com/xGrowth%20App%20Templates/_wiki/wikis/xGrowth.wiki/88/Virtual-Assistant-for-MS-Teams?anchor=rich-cards) Abschnitt in dieser Dokumentation.
+Weitere Informationen finden Sie [in diesem](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant) Abschnitt in dieser Dokumentation.
 
 ### <a name="handle-activities-from-group-chat-or-channel-scope"></a>Behandeln von Aktivitäten aus Gruppenchat- oder Kanalbereich
 
@@ -555,7 +555,7 @@ Weitere Informationen finden Sie [in diesem](https://msteams-captain.visualstudi
     }
 ```
 
-Sie können auch vorhandene Fähigkeiten aus dem [Bot Framework Solutions-Repository](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) nutzen oder eine neue Fähigkeit ganz neu erstellen. Informationen zum Erstellen einer neuen Fähigkeit finden Sie unter [Lernprogramme zum Erstellen einer neuen Fähigkeit.](https://microsoft.github.io/botframework-solutions/overview/skills/) Dokumentation zur Architektur des virtuellen Assistenten und der Fähigkeiten finden Sie unter[Virtual Assistant and skills architecture](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
+Sie können auch vorhandene Fähigkeiten aus dem [Bot Framework Solutions-Repository](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) nutzen oder eine neue Fähigkeit ganz neu erstellen. Informationen zum Erstellen einer neuen Fähigkeit finden Sie unter [Lernprogramme zum Erstellen einer neuen Fähigkeit.](https://microsoft.github.io/botframework-solutions/overview/skills/) Dokumentation zur Architektur des virtuellen Assistenten und der Fähigkeiten finden Sie unter[Virtual Assistant and skills architecture](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
 
 ## <a name="limitations-of-virtual-assistant"></a>Einschränkungen des virtuellen Assistenten 
 
@@ -566,7 +566,7 @@ Sie können auch vorhandene Fähigkeiten aus dem [Bot Framework Solutions-Reposi
   * Die Konfiguration von Messagingerweiterungen ist nicht auf einzelne Befehle, sondern auf die gesamte Erweiterung selbst begrenzt. Dadurch wird die Konfiguration für jede einzelne Fähigkeit über den virtuellen Assistenten beschränkt.
   * Befehls-IDs für Messagingerweiterungen haben eine maximale Länge von [64](../resources/schema/manifest-schema.md#composeextensions) Zeichen, und 37 Zeichen werden zum Einbetten von Fertigkeiteninformationen verwendet. Daher sind aktualisierte Einschränkungen für die Befehls-ID auf 27 Zeichen beschränkt.
 
-Sie können auch vorhandene Fähigkeiten aus dem [Bot Framework Solutions-Repository](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) nutzen oder eine neue Fähigkeit ganz neu erstellen. Lernprogramme für die spätere finden Sie [hier](https://microsoft.github.io/botframework-solutions/overview/skills/). Weitere Informationen finden Sie [in der Dokumentation](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) zur Architektur des virtuellen Assistenten und der Fähigkeiten.
+Sie können auch vorhandene Fähigkeiten aus dem [Bot Framework Solutions-Repository](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) nutzen oder eine neue Fähigkeit ganz neu erstellen. Lernprogramme für die spätere finden Sie [hier](https://microsoft.github.io/botframework-solutions/overview/skills/). Weitere Informationen finden Sie [in der Dokumentation](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) zur Architektur des virtuellen Assistenten und der Fähigkeiten.
 
 ## <a name="code-sample"></a>Codebeispiel
 
@@ -576,10 +576,8 @@ Sie können auch vorhandene Fähigkeiten aus dem [Bot Framework Solutions-Reposi
 | Book-a-room bot skill code | Ermöglicht es Ihnen, unterwegs schnell einen Besprechungsraum zu finden und zu reservieren. |  | [View](https://github.com/nebhagat/msteams-virtual-assistant-dotnet) |
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
 
-- [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
-
-- [Book-a-room](app-templates.md#book-a-room)
-
-- [Microsoft Teams Bot](../bots/what-are-bots.md)
+* [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
+* [Book-a-room](app-templates.md#book-a-room)
+* [Microsoft Teams Bot](../bots/what-are-bots.md)

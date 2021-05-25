@@ -5,12 +5,12 @@ ms.topic: reference
 localization_priority: Normal
 ms.author: lajanuar
 keywords: Richtlinien für die Überprüfung von Fällen bei häufig fehlgeschlagenen Anwendungsübermittlungstipps
-ms.openlocfilehash: 50bbd2af3b4c834e2ac4776e1fc7db1d8bf45173
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b2d228b9fdd7ea7773c577c57df983667640dfdd
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565245"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629998"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Tipps für eine erfolgreiche Microsoft Teams-App-Übermittlung
 
@@ -157,8 +157,7 @@ Ihr Bot muss auf jeden Befehl und nicht auf den Benutzer reagieren. Hier sind ei
 
   ![Beispiel für Hilfebefehle](../../../../assets/images/faq/helpcommand.png)
 
-* **Verwenden von adaptiven Karten und Aufgabenmodulen, um Ihre Botantwort klar und umsetzbar zu machen** 
- [Adaptive Karten mit Schaltflächen, die Aufgabenmodule aufrufen,](/task-modules-and-cards/task-modules/task-modules-bots.md) verbessern die Benutzerfreundlichkeit des Bots. Diese Karten und Schaltflächen sind auf einem mobilen Gerät einfacher zu verwenden, als dass Der Benutzer die Befehle eintippt. Botantworten dürfen auch nicht textuell mit Langtext sein. Bots müssen adaptive Karten und Aufgabenmodule anstelle von benutzeroberflächenbasiertem Unterhaltungschat und langen Textantworten verwenden.
+* **Verwenden von adaptiven Karten und Aufgabenmodulen, um Ihre Botantwort klar und umsetzbar zu machen** Adaptive Karten mit Schaltflächen, die Aufgabenmodule aufrufen, verbessern die Benutzerfreundlichkeit des Bots. Diese Karten und Schaltflächen sind auf einem mobilen Gerät einfacher zu verwenden, als dass Der Benutzer die Befehle eintippt. Botantworten dürfen auch nicht textuell mit Langtext sein. Bots müssen adaptive Karten und Aufgabenmodule anstelle von benutzeroberflächenbasiertem Unterhaltungschat und langen Textantworten verwenden.
 
 * **Denken Sie durch alle Bereiche**. Stellen Sie sicher, dass Ihr Bot entsprechende Antworten liefert, wenn sie in einem Kanal und `@*botname*` in persönlichen Unterhaltungen erwähnt werden ( ). Wenn Ihr Bot keinen aussagekräftigen Kontext innerhalb des Persönlichen oder Teams-Bereichs bietet, deaktivieren Sie diesen Bereich über das Manifest. (Siehe den `bots` Block im [Microsoft Teams Manifestschemareferenz](../../../../resources/schema/manifest-schema.md#bots).)
 
@@ -247,7 +246,7 @@ Bitte warnen Sie die Benutzer, bevor Ihre App Dateien oder ausführbare Dateien 
 * Weitere Informationen finden Sie [im Handbuch zur](/azure/active-directory/develop/troubleshoot-publisher-verification) Problembehandlung.
 * Schließen Sie die Selbstbescheinigung über das Partner Center ab. Füllen Sie den Self-Assessment unter **App Compliance aus.**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
 
 * [Weitere Informationen zu Teams App-Genehmigungsrichtlinien](/legal/marketplace/certification-policies#1140-teams)
 * [Abschnitt 100 – Allgemein](/legal/marketplace/certification-policies#100-general)

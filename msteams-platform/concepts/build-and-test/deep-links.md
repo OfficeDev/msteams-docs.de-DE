@@ -4,12 +4,12 @@ description: Beschreibt tiefe Links und deren Verwendung in Ihren Apps
 ms.topic: how-to
 localization_priority: Normal
 keywords: deep link deeplink für Teams
-ms.openlocfilehash: 837d180b06f69b9be49d898c62b9ab8ee64d51d0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: cd7735595f260431524edf1431ff22a1eeb361bc
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566054"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630145"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links 
 
@@ -78,7 +78,7 @@ Die Abfrageparameter sind:
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | Die ID aus Ihrem Manifest. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | Die ID für das Element auf der Registerkarte, die Sie beim Konfigurieren der [Registerkarte angegeben haben.](~/tabs/how-to/create-tab-pages/configuration-page.md)|Tasklist123|
-| `entityWebUrl` oder `subEntityWebUrl`&emsp; | Ein optionales Feld mit einer Fallback-URL, die verwendet werden soll, wenn der Client das Rendern der Registerkarte nicht unterstützt. | https://tasklist.example.com/123 oder https://tasklist.example.com/list123/task456 |
+| `entityWebUrl` oder `subEntityWebUrl`&emsp; | Ein optionales Feld mit einer Fallback-URL, die verwendet werden soll, wenn der Client das Rendern der Registerkarte nicht unterstützt. | `https://tasklist.example.com/123` oder `https://tasklist.example.com/list123/task456` |
 | `entityLabel` oder `subEntityLabel`&emsp; | Eine Bezeichnung für das Element auf Ihrer Registerkarte, die beim Anzeigen des Tiefenlinks verwendet werden soll. | Aufgabenliste 123 oder "Aufgabe 456 |
 | `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| Ein JSON-Objekt mit den folgenden Feldern:</br></br> * Eine ID für das Element auf der Registerkarte. </br></br> * Die Microsoft Teams Kanal-ID, die im Registerkartenkontext verfügbar [ist.](~/tabs/how-to/access-teams-context.md) | 
 | `subEntityId`&emsp; | Eine ID für das Element auf der Registerkarte. |Task456 |
@@ -114,7 +114,7 @@ Sie können eine Deeplink-Verknüpfung mit Inhalten in Teams Ihrer Registerkarte
 microsoftTeams.executeDeepLink(/*deepLink*/);
 ```
 
-Dieser Aufruf navigiert Sie zur richtigen URL oder löst eine Clientaktion aus, z. B. das Öffnen eines Planungs- oder App-Installationsdialogfelds. Sehen Sie sich folgendes Beispiel an:
+Dieser Aufruf navigiert Sie zur richtigen URL oder löst eine Clientaktion aus, z. B. das Öffnen eines Planungs- oder App-Installationsdialogfelds. Sehen Sie sich das folgende Beispiel an:
 
 ```Javascript
 // Open a scheduling dialog from your tab
@@ -156,8 +156,8 @@ Die Abfrageparameter sind:
 
 * `tenantId`: Mandanten-ID-Beispiel, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
 * `fileType`: Unterstützter Dateityp, z. B. docx, pptx, xlsx und pdf
-* `objectUrl`: Objekt-URL der Datei, https://microsoft.sharepoint.com/teams/(filepath)
-* `baseUrl`: Basis-URL der Datei, https://microsoft.sharepoint.com/teams
+* `objectUrl`: Objekt-URL der Datei, `https://microsoft.sharepoint.com/teams/(filepath)`
+* `baseUrl`: Basis-URL der Datei, `https://microsoft.sharepoint.com/teams`
 * `serviceName`: Name des Diensts, App-ID
 * `threadId`: Die threadId ist die Team-ID des Teams, in dem die Datei gespeichert ist. Sie ist optional und kann nicht für Dateien festgelegt werden, die im Ordner "OneDrive" eines Benutzers gespeichert sind. threadId – 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
 * `groupId`: Gruppen-ID der Datei, ae063b79-5315-4ddb-ba70-27328ba6c31e
@@ -191,7 +191,7 @@ Die Abfrageparameter sind:
 * `appID`: Ihre Manifest-ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
 
 * `entityID`: Die Element-ID, die Sie beim [Konfigurieren der Registerkarte angegeben haben.](~/tabs/how-to/create-tab-pages/configuration-page.md) Beispiel: **tasklist123**.
-* `entityWebUrl`: Ein optionales Feld mit einer Fallback-URL, die verwendet werden soll, wenn der Client das Rendern der Registerkarte nicht unterstützt – https://tasklist.example.com/123 oder https://tasklist.example.com/list123/task456 .
+* `entityWebUrl`: Ein optionales Feld mit einer Fallback-URL, die verwendet werden soll, wenn der Client das Rendern der Registerkarte nicht unterstützt – `https://tasklist.example.com/123` oder `https://tasklist.example.com/list123/task456` .
 * `entityName`: Eine Bezeichnung für das Element auf Ihrer Registerkarte, die beim Anzeigen des Tiefenlinks, Aufgabenliste 123 oder Aufgabe 456 verwendet werden soll.
 
 Beispiel: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
@@ -251,7 +251,7 @@ Es folgen die Abfrageparameter:
 |-------------|-------------|------|----|
 |Deep Link, der die Subentity-ID verwendet  |Microsoft Teams Beispiel-App zum Demonstrieren der Deeplinks vom Botchat zur Registerkarte, die die Subentity-ID verwendet.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
 
 [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
 

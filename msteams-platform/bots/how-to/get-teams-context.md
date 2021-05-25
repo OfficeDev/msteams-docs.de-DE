@@ -5,12 +5,12 @@ description: Hier erfahren Sie, wie Sie den spezifischen Kontext von Microsoft T
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 2e0178c5fd1ebca85d6e6c2cb6f3591f36a648fb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 6a8f903fb2f3ed8120e31b7536b65f22fdf6d620
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020016"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630166"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Get Teams specific context for your bot
 
@@ -166,7 +166,7 @@ export class MyBot extends TeamsActivityHandler {
 async def _show_members(
     self, turn_context: TurnContext
 ):
-    member = TeamsInfo.get_member(turn_context, turn_context.activity.from_property.id)
+    member = await TeamsInfo.get_member(turn_context, turn_context.activity.from_property.id)
 ```
 
 # <a name="json"></a>[Json](#tab/json)

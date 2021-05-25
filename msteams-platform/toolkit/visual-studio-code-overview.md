@@ -5,12 +5,12 @@ keywords: Teams Visual Studio Code Toolkit
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: efd0962e9c4c0d64dbac47caf29b2e56907937b3
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d51ccf3ed62e22fb417eec72d1f409b1b77b9da6
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566558"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629837"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Erstellen von Apps mit dem Teams Toolkit und Visual Studio Code
 
@@ -45,7 +45,7 @@ Das Microsoft Teams Toolkit für Visual Studio Code steht im [Visual Studio Mark
 
 1. Wählen Visual Studio Code das Symbol Teams aus. ![Teams-Symbol](../assets/icons/favicon-16x16.png) aus der Aktivitätsleiste auf der linken Seite des Fensters.
 1. Wählen **Sie im Befehlsmenü App-Paket** importieren aus.
-1. Wählen Sie Ihre [vorhandene Teams-App-Paket-ZIP-Datei](../concepts/build-and-test/apps-package.md) aus.
+1. Wählen Sie Ihre vorhandene [Teams-App-Paket-ZIP-Datei](/microsoftteams/platform/concepts/build-and-test/apps-package?view=msteams-client-js-latest&preserve-view=true) aus.
 1. Wählen Sie die **Schaltfläche Veröffentlichungspaket auswählen** aus. Die Konfigurationsregisterkarte des Toolkits sollte nun mit den Details Ihrer App gefüllt werden.
 1. Wählen Visual Studio Code Ordner **zum** Arbeitsbereich hinzufügen aus, um das Quellcodeverzeichnis dem Arbeitsbereich Visual Studio Code  ->   hinzuzufügen.
 
@@ -55,7 +55,7 @@ Im Kern umfasst die Teams drei Komponenten:
 
   1. Der Microsoft Teams (Web, Desktop oder Mobile), auf dem Benutzer mit Ihrer App interagieren.
   1. Ein Server, der auf Anforderungen nach Inhalten reagiert, die in der Teams. Beispiel: HTML-Registerkarteninhalt oder eine adaptive Botkarte.
-  1. Ein [Teams-App-Paket,](/concepts/build-and-test/apps-package.md) das aus drei Dateien besteht:
+  1. Ein Teams-App-Paket besteht aus drei Dateien:
 
       > [!div class="checklist"]
       >
@@ -83,7 +83,7 @@ Ausführliche Anweisungen zum **Packen** und Testen Ihrer App finden Sie unter E
 
 ### <a name="enable-development-from-localhost"></a>Aktivieren der Entwicklung von localhost
 
-Wenn Sie Ihre registerkartenbasierte App auf localhost mithilfe von HTTPS debuggen möchten, müssen Sie Ihrem Browser mitteilen, dass er der App vertraut, von der sie bedient <https://localhost> wird. Navigieren Sie zu <https://localhost:3000/tab>. Wenn eine Warnung angezeigt wird, die angibt, dass die Website nicht vertrauenswürdig ist, wählen Sie die Option aus, um trotzdem fortzufahren. Der Zugriff auf Ihre App sollte jetzt über den Teams sein.
+Wenn Sie Ihre registerkartenbasierte App auf localhost mithilfe von HTTPS debuggen möchten, müssen Sie Ihrem Browser mitteilen, dass er der App vertraut, von der sie bedient `<https://localhost>` wird. Navigieren Sie zu `<https://localhost:3000/tab>`. Wenn eine Warnung angezeigt wird, die angibt, dass die Website nicht vertrauenswürdig ist, wählen Sie die Option aus, um trotzdem fortzufahren. Der Zugriff auf Ihre App sollte jetzt über den Teams sein.
 
 ### <a name="run-your-app-in-teams"></a>Führen Sie Ihre App in Teams
 

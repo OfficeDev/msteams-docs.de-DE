@@ -5,12 +5,12 @@ description: Testen und Debuggen des Bots lokal mit einer IDE
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 52676d35599560704e5bb72d85e09860174fdaf1
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: af4b8d38b763d2266ec64fef0fe8c487b9120773
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058376"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631013"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Testen und Debuggen des Bots lokal
 
@@ -93,8 +93,7 @@ Um zu verhindern, dass Ihr Bot Nachrichten empfängt, wechseln Sie zu Ihrem **Bo
 
 Um Ihren Bot vollständig aus Teams entfernen, wechseln Sie zu Ihrem **Bot-Dashboard,** und bearbeiten Sie den Microsoft Teams Kanal. Klicken Sie **unten** auf die Schaltfläche Löschen. Dadurch wird verhindert, dass Benutzer Ihren Bot entdecken, hinzufügen und mit ihm interagieren. Dadurch wird der Bot nicht aus den Teams anderen Benutzern entfernt, er funktioniert jedoch auch nicht mehr für ihn.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
 
-- [Bot mit Inspektions-Middleware debuggen](/azure/bot-service/bot-service-debug-inspection-middleware)
-
-- [Anruf- und Besprechungsbot lokal debuggen](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
+* [Bot mit Inspektions-Middleware debuggen](/azure/bot-service/bot-service-debug-inspection-middleware)
+* [Anruf- und Besprechungsbot lokal debuggen](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

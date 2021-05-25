@@ -6,12 +6,12 @@ keywords: Cookieattribute samesite
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: cf28a28050d50b2b6b2601a3231cdad30211ab2c
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: c286e01b6e2477c1ab2b787852cde0fb789a80da
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566712"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629851"
 ---
 # <a name="microsoft-teams-and-the-samesite-cookie-attribute-2020-update"></a>Microsoft Teams und dem SameSite-Cookieattribut (Update 2020)
 
@@ -77,14 +77,11 @@ Android WebView ist eine Chrome-Systemkomponente, mit der Android-Apps Webinhalt
 * Für Cookies, die nur in einem Kontext eines Erstverdingten benötigt werden, sollten Sie sie als `SameSite=Lax` oder `SameSite=Strict` deklarieren, falls erforderlich.
 * Für Cookies, die in einem Drittanbieterkontext benötigt werden, sollten Sie sicherstellen, dass sie als deklariert `SameSite=None; Secure` werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
 
 * [SameSite-Beispiele](https://github.com/GoogleChromeLabs/samesite-examples)
-
 * [SameSite-Cookierezepte](https://web.dev/samesite-cookie-recipes/)
-
 * [Bekannte inkompatible Clients]( https://www.chromium.org/updates/same-site/incompatible-clients)
-
 * [Entwickler: Machen Sie sich bereit für neue SameSite=None; Secure Cookie Einstellungen](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 
 **OpenId Verbinden Auswirkung**<br>

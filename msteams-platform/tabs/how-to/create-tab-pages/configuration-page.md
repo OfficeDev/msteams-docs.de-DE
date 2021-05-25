@@ -6,12 +6,12 @@ keywords: Gruppenkanal für Teams-Registerkarten konfigurierbar
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: aeab1cf96d1e875db79d9143fefd0e46348f585a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b8300f268f74bed4fd1180b7a97c3b21ddda820a
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566684"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629963"
 ---
 # <a name="create-a-configuration-page"></a>Erstellen einer Konfigurationsseite
 
@@ -104,7 +104,7 @@ Wenn Sie die relative Schaltfläche auswählen, wird entweder `saveGray()` oder 
 1. Der `microsoftTeams.settings.registerOnSaveHandler()` Ereignishandler wird ausgelöst.
 1. Die **Schaltfläche** Speichern auf der Konfigurationsseite der App, die in Teams hochgeladen wurde, ist aktiviert.
 
-Der Konfigurationsseitencode informiert Teams, dass die Konfigurationsanforderungen erfüllt sind und die Installation fortgesetzt werden kann. Wenn der Benutzer Speichern **auswählt,** werden die Parameter von `settings.setSettings()` festgelegt, wie von der Schnittstelle `Settings` definiert. Weitere Informationen finden Sie unter [Einstellungen Schnittstelle](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true). Im letzten Schritt wird `saveEvent.notifySuccess()` aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
+Der Konfigurationsseitencode informiert Teams, dass die Konfigurationsanforderungen erfüllt sind und die Installation fortgesetzt werden kann. Wenn der Benutzer Speichern **auswählt,** werden die Parameter von `settings.setSettings()` festgelegt, wie von der Schnittstelle `Settings` definiert. Weitere Informationen finden Sie unter [Einstellungen Schnittstelle](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true). Im letzten Schritt wird `saveEvent.notifySuccess()` aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ Der Konfigurationsseitencode informiert Teams, dass die Konfigurationsanforderun
 
 Auf der Registerkarte sind möglicherweise Kontextinformationen zum Anzeigen relevanter Inhalte erforderlich. Kontextbezogene Informationen verbessern die Ansinnen Ihrer Registerkarte weiter, indem sie eine angepasste Benutzeroberfläche bereitstellen.
 
-Weitere Informationen zu den Eigenschaften, die für die Registerkartenkonfiguration verwendet werden, finden Sie unter [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true). Sammeln Sie die Werte von Kontextdatenvariablen auf die folgenden zwei Arten:
+Weitere Informationen zu den Eigenschaften, die für die Registerkartenkonfiguration verwendet werden, finden Sie unter [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Sammeln Sie die Werte von Kontextdatenvariablen auf die folgenden zwei Arten:
 
 1. Einfügen von Platzhaltern für die URL-Abfragezeichenfolge in der `configurationURL` .
 
@@ -123,7 +123,7 @@ Weitere Informationen zu den Eigenschaften, die für die Registerkartenkonfigura
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Einfügen von Platzhaltern in das `configurationUrl`
 
-Fügen Sie Ihrer Basis Kontextschnittstellenplatzhalter `configurationUrl` hinzu. Zum Beispiel:
+Fügen Sie Ihrer Basis Kontextschnittstellenplatzhalter `configurationUrl` hinzu. Beispiel:
 
 ##### <a name="base-url"></a>Basis-URL
 
@@ -158,7 +158,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>Verwenden der `getContext()` Funktion zum Abrufen des Kontexts
 
-Die `microsoftTeams.getContext((context) => {})` Funktion ruft die [Kontextschnittstelle ab, wenn](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) sie aufgerufen wird. Fügen Sie diese Funktion der Konfigurationsseite hinzu, um Kontextwerte abzurufen:
+Die `microsoftTeams.getContext((context) => {})` Funktion ruft die [Kontextschnittstelle ab, wenn](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) sie aufgerufen wird. Fügen Sie diese Funktion der Konfigurationsseite hinzu, um Kontextwerte abzurufen:
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -197,4 +197,4 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="mobile-clients"></a>Mobile Clients
 
-Wenn Sie den Kanal oder die Registerkarte "Gruppe" auf den mobilen Clients Teams, muss die Konfiguration einen `setSettings()` Wert für die Eigenschaft `websiteUrl` haben. Weitere Informationen finden Sie unter [Anleitungen für Registerkarten auf mobilen Geräten.](~/tabs/design/tabs-mobile.md)
+Wenn Der Kanal oder die Registerkarte "Gruppe" auf den mobilen Teams angezeigt werden soll, muss die Konfiguration `setSettings()` einen Wert für `websiteUrl` haben. Weitere Informationen finden Sie unter [Anleitungen für Registerkarten auf mobilen Geräten.](~/tabs/design/tabs-mobile.md)

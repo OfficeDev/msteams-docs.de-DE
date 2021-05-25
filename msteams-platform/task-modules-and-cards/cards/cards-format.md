@@ -5,12 +5,12 @@ keywords: Teams-Bots-Kartenformat
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: 848656097f2c865705cc0d91dece93049d8c6790
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b52eb01f7d886f3d4b2f12c8209c181d43a31956
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566582"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630213"
 ---
 # <a name="format-cards-in-teams"></a>Formatieren von Karten in Teams
 
@@ -169,8 +169,6 @@ Verwenden Sie die Informationsmaskeneigenschaft, um bestimmte Informationen zu m
 > [!NOTE]
 > Die Informationsmaskeneigenschaft ist derzeit nur in der Entwicklervorschau verfügbar.
 
-Um Informationen in adaptiven Karten zu maskieren, fügen Sie die Eigenschaft zum Eingeben `isMasked`  `Input.Text` hinzu, und legen Sie den Wert auf *true .*
-
 #### <a name="sample-adaptive-card-with-masking-property"></a>Beispiel für adaptive Karte mit Maskierungseigenschaft
 
 ```json
@@ -178,8 +176,7 @@ Um Informationen in adaptiven Karten zu maskieren, fügen Sie die Eigenschaft zu
     "type": "Input.Text",
     "id": "secretThing",
     "style": "password",
-    "isMasked": true
-  },
+},
 ```
 
 Die folgende Abbildung ist ein Beispiel für die Maskierung von Informationen in adaptiven Karten:
@@ -218,7 +215,7 @@ Darüber hinaus muss Ihre App die folgenden Elemente enthalten:
 
 Eine adaptive Karte mit voller Breite wird wie folgt ![ angezeigt: Adaptive Kartenansicht mit voller Breite](../../assets/images/cards/full-width-adaptive-card.png)
 
-Wenn Sie die Eigenschaft nicht auf Vollständig festgelegt haben, lautet die Standardansicht der adaptiven Karte wie folgt: Adaptive Kartenansicht mit geringer `width`  ![ Breite](../../assets/images/cards/small-width-adaptive-card.png)
+Wenn Sie die Eigenschaft nicht auf Vollständig festgelegt haben, wird die Standardansicht der adaptiven Karte wie folgt angezeigt: Adaptive Kartenansicht mit geringer `width`  ![ Breite](../../assets/images/cards/small-width-adaptive-card.png)
 
 ### <a name="typeahead-support"></a>Typeahead-Unterstützung
 

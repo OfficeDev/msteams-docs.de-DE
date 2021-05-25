@@ -5,12 +5,12 @@ ms.topic: overview
 localization_priority: Normal
 keywords: teams bots messages
 ms.date: 05/20/2019
-ms.openlocfilehash: e1926afe42bca45eda5f39be1be8342452b3aa24
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: efa7658aef87650e360c79523ac1c282dc4814fd
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566495"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630460"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Führen einer Unterhaltung mit einem Microsoft Teams Bot
 
@@ -51,7 +51,7 @@ Grundlegende Unterhaltungen werden über den Bot Framework Connector, eine einze
 
 Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und Bilder an Ihren Bot senden. Sie können den Inhaltstyp angeben, den Ihr Bot auf der Seite Microsoft Teams Einstellungen für Ihren Bot verarbeiten kann.
 
-| Format | Vom Benutzer zum Bot  | Vom Bot zum Benutzer |  Notes |
+| Format | Vom Benutzer zum Bot  | Vom Bot zum Benutzer |  Anmerkungen |
 | --- | :---: | :---: | --- |
 | Rich-Text  | ✔ | ✔ |  |
 | Bilder | ✔ | ✔ | Maximal 1024×1024 und 1 MB im PNG-, JPEG- oder GIF-Format; animierte GIF werden nicht unterstützt. |
@@ -76,7 +76,7 @@ Bilder werden durch Hinzufügen von Anlagen zu einer Nachricht gesendet. Weitere
 
 Bilder können im PNG-, JPEG- oder GIF-Format mindestens 1024×1024 und 1 MB groß sein. animierte GIF wird nicht unterstützt.
 
-Es wird empfohlen, die Höhe und Breite der einzelnen Bilder mithilfe von XML anzugeben. Wenn Sie Markdown verwenden, ist die Bildgröße standardmäßig auf 256×256 festgelegt. Zum Beispiel:
+Es wird empfohlen, die Höhe und Breite der einzelnen Bilder mithilfe von XML anzugeben. Wenn Sie Markdown verwenden, ist die Bildgröße standardmäßig auf 256×256 festgelegt. Beispiel:
 
 * `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` verwenden
 * Nicht verwenden `![Duck on a rock](http://aka.ms/Fo983c)`
@@ -88,7 +88,7 @@ Je nachdem, welche Bereiche deklariert werden, kann Ihr Bot Nachrichten in den f
 * **Persönlicher Chat** Benutzer können in einer privaten Unterhaltung mit einem Bot interagieren, indem sie einfach den hinzugefügten Bot im Chatverlauf auswählen oder den Namen oder die App-ID in das Feld An: in einen neuen Chat eingeben.
 * **Kanäle** Ein Bot kann in einem Kanal (&quot;@_botname")_ erwähnt werden, wenn er dem Team hinzugefügt wurde. Beachten Sie, dass für zusätzliche Antworten auf einen Bot in einem Kanal der Bot erwähnt werden muss. Sie antwortet nicht auf Antworten, wenn sie nicht erwähnt wird.
 
-Für eingehende Nachrichten empfängt Ihr Bot ein [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0&preserve-view=true) Objekt vom Typ `messageType: message` . Obwohl das Objekt andere Arten von Informationen enthalten kann, z. B. Kanalupdates, die an Ihren Bot gesendet werden, stellt der Typ die Kommunikation `Activity` zwischen Bot und Benutzer [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` dar.
+Für eingehende Nachrichten empfängt Ihr Bot ein [Activity-Objekt](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) vom Typ `messageType: message` . Obwohl das Objekt andere Arten von Informationen enthalten kann, z. B. Kanalupdates, die an Ihren Bot gesendet werden, stellt der Typ die Kommunikation `Activity` zwischen Bot und Benutzer [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` dar.
 
 Ihr Bot empfängt eine Nutzlast, die die Benutzernachricht sowie weitere Informationen über den Benutzer, die Quelle der Nachricht und Teams `Text` enthält. Beachten Sie:
 

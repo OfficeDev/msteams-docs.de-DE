@@ -5,12 +5,12 @@ description: Eine Schnellstartanleitung zum Erstellen eines benutzerdefinierten 
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: ea929edf5a281a4bb80a37b2d5c6e19c82fce6e4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: bac406f22e9273b6cca5d1d5f576b03d295b875f
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52580462"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630355"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>Erstellen eines benutzerdefinierten Kanals und einer Registerkarte "Gruppe" mit ASP.NET Core MVC
 
@@ -20,7 +20,7 @@ In diesem Schnellstart werden wir durch das Erstellen einer benutzerdefinierten 
 
 ## <a name="get-the-source-code"></a>Den Quellcode erhalten
 
-Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis für Ihr Registerkartenprojekt. Wir haben ein einfaches [Kanalgruppenregisterkartenprojekt](https://github.com/OfficeDev/microsoft-teams-sample-tabs/ChannelGroupTabMVC) bereitgestellt, um Sie zu starten. Zum Abrufen des Quellcodes können Sie den Zip-Ordner herunterladen und die Dateien extrahieren oder das Beispielrepository in Ihr neues Verzeichnis klonen:
+Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis für Ihr Registerkartenprojekt. Wir haben ein einfaches [Kanalgruppenregisterkartenprojekt](https://github.com/OfficeDev/microsoft-teams-sample-tabs/tree/master/ChannelGroupTabMVC) bereitgestellt, um Sie zu starten. Zum Abrufen des Quellcodes können Sie den Zip-Ordner herunterladen und die Dateien extrahieren oder das Beispielrepository in Ihr neues Verzeichnis klonen:
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git

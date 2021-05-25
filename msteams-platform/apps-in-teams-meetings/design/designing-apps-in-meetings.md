@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Apps in Teams entwerfen und das Microsoft Tea
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 0a888c333305e9caafcd0bac0e5549bf08ead424
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 33b11a6dfc759fabd54ca2fe2c68978a5d5d1475
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566026"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644617"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen ihrer Microsoft Teams Besprechungserweiterung
 
@@ -25,23 +25,33 @@ Umfassendere Entwurfsrichtlinien, einschließlich Elemente, die Sie bei Bedarf p
 
 ## <a name="add-a-meeting-extension"></a>Hinzufügen einer Besprechungserweiterung
 
-Sie können eine Besprechungserweiterung vor und während Besprechungen hinzufügen. Sie können auch eine App für eine bestimmte Besprechung direkt aus dem Teams (AppSource) hinzufügen.
+Benutzer können vor und während besprechungen eine Besprechungserweiterung hinzufügen. Sie können auch eine App für eine bestimmte Besprechung direkt aus dem Teams hinzufügen.
 
 ### <a name="add-before-a-meeting"></a>Hinzufügen vor einer Besprechung
 
-Wählen Sie in den Besprechungsdetails **Registerkarte hinzufügen +** aus, um das App-Flyout zu öffnen und apps zu finden, die für Besprechungen optimiert sind.
+In den Besprechungsdetails können Benutzer registerkarte hinzufügen **+** auswählen, um das App-Flyout zu öffnen und apps zu finden, die für Besprechungen optimiert sind.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="Beispiel zeigt, wie Sie eine Besprechungserweiterung vor einer Besprechung hinzufügen." border="false":::
 
 ### <a name="add-during-a-meeting"></a>Hinzufügen während einer Besprechung
 
-Wählen Sie in einer Besprechung **weitere App** :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **hinzufügen aus,** und wählen Sie die app aus, die Sie möchten.
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+In einer Besprechung können Benutzer **weitere** Hinzufügen einer :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **App auswählen** und die app auswählen, die sie möchten.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Beispiel zeigt, wie Sie während einer Besprechung eine Besprechungserweiterung hinzufügen." border="false":::
 
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+In einer Besprechung können Benutzer **mehr** auswählen und die :::image type="icon" source="../../assets/icons/teams-client-more.png"::: app auswählen, die sie möchten.
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Beispiel zeigt, wie Sie eine Besprechungserweiterung während einer Besprechung auf mobilen Geräten hinzufügen." border="false":::
+
+---
+
 ## <a name="before-a-meeting"></a>Vor einer Besprechung
 
-Vor Ihrer Besprechung können Sie Inhalte auf der Registerkarte hinzufügen. Das folgende Beispiel zeigt eine Entwurfsfrage, die während des Anrufs beantwortet wird.
+Vor einer Besprechung können Benutzer Inhalte auf der Registerkarte hinzufügen. Das folgende Beispiel zeigt eine Entwurfsfrage, die während des Anrufs beantwortet wird.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="Beispiel zeigt, wie Inhalte in den Besprechungsdetails vor einem Anruf app-App." border="false":::
 
@@ -64,7 +74,7 @@ Verwenden Sie eine der folgenden Teams-UI-Vorlagen, um Die Besprechungsregisterk
 * [Dashboard:](../../concepts/design/design-teams-app-ui-templates.md#dashboard)Ein Dashboard ist ein Canvas mit mehreren Karten, die eine Übersicht über Daten oder Inhalte bieten.
 * [Formular](../../concepts/design/design-teams-app-ui-templates.md#form): Formulare sind für die strukturierte Erfassung, Validierung und Übermittlung von Benutzereingaben.
 * [Leerer](../../concepts/design/design-teams-app-ui-templates.md#empty-state)Zustand: Die Vorlage für den leeren Zustand kann für viele Szenarien verwendet werden, z. B. für die Anmeldung, die Erstlauferfahrung, Fehlermeldungen und vieles mehr.
-* [Linkes](../../concepts/design/design-teams-app-ui-templates.md#left-nav)Navigationsmenü: Die linke Navigationsvorlage kann hilfreich sein, wenn Ihre Registerkarte eine Navigation erfordert. Im Allgemeinen sollten Sie die Registerkartennavigation auf ein Minimum beschränken.
+* [Linkes](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav)Navigationselement: Die linke Navigationskomponente kann hilfreich sein, wenn Ihre Registerkarte eine Navigation erfordert. Im Allgemeinen sollten Sie die Navigation auf ein Minimum beschränken.
 
 ## <a name="use-an-in-meeting-tab"></a>Verwenden einer Registerkarte in Besprechungen
 
@@ -78,7 +88,15 @@ Personen können die Registerkarte "In-Meeting" verwenden, um:
 * Erstellen Sie eine Umfrage, eine Umfrage oder ein Aufgabenelement für die Besprechungsteilnehmer.
 * Anzeigen von Notizen, die für die Besprechung relevant sind. Beispielsweise Informationen zu einem Vertriebsleiter.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Ein Beispiel zeigt, wie Sie Umfrageinhalte auf einer Registerkarte in besprechungen präsentieren können." border="false":::
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Beispiel zeigt, wie Sie Umfrageinhalte auf einer Registerkarte für Besprechungen auf mobilen Geräten präsentieren können." border="false":::
+
+---
 
 ### <a name="anatomy-in-meeting-tab"></a>Anatomie: Registerkarte "In-Meeting"
 
@@ -124,7 +142,15 @@ Dialoge in Besprechungen werden von einem Benutzer (z. B. dem Besprechungsorgani
 * Übermitteln von Genehmigungen
 * Erinnerungen erhalten
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Beispiel zeigt, wie Sie ein Besprechungsdialogfeld verwenden können." border="false":::
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="Beispiel zeigt, wie Sie ein Besprechungsdialogfeld auf Mobilgeräten verwenden können." border="false":::
+
+---
 
 ### <a name="anatomy-in-meeting-dialog"></a>Anatomie: Dialogfeld "In-Meeting"
 

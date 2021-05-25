@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: b3f08c39a7900b80fb46d167fae8d9e8bdbcc574
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 83fad746d71dd196f6efa6526f5c6c28ceac9e20
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101555"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644892"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Entwerfen Ihrer persönlichen App für Microsoft Teams
 
@@ -39,14 +39,16 @@ Mit einem privaten Arbeitsbereich können Sie App-Inhalte anzeigen, die für Sie
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomie: Persönliche App (privater Arbeitsbereich)
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Beispiel zeigt die Komponentenanatomie der persönlichen Registerkarte." border="false":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
 |A|**App-Attributierung:** Ihr App-Logo und -Name.|
-|B|**Registerkarten**: Bietet Navigation für Ihre persönliche App. Fügen Sie z. B. eine **Registerkarte Informationen** oder **Hilfe** ein.|
+|B|**Registerkarten**: Bietet Navigation für Ihre persönliche App.|
 |C|**Popupansicht:** Pusht Ihre App-Inhalte aus einem übergeordneten Fenster in ein eigenständiges untergeordnetes Fenster.|
-|D|**Weitere Menü**: Enthält zusätzliche App-Informationen und -Optionen. (Alternativ können Sie **Einstellungen** Registerkarte erstellen.)|
+|D|**Weitere Menü**: Enthält zusätzliche App-Optionen und Informationen. (Alternativ können Sie **Einstellungen** Registerkarte erstellen.)|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Beispiel zeigt die Strukturanatomie der persönlichen Registerkarte." border="false":::
 
@@ -55,22 +57,44 @@ Mit einem privaten Arbeitsbereich können Sie App-Inhalte anzeigen, die für Sie
 |A|**Registerkarten**: Bietet Navigation für Ihre persönliche App.|
 |1|**iframe**: Zeigt Ihre App-Inhalte an.|
 
-### <a name="designing-with-ui-templates"></a>Entwerfen mit Benutzeroberflächenvorlagen
+# <a name="mobile"></a>[Mobil](#tab/mobile)
 
-Verwenden Sie eine der folgenden Teams, um Ihre persönliche Registerkarte zu entwerfen:
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="Beispiel zeigt die Komponentenanatomie der persönlichen Registerkarte." border="false":::
+
+|Leistungsindikator|Beschreibung|
+|----------|-----------|
+|A|**App-Attribution:** Ihr App-Name.|
+|B|**Registerkarten**: Bietet Navigation für Ihre persönliche App.|
+|C|**Weitere Menü**: Enthält zusätzliche App-Optionen und Informationen.|
+|D|**Primäre Navigation:** Stellt navigation zu Ihrer App andere Hauptfunktionen Teams zur Seite.|
+
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="Beispiel zeigt die Strukturanatomie der persönlichen Registerkarte." border="false":::
+
+|Leistungsindikator|Beschreibung|
+|----------|-----------|
+|A|**Registerkarten**: Bietet Navigation für Ihre persönliche App.|
+|1|**webview**: Zeigt Ihre App-Inhalte an.|
+
+---
+
+### <a name="designing-with-ui-templates-and-advanced-components"></a>Entwerfen mit Benutzeroberflächenvorlagen und erweiterten Komponenten
+
+Verwenden Sie eine der folgenden Teams und Komponenten, um Ihre persönliche Registerkarte zu entwerfen:
 
 * [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem scannierbaren Format anzeigen und Benutzern das Ausführen von Aktionen für eine gesamte Liste oder einzelne Elemente ermöglichen.
 * [Task board:](../../concepts/design/design-teams-app-ui-templates.md#task-board)Ein Task Board, manchmal auch als Kanbanboard oder Schwimmstreifen bezeichnet, ist eine Sammlung von Karten, die häufig zum Nachverfolgen des Status von Arbeitselementen oder Tickets verwendet werden.
 * [Dashboard:](../../concepts/design/design-teams-app-ui-templates.md#dashboard)Ein Dashboard ist ein Canvas mit mehreren Karten, die eine Übersicht über Daten oder Inhalte bieten.
 * [Formular](../../concepts/design/design-teams-app-ui-templates.md#form): Formulare sind für die strukturierte Erfassung, Validierung und Übermittlung von Benutzereingaben.
 * [Leerer](../../concepts/design/design-teams-app-ui-templates.md#empty-state)Zustand: Die Vorlage für den leeren Zustand kann für viele Szenarien verwendet werden, z. B. für die Anmeldung, die Erstlauferfahrung, Fehlermeldungen und vieles mehr.
-* [Linkes](../../concepts/design/design-teams-app-ui-templates.md#left-nav)Navigationsmenü: Die linke Navigationsvorlage kann hilfreich sein, wenn Ihre Registerkarte eine Navigation erfordert. Im Allgemeinen sollten Sie die Registerkartennavigation auf ein Minimum beschränken.
+* [Linkes](~/concepts/design/design-teams-app-advanced-ui-components.md#left-nav)Navigationsmenü: Die linke Navigationskomponente kann hilfreich sein, wenn Ihre persönliche App eine gewisse Navigation erfordert. Im Allgemeinen sollten Sie die Navigation auf ein Minimum beschränken.
 
 ## <a name="use-a-personal-app-bot"></a>Verwenden einer persönlichen App (Bot)
 
 Persönliche Apps können einen Bot für Einzelunterhaltungen und private Benachrichtigungen enthalten (z. B. wenn ein Kollege einen Kommentar auf Ihrer Artboard veröffentlicht). Der Bot ist auf einer von Ihnen angegebenen Registerkarte verfügbar.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomie: Persönliche App (Bot)
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
 
 :::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Beispiel zeigt die Anatomie der persönlichen Botkomponente." border="false":::
 
@@ -79,6 +103,19 @@ Persönliche Apps können einen Bot für Einzelunterhaltungen und private Benach
 |A|**Registerkarte "Bot":** Fügen Sie beispielsweise eine Registerkarte **Chat** ein, um auf Botunterhaltungen und -benachrichtigungen zu zugreifen.|
 |B|**Bot-Nachricht:** Bots senden häufig Nachrichten und Benachrichtigungen in Form einer Karte (z. B. einer adaptiven Karte).|
 |C|**Verfassenfeld**: Eingabefeld zum Senden von Nachrichten an den Bot.|
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="Beispiel zeigt die Anatomie der persönlichen Botkomponente." border="false":::
+
+|Leistungsindikator|Beschreibung|
+|----------|-----------|
+|A|**Bot-Einstiegspunkt:** Einstiegspunkt für Benutzer, um auf das Botfeature in Ihrer persönlichen App zu zugreifen.|
+|B|**Schaltfläche "Zurück":** Führt Benutzer zurück zum privaten Arbeitsbereich.|
+|C|**Bot-Nachricht:** Bots senden häufig Nachrichten und Benachrichtigungen in Form einer Karte (z. B. einer adaptiven Karte).|
+|D|**Verfassenfeld**: Eingabefeld zum Senden von Nachrichten an den Bot.|
+
+---
 
 ## <a name="manage-a-personal-tab"></a>Verwalten einer persönlichen Registerkarte
 
@@ -166,7 +203,7 @@ Wenn Sie Ihre App nicht speziell für Teams erstellt haben, verfügen Sie wahrsc
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="Beispiel zeigt, wie komplexe App-Features nicht mit einer persönlichen App zu verarbeiten sind." border="false":::
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
 
 Diese anderen Entwurfsrichtlinien können je nach Umfang Ihrer persönlichen App hilfreich sein:
 

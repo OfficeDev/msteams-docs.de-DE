@@ -4,12 +4,12 @@ description: Beschreibt den Prozess zum Testen Teams benutzerdefinierten Apps in
 ms.topic: how-to
 localization_priority: Normal
 keywords: Konfigurieren Microsoft 365 Mandanten Teams Hochladen der Test-App
-ms.openlocfilehash: 2c9f23a5c6ae286ff4b7d911f370bd45b854a647
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 37f917727aba1a0f9828434b1519b4bb787df7aa
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565186"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631006"
 ---
 # <a name="test-your-app"></a>Testen eigener Apps
 
@@ -35,13 +35,11 @@ Wenn Sie die Konsolenprotokolle anzeigen, html-, css- und Netzwerkanforderungen 
 
 Fügen Sie die Testdaten dem Microsoft 365 hinzu. Weitere Informationen finden Sie unter Hinzufügen von Testdaten zu Office 365 [Test-Mandant,](~/concepts/build-and-test/test-data.md)und füllen Sie alle erforderlichen Komponenten aus, bevor Sie mit dem Hochladen der Testdaten beginnen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
 
-- [Debuggen Ihrer Registerkarte](~/tabs/how-to/developer-tools.md)
- 
-- [Debuggen Ihrer Bots](~/bots/how-to/debug/locally-with-an-ide.md)
-
-- [Testen von RSC-Berechtigungen](~/graph-api/rsc/test-resource-specific-consent.md)
+* [Debuggen Ihrer Registerkarte](~/tabs/how-to/developer-tools.md)
+* [Debuggen Ihrer Bots](~/bots/how-to/debug/locally-with-an-ide.md)
+* [Testen von RSC-Berechtigungen](~/graph-api/rsc/test-resource-specific-consent.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

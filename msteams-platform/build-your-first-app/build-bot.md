@@ -5,12 +5,12 @@ description: Erstellen Sie schnell Microsoft Teams bot mithilfe des Microsoft Te
 ms.author: timura
 ms.date: 04/14/2020
 ms.topic: tutorial
-ms.openlocfilehash: 2cbd90b293e8ac8343febc7b3d23278d5bb5bf82
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d54766d739ceaf585ab4a1e026f4a6e1150e3a2e
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565886"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630978"
 ---
 # <a name="create-your-first-bot-for-teams"></a>Erstellen Des ersten Bots für Teams
 
@@ -64,7 +64,7 @@ Viele der App-Konfigurationen und Gerüste werden automatisch eingerichtet, wenn
 
 Wenn Sie in einem anderen Lernprogramm eine Registerkarte erstellt haben, ist das App-Gerüst für den Bot anders. Im Gegensatz zu Registerkarten erfordert die Botentwicklung nicht, dass Sie Front-End-Webkomponenten erstellen oder das Teams JavaScript-Client-SDK verwenden.  Stattdessen verwendet das Gerüst das [Microsoft Bot Framework](https://dev.botframework.com/), das ein Open-Source-SDK zum Erstellen intelligenter Bots auf Enterprise-Qualität ist, die im Web, mobil und natürlich Teams! 
 
-Die Datei, die sich im Stammverzeichnis Ihres Projekts befindet, ist der Teams-spezifische Handler, der Botaktivitäten verarbeitet, z. B. wie der Bot auf bestimmte `botActivityHandler.js` Nachrichten reagiert. Das App-Gerüst stellt eine Datei im Stammverzeichnis Ihres Projekts zur Teams, die Botaktivitäten verarbeitet, z. B. wie der Bot auf bestimmte Nachrichten `botActivityHandler.js` reagiert.
+Das App-Gerüst stellt eine Datei im Stammverzeichnis Ihres Projekts zur Teams-spezifischen Handler zur Behandlung von Botaktivitäten, z. B. wie der Bot auf bestimmte Nachrichten `botActivityHandler.js` reagiert.
 
 ## <a name="3-securely-expose-your-localhost-to-the-internet"></a>3. Stellen Sie Ihren localhost sicher für das Internet zur Verfügung
 
@@ -156,7 +156,7 @@ Wenn Sie Ihre App installiert haben, der Bot jedoch nicht funktioniert, stellen 
 
 Es ist wichtig zu wissen, dass dies nicht mit einem Kanal in Teams. In diesem Fall stellt ein Kanal die Verbindung zwischen Dem Azure Bot Service und Teams oder einer anderen unterstützten Microsoft- oder [Drittanbieter-Kommunikations-App bereit.](/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
 
 * [Bot-Grundlagen](../bots/bot-basics.md)
 * [Erstellen einer persönlichen Registerkarte für Microsoft Teams](../build-your-first-app/build-personal-tab.md)

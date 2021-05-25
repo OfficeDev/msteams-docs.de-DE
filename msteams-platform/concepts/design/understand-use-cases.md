@@ -5,12 +5,12 @@ description: Wenn Sie Ihre Microsoft Teams planen, sollten Sie zuerst wissen, we
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b1d51dd126f237584b5c53ca053cdd13bc470d0b
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 7e91ddcab88243baf83f11fad59539845724fc78
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101786"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630761"
 ---
 # <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
 
@@ -77,9 +77,9 @@ Denken Sie vor allem daran, dass niemand Spam mag. Das Löschen von persönliche
 
 Ermitteln Sie, welche neuen Features der Benutzer in der aktuellen Lösung bevorzugt. Wenn Sie über eine Roadmap für neue Features verfügen, die der App hinzugefügt werden sollen, werden der Entwurf und die Architektur betroffen sein.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
 
-* [Auswählen, wie Ihre App verbreitet werden soll](../deploy-and-publish/overview.md)
+* [Auswählen, wie Ihre App verbreitet werden soll](../deploy-and-publish/apps-publish-overview.md)
 * [Entwurfsregisterkarten](../../tabs/design/tabs.md)
 * [Designbots](../../bots/design/bots.md)
 

@@ -5,12 +5,12 @@ description: Integrieren eines Power Virtual Agents Chatbots in die Teams Plattf
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 2a8f9c23eaa1acf2555b91cc4caf8d0f3298c114
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a38b2447bba42e70d8a1c3c9dca5d92e41cfb77c
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566117"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630593"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Hinzufügen eines Power Virtual Agent-Chatbots 
 
@@ -99,17 +99,13 @@ Dieser Schritt ist nur erforderlich, wenn der Bot die Anmeldung des Benutzers er
 1. **Starten eines Chats**   
 Der Einrichtungsprozess für das Hinzufügen ihres Power Virtual Agents Chatbots zu Teams ist abgeschlossen. Sie können jetzt eine Unterhaltung mit Ihrem Bot in einem persönlichen Chat starten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
 
-- [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
-
-- [Erstellen eines Chatbots für Teams mit Microsoft Power Virtual Agents](../bot-features.md#bots-and-the-microsoft-power-virtual-agents).  
-
-- [Power Virtual Agents Portal](https://powervirtualagents.microsoft.com)
-
-- [Veröffentlichen ihres Power Virtual Agents Bots](/power-virtual-agents/publication-fundamentals-publish-channels)
-
-- [Sicherheit und Compliance in Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
+* [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
+* [Erstellen eines Chatbots für Teams mit Microsoft Power Virtual Agents](../bot-features.md#bots-and-the-microsoft-power-virtual-agents).  
+* [Power Virtual Agents Portal](https://powervirtualagents.microsoft.com)
+* [Veröffentlichen ihres Power Virtual Agents Bots](/power-virtual-agents/publication-fundamentals-publish-channels)
+* [Sicherheit und Compliance in Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
 
 ## <a name="next-step"></a>Nächster Schritt
 

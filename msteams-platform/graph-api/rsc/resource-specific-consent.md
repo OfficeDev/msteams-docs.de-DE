@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams authorization OAuth SSO AAD rsc Graph
-ms.openlocfilehash: dabe0c33013fbb398eee7bf00ac2881cd86e6bc5
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d751e5dba22b19edfe6ffda3eb6a73a37375f92b
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566130"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630677"
 ---
 # <a name="resource-specific-consent-rsc"></a>Ressourcenspezifische Zustimmung (RSC)
 
@@ -19,7 +19,7 @@ Die ressourcenspezifische Zustimmung (Resource-Specific Consent, RSC) ist eine M
 
 ## <a name="resource-specific-permissions"></a>Ressourcenspezifische Berechtigungen
 
-|Anwendungsberechtigung| Aktion |
+|Anwendungsberechtigung| Maßnahme |
 | ----- | ----- |
 |TeamSettings.Read.Group | Hier erhalten Sie die Einstellungen für dieses Team.|
 |TeamSettings.ReadWrite.Group|Aktualisieren Sie die Einstellungen für dieses Team.|
@@ -56,7 +56,7 @@ Sie können die Zustimmung des [Gruppenbesitzers direkt](/azure/active-directory
 
 > [!div class="checklist"]
 >
->- Melden Sie sich beim [Azure-Portal](https://portal.azure.com) als [globaler Administrator/Unternehmensadministrator an.](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator)  
+>- Melden Sie sich beim [Azure-Portal](https://portal.azure.com) als [globaler Administrator/Unternehmensadministrator an.](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)  
  > - [Wählen](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) **Azure Active Directory** Enterprise  =>  **Anwendungen**  =>  **Zustimmungs- und Berechtigungen**  =>  **Benutzer-Zustimmungseinstellungen aus.**
 > - Aktivieren, Deaktivieren oder Einschränken der Zustimmung des Benutzers mit der Zustimmung des Steuerelements mit der Bezeichnung Gruppenbesitzer für Apps, die auf Daten zugreifen **(Der** Standardwert ist Zulassen der Zustimmung des Gruppenbesitzers **für alle Gruppenbesitzer).** Damit ein Teambesitzer eine App mithilfe von RSC installieren kann, muss die Zustimmung des Gruppenbesitzers für den Benutzer aktiviert sein.
 
@@ -157,7 +157,7 @@ Nachdem die App in einem Team installiert wurde, können Sie den [Graph-Explorer
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
  
 * [Testen von ressourcenspezifischen Zustimmungsberechtigungen in Teams](test-resource-specific-consent.md)
 * [Ressourcenspezifische Zustimmung in Microsoft Teams für Administratoren](/MicrosoftTeams/resource-specific-consent)

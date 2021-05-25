@@ -6,18 +6,18 @@ keywords: Standortzuordnungsfunktionen Systemeigene Geräteberechtigungen
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: b85f19e74d0a8121dd290fc395c1018178437b3a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 47fd11c918725b3195636f972ba37cbdde0c4a60
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566187"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630747"
 ---
 # <a name="integrate-location-capabilities"></a>Integration von Standortfunktionen 
 
 In diesem Dokument erfahren Sie, wie Sie die Standortfunktionen des systemeigenen Geräts in Ihre Teams integrieren.  
 
-Sie können das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)verwenden, das die tools zur Verfügung stellt, die für Ihre App für den Zugriff auf die systemeigenen Gerätefunktionen des [Benutzers erforderlich sind.](native-device-permissions.md) Verwenden Sie die Standort-APIs, z. B. [getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) und [showLocation,](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) um die Funktionen in Ihre App zu integrieren. 
+Sie können das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)verwenden, das die tools zur Verfügung stellt, die für Ihre App für den Zugriff auf die systemeigenen Gerätefunktionen des [Benutzers erforderlich sind.](native-device-permissions.md) Verwenden Sie die Standort-APIs, z. B. [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) und [showLocation,](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) um die Funktionen in Ihre App zu integrieren. 
 
 ## <a name="advantages-of-integrating-location-capabilities"></a>Vorteile der Integration von Standortfunktionen
 
@@ -51,11 +51,10 @@ Sie müssen die folgenden APIs verwenden, um die Standortfunktionen Ihres Gerät
 
 | API      | Beschreibung   |
 | --- | --- |
-|[getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) | Gibt den aktuellen Gerätespeicherort des Benutzers an oder öffnet die systemeigene Standortauswahl und gibt den vom Benutzer ausgewählten Speicherort zurück. |
-|[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation&preserve-view=true) | Zeigt die Position auf der Karte an. |
+|[getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) | Gibt den aktuellen Gerätespeicherort des Benutzers an oder öffnet die systemeigene Standortauswahl und gibt den vom Benutzer ausgewählten Speicherort zurück. |
+|[showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) | Zeigt die Position auf der Karte an. |
 
 > [!NOTE]
-
 > Die `getLocation()` API enthält die folgenden [Eingabekonfigurationen](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true)und `allowChooseLocation` `showMap` . <br/> Wenn der Wert von true ist, können die Benutzer `allowChooseLocation` einen beliebigen Speicherort ihrer Wahl auswählen. <br/>  Wenn der Wert *false ist,* können die Benutzer ihren aktuellen Speicherort nicht ändern.<br/> Wenn der Wert `showMap` von *false ist,* wird der aktuelle Speicherort abgerufen, ohne die Karte anzuzeigen. `showMap`wird ignoriert, `allowChooseLocation` wenn auf true festgelegt *ist.*
 
 **Web-App-Erfahrung für Standortfunktionen** 
@@ -102,7 +101,7 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 });
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
 
 * [Integrieren von Medienfunktionen in Teams](mobile-camera-image-permissions.md)
 * [Integrieren von QR-Code oder Barcodescannerfunktionen in Teams](qr-barcode-scanner-capability.md)

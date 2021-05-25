@@ -4,12 +4,12 @@ description: Das Microsoft Teams-Produktteam reagiert auf die Entwickler-Communi
 localization_priority: Normal
 ms.topic: reference
 keywords: Teams Feedback Entwicklerfragen Probleme kontakt support request bugs beiträge Communitydiskussionen
-ms.openlocfilehash: 0ced6a6e593f38e42833a81df9a22f4919b8c5bb
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b052b50bdafd542904bf3a9dfc6ee9d1ad5cf769
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566166"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630481"
 ---
 # <a name="microsoft-teams-developer-community-channels"></a>Microsoft Teams Entwickler-Community-Kanäle
 
@@ -24,7 +24,7 @@ Microsoft Teams Entwickler-Community verwenden Stack Overflow, um eine Verbindun
 |  **Dokumentationsupdates**           |     Wählen **Sie** Bearbeiten in dem Artikel aus, den Sie aktualisieren möchten, und übermitteln Sie eine [Pullanforderung Microsoft Teams Dokumentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) Repository.                                                                                                                                                           |
 |       **Vorschläge für Features**       |                                                                                                                                                                      Veröffentlichen von Featurevorschlägen [Microsoft Teams Feedbackportal auf UserVoice](https://microsoftteams.uservoice.com/forums/555103-public-preview/category/182881-developer-platform).                                                                                                                                                                      |
 |       **Allgemeine Fragen**         |Senden Sie allgemeine Fragen zur Microsoft Teams Entwicklerplattform an [Microsoft Teams Community Hilfe.](mailto:microsoftteamsdev@microsoft.com) Wir empfehlen, Fragen zu den hier genannten Kanälen zu stellen und E-Mails nur zu verwenden, wenn kein anderer Kommunikationsmodus anwendbar ist.                                                                                                                                                                      |
-|        **Beispiele**         | Übermitteln sie Probleme mit Beispielen an [Microsoft Teams Samples Repository.](/microsoftteams/platform/tutorials/code-samples)|
+|        **Beispiele**         | Übermitteln sie Probleme mit Beispielen an [Microsoft Teams Samples Repository.](https://github.com/OfficeDev/Microsoft-Teams-Samples)|
 |           **Probleme oder Vorschläge des Tab-SDK**          |         Übermitteln von Problemen und Featureanforderungen an das SDK-Repository für [Microsoft Teams JavaScript Library](https://github.com/OfficeDev/microsoft-teams-library-js/issues). Verwenden Sie das Tag, um Fragen zum SDK unter `microsoft-teams` [Stack Overflow zu stellen.](https://stackoverflow.com/questions/tagged/microsoft-teams)                                                                                                                                                                            |
 
 ## <a name="product-support-channels"></a>Produktsupportkanäle
@@ -35,6 +35,6 @@ In der folgenden Tabelle sind die Supportkanäle aufgeführt, die Teams produktb
 |         **Microsoft Teams produktprobleme und -fehler**          | Der Mandantenadministrator kann sich an Microsoft 365 [Product Support .](/microsoft-365/admin/contact-support-for-business-products)                                                            |
 |        **Allgemeine Fragen zu Microsoft Teams**        |  Übermitteln Sie Ihre Fragen [zu Microsoft Teams Community](https://answers.microsoft.com/en-us/msteams/forum).               |                                                           
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Sehen Sie ebenfalls
 
 [SDK-Referenz](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)

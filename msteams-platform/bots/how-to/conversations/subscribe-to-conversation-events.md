@@ -5,12 +5,12 @@ description: So arbeiten Sie mit Unterhaltungsereignissen aus Ihrem Microsoft Te
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 23f58a0544b317f7532ff12bc7f30b6eb6cd670a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 7dfafbd02c53ea0fe7393d4e4f771a50ad2954d2
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020028"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630705"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Unterhaltungsereignisse in Ihrem Teams-Bot
 
@@ -143,7 +143,7 @@ async def on_teams_channel_created(
     )
 ```
 
-* * *
+---
 
 ### <a name="channel-renamed"></a>Kanal umbenannt
 
@@ -225,7 +225,7 @@ async def on_teams_channel_renamed(
     )
 ```
 
-* * *
+---
 
 ### <a name="channel-deleted"></a>Kanal gelöscht
 
@@ -309,7 +309,7 @@ async def on_teams_channel_deleted(
     )
 ```
 
-* * *
+---
 
 ### <a name="channel-restored"></a>Kanal wiederhergestellt
 
@@ -398,7 +398,7 @@ async def on_teams_channel_restored(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-members-added"></a>Hinzugefügte Teammitglieder
 
@@ -542,7 +542,7 @@ async def on_teams_members_added(
     return
 ```
 
-* * *
+---
 
 ### <a name="team-members-removed"></a>Entfernte Teammitglieder
 
@@ -654,7 +654,7 @@ async def on_teams_members_removed(
     return
 ```
 
-* * *
+---
 
 ### <a name="team-renamed"></a>Team umbenannt
 
@@ -734,7 +734,7 @@ async def on_teams_team_renamed(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-deleted"></a>Team gelöscht
 
@@ -810,7 +810,7 @@ async def on_teams_team_deleted(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-restored"></a>Team wiederhergestellt
 
@@ -890,7 +890,7 @@ async def on_teams_team_restored(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-archived"></a>Team archiviert
 
@@ -970,7 +970,7 @@ async def on_teams_team_archived(
     )
 ```
 
-* * *
+---
 
 
 ### <a name="team-unarchived"></a>Team wird nicht archiviert
@@ -1051,7 +1051,7 @@ async def on_teams_team_unarchived(
     )
 ```
 
-* * *
+---
 
 Nachdem Sie nun mit den Unterhaltungsaktualisierungsereignissen gearbeitet haben, können Sie die Nachrichtenreaktionsereignisse verstehen, die für unterschiedliche Reaktionen auf eine Nachricht auftreten.
 
@@ -1173,7 +1173,7 @@ async def on_reactions_added(
     return
 ```
 
-* * *
+---
 
 ### <a name="reactions-removed-from-bot-message"></a>Aus bot-Nachricht entfernte Reaktionen
 
@@ -1282,7 +1282,7 @@ async def on_reactions_removed(
     return
 ```
 
-* * *
+---
 
 ## <a name="installation-update-event"></a>Installationsupdateereignis
 
@@ -1320,6 +1320,10 @@ turnContext, CancellationToken cancellationToken) {
 // TO:DO Installation workflow return;
 }
 ```
+
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
+
+Nicht verfügbar
 
 # <a name="json"></a>[Json](#tab/json)
 
@@ -1375,7 +1379,12 @@ turnContext, CancellationToken cancellationToken) {
   "locale": "en" 
 }
 ```
-* * *
+
+# <a name="python"></a>[Python](#tab/python)
+
+Nicht verfügbar
+
+---
 
 ## <a name="code-sample"></a>Codebeispiel
 

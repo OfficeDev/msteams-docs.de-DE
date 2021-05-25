@@ -5,16 +5,16 @@ description: Erfahren Sie mehr über die primitiven Benutzeroberflächenkomponen
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: fd6053b28bd56231d49c5830a00d40868a36509a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: eec324a67cec0eb39cc98c0ab63ff71771ebbf11
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019888"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644910"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Entwerfen Ihrer Microsoft Teams app mit grundlegenden Fluent UI-Komponenten
 
-Teams Apps werden in der Regel mit den folgenden grundlegenden Komponenten für die Fluent-Benutzeroberfläche erstellt. Diese Komponenten sind so flach wie möglich und können für verschiedene Verwendungsfälle, Designs und Bildschirmgrößen verwendet werden.
+Sie können Ihre Teams mit den folgenden grundlegenden Komponenten der Fluent-Benutzeroberfläche von Grund auf neu erstellen. Diese Komponenten sind so flach wie möglich und können für verschiedene Verwendungsfälle, Designs und Bildschirmgrößen verwendet werden.
 
 Die Abbildungen auf dieser Seite zeigen, wie Komponenten in Teams (hell) und dunklen Designs aussehen.
 

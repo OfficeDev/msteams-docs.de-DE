@@ -4,12 +4,12 @@ description: Beschreibt die Authentifizierung in Teams und deren Verwendung in R
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams-Authentifizierungsregisterkarten AAD
-ms.openlocfilehash: 2fdfc4448abb6980cca97e90951d7772611108da
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 138575ab28280f167c0627731c8219eccb07b7d9
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020387"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629984"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Authentifizieren eines Benutzers auf einer Microsoft Teams Registerkarte
 
@@ -151,7 +151,7 @@ Ihre App kann ein eigenes Sitzungscookie festlegen, sodass sich der Benutzer nic
 > Chrome 80, das anfang 2020 veröffentlicht werden soll, führt neue Cookiewerte ein und setzt standardmäßig Cookierichtlinien auf. Es wird empfohlen, dass Sie die beabsichtigte Verwendung für Ihre Cookies festlegen, anstatt sich auf das Standardverhalten des Browsers zu verlassen. *Weitere Informationen* [finden Sie unter SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
 
 >[!NOTE]
->Um das richtige Token für Microsoft Teams und Gastbenutzer abzurufen, ist es wichtig, dass die Apps mandantenspezifische https://login.microsoftonline.com/ **Endpunkte {tenantId} verwenden.** Sie können tenantId aus dem Botnachrichten- oder Registerkartenkontext erhalten. Wenn die Apps verwenden, erhalten die Benutzer falsche Token und melden sich beim "home"-Mandanten anstatt beim Mandanten an, bei dem sie https://login.microsoftonline.com/common derzeit angemeldet sind.
+>Um das richtige Token für Microsoft Teams und Gastbenutzer abzurufen, ist es wichtig, dass die Apps mandantenspezifische Endpunkte `https://login.microsoftonline.com/**{tenantId}**` verwenden. Sie können tenantId aus dem Botnachrichten- oder Registerkartenkontext erhalten. Wenn die Apps verwenden, erhalten die Benutzer falsche Token und melden sich beim "home"-Mandanten anstatt beim Mandanten an, bei dem sie `https://login.microsoftonline.com/common` derzeit angemeldet sind.
 
 Weitere Informationen zu single Sign-On (SSO) finden Sie im Artikel [Automatische Authentifizierung](~/tabs/how-to/authentication/auth-silent-AAD.md).
 

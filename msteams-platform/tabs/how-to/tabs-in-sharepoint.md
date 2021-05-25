@@ -6,12 +6,12 @@ keywords: Teams registerkarten sharepoint framework development
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a2ea6c470f094a9d7b8617a210559e911f5f81c9
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: c6c5668c0d937e0512d8a6dba366f7fd545b8a96
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058481"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630411"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint 
 
@@ -42,7 +42,7 @@ Mit der Novemberversion von Teams und SharePoint-Framework v.1.7 verfügen Entwi
     </a>
 </li>
 <li>
-    <a href="https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab">
+    <a href="/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -143,8 +143,6 @@ Die folgende Abbildung zeigt die vollständige Erfahrung Teams App in Sharepoint
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Erstellen von Microsoft Teams-Registerkarten mit SharePoint Framework – Lernprogramm](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
-
-- [Verwenden von App-Seiten mit einem einzelne Part in SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
-
-- [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
+* [Erstellen von Microsoft Teams-Registerkarten mit SharePoint Framework – Lernprogramm](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+* [Verwenden von App-Seiten mit einem einzelne Part in SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+* [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
