@@ -5,13 +5,13 @@ description: Erhalten Sie eine Übersicht darüber, wie Entwickler Microsoft Tea
 ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
-ms.date: 09/22/2020
-ms.openlocfilehash: 645b8087b367dd3cc9f5efdd53c53974307ce65e
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.date: 05/24/2021
+ms.openlocfilehash: 796353a4c556794a518a451e8a45989351729eb9
+ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630494"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646516"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Apps für Microsoft Teams erstellen
 
@@ -20,7 +20,7 @@ Microsoft Teams apps bringen wichtige Informationen, allgemeine Tools und vertra
 Apps sind die Art und Weise, Teams Ihre Anforderungen erfüllen. Erstellen Sie etwas neues für Teams oder integrieren Sie eine vorhandene App.
 
 > [!div class="nextstepaction"]
-> [Beginnen Sie hier](build-your-first-app/build-first-app-overview.md)
+> [Beginnen Sie hier](get-started/prerequisites.md)
 
 ## <a name="what-are-teams-apps"></a>Was sind Teams Apps?
 
@@ -153,7 +153,7 @@ Nutzen **Teams** Daten: Die [Microsoft Graph-API für Teams](/graph/teams-concep
 Machen Sie sich schnell mit dem Erstellen von Teams vertraut, indem Sie Ihre Umgebung einrichten und eine einfache App erstellen.
 
 > [!div class="nextstepaction"]
-> [Die erste App erstellen](build-your-first-app/build-first-app-overview.md)
+> [Die erste App erstellen](get-started/prerequisites.md)
 
    :::column-end:::
    :::column span="":::
@@ -209,7 +209,7 @@ Suchen Sie nach Inspiration für die App-Entwicklung? Durchsuchen Sie unsere Lis
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Sehen Sie ebenfalls
+## <a name="see-also"></a>Siehe auch
 
 * [Hinzufügen einer Share-to-Teams-Schaltfläche zu Ihrer Website](concepts/build-and-test/share-to-teams.md)
 * [Entwerfen Ihrer Teams App](concepts/design/design-teams-app-overview.md)

@@ -5,12 +5,12 @@ keywords: Erste Schritte für Entwicklerportalteams
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 857d2069c4f67bf15e1d3435af55a684a918df87
-ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
+ms.openlocfilehash: 5f3335470a442fc8a3c94e9563e21fea75c4ef4b
+ms.sourcegitcommit: c55b0d2a4c1f8945e49b0b7c0b08c0eb3da3d2be
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52635093"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646333"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Verwalten Sie Ihre Apps mit dem Entwicklerportal für Microsoft Teams
 
@@ -79,8 +79,8 @@ Auf der **Seite Übersicht** sehen Sie die Gesamtzahl der aktiven Benutzer für 
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | *Monatlicher R30* | Die Standardverwendungsmetrik. Es zeigt die Anzahl der eindeutigen aktiven Benutzer an, die Ihre App innerhalb dieses rollenden 30-Tage-Fensters in UTC verwendet haben. |
 | *Täglich* | Zeigt die Anzahl der eindeutigen aktiven Benutzer an, die Ihre App an einem bestimmten Tag in UTC verwendet haben. |
-| *Verlauf* | Die monatliche und tägliche Nutzung wird für die letzten sieben, 30 Tage und 60 Tage angezeigt. |
-| *Latenz* | Die Verwendung sollte für einen bestimmten Tag innerhalb von 24-48 Stunden widergespiegelt werden. Die Verwendung für neue Apps kann bis zu 3-5 Tage dauern.|
+
+Die monatliche und tägliche Nutzung wird für die letzten sieben, 30 Tage und 60 Tage angezeigt. Die Verwendung sollte für einen bestimmten Tag innerhalb von 24-48 Stunden widergespiegelt werden. Die Verwendung für neue Apps kann bis zu 3-5 Tage dauern.
 
 ## <a name="use-tools-to-create-app-features"></a>Verwenden von Tools zum Erstellen von App-Features
 

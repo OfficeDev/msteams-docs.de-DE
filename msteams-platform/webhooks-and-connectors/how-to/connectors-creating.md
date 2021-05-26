@@ -5,12 +5,12 @@ keywords: Teams O365-Connector
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: ace546853d7dfe9773055288a0fc3471fe656652
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 1598b84fc1c36547aa4c814cdf03404a3833779e
+ms.sourcegitcommit: c55b0d2a4c1f8945e49b0b7c0b08c0eb3da3d2be
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629823"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646323"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Erstellen Office 365 Connectors für Microsoft Teams
 
@@ -190,7 +190,7 @@ Die folgende manifest.JSON-Datei enthält die grundlegenden Elemente, die zum Te
 
 Das Exchange Online PowerShell V2-Modul verwendet moderne Authentifizierung und arbeitet mit mehrstufiger Authentifizierung (Multi-Factor Authentication, MFA) für die Verbindung mit allen Exchange-bezogenen PowerShell-Umgebungen in Microsoft 365. Administratoren können Exchange Online PowerShell verwenden, um Connectors für einen gesamten Mandanten oder ein bestimmtes Gruppenpostfach zu deaktivieren, was alle Benutzer in diesem Mandanten oder Postfach betrifft. Es ist nicht möglich, für einige und nicht für andere zu deaktivieren. Außerdem sind Connectors standardmäßig für GCC deaktiviert.
 
-Die Einstellung auf Mandantenebene überschreibt die Einstellung auf Gruppenebene. Wenn ein Administrator beispielsweise Connectors für die Gruppe aktiviert und für den Mandanten deaktiviert, werden Connectors für die Gruppe deaktiviert. Um einen Connector in Teams zu aktivieren, stellen Sie eine Verbindung mit [Exchange Online PowerShell](/docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) mithilfe der modernen Authentifizierung mit oder ohne MFA sicher.
+Die Einstellung auf Mandantenebene überschreibt die Einstellung auf Gruppenebene. Wenn ein Administrator beispielsweise Connectors für die Gruppe aktiviert und für den Mandanten deaktiviert, werden Connectors für die Gruppe deaktiviert. Um einen Connector in Teams zu aktivieren, stellen Sie eine Verbindung mit [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) mithilfe der modernen Authentifizierung mit oder ohne MFA sicher.
 
 ### <a name="commands-to-disable-or-enable-connectors"></a>Befehle zum Deaktivieren oder Aktivieren von Connectors
 
@@ -203,7 +203,7 @@ Die Einstellung auf Mandantenebene überschreibt die Einstellung auf Gruppeneben
     * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
     * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
-Weitere Informationen zum Austausch von PowerShell-Modulen finden Sie unter [Set-OrganizationConfig](/docs.microsoft.com/powershell/module/exchange/Set-OrganizationConfig.md?view=exchange-ps&preserve-view=true). Zum Aktivieren oder Deaktivieren Outlook Sie [Apps mit Ihren Gruppen in Outlook.](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us)
+Weitere Informationen zum Austausch von PowerShell-Modulen finden Sie unter [Set-OrganizationConfig](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true). Zum Aktivieren oder Deaktivieren Outlook Sie [Apps mit Ihren Gruppen in Outlook.](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us)
 
 ## <a name="testing-your-connector"></a>Testen des Connectors
 
