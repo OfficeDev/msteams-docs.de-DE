@@ -4,12 +4,12 @@ description: Beispiel für benutzerspezifische Ansichten mithilfe universeller A
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 696fc5ce25c79d749b301309bfe0c737e39ad294
-ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
+ms.openlocfilehash: cadf66082582cfd9009a0497b3eb5e58f0a2ef02
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555444"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649628"
 ---
 # <a name="user-specific-views"></a>Benutzerspezifische Ansichten
 
@@ -17,7 +17,15 @@ Wenn adaptive Karten in einer Teams gesendet wurden, sehen alle Benutzer den exa
 
 Beispielsweise möchte Megan, ein Sicherheitsinspektor bei Contoso, einen Vorfall erstellen und alex zuweisen. Außerdem möchte sie, dass jeder im Team über den Vorfall informiert ist. Megan verwendet die Nachrichtenerweiterung contoso incident reporting powered by Universal Actions for Adaptive Cards.
 
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Benutzerspezifische Ansichten für mobile Benutzer":::
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="Benutzerspezifische Ansichten":::
+
+* * *
 
 ## <a name="user-specific-views-for-adaptive-cards"></a>Benutzerspezifische Ansichten für adaptive Karten
 

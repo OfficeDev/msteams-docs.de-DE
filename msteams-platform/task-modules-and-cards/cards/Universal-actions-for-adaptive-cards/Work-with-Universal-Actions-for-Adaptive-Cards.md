@@ -3,12 +3,12 @@ title: Mit Universal-Aktionen für adaptive Karten arbeiten
 description: Arbeiten Sie mit den universellen Aktionen für adaptive Karten.
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 8c260a4893d38ad365cbb3bdd5a7613a1b42654f
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 4361f1c7774837b728c6382df4e62e00ea912e35
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088838"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649699"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Mit Universal-Aktionen für adaptive Karten arbeiten
 
@@ -52,7 +52,7 @@ Weitere Informationen zur Unterstützung älterer Clients finden Sie unter [Abw�
 
 Ersetzen Sie beim Erstellen adaptiver Karten `Action.Submit` und `Action.Http` durch `Action.Execute` . Das Schema für `Action.Execute` ähnelt dem von `Action.Submit` .
 
-Weitere Informationen finden Sie unter [Action.Exeschema and properties](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+Weitere Informationen finden Sie unter [Action.Exeschema and properties](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
 Jetzt können Sie das Aktualisierungsmodell verwenden, damit adaptive Karten automatisch aktualisiert werden können.
 
@@ -60,7 +60,7 @@ Jetzt können Sie das Aktualisierungsmodell verwenden, damit adaptive Karten aut
 
 Um Ihre adaptive Karte automatisch zu aktualisieren, definieren Sie ihre Eigenschaft, die eine Aktion vom Typ und `refresh` `Action.Execute` ein Array `userIds` einbettet.
 
-Weitere Informationen finden Sie unter [Aktualisierungsschema und Eigenschaften](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism).
+Weitere Informationen finden Sie unter [Aktualisierungsschema und Eigenschaften](/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism).
 
 ## <a name="user-ids-in-refresh"></a>Benutzer-IDs in der Aktualisierung
 
@@ -72,7 +72,7 @@ Im Folgenden sind die Features von UserIds in refresh zu finden:
 
 * Die UserIds-Eigenschaft wird hinzugefügt, da Kanäle in Teams eine große Anzahl von Mitgliedern enthalten können. Wenn alle Mitglieder den Kanal gleichzeitig anzeigen, führt eine bedingungslose automatische Aktualisierung zu vielen gleichzeitigen Aufrufen des Bots. Um dies zu vermeiden, muss die Eigenschaft immer enthalten sein, um zu ermitteln, welche Benutzer eine automatische Aktualisierung mit maximal `userIds` *60 (60) Benutzer-MRIs erhalten müssen.*
 
-* Weitere Informationen zum Abrufen Teams Benutzer-MRIs des Unterhaltungsmitglieds zum Hinzufügen in die UserIds-Liste im Abschnitt Aktualisierung von Adaptive Karte finden Sie unter [Fetch roster or user profile](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
+* Weitere Informationen zum Abrufen Teams Benutzer-MRIs des Unterhaltungsmitglieds zum Hinzufügen in die UserIds-Liste im Abschnitt Aktualisierung von Adaptive Karte finden Sie unter [Fetch roster or user profile](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
 
 * Beispiel für Teams benutzer-MRI ist`29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 
@@ -85,9 +85,9 @@ Im nächsten Schritt verwenden Sie die Aufrufaktivität, um zu verstehen, welche
 
 Wenn sie im Client ausgeführt wird, wird ihrem Bot eine neue `Action.Execute` Art von `adaptiveCard/action` Invoke-Aktivität vorgenommen.
 
-Weitere Informationen finden Sie unter [Anforderungsformat und Eigenschaften für eine typische `adaptiveCard/action` Aufrufaktivität](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#request-format).
+Weitere Informationen finden Sie unter [Anforderungsformat und Eigenschaften für eine typische `adaptiveCard/action` Aufrufaktivität](/adaptive-cards/authoring-cards/universal-action-model#request-format).
 
-Weitere Informationen finden Sie unter [Antwortformat und Eigenschaften für eine typische `adaptiveCard/action` Aufrufaktivität mit unterstützten Antworttypen](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#response-format).
+Weitere Informationen finden Sie unter [Antwortformat und Eigenschaften für eine typische `adaptiveCard/action` Aufrufaktivität mit unterstützten Antworttypen](/adaptive-cards/authoring-cards/universal-action-model#response-format).
 
 Als Nächstes können Sie die Abwärtskompatibilität auf ältere Clients über verschiedene Plattformen hinweg anwenden und Ihre adaptive Karte kompatibel machen.
 
@@ -99,7 +99,13 @@ Mit universellen Aktionen für adaptive Karten können Sie Eigenschaften festleg
 
 Um die Abwärtskompatibilität Ihrer adaptiven Karten mit älteren Versionen von Teams sicherzustellen, müssen Sie die Eigenschaft enthalten und `fallback` den Wert auf `Action.Submit` festlegen. Außerdem muss Ihr Botcode sowohl als auch `Action.Execute` `Action.Submit` verarbeiten.
 
-Weitere Informationen finden Sie unter [Abwärtskompatibilität auf Teams](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#teams).
+Weitere Informationen finden Sie unter [Abwärtskompatibilität auf Teams](/adaptive-cards/authoring-cards/universal-action-model#teams).
+
+## <a name="code-sample"></a>Codebeispiel
+
+|Beispielname | Beschreibung | . NETCore |
+|----------------|-----------------|--------------|
+| Teams-Catering-Bot | Erstellen Sie einen einfachen Bot, der die Essensbestellung mit adaptiven Karten akzeptiert. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
 
 ## <a name="see-also"></a>Siehe auch
 

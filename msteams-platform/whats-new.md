@@ -4,12 +4,12 @@ description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: Teams, was neu ist
-ms.openlocfilehash: 073776e7058ef2224b891158319fd816953d2c05
-ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
+ms.openlocfilehash: 50f8f9f24285a6678e34a97732992c3051b8e0a9
+ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52634695"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52651719"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neues für Entwickler in Microsoft Teams
 
@@ -27,14 +27,14 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
-|5/24/2021|Die Teams app-Entwurfsrichtlinien mit mobilen Mustern und mehr aktualisiert.|[Entwerfen Ihrer Teams App](~/concepts/design/design-teams-app-overview.md)
-|03/18/2021|Hinweis: **Aktualisieren Sie auf Version 4.10** oder höher des Bot Framework SDK, da wir mit dem Veraltetkeitsprozess für und begonnen `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` haben. | [Bot API-Änderungen für Team-/Chatmitglieder](resources/team-chat-member-api-changes.md) |
+|05/24/2021|Die Teams app-Entwurfsrichtlinien mit mobilen Mustern und mehr aktualisiert.|[Entwerfen Ihrer Teams App](~/concepts/design/design-teams-app-overview.md)
 |05/13/2021|Informationen zu mConnect und Skooler hinzugefügt.|[Lernverwaltungssystem für Das Lernen von Moodle](resources/moodle-overview.md)
 |05/10/2021| Manifest v1.10 wird veröffentlicht.|[Manifestschema](resources/schema/manifest-schema.md) |
 |05/10/2021| Neue App-Anpassungsfunktion.| [Aktivieren von Organisationen zum Anpassen Ihrer App](concepts/design/enable-app-customization.md) |
 |05/07/2021| Tiefe Links für Audio- und Videoanrufe im Chat. |[Deep-Links](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|Neue Anleitung zum Veröffentlichen von Apps im Teams Store.|[Veröffentlichen Ihrer App im Teams Store](concepts/deploy-and-publish/appsource/publish.md), Teams Richtlinien für die [Storeüberprüfung](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
-| 04/29/2021 | Neu: Universelle Aktionen für adaptive Karten. | [Universal-Aktionen für adaptive Karten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/29/2021 | Neu: Universelle Aktionen für adaptive Karten. | [Universal-Aktionen für adaptive Karten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/08/2021| Die App-Anpassungsfunktion ist jetzt in der Entwicklervorschau verfügbar.|[Übersicht über die Entwurfsteams-App,](concepts/design/enable-app-customization.md) [Übersicht über App Studio](concepts/build-and-test/app-studio-overview.md#connectors)und [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|Hinweis: Aktualisieren Sie auf Version 4.10 oder höher des Bot Framework SDK, wie wir mit dem Veraltetkeitsprozess für `TeamsInfo.getMembers` und begonnen `TeamsInfo.GetMembersAsync` haben. | [Bot API-Änderungen für Team-/Chatmitglieder](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Hinweis: Registerkarten haben keine Ränder mehr um ihre Erfahrungen. Registerkartenentwickler sollten ihre Apps überprüfen und aktualisieren. | [Entfernen von Registerkartenrändern](resources/removing-tab-margins.md) |
 |03/05/2021|Der Standardinstallationsbereich und die Gruppenfunktion werden in der Entwicklervorschau angezeigt.| [Standardinstallationsbereich und Gruppenfunktion](concepts/deploy-and-publish/add-default-install-scope.md) |
@@ -159,7 +159,10 @@ Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff auf
 
 | **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
+|05/25/2021| Das Teams Toolkit für [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) und [Visual Studio aktualisiert.](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview) | [Erste Schritte mit Teams App-Entwicklung](~/get-started/prerequisites.md) |
+|05/25/2021| Besprechungsdetails-API und Echtzeit-Teams Besprechungsereignisse | [Apps für Teams-Besprechungen erstellen](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| Neues Entwicklerportal für Teams für die Verwaltung Ihrer Teams eingeführt. | [Entwicklerportal für Teams](concepts/build-and-test/teams-developer-portal.md) |
+|05/25/2021| Das Feature "Gemeinsamer Modus" kombiniert Teilnehmer in einer einzelnen virtuellen Szene und platziert ihre Videostreams an vordefinierten Plätzen. | [Modus "Zusammen"](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|Bots können aktiviert werden, um alle Kanalnachrichten mithilfe der ressourcenspezifischen Zustimmung (RSC) zu empfangen.|[Empfangen aller Nachrichten mit RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md) [Botunterhaltungsübersicht,](~/bots/how-to/conversations/conversation-basics.md) [Kanal-](~/bots/how-to/conversations/channel-and-group-conversations.md)und Gruppenunterhaltungen und [Entwicklervorschaumanifestschema](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021|Tabs link unfurling and stage view|[Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
 |03/05/2021| Registerkarten verfügen nicht mehr über Ränder, die ihre Erfahrungen umgeben. Registerkartenentwickler sollten ihre Apps überprüfen und aktualisieren. | [Entfernen von Registerkartenrändern](resources/removing-tab-margins.md) |

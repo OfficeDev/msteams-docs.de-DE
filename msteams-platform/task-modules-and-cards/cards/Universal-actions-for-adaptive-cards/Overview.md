@@ -3,12 +3,12 @@ title: Übersicht über universelle Aktionen für adaptive Karten
 description: Eine kurze Übersicht über universelle Aktionen für adaptive Karten.
 ms.topic: overview
 localization_priority: Normal
-ms.openlocfilehash: f0adf3d1a01262ff9cbdf14128c9ffe088ae8072
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 8bdbc488c68bf9bef79363f1a22d66e63ec32e08
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088915"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649717"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Universal-Aktionen für adaptive Karten
 
@@ -51,7 +51,15 @@ Sie können nun dieselbe Karte sowohl an Teams als auch Outlook senden und sie m
 
 Die folgende Abbildung zeigt die universellen Aktionen für adaptive Karten für Teams und Outlook:
 
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-teams-outlook.jpg" alt-text="Mobile gleiche Karte für Teams und Outlook":::
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Gleiche Karte für Teams und Outlook":::
+
+* * *
 
 ### <a name="user-specific-views"></a>Benutzerspezifische Ansichten
 
@@ -61,7 +69,15 @@ Wenn Sie beispielsweise eine Vorfallberichtskarte in einem Chat oder Kanal sende
 
 Die folgende Abbildung zeigt ein Beispiel für eine Ticketing Messaging Extension (ME), bei der verschiedenen Benutzern im Chat basierend auf der Anforderung unterschiedliche Aktionen angezeigt werden:
 
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Benutzerspezifische Ansichten für mobile Benutzer":::
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="Benutzerspezifische Ansichten":::
+
+* * *
 
 Weitere Informationen finden Sie [unter Beispiel für benutzerspezifische Ansichten](User-Specific-Views.md).
 
@@ -91,7 +107,7 @@ Jetzt können Sie verstehen, wie adaptive Karten mit dem neuen Modell für unive
 
 ## <a name="adaptive-cards-and-the-new-universal-actions-model"></a>Adaptive Karten und das neue Modell für universelle Aktionen
 
-Adaptive Karten sind eine Kombination aus Inhalten, z. B. Text und Grafiken, und Aktionen, die von einem Benutzer ausgeführt werden können. Weitere Informationen finden Sie unter [Adaptive Karten](http://adaptivecards.io/). Die neuen universellen Aktionen für adaptive Karten ermöglichen eine allgemeine Behandlung der adaptiven Kartenaktionen über Plattformen und Anwendungen hinweg. Weitere Informationen finden Sie unter [Universelles Aktionsmodell](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model).
+Adaptive Karten sind eine Kombination aus Inhalten, z. B. Text und Grafiken, und Aktionen, die von einem Benutzer ausgeführt werden können. Weitere Informationen finden Sie unter [Adaptive Karten](http://adaptivecards.io/). Die neuen universellen Aktionen für adaptive Karten ermöglichen eine allgemeine Behandlung der adaptiven Kartenaktionen über Plattformen und Anwendungen hinweg. Weitere Informationen finden Sie unter [Universelles Aktionsmodell](/adaptive-cards/authoring-cards/universal-action-model).
 
 [Das Dokument "Arbeiten mit universellen](Work-with-universal-actions-for-adaptive-cards.md) Aktionen für adaptive Karten" führt Sie durch die Schritte, um die Funktionen von Universelle Aktionen für adaptive Karten für Ihre Lösung zu nutzen.
 

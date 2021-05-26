@@ -1,67 +1,86 @@
 ---
-title: Apps für Teams-Besprechungen erstellen
+title: Voraussetzungen und API-Verweise für Apps in Teams Besprechungen
 author: laujan
-description: Erstellen von Apps für Teams-Besprechungen
+description: Arbeiten mit Apps für Teams Besprechungen
 ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Rollen-API für Teams-Apps-Besprechungen für Benutzerteilnehmer
-ms.openlocfilehash: 3bfbcd0eed1bd287303315ae57cd2f0db039890c
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 6ee26142ad80021f00ffebf3502f68c124ab4b67
+ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630180"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52651726"
 ---
-# <a name="create-apps-for-teams-meetings"></a>Apps für Teams-Besprechungen erstellen
+# <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Voraussetzungen und API-Verweise für Apps in Teams Besprechungen
 
-## <a name="prerequisites-and-considerations"></a>Voraussetzungen und Überlegungen
+Um die Funktionen Ihrer Apps über den gesamten Besprechungslebenszyklus zu erweitern, Teams Sie mit Apps für Teams arbeiten. Sie müssen die Voraussetzungen durchgehen und die Besprechungs-Apps-API-Verweise verwenden, um die Besprechungserfahrung zu verbessern.
 
-Bevor Sie Apps für Teams erstellen, müssen Sie folgendes wissen:
+## <a name="prerequisites"></a>Voraussetzungen
+
+Bevor Sie mit Apps für Teams arbeiten, müssen Sie folgendes wissen:
 
 * Sie müssen wissen, wie Sie apps Teams entwickeln. Weitere Informationen finden Sie unter [Teams App Development](../overview.md).
 
-* Sie müssen das Teams-App-Manifest aktualisieren, um anzugeben, dass die App für Besprechungen verfügbar ist. Weitere Informationen finden Sie unter [App-Manifest](#update-your-app-manifest).
+* Sie müssen das Teams-App-Manifest aktualisieren, um anzugeben, dass die App für Besprechungen verfügbar ist. Weitere Informationen finden Sie unter [App-Manifest](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest).
 
-* Damit Ihre App im Besprechungslebenszyklus als Registerkarte funktioniert, muss sie konfigurierbare Registerkarten im Gruppenchatbereich unterstützen. Weitere Informationen finden Sie unter [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) und [build a group tab](../build-your-first-app/build-channel-tab.md).
+* Ihre App muss konfigurierbare Registerkarten im Gruppenchatbereich unterstützen, damit Ihre App im Besprechungslebenszyklus als Registerkarte funktioniert. Weitere Informationen finden Sie unter [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) und [build a group tab](../build-your-first-app/build-channel-tab.md).
 
-* Sie müssen die allgemeinen Richtlinien Teams Registerkartendesigns für Szenarien vor und nach Besprechungen einhalten. Informationen zu Erfahrungen während Besprechungen finden Sie in den Entwurfsrichtlinien für Besprechungsdialogfeldern und Besprechungsdialogfeldern. Weitere Informationen finden Sie unter [Teams Richtlinien](../tabs/design/tabs.md)für den Registerkartenentwurf, Richtlinien für das Design von Registerkarten [in](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) Besprechungen und Entwurfsrichtlinien für [Besprechungsdialogdialog.](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
+* Sie müssen die allgemeinen Richtlinien Teams Registerkartendesigns für Szenarien vor und nach Besprechungen einhalten. Informationen zu Erfahrungen während Besprechungen finden Sie in den Entwurfsrichtlinien für Besprechungsdialogfeldern und Besprechungsdialogfeldern. Weitere Informationen finden Sie unter [Teams Richtlinien](../tabs/design/tabs.md)für den Registerkartenentwurf, Richtlinien zum Entwerfen von Registerkarten [in](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)Besprechungen und Entwurfsrichtlinien für [Besprechungsdialogdialog.](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 
 * Sie müssen den Bereich `groupchat` unterstützen, um Ihre App in Chats vor und nach besprechungen zu aktivieren. Mit der App vor der Besprechung können Sie Besprechungs-Apps finden und hinzufügen und Aufgaben vor besprechungen ausführen. Mit der App nach der Besprechung können Sie die Ergebnisse der Besprechung anzeigen, z. B. Umfrageergebnisse oder Feedback.
 
-* Die Parameter für die Besprechungs-API-URL müssen `meetingId` über `userId` , und `tenantId` verfügen. Diese sind im Rahmen der Client-SDK- Teams Bot-Aktivität verfügbar. Darüber hinaus können zuverlässige Informationen für Benutzer-ID und Mandanten-ID mithilfe der [Tab-SSO-Authentifizierung abgerufen werden.](../tabs/how-to/authentication/auth-aad-sso.md)
+* Die Parameter für die Besprechungs-API-URL müssen `meetingId` über `userId` , und `tenantId` verfügen. Diese sind im Rahmen der Teams Client SDK und Bot-Aktivität verfügbar. Darüber hinaus können Sie zuverlässige Informationen für Benutzer-ID und Mandanten-ID mithilfe [der Registerkarte SSO-Authentifizierung abrufen.](../tabs/how-to/authentication/auth-aad-sso.md)
 
 * Die `GetParticipant` API muss über eine Botregistrierung und -ID verfügen, um Authentifizierungstoken zu generieren. Weitere Informationen finden Sie unter [Botregistrierung und ID](../build-your-first-app/build-bot.md).
 
-* Damit Ihre App in Echtzeit aktualisiert werden kann, muss sie basierend auf den Ereignisaktivitäten in der Besprechung auf dem neuesten Stand sein. Diese Ereignisse können sich innerhalb des Dialogfelds in der Besprechung und in anderen Phasen des gesamten Besprechungslebenszyklus finden. Das Dialogfeld in der Besprechung finden Sie unter `bot Id` Completion-Parameter in `Notification Signal API` .
+* Damit Ihre App in Echtzeit aktualisiert werden kann, muss sie basierend auf den Ereignisaktivitäten in der Besprechung auf dem neuesten Stand sein. Diese Ereignisse können sich innerhalb des Dialogfelds in der Besprechung und in anderen Phasen des gesamten Besprechungslebenszyklus finden. Das Dialogfeld In-Meeting finden Sie unter Completion `bot Id` parameter in `NotificationSignal` API.
 
-## <a name="meeting-apps-api-reference"></a>Apireferenz für Besprechungs-Apps
+* Die Besprechungsdetails-API muss über eine Botregistrierung und bot-ID verfügen. Es erfordert Bot SDK, um zu `TurnContext` erhalten.
+
+* Bei Besprechungsereignissen in Echtzeit müssen Sie mit dem über das Bot SDK verfügbaren `TurnContext` Objekt vertraut sein. Das `Activity` Objekt in enthält die Nutzlast mit der `TurnContext` tatsächlichen Start- und Endzeit. Für Echtzeit-Besprechungsereignisse ist eine registrierte Bot-ID von der Teams erforderlich.
+
+Nachdem Sie die Voraussetzungen erfüllt haben, können Sie die API-Verweise auf die Besprechungs-Apps , , und die Besprechungsdetails-API verwenden, mit der Sie mithilfe von Attributen auf Informationen zugreifen und relevante `GetUserContext` `GetParticipant` Inhalte anzeigen `NotificationSignal` können.
+
+## <a name="meeting-apps-api-references"></a>Apireferenzen für Besprechungs-Apps
+
+Die neuen Besprechungsergehnmöglichkeiten bieten Ihnen APIs, die die Besprechungserfahrung transformieren. Mit dieser neuen Funktion können Sie Apps erstellen oder vorhandene Apps innerhalb des Besprechungslebenszyklus integrieren. Sie können die APIs verwenden, um Ihre App auf die Besprechung aufmerksam zu machen. Sie können auswählen, welche APIs Sie verwenden möchten, um die Besprechungserfahrung zu verbessern.
+
+Die folgende Tabelle enthält eine Liste dieser APIs:
 
 |API|Beschreibung|Anforderung|Quelle|
 |---|---|----|---|
 |**GetUserContext**| Mit dieser API können Sie Kontextinformationen abrufen, um relevante Inhalte auf einer Registerkarte Teams anzuzeigen. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams Client SDK|
 |**GetParticipant**| Mit dieser API kann ein Bot Teilnehmerinformationen nach Besprechungs-ID und Teilnehmer-ID abrufen. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | Mit dieser API können Sie Besprechungssignale bereitstellen, die mithilfe der vorhandenen Unterhaltungsbenachrichtigungs-API für den Benutzer-Bot-Chat übermittelt werden. Damit können Sie basierend auf der Benutzeraktion, die ein Dialogfeld in der Besprechung zeigt, ein Signal senden. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
+|**Besprechungsdetails** | Mit dieser API können Sie statische Besprechungsmetadaten abrufen. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
 
-### <a name="getusercontext"></a>GetUserContext
+### <a name="getusercontext-api"></a>GetUserContext-API
 
 Informationen zum Identifizieren und Abrufen von Kontextinformationen für Ihre Registerkarteninhalte finden Sie unter [Abrufen des Kontexts für Teams Registerkarte](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library). `meetingId`wird von einer Registerkarte verwendet, wenn sie im Besprechungskontext ausgeführt wird, und wird für die Antwortnutzlast hinzugefügt.
 
 ### <a name="getparticipant-api"></a>GetParticipant-API
 
 > [!NOTE]
-> * Zwischenspeichern Sie keine Teilnehmerrollen, da der Besprechungsorganisator eine Rolle jederzeit ändern kann.
+> * Zwischenspeichern Sie die Teilnehmerrollen nicht, da der Besprechungsorganisator die Rollen jederzeit ändern kann.
 > * Teams unterstützt derzeit keine großen Verteilerlisten oder Listengrößen von mehr als 350 Teilnehmern für die `GetParticipant` API.
+
+Die `GetParticipant` API ermöglicht einem Bot das Abrufen von Teilnehmerinformationen nach Besprechungs-ID und Teilnehmer-ID. Die API enthält Abfrageparameter, Beispiele und Antwortcodes.
 
 #### <a name="query-parameters"></a>Abfrageparameter
 
+Die `GetParticipant` API enthält die folgenden Abfrageparameter:
+
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**meetingId**| Zeichenfolge | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
-|**participantId**| Zeichenfolge | Ja | Die Teilnehmer-ID ist die Benutzer-ID. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Teilnehmer-ID aus dem Tab-SSO zu erhalten. |
-|**tenantId**| Zeichenfolge | Ja | Die Mandanten-ID ist für die Mandantenbenutzer erforderlich. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Mandanten-ID aus dem Tab-SSO zu erhalten. |
+|**meetingId**| String | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
+|**participantId**| String | Ja | Die Teilnehmer-ID ist die Benutzer-ID. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Teilnehmer-ID aus dem Tab-SSO zu erhalten. |
+|**tenantId**| String | Ja | Die Mandanten-ID ist für die Mandantenbenutzer erforderlich. Sie ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Mandanten-ID aus dem Tab-SSO zu erhalten. |
 
 #### <a name="example"></a>Beispiel
+
+Die `GetParticipant` API enthält die folgenden Beispiele:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -135,13 +154,15 @@ Der JSON-Antworttext für `GetParticipant` API ist:
 
 #### <a name="response-codes"></a>Antwortcodes
 
+Die `GetParticipant` API enthält die folgenden Antwortcodes:
+
 |Antwortcode|Beschreibung|
 |---|---|
 | **403** | Die App darf keine Teilnehmerinformationen erhalten. Dies ist die häufigste Fehlerantwort und wird ausgelöst, wenn die App nicht in der Besprechung installiert ist. Beispiel: Wenn die App vom Mandantenadministrator deaktiviert oder während der Livewebsitemigration blockiert wird.|
 | **200** | Die Teilnehmerinformationen werden erfolgreich abgerufen.|
 | **401** | Die App antwortet mit einem ungültigen Token.|
 | **404** | Die Besprechung ist entweder abgelaufen, oder der Teilnehmer wurde nicht gefunden.|
-| **500** | Die Besprechung ist entweder länger als 60 Tage seit dem Ende der Besprechung abgelaufen, oder der Teilnehmer verfügt nicht über Berechtigungen basierend auf seiner Rolle.|
+| **500** | Die Besprechung ist entweder (mehr als 60 Tage) seit dem Ende der Besprechung abgelaufen, oder die Teilnehmer verfügen nicht über Berechtigungen basierend auf ihrer Rolle.|
 
 ### <a name="notificationsignal-api"></a>NotificationSignal-API
 
@@ -151,13 +172,17 @@ Alle Benutzer in einer Besprechung erhalten die über die API gesendeten `Notifi
 > * Wenn ein Dialogfeld in der Besprechung aufgerufen wird, wird der Inhalt als Chatnachricht angezeigt.
 > * Derzeit wird das Senden gezielter Benachrichtigungen nicht unterstützt.
 
-#### <a name="query-parameters"></a>Abfrageparameter
+`NotificationSignal` Mit der API können Sie Besprechungssignale bereitstellen, die mithilfe der vorhandenen Unterhaltungsbenachrichtigungs-API für den Benutzer-Bot-Chat übermittelt werden. Mit dieser API können Sie basierend auf der Benutzeraktion, die ein Dialogfeld in der Besprechung zeigt, ein Signal senden. Die API enthält Abfrageparameter, Beispiele und Antwortcodes.
+
+#### <a name="query-parameter"></a>Abfrageparameter
+
+Die `NotificationSignal` API enthält den folgenden Abfrageparameter:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**conversationId**| Zeichenfolge | Ja | Der Unterhaltungsbezeichner ist als Teil des Botaufrufs verfügbar. |
+|**conversationId**| Zeichenfolge | Ja | Der Unterhaltungsbezeichner ist als Teil von Bot Invoke verfügbar. |
 
-#### <a name="example"></a>Beispiel
+#### <a name="examples"></a>Beispiele
 
 Der `Bot ID` wird im Manifest deklariert, und der Bot empfängt ein Ergebnisobjekt.
 
@@ -165,6 +190,8 @@ Der `Bot ID` wird im Manifest deklariert, und der Bot empfängt ein Ergebnisobje
 > * Der `completionBotId` Parameter von ist im `externalResourceUrl` angeforderten Nutzlastbeispiel optional. `Bot ID` wird im Manifest deklariert, und der Bot empfängt ein Ergebnisobjekt.
 > * Die `externalResourceUrl` Parameter für Breite und Höhe müssen in Pixel angegeben werden. Um sicherzustellen, dass die Abmessungen innerhalb der zulässigen Grenzwerte liegen, finden Sie unter [Entwurfsrichtlinien](design/designing-apps-in-meetings.md).
 > * Die URL ist die Im Besprechungsdialogfeld `<iframe>` geladene Seite. Die Domäne muss sich im Array der App `validDomains` im App-Manifest befinden.
+
+Die `NotificationSignal` API enthält die folgenden Beispiele:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -215,9 +242,11 @@ POST /v3/conversations/{conversationId}/activities
 }
 ```
 
-* * *
+---
 
 #### <a name="response-codes"></a>Antwortcodes
+
+Die `NotificationSignal` API enthält die folgenden Antwortcodes:
 
 |Antwortcode|Beschreibung|
 |---|---|
@@ -226,153 +255,233 @@ POST /v3/conversations/{conversationId}/activities
 | **403** | Die App kann das Signal nicht senden. Dies kann aus verschiedenen Gründen geschehen, z. B. wenn der Mandantenadministrator die App deaktiviert, die App während der Livewebsitemigration blockiert wird und so weiter. In diesem Fall enthält die Nutzlast eine detaillierte Fehlermeldung. |
 | **404** | Der Besprechungschat ist nicht vorhanden. |
 
-## <a name="enable-your-app-for-teams-meetings"></a>Aktivieren Ihrer App für Teams Besprechungen
-
-### <a name="update-your-app-manifest"></a>Aktualisieren Des App-Manifests
-
-Die Funktionen der Besprechungs-App werden in Ihrem App-Manifest mit `configurableTabs` den Arrays , und `scopes` `context` deklariert. Scope definiert, für wen und der Kontext definiert, wo Ihre App verfügbar ist.
+### <a name="meeting-details-api"></a>Api für Besprechungsdetails
 
 > [!NOTE]
-> Versuchen Sie, Ihr App-Manifest mit dem [Manifestschema zu aktualisieren.](../resources/schema/manifest-schema-dev-preview.md)
-> Apps in Besprechungen benötigen *Gruppenchatbereich.* Der *Teambereich* funktioniert nur für Registerkarten in Kanälen.
+> Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
-```json
+Mit der Besprechungsdetails-API kann Ihre App statische Besprechungsmetadaten abrufen. Dies sind Datenpunkte, die sich nicht dynamisch ändern.
+Die API ist über Bot Services verfügbar.
 
-"configurableTabs": [
-    {
-      "configurationUrl": "https://contoso.com/teamstab/configure",
-      "canUpdateConfiguration": true,
-      "scopes": [
-        "team",
-        "groupchat"
-      ],
-      "context":[
-        "channelTab",
-        "privateChatTab",
-        "meetingChatTab",
-        "meetingDetailsTab",
-        "meetingSidePanel",
-        "meetingStage"
-     ]
-    }
-  ]
-```
-> [!NOTE]
-> `meetingStage` ist derzeit nur in der Entwicklervorschau verfügbar.
+#### <a name="query-parameter"></a>Abfrageparameter
 
-### <a name="context-property"></a>Context-Eigenschaft
+Die Besprechungsdetails-API enthält den folgenden Abfrageparameter:
 
-Mit der `context` Registerkarte und den Eigenschaften können Sie `scopes` bestimmen, wo Ihre App angezeigt werden muss. Registerkarten im `team` Bereich oder können mehrere `groupchat` Kontexte haben. Es folgen die Werte für die Eigenschaft, aus der Sie `context` alle oder einige der Werte verwenden können:
+|Wert|Typ|Erforderlich|Beschreibung|
+|---|---|----|---|
+|**meetingId**| String | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar. |
 
-|Wert|Beschreibung|
-|---|---|
-| **channelTab** | Eine Registerkarte in der Kopfzeile eines Teamkanals. |
-| **privateChatTab** | Eine Registerkarte in der Kopfzeile eines Gruppenchats zwischen einer Gruppe von Benutzern, die sich nicht im Kontext eines Teams oder einer Besprechung befindet. |
-| **meetingChatTab** | Eine Registerkarte in der Kopfzeile eines Gruppenchats zwischen einer Gruppe von Benutzern im Kontext einer geplanten Besprechung. |
-| **meetingDetailsTab** | Eine Registerkarte in der Kopfzeile der Besprechungsdetailsansicht des Kalenders. |
-| **meetingSidePanel** | Ein In-Meeting-Panel, das über die einheitliche Leiste (U-Leiste) geöffnet wird. |
-| **meetingStage** | Eine App aus der Sidepanel kann für die Besprechungsphase freigegeben werden. |
+#### <a name="example"></a>Beispiel
 
-> [!NOTE]
-> `Context` wird derzeit auf mobilen Clients nicht unterstützt.
+Die Besprechungsdetails-API enthält die folgenden Beispiele:
 
-## <a name="configure-your-app-for-meeting-scenarios"></a>Konfigurieren Ihrer App für Besprechungsszenarien
+# <a name="c"></a>[C#](#tab/dotnet)
 
-> [!NOTE]
-> * Damit Ihre App im Registerkartenkatalog angezeigt wird, muss sie konfigurierbare Registerkarten und den Gruppenchatbereich unterstützen.
-> * Mobile Clients unterstützen Registerkarten nur in Vor- und Nachbesprechungsphasen.
-> * Die Besprechungserfahrungen, die im Dialogfeld "Besprechung" und "Registerkarte" angezeigt werden, werden derzeit auf mobilen Clients nicht unterstützt. Weitere Informationen finden Sie unter [Anleitungen für Registerkarten auf mobilen](../tabs/design/tabs-mobile.md) Geräten beim Erstellen Ihrer Registerkarten für Mobilgeräte.
-
-### <a name="before-a-meeting"></a>Vor einer Besprechung
-
-Vor einer Besprechung können Benutzer Einer Besprechung Registerkarten, Bots und Messagingerweiterungen hinzufügen. Benutzer mit Organisator- und Organisatorrollen können einer Besprechung Registerkarten hinzufügen.
-
-**So fügen Sie einer Besprechung eine Registerkarte hinzu**
-
-1. Wählen Sie in Ihrem Kalender eine Besprechung aus, der Sie eine Registerkarte hinzufügen möchten.
-1. Wählen Sie die **Registerkarte Details** aus, und wählen Sie plus aus. <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. Der Registerkartenkatalog wird angezeigt.
-
-    ![Pre-Meeting-Erfahrung](../assets/images/apps-in-meetings/PreMeeting.png)
-
-1. Wählen Sie im Registerkartenkatalog die App aus, die Sie hinzufügen möchten, und führen Sie die erforderlichen Schritte aus. Die App wird als Registerkarte installiert.
-    > [!NOTE] 
-    > Derzeit wird das Abrufen von Besprechungsdetails und Teilnehmerinformationen auf der Registerkarte Besprechungen nicht unterstützt.
-
-**So fügen Sie einer Besprechung eine Messagingerweiterung hinzu**
-
-1. Wählen Sie die Ellipsen oder das Überlaufmenü &#x25CF;&#x25CF;&#x25CF; sich im Bereich Verfassen von Nachrichten im Chat befindet.
-1. Wählen Sie die App aus, die Sie hinzufügen möchten, und führen Sie die Schritte nach Bedarf aus. Die App wird als Messagingerweiterung installiert.
-
-**So fügen Sie einer Besprechung einen Bot hinzu**
-
-Geben Sie in einem Besprechungschat den **@** Schlüssel ein, und wählen **Sie Bots erhalten aus.**
-
-> [!NOTE]
-> * Die Benutzeridentität muss mithilfe von [Tabs SSO bestätigt werden.](../tabs/how-to/authentication/auth-aad-sso.md) Nach der Authentifizierung kann die App die Benutzerrolle mithilfe der `GetParticipant` API abrufen.
-> * Basierend auf der Benutzerrolle kann die App rollenspezifische Benutzeroberflächen bereitstellen. Beispielsweise ermöglicht eine Abruf-App nur Organisatoren und Organisatoren, eine neue Umfrage zu erstellen.
-> * Rollenzuweisungen können geändert werden, während eine Besprechung ausgeführt wird. Weitere Informationen finden Sie unter [Rollen in einer Teams Besprechung](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
-
-### <a name="during-a-meeting"></a>Während einer Besprechung
-
-#### <a name="sidepanel"></a>sidePanel
-
-Mit dem sidePanel können Sie die Erfahrungen in einer Besprechung anpassen, mit denen Organisatoren und Organisatoren unterschiedliche Ansichten und Aktionen ermöglichen. In Ihrem App-Manifest müssen Sie dem Kontextarray sidePanel hinzufügen. In der Besprechung und in allen Szenarien wird die App auf einer Registerkarte in der Besprechung gerendert, die 320 Pixel breit ist. Weitere Informationen finden Sie unter [FrameContext-Schnittstelle](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
-
-Informationen zur Verwendung der `userContext` API zum Entsprechend routen von Anforderungen finden Sie unter Teams [SDK](../tabs/how-to/access-teams-context.md#user-context). Weitere [Teams finden Sie unter Authentifizierungsfluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md). Der Authentifizierungsfluss für Registerkarten ähnelt dem Authentifizierungsfluss für Websites. Registerkarten können also OAuth 2.0 direkt verwenden. Siehe, [Microsoft Identity Platform und OAuth 2.0 Autorisierungscodefluss](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
-
-Die Messagingerweiterung funktioniert wie erwartet, wenn sich ein Benutzer in einer Besprechungsansicht befindet und der Benutzer Nachrichtenerweiterungskarten verfassen kann. AppName in-meeting ist eine QuickInfo, in der der App-Name in der Besprechungs-U-Leiste steht.
-
-> [!NOTE]
-> Verwenden Sie Version 1.7.0 oder höher von [Teams SDK,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)da die Versionen zuvor die Seitenleiste nicht unterstützen.
-
-#### <a name="in-meeting-dialog"></a>Dialogfeld "Besprechung"
-
-Das Dialogfeld in der Besprechung kann verwendet werden, um Teilnehmer während der Besprechung zu engagieren und Während der Besprechung Informationen oder Feedback zu sammeln. Verwenden Sie die [`NotificationSignal`](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) API, um zu signalisieren, dass eine Blasenbenachrichtigung ausgelöst werden muss. Geben Sie im Rahmen der Nutzlast der Benachrichtigungsanforderung die URL an, in der der anzuzeigende Inhalt gehostet wird.
-
-Im Besprechungsdialogfeld darf kein Aufgabenmodul verwendet werden. Das Aufgabenmodul wird in einem Besprechungschat nicht aufgerufen. Eine externe Ressourcen-URL wird zum Anzeigen von Inhaltsblasen in einer Besprechung verwendet. Sie können die Methode `submitTask` verwenden, um Daten in einem Besprechungschat zu übermitteln.
-
-> [!NOTE]
-> * Sie müssen die [submitTask()-Funktion](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) aufrufen, um automatisch zu schließen, nachdem ein Benutzer eine Aktion in der Webansicht ausgeführt hat. Dies ist eine Anforderung für die App-Übermittlung. Weitere Informationen finden Sie unter [Teams SDK Task Module](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest&preserve-view=true).
-> * Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss die Nutzlast der ursprünglichen Aufrufanforderung auf den Anforderungsmetadaten im Objekt und nicht auf den `from.id` `from` `from.aadObjectId` Anforderungsmetadaten beruhen. `from.id`ist die Benutzer-ID und `from.aadObjectId` Azure Active Directory (AAD)-ID des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
-
-#### <a name="share-to-stage"></a>Freigeben in der Phase 
-
-> [!NOTE]
-> * Diese Funktion ist derzeit nur in der Entwicklervorschau verfügbar.
-> * Um dieses Feature verwenden zu können, muss die App eine Besprechungs-Sidepanel unterstützen.
-
-
-Mit dieser Funktion können Entwickler eine App für die Besprechungsphase freigeben. Durch aktivieren der Freigabe für die Besprechungsphase können Besprechungsteilnehmer in Echtzeit zusammenarbeiten. 
-
-Der erforderliche Kontext befindet `meetingStage` sich im App-Manifest. Voraussetzung dafür ist der `meetingSidePanel` Kontext. Dadurch wird die **Schaltfläche Freigeben** im Sidepanel wie in der folgenden Abbildung depeziiert aktiviert:
-
-  ![share_to_stage_during_meeting-Erfahrung](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
-
-Die manifeste Änderung, die zum Aktivieren dieser Funktion erforderlich ist, lautet wie folgt: 
-
-```json
-
-"configurableTabs": [
-    {
-      "configurationUrl": "https://contoso.com/teamstab/configure",
-      "canUpdateConfiguration": true,
-      "scopes": [
-        "groupchat"
-      ],
-      "context":[
-        
-        "meetingSidePanel",
-        "meetingStage"
-     ]
-    }
-  ]
+```csharp
+var connectorClient = parameters.TurnContext.TurnState.Get<IConnectorClient>();
+var creds = connectorClient.Credentials as AppCredentials;
+var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
+var request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri(connectorClient.BaseUri.OriginalString), $"v1/meetings/{meetingId}"));
+request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+HttpResponseMessage response = await (connectorClient as ServiceClient<ConnectorClient>).HttpClient.SendAsync(request, CancellationToken.None).ConfigureAwait(false);
+string content;
+if (response.Content != null)
+{
+    content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+}
 ```
 
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
 
+Nicht verfügbar
 
-### <a name="after-a-meeting"></a>Nach einer Besprechung
+# <a name="json"></a>[Json](#tab/json)
 
-Die Konfigurationen nach der Besprechung und vor der Besprechung sind äquivalent.
+```http
+GET /v1/meetings/{meetingId}
+```
+
+---
+
+Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
+
+```json
+{ 
+   "details": { 
+        "id": "meeting ID", 
+        "msGraphResourceId": "", 
+        "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
+        "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
+        "joinUrl": "https://teams.microsoft.com/l/xx", 
+        "title": "All Hands", 
+        "type": "Scheduled" 
+    }, 
+    "conversation": { 
+            "isGroup": true, 
+            “conversationType”: “groupchat”, 
+            "id": "meeting chat ID" 
+    }, 
+    "organizer": { 
+        "id": "<organizer user ID>", 
+        "aadObjectId": "<AAD ID>", 
+        "tenantId": "<Tenant ID>" 
+    }
+} 
+```
+
+## <a name="real-time-teams-meeting-events"></a>Echtzeit-Teams Besprechungsereignisse
+
+> [!NOTE]
+> Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
+
+Der Benutzer kann Besprechungsereignisse in Echtzeit empfangen. Sobald eine App einer Besprechung zugeordnet ist, werden der tatsächliche Beginn und die Endzeit der Besprechung für den Bot freigegeben.
+
+Die tatsächliche Start- und Endzeit einer Besprechung unterscheiden sich von der geplanten Start- und Endzeit. Die Besprechungsdetails-API stellt die geplante Start- und Endzeit bereit, während das Ereignis die tatsächliche Start- und Endzeit liefert.
+
+### <a name="example-of-meeting-start-event-payload"></a>Beispiel für die Nutzlast des Besprechungsstartereigniss
+
+Der folgende Code enthält ein Beispiel für die Nutzlast des Besprechungsstartereigniss:
+
+```json
+{ 
+    "name": "Microsoft/MeetingStart", 
+    "type": "event", 
+    "timestamp": "2021-04-29T16:10:41.1252256Z", 
+    "id": "123", 
+    "channelId": "msteams", 
+    "serviceUrl": "https://microsoft.com", 
+    "from": { 
+        "id": "userID", 
+        "name": "", 
+        "aadObjectId": "aadOnjectId" 
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "tenantId": "tenantId", 
+        "id": "thread id" 
+    }, 
+    "recipient": { 
+        "id": "user Id", 
+        "name": "user name" 
+    }, 
+    "entities": [ 
+        { 
+            "locale": "en-US", 
+            "country": "US", 
+            "type": "clientInfo" 
+        } 
+    ], 
+    "channelData": { 
+        "tenant": { 
+            "id": "channel id" 
+        }, 
+        "source": null, 
+        "meeting": { 
+            "id": "meeting id" 
+        } 
+    }, 
+    "value": { 
+        "MeetingType": "Scheduled", 
+        "Title": "Meeting Start/End Event", 
+        "Id":"meeting id", 
+        "JoinUrl": "url" 
+        "StartTime": "2021-04-29T16:17:17.4388966Z" 
+    }, 
+    "locale": "en-US" 
+}
+```
+
+### <a name="example-of-meeting-end-event-payload"></a>Beispiel für die Nutzlast des Besprechungsendereigniss
+
+Der folgende Code enthält ein Beispiel für die Nutzlast des Besprechungsendereigniss:
+
+```json
+{ 
+    "name": "Microsoft/MeetingEnd", 
+    "type": "event", 
+    "timestamp": "2021-04-29T16:17:17.4388966Z", 
+    "id": "123", 
+    "channelId": "msteams", 
+    "serviceUrl": "https://microsoft.com", 
+    "from": { 
+        "id": "user id", 
+        "name": "", 
+        "aadObjectId": "aadObjectId" 
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "tenantId": "tenantId", 
+        "id": "thread id" 
+    }, 
+    "recipient": { 
+        "id": "user id", 
+        "name": "user name" 
+    }, 
+    "entities": [ 
+        { 
+            "locale": "en-US", 
+            "country": "US", 
+            "type": "clientInfo" 
+        } 
+    ], 
+    "channelData": { 
+        "tenant": { 
+            "id": "channel id" 
+        }, 
+        "source": null, 
+        "meeting": { 
+            "id": "meeting Id" 
+        } 
+    }, 
+    "value": { 
+        "MeetingType": "Scheduled", 
+        "Title": "Meeting Start/End Event in Canary", 
+        "Id": "19:meeting_NTM3ZDJjOTUtZGRhOS00MzYxLTk5NDAtMzY4M2IzZWFjZGE1@thread.v2", 
+        "JoinUrl": "url", 
+        "EndTime": "2021-04-29T16:17:17.4388966Z" 
+    }, 
+    "locale": "en-US" 
+}
+```
+
+### <a name="example-of-getting-metadata-of-a-meeting"></a>Beispiel für das Abrufen von Metadaten einer Besprechung
+
+Ihr Bot empfängt das Ereignis über den `OnEventActivityAsync` Handler.
+
+Zum Deserialisieren der json-Nutzlast wird ein Modellobjekt eingeführt, um die Metadaten einer Besprechung zu erhalten. Die Metadaten einer Besprechung befinden sich in der `value` Eigenschaft in der Ereignisnutzlast. Das `MeetingStartEndEventvalue` Modellobjekt wird erstellt, dessen Membervariablen den Schlüsseln unter der `value` Eigenschaft in der Ereignisnutzlast entsprechen.
+
+Der folgende Code zeigt, wie Sie die Metadaten einer Besprechung erfassen, die , , , ist, und von einem `MeetingType` `Title` `Id` Besprechungsanfangs- und `JoinUrl` `StartTime` `EndTime` -endereignis:
+
+```csharp
+protected override async Task OnEventActivityAsync(
+ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+    // Event Name is either `Microsoft/MeetingStart` or `Microsoft/MeetingEnd`
+    var meetingEventName = turnContext.Activity.Name;
+    // Value contains meeting information (ex: meeting type, start time, etc).
+    var meetingEventInfo = turnContext.Activity.Value as JObject; 
+    var meetingEventInfoObject =
+meetingEventInfo.ToObject<MeetingStartEndEventValue>();
+    // Create a very simple adaptive card with meeting information
+var attachmentCard = createMeetingStartOrEndEventAttachment(meetingEventName,
+meetingEventInfoObject);
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(attachmentCard));
+}
+```
+
+MeetingStartEndEventvalue.cs enthält den folgenden Code:
+
+```csharp
+public class MeetingStartEndEventValue
+{
+    public string Id { get; set; }
+    public string Title { get; set; }
+    public string MeetingType { get; set; }
+    public string JoinUrl { get; set; }
+    public string StartTime { get; set; }
+    public string EndTime { get; set; }
+}
+```
 
 ## <a name="code-sample"></a>Codebeispiel
 
@@ -380,9 +489,15 @@ Die Konfigurationen nach der Besprechung und vor der Besprechung sind äquivalen
 |----------------|-----------------|--------------|--------------|
 | Erweiterbarkeit von Besprechungen | Microsoft Teams Beispiel für die Besprechungsergehnbarkeit zum Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Besprechungsinhaltsblasen-Bot | Microsoft Teams beispiel für die Besprechungsergehnbarkeit für die Interaktion mit dem Inhaltsblasenbot in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Meeting SidePanel | Microsoft Teams beispiel für die Besprechungsergehnbarkeit für die Iteracting mit dem Seitenbereich in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |
+| Meeting meetingSidePanel | Microsoft Teams beispiel für die Besprechungsergehnbarkeit für die Interaktion mit dem Seitenbereich in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | |
 
-## <a name="see-also"></a>Sehen Sie ebenfalls
+## <a name="see-also"></a>Siehe auch
 
 * [Entwurfsrichtlinien für Besprechungsdialogdialog](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams Authentifizierungsfluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Apps für Teams Besprechungen](teams-apps-in-meetings.md)
+
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen](enable-and-configure-your-app-for-teams-meetings.md)
