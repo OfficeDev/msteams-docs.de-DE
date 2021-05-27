@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie Ihre App in einem Microsoft Teams. Das Querla
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: 39e94317ceb615ecd7d5481276ffafed5afe5cde
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a54068ffd57a5d622cad72267c049cee69b18d58
+ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565193"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "52684649"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Hochladen Ihrer App in Microsoft Teams
 
