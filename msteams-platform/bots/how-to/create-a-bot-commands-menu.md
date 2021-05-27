@@ -5,23 +5,28 @@ description: Erstellen eines Befehlsmenüs für ihren Microsoft Teams Bot
 ms.topic: how-to
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: da87725fca6b4eeacd43f48f6946920251d772e9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f89c564a2843aaee010774e6b262a96ce4d6530f
+ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020912"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52668837"
 ---
 # <a name="bot-command-menus"></a>Bot-Befehlsmenüs
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-> [!Note]
-> Botmenüs werden auf mobilen Clients nicht angezeigt.
-
 Um eine Reihe von Kernbefehlen zu definieren, auf die Ihr Bot reagieren kann, können Sie ein Befehlsmenü mit einer Dropdownliste mit Befehlen für Ihren Bot hinzufügen. Die Liste der Befehle wird den Benutzern im Bereich Verfassen von Nachrichten angezeigt, wenn sie mit Ihrem Bot in Unterhaltung sind. Wählen Sie einen Befehl aus der Liste aus, um die Befehlszeichenfolge in das Meldungsfeld verfassen ein, und wählen Sie **Senden aus.**
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 ![Befehlsmenü "Bot"](./conversations/media/bot-menu-sample.png)
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+![Befehlsmenü für mobile Bots](./conversations/media/mobile-bot-menu-sample.png)
+
+* * *
 
 ## <a name="create-a-command-menu-for-your-bot"></a>Erstellen eines Befehlsmenüs für Ihren Bot
 

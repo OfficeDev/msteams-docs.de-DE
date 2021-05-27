@@ -5,12 +5,12 @@ description: Erstellen Sie schnell Microsoft Teams App, die ein "Hello, World!" 
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 861b6921d7a2092a746ea7dc1399f8aaa523e207
-ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
+ms.openlocfilehash: 6a9c7e008e2fb6d77c3314286b09d006bd468c37
+ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646782"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52667454"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Erstellen und Ausführen der ersten Microsoft Teams app mit Blazor
 
@@ -18,7 +18,7 @@ In diesem Lernprogramm erstellen Sie eine neue Microsoft Teams-App in .NET/Blazo
 
 Die app, die erstellt wird, zeigt grundlegende Benutzerinformationen für den aktuellen Benutzer an.  Wenn die Berechtigung erteilt wird, stellt die App eine Verbindung mit dem Microsoft Graph als aktueller Benutzer, um das vollständige Profil zu erhalten.
 
-## <a name="before-you-begin"></a>Bevor Sie beginnen:
+## <a name="before-you-begin"></a>Bevor Sie loslegen
 
 Stellen Sie sicher, dass Ihre Entwicklungsumgebung eingerichtet ist, indem Sie die [erforderlichen Komponenten installieren.](prerequisites.md)
 
@@ -53,10 +53,10 @@ Verwenden Sie das Teams Toolkit, um Ihr erstes Projekt zu erstellen:
 1. Führen `dotnet new -i` Sie aus, um die Vorlage von NuGet:
 
    ``` bash
-   dotnet new -i Microsoft.TeamsApp.Blazor
+   dotnet new --install Microsoft.TeamsFx.VisualStudio.ProjectTemplates::0.1.43-beta
    ```
 
-   Sie müssen dies nur beim ersten Mal oder beim Aktualisieren der Vorlage tun.
+   Sie müssen dies nur beim ersten Mal oder beim Aktualisieren der Vorlage tun. Überprüfen [NuGet](https://www.nuget.org/packages/Microsoft.TeamsFx.VisualStudio.ProjectTemplates/) die neueste Version dieses Pakets.
 
 1. Erstellen eines Verzeichnisses:
 

@@ -6,19 +6,20 @@
     - name: Was ist neu?
       href: whats-new.md
 - name: Erste Schritte
+  expanded: true
   items:
-    - name: Übersicht
-      href: build-your-first-app/build-first-app-overview.md
-    - name: 'Erstellen Sie eine "Hallo, Welt!" Anwendung'
-      href: build-your-first-app/build-and-run.md
-    - name: Erstellen einer einfachen persönlichen Registerkarte
-      href: build-your-first-app/build-personal-tab.md
-    - name: Erstellen Sie Ihre erste Kanal- und Gruppen-Registerkarte
-      href: build-your-first-app/build-channel-tab.md
-    - name: Erstellen Sie Ihren ersten Bot
-      href: build-your-first-app/build-bot.md
-    - name: Erstellen Sie Ihre erste Messaging-Erweiterung
-      href: build-your-first-app/build-messaging-extension.md
+    - name: Voraussetzungen
+      href: get-started/prerequisites.md
+    - name: Erstellen einer persönlichen App (React)
+      href: get-started/first-app-react.md
+    - name: Erstellen einer persönlichen App (Blazor)
+      href: get-started/first-app-blazor.md
+    - name: Erstellen einer persönlichen App (SPFx)
+      href: get-started/first-app-spfx.md
+    - name: Erstellen eines Unterhaltungs-Bots
+      href: get-started/first-app-bot.md
+    - name: Erstellen einer Messaging-Erweiterung
+      href: get-started/first-message-extension.md
 - name: Lernprogramme und Codebeispiele
   items:
     - name: Lernprogramme
@@ -191,10 +192,22 @@
   items:
     - name: Übersicht
       href: tabs/what-are-tabs.md
-    - name: Aufgeklappte Registerkartenverknüpfung und Phasenansicht
-      href: tabs/tabs-link-unfurling.md
-    - name: Registerkartenanforderungen
-      href: tabs/how-to/tab-requirements.md
+    - name: Erstellen einer Registerkarte
+      items:
+        - name: Registerkartenanforderungen
+          href: tabs/how-to/tab-requirements.md
+        - name: Erstellen einer Inhaltsseite
+          href: tabs/how-to/create-tab-pages/content-page.md
+        - name: Erstellen einer Konfigurationsseite
+          href: tabs/how-to/create-tab-pages/configuration-page.md
+        - name: Erstellen einer Seite zum Entfernen
+          href: tabs/how-to/create-tab-pages/removal-page.md
+        - name: Kontext für Ihre Registerkarte erhalten
+          href: tabs/how-to/access-teams-context.md
+        - name: Erstellen von Registerkarten mit adaptiven Karten
+          href: tabs/how-to/build-adaptive-card-tabs.md
+        - name: Aufgeklappte Registerkartenverknüpfung und Phasenansicht
+          href: tabs/tabs-link-unfurling.md
     - name: Schnellstarts
       items:
         - name: Persönliche Registerkarte mit Node.js
@@ -209,16 +222,6 @@
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
         - name: Kanalregisterkarte mit C#/ASP.NET Core MVC
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-    - name: Erstellen einer Inhaltsseite
-      href: tabs/how-to/create-tab-pages/content-page.md
-    - name: Erstellen einer Konfigurationsseite
-      href: tabs/how-to/create-tab-pages/configuration-page.md
-    - name: Erstellen einer Seite zum Entfernen
-      href: tabs/how-to/create-tab-pages/removal-page.md
-    - name: Registerkarten auf mobilen Geräten
-      href: tabs/design/tabs-mobile.md
-    - name: Kontext für Ihre Registerkarte erhalten
-      href: tabs/how-to/access-teams-context.md
 - name: Erstellen von Bots
   items:
     - name: Übersicht
@@ -298,8 +301,14 @@
   items:
     - name: Übersicht
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: Erstellen einer App für Besprechungen
+    - name: Erweiterbarkeit der Besprechungs-App
+      href: apps-in-teams-meetings/meeting-app-extensibility.md
+    - name: Voraussetzungen und API-Verweise für Apps in Teams-Besprechungen
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+    - name: Aktivieren und Konfigurieren von Apps für Besprechungen
+      href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+    - name: Zusammen-Modus in Teams
+      href: apps-in-teams-meetings/teams-together-mode.md
 - name: Erstellen von Webhooks und Connectors
   items:
     - name: Übersicht

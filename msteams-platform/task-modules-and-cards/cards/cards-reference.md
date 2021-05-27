@@ -4,16 +4,16 @@ description: Beschreibt alle Karten und Kartenaktionen, die Bots in der Teams
 localization_priority: Normal
 keywords: Bots-Kartenreferenz
 ms.topic: reference
-ms.openlocfilehash: cab7f1659759f40beb1aba59531ee6c1a84662c1
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d3f0904326f951475c8a0d3e17daf720d9aad489
+ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566859"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52668862"
 ---
 # <a name="cards-reference"></a>Karten-Referenz
 
-Die in diesem Dokument aufgeführten Karten werden in Bots für Microsoft Teams. Sie basieren auf Karten, die vom Bot Framework definiert wurden, aber Teams unterstützt nicht alle Bot Framework-Karten, sondern einige Teams hinzugefügt wurden. Unterschiede werden in den Verweisen in diesem Dokument aufgerufen.
+Die in diesem Dokument aufgeführten Karten werden in Bots für Microsoft Teams. Sie basieren auf Karten, die vom Bot Framework (BF) definiert wurden, aber Teams unterstützt nicht alle Bot Framework-Karten, sondern einige Teams hinzugefügt wurden. Unterschiede werden in den Verweisen in diesem Dokument aufgerufen.
 
 ## <a name="card-examples"></a>Kartenbeispiele
 
@@ -55,7 +55,7 @@ Bilder müssen mindestens 1024×1024 im PNG-, JPEG- oder GIF-Format vorliegen un
 | Eigenschaft | Typ  | Beschreibung |
 | --- | --- | --- |
 | url | URL | HTTPS-URL zum Bild. |
-| alt | String | Barrierefreie Beschreibung des Bilds. |
+| alt | Zeichenfolge | Barrierefreie Beschreibung des Bilds. |
 
 > [!NOTE]
 > Wenn eine Karte eine Bild-URL enthält, die eine Umleitung vor dem endgültigen Bild durchgeht, wird die Umleitung in der Bild-URL nicht unterstützt. Dies tritt für Bilder auf, die in der öffentlichen Cloud freigegeben werden.

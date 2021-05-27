@@ -5,19 +5,19 @@ keywords: Erste Schritte für Entwicklerportalteams
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 5f3335470a442fc8a3c94e9563e21fea75c4ef4b
-ms.sourcegitcommit: c55b0d2a4c1f8945e49b0b7c0b08c0eb3da3d2be
+ms.openlocfilehash: 950ca7e09f5b87647cb62b66a545a0b1cec33a7d
+ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646333"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52667443"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Verwalten Sie Ihre Apps mit dem Entwicklerportal für Microsoft Teams
 
 > [!NOTE]
 > Das Entwicklerportal für Teams befindet sich derzeit in [der öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md).
 
-Das Entwicklerportal für Teams ist das primäre Tool zum Konfigurieren, Verteilen und Verwalten Microsoft Teams Apps. Mit dem Entwicklerportal können Sie mit Kollegen in Ihrer App zusammenarbeiten, Laufzeitumgebungen einrichten und vieles mehr.
+Das <a href="https://dev.teams.microsoft.com" target="_blank">Entwicklerportal für Teams</a> ist das primäre Tool zum Konfigurieren, Verteilen und Verwalten Microsoft Teams Apps. Mit dem Entwicklerportal können Sie mit Kollegen in Ihrer App zusammenarbeiten, Laufzeitumgebungen einrichten und vieles mehr.
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot der Startseite des Entwicklerportals für Teams.":::
 

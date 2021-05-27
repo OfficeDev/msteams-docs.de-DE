@@ -4,16 +4,44 @@ description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: Teams, was neu ist
-ms.openlocfilehash: 50f8f9f24285a6678e34a97732992c3051b8e0a9
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: eb7252a8f3a48049de098c50b26f087df70e5b20
+ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651719"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52668855"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neues für Entwickler in Microsoft Teams
 
-Entdecken Microsoft Teams plattformfeatures, die allgemein verfügbar sind (GA) und in der Entwicklervorschau.
+Entdecken Microsoft Teams Plattformfeatures, die in Microsoft Build 2021, allgemein verfügbar (GA) und in der Entwicklervorschau eingeführt werden.
+
+## <a name="microsoft-build-2021"></a>Microsoft Build 2021
+
+# <a name="features-in-developer-preview"></a>[Features in der Entwicklervorschau](#tab/devpreview)
+
+| **Date** | **Features** | **Geänderte Themen** |
+| -------- | --------- | ------------------ |
+|05/26/2021| Erstellen von Registerkarten mit adaptiven Karten. |[Registerkarten erstellen](tabs/how-to/build-adaptive-card-tabs.md)|
+|05/25/2021| Das Teams Toolkit für [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) und [Visual Studio aktualisiert.](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview) | [Erste Schritte mit Teams App-Entwicklung](~/get-started/prerequisites.md) |
+|05/25/2021| Besprechungsdetails-API und Echtzeit-Teams Besprechungsereignisse. | [Apps für Teams-Besprechungen erstellen](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
+|05/25/2021| Neues Entwicklerportal für Teams für die Verwaltung Ihrer Teams eingeführt. | [Entwicklerportal für Teams](concepts/build-and-test/teams-developer-portal.md) |
+|05/25/2021| Das Feature "Gemeinsamer Modus" kombiniert Teilnehmer in einer einzelnen virtuellen Szene und platziert ihre Videostreams an vordefinierten Plätzen. | [Modus "Zusammen"](~/apps-in-teams-meetings/teams-together-mode.md) |
+|05/24/2021| Bots können aktiviert werden, um alle Kanalnachrichten mithilfe der ressourcenspezifischen Zustimmung (RSC) zu empfangen.|[Empfangen aller Nachrichten mit RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md) [Botunterhaltungsübersicht,](~/bots/how-to/conversations/conversation-basics.md) [Kanal-](~/bots/how-to/conversations/channel-and-group-conversations.md)und Gruppenunterhaltungen und [Entwicklervorschaumanifestschema](~/resources/schema/manifest-schema-dev-preview.md) |
+|05/21/2021| Registerkarten verknüpfen das Ausflinken und die Stage-Ansicht. |[Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
+
+> [!NOTE]
+> Weitere Informationen zu features available in developer preview finden Sie unter [Public Developer Preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
+
+# <a name="features-in-ga"></a>[Features in GA](#tab/GA)
+
+| **Date** | **Features** | **Geänderte Themen** |
+| -------- | --------- | ------------------ |
+|04/29/2021 | Universelle Aktionen für adaptive Karten. | [Universal-Aktionen für adaptive Karten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/08/2021| App-Anpassung.|[Übersicht über die Entwurfsteams-App,](concepts/design/enable-app-customization.md) [Übersicht über App Studio](concepts/build-and-test/app-studio-overview.md#connectors)und [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
+|03/29/2021 | Formatieren von Karten in Teams. | [Formatieren von Karten in Teams](task-modules-and-cards/cards/cards-format.md) |
+|02/19/2021|Standortfunktionen hinzugefügt. <br/> Informationen zu Standortfunktionen werden in der Übersicht über die Gerätefunktionen, systemeigene Geräteberechtigungen, Integrieren von Medienfunktionen und QR- oder Barcodescannerfunktionen hinzugefügt.|[Übersicht,](concepts/device-capabilities/device-capabilities-overview.md) [Geräteberechtigungen anfordern,](concepts/device-capabilities/native-device-permissions.md) [Medienfunktionen integrieren,](concepts/device-capabilities/mobile-camera-image-permissions.md) [QR- oder Strichcodescannerfunktion](concepts/device-capabilities/qr-barcode-scanner-capability.md)integrieren, [Standortfunktionen integrieren](concepts/device-capabilities/location-capability.md) |
+
+---
 
 ## <a name="ga-features"></a>Ga-Features
 
@@ -33,11 +61,11 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 |05/10/2021| Neue App-Anpassungsfunktion.| [Aktivieren von Organisationen zum Anpassen Ihrer App](concepts/design/enable-app-customization.md) |
 |05/07/2021| Tiefe Links für Audio- und Videoanrufe im Chat. |[Deep-Links](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|Neue Anleitung zum Veröffentlichen von Apps im Teams Store.|[Veröffentlichen Ihrer App im Teams Store](concepts/deploy-and-publish/appsource/publish.md), Teams Richtlinien für die [Storeüberprüfung](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
-|04/29/2021 | Neu: Universelle Aktionen für adaptive Karten. | [Universal-Aktionen für adaptive Karten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/08/2021| Die App-Anpassungsfunktion ist jetzt in der Entwicklervorschau verfügbar.|[Übersicht über die Entwurfsteams-App,](concepts/design/enable-app-customization.md) [Übersicht über App Studio](concepts/build-and-test/app-studio-overview.md#connectors)und [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
+|04/29/2021 | Universelle Aktionen für adaptive Karten. | [Universal-Aktionen für adaptive Karten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/08/2021| App-Anpassungsfeature.|[Übersicht über die Entwurfsteams-App,](concepts/design/enable-app-customization.md) [Übersicht über App Studio](concepts/build-and-test/app-studio-overview.md#connectors)und [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|Hinweis: Aktualisieren Sie auf Version 4.10 oder höher des Bot Framework SDK, wie wir mit dem Veraltetkeitsprozess für `TeamsInfo.getMembers` und begonnen `TeamsInfo.GetMembersAsync` haben. | [Bot API-Änderungen für Team-/Chatmitglieder](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Hinweis: Registerkarten haben keine Ränder mehr um ihre Erfahrungen. Registerkartenentwickler sollten ihre Apps überprüfen und aktualisieren. | [Entfernen von Registerkartenrändern](resources/removing-tab-margins.md) |
-|03/05/2021|Der Standardinstallationsbereich und die Gruppenfunktion werden in der Entwicklervorschau angezeigt.| [Standardinstallationsbereich und Gruppenfunktion](concepts/deploy-and-publish/add-default-install-scope.md) |
+|03/05/2021|Standardinstallationsbereich und Gruppenfunktion.| [Standardinstallationsbereich und Gruppenfunktion](concepts/deploy-and-publish/add-default-install-scope.md) |
 |03/05/2021|Ordnen Sie persönliche App-Registerkarten neu an.|[Neu anordnen der Registerkarte Chat in persönlichen Apps](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
 |03/04/2021|Informationsmasken in adaptiven Karten.| [Informationsmasken in adaptiven Karten](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|Standortfunktionen hinzugefügt. <br/> Informationen zu Standortfunktionen werden in der Übersicht über die Gerätefunktionen, systemeigene Geräteberechtigungen, Integrieren von Medienfunktionen und QR- oder Barcodescannerfunktionen hinzugefügt.|[Übersicht,](concepts/device-capabilities/device-capabilities-overview.md) [Geräteberechtigungen anfordern,](concepts/device-capabilities/native-device-permissions.md) [Medienfunktionen integrieren,](concepts/device-capabilities/mobile-camera-image-permissions.md) [QR- oder Strichcodescannerfunktion](concepts/device-capabilities/qr-barcode-scanner-capability.md)integrieren, [Standortfunktionen integrieren](concepts/device-capabilities/location-capability.md) |
@@ -105,7 +133,7 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 | 05/06/2019 | Anwendungszertifizierungsprogramm für Store-Apps. | [Anwendungszertifizierung](~/concepts/deploy-and-publish/appsource/post-publish/overview.md#complete-microsoft-365-certification) |
 | 05/06/2019 | App-Vorlagen sind jetzt verfügbar. | [App-Vorlagen](~/samples/app-templates.md) |
 | 04/23/2019 | Aktionsbasierte Messagingerweiterungen sind jetzt verfügbar. | [Aktionsbasierte Nachrichtenerweiterungen](~/concepts/messaging-extensions/create-extensions.md) |
-| 02/18/2019 | Das Erstellen von tiefen Links zu privaten Chats ist nicht in der Entwicklervorschau verfügbar. | [Tiefe Verknüpfung mit einem Chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 02/18/2019 | Erstellen von tiefen Links zu privaten Chats. | [Tiefe Verknüpfung mit einem Chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | Anzeigen von SKU- und licenceType-Informationen im Registerkartenkontext. | [Registerkartenkontext](~/concepts/tabs/tabs-context.md) |
 
 <br>
@@ -120,7 +148,7 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
-| 12.11.2018 | Registerkarten im Gruppenchat sind jetzt in der veröffentlichten Version von Teams verfügbar und wurden aus der Entwicklervorschau verschoben. Im Rahmen dieser Arbeit wurde der Abschnitt Registerkarten aus Gründen der Übersichtlichkeit überarbeitet.| [Konfigurierbare Registerkarten](~/concepts/tabs/tabs-configurable.md) |
+| 12.11.2018 | Registerkarten im Gruppenchat sind jetzt in der veröffentlichten Version von Teams. Im Rahmen dieser Arbeit wurde der Abschnitt Registerkarten aus Gründen der Übersichtlichkeit überarbeitet.| [Konfigurierbare Registerkarten](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | Die ersten Schritte für Knoten JS und für .NET/C# wurden aktualisiert, um App Studio in Teams zu verwenden, und ein neuer Abschnitt wurde zum Hosten von Node-basierten Teams-Apps in Azure hinzugefügt. | Erste Schritte auf der [Microsoft Teams-Plattform mit C#/.NET und App Studio](~/get-started/get-started-dotnet-app-studio.md), Erste Schritte auf der Microsoft Teams-Plattform mit Node [JS und App Studio](~/get-started/get-started-nodejs-app-studio.md), Hosten Ihrer Node [Teams-App in Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | Sie können jetzt tiefe Links zu privaten Chats zwischen Benutzern erstellen. | [Tiefe Verknüpfung mit einem Chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 08.11.2018 | SharePoint-Framework 1.7 ist im Lieferumfang und damit ein neues Feature zur Verwendung Microsoft Teams Registerkarte als SharePoint-Framework web part. | [Registerkarten in SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
@@ -130,7 +158,7 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 | 09/11/2018 | Registerkartenkonfigurationsseiten sind jetzt deutlich höher. | [Tabdesign](tabs/design/tabs.md) |
 | 08/15/2018 | Adaptive Karten werden jetzt in der Teams.|[Adaptive Kartenaktionen in Teams](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
 | 08/10/2018 | Clientunterstützung für DevTools.| [DevTools für den Microsoft Teams-Desktopclient](~/resources/dev-preview/developer-preview-tools.md)|
-| 08/08/2018 | Messagingerweiterungen unterstützen jetzt mehrere Befehle. Dieses Feature wurde in Developer Preview und ist jetzt für alle Benutzer freigegeben.| [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
+| 08/08/2018 | Messagingerweiterungen unterstützen jetzt mehrere Befehle. | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
 | 08/07/2018 | Die Inlinekonfiguration wird jetzt in Connectors unterstützt. Die Connectors-Dokumentation wurde ebenfalls überarbeitet und aus Gründen der Übersichtlichkeit erweitert.| [Connectors](~/concepts/connectors/connectors.md)|
 | 08/06/2018 | Ihr Bot kann jetzt Dateien senden und empfangen.| [Senden und Empfangen von Dateien über Ihren Bot](~/bots/how-to/bots-filesv4.md)|
 | 07/23/2018 | Informationen zur Erneuten Zertifizierung von Apps wurden dem Abschnitt Veröffentlichung hinzugefügt. |[Manifestberechtigungen](resources/schema/manifest-schema.md#permissions)|
@@ -159,6 +187,7 @@ Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff auf
 
 | **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
+|05/26/2021|Erstellen von Registerkarten mit adaptiven Karten|[Registerkarten erstellen](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Das Teams Toolkit für [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) und [Visual Studio aktualisiert.](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview) | [Erste Schritte mit Teams App-Entwicklung](~/get-started/prerequisites.md) |
 |05/25/2021| Besprechungsdetails-API und Echtzeit-Teams Besprechungsereignisse | [Apps für Teams-Besprechungen erstellen](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| Neues Entwicklerportal für Teams für die Verwaltung Ihrer Teams eingeführt. | [Entwicklerportal für Teams](concepts/build-and-test/teams-developer-portal.md) |
