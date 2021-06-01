@@ -4,12 +4,12 @@ description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: Teams, was neu ist
-ms.openlocfilehash: eb7252a8f3a48049de098c50b26f087df70e5b20
-ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
+ms.openlocfilehash: 89cd0a0bd7d19aaaab1b40a4976b265b9aa04b5d
+ms.sourcegitcommit: 118f7261d313feeac5b398fef56a44bd90104b2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52668855"
+ms.lasthandoff: 05/31/2021
+ms.locfileid: "52709635"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neues für Entwickler in Microsoft Teams
 
@@ -55,8 +55,9 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
-|05/24/2021|Die Teams app-Entwurfsrichtlinien mit mobilen Mustern und mehr aktualisiert.|[Entwerfen Ihrer Teams App](~/concepts/design/design-teams-app-overview.md)
-|05/13/2021|Informationen zu mConnect und Skooler hinzugefügt.|[Lernverwaltungssystem für Das Lernen von Moodle](resources/moodle-overview.md)
+|05/31/2021| Registerkarten für Unterhaltungen | [Starten und Fortsetzen von Unterhaltungen zu Inhalten auf Ihren Registerkarten](~/tabs/how-to/conversational-tabs.md) |
+|05/24/2021| Die Teams app-Entwurfsrichtlinien mit mobilen Mustern und mehr aktualisiert.|[Entwerfen Ihrer Teams App](~/concepts/design/design-teams-app-overview.md)
+|05/13/2021| Informationen zu mConnect und Skooler hinzugefügt.|[Lernverwaltungssystem für Das Lernen von Moodle](resources/moodle-overview.md)
 |05/10/2021| Manifest v1.10 wird veröffentlicht.|[Manifestschema](resources/schema/manifest-schema.md) |
 |05/10/2021| Neue App-Anpassungsfunktion.| [Aktivieren von Organisationen zum Anpassen Ihrer App](concepts/design/enable-app-customization.md) |
 |05/07/2021| Tiefe Links für Audio- und Videoanrufe im Chat. |[Deep-Links](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
@@ -91,11 +92,11 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 |09/22/2020|Neue Informationen zum Einstieg in Teams Entwicklung.|[Erstellen der ersten Teams-App](build-your-first-app/build-first-app-overview.md)|
 |09/18/2020|Unterstützung für Besprechungs-Teams (Release Preview).|[Erstellen von Apps für Teams und](apps-in-teams-meetings/create-apps-for-teams-meetings.md) Apps in Teams [Besprechungen](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |08/19/2020|Importieren Teams Nachrichten mit Microsoft Graph.|[Plattform-Nachrichten von Drittanbietern mithilfe von Microsoft Graph in Teams importieren](graph-api/import-messages/import-external-messages-to-teams.md)
-| 08/12/2020 |Unterstützung für adaptive Karten im eingehenden Webhook, der zu GA verschoben wurde.|[Senden von adaptiven Karten mithilfe eines eingehenden Webhooks](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
+|08/12/2020 |Unterstützung für adaptive Karten im eingehenden Webhook, der zu GA verschoben wurde.|[Senden von adaptiven Karten mithilfe eines eingehenden Webhooks](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|Erste Schritte beim Erstellen Teams Apps mit dem Visual Studio Toolkit.|[Erstellen von Apps mit dem Microsoft Teams Toolkit und Visual Studio Code](toolkit/visual-studio-overview.md) |
 |08/06/2020|Unterstützung für die Tabs-SSO-Authentifizierung.|[Entwickeln einer SSO-Microsoft Teams Registerkarte](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Graph proaktive Bots und Nachrichten (Public Preview).|[Aktivieren einer proaktiven Botinstallation und proaktivem Messaging in Teams microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
-| 07/22/2020 |Updates für mobile Gerätefunktionen.|[Anfordern von Geräteberechtigungen für Microsoft Teams Registerkarte](concepts/device-capabilities/native-device-permissions.md) |
+|07/22/2020 |Updates für mobile Gerätefunktionen.|[Anfordern von Geräteberechtigungen für Microsoft Teams Registerkarte](concepts/device-capabilities/native-device-permissions.md) |
 |07/20/2020|Teams App Validation Tool für AppSource-Übermittlungen.|[Teams App-Validierungstool](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |07/15/2020|Erstellen Sie einen virtuellen Assistenten für Teams.|[Virtueller Assistent für Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|In einer dokumentation zu systemeigenen Ladeanzeigen.|[Anzeigen eines systemeigenen Ladeindikators](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
@@ -104,7 +105,7 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 |06/05/2020| Manifestschema auf Version 1.7 aktualisiert.| [Referenz: Manifestschema für Microsoft Teams](resources/schema/manifest-schema.md)|
 |05/18/2020|Integrieren Power Virtual Agents in Teams.|[Integrieren eines Power Virtual Agents Chatbots in Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
 |04/01/2020|Integrieren von WFM-Systemen mit Shifts Connector für Teams.|[Microsoft Teams Verschiebt WFM-Connectors](samples/shifts-wfm-connectors.md)
-| 03/24/2020 | Unterstützung für das Abrufen eines einzelnen Mitglieds einer Unterhaltung und zusätzliche Unterstützung für das Abrufen von seitenseitigen Mitgliedern hinzugefügt. | [Teams-Kontext für Ihren Bot erhalten](~/bots/how-to/get-teams-context.md) |
+|03/24/2020 | Unterstützung für das Abrufen eines einzelnen Mitglieds einer Unterhaltung und zusätzliche Unterstützung für das Abrufen von seitenseitigen Mitgliedern hinzugefügt. | [Teams-Kontext für Ihren Bot erhalten](~/bots/how-to/get-teams-context.md) |
 
 <br>
 

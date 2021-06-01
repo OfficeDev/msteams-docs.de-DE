@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams veröffentlichen Store Office Publishing AppSource-Lokalisierungssprache
 ms.date: 05/15/2018
-ms.openlocfilehash: a55b8af97e5306843858e5844a017dd402ab3516
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 6dbdeb6d16c99aada23f8d74a92d958f9c29b69d
+ms.sourcegitcommit: 118f7261d313feeac5b398fef56a44bd90104b2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566047"
+ms.lasthandoff: 05/31/2021
+ms.locfileid: "52709628"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Lokalisierung für Microsoft Teams Apps
 
@@ -137,8 +137,8 @@ Wenn Sie lokalisierte Versionen Ihrer Anwendung bereitstellen, ist es sehr wahrs
 
 ## <a name="code-sample"></a>Codebeispiel
 
-| Beispielname | Beschreibung | .NET |
-|-------------|-------------|------|
-| App-Lokalisierung | Microsoft Teams-App-Lokalisierung mithilfe von Bot und Registerkarte. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+| Beispielname | Beschreibung | .NET | Node.js |
+|-------------|-------------|------|------|
+| App-Lokalisierung | Microsoft Teams-App-Lokalisierung mithilfe von Bot und Registerkarte. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
 
