@@ -5,16 +5,17 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Teams-Manifestschema
-ms.openlocfilehash: 6c7cd02480f78d19aed269b5d78d0c6f470621d2
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d8427d23ba2caa73cecd173f6d1ef0d041252b3b
+ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566446"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "52710627"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
 Das Teams beschreibt, wie die App in das Microsoft Teams integriert wird. Ihr Manifest muss dem schema entsprechen, das unter gehostet [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) wird. Frühere Versionen 1.0, 1.1,..., 1.6 und so weiter werden ebenfalls unterstützt (unter Verwendung von "v1.x" in der URL).
+Weitere Informationen zu den in den einzelnen Versionen vorgenommenen Änderungen finden Sie unter [Manifeständerungsprotokoll](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen:
 
@@ -422,7 +423,7 @@ Wird verwendet, wenn Ihre App über eine Registerkartenerfahrung im Teamkanal ve
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 Zeichen|✔|Die https:// URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die `team` Bereiche `groupchat` und. |
-|`canUpdateConfiguration`|boolean|||Ein Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: **true**.|
+|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: **true**.|
 |`context` |Array von Enumerationen|6 ||Der Satz von `contextItem` Bereich, in [dem eine Registerkarte unterstützt wird.](../../tabs/how-to/access-teams-context.md) Standard: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|Zeichenfolge|2048||Ein relativer Dateipfad zu einem Registerkartenvorschaubild zur Verwendung in SharePoint. Größe 1024 x 768. |
 |`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in der SharePoint. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
@@ -461,11 +462,11 @@ Das Element ist ein Array (maximal 1 Element ist derzeit nur ein Bot pro App zul
 |---|---|---|---|---|
 |`botId`|string|64 Zeichen|✔|Die eindeutige Microsoft-App-ID für den Bot, wie bei Bot Framework registriert. Dies kann mit der allgemeinen [App-ID identisch sein.](#id)|
 |`scopes`|Array von Enumerationen|3|✔|Gibt an, ob der Bot eine Umgebung im Kontext eines Kanals in einem `team` oder Gruppenchat (`groupchat`) ist, oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`). Diese Optionen sind nicht exklusiv.|
-|`needsChannelSelector`|boolean|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
-|`isNotificationOnly`|boolean|||Gibt an, ob ein Bot ein unidirektionaler Bot ausschließlich für Benachrichtigungen ist (im Gegensatz zu einem dialogorientierten Bot). Standard: **`false`**|
-|`supportsFiles`|boolean|||Gibt an, ob der Bot die Möglichkeit zum Hochladen/Herunterladen von Dateien in persönliche Chats unterstützt. Standard: **`false`**|
-|`supportsCalling`|boolean|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG**: Diese Eigenschaft ist derzeit experimentell. Experimentelle Eigenschaften sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie vollständig verfügbar werden.  Es wird nur zu Test- und Explorationszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
-|`supportsVideo`|boolean|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG**: Diese Eigenschaft ist derzeit experimentell. Experimentelle Eigenschaften sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie vollständig verfügbar werden.  Es wird nur zu Test- und Explorationszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
+|`needsChannelSelector`|Boolescher Wert|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
+|`isNotificationOnly`|Boolescher Wert|||Gibt an, ob ein Bot ein unidirektionaler Bot ausschließlich für Benachrichtigungen ist (im Gegensatz zu einem dialogorientierten Bot). Standard: **`false`**|
+|`supportsFiles`|Boolescher Wert|||Gibt an, ob der Bot die Möglichkeit zum Hochladen/Herunterladen von Dateien in persönliche Chats unterstützt. Standard: **`false`**|
+|`supportsCalling`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG**: Diese Eigenschaft ist derzeit experimentell. Experimentelle Eigenschaften sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie vollständig verfügbar werden.  Es wird nur zu Test- und Explorationszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
+|`supportsVideo`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG**: Diese Eigenschaft ist derzeit experimentell. Experimentelle Eigenschaften sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie vollständig verfügbar werden.  Es wird nur zu Test- und Explorationszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -512,7 +513,7 @@ Das Element ist ein Array (maximal 1 Element) mit allen Elementen vom Typ `objec
 |---|---|---|---|---|
 |`botId`|string|64|✔|Die eindeutige Microsoft-App-ID für den Bot, der die Messagingerweiterung unterstützt, wie beim Bot Framework registriert. Dies kann mit der allgemeinen App-ID identisch sein.|
 |`commands`|Array von Objekten|10|✔|Array von Befehlen, die von der Messagingerweiterung unterstützt werden.|
-|`canUpdateConfiguration`|boolean|||Ein Wert, der angibt, ob die Konfiguration einer Messagingerweiterung vom Benutzer aktualisiert werden kann. Standard: **False**.|
+|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob die Konfiguration einer Messagingerweiterung vom Benutzer aktualisiert werden kann. Standard: **False**.|
 |`messageHandlers`|Array von Objekten|5 ||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind.|
 |`messageHandlers.type`|Zeichenfolge|||Der Typ des Nachrichtenhandlers. Muss `"link"` sein.|
 |`messageHandlers.value.domains`|Array von Zeichenfolgen|||Array von Domänen, für die der Linknachrichtenhandler registrieren kann.|
@@ -529,9 +530,9 @@ Jedes Befehlselement ist ein Objekt mit der folgenden Struktur:
 |`title`|Zeichenfolge|32 Zeichen|✔|Der benutzerfreundliche Befehlsname.|
 |`type`|Zeichenfolge|64 Zeichen||Typ des Befehls. Einer oder `query` `action` . Standard: **Abfrage**.|
 |`description`|Zeichenfolge|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
-|`initialRun`|boolean|||Ein boolescher Wert gibt an, ob der Befehl anfangs ohne Parameter ausgeführt wird. Der Standardwert ist **false**.|
+|`initialRun`|Boolescher Wert|||Ein boolescher Wert gibt an, ob der Befehl anfangs ohne Parameter ausgeführt wird. Der Standardwert ist **false**.|
 |`context`|Array von Zeichenfolgen|3||Definiert, von wo aus die Nachrichtenerweiterung aufgerufen werden kann. Beliebige Kombination aus `compose` , `commandBox` , `message` . Der Standardwert ist `["compose","commandBox"]`.|
-|`fetchTask`|boolean|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden muss. Der Standardwert ist **false**.|
+|`fetchTask`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden muss. Der Standardwert ist **false**.|
 |`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das beim Verwenden eines Befehls für die Messagingerweiterung vor dem Laden geladen werden soll.|
 |`taskInfo.title`|Zeichenfolge|64 Zeichen||Titel des ersten Dialogfelds.|
 |`taskInfo.width`|Zeichenfolge|||Dialogbreite – entweder eine Zahl in Pixel oder ein Standardlayout wie "groß", "mittel" oder "klein".|

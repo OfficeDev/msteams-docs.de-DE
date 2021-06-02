@@ -5,12 +5,12 @@ description: Beschreibt, wie sie auf die Aktion zum Übermitteln des Aufgabenmod
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 3ed682eadde410a545f73768943a51ef95123e49
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ae5171f45974e7977a45775facf6360d34a84f87
+ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019832"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "52710641"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Reagieren auf die Absendenaktion des Aufgabenmoduls
 
@@ -26,7 +26,7 @@ Sie haben die folgenden Optionen, um zu antworten:
 * [Kartenantwort:](#respond-with-a-card-inserted-into-the-compose-message-area)Sie können mit einer Karte antworten, mit der der Benutzer interagieren oder in eine Nachricht einfügen kann.
 * [Adaptive Karte vom Bot:](#bot-response-with-adaptive-card)Fügen Sie eine adaptive Karte direkt in die Unterhaltung ein.
 * [Fordern Sie den Benutzer zur Authentifizierung an.](~/messaging-extensions/how-to/add-authentication.md)
-* [Fordern Sie den Benutzer auf, eine zusätzliche Konfiguration zur Verfügung zu stellen.](~/messaging-extensions/how-to/add-configuration-page.md)
+* [Fordern Sie den Benutzer auf, eine zusätzliche Konfiguration zur Verfügung zu stellen]~/get-started/first-message-extension.md).
 
 Für die Authentifizierung oder Konfiguration wird nach Abschluss des Vorgangs der ursprüngliche Aufruf an Den Webdienst erneut senden. Die folgende Tabelle zeigt, welche Arten von Antworten basierend auf dem Aufrufspeicherort der `commandContext` Messagingerweiterung verfügbar sind: 
 
@@ -587,9 +587,9 @@ Der folgende Abschnitt enthält eine Beschreibung der Entitäten im `OnBehalfOf`
 |Feld|Typ|Beschreibung|
 |:---|:---|:---|
 |`itemId`|Ganze Zahl|Beschreibt die Identifikation des Elements. Der Wert muss `0` sein.|
-|`mentionType`|Zeichenfolge|Beschreibt die Erwähnung einer "Person".|
-|`mri`|Zeichenfolge|MrI (Message Resource Identifier) der Person, in deren Auftrag die Nachricht gesendet wird. Der Name des Absenders der Nachricht würde als " bis " \<user\> \<bot name\> angezeigt.|
-|`displayName`|Zeichenfolge|Name der Person. Wird als Fallback verwendet, wenn die Namensauflösung nicht verfügbar ist.|
+|`mentionType`|String|Beschreibt die Erwähnung einer "Person".|
+|`mri`|String|MrI (Message Resource Identifier) der Person, in deren Auftrag die Nachricht gesendet wird. Der Name des Absenders der Nachricht würde als " bis " \<user\> \<bot name\> angezeigt.|
+|`displayName`|String|Name der Person. Wird als Fallback verwendet, wenn die Namensauflösung nicht verfügbar ist.|
   
 ## <a name="code-sample"></a>Codebeispiel
 
