@@ -1,18 +1,18 @@
 ---
-title: Entwerfen Ihrer Registerkarte für Desktop und Web
-description: Erfahren Sie, wie Sie Teams Registerkarte (Desktop und Web) entwerfen und das Microsoft Teams UI Kit erhalten.
+title: Entwerfen von Registerkarten für Desktop, Web und Mobile
+description: Erfahren Sie, wie Sie Teams Registerkarte für Desktop, Web und Mobile entwerfen und das Microsoft Teams UI Kit erhalten.
 author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 38eb7e400de63beb0d2840ee573bbfd16299cfbd
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: f1823a064cd182d0271aa97bef58ec724c7819b3
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644713"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721843"
 ---
-# <a name="designing-your-tab-for-microsoft-teams"></a>Entwerfen Ihrer Registerkarte für Microsoft Teams
+# <a name="design-your-tab-for-microsoft-teams"></a>Entwerfen Ihrer Registerkarte für Microsoft Teams
 
 Eine Registerkarte ist ein großer Canvas für Ihre App-Inhalte. Um Ihr App-Design zu leiten, wird in den folgenden Informationen beschrieben und veranschaulicht, wie Benutzer Registerkarten hinzufügen, verwenden und verwalten Teams.
 
@@ -74,7 +74,7 @@ Sie können einen Schritt hinzufügen, in dem sich Benutzer zuerst mit ihren Mic
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Beispiel zeigt einen Registerkartenauthentifizierungsbildschirm." border="false":::
 
-### <a name="designing-a-tab-setup-with-ui-templates"></a>Entwerfen einer Registerkarteneinrichtung mit Benutzeroberflächenvorlagen
+### <a name="design-a-tab-setup-with-ui-templates"></a>Entwerfen einer Registerkarteneinrichtung mit Benutzeroberflächenvorlagen
 
 Verwenden Sie eine der folgenden Teams- und Benutzeroberflächenvorlagen, um beim Entwerfen der Registerkarteneinrichtung zu helfen:
 
@@ -166,7 +166,7 @@ Benutzer können neben den angezeigten Registerkarteninhalten eine Unterhaltung 
 
 ### <a name="permissions-and-role-based-views"></a>Berechtigungen und rollenbasierte Ansichten
 
-Die Registerkartenerfahrung kann für Benutzer je nach ihren Berechtigungen unterschiedlich sein. Beispielsweise kann ein Benutzer auf die Registerkarte zugreifen, ohne sich anmelden zu müssen. Ein anderer Benutzer muss sich jedoch signieren und sieht leicht andere Inhalte.
+Die Registerkartenerfahrung kann für Benutzer je nach ihren Berechtigungen unterschiedlich sein. Beispielsweise kann ein Benutzer auf die Registerkarte zugreifen, ohne sich anmelden zu müssen. Ein anderer Benutzer muss sich jedoch anmelden und etwas andere Inhalte sehen.
 
 ## <a name="manage-a-tab"></a>Verwalten einer Registerkarte
 

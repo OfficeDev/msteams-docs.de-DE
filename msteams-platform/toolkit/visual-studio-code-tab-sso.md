@@ -5,14 +5,19 @@ keywords: Registerkarten des visual studio code toolkits sso graph authenticatio
 localization_priority: Normal
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: b2ba9eb27d00f07ec46ddfe0c1cc13ed0864bbbc
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 2ef409a45b92240cced09d2d77793af33945589e
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630992"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721815"
 ---
 # <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>Einmalige Anmeldung mit Teams Toolkit und Visual Studio Code für Registerkarten
+
+> [!IMPORTANT]
+> **Dieses Dokument bezieht sich auf eine alte Version von Teams Toolkit**
+>
+> Wenn Sie aktuelle Informationen erhalten, lesen Sie [die](../get-started/prerequisites.md) Voraussetzungen, und folgen Sie einem der neueren Lernprogramme.
 
 Mit Microsoft Teams Toolkit können Sie die einmalige Anmeldung (Single Sign-On, SSO)-Authentifizierung für Registerkarten-Apps direkt innerhalb Visual Studio Code. Das Toolkit führt Sie durch den Prozess und bietet alles, was Sie benötigen, einschließlich der Bereitstellung Microsoft Identity Platform Registrierung im Azure-Portal.
 
@@ -48,6 +53,6 @@ Wenn Sie mehr darüber erfahren möchten, wie Ihre Azure-App-Registrierung berei
 > [!TIP]
 > Möglicherweise wird der Dialog zur App-Installation im Browser nicht angezeigt, wenn Popupfenster für Ihren Browser deaktiviert sind. Aktivieren Sie in diesem Fall Popupfenster, und aktualisieren Sie die Seite.
 
-## <a name="see-also"></a>Sehen Sie ebenfalls
+## <a name="see-also"></a>Siehe auch
 
 [Erstellen von Apps mit dem Microsoft Teams Toolkit und Visual Studio Code](visual-studio-code-overview.md)

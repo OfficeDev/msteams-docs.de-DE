@@ -3,14 +3,14 @@ title: Erste Schritte – Erstellen Ihrer ersten Microsoft Teams-App mit React
 author: adrianhall
 description: Erstellen Sie mithilfe von Microsoft Teams-Toolkit und React schnell eine Microsoft Teams-App, die die Meldung "Hallo, Welt!" anzeigt.
 ms.author: adhal
-ms.date: 05/18/2021
+ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 4560e332834fec7b681a6b2babf3e881b5e472f7
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
-ms.translationtype: HT
+ms.openlocfilehash: 8c6a957dc01cfaac0f8463166a6647d6b18babed
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "52698139"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721836"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>Erstellen und Ausführen Ihrer ersten Microsoft Teams-App mit React
 
@@ -124,8 +124,6 @@ Das Microsoft Teams-Toolkit ermöglicht es Ihnen, Ihre App lokal auszuführen.  
 
 Sobald dies erfolgt ist, kann die App im Microsoft Teams-Client geladen werden.  Wir verwenden den Microsoft Teams-Webclient, um den HTML-, CSS- und JavaScript-Code in einer standardmäßigen Webentwicklungsumgebung anzuzeigen.
 
-[!INCLUDE [Adjust your browser launch settings](~/includes/get-started/browser-private-launch.md)]
-
 ### <a name="build-and-run-your-app-locally-in-visual-studio-code"></a>Erstellen und lokales Ausführen der App in Visual Studio Code
 
 So erstellen Sie Ihre App und führen sie lokal aus:
@@ -138,7 +136,7 @@ So erstellen Sie Ihre App und führen sie lokal aus:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot mit Dialogfenster zum Installieren eines SSL-Zertifikats, damit Microsoft Teams Ihre Anwendung von localhost laden kann.":::
 
-1. Ihr Webbrowser wird gestartet, um die Anwendung auszuführen. Wenn Sie zum Öffnen von Microsoft Teams aufgefordert werden, wählen Sie „Abbrechen“ aus, um im Browser zu verbleiben. Wählen Sie bei der entsprechenden Aufforderung **Stattdessen die Web-App verwenden** aus.
+1. Ihr Webbrowser startet mit der Ausführung der App. Wenn Sie aufgefordert werden, Teams desktop zu öffnen, wählen **Sie Abbrechen** aus, um im Browser zu verbleiben. Sie werden möglicherweise auch aufgefordert, zu anderen Teams zu wechseln. wählen Sie Teams Web-App aus, wenn dies geschieht.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot, der zeigt, wie die Web-Version von Microsoft Teams beim Start ausgewählt wird.":::
 
