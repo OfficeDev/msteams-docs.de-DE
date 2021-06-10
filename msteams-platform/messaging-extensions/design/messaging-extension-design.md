@@ -126,8 +126,17 @@ Nach dem Hinzufügen können Benutzer das Symbol **Mehr** in der Chatnachricht o
 :::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-chat-post.png" alt-text="Beispiel zeigt, wie Sie eine Messagingerweiterung über einen Chatbeitrag auf Mobilgeräten öffnen." border="false":::
 
 ---
-':::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
-':::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
+
+#### Channel post
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
+
 ---
 
 ## <a name="use-a-messaging-extension"></a><span data-ttu-id="3c853-165">Verwenden einer Messagingerweiterung</span><span class="sxs-lookup"><span data-stu-id="3c853-165">Use a messaging extension</span></span>
