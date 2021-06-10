@@ -1,25 +1,25 @@
 ---
 title: Benutzerspezifische Ansichten
-description: Beispiel für benutzerspezifische Ansichten mithilfe universeller Aktionen
+description: Beispiel für benutzerspezifische Ansichten mit universellen Aktionen
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: cadf66082582cfd9009a0497b3eb5e58f0a2ef02
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
+ms.openlocfilehash: c24697b300d07ed53a172df162d0d3851361f579
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649628"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853515"
 ---
 # <a name="user-specific-views"></a>Benutzerspezifische Ansichten
 
-Wenn adaptive Karten in einer Teams gesendet wurden, sehen alle Benutzer den exakt gleichen Karteninhalt. Mit der Einführung des Universellen Aktionsmodells und für adaptive Karten können Botentwickler benutzern nun benutzerspezifische Ansichten `refresh` adaptiver Karten bereitstellen. Dieselbe adaptive Karte kann jetzt auf eine benutzerspezifische adaptive Karte aktualisiert werden.
+Wenn adaptive Karten zuvor in einer Teams Unterhaltung gesendet wurden, sehen alle Benutzer genau den gleichen Karteninhalt. Mit der Einführung des Modells für universelle Aktionen und `refresh` für adaptive Karten können Botentwickler Benutzern jetzt benutzerspezifische Ansichten adaptiver Karten bereitstellen. Dieselbe adaptive Karte kann jetzt auf eine benutzerspezifische adaptive Karte aktualisiert werden. Maximal 60 verschiedene Benutzer können eine andere Version der Karte mit zusätzlichen Informationen oder Aktionen sehen. Dies bietet leistungsstarke Szenarien wie Genehmigungen, Steuerelemente für Umfrageersteller, Ticketing, Vorfallverwaltung und Projektverwaltungskarten.
 
-Beispielsweise möchte Megan, ein Sicherheitsinspektor bei Contoso, einen Vorfall erstellen und alex zuweisen. Außerdem möchte sie, dass jeder im Team über den Vorfall informiert ist. Megan verwendet die Nachrichtenerweiterung contoso incident reporting powered by Universal Actions for Adaptive Cards.
+Megan, ein Sicherheitsinspektor bei Contoso, möchte beispielsweise einen Vorfall erstellen und Alex zuweisen. Außerdem möchte sie, dass jeder im Team über den Vorfall informiert wird. Megan verwendet die Nachrichtenerweiterung "Contoso Incident Reporting", die von universellen Aktionen für adaptive Karten unterstützt wird.
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
-:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Benutzerspezifische Ansichten für mobile Benutzer":::
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Benutzerspezifische Ansichten mobiler Benutzer":::
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
@@ -60,16 +60,16 @@ Der folgende Code enthält ein Beispiel für adaptive Karten:
 }
 ```
 
-**Aktualisieren Sie benutzerspezifische Ansichten, und rufen Sie Anforderungen an den Bot auf, um adaptive Karten zu senden**
+**Um adaptive Karten zu senden, aktualisieren Sie benutzerspezifische Ansichten, und rufen Sie Anforderungen an den Bot auf.**
 
-1. Wenn Megan einen neuen Vorfall erstellt, sendet der Bot die adaptive Karte oder eine gemeinsame Karte mit Vorfalldetails in der Teams Unterhaltung.
-2. Jetzt wird diese Karte automatisch auf benutzerspezifische Ansicht für Megan und Alex aktualisiert. Die Benutzer-MRIs von Alex und Megan werden in eigenschaft der Eigenschaft der `userIds` `refresh` adaptiven Karten-JSON hinzugefügt. Die Karte bleibt für andere Benutzer in der Unterhaltung gleich.
-3. Für Megan löst die automatische Aktualisierung eine `adaptiveCard/action` Aufrufanforderung an den Bot aus. Der Bot kann eine Vorfallerstellerkarte mit `Edit` Schaltfläche als Antwort auf diese Aufrufanforderung zurückgeben.
-4. Ähnlich wie bei Alex löst die automatische Aktualisierung eine weitere `adaptiveCard/action` Aufrufanforderung an den Bot aus. Der Bot kann eine Karte des Vorfallsbesitzers als `Resolve` Antwort auf diese Aufrufanforderung zurückgeben.
+1. Wenn Megan einen neuen Vorfall erstellt, sendet der Bot die adaptive Karte oder allgemeine Karte mit Vorfalldetails in der Teams Unterhaltung.
+2. Jetzt wird diese Karte automatisch auf die benutzerspezifische Ansicht für Megan und Alex aktualisiert. Alex und Megans Benutzer-MRIs werden als `userIds` Eigenschaft der Adaptive Card JSON `refresh` hinzugefügt. Die Karte bleibt für andere Benutzer in der Unterhaltung gleich.
+3. Bei Megan löst die automatische Aktualisierung eine `adaptiveCard/action` Aufrufanforderung an den Bot aus. Der Bot kann eine Vorfallerstellerkarte mit `Edit` schaltfläche als Antwort auf diese Aufrufanforderung zurückgeben.
+4. Auf ähnliche Weise löst die automatische Aktualisierung für Alex eine weitere `adaptiveCard/action` Aufrufanforderung an den Bot aus. Der Bot kann eine `Resolve` Vorfallbesitzer-Kartenschaltfläche als Antwort auf diese Aufrufanforderung zurückgeben.
 
-## <a name="invoke-request-sent-from-teams-client-to-the-bot"></a>Aufrufen der Anforderung, die vom Teams an den Bot gesendet wird
+## <a name="invoke-request-sent-from-teams-client-to-the-bot"></a>Aufrufen einer Anforderung, die vom Teams-Client an den Bot gesendet wurde
 
-Der folgende Code enthält ein Beispiel für eine Aufrufanforderung, die von Alex' und Megans Teams an den Bot gesendet wird:
+Der folgende Code enthält ein Beispiel für eine Aufrufanforderung, die vom Teams-Client von Alex und Megan an den Bot gesendet wird:
 
 ```JSON
 { 
@@ -92,9 +92,9 @@ Der folgende Code enthält ein Beispiel für eine Aufrufanforderung, die von Ale
 }
 ```
 
-## <a name="adaptivecardaction-invoke-response-card"></a>adaptiveCard/action invoke response card
+## <a name="adaptivecardaction-invoke-response-card"></a>adaptiveCard/Aktionsaufrufantwortkarte
 
-Der folgende Code enthält ein Beispiel für eine adaptiveCard/Action-Aufrufantwortkarte für Megan:
+Der folgende Code enthält ein Beispiel für eine AdaptiveCard/Aktionsaufforderungsantwortkarte für Megan:
 
 ```JSON
 {
@@ -134,9 +134,9 @@ Der folgende Code enthält ein Beispiel für eine adaptiveCard/Action-Aufrufantw
 }
 ```
 
-## <a name="adaptivecardaction-invoke-response-card-for-alex"></a>adaptiveCard/action invoke response card for Alex
+## <a name="adaptivecardaction-invoke-response-card-for-alex"></a>adaptiveCard/Aktion ruft Antwortkarte für Alex auf
 
-Der folgende Code enthält ein Beispiel für eine adaptiveCard/Action-Aufrufantwortkarte für Alex:
+Der folgende Code enthält ein Beispiel für eine AdaptiveCard/Aktionsaufforderungsantwortkarte für Alex:
 
 ```JSON
 {
@@ -178,7 +178,7 @@ Der folgende Code enthält ein Beispiel für eine adaptiveCard/Action-Aufrufantw
 
 ## <a name="invoke-response-to-return-adaptive-cards"></a>Aufrufen der Antwort zum Zurückgeben adaptiver Karten
 
-Der folgende Code enthält ein Beispiel für eine Aufrufantwort zum Zurückgeben adaptiver Karten:
+Der folgende Code enthält ein Beispiel für eine Aufrufantwort, um adaptive Karten zurückzugeben:
 
 ```C#
 string cardJson = "<adaptive card json>";
@@ -192,11 +192,13 @@ var adaptiveCardResponse = JObject.FromObject(new
  });
 ```
 
-Richtlinien für den Kartenentwurf, die beim Entwerfen benutzerspezifischer Ansichten zu berücksichtigen sind:
+Richtlinien für den Kartenentwurf, die Sie beim Entwerfen benutzerspezifischer Ansichten beachten sollten:
 
-* Sie können maximal **60 benutzerspezifische** Ansichten für eine bestimmte Karte erstellen, die an einen Chat oder Kanal gesendet werden, indem Sie sie `userIds` im Abschnitt `refresh` angeben.
-* **Basiskarte:** Die Basisversion der Karte, die der Botentwickler an den Chat sendet. Dies ist die Version der adaptiven Karte für alle Benutzer, die nicht im Abschnitt angegeben `userIds` sind.
-* Ein Nachrichtenupdate oder -bearbeiten kann verwendet werden, um die Basiskarte zu aktualisieren und gleichzeitig die benutzerspezifische Karte zu aktualisieren.
+* Sie können maximal **60 benutzerspezifische Ansichten** für eine bestimmte Karte erstellen, die an einen Chat oder Kanal gesendet wird, indem Sie diese `userIds` im Abschnitt `refresh` angeben.
+* **Basiskarte:** Die Basisversion der Karte, die der Bot-Entwickler an den Chat sendet. Dies ist die Version der adaptiven Karte für alle Benutzer, die nicht im Abschnitt angegeben `userIds` sind.
+* Eine Nachrichtenaktualisierung kann verwendet werden, um die Basiskarte zu aktualisieren und gleichzeitig die benutzerspezifische Karte zu aktualisieren. Beim Öffnen des Chats oder Kanals wird auch die Karte für Benutzer mit aktivierter Aktualisierung aktualisiert.
+* Für Szenarien mit größeren Gruppen, in denen Benutzer zu einer Aktionsansicht wechseln, die dynamische Updates für Antwortende benötigt, können Sie bis zu 60 Benutzer zur `userIds` Liste hinzufügen. Sie können den Ersten Antwortenden aus der Liste entfernen, wenn der 61. Benutzer antwortet. Für die Benutzer, die aus der Liste entfernt `userIds` werden, können Sie eine manuelle Aktualisierungsschaltfläche bereitstellen oder die Schaltfläche "Aktualisieren" im Menü "Nachrichtenoptionen" verwenden, um das neueste Ergebnis zu erhalten.
+* Geben Sie Benutzern eine Eingabeaufforderung, um eine benutzerspezifische Ansicht zu erhalten, in der nur eine bestimmte Ansicht der Karte oder einige Aktionen angezeigt werden.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -4,12 +4,12 @@ description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: 'Teams: Neuigkeiten'
-ms.openlocfilehash: d053c9c6d41788014ee0a1f252b0b65e1a30ecb8
-ms.sourcegitcommit: 45c66faef8145abb903ef7118b9fa914c12aba2a
+ms.openlocfilehash: 297e86925d4facfc0982ea67ce9b61e48adeb4d8
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "52736768"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853522"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -23,7 +23,6 @@ Entdecken Sie Microsoft Teams Plattformfeatures, die in Microsoft Build 2021, al
 | -------- | --------- | ------------------ |
 |05/26/2021| Erstellen sie Registerkarten mit adaptiven Karten. |[Registerkarten erstellen](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Teams Toolkit für [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) und [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)aktualisiert. | [Erste Schritte mit Teams App-Entwicklung](~/get-started/prerequisites.md) |
-|05/25/2021| Besprechungsdetails-API und Echtzeit-Teams Besprechungsereignisse. | [Apps für Teams-Besprechungen erstellen](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| Das neue Entwicklerportal für Teams für die Verwaltung Ihrer Teams-Apps eingeführt. | [Entwicklerportal für Teams](concepts/build-and-test/teams-developer-portal.md) |
 |05/25/2021| Das Feature "Zusammen-Modus" kombiniert Teilnehmer in einer einzelnen virtuellen Szene und platziert ihre Videostreams auf vordefinierten Arbeitsplätzen. | [Together-Modus](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021| Bots können aktiviert werden, um alle Kanalnachrichten mithilfe der ressourcenspezifischen Zustimmung (RSC) zu empfangen.|[Empfangen aller Nachrichten mit RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md) [Bot-Unterhaltungsübersicht,](~/bots/how-to/conversations/conversation-basics.md) [Kanal- und Gruppenunterhaltungen](~/bots/how-to/conversations/channel-and-group-conversations.md)und [Entwicklervorschau-Manifestschema](~/resources/schema/manifest-schema-dev-preview.md) |
@@ -91,11 +90,11 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
-|11/30/2020|Identitätsplattformintegration mit Teams Toolkit und Visual Studio Code für Registerkarten.|[Single Sign-On-Authentifizierung mit Teams Toolkit und Visual Studio Code für Registerkarten](toolkit/visual-studio-code-tab-sso.md)|
+|11/30/2020|Identitätsplattformintegration in Teams Toolkit und Visual Studio Code für Registerkarten.|[Single Sign-On-Authentifizierung mit Teams Toolkit und Visual Studio Code für Registerkarten](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams App-Manifest auf Version 1.8 aktualisiert.|[Referenz: Manifestschema für Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/10/2020|Teams Bot-Entwurfsrichtlinien.|[Entwurfsrichtlinien für Bots](bots/design/bots.md)|
 |09/30/2020|Das Senden und Empfangen von Dateien an Bots auf mobilen Geräten wird jetzt unterstützt.|[Senden und Empfangen von Dateien über Ihren Bot](resources/bot-v3/bots-files.md)|
-|09/22/2020|Neue Informationen für die ersten Schritte mit Teams Entwicklung.|[Erstellen Ihrer ersten Teams-App-Übersicht](build-your-first-app/build-first-app-overview.md)|
+|09/22/2020|Neue Informationen für die ersten Schritte mit Teams Entwicklung.|[Erstellen Ihrer ersten Teams App-Übersicht](build-your-first-app/build-first-app-overview.md)|
 |09/18/2020|Unterstützung für In-Meeting-Teams-Apps (Release Preview).|[Erstellen von Apps für Teams Besprechungen](apps-in-teams-meetings/create-apps-for-teams-meetings.md) und [Apps in Teams Besprechungen](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |08/19/2020|Importieren sie Teams Nachrichten mit Microsoft Graph.|[Plattform-Nachrichten von Drittanbietern mithilfe von Microsoft Graph in Teams importieren](graph-api/import-messages/import-external-messages-to-teams.md)
 |08/12/2020 |Unterstützung adaptiver Karten für eingehende Webhooks, die auf GA verschoben wurden.|[Senden von adaptiven Karten mithilfe eines eingehenden Webhooks](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
@@ -110,7 +109,7 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 |07/01/2020|Einmaliges Anmelden für Registerkarten GA für Teams Web- und Desktopclients.|[Single Sign-On (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| Das Manifestschema wurde auf Version 1.7 aktualisiert.| [Referenz: Manifestschema für Microsoft Teams](resources/schema/manifest-schema.md)|
 |05/18/2020|Integrieren sie Power Virtual Agents in Teams.|[Integrieren eines Power Virtual Agents Chatbots in Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
-|04/01/2020|Integrieren Sie WFM-Systeme mit shifts Connector für Teams.|[Microsoft Teams Schichten von WFM-Connectors](samples/shifts-wfm-connectors.md)
+|04/01/2020|Integrieren Sie WFM-Systeme in den Schichten-Connector für Teams.|[Microsoft Teams Schichten von WFM-Connectors](samples/shifts-wfm-connectors.md)
 |03/24/2020 | Unterstützung für das Abrufen eines einzelnen Elements einer Unterhaltung und zusätzliche Unterstützung für das Abrufen von seitenseitigen Mitgliedern hinzugefügt. | [Teams-Kontext für Ihren Bot erhalten](~/bots/how-to/get-teams-context.md) |
 
 <br>
@@ -156,12 +155,12 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 | **Date** | **Notizen** | **Geänderte Themen** |
 | -------- | --------- | ------------------ |
 | 12.11.2018 | Registerkarten im Gruppenchat sind jetzt in der veröffentlichten Version von Teams verfügbar. Im Rahmen dieser Arbeit wurde der Abschnitt "Registerkarten" aus Gründen der Übersichtlichkeit überarbeitet.| [Konfigurierbare Registerkarten](~/concepts/tabs/tabs-configurable.md) |
-| 11/11/2018 | Erste Schritte für Node JS und .NET/C# wurden aktualisiert, um App Studio in Teams zu verwenden, und ein neuer Abschnitt zum Hosten von Node-basierten Teams-Apps in Azure wurde hinzugefügt. | [Erste Schritte mit der Microsoft Teams-Plattform mit C#/.NET und App Studio,](~/get-started/get-started-dotnet-app-studio.md) [erste Schritte mit der Microsoft Teams-Plattform mit Node JS und App Studio,](~/get-started/get-started-nodejs-app-studio.md) [Hosten Ihrer Node Teams-App in Azure](~/get-started/get-started-nodejs-in-azure.md)|
+| 11/11/2018 | Erste Schritte für Node JS und .NET/C# wurden aktualisiert, um App Studio in Teams zu verwenden, und ein neuer Abschnitt zum Hosten von Node-basierten Teams Apps in Azure wurde hinzugefügt. | [Erste Schritte mit der Microsoft Teams-Plattform mit C#/.NET und App Studio,](~/get-started/get-started-dotnet-app-studio.md) [erste Schritte mit der Microsoft Teams-Plattform mit Node JS und App Studio,](~/get-started/get-started-nodejs-app-studio.md) [Hosten Ihrer Node Teams-App in Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | Sie können jetzt Deep-Links zu privaten Chats zwischen Benutzern erstellen. | [Deep-Links zu einem Chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
-| 08.11.2018 | SharePoint-Framework 1.7 wurde ausgeliefert und enthält ein neues Feature, mit dem Microsoft Teams Registerkarte als SharePoint-Framework-Webpart verwendet werden kann. | [Registerkarten in SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
-| 11/05/2018 | Das **Aufgabenmodulfeature** wurde veröffentlicht. Mit einem Aufgabenmodul können Sie modale Popupfunktionen in Ihrer Teams-Anwendung erstellen, sowohl von Bots als auch von Registerkarten. Innerhalb des Popups können Sie Ihren eigenen benutzerdefinierten HTML-/JavaScript-Code ausführen, ein `<iframe>` -basiertes Widget wie ein YouTube- oder Microsoft Stream-Video anzeigen oder eine [adaptive Karte](/adaptive-cards/)anzeigen. | [Aufgabenmodul (Übersicht),](~/concepts/task-modules/task-modules-overview.md) [Aufgabenmodul in Registerkarten,](~/concepts/task-modules/task-modules-tabs.md)  [Aufgabenmodul in Bots](~/concepts/task-modules/task-modules-bots.md) |
+| 08.11.2018 | SharePoint-Framework 1.7 wurde ausgeliefert und enthält ein neues Feature, das Microsoft Teams Registerkarte als SharePoint-Framework-Webpart verwendet. | [Registerkarten in SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
+| 11/05/2018 | Das **Aufgabenmodulfeature** wurde veröffentlicht. Mit einem Aufgabenmodul können Sie modale Popup-Oberflächen in Ihrer Teams-Anwendung erstellen, sowohl aus Bots als auch aus Registerkarten. Innerhalb des Popups können Sie Ihren eigenen benutzerdefinierten HTML-/JavaScript-Code ausführen, ein `<iframe>` -basiertes Widget wie ein YouTube- oder Microsoft Stream-Video anzeigen oder eine [adaptive Karte](/adaptive-cards/)anzeigen. | [Aufgabenmodul (Übersicht),](~/concepts/task-modules/task-modules-overview.md) [Aufgabenmodul in Registerkarten,](~/concepts/task-modules/task-modules-tabs.md)  [Aufgabenmodul in Bots](~/concepts/task-modules/task-modules-bots.md) |
 | 10/05/2018 | Formatierungsinformationen für Karten wurden auf desktop-, iOS- und Android-Clients für Teams aktualisiert und getestet. | [Karten,](~/concepts/cards/cards.md) [Kartenformatierung](~/concepts/cards/cards-format.md) |
-| 09/24/2018 | Die APIs für Anrufe und Onlinebesprechungen für Microsoft Graph wurden in der Betaversion veröffentlicht, und Teams Apps können jetzt mitHilfe von Sprache und Video auf vielfältige Weise mit Benutzern interagieren. | [Bots für Anrufe und Onlinebesprechungen,](~/concepts/calls-and-meetings/registering-calling-bot.md) [Echtzeitmedienkonzepte,](~/concepts/calls-and-meetings/real-time-media-concepts.md) [Registrieren eines Aufrufen-Bots,](~/concepts/calls-and-meetings/registering-calling-bot.md) [Debuggen und lokale Tests,](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md) [von der Anwendung gehostete Medien,](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md) [Behandeln eingehender Anrufbenachrichtigungen](~/concepts/calls-and-meetings/call-notifications.md) |
+| 09/24/2018 | Die APIs für Anrufe und Onlinebesprechungen für Microsoft Graph wurden in der Betaversion veröffentlicht, und Teams Apps können jetzt mithilfe von Sprache und Video auf vielfältige Weise mit Benutzern interagieren. | [Bots für Anrufe und Onlinebesprechungen,](~/concepts/calls-and-meetings/registering-calling-bot.md) [Echtzeitmedienkonzepte,](~/concepts/calls-and-meetings/real-time-media-concepts.md) [Registrieren eines aufrufenden Bots,](~/concepts/calls-and-meetings/registering-calling-bot.md) [Debuggen und lokale Tests,](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md) [Von anwendungen gehostete Medien,](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md) [Behandeln eingehender Anrufbenachrichtigungen](~/concepts/calls-and-meetings/call-notifications.md) |
 | 09/11/2018 | Registerkartenkonfigurationsseiten sind jetzt wesentlich höher. | [Registerkartendesign](tabs/design/tabs.md) |
 | 08/15/2018 | Adaptive Karten werden jetzt in Teams unterstützt.|[Adaptive Kartenaktionen in Teams](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
 | 08/10/2018 | Clientunterstützung für DevTools.| [DevTools für den Microsoft Teams-Desktopclient](~/resources/dev-preview/developer-preview-tools.md)|
@@ -196,7 +195,6 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 | -------- | --------- | ------------------ |
 |05/26/2021|Erstellen von Registerkarten mit adaptiven Karten|[Registerkarten erstellen](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Teams Toolkit für [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) und [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)aktualisiert. | [Erste Schritte mit Teams App-Entwicklung](~/get-started/prerequisites.md) |
-|05/25/2021| Besprechungsdetails-API und Echtzeit-Teams Besprechungsereignissen | [Apps für Teams-Besprechungen erstellen](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| Das neue Entwicklerportal für Teams für die Verwaltung Ihrer Teams-Apps eingeführt. | [Entwicklerportal für Teams](concepts/build-and-test/teams-developer-portal.md) |
 |05/25/2021| Das Feature "Zusammen-Modus" kombiniert Teilnehmer in einer einzelnen virtuellen Szene und platziert ihre Videostreams auf vordefinierten Arbeitsplätzen. | [Together-Modus](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|Bots können aktiviert werden, um alle Kanalnachrichten mithilfe der ressourcenspezifischen Zustimmung (RSC) zu empfangen.|[Empfangen aller Nachrichten mit RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md) [Bot-Unterhaltungsübersicht,](~/bots/how-to/conversations/conversation-basics.md) [Kanal- und Gruppenunterhaltungen](~/bots/how-to/conversations/channel-and-group-conversations.md)und [Entwicklervorschau-Manifestschema](~/resources/schema/manifest-schema-dev-preview.md) |
