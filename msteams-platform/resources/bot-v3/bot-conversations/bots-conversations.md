@@ -81,7 +81,7 @@ Es wird empfohlen, die Höhe und Breite der einzelnen Bilder mithilfe von XML an
 * `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` verwenden
 * Nicht verwenden `![Duck on a rock](http://aka.ms/Fo983c)`
 
-## <a name="receiving-messages&quot;></a>Empfangen von Nachrichten
+## <a name="receiving-messages"></a>Empfangen von Nachrichten
 
 Je nachdem, welche Bereiche deklariert werden, kann Ihr Bot Nachrichten in den folgenden Kontexten empfangen:
 
