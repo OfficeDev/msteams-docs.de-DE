@@ -5,18 +5,19 @@ ms.topic: reference
 keywords: Teams-Manifestschema – Entwicklervorschau
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: c582a6af0505680b9843c86be7fc800fab12129d
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: c2009038341a22664b0f055fa9756a9d1eba87b9
+ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853536"
+ms.lasthandoff: 06/13/2021
+ms.locfileid: "52915090"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Entwicklervorschau-Manifestschema für Microsoft Teams
 
+Informationen zum Aktivieren der Entwicklervorschau finden Sie in der [öffentlichen Entwicklervorschau für Microsoft Teams.](~/resources/dev-preview/developer-preview-intro.md)
+
 > [!NOTE]
-> Weitere Informationen zum Programm und wie Sie teilnehmen können, finden Sie in der [Entwicklervorschau.](~/resources/dev-preview/developer-preview-intro.md)
-> Wenn Sie die Entwicklervorschau nicht verwenden, sollten Sie diese Version des Manifests nicht verwenden. Siehe [Referenz: Manifestschema für Microsoft Teams](~/resources/schema/manifest-schema.md) für die öffentliche Version des Manifests.
+> * Wenn Sie keine Vorschaufeatures für Entwickler verwenden, verwenden Sie stattdessen das [App-Manifest für GA-Features.](~/resources/schema/manifest-schema.md)
 
 Das Microsoft Teams Manifest beschreibt, wie die App in das Microsoft Teams Produkt integriert wird. Ihr Manifest muss dem schema gehosteten [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) entsprechen.
 
@@ -504,7 +505,7 @@ Das Objekt ist ein Array mit allen Elementen des Typs `string` .
 
 **Optional**
 
-Geben Sie Ihre AAD-App-ID und Graph Informationen an, um Benutzern zu helfen, sich nahtlos bei Ihrer AAD-App anzumelden.
+Geben Sie Ihre AAD-App-ID und Graph Informationen an, damit sich Benutzer nahtlos bei Ihrer AAD-App anmelden können.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
