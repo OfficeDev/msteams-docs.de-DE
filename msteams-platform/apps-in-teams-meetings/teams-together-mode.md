@@ -1,180 +1,180 @@
 ---
-title: Together Mode in Teams
-description: Arbeiten mit dem Gemeinsamen Modus
+title: Szenen im benutzerdefinierten Modus "Zusammen"
+description: Arbeiten mit benutzerdefinierten Szenen im Zusammen-Modus
 ms.topic: conceptual
-ms.openlocfilehash: 1620e01ef1825ec43e94614ff8ea355e764e10e0
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: b2a81d92724785acbcd198d6240eec7d8d510e1c
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651740"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949749"
 ---
-# <a name="together-mode-in-teams"></a>Together Mode in Teams
+# <a name="custom-together-mode-scenes-in-teams"></a>Szenen im benutzerdefinierten Zusammen-Modus in Teams
 
 > [!NOTE]
 > Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
-Microsoft Teams Der Modus "Zusammen" bietet eine immersive und ansprechende Besprechungsumgebung, die Personen zusammen bringt und sie ermutigt, ihr Video zu aktivieren. Es kombiniert Teilnehmer digital zu einer einzelnen virtuellen Szene und platziert ihre Videostreams an vordefinierten, vom Szenenersteller entworfenen und festgelegten Sitzen.
+Szenen im benutzerdefinierten Zusammen-Modus in Microsoft Teams bieten eine immersive und ansprechende Besprechungsumgebung, die Personen zusammenführt und sie dazu auffordert, ihr Video zu aktivieren. Sie kombiniert Teilnehmer digital in einer einzelnen virtuellen Szene und platziert ihre Videostreams in vordefinierten Arbeitsplätzen, die vom Szenenersteller entworfen und behoben wurden.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
-Eine Szene im Gemeinsamen Modus ist ein Artefakt, das vom Szenenentwickler mit dem Microsoft Scene Studio erstellt wurde. In einer konzipierten Szeneneinstellung verfügen die Teilnehmer über festgelegte Plätze mit Videostreams, die in diesen Sitzen gerendert werden.
+Eine Szene in benutzerdefinierten Szenen im Gemeinsamen Modus ist ein Artefakt, das vom Szenenentwickler mithilfe des Microsoft Scene Studio erstellt wurde. In einer eingestellten Szeneneinstellung haben die Teilnehmer Arbeitsplätze mit Videostreams festgelegt, die auf diesen Arbeitsplätzen gerendert werden.
 
 > [!NOTE]
-> Nur Szenen-Apps werden empfohlen, da die Kauferfahrung für solche Apps nahtloser ist.
+> Apps nur für Szenen werden empfohlen, da die Kauferfahrung für solche Apps nahtloser ist.
 
 Der folgende Prozess bietet eine Übersicht zum Erstellen einer Nur-Szene-App:
 
-:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Nur Szenen-App erstellen" border="false":::
+:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Nur-Szene-App erstellen" border="false":::
 
 > [!NOTE]
-> * Eine Nur-Szene-App ist immer noch eine App in Microsoft Teams. Das Scene Studio verarbeitet die Erstellung von App-Paketen im Hintergrund.
-> * Mehrere Szenen in einem einzelnen App-Paket werden benutzern als flache Liste von Szenen angezeigt.
+> * Eine Nur-Szene-App ist weiterhin eine App in Microsoft Teams. Das Szenenstudio verarbeitet die Erstellung des App-Pakets im Hintergrund.
+> * Mehrere Szenen in einem einzelnen App-Paket werden Benutzern als flache Liste von Szenen angezeigt.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Sie müssen über grundlegende Kenntnisse der folgenden Funktionen verfügen, um den Gemeinsamen Modus verwenden zu können:
+Sie müssen über grundlegende Kenntnisse der folgenden Punkte verfügen, um benutzerdefinierte Szenen im Zusammen-Modus verwenden zu können:
 
-* Definition von Szene und Sitzen in einer Szene.
-* Verfügen Sie über ein Microsoft Developer-Konto, und machen Sie sich mit Microsoft Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) und App Studio vertraut.
-* [Konzept des Querladens von Apps](../concepts/deploy-and-publish/apps-upload.md).
-* Stellen Sie sicher, dass  der Administrator die Berechtigung zum Hochladen einer benutzerdefinierten App und zum Auswählen aller Filter im Rahmen von App-Setup- bzw. Besprechungsrichtlinien erteilt hat.
+* Definition der Szene und der Arbeitsplätze in einer Szene.
+* Besitzen Sie ein Microsoft Developer-Konto, und machen Sie sich mit dem Microsoft Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) und App Studio vertraut.
+* [Konzept des Querladens von Apps.](../concepts/deploy-and-publish/apps-upload.md)
+* Stellen Sie sicher, dass der Administrator die Berechtigung zum **Hochladen einer benutzerdefinierten App** und zum Auswählen aller Filter im Rahmen der App-Setup- bzw. Besprechungsrichtlinien erteilt hat.
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
-Berücksichtigen Sie vor dem Erstellen einer Szene Folgendes, um eine nahtlose Szenenbildung zu ermöglichen:
+Berücksichtigen Sie vor dem Erstellen einer Szene Folgendes, um eine nahtlose Szenenerstellung zu ermöglichen:
 
 * Stellen Sie sicher, dass alle Bilder im PNG-Format vorliegen.
-* Stellen Sie sicher, dass das endgültige Paket mit allen zusammen 1920 x 1080 Bildern nicht die Auflösung von 1920 x 1080 überschreiten darf.
+* Stellen Sie sicher, dass das endgültige Paket mit allen zusammen zusammengestellten Bildern die Auflösung von 1920 x 1080 nicht überschreiten darf.
 
     > [!NOTE]
-    > Die Auflösung ist eine gleichmäßige Zahl. Dies ist eine Voraussetzung dafür, dass Szenen erfolgreich beleuchtet werden.
+    > Die Auflösung ist eine gerade Zahl. Dies ist eine Voraussetzung dafür, dass Szenen erfolgreich beleuchtet werden.
 
 * Stellen Sie sicher, dass die maximale Szenengröße 10 MB beträgt.
 * Stellen Sie sicher, dass die maximale Größe jedes Bilds 5 MB beträgt.
 
     > [!NOTE]
     > * Eine Szene ist eine Sammlung mehrerer Bilder. Der Grenzwert gilt für jedes einzelne Bild.
-    > * Die einzelne Bildauflösung muss auch eine gleichmäßige Zahl sein.
+    > * Die individuelle Bildauflösung muss auch eine gerade Zahl sein.
   
-* Stellen Sie sicher, dass **das Kontrollkästchen Transparent** aktiviert ist, wenn das Bild transparent ist. Dieses Kontrollkästchen ist im rechten Bereich verfügbar, wenn ein Bild ausgewählt ist.
+* Stellen Sie sicher, dass das **Kontrollkästchen Transparent** aktiviert ist, wenn das Bild transparent ist. Dieses Kontrollkästchen ist im rechten Bereich verfügbar, wenn ein Bild ausgewählt ist.
 
     > [!NOTE]
-    > Überlappende Bilder müssen als **Transparent gekennzeichnet** werden, um anzuzeigen, dass es sich um überlappende Bilder in der Szene handelt.
+    > Überlappende Bilder müssen als **transparent** markiert werden, um anzuzeigen, dass es sich um überlappende Bilder in der Szene handelt.
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>Erstellen einer Szene mithilfe des Szenenstudios
 
-Microsoft verfügt über ein Szenenstudio, mit dem Sie Szenen erstellen können. Sie ist im [Szenen-Editor verfügbar– Teams Entwicklerportal](https://dev.teams.microsoft.com/scenes).
+Microsoft verfügt über ein Szenenstudio, mit dem Sie Szenen erstellen können. Es ist im [Szenen-Editor](https://dev.teams.microsoft.com/scenes)– Teams Entwicklerportal verfügbar.
 
 > [!NOTE]
-> Dieses Dokument bezieht sich auf Scene studio im Microsoft Teams Developer Portal. Die Benutzeroberfläche und die Funktionen sind im App Studio Scene Designer identisch.
+> Dieses Dokument bezieht sich auf Scene Studio im Microsoft Teams Entwicklerportal. Die Benutzeroberfläche und Funktionen sind im App Studio Scene Designer identisch.
 
 Eine Szene im Kontext des Szenenstudios ist ein Artefakt, das Folgendes enthält:
 
-* Reservierte Plätze für Besprechungsorganisatoren und Besprechungsorganisatoren.
+* Reservierte Arbeitsplätze für Besprechungsorganisatoren und Besprechungsreferenten.
 
     > [!NOTE]
-    > Der Presenter bezieht sich nicht auf den Benutzer, der aktiv freigaben möchte. Er bezieht sich auf die [Besprechungsrolle](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+    > Der Referent bezieht sich nicht auf den Benutzer, der aktiv teilt. Es bezieht sich auf die [Besprechungsrolle.](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
 
 * Platz und Bild für jeden Teilnehmer mit einer anpassbaren Breite und Höhe.
 
     > [!NOTE]
     > PNG ist das einzige unterstützte Format.
 
-* XYZ-Koordinaten aller Sitze und Bilder.
-* Sammlung von Bildern, die als ein Bild getarnt sind.
+* XYZ-Koordinaten aller Arbeitsplätze und Bilder.
+* Sammlung von Bildern, die als ein einziges Bild getarnt sind.
 
-Die Größe des Platzes wird zum Zeichenbereich für das Rendern des Teilnehmervideostreams. Die folgende Abbildung zeigt jeden Platz, der als Avatar für das Erstellen von Szenen dargestellt wird:
+Die Platzabmessungen werden zum Zeichenbereich für das Rendern des Videostreams des Teilnehmers. Die folgende Abbildung zeigt jeden Platz, der als Avatar zum Erstellen von Szenen dargestellt wird:
 
 ![Szenenstudio](../assets/images/apps-in-meetings/scene-design-studio.png)
 
-**So erstellen Sie eine Szene mithilfe des Szenenstudios**
+**So erstellen Sie eine Szene mit dem Scene Studio**
 
-1. Wechseln Sie [zu Szenen-Editor – Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
-
-    >[!NOTE]
-    > * Zum Öffnen von Scene Studio können Sie zur Startseite des [Teams-Entwicklerportals](https://dev.teams.microsoft.com/home) navigieren und benutzerdefinierte Szenen für **Besprechungen erstellen auswählen.**
-    > * Zum Öffnen von Scene Studio können Sie zur Startseite von [Teams Developer Portal](https://dev.teams.microsoft.com/home)navigieren, im  linken Abschnitt Tools auswählen und im Abschnitt **Extras** szenenstudio auswählen. 
-
-1. Wählen Sie **auf der** Seite Szenen-Editor die Option Neue Szene **erstellen aus.**
-
-1. Geben Sie **im Feld Szene** einen Namen für die Szene ein.
+1. Wechseln Sie zum [Szenen-Editor – Teams Entwicklerportal.](https://dev.teams.microsoft.com/scenes)
 
     >[!NOTE]
-    > * Sie können Schließen **auswählen,** um zwischen dem Schließen oder erneuten Öffnen des rechten Bereichs umschalten zu können.
-    > * Sie können die Szene mithilfe der Zoomleiste vergrößern oder verkleinern, um eine bessere Ansicht der Szene zu erhalten.
+    > * Um Scene Studio zu öffnen, können Sie zur Startseite von [Teams Entwicklerportal](https://dev.teams.microsoft.com/home) navigieren und **benutzerdefinierte Szenen für Besprechungen** erstellen auswählen.
+    > * Um Scene Studio zu öffnen, können Sie zur Startseite von [Teams Entwicklerportal](https://dev.teams.microsoft.com/home)navigieren, im linken Abschnitt extras **und** im Abschnitt **"Extras"** das **Szenenstudio** auswählen.
 
-1. Ziehen Sie das Bild in die Umgebung, wie in der folgenden Abbildung dargestellt, und legen Sie es in die Umgebung ab:
+1. Wählen Sie auf der Seite **"Szenen-Editor"** die Option **"Neue Szene erstellen" aus.**
+
+1. Geben Sie im **Szenenfeld** einen Namen für die Szene ein.
 
     >[!NOTE]
-    > * Sie können die dateien [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) [ undSampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) mit den Bildern herunterladen.
-    > * Alternativ können Sie der Szene Hintergrundbilder hinzufügen, indem **Sie Bilder hinzufügen verwenden.**
+    > * Sie können **"Schließen"** auswählen, um zwischen dem Schließen oder erneuten Öffnen des rechten Bereichs zu wechseln.
+    > * Sie können die Szene mithilfe der Zoomleiste vergrößern oder verkleinern, um eine bessere Ansicht der Szene zu erzielen.
+
+1. Ziehen Sie das Bild in die Umgebung, wie in der folgenden Abbildung dargestellt:
+
+    >[!NOTE]
+    > * Sie können die [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) herunterladen und Dateien mit den Bildern [SampleApp.zip.](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip)
+    > * Alternativ können Sie der Szene Hintergrundbilder hinzufügen, indem **Sie Bilder hinzufügen.**
 
     ![Ziehen in die Szene](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
 
 1. Wählen Sie das Bild aus, das Sie platziert haben.
 
-1. Wählen Sie im rechten Bereich eine Ausrichtung für das Bild aus, oder verwenden Sie **den** Schieberegler Größenänderung, um die Bildgröße anzupassen.
+1. Wählen Sie im rechten Bereich eine Ausrichtung für das Bild aus, oder verwenden Sie den Schieberegler **"Größe anpassen",** um die Bildgröße anzupassen.
 
     ![Ausrichtung für Bilder](../assets/images/apps-in-meetings/image-alignment.png)
 
 1. Wählen Sie einen Bereich außerhalb des Bilds aus.
 
-1. Wählen Sie in der oberen rechten Ecke unter **Ebenen die** Option **Teilnehmer aus.**
+1. Wählen Sie in der oberen rechten Ecke unter **"Layer"** die Option **"Teilnehmer"** aus.
 
-1. Wählen Sie im Feld Anzahl  der Teilnehmer die Anzahl der Teilnehmer für die Szene aus, und wählen Sie **Hinzufügen aus.**
+1. Wählen Sie im Feld "Anzahl der **Teilnehmer"** die Anzahl der Teilnehmer für die Szene aus, und wählen Sie **"Hinzufügen"** aus.
 
     >[!NOTE]
-    > * Nachdem die Szene versendet wurde, werden die Avatarplatzierungen durch die Videostreams des tatsächlichen Teilnehmers ersetzt.
-    > * Sie können die Teilnehmerbilder um die Szene ziehen und sie an der erforderlichen Position platzieren und die Größe mithilfe des Größenänderungspfeils ändern.
+    > * Nachdem die Szene ausgeliefert wurde, werden die Avatar-Platzierungen durch die Videostreams des tatsächlichen Teilnehmers ersetzt.
+    > * Sie können die Teilnehmerbilder um die Szene ziehen und an der erforderlichen Position platzieren und die Größe mithilfe des Größenänderungspfeils ändern.
 
-1. Wählen Sie ein beliebiges Teilnehmerbild aus, und aktivieren Sie das Kontrollkästchen **Spot** zuweisen, um den Spot dem Teilnehmer zuzuordnen.
+1. Wählen Sie ein beliebiges Teilnehmerbild aus, und aktivieren Sie das Kontrollkästchen **"Spot zuweisen",** um dem Teilnehmer die Stelle zuzuweisen.
 
-1. Wählen **Sie die Rolle** "Besprechungsorganisator" oder **"Organisator"** für den Teilnehmer aus.
+1. Wählen Sie die Rolle **"Besprechungsorganisator"** oder **"Referent"** für den Teilnehmer aus.
 
     >[!NOTE]
     > In einer Besprechung muss einem Teilnehmer die Rolle eines Besprechungsorganisators zugewiesen werden.
 
     ![Spot zuweisen](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. Wählen **Sie Speichern** aus, und **wählen** Teams ansicht aus, um Ihre Szene in einem Microsoft Teams.
+1. Wählen Sie **"Speichern"** und **dann "Ansicht" in Teams** aus, um Die Szene in Microsoft Teams schnell zu testen.
 
     >[!NOTE]
-    > Wenn Sie eine von Ihnen erstellte Szene löschen möchten, wählen **Sie szene löschen in** der oberen Leiste aus.
+    > Um eine von Ihnen erstellte Szene zu löschen, wählen Sie die Szene auf der oberen Leiste **löschen** aus.
 
-1. Wählen Sie im Dialogfeld **Ansicht in Teams** vorschau in **Teams** aus.
-1. Wählen Sie im angezeigten Dialogfeld Hinzufügen **aus.**
+1. Wählen Sie im Dialogfeld **Ansicht in Teams** in Teams die Option **"Vorschau"** aus.
+1. Wählen Sie im daraufhin angezeigten Dialogfeld **"Hinzufügen"** aus.
 
-    Die Szene kann getestet oder zugegriffen werden, indem Sie eine Testsitzung erstellen und den Gemeinsamen Modus starten. Weitere Informationen finden Sie unter [Aktivieren des Gemeinsamen Modus](#activate-the-together-mode).
+    Sie können die Szene testen oder darauf zugreifen, indem Sie eine Testbesprechung erstellen und benutzerdefinierte Szenen im Gemeinsamen Modus starten. Weitere Informationen finden Sie unter [Aktivieren benutzerdefinierter Szenen für den Zusammen-Modus.](#activate-custom-together-mode-scenes)
 
-    ![Gemeinsamen Modus starten](../assets/images/apps-in-meetings/launchtogethermode.png)
-
-    >[!NOTE]
-    > * Durch **Auswählen der** Vorschau wird automatisch Microsoft Teams App erstellt, die auf der Seite **Apps** im Teams angezeigt werden kann.
-    > * Durch **Auswählen der Vorschau** wird automatisch ein App-Paket erstellt, appmanifest.jshinter der Szene angezeigt wird. Wie bereits erwähnt, ist dies abstrahiert, Sie können jedoch auf das automatisch erstellte App-Paket zugreifen, indem Sie über das Menü zu **Apps** navigieren.
-    > * Die Szene kann dann im Szenenkatalog für den gemeinsamen Modus angezeigt werden.
-
-1. Optional können Sie  im Dropdownmenü Speichern die Option Freigeben auswählen, um einen freigabebaren Link zu erstellen, um Ihre Szenen für andere Benutzer einfach zu verteilen.  Wenn Sie diesen Link öffnen, wird die Szene für den Benutzer installiert, und er kann mit der Verwendung beginnen.
-
-1. Nach der Vorschau kann die Szene als App an Teams, indem Sie die Schritte für die App-Übermittlung ausführen.
+    ![Starten von Szenen im benutzerdefinierten Modus "Zusammen"](../assets/images/apps-in-meetings/launchtogethermode.png)
 
     >[!NOTE]
-    > Dieser Schritt erfordert das Vom Szenenpaket unterschiedliche App-Paket für die entworfene Szene. Das automatisch erstellte App-Paket finden Sie im Abschnitt **Apps** im Teams Developer Center.
+    > * Wenn Sie **"Vorschau"** auswählen, wird automatisch eine Microsoft Teams-App erstellt, die auf der Seite **"Apps"** im Teams Entwicklerportal angezeigt werden kann.
+    > * Wenn Sie **die Vorschau** auswählen, wird automatisch ein App-Paket erstellt, das hinter der Szene appmanifest.jswird. Wie bereits erwähnt, ist dies abstrahiert, Aber Sie können über das Menü zu **Apps** navigieren, um auf das automatisch erstellte App-Paket zuzugreifen.
+    > * Die Szene kann dann in der benutzerdefinierten Szenengalerie für den Zusammen-Modus angezeigt werden.
 
-1. Optional kann das Szenenpaket abgerufen werden, indem  Sie im Dropdownmenü Speichern auf **Exportieren** klicken. Eine .zip, d. h. das Szenenpaket, wird heruntergeladen.
+1. Optional können Sie im Dropdownmenü **"Speichern"** die Option **"Freigeben"** auswählen, um einen freigabefähigen Link zu erstellen, um Ihre Szenen für andere Benutzer einfach zu verteilen. Durch Öffnen dieses Links wird die Szene für den Benutzer installiert, und er kann mit der Verwendung beginnen.
+
+1. Nach der Vorschau kann die Szene als App an Teams ausgeliefert werden, indem Sie die Schritte für die App-Übermittlung ausführen.
+
+    >[!NOTE]
+    > Dieser Schritt erfordert das App-Paket, das sich vom Szenenpaket unterscheidet, für die Szene, die entworfen wurde. Das automatisch erstellte App-Paket finden Sie im Abschnitt **"Apps"** im Teams Developer Center.
+
+1. Optional kann das Szenenpaket abgerufen werden, indem Sie im Dropdownmenü **"Speichern"** die Option **"Exportieren"** auswählen. Eine .zip Datei, bei der es sich um das Szenenpaket handelt, wird heruntergeladen.
 
     ![Exportieren einer Szene](../assets/images/apps-in-meetings/build-a-scene.png)
 
     >[!NOTE]
-    > Das Szenenpaket besteht aus einem scene.jsund den PNG-Ressourcen, die zum Erstellen einer Szene verwendet werden. Das Szenenpaket kann für die Einbindung anderer Änderungen überprüft werden, wie im Abschnitt Beispiel scene.jsabschnitt dieses Dokuments beschrieben.
+    > Das Szenenpaket umfasst eine scene.jsund die PNG-Objekte, die zum Erstellen einer Szene verwendet werden. Das Szenenpaket kann auf andere Änderungen überprüft werden, wie im Beispiel scene.jsim Abschnitt dieses Dokuments beschrieben.
 
-Eine komplexere Szene, die die Z-Achse nutzt, wird im Schrittweisen Beispiel für erste Schritte gezeigt.
+Eine komplexere Szene, die die Z-Achse nutzt, wird im Beispiel für die ersten Schritte veranschaulicht.
 
 ## <a name="sample-scenejson"></a>Beispiel scene.json
 
-Scene.jszusammen mit den Bildern geben Sie die genaue Position der Sitze an. Eine Szene besteht aus Bitmapbildern, Sprites und Rechtecken, in die Teilnehmervideos eingefügt werden können. Diese Sprites und Teilnehmerfelder werden in einem Weltkoordinatensystem definiert, bei dem die X-Achse nach rechts und die Y-Achse nach unten zeigt. Der Modus "Zusammen" unterstützt das Vergrößern der aktuellen Teilnehmer. Dies ist für kleine Besprechungen in einer großen Szene hilfreich. Ein sprite ist ein statisches Bitmapbild, das in der Welt positioniert ist. Der Z-Wert des sprite bestimmt die Position des sprite. Das Rendern beginnt mit dem sprite mit dem niedrigsten Z-Wert, sodass ein höherer Z-Wert bedeutet, dass er näher an der Kamera liegt. Jeder Teilnehmer verfügt über einen eigenen Videofeed, der segmentiert ist, sodass nur der Vordergrund gerendert wird.
+Scene.jszusammen mit den Bildern gibt die genaue Position der Arbeitsplätze an. Eine Szene besteht aus Bitmapbildern, Sprites und Rechtecke, in die Teilnehmervideos eingefügt werden. Diese Sprites und Teilnehmerfelder werden in einem Weltkoordinatensystem definiert, wobei die X-Achse nach rechts und die Y-Achse nach unten zeigen. Szenen im benutzerdefinierten Zusammen-Modus unterstützen das Vergrößern der aktuellen Teilnehmer. Dies ist hilfreich für kleine Besprechungen in einer großen Szene. Ein Sprite ist ein statisches Bitmapbild, das in der Welt positioniert ist. Der Z-Wert des Sprite bestimmt die Position des Sprite. Das Rendern beginnt mit dem Sprite mit dem niedrigsten Z-Wert, daher bedeutet ein höherer Z-Wert, dass es näher an der Kamera ist. Jeder Teilnehmer verfügt über einen eigenen Videofeed, der so segmentiert ist, dass nur der Vordergrund gerendert wird.
 
-Nachfolgend finden Sie scene.jsBeispiel:
+Im Folgenden finden Sie die scene.jsim Beispiel:
 
 ```json
 {
@@ -239,45 +239,45 @@ Nachfolgend finden Sie scene.jsBeispiel:
 }
 ```
 
-Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Das Szenen-JSON enthält außerdem Informationen zu allen ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Sitz eine Sitz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Sitzreihenfolge wird automatisch generiert und kann je nach Einstellung geändert werden.
+Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Die Szenen-JSON enthält auch Informationen zu allen Ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Arbeitsplatz eine Platz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Reihenfolge der Auslastung wird automatisch generiert und kann je nach Präferenz geändert werden.
 
 > [!NOTE]
-> Die Nummer der Sitzreihenfolge entspricht der Reihenfolge der Personen, die dem Anruf beitreten.
+> Die Nummer der Reihenfolge der Benachrichtigung entspricht der Reihenfolge der Personen, die dem Anruf beitreten.
 
-Die zOrder stellt die Reihenfolge dar, in der Bilder und Sitze entlang der Z-Achse platziert werden. In vielen Fällen gibt es ein Gefühl von Tiefe oder Partition, falls erforderlich. Weitere Informationen finden Sie im Schrittweisen Beispiel für erste Schritte. Das Beispiel nutzt die zOrder.
+Der ZOrder stellt die Reihenfolge dar, in der Bilder und Arbeitsplätze entlang der Z-Achse platziert werden. In vielen Fällen gibt es bei Bedarf ein Gefühl von Tiefe oder Partition. Weitere Informationen finden Sie im Schritt-für-Schritt-Beispiel für die ersten Schritte. Das Beispiel nutzt zOrder.
 
-Nachdem Sie die Beispielanwendung scene.jshaben, können Sie den Modus "Zusammen" aktivieren, um an Szenen zu arbeiten.
+Nachdem Sie nun das Beispiel scene.jsweiter durchgegangen sind, können Sie die benutzerdefinierten Szenen im Zusammen-Modus aktivieren, um szenenaktiviert zu werden.
 
-## <a name="activate-the-together-mode"></a>Aktivieren des Gemeinsamen Modus
+## <a name="activate-custom-together-mode-scenes"></a>Aktivieren von Szenen im benutzerdefinierten Modus "Zusammen"
 
-Erhalten Sie End-to-End-Informationen darüber, wie sich ein Endbenutzer mit Szenen im Gemeinsamen Modus beschäftigt.
+Hier erhalten Sie End-to-End-Informationen dazu, wie sich ein Endbenutzer mit Szenen in benutzerdefinierten Szenen im Zusammen-Modus beschäftigt.
 
-**So wählen Sie Szenen aus, und aktivieren Sie den Gemeinsamen Modus**
+**So wählen Sie Szenen aus und aktivieren benutzerdefinierte Szenen im Gemeinsamen Modus**
 
-1. Erstellen Sie eine neue Testsitzung.
-
-    >[!NOTE]
-    > Beim Auswählen **der Vorschau** im Szenenstudio wird die Szene als App in Microsoft Teams. Dies ist das Modell für einen Entwickler, um Szenen aus dem Szenenstudio zu testen und auszuprobieren. Nachdem eine Szene als App versendet wurde, werden diese Szenen im Szenenkatalog angezeigt.
-
-1. Wählen Sie **in** der Dropdownliste Galerie in der oberen linken Ecke zusammen **Modus aus.** Das **Dialogfeld Auswahl** wird angezeigt, und die hinzugefügte Szene ist verfügbar.
-
-1. Wählen **Sie Szene ändern aus,** um die Standardszene zu ändern.
-
-1. Wählen Sie **im Szenenkatalog** die Szene aus, die Sie für Ihre Besprechung verwenden möchten.
-
-1. Optional können der Besprechungsorganisator und der Organisator in der Besprechung den Modus **Alle** Teilnehmer in den Gemeinsamen Modus wechseln auswählen.
+1. Erstellen sie eine neue Testbesprechung.
 
     >[!NOTE]
-    > Zu jedem Beliebigen Zeitpunkt kann nur eine Szene homogen für die Besprechung verwendet werden. Wenn ein Organisator oder ein Organisator eine Szene ändert, ändert sie sich für alle. Das Wechseln in oder aus dem Gemeinsamen Modus liegt bei einzelnen Teilnehmern, aber im Gemeinsamen Modus haben alle Teilnehmer dieselbe Szene.
+    > Bei Auswahl der **Vorschau** im Szenenstudio wird die Szene als App in Microsoft Teams installiert. Dies ist das Modell, mit dem Entwickler Szenen aus dem Szenenstudio testen und ausprobieren können. Nachdem eine Szene als App ausgeliefert wurde, sehen Benutzer diese Szenen in der Szenengalerie.
+
+1. Wählen  Sie in der Dropdownliste Katalog in der oberen linken Ecke den **Modus Zusammen** aus. Das Dialogfeld **"Auswahl"** wird angezeigt, und die hinzugefügte Szene ist verfügbar.
+
+1. Wählen Sie **"Szene ändern"** aus, um die Standard-Szene zu ändern.
+
+1. Wählen Sie im **Szenenkatalog** die Szene aus, die Sie für Ihre Besprechung verwenden möchten.
+
+1. Optional können der Besprechungsorganisator und der Referent die Szene für alle Teilnehmer der Besprechung **ändern.**
+
+    >[!NOTE]
+    > Zu jedem Zeitpunkt kann nur eine Szene homogen für die Besprechung verwendet werden. Wenn ein Referent oder Organisator eine Szene ändert, wird sie für alle geändert. Das Wechseln in oder aus benutzerdefinierten Szenen für den gemeinsamen Modus ist für einzelne Teilnehmer selbst möglich, aber in benutzerdefinierten Szenen im Gemeinsamen Modus haben alle Teilnehmer dieselbe Szene.
 
 1. Wählen Sie **Anwenden** aus. Teams installiert die App für den Benutzer und wendet die Szene an.
 
-## <a name="open-a-together-mode-scene-package"></a>Öffnen eines Szenenpakets für den gemeinsamen Modus
+## <a name="open-a-custom-together-mode-scenes-scene-package"></a>Öffnen eines benutzerdefinierten Szenenpakets für den Gemeinsamen Modus
 
-Sie können das Szenenpaket, bei dem es sich um eine .zip, die aus dem Szenenstudio abgerufen wurde, für andere Ersteller freigeben, um die Szene weiter zu verbessern. Die **Funktion "Szene importieren"** kann genutzt werden. Dieses Tool hilft beim Auspacken eines Szenenpakets, damit der Ersteller die Szene weiter erstellt.
+Sie können das Szenenpaket, das eine .zip aus dem Szenenstudio abgerufene Datei ist, für andere Ersteller freigeben, um die Szene weiter zu verbessern. Die Funktion zum **Importieren einer Szene** kann verwendet werden. Mit diesem Tool können Sie ein Szenenpaket entpacken, damit der Ersteller die Szene weiter erstellen kann.
 
 ![Szenen-ZIP-Datei](../assets/images/apps-in-meetings/scene-zip-file.png)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Artikel
 
 [Apps für Teams Besprechungen](teams-apps-in-meetings.md)
