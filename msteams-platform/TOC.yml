@@ -202,6 +202,8 @@
           href: tabs/how-to/create-tab-pages/configuration-page.md
         - name: Erstellen einer Seite zum Entfernen
           href: tabs/how-to/create-tab-pages/removal-page.md
+        - name: Registerkarten auf mobilen Geräten
+          href: tabs/design/tabs-mobile.md
         - name: Kontext für Ihre Registerkarte erhalten
           href: tabs/how-to/access-teams-context.md
         - name: Erstellen von Registerkarten mit adaptiven Karten
@@ -210,6 +212,8 @@
           href: tabs/tabs-link-unfurling.md
         - name: Registerkarten für Unterhaltungen erstellen
           href: tabs/how-to/conversational-tabs.md
+        - name: Änderungen am Registerkartenrand
+          href: resources/removing-tab-margins.md
     - name: Schnellstarts
       items:
         - name: Persönliche Registerkarte mit Node.js
@@ -307,7 +311,7 @@
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
     - name: Aktivieren und Konfigurieren von Apps für Besprechungen
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-    - name: Zusammen-Modus in Teams
+    - name: Benutzerdefinierte Zusammen-Modus-Szenen
       href: apps-in-teams-meetings/teams-together-mode.md
 - name: Erstellen von Webhooks und Connectors
   items:
@@ -369,8 +373,6 @@
           href: tabs/how-to/authentication/auth-silent-aad.md
         - name: Verwenden von SSO-Authentifizierung (einmaliges Anmelden)
           href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: Hinzufügen von SSO mit Microsoft Teams-Toolkit für Visual Studio Code
-          href: toolkit/visual-studio-code-tab-sso.md
     - name: Bots
       items:
         - name: Authentifizierungsfluss in Bots
@@ -475,8 +477,6 @@
           href: concepts/build-and-test/apps-localization.md
         - name: JSON-Schema für Lokalisierung
           href: resources/schema/localization-schema.md
-    - name: Änderungen am Registerkartenrand
-      href: resources/removing-tab-margins.md
     - name: SameSite-Cookie-Attribut (Update von 2020)
       href: resources/samesite-cookie-update.md
     - name: Häufig Fehler beim Übermitteln an den Store
