@@ -5,12 +5,12 @@ description: Erstellen Sie mithilfe des Teams Toolkits eine Messaging-Erweiterun
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: eaecb045993f8dfd21f4c2c4359a4a3388d659e6
-ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.openlocfilehash: bf00897beec92c64fe9dd68ca76e35751b3c7aed
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "52710648"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994203"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Erstellen Sie Ihre erste Messaging-Erweiterung für Microsoft Teams, und führen Sie sie aus.
 
@@ -167,26 +167,24 @@ Die Bereitstellung umfasst das Bereitstellen von Ressourcen für ein aktives Azu
 
 </details>
 
-## <a name="add-a-configuration-page-to-your-messaging-extension"></a>Hinzufügen einer Konfigurationsseite zu Ihrer Messagingerweiterung
+## <a name="add-a-configuration-page-to-your-messaging-extension"></a>Hinzufügen einer Konfigurationsseite zu Ihrer Messaging-Erweiterung
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 ## <a name="code-sample"></a>Codebeispiel
 
-In Teams Search Auth Config für Beispielprojekte auf GitHub wird gezeigt, wie Sie Messagingerweiterungen erstellen, die eine Konfigurationsseite und [botdienstbasierte](https://github.com/microsoft/BotBuilder-Samples#teams-samples)Authentifizierung enthalten. In den Beispielen wird auch gezeigt, wie Nachrichtenerweiterungen erstellt werden, die Suchanforderungen akzeptieren und die Ergebnisse zurückgeben, nachdem sich der Benutzer angemeldet hat.
+Die Teams Search Auth Config für Beispielprojekte auf GitHub veranschaulichen, wie Sie Messaging-Erweiterungen erstellen, die eine Konfigurationsseite und [die Bot Service-Authentifizierung](https://github.com/microsoft/BotBuilder-Samples#teams-samples)enthalten. Die Beispiele zeigen auch, wie Sie Nachrichtenerweiterungen erstellen, die Suchanforderungen akzeptieren und die Ergebnisse zurückgeben, nachdem sich der Benutzer angemeldet hat.
 
 | **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
 |-----------------|-----------------|-------------|--------------|--------|
-| Bot-Generator | So erstellen Sie Messagingerweiterungen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+| Bot-Generator | So erstellen Sie Messaging-Erweiterungen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
 ## <a name="additional-code-sample"></a>Zusätzliches Codebeispiel
 
 > [!div class="nextstepaction"]
-> [Weitere Bot Framework-Beispiele auf GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
+> [Weitere Bot Framework-Beispiele auf GitHub anzeigen](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
 
-## <a name="next-steps"></a>Nächste Schritte
-
-Weitere Informationen zu anderen Methoden zum Erstellen von Teams-Apps:
+## <a name="see-also"></a>Siehe auch
 
 - [Erstellen einer Teams-App mit React](first-app-react.md)
 - [Erstellen einer Teams-App mit Blazor](first-app-blazor.md)

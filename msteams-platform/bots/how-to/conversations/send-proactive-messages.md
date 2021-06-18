@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
 Keywords: Nachricht senden Benutzer-ID Kanal-ID Unterhaltungs-ID abrufen
-ms.openlocfilehash: d2e9900e6c7d1f5ea5edfabe6dacb2f18b429b3f
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 56411fe381a05318d0e12d6876cf26138baba42c
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949777"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994217"
 ---
 # <a name="send-proactive-messages"></a>Senden proaktiver Nachrichten
 
@@ -67,9 +67,7 @@ Nachdem Sie die entsprechenden Adressinformationen erhalten haben, können Sie I
 
 ## <a name="send-the-message"></a>Senden der Nachricht
 
-Nachdem Sie nun über die richtigen Adressinformationen verfügen, können Sie Ihre Nachricht senden. Wenn Sie das SDK verwenden, verwenden Sie dazu die `continueConversation` Methode und den direkten `conversationId` `tenantId` API-Aufruf. Sie müssen die richtige Einstellung `conversationParameters` festlegen, um Ihre Nachricht erfolgreich zu senden. Sehen Sie [sich](#samples) den Beispielabschnitt an, oder verwenden Sie eines der Im [Codebeispielabschnitt](#code-sample) aufgeführten Beispiele.
-
-Wenn Sie das SDK verwenden, müssen Sie die `continueConversation` Methode und den und einen direkten `conversationId` `tenantId` API-Aufruf verwenden, um die Nachricht zu senden. Sie müssen die richtige Einstellung `conversationParameters` festlegen, um Ihre Nachricht erfolgreich zu senden.
+Nachdem Sie nun über die richtigen Adressinformationen verfügen, können Sie Ihre Nachricht senden. Wenn Sie das SDK verwenden, müssen Sie die `continueConversation` Methode und die und einen direkten `conversationId` `tenantId` API-Aufruf verwenden. Sie müssen die richtige Einstellung `conversationParameters` festlegen, um Ihre Nachricht erfolgreich zu senden. Sehen Sie [sich](#samples) den Beispielabschnitt an, oder verwenden Sie eines der Im [Codebeispielabschnitt](#code-sample) aufgeführten Beispiele.
 
 Nachdem Sie die proaktive Nachricht gesendet haben, müssen Sie diese bewährten Methoden befolgen und proaktive Nachrichten senden, um einen besseren Informationsaustausch zwischen Benutzern und dem Bot zu erzielen.
 
@@ -280,8 +278,11 @@ Die folgende Tabelle enthält ein einfaches Codebeispiel, das den grundlegenden 
 > [!div class="nextstepaction"]
 > [Codebeispiele für proaktives Messaging Teams](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
+## <a name="see-also"></a>Siehe auch
+
+[**Codebeispiele für proaktives Messaging Teams**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> Codebeispiele für [**proaktives Messaging Teams**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp) 
->  [Formatieren Von Bot-Nachrichten](~/bots/how-to/format-your-bot-messages.md)
+> [Formatieren von Bot-Nachrichten](~/bots/how-to/format-your-bot-messages.md)

@@ -5,12 +5,12 @@ description: Erstellen Sie mithilfe des Teams-Toolkits einen Unterhaltungs-Bot f
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: a2f1ccfa6cc708d655f3b9a54062ee39e8be14bd
-ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.openlocfilehash: e59980e7f33c326c16faefd412f9845e47f234e5
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52721850"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994259"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Erstellen Sie Ihren ersten Unterhaltungs-Bot für Microsoft Teams
 
@@ -109,7 +109,7 @@ So erstellen Sie Ihre App und führen sie lokal aus:
 
    > Wenn Sie die App zum ersten Mal ausführen, werden alle Abhängigkeiten heruntergeladen und die App wird erstellt.  Wenn die Erstellung abgeschlossen ist, wird automatisch ein Browserfenster geöffnet.  Dies kann 3 bis 5 Minuten dauern.
 
-1. Ihr Webbrowser startet mit der Ausführung der App. Wenn Sie aufgefordert werden, Teams desktop zu öffnen, wählen **Sie Abbrechen** aus, um im Browser zu verbleiben. Sie werden möglicherweise auch aufgefordert, zu anderen Teams zu wechseln. wählen Sie Teams Web-App aus, wenn dies geschieht.
+1. Ihr Webbrowser beginnt mit der Ausführung der App. Wenn Sie aufgefordert werden, Teams Desktop zu öffnen, wählen Sie **"Abbrechen"** aus, um im Browser zu verbleiben. Möglicherweise werden Sie auch aufgefordert, zu anderen Zeiten zu Teams Desktop zu wechseln. wählen Sie in diesem Fall die Teams Web-App aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot, der zeigt, wie die Web-Version von Microsoft Teams beim Start ausgewählt wird.":::
 
@@ -160,11 +160,13 @@ Die Bereitstellung umfasst das Bereitstellen von Ressourcen für ein aktives Azu
 
 </details>
 
-## <a name="next-steps"></a>Nächste Schritte
-
-Weitere Informationen zu anderen Methoden zum Erstellen von Teams-Apps:
+## <a name="see-also"></a>Siehe auch
 
 - [Erstellen einer Teams-App mit React](first-app-react.md)
 - [Erstellen einer Teams-App mit Blazor](first-app-blazor.md)
-- [Erstellen einer Teams-App als ein SharePoint-Webpart](first-app-spfx.md) (Azure nicht erforderlich)
-- [Erstellen einer Messaging-Erweiterung](first-message-extension.md)
+- [Erstellen einer Microsoft Teams-App als SharePoint-Webpart](first-app-spfx.md) (Azure nicht erforderlich)
+
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Erstellen einer Messaging-Erweiterung](first-message-extension.md)
