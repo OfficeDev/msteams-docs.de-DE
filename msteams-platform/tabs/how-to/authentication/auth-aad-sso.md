@@ -4,19 +4,19 @@ description: Beschreibt einmaliges Anmelden (Single Sign-On, SSO)
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams-Authentifizierungs-SSO-AAD-Api für einmaliges Anmelden
-ms.openlocfilehash: 681481d4d4f764c260729d37d7b5f5f2ce58d0ec
-ms.sourcegitcommit: d9274ac2f32880e861b206ac6ce29467d631177f
+ms.openlocfilehash: 1e26189a9a04991c2ad384e58f4fd6d68ca69b6d
+ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "52760881"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53049036"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>SSO-Unterstützung (Single Sign-On) für Registerkarten
 
-Benutzer melden sich bei Microsoft Teams über ihre Geschäfts-, Schul- oder Microsoft-Konten an, die Office 365, Outlook usw. sind. Sie können dies nutzen, indem Sie einem einmaligen Anmelden erlauben, Ihre Teams Registerkarte oder ihr Aufgabenmodul auf Desktop- oder mobilen Clients zu autorisieren. Wenn ein Benutzer der Verwendung Ihrer App zustimmt, muss er auf einem anderen Gerät nicht erneut zustimmen, da er automatisch angemeldet ist. Darüber hinaus wird Ihr Zugriffstoken vorab abgerufen, um die Leistung und Ladezeiten zu verbessern.
+Benutzer melden sich bei Microsoft Teams über ihre Geschäfts-, Schul- oder Microsoft-Konten an, die Office 365, Outlook usw. sind. Sie können dies nutzen, indem Sie einem einmaligen Anmelden erlauben, Ihre Teams Registerkarte oder das Aufgabenmodul auf Desktop- oder mobilen Clients zu autorisieren. Wenn ein Benutzer der Verwendung Ihrer App zustimmt, muss er auf einem anderen Gerät nicht erneut zustimmen, da er automatisch angemeldet ist. Darüber hinaus wird Ihr Zugriffstoken vorab abgerufen, um die Leistung und Ladezeiten zu verbessern.
 
 > [!NOTE]
-> **Teams versionen mobiler Clients, die SSO unterstützen**  
+> **Teams Versionen mobiler Clients, die SSO unterstützen**  
 >
 > ✔Teams für Android (1416/1.0.0.2020073101 und höher)
 >
@@ -27,7 +27,7 @@ Benutzer melden sich bei Microsoft Teams über ihre Geschäfts-, Schul- oder Mic
 > [!NOTE]
 > **Schnellstart**  
 >
-> Der einfachste Weg zu den ersten Schritten mit Tab-SSO ist das Teams Toolkit für Visual Studio Code. Weitere Informationen finden Sie unter [SSO mit Teams Toolkit und Visual Studio Code für Registerkarten](../../../toolkit/visual-studio-code-tab-sso.md)
+> Der einfachste Weg zu den ersten Schritten mit Tab-SSO ist das Teams Toolkit für Visual Studio Code. Weitere Informationen finden Sie unter [SSO mit Teams Toolkit und Visual Studio Code für Registerkarten.](../../../toolkit/visual-studio-code-tab-sso.md)
 
 ## <a name="how-sso-works-at-runtime"></a>Funktionsweise von SSO zur Laufzeit
 
@@ -40,11 +40,11 @@ Die folgende Abbildung zeigt, wie der SSO-Prozess funktioniert:
 2. Wenn der aktuelle Benutzer ihre Registerkartenanwendung zum ersten Mal verwendet hat, wird eine Anforderungsaufforderung zur Zustimmung angezeigt, wenn eine Zustimmung erforderlich ist, oder um die schrittweise Authentifizierung wie die zweistufige Authentifizierung zu behandeln.
 3. Teams fordert das Registerkartenanwendungstoken vom Azure Active Directory-Endpunkt (AAD) für den aktuellen Benutzer an.
 4. AAD sendet das Registerkartenanwendungstoken an die Teams Anwendung.
-5. Teams sendet das Token der Registerkartenanwendung als Teil des ergebnisobjekts, das vom Aufruf zurückgegeben wird, an die `getAuthToken()` Registerkarte.
+5. Teams sendet das Registerkartenanwendungstoken als Teil des ergebnisobjekts, das vom Aufruf zurückgegeben wird, an die `getAuthToken()` Registerkarte.
 6. Das Token wird in der Registerkartenanwendung mithilfe von JavaScript analysiert, um die erforderlichen Informationen wie die E-Mail-Adresse des Benutzers zu extrahieren.
 
 > [!NOTE]
-> Dies gilt nur für die `getAuthToken()` Zustimmung zu einer begrenzten Gruppe von APIs auf Benutzerebene, bei denen es sich um E-Mails, Profile, offline_access und OpenId handelt. Es wird nicht für weitere Graph Bereichen wie oder `User.Read` `Mail.Read` verwendet. Empfohlene Problemumgehungen finden Sie in [zusätzlichen Graph Bereichen.](#apps-that-require-additional-graph-scopes)
+> Dies gilt nur für die `getAuthToken()` Zustimmung zu einer begrenzten Gruppe von APIs auf Benutzerebene, bei denen es sich um E-Mails, Profile, offline_access und OpenId handelt. Es wird nicht für weitere Graph Bereichen wie `User.Read` oder `Mail.Read` verwendet. Empfohlene Problemumgehungen finden Sie in [zusätzlichen Graph Bereichen.](#apps-that-require-additional-graph-scopes)
 
 Die SSO-API funktioniert auch in [Aufgabenmodulen,](../../../task-modules-and-cards/what-are-task-modules.md) die Webinhalte einbetten.
 
@@ -59,7 +59,7 @@ In diesem Abschnitt werden die Aufgaben zum Erstellen einer Teams Registerkarte 
 1. Rufen Sie Ihre [AAD-Anwendungs-ID ab.](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) 
 1. Geben Sie die Berechtigungen an, die Ihre Anwendung für den AAD-Endpunkt benötigt, und optional Graph.
 1. [Erteilen von Berechtigungen](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) für Teams Desktop-, Web- und mobile Anwendungen.
-1. Autorisieren Sie Teams vorab, indem Sie die Schaltfläche **"Bereich hinzufügen"** auswählen, und geben Sie im daraufhin geöffneten Bereich **access_as_user** als **Bereichsnamen** ein.
+1. Autorisieren Sie Teams vorab, indem Sie auf die Schaltfläche **"Bereich hinzufügen"** klicken, und geben Sie im daraufhin geöffneten Bereich **access_as_user** als **Bereichsnamen** ein.
 
 > [!NOTE]
 > Es gibt einige wichtige Einschränkungen, die Sie kennen müssen:
@@ -77,7 +77,7 @@ In diesem Abschnitt werden die Aufgaben zum Erstellen einer Teams Registerkarte 
     2. Wählen Sie die **unterstützten Kontotypen** aus, wählen Sie den Kontotyp "Einzelner Mandant" oder "Mehrinstanzenkonto" aus. ¹
     * Lassen Sie **URI umleiten** leer.
     3. Wählen Sie **Registrieren** aus.
-1. Kopieren und speichern Sie auf der Übersichtsseite die **Anwendungs-ID (Client-ID).** Sie benötigen ihn später, wenn Sie Ihr Teams Anwendungsmanifest aktualisieren.
+1. Kopieren und speichern Sie auf der Übersichtsseite die **Anwendungs-ID (Client-ID).** Sie müssen ihn später beim Aktualisieren des Teams Anwendungsmanifests verwenden.
 1. Wählen Sie unter **Verwalten** die Option **Eine API verfügbar machen** aus.
 
     > [!NOTE]
@@ -89,19 +89,19 @@ In diesem Abschnitt werden die Aufgaben zum Erstellen einer Teams Registerkarte 
 1. Geben Sie die Details in die Felder für die Konfiguration der Aufforderungen zur Administrator- und Benutzerzustimmung mit werten ein, die für den Bereich geeignet `access_as_user` sind:
     * **Titel der Administratoreinwilligung**: Teams kann auf das Benutzerprofil zugreifen.
     * Beschreibung der **Administratorzustimmung:** Teams können die Web-APIs der App als aktueller Benutzer aufrufen.
-    * Titel der **Benutzergenehmigung:** Teams können auf Ihr Profil zugreifen und Anforderungen in Ihrem Auftrag stellen.
+    * Titel der **Benutzergenehmigung:** Teams können in Ihrem Namen auf Ihr Profil zugreifen und Anforderungen stellen.
     * Beschreibung der **Benutzergenehmigung:** Teams können die APIs dieser App mit den gleichen Rechten aufrufen wie Sie.
 1. Stellen Sie sicher, **Zustand** auf **Aktiviert** festgelegt ist.
 1. Wählen Sie **"Bereich hinzufügen"** aus, um die Details zu speichern. Der Domänenteil des **Bereichsnamens,** der unterhalb des Textfelds angezeigt wird, muss automatisch mit dem im vorherigen Schritt festgelegten **Anwendungs-ID-URI** übereinstimmen, `/access_as_user` wobei er am Ende angefügt `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` wird.
 1. Identifizieren Sie im Abschnitt **"Autorisierte Clientanwendungen"** die Anwendungen, die Sie für die Webanwendung Ihrer App autorisieren möchten. Wählen Sie **"Clientanwendung hinzufügen"** aus. Geben Sie jede der folgenden Client-IDs ein, und wählen Sie den autorisierten Bereich aus, den Sie im vorherigen Schritt erstellt haben:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`für Teams mobile oder Desktopanwendung.
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`für Teams Webanwendung.
-1. Navigieren Sie zu **API-Berechtigungen.** Wählen **Sie "Microsoft** Graph Delegierte Berechtigungen" eine Berechtigung hinzufügen  >    >  aus, und fügen Sie dann die folgenden Berechtigungen aus Graph API hinzu:
+1. Navigieren Sie zu **API-Berechtigungen.** Wählen **Sie eine Berechtigung Hinzufügen** von Microsoft  >  **Graph** delegierte  >  **Berechtigungen** aus, und fügen Sie dann die folgenden Berechtigungen aus Graph API hinzu:
     * User.Read ist standardmäßig aktiviert
     * email
     * offline_access
     * Openid
-    * Profil
+    * profile
 
 1. Navigieren Sie zur **Authentifizierung.**
 
@@ -124,7 +124,7 @@ Glückwunsch! Sie haben die Voraussetzungen für die App-Registrierung erfüllt,
 
 ### <a name="2-update-your-teams-application-manifest"></a>2. Aktualisieren Des Teams Anwendungsmanifests
 
-Verwenden Sie den folgenden Code, um dem Teams Manifest neue Eigenschaften hinzuzufügen:
+Verwenden Sie den folgenden Code, um ihrem Teams Manifest neue Eigenschaften hinzuzufügen:
 
 ```json
 "webApplicationInfo": {
@@ -166,9 +166,9 @@ Nachdem Sie das Zugriffstoken im Erfolgsrückruf erhalten haben, können Sie das
 
 ## <a name="code-sample"></a>Codebeispiel
 
-|**Beispielname**|**Beschreibung**|**C#**|**Node.js**|
+|**Beispielname**|**Description**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
-| Registerkarten-SSO |Microsoft Teams Beispiel-App für Registerkarten azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+| Registerkarten-SSO |Microsoft Teams Beispiel-App für Registerkarten Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 

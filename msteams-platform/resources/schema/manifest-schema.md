@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Teams-Manifestschema
-ms.openlocfilehash: 75c29a1cf9c2897d7b419b45bfc1a4f0447c7aa3
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: 44bae986d5ea78a044cb66d48e6e093d489f4473
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853529"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037628"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
-Das Teams-Manifest beschreibt, wie die App in das Microsoft Teams-Produkt integriert wird. Ihr Manifest muss dem schema gehosteten [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) entsprechen. Frühere Versionen 1.0, 1.1,..., 1.6 usw. werden ebenfalls unterstützt (unter Verwendung von "v1.x" in der URL).
+Das Teams-Manifest beschreibt, wie die App in das Microsoft Teams Produkt integriert wird. Ihr Manifest muss dem schema gehosteten [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) entsprechen. Frühere Versionen 1.0, 1.1,..., 1.6 usw. werden ebenfalls unterstützt (unter Verwendung von "v1.x" in der URL).
 Weitere Informationen zu den Änderungen, die in jeder Version vorgenommen wurden, finden Sie im [Manifeständerungsprotokoll.](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)
 
 Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen:
@@ -260,7 +260,7 @@ Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen:
       "Owner.Read.Group",
       "Member.ReadWrite.Group",
       "Owner.ReadWrite.Group"
-    ],
+    ]
   },
   "showLoadingIndicator": false,
   "isFullScreen": false,
@@ -304,7 +304,7 @@ Das Schema definiert die folgenden Eigenschaften:
 
 Optional, aber empfohlen – Zeichenfolge
 
-Die https://-URL, die auf das JSON-Schema für das Manifest verweist.
+Die https:// URL, die auf das JSON-Schema für das Manifest verweist.
 
 ## <a name="manifestversion"></a>manifestVersion
 
@@ -326,7 +326,7 @@ Diese Versionszeichenfolge muss dem [Semverstandard](http://semver.org/) (MAJOR.
 
 **Erforderlich** – Microsoft-App-ID
 
-Die ID ist ein eindeutiger von Microsoft generierter Bezeichner für die App. Sie haben eine ID, wenn Ihr Bot über das Microsoft Bot Framework registriert ist oder sich die Web-App Ihrer Registerkarte bereits bei Microsoft anmeldet. Sie müssen die ID hier eingeben. Andernfalls müssen Sie eine neue ID im [Microsoft-Anwendungsregistrierungsportal](https://aka.ms/appregistrations)generieren. Verwenden Sie die gleiche ID, wenn Sie einen Bot hinzufügen.
+Die ID ist ein eindeutiger von Microsoft generierter Bezeichner für die App. Sie haben eine ID, wenn Ihr Bot über die Microsoft Bot Framework registriert ist oder sich die Web-App Ihrer Registerkarte bereits bei Microsoft anmeldet. Sie müssen die ID hier eingeben. Andernfalls müssen Sie eine neue ID im [Microsoft-Anwendungsregistrierungsportal](https://aka.ms/appregistrations)generieren. Verwenden Sie die gleiche ID, wenn Sie einen Bot hinzufügen.
 
 > [!NOTE]
 > Wenn Sie ein Update für Ihre vorhandene App in AppSource übermitteln, darf die ID in Ihrem Manifest nicht geändert werden.
@@ -335,7 +335,7 @@ Die ID ist ein eindeutiger von Microsoft generierter Bezeichner für die App. Si
 
 **Erforderlich** – Objekt
 
-Gibt Informationen zu Ihrem Unternehmen an. Bei An den Teams Store übermittelten Apps müssen diese Werte mit den Informationen in Ihrem Store-Eintrag übereinstimmen. Weitere Informationen finden Sie in den Richtlinien für die Veröffentlichung des [Teams-Stores.](~/concepts/deploy-and-publish/appsource/publish.md)
+Gibt Informationen zu Ihrem Unternehmen an. Für An den Teams Store übermittelte Apps müssen diese Werte mit den Informationen in Ihrem Store-Eintrag übereinstimmen. Weitere Informationen finden Sie in den [Richtlinien für die Teams Store-Veröffentlichung.](~/concepts/deploy-and-publish/appsource/publish.md)
 
 |Name| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|
@@ -349,7 +349,7 @@ Gibt Informationen zu Ihrem Unternehmen an. Bei An den Teams Store übermittelte
 
 **Erforderlich** – Objekt
 
-Der Name Ihrer App-Erfahrung, der Benutzern in der Teams-Benutzeroberfläche angezeigt wird. Für an AppSource übermittelte Apps müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen. Die Werte von `short` und `full` müssen unterschiedlich sein.
+Der Name Ihrer App-Erfahrung, der Benutzern in der Teams angezeigt wird. Für an AppSource übermittelte Apps müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen. Die Werte von `short` und `full` müssen unterschiedlich sein.
 
 |Name| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|
@@ -575,11 +575,11 @@ Stellt die systemeigenen Features auf dem Gerät eines Benutzers bereit, auf die
 
 **Optional,** außer **erforderlich,** sofern angegeben.
 
-Eine Liste der gültigen Domänen für Websites, die die App im Teams-Client laden möchte. Domäneneinträge können Platzhalter enthalten, `*.example.com` z. B. . Dies entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com` . Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der für die Registerkartenkonfiguration verwendeten navigieren muss, muss diese Domäne hier angegeben werden.
+Eine Liste der gültigen Domänen für Websites, die die App innerhalb des Teams-Clients laden soll. Domäneneinträge können Platzhalter enthalten, `*.example.com` z. B. . Dies entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com` . Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der für die Registerkartenkonfiguration verwendeten navigieren muss, muss diese Domäne hier angegeben werden.
 
 Es ist **nicht** erforderlich, die Domänen von Identitätsanbietern, die Sie in Ihrer App unterstützen möchten, einzuschließen. Um sich beispielsweise mit einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten. Sie dürfen jedoch keine accounts.google.com in `validDomains[]` einschließen.
 
-Teams Apps, für die ihre eigenen SharePoint-URLs ordnungsgemäß funktionieren müssen, enthält "{teamsitedomain}" in ihrer gültigen Domänenliste.
+Teams Apps, die ihre eigenen SharePoint-URLs benötigen, um ordnungsgemäß zu funktionieren, enthalten "{teamsitedomain}" in ihrer gültigen Domänenliste.
 
 > [!IMPORTANT]
 > Fügen Sie keine Domänen hinzu, die sich außerhalb Ihres Steuerelements befinden, entweder direkt oder über Platzhalter. Ist z. `yourapp.onmicrosoft.com` B. gültig, ist jedoch `*.onmicrosoft.com` ungültig.
@@ -590,7 +590,7 @@ Das Objekt ist ein Array mit allen Elementen des Typs `string` .
 
 **Optional** - Objekt
 
-Geben Sie Ihre Azure Active Directory (AAD)-App-ID und Microsoft Graph Informationen an, um Benutzern zu helfen, sich nahtlos bei Ihrer App anzumelden. Wenn Ihre App in AAD registriert ist, müssen Sie die App-ID angeben, damit Administratoren berechtigungen einfach überprüfen und ihre Zustimmung im Teams Admin Center erteilen können.
+Geben Sie Ihre Azure Active Directory (AAD)-App-ID und Microsoft Graph Informationen an, damit sich Benutzer nahtlos bei Ihrer App anmelden können. Wenn Ihre App in AAD registriert ist, müssen Sie die App-ID angeben, damit Administratoren berechtigungen einfach überprüfen und ihre Zustimmung im Teams Admin Center erteilen können.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|

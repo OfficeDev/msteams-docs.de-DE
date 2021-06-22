@@ -5,12 +5,12 @@ description: Erstellen Sie mithilfe des Teams Toolkits eine Messaging-Erweiterun
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: bf00897beec92c64fe9dd68ca76e35751b3c7aed
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: cb37bc97c3b9de8ce469728e4c1b0e09ba1c2942
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994203"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037635"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Erstellen Sie Ihre erste Messaging-Erweiterung für Microsoft Teams, und führen Sie sie aus.
 
@@ -97,7 +97,7 @@ Eine Messaging-Erweiterung verwendet das [Bot-Framework](https://docs.botframewo
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-file-layout.png" alt-text="Dateilayout eines Bot-Projekts.":::
 
-Der Bot-Code wird im `bot` Verzeichnis gespeichert.  Das `bots/messageExtensionBot.js` ist der Haupteinsteigerpunkt der Messaging-Erweiterung.
+Der Bot-Code wird im `bot` Verzeichnis gespeichert.  Das `bot/messageExtensionBot.js` ist der Haupteinsteigerpunkt der Messaging-Erweiterung.
 
 > [!Tip]
 > Machen Sie sich mit Bots außerhalb von Teams vertraut, bevor Sie Ihren ersten Bot in Teams integrieren.  Sie können weitere Informationen zu Bots im Lernprogramme von [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) finden.
@@ -173,9 +173,9 @@ Die Bereitstellung umfasst das Bereitstellen von Ressourcen für ein aktives Azu
 
 ## <a name="code-sample"></a>Codebeispiel
 
-Die Teams Search Auth Config für Beispielprojekte auf GitHub veranschaulichen, wie Sie Messaging-Erweiterungen erstellen, die eine Konfigurationsseite und [die Bot Service-Authentifizierung](https://github.com/microsoft/BotBuilder-Samples#teams-samples)enthalten. Die Beispiele zeigen auch, wie Sie Nachrichtenerweiterungen erstellen, die Suchanforderungen akzeptieren und die Ergebnisse zurückgeben, nachdem sich der Benutzer angemeldet hat.
+Die Teams Search Auth Config for sample projects on GitHub, demonstrate how to create messaging extensions that include a configuration page and [Bot Service authentication.](https://github.com/microsoft/BotBuilder-Samples#teams-samples) Die Beispiele zeigen auch, wie Sie Nachrichtenerweiterungen erstellen, die Suchanforderungen akzeptieren und die Ergebnisse zurückgeben, nachdem sich der Benutzer angemeldet hat.
 
-| **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
+| **Beispielname** | **Description** | **.NET** | **Node.js** | **Python** |
 |-----------------|-----------------|-------------|--------------|--------|
 | Bot-Generator | So erstellen Sie Messaging-Erweiterungen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
