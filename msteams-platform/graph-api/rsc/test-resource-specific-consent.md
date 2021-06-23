@@ -2,16 +2,16 @@
 title: Testen von ressourcenspezifischen Zustimmungsberechtigungen in Teams
 description: Details zum Testen der ressourcenspezifischen Zustimmung in Teams mit Postman
 localization_priority: Normal
-author: laujan
+author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Teams-Autorisierung OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 29dc0241bfd5b42cb1853de3e89e43344c223c24
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 92c6d5d96c103fb5e0da6afd91357b5887b2ba10
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994273"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069084"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Testen von ressourcenspezifischen Zustimmungsberechtigungen in Teams
 

@@ -1,16 +1,16 @@
 ---
 title: Erstellen von benutzerdefinierten Apps mit wenig Code für Microsoft Teams
-author: laujan
+author: surbhigupta
 description: Ausführliche Informationen zu den verfügbaren Microsoft Low- und No-Code-Lösungen für Teams
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 7c35002752a4cdd1481c7e23bf49d2777cbcb26d
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 3c7f2dc76f01a47226598e5480e9b39ce9dd173a
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994084"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069130"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Erstellen von benutzerdefinierten Apps mit wenig Code für Microsoft Teams
 
@@ -56,7 +56,7 @@ Virtual Assistant ist eine Open-Source-Vorlage von Microsoft, mit der Sie eine s
 |  Thema  |  Links  |
 |:---------|:----------------------|
 |Power BI|[Power BI für App-Entwickler](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI für Entwickler](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
-|Power-Apps|[Power Apps für App-Entwickler](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps für Entwickler](/learn/browse/?products=power-apps)|
+|Power Apps|[Power Apps für App-Entwickler](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps für Entwickler](/learn/browse/?products=power-apps)|
 |Power Automate|[Power Automate für App-Entwickler](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate für Entwickler](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
 |Power Virtual Agents|[Power Virtual Agents für App-Entwickler und -Entwickler](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 

@@ -1,53 +1,53 @@
 ---
 title: Kanal- und Gruppenunterhaltungen mit einem Bot
-author: clearab
-description: Senden, Empfangen und Behandeln von Nachrichten für einen Bot in einem Kanal- oder Gruppenchat.
+author: surbhigupta
+description: So senden, empfangen und verarbeiten Sie Nachrichten für einen Bot in einem Kanal- oder Gruppenchat.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: ef5cf8464fa0e93d5ea3840003a2b0c04a4a5ef5
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 399f7d7487b4992e70d4ee515b26101e2b253a62
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630999"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069003"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Kanal- und Gruppenchatunterhaltungen mit einem Bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Um den Microsoft Teams in einem Team- oder Gruppenchat zu installieren, fügen Sie dem Bot den Bereich oder `teams` `groupchat` den Bereich hinzu. Dadurch können alle Mitglieder der Unterhaltung mit Ihrem Bot interagieren. Nachdem der Bot installiert wurde, hat er Zugriff auf Metadaten zur Unterhaltung, z. B. auf die Liste der Unterhaltungsmitglieder. Wenn er in einem Team installiert ist, hat der Bot außerdem Zugriff auf Details zu diesem Team und die vollständige Liste der Kanäle.
+Um den Microsoft Teams Bot in einem Team- oder Gruppenchat zu installieren, fügen Sie den `teams` oder den Bereich zu Ihrem Bot `groupchat` hinzu. Dadurch können alle Mitglieder der Unterhaltung mit Ihrem Bot interagieren. Nachdem der Bot installiert wurde, hat er Zugriff auf Metadaten über die Unterhaltung, z. B. die Liste der Unterhaltungsmitglieder. Wenn er in einem Team installiert wird, hat der Bot außerdem Zugriff auf Details zu diesem Team und die vollständige Liste der Kanäle.
 
-Bots in einer Gruppe oder einem Kanal empfangen nachrichten nur, wenn sie @botname. Sie erhalten keine weiteren Nachrichten, die an die Unterhaltung gesendet werden. Der Bot muss direkt @erwähnt werden. Ihr Bot erhält keine Nachricht, wenn das Team oder der Kanal erwähnt wird oder wenn jemand auf eine Nachricht von Ihrem Bot antwortet, ohne @mentioning senden.
+Bots in einer Gruppe oder einem Kanal empfangen Nachrichten nur, wenn sie @botname erwähnt werden. Sie erhalten keine weiteren Nachrichten, die an die Unterhaltung gesendet werden. Der Bot muss direkt @erwähnt werden. Ihr Bot erhält keine Nachricht, wenn das Team oder der Kanal erwähnt wird oder wenn jemand auf eine Nachricht von Ihrem Bot antwortet, ohne ihn @mentioning.
 
 > [!NOTE]
 > Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../../../resources/dev-preview/developer-preview-intro.md) verfügbar.
 >
-> Mithilfe der ressourcenspezifischen Zustimmung (RSC) können Bots alle Kanalnachrichten in Teams empfangen, in dem sie installiert sind, ohne dass @mentioned. Weitere Informationen finden Sie unter [Empfangen aller Kanalnachrichten mit RSC](channel-messages-with-rsc.md).
+> Mithilfe der ressourcenspezifischen Zustimmung (RESOURCE-Specific Consent, RSC) können Bots alle Kanalnachrichten in Teams empfangen, in denen sie installiert ist, ohne @mentioned zu werden. Weitere Informationen finden Sie unter [Empfangen aller Kanalnachrichten mit RSC.](channel-messages-with-rsc.md)
 
 ## <a name="design-guidelines"></a>Richtlinien für den Entwurf
 
-Im Gegensatz zu persönlichen Chats muss Ihr Bot in Gruppenchats und Kanälen eine schnelle Einführung bereitstellen. Sie müssen diese und weitere Richtlinien für das Botdesign befolgen. Weitere Informationen zum Entwerfen von Bots in Teams finden Sie unter Entwerfen von Botunterhaltungen [in Kanälen und Chats.](~/bots/design/bots.md)
+Im Gegensatz zu persönlichen Chats muss Ihr Bot in Gruppenchats und Kanälen eine schnelle Einführung bereitstellen. Sie müssen diese und weitere Bot-Designrichtlinien befolgen. Weitere Informationen zum Entwerfen von Bots in Teams finden Sie unter [Entwerfen von Bot-Unterhaltungen in Kanälen und Chats.](~/bots/design/bots.md)
 
-Jetzt können Sie neue Unterhaltungsthreads erstellen und problemlos verschiedene Unterhaltungen in Kanälen verwalten.
+Jetzt können Sie neue Unterhaltungsthreads erstellen und ganz einfach verschiedene Unterhaltungen in Kanälen verwalten.
 
 ## <a name="create-new-conversation-threads"></a>Erstellen neuer Unterhaltungsthreads
 
-Wenn Ihr Bot in einem Team installiert ist, müssen Sie einen neuen Unterhaltungsthread erstellen, anstatt auf einen vorhandenen zu antworten. Manchmal ist es schwierig, zwischen zwei Unterhaltungen zu unterscheiden. Wenn die Unterhaltung threaded ist, ist es einfacher, verschiedene Unterhaltungen in Kanälen zu organisieren und zu verwalten. Dies ist eine Form von [proaktivem Messaging.](~/bots/how-to/conversations/send-proactive-messages.md)
+Wenn Ihr Bot in einem Team installiert ist, müssen Sie einen neuen Unterhaltungsthread erstellen, anstatt auf einen vorhandenen zu antworten. Manchmal ist es schwierig, zwischen zwei Unterhaltungen zu unterscheiden. Wenn die Unterhaltung gethreadt ist, ist es einfacher, verschiedene Unterhaltungen in Kanälen zu organisieren und zu verwalten. Dies ist eine Form proaktiver [Nachrichten.](~/bots/how-to/conversations/send-proactive-messages.md)
 
-Als Nächstes können Sie Erwähnungen mithilfe des Objekts abrufen und Ihren Nachrichten Erwähnungen `entities` hinzufügen, indem Sie das Objekt `Mention` verwenden.
+Als Nächstes können Sie Erwähnungen mithilfe des Objekts abrufen `entities` und Mithilfe des Objekts Erwähnungen zu Ihren Nachrichten `Mention` hinzufügen.
 
 ## <a name="work-with-mentions"></a>Arbeiten mit Erwähnungen
 
-Jede Nachricht an Ihren Bot aus einer Gruppe oder einem Kanal enthält eine @mention deren Name im Nachrichtentext enthalten ist. Ihr Bot kann auch andere Benutzer abrufen, die in einer Nachricht erwähnt werden, und Allen nachrichten, die er sendet, Erwähnungen hinzufügen.
+Jede Nachricht an Ihren Bot aus einer Gruppe oder einem Kanal enthält einen @mention mit seinem Namen im Nachrichtentext. Ihr Bot kann auch andere Benutzer abrufen, die in einer Nachricht erwähnt werden, und Erwähnungen zu allen gesendeten Nachrichten hinzufügen.
 
-Sie müssen auch die @mentions aus dem Inhalt der Nachricht, die Ihr Bot empfängt, herausstreifen.
+Sie müssen auch die @mentions aus dem Inhalt der Nachricht entfernen, die Ihr Bot empfängt.
 
 ### <a name="retrieve-mentions"></a>Abrufen von Erwähnungen
 
-Erwähnungen werden im Objekt in nutzlast zurückgegeben und enthalten sowohl die eindeutige ID des Benutzers als auch den Namen `entities` des erwähnten Benutzers. Der Text der Nachricht enthält auch die Erwähnung, z. B. `<at>@John Smith<at>` . Verlassen Sie sich jedoch nicht auf den Text in der Nachricht, um Informationen über den Benutzer abzurufen. Die Person, die die Nachricht sendet, kann sie ändern. Verwenden Sie daher das `entities` Objekt.
+Erwähnungen werden in der Nutzlast im Objekt zurückgegeben `entities` und enthalten sowohl die eindeutige ID des Benutzers als auch den Namen des erwähnten Benutzers. Der Text der Nachricht enthält auch die Erwähnung, `<at>@John Smith<at>` z. B. . Verlassen Sie sich jedoch nicht auf den Text in der Nachricht, um Informationen über den Benutzer abzurufen. Es ist möglich, dass die Person, die die Nachricht sendet, sie ändert. Verwenden Sie daher das `entities` Objekt.
 
-Sie können alle Erwähnungen in der Nachricht abrufen, indem Sie die Funktion im Bot Builder SDK aufrufen, das `GetMentions` ein Array von Objekten `Mention` zurückgibt.
+Sie können alle Erwähnungen in der Nachricht abrufen, indem Sie die `GetMentions` Funktion im Bot Builder SDK aufrufen, das ein Array von Objekten zurückgibt. `Mention`
 
 Der folgende Code zeigt ein Beispiel für das Abrufen von Erwähnungen:
 
@@ -144,14 +144,14 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 ### <a name="add-mentions-to-your-messages"></a>Hinzufügen von Erwähnungen zu Ihren Nachrichten
 
-Ihr Bot kann andere Benutzer in Nachrichten erwähnen, die in Kanälen gepostet werden.
+Ihr Bot kann andere Benutzer in Nachrichten erwähnen, die in Kanälen veröffentlicht wurden.
 
 Das `Mention` Objekt verfügt über zwei Eigenschaften, die Sie mithilfe der folgenden Eigenschaften festlegen müssen:
 
-* Fügen <at>@username</at> in den Nachrichtentext ein.
-* Schließen Sie das Mention-Objekt in die Entitätssammlung ein.
+* Fügen Sie <at>@username</at> in den Nachrichtentext ein.
+* Schließen Sie das Erwähnungsobjekt in die Entitätensammlung ein.
 
-Das Bot Framework SDK stellt Hilfsmethoden und Objekte zum Erstellen von Erwähnungen zur Verfügung.
+Das Bot Framework SDK bietet Hilfsmethoden und Objekte zum Erstellen von Erwähnungen.
 
 Der folgende Code zeigt ein Beispiel für das Hinzufügen von Erwähnungen zu Ihren Nachrichten:
 
@@ -194,7 +194,7 @@ this.onMessage(async (turnContext, next) => {
 
 # <a name="json"></a>[Json](#tab/json)
 
-Das `text` Feld im Objekt im Array muss einem Teil des `entities` Nachrichtenfelds `text` entsprechen. Andern falls nicht, wird die Erwähnung ignoriert.
+Das `text` Feld im Objekt im Array muss mit einem Teil des `entities` `text` Meldungsfelds übereinstimmen. Wenn dies nicht der Typ ist, wird die Erwähnung ignoriert.
 
 ```json
 {
@@ -257,22 +257,22 @@ Jetzt können Sie eine Einführungsnachricht senden, wenn Ihr Bot zum ersten Mal
 
 ## <a name="send-a-message-on-installation"></a>Senden einer Nachricht bei der Installation
 
-Wenn Ihr Bot zum ersten Mal der Gruppe oder dem Team hinzugefügt wird, muss eine Einführungsnachricht gesendet werden. Die Nachricht muss eine kurze Beschreibung der Funktionen des Bots und deren Verwendung enthalten. Sie müssen das Ereignis `conversationUpdate` mit dem `teamMemberAdded` eventType abonnieren.  Das Ereignis wird gesendet, wenn ein neues Teammitglied hinzugefügt wird. Überprüfen Sie, ob das hinzugefügte neue Mitglied der Bot ist. Weitere Informationen finden Sie unter [Senden einer Willkommensnachricht an ein neues Teammitglied](~/bots/how-to/conversations/send-proactive-messages.md).
+Wenn Ihr Bot zum ersten Mal der Gruppe oder dem Team hinzugefügt wird, muss eine Einführungsnachricht gesendet werden. Die Nachricht muss eine kurze Beschreibung der Features des Bots und deren Verwendung bereitstellen. Sie müssen das `conversationUpdate` Ereignis mit dem `teamMemberAdded` eventType abonnieren.  Das Ereignis wird gesendet, wenn ein neues Teammitglied hinzugefügt wird. Überprüfen Sie, ob das neue hinzugefügte Mitglied der Bot ist. Weitere Informationen finden Sie unter [Senden einer Willkommensnachricht an ein neues Teammitglied.](~/bots/how-to/conversations/send-proactive-messages.md)
 
-Senden Sie eine persönliche Nachricht an jedes Teammitglied, wenn der Bot hinzugefügt wird. Dazu erhalten Sie die Teamliste, und senden Sie jedem Benutzer eine direkte Nachricht.
+Senden Sie eine persönliche Nachricht an jedes Teammitglied, wenn der Bot hinzugefügt wird. Rufen Sie dazu die Teamliste ab, und senden Sie jedem Benutzer eine direkte Nachricht.
 
 Senden Sie in den folgenden Fällen keine Nachricht:
 
-* Das Team ist groß, z. B. größer als 100 Mitglieder. Ihr Bot kann als Spam gesehen werden, und die Person, die ihn hinzugefügt hat, kann Beschwerden erhalten. Sie müssen die Wertversprechung Ihres Bots jedem klar vermitteln, der die Willkommensnachricht sieht.
+* Das Team ist groß, z. B. größer als 100 Mitglieder. Ihr Bot kann als Spam angesehen werden, und die Person, die ihn hinzugefügt hat, kann Beschwerden erhalten. Sie müssen das Wertversprechen Ihres Bots klar an alle Personen kommunizieren, die die Willkommensnachricht sehen.
 * Ihr Bot wird zuerst in einer Gruppe oder einem Kanal erwähnt, anstatt zuerst einem Team hinzugefügt zu werden.
 * Eine Gruppe oder ein Kanal wird umbenannt.
 * Ein Teammitglied wird einer Gruppe oder einem Kanal hinzugefügt.
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="see-also"></a>Sehen Sie ebenfalls
+## <a name="see-also"></a>Siehe auch
 
-[Get Teams context](~/bots/how-to/get-teams-context.md)
+[Abrufen Teams Kontexts](~/bots/how-to/get-teams-context.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

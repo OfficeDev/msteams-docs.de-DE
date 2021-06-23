@@ -1,21 +1,21 @@
 ---
 title: Apps für Teams Besprechungen
-author: laujan
+author: surbhigupta
 description: Übersicht über Apps in Teams Besprechungen basierend auf Teilnehmer- und Benutzerrolle
 ms.topic: overview
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Teams-Apps – Benutzerteilnehmer-Rollen-API für Besprechungen
-ms.openlocfilehash: 69016f818a333cb4f7cecc252539e076838a0735
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 0ba475e852b8dc673d33ac818077b3b0951ac5f9
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949651"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068568"
 ---
 # <a name="apps-for-teams-meetings"></a>Apps für Teams Besprechungen
 
-Besprechungen ermöglichen zusammenarbeiten, Partnerschaft, informierte Kommunikation und gemeinsames Feedback in einem inklusiven und aktiven Forum. Die Besprechungs-App kann je nach Status des Teilnehmers eine Benutzererfahrung für jede Phase des Besprechungslebenszyklus bereitstellen, einschließlich der App-Erfahrung vor der Besprechung, in besprechungsbesprechung und nach der Besprechung.
+Besprechungen ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikation und gemeinsames Feedback in einem inklusiven und aktiven Forum. Die Besprechungs-App kann je nach Status des Teilnehmers eine Benutzererfahrung für jede Phase des Besprechungslebenszyklus bereitstellen, einschließlich der App-Erfahrung vor der Besprechung, in besprechungsbesprechung und nach der Besprechung.
 
 Die Benutzer können während Besprechungen über den Registerkartenkatalog auf Apps zugreifen, z. B.:
 
@@ -33,7 +33,7 @@ Um Teams mit Apps für Besprechungen anzupassen, können Sie Ihre Apps für Team
 
 Mit der neuen benutzerdefinierten Szenenfunktion für den gemeinsamen Modus können Benutzer in einer Besprechung mit ihrem Team an einem Ort zusammenarbeiten, ohne durch Felder getrennt zu sein.
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Siehe auch
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)

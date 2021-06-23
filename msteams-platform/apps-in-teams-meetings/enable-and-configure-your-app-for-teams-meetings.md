@@ -1,14 +1,14 @@
 ---
 title: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
-author: laujan
+author: surbhigupta
 description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 ms.topic: conceptual
-ms.openlocfilehash: 6542a8d1b4b8055d09585da4cf8c1194b5f293d7
-ms.sourcegitcommit: 4751ca40f36ed21ec743b14483b181adade6b904
+ms.openlocfilehash: e31e241a61f40a8dc2b8a1221765bd4755d346ed
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "52871839"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068644"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -16,7 +16,7 @@ Jedes Team hat eine andere Art, Aufgaben zu kommunizieren und zusammenzuarbeiten
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Aktivieren Ihrer App für Teams Besprechungen
 
-Um Ihre App für Teams Besprechungen zu aktivieren, müssen Sie Ihr App-Manifest aktualisieren und anhand der Kontexteigenschaften bestimmen, wo Ihre App angezeigt werden muss.
+Um Ihre App für Teams Besprechungen zu aktivieren, müssen Sie Ihr App-Manifest aktualisieren und anhand der Kontexteigenschaften bestimmen, wo Ihre App angezeigt werden soll.
 
 ### <a name="update-your-app-manifest"></a>Aktualisieren des App-Manifests
 
@@ -78,7 +78,7 @@ Nachdem Sie Ihre App für Teams Besprechungen aktiviert haben, müssen Sie Ihre 
 > * Mobile Clients unterstützen Registerkarten nur in Vor- und Nachbesprechungsphasen.
 > * Die Besprechungsumgebungen, die sich im Dialogfeld "Besprechung" und "Registerkarte" befinden, werden derzeit auf mobilen Clients nicht unterstützt. Weitere Informationen finden Sie unter [Anleitungen für Registerkarten auf mobilgeräten,](../tabs/design/tabs-mobile.md) während Sie Ihre Registerkarten für mobilgeräte erstellen.
 
-Teams Besprechungen bietet eine einzigartige Umgebung für die Zusammenarbeit in Ihrer Organisation. Es bietet die Möglichkeit, Ihre App für verschiedene Besprechungsszenarien zu konfigurieren. Sie können Ihre Apps so konfigurieren, dass die Besprechungserfahrung basierend auf der Teilnehmerrolle oder dem Benutzertyp verbessert wird. Jetzt können Sie ermitteln, welche Aktionen in den folgenden Besprechungsszenarien ausgeführt werden können:
+Teams Besprechungen bietet eine einzigartige Erfahrung für die Zusammenarbeit in Ihrer Organisation. Es bietet die Möglichkeit, Ihre App für verschiedene Besprechungsszenarien zu konfigurieren. Sie können Ihre Apps so konfigurieren, dass die Besprechungserfahrung basierend auf der Teilnehmerrolle oder dem Benutzertyp verbessert wird. Jetzt können Sie ermitteln, welche Aktionen in den folgenden Besprechungsszenarien ausgeführt werden können:
 * [Vor der Besprechung](#pre-meeting)
 * [Besprechungsbesprechung](#in-meeting)
 * [Nach der Besprechung](#post-meeting)
@@ -101,7 +101,7 @@ Vor einer Besprechung können Benutzer Registerkarten, Bots und Messaging-Erweit
 
 **So fügen Sie einer Besprechung eine Messaging-Erweiterung hinzu**
 
-1. Wählen Sie die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; aus, die sich im Bereich zum Verfassen von Nachrichten im Chat befinden.
+1. Wählen Sie die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; , die sich im Bereich zum Verfassen von Nachrichten im Chat befinden.
 1. Wählen Sie die App aus, die Sie hinzufügen möchten, und führen Sie die Schritte nach Bedarf aus. Die App wird als Messaging-Erweiterung installiert.
 
 **So fügen Sie einer Besprechung einen Bot hinzu**
@@ -121,12 +121,12 @@ Während einer Besprechung können Sie das meetingSidePanel oder das Dialogfeld 
 
 Mit dem meetingSidePanel können Sie Benutzeroberflächen in einer Besprechung anpassen, die Organisatoren und Referenten unterschiedliche Ansichten und Aktionen ermöglichen. In Ihrem App-Manifest müssen Sie meetingSidePanel dem Kontextarray hinzufügen. In der Besprechung und in allen Szenarien wird die App auf einer Besprechungsregisterkarte mit einer Breite von 320 Pixeln gerendert. Weitere Informationen finden Sie unter [FrameContext-Schnittstelle.](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
 
-Informationen zur Verwendung der API zum weiterleiten von `userContext` Anforderungen finden Sie unter Teams [SDK.](../tabs/how-to/access-teams-context.md#user-context) Weitere Informationen finden Sie unter [Teams Authentifizierungsfluss für Registerkarten.](../tabs/how-to/authentication/auth-flow-tab.md) Der Authentifizierungsfluss für Registerkarten ist dem Authentifizierungsfluss für Websites sehr ähnlich. Registerkarten können daher OAuth 2.0 direkt verwenden. Weitere Informationen finden Sie unter [Microsoft Identity Platform und OAuth 2.0-Autorisierungscodefluss.](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
+Informationen zur Verwendung der `userContext` API zum weiterleiten von Anforderungen finden Sie unter Teams [SDK.](../tabs/how-to/access-teams-context.md#user-context) Weitere Informationen finden Sie unter [Teams Authentifizierungsfluss für Registerkarten.](../tabs/how-to/authentication/auth-flow-tab.md) Der Authentifizierungsfluss für Registerkarten ist dem Authentifizierungsfluss für Websites sehr ähnlich. Registerkarten können daher OAuth 2.0 direkt verwenden. Weitere Informationen finden Sie unter [Microsoft Identity Platform und OAuth 2.0-Autorisierungscodefluss.](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
 
 Die Messaging-Erweiterung funktioniert wie erwartet, wenn sich ein Benutzer in einer Besprechungsansicht befindet und der Benutzer Erweiterungskarten zum Verfassen von Nachrichten posten kann. "AppName in-Meeting" ist eine QuickInfo, die den App-Namen in der Besprechungs-U-Leiste angibt.
 
 > [!NOTE]
-> Verwenden Sie Version 1.7.0 oder höher von [Teams SDK,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)da versionen zuvor den Seitenbereich nicht unterstützen.
+> Verwenden Sie Version 1.7.0 oder höher von [Teams SDK,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)da die vorherigen Versionen den Seitenbereich nicht unterstützen.
 
 #### <a name="in-meeting-dialog-box"></a>Dialogfeld "Besprechungsinterne Besprechung"
 
@@ -176,7 +176,7 @@ Die Konfigurationen nach der Besprechung und vor der [Besprechung](#pre-meeting)
 
 |Beispielname | Beschreibung | Beispiel |
 |----------------|-----------------|--------------|----------------|-----------|
-| Besprechungs-App | Veranschaulicht, wie die Besprechungstoken-Generator-App verwendet wird, um ein Token anzufordern, das sequenziell generiert wird, sodass jeder Teilnehmer eine angemessene Möglichkeit zur Interaktion hat. Dies kann in Situationen wie Beibesprechungen, Q&A-Sitzungen usw. hilfreich sein. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+| Besprechungs-App | Veranschaulicht, wie die Besprechungstoken-Generator-App verwendet wird, um ein Token anzufordern, das sequenziell generiert wird, damit jeder Teilnehmer eine angemessene Möglichkeit zur Interaktion hat. Dies kann in Situationen wie Meetings mit Derbesprechung, Q&A-Sitzungen usw. hilfreich sein. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
 ## <a name="see-also"></a>Siehe auch
 

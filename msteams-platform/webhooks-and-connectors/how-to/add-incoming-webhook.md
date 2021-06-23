@@ -1,17 +1,17 @@
 ---
 title: Senden externer Anfragen an Microsoft Teams mit eingehenden Webhooks
-author: laujan
+author: surbhigupta
 description: Hinzufügen eines eingehenden Webhooks zur Teams-App
-keywords: Teams tabs outgoing webhook
+keywords: Teams-Registerkarten für ausgehenden Webhook
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: bb2306cb57c069d3bed06702495da2775694643a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: acaf2c7ba8c9c6d34399b51f3c0ef9a1110c0fb4
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566817"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068932"
 ---
 # <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>Senden externer Anfragen an Microsoft Teams mit eingehenden Webhooks
 
@@ -27,7 +27,7 @@ Bei eingehenden Webhooks handelt es sich um eine spezielle Art von Connectors in
 
 | Feature | Beschreibung |
 | ------- | ----------- |
-|Konfigurationsbereich|Eingehende Webhooks werden auf Kanalebene begrenzt und konfiguriert. Ausgehende Webhooks werden beispielsweise auf Teamebene bereichs- und konfiguriert.|
+|Konfigurationsbereich|Eingehende Webhooks werden auf Kanalebene festgelegt und konfiguriert. Ausgehende Webhooks werden beispielsweise auf Teamebene festgelegt und konfiguriert.|
 |Sichere Ressourcendefinitionen|Nachrichten werden als JSON-Nutzlast formatiert. Diese deklarative Nachrichtenstruktur verhindert die Einschleusung von bösartigem Code, da auf dem Client keine Codeausführung stattfindet.|
 |Unterstützung für Aktion erfordernde Nachrichten|Wenn Sie festlegen, dass Nachrichten als Karten gesendet werden sollen, müssen Sie das Format für **Aktion erfordernde Nachrichtenkarten** verwenden. Aktion erfordernde Nachrichtenkarten werden in allen Office 365-Gruppen einschließlich Microsoft Teams unterstützt. Hier sind Links zur [Referenz zu Legacy-Nachrichtenkarten mit Aktionen](/outlook/actionable-messages/message-card-reference)und zum [Nachrichtenkarten-Playground](https://messagecardplayground.azurewebsites.net).|
 |Unabhängige HTTPS-Messaging-Unterstützung| Karten sind eine großartige Möglichkeit, Informationen in einer übersichtlichen und einheitlichen Weise darzustellen. Jedes Tool oder Framework, das HTTPS-POST-Anforderungen senden kann, kann über einen eingehenden Webhook Nachrichten an Microsoft Teams senden.|

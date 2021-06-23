@@ -1,25 +1,25 @@
 ---
 title: Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint
-author: laujan
-description: Bereitstellen der vorhandenen registerkarte Teams in SharePoint als SharePoint-Framework Web part.
-keywords: Teams registerkarten sharepoint framework development
+author: surbhigupta
+description: Bereitstellen der vorhandenen Teams-Registerkarte in SharePoint als SharePoint-Framework-Webpart.
+keywords: Teams-Registerkarten für die SharePoint-Framework-Entwicklung
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c6c5668c0d937e0512d8a6dba366f7fd545b8a96
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 6720cf3fdc8a02d325bf775f4bf319b9d07ec17c
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630411"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068650"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint 
 
-Sie können eine umfassende Integrationserfahrung zwischen Microsoft Teams und SharePoint erhalten, indem Sie eine registerkarte Microsoft Teams in SharePoint web part SPFx hinzufügen. In diesem Dokument erfahren Sie, wie Sie eine Registerkarte aus einer Microsoft Teams Beispiel-App nehmen und in einer SharePoint. 
+Sie können eine umfassende Integration zwischen Microsoft Teams und SharePoint erzielen, indem Sie eine Microsoft Teams Registerkarte in SharePoint als SPFx Webpart hinzufügen. Dieses Dokument führt Sie durch die Verwendung einer Registerkarte aus einer Microsoft Teams Beispiel-App und deren Verwendung in SharePoint. 
 
 ## <a name="rich-integration-between-teams-and-sharepoint"></a>Umfassende Integration zwischen Teams und SharePoint
 
-Mit der Novemberversion von Teams und SharePoint-Framework v.1.7 verfügen Entwickler über zwei leistungsstarke Funktionen:
+Mit der November-Version von Teams und SharePoint-Framework Version 1.7 verfügen Entwickler über zwei leistungsstarke Funktionen:
 
 <ul  class="panelContent cardsC">
 <li>
@@ -34,7 +34,7 @@ Mit der Novemberversion von Teams und SharePoint-Framework v.1.7 verfügen Entwi
                     </div>
                     <div class="cardText">
                         <h3>Teams Registerkarten in SharePoint</h3>
-                        <p>Erstellen Sie umfassende App-SharePoint, indem Sie Ihre Teams in Sharepoint (in diesem Artikel) verwenden.</p>
+                        <p>Erstellen Sie umfangreiche App-Funktionen in SharePoint, indem Sie Ihre Teams-App in SharePoint integrieren (dieser Artikel).</p>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@ Mit der Novemberversion von Teams und SharePoint-Framework v.1.7 verfügen Entwi
                     </div>
                     <div class="cardText">
                         <h3>SharePoint-Framework in Teams</h3>
-                        <p>Bringen Sie SharePoint Webparts zu Teams und lassen SharePoint Hosting für Sie verwalten.</p>
+                        <p>Bringen Sie Ihre SharePoint-Webparts zu Teams, und lassen Sie SharePoint das Hosting für Sie verwalten.</p>
                     </div>
                 </div>
             </div>
@@ -64,82 +64,82 @@ Mit der Novemberversion von Teams und SharePoint-Framework v.1.7 verfügen Entwi
 
 ### <a name="teams-tabs-in-sharepoint"></a>Teams Registerkarten in SharePoint
 
-Mit SharePoint-Framework v.1.7 können Sie Ihre registerkarten Teams in SharePoint. Wenn in SharePoint gehostete Registerkarten  eine ähnliche vollständige Seitenerfahrung erhalten, werden alle Features von Teams-Registerkarten verfügbar gemacht, während der Kontext und die Vertrautheit einer SharePoint bleiben.
+Mit SharePoint-Framework Version 1.7 können Sie Ihre Teams Registerkarten in SharePoint hosten. Da in SharePoint gehostete Registerkarten eine ähnliche **ganzseitige Oberfläche** erhalten, werden alle Features von Teams Registerkarten verfügbar, während der Kontext und die Vertrautheit einer SharePoint Website beibehalten werden.
 
 ### <a name="sharepoint-framework-in-teams"></a>SharePoint-Framework in Teams
 
-Sie können ihre Registerkarten Microsoft Teams auch mithilfe von SharePoint-Framework. SharePoint-Framework Webparts werden innerhalb von SharePoint gehostet, ohne dass externe Dienste wie Azure benötigt werden. Für SharePoint Entwickler vereinfacht dies den Entwicklungsprozess für Teams Registerkarten erheblich. Weitere Informationen zu SharePoint-Framework in Teams finden Sie unter Verwenden der SharePoint-Framework [in Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+Sie können Ihre Microsoft Teams Registerkarten auch mit SharePoint-Framework implementieren. SharePoint-Framework Webparts werden in SharePoint gehostet, ohne dass externe Dienste wie Azure erforderlich sind. Für SharePoint Entwickler vereinfacht dies den Entwicklungsprozess für Teams Registerkarten erheblich. Weitere Informationen zu SharePoint-Framework in Teams finden Sie unter [Verwendung der SharePoint-Framework in Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
 ## <a name="introduction"></a>Einführung
 
-Die hier verwendete Registerkarte wird bereits in Azure gehostet, um sich auf die erforderliche Integrationsarbeit zu konzentrieren.
+Die hier verwendete Registerkarte wird bereits in Azure gehostet, um sich auf die erforderlichen Integrationsarbeit zu konzentrieren.
 
-Die verwendete Beispiel-App ist eine Talentverwaltungsanwendung. Es verwaltet den Einstellungsprozess von Kandidaten für offene Positionen in einem Team. Erstellen Sie ein Teams-App, und laden Sie sie in Teams. Erstellen Sie keine echte Talentverwaltungsanwendung.
+Die verwendete Beispiel-App ist eine Talent management-Anwendung. Sie verwaltet den Einstellungsprozess von Kandidaten für offene Positionen in einem Team. Erstellen Sie ein Beispiel Teams App, und laden Sie sie in Teams. Erstellen Sie keine echte Talentverwaltungsanwendung.
 
 ### <a name="benefits-of-this-approach"></a>Vorteile dieses Ansatzes
 
-* Erreichen SharePoint Benutzer mit ihrer vorhandenen Teams Registerkarte.
-* Hochladen Ihr App-Manifest direkt in Ihren SharePoint-App-Katalog. [Teams Anwendungspakete](~/concepts/build-and-test/apps-package.md) werden jetzt von der SharePoint.
-* Die Benutzer konfigurieren die Registerkarte auf einer Seite genau wie alle anderen SharePoint Web part.
-* Ihre Registerkarte kann auf ihren [Kontext](~/tabs/how-to/access-teams-context.md) zugreifen, wie er kann, wenn sie innerhalb der Teams.
+* Erreichen Sie SharePoint Benutzer mit Ihrer vorhandenen Teams Registerkarte.
+* Hochladen Sie Ihr App-Manifest direkt im SharePoint App-Katalog an. [Teams Anwendungspakete](~/concepts/build-and-test/apps-package.md) werden jetzt von SharePoint unterstützt.
+* Die Benutzer konfigurieren die Registerkarte auf einer Seite genau wie jedes andere SharePoint Webpart.
+* Ihre Registerkarte kann auf ihren [Kontext](~/tabs/how-to/access-teams-context.md) zugreifen, wenn sie innerhalb Teams ausgeführt wird.
 
 **So fügen Sie Teams Registerkarte zu SharePoint**
 
-Führen Sie die folgenden Schritte aus, um Teams Registerkarte zu SharePoint:
+Führen Sie die folgenden Schritte aus, um SharePoint Teams Registerkarte hinzuzufügen:
 
 ## <a name="1-test-the-sample-app"></a>1. Testen der Beispiel-App
 
 Laden Sie das [Beispiel-App-Manifest herunter.](https://github.com/MicrosoftDocs/msteams-docs/raw/master/msteams-platform/assets/downloads/TalentMgmt-Azure.zip)
 
 1. Öffnen Sie Microsoft Teams.
-1. Wählen Sie **das Appstore-Symbol** unten links neben der Registerkarte aus.
-1. Wählen **Hochladen eine benutzerdefinierte App** unten links aus. In der folgenden Abbildung wird der entsprechende Bildschirm angezeigt:  
+1. Wählen Sie das **Appstore-Symbol** unten links auf der Registerkarte aus.
+1. Wählen Sie unten links **Hochladen eine benutzerdefinierte App** aus. In der folgenden Abbildung wird der entsprechende Bildschirm angezeigt:  
 
     ![Hochladen einer benutzerdefinierten App](~/assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png)
 
-1. Die datei, die hochgeladen werden soll, befindet sich im **Ordner Downloads.** Es wird als TalentMgmt-Azure.zip. In der folgenden Abbildung wird der entsprechende Bildschirm angezeigt:
+1. Die hochzuladende Datei befindet sich im **Ordner "Downloads".** Sie wird TalentMgmt-Azure.zip genannt. In der folgenden Abbildung wird der entsprechende Bildschirm angezeigt:
  
     ![TalentMgmt in Azure](~/assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png)
 
-1. Sie können den Installations- oder Zustimmungsbildschirm für die Talentverwaltungs-App sehen. Wählen Sie das Team aus, das Sie installieren möchten. 
-1. Wählen Sie **installieren** aus, und beginnen Sie mit dem Experimentieren mit der App.
+1. Sie können den Installations- oder Zustimmungsbildschirm für die Talentmanagement-App anzeigen. Wählen Sie das Team aus, das Sie installieren möchten. 
+1. Wählen Sie die **Option "Installieren" aus,** und beginnen Sie mit dem Experimentieren mit der App.
 
-## <a name="2-use-teams-tab-in-sharepoint"></a>2. Verwenden Teams Registerkarte in SharePoint
+## <a name="2-use-teams-tab-in-sharepoint"></a>2. Verwenden sie Teams Registerkarte in SharePoint
 
-1. Hochladen Sie Ihr Teams-App-Paket in Ihrem SharePoint-App-Katalog, indem Sie `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` besuchen. Beispiel: `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`.
+1. Hochladen und stellen Sie Das Teams-App-Paket im SharePoint App-Katalog bereit. `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` Beispiel: `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`.
 
-1. Wenn Sie dazu aufgefordert werden, aktivieren **Sie Diese Lösung für alle Websites in der Organisation verfügbar machen.**
+1. Wenn Sie dazu aufgefordert werden, aktivieren **Sie "Diese Lösung für alle Websites in der Organisation verfügbar machen".**
 In der folgenden Abbildung wird der entsprechende Bildschirm angezeigt:
 
-   ![Registerkarten in der Sharepoint-Ansicht](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
+   ![Registerkarten in der SharePoint-Ansicht](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
 
-1. Erstellen Sie auf Ihrer Website eine neue Seite, indem Sie oben rechts die Zahnradschaltfläche auswählen und dann **Seite hinzufügen auswählen.**
+1. Erstellen Sie auf Ihrer Website eine neue Seite, indem Sie oben rechts die Zahnradschaltfläche auswählen und dann **eine Seite hinzufügen** auswählen.
 In der folgenden Abbildung wird der entsprechende Bildschirm angezeigt:
 
-   ![Sharepoint-Ansicht](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
+   ![SharePoint-Ansicht](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 
-1. Sie können die Erstellungserfahrung SharePoint Seiten anzeigen. Benennen Sie Ihre Seite als **Registerkarte "Teams".**
+1. Sie können die Erstellungsoberfläche SharePoint Seiten anzeigen. Benennen Sie Ihre Seite als **Registerkarte "Meine Teams".**
 
-1. Öffnen Sie die Web part-Toolbox, indem Sie die Schaltfläche drücken, und wählen Sie Teams `+` Registerkarte namens Contoso HR **aus.** Webparts werden alphabetisch sortiert. Wenn es sich um eine lange Liste handelt, können Sie die Suchleiste verwenden, um sie zu finden. Dadurch wird ein Webteil im Zeichenbereich erstellt, das ihre Teams enthält. In der folgenden Abbildung wird die Registerkartenansicht angezeigt:
+1. Öffnen Sie die Webpart-Toolbox, indem Sie auf die `+` Schaltfläche klicken, und wählen Sie Ihre Teams Registerkarte namens **Contoso HR** aus. Webparts werden alphabetisch sortiert. Wenn es sich um eine lange Liste handelt, können Sie die Suchleiste verwenden, um sie zu finden. Dadurch wird ein Webpart im Zeichenbereich erstellt, das Ihre Teams Registerkarte enthält. In der folgenden Abbildung wird die Registerkartenansicht angezeigt:
 
    ![Registerkartenansicht](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 
-1. Drücken Sie die **Schaltfläche Veröffentlichen,** nachdem Sie die Bearbeitung abgeschlossen haben.
+1. Klicken Sie auf die Schaltfläche **"Veröffentlichen",** nachdem Sie die Bearbeitung abgeschlossen haben.
 
-1. Wählen **Sie Seite zur Navigation hinzufügen aus,** um einen Schnellverweis auf Ihre Seite in der linken Navigationsleiste zu haben. In der folgenden Abbildung wird die Registerkarte in Sharepoint angezeigt: 
+1. Wählen Sie **"Seite zur Navigation hinzufügen"** aus, um in der linken Navigationsleiste einen Schnellverweis auf Ihre Seite zu erhalten. In der folgenden Abbildung wird die Registerkarte in SharePoint angezeigt: 
 
-   ![Registerkarte im Sharepoint-Bild](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
+   ![Registerkarte in SharePoint-Bild](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 
 ## <a name="3-explore-app-pages-in-sharepoint"></a>3. Erkunden von App-Seiten in SharePoint
 
-Nachdem Ihre Seite veröffentlicht wurde, können Sie erkunden, wie Sie Ihre [Teams-App](/sharepoint/dev/spfx/web-parts/single-part-app-pages)in eine vollständigere Umgebung innerhalb von SharePoint. Dadurch wird die aktuelle Seite in eine App-Seite konvertiert, die das normale SharePoint seitenlayout mit einer vollständigen Seitenerfahrung für die Registerkarte Teams zeigt. 
+Nachdem Ihre Seite veröffentlicht wurde, können Sie erkunden, [wie Sie Ihre Teams App in SharePoint zu einer umfassenderen Oberfläche machen.](/sharepoint/dev/spfx/web-parts/single-part-app-pages) Dadurch wird die aktuelle Seite in eine App-Seite konvertiert, auf der das normale SharePoint Seitenlayout mit einer vollständigen Seitenoberfläche für die Registerkarte Teams angezeigt wird. 
 
-Die folgende Abbildung zeigt die vollständige Erfahrung Teams App in Sharepoint: ![ Abbildung von Registerkarten in Sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
+Die folgende Abbildung zeigt die vollständige Benutzeroberfläche von Teams App in SharePoint: ![ Abbildung von Registerkarten in SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
 ## <a name="code-sample"></a>Codebeispiel
 | **Beispielname** | **Beschreibung** | **SPFx** |
 |-----------------|-----------------|----------|
-| SPFx Web part | SPFx web part samples for tabs, channels, and groups. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/spfx)
+| SPFx-Webpart | SPFx Webpartbeispiele für Registerkarten, Kanäle und Gruppen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/spfx)
 
 ## <a name="see-also"></a>Siehe auch
 

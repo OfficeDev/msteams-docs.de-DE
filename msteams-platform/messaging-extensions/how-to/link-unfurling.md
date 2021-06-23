@@ -1,22 +1,22 @@
 ---
-title: Entfalten von Links
-author: clearab
+title: Verbreiten von Links
+author: surbhigupta
 description: So führen Sie die Verbreitung von Links mit der Messaging-Erweiterung in einer Microsoft Teams-App durch.
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 726ba47d1290b4dc38bb2b90e5ce9fc8a3c5fb6b
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: 7713fe794c9d15453438cfe3e1bde0238bde9d8c
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853550"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068950"
 ---
-# <a name="link-unfurling"></a>Entfalten von Links
+# <a name="link-unfurling"></a>Verbreiten von Links
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-In diesem Dokument erfahren Sie, wie Sie Ihrem App-Manifest mitHilfe von App Studio und manuell eine Verknüpfung hinzufügen. Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Die `invoke` enthält die vollständige URL, die in den Bereich zum Verfassen von Nachrichten eingefügt wurde, und Sie können mit einer Karte antworten, die der Benutzer freigeben kann, und zusätzliche Informationen oder Aktionen bereitstellen. Dies funktioniert ähnlich wie ein Suchbefehl mit der URL, die als Suchbegriff dient.
+In diesem Dokument erfahren Sie, wie Sie Ihrem App-Manifest mithilfe von App Studio und manuell Eine Verknüpfung hinzufügen. Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Die `invoke` enthält die vollständige URL, die in den Bereich zum Verfassen von Nachrichten eingefügt wurde, und Sie können mit einer Karte antworten, die der Benutzer freigeben kann, und zusätzliche Informationen oder Aktionen bereitstellen. Dies funktioniert ähnlich wie ein Suchbefehl mit der URL, die als Suchbegriff dient.
 
 > [!NOTE]
 > * Derzeit wird die Verbreitung von Links auf mobilen Clients nicht unterstützt.
