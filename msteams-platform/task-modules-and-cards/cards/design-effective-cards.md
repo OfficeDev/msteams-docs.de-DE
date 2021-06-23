@@ -1,27 +1,27 @@
 ---
 title: Entwerfen adaptiver Karten für Ihre App
 description: Erfahren Sie, wie Sie adaptive Karten für Teams entwerfen und das Microsoft Teams UI Kit erhalten.
-localization_priority: Normal
+localization_priority: Priority
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b4d5f43268c7bd5afecb56d26eb0d49ed6c9002b
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
-ms.translationtype: MT
+ms.openlocfilehash: 8e56928da44e22006feb59715c8bdbf821ec4c42
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630282"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037656"
 ---
-# <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Entwerfen adaptiver Karten für Ihre Microsoft Teams App
+# <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Entwerfen adaptiver Karten für Ihre Microsoft Teams-App
 
-Eine adaptive Karte enthält einen Freihandformtext mit Kartenelementen und optionalen Aktionen. Adaptive Karten sind aktionenfähige Codeausschnitte von Inhalten, die Sie einer Unterhaltung über einen Bot oder eine Messagingerweiterung hinzufügen können. Mithilfe von Text, Grafiken und Schaltflächen bieten diese Karten eine umfassende Kommunikation für Ihre Zielgruppe.
+Eine adaptive Karte enthält einen Freihandform-Textkörper mit Kartenelementen und optionalen Aktionen. Adaptive Karten sind Aktionen erfordernde Inhaltsausschnitte, die Sie einer Unterhaltung über einen Bot oder eine Messagingerweiterung hinzufügen können. Mithilfe von Text, Grafiken und Schaltflächen ermöglichen diese Karten eine umfassende Kommunikation mit Ihrer Zielgruppe.
 
-Das Adaptive Card-Framework wird in vielen Microsoft-Produkten verwendet, einschließlich Teams. Sie können Karten innerhalb von Nachrichten über Bots oder Messagingerweiterungen an Benutzer senden. Benutzer können auch Aktionen auf Karten ausführen, wenn vorhanden.
+Das Framework für adaptive Karten wird in vielen Microsoft-Produkten verwendet, einschließlich Microsoft Teams. Sie können Karten in Nachrichten über Bots oder Messagingerweiterungen an Benutzer senden. Benutzer können auch Aktionen auf Karten durchführen, wenn diese bereitgestellt werden.
 
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Übersichtsbeispiel einer adaptiven Karte." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Übersichtsbeispiel für eine adaptive Karte." border="false":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
-Umfassendere Entwurfsrichtlinien für adaptive Karten finden Sie in Teams, einschließlich Elementen, die Sie bei Bedarf packen und ändern können, im Microsoft Teams UI Kit. Das Benutzeroberflächenkit behandelt auch wichtige Themen wie Design, Barrierefreiheit und reaktionsschnelle Größenanpassung.
+Umfassendere Entwurfsrichtlinien für adaptive Karten, einschließlich Elemente, die Sie nach Bedarf abrufen und ändern können, finden Sie im Microsoft Teams-UI-Kit. Das UI-Kit deckt auch wesentliche Themen wie Designs, Barrierefreiheit und dynamische Größenanpassung ab.
 
 > [!div class="nextstepaction"]
 > [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -31,169 +31,159 @@ Umfassendere Entwurfsrichtlinien für adaptive Karten finden Sie in Teams, einsc
 Sie können ihre adaptiven Karten auch direkt im Browser entwerfen.
 
 > [!div class="nextstepaction"]
-> [Testen des Designers für adaptive Karten](https://adaptivecards.io/designer/)
+> [Designer für adaptive Karten testen](https://adaptivecards.io/designer/)
 
-## <a name="types-of-adaptive-cards"></a>Typen adaptiver Karten
+## <a name="types-of-adaptive-cards"></a>Typen von adaptiven Karten
 
 ### <a name="hero"></a>Hero
 
-Unsere größte Karte. Wird für die Freigabe von Artikeln oder Szenarien verwendet, in denen ein Bild den größten Teil der Geschichte beschreibt.
+Unsere größte Karte. Wird für die Freigabe von Artikeln oder Szenarien verwendet, in denen Bilder den größten Teil der Geschichte erzählen.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Beispiel zeigt eine Adaptive Card Hero Card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Beispiel einer adaptiven Hero-Karte." border="false":::
 
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+# <a name="mobile"></a>[Mobilgerät](#tab/mobile)
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="Beispiel zeigt eine Adaptive Card Hero Card auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="Beispiel einer adaptiven Hero-Karte auf einem Mobilgerät." border="false":::
 
 ---
 
 ### <a name="thumbnail"></a>Miniaturansicht
 
-Verwenden Sie diese Methode zum Senden einer einfachen Nachricht mit Aktionen.
+Wird zum Senden einer einfachen, Aktionen erfordernden Nachricht verwendet.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Beispiel zeigt eine Miniaturansichtskarte für adaptive Karten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Beispiel einer adaptiven Miniaturansichtskarte." border="false":::
 
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+# <a name="mobile"></a>[Mobilgerät](#tab/mobile)
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="Beispiel zeigt eine Miniaturansichtskarte für adaptive Karten auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="Beispiel einer adaptiven Miniaturansichtskarte auf einem Mobilgerät." border="false":::
 
 ---
 
 ### <a name="list"></a>Liste
 
-Wird in Szenarien verwendet, in denen der Benutzer ein Element aus einer Liste auswählen soll, die Elemente jedoch nicht viel Erläuterung benötigen.
+Wird in Szenarien verwendet, in denen der Benutzer ein Element aus einer Liste auswählen soll, die Elemente jedoch nicht viel Erklärung benötigen.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Beispiel zeigt eine Listenkarte für adaptive Karten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Beispiel einer adaptiven Listenkarte." border="false":::
 
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+# <a name="mobile"></a>[Mobilgerät](#tab/mobile)
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="Beispiel zeigt eine Listenkarte für adaptive Karten auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="Beispiel einer adaptiven Listenkarte auf einem Mobilgerät." border="false":::
 
 ---
-
-### Digest
-
 Use for news digests and round-up posts. Note: We recommend the thumbnail card for a single update or news item.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false":::
-
+':::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false"::': null
+':::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false"::': null
 ---
 
 ### <a name="media"></a>Medien
 
-Verwenden Sie, wenn Sie Text und Medien, z. B. Audio oder Video, kombinieren möchten.
+Wird verwendet, wenn Sie Text und Medien kombinieren möchten, z. B. Audio oder Video.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Beispiel zeigt eine Medienkarte für adaptive Karten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Beispiel einer adaptiven Medienkarte." border="false":::
 
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+# <a name="mobile"></a>[Mobilgerät](#tab/mobile)
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="Beispiel zeigt eine Medienkarte für adaptive Karten auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="Beispiel einer adaptiven Medienkarte auf einem Mobilgerät." border="false":::
 
 ---
 
 ### <a name="people"></a>Personen
 
-Am besten, wenn Sie effizient vermitteln, wer an einer Aufgabe beteiligt ist.
+Am besten geeignet, wenn Sie effizient vermitteln möchten, wer an einer Aufgabe beteiligt ist.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Beispiel zeigt eine Adaptive Card-Personenkarte." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Beispiel einer adaptiven Personenkarte." border="false":::
 
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+# <a name="mobile"></a>[Mobilgerät](#tab/mobile)
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="Beispiel zeigt eine Adaptive Card-Personenkarte auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="Beispiel einer adaptiven Personenkarte auf einem Mobilgerät." border="false":::
 
 ---
 
-### <a name="request-ticket"></a>Ticket anfordern
+### <a name="request-ticket"></a>Anforderungsticket
 
-Verwenden Sie, um schnelle Eingaben von einem Benutzer zu erhalten, um automatisch eine Aufgabe oder ein Ticket zu erstellen.
+Wird verwendet, um von einem Benutzer schnelle Eingaben zum automatischen Erstellen einer Aufgabe oder eines Tickets zu erhalten.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Beispiel zeigt eine Ticketkarte für adaptive Kartenanforderung." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Beispiel einer adaptiven Anforderungsticketkarte." border="false":::
 
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+# <a name="mobile"></a>[Mobilgerät](#tab/mobile)
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="Beispiel zeigt eine Adaptive Card-Anforderungsticketkarte auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="Beispiel einer adaptiven Anforderungsticketkarte auf einem Mobilgerät." border="false":::
 
 ---
 
-### <a name="image-set"></a>Bildsatz
+### <a name="image-set"></a>Bildergruppe
 
-Verwenden Sie zum Senden mehrerer Bildminiaturansichten.
+Wird verwendet, um mehrere Miniaturansichten von Bildern zu senden.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Beispiel zeigt eine Adaptive Card-Bildsatzkarte." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Beispiel einer adaptiven Bildergruppenkarte." border="false":::
 
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+# <a name="mobile"></a>[Mobilgerät](#tab/mobile)
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="Beispiel zeigt eine Adaptive Card-Bildsatzkarte auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="Beispiel einer adaptiven Bildergruppenkarte auf einem Mobilgerät." border="false":::
 
 ---
 
-### <a name="action-set"></a>Aktionssatz
+### <a name="action-set"></a>Aktionsgruppe
 
-Verwenden Sie diese Option, wenn der Benutzer eine Schaltfläche auswählen und dann die Benutzereingaben von derselben Karte erfassen soll.
+Wird verwendet, wenn der Benutzer eine Schaltfläche auswählen soll, und Sie dann zusätzliche Benutzereingaben über dieselbe Karte erfassen möchten.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Beispiel zeigt eine Aktionssatzkarte für adaptive Karten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Beispiel einer adaptiven Aktionsgruppenkarte." border="false":::
 
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+# <a name="mobile"></a>[Mobilgerät](#tab/mobile)
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="Beispiel zeigt eine Aktionssatzkarte für adaptive Karten auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="Beispiel einer adaptiven Aktionsgruppenkarte auf einem Mobilgerät." border="false":::
 
 ---
 
-### <a name="choice-set"></a>Auswahlsatz
+### <a name="choice-set"></a>Auswahlgruppe
 
-Verwenden Sie, um mehrere Eingaben vom Benutzer zu erfassen.
+Wird verwendet, um mehrere Eingaben vom Benutzer zu erfassen.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Beispiel zeigt eine Auswahlkarte für adaptive Karten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Beispiel einer adaptiven Auswahlgruppenkarte." border="false":::
 
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+# <a name="mobile"></a>[Mobilgerät](#tab/mobile)
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="Beispiel zeigt eine Auswahlkarte für adaptive Karten auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="Beispiel einer adaptiven Auswahlgruppenkarte auf einem Mobilgerät." border="false":::
 
 ---
 
 ## <a name="anatomy"></a>Anatomie
 
-Adaptive Karten haben eine menge Flexibilität. Es wird jedoch dringend empfohlen, die folgenden Komponenten auf jeder Karte zu verwenden.
+Adaptive Karten sind sehr flexibel. Es wird jedoch dringend empfohlen, mindestens die folgenden Komponenten auf jeder Karte zu verwenden.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="EExample zeigt adaptive Kartenanatomie." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="Beispiel der Anatomie adaptiver Karten." border="false":::
 
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+# <a name="mobile"></a>[Mobilgerät](#tab/mobile)
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="Beispiel zeigt adaptive Kartenanatomie auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="Beispiel der Anatomie adaptiver Karten auf einem Mobilgerät." border="false":::
 
 ---
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
-|A|**Header**: Machen Sie Ihre Kopfzeilen klar und präzise.|
-|B|**Textkörperkopie:** Übermitteln Sie Details, die entweder zu lang oder nicht wichtig genug sind, um in die Kopfzeile zu enthalten.|
-|C|**Primäre Aktionen:** Als bewährte Methode werden 1-3 primäre Aktionen bezeichnet. Sie können bis zu sechs Personen haben.|
+|A|**Kopfzeile**: Sorgen Sie dafür, dass Ihre Kopfzeilen klar und präzise sind.|
+|B|**Textkörper**: Übermitteln Sie hier Details, die entweder zu lang oder nicht wichtig genug sind, um sie in die Kopfzeile aufzunehmen.|
+|C|**Primäre Aktionen**: Schließen Sie als bewährte Methode 1 bis 3 primäre Aktionen ein. Es können bis zu sechs eingefügt werden.|
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
@@ -203,27 +193,27 @@ Verwenden Sie diese Empfehlungen, um eine hochwertige App-Erfahrung zu erstellen
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Bewährte Methode, wie Sie nur einen kleinen Satz von Aktionen auf einer adaptiven Karte verwenden sollten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Bewährte Methode: Eine adaptive Karte sollte nur eine kleine Gruppe von Aktionen enthalten." border="false":::
 
-#### <a name="do-use-up-to-six-primary-actions"></a>Do: Verwenden von bis zu sechs primären Aktionen
+#### <a name="do-use-up-to-six-primary-actions"></a>Was Sie tun sollten: bis zu sechs primäre Aktionen verwenden
 
-Adaptive Karten können zwar sechs primäre Aktionen unterstützen, die meisten Karten benötigen dies jedoch nicht. Die Aktionen sollten klar, präzise und direkt sein. Weniger ist mehr.
+Adaptive Karten unterstützen zwar bis zu sechs primäre Aktionen, auf den meisten Karten werden diese jedoch nicht benötigt. Aktionen sollten klar, präzise und unkompliziert sein. Weniger ist mehr.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Bewährte Methode, um Benutzer nicht mit zu vielen Aktionen auf einer adaptiven Karte zu überfordern." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Bewährte Methode: Benutzer sollten nicht mit zu vielen Aktionen auf einer adaptiven Karte überfordert werden." border="false":::
 
-#### <a name="dont-use-more-than-six-primary-actions"></a>Don't: Verwenden von mehr als sechs primären Aktionen
+#### <a name="dont-use-more-than-six-primary-actions"></a>Was Sie nicht tun sollten: mehr als sechs primäre Aktionen verwenden
 
-Adaptive Karten sollten schnell aktionenfähige Inhalte enthalten. Zu viele Aktionen können einen Benutzer überfordern.
+Adaptive Karten sollten schnelle, handlungsrelevante Inhalte präsentieren. Zu viele Aktionen können einen Benutzer überfordern.
 
    :::column-end:::
 :::row-end:::
 
 ### <a name="frequency"></a>Häufigkeit
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Bewährte Methode zur Häufigkeit adaptiver Karten." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Bewährte Methode bezüglich der Häufigkeit adaptiver Karten." border="false":::
 
-#### <a name="do-be-concise"></a>Do: Kurz sein
+#### <a name="do-be-concise"></a>Was Sie tun sollten: Präzise sein
 
-Es ist einfach, mehrere Karten in eine Unterhaltung zu senden, aber sobald Karten nicht mehr angezeigt werden, werden sie weniger nützlich. Versuchen Sie, sich auf das Wesentliche zu beschränken. Dies gilt insbesondere in einem Kanal, in dem Benutzer weniger Toleranz für das haben, was sie als "Rauschen" wahrnehmen.
+Es ist einfach, mehrere Karten in eine Unterhaltung zu senden, aber sobald Karten aus der Ansicht scrollen, werden sie weniger nützlich. Versuchen Sie, sich auf das Wesentliche zu beschränken. Dies gilt insbesondere in einem Kanal, in dem Benutzer weniger Toleranz für das haben, was sie als „Rauschen“ wahrnehmen.
