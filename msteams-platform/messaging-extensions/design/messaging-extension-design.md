@@ -126,8 +126,17 @@ Nach dem Hinzufügen können Benutzer das Symbol **Weitere** :::image type="icon
 :::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-chat-post.png" alt-text="Das Beispiel zeigt, wie Sie eine Messaging-Erweiterung aus einem Chatbeitrag auf mobilen Geräten öffnen." border="false":::
 
 ---
-':::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
-':::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
+
+#### Channel post
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
+
 ---
 
 ## <a name="use-a-messaging-extension"></a>Verwenden einer Messaging-Erweiterung
