@@ -3,12 +3,12 @@ title: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 author: surbhigupta
 description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 ms.topic: conceptual
-ms.openlocfilehash: e31e241a61f40a8dc2b8a1221765bd4755d346ed
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 4b71673b683129ef00c01297ce14a677864d4eb4
+ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068644"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53114188"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -79,11 +79,12 @@ Nachdem Sie Ihre App für Teams Besprechungen aktiviert haben, müssen Sie Ihre 
 > * Die Besprechungsumgebungen, die sich im Dialogfeld "Besprechung" und "Registerkarte" befinden, werden derzeit auf mobilen Clients nicht unterstützt. Weitere Informationen finden Sie unter [Anleitungen für Registerkarten auf mobilgeräten,](../tabs/design/tabs-mobile.md) während Sie Ihre Registerkarten für mobilgeräte erstellen.
 
 Teams Besprechungen bietet eine einzigartige Erfahrung für die Zusammenarbeit in Ihrer Organisation. Es bietet die Möglichkeit, Ihre App für verschiedene Besprechungsszenarien zu konfigurieren. Sie können Ihre Apps so konfigurieren, dass die Besprechungserfahrung basierend auf der Teilnehmerrolle oder dem Benutzertyp verbessert wird. Jetzt können Sie ermitteln, welche Aktionen in den folgenden Besprechungsszenarien ausgeführt werden können:
-* [Vor der Besprechung](#pre-meeting)
-* [Besprechungsbesprechung](#in-meeting)
-* [Nach der Besprechung](#post-meeting)
 
-### <a name="pre-meeting"></a>Vor der Besprechung
+* [Vor einer Besprechung](#before-a-meeting)
+* [Während einer Besprechung](#during-a-meeting)
+* [Nach einer Besprechung](#after-a-meeting)
+
+### <a name="before-a-meeting"></a>Vor einer Besprechung
 
 Vor einer Besprechung können Benutzer Registerkarten, Bots und Messaging-Erweiterungen hinzufügen. Benutzer mit Organisator- und Referentenrollen können einer Besprechung Registerkarten hinzufügen.
 
@@ -113,7 +114,7 @@ Geben Sie in einem Besprechungschat den **@** Schlüssel ein, und wählen **Sie 
 > * Basierend auf der Benutzerrolle kann die App rollenspezifische Benutzeroberflächen bereitstellen. Eine Abruf-App ermöglicht beispielsweise nur Organisatoren und Referenten das Erstellen einer neuen Umfrage.
 > * Rollenzuweisungen können geändert werden, während eine Besprechung ausgeführt wird. Weitere Informationen finden Sie [unter Rollen in einer Teams Besprechung.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
 
-### <a name="in-meeting"></a>Besprechungsbesprechung
+### <a name="during-a-meeting"></a>Während einer Besprechung
 
 Während einer Besprechung können Sie das meetingSidePanel oder das Dialogfeld in der Besprechung verwenden, um einzigartige Umgebungen für Ihre Apps zu erstellen.
 
@@ -138,19 +139,18 @@ Das Besprechungsdialogfeld darf kein Aufgabenmodul verwenden. Das Aufgabenmodul 
 > * Sie müssen die [SubmitTask()-Funktion](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) aufrufen, um sie automatisch zu schließen, nachdem ein Benutzer eine Aktion in der Webansicht ausgeführt hat. Dies ist eine Anforderung für die App-Übermittlung. Weitere Informationen finden Sie unter [Teams SDK-Aufgabenmodul.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
 > * Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss ihre anfängliche Aufrufanforderungsnutzlast auf den `from.id` Anforderungsmetadaten im `from` Objekt basieren, nicht auf den `from.aadObjectId` Anforderungsmetadaten. `from.id`ist die Benutzer-ID und `from.aadObjectId` die Azure Active Directory -ID (AAD) des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
 
-#### <a name="share-to-stage"></a>Freigeben in der Phase
+#### <a name="shared-meeting-stage"></a>Freigegebene Besprechungsphase
 
 > [!NOTE]
 > * Diese Funktion ist derzeit nur in der [Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
-> * Um dieses Feature zu verwenden, muss die App ein Besprechungs-MeetingSidePanel unterstützen.
 
-Diese Funktion bietet Entwicklern die Möglichkeit, eine App für die Besprechungsphase freizugeben. Durch Aktivieren der Freigabe für die Besprechungsphase können Besprechungsteilnehmer in Echtzeit zusammenarbeiten.
+Die freigegebene Besprechungsphase ermöglicht es Besprechungsteilnehmern, in Echtzeit mit App-Inhalten zu interagieren und daran zusammenzuarbeiten.
 
 Der erforderliche Kontext befindet `meetingStage` sich im App-Manifest. Voraussetzung hierfür ist, dass der Kontext vorhanden `meetingSidePanel` ist. Dadurch wird **"Freigeben** im meetingSidePanel" aktiviert.
 
 ![Freigeben für die Bereitstellung während der Besprechungserfahrung](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
-Die Manifeständerung, die zum Aktivieren dieser Funktion erforderlich ist, lautet wie folgt:
+Konfigurieren Sie ihr App-Manifest wie folgt, um die freigegebene Besprechungsphase zu aktivieren:
 
 ```json
 "configurableTabs": [
@@ -168,15 +168,17 @@ Die Manifeständerung, die zum Aktivieren dieser Funktion erforderlich ist, laut
   ]
 ```
 
-### <a name="post-meeting"></a>Nach der Besprechung
+Erfahren Sie, wie Sie [eine gemeinsame Besprechungsphase entwerfen.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
-Die Konfigurationen nach der Besprechung und vor der [Besprechung](#pre-meeting) sind identisch.
+### <a name="after-a-meeting"></a>Nach einer Besprechung
+
+Die Konfigurationen nach und [vor Besprechungen](#before-a-meeting) sind identisch.
 
 ## <a name="code-sample"></a>Codebeispiel
 
 |Beispielname | Beschreibung | Beispiel |
 |----------------|-----------------|--------------|----------------|-----------|
-| Besprechungs-App | Veranschaulicht, wie die Besprechungstoken-Generator-App verwendet wird, um ein Token anzufordern, das sequenziell generiert wird, damit jeder Teilnehmer eine angemessene Möglichkeit zur Interaktion hat. Dies kann in Situationen wie Meetings mit Derbesprechung, Q&A-Sitzungen usw. hilfreich sein. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+| Besprechungs-App | Veranschaulicht, wie die Besprechungstoken-Generator-App verwendet wird, um ein Token anzufordern, das sequenziell generiert wird, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Dies kann in Situationen wie Beibesprechungen und Q&A-Sitzungen hilfreich sein. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
 ## <a name="see-also"></a>Siehe auch
 

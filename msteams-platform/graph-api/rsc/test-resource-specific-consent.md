@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Teams-Autorisierung OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 92c6d5d96c103fb5e0da6afd91357b5887b2ba10
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 8f5b293557ef7de9e4d551c5ae2bd7216e6e3fc0
+ms.sourcegitcommit: 261058171f1e3bbc822c5bcc0e9fba5a4de68000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069084"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53111128"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Testen von ressourcenspezifischen Zustimmungsberechtigungen in Teams
 
@@ -23,7 +23,7 @@ Die ressourcenspezifische Zustimmung (RESOURCE-Specific Consent, RSC) ist eine M
 > [!NOTE]
 > Zum Testen der RSC-Berechtigungen muss ihre Teams App-Manifestdatei einen **webApplicationInfo-Schlüssel** enthalten, der mit den folgenden Feldern gefüllt ist:
 >
-> - **id:** Ihre Azure AD-App-ID, siehe [Registrieren Ihrer App im Azure AD-Portal.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)
+> - **id:** Ihre Azure AD-App-ID, siehe [Registrieren Ihrer App im Azure AD-Portal.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)
 > - **Ressource:** Eine beliebige Zeichenfolge finden Sie in der Notiz im [App-Manifest aktualisieren Teams.](resource-specific-consent.md#update-your-teams-app-manifest)
 > - **Anwendungsberechtigungen:** RSC-Berechtigungen für Ihre App finden Sie unter ["Ressourcenspezifische Berechtigungen".](resource-specific-consent.md#resource-specific-permissions)
 

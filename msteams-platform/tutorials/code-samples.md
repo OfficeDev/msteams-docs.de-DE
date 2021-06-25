@@ -1,28 +1,33 @@
 ---
 title: App-Codebeispiele
-description: Links und Beschreibungen von Beispielanwendungen für Microsoft Teams Entwicklerplattform
+description: Links und Beschreibungen von Beispielanwendungen für die Microsoft Teams-Entwicklerplattform
 localization_priority: Normal
 ms.topic: reference
-keywords: Microsoft Teams Entwicklerbeispiele
-ms.openlocfilehash: 99a30d78a1e8dad6f2147e66ed67f7b08eeaef04
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+keywords: Beispiele für Microsoft Teams-Entwickler
+ms.openlocfilehash: dbd14d84dadf333347fcab51bb354b38f492b0b6
+ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018369"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53114231"
 ---
-# <a name="tutorials-for-the-microsoft-teams-developer-platform"></a>Lernprogramme für Microsoft Teams Entwicklerplattform
+# <a name="overview"></a>Übersicht
 
-Hier finden Sie eine Liste von Lernprogrammen, die zeigen, wie Sie die Funktionen Teams Entwicklerplattform erweitern können, indem Sie benutzerdefinierte Apps erstellen.
+In diesem Lernprogramm erfahren Sie, wie Sie eine App mit C# oder .NET, Node.js und Yeoman Generator erstellen. Dieses Lernprogramm enthält außerdem mehrere Codebeispiele für Registerkarten, Bots, Messaging-Erweiterungen, Webhooks und Connectors sowie Graph-APIs zum Anpassen und Konfigurieren Ihrer Apps. Darüber hinaus können Sie sich auch in den Microsoft Learn-Abschnitten informieren, in denen Sie die Funktionen der Teams Entwicklerplattform erweitern können, indem Sie benutzerdefinierte Apps erstellen.  
 
 ## <a name="getting-started-with-microsoft-learn"></a>Erste Schritte mit Microsoft Learn
 
 | **Funktionalität**| **Lernmodul**|
 |--------|-------------|
-| Registerkarten – eingebettete Weberfahrungen  |  [Erstellen einer eingebetteten Weboberfläche mit Registerkarten für Microsoft Teams](https://docs.microsoft.com/learn/modules/embedded-web-experiences/) |
-| Webhooks und Connectors  |  [Verbinden von Webdiensten mit Microsoft Teams mit Webhooks und Office 365-Connectors](https://docs.microsoft.com/learn/modules/msteams-webhooks-connectors/) |
-|Messaging-Erweiterungen  | [Aufgabenorientierte Interaktionen in Microsoft Teams mit Messaging-Erweiterungen](https://docs.microsoft.com/learn/modules/msteams-messaging-extensions/)  |
-| Aufgabenmodule |  [Sammeln von Eingaben in Microsoft Teams Aufgabenmodulen](https://docs.microsoft.com/learn/modules/msteams-task-modules/) |
-| Unterhaltungsbots  | [Erstellen von interaktiven Unterhaltungsbots für Microsoft Teams](https://docs.microsoft.com/learn/modules/msteams-conversation-bots/)  |
+| Registerkarten – eingebettete Weboberflächen  |  [Erstellen einer eingebetteten Weboberfläche mit Registerkarten für Microsoft Teams](/learn/modules/embedded-web-experiences/) |
+| Webhooks und Connectors  |  [Verbinden von Webdiensten mit Microsoft Teams mit Webhooks und Office 365-Connectors](/learn/modules/msteams-webhooks-connectors/) |
+|Messaging-Erweiterungen  | [Aufgabenorientierte Interaktionen in Microsoft Teams mit Messaging-Erweiterungen](/learn/modules/msteams-messaging-extensions/)  |
+| Aufgabenmodule |  [Sammeln von Eingaben in Microsoft Teams mit Aufgabenmodulen](/learn/modules/msteams-task-modules/) |
+| Unterhaltungs-Bots  | [Erstellen von interaktiven Unterhaltungsbots für Microsoft Teams](/learn/modules/msteams-conversation-bots/)  |
 
+## <a name="see-also"></a>Siehe auch
 
+* [Erstellen einer App mithilfe von C# oder .NET](get-started-dotnet-app-studio.md)
+* [Erstellen einer App mithilfe von Node.js](get-started-nodejs-app-studio.md)
+* [Erstellen einer App mithilfe des Yeoman-Generators](get-started-yeoman.md)
+* [Codebeispiele](https://github.com/OfficeDev/Microsoft-Teams-Samples)
