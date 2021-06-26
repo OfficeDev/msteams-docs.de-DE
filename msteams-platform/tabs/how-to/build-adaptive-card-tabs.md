@@ -4,41 +4,45 @@ author: KirtiPereira
 description: Erstellen von Registerkarten mit adaptiven Karten
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: d65fc537b5282c050d891a6a73ff114c630e2c1c
-ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
+ms.openlocfilehash: c551ae748805ddc380fb3213b67f704c73060a2f
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52668848"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140285"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
 > [!IMPORTANT]
-> * Dieses Feature befindet sich im [öffentlichen Developer Preview](~/resources/dev-preview/developer-preview-intro.md) und wird auf Desktop- und Mobilgeräten unterstützt. Unterstützung im Webbrowser wird in Kürze verfügbar sein.
+> * Dieses Feature befindet sich in der [Öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md) und wird auf Desktops und mobilen Geräten unterstützt. Der Support im Webbrowser wird in Kürze verfügbar sein.
 > * Registerkarten mit adaptiven Karten werden derzeit nur als persönliche Apps unterstützt.
 
-Verwenden Sie adaptive Karten, um Registerkarten mühelos zu erstellen. Sie können Ihre Registerkarten mit fertigen Benutzeroberflächen-Lego-Blöcken erstellen, die auf Desktop, Web und Mobil nativ aussehen und sich als nativ anfühlen. Das Erstellen von Registerkarten mit adaptiven Karten zentralisiert alle Teams-App-Funktionen um ein Bot-Back-End und das Frontend adaptiver Karten, sodass kein anderes Back-End für Ihren Bot und Ihre Registerkarten benötigt wird. Dadurch werden die Server- und Wartungskosten Ihrer Teams erheblich reduziert. Dieser Artikel hilft Ihnen, die änderungen zu verstehen, die am App-Manifest vorgenommen werden müssen, wie die Aktivität aufgerufen wird und wie Informationen auf der Registerkarte mit adaptiven Karten aufgerufen werden, sowie die Auswirkungen auf den Workflow des Aufgabenmoduls. 
+Beim Entwickeln einer Registerkarte mithilfe der herkömmlichen Methode können diese Probleme auftreten, z. B. HTML- und CSS-Überlegungen, langsame Ladezeiten, iFrame-Einschränkungen sowie Serverwartung und -kosten. Registerkarten für adaptive Karten sind eine neue Methode zum Erstellen von Registerkarten in Teams. Anstatt Webinhalte in einen IFrame einzubetten, können Sie adaptive Karten auf einer Registerkarte rendern. Während das Front-End mit adaptiven Karten gerendert wird, wird das Back-End von einem Bot unterstützt. Der Bot ist dafür verantwortlich, Anforderungen zu akzeptieren und entsprechend mit der gerenderten adaptiven Karte zu antworten.
 
-Die folgende Abbildung zeigt Buildregisterkarten mit adaptiven Karten auf Desktop- und Mobilgeräten: Beispiel für adaptive Karten, die :::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="in Registerkarten gerendert werden." border="false":::
+Sie können Ihre Registerkarten mit vorgefertigten Ui-Blocks (Ui) erstellen, die auf Desktops, im Web und auf mobilgeräten systemintern aussehen und sich nativ anfühlen. Dieser Artikel hilft Ihnen zu verstehen, welche Änderungen am App-Manifest vorgenommen werden müssen, wie das Aufrufen von Aktivitätsanforderungen und das Senden von Informationen auf der Registerkarte mit adaptiven Karten und die Auswirkungen auf den Aufgabenmodulworkflow erfolgt.
+
+Die folgende Abbildung zeigt Buildregisterkarten mit adaptiven Karten auf Desktops und mobilgeräten:
+
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="Beispiel für eine adaptive Karte, die auf Registerkarten gerendert wird." border="false":::
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Bevor Sie mit der Verwendung adaptiver Karten zum Erstellen von Registerkarten beginnen, müssen Sie:
+Bevor Sie mit der Verwendung adaptiver Karten zum Erstellen von Registerkarten beginnen, müssen Sie Folgendes tun:
 
-* Machen Sie sich mit [Bot-Entwicklung,](../../bots/what-are-bots.md) [adaptiven Karten](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)und [Aufgabenmodulen](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
-* Sie können einen Bot in Teams Für Ihre Entwicklung ausführen.
-* Be in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
+* Machen Sie sich mit [der Bot-Entwicklung,](../../bots/what-are-bots.md) [adaptiven Karten](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)und [Aufgabenmodulen](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams vertraut.
+* Lassen Sie einen Bot in Teams für Ihre Entwicklung ausführen.
+* Seien Sie in [der Öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md).
 
 ## <a name="changes-to-app-manifest"></a>Änderungen am App-Manifest
 
-Persönliche Apps, die Registerkarten rendern, müssen ein `staticTabs` Array in ihr App-Manifest enthalten. Adaptive Kartenregisterkarten werden gerendert, wenn `contentBotId` die Eigenschaft in der Definition bereitgestellt `staticTab` wird. Statische Registerkartendefinitionen müssen entweder eine enthalten, die eine Adaptive Kartenregisterkarte oder eine , die eine typische gehostete Webinhaltsregisterkartenerfahrung `contentBotId` `contentUrl` an gibt.
+Persönliche Apps, die Registerkarten rendern, müssen ein `staticTabs` Array in ihrem App-Manifest enthalten. Registerkarten für adaptive Karten werden gerendert, wenn die `contentBotId` Eigenschaft in der Definition bereitgestellt `staticTab` wird. Statische Registerkartendefinitionen müssen entweder eine , eine Registerkarte für `contentBotId` adaptive Karten oder eine , die eine typische `contentUrl` gehostete Webinhaltsregisterkarte angeben.
 
 > [!NOTE]
-> Die `contentBotId` Eigenschaft ist derzeit manifest version 1.9 oder höher verfügbar. 
+> Die `contentBotId` Eigenschaft ist derzeit in der Manifestversion 1.9 oder höher verfügbar.
 
-Geben Sie `contentBotId` der Eigenschaft die Eigenschaft `botId` an, mit der die Registerkarte Adaptive Karte kommunizieren muss. Die für die Registerkarte Adaptive Karte konfigurierte wird im Parameter jeder Aufrufanforderung gesendet und kann verwendet werden, um verschiedene adaptive Kartenregisterkarten zu unterscheiden, die vom gleichen Bot `entityId` `tabContext` unterstützt werden. Weitere Informationen zu anderen statischen Registerkartendefinitionsfeldern finden Sie unter [Manifestschema](../../resources/schema/manifest-schema.md#statictabs).
+Stellen Sie der `contentBotId` Eigenschaft die Eigenschaft `botId` bereit, mit der die Registerkarte "Adaptive Karte" kommunizieren muss. Die `entityId` für die Registerkarte "Adaptive Karte" konfigurierte Karte wird im Parameter jeder Aufrufanforderung gesendet und kann verwendet `tabContext` werden, um adaptive Kartenregisterkarten zu unterscheiden, die vom gleichen Bot unterstützt werden. Weitere Informationen zu anderen statischen Registerkartendefinitionsfeldern finden Sie unter [Manifestschema.](../../resources/schema/manifest-schema.md#statictabs)
 
-Im Folgenden finden Sie ein Beispielmanifest für adaptive Kartenregisterkarten:
+Es folgt ein Beispiel für ein Registerkartenmanifest für adaptive Karten:
 
 ```json
 {
@@ -93,19 +97,19 @@ Im Folgenden finden Sie ein Beispielmanifest für adaptive Kartenregisterkarten:
 
 ## <a name="invoke-activities"></a>Aufrufen von Aktivitäten
 
-Die Kommunikation zwischen Ihrer Registerkarte für adaptive Karten und Ihrem Bot erfolgt über `invoke` Aktivitäten. Jede `invoke` Aktivität hat einen entsprechenden *Namen*. Verwenden Sie den Namen jeder Aktivität, um jede Anforderung zu unterscheiden. `tab/fetch` und `tab/submit` sind die aktivitäten, die in diesem Abschnitt behandelt werden.
+Die Kommunikation zwischen Ihrer Registerkarte "Adaptive Karte" und Ihrem Bot erfolgt über `invoke` Aktivitäten. Jede `invoke` Aktivität hat einen entsprechenden **Namen.** Verwenden Sie den Namen jeder Aktivität, um jede Anforderung zu unterscheiden. `tab/fetch` und `tab/submit` sind die in diesem Abschnitt behandelten Aktivitäten.
 
-### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>Abrufen der adaptiven Karte zum Rendern auf einer Registerkarte
+### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>Abrufen einer adaptiven Karte zum Rendern auf einer Registerkarte
 
-`tab/fetch` ist die erste Aufrufanforderung, die Ihr Bot empfängt, wenn ein Benutzer eine Registerkarte für adaptive Karten öffnet. Wenn Ihr Bot die Anforderung empfängt, sendet er entweder eine Antwort **zur** Fortsetzung der Registerkarte oder eine Antwort der **Registerkartenauthentisierung.**
-Die **Fortsetzungsantwort** enthält ein Array für **Karten**, das vertikal auf die Registerkarte in der Reihenfolge des Arrays gerendert wird.
+`tab/fetch`ist die erste Aufrufanforderung, die Ihr Bot empfängt, wenn ein Benutzer eine Registerkarte für adaptive Karten öffnet. Wenn Ihr Bot die Anforderung empfängt, sendet er entweder eine **Antwort** zur Fortsetzung der Registerkarte oder eine **Tab-Authentifizierungsantwort.**
+Die **Fortsetzungsantwort** enthält ein Array für **Karten,** das vertikal auf der Registerkarte in der Reihenfolge des Arrays gerendert wird.
 
 > [!NOTE]
-> Die **Antwort auf** die Authentifizierung wird im Abschnitt Authentifizierung [ausführlich](#authentication) erläutert.
+> Weitere Informationen zur **Authentifizierungsantwort** finden Sie unter ["Authentifizierung".](#authentication)
 
-Die folgenden Codeausschnitte sind Beispiele für `tab/fetch` Anforderung und Antwort:
+Der folgende Code enthält Beispiele für `tab/fetch` Anforderung und Antwort:
 
-**`tab/fetch` request**
+**`tab/fetch` Anfrage**
 
 ```json
 // tab/fetch POST request: agents/{botId}/invoke
@@ -126,7 +130,7 @@ Die folgenden Codeausschnitte sind Beispiele für `tab/fetch` Anforderung und An
 }
 ```
 
-**`tab/fetch` response**
+**`tab/fetch` Antwort**
 
 ```json
 // tab/fetch **continue** POST response:
@@ -151,18 +155,18 @@ Die folgenden Codeausschnitte sind Beispiele für `tab/fetch` Anforderung und An
 }
 ```
 
-### <a name="handle-submits-from-adaptive-card"></a>Behandeln von Übermittelten von adaptiver Karte
+### <a name="handle-submits-from-adaptive-card"></a>Verarbeiten von Übermittlungen von einer adaptiven Karte
 
 Nachdem eine adaptive Karte auf der Registerkarte gerendert wurde, muss sie in der Lage sein, auf Benutzerinteraktionen zu reagieren. Diese Antwort wird von der `tab/submit` Aufrufanforderung verarbeitet.
 
-Wenn ein Benutzer auf der Registerkarte Adaptive Karte eine Schaltfläche auswählt, wird die Anforderung an Ihren Bot mit den entsprechenden Daten über die `tab/submit` *Action.Submit-Funktion* der adaptiven Karte ausgelöst. Die Adaptive Card-Daten sind über die Dateneigenschaft der Anforderung `tab/submit` verfügbar. Sie erhalten eine der folgenden Antworten auf Ihre Anforderung:
+Wenn ein Benutzer eine Schaltfläche auf der Registerkarte "Adaptive Karte" auswählt, wird die `tab/submit` Anforderung an Ihren Bot mit den entsprechenden Daten über die Funktion der `Action.Submit` adaptiven Karte ausgelöst. Die Daten der adaptiven Karte sind über die Dateneigenschaft der `tab/submit` Anforderung verfügbar. Sie erhalten eine der folgenden Antworten auf Ihre Anforderung:
 
-* Eine Http-Statuscodeantwort `200` ohne Text. Eine leere 200-Antwort führt zu keiner Aktion des Clients.
-* Auf der `200` **Standardregisterkarte wird die** Antwort fortgesetzt, wie im Abschnitt ["Adaptive Karte abrufen"](#fetch-adaptive-card-to-render-to-a-tab) erläutert. Eine Antwort **für die Fortsetzung** der Registerkarte löst den Client aus, um die gerenderte Adaptive Kartenregisterkarte mit den adaptiven Karten im Kartenarray der Fortsetzungsantwort **zu** aktualisieren.
+* Eine HTTP-Statuscodeantwort `200` ohne Textkörper. Eine leere 200-Antwort führt dazu, dass der Client keine Aktion ausführt.
+* Auf der `200` Standardregisterkarte wird die Antwort **fortgesetzt,** wie beim [Abrufen einer adaptiven Karte](#fetch-adaptive-card-to-render-to-a-tab)erläutert. Eine **Fortsetzungsantwort** der Registerkarte löst aus, dass der Client die gerenderte Registerkarte "Adaptive Karte" mit den adaptiven Karten aktualisiert, die im Kartenarray der **Fortsetzungsantwort** bereitgestellt werden.
 
-Die folgenden Codeausschnitte sind Beispiele für `tab/submit` Anforderung und Antwort:
+Der folgende Code enthält Beispiele für `tab/submit` Anforderung und Antwort:
 
-**`tab/submit` request**
+**`tab/submit` Anfrage**
 
 ```json
 // tab/submit POST request: agents/{botId}/invoke:
@@ -187,7 +191,7 @@ Die folgenden Codeausschnitte sind Beispiele für `tab/submit` Anforderung und A
 }
 ```
 
-**`tab/submit` response**
+**`tab/submit` Antwort**
 
 ```json
 //tab/fetch **continue** POST response:
@@ -209,17 +213,17 @@ Die folgenden Codeausschnitte sind Beispiele für `tab/submit` Anforderung und A
 }
 ```
 
-## <a name="understand-task-module-workflow"></a>Verstehen des Aufgabenmodulworkflows
+## <a name="understand-task-module-workflow"></a>Grundlegendes zum Aufgabenmodulworkflow
 
-Das Aufgabenmodul verwendet auch adaptive Karte zum Aufrufen und `task/fetch` Zum Aufrufen von Anforderungen und `task/submit` Antworten. Weitere Informationen finden Sie unter [Using Task Modules in Microsoft Teams bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
+Das Aufgabenmodul verwendet auch adaptive Karte zum Aufrufen `task/fetch` und `task/submit` Anfordern und Antworten. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Microsoft Teams Bots.](../../task-modules-and-cards/task-modules/task-modules-bots.md)
 
-Mit der Einführung der Registerkarte Adaptive Karte ändert sich jedoch, wie der Bot auf eine Anforderung `task/submit` reagiert. Wenn Sie eine Registerkarte für adaptive Karten verwenden, antwortet der Bot auf die Aufrufanforderung mit der Standard-Tab-Continue-Antwort und schließt `task/submit` das Aufgabenmodul.  Die Registerkarte Adaptive Karte wird aktualisiert, indem die neue Liste der Im Antworttext der Registerkarte **"Fortsetzung"** bereitgestellten Karten gerendert wird.
+Mit der Einführung der Registerkarte "Adaptive Karte" gibt es eine Änderung in der Art und Weise, wie der Bot auf eine `task/submit` Anforderung antwortet. Wenn Sie eine Registerkarte für adaptive Karten verwenden, antwortet der Bot auf die `task/submit` Aufrufanforderung mit der Standardregisterkarte **"Continue"-Antwort** und schließt das Aufgabenmodul. Die Registerkarte "Adaptive Karte" wird aktualisiert, indem die neue Liste der Im Antworttext der Registerkarte **"Fortsetzen"** bereitgestellten Karten gerendert wird.
 
-### <a name="invoke-taskfetch"></a>Invoke `task/fetch`
+### <a name="invoke-taskfetch"></a>Aufrufen `task/fetch`
 
-Die folgenden Codeausschnitte sind Beispiele für `task/fetch` Anforderung und Antwort:
+Der folgende Code enthält Beispiele für `task/fetch` Anforderung und Antwort:
 
-**`task/fetch` request**
+**`task/fetch` Anfrage**
 ```json
 // task/fetch POST request: agents/{botId}/invoke
 {
@@ -242,7 +246,7 @@ Die folgenden Codeausschnitte sind Beispiele für `task/fetch` Anforderung und A
 }
 ```
 
-**`task/fetch` response**
+**`task/fetch` Antwort**
 
 ```json
 // task/fetch POST response: agents/{botId}/invoke
@@ -263,11 +267,11 @@ Die folgenden Codeausschnitte sind Beispiele für `task/fetch` Anforderung und A
 }
 ```
 
-### <a name="invoke-tasksubmit"></a>Invoke `task/submit`
+### <a name="invoke-tasksubmit"></a>Aufrufen `task/submit`
 
-Die folgenden Codeausschnitte sind Beispiele für `task/submit` Anforderung und Antwort:
+Der folgende Code enthält Beispiele für `task/submit` Anforderung und Antwort:
 
-**`task/submit` request**
+**`task/submit` Anfrage**
 
 ```json
 // task/submit POST request: agent/{botId}/invoke:
@@ -289,7 +293,7 @@ Die folgenden Codeausschnitte sind Beispiele für `task/submit` Anforderung und 
 }
 ```
 
-**`task/submit` Antworttyp der Registerkarte**
+**`task/submit` Registerkartenantworttyp**
 
 ```json
 // tab/fetch **continue** POST response: 
@@ -318,31 +322,31 @@ Die folgenden Codeausschnitte sind Beispiele für `task/submit` Anforderung und 
 
 ## <a name="authentication"></a>Authentifizierung
 
-In den vorherigen Abschnitten dieses Artikels haben Sie gesehen, dass die meisten Entwicklungsparadigmen aus den Aufgabenmodulanforderungen und -antworten in Registerkartenanforderungen und -antworten extrapoliert werden können. Beim Behandeln der Authentifizierung folgt der Workflow für adaptive Kartenregisterkarte jedoch dem Authentifizierungsmuster für Messagingerweiterungen. Weitere Informationen finden Sie unter [Hinzufügen der Authentifizierung](../../messaging-extensions/how-to/add-authentication.md). 
+In den vorherigen Abschnitten dieses Artikels haben Sie gesehen, dass die meisten Entwicklungsparadigmen aus den Aufgabenmodulanforderungen und -antworten in Registerkartenanforderungen und -antworten erweitert werden können. Wenn es um die Behandlung der Authentifizierung geht, folgt der Workflow für die Registerkarte "Adaptive Karte" dem Authentifizierungsmuster für Messaging-Erweiterungen. Weitere Informationen finden Sie unter Hinzufügen der [Authentifizierung.](../../messaging-extensions/how-to/add-authentication.md)
 
-Im Abschnitt [Aufrufaktivitäten](#invoke-activities) wurden Sie darüber informiert, dass Anforderungen entweder eine Fortsetzungs- oder eine `tab/fetch` **Authentifizierungsantwort haben** können.  Wenn eine `tab/fetch` Anforderung ausgelöst wird und eine Antwort der **Registerkartenauthentisierung** empfängt, wird dem Benutzer die Anmeldeseite angezeigt. 
+`tab/fetch` Anforderungen können entweder eine **Fortsetzungs-** oder eine **Authentifizierungsantwort** haben. Wenn eine `tab/fetch` Anforderung ausgelöst wird und eine Registerkartenauthentifizierungsantwort empfängt, wird dem Benutzer die Anmeldeseite angezeigt. 
 
-**So rufen Sie einen Authentifizierungscode über `tab/fetch` das Aufrufen ab**
+**So rufen Sie einen Authentifizierungscode durch Aufrufen ab `tab/fetch`**
 
 1. Öffnen Sie Ihre App. Die Anmeldeseite wird angezeigt.
 
     > [!NOTE]
-    > Das App-Logo wird über die im App-Manifest definierte Eigenschaft bereitgestellt, und der Titel wird angezeigt, nachdem das Logo in der Eigenschaft definiert wurde, die im Antworttext der Registerkarte `icon` `title` **authentifizierung** zurückgegeben wird.
+    > Das App-Logo wird über die `icon` im App-Manifest definierte Eigenschaft bereitgestellt. Der Titel, der angezeigt wird, nachdem das Logo in der Eigenschaft definiert wurde, `title` die im Antworttext der **Registerkartenauthentifizierung** zurückgegeben wird.
 
-1. Wählen Sie **Anmelden** aus. Sie werden zu der Authentifizierungs-URL umgeleitet, die in der `value` Eigenschaft des **Authentifizierungsantworttexts** angegeben ist. 
-1. Ein Popupfenster wird geöffnet. In diesem Popupfenster wird Ihre Webseite mithilfe der Authentifizierungs-URL hostet.
-1. Schließen Sie nach der Anmeldung das Fenster. Ein *Authentifizierungscode* wird an den Teams gesendet.
-1. Der Teams-Client gibt die Anforderung dann erneut an Ihren Dienst weiter, der den von Ihrer gehosteten Webseite bereitgestellten Authentifizierungscode `tab/fetch` enthält. 
+1. Wählen Sie **Anmelden** aus. Sie werden zu der Authentifizierungs-URL umgeleitet, die in der `value` Eigenschaft des **Authentifizierungsantworttexts** angegeben ist.
+1. Ein Popupfenster wird geöffnet. In diesem Popupfenster wird Ihre Webseite mithilfe der Authentifizierungs-URL gehostet.
+1. Schließen Sie nach der Anmeldung das Fenster. Ein **Authentifizierungscode** wird an den Teams Client gesendet.
+1. Der Teams-Client sendet dann die `tab/fetch` Anforderung erneut an Ihren Dienst, der den von Ihrer gehosteten Webseite bereitgestellten Authentifizierungscode enthält.
 
 ### <a name="tabfetch-authentication-data-flow"></a>`tab/fetch` Authentifizierungsdatenfluss
 
-Die folgende Abbildung bietet eine Übersicht über die Funktionsweise des Authentifizierungsdatenflusses für einen `tab/fetch` Aufruf.
+Die folgende Abbildung enthält eine Übersicht über die Funktionsweise des Authentifizierungsdatenflusses für einen `tab/fetch` Aufruf.
 
 :::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Beispiel für den Authentifizierungsfluss für adaptive Kartenregisterkarten." border="false":::
 
-**`tab/fetch` Antwort auf Authentifizierung**
+**`tab/fetch` Authentifizierungsantwort**
 
-Der folgende Codeausschnitt ist ein Beispiel für `tab/fetch` die Authentifizierungsantwort:
+Der folgende Code enthält ein Beispiel für die `tab/fetch` Authentifizierungsantwort:
 
 ```json
 // tab/auth POST response (openURL)
@@ -364,7 +368,7 @@ Der folgende Codeausschnitt ist ein Beispiel für `tab/fetch` die Authentifizier
 
 ### <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt ein neu ausgestelltes Anforderungsbeispiel:
+Der folgende Code zeigt ein neu ausgestelltes Anforderungsbeispiel:
 
 ```json
 {
@@ -410,6 +414,20 @@ Das folgende Beispiel zeigt ein neu ausgestelltes Anforderungsbeispiel:
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Adaptive Karte](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Adaptive Karte](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [registerkarten Teams](~/tabs/what-are-tabs.md)
+* [Voraussetzungen](~/tabs/how-to/tab-requirements.md)
+* [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
+* [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
+* [Erstellen einer Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md)
+* [Erstellen einer Konfigurationsseite](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Erstellen einer Seite zum Entfernen ihrer Registerkarte](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
+* [Kontext für Ihre Registerkarte erhalten](~/tabs/how-to/access-teams-context.md)
+* [Registerkarten für Unterhaltungen erstellen](~/tabs/how-to/conversational-tabs.md)
+* [Änderungen am Registerkartenrand](~/resources/removing-tab-margins.md)
 
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Aufgeklappte Registerkartenverknüpfung und Phasenansicht](~/tabs/tabs-link-unfurling.md)

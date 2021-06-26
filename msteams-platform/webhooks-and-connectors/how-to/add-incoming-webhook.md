@@ -1,74 +1,98 @@
 ---
-title: Senden externer Anfragen an Microsoft Teams mit eingehenden Webhooks
-author: surbhigupta
-description: Hinzufügen eines eingehenden Webhooks zur Teams-App
+title: Erstellen eines eingehenden Webhooks
+author: laujan
+description: beschreibt, wie eingehende Webhooks zu Teams App hinzugefügt und externe Anforderungen an Teams mit eingehenden Webhooks gesendet werden.
 keywords: Teams-Registerkarten für ausgehenden Webhook
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: acaf2c7ba8c9c6d34399b51f3c0ef9a1110c0fb4
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 53fe9725148579325386fa4677bebb61fdb72c56
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068932"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140118"
 ---
-# <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>Senden externer Anfragen an Microsoft Teams mit eingehenden Webhooks
+# <a name="create-incoming-webhook"></a>Erstellen eines eingehenden Webhooks
 
-## <a name="what-are-incoming-webhooks-in-teams"></a>Was sind eingehende Webhooks in Teams?
-
-Bei eingehenden Webhooks handelt es sich um eine spezielle Art von Connectors in Microsoft Teams, die eine einfache Möglichkeit für externe Apps zum Freigeben von Inhalten in Teamkanälen bieten und häufig als Nachverfolgungs- und Benachrichtigungstools verwendet werden. Teams stellt eine eindeutige URL bereit, an die Sie eine JSON-Nutzlast mit der Nachricht senden, die Sie etwas senden (POST) möchten, typischerweise in einem Kartenformat. Karten sind Benutzeroberflächencontainer, die Inhalte und Aktionen zu einem bestimmten Thema enthalten und eine Möglichkeit darstellen, Nachrichtendaten auf einheitliche Weise zu präsentieren. Teams verwendet Karten in von drei Funktionen:
+Mit eingehendem Webhook können externe Apps Inhalte in Teams Kanälen freigeben. Diese Webhooks werden als Tracking- und Benachrichtigungstools verwendet. Sie stellen eine eindeutige URL bereit, an die Sie eine JSON-Nutzlast mit einer Nachricht im Kartenformat senden. Karten sind Benutzeroberflächencontainer, die Inhalte und Aktionen im Zusammenhang mit einem einzelnen Thema enthalten. Teams Karten in den folgenden Funktionen verwenden:
 
 * Bots
 * Messaging-Erweiterungen
 * Connectors
 
-## <a name="incoming-webhook-key-features"></a>Wichtige Features eingehender Webhooks
+## <a name="key-features-of-incoming-webhook"></a>Wichtige Features des eingehenden Webhooks
 
-| Feature | Beschreibung |
+Die folgende Tabelle enthält die Features und die Beschreibung des eingehenden Webhooks:
+
+| Features | Beschreibung |
 | ------- | ----------- |
-|Konfigurationsbereich|Eingehende Webhooks werden auf Kanalebene festgelegt und konfiguriert. Ausgehende Webhooks werden beispielsweise auf Teamebene festgelegt und konfiguriert.|
-|Sichere Ressourcendefinitionen|Nachrichten werden als JSON-Nutzlast formatiert. Diese deklarative Nachrichtenstruktur verhindert die Einschleusung von bösartigem Code, da auf dem Client keine Codeausführung stattfindet.|
-|Unterstützung für Aktion erfordernde Nachrichten|Wenn Sie festlegen, dass Nachrichten als Karten gesendet werden sollen, müssen Sie das Format für **Aktion erfordernde Nachrichtenkarten** verwenden. Aktion erfordernde Nachrichtenkarten werden in allen Office 365-Gruppen einschließlich Microsoft Teams unterstützt. Hier sind Links zur [Referenz zu Legacy-Nachrichtenkarten mit Aktionen](/outlook/actionable-messages/message-card-reference)und zum [Nachrichtenkarten-Playground](https://messagecardplayground.azurewebsites.net).|
-|Unabhängige HTTPS-Messaging-Unterstützung| Karten sind eine großartige Möglichkeit, Informationen in einer übersichtlichen und einheitlichen Weise darzustellen. Jedes Tool oder Framework, das HTTPS-POST-Anforderungen senden kann, kann über einen eingehenden Webhook Nachrichten an Microsoft Teams senden.|
-|Markdown-Unterstützung|Alle Textfelder in Aktion erfordernden Nachrichtenkarten unterstützen grundlegendes Markdown. **Verwenden Sie in Ihren Karten kein HTML-Markup.** HTML wird ignoriert und als reiner Text behandelt.|
+|Adaptive Karten mit einem eingehenden Webhook|Adaptive Karten können über eingehende Webhooks gesendet werden. Weitere Informationen finden Sie unter [Senden adaptiver Karten mit eingehenden Webhooks.](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook)|
+|Unterstützung für Aktion erfordernde Nachrichten|Aktion erfordernde Nachrichtenkarten werden in allen Office 365-Gruppen einschließlich Microsoft Teams unterstützt. Wenn Sie Nachrichten über Karten senden, müssen Sie das Kartenformat für Aktionen erfordernde Nachrichten verwenden. Weitere Informationen finden Sie unter [Legacy-Referenz für Nachrichtenkarten](/outlook/actionable-messages/message-card-reference) mit Aktionen und [Nachrichtenkarten-Playground.](https://messagecardplayground.azurewebsites.net)|
+|Unabhängige HTTPS-Messaging-Unterstützung|Karten stellen Informationen klar und konsistent bereit. Jedes Tool oder Framework, das HTTPS POST-Anforderungen senden kann, kann Nachrichten über einen eingehenden Webhook an Teams senden.|
+|Markdown-Unterstützung|Alle Textfelder in Aktion erfordernden Nachrichtenkarten unterstützen grundlegendes Markdown. Verwenden Sie kein HTML-Markup in Ihren Karten. HTML wird ignoriert und als reiner Text behandelt.|
+|Bereichskonfiguration|Eingehender Webhook ist auf Kanalebene beschränkt und konfiguriert.|
+|Sichere Ressourcendefinitionen|Nachrichten werden als JSON-Nutzlast formatiert. Diese deklarative Messagingstruktur verhindert das Einfügen von schädlichem Code.|
 
-> [!Note]
-> Teams-Bots, Messaging-Erweiterungen, eingehende Webhooks und das Bot-Framework unterstützen adaptive Karten, ein offenes, plattformübergreifendes Framework. [Teams-Connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) unterstützen derzeit keine adaptiven Karten. Es ist jedoch möglich, einen [Fluss](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) zu erstellen, der adaptive Karten an einen Teams-Kanal sendet.
+> [!NOTE]
+> * Teams Bots, Messaging-Erweiterungen, eingehender Webhook und bot Framework unterstützen adaptive Karten, ein offenes kartenübergreifendes Plattformframework. Derzeit unterstützen [Teams Connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) keine adaptiven Karten. Es ist jedoch möglich, einen [Fluss](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) zu erstellen, der adaptive Karten an einen Teams-Kanal sendet.
+> * Weitere Informationen zu Karten und Webhooks finden Sie unter [Adaptive Karten und eingehende Webhooks.](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks)
 
-## <a name="add-an-incoming-webhook-to-a-teams-channel"></a>Hinzufügen eines eingehenden Webhooks zu einem Teams-Kanal
+## <a name="create-incoming-webhook"></a>Erstellen eines eingehenden Webhooks
 
-> [!Important]  
-> Wenn in Ihrem Team unter **Einstellungen** => **Mitgliederberechtigungen** => **Mitgliedern das Erstellen, Aktualisieren und Entfernen von Connectors erlauben** ausgewählt ist, kann jedes Teammitglied einen Connector hinzufügen, ändern oder löschen.
+**So fügen Sie einem Teams Kanal einen eingehenden Webhook hinzu**
 
-**So fügen Sie einen eingehenden Webhook hinzu**
+1. Wechseln Sie zu dem Kanal, in dem Sie den Webhook hinzufügen möchten, und wählen Sie &#8226;&#8226;&#8226; **Weitere Optionen** in der oberen Navigationsleiste aus.
+1. Wählen Sie **connectors** aus dem Dropdownmenü aus:
 
-1. Navigieren Sie zu dem Kanal, dem Sie den Webhook hinzufügen möchten, und wählen Sie (&#8226;&#8226;&#8226;) *Weitere Optionen* in der oberen Navigationsleiste aus.
-1. Suchen Sie im Dropdownmenü **Connectors** nach **Eingehender Webhook**.
-1. Wählen Sie die Schaltfläche **Konfigurieren** aus, geben Sie einen Namen ein, und laden Sie optional einen Avatar für Ihren Webhook hoch.
-1. Im Dialogfeld wird eine eindeutige URL angezeigt, die dem Kanal zugeordnet ist. Stellen Sie sicher, dass Sie die **URL kopieren und speichern**, da Sie diese dem externen Dienst zur Verfügung stellen müssen.
-1. Klicken Sie auf die Schaltfläche **Fertig**. Der Webhook ist nun im Teamkanal verfügbar.
+    ![Connector auswählen](~/assets/images/connectors.png)
 
-## <a name="remove-an-incoming-webhook-from-a-teams-channel"></a>Entfernen eines eingehenden Webhooks aus einem Teams-Kanal
+1. Suchen Sie nach **eingehendem Webhook,** und wählen Sie **"Hinzufügen"** aus.
+1. Wählen Sie **"Konfigurieren",** geben Sie einen Namen an, und laden Sie bei Bedarf ein Bild für Ihren Webhook hoch:
 
-**So entfernen Sie einen eingehenden Webhook**
+    ![Schaltfläche "Konfigurieren"](~/assets/images/configure.png)
 
-1. Navigieren Sie zu dem Kanal, dem der Webhook hinzugefügt wurde, und wählen Sie (&#8226;&#8226;&#8226;) *Weitere Optionen* in der oberen Navigationsleiste aus.
-1. Wählen Sie im Dropdownmenü die Option **Connectors** aus.
-1. Wählen Sie auf der linken Seite unter **Verwalten** die Option **Konfiguriert** aus.
-1. Wählen Sie *Zahl konfiguriert* aus, um eine Liste Ihrer aktuellen Connectors zu sehen.
-1. Wählen Sie **Verwalten** neben dem Connector aus, den Sie löschen möchten.
-1. Wählen Sie die Schaltfläche **Entfernen** aus, und ein Dialogfeld *Konfiguration entfernen* wird angezeigt.
-1. Füllen Sie optional die Felder und Kontrollkästchen des Dialogfelds aus, bevor Sie die Schaltfläche **Entfernen** auswählen. Der Webhook wird aus dem Teamkanal gelöscht.
+1. Im Dialogfeld wird eine eindeutige URL angezeigt, die dem Kanal zugeordnet ist. Kopieren und speichern Sie die Webhook-URL, um Informationen an Microsoft Teams zu senden und **"Fertig"** auszuwählen:
 
-## <a name="distribution"></a>Verteilung
+    ![Eindeutige URL](~/assets/images/url.png)
 
-Sie haben drei Möglichkeiten, Ihren eingehenden Webhook zu verteilen:
+Der Webhook ist im Teams Kanal verfügbar.
 
-* Richten Sie einen eingehenden Webhook direkt für Ihr Team ein.
-* Fügen Sie eine Konfigurationsseite hinzu, und verpacken Sie Ihren eingehenden Webhook in einen [O365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md).
-* Verpacken und veröffentlichen Sie Ihren Connector als Teil Ihrer [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md)-Übermittlung.
+> [!NOTE]
+> Wählen Sie in Teams **Einstellungen**  >  **Mitgliedsberechtigungen** aus, damit Mitglieder Connectors  >  **erstellen, aktualisieren und entfernen können,** damit jedes Teammitglied einen Connector hinzufügen, ändern oder löschen kann.
+
+## <a name="remove-incoming-webhook"></a>Entfernen des eingehenden Webhooks
+
+**So entfernen Sie einen eingehenden Webhook aus einem Teams Kanal**
+
+1. Wechseln Sie zum Kanal.
+1. Wählen Sie in der oberen Navigationsleiste &#8226;&#8226;&#8226; **Weitere Optionen** aus.
+1. Wählen Sie im Dropdownmenü **Connectors** aus.
+1. Wählen Sie auf der linken Seite unter **Verwalten** die Option **"Konfiguriert"** aus.
+1. Wählen Sie die **< *1*> Konfiguriert aus,** um eine Liste Ihrer aktuellen Connectors anzuzeigen:
+
+    ![Konfigurierter Webhook](~/assets/images/configured.png)
+
+1. Wählen Sie neben dem Connector, den Sie entfernen möchten, die Option **"Verwalten"** aus:
+
+    ![Verwalten von Webhook](~/assets/images/manage.png)
+
+1. Wählen Sie **"Entfernen" aus:**
+
+    ![Entfernen von Webhook](~/assets/images/remove.png)
+
+    Das Dialogfeld Konfiguration **entfernen** wird angezeigt:
+
+    ![Entfernen der Konfiguration](~/assets/images/removeconfiguration.png)
+
+1. Füllen Sie die Felder und Kontrollkästchen des Dialogfelds aus, und wählen Sie **"Entfernen" aus:**
+
+    ![Endgültiges Entfernen](~/assets/images/finalremove.png)
+
+    Der Webhook wird aus dem Teams-Kanal entfernt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Senden von Nachrichten an Connectors und Webhooks](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [Erstellen eines ausgehenden Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [Erstellen eines Office 365-Connectors](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Erstellen und Senden von Nachrichten](~/webhooks-and-connectors/how-to/connectors-using.md)

@@ -5,40 +5,47 @@ keywords: Teams-Bots- Kartenformat
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: eead38b7f28ca740473a1df029e35b9ac624391d
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 877a16f884e91138dc656434438a5fe1dd2ffd6e
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994168"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140641"
 ---
-# <a name="format-cards-in-teams"></a>Formatieren von Karten in Teams
+# <a name="format-cards-in-microsoft-teams"></a>Formatieren von Karten in Microsoft Teams
 
-Je nach Kartentyp können Sie Rich-Text-Formatierungen entweder mit Markdown oder HTML zu Ihren Karten hinzufügen.
+Es folgen die beiden Möglichkeiten zum Hinzufügen von Rich-Text-Formatierungen zu Ihren Karten:
+* [Markdown](#format-cards-with-markdown)
+* [HTML](#format-cards-with-html)
 
-Karten unterstützen die Formatierung nur in der Texteigenschaft, nicht in den Titel- oder Untertiteleigenschaften. Die Formatierung kann mithilfe einer Teilmenge der XML-Formatierung (HTML) oder markdown abhängig vom Kartentyp angegeben werden. Für aktuelle und zukünftige Entwicklungskarten wird adaptive Karten mit Markdown-Formatierung empfohlen.
+Karten unterstützen die Formatierung nur in der Texteigenschaft, nicht in den Titel- oder Untertiteleigenschaften. Die Formatierung kann je nach Kartentyp mithilfe einer Teilmenge von XML- oder HTML-Formatierungen oder Markdown angegeben werden. Für die aktuelle und zukünftige Entwicklung adaptiver Karten wird die Markdown-Formatierung empfohlen.
 
-Die Formatierungsunterstützung unterscheidet sich zwischen verschiedenen Kartentypen, und das Rendern der Karte kann sich geringfügig zwischen dem Desktop und den mobilen Teams-Clients sowie Teams im Desktopbrowser unterscheiden.
+Die Formatierungsunterstützung unterscheidet sich zwischen Kartentypen. Das Rendern der Karte kann sich geringfügig zwischen dem Desktop- und dem mobilen Microsoft Teams-Clients sowie Teams im Desktopbrowser unterscheiden.
 
-Sie können ein Inlinebild mit einer beliebigen Teams Karte einschließen. Bilder, die als , oder Dateien formatiert werden  `.png` `.jpg` und `.gif` 1024 ×1024 px oder 1 MB nicht überschreiten dürfen. Animierte GIF-Dateien werden offiziell nicht unterstützt. Weitere Informationen finden Sie unter [Kartenreferenz.](./cards-reference.md#inline-card-images)
+Sie können ein Inlinebild mit einer beliebigen Teams Karte einschließen. Bilder können als , oder Dateien formatiert werden `.png` `.jpg` und `.gif` dürfen 1024 ×1024 px oder 1 MB nicht überschreiten. Animierte GIF-Dateien werden nicht unterstützt. Weitere Informationen finden Sie unter [Kartentypen.](./cards-reference.md#inline-card-images)
 
-## <a name="formatting-cards-with-markdown"></a>Formatieren von Karten mit Markdown
+Sie können adaptive Karten und Office 365 Connectorkarten mit Markdown formatieren, die bestimmte unterstützte Formatvorlagen enthalten.
 
-Es gibt zwei Kartentypen, die Markdown in Teams unterstützen:
+## <a name="format-cards-with-markdown"></a>Formatieren von Karten mit Markdown
 
-> [!div class="checklist"]
-> * **Adaptive Karten:** Markdown wird im Feld für adaptive Karten `Textblock` sowie und `Fact.Title` `Fact.Value` unterstützt. HTML wird in adaptiven Karten nicht unterstützt.
-> * **O365-Connectorkarten:** Markdown und beschränkter HTML-Code werden in Office 365 Connectorkarten in den Textfeldern unterstützt.
+Die folgenden Kartentypen unterstützen Markdown-Formatierung in Teams:
 
-# <a name="markdown-formatting-adaptive-cards"></a>[**Markdownformatierung: Adaptive Karten**](#tab/adaptive-md)
+* Adaptive Karten: Markdown wird im Feld für adaptive Karten `Textblock` sowie `Fact.Title` und `Fact.Value` unterstützt. HTML wird in adaptiven Karten nicht unterstützt.
+* O365-Connectorkarten: Markdown und beschränkter HTML-Code werden in O365-Connectorkarten in den Textfeldern unterstützt.
 
- Die unterstützten Formatvorlagen für `Textblock` `Fact.Title` und `Fact.Value` sind:
+Sie können Newlines für adaptive Karten verwenden `\r` oder `\n` Escapesequenzen für Newlines in Listen verwenden. Die Formatierung unterscheidet sich zwischen der Desktopversion und der mobilen Version von Teams für adaptive Karten. Kartenbasierte Erwähnungen werden in Web-, Desktop- und mobilen Clients unterstützt. Sie können die Eigenschaft zum Maskieren von Informationen verwenden, um bestimmte Informationen zu maskieren, z. B. Kennwort oder vertrauliche Informationen von Benutzern innerhalb des Eingabeelements für adaptive `Input.Text` Karten. Sie können die Breite einer adaptiven Karte mithilfe des `width` Objekts erweitern. Sie können die Typaheadunterstützung in adaptiven Karten aktivieren und die Eingabeauswahl filtern, während der Benutzer die Eingabe eingibt. Mit der Eigenschaft können Sie die Möglichkeit zum selektiven Anzeigen von `msteams` Bildern in der Phasenansicht hinzufügen.
+
+Die Formatierung unterscheidet sich zwischen der Desktopversion und der mobilen Version von Teams für adaptive Karten und Connectorkarten. In diesem Abschnitt können Sie das Beispiel für das Markdown-Format für adaptive Karten und Connectorkarten durchgehen.
+
+# <a name="markdown-format-for-adaptive-cards"></a>[Markdown-Format für adaptive Karten](#tab/adaptive-md)
+
+ Die folgende Tabelle enthält die unterstützten Formatvorlagen für `Textblock` `Fact.Title` , `Fact.Value` und:
 
 | Format | Beispiel | Markdown |
 | --- | --- | --- |
-| bold | **Bold** | ```**Bold**``` |
-| italic | _Italic_ | ```_Italic_``` |
-| Ungeordnete Liste | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| Fett | **Bold** | ```**Bold**``` |
+| Kursiv | _Italic_ | ```_Italic_``` |
+| Unsortierte Liste | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | Sortierte Liste | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | Hyperlinks |[Bing](https://www.bing.com/)| ```[Title](url)``` |
 
@@ -50,34 +57,32 @@ Die folgenden Markdown-Tags werden nicht unterstützt:
 * Vorformatierter Text
 * Blockzitaten
 
-> [!IMPORTANT]
-> Adaptive Karten unterstützen keine HTML-Formatierung.
-
 ### <a name="newlines-for-adaptive-cards"></a>Newlines für adaptive Karten
 
-In Listen können Sie die `\r` `\n` Oder Escapesequenzen für Newlines verwenden. Die Verwendung `\n\n` in einer Liste bewirkt, dass das nächste Element in der Liste eingezogen wird. Wenn Sie newlines an anderer Stelle im Textblock benötigen, verwenden Sie `\n\n` .
+Sie können die `\r` `\n` Oder Escapesequenzen für Newlines in Listen verwenden. Die Verwendung `\n\n` in Listen bewirkt, dass das nächste Element in der Liste eingezogen wird. Wenn Sie newlines an anderer Stelle im TextBlock benötigen, verwenden Sie `\n\n` .
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops für adaptive Karten
 
-Die Formatierung unterscheidet sich geringfügig zwischen der Desktopversion und der mobilen Version von Teams.
-
-Auf dem Desktop wird die Markdown-Formatierung für adaptive Karten sowohl in Webbrowsern als auch in der Teams Clientanwendung wie folgt angezeigt:
+Auf dem Desktop wird die Markdown-Formatierung für adaptive Karten wie in der folgenden Abbildung in Webbrowsern und in der Teams Clientanwendung angezeigt:
 
 ![Markdown-Formatierung für adaptive Karten im Desktopclient](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
-Unter iOS wird die Markdown-Formatierung für adaptive Karten wie folgt angezeigt:
+Unter iOS wird die Markdown-Formatierung für adaptive Karten wie in der folgenden Abbildung dargestellt angezeigt:
 
 ![Markdown-Formatierung adaptiver Karten in iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
-Unter Android wird die Markdown-Formatierung für adaptive Karten wie folgt angezeigt:
+Unter Android wird die Markdown-Formatierung für adaptive Karten wie in der folgenden Abbildung dargestellt angezeigt:
 
 ![Markdown-Formatierung für adaptive Karten in Android](../../assets/images/cards/Adaptive-markdown-Android.png)
 
-### <a name="more-information-on-adaptive-cards"></a>Weitere Informationen zu adaptiven Karten
+Weitere Informationen finden Sie unter [Textfeatures in adaptiven Karten.](/adaptive-cards/create/textfeatures)
 
-[Textfeatures in adaptiven Karten](/adaptive-cards/create/textfeatures) Die in diesem Thema erwähnten Datums- und Lokalisierungsfeatures werden in Teams nicht unterstützt.
+> [!NOTE]
+> Die in diesem Abschnitt erwähnten Datums- und Lokalisierungsfeatures werden in Teams nicht unterstützt.
 
-### <a name="formatting-sample-for-adaptive-cards"></a>Formatierungsbeispiel für adaptive Karten
+### <a name="adaptive-cards-format-sample"></a>Beispiel für adaptive Kartenformat
+
+Der folgende Code zeigt ein Beispiel für die Formatierung adaptiver Karten:
 
 ``` json
 {
@@ -113,23 +118,23 @@ Unter Android wird die Markdown-Formatierung für adaptive Karten wie folgt ange
 
 ### <a name="mention-support-within-adaptive-cards-v12"></a>Erwähnen der Unterstützung in adaptiven Karten v1.2
 
-Kartenbasierte Erwähnungen werden in Web-, Desktop- und mobilen Clients unterstützt. Sie können @Erwähnungen in einem adaptiven Kartentext für Bots und Antworten auf Messaging-Erweiterungen hinzufügen. Um @Erwähnungen in Karten hinzuzufügen, befolgen Sie die gleiche Benachrichtigungslogik und dasselbe Rendering wie nachrichtenbasierte [Erwähnungen in Kanal- und Gruppenchatunterhaltungen.](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)
+Sie können @mentions in einem Textkörper für adaptive Karten für Bots und Messaging-Erweiterungsantworten hinzufügen. Um @mentions in Karten hinzuzufügen, folgen Sie der gleichen Benachrichtigungslogik und dem Rendern wie nachrichtenbasierte [Erwähnungen in Kanal- und Gruppenchatunterhaltungen.](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)
 
 Bots und Messaging-Erweiterungen können Erwähnungen innerhalb des Karteninhalts in [TextBlock-](https://adaptivecards.io/explorer/TextBlock.html) und [FactSet-Elementen](https://adaptivecards.io/explorer/FactSet.html) enthalten.
 
 > [!NOTE]
-> * [Medienelemente](https://adaptivecards.io/explorer/Media.html) werden derzeit in adaptiven Karten v1.2 auf der Teams Plattform nicht unterstützt.
-> * Kanal- & Teamerwähnungen werden in Botnachrichten nicht unterstützt.
-
-#### <a name="constructing-mentions"></a>Erstellen von Erwähnungen
+> * [Medienelemente](https://adaptivecards.io/explorer/Media.html) werden derzeit in adaptiven Karten v1.2 auf der Teams-Plattform nicht unterstützt.
+> * Kanal- und Teamerwähnungen werden in Botnachrichten nicht unterstützt.
 
 Um eine Erwähnung in eine adaptive Karte aufzunehmen, muss Ihre App die folgenden Elemente enthalten:
 
 * `<at>username</at>` in den unterstützten adaptiven Kartenelementen.
-* Das `mention` Objekt innerhalb einer Eigenschaft im `msteams` Karteninhalt, das die Teams Benutzer-ID des erwähnten Benutzers enthält.
+* Das `mention` Objekt innerhalb einer Eigenschaft im `msteams` Karteninhalt enthält die Teams Benutzer-ID des erwähnten Benutzers.
 * Dies `userId` ist für Ihre Bot-ID und einen bestimmten Benutzer eindeutig. Es kann verwendet werden, um einen bestimmten Benutzer zu @mention. Die `userId` kann mithilfe einer der im [Abrufen der Benutzer-ID](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)erwähnten Optionen abgerufen werden.
 
 #### <a name="sample-adaptive-card-with-a-mention"></a>Beispiel für eine adaptive Karte mit einer Erwähnung
+
+Der folgende Code zeigt ein Beispiel für eine adaptive Karte mit einer Erwähnung:
 
 ``` json
 {
@@ -161,12 +166,17 @@ Um eine Erwähnung in eine adaptive Karte aufzunehmen, muss Ihre App die folgend
 ```
 
 ### <a name="information-masking-in-adaptive-cards"></a>Informationsformatierung in adaptiven Karten
-Verwenden Sie die Eigenschaft zum Maskieren von Informationen, um bestimmte Informationen zu maskieren, z. B. Kennwort oder vertrauliche Informationen von Benutzern innerhalb des Eingabeelements für adaptive [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) Karten. 
+
+Verwenden Sie die Eigenschaft zum Maskieren von Informationen, um bestimmte Informationen zu maskieren, z. B. Kennwort oder vertrauliche Informationen von Benutzern innerhalb des Eingabeelements für adaptive [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) Karten.
 
 > [!NOTE]
-> Das Feature unterstützt nur die clientseitige Informationsmaske, der maskierte Eingabetext wird als Klartext an die https-Endpunktadresse gesendet, die während der [Botkonfiguration](../../build-your-first-app/build-bot.md)angegeben wurde. 
+> Das Feature unterstützt nur die clientseitige Informationsmaske. Der maskierte Eingabetext wird als Klartext an die HTTPS-Endpunktadresse gesendet, die während der [Botkonfiguration](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint)angegeben wurde.
+
+Um Informationen in adaptiven Karten zu maskieren, fügen Sie die `isMasked` Eigenschaft zum **Eingeben** `Input.Text` hinzu, und legen Sie ihren Wert auf **"true"** fest.
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>Beispiel für adaptive Karte mit Maskierungseigenschaft
+
+Der folgende Code zeigt ein Beispiel für eine adaptive Karte mit Maskierungseigenschaft:
 
 ```json
 {
@@ -181,13 +191,16 @@ Die folgende Abbildung ist ein Beispiel für die Maskierung von Informationen in
 ![Maskierungsinformationsbild](../../assets/images/cards/masking-information-view.png)
 
 ### <a name="full-width-adaptive-card"></a>Adaptive Karte mit voller Breite
-Sie können die `msteams` Eigenschaft verwenden, um die Breite einer adaptiven Karte zu erweitern und zusätzlichen Canvas-Platz zu nutzen. Informationen zur Verwendung der Eigenschaft finden Sie im folgenden Beispiel:
 
-#### <a name="constructing-full-width-cards"></a>Erstellen von Karten mit voller Breite
-Um eine adaptive Karte mit voller Breite zu erstellen, muss das `width` Objekt in der Eigenschaft im `msteams` Karteninhalt auf . `Full`
-Darüber hinaus muss Ihre App die folgenden Elemente enthalten:
+Sie können die `msteams` Eigenschaft verwenden, um die Breite einer adaptiven Karte zu erweitern und zusätzlichen Canvas-Platz zu nutzen. Der nächste Abschnitt enthält Informationen zur Verwendung der Eigenschaft.
+
+#### <a name="construct-full-width-cards"></a>Erstellen von Karten mit voller Breite
+
+Um eine adaptive Karte mit voller Breite zu erstellen, muss das `width` Objekt in der Eigenschaft im `msteams` Karteninhalt auf festgelegt `Full` werden.
 
 #### <a name="sample-adaptive-card-with-full-width"></a>Beispiel für adaptive Karte mit voller Breite
+
+Um eine adaptive Karte mit voller Breite zu erstellen, muss Ihre App die Elemente aus dem folgenden Codebeispiel enthalten:
 
 ``` json
 {
@@ -210,19 +223,23 @@ Darüber hinaus muss Ihre App die folgenden Elemente enthalten:
 }
 ```
 
-Eine adaptive Karte mit voller Breite wird wie folgt angezeigt: ![ Ansicht "Adaptive Karte mit voller Breite"](../../assets/images/cards/full-width-adaptive-card.png)
+Die folgende Abbildung zeigt eine adaptive Karte mit voller Breite:
 
-Wenn Sie die Eigenschaft nicht `width` auf *"Vollständig"* festgelegt haben, wird die Standardansicht der adaptiven Karte wie folgt angezeigt: Ansicht für ![ adaptive Karten mit geringer Breite](../../assets/images/cards/small-width-adaptive-card.png)
+![Adaptive Kartenansicht mit voller Breite](../../assets/images/cards/full-width-adaptive-card.png)
+
+Die folgende Abbildung zeigt die Standardansicht der adaptiven Karte, wenn Sie die Eigenschaft nicht `width` auf **"Vollständig"** festgelegt haben:
+
+![Ansicht für adaptive Karten mit geringer Breite](../../assets/images/cards/small-width-adaptive-card.png)
 
 ### <a name="typeahead-support"></a>Typeahead-Unterstützung
 
-Innerhalb des Schemaelements kann das Abfragen von [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) Benutzern zum Filtern und Auswählen durch eine große Anzahl von Auswahlmöglichkeiten den Abschluss der Aufgabe erheblich verlangsamen. Die Typeahead-Unterstützung in adaptiven Karten kann die Eingabeauswahl vereinfachen, indem die Eingabeauswahl eingegrenzt oder gefiltert wird, während ein Benutzer die Eingabe eintippt. 
+Innerhalb des Schemaelements kann das Abfragen von [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) Benutzern zum Filtern und Auswählen einer großen Anzahl von Auswahlmöglichkeiten den Abschluss der Aufgabe erheblich verlangsamen. Die Typeahead-Unterstützung in adaptiven Karten kann die Eingabeauswahl vereinfachen, indem die Eingabeauswahl eingegrenzt oder gefiltert wird, während der Benutzer die Eingabe eingibt.
 
-#### <a name="enable-typeahead-in-adaptive-cards"></a>Aktivieren von Typeahead in adaptiven Karten
-
-So aktivieren Sie Typeahead innerhalb des `Input.Choiceset` `style` Satzes, und stellen Sie `filtered` sicher, dass er auf festgelegt `isMultiSelect` `false` ist. 
+So aktivieren Sie Typeahead in der `Input.Choiceset` , legen Sie `style` `filtered` fest, und stellen Sie sicher, dass `isMultiSelect` sie auf festgelegt `false` ist.
 
 #### <a name="sample-adaptive-card-with-typeahead-support"></a>Beispiel für adaptive Karte mit Typeahead-Unterstützung
+
+Der folgende Code zeigt ein Beispiel für eine adaptive Karte mit Typahead-Unterstützung:
 
 ``` json
 {
@@ -235,7 +252,7 @@ So aktivieren Sie Typeahead innerhalb des `Input.Choiceset` `style` Satzes, und 
     ],
    "style": "filtered"
 }
-``` 
+```
 
 ### <a name="stage-view-for-images-in-adaptive-cards"></a>Phasenansicht für Bilder in adaptiven Karten
 
@@ -258,57 +275,61 @@ In einer adaptiven Karte können Sie die Eigenschaft verwenden, um die Möglichk
 }
 ```
 
-Wenn Benutzer mit dem Mauszeiger auf das Bild zeigen, wird in der oberen rechten Ecke des Bilds ein Erweiterungssymbol angezeigt: ![ adaptive Karte mit erweiterbarem Bild](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+Wenn Benutzer mit dem Mauszeiger auf das Bild zeigen, wird in der oberen rechten Ecke ein Erweiterungssymbol angezeigt, wie in der folgenden Abbildung dargestellt:
 
-Das Bild wird in der Phasenansicht angezeigt, wenn der Benutzer die Schaltfläche "Erweitern" auswählt: ![ Bild in Phasenansicht erweitert](../../assets/images/cards/adaptivecard-expand-image.png)
+![Adaptive Karte mit erweiterbarem Bild](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
 
-In der Phasenansicht können Benutzer das Bild vergrößern und verkleinern. Sie können auswählen, welche Bilder in Ihrer adaptiven Karte für diese Funktion benötigt werden.
+Das Bild wird in der Phasenansicht angezeigt, wenn der Benutzer das Erweiterungssymbol wie in der folgenden Abbildung dargestellt auswählt:
+
+![Bild, erweitert auf Phasenansicht](../../assets/images/cards/adaptivecard-expand-image.png)
+
+In der Phasenansicht können Benutzer das Bild vergrößern und verkleinern. Sie können die Bilder in Ihrer adaptiven Karte auswählen, die über diese Funktion verfügen müssen.
 
 > [!NOTE]
-> Die Funktion zum Vergrößern und Verkleinern gilt nur für die Bildelemente (Bildtyp) auf einer adaptiven Karte.
+> * Die Funktion zum Vergrößern und Verkleinern gilt nur für die Bildelemente, bei denen es sich um Bildtypen in einer adaptiven Karte handelt.
+> * Für Teams mobile Apps ist standardmäßig die Phasenansichtsfunktion für Bilder in adaptiven Karten verfügbar. Benutzer können Adaptive Kartenbilder in der Phasenansicht anzeigen, indem sie einfach auf das Bild tippen, unabhängig davon, ob das `allowExpand` Attribut vorhanden ist oder nicht.
 
-> [!NOTE]
-> Für Teams mobile Apps sind standardmäßig Funktionen für die Phasenansicht für Bilder in adaptiven Karten verfügbar, und Benutzer können adaptive Kartenbilder in der Phasenansicht anzeigen, indem sie einfach auf das Bild tippen, unabhängig davon, ob das `allowExpand` Attribut vorhanden ist oder nicht.
+# <a name="markdown-format-for-o365-connector-cards"></a>[Markdownformat für O365-Connectorkarten](#tab/connector-md)
 
-# <a name="markdown-formatting-o365-connector-cards"></a>[**Markdownformatierung: O365-Connectorkarten**](#tab/connector-md)
-
-Connectorkarten unterstützen eingeschränkte Markdown- und HTML-Formatierungen. Die HTML-Unterstützung wird im letzten Abschnitt beschrieben.
+Connectorkarten unterstützen eingeschränkte Markdown- und HTML-Formatierungen.
 
 | Format | Beispiel | Markdown |
 | --- | --- | --- |
-| bold | **text** | `**text**` |
-| italic | *text* | `*text*` |
+| Fett | **text** | `**text**` |
+| Kursiv | *text* | `*text*` |
 | Kopfzeile (Ebenen 1 &ndash; 3) | **Text** | `### Text`|
 | Durchgestrichen | ~~text~~ | `~~text~~` |
-| Ungeordnete Liste | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| Unsortierte Liste | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | Sortierte Liste | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | Vorformatierter Text | `text` | ``preformatted text`` |
-| blockquote | >Blockquote-Text | `>blockquote text` |
-| Link | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
+| Blockquote | >Blockquote-Text | `>blockquote text` |
+| Hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
 | Bildlink |![Ente auf einem Brocken](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
 In Konnektorkarten werden Newlines für `\n\n` gerendert, aber nicht für `\n` oder `\r` .
 
-### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>Unterschiede zwischen Mobilgeräten und Desktops bei Connectorkarten mit Markdown
+### <a name="mobile-and-desktop-differences-for-connector-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops bei Connectorkarten
 
-Auf dem Desktop sieht die Markdown-Formatierung für Connectorkarten wie folgt aus:
+Auf dem Desktop wird die Markdown-Formatierung für Connectorkarten wie in der folgenden Abbildung dargestellt angezeigt:
 
 ![Markdownformatierung für Connectorkarten im Desktopclient](../../assets/images/cards/connector-desktop-markdown-combined.png)
 
-Unter iOS sieht die Markdownformatierung für Connectorkarten wie folgt aus:
+Unter iOS wird die Markdownformatierung für Connectorkarten wie in der folgenden Abbildung dargestellt angezeigt:
 
 ![Markdownformatierung für Connectorkarten im iOS-Client](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
 
-Probleme:
+Bei Connectorkarten, die Markdown für iOS verwenden, gibt es folgende Probleme:
 
 * Der iOS-Client für Teams rendert keine Markdown- oder HTML-Inlinebilder in Connectorkarten.
 * Blockquotes werden als eingezogen, aber ohne grauen Hintergrund gerendert.
 
-Unter Android sieht die Markdown-Formatierung für Connectorkarten wie folgt aus:
+Unter Android wird die Markdown-Formatierung für Connectorkarten wie in der folgenden Abbildung dargestellt angezeigt:
 
 ![Markdownformatierung für Connectorkarten im Android-Client](../../assets/images/cards/connector-android-markdown-combined.png)
 
-### <a name="formatting-example-for-markdown-connector-cards"></a>Formatierungsbeispiel für Markdown-Connectorkarten
+### <a name="format-example-for-markdown-connector-cards"></a>Formatbeispiel für Markdown-Connectorkarten
+
+Der folgende Code zeigt ein Beispiel für die Formatierung von Markdown-Connectorkarten:
 
 ``` json
 {
@@ -357,47 +378,56 @@ Unter Android sieht die Markdown-Formatierung für Connectorkarten wie folgt aus
 
 ---
 
-## <a name="formatting-cards-with-html"></a>Formatieren von Karten mit HTML
+## <a name="format-cards-with-html"></a>Formatieren von Karten mit HTML
 
-# <a name="html-formatting-o365-connector-cards"></a>[**HTML-Formatierung: O365-Connectorkarten**](#tab/connector-html)
+Die folgenden Kartentypen unterstützen HTML-Formatierung in Teams:
 
-Connectorkarten unterstützen eingeschränkte Markdown- und HTML-Formatierungen. Markdown wird im nächsten Abschnitt beschrieben.
+* O365-Connectorkarten: Eingeschränkte Markdown- und HTML-Formatierung wird in Office 365 Connector-Karten unterstützt.
+* Favoriten- und Miniaturansichtskarten: HTML-Tags werden für einfache Karten unterstützt, z. B. die Favoriten- und Miniaturansichtskarten.
+
+Die Formatierung unterscheidet sich zwischen der Desktopversion und der mobilen Version von Teams für O365-Connectorkarten und einfache Karten. In diesem Abschnitt können Sie das HTML-Formatbeispiel für Konnektorkarten und einfache Karten durchgehen.
+
+# <a name="html-format-for-o365-connector-cards"></a>[HTML-Format für O365-Connectorkarten](#tab/connector-html)
+
+Connectorkarten unterstützen eingeschränkte Markdown- und HTML-Formatierungen.
 
 | Format | Beispiel | HTML |
 | --- | --- | --- |
-| bold | **text** | `<strong>text</strong>` |
-| italic | *text* | `<em>text</em>` |
+| Fett | **text** | `<strong>text</strong>` |
+| Kursiv | *text* | `<em>text</em>` |
 | Kopfzeile (Ebenen 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | Durchgestrichen | ~~text~~ | `<strike>text</strike>` |
-| Ungeordnete Liste | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| Unsortierte Liste | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Sortierte Liste | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | Vorformatierter Text | `text` | `<pre>text</pre>` |
-| blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
-| Link | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
+| Hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | Bildlink | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 In Connectorkarten werden Newlines mithilfe des Tags in HTML `<p>` gerendert.
 
-### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a>Unterschiede zwischen Mobilgeräten und Desktops bei Connectorkarten mit HTML
+### <a name="mobile-and-desktop-differences-for-connector-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops bei Connectorkarten
 
-Auf dem Desktop sieht die HTML-Formatierung für Connectorkarten wie folgt aus:
+Auf dem Desktop wird die HTML-Formatierung für Connectorkarten wie in der folgenden Abbildung dargestellt angezeigt:
 
 ![HTML-Formatierung für Connectorkarten im Desktopclient](../../assets/images/cards/Connector-desktop-html-combined.png)
 
-Unter iOS sieht die HTML-Formatierung wie folgt aus:
+Unter iOS wird die HTML-Formatierung wie in der folgenden Abbildung dargestellt angezeigt:
 
 ![HTML-Formatierung für Connectorkarten im iOS-Client](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
-Probleme:
+Konnektorkarten, die HTML für iOS verwenden, umfassen die folgenden Probleme:
 
 * Inlinebilder werden unter iOS nicht mit Markdown oder HTML in Connectorkarten gerendert.
 * Vorformatierter Text wird gerendert, hat jedoch keinen grauen Hintergrund.
 
-Unter Android sieht die HTML-Formatierung wie folgt aus:
+Unter Android wird die HTML-Formatierung wie in der folgenden Abbildung dargestellt angezeigt:
 
 ![HTML-Formatierung für Connectorkarten im Android-Client](../../assets/images/cards/connector-android-html-combined.png)
 
-### <a name="formatting-sample-for-html-connector-cards"></a>Formatierungsbeispiel für HTML-Connectorkarten
+### <a name="format-sample-for-html-connector-cards"></a>Formatbeispiel für HTML-Connectorkarten
+
+Der folgende Code zeigt ein Beispiel für die Formatierung für HTML-Connectorkarten:
 
 ``` json
 {
@@ -447,49 +477,54 @@ Unter Android sieht die HTML-Formatierung wie folgt aus:
 
 ```
 
-# <a name="html-formatting-hero-and-thumbnail-cards"></a>[**HTML-Formatierung: Favoriten- und Miniaturansichtskarten**](#tab/simple-html)
+# <a name="html-format-for-hero-and-thumbnail-cards"></a>[HTML-Format für Favoriten- und Miniaturansichtskarten](#tab/simple-html)
 
-HTML-Tags werden für einfache Karten wie die Hero- und Miniaturansichtskarte unterstützt. Markdown wird nicht unterstützt.
+HTML-Tags werden für einfache Karten unterstützt, z. B. die Favoriten- und Miniaturansichtskarten. Markdown wird nicht unterstützt.
 
 | Format | Beispiel | HTML |
 | --- | --- | --- |
-| bold | **text** | `<strong>text</strong>` |
-| italic | *text* | `<em>text</em>` |
+| Fett | **text** | `<strong>text</strong>` |
+| Kursiv | *text* | `<em>text</em>` |
 | Kopfzeile (Ebenen 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | Durchgestrichen | ~~text~~ | `<strike>text</strike>` |
-| Ungeordnete Liste | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| Unsortierte Liste | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Sortierte Liste | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | Vorformatierter Text | `text` | `<pre>text</pre>` |
-| blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
-| Link | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
+| Hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | Bildlink |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops bei einfachen Karten
 
-Aufgrund von Auflösungsunterschieden zwischen desktop und mobiler Plattform unterscheidet sich die Formatierung zwischen dem Desktop und der mobilen Version von Teams.
+Da es Auflösungsunterschiede zwischen dem Desktop und der mobilen Plattform gibt, unterscheidet sich die Formatierung zwischen dem Desktop und der mobilen Version von Teams.
 
-Auf dem Desktop wird die HTML-Formatierung wie folgt angezeigt:
+Auf dem Desktop wird die HTML-Formatierung wie in der folgenden Abbildung dargestellt angezeigt:
 
 ![HTML-Formatierung im Desktopclient](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
 
-Unter iOS wird html-Formatierung wie folgt angezeigt:
+Unter iOS wird die HTML-Formatierung wie in der folgenden Abbildung dargestellt angezeigt:
 
 ![HTML-Formatierung im iOS-Client](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
 
-Probleme:
+Zeichenformatierungen wie Fett und Kursiv werden unter iOS nicht gerendert.
 
-* Zeichenformatierungen wie Fett und Kursiv werden unter iOS nicht gerendert.
-
-Unter Android sieht die HTML-Formatierung wie folgt aus:
+Unter Android wird die HTML-Formatierung wie in der folgenden Abbildung dargestellt angezeigt:
 
 ![HTML-Formatierung im Android-Client](../../assets/images/cards/card-formatting-xml-android-60.png)
 
-Zeichenformatierungen wie fett und kursiv werden unter Android korrekt angezeigt.
+Zeichenformatierung, z. B. fett und kursiv, wird unter Android korrekt angezeigt.
 
-### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a>Formatierungsbeispiel für HTML-Formatierung in einfachen Karten
+### <a name="format-example-for-simple-cards"></a>Formatbeispiel für einfache Karten
 
-Diese Screenshots wurden mit Teams AppStudio erstellt, wobei die Texteigenschaft einer Hero-Karte auf die folgende Zeichenfolge festgelegt wurde. Sie können die Formatierung in Ihren eigenen Karten testen, indem Sie diesen Code ändern.
+Die Bilder im vorherigen Abschnitt wurden mit Teams **App Studio** erstellt, wobei die Texteigenschaft einer Hero-Karte auf die folgende Zeichenfolge festgelegt ist:
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
+Sie können die Formatierung in Ihren eigenen Karten testen, indem Sie diesen Code ändern.
+
 ---
+
+## <a name="see-also"></a>Siehe auch
+
+* [Kartenaktionen](./cards-actions.md)
+* [Aufgabenmodule](~/task-modules-and-cards/cards/cards-format.md)

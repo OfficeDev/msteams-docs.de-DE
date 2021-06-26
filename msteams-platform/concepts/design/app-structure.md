@@ -1,65 +1,117 @@
 ---
-title: Entwerfen Ihrer App – Verstehen der App-Struktur
-description: Verstehen Sie, was Sie beim Entwerfen Ihrer App in Microsoft Teams anpassen können und nicht.
+title: Entwerfen Ihrer App – Grundlegendes zur App-Struktur
+description: Verstehen Sie, was Sie in Microsoft Teams beim Entwerfen Ihrer App anpassen können und was nicht.
 author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: bf84ad1d52cf46e9242bf4122dc5e900461ab806
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: a574ebeb5416e614152bb24d52cc798f0032943c
+ms.sourcegitcommit: 0fe60b3fd406a5768b18977df53d1f4c665e5300
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631310"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53133393"
 ---
-# <a name="understand-the-microsoft-teams-app-structure"></a>Verstehen der Microsoft Teams-App-Struktur
+# <a name="understand-the-microsoft-teams-app-structure"></a>Grundlegendes zur Microsoft Teams App-Struktur
 
-Beim Erstellen Ihrer App ist es wichtig zu wissen, was Sie in der App Microsoft Teams. Diese Informationen helfen Ihnen, besser zu verstehen, welche Teile der App Sie steuern.
+Beim Erstellen Ihrer App ist es wichtig zu wissen, was Sie in Microsoft Teams anpassen können und was nicht. Anhand dieser Informationen können Sie besser verstehen, welche Teile der App-Erfahrung Sie steuern.
 
-Die folgenden Wireframes zeigen Folgendes:
+Die folgenden Drahtframes zeigen Ihnen:
 
-* Die Oberflächen, die Sie in den einzelnen apps Teams anpassen können (in Blau umrissen).
+* Die Oberflächen, die Sie in jeder Teams App-Funktion anpassen können (in Rosa umrissen).
 * Die Bereiche, die jede Funktion unterstützt.
 
-> [!NOTE]
-> **Was bedeutet Bereich?** Ein Bereich ist ein Bereich in Teams, in dem Benutzer Ihre App verwenden können. Apps können einen oder mehrere Bereiche haben, einschließlich persönlicher, Kanäle, Chats und Besprechungen.
+> [!TIP]
+> **Was bedeutet "Bereich"?** Ein Bereich ist ein Bereich in Teams in dem Benutzer Ihre App verwenden können. Apps können einen oder mehrere Bereiche haben, einschließlich persönlich, Kanäle, Chats und Besprechungen.
 
 ## <a name="personal-apps"></a>Persönliche Apps
 
-Persönliche Apps bieten eine große Canvas, um Ihre App-Inhalte für einzelne Benutzer zu hosten. Der Zeichenbereich ist ein iframe, damit Sie die Benutzererfahrung vollständig anpassen können.
+Persönliche Apps bieten eine große Canvas, um Ihre App-Inhalte für einzelne Benutzer zu hosten.
 
-***Unterstützte Bereiche**: Persönlich*
+***Unterstützte Bereiche:** Persönlich*
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps.png" alt-text="Konzeptionelle Abbildung mit den Front-End-Bereichen in Teams, die Entwickler für persönliche Apps anpassen können." border="false":::
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+Die Canvas ist ein iFrame, damit Sie die Benutzeroberfläche vollständig anpassen können.
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für persönliche Apps auf dem Desktop anpassen können." border="false":::
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+Die Canvas ist eine Webansicht, mit der Sie die Benutzeroberfläche vollständig anpassen können.
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für persönliche Apps auf Mobilgeräten anpassen können." border="false":::
+
+---
 
 ## <a name="tabs"></a>Registerkarten
 
-Registerkarten bieten eine große Canvas zum Hosten von App-Inhalten für eine Gruppe von Benutzern. Sie können Registerkarten in freigegebene Bereiche wie Kanäle, Chats und Besprechungs einladen. Der Zeichenbereich ist ein iframe, damit Sie die Benutzererfahrung vollständig anpassen können.
+Registerkarten bieten einen großen Canvas zum Hosten der App-Inhalte für eine Gruppe von Benutzern. Sie können Registerkarten in freigegebene Bereiche wie Kanäle, Chats und Besprechungseinladungen einschließen.
 
-***Unterstützte Bereiche**: Kanäle, Chats, Besprechungen*
+***Unterstützte Bereiche:** Kanäle, Chats, Besprechungen*
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs.png" alt-text="Konzeptionelle Abbildung mit den Front-End-Bereichen in Teams, die Entwickler für Registerkarten anpassen können." border="false":::
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+Die Canvas ist ein iFrame, damit Sie die Benutzeroberfläche vollständig anpassen können.
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Registerkarten auf Desktops anpassen können." border="false":::
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+Die Canvas ist eine Webansicht, mit der Sie die Benutzeroberfläche vollständig anpassen können.
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Registerkarten auf Mobilgeräten anpassen können." border="false":::
+
+---
 
 ## <a name="bots"></a>Bots
 
-Bots sind Unterhaltungs-Apps, die Teams systemeigenen Messagingfeatures integrieren, sodass die Benutzeroberflächenarbeit für Sie erledigt wird. Aus entwurfsspezifischer Sicht gibt es weiterhin Möglichkeiten, persönlichkeitsspezifische, benutzerdefinierte Funktionen und umfangreiche, umsetzbare Informationen mit unserer Unterstützung für die Verarbeitung natürlicher Sprachen (Natural Language Processing, NLP) und der Adaptive Cards-Plattform hinzuzufügen.
+Bots sind Unterhaltungs-Apps, die in Teams systemeigenen Messaging-Features integriert sind, sodass die Ui-Arbeit für Sie erledigt wird. Aus Entwurfssicht gibt es weiterhin Möglichkeiten, Persönlichkeit, benutzerdefinierte Funktionen und umfangreiche, umsetzbare Informationen mit unserer NLP-Unterstützung (Natural Language Processing) und der Plattform für adaptive Karten hinzuzufügen.
 
-***Unterstützte Bereiche**: Persönlich, Kanäle, Chats, Besprechungen*
+***Unterstützte Bereiche:** Persönlich, Kanäle, Chats, Besprechungen*
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots.png" alt-text="Konzeptionelle Abbildung mit den Front-End-Bereichen in Teams, die Entwickler für Bots anpassen können." border="false":::
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Bots auf desktop anpassen können." border="false":::
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Bots auf Mobilen anpassen können." border="false":::
+
+---
 
 ## <a name="messaging-extensions"></a>Messaging-Erweiterungen
 
-Messagingerweiterungen sind Verknüpfungen zum Einfügen von App-Inhalten oder zum Handeln in einer Nachricht, ohne aus der Unterhaltung zu navigieren. Aktionsbasierte Messagingerweiterungen bieten Ihnen mehr Kontrolle über die Besensung, während Teams vieles von dem verarbeitet, was für suchbasierte Messagingerweiterungen gerendert wird.
+Messagingerweiterungen sind Tastenkombinationen zum Einfügen von App-Inhalten oder zum Bearbeiten einer Nachricht, ohne von der Konversation weg zu navigieren. Action-based messaging extensions give you more control of the experience, while Teams handles much of what renders for search-based messaging extensions.
 
-***Unterstützte Bereiche**: Persönlich, Kanäle, Chats, Besprechungen*
+***Unterstützte Bereiche:** Persönlich, Kanäle, Chats, Besprechungen*
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions.png" alt-text="Konzeptionelle Abbildung mit den Front-End-Bereichen in Teams, die Entwickler für Messagingerweiterungen anpassen können." border="false":::
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Messaging-Erweiterungen auf dem Desktop anpassen können." border="false":::
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Messaging-Erweiterungen auf mobilgeräten anpassen können." border="false":::
+
+---
 
 ## <a name="meeting-extensions"></a>Besprechungserweiterungen
 
-Besprechungserweiterungen sind Apps zur Verbesserung von Livebesprechungen. Sie können Ihre App-Inhalte in verschiedenen Szenarien hosten, z. B. vor, während und nach Besprechungen. Die Oberfläche ist ein iframe, mit dem Sie die Oberfläche anpassen können, beachten Sie jedoch, dass diese Apps dunkel und schmal in Besprechungen sind.
+Besprechungserweiterungen sind Apps zur Verbesserung von Livebesprechungen. Sie können Ihre App-Inhalte in verschiedenen Szenarien hosten, einschließlich vor, während und nach Besprechungen.
 
-***Unterstützte Bereiche**: Besprechungen, Chats*
+***Unterstützte Bereiche:** Besprechungen, Chats*
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions.png" alt-text="Konzeptionelle Abbildung mit den Front-End-Bereichen in Teams, die Entwickler für Besprechungserweiterungen anpassen können." border="false":::
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+Die Oberfläche ist ein iFrame, mit dem Sie die Benutzeroberfläche anpassen können. Bedenken Sie jedoch, dass diese Apps in Besprechungen dunkles Design verwenden und schmal sind.
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Besprechungserweiterungen auf dem Desktop anpassen können." border="false":::
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+Die Oberfläche ist eine Webansicht, mit der Sie die Benutzeroberfläche anpassen können. Bedenken Sie jedoch, dass diese Apps in Besprechungen dunkles Design verwenden.
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Besprechungserweiterungen auf mobilgeräten anpassen können." border="false":::
+
+---

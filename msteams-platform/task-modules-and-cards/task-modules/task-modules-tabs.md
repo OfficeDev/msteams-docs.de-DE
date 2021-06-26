@@ -1,21 +1,21 @@
 ---
 title: Verwenden von Aufgabenmodulen in Microsoft Teams Registerkarten
-description: Erläutert das Aufrufen von Aufgabenmodulen Teams Registerkarten mithilfe des Microsoft Teams-Client-SDK
+description: Erläutert das Aufrufen von Aufgabenmodulen von Teams Registerkarten mithilfe des Microsoft Teams-Client-SDKs.
 localization_priority: Normal
 ms.topic: how-to
-keywords: task modules teams tabs client sdk
-ms.openlocfilehash: 5e85fd0662b8a15d6b98d9c2d2dfa5137b05fa39
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+keywords: Teams-Registerkarten-Client-SDK für Aufgabenmodule
+ms.openlocfilehash: 8afd2c93261f28aa7ced4c98d29be27dca35f8b1
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019524"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140552"
 ---
-# <a name="using-task-modules-in-tabs"></a>Verwenden von Aufgabenmodulen in Registerkarten
+# <a name="use-task-modules-in-tabs"></a>Verwenden von Aufgabenmodulen in Registerkarten
 
-Das Hinzufügen eines Aufgabenmoduls zu Ihrer Registerkarte kann die Benutzererfahrung für Workflows, für die Dateneingaben erforderlich sind, erheblich vereinfachen. Mit Aufgabenmodulen können Sie ihre Eingaben in einem Teams Popup erfassen. Ein gutes Beispiel hierin ist die Bearbeitung von Planner-Karten. Sie können Aufgabenmodule verwenden, um eine ähnliche Erfahrung zu erstellen.
+Fügen Sie Ihrer Registerkarte ein Aufgabenmodul hinzu, um die Benutzererfahrung für workflows zu vereinfachen, die eine Dateneingabe erfordern. Mit Aufgabenmodulen können Sie ihre Eingaben in einem Microsoft Teams-Aware-Popup erfassen. Ein gutes Beispiel hierfür ist das Bearbeiten von Planner-Karten. Sie können Aufgabenmodule verwenden, um eine ähnliche Oberfläche zu erstellen.
 
-Zur Unterstützung des Aufgabenmodulfeatures wurden dem client-SDK zwei [Microsoft Teams hinzugefügt:](/javascript/api/overview/msteams-client)
+Zur Unterstützung des Aufgabenmodulfeatures werden dem [Teams-Client-SDK](/javascript/api/overview/msteams-client)zwei neue Funktionen hinzugefügt. Der folgende Code zeigt ein Beispiel für diese beiden Funktionen:
 
 ```typescript
 microsoftTeams.tasks.startTask(
@@ -29,22 +29,24 @@ microsoftTeams.tasks.submitTask(
 ): void;
 ```
 
-Sehen wir uns an, wie jeder von ihnen funktioniert.
+Sie können sehen, wie das Aufrufen eines Aufgabenmoduls über eine Registerkarte und das Übermitteln des Ergebnisses eines Aufgabenmoduls funktioniert.
 
-## <a name="invoking-a-task-module-from-a-tab"></a>Aufrufen eines Aufgabenmoduls über eine Registerkarte
+## <a name="invoke-a-task-module-from-a-tab"></a>Aufrufen eines Aufgabenmoduls über eine Registerkarte
 
-Verwenden Sie zum Aufrufen eines Aufgabenmoduls von einer Registerkarte aus das Übergeben `microsoftTeams.tasks.startTask()` eines [TaskInfo-Objekts](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object) und einer optionalen `submitHandler` Rückruffunktion. Wie bereits beschrieben, sind zwei Fälle zu berücksichtigen:
+Zum Aufrufen eines Aufgabenmoduls über eine Registerkarte übergeben Sie `microsoftTeams.tasks.startTask()` ein [TaskInfo-Objekt](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) und eine optionale `submitHandler` Rückruffunktion. Es gibt zwei Zu berücksichtigende Fälle:
 
-1. Der Wert von `TaskInfo.url` ist auf eine URL festgelegt. Das Aufgabenmodulfenster wird angezeigt und `TaskModule.url` als innen `<iframe>` geladen. JavaScript auf dieser Seite sollte `microsoftTeams.initialize()` aufrufen. Wenn auf der Seite eine Funktion enthalten ist und beim Aufrufen ein Fehler auftritt, wird mit set auf die Fehlerzeichenfolge aufgerufen, die den Fehler angibt, wie `submitHandler` `microsoftTeams.tasks.startTask()` unten `submitHandler` `err` [beschrieben.](#task-module-invocation-errors)
-1. Der Wert von `taskInfo.card` ist der [JSON für eine adaptive Karte](~/task-modules-and-cards/what-are-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). In diesem Fall gibt es offensichtlich keine JavaScript-Funktion zum Aufrufen, wenn der Benutzer eine Schaltfläche auf der adaptiven Karte schließt oder drückt. Die einzige Möglichkeit, das eingegebene Ergebnis zu erhalten, besteht in der Übergabe des Ergebnisses an einen `submitHandler` Bot. Um ein Aufgabenmodul für adaptive Karten auf einer Registerkarte verwenden zu können, muss Ihre App einen Bot enthalten, um Informationen vom Benutzer zurück zu erhalten. Dies wird unten erläutert.
+* Der Wert von `TaskInfo.url` ist auf eine URL festgelegt. Das Aufgabenmodulfenster wird angezeigt und `TaskModule.url` als `<iframe>` darin geladen. JavaScript auf dieser Seite ruft `microsoftTeams.initialize()` . Wenn eine Funktion auf der Seite vorhanden `submitHandler` ist und beim Aufrufen ein Fehler `microsoftTeams.tasks.startTask()` auftritt, wird dieser `submitHandler` aufgerufen, wobei die `err` Fehlerzeichenfolge auf dieselbe festgelegt ist. Weitere Informationen finden Sie unter [Fehler beim Aufrufen des Aufgabenmoduls.](#task-module-invocation-errors)
+* Der Wert von `taskInfo.card` ist der [JSON-Code für eine adaptive Karte.](~/task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment) Es gibt keine JavaScript-Funktion, die aufgerufen werden `submitHandler` kann, wenn der Benutzer eine Schaltfläche auf der adaptiven Karte schließt oder drückt. Die einzige Möglichkeit, die vom Benutzer eingegebenen Informationen zu erhalten, besteht darin, das Ergebnis an einen Bot zu übergeben. Um ein Aufgabenmodul für adaptive Karten auf einer Registerkarte zu verwenden, muss Ihre App einen Bot enthalten, um eine Antwort des Benutzers zu erhalten.
 
-## <a name="example-invoking-a-task-module"></a>Beispiel: Aufrufen eines Aufgabenmoduls
+Der nächste Abschnitt enthält ein Beispiel für das Aufrufen eines Aufgabenmoduls.
 
-Der folgende Code wird aus dem [Aufgabenmodulbeispiel angepasst.](~/task-modules-and-cards/what-are-task-modules.md#code-sample) So sieht das Aufgabenmodul aus:
+## <a name="example-of-invoking-a-task-module"></a>Beispiel für das Aufrufen eines Aufgabenmoduls
 
-![Aufgabenmodul – Benutzerdefiniertes Formular](~/assets/images/task-module/task-module-custom-form.png)
+In der folgenden Abbildung wird das Aufgabenmodul angezeigt:
 
-Das `submitHandler` ist sehr einfach; es echot einfach den Wert von oder an die `err` `result` Konsole:
+![Aufgabenmodul – benutzerdefiniertes Formular](~/assets/images/task-module/task-module-custom-form.png)
+
+Der folgende Code basiert auf [dem Aufgabenmodulbeispiel:](~/task-modules-and-cards/task-modules/invoking-task-modules.md#code-sample)
 
 ```javascript
 let taskInfo = {
@@ -68,33 +70,37 @@ submitHandler = (err, result) => {
 microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 ```
 
-## <a name="submitting-the-result-of-a-task-module"></a>Übermitteln des Ergebnisses eines Aufgabenmoduls
+Dies `submitHandler` ist sehr einfach und entspricht dem Wert der Konsole oder der `err` `result` Konsole.
 
-Die `submitHandler` Funktion wird mit `TaskInfo.url` verwendet. Die `submitHandler` Funktion befindet sich auf der `TaskInfo.url` Webseite. Wenn beim Aufrufen des Aufgabenmoduls ein Fehler auftritt, wird Ihre Funktion sofort mit einer Zeichenfolge aufgerufen, die angibt, `submitHandler` `err` welcher Fehler aufgetreten [ist.](#task-module-invocation-errors) Die Funktion wird auch mit einer Zeichenfolge aufgerufen, wenn der Benutzer das X oben `submitHandler` `err` rechts im Aufgabenmodul drückt.
+## <a name="submit-the-result-of-a-task-module"></a>Übermitteln des Ergebnisses eines Aufgabenmoduls
 
-Wenn kein Aufruffehler auftritt und der Benutzer X nicht drückt, um ihn zu schließen, drückt der Benutzer nach Abschluss eine Schaltfläche. Je nachdem, ob es sich um eine URL oder eine adaptive Karte im Aufgabenmodul geht, geschieht dies:
+Die `submitHandler` Funktion befindet sich auf der Webseite und wird mit `TaskInfo.url` `TaskInfo.url` verwendet. Wenn beim Aufrufen des Aufgabenmoduls ein Fehler auftritt, wird Ihre `submitHandler` Funktion sofort mit einer Zeichenfolge `err` aufgerufen, die angibt, welcher [Fehler aufgetreten ist.](#task-module-invocation-errors) Die `submitHandler` Funktion wird auch mit einer Zeichenfolge `err` aufgerufen, wenn der Benutzer X oben rechts im Aufgabenmodul auswählt, um sie zu schließen.
 
-### <a name="htmljavascript-taskinfourl"></a>HTML/JavaScript ( `TaskInfo.url` )
+Wenn kein Aufruffehler auftritt und der Benutzer X nicht auswählt, um es zu schließen, wählt der Benutzer nach Abschluss eine Schaltfläche aus. Je nachdem, ob es sich um eine URL oder eine adaptive Karte im Aufgabenmodul handelt, enthalten die nächsten Abschnitte Details dazu, was passiert.
 
-Nachdem Sie überprüft haben, was der Benutzer eingegeben hat, rufen Sie die SDK-Funktion auf (im Folgenden als zu `microsoftTeams.tasks.submitTask()` `submitTask()` Lesbarkeitszwecken bezeichnet). Sie können ohne Parameter aufrufen, wenn Sie nur Teams Aufgabenmodul schließen möchten, aber meistens möchten Sie ein Objekt oder eine Zeichenfolge an `submitTask()` Ihre `submitHandler` übergeben.
+### <a name="html-or-javascript-taskinfourl"></a>HTML oder JavaScript `TaskInfo.url`
 
-Übergeben Sie Ihr Ergebnis als ersten Parameter. Teams ruft das Objekt/die Zeichenfolge auf, das Sie `submitHandler` `err` an übergeben `null` `result` `submitTask()` haben. Wenn Sie einen Parameter aufrufen, müssen Sie ein oder ein Array von Zeichenfolgen übergeben: Dadurch kann Teams überprüfen, ob die App, die das Ergebnis sendet, dieselbe ist, die das Aufgabenmodul aufgerufen `submitTask()` `result`  `appId` `appId` hat.
+Rufen Sie nach dem Überprüfen der Eingaben des Benutzers die `microsoftTeams.tasks.submitTask()` SDK-Funktion auf, die als `submitTask()` bezeichnet wird. Rufen `submitTask()` Sie ohne Parameter auf, wenn Sie nur möchten, dass Teams das Aufgabenmodul schließt. Sie können ein Objekt oder eine Zeichenfolge an Ihre `submitHandler` übergeben.
 
-### <a name="adaptive-card-taskinfocard"></a>Adaptive Karte ( `TaskInfo.card` )
+Übergeben Sie Ihr Ergebnis als ersten Parameter. Teams ruft auf, wo sich das Objekt oder die Zeichenfolge befindet `submitHandler` `err` und `null` `result` ist, an die Sie übergeben `submitTask()` haben. Wenn Sie `submitTask()` mit einem Parameter `result` aufrufen, müssen Sie ein oder ein Array von `appId` `appId` Zeichenfolgen übergeben. Dadurch können Teams überprüfen, ob die App, die das Ergebnis sendet, mit dem aufgerufenen Aufgabenmodul übereinstimmt.
 
-Wenn Sie das Aufgabenmodul mit einem aufgerufen haben, werden die Werte auf der Karte als Wert von zurückgegeben, wenn der Benutzer eine Schaltfläche `submitHandler` `Action.Submit` `result` drückt. Wenn der Benutzer die Esc-Taste drückt oder das X drückt, `err` wird stattdessen zurückgegeben. Wenn Ihre App zusätzlich zu einer Registerkarte einen Bot enthält, können Sie auch einfach den des Bots als `appId` Wert in das Objekt `completionBotId` `TaskInfo` hinzufügen. Der adaptive Kartentext (wie vom Benutzer ausgefüllt) wird über eine Nachricht an den Bot gesendet, wenn der Benutzer `task/submit invoke` eine Schaltfläche `Action.Submit` drückt. Das Schema für das empfangene Objekt ähnelt dem Schema, das Sie für [Aufgaben-/Abruf- und Aufgaben-/Absenden von Nachrichten erhalten.](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages) Der einzige Unterschied ist, dass das Schema des JSON-Objekts ein  adaptives Kartenobjekt ist, im Gegensatz zu einem Objekt, das ein adaptives Kartenobjekt enthält, als wenn adaptive Karten mit [Bots verwendet werden.](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages)
+### <a name="adaptive-card-taskinfocard"></a>Adaptive Karte `TaskInfo.card`
 
-## <a name="example-submitting-the-result-of-a-task-module"></a>Beispiel: Übermitteln des Ergebnisses eines Aufgabenmoduls
+Wenn Sie das Aufgabenmodul mit einer aufrufen `submitHandler` und der Benutzer eine Schaltfläche auswählt, werden die Werte auf der Karte als Wert von `Action.Submit` `result` zurückgegeben. Wenn der Benutzer die Esc-Taste oder X oben rechts auswählt, `err` wird stattdessen zurückgegeben. Wenn Ihre App zusätzlich zu einer Registerkarte einen Bot enthält, können Sie einfach den `appId` Bot als Wert in das Objekt `completionBotId` `TaskInfo` einschließen. Der vom Benutzer ausgefüllte Textkörper der adaptiven Karte wird mithilfe einer Nachricht an den Bot `task/submit invoke` gesendet, wenn der Benutzer eine Schaltfläche auswählt. `Action.Submit` Das Schema für das empfangene Objekt ähnelt dem [Schema, das Sie für Aufgaben-/Abruf- und Aufgaben-/Sendenachrichten erhalten.](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages) Der einzige Unterschied besteht darin, dass das Schema des JSON-Objekts ein Adaptive Card-Objekt im Gegensatz zu einem Objekt ist, das ein Adaptive Card-Objekt enthält, als [wenn adaptive Karten mit Bots verwendet werden.](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages)
 
-Rufen Sie [das Formular im obigen Aufgabenmodul mit](#example-invoking-a-task-module) einem HTML-Formular auf. Hier ist das Formular definiert:
+Der nächste Abschnitt enthält ein Beispiel für das Übermitteln des Ergebnisses eines Aufgabenmoduls.
+
+## <a name="example-of-submitting-the-result-of-a-task-module"></a>Beispiel für das Übermitteln des Ergebnisses eines Aufgabenmoduls
+
+Weitere Informationen finden Sie [im HTML-Formular im Aufgabenmodul.](#example-of-invoking-a-task-module) Der folgende Code enthält ein Beispiel dafür, wo das Formular definiert ist:
 
 ```html
 <form method="POST" id="customerForm" action="/register" onSubmit="return validateForm()">
 ```
 
-Es gibt fünf Felder in diesem Formular, aber wir interessieren uns nur für die Werte von drei von ihnen für dieses Beispiel: `name` `email` , , und `favoriteBook` .
+Es gibt fünf Felder in diesem Formular, aber für dieses Beispiel sind nur drei Werte erforderlich, `name` und `email` `favoriteBook` .
 
-Hier ist die `validateForm()` Funktion, die `submitTask()` aufruft:
+Der folgende Code enthält ein Beispiel für die `validateForm()` Funktion, die `submitTask()` aufruft:
 
 ```javascript
 function validateForm() {
@@ -108,13 +114,30 @@ function validateForm() {
 }
 ```
 
+Der nächste Abschnitt enthält Aufrufprobleme des Aufgabenmoduls und deren Fehlermeldungen.
+
 ## <a name="task-module-invocation-errors"></a>Fehler beim Aufrufen des Aufgabenmoduls
 
-Hier sind die möglichen `err` Werte, die von Ihrem empfangen werden `submitHandler` können:
+Die folgende Tabelle enthält die möglichen `err` Werte, die von Ihnen empfangen werden `submitHandler` können:
 
-| Problem | Fehlermeldung (Wert von `err` ) |
+| Problem | Fehlermeldung, die den Wert von `err` |
 | ------- | ------------------------------ |
-| Werte für beide `TaskInfo.url` und `TaskInfo.card` wurden angegeben. | "Werte für Karte und URL wurden angegeben. Das eine oder andere, aber nicht beides, ist zulässig." |
-| Weder `TaskInfo.url` angegeben noch `TaskInfo.card` angegeben. | "Sie müssen einen Wert für eine Karte oder url angeben." |
-| `appId`Ungültig. | "Ungültige appId." |
-| Der Benutzer hat die X-Taste gedrückt und sie geschlossen. | "Der Benutzer hat das Aufgabenmodul abgebrochen/geschlossen." |
+| Werte für beide `TaskInfo.url` werte und `TaskInfo.card` wurden angegeben. | Werte für Karte und URL wurden angegeben. Der eine oder andere, aber nicht beide, sind zulässig. |
+| `TaskInfo.url`Weder `TaskInfo.card` angegeben noch angegeben. | Sie müssen einen Wert für karte oder URL angeben. |
+| `appId`Ungültig. | Ungültige App-ID. |
+| Der Benutzer hat die X-Schaltfläche ausgewählt und sie geschlossen. | Der Benutzer hat das Aufgabenmodul abgebrochen oder geschlossen. |
+
+## <a name="code-sample"></a>Codebeispiel
+
+|Beispielname | Beschreibung | .NET | Node.js|
+|----------------|-----------------|--------------|----------------|
+|Aufgabenmodul-Beispielregisterkarten und Bots-V3 | Beispiele zum Erstellen von Aufgabenmodulen. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+
+## <a name="see-also"></a>Siehe auch
+
+[Aufrufen und Schließen von Aufgabenmodulen](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Verwenden von Aufgabenmodulen von Bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)

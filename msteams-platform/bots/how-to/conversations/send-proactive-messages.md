@@ -5,14 +5,14 @@ ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
 Keywords: Nachricht senden Benutzer-ID Kanal-ID Unterhaltungs-ID abrufen
-ms.openlocfilehash: 56411fe381a05318d0e12d6876cf26138baba42c
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 443988cc70f009ab657a1a29a91e8989dfed4f43
+ms.sourcegitcommit: 656a1de9e23e0ad90dddcb93a2bbfcc63848a856
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994217"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53130195"
 ---
-# <a name="send-proactive-messages"></a>Senden proaktiver Nachrichten
+# <a name="proactive-messages"></a>Proaktive Nachrichten
 
 [!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 

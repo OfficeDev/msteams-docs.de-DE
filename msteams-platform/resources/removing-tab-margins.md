@@ -6,12 +6,12 @@ keywords: Registerkarte zum Entfernen des Abstands von Rändern
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: b4b3fbbe7ed2e8356fcc9c49346d423707a6a264
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 086ce3a375416291a64e3222e698d7e363a651e6
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069168"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140572"
 ---
 # <a name="tab-margin-changes"></a>Änderungen am Registerkartenrand
 
@@ -28,13 +28,13 @@ Wenn Sie die Ränder um alle Registerkarten entfernen, können Entwickler Apps e
 * 5. März 2021 – In [public Developer Preview](~/resources/dev-preview/developer-preview-intro.md)entfernte Ränder.
 * 15. Juni 2021 – Ränder werden in der Produktion entfernt.
 
-## <a name="guidelines"></a>Anleitungen
+## <a name="guidelines"></a>Richtlinien
 
 Microsoft Teams Apps, die Registerkarten verwenden, sind von dieser Änderung betroffen. Entwickler müssen zur [Öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md) wechseln, um zu bestimmen, wie ihre Registerkarten betroffen sind, und die erforderlichen Änderungen vornehmen.
 
 Registerkartenentwickler dürfen sich nicht auf Teams verlassen, um Ränder um ihre Registerkarten herum bereitzustellen. Entwickler sollten Ränder um ihre Registerkartendesigns herum hinzufügen, wo dies erforderlich ist. App-Designs in der Produktion können so aussehen, als ob zusätzliche Abstände vorhanden sind, d. h. Ränder, die von Teams bereitgestellt werden, und Ränder, die von der Registerkarte bereitgestellt werden. Der zusätzliche Abstand ist jedoch nur temporär und wird in ein paar Wochen entfernt, sodass nur der von der App bereitgestellte Abstand übrig bleibt.
 
-## <a name="faq"></a>Häufig gestellte Fragen (FAQ)
+## <a name="faq"></a>Häufig gestellte Fragen
 
 **Ist es für App-Chrome, z. B. Kopfzeile oder Taskleiste, in Ordnung, die Ränder unserer Designs zu berühren?**
 
@@ -54,3 +54,18 @@ Nein, Sie müssen ihren eigenen Abstand oder Ränder links und rechts von allen 
 > * Alle Registerkarten haben ihre Ränder entfernt: persönliche Registerkarten, (Gruppen-)Chat-Registerkarten, Besprechungsregisterkarten und Kanalregisterkarten.
 > * Es gibt keine Möglichkeit, diese Änderung abzumelden oder abzuwählen. Sie gilt für alle Registerkarten.
 > * Diese Änderung kann sich auf Registerkarten auswirken, die auf Microsoft Teams angewiesen sind, um Ränder zu ihrer Benutzeroberfläche bereitzustellen.
+
+## <a name="see-also"></a>Siehe auch
+
+* [registerkarten Teams](~/tabs/what-are-tabs.md)
+* [Voraussetzungen](~/tabs/how-to/tab-requirements.md)
+* [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
+* [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
+* [Erstellen einer Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md)
+* [Erstellen einer Konfigurationsseite](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Erstellen einer Seite zum Entfernen ihrer Registerkarte](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
+* [Kontext für Ihre Registerkarte erhalten](~/tabs/how-to/access-teams-context.md)
+* [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Aufgeklappte Registerkartenverknüpfung und Phasenansicht](~/tabs/tabs-link-unfurling.md)
+* [Registerkarten für Unterhaltungen erstellen](~/tabs/how-to/conversational-tabs.md)
