@@ -192,42 +192,30 @@
   items:
     - name: Übersicht
       href: tabs/what-are-tabs.md
-    - name: Erstellen einer Registerkarte
-      items:
-        - name: Registerkartenanforderungen
-          href: tabs/how-to/tab-requirements.md
-        - name: Erstellen einer Inhaltsseite
-          href: tabs/how-to/create-tab-pages/content-page.md
-        - name: Erstellen einer Konfigurationsseite
-          href: tabs/how-to/create-tab-pages/configuration-page.md
-        - name: Erstellen einer Seite zum Entfernen
-          href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: Registerkarten auf mobilen Geräten
-          href: tabs/design/tabs-mobile.md
-        - name: Kontext für Ihre Registerkarte erhalten
-          href: tabs/how-to/access-teams-context.md
-        - name: Erstellen von Registerkarten mit adaptiven Karten
-          href: tabs/how-to/build-adaptive-card-tabs.md
-        - name: Aufgeklappte Registerkartenverknüpfung und Phasenansicht
-          href: tabs/tabs-link-unfurling.md
-        - name: Registerkarten für Unterhaltungen erstellen
-          href: tabs/how-to/conversational-tabs.md
-        - name: Änderungen am Registerkartenrand
-          href: resources/removing-tab-margins.md
-    - name: Schnellstarts
-      items:
-        - name: Persönliche Registerkarte mit Node.js
-          href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: Persönliche Registerkarte mit C#/ASP.NET Core
-          href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: Persönliche Registerkarte mit C#/ASP.NET Core MVC
-          href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-        - name: Kanalregisterkarte mit Node.js
-          href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-        - name: Kanalregisterkarte mit C#/ASP.NET Core
-          href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-        - name: Kanalregisterkarte mit C#/ASP.NET Core MVC
-          href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+    - name: Voraussetzungen
+      href: tabs/how-to/tab-requirements.md
+    - name: Erstellen einer persönlichen Registerkarte
+      href: tabs/how-to/create-personal-tab.md
+    - name: Erstellen einer Kanalregisterkarte
+      href: tabs/how-to/create-channel-group-tab.md
+    - name: Erstellen einer Inhaltsseite
+      href: tabs/how-to/create-tab-pages/content-page.md
+    - name: Erstellen einer Konfigurationsseite
+      href: tabs/how-to/create-tab-pages/configuration-page.md
+    - name: Erstellen einer Seite zum Entfernen
+      href: tabs/how-to/create-tab-pages/removal-page.md
+    - name: Registerkarten auf mobilen Geräten
+      href: tabs/design/tabs-mobile.md
+    - name: Kontext für Ihre Registerkarte erhalten
+      href: tabs/how-to/access-teams-context.md
+    - name: Erstellen von Registerkarten mit adaptiven Karten
+      href: tabs/how-to/build-adaptive-card-tabs.md
+    - name: Aufgeklappte Registerkartenverknüpfung und Phasenansicht
+      href: tabs/tabs-link-unfurling.md
+    - name: Registerkarten für Unterhaltungen erstellen
+      href: tabs/how-to/conversational-tabs.md
+    - name: Änderungen am Registerkartenrand
+      href: resources/removing-tab-margins.md
 - name: Erstellen von Bots
   items:
     - name: Übersicht
@@ -251,8 +239,11 @@
           href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Unterhaltungsereignisse in Ihrem Teams-Bot
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
-        - name: Senden proaktiver Nachrichten
+        - name: Proaktive Nachrichten
           href: bots/how-to/conversations/send-proactive-messages.md
+          items:
+            - name: Schrittweise Anleitung
+              href: sbs-send-proactive.yml
         - name: Formatieren von Bot-Nachrichten
           href: bots/how-to/format-your-bot-messages.md
         - name: Bot-Nachrichten aktualisieren und löschen
@@ -317,26 +308,28 @@
   items:
     - name: Übersicht
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - name: Erstellen eines eingehenden Webhooks
-      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-    - name: Erstellen eines ausgehenden Webhooks
+    - name: Erstellen ausgehender Webhooks
       href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-    - name: Erstellen eines Office 365-Connectors
+    - name: Erstellen eingehender Webhooks
+      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+    - name: Erstellen von Office 365-Connectors
       href: webhooks-and-connectors/how-to/connectors-creating.md
-    - name: Senden von Nachrichten an Connectors und Webhooks
+    - name: Nachrichten erstellen und senden
       href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Erstellen von Karten und Aufgabenmodulen
   items:
+    - name: Übersicht
+      href: task-modules-and-cards/cards-and-task-modules.md
     - name: Erstellen von Karten
       items:
         - name: Übersicht
           href: task-modules-and-cards/what-are-cards.md
-        - name: Formatieren von Kartentext
-          href: task-modules-and-cards/cards/cards-format.md
-        - name: Kartenaktionen hinzufügen und darauf reagieren
-          href: task-modules-and-cards/cards/cards-actions.md
-        - name: Karten-Referenz
+        - name: Kartentypen
           href: task-modules-and-cards/cards/cards-reference.md
+        - name: Formatieren von Karten in Microsoft Teams
+          href: task-modules-and-cards/cards/cards-format.md
+        - name: Kartenaktionen
+          href: task-modules-and-cards/cards/cards-actions.md
         - name: Universal-Aktionen für adaptive Karten
           items:
             - name: Übersicht
@@ -353,9 +346,11 @@
       items:
         - name: Übersicht
           href: task-modules-and-cards/what-are-task-modules.md
+        - name: Aufrufen und Schließen von Aufgabenmodulen
+          href: task-modules-and-cards/task-modules/invoking-task-modules.md
         - name: Verwenden von Aufgabenmodulen in Registerkarten
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-        - name: Verwenden von Aufgabenmodulen in Bots
+        - name: Verwenden von Aufgabenmodulen aus Bots
           href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: Authentifizierung hinzufügen
   items:
@@ -477,13 +472,13 @@
       items:
         - name: Lokalisieren IhrerApp
           href: concepts/build-and-test/apps-localization.md
-        - name: JSON-Schema für Lokalisierung
+        - name: Json-Schemareferenz lokalisieren
           href: resources/schema/localization-schema.md
-    - name: SameSite-Cookie-Attribut (Update von 2020)
+    - name: SameSite-Cookieattribut
       href: resources/samesite-cookie-update.md
     - name: Häufig Fehler beim Übermitteln an den Store
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-    - name: Zur Microsoft Teams-Dokumentation beitragen
+    - name: Mitwirken an der Teams-Dokumentation
       href: resources/teams-contributor-reference.md
 - name: Support und Feedback
   href: feedback.md
