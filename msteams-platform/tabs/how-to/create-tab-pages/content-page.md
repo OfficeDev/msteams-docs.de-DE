@@ -6,12 +6,12 @@ keywords: teams tabs group channel configurable static
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: d1ec2c0381ba371393a03cda69ffc44a5f49924e
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 1276fdac2d3a30836b574b8e51b99fcbd7a415d2
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140201"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179734"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Erstellen einer Inhaltsseite für Ihre Registerkarte
 
@@ -29,7 +29,7 @@ Das übergeordnete Ziel Ihrer Registerkarte besteht darin, den Zugriff auf aussa
 
 Weitere Informationen finden Sie in den Richtlinien für das [Registerkartendesign](~/tabs/design/tabs.md) und [Microsoft Teams Richtlinien für die Speichervalidierung.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 
-## <a name="integrate-your-code-with-teams"></a>Integrieren von Code in Teams
+## <a name="integrate-your-code-with-teams"></a>Integrieren Von Code in Teams
 
 Damit Ihre Seite in Teams angezeigt werden kann, müssen Sie das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) und einen Aufruf nach `microsoftTeams.initialize()` dem Laden der Seite einschließen. 
 
@@ -55,7 +55,7 @@ Der folgende Code enthält ein Beispiel dafür, wie Ihre Seite und der Teams-Cli
 
 ## <a name="access-additional-content"></a>Zugreifen auf zusätzliche Inhalte
 
-Sie können mithilfe des SDK auf zusätzliche Inhalte zugreifen, um mit Teams zu interagieren, Deep-Links zu erstellen, Aufgabenmodule zu verwenden und zu überprüfen, ob URL-Domänen im Array enthalten `validDomains` sind.
+Sie können auf zusätzliche Inhalte zugreifen, indem Sie das SDK verwenden, um mit Teams zu interagieren, Deep-Links zu erstellen, Aufgabenmodule zu verwenden und zu überprüfen, ob URL-Domänen im Array enthalten `validDomains` sind.
 
 ### <a name="use-the-sdk-to-interact-with-teams"></a>Verwenden des SDK für die Interaktion mit Teams
 
@@ -74,7 +74,7 @@ Ein Aufgabenmodul ist eine modale Popupoberfläche, die Sie von Ihrer Registerka
 Stellen Sie sicher, dass alle URL-Domänen, die in Ihren Registerkarten verwendet werden, im `validDomains` Array ihres [Manifests](~/concepts/build-and-test/apps-package.md)enthalten sind. Weitere Informationen finden Sie unter ["validDomains"](~/resources/schema/manifest-schema.md#validdomains) in der Manifestschemareferenz.
 
 > [!NOTE]
-> Die Kernfunktionalität Ihrer Registerkarte befindet sich innerhalb Teams und nicht außerhalb von Teams.
+> Die Kernfunktionalität ihrer Registerkarte ist innerhalb Teams und nicht außerhalb von Teams vorhanden.
 
 ## <a name="show-a-native-loading-indicator"></a>Anzeigen einer systemeigenen Ladeanzeige
 
@@ -91,7 +91,7 @@ Wenn Sie `showLoadingIndicator : true`  in Ihrem App-Manifest angeben, müssen a
 1. Aufrufen von `microsoftTeams.initialize();`
 1. Rufen Sie als **obligatorischen** Schritt `microsoftTeams.appInitialization.notifySuccess()` Teams auf, dass Ihre App erfolgreich geladen wurde. Teams blendet dann ggf. die Ladeanzeige aus. Wenn `notifySuccess`  die App nicht innerhalb von 30 Sekunden aufgerufen wird, wird davon ausgegangen, dass ein Timeout für Ihre App aufgetreten ist und ein Fehlerbildschirm mit einer Wiederholungsoption angezeigt wird.
 1. **Optional** können Sie, wenn Sie bereit sind, auf dem Bildschirm zu drucken und den restlichen Inhalt Der Anwendung zu laden, die Ladeanzeige manuell ausblenden, indem Sie `microsoftTeams.appInitialization.notifyAppLoaded();` aufrufen.
-1. Wenn die Anwendung nicht geladen werden kann, können Sie Teams mitteilen, `microsoftTeams.appInitialization.notifyFailure(reason);` dass ein Fehler aufgetreten ist. Dem Benutzer wird ein Fehlerbildschirm angezeigt. Der folgende Code enthält ein Beispiel für Anwendungsfehlerursachen:
+1. Wenn die Anwendung nicht geladen werden kann, können Sie `microsoftTeams.appInitialization.notifyFailure(reason);` Teams mitteilen, dass ein Fehler aufgetreten ist. Dem Benutzer wird ein Fehlerbildschirm angezeigt. Der folgende Code enthält ein Beispiel für Anwendungsfehlerursachen:
 
     ```typescript
     /* List of failure reasons */
@@ -105,17 +105,9 @@ Wenn Sie `showLoadingIndicator : true`  in Ihrem App-Manifest angeben, müssen a
 ## <a name="see-also"></a>Siehe auch
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
-* [Voraussetzungen](~/tabs/how-to/tab-requirements.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
 * [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
 * [Erstellen einer Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Erstellen einer Seite zum Entfernen ihrer Registerkarte](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
-* [Kontext für Ihre Registerkarte erhalten](~/tabs/how-to/access-teams-context.md)
-* [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Aufgeklappte Registerkartenverknüpfung und Phasenansicht](~/tabs/tabs-link-unfurling.md)
-* [Registerkarten für Unterhaltungen erstellen](~/tabs/how-to/conversational-tabs.md)
-* [Änderungen am Registerkartenrand](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

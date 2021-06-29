@@ -4,12 +4,12 @@ author: KirtiPereira
 description: Erstellen von Registerkarten mit adaptiven Karten
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: c551ae748805ddc380fb3213b67f704c73060a2f
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 4359b20d5839b86955082b7a5da8db262e13600c
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140285"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179902"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
@@ -19,7 +19,7 @@ ms.locfileid: "53140285"
 
 Beim Entwickeln einer Registerkarte mithilfe der herkömmlichen Methode können diese Probleme auftreten, z. B. HTML- und CSS-Überlegungen, langsame Ladezeiten, iFrame-Einschränkungen sowie Serverwartung und -kosten. Registerkarten für adaptive Karten sind eine neue Methode zum Erstellen von Registerkarten in Teams. Anstatt Webinhalte in einen IFrame einzubetten, können Sie adaptive Karten auf einer Registerkarte rendern. Während das Front-End mit adaptiven Karten gerendert wird, wird das Back-End von einem Bot unterstützt. Der Bot ist dafür verantwortlich, Anforderungen zu akzeptieren und entsprechend mit der gerenderten adaptiven Karte zu antworten.
 
-Sie können Ihre Registerkarten mit vorgefertigten Ui-Blocks (Ui) erstellen, die auf Desktops, im Web und auf mobilgeräten systemintern aussehen und sich nativ anfühlen. Dieser Artikel hilft Ihnen zu verstehen, welche Änderungen am App-Manifest vorgenommen werden müssen, wie das Aufrufen von Aktivitätsanforderungen und das Senden von Informationen auf der Registerkarte mit adaptiven Karten und die Auswirkungen auf den Aufgabenmodulworkflow erfolgt.
+Sie können Ihre Registerkarten mit vorgefertigten Ui-Blocks (UI) erstellen, die auf Desktops, im Web und auf mobilgeräten systemintern aussehen und sich nativ anfühlen. Dieser Artikel hilft Ihnen zu verstehen, welche Änderungen am App-Manifest vorgenommen werden müssen, wie das Aufrufen von Aktivitätsanforderungen und das Senden von Informationen auf der Registerkarte mit adaptiven Karten und die Auswirkungen auf den Aufgabenmodulworkflow erfolgt.
 
 Die folgende Abbildung zeigt Buildregisterkarten mit adaptiven Karten auf Desktops und mobilgeräten:
 
@@ -416,16 +416,9 @@ Der folgende Code zeigt ein neu ausgestelltes Anforderungsbeispiel:
 
 * [Adaptive Karte](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
-* [Voraussetzungen](~/tabs/how-to/tab-requirements.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
 * [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
-* [Erstellen einer Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Erstellen einer Konfigurationsseite](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [Erstellen einer Seite zum Entfernen ihrer Registerkarte](~/tabs/how-to/create-tab-pages/removal-page.md)
 * [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
-* [Kontext für Ihre Registerkarte erhalten](~/tabs/how-to/access-teams-context.md)
-* [Registerkarten für Unterhaltungen erstellen](~/tabs/how-to/conversational-tabs.md)
-* [Änderungen am Registerkartenrand](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

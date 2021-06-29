@@ -1,20 +1,20 @@
 ---
-title: Erste Schritte – Erstellen Ihrer ersten Teams-App mit Doppelklick
+title: Erste Schritte – Erstellen Sie Ihre erste Teams-App mit Demerz
 author: adrianhall
-description: Erstellen Sie mithilfe von Microsoft Teams-Toolkit und React schnell eine Microsoft Teams-App, mithilfe des Microsoft Teams-Toolkits und von .NET Mofzor.
+description: Erstellen Sie mithilfe von Microsoft Teams-Toolkit und React schnell eine Microsoft Teams-App, mithilfe des Microsoft Teams Toolkits und .NET Mofzor.
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: c336c97d477e7038cc41a5e593d71b0e98dc4643
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: f40331ed06a401d60092e884add2cfa747c3ebdc
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994392"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179951"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Erstellen und Ausführen Ihrer ersten Microsoft Teams-App mit Demerz
 
-In diesem Lernprogramm erstellen Sie eine neue Microsoft Teams-App in .NET/Mofzor, die eine einfache persönliche App zum Abrufen von Informationen aus Microsoft Graph implementiert. (Eine *persönliche App* enthält eine Reihe von Registerkarten, die für die individuelle Verwendung vorgesehen sind.)  Während des Lernprogramms erfahren Sie mehr über die Struktur einer Teams-App, wie Sie eine App lokal ausführen und wie Sie die App in Azure bereitstellen.
+In diesem Lernprogramm erstellen Sie eine neue Microsoft Teams-App in .NET/Doppelklick, die eine einfache persönliche App zum Abrufen von Informationen aus dem Microsoft Graph implementiert. (Eine *persönliche App* enthält eine Reihe von Registerkarten, die für die individuelle Verwendung vorgesehen sind.)  Während des Lernprogramms erfahren Sie mehr über die Struktur einer Teams-App, wie Sie eine App lokal ausführen und wie Sie die App in Azure bereitstellen.
 
 In der erstellten App werden grundlegende Benutzerinformationen für den aktuellen Benutzer angezeigt.  Wenn die Berechtigung dazu erteilt wurde, stellt die App eine Verbindung mit Microsoft Graph als aktueller Benutzer her, um das vollständige Profil zu erhalten.
 
@@ -29,13 +29,13 @@ Stellen Sie sicher, dass Ihre Entwicklungsumgebung eingerichtet ist, indem Sie d
 
 Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 
-# <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
+# <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
 
 1. Öffnen Sie Visual Studio 2019.
 
 1. Wählen Sie **"Neues Projekt erstellen"** aus.
 
-1. Wählen Sie **Microsoft Teams-App** aus, und drücken Sie dann **"Weiter".**  Verwenden Sie den Projekttyp Microsoft **Teams,** um Ihnen bei der Suche nach der Vorlage zu helfen.
+1. Wählen Sie **Microsoft Teams App** aus, und drücken Sie dann **"Weiter".**  Um die Vorlage zu finden, verwenden Sie den Projekttyp **Microsoft Teams**.
 
 1. Geben Sie dem Projekt und der Projektmappe einen guten Namen, und drücken Sie dann **"Weiter".**
 
@@ -43,7 +43,7 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 
 1. Ihre Microsoft Teams-App wird innerhalb weniger Sekunden erstellt.  Nachdem das Projekt erstellt wurde, richten Sie einmaliges Anmelden mit M365 ein:
 
-   - Wählen Sie **Project**  >  **TeamsFx**  >  **Configure for SSO...** aus.
+   - Wählen Sie **Project**  >  **TeamsFx**  >  **Konfigurieren für SSO... aus.**
    - Melden Sie sich bei Ihrem M365-Administratorkonto an, wenn Sie dazu aufgefordert werden.
 
 # <a name="command-line"></a>[Befehlszeile](#tab/cli)
@@ -56,7 +56,7 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
    dotnet new --install Microsoft.TeamsFx.VisualStudio.ProjectTemplates::0.1.43-beta
    ```
 
-   Dies ist nur beim ersten Mal oder beim Aktualisieren der Vorlage erforderlich. Überprüfen Sie [NuGet](https://www.nuget.org/packages/Microsoft.TeamsFx.VisualStudio.ProjectTemplates/) auf die neueste Version dieses Pakets.
+   Dies ist nur beim ersten Mal oder beim Aktualisieren der Vorlage erforderlich. Überprüfen Sie [NuGet](https://www.nuget.org/packages/Microsoft.TeamsFx.VisualStudio.ProjectTemplates/) nach der neuesten Version dieses Pakets.
 
 1. Erstellen eines Verzeichnisses:
 
@@ -70,13 +70,13 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
    dotnet new teamsapp --shortName my-teams-app --companyName "My Company"
    ```
 
-1. Nachdem Sie ein Gerüst erstellt haben, konfigurieren Sie das Projekt für die Teams-Bereitstellung:
+1. Nachdem Sie ein Gerüst erstellt haben, konfigurieren Sie das Projekt für Teams Bereitstellung:
 
    ``` bash
    teamsfx init
    ```
 
-Sie können die Projektmappe jetzt in Visual Studio zum Debuggen öffnen.
+Sie können die Lösung nun in Visual Studio zum Debuggen öffnen.
 
 ---
 
@@ -84,7 +84,7 @@ Sie können die Projektmappe jetzt in Visual Studio zum Debuggen öffnen.
 
 Wenn Sie diesen Abschnitt vorerst überspringen möchten, können Sie [Ihre App lokal ausführen](#run-your-app-locally).
 
-Nachdem das Microsoft Teams Toolkit Ihr Projekt konfiguriert hat, verfügen Sie über die Komponenten zum Erstellen einer einfachen persönlichen App für Microsoft Teams. Die Im Projektmappen-Explorer-Bereich von Visual Studio 2019 angezeigten Projektverzeichnisse und Dateien.
+Nachdem das Microsoft Teams Toolkit Ihr Projekt konfiguriert hat, verfügen Sie über die Komponenten zum Erstellen einer einfachen persönlichen App für Microsoft Teams. Die Projektverzeichnisse und Dateien werden im Projektmappen-Explorer-Bereich von Visual Studio 2019 angezeigt.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-file-layout.png" alt-text="Screenshot der App-Projektdateien für eine persönliche App in Visual Studio 2019.":::
 
@@ -95,7 +95,7 @@ Nachdem das Microsoft Teams Toolkit Ihr Projekt konfiguriert hat, verfügen Sie 
 Da Sie während des Setups eine Registerkarten-App erstellt haben, erstellt das Teams-Toolkit das Gerüst für den gesamten erforderlichen Code für eine einfache Registerkarte als [Einenzockserver.](/aspnet/core/blazor)
 
 - `Pages/Tab.razor` ist der Einstiegspunkt der Front-End-Anwendung.
-- `TeamsFx.cs``JS/src/index.js`und wird für die Initialisierung der Kommunikation mit dem Teams-Host verwendet.
+- `TeamsFx.cs``JS/src/index.js`wird für die Initialisierung der Kommunikation mit dem Teams Host verwendet.
 
 Sie können Back-End-Funktionen hinzufügen, indem Sie Ihrer Anwendung zusätzliche ASP.NET Core-Controller hinzufügen.
 
@@ -104,14 +104,14 @@ Sie können Back-End-Funktionen hinzufügen, indem Sie Ihrer Anwendung zusätzli
 Das Microsoft Teams-Toolkit ermöglicht es Ihnen, Ihre App lokal auszuführen.  Dies besteht aus mehreren Teilen, die für die Bereitstellung der richtigen, von Microsoft Teams erwarteten Infrastruktur erforderlich sind:
 
 - Es wird eine Anwendung bei Azure Active Directory registriert.  Diese Anwendung verfügt über Berechtigungen, die mit dem Speicherort, von dem die App geladen wird, und allen Back-End-Ressourcen verknüpft sind, auf die sie zugreift.
-- Eine Web-API wird (über IIS Express) gehostet, um Authentifizierungsaufgaben zu unterstützen, die als Proxy zwischen der App und Azure Active Directory fungieren.  
+- Eine Web-API wird (über IIS Express) gehostet, um Authentifizierungsaufgaben zu unterstützen und als Proxy zwischen der App und Azure Active Directory zu fungieren.  
 - Es wird ein App-Manifest generiert und im Entwicklerportal für Microsoft Teams verfügbar gemacht.  Microsoft Teams verwendet das App-Manifest, um die verbundenen Clients darüber zu informieren, von wo die App geladen werden soll.
 
 Sobald dies erfolgt ist, kann die App im Microsoft Teams-Client geladen werden.  Wir verwenden den Microsoft Teams-Webclient, um den HTML-, CSS- und JavaScript-Code in einer standardmäßigen Webentwicklungsumgebung anzuzeigen.
 
 So erstellen Sie Ihre App und führen sie lokal aus:
 
-1. Drücken Sie in Visual Studio Code **F5**, um die Anwendung im Debugmodus auszuführen.
+1. Drücken Sie von Visual Studio **F5,** um die Anwendung im Debugmodus auszuführen.
 
 1. Installieren Sie auf Anforderung das selbstsignierungsbasierte SSL-Zertifikat für das lokale Debuggen.
 
@@ -136,7 +136,7 @@ Wenn Sie F5 gedrückt haben, hat das Microsoft Teams-Toolkit Folgendes getan:
 1. Ihre Anwendung bei Microsoft Teams für das „Querladen“ registriert.
 1. Das Anwendungs-Back-End wurde lokal ausgeführt.
 1. Das lokal gehostete Anwendungs-Front-End gestartet
-1. Microsoft Teams wurde in einem Webbrowser mit einem Befehl gestartet, um Teams anzuweisen, die Anwendung querzuladen (die URL ist im Anwendungsmanifest registriert).
+1. Gestartet Microsoft Teams in einem Webbrowser mit einem Befehl, um Teams anzuweisen, die Anwendung querzuladen (die URL wird im Anwendungsmanifest registriert).
 
 </details>
 
@@ -144,7 +144,7 @@ Wenn Sie F5 gedrückt haben, hat das Microsoft Teams-Toolkit Folgendes getan:
 <details>
 <summary>Erfahren Sie, wie Sie häufige Probleme bei dem lokalen Ausführen Ihrer App lösen können.</summary>
 
-Um Ihre App in Teams erfolgreich ausführen zu können, benötigen Sie ein Microsoft 365-Entwicklungskonto, das das Laden der App-Seite ermöglicht. Weitere Informationen zum Öffnen von Apps finden Sie unter [Erforderliche Komponenten](prerequisites.md#enable-sideloading).
+Um Ihre App erfolgreich in Teams ausführen zu können, benötigen Sie ein Microsoft 365 Entwicklungskonto, das das Laden der App-Seite ermöglicht. Weitere Informationen zum Öffnen von Apps finden Sie unter [Erforderliche Komponenten](prerequisites.md#enable-sideloading).
 
 </details>
 
@@ -154,7 +154,7 @@ Die Bereitstellung besteht aus zwei Schritten.  Zuerst werden erforderliche Clou
 
 > **Vorschau**
 >
-> Die Unterstützung für Mofzor-Apps ist neu im Teams-Toolkit.  Bereitstellung und Bereitstellung erfolgen mit einer Kombination aus Visual Studio 2019 und dem Entwicklerportal für Teams.
+> Die Unterstützung für Doppelklick-Apps ist neu in Teams Toolkit.  Bereitstellung und Bereitstellung erfolgen mit einer Kombination aus Visual Studio 2019 und dem Entwicklerportal für Teams.
 
 ## <a name="provision-and-deploy-your-app-to-azure-app-service"></a>Bereitstellen und Bereitstellen Ihrer App im Azure App Service
 
@@ -174,7 +174,7 @@ Die Bereitstellung besteht aus zwei Schritten.  Zuerst werden erforderliche Clou
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish4.png" alt-text="Erstellen Sie eine neue Instanz.":::
 
-1. Im Dialogfeld **"App-Dienst erstellen (Windows)** werden die Eintragsfelder **"Name",** **"Abonnementname",** **"Ressourcengruppe"** und **"Hostingplan"** ausgefüllt. Wenn Sie bereits einen App-Dienst ausgeführt haben, werden vorhandene Einstellungen ausgewählt.  Sie können eine neue Ressourcengruppe und einen Hostingplan erstellen (empfohlen).  Wenn Sie fertig sind, wählen Sie **Erstellen** aus.
+1. Im Dialogfeld **"App-Dienst erstellen" (Windows)** werden die Eintragsfelder **"Name",** **"Abonnementname",** **"Ressourcengruppe"** und **"Hostingplan"** ausgefüllt. Wenn Sie bereits einen App-Dienst ausgeführt haben, werden vorhandene Einstellungen ausgewählt.  Sie können eine neue Ressourcengruppe und einen Hostingplan erstellen (empfohlen).  Wenn Sie fertig sind, wählen Sie **Erstellen** aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish5.png" alt-text="Auswählen von Hostingplan und Abonnement":::
 
@@ -228,7 +228,7 @@ Das App-Manifest lädt die Registerkarte von einer `localhost` URL.  In diesem A
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Auswählen grundlegender Informationen":::
 
-1. Es gibt mehrere Stellen innerhalb des Manifests, an denen ein Element als Teil einer URL aufgeführt `locahost:XXXXX` wird.  Ersetzen Sie alle Vorkommen `{{azure_app_url}}` durch (einschließlich der geschweiften Klammern).
+1. Es gibt mehrere Stellen innerhalb des Manifests, an denen ein Element als Teil einer URL aufgeführt `localhost:XXXXX` wird.  Ersetzen Sie alle Vorkommen `{{azure_app_url}}` durch (einschließlich der geschweiften Klammern).
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Anpassen der grundlegenden Informationen für die Umgebung":::
 
@@ -247,7 +247,7 @@ Das App-Manifest lädt die Registerkarte von einer `localhost` URL.  In diesem A
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments7.png" alt-text="Bearbeiten von URLs für persönliche Registerkarten":::
 
-1. Drücken Sie **Update**.
+1. Drücken Sie **update**.
 
 1. Klicken Sie auf **Speichern**.
 
@@ -267,7 +267,7 @@ Das App-Manifest lädt die Registerkarte von einer `localhost` URL.  In diesem A
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments9.png" alt-text="Hinzufügen einer Domäne":::
 
-Sie können jetzt die Schaltfläche **"Vorschau in Teams"** oben auf der Seite verwenden, um Ihre App in Teams zu starten.
+Sie können jetzt die Schaltfläche **"Vorschau in Teams"** oben auf der Seite verwenden, um Ihre App innerhalb Teams zu starten.
 
 ## <a name="see-also"></a>Siehe auch
 

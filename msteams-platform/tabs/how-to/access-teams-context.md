@@ -4,12 +4,12 @@ description: Beschreibt, wie Sie Benutzerkontext zu Ihren Registerkarten abrufen
 localization_priority: Normal
 ms.topic: how-to
 keywords: Teams Registerkarten Benutzerkontext
-ms.openlocfilehash: 29f574ae924ddde52b63590aba3fcc06a3d446af
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8c91cf5a65f13d9f58f6ae8aa2678266c37338c8
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140278"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179727"
 ---
 # <a name="get-context-for-your-tab"></a>Kontext für Ihre Registerkarte erhalten
 
@@ -55,7 +55,7 @@ Verwenden Sie Platzhalter in Ihren Konfigurations-oder Inhalts-URLs. Microsoft T
 
 In Ihrem Registerkartenmanifest legen Sie das Attribut beispielsweise `configURL` auf `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` fest, dass der angemeldete Benutzer die folgenden Attribute hat:
 
-* Ihr Benutzername ist **user@example.com**.
+* Ihr Benutzername ist **user@example.com.**
 * Die Mandanten-ID des Unternehmens lautet **e2653c usw.**
 * Sie sind Mitglied der Office 365-Gruppe mit id **00209384-usw.**
 * Der Benutzer hat sein Teams Design auf **dunkel** festgelegt.
@@ -64,7 +64,7 @@ Wenn sie die Registerkarte konfigurieren, ruft Teams die folgende URL auf:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
-### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Abrufen des Kontexts mithilfe der Microsoft Teams JavaScript-Bibliothek
+### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Abrufen von Kontext mithilfe der Microsoft Teams JavaScript-Bibliothek
 
 Sie können die zuvor aufgeführten Informationen auch mithilfe des [JavaScript-Client-SDKs von Microsoft Teams](/javascript/api/overview/msteams-client) abrufen, indem Sie `microsoftTeams.getContext(function(context) { /* ... */ })` aufrufen.
 
@@ -121,8 +121,8 @@ Wenn Ihre Inhaltsseite in einem privaten Kanal geladen wird, werden die Daten, d
 * `teamId`: Auf die threadId des privaten Kanals festgelegt
 * `teamName`: Auf den Namen des privaten Kanals festgelegt
 * `teamSiteUrl`: Legen Sie die URL einer eindeutigen SharePoint-Website für den privaten Kanal fest.
-* `teamSitePath`: Auf den Pfad einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal festgelegt
-* `teamSiteDomain`: Auf die Domäne einer eindeutigen, eindeutigen SharePoint-Websitedomäne für den privaten Kanal festgelegt
+* `teamSitePath`: Legen Sie den Pfad einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal fest.
+* `teamSiteDomain`: Festlegen auf die Domäne einer eindeutigen SharePoint-Websitedomäne für den privaten Kanal
 
 Wenn Ihre Seite einen dieser Werte verwendet, müssen Sie das Feld überprüfen, `channelType` um festzustellen, ob Die Seite in einem privaten Kanal geladen ist, und entsprechend reagieren.
 
@@ -139,16 +139,8 @@ Das `theme` Argument in der Funktion ist eine Zeichenfolge mit dem Wert , oder `
 
 * [Richtlinien für den Registerkartenentwurf](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
-* [Voraussetzungen](~/tabs/how-to/tab-requirements.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
 * [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
-* [Erstellen einer Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Erstellen einer Konfigurationsseite](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [Erstellen einer Seite zum Entfernen ihrer Registerkarte](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
-* [Aufgeklappte Registerkartenverknüpfung und Phasenansicht](~/tabs/tabs-link-unfurling.md)
-* [Registerkarten für Unterhaltungen erstellen](~/tabs/how-to/conversational-tabs.md)
-* [Änderungen am Registerkartenrand](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

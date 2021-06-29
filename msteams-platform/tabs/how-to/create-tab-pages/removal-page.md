@@ -6,12 +6,12 @@ keywords: Teams-Registerkarten Gruppenkanal konfigurierbare Löschung entfernen
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1b4ef5435ad1be82726edbf02d7205c0b1feba06
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 97f5dfdd8cd9e5e19ec26c345ac960a04a108ab3
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140194"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179713"
 ---
 # <a name="create-a-removal-page"></a>Erstellen einer Seite zum Entfernen
 
@@ -31,7 +31,7 @@ Wenn Ihre Registerkarte in einen Kanal- oder Gruppenchat hochgeladen wird, fügt
 | ----------------------- | :----: | ----- | ----------- |
 |     Einstellungen            |   √    |       |Die `configurationUrl` Seite wird in einem IFrame neu geladen, sodass der Benutzer die Registerkarte neu konfigurieren kann. |
 |     Umbenennen              |   √    |   √   | Der Benutzer kann den Namen der Registerkarte so ändern, wie er in der Registerkartenleiste angezeigt wird.          |
-|     Entfernen              |   √    |   √   |  Wenn die  `removeURL` Eigenschaft und der Wert auf der **Konfigurationsseite** enthalten sind, wird die Seite zum **Entfernen** in einen IFrame geladen und dem Benutzer angezeigt. Wenn keine Seite zum Entfernen enthalten ist, wird dem Benutzer ein Bestätigungsdialogfeld angezeigt.          |
+|     Entfernen              |   √    |   √   |  Wenn die  `removeURL` Eigenschaft und der Wert in der **Konfigurationsseite** enthalten sind, wird die Seite zum **Entfernen** in einen IFrame geladen und dem Benutzer angezeigt. Wenn keine Seite zum Entfernen enthalten ist, wird dem Benutzer ein Bestätigungsdialogfeld angezeigt.          |
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Erstellen einer Seite zum Entfernen von Registerkarten für Ihre Anwendung
 
@@ -57,7 +57,7 @@ Sie können den `getContext()` aktuellen Kontext abrufen, in dem der Frame ausge
 
 #### <a name="include-authentication"></a>Einschließen der Authentifizierung
 
-Eine Authentifizierung ist erforderlich, bevor ein Benutzer den Registerkarteninhalt löschen kann. Kontextinformationen können verwendet werden, um Authentifizierungsanforderungen und Autorisierungsseiten-URLs zu erstellen. Siehe [Microsoft Teams Authentifizierungsfluss für Registerkarten.](~/tabs/how-to/authentication/auth-flow-tab.md) Stellen Sie sicher, dass alle Domänen, die auf Ihren Registerkartenseiten verwendet werden, im Array aufgeführt `manifest.json` `validDomains` sind.
+Eine Authentifizierung ist erforderlich, bevor ein Benutzer den Registerkarteninhalt löschen kann. Kontextinformationen können verwendet werden, um Authentifizierungsanforderungen und Autorisierungsseiten-URLs zu erstellen. Registerkarten finden Sie [unter Microsoft Teams Authentifizierungsfluss.](~/tabs/how-to/authentication/auth-flow-tab.md) Stellen Sie sicher, dass alle Domänen, die auf Ihren Registerkartenseiten verwendet werden, im Array aufgeführt `manifest.json` `validDomains` sind.
 
 Es folgt ein Beispielcodeblock zum Entfernen von Registerkarten:
 
@@ -94,16 +94,9 @@ Nachdem der Remove-Handler ausgeführt `removeEvent.notifySuccess()` wurde, oder
 ## <a name="see-also"></a>Siehe auch
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
-* [Voraussetzungen](~/tabs/how-to/tab-requirements.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
 * [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
-* [Erstellen einer Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md)
 * [Erstellen einer Konfigurationsseite](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [Kontext für Ihre Registerkarte erhalten](~/tabs/how-to/access-teams-context.md)
-* [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Aufgeklappte Registerkartenverknüpfung und Phasenansicht](~/tabs/tabs-link-unfurling.md)
-* [Registerkarten für Unterhaltungen erstellen](~/tabs/how-to/conversational-tabs.md)
-* [Änderungen am Registerkartenrand](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

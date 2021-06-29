@@ -1,18 +1,18 @@
 ---
-title: Erstellen und Senden von Nachrichten
+title: Nachrichten erstellen und senden
 author: laujan
 description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Teams
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams O365-Connector
-ms.openlocfilehash: e396d0048831634f683b6df925853464698fb96a
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8835e43ed74a8da5ad3b3b4358b259d63068b469
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140527"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179895"
 ---
-# <a name="create-and-send-messages"></a>Erstellen und Senden von Nachrichten
+# <a name="create-and-send-messages"></a>Nachrichten erstellen und senden
 
 Sie können Nachrichten mit Aktionen erstellen und über eingehenden Webhook oder Office 365 Connector senden.
 
@@ -200,7 +200,7 @@ Diese Nachricht enthält die folgende Karte im Kanal:
 
 **So senden Sie adaptive Karten über einen eingehenden Webhook**
 
-1. [Richten Sie einen benutzerdefinierten Webhook](/add-incoming-webhook.md) in Teams ein.
+1. [Richten Sie einen benutzerdefinierten Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams ein.
 1. Erstellen Sie die JSON-Datei für adaptive Karten mit dem folgenden Code:
 
     ```json
