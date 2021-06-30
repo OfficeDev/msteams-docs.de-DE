@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Teams-Apps – Benutzerteilnehmer-Rollen-API für Besprechungen
-ms.openlocfilehash: dbab038c6e006003fb4525c6d58ea8a151e9592d
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 3a3b2fc13f67d2ca3b061a165248fa2458058441
+ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179699"
+ms.locfileid: "53196236"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Voraussetzungen und API-Verweise für Apps in Teams-Besprechungen
 
-Um die Funktionen Ihrer Apps über den gesamten Besprechungslebenszyklus zu erweitern, können Sie mit Teams mit Apps für Teams Besprechungen arbeiten. Sie müssen die Voraussetzungen durchlaufen, und Sie können die Api-Verweise auf Besprechungs-Apps verwenden, um die Besprechungserfahrung zu verbessern.
+Um die Funktionen Ihrer Apps über den gesamten Besprechungslebenszyklus zu erweitern, können Sie mit Teams mit Apps für Teams Besprechungen arbeiten. Sie müssen die Voraussetzungen erfüllen, und Sie können die Api-Verweise auf Besprechungs-Apps verwenden, um die Besprechungserfahrung zu verbessern.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -252,7 +252,7 @@ Die `NotificationSignal` API enthält die folgenden Antwortcodes:
 |---|---|
 | **201** | Die Aktivität mit Signal wird erfolgreich gesendet. |
 | **401** | Die App antwortet mit einem ungültigen Token. |
-| **403** | Die App kann das Signal nicht senden. Dies kann aus verschiedenen Gründen geschehen, z. B. wenn der Mandantenadministrator die App deaktiviert, die App während der Migration einer Livewebsite blockiert wird usw. In diesem Fall enthält die Nutzlast eine detaillierte Fehlermeldung. |
+| **403** | Die App kann das Signal nicht senden. Dies kann aus verschiedenen Gründen geschehen, z. B. wenn der Mandantenadministrator die App deaktiviert, die App während der Migration der Livewebsite blockiert wird usw. In diesem Fall enthält die Nutzlast eine detaillierte Fehlermeldung. |
 | **404** | Der Besprechungschat ist nicht vorhanden. |
 
 ### <a name="meeting-details-api"></a>Besprechungsdetails-API
@@ -262,18 +262,19 @@ Die `NotificationSignal` API enthält die folgenden Antwortcodes:
 
 Die Besprechungsdetails-API ermöglicht Ihrer App das Abrufen statischer Besprechungsmetadaten. Dies sind Datenpunkte, die sich nicht dynamisch ändern.
 Die API ist über Bot Services verfügbar.
-#### <a name="pre-requisite"></a>Voraussetzungen
-Vor der Verwendung der Besprechungsdetails-API müssen die erforderlichen RSC-Berechtigungen abgerufen werden. Das App-Manifest muss über die folgende webApplicationInfo verfügen:
 
-# <a name="json"></a>[Json](#tab/json)
+#### <a name="prerequisite"></a>Voraussetzung
 
-```"webApplicationInfo": {
+Um die Besprechungsdetails-API zu verwenden, müssen Sie RSC-Berechtigungen abrufen. Verwenden Sie das folgende Beispiel, um die Eigenschaft Ihres App-Manifests zu `webApplicationInfo` konfigurieren:
+
+```json
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
       "OnlineMeeting.ReadBasic.Chat"
     ]
-  }
+}
  ```
 
 #### <a name="query-parameter"></a>Abfrageparameter
@@ -351,18 +352,18 @@ Der Benutzer kann Besprechungsereignisse in Echtzeit empfangen. Sobald eine App 
 
 Die tatsächliche Anfangs- und Endzeit einer Besprechung unterscheidet sich von der geplanten Start- und Endzeit. Die Besprechungsdetails-API stellt die geplante Start- und Endzeit bereit, während das Ereignis die tatsächliche Start- und Endzeit bereitstellt.
 
-#### <a name="pre-requisite"></a>Voraussetzungen
-Das App-Manifest muss über die folgende webApplicationInfo verfügen, um die Besprechungsstart- und -endereignisse erfolgreich empfangen zu können.
+### <a name="prerequisite"></a>Voraussetzung
 
-# <a name="json"></a>[Json](#tab/json)
+Ihr App-Manifest muss über die `webApplicationInfo` Eigenschaft verfügen, um die Besprechungsstart- und -endereignisse zu empfangen. Verwenden Sie das folgende Beispiel, um Ihr Manifest zu konfigurieren:
 
-```"webApplicationInfo": {
+```json
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
       "OnlineMeeting.ReadBasic.Chat"
     ]
-  }
+}
  ```
 
 ### <a name="example-of-meeting-start-event-payload"></a>Beispiel für die Nutzlast des Besprechungsstartereignisses

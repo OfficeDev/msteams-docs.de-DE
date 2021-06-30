@@ -5,20 +5,20 @@ description: Integrieren eines Power Virtual Agents Chatbots in die Teams-Plattf
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 85f2d91d2c5cfdb0ae746a00c7a9f3d6a0c15972
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 2aa8cc510033768b68cf01cbb5b0327bffe13154
+ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069016"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53196250"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Hinzufügen eines Power Virtual Agent-Chatbots 
 
-Power Virtual Agents ist eine codelose, geleitete grafische Oberflächenlösung, die es jedem Mitglied Ihres Teams ermöglicht, umfassende, unterhaltungsbezogene Chatbots zu erstellen, die sich problemlos in die Teams-Plattform integrieren lassen. Alle in Power Virtual Agents erstellten Inhalte werden natürlich in Teams gerendert. Power Virtual Agents Bots interagieren mit Benutzern in der Teams nativen Chat-Canvas. IT-Administratoren, Geschäftsanalysten, Domänenspezialisten und erfahrene App-Entwickler können intelligente virtuelle Agents für Teams entwerfen, entwickeln und veröffentlichen, ohne eine Entwicklungsumgebung einrichten zu müssen. Sie können einen Webdienst erstellen oder sich direkt beim Bot Framework registrieren. 
+Power Virtual Agents ist eine codelose, geleitete grafische Oberflächenlösung, die es jedem Mitglied Ihres Teams ermöglicht, umfassende, unterhaltungsbezogene Chatbots zu erstellen, die sich problemlos in die Teams-Plattform integrieren lassen. Alle in Power Virtual Agents erstellten Inhalte werden natürlich in Teams gerendert. Power Virtual Agents Bots interagieren mit Benutzern im Teams nativen Chat-Canvas. IT-Administratoren, Geschäftsanalysten, Domänenspezialisten und erfahrene App-Entwickler können intelligente virtuelle Agents für Teams entwerfen, entwickeln und veröffentlichen, ohne eine Entwicklungsumgebung einrichten zu müssen. Sie können einen Webdienst erstellen oder sich direkt beim Bot Framework registrieren. 
 
 In diesem Dokument erfahren Sie, wie Sie Ihren Chatbot in Teams über das Power Virtual Agents-Portal verfügbar machen und Ihren Bot mit App Studio Teams hinzufügen. 
 
-mit Power Virtual Agents können Sie leistungsstarke Chatbots erstellen, die Fragen Ihrer Kunden, anderer Mitarbeiter oder Besucher Ihrer Website oder Ihres Dienstes beantworten können.
+Power Virtual Agents können Sie leistungsstarke Chatbots erstellen, die Fragen Ihrer Kunden, anderen Mitarbeiter oder Besucher Ihrer Website oder Ihres Dienstes beantworten können.
 
 Diese Bots können problemlos erstellt werden, ohne dass Datenentwickler oder Entwickler benötigt werden.
 
@@ -32,7 +32,7 @@ Um Ihren Chatbot in Teams über das Power Virtual Agents-Portal verfügbar zu ma
 **So stellen Sie den Chatbot in Teams**
 
 1. **Veröffentlichen der neuesten Bot-Inhalte**  
-Nachdem Sie einen Chatbot im Power Virtual Agents-Portal erstellt haben, müssen Sie Ihren Bot veröffentlichen, bevor Teams Benutzer damit interagieren können. Weitere Informationen finden Sie unter [Veröffentlichen der neuesten Bot-Inhalte.](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content)
+Nachdem Sie einen Chatbot im Power Virtual Agents Portal erstellt haben, müssen Sie Ihren Bot veröffentlichen, bevor Teams Benutzer damit interagieren können. Weitere Informationen finden Sie unter [Veröffentlichen der neuesten Bot-Inhalte.](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content)
 
    ![Veröffentlichen im Power Virtual Agents-Portal](../../assets/images/pva-publish.png)
 
@@ -102,13 +102,12 @@ Der Einrichtungsprozess zum Hinzufügen Ihres Power Virtual Agents Chat-Bots zu 
 ## <a name="see-also"></a>Siehe auch
 
 * [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
-* [Erstellen Sie einen Chatbot für Teams mit Microsoft Power Virtual Agents.](../bot-features.md#bots-and-the-microsoft-power-virtual-agents)  
+* [Erstellen Sie einen Chatbot für Teams mit Microsoft Power Virtual Agents.](../bot-features.md#bots-with-power-virtual-agents)  
 * [Power Virtual Agents-Portal](https://powervirtualagents.microsoft.com)
-* [Veröffentlichen Ihres Power Virtual Agents-Bots](/power-virtual-agents/publication-fundamentals-publish-channels)
+* [Veröffentlichen Ihres Power Virtual Agents Bots](/power-virtual-agents/publication-fundamentals-publish-channels)
 * [Sicherheit und Compliance in Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Erstellen eines virtuellen Assistenten](~/samples/virtual-assistant.md)
-
