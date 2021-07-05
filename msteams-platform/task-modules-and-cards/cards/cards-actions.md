@@ -4,12 +4,12 @@ description: Beschreibt Kartenaktionen in Microsoft Teams und deren Verwendung i
 localization_priority: Normal
 ms.topic: conceptual
 keywords: Aktionen für Teams-Bots-Karten
-ms.openlocfilehash: 1b20ca8003ab74c5dd2860e754024ae64ff94527
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 4af152f6179785687d4fd7371d202c56e1aee170
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140089"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254202"
 ---
 # <a name="card-actions"></a>Kartenaktionen
 
@@ -424,7 +424,7 @@ Adaptive Karten unterstützen vier Aktionstypen:
 * [Action.OpenUrl](http://adaptivecards.io/explorer/Action.OpenUrl.html)
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
-* [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
+* [Action.Exeniedlich](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
 Sie können auch die Nutzlast der adaptiven Karte `Action.Submit` ändern, um vorhandene Bot Framework-Aktionen mithilfe einer Eigenschaft im Objekt von zu `msteams` `data` `Action.Submit` unterstützen. Der nächste Abschnitt enthält Details zur Verwendung vorhandener Bot Framework-Aktionen mit adaptiven Karten.
 
@@ -533,7 +533,7 @@ Der folgende Code zeigt ein Beispiel für adaptive Karten mit `invoke` Aktion:
 ```json
 {
   "type": "Action.Submit",
-  "title": "submit"
+  "title": "submit",
   "data": {
     "msteams": {
         "type": "task/fetch"
@@ -557,7 +557,7 @@ Der folgende Code zeigt ein Beispiel für adaptive Karten mit `invoke` Aktion mi
 }
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 [Karten-Referenz](./cards-reference.md)
 

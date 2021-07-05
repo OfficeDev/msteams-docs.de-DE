@@ -5,41 +5,41 @@ description: Erfahren Sie, wie Sie mit der Microsoft Teams App-Entwicklung begin
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 7310d54322b6cbfd24e30eef37ea63a7969c001c
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: 4796d37aa0ef904805fbfe2956f9e1d49960bfe9
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037642"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254260"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>Voraussetzungen: Erste Schritte mit Microsoft Teams App-Entwicklung
 
-Bevor Sie Ihre erste Teams-App erstellen, müssen Sie ein paar Tools installieren und Ihre Entwicklungsumgebung einrichten.
+Bevor Sie mit dem Erstellen ihrer ersten Teams-App beginnen, müssen Sie ein paar Tools installieren und Ihre Entwicklungsumgebung einrichten.
 
 ## <a name="install-required-tools"></a>Installieren erforderlicher Tools
 
 Einige der benötigten Tools hängen davon ab, wie Sie Ihre Teams-App erstellen möchten:
 
-- [Node.js](https://nodejs.org/en/download/) (verwenden Sie die neueste Version von v14 LTS)
+- [Node.js](https://nodejs.org/en/download/) (neueste Version von v14 LTS verwenden)
 - Ein Browser mit Entwicklertools, z. [B. Microsoft Edge](https://www.microsoft.com/edge) (empfohlen) oder [Google Chrome](https://www.google.com/chrome/)
 - Wenn Sie mit JavaScript, TypeScript oder dem SharePoint-Framework (SPFx) entwickeln, installieren Sie [Visual Studio Code](https://code.visualstudio.com/download)Version 1.55 oder höher.  
-- Wenn Sie mit .NET entwickeln, installieren Sie [Visual Studio 2019](https://visualstudio.com/download). Stellen Sie sicher, dass Sie die **ASP.NET- und Webentwicklung** oder **die plattformübergreifende .NET Core-Entwicklungsworkload** installieren.
+- Wenn Sie mit .NET entwickeln, installieren Sie [Visual Studio 2019](https://visualstudio.com/download). Stellen Sie sicher, dass Sie die **workload für die ASP.NET- und Webentwicklung** oder **.NET Core plattformübergreifende Entwicklung** installieren.
 
 > [!WARNING]
 > Es gibt bekannte Probleme mit `npm@7` , die mit Node v15 und höher gepackt sind. Wenn Beim Ausführen Probleme `npm install` auftreten, stellen Sie sicher, dass Sie Node v14 (LTS) verwenden.
 
 ## <a name="install-the-teams-toolkit"></a>Installieren des Teams Toolkits
 
-Das Teams Toolkit vereinfacht den Entwicklungsprozess mit Tools zum Bereitstellen und Bereitstellen von Cloudressourcen für Ihre App, zum Veröffentlichen im Teams Store und vieles mehr. Sie können das Toolkit mit Visual Studio Code, Visual Studio oder als CLI `teamsfx` (genannt) verwenden.
+Das Teams Toolkit vereinfacht den Entwicklungsprozess mit Tools zum Bereitstellen und Bereitstellen von Cloudressourcen für Ihre App, zum Veröffentlichen im Teams Store und vieles mehr. Sie können das Toolkit mit Visual Studio Code, Visual Studio oder als CLI `teamsfx` (called) verwenden.
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Öffnen Sie Visual Studio Code.
-1. Wählen Sie die Erweiterungsansicht (**STRG+UMSCHALT+X**  /  **⌘⇧-X** oder **Ansicht > Erweiterungen) aus.**
+1. Wählen Sie die **Erweiterungsansicht** (**STRG+UMSCHALT+X**  /  **⌘⇧-X** oder **Ansicht > Erweiterungen) aus.**
 1. Geben Sie in das Suchfeld **Teams Toolkit** ein.
-1. Wählen Sie die grüne Installationsschaltfläche neben dem Teams Toolkit aus.
+1. Wählen Sie "Neben dem Teams Toolkit **installieren"** aus.
 
-Sie finden auch das Teams Toolkit im [Visual Studio Code Marketplace.](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
+Sie finden auch das Teams Toolkit auf dem [Visual Studio Code Marketplace.](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
 
 Die folgenden Tools können von der Visual Studio Code-Erweiterung installiert werden, wenn sie benötigt werden. Wenn sie bereits installiert ist, kann stattdessen die installierte Version verwendet werden. Wenn Sie Linux einschließlich WSL verwenden, müssen Sie diese Tools vor der Verwendung installieren:
 
@@ -53,7 +53,7 @@ Die folgenden Tools können von der Visual Studio Code-Erweiterung installiert w
 
 - [ngrok](https://ngrok.com/download)
 
-    Einige Teams App-Features (Unterhaltungsbots, Messaging-Erweiterungen und eingehende Webhooks) erfordern eingehende Verbindungen. Sie müssen Ihr Entwicklungssystem für Teams über einen Tunnel verfügbar machen. Für Apps, die nur Registerkarten enthalten, ist kein Tunnel erforderlich. Dieses Paket wird im Projektverzeichnis installiert (mit `devDependencies` npm).
+    Einige Teams App-Features (Unterhaltungs-Bots, Messaging-Erweiterungen und eingehende Webhooks) erfordern eingehende Verbindungen. Sie müssen Ihr Entwicklungssystem für Teams über einen Tunnel verfügbar machen. Für Apps, die nur Registerkarten enthalten, ist kein Tunnel erforderlich. Dieses Paket wird im Projektverzeichnis installiert (mit `devDependencies` npm).
 
 # <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
 
@@ -64,9 +64,8 @@ So installieren Sie die Teams Toolkit-Erweiterung:
 1. Öffnen Sie Visual Studio 2019.
 1. Wählen Sie **Erweiterungen**  >  **aus, um Erweiterungen zu verwalten.**
 1. Geben Sie in das Suchfeld **Teams Toolkit** ein.
-1. Wählen Sie die Erweiterung Teams Toolkit aus, und wählen Sie **"Herunterladen"** aus.
-
-Die Erweiterung kann heruntergeladen werden. Schließen Sie Visual Studio 2019, um die Erweiterung zu installieren.
+1. Wählen Sie die Erweiterung Teams Toolkit aus, und wählen Sie **"Herunterladen"** aus. Die Erweiterung wird heruntergeladen.
+1. Schließen Sie Visual Studio 2019, um die Erweiterung zu installieren.
 
 # <a name="command-line"></a>[Befehlszeile](#tab/cli)
 
@@ -84,7 +83,7 @@ sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
 
 Dies ist auf Linux- und macOS-Systemen häufiger.
 
-Stellen Sie sicher, dass Sie dem PFAD den globalen npm-Cache hinzufügen. Dies geschieht normalerweise als Teil des Node.js-Installationsprogramms.  
+Stellen Sie sicher, dass Sie dem PFAD den globalen npm-Cache hinzufügen. Dies geschieht normalerweise als Teil des Node.js Installationsprogramms.  
 
 Sie können die CLI mit dem `teamsfx` Befehl verwenden. Stellen Sie sicher, dass der Befehl funktioniert, indem Sie `teamsfx -h` .
 
@@ -104,7 +103,7 @@ Wenn Sie auf in Azure gespeicherte Daten zugreifen oder ein cloudbasiertes Back-
 - [Azure-Tools für Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
 - [Azure CLI](/cli/azure/install-azure-cli)
 
-Wenn Sie mit Microsoft Graph-Daten arbeiten, sollten Sie den Microsoft Graph Explorer kennenlernen und mit einem Lesezeichen versehen. Mit diesem browserbasierten Tool können Sie Microsoft Graph außerhalb einer App abfragen.
+Wenn Sie mit Microsoft Graph-Daten arbeiten, sollten Sie den Microsoft Graph-Explorer kennenlernen und mit einem Lesezeichen versehen. Mit diesem browserbasierten Tool können Sie Microsoft Graph außerhalb einer App abfragen.
 
 - [Microsoft Graph-Tester](https://developer.microsoft.com/graph/graph-explorer)
 
@@ -114,12 +113,12 @@ Mit dem Entwicklerportal für Teams können Sie Ihre Teams App konfigurieren, ve
 
 ## <a name="enable-sideloading"></a>Aktivieren des Querladens
 
-Während der Entwicklung müssen Sie Ihre App innerhalb Teams laden, ohne sie zu verteilen. Dies wird als "Querladen" bezeichnet.
+Während der Entwicklung müssen Sie Ihre App innerhalb Teams laden, ohne sie zu verteilen. Dies wird als Querladen bezeichnet.
 
-1. Wenn Sie über ein Teams Konto verfügen, überprüfen Sie, ob Sie Apps in Teams querladen können:
+Wenn Sie über ein Teams Konto verfügen, überprüfen Sie, ob Sie Apps in Teams querladen können:
 
-    1. Wählen Sie im Teams Client **Apps** aus.
-    1. Suchen Sie nach einer Option zum **Hochladen einer benutzerdefinierten App.**
+1. Wählen Sie im Teams Client **Apps** aus.
+1. Wählen Sie **Hochladen einer benutzerdefinierten App** aus.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="Abbildung, die zeigt, wo in Teams Sie eine benutzerdefinierte App hochladen können.":::
 
@@ -130,15 +129,14 @@ Während der Entwicklung müssen Sie Ihre App innerhalb Teams laden, ohne sie zu
 
 Wenn die Option zum Querladen nicht angezeigt wird oder Sie nicht über ein Teams Konto verfügen, können Sie ein kostenloses Teams Entwicklerkonto erhalten, indem Sie am M365-Entwicklerprogramm teilnehmen.  Der Registrierungsvorgang dauert ungefähr zwei Minuten.
 
-1. Wechseln Sie zum [Microsoft 365-Entwicklerprogramm.](https://developer.microsoft.com/microsoft-365/dev-program)
+1. Wechseln Sie zum [Microsoft 365 Entwicklerprogramm.](https://developer.microsoft.com/microsoft-365/dev-program)
 1. Wählen Sie **"Jetzt beitreten"** aus, und folgen Sie den Anweisungen auf dem Bildschirm.
-1. Wenn Sie zur Willkommensseite gelangen, wählen Sie **E5-Abonnement einrichten** aus.
-1. Richten Sie Ihr Administratorkonto ein. Sobald Sie fertig sind, sollte ein Bildschirm wie dieser angezeigt werden.
+1. Wählen Sie auf der Willkommensseite **"E5-Abonnement einrichten"** aus.
+1. Richten Sie Ihr Administratorkonto ein. Nach Abschluss des Vorgangs sollte ein Bildschirm wie dieser angezeigt werden.
 
     :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Beispiel für das, was nach der Registrierung für das Microsoft 365-Entwicklerprogramm angezeigt wird.":::
 
-1. Melden Sie sich mit dem soeben eingerichteten Administratorkonto bei Teams an.
-1. Überprüfen Sie, ob Sie nun über die **Hochladen einer benutzerdefinierten App-Option** verfügen.
+1. Melden Sie sich mit dem soeben eingerichteten Administratorkonto bei Teams an. Stellen Sie sicher, dass Sie über die **Hochladen einer benutzerdefinierten App-Option** verfügen.
 
 ## <a name="get-a-free-azure-account"></a>Abrufen eines kostenlosen Azure-Kontos
 
@@ -149,7 +147,7 @@ Wenn Sie Ihre App hosten oder auf Ressourcen in Azure zugreifen möchten, benöt
 Sie müssen Zugriff auf zwei Konten haben:
 
 - Ihre Microsoft 365 Kontoanmeldeinformationen. Dies ist das Konto, mit dem Sie sich bei Teams anmelden. Wenn Sie einen Microsoft 365 Entwicklerprogrammmandanten verwenden, ist dies das Administratorkonto, das Sie bei der Registrierung für das Programm eingerichtet haben.
-- - Ihre Azure-Anmeldeinformationen. Dies ist das Konto, das Sie für den Zugriff auf das Azure-Portal und für die Bereitstellung neuer Cloudressourcen zur Unterstützung Ihrer App verwenden.
+- Ihre Azure-Anmeldeinformationen. Dies ist das Konto, das Sie für den Zugriff auf das Azure-Portal und für die Bereitstellung neuer Cloudressourcen zur Unterstützung Ihrer App verwenden.
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
@@ -162,20 +160,20 @@ Sie müssen Zugriff auf zwei Konten haben:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/account-commands.png" alt-text="Speicherort des Abschnitts &quot;Konten&quot;, der für die Anmeldung verwendet wird.":::
 
-1. Der Anmeldevorgang beginnt mit ihrem normalen Webbrowser. Schließen Sie den Anmeldevorgang für Ihr M365-Konto ab. Sie werden aufgefordert, wenn Sie den Browser schließen und zu Visual Studio Code zurückkehren können.
+    Der Anmeldevorgang beginnt mit ihrem normalen Webbrowser. Schließen Sie den Anmeldevorgang für Ihr M365-Konto ab. Wenn Sie dazu aufgefordert werden, können Sie den Browser schließen und zu Visual Studio Code zurückkehren.
 1. Kehren Sie zum Teams Toolkit in Visual Studio Code zurück.
 1. Wählen Sie **"Bei Azure anmelden"** aus.
 
     > [!TIP]
     > Wenn Sie die Azure-Kontoerweiterung installiert haben und dasselbe Konto verwenden, können Sie diesen Schritt überspringen. Verwenden Sie das gleiche Konto wie in anderen Erweiterungen.
 
-1. Der Anmeldevorgang beginnt mit ihrem normalen Webbrowser.  Schließen Sie den Anmeldevorgang für Ihr Azure-Konto ab. Sie werden aufgefordert, wenn Sie den Browser schließen und zu Visual Studio Code zurückkehren können.
+1. Der Anmeldevorgang beginnt mit ihrem normalen Webbrowser.  Schließen Sie den Anmeldevorgang für Ihr Azure-Konto ab. Wenn Sie dazu aufgefordert werden, können Sie den Browser schließen und zu Visual Studio Code zurückkehren.
 
-Nach Abschluss des Vorgangs werden im Abschnitt **"KONTEN"** der Randleiste die beiden Konten separat zusammen mit der Anzahl der verwendbaren Azure-Abonnements angezeigt, die Ihnen zur Verfügung stehen. Stellen Sie sicher, dass mindestens ein verwendbares Azure-Abonnement verfügbar ist. Wenn nicht, melden Sie sich ab, und verwenden Sie ein anderes Konto.
+    Nach Abschluss des Vorgangs werden im Abschnitt **"KONTEN"** der Randleiste die beiden Konten separat zusammen mit der Anzahl der verwendbaren Azure-Abonnements angezeigt, die Ihnen zur Verfügung stehen. Stellen Sie sicher, dass mindestens ein verwendbares Azure-Abonnement verfügbar ist. Wenn nicht, melden Sie sich ab, und verwenden Sie ein anderes Konto.
 
 # <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
 
-Visual Studio 2019 werden Sie aufgefordert, sich bei jedem Dienst bei Bedarf anzumelden. Sie müssen sich nicht vorab bei Ihren M365- und Azure-Konten anmelden.
+Visual Studio 2019 werden Sie aufgefordert, sich bei jedem Dienst nach Bedarf anzumelden. Sie müssen sich nicht vorab bei Ihren M365- und Azure-Konten anmelden.
 
 # <a name="command-line"></a>[Befehlszeile](#tab/cli)
 
@@ -195,20 +193,21 @@ Visual Studio 2019 werden Sie aufgefordert, sich bei jedem Dienst bei Bedarf anz
 
     Der Anmeldevorgang beginnt mit ihrem normalen Webbrowser. Schließen Sie den Anmeldevorgang für Ihr Azure-Konto ab. Sie werden aufgefordert, den Browser zu schließen.
 
-Die Kontoanmeldungen werden zwischen Visual Studio Code und der TeamsFx CLI geteilt.
+    Die Kontoanmeldungen werden zwischen Visual Studio Code und der TeamsFx CLI geteilt.
 
----
 
-Nachdem Ihre Entwicklungsumgebung konfiguriert wurde, können Sie Ihre erste Teams App erstellen, erstellen und bereitstellen.
 
-## <a name="see-also"></a>Siehe auch
+    Nachdem Ihre Entwicklungsumgebung konfiguriert wurde, können Sie Ihre erste Teams App erstellen, erstellen und bereitstellen.
 
-- [Erstellen Sie Ihre erste Teams-App mitHilfe von Hannsor](first-app-blazor.md)
-- [Erstellen Ihrer ersten Teams-App mit SharePoint-Framework (SPFx)](first-app-spfx.md)
-- [Erstellen einer Unterhaltungs-Bot-App](first-app-bot.md)
-- [Erstellen einer Messaging-Erweiterung](first-message-extension.md)
+## <a name="see-also"></a>Weitere Informationen:
 
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Erstellen Ihrer ersten Teams-App mit React](first-app-react.md)
+* [Übersicht über Lernprogramme](code-samples.md) 
+* [Erstellen einer App mit React](first-app-react.md)
+* [Erstellen einer App mitHilfe von Blatter](first-app-blazor.md)
+* [Erstellen einer App mit SPFx](first-app-spfx.md)
+* [Erstellen einer App mithilfe von C# oder .NET](get-started-dotnet-app-studio.md)
+* [Erstellen einer App mithilfe von Node.js](get-started-nodejs-app-studio.md)
+* [Erstellen einer App mithilfe des Yeoman-Generators](get-started-yeoman.md)
+* [Erstellen einer Unterhaltungs-Bot-App](first-app-bot.md)
+* [Erstellen einer Messaging-Erweiterung](first-message-extension.md)
+* [Codebeispiele](https://github.com/OfficeDev/Microsoft-Teams-Samples)

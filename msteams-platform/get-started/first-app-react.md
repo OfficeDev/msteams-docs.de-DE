@@ -5,22 +5,22 @@ description: Erstellen Sie mithilfe von Microsoft Teams-Toolkit und React schnel
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: edd7cf8048dd89156b4b91afecb329d91baf3f53
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: c257bcd805a6b7b38ab657cb31cad961df1c4704
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994114"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254321"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>Erstellen und Ausführen Ihrer ersten Microsoft Teams-App mit React
 
-In diesem Lernprogramm erstellen Sie eine neue Microsoft Teams-Anwendung in React, die eine einfache persönliche App implementiert, um Informationen aus Microsoft Graph abzurufen. Eine persönliche *App* enthält beispielsweise eine Gruppe von Registerkarten, die für die individuelle Verwendung vorgesehen sind. Während des Lernprogramms erfahren Sie mehr über die Struktur einer Teams-App, wie Sie eine App lokal ausführen und wie Sie die App in Azure bereitstellen.
+In diesem Lernprogramm erfahren Sie, wie Sie eine neue Microsoft Teams-App in React erstellen, die eine einfache persönliche App zum Abrufen von Informationen aus dem Microsoft Graph implementiert. Beispielsweise enthält eine *persönliche App* eine Reihe von Registerkarten für die individuelle Verwendung. Während des Lernprogramms erfahren Sie mehr über die Struktur einer Teams-App, wie Sie eine App lokal ausführen und wie Sie die App in Azure bereitstellen.
 
 In der erstellten App werden grundlegende Benutzerinformationen für den aktuellen Benutzer angezeigt. Wenn die Berechtigung dazu erteilt wurde, stellt die App eine Verbindung mit Microsoft Graph als aktueller Benutzer her, um das vollständige Profil zu erhalten.
 
 ## <a name="before-you-begin"></a>Bevor Sie beginnen
 
-Stellen Sie sicher, dass Ihre Entwicklungsumgebung eingerichtet ist, indem Sie die [erforderlichen Komponenten](prerequisites.md)installieren.
+Stellen Sie sicher, dass Ihre Entwicklungsumgebung eingerichtet ist, indem Sie die erforderlichen Komponenten installieren.
 
 > [!div class="nextstepaction"]
 > [Erforderliche Komponenten installieren](prerequisites.md)
@@ -32,7 +32,7 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Öffnen Sie Visual Studio Code.
-1. Öffnen Sie das Microsoft Teams-Toolkit, indem Sie auf das Microsoft Teams-Symbol in der Randleiste klicken:
+1. Öffnen Sie das Teams Toolkit, und wählen Sie das symbol Teams in der Seitenleiste aus:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Das Microsoft Teams-Symbol in der Visual Studio Code-Randleiste.":::
 
@@ -44,19 +44,19 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Starten des Assistenten für „Neues Projekt erstellen“":::
 
-1. Im Schritt **"Funktionen auswählen"** ist die **Registerkartenfunktion** bereits ausgewählt. Drücken Sie **OK**.
+1. Geben Sie im Abschnitt **"Funktionen auswählen"** an, dass **"Tab"** ausgewählt ist, und wählen Sie **"OK"** aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot, der zeigt, wie Ihrer neuen App Funktionen hinzufügt werden können.":::
 
-1. Wählen Sie im Schritt **Frontend-Hostingtyp** die Option **Azure** aus.
+1. Wählen Sie im Abschnitt **"Frontend-Hostingtyp"** **Azure** aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Screenshot, der zeigt, wie das Hosting für Ihre neue App ausgewählt wird.":::
 
-1. Drücken Sie im Schritt **Cloudressourcen** auf **OK**.  Für dieses Lernprogramm werden keine zusätzlichen Cloudressourcen benötigt.
+1. Wählen Sie im Abschnitt **"Cloudressourcen"** **OK** aus.  Für dieses Lernprogramm werden keine zusätzlichen Cloudressourcen benötigt.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="Screenshot, der zeigt, wie Cloudressourcen für Ihre neue App hinzugefügt werden.":::
 
-1. Wählen Sie im Schritt **Programmiersprache** die Option **JavaScript** aus.
+1. Wählen Sie im Abschnitt **"Programmiersprache"** **JavaScript** aus.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Screenshot, der zeigt, wie die Programmiersprache ausgewählt wird.":::
 
@@ -64,7 +64,7 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 
 1. Geben Sie einen passenden Namen für Ihre App ein, wie z. B. `helloworld`. Der Name der App darf nur aus alphanumerischen Zeichen bestehen.  Drücken Sie die **EINGABETASTE**, um fortzufahren.
 
-Ihre Teams-App wird innerhalb weniger Sekunden erstellt.
+   Ihre Teams-App wird innerhalb weniger Sekunden erstellt.
 
 # <a name="command-line"></a>[Befehlszeile](#tab/cli)
 
@@ -77,14 +77,13 @@ teamsfx new
 Die CLI führt durch einige Fragen zum Erstellen des Projekts. Mit jeder Frage erfahren Sie, wie Sie sie beantworten können, z. B. verwenden Sie Pfeiltasten, um eine Option auszuwählen. Wenn Sie eine Frage beantwortet haben, bestätigen Sie Ihre Auswahl, indem Sie die **EINGABETASTE** drücken.
 
 1. Wählen Sie **Neue Microsoft Teams-App erstellen** aus.
-1. Wählen Sie die Funktion **Registerkarte** aus.
-1. Wählen Sie **Azure**-Frontend-Hosting aus.
-1. Wählen Sie keine Cloudressourcen aus.
+1. Wählen Sie die **Registerkartenfunktion** aus.
+1. Wählen Sie **Azure**-Frontend-Hosting aus. Wählen Sie keine Cloudressourcen aus.
 1. Wählen Sie **JavaScript** als Programmiersprache aus.
 1. Drücken Sie die **EINGABETASTE**, um den Standardordner des Arbeitsbereichs auszuwählen.
 1. Geben Sie einen passenden Namen für Ihre App ein, wie z. B. `helloworld`.  Der Name der App darf nur aus alphanumerischen Zeichen bestehen.
 
-Nachdem alle Fragen beantwortet wurden, wird Ihr Projekt erstellt.
+   Nachdem alle Fragen beantwortet wurden, wird Ihr Projekt erstellt.
 
 ---
 
@@ -92,7 +91,7 @@ Nachdem alle Fragen beantwortet wurden, wird Ihr Projekt erstellt.
 
 Wenn Sie diesen Abschnitt vorerst überspringen möchten, können Sie [Ihre App lokal ausführen](#run-your-app-locally).
 
-Nachdem das Microsoft Teams Toolkit Ihr Projekt konfiguriert hat, verfügen Sie über die Komponenten zum Erstellen einer einfachen persönlichen App für Microsoft Teams. Die Projektverzeichnisse und -dateien werden im Explorer-Bereich von Visual Studio Code angezeigt.
+Nachdem das Teams Toolkit Ihr Projekt konfiguriert hat, verfügen Sie über die Komponenten zum Erstellen einer einfachen persönlichen App für Teams. Die Projektverzeichnisse und -dateien werden im Explorer-Bereich von Visual Studio Code angezeigt.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Screenshot der App-Projektdateien für eine persönliche App in Visual Studio Code":::
 
@@ -122,7 +121,7 @@ Das Microsoft Teams-Toolkit ermöglicht es Ihnen, Ihre App lokal auszuführen.  
 - Die HTML-, CSS- und JavaScript-Ressourcen, aus denen das Front-End der App besteht, werden in einem lokalen Dienst gehostet. Der Zugriff darauf ist über `https://localhost:3000` möglich.
 - Es wird ein App-Manifest generiert und im Entwicklerportal für Microsoft Teams verfügbar gemacht.  Microsoft Teams verwendet das App-Manifest, um die verbundenen Clients darüber zu informieren, von wo die App geladen werden soll.
 
-Sobald dies erfolgt ist, kann die App im Microsoft Teams-Client geladen werden.  Wir verwenden den Microsoft Teams-Webclient, um den HTML-, CSS- und JavaScript-Code in einer standardmäßigen Webentwicklungsumgebung anzuzeigen.
+Danach kann die App innerhalb des Teams-Clients geladen werden.  Wir verwenden den Microsoft Teams-Webclient, um den HTML-, CSS- und JavaScript-Code in einer standardmäßigen Webentwicklungsumgebung anzuzeigen.
 
 ### <a name="build-and-run-your-app-locally-in-visual-studio-code"></a>Erstellen und lokales Ausführen der App in Visual Studio Code
 
@@ -136,11 +135,11 @@ So erstellen Sie Ihre App und führen sie lokal aus:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot mit Dialogfenster zum Installieren eines SSL-Zertifikats, damit Microsoft Teams Ihre Anwendung von localhost laden kann.":::
 
-1. Ihr Webbrowser beginnt mit der Ausführung der App. Wenn Sie aufgefordert werden, Teams Desktop zu öffnen, wählen Sie **"Abbrechen"** aus, um im Browser zu verbleiben. Möglicherweise werden Sie auch aufgefordert, zu anderen Zeiten zu Teams Desktop zu wechseln. wählen Sie in diesem Fall die Teams Web-App aus.
+1. Ihr Webbrowser beginnt mit der Ausführung der App. Wenn Sie aufgefordert werden, Teams Desktop zu öffnen, wählen Sie **"Abbrechen"** aus, um im Browser zu verbleiben. Sie werden möglicherweise auch aufgefordert, zu anderen Zeiten zu Teams Desktop zu wechseln. wählen Sie in diesem Fall die Teams Web-App aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot, der zeigt, wie die Web-Version von Microsoft Teams beim Start ausgewählt wird.":::
 
-1. Möglicherweise werden Sie aufgefordert, sich anzumelden.  Melden Sie sich in diesem Fall mit Ihrem M365-Konto an.
+1. Melden Sie sich bei Aufforderung mit Ihrem M365-Konto an.
 1. Wenn Sie aufgefordert werden, die App in Microsoft Teams zu installieren, drücken Sie **Hinzufügen**.
 
 Ihre App wird jetzt angezeigt:
@@ -153,13 +152,13 @@ Sie können normale Debugaktivitäten ausführen, als wäre dies eine andere Web
 <details>
 <summary>Erfahren Sie, was geschieht, wenn Sie Ihre App lokal im Debugger ausführen.</summary>
 
-Wenn Sie F5 gedrückt haben, hat das Microsoft Teams-Toolkit Folgendes getan:
+Wenn Sie **F5** drücken, hat das Teams Toolkit Folgendes:
 
-1. Ihre Anwendung bei Azure Active Directory registriert
-1. Ihre Anwendung in Microsoft Teams *quergeladen*
-1. Ihr Anwendungs-Back-End mithilfe von [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start) lokal gestartet
-1. Das lokal gehostete Anwendungs-Front-End gestartet
-1. Gestartet Microsoft Teams in einem Webbrowser mit einem Befehl, um Teams anzuweisen, die Anwendung `https://localhost:3000/tab` querzuladen. Dies ist die im Anwendungsmanifest registrierte URL.
+* Registriert Ihre Anwendung bei Azure Active Directory.
+* *Lädt* Ihre App in Teams quer.
+* Startet ihr Anwendungs-Back-End, das lokal mithilfe von [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start)ausgeführt wird.
+* Startet das lokal gehostete Anwendungs-Front-End.
+* Startet Microsoft Teams in einem Webbrowser mit einem Befehl, um Teams anzuweisen, die Anwendung `https://localhost:3000/tab` querzuladen. Dies ist die im Anwendungsmanifest registrierte URL.
 
 </details>
 
@@ -179,24 +178,19 @@ Um Ihre App in Microsoft Teams erfolgreich auszuführen, müssen Sie über ein M
 
 Vor der Bereitstellung wurde die Anwendung lokal ausgeführt:
 
-1. Das Back-End unter Verwendung von **Azure Functions Core Tools** ausgeführt.
-1. Der HTTP-Endpunkt der Anwendung, an dem Microsoft Teams die Anwendung lädt, wird lokal ausgeführt.
+* Das Back-End unter Verwendung von **Azure Functions Core Tools** ausgeführt.
+* Der HTTP-Endpunkt der Anwendung, an dem Microsoft Teams die Anwendung lädt, wird lokal ausgeführt.
 
 Die Bereitstellung umfasst die Bereitstellung von Ressourcen für ein aktives Azure-Abonnement sowie das Bereitstellen oder Hochladen des Back-End- und Front-End-Codes für die Anwendung in Azure.
 
-1. Wenn das Back-End konfiguriert ist, verwendet es eine Vielzahl von Azure-Diensten, einschließlich Azure App Service und Azure Storage.
-1. Die Front-End-Anwendung wird in einem Azure Storage-Konto bereitgestellt, das für statisches Webhosting konfiguriert ist.
+* Das Back-End, wenn es konfiguriert ist, verwendet eine Vielzahl von Azure-Diensten, einschließlich Azure App Service und Azure Storage.
+* Die Front-End-Anwendung wird in einem Azure Storage-Konto bereitgestellt, das für statisches Webhosting konfiguriert ist.
 
 </details>
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-- [Erstellen einer Microsoft Teams-App mit Blazor](first-app-blazor.md)
-- [Erstellen einer Microsoft Teams-App als SharePoint-Webpart](first-app-spfx.md) (Azure nicht erforderlich)
-- [Erstellen einer Unterhaltungs-Bot-App](first-app-bot.md)
-- [Erstellen einer Messaging-Erweiterung](first-message-extension.md)
-
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Erstellen einer Microsoft Teams-App mit Blazor](first-app-blazor.md)
+* [Übersicht über Lernprogramme](code-samples.md)
+* [Erstellen einer Unterhaltungs-Bot-App](first-app-bot.md)
+* [Erstellen einer Messaging-Erweiterung](first-message-extension.md)
+* [Codebeispiele](https://github.com/OfficeDev/Microsoft-Teams-Samples)

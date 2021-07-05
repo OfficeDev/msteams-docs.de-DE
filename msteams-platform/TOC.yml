@@ -8,28 +8,26 @@
 - name: Erste Schritte
   expanded: true
   items:
+    - name: Übersicht
+      href: get-started/code-samples.md
     - name: Voraussetzungen
       href: get-started/prerequisites.md
-    - name: Erstellen einer persönlichen App (React)
+    - name: Erstellen Ihrer ersten App mit React
       href: get-started/first-app-react.md
-    - name: Erstellen einer persönlichen App (Blazor)
+    - name: Erstellen Ihrer ersten App mit Blazor
       href: get-started/first-app-blazor.md
-    - name: Erstellen einer persönlichen App (SPFx)
+    - name: Erstellen Ihrer ersten App mit SPFx
       href: get-started/first-app-spfx.md
-    - name: Erstellen eines Unterhaltungs-Bots
-      href: get-started/first-app-bot.md
-    - name: Erstellen einer Messaging-Erweiterung
-      href: get-started/first-message-extension.md
-- name: Lernprogramme und Codebeispiele
-  items:
-    - name: Übersicht
-      href: tutorials/code-samples.md
     - name: Erstellen Ihrer ersten App mit C# oder .NET
-      href: tutorials/get-started-dotnet-app-studio.md
+      href: get-started/get-started-dotnet-app-studio.md
     - name: Erstellen Ihrer ersten App mit Node.js
-      href: tutorials/get-started-nodejs-app-studio.md
+      href: get-started/get-started-nodejs-app-studio.md
     - name: Erstellen Ihrer ersten App mit dem Yeoman-Generator
-      href: tutorials/get-started-yeoman.md
+      href: get-started/get-started-yeoman.md
+    - name: Erstellen Sie Ihren ersten Chatbot
+      href: get-started/first-app-bot.md
+    - name: Erstellen Sie Ihre erste Messagingerweiterung
+      href: get-started/first-message-extension.md
     - name: Codebeispiele
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: App-Grundlagen
@@ -44,36 +42,6 @@
       href: concepts/design/understand-use-cases.md
     - name: Anwendungsfälle zu Microsoft Teams-App-Funktionen zuordnen
       href: concepts/design/map-use-cases.md
-- name: Integration in Microsoft Teams
-  items:
-    - name: Übersicht
-      href: samples/integrate-web-apps-overview.md
-    - name: Web-Apps
-      href: samples/integrating-web-apps.md
-    - name: Power Plattform-Apps
-      items:
-        - name: Übersicht
-          href: samples/teams-low-code-solutions.md
-        - name: Hinzufügen eines Power Virtual Agent-Chatbots
-          href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-        - name: Erstellen eines virtuellen Assistenten
-          href: samples/virtual-assistant.md
-    - name: App-Vorlagen für Microsoft Teams
-      href: samples/app-templates.md
-    - name: Produktionsfertige Shifts-Connectors
-      href: samples/shifts-wfm-connectors.md
-    - name: Moodle LMS
-      items:
-        - name: Übersicht
-          href: resources/moodle-overview.md
-        - name: Installieren von Moodle LMS
-          href: resources/moodleInstructions.md
-    - name: Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
-      href: concepts/build-and-test/share-to-teams.md
-    - name: Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint
-      href: tabs/how-to/tabs-in-sharepoint.md
-    - name: Erstellen von Deep-Links
-      href: concepts/build-and-test/deep-links.md
     - name: Gerätefunktionen
       items:
         - name: Übersicht
@@ -468,6 +436,36 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: Features
           href: resources/dev-preview/developer-preview-features.md
+- name: Integration in Microsoft Teams
+  items:
+    - name: Übersicht
+      href: samples/integrate-web-apps-overview.md
+    - name: Web-Apps
+      href: samples/integrating-web-apps.md
+    - name: Power Plattform-Apps
+      items:
+        - name: Übersicht
+          href: samples/teams-low-code-solutions.md
+        - name: Hinzufügen eines Power Virtual Agent-Chatbots
+          href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+        - name: Erstellen eines virtuellen Assistenten
+          href: samples/virtual-assistant.md
+    - name: App-Vorlagen für Microsoft Teams
+      href: samples/app-templates.md
+    - name: Produktionsfertige Shifts-Connectors
+      href: samples/shifts-wfm-connectors.md
+    - name: Moodle LMS
+      items:
+        - name: Übersicht
+          href: resources/moodle-overview.md
+        - name: Installieren von Moodle LMS
+          href: resources/moodleInstructions.md
+    - name: Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
+      href: concepts/build-and-test/share-to-teams.md
+    - name: Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint
+      href: tabs/how-to/tabs-in-sharepoint.md
+    - name: Erstellen von Deep-Links
+      href: concepts/build-and-test/deep-links.md
 - name: Ressourcen
   items:
     - name: Lokalisierung

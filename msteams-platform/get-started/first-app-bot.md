@@ -5,20 +5,20 @@ description: Erstellen Sie mithilfe des Teams-Toolkits einen Unterhaltungs-Bot f
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 68b266b1cf9d8f7e9b4b98611d3ba982a2e18a47
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: 96bbddd99b6901a4b92e1e2f2dc98482c755dc66
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037649"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254251"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Erstellen Sie Ihren ersten Unterhaltungs-Bot für Microsoft Teams
 
-Ein Bot agiert als Vermittler zwischen einem Teams-Benutzer und einem Webdienst.  Benutzer können mit einem Bot chatten, um schnell Informationen zu erhalten, Workflows zu initiieren, oder für alles andere, was Ihr Webservice tun kann.  In diesem Lernprogramm erfahren Sie, wie Sie eine Teams-Bot-App erstellen, ausführen und bereitstellen.
+In diesem Lernprogramm erfahren Sie, wie Sie eine Teams-Bot-App erstellen, ausführen und bereitstellen. Ein Bot agiert als Vermittler zwischen einem Teams-Benutzer und einem Webdienst.  Benutzer können mit einem Bot chatten, um schnell Informationen zu erhalten, Workflows zu initiieren, oder für alles andere, was Ihr Webservice tun kann. 
 
 ## <a name="before-you-begin"></a>Bevor Sie beginnen
 
-Stellen Sie sicher, dass Ihre Entwicklungsumgebung eingerichtet ist, indem Sie [Installieren erforderlicher Komponenten](prerequisites.md)
+Stellen Sie sicher, dass Ihre Entwicklungsumgebung eingerichtet ist, indem Sie die erforderlichen Komponenten installieren.
 
 > [!div class="nextstepaction"]
 > [Installieren erforderlicher Komponenten](prerequisites.md)
@@ -30,7 +30,7 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Öffnen Sie Visual Studio Code.
-1. Öffnen Sie das Microsoft Teams-Toolkit, indem Sie auf das Microsoft Teams-Symbol in der Randleiste klicken:
+1. Wählen Sie das Symbol Teams in der Seitenleiste aus, um das Teams Toolkit zu öffnen.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Das Microsoft Teams-Symbol in der Visual Studio Code-Randleiste.":::
 
@@ -40,23 +40,23 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 
 1. Wählen Sie **Neue Microsoft Teams-App erstellen** aus.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Start des Assistenten für „Neues Projekt erstellen“":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Starten des Assistenten für „Neues Projekt erstellen“":::
 
-1. Wählen Sie im Schritt **Funktionen auswählen** die Option **Bot** aus, und heben Sie die Auswahl **Registerkarte** auf. Drücken Sie **OK**.
+1. Wählen Sie im Abschnitt **"Funktionen auswählen"** die Option **"Bot"** aus, deaktivieren **Sie die Registerkarte,** und wählen Sie **"OK"** aus.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities-bot.png" alt-text="Screenshot, der zeigt, wie Ihrer neuen App Funktionen hinzufügt werden.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities-bot.png" alt-text="Screenshot, der zeigt, wie Ihrer neuen App Funktionen hinzufügt werden können.":::
 
-1. Wählen Sie im Schritt **Registrierung eines Bots** die Option **Eine neue Registrierung eines Bots erstellen**.
+1. Wählen Sie im Abschnitt **"Bot-Registrierung"** die Option **"Neue Bot-Registrierung erstellen"** aus.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-bot-registration.png" alt-text="Wählen Sie „Eine neue Bot-Registrierung erstellen“ aus":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-bot-registration.png" alt-text="Wählen Sie „Eine neue Registrierung eines Bots erstellen“ aus":::
 
-1. Wählen Sie im Schritt **Programmiersprache** die Option **JavaScript** aus.
+1. Wählen Sie im Abschnitt **"Programmiersprache"** **JavaScript** aus.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Screenshot, der zeigt, wie die Programmiersprache ausgewählt wird.":::
 
 1. Wählen Sie einen Arbeitsbereichsordner aus.  Innerhalb Ihres Arbeitsbereichsordners wird für das von Ihnen erstellte Projekt ein Ordner erstellt.
 
-1. Geben Sie einen passenden Namen für Ihre App ein, wie z. B. `helloworld`.  Der Name der App darf nur aus alphanumerischen Zeichen bestehen.  Drücken Sie die **EINGABETASTE**, um fortzufahren.
+1. Geben Sie einen passenden Namen für Ihre App ein, wie z. B. `helloworld`.  Der Name der App darf nur alphanumerische Zeichen enthalten.  Drücken Sie die **EINGABETASTE**, um fortzufahren.
 
 Ihre Microsoft Teams-App wird innerhalb weniger Sekunden erstellt.
 
@@ -70,14 +70,14 @@ teamsfx new
 
 Die CLI führt durch einige Fragen zum Erstellen des Projekts.  Bei jeder Frage wird angegeben, wie Sie sie beantworten können (z. B. mithilfe von Pfeiltasten, um eine Option auszuwählen).  Wenn Sie eine Frage beantwortet haben, bestätigen Sie Ihre Auswahl, indem Sie die **EINGABETASTE** drücken.
 
-1. Wählen Sie **Eine neue Teams-App erstellen** aus.
-1. Wählen Sie die Funktion **Bot** aus, und heben Sie die Auswahl der Funktion **Registerkarte** auf.
-1. Wählen Sie **Eine neue Bot-Registrierung erstellen** aus.
+1. Wählen Sie **Neue Microsoft Teams-App erstellen** aus.
+1. Wählen Sie **Bot** aus, und heben Sie die **Auswahl auf der Registerkarte auf.**
+1. Wählen Sie **Eine neue Registrierung eines Bots erstellen** aus.
 1. Wählen Sie **JavaScript** als Programmiersprache aus.
 1. Drücken Sie die **EINGABETASTE**, um den Standardordner des Arbeitsbereichs auszuwählen.
 1. Geben Sie einen passenden Namen für Ihre App ein, wie z. B. `helloworld`.  Der Name der App darf nur aus alphanumerischen Zeichen bestehen.
 
-Sobald alle Fragen beantwortet wurden, wird Ihr Projekt erstellt.
+Nachdem alle Fragen beantwortet wurden, wird Ihr Projekt erstellt.
 
 ---
 
@@ -105,7 +105,7 @@ Das Teams-Toolkit ermöglicht es Ihnen, Ihre App lokal zu hosten.  Gehen Sie hie
 
 So erstellen Sie Ihre App und führen sie lokal aus:
 
-1. Drücken Sie in Visual Studio Code **F5**, um die Anwendung im Debugmodus auszuführen.
+1. Drücken Sie Visual Studio Code die **F5-Taste,** um die Anwendung im Debugmodus auszuführen.
 
    > Wenn Sie die App zum ersten Mal ausführen, werden alle Abhängigkeiten heruntergeladen und die App wird erstellt.  Wenn die Erstellung abgeschlossen ist, wird automatisch ein Browserfenster geöffnet.  Dies kann 3 bis 5 Minuten dauern.
 
@@ -114,23 +114,23 @@ So erstellen Sie Ihre App und führen sie lokal aus:
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot, der zeigt, wie die Web-Version von Microsoft Teams beim Start ausgewählt wird.":::
 
 1. Möglicherweise werden Sie aufgefordert, sich anzumelden.  Melden Sie sich in diesem Fall mit Ihrem M365-Konto an.
-1. Wenn Sie aufgefordert werden, die App in Teams zu installieren, drücken Sie **Hinzufügen**.
+1. Wenn Sie aufgefordert werden, die App auf Teams zu installieren, wählen Sie **Hinzufügen** aus.
 
-Sobald die App geladen ist, werden Sie direkt zu einer Chat-Sitzung mit dem Bot geführt.  Sie können `intro` eingeben, um einen Einführungskarte anzuzeigen, und `show`, um Ihre Details von Microsoft Graph anzuzeigen.  (Dies benötigt eine zusätzliche Berechtigungsgenehmigung).
+   Nachdem die App geladen wurde, werden Sie direkt zu einer Chatsitzung mit dem Bot weitergeleitet.  Sie können `intro` eingeben, um einen Einführungskarte anzuzeigen, und `show`, um Ihre Details von Microsoft Graph anzuzeigen.  (Dies benötigt eine zusätzliche Berechtigungsgenehmigung).
 
-Das Debuggen funktioniert so, wie Sie es normalerweise erwarten – probieren Sie es selbst aus! Öffnen Sie die Datei `bot/dialogs/rootDialog.js`, und suchen Sie die `triggerCommand(...)`-Methode.  Setzen Sie einen Haltepunkt auf dem Standardvorgang.  Geben Sie dann einigen Text ein.
+   Das Debuggen funktioniert so, wie Sie es normalerweise erwarten – probieren Sie es selbst aus! Öffnen Sie die Datei `bot/dialogs/rootDialog.js`, und suchen Sie die `triggerCommand(...)`-Methode.  Setzen Sie einen Haltepunkt auf dem Standardvorgang.  Geben Sie dann einigen Text ein.
 
 <!-- markdownlint-disable MD033 -->
 <details>
 <summary>Erfahren Sie, was geschieht, wenn Sie Ihre App lokal im Debugger ausführen.</summary>
 
-Wenn Sie F5 gedrückt haben, hat das Microsoft Teams-Toolkit Folgendes getan:
+Wenn Sie **F5** drücken, hat das Teams Toolkit Folgendes:
 
-1. Ihre Anwendung bei Azure Active Directory registriert.
-1. Ihre Anwendung bei Microsoft Teams für das „Querladen“ registriert.
-1. Ihr Anwendungs-Back-End mithilfe von [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start) lokal gestartet.
-1. Ein ngrok-Tunnel gestartet, sodass Teams mit Ihrer App kommunizieren kann.
-1. Microsoft Teams mit einem Befehl gestartet, mit dem Teams angewiesen wird, die Anwendung querzuladen.
+1. Registriert Ihre Anwendung bei Azure Active Directory.
+1. Registriert Ihre Anwendung für das "Querladen" in Microsoft Teams.
+1. Startet ihr Anwendungs-Back-End, das lokal mithilfe von [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start)ausgeführt wird.
+1. Startet einen ngrok-Tunnel, damit Teams mit Ihrer App kommunizieren können.
+1. Startet Microsoft Teams mit einem Befehl, um Teams anzuweisen, die Anwendung querzuladen.
 
 </details>
 
@@ -156,17 +156,18 @@ Vor der Bereitstellung wurde die Anwendung lokal ausgeführt:
 1. Das Back-End unter Verwendung von _Azure Functions Core Tools_ ausgeführt.
 1. Der HTTP-Endpunkt der Anwendung, an dem Microsoft Teams die Anwendung lädt, wird lokal ausgeführt.
 
-Die Bereitstellung umfasst das Bereitstellen von Ressourcen für ein aktives Azure-Abonnement und das Bereitstellen (Hochladen) des Back-End- und des Frontend-Codes für die Anwendung in Azure. Das Back-End verwendet eine Vielzahl von Azure-Diensten, einschließlich Azure App Service und Azure Bot Service.
+   Die Bereitstellung umfasst das Bereitstellen von Ressourcen für ein aktives Azure-Abonnement und das Bereitstellen (Hochladen) des Back-End- und des Frontend-Codes für die Anwendung in Azure. Das Back-End verwendet eine Vielzahl von Azure-Diensten, einschließlich Azure App Service und Azure Bot Service.
 
 </details>
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-- [Erstellen einer Teams-App mit React](first-app-react.md)
-- [Erstellen einer Teams-App mit Blazor](first-app-blazor.md)
-- [Erstellen einer Microsoft Teams-App als SharePoint-Webpart](first-app-spfx.md) (Azure nicht erforderlich)
-
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Erstellen einer Messaging-Erweiterung](first-message-extension.md)
+* [Übersicht über Lernprogramme](code-samples.md) 
+* [Erstellen einer App mit React](first-app-react.md)
+* [Erstellen einer App mitHilfe von Blatter](first-app-blazor.md)
+* [Erstellen einer App mit SPFx](first-app-spfx.md)
+* [Erstellen einer App mithilfe von C# oder .NET](get-started-dotnet-app-studio.md)
+* [Erstellen einer App mithilfe von Node.js](get-started-nodejs-app-studio.md)
+* [Erstellen einer App mithilfe des Yeoman-Generators](get-started-yeoman.md)
+* [Erstellen einer Messaging-Erweiterung](first-message-extension.md)
+* [Codebeispiele](https://github.com/OfficeDev/Microsoft-Teams-Samples)
