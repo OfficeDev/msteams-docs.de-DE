@@ -1,6 +1,6 @@
 ### YamlMime:Hub
-title: Microsoft Teams-Entwicklerdokumentation
-summary: 'Erhalten Sie Dokumentation, Beispielcode, Lernprogramme und vieles mehr, um Benutzerdefinierte Microsoft Teams-Apps zu erstellen.'
+title: Microsoft Teams Entwicklerdokumentation
+summary: 'Hier erhalten Sie Dokumentation, Beispielcode, Lernprogramme und vieles mehr, um Benutzerdefinierte Microsoft Teams-Apps zu erstellen.'
 brand: teams
 metadata:
   title: Microsoft Teams Dokumentation für Plattformentwickler
@@ -33,8 +33,8 @@ highlightedContent:
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
     - title: Lernprogramme und Codebeispiele
       itemType: sample
-      url: /microsoftteams/platform/tutorials/code-samples
-    - title: Microsoft Build 2021 – Neuigkeiten
+      url: /microsoftteams/platform/get-started/code-samples
+    - title: Was ist neu?
       itemType: whats-new
       url: /microsoftteams/platform/whats-new
 conceptualContent:
@@ -67,7 +67,7 @@ conceptualContent:
           text: Manifestschema für Teams-Apps
         - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
           itemType: reference
-          text: Erstellen von Szenarien für Teams Apps
+          text: Erstellen von Szenarien für Teams-Apps
         - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
           itemType: reference
           text: Bewährte Methoden für Teams App-Szenarien
@@ -90,7 +90,7 @@ conceptualContent:
           text: Sammeln von Eingaben und Sammeln von Informationen mit Aufgabenmodulen
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: Verbinden Webdienste für Kanäle und Teams mit Webhooks und Office 365 Connectors
+          text: Verbinden von Webdiensten an Kanäle und Teams mit Webhooks und Office 365 Connectors
     - title: Integrieren
       links:
         - url: /microsoftteams/platform/samples/integrating-web-apps
