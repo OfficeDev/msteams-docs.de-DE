@@ -6,16 +6,16 @@ keywords: Konfigurierbarer Gruppenkanal für Teams-Registerkarten
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4fb7667cdcd060d44b64de1719bff69b3f96615f
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 6f79480fb3ec6eb50de622e0b67b70e021d8cce7
+ms.sourcegitcommit: a6253e89cb8c8c34d45b06e08c9668daeebc30a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179769"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "53300312"
 ---
 # <a name="create-a-configuration-page"></a>Erstellen einer Konfigurationsseite
 
-Eine Konfigurationsseite ist ein spezieller [Inhaltsseitentyp.](content-page.md) Die Benutzer konfigurieren einige Aspekte der Microsoft Teams App mithilfe der Konfigurationsseite und verwenden diese Konfiguration im Folgenden:
+Eine Konfigurationsseite ist ein spezieller [Inhaltsseitentyp.](content-page.md) Die Benutzer konfigurieren einige Aspekte der Microsoft Teams-App mithilfe der Konfigurationsseite und verwenden diese Konfiguration im Folgenden:
 
 * Registerkarte "Kanal- oder Gruppenchat": Sammeln sie Informationen von den Benutzern, und legen Sie `contentUrl` die anzuzeigende Inhaltsseite fest.
 * Eine [Messaging-Erweiterung](~/messaging-extensions/what-are-messaging-extensions.md).
@@ -35,57 +35,57 @@ Der folgende Code ist ein Beispiel für den entsprechenden Code für die Konfigu
 
 ```html
 <head>
-<script src='https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js'></script>
+    <script src='https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js'></script>
 </head>
-    <body>
-        <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
-        <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
-        <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
+<body>
+    <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
+    <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
+    <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
 
-        <script>
-            microsoftTeams.initialize();
-            let saveGray = () => {
-                microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
-                    microsoftTeams.settings.setSettings({
-                        websiteUrl: "https://yourWebsite.com",
-                        contentUrl: "https://yourWebsite.com/gray",
-                        entityId: "grayIconTab",
-                        suggestedDisplayName: "MyNewTab"
-                    });
-                    saveEvent.notifySuccess();
+    <script>
+        microsoftTeams.initialize();
+        let saveGray = () => {
+            microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.settings.setSettings({
+                    websiteUrl: "https://yourWebsite.com",
+                    contentUrl: "https://yourWebsite.com/gray",
+                    entityId: "grayIconTab",
+                    suggestedDisplayName: "MyNewTab"
                 });
-            }
-            let saveRed = () => {
-                microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
-                    microsoftTeams.settings.setSettings({
-                        websiteUrl: "https://yourWebsite.com",
-                        contentUrl: "https://yourWebsite.com/red",
-                        entityId: "redIconTab",
-                        suggestedDisplayName: "MyNewTab"
-                    });
-                    saveEvent.notifySuccess();
+                saveEvent.notifySuccess();
+            });
+        }
+        let saveRed = () => {
+            microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.settings.setSettings({
+                    websiteUrl: "https://yourWebsite.com",
+                    contentUrl: "https://yourWebsite.com/red",
+                    entityId: "redIconTab",
+                    suggestedDisplayName: "MyNewTab"
                 });
-            }
+                saveEvent.notifySuccess();
+            });
+        }
 
-            let gr = document.getElementById("gray").style;
-            let rd = document.getElementById("red").style;
+        let gr = document.getElementById("gray").style;
+        let rd = document.getElementById("red").style;
 
-            const colorClickGray = () => {
-                gr.display = "block";
-                rd.display = "none";
-                microsoftTeams.settings.setValidityState(true);
-                saveGray()
-            }
+        const colorClickGray = () => {
+            gr.display = "block";
+            rd.display = "none";
+            microsoftTeams.settings.setValidityState(true);
+            saveGray()
+        }
 
-            const colorClickRed = () => {
-                rd.display = "block";
-                gr.display = "none";
-                microsoftTeams.settings.setValidityState(true);
-                saveRed();
-            }
-        </script>
-    </body>
-...
+        const colorClickRed = () => {
+            rd.display = "block";
+            gr.display = "none";
+            microsoftTeams.settings.setValidityState(true);
+            saveRed();
+        }
+    </script>
+    ...
+</body>
 ```
 
 Wählen Sie auf der Konfigurationsseite entweder die Schaltfläche **"Grau"** oder **"Rot auswählen"** aus, um den Registerkarteninhalt mit einem grauen oder roten Symbol anzuzeigen.
@@ -123,7 +123,7 @@ Weitere Informationen zu den Eigenschaften, die für die Registerkartenkonfigura
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Einfügen von Platzhaltern in die `configurationUrl`
 
-Fügen Sie Ihrer Basis Platzhalter für die Kontextschnittstelle `configurationUrl` hinzu. Zum Beispiel:
+Fügen Sie Ihrer Basis Platzhalter für die Kontextschnittstelle `configurationUrl` hinzu. Beispiel:
 
 ##### <a name="base-url"></a>Basis-URL
 

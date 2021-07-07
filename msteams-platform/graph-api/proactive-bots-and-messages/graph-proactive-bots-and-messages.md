@@ -6,21 +6,21 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Proaktive Chatinstallation von Teams Graph
-ms.openlocfilehash: 222c69f6349177a72f4b8599068ea1ebacbf6d16
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: 0f59a74cc24b7d80dd3afd4aa4369a47d56e4d59
+ms.sourcegitcommit: a6253e89cb8c8c34d45b06e08c9668daeebc30a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114238"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "53300305"
 ---
-# <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Proaktive Installation von Apps mit Graph-API zum Senden von Nachrichten
+# <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Proaktive Installation von Apps über die Graph-API zum Senden von Nachrichten
 
 >[!IMPORTANT]
 > Microsoft Graph und Microsoft Teams öffentliche Vorschauen stehen für frühzeitigen Zugriff und Feedback zur Verfügung. Obwohl diese Version umfangreichen Tests unterzogen wurde, ist sie nicht für die Verwendung in der Produktion vorgesehen.
 
 ## <a name="proactive-messaging-in-teams"></a>Proaktives Messaging in Teams
 
-Proaktive Nachrichten werden von Bots initiiert, um Unterhaltungen mit einem Benutzer zu starten. Sie dienen vielen Zwecken, darunter das Senden von Willkommensnachrichten, das Durchführen von Umfragen oder Umfragen und das Senden organisationsweiter Benachrichtigungen. Proaktive Nachrichten in Teams können als **Ad-hoc-** oder **dialogbasierte** Unterhaltungen übermittelt werden:
+Proaktive Nachrichten werden von Bots initiiert, um Unterhaltungen mit einem Benutzer zu starten. Sie dienen vielen Zwecken, z. B. dem Senden von Willkommensnachrichten, der Durchführung von Umfragen oder Umfragen und dem Senden organisationsweiter Benachrichtigungen. Proaktive Nachrichten in Teams können als **Ad-hoc-** oder **dialogbasierte** Unterhaltungen übermittelt werden:
 
 |Nachrichtentyp | Beschreibung |
 |----------------|-------------- |
@@ -29,15 +29,15 @@ Proaktive Nachrichten werden von Bots initiiert, um Unterhaltungen mit einem Ben
 
 ## <a name="proactive-app-installation-in-teams"></a>Proaktive App-Installation in Teams
 
-Bevor Ihr Bot proaktiv eine Nachricht an einen Benutzer senden kann, muss er entweder als persönliche App oder in einem Team installiert werden, in dem der Benutzer Mitglied ist. Manchmal müssen Sie proaktive Nachrichten an Benutzer senden, die Ihre App nicht installiert oder zuvor mit Ihrer App interagiert haben. Beispielsweise müssen wichtige Informationen an alle Personen in Ihrer Organisation ausgegeben werden. Für solche Szenarien können Sie die Microsoft Graph-API verwenden, um Ihren Bot proaktiv für Ihre Benutzer zu installieren.
+Bevor Ihr Bot proaktiv eine Nachricht an einen Benutzer senden kann, muss er entweder als persönliche App oder in einem Team installiert werden, in dem der Benutzer Mitglied ist. Manchmal müssen Sie proaktive Nachrichten an Benutzer senden, die Ihre App nicht installiert oder zuvor mit ihrer App interagiert haben. Beispielsweise müssen wichtige Informationen an alle Personen in Ihrer Organisation ausgegeben werden. Für solche Szenarien können Sie die Microsoft Graph-API verwenden, um Ihren Bot proaktiv für Ihre Benutzer zu installieren.
 
 ## <a name="permissions"></a>Berechtigungen
 
-Die [Ressourcentypberechtigungen](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) von Microsoft Graph teamsAppInstallation helfen Ihnen, den Installationslebenszyklus Ihrer App für alle Benutzer- (persönlichen) oder Teambereiche (Kanal) innerhalb der Microsoft Teams Plattform zu verwalten:
+Microsoft Graph [TeamsAppInstallation-Ressourcentypberechtigungen](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) helfen Ihnen, den Installationslebenszyklus Ihrer App für alle Benutzer- (persönlichen) oder Teambereiche (Kanal) innerhalb der Microsoft Teams Plattform zu verwalten:
 
 |Anwendungsberechtigung | Beschreibung|
 |------------------|---------------------|
-|`TeamsAppInstallation.ReadWriteSelfForUser.All`|Ermöglicht es einer Teams App, sich selbst für jeden *Benutzer* zu lesen, zu installieren, zu aktualisieren und zu deinstallieren, ohne sich vorher anzumelden oder zu verwenden.|
+|`TeamsAppInstallation.ReadWriteSelfForUser.All`|Ermöglicht es einer Teams App, sich selbst für jeden *Benutzer* ohne vorherige Anmeldung oder Verwendung zu lesen, zu installieren, zu aktualisieren und zu deinstallieren.|
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Ermöglicht es einer Teams App, sich selbst in einem *Beliebigen Team* zu lesen, zu installieren, zu aktualisieren und zu deinstallieren, ohne sich vorher anzumelden oder zu verwenden.|
 
 Um diese Berechtigungen zu verwenden, müssen Sie Ihrem App-Manifest einen [webApplicationInfo-Schlüssel](../../resources/schema/manifest-schema.md#webapplicationinfo) mit den folgenden Werten hinzufügen:
@@ -95,7 +95,7 @@ Sie können die `teamsAppId` folgenden Methoden abrufen:
 
 * Wenn Ihre App bereits für einen Benutzer im persönlichen Bereich hochgeladen oder quergeladen wurde:
 
-    **Microsoft Graph-Seitenverweis:** [Für Benutzer installierte Apps auflisten](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
+    **Microsoft Graph-Seitenverweis:** [Auflisten der für den Benutzer installierten Apps](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
     **HTTP GET-Anforderung:**
 
@@ -120,7 +120,7 @@ Sie können die `teamsAppId` folgenden Methoden abrufen:
 
 Sie können wie folgt ermitteln, ob Ihr Bot derzeit für einen Nachrichtenempfänger installiert ist:
 
-**Microsoft Graph-Seitenverweis:** [Für Benutzer installierte Apps auflisten](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
+**Microsoft Graph-Seitenverweis:** [Auflisten der für den Benutzer installierten Apps](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **HTTP GET-Anforderung:**
 
@@ -190,6 +190,12 @@ Wenn Ihre App für den Benutzer installiert ist, erhält der Bot eine `conversat
 
 Ihr Bot kann [proaktive Nachrichten senden,](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) nachdem der Bot für einen Benutzer oder ein Team hinzugefügt wurde und alle Benutzerinformationen erhalten hat.
 
+## <a name="code-sample"></a>Codebeispiel
+
+| **Beispielname** | **Beschreibung** | **.NET** | **Node.js** |
+|---------------|--------------|--------|-------------|--------|
+| Proaktive Installation der App und Senden proaktiver Benachrichtigungen | Dieses Beispiel zeigt, wie Sie die proaktive Installation von Apps für Benutzer verwenden und proaktive Benachrichtigungen senden können, indem Sie Microsoft Graph APIs aufrufen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
+
 ## <a name="see-also"></a>Siehe auch
 
 * [**Verwalten von App-Setuprichtlinien in Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
@@ -198,4 +204,4 @@ Ihr Bot kann [proaktive Nachrichten senden,](/azure/bot-service/bot-builder-howt
 ## <a name="additional-code-samples"></a>Zusätzliche Codebeispiele
 >
 > [!div class="nextstepaction"]
-> [**Codebeispiele für proaktives Messaging Teams**](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+> [**Codebeispiele für proaktives Messaging Teams**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)

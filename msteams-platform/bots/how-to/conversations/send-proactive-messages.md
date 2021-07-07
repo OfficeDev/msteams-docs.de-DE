@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
 Keywords: Nachricht senden Benutzer-ID Kanal-ID Unterhaltungs-ID abrufen
-ms.openlocfilehash: 443988cc70f009ab657a1a29a91e8989dfed4f43
-ms.sourcegitcommit: 656a1de9e23e0ad90dddcb93a2bbfcc63848a856
+ms.openlocfilehash: 5c169e8ef7735b42233bef9992de3540a6fbbee1
+ms.sourcegitcommit: a6253e89cb8c8c34d45b06e08c9668daeebc30a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53130195"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "53300298"
 ---
 # <a name="proactive-messages"></a>Proaktive Nachrichten
 
@@ -22,7 +22,7 @@ Eine proaktive Nachricht ist jede Nachricht, die von einem Bot gesendet wird, di
 * Benachrichtigungen
 * Geplante Nachrichten
 
-Damit Ihr Bot eine proaktive Nachricht an einen Benutzer, einen Gruppenchat oder ein Team senden kann, muss er Zugriff haben, um die Nachricht zu senden. Für einen Gruppenchat oder ein Team muss die App, die Ihren Bot enthält, zuerst an diesem Speicherort installiert werden. Sie können [Ihre App proaktiv mithilfe von Microsoft Graph](#proactively-install-your-app-using-graph) in einem Team installieren, falls erforderlich, oder eine [App-Richtlinie](/microsoftteams/teams-custom-app-policies-and-settings) verwenden, um Apps an Teams und Benutzer in Ihrem Mandanten zu senden. Für Benutzer muss Ihre App entweder für den Benutzer installiert werden, oder Ihr Benutzer muss Teil eines Teams sein, in dem Ihre App installiert ist.
+Damit Ihr Bot eine proaktive Nachricht an einen Benutzer, einen Gruppenchat oder ein Team senden kann, muss er Zugriff haben, um die Nachricht zu senden. Für einen Gruppenchat oder ein Team muss die App, die Ihren Bot enthält, zuerst an diesem Speicherort installiert werden. Sie können [Ihre App proaktiv mithilfe von Microsoft Graph](#proactively-install-your-app-using-graph) in einem Team installieren, falls erforderlich, oder eine [App-Richtlinie](/microsoftteams/teams-custom-app-policies-and-settings) verwenden, um Apps an Teams und Benutzer in Ihrem Mandanten zu übertragen. Für Benutzer muss Ihre App entweder für den Benutzer installiert werden, oder Ihr Benutzer muss Teil eines Teams sein, in dem Ihre App installiert ist.
 
 Das Senden einer proaktiven Nachricht unterscheidet sich vom Senden einer regulären Nachricht. Es ist nicht aktiv `turnContext` für eine Antwort zu verwenden. Sie müssen die Unterhaltung erstellen, bevor Sie die Nachricht senden. Beispielsweise ein neuer 1:1-Chat oder ein neuer Unterhaltungsthread in einem Kanal. Sie können keinen neuen Gruppenchat oder einen neuen Kanal in einem Team mit proaktiven Nachrichten erstellen.
 
@@ -113,11 +113,11 @@ Proaktive Meldung von Benutzern, die zuvor nicht installiert oder mit Ihrer App 
 
 Sie können nur Apps installieren, die sich im App-Katalog Ihrer Organisation oder im Teams App-Store befinden.
 
-Informationen zum [Installieren von Apps für Benutzer](/graph/api/userteamwork-post-installedapps) finden Sie in der Dokumentation zu Graph und [proaktiver Bot-Installation und Messaging in Teams mit Graph.](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) Es gibt auch ein [Microsoft .NET Framework-Beispiel](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) auf der GitHub-Plattform.
+Informationen zum [Installieren von Apps für Benutzer](/graph/api/userteamwork-post-installedapps) finden Sie in der Dokumentation zu Graph sowie zur [proaktiven Bot-Installation und -Messaging in Teams mit Graph.](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) Es gibt auch ein [Microsoft .NET Framework-Beispiel](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) auf der GitHub-Plattform.
 
 ## <a name="samples"></a>Beispiele
 
-Der folgende Code zeigt ein einfaches Codebeispiel, das Ihre App proaktiv mit Graph installiert:
+Der folgende Code zeigt, wie proaktive Nachrichten gesendet werden:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -272,6 +272,7 @@ Die folgende Tabelle enthält ein einfaches Codebeispiel, das den grundlegenden 
 |---------------|--------------|--------|-------------|--------|
 | Teams Grundlagen zu Unterhaltungen  | Veranschaulicht die Grundlagen von Unterhaltungen in Teams, einschließlich des Sendens proaktiver 1:1-Nachrichten.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | Starten eines neuen Threads in einem Kanal | Veranschaulicht das Erstellen eines neuen Threads in einem Kanal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
+| Proaktive Installation der App und Senden proaktiver Benachrichtigungen | Dieses Beispiel zeigt, wie Sie die proaktive Installation von Apps für Benutzer verwenden und proaktive Benachrichtigungen senden können, indem Sie Microsoft Graph APIs aufrufen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
 
 ### <a name="additional-code-sample"></a>Zusätzliches Codebeispiel
 
