@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Teams-Apps – Benutzerteilnehmer-Rollen-API für Besprechungen
-ms.openlocfilehash: 38a7a5fdf9794fb95b4141f2c73e8282a9bf8601
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: bc13fa7b8c3af9a7c48463eab7198e908164ffbe
+ms.sourcegitcommit: 0a775ae12419f3bc7484e557f4b4ae815bab64ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211590"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53333687"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Voraussetzungen und API-Verweise für Apps in Teams-Besprechungen
 
-Um die Funktionen Ihrer Apps über den gesamten Besprechungslebenszyklus zu erweitern, können Sie mit Teams mit Apps für Teams Besprechungen arbeiten. Sie müssen die Voraussetzungen erfüllen, und Sie können die Api-Verweise auf Besprechungs-Apps verwenden, um die Besprechungserfahrung zu verbessern.
+Um die Funktionen Ihrer Apps über den gesamten Besprechungslebenszyklus zu erweitern, können Sie mit Teams mit Apps für Teams Besprechungen arbeiten. Sie müssen die Voraussetzungen durchlaufen, und Sie können die Api-Verweise auf Besprechungs-Apps verwenden, um die Besprechungserfahrung zu verbessern.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -87,7 +87,7 @@ Die `GetParticipant` API enthält die folgenden Beispiele:
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-  TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+  TeamsMeetingParticipant participant = await TeamsInfo.GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourParticipantTenantId").ConfigureAwait(false);
   TeamsChannelAccount member = participant.User;
   MeetingParticipantInfo meetingInfo = participant.Meeting;
   ConversationAccount conversation = participant.Conversation;
@@ -154,7 +154,7 @@ Der JSON-Antworttext für `GetParticipant` die API lautet:
 
 #### <a name="response-codes"></a>Antwortcodes
 
-Die `GetParticipant` API enthält die folgenden Antwortcodes:
+Die `GetParticipant` API gibt die folgenden Antwortcodes zurück:
 
 |Antwortcode|Beschreibung|
 |---|---|
@@ -162,7 +162,6 @@ Die `GetParticipant` API enthält die folgenden Antwortcodes:
 | **200** | Die Teilnehmerinformationen werden erfolgreich abgerufen.|
 | **401** | Die App antwortet mit einem ungültigen Token.|
 | **404** | Die Besprechung ist entweder abgelaufen, oder der Teilnehmer konnte nicht gefunden werden.|
-| **500** | Die Besprechung ist entweder abgelaufen (mehr als 60 Tage), seit die Besprechung endete, oder die Teilnehmer verfügen nicht über Berechtigungen basierend auf ihrer Rolle.|
 
 ### <a name="notificationsignal-api"></a>NotificationSignal-API
 
@@ -197,15 +196,7 @@ Die `NotificationSignal` API enthält die folgenden Beispiele:
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
-
-activity.ChannelData = new TeamsChannelData
-  {
-    Notification = new NotificationInfo()
-                    {
-                        AlertInMeeting = true,
-                        ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-                    }
-  };
+activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID");
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
@@ -252,7 +243,7 @@ Die `NotificationSignal` API enthält die folgenden Antwortcodes:
 |---|---|
 | **201** | Die Aktivität mit Signal wird erfolgreich gesendet. |
 | **401** | Die App antwortet mit einem ungültigen Token. |
-| **403** | Die App kann das Signal nicht senden. Dies kann aus verschiedenen Gründen geschehen, z. B. wenn der Mandantenadministrator die App deaktiviert, die App während der Migration einer Livewebsite blockiert wird usw. In diesem Fall enthält die Nutzlast eine detaillierte Fehlermeldung. |
+| **403** | Die App kann das Signal nicht senden. Dies kann aus verschiedenen Gründen geschehen, z. B. wenn der Mandantenadministrator die App deaktiviert, die App während der Migration der Livewebsite blockiert wird usw. In diesem Fall enthält die Nutzlast eine detaillierte Fehlermeldung. |
 | **404** | Der Besprechungschat ist nicht vorhanden. |
 
 ### <a name="meeting-details-api"></a>Besprechungsdetails-API
@@ -292,7 +283,7 @@ Die Besprechungsdetails-API enthält die folgenden Beispiele:
 # <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
-var connectorClient = parameters.TurnContext.TurnState.Get<IConnectorClient>();
+var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
 var creds = connectorClient.Credentials as AppCredentials;
 var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
 var request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri(connectorClient.BaseUri.OriginalString), $"v1/meetings/{meetingId}"));
