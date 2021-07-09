@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Apps in Teams Besprechungen entwerfen und das
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 7196017f92bebb776d1b73680893ebfe3684a74c
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: a08e5a850a62b0cf73661d00e07e55e46abce32f
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114309"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335410"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen ihrer Microsoft Teams Besprechungserweiterung
 
@@ -43,7 +43,7 @@ In einer Besprechung können Benutzer **weitere** :::image type="icon" source=".
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
-In einer Besprechung können Benutzer **mehr** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: auswählen und die gewünschte App auswählen.
+Nachdem Sie die App auf dem Desktop hinzugefügt haben, können Sie die App auswählen und die App in einer Besprechung verwenden, indem Sie **"Mehr"** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: auswählen.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Beispiel zeigt, wie sie während einer Besprechung auf mobilen Geräten eine Besprechungserweiterung hinzufügen." border="false":::
 
@@ -62,8 +62,8 @@ Vor einer Besprechung können Benutzer Inhalte auf der Registerkarte hinzufügen
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
 |1|**Registerkartenname:** Navigationsbezeichnung für Ihre Registerkarte.|
-|2 |**Registerkartenüberlauf:** Öffnet Registerkartenaktionen, z. B. Umbenennen und Entfernen.|
-|3 |**iframe:** Zeigt Ihre App-Inhalte an.|
+|2|**Registerkartenüberlauf:** Öffnet Registerkartenaktionen, z. B. Umbenennen und Entfernen.|
+|3|**iframe:** Zeigt Ihre App-Inhalte an.|
 
 ### <a name="designing-with-ui-templates"></a>Entwerfen mit UI-Vorlagen
 
@@ -105,8 +105,8 @@ Personen können die Registerkarte "Besprechungsinterne Besprechung" für Folgen
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
 |1|**App-Symbol (ausgewählt):** 16 Pixel transparentes App-Logo.|
-|2 |**App-Name**|
-|3 |**Header:** Enthält ihren App-Namen.|
+|2|**App-Name**|
+|3|**Header:** Enthält ihren App-Namen.|
 |4 |**Schaltfläche "Schließen":** Schließt die Registerkarte. Verwenden Sie immer das Symbol zum Schließen oben rechts anstelle einer Aktion in der Fußzeile.|
 |5 |**Benachrichtigungsleiste:** Fehlerwarnungen werden direkt unterhalb der Kopfzeile angezeigt, und der iframe-Inhalt wird um 20 Pixel nach unten verschoben.|
 |6 |**iframe:** Zeigt Ihre App-Inhalte an.|
@@ -129,7 +129,7 @@ Beachten Sie Folgendes, wenn Sie den Bildlauf zulassen:
 
 ### <a name="navigation"></a>Navigation
 
-Für Szenarien mit Navigationsebenen oder umfangreichen Inhalten wird empfohlen, Benutzern das Navigieren zu einer sekundären Ebene zu gestatten. Benutzer müssen in der Lage sein, zur vorherigen Ebene zurückzukehren.
+Für Szenarien mit Navigationsebenen oder umfangreichen Inhalten wird empfohlen, Dass Benutzer zu einer sekundären Ebene navigieren können. Benutzer müssen in der Lage sein, zur vorherigen Ebene zurückzukehren.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="Beispiel zeigt die Navigation in Besprechungen." border="false":::
 
@@ -163,7 +163,7 @@ In-Meeting-Dialogfelder werden von einem Benutzer (z. B. dem Besprechungsorganis
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
 |1|**Kopfzeile:** Enthält das App-Symbol, den Namen, die Aktionszeichenfolge und das Schließen-Symbol.|
-|2 |**iframe:** Zeigt Ihre App-Inhalte an.|
+|2|**iframe:** Zeigt Ihre App-Inhalte an.|
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomie: Kopfzeile des Besprechungsdialogfelds
 
@@ -174,8 +174,8 @@ Es gibt zwei Kopfzeilenvarianten. Verwenden Sie nach Möglichkeit die Variante m
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
 |1|**Avatar**: Person, die das Besprechungsdialogfeld initiiert.|
-|2 |**App-Symbol**|
-|3 |**App-Name**|
+|2|**App-Symbol**|
+|3|**App-Name**|
 |4 |**Schaltfläche "Schließen":** Schließt das Dialogfeld.|
 |5 |**Aktionszeichenfolge:** Beschreibt in der Regel, wer das Dialogfeld initiiert hat.|
 
@@ -246,8 +246,8 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
 |1|**App-Symbol:** Das hervorgehobene Symbol gibt an, dass die Registerkarte "In-Meeting" der App geöffnet ist.|
-|2 |**Schaltfläche "Für Besprechungsphase freigeben":** Der Einstiegspunkt, an dem die App für die Besprechungsphase freigegeben werden soll. Zeigt an, ob Sie Ihre App für die Verwendung der freigegebenen Besprechungsphase konfigurieren.|
-|3 |**iframe:** Zeigt Ihre App-Inhalte an.|
+|2|**Schaltfläche "Für Besprechungsphase freigeben":** Der Einstiegspunkt, an dem die App für die Besprechungsphase freigegeben werden soll. Zeigt an, ob Sie Ihre App für die Verwendung der freigegebenen Besprechungsphase konfigurieren.|
+|3|**iframe:** Zeigt Ihre App-Inhalte an.|
 |4 |**Schaltfläche "Freigabe beenden":** Beendet die Freigabe der App für die Besprechungsphase. Zeigt nur für den Teilnehmer an, der die Freigabe gestartet hat.|
 |5 |**Zuschreibung** des Referenten: Zeigt den Namen des Teilnehmers an, der die App freigegeben hat.|
 
@@ -366,7 +366,7 @@ Aufgrund des begrenzten Platzes der Besprechungsregisterkarte werden Layouts mit
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="Beispiel, das zeigt, wie primäre Steuerelemente rechts ausgerichtet werden." border="false":::
 
-#### <a name="do-right-align-the-primary-action"></a>Do: Rechtsgündige Ausrichtung der primären Aktion
+#### <a name="do-right-align-the-primary-action"></a>Do: Ausrichtung der primären Aktion nach rechts
 
 Wir empfehlen, die visuell schwerste Aktion am rechten Ort zu positionieren.
 
@@ -392,7 +392,7 @@ Dies weicht vom standard Teams Muster für die Platzierung von Steuerelementen i
 
 #### <a name="do-scroll-vertically"></a>Do: Vertikaler Bildlauf
 
-Benutzer erwarten vertikalen Bildlauf in Teams (und an anderer Stelle). Dies gilt möglicherweise nicht, wenn Sie über eine kreative Canvas verfügen, z. B. ein Whiteboard, das Benutzer über die X- und Y-Achse schwenken können.
+Benutzer erwarten einen vertikalen Bildlauf in Teams (und an anderer Stelle). Dies gilt möglicherweise nicht, wenn Sie über eine kreative Canvas verfügen, z. B. ein Whiteboard, das Benutzer über die X- und Y-Achse schwenken können.
 
    :::column-end:::
    :::column span="":::
@@ -403,7 +403,7 @@ Benutzer erwarten vertikalen Bildlauf in Teams (und an anderer Stelle). Dies gil
 
 #### <a name="dont-scroll-horizontally"></a>Nicht ausführen: Horizontaler Bildlauf
 
-Der horizontale Bildlauf ist kein erwartetes Verhalten in Teams (einschließlich der Besprechungsumgebung).
+Horizontaler Bildlauf ist kein erwartetes Verhalten in Teams (einschließlich der Besprechungsumgebung).
 
    :::column-end:::
 :::row-end:::
@@ -440,7 +440,7 @@ Besprechungsdialogfelder sind für kurze Interaktionen vorgesehen.
 
 #### <a name="do-focus-on-dark-theme"></a>Do: Fokus auf dunklem Design
 
-Teams Besprechungen sind für dunkles Design optimiert, um visuelles und kognitives Rauschen zu reduzieren, damit sich Benutzer auf die Diskussion und freigegebene Inhalte konzentrieren können. Beachten Sie, dass bestimmte Arten von Apps (z. B. Whiteboarding und Dokumentbearbeitung) keinen dunklen Zeichenbereich benötigen.
+Teams Besprechungen sind für dunkles Design optimiert, um visuelles und kognitives Rauschen zu reduzieren, damit sich Die Benutzer auf die Diskussion und freigegebene Inhalte konzentrieren können. Beachten Sie, dass bestimmte Arten von Apps (z. B. Whiteboarding und Dokumentbearbeitung) keinen dunklen Zeichenbereich benötigen.
 
    :::column-end:::
    :::column span="":::
@@ -481,7 +481,7 @@ Das Bereitstellen einer Option zum Schließen von Besprechungsregisterkarteninha
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Beispiel für modale Elemente (oder Aufgabenmodule) innerhalb einer Besprechungsregisterkarte." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Beispiel für modale Elemente (oder Aufgabenmodule) auf einer Besprechungsregisterkarte." border="false":::
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>Vorsicht: Vermeiden Sie modale Elemente auf der Registerkarte "Besprechung".
 

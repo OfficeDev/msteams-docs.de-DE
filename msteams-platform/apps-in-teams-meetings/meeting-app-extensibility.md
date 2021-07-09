@@ -3,12 +3,12 @@ title: Erweiterbarkeit der Besprechungs-App
 author: surbhigupta
 description: Verstehen der Erweiterbarkeit der Besprechungs-App
 ms.topic: conceptual
-ms.openlocfilehash: 0daa3b1976754eff6fed057de0c3659b51506f96
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 1b9cc381879a12d5c9d26711dde93e308d3e4231
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068635"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335391"
 ---
 # <a name="meeting-app-extensibility"></a>Erweiterbarkeit der Besprechungs-App
 
@@ -29,11 +29,10 @@ Der Besprechungslebenszyklus besteht aus der App-Erfahrung vor der Besprechung, 
 Registerkarten ermöglichen Teammitgliedern den Zugriff auf Dienste und Inhalte in einem bestimmten Raum innerhalb einer Besprechung. Das Team arbeitet direkt mit Registerkarten und hat Unterhaltungen über die Tools und Daten, die auf Registerkarten verfügbar sind. In Teams Besprechung können Benutzer eine Registerkarte hinzufügen, indem sie <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, und wählen Sie die App aus, die sie installieren möchten.
 
 > [!IMPORTANT]
-> Wenn Sie eine Registerkarte in Ihre Besprechung integriert haben, muss Ihre App den Teams [SSO-Authentifizierungsfluss (Single Sign-On) für Registerkarten](../tabs/how-to/authentication/auth-aad-sso.md)befolgen.
+> Wenn Sie eine Registerkarte in Ihre Besprechung integriert haben, muss Ihre App dem Teams [SSO-Authentifizierungsfluss (Single Sign-On) für Registerkarten](../tabs/how-to/authentication/auth-aad-sso.md)folgen.
 
 > [!NOTE]
-> * Mobile Clients unterstützen Registerkarten nur in Vor- und Nachbesprechungsphasen. Die In-Meeting-Umgebungen, die sich im Besprechungsdialogfeld und -panel befinden, sind derzeit nicht auf mobilen Geräten verfügbar.
-> * Apps werden nur in privaten geplanten Besprechungen unterstützt.
+> Apps werden nur in privaten geplanten Besprechungen unterstützt.
 
 #### <a name="pre-meeting-app-experience"></a>App-Erfahrung vor der Besprechung
 
@@ -48,42 +47,86 @@ Mit der App-Erfahrung vor der Besprechung können Sie Besprechungs-Apps suchen u
 
 1. Wählen Sie im Registerkartenkatalog die App aus, die Sie hinzufügen möchten, und führen Sie die erforderlichen Schritte aus. Die App wird als Registerkarte installiert.
 
-    ![Registerkartenansicht vor der Besprechung](../assets/images/apps-in-meetings/PreMeetingTab.png)
-
     > [!NOTE]
     > * Sie können eine Registerkarte auch mithilfe der Registerkarte **"Besprechungschat"** in einer vorhandenen Besprechung hinzufügen.
     > * Das Registerkartenlayout muss sich in einem organisierten Zustand befinden, wenn mehr als zehn Umfragen oder Umfragen vorhanden sind.
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+![Registerkartenansicht vor der Besprechung](../assets/images/apps-in-meetings/PreMeetingTab.png)
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+Nachdem die Registerkarten zu einer vorhandenen Besprechung auf dem Desktop oder im Web hinzugefügt wurden, können Sie die gleichen Apps in der Umgebung vor der Besprechung im Abschnitt **"Weitere** Besprechungsdetails" anzeigen.
+
+<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+
+---
 
 #### <a name="in-meeting-app-experience"></a>App-Erfahrung in Besprechungen
 
 Mit der App-Erfahrung in besprechungsinternen Besprechungen können Sie Teilnehmer während der Besprechung mithilfe von Apps und dem Dialogfeld in der Besprechung einbeziehen. Besprechungs-Apps werden in der oberen Leiste des Besprechungsfensters als Registerkarte in einer Besprechung gehostet. Verwenden Sie das Dialogfeld in der Besprechung, um Aktionen erfordernde Inhalte für Besprechungsteilnehmer anzuzeigen. Weitere Informationen finden Sie unter [Erstellen von Apps für Teams Besprechungen.](create-apps-for-teams-meetings.md)
 
+Für mobile Geräte sind Besprechungs-Apps über **Apps** > auslassungspunkte &#x25CF;&#x25CF;&#x25CF; in der Besprechung verfügbar. Wählen Sie **"Apps"** aus, um alle in der Besprechung verfügbaren Apps anzuzeigen.
+
 **So verwenden Sie Registerkarten während einer Besprechung**
 
-1. Wählen Sie nach der Teilnahme an der Besprechung in der oberen Leiste des Chatfensters die App aus, die Sie verwenden möchten. Eine App ist in einer Teams Besprechung im Seitenbereich oder im Dialogfeld in der Besprechung sichtbar.
+1. Wechseln Sie zu Teams.
+1. Wählen Sie in Ihrem Kalender eine Besprechung aus, in der Sie eine Registerkarte verwenden möchten.
+1. Wählen Sie nach der Teilnahme an der Besprechung in der oberen oberen Leiste des Chatfensters die erforderliche App aus.
+    Eine App ist in einer Teams Besprechung im Seitenbereich oder im Dialogfeld in der Besprechung sichtbar.
 1. Geben Sie im Dialogfeld in der Besprechung Ihre Antwort als Feedback ein.
 
-    ![Dialogfeldansicht](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
+# <a name="desktop"></a>[Desktop](#tab/desktop)
 
-    > [!NOTE]
-    > * Apps können das Teams Client SDK nutzen, um auf das Client-SDK zuzugreifen `meetingId` und die Oberfläche entsprechend zu `userMri` `frameContext` rendern.
-    > * Wenn das Dialogfeld in der Besprechung erfolgreich gerendert wird, werden Sie benachrichtigt, dass die Ergebnisse erfolgreich heruntergeladen wurden.
-    > * Ihr App-Manifest gibt die Stellen an, an denen sie angezeigt werden sollen. Das Kontextfeld wird zu diesem Zweck verwendet. Es kann auch Teil einer Freigabe-Tray-Erfahrung sein, die den angegebenen Entwurfsrichtlinien unterliegt.
+![Dialogfeldansicht](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
-    Die folgende Abbildung veranschaulicht den besprechungsinternen Bereich:
+# <a name="mobile"></a>[Mobil](#tab/mobile)
 
-    ![Besprechungsseitiger Bereich](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+Nachdem Sie die Besprechung eingegeben und die App über den Desktop oder das Web hinzugefügt haben, ist die App in mobilen Teams Besprechung im Abschnitt **"Apps"** sichtbar. Wählen Sie **"Apps"** aus, um die Liste der Apps anzuzeigen. Der Benutzer kann jede der Apps als besprechungsseitigen Bereich der App starten.
+
+Das Dialogfeld in der Besprechung wird angezeigt, in dem Sie Ihre Antwort als Feedback eingeben können.
+
+<img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
+
+> [!NOTE]
+> Sie müssen das App-Manifest nicht ändern, damit die Apps auf mobilen Geräten funktionieren.
+
+---
+
+> [!NOTE]
+> * Apps können das Teams Client SDK nutzen, um auf das Client-SDK zuzugreifen `meetingId` und die Oberfläche entsprechend zu `userMri` `frameContext` rendern.
+> * Wenn das Dialogfeld in der Besprechung erfolgreich gerendert wird, erhalten Sie eine Benachrichtigung, dass die Ergebnisse erfolgreich heruntergeladen wurden.
+> * Ihr App-Manifest gibt die Orte an, an denen sie angezeigt werden sollen. Das Kontextfeld wird zu diesem Zweck verwendet. Es ist auch Teil einer Freigabe-Tray-Erfahrung, die den angegebenen Entwurfsrichtlinien unterliegt.
+
+Die folgende Abbildung veranschaulicht den besprechungsinternen Bereich:
+
+![Besprechungsseitiger Bereich](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+
+In der folgenden Tabelle wird das Verhalten der App beschrieben, wenn sie genehmigt und nicht genehmigt wird:
+
+|App-Funktion | App ist genehmigt | App ist nicht genehmigt |
+|---|---|---|
+| Erweiterbarkeit von Besprechungen | Die App wird in Besprechungen angezeigt. | Die App wird in Besprechungen für die mobilen Clients nicht angezeigt. |
 
 #### <a name="post-meeting-app-experience"></a>App-Erfahrung nach der Besprechung
 
-Mit der App-Erfahrung nach der Besprechung können Sie die Ergebnisse der Besprechung anzeigen, z. B. Umfrageergebnisse oder Feedback. Auswählen <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> um eine Registerkarte hinzuzufügen und Besprechungsnotizen und -ergebnisse abzurufen, auf die Organisatoren und Teilnehmer maßnahmen ergreifen müssen.
+Mit der App-Erfahrung nach der Besprechung können Sie die Ergebnisse der Besprechung anzeigen, z. B. Umfrageergebnisse oder Feedback. Auswählen <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> Um eine Registerkarte hinzuzufügen, erhalten Sie Besprechungsnotizen und Ergebnisse dazu, welche Organisatoren und Teilnehmer Maßnahmen ergreifen müssen.
 
 In der folgenden Abbildung wird die Registerkarte **"Contoso"** mit den Ergebnissen der Umfrage und des Feedbacks von Besprechungsteilnehmern angezeigt:
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 ![Ansicht "Besprechung posten"](../assets/images/apps-in-meetings/PostMeeting.png)
 
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile post meeting view" width="200"/>
+
+---
+
 > [!NOTE]
-> Das Registerkartenlayout muss organisiert werden, wenn mehr als zehn Umfragen oder Umfragen vorhanden sind.
+> Das Registerkartenlayout muss organisiert werden, wenn mehr als 10 Umfragen oder Umfragen vorhanden sind.
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>Integrieren von Bots in den Besprechungslebenszyklus
 
@@ -122,8 +165,8 @@ Benutzertypen, z. B. Organisator, Referent oder Teilnehmer in einer Besprechung,
 In der folgenden Liste werden die verschiedenen Benutzertypen zusammen mit ihrer Barrierefreiheit und Leistung beschrieben:
 
 * **Mandanteninterne** Benutzer: Mandanteninterne Benutzer gehören zur Organisation und verfügen über Anmeldeinformationen in Azure Active Directory (AAD) für den Mandanten. Sie sind in der Regel Vollzeit-, Vor-Ort- oder Remotemitarbeiter. Ein mandanteninterner Benutzer kann ein Organisator, Referent oder Teilnehmer sein.
-* **Gast:** Ein Gast ist ein Teilnehmer aus einer anderen Organisation, der eingeladen ist, auf Teams oder andere Ressourcen im Mandanten der Organisation zuzugreifen. Gäste werden dem AAD der Organisation hinzugefügt und verfügen über die gleichen Teams Funktionen wie ein systemeigenes Teammitglied mit Zugriff auf Teamchats, Besprechungen und Dateien. Ein Gastbenutzer kann ein Organisator, Referent oder Teilnehmer sein. Weitere Informationen finden Sie unter [Gastzugriff in Teams](/microsoftteams/guest-access).
-* **Partner oder extern:** Ein Verbundbenutzer ist ein externer Teams Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Verbundbenutzer verfügen über gültige Anmeldeinformationen bei Verbundpartnern und sind von Teams autorisiert. Sie haben keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen aus Ihrer Organisation. Der Gastzugriff ist eine bessere Option für externe Benutzer, um Zugriff auf Teams und Kanäle zu haben. Weitere Informationen finden Sie unter [Verwalten des externen Zugriffs in Teams](/microsoftteams/manage-external-access).
+* **Gast:** Ein Gast ist ein Teilnehmer aus einer anderen Organisation, der eingeladen ist, auf Teams oder andere Ressourcen im Mandanten der Organisation zuzugreifen. Gäste werden dem AAD der Organisation hinzugefügt und verfügen über die gleichen Teams Funktionen wie ein systemeigenes Teammitglied mit Zugriff auf Teamchats, Besprechungen und Dateien. Ein Gastbenutzer kann ein Organisator, Referent oder Teilnehmer sein. Weitere Informationen finden Sie unter [Gastzugriff in Teams.](/microsoftteams/guest-access)
+* **Partnerbenutzer oder extern:** Ein Verbundbenutzer ist ein externer Teams Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Verbundbenutzer verfügen über gültige Anmeldeinformationen bei Verbundpartnern und sind von Teams autorisiert. Sie haben keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen aus Ihrer Organisation. Der Gastzugriff ist eine bessere Option für externe Benutzer, um Zugriff auf Teams und Kanäle zu haben. Weitere Informationen finden Sie unter [Verwalten des externen Zugriffs in Teams.](/microsoftteams/manage-external-access)
 
     > [!NOTE]
     > Ihre Teams Benutzer können Apps hinzufügen, wenn sie Besprechungen oder Chats mit anderen Organisationen hosten. Die Benutzer können Apps verwenden, die von externen Benutzern freigegeben wurden, wenn Ihre Benutzer an Besprechungen oder Chats teilnehmen, die von anderen Organisationen gehostet werden. Die Datenrichtlinien der Organisation des hostenden Benutzers sowie die Datenfreigabepraktiken der Drittanbieter-Apps, die von der Organisation dieses Benutzers freigegeben werden, werden wirksam.

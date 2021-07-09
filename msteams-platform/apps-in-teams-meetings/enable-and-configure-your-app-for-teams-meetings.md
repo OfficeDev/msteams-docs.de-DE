@@ -3,12 +3,12 @@ title: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 author: surbhigupta
 description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 ms.topic: conceptual
-ms.openlocfilehash: c123cc5cf15a7d0af64e2de16e96a673a2e4435c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 16112b75e109702f1f0be6d335b8d407d35211b5
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53139970"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335368"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -61,22 +61,17 @@ Die `context` Eigenschaft bestimmt, was angezeigt werden muss, wenn ein Benutzer
 |---|---|
 | **channelTab** | Eine Registerkarte in der Kopfzeile eines Teamkanals. |
 | **privateChatTab** | Eine Registerkarte in der Kopfzeile eines Gruppenchats zwischen einer Gruppe von Benutzern, nicht im Kontext eines Teams oder einer Besprechung. |
-| **meetingChatTab** | Eine Registerkarte in der Kopfzeile eines Gruppenchats zwischen einer Gruppe von Benutzern im Kontext einer geplanten Besprechung. |
-| **meetingDetailsTab** | Eine Registerkarte in der Kopfzeile der Besprechungsdetails-Ansicht des Kalenders. |
+| **meetingChatTab** | Eine Registerkarte in der Kopfzeile eines Gruppenchats zwischen einer Gruppe von Benutzern im Kontext einer geplanten Besprechung. Sie können entweder **meetingChatTab** oder **meetingDetailsTab** angeben, um sicherzustellen, dass die Apps auf mobilgeräten funktionieren. |
+| **meetingDetailsTab** | Eine Registerkarte in der Kopfzeile der Besprechungsdetails-Ansicht des Kalenders. Sie können entweder **meetingChatTab** oder **meetingDetailsTab** angeben, um sicherzustellen, dass die Apps auf mobilgeräten funktionieren. |
 | **meetingSidePanel** | Ein Besprechungsbereich, der über die einheitliche Leiste (U-Leiste) geöffnet wird. |
-| **meetingStage** | Eine App aus dem meetingSidePanel kann für die Besprechungsphase freigegeben werden. |
-
-> [!NOTE]
-> `Context` auf mobilen Clients wird derzeit nicht unterstützt.
+| **meetingStage** | Eine App aus dem meetingSidePanel kann für die Besprechungsphase freigegeben werden. Diese Registerkarte wird auf mobilgeräten nicht unterstützt. |
 
 Nachdem Sie Ihre App für Teams Besprechungen aktiviert haben, müssen Sie Ihre App vor einer Besprechung, während einer Besprechung und nach einer Besprechung konfigurieren.
 
 ## <a name="configure-your-app-for-meeting-scenarios"></a>Konfigurieren Ihrer App für Besprechungsszenarien
 
 > [!NOTE]
-> * Damit Ihre App im Registerkartenkatalog sichtbar ist, müssen konfigurierbare Registerkarten und der Gruppenchatbereich unterstützt werden.
-> * Mobile Clients unterstützen Registerkarten nur in Vor- und Nachbesprechungsphasen.
-> * Die Besprechungsumgebungen, die sich im Dialogfeld "Besprechung" und "Registerkarte" befinden, werden derzeit auf mobilen Clients nicht unterstützt. Weitere Informationen finden Sie unter [Anleitungen für Registerkarten auf mobilgeräten,](../tabs/design/tabs-mobile.md) während Sie Ihre Registerkarten für mobilgeräte erstellen.
+> Damit Ihre App im Registerkartenkatalog sichtbar ist, müssen konfigurierbare Registerkarten und der Gruppenchatbereich unterstützt werden.
 
 Teams Besprechungen bietet eine einzigartige Erfahrung für die Zusammenarbeit in Ihrer Organisation. Es bietet die Möglichkeit, Ihre App für verschiedene Besprechungsszenarien zu konfigurieren. Sie können Ihre Apps so konfigurieren, dass die Besprechungserfahrung basierend auf der Teilnehmerrolle oder dem Benutzertyp verbessert wird. Jetzt können Sie ermitteln, welche Aktionen in den folgenden Besprechungsszenarien ausgeführt werden können:
 
@@ -102,7 +97,7 @@ Vor einer Besprechung können Benutzer Registerkarten, Bots und Messaging-Erweit
 
 **So fügen Sie einer Besprechung eine Messaging-Erweiterung hinzu**
 
-1. Wählen Sie die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; , die sich im Bereich zum Verfassen von Nachrichten im Chat befinden.
+1. Wählen Sie die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; aus, die sich im Bereich zum Verfassen von Nachrichten im Chat befinden.
 1. Wählen Sie die App aus, die Sie hinzufügen möchten, und führen Sie die Schritte nach Bedarf aus. Die App wird als Messaging-Erweiterung installiert.
 
 **So fügen Sie einer Besprechung einen Bot hinzu**
@@ -137,7 +132,7 @@ Das Besprechungsdialogfeld darf kein Aufgabenmodul verwenden. Das Aufgabenmodul 
 
 > [!NOTE]
 > * Sie müssen die [SubmitTask()-Funktion](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) aufrufen, um sie automatisch zu schließen, nachdem ein Benutzer eine Aktion in der Webansicht ausgeführt hat. Dies ist eine Anforderung für die App-Übermittlung. Weitere Informationen finden Sie unter [Teams SDK-Aufgabenmodul.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
-> * Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss ihre anfängliche Aufrufanforderungsnutzlast auf den `from.id` Anforderungsmetadaten im `from` Objekt basieren, nicht auf den `from.aadObjectId` Anforderungsmetadaten. `from.id`ist die Benutzer-ID und `from.aadObjectId` die Azure Active Directory -ID (AAD) des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
+> * Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss ihre anfängliche Aufrufanforderungsnutzlast auf den `from.id` Anforderungsmetadaten im `from` Objekt basieren, nicht auf den `from.aadObjectId` Anforderungsmetadaten. `from.id`ist die Benutzer-ID und `from.aadObjectId` die Azure Active Directory-ID (AAD) des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
 
 #### <a name="shared-meeting-stage"></a>Freigegebene Besprechungsphase
 

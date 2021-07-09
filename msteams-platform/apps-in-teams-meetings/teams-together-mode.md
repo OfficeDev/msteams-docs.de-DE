@@ -2,14 +2,14 @@
 title: Szenen im benutzerdefinierten Modus "Zusammen"
 description: Arbeiten mit benutzerdefinierten Szenen im Zusammen-Modus
 ms.topic: conceptual
-ms.openlocfilehash: b2a81d92724785acbcd198d6240eec7d8d510e1c
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 9b65a0ff32c2f895cd0330f49d985ba48369dccf
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949749"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335375"
 ---
-# <a name="custom-together-mode-scenes-in-teams"></a>Szenen im benutzerdefinierten Zusammen-Modus in Teams
+# <a name="custom-together-mode-scenes-in-teams"></a>Benutzerdefinierte Zusammen-Modus-Szenen
 
 > [!NOTE]
 > Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
@@ -28,7 +28,7 @@ Der folgende Prozess bietet eine Übersicht zum Erstellen einer Nur-Szene-App:
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Nur-Szene-App erstellen" border="false":::
 
 > [!NOTE]
-> * Eine Nur-Szene-App ist weiterhin eine App in Microsoft Teams. Das Szenenstudio verarbeitet die Erstellung des App-Pakets im Hintergrund.
+> * Eine Nur-Szene-App ist immer noch eine App in Microsoft Teams. Das Szenenstudio verarbeitet die Erstellung des App-Pakets im Hintergrund.
 > * Mehrere Szenen in einem einzelnen App-Paket werden Benutzern als flache Liste von Szenen angezeigt.
 
 ## <a name="prerequisites"></a>Voraussetzungen
@@ -94,7 +94,7 @@ Die Platzabmessungen werden zum Zeichenbereich für das Rendern des Videostreams
 
     >[!NOTE]
     > * Um Scene Studio zu öffnen, können Sie zur Startseite von [Teams Entwicklerportal](https://dev.teams.microsoft.com/home) navigieren und **benutzerdefinierte Szenen für Besprechungen** erstellen auswählen.
-    > * Um Scene Studio zu öffnen, können Sie zur Startseite von [Teams Entwicklerportal](https://dev.teams.microsoft.com/home)navigieren, im linken Abschnitt extras **und** im Abschnitt **"Extras"** das **Szenenstudio** auswählen.
+    > * Um Scene Studio zu öffnen, können Sie zur Startseite von [Teams Entwicklerportal](https://dev.teams.microsoft.com/home)navigieren, im linken Abschnitt die Option **"Extras"** und im Abschnitt **"Extras"** das **Szenenstudio** auswählen.
 
 1. Wählen Sie auf der Seite **"Szenen-Editor"** die Option **"Neue Szene erstellen" aus.**
 
@@ -137,7 +137,7 @@ Die Platzabmessungen werden zum Zeichenbereich für das Rendern des Videostreams
 
     ![Spot zuweisen](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. Wählen Sie **"Speichern"** und **dann "Ansicht" in Teams** aus, um Die Szene in Microsoft Teams schnell zu testen.
+1. Wählen Sie **"Speichern"** und **dann "Anzeigen" in Teams** aus, um Die Szene in Microsoft Teams schnell zu testen.
 
     >[!NOTE]
     > Um eine von Ihnen erstellte Szene zu löschen, wählen Sie die Szene auf der oberen Leiste **löschen** aus.
@@ -150,7 +150,7 @@ Die Platzabmessungen werden zum Zeichenbereich für das Rendern des Videostreams
     ![Starten von Szenen im benutzerdefinierten Modus "Zusammen"](../assets/images/apps-in-meetings/launchtogethermode.png)
 
     >[!NOTE]
-    > * Wenn Sie **"Vorschau"** auswählen, wird automatisch eine Microsoft Teams-App erstellt, die auf der Seite **"Apps"** im Teams Entwicklerportal angezeigt werden kann.
+    > * Wenn Sie **"Vorschau"** auswählen, wird automatisch eine Microsoft Teams App erstellt, die auf der Seite **"Apps"** im Teams Entwicklerportal angezeigt werden kann.
     > * Wenn Sie **die Vorschau** auswählen, wird automatisch ein App-Paket erstellt, das hinter der Szene appmanifest.jswird. Wie bereits erwähnt, ist dies abstrahiert, Aber Sie können über das Menü zu **Apps** navigieren, um auf das automatisch erstellte App-Paket zuzugreifen.
     > * Die Szene kann dann in der benutzerdefinierten Szenengalerie für den Zusammen-Modus angezeigt werden.
 
@@ -239,7 +239,7 @@ Im Folgenden finden Sie die scene.jsim Beispiel:
 }
 ```
 
-Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Die Szenen-JSON enthält auch Informationen zu allen Ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Arbeitsplatz eine Platz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Reihenfolge der Auslastung wird automatisch generiert und kann je nach Präferenz geändert werden.
+Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Die Szenen-JSON enthält auch Informationen zu allen Ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Arbeitsplatz eine Platz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Reihenfolge der Auslastung wird automatisch generiert und kann gemäß Der Einstellung geändert werden.
 
 > [!NOTE]
 > Die Nummer der Reihenfolge der Benachrichtigung entspricht der Reihenfolge der Personen, die dem Anruf beitreten.
@@ -250,9 +250,9 @@ Nachdem Sie nun das Beispiel scene.jsweiter durchgegangen sind, können Sie die 
 
 ## <a name="activate-custom-together-mode-scenes"></a>Aktivieren von Szenen im benutzerdefinierten Modus "Zusammen"
 
-Hier erhalten Sie End-to-End-Informationen dazu, wie sich ein Endbenutzer mit Szenen in benutzerdefinierten Szenen im Zusammen-Modus beschäftigt.
+Erhalten Sie End-to-End-Informationen dazu, wie sich ein Endbenutzer mit Szenen in benutzerdefinierten Szenen im Zusammen-Modus beschäftigt.
 
-**So wählen Sie Szenen aus und aktivieren benutzerdefinierte Szenen im Gemeinsamen Modus**
+**So wählen Sie Szenen aus und aktivieren benutzerdefinierte Szenen im Zusammen-Modus**
 
 1. Erstellen sie eine neue Testbesprechung.
 
@@ -278,6 +278,6 @@ Sie können das Szenenpaket, das eine .zip aus dem Szenenstudio abgerufene Datei
 
 ![Szenen-ZIP-Datei](../assets/images/apps-in-meetings/scene-zip-file.png)
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Siehe auch
 
 [Apps für Teams Besprechungen](teams-apps-in-meetings.md)

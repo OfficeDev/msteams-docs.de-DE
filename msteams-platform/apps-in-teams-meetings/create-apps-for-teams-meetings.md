@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Teams-Apps – Benutzerteilnehmer-Rollen-API für Besprechungen
-ms.openlocfilehash: bc13fa7b8c3af9a7c48463eab7198e908164ffbe
-ms.sourcegitcommit: 0a775ae12419f3bc7484e557f4b4ae815bab64ec
+ms.openlocfilehash: 2dce62aaf94e68c14183f0d91e5ba823f2ef3d7e
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/08/2021
-ms.locfileid: "53333687"
+ms.locfileid: "53335347"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Voraussetzungen und API-Verweise für Apps in Teams-Besprechungen
 
-Um die Funktionen Ihrer Apps über den gesamten Besprechungslebenszyklus zu erweitern, können Sie mit Teams mit Apps für Teams Besprechungen arbeiten. Sie müssen die Voraussetzungen durchlaufen, und Sie können die Api-Verweise auf Besprechungs-Apps verwenden, um die Besprechungserfahrung zu verbessern.
+Um die Funktionen Ihrer Apps über den gesamten Besprechungslebenszyklus zu erweitern, können Sie mit Teams mit Apps für Teams Besprechungen arbeiten. Sie müssen die Voraussetzungen erfüllen, und Sie können die Api-Verweise auf Besprechungs-Apps verwenden, um die Besprechungserfahrung zu verbessern.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -45,7 +45,7 @@ Nachdem Sie die Voraussetzungen erfüllt haben, können Sie die API-Verweise auf
 
 ## <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
-Die neuen Besprechungserweiterungen bieten Ihnen APIs, die die Besprechungsumgebung transformieren. Mit dieser neuen Funktion können Sie Apps erstellen oder vorhandene Apps in den Besprechungslebenszyklus integrieren. Sie können die APIs verwenden, um Ihre App auf die Besprechung aufmerksam zu machen. Sie können auswählen, welche APIs Sie verwenden möchten, um die Besprechungserfahrung zu verbessern.
+Die neuen Besprechungserweiterungen bieten APIs zum Transformieren der Besprechungsumgebung. Sie können Apps erstellen oder vorhandene Apps in den Besprechungslebenszyklus integrieren. Sie können die APIs verwenden, um Ihre App auf die Besprechung aufmerksam zu machen. Sie können die APIs auswählen, die Sie verwenden möchten, um die Besprechungserfahrung zu verbessern.
 
 Die folgende Tabelle enthält eine Liste dieser APIs:
 
@@ -505,9 +505,9 @@ public class MeetingStartEndEventValue
 |Beispielname | Beschreibung | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Erweiterbarkeit von Besprechungen | Microsoft Teams Beispiel für die Erweiterbarkeit von Besprechungen zum Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Besprechungsinhalts-Blasen-Bot | Microsoft Teams Besprechungserweiterbarkeitsbeispiel für die Interaktion mit einem Inhaltsblasen-Bot in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| Besprechungsinhalts-Blasen-Bot | Microsoft Teams Besprechungserweiterungsbeispiel für die Interaktion mit einem Inhaltsblasen-Bot in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | Meeting MeetingSidePanel | Microsoft Teams Besprechungserweiterungsbeispiel für die Interaktion mit dem Seitenbereich in besprechungsinternen Besprechungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Registerkarte "Details" in der Besprechung | Microsoft Teams Besprechungserweiterbarkeitsbeispiel für das Iteracting mit der Registerkarte "Details" in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| Registerkarte "Details" in der Besprechung | Microsoft Teams Besprechungserweiterungsbeispiel für das Iteracting mit der Registerkarte "Details" in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 
 ## <a name="see-also"></a>Siehe auch
 
