@@ -1,29 +1,29 @@
 ---
 title: Optimieren eines Bots mit Ratenbegrenzung in Teams
-description: Geschwindigkeitsbegrenzung und bewährte Methoden in Microsoft Teams
+description: Begrenzung der Raten und bewährte Methoden in Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
-keywords: Beschränkung der Rate von Teams-Bots
-ms.openlocfilehash: 3b8f80efa50d2fbf44162aec13994b747b9bd7ac
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+keywords: Teams-Bots – Begrenzung der Raten
+ms.openlocfilehash: 41070bec7905c7003afb917aedcdd08495418602
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230960"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428695"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimieren eines Bots mit Ratenbegrenzung in Teams
 
-Die Geschwindigkeitsbegrenzung ist eine Methode, um Nachrichten auf eine bestimmte maximale Häufigkeit zu beschränken. Als allgemeines Prinzip muss Ihre Anwendung die Anzahl der Von ihr gesendeten Nachrichten auf eine einzelne Chat- oder Kanal unterhaltung beschränken. Dadurch wird eine optimale Benutzererfahrung sichergestellt, und Nachrichten werden ihren Benutzern nicht als Spam angezeigt.
+Die Geschwindigkeitsbegrenzung ist eine Methode, um Nachrichten auf eine bestimmte maximale Häufigkeit zu beschränken. Im Allgemeinen muss Ihre Anwendung die Anzahl der Nachrichten beschränken, die sie an einen einzelnen Chat oder eine Kanalunterhaltung sendet. Dadurch wird eine optimale Benutzererfahrung sichergestellt, und Nachrichten werden Ihren Benutzern nicht als Spam angezeigt.
 
-Zum Schutz Microsoft Teams und seiner Benutzer bieten die Bot-APIs eine Geschwindigkeitsbegrenzung für eingehende Anforderungen. Apps, die diesen Grenzwert überschreiten, erhalten einen `HTTP 429 Too Many Requests` Fehlerstatus. Alle Anforderungen unterliegen der gleichen Richtlinie zur Begrenzung der Rate, einschließlich des Sendens von Nachrichten, Kanalaufzählungen und Abrufen von Dienstplans.
+Um Microsoft Teams und seine Benutzer zu schützen, bieten die Bot-APIs ein Preislimit für eingehende Anforderungen. Apps, die diesen Grenzwert überschreiten, erhalten einen `HTTP 429 Too Many Requests` Fehlerstatus. Alle Anforderungen unterliegen derselben Richtlinie für die Begrenzung der Raten, einschließlich des Sendens von Nachrichten, Kanalenumerationen und Listenabrufen.
 
-Da sich die genauen Werte der Zinsgrenzen ändern können, muss Ihre Anwendung das entsprechende Backoff-Verhalten implementieren, wenn die API `HTTP 429 Too Many Requests` zurückgibt.
+Da sich die genauen Werte von Zinslimits ändern können, muss Ihre Anwendung das entsprechende Backoff-Verhalten implementieren, wenn die API `HTTP 429 Too Many Requests` zurückgibt.
 
-## <a name="handle-rate-limits"></a>Behandeln von Satzbegrenzungen
+## <a name="handle-rate-limits"></a>Behandeln von Ratenlimits
 
-Beim Ausstellen eines Bot Builder-SDK-Vorgangs können Sie den Statuscode `Microsoft.Rest.HttpOperationException` behandeln und überprüfen.
+Beim Ausgeben eines Bot Builder SDK-Vorgangs können Sie den Statuscode behandeln `Microsoft.Rest.HttpOperationException` und überprüfen.
 
-Der folgende Code zeigt ein Beispiel für die Behandlung von Geschwindigkeitsbeschränkungen:
+Der folgende Code zeigt ein Beispiel für die Behandlung von Ratengrenzen:
 
 ```csharp
 try
@@ -40,22 +40,22 @@ catch (HttpOperationException ex)
 }
 ```
 
-Nachdem Sie die Geschwindigkeitsbeschränkungen für Bots umgangen haben, können Sie Antworten mithilfe eines `HTTP 429` exponentiellen Backoffs behandeln.
+Nachdem Sie die Ratenlimits für Bots behandelt haben, können Sie `HTTP 429` Antworten mithilfe eines exponentiellen Backoffs verarbeiten.
 
 ## <a name="handle-http-429-responses"></a>Behandeln von `HTTP 429` Antworten
 
-Im Allgemeinen müssen Sie einfache Vorsichtsmaßnahmen ergreifen, um den Empfang von Antworten `HTTP 429` zu vermeiden. Vermeiden Sie beispielsweise, mehrere Anforderungen an dieselbe persönliche Unterhaltung oder eine Kanal unterhaltung ausstellen. Erstellen Sie stattdessen einen Batch der API-Anforderungen.
+Im Allgemeinen müssen Sie einfache Vorsichtsmaßnahmen ergreifen, um antworten zu `HTTP 429` vermeiden. Vermeiden Sie beispielsweise das Ausstellen mehrerer Anforderungen an dieselbe persönliche Unterhaltung oder Kanalunterhaltung. Erstellen Sie stattdessen einen Batch der API-Anforderungen.
 
-Die Verwendung eines exponentiellen Backoffs mit einem zufälligen Jitter ist die empfohlene Methode zum Verarbeiten von 429s. Dadurch wird sichergestellt, dass bei Wiederholungsversuchen bei mehreren Anforderungen keine Kollisionen auftut.
+Die Verwendung eines exponentiellen Backoffs mit einem zufälligen Jitter ist die empfohlene Methode zum Behandeln von 429s. Dadurch wird sichergestellt, dass mehrere Anforderungen bei Wiederholungsversuche keine Konflikte auslösen.
 
-Nachdem Sie Antworten behandeln, können Sie das Beispiel `HTTP 429` zum Erkennen vorübergehender Ausnahmen durchgehen.
+Nachdem Sie Antworten behandelt `HTTP 429` haben, können Sie das Beispiel zum Erkennen vorübergehender Ausnahmen durchgehen.
 
 > [!NOTE]
-> Zusätzlich zum Retyringfehlercode **429** müssen auch die Fehlercodes **412,** **502** und **504** wiederholt werden.
+> Zusätzlich zur Wiederholung des Fehlercodes **429** müssen auch die Fehlercodes **412,** **502** und **504** wiederholt werden.
 
-## <a name="detect-transient-exceptions-example"></a>Erkennen vorübergehender Ausnahmen (Beispiel)
+## <a name="detect-transient-exceptions-example"></a>Beispiel zum Erkennen vorübergehender Ausnahmen
 
-Der folgende Code zeigt ein Beispiel für die Verwendung eines exponentiellen Backoffs mithilfe des Anwendungsblocks für die vorübergehende Fehlerbehandlung:
+Der folgende Code zeigt ein Beispiel für die Verwendung eines exponentiellen Backoffs mithilfe des Vorübergehenden Anwendungsblocks für die Fehlerbehandlung:
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
@@ -80,15 +80,15 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
     }
 ```
 
-Sie können Backoff- und Wiederholungsversuche mithilfe der [vorübergehenden Fehlerbehandlung ausführen.](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29) Richtlinien zum Abrufen und Installieren des NuGet finden Sie unter Hinzufügen des Anwendungsblocks für vorübergehende Fehlerbehandlung [zu Ihrer Lösung](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN). Siehe auch [vorübergehende Fehlerbehandlung](/azure/architecture/best-practices/transient-faults).
+Sie können Backoff- und Wiederholungsversuche mithilfe [der vorübergehenden Fehlerbehandlung](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)durchführen. Richtlinien zum Abrufen und Installieren des NuGet-Pakets finden Sie unter [Hinzufügen des Vorübergehenden Fehlerbehandlungsanwendungsblocks zu Ihrer Lösung.](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN) Siehe auch [vorübergehende Fehlerbehandlung.](/azure/architecture/best-practices/transient-faults)
 
-Nachdem Sie das Beispiel zum Erkennen vorübergehender Ausnahmen durchgehen, gehen Sie durch das exponentielle Backoff-Beispiel. Sie können exponentielles Backoff verwenden, anstatt Fehler erneut zu wiederholen.
+Nachdem Sie das Beispiel zum Erkennen vorübergehender Ausnahmen durchgehen, durchlaufen Sie das exponentielle Backoff-Beispiel. Sie können exponentielles Backoff verwenden, anstatt fehlerweise erneut zu versuchen.
 
 ## <a name="backoff-example"></a>Backoff-Beispiel
 
-Sie können nicht nur Geschwindigkeitsbegrenzungen erkennen, sondern auch ein exponentielles Backoff ausführen.
+Zusätzlich zum Erkennen von Zinslimits können Sie auch ein exponentielles Backoff ausführen.
 
-Der folgende Code zeigt ein Beispiel für exponentielles Backoff:
+Der folgende Code zeigt ein Beispiel für einen exponentiellen Backoff:
 
 ```csharp
 /**
@@ -107,24 +107,24 @@ var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(
 await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync( (Activity)reply) ).ConfigureAwait(false);
 ```
 
-Sie können auch eine Methodenausführung mit der in diesem Abschnitt beschriebenen `System.Action` Wiederholungsrichtlinie ausführen. Mit der referenzierten Bibliothek können Sie auch ein festes Intervall oder einen linearen Backoffmechanismus angeben.
+Sie können auch eine `System.Action` Methodenausführung mit der in diesem Abschnitt beschriebenen Wiederholungsrichtlinie ausführen. In der referenzierten Bibliothek können Sie auch ein festes Intervall oder einen linearen Backoff-Mechanismus angeben.
 
-Store wert und strategie in einer Konfigurationsdatei, um Werte zur Laufzeit zu optimieren und zu optimieren.
+Store den Wert und die Strategie in einer Konfigurationsdatei, um die Werte zur Laufzeit zu optimieren und zu optimieren.
 
-Weitere Informationen finden Sie unter [Wiederholungsmuster](/azure/architecture/patterns/retry).
+Weitere Informationen finden Sie unter [Wiederholungsmuster.](/azure/architecture/patterns/retry)
 
-Sie können auch die Geschwindigkeitsbegrenzung mithilfe der Pro-Bot-Pro-Thread-Grenze behandeln.
+Sie können die Ratenbegrenzung auch mithilfe des Grenzwerts pro Bot und Thread behandeln.
 
-## <a name="per-bot-per-thread-limit"></a>Pro Bot pro Threadgrenzwert
+## <a name="per-bot-per-thread-limit"></a>Pro Bot pro Threadlimit
 
-Der Grenzwert pro Bot pro Thread steuert den Datenverkehr, den ein Bot in einer einzigen Unterhaltung generieren darf. Eine Unterhaltung zwischen Bot und Benutzer, einem Gruppenchat oder einem Kanal in einem Team ist 1:1. Wenn die Anwendung also eine Botnachricht an jeden Benutzer sendet, wird der Threadgrenzwert nicht gedrosselt.
+Der Grenzwert pro Bot und Thread steuert den Datenverkehr, den ein Bot in einer einzigen Unterhaltung generieren darf. Eine Unterhaltung ist 1:1 zwischen Bot und Benutzer, einem Gruppenchat oder einem Kanal in einem Team. Wenn die Anwendung also eine Bot-Nachricht an jeden Benutzer sendet, wird der Threadgrenzwert nicht gedrosselt.
 
 >[!NOTE]
-> * Der Threadgrenzwert von 3600 Sekunden und 1800 Vorgängen gilt nur, wenn mehrere Botnachrichten an einen einzelnen Benutzer gesendet werden. 
-> * Der globale Grenzwert pro App pro Mandant beträgt 50 Anforderungen pro Sekunde (RPS). Daher darf die Gesamtzahl der Botnachrichten pro Sekunde nicht die Threadbegrenzung überschreiten.
-> * Die Nachrichtenteilung auf Dienstebene führt zu einem höheren RpS als erwartet. Wenn Sie sich Sorgen machen, die Grenzwerte zu überschreiten, müssen Sie die [Backoff-Strategie implementieren.](#backoff-example) Die in diesem Abschnitt angegebenen Werte sind nur zur Schätzung vorgesehen.
+> * Das Threadlimit von 3600 Sekunden und 1800 Vorgängen gilt nur, wenn mehrere Bot-Nachrichten an einen einzelnen Benutzer gesendet werden. 
+> * Das globale Limit pro App und Mandant beträgt 50 Anforderungen pro Sekunde (RPS). Daher darf die Gesamtzahl der Botnachrichten pro Sekunde das Threadlimit nicht überschreiten.
+> * Das Teilen von Nachrichten auf Dienstebene führt zu einem höheren RPS als erwartet. Wenn Sie sich Sorgen machen, die Grenzwerte zu erreichen, müssen Sie die [Backoff-Strategie](#backoff-example)implementieren. Die in diesem Abschnitt angegebenen Werte dienen nur der Schätzung.
 
-In der folgenden Tabelle sind die Grenzwerte pro Bot pro Thread aufgeführt:
+Die folgende Tabelle enthält die Grenzwerte pro Bot und Thread:
 
 | Szenario | Zeitraum in Sekunden | Maximal zulässige Vorgänge |
 | --- | --- | --- |
@@ -136,25 +136,25 @@ In der folgenden Tabelle sind die Grenzwerte pro Bot pro Thread aufgeführt:
 | Unterhaltung erstellen | 2 | 8  |
 | Unterhaltung erstellen | 30 | 60 |
 | Unterhaltung erstellen | 3600 | 1800 |
-| Unterhaltungsmitglieder erhalten| 1 | 14  |
-| Unterhaltungsmitglieder erhalten| 2 | 16  |
-| Unterhaltungsmitglieder erhalten| 30 | 120 |
-| Unterhaltungsmitglieder erhalten| 3600 | 3600 |
-| Unterhaltungen erhalten | 1 | 14  |
-| Unterhaltungen erhalten | 2 | 16  |
-| Unterhaltungen erhalten | 30 | 120 |
-| Unterhaltungen erhalten | 3600 | 3600 |
+| Abrufen von Unterhaltungsmitgliedern| 1 | 14  |
+| Abrufen von Unterhaltungsmitgliedern| 2 | 16  |
+| Abrufen von Unterhaltungsmitgliedern| 30 | 120 |
+| Abrufen von Unterhaltungsmitgliedern| 3600 | 3600 |
+| Unterhaltungen abrufen | 1 | 14  |
+| Unterhaltungen abrufen | 2 | 16  |
+| Unterhaltungen abrufen | 30 | 120 |
+| Unterhaltungen abrufen | 3600 | 3600 |
 
 >[!NOTE]
-> Frühere Versionen `TeamsInfo.getMembers` von und `TeamsInfo.GetMembersAsync` APIs sind veraltet. Sie werden auf fünf Anforderungen pro Minute gedrosselt und geben maximal 10.000 Mitglieder pro Team zurück. Informationen zum Aktualisieren Ihres Bot Framework SDK und des Codes zur Verwendung der neuesten paginierten API-Endpunkte finden Sie unter [Bot-API-Änderungen für Team- und Chatmitglieder.](../../resources/team-chat-member-api-changes.md)
+> Frühere Versionen `TeamsInfo.getMembers` von und `TeamsInfo.GetMembersAsync` APIs sind veraltet. Sie werden auf fünf Anforderungen pro Minute gedrosselt und geben maximal 10.000 Mitglieder pro Team zurück. Informationen zum Aktualisieren Ihres Bot Framework SDK und des Codes für die Verwendung der neuesten paginierten API-Endpunkte finden Sie unter [Bot-API-Änderungen für Team- und Chatmitglieder.](../../resources/team-chat-member-api-changes.md)
 
-Sie können die Geschwindigkeitsbegrenzung auch mithilfe des Pro-Thread-Grenzwerts für alle Bots behandeln.
+Sie können die Ratenbegrenzung auch mithilfe des Grenzwerts pro Thread für alle Bots behandeln.
 
 ## <a name="per-thread-limit-for-all-bots"></a>Grenzwert pro Thread für alle Bots
 
-Der Grenzwert pro Thread für alle Bots steuert den Datenverkehr, den alle Bots über eine einzelne Unterhaltung generieren dürfen. Eine Unterhaltung hier ist 1:1 zwischen Bot und Benutzer, einem Gruppenchat oder einem Kanal in einem Team.
+Der Grenzwert pro Thread für alle Bots steuert den Datenverkehr, den alle Bots in einer einzigen Unterhaltung generieren dürfen. Eine Unterhaltung hier ist 1:1 zwischen Bot und Benutzer, einem Gruppenchat oder einem Kanal in einem Team.
 
-In der folgenden Tabelle ist der Grenzwert pro Thread für alle Bots aufgeführt:
+Die folgende Tabelle enthält den Grenzwert pro Thread für alle Bots:
 
 | Szenario | Zeitraum in Sekunden | Maximal zulässige Vorgänge |
 | --- | --- | --- |
@@ -164,10 +164,10 @@ In der folgenden Tabelle ist der Grenzwert pro Thread für alle Bots aufgeführt
 | Unterhaltung erstellen | 2 | 16  |
 | Unterhaltung erstellen| 1 | 14  |
 | Unterhaltung erstellen| 2 | 16  |
-| Unterhaltungsmitglieder erhalten| 1 | 28 |
-| Unterhaltungsmitglieder erhalten| 2 | 32 |
-| Unterhaltungen erhalten | 1 | 28 |
-| Unterhaltungen erhalten | 2 | 32 |
+| Abrufen von Unterhaltungsmitgliedern| 1 | 28 |
+| Abrufen von Unterhaltungsmitgliedern| 2 | 32 |
+| Unterhaltungen abrufen | 1 | 28 |
+| Unterhaltungen abrufen | 2 | 32 |
 
 ## <a name="next-step"></a>Nächster Schritt
 

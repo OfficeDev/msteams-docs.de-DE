@@ -4,12 +4,12 @@ author: KirtiPereira
 description: Erstellen von Registerkarten mit adaptiven Karten
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 5a66f49db3710885b926a7abce45ef858bf0b092
-ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
+ms.openlocfilehash: aaa6ae00e4a70ea27c27638ed9475bc7edec25da
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53328058"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428716"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
@@ -17,9 +17,9 @@ ms.locfileid: "53328058"
 > * Dieses Feature befindet sich in der [Öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md) und wird auf Desktops und mobilen Geräten unterstützt. Der Support im Webbrowser wird in Kürze verfügbar sein.
 > * Registerkarten mit adaptiven Karten werden derzeit nur als persönliche Apps unterstützt.
 
-Beim Entwickeln einer Registerkarte mithilfe der herkömmlichen Methode können diese Probleme auftreten, z. B. HTML- und CSS-Überlegungen, langsame Ladezeiten, iFrame-Einschränkungen sowie Serverwartung und -kosten. Registerkarten für adaptive Karten sind eine neue Möglichkeit zum Erstellen von Registerkarten in Teams. Anstatt Webinhalte in einen IFrame einzubetten, können Sie adaptive Karten auf einer Registerkarte rendern. Während das Front-End mit adaptiven Karten gerendert wird, wird das Back-End von einem Bot unterstützt. Der Bot ist dafür verantwortlich, Anforderungen zu akzeptieren und entsprechend mit der gerenderten adaptiven Karte zu antworten.
+Beim Entwickeln einer Registerkarte mithilfe der herkömmlichen Methode können diese Probleme auftreten, z. B. HTML- und CSS-Überlegungen, langsame Ladezeiten, iFrame-Einschränkungen sowie Serverwartung und -kosten. Adaptive Kartenregisterkarten sind eine neue Möglichkeit zum Erstellen von Registerkarten in Teams. Anstatt Webinhalte in einen IFrame einzubetten, können Sie adaptive Karten auf einer Registerkarte rendern. Während das Front-End mit adaptiven Karten gerendert wird, wird das Back-End von einem Bot unterstützt. Der Bot ist dafür verantwortlich, Anforderungen zu akzeptieren und entsprechend mit der gerenderten adaptiven Karte zu antworten.
 
-Sie können Ihre Registerkarten mit vorgefertigten Ui-Blocks (Ui) erstellen, die auf Desktops, im Web und auf mobilgeräten systemintern aussehen und sich nativ anfühlen. Dieser Artikel hilft Ihnen zu verstehen, welche Änderungen am App-Manifest vorgenommen werden müssen, wie das Aufrufen von Aktivitätsanforderungen und das Senden von Informationen auf der Registerkarte mit adaptiven Karten und die Auswirkungen auf den Aufgabenmodulworkflow erfolgt.
+Sie können Ihre Registerkarten mit vorgefertigten Bausteinen der Benutzeroberfläche erstellen, die systemintern auf Desktops, im Web und auf Mobilgeräten aussehen und sich nativ anfühlen. Dieser Artikel hilft Ihnen zu verstehen, welche Änderungen am App-Manifest vorgenommen werden müssen, wie das Aufrufen von Aktivitätsanforderungen und das Senden von Informationen auf der Registerkarte mit adaptiven Karten und die Auswirkungen auf den Aufgabenmodulworkflow erfolgt.
 
 Die folgende Abbildung zeigt Buildregisterkarten mit adaptiven Karten auf Desktops und mobilgeräten:
 
@@ -29,7 +29,7 @@ Die folgende Abbildung zeigt Buildregisterkarten mit adaptiven Karten auf Deskto
 
 Bevor Sie mit der Verwendung adaptiver Karten zum Erstellen von Registerkarten beginnen, müssen Sie Folgendes tun:
 
-* Machen Sie sich mit [der Bot-Entwicklung,](../../bots/what-are-bots.md) [adaptiven Karten](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)und [Aufgabenmodulen](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams vertraut.
+* Machen Sie sich mit der [Bot-Entwicklung,](../../bots/what-are-bots.md) [adaptiven Karten](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)und [Aufgabenmodulen](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams vertraut.
 * Lassen Sie einen Bot in Teams für Ihre Entwicklung ausführen.
 * Seien Sie in [der Öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md).
 
