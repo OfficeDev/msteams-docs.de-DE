@@ -6,19 +6,19 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: Teams-Autorisierung OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 4573140e33bffb0daafbdc9f929b5afd49231af8
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: ce4076ff8cb9945f3b7dd1a7e809391292ec314a
+ms.sourcegitcommit: c145d52b2d4daa7655e6c3ddfa739fa1beeb8d6a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114420"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53455220"
 ---
 # <a name="resource-specific-consent"></a>Ressourcenspezifische Zustimmung
 
 > [!NOTE]
 > Die ressourcenspezifische Zustimmung für den Chatbereich ist nur in der [öffentlichen Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
-Bei der ressourcenspezifischen Zustimmung (RSC) handelt es sich um eine Microsoft Teams- und Microsoft Graph-API-Integration, mit der Ihre App API-Endpunkte verwenden kann, um bestimmte Ressourcen innerhalb einer Organisation zu verwalten, entweder Teams oder Chats. Das RSC-Berechtigungsmodell ermöglicht *Es Teambesitzern* und *Chatbesitzern,* einer Anwendung die Zustimmung zu erteilen, auf die Daten eines Teams und die Daten eines Chats zuzugreifen bzw. diese zu ändern.
+Die ressourcenspezifische Zustimmung (RESOURCE-Specific Consent, RSC) ist eine Microsoft Teams- und Microsoft Graph-API-Integration, mit der Ihre App API-Endpunkte verwenden kann, um bestimmte Ressourcen, entweder Teams oder Chats, innerhalb einer Organisation zu verwalten. Das RSC-Berechtigungsmodell ermöglicht *Es Teambesitzern* und *Chatbesitzern,* einer Anwendung die Zustimmung zu erteilen, auf die Daten eines Teams und die Daten eines Chats zuzugreifen bzw. diese zu ändern.
 
 ## <a name="resource-specific-permissions"></a>Ressourcenspezifische Berechtigungen
 
@@ -65,7 +65,7 @@ Die folgende Tabelle enthält ressourcenspezifische Berechtigungen für einen Ch
 Weitere Informationen finden Sie unter ["Ressourcenspezifische Zustimmungsberechtigungen für Chats".](/graph/permissions-reference#chat-resource-specific-consent-permissions)
 
 > [!NOTE]
-> Ressourcenspezifische Berechtigungen sind nur für Teams Apps verfügbar, die auf dem Teams-Client installiert sind, und sind derzeit nicht Teil des Azure Active Directory (AAD)-Portals.
+> Ressourcenspezifische Berechtigungen sind nur für Teams apps verfügbar, die auf dem Teams-Client installiert sind und derzeit nicht Teil des Azure Active Directory (AAD)-Portals sind.
 
 ## <a name="enable-rsc-in-your-application"></a>Aktivieren von RSC in Ihrer Anwendung
 
@@ -88,7 +88,7 @@ Weitere Informationen finden Sie unter ["Ressourcenspezifische Zustimmungsberech
 Sie können die Zustimmung des [Gruppenbesitzers](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) direkt im Azure-Portal aktivieren oder deaktivieren:
 
 1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com) als [globaler Administrator oder Unternehmensadministrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)an.
-1. Wählen Sie **Azure Active Directory**  >  **Enterprise Anwendungen**  >  **zustimmungs- und**  >  [**berechtigungseinstellungen**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)aus.
+1. Wählen Sie **Azure Active Directory**  >  **Enterprise Anwendungen**  >  **"Zustimmung" und "Benutzer-Zustimmungseinstellungen"**  >  [**aus.**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)
 1. Aktivieren, deaktivieren oder beschränken Sie die Zustimmung des Benutzers mit der Zustimmung des Steuerelements **"Gruppenbesitzer" für Apps, die auf Daten zugreifen.** Der Standardwert ist **Die Zustimmung des Gruppenbesitzers für alle Gruppenbesitzer zulassen.** Damit ein Teambesitzer eine App mit RSC installieren kann, muss die Zustimmung des Gruppenbesitzers für diesen Benutzer aktiviert sein.
 
     ![Azure RSC-Teamkonfiguration](../../assets/images/azure-rsc-team-configuration.png)
@@ -100,7 +100,7 @@ Darüber hinaus können Sie die Zustimmung des Gruppenbesitzers mithilfe von Pow
 Sie können die Zustimmung des [Benutzers](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) direkt im Azure-Portal aktivieren oder deaktivieren:
 
 1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com) als [globaler Administrator oder Unternehmensadministrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)an.
-1. Wählen Sie **Azure Active Directory**  >  **Enterprise Anwendungen**  >  **zustimmungs- und**  >  [**berechtigungseinstellungen**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)aus.
+1. Wählen Sie **Azure Active Directory**  >  **Enterprise Anwendungen**  >  **"Zustimmung" und "Benutzer-Zustimmungseinstellungen"**  >  [**aus.**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)
 1. Aktivieren, deaktivieren oder einschränken Sie die Zustimmung des Benutzers mit dem Steuerelement mit der Bezeichnung **"Benutzer-Zustimmung für Anwendungen".** Die Standardeinstellung ist **"Zustimmung des Benutzers für Apps zulassen".** Damit ein Chatmitglied eine App mit RSC installieren kann, muss die Benutzerzustimmung für diesen Benutzer aktiviert sein.
 
     ![Azure RSC-Chatkonfiguration](../../assets/images/azure-rsc-chat-configuration.png)
@@ -122,7 +122,7 @@ Das AAD-Portal bietet Ihnen eine zentrale Plattform zum Registrieren und Konfigu
 > [!IMPORTANT]
 > Das AAD-Portal kann nicht zum Anfordern von RSC-Berechtigungen verwendet werden. RSC-Berechtigungen gelten derzeit ausschließlich für Teams Anwendungen, die im Teams-Client installiert sind, und werden in der JSON-Datei (Teams App Manifest) deklariert.
 
-## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>Abrufen eines Zugriffstokens vom Microsoft Identity Platform
+## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>Abrufen eines Zugriffstokens von der Microsoft Identity Platform
 
 Um Graph API-Aufrufe auszuführen, müssen Sie ein Zugriffstoken für Ihre App von der Identitätsplattform abrufen. Bevor Ihre App ein Token von der Identitätsplattform abrufen kann, muss sie im AAD-Portal registriert werden. Das Zugriffstoken enthält Informationen zu Ihrer App und die Berechtigungen, über die es für die Ressourcen und APIs verfügt, die über Microsoft Graph bereitgestellt werden.
 
@@ -158,7 +158,7 @@ Die RSC-Berechtigungen werden in Ihrer JSON-Datei des App-Manifests deklariert. 
     "applicationPermissions": [
       "TeamSettings.Read.Group",
       "ChannelMessage.Read.Group",
-      "TeamSettings.Edit.Group",
+      "TeamSettings.ReadWrite.Group",
       "ChannelSettings.ReadWrite.Group",
       "Channel.Create.Group",
       "Channel.Delete.Group",
@@ -218,7 +218,7 @@ Nachdem die App in einer Ressource installiert wurde, können Sie [Graph Explore
 1. Wählen Sie im Dropdownmenü des Teams den **Link zum Team abrufen** aus.
 1. Kopieren und speichern Sie den **groupId-Wert** aus dem Dialogfeld **"Link zum Team-Popup** abrufen".
 1. Melden Sie sich bei **Graph Explorer** an.
-1. Führen Sie einen **GET-Aufruf** an diesen Endpunkt aus: `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants` . Das `clientAppId` Feld in der Antwort wird dem im Teams `webApplicationInfo.id` App-Manifest angegebenen zugeordnet.
+1. Führen Sie einen **GET-Aufruf** an diesen Endpunkt aus: `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants` . Das `clientAppId` Feld in der Antwort entspricht dem im Teams `webApplicationInfo.id` App-Manifest angegebenen Feld.
 
     ![Graph Explorer-Antwort auf get call for team RSC permissions](../../assets/images/team-graph-permissions.png)
 
@@ -226,7 +226,7 @@ Weitere Informationen zum Abrufen von Details zu den in einem bestimmten Team in
 
 ### <a name="check-your-app-for-added-rsc-permissions-in-a-chat"></a>Überprüfen Ihrer App auf hinzugefügte RSC-Berechtigungen in einem Chat
 
-1. Rufen Sie die Chatthread-ID vom Teams *Webclient* ab.
+1. Rufen Sie die Chatthread-ID vom *Teams-Webclient* ab.
 1. Wählen Sie im Teams Webclient im bereich ganz links die Option **"Chat"** aus.
 1. Wählen Sie im Dropdownmenü den Chat aus, in dem die App installiert ist.
 1. Kopieren Sie die Web-URL, und speichern Sie die Chatthread-ID aus der Zeichenfolge.
@@ -234,7 +234,7 @@ Weitere Informationen zum Abrufen von Details zu den in einem bestimmten Team in
     ![Chatthread-ID von Web-URL](../../assets/images/chat-thread-id.png)
 
 1. Melden Sie sich bei **Graph Explorer** an.
-1. Führen Sie einen **GET-Aufruf** an den folgenden Endpunkt aus: `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants` . Das `clientAppId` Feld in der Antwort wird dem im Teams `webApplicationInfo.id` App-Manifest angegebenen zugeordnet.
+1. Führen Sie einen **GET-Aufruf** an den folgenden Endpunkt aus: `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants` . Das `clientAppId` Feld in der Antwort entspricht dem im Teams `webApplicationInfo.id` App-Manifest angegebenen Feld.
 
     ![Graph Explorer-Antwort auf GET call for chat RSC permissions](../../assets/images/chat-graph-permissions.png)
 
@@ -244,7 +244,7 @@ Weitere Informationen zum Abrufen von Details zu in einem bestimmten Chat instal
 
 | **Beispielname** | **Beschreibung** | **.NET** |**Node.js** |
 |-----------------|-----------------|----------------|----------------|
-| Resource-Specific Consent (RSC) | Verwenden Sie RSC, um Graph APIs aufzurufen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
+| Resource-Specific Consent (RSC) | Verwenden Sie RSC, um Graph APIs aufzurufen. | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
 
 ## <a name="see-also"></a>Siehe auch
  

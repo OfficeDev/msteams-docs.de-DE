@@ -2,19 +2,19 @@
 title: Szenen im benutzerdefinierten Modus "Zusammen"
 description: Arbeiten mit benutzerdefinierten Szenen im Zusammen-Modus
 ms.topic: conceptual
-ms.openlocfilehash: 9b65a0ff32c2f895cd0330f49d985ba48369dccf
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 74405041c6d90c2ef502a2c52570650daebb3526
+ms.sourcegitcommit: d354ab3cda83e6cd8bb9f03bc0fa2d1c1a61a6ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335375"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53463324"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Benutzerdefinierte Zusammen-Modus-Szenen
 
 > [!NOTE]
 > Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
-Szenen im benutzerdefinierten Zusammen-Modus in Microsoft Teams bieten eine immersive und ansprechende Besprechungsumgebung, die Personen zusammenführt und sie dazu auffordert, ihr Video zu aktivieren. Sie kombiniert Teilnehmer digital in einer einzelnen virtuellen Szene und platziert ihre Videostreams in vordefinierten Arbeitsplätzen, die vom Szenenersteller entworfen und behoben wurden.
+Szenen im benutzerdefinierten Zusammen-Modus in Microsoft Teams bieten eine immersive und ansprechende Besprechungsumgebung, die Menschen zusammenführt und sie dazu auffordert, ihr Video zu aktivieren. Sie kombiniert Teilnehmer digital in einer einzelnen virtuellen Szene und platziert ihre Videostreams in vordefinierten Arbeitsplätzen, die vom Szenenersteller entworfen und behoben wurden.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
@@ -38,7 +38,7 @@ Sie müssen über grundlegende Kenntnisse der folgenden Punkte verfügen, um ben
 * Definition der Szene und der Arbeitsplätze in einer Szene.
 * Besitzen Sie ein Microsoft Developer-Konto, und machen Sie sich mit dem Microsoft Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) und App Studio vertraut.
 * [Konzept des Querladens von Apps.](../concepts/deploy-and-publish/apps-upload.md)
-* Stellen Sie sicher, dass der Administrator die Berechtigung zum **Hochladen einer benutzerdefinierten App** und zum Auswählen aller Filter im Rahmen der App-Setup- bzw. Besprechungsrichtlinien erteilt hat.
+* Stellen Sie sicher, dass der Administrator die Berechtigung zum [**Hochladen einer benutzerdefinierten App**](../concepts/deploy-and-publish/apps-upload.md) und zum Auswählen aller Filter im Rahmen der App-Setup- bzw. Besprechungsrichtlinien erteilt hat.
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
@@ -137,12 +137,13 @@ Die Platzabmessungen werden zum Zeichenbereich für das Rendern des Videostreams
 
     ![Spot zuweisen](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. Wählen Sie **"Speichern"** und **dann "Anzeigen" in Teams** aus, um Die Szene in Microsoft Teams schnell zu testen.
+1. Wählen Sie **"Speichern"** und **dann "Ansicht" in Teams** aus, um Ihre Szene in Microsoft Teams schnell zu testen.
 
     >[!NOTE]
-    > Um eine von Ihnen erstellte Szene zu löschen, wählen Sie die Szene auf der oberen Leiste **löschen** aus.
+    > * Wenn Sie **"Ansicht" in Teams** auswählen, wird automatisch eine Microsoft Teams App erstellt, die auf der Seite **"Apps"** im Teams Entwicklerportal angezeigt werden kann.
+    > * Wenn Sie **"Ansicht" in Teams** auswählen, wird automatisch ein App-Paket erstellt, das hinter der Szene appmanifest.jswird. Wie bereits erwähnt, ist dies abstrahiert, Aber Sie können über das Menü zu **Apps** navigieren, um auf das automatisch erstellte App-Paket zuzugreifen.
+    > * Um eine von Ihnen erstellte Szene zu löschen, wählen Sie die Szene auf der oberen Leiste **löschen** aus.
 
-1. Wählen Sie im Dialogfeld **Ansicht in Teams** in Teams die Option **"Vorschau"** aus.
 1. Wählen Sie im daraufhin angezeigten Dialogfeld **"Hinzufügen"** aus.
 
     Sie können die Szene testen oder darauf zugreifen, indem Sie eine Testbesprechung erstellen und benutzerdefinierte Szenen im Gemeinsamen Modus starten. Weitere Informationen finden Sie unter [Aktivieren benutzerdefinierter Szenen für den Zusammen-Modus.](#activate-custom-together-mode-scenes)
@@ -150,9 +151,7 @@ Die Platzabmessungen werden zum Zeichenbereich für das Rendern des Videostreams
     ![Starten von Szenen im benutzerdefinierten Modus "Zusammen"](../assets/images/apps-in-meetings/launchtogethermode.png)
 
     >[!NOTE]
-    > * Wenn Sie **"Vorschau"** auswählen, wird automatisch eine Microsoft Teams App erstellt, die auf der Seite **"Apps"** im Teams Entwicklerportal angezeigt werden kann.
-    > * Wenn Sie **die Vorschau** auswählen, wird automatisch ein App-Paket erstellt, das hinter der Szene appmanifest.jswird. Wie bereits erwähnt, ist dies abstrahiert, Aber Sie können über das Menü zu **Apps** navigieren, um auf das automatisch erstellte App-Paket zuzugreifen.
-    > * Die Szene kann dann in der benutzerdefinierten Szenengalerie für den Zusammen-Modus angezeigt werden.
+    > * Die Szene kann in der benutzerdefinierten Szenengalerie für den Zusammen-Modus angezeigt werden.
 
 1. Optional können Sie im Dropdownmenü **"Speichern"** die Option **"Freigeben"** auswählen, um einen freigabefähigen Link zu erstellen, um Ihre Szenen für andere Benutzer einfach zu verteilen. Durch Öffnen dieses Links wird die Szene für den Benutzer installiert, und er kann mit der Verwendung beginnen.
 
@@ -166,7 +165,7 @@ Die Platzabmessungen werden zum Zeichenbereich für das Rendern des Videostreams
     ![Exportieren einer Szene](../assets/images/apps-in-meetings/build-a-scene.png)
 
     >[!NOTE]
-    > Das Szenenpaket umfasst eine scene.jsund die PNG-Objekte, die zum Erstellen einer Szene verwendet werden. Das Szenenpaket kann auf andere Änderungen überprüft werden, wie im Beispiel scene.jsim Abschnitt dieses Dokuments beschrieben.
+    > Das Szenenpaket besteht aus einem scene.jsund den PNG-Ressourcen, die zum Erstellen einer Szene verwendet werden. Das Szenenpaket kann auf andere Änderungen überprüft werden, wie im Beispiel scene.jsim Abschnitt dieses Dokuments beschrieben.
 
 Eine komplexere Szene, die die Z-Achse nutzt, wird im Beispiel für die ersten Schritte veranschaulicht.
 
@@ -239,7 +238,7 @@ Im Folgenden finden Sie die scene.jsim Beispiel:
 }
 ```
 
-Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Die Szenen-JSON enthält auch Informationen zu allen Ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Arbeitsplatz eine Platz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Reihenfolge der Auslastung wird automatisch generiert und kann gemäß Der Einstellung geändert werden.
+Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Die Szenen-JSON enthält auch Informationen zu allen Ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Arbeitsplatz eine Platz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Reihenfolge der Auslastung wird automatisch generiert und kann je nach Präferenz geändert werden.
 
 > [!NOTE]
 > Die Nummer der Reihenfolge der Benachrichtigung entspricht der Reihenfolge der Personen, die dem Anruf beitreten.
@@ -250,7 +249,7 @@ Nachdem Sie nun das Beispiel scene.jsweiter durchgegangen sind, können Sie die 
 
 ## <a name="activate-custom-together-mode-scenes"></a>Aktivieren von Szenen im benutzerdefinierten Modus "Zusammen"
 
-Erhalten Sie End-to-End-Informationen dazu, wie sich ein Endbenutzer mit Szenen in benutzerdefinierten Szenen im Zusammen-Modus beschäftigt.
+Hier erhalten Sie End-to-End-Informationen dazu, wie sich ein Endbenutzer mit Szenen in benutzerdefinierten Szenen im Zusammen-Modus beschäftigt.
 
 **So wählen Sie Szenen aus und aktivieren benutzerdefinierte Szenen im Zusammen-Modus**
 
@@ -274,7 +273,7 @@ Erhalten Sie End-to-End-Informationen dazu, wie sich ein Endbenutzer mit Szenen 
 
 ## <a name="open-a-custom-together-mode-scenes-scene-package"></a>Öffnen eines benutzerdefinierten Szenenpakets für den Gemeinsamen Modus
 
-Sie können das Szenenpaket, das eine .zip aus dem Szenenstudio abgerufene Datei ist, für andere Ersteller freigeben, um die Szene weiter zu verbessern. Die Funktion zum **Importieren einer Szene** kann verwendet werden. Mit diesem Tool können Sie ein Szenenpaket entpacken, damit der Ersteller die Szene weiter erstellen kann.
+Sie können das Szenenpaket, das eine aus dem Szenenstudio abgerufene .zip datei ist, für andere Ersteller freigeben, um die Szene weiter zu verbessern. Die Funktion zum **Importieren einer Szene** kann verwendet werden. Mit diesem Tool können Sie ein Szenenpaket entpacken, damit der Ersteller die Szene weiter erstellen kann.
 
 ![Szenen-ZIP-Datei](../assets/images/apps-in-meetings/scene-zip-file.png)
 
