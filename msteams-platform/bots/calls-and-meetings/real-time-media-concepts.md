@@ -1,69 +1,69 @@
 ---
-title: Echtzeitmedienanrufe und Onlinebesprechungen mit Microsoft Teams
-description: Grundlegendes zu den wichtigsten Konzepten beim Erstellen von Bots, die Audio- und Videoanrufe und Onlinebesprechungen in Echtzeit durchführen können.
+title: Echtzeit-Medienanrufe und Onlinebesprechungen mit Microsoft Teams
+description: Grundlegendes zu den wichtigsten Konzepten beim Erstellen eines Bots, der Audio- und Videoanrufe in Echtzeit und Onlinebesprechungen durchführen kann.
 ms.topic: conceptual
 localization_priority: Normal
-keywords: Audiostream video stream audio/video calling meeting real-time media application-hosted media service-hosted media media
-ms.openlocfilehash: deedc47f67fe6848cf7f84457247d2271257e3f0
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+keywords: 'Audiostream-Videostream: Audio-/Videoanrufe bei Besprechungen in Echtzeit, medienanwendungsgehostete Medien, die vom Mediendienst gehostet werden'
+ms.openlocfilehash: 0cfb8f345702f03ae356789d8dad1573902dcfb4
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020155"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53585949"
 ---
-# <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Echtzeitmedienanrufe und Besprechungen mit Microsoft Teams
+# <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Echtzeit-Medienanrufe und Besprechungen mit Microsoft Teams
 
-Die Echtzeitmedienplattform ermöglicht Bots die Interaktion mit Microsoft Teams Anrufen und Besprechungen mithilfe von Echtzeit-Sprach-, Video- und Bildschirmfreigabe. Dies ist eine erweiterte Funktion, mit der der Bot Sprach- und Videoinhalte frame für Frame senden und empfangen kann. Der Bot hat unformatierte Zugriff auf die Medienstreams für Sprach-, Video- und Bildschirmfreigabe. Es gibt einfachere vom Dienst gehostete Medienbots, die für alle Medienverarbeitungen auf der Echtzeitmedienplattform beruhen. Bots, die Medien selbst verarbeiten, werden als anwendungsgehostte Medienbots bezeichnet.
+Die Echtzeit-Medienplattform ermöglicht Bots die Interaktion mit Microsoft Teams Anrufen und Besprechungen mithilfe von Sprach-, Video- und Bildschirmfreigabe in Echtzeit. Die Echtzeit-Medienplattform ist eine erweiterte Funktion, mit der der Bot Sprach- und Videoinhaltsframes nach Frame senden und empfangen kann. Der Bot hat unformatierten Zugriff auf die Mediendatenströme Sprach-, Video- und Bildschirmfreigabe. Es gibt einfachere vom Dienst gehostete Medienbots, die für die gesamte Medienverarbeitung auf der Echtzeit-Medienplattform basieren. Bots, die Medien selbst verarbeiten, werden als von der Anwendung gehostete Medienbots bezeichnet.
 
-Beispielsweise empfängt der Bot bei einem 1:1-Anruf mit einem Bot, wie der Benutzer spricht, 50 Audioframes pro Sekunde, bei denen jeder Frame 20 Millisekunden Audio enthält. Ein von der Anwendung gehosteter Medienbot kann die Spracherkennung in Echtzeit ausführen, wenn die Audioframes empfangen werden, anstatt auf eine Aufzeichnung warten zu müssen, nachdem der Benutzer nicht mehr gesprochen hat. Der Bot kann auch Videos mit hoher Auflösung senden und empfangen, einschließlich videobasierter Bildschirmfreigabeinhalte.
+Beispielsweise erhält der Bot bei einem 1:1-Anruf mit einem Bot, während der Benutzer spricht, 50 Audioframes pro Sekunde. Der Bot empfängt Audioframes mit jeweils 20 Millisekunden (ms) Audio. Ein von der Anwendung gehosteter Medienbot kann die Spracherkennung in Echtzeit durchführen, wenn die Audioframes empfangen werden. Es ist nicht erforderlich, auf eine Aufzeichnung zu warten, nachdem der Benutzer aufgehört hat zu sprechen. Der Bot kann auch Video mit hoher Auflösung senden und empfangen, einschließlich videobasierter Bildschirmfreigabeinhalte.
 
-Die Plattform bietet eine einfache socket- like-API für den Bot zum Senden und Empfangen von Medien. Es verarbeitet die Echtzeitcodierung und -decodierung von Audio- oder Videopaketen mithilfe von Codecs wie SILK und G.722 für Audio und H.264 für Video. Die Plattform übernimmt auch die verschlüsselungs- oder entschlüsselte Medienpaket- und Paketnetzwerkübertragung automatisch. Der Bot betrifft nur die tatsächlichen Audio- oder Videoinhalte. Ein Echtzeitmedienbot nimmt an 1:1-Anrufen sowie Besprechungen mit mehreren Teilnehmern teil.
+Die Plattform bietet eine einfache socketähnliche API für den Bot zum Senden und Empfangen von Medien. Es verarbeitet die Codierung und Decodierung von Audio- oder Videopaketen in Echtzeit. Für Audio und H.264 für Video werden Codecs wie BEISPIELSWEISE CODEC und G.722 verwendet. Die Plattform verarbeitet auch die gesamte Medienpaketverschlüsselung oder -entschlüsselung sowie die Paketnetzwerkübertragung. Der Bot befasst sich nur mit den tatsächlichen Audio- oder Videoinhalten. Ein Echtzeit-Medienbot nimmt an 1:1-Anrufen und Besprechungen mit mehreren Teilnehmern teil.
 
 ## <a name="media-session"></a>Mediensitzung
 
-Wenn ein Medienbot in Echtzeit einen eingehenden Anruf beantwortet oder an einer Teams teiln, muss er deklarieren, welche Modalitäten er unterstützen muss. Für jede unterstützte Modalität gibt der Bot an, ob er Medien senden und empfangen, nur empfangen oder nur senden kann. Beispielsweise muss ein Bot, der 1:1-Teams-Anrufe verarbeiten soll, Audio senden und empfangen, aber nur Video senden, da das Video des Anrufers nicht empfangen werden muss. Der Satz von Audio- und Videomodalitäten, die zwischen dem Bot und dem Teams oder Besprechung eingerichtet werden, wird als Mediensitzung bezeichnet.
+Ein Echtzeitmedienbot muss deklarieren, welche Modalitäten er unterstützen muss. Der Echtzeitmedienbot muss Unterstützung deklarieren, wenn er einen eingehenden Anruf entgegennimmt oder an einer Teams Besprechung teilnimmt. Für jede unterstützte Modalität deklariert der Bot, ob er Medien senden und empfangen, nur empfangen oder nur senden kann. Beispielsweise muss ein Bot, der für die Verarbeitung von 1:1-Teams-Anrufen entwickelt wurde, Audio senden und empfangen. Der Bot muss jedoch nur Videos senden, da er das Video des Anrufers nicht empfangen muss. Der Satz von Audio- und Videomodalitäten, der zwischen dem Bot und dem Teams Anrufer oder der Besprechung eingerichtet wurde, wird als Mediensitzung bezeichnet.
 
-Es werden zwei Arten von Videomodalitäten unterstützt, hauptvideo- und videobasierte Bildschirmfreigabe. Das Hauptvideo wird verwendet, um das Video von der Webcam eines Benutzers zu transportieren. Die videobasierte Bildschirmfreigabe ermöglicht es einem Benutzer, seinen Bildschirm als Videostream zu teilen. Die Plattform ermöglicht es einem Bot, beide Videotypen zu senden und zu empfangen.
+Es werden zwei Arten von Videomodalitäten unterstützt: Hauptvideo und videobasierte Bildschirmfreigabe. Das Hauptvideo wird verwendet, um das Video von der Webcam eines Benutzers zu übertragen. Mit der videobasierten Bildschirmfreigabe kann ein Benutzer den Bildschirm freigeben. Die Plattform ermöglicht es einem Bot, beide Videotypen zu senden und zu empfangen.
 
-Wenn ein Bot einer Teams beigetreten ist, kann er mehrere Hauptvideostreams gleichzeitig bis zu zehn pro Mediensitzung empfangen. Dadurch kann der Bot mehr als einen Teilnehmer an der Besprechung sehen.
+Wenn er an einer Teams Besprechung teil nimmt, kann ein Bot mehrere Hauptvideostreams gleichzeitig bis zu 10 pro Mediensitzung empfangen. Der Bot kann mehr als einen Teilnehmer an der Besprechung sehen.
 
-Der nächste Abschnitt enthält Details zum Senden und Empfangen von Medien als Sequenz von Frames.
+Der nächste Abschnitt enthält Details über den Bot, der Medien als Folge von Frames sendet und empfängt.
 
 ## <a name="frames-and-frame-rate"></a>Frames und Framerate
 
-Ein Echtzeitmedienbot interagiert direkt mit den Audio- und Videomodalitäten einer Mediensitzung. Dies bedeutet, dass der Bot Medien als Sequenz von Frames sendet und empfängt, wobei jeder Frame eine Inhaltseinheit darstellt. Eine Sekunde Audio wird als Sequenz von 50 Frames übertragen, jeder Frame enthält 20 ms, d. h. 1/50 einer Sekunde Sprachinhalt. Eine Sekunde des Videos wird als Sequenz von 30 Bildern übertragen, die jeweils nur für 33,3 ms angezeigt werden sollen, d. h. 1/30 sekunden, bevor der nächste Videoframe angezeigt wird. Die Anzahl der pro Sekunde übertragenen oder gerenderten Frames wird als Framerate bezeichnet.
+Ein Echtzeit-Medienbot interagiert direkt mit den Audio- und Videomodalitäten einer Mediensitzung. Der Bot sendet und empfängt Medien als Folge von Frames, und jeder Frame ist eine Inhaltseinheit. Eine Sekunde Audiodaten werden als eine Abfolge von 50 Frames übertragen. Jeder Frame enthält 20 ms, d. h. 1/50 Sekunden des Sprachinhalts. Eine Sekunde des Videos wird als Sequenz von 30 Standbildern übertragen. Jedes Bild ist für nur 33,3 ms vorgesehen, also 1/30 Sekunden vor dem nächsten Videoframe. Die Anzahl der pro Sekunde übertragenen oder gerenderten Frames wird als Framerate bezeichnet.
 
-Der nächste Abschnitt enthält Details zum Audio- und Videoformat, das in Echtzeitmedienanrufen und Besprechungen verwendet wird.
+Der nächste Abschnitt enthält Details zum Audio- und Videoformat, das in Echtzeit-Medienanrufen und Besprechungen verwendet wird.
 
 ## <a name="audio-and-video-format"></a>Audio- und Videoformat
 
-Im Audioformat wird jede Sekunde des Audios als 16.000 Samples dargestellt, jedes Beispiel enthält 16-Bit-Daten. Ein 20 ms-Audioframe enthält 320 Samples, die 640 Byte Daten sind.
+Im Audioformat wird jede Audiosekunde als 16.000 Beispiele dargestellt, wobei jedes Beispiel 16 Bit Daten enthält. Ein 20 Ms großer Audioframe enthält 320 Beispiele, die 640 Byte Daten enthalten.
 
-Im Videoformat werden mehrere Formate unterstützt. Zwei wichtige Eigenschaften eines Videoformats sind die Framegröße und das Farbformat. Unterstützte Framegrößen sind 640 x 360, d. h. 360 Pixel, 1280 x 720 Pixel und 1920 x 1080 Pixel. Unterstützte Farbformate sind NV12 mit 12 Bit pro Pixel und RGB24 mit 24 Bit pro Pixel.
+Im Videoformat werden mehrere Formate unterstützt. Zwei wichtige Eigenschaften eines Videoformats sind die Framegröße und das Farbformat. Unterstützte Framegrößen umfassen 640 x 360 Pixel, 1280 x 720 Pixel und 1920 x 1080 pixel. Unterstützte Farbformate sind NV12 mit 12 Bit pro Pixel und RGB24 mit 24 Bit pro Pixel.
 
-Ein 720p-Videoframe enthält 921.600 Pixel, also 1280 mal 720 Pixel. Im RGB24-Farbformat wird jedes Pixel als 3 Byte dargestellt, d. h. 24 Bit, die jeweils ein Byte aus roten, grünen und blauen Farbkomponenten enthalten. Daher erfordert ein einzelner 720p RGB24-Videoframe 2.764.800 Byte Daten, also 921.600 Pixel mal 3 Byte pro Pixel. Bei einer Framerate von 30 fps bedeutet das Senden von 720p RGB24-Videoframes die Verarbeitung von ungefähr 80 Megabyte pro Sekunde des Inhalts, der vom H.264-Videocodec vor der Netzwerkübertragung erheblich komprimiert wird.
+Ein Videoframe mit 720 p enthält 921.600 Pixel, was 1280 Mal 720 Pixeln entspricht. Im RGB24-Farbformat wird jedes Pixel als 3 Byte dargestellt, das 24 Bit groß ist, einschließlich 1 Byte der Farbkomponenten Rot, Grün und Blau. Ein einzelner RGB24-Videoframe mit 720p erfordert 2.764.800 Bytes an Daten, was 921.600 Pixel mal 3 Bytes pro Pixel entspricht. Bei einer variablen Framerate bedeutet das Senden von RGB24-Videoframes mit 720p etwa 80 Megabyte pro Sekunde Inhalt. 80 Megabyte werden durch den H.264-Videocodec vor der Netzwerkübertragung erheblich komprimiert.
 
-Eine erweiterte Funktion der Plattform ermöglicht es einem Bot, Video als codierte H.264-Frames zu senden oder zu empfangen. Dies unterstützt Bots, die einen eigenen H.264-Encoder oder Decoder bereitstellen oder den Videodatenstrom nicht in unformatierte RGB24- oder NV12-Bitmaps decodieren müssen.
+Eine erweiterte Funktion der Plattform ermöglicht es einem Bot, Videos als codierte H.264-Frames zu senden oder zu empfangen. Bots, die einen eigenen H.264-Encoder oder Decoder bereitstellen, werden unterstützt, oder der in rgb24- oder NV12-Bitmaps decodierte Videodatenstrom ist nicht erforderlich.
 
-Der nächste Abschnitt enthält Details dazu, welche Besprechungsteilnehmer sprechen, die aktive und dominante Referenten sind.
+Der nächste Abschnitt enthält Details darüber, welche Besprechungsteilnehmer sprechen, welche aktive und dominante Referenten sind.
 
 ## <a name="active-and-dominant-speakers"></a>Aktive und dominante Lautsprecher
 
-Wenn ein Bot an einer Teams, die aus mehreren Teilnehmern besteht, verbunden ist, kann er bestimmen, welche Besprechungsteilnehmer gerade sprechen. Aktive Lautsprecher identifizieren, welche Teilnehmer in jedem empfangenen Audioframe gehört werden. Dominante Lautsprecher identifizieren, welche Teilnehmer derzeit am aktivsten oder dominantesten in der Gruppenbesprechung sind, auch wenn ihre Stimme nicht in jedem Audioframe gehört wird. Die Gruppe dominanter Lautsprecher kann sich ändern, wenn unterschiedliche Teilnehmer abwechselnd sprechen.
+Wenn er einer Teams Besprechung beigetreten ist, die aus mehreren Teilnehmern besteht, kann ein Bot ermitteln, welche Besprechungsteilnehmer gerade sprechen. Aktive Lautsprecher identifizieren, welche Teilnehmer in jedem empfangenen Audioframe gehört werden. Dominante Sprecher identifizieren, welche Teilnehmer derzeit aktiv oder dominant in der Gruppenunterhaltung sind, obwohl ihre Stimme nicht in jedem Audioframe gehört wird. Die Gruppe der dominanten Sprecher kann sich ändern, wenn unterschiedliche Teilnehmer abwechselnd sprechen.
 
-Der nächste Abschnitt enthält Details zu Videoabonnementanforderungen, die von einem Bot vorgenommen wurden.
+Der nächste Abschnitt enthält Details zu Videoabonnementanforderungen, die von einem Bot gestellt werden.
 
 ## <a name="video-subscription"></a>Videoabonnement
 
-Bei einem 1:1-Anruf empfängt der Bot automatisch das Video des Anrufers, wenn der Bot für den Empfang des Videos aktiviert ist. In einer Teams muss der Bot der Plattform angeben, welche Teilnehmer er sehen möchte. Ein Videoabonnement ist eine Anforderung des Bots, die Hauptvideo- oder Bildschirmfreigabeinhalte eines Teilnehmers zu erhalten. Während die Teilnehmer der Besprechung ihre Unterhaltung führen, ändert der Bot seine gewünschten Videoabonnements basierend auf Updates des dominanten Lautsprechersets oder Benachrichtigungen, die angeben, welcher Teilnehmer gerade bildschirmfreigaben.
+Bei einem 1:1-Anruf empfängt der Bot automatisch das Video des Anrufers, wenn der Bot für den Empfang des Videos aktiviert ist. In einer Teams Besprechung muss der Bot der Plattform angeben, welche Teilnehmer er sehen möchte. Ein Videoabonnement ist eine Anforderung des Bots, den Hauptinhalt des Videos oder der Bildschirmfreigabe eines Teilnehmers zu erhalten. Während die Teilnehmer an der Besprechung ihre Unterhaltungen führen, ändert der Bot die erforderlichen Videoabonnements. Der Bot ändert Videoabonnements basierend auf Updates des dominanten Lautsprechersatzes oder Benachrichtigungen, die angeben, welcher Teilnehmer derzeit bildschirmfreigabet.
 
-Der nächste Abschnitt enthält Details dazu, was Sie installieren müssen, und die Anforderungen für die Entwicklung eines vom Anwendungshosting gehosteten Medienbots.
+Der nächste Abschnitt enthält Details dazu, was Sie installieren müssen, und die Anforderungen zum Entwickeln eines von der Anwendung gehosteten Medienbots.
 
 ## <a name="developer-resources"></a>Entwicklerressourcen
 
-Zum Entwickeln eines von einer Anwendung gehosteten Medienbots müssen Sie [microsoft.Graph. Calls.Media .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) NuGet paket innerhalb Visual Studio Projekt.
+Um einen von der Anwendung gehosteten Medienbot zu entwickeln, müssen Sie die [Microsoft.Graph installieren. Calls.Media .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) NuGet package within your Visual Studio project.
 
-Anwendungsgehostte Medienbots erfordern .NET oder C# und Windows Server. Weitere Informationen finden Sie unter [Anforderungen und Überlegungen für anwendungsgehostte Medienbots](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development).
+In der Anwendung gehostete Medienbots erfordern .NET oder C# und Windows Server. Weitere Informationen finden Sie unter [Anforderungen und Überlegungen für von der Anwendung gehostete Medienbots.](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development)
 
 ## <a name="next-step"></a>Nächster Schritt
 
