@@ -4,12 +4,12 @@ author: KirtiPereira
 description: Erstellen von Registerkarten mit adaptiven Karten
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: aaa6ae00e4a70ea27c27638ed9475bc7edec25da
-ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
+ms.openlocfilehash: 4ec3cab39fa8383b89a5f9574cf8a7f864abd341
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53428716"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726852"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
@@ -17,9 +17,16 @@ ms.locfileid: "53428716"
 > * Dieses Feature befindet sich in der [Öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md) und wird auf Desktops und mobilen Geräten unterstützt. Der Support im Webbrowser wird in Kürze verfügbar sein.
 > * Registerkarten mit adaptiven Karten werden derzeit nur als persönliche Apps unterstützt.
 
-Beim Entwickeln einer Registerkarte mithilfe der herkömmlichen Methode können diese Probleme auftreten, z. B. HTML- und CSS-Überlegungen, langsame Ladezeiten, iFrame-Einschränkungen sowie Serverwartung und -kosten. Adaptive Kartenregisterkarten sind eine neue Möglichkeit zum Erstellen von Registerkarten in Teams. Anstatt Webinhalte in einen IFrame einzubetten, können Sie adaptive Karten auf einer Registerkarte rendern. Während das Front-End mit adaptiven Karten gerendert wird, wird das Back-End von einem Bot unterstützt. Der Bot ist dafür verantwortlich, Anforderungen zu akzeptieren und entsprechend mit der gerenderten adaptiven Karte zu antworten.
+Beim Entwickeln einer Registerkarte mithilfe der herkömmlichen Methode können folgende Probleme auftreten:
 
-Sie können Ihre Registerkarten mit vorgefertigten Bausteinen der Benutzeroberfläche erstellen, die systemintern auf Desktops, im Web und auf Mobilgeräten aussehen und sich nativ anfühlen. Dieser Artikel hilft Ihnen zu verstehen, welche Änderungen am App-Manifest vorgenommen werden müssen, wie das Aufrufen von Aktivitätsanforderungen und das Senden von Informationen auf der Registerkarte mit adaptiven Karten und die Auswirkungen auf den Aufgabenmodulworkflow erfolgt.
+* Überlegungen zu HTML und CSS
+* Langsame Ladezeiten
+* iFrame-Einschränkungen
+* Serverwartung und Kosten
+
+Registerkarten für adaptive Karten sind eine neue Möglichkeit zum Erstellen von Registerkarten in Teams. Anstatt Webinhalte in einen IFrame einzubetten, können Sie adaptive Karten auf einer Registerkarte rendern. Während das Front-End mit adaptiven Karten gerendert wird, wird das Back-End von einem Bot unterstützt. Der Bot ist dafür verantwortlich, Anforderungen zu akzeptieren und entsprechend mit der gerenderten adaptiven Karte zu antworten.
+
+Sie können Ihre Registerkarten mit vorgefertigten Bausteinen für die Benutzeroberfläche (UI) erstellen, die auf Desktops, im Web und auf mobilgeräten systemeigen sind. Dieser Artikel hilft Ihnen zu verstehen, welche Änderungen am App-Manifest vorgenommen werden müssen. In diesem Artikel wird auch beschrieben, wie die Aufrufaktivität Informationen auf der Registerkarte mit adaptiven Karten anfordert und sendet und welche Auswirkungen dies auf den Aufgabenmodulworkflow hat.
 
 Die folgende Abbildung zeigt Buildregisterkarten mit adaptiven Karten auf Desktops und mobilgeräten:
 
@@ -29,7 +36,7 @@ Die folgende Abbildung zeigt Buildregisterkarten mit adaptiven Karten auf Deskto
 
 Bevor Sie mit der Verwendung adaptiver Karten zum Erstellen von Registerkarten beginnen, müssen Sie Folgendes tun:
 
-* Machen Sie sich mit der [Bot-Entwicklung,](../../bots/what-are-bots.md) [adaptiven Karten](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)und [Aufgabenmodulen](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams vertraut.
+* Machen Sie sich mit [der Bot-Entwicklung,](../../bots/what-are-bots.md) [adaptiven Karten](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)und [Aufgabenmodulen](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams vertraut.
 * Lassen Sie einen Bot in Teams für Ihre Entwicklung ausführen.
 * Seien Sie in [der Öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md).
 
@@ -160,7 +167,7 @@ Der folgende Code enthält Beispiele für `tab/fetch` Anforderung und Antwort:
 
 ### <a name="handle-submits-from-adaptive-card"></a>Verarbeiten von Übermittlungen von einer adaptiven Karte
 
-Nachdem eine adaptive Karte auf der Registerkarte gerendert wurde, muss sie in der Lage sein, auf Benutzerinteraktionen zu reagieren. Diese Antwort wird von der `tab/submit` Aufrufanforderung verarbeitet.
+Nachdem eine adaptive Karte auf der Registerkarte gerendert wurde, kann sie auf Benutzerinteraktionen reagieren. Diese Antwort wird von der `tab/submit` Aufrufanforderung verarbeitet.
 
 Wenn ein Benutzer eine Schaltfläche auf der Registerkarte "Adaptive Karte" auswählt, wird die `tab/submit` Anforderung an Ihren Bot mit den entsprechenden Daten über die Funktion der `Action.Submit` adaptiven Karte ausgelöst. Die Daten der adaptiven Karte sind über die Dateneigenschaft der `tab/submit` Anforderung verfügbar. Sie erhalten eine der folgenden Antworten auf Ihre Anforderung:
 
@@ -220,7 +227,7 @@ Der folgende Code enthält Beispiele für `tab/submit` Anforderung und Antwort:
 
 Das Aufgabenmodul verwendet auch adaptive Karte zum Aufrufen `task/fetch` und `task/submit` Anfordern und Antworten. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Microsoft Teams Bots.](../../task-modules-and-cards/task-modules/task-modules-bots.md)
 
-Mit der Einführung der Registerkarte "Adaptive Karte" gibt es eine Änderung in der Art und Weise, wie der Bot auf eine `task/submit` Anforderung antwortet. Wenn Sie eine Registerkarte für adaptive Karten verwenden, antwortet der Bot auf die `task/submit` Aufrufanforderung mit der Standardregisterkarte **"Continue"-Antwort** und schließt das Aufgabenmodul. Die Registerkarte "Adaptive Karte" wird aktualisiert, indem die neue Liste der Karten gerendert wird, die im Antworttext der Registerkarte **"Fortsetzen"** bereitgestellt wird.
+Mit der Einführung der Registerkarte "Adaptive Karte" gibt es eine Änderung in der Art und Weise, wie der Bot auf eine `task/submit` Anforderung antwortet. Wenn Sie eine Registerkarte für adaptive Karten verwenden, antwortet der Bot auf die `task/submit` Aufrufanforderung mit der Standardregisterkarte **"Continue"-Antwort** und schließt das Aufgabenmodul. Die Registerkarte "Adaptive Karte" wird aktualisiert, indem die neue Liste der Im Antworttext der Registerkarte **"Fortsetzen"** bereitgestellten Karten gerendert wird.
 
 ### <a name="invoke-taskfetch"></a>Aufrufen `task/fetch`
 
@@ -325,7 +332,7 @@ Der folgende Code enthält Beispiele für `task/submit` Anforderung und Antwort:
 
 ## <a name="authentication"></a>Authentifizierung
 
-In den vorherigen Abschnitten dieses Artikels haben Sie gesehen, dass die meisten Entwicklungsparadigmen aus den Aufgabenmodulanforderungen und -antworten in Registerkartenanforderungen und -antworten erweitert werden können. Wenn es um die Behandlung der Authentifizierung geht, folgt der Workflow für die Registerkarte "Adaptive Karte" dem Authentifizierungsmuster für Messaging-Erweiterungen. Weitere Informationen finden Sie unter Hinzufügen der [Authentifizierung.](../../messaging-extensions/how-to/add-authentication.md)
+In den vorherigen Abschnitten haben Sie gesehen, dass die meisten Entwicklungsparadigmen aus den Aufgabenmodulanforderungen und -antworten in Registerkartenanforderungen und -antworten erweitert werden können. Wenn es um die Behandlung der Authentifizierung geht, folgt der Workflow für die Registerkarte "Adaptive Karte" dem Authentifizierungsmuster für Messaging-Erweiterungen. Weitere Informationen finden Sie unter Hinzufügen der [Authentifizierung.](../../messaging-extensions/how-to/add-authentication.md)
 
 `tab/fetch` Anforderungen können entweder eine **Fortsetzungs-** oder eine **Authentifizierungsantwort** haben. Wenn eine `tab/fetch` Anforderung ausgelöst wird und eine Registerkartenauthentifizierungsantwort empfängt, wird dem Benutzer die Anmeldeseite angezeigt. 
 
@@ -414,6 +421,12 @@ Der folgende Code zeigt ein neu ausgestelltes Anforderungsbeispiel:
     "localTimeZone": "America/Los_Angeles"
 }
 ```
+
+## <a name="code-sample"></a>Codebeispiel
+
+|**Beispielname** | **Beschreibung** |**.NET** | **Node.js** |
+|----------------|-----------------|--------------|--------------|
+| Adaptive Karten auf Teams Registerkarte anzeigen | Microsoft Teams Beispielcode der Registerkarte, der veranschaulicht, wie adaptive Karten in Teams angezeigt werden. |[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -6,12 +6,12 @@ keywords: Konfigurierbarer Gruppenkanal für Teams-Registerkarten
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8566bb0457db76e4639593dcd67a0442749c0a31
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 9babab566085c13089400e4e035f2c481295d0c4
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179937"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726831"
 ---
 # <a name="prerequisites"></a>Voraussetzungen
 
@@ -39,10 +39,18 @@ Teams Registerkarten müssen die folgenden Voraussetzungen erfüllen:
 
 * Die Registerkarte "MS Teams" unterstützt nicht die Möglichkeit, Intranetwebsites zu laden, die selbstsignte Zertifikate verwenden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="tools-you-can-use-to-build-tabs"></a>Tools, die Sie zum Erstellen von Registerkarten verwenden können
+* [Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
+* [Microsoft Teams-Toolkit-Erweiterung für Visual Studio](../../toolkit/visual-studio-overview.md)
+
+## <a name="see-also"></a>Weitere Artikel
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
-* [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
+* [Erstellen Ihrer ersten App mit React](../../get-started/first-app-react.md)
+* [Erstellen Ihrer ersten App mit Blazor](../../get-started/first-app-blazor.md)
+* [Erstellen Ihrer ersten App mit SPFx](../../get-started/first-app-spfx.md)
+* [Erstellen Sie Ihren ersten Chatbot](../../get-started/first-app-bot.md)
+* [Erstellen Ihrer ersten Nachrichtenerweiterung](../../get-started/first-message-extension.md)
 * [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
 
 ## <a name="next-step"></a>Nächster Schritt

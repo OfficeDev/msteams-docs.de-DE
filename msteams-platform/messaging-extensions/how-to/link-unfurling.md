@@ -5,12 +5,12 @@ description: So führen Sie die Verbreitung von Links mit der Messaging-Erweiter
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7713fe794c9d15453438cfe3e1bde0238bde9d8c
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 3f3fca5483fb3828f4e3957d0d22dc1e361f7ffb
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068950"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726929"
 ---
 # <a name="link-unfurling"></a>Verbreiten von Links
 
@@ -79,6 +79,8 @@ Die folgenden Kartentypen werden unterstützt:
 * [Office 365 Connectorkarte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Karte](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
+Sie können eine Vorschau einer adaptiven Karte oder Office 365 Connectorkarte in der Ergebnisliste mithilfe der Vorschaueigenschaft anzeigen. Die Vorschaueigenschaft ist nicht erforderlich, wenn die Ergebnisse bereits Hero- oder Miniaturansichtskarten sind. Wenn Sie die Vorschauanlage verwenden, muss es sich entweder um eine Hero- oder eine Miniaturansichtskarte handeln. Wenn keine Vorschaueigenschaft angegeben ist, schlägt die Vorschau der Karte fehl, und es wird nichts angezeigt.
+
 ### <a name="example"></a>Beispiel
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
@@ -124,7 +126,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 Es folgt ein Beispiel für das `invoke` An Ihren Bot gesendete:
 
@@ -177,7 +179,7 @@ Es folgt ein Beispiel für die Antwort:
 
 * * *
 
-## <a name="see-also"></a>Siehe auch 
+## <a name="see-also"></a>Weitere Artikel 
 
 * [Karten](~/task-modules-and-cards/what-are-cards.md)
 * [Aufgeklappte Registerkartenverknüpfung und Phasenansicht](~/tabs/tabs-link-unfurling.md)

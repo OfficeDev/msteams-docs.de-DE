@@ -3,33 +3,33 @@ title: Erweiterbarkeit der Besprechungs-App
 author: surbhigupta
 description: Verstehen der Erweiterbarkeit der Besprechungs-App
 ms.topic: conceptual
-ms.openlocfilehash: 1b9cc381879a12d5c9d26711dde93e308d3e4231
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 01f1d7ce6675e65b9310eab7b04fd83a129f28cb
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335391"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726880"
 ---
 # <a name="meeting-app-extensibility"></a>Erweiterbarkeit der Besprechungs-App
 
 Die Erweiterbarkeit der Besprechungs-App von Teams basiert auf den folgenden Konzepten:
 
-* Der Besprechungslebenszyklus umfasst verschiedene Phasen, z. B. vor der Besprechung, in der Besprechung und nach der Besprechung.  
+* Ein Besprechungslebenszyklus umfasst verschiedene Phasen, z. B. vor der Besprechung, in der Besprechung und nach der Besprechung.  
 * Es gibt drei unterschiedliche Teilnehmerrollen in einer Besprechung: Organisator, Referent und Teilnehmer. Weitere Informationen finden Sie [unter Rollen in einer Teams Besprechung.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)  
 * Es gibt verschiedene [Benutzertypen](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) in einer Besprechung: Mandanten-, [Gast-,](/microsoftteams/guest-access) [Verbund-](/microsoftteams/manage-external-access)und anonyme Benutzer.
 
-In diesem Artikel werden Informationen zum Besprechungslebenszyklus und zum Integrieren von Registerkarten, Bots und Messaging-Erweiterungen in die Besprechung behandelt. Es enthält Informationen zum Identifizieren verschiedener Teilnehmerrollen und verschiedener Benutzertypen zum Ausführen von Aufgaben.
+In diesem Artikel werden Informationen zum Besprechungslebenszyklus und zum Integrieren von Registerkarten, Bots und Messaging-Erweiterungen in eine Besprechung behandelt. Es enthält Informationen zum Identifizieren verschiedener Teilnehmerrollen und Benutzertypen zum Ausführen von Aufgaben.
 
 ## <a name="meeting-lifecycle"></a>Besprechungslebenszyklus
 
-Der Besprechungslebenszyklus besteht aus der App-Erfahrung vor der Besprechung, in der Besprechung und nach der Besprechung. Sie können Registerkarten, Bots und Messaging-Erweiterungen in jeder Phase des Besprechungslebenszyklus integrieren.
+Ein Besprechungslebenszyklus besteht aus der App-Erfahrung vor der Besprechung, in der Besprechung und nach der Besprechung. Sie können Registerkarten, Bots und Messaging-Erweiterungen in jeder Phase des Besprechungslebenszyklus integrieren.
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>Integrieren von Registerkarten in den Besprechungslebenszyklus
 
-Registerkarten ermöglichen Teammitgliedern den Zugriff auf Dienste und Inhalte in einem bestimmten Raum innerhalb einer Besprechung. Das Team arbeitet direkt mit Registerkarten und hat Unterhaltungen über die Tools und Daten, die auf Registerkarten verfügbar sind. In Teams Besprechung können Benutzer eine Registerkarte hinzufügen, indem sie <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, und wählen Sie die App aus, die sie installieren möchten.
+Registerkarten ermöglichen Teammitgliedern den Zugriff auf Dienste und Inhalte in einem bestimmten Raum innerhalb einer Besprechung. Das Team arbeitet direkt mit Registerkarten und hat Unterhaltungen über die Tools und Daten, die auf Registerkarten verfügbar sind. In einer Teams Besprechung können Benutzer eine Registerkarte hinzufügen, indem sie <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, und wählen Sie die App aus, die sie installieren möchten.
 
 > [!IMPORTANT]
-> Wenn Sie eine Registerkarte in Ihre Besprechung integriert haben, muss Ihre App dem Teams [SSO-Authentifizierungsfluss (Single Sign-On) für Registerkarten](../tabs/how-to/authentication/auth-aad-sso.md)folgen.
+> Wenn Sie eine Registerkarte in Ihre Besprechung integriert haben, muss Ihre App den Teams [SSO-Authentifizierungsfluss (Single Sign-On) für Registerkarten](../tabs/how-to/authentication/auth-aad-sso.md)befolgen.
 
 > [!NOTE]
 > Apps werden nur in privaten geplanten Besprechungen unterstützt.
@@ -48,8 +48,8 @@ Mit der App-Erfahrung vor der Besprechung können Sie Besprechungs-Apps suchen u
 1. Wählen Sie im Registerkartenkatalog die App aus, die Sie hinzufügen möchten, und führen Sie die erforderlichen Schritte aus. Die App wird als Registerkarte installiert.
 
     > [!NOTE]
-    > * Sie können eine Registerkarte auch mithilfe der Registerkarte **"Besprechungschat"** in einer vorhandenen Besprechung hinzufügen.
-    > * Das Registerkartenlayout muss sich in einem organisierten Zustand befinden, wenn mehr als zehn Umfragen oder Umfragen vorhanden sind.
+    > * Sie können einer vorhandenen Besprechung auch über die Registerkarte **"Besprechungschat"** eine Registerkarte hinzufügen.
+    > * Das Registerkartenlayout muss sich in einem organisierten Zustand befinden, wenn mehr als 10 Umfragen oder Umfragen vorhanden sind.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
@@ -57,7 +57,7 @@ Mit der App-Erfahrung vor der Besprechung können Sie Besprechungs-Apps suchen u
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
-Nachdem die Registerkarten zu einer vorhandenen Besprechung auf dem Desktop oder im Web hinzugefügt wurden, können Sie die gleichen Apps in der Umgebung vor der Besprechung im Abschnitt **"Weitere** Besprechungsdetails" anzeigen.
+Nachdem die Registerkarten zu einer vorhandenen Besprechung auf dem Desktop oder im Web hinzugefügt wurden, können Sie die gleichen Apps in der Umgebung vor der Besprechung unter **"Weitere** Abschnitt der Besprechungsdetails" anzeigen.
 
 <img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
 
@@ -65,7 +65,7 @@ Nachdem die Registerkarten zu einer vorhandenen Besprechung auf dem Desktop oder
 
 #### <a name="in-meeting-app-experience"></a>App-Erfahrung in Besprechungen
 
-Mit der App-Erfahrung in besprechungsinternen Besprechungen können Sie Teilnehmer während der Besprechung mithilfe von Apps und dem Dialogfeld in der Besprechung einbeziehen. Besprechungs-Apps werden in der oberen Leiste des Besprechungsfensters als Registerkarte in einer Besprechung gehostet. Verwenden Sie das Dialogfeld in der Besprechung, um Aktionen erfordernde Inhalte für Besprechungsteilnehmer anzuzeigen. Weitere Informationen finden Sie unter [Erstellen von Apps für Teams Besprechungen.](create-apps-for-teams-meetings.md)
+Mit der App-Erfahrung in besprechungsinternen Besprechungen können Sie Teilnehmer während der Besprechung mithilfe von Apps und dem Dialogfeld in der Besprechung einbeziehen. Besprechungs-Apps werden auf der Symbolleiste des Besprechungsfensters als Registerkarte in der Besprechung gehostet. Verwenden Sie das Dialogfeld in der Besprechung, um Aktionen erfordernde Inhalte für Besprechungsteilnehmer anzuzeigen. Weitere Informationen finden Sie unter [Erstellen von Apps für Teams Besprechungen.](create-apps-for-teams-meetings.md)
 
 Für mobile Geräte sind Besprechungs-Apps über **Apps** > auslassungspunkte &#x25CF;&#x25CF;&#x25CF; in der Besprechung verfügbar. Wählen Sie **"Apps"** aus, um alle in der Besprechung verfügbaren Apps anzuzeigen.
 
@@ -73,7 +73,7 @@ Für mobile Geräte sind Besprechungs-Apps über **Apps** > auslassungspunkte &#
 
 1. Wechseln Sie zu Teams.
 1. Wählen Sie in Ihrem Kalender eine Besprechung aus, in der Sie eine Registerkarte verwenden möchten.
-1. Wählen Sie nach der Teilnahme an der Besprechung in der oberen oberen Leiste des Chatfensters die erforderliche App aus.
+1. Wählen Sie nach der Teilnahme an der Besprechung auf der Symbolleiste des Chatfensters die erforderliche App aus.
     Eine App ist in einer Teams Besprechung im Seitenbereich oder im Dialogfeld in der Besprechung sichtbar.
 1. Geben Sie im Dialogfeld in der Besprechung Ihre Antwort als Feedback ein.
 
@@ -97,7 +97,7 @@ Das Dialogfeld in der Besprechung wird angezeigt, in dem Sie Ihre Antwort als Fe
 > [!NOTE]
 > * Apps können das Teams Client SDK nutzen, um auf das Client-SDK zuzugreifen `meetingId` und die Oberfläche entsprechend zu `userMri` `frameContext` rendern.
 > * Wenn das Dialogfeld in der Besprechung erfolgreich gerendert wird, erhalten Sie eine Benachrichtigung, dass die Ergebnisse erfolgreich heruntergeladen wurden.
-> * Ihr App-Manifest gibt die Orte an, an denen sie angezeigt werden sollen. Das Kontextfeld wird zu diesem Zweck verwendet. Es ist auch Teil einer Freigabe-Tray-Erfahrung, die den angegebenen Entwurfsrichtlinien unterliegt.
+> * Ihr App-Manifest gibt die Stellen an, an denen die Apps angezeigt werden sollen. Das Kontextfeld wird zu diesem Zweck verwendet. Es ist auch Teil einer Freigabe-Tray-Erfahrung, die den angegebenen Entwurfsrichtlinien unterliegt.
 
 Die folgende Abbildung veranschaulicht den besprechungsinternen Bereich:
 
@@ -111,7 +111,7 @@ In der folgenden Tabelle wird das Verhalten der App beschrieben, wenn sie genehm
 
 #### <a name="post-meeting-app-experience"></a>App-Erfahrung nach der Besprechung
 
-Mit der App-Erfahrung nach der Besprechung können Sie die Ergebnisse der Besprechung anzeigen, z. B. Umfrageergebnisse oder Feedback. Auswählen <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> Um eine Registerkarte hinzuzufügen, erhalten Sie Besprechungsnotizen und Ergebnisse dazu, welche Organisatoren und Teilnehmer Maßnahmen ergreifen müssen.
+Mit der App-Erfahrung nach der Besprechung können Sie die Ergebnisse der Besprechung anzeigen, z. B. Umfrageergebnisse oder Feedback. Auswählen <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> um eine Registerkarte hinzuzufügen, Besprechungsnotizen abzurufen und die Ergebnisse anzuzeigen, in denen Organisatoren und Teilnehmer maßnahmen ergreifen müssen.
 
 In der folgenden Abbildung wird die Registerkarte **"Contoso"** mit den Ergebnissen der Umfrage und des Feedbacks von Besprechungsteilnehmern angezeigt:
 
@@ -162,11 +162,11 @@ Nachdem Sie Ihre App basierend auf den Teilnehmerrollen in einer Besprechung ent
 
 Benutzertypen, z. B. Organisator, Referent oder Teilnehmer in einer Besprechung, können eine der [Teilnehmerrollen in einer Besprechung](#participant-roles-in-a-meeting)ausführen.
 
-In der folgenden Liste werden die verschiedenen Benutzertypen zusammen mit ihrer Barrierefreiheit und Leistung beschrieben:
+In der folgenden Liste werden die verschiedenen Benutzertypen zusammen mit ihrer Barrierefreiheit und Leistung aufgeführt:
 
-* **Mandanteninterne** Benutzer: Mandanteninterne Benutzer gehören zur Organisation und verfügen über Anmeldeinformationen in Azure Active Directory (AAD) für den Mandanten. Sie sind in der Regel Vollzeit-, Vor-Ort- oder Remotemitarbeiter. Ein mandanteninterner Benutzer kann ein Organisator, Referent oder Teilnehmer sein.
-* **Gast:** Ein Gast ist ein Teilnehmer aus einer anderen Organisation, der eingeladen ist, auf Teams oder andere Ressourcen im Mandanten der Organisation zuzugreifen. Gäste werden dem AAD der Organisation hinzugefügt und verfügen über die gleichen Teams Funktionen wie ein systemeigenes Teammitglied mit Zugriff auf Teamchats, Besprechungen und Dateien. Ein Gastbenutzer kann ein Organisator, Referent oder Teilnehmer sein. Weitere Informationen finden Sie unter [Gastzugriff in Teams.](/microsoftteams/guest-access)
-* **Partnerbenutzer oder extern:** Ein Verbundbenutzer ist ein externer Teams Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Verbundbenutzer verfügen über gültige Anmeldeinformationen bei Verbundpartnern und sind von Teams autorisiert. Sie haben keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen aus Ihrer Organisation. Der Gastzugriff ist eine bessere Option für externe Benutzer, um Zugriff auf Teams und Kanäle zu haben. Weitere Informationen finden Sie unter [Verwalten des externen Zugriffs in Teams.](/microsoftteams/manage-external-access)
+* **Mandanteninterne** Benutzer gehören zur Organisation und verfügen über Anmeldeinformationen in Azure Active Directory (AAD) für den Mandanten. Sie sind in der Regel Vollzeit-, Vor-Ort- oder Remotemitarbeiter. Ein mandanteninterner Benutzer kann ein Organisator, Referent oder Teilnehmer sein.
+* **Gast:** Ein Gast ist ein Teilnehmer aus einer anderen Organisation, der eingeladen ist, auf Teams oder andere Ressourcen im Mandanten der Organisation zuzugreifen. Gäste werden dem AAD der Organisation hinzugefügt und verfügen über dieselben Teams Funktionen wie ein systemeigenes Teammitglied mit Zugriff auf Teamchats, Besprechungen und Dateien. Ein Gastbenutzer kann ein Organisator, Referent oder Teilnehmer sein. Weitere Informationen finden Sie unter [Gastzugriff in Teams](/microsoftteams/guest-access).
+* **Verbunden oder extern:** Ein Verbundbenutzer ist ein externer Teams Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Verbundbenutzer verfügen über gültige Anmeldeinformationen bei Verbundpartnern und sind von Teams autorisiert. Sie haben keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen aus Ihrer Organisation. Der Gastzugriff ist eine bessere Option für externe Benutzer, um Zugriff auf Teams und Kanäle zu haben. Weitere Informationen finden Sie unter [Verwalten des externen Zugriffs in Teams.](/microsoftteams/manage-external-access)
 
     > [!NOTE]
     > Ihre Teams Benutzer können Apps hinzufügen, wenn sie Besprechungen oder Chats mit anderen Organisationen hosten. Die Benutzer können Apps verwenden, die von externen Benutzern freigegeben wurden, wenn Ihre Benutzer an Besprechungen oder Chats teilnehmen, die von anderen Organisationen gehostet werden. Die Datenrichtlinien der Organisation des hostenden Benutzers sowie die Datenfreigabepraktiken der Drittanbieter-Apps, die von der Organisation dieses Benutzers freigegeben werden, werden wirksam.
@@ -186,7 +186,7 @@ Die folgende Tabelle enthält die Benutzertypen und die Features, auf die jeder 
 | Gast, der Teil des Mandanten-AAD ist | Interaktion ist zulässig. Das Erstellen, Aktualisieren und Löschen ist nicht zulässig. | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat von einer adaptiven Karte sind zulässig. | Available |
 | Verbundbenutzer. Weitere Informationen finden Sie unter [nicht standardmäßige Benutzer.](/microsoftteams/non-standard-users) | Interaktion ist zulässig. Das Erstellen, Aktualisieren und Löschen ist nicht zulässig. | Interaktion ist zulässig. Das Abrufen, Aktualisieren und Löschen ist nicht zulässig. | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat von einer adaptiven Karte sind zulässig. | Nicht verfügbar |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Artikel
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)

@@ -3,12 +3,12 @@ title: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 author: surbhigupta
 description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 ms.topic: conceptual
-ms.openlocfilehash: 16112b75e109702f1f0be6d335b8d407d35211b5
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 69ff70c7dedb1c05728cb4ac8ed797dd6c6df959
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335368"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726866"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -16,7 +16,7 @@ Jedes Team hat eine andere Art, Aufgaben zu kommunizieren und zusammenzuarbeiten
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Aktivieren Ihrer App für Teams Besprechungen
 
-Um Ihre App für Teams Besprechungen zu aktivieren, müssen Sie Ihr App-Manifest aktualisieren und anhand der Kontexteigenschaften bestimmen, wo Ihre App angezeigt werden soll.
+Um Ihre App für Teams Besprechungen zu aktivieren, müssen Sie Ihr App-Manifest aktualisieren und anhand der Kontexteigenschaften bestimmen, wo Ihre App angezeigt werden muss.
 
 ### <a name="update-your-app-manifest"></a>Aktualisieren des App-Manifests
 
@@ -73,7 +73,7 @@ Nachdem Sie Ihre App für Teams Besprechungen aktiviert haben, müssen Sie Ihre 
 > [!NOTE]
 > Damit Ihre App im Registerkartenkatalog sichtbar ist, müssen konfigurierbare Registerkarten und der Gruppenchatbereich unterstützt werden.
 
-Teams Besprechungen bietet eine einzigartige Erfahrung für die Zusammenarbeit in Ihrer Organisation. Es bietet die Möglichkeit, Ihre App für verschiedene Besprechungsszenarien zu konfigurieren. Sie können Ihre Apps so konfigurieren, dass die Besprechungserfahrung basierend auf der Teilnehmerrolle oder dem Benutzertyp verbessert wird. Jetzt können Sie ermitteln, welche Aktionen in den folgenden Besprechungsszenarien ausgeführt werden können:
+Teams Besprechungen bietet eine einzigartige Umgebung für die Zusammenarbeit in Ihrer Organisation. Es bietet die Möglichkeit, Ihre App für verschiedene Besprechungsszenarien zu konfigurieren. Sie können Ihre Apps so konfigurieren, dass die Besprechungserfahrung basierend auf der Teilnehmerrolle oder dem Benutzertyp verbessert wird. Jetzt können Sie ermitteln, welche Aktionen in den folgenden Besprechungsszenarien ausgeführt werden können:
 
 * [Vor einer Besprechung](#before-a-meeting)
 * [Während einer Besprechung](#during-a-meeting)
@@ -113,7 +113,7 @@ Geben Sie in einem Besprechungschat den **@** Schlüssel ein, und wählen **Sie 
 
 Während einer Besprechung können Sie das meetingSidePanel oder das Dialogfeld in der Besprechung verwenden, um einzigartige Umgebungen für Ihre Apps zu erstellen.
 
-#### <a name="meetingsidepanel"></a>meetingSidePanel
+#### <a name="meeting-sidepanel"></a>Sidepanel für Besprechungen
 
 Mit dem meetingSidePanel können Sie Benutzeroberflächen in einer Besprechung anpassen, die Organisatoren und Referenten unterschiedliche Ansichten und Aktionen ermöglichen. In Ihrem App-Manifest müssen Sie meetingSidePanel dem Kontextarray hinzufügen. In der Besprechung und in allen Szenarien wird die App auf einer Besprechungsregisterkarte mit einer Breite von 320 Pixeln gerendert. Weitere Informationen finden Sie unter [FrameContext-Schnittstelle.](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
 
@@ -173,7 +173,7 @@ Die Konfigurationen nach und [vor Besprechungen](#before-a-meeting) sind identis
 
 |Beispielname | Beschreibung | Beispiel |
 |----------------|-----------------|--------------|----------------|-----------|
-| Besprechungs-App | Veranschaulicht, wie die Besprechungstoken-Generator-App verwendet wird, um ein Token anzufordern, das sequenziell generiert wird, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Dies kann in Situationen wie Beibesprechungen und Q&A-Sitzungen hilfreich sein. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+| Besprechungs-App | Veranschaulicht, wie die Besprechungstoken-Generator-App verwendet wird, um ein Token anzufordern, das sequenziell generiert wird, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Dies kann in Situationen wie Beibesprechungen und Q-&A-Sitzungen hilfreich sein. | [Anzeigen](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
 ## <a name="see-also"></a>Siehe auch
 
