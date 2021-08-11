@@ -4,17 +4,16 @@ author: KirtiPereira
 description: Erstellen von Registerkarten mit adaptiven Karten
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 4ec3cab39fa8383b89a5f9574cf8a7f864abd341
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 8f1b8bbc27a2b10d8e4fbca8e87c75eeb29c8c36efacd6eb3cf921295e27b88b
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726852"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823228"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
 > [!IMPORTANT]
-> * Dieses Feature befindet sich in der [Öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md) und wird auf Desktops und mobilen Geräten unterstützt. Der Support im Webbrowser wird in Kürze verfügbar sein.
 > * Registerkarten mit adaptiven Karten werden derzeit nur als persönliche Apps unterstützt.
 
 Beim Entwickeln einer Registerkarte mithilfe der herkömmlichen Methode können folgende Probleme auftreten:
@@ -38,7 +37,6 @@ Bevor Sie mit der Verwendung adaptiver Karten zum Erstellen von Registerkarten b
 
 * Machen Sie sich mit [der Bot-Entwicklung,](../../bots/what-are-bots.md) [adaptiven Karten](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)und [Aufgabenmodulen](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams vertraut.
 * Lassen Sie einen Bot in Teams für Ihre Entwicklung ausführen.
-* Seien Sie in [der Öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md).
 
 ## <a name="changes-to-app-manifest"></a>Änderungen am App-Manifest
 
@@ -426,7 +424,7 @@ Der folgende Code zeigt ein neu ausgestelltes Anforderungsbeispiel:
 
 |**Beispielname** | **Beschreibung** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| Adaptive Karten auf Teams Registerkarte anzeigen | Microsoft Teams Beispielcode der Registerkarte, der veranschaulicht, wie adaptive Karten in Teams angezeigt werden. |[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| Anzeigen adaptiver Karten auf Teams Registerkarte | Microsoft Teams Beispielcode für Registerkarten, der veranschaulicht, wie adaptive Karten in Teams angezeigt werden. |[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 

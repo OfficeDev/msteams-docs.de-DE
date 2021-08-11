@@ -5,16 +5,16 @@ description: Ermitteln Sie, wie die Anwendungsfälle Ihrer App innerhalb der Tea
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b374f0ca81402effb548c1cfcb90ed3d316360f1
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 82b7c4cf29eb6b5d31c55dbc420a3c2c6c3038dfa710ba6257fc5486a97713bf
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068554"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709552"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Zuordnen von Anwendungsfällen zu Teams App-Funktionen
 
-Nachdem Sie ermittelt *haben, wer* der Benutzer ist und *welches* Problem Sie lösen werden, müssen Sie *entscheiden, wie* das Problem gelöst werden soll. *Wer,* *was* und *wie* der Prozess des Verständnisses und der Zuordnung Ihrer Anwendungsfälle zu Teams App-Funktionen abgeschlossen wird. Sie müssen den Bereich der App basierend auf den Antworten definieren, die Sie vom Benutzer auf Ihre Abfragen erhalten haben, und dann entscheiden, welche Funktion für die App-Erstellung am besten geeignet ist.
+Nachdem Sie ermittelt *haben, wer* der Benutzer ist und *welches* Problem Sie lösen werden, müssen Sie *entscheiden, wie* das Problem gelöst werden soll. *Wer,* *was* und *wie* den Prozess des Verständnisses und der Zuordnung Ihrer Anwendungsfälle zu Teams App-Funktionen abschließt. Sie müssen den Bereich der App basierend auf den Antworten definieren, die Sie vom Benutzer auf Ihre Abfragen erhalten haben, und dann entscheiden, welche Funktion für die App-Erstellung am besten geeignet ist.
 
 > [!NOTE]
 > Sie müssen über ein gutes Verständnis der [Einstiegspunkte und UI-Elemente verfügen,](../../concepts/extensibility-points.md) die für Ihre App verfügbar sind. Sie müssen auch sicherstellen, dass Sie [Ihre Anwendungsfälle](../../concepts/design/understand-use-cases.md) sorgfältig berücksichtigt haben.
@@ -25,8 +25,8 @@ Berücksichtigen Sie bei der Auswahl des App-Bereichs Folgendes:
 
 * Eine App kann bereichsübergreifend vorhanden sein.
 * App-Funktionen, z. B. Messaging-Erweiterungen, folgen Benutzern in verschiedenen Bereichen.
-* Benutzer zögern häufig, Apps zu Teams oder Kanälen hinzuzufügen.
-* Gastbenutzer können auf Inhalte zugreifen, die in Teams oder Kanälen verfügbar gemacht werden.
+* Benutzer zögern häufig, apps zu Teams oder Kanälen hinzuzufügen.
+* Gäste können auf Inhalte zugreifen, die in Teams oder Kanälen verfügbar gemacht werden.
 
 Sie können zwischen dem persönlichen Bereich und dem Team- oder Kanalbereich für Ihre App wählen, je nachdem, wie sie aussehen:
 
@@ -72,7 +72,7 @@ Manchmal benötigen Sie nur eine schnelle Möglichkeit, einen Prozess oder Workf
 
 ## <a name="send-notifications-and-alerts"></a>Senden von Benachrichtigungen und Warnungen
 
-Senden Sie asynchrone Benachrichtigungen und Warnungen an Ihre Benutzer in Teams. Verwenden Sie interaktive Karten, um schnell auf häufig verwendete Aktionen und Links zu zusätzlichen Informationen zuzugreifen.
+Senden asynchroner Benachrichtigungen und Warnungen an Ihre Benutzer in Teams. Verwenden Sie interaktive Karten, um schnell auf häufig verwendete Aktionen und Links zu zusätzlichen Informationen zuzugreifen.
 
 * **Unterhaltungsbots:** Senden proaktiver Nachrichten an Gruppen, Kanäle oder einzelne Benutzer.
 
@@ -84,11 +84,11 @@ Die Menschen haben Fragen, und Sie haben wahrscheinlich viele der Antworten, die
 
 * **Unterhaltungsbots:** Verarbeitung natürlicher Sprache, KI, maschinelles Lernen und alle Schlüsselwörter. Verwenden Sie einen Bot, der von der intelligenten Cloud unterstützt wird, um Ihre Benutzer mit den antworten zu verbinden, die sie benötigen.
 
-* **Registerkarten:** Betten Sie Ihr vorhandenes Webportal in Teams ein, oder erstellen Sie eine Teams-spezifische Version für zusätzliche Funktionen.
+* **Registerkarten:** Betten Sie Ihr vorhandenes Webportal in Teams ein, oder erstellen Sie eine Teams-spezifische Version für hinzugefügte Funktionen.
 
 ## <a name="get-social"></a>Soziale Netzwerke abrufen
 
-Eine Plattform für die Zusammenarbeit ist inhärent eine soziale Plattform. Lassen Sie Ihre kreative Seite kostenlos sein und Ihrem Arbeitsplatz etwas Spaß machen. Alle Benutzer müssen in der Lage sein, Witze zu senden, Kudos zu geben, memes zu erhalten, emojis auszusenden oder alles andere, was Ihnen auffällt.
+Eine Plattform für die Zusammenarbeit ist inhärent eine soziale Plattform. Lassen Sie Ihre kreative Seite kostenlos sein und Ihrem Arbeitsplatz etwas Spaß machen. Alle Benutzer müssen in der Lage sein, Ausfälle zu senden, Kudos zu geben, memes zu erhalten, emojis auszusenden oder alles andere, was Ihnen auffällt.
 
 ## <a name="think-in-terms-of-a-single-page-app"></a>Denken Sie an eine Einzelseiten-App
 
@@ -102,6 +102,6 @@ Sie sind sich nicht sicher, wo Sie beginnen sollen? Fühlen Sie sich etwas über
 
 Abgesehen davon kombinieren die besten Apps in der Regel mehrere Features, wodurch eine App erstellt wird, die Benutzer im richtigen Kontext mit der richtigen Funktionalität zur richtigen Zeit einschaltet. Sie dürfen keine Funktionalität an einem Ort erzwingen, zu dem sie nicht gehört. Nur weil Sie über einen guten 1:1-Unterhaltungsbot verfügen, bedeutet dies nicht, dass Sie ihn zu einem Team hinzufügen. Unterschiedliche Erweiterbarkeitspunkte eignen sich für unterschiedliche Dinge und spielen ihre Stärken beim Erstellen einer erfolgreichen App aus.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Apps für Microsoft Teams erstellen](../../overview.md)
+[Erstellen Ihrer ersten Microsoft Teams-App](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)

@@ -4,12 +4,12 @@ description: Grundlegendes zu den wichtigsten Konzepten beim Erstellen eines Bot
 ms.topic: conceptual
 localization_priority: Normal
 keywords: 'Audiostream-Videostream: Audio-/Videoanrufe bei Besprechungen in Echtzeit, medienanwendungsgehostete Medien, die vom Mediendienst gehostet werden'
-ms.openlocfilehash: 0cfb8f345702f03ae356789d8dad1573902dcfb4
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.openlocfilehash: 23a4573c39968f3b5c53badc32fd80ecc4dc889087dd8d98253be9d46555919c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53585949"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709545"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Echtzeit-Medienanrufe und Besprechungen mit Microsoft Teams
 
@@ -25,7 +25,7 @@ Ein Echtzeitmedienbot muss deklarieren, welche Modalitäten er unterstützen mus
 
 Es werden zwei Arten von Videomodalitäten unterstützt: Hauptvideo und videobasierte Bildschirmfreigabe. Das Hauptvideo wird verwendet, um das Video von der Webcam eines Benutzers zu übertragen. Mit der videobasierten Bildschirmfreigabe kann ein Benutzer den Bildschirm freigeben. Die Plattform ermöglicht es einem Bot, beide Videotypen zu senden und zu empfangen.
 
-Wenn er an einer Teams Besprechung teil nimmt, kann ein Bot mehrere Hauptvideostreams gleichzeitig bis zu 10 pro Mediensitzung empfangen. Der Bot kann mehr als einen Teilnehmer an der Besprechung sehen.
+Wenn ein Bot an einer Teams Besprechung teil nimmt, kann er mehrere Hauptvideostreams gleichzeitig bis zu 10 pro Mediensitzung empfangen. Der Bot kann mehr als einen Teilnehmer an der Besprechung sehen.
 
 Der nächste Abschnitt enthält Details über den Bot, der Medien als Folge von Frames sendet und empfängt.
 
@@ -37,11 +37,11 @@ Der nächste Abschnitt enthält Details zum Audio- und Videoformat, das in Echtz
 
 ## <a name="audio-and-video-format"></a>Audio- und Videoformat
 
-Im Audioformat wird jede Audiosekunde als 16.000 Beispiele dargestellt, wobei jedes Beispiel 16 Bit Daten enthält. Ein 20 Ms großer Audioframe enthält 320 Beispiele, die 640 Byte Daten enthalten.
+Im Audioformat wird jede Audiosekunde als 16.000 Beispiele dargestellt, wobei jedes Beispiel 16 Bit Daten enthält. Ein 20 Ms großer Audioframe enthält 320 Beispiele mit 640 Byte Daten.
 
 Im Videoformat werden mehrere Formate unterstützt. Zwei wichtige Eigenschaften eines Videoformats sind die Framegröße und das Farbformat. Unterstützte Framegrößen umfassen 640 x 360 Pixel, 1280 x 720 Pixel und 1920 x 1080 pixel. Unterstützte Farbformate sind NV12 mit 12 Bit pro Pixel und RGB24 mit 24 Bit pro Pixel.
 
-Ein Videoframe mit 720 p enthält 921.600 Pixel, was 1280 Mal 720 Pixeln entspricht. Im RGB24-Farbformat wird jedes Pixel als 3 Byte dargestellt, das 24 Bit groß ist, einschließlich 1 Byte der Farbkomponenten Rot, Grün und Blau. Ein einzelner RGB24-Videoframe mit 720p erfordert 2.764.800 Bytes an Daten, was 921.600 Pixel mal 3 Bytes pro Pixel entspricht. Bei einer variablen Framerate bedeutet das Senden von RGB24-Videoframes mit 720p etwa 80 Megabyte pro Sekunde Inhalt. 80 Megabyte werden durch den H.264-Videocodec vor der Netzwerkübertragung erheblich komprimiert.
+Ein Videoframe mit 720 p enthält 921.600 Pixel, was 1280 Mal 720 Pixeln entspricht. Im RGB24-Farbformat wird jedes Pixel als 3 Byte dargestellt, das 24 Bit groß ist, einschließlich jeweils 1 Byte der Farbkomponenten Rot, Grün und Blau. Ein einzelner RGB24-Videoframe mit 720p erfordert 2.764.800 Bytes an Daten, was 921.600 Pixel mal 3 Bytes pro Pixel entspricht. Bei einer variablen Framerate bedeutet das Senden von RGB24-Videoframes mit 720p etwa 80 Megabyte pro Sekunde Inhalt. 80 Megabyte werden durch den H.264-Videocodec vor der Netzwerkübertragung erheblich komprimiert.
 
 Eine erweiterte Funktion der Plattform ermöglicht es einem Bot, Videos als codierte H.264-Frames zu senden oder zu empfangen. Bots, die einen eigenen H.264-Encoder oder Decoder bereitstellen, werden unterstützt, oder der in rgb24- oder NV12-Bitmaps decodierte Videodatenstrom ist nicht erforderlich.
 
@@ -55,7 +55,7 @@ Der nächste Abschnitt enthält Details zu Videoabonnementanforderungen, die von
 
 ## <a name="video-subscription"></a>Videoabonnement
 
-Bei einem 1:1-Anruf empfängt der Bot automatisch das Video des Anrufers, wenn der Bot für den Empfang des Videos aktiviert ist. In einer Teams Besprechung muss der Bot der Plattform angeben, welche Teilnehmer er sehen möchte. Ein Videoabonnement ist eine Anforderung des Bots, den Hauptinhalt des Videos oder der Bildschirmfreigabe eines Teilnehmers zu erhalten. Während die Teilnehmer an der Besprechung ihre Unterhaltungen führen, ändert der Bot die erforderlichen Videoabonnements. Der Bot ändert Videoabonnements basierend auf Updates des dominanten Lautsprechersatzes oder Benachrichtigungen, die angeben, welcher Teilnehmer derzeit bildschirmfreigabet.
+Bei einem 1:1-Anruf empfängt der Bot automatisch das Video des Anrufers, wenn der Bot für den Empfang des Videos aktiviert ist. In einer Teams Besprechung muss der Bot der Plattform angeben, welche Teilnehmer er sehen möchte. Ein Videoabonnement ist eine Anforderung des Bots, den Hauptinhalt des Videos oder der Bildschirmfreigabe eines Teilnehmers zu erhalten. Während die Teilnehmer an der Besprechung ihre Unterhaltungen führen, ändert der Bot die erforderlichen Videoabonnements. Der Bot ändert Videoabonnements basierend auf Updates des dominanten Sprechersatzes oder Benachrichtigungen, die angeben, welcher Teilnehmer derzeit bildschirmfreigabet.
 
 Der nächste Abschnitt enthält Details dazu, was Sie installieren müssen, und die Anforderungen zum Entwickeln eines von der Anwendung gehosteten Medienbots.
 

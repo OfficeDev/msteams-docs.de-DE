@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie adaptive Karten für Teams entwerfen und das 
 localization_priority: Priority
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8e56928da44e22006feb59715c8bdbf821ec4c42
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: ca7c38f112808f98ae1555e91f794f032e880c862a697e1218953d40cbb410aa
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037656"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708521"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Entwerfen adaptiver Karten für Ihre Microsoft Teams-App
 
@@ -37,7 +37,7 @@ Sie können ihre adaptiven Karten auch direkt im Browser entwerfen.
 
 ### <a name="hero"></a>Hero
 
-Unsere größte Karte. Wird für die Freigabe von Artikeln oder Szenarien verwendet, in denen Bilder den größten Teil der Geschichte erzählen.
+Unsere größte Karte. Wird für die Freigabe von Artikeln oder Szenarien verwendet, in denen ein Bild den größten Teil der Geschichte erzählt.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
@@ -76,19 +76,9 @@ Wird in Szenarien verwendet, in denen der Benutzer ein Element aus einer Liste a
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="Beispiel einer adaptiven Listenkarte auf einem Mobilgerät." border="false":::
 
 ---
-
-### Digest
-
 Use for news digests and round-up posts. Note: We recommend the thumbnail card for a single update or news item.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false":::
-
+':::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false"::': null
+':::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false"::': null
 ---
 
 ### <a name="media"></a>Medien

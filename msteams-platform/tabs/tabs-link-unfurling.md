@@ -1,15 +1,15 @@
 ---
 title: Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 author: Rajeshwari-v
-description: So heben Sie einen Link auf, öffnen die Phasenansicht und heften eine Registerkarte mit Microsoft Teams App an.
+description: Wie Sie einen Link öffnen, die Phasenansicht öffnen und eine Registerkarte mit Microsoft Teams App anheften.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: b54eb5942d19749b39bb9bb504dd8645f5655ef3
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: a76bf6f5d97114655893dd80ebf0de81fc242ea4d6b444516565b952aab883fe
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179944"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708677"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 
@@ -19,7 +19,7 @@ ms.locfileid: "53179944"
 Die Phasenansicht ist eine neue Benutzeroberflächenkomponente, mit der Sie den Inhalt rendern können, der im Vollbildmodus in Teams geöffnet und als Registerkarte angeheftet ist.
  
 > [!NOTE]
-> Derzeit unterstützen Teams mobile Clients die Verbreitung von Registerkarten und die Phasenansicht nicht. Mobile Clients verwenden das `websiteUrl` vom Entwickler bereitgestellte Attribut, um die Seite im Webbrowser des Geräts zu öffnen.
+> Derzeit unterstützen Teams mobile Clients das Aufheben von Registerkarten und die Phasenansicht nicht. Mobile Clients verwenden das `websiteUrl` vom Entwickler bereitgestellte Attribut, um die Seite im Webbrowser des Geräts zu öffnen.
 
 ## <a name="stage-view"></a>Phasenansicht
 
@@ -129,7 +129,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 ## <a name="tab-information-property"></a>Tabinformationseigenschaft
 
-| Eigenschaftsname | Typ | Anzahl der Zeichen | Beschreibung |
+| Eigenschaftenname | Typ | Anzahl der Zeichen | Beschreibung |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Zeichenfolge | 64 | Diese Eigenschaft ist ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird. Dies ist ein Pflichtfeld.|
 | `name` | Zeichenfolge | 128 | Diese Eigenschaft ist der Anzeigename der Registerkarte in der Kanalschnittstelle. Dieses Feld ist optional.|
@@ -137,7 +137,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 | `websiteUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, auf die sie zeigen soll, wenn ein Benutzer die Anzeige in einem Browser auswählt. Dies ist ein Pflichtfeld.|
 | `removeUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, die auf die Benutzeroberfläche zeigt, die angezeigt werden soll, wenn der Benutzer die Registerkarte löscht. Dies ist ein optionales Feld.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Verbreitung von Messaging-Erweiterungen](~/messaging-extensions/how-to/link-unfurling.md)
 * [registerkarten Teams](~/tabs/what-are-tabs.md)

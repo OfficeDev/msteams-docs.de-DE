@@ -5,12 +5,12 @@ description: So senden, empfangen und verarbeiten Sie Nachrichten für einen Bot
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 399f7d7487b4992e70d4ee515b26101e2b253a62
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 8ff89cf88bf56a905bdf507e1bc6e4ebbbd691f70d94289c8e206024c5657fa9
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069003"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708413"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Kanal- und Gruppenchatunterhaltungen mit einem Bot
 
@@ -85,7 +85,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -192,7 +192,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 Das `text` Feld im Objekt im Array muss mit einem Teil des `entities` `text` Meldungsfelds übereinstimmen. Wenn dies nicht der Typ ist, wird die Erwähnung ignoriert.
 
@@ -270,7 +270,7 @@ Senden Sie in den folgenden Fällen keine Nachricht:
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Abrufen Teams Kontexts](~/bots/how-to/get-teams-context.md)
 

@@ -2,19 +2,19 @@
 title: Szenen im benutzerdefinierten Modus "Zusammen"
 description: Arbeiten mit benutzerdefinierten Szenen im Zusammen-Modus
 ms.topic: conceptual
-ms.openlocfilehash: 74405041c6d90c2ef502a2c52570650daebb3526
-ms.sourcegitcommit: d354ab3cda83e6cd8bb9f03bc0fa2d1c1a61a6ce
+ms.openlocfilehash: 24b350341c7503569504bffa41f715ff87caa7db49cd890482688353e7f0493f
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "53463324"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823235"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Benutzerdefinierte Zusammen-Modus-Szenen
 
 > [!NOTE]
 > Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
-Szenen im benutzerdefinierten Zusammen-Modus in Microsoft Teams bieten eine immersive und ansprechende Besprechungsumgebung, die Menschen zusammenführt und sie dazu auffordert, ihr Video zu aktivieren. Sie kombiniert Teilnehmer digital in einer einzelnen virtuellen Szene und platziert ihre Videostreams in vordefinierten Arbeitsplätzen, die vom Szenenersteller entworfen und behoben wurden.
+Szenen im benutzerdefinierten Zusammen-Modus in Microsoft Teams bieten eine immersive und ansprechende Besprechungsumgebung, die Personen zusammenführt und sie dazu auffordert, ihr Video zu aktivieren. Sie kombiniert Teilnehmer digital in einer einzelnen virtuellen Szene und platziert ihre Videostreams in vordefinierten Arbeitsplätzen, die vom Szenenersteller entworfen und behoben wurden.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
@@ -94,7 +94,7 @@ Die Platzabmessungen werden zum Zeichenbereich für das Rendern des Videostreams
 
     >[!NOTE]
     > * Um Scene Studio zu öffnen, können Sie zur Startseite von [Teams Entwicklerportal](https://dev.teams.microsoft.com/home) navigieren und **benutzerdefinierte Szenen für Besprechungen** erstellen auswählen.
-    > * Um Scene Studio zu öffnen, können Sie zur Startseite von [Teams Entwicklerportal](https://dev.teams.microsoft.com/home)navigieren, im linken Abschnitt die Option **"Extras"** und im Abschnitt **"Extras"** das **Szenenstudio** auswählen.
+    > * To open Scene studio, you can navigate to the home page of [Teams Developer Portal,](https://dev.teams.microsoft.com/home)select **Tools** from the left hand section, and select **Scene studio** from the **Tools** section.
 
 1. Wählen Sie auf der Seite **"Szenen-Editor"** die Option **"Neue Szene erstellen" aus.**
 
@@ -137,7 +137,7 @@ Die Platzabmessungen werden zum Zeichenbereich für das Rendern des Videostreams
 
     ![Spot zuweisen](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. Wählen Sie **"Speichern"** und **dann "Ansicht" in Teams** aus, um Ihre Szene in Microsoft Teams schnell zu testen.
+1. Wählen Sie **"Speichern"** und **dann "Ansicht" in Teams** aus, um Die Szene in Microsoft Teams schnell zu testen.
 
     >[!NOTE]
     > * Wenn Sie **"Ansicht" in Teams** auswählen, wird automatisch eine Microsoft Teams App erstellt, die auf der Seite **"Apps"** im Teams Entwicklerportal angezeigt werden kann.
@@ -155,17 +155,17 @@ Die Platzabmessungen werden zum Zeichenbereich für das Rendern des Videostreams
 
 1. Optional können Sie im Dropdownmenü **"Speichern"** die Option **"Freigeben"** auswählen, um einen freigabefähigen Link zu erstellen, um Ihre Szenen für andere Benutzer einfach zu verteilen. Durch Öffnen dieses Links wird die Szene für den Benutzer installiert, und er kann mit der Verwendung beginnen.
 
-1. Nach der Vorschau kann die Szene als App an Teams ausgeliefert werden, indem Sie die Schritte für die App-Übermittlung ausführen.
+1. Nach der Vorschau kann die Szene als App an Teams ausgeliefert werden, indem Sie zum Abschnitt "Apps" im Teams Developer Center wechseln. Von dort aus können Sie das App-Paket herunterladen oder direkt in Ihrer Organisation veröffentlichen.
 
     >[!NOTE]
     > Dieser Schritt erfordert das App-Paket, das sich vom Szenenpaket unterscheidet, für die Szene, die entworfen wurde. Das automatisch erstellte App-Paket finden Sie im Abschnitt **"Apps"** im Teams Developer Center.
 
-1. Optional kann das Szenenpaket abgerufen werden, indem Sie im Dropdownmenü **"Speichern"** die Option **"Exportieren"** auswählen. Eine .zip Datei, bei der es sich um das Szenenpaket handelt, wird heruntergeladen.
+1. Optional kann das Szenenpaket gespeichert werden, indem Sie im Dropdownmenü **"Speichern"** die Option **"Exportieren"** auswählen. Eine .zip Datei, bei der es sich um das Szenenpaket handelt, wird heruntergeladen.
 
     ![Exportieren einer Szene](../assets/images/apps-in-meetings/build-a-scene.png)
 
     >[!NOTE]
-    > Das Szenenpaket besteht aus einem scene.jsund den PNG-Ressourcen, die zum Erstellen einer Szene verwendet werden. Das Szenenpaket kann auf andere Änderungen überprüft werden, wie im Beispiel scene.jsim Abschnitt dieses Dokuments beschrieben.
+    > Das Szenenpaket umfasst eine scene.jsund die PNG-Objekte, die zum Erstellen einer Szene verwendet werden. Das Szenenpaket kann auf andere Änderungen überprüft werden, wie im Beispiel scene.jsim Abschnitt dieses Dokuments beschrieben.
 
 Eine komplexere Szene, die die Z-Achse nutzt, wird im Beispiel für die ersten Schritte veranschaulicht.
 
@@ -238,7 +238,7 @@ Im Folgenden finden Sie die scene.jsim Beispiel:
 }
 ```
 
-Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Die Szenen-JSON enthält auch Informationen zu allen Ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Arbeitsplatz eine Platz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Reihenfolge der Auslastung wird automatisch generiert und kann je nach Präferenz geändert werden.
+Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Die Szenen-JSON enthält auch Informationen zu allen Ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Arbeitsplatz eine Platz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Reihenfolge der Auslastung wird automatisch generiert und kann gemäß Der Einstellung geändert werden.
 
 > [!NOTE]
 > Die Nummer der Reihenfolge der Benachrichtigung entspricht der Reihenfolge der Personen, die dem Anruf beitreten.
@@ -249,7 +249,7 @@ Nachdem Sie nun das Beispiel scene.jsweiter durchgegangen sind, können Sie die 
 
 ## <a name="activate-custom-together-mode-scenes"></a>Aktivieren von Szenen im benutzerdefinierten Modus "Zusammen"
 
-Hier erhalten Sie End-to-End-Informationen dazu, wie sich ein Endbenutzer mit Szenen in benutzerdefinierten Szenen im Zusammen-Modus beschäftigt.
+Erhalten Sie End-to-End-Informationen dazu, wie sich ein Endbenutzer mit Szenen in benutzerdefinierten Szenen im Zusammen-Modus beschäftigt.
 
 **So wählen Sie Szenen aus und aktivieren benutzerdefinierte Szenen im Zusammen-Modus**
 

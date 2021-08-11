@@ -4,12 +4,12 @@ description: Beschreibt, wie Sie Benutzerkontext zu Ihren Registerkarten abrufen
 localization_priority: Normal
 ms.topic: how-to
 keywords: Teams Registerkarten Benutzerkontext
-ms.openlocfilehash: 8c91cf5a65f13d9f58f6ae8aa2678266c37338c8
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 32c8606d172a785356107750eac8168b1987d7f6b41d44f02297f0c19d22aa61
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179727"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709330"
 ---
 # <a name="get-context-for-your-tab"></a>Kontext für Ihre Registerkarte erhalten
 
@@ -42,7 +42,7 @@ Verwenden Sie Platzhalter in Ihren Konfigurations-oder Inhalts-URLs. Microsoft T
 
 * {entityId}: Die ID, die Sie für das Element auf dieser Registerkarte beim ersten [Konfigurieren der Registerkarte](~/tabs/how-to/create-tab-pages/configuration-page.md) angegeben haben.
 * {subEntityId}: Die ID, die Sie beim Generieren eines [Deep-Links](~/concepts/build-and-test/deep-links.md) für ein bestimmtes Element auf dieser Registerkarte angegeben haben. Dies muss verwendet werden, um einen bestimmten Zustand innerhalb einer Entität wiederherzustellen. Beispiel: Scrollen zu oder Aktivieren eines bestimmten Inhaltselements.
-* {loginHint}: Ein Wert, der als Anmeldehinweis für AAD geeignet ist. Dies ist in der Regel der Anmeldename des aktuellen Benutzers in seiner Startseitenmandanten.
+* {loginHint}: Ein Wert, der als Anmeldehinweis für AAD geeignet ist. Dies ist in der Regel der Anmeldename des aktuellen Benutzers in dessen Home-Mandant.
 * {userPrincipalName}: Der Benutzerprinzipalname des aktuellen Benutzers im aktuellen Mandanten.
 * {userObjectId}: Die AAD-Objekt-ID des aktuellen Benutzers im aktuellen Mandanten.
 * {theme}: Das aktuelle Benutzeroberflächendesign wie `default` , `dark` oder `contrast` .
@@ -57,14 +57,14 @@ In Ihrem Registerkartenmanifest legen Sie das Attribut beispielsweise `configURL
 
 * Ihr Benutzername ist **user@example.com.**
 * Die Mandanten-ID des Unternehmens lautet **e2653c usw.**
-* Sie sind Mitglied der Office 365-Gruppe mit id **00209384-usw.**
+* Sie sind Mitglied der Office 365-Gruppe mit der ID **00209384 usw.**
 * Der Benutzer hat sein Teams Design auf **dunkel** festgelegt.
 
 Wenn sie die Registerkarte konfigurieren, ruft Teams die folgende URL auf:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
-### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Abrufen von Kontext mithilfe der Microsoft Teams JavaScript-Bibliothek
+### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Abrufen des Kontexts mithilfe der Microsoft Teams JavaScript-Bibliothek
 
 Sie können die zuvor aufgeführten Informationen auch mithilfe des [JavaScript-Client-SDKs von Microsoft Teams](/javascript/api/overview/msteams-client) abrufen, indem Sie `microsoftTeams.getContext(function(context) { /* ... */ })` aufrufen.
 
@@ -121,8 +121,8 @@ Wenn Ihre Inhaltsseite in einem privaten Kanal geladen wird, werden die Daten, d
 * `teamId`: Auf die threadId des privaten Kanals festgelegt
 * `teamName`: Auf den Namen des privaten Kanals festgelegt
 * `teamSiteUrl`: Legen Sie die URL einer eindeutigen SharePoint-Website für den privaten Kanal fest.
-* `teamSitePath`: Legen Sie den Pfad einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal fest.
-* `teamSiteDomain`: Festlegen auf die Domäne einer eindeutigen SharePoint-Websitedomäne für den privaten Kanal
+* `teamSitePath`: Legen Sie den Pfad einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal fest
+* `teamSiteDomain`: Auf die Domäne einer eindeutigen, eindeutigen SharePoint-Websitedomäne für den privaten Kanal festgelegt
 
 Wenn Ihre Seite einen dieser Werte verwendet, müssen Sie das Feld überprüfen, `channelType` um festzustellen, ob Die Seite in einem privaten Kanal geladen ist, und entsprechend reagieren.
 
@@ -135,7 +135,7 @@ Sie können Ihre App registrieren, um informiert zu werden, wenn sich das Design
 
 Das `theme` Argument in der Funktion ist eine Zeichenfolge mit dem Wert , oder `default` `dark` `contrast` .
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Richtlinien für den Registerkartenentwurf](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [registerkarten Teams](~/tabs/what-are-tabs.md)

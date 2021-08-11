@@ -4,12 +4,12 @@ description: Beschreibt Deep-Links und deren Verwendung in Ihren Apps
 ms.topic: how-to
 localization_priority: Normal
 keywords: DeepLink für Teams
-ms.openlocfilehash: 07eb03f2e9686c26a917ab1f2d72fc0668e59107
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 2f382e3612b0df026a12b8b37fdbbc278df6ecf8fe8e0c67582c3486eb91c5be
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949679"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823214"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links 
 
@@ -27,7 +27,7 @@ Sie können Links zu Informationen und Features in Teams erstellen. Die folgende
 >
 > **Bot**:  
 > ✔ Deeplink im Kartentext: Wird zuerst im Browser geöffnet.  
-> ✔ Deeplink zur OpenURL-Aktion in adaptiver Karte hinzugefügt: Navigiert direkt zur Deeplink-URL.  
+> ✔ Deeplink, der der OpenURL-Aktion in adaptiver Karte hinzugefügt wurde: Navigiert direkt zur Deeplink-URL.  
 > ✔ Hyperlinkmarkdowntext auf der Karte: Wird zuerst im Browser geöffnet.  
 >
 > **Chat**:  
@@ -128,7 +128,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 Sie können Deep-Links zu privaten Chats zwischen Benutzern erstellen, indem Sie die Teilnehmergruppe angeben. Wenn kein Chat mit den angegebenen Teilnehmern vorhanden ist, navigiert der Link den Benutzer zu einem leeren neuen Chat. Neue Chats werden im Entwurfsstatus erstellt, bis der Benutzer die erste Nachricht sendet. Andernfalls können Sie den Namen des Chats angeben, falls er noch nicht vorhanden ist, zusammen mit Text, der in das Feld zum Verfassen des Benutzers eingefügt werden soll. Sie können sich dieses Feature als eine Verknüpfung vorstellen, mit der der Benutzer manuell zu dem Chat navigieren oder diesen erstellen und dann die Nachricht eingeben kann.
 
-Wenn Sie beispielsweise ein Office 365 Benutzerprofil von Ihrem Bot als Karte zurückgeben, kann dieser Deep-Link es dem Benutzer ermöglichen, einfach mit dieser Person zu chatten.
+Wenn Sie beispielsweise ein Office 365 Benutzerprofil von Ihrem Bot als Karte zurückgeben, kann dieser Deep-Link dem Benutzer das einfache Chatten mit dieser Person ermöglichen.
 
 ### <a name="generate-a-deep-link-to-a-chat"></a>Generieren eines Deep-Links zu einem Chat
 
@@ -206,7 +206,7 @@ Beispiel: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee
 > [!NOTE]
 > Dieses Feature befindet sich derzeit in der Entwicklervorschau.
 
-Sie können Deep-Links zum Teams integrierten Planungsdialogfelds erstellen. Dies ist besonders nützlich, wenn Ihre App dem Benutzer beim Ausführen von Kalender- oder Planungsaufgaben hilft.
+Sie können Deep-Links zum Teams integrierten Planungsdialogfeld erstellen. Dies ist besonders nützlich, wenn Ihre App dem Benutzer beim Ausführen von Kalender- oder Planungsaufgaben hilft.
 
 ### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>Generieren eines Deep-Links zum Planungsdialogfeld
 
@@ -227,9 +227,9 @@ Die Abfrageparameter sind:
 
 Um diesen Deep-Link mit Ihrem Bot zu verwenden, können Sie dies als URL-Ziel in der Schaltfläche Ihrer Karte angeben oder über den Aktionstyp auf die Aktion `openUrl` tippen.
 
-## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>Deep-Links zu einem Audio- oder Audiovideoanruf
+## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>Deep linking to an audio or audio-video call
 
-Sie können Deep-Links erstellen, um nur Audio- oder Audiovideoanrufe an einen einzelnen Benutzer oder eine Gruppe von Benutzern aufzurufen, indem Sie den Anruftyp als *Audio* oder *Av* und die Teilnehmer angeben. Nachdem der Deep-Link aufgerufen wurde und vor dem Tätigen des Anrufs fordert Teams Desktopclient eine Bestätigung für den Anruf an. Im Falle eines Gruppenanrufs können Sie eine Gruppe von VoIP-Benutzern und eine Gruppe von PSTN-Benutzern im selben Deeplink-Aufruf aufrufen. 
+Sie können Deep-Links erstellen, um nur Audio- oder Audiovideoanrufe an einen einzelnen Benutzer oder eine Gruppe von Benutzern aufzurufen, indem Sie den Anruftyp als *Audio* oder *Av* und die Teilnehmer angeben. Nachdem der Deep-Link aufgerufen wurde und vor dem Tätigen des Anrufs, fordert Teams Desktopclient eine Bestätigung für den Anruf an. Im Falle eines Gruppenanrufs können Sie eine Gruppe von VoIP-Benutzern und eine Gruppe von PSTN-Benutzern im selben Deeplink-Aufruf aufrufen. 
 
 Bei einem Videoanruf fordert der Client die Bestätigung an und aktiviert das Video des Anrufers für den Anrufer. Der Empfänger des Anrufs kann über das Teams Anrufbenachrichtigungsfenster nur über Audio oder Audio und Video antworten.
 
@@ -241,22 +241,22 @@ Bei einem Videoanruf fordert der Client die Bestätigung an und aktiviert das Vi
 | Deep-Link | Format | Beispiel |
 |-----------|--------|---------|
 | Tätigen eines Audioanrufs | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
-| Tätigen eines Audio- und Videoanrufs | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
-|Tätigen eines Audio- und Videoanrufs mit einer optionalen Parameterquelle | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
+| Tätigen eines Audio- und Videoanrufs | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withVideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true |
+|Tätigen eines Audio- und Videoanrufs mit einer optionalen Parameterquelle | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withVideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp |  
 | Tätigen eines Audio- und Videoanrufs für eine Kombination aus VoIP- und PSTN-Benutzern | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; ,4: &lt; Phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 Es folgen die Abfrageparameter:
 * `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Anrufs darstellen. Derzeit unterstützt das Benutzer-ID-Feld den Azure AD UserPrincipalName, in der Regel eine E-Mail-Adresse, oder im Falle eines PSTN-Anrufs unterstützt es eine pstn mri 4: &lt; &gt; Telefonnummer.
-* `Withvideo`: Dies ist ein optionaler Parameter, den Sie für einen Videoanruf verwenden können. Durch Festlegen dieses Parameters wird nur die Kamera des Anrufers aktiviert. Der Empfänger des Anrufs hat die Möglichkeit, audio- oder audio- und videoanrufe über das Teams Anrufbenachrichtigungsfenster zu beantworten. 
+* `withVideo`: Dies ist ein optionaler Parameter, den Sie für einen Videoanruf verwenden können. Durch Festlegen dieses Parameters wird nur die Kamera des Anrufers aktiviert. Der Empfänger des Anrufs hat die Wahl, über audio- oder audio- und videoanruf über das Teams Anrufbenachrichtigungsfenster zu beantworten. 
 * `Source`: Dies ist ein optionaler Parameter, der über die Quelle des Deeplinks informiert.
 
 ## <a name="code-sample"></a>Codebeispiel
 
 | Beispielname | Beschreibung | C# |Node.js|
 |-------------|-------------|------|----|
-|Deep Link consuming Subentity ID  |Microsoft Teams Beispiel-App zum Demonstrieren von Deeplink vom Bot-Chat zum Tabulator der Unterentitäts-ID.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|Deep Link consuming Subentity ID  |Microsoft Teams Beispiel-App zum Demonstrieren von Deeplink vom Bot-Chat zum Tab, der die Unterentitäts-ID verwendet.|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Siehe auch
 
 [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
 

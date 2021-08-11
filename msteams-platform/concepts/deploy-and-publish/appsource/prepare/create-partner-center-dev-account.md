@@ -1,23 +1,23 @@
 ---
 title: Erstellen Ihres Partner Center-Entwicklerkontos
-description: Um Ihre App im Microsoft Teams zu veröffentlichen, benötigen Sie ein Partner Center-Entwicklerkonto.
+description: Um Ihre App im Microsoft Teams Store zu veröffentlichen, benötigen Sie ein Partner Center-Entwicklerkonto.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: ac31ff3d46a87814edfe2b7ec789d183e9c02e2f
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: ef506b092a06e0c4668ff36aefeddfbafb93c5d5625a4871ce7082c4c6564fea
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566040"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708653"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Erstellen eines Partner Center-Entwicklerkontos
 
-Um Ihre App im Microsoft Teams zu veröffentlichen, müssen Sie [Ihr Partner Center-Entwicklerkonto einrichten.](/office/dev/store/open-a-developer-account) Je nach Szenario können Sie möglicherweise ein vorhandenes Konto verwenden.
+Um Ihre App im Microsoft Teams Store zu veröffentlichen, müssen Sie [Ihr Partner Center-Entwicklerkonto einrichten.](/office/dev/store/open-a-developer-account) Je nach Szenario können Sie möglicherweise ein vorhandenes Konto verwenden.
 
 ## <a name="faq"></a>Häufig gestellte Fragen
 
-Erhalten Sie Antworten auf einige häufig gestellte Fragen zum Verwalten Ihres Partner Center-Kontos.
+Erhalten Sie Antworten auf einige häufig gestellte Fragen zur Verwaltung Ihres Partner Center-Kontos.
 
 <br>
 
@@ -27,8 +27,8 @@ Erhalten Sie Antworten auf einige häufig gestellte Fragen zum Verwalten Ihres P
 
 Sie können ein Partner Center-Konto auf eine der folgenden Arten erstellen:
 
-* Wenn Sie neu im Partner Center sind und kein Microsoft Network Account haben, erstellen Sie ein Konto auf der [Partner Center-Registrierungsseite](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page).
-* Wenn Sie bereits im Microsoft Partner Network registriert sind, erstellen Sie ein Konto direkt im Partner Center mit vorhandenen [Microsoft Partner Center-Registrierungen.](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)
+* Wenn Sie noch nicht im Partner Center sind und nicht über ein Microsoft-Netzwerkkonto verfügen, [erstellen Sie ein Konto über die Partner Center-Registrierungsseite.](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page)
+* Wenn Sie bereits im Microsoft Partner Network registriert sind, [erstellen Sie ein Konto direkt im Partner Center mithilfe vorhandener Microsoft Partner Center-Registrierungen.](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)
 
 <br>
 
@@ -36,15 +36,15 @@ Sie können ein Partner Center-Konto auf eine der folgenden Arten erstellen:
 
 <details>
 
-<summary><b>Was passiert, wenn ich mein Konto im Partner Center nicht finden kann?</b></summary>
+<summary><b>Was geschieht, wenn ich mein Konto im Partner Center nicht finden kann?</b></summary>
 
 Öffnen Sie ein [Partner Center-Supportticket,](https://partner.microsoft.com/support/v2/?stage=1) und wählen Sie Folgendes aus:
 
 | Menü | Option |
 | -------   | -------  |
-|Kategorie| Kommerzieller Marketplace|
-| Thema | Allgemeine Marketplace-Hilfe und How-to-Fragen |
-| Untertopisch| Office-Add-In |
+|Kategorie| Commercial Marketplace|
+| Thema | Allgemeine Marketplace-Hilfe und Fragen zur Vorgehensweise |
+| Subtopic| Office-Add-In |
 
 <br>
 
@@ -52,19 +52,9 @@ Sie können ein Partner Center-Konto auf eine der folgenden Arten erstellen:
 
 <details>
 
-<summary><b>Wo kann ich Support für Probleme mit meinem Partner Center-Konto erhalten?</b></summary>
+<summary><b>Wo erhalte ich Support für Probleme mit meinem Partner Center-Konto?</b></summary>
 
-Besuchen Sie die [Supportseite der Herausgeber,](https://aka.ms/marketplacepublishersupport) um nach Ihrem Problem zu suchen. Wenn die Anleitung nicht hilfreich ist, erstellen Sie ein [Partner Center-Supportticket](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>Wie verwalte ich mein Office Store im Partner Center?</b></summary>
-
-Weitere [Informationen finden Sie unter Verwalten Ihres Kontos über das Partner Center.](/office/dev/store/manage-account-settings-and-profile)
+Besuchen Sie die Supportseite der [Herausgeber,](https://aka.ms/marketplacepublishersupport) um nach Ihrem Problem zu suchen. Wenn die Anleitung nicht hilfreich ist, erstellen Sie ein [Partner Center-Supportticket.](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)
 
 <br>
 
@@ -72,9 +62,19 @@ Weitere [Informationen finden Sie unter Verwalten Ihres Kontos über das Partner
 
 <details>
 
-<summary><b>Meine Telefonnummer hat keine Vorwahl, wie kann ich sie also meinem Profil hinzufügen?</b></summary>
+<summary><b>Wie verwalte ich mein Office Store-Konto im Partner Center?</b></summary>
 
-Die Telefonnummer hat drei Teile: Ländercode, Vorwahl und Telefonnummer. Wenn Ihre Telefonnummer keine Vorwahl enthält, lassen Sie das zweite Feld leer, und füllen Sie das dritte Feld aus.
+Weitere Informationen finden Sie [unter Verwalten Ihres Kontos über das Partner Center.](/office/dev/store/manage-account-settings-and-profile)
+
+<br>
+
+</details>
+
+<details>
+
+<summary><b>Meine Telefonnummer hat keine Ortsvorwahl. Wie füge ich sie meinem Profil hinzu?</b></summary>
+
+Die Telefonnummer umfasst drei Teile: Landesvorwahl, Ortsvorwahl und Telefonnummer. Wenn Ihre Telefonnummer keine Ortsvorwahl enthält, lassen Sie das zweite Feld leer, und schließen Sie das dritte Feld ab.
 
 <br>
 
@@ -84,7 +84,7 @@ Die Telefonnummer hat drei Teile: Ländercode, Vorwahl und Telefonnummer. Wenn I
 
 <summary><b>Wie verwalte ich meine Kontoeinstellungen und mein Partnerprofil im Partner Center?</b></summary>
 
-Weitere Informationen finden Sie unter Verwalten von [Kontoeinstellungen und](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) Profilinformationen.
+Weitere Informationen finden Sie unter [Verwalten von Kontoeinstellungen und Profilinformationen.](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info)
 
 <br>
 
@@ -92,11 +92,11 @@ Weitere Informationen finden Sie unter Verwalten von [Kontoeinstellungen und](/w
 
 <details>
 
-<summary><b>Warum wird eine Meldung mit dem Thema "Dieses Konto ist nicht berechtigt veröffentlichen" angezeigt, wenn ich versuche, meine App zu übermitteln?</b></summary>
+<summary><b>Warum wird die Meldung "Dieses Konto ist nicht veröffentlichungsberechtigt" angezeigt, wenn ich versuche, meine App zu übermitteln?</b></summary>
 
-Diese Fehlermeldung wurde angezeigt, da der [Kontoüberprüfungsstatus](/partner-center/verification-responses) aussteht. Überprüfen Sie Ihren Status im Partner [Center-Dashboard](https://partner.microsoft.com/dashboard). Wählen Sie **Einstellungen** Zahnradsymbol aus, und wählen Sie **Entwicklereinstellungen > Konto > Kontoeinstellungen aus.**
+Sie haben diese Fehlermeldung erhalten, da ihr [Kontoüberprüfungsstatus](/partner-center/verification-responses) aussteht. Überprüfen Sie Ihren Status im Partner [Center-Dashboard.](https://partner.microsoft.com/dashboard) Wählen Sie das **Zahnradsymbol Einstellungen** aus, und wählen Sie **die Entwicklereinstellungen > Konto > Kontoeinstellungen** aus.
 
-![Status der Partner Center-Überprüfung](~/assets/images/partner-center-verification-status.png)
+![Partner Center-Überprüfungsstatus](~/assets/images/partner-center-verification-status.png)
 
 <br>
 
@@ -104,13 +104,13 @@ Diese Fehlermeldung wurde angezeigt, da der [Kontoüberprüfungsstatus](/partner
 
 <details>
 
-<summary><b>Was wird beim Überprüfungsprozess des Partner Center-Kontos überprüft?</b></summary>
+<summary><b>Was wird im Überprüfungsprozess des Partner Center-Kontos überprüft?</b></summary>
 
-Es gibt drei Überprüfungsbereiche: **E-Mail-Besitz,** **Beschäftigung** und **Unternehmen.** Weitere Informationen finden Sie unter [Überprüftes und Reagieren.](/partner-center/verification-responses#what-is-verified-and-how-to-respond)
+Es gibt drei Überprüfungsbereiche: **E-Mail-Besitz,** **Anstellung** und **Unternehmen.** Weitere Informationen finden Sie unter ["Überprüft" und "Reagieren".](/partner-center/verification-responses#what-is-verified-and-how-to-respond)
 
 Wenn Sie der primäre Kontakt, globaler Administrator oder Kontoadministrator sind, können Sie den Überprüfungsstatus überwachen und den Fortschritt auf Ihrer Profilseite nachverfolgen.
 
-Sobald der Überprüfungsprozess abgeschlossen ist, ändert sich der Status Ihrer Registrierung auf der Profilseite von *ausstehend* in *autorisiert.* Der primäre Kontakt erhält dann innerhalb weniger Werktage eine E-Mail von Microsoft.
+Nach Abschluss des Überprüfungsprozesses ändert sich der Status Ihrer Registrierung auf der Profilseite von *"Ausstehend"* in *"Autorisiert".* Der primäre Kontakt erhält dann innerhalb weniger Werktage eine E-Mail von Microsoft.
 
 <br>
 
@@ -118,15 +118,15 @@ Sobald der Überprüfungsprozess abgeschlossen ist, ändert sich der Status Ihre
 
 <details>
 
-<summary><b>Der Status der Kontoüberprüfung wurde nicht über den E-Mail-Besitz hinaus erweitert. Wie soll ich vorgehen?</b></summary>
+<summary><b>Mein Kontoüberprüfungsstatus hat sich nicht über den E-Mail-Besitz hinaus entwickelt. Wie sollte ich fortfahren?</b></summary>
 
-Während der **Überprüfung des** E-Mail-Besitzes wird eine Überprüfungs-E-Mail an den primären Kontakt gesendet. Überprüfen Sie ihren primären Kontakt posteingang auf eine E-Mail von **maccount@microsoft.com** betreffzeile **Aktion erforderlich: Überprüfen** Sie Ihr E-Mail-Konto bei Microsoft, und schließen Sie den E-Mail-Überprüfungsprozess ab. Die Überprüfungs-E-Mail wird an die Adresse gesendet, die in den Einstellungen Ihres Partner Center-Kontos aufgeführt ist.
+Während der Überprüfung des **E-Mail-Besitzes** wird eine Überprüfungs-E-Mail an den primären Kontakt gesendet. Überprüfen Sie den Posteingang Ihres primären Kontakts auf eine E-Mail von **maccount@microsoft.com,** wobei die Betreffzeile **"Aktion erforderlich" ist: Überprüfen Sie Ihr E-Mail-Konto bei Microsoft,** und schließen Sie den E-Mail-Überprüfungsprozess ab. Die Überprüfungs-E-Mail wird an die Adresse gesendet, die in den Einstellungen Ihres Partner Center-Kontos aufgeführt ist.
 
 Beachten Sie Folgendes zum E-Mail-Überprüfungsprozess:
 
-* Der Link zur E-Mail-Überprüfung ist nur für sieben Tage gültig.
-* Sie können anfordern, die E-Mail erneut zu senden, indem Sie Ihre Partnerprofilseite besuchen und den **Link Überprüfung erneut** senden auswählen.
-* Um sicherzustellen, dass Sie die  E-Mail erhalten, microsoft.com sichere Domäne auflisten und Ihre Junk-E-Mail-Ordner überprüfen.
+* Der E-Mail-Überprüfungslink ist nur für sieben Tage gültig.
+* Sie können anfordern, die E-Mail erneut zu senden, indem Sie ihre Partnerprofilseite besuchen und den **E-Mail-Link** zur Erneuten Überprüfung auswählen.
+* Um sicherzustellen, dass Sie die E-Mail erhalten, **microsoft.com** sichere Liste als sichere Domäne, und überprüfen Sie Ihre Junk-E-Mail-Ordner.
 
 <br>
 
@@ -134,9 +134,9 @@ Beachten Sie Folgendes zum E-Mail-Überprüfungsprozess:
 
 <details>
 
-<summary><b>Wie kann ich weitere Unterstützung für meine kontobezogenen Probleme erhalten?</b></summary>
+<summary><b>Wie erhalte ich weiteren Support für probleme im Zusammenhang mit meinem Konto?</b></summary>
 
-Weitere Informationen finden Sie unter Support [für das Commercial Marketplace-Programm im Partner Center.](/azure/marketplace/partner-center-portal/support)
+Weitere Informationen finden Sie [im Support für das Commercial Marketplace-Programm im Partner Center.](/azure/marketplace/partner-center-portal/support)
 
 <br>
 
@@ -149,10 +149,10 @@ Weitere Informationen finden Sie unter Support [für das Commercial Marketplace-
 Versuchen Sie, das Problem durch folgende Maßnahme zu beheben:
 
 * Überprüfen Sie Ihren Junk- oder Spamordner.
-* Löschen Sie den Browsercache, wechseln Sie zu Ihrem Partner Center-Kontodashboard, und wählen Sie **Überprüfungs-E-Mail erneut senden aus.**
-* Versuchen Sie, über einen anderen Browser auf den **E-Mail-Link** Zum Erneuten Senden der Überprüfung zu zugreifen.
-* Arbeiten Sie mit Ihrer IT-Abteilung zusammen, um sicherzustellen, dass die Überprüfungs-E-Mails nicht von Ihrem E-Mail-Server blockiert werden.
-* Passen Sie den Spamfilter Ihres Servers an, um alle E-Mails von **maccount@microsoft.com.**
+* Löschen Sie den Browsercache, wechseln Sie zu Ihrem Partner Center-Kontodashboard, und wählen Sie **Bestätigungs-E-Mail erneut senden** aus.
+* Versuchen Sie, über einen anderen Browser auf den **E-Mail-Link** zur Erneuten Überprüfung zuzugreifen.
+* Arbeiten Sie mit Ihrer IT-Abteilung, um sicherzustellen, dass die Überprüfungs-E-Mails nicht von Ihrem E-Mail-Server blockiert werden.
+* Passen Sie den Spamfilter Ihres Servers so an, dass alle E-Mails von **maccount@microsoft.com** zugelassen oder sicher aufgelistet werden.
 
 <br>
 
@@ -160,9 +160,9 @@ Versuchen Sie, das Problem durch folgende Maßnahme zu beheben:
 
 <details>
 
-<summary><b>Wie lange dauert die Überprüfung der Beschäftigung in der Regel?</b></summary>
+<summary><b>Wie lange dauert die Überprüfung der Anstellung normalerweise?</b></summary>
 
-Wenn alle übermittelten Details korrekt sind, dauert die Überprüfung der Beschäftigung etwa zwei Stunden.
+Wenn alle übermittelten Details korrekt sind, dauert die Überprüfung der Anstellung etwa zwei Stunden.
 
 <br>
 
@@ -172,7 +172,7 @@ Wenn alle übermittelten Details korrekt sind, dauert die Überprüfung der Besc
 
 <summary><b>Wie lange dauert der Geschäftsüberprüfungsprozess in der Regel?</b></summary>
 
-Wenn alle erforderlichen Dokumente übermittelt werden, dauert die Geschäftsüberprüfung ein bis zwei Werktage.
+Wenn alle erforderlichen Dokumente übermittelt werden, dauert die Geschäftliche Überprüfung ein bis zwei Werktage, bis sie abgeschlossen ist.
 
 <br>
 
@@ -180,9 +180,9 @@ Wenn alle erforderlichen Dokumente übermittelt werden, dauert die Geschäftsüb
 
 <details>
 
-<summary><b>Wenn ich mich an das Supportteam stütze, wird mein Ticket beschleunigt?</b></summary>
+<summary><b>Wenn ich mich an das Supportteam wenden möchte, wird mein Ticket beschleunigt?</b></summary>
 
-Supporttickets werden in einer Woche aufgelöst. Suchen Sie nach Updates, die an die E-Mail gesendet wurden, die Sie beim Erstellen des Supporttickets bereitgestellt haben.
+Supporttickets werden in einer Woche aufgelöst. Suchen Sie nach Updates, die an die E-Mail gesendet wurden, die Sie beim Erstellen des Supporttickets angegeben haben.
 
 <br>
 
@@ -190,15 +190,15 @@ Supporttickets werden in einer Woche aufgelöst. Suchen Sie nach Updates, die an
 
 <details>
 
-<summary><b>Ich habe ein Supportticket erstellt, aber in sieben Werktagen kein Update erhalten. Wo kann ich Hilfe erhalten?</b></summary>
+<summary><b>Ich habe ein Supportticket erstellt, aber in sieben Werktagen kein Update erhalten. Wo erhalte ich Hilfe?</b></summary>
 
-Senden Sie eine <a href="mailto:teamsubm@microsoft.com">E-Mail teamsubm@microsoft.com</a> mit den folgenden Details:
+Senden Sie eine E-Mail mit den folgenden Details an <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com:</a>
 
-* **Betreffzeile**: Partner Center Account Issue for *<your app name>* .
-* **E-Mail-Text:**
+* **Betreffzeile:** Partner Center-Kontoproblem für *<your app name>* .
+* **E-Mail-Textkörper:**
     * Supportticketnummer.
     * Ihre Verkäufer-ID.
-    * Screenshot des Problems (wenn möglich).
+    * Screenshot des Problems (sofern möglich).
 
 <br>
 
@@ -206,12 +206,12 @@ Senden Sie eine <a href="mailto:teamsubm@microsoft.com">E-Mail teamsubm@microsof
 
 <details>
 
-<summary><b>Wo sonst kann ich zur Partner Center-Hilfe wechseln?</b></summary>
+<summary><b>Wo kann ich sonst Hilfe im Partner Center erhalten?</b></summary>
 
-Die folgenden Ressourcen können auch helfen:
+Die folgenden Ressourcen können ebenfalls hilfreich sein:
 
-* [Microsoft 365 häufig gestellte Fragen zur App-Übermittlung](/office/dev/store/appsource-submission-faq).
-* [Kommerzielle Marketplace-Dokumentation](/azure/marketplace/).
+* [Microsoft 365 Häufig gestellte Fragen zur App-Übermittlung.](/office/dev/store/appsource-submission-faq)
+* [Dokumentation zum kommerziellen Marketplace.](/azure/marketplace/)
 
 <br>
 

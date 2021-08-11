@@ -5,12 +5,12 @@ keywords: Visual Studio-Toolkit für Teams
 localization_priority: Normal
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: 6a0f466ba0d95312695be8b5460fc949e3f70811
-ms.sourcegitcommit: 4ac93d69927791a8ccf678ca5ee83e63b51566b4
+ms.openlocfilehash: f72b8d723b5511e6e68a94617e256e280ce2ed50ee33544ccb3c8c237ddd9832
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53095514"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701810"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Erstellen von Apps mit dem Teams Toolkit und Visual Studio
 
@@ -26,7 +26,7 @@ Mithilfe des Microsoft Teams-Toolkits können Sie benutzerdefinierte Teams-Apps 
 
 ## <a name="install-the-teams-toolkit"></a>Installieren des Teams Toolkits
 
-The Microsoft Teams Toolkit for Visual Studio is available to download from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit) or directly from the **Extensions** menu within Visual Studio.
+Das Microsoft Teams Toolkit für Visual Studio steht im Visual Studio [Marketplace](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit) oder direkt im **Menü "Erweiterungen"** in Visual Studio zum Download zur Verfügung.
 
 ## <a name="use-the-toolkit"></a>Verwenden des Toolkits
 
@@ -43,13 +43,13 @@ The Microsoft Teams Toolkit for Visual Studio is available to download from the 
 3. Suchen Sie nach **Microsoft Teams App,** und wählen Sie **"Weiter"** aus.
 4. Geben Sie im **Feld "Neues Projekt konfigurieren"** den **Namen Project,** **den Speicherort** und den **Projektmappennamen ein.**
 5. Wählen Sie **"Weiter"** aus, um einen Namen für die App einzugeben.
-6. Geben Sie im Bildschirm "Zusätzliche Informationen" einen **Anwendungsnamen** und einen **Entwickler- oder Firmennamen** für Ihre Teams-App ein.
+6. Geben Sie im Bildschirm "Zusätzliche Informationen" einen **Anwendungs-** und **Entwickler- oder Firmennamen** für Ihre Teams-App ein.
 
 ## <a name="configure-your-app"></a>Konfigurieren Sie die App
 
-Im Kern umfasst die Teams App drei Komponenten:
+Im Kern umfasst die Teams-App drei Komponenten:
 
-- Der Microsoft Teams Client (Web, Desktop oder Mobil), auf dem Benutzer mit Ihrer App interagieren.
+- Der Microsoft Teams-Client (Web, Desktop oder Mobil), auf dem Benutzer mit Ihrer App interagieren.
 - Ein Server, der auf Anforderungen für Inhalte reagiert, die in Teams angezeigt werden. Beispiel: HTML-Registerkarteninhalt oder eine adaptive Bot-Karte.
 - Ein Teams-App-Paket besteht aus drei Dateien:
 
@@ -64,7 +64,7 @@ Wenn eine App installiert ist, analysiert der Teams Client die Manifestdatei, um
 > [!NOTE]
 >Wenn sie dies noch nicht getan haben, müssen Sie sich bei Ihrem Microsoft 365 Konto anmelden, um den Entwicklungsprozess fortzusetzen.
 >
-> Wenn Sie nicht über ein Microsoft 365 Konto verfügen, können Sie sich für ein [Abonnement des Microsoft 365 Entwicklerprogramms](https://developer.microsoft.com/microsoft-365/dev-program) registrieren. Es ist 90 Tage kostenlos und wird verlängert, solange Sie es für Entwicklungsaktivitäten verwenden. Wenn Sie über ein Visual Studio Enterprise- oder Professional-Abonnement verfügen, enthalten beide Programme ein kostenloses Microsoft 365 [Entwicklerabonnement,](https://aka.ms/MyVisualStudioBenefits)das für die Lebensdauer Ihres Visual Studio Abonnements aktiv ist. Weitere Informationen finden Sie unter [Einrichten eines Microsoft 365 Entwicklerabonnements.](/office/developer-program/office-365-developer-program-get-started)
+> Wenn Sie nicht über ein Microsoft 365 Konto verfügen, können Sie sich für ein Abonnement des [Microsoft 365 Entwicklerprogramms](https://developer.microsoft.com/microsoft-365/dev-program) registrieren. Es ist 90 Tage kostenlos und wird verlängert, solange Sie es für Entwicklungsaktivitäten verwenden. Wenn Sie über ein Visual Studio Enterprise- oder Professional-Abonnement verfügen, enthalten beide Programme ein kostenloses Microsoft 365 [Entwicklerabonnement,](https://aka.ms/MyVisualStudioBenefits)das für die Lebensdauer Ihres Visual Studio Abonnements aktiv ist. Weitere Informationen finden Sie unter [Einrichten eines Microsoft 365 Entwicklerabonnements.](/office/developer-program/office-365-developer-program-get-started)
 
 ### <a name="configuration-steps"></a>Konfigurationsschritte 
 
@@ -74,11 +74,11 @@ Wenn Sie dazu aufgefordert werden, melden Sie sich bei Ihrem Microsoft-Konto an,
 
 ## <a name="install-and-run-your-app-locally"></a>Lokales Installieren und Ausführen der App
 
-Drücken Sie F5, um das Debuggen zu starten. Das Dialogfeld für die App-Installation wird im Teams Client angezeigt.
+Drücken Sie F5, um das Debuggen zu starten. Das Dialogfeld für die App-Installation wird im Teams-Client angezeigt.
 
 ## <a name="validate-your-app"></a>Validieren Ihrer App
 
-Im Menü **Project > TeamsFx Validate > Teams Manifest** können Sie überprüfen, ob Ihr App-Paket gültig ist.
+Mit dem Menü **Project > TeamsFx Validate > Teams Manifest** können Sie überprüfen, ob Ihr App-Paket gültig ist.
 
 ## <a name="publish-your-app-to-teams"></a>Veröffentlichen Ihrer App in Teams
 

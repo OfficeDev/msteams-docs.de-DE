@@ -6,20 +6,20 @@ keywords: Teams O365-Connector
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 28a2b35e868baf34e35a11a00e10b30b0f09c236
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: e52402e841b675de7d0c19302b8c8090bcb90cef27ac61e8ac3d6dd69a0bb076
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179755"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709320"
 ---
 # <a name="create-office-365-connectors"></a>Erstellen von Office 365-Connectors
 
-Mit Microsoft Teams Apps können Sie Ihren vorhandenen Office 365 Connector hinzufügen oder einen neuen connector in Teams erstellen. Weitere Informationen finden Sie unter [Erstellen Eines eigenen Connectors.](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector)
+Mit Microsoft Teams Apps können Sie Ihren vorhandenen Office 365 Connector hinzufügen oder innerhalb Teams einen neuen erstellen. Weitere Informationen finden Sie unter [Erstellen Eines eigenen Connectors.](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector)
 
 ## <a name="add-a-connector-to-teams-app"></a>Hinzufügen eines Connectors zu Teams App
 
-Sie können Ihren Connector im Rahmen Ihrer AppSource-Übermittlung [verpacken](~/concepts/build-and-test/apps-package.md) und [veröffentlichen.](~/concepts/deploy-and-publish/apps-publish.md) Sie können Ihren registrierten Connector als Teil Ihres Teams-App-Pakets verteilen. Informationen zu Einstiegspunkten für Teams App finden Sie unter ["Funktionen".](~/concepts/extensibility-points.md) Sie können das Paket benutzern auch direkt zum Hochladen in Teams bereitstellen.
+Sie können Ihren Connector im Rahmen Ihrer AppSource-Übermittlung [verpacken](~/concepts/build-and-test/apps-package.md) und [veröffentlichen.](~/concepts/deploy-and-publish/apps-publish.md) Sie können Ihren registrierten Connector als Teil Ihres Teams-App-Pakets verteilen. Informationen zu Einstiegspunkten für Teams App finden Sie unter ["Funktionen".](~/concepts/extensibility-points.md) Sie können das Paket auch direkt für Benutzer bereitstellen, um es in Teams hochzuladen.
 
 Um Den Connector zu verteilen, müssen Sie sich über [das Connectors Developer Dashboard](https://outlook.office.com/connectors/home/login/#/publish)registrieren. Wenn ein Connector registriert ist, wird davon ausgegangen, dass er in allen Office 365 Produkten funktioniert, die Anwendungen unterstützen, einschließlich Outlook und Teams. Wenn dies nicht der Fall ist und Sie einen Connector erstellen müssen, der nur in Microsoft Teams funktioniert, wenden Sie sich an: [Microsoft Teams E-Mail-Adresse für App-Übermittlungen.](mailto:teamsubm@microsoft.com)
 
@@ -28,7 +28,7 @@ Um Den Connector zu verteilen, müssen Sie sich über [das Connectors Developer 
 
 ### <a name="integrate-the-configuration-experience"></a>Integrieren der Konfigurationsumgebung
 
-Benutzer können die gesamte Connectorkonfiguration abschließen, ohne den Teams-Client verlassen zu müssen. Um die Erfahrung zu erhalten, können Teams Ihre Konfigurationsseite direkt in einen iframe einbetten. Die Reihenfolge der Vorgänge lautet wie folgt:
+Benutzer können die gesamte Connectorkonfiguration abschließen, ohne den Teams Client verlassen zu müssen. Um die Erfahrung zu erhalten, können Teams Ihre Konfigurationsseite direkt in einen iframe einbetten. Die Reihenfolge der Vorgänge lautet wie folgt:
 
 1. Der Benutzer wählt den Connector aus, um mit dem Konfigurationsprozess zu beginnen.
 1. Der Benutzer interagiert mit der Weboberfläche, um die Konfiguration abzuschließen.
@@ -38,7 +38,7 @@ Benutzer können die gesamte Connectorkonfiguration abschließen, ohne den Teams
     > * Der Code kann das Speicherereignis verarbeiten, indem die Webhook-Einstellungen abgerufen werden. Ihr Code speichert den Webhook, um Ereignisse später zu posten.
     > * Die Konfigurationsoberfläche wird inline in Teams geladen.
 
-Sie können Ihre vorhandene Webkonfigurationsoberfläche wiederverwenden oder eine separate Version erstellen, die speziell in Teams gehostet werden soll. Ihr Code muss das Microsoft Teams JavaScript SDK enthalten. Dadurch erhält Ihr Code Zugriff auf APIs, um allgemeine Vorgänge auszuführen, z. B. den aktuellen Benutzer-, Kanal- oder Teamkontext abzurufen und Authentifizierungsflüsse zu initiieren.
+Sie können Ihre vorhandene Webkonfiguration wiederverwenden oder eine separate Version erstellen, die speziell in Teams gehostet werden soll. Ihr Code muss das Microsoft Teams JavaScript SDK enthalten. Dadurch erhält Ihr Code Zugriff auf APIs, um allgemeine Vorgänge auszuführen, z. B. den aktuellen Benutzer-, Kanal- oder Teamkontext abzurufen und Authentifizierungsflüsse zu initiieren.
 
 **So integrieren Sie die Konfigurationsumgebung**
 
@@ -163,7 +163,7 @@ Die folgende manifest.jszur Datei enthält die Elemente, die zum Testen und Übe
 > [!NOTE]
 > Ersetzen Sie `id` im folgenden Beispiel die `connectorId` GUID des Connectors.
 
-#### <a name="example-of-manifestjson-with-connector"></a>Beispiel für manifest.jsmit Connector
+#### <a name="example-of-manifestjson-with-connector"></a>Beispiel für manifest.jseingeschaltet mit Connector
 
 ```json
 {
@@ -224,7 +224,7 @@ Weitere Informationen zum Austausch von PowerShell-Modulen finden Sie unter ["Se
 
 ## <a name="test-your-connector"></a>Testen des Connectors
 
-Laden Sie den Connector mit einer anderen App in ein Team hoch, um den Connector zu testen. Sie können ein .zip-Paket mithilfe der Manifestdatei aus den beiden Symboldateien und Connectors Erstellen Entwicklerdashboard, geändert wie unter ["Einschließen des Connectors in Ihr Manifest"](#include-the-connector-in-your-manifest)angegeben.
+Laden Sie den Connector mit einer anderen App in ein Team hoch, um den Connector zu testen. Sie können ein .zip-Paket mithilfe der Manifestdatei aus den beiden Symboldateien und connectors Developer Dashboard erstellen, geändert wie unter ["Connector in Das Manifest einschließen"](#include-the-connector-in-your-manifest)angegeben.
 
 Nachdem Sie die App hochgeladen haben, öffnen Sie die Liste der Connectors aus einem beliebigen Kanal. Scrollen Sie nach unten, um Ihre App im Abschnitt **"Hochgeladen"** anzuzeigen:
 
@@ -250,6 +250,9 @@ Nachdem Sie das App-Paket hochgeladen haben, um den Connector in einem Team zu k
 1. Geben Sie im Suchfeld einen Team- oder Kanalnamen ein.
 1. Wählen Sie im Dropdownmenü in der unteren rechten Ecke des Dialogfelds die Option **"Connector einrichten"** aus.
 
+> [!IMPORTANT]
+> Derzeit sind benutzerdefinierte Connectors in Government Community Cloud (GCC), GCC-High und Department of Defense (DOD) nicht verfügbar.
+
 Der Connector ist im Abschnitt &#9679;&#9679;&#9679; > **Weitere Optionen** Connectors  >    >  **alle** Connectors für Ihr  >  **Team** für dieses Team verfügbar. Sie können navigieren, indem Sie zu diesem Abschnitt scrollen oder nach der Connector-App suchen. Um den Connector zu konfigurieren oder zu ändern, wählen Sie **Konfigurieren** aus.
 
 ## <a name="distribute-webhook-and-connector"></a>Verteilen von Webhook und Connector
@@ -264,8 +267,8 @@ Die folgende Tabelle enthält den Beispielnamen und dessen Beschreibung:
 
 |**Beispielname** | **Beschreibung** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Connectors    | Beispiel Office 365 Connector, der Benachrichtigungen an Teams Kanal generiert.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
-| Beispiel für generische Connectors |Beispielcode für einen generischen Connector, der für jedes System, das Webhooks unterstützt, einfach angepasst werden kann.|  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+| Connectors    | Beispiel Office 365 Connector, der Benachrichtigungen an Teams Kanal generiert.|   [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| Beispiel für generische Connectors |Beispielcode für einen generischen Connector, der für jedes System, das Webhooks unterstützt, einfach angepasst werden kann.|  | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## <a name="see-also"></a>Siehe auch
 
