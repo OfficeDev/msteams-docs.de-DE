@@ -1,17 +1,17 @@
 ---
 title: 'Lernprogramm – Erstellen Ihrer ersten App mit C #'
-description: Erfahren Sie, wie Sie mit C# oder .NET mit dem Erstellen Microsoft Teams Apps beginnen.
+description: Erfahren Sie, wie Sie mit dem Erstellen Microsoft Teams Apps mit C# oder .NET beginnen.
 keywords: Erste Schritte .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 localization_priority: Normal
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: f63e729400fa74f1675faddbe0b5f8fa101c8824
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 72cbaadbd3e641b9f142cec51b4d9fd9ef170f727c87ed97c84e392943b84af3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254344"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707336"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>Erstellen Ihrer ersten Teams-App mit C #
 
@@ -148,7 +148,7 @@ Visual Studio bietet integrierte Unterstützung für die App-Bereitstellung für
 
 1. Wählen Sie **"Hello World"** aus, und wählen Sie **"Importieren"** aus. Die **Hello World-App** wird im Entwicklerportal importiert. 
 
-    Sie können Ihre App über das Teams Entwicklerportal konfigurieren. Das Manifest befindet sich unter "Verteilen". Sie können das Manifest verwenden, um Funktionen, erforderliche Ressourcen und andere wichtige Attribute für Ihre App zu konfigurieren. Weitere Informationen zum Konfigurieren Ihrer App mithilfe des Entwicklerportals finden Sie unter [Teams Developer Portal.](../concepts/build-and-test/teams-developer-portal.md)
+    Sie können Ihre App über das Teams Entwicklerportal konfigurieren. Das Manifest befindet sich unter "Verteilen". Sie können das Manifest verwenden, um Funktionen, erforderliche Ressourcen und andere wichtige Attribute für Ihre App zu konfigurieren. Weitere Informationen zum Konfigurieren Ihrer App mithilfe des Entwicklerportals finden Sie [unter Teams Developer Portal.](../concepts/build-and-test/teams-developer-portal.md)
 
     <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
 ---
@@ -205,7 +205,7 @@ Sie können den Bot jetzt in Teams testen.
 
     <img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 * [Übersicht über Lernprogramme](code-samples.md)
 * [Erstellen einer Unterhaltungs-Bot-App](first-app-bot.md)

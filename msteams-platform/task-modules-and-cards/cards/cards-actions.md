@@ -4,12 +4,12 @@ description: Beschreibt Kartenaktionen in Microsoft Teams und deren Verwendung i
 localization_priority: Normal
 ms.topic: conceptual
 keywords: Teams-Bots – Kartenaktionen
-ms.openlocfilehash: 4af152f6179785687d4fd7371d202c56e1aee170
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
-ms.translationtype: HT
+ms.openlocfilehash: b7c6641078d835ec92975924aaf64da1573757211413da99184bd86c9465b53e
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254202"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705328"
 ---
 # <a name="card-actions"></a>Kartenaktionen
 

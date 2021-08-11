@@ -5,16 +5,16 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams veröffentlichen die AppSource-Lokalisierungssprache für Store-Veröffentlichungen
 ms.date: 05/15/2018
-ms.openlocfilehash: 5410d6f829c3fec9b5d631452e459bd276df472e
-ms.sourcegitcommit: c145d52b2d4daa7655e6c3ddfa739fa1beeb8d6a
+ms.openlocfilehash: 403314eb732aef0a0813dc56c37cd3c34eecafd3754a74a4946a70f33d9fbde7
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "53455213"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705573"
 ---
 # <a name="localize-your-app"></a>Lokalisieren IhrerApp
 
-Sie müssen die folgenden Faktoren berücksichtigen, um Ihre Microsoft Teams App zu lokalisieren:
+Sie müssen die folgenden Faktoren berücksichtigen, um Ihre Microsoft Teams-App zu lokalisieren:
 
 1. [Lokalisieren Sie Ihren AppSource-Eintrag.](#localize-your-appsource-listing)
 1. [Lokalisieren Sie Zeichenfolgen in Ihrem App-Manifest.](#localize-strings-in-your-app-manifest) 

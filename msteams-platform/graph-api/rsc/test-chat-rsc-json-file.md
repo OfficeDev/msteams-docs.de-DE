@@ -1,17 +1,17 @@
 ---
 title: Testen der ressourcenspezifischen Zustimmung für einen Chat in Teams
-description: Testen der ressourcenspezifischen Zustimmung für einen Chat in Teams mitHilfe von Postman
+description: So testen Sie die ressourcenspezifische Zustimmung für einen Chat in Teams mit Postman
 localization_priority: Normal
 author: jecha
 ms.author: jecha
 ms.topic: how-to
 keywords: Teams-Autorisierung OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 3ca4c00e59f2fe8f3ed03223b58c37927cf527ad
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 50fc8919e438bc849a76cb4d9a7f49449e7ff072dfae18edb66db23e7991d8d1
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994403"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708040"
 ---
 # <a name="test-chat-rsc-postman-collection-for-json"></a>Testchat RSC Postman-Sammlung für JSON
 

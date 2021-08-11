@@ -1,20 +1,20 @@
 ---
-title: Erste Schritte – Erstellen Sie Ihre erste Teams-App mitHilfe von Doppelklicken
+title: Erste Schritte – Erstellen Sie Ihre erste Teams-App mitHilfe von Doppelklick
 author: adrianhall
 description: Erstellen Sie mithilfe von Microsoft Teams-Toolkit und React schnell eine Microsoft Teams-App, mithilfe des Microsoft Teams Toolkits und .NET Mofzor.
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: a749d70875948d606f42688fea74c1e0bf79817e
-ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
+ms.openlocfilehash: eb3f5c66a8e7c6f19c96d192fb8b84124b6203d47d54f161633dd12969adbb17
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53428737"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707187"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Erstellen und Ausführen Ihrer ersten Microsoft Teams-App mit Demerz
 
-In diesem Lernprogramm erfahren Sie, wie Sie eine neue Microsoft Teams-App in .NET/Doppelklickmicron erstellen, die eine einfache persönliche App implementiert, um Informationen aus der Microsoft-Graph abzurufen. Beispielsweise enthält eine *persönliche App* eine Reihe von Registerkarten für die individuelle Verwendung. Während des Lernprogramms erfahren Sie mehr über die Struktur einer Teams-App, wie Sie eine App lokal ausführen und wie Sie die App in Azure bereitstellen.
+In diesem Lernprogramm erfahren Sie, wie Sie eine neue Microsoft Teams-App in .NET/Doppelklicken erstellen, die eine einfache persönliche App zum Abrufen von Informationen aus dem Microsoft Graph implementiert. Beispielsweise enthält eine *persönliche App* eine Reihe von Registerkarten für die individuelle Verwendung. Während des Lernprogramms erfahren Sie mehr über die Struktur einer Teams-App, wie Sie eine App lokal ausführen und wie Sie die App in Azure bereitstellen.
 
 In der erstellten App werden grundlegende Benutzerinformationen für den aktuellen Benutzer angezeigt.  Wenn die Berechtigung dazu erteilt wurde, stellt die App eine Verbindung mit Microsoft Graph als aktueller Benutzer her, um das vollständige Profil zu erhalten.
 
@@ -43,7 +43,7 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 
 1. Wählen Sie **Erstellen** aus.  Der Anwendungsname und der Firmenname werden Ihren Endbenutzern angezeigt. Ihre Microsoft Teams-App wird innerhalb weniger Sekunden erstellt.  Nachdem das Projekt erstellt wurde, richten Sie einmaliges Anmelden mit M365 ein:
 
-   1. Wählen Sie **Project**  >  **TeamsFx**  >  **Konfigurieren für SSO... aus.**
+   1. Wählen Sie **Project**  >  **TeamsFx**  >  **Configure for SSO... aus.**
    1. Melden Sie sich bei Ihrem M365-Administratorkonto an, wenn Sie dazu aufgefordert werden.
 
 # <a name="command-line"></a>[Befehlszeile](#tab/cli)
@@ -84,7 +84,7 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 
 Wenn Sie diesen Abschnitt vorerst überspringen möchten, können Sie [Ihre App lokal ausführen](#run-your-app-locally).
 
-Nachdem das Teams Toolkit Ihr Projekt konfiguriert hat, verfügen Sie über die Komponenten zum Erstellen einer einfachen persönlichen App für Teams. Die Projektverzeichnisse und Dateien werden im Projektmappen-Explorer-Bereich von Visual Studio 2019 angezeigt.
+Nachdem das Teams Toolkit Ihr Projekt konfiguriert hat, verfügen Sie über die Komponenten zum Erstellen einer einfachen persönlichen App für Teams. Die Im Projektmappen-Explorer-Bereich von Visual Studio 2019 angezeigten Projektverzeichnisse und Dateien.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-file-layout.png" alt-text="Screenshot der App-Projektdateien für eine persönliche App in Visual Studio 2019.":::
 
@@ -95,7 +95,7 @@ Nachdem das Teams Toolkit Ihr Projekt konfiguriert hat, verfügen Sie über die 
 Da Sie während des Setups eine Registerkarten-App erstellt haben, erstellt das Teams-Toolkit das Gerüst für den gesamten erforderlichen Code für eine einfache Registerkarte als [Einenzockserver.](/aspnet/core/blazor)
 
 - `Pages/Tab.razor` ist der Einstiegspunkt der Front-End-Anwendung.
-- `TeamsFx.cs``JS/src/index.js`und wird für die Initialisierung der Kommunikation mit dem Teams Host verwendet.
+- `TeamsFx.cs``JS/src/index.js`wird für die Initialisierung der Kommunikation mit dem Teams Host verwendet.
 
 Sie können Back-End-Funktionen hinzufügen, indem Sie Ihrer Anwendung zusätzliche ASP.NET Core-Controller hinzufügen.
 
@@ -104,7 +104,7 @@ Sie können Back-End-Funktionen hinzufügen, indem Sie Ihrer Anwendung zusätzli
 Das Microsoft Teams-Toolkit ermöglicht es Ihnen, Ihre App lokal auszuführen.  Dies besteht aus mehreren Teilen, die für die Bereitstellung der richtigen, von Microsoft Teams erwarteten Infrastruktur erforderlich sind:
 
 - Es wird eine Anwendung bei Azure Active Directory registriert.  Diese Anwendung verfügt über Berechtigungen, die mit dem Speicherort, von dem die App geladen wird, und allen Back-End-Ressourcen verknüpft sind, auf die sie zugreift.
-- Eine Web-API wird (über IIS Express) gehostet, um Authentifizierungsaufgaben zu unterstützen, die als Proxy zwischen der App und Azure Active Directory fungieren.  
+- Eine Web-API wird (über IIS Express) gehostet, um Authentifizierungsaufgaben zu unterstützen und als Proxy zwischen der App und Azure Active Directory zu fungieren.  
 - Es wird ein App-Manifest generiert und im Entwicklerportal für Microsoft Teams verfügbar gemacht.  Microsoft Teams verwendet das App-Manifest, um die verbundenen Clients darüber zu informieren, von wo die App geladen werden soll.
 
 Danach kann die App innerhalb des Teams-Clients geladen werden.  Wir verwenden den Microsoft Teams-Webclient, um den HTML-, CSS- und JavaScript-Code in einer standardmäßigen Webentwicklungsumgebung anzuzeigen.
@@ -137,7 +137,7 @@ Wenn Sie die **F5-Taste** drücken, wird das Teams Toolkit:
 
 1. Registriert Ihre Anwendung bei Azure Active Directory.
 1. Registriert Ihre Anwendung für das "Querladen" in Microsoft Teams.
-1. Startet das Anwendungs-Back-End, das lokal ausgeführt wird.
+1. Startet das Anwendungs-Back-End lokal.
 1. Startet das lokal gehostete Anwendungs-Front-End.
 1. Startet Microsoft Teams in einem Webbrowser mit einem Befehl, um Teams anzuweisen, die Anwendung querzuladen (die URL wird im Anwendungsmanifest registriert).
 
@@ -147,7 +147,7 @@ Wenn Sie die **F5-Taste** drücken, wird das Teams Toolkit:
 <details>
 <summary>Erfahren Sie, wie Sie häufige Probleme bei dem lokalen Ausführen Ihrer App lösen können.</summary>
 
-Um Ihre App erfolgreich in Teams ausführen zu können, benötigen Sie ein Microsoft 365 Entwicklungskonto, das das Laden der App-Seite ermöglicht. Weitere Informationen zum Öffnen von Apps finden Sie unter [Erforderliche Komponenten](prerequisites.md#enable-sideloading).
+Um Ihre App erfolgreich in Teams ausführen zu können, benötigen Sie ein Microsoft 365 Entwicklungskonto, das das Querladen der App ermöglicht. Weitere Informationen zum Öffnen von Apps finden Sie unter [Erforderliche Komponenten](prerequisites.md#enable-sideloading).
 
 </details>
 
@@ -257,7 +257,7 @@ Das App-Manifest lädt die Registerkarte von einer `localhost` URL.  In diesem A
 
 1. Wählen Sie **Aktualisieren** aus.
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern** aus.
 
 1. Wählen Sie in der Seitenleiste **single Sign-On** aus.
 
@@ -265,7 +265,7 @@ Das App-Manifest lädt die Registerkarte von einer `localhost` URL.  In diesem A
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments8.png" alt-text="Bearbeiten des Anwendungs-ID-URI für einmaliges Anmelden":::
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern** aus.
 
 1. Wählen Sie in der Seitenleiste **Domänen** aus.
 
@@ -275,9 +275,9 @@ Das App-Manifest lädt die Registerkarte von einer `localhost` URL.  In diesem A
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments9.png" alt-text="Hinzufügen einer Domäne":::
 
-   Sie können jetzt die Option **"Vorschau in Teams"** oben auf der Seite verwenden, um Ihre App in Teams zu starten.
+   Sie können jetzt die Option **"Vorschau in Teams"** oben auf der Seite verwenden, um Ihre App innerhalb Teams zu starten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Übersicht über Lernprogramme](code-samples.md)
 * [Erstellen einer Unterhaltungs-Bot-App](first-app-bot.md)

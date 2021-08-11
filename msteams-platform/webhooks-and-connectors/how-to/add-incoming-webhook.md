@@ -6,12 +6,12 @@ keywords: Teams-Registerkarten für ausgehenden Webhook
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 53fe9725148579325386fa4677bebb61fdb72c56
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: c5f90da64fe846e6579bc47de2edcd900d6ee6ba3a640788fba440734f55b7ec
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140118"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705356"
 ---
 # <a name="create-incoming-webhook"></a>Erstellen eines eingehenden Webhooks
 
@@ -59,7 +59,7 @@ Die folgende Tabelle enthält die Features und die Beschreibung des eingehenden 
 Der Webhook ist im Teams Kanal verfügbar.
 
 > [!NOTE]
-> Wählen Sie in Teams **Einstellungen**  >  **Mitgliedsberechtigungen** aus, damit Mitglieder Connectors  >  **erstellen, aktualisieren und entfernen können,** damit jedes Teammitglied einen Connector hinzufügen, ändern oder löschen kann.
+> Wählen Sie in Teams **Einstellungen**  >  **Mitgliedsberechtigungen**  >  zulassen, dass Mitglieder Connectors **erstellen, aktualisieren und entfernen** können, damit jedes Teammitglied einen Connector hinzufügen, ändern oder löschen kann.
 
 ## <a name="remove-incoming-webhook"></a>Entfernen des eingehenden Webhooks
 
@@ -91,8 +91,8 @@ Der Webhook ist im Teams Kanal verfügbar.
 
     Der Webhook wird aus dem Teams-Kanal entfernt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Erstellen eines ausgehenden Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Erstellen eines Office 365-Connectors](~/webhooks-and-connectors/how-to/connectors-creating.md)
-* [Erstellen und Senden von Nachrichten](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [Nachrichten erstellen und senden](~/webhooks-and-connectors/how-to/connectors-using.md)

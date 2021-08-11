@@ -6,16 +6,16 @@ ms.topic: overview
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Teams-Apps – Benutzerteilnehmer-Rollen-API für Besprechungen
-ms.openlocfilehash: 0ba475e852b8dc673d33ac818077b3b0951ac5f9
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: f86e6fe359b5c3cdf76372e82a4faa0403d529bfd94d473e7f924e449826aa29
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068568"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702138"
 ---
 # <a name="apps-for-teams-meetings"></a>Apps für Teams Besprechungen
 
-Besprechungen ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikation und gemeinsames Feedback in einem inklusiven und aktiven Forum. Die Besprechungs-App kann je nach Status des Teilnehmers eine Benutzererfahrung für jede Phase des Besprechungslebenszyklus bereitstellen, einschließlich der App-Erfahrung vor der Besprechung, in besprechungsbesprechung und nach der Besprechung.
+Besprechungen ermöglichen zusammenarbeiten, Partnerschaft, informierte Kommunikation und gemeinsames Feedback in einem inklusiven und aktiven Forum. Die Besprechungs-App kann je nach Status des Teilnehmers eine Benutzererfahrung für jede Phase des Besprechungslebenszyklus bereitstellen, einschließlich der App-Erfahrung vor der Besprechung, in besprechungsbesprechung und nach der Besprechung.
 
 Die Benutzer können während Besprechungen über den Registerkartenkatalog auf Apps zugreifen, z. B.:
 
@@ -33,7 +33,7 @@ Um Teams mit Apps für Besprechungen anzupassen, können Sie Ihre Apps für Team
 
 Mit der neuen benutzerdefinierten Szenenfunktion für den gemeinsamen Modus können Benutzer in einer Besprechung mit ihrem Team an einem Ort zusammenarbeiten, ohne durch Felder getrennt zu sein.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)

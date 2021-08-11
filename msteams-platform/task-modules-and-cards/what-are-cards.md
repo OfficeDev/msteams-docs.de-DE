@@ -4,12 +4,12 @@ description: Beschreibt Karten und deren Verwendung in Bots, Connectors und Mess
 localization_priority: Normal
 keywords: Connectors Bots Karten Messaging
 ms.topic: overview
-ms.openlocfilehash: f895423e5755dd85a7618b8907c4c3b0acbc3cf4
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 5fce5983e5197bfde37d2c92d427e8135b294d422eb019ef207eeb7f0e5be9f3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140544"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706632"
 ---
 # <a name="cards"></a>Karten
 
@@ -25,13 +25,13 @@ Teams verwendet Karten an drei verschiedenen Stellen:
 
 ## <a name="cards-in-connectors"></a>Karten in Connectors
 
-Karten wurden zuerst als Teil von Outlook und Office 365 definiert und werden jetzt als Teil von Office 365 Connectors verwendet. Wie viele Office 365 Anwendungen unterstützt Teams Connectors. Weitere Informationen finden Sie unter [Office 365 Connectors für Teams.](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) Sie finden die Spezifikation für Karten in Connectors in Referenz [zu Nachrichtenkarten](/outlook/actionable-messages/card-reference)mit Aktionen.
+Karten wurden zuerst als Teil von Outlook und Office 365 definiert und werden jetzt als Teil Office 365 Connectors verwendet. Wie viele Office 365 Anwendungen unterstützt Teams Connectors. Weitere Informationen finden Sie unter [Office 365 Connectors für Teams.](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) Sie finden die Spezifikation für Karten in Connectors in Referenz [zu Nachrichtenkarten](/outlook/actionable-messages/card-reference)mit Aktionen.
 
 ## <a name="cards-in-bots"></a>Karten in Bots
 
-Die Microsoft Bot Framework erweitert die Kartenspezifikation, indem eine Reihe vordefinierter Karten hinzugefügt wird, die Bots als Teil von Botnachrichten verwenden können. Teams unterstützt Bots mithilfe des Bot-Frameworks, unterstützt jedoch einen anderen Satz dieser Karten. Allgemeine Informationen zu Karten in Bot Framework finden Sie unter [Hinzufügen von Rich-Card-Anlagen zu Nachrichten.](/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards) Diese Karten werden in Teams als einfache Karten bezeichnet.
+Der Microsoft Bot Framework erweitert die Kartenspezifikation, indem eine Reihe vordefinierter Karten hinzugefügt wird, die Bots als Teil von Botnachrichten verwenden können. Teams unterstützt Bots mithilfe des Bot Frameworks, unterstützt jedoch einen anderen Satz dieser Karten. Allgemeine Informationen zu Karten in Bot Framework finden Sie unter [Hinzufügen von Rich-Card-Anlagen zu Nachrichten.](/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards) Diese Karten werden in Teams als einfache Karten bezeichnet.
 
-Bots in Teams können einfache Karten, Connectorkarten oder adaptive Karten verwenden. [Kartentypen](~/task-modules-and-cards/cards/cards-reference.md) enthalten Informationen zu Karten, die von Bots in Teams unterstützt werden.
+Bots in Teams können einfache Karten, Connectorkarten oder adaptive Karten verwenden. [Kartentypen](~/task-modules-and-cards/cards/cards-reference.md) bieten Informationen zu Karten, die von Bots in Teams unterstützt werden.
 
 ## <a name="cards-in-messaging-extensions"></a>Karten in Messaging-Erweiterungen
 
@@ -39,13 +39,13 @@ Bots in Teams können einfache Karten, Connectorkarten oder adaptive Karten verw
 
 ## <a name="types-of-cards"></a>Kartentypen
 
-Alle von Teams verwendeten Karten werden in [Kartentypen](~/task-modules-and-cards/cards/cards-reference.md)aufgeführt. In dieser Referenz werden auch Die Unterschiede zwischen Bot Framework-Karten und Karten in Teams beschrieben.
+Alle von Teams verwendeten Karten werden in [Kartentypen](~/task-modules-and-cards/cards/cards-reference.md)aufgeführt. In dieser Referenz werden auch die Unterschiede zwischen Bot Framework-Karten und Karten in Teams beschrieben.
 
 ## <a name="adaptive-cards"></a>Adaptive Karten
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
 
-[Adaptive Karten](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) sind eine neue produktübergreifende Spezifikation für Karten in Microsoft-Produkten, einschließlich Bots, Cortana, Outlook und Windows. Sie sind der empfohlene Kartentyp für neue Teams Entwicklung. Allgemeine Informationen vom Team für adaptive Karten finden Sie unter ["Übersicht über adaptive Karten".](/adaptive-cards) Sie können adaptive Karten überall verwenden, wo Sie vorhandene Favoritenkarten, Office 365 karten und Miniaturansichtskarten verwenden.
+[Adaptive Karten](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) sind eine neue produktübergreifende Spezifikation für Karten in Microsoft-Produkten, einschließlich Bots, Cortana, Outlook und Windows. Sie sind der empfohlene Kartentyp für neue Teams Entwicklung. Allgemeine Informationen vom Team für adaptive Karten finden Sie unter ["Übersicht über adaptive Karten".](/adaptive-cards) Sie können adaptive Karten überall verwenden, wo Sie vorhandene Hero-Karten, Office 365 karten und Miniaturansichtskarten verwenden.
 
 Zusätzlich zu adaptiven Karten unterstützt Teams zwei andere Arten von Karten:
 
@@ -62,7 +62,7 @@ Zusätzlich zu adaptiven Karten unterstützt Teams zwei andere Arten von Karten:
 
 Mit adaptiven Karten mit eingehenden Webhooks können Sie die umfangreichen und flexiblen Funktionen adaptiver Karten nutzen. Es sendet Daten mit eingehenden Webhooks in Teams von ihrem Webdienst.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Formatieren von Karten in Teams](~/task-modules-and-cards/cards/cards-format.md)
 * [Entwerfen adaptiver Karten](~/task-modules-and-cards/cards/design-effective-cards.md)

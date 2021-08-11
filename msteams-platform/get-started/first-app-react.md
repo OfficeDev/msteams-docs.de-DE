@@ -5,16 +5,16 @@ description: Erstellen Sie mithilfe von Microsoft Teams-Toolkit und React schnel
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: c257bcd805a6b7b38ab657cb31cad961df1c4704
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 7d043c904521f33946510de60f539dc27dd6b687bc74bbb89aa35f9d267fe8ef
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254321"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707077"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>Erstellen und Ausführen Ihrer ersten Microsoft Teams-App mit React
 
-In diesem Lernprogramm erfahren Sie, wie Sie eine neue Microsoft Teams-App in React erstellen, die eine einfache persönliche App zum Abrufen von Informationen aus dem Microsoft Graph implementiert. Beispielsweise enthält eine *persönliche App* eine Reihe von Registerkarten für die individuelle Verwendung. Während des Lernprogramms erfahren Sie mehr über die Struktur einer Teams-App, wie Sie eine App lokal ausführen und wie Sie die App in Azure bereitstellen.
+In diesem Lernprogramm erfahren Sie, wie Sie eine neue Microsoft Teams-App in React erstellen, die eine einfache persönliche App implementiert, um Informationen aus dem Microsoft Graph abzurufen. Beispielsweise enthält eine *persönliche App* eine Reihe von Registerkarten für die individuelle Verwendung. Während des Lernprogramms erfahren Sie mehr über die Struktur einer Teams-App, wie Sie eine App lokal ausführen und wie Sie die App in Azure bereitstellen.
 
 In der erstellten App werden grundlegende Benutzerinformationen für den aktuellen Benutzer angezeigt. Wenn die Berechtigung dazu erteilt wurde, stellt die App eine Verbindung mit Microsoft Graph als aktueller Benutzer her, um das vollständige Profil zu erhalten.
 
@@ -135,7 +135,7 @@ So erstellen Sie Ihre App und führen sie lokal aus:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot mit Dialogfenster zum Installieren eines SSL-Zertifikats, damit Microsoft Teams Ihre Anwendung von localhost laden kann.":::
 
-1. Ihr Webbrowser beginnt mit der Ausführung der App. Wenn Sie aufgefordert werden, Teams Desktop zu öffnen, wählen Sie **"Abbrechen"** aus, um im Browser zu verbleiben. Sie werden möglicherweise auch aufgefordert, zu anderen Zeiten zu Teams Desktop zu wechseln. wählen Sie in diesem Fall die Teams Web-App aus.
+1. Ihr Webbrowser beginnt mit der Ausführung der App. Wenn Sie aufgefordert werden, Teams Desktop zu öffnen, wählen Sie **"Abbrechen"** aus, um im Browser zu verbleiben. Möglicherweise werden Sie auch aufgefordert, zu anderen Zeiten zu Teams Desktop zu wechseln. Wählen Sie in diesem Fall die Teams Web-App aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot, der zeigt, wie die Web-Version von Microsoft Teams beim Start ausgewählt wird.":::
 
@@ -152,7 +152,7 @@ Sie können normale Debugaktivitäten ausführen, als wäre dies eine andere Web
 <details>
 <summary>Erfahren Sie, was geschieht, wenn Sie Ihre App lokal im Debugger ausführen.</summary>
 
-Wenn Sie **F5** drücken, hat das Teams Toolkit Folgendes:
+Wenn Sie die **F5-Taste** drücken, wird das Teams Toolkit:
 
 * Registriert Ihre Anwendung bei Azure Active Directory.
 * *Lädt* Ihre App in Teams quer.
@@ -188,7 +188,7 @@ Die Bereitstellung umfasst die Bereitstellung von Ressourcen für ein aktives Az
 
 </details>
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 * [Übersicht über Lernprogramme](code-samples.md)
 * [Erstellen einer Unterhaltungs-Bot-App](first-app-bot.md)

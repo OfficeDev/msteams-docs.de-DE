@@ -4,39 +4,39 @@ author: surbhigupta12
 description: Empfangen aller Kanalnachrichten mit RSC-Berechtigungen
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 833bdbc015cf852fcd899ce4e75f742448b89978
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 8ddbb3cd7ffa8f02caea2fb0e1e74abb9b64ffe94bb34b8a09561e744cea25b5
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631326"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705874"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Empfangen aller Kanalnachrichten mit RSC
 
 > [!NOTE]
 > Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../../../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
-Das ressourcenspezifische Berechtigungsmodell (Resource-Specific Consent, RSC), das ursprünglich für Teams Graph-APIs entwickelt wurde, wurde nun auf Botszenarien erweitert.
+Das ressourcenspezifische Zustimmungsmodell (RSC), das ursprünglich für Teams Graph-APIs entwickelt wurde, wurde jetzt auf Bot-Szenarien erweitert.
 
-Derzeit können Bots nur Benutzerkanalnachrichten empfangen, wenn sie @mentioned. Mithilfe von RSC können Sie teambesitzer nun bitten, einem Bot zu zustimmen, Benutzernachrichten über Standardkanäle in einem Team zu empfangen, ohne dass @mentioned. Diese Funktion wird durch Angeben der Berechtigung im Manifest einer `ChannelMessage.Read.Group` RSC-aktivierten Teams aktiviert. Nach der Konfiguration können Teambesitzer während des App-Installationsvorgangs ihre Zustimmung erteilen.
+Derzeit können Bots nur Benutzerkanalnachrichten empfangen, wenn sie @mentioned sind. Mithilfe von RSC können Sie jetzt Teambesitzer bitten, zuzustimmen, dass ein Bot Benutzernachrichten über Standardkanäle in einem Team empfängt, ohne @mentioned zu werden. Diese Funktion wird aktiviert, indem die `ChannelMessage.Read.Group` Berechtigung im Manifest einer RSC-aktivierten Teams-App angegeben wird. Nach der Konfiguration können Teambesitzer während des App-Installationsvorgangs ihre Zustimmung erteilen.
 
-Weitere Informationen zum Aktivieren von RSC für Ihre App finden Sie unter [ressourcenspezifische](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest)Zustimmung in Teams .
+Weitere Informationen zum Aktivieren von RSC für Ihre App finden Sie unter [ressourcenspezifischer Zustimmung in Teams.](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest)
 
-## <a name="enable-bots-to-receive-all-channel-messages"></a>Aktivieren von Bots zum Empfangen aller Kanalnachrichten
+## <a name="enable-bots-to-receive-all-channel-messages"></a>Bots den Empfang aller Kanalnachrichten ermöglichen
 
-Die `ChannelMessage.Read.Group` RSC-Berechtigung wird auf Bots erweitert. Mit dieser Berechtigung können Graph-Anwendungen mit Zustimmung des Benutzers alle Nachrichten in einer Unterhaltung und Bots alle Kanalnachrichten empfangen, ohne dass sie @mentioned.
+Die `ChannelMessage.Read.Group` RSC-Berechtigung wird auf Bots erweitert. Mit der Zustimmung des Benutzers ermöglicht diese Berechtigung Graph-Anwendungen, alle Nachrichten in einer Unterhaltung abzurufen, und Bots, um alle Kanalnachrichten zu empfangen, ohne @mentioned zu werden.
 
 ## <a name="update-app-manifest"></a>Aktualisieren des App-Manifests
 
-Damit Ihr Bot alle Kanalnachrichten empfangen kann, muss RSC im Teams-App-Manifest mit der in der `ChannelMessage.Read.Group` Eigenschaft angegebenen Berechtigung konfiguriert `webApplicationInfo` werden.
+Damit Ihr Bot alle Kanalnachrichten empfangen kann, muss RSC im Teams App-Manifest mit der in der Eigenschaft angegebenen Berechtigung konfiguriert `ChannelMessage.Read.Group` `webApplicationInfo` werden.
 
 ![Aktualisieren des App-Manifests](~/bots/how-to/conversations/Media/appmanifest.png)
 
 Es folgt ein Beispiel für das `webApplicationInfo` Objekt:
 
-* **id**: Ihre Azure Active Directory (AAD)-App-ID. Dies kann mit Ihrer Bot-ID identisch sein.
-* **resource**: Any string. Dieses Feld hat keinen Vorgang in RSC, muss jedoch hinzugefügt werden und über einen Wert verfügen, um Fehlerantworten zu vermeiden.
-* **applicationPermissions**: RSC-Berechtigungen für Ihre App `ChannelMessage.Read.Group` mit müssen angegeben werden. Weitere Informationen finden Sie unter [ressourcenspezifische Berechtigungen](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
+* **id:** Ihre Azure Active Directory (AAD)-App-ID. Dies kann mit Ihrer Bot-ID identisch sein.
+* **ressource:** Eine beliebige Zeichenfolge. Dieses Feld verfügt über keinen Vorgang in RSC, muss jedoch hinzugefügt werden und einen Wert aufweisen, um eine Fehlerantwort zu vermeiden.
+* **applicationPermissions:** RSC-Berechtigungen für Ihre App mit `ChannelMessage.Read.Group` müssen angegeben werden. Weitere Informationen finden Sie unter [ressourcenspezifische Berechtigungen.](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions)
 
 Der folgende Code enthält ein Beispiel für das App-Manifest:
 
@@ -50,37 +50,37 @@ Der folgende Code enthält ein Beispiel für das App-Manifest:
   }
 ```
 
-## <a name="sideload-in-a-team-to-test"></a>Querladen in einem zu testenden Team
+## <a name="sideload-in-a-team-to-test"></a>Querladen in einem Team zum Testen
 
-So laden Sie in einem Team quer, um zu testen, ob alle Kanalnachrichten in einem Team mit RSC empfangen werden, ohne dass @mentioned:
+Wenn Sie in einem Team querladen möchten, um zu testen, ob alle Kanalnachrichten in einem Team mit RSC empfangen werden, ohne @mentioned:
 
-1. Wählen Oder erstellen Sie ein Team.
-1. Wählen Sie die ellipsen &#x25CF;&#x25CF;&#x25CF; linken Bereich aus. Das Dropdownmenü wird angezeigt.
-1. Wählen **Sie team verwalten** im Dropdownmenü aus. Die Details werden angezeigt.
+1. Wählen Sie ein Team aus, oder erstellen Sie es.
+1. Wählen Sie die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; im linken Bereich aus. Das Dropdownmenü wird angezeigt.
+1. Wählen Sie im Dropdownmenü die Option **"Team verwalten"** aus. Die Details werden angezeigt.
 
    ![Verwalten von Apps im Team](~/bots/how-to/conversations/Media/managingteam.png)
 
 1. Wählen Sie **Apps** aus. Es werden mehrere Apps angezeigt.
-1. Wählen **Hochladen eine benutzerdefinierte App aus** der unteren rechten Ecke aus.
+1. Wählen Sie in der unteren rechten Ecke **Hochladen einer benutzerdefinierten App** aus.
 
-    ![Hochladen benutzerdefinierter Apps](~/bots/how-to/conversations/Media/uploadingcustomapp.png)
+    ![Hochladen einer benutzerdefinierten App](~/bots/how-to/conversations/Media/uploadingcustomapp.png)
 
-1. Wählen Sie das App-Paket im Dialogfeld **Öffnen** aus.
+1. Wählen Sie im Dialogfeld **"Öffnen"** das App-Paket aus.
 1. Klicken Sie auf **Öffnen**.
 
     ![Auswählen des App-Pakets](~/bots/how-to/conversations/Media/selectapppackage.png)
 
-1. Wählen **Sie Im** Popup app-Details hinzufügen aus, um den Bot zu Ihrem ausgewählten Team hinzuzufügen.
+1. Wählen Sie im Popup "App-Details" die Option **"Hinzufügen"** aus, um den Bot ihrem ausgewählten Team hinzuzufügen.
 
     ![Hinzufügen des Bots](~/bots/how-to/conversations/Media/addingbot.png)
 
 1. Wählen Sie einen Kanal aus, und geben Sie eine Nachricht im Kanal für Ihren Bot ein.
 
-    Der Bot empfängt die Nachricht, ohne dass @mentioned.
+    Der Bot empfängt die Nachricht, ohne @mentioned zu werden.
 
     ![Bot empfängt Nachricht](~/bots/how-to/conversations/Media/botreceivingmessage.png)
 
-## <a name="see-also"></a>Sehen Sie ebenfalls
+## <a name="see-also"></a>Weitere Informationen
 
 * [Bot-Unterhaltungen](/microsoftteams/platform/bots/how-to/conversations/conversation-basics)
 * [Ressourcenspezifische Zustimmung](/microsoftteams/resource-specific-consent)

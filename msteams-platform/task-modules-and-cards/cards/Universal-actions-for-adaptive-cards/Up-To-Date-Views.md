@@ -1,28 +1,28 @@
 ---
 title: Aktuelle Ansichten
-description: Beispiel für aktuelle Ansichten mithilfe von Universal Bot
+description: Beispiel für aktuelle Ansichten mit universellem Bot
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 2027d07961929fb40e7afc3ee268e1267b235a02
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 83cb86bc4b9b8b3a8cfc48cfbb761cf71c8417267731f3cbfc44f077ca5e99b8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088888"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707420"
 ---
 # <a name="up-to-date-cards"></a>Aktuelle Karten
 
-Sie können Ihren Benutzern jetzt aktuelle Informationen zu adaptiven Karten mit einer Kombination aus Aktualisierungs- und Nachrichtenbearbeitungen in Teams. Dadurch können Sie die benutzerspezifischen Ansichten dynamisch auf den neuesten Status aktualisieren, wenn eine Änderung an Ihrem Dienst vor sich geht. Bei Projektverwaltungs- oder Ticketkarten können Sie beispielsweise Kommentare und den Status der Aufgabe aktualisieren. Bei Genehmigungen wird der neueste Zustand widersspiegelt und gleichzeitig differenzierte Informationen und Aktionen zur Verfügung stellt.
+Jetzt können Sie Ihren Benutzern auf adaptiven Karten die neuesten Informationen zur Verfügung stellen. Fügen Sie eine Kombination aus Aktualisierungs- und Nachrichtenbearbeitungen in Teams ein. Aktualisieren Sie die benutzerspezifischen Ansichten dynamisch auf den neuesten Status, wenn eine Änderung für Ihren Dienst vorliegt. Aktualisieren Sie z. B. für Projektmanagement- oder Ticketkarten Kommentare und den Aufgabenstatus. Für Genehmigungen wird der neueste Status widergespiegelt, während auch differenzierte Informationen und Aktionen bereitgestellt werden.
 
-Beispielsweise kann ein Benutzer eine Anforderung zur Anlagengenehmigung in einer Teams erstellen. Alex erstellt eine Genehmigungsanforderung und weist sie Megan und Nestor zu. Es folgen die beiden Teile zum Erstellen der Genehmigungsanforderung:
+Beispielsweise kann ein Benutzer in einer Teams Unterhaltung eine Objektgenehmigungsanforderung erstellen. Alex erstellt eine Genehmigungsanforderung und weist sie Megan und Nestor zu. Im Folgenden werden die beiden Teile zum Erstellen der Genehmigungsanforderung aufgeführt:
 
-* Benutzerspezifische Ansichten können mithilfe der Eigenschaft der `refresh` adaptiven Karten genutzt werden.
-Mithilfe benutzerspezifischer Ansichten kann  eine  Karte mit Den Schaltflächen Genehmigen oder Ablehnen für eine Gruppe von Benutzern und eine Karte ohne diese Schaltflächen für andere Benutzer angezeigt werden.
+* Benutzerspezifische Ansichten können mithilfe der Eigenschaft der adaptiven Karten angewendet `refresh` werden.
+Mit benutzerspezifischen Ansichten kann eine Karte mit den Schaltflächen **"Genehmigen"** oder **"Ablehnen"** für eine Gruppe von Benutzern und eine Karte ohne diese Schaltflächen für andere Benutzer angezeigt werden.
 
-* Um den Kartenstatus immer auf dem neuesten Stand zu halten, Teams Nachrichtenbearbeitungsmechanismus genutzt werden. Jedes Mal, wenn eine Genehmigung vor liegt, kann der Bot beispielsweise eine Nachrichtenbearbeitung für alle Benutzer auslösen. Diese Botnachrichtenbearbeitung löst eine Aufrufanforderung für alle Benutzer der automatischen Aktualisierung aus, auf die der Bot mit der aktualisierten `adaptiveCard/action` benutzerspezifischen Karte antworten kann.
+* Um den Kartenstatus immer auf dem neuesten Stand zu halten, kann Teams Mechanismus zum Bearbeiten von Nachrichten verwendet werden. Beispielsweise kann der Bot bei jeder Genehmigung eine Nachrichtenbearbeitung für alle Benutzer auslösen. Diese Bot-Nachrichtenbearbeitung löst eine Aufrufanforderung für alle Benutzer der `adaptiveCard/action` automatischen Aktualisierung aus, auf die der Bot mit der aktualisierten benutzerspezifischen Karte antworten kann.
 
-Weitere Informationen finden Sie unter [How to do a bot message edit](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
+Weitere Informationen finden Sie unter ["Bearbeiten einer Botnachricht"](/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
 
 ## <a name="approval-base-card"></a>Genehmigungsbasiskarte
 
@@ -58,9 +58,9 @@ Der folgende Code enthält ein Beispiel für eine Genehmigungsbasiskarte:
 }
 ```
 
-## <a name="approval-card-with-approve-and-reject-buttons"></a>Genehmigungskarte mit Schaltflächen Genehmigen und Ablehnen
+## <a name="approval-card-with-approve-and-reject-buttons"></a>Genehmigungskarte mit Schaltflächen "Genehmigen" und "Ablehnen"
 
-Der folgende Code enthält ein Beispiel für eine Genehmigungskarte mit den Schaltflächen **Genehmigen** **und Ablehnen:**
+Der folgende Code enthält ein Beispiel für eine Genehmigungskarte mit den Schaltflächen **"Genehmigen"** und **"Ablehnen":**
 
 ```JSON
 {
@@ -110,34 +110,34 @@ Der folgende Code enthält ein Beispiel für eine Genehmigungskarte mit den Scha
 }
 ```
 
-Es folgen die beiden Rollen, die Benutzern in Abhängigkeit von ihrer Beteiligung an der Genehmigungsanforderung angezeigt werden:
+Im Folgenden sind die beiden Rollen aufgeführt, die Benutzern je nach Genehmigungsanforderung angezeigt werden:
 
-* Genehmigungsbasiskarte: Wird Benutzern angezeigt, die nicht Teil der Liste genehmiger Personen sind und die Anforderung noch nicht genehmigt oder abgelehnt haben und nicht Teil der Liste in der Eigenschaft der `userIds` `refresh` adaptiven Karten-JSON sind.
-* Genehmigungskarte mit  **Den** Schaltflächen Genehmigen oder Ablehnen: Wird den Benutzern angezeigt, die Teil der Liste genehmiger Personen sind, und der Liste in der Eigenschaft des `userIds` `refresh` JSON für adaptive Karten.
+* Genehmigungsbasiskarte: Wird Benutzern angezeigt, die nicht Teil der Liste der Genehmiger sind und die Anforderung noch nicht genehmigt oder abgelehnt wurde, und nicht Teil der `userIds` Liste in eigenschaft des `refresh` JSON-Codes für adaptive Karten.
+* Genehmigungskarte mit Schaltflächen **"Genehmigen"** oder **"Ablehnen":** Wird den Benutzern angezeigt, die Teil der Liste der genehmigenden Personen sind, und der `userIds` Liste in der Eigenschaft der ADAPTIVE Card `refresh` JSON.
 
-**So senden Sie die Anforderung zur Anlagengenehmigung**
+**So senden Sie die Anforderung zur Genehmigung des Objekts**
 
-1. Alex löst eine Anforderung zur Anlagengenehmigung in einer Teams aus und weist sie Megan und Nestor zu.
+1. Alex löst in einer Teams Unterhaltung eine Anforderung zur Objektgenehmigung aus und weist sie Megan und Nestor zu.
 2. Bot sendet die Genehmigungsbasiskarte in der Unterhaltung.
-3. Alle anderen Benutzer in der Unterhaltung sehen die vom Bot gesendete Karte. Die automatische Aktualisierung wird für Megan und Nestor ausgelöst,  denen nun die benutzerspezifische Karte mit den Schaltflächen **Genehmigen** oder Ablehnen angezeigt wird, da ihre Benutzer-MRIs der Liste in der Eigenschaft der adaptiven Karte hinzugefügt `userIds` `refresh` werden.
+3. Alle anderen Benutzer in der Unterhaltung sehen die vom Bot gesendete Karte. Die automatische Aktualisierung wird für Megan und Nestor ausgelöst, die nun die benutzerspezifische Karte mit den Schaltflächen **"Genehmigen"** oder **"Ablehnen"** sehen, da ihre Benutzer-MRIs der Liste in der Eigenschaft der adaptiven Karte hinzugefügt `userIds` `refresh` werden.
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png" alt-text="Benutzerspezifische Ansichten":::
 
-4. Nestor wählt die Schaltfläche **Genehmigen** aus, die mit betrieben `Action.Execute` wird. Der Bot ruft eine `adaptiveCard/action` Aufrufanforderung ab, an die er als Antwort eine adaptive Karte zurückgeben kann.
-5. Der Bot löst eine Nachrichtenbearbeitung mit einer aktualisierten Karte aus, auf der nestor die Anforderung genehmigt hat, während Megans Genehmigung aussteht.
-6. Die Bot-Nachrichtenbearbeitung löst eine automatische Aktualisierung für Megan aus, und ihr wird die aktualisierte  benutzerspezifische Karte angezeigt, auf der nestor die Anforderung genehmigt hat, aber auch die Schaltflächen Genehmigen oder Ablehnen **angezeigt** wird. Die Benutzer-MRT von Nestor wird in den Schritten 4 und 5 aus der Liste in der Eigenschaft dieses JSON für adaptive Karten `userIds` `refresh` entfernt. Jetzt wird die automatische Aktualisierung nur für Megan ausgelöst.
+4. Nestor wählt die Schaltfläche **"Genehmigen"** aus, die `Action.Execute` mit . Der Bot erhält eine `adaptiveCard/action` Aufrufanforderung, auf die er als Antwort eine adaptive Karte zurückgeben kann.
+5. Der Bot löst eine Nachrichtenbearbeitung mit einer aktualisierten Karte aus, die besagt, dass Nestor die Anforderung genehmigt hat, während Megans Genehmigung aussteht.
+6. Die Bearbeitung von Bot-Nachrichten löst eine automatische Aktualisierung für Megan aus, und sie sieht die aktualisierte benutzerspezifische Karte, die besagt, dass Nestor die Anforderung genehmigt hat, aber auch die Schaltflächen **"Genehmigen"** oder **"Ablehnen"** sieht. Die Benutzer-MRI von Nestor wird in den `userIds` Schritten 4 und 5 aus der Liste in der Eigenschaft dieses JSON-Codes für `refresh` adaptive Karten entfernt. Jetzt wird die automatische Aktualisierung nur für Megan ausgelöst.
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-2.png" alt-text="Aktuelle benutzerspezifische Ansichten":::
 
-7. Megan wählt nun die Schaltfläche **Genehmigen** aus, die mit betrieben `Action.Execute` wird. Der Bot ruft eine `adaptiveCard/action` Aufrufanforderung ab, an die er als Antwort eine adaptive Karte zurückgeben kann.
-8. Der Bot löst eine Nachrichtenbearbeitung mit einer aktualisierten Karte aus, die nestor und Megan die Anforderung genehmigt haben.
-9. Die Botnachrichtenbearbeitung löst keine automatische Aktualisierung aus. Megans Benutzer-MRI wird auch in der Eigenschaft dieser adaptiven Karten-JSON in den Schritten `userIds` `refresh` 7 und 8 aus der Liste entfernt.
+7. Jetzt wählt Megan die Schaltfläche **"Genehmigen"** aus, die mit eingeschaltet `Action.Execute` wird. Der Bot erhält eine `adaptiveCard/action` Aufrufanforderung, auf die er als Antwort eine adaptive Karte zurückgeben kann.
+8. Der Bot löst eine Nachrichtenbearbeitung mit einer aktualisierten Karte aus, die besagt, dass Nestor und Megan die Anforderung genehmigt haben.
+9. Die Bearbeitung von Bot-Nachrichten löst keine automatische Aktualisierung aus. Megans Benutzer-MRI wird in den Schritten 7 und 8 ebenfalls aus der Liste in der Eigenschaft dieses JSON-Codes für `userIds` `refresh` adaptive Karten entfernt.
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-3.png" alt-text="Aktuelle Ansichten":::
 
-## <a name="adaptive-card-sent-as-response-of-adaptivecardaction-and-message-edit"></a>Adaptive Karte, die als Antwort von und gesendet `adaptiveCard/action` wird `message edit`
+## <a name="adaptive-card-sent-as-response-of-adaptivecardaction-and-message-edit"></a>Adaptive Karte, die als Antwort von `adaptiveCard/action` und `message edit`
 
-Der folgende Code enthält ein Beispiel für adaptive Karten, die als Antwort auf und für die `adaptiveCard/action` `message edit` Schritte 4 und 5 gesendet werden:
+Der folgende Code enthält ein Beispiel für adaptive Karten, die als Antwort auf `adaptiveCard/action` und für die Schritte `message edit` 4 und 5 gesendet werden:
 
 ```JSON
 {
@@ -173,7 +173,7 @@ Der folgende Code enthält ein Beispiel für adaptive Karten, die als Antwort au
 }
 ```
 
-Der folgende Code enthält ein Beispiel für adaptive Karten, die als Reaktion auf den Aufruf durch `adaptiveCard/action` automatische Aktualisierung für Schritt 6 gesendet werden:
+Der folgende Code enthält ein Beispiel für adaptive Karten, die als Reaktion auf `adaptiveCard/action` den Aufruf über die automatische Aktualisierung für Schritt 6 gesendet werden:
 
 ```JSON
 {
@@ -227,7 +227,7 @@ Der folgende Code enthält ein Beispiel für adaptive Karten, die als Reaktion a
 }
 ```
 
-Der folgende Code enthält ein Beispiel für adaptive Karten, die als Antwort auf und für die Schritte `adaptiveCard/action` `message edit` 7 und 8 gesendet werden:
+Der folgende Code enthält ein Beispiel für adaptive Karten, die als Antwort auf `adaptiveCard/action` und für die Schritte `message edit` 7 und 8 gesendet werden:
 
 ```JSON
 {
@@ -258,6 +258,12 @@ Der folgende Code enthält ein Beispiel für adaptive Karten, die als Antwort au
   ]
 }
 ```
+
+## <a name="code-sample"></a>Codebeispiel
+
+|Beispielname | Beschreibung | .NETCore | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Sequenzielle Workflows adaptive Karten | Vorführen, wie sequenzielle Workflows, benutzerspezifische Ansichten und aktuelle adaptive Karten in Bots implementiert werden. | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 

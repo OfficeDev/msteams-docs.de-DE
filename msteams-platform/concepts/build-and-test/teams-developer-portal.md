@@ -5,12 +5,12 @@ keywords: Erste Schritte für Entwicklerportal-Teams
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 6dca8723248441c3cf672931295b4b68e02cc24c
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 6934978c1b30cfa53b2307d772f7093047c1eb454cd4ff2010767b8d5e270bb9
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949686"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707699"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Verwalten Ihrer Apps mit dem Entwicklerportal für Microsoft Teams
 
@@ -29,7 +29,7 @@ Das Entwicklerportal bietet verschiedene Möglichkeiten zum Registrieren einer T
 * Importieren eines vorhandenen App-Pakets
 
 > [!NOTE]
-> Wenn Sie eine App mit dem [Microsoft Teams-Toolkit für Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)erstellen, können Sie diese App im Entwicklerportal verwalten.
+> Wenn Sie eine App mit dem [Microsoft Teams Toolkit für Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)erstellen, können Sie diese App im Entwicklerportal verwalten.
 
 ## <a name="set-up-an-environment"></a>Einrichten einer Umgebung
 
@@ -56,13 +56,13 @@ Jede App enthält eine **Besitzerseite,** auf der Sie Ihre App-Registrierung fü
 
 Eine Teams-App ist eine Web-App. Wie alle Web-Apps wird der Quellcode in der Regel in einer IDE oder einem Code-Editor entwickelt und an einer beliebigen Stelle in der Cloud (z. B. Azure) gehostet.
 
-Um Ihre App in Teams zu installieren und zu rendern, müssen Sie eine Reihe von Konfigurationen einschließen, die Teams erkennt. Dies geschieht traditionell durch das Erstellen eines App-Manifests, einer JSON-Datei, die alle Metadaten enthält, die Teams zum Anzeigen Ihrer App-Inhalte benötigt. Das Entwicklerportal abstrahiert diesen Prozess und enthält neue Features und Tools, die Ihnen helfen, erfolgreicher zu sein.
+Um Ihre App in Teams zu installieren und zu rendern, müssen Sie eine Reihe von Konfigurationen einschließen, die Teams erkennt. Dies geschieht traditionell durch das Erstellen eines App-Manifests, einer JSON-Datei, die alle Metadaten enthält, die Teams zum Anzeigen ihrer App-Inhalte benötigt. Das Entwicklerportal abstrahiert diesen Prozess und enthält neue Features und Tools, die Ihnen helfen, erfolgreicher zu sein.
 
-## <a name="test-your-app-directly-in-teams"></a>Testen Ihrer App direkt in Teams
+## <a name="test-your-app-directly-in-teams"></a>Testen Sie Ihre App direkt in Teams
 
 Das Entwicklerportal bietet Optionen zum Testen und Debuggen Ihrer App:
 
-* Auf der **Übersichtsseite** sehen Sie eine Momentaufnahme, ob die Konfigurationen Ihrer App anhand von Teams Store-Testfällen überprüft werden.
+* Auf der **Übersichtsseite** sehen Sie eine Momentaufnahme, ob die Konfigurationen Ihrer App anhand Teams Store-Testfälle überprüft werden.
 * Mit der Schaltfläche **"Vorschau in Teams"** können Sie Ihre App schnell im Teams-Client zum Debuggen starten.
 
 ## <a name="distribute-your-app"></a>Verteilen Ihrer App
@@ -86,6 +86,6 @@ Die monatliche und tägliche Nutzung wird für die letzten sieben, 30 und 60 Tag
 
 Das Entwicklerportal enthält auch Tools, mit denen Sie einige wichtige Features von Teams-Apps erstellen können. Einige dieser Tools umfassen:
 
-* **Szenenstudio:** Entwerfen [sie benutzerdefinierte Szenen für den Gemeinsamen Modus](~/apps-in-teams-meetings/teams-together-mode.md) für Teams-Besprechungen.
+* **Szenenstudio:** Entwerfen [Sie benutzerdefinierte Szenen im Zusammen-Modus](~/apps-in-teams-meetings/teams-together-mode.md) für Teams Besprechungen.
 * **Editor für adaptive Karten:** Erstellen und Anzeigen einer Vorschau adaptiver Karten, die in Ihre Apps aufgenommen werden sollen.
-* **Microsoft Identity Platform Management:** Registrieren Sie Ihre Apps bei Azure Active Directory (Azure AD), um Benutzern zu helfen, sich anzumelden und Zugriff auf APIs zu gewähren.
+* **Microsoft Identity Platform Verwaltung:** Registrieren Sie Ihre Apps bei Azure Active Directory (Azure AD), um Benutzern zu helfen, sich anzumelden und Zugriff auf APIs bereitzustellen.

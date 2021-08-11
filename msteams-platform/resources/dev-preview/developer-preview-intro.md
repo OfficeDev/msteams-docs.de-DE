@@ -1,57 +1,57 @@
 ---
-title: Developer Preview
-description: Beschreibt die Features in der öffentlichen Developer Preview von Microsoft Teams
+title: Entwicklervorschau
+description: Beschreibt die Features in der Public Developer Preview von Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
-keywords: Teams vorschau entwicklerfeatures
-ms.openlocfilehash: f19268afd81fe9fa7ae2116740e7b9d4ff8225cb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+keywords: Teams– Vorschau für Entwicklerfeatures
+ms.openlocfilehash: ddf935279d5298caa032df7f109369bdc4b798ef51206f5cc688846061fd6720
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019720"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703961"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Öffentliche Entwicklervorschau für Microsoft Teams
 
 >[!NOTE]
->Features, die in der Vorschau enthalten sind, sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie in der öffentlichen Version verfügbar werden. Sie werden nur zu Test- und Explorationszwecken bereitgestellt. Sie sollten nicht in Produktionsanwendungen verwendet werden.
+>Features, die in der Vorschau enthalten sind, sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie in der Veröffentlichung verfügbar werden. Sie werden nur zu Test- und Untersuchungszwecken bereitgestellt. Sie sollten nicht in Produktionsanwendungen verwendet werden.
 
-Developer Preview ist ein öffentliches Programm für Entwickler, das frühzeitigen Zugriff auf unveröffentlichte Features in Microsoft Teams. Auf diese Weise können Sie anstehende Features für die mögliche Integration in Ihre app Microsoft Teams testen. Wir freuen uns auch [über Feedback](~/feedback.md) zu allen Features in der Entwicklervorschau. Die Entwicklervorschau ist pro Microsoft Teams aktiviert, sodass Sie sich keine Gedanken über die Auswirkungen auf Ihre gesamte Organisation machen müssen.
+Developer Preview ist ein öffentliches Programm für Entwickler, das frühzeitigen Zugriff auf nicht freigegebene Features in Microsoft Teams bietet. Auf diese Weise können Sie bevorstehende Features erkunden und testen, um eine potenzielle Einbindung in Ihre Microsoft Teams-App zu ermöglichen. Wir freuen uns auch über [Feedback](~/feedback.md) zu allen Features in der Entwicklervorschau. Die Entwicklervorschau ist pro Microsoft Teams Client aktiviert, sodass Sie sich keine Gedanken über die Auswirkungen auf Ihre gesamte Organisation machen müssen.
 
 ## <a name="developer-preview-app-manifest"></a>Entwicklervorschau-App-Manifest
 
-Viele features enabled in developer preview will require alterations to your app manifest JSON file. Hierzu müssen Sie das Entwicklervorschaumanifestschema verwenden [Wenn](~/resources/schema/manifest-schema-dev-preview.md) Sie dieses Schema verwenden, können Sie [App Studio](~/concepts/build-and-test/app-studio-overview.md) nicht verwenden, um diese Änderungen vorzunehmen, und Sie können es auch nicht verwenden, um Ihre App zu Testzwecken hochzuladen. Um Ihre App hochzuladen, müssen Sie auf das Symbol in der App-Leiste klicken, und wählen `More apps` Sie dann die `Upload a custom app link` aus. Mit dieser Methode können Sie nur eine gezippte Version Ihres App-Pakets hochladen.
+Viele in der Entwicklervorschau aktivierte Features erfordern Änderungen an Ihrer JSON-Datei des App-Manifests. Dazu müssen Sie das [Entwicklervorschau-Manifestschema](~/resources/schema/manifest-schema-dev-preview.md) verwenden. Wenn Sie dieses Schema verwenden, können Sie app [Studio](~/concepts/build-and-test/app-studio-overview.md) nicht verwenden, um diese Änderungen vorzunehmen, und Sie können es auch nicht verwenden, um Ihre App zu Testzwecken hochzuladen. Um Ihre App hochzuladen, müssen Sie auf das `More apps` Symbol auf der App-Leiste klicken und dann die Option `Upload a custom app link` auswählen. Mit dieser Methode können Sie nur eine gezippte Version Ihres App-Pakets hochladen.
 
-Möglicherweise ist es hilfreich, App Studio zu verwenden, um die Vorschauteile ihres App-Pakets zu erstellen, das Paket zu exportieren und die Datei manuell zu bearbeiten, um die entwicklervorschaufeatures hinzuzufügen, die Sie verwenden `manifest.json` möchten. Nachdem Sie der Datei Entwicklervorschaufeatures hinzugefügt haben, können Sie das Paket nicht erneut in `manifest.json` App Studio importieren.
+Möglicherweise ist es hilfreich, App Studio zum Erstellen der Nicht-Entwicklervorschau-Teile Ihres App-Pakets zu verwenden, dieses Paket zu exportieren und die Datei manuell `manifest.json` zu bearbeiten, um die Entwicklervorschaufeatures hinzuzufügen, die Sie verwenden möchten. Nachdem Sie der Datei Entwicklervorschaufeatures hinzugefügt haben, `manifest.json` können Sie das Paket nicht erneut in App Studio importieren.
 
 ## <a name="enable-developer-preview"></a>Aktivieren der Entwicklervorschau
 
-Die Entwicklervorschau ist pro Client aktiviert, die Option zum Aktivieren der Entwicklervorschau wird jedoch auf Organisationsebene gesteuert. Um die Option zum Aktivieren der Entwicklervorschau für eine Person zu aktivieren, müssen Sie sicherstellen, dass sie benutzerdefinierte Apps hochladen können. Weitere Informationen finden Sie unter Einrichten [Ihres Mandanten.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+Die Entwicklervorschau ist pro Client aktiviert, die Option zum Aktivieren der Entwicklervorschau wird jedoch auf Organisationsebene gesteuert. Um die Option zum Aktivieren der Entwicklervorschau für eine Einzelperson zu aktivieren, müssen Sie sicherstellen, dass diese benutzerdefinierte Apps hochladen können. Weitere Informationen finden Sie unter ["Einrichten Ihres Mandanten".](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
-Die Verwendung einer App, die Entwicklervorschaufeatures enthält, kann dazu führen, dass Sich Clients, die die Entwicklervorschau nicht aktiviert haben, unerwartet verhalten. Wenn kein Eintrag für die Entwicklervorschau angezeigt wird, liegt der wahrscheinlichste Grund dafür, dass Ihre Organisation nicht für das Hochladen von Apps konfiguriert ist.
+Die Verwendung einer App mit Entwicklervorschaufeatures kann dazu führen, dass sich Clients, die die Entwicklervorschau nicht aktiviert haben, unerwartet verhalten. Wenn kein Eintrag für die Entwicklervorschau angezeigt wird, ist der wahrscheinlichste Grund, dass Ihre Organisation nicht für das Hochladen von Apps konfiguriert ist.
 
 ### <a name="on-a-desktop-or-web-client"></a>Auf einem Desktop- oder Webclient
 
-Zum Aktivieren der öffentlichen Entwicklervorschau auf einem Desktop- oder Webclient müssen Sie die folgenden Schritte tun:
+Um die öffentliche Entwicklervorschau auf einem Desktop- oder Webclient zu aktivieren, müssen Sie folgendermaßen vorgehen:
 
-1. Aktivieren des Hochladens von Apps in der Verwaltungskonsole Ihres Mandanten, wie hier [beschrieben.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
-1. Klicken Sie auf Ihr Profil (entweder in der oberen rechten oder unteren linken Ecke der Teams), um das Teams anzuzeigen.
-1. Wählen Sie Informationen → Entwicklervorschau aus.
-1. Wählen **Sie Switch to Developer preview aus.**
+1. Aktivieren des Hochladens von Apps in der Verwaltungskonsole Ihres Mandanten, wie [hier](~/concepts/build-and-test/prepare-your-o365-tenant.md)beschrieben.
+1. Klicken Sie auf Ihr Profil (entweder in der oberen rechten oder unteren linken Ecke der Teams Oberfläche), um das Teams Menü anzuzeigen.
+1. Wählen Sie "Info → Entwicklervorschau" aus.
+1. Wählen Sie **"Zur Entwicklervorschau wechseln" aus.**
 
 ### <a name="on-a-mobile-client"></a>Auf einem mobilen Client
 
-Gehen Sie wie folgt vor, um die Öffentliche Entwicklervorschau auf einem mobilen Client zu aktivieren:
+Um die öffentliche Entwicklervorschau auf einem mobilen Client zu aktivieren, müssen Sie folgendermaßen vorgehen:
 
-1. Aktivieren des Hochladens von Apps in der Verwaltungskonsole Ihres Mandanten, wie hier [beschrieben.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
-1. Öffnen Sie das Menü Hamburger oben links, und wählen Sie **dann Einstellungen**.
-1. Wählen Sie **Informationen aus.**
-1. Klicken Sie auf den Umschalter Entwicklervorschau.
+1. Aktivieren des Hochladens von Apps in der Verwaltungskonsole Ihres Mandanten, wie [hier](~/concepts/build-and-test/prepare-your-o365-tenant.md)beschrieben.
+1. Öffnen Sie das Hamburger-Menü oben links, und wählen Sie dann **Einstellungen** aus.
+1. Wählen Sie **"Info" aus.**
+1. Klicken Sie auf den Entwicklervorschau-Umschalter.
 
 ## <a name="disable-developer-preview"></a>Deaktivieren der Entwicklervorschau
 
-Verwenden Sie dasselbe Menüelement unter Informationen → Entwicklervorschau, und klicken Sie darauf, um es zu deaktivieren.
+Verwenden Sie dasselbe Menüelement unter "Info → Entwicklervorschau", und klicken Sie darauf, um es zu deaktivieren.
 
 ## <a name="features-available-in-developer-preview"></a>In der Entwicklervorschau verfügbare Features
 
-Eine vollständige Liste der features, die derzeit in der Entwicklervorschau aktiviert sind, finden Sie unter Features [in der öffentlichen Entwicklervorschau](../../resources/dev-preview/developer-preview-features.md).
+Eine vollständige Liste der derzeit in der Entwicklervorschau aktivierten Features finden Sie [unter: Features in der öffentlichen Entwicklervorschau.](../../resources/dev-preview/developer-preview-features.md)

@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: Von der Anwendung gehostete Medien-Windows Server-Azure-VM
 ms.date: 11/16/2018
-ms.openlocfilehash: a66296951dd2f704d531840f79a4c4b955af6bdf
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 20f4327ee967cdc75b72eb5525b684c0fb61acb3c90fb96c26eeb23d815fe4e0
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335361"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702830"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Anforderungen und Überlegungen für von der Anwendung gehostete Medienbots
 
@@ -24,7 +24,7 @@ Ein von der Anwendung gehosteter Medienbot benötigt die [ `Microsoft.Graph.Comm
 
 Ein von der Anwendung gehosteter Medienbot erfordert Folgendes:
 
-- Der Bot muss in C# und der Standard-.NET Framework entwickelt und in Microsoft Azure bereitgestellt werden. Sie können C++- oder Node.js-APIs nicht für den Zugriff auf Echtzeitmedien verwenden, und .NET Core wird für einen von der Anwendung gehosteten Medienbot nicht unterstützt.
+- Der Bot muss in C# und dem Standard-.NET Framework entwickelt und in Microsoft Azure bereitgestellt werden. Sie können C++ oder Node.js-APIs nicht für den Zugriff auf Echtzeitmedien verwenden, und .NET Core wird für einen von der Anwendung gehosteten Medienbot nicht unterstützt.
 
 - Der Bot kann in einer der folgenden Azure-Dienstumgebungen gehostet werden:
     - Cloud-Dienst.
@@ -39,7 +39,7 @@ Der nächste Abschnitt enthält Details dazu, wo sich Medienanrufe in Echtzeit b
 
 ## <a name="real-time-media-calls-stay-where-they-are-created"></a>Medienanrufe in Echtzeit bleiben dort, wo sie erstellt werden
 
-Echtzeit-Medienanrufe bleiben auf dem Computer, auf dem sie erstellt wurden. Ein Echtzeit-Medienanruf wird an die VM-Instanz (Virtual Machine) angeheftet, die den Anruf angenommen oder gestartet hat. Medien aus einem Microsoft Teams Anruf oder einer Besprechung fließen zu dieser VM-Instanz, und Medien, die der Bot zurück an Microsoft Teams muss auch von dieser VM stammen. Wenn beim Beenden des virtuellen Computers Echtzeit-Medienanrufe ausgeführt werden, werden diese Aufrufe abrupt beendet. Wenn der Bot über vor dem Herunterfahren des virtuellen Computers verfügt, kann er die Aufrufe beenden.
+Echtzeit-Medienanrufe bleiben auf dem Computer, auf dem sie erstellt wurden. Ein Echtzeit-Medienanruf wird an die VM-Instanz (Virtual Machine) angeheftet, die den Anruf angenommen oder gestartet hat. Medien aus einem Microsoft Teams Anruf oder einer Besprechung fließen zu dieser VM-Instanz, und Medien, die der Bot zurück an Microsoft Teams muss auch von diesem virtuellen Computer stammen. Wenn beim Beenden des virtuellen Computers Echtzeit-Medienanrufe ausgeführt werden, werden diese Aufrufe abrupt beendet. Wenn der Bot über vor dem Herunterfahren des virtuellen Computers verfügt, kann er die Aufrufe beenden.
 
 Der nächste Abschnitt enthält Details zur Barrierefreiheit von in der Anwendung gehosteten Medienbots.
 
@@ -70,15 +70,15 @@ Beispiele für von der Anwendung gehostete Medienbots sind:
 
 | **Beispielname** | **Beschreibung** | **Graph** |
 |------------|-------------|-----------|
-| Beispiel für lokale Medien | Beispiele, die unterschiedliche lokale Medienszenarien veranschaulichen. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
-| Beispiel für Remotemedien | Beispiele, die verschiedene Remotemedienszenarien veranschaulichen. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+| Beispiel für lokale Medien | Beispiele, die unterschiedliche lokale Medienszenarien veranschaulichen. | [Anzeigen](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
+| Beispiel für Remotemedien | Beispiele, die verschiedene Remotemedienszenarien veranschaulichen. | [Anzeigen](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Graph Aufrufen der SDK-Dokumentation](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
+- [Graph Dokumentation zum Aufrufen des SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 - Die Bots benötigen mehr Rechen- und Netzwerkbandbreitenkapazität als Messaging-Bots und verursachen deutlich höhere Betriebskosten. Ein Echtzeit-Medienbot-Entwickler muss die Skalierbarkeit des Bots sorgfältig messen und sicherstellen, dass der Bot nicht mehr gleichzeitige Anrufe akzeptiert, als er verwalten kann. Ein videoaktivierter Bot kann nur eine oder zwei gleichzeitige Mediensitzungen pro CPU-Kern unterstützen, wenn die rohen RGB24- oder NV12-Videoformate verwendet werden.
 - Die Echtzeitmedienplattform nutzt derzeit keine Grafikverarbeitungseinheiten (GPU), die auf dem virtuellen Computer verfügbar sind, um die H.264-Videocodierung oder -Decodierung zu deaktivieren. Stattdessen erfolgt die Videocodierung und -decodierung in der Software auf der CPU. Wenn eine GPU verfügbar ist, nutzt der Bot diese für das eigene Grafikrendering, z. B. wenn der Bot ein 3D-Grafikmodul verwendet.
-- Die VM-Instanz, die den Echtzeitmedienbot hostet, muss mindestens 2 CPU-Kerne aufweisen. Für Azure wird ein virtueller Computer der Dv2-Serie empfohlen. Für andere Azure-VM-Typen ist ein System mit 4 virtuellen CPUs (vCPU) die mindest erforderliche Größe. Weitere Informationen zu Azure VM-Typen finden Sie in der [Azure-Dokumentation.](/azure/virtual-machines/windows/sizes-general)
+- Die VM-Instanz, die den Echtzeitmedienbot hostet, muss mindestens 2 CPU-Kerne aufweisen. Für Azure wird ein virtueller Computer der Dv2-Serie empfohlen. Bei anderen Azure-VM-Typen ist ein System mit 4 virtuellen CPUs (vCPU) die mindest erforderliche Größe. Weitere Informationen zu Azure VM-Typen finden Sie in der [Azure-Dokumentation.](/azure/virtual-machines/windows/sizes-general)
 
 Der nächste Abschnitt enthält Beispiele, die unterschiedliche lokale Medienszenarien veranschaulichen.
 

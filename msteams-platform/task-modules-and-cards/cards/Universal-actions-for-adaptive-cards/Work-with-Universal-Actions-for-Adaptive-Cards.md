@@ -3,39 +3,39 @@ title: Mit Universal-Aktionen für adaptive Karten arbeiten
 description: Mit Universal-Aktionen für adaptive Karten arbeiten.
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 4361f1c7774837b728c6382df4e62e00ea912e35
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
-ms.translationtype: HT
+ms.openlocfilehash: 0c3b07d630452abe945e43e7a9dfdced00e22f35324b2e9c7768b6bca5a0d065
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649699"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701966"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Mit Universal-Aktionen für adaptive Karten arbeiten
 
-Universal-Aktionen für adaptive Karten bieten eine Möglichkeit zum Implementieren adaptiver Kartenszenarien für Teams und Outlook. In diesem Dokument wird Folgendes behandelt:
+Universelle Aktionen für adaptive Karten bieten eine Möglichkeit zum Implementieren adaptiver Kartenszenarien für Teams und Outlook. Dieses Dokument behandelt die folgenden Themen:
 
 * [Schema, das für Universal-Aktionen für adaptive Karten verwendet wird](#schema-for-universal-actions-for-adaptive-cards)
 * [Aktualisierungsmodell](#refresh-model)
 * [`adaptiveCard/action` Aufrufaktivität](#adaptivecardaction-invoke-activity)
 * [Abwärtskompatibilität](#backward-compatibility)
 
-## <a name="quick-start-guide-to-leverage-universal-actions-for-adaptive-cards-in-teams"></a>Schnellstarthandbuch zur Nutzung von Universal-Aktionen für adaptive Karten in Teams
+## <a name="quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams"></a>Schnellstartanleitung zur Verwendung von universellen Aktionen für adaptive Karten in Teams
 
 1. Ersetzen Sie alle Instanzen von `Action.Submit` durch `Action.Execute`, um ein vorhandenes Szenario in Teams zu aktualisieren.
-2. Fügen Sie Ihrer adaptiven Karte eine `refresh`-Klausel hinzu, wenn Sie das Modell für die automatische Aktualisierung nutzen möchten oder wenn Ihr Szenario benutzerspezifische Ansichten erfordert.
+2. Fügen Sie ihrer adaptiven Karte eine `refresh` Klausel hinzu, wenn Sie das automatische Aktualisierungsmodell verwenden möchten oder wenn Ihr Szenario benutzerspezifische Ansichten erfordert.
 
     >[!NOTE]
     > Geben Sie die `userIds`-Eigenschaft an, die identifiziert werden soll, welche Benutzer automatische Updates erhalten.
 
 3. Verarbeiten Sie `adaptiveCard/action` Aufrufanforderungen in Ihrem Bot.
-4. Verwenden Sie den Kontext der Aufrufanforderung, um mit Karten zu antworten, die speziell für einen Benutzer erstellt wurden.
+4. Verwenden Sie den Kontext der Aufrufanforderung, um mit Karten zu antworten, die für einen Benutzer erstellt wurden.
 
     > [!NOTE]
     > Wenn Ihr Bot als Ergebnis der Verarbeitung eines `Action.Execute` eine neue Karte zurückgibt, muss die Antwort dem Antwortformat entsprechen.
 
 ## <a name="schema-for-universal-actions-for-adaptive-cards"></a>Schema für Universal-Aktionen für adaptive Karten
 
-Universal-Aktionen für adaptive Karten wird in der Adaptive Karten-Schemaversion 1.4 eingeführt. Um adaptive Karten effektiv verwenden zu können, muss die `version`-Eigenschaft Ihrer adaptiven Karte auf 1.4 festgelegt werden.
+Universelle Aktionen für adaptive Karten werden in der Schemaversion 1.4 für adaptive Karten eingeführt. Um adaptive Karten effektiv verwenden zu können, muss die `version`-Eigenschaft Ihrer adaptiven Karte auf 1.4 festgelegt werden.
 
 > [!NOTE]
 > Wenn Sie die `version`-Eigenschaft auf 1.4 festlegen, ist Ihre adaptive Karte nicht mit älteren Clients der Plattformen oder Anwendungen wie Outlook und Teams kompatibel, da sie die Universal-Aktionen für adaptive Karten nicht unterstützen.
@@ -66,13 +66,13 @@ Weitere Informationen finden Sie unter [Aktualisieren von Schemas und Eigenschaf
 
 Im Folgenden sind die Features von UserIds aufgeführt, die aktualisiert werden:
 
-* UserIds ist ein Array von Benutzer-MRIs, das Teil der `refresh`-Eigenschaft in Adaptive Karten ist.
+* UserIds ist ein Array von Benutzer-MRIs, das Teil der `refresh` Eigenschaft in adaptiven Karten ist.
 
 * Wenn die `userIds`-Listeneigenschaft als `userIds: []` im Aktualisierungsabschnitt der Karte angegeben ist, wird die Karte nicht automatisch aktualisiert. Stattdessen wird dem Benutzer eine Option **Karte aktualisieren** im Dreifachpunktmenü im Web oder auf dem Desktop und im Kontextmenü mit langem Tastendruck auf Mobilgeräten, d. h. Android oder iOS, angezeigt, um die Karte manuell zu aktualisieren.
 
-* Die UserIds-Eigenschaft wird hinzugefügt, da Kanäle in Teams eine große Anzahl von Mitgliedern enthalten können. Wenn alle Mitglieder den Kanal gleichzeitig anzeigen, führt eine bedingungslose automatische Aktualisierung zu vielen gleichzeitigen Aufrufen des Bots. Um dies zu vermeiden, muss die `userIds`-Eigenschaft immer eingeschlossen werden, um zu identifizieren, welche Benutzer eine automatische Aktualisierung mit maximal *60 (sechszig) Benutzer-MRIs* erhalten müssen.
+* Die UserIds-Eigenschaft wird hinzugefügt, da Kanäle in Teams eine große Anzahl von Mitgliedern enthalten können. Wenn alle Mitglieder den Kanal gleichzeitig anzeigen, führt eine bedingungslose automatische Aktualisierung zu vielen gleichzeitigen Aufrufen des Bots. Die `userIds` Eigenschaft muss immer eingeschlossen werden, um zu identifizieren, welche Benutzer eine automatische Aktualisierung mit maximal *60 (60) Benutzer-MRIs* erhalten müssen.
 
-* Weitere Informationen dazu, wie Sie die Benutzer-MRIs eines Teams-Unterhaltungsmitglieds abrufen können, um sie in der Liste "userIds" im Aktualisierungsabschnitt der adaptiven Karte hinzuzufügen, finden Sie unter [Abrufen der Liste oder des Benutzerprofils](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
+* Sie können Teams Benutzer-MRIs eines Unterhaltungsmitglieds abrufen. Weitere Informationen zum Hinzufügen der Liste "userIds" im Aktualisierungsbereich der adaptiven Karte finden Sie unter Abrufen der Teilnehmerliste oder des [Benutzerprofils.](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)
 
 * MRI des Teams-Beispielbenutzers ist `29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 
@@ -93,7 +93,7 @@ Als Nächstes können Sie Abwärtskompatibilität auf ältere Clients auf versch
 
 ## <a name="backward-compatibility"></a>Abwärtskompatibilität
 
-Mit Universal-Aktionen für adaptive Karten können Sie Eigenschaften festlegen, die Abwärtskompatibilität mit älteren Versionen von Outlook und Teams ermöglichen.
+Mit universellen Aktionen für adaptive Karten können Sie Eigenschaften festlegen, die die Abwärtskompatibilität mit älteren Versionen von Outlook und Teams ermöglichen.
 
 ### <a name="teams"></a>Microsoft Teams
 
@@ -101,11 +101,12 @@ Um die Abwärtskompatibilität Ihrer adaptiven Karten mit älteren Versionen von
 
 Weitere Informationen finden Sie unter [Abwärtskompatibilität in Teams](/adaptive-cards/authoring-cards/universal-action-model#teams).
 
-## <a name="code-sample"></a>Codebeispiel
+## <a name="code-samples"></a>Codebeispiele
 
-|Beispielname | Beschreibung | .NETCore |
-|----------------|-----------------|--------------|
-| Teams-Catering-Bot | Erstellen Sie einen einfachen Bot, der mit adaptiven Karten eine Bestellung annimmt. |[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
+|Beispielname | Beschreibung | .NETCore | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Teams-Catering-Bot | Erstellen Sie einen Bot, der die Bestellung von Essen mithilfe adaptiver Karten akzeptiert. |[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Noch nicht verfügbar |
+| Sequenzielle Workflows adaptive Karten | Vorführen, wie sequenzielle Workflows, benutzerspezifische Ansichten und aktuelle adaptive Karten in Bots implementiert werden. | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 

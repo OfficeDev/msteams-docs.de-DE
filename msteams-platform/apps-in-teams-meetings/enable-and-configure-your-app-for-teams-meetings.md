@@ -3,12 +3,12 @@ title: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 author: surbhigupta
 description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 ms.topic: conceptual
-ms.openlocfilehash: 69ff70c7dedb1c05728cb4ac8ed797dd6c6df959
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 1d5983599e658440f3e1ec22c90ea88d63e22550e70be579290b51e57316df36
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726866"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702214"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -122,7 +122,7 @@ Informationen zur Verwendung der `userContext` API zum weiterleiten von Anforder
 Die Messaging-Erweiterung funktioniert wie erwartet, wenn sich ein Benutzer in einer Besprechungsansicht befindet und der Benutzer Erweiterungskarten zum Verfassen von Nachrichten posten kann. "AppName in-Meeting" ist eine QuickInfo, die den App-Namen in der Besprechungs-U-Leiste angibt.
 
 > [!NOTE]
-> Verwenden Sie Version 1.7.0 oder höher von [Teams SDK,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)da die vorherigen Versionen den Seitenbereich nicht unterstützen.
+> Verwenden Sie Version 1.7.0 oder höher von [Teams SDK,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)da versionen zuvor den Seitenbereich nicht unterstützen.
 
 #### <a name="in-meeting-dialog-box"></a>Dialogfeld "Besprechungsinterne Besprechung"
 
@@ -132,7 +132,7 @@ Das Besprechungsdialogfeld darf kein Aufgabenmodul verwenden. Das Aufgabenmodul 
 
 > [!NOTE]
 > * Sie müssen die [SubmitTask()-Funktion](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) aufrufen, um sie automatisch zu schließen, nachdem ein Benutzer eine Aktion in der Webansicht ausgeführt hat. Dies ist eine Anforderung für die App-Übermittlung. Weitere Informationen finden Sie unter [Teams SDK-Aufgabenmodul.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
-> * Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss ihre anfängliche Aufrufanforderungsnutzlast auf den `from.id` Anforderungsmetadaten im `from` Objekt basieren, nicht auf den `from.aadObjectId` Anforderungsmetadaten. `from.id`ist die Benutzer-ID und `from.aadObjectId` die Azure Active Directory-ID (AAD) des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
+> * Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss ihre anfängliche Aufrufanforderungsnutzlast auf den `from.id` Anforderungsmetadaten im `from` Objekt basieren, nicht auf den `from.aadObjectId` Anforderungsmetadaten. `from.id`ist die Benutzer-ID und `from.aadObjectId` die Azure Active Directory (AAD)-ID des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
 
 #### <a name="shared-meeting-stage"></a>Freigegebene Besprechungsphase
 
@@ -173,7 +173,7 @@ Die Konfigurationen nach und [vor Besprechungen](#before-a-meeting) sind identis
 
 |Beispielname | Beschreibung | Beispiel |
 |----------------|-----------------|--------------|----------------|-----------|
-| Besprechungs-App | Veranschaulicht, wie die Besprechungstoken-Generator-App verwendet wird, um ein Token anzufordern, das sequenziell generiert wird, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Dies kann in Situationen wie Beibesprechungen und Q-&A-Sitzungen hilfreich sein. | [Anzeigen](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+| Besprechungs-App | Veranschaulicht, wie die Besprechungstoken-Generator-App verwendet wird, um ein Token anzufordern, das sequenziell generiert wird, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Dies kann in Situationen wie Beibesprechungen und Q&A-Sitzungen hilfreich sein. | [Anzeigen](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
 ## <a name="see-also"></a>Siehe auch
 

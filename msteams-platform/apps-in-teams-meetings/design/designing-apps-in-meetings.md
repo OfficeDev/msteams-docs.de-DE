@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Apps in Teams Besprechungen entwerfen und das
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: a08e5a850a62b0cf73661d00e07e55e46abce32f
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 621fbb1e3da7ef9083229acf93b05c72cc528bf2ec813529d93025e1a54d79c6
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335410"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702493"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen ihrer Microsoft Teams Besprechungserweiterung
 
@@ -129,7 +129,7 @@ Beachten Sie Folgendes, wenn Sie den Bildlauf zulassen:
 
 ### <a name="navigation"></a>Navigation
 
-Für Szenarien mit Navigationsebenen oder umfangreichen Inhalten wird empfohlen, Dass Benutzer zu einer sekundären Ebene navigieren können. Benutzer müssen in der Lage sein, zur vorherigen Ebene zurückzukehren.
+Für Szenarien mit Navigationsebenen oder umfangreichen Inhalten wird empfohlen, Benutzern das Navigieren zu einer sekundären Ebene zu gestatten. Benutzer müssen in der Lage sein, zur vorherigen Ebene zurückzukehren.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="Beispiel zeigt die Navigation in Besprechungen." border="false":::
 
@@ -203,7 +203,7 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
 :::row:::
    :::column span="1":::
 
-**Bearbeiten und Überprüfen:** Machen Sie sich mit Dashboards vertraut und planen Sie mit allen Anrufern.
+**Bearbeiten und Überprüfen:** Machen Sie sich mit Dashboards vertraut und planen Sie mit allen Benutzern während des Anrufs.
 
    :::column-end:::
    :::column span="3":::
@@ -253,7 +253,7 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>Reaktionsfähiges Verhalten: Freigegebene Besprechungsphase
 
-Apps, die für die Besprechungsphase freigegeben wurden, variieren je nach Größe des Besprechungsstatus und der Größe des Fensters durch den Benutzer. Verwalten Sie den Abstand und das dynamische Layout von Navigation und Steuerelementen genau wie in einem Browser.
+Apps, die für die Besprechungsphase freigegeben wurden, variieren je nach Dem Status der Besprechung und der Größe des Fensters durch den Benutzer. Verwalten Sie den Abstand und das dynamische Layout von Navigation und Steuerelementen genau wie in einem Browser.
 
 * **Seitenbereich:** Ein Benutzer kann den Seitenbereich jederzeit während einer Besprechung öffnen lassen, um zu chatten, die Teilnehmerliste anzuzeigen oder eine App zu verwenden (z. B. die Registerkarte "In-Meeting"). Die Phase wird dynamisch neu angeordnet, wenn das Panel geöffnet ist.
 * **Video- und Audioraster:** Das Video- und Audioraster ist immer sichtbar, um Besprechungsteilnehmer anzuzeigen. Wenn ein Benutzer eine Person in der Besprechung ins Blickfeld rückt oder anheftet, erhöht dies die Höhe oder Breite des Teilnehmerrasters je nach Ausrichtung.
@@ -376,7 +376,7 @@ Wir empfehlen, die visuell schwerste Aktion am rechten Ort zu positionieren.
 
 #### <a name="dont-left-or-center-align-actions"></a>Nicht empfohlen: Aktionen links oder zentr werden ausgerichtet
 
-Dies weicht vom standard Teams Muster für die Platzierung von Steuerelementen in einem Dialogfeld ab und kann mit einem Dialogfeld hinter dem oberen Dialogfeld in Konflikt geraten.
+Dies weicht vom standardmäßigen Teams Muster für die Platzierung von Steuerelementen in einem Dialogfeld ab und kann zu Konflikten mit einem Dialogfeld hinter dem oberen Dialogfeld führen.
 
    :::column-end:::
 :::row-end:::
@@ -440,7 +440,7 @@ Besprechungsdialogfelder sind für kurze Interaktionen vorgesehen.
 
 #### <a name="do-focus-on-dark-theme"></a>Do: Fokus auf dunklem Design
 
-Teams Besprechungen sind für dunkles Design optimiert, um visuelles und kognitives Rauschen zu reduzieren, damit sich Die Benutzer auf die Diskussion und freigegebene Inhalte konzentrieren können. Beachten Sie, dass bestimmte Arten von Apps (z. B. Whiteboarding und Dokumentbearbeitung) keinen dunklen Zeichenbereich benötigen.
+Teams Besprechungen sind für dunkles Design optimiert, um visuelles und kognitives Rauschen zu reduzieren, damit sich Benutzer auf die Diskussion und freigegebene Inhalte konzentrieren können. Beachten Sie, dass bestimmte Arten von Apps (z. B. Whiteboarding und Dokumentbearbeitung) keinen dunklen Zeichenbereich benötigen.
 
    :::column-end:::
    :::column span="":::

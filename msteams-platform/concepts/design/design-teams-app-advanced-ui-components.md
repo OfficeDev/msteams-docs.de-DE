@@ -5,20 +5,20 @@ description: Erfahren Sie mehr über die UI-Komponenten, die in Teams verwendet 
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: 6f2bd9cd237751adb15db45bbd6e3cdfea35ce09
-ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
+ms.openlocfilehash: a23cd05947ac2d9d4e8117420bf2e2c11613e430989613bf2d267e5c892bf39c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53328079"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703502"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Entwerfen Ihrer Microsoft Teams-App mit erweiterten UI-Komponenten
 
-Die folgenden Komponenten sind eine Kombination aus [einfachen UI-Komponenten,](~/concepts/design/design-teams-app-basic-ui-components.md) die Sie für allgemeine Teams Entwurfssituationen wie navigation verwenden können.
+Die folgenden Komponenten sind eine Kombination aus [grundlegenden UI-Komponenten,](~/concepts/design/design-teams-app-basic-ui-components.md) die Sie für allgemeine Teams Entwurfssituationen wie navigation verwenden können.
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
-Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent Benutzeroberfläche</a>enthält das Microsoft Teams UI Kit Komponenten und Muster, die speziell für die Erstellung Teams Apps entwickelt wurden. Im UI-Kit können Sie die hier aufgeführten Komponenten direkt in Ihr Design einfügen und weitere Beispiele für die Verwendung der einzelnen Komponenten anzeigen.
+Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent Ui</a>enthält das Microsoft Teams UI Kit Komponenten und Muster, die speziell für die Erstellung Teams Apps entwickelt wurden. Im UI-Kit können Sie die hier aufgeführten Komponenten direkt in Ihr Design einfügen und weitere Beispiele für die Verwendung der einzelnen Komponenten anzeigen.
 
 > [!div class="nextstepaction"]
 > [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -48,7 +48,7 @@ Verwenden Sie die linke Navigationsleiste, um mehrere Seiten in Ihrer Teams Regi
 
 ### <a name="top-use-cases"></a>Häufigste Anwendungsfälle
 
-* Durchsuchen Sie mehrere Seiten auf einer Teams Registerkarte.
+* Durchsuchen Sie mehrere Seiten innerhalb einer Teams Registerkarte.
 * Teilen Sie komplexe Apps auf mehrere Seiten auf.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)

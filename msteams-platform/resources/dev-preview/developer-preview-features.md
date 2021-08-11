@@ -1,43 +1,43 @@
 ---
-title: Features in der öffentlichen Developer Preview
-description: Details zu den Features im Microsoft Teams Public Developer Preview
+title: Features in der Öffentlichen Entwicklervorschau
+description: Details zu den Features in der Microsoft Teams Public Developer Preview
 ms.topic: reference
 localization_priority: Normal
-keywords: Teams vorschau entwicklerfeatures
-ms.openlocfilehash: 84683420a5c61bb1eb493f8191bfbcbe97f6fb46
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+keywords: Teams– Vorschau für Entwicklerfeatures
+ms.openlocfilehash: f24f95245707097cb5fc79c041582efb5e1f11ef29877855003baf3707842c4c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230904"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704396"
 ---
-# <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Features in der öffentlichen Developer Preview für Microsoft Teams
+# <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Features in der Öffentlichen Entwicklervorschau für Microsoft Teams
 
 > [!NOTE]
-> Diese Seite ist im Juni 2021 veraltet. Informationen zu features available for developer preview finden Sie unter [What's new?](~/whats-new.md)
+> Diese Seite wird im Juni 2021 veraltet sein. Informationen zu den für die Entwicklervorschau verfügbaren Features finden Sie unter ["Neuigkeiten".](~/whats-new.md)
 
-Die Entwicklervorschau enthält die folgenden neuen Features:
+Die Entwicklervorschau umfasst die folgenden neuen Features:
 
 ## <a name="app-customization"></a>App-Anpassung
 
-Sie können jetzt einen ausgewählten Satz von Eigenschaften definieren, den ein Teams Administrator je nach Bedarf der Organisation anpassen oder neubranden kann. Weitere Informationen finden Sie unter [App-Anpassungsfeature](~/concepts/design/design-teams-app-overview.md).
+Sie können jetzt einen ausgewählten Satz von Eigenschaften definieren, den ein Teams Administrator basierend auf den Anforderungen seiner Organisation anpassen oder neu ein Branding durchführen kann. Weitere Informationen finden Sie unter [App-Anpassungsfeature.](~/concepts/design/design-teams-app-overview.md)
 
-## <a name="tabs-single-sign-on-sso"></a>Einmaliges Anmelden (Single Sign-On, SSO)
+## <a name="tabs-single-sign-on-sso"></a>Registerkarten für einmaliges Anmelden (Single Sign-On, SSO)
 
-Sie können jetzt einmaliges Anmelden [(Single Sign-On, SSO)](~/tabs/how-to/authentication/auth-aad-sso.md) verwenden, um sich über das Teams JavaScript SDK über eine Webinhaltsseite anzumelden und einen Benutzer auf Desktop- und Mobilgeräten zu authentifizieren. Einer der Vorteile ist, dass sich ein Benutzer niemals anmelden muss. und sobald sie der App mit ihrem Profil zugestimmt haben: Sie werden automatisch auf ihrer Registerkarte (einschließlich Mobile) angemeldet.
+Sie können jetzt [einmaliges Anmelden (Single Sign-On, SSO)](~/tabs/how-to/authentication/auth-aad-sso.md) verwenden, um einen Benutzer auf dem Desktop und auf mobilgeräten mithilfe des Teams JavaScript SDK von einer Webinhaltsseite aus anzumelden und zu authentifizieren. Einer der Vorteile besteht darin, dass sich ein Benutzer nie anmelden muss. und nachdem sie der App mit ihrem Profil zugestimmt haben, werden sie automatisch bei ihrer Registerkarte angemeldet (einschließlich mobilgeräte).
 
-Unsere Entwicklervorschau ist in den Manifestversionen 1.5 und höher verfügbar. Unsere aktuelle Implementierung kann nur eine begrenzte Anzahl von Graph-APIs abrufen. Wir bieten jedoch eine Problemumgehung, um zusätzliche Graph-APIs mithilfe unserer vorhandenen Authentifizierungs-API zu erhalten.
+Unsere Entwicklervorschau ist in den Manifestversionen 1.5 und höher verfügbar. Unsere aktuelle Implementierung kann nur eine begrenzte Anzahl von Graph-APIs abrufen, aber wir bieten eine Problemumgehung, um zusätzliche Graph-APIs mithilfe unserer vorhandenen Authentifizierungs-API zu erhalten.
 
-## <a name="calls-and-online-meeting-bots"></a>Anrufe und Online-Besprechungsbots
+## <a name="calls-and-online-meeting-bots"></a>Anrufe und Onlinebesprechungs-Bots
 
-Durch das Hinzufügen von [Microsoft Graph-APIs](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)für Anrufe und Onlinebesprechungen können Microsoft Teams Apps jetzt mit Benutzern auf vielfältige Weise mithilfe von Sprach- und Videonachrichten interagieren. Mit diesen APIs können Sie neue App-Features wie interaktive Sprachantwort (Interactive Voice Response, IVR), Anrufsteuerung und Zugriff auf Audio- und/oder Videostreams in Echtzeit für Anrufe und Besprechungen hinzufügen, einschließlich Desktop- und App-Freigabe.
+Durch die Hinzufügung von [Microsoft Graph-APIs für Anrufe und Onlinebesprechungen](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)können Microsoft Teams Apps jetzt mit Benutzern auf vielfältige Weise mitHilfe von Sprache und Video interagieren. Mit diesen APIs können Sie neue App-Features wie interaktive Sprachantwort (Interactive Voice Response, IVR), Anrufsteuerung und Zugriff auf Audio- und/oder Videodatenströme in Echtzeit für Anrufe und Besprechungen hinzufügen, einschließlich Desktop- und App-Freigabe.
 
-Wir haben einen neuen Abschnitt zum Erstellen und Entwickeln von Anrufen und Onlinebesprechungsbots hinzugefügt, beginnend mit der [Übersicht](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
+Wir haben einen neuen Abschnitt zum Erstellen und Entwickeln von Bots für Anrufe und Onlinebesprechungen hinzugefügt, beginnend mit der [Übersicht.](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 
 
-## <a name="image-enlarge-support"></a>Unterstützung für die Bild vergrößern
+## <a name="image-enlarge-support"></a>Unterstützung für bild vergrößerte Bilder
 
-Bots können jetzt angeben, welche Bilder in adaptiven Karten in Teams vergrößert werden dürfen. Dies ist nützlich für Szenarien wie das Freigeben detaillierter schrittweiser visueller Anleitungen über Bots, die für Benutzer andernfalls schwer zu lesen sind. Um ein Bild erweiterbar zu machen, kennzeichnen Sie es `allowExpand: true` wie unten gezeigt.
+Bots können jetzt angeben, welche Bilder in adaptiven Karten in Teams vergrößert werden dürfen. Dies ist nützlich für Szenarien wie das Freigeben detaillierter schrittweiser visueller Handbücher über Bots, die andernfalls für Benutzer schwer zu lesen sein können. Um ein Bild erweiterbar zu machen, kennzeichnen Sie es einfach `allowExpand: true` wie unten dargestellt.
 
 ```json
     {
@@ -48,4 +48,4 @@ Bots können jetzt angeben, welche Bilder in adaptiven Karten in Teams vergröß
       }
     }
 ```
-Dies hat zur Teams, dass der Web-/Desktopclient beim Zeigen auf das Bild ein Element rendert, damit der Benutzer das Bild erweitern kann.
+Dies führt dazu, dass Teams Web-/Desktopclient ein Element rendert, wenn der Mauszeiger auf das Bild gezeigt wird, damit der Benutzer das Bild erweitern kann.

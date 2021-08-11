@@ -1,6 +1,6 @@
 ### YamlMime:Hub
 title: Microsoft Teams Entwicklerdokumentation
-summary: 'Hier erhalten Sie Dokumentation, Beispielcode, Lernprogramme und vieles mehr, um Benutzerdefinierte Microsoft Teams-Apps zu erstellen.'
+summary: 'Hier erhalten Sie Dokumentationen, Beispielcode, Lernprogramme und vieles mehr, um Benutzerdefinierte Microsoft Teams-Apps zu erstellen.'
 brand: teams
 metadata:
   title: Microsoft Teams Dokumentation für Plattformentwickler
@@ -70,7 +70,7 @@ conceptualContent:
           text: Erstellen von Szenarien für Teams-Apps
         - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
           itemType: reference
-          text: Bewährte Methoden für Teams App-Szenarien
+          text: Bewährte Methoden für Teams-App-Szenarien
     - title: Informationen
       links:
         - url: /learn/modules/intro-microsoft-teams-apps
@@ -90,7 +90,7 @@ conceptualContent:
           text: Sammeln von Eingaben und Sammeln von Informationen mit Aufgabenmodulen
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: Verbinden von Webdiensten an Kanäle und Teams mit Webhooks und Office 365 Connectors
+          text: Verbinden Webdienste für Kanäle und Teams mit Webhooks und Office 365 Connectors
     - title: Integrieren
       links:
         - url: /microsoftteams/platform/samples/integrating-web-apps

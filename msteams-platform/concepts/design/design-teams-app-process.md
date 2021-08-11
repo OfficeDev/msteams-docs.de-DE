@@ -5,16 +5,16 @@ description: Erhalten Sie eine allgemeine Vorstellung davon, wie und wann Sie Mi
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 225859da18cb50741ab49c68d89bc318c6c9034c
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: f4d406426cdadd946e3579cec85e8c5c8133c2b5206a00fc1e32a29a2442b7cd
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994210"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704491"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Entwurfsprozess für Microsoft Teams-Apps
 
-Es gibt mehrere Tools und Ressourcen für das Entwerfen Ihrer Microsoft Teams-App. In den folgenden Schritten wird beschrieben, wann und wie Sie diese während des Entwurfsprozesses verwenden können. (Einige Schritte befinden sich möglicherweise außerhalb des Entwurfsprozesses, sind aber für zusätzlichen Kontext enthalten.)
+Es gibt mehrere Tools und Ressourcen zum Entwerfen Ihrer Microsoft Teams-App. In den folgenden Schritten wird beschrieben, wann und wie Sie diese während des Entwurfsprozesses verwenden können. (Einige Schritte befinden sich möglicherweise außerhalb des Entwurfsprozesses, sind aber für zusätzlichen Kontext enthalten.)
 
 :::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagramm mit einem Beispiel für den Teams App-Entwurfsprozess." border="false":::
 
@@ -33,7 +33,7 @@ Weitere Informationen finden Sie unter [Verstehen der Anwendungsfälle Ihrer App
 
 ## <a name="get-teams-design-tools"></a>Abrufen Teams-Entwurfstools
 
-Microsoft bietet Tools, die das Entwerfen Ihrer Teams-App vereinfachen. Es wird dringend empfohlen, mindestens das Microsoft Teams UI Kit zu verwenden.
+Microsoft stellt Tools bereit, die das Entwerfen Ihrer Teams-App vereinfachen. Es wird dringend empfohlen, mindestens das Microsoft Teams UI Kit zu verwenden.
 
 ### <a name="get-the-microsoft-teams-ui-kit"></a>Abrufen des Microsoft Teams UI Kit
 
@@ -42,19 +42,19 @@ Das Microsoft Teams UI Kit kann Ihnen dabei helfen, in kürzester Zeit eine effe
 Das UI-Kit verfügt auch über vordefinierte Vorlagen und Komponenten, die Sie bei Bedarf kopieren und ändern können, sodass Sie mehr Zeit mit dem Entwerfen der besten Benutzererfahrung verbringen können, anstatt sich Gedanken darüber zu machen, wie eine Schaltfläche aussehen sollte.
 
 > [!TIP]
-> **Ist das UI-Kit für mich geeignet?** Wenn Sie am Erstellen einer Teams App beteiligt sind, ja. Das Erstellen einer Teams-App ist nicht nur für Designer hilfreich, sondern auch für Produktmanager, Entwickler, die IDEs verwenden, und Entwickler, die mit Tools mit wenig Code (z. B. microsoft Power Platform) erstellen.
+> **Ist das UI-Kit für mich geeignet?** Wenn Sie an der Erstellung einer Teams App beteiligt sind, ja. Das Erstellen einer Teams-App ist nicht nur für Designer hilfreich, sondern auch für Produktmanager, Entwickler, die IDEs verwenden, und Entwickler, die mit Tools mit wenig Code (z. B. microsoft Power Platform) erstellen.
 
-1. Wechseln Sie zur [Seite Microsoft Teams UI Kit -Kits](https://www.figma.com/community/file/916836509871353159).
+1. Wechseln Sie zur [Seite Microsoft Teams UI Kit -Kits.](https://www.figma.com/community/file/916836509871353159)
 1. Wählen Sie **"Duplizieren"** aus, um das UI-Kit zu öffnen. (Möglicherweise müssen Sie zuerst ein Numma-Konto erstellen.)
 
 ### <a name="try-the-sample-app"></a>Probieren Sie die Beispiel-App aus
 
-Sie können eine Beispiel-App hochladen, um zu sehen, wie Apps im Teams-Client aussehen und sich verhalten sollen.
+Sie können eine Beispiel-App hochladen, um zu sehen, wie Apps im Teams Client aussehen und sich verhalten sollen.
 
 > [!div class="nextstepaction"]
 > [Abrufen der Beispiel-App (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
-## <a name="learn-teams-design-system"></a>Informationen zum Teams-Entwurfssystem
+## <a name="learn-teams-design-system"></a>Lernen Sie Teams Entwurfssystem kennen
 
 Informieren Sie sich ausführlich über die [Grundlagen Teams App-Designs,](design-teams-app-fundamentals.md)einschließlich Layout, Farbschemas und mehr, oder machen Sie sich mit ihnen vertraut.
 
@@ -93,7 +93,7 @@ Das Design ist fertig, und Sie können mit dem Erstellen beginnen. Die folgenden
 
 ### <a name="build-with-ui-templates"></a>Erstellen mit Benutzeroberflächenvorlagen
 
-Wenn Sie benutzeroberflächenvorlagen in Ihrem Entwurf verwendet haben, können Sie diese Vorlagen mit der Microsoft Teams Benutzeroberflächenbibliothek (einer React-Komponentenbibliothek basierend auf Fluent Benutzeroberfläche) implementieren.
+Wenn Sie benutzeroberflächenvorlagen in Ihrem Entwurf verwendet haben, können Sie diese Vorlagen mit der Microsoft Teams BENUTZERoberflächenbibliothek (einer React-Komponentenbibliothek basierend auf Fluent Benutzeroberfläche) implementieren.
 
 Derzeit sind nicht alle im UI-Kit aufgeführten Vorlagen in der Bibliothek verfügbar.
 
@@ -104,7 +104,7 @@ Derzeit sind nicht alle im UI-Kit aufgeführten Vorlagen in der Bibliothek verf�
 
 Nicht anders als in der Entwurfsphase können Sie diese Fluent UI-Komponenten in Ihrem App-Projekt verwenden, wenn eine Benutzeroberflächenvorlage etwas fehlt, das Sie benötigen, oder Sie die App einfach von Grund auf neu erstellen möchten. 
 
-(Hinweis: Wenn Sie etwas fehlendes bemerken oder eine Idee für eine Vorlage haben, sollten Sie einen Beitrag zum Repository der Teams UI-Bibliothek leisten.)
+(Hinweis: Wenn Sie etwas fehlendes bemerken oder eine Idee für eine Vorlage haben, können Sie einen Beitrag zum Repository der Teams UI-Bibliothek leisten.)
 
 > [!div class="nextstepaction"]
 > [Abrufen der Bibliothek (Fluent Benutzeroberfläche)](https://fluentsite.z22.web.core.windows.net/)

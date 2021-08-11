@@ -5,12 +5,12 @@ description: Übersicht über die Tools und SDKs zum Erstellen Microsoft Teams B
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: c346d7b7a1c720e651a847fb8a650fc549689654
-ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
+ms.openlocfilehash: e34d89b0ea8aaeb533899309cfb8fdf34d4ceb4994a6e87db398cc3dfc577abd
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53196243"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707099"
 ---
 # <a name="bots-and-sdks"></a>Tools und SDKs
 
@@ -27,7 +27,7 @@ Ihr Teams Bot besteht aus Folgenden:
 
 * Ein öffentlich zugänglicher Webdienst, der von Ihnen gehostet wird.
 * Eine Bot Framework-Registrierung für Ihren Webdienst.
-* Ihr Teams App-Paket, das den Teams-Client mit Ihrem Webdienst verbindet.
+* Ihr Teams-App-Paket, das den Teams-Client mit Ihrem Webdienst verbindet.
 
 > [!TIP]
 > Verwenden Sie das Entwicklerportal, um Ihren Webdienst beim Bot Framework zu registrieren und Ihre App-Konfigurationen anzugeben. Weitere Informationen finden Sie unter [Verwalten Ihrer Apps mit dem Entwicklerportal für Teams.](~/concepts/build-and-test/teams-developer-portal.md)
@@ -35,15 +35,15 @@ Ihr Teams Bot besteht aus Folgenden:
 Das [Bot Framework](https://dev.botframework.com/) ist ein umfangreiches SDK, das zum Erstellen von Bots mit C#, Java, Python und JavaScript verwendet wird. Wenn Sie bereits über einen Bot verfügen, der auf dem Bot Framework basiert, können Sie ihn einfach so ändern, dass er in Teams funktioniert. Verwenden Sie C# oder Node.js, um unsere SDKs zu [nutzen.](/microsoftteams/platform/#pivot=sdk-tools) Diese Pakete erweitern die grundlegenden Klassen und Methoden des Bot Builder-SDKs folgendermaßen:
 
 * Verwenden Sie spezielle Kartentypen wie die Office 365-Connectorkarte.
-* Legen Sie Teams-spezifische Kanaldaten für Aktivitäten fest.
+* Legen Sie Teams-spezifischen Kanaldaten für Aktivitäten fest.
 * Verarbeiten Sie Messaging-Erweiterungsanforderungen.
 
 > [!IMPORTANT]
-> Sie können Teams-Apps in jeder Webprogrammiertechnologie entwickeln und die [Bot Framework-REST-APIs](/bot-framework/rest-api/bot-framework-rest-overview) direkt aufrufen. Sie müssen jedoch in allen Fällen die Tokenverarbeitung durchführen.
+> Sie können Teams Apps in jeder Webprogrammiertechnologie entwickeln und die [Bot Framework-REST-APIs](/bot-framework/rest-api/bot-framework-rest-overview) direkt aufrufen. Sie müssen jedoch in allen Fällen die Tokenverarbeitung durchführen.
 
 ## <a name="bots-with-power-virtual-agents"></a>Bots mit Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) ist ein Chatbot-Dienst, der auf der Microsoft Power-Plattform und dem Bot Framework basiert. Der Power Virtual Agent-Entwicklungsprozess verwendet einen geführten, codefreien und grafischen Schnittstellenansatz, mit dem Ihre Teammitglieder einfach einen intelligenten virtuellen Agent erstellen und verwalten können. Nachdem Sie Ihren Chatbot im [Power Virtual Agents Portal](https://powervirtualagents.microsoft.com)erstellt haben, können Sie ihn problemlos in [Teams integrieren.](how-to/add-power-virtual-agents-bot-to-teams.md) Weitere Informationen zu den ersten Schritten finden Sie [in Power Virtual Agents Dokumentation.](/power-virtual-agents)
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) ist ein Chatbot-Dienst, der auf der Microsoft Power-Plattform und bot Framework basiert. Der Power Virtual Agent-Entwicklungsprozess verwendet einen geführten, codefreien und grafischen Schnittstellenansatz, der Es Ihren Teammitgliedern ermöglicht, einfach einen intelligenten virtuellen Agent zu erstellen und zu verwalten. Nachdem Sie Ihren Chatbot im [Power Virtual Agents Portal](https://powervirtualagents.microsoft.com)erstellt haben, können Sie ihn problemlos in [Teams integrieren.](how-to/add-power-virtual-agents-bot-to-teams.md) Weitere Informationen zu den ersten Schritten finden Sie [in Power Virtual Agents Dokumentation.](/power-virtual-agents)
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots mit Webhooks und Connectors
 
@@ -110,9 +110,9 @@ Einer der Nachteile von Bots besteht darin, dass es schwierig ist, eine große A
 
 ## <a name="code-sample"></a>Codebeispiel
 
-|Beispielname | Beschreibung | . Netcore | Node.js |
+|Beispielname | Beschreibung | .NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Teams-Unterhaltungsbot | Behandlung von Nachrichten- und Unterhaltungsereignissen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
+| Teams-Unterhaltungsbot | Behandlung von Nachrichten- und Unterhaltungsereignissen. |[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
 
 ## <a name="next-step"></a>Nächster Schritt
 

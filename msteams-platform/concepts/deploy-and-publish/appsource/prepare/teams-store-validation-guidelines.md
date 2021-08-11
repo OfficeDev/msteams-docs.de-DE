@@ -1,19 +1,19 @@
 ---
 title: Microsoft Teams Richtlinien für die Speicherüberprüfung
-description: Beschreibt die Richtlinien, die jede an den Teams Store (AppSource) übermittelte App befolgen muss.
+description: Beschreibt die Richtlinien, die jede an den Teams Store übermittelte App (AppSource) befolgen muss.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 79cdc032ee1e7479f7737e5dc71f8f01bb024da8
-ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
+ms.openlocfilehash: 818fe6c9123e6a43788c650542b9e0aed6aeed90e0c78c72ae08f4d4f53d060a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "52763115"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703607"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams Richtlinien für die Speicherüberprüfung
 
-Die Einhaltung dieser Richtlinien erhöht die Wahrscheinlichkeit, dass Ihre App den Microsoft Teams Store-Übermittlungsprozess übergibt. Diese Teams-spezifischen Richtlinien ergänzen die Zertifizierungsrichtlinien für den [kommerziellen Microsoft-Marketplace](/legal/marketplace/certification-policies) und werden häufig aktualisiert, um neue Funktionen, Benutzerfeedback und Änderungen an Geschäftsregel zu berücksichtigen.
+Wenn Sie diese Richtlinien befolgen, erhöht sich die Wahrscheinlichkeit, dass Ihre App den Microsoft Teams Store-Übermittlungsprozess übergibt. Diese Teams-spezifischen Richtlinien ergänzen die Zertifizierungsrichtlinien für den [kommerziellen Microsoft-Marketplace](/legal/marketplace/certification-policies) und werden häufig aktualisiert, um neue Funktionen, Benutzerfeedback und Änderungen an Geschäftsregel zu berücksichtigen.
 
 > [!NOTE]
 > Einige Richtlinien gelten möglicherweise nicht für Ihre App. Wenn Ihre App beispielsweise keinen Bot enthält, können Sie botbezogene Richtlinien ignorieren.
@@ -27,7 +27,7 @@ Der Name einer App spielt eine wichtige Rolle dabei, wie Benutzer ihn im Store e
 * Der Name muss Ausdrücke enthalten, die für Ihre Benutzer relevant sind.
 * Namen der wichtigsten Teams Features&#8212;wie **Chat,** **Kontakte,** **Kalender,** **Anrufe,** **Dateien,** **Aktivitäten,** **Teams,** **Apps** und **Hilfe**&#8212;sollten nicht im App-Namen enthalten sein.
 * Häufig verwendete Substantivs müssen mit dem Namen des Entwicklers (z. B. **Contoso Tasks** statt **Tasks)** vorangestellt oder suffixed sein.
-* Darf keine **Teams** oder andere Microsoft-Produktnamen verwenden, die fälschlicherweise auf Co-Branding oder Co-Verkauf hindeuten. (Weitere Informationen zum Verweisen auf Microsoft-Software, -Produkte und -Dienste finden Sie in den [Microsoft-Richtlinien für Marken und Marken](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)).
+* Darf keine **Teams** oder andere Microsoft-Produktnamen verwenden, die fälschlicherweise auf co-branding oder co-selling hindeuten. (Weitere Informationen zum Verweisen auf Microsoft-Software, -Produkte und -Dienste finden Sie in den [Microsoft-Richtlinien für Marken und Marken](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)).
 * Wenn Ihre App Teil einer offiziellen Partnerschaft mit Microsoft ist, muss der Name Ihrer App zuerst kommen (z. **B. Contoso Connector für Microsoft Teams).**
 * Der Name einer im Store oder einem anderen Angebot auf dem kommerziellen Marketplace aufgeführten App darf nicht kopiert werden.
 * Darf keine profanen oder abfälligen Ausdrücke enthalten. Der Name darf auch keine rassisch oder kulturunabhängige Sprache enthalten.
@@ -41,7 +41,7 @@ Ihre App muss die Zusammenarbeit in Gruppen erleichtern, die Produktivität eine
 
 ### <a name="similar-platforms-and-services"></a>Ähnliche Plattformen und Dienste
 
-Apps müssen sich auf die Teams Konzentrieren und dürfen keine Namen, Symbole oder Bilder anderer ähnlicher Chat-basierter Plattformen oder Dienste für die Zusammenarbeit enthalten, es sei denn, Ihre App bietet spezifische Interoperabilität.
+Apps müssen sich auf die Teams Konzentrieren und dürfen nicht die Namen, Symbole oder Bilder anderer ähnlicher Chat-basierter Plattformen oder Dienste für die Zusammenarbeit enthalten, es sei denn, Ihre App bietet spezifische Interoperabilität.
 
 ### <a name="feature-names"></a>Featurenamen
 
@@ -54,14 +54,14 @@ App-Featurenamen in Schaltflächen und anderer Benutzeroberflächentext dürfen 
 Das [Microsoft 365 App Compliance-Programm](/microsoft-365-app-certification/overview) soll Organisationen dabei helfen, Risiken zu bewerten und zu verwalten, indem Sicherheits- und Complianceinformationen zu Ihrer App ausgewertet werden. Wenn Sie eine App im Teams Store veröffentlichen, müssen Sie die folgenden Stufen des Programms ausführen:
 
 * [Publisher Überprüfung:](/azure/active-directory/develop/publisher-verification-overview)Hilft Administratoren und Endbenutzern, die Authentizität von App-Entwicklern zu verstehen, die sich in die Microsoft Identity Platform integrieren. Nach Abschluss des Vorgangs wird ein blaues Signal "bestätigt" im Zustimmungsdialogfeld Azure Active Directory (Azure AD) und auf anderen Bildschirmen angezeigt. Weitere Informationen finden Sie unter [häufig gestellte Fragen,](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions) [wie Sie Ihre App als herausgebergeprüft kennzeichnen](/azure/active-directory/develop/mark-app-as-publisher-verified)und problembehandlung bei der [Herausgeberüberprüfung](/azure/active-directory/develop/troubleshoot-publisher-verification)durchführen.
-* [Publisher Nachweis:](/microsoft-365-app-certification/docs/attestation)Ein Prozess, bei dem Sie allgemeine, Datenverarbeitungs- und Sicherheits- und Complianceinformationen freigeben, um potenziellen Kunden zu helfen, fundierte Entscheidungen über die Verwendung Ihrer App zu treffen.
+* [Publisher Nachweis:](/microsoft-365-app-certification/docs/attestation)Ein Prozess, in dem Sie allgemeine Informationen, Datenverarbeitung sowie Sicherheits- und Complianceinformationen freigeben, um potenziellen Kunden zu helfen, fundierte Entscheidungen über die Verwendung Ihrer App zu treffen.
 
 > [!NOTE]
-> Wenn Sie eine App übermitteln, die zuvor nicht aufgeführt wurde, können Sie Publisher Nachweis erst offiziell abschließen, wenn sich Ihre App im Teams Store befindet. Wenn Sie eine aufgeführte App aktualisieren, führen Sie Publisher Attestation aus, bevor Sie die neueste Version der App übermitteln.
+> Wenn Sie eine App übermitteln, die zuvor nicht aufgeführt wurde, können Sie Publisher Nachweis erst offiziell abschließen, wenn sich Ihre App im Teams Store befindet. Wenn Sie eine aufgeführte App aktualisieren, führen Sie Publisher Nachweis aus, bevor Sie die neueste Version der App übermitteln.
 
 ### <a name="bots"></a>Bots
 
-Für Apps, die den Microsoft Azure Bot-Dienst verwenden (z. B. Bots und Messaging-Erweiterungen), müssen Sie alle anforderungen erfüllen, die in den [Microsoft Online Services-Nutzungsbedingungen](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)definiert sind.
+Für Apps, die den Microsoft Azure Bot-Dienst verwenden (z. B. Bots und Messaging-Erweiterungen), müssen Sie alle In den Microsoft [Online Services-Nutzungsbedingungen](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)definierten Anforderungen erfüllen.
 
 Bots müssen immer die Berechtigung zum Hochladen einer Datei anfordern und nach dem Hochladen der Datei eine Bestätigungsmeldung anzeigen.
 
@@ -70,7 +70,7 @@ Bots müssen immer die Berechtigung zum Hochladen einer Datei anfordern und nach
 In den meisten Fällen dürfen Sie keine Domänen außerhalb der Kontrolle Ihrer Organisation (einschließlich Platzhalter) und Tunneldienste in die Domänenkonfigurationen Ihrer App einschließen. Zu den folgenden Ausnahmen gehören:
 
 * Wenn Ihre App die OAuthCard des Azure Bot Service verwendet, müssen Sie sie als gültige Domäne einschließen, `token.botframework.com` sonst funktioniert die **Anmeldeschaltfläche** nicht.
-* Wenn Ihre App SharePoint verwendet, können Sie die zugeordnete Stamm SharePoint Website mithilfe der Kontexteigenschaft als gültige Domäne `{teamSiteDomain}` einschließen.
+* Wenn Ihre App auf SharePoint basiert, können Sie den zugeordneten Stamm SharePoint Website mithilfe der Kontexteigenschaft als gültige Domäne `{teamSiteDomain}` einschließen.
 
 ### <a name="authentication"></a>Authentifizierung
 
@@ -87,7 +87,7 @@ Beachten Sie Folgendes, wenn Ihre App Benutzer mit einem externen Dienst authent
 
 #### <a name="government-community-cloud-listings"></a>Government Community Cloud-Einträge
 
-Um Ihre App an Government Community Cloud (GCC)-Benutzer zu verteilen und doppelte Einträge im Teams Store zu vermeiden, muss der Authentifizierungsprozess Benutzer identifizieren und an eine GCC spezifische oder erwartete URL weiterleiten.
+Um Ihre App an Government Community Cloud (GCC) Benutzer zu verteilen und doppelte Einträge im Teams Store zu vermeiden, muss der Authentifizierungsprozess Benutzer identifizieren und an eine GCC spezifische oder erwartete URL weiterleiten.
 
 ### <a name="sensitive-content"></a>Vertrauliche Inhalte
 
@@ -114,7 +114,7 @@ Apps, die unter der iOS- oder Android-Version von Teams ausgeführt werden, müs
 
 Apps dürfen Benutzer nicht aus Teams für die wichtigsten Benutzerszenarien entfernen. App-Inhalte und -Interaktionen können innerhalb Teams Funktionen erfolgen, z. B. Bots, Karten und Aufgabenmodule.
 
-Sie sollten Benutzer an Teams und nicht mit einer externen Website oder App verknüpfen. Für Szenarien, die externe Funktionen erfordern, muss Ihre App über eine explizite Benutzerberechtigung verfügen, um diese Funktionalität zu starten.
+Sie sollten Benutzer an einer anderen Stelle in Teams und nicht mit einer externen Website oder App verknüpfen. Für Szenarien, die externe Funktionen erfordern, muss Ihre App über eine explizite Benutzerberechtigung verfügen, um diese Funktionalität zu starten.
 
 ### <a name="compatibility"></a>Kompatibilität
 
@@ -147,7 +147,7 @@ Das Teams App-Manifest definiert die Konfigurationen Ihrer App.
 
 * Ihr Manifest muss dem neuesten Manifestschema entsprechen. Weitere Informationen finden Sie in der [Manifestreferenz.](~/resources/schema/manifest-schema.md)
 * Wenn Ihre App eine Bot- oder Messaging-Erweiterung enthält, muss Ihr Manifest mit Bot Framework-Metadaten konsistent sein, einschließlich Bot-Name, Logo, Link zur Datenschutzrichtlinie und Link zu Nutzungsbedingungen.
-* Wenn Ihre App Azure Active Directory (Azure AD) für die Authentifizierung verwendet, fügen Sie die Azure AD-Anwendungs-ID (Client-ID) in das Manifest ein. Weitere Informationen finden Sie in der [Manifestreferenz.](~/resources/schema/manifest-schema.md#webapplicationinfo)
+* Wenn Ihre App Azure Active Directory (Azure AD) für die Authentifizierung verwendet, schließen Sie die Azure AD-Anwendungs-ID (Client-ID) in das Manifest ein. Weitere Informationen finden Sie in der [Manifestreferenz.](~/resources/schema/manifest-schema.md#webapplicationinfo)
 
 ### <a name="app-icons"></a>App-Symbole
 
@@ -155,7 +155,7 @@ Symbole sind eines der Hauptelemente, die Benutzern beim Durchsuchen des Teams S
 
 * Ihr App-Paket muss zwei PNG-Versionen des App-Symbols enthalten: ein Farbsymbol und ein Gliederungssymbol.
 * Die Farbversion ihres Symbols wird in den meisten Teams Szenarien angezeigt und muss 192 x 192 Pixel groß sein. Das Symbolsymbol (96 x 96 Pixel) kann eine beliebige Farbe oder Farbe sein, muss sich jedoch auf einem durchgezogenen oder vollständig transparenten quadratischen Hintergrund befinden.
-* Die Gliederungsversion Ihres Symbols wird angezeigt, wenn Ihre App verwendet und auf der App-Leiste auf der linken Seite von Teams "verschoben" wird und wenn ein Benutzer die Messaging-Erweiterung Ihrer App anheftet. Sie muss 32 x 32 Pixel groß sein und kann weiß mit einem transparenten Hintergrund oder transparent mit weißem Hintergrund sein (keine anderen Farben sind zulässig). Das Symbol sollte keinen zusätzlichen Abstand um das Symbol aufweisen.
+* Die Gliederungsversion Ihres Symbols wird angezeigt, wenn Ihre App verwendet und auf der App-Leiste auf der linken Seite von Teams "verschoben" wird und wenn ein Benutzer die Messaging-Erweiterung Ihrer App anheftet. Sie muss 32 x 32 Pixel groß sein und kann weiß mit einem transparenten Hintergrund oder transparent mit weißem Hintergrund sein (es sind keine anderen Farben zulässig). Das Symbol sollte keinen zusätzlichen Abstand um das Symbol aufweisen.
 * Symbole mit korrekter Größe und Formatierung müssen in Ihrem App-Paket enthalten sein. Die Symbole müssen auch mit den Metadaten des Store-Eintrags übereinstimmen, die übermittelt werden.
 
 Weitere Informationen, bewährte Methoden und Beispiele finden Sie in den Richtlinien für Teams [App-Symbole.](~/concepts/build-and-test/apps-package.md#app-icons)
@@ -190,7 +190,7 @@ Die lange Beschreibung kann eine ansprechende Darstellung liefern, die das Wertv
 * Verwenden Sie [Markdown,](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) um Ihre Beschreibung zu formatieren.
 * Verwenden Sie aktive Sprache, und sprechen Sie direkt mit Benutzern. Sie können z. *B. ...*
 * Auflisten von Features mit Aufzählungspunkten, sodass es einfacher ist, die Beschreibung zu überprüfen.
-* Beschreiben Sie einschränkungen, Bedingungen oder Ausnahmen für die Funktionalität, Features und Lieferumfang, die im Eintrag und den zugehörigen Materialien beschrieben sind, bevor der Benutzer Ihre App installiert. Die Teams Funktionen, die Ihre App unterstützt, müssen sich auf die Kernfunktionen beziehen, die in Ihrem Eintrag beschrieben werden.
+* Beschreiben Sie einschränkungen, Bedingungen oder Ausnahmen für die Funktionalität, Features und Lieferumfang, die im Eintrag und den zugehörigen Materialien beschrieben sind, bevor der Benutzer Ihre App installiert. Die von Ihrer App unterstützten Teams Funktionen müssen sich auf die Kernfunktionen beziehen, die in Ihrem Eintrag beschrieben werden.
 * Fügen Sie einen Hilfe- oder Supportlink hinzu.
 * Verweisen Sie auf **Microsoft 365** anstelle **von Office 365.**
 * Wenn Sie **auf Teams** verweisen müssen, schreiben Sie den ersten Verweis als **Microsoft Teams**. Nachfolgende Verweise können auf **Teams** gekürzt werden.
@@ -239,7 +239,7 @@ Screenshots bieten eine ansprechende visuelle Vorschau Ihrer App, um den App-Nam
 
 * Zeigen Sie bestimmte Geräte an, z. B. Smartphones oder Laptops.
 * Anzeigen von Chrom oder UI, das sich nicht in Ihrer App befindet.
-* Erfassen Sie alle Teams oder Browser-UI in Ihren Screenshots.
+* Erfassen Sie alle Teams oder Die Benutzeroberfläche des Browsers in Ihren Screenshots.
 * Schließen Sie Mockups ein, die die tatsächliche Benutzeroberfläche Ihrer App ungenau wiedergeben, z. B. anzeigen, dass Ihre App außerhalb von Teams verwendet wird.
 
 > [!TIP]
@@ -289,7 +289,7 @@ Wenn Ihre App eine Registerkarte enthält, stellen Sie sicher, dass sie diesen R
 
 * Registerkarten dürfen nicht mehr als drei Navigationsebenen aufweisen.
 * Registerkarten dürfen keine Navigation bereitstellen, die mit der primären Teams Navigation in Konflikt steht.
-* Die sekundären und sekundären Seiten in einer Registerkarte müssen in einer Ansicht der Ebene 2 und ebene 3 im Hauptregisterkartenbereich geöffnet werden, der über Breadcrumbs oder die linke Navigation navigiert wird. Sie können auch die folgenden Komponenten einschließen, um die Registerkartennavigation zu unterstützen:
+* Die sekundären und sekundären Seiten in einer Registerkarte müssen in einer Ansicht der Stufe 2 und ebene 3 im Hauptregisterkartenbereich geöffnet werden, der über Breadcrumbs oder die linke Navigation navigiert wird. Sie können auch die folgenden Komponenten einschließen, um die Registerkartennavigation zu unterstützen:
     * Zurück-Schaltflächen
     * Seitenüberschriften
     * Hamburger-Menüs
@@ -302,7 +302,7 @@ Wenn Ihre App eine Registerkarte enthält, stellen Sie sicher, dass sie diesen R
 * Registerkarten müssen über das Hosten einer vorhandenen Website hinausgehen.
 * Benutzer müssen in der Lage sein, ihre letzte Aktion auf der Registerkarte rückgängig zu machen.
 * Registerkarten in einem persönlichen Kontext können Inhalte aus freigegebenen Instanzen der App aggregieren.
-* Registerkarten müssen auf Teams Designs reagieren. Wenn ein Benutzer das Design ändert, muss das Design der App die Auswahl widerspiegeln.
+* Registerkarten müssen für Teams Designs reaktionsfähig sein. Wenn ein Benutzer das Design ändert, muss das Design der App die Auswahl widerspiegeln.
 * Registerkarten müssen nach Möglichkeit Teams Komponenten verwenden, z. B. Teams Schriftarten, Typhierarchien, Farbpaletten, Rastersystem, Bewegung, Tonfall der Stimme usw.
 * Sie müssen eine **Einstellungen** Registerkarte einschließen.
 * Registerkarten müssen Teams Interaktionsdesign folgen, z. B. Seitennavigation, Position und Verwendung von Dialogfeldern, Informationshierarchien usw., wann immer möglich.
@@ -318,7 +318,7 @@ Wenn Ihre App eine Registerkarte enthält, stellen Sie sicher, dass sie diesen R
 Wenn Ihre App einen Bot enthält, stellen Sie sicher, dass sie diesen Richtlinien entspricht.
 
 > [!TIP]
-> Informationen zum Erstellen einer qualitativ hochwertigen App-Erfahrung finden Sie in den [Teams Bot-Entwurfsrichtlinien.](~/bots/design/bots.md)
+> Informationen zum Erstellen einer qualitativ hochwertigen App-Erfahrung finden Sie in den [Designrichtlinien für Teams Bots.](~/bots/design/bots.md)
 
 ### <a name="bot-commands"></a>Bot-Befehle
 
@@ -328,7 +328,7 @@ Die Analyse der Benutzereingabe und die Vorhersage der Benutzerabsicht ist schwi
 * Alle Befehle, die Ihr Bot unterstützt, müssen ordnungsgemäß funktionieren, einschließlich des Befehls **"Hallo",** **"Hello"** und **"Hilfe".**
 
 > [!TIP]
-> Fügen Sie für persönliche Bots eine **Registerkarte "Hilfe"** hinzu, die weiter beschreibt, was Ihr Bot tun kann.
+> Fügen Sie für persönliche Bots eine **Hilferegisterkarte** hinzu, die weiter beschreibt, was Ihr Bot tun kann.
 
 ### <a name="bot-welcome-messages"></a>Bot-Willkommensnachrichten
 
@@ -355,10 +355,10 @@ Bot-Benachrichtigungen müssen Inhalte enthalten, die für den Bereich relevant 
 
 Adaptive Karten sind eine dringend empfohlene Methode zum Anzeigen von Bot-Nachrichten. Ihre Karten müssen einfach sein und nur 1 bis 3 Aktionen enthalten. Wenn Sie mehr Inhalte anzeigen müssen, sollten Sie ein Aufgabenmodul oder eine Registerkarte verwenden.
 
-Weitere Informationen finden Sie in den folgenden Ressourcen:
+Weitere Informationen finden Sie in den folgenden Artikeln:
 
 * [Entwerfen Adaptiver Karten](~/task-modules-and-cards/cards/design-effective-cards.md)
-* [Karten-Referenz](~/task-modules-and-cards/cards/cards-reference.md#types-of-cards)
+* [Kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md#types-of-cards)
 
 ## <a name="messaging-extensions"></a>Messaging-Erweiterungen
 
@@ -388,7 +388,7 @@ Messaging-Erweiterungen sollten eine Vorschau erkannter Links im Feld Teams Verf
 Ein Aufgabenmodul muss ein Symbol und den Kurznamen der App enthalten, der es zugeordnet ist.
 
 > [!TIP]
-> Informationen zum Erstellen einer qualitativ hochwertigen App-Erfahrung finden Sie in den [Entwurfsrichtlinien für Teams Aufgabenmodul.](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)
+> Informationen zum Erstellen einer qualitativ hochwertigen App-Erfahrung finden Sie in den [Designrichtlinien für Teams Aufgabenmodul.](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)
 
 ## <a name="meeting-extensions"></a>Besprechungserweiterungen
 

@@ -1,55 +1,55 @@
 ---
-title: Packen Ihrer App
-description: Erfahren Sie, wie Sie Microsoft Teams App zum Testen, Hochladen und Speichern von Veröffentlichungen packen.
+title: Verpacken Ihrer App
+description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App zum Testen, Hochladen und Veröffentlichen im Store verpacken.
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 219e2d5341707ed51b7e0a3a8077f93df9eac640
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: fc489f6f00a267cde3ca5fdc8852240ad2f07f4dcc7912cba9550728fdcd9402
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565214"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703900"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Erstellen eines Microsoft Teams-App-Pakets
 
-Sie benötigen ein App-Paket, planen jedoch, Ihre app Microsoft Teams verteilen. Ein gültiges Paket ist eine ZIP-Datei, die Folgendes enthält:
+Sie benötigen ein App-Paket, aber Sie planen, Ihre Microsoft Teams App zu verteilen. Ein gültiges Paket ist eine ZIP-Datei, die Folgendes enthält:
 
-* **App-Manifest:** Beschreibt, wie Ihre App konfiguriert ist, einschließlich ihrer Funktionen, erforderlichen Ressourcen und anderer wichtiger Attribute.
+* **App-Manifest:** Beschreibt, wie Ihre App konfiguriert ist, einschließlich der Funktionen, der erforderlichen Ressourcen und anderer wichtiger Attribute.
 * **App-Symbole:** Jedes Paket erfordert ein Farb- und Gliederungssymbol für Ihre App.
 
 ## <a name="app-manifest"></a>App-Manifest
 
-Ihre App-Manifestdatei muss auf der obersten Ebene des Pakets mit dem Namen `manifest.json` sein. 
+Die App-Manifestdatei muss sich auf der obersten Ebene des Pakets mit dem Namen `manifest.json` befinden. 
 
-Stellen Sie beim Veröffentlichen im Teams sicher, dass das Manifest auf das neueste Schema [verweist.](~/resources/schema/manifest-schema.md)
+Stellen Sie beim Veröffentlichen im Teams Speicher sicher, dass Ihr Manifest auf das neueste [Schema](~/resources/schema/manifest-schema.md)verweist.
 
 ## <a name="app-icons"></a>App-Symbole
 
-Ihr App-Paket muss zwei PNG-Versionen Ihres App-Symbols enthalten: eine Farb- und Gliederungsversion.
+Ihr App-Paket muss zwei PNG-Versionen des App-Symbols enthalten: eine Farb- und Gliederungsversion.
 
 > [!Note]
-> Wenn Ihre App über einen Bot oder eine Messagingerweiterung verfügt, werden Ihre Symbole auch in Ihrer Microsoft Azure Bot Service-Registrierung enthalten.
+> Wenn Ihre App über eine Bot- oder Messaging-Erweiterung verfügt, werden Ihre Symbole auch in Ihre Microsoft Azure Bot Service-Registrierung einbezogen.
 
-Damit Ihre App die Teams bestehen kann, müssen diese Symbole die folgenden Größenanforderungen erfüllen.
+Damit Ihre App Teams Store-Überprüfung bestehen kann, müssen diese Symbole die folgenden Größenanforderungen erfüllen.
 
 ### <a name="color-icon"></a>Farbsymbol
 
-Die Farbversion Des Symbols wird in den meisten Teams angezeigt und muss 192 x 192 Pixel groß sein. Ihr Symbol (96 x 96 Pixel) kann eine beliebige Farbe sein, muss jedoch auf einem einfarbigen oder vollständig transparenten quadratischen Hintergrund stehen.
+Die Farbversion ihres Symbols wird in den meisten Teams Szenarien angezeigt und muss 192 x 192 Pixel groß sein. Das Symbolsymbol (96 x 96 Pixel) kann eine beliebige Farbe sein, muss sich jedoch auf einem durchgezogenen oder vollständig transparenten quadratischen Hintergrund befinden.
 
-Teams Symbol automatisch zu, um ein Quadrat mit abgerundeten Ecken in mehreren Szenarien und eine hexagonale Form in Botszenarien angezeigt. Um das Symbol zuschneiden, ohne Details zu verlieren, schließen Sie 48 Pixel Abstand um das Symbol ein.
+Teams ihr Symbol automatisch zuschneidet, um ein Quadrat mit abgerundeten Ecken in mehreren Szenarien und eine fiktive Form in Bot-Szenarien anzuzeigen. Um das Symbol zuzuschneiden, ohne Details zu verlieren, fügen Sie 48 Pixel Abstand um das Symbol ein.
 
-:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams Farbsymbol und Entwurfsanleitung." border="false":::
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams Farbsymbol und Designanleitung." border="false":::
 
 ### <a name="outline-icon"></a>Gliederungssymbol
 
 Ein Gliederungssymbol wird in zwei Szenarien angezeigt:
 
-* Wenn Ihre App verwendet wird und auf der App-Leiste auf der linken Seite des Teams.
-* Wenn ein Benutzer die Messagingerweiterung Ihrer App anheften.
+* Wenn Ihre App verwendet wird und auf der App-Leiste auf der linken Seite von Teams "hervorgehoben" wird.
+* Wenn ein Benutzer die Messaging-Erweiterung Ihrer App anheftet.
 
-Das Symbol muss 32 x 32 Pixel groß sein. Es kann weiß mit einem transparenten Hintergrund oder transparent mit weißem Hintergrund sein (keine anderen Farben sind zulässig). Das Gliederungssymbol sollte keinen zusätzlichen Abstand um das Symbol haben.
+Das Symbol muss 32 x 32 Pixel groß sein. Es kann weiß mit einem transparenten Hintergrund oder transparent mit weißem Hintergrund sein (keine anderen Farben sind zulässig). Das Gliederungssymbol sollte keinen zusätzlichen Abstand um das Symbol aufweisen.
 
-:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams Gliederungssymbolentwurfsanleitung." border="false":::
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams Designanleitung für Gliederungssymbole." border="false":::
 
 ### <a name="best-practices"></a>Bewährte Methoden
 
@@ -57,28 +57,28 @@ Das Symbol muss 32 x 32 Pixel groß sein. Es kann weiß mit einem transparenten 
    :::column span="":::
 :::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="Abbildung, die zeigt, wie Sie Ihre App-Symbole entwerfen." border="false":::
 
-#### <a name="do-follow-the-precise-outline-icon-guidelines"></a>Do: Befolgen Sie die Richtlinien für genaue Gliederungssymbole.
+#### <a name="do-follow-the-precise-outline-icon-guidelines"></a>Do: Befolgen Sie die genauen Richtlinien für Gliederungssymbole.
 
-Die RGB-Werte von Weiß, die in Ihrem Symbol verwendet werden, müssen Rot sein: 255, Grün: 255, Blau: 255. Alle anderen Teile des Gliederungssymbols müssen vollständig transparent sein, und der Alphakanal ist auf 0 festgelegt.
+Die RGB-Werte von Weiß, das in Ihrem Symbol verwendet wird, müssen Rot sein: 255, Grün: 255, Blau: 255. Alle anderen Teile des Gliederungssymbols müssen vollständig transparent sein, wobei der Alphakanal auf 0 festgelegt ist.
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="Abbildung, die zeigt, wie Sie Ihre App-Symbole nicht entwerfen." border="false":::
 
-#### <a name="dont-crop-in-a-circular-or-rounded-square-shape"></a>Don't: Crop in a circular or rounded square shape
+#### <a name="dont-crop-in-a-circular-or-rounded-square-shape"></a>Nicht empfohlen: Zuschneiden in einer kreisförmigen oder abgerundeten Quadratform
 
-Das in Ihrem App-Paket übermittelte Farbsymbol muss quadratisch sein. Runden Sie nicht die Ecken Ihres Symbols. Teams automatisch den Eckenradius an.
+Das in Ihrem App-Paket übermittelte Farbsymbol muss quadratisch sein. Runden Sie nicht die Ecken Des Symbols. Teams passt den Winkelradius automatisch an.
 
    :::column-end:::
 :::row-end:::
 
-#### <a name="dont-copy-other-brands"></a>Don't: Copy other brands
+#### <a name="dont-copy-other-brands"></a>Don't: Copy other labels
 
-Ihre Symbole dürfen keine urheberrechtlich geschützten Produkte imitieren, die Sie nicht besitzen. Beispiel: ein Design, das einem Microsoft-Produkt oder einer Marke ähnelt.
+Ihre Symbole dürfen keine urheberrechtlich geschützten Produkte imitieren, die Sie nicht besitzen. Beispielsweise ein Design, das einem Microsoft-Produkt oder einer Microsoft-Marke ähnelt.
 
 ### <a name="examples"></a>Beispiele
 
-Hier sehen Sie, wie App-Symbole in verschiedenen Teams und Kontexten angezeigt werden.
+Hier sehen Sie, wie App-Symbole in verschiedenen Teams Funktionen und Kontexten angezeigt werden.
 
 #### <a name="personal-app"></a>Persönliche App
 
@@ -86,11 +86,11 @@ Hier sehen Sie, wie App-Symbole in verschiedenen Teams und Kontexten angezeigt w
 
 #### <a name="bot-channel"></a>Bot (Kanal)
 
-:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Beispiel, das zeigt, wie ein App-Symbol auf einem Bot innerhalb eines Kanals aussieht." border="false":::
+:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Beispiel, das zeigt, wie ein App-Symbol auf einem Bot innerhalb des Kanals aussieht." border="false":::
 
 #### <a name="messaging-extension"></a>Messaging-Erweiterung
 
-:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<text>" border="false":::
+:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alternativ>" border="false":::
 
 ## <a name="next-step"></a>Nächster Schritt
 

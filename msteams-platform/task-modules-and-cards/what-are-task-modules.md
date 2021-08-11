@@ -5,12 +5,12 @@ description: Hinzufügen modaler Popup-Oberflächen zum Sammeln oder Anzeigen vo
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 257ca54ab53d310116cc301dded01a7582c11532
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 3b0e639acc8901a3637189e435fcfc159e992ae3a674a437733474087103193c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140537"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707682"
 ---
 # <a name="task-modules"></a>Aufgabenmodule
 
@@ -50,7 +50,7 @@ Ein Aufgabenmodul enthält Folgendes, wie in der vorherigen Abbildung dargestell
 6. Wenn Sie eine adaptive Karte mithilfe der `card` Eigenschaft des [TaskInfo -Objekts](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) anzeigen, wird der Abstand für Sie hinzugefügt. Weitere Informationen finden Sie unter [Aufgabenmodul-CSS für HTML- oder JavaScript-Aufgabenmodule.](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules)
 7. Schaltflächen für adaptive Karten werden gerendert, nachdem Sie **"Registrieren"** ausgewählt haben. Wenn Sie Ihre eigene Seite verwenden, erstellen Sie Ihre eigenen Schaltflächen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Karten](~/task-modules-and-cards/what-are-cards.md)
 

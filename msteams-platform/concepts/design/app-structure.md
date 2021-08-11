@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: a574ebeb5416e614152bb24d52cc798f0032943c
-ms.sourcegitcommit: 0fe60b3fd406a5768b18977df53d1f4c665e5300
+ms.openlocfilehash: 2e053186355b583e456e73c6443f5d8c043157a9ae0a09941a86a3aabd7978c5
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53133393"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706702"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Grundlegendes zur Microsoft Teams App-Struktur
 
@@ -32,7 +32,7 @@ Persönliche Apps bieten eine große Canvas, um Ihre App-Inhalte für einzelne B
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-Die Canvas ist ein iFrame, damit Sie die Benutzeroberfläche vollständig anpassen können.
+Die Canvas ist ein iFrame, sodass Sie die Benutzeroberfläche vollständig anpassen können.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für persönliche Apps auf dem Desktop anpassen können." border="false":::
 
@@ -40,7 +40,7 @@ Die Canvas ist ein iFrame, damit Sie die Benutzeroberfläche vollständig anpass
 
 Die Canvas ist eine Webansicht, mit der Sie die Benutzeroberfläche vollständig anpassen können.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für persönliche Apps auf Mobilgeräten anpassen können." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für persönliche Apps auf mobilgeräten anpassen können." border="false":::
 
 ---
 
@@ -52,7 +52,7 @@ Registerkarten bieten einen großen Canvas zum Hosten der App-Inhalte für eine 
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-Die Canvas ist ein iFrame, damit Sie die Benutzeroberfläche vollständig anpassen können.
+Die Canvas ist ein iFrame, sodass Sie die Benutzeroberfläche vollständig anpassen können.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Registerkarten auf Desktops anpassen können." border="false":::
 
@@ -66,17 +66,17 @@ Die Canvas ist eine Webansicht, mit der Sie die Benutzeroberfläche vollständig
 
 ## <a name="bots"></a>Bots
 
-Bots sind Unterhaltungs-Apps, die in Teams systemeigenen Messaging-Features integriert sind, sodass die Ui-Arbeit für Sie erledigt wird. Aus Entwurfssicht gibt es weiterhin Möglichkeiten, Persönlichkeit, benutzerdefinierte Funktionen und umfangreiche, umsetzbare Informationen mit unserer NLP-Unterstützung (Natural Language Processing) und der Plattform für adaptive Karten hinzuzufügen.
+Bots sind Unterhaltungs-Apps, die sich in Teams native Messaging-Features integrieren, sodass die Ui-Arbeit für Sie erledigt wird. Aus Entwurfssicht gibt es weiterhin Möglichkeiten, Persönlichkeit, benutzerdefinierte Funktionen und umfangreiche, umsetzbare Informationen mit unserer NLP-Unterstützung (Natural Language Processing) und der Plattform für adaptive Karten hinzuzufügen.
 
 ***Unterstützte Bereiche:** Persönlich, Kanäle, Chats, Besprechungen*
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Bots auf desktop anpassen können." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Bots auf dem Desktop anpassen können." border="false":::
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Bots auf Mobilen anpassen können." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Bots auf mobilgeräten anpassen können." border="false":::
 
 ---
 
@@ -104,7 +104,7 @@ Besprechungserweiterungen sind Apps zur Verbesserung von Livebesprechungen. Sie 
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-Die Oberfläche ist ein iFrame, mit dem Sie die Benutzeroberfläche anpassen können. Bedenken Sie jedoch, dass diese Apps in Besprechungen dunkles Design verwenden und schmal sind.
+Die Oberfläche ist ein iFrame, mit dem Sie die Benutzeroberfläche anpassen können. Bedenken Sie jedoch, dass diese Apps während Besprechungen dunkles Design verwenden und schmal sind.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Besprechungserweiterungen auf dem Desktop anpassen können." border="false":::
 

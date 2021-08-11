@@ -6,12 +6,12 @@ keywords: teams tabs group channel configurable static
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6d1a0f6dd3593209f94966140ea94b33ac0c8d10
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: f6f673420de73d786ddee95b4da7870750f3e6851a80f6ad71b1e606d650ba60
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726873"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708308"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Erstellen einer Inhaltsseite für Ihre Registerkarte
 
@@ -27,11 +27,11 @@ Dieser Artikel ist spezifisch für die Verwendung von Inhaltsseiten als Register
 
 Das übergeordnete Ziel Ihrer Registerkarte besteht darin, den Zugriff auf aussagekräftige und ansprechende Inhalte zu ermöglichen, die einen praktischen Nutzen und einen offensichtlichen Zweck haben. Sie müssen sich darauf konzentrieren, das Registerkartendesign übersichtlich, navigations intuitiv und inhaltssiv zu gestalten.
 
-Weitere Informationen finden Sie in den Richtlinien für das [Registerkartendesign](~/tabs/design/tabs.md) und [Microsoft Teams Richtlinien für die Speichervalidierung.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+Weitere Informationen finden Sie unter [Registerkartenentwurfsrichtlinien](~/tabs/design/tabs.md) und [Microsoft Teams Richtlinien für die Speichervalidierung.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 
 ## <a name="integrate-your-code-with-teams"></a>Integrieren Von Code in Teams
 
-Damit Ihre Seite in Teams angezeigt werden kann, müssen Sie das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) und einen Aufruf nach `microsoftTeams.initialize()` dem Laden der Seite einschließen. 
+Damit Ihre Seite in Teams angezeigt werden kann, müssen Sie das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) und einen Aufruf nach dem `microsoftTeams.initialize()` Laden der Seite einschließen. 
 
 Der folgende Code enthält ein Beispiel dafür, wie Ihre Seite und der Teams-Client kommunizieren:
 
@@ -102,7 +102,7 @@ Wenn Sie `showLoadingIndicator : true`  in Ihrem App-Manifest angeben, müssen a
     }
     ```
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Weitere Informationen
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)

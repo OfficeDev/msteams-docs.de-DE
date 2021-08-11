@@ -6,12 +6,12 @@ author: surbhigupta
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: c2cff522c0089657c6a33a4e4c3b4dd176abda11
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 93992f5aa4aaa4081b16ddbf9f984a9a1a5ff547bc847e54dcdb62d12c4948e0
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068962"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707106"
 ---
 # <a name="create-a-saas-offer-for-your-teams-app"></a>SaaS-Angebot für Ihre Teams-App erstellen
 
@@ -24,7 +24,7 @@ Wenn Sie Ihrer App-Lösung ein SaaS-Angebot (Software as a Service) hinzufügen,
 |**Erstellen eines neuen SaaS-Angebots**|Erstellen und Konfigurieren eines neuen SaaS-Angebots auf dem kommerziellen Marketplace.| [Dokumentation](/azure/marketplace/partner-center-portal/create-new-saas-offer)|
 |**Registrieren einer neuen SaaS-Anwendung** | Registrieren einer SaaS-Anwendung bei Microsoft.| [Dokumentation](/azure/marketplace/partner-center-portal/pc-saas-registration)|
 |**SaaS-Angebotserstellung: Prüfliste für Entwickler**| Details und Anleitungen zum Erstellen eines SaaS-Angebots im Partner Center.| [Dokumentation](/azure/marketplace/partner-center-portal/offer-creation-checklist)|
-|**Kommerzielles Marketplace-Angebot: bewährte Methoden** |Insights zum Erstellen effektiver SaaS-Angebote.|[Dokumentation](/azure/marketplace/gtm-offer-listing-best-practices)|
+|**Kommerzielles Marketplace-Angebot: bewährte Methoden** |Insights für die Erstellung effektiver SaaS-Angebote.|[Dokumentation](/azure/marketplace/gtm-offer-listing-best-practices)|
 |**Microsoft SaaS-Erfüllungs-API (V2)** | Erkunden Sie die APIs, mit denen Entwickler SaaS-Angebote mit Microsoft erstellen können.| [Dokumentation](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2) |
 |**Implementieren des SaaS Fulfillment SDK**| Implementieren der erforderlichen Komponenten, um das SDK zu aktivieren, einschließlich der SaaS Fulfillment API (v2) und der Marketplace Metering Service-API.| [Get it on GitHub](https://github.com/Azure/Microsoft-commercial-marketplace-transactable-SaaS-offer-SDK/blob/master/docs/Installation-Instructions.md) |
 |**Beispielcode für SaaS-Angebote**| Sehen Sie sich unsere SaaS-Angebotscodebeispiele und das SDK an.| [Get it on GitHub](https://github.com/Azure/Microsoft-commercial-marketplace-transactable-SaaS-offer-SDK)|

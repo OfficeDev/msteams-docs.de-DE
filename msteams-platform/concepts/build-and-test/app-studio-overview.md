@@ -4,14 +4,14 @@ description: Erste Schritte zum Erstellen von großartigen Apps in Microsoft Tea
 keywords: Erste Schritte mit App Studio-Teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: c68a7a36212086c9c0929796cab66bc53f8cbb2b
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 507a044098e479c7b737d6d7711a4e912ec81cbfe56fda2345a088618c47b36b
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949770"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704049"
 ---
-# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Verwalten Ihrer Apps mit App Studio für Microsoft Teams
+# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Verwalten Von Apps mit App Studio für Microsoft Teams
 
 > [!TIP]
 > **Testen Sie das Entwicklerportal:** App Studio hat sich weiterentwickelt. Konfigurieren, verteilen und verwalten Sie Ihre Teams-Apps mit dem neuen [Entwicklerportal.](https://dev.teams.microsoft.com/)
@@ -76,7 +76,7 @@ Im Abschnitt "Funktionen" des Manifest-Editors werden die Funktionen der App def
 
   Sie müssen auch alle zusätzlichen Domänen angeben, von denen die Registerkarte erwartet, dass sie geladen werden oder mit denen sie verlinkt wird.
 
-* **Persönliche Registerkarten.** In diesem Abschnitt können Sie eine Reihe von Registerkarten definieren, die standardmäßig in der persönlichen App-Benutzeroberfläche angezeigt werden (Erfahrung, die ein Benutzer mit Ihrer App außerhalb des Kontexts eines Teams oder Kanals hat). Geben Sie in diesem Abschnitt den Registerkartennamen an, ein eindeutiger Bezeichner, die URL, die auf die Benutzeroberfläche verweist und in Teams angezeigt werden soll, und optional die URL, die verwendet werden soll, wenn ein Benutzer die Registerkarte in einem Browser anzeigen möchte. Stellen Sie mit Teams Registerkarten alle zusätzlichen Domänen bereit, von denen die Registerkarte erwartet, dass sie geladen wird, oder stellen Sie eine Verknüpfung zu diesen bereit.
+* **Persönliche Registerkarten.** In diesem Abschnitt können Sie eine Reihe von Registerkarten definieren, die standardmäßig in der persönlichen App-Benutzeroberfläche angezeigt werden (Erfahrung, die ein Benutzer mit Ihrer App außerhalb des Kontexts eines Teams oder Kanals hat). Geben Sie in diesem Abschnitt den Registerkartennamen an, ein eindeutiger Bezeichner, die URL, die auf die Benutzeroberfläche verweist und in Teams angezeigt werden soll, und optional die URL, die verwendet werden soll, wenn ein Benutzer die Registerkarte in einem Browser anzeigen möchte. Stellen Sie mit Teams Registerkarten alle zusätzlichen Domänen bereit, von denen die Registerkarte erwartet, dass sie geladen wird oder mit denen eine Verknüpfung hergestellt wird.
 
 ##### <a name="bots"></a>Bots
 
@@ -128,7 +128,7 @@ Wenn Sie bereits über eine Karte verfügen, die Sie in Teams überprüfen möch
 ### <a name="react-control-library"></a>React-Steuerelementbibliothek
 
 >[!Note]
-> Diese React Steuerelementbibliothek ist in Zukunft veraltet. Erwägen Sie die Verwendung der [React-Steuerelemente Fluent-UI als alternative](https://microsoft.github.io/fluent-ui-react/) zuvor Stardust-UI.
+> Diese React Steuerelementbibliothek ist in Zukunft veraltet. Erwägen Sie die Verwendung der [React-Steuerelemente Fluent-UI als alternative](https://microsoft.github.io/fluent-ui-react/) zuvor Stardust-Benutzeroberfläche.
 
 Das Erstellen einer App, die Teams‘ Bewährte Methoden befolgt, ist eine hervorragende Möglichkeit, Ihrer App ein Erscheinungsbild zu verleihen, das sich nahtlos in die Kundenerfahrung in Teams einfügt. Die von Ihnen verwendeten UI-Steuerelemente sind entscheidend, um dieses Ziel zu erreichen. Um das Erstellen einer konsistenten Benutzeroberfläche zu vereinfachen, bietet App Studio verschiedene Kategorien von Steuerelementen für die Benutzeroberfläche, die den Entwurfsprinzipien von Teams entsprechen.
 

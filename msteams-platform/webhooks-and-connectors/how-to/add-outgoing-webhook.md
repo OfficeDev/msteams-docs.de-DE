@@ -6,12 +6,12 @@ ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
 keywords: Teams-Registerkarten ausgehende Webhook-Nachricht mit Aktionen überprüfen Webhook
-ms.openlocfilehash: c02ff5388e47ba40056afcc1fcf5e8d7ad4437e8
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8dabf78cd27f0f59bd8ce617eb83ded24ecc3dc92478e7233bf8f8bb6a2a4e19
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140327"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704300"
 ---
 # <a name="create-outgoing-webhook"></a>Erstellen eines ausgehenden Webhooks
 
@@ -52,7 +52,7 @@ Erstellen Sie ausgehende Webhooks, und fügen Sie Teams benutzerdefinierte Bots 
 
 1. Geben Sie die folgenden Details auf der Seite **"Erstellen eines ausgehenden Webhooks" ein:**
 
-    * **Name:** Der Webhook-Titel und @mention Registerkarte.
+    * **Name:** Der Webhook-Titel und die Registerkarte @mention.
     * **Rückruf-URL:** Der HTTPS-Endpunkt, der JSON-Nutzlasten akzeptiert und POST-Anforderungen von Teams empfängt.
     * **Beschreibung:** Eine detaillierte Zeichenfolge, die auf der Profilkarte und im App-Dashboard auf Teamebene angezeigt wird.
     * **Profilbild:** Ein App-Symbol für Ihren Webhook, das optional ist.
@@ -68,8 +68,8 @@ Ein [Hashbasiertes Dialogfeld mit dem Nachrichtenauthentifizierungscode (Message
 
 Das folgende Szenario enthält die Details zum Hinzufügen eines ausgehenden Webhooks:
 
-* Szenario: Pushänderungsstatusbenachrichtigungen auf einem Teams Kanaldatenbankserver an Ihre App.
-* Beispiel: Sie verfügen über eine Branchen-App, die alle CRUD-Vorgänge verfolgt, z. B. erstellen, lesen, aktualisieren und löschen. Diese Vorgänge werden den Mitarbeiterdatensätzen von Teams Kanal-HR-Benutzern über einen Office 365 Mandanten vorgenommen.
+* Szenario: Push-Änderungsstatusbenachrichtigungen auf einem Teams Kanaldatenbankserver an Ihre App.
+* Beispiel: Sie verfügen über eine Branchen-App, die alle CRUD-Vorgänge verfolgt, z. B. erstellen, lesen, aktualisieren und löschen. Diese Vorgänge werden den Mitarbeiterdatensätzen von Teams Kanal-HR-Benutzern in einem Office 365 Mandanten vorgenommen.
 
 # <a name="url-json-payload"></a>[JSON-URL-Nutzlast](#tab/urljsonpayload)
 **Erstellen Sie eine URL auf dem Server Ihrer App, um eine POST-Anforderung mit einer JSON-Nutzlast zu akzeptieren und zu verarbeiten.**
@@ -89,7 +89,7 @@ Um sicherzustellen, dass Ihr Dienst nur Aufrufe von tatsächlichen Teams Clients
 
 Ihr Code muss die in der Anforderung enthaltene HMAC-Signatur immer wie folgt überprüfen:
 
-* Generieren Sie das HMAC-Token aus dem Anforderungstext der Nachricht. Es gibt Standardbibliotheken, um dies auf den meisten Plattformen zu tun, z. [B. Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) für Node.js und [Teams Webhook-Beispiel](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) für C \# ). Microsoft Teams verwendet standard SHA256 HMAC-Kryptografie. Sie müssen den Textkörper in UTF8 in ein Bytearray konvertieren.
+* Generieren Sie das HMAC-Token aus dem Anforderungstext der Nachricht. Es gibt Standardbibliotheken, um dies auf den meisten Plattformen zu tun, z. [B. Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) für Node.js und [Teams Webhook-Beispiel](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) für C \# ). Microsoft Teams verwendet standardmäßige SHA256 HMAC-Kryptografie. Sie müssen den Textkörper in UTF8 in ein Bytearray konvertieren.
 * Berechnen Sie den Hash aus dem Bytearray des Sicherheitstokens, das von Teams bereitgestellt wird, wenn Sie den ausgehenden Webhook im Teams-Client registriert haben. Siehe [Erstellen eines ausgehenden Webhooks.](#create-outgoing-webhook)
 * Konvertieren Sie den Hash in eine Zeichenfolge mithilfe der UTF-8-Codierung.
 * Vergleichen Sie den Zeichenfolgenwert des generierten Hash mit dem in der HTTP-Anforderung angegebenen Wert.
@@ -180,7 +180,7 @@ var responseMsg = JSON.stringify({
 });
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -217,9 +217,9 @@ var responseMsg = JSON.stringify({
 
 |**Beispielname** | **Beschreibung** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Ausgehende Webhooks | Beispiele zum Erstellen von benutzerdefinierten Bots, die in Microsoft Teams verwendet werden.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| Ausgehende Webhooks | Beispiele zum Erstellen von benutzerdefinierten Bots, die in Microsoft Teams verwendet werden.| [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## <a name="see-also"></a>Siehe auch
 * [Erstellen eines eingehenden Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Erstellen eines Office 365-Connectors](~/webhooks-and-connectors/how-to/connectors-creating.md)
-* [Erstellen und Senden von Nachrichten](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [Nachrichten erstellen und senden](~/webhooks-and-connectors/how-to/connectors-using.md)

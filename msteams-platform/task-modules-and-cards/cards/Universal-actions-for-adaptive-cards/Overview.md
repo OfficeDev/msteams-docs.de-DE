@@ -3,12 +3,12 @@ title: Übersicht über universelle Aktionen für adaptive Karten
 description: Eine kurze Übersicht über universelle Aktionen für adaptive Karten.
 ms.topic: overview
 localization_priority: Normal
-ms.openlocfilehash: f8980743954c4dff2ced464bc599439c7519cefe
-ms.sourcegitcommit: d1d1143e285cac5f23590ccba5389616d08f94b3
+ms.openlocfilehash: 20231245af5a1fe479277558367e6265f4391ff0925dfcf96288912470b09b38
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "52781618"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706364"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Universal-Aktionen für adaptive Karten
 
@@ -111,7 +111,7 @@ Adaptive Karten sind eine Kombination aus Inhalten, z. B. Text und Grafiken, und
 
 Sie können loslegen, indem Sie Szenarien mithilfe der [Schnellstartanleitung](Work-with-universal-actions-for-adaptive-cards.md) aktualisieren und universelle Aktionen nutzen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Was sind Bots?](~/bots/what-are-bots.md)
 * [Übersicht über adaptive Karten](~/task-modules-and-cards/what-are-cards.md)

@@ -1,55 +1,55 @@
 ---
 title: Eingehende Anrufbenachrichtigungen
-description: Detaillierte technische Informationen zum Behandeln von Benachrichtigungen von eingehenden Anrufen
+description: Detaillierte technische Informationen zur Behandlung von Benachrichtigungen bei eingehenden Anrufen
 ms.topic: conceptual
 localization_priority: Normal
-keywords: Aufrufen von Anrufbenachrichtigungen Rückrufregionsaffinität
+keywords: Anrufbenachrichtigungen Rückrufregion Affinität aufrufen
 ms.date: 04/02/2019
-ms.openlocfilehash: 06068c13d27598b9a7b5e70181c69f9efb2c0afb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 5c24aa83b26999070f65978fce9b19139f2445955acb8f5aa7b5c0a46255c927
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020176"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705045"
 ---
 # <a name="incoming-call-notifications"></a>Eingehende Anrufbenachrichtigungen
 
-Bei der Registrierung eines Anruf- und [Besprechungsbots für Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)wird der Webhook für das Aufrufen der URL erwähnt. Diese URL ist der Webhook-Endpunkt für alle eingehenden Anrufe an Ihren Bot.
+Bei [der Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)wird der Webhook für die Anruf-URL erwähnt. Diese URL ist der Webhook-Endpunkt für alle eingehenden Anrufe an Ihren Bot.
 
 ## <a name="protocol-determination"></a>Protokollermittlung
 
-Die eingehende Benachrichtigung wird aus Kompatibilität mit dem vorherigen Skype [bereitgestellt.](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true) Um den Aufruf an das Microsoft Graph-Protokoll zu konvertieren, muss Ihr Bot ermitteln, ob die Benachrichtigung im Legacyformat enthalten ist, und die folgende Antwort bereitstellen:
+Die eingehende Benachrichtigung wird aus Gründen der Kompatibilität mit dem vorherigen [Skype-Protokoll](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)in einem älteren Format bereitgestellt. Um den Aufruf in das Microsoft Graph-Protokoll zu konvertieren, muss Ihr Bot ermitteln, ob die Benachrichtigung ein Legacyformat aufweist, und die folgende Antwort bereitstellen:
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-Ihr Bot empfängt die Benachrichtigung erneut, aber dieses Mal im Microsoft Graph Protokoll.
+Ihr Bot empfängt die Benachrichtigung erneut, aber dieses Mal im Microsoft Graph-Protokoll.
 
-In einer zukünftigen Version der Echtzeitmedienplattform können Sie das von Der Anwendung unterstützte Protokoll konfigurieren, um den anfänglichen Rückruf im Legacyformat zu vermeiden.
+In einer zukünftigen Version der Real-Time Media Platform können Sie das Protokoll konfigurieren, das Ihre Anwendung unterstützt, um zu vermeiden, dass der anfängliche Rückruf im Legacyformat empfangen wird.
 
-Der nächste Abschnitt enthält Details zu eingehenden Anrufbenachrichtigungen, die für die Regionaffinität zu Ihrer Bereitstellung umgeleitet werden.
+Der nächste Abschnitt enthält Details zu eingehenden Anrufbenachrichtigungen, die für die Regionsaffinität zu Ihrer Bereitstellung umgeleitet werden.
 
-## <a name="redirects-for-region-affinity"></a>Umleitungen für die Regionaffinität
+## <a name="redirects-for-region-affinity"></a>Umleitungen für Regionsaffinität
 
-Sie rufen Ihren Webhook aus dem Rechenzentrum auf, das den Anruf hosten. Der Anruf beginnt in einem Beliebigen Rechenzentrum und berücksichtigt keine Regionalaffinitäten. Die Benachrichtigung wird abhängig von der GeoDNS-Auflösung an Ihre Bereitstellung gesendet. Wenn Ihre Anwendung durch Überprüfen der ursprünglichen Benachrichtigungsnutzlast oder anderweitig feststellt, dass sie in einer anderen Bereitstellung ausgeführt werden muss, gibt die Anwendung die folgende Antwort:
+Sie rufen Ihren Webhook aus dem Rechenzentrum an, in dem der Anruf gehostet wird. Der Anruf beginnt in einem beliebigen Rechenzentrum und berücksichtigt keine Regionsaffinitäten. Die Benachrichtigung wird abhängig von der GeoDNS-Auflösung an Ihre Bereitstellung gesendet. Wenn Ihre Anwendung feststellt, dass sie in einer anderen Bereitstellung ausgeführt werden muss, indem sie die anfängliche Benachrichtigungsnutzlast überprüft oder anderweitig überprüft, gibt die Anwendung die folgende Antwort aus:
 
 ```http
 HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-Aktivieren Sie Ihren Bot, um einen eingehenden Anruf über die [Antwort-API zu](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) beantworten. Sie können die `callbackUri` angeben, um diesen bestimmten Anruf zu verarbeiten. Dies ist nützlich für Zustandsinstanzen, in denen Ihr Anruf von einer bestimmten Partition verarbeitet wird, und Sie möchten diese Informationen in die für das Routing an die `callbackUri` richtige Instanz einbetten.
+Ermöglichen Sie Ihrem Bot, einen eingehenden Anruf mithilfe der [Antwort-API](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) zu beantworten. Sie können den `callbackUri` für diesen bestimmten Aufruf zu verwendenden Wert angeben. Dies ist nützlich für zustandsbehaftete Instanzen, in denen Ihr Anruf von einer bestimmten Partition verarbeitet wird, und Sie möchten diese Informationen für das `callbackUri` Routing an die richtige Instanz einbetten.
 
-Der nächste Abschnitt enthält Details zur Authentifizierung des Rückrufs durch Überprüfen des Tokens, das in Ihrem Webhook bereitgestellt wurde.
+Der nächste Abschnitt enthält Details zum Authentifizieren des Rückrufs, indem das token überprüft wird, das in Ihrem Webhook veröffentlicht wurde.
 
 ## <a name="authenticate-the-callback"></a>Authentifizieren des Rückrufs
 
-Ihr Bot muss das token überprüfen, das in Ihrem Webhook bereitgestellt wurde, um die Anforderung zu überprüfen. Jedes Mal, wenn die API an den Webhook beiträget, enthält die HTTP-POST-Nachricht ein OAuth-Token im Autorisierungsheader als Bearertoken, bei dem die Zielgruppe die App-ID Ihrer Anwendung ist.
+Ihr Bot muss das in Ihrem Webhook gepostete Token überprüfen, um die Anforderung zu überprüfen. Jedes Mal, wenn die API im Webhook postet, enthält die HTTP POST-Nachricht ein OAuth-Token im Autorisierungsheader als Bearertoken, wobei die Zielgruppe die App-ID Ihrer Anwendung ist.
 
-Ihre Anwendung muss dieses Token überprüfen, bevor sie die Rückrufanforderung akzeptiert.
+Ihre Anwendung muss dieses Token überprüfen, bevor die Rückrufanforderung akzeptiert wird.
 
-Der folgende Beispielcode wird zum Authentifizieren des Rückrufs verwendet:
+Der folgende Beispielcode wird verwendet, um den Rückruf zu authentifizieren:
 
 ```http
 POST https://bot.contoso.com/api/calls
@@ -68,7 +68,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-Das OAuth-Token hat die folgenden Werte und wird von einem Skype:
+Das OAuth-Token hat die folgenden Werte und wird von Skype signiert:
 
 ```json
 {
@@ -81,15 +81,15 @@ Das OAuth-Token hat die folgenden Werte und wird von einem Skype:
 }
 ```
 
-Die unter veröffentlichte <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> OpenID-Konfiguration kann zum Überprüfen des Tokens verwendet werden. Jeder OAuth-Tokenwert wird wie folgt verwendet:
+Die openID-Konfiguration, die unter veröffentlicht <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> wurde, kann verwendet werden, um das Token zu überprüfen. Jeder OAuth-Tokenwert wird wie folgt verwendet:
 
-* `aud` dabei ist Audience der für die Anwendung angegebene App-ID-URI.
+* `aud` dabei ist "audience" der app-ID-URI, der für die Anwendung angegeben ist.
 * `tid` ist die Mandanten-ID für Contoso.com.
-* `iss` ist der Tokenherausgeber, `https://api.botframework.com` .
+* `iss` ist der `https://api.botframework.com` Tokenaussteller.
 
-Für die Codeverarbeitung muss der Webhook das Token überprüfen, sicherstellen, dass es nicht abgelaufen ist, und überprüfen, ob es von der veröffentlichten OpenID-Konfiguration signiert wurde. Sie müssen auch überprüfen, ob aud mit Ihrer App-ID entspricht, bevor Sie die Rückrufanforderung akzeptieren.
+Für die Codeverarbeitung muss der Webhook das Token überprüfen, sicherstellen, dass es nicht abgelaufen ist, und überprüfen, ob es von der veröffentlichten OpenID-Konfiguration signiert wurde. Sie müssen auch überprüfen, ob "aud" ihrer App-ID entspricht, bevor Sie die Rückrufanforderung annehmen.
 
-Weitere Informationen finden Sie unter [Überprüfen eingehender Anforderungen](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
+Weitere Informationen finden Sie unter [Überprüfen eingehender Anforderungen.](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)
 
 ## <a name="next-step"></a>Nächster Schritt
 

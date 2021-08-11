@@ -5,12 +5,12 @@ description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Te
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams O365-Connector
-ms.openlocfilehash: 8835e43ed74a8da5ad3b3b4358b259d63068b469
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: afef216c7ef6f6813dc1ece807fa917a801687eb060f2711be7df3c2cb42ac12
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179895"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703128"
 ---
 # <a name="create-and-send-messages"></a>Nachrichten erstellen und senden
 
@@ -251,7 +251,7 @@ Die folgende Tabelle enthält die zeitbasierten Transaktionsdetails:
 
 | Zeit in Sekunden  | Maximal zulässige Anforderungen  |
 |---|---|
-| 1    | 4   |  
+| 1   | 4   |  
 | 30   | 60  |  
 | 3600   | 100  |
 | 7200 | 150  |
@@ -280,7 +280,7 @@ try
 
 Diese Grenzwerte sind vorhanden, um das Spamming eines Kanals über einen Connector zu reduzieren und eine optimale Benutzererfahrung sicherzustellen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Office 365 Connectors für Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Erstellen eines eingehenden Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)

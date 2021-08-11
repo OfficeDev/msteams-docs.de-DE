@@ -5,12 +5,12 @@ description: Erstellen eines Unterhaltungsunterentitätschats für Ihre Kanalreg
 keywords: Kanal "Teams-Registerkarten" konfigurierbar
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: b563510b9ce232a98572430c76f1b8e59ddb4886
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 6c2574453f00735d4441c389648df375fc1d01046d2c8f558b470efe4f3392ca
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179692"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705106"
 ---
 # <a name="create-conversational-tabs"></a>Registerkarten für Unterhaltungen erstellen
 
@@ -20,7 +20,7 @@ Unterhaltungsunterentitäten werden nur in Kanälen unterstützt. Sie können vo
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Um Unterhaltungsunterentitäten zu unterstützen, muss Ihre Registerkartenwebanwendung in der Lage sein, eine Zuordnung zwischen Unterentitäten ↔ Unterhaltungen in einer Back-End-Datenbank zu speichern. Dies `conversationId` wird bereitgestellt, Sie müssen dies jedoch speichern `conversationId` und an Teams zurückgeben, damit Benutzer die Unterhaltung fortsetzen können.
+Um Unterhaltungsunterentitäten zu unterstützen, muss Ihre Registerkartenwebanwendung in der Lage sein, eine Zuordnung zwischen Unterentitäten ↔ Unterhaltungen in einer Back-End-Datenbank zu speichern. Die `conversationId` wird bereitgestellt, aber Sie müssen dies speichern `conversationId` und an Teams zurückgeben, damit Benutzer die Unterhaltung fortsetzen können.
 
 ## <a name="start-a-new-conversation"></a>Starten einer neuen Unterhaltung
 
@@ -89,7 +89,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 };
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)

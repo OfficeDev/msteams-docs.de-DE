@@ -1,26 +1,26 @@
 ---
-title: Entwerfen Ihrer App mit grundlegenden Komponenten für die Fluent-Benutzeroberfläche
+title: Entwerfen Ihrer App mit einfachen Fluent UI-Komponenten
 author: heath-hamilton
-description: Erfahren Sie mehr über die primitiven Benutzeroberflächenkomponenten, die häufig verwendet werden, um Microsoft Teams zu erstellen und das Microsoft Teams UI Kit zu erhalten.
+description: Erfahren Sie mehr über die grundtypischen UI-Komponenten, die häufig zum Erstellen Microsoft Teams Apps und zum Abrufen des Microsoft Teams UI Kit verwendet werden.
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: eec324a67cec0eb39cc98c0ab63ff71771ebbf11
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: e58a64014be2b576f8ca16d707e315fa8056f9b717ae8dd976f80c544c57ba31
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644910"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704166"
 ---
-# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Entwerfen Ihrer Microsoft Teams app mit grundlegenden Fluent UI-Komponenten
+# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Entwerfen Ihrer Microsoft Teams-App mit einfachen Fluent UI-Komponenten
 
-Sie können Ihre Teams mit den folgenden grundlegenden Komponenten der Fluent-Benutzeroberfläche von Grund auf neu erstellen. Diese Komponenten sind so flach wie möglich und können für verschiedene Verwendungsfälle, Designs und Bildschirmgrößen verwendet werden.
+Mit den folgenden grundlegenden Fluent UI-Komponenten können Sie Ihre Teams-App von Grund auf neu erstellen. Diese so flach wie möglich gestalteten Komponenten können in verschiedenen Anwendungsfällen, Designs und Bildschirmgrößen verwendet werden.
 
-Die Abbildungen auf dieser Seite zeigen, wie Komponenten in Teams (hell) und dunklen Designs aussehen.
+Die Abbildungen auf dieser Seite zeigen, wie Komponenten in Teams Standarddesigns (hell) und dunkel aussehen.
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
-Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">der Fluent-Benutzeroberfläche</a>enthält das Microsoft Teams UI Kit Komponenten und Muster, die speziell für das Erstellen von apps Teams sind. Im UI Kit können Sie die hier aufgeführten Komponenten direkt in Ihren Entwurf packen und einfügen und weitere Beispiele für die Verwendung der einzelnen Komponenten anzeigen.
+Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent Ui</a>enthält das Microsoft Teams UI Kit Komponenten und Muster, die speziell für die Erstellung Teams Apps entwickelt wurden. Im UI-Kit können Sie die hier aufgeführten Komponenten direkt in Ihr Design einfügen und weitere Beispiele für die Verwendung der einzelnen Komponenten anzeigen.
 
 > [!div class="nextstepaction"]
 > [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -39,7 +39,7 @@ Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_bl
 
 ## <a name="card"></a>Karte
 
-:::image type="content" source="../../assets/images/components/card.png" alt-text="Beispiel zeigt eine Komponente für die Kartenbenutzeroberfläche." border="false":::
+:::image type="content" source="../../assets/images/components/card.png" alt-text="Beispiel zeigt eine Karten-UI-Komponente." border="false":::
 
 ## <a name="carousel"></a>Karussell
 
@@ -51,7 +51,7 @@ Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_bl
 
 ## <a name="coachmark"></a>Coachmark
 
-:::image type="content" source="../../assets/images/components/coachmark.png" alt-text="Beispiel zeigt eine Kubusmark-UI-Komponente." border="false":::
+:::image type="content" source="../../assets/images/components/coachmark.png" alt-text="Beispiel zeigt eine Co-Mark-UI-Komponente." border="false":::
 
 ## <a name="contextual-menu"></a>Kontextmenü
 
@@ -67,11 +67,11 @@ Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_bl
 
 ## <a name="group-list"></a>Gruppenliste
 
-:::image type="content" source="../../assets/images/components/group-list.png" alt-text="Beispiel zeigt eine Benutzeroberflächenkomponente für Gruppenlisten." border="false":::
+:::image type="content" source="../../assets/images/components/group-list.png" alt-text="Beispiel zeigt eine Gruppenlisten-UI-Komponente." border="false":::
 
 ## <a name="hyperlink"></a>Hyperlink
 
-:::image type="content" source="../../assets/images/components/hyperlink.png" alt-text="Beispiel zeigt eine Hyperlink-UI-Komponente." border="false":::
+:::image type="content" source="../../assets/images/components/hyperlink.png" alt-text="Beispiel zeigt eine Link-UI-Komponente." border="false":::
 
 ## <a name="input"></a>Input
 
@@ -79,13 +79,13 @@ Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_bl
 
 ## <a name="key-value-pair"></a>Schlüsselwertpaar
 
-:::image type="content" source="../../assets/images/components/key-value-pair.png" alt-text="Beispiel zeigt eine Benutzeroberflächenkomponente des Schlüsselwertpaars." border="false":::
+:::image type="content" source="../../assets/images/components/key-value-pair.png" alt-text="Beispiel zeigt eine UI-Komponente für ein Schlüsselwertpaar." border="false":::
 
 ## <a name="paragraph"></a>Absatz
 
-:::image type="content" source="../../assets/images/components/paragraph.png" alt-text="Beispiel zeigt eine Absatzbenutzeroberflächenkomponente." border="false":::
+:::image type="content" source="../../assets/images/components/paragraph.png" alt-text="Beispiel zeigt eine Absatz-UI-Komponente." border="false":::
 
-## <a name="picker"></a>Auswahl
+## <a name="picker"></a>Picker
 
 :::image type="content" source="../../assets/images/components/picker.png" alt-text="Beispiel zeigt eine Auswahl-UI-Komponente." border="false":::
 
@@ -93,29 +93,29 @@ Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_bl
 
 :::image type="content" source="../../assets/images/components/pivot.png" alt-text="Beispiel zeigt eine Pivot-UI-Komponente." border="false":::
 
-## <a name="progress-indicator"></a>Statusindikator
+## <a name="progress-indicator"></a>Statusanzeige
 
-:::image type="content" source="../../assets/images/components/progress-indicator.png" alt-text="Beispiel zeigt eine Benutzeroberflächenkomponente für Fortschrittsanzeigen." border="false":::
+:::image type="content" source="../../assets/images/components/progress-indicator.png" alt-text="Beispiel zeigt eine Ui-Komponente der Statusanzeige." border="false":::
 
 ## <a name="radio"></a>Radio
 
-:::image type="content" source="../../assets/images/components/radio.png" alt-text="Beispiel zeigt eine Funkbenutzeroberflächenkomponente." border="false":::
+:::image type="content" source="../../assets/images/components/radio.png" alt-text="Beispiel zeigt eine Funk-UI-Komponente." border="false":::
 
-## <a name="scrollbar"></a>Bildlaufleiste
+## <a name="scrollbar"></a>Scrollbar
 
-:::image type="content" source="../../assets/images/components/scrollbar.png" alt-text="Beispiel zeigt eine Scrollbar-UI-Komponente." border="false":::
+:::image type="content" source="../../assets/images/components/scrollbar.png" alt-text="Beispiel zeigt eine Komponente der Bildlaufleisten-BENUTZEROBERFLÄCHE." border="false":::
 
 ## <a name="search-box"></a>Suchfeld
 
-:::image type="content" source="../../assets/images/components/searchbox.png" alt-text="Beispiel zeigt eine Benutzeroberflächenkomponente des Suchfelds." border="false":::
+:::image type="content" source="../../assets/images/components/searchbox.png" alt-text="Beispiel zeigt eine Suchfeld-UI-Komponente." border="false":::
 
 ## <a name="side-panel"></a>Seitenbereich
 
-:::image type="content" source="../../assets/images/components/side-panel.png" alt-text="Beispiel zeigt eine Sidepanel-UI-Komponente." border="false":::
+:::image type="content" source="../../assets/images/components/side-panel.png" alt-text="Beispiel zeigt eine Seitenbereich-UI-Komponente." border="false":::
 
 ## <a name="status-label"></a>Statusbezeichnung
 
-:::image type="content" source="../../assets/images/components/status-label.png" alt-text="Beispiel zeigt eine Benutzeroberflächenkomponente für statusbeschriftung." border="false":::
+:::image type="content" source="../../assets/images/components/status-label.png" alt-text="Beispiel zeigt eine Statusbeschriftungs-UI-Komponente." border="false":::
 
 ## <a name="toast"></a>Popup
 
@@ -123,7 +123,7 @@ Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_bl
 
 ## <a name="toggle"></a>Umschaltfläche
 
-Hinweis: In der Fluent-Benutzeroberfläche ist umschalten eine Art von Kontrollkästchen.
+Hinweis: In Fluent Ui ist die Umschaltfläche ein Kontrollkästchentyp.
 
 :::image type="content" source="../../assets/images/components/toggle.png" alt-text="Beispiel zeigt eine Umschalt-UI-Komponente." border="false":::
 
@@ -133,7 +133,7 @@ Hinweis: In der Fluent-Benutzeroberfläche ist umschalten eine Art von Kontrollk
 
 ## <a name="other-resources"></a>Sonstige Ressourcen
 
-Hier finden Sie Codebeispiele und Implementierungsdetails für einige der hier und im Microsoft Teams UI Kit aufgeführten Komponenten.
+Erhalten Sie Codebeispiele und Implementierungsdetails für einige der hier aufgeführten Komponenten und im Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
-> [Testen der Komponenten (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
+> [Testen der Komponenten (Fluent Ui)](https://fluentsite.z22.web.core.windows.net/)

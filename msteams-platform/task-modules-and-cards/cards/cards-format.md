@@ -4,13 +4,13 @@ description: Beschreibt die Formatierung von Kartentext in Microsoft Teams
 keywords: Teams-Bots- Kartenformat
 localization_priority: Normal
 ms.topic: reference
-ms.date: 03/29/2018
-ms.openlocfilehash: 877a16f884e91138dc656434438a5fe1dd2ffd6e
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.date: 06/25/2021
+ms.openlocfilehash: b972fd24be56423a4dce9ba9cb55c0cb44038e81b1859697ac36ecccda4d0283
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140641"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706175"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatieren von Karten in Microsoft Teams
 
@@ -22,7 +22,7 @@ Karten unterstützen die Formatierung nur in der Texteigenschaft, nicht in den T
 
 Die Formatierungsunterstützung unterscheidet sich zwischen Kartentypen. Das Rendern der Karte kann sich geringfügig zwischen dem Desktop- und dem mobilen Microsoft Teams-Clients sowie Teams im Desktopbrowser unterscheiden.
 
-Sie können ein Inlinebild mit einer beliebigen Teams Karte einschließen. Bilder können als , oder Dateien formatiert werden `.png` `.jpg` und `.gif` dürfen 1024 ×1024 px oder 1 MB nicht überschreiten. Animierte GIF-Dateien werden nicht unterstützt. Weitere Informationen finden Sie unter [Kartentypen.](./cards-reference.md#inline-card-images)
+Sie können ein Inlinebild mit einer beliebigen Teams Karte einfügen. Bilder können als , oder Dateien formatiert werden `.png` `.jpg` und `.gif` dürfen 1024 ×1024 px oder 1 MB nicht überschreiten. Animierte GIF-Dateien werden nicht unterstützt. Weitere Informationen finden Sie unter [Kartentypen.](./cards-reference.md#inline-card-images)
 
 Sie können adaptive Karten und Office 365 Connectorkarten mit Markdown formatieren, die bestimmte unterstützte Formatvorlagen enthalten.
 
@@ -63,7 +63,7 @@ Sie können die `\r` `\n` Oder Escapesequenzen für Newlines in Listen verwenden
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops für adaptive Karten
 
-Auf dem Desktop wird die Markdown-Formatierung für adaptive Karten wie in der folgenden Abbildung in Webbrowsern und in der Teams Clientanwendung angezeigt:
+Auf dem Desktop wird die Markdown-Formatierung für adaptive Karten wie in der folgenden Abbildung sowohl in Webbrowsern als auch in der Teams Clientanwendung angezeigt:
 
 ![Markdown-Formatierung für adaptive Karten im Desktopclient](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
@@ -123,7 +123,7 @@ Sie können @mentions in einem Textkörper für adaptive Karten für Bots und Me
 Bots und Messaging-Erweiterungen können Erwähnungen innerhalb des Karteninhalts in [TextBlock-](https://adaptivecards.io/explorer/TextBlock.html) und [FactSet-Elementen](https://adaptivecards.io/explorer/FactSet.html) enthalten.
 
 > [!NOTE]
-> * [Medienelemente](https://adaptivecards.io/explorer/Media.html) werden derzeit in adaptiven Karten v1.2 auf der Teams-Plattform nicht unterstützt.
+> * [Medienelemente](https://adaptivecards.io/explorer/Media.html) werden derzeit in adaptiven Karten v1.2 auf der Teams Plattform nicht unterstützt.
 > * Kanal- und Teamerwähnungen werden in Botnachrichten nicht unterstützt.
 
 Um eine Erwähnung in eine adaptive Karte aufzunehmen, muss Ihre App die folgenden Elemente enthalten:
@@ -196,7 +196,7 @@ Sie können die `msteams` Eigenschaft verwenden, um die Breite einer adaptiven K
 
 #### <a name="construct-full-width-cards"></a>Erstellen von Karten mit voller Breite
 
-Um eine adaptive Karte mit voller Breite zu erstellen, muss das `width` Objekt in der Eigenschaft im `msteams` Karteninhalt auf festgelegt `Full` werden.
+Um eine adaptive Karte mit voller Breite zu erstellen, muss das `width` Objekt in der Eigenschaft im `msteams` Karteninhalt auf . `Full`
 
 #### <a name="sample-adaptive-card-with-full-width"></a>Beispiel für adaptive Karte mit voller Breite
 
@@ -286,8 +286,8 @@ Das Bild wird in der Phasenansicht angezeigt, wenn der Benutzer das Erweiterungs
 In der Phasenansicht können Benutzer das Bild vergrößern und verkleinern. Sie können die Bilder in Ihrer adaptiven Karte auswählen, die über diese Funktion verfügen müssen.
 
 > [!NOTE]
-> * Die Funktion zum Vergrößern und Verkleinern gilt nur für die Bildelemente, bei denen es sich um Bildtypen in einer adaptiven Karte handelt.
-> * Für Teams mobile Apps ist standardmäßig die Phasenansichtsfunktion für Bilder in adaptiven Karten verfügbar. Benutzer können Adaptive Kartenbilder in der Phasenansicht anzeigen, indem sie einfach auf das Bild tippen, unabhängig davon, ob das `allowExpand` Attribut vorhanden ist oder nicht.
+> * Die Funktion zum Vergrößern und Verkleinern gilt nur für die Bildelemente, bei denen es sich um einen Bildtyp in einer adaptiven Karte handelt.
+> * Für Teams mobile Apps ist die Phasenansichtsfunktion für Bilder in adaptiven Karten standardmäßig verfügbar. Benutzer können Adaptive Kartenbilder in der Phasenansicht anzeigen, indem sie einfach auf das Bild tippen, unabhängig davon, ob das `allowExpand` Attribut vorhanden ist oder nicht.
 
 # <a name="markdown-format-for-o365-connector-cards"></a>[Markdownformat für O365-Connectorkarten](#tab/connector-md)
 
@@ -308,7 +308,7 @@ Connectorkarten unterstützen eingeschränkte Markdown- und HTML-Formatierungen.
 
 In Konnektorkarten werden Newlines für `\n\n` gerendert, aber nicht für `\n` oder `\r` .
 
-### <a name="mobile-and-desktop-differences-for-connector-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops bei Connectorkarten
+### <a name="mobile-and-desktop-differences-for-connector-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops für Connectorkarten
 
 Auf dem Desktop wird die Markdown-Formatierung für Connectorkarten wie in der folgenden Abbildung dargestellt angezeigt:
 
@@ -382,7 +382,7 @@ Der folgende Code zeigt ein Beispiel für die Formatierung von Markdown-Connecto
 
 Die folgenden Kartentypen unterstützen HTML-Formatierung in Teams:
 
-* O365-Connectorkarten: Eingeschränkte Markdown- und HTML-Formatierung wird in Office 365 Connector-Karten unterstützt.
+* O365-Connectorkarten: Eingeschränkte Markdown- und HTML-Formatierungen werden in Office 365 Connector-Karten unterstützt.
 * Favoriten- und Miniaturansichtskarten: HTML-Tags werden für einfache Karten unterstützt, z. B. die Favoriten- und Miniaturansichtskarten.
 
 Die Formatierung unterscheidet sich zwischen der Desktopversion und der mobilen Version von Teams für O365-Connectorkarten und einfache Karten. In diesem Abschnitt können Sie das HTML-Formatbeispiel für Konnektorkarten und einfache Karten durchgehen.
@@ -406,7 +406,7 @@ Connectorkarten unterstützen eingeschränkte Markdown- und HTML-Formatierungen.
 
 In Connectorkarten werden Newlines mithilfe des Tags in HTML `<p>` gerendert.
 
-### <a name="mobile-and-desktop-differences-for-connector-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops bei Connectorkarten
+### <a name="mobile-and-desktop-differences-for-connector-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops für Connectorkarten
 
 Auf dem Desktop wird die HTML-Formatierung für Connectorkarten wie in der folgenden Abbildung dargestellt angezeigt:
 
@@ -524,7 +524,7 @@ Sie können die Formatierung in Ihren eigenen Karten testen, indem Sie diesen Co
 
 ---
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Kartenaktionen](./cards-actions.md)
 * [Aufgabenmodule](~/task-modules-and-cards/cards/cards-format.md)

@@ -5,12 +5,12 @@ description: So arbeiten Sie mit Unterhaltungsereignissen aus Ihrem Microsoft Te
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 39d3a6d54b275fd6b9f28eb38b124435e9ba8bfd
-ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
+ms.openlocfilehash: c50409720bdb700295934171d8a2a3474205adb59e8397dcc64a01b9aec23fa3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53049045"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703627"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Unterhaltungsereignisse in Ihrem Teams-Bot
 
@@ -48,12 +48,12 @@ Die folgende Tabelle enthält eine Liste Teams Unterhaltungsaktualisierungsereig
 | Kanal umbenannt     | channelRenamed    | OnTeamsChannelRenamedAsync | [Ein Kanal wird umbenannt.](#channel-renamed) | Team |
 | Kanal gelöscht     | channelDeleted    | OnTeamsChannelDeletedAsync | [Ein Kanal wird gelöscht.](#channel-deleted) | Team |
 | Kanal wiederhergestellt    | channelRestored    | OnTeamsChannelRestoredAsync | [Ein Kanal wird wiederhergestellt.](#channel-deleted) | Team |
-| Hinzugefügte Mitglieder   | membersAdded   | OnTeamsMembersAddedAsync   | [Ein Element wird hinzugefügt.](#team-members-added) | Alle |
+| Mitglieder hinzugefügt   | membersAdded   | OnTeamsMembersAddedAsync   | [Ein Element wird hinzugefügt.](#team-members-added) | Alle |
 | Elemente entfernt | membersRemoved | OnTeamsMembersRemovedAsync | [Ein Element wird entfernt.](#team-members-removed) | groupChat und Team |
 | Team umbenannt        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Ein Team wird umbenannt.](#team-renamed)       | Team |
 | Team gelöscht        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Ein Team wird gelöscht.](#team-deleted)       | Team |
 | Team archiviert        | teamArchived       | OnTeamsTeamArchivedAsync    | [Ein Team wird archiviert.](#team-archived)       | Team |
-| Team nicht archiviert        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [Ein Team wird nicht archiviert.](#team-unarchived)       | Team |
+| Team-Archivierung rückgängig gemacht        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [Ein Team wird nicht archiviert.](#team-unarchived)       | Team |
 | Team wiederhergestellt        | teamRestored      | OnTeamsTeamRestoredAsync    | [Ein Team wird wiederhergestellt](#team-restored)       | Team |
 
 ### <a name="channel-created"></a>Kanal erstellt
@@ -92,7 +92,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -176,7 +176,7 @@ export class MyBot extends TeamsActivityHandler {
     }
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -260,7 +260,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -347,7 +347,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -451,7 +451,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 Dies ist die Nachricht, die Ihr Bot erhält, wenn der Bot einem Team hinzugefügt wird.
 
@@ -598,7 +598,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 Das `channelData` Objekt im folgenden Nutzlastbeispiel basiert auf dem Hinzufügen eines Mitglieds zu einem Team anstelle eines Gruppenchats oder dem Initiieren einer neuen 1:1-Unterhaltung:
 
@@ -688,7 +688,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 { 
@@ -765,7 +765,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 { 
@@ -844,7 +844,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 { 
@@ -924,7 +924,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 { 
@@ -973,7 +973,7 @@ async def on_teams_team_archived(
 ---
 
 
-### <a name="team-unarchived"></a>Team nicht archiviert
+### <a name="team-unarchived"></a>Team-Archivierung rückgängig gemacht
 
 Der Bot erhält eine Benachrichtigung, wenn das Team, in dem er installiert ist, nicht archiviert wird. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamUnarchived` im `channelData` Objekt.
 
@@ -1005,7 +1005,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 { 
@@ -1107,7 +1107,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -1216,7 +1216,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -1325,7 +1325,7 @@ turnContext, CancellationToken cancellationToken) {
 
 Nicht verfügbar
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 { 
@@ -1391,7 +1391,7 @@ Nicht verfügbar
 > [!NOTE]
 > Das Deinstallationsverhalten für persönliche Apps mit Bot ist derzeit nur in der [öffentlichen Entwicklervorschau](../../../resources/dev-preview/developer-preview-intro.md)verfügbar.
 
-Wenn Sie eine App deinstallieren, wird der Bot ebenfalls deinstalliert. Wenn ein Benutzer eine Nachricht an Ihre App sendet, erhält er den Antwortcode 403. Ihr Bot erhält einen 403-Antwortcode für neue Nachrichten, die von Ihrem Bot gepostet wurden. Das Verhalten der Postdeinstallation für Bots im persönlichen Bereich mit den Bereichen Teams und groupChat wird nun ausgerichtet. Sie können keine Nachrichten senden oder empfangen, nachdem eine App deinstalliert wurde.
+Wenn Sie eine App deinstallieren, wird der Bot ebenfalls deinstalliert. Wenn ein Benutzer eine Nachricht an Ihre App sendet, erhält er den Antwortcode 403. Ihr Bot erhält einen 403-Antwortcode für neue Nachrichten, die von Ihrem Bot gepostet wurden. Das Verhalten der Postdeinstallation für Bots im persönlichen Bereich mit den Bereichen Teams und groupChat wird jetzt ausgerichtet. Sie können keine Nachrichten senden oder empfangen, nachdem eine App deinstalliert wurde.
 
 <img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
 
@@ -1406,9 +1406,9 @@ Es ist wichtig zu wissen, dass neue Ereignisse jederzeit in der Zukunft hinzugef
 
 ## <a name="code-sample"></a>Codebeispiel
 
-| **Beispielname** | **Description** | **.NET** | **Node.js** | **Python** |
+| **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
-| Unterhaltungsbot | Beispielcode für Bots-Unterhaltungsereignisse. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Unterhaltungsbot | Beispielcode für Bots-Unterhaltungsereignisse. | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

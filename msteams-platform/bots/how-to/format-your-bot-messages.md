@@ -5,12 +5,12 @@ description: Hinzufügen umfangreicher Formatierungen zu Ihren Bot-Nachrichten
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 56a34edee372cc6c5bcc5808015783f04867f141
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: fba55b6b08785d375f80923133d3af70434cbaf57adf8feaf4e9f50f478f5e61
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068981"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705601"
 ---
 # <a name="format-your-bot-messages"></a>Formatieren von Bot-Nachrichten
 
@@ -18,7 +18,7 @@ Mithilfe der Nachrichtenformatierung können Sie die besten Botnachrichten berei
 
 ## <a name="format-text-content"></a>Formatieren von Textinhalten
 
-Um Ihre Bot-Nachrichten zu formatieren, können Sie die optionale Eigenschaft festlegen, [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) um zu steuern, wie der Textinhalt Ihrer Bot-Nachricht gerendert wird.
+Um Ihre Bot-Nachrichten zu formatieren, können Sie die optionale Eigenschaft festlegen, [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) um zu steuern, wie der Textinhalt Ihrer Botnachricht gerendert wird.
 
 Microsoft Teams unterstützt die folgenden Formatierungsoptionen:
 
@@ -64,7 +64,7 @@ Die Unterstützung für die Textformatierung variiert je nach Nachrichtentyp und
 
 ### <a name="text-only-messages"></a>Nur-Text-Nachrichten
 
-Die folgende Tabelle enthält eine Liste der Formatvorlagen und welche dieser Formatvorlagen auf Desktop, iOS und Android unterstützt werden:
+Die folgende Tabelle enthält eine Liste der Formatvorlagen und welche dieser Formatvorlagen auf Desktops, iOS und Android unterstützt werden:
 
 | Format                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |

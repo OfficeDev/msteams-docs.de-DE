@@ -4,18 +4,18 @@ description: Begrenzung der Raten und bewährte Methoden in Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams-Bots – Begrenzung der Raten
-ms.openlocfilehash: 41070bec7905c7003afb917aedcdd08495418602
-ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
+ms.openlocfilehash: 1ee98af7704baa066ad6ca7adbf0997879454a3c58e83d62ea4f5a2f17c20c36
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53428695"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705608"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimieren eines Bots mit Ratenbegrenzung in Teams
 
 Die Geschwindigkeitsbegrenzung ist eine Methode, um Nachrichten auf eine bestimmte maximale Häufigkeit zu beschränken. Im Allgemeinen muss Ihre Anwendung die Anzahl der Nachrichten beschränken, die sie an einen einzelnen Chat oder eine Kanalunterhaltung sendet. Dadurch wird eine optimale Benutzererfahrung sichergestellt, und Nachrichten werden Ihren Benutzern nicht als Spam angezeigt.
 
-Um Microsoft Teams und seine Benutzer zu schützen, bieten die Bot-APIs ein Preislimit für eingehende Anforderungen. Apps, die diesen Grenzwert überschreiten, erhalten einen `HTTP 429 Too Many Requests` Fehlerstatus. Alle Anforderungen unterliegen derselben Richtlinie für die Begrenzung der Raten, einschließlich des Sendens von Nachrichten, Kanalenumerationen und Listenabrufen.
+Um Microsoft Teams und ihre Benutzer zu schützen, bieten die Bot-APIs ein Preislimit für eingehende Anforderungen. Apps, die diesen Grenzwert überschreiten, erhalten einen `HTTP 429 Too Many Requests` Fehlerstatus. Alle Anforderungen unterliegen derselben Richtlinie für die Begrenzung der Raten, einschließlich des Sendens von Nachrichten, Kanalenumerationen und Listenabrufen.
 
 Da sich die genauen Werte von Zinslimits ändern können, muss Ihre Anwendung das entsprechende Backoff-Verhalten implementieren, wenn die API `HTTP 429 Too Many Requests` zurückgibt.
 

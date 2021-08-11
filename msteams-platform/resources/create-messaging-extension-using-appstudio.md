@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie eine Microsoft Teams Messaging-Erweiterung mi
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 61bfed969b981bd5000bdb6eca0bbd77196e8086
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 786d2fb12294ff3cd42a71094ac6c1943bec040ebfee2bf50a9c580721949b71
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069223"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706452"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Eine Messaging-Erweiterung mit App Studio erstellen
 
@@ -59,7 +59,7 @@ Sie können Ihr App-Manifest entweder in App Studio oder manuell erstellen.
 Sie können die App Studio-App innerhalb des Microsoft Teams-Clients verwenden, um Ihr App-Manifest zu erstellen.
 
 1. Öffnen Sie App Studio im Teams-Client aus dem **...**-Überlaufmenü auf der linken Navigationsleiste. Wenn es noch nicht installiert ist, können Sie dies tun, indem Sie danach suchen.
-2. Wählen Sie auf der Registerkarte **"Manifest-Editor"** die Option **"Neue App erstellen"** aus (oder wenn Sie einer vorhandenen App eine Messaging-Erweiterung hinzufügen, können Sie Ihr App-Paket importieren).
+2. Wählen Sie auf der Registerkarte **"Manifest-Editor"** die Option **"Neue App** erstellen" aus (oder wenn Sie einer vorhandenen App eine Messaging-Erweiterung hinzufügen, können Sie Ihr App-Paket importieren).
 3. Fügen Sie Ihre App-Details hinzu (in der [Manifestschemadefinition](~/resources/schema/manifest-schema.md) finden Sie die vollständigen Beschreibungen der einzelnen Felder).
 4. Klicken Sie auf der Registerkarte **"Messaging-Erweiterungen"** auf die Schaltfläche **"Setup".**
 5. Sie können entweder einen neuen Webdienst (Bot) für die Verwendung Ihrer Messaging-Erweiterung erstellen, oder wenn Sie hier bereits eine Auswahl registriert bzw. diesen hinzugefügt haben.
@@ -234,7 +234,7 @@ Wenn Ihre Benutzer Ihre Messaging-Erweiterung auslösen, müssen Sie die anfäng
 
 Sobald eine Besprechung beginnt, können Teams Teilnehmer während eines Liveanrufs direkt mit Ihrer Messaging-Erweiterung interagieren. Berücksichtigen Sie beim Erstellen Ihrer Messaging-Erweiterung in Besprechungen Folgendes:
 
-1. **Location**. Ihre Messaging-Erweiterung kann über den Bereich zum Verfassen von Nachrichten, das Befehlsfeld oder @mentioned im Besprechungschat aufgerufen werden.
+1. **Location**. Ihre Messaging-Erweiterung kann im Nachrichtenbereich zum Verfassen, im Befehlsfeld oder @mentioned im Besprechungschat aufgerufen werden.
 
 1. **Metadaten**. Wenn Ihre Messaging-Erweiterung aufgerufen wird, kann sie den Benutzer und Mandanten von `userId` und `tenantId` identifizieren. Die `meetingId`kann als Teil des Objekts `channelData` gefunden werden. Ihre App kann die `userId` `meetingId`  UND für die `GetParticipant` API-Anforderung verwenden, um Benutzerrollen abzurufen.
 

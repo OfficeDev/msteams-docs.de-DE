@@ -6,12 +6,12 @@ keywords: Cookieattribute samesite
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 34674ab58cc9808525d315cea3db464ddf11b4f9
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 78ac367ee550650fb9994676a8083a1b201a06086582161daba6ea4311d0aaeb
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140565"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708336"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite-Cookieattribut 
 
@@ -21,7 +21,7 @@ Cookies sind Textzeichenfolgen, die von Websites gesendet und vom Webbrowser auf
 
 Die Cookietypen und ihre entsprechenden Bereiche sind wie folgt:
 
-|Cookie|Umfang|
+|Cookie|Bereich|
 | ------ | ------ |
 |Cookies von Erstanbietern|Ein Erstanbieter-Cookie wird von Websites erstellt, die ein Benutzer besucht. Es wird verwendet, um Daten wie Einkaufswagenelemente und Anmeldeinformationen zu speichern. Beispielsweise Authentifizierungscookies und andere Analysen.|
 |Cookies von Drittanbietern|Ein Drittanbietercookie ist technisch identisch mit einem Erstanbietercookie. Der Unterschied besteht darin, dass Daten mit einer zweiten Partei über einen Datenpartnerschaftsvertrag geteilt werden. Beispielsweise [Microsoft Teams Analyse und Berichterstellung.](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference) |
@@ -29,11 +29,11 @@ Die Cookietypen und ihre entsprechenden Bereiche sind wie folgt:
 
 ## <a name="cookies-and-http-requests"></a>Cookies und HTTP-Anforderungen
 
-Vor der Einführung von SameSite-Einschränkungen wurden die Cookies im Browser gespeichert. Sie wurden an jede HTTP-Webanforderung angefügt und vom `Set Cookie` HTTP-Antwortheader an den Server gesendet. Mit dieser Methode wurden Sicherheitsrisiken eingeführt, z. B. Cross Site Request Forgery, die als CSRF-Angriffe bezeichnet werden. Die SameSite-Komponente reduzierte die Gefährdung durch ihre Implementierung und Verwaltung im SetCookie-Header.
+Vor der Einführung von SameSite-Einschränkungen wurden die Cookies im Browser gespeichert. Sie wurden an jede HTTP-Webanforderung angefügt und über den `Set Cookie` HTTP-Antwortheader an den Server gesendet. Mit dieser Methode wurden Sicherheitsrisiken eingeführt, z. B. Cross Site Request Forgery, die als CSRF-Angriffe bezeichnet werden. Die SameSite-Komponente reduzierte die Gefährdung durch ihre Implementierung und Verwaltung im SetCookie-Header.
 
 ## <a name="samesite-cookie-attribute-initial-release"></a>SameSite-Cookieattribut: erste Version
 
-In Google Chrome, Version 51, wurde die `SetCookie SameSite` Spezifikation als optionales Attribut eingeführt. Ab Build 17672 wurde Windows 10 die SameSite-Cookieunterstützung für den [Microsoft Edge Browser](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/)eingeführt.
+In Google Chrome, Version 51, wurde die `SetCookie SameSite` Spezifikation als optionales Attribut eingeführt. Ab Build 17672 Windows 10 die SameSite-Cookieunterstützung für den [Microsoft Edge Browser](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/)eingeführt.
 
 Sie können das Hinzufügen des SameSite-Cookieattributs zum Header deaktivieren `SetCookie` oder es mit einer der beiden Einstellungen **Lax** und **Strict** hinzufügen. Ein nicht implementiertes SameSite-Attribut wurde als Standardzustand betrachtet.
 
@@ -60,7 +60,7 @@ SameSite-Cookieattribute sind wie folgt:
 
 ### <a name="tabs-task-modules-and-messaging-extensions"></a>Registerkarten, Aufgabenmodule und Messaging-Erweiterungen
 
-* Teams Registerkarten werden `<iframes>` zum Einbetten von Inhalten verwendet, die in einem Kontext der obersten Ebene oder des Erstanbieters angezeigt werden.
+* Teams Registerkarten zum `<iframes>` Einbetten von Inhalten verwendet werden, die in einem Kontext der obersten Ebene oder des Erstanbieters angezeigt werden.
 * Aufgabenmodule ermöglichen Ihnen das Erstellen von modalen Popup-Erlebnissen in Ihrer Teams-Anwendung. Ähnlich wie bei einer Registerkarte wird ein modales Fenster auf der aktuellen Seite geöffnet.
 * Messaging-Erweiterungen ermöglichen es Ihnen, anreicherte Inhalte aus externen Ressourcen in eine Chatnachricht einzufügen.
 
@@ -84,11 +84,11 @@ Android WebView ist eine Chrome-Systemkomponente, mit der Android-Apps den Webin
 > * Sie müssen Cookies von Erstanbietern entsprechend `SameSite=Lax` `SameSite=Strict` deklarieren.      
 > * Sie müssen Cookies von Drittanbietern als `SameSite=None; Secure` deklarieren.   
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [SameSite-Beispiele](https://github.com/GoogleChromeLabs/samesite-examples)
 * [SameSite-Cookie-Rezept](https://web.dev/samesite-cookie-recipes/)
 * [Bekannte inkompatible Clients]( https://www.chromium.org/updates/same-site/incompatible-clients)
-* [Entwickler: Bereiten Sie sich auf "New SameSite=None" vor; Secure Cookie Einstellungen](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
-* [Bevorstehende Änderungen des SameSite-Cookies in ASP.NET und ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
+* [Entwickler: Machen Sie sich bereit für neue sichere Cookie-Einstellungen mit SameSite=None](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
+* [Bevorstehende Änderungen an SameSite-Cookies in ASP.NET und ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
 * [HTTP-Cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies)

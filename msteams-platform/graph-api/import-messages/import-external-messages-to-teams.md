@@ -6,16 +6,16 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams importieren Nachrichten-API-Diagramm Microsoft migrieren Migrationsbeitrag
-ms.openlocfilehash: 95cbf6bf2deac4ea71e60fe0fece06c1dd3ad24c
-ms.sourcegitcommit: 656a1de9e23e0ad90dddcb93a2bbfcc63848a856
+ms.openlocfilehash: 17e68db9803e00d3dfb8743ba3b371753508fb5a3471317c25d7a42c8027c248
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53130094"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704403"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Plattform-Nachrichten von Drittanbietern mithilfe von Microsoft Graph in Teams importieren
 
-Mit Microsoft Graph können Sie den vorhandenen Nachrichtenverlauf und die Daten von Benutzern aus einem externen System in einen Teams Kanal migrieren. Durch die Aktivierung der Neugestaltung einer Drittanbieterplattform-Messaginghierarchie innerhalb Teams können Benutzer ihre Kommunikation nahtlos fortsetzen und ohne Unterbrechung fortfahren.
+Mit Microsoft Graph können Sie den vorhandenen Nachrichtenverlauf und die Daten von Benutzern aus einem externen System in einen Teams Kanal migrieren. Durch die Aktivierung der Neugestaltung einer Plattform-Messaging-Hierarchie eines Drittanbieters innerhalb Teams können Benutzer ihre Kommunikation nahtlos fortsetzen und ohne Unterbrechung fortfahren.
 
 > [!NOTE]
 > Microsoft kann in Zukunft von Ihnen oder Ihren Kunden fordern, basierend auf der Menge der importierten Daten, zusätzliche Gebühren zu zahlen.
@@ -36,12 +36,12 @@ Auf hoher Ebene besteht der Importvorgang aus folgenden Komponenten:
 
 * Überprüfen Sie die Drittanbieterdaten, um zu entscheiden, was migriert wird.  
 * Extrahieren Sie die ausgewählten Daten aus dem Drittanbieter-Chatsystem.  
-* Ordnen Sie die Chatstruktur eines Drittanbieters der Teams Struktur zu.  
+* Ordnen Sie die Chatstruktur eines Drittanbieters der Teams-Struktur zu.  
 * Konvertieren von Importdaten in das für die Migration erforderliche Format.  
 
 ### <a name="set-up-your-office-365-tenant"></a>Einrichten des Office 365-Mandanten
 
-* Stellen Sie sicher, dass für die Importdaten ein Office 365 Mandanten vorhanden ist. Weitere Informationen zum Einrichten eines Office 365 Mandanten für Teams finden Sie unter [Vorbereiten Ihres Office 365 Mandanten.](../../concepts/build-and-test/prepare-your-o365-tenant.md)
+* Stellen Sie sicher, dass für die Importdaten ein Office 365 Mandant vorhanden ist. Weitere Informationen zum Einrichten eines Office 365 Mandanten für Teams finden Sie unter [Vorbereiten Ihres Office 365 Mandanten.](../../concepts/build-and-test/prepare-your-o365-tenant.md)
 * Stellen Sie sicher, dass sich Teammitglieder in Azure Active Directory (AAD) befinden. Weitere Informationen finden Sie unter [Hinzufügen eines neuen Benutzers](/azure/active-directory/fundamentals/add-users-azure-active-directory) zu AAD.
 
 ## <a name="step-1-create-a-team"></a>Schritt 1: Erstellen eines Teams
@@ -149,7 +149,7 @@ HTTP/1.1 202 Accepted
 Sie können die Fehlermeldung in den folgenden Szenarien erhalten:
 
 * Wenn `createdDateTime` für die Zukunft festgelegt ist.
-* Wenn `createdDateTime` richtig angegeben ist, das `channelCreationMode` Instanzattribut jedoch fehlt oder auf einen ungültigen Wert festgelegt ist.
+* Wenn `createdDateTime` richtig angegeben, aber `channelCreationMode` instanzattribut fehlt oder auf ungültigen Wert festgelegt ist.
 
 ## <a name="step-3-import-messages"></a>Schritt 3: Importieren von Nachrichten
 
@@ -381,6 +381,6 @@ Die folgende Tabelle enthält den Inhaltsbereich:
 ||Beiträge zwischen Kanälen querstellen|
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Integration von Microsoft Graph und Teams](/graph/teams-concept-overview)

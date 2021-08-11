@@ -1,19 +1,19 @@
 ---
 title: Unterstützte Medienformate für Bots
-description: Bots auf Microsoft Teams unterstützt nur die folgenden Medienformate für Audio- und Videoinhalte.
+description: Bots auf Microsoft Teams unterstützen nur die folgenden Medienformate für Audio- und Videoinhalte.
 ms.topic: reference
 localization_priority: Normal
-keywords: Teams bots Medienformate
-ms.openlocfilehash: 1a6fe745af6048be972bd6cea26ca5d0f876727f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+keywords: Teams Bots Medienformate
+ms.openlocfilehash: a7279af1154a7d6aa66200146adcff5216b63b03a62229e2af908e8b9b8c9d07
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020611"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703110"
 ---
 # <a name="supported-media-formats-for-bots"></a>Unterstützte Medienformate für Bots
 
-Bots auf Microsoft Teams unterstützt nur die folgenden Medienformate für Audio- und Videoinhalte:
+Bots auf Microsoft Teams unterstützen nur die folgenden Medienformate für Audio- und Videoinhalte:
 
 | Format | Weitere Informationen |
 | --- | --- |
@@ -21,10 +21,10 @@ Bots auf Microsoft Teams unterstützt nur die folgenden Medienformate für Audio
 | PCM_U8, PCM_S16LE, PCM_S32LE, PCM_F32LE, PCM_S16BE, PCM_S24BE, PCM_MULAW | https://wiki.multimedia.cx/?title=PCM |
 | Ogg | http://www.vorbis.com/ |
 | Matroska | https://matroska.org/ |
-| WAV | https://en.wikipedia.org/wiki/WAV |
-| AAC | https://en.wikipedia.org/wiki/Advanced_Audio_Coding |
+| Wav | https://en.wikipedia.org/wiki/WAV |
+| Aac | https://en.wikipedia.org/wiki/Advanced_Audio_Coding |
 | H264 | https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC |
-| MP3 | https://en.wikipedia.org/wiki/MP3 |
+| Mp3 | https://en.wikipedia.org/wiki/MP3 |
 | Opus | http://opus-codec.org/ |
 | MP4 | https://en.wikipedia.org/wiki/MPEG-4 |
 

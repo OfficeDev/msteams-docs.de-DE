@@ -6,12 +6,12 @@ keywords: Konfigurierbarer Gruppenkanal für Teams-Registerkarten
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 9babab566085c13089400e4e035f2c481295d0c4
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 36d5a6ee785779c8ba186a00ec80519a189ac278e7ec2298bba82fb53f0a848a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726831"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701800"
 ---
 # <a name="prerequisites"></a>Voraussetzungen
 
@@ -35,7 +35,7 @@ Teams Registerkarten müssen die folgenden Voraussetzungen erfüllen:
 
 * Damit die Authentifizierung auf mobilen Clients funktioniert, müssen Sie Teams JavaScript SDK auf mindestens Version 1.4.1 aktualisieren.
 
-* Wenn Ihre Kanal- oder Gruppenregisterkarte auf Teams mobilen Clients angezeigt werden soll, muss die `setSettings()` Konfiguration einen Wert für die Eigenschaft `websiteUrl` aufweisen.
+* Wenn Sie ihre Kanal- oder Gruppenregisterkarte auf Teams mobilen Clients anzeigen möchten, muss die `setSettings()` Konfiguration einen Wert für die Eigenschaft `websiteUrl` aufweisen.
 
 * Die Registerkarte "MS Teams" unterstützt nicht die Möglichkeit, Intranetwebsites zu laden, die selbstsignte Zertifikate verwenden.
 
@@ -43,7 +43,7 @@ Teams Registerkarten müssen die folgenden Voraussetzungen erfüllen:
 * [Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
 * [Microsoft Teams-Toolkit-Erweiterung für Visual Studio](../../toolkit/visual-studio-overview.md)
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Weitere Informationen
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Erstellen Ihrer ersten App mit React](../../get-started/first-app-react.md)

@@ -1,20 +1,20 @@
 ---
 title: Lernprogramm – Erstellen Ihrer ersten App mit Node.js
-description: Erfahren Sie, wie Sie mit Microsoft Teams-Apps mit Node.js beginnen.
+description: Erfahren Sie, wie Sie mit Microsoft Teams Apps mit Node.js beginnen.
 keywords: Erste Schritte node.js nodejs App Studio
 ms.topic: tutorial
 localization_priority: Normal
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 84c3452c739f67c2908d698b627b5651ff9d5d7a
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 5abde3b1866556ff20e9ee145e761915f88f7288c581556460f5e0e3f3386ecb
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254376"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704624"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-nodejs"></a>Erstellen Ihrer ersten Microsoft Teams-App mit Node.js
 
-In diesem Lernprogramm erfahren Sie, wie Sie Ihre erste Microsoft Teams-App mit Node.js erstellen. Außerdem werden Sie durch die folgenden Schritte geführt: 
+In diesem Lernprogramm erfahren Sie, wie Sie Ihre 1. Microsoft Teams App mit Node.js erstellen. Außerdem werden Sie durch die folgenden Schritte geführt: 
 
 1. [Vorbereiten der Umgebung](#prepare-environment)
 1. [Voraussetzungen abrufen](#GetPrerequisites)
@@ -156,7 +156,7 @@ Notieren Sie sich die URL Ihrer App. Sie benötigen dies später, wenn Sie die A
 
 ## <a name="deploy-your-app-to-microsoft-teams"></a>Bereitstellen Ihrer App für Microsoft Teams
 
-An diesem Punkt wird eine App im Internet gehostet, aber Sie können noch nicht sagen, Teams, wo sie gesucht werden soll oder sogar wie Ihre App heißt. Dazu müssen Sie jetzt ein App-Paket erstellen. Dies ist nur eine Textdatei, die das App-Manifest und einige Symbole enthält, die der Teams-Client verwendet, um Ihre App ordnungsgemäß anzuzeigen und zu brandingen. Sie können dieses App-Paket manuell erstellen oder App Studio oder das Entwicklerportal verwenden, Tools, die in Teams ausgeführt werden, wodurch die Registrierung der App vereinfacht wird. App Studio und das Entwicklerportal sind die empfohlenen Methoden zum Erstellen und Aktualisieren des App-Pakets.
+An diesem Punkt wird eine App im Internet gehostet, aber Sie haben noch keine Möglichkeit, Teams zu erfahren, wo sie gesucht werden soll oder sogar wie Ihre App heißt. Dazu müssen Sie jetzt ein App-Paket erstellen. Dies ist nur eine Textdatei, die das App-Manifest und einige Symbole enthält, die der Teams-Client verwendet, um Ihre App ordnungsgemäß anzuzeigen und zu brandingen. Sie können dieses App-Paket manuell erstellen oder App Studio oder das Entwicklerportal verwenden, Tools, die in Teams ausgeführt werden, wodurch die Registrierung der App vereinfacht wird. App Studio und das Entwicklerportal sind die empfohlenen Methoden zum Erstellen und Aktualisieren des App-Pakets.
 
 Für beide Methoden benötigen Sie Folgendes:
 
@@ -187,7 +187,7 @@ Für beide Methoden benötigen Sie Folgendes:
 
 1. Wählen Sie **"Hello World"** aus, und wählen Sie **"Importieren"** aus. Die **Hello World-App** wird im Entwicklerportal importiert. 
 
-    Sie können Ihre App über das Teams Entwicklerportal konfigurieren. Das Manifest befindet sich unter "Verteilen". Sie können das Manifest verwenden, um Funktionen, erforderliche Ressourcen und andere wichtige Attribute für Ihre App zu konfigurieren. Weitere Informationen zum Konfigurieren Ihrer App mithilfe des Entwicklerportals finden Sie unter [Teams Developer Portal.](../concepts/build-and-test/teams-developer-portal.md)
+    Sie können Ihre App über das Teams Entwicklerportal konfigurieren. Das Manifest befindet sich unter "Verteilen". Sie können das Manifest verwenden, um Funktionen, erforderliche Ressourcen und andere wichtige Attribute für Ihre App zu konfigurieren. Weitere Informationen zum Konfigurieren Ihrer App mithilfe des Entwicklerportals finden Sie [unter Teams Developer Portal.](../concepts/build-and-test/teams-developer-portal.md)
 
     <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
 
@@ -206,7 +206,7 @@ WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 
 Wie Sie dies tun, hängt davon ab, wie Sie Ihre App gehostet haben. Wichtig bei der Verwendung von Umgebungsvariablen ist, dass diese Werte Teil Ihrer Umgebung sind. Sie können über den Code für Ihre App aufgerufen werden, werden jedoch nicht für Dritte verfügbar gemacht, die möglicherweise die Dateien untersuchen, aus denen Ihre Website besteht.
 
-Wenn Sie die App mit ngrok ausführen, müssen Sie einige lokale Umgebungsvariablen einrichten. Es gibt viele Möglichkeiten, dies zu tun. Wenn Sie jedoch Visual Studio Code verwenden, besteht die einfachste Möglichkeit darin, eine [Startkonfiguration](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)hinzuzufügen:
+Wenn Sie die App mit ngrok ausführen, müssen Sie einige lokale Umgebungsvariablen einrichten. Es gibt viele Möglichkeiten, dies zu tun, aber am einfachsten, wenn Sie Visual Studio Code verwenden, ist das Hinzufügen einer [Startkonfiguration:](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)
 
 ``` 
 {
@@ -226,14 +226,14 @@ Wenn Sie die App mit ngrok ausführen, müssen Sie einige lokale Umgebungsvariab
 }
 ```
 
-Dabei gilt Folgendes:
+Dabei gilt:
 
 MICROSOFT_APP_ID und MICROSOFT_APP_PASSWORD ist die ID bzw. das Kennwort für Ihren Bot.
 NODE_DEBUG zeigen Ihnen, was in Ihrem Bot in der Visual Studio Code Debugkonsole passiert.
 NODE_CONFIG_DIR verweist auf das Verzeichnis im Stammverzeichnis des Repositorys (wenn die App lokal ausgeführt wird, wird sie standardmäßig im Ordner "src" gesucht).
 
 > [!Note]
-> Wenn Sie npm noch nicht von früheren Versionen des Lernprogramms beendet haben, müssen Sie diese ausführen, `npm stop` damit Visual Studio Code die Startkonfigurationsvariablen korrekt abrufen können.
+> Wenn Sie npm nicht von früheren Versionen des Lernprogramms beendet haben, müssen Sie ausführen, `npm stop` damit Visual Studio Code die Startkonfigurationsvariablen korrekt abrufen können.
 
 <a name="ConfigureTheAppTab"></a>
 
@@ -265,7 +265,7 @@ Sie können jetzt mit dem Bot in Teams interagieren. Wählen Sie einen Kanal im 
 
     <img width="430px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
 
- ## <a name="see-also"></a>Weitere Informationen:
+ ## <a name="see-also"></a>Weitere Informationen
 
 * [Übersicht über Lernprogramme](code-samples.md)
 * [Erstellen einer Unterhaltungs-Bot-App](first-app-bot.md)

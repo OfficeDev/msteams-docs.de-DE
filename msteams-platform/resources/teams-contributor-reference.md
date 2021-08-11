@@ -1,18 +1,18 @@
 ---
-title: Mitwirken an Teams Dokumentation
+title: Mitwirken an der Teams-Dokumentation
 description: Schritte zum Erstellen und Veröffentlichen Teams Dokumentation
 author: surbhigupta
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: contributor-guide
-ms.openlocfilehash: a567b0462397780650d6173df9dae1b340a06f97
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: d09f946926f7377b65910c7bccce7cef8e30ef739afa31b94c83354cffbd7c27
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140513"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708056"
 ---
-# <a name="contribute-to-teams-documentation"></a>Mitwirken an Teams Dokumentation
+# <a name="contribute-to-teams-documentation"></a>Mitwirken an der Teams-Dokumentation
 
 Teams Dokumentation ist Teil der technischen **Dokumentationsbibliothek von Microsoft Docs.** Der Inhalt ist in Gruppen unterteilt, die als Docsets bezeichnet werden und jeweils eine Gruppe verwandter Dokumente darstellen, die als einzelne Entität verwaltet werden. Artikel im selben Dokumentsatz weisen nach docs.microsoft.com die gleiche URL-Pfaderweiterung **auf.** Ist beispielsweise `/docs.microsoft.com/microsoftteams/...` der Anfang des Teams Docset-Dateipfads. Teams Artikel werden in markdown-Syntax geschrieben und auf GitHub gehostet.
 
@@ -60,7 +60,7 @@ Weitere Informationen zu Hyperlinks und Dateipfaden finden Sie unter [Verwenden 
 > &emsp;&#x2714; Verwenden Sie einen relativen Pfad ohne vorangestellten Schrägstrich.<br>
 > &emsp;&#x2714; schließen Sie die Dateierweiterung Markdown ein.<br>
 >Beispiel: **übergeordnetes Verzeichnis/Verzeichnis/Pfad-zu-article.md** – > [Erstellen einer App für Microsoft Teams](../concepts/building-an-app.md) <br><br>
-> So verweisen Sie auf einen Microsoft Docs-Bibliotheksartikel, der nicht Teil des Teams Plattform-Docsets **ist:**<br>
+> So verweisen Sie auf einen Microsoft Docs-Bibliotheksartikel, der nicht Teil des Teams Plattform-Docset **ist:**<br>
 > &emsp;&#x2714; Verwenden Sie einen relativen Pfad, der mit einem Schrägstrich beginnt.<br>
 > &emsp;&#x2714; Dateierweiterung nicht einschließen. <br> Beispiel: **/docset/address-to-file-location** - > [Verwenden der Microsoft Graph-API zum Arbeiten mit Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
 > Um auf eine Seite außerhalb der Microsoft Docs-Bibliothek zu verweisen, z. B. GitHub, verwenden Sie den vollständigen `https` Dateipfad.<br>
@@ -69,13 +69,13 @@ Weitere Informationen zu Hyperlinks und Dateipfaden finden Sie unter [Verwenden 
 
 Codebeispiele spielen eine wichtige Rolle bei der effektiven Verwendung von APIs und SDKs. Gut dargestellte Codebeispiele können deutlich vermitteln, wie alles funktioniert, als beschreibende Text- und Anleitungsinformationen allein. Ihre Codebeispiele müssen präzise, präzise, gut dokumentiert und leserfreundlicher sein. Code, der leicht zu lesen ist, muss leicht verständlich sein, testen, debuggen, verwalten, ändern und erweitern. Weitere Informationen finden Sie unter ["Einfügen von Code in Dokumente".](/contribute/code-in-docs)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Microsoft-Dokumente](/)
 * [Leitfaden für Mitwirkende](/contribute)
 * [Schnellstart für Dokumentstil und Sprache](/contribute/style-quick-start)
 * [Neuesten Stand: Quellcodelesbarkeit Tipps](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
-* [Teams Dokumentation](/microsoftteams/platform/overview)
+* [Teams-Dokumentation](/microsoftteams/platform/overview)
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
 
 
