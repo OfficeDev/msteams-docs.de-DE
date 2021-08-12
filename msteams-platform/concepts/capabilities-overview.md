@@ -6,12 +6,12 @@ ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 7cb2d042c1b666b6047aa910f3e797e2a59a396d2fd87a37f06fadc04e989d85
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f8e44496154f3df638737bd91d1ee983f7791414
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707123"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53585977"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Grundlegendes zu Microsoft Teams App-Funktionen
 
@@ -21,7 +21,7 @@ Es gibt mehrere Möglichkeiten, Teams zu erweitern, sodass jede App einzigartig 
 
 ## <a name="app-capabilities"></a>App-Funktionen
 
-Ihre Teams-Apps verfügen über eine oder alle der folgenden Kernfunktionen:
+Ihre Teams-App verfügt über eine oder alle der folgenden Kernfunktionen:
 
 * [Tabs](../tabs/what-are-tabs.md)
 * [Messaging-Erweiterungen](../messaging-extensions/what-are-messaging-extensions.md)
@@ -30,7 +30,7 @@ Ihre Teams-Apps verfügen über eine oder alle der folgenden Kernfunktionen:
 
 Ihre App kann auch erweiterte Funktionen nutzen, z. B. die [Microsoft Graph-API für Teams.](/graph/teams-concept-overview)
 
-Die folgende Abbildung gibt Ihnen eine Vorstellung davon, welche Funktionen die gewünschten Features in Ihrer App bereitstellen:
+In der folgenden Abbildung erhalten Sie eine Vorstellung davon, welche Funktionen die gewünschten Features in Ihrer App bereitstellen:
 
 :::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Mind map illustrating what Teams app capabilities are.":::
 
@@ -39,32 +39,7 @@ Die folgende Abbildung gibt Ihnen eine Vorstellung davon, welche Funktionen die 
 Wenn Sie sich mit Teams App-Entwicklung vertraut machen, verstehen Sie die grundlegenden Grundlagen. Sie wissen, dass es mehrere Möglichkeiten gibt, bestimmte Features zu erstellen. Überlegen Sie in solchen Szenarien, wie Sie Ihren Benutzern eine nativeere Benutzeroberfläche bieten können.
 Sie können beispielsweise Benutzereingaben in einem Formular sammeln, das als Registerkarte in der App erstellt wurde. Sie können dies auch mithilfe eines Aufgabenmoduls tun, ohne die Ansichten zu wechseln und den Arbeitsfluss des Benutzers zu unterbrechen. Es ist wichtig, Erweiterungspunkte zu wählen, die die geringste Abweichung vom regulären Arbeitsfluss eines Benutzers bereitstellen.
 
-## <a name="government-community-cloud-gcc"></a>Government Community Cloud (GCC)
-
-Government Community Cloud ist eine Auf Regierung ausgerichtete Kopie der kommerziellen Umgebung. Das Verteidigungsministerium (Department of Defense, DOD) und Auftragnehmer des Bundes sind verpflichtet, die strengen Anforderungen an Cybersicherheit und Compliance zu erfüllen. Zu diesem Zweck wurde GCC-High erstellt, um die Anforderungen von DOD und Bundesauftragnehmern zu erfüllen. GCC-High ist eine Kopie der DOD-Cloud, aber in einer eigenen unabhängigen Umgebung vorhanden. Die DOD-Cloud wurde nur für das Verteidigungsministerium erstellt.
-
-Die folgende Tabelle enthält Teams Features und Verfügbarkeit für GCC, GCC-Hoch und DOD:
-
-| Features   | GCC | GCC – hoch | DOD |
-|-------------|---------|
-| Teams eigenen Apps wie in intern entwickelten Apps | ✔️ App ist aktiviert, wenn sie über GCC verfügt. | ✔️ App ist aktiviert, wenn sie über GCC-Hoch verfügt. | ✔️ App ist aktiviert, wenn sie ÜBER DOD verfügt. |
-| Microsoft-Apps | ✔️ Microsoft-Apps, die mit GCC kompatibel sind | ✔️ Microsoft-Apps, die mit GCC-High kompatibel sind | ✔️ Microsoft-Apps, die DOD-konform sind |
-| 3p- oder Drittanbieter-Apps | ✔️ Drittanbieter-Apps sind verfügbar. Standardmäßig deaktiviert, und mandantenadministratoren verwenden ihren eigenen Ermessen, um es zu aktivieren. | ❌ | ❌ |
-| Bots | ✔️ | ❌ | ❌ |
-| Benutzerdefinierte oder Branchenregisterkarten-Apps |  ✔️ | ✔️ | ✔️ |
-| Querladen von Apps | ✔️ | ❌ | ❌ |
-| Benutzerdefinierte oder Lob-Bots | ✔️ | ❌ | ❌ |
-| Benutzerdefinierte Messaging-Erweiterungen | ❌ | ❌ | ❌ |
-| Benutzerdefinierte Connectors | ❌ | ❌ | ❌ |
-
-Die folgende Liste hilft bei der Ermittlung der Verfügbarkeit von GCC, GCC-Hoch und DOD für die Features:
-
-* Informationen zu Drittanbieter-Apps finden Sie unter [Web-Apps](../samples/integrating-web-apps.md) und [Besprechungs-App-Erweiterbarkeit.](../apps-in-teams-meetings/meeting-app-extensibility.md)
-* Informationen zu Bots finden Sie unter [Erstellen Ihres ersten Unterhaltungs-Bots für Teams,](../get-started/first-app-bot.md)Entwerfen Ihres Teams [Bots, Hinzufügen von Bots zu Microsoft Teams Apps](../resources/bot-v3/bots-overview.md)und [Bots in Teams](../bots/what-are-bots.md). [](../bots/design/bots.md)
-* Informationen zum Querladen von Apps finden Sie unter [Aktivieren der Anpassung Ihrer Teams-App,](../concepts/design/enable-app-customization.md)Verteilen Ihrer [Microsoft Teams-App](../concepts/deploy-and-publish/apps-publish-overview.md)und [Hochladen Ihrer App in Teams.](../concepts/deploy-and-publish/apps-upload.md)
-* Benutzerdefinierte Connectors finden Sie unter [Erstellen Office 365 Connectors für Teams.](../webhooks-and-connectors/how-to/connectors-creating.md)
-
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Erstellen von Apps für Teams](../overview.md) 
  [Erstellen Ihrer ersten Microsoft Teams-App](../build-your-first-app/build-first-app-overview.md)

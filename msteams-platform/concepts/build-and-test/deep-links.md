@@ -4,12 +4,12 @@ description: Beschreibt Deep-Links und deren Verwendung in Ihren Apps
 ms.topic: how-to
 localization_priority: Normal
 keywords: DeepLink für Teams
-ms.openlocfilehash: 2f382e3612b0df026a12b8b37fdbbc278df6ecf8fe8e0c67582c3486eb91c5be
-ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
+ms.openlocfilehash: 97db37f4fd2831647f891a970479a03ddcc160c921098efc82aa82aec9e297c9
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "57823214"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707309"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links 
 
@@ -108,7 +108,7 @@ Der [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext
 
 ## <a name="deep-linking-from-your-tab"></a>Deep-Verknüpfung von Ihrer Registerkarte
 
-Sie können Deeplinks zu Inhalten in Teams von Ihrer Registerkarte aus erstellen. Dies ist nützlich, wenn Ihre Registerkarte mit anderen Inhalten in Teams verknüpft werden muss, z. B. mit einem Kanal, einer Nachricht, einer anderen Registerkarte oder sogar zum Öffnen eines Planungsdialogfelds. Um einen Deeplink von Ihrer Registerkarte aus auszulösen, sollten Sie Folgendes aufrufen:
+Sie können Deeplinks zu Inhalten in Teams von Ihrer Registerkarte aus ausführen. Dies ist nützlich, wenn Ihre Registerkarte mit anderen Inhalten in Teams verknüpft werden muss, z. B. mit einem Kanal, einer Nachricht, einer anderen Registerkarte oder sogar zum Öffnen eines Planungsdialogfelds. Um einen Deeplink von Ihrer Registerkarte aus auszulösen, sollten Sie Folgendes aufrufen:
 
 ```Javascript
 microsoftTeams.executeDeepLink(/*deepLink*/);
@@ -227,9 +227,9 @@ Die Abfrageparameter sind:
 
 Um diesen Deep-Link mit Ihrem Bot zu verwenden, können Sie dies als URL-Ziel in der Schaltfläche Ihrer Karte angeben oder über den Aktionstyp auf die Aktion `openUrl` tippen.
 
-## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>Deep linking to an audio or audio-video call
+## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>Deep-Links zu einem Audio- oder Audiovideoanruf
 
-Sie können Deep-Links erstellen, um nur Audio- oder Audiovideoanrufe an einen einzelnen Benutzer oder eine Gruppe von Benutzern aufzurufen, indem Sie den Anruftyp als *Audio* oder *Av* und die Teilnehmer angeben. Nachdem der Deep-Link aufgerufen wurde und vor dem Tätigen des Anrufs, fordert Teams Desktopclient eine Bestätigung für den Anruf an. Im Falle eines Gruppenanrufs können Sie eine Gruppe von VoIP-Benutzern und eine Gruppe von PSTN-Benutzern im selben Deeplink-Aufruf aufrufen. 
+Sie können Deep-Links erstellen, um nur Audio- oder Audiovideoanrufe an einen einzelnen Benutzer oder eine Gruppe von Benutzern aufzurufen, indem Sie den Anruftyp als *Audio* oder *Av* und die Teilnehmer angeben. Nachdem der Deep-Link aufgerufen wurde und bevor der Anruf erfolgt ist, fordert Teams Desktopclient eine Bestätigung für den Anruf an. Im Falle eines Gruppenanrufs können Sie eine Gruppe von VoIP-Benutzern und eine Gruppe von PSTN-Benutzern im selben Deeplink-Aufruf aufrufen. 
 
 Bei einem Videoanruf fordert der Client die Bestätigung an und aktiviert das Video des Anrufers für den Anrufer. Der Empfänger des Anrufs kann über das Teams Anrufbenachrichtigungsfenster nur über Audio oder Audio und Video antworten.
 
@@ -241,13 +241,13 @@ Bei einem Videoanruf fordert der Client die Bestätigung an und aktiviert das Vi
 | Deep-Link | Format | Beispiel |
 |-----------|--------|---------|
 | Tätigen eines Audioanrufs | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
-| Tätigen eines Audio- und Videoanrufs | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withVideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true |
-|Tätigen eines Audio- und Videoanrufs mit einer optionalen Parameterquelle | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withVideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp |  
-| Tätigen eines Audio- und Videoanrufs für eine Kombination aus VoIP- und PSTN-Benutzern | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; ,4: &lt; Phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
+| Tätigen eines Audio- und Videoanrufs | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
+|Tätigen eines Audio- und Videoanrufs mit einer optionalen Parameterquelle | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
+| Tätigen eines Audio- und Videoanrufs an eine Kombination aus VoIP- und PSTN-Benutzern | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; ,4: &lt; Phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 Es folgen die Abfrageparameter:
 * `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Anrufs darstellen. Derzeit unterstützt das Benutzer-ID-Feld den Azure AD UserPrincipalName, in der Regel eine E-Mail-Adresse, oder im Falle eines PSTN-Anrufs unterstützt es eine pstn mri 4: &lt; &gt; Telefonnummer.
-* `withVideo`: Dies ist ein optionaler Parameter, den Sie für einen Videoanruf verwenden können. Durch Festlegen dieses Parameters wird nur die Kamera des Anrufers aktiviert. Der Empfänger des Anrufs hat die Wahl, über audio- oder audio- und videoanruf über das Teams Anrufbenachrichtigungsfenster zu beantworten. 
+* `Withvideo`: Dies ist ein optionaler Parameter, den Sie für einen Videoanruf verwenden können. Durch Festlegen dieses Parameters wird nur die Kamera des Anrufers aktiviert. Der Empfänger des Anrufs hat die Wahl, über audio- oder audio- und videoanruf über das Teams Anrufbenachrichtigungsfenster zu beantworten. 
 * `Source`: Dies ist ein optionaler Parameter, der über die Quelle des Deeplinks informiert.
 
 ## <a name="code-sample"></a>Codebeispiel

@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Teams-Manifestschema
-ms.openlocfilehash: f1f40a3cc28410fe41f114ac749f06124fbbc1f850a02771bfe67ba40c77aae3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: b072bf34bcb242571cfd45237cd92d118efefa8c
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708028"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53586054"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -316,7 +316,7 @@ Die Version des Manifestschemas, das dieses Manifest verwendet. Es muss 1.10 sei
 
 **Erforderlich**– Zeichenfolge
 
-Die Version einer bestimmten App. Wenn Sie etwas in Ihrem Manifest aktualisieren, muss auch die Version erhöht werden. Auf diese Weise wird bei der Installation des neuen Manifests das vorhandene überschrieben, und der Benutzer erhält die neue Funktionalität. Wenn diese App an den Store übermittelt wurde, muss das neue Manifest erneut gesendet und erneut validiert werden. Die App-Benutzer erhalten das neue aktualisierte Manifest innerhalb weniger Stunden nach der Genehmigung des Manifests automatisch.
+Die Version einer bestimmten App. Wenn Sie etwas in Ihrem Manifest aktualisieren, muss auch die Version erhöht werden. Auf diese Weise wird bei der Installation des neuen Manifests das vorhandene überschrieben, und der Benutzer erhält die neue Funktionalität. Wenn diese App an den Store übermittelt wurde, muss das neue Manifest erneut gesendet und erneut validiert werden. Die App-Benutzer erhalten das neue aktualisierte Manifest automatisch innerhalb weniger Stunden nach der Genehmigung des Manifests.
 
 Wenn sich die App-Anforderungen für Berechtigungen ändern, werden die Benutzer aufgefordert, ein Upgrade durchzuführen und die App erneut zu konfigurieren.
 
@@ -356,7 +356,7 @@ Der Name Ihrer App-Erfahrung, der Benutzern in der Teams angezeigt wird. Für an
 |`short`|30 Zeichen|✔|Der kurze Anzeigename für die App.|
 |`full`|100 Zeichen||Der vollständige Name der App, der verwendet wird, wenn der vollständige App-Name 30 Zeichen überschreitet.|
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>description
 
 **Required**-object
 
@@ -520,7 +520,7 @@ Das Element ist ein Array (maximal ein Element) mit allen Elementen des Typs `ob
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-Ihre Messaging-Erweiterung muss mindestens einen Befehl mit maximal 10 Befehlen deklarieren. Jeder Befehl wird in Microsoft Teams als potenzielle Interaktion vom UI-basierten Einstiegspunkt angezeigt.
+Ihre Messaging-Erweiterung muss einen oder mehrere Befehle mit maximal 10 Befehlen deklarieren. Jeder Befehl wird in Microsoft Teams als potenzielle Interaktion vom UI-basierten Einstiegspunkt angezeigt.
 
 Jedes Befehlselement ist ein Objekt mit der folgenden Struktur:
 
@@ -575,7 +575,7 @@ Stellt die systemeigenen Features auf dem Gerät eines Benutzers bereit, auf die
 
 **Optional,** außer **erforderlich,** sofern angegeben.
 
-Eine Liste der gültigen Domänen für Websites, die von der App im Teams-Client geladen werden sollen. Domäneneinträge können Platzhalter enthalten, `*.example.com` z. B. . Die gültige Domäne entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com` . Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der Registerkartenkonfiguration navigiert, muss diese Domäne hier angegeben werden.
+Eine Liste der gültigen Domänen für Websites, die die App im Teams-Client laden soll. Domäneneinträge können Platzhalter enthalten, `*.example.com` z. B. . Die gültige Domäne entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com` . Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der Registerkartenkonfiguration navigiert, muss diese Domäne hier angegeben werden.
 
 Schließen Sie **nicht** die Domänen von Identitätsanbietern ein, die Sie in Ihrer App unterstützen möchten. Um sich beispielsweise mit einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten. Sie dürfen jedoch keine accounts.google.com in `validDomains[]` einschließen.
 
@@ -718,7 +718,7 @@ Sie können eine der folgenden Eigenschaften definieren:
 * `longDescription`: Die ausführliche Beschreibung der App.
 * `smallImageUrl`: Das Gliederungssymbol der App.
 * `largeImageUrl`: Das Farbsymbol der App.
-* `accentColor`: Die zu verwendende Farbe und ein Hintergrund für Die Gliederungssymbole.
+* `accentColor`: Die zu verwendende Farbe und ein Hintergrund für Ihre Gliederungssymbole.
 * `developerUrl`: Die HTTPS-URL der Website des Entwicklers.
 * `privacyUrl`: Die HTTPS-URL der Datenschutzrichtlinie des Entwicklers.
 * `termsOfUseUrl`: Die HTTPS-URL der Nutzungsbedingungen des Entwicklers.

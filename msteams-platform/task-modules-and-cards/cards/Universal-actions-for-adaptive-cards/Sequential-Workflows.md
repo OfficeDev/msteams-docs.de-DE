@@ -4,12 +4,12 @@ description: Beispiel für sequenzielle Workflows mit universellen Aktionen
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: d7628987e4258ef4fe4f42d751cc48ed947439dd9b38a6c30769b58e8b6e7e85
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: c6e247fd2b3cb8d908cc3cb7282bd3f7666d2ed0
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705522"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53585991"
 ---
 # <a name="sequential-workflows"></a>Sequenzielle Workflows
 

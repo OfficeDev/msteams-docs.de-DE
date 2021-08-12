@@ -2,19 +2,19 @@
 title: Szenen im benutzerdefinierten Modus "Zusammen"
 description: Arbeiten mit benutzerdefinierten Szenen im Zusammen-Modus
 ms.topic: conceptual
-ms.openlocfilehash: 24b350341c7503569504bffa41f715ff87caa7db49cd890482688353e7f0493f
-ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
+ms.openlocfilehash: b10f5506012dd3b204187dde1ef5e45d2e4bb3536ea9106f2643b0d846fbe640
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "57823235"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702166"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Benutzerdefinierte Zusammen-Modus-Szenen
 
 > [!NOTE]
 > Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
-Szenen im benutzerdefinierten Zusammen-Modus in Microsoft Teams bieten eine immersive und ansprechende Besprechungsumgebung, die Personen zusammenführt und sie dazu auffordert, ihr Video zu aktivieren. Sie kombiniert Teilnehmer digital in einer einzelnen virtuellen Szene und platziert ihre Videostreams in vordefinierten Arbeitsplätzen, die vom Szenenersteller entworfen und behoben wurden.
+Szenen im benutzerdefinierten Zusammen-Modus in Microsoft Teams bieten eine immersive und ansprechende Besprechungsumgebung, die Menschen zusammenführt und sie auffordert, ihr Video zu aktivieren. Sie kombiniert Teilnehmer digital in einer einzelnen virtuellen Szene und platziert ihre Videostreams in vordefinierten Arbeitsplätzen, die vom Szenenersteller entworfen und behoben wurden.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
@@ -94,7 +94,7 @@ Die Platzabmessungen werden zum Zeichenbereich für das Rendern des Videostreams
 
     >[!NOTE]
     > * Um Scene Studio zu öffnen, können Sie zur Startseite von [Teams Entwicklerportal](https://dev.teams.microsoft.com/home) navigieren und **benutzerdefinierte Szenen für Besprechungen** erstellen auswählen.
-    > * To open Scene studio, you can navigate to the home page of [Teams Developer Portal,](https://dev.teams.microsoft.com/home)select **Tools** from the left hand section, and select **Scene studio** from the **Tools** section.
+    > * Um Scene Studio zu öffnen, können Sie zur Startseite von [Teams Entwicklerportal](https://dev.teams.microsoft.com/home)navigieren, im linken Abschnitt die Option **"Extras"** und im Abschnitt **"Extras"** das **Szenenstudio** auswählen.
 
 1. Wählen Sie auf der Seite **"Szenen-Editor"** die Option **"Neue Szene erstellen" aus.**
 
@@ -277,6 +277,6 @@ Sie können das Szenenpaket, das eine aus dem Szenenstudio abgerufene .zip datei
 
 ![Szenen-ZIP-Datei](../assets/images/apps-in-meetings/scene-zip-file.png)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Apps für Teams Besprechungen](teams-apps-in-meetings.md)

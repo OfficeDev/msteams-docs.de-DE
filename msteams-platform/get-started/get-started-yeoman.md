@@ -5,12 +5,12 @@ keywords: Erste Schritte node.js nodejs yeoman
 localization_priority: Normal
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: 2a75c5bfd24facb8be1897997fc94896e1f62990547da12d35c783d38be2e077
-ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
+ms.openlocfilehash: fb37e49ad4cfe3b705832a1a5e419de56a859f43b601e5c8d7c026b120f37ab0
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "57823242"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703201"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Erstellen Ihrer ersten Microsoft Teams-App mithilfe des Yeoman-Generators
 
@@ -78,11 +78,11 @@ In diesem Abschnitt werden Sie durch die Schritte zum Generieren Ihres Projekts 
    1. Geben Sie den Titel Ihres Projekts ein. Dieser Titel wird im Manifest und in der Beschreibung Ihrer App verwendet. 
    1. Geben Sie einen Firmennamen ein, der auch im Manifest verwendet wird.
    1. Geben Sie die Version des Manifests ein, das Sie verwenden möchten. Wählen Sie für dieses Lernprogramm `v1.5` das aktuelle allgemein verfügbare Schema aus.
-   1. Wählen Sie die Elemente aus, die Sie Ihrem Projekt hinzufügen möchten. Sie können eine einzelne oder eine beliebige Kombination von Elementen auswählen. Wählen Sie für dieses Lernprogramm einfach *eine Registerkarte* aus:
+   1. Wählen Sie die Elemente aus, die Sie Ihrem Projekt hinzufügen möchten. Sie können eine einzelne oder eine beliebige Kombination von Elementen auswählen. Wählen Sie für diese Lernprogramme einfach *eine Registerkarte* aus:
 
     ![Elementauswahl](~/assets/yeoman-images/teams-first-app-2.png)
 
-1. Antworten Sie auf die nächsten Folgefragen, die basierend auf den in Schritt 3 ausgewählten Elementen angezeigt werden.
+1. Antworten Sie auf die nächsten Folgefragen, die basierend auf den in Schritt 2 ausgewählten Elementen angezeigt werden.
 1. Geben Sie eine URL für den Speicherort ein, an dem Sie Ihre Lösung hosten möchten. 
 
    > [!NOTE]
@@ -136,7 +136,7 @@ Jetzt sollten Sie zu der Registerkarte wechseln `http://localhost:3007/myFirstAp
 
 ### <a name="run-your-app-in-microsoft-teams"></a>Ausführen Ihrer App in Microsoft Teams
 
-Microsoft Teams nicht zulässt, dass Ihre App auf localhost gehostet wird. Daher müssen Sie sie entweder über eine öffentliche URL veröffentlichen oder einen Proxy wie ngrok verwenden. Eine gute Nachricht ist, dass das Gerüstprojekt über dieses integrierte Projekt verfügt. 
+Microsoft Teams nicht zulässt, dass Ihre App auf localhost gehostet wird. Daher müssen Sie sie entweder unter einer öffentlichen URL veröffentlichen oder einen Proxy wie ngrok verwenden. Eine gute Nachricht ist, dass das Gerüstprojekt über dieses integrierte Projekt verfügt. 
 
 **So führen Sie Ihre App in Teams**
 
@@ -191,7 +191,7 @@ Sie können ihre aktuelle Microsoft Teams Version auch mit dem Microsoft Teams Y
    ```
    Congrats! Sie haben Ihre erste Microsoft Teams App erstellt und bereitgestellt. Sie haben auch Microsoft Teams aktualisiert.
 
- ## <a name="see-also"></a>Siehe auch
+ ## <a name="see-also"></a>Weitere Informationen
 
 * [Übersicht über Lernprogramme](code-samples.md)
 * [Erstellen einer Unterhaltungs-Bot-App](first-app-bot.md)

@@ -3,16 +3,16 @@ title: Mit Universal-Aktionen für adaptive Karten arbeiten
 description: Mit Universal-Aktionen für adaptive Karten arbeiten.
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 0c3b07d630452abe945e43e7a9dfdced00e22f35324b2e9c7768b6bca5a0d065
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 426e1324f0ccc113d7fd0f16ef38ca8558148541
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701966"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53586040"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Mit Universal-Aktionen für adaptive Karten arbeiten
 
-Universelle Aktionen für adaptive Karten bieten eine Möglichkeit zum Implementieren adaptiver Kartenszenarien für Teams und Outlook. Dieses Dokument behandelt die folgenden Themen:
+Universelle Aktionen für adaptive Karten bieten eine Möglichkeit zum Implementieren adaptiver Kartenszenarien sowohl für Teams als auch für Outlook. Dieses Dokument behandelt die folgenden Themen:
 
 * [Schema, das für Universal-Aktionen für adaptive Karten verwendet wird](#schema-for-universal-actions-for-adaptive-cards)
 * [Aktualisierungsmodell](#refresh-model)
