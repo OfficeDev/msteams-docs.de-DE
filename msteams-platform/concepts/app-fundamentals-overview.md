@@ -5,20 +5,20 @@ description: Beschreiben sie die grundlegenden Konzepte der Teams Plattformentwi
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: ab69cedd9bd6fd25a9d7566b0f3e93ff1c38ef29
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.openlocfilehash: 7ffdfbb735f2c7c6cf5cbcf0f1e7f2134f92f613989cd3f8eac84f22cd73543e
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53585935"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706078"
 ---
-# <a name="microsoft-teams-app-development-fundamentals"></a>Grundlagen der Microsoft Teams App-Entwicklung
+# <a name="microsoft-teams-app-development-fundamentals"></a>Grundlagen der app-Entwicklung Microsoft Teams
 
-Microsoft Teams App-Grundlagen geben die Richtung vor, die Sie zum Erstellen Ihrer benutzerdefinierten Teams-App benötigen. Sie können das für die Planung Ihrer Teams-App erforderliche Framework erkennen. Das Dokument hilft Ihnen, die Kommunikation zwischen Benutzern und Apps zu verstehen und herauszufinden, welche Art von App-Oberflächen Sie verwenden müssen oder welche APIs Ihre App möglicherweise im Prozess benötigt. Lassen Sie sich von der Interaktivität inspirieren, die die App-Erfahrung bei der Integration in Teams vertiefen kann.
+Microsoft Teams App-Grundlagen geben die Richtung vor, in der Sie Ihre benutzerdefinierte Teams-App erstellen müssen. Sie können das für die Planung Ihrer Teams-App erforderliche Framework erkennen. Das Dokument hilft Ihnen, die Kommunikation zwischen Benutzern und Apps zu verstehen und herauszufinden, welche Art von App-Oberflächen Sie verwenden müssen oder welche APIs Ihre App möglicherweise im Prozess benötigt. Lassen Sie sich von der Interaktivität inspirieren, die die App-Erfahrung bei der Integration in Teams vertiefen kann.
 
 ## <a name="capabilities-and-entry-points"></a>Funktionen und Einstiegspunkte
 
-Sie können Ihre Teams-App auf verschiedene Arten erweitern. Um Ihre App erweitern zu können, müssen Sie alle Kernfunktionen und Einstiegspunkte verstehen, die in einem Raum für die Zusammenarbeit funktionieren. Sie können mit den Erweiterungspunkten für die Erstellung Ihrer Apps experimentieren. Wichtige App-Projektkomponenten helfen Ihnen, Ihre App-Seite ordnungsgemäß zu konfigurieren. Teams App kann [über mehrere Funktionen](../concepts/capabilities-overview.md) und [Einstiegspunkte verfügen.](../concepts/extensibility-points.md)
+Sie können Ihre Teams-App auf mehrere Arten erweitern. Um Ihre App erweitern zu können, müssen Sie alle Kernfunktionen und Einstiegspunkte verstehen, die in einem Raum für die Zusammenarbeit funktionieren. Sie können mit den Erweiterungspunkten für die Erstellung Ihrer Apps experimentieren. Wichtige App-Projektkomponenten helfen Ihnen, Ihre App-Seite ordnungsgemäß zu konfigurieren. Teams App kann [über mehrere Funktionen](../concepts/capabilities-overview.md) und [Einstiegspunkte verfügen.](../concepts/extensibility-points.md)
 
 ## <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
 
@@ -33,7 +33,7 @@ Sie können Benutzerprobleme erkennen und die Antworten auf einige häufige Prob
 
 [Die Zuordnung Ihrer Anwendungsfälle](../concepts/design/map-use-cases.md) deckt einige häufige Szenarien und die Auswahl der Funktionen Ihrer App ab. Es werden Informationen bereitgestellt, um Ihre App freizugeben und an Elementen in einem externen System zusammenzuarbeiten. Sie können auch erfahren, wie Sie Workflows initiieren und Benachrichtigungen an Benutzer senden. Erhalten Sie zusätzliche Tipps, wie Sie beginnen, wie Sie soziale Netzwerke mit Benutzern, Unterhaltungsbots und die Kombination mehrerer Features erhalten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Integrieren von Web-Apps in Teams](../samples/integrating-web-apps.md)
 * [Erstellen Ihrer ersten Microsoft Teams-App](../build-your-first-app/build-first-app-overview.md) 

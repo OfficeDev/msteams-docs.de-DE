@@ -5,12 +5,12 @@ description: Bei der Planung Ihrer Microsoft Teams-App sollten Sie zunächst ver
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 59bfdf6a407a29adfd27c135066fd44fa58288ed
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.openlocfilehash: 5171ce800c09c31486cfddcffcca7069ed81f0bf8d913876acaaaef4144d7bf7
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53585956"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703173"
 ---
 # <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
 
@@ -30,7 +30,7 @@ Jede gute App hat ein Kernproblem oder eine Notwendigkeit, die sie zu lösen ver
 
 ## <a name="understand-your-user"></a>Grundlegendes zu Ihrem Benutzer
 
-Verstehen Sie, wer Ihr Benutzer ist, und Sie können das richtige Verteilungsmodell identifizieren, aber noch wichtiger ist, dass Es Ihnen hilft, zu identifizieren, wie Benutzer Teams verwenden. Stellen Sie relevante Fragen, z. B.:
+Verstehen Sie, wer Ihr Benutzer ist, und Sie können das richtige Verteilungsmodell identifizieren, aber noch wichtiger ist, dass es Ihnen hilft, zu identifizieren, wie Benutzer Teams verwenden. Stellen Sie relevante Fragen, z. B.:
 
 * Sind die Benutzer in erster Linie Mitarbeiter im Front-Line-Dienst auf mobilen Clients?
 * Erwarten Sie, dass viele Gastbenutzer Zugriff auf Ihre App benötigen?
@@ -51,7 +51,7 @@ Wenn Sie die Einschränkungen der Apps hinsichtlich der Datenbarrierefreiheit un
 
 ## <a name="provide-authentication"></a>Bereitstellen der Authentifizierung
 
-Sie müssen frühzeitig ermitteln, ob Sie die Dienste, die Sie verfügbar machen, und auf welcher Ebene schützen müssen. Denken Sie daran, dass die webdienste, die in Ihrer Teams-App verfügbar gemacht werden, über das Internet öffentlich verfügbar sind. Wenn Sie also sicher sein müssen, dass sie jetzt darüber nachdenken. Wenn Sie eine Lösung benötigen, die erfordert, dass Sie Benutzern außerhalb des Mandanten Gastzugriff gewähren, müssen Zugriffseinschränkungen und -berechtigungen platziert werden, um vertrauliche Informationen zu schützen. Sie müssen Apps unter Berücksichtigung der Einschränkungen entwerfen, die mit dem Gastbenutzerzugriff verbunden sind. Stellen Sie daher Fragen, z. B.: 
+Sie müssen frühzeitig ermitteln, ob Sie die Dienste, die Sie verfügbar machen, und auf welcher Ebene schützen müssen. Denken Sie daran, dass die webdienste, die in Ihrer Teams App verfügbar gemacht werden, über das Internet öffentlich verfügbar sind. Wenn Sie also sicher sein müssen, dass sie jetzt darüber nachdenken. Wenn Sie eine Lösung benötigen, die erfordert, dass Sie Benutzern außerhalb des Mandanten Gastzugriff gewähren, müssen Zugriffseinschränkungen und -berechtigungen platziert werden, um vertrauliche Informationen zu schützen. Sie müssen Apps unter Berücksichtigung der Einschränkungen entwerfen, die mit dem Gastbenutzerzugriff verbunden sind. Stellen Sie daher Fragen, z. B.: 
 
 * Greifen die Benutzer basierend auf ihren Rollen auf unterschiedliche Ansichten von Daten zu?
 * Sind personenbezogene Informationen beteiligt?
@@ -60,7 +60,7 @@ Sie müssen frühzeitig ermitteln, ob Sie die Dienste, die Sie verfügbar machen
 
 ## <a name="decide-what-goes-in-teams"></a>Entscheiden, was in Teams
 
-Ob Sie eine neue Lösung erstellen oder eine vorhandene Lösung in Teams bringen, ist es wichtig zu entscheiden, ob sich die gesamte App innerhalb des Teams-Clients befindet. Überprüfen Sie, ob es sinnvoll ist, nur einen Teil der Erfahrung einzubringen. Mit einer Kombination aus Registerkarten, Messaging-Erweiterungen, Aufgabenmodulen, adaptiven Karten und Unterhaltungsbots können Sie komplexe Apps vollständig in Teams erstellen.
+Unabhängig davon, ob Sie eine neue Lösung erstellen oder eine vorhandene Lösung in Teams bringen, ist es wichtig zu entscheiden, ob sich die gesamte App innerhalb des Teams-Clients befindet. Überprüfen Sie, ob es sinnvoll ist, nur einen Teil der Erfahrung einzubringen. Mit einer Kombination aus Registerkarten, Messaging-Erweiterungen, Aufgabenmodulen, adaptiven Karten und Unterhaltungsbots können Sie komplexe Apps vollständig in Teams erstellen.
 Denken Sie daran, wer Ihre Benutzer sind und welche Probleme Sie lösen möchten. Verfügen sie bereits über ein System zur Lösung des großteils des Problems, oder müssen Sie lediglich einen Untersatz der Funktionalität in Teams erweitern? Wenn Sie einen Teil Ihrer Lösung bereitstellen möchten, müssen Sie sich in der Regel auf die Freigabe, Zusammenarbeit, Initiierung und Überwachung von Workflows konzentrieren.
 
 ## <a name="plan-the-onboarding-experience"></a>Planen der Onboarding-Erfahrung
@@ -77,7 +77,7 @@ Denken Sie vor allem daran, dass niemand Spam mag. Persönliche und Kanalnachric
 
 Ermitteln Sie, welche neuen Features der Benutzer in der aktuellen Lösung bevorzugen wird. Wenn Sie über eine Roadmap für neue Features verfügen, die der App hinzugefügt werden sollen, sind das Design und die Architektur betroffen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Auswählen, wie Ihre App verbreitet werden soll](../deploy-and-publish/apps-publish-overview.md)
 * [Designregisterkarten](../../tabs/design/tabs.md)
