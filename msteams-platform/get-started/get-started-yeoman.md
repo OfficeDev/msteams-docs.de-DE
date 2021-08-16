@@ -5,19 +5,19 @@ keywords: Erste Schritte node.js nodejs yeoman
 localization_priority: Normal
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: fb37e49ad4cfe3b705832a1a5e419de56a859f43b601e5c8d7c026b120f37ab0
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 696c98be0b091cb937194140f5606c774447baff
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703201"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345178"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Erstellen Ihrer ersten Microsoft Teams-App mithilfe des Yeoman-Generators
 
 > [!Note]
 > Dieses Lernprogramm stammt aus dem [Yeoman-Generator für Teams Wiki.](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)
 
-In diesem Lernprogramm erfahren Sie, wie Sie Ihre erste Microsoft Teams-App mit dem Microsoft Teams Yeoman-Generator erstellen. Außerdem werden Sie durch den Prozess des Upgradens Ihrer Teams mithilfe des Yeoman-Generators führt. Bevor Sie beginnen, benötigen Sie ein Teams Konto, das das [Querladen von Apps](~/concepts/build-and-test/prepare-your-o365-tenant.md)ermöglicht.
+In diesem Lernprogramm erfahren Sie, wie Sie Ihre 1. Microsoft Teams App mit dem Microsoft Teams Yeoman-Generator erstellen. Außerdem werden Sie durch den Prozess des Upgradens Ihrer Teams mithilfe des Yeoman-Generators führt. Bevor Sie beginnen, benötigen Sie ein Teams Konto, das das [Querladen von Apps](~/concepts/build-and-test/prepare-your-o365-tenant.md)ermöglicht.
 
 ![Git des Yeoman-Generators](~/assets/yeoman-demo.gif)
 
@@ -35,7 +35,7 @@ Sie müssen Folgendes auf Ihrem Computer installieren, bevor Sie mit der Verwend
 
 * Ein Code-Editor
 
-   Sie benötigen einen Code-Editor. Die meisten dieser Dokumentationen und Bilder beziehen sich auf die Verwendung [Visual Studio Code](https://code.visualstudio.com). Sie können jedoch den gewünschten Text-Editor verwenden.
+   Sie benötigen einen Code-Editor. Die meisten dieser Dokumentationen und Bilder beziehen sich auf die Verwendung [von Visual Studio Code](https://code.visualstudio.com). Sie können jedoch den gewünschten Text-Editor verwenden.
 
 * Yeoman und Gulp CLI
 
@@ -78,11 +78,11 @@ In diesem Abschnitt werden Sie durch die Schritte zum Generieren Ihres Projekts 
    1. Geben Sie den Titel Ihres Projekts ein. Dieser Titel wird im Manifest und in der Beschreibung Ihrer App verwendet. 
    1. Geben Sie einen Firmennamen ein, der auch im Manifest verwendet wird.
    1. Geben Sie die Version des Manifests ein, das Sie verwenden möchten. Wählen Sie für dieses Lernprogramm `v1.5` das aktuelle allgemein verfügbare Schema aus.
-   1. Wählen Sie die Elemente aus, die Sie Ihrem Projekt hinzufügen möchten. Sie können eine einzelne oder eine beliebige Kombination von Elementen auswählen. Wählen Sie für diese Lernprogramme einfach *eine Registerkarte* aus:
+   1. Wählen Sie die Elemente aus, die Sie Ihrem Projekt hinzufügen möchten. Sie können eine einzelne oder eine beliebige Kombination von Elementen auswählen. Wählen Sie für dieses Lernprogramm einfach *eine Registerkarte* aus:
 
     ![Elementauswahl](~/assets/yeoman-images/teams-first-app-2.png)
 
-1. Antworten Sie auf die nächsten Folgefragen, die basierend auf den in Schritt 2 ausgewählten Elementen angezeigt werden.
+1. Antworten Sie auf die nächsten Folgefragen, die basierend auf den in Schritt 3 ausgewählten Elementen angezeigt werden.
 1. Geben Sie eine URL für den Speicherort ein, an dem Sie Ihre Lösung hosten möchten. 
 
    > [!NOTE]
@@ -136,11 +136,11 @@ Jetzt sollten Sie zu der Registerkarte wechseln `http://localhost:3007/myFirstAp
 
 ### <a name="run-your-app-in-microsoft-teams"></a>Ausführen Ihrer App in Microsoft Teams
 
-Microsoft Teams nicht zulässt, dass Ihre App auf localhost gehostet wird. Daher müssen Sie sie entweder unter einer öffentlichen URL veröffentlichen oder einen Proxy wie ngrok verwenden. Eine gute Nachricht ist, dass das Gerüstprojekt über dieses integrierte Projekt verfügt. 
+Microsoft Teams nicht zulässt, dass Ihre App auf localhost gehostet wird. Daher müssen Sie sie entweder über eine öffentliche URL veröffentlichen oder einen Proxy wie ngrok verwenden. Eine gute Nachricht ist, dass das Gerüstprojekt über dieses integrierte Projekt verfügt. 
 
 **So führen Sie Ihre App in Teams**
 
-1. Wird `gulp ngrok-serve` in Terminal ausgeführt. Wenn Sie `gulp ngrok-serve` den ngrok-Dienst ausführen, wird er im Hintergrund mit einem eindeutigen und öffentlichen DNS-Eintrag gestartet, und er packt auch das Manifest mit dieser eindeutigen URL und führt dann genau dasselbe aus wie `gulp serve` .
+1. Wird `gulp ngrok-serve` in Terminal ausgeführt. Wenn Sie `gulp ngrok-serve` den ngrok-Dienst ausführen, wird er im Hintergrund mit einem eindeutigen und öffentlichen DNS-Eintrag gestartet. Außerdem wird das Manifest mit dieser eindeutigen URL verpackt und dann genau dasselbe ausgeführt wie `gulp serve` .
 1. Erstellen Sie ein neues Microsoft Teams Team.
 1. Wählen Sie den Teamnamen > Teams Einstellungen > Apps aus.
 1. Wählen Sie in der unteren rechten Ecke **Hochladen einer benutzerdefinierten App** aus.
@@ -165,7 +165,7 @@ Sie können ihre aktuelle Microsoft Teams Version auch mit dem Microsoft Teams Y
    ```PowerShell
     yo teams --version
    ```
-2. Verwenden Sie den folgenden Befehl, um Ihren Generator auszuwählen und zu aktualisieren:
+2. Verwenden Sie den folgenden Befehl, um ihren Generator auszuwählen und zu aktualisieren:
 
    ```PowerShell
     yo
@@ -191,7 +191,7 @@ Sie können ihre aktuelle Microsoft Teams Version auch mit dem Microsoft Teams Y
    ```
    Congrats! Sie haben Ihre erste Microsoft Teams App erstellt und bereitgestellt. Sie haben auch Microsoft Teams aktualisiert.
 
- ## <a name="see-also"></a>Weitere Informationen
+ ## <a name="see-also"></a>Siehe auch
 
 * [Übersicht über Lernprogramme](code-samples.md)
 * [Erstellen einer Unterhaltungs-Bot-App](first-app-bot.md)

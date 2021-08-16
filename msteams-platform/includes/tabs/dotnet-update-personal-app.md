@@ -4,7 +4,7 @@
 
 Damit Ihre Registerkarte in Teams angezeigt werden kann, müssen Sie das **Microsoft Teams JavaScript-Client-SDK** und einen Aufruf nach `microsoftTeams.initialize()` dem Laden der Seite einschließen. So kommunizieren Ihre Registerkarte und die Teams-App:
 
-Wechseln Sie zum **Freigegebenen** Ordner, öffnen Sie **_Layout.cshtml,** und fügen Sie dem Abschnitt "tags" Folgendes `<head>` hinzu:
+Wechseln Sie zum **Freigegebenen** Ordner, öffnen **Sie _Layout.cshtml,** und fügen Sie dem Abschnitt "Tags" Folgendes `<head>` hinzu:
 
 ```html
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>

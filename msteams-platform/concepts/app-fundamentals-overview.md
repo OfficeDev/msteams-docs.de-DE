@@ -5,16 +5,16 @@ description: Beschreiben sie die grundlegenden Konzepte der Teams Plattformentwi
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 7ffdfbb735f2c7c6cf5cbcf0f1e7f2134f92f613989cd3f8eac84f22cd73543e
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 57c2cdbf4900de58166bbf4f75191943aeeb1db1
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706078"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345579"
 ---
-# <a name="microsoft-teams-app-development-fundamentals"></a>Grundlagen der app-Entwicklung Microsoft Teams
+# <a name="microsoft-teams-app-development-fundamentals"></a>Grundlagen der Microsoft Teams App-Entwicklung
 
-Microsoft Teams App-Grundlagen geben die Richtung vor, in der Sie Ihre benutzerdefinierte Teams-App erstellen müssen. Sie können das für die Planung Ihrer Teams-App erforderliche Framework erkennen. Das Dokument hilft Ihnen, die Kommunikation zwischen Benutzern und Apps zu verstehen und herauszufinden, welche Art von App-Oberflächen Sie verwenden müssen oder welche APIs Ihre App möglicherweise im Prozess benötigt. Lassen Sie sich von der Interaktivität inspirieren, die die App-Erfahrung bei der Integration in Teams vertiefen kann.
+Microsoft Teams App-Grundlagen geben die Richtung vor, die Sie zum Erstellen Ihrer benutzerdefinierten Teams-App benötigen. Sie können das für die Planung Ihrer Teams-App erforderliche Framework erkennen. Das Dokument hilft Ihnen, die Kommunikation zwischen Benutzern und Apps zu verstehen und herauszufinden, welche Art von App-Oberflächen Sie verwenden müssen oder welche APIs Ihre App möglicherweise im Prozess benötigt. Lassen Sie sich von der Interaktivität inspirieren, die die App-Erfahrung bei der Integration in Teams vertiefen kann.
 
 ## <a name="capabilities-and-entry-points"></a>Funktionen und Einstiegspunkte
 
@@ -33,7 +33,11 @@ Sie können Benutzerprobleme erkennen und die Antworten auf einige häufige Prob
 
 [Die Zuordnung Ihrer Anwendungsfälle](../concepts/design/map-use-cases.md) deckt einige häufige Szenarien und die Auswahl der Funktionen Ihrer App ab. Es werden Informationen bereitgestellt, um Ihre App freizugeben und an Elementen in einem externen System zusammenzuarbeiten. Sie können auch erfahren, wie Sie Workflows initiieren und Benachrichtigungen an Benutzer senden. Erhalten Sie zusätzliche Tipps, wie Sie beginnen, wie Sie soziale Netzwerke mit Benutzern, Unterhaltungsbots und die Kombination mehrerer Features erhalten.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="integrate-device-capabilities"></a>Integrieren von Gerätefunktionen
+
+Microsoft Teams Plattform verbessert die Entwicklerfunktionen kontinuierlich, die sich an den integrierten Oberflächen von Erstanbietern orientieren. Die erweiterte Teams-Plattform ermöglicht Partnern den Zugriff auf und die Integration der systemeigenen Gerätefunktionen wie Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort mithilfe dedizierter APIs, die in Microsoft Teams JavaScript-Client-SDK verfügbar sind. 
+
+## <a name="see-also"></a>Siehe auch
 
 * [Integrieren von Web-Apps in Teams](../samples/integrating-web-apps.md)
 * [Erstellen Ihrer ersten Microsoft Teams-App](../build-your-first-app/build-first-app-overview.md) 

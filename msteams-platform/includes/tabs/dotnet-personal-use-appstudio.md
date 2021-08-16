@@ -15,7 +15,7 @@
     /bin/Debug/netcoreapp2.2/tab.zip
     ```
 
-1. Hochladen zu **App Studio** **tab.zip.**
+1. Hochladen **tab.zip** zu App **Studio.**
 
 ### <a name="update-your-app-package-with-manifest-editor"></a>Aktualisieren des App-Pakets mit dem Manifest-Editor
 
@@ -49,7 +49,7 @@ Im Abschnitt **"Registerkarten":**
 
     Lassen Sie das **Feld "Website-URL"** leer.
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern** aus.
 
 #### <a name="finish-domains-and-permissions"></a>Fertig stellen: Domänen und Berechtigungen
 
@@ -60,7 +60,7 @@ Im Abschnitt **"Domänen und Berechtigungen"** muss das Feld **"Domänen" im Reg
 >[!IMPORTANT]
 > Auf der rechten Seite wird in der **Beschreibung** die folgende Warnung angezeigt:
 >
-> &#9888; Das **Array "validDomains" darf keine Tunnelwebsite enthalten...**
+> &#9888; **Das Array "validDomains" darf keine Tunnelwebsite enthalten...**
 >
 >Diese Warnung kann beim Testen der Registerkarte ignoriert werden.
 
@@ -74,6 +74,6 @@ Im Abschnitt **"Domänen und Berechtigungen"** muss das Feld **"Domänen" im Reg
 
 ## <a name="view-your-personal-tab"></a>Anzeigen Ihrer persönlichen Registerkarte
 
-1. Wählen Sie in der Navigationsleiste ganz links neben der Teams App die Ellipsen aus, &#x25CF;&#x25CF;&#x25CF;. Es wird eine Liste der persönlichen Apps angezeigt.
+1. Wählen Sie in der Navigationsleiste ganz links neben der Teams-App die Ellipsen aus, &#x25CF;&#x25CF;&#x25CF;. Es wird eine Liste der persönlichen Apps angezeigt.
 
 1. Wählen Sie ihre Registerkarte aus der Liste aus, um sie anzuzeigen.

@@ -4,12 +4,12 @@ description: Beschreibt die Features in der Public Developer Preview von Microso
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams– Vorschau für Entwicklerfeatures
-ms.openlocfilehash: ddf935279d5298caa032df7f109369bdc4b798ef51206f5cc688846061fd6720
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1dc719ae9ead4ef7c7519925b79ca62859ada903
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703961"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345558"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Öffentliche Entwicklervorschau für Microsoft Teams
 
@@ -28,7 +28,7 @@ Möglicherweise ist es hilfreich, App Studio zum Erstellen der Nicht-Entwicklerv
 
 Die Entwicklervorschau ist pro Client aktiviert, die Option zum Aktivieren der Entwicklervorschau wird jedoch auf Organisationsebene gesteuert. Um die Option zum Aktivieren der Entwicklervorschau für eine Einzelperson zu aktivieren, müssen Sie sicherstellen, dass diese benutzerdefinierte Apps hochladen können. Weitere Informationen finden Sie unter ["Einrichten Ihres Mandanten".](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
-Die Verwendung einer App mit Entwicklervorschaufeatures kann dazu führen, dass sich Clients, die die Entwicklervorschau nicht aktiviert haben, unerwartet verhalten. Wenn kein Eintrag für die Entwicklervorschau angezeigt wird, ist der wahrscheinlichste Grund, dass Ihre Organisation nicht für das Hochladen von Apps konfiguriert ist.
+Die Verwendung einer App, die Entwicklervorschaufeatures enthält, kann dazu führen, dass sich Clients, die die Entwicklervorschau nicht aktiviert haben, unerwartet verhalten. Wenn kein Eintrag für die Entwicklervorschau angezeigt wird, ist der wahrscheinlichste Grund, dass Ihre Organisation nicht für das Hochladen von Apps konfiguriert ist.
 
 ### <a name="on-a-desktop-or-web-client"></a>Auf einem Desktop- oder Webclient
 
@@ -52,6 +52,5 @@ Um die öffentliche Entwicklervorschau auf einem mobilen Client zu aktivieren, m
 
 Verwenden Sie dasselbe Menüelement unter "Info → Entwicklervorschau", und klicken Sie darauf, um es zu deaktivieren.
 
-## <a name="features-available-in-developer-preview"></a>In der Entwicklervorschau verfügbare Features
 
-Eine vollständige Liste der derzeit in der Entwicklervorschau aktivierten Features finden Sie [unter: Features in der öffentlichen Entwicklervorschau.](../../resources/dev-preview/developer-preview-features.md)
+

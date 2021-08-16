@@ -6,25 +6,25 @@ ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: c114eba3e022f153ccaa9e9031086989eca5d019bd472fb0b9f5da583465deb9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: df871894a1353301edaeb12af3cb940f0bb47472
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707515"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345614"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Apps für Microsoft Teams erstellen
 
-Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse, in denen sich Personen zunehmend sammeln, lernen und arbeiten.
+Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse, in denen sich Menschen zunehmend sammeln, lernen und arbeiten.
 
-Apps erweitern Teams entsprechend Ihren Anforderungen. Erstellen Sie etwas ganz Neues für Teams oder integrieren Sie eine vorhandene App.
+Apps erweitern Teams entsprechend Ihren Anforderungen. Erstellen Sie etwas völlig Neues für Teams oder integrieren Sie eine vorhandene App.
 
 > [!div class="nextstepaction"]
 > [Beginnen Sie hier](get-started/prerequisites.md)
 
 ## <a name="what-are-teams-apps"></a>Was sind Teams Apps?
 
-Teams Apps sind eine Kombination von [Funktionen.](concepts/capabilities-overview.md) Einige Apps sind einfach (Senden von Benachrichtigungen), während andere komplex sind (Verwalten von Patientendatensätzen). Denken Sie bei der Planung Ihrer App daran, dass Teams ein Hub für die Zusammenarbeit ist. Die besten Teams Apps helfen Menschen, sich auszudrücken und besser zusammenzuarbeiten.
+Teams Apps sind eine Kombination von [Funktionen.](concepts/capabilities-overview.md) Einige Apps sind einfach (Benachrichtigungen senden), während andere komplex sind (Patientendatensätze verwalten). Denken Sie bei der Planung Ihrer App daran, dass Teams ein Hub für die Zusammenarbeit ist. Die besten Teams Apps helfen Menschen, sich auszudrücken und besser zusammenzuarbeiten.
 
 ### <a name="personal-apps"></a>Persönliche Apps
 
@@ -117,7 +117,7 @@ Teams Apps sind eine Kombination von [Funktionen.](concepts/capabilities-overvie
 
    :::column span="":::
 
-**Kommunizieren mit externen Apps:** [Eingehende Webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sind eine einfache Möglichkeit, automatisch Benachrichtigungen von einer anderen App an einen Teams Kanal zu senden. Senden Sie bei [ausgehenden Webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)eine Nachricht an Ihren Webdienst mit einem @mention.
+**Kommunikation mit externen Apps:** [Eingehende Webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sind eine einfache Möglichkeit, automatisch Benachrichtigungen von einer anderen App an einen Teams Kanal zu senden. Senden Sie bei [ausgehenden Webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)eine Nachricht an Ihren Webdienst mit einem @mention.
 
    :::column-end:::
 
@@ -210,13 +210,13 @@ Sie möchten sich für die App-Entwicklung inspirieren? Durchsuchen Sie unsere L
 :::row-end:::
 
 ## <a name="integrate-teams-in-your-external-app"></a>Integrieren von Teams in Ihre externe App
-Diese Seite konzentriert sich auf das Einbetten Ihrer eigenen Erfahrungen in Microsoft Teams, indem sie Teams Apps erstellt. Wenn Sie dieses Modell *umkehren* und Teams oder andere Kommunikationsfunktionen in Ihre eigene externe App-Erfahrung integrieren möchten, finden Sie weitere Informationen unter [Azure Communication Services.](/azure/communication-services/overview) Azure Communication Services sind cloudbasierte Dienste mit REST-APIs und Clientbibliotheks-SDKs, die Ihnen bei der Integration der Kommunikation in Ihre eigenen benutzerdefinierten Anwendungen helfen. Sie können generische oder Teams-formatierte React Webkomponenten für Anrufe und Chats mithilfe der [Benutzeroberflächenbibliothek einbetten.](https://azure.github.io/communication-ui-library/)
+Diese Seite konzentriert sich auf das Einbetten Ihrer eigenen Erfahrungen in Microsoft Teams, indem sie Teams Apps erstellt. Wenn Sie dieses Modell *umkehren* und Teams oder andere Kommunikationsfunktionen in Ihre eigene externe App integrieren möchten, lesen Sie [Azure Communication Services.](/azure/communication-services/overview) Azure Communication Services sind cloudbasierte Dienste mit REST-APIs und Clientbibliotheks-SDKs, die Ihnen bei der Integration der Kommunikation in Ihre eigenen benutzerdefinierten Anwendungen helfen. Sie können generische oder Teams formatierte React Webkomponenten für Anrufe und Chats mithilfe der [Benutzeroberflächenbibliothek einbetten.](https://azure.github.io/communication-ui-library/)
 
 Azure Communication Services-Anwendungen können öffentliche Vorschaufunktionen verwenden, um mit Teams zu [zusammenarbeiten](/azure/communication-services/concepts/teams-interop) und Ihrer benutzerdefinierten Anwendung die anonyme Teilnahme an Teams Besprechungen zu ermöglichen. Beispielsweise können Sie Videoanrufe in eine mobile Bankanwendung integrieren und Endbenutzern ermöglichen, sich mithilfe von Microsoft Teams praktisch mit Bankmitarbeitern zu treffen. 
 
 Sie können auch Microsoft 365 Identität integrieren, um externe Anwendungen zu erstellen, die Video- und PSTN-Anrufe im Auftrag eines Teams Benutzers einbetten. Wenn Sie in der Vergangenheit [Skype for Business SDKs](/skype-sdk/appsdk/skypeappsdk) verwendet haben, werden diese Funktionen als Teil von Azure Communication Services als Ersatz empfohlen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Hinzufügen einer Share-to-Teams-Schaltfläche zu Ihrer Website](concepts/build-and-test/share-to-teams.md)
 * [Entwerfen Ihrer Teams-App](concepts/design/design-teams-app-overview.md)

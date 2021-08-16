@@ -6,17 +6,17 @@ keywords: Registerkarte zum Entfernen des Abstands von Rändern
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 4ca8356bddc0e578bc58b38112fb1268302a5ad0e84631bf81864c70cffbcb64
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2dc024bea28dbd8f98c658ccfa4a7494e77e19d9
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704385"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345600"
 ---
 # <a name="tab-margin-changes"></a>Änderungen am Registerkartenrand
 
-In diesem Dokument wird beschrieben, wie das Entfernen von Rändern um alle Registerkarten in Microsoft Teams die App-Erstellung verbessert. Dies ist eine In Microsoft Teams 2021 eingeführte Erweiterung.
-Sie können Apps erstellen, die systemeigener für Teams aussehen, indem Sie die Ränder um alle Registerkarten entfernen. Registerkarten mit entfernten Rändern richten sich nach Microsoft Teams [UI-Kit-Designs.](~/tabs/design/tabs.md) Die meisten Apps verfügen über ein verbessertes Aussehen ohne Ränder.
+In diesem Dokument wird beschrieben, wie das Entfernen von Rändern um alle Registerkarten in Microsoft Teams die App-Erstellung verbessert. Dies ist eine Erweiterung, die in Microsoft Teams 2021 eingeführt wurde.
+Sie können Apps erstellen, die systemeigener für Teams aussehen, indem Sie die Ränder um alle Registerkarten entfernen. Registerkarten mit entfernten Rändern entsprechen Microsoft Teams [UI-Kit-Designs.](~/tabs/design/tabs.md) Die meisten Apps verfügen über ein verbessertes Aussehen ohne Ränder.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tabstopp und ohne Ränder" border="false":::
 
@@ -29,7 +29,7 @@ Das Entfernen von Registerkartenrändern wirkt sich auf Ihre Teams Apps aus, die
 
 ## <a name="faq"></a>Häufig gestellte Fragen
 
-**Ist es für App-Chrome, z. B. Kopfzeile oder Taskleiste, in Ordnung, die Ränder unserer Designs zu berühren?**
+**Ist es für App-Chrom, z. B. Kopfzeile oder Taskleiste, in Ordnung, die Ränder unserer Designs zu berühren?**
 
 Ja, dies ist in Ordnung, und Teams fördert ein solches Design. Es hilft der App, sich systemintern anfühlen zu können.
 
@@ -48,7 +48,7 @@ Nein, Sie müssen Ihren eigenen Abstand oder Ränder links und rechts von allen 
 > * Die Änderung des Registerkartenrands gilt für alle Registerkarten. Es gibt keine Möglichkeit, die Änderung abzumelden oder abzuwählen. 
 > * Die Änderung von Registerkartenrändern kann sich auf Registerkarten auswirken, die auf Microsoft Teams angewiesen sind, um Ränder zu ihrer Benutzeroberfläche bereitzustellen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)

@@ -4,19 +4,19 @@ description: Beschreibt einmaliges Anmelden (Single Sign-On, SSO)
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams-Authentifizierungs-SSO-AAD-Api für einmaliges Anmelden
-ms.openlocfilehash: f51f34f103682207551d1b53d47a763f7c3b464085b6806c1241c1e14636bc06
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 34d98707313dea011a072fa77cc0dfc1b03b2a83
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701903"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345669"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>SSO-Unterstützung (Single Sign-On) für Registerkarten
 
 Benutzer melden sich bei Microsoft Teams über ihre Geschäfts-, Schul- oder Microsoft-Konten an, die Office 365, Outlook usw. sind. Sie können dies nutzen, indem Sie einem einmaligen Anmelden erlauben, Ihre Teams Registerkarte oder das Aufgabenmodul auf Desktop- oder mobilen Clients zu autorisieren. Wenn ein Benutzer der Verwendung Ihrer App zustimmt, muss er auf einem anderen Gerät nicht erneut zustimmen, da er automatisch angemeldet ist. Darüber hinaus wird Ihr Zugriffstoken vorab abgerufen, um die Leistung und Ladezeiten zu verbessern.
 
 > [!NOTE]
-> **Teams Versionen mobiler Clients, die SSO unterstützen**  
+> **Teams versionen mobiler Clients, die SSO unterstützen**  
 >
 > ✔Teams für Android (1416/1.0.0.2020073101 und höher)
 >
@@ -27,7 +27,7 @@ Benutzer melden sich bei Microsoft Teams über ihre Geschäfts-, Schul- oder Mic
 > [!NOTE]
 > **Schnellstart**  
 >
-> Der einfachste Weg zu den ersten Schritten mit Tab-SSO ist das Teams-Toolkit für Visual Studio Code. Weitere Informationen finden Sie unter [SSO mit Teams Toolkit und Visual Studio Code für Registerkarten.](../../../toolkit/visual-studio-code-tab-sso.md)
+> Der einfachste Weg zu den ersten Schritten mit Tab-SSO ist das Teams Toolkit für Visual Studio Code. Weitere Informationen finden Sie unter [SSO mit Teams Toolkit und Visual Studio Code für Registerkarten](../../../toolkit/visual-studio-code-tab-sso.md)
 
 ## <a name="how-sso-works-at-runtime"></a>Funktionsweise von SSO zur Laufzeit
 
@@ -38,13 +38,13 @@ Die folgende Abbildung zeigt, wie der SSO-Prozess funktioniert:
 
 1. In der Registerkarte wird ein JavaScript-Aufruf an `getAuthToken()` durchgeführt. Dadurch wird Teams angewiesen, ein Authentifizierungstoken für die Registerkartenanwendung abzurufen.
 2. Wenn der aktuelle Benutzer ihre Registerkartenanwendung zum ersten Mal verwendet hat, wird eine Anforderungsaufforderung zur Zustimmung angezeigt, wenn eine Zustimmung erforderlich ist, oder um die schrittweise Authentifizierung wie die zweistufige Authentifizierung zu behandeln.
-3. Teams fordert das Registerkartenanwendungstoken vom Azure Active Directory (AAD)-Endpunkt für den aktuellen Benutzer an.
+3. Teams fordert das Registerkartenanwendungstoken vom Azure Active Directory(AAD)-Endpunkt für den aktuellen Benutzer an.
 4. AAD sendet das Registerkartenanwendungstoken an die Teams Anwendung.
-5. Teams sendet das Registerkartenanwendungstoken als Teil des ergebnisobjekts, das vom Aufruf zurückgegeben wird, an die `getAuthToken()` Registerkarte.
+5. Teams sendet das Token der Registerkartenanwendung als Teil des ergebnisobjekts, das vom Aufruf zurückgegeben wird, an die `getAuthToken()` Registerkarte.
 6. Das Token wird in der Registerkartenanwendung mithilfe von JavaScript analysiert, um die erforderlichen Informationen wie die E-Mail-Adresse des Benutzers zu extrahieren.
 
 > [!NOTE]
-> Dies gilt nur für die `getAuthToken()` Zustimmung zu einer begrenzten Gruppe von APIs auf Benutzerebene, die E-Mail, Profil, offline_access und OpenId sind. Es wird nicht für weitere Graph Bereichen wie `User.Read` oder `Mail.Read` verwendet. Mögliche Problemumgehungen finden Sie unter [Abrufen eines Zugriffstokens mit Graph Berechtigungen.](#get-an-access-token-with-graph-permissions)
+> Dies `getAuthToken()` gilt nur für die Zustimmung zu einer begrenzten Gruppe von APIs auf Benutzerebene, die E-Mail, Profil, offline_access und OpenId sind. Es wird nicht für weitere Graph Bereichen wie `User.Read` oder `Mail.Read` verwendet. Mögliche Problemumgehungen finden Sie unter [Abrufen eines Zugriffstokens mit Graph Berechtigungen.](#get-an-access-token-with-graph-permissions)
 
 
 Die SSO-API funktioniert auch in [Aufgabenmodulen,](../../../task-modules-and-cards/what-are-task-modules.md) die Webinhalte einbetten.
@@ -60,7 +60,7 @@ In diesem Abschnitt werden die Aufgaben zum Erstellen einer Teams Registerkarte 
 1. Rufen Sie Ihre [AAD-Anwendungs-ID ab.](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) 
 1. Geben Sie die Berechtigungen an, die Ihre Anwendung für den AAD-Endpunkt benötigt, und optional Graph.
 1. [Erteilen von Berechtigungen](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) für Teams Desktop-, Web- und mobile Anwendungen.
-1. Autorisieren Sie Teams vorab, indem Sie auf die Schaltfläche **"Bereich hinzufügen"** klicken, und geben Sie im daraufhin geöffneten Bereich **access_as_user** als **Bereichsnamen** ein.
+1. Autorisieren Sie Teams vorab, indem Sie die Schaltfläche **"Bereich hinzufügen"** auswählen, und geben Sie im daraufhin geöffneten Bereich **access_as_user** als **Bereichsnamen** ein.
 
 > [!NOTE]
 > Es gibt einige wichtige Einschränkungen, die Sie kennen müssen:
@@ -85,24 +85,24 @@ In diesem Abschnitt werden die Aufgaben zum Erstellen einer Teams Registerkarte 
     > Wenn Sie eine App mit einem Bot und einer Registerkarte erstellen, geben Sie den Anwendungs-ID-URI als `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
 
 1. Wählen Sie den Link **"Festlegen"** aus, um den Anwendungs-ID-URI in Form von zu `api://{AppID}` generieren. Fügen Sie Ihren vollqualifizierten Domänennamen mit einem schrägen Schrägstrich "/" an das Ende zwischen den doppelten Schrägstrichen und der GUID ein. Die gesamte ID muss die Form von `api://fully-qualified-domain-name.com/{AppID}` aufweisen. ² Beispiel: `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` . Der vollqualifizierte Domänenname ist der lesbare Domänenname, aus dem Ihre App bereitgestellt wird. Wenn Sie einen Tunneldienst wie ngrok verwenden, müssen Sie diesen Wert aktualisieren, wenn sich Ihre ngrok-Unterdomäne ändert.
-1. Wählen Sie **Bereich hinzufügen**. Geben Sie im daraufhin geöffneten Bereich **access_as_user** als **Bereichsnamen** ein.
+1. Wählen Sie **Bereich hinzufügen**. Geben Sie in das daraufhin geöffnete Panel **access_as_user** als **Bereichsnamen** ein.
 1. Geben Sie im Feld **Wer zustimmen können?** **Administratoren und Benutzer** ein.
 1. Geben Sie die Details in die Felder für die Konfiguration der Aufforderungen zur Administrator- und Benutzerzustimmung mit werten ein, die für den Bereich geeignet `access_as_user` sind:
     * **Titel der Administratoreinwilligung**: Teams kann auf das Benutzerprofil zugreifen.
     * Beschreibung der **Administratorzustimmung:** Teams können die Web-APIs der App als aktueller Benutzer aufrufen.
-    * Titel der **Benutzergenehmigung:** Teams können in Ihrem Namen auf Ihr Profil zugreifen und Anforderungen stellen.
+    * Titel der **Benutzergenehmigung:** Teams können auf Ihr Profil zugreifen und Anforderungen in Ihrem Namen stellen.
     * Beschreibung der **Benutzergenehmigung:** Teams können die APIs dieser App mit den gleichen Rechten aufrufen wie Sie.
 1. Stellen Sie sicher, **Zustand** auf **Aktiviert** festgelegt ist.
 1. Wählen Sie **"Bereich hinzufügen"** aus, um die Details zu speichern. Der Domänenteil des **Bereichsnamens,** der unterhalb des Textfelds angezeigt wird, muss automatisch mit dem im vorherigen Schritt festgelegten **Anwendungs-ID-URI** übereinstimmen, `/access_as_user` wobei er am Ende angefügt `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` wird.
 1. Identifizieren Sie im Abschnitt **"Autorisierte Clientanwendungen"** die Anwendungen, die Sie für die Webanwendung Ihrer App autorisieren möchten. Wählen Sie **"Clientanwendung hinzufügen"** aus. Geben Sie jede der folgenden Client-IDs ein, und wählen Sie den autorisierten Bereich aus, den Sie im vorherigen Schritt erstellt haben:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`für Teams mobile oder Desktopanwendung.
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`für Teams Webanwendung.
-1. Navigieren Sie zu **API-Berechtigungen.** Wählen **Sie "Microsoft** Graph Delegierte Berechtigungen" eine Berechtigung hinzufügen  >    >  aus, und fügen Sie dann die folgenden Berechtigungen aus Graph API hinzu:
+1. Navigieren Sie zu **API-Berechtigungen.** Wählen **Sie eine Berechtigung Hinzufügen** von Microsoft  >  **Graph** delegierte  >  **Berechtigungen** aus, und fügen Sie dann die folgenden Berechtigungen aus Graph API hinzu:
     * User.Read ist standardmäßig aktiviert
     * email
     * offline_access
     * Openid
-    * Profil
+    * profile
 
 1. Navigieren Sie zur **Authentifizierung.**
 
@@ -159,7 +159,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 Wenn Sie anrufen `getAuthToken` – und eine zusätzliche Benutzerzustimmung für Berechtigungen auf Benutzerebene erforderlich ist, wird dem Benutzer ein Dialogfeld angezeigt, um zusätzliche Zustimmung zu erteilen.
 
-Nachdem Sie das Zugriffstoken im Erfolgsrückruf erhalten haben, können Sie das Zugriffstoken decodieren, um die diesem Token zugeordneten Ansprüche anzuzeigen. Optional können Sie das Zugriffstoken manuell kopieren und in ein Tool einfügen, z. [B. jwt.ms,](https://jwt.ms/) um dessen Inhalt zu überprüfen. Wenn Sie den UPN im zurückgegebenen Zugriffstoken nicht erhalten, können Sie ihn als [optionalen Anspruch](/azure/active-directory/develop/active-directory-optional-claims) in AAD hinzufügen.
+Nachdem Sie das Zugriffstoken im Erfolgsrückruf erhalten haben, können Sie das Zugriffstoken decodieren, um die diesem Token zugeordneten Ansprüche anzuzeigen. Optional können Sie das Zugriffstoken manuell kopieren und in ein Tool einfügen, z. [B. jwt.ms,](https://jwt.ms/) um dessen Inhalt zu überprüfen. Wenn Sie den UPN im zurückgegebenen Zugriffstoken nicht erhalten, können Sie ihn als [optionalen Anspruch](/azure/active-directory/develop/active-directory-optional-claims) in AAD hinzufügen. Weitere Informationen finden Sie unter [Zugriffstoken.](/azure/active-directory/develop/access-tokens)
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
@@ -169,7 +169,7 @@ Nachdem Sie das Zugriffstoken im Erfolgsrückruf erhalten haben, können Sie das
 
 |**Beispielname**|**Beschreibung**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
-| Registerkarten-SSO |Microsoft Teams Beispiel-App für Registerkarten azure AD SSO| [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+| Registerkarten-SSO |Microsoft Teams Beispiel-App für Registerkarten azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
@@ -183,11 +183,11 @@ Eine einfache Möglichkeit, im Namen einer Organisation als Mandantenadministrat
 
 #### <a name="ask-for-additional-consent-using-the-auth-api"></a>Anfordern zusätzlicher Zustimmung mithilfe der Authentifizierungs-API
 
-Ein weiterer Ansatz zum Abrufen zusätzlicher Graph Bereiche ist das Anzeigen eines Zustimmungsdialogfelds mithilfe unseres vorhandenen [webbasierten Azure AD-Authentifizierungsansatzes,](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page) bei dem ein Dialogfeld für die Azure AD-Zustimmung angezeigt wird. 
+Ein weiterer Ansatz zum Abrufen zusätzlicher Graph Bereiche besteht darin, ein Zustimmungsdialogfeld mithilfe unseres vorhandenen [webbasierten Azure AD-Authentifizierungsansatzes](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page) anzuzeigen, bei dem ein Dialogfeld für die Azure AD-Zustimmung angezeigt wird. 
 
 **So fordern Sie eine zusätzliche Zustimmung mithilfe der Auth-API an**
 
-1. Das abgerufene Token `getAuthToken()` muss serverseitig mithilfe von AAD [im Auftrag von Flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) ausgetauscht werden, um Zugriff auf diese zusätzlichen Graph APIs zu erhalten. Stellen Sie sicher, dass Sie den v2-Graph-Endpunkt für diesen Austausch verwenden.
+1. Das abgerufene Token `getAuthToken()` muss serverseitig mithilfe von AAD [im Auftrag des Flusses](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) ausgetauscht werden, um Zugriff auf diese zusätzlichen Graph-APIs zu erhalten. Stellen Sie sicher, dass Sie den v2-Graph-Endpunkt für diesen Austausch verwenden.
 2. Wenn der Austausch fehlschlägt, gibt AAD eine Ausnahme für ungültige Genehmigungen zurück. Es gibt in der Regel eine von zwei Fehlermeldungen `invalid_grant` oder `interaction_required` .
 3. Wenn der Austausch fehlschlägt, müssen Sie zusätzliche Zustimmung anfordern. Zeigen Sie eine Benutzeroberfläche an, auf der der Benutzer aufgefordert wird, eine zusätzliche Zustimmung zu erteilen. Diese Benutzeroberfläche muss eine Schaltfläche enthalten, die ein AAD-Zustimmungsdialogfeld mithilfe unserer [AAD-Authentifizierungs-API](~/concepts/authentication/auth-silent-aad.md)auslöst.
 4. Wenn Sie weitere Zustimmung von AAD anfordern, müssen Sie `prompt=consent` AAD den [Abfragezeichenfolgenparameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) hinzufügen, andernfalls fragt AAD nicht nach den zusätzlichen Bereichen.

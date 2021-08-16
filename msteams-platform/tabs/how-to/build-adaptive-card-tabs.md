@@ -4,17 +4,16 @@ author: KirtiPereira
 description: Erstellen von Registerkarten mit adaptiven Karten
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 6b969461669f9edb7d7f3e216b3b91dd700881b34de17389f8a43348b09830f8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 31954b046c550d34155bc7a9ec66cfc61b74ecf4
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705085"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345572"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
 > [!IMPORTANT]
-> * Dieses Feature befindet sich in der [Öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md) und wird auf Desktops und mobilen Geräten unterstützt. Der Support im Webbrowser wird in Kürze verfügbar sein.
 > * Registerkarten mit adaptiven Karten werden derzeit nur als persönliche Apps unterstützt.
 
 Beim Entwickeln einer Registerkarte mithilfe der herkömmlichen Methode können folgende Probleme auftreten:
@@ -36,9 +35,8 @@ Die folgende Abbildung zeigt Buildregisterkarten mit adaptiven Karten auf Deskto
 
 Bevor Sie mit der Verwendung adaptiver Karten zum Erstellen von Registerkarten beginnen, müssen Sie Folgendes tun:
 
-* Machen Sie sich mit [der Bot-Entwicklung,](../../bots/what-are-bots.md) [adaptiven Karten](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)und [Aufgabenmodulen](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams vertraut.
+* Machen Sie sich mit [der Bot-Entwicklung,](../../bots/what-are-bots.md) [adaptiven Karten](https://adaptivecards.io/)und [Aufgabenmodulen](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams vertraut.
 * Lassen Sie einen Bot in Teams für Ihre Entwicklung ausführen.
-* Seien Sie in [der Öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md).
 
 ## <a name="changes-to-app-manifest"></a>Änderungen am App-Manifest
 
@@ -426,7 +424,7 @@ Der folgende Code zeigt ein neu ausgestelltes Anforderungsbeispiel:
 
 |**Beispielname** | **Beschreibung** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| Adaptive Karten auf Teams Registerkarte anzeigen | Microsoft Teams Beispielcode der Registerkarte, der veranschaulicht, wie adaptive Karten in Teams angezeigt werden. |[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| Anzeigen adaptiver Karten auf Teams Registerkarte | Microsoft Teams Beispielcode für Registerkarten, der veranschaulicht, wie adaptive Karten in Teams angezeigt werden. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 

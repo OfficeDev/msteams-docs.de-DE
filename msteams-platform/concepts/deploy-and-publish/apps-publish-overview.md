@@ -4,16 +4,16 @@ description: Beschreibt die Optionen für die Veröffentlichung Ihrer Microsoft 
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: c5dc026627ba912e0beebb9321c664f0a5af4ccf38905eb969226da8103b9a4a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: eeaa0dc7804938a663156ad019123b32630eb14f
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701985"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345704"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Verteilen Ihrer Microsoft Teams-App
 
-Sie können Ihre Microsoft Teams-App einer Person, einem Team, einer Organisation oder jeder Person bereitstellen, die sie verwenden möchte. Die Verteilung hängt von mehreren Faktoren ab, einschließlich der Anforderungen der Benutzer, geschäftlichen und technischen Anforderungen und Ihren Zielen für die App.
+Sie können Ihre Microsoft Teams-App für eine Einzelperson, ein Team, eine Organisation oder jede Person bereitstellen, die sie verwenden möchte. Die Verteilung hängt von mehreren Faktoren ab, einschließlich der Anforderungen der Benutzer, geschäftlichen und technischen Anforderungen und Ihren Zielen für die App.
 
 ## <a name="upload-your-app-in-teams"></a>Hochladen Ihrer App in Teams
 
@@ -32,10 +32,10 @@ Weitere Informationen finden Sie unter [Verwalten Ihrer Apps im Teams Admin Cent
 
 ### <a name="government-community-cloud-gcc-organizations"></a>Government Community Cloud (GCC)-Organisationen
 
-In GCC Teams Umgebungen sind kompatible Microsoft-Apps standardmäßig aktiviert. Stellen Sie jedoch vor der Veröffentlichung einer App sicher, dass alle Endpunkte der App den Anforderungen Ihrer GCC Organisation entsprechen.
+In GCC Teams Umgebungen sind kompatible Microsoft-Apps standardmäßig aktiviert. Stellen Sie vor der Veröffentlichung einer App jedoch sicher, dass alle Endpunkte der App den Anforderungen Ihrer GCC Organisation entsprechen.
 
 > [!IMPORTANT]
->Wenn Ihre App einen Bot oder eine Messaging-Erweiterung enthält, müssen Sie die Option **Microsoft Teams für Behörden** auswählen, wenn Sie einen Kanal zwischen Ihrem Bot und Teams in Azure einrichten. Weitere Informationen finden Sie unter [Verbinden eines Bots mit Kanälen.](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true)
+>Wenn Ihre App einen Bot oder eine Messaging-Erweiterung enthält, müssen Sie beim Einrichten eines Kanals zwischen Ihrem Bot und Teams in Azure die Option Microsoft Teams **für Behörden** auswählen. Weitere Informationen finden Sie unter [Verbinden eines Bots mit Kanälen.](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true)
 
 ## <a name="publish-your-app-to-the-teams-store"></a>Veröffentlichen Ihrer App im Teams Store
 
@@ -43,7 +43,7 @@ Stellen Sie Ihre App für alle Benutzer zur Verfügung. Diese Art der Verteilung
 
 Weitere Informationen finden Sie unter [Veröffentlichen im Teams Store.](~/concepts/deploy-and-publish/appsource/publish.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Microsoft 365 Compliance-Programm](/microsoft-365-app-certification/overview)
 

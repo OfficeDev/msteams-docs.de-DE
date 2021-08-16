@@ -6,12 +6,12 @@ keywords: Systemeigene Geräteberechtigungen für Standortzuordnungsfunktionen
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 94eb8735092f97f35a03b7b19eee9e20c75eaaac7463d1869c4c2718d55ef3bf
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2caf0f9e631990211eea4e94b58b4ec8399fb3d5
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705990"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345655"
 ---
 # <a name="integrate-location-capabilities"></a>Integration von Standortfunktionen 
 
@@ -34,7 +34,7 @@ Um Standortfunktionen zu integrieren, müssen Sie die App-Manifestdatei aktualis
 
 ## <a name="update-manifest"></a>Updatemanifest
 
-Aktualisieren Sie ihre Teams [App-manifest.jsauf](../../resources/schema/manifest-schema.md#devicepermissions) der Datei, indem Sie die Eigenschaft hinzufügen `devicePermissions` und `geolocation` angeben. Damit kann Ihre App die erforderlichen Berechtigungen von Benutzern anfordern, bevor sie mit der Verwendung der Standortfunktionen beginnen. Das Update für das App-Manifest lautet wie folgt:
+Aktualisieren Sie die Teams [App-manifest.jsauf](../../resources/schema/manifest-schema.md#devicepermissions) der Datei, indem Sie die Eigenschaft hinzufügen `devicePermissions` und `geolocation` angeben. Damit kann Ihre App die erforderlichen Berechtigungen von Benutzern anfordern, bevor sie mit der Verwendung der Standortfunktionen beginnen. Das Update für das App-Manifest lautet wie folgt:
 
 ``` json
 "devicePermissions": [
@@ -102,8 +102,8 @@ Sie müssen sicherstellen, dass diese Fehler in Ihrer Teams-App ordnungsgemäß 
 | **8000** | USER_ABORT |Der Benutzer hat den Vorgang abgebrochen.|
 | **9000** | OLD_PLATFORM | Der Benutzer befindet sich auf einem alten Plattformbuild, in dem die Implementierung der API nicht vorhanden ist. Das Upgrade des Builds sollte das Problem beheben.|
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Integrieren von Medienfunktionen in Teams](mobile-camera-image-permissions.md)
 * [Integrieren von QR-Code oder Strichcodescanner-Funktion in Teams](qr-barcode-scanner-capability.md)
-* [Integrieren der Personenauswahlfunktion in Teams](people-picker-capability.md)
+* [Integrieren der Personenauswahl in Teams](people-picker-capability.md)

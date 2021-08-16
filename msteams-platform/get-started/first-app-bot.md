@@ -5,21 +5,21 @@ description: Erstellen Sie mithilfe des Teams-Toolkits einen Unterhaltungs-Bot f
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 3c70db137bc61e2beef09b130269ca34838d40dd344858215fc8d71f583b315a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2b39dc51c1c175e738b88376a298df82f25a582a
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707059"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345641"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Erstellen Sie Ihren ersten Unterhaltungs-Bot für Microsoft Teams
 
 In diesem Lernprogramm erfahren Sie, wie Sie eine Teams-Bot-App erstellen, ausführen und bereitstellen. Ein Bot agiert als Vermittler zwischen einem Teams-Benutzer und einem Webdienst. Benutzer können mit einem Bot chatten, um schnell Informationen zu erhalten, Workflows zu initiieren, oder für alles andere, was Ihr Webservice tun kann. 
 
 > [!IMPORTANT]
-> Derzeit sind Bots in Government Community Cloud (GCC) verfügbar, aber nicht in GCC-High und department of Defense (DOD).
+> Derzeit sind Bots in Government Community Cloud (GCC) verfügbar, aber nicht in GCC-High und DoD (Department of Defense).
 
-## <a name="before-you-begin"></a>Vorabinformationen
+## <a name="before-you-begin"></a>Bevor Sie beginnen
 
 Stellen Sie sicher, dass Ihre Entwicklungsumgebung eingerichtet ist, indem Sie die erforderlichen Komponenten installieren.
 
@@ -33,7 +33,7 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Öffnen Sie Visual Studio Code.
-1. Wählen Sie das symbol Teams in der Randleiste aus, um das Teams Toolkit zu öffnen.
+1. Wählen Sie das symbol Teams in der Seitenleiste aus, um das Teams Toolkit zu öffnen.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Das Microsoft Teams-Symbol in der Visual Studio Code-Randleiste.":::
 
@@ -112,7 +112,7 @@ So erstellen Sie Ihre App und führen sie lokal aus:
 
    > Wenn Sie die App zum ersten Mal ausführen, werden alle Abhängigkeiten heruntergeladen und die App wird erstellt.  Wenn die Erstellung abgeschlossen ist, wird automatisch ein Browserfenster geöffnet.  Dies kann 3 bis 5 Minuten dauern.
 
-1. Ihr Webbrowser beginnt mit der Ausführung der App. Wenn Sie aufgefordert werden, Teams Desktop zu öffnen, wählen Sie **"Abbrechen"** aus, um im Browser zu verbleiben. Möglicherweise werden Sie auch aufgefordert, zu anderen Zeiten zu Teams Desktop zu wechseln. Wählen Sie in diesem Fall die Teams Web-App aus.
+1. Ihr Webbrowser beginnt mit der Ausführung der App. Wenn Sie aufgefordert werden, Teams Desktop zu öffnen, wählen Sie **"Abbrechen"** aus, um im Browser zu verbleiben. Sie werden möglicherweise auch aufgefordert, zu anderen Zeiten zu Teams Desktop zu wechseln. wählen Sie in diesem Fall die Teams Web-App aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot, der zeigt, wie die Web-Version von Microsoft Teams beim Start ausgewählt wird.":::
 
@@ -127,7 +127,7 @@ So erstellen Sie Ihre App und führen sie lokal aus:
 <details>
 <summary>Erfahren Sie, was geschieht, wenn Sie Ihre App lokal im Debugger ausführen.</summary>
 
-Wenn Sie die **F5-Taste** drücken, wird das Teams Toolkit:
+Wenn Sie **F5** drücken, wird das Teams Toolkit:
 
 1. Registriert Ihre Anwendung bei Azure Active Directory.
 1. Registriert Ihre Anwendung für das "Querladen" in Microsoft Teams.
@@ -166,7 +166,7 @@ Vor der Bereitstellung wurde die Anwendung lokal ausgeführt:
 
 </details>
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Übersicht über Lernprogramme](code-samples.md) 
 * [Erstellen einer App mit React](first-app-react.md)

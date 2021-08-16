@@ -4,18 +4,18 @@ description: Begrenzung der Raten und bewährte Methoden in Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams-Bots – Begrenzung der Raten
-ms.openlocfilehash: 1ee98af7704baa066ad6ca7adbf0997879454a3c58e83d62ea4f5a2f17c20c36
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: d113cc0236de78a34211b9348105916740189d81
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705608"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345593"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimieren eines Bots mit Ratenbegrenzung in Teams
 
 Die Geschwindigkeitsbegrenzung ist eine Methode, um Nachrichten auf eine bestimmte maximale Häufigkeit zu beschränken. Im Allgemeinen muss Ihre Anwendung die Anzahl der Nachrichten beschränken, die sie an einen einzelnen Chat oder eine Kanalunterhaltung sendet. Dadurch wird eine optimale Benutzererfahrung sichergestellt, und Nachrichten werden Ihren Benutzern nicht als Spam angezeigt.
 
-Um Microsoft Teams und ihre Benutzer zu schützen, bieten die Bot-APIs ein Preislimit für eingehende Anforderungen. Apps, die diesen Grenzwert überschreiten, erhalten einen `HTTP 429 Too Many Requests` Fehlerstatus. Alle Anforderungen unterliegen derselben Richtlinie für die Begrenzung der Raten, einschließlich des Sendens von Nachrichten, Kanalenumerationen und Listenabrufen.
+Um Microsoft Teams und seine Benutzer zu schützen, bieten die Bot-APIs ein Zinslimit für eingehende Anforderungen. Apps, die diesen Grenzwert überschreiten, erhalten einen `HTTP 429 Too Many Requests` Fehlerstatus. Alle Anforderungen unterliegen derselben Richtlinie für die Begrenzung der Raten, einschließlich des Sendens von Nachrichten, Kanalenumerationen und Listenabrufen.
 
 Da sich die genauen Werte von Zinslimits ändern können, muss Ihre Anwendung das entsprechende Backoff-Verhalten implementieren, wenn die API `HTTP 429 Too Many Requests` zurückgibt.
 
@@ -63,20 +63,23 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
         // List of error codes to retry on
         List<int> transientErrorStatusCodes = new List<int>() { 429 };
 
-        public bool IsTransient(Exception ex)
-        {
-            if (ex.Message.Contains("429"))
-                return true;
+        public static bool IsTransient(Exception ex)
+          {
+              if (ex.Message.Contains("429"))
+                  return true;
 
-            var httpOperationException = ex as HttpOperationException;
-            if (httpOperationException != null)
-            {
-                return httpOperationException.Response != null &&
-                        transientErrorStatusCodes.Contains((int)httpOperationException.Response.StatusCode);
-            }
-
-            return false;
-        }
+              HttpResponseMessageWrapper? response = null;
+              if (ex is HttpOperationException httpOperationException)
+              {
+                  response = httpOperationException.Response;
+              }
+              else
+              if (ex is ErrorResponseException errorResponseException)
+              {
+                  response = errorResponseException.Response;
+              }
+              return response != null && transientErrorStatusCodes.Contains((int)response.StatusCode);
+          }
     }
 ```
 
@@ -122,26 +125,26 @@ Der Grenzwert pro Bot und Thread steuert den Datenverkehr, den ein Bot in einer 
 >[!NOTE]
 > * Das Threadlimit von 3600 Sekunden und 1800 Vorgängen gilt nur, wenn mehrere Bot-Nachrichten an einen einzelnen Benutzer gesendet werden. 
 > * Das globale Limit pro App und Mandant beträgt 50 Anforderungen pro Sekunde (RPS). Daher darf die Gesamtzahl der Botnachrichten pro Sekunde das Threadlimit nicht überschreiten.
-> * Das Teilen von Nachrichten auf Dienstebene führt zu einem höheren RPS als erwartet. Wenn Sie sich Sorgen machen, die Grenzwerte zu erreichen, müssen Sie die [Backoff-Strategie](#backoff-example)implementieren. Die in diesem Abschnitt angegebenen Werte dienen nur der Schätzung.
+> * Das Teilen von Nachrichten auf Dienstebene führt zu höher als erwarteten RPS. Wenn Sie sich Sorgen machen, die Grenzwerte zu erreichen, müssen Sie die [Backoff-Strategie](#backoff-example)implementieren. Die in diesem Abschnitt angegebenen Werte dienen nur der Schätzung.
 
 Die folgende Tabelle enthält die Grenzwerte pro Bot und Thread:
 
 | Szenario | Zeitraum in Sekunden | Maximal zulässige Vorgänge |
 | --- | --- | --- |
-| An Unterhaltung senden | 1 | 7  |
-| An Unterhaltung senden | 2 | 8  |
+| An Unterhaltung senden | 1  | 7  |
+| An Unterhaltung senden | 2  | 8  |
 | An Unterhaltung senden | 30 | 60 |
 | An Unterhaltung senden | 3600 | 1800 |
-| Unterhaltung erstellen | 1 | 7  |
-| Unterhaltung erstellen | 2 | 8  |
+| Unterhaltung erstellen | 1  | 7  |
+| Unterhaltung erstellen | 2  | 8  |
 | Unterhaltung erstellen | 30 | 60 |
 | Unterhaltung erstellen | 3600 | 1800 |
-| Abrufen von Unterhaltungsmitgliedern| 1 | 14  |
-| Abrufen von Unterhaltungsmitgliedern| 2 | 16  |
+| Abrufen von Unterhaltungsmitgliedern| 1  | 14  |
+| Abrufen von Unterhaltungsmitgliedern| 2  | 16  |
 | Abrufen von Unterhaltungsmitgliedern| 30 | 120 |
 | Abrufen von Unterhaltungsmitgliedern| 3600 | 3600 |
-| Unterhaltungen abrufen | 1 | 14  |
-| Unterhaltungen abrufen | 2 | 16  |
+| Unterhaltungen abrufen | 1  | 14  |
+| Unterhaltungen abrufen | 2  | 16  |
 | Unterhaltungen abrufen | 30 | 120 |
 | Unterhaltungen abrufen | 3600 | 3600 |
 
@@ -158,16 +161,16 @@ Die folgende Tabelle enthält den Grenzwert pro Thread für alle Bots:
 
 | Szenario | Zeitraum in Sekunden | Maximal zulässige Vorgänge |
 | --- | --- | --- |
-| An Unterhaltung senden | 1 | 14  |
-| An Unterhaltung senden | 2 | 16  |
-| Unterhaltung erstellen | 1 | 14  |
-| Unterhaltung erstellen | 2 | 16  |
-| Unterhaltung erstellen| 1 | 14  |
-| Unterhaltung erstellen| 2 | 16  |
-| Abrufen von Unterhaltungsmitgliedern| 1 | 28 |
-| Abrufen von Unterhaltungsmitgliedern| 2 | 32 |
-| Unterhaltungen abrufen | 1 | 28 |
-| Unterhaltungen abrufen | 2 | 32 |
+| An Unterhaltung senden | 1  | 14  |
+| An Unterhaltung senden | 2  | 16  |
+| Unterhaltung erstellen | 1  | 14  |
+| Unterhaltung erstellen | 2  | 16  |
+| Unterhaltung erstellen| 1  | 14  |
+| Unterhaltung erstellen| 2  | 16  |
+| Abrufen von Unterhaltungsmitgliedern| 1  | 28 |
+| Abrufen von Unterhaltungsmitgliedern| 2  | 32 |
+| Unterhaltungen abrufen | 1  | 28 |
+| Unterhaltungen abrufen | 2  | 32 |
 
 ## <a name="next-step"></a>Nächster Schritt
 

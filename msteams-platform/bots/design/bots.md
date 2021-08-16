@@ -5,19 +5,19 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: b6b6712a6372a37886ef227fd941cb70f24a57ce2d65a8e3492bea8c080c74ef
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ea0392868b06653657beff60b157070eaef7f4ba
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709753"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345648"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Entwerfen Ihres Microsoft Teams-Bots
 
 Bots sind Unterhaltungs-Apps, die bestimmte Aufgaben ausführen. Basierend auf dem <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a> kommunizieren Bots mit Benutzern, beantworten ihre Fragen und benachrichtigen sie proaktiv über Änderungen und andere Ereignisse. Sie sind eine tolle Möglichkeit zur Kontaktaufnahme.
 
 > [!IMPORTANT]
-> Derzeit sind Bots in Government Community Cloud (GCC) verfügbar, aber nicht in GCC-High und department of Defense (DOD).
+> Derzeit sind Bots in Government Community Cloud (GCC) verfügbar, aber nicht in GCC-High und DoD (Department of Defense).
 
 Die folgenden Informationen beschreiben und veranschaulichen, wie Benutzer Bots in Teams hinzufügen, verwenden und verwalten können, um Ihr App-Design zu steuern.
 
@@ -155,8 +155,8 @@ Sie können Bots in den folgenden Kontexten verwenden:
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
 |1|**App-Name und -Symbol**|
-|2|**Chat-Registerkarte**: Öffnet den Bereich für Gespräche mit Ihrem Bot (gilt nur für persönliche Apps).|
-|3|**Benutzerdefinierte Registerkarten**: Öffnet weitere Inhalte zu Ihrer App.|
+|2 |**Chat-Registerkarte**: Öffnet den Bereich für Gespräche mit Ihrem Bot (gilt nur für persönliche Apps).|
+|3 |**Benutzerdefinierte Registerkarten**: Öffnet weitere Inhalte zu Ihrer App.|
 |4 |**Info-Registerkarte**: Zeigt grundlegende Informationen zu Ihrer App an.|
 |5 |**Chat-Blase**: Bot-Unterhaltungen verwenden das Team-Messaging-Framework.|
 |6 |**Adaptive Karte:** Wenn die Antworten Ihres Bots adaptive Karten enthalten, nimmt die Karte die volle Breite der Chatblase ein.|
@@ -169,8 +169,8 @@ Sie können Bots in den folgenden Kontexten verwenden:
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
 |1|**App-Name und -Symbol**|
-|2|**Chat-Registerkarte**: Öffnet den Bereich für Gespräche mit Ihrem Bot (gilt nur für persönliche Apps).|
-|3|**Benutzerdefinierte Registerkarten**: Öffnet weitere Inhalte zu Ihrer App.|
+|2 |**Chat-Registerkarte**: Öffnet den Bereich für Gespräche mit Ihrem Bot (gilt nur für persönliche Apps).|
+|3 |**Benutzerdefinierte Registerkarten**: Öffnet weitere Inhalte zu Ihrer App.|
 |4 |**Chat-Blase**: Bot-Unterhaltungen verwenden das Team-Messaging-Framework.|
 |5 |**Adaptive Karte:** Wenn die Antworten Ihres Bots adaptive Karten enthalten, nimmt die Karte die volle Breite der Chatblase ein.|
 
@@ -362,7 +362,7 @@ Einige Personen erwarten, dass Gespräche auf natürliche Weise ablaufen, so wie
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Ein Beispiel für Bots sollte Benutzern helfen, zu verstehen, wie Bots verwendet werden." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Beispiel für Bots sollte Benutzern helfen, zu verstehen, wie Bots verwendet werden." border="false":::
 
 #### <a name="do-provide-help"></a>Do: Hilfe anbieten
 
@@ -421,7 +421,7 @@ Ihr Bot sollte keine vertraulichen Informationen an Personen in einer Gruppe wei
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 Diese weiteren Richtlinien könnten bei Ihrem Bot-Design hilfreich sein:
 

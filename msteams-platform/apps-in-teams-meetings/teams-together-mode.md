@@ -2,19 +2,19 @@
 title: Szenen im benutzerdefinierten Modus "Zusammen"
 description: Arbeiten mit benutzerdefinierten Szenen im Zusammen-Modus
 ms.topic: conceptual
-ms.openlocfilehash: b10f5506012dd3b204187dde1ef5e45d2e4bb3536ea9106f2643b0d846fbe640
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: d19f99ab55654eab03d56de8a001484bb518a7f2
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702166"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345269"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Benutzerdefinierte Zusammen-Modus-Szenen
 
 > [!NOTE]
 > Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
-Szenen im benutzerdefinierten Zusammen-Modus in Microsoft Teams bieten eine immersive und ansprechende Besprechungsumgebung, die Menschen zusammenführt und sie auffordert, ihr Video zu aktivieren. Sie kombiniert Teilnehmer digital in einer einzelnen virtuellen Szene und platziert ihre Videostreams in vordefinierten Arbeitsplätzen, die vom Szenenersteller entworfen und behoben wurden.
+Szenen im benutzerdefinierten Zusammen-Modus in Microsoft Teams bieten eine immersive und ansprechende Besprechungsumgebung, die Personen zusammenführt und sie dazu auffordert, ihr Video zu aktivieren. Sie kombiniert Teilnehmer digital in einer einzelnen virtuellen Szene und platziert ihre Videostreams in vordefinierten Arbeitsplätzen, die vom Szenenersteller entworfen und behoben wurden.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
@@ -137,7 +137,7 @@ Die Platzabmessungen werden zum Zeichenbereich für das Rendern des Videostreams
 
     ![Spot zuweisen](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. Wählen Sie **"Speichern"** und **dann "Ansicht" in Teams** aus, um Die Szene in Microsoft Teams schnell zu testen.
+1. Wählen Sie **"Speichern"** und **dann "Ansicht" in Teams** aus, um Ihre Szene in Microsoft Teams schnell zu testen.
 
     >[!NOTE]
     > * Wenn Sie **"Ansicht" in Teams** auswählen, wird automatisch eine Microsoft Teams App erstellt, die auf der Seite **"Apps"** im Teams Entwicklerportal angezeigt werden kann.
@@ -165,7 +165,7 @@ Die Platzabmessungen werden zum Zeichenbereich für das Rendern des Videostreams
     ![Exportieren einer Szene](../assets/images/apps-in-meetings/build-a-scene.png)
 
     >[!NOTE]
-    > Das Szenenpaket umfasst eine scene.jsund die PNG-Objekte, die zum Erstellen einer Szene verwendet werden. Das Szenenpaket kann auf andere Änderungen überprüft werden, wie im Beispiel scene.jsim Abschnitt dieses Dokuments beschrieben.
+    > Das Szenenpaket besteht aus einer scene.jsund den PNG-Ressourcen, die zum Erstellen einer Szene verwendet werden. Das Szenenpaket kann auf andere Änderungen überprüft werden, wie im Beispiel scene.jsim Abschnitt dieses Dokuments beschrieben.
 
 Eine komplexere Szene, die die Z-Achse nutzt, wird im Beispiel für die ersten Schritte veranschaulicht.
 
@@ -238,7 +238,7 @@ Im Folgenden finden Sie die scene.jsim Beispiel:
 }
 ```
 
-Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Die Szenen-JSON enthält auch Informationen zu allen Ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Arbeitsplatz eine Platz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Reihenfolge der Auslastung wird automatisch generiert und kann gemäß Der Einstellung geändert werden.
+Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Die Szenen-JSON enthält auch Informationen zu allen Ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Arbeitsplatz eine Platz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Reihenfolge der Auslastung wird automatisch generiert und kann je nach Präferenz geändert werden.
 
 > [!NOTE]
 > Die Nummer der Reihenfolge der Benachrichtigung entspricht der Reihenfolge der Personen, die dem Anruf beitreten.
@@ -249,7 +249,7 @@ Nachdem Sie nun das Beispiel scene.jsweiter durchgegangen sind, können Sie die 
 
 ## <a name="activate-custom-together-mode-scenes"></a>Aktivieren von Szenen im benutzerdefinierten Modus "Zusammen"
 
-Erhalten Sie End-to-End-Informationen dazu, wie sich ein Endbenutzer mit Szenen in benutzerdefinierten Szenen im Zusammen-Modus beschäftigt.
+Hier erhalten Sie End-to-End-Informationen dazu, wie sich ein Endbenutzer mit Szenen in benutzerdefinierten Szenen im Zusammen-Modus beschäftigt.
 
 **So wählen Sie Szenen aus und aktivieren benutzerdefinierte Szenen im Zusammen-Modus**
 
@@ -273,10 +273,10 @@ Erhalten Sie End-to-End-Informationen dazu, wie sich ein Endbenutzer mit Szenen 
 
 ## <a name="open-a-custom-together-mode-scenes-scene-package"></a>Öffnen eines benutzerdefinierten Szenenpakets für den Gemeinsamen Modus
 
-Sie können das Szenenpaket, das eine aus dem Szenenstudio abgerufene .zip datei ist, für andere Ersteller freigeben, um die Szene weiter zu verbessern. Die Funktion zum **Importieren einer Szene** kann verwendet werden. Mit diesem Tool können Sie ein Szenenpaket entpacken, damit der Ersteller die Szene weiter erstellen kann.
+Sie können das Szenenpaket, bei dem es sich um eine aus dem Szenenstudio abgerufene .zip datei handelt, für andere Ersteller freigeben, um die Szene weiter zu verbessern. Die Funktion zum **Importieren einer Szene** kann verwendet werden. Mit diesem Tool können Sie ein Szenenpaket entpacken, damit der Ersteller die Szene weiter erstellen kann.
 
 ![Szenen-ZIP-Datei](../assets/images/apps-in-meetings/scene-zip-file.png)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Apps für Teams Besprechungen](teams-apps-in-meetings.md)

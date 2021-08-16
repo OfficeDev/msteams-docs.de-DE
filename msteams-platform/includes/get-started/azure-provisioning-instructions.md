@@ -5,7 +5,7 @@ Die Bereitstellung besteht aus zwei Schritten.  Zuerst werden erforderliche Clou
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Öffnen Sie Visual Studio Code.
-1. Wählen Sie das Teams-Toolkit in der Seitenleiste aus, indem Sie das Symbol "Teams" auswählen.
+1. Wählen Sie das Teams Toolkit in der Seitenleiste aus, indem Sie das Symbol Teams auswählen.
 1. Wählen Sie **"Bereitstellung in der Cloud" aus.**
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot der Bereitstellungsbefehle":::

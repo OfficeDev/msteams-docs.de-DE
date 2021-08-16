@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie Ihre App in Microsoft Teams querladen. Sidelo
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: 86b085f55c66b7ce9937665bdd20b04841344e924610237bf2e592d867d0b632
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 93df0d92ce6912888dd1932be3295ca92fa5a967
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708709"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345262"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Hochladen Ihrer App in Microsoft Teams
 
@@ -36,7 +36,7 @@ Sie können Ihre App in ein Team, einen Chat, eine Besprechung oder zur persönl
 1. Wählen Sie **"Apps"** aus, und wählen Sie **Hochladen einer benutzerdefinierten App** aus.
 1. Wählen Sie Ihr App-Paket .zip Datei aus. Ein Installationsdialogfeld wird angezeigt.
 :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot eines Beispiels für ein Dialogfeld für Teams App-Installation.":::
-1. Fügen Sie Ihre App zu Teams hinzu.
+1. Fügen Sie Ihre App Teams hinzu.
 
 ## <a name="troubleshoot-upload-issues"></a>Behandeln von Problemen beim Hochladen
 
@@ -56,7 +56,7 @@ Sie müssen Ihre App nicht erneut querladen, wenn Sie Codeänderungen vornehmen 
 
 ## <a name="remove-your-app"></a>Entfernen Ihrer App
 
-Um Ihre App zu entfernen, klicken Sie mit der rechten Maustaste auf das App-Symbol in Teams, und wählen Sie **Deinstallieren** aus.
+Um Ihre App zu entfernen, klicken Sie mit der rechten Maustaste auf das App-Symbol in Teams, und wählen Sie **Deinstallieren aus.**
 
 > [!NOTE]
 > Persönliche Bot-Aktivitäten können nicht vollständig entfernt werden. Wenn Sie die App entfernen und erneut hinzufügen, wird eine neue Kommunikation mit dem Bot an die vorherige Unterhaltung mit ihr angefügt.
