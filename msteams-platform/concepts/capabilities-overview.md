@@ -6,12 +6,12 @@ ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 7cb2d042c1b666b6047aa910f3e797e2a59a396d2fd87a37f06fadc04e989d85
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: e0f7a57fb125450593fd63c412278e1030c51d42
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707123"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345690"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Grundlegendes zu Microsoft Teams App-Funktionen
 
@@ -30,7 +30,7 @@ Ihre Teams-Apps verfügen über eine oder alle der folgenden Kernfunktionen:
 
 Ihre App kann auch erweiterte Funktionen nutzen, z. B. die [Microsoft Graph-API für Teams.](/graph/teams-concept-overview)
 
-Die folgende Abbildung gibt Ihnen eine Vorstellung davon, welche Funktionen die gewünschten Features in Ihrer App bereitstellen:
+In der folgenden Abbildung erhalten Sie eine Vorstellung davon, welche Funktionen die gewünschten Features in Ihrer App bereitstellen:
 
 :::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Mind map illustrating what Teams app capabilities are.":::
 
@@ -41,13 +41,13 @@ Sie können beispielsweise Benutzereingaben in einem Formular sammeln, das als R
 
 ## <a name="government-community-cloud-gcc"></a>Government Community Cloud (GCC)
 
-Government Community Cloud ist eine Auf Regierung ausgerichtete Kopie der kommerziellen Umgebung. Das Verteidigungsministerium (Department of Defense, DOD) und Auftragnehmer des Bundes sind verpflichtet, die strengen Anforderungen an Cybersicherheit und Compliance zu erfüllen. Zu diesem Zweck wurde GCC-High erstellt, um die Anforderungen von DOD und Bundesauftragnehmern zu erfüllen. GCC-High ist eine Kopie der DOD-Cloud, aber in einer eigenen unabhängigen Umgebung vorhanden. Die DOD-Cloud wurde nur für das Verteidigungsministerium erstellt.
+Government Community Cloud ist eine Auf Regierung ausgerichtete Kopie der kommerziellen Umgebung. Das Verteidigungsministerium (Department of Defense, DOD) und Auftragnehmer des Bundes sind verpflichtet, die strengen Anforderungen an Cybersicherheit und Compliance zu erfüllen. Zu diesem Zweck wurde GCC-High erstellt, um die Anforderungen von DOD und Bundesauftragnehmern zu erfüllen. GCC-High ist eine Kopie der DOD-Cloud, aber in ihrer eigenen unabhängigen Umgebung vorhanden. Die DOD-Cloud wurde nur für das Verteidigungsministerium erstellt.
 
 Die folgende Tabelle enthält Teams Features und Verfügbarkeit für GCC, GCC-Hoch und DOD:
 
 | Features   | GCC | GCC – hoch | DOD |
 |-------------|---------|
-| Teams eigenen Apps wie in intern entwickelten Apps | ✔️ App ist aktiviert, wenn sie über GCC verfügt. | ✔️ App ist aktiviert, wenn sie über GCC-Hoch verfügt. | ✔️ App ist aktiviert, wenn sie ÜBER DOD verfügt. |
+| Teams eigenen Apps wie bei intern entwickelten Apps | ✔️ App ist aktiviert, wenn sie über GCC verfügt. | ✔️ App ist aktiviert, wenn sie über GCC-Hoch verfügt. | ✔️ App ist aktiviert, wenn sie ÜBER DOD verfügt. |
 | Microsoft-Apps | ✔️ Microsoft-Apps, die mit GCC kompatibel sind | ✔️ Microsoft-Apps, die mit GCC-High kompatibel sind | ✔️ Microsoft-Apps, die DOD-konform sind |
 | 3p- oder Drittanbieter-Apps | ✔️ Drittanbieter-Apps sind verfügbar. Standardmäßig deaktiviert, und mandantenadministratoren verwenden ihren eigenen Ermessen, um es zu aktivieren. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
@@ -57,14 +57,14 @@ Die folgende Tabelle enthält Teams Features und Verfügbarkeit für GCC, GCC-Ho
 | Benutzerdefinierte Messaging-Erweiterungen | ❌ | ❌ | ❌ |
 | Benutzerdefinierte Connectors | ❌ | ❌ | ❌ |
 
-Die folgende Liste hilft bei der Ermittlung der Verfügbarkeit von GCC, GCC-Hoch und DOD für die Features:
+Die folgende Liste hilft, die Verfügbarkeit von GCC, GCC-Hoch und DOD für die Features zu ermitteln:
 
 * Informationen zu Drittanbieter-Apps finden Sie unter [Web-Apps](../samples/integrating-web-apps.md) und [Besprechungs-App-Erweiterbarkeit.](../apps-in-teams-meetings/meeting-app-extensibility.md)
-* Informationen zu Bots finden Sie unter [Erstellen Ihres ersten Unterhaltungs-Bots für Teams,](../get-started/first-app-bot.md)Entwerfen Ihres Teams [Bots, Hinzufügen von Bots zu Microsoft Teams Apps](../resources/bot-v3/bots-overview.md)und [Bots in Teams](../bots/what-are-bots.md). [](../bots/design/bots.md)
+* Informationen zu Bots finden Sie unter [Erstellen Ihres ersten Unterhaltungs-Bots für Teams](../get-started/first-app-bot.md), Entwerfen Ihres Teams [Bots, Hinzufügen von Bots zu Microsoft Teams Apps](../resources/bot-v3/bots-overview.md)und [Bots in Teams](../bots/what-are-bots.md). [](../bots/design/bots.md)
 * Informationen zum Querladen von Apps finden Sie unter [Aktivieren der Anpassung Ihrer Teams-App,](../concepts/design/enable-app-customization.md)Verteilen Ihrer [Microsoft Teams-App](../concepts/deploy-and-publish/apps-publish-overview.md)und [Hochladen Ihrer App in Teams.](../concepts/deploy-and-publish/apps-upload.md)
 * Benutzerdefinierte Connectors finden Sie unter [Erstellen Office 365 Connectors für Teams.](../webhooks-and-connectors/how-to/connectors-creating.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Erstellen von Apps für Teams](../overview.md) 
  [Erstellen Ihrer ersten Microsoft Teams-App](../build-your-first-app/build-first-app-overview.md)

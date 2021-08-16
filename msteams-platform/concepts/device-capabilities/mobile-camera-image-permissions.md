@@ -1,17 +1,17 @@
 ---
 title: Integrieren von Medienfunktionen
 author: Rajeshwari-v
-description: So verwenden Sie Teams JavaScript-Client-SDK, um Medienfunktionen zu aktivieren
+description: Verwenden von Teams JavaScript-Client-SDK zum Aktivieren von Medienfunktionen
 keywords: Systemeigene Geräteberechtigungsmedien für Kamerabildmikrofonfunktionen
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 41132cacc23628e0d585eaeae634eef263a62030443a362bf38075a2534ab544
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 74ebeee5392272021f2a9977709fc0b1df2a50b1
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704966"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345732"
 ---
 # <a name="integrate-media-capabilities"></a>Integrieren von Medienfunktionen 
 
@@ -28,11 +28,11 @@ Es ist wichtig, sich mit den [API-Antwortfehlern](#error-handling) vertraut zu m
 
 > [!NOTE] 
 > * Derzeit ist Microsoft Teams Unterstützung für Medienfunktionen nur für mobile Clients verfügbar.   
-> * Derzeit unterstützt Teams keine Geräteberechtigungen für Apps, Registerkarten und das Besprechungs-Sidepanel.    
+> * Derzeit unterstützt Teams keine Geräteberechtigungen für Apps mit mehreren Fenstern, Registerkarten und das Besprechungs-Sidepanel.    
 
 ## <a name="update-manifest"></a>Updatemanifest
 
-Aktualisieren Sie ihre Teams [App-manifest.jsauf](../../resources/schema/manifest-schema.md#devicepermissions) der Datei, indem Sie die Eigenschaft hinzufügen `devicePermissions` und `media` angeben. Damit kann Ihre App die erforderlichen Berechtigungen von Benutzern anfordern, bevor sie mit der Aufnahme des Bilds mit der **Kamera** beginnen, den Katalog öffnen, um ein Bild auszuwählen, das als Anlage übermittelt werden soll, oder das **Mikrofon** verwenden, um die Unterhaltung aufzuzeichnen. Das Update für das App-Manifest lautet wie folgt:
+Aktualisieren Sie ihre Teams [App-manifest.jsin](../../resources/schema/manifest-schema.md#devicepermissions) der Datei, indem Sie die Eigenschaft hinzufügen `devicePermissions` und `media` angeben. Damit kann Ihre App die erforderlichen Berechtigungen von Benutzern anfordern, bevor sie mit der Aufnahme des Bilds mit der **Kamera** beginnen, den Katalog öffnen, um ein Bild auszuwählen, das als Anlage übermittelt werden soll, oder das **Mikrofon** verwenden, um die Unterhaltung aufzuzeichnen. Das Update für das App-Manifest lautet wie folgt:
 
 ``` json
 "devicePermissions": [
@@ -250,9 +250,9 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 });
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-* [Integrieren von QR- oder Strichcodescannern in Teams](qr-barcode-scanner-capability.md)
+* [Integrieren der QR- oder Strichcodescannerfunktion in Teams](qr-barcode-scanner-capability.md)
 * [Integrieren von Standortfunktionen in Teams](location-capability.md)
-* [Integrieren der Personenauswahlfunktion in Teams](people-picker-capability.md)
+* [Integrieren der Personenauswahl in Teams](people-picker-capability.md)
 
