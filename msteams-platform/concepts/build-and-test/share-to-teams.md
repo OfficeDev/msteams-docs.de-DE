@@ -4,16 +4,16 @@ description: So fügen Sie die Freigabe zu Teams eingebetteten Schaltfläche auf
 ms.topic: reference
 localization_priority: Normal
 keywords: Freigeben von Teams Share-to-Teams
-ms.openlocfilehash: 721f86f1995423b083550d443790b4fdc01910243c63c9eaa8e679cc140083a3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 4bbf29bb355726b519975bec5d6fad3419b81ce3
+ms.sourcegitcommit: 09067fb9886323f144384254c41e93469c433382
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707716"
+ms.lasthandoff: 08/16/2021
+ms.locfileid: "58358622"
 ---
 # <a name="create-share-to-teams-button"></a>Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
 
-Websites von Drittanbietern können das Startprogrammskript verwenden, um Share-to-Teams-Schaltflächen auf ihren Webseiten einzubetten. Wenn Sie diese Option auswählen, wird die Share-to-Teams-Oberfläche in einem Popupfenster gestartet. Auf diese Weise können Sie einen Link direkt für jede Person oder Microsoft Teams Kanal freigeben, ohne den Kontext zu wechseln. Dieses Dokument führt Sie zum Erstellen und Einbetten einer Schaltfläche für Teams freigeben für Ihre Website, zum Erstellen der Websitevorschau und zum Erweitern von Share-to-Teams für Education.
+Websites von Drittanbietern können das Startprogrammskript verwenden, um Share-to-Teams-Schaltflächen auf ihren Webseiten einzubetten. Wenn Sie diese Option auswählen, wird die Share-to-Teams-Oberfläche in einem Popupfenster gestartet. Auf diese Weise können Sie einen Link direkt für jede Person oder Microsoft Teams Kanal freigeben, ohne den Kontext zu wechseln. In diesem Dokument erfahren Sie, wie Sie eine Schaltfläche für Teams freigeben für Ihre Website erstellen und einbetten, Eine Websitevorschau erstellen und share-to-Teams für Education erweitern.
 
 > [!NOTE]
 > * Nur die Desktopversionen von Edge und Chrome werden unterstützt.
@@ -40,11 +40,11 @@ In der folgenden Abbildung wird die Popupoberfläche "Share-to-Teams" angezeigt:
     </div>
     ```
 
-    Nach Abschluss dieses Vorgangs wird das symbol Microsoft Teams zu Ihrer Website hinzugefügt. Die folgende Abbildung zeigt das Symbol "Share-to-Teams":
+    Nach Abschluss dieses Vorgangs wird das symbol Microsoft Teams ihrer Website hinzugefügt. Die folgende Abbildung zeigt das Symbol "Freigeben für Teams":
 
     ![Symbol "Für Teams freigeben"](~/assets/icons/share-to-teams-icon.png)
 
-1. Wenn Sie eine andere Symbolgröße für die Schaltfläche "Freigeben für Teams" verwenden möchten, verwenden Sie alternativ das `data-icon-px-size` Attribut.
+1. Wenn Sie eine andere Symbolgröße für die Schaltfläche "Freigeben bis Teams" wünschen, verwenden Sie alternativ das `data-icon-px-size` Attribut.
 
     ```html
     <div
@@ -53,7 +53,7 @@ In der folgenden Abbildung wird die Popupoberfläche "Share-to-Teams" angezeigt:
       data-icon-px-size="64">
     </div>
     ```
-1. Wenn der freigegebene Link eine Benutzerauthentifizierung erfordert und die URL-Vorschau ihres Links, der freigegeben werden soll, in Teams dann nicht gut gerendert wird, können Sie die URL-Vorschau deaktivieren, indem Sie das `data-preview` Attribut hinzufügen, das auf `false` .
+1. Wenn der freigegebene Link eine Benutzerauthentifizierung erfordert und die URL-Vorschau ihres Links, der freigegeben werden soll, in Teams nicht gut gerendert wird, können Sie die URL-Vorschau deaktivieren, indem Sie das Attribut hinzufügen, `data-preview` das auf festgelegt `false` ist.
 
     ```html
     <div
@@ -63,7 +63,7 @@ In der folgenden Abbildung wird die Popupoberfläche "Share-to-Teams" angezeigt:
     </div>
     ```
 
-1. Wenn Ihre Seite Inhalte dynamisch rendert, können Sie die Methode verwenden, `shareToMicrosoftTeams.renderButtons()` um zu erzwingen, dass die Schaltfläche **"Freigeben"** an der entsprechenden Stelle in der Pipeline gerendert wird.
+1. Wenn Ihre Seite Inhalte dynamisch rendert, können Sie mit der `shareToMicrosoftTeams.renderButtons()` Methode erzwingen, dass **Share** an der entsprechenden Stelle in der Pipeline gerendert wird.
 
 ## <a name="craft-your-website-preview"></a>Erstellen der Websitevorschau
 
@@ -82,11 +82,11 @@ In der folgenden Tabelle werden die erforderlichen Tags beschrieben:
 |Beschreibung|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |Miniaturansicht| nichts. |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
-Sie können entweder die HTML-Standardversion oder die Open Graph-Version verwenden.
+Sie können entweder die HTML-Standardversionen oder die Open Graph-Version verwenden.
 
 ## <a name="share-to-teams-for-education"></a>Freigeben für Teams für Education
 
-Für Lehrer, die die Schaltfläche "Freigeben" zum Teams verwenden, gibt es eine zusätzliche Option zu `Create an Assignment` . Auf diese Weise können Sie basierend auf dem freigegebenen Link schnell eine Aufgabe im ausgewählten Team erstellen. Die folgende Abbildung zeigt Share-to-Teams für Bildungseinrichtungen: 
+Für Lehrer, die die Schaltfläche "Freigeben" zum Teams verwenden, gibt es eine zusätzliche Option für `Create an Assignment` . Auf diese Weise können Sie basierend auf dem freigegebenen Link schnell eine Aufgabe im ausgewählten Team erstellen. Die folgende Abbildung zeigt Share-to-Teams für Bildungseinrichtungen: 
 
 ![Freigeben für Teams Popup-Bildungseinrichtungen](~/assets/images/share-to-teams-popup-edu.png)
 
@@ -131,6 +131,6 @@ Sie können die Standardwerte für die folgenden Felder im Formular "Freigeben" 
 ></span>
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
