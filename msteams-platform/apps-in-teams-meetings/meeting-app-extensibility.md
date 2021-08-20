@@ -3,12 +3,12 @@ title: Erweiterbarkeit der Besprechungs-App
 author: surbhigupta
 description: Verstehen der Erweiterbarkeit der Besprechungs-App
 ms.topic: conceptual
-ms.openlocfilehash: 0da7a68fec5ea3cf01adfbb4edabded23a9f3311
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: f4801c1fbaa641d539435e214f87f7f9885d2dc7
+ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345283"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "58398683"
 ---
 # <a name="meeting-app-extensibility"></a>Erweiterbarkeit der Besprechungs-App
 
@@ -29,10 +29,11 @@ Ein Besprechungslebenszyklus besteht aus der App-Erfahrung vor der Besprechung, 
 Registerkarten ermöglichen Teammitgliedern den Zugriff auf Dienste und Inhalte in einem bestimmten Raum innerhalb einer Besprechung. Das Team arbeitet direkt mit Registerkarten und hat Unterhaltungen über die Tools und Daten, die auf Registerkarten verfügbar sind. In einer Teams Besprechung können Benutzer eine Registerkarte hinzufügen, indem sie <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, und wählen Sie die App aus, die sie installieren möchten.
 
 > [!IMPORTANT]
-> Wenn Sie eine Registerkarte in Ihre Besprechung integriert haben, muss Ihre App den Teams [SSO-Authentifizierungsfluss (Single Sign-On) für Registerkarten](../tabs/how-to/authentication/auth-aad-sso.md)befolgen.
+> Wenn Sie eine Registerkarte in Ihre Besprechung integriert haben, muss Ihre App dem Teams [SSO-Authentifizierungsfluss (Single Sign-On) für Registerkarten](../tabs/how-to/authentication/auth-aad-sso.md)folgen.
 
 > [!NOTE]
-> Apps werden nur in privaten geplanten Besprechungen unterstützt.
+> * Die privaten geplanten Besprechungen unterstützen nur Apps.
+> * Die Option "App hinzufügen" für Teams Registerkarte "Besprechungserweiterung" wird in Teams Webclient nicht unterstützt.
 
 #### <a name="pre-meeting-app-experience"></a>App-Erfahrung vor der Besprechung
 
@@ -57,7 +58,7 @@ Mit der App-Erfahrung vor der Besprechung können Sie Besprechungs-Apps suchen u
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
-Nachdem die Registerkarten zu einer vorhandenen Besprechung auf dem Desktop oder im Web hinzugefügt wurden, können Sie die gleichen Apps in der Umgebung vor der Besprechung unter **"Weitere** Abschnitt der Besprechungsdetails" anzeigen.
+Nachdem die Registerkarten zu einer vorhandenen Besprechung auf dem Desktop oder im Web hinzugefügt wurden, können Sie die gleichen Apps in der Umgebung vor der Besprechung im Abschnitt **"Weitere** Besprechungsdetails" anzeigen.
 
 <img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
 
@@ -67,7 +68,7 @@ Nachdem die Registerkarten zu einer vorhandenen Besprechung auf dem Desktop oder
 
 Mit der App-Erfahrung in besprechungsinternen Besprechungen können Sie Teilnehmer während der Besprechung mithilfe von Apps und dem Dialogfeld in der Besprechung einbeziehen. Besprechungs-Apps werden auf der Symbolleiste des Besprechungsfensters als Registerkarte in der Besprechung gehostet. Verwenden Sie das Dialogfeld in der Besprechung, um Aktionen erfordernde Inhalte für Besprechungsteilnehmer anzuzeigen. Weitere Informationen finden Sie unter [Erstellen von Apps für Teams Besprechungen.](create-apps-for-teams-meetings.md)
 
-Für mobile Geräte sind Besprechungs-Apps über **Apps** > Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; in der Besprechung verfügbar. Wählen Sie **"Apps"** aus, um alle in der Besprechung verfügbaren Apps anzuzeigen.
+Für mobile Geräte sind Besprechungs-Apps über **Apps** > auslassungspunkte &#x25CF;&#x25CF;&#x25CF; in der Besprechung verfügbar. Wählen Sie **"Apps"** aus, um alle in der Besprechung verfügbaren Apps anzuzeigen.
 
 **So verwenden Sie Registerkarten während einer Besprechung**
 
@@ -134,7 +135,7 @@ Bots, die im Gruppenchatbereich aktiviert sind, funktionieren in Besprechungen. 
 
 ### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>Integrieren von Messaging-Erweiterungen in den Besprechungslebenszyklus
 
-Um Messaging-Erweiterungen zu implementieren, beginnen Sie mit dem [Erstellen einer Messaging-Erweiterung,](../messaging-extensions/how-to/create-messaging-extension.md) und fahren Sie dann mit dem [Erstellen von Apps für Teams Besprechungen](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references)fort.
+Um Messaging-Erweiterungen zu implementieren, beginnen Sie mit dem [Erstellen einer Messaging-Erweiterung,](../messaging-extensions/how-to/create-messaging-extension.md) und fahren Sie dann mit dem Erstellen von [Apps für Teams Besprechungen](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references)fort.
 
 Die Erweiterbarkeit der Teams Besprechungs-App ermöglicht es Ihnen, Ihre App basierend auf den Teilnehmerrollen in einer Besprechung zu entwerfen.
 
@@ -166,7 +167,7 @@ In der folgenden Liste werden die verschiedenen Benutzertypen zusammen mit ihrer
 
 * **Mandanteninterne** Benutzer: Mandanteninterne Benutzer gehören zur Organisation und verfügen über Anmeldeinformationen in Azure Active Directory (AAD) für den Mandanten. Sie sind in der Regel Vollzeit-, Vor-Ort- oder Remotemitarbeiter. Ein mandanteninterner Benutzer kann ein Organisator, Referent oder Teilnehmer sein.
 * **Gast:** Ein Gast ist ein Teilnehmer aus einer anderen Organisation, der eingeladen ist, auf Teams oder andere Ressourcen im Mandanten der Organisation zuzugreifen. Gäste werden dem AAD der Organisation hinzugefügt und verfügen über die gleichen Teams Funktionen wie ein systemeigenes Teammitglied mit Zugriff auf Teamchats, Besprechungen und Dateien. Ein Gastbenutzer kann ein Organisator, Referent oder Teilnehmer sein. Weitere Informationen finden Sie unter [Gastzugriff in Teams](/microsoftteams/guest-access).
-* **Partner oder extern:** Ein Verbundbenutzer ist ein externer Teams Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Verbundbenutzer verfügen über gültige Anmeldeinformationen bei Verbundpartnern und sind von Teams autorisiert. Sie haben keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen aus Ihrer Organisation. Der Gastzugriff ist eine bessere Option für externe Benutzer, um Zugriff auf Teams und Kanäle zu haben. Weitere Informationen finden Sie unter [Verwalten des externen Zugriffs in Teams](/microsoftteams/manage-external-access).
+* **Partner oder extern:** Ein Verbundbenutzer ist ein externer Teams Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Verbundbenutzer verfügen über gültige Anmeldeinformationen bei Verbundpartnern und werden von Teams autorisiert. Sie haben keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen aus Ihrer Organisation. Der Gastzugriff ist eine bessere Option für externe Benutzer, um Zugriff auf Teams und Kanäle zu haben. Weitere Informationen finden Sie unter [Verwalten des externen Zugriffs in Teams.](/microsoftteams/manage-external-access)
 
     > [!NOTE]
     > Ihre Teams Benutzer können Apps hinzufügen, wenn sie Besprechungen oder Chats mit anderen Organisationen hosten. Die Benutzer können Apps verwenden, die von externen Benutzern freigegeben wurden, wenn Ihre Benutzer an Besprechungen oder Chats teilnehmen, die von anderen Organisationen gehostet werden. Die Datenrichtlinien der Organisation des hostenden Benutzers sowie die Datenfreigabepraktiken der Drittanbieter-Apps, die von der Organisation dieses Benutzers freigegeben werden, werden wirksam.

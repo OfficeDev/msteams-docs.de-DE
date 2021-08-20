@@ -1,22 +1,22 @@
 ---
 title: Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 author: Rajeshwari-v
-description: Informationen zum Aufheben eines Links, Öffnen der Phasenansicht und Anheften einer Registerkarte mit Microsoft Teams App.
+description: So heben Sie einen Link auf, öffnen sie die Phasenansicht, und heften Sie eine Registerkarte mit Microsoft Teams App an.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: f465530dcc53ff3b0174f5b78ebf2240665a7d9e
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 74f385476887ab14d9b3eac12bfb8e0735b295d5
+ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345276"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "58398676"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 
 > [!NOTE]
 > Dieses Feature ist nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
-Die Phasenansicht ist eine neue Benutzeroberflächenkomponente, mit der Sie den Inhalt rendern können, der im Vollbildmodus in Teams geöffnet und als Registerkarte angeheftet ist.
+Die Phasenansicht ist eine neue Benutzeroberflächenkomponente, mit der Sie den Inhalt rendern können, der im Vollbildmodus in Teams geöffnet und als Registerkarte angeheftet wird.
  
 > [!NOTE]
 > Derzeit unterstützen Teams mobile Clients das Aufheben von Registerkartenlinks und die Phasenansicht nicht. Mobile Clients verwenden das `websiteUrl` vom Entwickler bereitgestellte Attribut, um die Seite im Webbrowser des Geräts zu öffnen.
@@ -33,7 +33,7 @@ Die Phasenansicht bietet eine nahtlosere Erfahrung beim Anzeigen von Inhalten in
 
 |Phasenansicht|Aufgabenmodul|
 |:-----------|:-----------|
-|Die Phasenansicht ist nützlich, wenn Sie benutzern umfangreiche Inhalte anzeigen können, z. B. eine Seite, ein Dashboard, eine Datei usw. Es bietet umfangreiche Features, mit denen Sie Ihre Inhalte im Vollbildbereich rendern können.|[Das Aufgabenmodul](../task-modules-and-cards/task-modules/task-modules-tabs.md) ist besonders nützlich, um Nachrichten anzuzeigen, die Die Aufmerksamkeit des Benutzers erfordern, oder um Informationen zu sammeln, die zum Nächsten Schritt erforderlich sind.|
+|Die Phasenansicht ist hilfreich, wenn Sie benutzern umfangreiche Inhalte anzeigen können, z. B. eine Seite, ein Dashboard, eine Datei usw. Es bietet umfangreiche Features, mit denen Sie Ihre Inhalte im Vollbildbereich rendern können.|[Das Aufgabenmodul](../task-modules-and-cards/task-modules/task-modules-tabs.md) ist besonders nützlich, um Nachrichten anzuzeigen, die Die Aufmerksamkeit des Benutzers erfordern, oder um Informationen zu sammeln, die zum Nächsten Schritt erforderlich sind.|
   
 ## <a name="invoke-stage-view"></a>Aufrufen der Phasenansicht
 
@@ -133,9 +133,16 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Zeichenfolge | 64 | Diese Eigenschaft ist ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird. Dies ist ein Pflichtfeld.|
 | `name` | Zeichenfolge | 128 | Diese Eigenschaft ist der Anzeigename der Registerkarte in der Kanalschnittstelle. Dieses Feld ist optional.|
-| `contentUrl` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https://-URL, die auf die Entitätsbenutzeroberfläche verweist, die im Teams Canvas angezeigt werden soll. Dies ist ein Pflichtfeld.|
+| `contentUrl` | String | 2048 | Diese Eigenschaft ist die https://-URL, die auf die Entitätsbenutzeroberfläche verweist, die im Teams Canvas angezeigt werden soll. Dies ist ein Pflichtfeld.|
 | `websiteUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, auf die sie zeigen soll, wenn ein Benutzer die Anzeige in einem Browser auswählt. Dies ist ein Pflichtfeld.|
 | `removeUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https://-URL, die auf die Benutzeroberfläche verweist, die angezeigt werden soll, wenn der Benutzer die Registerkarte löscht. Dies ist ein optionales Feld.|
+
+## <a name="code-sample"></a>Codebeispiel
+
+| Beispielname | Beschreibung | C# |Node.js|
+|-------------|-------------|------|----|
+|Registerkarte in der Phasenansicht |Microsoft Teams Registerkartenbeispiel-App zum Demonstrieren der Registerkarte in der Phasenansicht.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+    
 
 ## <a name="see-also"></a>Siehe auch
 
