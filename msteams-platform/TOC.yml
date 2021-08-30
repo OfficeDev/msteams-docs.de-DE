@@ -266,12 +266,14 @@
   items:
     - name: Übersicht
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: Erweiterbarkeit der Besprechungs-App
+    - name: Einheitliche Besprechungs-Apps
       href: apps-in-teams-meetings/meeting-app-extensibility.md
-    - name: Voraussetzungen und API-Verweise für Apps in Teams-Besprechungen
+    - name: Voraussetzungen für Apps in Teams-Besprechungen
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
     - name: Aktivieren und Konfigurieren von Apps für Besprechungen
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+    - name: API-Referenzen für Besprechungs-Apps
+      href: apps-in-teams-meetings/API-references.md
     - name: Benutzerdefinierte Zusammen-Modus-Szenen
       href: apps-in-teams-meetings/teams-together-mode.md
 - name: Erstellen von Webhooks und Connectors
@@ -346,6 +348,8 @@
           href: bots/how-to/authentication/add-authentication.md
         - name: Verwenden von SSO-Authentifizierung (einmaliges Anmelden)
           href: bots/how-to/authentication/auth-aad-sso-bots.md
+        - name: Schrittweise Anleitung für Bots mit SSO
+          href: sbs-bots-with-sso.yml
     - name: Messaging-Erweiterungen
       items:
         - name: Hinzufügen einer Authentifizierung zu Ihrer Messaging-Erweiterung
