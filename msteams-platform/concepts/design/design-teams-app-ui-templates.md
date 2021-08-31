@@ -5,14 +5,14 @@ description: Entwerfen Sie Ihre App schneller mit standardisierten UI-Komponente
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: 7d46829be50e6c88dc7629376437878a4b5fecf93d82e805a12093c96b3677ba
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6405c8a35b9d80c0a7fbcb9d28ae5e1a637a2ea6
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702890"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408681"
 ---
-# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Entwerfen Ihrer Microsoft Teams-App mit Ui-Vorlagen
+# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Entwerfen Ihrer Microsoft Teams-App mit UI-Vorlagen
 
 Entwerfen Sie Ihre Microsoft Teams-App schneller mit UI-Vorlagen. Die Vorlagen sind eine Sammlung von Fluent UI-basierten Komponenten, die in allgemeinen Teams Anwendungsfällen funktionieren, sodass Sie mehr Zeit haben, um die beste Benutzererfahrung zu ermitteln.
 
@@ -48,7 +48,7 @@ Installieren Sie eine Beispiel-App, um zu sehen, wie UI-Vorlagen in Teams Kontex
 
 ## <a name="dashboard"></a>Dashboard
 
-Ein Dashboard zeigt unterschiedliche Inhaltstypen an einem zentralen Ort an (Teams persönliche App oder Registerkarte). Benutzer sollten in der Lage sein, zumindest einige der Elemente anzupassen, die sie auf einem Dashboard sehen.
+Ein Dashboard zeigt verschiedene Arten von Inhalten an einem zentralen Ort an (Teams persönliche App oder Registerkarte). Benutzer sollten in der Lage sein, zumindest einige der Elemente anzupassen, die sie auf einem Dashboard sehen.
 
 ### <a name="top-use-cases"></a>Häufigste Anwendungsfälle
 
@@ -56,15 +56,13 @@ Ein Dashboard zeigt unterschiedliche Inhaltstypen an einem zentralen Ort an (Tea
 * Berichtsmetriken
 * Organisieren unterschiedlicher Informationen an einem Ort
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Beispiel zeigt eine Dashboard-UI-Vorlage auf dem Desktop." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="Beispiel zeigt eine Dashboard-UI-Vorlage auf mobilgeräten." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Beispiel zeigt eine Dashboard-UI-Vorlage auf dem Desktop." border="false":::
 
 ## <a name="data-visualization"></a>Datenvisualisierung
 
@@ -75,15 +73,13 @@ Sie können unterschiedliche Kartengrößen (einzel, doppelt und vollständig) v
 * Anzeigen komplexer Informationen
 * Erstellen eines Dashboards
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Beispiel zeigt eine Datenvisualisierungs-UI-Vorlage auf dem Desktop." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="Beispiel zeigt eine Vorlage für die Datenvisualisierung auf mobilen Geräten." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Beispiel zeigt eine Datenvisualisierungs-UI-Vorlage auf dem Desktop." border="false":::
 
 ## <a name="empty-state"></a>Leerer Zustand
 
@@ -96,15 +92,13 @@ Die leere Statusvorlage kann für viele Szenarien verwendet werden, einschließl
 * Erfolgsmeldungen
 * Fehlermeldungen
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Beispiel zeigt eine leere Status-UI-Vorlage auf dem Desktop." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="Beispiel zeigt eine leere Status-UI-Vorlage auf mobilgeräten." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Beispiel zeigt eine leere Status-UI-Vorlage auf dem Desktop." border="false":::
 
 ## <a name="filter"></a>Filter
 
@@ -132,15 +126,13 @@ Formulare werden verwendet, um Benutzereingaben strukturiert zu erfassen, zu üb
 * Einstellungen
 * Benutzereingabesammlung
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Beispiel zeigt eine Formular-UI-Vorlage auf dem Desktop." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="Beispiel zeigt eine Formular-UI-Vorlage auf mobilgeräten." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Beispiel zeigt eine Formular-UI-Vorlage auf dem Desktop." border="false":::
 
 ## <a name="list"></a>Liste
 
@@ -151,33 +143,29 @@ Sie können eine Liste verwenden, um verwandte Elemente in einem scannbaren Form
 * Anzeigen von Daten
 * Kontextbezogene Aktionen für App-Inhalte
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Beispiel zeigt eine Listen-UI-Vorlage auf dem Desktop." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="Beispiel zeigt eine Listen-UI-Vorlage auf mobilgeräten." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Beispiel zeigt eine Listen-UI-Vorlage auf dem Desktop." border="false":::
 
 ## <a name="sign-in"></a>Anmelden
 
-Sie können App-Anmeldeabläufe für unterschiedliche Teams Kontexte und Identitätsanbieter entwerfen. Das folgende Beispiel enthält einmaliges Anmelden (Single Sign-On, SSO), das wir für die einfachste Authentifizierung empfehlen.
+Sie können App-Anmeldeflüsse für unterschiedliche Teams Kontexte und Identitätsanbieter entwerfen. Das folgende Beispiel enthält einmaliges Anmelden (Single Sign-On, SSO), das wir für die einfachste Authentifizierung empfehlen.
 
 ### <a name="top-use-case"></a>Häufigster Anwendungsfall
 
 * Authentifizieren von Benutzern
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+### <a name="mobile"></a>Mobilgeräte
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="Beispiel zeigt eine Vorlage für die Anmeldung auf mobilen Geräten." border="false":::
+
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Beispiel zeigt eine Vorlage für die Anmeldung auf der Benutzeroberfläche auf dem Desktop." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
-
-:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="Beispiel zeigt eine Benutzeroberflächenvorlage für die Anmeldung auf mobilgeräten." border="false":::
-
----
 
 ## <a name="settings"></a>Einstellungen
 
@@ -199,15 +187,13 @@ Ein Task Board, manchmal auch als "Tickets Board" oder "Boot" bezeichnet, ist ei
 * Brainstorming. Hinzufügen von Ideen in verschiedenen Kategorien
 * Sortierübungen. Organisieren beliebiger Informationen in Buckets
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Beispiel zeigt eine Task Board-UI-Vorlage auf dem Desktop." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="Beispiel zeigt eine Task Board-UI-Vorlage auf mobilgeräten." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Beispiel zeigt eine Task Board-UI-Vorlage auf dem Desktop." border="false":::
 
 ## <a name="wizard"></a>Assistent
 
@@ -219,12 +205,10 @@ Ein Assistent führt einen Benutzer durch mehrere Bildschirme, um eine Aufgabe a
 * Onboarding
 * Erfahrungen bei der ersten Ausführung
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Beispiel zeigt eine Assistenten-UI-Vorlage auf dem Desktop." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="Beispiel zeigt eine Assistenten-UI-Vorlage auf mobilgeräten." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Beispiel zeigt eine Assistenten-UI-Vorlage auf dem Desktop." border="false":::

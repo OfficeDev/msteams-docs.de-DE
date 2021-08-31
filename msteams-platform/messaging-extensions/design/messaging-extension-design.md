@@ -6,12 +6,12 @@ author: heath-hamilton
 localization_priority: Priority
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: 63bdbd0afbf2d0c4a3b7506330fb56e463a10169379c0674dd68496e3cc8de19
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 8ea0efa758855cdba4f7791eb6e99b3b1e22f8fe
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703311"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408643"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>Entwerfen Sie Ihre Microsoft Teams-Messaging-Erweiterung
 
@@ -32,17 +32,15 @@ In den folgenden Teams-Kontexten können eine Messaging-Erweiterung hinzufügen:
 * Aus dem Teams-Store.
 * In einem Kanal, Chat oder einer Besprechung (vor, während und nachher) in der Nähe des "Verfassen"-Felds. Beachten Sie, dass wenn Sie eine Messaging-Erweiterung an einer dieser Stellen hinzufügen, nur Sie sie in diesem Kontext verwenden können.
 
-Das folgende Beispiel zeigt, wie Sie eine Messaging-Erweiterung in einem Kanal hinzufügen:
+Das folgenden Beispiele zeigen, wie eine Messaging-Erweiterung in einem Kanal hinzufügt werden kann.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="Das Beispiel zeigt, wie eine Messaging-Erweiterung in der Nähe des &quot;Verfassen&quot;-Felds in einem Kanal hinzugefügt wird." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="Das Beispiel zeigt, wie eine Messaging-Erweiterung in der Nähe des &quot;Verfassen&quot;-Felds in einem Kanal auf Mobilgeräten hinzugefügt wird." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="Das Beispiel zeigt, wie eine Messaging-Erweiterung in der Nähe des &quot;Verfassen&quot;-Felds in einem Kanal hinzugefügt wird." border="false":::
 
 ## <a name="set-up-a-messaging-extension"></a>Einrichten einer Messaging-Erweiterung
 
@@ -50,15 +48,13 @@ Die Authentifizierung ist nicht obligatorisch, aber wenn Ihre App zum Beispiel e
 
 Aus Gründen der Konsistenz zwischen Teams-Apps können Sie den Anmeldebildschirm nicht anpassen. Wenn Sie die Authentifizierung mit einmaligem Anmelden (Single Sign-On, SSO) verwenden, werden Benutzer automatisch angemeldet.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="Das Beispiel zeigt den Setupbildschirm der Messaging-Erweiterung mit einer Anmeldeschaltfläche." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="Das Beispiel zeigt den Setupbildschirm der Messaging-Erweiterung mit einer Anmeldeschaltfläche auf Mobilgeräten." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="Das Beispiel zeigt den Setupbildschirm der Messaging-Erweiterung mit einer Anmeldeschaltfläche." border="false":::
 
 ## <a name="types-of-messaging-extensions"></a>Typen von Messaging-Erweiterungen
 
@@ -68,15 +64,13 @@ Messaging-Erweiterungen können Suchbefehle, Aktionsbefehle oder beides aufweise
 
 Mit Suchbefehlen können Benutzer Ihre Messaging-Erweiterung dazu nutzen, schnell externe Inhalte zu finden und in eine Nachricht einzufügen. Suchbefehle werden häufig im "Verfassen"-Feld zur Verfügung gestellt. Sie können z. B. eine Diskussion beginnen oder etwas zu einer Diskussion hinzufügen, indem Sie einen Teil des Inhalts teilen – ohne Teams verlassen zu müssen.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="Das Beispiel zeigt eine suchbasierte Messaging-Erweiterung, die über das &quot;Verfassen&quot;-Feld gestartet wurde." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="Das Beispiel zeigt eine suchbasierte Messaging-Erweiterung, die über das &quot;Verfassen&quot;-Feld auf mobilen Geräten gestartet wurde." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="Das Beispiel zeigt eine suchbasierte Messaging-Erweiterung, die über das &quot;Verfassen&quot;-Feld gestartet wurde." border="false":::
 
 #### <a name="compose-box-layout-options"></a>Layoutoptionen für das "Verfassen"-Feld 
 
@@ -98,37 +92,25 @@ Das "Verfassen"-Feld und Nachrichten oder Beiträge sind die primären Kontexte,
 
 Nach dem Hinzufügen können Benutzer Ihre Messaging-Erweiterung öffnen, indem sie ihr App-Symbol unter dem "Verfassen"-Feld auswählen. In diesen Beispielen verfügt die Erweiterung über Such- und Aktionsbefehle.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="Das Beispiel zeigt, wie Sie eine Messaging-Erweiterung über das &quot;Verfassen&quot;-Feld öffnen." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="Das Beispiel zeigt, wie Sie eine Messaging-Erweiterung über das &quot;Verfassen&quot;-Feld auf Mobilgeräten öffnen." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="Das Beispiel zeigt, wie Sie eine Messaging-Erweiterung über das &quot;Verfassen&quot;-Feld öffnen." border="false":::
 
 ### <a name="from-a-chat-message-or-channel-post"></a>Aus einer Chatnachricht oder einem Kanalbeitrag
 
 Nach dem Hinzufügen können Benutzer das Symbol **Weitere** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: in der Chatnachricht oder im Kanalbeitrag auswählen, um die Aktionsbefehle Ihrer Erweiterung zu finden. Ihre Erweiterung wird möglicherweise basierend auf der Nutzung unter **Weitere Aktionen** aufgeführt.
 
-> [!NOTE]
-> Unterstützung für weitere Aktionen aus einer Chatnachricht oder einem Kanalbeitrag ist auf der mobilen Microsoft Teams-Plattform nicht verfügbar. 
-
 #### <a name="chat-message"></a>Chatnachricht
-
-# <a name="desktop"></a>[Desktop](#tab/desktop)
 
 :::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="Das Beispiel zeigt, wie Sie eine Messaging-Erweiterung aus einer Chatnachricht öffnen." border="false":::
 
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="channel-post"></a>Kanalbeitrag
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-chat-post.png" alt-text="Das Beispiel zeigt, wie Sie eine Messaging-Erweiterung aus einem Chatbeitrag auf mobilen Geräten öffnen." border="false":::
-
----
-':::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
-':::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
----
+:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Das Beispiel zeigt, wie Sie eine Messaging-Erweiterung aus einem Kanalbeitrag auf mobilen Geräten öffnen." border="false":::
 
 ## <a name="use-a-messaging-extension"></a>Verwenden einer Messaging-Erweiterung
 
@@ -138,53 +120,33 @@ In den folgenden Szenarien wird veranschaulicht, wie Benutzer Messaging-Erweiter
 
 **1. Wählen Sie eine Messaging-Erweiterung aus**. Benutzer können über das "Verfassen"-Feld nach dem Inhalt suchen, den sie freigeben möchten.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="Das Beispiel zeigt einen Benutzer, der nach Inhalten sucht, die aus dem &quot;Verfassen&quot;-Feld eingefügt werden sollen." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="Das Beispiel zeigt einen Benutzer, der auf einem Mobilgerät über das &quot;Verfassen&quot;-Feld nach Inhalten sucht, die eingefügt werden sollen." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="Das Beispiel zeigt einen Benutzer, der nach Inhalten sucht, die aus dem &quot;Verfassen&quot;-Feld eingefügt werden sollen." border="false":::
 
 **2. Inhalt einfügen**. Nach der Veröffentlichung können andere Personen auf den Inhalt antworten oder diesen auswählen, um weitere Informationen in Ihrer App anzuzeigen.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="Das Beispiel zeigt, wie ein Benutzer Inhalte in einer Kanalunterhaltung postet." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="Das Beispiel zeigt, wie ein Benutzer auf einem Mobilgerät Inhalte in einer Kanalunterhaltung postet." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="Das Beispiel zeigt, wie ein Benutzer Inhalte in einer Kanalunterhaltung postet." border="false":::
 
 ### <a name="take-action-on-a-message"></a>Aktionen für eine Nachricht ausführen
 
 **1. Wählen Sie eine Messaging-Erweiterung aus**. Ihre App kann einen oder mehrere Aktionsbefehle enthalten.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
 :::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="Das Beispiel zeigt, wie ein Benutzer einen Aktionsbefehl für die Messaging-Erweiterung auswählt." border="false":::
 
-# <a name="mobile"></a>[Mobil](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-select-action-command.png" alt-text="Das Beispiel zeigt, wie ein Benutzer auf einem Mobilgerät einen Aktionsbefehl für die Messaging-Erweiterung auswählt." border="false":::
-
----
-
-**2. Führen Sie die Aktion aus**. Ihre App kann alle Inhalte oder Daten empfangen und verarbeiten, die von der Nachrichtenaktion gesendet werden. Dadurch können Benutzer in ihrer Unterhaltung bleiben und sich keine Gedanken über die direkte Eingabe von Informationen in Ihrer App machen, wie im folgenden Beispiel.
-
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+**2. Führen Sie die Aktion aus**. Ihre App kann alle Inhalte oder Daten empfangen und verarbeiten, die von der Nachrichtenaktion gesendet werden. Benutzer führen die Aktion in Ihrer App aus, während sie in ihrer Unterhaltung bleiben.
 
 :::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Beispiel für das Ausführen von Aktionen für eine Nachricht." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-complete-action-command.png" alt-text="Beispiel für das Ausführen von Aktionen für eine Nachricht auf einem Mobilgerät." border="false":::
-
----
 
 ### <a name="preview-links"></a>Vorschaulinks
 
@@ -192,27 +154,23 @@ Messaging-Erweiterungen ermöglichen es Ihnen auch, Rich-Links aus einer erkannt
 
 **1. Fügen Sie einen erkannten Link** in das "Verfassen"-Feld ein.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Das Beispiel zeigt, wie ein Benutzer einen Link in das &quot;Verfassen&quot;-Feld eingibt." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="Das Beispiel zeigt, wie ein Benutzer auf einem Mobilgerät einen Link in das &quot;Verfassen&quot;-Feld eingibt." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Das Beispiel zeigt, wie ein Benutzer einen Link in das &quot;Verfassen&quot;-Feld eingibt." border="false":::
 
 **2. Inhalt einfügen**. Wenn Ihre App die URL im "Verfassen"-Feld erkennt, rendert sie den Link als Karte, die eine inhaltsreiche Vorschau des Webinhalts bereitstellt. (Weitere Informationen finden Sie unter [Entwurfsrichtlinien für Adaptive Karten](../../task-modules-and-cards/cards/design-effective-cards.md).)
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="Das Beispiel zeigt, wie die URL umfangreiche Inhalte in das &quot;Verfassen&quot;-Feld einschließt, da sie von Ihrer App erkannt wird." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="Das Beispiel zeigt, wie die URL auf einem Mobilgerät umfangreiche Inhalte in das &quot;Verfassen&quot;-Feld einschließt, da sie von Ihrer App erkannt wird." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="Das Beispiel zeigt, wie die URL umfangreiche Inhalte in das &quot;Verfassen&quot;-Feld einschließt, da sie von Ihrer App erkannt wird." border="false":::
 
 ## <a name="manage-a-messaging-extension"></a>Verwalten einer Messaging-Erweiterung
 
@@ -222,9 +180,22 @@ Benutzer können Ihre Messaging-Erweiterung anheften, entfernen oder konfigurier
 
 ### <a name="messaging-extension-in-the-compose-box"></a>Messaging-Erweiterung im "Verfassen"-Feld
 
-Das folgende Beispiel ist eine Messaging-Erweiterung, die über das "Verfassen"-Feld geöffnet wird.
+Das folgenden Beispiele zeigen eine Messaging-Erweiterung, die über das "Verfassen"-Feld geöffnet wird.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+#### <a name="mobile"></a>Mobil
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="Abbildung zeigt die UI-Anatomie einer Messaging-Erweiterung im Feld &quot;Verfassen&quot;auf einem Mobilgerät." border="false":::
+
+|Leistungsindikator|Beschreibung|
+|----------|-----------|
+|1|**App-Name**: Vollständiger Name Ihrer App.|
+|2|**Menüsymbol für Aktionsbefehle (optional)**: Öffnet eine Liste von Aktionsbefehlen für Ihre Messaging-Erweiterung (sofern vorhanden).
+|3|**Suchfeld**: Ermöglicht Benutzern das Suchen von App-Inhalten, die sie einfügen möchten.|
+|4|**Registerkartenmenü (optional)**: Stellt mehrere Inhaltskategorien bereit.|
+|5|**Menü "Aktionsbefehle" (optional)**: Zeigt die Liste der Aktionsbefehle an (sofern angegeben).|
+|6|**App-Inhalt**: Hauptsächlich zum Anzeigen von Suchergebnissen.|
+
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="Abbildung zeigt die UI-Anatomie einer Messaging-Erweiterung im Feld &quot;Verfassen&quot;." border="false":::
 
@@ -238,21 +209,6 @@ Das folgende Beispiel ist eine Messaging-Erweiterung, die über das "Verfassen"-
 |6|**Menü "Aktionsbefehle" (optional)**: Zeigt die Liste der Aktionsbefehle an (sofern angegeben).|
 |7|**App-Inhalt**: Hauptsächlich zum Anzeigen von Suchergebnissen. Im folgenden Beispiel wird das Listenlayout verwendet (Rasterlayout ist eine weitere Option).|
 |8|**App-Logo**: Gliederungssymbol Ihres App-Logos.|
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="Abbildung zeigt die UI-Anatomie einer Messaging-Erweiterung im Feld &quot;Verfassen&quot;auf einem Mobilgerät." border="false":::
-
-|Leistungsindikator|Beschreibung|
-|----------|-----------|
-|1|**App-Name**: Vollständiger Name Ihrer App.|
-|2|**Menüsymbol für Aktionsbefehle (optional)**: Öffnet eine Liste von Aktionsbefehlen für Ihre Messaging-Erweiterung (sofern vorhanden).
-|3|**Suchfeld**: Ermöglicht Benutzern das Suchen von App-Inhalten, die sie einfügen möchten.|
-|4|**Registerkartenmenü (optional)**: Stellt mehrere Inhaltskategorien bereit.|
-|5|**Menü "Aktionsbefehle" (optional)**: Zeigt die Liste der Aktionsbefehle an (sofern angegeben).|
-|6|**App-Inhalt**: Hauptsächlich zum Anzeigen von Suchergebnissen.|
-
----
 
 ### <a name="messaging-extension-management-menu"></a>Menü "Verwalten der Messaging-Erweiterung"
 

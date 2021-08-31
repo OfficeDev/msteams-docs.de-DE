@@ -5,24 +5,24 @@ description: Erfahren Sie, wie Sie Aktivitätsfeedbenachrichtigungen für Ihre T
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 4a2b5510c2e5d0b26897593bbf0fdc0dc493b46ead3be669ff8b72d7cc3970eb
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 7bc5527a4ac849ab6a46692da85b051f86606f92
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705135"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408552"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Entwerfen von Aktivitätsfeedbenachrichtigungen für Ihre Microsoft Teams-App
 
 Der Aktivitätsfeed ist eine Oberfläche, auf der Benutzer auf ihre Benachrichtigungen in Microsoft Teams zugreifen können. Der Feed behält Benachrichtigungen aus den letzten vier Wochen bei.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Beispiel zeigt eine App-Benachrichtigung, die im Teams-Aktivitätsfeed angezeigt wird." border="false":::
-
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
 :::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="Beispiel zeigt eine App-Benachrichtigung, die im Teams Aktivitätsfeed auf mobilgeräten angezeigt wird." border="false":::
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Beispiel zeigt eine App-Benachrichtigung, die im Teams Aktivitätsfeed angezeigt wird." border="false":::
 
 ---
 
@@ -47,11 +47,20 @@ Die folgenden Varianten zeigen die Arten von Aktivitätsfeed-Benachrichtigungska
 
 ## <a name="manage-activity-feed-notifications"></a>Verwalten von Aktivitätsfeedbenachrichtigungen
 
-Benutzer können Benachrichtigungen, die von Ihrer App gesendet werden, auf der Einstellungsseite Teams verwalten.
+Benutzer können Benachrichtigungen, die von Ihrer App gesendet werden, auf der Seite Teams Einstellungen verwalten.
 
 ## <a name="related-system-notifications"></a>Zugehörige Systembenachrichtigungen
 
 Jede Aktivität generiert eine Systembenachrichtigung. Was angezeigt wird, hängt davon ab, was der Benutzer in den Benachrichtigungseinstellungen konfiguriert. Benutzer können auch ein Benachrichtigungsformat basierend auf ihrem Betriebssystem auswählen.
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/activity-feed/mobile-related-system-notifications.png" alt-text="Varianten von Teams Aktivitätsfeedkarten unter Android und iOS." border="false":::
+
+|Leistungsindikator|Beschreibung|
+|----------|-----------|
+|1|Android|
+|2|iOS|
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
@@ -62,15 +71,6 @@ Jede Aktivität generiert eine Systembenachrichtigung. Was angezeigt wird, häng
 |1|benutzerdefinierte Teams|
 |2|Windows|
 |3|Mac|
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
-
-:::image type="content" source="../../assets/images/activity-feed/mobile-related-system-notifications.png" alt-text="Varianten von Teams Aktivitätsfeedkarten unter Android und iOS." border="false":::
-
-|Leistungsindikator|Beschreibung|
-|----------|-----------|
-|1|Android|
-|2|iOS|
 
 ---
 

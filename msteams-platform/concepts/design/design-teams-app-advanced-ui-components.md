@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über die UI-Komponenten, die in Teams verwendet 
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: a23cd05947ac2d9d4e8117420bf2e2c11613e430989613bf2d267e5c892bf39c
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 90dcf95cfde1d7c6c2878da7a10d8b3b0245de3f
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703502"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408692"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Entwerfen Ihrer Microsoft Teams-App mit erweiterten UI-Komponenten
 
@@ -32,15 +32,13 @@ Breadcrumbs sind eine Navigationshilfe, die die Hierarchie Ihrer App vermittelt.
 * Kommunizieren der Hierarchie
 * Navigation
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="Beispiel zeigt eine Breadcrumbvorlage auf dem Desktop." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="Beispiel zeigt eine Breadcrumbvorlage auf Mobilgeräten." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="Beispiel zeigt eine Breadcrumbvorlage auf dem Desktop." border="false":::
 
 ## <a name="left-nav"></a>Linker Navigationsbereich
 
@@ -51,15 +49,13 @@ Verwenden Sie die linke Navigationsleiste, um mehrere Seiten in Ihrer Teams Regi
 * Durchsuchen Sie mehrere Seiten innerhalb einer Teams Registerkarte.
 * Teilen Sie komplexe Apps auf mehrere Seiten auf.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Beispiel zeigt eine Vorlage für die linke Navigation auf dem Desktop." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="Beispiel zeigt eine Vorlage für die linke Navigation auf mobilgeräten." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Beispiel zeigt eine Vorlage für die linke Navigation auf dem Desktop." border="false":::
 
 ## <a name="notification-bar"></a>Benachrichtigungsleiste
 
@@ -71,15 +67,13 @@ Eine Benachrichtigungsleiste ist ein dedizierter Bereich zum Anzeigen kurzer, wi
 * Erfolgsmeldungen
 * Informations- oder Werbenachrichten
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Beispiel zeigt Vorlagen für die Benachrichtigungsleiste auf dem Desktop." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="Beispiel zeigt die Benachrichtigungsleisten-UI-Vorlage auf mobilgeräten." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Beispiel zeigt Vorlagen für die Benachrichtigungsleiste auf dem Desktop." border="false":::
 
 ## <a name="stage"></a>Stufe
 
@@ -92,17 +86,15 @@ Erfahren Sie, wie Sie [die Phase](~/tabs/tabs-link-unfurling.md)implementieren.
 * Anzeigen von Inhalten auf einer großen Oberfläche innerhalb Teams anstelle einer anderen App oder eines anderen Browsers
 * Spotlight-Medien oder andere umfangreiche Inhalte
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Beispiel zeigt eine Phasenvorlage auf dem Desktop." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobilgeräte
 
 Ihre App kann eine Phase über eine adaptive Karte, einen freigegebenen Link oder visuelle Komponenten (z. B. ein Diagramm) starten.
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="Beispiel zeigt eine Phasenvorlage auf mobilgeräten." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Beispiel zeigt eine Phasenvorlage auf dem Desktop." border="false":::
 
 ## <a name="toolbar"></a>Symbolleiste
 
@@ -114,12 +106,10 @@ Eine Symbolleiste ist ein Container zum Gruppieren einer Gruppe von Steuerelemen
 * Kontextfilter und -suche
 * Navigation und Breadcrumbs
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="Beispiel zeigt eine Symbolleistenvorlage auf dem Desktop." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="Beispiel zeigt eine Symbolleistenvorlage auf mobilgeräten." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="Beispiel zeigt eine Symbolleistenvorlage auf dem Desktop." border="false":::

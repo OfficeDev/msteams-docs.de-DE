@@ -1,16 +1,16 @@
 ---
 title: Entwerfen von Aufgabenmodulen
 author: heath-hamilton
-description: Erfahren Sie, wie Sie Aufgabenmodule für Teams-Apps entwerfen und das Microsoft Teams UI Kit erhalten.
+description: Erfahren Sie, wie Sie Aufgabenmodule für Teams Apps entwerfen und das Microsoft Teams UI Kit erhalten.
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: f96684614766f5129bad31dc143b9be83e901ffa82df2f204a20e12fc79e7e49
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 9248fba30726511d025e71957c0d9f2bac4c9866
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708200"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408615"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Entwerfen von Aufgabenmodulen für Ihre Microsoft Teams-App
 
@@ -30,9 +30,9 @@ Umfassendere Entwurfsrichtlinien für Aufgabenmodule, einschließlich Elementen,
 Aufgabenmodule können von fast überall in Ihrer App gestartet werden.
 
 * **Registerkarte:** Ein Aufgabenmodul kann über einen beliebigen Link innerhalb einer Registerkarte gestartet werden. Wird in Szenarien verwendet, in denen der Benutzer sich auf eine Interaktion konzentrieren soll.
-* **Bot:** Ein Aufgabenmodul kann über einen Link in einer Bot-Nachricht gestartet werden.
+* **Bot:** Ein Aufgabenmodul kann über einen Link innerhalb einer Bot-Nachricht gestartet werden.
 * **Adaptive Karte:** Ein Aufgabenmodul kann von einer adaptiven Karte (gesendet mit einer Messaging-Erweiterung oder von einem Bot) gestartet werden, wenn ein Benutzer eine Schaltfläche auswählt.
-* **Messaging-Erweiterung (Aktionsbefehle):** Messaging-Erweiterungen ermöglichen es Ihnen, eine bestimmte Aktion für Nachrichteninhalte auszuführen. Wenn Sie eine Aktion auswählen, wird ein Aufgabenmodul geöffnet.
+* **Messaging-Erweiterung (Aktionsbefehle):** Messaging-Erweiterungen ermöglichen Es Ihnen, eine bestimmte Aktion für Nachrichteninhalte auszuführen. Wenn Sie eine Aktion auswählen, wird ein Aufgabenmodul geöffnet.
 * **Messaging-Erweiterung (Verfassenfeldkontext):** Im Feld "Verfassen" können Sie eine Messaging-Erweiterung so entwerfen, dass anstelle des typischen Flyouts ein Aufgabenmodul geöffnet wird. Reservieren Sie Aufgabenmodule für komplexe Interaktionen, z. B. das Ausfüllen eines Formulars.
 
 ## <a name="anatomy"></a>Anatomie
@@ -41,20 +41,7 @@ Aufgabenmodule bieten eine flexible Oberfläche für gehostete App-Umgebungen. S
 
 Sie können auch mit dem Framework für [adaptive Karten](../../task-modules-and-cards/cards/design-effective-cards.md) erstellt werden, was eine einfachere und schnellere Möglichkeit sein kann, allgemeine Szenarien (z. B. Formulare) zu vereinfachen.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Abbildung der Ui-Anatomie eines Aufgabenmoduls." border="false":::
-
-|Leistungsindikator|Beschreibung|
-|----------|-----------|
-|1|**App-Symbol**|
-|2|**App-Name**: Vollständiger Name Ihrer App.|
-|3|**Kopfzeile:** Kopfzeilen klar und prägnant gestalten. Beschreiben Sie die Aufgabe, die Benutzer ausführen sollen.
-|4 |**Schaltfläche "Schließen":** Schließt das Aufgabenmodul. Es werden keine nicht gespeicherten Änderungen im App-Inhalt angewendet.|
-|5 |**iframe:** Dynamischer Speicherplatz, in dem Ihre App-Inhalte gehostet werden.|
-|6 |**Aktionen (optional):** Schaltflächen im Zusammenhang mit Ihrem App-Inhalt.|
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Abbildung der UI-Anatomie eines Aufgabenmoduls auf mobilgeräten." border="false":::
 
@@ -66,7 +53,18 @@ Sie können auch mit dem Framework für [adaptive Karten](../../task-modules-and
 |4 |**Webview:** Reaktionsfähiger Speicherplatz, in dem Ihre App-Inhalte gehostet werden.|
 |5 |**Aktionen (optional):** Schaltflächen im Zusammenhang mit Ihrem App-Inhalt.|
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Abbildung der Ui-Anatomie eines Aufgabenmoduls." border="false":::
+
+|Leistungsindikator|Beschreibung|
+|----------|-----------|
+|1|**App-Symbol**|
+|2|**App-Name**: Vollständiger Name Ihrer App.|
+|3|**Kopfzeile:** Kopfzeilen klar und prägnant gestalten. Beschreiben Sie die Aufgabe, die Benutzer ausführen sollen.
+|4 |**Schaltfläche "Schließen":** Schließt das Aufgabenmodul. Es werden keine nicht gespeicherten Änderungen im App-Inhalt angewendet.|
+|5 |**iframe:** Dynamischer Speicherplatz, in dem Ihre App-Inhalte gehostet werden.|
+|6 |**Aktionen (optional):** Schaltflächen im Zusammenhang mit Ihrem App-Inhalt.|
 
 ## <a name="designing-with-ui-templates"></a>Entwerfen mit UI-Vorlagen
 
@@ -82,99 +80,85 @@ Erwägen Sie die Verwendung von Vorlagen für allgemeine Layouts in Ihren Aufgab
 
 Listen funktionieren gut in einem Aufgabenmodul, da sie einfach zu scannen sind.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Beispielliste in einem Aufgabenmodul." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="Beispielliste in einem Aufgabenmodul auf mobilen Geräten." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Beispielliste in einem Aufgabenmodul." border="false":::
 
 ### <a name="form"></a>Formular
 
 Aufgabenmodule eignen sich hervorragend zum Anzeigen von Formularen mit sequenziellen Benutzereingaben und Inlineüberprüfungen. Sie können adaptive Karten zum Einbetten von Formularelementen verwenden.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/form.png" alt-text="Beispielformular in einem Aufgabenmodul." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Beispielformular in einem Aufgabenmodul auf mobilen Geräten." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/task-module/form.png" alt-text="Beispielformular in einem Aufgabenmodul." border="false":::
 
 ### <a name="sign-in"></a>Anmelden
 
 Erstellen Sie einen fokussierten Anmelde- oder Registrierungsfluss mit einer Reihe von Aufgabenmodulen, sodass Benutzer problemlos sequenzielle Schritte durchlaufen können.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Beispiel für die Anmeldung in einem Aufgabenmodul." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Beispiel für die Anmeldung in einem Aufgabenmodul auf mobilen Geräten." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
 
-### <a name="media"></a>Media
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Beispiel für die Anmeldung in einem Aufgabenmodul." border="false":::
+
+### <a name="media"></a>Medien
 
 Einbetten von Medieninhalten in ein Aufgabenmodul für eine fokussierte Anzeige.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Beispiel für Medieninhalte in einem Aufgabenmodul." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="Beispiel für Medieninhalte in einem Aufgabenmodul auf mobilen Geräten." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Beispiel für Medieninhalte in einem Aufgabenmodul." border="false":::
 
 ### <a name="empty-state"></a>Leerer Zustand
 
 Wird für Begrüßungs-, Fehler- und Erfolgsmeldungen verwendet.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Beispiel für einen leeren Zustand in einem Aufgabenmodul." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="Beispiel für einen leeren Zustand in einem Aufgabenmodul auf mobilen Geräten." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Beispiel für einen leeren Zustand in einem Aufgabenmodul." border="false":::
 
 ### <a name="image-gallery"></a>Bildergalerie
 
 Einbetten eines Katalog-Karussells in einen iframe (Desktop) oder eine Webansicht (mobil).
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Beispielbildgalerie in einem Aufgabenmodul." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+##### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="Beispielbildgalerie in einem Aufgabenmodul auf mobilen Geräten." border="false":::
 
----
+##### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Beispielbildgalerie in einem Aufgabenmodul." border="false":::
 
 ### <a name="poll"></a>Umfrage
 
 In diesem Beispiel werden die Von einer adaptiven Karte gestarteten Umfrageergebnisse gezeigt. Die Abfrage kann auch in einem Aufgabenmodul platziert werden.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Beispielumfrage in einem Aufgabenmodul." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="Beispielumfrage in einem Aufgabenmodul auf mobilen Geräten." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Beispielumfrage in einem Aufgabenmodul." border="false":::
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
@@ -196,7 +180,7 @@ Das Ziel besteht darin, den Benutzer auf die Erledigung einer Aufgabe zu konzent
 
 #### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>Don't: Popup eines Dialogfelds über einem Aufgabenmodul
 
-Dies führt zu einer unfokussierten, verwirrenden Benutzererfahrung.
+Dadurch entsteht eine unfokussierte, verwirrende Benutzererfahrung.
 
    :::column-end:::
 :::row-end:::

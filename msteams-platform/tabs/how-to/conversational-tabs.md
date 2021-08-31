@@ -5,12 +5,12 @@ description: Erstellen eines Unterhaltungsunterentitätschats für Ihre Kanalreg
 keywords: Kanal "Teams-Registerkarten" konfigurierbar
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: 6c2574453f00735d4441c389648df375fc1d01046d2c8f558b470efe4f3392ca
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: dffd4eb468167561735dbc292a400416c9bb11af
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705106"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58529007"
 ---
 # <a name="create-conversational-tabs"></a>Registerkarten für Unterhaltungen erstellen
 
@@ -89,7 +89,13 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 };
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="code-sample"></a>Codebeispiel
+
+| Beispielname | Beschreibung | C# |Node.js|
+|-------------|-------------|------|----|
+|Registerkarte "Unterhaltung erstellen"| Microsoft Teams Registerkartenbeispiel-App zum Demonstrieren der Registerkarte "Unterhaltung erstellen". | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+
+## <a name="see-also"></a>Siehe auch
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)

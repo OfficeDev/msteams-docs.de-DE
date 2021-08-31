@@ -5,16 +5,16 @@ author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f6ff2799b5f300eded89ff24b75114a7ba0fa79b330a543e684e99127dc89e4c
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a949687ee53186b4449ad086b4db6c89cc151995
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709446"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408629"
 ---
-# <a name="design-your-tab-for-microsoft-teams"></a>Entwerfen der Registerkarte für Microsoft Teams
+# <a name="design-your-tab-for-microsoft-teams"></a>Entwerfen Der Registerkarte für Microsoft Teams
 
-Eine Registerkarte ist ein großer Zeichenbereich für Ihre App-Inhalte. Zur Anleitung ihres App-Designs beschreiben und veranschaulichen die folgenden Informationen, wie Benutzer Registerkarten in Teams hinzufügen, verwenden und verwalten können.
+Eine Registerkarte ist ein großer Zeichenbereich für Ihre App-Inhalte. Um Ihr App-Design zu leiten, beschreiben und veranschaulichen die folgenden Informationen, wie Benutzer Registerkarten in Teams hinzufügen, verwenden und verwalten können.
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
@@ -31,19 +31,17 @@ Sie können eine Registerkarte aus dem Teams Store (AppSource) oder in einem der
 * Kanal
 * Besprechung (vor, während oder nach der Besprechung)
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-Das folgende Beispiel zeigt, wie Benutzer eine Registerkarte in einem Kanal hinzufügen können.
-
-:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Beispiel zeigt eine Registerkarte, die in einem Kanal hinzugefügt wird." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobilgeräte
 
 Benutzer können auf Registerkarten zugreifen, indem sie die Schaltfläche **"Mehr"** im Kanal (Beispiel unten) oder den Chat auswählen, in dem sie hinzugefügt wurden.
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="Beispiel zeigt, wie eine mobile Registerkarte in einem Kanal hinzugefügt wird." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+Das folgende Beispiel zeigt, wie Benutzer eine Registerkarte in einem Kanal hinzufügen können.
+
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Beispiel zeigt eine Registerkarte, die in einem Kanal hinzugefügt wird." border="false":::
 
 ## <a name="set-up-a-tab"></a>Einrichten einer Registerkarte
 
@@ -53,7 +51,7 @@ Es gibt einen kurzen Einrichtungsprozess, um eine App als Kanal, Chat oder Bespr
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Beispiel zeigt eine modale Registerkartenkonfiguration." border="false":::
 
-### <a name="anatomy-tab-configuration-dialog"></a>Anatomie: Dialogfeld "Registerkartenkonfiguration"
+#### <a name="anatomy-tab-configuration-dialog"></a>Anatomie: Dialogfeld "Registerkartenkonfiguration"
 
 :::image type="content" source="../../assets/images/tabs/test.png" alt-text="Abbildung der Ui-Anatomie einer modalen Registerkartenkonfiguration." border="false":::
 
@@ -84,21 +82,29 @@ Verwenden Sie eine der folgenden Teams Ui-Vorlagen, um die Registerkarteneinrich
 
 ## <a name="view-a-tab"></a>Anzeigen einer Registerkarte
 
-Registerkarten bieten eine Weboberfläche im Vollbildmodus in Teams, in der Sie Inhalte für die Zusammenarbeit , z. B. Taskboards und Dashboards, sowie wichtige Informationen anzeigen können.
+Registerkarten bieten eine Weboberfläche im Vollbildmodus in Teams, in der Sie Inhalte für die Zusammenarbeit wie Taskboards und Dashboards sowie wichtige Informationen anzeigen können.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Beispiel zeigt eine Registerkarte mit einem Task Board." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="Beispiel zeigt eine mobile Registerkarte mit einem Task Board." border="false":::
 
----
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Beispiel zeigt eine Registerkarte mit einem Task Board." border="false":::
 
 ### <a name="anatomy-tab"></a>Anatomie: Registerkarte
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+#### <a name="mobile"></a>Mobilgeräte
+
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Abbildung der Ui-Anatomie einer Registerkarte." border="false":::
+
+|Leistungsindikator|Beschreibung|
+|----------|-----------|
+|1|**Registerkartenname:** Navigationsbezeichnung für Ihre Registerkarte.|
+|2|**Registerkartenchat:** Öffnet einen Chat, mit dem Benutzer eine Unterhaltung neben dem Inhalt führen können.|
+|3|**webview:** Zeigt Ihre App-Inhalte an.|
+
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Abbildung der Ui-Anatomie einer Registerkarte." border="false":::
 
@@ -109,19 +115,7 @@ Registerkarten bieten eine Weboberfläche im Vollbildmodus in Teams, in der Sie 
 |3|**Registerkartenchat:** Öffnet einen Chat auf der rechten Seite, sodass Benutzer eine Unterhaltung neben dem Inhalt führen können.|
 |4 |**iframe:** Zeigt Ihre App-Inhalte an.|
 
-# <a name="mobile"></a>[Mobil](#tab/mobile)
-
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Abbildung der Ui-Anatomie einer Registerkarte." border="false":::
-
-|Leistungsindikator|Beschreibung|
-|----------|-----------|
-|1|**Registerkartenname:** Navigationsbezeichnung für Ihre Registerkarte.|
-|2|**Registerkartenchat:** Öffnet einen Chat, mit dem Benutzer eine Unterhaltung neben dem Inhalt führen können.|
-|3|**webview:** Zeigt Ihre App-Inhalte an.|
-
----
-
-### <a name="designing-a-tab-with-ui-templates-and-advanced-components"></a>Entwerfen einer Registerkarte mit Benutzeroberflächenvorlagen und erweiterten Komponenten
+### <a name="design-a-tab-with-ui-templates-and-advanced-components"></a>Entwerfen einer Registerkarte mit Benutzeroberflächenvorlagen und erweiterten Komponenten
 
 Verwenden Sie eine der folgenden Teams Vorlagen und Komponenten, um die Registerkartenerfahrung zu entwerfen:
 
@@ -138,31 +132,27 @@ Registerkarten erleichtern Unterhaltungen zu Inhalten an einem zentralen Ort.
 
 ### <a name="thread-discussion"></a>Diskussionsthread
 
-Benutzer können automatisch Beiträge in einem Kanal oder Chat veröffentlichen, nachdem sie eine neue Registerkarte hinzugefügt haben. Dies benachrichtigt nicht nur Teammitglieder über den neuen Inhalt und stellt einen Link zur Registerkarte bereit, sondern ermöglicht es Personen, mit dem Gespräch über die Registerkarte zu beginnen.
+Benutzer können automatisch Beiträge in einem Kanal oder Chat veröffentlichen, nachdem sie eine neue Registerkarte hinzugefügt haben. Dadurch werden Teammitglieder nicht nur über den neuen Inhalt benachrichtigt und ein Link zur Registerkarte bereitgestellt, sondern es können auch Personen beginnen, über die Registerkarte zu sprechen.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Beispiel zeigt eine Registerkarte, die in einem Kanalthread behandelt wird." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="Beispiel zeigt eine mobile Registerkarte, die in einem Kanalthread behandelt wird." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Beispiel zeigt eine Registerkarte, die in einem Kanalthread behandelt wird." border="false":::
 
 ### <a name="tab-chat"></a>Registerkartenchat
 
 Benutzer können eine Unterhaltung neben dem angezeigten Registerkarteninhalt führen. Auf dem Desktop wird der Chat an der Seite des App-Inhalts geöffnet.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Beispiel zeigt eine Registerkarte mit geöffneten Chats auf der rechten Seite." border="false":::
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="Beispiel zeigt eine mobile Registerkarte mit einem Kontextchatbereich." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Beispiel zeigt eine Registerkarte mit geöffneten Chats auf der rechten Seite." border="false":::
 
 ### <a name="permissions-and-role-based-views"></a>Berechtigungen und rollenbasierte Ansichten
 
@@ -174,17 +164,7 @@ Sie können Optionen zum Umbenennen, Entfernen oder Ändern einer Registerkarte 
 
 ### <a name="anatomy-tab-menu"></a>Anatomie: Registerkartenmenü
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Abbildung der Ui-Anatomie eines Registerkartenmenüs." border="false":::
-
-|Leistungsindikator|Beschreibung|
-|----------|-----------|
-|1|**Einstellungen:**(Optional) Ermöglicht Benutzern, die Einstellungen einer Registerkarte zu ändern, nachdem sie hinzugefügt wurde.|
-|2|**Umbenennen:** Benutzer können der Registerkarte einen Namen geben, der für den Kanal, den Chat oder die Besprechung von Bedeutung ist.|
-|3|**Entfernen:** Entfernt die Registerkarte aus dem Kanal, Chat oder der Besprechung.|
-
-# <a name="mobile"></a>[Mobil](#tab/mobile)
+#### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="Abbildung der Ui-Anatomie eines mobilen Registerkartenmenüs." border="false":::
 
@@ -192,11 +172,19 @@ Sie können Optionen zum Umbenennen, Entfernen oder Ändern einer Registerkarte 
 |----------|-----------|
 |1|**Im Browser öffnen:** Öffnet die App im Standardbrowser des Geräts.|
 |2|**Link kopieren:** Benutzer können einen Link zu der Registerkarte kopieren und freigeben.|
-|3|**Einstellungen**: (Optional) Ändern Sie die Einstellungen einer Registerkarte, nachdem sie hinzugefügt wurde.|
+|3|**Einstellungen:**(Optional) Ändern Sie die Einstellungen einer Registerkarte, nachdem sie hinzugefügt wurde.|
 |4 |**Umbenennen:** Benutzer können der Registerkarte einen Namen geben, der für den Kanal, den Chat oder die Besprechung von Bedeutung ist.|
 |5 |**Löschen:** Entfernt die Registerkarte aus dem Kanal, Chat oder der Besprechung.|
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Abbildung der Ui-Anatomie eines Registerkartenmenüs." border="false":::
+
+|Leistungsindikator|Beschreibung|
+|----------|-----------|
+|1|**Einstellungen**: (Optional) Ermöglicht Benutzern, die Einstellungen einer Registerkarte zu ändern, nachdem sie hinzugefügt wurde.|
+|2|**Umbenennen:** Benutzer können der Registerkarte einen Namen geben, der für den Kanal, den Chat oder die Besprechung von Bedeutung ist.|
+|3|**Entfernen:** Entfernt die Registerkarte aus dem Kanal, Chat oder der Besprechung.|
 
 ## <a name="tab-notifications-and-deep-linking"></a>Registerkartenbenachrichtigungen und Deep-Verknüpfung
 

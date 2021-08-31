@@ -5,12 +5,12 @@ description: So arbeiten Sie mit Unterhaltungsereignissen aus Ihrem Microsoft Te
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: c50409720bdb700295934171d8a2a3474205adb59e8397dcc64a01b9aec23fa3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 94bbb43110e45c9ab84c686f8fc8e2ade19d6998
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703627"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58529000"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Unterhaltungsereignisse in Ihrem Teams-Bot
 
@@ -1289,12 +1289,10 @@ async def on_reactions_removed(
 Der Bot empfängt ein `installationUpdate` Ereignis, wenn Sie einen Bot in einem Unterhaltungsthread installieren. Die Deinstallation des Bots aus dem Thread löst auch das Ereignis aus. Bei der Installation eines Bots wird das **Aktionsfeld** im Ereignis so festgelegt, dass *es hinzugefügt* wird, und wenn der Bot deinstalliert wird, wird das **Aktionsfeld** so festgelegt, dass *es entfernt* wird.
  
 > [!NOTE]
-> Wenn Sie eine Anwendung aktualisieren und dann einen Bot hinzufügen oder entfernen, löst die Aktion auch das `installationUpdate` Ereignis aus. Das **Aktionsfeld** wird auf *"Add-Upgrade"* festgelegt, wenn Sie einen Bot hinzufügen, oder *"remove-upgrade",* wenn Sie einen Bot entfernen. 
-
-> [!IMPORTANT]
-> Installationsupdateereignisse befinden sich heute in der Entwicklervorschau und werden im März 2021 allgemein verfügbar sein. Um die Installationsupdateereignisse anzuzeigen, können Sie Ihren Teams-Client in die öffentliche Entwicklervorschau verschieben und Ihre App persönlich oder zu einem Team oder einem Chat hinzufügen.
+> Wenn Sie eine Anwendung aktualisieren und dann einen Bot hinzufügen oder entfernen, löst die Aktion auch das `installationUpdate` Ereignis aus. Das **Aktionsfeld** wird auf *"Add-Upgrade"* festgelegt, wenn Sie einen Bot hinzufügen, oder *"remove-upgrade",* wenn Sie einen Bot entfernen.
 
 ### <a name="install-update-event"></a>Updateereignis installieren
+
 Verwenden Sie das Ereignis, um bei der `installationUpdate` Installation eine Einführungsnachricht von Ihrem Bot zu senden. Dieses Ereignis hilft Ihnen, Ihre Datenschutz- und Datenaufbewahrungsanforderungen zu erfüllen. Sie können auch Benutzer- oder Threaddaten bereinigen und löschen, wenn der Bot deinstalliert wird.
 
 # <a name="c"></a>[C#](#tab/dotnet)
@@ -1408,7 +1406,7 @@ Es ist wichtig zu wissen, dass neue Ereignisse jederzeit in der Zukunft hinzugef
 
 | **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
-| Unterhaltungsbot | Beispielcode für Bots-Unterhaltungsereignisse. | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Unterhaltungsbot | Beispielcode für Bots-Unterhaltungsereignisse. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

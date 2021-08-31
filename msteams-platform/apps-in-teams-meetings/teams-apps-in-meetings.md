@@ -6,18 +6,18 @@ ms.topic: overview
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Teams-Apps – Benutzerteilnehmer-Rollen-API für Besprechungen
-ms.openlocfilehash: f86e6fe359b5c3cdf76372e82a4faa0403d529bfd94d473e7f924e449826aa29
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ac2f2433ddea126b343afa48c11efdf547ad0023
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702138"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528876"
 ---
 # <a name="apps-for-teams-meetings"></a>Apps für Teams Besprechungen
 
-Besprechungen ermöglichen zusammenarbeiten, Partnerschaft, informierte Kommunikation und gemeinsames Feedback in einem inklusiven und aktiven Forum. Die Besprechungs-App kann je nach Status des Teilnehmers eine Benutzererfahrung für jede Phase des Besprechungslebenszyklus bereitstellen, einschließlich der App-Erfahrung vor der Besprechung, in besprechungsbesprechung und nach der Besprechung.
+Besprechungen ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikation und gemeinsames Feedback. Die Besprechungs-App kann eine Benutzererfahrung für jede Phase des Besprechungslebenszyklus bereitstellen. Der Besprechungslebenszyklus umfasst die App-Erfahrung vor der Besprechung, in besprechungsbesprechung und nach der Besprechung, je nach Status des Teilnehmers.
 
-Die Benutzer können während Besprechungen über den Registerkartenkatalog auf Apps zugreifen, z. B.:
+Die Benutzer können in Besprechungen über den Registerkartenkatalog aus ihrem Kalender auf Apps zugreifen, z. B.:
 
 * Vorabphase eines Boards für Diess.
 * Starten Sie ein Dialogfeld, in dem Aktionen ausgeführt werden können.
@@ -25,15 +25,19 @@ Die Benutzer können während Besprechungen über den Registerkartenkatalog auf 
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
 
-Dieser Artikel bietet eine Übersicht über die Erweiterbarkeit von Besprechungs-Apps, API-Referenzen, das Aktivieren und Konfigurieren von Apps für Besprechungen und benutzerdefinierte Szenen im Gemeinsamen Modus in Teams.
+Die folgende Abbildung gibt Ihnen eine Vorstellung von den Erweiterbarkeitsfunktionen der Besprechungs-App:
 
-Sie können Ihre Besprechungserfahrung verbessern, indem Sie das Feature zur Besprechungserweiterung verwenden, mit dem Sie Ihre Apps in Besprechungen integrieren können. Es umfasst auch verschiedene Phasen eines Besprechungslebenszyklus, in denen Sie Registerkarten, Bots und Messaging-Erweiterungen integrieren können. Mit Besprechungserweiterungs-APIs können Sie unterschiedliche Teilnehmerrollen und Benutzertypen identifizieren, Besprechungsereignisse abrufen, In-Meeting-Dialogfelder generieren usw.
+![Erweiterbarkeit der Besprechungs-App](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
-Um Teams mit Apps für Besprechungen anzupassen, können Sie Ihre Apps für Teams Besprechungen aktivieren, indem Sie Ihr App-Manifest aktualisieren und Ihre Apps auch für Besprechungsszenarien konfigurieren.
+Dieser Artikel bietet eine Übersicht über die Erweiterbarkeit von Besprechungs-Apps, API-Referenzen, das Aktivieren und Konfigurieren von Apps für Besprechungen und benutzerdefinierte Szenen im Zusammen-Modus in Teams.
 
-Mit der neuen benutzerdefinierten Szenenfunktion für den gemeinsamen Modus können Benutzer in einer Besprechung mit ihrem Team an einem Ort zusammenarbeiten, ohne durch Felder getrennt zu sein.
+Verbessern Sie Ihre Besprechungserfahrung mithilfe des Features zur Besprechungserweiterung. Mit diesem Feature können Sie Ihre Apps in Besprechungen integrieren. Es umfasst auch verschiedene Phasen eines Besprechungslebenszyklus, in denen Sie Registerkarten, Bots und Messaging-Erweiterungen integrieren können. Sie können verschiedene Teilnehmerrollen und Benutzertypen identifizieren, Besprechungsereignisse abrufen und In-Meeting-Dialogfelder generieren.
 
-## <a name="see-also"></a>Weitere Informationen
+Um Teams mit Apps für Besprechungen anzupassen, aktivieren Sie Ihre Apps für Teams Besprechungen, indem Sie das App-Manifest aktualisieren und die Apps für Besprechungsszenarien konfigurieren.
+
+Mit der neuen benutzerdefinierten Szenenfunktion für den gemeinsamen Modus können Benutzer an einem Ort in einer Besprechung mit ihrem Team zusammenarbeiten.
+
+## <a name="see-also"></a>Siehe auch
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
