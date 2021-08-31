@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: Teams-Autorisierung OAuth SSO AAD rsc Graph
-ms.openlocfilehash: c013153470b4be54df82fa313b5d2f8dca16fe9a
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 1dcb12c7e76671867ec632f02177565dee212fc4
+ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528950"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "58822213"
 ---
 # <a name="resource-specific-consent"></a>Ressourcenspezifische Zustimmung
 
@@ -43,6 +43,7 @@ Die granularen, Teams-spezifischen RSC-Berechtigungen definieren, was eine Anwen
 |TeamsTab.ReadWrite.Group|Aktualisieren Sie die Registerkarten dieses Teams. |
 |TeamsTab.Delete.Group|Löschen der Registerkarten dieses Teams. |
 |TeamMember.Read.Group|Rufen Sie die Mitglieder dieses Teams ab. |
+|TeamsActivity.Send.Group|Erstellen Sie neue Benachrichtigungen in den Aktivitätsfeeds der Benutzer in diesem Team. |
 
 Weitere Informationen finden Sie unter [teamressourcenspezifische Zustimmungsberechtigungen.](/graph/permissions-reference#teams-resource-specific-consent-permissions)
 
@@ -65,6 +66,7 @@ Die folgende Tabelle enthält ressourcenspezifische Berechtigungen für einen Ch
 | OnlineMeeting.ReadBasic.Chat   | Lesen Sie grundlegende Eigenschaften wie Name, Zeitplan, Organisator, Verknüpfung und Start-/End-Benachrichtigungen einer Besprechung, die diesem Chat zugeordnet ist. |
 | Calls.AccessMedia.Chat         | Zugreifen auf Mediendatenströme in Anrufen, die mit diesem Chat oder dieser Besprechung verbunden sind.                                    |
 | Calls.JoinGroupCall.Chat         | Nehmen Sie an Anrufen teil, die mit diesem Chat oder dieser Besprechung verbunden sind.                                    |
+| TeamsActivity.Send.Chat         | Erstellen Sie neue Benachrichtigungen in den Aktivitätsfeeds der Benutzer in diesem Chat. |
 
 Weitere Informationen finden Sie unter ["Ressourcenspezifische Zustimmungsberechtigungen für Chats".](/graph/permissions-reference#chat-resource-specific-consent-permissions)
 
@@ -126,7 +128,7 @@ Das AAD-Portal bietet Ihnen eine zentrale Plattform zum Registrieren und Konfigu
 > [!IMPORTANT]
 > Das AAD-Portal kann nicht zum Anfordern von RSC-Berechtigungen verwendet werden. RSC-Berechtigungen gelten derzeit ausschließlich für Teams Anwendungen, die im Teams-Client installiert sind, und werden in der JSON-Datei (Teams App Manifest) deklariert.
 
-## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>Abrufen eines Zugriffstokens von der Microsoft Identity Platform
+## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>Abrufen eines Zugriffstokens vom Microsoft Identity Platform
 
 Um Graph API-Aufrufe auszuführen, müssen Sie ein Zugriffstoken für Ihre App von der Identitätsplattform abrufen. Bevor Ihre App ein Token von der Identitätsplattform abrufen kann, muss sie im AAD-Portal registriert werden. Das Zugriffstoken enthält Informationen zu Ihrer App und die Berechtigungen, über die es für die Ressourcen und APIs verfügt, die über Microsoft Graph bereitgestellt werden.
 
@@ -144,8 +146,8 @@ Die RSC-Berechtigungen werden in Ihrer JSON-Datei des App-Manifests deklariert. 
 
 |Name| Typ | Beschreibung|
 |---|---|---|
-|`id` |Zeichenfolge |Ihre AAD-App-ID. Weitere Informationen finden Sie unter [Registrieren Ihrer App im AAD-Portal.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)|
-|`resource`|Zeichenfolge| Dieses Feld hat keinen Vorgang in RSC, muss jedoch hinzugefügt werden und einen Wert aufweisen, um eine Fehlerantwort zu vermeiden. Jede Zeichenfolge wird ausgeführt.|
+|`id` |String |Ihre AAD-App-ID. Weitere Informationen finden Sie unter [Registrieren Ihrer App im AAD-Portal.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)|
+|`resource`|String| Dieses Feld hat keinen Vorgang in RSC, muss jedoch hinzugefügt werden und einen Wert aufweisen, um eine Fehlerantwort zu vermeiden. Jede Zeichenfolge wird ausgeführt.|
 |`applicationPermissions`|Array aus Zeichenfolgen|RSC-Berechtigungen für Ihre App. Weitere Informationen finden Sie unter [ressourcenspezifische Berechtigungen.](resource-specific-consent.md#resource-specific-permissions)|
 
 >
@@ -172,7 +174,8 @@ Die RSC-Berechtigungen werden in Ihrer JSON-Datei des App-Manifests deklariert. 
         "TeamsTab.Create.Group",
         "TeamsTab.ReadWrite.Group",
         "TeamsTab.Delete.Group",
-        "TeamMember.Read.Group"
+        "TeamMember.Read.Group",
+        "TeamsActivity.Send.Group"
     ]
   }
 ```
@@ -196,7 +199,8 @@ Die RSC-Berechtigungen werden in Ihrer JSON-Datei des App-Manifests deklariert. 
         "TeamsAppInstallation.Read.Chat",
         "OnlineMeeting.ReadBasic.Chat",
         "Calls.AccessMedia.Chat",
-        "Calls.JoinGroupCalls.Chat"
+        "Calls.JoinGroupCalls.Chat",
+        "TeamsActivity.Send.Chat"
     ]
   }
 ```
@@ -218,13 +222,13 @@ Nachdem die App in einer Ressource installiert wurde, können Sie [Graph Explore
 ### <a name="check-your-app-for-added-rsc-permissions-in-a-team"></a>Überprüfen Ihrer App auf hinzugefügte RSC-Berechtigungen in einem Team
 
 1. Rufen Sie die **groupId** des Teams aus Teams ab.
-1. Wählen Sie in Teams im äußersten linken Bereich **Teams** aus.
+1. Wählen Sie in Teams ganz links **Teams** aus.
 1. Wählen Sie das Team aus, in dem die App installiert werden soll.
-1. Wählen Sie die auslassungspunkte &#x25CF;&#x25CF;&#x25CF; für dieses Team aus.
+1. Wählen Sie die Ellipsen aus, &#x25CF;&#x25CF;&#x25CF; für dieses Team.
 1. Wählen Sie im Dropdownmenü des Teams den **Link zum Team abrufen** aus.
 1. Kopieren und speichern Sie den **groupId-Wert** aus dem Dialogfeld **"Link zum Team-Popup** abrufen".
 1. Melden Sie sich bei **Graph Explorer** an.
-1. Führen Sie einen **GET-Aufruf** an diesen Endpunkt aus: `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants` . Das `clientAppId` Feld in der Antwort wird dem im Teams `webApplicationInfo.id` App-Manifest angegebenen zugeordnet.
+1. Führen Sie einen **GET-Aufruf** an diesen Endpunkt aus: `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants` . Das `clientAppId` Feld in der Antwort entspricht dem im Teams `webApplicationInfo.id` App-Manifest angegebenen Feld.
 
     ![Graph Explorer-Antwort auf get call for team RSC permissions](../../assets/images/team-graph-permissions.png)
 
@@ -232,7 +236,7 @@ Weitere Informationen zum Abrufen von Details zu den in einem bestimmten Team in
 
 ### <a name="check-your-app-for-added-rsc-permissions-in-a-chat"></a>Überprüfen Ihrer App auf hinzugefügte RSC-Berechtigungen in einem Chat
 
-1. Rufen Sie die Chatthread-ID vom *Teams-Webclient* ab.
+1. Rufen Sie die Chatthread-ID vom Teams *Webclient* ab.
 1. Wählen Sie im Teams Webclient im bereich ganz links die Option **"Chat"** aus.
 1. Wählen Sie im Dropdownmenü den Chat aus, in dem die App installiert ist.
 1. Kopieren Sie die Web-URL, und speichern Sie die Chatthread-ID aus der Zeichenfolge.
@@ -240,7 +244,7 @@ Weitere Informationen zum Abrufen von Details zu den in einem bestimmten Team in
     ![Chatthread-ID von Web-URL](../../assets/images/chat-thread-id.png)
 
 1. Melden Sie sich bei **Graph Explorer** an.
-1. Führen Sie einen **GET-Aufruf** an den folgenden Endpunkt aus: `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants` . Das `clientAppId` Feld in der Antwort wird dem im Teams `webApplicationInfo.id` App-Manifest angegebenen zugeordnet.
+1. Führen Sie einen **GET-Aufruf** an den folgenden Endpunkt aus: `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants` . Das `clientAppId` Feld in der Antwort entspricht dem im Teams `webApplicationInfo.id` App-Manifest angegebenen Feld.
 
     ![Graph Explorer-Antwort auf GET call for chat RSC permissions](../../assets/images/chat-graph-permissions.png)
 
@@ -250,7 +254,7 @@ Weitere Informationen zum Abrufen von Details zu in einem bestimmten Chat instal
 
 | **Beispielname** | **Beschreibung** | **.NET** |**Node.js** |
 |-----------------|-----------------|----------------|----------------|
-| Resource-Specific Consent (RSC) | Verwenden Sie RSC, um Graph APIs aufzurufen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
+| Resource-Specific Zustimmung (RSC) | Verwenden Sie RSC, um Graph APIs aufzurufen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
 
 ## <a name="see-also"></a>Siehe auch
  

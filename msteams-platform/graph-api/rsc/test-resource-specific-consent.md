@@ -6,25 +6,25 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Teams-Autorisierung OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 629d798e600a3a9a9ba1cbd7fd75bdc8de13a507
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 89b9dceebfd0732fb29fe497edc000249d073aab
+ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528943"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "58822220"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Testen von ressourcenspezifischen Zustimmungsberechtigungen in Teams
 
 > [!NOTE]
 > Die ressourcenspezifische Zustimmung für den Chatbereich ist nur in der [öffentlichen Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
-Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams- und Graph-API-Integration, mit der Ihre App API-Endpunkte verwenden kann, um bestimmte Ressourcen innerhalb einer Organisation zu verwalten – entweder Teams oder Chats. Weitere Informationen finden Sie unter [Resource-specific consent (RSC) – Microsoft Teams Graph API.](resource-specific-consent.md)
+Die ressourcenspezifische Zustimmung (RESOURCE-Specific Consent, RSC) ist eine Microsoft Teams- und Graph-API-Integration, mit der Ihre App API-Endpunkte verwenden kann, um bestimmte Ressourcen innerhalb einer Organisation zu verwalten – entweder Teams oder Chats. Weitere Informationen finden Sie unter [Resource-specific consent (RSC) – Microsoft Teams Graph API.](resource-specific-consent.md)
 
 > [!NOTE]
 > Zum Testen der RSC-Berechtigungen muss ihre Teams App-Manifestdatei einen **webApplicationInfo-Schlüssel** enthalten, der mit den folgenden Feldern gefüllt ist:
 >
 > - **id:** Ihre Azure AD-App-ID, siehe [Registrieren Ihrer App im Azure AD-Portal.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)
-> - **Ressource:** Eine beliebige Zeichenfolge finden Sie in der Notiz im [App-Manifest aktualisieren Teams.](resource-specific-consent.md#update-your-teams-app-manifest)
+> - **Ressource:** Eine beliebige Zeichenfolge finden Sie in der Notiz unter [Aktualisieren ihres Teams-App-Manifests.](resource-specific-consent.md#update-your-teams-app-manifest)
 > - **Anwendungsberechtigungen:** RSC-Berechtigungen für Ihre App finden Sie unter ["Ressourcenspezifische Berechtigungen".](resource-specific-consent.md#resource-specific-permissions)
 
 ## <a name="example-for-a-team"></a>Beispiel für ein Team
@@ -45,7 +45,8 @@ Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams- und Graph-A
         "TeamsTab.Create.Group",
         "TeamsTab.ReadWrite.Group",
         "TeamsTab.Delete.Group",
-        "TeamMember.Read.Group"
+        "TeamMember.Read.Group",
+        "TeamsActivity.Send.Group"
     ]
    }
 ```
@@ -68,7 +69,8 @@ Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams- und Graph-A
         "TeamsAppInstallation.Read.Chat",
         "OnlineMeeting.ReadBasic.Chat",
         "Calls.AccessMedia.Chat",
-        "Calls.JoinGroupCalls.Chat"
+        "Calls.JoinGroupCalls.Chat",
+        "TeamsActivity.Send.Chat"
     ]
    }
 ```
@@ -92,7 +94,7 @@ Um zu überprüfen, ob die RSC-Berechtigungen von der API-Anforderungsnutzlast b
 
     1. Wählen Sie im Teams Client in der Navigationsleiste ganz links **Teams** aus.
     2. Wählen Sie im Dropdownmenü das Team aus, in dem die App installiert ist.
-    3. Wählen Sie das Symbol **"Weitere Optionen"** aus (&#8943;).
+    3. Klicken Sie auf das Symbol **"Weitere Optionen"** (&#8943;).
     4. Wählen Sie **"Link zum Team abrufen" aus.** 
     5. Kopieren und speichern Sie den **groupId-Wert** aus der Zeichenfolge.
 
@@ -106,7 +108,7 @@ Um zu überprüfen, ob die RSC-Berechtigungen von der API-Anforderungsnutzlast b
 * `tenantId`: Der Name oder die AAD-Objekt-ID Ihres Mandanten.
 * `chatId`: Sie können die Chatthread-ID wie folgt vom *Teams-Webclient* abrufen:
 
-    1. Wählen Sie im Teams Webclient in der linken Navigationsleiste **"Chat"** aus.
+    1. Wählen Sie im Teams Webclient in der Navigationsleiste ganz links die Option **"Chat"** aus.
     2. Wählen Sie im Dropdownmenü den Chat aus, in dem die App installiert ist.
     3. Kopieren Sie die Web-URL, und speichern Sie die Chatthread-ID aus der Zeichenfolge.
 ![Chatthread-ID von Web-URL.](../../assets/images/chat-thread-id.png)
