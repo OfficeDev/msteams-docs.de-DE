@@ -2,17 +2,14 @@
 title: Szenen im benutzerdefinierten Modus "Zusammen"
 description: Arbeiten mit benutzerdefinierten Szenen im Zusammen-Modus
 ms.topic: conceptual
-ms.openlocfilehash: 9a0ef7eb2d6a014aaf831a0e1765d4b4ca44b8c6
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 32b7cb32eb3f422641dbf28e635e39d978bad002
+ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528836"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "58849440"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Benutzerdefinierte Zusammen-Modus-Szenen
-
-> [!NOTE]
-> Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
 Szenen im benutzerdefinierten Zusammen-Modus in Microsoft Teams eine immersive und ansprechende Besprechungsumgebung mit den folgenden Aktionen bereitstellen:
 
@@ -51,7 +48,7 @@ Berücksichtigen Sie die folgenden Methoden für die Erstellung von Szenen:
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>Erstellen einer Szene mithilfe des Szenenstudios
 
-Microsoft verfügt über ein Szenenstudio, mit dem Sie Szenen erstellen können. Es ist im [Szenen-Editor verfügbar – Teams Entwicklerportal.](https://dev.teams.microsoft.com/scenes) Dieses Dokument verweist auf Scene Studio im Microsoft Teams Entwicklerportal. Die Benutzeroberfläche und Funktionen sind im App Studio Scene Designer identisch.
+Microsoft verfügt über ein Szenenstudio, mit dem Sie Szenen erstellen können. Es ist im [Szenen-Editor](https://dev.teams.microsoft.com/scenes)– Teams Entwicklerportal verfügbar. Dieses Dokument verweist auf Scene Studio im Microsoft Teams Entwicklerportal. Die Benutzeroberfläche und Funktionen sind im App Studio Scene Designer identisch.
 
 Eine Szene im Kontext des Szenenstudios ist ein Artefakt, das die folgenden Elemente enthält:
 
@@ -71,7 +68,7 @@ Die folgende Abbildung zeigt jeden Platz, der als Avatar zum Erstellen der Szene
 
 1. Wechseln Sie zum [Szenen-Editor – Teams Entwicklerportal.](https://dev.teams.microsoft.com/scenes)
 
-    Alternativ können Sie zum Öffnen des Szenenstudios zur Startseite des [Teams Entwicklerportals](https://dev.teams.microsoft.com/home)wechseln:
+    Alternativ können Sie zum Öffnen von Scene Studio zur Startseite des [Teams Entwicklerportals](https://dev.teams.microsoft.com/home)wechseln:
     * Wählen Sie **"Benutzerdefinierte Szenen für Besprechungen erstellen"** aus.
     * Wählen Sie im linken Abschnitt die Option **"Extras"** und dann im Abschnitt **"Extras"** die Option **"Szenenstudio"** aus.
 
@@ -107,13 +104,13 @@ Die folgende Abbildung zeigt jeden Platz, der als Avatar zum Erstellen der Szene
 
     ![Spot zuweisen](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. Wählen Sie **"Speichern"** und **dann "Anzeigen" in Teams** aus, um Die Szene in Microsoft Teams schnell zu testen.
+1. Wählen Sie **"Speichern"** und **dann "Anzeigen" in Teams** aus, um Ihre Szene schnell in Microsoft Teams zu testen.
 
     * Wenn Sie **"Ansicht" in Teams** auswählen, wird automatisch eine Microsoft Teams App erstellt, die auf der Seite **"Apps"** im Teams Entwicklerportal angezeigt werden kann.
-    * Wenn Sie **"Ansicht" in Teams** auswählen, wird automatisch ein App-Paket erstellt, das hinter der Szene appmanifest.jswird. Sie können über das Menü zu  **Apps** wechseln und auf das automatisch erstellte App-Paket zugreifen.
+    * Wenn Sie **"Ansicht" in Teams** auswählen, wird automatisch ein App-Paket erstellt, das hinter der Szene appmanifest.jsist. Sie können über das Menü zu  **Apps** wechseln und auf das automatisch erstellte App-Paket zugreifen.
     * Um eine von Ihnen erstellte Szene zu löschen, wählen Sie die Szene auf der oberen Leiste **löschen** aus.
 
-1. Wählen Sie **in "Ansicht in Teams"** die Option **"Vorschau" in Teams** aus.
+1. Wählen Sie **in "Ansicht" in Teams** die Option **"Vorschau" in Teams** aus.
 1. Wählen Sie im daraufhin angezeigten Dialogfeld **"Hinzufügen"** aus.
 
     Die Szene wird getestet oder durch Erstellen einer Testbesprechung und Starten benutzerdefinierter Szenen im Zusammen-Modus aufgerufen. Weitere Informationen finden Sie unter [Aktivieren benutzerdefinierter Szenen im Zusammen-Modus:](#activate-custom-together-mode-scenes)
@@ -134,7 +131,7 @@ Eine komplexe Szene, die die Z-Achse verwendet, wird im Schritt-für-Schritt-Bei
 
 ## <a name="sample-scenejson"></a>Beispiel scene.json
 
-Scene.jszusammen mit den Bildern gibt die genaue Position der Arbeitsplätze an. Eine Szene besteht aus Bitmapbildern, Sprites und Rechtecke, in die Teilnehmervideos eingefügt werden. Diese Sprites und Teilnehmerfelder werden in einem Weltkoordinatensystem definiert. Die X-Achse zeigt nach rechts und die Y-Achse nach unten.
+Scene.jszusammen mit den Bildern zeigen die genaue Position der Arbeitsplätze an. Eine Szene besteht aus Bitmapbildern, Sprites und Rechtecke, in die Teilnehmervideos eingefügt werden. Diese Sprites und Teilnehmerfelder werden in einem Weltkoordinatensystem definiert. Die X-Achse zeigt nach rechts und die Y-Achse nach unten.
 
 Szenen im benutzerdefinierten Zusammen-Modus unterstützen das Vergrößern der aktuellen Teilnehmer. Dieses Feature ist hilfreich für kleine Besprechungen in einer großen Szene. Ein Sprite ist ein statisches Bitmapbild, das in der Welt positioniert ist. Der Z-Wert des Sprite bestimmt die Position des Sprite. Das Rendern beginnt mit dem Sprite mit dem niedrigsten Z-Wert, daher bedeutet ein höherer Z-Wert, dass er näher an der Kamera ist. Jeder Teilnehmer verfügt über einen eigenen Videofeed, der segmentiert ist, sodass nur der Vordergrund gerendert wird.
 
@@ -203,11 +200,11 @@ Der folgende Code ist der scene.jsim Beispiel:
 }
 ```
 
-Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Die Szenen-JSON enthält auch Informationen zu allen Ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Arbeitsplatz eine Platz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Reihenfolge der Auslastung wird automatisch generiert und gemäß Der Einstellung geändert. Die Nummer der Reihenfolge entspricht der Reihenfolge der Personen, die dem Anruf beitreten.
+Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Die Szenen-JSON enthält auch Informationen zu allen Ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Arbeitsplatz eine Platz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Reihenfolge der Auslastung wird automatisch generiert und gemäß ihrer Präferenz geändert. Die Nummer der Reihenfolge entspricht der Reihenfolge der Personen, die dem Anruf beitreten.
 
 Dies stellt die Reihenfolge dar, in `zOrder` der Bilder und Arbeitsplätze entlang der Z-Achse platziert werden. Es gibt bei Bedarf ein Gefühl von Tiefe oder Partition. Sehen Sie sich das Beispiel für schrittweise erste Schritte an. Im Beispiel wird die `zOrder` .
 
-Nachdem Sie nun die Beispiel-scene.jsdurchgegangen sind, können Sie die benutzerdefinierten Szenen im Zusammen-Modus aktivieren, um szenenaktiviert zu werden.
+Nachdem Sie nun die Beispiel-scene.jsdurchlaufen haben, können Sie die benutzerdefinierten Szenen im Zusammen-Modus aktivieren, um szenenaktiviert zu werden.
 
 ## <a name="activate-custom-together-mode-scenes"></a>Aktivieren von Szenen im benutzerdefinierten Modus "Zusammen"
 
@@ -235,7 +232,7 @@ Erhalten Sie weitere Informationen dazu, wie sich ein Benutzer mit Szenen in ben
 
 ## <a name="open-a-custom-together-mode-scenes-scene-package"></a>Öffnen eines benutzerdefinierten Szenenpakets für den Gemeinsamen Modus
 
-Sie können das Szenenpaket, das eine .zip aus dem Szenenstudio abgerufene Datei ist, für andere Ersteller freigeben, um die Szene weiter zu verbessern. Die Funktion zum **Importieren einer Szene** hilft beim Entpacken eines Szenenpakets, damit der Ersteller die Szene weiter erstellen kann.
+Sie können das Szenenpaket, das eine aus dem Szenenstudio abgerufene .zip-Datei ist, für andere Ersteller freigeben, um die Szene weiter zu verbessern. Die Funktion zum **Importieren einer Szene** hilft beim Entpacken eines Szenenpakets, damit der Ersteller die Szene weiter erstellen kann.
 
 ![Szenen-ZIP-Datei](../assets/images/apps-in-meetings/scene-zip-file.png)
 

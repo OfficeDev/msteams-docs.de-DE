@@ -4,20 +4,20 @@ description: Links und Beschreibungen von Beispielanwendungen für die Microsoft
 localization_priority: Normal
 ms.topic: reference
 keywords: Microsoft Teams Entwicklerbeispiele
-ms.openlocfilehash: 05884025f91377764d65242d501314c3798d3a73a430e103de885692c1e2ee63
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: c261aebc327d09265db8831c2b7a8549f30a34fe
+ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709590"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "58849426"
 ---
 # <a name="overview"></a>Übersicht
 
-In diesem Lernprogramm erfahren Sie, wie Sie eine App mit React, Doppelklicken, SPFx, C# oder .NET, Node.js und Yeoman Generator erstellen. Außerdem erfahren Sie, wie Sie Ihren ersten Bot und Ihre erste Messaging-Erweiterung erstellen. Dieses Lernprogramm führt Sie durch mehrere Codebeispiele für Registerkarten, Bots, Messaging-Erweiterungen, Webhooks und Connectors und Graph-APIs, mit denen Sie Ihre Apps anpassen und konfigurieren können. Darüber hinaus können Sie sich auch auf die Microsoft Learn-Abschnitte beziehen, in denen Sie die Funktionen der Teams Entwicklerplattform erweitern können, indem Sie benutzerdefinierte Apps erstellen.  
+In diesem Lernprogramm erfahren Sie, wie Sie eine App mit React, SPFx, C# oder .NET, Node.js und Yeoman Generator erstellen. Außerdem erfahren Sie, wie Sie Ihren ersten Bot und Ihre erste Messaging-Erweiterung erstellen. Dieses Lernprogramm führt Sie durch mehrere Codebeispiele für Registerkarten, Bots, Messaging-Erweiterungen, Webhooks und Connectors und Graph-APIs, mit denen Sie Ihre Apps anpassen und konfigurieren können. Darüber hinaus können Sie sich auch in den Microsoft Learn-Abschnitten informieren, in denen Sie die Funktionen der Teams Entwicklerplattform erweitern können, indem Sie benutzerdefinierte Apps erstellen.  
 
 ## <a name="getting-started-with-microsoft-learn"></a>Erste Schritte mit Microsoft Learn
 
-| **Funktion**| **Lernmodul**|
+| **Funktionalität**| **Lernmodul**|
 |--------|-------------|
 | Registerkarten – eingebettete Weboberflächen  |  [Erstellen einer eingebetteten Weboberfläche mit Registerkarten für Microsoft Teams](/learn/modules/embedded-web-experiences/) |
 | Webhooks und Connectors  |  [Verbinden von Webdiensten mit Microsoft Teams mit Webhooks und Office 365-Connectors](/learn/modules/msteams-webhooks-connectors/) |
@@ -29,7 +29,7 @@ In diesem Lernprogramm erfahren Sie, wie Sie eine App mit React, Doppelklicken, 
 
 In den **ersten** Lektionen erfahren Sie, wie Sie grundlegende Teams-Apps erstellen. Jedes Lernprogramm führt Sie durch die Erstellung einer einfachen, realen Teams-App und führt Sie mit allgemeinen Tools, grundlegenden Konzepten und erweiterten Features ein.
 
-### <a name="teams-app-fundamentals"></a>Grundlagen der Teams-App
+### <a name="teams-app-fundamentals"></a>Grundlagen Teams App
 
 Mit [der Teams Entwicklerplattform](../overview.md) können Sie benutzerdefinierte Apps erstellen. Einige häufige Szenarios, im Rahmen derer eine benutzerdefinierte Microsoft Teams-App hilfreich sein kann, lauten wie folgt:
 
@@ -45,7 +45,11 @@ Eine Teams App besteht aus einer oder mehreren [Plattformfunktionen](../concepts
 
 Je nachdem, welche Funktionen Sie für Ihre App benötigen, benötigen Sie ein entsprechendes Entwicklungstoolset.
 
-| App-Funktionen | Benutzerinteraktionen | Empfohlene Tools | SDKs | Technologiestapel | |--------|-------------|| --------|| --------|| --------| | Registerkarten | Eine eingebettete Weboberfläche im Vollbildmodus. | VS Code mit Teams Toolkit-Erweiterung oder YoTeams (Yeoman Generator) | [Teams-Client-SDK-|](/javascript/api/overview/msteams-client) Webtechnologie im Allgemeinen, HTML-, CSS- und JavaScript-| | Bots | Ein Chat-Bot, der sich mit Mitgliedern unterhält. | VS Code mit Teams Toolkit-Erweiterung oder YoTeams (Yeoman Generator) | [Bot Framework SDK](https://dev.botframework.com/) | Node.js-, C#- oder Python-| | Messaging-Erweiterungen | Verknüpfungen zum Einfügen externer Inhalte in eine Unterhaltung oder zum Ausführen von Aktionen für Nachrichten. | VS Code mit Teams Toolkit-Erweiterung oder YoTeams (Yeoman Generator) | [Bot Framework SDK](https://dev.botframework.com/) | Node.js-, C#- oder Python-|
+| App-Funktionen | Benutzerinteraktionen | Empfohlene Tools | SDKs | Technologiestapel |
+|--------|-------------|--------|--------|--------|
+| Registerkarten | Eine eingebettete Weboberfläche im Vollbildmodus. | VS Code mit Teams Toolkit-Erweiterung oder YoTeams (Yeoman Generator) | [Teams-Client-SDK](/javascript/api/overview/msteams-client) | Webtechnologie im Allgemeinen, HTML, CSS und JavaScript |
+| Bots | Ein Chat-Bot, der sich mit Mitgliedern unterhält. | VS Code mit Teams Toolkit-Erweiterung oder YoTeams (Yeoman Generator) | [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C# oder Python |
+| Messaging-Erweiterungen | Verknüpfungen zum Einfügen externer Inhalte in eine Unterhaltung oder zum Ausführen von Aktionen für Nachrichten. | VS Code mit Teams Toolkit-Erweiterung oder YoTeams (Yeoman Generator) | [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C# oder Python |
 
 Der Abschnitt "Erste Schritte" führt Sie durch empfohlene Toolsätze und häufig verwendete Technologien, z. B. Visual Studio Code mit Teams Erweiterung, React.js für Registerkarten und Node.js für Bots und Messaging-Erweiterungen, obwohl *Sie nicht auf die Verwendung dieser bestimmten Stapel beschränkt sind.*
 
@@ -53,11 +57,11 @@ Wenn Sie lieber eine Befehlszeilenschnittstelle (CLI) verwenden möchten, lesen 
 
 ### <a name="teams-does-not-host-your-app"></a>Teams hosten Ihre App nicht
 
-Sie installieren nur ein App-Paket, das eine Konfigurationsdatei, die als Manifest- und App-Symbole bezeichnet wird, auf Teams Client enthält. Die restlichen App-Logiken und der Datenspeicherung werden an anderer Stelle gehostet, z. B. azure-Webdienste. Ihre App in der Cloud oder localhost während der Entwicklung greift über HTTPS auf Teams zu.
+Sie installieren nur ein App-Paket mit einer Konfigurationsdatei, die als Manifest- und App-Symbole bezeichnet wird, auf Teams Client. Die restlichen App-Logiken und der Datenspeicherung werden an anderer Stelle gehostet, z. B. azure-Webdienste. Ihre App in der Cloud oder localhost während der Entwicklung greift über HTTPS auf Teams zu.
 
 :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Abbildung der App auf Teams zeigt auf Ihre App-Logik auf dem Cloudserver.":::
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Erstellen einer App mit React](first-app-react.md)
 * [Erstellen einer App mitHilfe von Blatter](first-app-blazor.md)
