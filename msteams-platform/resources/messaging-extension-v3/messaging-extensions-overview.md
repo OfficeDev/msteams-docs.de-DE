@@ -1,37 +1,37 @@
 ---
-title: Entwickeln von Messagingerweiterungen
-description: Beschreibt die ersten Schritte mit Messagingerweiterungen in Microsoft Teams
+title: Entwickeln von Messaging-Erweiterungen
+description: Beschreibt die ersten Schritte mit Messaging-Erweiterungen in Microsoft Teams
 ms.topic: overview
-localization_priority: Normal
-keywords: Messagingerweiterungen für Teams
-ms.openlocfilehash: 2301a9af7574c193c7327bb45e38f91bedc73793
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.localizationpriority: medium
+keywords: Messaging-Erweiterungen für Teams– Messaging-Erweiterungen
+ms.openlocfilehash: ea07ae8c7a7a16f5187adfe6dbe5f52d8bf47056
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020604"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156514"
 ---
-# <a name="develop-messaging-extensions-for-microsoft-teams"></a>Entwickeln von Messagingerweiterungen für Microsoft Teams
+# <a name="develop-messaging-extensions-for-microsoft-teams"></a>Entwickeln von Messaging-Erweiterungen für Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-Messagingerweiterungen stellen eine leistungsstarke Möglichkeit für Benutzer zum Interagieren mit Ihrer App aus Microsoft Teams. Mit dieser Funktion können Benutzer Informationen an Und von Ihrem Dienst abfragen oder posten und diese Informationen in Form von Karten direkt in eine Nachricht posten.
+Messaging-Erweiterungen sind eine leistungsstarke Möglichkeit für Benutzer, über Microsoft Teams mit Ihrer App zu interagieren. Mit dieser Funktion können Benutzer Informationen zu und von Ihrem Dienst abfragen oder veröffentlichen und diese Informationen in Form von Karten direkt in einer Nachricht veröffentlichen.
 
-![Beispiel für Eine Messaging-Erweiterungskarte](~/assets/images/compose-extensions/ceexample.png)
+![Beispiel für eine Messaging-Erweiterungskarte](~/assets/images/compose-extensions/ceexample.png)
 
-Messagingerweiterungen werden am unteren Rand des Verfassenfelds angezeigt. Einige sind integrierte, z. B. Emoji, Giphy und Aufkleber. Wählen Sie **die Schaltfläche** Weitere Optionen (**&#8943;**) aus, um andere Messagingerweiterungen anzuzeigen, einschließlich derer, die Sie aus dem App-Katalog hinzufügen oder sich selbst hochladen.
+Messaging-Erweiterungen werden am unteren Rand des Felds zum Verfassen angezeigt. Einige davon sind integriert, z. B. Emoji, Giphy und Sticker. Wählen Sie die Schaltfläche **"Weitere Optionen"** **(&#8943;),** um weitere Messaging-Erweiterungen anzuzeigen, einschließlich derjenigen, die Sie aus dem App-Katalog hinzufügen oder selbst hochladen.
 
-Wie würden Sie Messagingerweiterungen verwenden? Hier sind einige Möglichkeiten:
+Wie würden Sie Messaging-Erweiterungen verwenden? Hier sind einige Möglichkeiten:
 
 * Arbeitsaufgaben und Fehler
 * Kundensupporttickets
-* Verwendungsdiagramme und -berichte
+* Verwendungsdiagramme und Berichte
 * Bilder und Medieninhalte
 * Verkaufschancen und Leads
 
-## <a name="types-of-messaging-extensions"></a>Arten von Messagingerweiterungen
+## <a name="types-of-messaging-extensions"></a>Typen von Messaging-Erweiterungen
 
-Es gibt in erster Linie zwei Arten von Messagingerweiterungen, die Sie für die Teams können. Die folgenden Themen führen Sie durch den Erstellungsprozess:
+Es gibt in erster Linie zwei Arten von Messaging-Erweiterungen, die Sie heute für Teams erstellen können. Die folgenden Themen führen Sie durch den Erstellungsprozess:
 
-* [Suchbasierte Messagingerweiterungen:](~/resources/messaging-extension-v3/search-extensions.md)Fragen Sie Ihren Dienst nach Informationen ab, und fügen Sie diese in eine Nachricht ein. Beispiel: Suchen einer Arbeitsaufgabe
-* [Aktionsbasierte Messagingerweiterungen:](~/resources/messaging-extension-v3/create-extensions.md)Sammeln von Informationen vom Benutzer und Veröffentlichen an einen Drittanbieterdienst. Beispiel: Erstellen einer Arbeitsaufgabe
+* [Suchbasierte Messaging-Erweiterungen:](~/resources/messaging-extension-v3/search-extensions.md)Fragen Sie Ihren Dienst nach Informationen ab, und fügen Sie diese in eine Nachricht ein. Beispiel: Nachschlagen einer Arbeitsaufgabe
+* [Aktionsbasierte Messaging-Erweiterungen:](~/resources/messaging-extension-v3/create-extensions.md)Sammeln von Informationen vom Benutzer und Posten bei einem Drittanbieterdienst. Beispiel: Erstellen einer Arbeitsaufgabe

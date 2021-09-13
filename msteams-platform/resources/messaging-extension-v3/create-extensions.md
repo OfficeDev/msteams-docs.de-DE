@@ -1,15 +1,15 @@
 ---
 title: Initiieren von Aktionen mit Messaging-Erweiterungen
 description: Erstellen von aktionsbasierten Messaging-Erweiterungen, damit Benutzer externe Dienste auslösen können
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Messaging-Erweiterungen für Teams – Suche nach Messaging-Erweiterungen
-ms.openlocfilehash: 5604d86f05bad42bf3a00f611711afc34beedf42
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: f028a26693eef03686ad6ad57423b30d4d861934
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140369"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156518"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Initiieren von Aktionen mit Messaging-Erweiterungen
 
@@ -130,7 +130,7 @@ Zum Initiieren von Aktionen aus einer Messaging-Erweiterung legen Sie den `type`
 
 ### <a name="initiate-actions-from-messages"></a>Initiieren von Aktionen aus Nachrichten
 
-Zusätzlich zum Initiieren von Aktionen aus dem Bereich zum Verfassen von Nachrichten können Sie auch Ihre Messaging-Erweiterung verwenden, um eine Aktion aus einer Nachricht auszulösen. Auf diese Weise können Sie den Inhalt der Nachricht zur Verarbeitung an Ihren Bot senden und optional mit einer Antwort mithilfe der unter [Antworten auf die Übermittlung](#responding-to-submit)beschriebenen Methode antworten. Die Antwort wird als Antwort auf die Nachricht eingefügt, die Ihre Benutzer vor dem Senden bearbeiten können. Ihre Benutzer können über das Überlaufmenü auf Ihre Messaging-Erweiterung zugreifen `...` und dann wie in der folgenden Abbildung `Take action` auswählen:
+Zusätzlich zum Initiieren von Aktionen aus dem Bereich zum Verfassen von Nachrichten können Sie auch Ihre Messaging-Erweiterung verwenden, um eine Aktion aus einer Nachricht auszulösen. Auf diese Weise können Sie den Inhalt der Nachricht zur Verarbeitung an Ihren Bot senden und optional mithilfe der unter [Antworten auf](#responding-to-submit)die Übermittlung beschriebenen Methode mit einer Antwort antworten. Die Antwort wird als Antwort auf die Nachricht eingefügt, die Ihre Benutzer vor dem Senden bearbeiten können. Ihre Benutzer können über das Überlaufmenü auf Ihre Messaging-Erweiterung zugreifen `...` und dann wie in der folgenden Abbildung `Take action` auswählen:
 
 ![Beispiel für das Initiieren einer Aktion aus einer Nachricht](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
@@ -228,7 +228,7 @@ Unten sehen Sie ein Beispiel für das `value` Objekt, das die Nachrichtendetails
 
 Sie können Ihre Messaging-Erweiterung testen, indem Sie Ihre App hochladen. Weitere Informationen finden Sie unter [Hochladen Ihrer App in einem Team.](~/concepts/deploy-and-publish/apps-upload.md)
 
-Um Ihre Messaging-Erweiterung zu öffnen, navigieren Sie zu einem Ihrer Chats oder Kanäle. Wählen Sie im Feld "Verfassen" die Schaltfläche **"Weitere Optionen"** (**&#8943;**) aus, und wählen Sie Ihre Messaging-Erweiterung aus.
+Um Ihre Messaging-Erweiterung zu öffnen, navigieren Sie zu einem Ihrer Chats oder Kanäle. Wählen Sie im Feld "Verfassen" die Schaltfläche **"Weitere Optionen"** **(&#8943;)** aus, und wählen Sie Ihre Messaging-Erweiterung aus.
 
 ## <a name="collecting-input-from-users"></a>Sammeln von Eingaben von Benutzern
 
@@ -236,7 +236,7 @@ Es gibt drei Möglichkeiten, Informationen von einem Endbenutzer in Teams zu sam
 
 ### <a name="static-parameter-list"></a>Liste statischer Parameter
 
-Bei dieser Methode müssen Sie lediglich eine statische Liste von Parametern im Manifest definieren, wie oben im Befehl "Erstellen To Do" gezeigt. Um diese Methode zu verwenden, stellen Sie sicher, dass sie `fetchTask` festgelegt ist und Dass Sie Die Parameter im Manifest `false` definieren.
+Bei dieser Methode müssen Sie lediglich eine statische Liste von Parametern im Manifest definieren, wie oben im Befehl "Erstellen To Do" dargestellt. Um diese Methode zu verwenden, stellen Sie sicher, dass sie `fetchTask` festgelegt ist und Dass Sie Die Parameter im Manifest `false` definieren.
 
 Wenn ein Benutzer einen Befehl mit statischen Parametern auswählt, generiert Teams ein Formular in einem Aufgabenmodul mit den im Manifest definierten Parametern. Wenn Sie auf "Absenden" klicken, wird an `composeExtension/submitAction` den Bot gesendet. Weitere Informationen zu dem erwarteten Satz von Antworten finden Sie unter [Antworten zur Übermittlung.](#responding-to-submit)
 
@@ -312,7 +312,7 @@ Genau wie im adaptiven Kartenfluss sendet Ihr Dienst ein `fetchTask` Ereignis un
 
 Wenn Ihre App auch einen Unterhaltungs-Bot enthält, müssen Sie möglicherweise sicherstellen, dass Ihr Bot in der Unterhaltung installiert ist, bevor Sie Ihr Aufgabenmodul laden. Dies kann in Situationen hilfreich sein, in denen Sie zusätzlichen Kontext für Ihr Aufgabenmodul benötigen. Beispielsweise müssen Sie möglicherweise die Liste abrufen, um ein Personenauswahl-Steuerelement oder die Liste der Kanäle in einem Team aufzufüllen.
 
-Um diesen Fluss zu vereinfachen, wenn Ihre Messaging-Erweiterung zum ersten Mal die `composeExtension/fetchTask` Aufrufüberprüfung empfängt, um festzustellen, ob Ihr Bot im aktuellen Kontext installiert ist. Sie können dies erreichen, indem Sie versuchen, den Listenerstellungsaufruf zu erhalten, z. B. wenn Ihr Bot nicht installiert ist, geben Sie eine adaptive Karte mit einer Aktion zurück, die den Benutzer zur Installation Ihres Bots anfordert. Siehe beispiel unten. Beachten Sie, dass dies erfordert, dass der Benutzer über die Berechtigung zum Installieren von Apps an diesem Speicherort verfügt. wenn ihnen keine Meldung angezeigt wird, in der sie aufgefordert werden, sich an ihren Administrator zu wenden.
+Um diesen Fluss zu vereinfachen, wenn Ihre Messaging-Erweiterung zum ersten Mal die `composeExtension/fetchTask` Aufrufüberprüfung empfängt, um festzustellen, ob Ihr Bot im aktuellen Kontext installiert ist. Sie können dies erreichen, indem Sie versuchen, den Listenerstellungsaufruf abzurufen, z. B. wenn Ihr Bot nicht installiert ist, geben Sie eine adaptive Karte mit einer Aktion zurück, die den Benutzer zur Installation Ihres Bots anfordert. Siehe beispiel unten. Beachten Sie, dass dies erfordert, dass der Benutzer über die Berechtigung zum Installieren von Apps an diesem Speicherort verfügt. wenn ihnen keine Meldung angezeigt wird, in der sie aufgefordert werden, sich an ihren Administrator zu wenden.
 
 Hier ist ein Beispiel für die Antwort:
 

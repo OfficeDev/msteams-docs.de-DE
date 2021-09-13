@@ -2,21 +2,21 @@
 title: SSO-Unterstützung für Ihre Messaging-Erweiterungen
 author: KirtiPereira
 description: So aktivieren Sie die SSO-Unterstützung für Ihre Messaging-Erweiterungen
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 656c17612c74ee55b870fd2e7e13dea60e6ed2f8
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: efda0e946204a756d75874a55ac728f81f8ebaef
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345241"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156522"
 ---
 # <a name="single-sign-on-sso-support-for-messaging-extensions"></a>SSO-Unterstützung (Single Sign-On) für Messaging-Erweiterungen
  
 Unterstützung für einmaliges Anmelden ist jetzt für Messaging-Erweiterungen und die Verbreitung von Links verfügbar. Wenn Sie einmaliges Anmelden (Single Sign-On, SSO) für Messaging-Erweiterungen aktivieren, wird das Authentifizierungstoken automatisch aktualisiert, wodurch die Anzahl der Male minimiert wird, die Sie zum Eingeben ihrer Anmeldeinformationen für Microsoft Teams benötigen.
 
-In diesem Dokument erfahren Sie, wie Sie das SSO aktivieren und Bei Bedarf Ihr Authentifizierungstoken speichern.
+In diesem Dokument erfahren Sie, wie Sie SSO aktivieren und Ihr Authentifizierungstoken speichern, falls erforderlich.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
