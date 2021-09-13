@@ -3,14 +3,14 @@ title: Senden und Empfangen von Dateien über den Bot
 description: Beschreibt, wie Dateien über den Bot gesendet und empfangen werden
 keywords: Teams-Bots senden Empfangen von Dateien
 ms.date: 05/20/2019
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: f6d738bfe3456ad9434512fd84d7e65d6062e57076656a57592cdf6a3f23790e
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: cb82643ad55439ac12d707d9fff0378afa99e363
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708112"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156351"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Senden und Empfangen von Dateien über den Bot
 
@@ -28,7 +28,7 @@ Es gibt zwei Möglichkeiten, Dateien an einen Bot zu senden und von einem Bot zu
 
 ## <a name="use-the-graph-apis"></a>Verwenden der Graph-APIs
 
-Veröffentlichen Sie Nachrichten mit Kartenanlagen, die auf vorhandene SharePoint-Dateien verweisen, mithilfe der Graph-APIs für [OneDrive und SharePoint.](/onedrive/developer/rest-api/) Um die Graph-APIs zu verwenden, erhalten Sie Über den standardmäßigen OAuth 2.0-Autorisierungsfluss Zugriff auf eine der folgenden Optionen:
+Posten Sie Nachrichten mit Kartenanlagen, die auf vorhandene SharePoint Dateien verweisen, mithilfe der Graph-APIs für [OneDrive und SharePoint.](/onedrive/developer/rest-api/) Um die Graph-APIs zu verwenden, erhalten Sie Über den standardmäßigen OAuth 2.0-Autorisierungsfluss Zugriff auf eine der folgenden Optionen:
 
 * Der OneDrive Ordner eines Benutzers für `personal` und `groupchat` dateien.
 * Die Dateien im Kanal eines Teams für `channel` Dateien.
@@ -127,7 +127,7 @@ In der folgenden Tabelle werden die Inhaltseigenschaften der Anlage beschrieben:
 | Eigenschaft | Zweck |
 | --- | --- |
 | `description` | Beschreibt den Zweck der Datei oder fasst den Inhalt zusammen. |
-| `sizeInBytes` | Stellt dem Benutzer eine Schätzung der Dateigröße und des Speicherplatzes in OneDrive bereit. |
+| `sizeInBytes` | Stellt dem Benutzer eine Schätzung der Dateigröße und des Speicherplatzes bereit, den er in OneDrive benötigt. |
 | `acceptContext` | Zusätzlicher Kontext, der automatisch an den Bot übertragen wird, wenn der Benutzer die Datei akzeptiert. |
 | `declineContext` | Zusätzlicher Kontext, der im Hintergrund an den Bot übertragen wird, wenn der Benutzer die Datei ablehnt. |
 
@@ -157,7 +157,7 @@ Der folgende Code zeigt ein Beispiel für eine präzise Version der Aufrufaktivi
 }
 ```
 
-Wenn der Benutzer die Datei ablehnt, empfängt der Bot auf ähnliche Weise das folgende Ereignis mit demselben Gesamtaktivitätsnamen:
+Wenn der Benutzer die Datei ablehnt, empfängt der Bot auf ähnliche Weise das folgende Ereignis mit dem gleichen Gesamtaktivitätsnamen:
 
 ```json
 {
@@ -173,7 +173,7 @@ Wenn der Benutzer die Datei ablehnt, empfängt der Bot auf ähnliche Weise das f
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Benachrichtigen des Benutzers über eine hochgeladene Datei
 
-Nachdem Sie eine Datei in die OneDrive des Benutzers hochgeladen haben, senden Sie eine Bestätigungsmeldung an den Benutzer. Die Nachricht muss die folgende `FileCard` Anlage enthalten, die der Benutzer auswählen kann, um sie entweder in der Vorschau anzuzeigen oder in OneDrive zu öffnen oder sie lokal herunterzuladen:
+Nachdem Sie eine Datei in die OneDrive des Benutzers hochgeladen haben, senden Sie eine Bestätigungsmeldung an den Benutzer. Die Nachricht muss die folgende `FileCard` Anlage enthalten, die der Benutzer auswählen kann, um sie in der Vorschau anzuzeigen oder in OneDrive zu öffnen oder sie lokal herunterzuladen:
 
 ```json
 {
@@ -323,7 +323,7 @@ Im folgenden Codebeispiel wird veranschaulicht, wie Sie die Dateizustimmung einh
 
 |**Beispielname** | **Beschreibung** | **.NET** | **Javascript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
-| File upload | Veranschaulicht, wie Sie die Dateizustimmung einholen und Dateien von einem Bot in Teams hochladen. Außerdem erfahren Sie, wie Sie eine an einen Bot gesendete Datei empfangen. | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
+| File upload | Veranschaulicht, wie Sie die Dateizustimmung einholen und Dateien von einem Bot in Teams hochladen. Außerdem erfahren Sie, wie Sie eine an einen Bot gesendete Datei empfangen. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

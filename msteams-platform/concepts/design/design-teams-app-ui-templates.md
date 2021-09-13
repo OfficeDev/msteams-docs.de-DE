@@ -3,18 +3,18 @@ title: Entwerfen Ihrer App mit UI-Vorlagen
 author: heath-hamilton
 description: Entwerfen Sie Ihre App schneller mit standardisierten UI-Komponenten, Layouts und Mustern, die häufig in Microsoft Teams zu sehen sind.
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 6405c8a35b9d80c0a7fbcb9d28ae5e1a637a2ea6
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: ef1fbe41c7618518dab64c25b3ac17eaf8f925d1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408681"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156937"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Entwerfen Ihrer Microsoft Teams-App mit UI-Vorlagen
 
-Entwerfen Sie Ihre Microsoft Teams-App schneller mit UI-Vorlagen. Die Vorlagen sind eine Sammlung von Fluent UI-basierten Komponenten, die in allgemeinen Teams Anwendungsfällen funktionieren, sodass Sie mehr Zeit haben, um die beste Benutzererfahrung zu ermitteln.
+Entwerfen Sie Ihre Microsoft Teams-App schneller mit UI-Vorlagen. Die Vorlagen sind eine Sammlung von Fluent UI-basierten Komponenten, die in gängigen Teams Anwendungsfällen funktionieren, sodass Sie mehr Zeit haben, um die beste Benutzererfahrung zu ermitteln.
 
 ## <a name="getting-started-with-tools-and-samples"></a>Erste Schritte mit Tools und Beispielen
 
@@ -48,7 +48,7 @@ Installieren Sie eine Beispiel-App, um zu sehen, wie UI-Vorlagen in Teams Kontex
 
 ## <a name="dashboard"></a>Dashboard
 
-Ein Dashboard zeigt verschiedene Arten von Inhalten an einem zentralen Ort an (Teams persönliche App oder Registerkarte). Benutzer sollten in der Lage sein, zumindest einige der Elemente anzupassen, die sie auf einem Dashboard sehen.
+Ein Dashboard zeigt verschiedene Inhaltstypen an einem zentralen Ort an (Teams persönliche App oder Registerkarte). Benutzer sollten in der Lage sein, zumindest einige der Elemente anzupassen, die sie auf einem Dashboard sehen.
 
 ### <a name="top-use-cases"></a>Häufigste Anwendungsfälle
 

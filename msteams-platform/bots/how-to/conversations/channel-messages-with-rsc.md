@@ -3,13 +3,13 @@ title: Empfangen aller Kanalnachrichten mit RSC
 author: surbhigupta12
 description: Empfangen aller Kanalnachrichten mit RSC-Berechtigungen
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: 1499bf4c78edd67af531e3fe8fa47ddfe196a923
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.localizationpriority: medium
+ms.openlocfilehash: ea247d7718b76f1e48bbb2c9839606dcb5cbab51
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528901"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156051"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Empfangen aller Kanalnachrichten mit RSC
 
@@ -18,7 +18,7 @@ ms.locfileid: "58528901"
 
 Das ressourcenspezifische Zustimmungsmodell (RSC), das ursprünglich für Teams Graph-APIs entwickelt wurde, wurde jetzt auf Bot-Szenarien erweitert.
 
-Derzeit können Bots nur Benutzerkanalnachrichten empfangen, wenn sie @mentioned sind. Mithilfe von RSC können Sie jetzt Teambesitzer bitten, einem Bot zuzustimmen, Benutzernachrichten über Standardkanäle in einem Team zu empfangen, ohne @mentioned zu werden. Diese Funktion wird aktiviert, indem die `ChannelMessage.Read.Group` Berechtigung im Manifest einer RSC-aktivierten Teams-App angegeben wird. Nach der Konfiguration können Teambesitzer während des App-Installationsvorgangs ihre Zustimmung erteilen.
+Derzeit können Bots nur Benutzerkanalnachrichten empfangen, wenn sie @mentioned sind. Mithilfe von RSC können Sie jetzt Teambesitzer bitten, zuzustimmen, dass ein Bot Benutzernachrichten über Standardkanäle in einem Team empfängt, ohne @mentioned zu werden. Diese Funktion wird aktiviert, indem die `ChannelMessage.Read.Group` Berechtigung im Manifest einer RSC-aktivierten Teams-App angegeben wird. Nach der Konfiguration können Teambesitzer während des App-Installationsvorgangs ihre Zustimmung erteilen.
 
 Weitere Informationen zum Aktivieren von RSC für Ihre App finden Sie unter [ressourcenspezifischer Zustimmung in Teams.](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest)
 
@@ -34,7 +34,7 @@ Damit Ihr Bot alle Kanalnachrichten empfangen kann, muss RSC im Teams App-Manife
 
 Es folgt ein Beispiel für das `webApplicationInfo` Objekt:
 
-* **id:** Ihre Azure Active Directory (AAD)-App-ID. Dies kann mit Ihrer Bot-ID identisch sein.
+* **id:** Ihre Azure Active Directory -App-ID (AAD). Dies kann mit Ihrer Bot-ID identisch sein.
 * **ressource:** Eine beliebige Zeichenfolge. Dieses Feld verfügt über keinen Vorgang in RSC, muss jedoch hinzugefügt werden und einen Wert aufweisen, um eine Fehlerantwort zu vermeiden.
 * **applicationPermissions:** RSC-Berechtigungen für Ihre App mit `ChannelMessage.Read.Group` müssen angegeben werden. Weitere Informationen finden Sie unter [ressourcenspezifische Berechtigungen.](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions)
 
@@ -55,7 +55,7 @@ Der folgende Code enthält ein Beispiel für das App-Manifest:
 Wenn Sie in einem Team querladen möchten, um zu testen, ob alle Kanalnachrichten in einem Team mit RSC empfangen werden, ohne @mentioned:
 
 1. Wählen Sie ein Team aus, oder erstellen Sie es.
-1. Wählen Sie die Ellipsen &#x25CF;&#x25CF;&#x25CF; im linken Bereich aus. Das Dropdownmenü wird angezeigt.
+1. Wählen Sie die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; im linken Bereich aus. Das Dropdownmenü wird angezeigt.
 1. Wählen Sie im Dropdownmenü die Option **"Team verwalten"** aus. Die Details werden angezeigt.
 
    ![Verwalten von Apps im Team](~/bots/how-to/conversations/Media/managingteam.png)
@@ -82,7 +82,7 @@ Wenn Sie in einem Team querladen möchten, um zu testen, ob alle Kanalnachrichte
 
 ## <a name="code-sample"></a>Codebeispiel
 
-| Beispielname | Beschreibung | C# |Node.js|
+| Beispielname | Beschreibung | C # |Node.js|
 |-------------|-------------|------|----|
 |Kanalnachrichten mit RSC-Berechtigungen| Microsoft Teams Beispiel-App veranschaulicht, wie ein Bot alle Kanalnachrichten mit RSC empfangen kann, ohne @mentioned zu werden.|  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |    [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 

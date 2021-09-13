@@ -1,8 +1,8 @@
 ### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-Damit Die Registerkarte in Teams angezeigt werden kann, müssen Sie das **Microsoft Teams JavaScript-Client-SDK** und einen Aufruf nach `microsoftTeams.initialize()` dem Laden der Seite einschließen. So kommunizieren Ihre Registerkarte und der Teams-Client:
+Damit Ihre Registerkarte in Teams angezeigt werden kann, müssen Sie das **Microsoft Teams JavaScript-Client-SDK** und einen Aufruf nach `microsoftTeams.initialize()` dem Laden der Seite einschließen. So kommunizieren Ihre Registerkarte und der Teams-Client:
 
-Wechseln Sie zum Ordner **"Freigegeben",** öffnen **Sie _Layout.cshtml,** und fügen Sie dem Tag Folgendes `<head>` hinzu:
+Wechseln Sie zum **Freigegebenen** Ordner, öffnen **Sie _Layout.cshtml,** und fügen Sie dem Tag Folgendes `<head>` hinzu:
 
 ```html
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -59,12 +59,12 @@ Wechseln Sie zum Ordner **"Freigegeben",** öffnen **Sie _Layout.cshtml,** und f
 Drücken Sie in Visual Studio **F5,** oder wählen Sie im Menü **"Debuggen"** die Option **"Debuggen starten"** aus. Stellen Sie sicher, dass **ngrok** ausgeführt wird und ordnungsgemäß funktioniert, indem Sie Ihren Browser öffnen und über die ngrok-HTTPS-URL, die im Eingabeaufforderungsfenster bereitgestellt wurde, zur Inhaltsseite wechseln.
 
 > [!TIP]
-> Sie müssen ihre Anwendung sowohl in Visual Studio als auch in ngrok ausführen. Wenn Sie die Ausführung Ihrer Anwendung in Visual Studio beenden müssen, um daran zu **arbeiten, führen Sie ngrok aus.** Sie lauscht weiterhin und setzt das Weiterleiten der Anforderung Ihrer Anwendung fort, wenn sie in Visual Studio neu gestartet wird. Wenn Sie den ngrok-Dienst neu starten müssen, wird eine neue URL zurückgegeben, und Sie müssen Ihre Anwendung mit der neuen URL aktualisieren.
+> Sie müssen ihre Anwendung sowohl in Visual Studio als auch in ngrok ausführen. Wenn Sie die Ausführung Ihrer Anwendung in Visual Studio beenden müssen, um daran zu **arbeiten, führen Sie ngrok aus.** Es wird weiterhin abhören und das Weiterleiten der Anforderung Ihrer Anwendung fortsetzen, wenn sie in Visual Studio neu gestartet wird. Wenn Sie den ngrok-Dienst neu starten müssen, wird eine neue URL zurückgegeben, und Sie müssen Ihre Anwendung mit der neuen URL aktualisieren.
 
 ## <a name="upload-your-tab"></a>Hochladen Der Registerkarte
 
 >[!Note]
-> App Studio kann verwendet werden, um Ihre **manifest.jszu** bearbeiten und das fertige Paket in Teams hochzuladen. Sie können die **manifest.js** für die Datei auch manuell bearbeiten, wenn Sie möchten. Wenn Sie dies tun, müssen Sie die Lösung erneut erstellen, um die hochzuladende **tab.zipdatei** zu erstellen.
+> App Studio kann verwendet werden, um Ihre **manifest.jszu** bearbeiten und das fertige Paket in Teams hochzuladen. Sie können auch die **manifest.js** on-Datei manuell bearbeiten, wenn Sie möchten. Wenn Sie dies tun, müssen Sie die Lösung erneut erstellen, um die hochzuladende **tab.zipdatei** zu erstellen.
 
 **So laden Sie Ihre Registerkarte hoch**
 
@@ -78,7 +78,7 @@ Drücken Sie in Visual Studio **F5,** oder wählen Sie im Menü **"Debuggen"** d
     /bin/Debug/netcoreapp2.2/tab.zip
     ```
 
-1. Hochladen app Studio **tab.zip.**
+1. Hochladen zu App Studio **tab.zip.**
 
 ### <a name="update-your-app-package-with-manifest-editor"></a>Aktualisieren des App-Pakets mit dem Manifest-Editor
 
@@ -123,7 +123,7 @@ Im Abschnitt **"Domänen und Berechtigungen"** müssen **Domänen von Ihren Regi
 
 1. Wählen Sie im Abschnitt **"Testen und Verteilen"** die Option **"Installieren"** aus.
 
-1. Wählen Sie im Popupdialogfeld **"Zu einem Team hinzufügen"** oder aus der Dropdownliste die Option **"Zu einem Chat hinzufügen"** aus.
+1. Wählen Sie im Dialogfeld Popup die Option **Zu einem Team hinzufügen** oder in der Dropdownliste **Zu einem Chat hinzufügen** aus.
 
 1. Wählen Sie das Team oder den Chat aus, in dem die Registerkarte angezeigt werden soll, und wählen Sie **"Registerkarte einrichten"** aus.
 

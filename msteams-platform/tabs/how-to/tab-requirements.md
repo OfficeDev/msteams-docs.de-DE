@@ -3,15 +3,15 @@ title: Voraussetzungen
 author: surbhigupta
 description: Jede Registerkarte in Microsoft Teams muss diese Anforderungen erfüllen.
 keywords: Konfigurierbarer Gruppenkanal für Teams-Registerkarten
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 36d5a6ee785779c8ba186a00ec80519a189ac278e7ec2298bba82fb53f0a848a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 786b4a74085acb57b4b87a5671a3a9b7ae9b0a41
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701800"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156413"
 ---
 # <a name="prerequisites"></a>Voraussetzungen
 
@@ -43,7 +43,7 @@ Teams Registerkarten müssen die folgenden Voraussetzungen erfüllen:
 * [Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
 * [Microsoft Teams-Toolkit-Erweiterung für Visual Studio](../../toolkit/visual-studio-overview.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Erstellen Ihrer ersten App mit React](../../get-started/first-app-react.md)

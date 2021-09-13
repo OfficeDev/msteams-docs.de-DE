@@ -2,15 +2,15 @@
 title: Aktivieren der Anpassung Ihrer App
 author: heath-hamilton
 description: Erfahren Sie, wie Teams Administratoren Ihre App für ihre Organisation anpassen können.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: ffc429d3dee0ab05e65951233b60ec17ae659b0e
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 193b4baeee16badb1dcb26139831d3e298de9a5c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408664"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156208"
 ---
 # <a name="enable-your-microsoft-teams-app-to-be-customized"></a>Aktivieren der anpassungsfähigen Microsoft Teams-App
 

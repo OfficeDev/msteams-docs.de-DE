@@ -3,15 +3,15 @@ title: 'Lernprogramm – Erstellen Ihrer ersten App mit C #'
 description: Erfahren Sie, wie Sie mit dem Erstellen Microsoft Teams Apps mit C# oder .NET beginnen.
 keywords: Erste Schritte .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 72cbaadbd3e641b9f142cec51b4d9fd9ef170f727c87ed97c84e392943b84af3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1ed26ed6869858a3818c7356c3f9b9f59103f616
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707336"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156554"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>Erstellen Ihrer ersten Teams-App mit C #
 
@@ -117,9 +117,9 @@ ngrok http 44327 -host-header=localhost:44327
 
 ### <a name="host-in-azure"></a>Hosten in Azure
 
-Microsoft Azure hostet Ihre .NET-Anwendung auf einer kostenlosen Ebene mithilfe der freigegebenen Infrastruktur. Dies reicht aus, um das `Hello World` Beispiel auszuführen. Weitere Informationen finden Sie unter [Erstellen eines neuen kostenlosen Azure-Kontos.](https://azure.microsoft.com/free/)
+Microsoft Azure hostet Ihre .NET-Anwendung auf einer kostenlosen Ebene unter Verwendung der freigegebenen Infrastruktur. Dies reicht aus, um das `Hello World` Beispiel auszuführen. Weitere Informationen finden Sie unter [Erstellen eines neuen kostenlosen Azure-Kontos.](https://azure.microsoft.com/free/)
 
-Visual Studio bietet integrierte Unterstützung für die App-Bereitstellung für verschiedene Anbieter, einschließlich Azure:
+Visual Studio bietet integrierte Unterstützung für die Bereitstellung von Apps für verschiedene Anbieter, einschließlich Azure:
 
 <img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 
@@ -148,7 +148,7 @@ Visual Studio bietet integrierte Unterstützung für die App-Bereitstellung für
 
 1. Wählen Sie **"Hello World"** aus, und wählen Sie **"Importieren"** aus. Die **Hello World-App** wird im Entwicklerportal importiert. 
 
-    Sie können Ihre App über das Teams Entwicklerportal konfigurieren. Das Manifest befindet sich unter "Verteilen". Sie können das Manifest verwenden, um Funktionen, erforderliche Ressourcen und andere wichtige Attribute für Ihre App zu konfigurieren. Weitere Informationen zum Konfigurieren Ihrer App mithilfe des Entwicklerportals finden Sie [unter Teams Developer Portal.](../concepts/build-and-test/teams-developer-portal.md)
+    Sie können Ihre App über das Teams Entwicklerportal konfigurieren. Das Manifest befindet sich unter "Verteilen". Sie können das Manifest verwenden, um Funktionen, erforderliche Ressourcen und andere wichtige Attribute für Ihre App zu konfigurieren. Weitere Informationen zum Konfigurieren Ihrer App mithilfe des Entwicklerportals finden Sie [unter Teams Entwicklerportal.](../concepts/build-and-test/teams-developer-portal.md)
 
     <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
 ---
@@ -177,7 +177,7 @@ Nachdem Sie die App in Teams installiert haben, müssen Sie sie so konfigurieren
 
 1. Wechseln Sie zu einem Kanal im Team, in dem Sie die Beispiel-App installiert haben, und wählen Sie die Schaltfläche **"+"** aus, um eine neue Registerkarte hinzuzufügen.
 1. Wählen Sie **"Hello World"** aus der **Registerkartenliste hinzufügen** aus. Es wird ein Konfigurationsdialogfeld angezeigt, in dem Sie die Registerkarte auswählen können, die in diesem Kanal angezeigt werden soll. 
-1. Wählen Sie **Speichern** aus. Die `Hello World` Registerkarte wird mit der Registerkarte geladen.
+1. Klicken Sie auf **Speichern**. Die `Hello World` Registerkarte wird mit der Registerkarte geladen.
 
     <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
@@ -205,7 +205,7 @@ Sie können den Bot jetzt in Teams testen.
 
     <img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Übersicht über Lernprogramme](code-samples.md)
 * [Erstellen einer Unterhaltungs-Bot-App](first-app-bot.md)

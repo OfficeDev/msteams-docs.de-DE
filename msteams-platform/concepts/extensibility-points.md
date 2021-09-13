@@ -3,19 +3,19 @@ title: Einstiegspunkte für Microsoft Teams-Apps
 author: heath-hamilton
 description: Hier wird beschrieben, wo Benutzer Ihre App in Microsoft Teams finden und verwenden können.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 9a98cbebd1ada8708b75256ebff1d93b0f528251b6250524d79bac45f59fb9f8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a23b447a07e0664875acbf9bf75f170a24a51dc2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702760"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156570"
 ---
 # <a name="entry-points-for-teams-apps"></a>Einstiegspunkte für Microsoft Teams-Apps
 
-Die Teams-Plattform bietet eine flexible Gruppe von Einstiegspunkten, z. B. Team, Kanal und Chat, an denen Benutzer Ihre App entdecken und verwenden können. Ihre App kann etwas so Einfachem dienen wie dem Einbetten von vorhandenem Webinhalt in eine Registerkarte, oder eine komplexe Lösung sein, mit der Benutzer in verschiedenen Kontexten interagieren.
-Die erfolgreichsten Apps sind systemeigen für Teams. Wählen Sie daher sorgfältig die Einstiegspunkte Ihrer App aus.
+Die Teams-Plattform bietet eine flexible Gruppe von Einstiegspunkten, z. B. Team, Kanal und Chat, in denen Benutzer Ihre App entdecken und verwenden können. Ihre App kann etwas so Einfachem dienen wie dem Einbetten von vorhandenem Webinhalt in eine Registerkarte, oder eine komplexe Lösung sein, mit der Benutzer in verschiedenen Kontexten interagieren.
+Die erfolgreichsten Apps sind systemeigen für Teams. Wählen Sie daher die Einstiegspunkte Ihrer App sorgfältig aus.
 
 ## <a name="shared-app-experiences"></a>Freigegebene App-Erfahrungen
 
@@ -45,7 +45,7 @@ Die folgende Liste zeigt, wie Teams Funktionen häufig in persönlichen Kontexte
 
 * [**Registerkarten**](~/tabs/what-are-tabs.md) bieten eine eingebettete Weboberfläche im Vollbildmodus, die für den Benutzer von Bedeutung ist.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Entwurfsrichtlinien für Teams-Apps](../concepts/design/design-teams-app-overview.md) <br>
 [Erstellen Ihrer ersten Microsoft Teams-App](../build-your-first-app/build-first-app-overview.md)

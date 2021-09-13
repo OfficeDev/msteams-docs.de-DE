@@ -5,12 +5,13 @@ description: Erstellen eines Unterhaltungsunterentitätschats für Ihre Kanalreg
 keywords: Kanal "Teams-Registerkarten" konfigurierbar
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: dffd4eb468167561735dbc292a400416c9bb11af
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.localizationpriority: none
+ms.openlocfilehash: a0dae824f27edfac6eea64ffe72fc112e46a71d7
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58529007"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156992"
 ---
 # <a name="create-conversational-tabs"></a>Registerkarten für Unterhaltungen erstellen
 
@@ -20,7 +21,7 @@ Unterhaltungsunterentitäten werden nur in Kanälen unterstützt. Sie können vo
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Um Unterhaltungsunterentitäten zu unterstützen, muss Ihre Registerkartenwebanwendung in der Lage sein, eine Zuordnung zwischen Unterentitäten ↔ Unterhaltungen in einer Back-End-Datenbank zu speichern. Die `conversationId` wird bereitgestellt, aber Sie müssen dies speichern `conversationId` und an Teams zurückgeben, damit Benutzer die Unterhaltung fortsetzen können.
+Um Unterhaltungsunterentitäten zu unterstützen, muss Ihre Registerkartenwebanwendung in der Lage sein, eine Zuordnung zwischen Unterentitäten ↔ Unterhaltungen in einer Back-End-Datenbank zu speichern. Die `conversationId` wird bereitgestellt, aber Sie müssen sie speichern `conversationId` und an Teams zurückgeben, damit Benutzer die Unterhaltung fortsetzen können.
 
 ## <a name="start-a-new-conversation"></a>Starten einer neuen Unterhaltung
 
@@ -91,7 +92,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 ## <a name="code-sample"></a>Codebeispiel
 
-| Beispielname | Beschreibung | C# |Node.js|
+| Beispielname | Beschreibung | C # |Node.js|
 |-------------|-------------|------|----|
 |Registerkarte "Unterhaltung erstellen"| Microsoft Teams Registerkartenbeispiel-App zum Demonstrieren der Registerkarte "Unterhaltung erstellen". | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 

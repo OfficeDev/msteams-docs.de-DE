@@ -4,14 +4,14 @@ author: Rajeshwari-v
 description: So verwenden Sie Teams JavaScript-Client-SDK, um Standortfunktionen zu nutzen
 keywords: Systemeigene Geräteberechtigungen für Standortzuordnungsfunktionen
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 2caf0f9e631990211eea4e94b58b4ec8399fb3d5
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: ac3227d963baea6f55da81596f2003fd865f32b1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345655"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156925"
 ---
 # <a name="integrate-location-capabilities"></a>Integration von Standortfunktionen 
 
@@ -97,7 +97,7 @@ Sie müssen sicherstellen, dass diese Fehler in Ihrer Teams-App ordnungsgemäß 
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | Die API wird auf der aktuellen Plattform nicht unterstützt.|
 | **500** | INTERNAL_ERROR | Beim Ausführen des erforderlichen Vorgangs ist ein interner Fehler aufgetreten.|
-| **1000** | PERMISSION_DENIED |Dem Benutzer wurden Standortberechtigungen für die Teams-App oder die Web-App verweigert.|
+| **1000** | PERMISSION_DENIED |Der Benutzer hat standortbezogene Berechtigungen für die Teams-App oder die Web-App verweigert.|
 | **4000** | INVALID_ARGUMENTS | Die API wird mit falschen oder nicht ausreichenden obligatorischen Argumenten aufgerufen.|
 | **8000** | USER_ABORT |Der Benutzer hat den Vorgang abgebrochen.|
 | **9000** | OLD_PLATFORM | Der Benutzer befindet sich auf einem alten Plattformbuild, in dem die Implementierung der API nicht vorhanden ist. Das Upgrade des Builds sollte das Problem beheben.|

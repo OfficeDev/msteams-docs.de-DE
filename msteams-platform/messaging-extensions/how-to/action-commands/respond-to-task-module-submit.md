@@ -2,22 +2,22 @@
 title: Reagieren auf die Sendeaktion des Aufgabenmoduls
 author: surbhigupta
 description: Beschreibt, wie auf die Aufgabenmodul-Sendeaktion über einen Aktionsbefehl für Messaging-Erweiterungen reagiert wird
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 9d0690a620efc3e658372cfaecf31504787b3d71
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 79687dd98f8d88e365ae1528b36806d3ffc559d3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068956"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157045"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Reagieren auf die Sendeaktion des Aufgabenmoduls
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 In diesem Dokument erfahren Sie, wie Ihre App auf die Aktionsbefehle reagiert, z. B. das Aufgabenmodul des Benutzers, um eine Aktion zu übermitteln.
-Nachdem ein Benutzer das Aufgabenmodul übermittelt hat, empfängt Ihr Webdienst eine `composeExtension/submitAction` Aufrufnachricht mit der Befehls-ID und den Parameterwerten. Ihre App hat fünf Sekunden Zeit, um auf den Aufruf zu reagieren. Andernfalls erhält der Benutzer die Fehlermeldung **"Die App kann nicht erreicht** werden", und jede Antwort auf den Aufruf wird vom Teams Client ignoriert.
+Nachdem ein Benutzer das Aufgabenmodul übermittelt hat, empfängt Ihr Webdienst eine `composeExtension/submitAction` Aufrufnachricht mit der Befehls-ID und den Parameterwerten. Ihre App hat fünf Sekunden Zeit, um auf den Aufruf zu reagieren. Andernfalls erhält der Benutzer die Fehlermeldung **"Die App kann nicht erreicht** werden", und alle Antworten auf den Aufruf werden vom Teams Client ignoriert.
 
 Sie haben die folgenden Optionen, um zu antworten:
 
@@ -30,7 +30,7 @@ Sie haben die folgenden Optionen, um zu antworten:
 
 Bei der Authentifizierung oder Konfiguration wird der ursprüngliche Aufruf nach Abschluss des Prozesses erneut an Ihren Webdienst senden. Die folgende Tabelle zeigt, welche Arten von Antworten basierend auf dem Aufrufspeicherort `commandContext` der Messaging-Erweiterung verfügbar sind: 
 
-|Antworttyp | Verfassen | Befehlsleiste | Meldung |
+|Antworttyp | Verfassen | Befehlsleiste | Nachricht |
 |--------------|:-------------:|:-------------:|:---------:|
 |Kartenantwort | ✔ | ✔ | ✔ |
 |Ein weiteres Aufgabenmodul | ✔ | ✔ | ✔ |
@@ -67,7 +67,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 Dies ist ein Beispiel für das JSON-Objekt, das Sie erhalten. Der `commandContext` Parameter gibt an, von wo ihre Messaging-Erweiterung ausgelöst wurde. Das `data` Objekt enthält die Felder auf dem Formular als Parameter und die Werte, die der Benutzer übermittelt hat. Das JSON-Objekt hier wird gekürzt, um die relevantesten Felder hervorzuheben.
 
@@ -157,7 +157,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -201,9 +201,9 @@ Die Antwortmethode ist identisch mit [der Antwort auf das ursprüngliche `fetchT
 ## <a name="bot-response-with-adaptive-card"></a>Bot-Antwort mit adaptiver Karte
 
 > [!NOTE]
-> Die Voraussetzung für das Abrufen der Bot-Antwort mit einer adaptiven Karte besteht darin, dass Sie das `bot` Objekt Ihrem App-Manifest hinzufügen und den erforderlichen Bereich für den Bot definieren müssen. Verwenden Sie die gleiche ID wie Ihre Messaging-Erweiterung für Ihren Bot.
+> Voraussetzung für das Abrufen der Bot-Antwort mit einer adaptiven Karte ist, dass Sie das `bot` Objekt Ihrem App-Manifest hinzufügen und den erforderlichen Bereich für den Bot definieren müssen. Verwenden Sie die gleiche ID wie Ihre Messaging-Erweiterung für Ihren Bot.
  
-Sie können auch darauf reagieren, indem Sie `submitAction` eine Nachricht mit einer adaptiven Karte mit einem Bot in den Kanal einfügen. Der Benutzer kann eine Vorschau der Nachricht anzeigen, bevor er sie übermittelt. Dies ist sehr nützlich in Szenarien, in denen Sie Informationen von den Benutzern sammeln, bevor Sie eine Adaptive Kartenantwort erstellen, oder wenn Sie die Karte aktualisieren, nachdem jemand damit interagiert. 
+Sie können auch darauf reagieren, indem Sie `submitAction` eine Nachricht mit einer adaptiven Karte mit einem Bot in den Kanal einfügen. Der Benutzer kann eine Vorschau der Nachricht anzeigen, bevor er sie übermittelt. Dies ist sehr nützlich in Szenarien, in denen Sie Informationen von den Benutzern sammeln, bevor Sie eine Adaptive Kartenantwort erstellen, oder wenn Sie die Karte aktualisieren, nachdem jemand damit interagiert hat. 
 
 Das folgende Szenario zeigt, wie die App Polly eine Abfrage konfiguriert, ohne die Konfigurationsschritte in die Kanalunterhaltung aufzunehmen:
 
@@ -303,7 +303,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 > [!NOTE]
 > * Die `activityPreview` Muss eine Aktivität mit genau einer Adaptive `message` Card-Anlage enthalten. Der `<< Card Payload >>` Wert ist ein Platzhalter für die Karte, die Sie senden möchten.
@@ -365,7 +365,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -405,7 +405,7 @@ Weitere Informationen zum Reagieren auf das ursprüngliche `fetchTask` Ereignis 
 
 ### <a name="respond-to-botmessagepreview-send"></a>Antworten auf botMessagePreview-Senden
 
-Nachdem der Benutzer **"Senden"** ausgewählt hat, erhalten Sie einen `composeExtension/submitAction` Aufruf mit `value.botMessagePreviewAction = send` . Ihr Webdienst muss eine proaktive Nachricht mit der adaptiven Karte erstellen und an die Unterhaltung senden sowie auf den Aufruf antworten.
+Nachdem der Benutzer das **Senden** ausgewählt hat, erhalten Sie einen `composeExtension/submitAction` Aufruf mit `value.botMessagePreviewAction = send` . Ihr Webdienst muss eine proaktive Nachricht mit der adaptiven Karte erstellen und an die Unterhaltung senden sowie auf den Aufruf antworten.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -501,7 +501,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[Json](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 Sie erhalten eine neue `composeExtension/submitAction` Nachricht, die der folgenden ähnelt:
 
@@ -562,7 +562,7 @@ Um die Benutzerzuordnung in Teams zu verwenden, müssen Sie die `OnBehalfOf` Erw
 
 ```
 
-# <a name="json"></a>[Json](#tab/json-1)
+# <a name="json"></a>[JSON](#tab/json-1)
 
 ```json
 {

@@ -3,18 +3,18 @@ title: Testen und debuggen Sie Ihren Bot lokal
 author: surbhigupta
 description: Lokales Testen und Debuggen Ihres Bots mit einer IDE
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 5774833806940fcd4a2cc771687ecfcd9126c835582f71c21f26b92314a1df40
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a143830ad32b42e9613011b3f08cfb9afd838f26
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706314"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156449"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Testen und debuggen Sie Ihren Bot lokal
 
-Beim Testen Ihres Bots müssen Sie sowohl die Kontexte berücksichtigen, in denen Ihr Bot ausgeführt werden soll, als auch alle Funktionen, die Sie möglicherweise zu Ihrem Bot hinzugefügt haben, die datenspezifische Microsoft Teams erfordern. Stellen Sie sicher, dass die Methode, die Sie zum Testen Des Bots auswählen, mit seiner Funktionalität übereinstimmt.
+Beim Testen Ihres Bots müssen Sie sowohl den Kontext berücksichtigen, in dem Ihr Bot ausgeführt werden soll, als auch alle Funktionen, die Sie möglicherweise zu Ihrem Bot hinzugefügt haben, die datenspezifische Microsoft Teams erfordern. Stellen Sie sicher, dass die Methode, die Sie zum Testen Des Bots auswählen, mit seiner Funktionalität übereinstimmt.
 
 ## <a name="test-by-uploading-to-teams"></a>Testen durch Hochladen auf Teams
 
@@ -40,9 +40,9 @@ Verwenden Sie den https-Endpunkt, der von ngrok in Ihrem App-Manifest bereitgest
 > [!NOTE]
 > Wenn Sie das Befehlsfenster schließen und neu starten, wird eine neue URL generiert, und Sie müssen die Bot-Endpunktadresse aktualisieren, um sie zu verwenden.
 
-## <a name="test-your-bot-without-uploading-to-teams"></a>Testen Sie Ihren Bot, ohne es in Teams hochzuladen
+## <a name="test-your-bot-without-uploading-to-teams"></a>Testen Ihres Bots ohne Upload in Teams
 
-Gelegentlich kann es erforderlich sein, Ihren Bot zu testen, ohne ihn als App in Teams zu installieren. Wir stellen zwei Methoden zum Testen des Bots bereit. Das Testen Ihres Bots, ohne ihn als App zu installieren, kann hilfreich sein, um sicherzustellen, dass Ihr Bot verfügbar ist und reagiert. Sie können jedoch nicht die gesamte Breite der Microsoft Teams Funktionen testen, die Sie Ihrem Bot möglicherweise hinzugefügt haben. Wenn Sie Ihren Bot vollständig testen müssen, sehen Sie sich [die Tests durch Hochladen an.](#test-by-uploading-to-teams)
+Gelegentlich kann es erforderlich sein, Ihren Bot zu testen, ohne ihn als App in Teams zu installieren. Wir stellen zwei Methoden zum Testen des Bots bereit. Das Testen Ihres Bots, ohne ihn als App zu installieren, kann hilfreich sein, um sicherzustellen, dass Ihr Bot verfügbar ist und reagiert. Sie können jedoch nicht die gesamte Breite Microsoft Teams Funktionen testen, die Sie Ihrem Bot möglicherweise hinzugefügt haben. Wenn Sie Ihren Bot vollständig testen müssen, sehen Sie sich [die Tests durch Hochladen an.](#test-by-uploading-to-teams)
 
 ### <a name="use-the-bot-emulator"></a>Verwenden des Bot-Emulator
 
@@ -93,7 +93,7 @@ Um zu verhindern, dass Ihr Bot Nachrichten empfängt, wechseln Sie zu Ihrem **Bo
 
 Um Ihren Bot vollständig aus Teams zu entfernen, wechseln Sie zu Ihrem **Bot-Dashboard,** und bearbeiten Sie den Microsoft Teams Kanal. Klicken Sie unten auf die Schaltfläche **"Löschen".** Dadurch wird verhindert, dass Benutzer Ihren Bot entdecken, hinzufügen und mit diesem interagieren. Dadurch wird der Bot nicht aus den Teams Instanzen anderer Benutzer entfernt, es funktioniert jedoch auch nicht mehr für ihn.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Bot mit Inspektions-Middleware debuggen](/azure/bot-service/bot-service-debug-inspection-middleware)
 * [Anruf- und Besprechungsbot lokal debuggen](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

@@ -1,19 +1,19 @@
 ---
 title: Entwicklertools für Microsoft Teams-Registerkarten
 description: Beschreibt, wie Sie bei Verwendung des Microsoft Teams-Desktopclients zu devTools gelangen
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Devtools debuggen Entwicklertools für mobile Chrome-Desktopclients
-ms.openlocfilehash: 8cc881af102810744dfaf0ee3de077da5d40671068ab319575518f8978e5f791
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 9aee38c6b063e54c876d11bfc498a9fcce9fbcf1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701835"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156434"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>Entwicklertools für Microsoft Teams-Registerkarten
 
-Wenn Teams in einem Browser ausgeführt wird, ist es einfach, auf devTools: F12 des Browsers unter Windows oder Command-Option-I unter MacOS zuzugreifen. DevTools bietet Ihnen Zugriff auf:
+Wenn Teams in einem Browser ausgeführt wird, ist es einfach, auf die DevTools: F12 des Browsers unter Windows oder Command-Option-I unter MacOS zuzugreifen. DevTools bietet Ihnen Zugriff auf:
 
 1. Anzeigen von Konsolenprotokollen.
 1. Anzeigen oder Ändern von HTML-, CSS- und Netzwerkanforderungen während der Laufzeit.
@@ -31,7 +31,7 @@ Während die Webversion und die Desktopversion von Teams fast identisch sind, gi
 1. Öffnen Sie devTools auf eine der folgenden Arten:
     * On Windows, you open DevTools via the Microsoft Teams icon in the desktop tray:<br>
   ![Klicken Sie mit der rechten Maustaste, um DevTools zu öffnen.](~/assets/images/dev-preview/devtools-right-click.png)
-    * Klicken Sie unter MacOS auf das Symbol Microsoft Teams dock.
+    * Klicken Sie unter MacOS auf das symbol Microsoft Teams auf Dock.
 
 Das folgende Beispiel zeigt, wie DevTools ein Dialogfeld für die Registerkartenkonfiguration öffnen und überprüfen:
 

@@ -4,16 +4,17 @@ description: Beschreibt die Optionen für die Veröffentlichung Ihrer Microsoft 
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: eeaa0dc7804938a663156ad019123b32630eb14f
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: d53bab5e951f64876f1d97d5e90b3788a206aa67
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345704"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156818"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Verteilen Ihrer Microsoft Teams-App
 
-Sie können Ihre Microsoft Teams-App für eine Einzelperson, ein Team, eine Organisation oder jede Person bereitstellen, die sie verwenden möchte. Die Verteilung hängt von mehreren Faktoren ab, einschließlich der Anforderungen der Benutzer, geschäftlichen und technischen Anforderungen und Ihren Zielen für die App.
+Sie können Ihre Microsoft Teams-App einer Person, einem Team, einer Organisation oder jeder Person bereitstellen, die sie verwenden möchte. Die Verteilung hängt von mehreren Faktoren ab, einschließlich der Anforderungen der Benutzer, geschäftlichen und technischen Anforderungen und Ihren Zielen für die App.
 
 ## <a name="upload-your-app-in-teams"></a>Hochladen Ihrer App in Teams
 
@@ -35,7 +36,7 @@ Weitere Informationen finden Sie unter [Verwalten Ihrer Apps im Teams Admin Cent
 In GCC Teams Umgebungen sind kompatible Microsoft-Apps standardmäßig aktiviert. Stellen Sie vor der Veröffentlichung einer App jedoch sicher, dass alle Endpunkte der App den Anforderungen Ihrer GCC Organisation entsprechen.
 
 > [!IMPORTANT]
->Wenn Ihre App einen Bot oder eine Messaging-Erweiterung enthält, müssen Sie beim Einrichten eines Kanals zwischen Ihrem Bot und Teams in Azure die Option Microsoft Teams **für Behörden** auswählen. Weitere Informationen finden Sie unter [Verbinden eines Bots mit Kanälen.](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true)
+>Wenn Ihre App einen Bot oder eine Messaging-Erweiterung enthält, müssen Sie die Option **Microsoft Teams für Behörden** auswählen, wenn Sie einen Kanal zwischen Ihrem Bot und Teams in Azure einrichten. Weitere Informationen finden Sie unter [Verbinden eines Bots mit Kanälen.](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true)
 
 ## <a name="publish-your-app-to-the-teams-store"></a>Veröffentlichen Ihrer App im Teams Store
 

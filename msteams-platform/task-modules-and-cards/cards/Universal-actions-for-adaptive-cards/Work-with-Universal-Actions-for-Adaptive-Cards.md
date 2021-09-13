@@ -2,13 +2,13 @@
 title: Mit Universal-Aktionen für adaptive Karten arbeiten
 description: Mit Universal-Aktionen für adaptive Karten arbeiten.
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: 0c3b07d630452abe945e43e7a9dfdced00e22f35324b2e9c7768b6bca5a0d065
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: b732308586d89f378b50056d7c98884a2990fb11
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701966"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156481"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Mit Universal-Aktionen für adaptive Karten arbeiten
 
@@ -19,7 +19,7 @@ Universelle Aktionen für adaptive Karten bieten eine Möglichkeit zum Implement
 * [`adaptiveCard/action` Aufrufaktivität](#adaptivecardaction-invoke-activity)
 * [Abwärtskompatibilität](#backward-compatibility)
 
-## <a name="quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams"></a>Schnellstartanleitung zur Verwendung von universellen Aktionen für adaptive Karten in Teams
+## <a name="quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams"></a>Schnellstarthandbuch für die Verwendung von universellen Aktionen für adaptive Karten in Teams
 
 1. Ersetzen Sie alle Instanzen von `Action.Submit` durch `Action.Execute`, um ein vorhandenes Szenario in Teams zu aktualisieren.
 2. Fügen Sie ihrer adaptiven Karte eine `refresh` Klausel hinzu, wenn Sie das automatische Aktualisierungsmodell verwenden möchten oder wenn Ihr Szenario benutzerspezifische Ansichten erfordert.
@@ -105,8 +105,8 @@ Weitere Informationen finden Sie unter [Abwärtskompatibilität in Teams](/adapt
 
 |Beispielname | Beschreibung | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Teams-Catering-Bot | Erstellen Sie einen Bot, der die Bestellung von Essen mithilfe adaptiver Karten akzeptiert. |[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Noch nicht verfügbar |
-| Sequenzielle Workflows adaptive Karten | Vorführen, wie sequenzielle Workflows, benutzerspezifische Ansichten und aktuelle adaptive Karten in Bots implementiert werden. | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Teams-Catering-Bot | Erstellen Sie einen Bot, der die Bestellung von Essen mithilfe adaptiver Karten akzeptiert. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Noch nicht verfügbar |
+| Sequenzielle Workflows adaptive Karten | Vorführen, wie sequenzielle Workflows, benutzerspezifische Ansichten und aktuelle adaptive Karten in Bots implementiert werden. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 

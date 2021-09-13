@@ -2,17 +2,17 @@
 title: Verwalten und Unterstützen Ihrer veröffentlichten App
 description: Was Sie denken sollten, sobald Ihr Store im Teams Store und in AppSource aufgeführt ist.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 80821eaad18998d087aeeb4f20db03ea02d9cab6d78d367add179b763e501249
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 82f85543fcf579f656704bc6c0faa47a322c2707
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704281"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156605"
 ---
-# <a name="maintain-your-published-microsoft-teams-app"></a>Verwalten ihrer veröffentlichten Microsoft Teams-App
+# <a name="maintain-your-published-microsoft-teams-app"></a>Verwalten der veröffentlichten Microsoft Teams-App
 
 Nachdem Ihre App im Microsoft Teams Store aufgeführt ist, überlegen Sie, wie Sie die App in Zukunft verwalten und Downloads und Nutzung erhöhen.
 
@@ -56,6 +56,6 @@ Erstellen Sie den Link mithilfe der folgenden URL, die mit Ihrer App-ID angefüg
 
 [Microsoft 365 Zertifizierung](/microsoft-365-app-certification/docs/certification) bietet Zusicherungen, dass Daten und Datenschutz angemessen gesichert und geschützt sind, wenn ein Office-App oder Add-In eines Drittanbieters in Ihrem Microsoft 365 Ökosystem installiert wird. Die Zertifizierung bestätigt, dass Ihre App mit Microsoft-Technologien kompatibel ist, den bewährten Methoden für cloudbasierte App-Sicherheit entspricht und von Microsoft unterstützt wird.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Monetarisieren Sie Ihre App über den Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

@@ -2,20 +2,20 @@
 title: Optimieren eines Bots mit Ratenbegrenzung in Teams
 description: Begrenzung der Raten und bewährte Methoden in Microsoft Teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Teams-Bots – Begrenzung der Raten
-ms.openlocfilehash: d113cc0236de78a34211b9348105916740189d81
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: f1e874c5e3db572c5f3111f0a5e6f8a4c6f3d87d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345593"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156345"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimieren eines Bots mit Ratenbegrenzung in Teams
 
 Die Geschwindigkeitsbegrenzung ist eine Methode, um Nachrichten auf eine bestimmte maximale Häufigkeit zu beschränken. Im Allgemeinen muss Ihre Anwendung die Anzahl der Nachrichten beschränken, die sie an einen einzelnen Chat oder eine Kanalunterhaltung sendet. Dadurch wird eine optimale Benutzererfahrung sichergestellt, und Nachrichten werden Ihren Benutzern nicht als Spam angezeigt.
 
-Um Microsoft Teams und seine Benutzer zu schützen, bieten die Bot-APIs ein Zinslimit für eingehende Anforderungen. Apps, die diesen Grenzwert überschreiten, erhalten einen `HTTP 429 Too Many Requests` Fehlerstatus. Alle Anforderungen unterliegen derselben Richtlinie für die Begrenzung der Raten, einschließlich des Sendens von Nachrichten, Kanalenumerationen und Listenabrufen.
+Um Microsoft Teams und seine Benutzer zu schützen, bieten die Bot-APIs ein Preislimit für eingehende Anforderungen. Apps, die diesen Grenzwert überschreiten, erhalten einen `HTTP 429 Too Many Requests` Fehlerstatus. Alle Anforderungen unterliegen derselben Richtlinie für die Begrenzung der Raten, einschließlich des Sendens von Nachrichten, Kanalenumerationen und Listenabrufen.
 
 Da sich die genauen Werte von Zinslimits ändern können, muss Ihre Anwendung das entsprechende Backoff-Verhalten implementieren, wenn die API `HTTP 429 Too Many Requests` zurückgibt.
 
@@ -131,20 +131,20 @@ Die folgende Tabelle enthält die Grenzwerte pro Bot und Thread:
 
 | Szenario | Zeitraum in Sekunden | Maximal zulässige Vorgänge |
 | --- | --- | --- |
-| An Unterhaltung senden | 1  | 7  |
-| An Unterhaltung senden | 2  | 8  |
+| An Unterhaltung senden | 1 | 7  |
+| An Unterhaltung senden | 2 | 8  |
 | An Unterhaltung senden | 30 | 60 |
 | An Unterhaltung senden | 3600 | 1800 |
-| Unterhaltung erstellen | 1  | 7  |
-| Unterhaltung erstellen | 2  | 8  |
+| Unterhaltung erstellen | 1 | 7  |
+| Unterhaltung erstellen | 2 | 8  |
 | Unterhaltung erstellen | 30 | 60 |
 | Unterhaltung erstellen | 3600 | 1800 |
-| Abrufen von Unterhaltungsmitgliedern| 1  | 14  |
-| Abrufen von Unterhaltungsmitgliedern| 2  | 16  |
+| Abrufen von Unterhaltungsmitgliedern| 1 | 14  |
+| Abrufen von Unterhaltungsmitgliedern| 2 | 16  |
 | Abrufen von Unterhaltungsmitgliedern| 30 | 120 |
 | Abrufen von Unterhaltungsmitgliedern| 3600 | 3600 |
-| Unterhaltungen abrufen | 1  | 14  |
-| Unterhaltungen abrufen | 2  | 16  |
+| Unterhaltungen abrufen | 1 | 14  |
+| Unterhaltungen abrufen | 2 | 16  |
 | Unterhaltungen abrufen | 30 | 120 |
 | Unterhaltungen abrufen | 3600 | 3600 |
 
@@ -161,16 +161,16 @@ Die folgende Tabelle enthält den Grenzwert pro Thread für alle Bots:
 
 | Szenario | Zeitraum in Sekunden | Maximal zulässige Vorgänge |
 | --- | --- | --- |
-| An Unterhaltung senden | 1  | 14  |
-| An Unterhaltung senden | 2  | 16  |
-| Unterhaltung erstellen | 1  | 14  |
-| Unterhaltung erstellen | 2  | 16  |
-| Unterhaltung erstellen| 1  | 14  |
-| Unterhaltung erstellen| 2  | 16  |
-| Abrufen von Unterhaltungsmitgliedern| 1  | 28 |
-| Abrufen von Unterhaltungsmitgliedern| 2  | 32 |
-| Unterhaltungen abrufen | 1  | 28 |
-| Unterhaltungen abrufen | 2  | 32 |
+| An Unterhaltung senden | 1 | 14  |
+| An Unterhaltung senden | 2 | 16  |
+| Unterhaltung erstellen | 1 | 14  |
+| Unterhaltung erstellen | 2 | 16  |
+| Unterhaltung erstellen| 1 | 14  |
+| Unterhaltung erstellen| 2 | 16  |
+| Abrufen von Unterhaltungsmitgliedern| 1 | 28 |
+| Abrufen von Unterhaltungsmitgliedern| 2 | 32 |
+| Unterhaltungen abrufen | 1 | 28 |
+| Unterhaltungen abrufen | 2 | 32 |
 
 ## <a name="next-step"></a>Nächster Schritt
 

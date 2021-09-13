@@ -5,12 +5,13 @@ description: Erstellen Sie mithilfe des Teams Toolkits eine Messaging-Erweiterun
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: 3566bc55c9995a8407b1344fbdb7d1548e210046
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.localizationpriority: none
+ms.openlocfilehash: 52352d23533b80c9df5422f87e58d318987b6e95
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254288"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156557"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Erstellen Sie Ihre erste Messaging-Erweiterung für Microsoft Teams, und führen Sie sie aus.
 
@@ -21,7 +22,7 @@ Es gibt zwei Arten von Teams-**Messaging-Erweiterungen**:
 - Mit [Suchbefehlen](../messaging-extensions/how-to/search-commands/define-search-command.md) können Sie externe Systeme durchsuchen und die Ergebnisse dieser Suche in Form einer Karte in eine Nachricht einfügen.
 - [Aktionsbefehle](../messaging-extensions/how-to/action-commands/define-action-command.md) ermöglichen Ihnen, Ihren Benutzern ein modales Popupfenster zum Sammeln oder Anzeigen von Informationen vorzuführen, ihre Interaktion zu verarbeiten und Informationen an Teams zurückzusenden.
 
-## <a name="before-you-begin"></a>Bevor Sie beginnen
+## <a name="before-you-begin"></a>Bevor Sie beginnen:
 
 Stellen Sie sicher, dass Ihre Entwicklungsumgebung eingerichtet ist, indem Sie die erforderlichen Komponenten installieren.
 
@@ -35,7 +36,7 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Öffnen Sie Visual Studio Code.
-1. Wählen Sie das Symbol Teams in der Seitenleiste aus, um das Teams Toolkit zu öffnen.
+1. Wählen Sie das symbol Teams in der Seitenleiste aus, um das Teams Toolkit zu öffnen.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Das Microsoft Teams-Symbol in der Visual Studio Code-Randleiste.":::
 
@@ -131,7 +132,7 @@ So erstellen Sie Ihre App und führen sie lokal aus:
 <details>
 <summary>Erfahren Sie, was passiert, wenn Sie Ihre App lokal im Debugger ausführen.</summary>
 
-Wenn Sie **F5** drücken, hat das Teams Toolkit Folgendes:
+Wenn Sie die **F5-Taste** drücken, wird das Teams Toolkit:
 
 1. Registriert Ihre Anwendung bei Azure Active Directory.
 1. Registriert Ihre Anwendung für das "Querladen" in Microsoft Teams.
@@ -184,7 +185,7 @@ Die Teams Search Auth Config for sample projects on GitHub, demonstrate how to c
 > [!div class="nextstepaction"]
 > [Weitere Bot Framework-Beispiele auf GitHub anzeigen](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 * [Übersicht über Lernprogramme](code-samples.md) 
 * [Erstellen einer App mit React](first-app-react.md)

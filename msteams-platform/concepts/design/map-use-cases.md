@@ -3,18 +3,18 @@ title: Zuordnen von Anwendungsfällen zu Teams App-Funktionen
 author: surbhigupta
 description: Ermitteln Sie, wie die Anwendungsfälle Ihrer App innerhalb der Teams funktionieren können.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 77e8db5e0d0e4738cf479ccfddb9766507f7170c
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: d9c52acc1562cb2dcfdcd9b0c58e4d4001699c9c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345551"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156297"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Zuordnen von Anwendungsfällen zu Teams App-Funktionen
 
-Nachdem Sie ermittelt *haben, wer* der Benutzer ist und *welches* Problem Sie lösen werden, müssen Sie *entscheiden, wie* das Problem gelöst werden soll. *Wer,* *was* und *wie* der Prozess des Verständnisses und der Zuordnung Ihrer Anwendungsfälle zu Teams App-Funktionen abgeschlossen wird. Sie müssen den Bereich der App basierend auf den Antworten definieren, die Sie vom Benutzer auf Ihre Abfragen erhalten haben, und dann entscheiden, welche Funktion am besten zum Erstellen Ihrer App geeignet ist.
+Nachdem Sie ermittelt *haben, wer* der Benutzer ist und *welches* Problem Sie lösen werden, müssen Sie *entscheiden, wie* das Problem gelöst werden soll. *Wer,* *was* und *wie* den Prozess des Verständnisses und der Zuordnung Ihrer Anwendungsfälle zu Teams App-Funktionen abschließt. Sie müssen den Bereich der App basierend auf den Antworten definieren, die Sie vom Benutzer auf Ihre Abfragen erhalten haben, und dann entscheiden, welche Funktion für die App-Erstellung am besten geeignet ist.
 
 > [!NOTE]
 > Sie müssen über ein gutes Verständnis der [Einstiegspunkte und UI-Elemente verfügen,](../../concepts/extensibility-points.md) die für Ihre App verfügbar sind. Sie müssen auch sicherstellen, dass Sie [Ihre Anwendungsfälle](../../concepts/design/understand-use-cases.md) sorgfältig berücksichtigt haben.
@@ -46,7 +46,7 @@ Die folgenden Szenarien unterstützen Sie beim Verständnis der Auswahl von Eins
 
 ## <a name="create-share-and-collaborate-on-items-in-an-external-system"></a>Erstellen, Freigeben und Zusammenarbeit an Elementen in einem externen System
 
-Die App für Microsoft Teams ist eine hervorragende Möglichkeit, mit Ihren Daten zu interagieren, und es stehen eine Vielzahl von Integrationspunkten zur Auswahl.
+App für Microsoft Teams ist eine hervorragende Möglichkeit, mit Ihren Daten zu interagieren, und es stehen eine Vielzahl von Integrationspunkten zur Auswahl.
 
 * **Messaging-Erweiterungen mit Suchbefehlen:** Durchsuchen externer Systeme und Freigeben der Ergebnisse als interaktive Karte.
 
@@ -72,7 +72,7 @@ Manchmal benötigen Sie nur eine schnelle Möglichkeit, einen Prozess oder Workf
 
 ## <a name="send-notifications-and-alerts"></a>Senden von Benachrichtigungen und Warnungen
 
-Senden Sie asynchrone Benachrichtigungen und Warnungen an Ihre Benutzer in Teams. Verwenden Sie interaktive Karten, um schnell auf häufig verwendete Aktionen und Links zu zusätzlichen Informationen zuzugreifen.
+Senden asynchroner Benachrichtigungen und Warnungen an Ihre Benutzer in Teams. Verwenden Sie interaktive Karten, um schnell auf häufig verwendete Aktionen und Links zu zusätzlichen Informationen zuzugreifen.
 
 * **Unterhaltungsbots:** Senden proaktiver Nachrichten an Gruppen, Kanäle oder einzelne Benutzer.
 
@@ -88,7 +88,7 @@ Die Menschen haben Fragen, und Sie haben wahrscheinlich viele der Antworten, die
 
 ## <a name="get-social"></a>Soziale Netzwerke abrufen
 
-Eine Plattform für die Zusammenarbeit ist inhärent eine soziale Plattform. Lassen Sie Ihre kreative Seite kostenlos sein und Ihrem Arbeitsplatz etwas Spaß machen. Alle Benutzer müssen in der Lage sein, Ausfälle zu senden, Kudos zu geben, memes zu erhalten, emojis auszusenden oder alles andere, was Ihnen auffällt.
+Eine Plattform für die Zusammenarbeit ist inhärent eine soziale Plattform. Lassen Sie Ihre kreative Seite kostenlos sein und Ihrem Arbeitsplatz etwas Spaß machen. Alle Benutzer müssen in der Lage sein, Witze zu senden, Kudos zu geben, memes zu erhalten, emojis auszusenden oder alles andere, was Ihnen auffällt.
 
 ## <a name="think-in-terms-of-a-single-page-app"></a>Denken Sie an eine Einzelseiten-App
 

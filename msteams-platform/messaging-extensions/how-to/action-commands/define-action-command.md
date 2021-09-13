@@ -2,15 +2,15 @@
 title: Definieren von Aktionsbefehlen für Messaging-Erweiterungen
 author: surbhigupta
 description: Eine Übersicht über Aktionsbefehle für Messaging-Erweiterungen
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: b4420247d3a0c1116bd1aed09fa2edccf18ae902
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: d9e2e482ed15c99613bbd786ab685a0b388de502
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068930"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156034"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definieren von Aktionsbefehlen für Messaging-Erweiterungen
 
@@ -29,7 +29,7 @@ Bevor Sie den Aktionsbefehl erstellen, müssen Sie die folgenden Faktoren festle
 Zunächst müssen Sie den Speicherort festlegen, an dem der Aktionsbefehl aufgerufen werden muss. Durch Angeben des `context` Befehls im App-Manifest kann der Befehl von einem oder mehreren der folgenden Speicherorte aufgerufen werden:
 
 * Bereich zum Verfassen von Nachrichten: Die Schaltflächen unten im Bereich zum Verfassen von Nachrichten.
-* Befehlsfeld: Durch @mentioning Ihre App im Befehlsfeld. 
+* Befehlsfeld: Durch @mentioning Ihrer App im Befehlsfeld. 
    > [!NOTE]
    > Wenn die Messaging-Erweiterung über das Befehlsfeld aufgerufen wird, können Sie nicht mit einer Botnachricht antworten, die direkt in die Unterhaltung eingefügt wurde.
 
@@ -45,7 +45,7 @@ In der folgenden Abbildung werden die Speicherorte angezeigt, an denen der Aktio
 
 Sie müssen nicht nur auswählen, von wo aus Der Befehl aufgerufen werden kann, sie müssen auch auswählen, wie das Formular im Aufgabenmodul für Ihre Benutzer aufgefüllt werden soll. Sie haben die folgenden drei Optionen zum Erstellen des Formulars, das innerhalb des Aufgabenmoduls gerendert wird:   
 
-* **Statische Liste von Parametern:** Dies ist die einfachste Methode. Sie können eine Liste der Parameter in Ihrem App-Manifest definieren, die vom Teams Client gerendert wird, die Formatierung kann in diesem Fall jedoch nicht gesteuert werden.
+* **Statische Liste von Parametern:** Dies ist die einfachste Methode. Sie können eine Liste von Parametern in Ihrem App-Manifest definieren, die vom Teams Client gerendert wird, aber in diesem Fall nicht die Formatierung steuern.
 * **Adaptive Karte:** Sie können eine adaptive Karte verwenden, die eine bessere Kontrolle über die Benutzeroberfläche bietet, Sie jedoch weiterhin auf die verfügbaren Steuerelemente und Formatierungsoptionen beschränkt.
 * **Eingebettete Webansicht:** Sie können eine benutzerdefinierte Webansicht in das Aufgabenmodul einbetten, um eine vollständige Kontrolle über die Benutzeroberfläche und die Steuerelemente zu haben. 
 
@@ -87,11 +87,11 @@ In der folgenden Abbildung wird die Befehlserweiterung für die Messaging-Erweit
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
 
-1. Wählen Sie **"Benutzer dürfen Aktionen in externen Diensten auslösen, während sie sich innerhalb von Teams** befinden" aus. In der folgenden Abbildung wird die Aktionsbefehlsauswahl angezeigt:
+1. Wählen Sie **"Benutzern das Auslösen von Aktionen in externen Diensten innerhalb von Teams erlauben"** aus. In der folgenden Abbildung wird die Aktionsbefehlsauswahl angezeigt:
 
     <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
     
-1. Um einen statischen Satz von Parametern zum Erstellen des Aufgabenmoduls zu verwenden, wählen Sie **einen Satz statischer Parameter für den Befehl** definieren aus. 
+1. Um einen statischen Parametersatz zum Erstellen des Aufgabenmoduls zu verwenden, wählen Sie **einen Satz statischer Parameter für den Befehl** definieren aus. 
 
     In der folgenden Abbildung wird die Auswahl der statischen Parameter des Aktionsbefehls angezeigt:
 
@@ -114,7 +114,7 @@ In der folgenden Abbildung wird die Befehlserweiterung für die Messaging-Erweit
 
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
-1. Wählen Sie **Speichern**.
+1. Klicken Sie auf **Speichern**.
 1. Um weitere Parameter hinzuzufügen, wählen Sie die Schaltfläche **"Hinzufügen"** im Abschnitt **"Parameter"** aus.
 
 ### <a name="create-an-action-command-manually"></a>Manuelles Erstellen eines Aktionsbefehls
@@ -215,7 +215,7 @@ Wenn Sie eine adaptive Karte oder eine eingebettete Webansicht ohne `taskInfo` O
 > [!div class="nextstepaction"]
 > [Erstellen und Antworten mit einem Aufgabenmodul](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-Wenn Sie die Parameter oder eine eingebettete Webansicht mit einem `taskInfo` Objekt verwenden, besteht der nächste Schritt in folgenden Schritten:
+Wenn Sie die Parameter oder eine eingebettete Webansicht mit einem `taskInfo` Objekt verwenden, besteht der nächste Schritt darin:
 
 > [!div class="nextstepaction"]
 > [Antworten auf das Senden des Aufgabenmoduls](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

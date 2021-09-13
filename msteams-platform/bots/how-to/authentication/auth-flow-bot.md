@@ -2,26 +2,26 @@
 title: Microsoft Teams Authentifizierungsfluss für Bots
 description: Beschreibt Microsoft Teams Authentifizierungsfluss in Bots
 keywords: Teams-Authentifizierungsfluss-Bots
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 0eb4808cc162b293404530f7da7ac9d63b9f98cb86a0d864866fd31e388ecb89
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: afaffa47058b994aa3241797db9b03a32a1b69fe
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708319"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156352"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>Authentifizierungsfluss für Bots in Microsoft Teams
 
 OAuth 2.0 ist ein offener Standard für Authentifizierung und Autorisierung, der von Azure Active Directory (Azure AD) und vielen anderen Identitätsanbietern verwendet wird. Ein grundlegendes Verständnis von OAuth 2.0 ist eine Voraussetzung für die Arbeit mit der Authentifizierung in Teams; [Hier ist eine gute Übersicht,](https://aaronparecki.com/oauth-2-simplified/) die leichter zu befolgen ist als die [formale Spezifikation.](https://oauth.net/2/) Der Authentifizierungsfluss für Registerkarten und Bots ist ein wenig anders – Registerkarten sind Websites sehr ähnlich, sodass sie OAuth 2.0 direkt verwenden können, während Bots einige Dinge nicht anders ausführen müssen und müssen, aber die Kernkonzepte sind identisch.
 
-Ein Beispiel, das den Authentifizierungsfluss für Bots mit Node.js und dem [OAuth 2.0-Autorisierungscode-Erteilungstyp](https://oauth.net/2/grant-types/authorization-code/)veranschaulicht, finden Sie im GitHub Repository Microsoft Teams [Authentifizierungsbeispiel.](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs)
+Ein Beispiel, das den Authentifizierungsfluss für Bots mit Node.js und dem [OAuth 2.0-Autorisierungscode-Erteilungstyp](https://oauth.net/2/grant-types/authorization-code/)veranschaulicht, finden Sie im GitHub Repository Microsoft Teams [Authentication-Beispiel.](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs)
 
 ![Diagramm der Bot-Authentifizierungssequenz](../../../assets/images/authentication/bot_auth_sequence_diagram.png)
 
 1. Der Benutzer sendet eine Nachricht an den Bot.
 2. Der Bot bestimmt, ob sich der Benutzer anmelden muss.
-   In diesem Beispiel speichert der Bot das Zugriffstoken in seinem Benutzerdatenspeicher. Der Benutzer wird aufgefordert, sich anzumelden, wenn er kein überprüftes Token für den ausgewählten Identitätsanbieter hat. ([Ansichtscode](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/utils/AuthenticationUtils.ts#L58-L76))
+   In diesem Beispiel speichert der Bot das Zugriffstoken in seinem Benutzerdatenspeicher. Der Benutzer wird aufgefordert, sich anzumelden, wenn kein überprüftes Token für den ausgewählten Identitätsanbieter vorhanden ist. ([Ansichtscode](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/utils/AuthenticationUtils.ts#L58-L76))
 3. Der Bot erstellt die URL zur Startseite des Authentifizierungsflusses und sendet eine Karte mit einer Aktion an den `signin` Benutzer. ([Ansichtscode](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L160-L190))</br>
     Wie andere Anwendungsauthentifizierungsflüsse in Teams muss sich die Startseite in einer Domäne befinden, die sich in Ihrer `validDomains` Liste befindet, und in derselben Domäne wie die Umleitungsseite nach der Anmeldung.
     > [!IMPORTANT] 
@@ -54,8 +54,8 @@ Beispielcode für den Bot-Authentifizierungsprozess:
 
 | **Beispielname** | **Beschreibung** | **Node.js** | **.NET** | **Python** |
 |-----------------|----------------|--------------|----------|-----------|
-| Teams-Authentifizierung | In diesem Beispiel wird die Authentifizierung in Microsoft Teams Apps veranschaulicht. | [Anzeigen](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) | | |
-| Bot-Authentifizierung | In diesem Beispiel wird die Verwendung der Authentifizierung für einen Bot veranschaulicht, der in Microsoft Teams | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)
+| Teams-Authentifizierung | In diesem Beispiel wird die Authentifizierung in Microsoft Teams Apps veranschaulicht. | [View](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) | | |
+| Bot-Authentifizierung | In diesem Beispiel wird veranschaulicht, wie die Authentifizierung für einen Bot verwendet wird, der in Microsoft Teams | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)
 
 ## <a name="see-also"></a>Siehe auch
 

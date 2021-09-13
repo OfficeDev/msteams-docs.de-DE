@@ -10,15 +10,16 @@ metadata:
   nextTutorialHref: bots/how-to/authentication/auth-aad-sso-bots.md
   nextTutorialTitle: Weitere Informationen zur Bot-Authentifizierung
   ms.custom: mvc
-  ms.openlocfilehash: 1b95b4010ce1c3b1340c1ddb4357645383c93497
-  ms.sourcegitcommit: b83e1ade63869be10e4fcdc963d6bab7c5311a5b
+  ms.localizationpriority: none
+  ms.openlocfilehash: 631caa72700165172619fc7a80a6cff2ad6e072f
+  ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 08/26/2021
-  ms.locfileid: "58538160"
+  ms.lasthandoff: 09/12/2021
+  ms.locfileid: "59156237"
 items:
 - durationInMinutes: 1
-  content: "Teams Bots sind Unterhaltungsbots, die sich wiederholende automatisierte Aufgaben ausführen, die von den Benutzern ausgeführt werden, z. B. den Kundendienst. Der Benutzer muss sich mehrmals mit den Anmeldeinformationen anmelden, um sich wiederholende Aufgaben auszuführen. Die SSO-Authentifizierungsmethode (Single Sign-On) in Azure Active Directory (AAD) aktualisiert das Authentifizierungstoken im Hintergrund. Dies führt dazu, dass Benutzer weniger häufig ihre Anmeldeinformationen eingeben müssen. \n\nEin Bot verhält sich abhängig von der Unterhaltung, an der er beteiligt ist, unterschiedlich:\n\n* Bots in Kanal- und Gruppenchatunterhaltungen erfordern, dass der Benutzer den Bot @mention muss.\n* Für Bots in einer 1:1-Unterhaltung ist keine @Erwähnung erforderlich. Alle vom Benutzer gesendeten Nachrichten werden an den Bot weitergeleitet.\n\nDiese Schritt-für-Schritt-Anleitung hilft Ihnen beim Erstellen eines Bots mit aktivierter SSO-Authentifizierung. Die folgende Ausgabe wird angezeigt:\n\n![Mobile bei Bot angemeldet](~/assets/images/bots/sbs-desktop-mobile.png)\n"
+  content: "Teams Bots sind Unterhaltungs-Bots, die sich wiederholende automatisierte Aufgaben ausführen, die von den Benutzern ausgeführt werden, z. B. den Kundendienst. Der Benutzer muss sich mehrmals mit den Anmeldeinformationen anmelden, um sich wiederholende Aufgaben auszuführen. Die SSO-Authentifizierungsmethode (Single Sign-On) in Azure Active Directory (AAD) aktualisiert das Authentifizierungstoken im Hintergrund. Dies führt dazu, dass Benutzer weniger häufig ihre Anmeldeinformationen eingeben müssen. \n\nEin Bot verhält sich abhängig von der Unterhaltung, an der er beteiligt ist, unterschiedlich:\n\n* Bots in Kanal- und Gruppenchatunterhaltungen erfordern, dass der Benutzer den Bot @mention muss.\n* Für Bots in einer 1:1-Unterhaltung ist keine @Erwähnung erforderlich. Alle vom Benutzer gesendeten Nachrichten werden an den Bot weitergeleitet.\n\nDiese Schritt-für-Schritt-Anleitung hilft Ihnen beim Erstellen eines Bots mit aktivierter SSO-Authentifizierung. Die folgende Ausgabe wird angezeigt:\n\n![Mobile bei Bot angemeldet](~/assets/images/bots/sbs-desktop-mobile.png)\n"
 - title: Voraussetzungen
   durationInMinutes: 1
   content: "Stellen Sie sicher, dass Sie die folgenden Tools installieren und Ihre Entwicklungsumgebung einrichten:  \n\n* Microsoft Teams mit einem Konto (kein Gastkonto)\n* [ngrok](https://ngrok.com/) oder eine entsprechende Tunnellösung\n* Visual Studio 2019 oder die neueste Version\n* [Microsoft 365 Entwicklerkonto](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) oder Zugriff auf Teams Konto mit den entsprechenden Berechtigungen zum Installieren einer App\n"
@@ -63,7 +64,7 @@ items:
 
     1. Wählen Sie **"Festlegen"** für den Anwendungs-ID-URI aus.
 
-    1. Verwenden Sie den angezeigten Anwendungs-ID-URI, und fügen **Sie api://botid** - am Anfang des URI an.
+    1. Verwenden Sie den angezeigten Anwendungs-ID-URI, und fügen **Sie api://botid-** am Anfang des URI an.
 
         <img src="~/assets/images/bots/exposeAPI.png" alt="Expose an API" width="500"/>
 
@@ -81,7 +82,7 @@ items:
         | ----- | ----- |
         | Anzeigename der Administratorzustimmung | Teams können auf das Profil des Benutzers zugreifen |
         | Beschreibung der Administratorzustimmung | Ermöglicht Teams, die Web-APIs der App als aktueller Benutzer aufzurufen. |
-        | Anzeigename der Zustimmung des Benutzers | Teams können auf Ihr Benutzerprofil zugreifen und Anforderungen in Ihrem Auftrag stellen |
+        | Anzeigename der Zustimmung des Benutzers | Teams können auf Ihr Benutzerprofil zugreifen und Anforderungen in Ihrem Auftrag stellen. |
         | Beschreibung der Zustimmung des Benutzers | Aktivieren Sie Teams, um die APIs dieser App mit den gleichen Rechten aufzurufen, über die Sie verfügen. |
 
     1. Stellen Sie sicher, **Zustand** auf **Aktiviert** festgelegt ist.
@@ -117,7 +118,7 @@ items:
 - title: Konfigurieren und Ausführen des Bot-Beispiels
   durationInMinutes: 1
   content: >
-    Konfigurieren Sie das Bot-Beispiel, um zu verstehen, wie unterhaltungsbezogene Bots in Microsoft Teams authentifiziert werden.
+    Konfigurieren Sie das Bot-Beispiel, um zu verstehen, wie man unterhaltungsbezogene Bots in Microsoft Teams authentifiziert.
 
 
     **So konfigurieren und führen Sie Ihr Bot-Beispiel aus**
@@ -131,7 +132,7 @@ items:
 
     1. Wählen Sie **"Datei > Öffnen > Project/Projektmappe"** aus.
 
-    1. Wechseln Sie zu **Microsoft-Teams-Samples > Beispielen > Ordner "bot-conversation-sso-quickstart" > csharp_dotnetcore** Ordner.
+    1. Wechseln Sie zu **Microsoft-Teams-Samples > Beispielen > Ordner "bot-conversation-sso-quickstart" > csharp_dotnetcore.**
 
     1. Öffnen Sie die Datei **"BotSSOCSharp.csproj".**
 
@@ -157,7 +158,7 @@ items:
         1.  Wechseln Sie zu **Tools**  >  **NuGet Paket-Manager**  >  **Paket-Manager Einstellungen**.
         1.  Wählen Sie **im** daraufhin angezeigten Optionsfenster **NuGet Paket-Manager**  >  **Paketquellen aus.**
         1.  Wählen Sie **Hinzufügen** aus.
-        1.  Geben Sie in **Name** **, nuget.org** und in **Source**. **https://api.nuget.org/v3/index.json**
+        1.  Geben Sie **in** **Name**, nuget.org und in **Source** **https://api.nuget.org/v3/index.json** .
         1.  Wählen Sie **"Aktualisieren"** und **"OK"** aus.
         1.  Erstellen Sie Ihr Projekt neu.
         <br>
@@ -178,9 +179,9 @@ items:
 
     1. Suchen **Sie** immanifest.json-Datei **nach {TODO: MicrosoftAppId},** und ersetzen Sie sie durch Ihre Microsoft App-ID.
 
-    1. Wechseln Sie Windows Explorer zum **Microsoft-Teams-Samples > Samples > bot-conversation-sso-quickstart > csharp_dotnetcore > appPackage** folder.
+    1. Wechseln Sie Windows Explorer zum **Microsoft-Teams-Samples >-Beispielen > Ordner "bot-conversation-sso-quickstart > csharp_dotnetcore > appPackage".**
 
-    1. Zippen Sie den Inhalt des **Ordners appPackage/,** um **manifest.zip** zu erstellen.
+    1. Zippen Sie den Inhalt des **AppPackage/-Ordners,** um **manifest.zip** zu erstellen.
 
     1. Wechseln Sie zu Teams.
 
@@ -207,4 +208,4 @@ items:
 
 
     ![Mobile bei Bot angemeldet](~/assets/images/bots/sbs-desktop-mobile.png)
-- content: Sie haben das Lernprogramm abgeschlossen, um mit SSO in einem Bot für Microsoft Teams mithilfe des Bot Frameworks zu beginnen.
+- content: Sie haben das Lernprogramm abgeschlossen, um mit SSO in einem Bot für Microsoft Teams unter Verwendung des Bot Frameworks zu beginnen.

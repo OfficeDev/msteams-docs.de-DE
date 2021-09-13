@@ -3,20 +3,20 @@ title: Entwerfen Ihrer persönlichen App
 description: Erfahren Sie, wie Sie eine Teams persönliche App entwerfen und das Microsoft Teams UI Kit erhalten.
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 52029fedc39270c029cea8a85f6b45988c2340d9
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: ae75a79ebc6293b99e7e4db310cfb0545ce5037a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408622"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156931"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Entwerfen Ihrer persönlichen App für Microsoft Teams
 
 Eine persönliche App kann ein Bot, ein privater Arbeitsbereich oder beides sein. Manchmal funktioniert es wie ein Ort zum Erstellen oder Anzeigen von Inhalten, in anderen Fällen bietet es dem Benutzer einen Blick auf alles, was ihnen liegt, wenn die App als Registerkarte in mehreren Kanälen konfiguriert wurde.
 
-Um Ihr App-Design zu leiten, beschreiben und veranschaulichen die folgenden Informationen, wie Personen persönliche Apps in Teams hinzufügen, verwenden und verwalten können.
+Um Ihr App-Design zu leiten, wird in den folgenden Informationen beschrieben und veranschaulicht, wie Personen persönliche Apps in Teams hinzufügen, verwenden und verwalten können.
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
@@ -33,7 +33,7 @@ Benutzer können eine persönliche App aus dem Teams Store oder dem App-Flyout h
 
 ## <a name="use-a-personal-app-private-workspace"></a>Verwenden einer persönlichen App (privater Arbeitsbereich)
 
-Mit einem privaten Arbeitsbereich können Benutzer App-Inhalte, die für sie von Bedeutung sind, an einem zentralen Ort anzeigen, ohne Teams verlassen zu müssen.
+Mit einem privaten Arbeitsbereich können Benutzer App-Inhalte, die für sie von Bedeutung sind, an einem zentralen Ort anzeigen, ohne Teams zu verlassen.
 
 (Implementierungshinweis: Der private Arbeitsbereich basiert auf der [*persönlichen*](../../build-your-first-app/build-personal-tab.md) Registerkartenfunktion.)
 
@@ -59,7 +59,7 @@ Mit einem privaten Arbeitsbereich können Benutzer App-Inhalte, die für sie von
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Beispiel zeigt die Aufbaukomponente der persönlichen Registerkarte." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Dieses Beispiel zeigt die Aufbaukomponente der persönlichen Registerkarte." border="false":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -68,7 +68,7 @@ Mit einem privaten Arbeitsbereich können Benutzer App-Inhalte, die für sie von
 |C|**Popupansicht:** Verschiebt Ihre App-Inhalte aus einem übergeordneten Fenster in ein eigenständiges untergeordnetes Fenster.|
 |D|**Mehr Menü:** Enthält zusätzliche App-Optionen und Informationen. (Alternativ können Sie **Einstellungen** eine Registerkarte erstellen.)|
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Beispiel zeigt die strukturelle Anatomie der persönlichen Registerkarte." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Dieses Beispiel zeigt die strukturelle Anatomie der persönlichen Registerkarte." border="false":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|

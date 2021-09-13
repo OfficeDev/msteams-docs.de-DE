@@ -3,16 +3,16 @@ title: Übersicht über die Grundlagen der App-Entwicklung
 author: heath-hamilton
 description: Beschreiben sie die grundlegenden Konzepte der Teams Plattformentwicklung.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 57c2cdbf4900de58166bbf4f75191943aeeb1db1
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: c31df4411f30d8de4c082d8889aa68d5e6ecf654
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345579"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156829"
 ---
-# <a name="microsoft-teams-app-development-fundamentals"></a>Grundlagen der Microsoft Teams App-Entwicklung
+# <a name="microsoft-teams-app-development-fundamentals"></a>Grundlagen der app-Entwicklung Microsoft Teams
 
 Microsoft Teams App-Grundlagen geben die Richtung vor, die Sie zum Erstellen Ihrer benutzerdefinierten Teams-App benötigen. Sie können das für die Planung Ihrer Teams-App erforderliche Framework erkennen. Das Dokument hilft Ihnen, die Kommunikation zwischen Benutzern und Apps zu verstehen und herauszufinden, welche Art von App-Oberflächen Sie verwenden müssen oder welche APIs Ihre App möglicherweise im Prozess benötigt. Lassen Sie sich von der Interaktivität inspirieren, die die App-Erfahrung bei der Integration in Teams vertiefen kann.
 
@@ -35,7 +35,7 @@ Sie können Benutzerprobleme erkennen und die Antworten auf einige häufige Prob
 
 ## <a name="integrate-device-capabilities"></a>Integrieren von Gerätefunktionen
 
-Microsoft Teams Plattform verbessert die Entwicklerfunktionen kontinuierlich, die sich an den integrierten Oberflächen von Erstanbietern orientieren. Die erweiterte Teams-Plattform ermöglicht Partnern den Zugriff auf und die Integration der systemeigenen Gerätefunktionen wie Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort mithilfe dedizierter APIs, die in Microsoft Teams JavaScript-Client-SDK verfügbar sind. 
+Microsoft Teams Plattform verbessert kontinuierlich die Entwicklerfunktionen, die sich an den integrierten Oberflächen von Erstanbietern orientieren. Die erweiterte Teams-Plattform ermöglicht Partnern den Zugriff und die Integration der systemeigenen Gerätefunktionen wie Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort mithilfe dedizierter APIs, die in Microsoft Teams JavaScript-Client-SDK verfügbar sind. 
 
 ## <a name="see-also"></a>Siehe auch
 

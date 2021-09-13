@@ -2,15 +2,15 @@
 title: Entwerfen von Aktivitätsfeedbenachrichtigungen
 author: heath-hamilton
 description: Erfahren Sie, wie Sie Aktivitätsfeedbenachrichtigungen für Ihre Teams-App entwerfen und das Microsoft Teams UI Kit erhalten.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 7bc5527a4ac849ab6a46692da85b051f86606f92
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 552541e17422d20297d857a4273ec807d11e6928
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408552"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156805"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Entwerfen von Aktivitätsfeedbenachrichtigungen für Ihre Microsoft Teams-App
 
@@ -22,7 +22,7 @@ Der Aktivitätsfeed ist eine Oberfläche, auf der Benutzer auf ihre Benachrichti
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Beispiel zeigt eine App-Benachrichtigung, die im Teams Aktivitätsfeed angezeigt wird." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Beispiel zeigt eine App-Benachrichtigung, die im Teams-Aktivitätsfeed angezeigt wird." border="false":::
 
 ---
 
@@ -47,7 +47,7 @@ Die folgenden Varianten zeigen die Arten von Aktivitätsfeed-Benachrichtigungska
 
 ## <a name="manage-activity-feed-notifications"></a>Verwalten von Aktivitätsfeedbenachrichtigungen
 
-Benutzer können Benachrichtigungen, die von Ihrer App gesendet werden, auf der Seite Teams Einstellungen verwalten.
+Benutzer können Benachrichtigungen, die von Ihrer App gesendet werden, auf der Einstellungsseite Teams verwalten.
 
 ## <a name="related-system-notifications"></a>Zugehörige Systembenachrichtigungen
 

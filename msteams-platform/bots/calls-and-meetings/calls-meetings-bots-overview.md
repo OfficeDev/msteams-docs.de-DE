@@ -1,19 +1,19 @@
 ---
 title: Bots für Anrufe und Onlinebesprechungen
-description: Erfahren Sie, wie Ihre Microsoft Teams-Apps mitHilfe von Sprach- und Videoinhalten über Microsoft Graph-APIs für Anrufe und Onlinebesprechungen mit Benutzern interagieren können.
+description: Erfahren Sie, wie Ihre Microsoft Teams-Apps mit Benutzern mithilfe von Sprach- und Videofunktion mithilfe von Microsoft Graph-APIs für Anrufe und Onlinebesprechungen interagieren können.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Sprach-Onlinebesprechungen mit Audiovideoanrufen
-ms.openlocfilehash: 578c10ab2566e8bbf51a2224b8d474fb74c92092ea815386865a4e28efe059c6
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: e94cb425f7931582067bc3439e890b74b64e0f51
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706798"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156877"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots für Anrufe und Onlinebesprechungen
 
-Bots können mit Teams Anrufen und Besprechungen in Echtzeit mit Sprach-, Video- und Bildschirmfreigabe interagieren. Mit [Microsoft Graph-APIs für Anrufe und Onlinebesprechungen](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)können Teams Apps jetzt mit Benutzern interagieren, indem Sie Sprach- und Videofunktionen verwenden, um die Benutzererfahrung zu verbessern. Mit diesen APIs können Sie die folgenden neuen Features hinzufügen:
+Bots können mit Teams Anrufen und Besprechungen in Echtzeit mit Sprach-, Video- und Bildschirmfreigabe interagieren. Mit [Microsoft Graph-APIs für Anrufe und Onlinebesprechungen](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)können Teams Apps jetzt mit Benutzern über Sprache und Video interagieren, um die Benutzererfahrung zu verbessern. Mit diesen APIs können Sie die folgenden neuen Features hinzufügen:
 
 * Interaktive Sprachantwort (Interactive Voice Response, IVR).
 * Anrufsteuerung.
@@ -21,7 +21,7 @@ Bots können mit Teams Anrufen und Besprechungen in Echtzeit mit Sprach-, Video-
 
 Um diese Graph-APIs in einer Teams-App zu verwenden, erstellen Sie einen Bot und geben einige zusätzliche Informationen und Berechtigungen an.
 
-Darüber hinaus ermöglicht die Echtzeit-Medienplattform Bots die Interaktion mit Teams Anrufen und Besprechungen mithilfe von Echtzeit-Sprach-, Video- und Bildschirmfreigabe. Ein Bot, der an Audio- oder Videoanrufen und Onlinebesprechungen teilnimmt, ist ein regulärer Microsoft Teams Bot mit einigen zusätzlichen Features, die zum Registrieren des Bots verwendet werden.
+Darüber hinaus ermöglicht die Real-Time Media Platform Bots die Interaktion mit Teams Anrufen und Besprechungen mithilfe von Echtzeit-Sprach-, Video- und Bildschirmfreigabe. Ein Bot, der an Audio- oder Videoanrufen und Onlinebesprechungen teilnimmt, ist ein regulärer Microsoft Teams Bot mit einigen zusätzlichen Features, die zum Registrieren des Bots verwendet werden.
 
 Mit dem Teams App-Manifest mit zwei zusätzlichen Einstellungen `supportsCalling` und Graph Berechtigungen für die Microsoft App-ID Ihres Bots und der Zustimmung des `supportsVideo` Mandantenadministrators können Sie den Bot registrieren. Bei der Registrierung eines Bots für Anrufe und Besprechungen für Teams wird die Webhook-URL erwähnt, die der Webhook-Endpunkt für alle eingehenden Anrufe an Ihren Bot ist. Für einen von der Anwendung gehosteten Medienbot ist Microsoft erforderlich. Graph. Communications.Calls.Media .NET library to access the audio and video media streams, and the bot must be deployed on a Windows Server machine or Windows Server guest Operating System (OS) in Azure. Bots auf Teams unterstützen nur eine bestimmte Gruppe von Medienformaten für Audio- und Videoinhalte.
 
@@ -52,7 +52,7 @@ Nachfolgend sind die verschiedenen Anruftypen und Berechtigungen aufgeführt, di
 * Ein Benutzer kann einen Peer-to-Peer-Anruf mit Ihrem Bot initiieren oder Ihren Bot zu einem vorhandenen Anruf mit mehreren Teilnehmern einladen. Der Anruf mit mehreren Teilnehmern ist in der Teams Benutzeroberfläche noch nicht aktiviert.
 
     > [!NOTE]
-    > Benutzerinitiierte Aufrufe an einen Bot werden derzeit nicht auf Microsoft Teams mobilen Plattform unterstützt.
+    > Benutzerinitiierte Aufrufe an einen Bot werden derzeit auf Microsoft Teams mobilen Plattform nicht unterstützt.
 
 * Graph Berechtigungen sind nicht erforderlich, damit ein Benutzer einen Peer-to-Peer-Anruf mit Ihrem Bot initiiert. Zusätzliche Berechtigungen sind erforderlich, damit Ihr Bot an einem Anruf mit mehreren Teilnehmern teilnimmt, oder damit Ihr Bot einen Peer-to-Peer-Anruf mit einem Benutzer initiiert.
 * Ein Anruf kann als Peer-to-Peer-Anruf beginnen und schließlich zu einem Anruf mit mehreren Teilnehmern werden. Ihr Bot kann Anrufe mit mehreren Teilnehmern initiieren, indem er andere Benutzer einlädt, sofern Ihr Bot über die richtigen Berechtigungen verfügt. Wenn Ihr Bot nicht über die Berechtigung zum Teilnehmen an Gruppenanrufen verfügt und ein Teilnehmer einen anderen Teilnehmer zum Anruf hinzufügt, wird Ihr Bot aus dem Anruf entfernt.
@@ -70,7 +70,7 @@ Es gibt zwei Arten von Signalen: eingehende Anrufe und Eingehende Anrufe. Es fol
 
 ### <a name="calls-and-online-meetings"></a>Anrufe und Onlinebesprechungen
 
-Aus sicht eines Teams Benutzers gibt es zwei Arten von Onlinebesprechungen, Ad-hoc-Besprechungen und geplante. Aus Sicht eines Bots sind beide Onlinebesprechungen identisch. Für einen Bot ist eine Onlinebesprechung ein Anruf mit mehreren Teilnehmern zwischen einer Gruppe von Teilnehmern und enthält Besprechungskoordinaten. Besprechungskoordinaten sind die Metadaten für die Besprechung, einschließlich `botId` , der Besprechung zugeordnet `chatId` `joinUrl` `startTime` `endTime` usw.
+Aus Sicht eines Teams Benutzers gibt es zwei Arten von Onlinebesprechungen, Ad-hoc-Besprechungen und geplante. Aus Sicht eines Bots sind beide Onlinebesprechungen identisch. Für einen Bot ist eine Onlinebesprechung ein Anruf mit mehreren Teilnehmern zwischen einer Gruppe von Teilnehmern und enthält Besprechungskoordinaten. Besprechungskoordinaten sind die Metadaten für die Besprechung, einschließlich `botId` , der Besprechung zugeordnet `chatId` `joinUrl` `startTime` `endTime` usw.
 
 ### <a name="real-time-media"></a>Echtzeitmedien
 
@@ -92,7 +92,7 @@ Echtzeitmedien beziehen sich auf Szenarien, in denen Medien in Echtzeit verarbei
 
 | **Beispielname** | **Beschreibung** | **Graph** |
 |---------------|----------|--------|
-| Graph Kommunikation | Graph Kommunikation, um mit der Kommunikationsplattform von Microsoft zu interagieren. | [Anzeigen](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
+| Graph Kommunikation | Graph Kommunikation, um mit der Kommunikationsplattform von Microsoft zu interagieren. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 | Anruf- und Besprechungsbot | Die Beispiel-App zeigt, wie Bot Anrufe erstellen, an Besprechungen teilnehmen und Anrufe übertragen kann. | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="see-also"></a>Siehe auch

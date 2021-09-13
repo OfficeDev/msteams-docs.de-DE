@@ -4,15 +4,15 @@ description: Beschreibt, wie Ereignisse in Bots für Microsoft Teams behandelt w
 keywords: Teams-Bots-Ereignisse
 ms.date: 05/20/2019
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 6a9eaab388927fcff51d7883e1a61ca1cec81fac
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 6189460e16459e737656f68945f1b0a2a3549834
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069076"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156763"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Behandeln von Botereignissen in Microsoft Teams
 
@@ -22,7 +22,7 @@ Microsoft Teams sendet Benachrichtigungen an Ihren Bot für Änderungen oder Ere
 
 * Lösen Sie eine Willkommensnachricht aus, wenn Ihr Bot zu einem Team hinzugefügt wird.
 * Abfragen und Zwischenspeichern von Gruppeninformationen, wenn der Bot einem Gruppenchat hinzugefügt wird.
-* Aktualisieren sie zwischengespeicherte Informationen zur Teammitgliedschaft oder Kanalinformationen.
+* Aktualisieren zwischengespeicherter Informationen zu Teammitgliedschaften oder Kanalinformationen.
 * Entfernt zwischengespeicherte Informationen für ein Team, wenn der Bot entfernt wird.
 * Wenn eine Bot-Nachricht von einem Benutzer gefällt.
 
@@ -362,7 +362,7 @@ Ihr Bot wird benachrichtigt, wenn das Team, in dem er sich befindet, umbenannt w
 
 ## <a name="channel-updates"></a>Kanalupdates
 
-Ihr Bot wird benachrichtigt, wenn ein Kanal in einem Team erstellt, umbenannt oder gelöscht wird, in dem er hinzugefügt wurde. Auch hier wird das `conversationUpdate` Ereignis empfangen, und ein Teams-spezifischer Ereignisbezeichner wird als Teil des `channelData.eventType` Objekts gesendet, wobei die Kanaldaten `channel.id` die GUID für den Kanal sind und den `channel.name` Kanalnamen selbst enthält.
+Ihr Bot wird benachrichtigt, wenn ein Kanal in einem Team erstellt, umbenannt oder gelöscht wird, in dem er hinzugefügt wurde. Auch hier wird das `conversationUpdate` Ereignis empfangen, und ein Teams-spezifische Ereignisbezeichner wird als Teil des `channelData.eventType` Objekts gesendet, wobei die Kanaldaten `channel.id` die GUID für den Kanal sind und den `channel.name` Kanalnamen selbst enthält.
 
 Die Kanalereignisse sind wie folgt:
 

@@ -1,17 +1,17 @@
 ---
 title: Verwenden von Microsoft Graph zum Importieren externer Plattformnachrichten in Teams
 description: Beschreibt, wie Microsoft Graph zum Importieren von Nachrichten von einer externen Plattform in Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams importieren Nachrichten-API-Diagramm Microsoft migrieren Migrationsbeitrag
-ms.openlocfilehash: 17e68db9803e00d3dfb8743ba3b371753508fb5a3471317c25d7a42c8027c248
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 9c5f45120a1e6d52409360d54a54096554ca86b4
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704403"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156920"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Plattform-Nachrichten von Drittanbietern mithilfe von Microsoft Graph in Teams importieren
 
@@ -36,7 +36,7 @@ Auf hoher Ebene besteht der Importvorgang aus folgenden Komponenten:
 
 * Überprüfen Sie die Drittanbieterdaten, um zu entscheiden, was migriert wird.  
 * Extrahieren Sie die ausgewählten Daten aus dem Drittanbieter-Chatsystem.  
-* Ordnen Sie die Chatstruktur eines Drittanbieters der Teams-Struktur zu.  
+* Ordnen Sie die Chatstruktur eines Drittanbieters der Teams Struktur zu.  
 * Konvertieren von Importdaten in das für die Migration erforderliche Format.  
 
 ### <a name="set-up-your-office-365-tenant"></a>Einrichten des Office 365-Mandanten
@@ -46,7 +46,7 @@ Auf hoher Ebene besteht der Importvorgang aus folgenden Komponenten:
 
 ## <a name="step-1-create-a-team"></a>Schritt 1: Erstellen eines Teams
 
-Da Sie vorhandene Daten migrieren, sind die Aufrechterhaltung der ursprünglichen Nachrichtenzeitstempel und das Verhindern von Nachrichtenaktivitäten während des Migrationsprozesses entscheidend, um den vorhandenen Nachrichtenfluss des Benutzers in Teams neu zu erstellen. Dies wird wie folgt erreicht:
+Da Sie vorhandene Daten migrieren, sind die Aufrechterhaltung der ursprünglichen Nachrichtenzeitstempel und das Verhindern von Nachrichtenaktivitäten während des Migrationsprozesses der Schlüssel zum Neuerstellen des vorhandenen Nachrichtenflusses des Benutzers in Teams. Dies wird wie folgt erreicht:
 
 > [Erstellen Sie ein neues Team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) mit einem Back-in-Timestamp mithilfe der Teamressourceneigenschaft. `createdDateTime` Platzieren Sie das neue Team in einem speziellen Zustand, der `migration mode` Benutzer von den meisten Aktivitäten innerhalb des Teams bis zum Abschluss des Migrationsprozesses einschränkt. Schließen Sie das `teamCreationMode` Instanzattribut mit dem `migration` Wert in die POST-Anforderung ein, um das neue Team explizit als für die Migration erstellt zu identifizieren.  
 
@@ -93,7 +93,7 @@ Content-Location: /teams/{team-id}
 Sie können die Fehlermeldung in den folgenden Szenarien erhalten:
 
 * Wenn `createdDateTime` für die Zukunft festgelegt ist.
-* Wenn `createdDateTime` richtig angegeben, aber `teamCreationMode` das Instanzattribut fehlt oder auf einen ungültigen Wert festgelegt ist.
+* Wenn `createdDateTime` richtig angegeben, aber `teamCreationMode` instanzattribut fehlt oder auf ungültigen Wert festgelegt ist.
 
 ## <a name="step-2-create-a-channel"></a>Schritt 2: Erstellen eines Kanals
 
@@ -149,7 +149,7 @@ HTTP/1.1 202 Accepted
 Sie können die Fehlermeldung in den folgenden Szenarien erhalten:
 
 * Wenn `createdDateTime` für die Zukunft festgelegt ist.
-* Wenn `createdDateTime` richtig angegeben, aber `channelCreationMode` instanzattribut fehlt oder auf ungültigen Wert festgelegt ist.
+* Wenn `createdDateTime` richtig angegeben ist, das `channelCreationMode` Instanzattribut jedoch fehlt oder auf einen ungültigen Wert festgelegt ist.
 
 ## <a name="step-3-import-messages"></a>Schritt 3: Importieren von Nachrichten
 
@@ -325,7 +325,7 @@ Aktion, die für eine `team` aufgerufen wird oder die sich nicht in `channel` `m
 
 ## <a name="step-five-add-team-members"></a>Schritt 5: Hinzufügen von Teammitgliedern
 
-Sie können ein Mitglied zu einem Team [hinzufügen, indem Sie die Teams-Benutzeroberfläche](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) verwenden, oder Microsoft Graph [Mitglieder-API hinzufügen:](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true)
+Sie können ein Mitglied zu einem Team [mithilfe der Teams-Benutzeroberfläche](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) oder microsoft Graph [Mitglieder-API hinzufügen:](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 #### <a name="request-add-member"></a>Anforderung (Mitglied hinzufügen)
 
@@ -373,7 +373,7 @@ Die folgende Tabelle enthält den Inhaltsbereich:
 |Inlinebilder als Teil der Nachricht|Bei Erwähnungen|
 |Links zu vorhandenen Dateien in SPO oder OneDrive|Reaktionen|
 |Nachrichten mit Rich-Text|Videos|
-|Nachrichtenantwortkette|Ankündigungen|
+|Nachrichtenantwortkette|Announcements|
 |Verarbeitung mit hohem Durchsatz|Codeausschnitte|
 ||Sticker|
 ||Emojis|
@@ -381,6 +381,6 @@ Die folgende Tabelle enthält den Inhaltsbereich:
 ||Beiträge zwischen Kanälen querstellen|
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Integration von Microsoft Graph und Teams](/graph/teams-concept-overview)

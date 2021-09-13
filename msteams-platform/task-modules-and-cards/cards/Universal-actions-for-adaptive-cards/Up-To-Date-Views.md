@@ -3,13 +3,13 @@ title: Aktuelle Ansichten
 description: Beispiel für aktuelle Ansichten mit universellem Bot
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: 83cb86bc4b9b8b3a8cfc48cfbb761cf71c8417267731f3cbfc44f077ca5e99b8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: b58f214d707f05664e35ddfebb5a265e806a7e70
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707420"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156601"
 ---
 # <a name="up-to-date-cards"></a>Aktuelle Karten
 
@@ -117,7 +117,7 @@ Im Folgenden sind die beiden Rollen aufgeführt, die Benutzern je nach Genehmigu
 
 **So senden Sie die Anforderung zur Genehmigung des Objekts**
 
-1. Alex löst in einer Teams Unterhaltung eine Anforderung zur Objektgenehmigung aus und weist sie Megan und Nestor zu.
+1. Alex löst in einer Teams Unterhaltung eine Anforderung zur Genehmigung von Ressourcen aus und weist sie Megan und Nestor zu.
 2. Bot sendet die Genehmigungsbasiskarte in der Unterhaltung.
 3. Alle anderen Benutzer in der Unterhaltung sehen die vom Bot gesendete Karte. Die automatische Aktualisierung wird für Megan und Nestor ausgelöst, die nun die benutzerspezifische Karte mit den Schaltflächen **"Genehmigen"** oder **"Ablehnen"** sehen, da ihre Benutzer-MRIs der Liste in der Eigenschaft der adaptiven Karte hinzugefügt `userIds` `refresh` werden.
 
@@ -263,7 +263,7 @@ Der folgende Code enthält ein Beispiel für adaptive Karten, die als Antwort au
 
 |Beispielname | Beschreibung | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Sequenzielle Workflows adaptive Karten | Vorführen, wie sequenzielle Workflows, benutzerspezifische Ansichten und aktuelle adaptive Karten in Bots implementiert werden. | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Sequenzielle Workflows adaptive Karten | Vorführen, wie sequenzielle Workflows, benutzerspezifische Ansichten und aktuelle adaptive Karten in Bots implementiert werden. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 

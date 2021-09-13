@@ -4,12 +4,13 @@ author: KirtiPereira
 description: Erstellen von Registerkarten mit adaptiven Karten
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 31954b046c550d34155bc7a9ec66cfc61b74ecf4
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: 902b57145a2ba0919e810e6785f077e626949970
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345572"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156998"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
@@ -23,7 +24,7 @@ Beim Entwickeln einer Registerkarte mithilfe der herkömmlichen Methode können 
 * iFrame-Einschränkungen
 * Serverwartung und Kosten
 
-Registerkarten für adaptive Karten sind eine neue Möglichkeit zum Erstellen von Registerkarten in Teams. Anstatt Webinhalte in einen IFrame einzubetten, können Sie adaptive Karten auf einer Registerkarte rendern. Während das Front-End mit adaptiven Karten gerendert wird, wird das Back-End von einem Bot unterstützt. Der Bot ist dafür verantwortlich, Anforderungen zu akzeptieren und entsprechend mit der gerenderten adaptiven Karte zu antworten.
+Adaptive Kartenregisterkarten sind eine neue Möglichkeit zum Erstellen von Registerkarten in Teams. Anstatt Webinhalte in einen IFrame einzubetten, können Sie adaptive Karten auf einer Registerkarte rendern. Während das Front-End mit adaptiven Karten gerendert wird, wird das Back-End von einem Bot unterstützt. Der Bot ist dafür verantwortlich, Anforderungen zu akzeptieren und entsprechend mit der gerenderten adaptiven Karte zu antworten.
 
 Sie können Ihre Registerkarten mit vorgefertigten Bausteinen für die Benutzeroberfläche (UI) erstellen, die auf Desktops, im Web und auf mobilgeräten systemeigen sind. Dieser Artikel hilft Ihnen zu verstehen, welche Änderungen am App-Manifest vorgenommen werden müssen. In diesem Artikel wird auch beschrieben, wie die Aufrufaktivität Informationen auf der Registerkarte mit adaptiven Karten anfordert und sendet und welche Auswirkungen dies auf den Aufgabenmodulworkflow hat.
 
@@ -424,7 +425,7 @@ Der folgende Code zeigt ein neu ausgestelltes Anforderungsbeispiel:
 
 |**Beispielname** | **Beschreibung** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| Anzeigen adaptiver Karten auf Teams Registerkarte | Microsoft Teams Beispielcode für Registerkarten, der veranschaulicht, wie adaptive Karten in Teams angezeigt werden. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| Adaptive Karten auf Teams Registerkarte anzeigen | Microsoft Teams Beispielcode der Registerkarte, der veranschaulicht, wie adaptive Karten in Teams angezeigt werden. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,15 +2,15 @@
 title: Messaging-Erweiterungen
 author: surbhigupta
 description: Eine Übersicht über Messaging-Erweiterungen auf der Microsoft Teams-Plattform
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 9f222e8b4baa60433e2fb7298cc94f53b180c05a83107cbd1bfd374fec1481a5
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 383b376757c1c0922776d8285449460b879ce274
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706029"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156645"
 ---
 # <a name="messaging-extensions"></a>Messaging-Erweiterungen
 
@@ -30,7 +30,7 @@ In der folgenden Abbildung werden die Speicherorte angezeigt, von denen Messagin
 
 ## <a name="understand-how-messaging-extensions-work"></a>Grundlegendes zur Funktionsweise von Messaging-Erweiterungen
 
-Eine Messaging-Erweiterung besteht aus einem Webdienst, den Sie hosten, und einem App-Manifest, das definiert, von wo aus Ihr Webdienst im Microsoft Teams-Client aufgerufen wird. Der Webdienst nutzt das Messaging-Schema und das sichere Kommunikationsprotokoll des Bot-Frameworks, daher müssen Sie Ihren Webdienst als Bot im Bot Framework registrieren. 
+Eine Messaging-Erweiterung besteht aus einem Webdienst, den Sie hosten, und einem App-Manifest, das definiert, wo Ihr Webdienst im Microsoft Teams-Client aufgerufen wird. Der Webdienst nutzt das Messaging-Schema und das sichere Kommunikationsprotokoll des Bot-Frameworks, daher müssen Sie Ihren Webdienst als Bot im Bot Framework registrieren. 
 
 > [!NOTE]
 > Obwohl Sie den Webdienst manuell erstellen können, verwenden Sie [das Bot Framework SDK,](https://github.com/microsoft/botframework-sdk) um mit dem Protokoll zu arbeiten.
@@ -49,7 +49,7 @@ Die Aktionsbefehle werden aus dem Bereich zum Verfassen von Nachrichten, aus dem
 
 ### <a name="search-commands"></a>Suchbefehle
 
-MitHilfe von Suchbefehlen können Benutzer ein externes System entweder manuell über ein Suchfeld oder durch Einfügen eines Links zu einer überwachten Domäne in den Bereich zum Verfassen von Nachrichten durchsuchen und die Ergebnisse der Suche in eine Nachricht einfügen. Im grundlegendsten Suchbefehlsfluss enthält die anfängliche Aufrufnachricht die Suchzeichenfolge, die der Benutzer übermittelt hat. Sie antworten mit einer Liste von Karten und Kartenvorschau. Der Teams-Client rendert eine Liste der Kartenvorschau für den Benutzer. Wenn der Benutzer eine Karte aus der Liste auswählt, wird die Karte in voller Größe in den Bereich zum Verfassen von Nachrichten eingefügt.
+MitHilfe von Suchbefehlen können Benutzer ein externes System entweder manuell über ein Suchfeld oder durch Einfügen eines Links zu einer überwachten Domäne in den Bereich zum Verfassen von Nachrichten durchsuchen und die Ergebnisse der Suche in eine Nachricht einfügen. Im grundlegendsten Suchbefehlsfluss enthält die anfängliche Aufrufnachricht die Suchzeichenfolge, die der Benutzer übermittelt hat. Sie antworten mit einer Liste von Karten und Kartenvorschau. Der Teams Client rendert eine Liste der Kartenvorschau für den Benutzer. Wenn der Benutzer eine Karte aus der Liste auswählt, wird die Karte in voller Größe in den Bereich zum Verfassen von Nachrichten eingefügt.
 
 Die Karten werden aus dem Bereich zum Verfassen von Nachrichten oder dem Befehlsfeld ausgelöst und nicht von einer Nachricht ausgelöst. Sie können nicht von einer Nachricht ausgelöst werden.
 In der folgenden Abbildung wird das Befehlsaufgabenmodul für die Messaging-Erweiterungssuche angezeigt:
@@ -72,8 +72,8 @@ Die folgenden Bilder zeigen das Feature zum Aufheben von Links, wenn ein Link in
 
 | **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
 |------------|-------------|----------------|------------|
-| Messaging-Erweiterung mit aktionsbasierten Befehlen | In diesem Beispiel wird veranschaulicht, wie Sie eine aktionsbasierte Messaging-Erweiterung erstellen. | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
-| Messaging-Erweiterung mit suchbasierten Befehlen | In diesem Beispiel wird veranschaulicht, wie Sie eine suchbasierte Messaging-Erweiterung erstellen. | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+| Messaging-Erweiterung mit aktionsbasierten Befehlen | In diesem Beispiel wird veranschaulicht, wie Sie eine aktionsbasierte Messaging-Erweiterung erstellen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
+| Messaging-Erweiterung mit suchbasierten Befehlen | In diesem Beispiel wird veranschaulicht, wie Sie eine suchbasierte Messaging-Erweiterung erstellen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
 ## <a name="see-also"></a>Siehe auch
 

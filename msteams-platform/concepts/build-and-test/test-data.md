@@ -2,15 +2,15 @@
 title: Hinzufügen von Testdaten zu Ihrem Microsoft 365 Testmandanten
 description: Einrichten Ihres Office 365 Entwicklerprogrammabonnements für erfolgreiche Tests von Microsoft Teams Apps
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Testen von Teams des Entwicklerprogramms für Apps
 ms.date: 11/01/2019
-ms.openlocfilehash: 44947f39e89ab36760968b72cda81cee4ea9798cbb111021c29ef5c035574b9e
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: fd5f5d1d372a5ddaaa48ed1e971268d28553d5f4
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707113"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156824"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Hinzufügen von Testdaten zu Ihrem Microsoft 365 Testmandanten
 
@@ -29,11 +29,11 @@ Sie können Ihre Microsoft Teams-App mit Beispieldaten mit einem Microsoft 365 E
 
 ## <a name="allow-users-to-upload-apps"></a>Benutzern das Hochladen von Apps gestatten
 
-Standardmäßig können nur globale Administratoren oder Teams Dienstadministratoren Apps in einem Mandanten hochladen (querladen). Sie können Benutzern auch erlauben, benutzerdefinierte Apps für ihre eigene Verwendung oder zu Testzwecken in Teams hochzuladen. Weitere Informationen finden Sie unter [Verwalten von benutzerdefinierten App-Richtlinien und -Einstellungen in Teams.](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)
+Standardmäßig können nur globale Administratoren oder Teams Dienstadministratoren Apps in einem Mandanten hochladen (querladen). Sie können Benutzern auch erlauben, benutzerdefinierte Apps für ihre eigene Verwendung oder zu Testzwecken in Teams hochzuladen. Weitere Informationen finden Sie unter [Verwalten von benutzerdefinierten App-Richtlinien und -Einstellungen in Teams.](/microsoftteams/teams-custom-app-policies-and-settings)
 
 ## <a name="create-teams-and-channels-for-testing"></a>Erstellen von Teams und Kanälen für Tests
 
-1. Speichern Sie den folgenden Codeausschnitt als **.xml** Datei, und notieren Sie sich den Dateipfad. Dieser XML-Code definiert die Struktur des Teams und Kanals, das zusammen mit seinen Mitgliedern erstellt wird:
+1. Speichern Sie den folgenden Codeausschnitt als **.xml** Datei, und notieren Sie sich den Dateipfad. Dieser XML-Code definiert die Struktur des Teams und Kanals, der zusammen mit seinen Mitgliedern erstellt wird:
 
     ```xml
     <?xml version="1.0"?>
@@ -246,7 +246,7 @@ Standardmäßig können nur globale Administratoren oder Teams Dienstadministrat
 
 5. Nachdem das Skript die Ausführung abgeschlossen hat, können Sie sich mit einem der Benutzerkonten beim Teams-Client anmelden und die neu erstellten Teams anzeigen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Debuggen der Registerkarte](~/tabs/how-to/developer-tools.md) 
 * [Debuggen Von Bots](~/bots/how-to/debug/locally-with-an-ide.md)

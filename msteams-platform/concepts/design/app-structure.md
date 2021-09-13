@@ -1,16 +1,16 @@
 ---
 title: Entwerfen Ihrer App – Grundlegendes zur App-Struktur
-description: Verstehen Sie, was Sie in Microsoft Teams anpassen können, wenn Sie Ihre App entwerfen.
+description: Verstehen Sie, was Sie in Microsoft Teams beim Entwerfen Ihrer App anpassen können und was nicht.
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: eb7e26a726313c366765f3ee4fd36aebc064ca78
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 481ed07682767a303efed50ec06a22cbbb393408
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408580"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156800"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Grundlegendes zur Microsoft Teams App-Struktur
 
@@ -52,7 +52,7 @@ Registerkarten bieten einen großen Canvas zum Hosten der App-Inhalte für eine 
 
 Die Canvas ist eine Webansicht, sodass Sie die Oberfläche vollständig anpassen können.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Registerkarten auf mobilgeräten anpassen können." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Registerkarten auf Mobilgeräten anpassen können." border="false":::
 
 ### <a name="desktop"></a>Desktop
 
@@ -62,7 +62,7 @@ Die Canvas ist ein iFrame, sodass Sie die Benutzeroberfläche vollständig anpas
 
 ## <a name="bots"></a>Bots
 
-Bots sind Unterhaltungs-Apps, die in Teams systemeigenen Messaging-Features integriert sind, sodass die Ui-Arbeit für Sie erledigt wird. Aus Entwurfssicht gibt es weiterhin Möglichkeiten, Persönlichkeit, benutzerdefinierte Funktionen und umfangreiche, umsetzbare Informationen mit unserer NLP-Unterstützung (Natural Language Processing) und der Plattform für adaptive Karten hinzuzufügen.
+Bots sind Unterhaltungs-Apps, die mit Teams systemeigenen Messaging-Features integriert sind, sodass die Ui-Arbeit für Sie erledigt wird. Aus Entwurfssicht gibt es weiterhin Möglichkeiten, Persönlichkeit, benutzerdefinierte Funktionen und umfangreiche, umsetzbare Informationen mit unserer NLP-Unterstützung (Natural Language Processing) und der Plattform für adaptive Karten hinzuzufügen.
 
 ***Unterstützte Bereiche:** Persönlich, Kanäle, Chats, Besprechungen*
 
@@ -72,7 +72,7 @@ Bots sind Unterhaltungs-Apps, die in Teams systemeigenen Messaging-Features inte
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Bots auf dem Desktop anpassen können." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Bots auf desktop anpassen können." border="false":::
 
 ## <a name="messaging-extensions"></a>Messaging-Erweiterungen
 

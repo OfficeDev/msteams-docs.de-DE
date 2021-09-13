@@ -1,19 +1,19 @@
 ---
 title: Kartentypen
 description: Beschreibt alle Karten und Kartenaktionen, die Bots in Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Referenz zu Bots-Karten
 ms.topic: reference
-ms.openlocfilehash: 4c386b3e237f89345bf94bc8cfa23d7e46477de21da0e7a99eb63663b19446af
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 424b21bb0d8b1d7a3aeb08cc9d6c521579bc7cc1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705513"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156889"
 ---
 # <a name="types-of-cards"></a>Kartentypen
 
-Adaptive, Hero-, List-, Office 365 Connector-, Beleg-, Anmelde- und Miniaturansichtskarten und Kartensammlungen werden in Bots für Microsoft Teams unterstützt. Sie basieren auf Vom Bot Framework definierten Karten, aber Teams unterstützt nicht alle Bot Framework-Karten und hat einige eigene hinzugefügt.
+Adaptive, Hero-, Listen-, Office 365 Connector-, Beleg-, Anmelde- und Miniaturansichtskarten und Kartensammlungen werden in Bots für Microsoft Teams unterstützt. Sie basieren auf Vom Bot Framework definierten Karten, aber Teams unterstützt nicht alle Bot Framework-Karten und hat einige eigene hinzugefügt.
 
 Bevor Sie die verschiedenen Kartentypen identifizieren, sollten Sie wissen, wie Sie eine Favoritenkarte, Miniaturansichtskarte oder adaptive Karte erstellen.
 
@@ -80,7 +80,7 @@ Sie können einige allgemeine Eigenschaften durchgehen, die für alle Karten gel
 
 Die Karte kann ein Inlinebild enthalten, indem ein Link zum öffentlich verfügbaren Bild eingeschlossen wird. Aus Leistungsgründen wird dringend empfohlen, das Image auf einem öffentlichen Content Delivery Network (CDN) zu hosten.
 
-Bilder werden nach oben oder unten skaliert, um das Seitenverhältnis für die Abdeckung des Bildbereichs beizubehalten. Bilder werden dann von der Mitte zugeschnitten, um das entsprechende Seitenverhältnis für die Karte zu erzielen.
+Bilder werden in der Größe nach oben oder unten skaliert, um das Seitenverhältnis für die Abdeckung des Bildbereichs beizubehalten. Bilder werden dann von der Mitte zugeschnitten, um das entsprechende Seitenverhältnis für die Karte zu erzielen.
 
 Bilder müssen höchstens 1024×1024 und im PNG-, JPEG- oder GIF-Format vorliegen. Animierte GIF-Dateien werden nicht unterstützt.
 
@@ -89,7 +89,7 @@ Die folgende Tabelle enthält die Eigenschaften von Inlinekartenbildern:
 | Eigenschaft | Typ  | Beschreibung |
 | --- | --- | --- |
 | url | URL | HTTPS-URL zum Bild. |
-| alt | Zeichenfolge | Beschreibung des Bilds, auf das zugegriffen werden kann. |
+| alt | String | Beschreibung des Bilds, auf das zugegriffen werden kann. |
 
 > [!NOTE]
 > Wenn eine Karte eine Bild-URL enthält, die vor dem endgültigen Bild umgeleitet wird, wird die Umleitung in der Bild-URL nicht unterstützt. Dies geschieht für Bilder, die in der öffentlichen Cloud freigegeben sind.
@@ -121,9 +121,9 @@ Die folgende Tabelle enthält die Features, die adaptive Karten unterstützen:
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
-> * Teams Plattform unterstützt v1.2 oder frühere Versionen von Features für adaptive Karten.
+> * Teams Plattform unterstützt v1.2 oder eine frühere Version von Features für adaptive Karten.
 > * Das Formatieren positiver oder destruktiver Aktionen wird in adaptiven Karten auf der Teams Plattform nicht unterstützt.
-> * Medienelemente werden derzeit in adaptiver Karte auf der Teams Plattform nicht unterstützt.
+> * Medienelemente werden derzeit in adaptiver Karte auf der Teams-Plattform nicht unterstützt.
 
 ### <a name="example-of-adaptive-card"></a>Beispiel für adaptive Karte
 
@@ -337,7 +337,7 @@ Der folgende Code zeigt ein Beispiel für eine Hero-Karte:
 
 Bot Framework-Referenz:
 
-* [Hero card Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
+* [Hero-Karte Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
 * [Hero-Karte C #](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-hero-card&preserve-view=true)
 
 ## <a name="list-card"></a>Karte auflisten
@@ -420,7 +420,7 @@ Der folgende Code zeigt ein Beispiel für eine Listenkarte:
 
 ## <a name="office-365-connector-card"></a>Office 365-Connectorkarte
 
-Sie können mit einer Office 365 Connectorkarte arbeiten, die ein flexibles Layout bietet und eine hervorragende Möglichkeit darstellt, nützliche Informationen zu erhalten. Die Office 365 Connectorkarte wird in Teams und nicht in Bot Framework unterstützt. Diese Karte bietet ein flexibles Layout mit mehreren Abschnitten, Feldern, Bildern und Aktionen. Diese Karte enthält eine Connectorkarte, sodass sie von Bots verwendet werden kann. Informationen zu den Unterschieden zwischen Connectorkarten und der Office 365 Connectorkarte finden Sie unter [zusätzliche Informationen auf der Office 365 Connector-Karte.](#additional-information-on-the-office-365-connector-card)
+Sie können mit einer Office 365 Connector-Karte arbeiten, die ein flexibles Layout bietet und eine hervorragende Möglichkeit darstellt, nützliche Informationen zu erhalten. Die Office 365 Connectorkarte wird in Teams und nicht in Bot Framework unterstützt. Diese Karte bietet ein flexibles Layout mit mehreren Abschnitten, Feldern, Bildern und Aktionen. Diese Karte enthält eine Connectorkarte, sodass sie von Bots verwendet werden kann. Informationen zu Unterschieden zwischen Connectorkarten und der Office 365 Connectorkarte finden Sie unter [zusätzliche Informationen auf der Office 365 Connector-Karte.](#additional-information-on-the-office-365-connector-card)
 
 ### <a name="support-for-office-365-connector-cards"></a>Unterstützung für Office 365 Connectorkarten
 
@@ -467,7 +467,7 @@ Um den Renderingstil für `activityImage` anzugeben, können Sie `activityImageT
 | `avatar` | Standard, `activityImage` wird als Kreis zugeschnitten. |
 | `article` | `activityImage` wird als Rechteck angezeigt und behält das Seitenverhältnis bei. |
 
-Weitere Informationen zu den Eigenschaften der Connectorkarte finden Sie unter [Referenz zu Nachrichtenkarten](/outlook/actionable-messages/card-reference)mit Aktionen. Die einzigen Connectorkarteneigenschaften, die Teams derzeit nicht unterstützt, sind:
+Weitere Informationen zu den Eigenschaften der Connectorkarte finden Sie unter [Referenz zu Nachrichtenkarten](/outlook/actionable-messages/card-reference)mit Aktionen. Die einzigen Connectorkarteneigenschaften, die Teams derzeit nicht unterstützen, sind:
 
 * `heroImage`
 * `hideOriginalBody`
@@ -616,7 +616,7 @@ Bot Framework-Referenz:
 
 Die Anmeldekarte in Teams ähnelt der Anmeldekarte im Bot Framework, mit der Ausnahme, dass die Anmeldekarte in Teams nur zwei Aktionen `signin` und `openUrl` unterstützt.
 
-Die Anmeldeaktion kann von jeder Karte in Teams verwendet werden, nicht nur von der Anmeldekarte. Weitere Informationen finden Sie unter [Teams Authentifizierungsfluss für Bots.](~/bots/how-to/authentication/auth-flow-bot.md)
+Die Anmeldeaktion kann von einer beliebigen Karte in Teams verwendet werden, nicht nur von der Anmeldekarte. Weitere Informationen finden Sie unter [Teams Authentifizierungsfluss für Bots.](~/bots/how-to/authentication/auth-flow-bot.md)
 
 ### <a name="support-for-signin-cards"></a>Unterstützung für Anmeldekarten
 
@@ -939,13 +939,13 @@ Eine Liste kann maximal zehn Karten pro Nachricht anzeigen.
 
 ## <a name="cards-not-supported-in-teams"></a>Karten werden in Teams nicht unterstützt
 
-Die folgenden Karten werden vom Bot Framework implementiert, aber nicht von Teams unterstützt:
+Die folgenden Karten werden vom Bot Framework implementiert, werden jedoch nicht von Teams unterstützt:
 
 * Animationskarten
 * Audiokarten
 * Grafikkarten
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Aufgabenmodule](~/task-modules-and-cards/what-are-task-modules.md)
 * [Formatieren von Karten](~/task-modules-and-cards/cards/cards-format.md)

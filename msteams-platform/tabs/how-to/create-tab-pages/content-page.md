@@ -3,15 +3,15 @@ title: Erstellen einer Inhaltsseite
 author: surbhigupta
 description: Erstellen einer Inhaltsseite
 keywords: teams tabs group channel configurable static
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f6f673420de73d786ddee95b4da7870750f3e6851a80f6ad71b1e606d650ba60
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1f83f1c46e637a73b52373740d21e32d3eb387e7
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708308"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156028"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Erstellen einer Inhaltsseite für Ihre Registerkarte
 
@@ -31,7 +31,7 @@ Weitere Informationen finden Sie unter [Registerkartenentwurfsrichtlinien](~/tab
 
 ## <a name="integrate-your-code-with-teams"></a>Integrieren Von Code in Teams
 
-Damit Ihre Seite in Teams angezeigt werden kann, müssen Sie das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) und einen Aufruf nach dem `microsoftTeams.initialize()` Laden der Seite einschließen. 
+Damit Ihre Seite in Teams angezeigt werden kann, müssen Sie das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) und einen Aufruf nach `microsoftTeams.initialize()` dem Laden der Seite einschließen. 
 
 Der folgende Code enthält ein Beispiel dafür, wie Ihre Seite und der Teams-Client kommunizieren:
 
@@ -55,7 +55,7 @@ Der folgende Code enthält ein Beispiel dafür, wie Ihre Seite und der Teams-Cli
 
 ## <a name="access-additional-content"></a>Zugreifen auf zusätzliche Inhalte
 
-Sie können auf zusätzliche Inhalte zugreifen, indem Sie das SDK verwenden, um mit Teams zu interagieren, Deep-Links zu erstellen, Aufgabenmodule zu verwenden und zu überprüfen, ob URL-Domänen im Array enthalten `validDomains` sind.
+Sie können mithilfe des SDK auf zusätzliche Inhalte zugreifen, um mit Teams zu interagieren, Deep-Links zu erstellen, Aufgabenmodule zu verwenden und zu überprüfen, ob URL-Domänen im Array enthalten `validDomains` sind.
 
 ### <a name="use-the-sdk-to-interact-with-teams"></a>Verwenden des SDK für die Interaktion mit Teams
 
@@ -91,7 +91,7 @@ Wenn Sie `showLoadingIndicator : true`  in Ihrem App-Manifest angeben, müssen a
 1. Aufrufen von `microsoftTeams.initialize();`
 1. Rufen Sie als **obligatorischen** Schritt `microsoftTeams.appInitialization.notifySuccess()` Teams auf, dass Ihre App erfolgreich geladen wurde. Teams blendet dann ggf. die Ladeanzeige aus. Wenn `notifySuccess`  die App nicht innerhalb von 30 Sekunden aufgerufen wird, wird davon ausgegangen, dass ein Timeout für Ihre App aufgetreten ist und ein Fehlerbildschirm mit einer Wiederholungsoption angezeigt wird.
 1. **Optional** können Sie, wenn Sie bereit sind, auf dem Bildschirm zu drucken und den restlichen Inhalt Der Anwendung zu laden, die Ladeanzeige manuell ausblenden, indem Sie `microsoftTeams.appInitialization.notifyAppLoaded();` aufrufen.
-1. Wenn ihre Anwendung nicht geladen werden kann, können Sie Teams mitteilen, `microsoftTeams.appInitialization.notifyFailure(reason);` dass ein Fehler aufgetreten ist. Dem Benutzer wird ein Fehlerbildschirm angezeigt. Der folgende Code enthält ein Beispiel für Anwendungsfehlerursachen:
+1. Wenn die Anwendung nicht geladen werden kann, können Sie Teams mitteilen, `microsoftTeams.appInitialization.notifyFailure(reason);` dass ein Fehler aufgetreten ist. Dem Benutzer wird ein Fehlerbildschirm angezeigt. Der folgende Code enthält ein Beispiel für Anwendungsfehlerursachen:
 
     ```typescript
     /* List of failure reasons */
@@ -102,7 +102,7 @@ Wenn Sie `showLoadingIndicator : true`  in Ihrem App-Manifest angeben, müssen a
     }
     ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)

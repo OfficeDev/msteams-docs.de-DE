@@ -3,15 +3,15 @@ title: Erstellen eines eingehenden Webhooks
 author: laujan
 description: beschreibt, wie eingehende Webhooks zu Teams App hinzugefügt und externe Anforderungen an Teams mit eingehenden Webhooks gesendet werden.
 keywords: Teams-Registerkarten für ausgehenden Webhook
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c5f90da64fe846e6579bc47de2edcd900d6ee6ba3a640788fba440734f55b7ec
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: c07456288a26e3152a552644b704e2c6e6de38cc
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705356"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156039"
 ---
 # <a name="create-incoming-webhook"></a>Erstellen eines eingehenden Webhooks
 
@@ -35,7 +35,7 @@ Die folgende Tabelle enthält die Features und die Beschreibung des eingehenden 
 |Sichere Ressourcendefinitionen|Nachrichten werden als JSON-Nutzlast formatiert. Diese deklarative Messagingstruktur verhindert das Einfügen von schädlichem Code.|
 
 > [!NOTE]
-> * Teams Bots, Messaging-Erweiterungen, eingehender Webhook und bot Framework unterstützen adaptive Karten, ein offenes kartenübergreifendes Plattformframework. Derzeit unterstützen [Teams Connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) keine adaptiven Karten. Es ist jedoch möglich, einen [Fluss](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) zu erstellen, der adaptive Karten an einen Teams-Kanal sendet.
+> * Teams Bots, Messaging-Erweiterungen, eingehender Webhook und das Bot Framework unterstützen adaptive Karten, ein offenes kartenübergreifendes Plattformframework. Derzeit unterstützen [Teams Connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) keine adaptiven Karten. Es ist jedoch möglich, einen [Fluss](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) zu erstellen, der adaptive Karten an einen Teams-Kanal sendet.
 > * Weitere Informationen zu Karten und Webhooks finden Sie unter [Adaptive Karten und eingehende Webhooks.](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks)
 
 ## <a name="create-incoming-webhook"></a>Erstellen eines eingehenden Webhooks
@@ -59,7 +59,7 @@ Die folgende Tabelle enthält die Features und die Beschreibung des eingehenden 
 Der Webhook ist im Teams Kanal verfügbar.
 
 > [!NOTE]
-> Wählen Sie in Teams **Einstellungen**  >  **Mitgliedsberechtigungen**  >  zulassen, dass Mitglieder Connectors **erstellen, aktualisieren und entfernen** können, damit jedes Teammitglied einen Connector hinzufügen, ändern oder löschen kann.
+> Wählen Sie in Teams **Einstellungen**  >  **Mitgliedsberechtigungen** aus, damit  >  **Mitglieder Connectors erstellen, aktualisieren und entfernen können,** damit jedes Teammitglied einen Connector hinzufügen, ändern oder löschen kann.
 
 ## <a name="remove-incoming-webhook"></a>Entfernen des eingehenden Webhooks
 
@@ -69,7 +69,7 @@ Der Webhook ist im Teams Kanal verfügbar.
 1. Wählen Sie in der oberen Navigationsleiste &#8226;&#8226;&#8226; **Weitere Optionen** aus.
 1. Wählen Sie im Dropdownmenü **Connectors** aus.
 1. Wählen Sie auf der linken Seite unter **Verwalten** die Option **"Konfiguriert"** aus.
-1. Wählen Sie die **< *1*> Konfiguriert aus,** um eine Liste Ihrer aktuellen Connectors anzuzeigen:
+1. Wählen Sie die **< *1*> Konfiguriert aus,** um eine Liste ihrer aktuellen Connectors anzuzeigen:
 
     ![Konfigurierter Webhook](~/assets/images/configured.png)
 
@@ -91,7 +91,7 @@ Der Webhook ist im Teams Kanal verfügbar.
 
     Der Webhook wird aus dem Teams-Kanal entfernt.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Erstellen eines ausgehenden Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Erstellen eines Office 365-Connectors](~/webhooks-and-connectors/how-to/connectors-creating.md)

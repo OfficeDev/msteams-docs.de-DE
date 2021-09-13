@@ -2,14 +2,14 @@
 title: Testen der App-Übersicht
 description: Beschreibt den Prozess zum Testen Ihrer Teams benutzerdefinierten App in Microsoft 365
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Konfigurieren Microsoft 365 Mandanten Teams Hochladen der Test-App
-ms.openlocfilehash: e33a1adb9ebc11f8bd1ece8f5fe43fc78e60b11883551fbd0ee3dfae237737cf
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 045159133b53b83e256eea9bab09f71e45bf02cf
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707689"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156213"
 ---
 # <a name="test-your-app"></a>Testen eigener Apps
 
@@ -35,7 +35,7 @@ Wenn Sie die Konsolenprotokolle anzeigen, HTML-, CSS- und Netzwerkanforderungen 
 
 Fügen Sie die Testdaten Microsoft 365 Testmandanten hinzu. Weitere Informationen finden Sie unter [Hinzufügen von Testdaten zu Ihrem Office 365 Testmandanten](~/concepts/build-and-test/test-data.md)und Erfüllen aller Voraussetzungen, bevor Sie mit dem Hochladen ihrer Testdaten beginnen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Debuggen der Registerkarte](~/tabs/how-to/developer-tools.md)
 * [Debuggen Von Bots](~/bots/how-to/debug/locally-with-an-ide.md)

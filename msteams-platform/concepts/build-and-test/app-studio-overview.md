@@ -2,14 +2,14 @@
 title: Erste Schritte mit App Studio für Microsoft Teams
 description: Erste Schritte zum Erstellen von großartigen Apps in Microsoft Teams mit App Studio
 keywords: Erste Schritte mit App Studio-Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 507a044098e479c7b737d6d7711a4e912ec81cbfe56fda2345a088618c47b36b
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 22fb1deb55671120d3f40fc9d6e5cbfc2f27330f
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704049"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156649"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Verwalten Von Apps mit App Studio für Microsoft Teams
 
@@ -128,7 +128,7 @@ Wenn Sie bereits über eine Karte verfügen, die Sie in Teams überprüfen möch
 ### <a name="react-control-library"></a>React-Steuerelementbibliothek
 
 >[!Note]
-> Diese React Steuerelementbibliothek ist in Zukunft veraltet. Erwägen Sie die Verwendung der [React-Steuerelemente Fluent-UI als alternative](https://microsoft.github.io/fluent-ui-react/) zuvor Stardust-Benutzeroberfläche.
+> Diese React Steuerelementbibliothek ist in Zukunft veraltet. Erwägen Sie die Verwendung der [React-Steuerelemente Fluent-UI als alternative](https://microsoft.github.io/fluent-ui-react/) zuvor Stardust-UI.
 
 Das Erstellen einer App, die Teams‘ Bewährte Methoden befolgt, ist eine hervorragende Möglichkeit, Ihrer App ein Erscheinungsbild zu verleihen, das sich nahtlos in die Kundenerfahrung in Teams einfügt. Die von Ihnen verwendeten UI-Steuerelemente sind entscheidend, um dieses Ziel zu erreichen. Um das Erstellen einer konsistenten Benutzeroberfläche zu vereinfachen, bietet App Studio verschiedene Kategorien von Steuerelementen für die Benutzeroberfläche, die den Entwurfsprinzipien von Teams entsprechen.
 

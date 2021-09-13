@@ -2,21 +2,21 @@
 title: Entwerfen Ihrer benutzerdefinierten App
 author: heath-hamilton
 description: Erfahren Sie, wie Sie Microsoft Teams-Apps entwerfen. Zu den Ressourcen gehören das Microsoft Teams UI Kit, bewährte Methoden, Beispiele und vieles mehr.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: f05bf979a5c0f75cfa009bc5b105fa5233447c20c1f98874221ad2b0761690aa
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 56a988b174739fbbf14f17d5454943a9081358ed
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705034"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156943"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Entwerfen Ihrer Microsoft Teams-App
 
 :::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="Konzeptionelles Bild, das die Microsoft Teams Entwurfsrichtlinien einführt.":::
 
-Unabhängig davon, ob Sie Designer, Produktmanager, Entwickler oder Entwickler mit Tools mit geringem Code sind, können Diese Richtlinien Ihnen dabei helfen, schnell die richtigen Entwurfsentscheidungen für Ihre Microsoft Teams App zu treffen.
+Unabhängig davon, ob Sie Designer, Produktmanager, Entwickler oder Entwickler mit Low-Code-Tools sind, können Diese Richtlinien Ihnen dabei helfen, schnell die richtigen Entwurfsentscheidungen für Ihre Microsoft Teams App zu treffen.
 
 ## <a name="creating-a-cohesive-experience"></a>Erstellen einer zusammenhängenden Oberfläche
 
@@ -24,7 +24,7 @@ Das Entwerfen einer Teams-App ähnelt dem Entwerfen einer herkömmlichen Web-App
 
 Diese Richtlinien und Ressourcen können Ihnen dabei helfen, dieses Gleichgewicht zu finden. Sie wissen, was Sie tun müssen und was Sie beim Entwerfen Ihrer Teams-App vermeiden müssen (z. B. navigation auf einer Registerkarte mit mehreren Ebenen).
 
-## <a name="teams-app-design-principles"></a>Teams App-Entwurfsprinzipien
+## <a name="teams-app-design-principles"></a>Teams App-Entwurfsgrundsätze
 
 Teams Apps helfen Menschen, gemeinsam mehr zu erreichen. Verwenden Sie diese Prinzipien, um Ihr Design zu leiten.
 
@@ -122,14 +122,14 @@ Lernen Sie die [Grundlagen des Teams App-Designs](design-teams-app-fundamentals.
 Erfahren Sie, wie Benutzer Teams Apps hinzufügen, verwenden und verwalten, um die einzelnen Funktionen in Ihrem Design optimal zu nutzen.
 
 * [Persönliche Apps](../../concepts/design/personal-apps.md)
-* [Tabs](../../tabs/design/tabs.md)
+* [Registerkarten](../../tabs/design/tabs.md)
 * [Messaging-Erweiterungen](../../messaging-extensions/design/messaging-extension-design.md)
 * [Bots](../../bots/design/bots.md)
 * [Besprechungserweiterungen](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
 ## <a name="ui-templates"></a>Vorlagen für Benutzeroberflächen
 
-Erstellen Sie schnell komplexe, präzise Designs mit [Vorlagen für häufige Teams Anwendungsfälle und Workflows.](design-teams-app-ui-templates.md)
+Erstellen Sie schnell komplexe, präzise Designs mit [Vorlagen für allgemeine Teams Anwendungsfälle und Workflows.](design-teams-app-ui-templates.md)
 
 ## <a name="basic-ui-components"></a>Grundlegende Benutzeroberflächenkomponenten
 

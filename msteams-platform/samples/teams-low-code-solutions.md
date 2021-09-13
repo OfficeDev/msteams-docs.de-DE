@@ -1,26 +1,26 @@
 ---
-title: Erstellen von benutzerdefinierten Apps mit wenig Code für Microsoft Teams
+title: Erstellen von benutzerdefinierten Apps mit geringem Code für Microsoft Teams
 author: surbhigupta
-description: Details der verfügbaren Microsoft Low- und no-Code-Lösungen für Teams
-localization_priority: Normal
+description: Details zu den verfügbaren Microsoft Low- und No-Code-Lösungen für Teams
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 4c529a3f46ffb0a57bbd298c01570c4d05074b9bbd4207e20e2f9a8374bfed1d
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1ad2b98855f822e0329d32701035f045aea8b601
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707797"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156274"
 ---
-# <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Erstellen von benutzerdefinierten Apps mit wenig Code für Microsoft Teams
+# <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Erstellen von benutzerdefinierten Apps mit geringem Code für Microsoft Teams
 
 Microsoft Teams erweiterbar und adaptiv ist. Dies bedeutet, dass Sie benutzerdefinierte Anwendungen für Teams erstellen können, die die unterschiedlichen Anforderungen Ihrer Benutzer erfüllen. Die benutzerdefinierten Apps mit geringem Code sparen Zeit, bieten schnelle Lösungen und erfüllen die Anforderungen als die von Grund auf neu erstellten Apps. Dieses Dokument bietet eine Übersicht über Microsoft Power Platform, Power Virtual Agents Chatbot und Virtual Assistant.
 
-Plattformen mit wenig Code bieten einen intuitiven Ansatz für die Softwareentwicklung mit minimalem oder gar keinem Code zum Erstellen von Anwendungen und Prozessen. Sie ermöglichen es Entwicklern ohne Erfahrung, benutzerdefinierte Apps mit wenig oder ohne Codierung zu erstellen, und professionelle Entwickler können die App schnell entwickeln und bereitstellen. Diese Plattformen bestehen aus einer visuellen Schnittstelle, Connectors zu Back-End-Diensten und einem integrierten App-Lebenszyklusverwaltungssystem zum Erstellen, Debuggen, Bereitstellen und Warten von Anwendungen. Microsoft Power Platform ist das innovative Gateway zum schnellen Erstellen Teams kompatibler Apps mit attributen mit geringem Code.
+Plattformen mit wenig Code bieten einen intuitiven Ansatz für die Softwareentwicklung mit minimalem oder gar keinem Code zum Erstellen von Anwendungen und Prozessen. Sie ermöglichen es Entwicklern ohne Erfahrung, benutzerdefinierte Apps mit wenig oder ohne Codierung zu erstellen, und professionelle Entwickler können die App schnell entwickeln und bereitstellen. Diese Plattformen bestehen aus einer visuellen Schnittstelle, Connectors zu Back-End-Diensten und einem integrierten App-Lebenszyklusverwaltungssystem zum Erstellen, Debuggen, Bereitstellen und Warten von Anwendungen. Microsoft Power Platform ist das innovative Gateway zum schnellen Erstellen Teams kompatibler Apps mit attributen mit wenig Code.
 
 ## <a name="teams-and-microsoft-power-platform"></a>Teams und Microsoft Power Platform
 
-Die Microsoft Power Platform kombiniert vier robuste Microsoft-Technologien wie Power BI, Power Apps, Power Automate, früher Microsoft Flow und Power Virtual Agents in einer leistungsstarken Anwendungsplattform. Mit diesen Technologien können Sie Lösungen erstellen, Prozesse automatisieren, Daten analysieren und virtuelle Agents in einer einheitlichen und integrierten Umgebung erstellen:
+Die Microsoft Power Platform kombiniert vier stabile Microsoft-Technologien wie Power BI, Power Apps, Power Automate, früher Microsoft Flow und Power Virtual Agents in einer leistungsstarken Anwendungsplattform. Mit diesen Technologien können Sie Lösungen erstellen, Prozesse automatisieren, Daten analysieren und virtuelle Agents in einer einheitlichen und integrierten Umgebung erstellen:
 
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Power Platform-Dienste":::
 
@@ -33,7 +33,7 @@ Die [Registerkarte Power BI für Microsoft Teams](https://powerbi.microsoft.com/
 
 ### <a name="-teams-and-power-apps"></a>✔ Teams und Power Apps
 
-Mit [Power Apps](/powerapps/powerapps-overview)können Sie Geschäfts-Apps erstellen, die eine Verbindung zu Ihren Geschäftsdaten herstellen und auf die Anforderungen Ihrer Organisation zugeschnitten sind.  Power Apps eine Vielzahl von App-Szenarien ermöglichen, um geschäftliche Herausforderungen durch [Canvas-Apps](/powerapps/maker/#canvas-apps)zu lösen. Nach dem Erstellen können Sie die App aus dem Power Apps Herstellerportal exportieren und [in Microsoft Teams einbetten.](/power-platform/admin/embed-app-teams)
+Mit [Power Apps](/powerapps/powerapps-overview)können Sie Geschäfts-Apps erstellen, die eine Verbindung zu Ihren Geschäftsdaten herstellen und auf die Anforderungen Ihrer Organisation zugeschnitten sind.  Power Apps eine Vielzahl von App-Szenarien ermöglichen, um geschäftliche Herausforderungen durch [Canvas-Apps](/powerapps/maker/#canvas-apps)zu lösen. Nach der Erstellung können Sie die App aus dem Power Apps Herstellerportal exportieren und [in Microsoft Teams einbetten.](/power-platform/admin/embed-app-teams)
 
 Die neue [Power Apps-App](https://go.microsoft.com/fwlink/?linkid=2143374) in Teams bietet App-Entwicklern eine integrierte Oberfläche zum Erstellen und Bearbeiten von Apps und Workflows innerhalb Teams. Sie können die Apps schnell veröffentlichen und für Teammitglieder freigeben. Die Mitglieder können die Apps verwenden, ohne zwischen mehreren Apps und Diensten wechseln zu müssen.
 
@@ -49,14 +49,14 @@ Verwenden Sie die neue [Power Virtual Agents-App](https://aka.ms/pva-teams-docs)
 
 ### <a name="-virtual-assistant-for-teams"></a>✔ Virtual Assistant für Teams
 
-Virtual Assistant ist eine Open-Source-Vorlage von Microsoft, mit der Sie eine stabile Unterhaltungslösung erstellen und gleichzeitig die volle Kontrolle über die Benutzeroberfläche, das Branding der Organisation und die erforderlichen Daten behalten können. Sie können Ihren virtuellen Assistenten für [die Integration in die Teams Umgebung](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro)konfigurieren. 
+Virtual Assistant ist eine Open Source-Vorlage von Microsoft, mit der Sie eine stabile Unterhaltungslösung erstellen und gleichzeitig die volle Kontrolle über die Benutzeroberfläche, das Branding der Organisation und die erforderlichen Daten behalten können. Sie können Ihren virtuellen Assistenten für [die Integration in die Teams Umgebung](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro)konfigurieren. 
 
 ### <a name="-power-platform-learn-modules"></a>✔ Power Platform Learn-Module
 
 |  Thema  |  Links  |
 |:---------|:----------------------|
 |Power BI|[Power BI für App-Entwickler](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI für Entwickler](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
-|Power Apps|[Power Apps für App-Entwickler](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps für Entwickler](/learn/browse/?products=power-apps)|
+|Power-Apps|[Power Apps für App-Entwickler](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps für Entwickler](/learn/browse/?products=power-apps)|
 |Power Automate|[Power Automate für App-Entwickler](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate für Entwickler](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
 |Power Virtual Agents|[Power Virtual Agents für App-Entwickler und -Entwickler](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 
@@ -65,8 +65,8 @@ Virtual Assistant ist eine Open-Source-Vorlage von Microsoft, mit der Sie eine s
 > [!NOTE]
 > Project Wird **in** Project **Dataverse für Teams** umbenannt.
 
-[Project Ist eine](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
-) neue Low-Code-Datenplattform, die in Kürze Microsoft Teams wird. Entwickler können Teams Power Platform-Lösungen direkt in Teams erstellen. Weitere Informationen zu Project Oakdale finden Sie unter [Teams Blog Microsoft Project Oakdale](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams).
+[Project Oakdale](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
+) ist eine neue Low-Code-Datenplattform, die in Kürze Microsoft Teams wird. Entwickler können Teams Power Platform-Lösungen direkt in Teams erstellen. Weitere Informationen zu Project Oakdale finden Sie im [Teams Blog Microsoft Project Oakdale](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams).
 
 ### <a name="-microsoft-blog-insights"></a>✔ Microsoft Blog Insights
 
@@ -81,6 +81,6 @@ Virtual Assistant ist eine Open-Source-Vorlage von Microsoft, mit der Sie eine s
 > [!div class="nextstepaction"]
 > [Verwalten von Microsoft Power Platform-Apps im Microsoft Teams Admin Center](/microsoftteams/manage-power-platform-apps)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)

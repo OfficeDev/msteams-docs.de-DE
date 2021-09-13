@@ -3,14 +3,14 @@ title: Aktualisieren und Löschen von Nachrichten, die von Ihrem Bot gesendet wu
 author: WashingtonKayaker
 description: Aktualisieren und Löschen von Nachrichten, die von Ihrem Microsoft Teams-Bot gesendet wurden
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 8f1738894aa5580f62b91fa44edf06d54fcc99f7786bae33ffc8cc7b95669fcc
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2db2ad28da41fd464f82ce5836acc8202f118923
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706092"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156339"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>Aktualisieren und Löschen von Nachrichten, die von Ihrem Bot gesendet wurden
 
@@ -112,7 +112,7 @@ await turn_context.update_activity(updated_activity)
 # <a name="rest-api"></a>[REST API](#tab/rest)
 
 > [!NOTE]
-> Sie können Teams-Apps in jeder Webprogrammiertechnologie entwickeln und die [REST-APIs des Bot-Connectordiensts](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)direkt aufrufen. Dazu müssen Sie [Authentifizierungssicherheitsverfahren](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) mit Ihren API-Anforderungen implementieren.
+> Sie können Teams Apps in einer beliebigen Webprogrammiertechnologie entwickeln und die [REST-APIs des Bot Connector-Diensts](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)direkt aufrufen. Dazu müssen Sie [Authentifizierungssicherheitsverfahren](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) mit Ihren API-Anforderungen implementieren.
 
 Um eine vorhandene Aktivität in einer Unterhaltung zu aktualisieren, schließen Sie den `conversationId` und `activityId` in den Anforderungsendpunkt ein. Um dieses Szenario abzuschließen, müssen Sie die Aktivitäts-ID zwischenspeichern, die vom ursprünglichen Post-Aufruf zurückgegeben wird.
 
@@ -130,7 +130,7 @@ Nachdem Sie nun Karten aktualisiert haben, können Sie Nachrichten mithilfe des 
 
 ## <a name="delete-messages"></a>Löschen von Nachrichten
 
-Im Bot Framework verfügt jede Nachricht über einen eindeutigen Aktivitätsbezeichner. Nachrichten können mithilfe der Bot Framework-Methode gelöscht `DeleteActivity` werden.
+Im Bot Framework hat jede Nachricht ihren eindeutigen Aktivitätsbezeichner. Nachrichten können mithilfe der Bot Framework-Methode gelöscht `DeleteActivity` werden.
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -182,7 +182,7 @@ Im folgenden Codebeispiel werden die Grundlagen von Unterhaltungen veranschaulic
 
 | **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
 |----------------------|-----------------|--------|-------------|--------|
-| Teams Grundlagen zu Unterhaltungen  | Veranschaulicht die Grundlagen von Unterhaltungen in Teams einschließlich Nachrichtenaktualisierung und -löschung. | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Teams Grundlagen zu Unterhaltungen  | Veranschaulicht die Grundlagen von Unterhaltungen in Teams einschließlich Nachrichtenaktualisierung und -löschung. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

@@ -2,15 +2,15 @@
 title: Erstellen von Apps mit dem Teams Toolkit und Visual Studio
 description: Erste Schritte beim Erstellen von großartigen benutzerdefinierten Apps direkt in Visual Studio mit dem Microsoft Teams Toolkit
 keywords: Visual Studio-Toolkit für Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: f72b8d723b5511e6e68a94617e256e280ce2ed50ee33544ccb3c8c237ddd9832
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 4f7da132f8cc63c65936c7c879226b04c87b3beb
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701810"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156052"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Erstellen von Apps mit dem Teams Toolkit und Visual Studio
 
@@ -41,7 +41,7 @@ Das Microsoft Teams Toolkit für Visual Studio steht im Visual Studio [Marketpla
 1. Starten Sie Visual Studio 2019.
 2. Wählen Sie **"Neues Projekt erstellen"** aus.
 3. Suchen Sie nach **Microsoft Teams App,** und wählen Sie **"Weiter"** aus.
-4. Geben Sie im **Feld "Neues Projekt konfigurieren"** den **Namen Project,** **den Speicherort** und den **Projektmappennamen ein.**
+4. Geben Sie im **Feld "Neues Projekt konfigurieren"** den **Namen Project,** **den Speicherort** und den **Projektmappennamen** ein.
 5. Wählen Sie **"Weiter"** aus, um einen Namen für die App einzugeben.
 6. Geben Sie im Bildschirm "Zusätzliche Informationen" einen **Anwendungs-** und **Entwickler- oder Firmennamen** für Ihre Teams-App ein.
 
@@ -59,12 +59,12 @@ Im Kern umfasst die Teams-App drei Komponenten:
     > - Ein [Farbsymbol](../resources/schema/manifest-schema.md#icons) für Ihre App, das im öffentlichen App- oder Organisations-App-Katalog angezeigt werden soll.
     > - Ein [Gliederungssymbol](../resources/schema/manifest-schema.md#icons) für die Anzeige auf der Teams Aktivitätsleiste.
 
-Wenn eine App installiert ist, analysiert der Teams Client die Manifestdatei, um die erforderlichen Informationen wie den Namen Ihrer App und die URL zu ermitteln, unter der sich die Dienste befinden.
+Wenn eine App installiert ist, analysiert der Teams-Client die Manifestdatei, um die erforderlichen Informationen wie den Namen Ihrer App und die URL zu ermitteln, unter der sich die Dienste befinden.
 
 > [!NOTE]
 >Wenn sie dies noch nicht getan haben, müssen Sie sich bei Ihrem Microsoft 365 Konto anmelden, um den Entwicklungsprozess fortzusetzen.
 >
-> Wenn Sie nicht über ein Microsoft 365 Konto verfügen, können Sie sich für ein Abonnement des [Microsoft 365 Entwicklerprogramms](https://developer.microsoft.com/microsoft-365/dev-program) registrieren. Es ist 90 Tage kostenlos und wird verlängert, solange Sie es für Entwicklungsaktivitäten verwenden. Wenn Sie über ein Visual Studio Enterprise- oder Professional-Abonnement verfügen, enthalten beide Programme ein kostenloses Microsoft 365 [Entwicklerabonnement,](https://aka.ms/MyVisualStudioBenefits)das für die Lebensdauer Ihres Visual Studio Abonnements aktiv ist. Weitere Informationen finden Sie unter [Einrichten eines Microsoft 365 Entwicklerabonnements.](/office/developer-program/office-365-developer-program-get-started)
+> Wenn Sie über kein Microsoft 365 Konto verfügen, können Sie sich für ein Abonnement des [Microsoft 365 Entwicklerprogramms](https://developer.microsoft.com/microsoft-365/dev-program) registrieren. Es ist 90 Tage kostenlos und wird verlängert, solange Sie es für Entwicklungsaktivitäten verwenden. Wenn Sie über ein Visual Studio Enterprise- oder Professional Abonnement verfügen, enthalten beide Programme ein kostenloses Microsoft 365 [Entwicklerabonnement,](https://aka.ms/MyVisualStudioBenefits)das für die Lebensdauer Ihres Visual Studio-Abonnements aktiv ist. Weitere Informationen finden Sie unter [Einrichten eines Microsoft 365 Entwicklerabonnements.](/office/developer-program/office-365-developer-program-get-started)
 
 ### <a name="configuration-steps"></a>Konfigurationsschritte 
 
@@ -82,7 +82,7 @@ Mit dem Menü **Project > TeamsFx Validate > Teams Manifest** können Sie überp
 
 ## <a name="publish-your-app-to-teams"></a>Veröffentlichen Ihrer App in Teams
 
-Im [Teams Entwicklerportal](https://dev.teams.microsoft.com/home)können Sie Ihre App in ein Team hochladen, Ihre App an den benutzerdefinierten App-Store Ihres Unternehmens für Benutzer in Ihrer Organisation übermitteln oder Ihre App für alle Teams Benutzer an app Source übermitteln.
+Im [Teams Entwicklerportal](https://dev.teams.microsoft.com/home)können Sie Ihre App in ein Team hochladen, Ihre App an den benutzerdefinierten App Store Ihres Unternehmens für Benutzer in Ihrer Organisation übermitteln oder Ihre App für alle Teams Benutzer an App Source übermitteln.
 
 - Ihr IT-Administrator wird diese Übermittlungen überprüfen.
 - Sie können zur **Veröffentlichungsseite** zurückkehren, um ihren Übermittlungsstatus zu überprüfen und zu erfahren, ob Ihre App von Ihrem IT-Administrator genehmigt oder abgelehnt wurde. Hier können Sie auch Updates für Ihre App übermitteln oder alle derzeit aktiven Übermittlungen abbrechen.

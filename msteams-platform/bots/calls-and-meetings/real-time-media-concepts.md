@@ -2,14 +2,14 @@
 title: Echtzeit-Medienanrufe und Onlinebesprechungen mit Microsoft Teams
 description: Grundlegendes zu den wichtigsten Konzepten beim Erstellen eines Bots, der Audio- und Videoanrufe in Echtzeit und Onlinebesprechungen durchführen kann.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: 'Audiostream-Videostream: Audio-/Videoanrufe bei Besprechungen in Echtzeit, medienanwendungsgehostete Medien, die vom Mediendienst gehostet werden'
-ms.openlocfilehash: 23a4573c39968f3b5c53badc32fd80ecc4dc889087dd8d98253be9d46555919c
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 5c7fce3e8d584781037b5d1169706c9f197e3a96
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709545"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156866"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Echtzeit-Medienanrufe und Besprechungen mit Microsoft Teams
 
@@ -25,7 +25,7 @@ Ein Echtzeitmedienbot muss deklarieren, welche Modalitäten er unterstützen mus
 
 Es werden zwei Arten von Videomodalitäten unterstützt: Hauptvideo und videobasierte Bildschirmfreigabe. Das Hauptvideo wird verwendet, um das Video von der Webcam eines Benutzers zu übertragen. Mit der videobasierten Bildschirmfreigabe kann ein Benutzer den Bildschirm freigeben. Die Plattform ermöglicht es einem Bot, beide Videotypen zu senden und zu empfangen.
 
-Wenn ein Bot an einer Teams Besprechung teil nimmt, kann er mehrere Hauptvideostreams gleichzeitig bis zu 10 pro Mediensitzung empfangen. Der Bot kann mehr als einen Teilnehmer an der Besprechung sehen.
+Wenn er an einer Teams Besprechung teil nimmt, kann ein Bot mehrere Hauptvideostreams gleichzeitig bis zu 10 pro Mediensitzung empfangen. Der Bot kann mehr als einen Teilnehmer an der Besprechung sehen.
 
 Der nächste Abschnitt enthält Details über den Bot, der Medien als Folge von Frames sendet und empfängt.
 

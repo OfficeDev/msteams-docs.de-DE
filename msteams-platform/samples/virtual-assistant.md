@@ -1,24 +1,24 @@
 ---
 title: Erstellen eines virtuellen Assistenten
 description: So erstellen Sie Virtual Assistant Bot und Fähigkeiten für die Verwendung in Microsoft Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Bots für virtuelle Teams-Assistenten
-ms.openlocfilehash: aec0b731b73607cd8f881509ab77da7b8fd35f21c121b97220fdd5019fc53df2
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 47258b55cd00452b33c09da6a5d5403ba1f0aa2c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708377"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156268"
 ---
 # <a name="create-virtual-assistant"></a>Erstellen eines virtuellen Assistenten 
 
-Virtual Assistant ist eine Open-Source-Vorlage von Microsoft, mit der Sie eine stabile Unterhaltungslösung erstellen und gleichzeitig die volle Kontrolle über die Benutzeroberfläche, das Branding der Organisation und die erforderlichen Daten behalten können. Die [Virtual Assistant Kernvorlage](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) ist der grundlegende Baustein, der die Microsoft-Technologien zusammenführt, die zum Erstellen eines Virtual Assistant erforderlich sind, einschließlich bot [Framework SDK,](https://github.com/microsoft/botframework-sdk) [Language Understanding (CSV)](https://www.luis.ai/)und [QnA Maker.](https://www.qnamaker.ai/) Außerdem werden die wesentlichen Funktionen wie die Registrierung von Fähigkeiten, verknüpfte Konten und die grundlegende Unterhaltungsabsicht zusammengeführt, um Benutzern eine Reihe nahtloser Interaktionen und Erfahrungen zu bieten. Darüber hinaus enthalten die Vorlagenfunktionen umfassende Beispiele für wiederverwendbare [Unterhaltungsfähigkeiten.](https://microsoft.github.io/botframework-solutions/overview/skills)  Individuelle Fähigkeiten sind in eine Virtual Assistant Lösung integriert, um mehrere Szenarien zu ermöglichen. Mithilfe des Bot Framework SDK werden Fähigkeiten in Quellcodeform dargestellt, sodass Sie sie nach Bedarf anpassen und erweitern können. Weitere Informationen zu den Fähigkeiten von Bot Framework finden Sie unter ["Was ist eine Bot Framework-Fähigkeit."](https://microsoft.github.io/botframework-solutions/overview/skills/) Dieses Dokument führt Sie zu Virtual Assistant Implementierungsüberlegungen für Organisationen, zum Erstellen eines Teams fokussierten Virtual Assistant, verwandtem Beispiel, Codebeispiel und Einschränkungen der Virtual Assistant.
-Die folgende Abbildung zeigt die Übersicht über den virtuellen Assistenten:
+Virtual Assistant ist eine Open Source-Vorlage von Microsoft, mit der Sie eine stabile Unterhaltungslösung erstellen und gleichzeitig die volle Kontrolle über die Benutzeroberfläche, das Branding der Organisation und die erforderlichen Daten behalten können. Die [Virtual Assistant Kernvorlage](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) ist der grundlegende Baustein, der die Microsoft-Technologien zusammenführt, die zum Erstellen eines Virtual Assistant erforderlich sind, einschließlich bot [Framework SDK,](https://github.com/microsoft/botframework-sdk) [Language Understanding (CSV)](https://www.luis.ai/)und [QnA Maker.](https://www.qnamaker.ai/) Außerdem werden die wesentlichen Funktionen wie die Registrierung von Fähigkeiten, verknüpfte Konten und die grundlegende Unterhaltungsabsicht zusammengeführt, um Benutzern eine Reihe nahtloser Interaktionen und Erfahrungen zu bieten. Darüber hinaus enthalten die Vorlagenfunktionen umfassende Beispiele für wiederverwendbare [Unterhaltungsfähigkeiten.](https://microsoft.github.io/botframework-solutions/overview/skills)  Individuelle Fähigkeiten sind in eine Virtual Assistant Lösung integriert, um mehrere Szenarien zu ermöglichen. Mithilfe des Bot Framework SDK werden Fähigkeiten in Quellcodeform dargestellt, sodass Sie sie nach Bedarf anpassen und erweitern können. Weitere Informationen zu den Fähigkeiten von Bot Framework finden Sie unter ["Was ist eine Bot Framework-Fähigkeit."](https://microsoft.github.io/botframework-solutions/overview/skills/) Dieses Dokument führt Sie zu Virtual Assistant Implementierungsüberlegungen für Organisationen, zum Erstellen eines Teams fokussierten Virtual Assistant, verwandtem Beispiel, Codebeispiel und Einschränkungen von Virtual Assistant.
+In der folgenden Abbildung wird die Übersicht über den virtuellen Assistenten angezeigt:
 
-![Übersichtsdiagramm für Virtual Assistant](../assets/images/bots/virtual-assistant/overview.png)
+![Übersichtsdiagramm Virtual Assistant](../assets/images/bots/virtual-assistant/overview.png)
 
-Textnachrichtenaktivitäten werden vom Virtual Assistant Kern mithilfe eines [Verteilermodells](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true) an zugeordnete Fähigkeiten weitergeleitet. 
+Textnachrichtenaktivitäten werden vom Virtual Assistant Kern mithilfe eines [Versandmodells](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true) an zugeordnete Fähigkeiten weitergeleitet. 
 
 ## <a name="implementation-considerations"></a>Überlegungen zur Implementierung
 
@@ -26,23 +26,23 @@ Die Entscheidung, eine Virtual Assistant hinzuzufügen, umfasst viele Determinan
 
 * Ein zentrales Team verwaltet alle Mitarbeitererfahrungen. Es bietet die Möglichkeit, eine Virtual Assistant Erfahrung zu erstellen und Updates für die Kernerfahrung zu verwalten, einschließlich des Hinzufügens neuer Fähigkeiten.
 * Es gibt mehrere Anwendungen in allen Geschäftsfunktionen, und es wird erwartet, dass die Anzahl in Zukunft wächst.
-* Vorhandene Anwendungen können angepasst werden, sind im Besitz der Organisation und werden in Fähigkeiten für eine Virtual Assistant umgewandelt.
+* Vorhandene Anwendungen können angepasst werden, befinden sich im Besitz der Organisation und werden in Fähigkeiten für eine Virtual Assistant umgewandelt.
 * Das zentrale Team für Mitarbeitererfahrungen kann Anpassungen an vorhandenen Apps beeinflussen. Es bietet auch die erforderlichen Anleitungen für die Integration vorhandener Anwendungen als Fähigkeiten in Virtual Assistant Erfahrung.
 
-In der folgenden Abbildung werden die Geschäftsfunktionen von Virtual Assistant angezeigt: 
+Die folgende Abbildung zeigt die Geschäftsfunktionen von Virtual Assistant: 
 
 ![Das zentrale Team verwaltet den Assistenten, und Teams für Geschäftsfunktionen bringen Fähigkeiten ein.](../assets/images/bots/virtual-assistant/business-functions.png)
 
 ## <a name="create-a-teams-focused-virtual-assistant"></a>Erstellen eines Teams-fokussierten Virtual Assistant
 
-Microsoft hat eine [Visual Studio Vorlage](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) zum Erstellen virtueller Assistenten und Fähigkeiten veröffentlicht. Mit der vorlage Visual Studio können Sie eine Virtual Assistant erstellen, die von einer textbasierten Oberfläche mit Unterstützung für begrenzte Rich-Cards mit Aktionen unterstützt wird. Wir haben die Visual Studio Basisvorlage erweitert, um Microsoft Teams Plattformfunktionen einzuschließen und großartige Teams App-Erfahrungen zu bieten. Einige der Funktionen umfassen unterstützung für umfangreiche adaptive Karten, Aufgabenmodule, Teams oder Gruppenchats und Messaging-Erweiterungen. Weitere Informationen zum Erweitern von Virtual Assistant auf Microsoft Teams finden Sie im [Lernprogramm: Erweitern Ihrer Virtual Assistant auf Microsoft Teams.](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/)    
+Microsoft hat eine [Visual Studio Vorlage](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) zum Erstellen virtueller Assistenten und Fähigkeiten veröffentlicht. Mit der vorlage Visual Studio können Sie eine Virtual Assistant erstellen, die von einer textbasierten Oberfläche mit Unterstützung für begrenzte Rich-Cards mit Aktionen unterstützt wird. Wir haben die Visual Studio Basisvorlage erweitert, um Microsoft Teams Plattformfunktionen zu integrieren und großartige Teams App-Umgebungen zu bieten. Einige der Funktionen umfassen unterstützung für umfangreiche adaptive Karten, Aufgabenmodule, Teams oder Gruppenchats und Messaging-Erweiterungen. Weitere Informationen zum Erweitern von Virtual Assistant auf Microsoft Teams finden Sie im [Lernprogramm: Erweitern Ihrer Virtual Assistant auf Microsoft Teams.](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/)    
 In der folgenden Abbildung wird das allgemeine Diagramm einer Virtual Assistant Lösung angezeigt:
 
-![Allgemeines Diagramm einer Virtual Assistant-Lösung](../assets/images/bots/virtual-assistant/high-level-diagram.png)
+![Allgemeines Diagramm einer Virtual Assistant Lösung](../assets/images/bots/virtual-assistant/high-level-diagram.png)
 
 ### <a name="add-adaptive-cards-to-your-virtual-assistant"></a>Hinzufügen adaptiver Karten zu Ihrer Virtual Assistant
 
-Um Anforderungen ordnungsgemäß zu verteilen, müssen Ihre Virtual Assistant das richtige MODELL UND die zugehörigen Fähigkeiten identifizieren. Der Verteilungsmechanismus kann jedoch nicht für Kartenaktionsaktivitäten verwendet werden, da das einer Fähigkeit zugeordnete MODELL VON TALENT für Kartenaktionstexte trainiert wird. Die Kartenaktionstexte sind feste, vordefinierte Schlüsselwörter und werden nicht von einem Benutzer auskommentiert.
+Um Anforderungen ordnungsgemäß zu verteilen, muss Ihre Virtual Assistant das richtige MODELL UND die zugehörigen Fähigkeiten identifizieren. Der Verteilungsmechanismus kann jedoch nicht für Kartenaktionsaktivitäten verwendet werden, da das einer Fähigkeit zugeordnete MODELL VON TALENT für Kartenaktionstexte trainiert wird. Die Kartenaktionstexte sind feste, vordefinierte Schlüsselwörter und werden nicht von einem Benutzer auskommentiert.
 
 Dieser Nachteil wurde behoben, indem Qualifikationsinformationen in die Nutzlast der Kartenaktion eingebettet werden. Jede Fähigkeit sollte in das Feld der Kartenaktionen eingebettet `skillId`  `value` werden. Sie müssen sicherstellen, dass jede Kartenaktionsaktivität die relevanten Qualifikationsinformationen enthält, und Virtual Assistant diese Informationen für die Verteilung nutzen können.
 
@@ -70,7 +70,7 @@ Ein Beispielcode für Kartenaktionsdaten wird im folgenden Abschnitt gezeigt:
     };
 ```
 
-Als `SkillCardActionData` Nächstes wird die Klasse in der Virtual Assistant-Vorlage eingeführt, um die Nutzlast der Kartenaktion zu `skillId` extrahieren.
+Als `SkillCardActionData` Nächstes wird die Klasse in der Virtual Assistant Vorlage eingeführt, um aus der Nutzlast der Kartenaktion zu `skillId` extrahieren.
 Ein Codeausschnitt, der aus der Nutzlast der Kartenaktion extrahiert  `skillId` werden soll, wird im folgenden Abschnitt gezeigt:
 
 ```csharp
@@ -128,7 +128,7 @@ Virtual Assistant können Unterbrechungen in Fällen behandeln, in denen ein Ben
 
 ### <a name="handle-task-module-requests"></a>Behandeln von Aufgabenmodulanforderungen
 
-Um einem Virtual Assistant Aufgabenmodulfunktionen hinzuzufügen, sind zwei zusätzliche Methoden im Virtual Assistant-Aktivitätshandler enthalten: `OnTeamsTaskModuleFetchAsync` und `OnTeamsTaskModuleSubmitAsync` . Diese Methoden lauschen aufgabenmodulbezogenen Aktivitäten von Virtual Assistant, identifizieren die mit der Anforderung verknüpften Fähigkeiten und leiten die Anforderung an die identifizierte Fähigkeit weiter. 
+Um einem Virtual Assistant Aufgabenmodulfunktionen hinzuzufügen, sind zwei zusätzliche Methoden im Virtual Assistant-Aktivitätshandler enthalten: `OnTeamsTaskModuleFetchAsync` und `OnTeamsTaskModuleSubmitAsync` . Diese Methoden hören aufgabenmodulbezogene Aktivitäten von Virtual Assistant ab, identifizieren die mit der Anforderung verknüpften Fähigkeiten und leiten die Anforderung an die identifizierte Fähigkeit weiter. 
 
 Die Anforderungsweiterleitung erfolgt über die [SkillHttpClient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable&preserve-view=true) `PostActivityAsync` -Methode. Es gibt die Antwort zurück, wie `InvokeResponse` sie analysiert und in konvertiert `TaskModuleResponse` wird.
 
@@ -224,13 +224,13 @@ Darüber hinaus müssen Sie alle Qualifikationsdomänen in den Abschnitt in die 
 
 ### <a name="handle-collaborative-app-scopes"></a>Behandeln von App-Bereichen für die Zusammenarbeit
 
-Teams Apps können in mehreren Bereichen vorhanden sein, einschließlich 1:1-Chat, Gruppenchat und Kanälen. Der Kern Virtual Assistant Vorlage ist für 1:1-Chats konzipiert. Im Rahmen der Onboarding-Erfahrung werden Benutzer Virtual Assistant aufgefordert, den Namen einzufordern und den Benutzerstatus zu verwalten. Da diese Onboarding-Erfahrung nicht für Gruppenchat- oder Kanalbereiche geeignet ist, wurde sie entfernt.
+Teams Apps können in mehreren Bereichen vorhanden sein, einschließlich 1:1-Chat, Gruppenchat und Kanälen. Die haupt Virtual Assistant Vorlage ist für 1:1-Chats konzipiert. Im Rahmen der Onboarding-Erfahrung werden Benutzer Virtual Assistant aufgefordert, den Namen einzufordern und den Benutzerstatus zu verwalten. Da diese Onboarding-Erfahrung nicht für Gruppenchat- oder Kanalbereiche geeignet ist, wurde sie entfernt.
 
 Fähigkeiten sollten Aktivitäten in mehreren Bereichen verarbeiten, z. B. 1:1-Chat, Gruppenchat und Kanalunterhaltung. Wenn einer dieser Bereiche nicht unterstützt wird, müssen Die Fähigkeiten mit einer entsprechenden Nachricht antworten.
 
 Die folgenden Verarbeitungsfunktionen wurden Virtual Assistant Core hinzugefügt:
 
-* Virtual Assistant kann ohne Textnachricht aus einem Gruppenchat oder Kanal aufgerufen werden.
+* Virtual Assistant kann ohne Textnachricht aus einem Gruppenchat oder -kanal aufgerufen werden.
 * Artikulationen werden vor dem Senden der Nachricht an das Verteilermodul bereinigt. Entfernen Sie beispielsweise die erforderlichen @mention des Bots.
 
 ```csharp
@@ -393,7 +393,7 @@ botskills connect --remoteManifest "<url to skill's manifest>" ..
 
 ### <a name="luis-integration"></a>INTEGRAL-Integration
 
-das Verteilermodell von Virtual Assistant basiert auf den MODELS-Modellen der angefügten Fähigkeiten. Das Verteilermodell identifiziert die Absicht für jede Textaktivität und ermittelt die damit verbundenen Fähigkeiten.
+das Verteilermodell Virtual Assistant basiert auf den MODELS-Modellen der angefügten Fähigkeiten. Das Verteilermodell identifiziert die Absicht für jede Textaktivität und ermittelt die damit verbundenen Fähigkeiten.
 
 Virtual Assistant erfordert das SKILL-Modell im `.lu` Format als Eingabe beim Anfügen einer Fähigkeit. JSON JSON wird `.lu` mithilfe des Botframework-Cli-Tools in das Format konvertiert.
 
@@ -462,8 +462,8 @@ Die entsprechende `.lu` Datei wird im folgenden Abschnitt angezeigt:
 > # RegEx entities
 ```
 
-Bei diesem Ansatz wird jeder Befehl, der von einem Benutzer ausgegeben wird, um Virtual Assistant, der `book room` mit einem Bot verknüpft ist, oder als `manage favorites` befehlsbezogen identifiziert `Book-a-room` und an diese Fähigkeit weitergeleitet.
-Auf der anderen Seite `Book-a-room room` muss bot DAS MODELL VERWENDEN, um diese Befehle zu verstehen, wenn sie nicht vollständig eingegeben wurden. Zum Beispiel: `I want to manage my favorite rooms`.
+Bei diesem Ansatz wird jeder Befehl, der von einem Benutzer ausgegeben wird, um zu Virtual Assistant, der `book room` mit einem Bot verknüpft ist, oder als `manage favorites` befehlsbezogen identifiziert `Book-a-room` und an diese Fähigkeit weitergeleitet.
+Auf der anderen Seite `Book-a-room room` muss bot DAS MODELL VERWENDEN, um diese Befehle zu verstehen, wenn sie nicht vollständig eingegeben wurden. Beispiel: `I want to manage my favorite rooms`.
 
 ### <a name="multi-language-support"></a>Mehrsprachige Unterstützung
 
@@ -517,7 +517,7 @@ Wir haben [claimsValidator](https://github.com/nebhagat/msteams-virtual-assistan
 "AllowedCallers": [ "<caller_VA1_appId>", "<caller_VA2_appId>" ],
 ```
 
-Das Array der zulässigen Aufrufer kann einschränken, welche Fähigkeiten Verbraucher auf die Fähigkeit zugreifen können. Fügen Sie diesem Array einen einzelnen Eintrag `*` hinzu, um Anrufe von einem beliebigen Qualifikationsverbraucher zu akzeptieren.
+Das Array der zulässigen Aufrufer kann einschränken, welche Fähigkeiten Verbraucher auf die Fähigkeit zugreifen können. Fügen Sie diesem Array einen einzelnen Eintrag `*` hinzu, um Anrufe von einem beliebigen Skill Consumer zu akzeptieren.
 
 ```
 "AllowedCallers": [ "*" ],
@@ -527,7 +527,7 @@ Weitere Informationen zum Hinzufügen einer Anspruchsüberprüfung zu einer Fäh
 
 ### <a name="limitation-of-card-refresh"></a>Einschränkung der Kartenaktualisierung 
 
-Aktualisierungsaktivitäten, z. B. kartenaktualisierung, werden noch nicht über Virtual Assistant ([GitHub-Problem)](https://github.com/microsoft/botbuilder-dotnet/issues/3686)unterstützt. Daher haben wir alle Kartenaktualisierungsanrufe `UpdateActivityAsync` durch die Veröffentlichung neuer Kartenanrufe `SendActivityAsync` ersetzt.
+Das Aktualisieren von Aktivitäten, z. B. die Kartenaktualisierung, wird noch nicht über Virtual Assistant ([GitHub-Problem)](https://github.com/microsoft/botbuilder-dotnet/issues/3686)unterstützt. Daher haben wir alle Kartenaktualisierungsanrufe `UpdateActivityAsync` durch die Veröffentlichung neuer Kartenanrufe `SendActivityAsync` ersetzt.
 
 ### <a name="card-actions-and-task-module-flows"></a>Kartenaktionen und Aufgabenmodulflüsse
 
@@ -555,11 +555,11 @@ Weitere Informationen finden Sie in [diesem](/microsoftteams/platform/samples/vi
     }
 ```
 
-Sie können auch vorhandene Fähigkeiten aus dem [Bot Framework-Lösungs-Repository](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) nutzen oder eine neue Fertigkeit von Grund auf neu erstellen. Informationen zum Erstellen einer neuen Fähigkeit finden Sie in [Lernprogrammen zum Erstellen einer neuen Fähigkeit.](https://microsoft.github.io/botframework-solutions/overview/skills/) Die Dokumentation zur Architektur Virtual Assistant und Fähigkeiten finden Sie unter[Virtual Assistant- und Skills-Architektur.](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)  
+Sie können auch vorhandene Fähigkeiten aus dem [Bot Framework-Lösungs-Repository](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) nutzen oder eine neue Fertigkeit von Grund auf neu erstellen. Informationen zum Erstellen einer neuen Fähigkeit finden Sie in [Lernprogrammen zum Erstellen einer neuen Fähigkeit.](https://microsoft.github.io/botframework-solutions/overview/skills/) Virtual Assistant und Dokumentation zur Architektur von Fähigkeiten finden Sie unter[Virtual Assistant- und Kompetenzarchitektur.](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)  
 
 ## <a name="limitations-of-virtual-assistant"></a>Einschränkungen von Virtual Assistant 
 
-* **EndOfConversation:** Eine Fähigkeit muss eine `endOfConversation` Aktivität senden, wenn sie eine Unterhaltung beendet. Basierend auf der Aktivität beendet ein Virtual Assistant den Kontext mit dieser bestimmten Fähigkeit und wechselt zurück in den Stammkontext Virtual Assistant. Für Book-a-Room-Bots gibt es keinen eindeutigen Zustand, in dem die Unterhaltung beendet wird. Daher haben wir nicht `endOfConversation` vom `Book-a-room` Bot gesendet, und wenn der Benutzer zum Stammkontext zurückkehren möchte, kann er dies einfach per `start over` Befehl tun.  
+* **EndOfConversation:** Eine Fähigkeit muss eine `endOfConversation` Aktivität senden, wenn sie eine Unterhaltung beendet. Basierend auf der Aktivität beendet ein Virtual Assistant den Kontext mit dieser bestimmten Fähigkeit und geht zurück in den Stammkontext Virtual Assistant. Für Book-a-Room-Bots gibt es keinen eindeutigen Zustand, in dem die Unterhaltung beendet wird. Daher haben wir nicht `endOfConversation` vom `Book-a-room` Bot gesendet, und wenn der Benutzer zum Stammkontext zurückkehren möchte, kann er dies einfach per `start over` Befehl tun.  
 * **Kartenaktualisierung:** Die Kartenaktualisierung wird noch nicht über Virtual Assistant unterstützt.  
 * **Messaging-Erweiterungen:**
   * Derzeit kann ein Virtual Assistant maximal zehn Befehle für Messaging-Erweiterungen unterstützen.
@@ -572,7 +572,7 @@ Sie können auch vorhandene Fähigkeiten aus dem [Bot Framework-Lösungs-Reposit
 
 | **Beispielname** | **Beschreibung** | **C#**  **.NET** |
 |----------|-----------------|---------------------------|
-| Visual Studio-Vorlage aktualisiert | Angepasste Vorlage zur Unterstützung von Teams-Funktionen. | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-virtual-assistant/csharp) |
+| Visual Studio-Vorlage aktualisiert | Angepasste Vorlage zur Unterstützung von Teams-Funktionen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-virtual-assistant/csharp) |
 | Book-a-Room-Bot–Fähigkeitscode | Ermöglicht ihnen, einen Besprechungsraum unterwegs schnell zu finden und zu reservieren. | [Anzeigen](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
 
 

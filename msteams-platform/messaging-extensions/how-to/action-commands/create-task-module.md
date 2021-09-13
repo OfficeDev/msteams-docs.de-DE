@@ -2,15 +2,15 @@
 title: Erstellen und Senden des Aufgabenmoduls
 author: surbhigupta
 description: Behandeln der anfänglichen Aufrufaktion und Antworten mit einem Aufgabenmodul aus einem Aktions-Messaging-Erweiterungsbefehl
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c93b660e3187328f022be5108456d9e1064cd557
-ms.sourcegitcommit: 1c4eaccee16dc63a1f2b5d7da2893d68f9c1533a
+ms.openlocfilehash: 891608b2346e09570ba88ee2b868177e1aca619c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "53534607"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156045"
 ---
 # <a name="create-and-send-the-task-module"></a>Erstellen und Senden des Aufgabenmoduls
 
@@ -24,7 +24,7 @@ Sie können das Aufgabenmodul mithilfe einer adaptiven Karte oder einer eingebet
 
 Im Prozess der anfänglichen Aufrufanforderung empfängt Ihr Dienst ein `Activity` Objekt vom `composeExtension/fetchTask` Typ, und Sie müssen mit einem Objekt antworten, das entweder eine adaptive Karte oder eine `task` URL zur eingebetteten Webansicht enthält. Zusammen mit den Standardmäßigen Bot-Aktivitätseigenschaften enthält die nutzlast des anfänglichen Aufrufs die folgenden Anforderungsmetadaten:
 
-|Eigenschaftsname|Zweck|
+|Eigenschaftenname|Zweck|
 |---|---|
 |`type`| Anforderungstyp. Es muss `invoke` . |
 |`name`| Typ des Befehls, der an Ihren Dienst ausgegeben wird. Es muss `composeExtension/fetchTask` . |
@@ -72,9 +72,9 @@ Der Code für die anfängliche Aufrufanforderung wird im folgenden Beispiel ange
 
 ## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-11-chat"></a>Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus dem 1:1-Chat aufgerufen wird 
 
-Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus dem 1:1-Chat aufgerufen wird, sind wie folgt aufgeführt:
+Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus dem 1:1-Chat aufgerufen wird, werden wie folgt aufgelistet:
 
-|Eigenschaftsname|Zweck|
+|Eigenschaftenname|Zweck|
 |---|---|
 |`type`| Anforderungstyp. Es muss `invoke` . |
 |`name`| Typ des Befehls, der an Ihren Dienst ausgegeben wird. Es muss `composeExtension/fetchTask` . |
@@ -125,7 +125,7 @@ Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus dem 1:1-Chat au
 
 Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus einem Gruppenchat aufgerufen wird, sind wie folgt aufgeführt:
 
-|Eigenschaftsname|Zweck|
+|Eigenschaftenname|Zweck|
 |---|---|
 |`type`| Anforderungstyp. Es muss `invoke` . |
 |`name`| Typ des Befehls, der an Ihren Dienst ausgegeben wird. Es muss `composeExtension/fetchTask` . |
@@ -224,7 +224,7 @@ Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus einem Besprechu
 
 Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul von einem Kanal aufgerufen wird (neuer Beitrag), werden wie folgt aufgelistet:
 
-|Eigenschaftsname|Zweck|
+|Eigenschaftenname|Zweck|
 |---|---|
 |`type`| Anforderungstyp. Es muss `invoke` . |
 |`name`| Typ des Befehls, der an Ihren Dienst ausgegeben wird. Es muss `composeExtension/fetchTask` . |
@@ -290,7 +290,7 @@ Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul von einem Kanal auf
 
 Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul von einem Kanal aufgerufen wird (Antwort auf Thread), werden wie folgt aufgelistet:
 
-|Eigenschaftsname|Zweck|
+|Eigenschaftenname|Zweck|
 |---|---|
 |`type`| Anforderungstyp. Es muss `invoke` . |
 |`name`| Typ des Befehls, der an Ihren Dienst ausgegeben wird. Es muss `composeExtension/fetchTask` . |
@@ -399,7 +399,7 @@ Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul von einem Kanal auf
 
 Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul von einem Befehlsfeld aufgerufen wird, sind wie folgt aufgeführt:
 
-|Eigenschaftsname|Zweck|
+|Eigenschaftenname|Zweck|
 |---|---|
 |`type`| Anforderungstyp. Es muss `invoke` . |
 |`name`| Typ des Befehls, der an Ihren Dienst ausgegeben wird. Es muss `composeExtension/fetchTask` . |
@@ -645,14 +645,14 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 Antworten Sie auf die Aufrufanforderung mit einem `task` Objekt, das entweder ein `taskInfo` Objekt mit der adaptiven Karte oder Web-URL oder eine einfache Zeichenfolgennachricht enthält.
 
-|Eigenschaftsname|Zweck|
+|Eigenschaftenname|Zweck|
 |---|---|
 |`type`| Dies kann entweder `continue` die Darstellung eines Formulars oder ein `message` einfaches Popup sein. |
 |`value`| Entweder ein `taskInfo` Objekt für ein Formular oder ein für eine `string` Nachricht. |
 
 Das Schema für das taskInfo-Objekt lautet:
 
-|Eigenschaftsname|Zweck|
+|Eigenschaftenname|Zweck|
 |---|---|
 |`title`| Der Titel des Aufgabenmoduls.|
 |`height`| Es muss entweder eine ganze Zahl (in Pixel) oder `small` `medium` , `large` sein.|
@@ -982,10 +982,10 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="code-sample"></a>Codebeispiel
 
-| Beispielname           | Description | .NET    | Node.js   |   
+| Beispielname           | Beschreibung | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams Messaging-Erweiterungsaktion| Beschreibt, wie Aktionsbefehle definiert, Aufgabenmodul erstellt und auf Aufgabenmodul-Sendeaktion reagiert wird. |[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams Messaging-Erweiterungssuche   |  Beschreibt, wie Suchbefehle definiert und auf Suchvorgänge reagiert wird.        |[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams Messaging-Erweiterungsaktion| Beschreibt, wie Aktionsbefehle definiert, Aufgabenmodul erstellt und auf Aufgabenmodul-Sendeaktion reagiert wird. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams Messaging-Erweiterungssuche   |  Beschreibt, wie Suchbefehle definiert und auf Suchvorgänge reagiert wird.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -4,14 +4,14 @@ author: surbhigupta
 description: Übersicht über Apps in Teams Besprechungen basierend auf Teilnehmer- und Benutzerrolle
 ms.topic: overview
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Teams-Apps – Benutzerteilnehmer-Rollen-API für Besprechungen
-ms.openlocfilehash: ac2f2433ddea126b343afa48c11efdf547ad0023
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: b84975296b443ad71fb78042729f225a31ba9afe
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528876"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156399"
 ---
 # <a name="apps-for-teams-meetings"></a>Apps für Teams Besprechungen
 
@@ -29,7 +29,7 @@ Die folgende Abbildung gibt Ihnen eine Vorstellung von den Erweiterbarkeitsfunkt
 
 ![Erweiterbarkeit der Besprechungs-App](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
-Dieser Artikel bietet eine Übersicht über die Erweiterbarkeit von Besprechungs-Apps, API-Referenzen, das Aktivieren und Konfigurieren von Apps für Besprechungen und benutzerdefinierte Szenen im Zusammen-Modus in Teams.
+Dieser Artikel bietet eine Übersicht über die Erweiterbarkeit von Besprechungs-Apps, API-Referenzen, das Aktivieren und Konfigurieren von Apps für Besprechungen und benutzerdefinierte Szenen im Gemeinsamen Modus in Teams.
 
 Verbessern Sie Ihre Besprechungserfahrung mithilfe des Features zur Besprechungserweiterung. Mit diesem Feature können Sie Ihre Apps in Besprechungen integrieren. Es umfasst auch verschiedene Phasen eines Besprechungslebenszyklus, in denen Sie Registerkarten, Bots und Messaging-Erweiterungen integrieren können. Sie können verschiedene Teilnehmerrollen und Benutzertypen identifizieren, Besprechungsereignisse abrufen und In-Meeting-Dialogfelder generieren.
 

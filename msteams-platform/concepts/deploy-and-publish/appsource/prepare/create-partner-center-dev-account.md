@@ -4,12 +4,13 @@ description: Um Ihre App im Microsoft Teams Store zu veröffentlichen, benötige
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: ef506b092a06e0c4668ff36aefeddfbafb93c5d5625a4871ce7082c4c6564fea
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 9a650326be832a5961a45ac4b7e418f29d073ea0
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708653"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156817"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Erstellen eines Partner Center-Entwicklerkontos
 
@@ -94,7 +95,7 @@ Weitere Informationen finden Sie unter [Verwalten von Kontoeinstellungen und Pro
 
 <summary><b>Warum wird die Meldung "Dieses Konto ist nicht veröffentlichungsberechtigt" angezeigt, wenn ich versuche, meine App zu übermitteln?</b></summary>
 
-Sie haben diese Fehlermeldung erhalten, da ihr [Kontoüberprüfungsstatus](/partner-center/verification-responses) aussteht. Überprüfen Sie Ihren Status im Partner [Center-Dashboard.](https://partner.microsoft.com/dashboard) Wählen Sie das **Zahnradsymbol Einstellungen** aus, und wählen Sie **die Entwicklereinstellungen > Konto > Kontoeinstellungen** aus.
+Sie haben diese Fehlermeldung erhalten, da ihr [Kontoüberprüfungsstatus](/partner-center/verification-responses) aussteht. Überprüfen Sie Ihren Status im Partner [Center-Dashboard.](https://partner.microsoft.com/dashboard) Wählen Sie das **Zahnradsymbol Einstellungen** aus, und wählen Sie **"Entwicklereinstellungen > Konto > Kontoeinstellungen"** aus.
 
 ![Partner Center-Überprüfungsstatus](~/assets/images/partner-center-verification-status.png)
 
@@ -120,7 +121,7 @@ Nach Abschluss des Überprüfungsprozesses ändert sich der Status Ihrer Registr
 
 <summary><b>Mein Kontoüberprüfungsstatus hat sich nicht über den E-Mail-Besitz hinaus entwickelt. Wie sollte ich fortfahren?</b></summary>
 
-Während der Überprüfung des **E-Mail-Besitzes** wird eine Überprüfungs-E-Mail an den primären Kontakt gesendet. Überprüfen Sie den Posteingang Ihres primären Kontakts auf eine E-Mail von **maccount@microsoft.com,** wobei die Betreffzeile **"Aktion erforderlich" ist: Überprüfen Sie Ihr E-Mail-Konto bei Microsoft,** und schließen Sie den E-Mail-Überprüfungsprozess ab. Die Überprüfungs-E-Mail wird an die Adresse gesendet, die in den Einstellungen Ihres Partner Center-Kontos aufgeführt ist.
+Während der Überprüfung des **E-Mail-Besitzes** wird eine Überprüfungs-E-Mail an den primären Kontakt gesendet. Überprüfen Sie den Posteingang Ihres primären Kontakts auf eine E-Mail von **maccount@microsoft.com** mit der erforderlichen **Betreffzeile": Überprüfen Sie Ihr E-Mail-Konto bei Microsoft,** und schließen Sie den E-Mail-Überprüfungsprozess ab. Die Überprüfungs-E-Mail wird an die Adresse gesendet, die in den Einstellungen Ihres Partner Center-Kontos aufgeführt ist.
 
 Beachten Sie Folgendes zum E-Mail-Überprüfungsprozess:
 
@@ -194,7 +195,7 @@ Supporttickets werden in einer Woche aufgelöst. Suchen Sie nach Updates, die an
 
 Senden Sie eine E-Mail mit den folgenden Details an <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com:</a>
 
-* **Betreffzeile:** Partner Center-Kontoproblem für *<your app name>* .
+* **Betreffzeile:** Partner Center-Kontoproblem für *Ihren App-Namen.*
 * **E-Mail-Textkörper:**
     * Supportticketnummer.
     * Ihre Verkäufer-ID.

@@ -2,21 +2,21 @@
 title: Automatische Authentifizierung
 description: Beschreibt die automatische Authentifizierung
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Teams-Authentifizierung SSO silent AAD
-ms.openlocfilehash: 1bdb75941f612be68ef0c6c2efa798a4888a88753434f1f3264243a135decc14
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 02078775ef3349ae5bb35e999e0f65587ab943d1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701884"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156093"
 ---
 # <a name="silent-authentication"></a>Automatische Authentifizierung
 
 > [!NOTE]
-> Damit die Authentifizierung für Ihre Registerkarte auf mobilen Clients funktioniert, stellen Sie sicher, dass Sie mindestens die Version 1.4.1 des Teams JavaScript SDK verwenden.
+> Damit die Authentifizierung für Ihre Registerkarte auf mobilen Clients funktioniert, stellen Sie sicher, dass Sie mindestens 1.4.1-Version des Teams JavaScript SDK verwenden.
 
-Die automatische Authentifizierung in Azure Active Directory (AAD) minimiert, wie oft ein Benutzer seine Anmeldeinformationen eingibt, indem das Authentifizierungstoken automatisch aktualisiert wird. Eine echte Unterstützung für einmaliges Anmelden finden Sie in der [SSO-Dokumentation.](~/tabs/how-to/authentication/auth-aad-sso.md)
+Die automatische Authentifizierung in Azure Active Directory (AAD) minimiert, wie oft ein Benutzer seine Anmeldeinformationen eingibt, indem das Authentifizierungstoken im Hintergrund aktualisiert wird. Eine echte Unterstützung für einmaliges Anmelden finden Sie in der [SSO-Dokumentation.](~/tabs/how-to/authentication/auth-aad-sso.md)
 
 Wenn Sie Ihren Code vollständig clientseitig beibehalten möchten, können Sie die [AAD-Authentifizierungsbibliothek](/azure/active-directory/develop/active-directory-authentication-libraries) für JavaScript verwenden, um ein AAD-Zugriffstoken im Hintergrund abzurufen. Wenn sich der Benutzer kürzlich angemeldet hat, wird nie ein Popup-Dialogfeld angezeigt.
 
@@ -31,7 +31,7 @@ Die ADAL.js-Bibliothek erstellt einen ausgeblendeten iframe für den impliziten 
 
 ## <a name="how-to-do-silent-authentication"></a>So führen Sie die automatische Authentifizierung durch
 
-Der Code in diesem Artikel stammt aus der Teams Beispiel-App, die [Teams Authentifizierungs-Beispielknoten](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)ist.
+Der Code in diesem Artikel stammt aus der Teams Beispiel-App, die [Teams Authentifizierungsbeispielknoten](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)ist.
 
 [Initiieren Sie die konfigurierbare Registerkarte "Automatische und einfache Authentifizierung" mithilfe von AAD,](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) und befolgen Sie die Anweisungen, um das Beispiel auf Ihrem lokalen Computer auszuführen.
 
@@ -105,7 +105,7 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### <a name="process-the-return-value"></a>Verarbeiten des Rückgabewerts
 
-ADAL.js analysiert das Ergebnis von AAD, indem die Rückrufseite für die Anmeldung aufgerufen `AuthenticationContext.handleWindowCallback(hash)` wird.
+ADAL.js analysiert das Ergebnis von AAD durch Aufrufen `AuthenticationContext.handleWindowCallback(hash)` der Rückrufseite für die Anmeldung.
 
 Überprüfen Sie, ob Sie über einen gültigen Benutzer und Anruf verfügen, oder melden Sie `microsoftTeams.authentication.notifySuccess()` den Status ihrer `microsoftTeams.authentication.notifyFailure()` Hauptregisterkarten-Inhaltsseite.
 

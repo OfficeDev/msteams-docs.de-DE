@@ -1,15 +1,15 @@
 ---
 title: Kontext für Ihre Registerkarte erhalten
 description: Beschreibt, wie Sie Benutzerkontext zu Ihren Registerkarten abrufen
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams Registerkarten Benutzerkontext
-ms.openlocfilehash: 32c8606d172a785356107750eac8168b1987d7f6b41d44f02297f0c19d22aa61
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: d0cdb107ef57c705589e225f1441a48caf427e5d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709330"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157003"
 ---
 # <a name="get-context-for-your-tab"></a>Kontext für Ihre Registerkarte erhalten
 
@@ -24,7 +24,7 @@ Ihre Registerkarte erfordert Kontextinformationen, um relevante Inhalte anzuzeig
 Der Kontext über den Benutzer, das Team oder das Unternehmen kann besonders hilfreich sein, wenn:
 
 * Sie erstellen ressourcen in Ihrer App oder ordnen sie dem angegebenen Benutzer oder Team zu.
-* Sie initiieren einen Authentifizierungsfluss von Azure Active Directory (AAD) oder einem anderen Identitätsanbieter, und Sie müssen den Benutzer nicht erneut eingeben. Weitere Informationen finden Sie unter [Authentifizieren eines Benutzers auf der Registerkarte Microsoft Teams.](~/concepts/authentication/authentication.md)
+* Sie initiieren einen Authentifizierungsfluss von Azure Active Directory (AAD) oder einem anderen Identitätsanbieter, und Sie müssen nicht erneut den Benutzernamen des Benutzers eingeben. Weitere Informationen finden Sie unter [Authentifizieren eines Benutzers auf der Registerkarte Microsoft Teams.](~/concepts/authentication/authentication.md)
 
 > [!IMPORTANT]
 > Obwohl diese Benutzerinformationen zu einer reibungslosen Benutzererfahrung beitragen können, dürfen Sie sie nicht als Identitätsnachweis verwenden. Beispielsweise kann ein Angreifer Ihre Seite in einem Browser laden und schädliche Informationen oder Anforderungen rendern.
@@ -121,8 +121,8 @@ Wenn Ihre Inhaltsseite in einem privaten Kanal geladen wird, werden die Daten, d
 * `teamId`: Auf die threadId des privaten Kanals festgelegt
 * `teamName`: Auf den Namen des privaten Kanals festgelegt
 * `teamSiteUrl`: Legen Sie die URL einer eindeutigen SharePoint-Website für den privaten Kanal fest.
-* `teamSitePath`: Legen Sie den Pfad einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal fest
-* `teamSiteDomain`: Auf die Domäne einer eindeutigen, eindeutigen SharePoint-Websitedomäne für den privaten Kanal festgelegt
+* `teamSitePath`: Legen Sie den Pfad einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal fest.
+* `teamSiteDomain`: Festlegen auf die Domäne einer eindeutigen SharePoint-Websitedomäne für den privaten Kanal
 
 Wenn Ihre Seite einen dieser Werte verwendet, müssen Sie das Feld überprüfen, `channelType` um festzustellen, ob Die Seite in einem privaten Kanal geladen ist, und entsprechend reagieren.
 
@@ -135,7 +135,7 @@ Sie können Ihre App registrieren, um informiert zu werden, wenn sich das Design
 
 Das `theme` Argument in der Funktion ist eine Zeichenfolge mit dem Wert , oder `default` `dark` `contrast` .
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Richtlinien für den Registerkartenentwurf](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [registerkarten Teams](~/tabs/what-are-tabs.md)

@@ -1,15 +1,16 @@
 ---
 title: Definieren von Suchbefehlen für Messaging-Erweiterungen
 author: surbhigupta
-description: Definieren sie Suchbefehle für Messaging-Erweiterungen für Microsoft Teams Apps.
+description: Definieren Sie Suchbefehle für Messaging-Erweiterungen für Microsoft Teams Apps.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6333840e6817761911b2b5acd4b53849448b5b68
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.localizationpriority: none
+ms.openlocfilehash: 88153523db6bd3f4957d03a0603e3b4cbdd02266
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068916"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156642"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definieren von Suchbefehlen für Messaging-Erweiterungen
 

@@ -3,14 +3,14 @@ title: Entwerfen Ihrer Besprechungserweiterung
 author: heath-hamilton
 description: Erfahren Sie, wie Sie Apps in Teams Besprechungen entwerfen und das Microsoft Teams UI Kit erhalten.
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 7da7d6c23f0f66fd73e976fb92d1883f9befd0d2
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 8b06dbbe7eba948800e9c35934798d4a6545108e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528915"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156405"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen ihrer Microsoft Teams Besprechungserweiterung
 
@@ -125,7 +125,7 @@ Beachten Sie Folgendes, wenn Sie den Bildlauf zulassen:
 
 ### <a name="navigation"></a>Navigation
 
-Für Szenarien mit Navigationsebenen oder umfangreichen Inhalten wird empfohlen, Benutzern das Navigieren zu einer sekundären Ebene zu gestatten. Benutzer müssen in der Lage sein, zur vorherigen Ebene zurückzukehren.
+Für Szenarien mit Navigationsebenen oder umfangreichen Inhalten wird empfohlen, Dass Benutzer zu einer sekundären Ebene navigieren können. Benutzer müssen in der Lage sein, zur vorherigen Ebene zurückzukehren.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="Beispiel zeigt die Navigation in Besprechungen." border="false":::
 
@@ -360,7 +360,7 @@ Aufgrund des begrenzten Platzes der Besprechungsregisterkarte werden Layouts mit
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="Beispiel, das zeigt, wie primäre Steuerelemente rechts ausgerichtet werden." border="false":::
 
-#### <a name="do-right-align-the-primary-action"></a>Do: Ausrichtung der primären Aktion nach rechts
+#### <a name="do-right-align-the-primary-action"></a>Do: Rechtsgündige Ausrichtung der primären Aktion
 
 Wir empfehlen, die visuell schwerste Aktion am rechten Ort zu positionieren.
 
@@ -370,7 +370,7 @@ Wir empfehlen, die visuell schwerste Aktion am rechten Ort zu positionieren.
 
 #### <a name="dont-left-or-center-align-actions"></a>Nicht empfohlen: Aktionen links oder zentr werden ausgerichtet
 
-Dies weicht vom standardmäßigen Teams Muster für die Platzierung von Steuerelementen in einem Dialogfeld ab und kann mit einem Dialogfeld hinter dem oberen Dialogfeld in Konflikt geraten.
+Dies weicht vom standard Teams Muster für die Platzierung von Steuerelementen in einem Dialogfeld ab und kann mit einem Dialogfeld hinter dem oberen Dialogfeld in Konflikt geraten.
 
    :::column-end:::
 :::row-end:::
@@ -500,7 +500,7 @@ App-Inhalte sollten in kleineren Fenstern dynamisch angepasst und verkleinert we
 
 #### <a name="dont-crop-or-clip-primary-ui-components"></a>Nicht empfohlen: Zuschneiden oder Beschneiden der primären UI-Komponenten
 
-Die unverankerte Navigation und Steuerelemente außerhalb des Bildschirms und die Notwendigkeit, einen Bildlauf zu finden, können für Benutzer verwirrend sein. Ihre App-Inhalte sollten nicht horizontal scrollen, wenn sie nicht in den iframe passen können.
+Die unverankerte Navigation und Steuerelemente außerhalb des Bildschirms und das Suchen eines Bildlaufs können für Benutzer verwirrend sein. Ihre App-Inhalte sollten nicht horizontal scrollen, wenn sie nicht in den iframe passen können.
 
    :::column-end:::
 :::row-end:::

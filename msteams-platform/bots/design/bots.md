@@ -3,21 +3,21 @@ title: Entwerfen Ihres Bots
 description: Erfahren Sie, wie Sie einen Teams-Bot entwerfen und das Microsoft Teams UI Kit erhalten.
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a52aa742d51ab637b850d8c55b15ab1305566e35
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: feeb80a0cd96172431e7682835e3f078cdd7983c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408671"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156685"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Entwerfen Ihres Microsoft Teams-Bots
 
 Bots sind Unterhaltungs-Apps, die bestimmte Aufgaben ausführen. Basierend auf dem <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a> kommunizieren Bots mit Benutzern, beantworten ihre Fragen und benachrichtigen sie proaktiv über Änderungen und andere Ereignisse. Sie sind eine tolle Möglichkeit zur Kontaktaufnahme.
 
 > [!IMPORTANT]
-> Bots sind in Government Community Cloud(GCC)-Umgebungen, aber nicht in GCC High- und Department of Defense(DoD)-Umgebungen verfügbar.
+> Bots sind in Government Community Cloud(GCC)-Umgebungen, aber nicht in GCC High- und Department of Defense (DoD)-Umgebungen verfügbar.
 
 Die folgenden Informationen beschreiben und veranschaulichen, wie Benutzer Bots in Teams hinzufügen, verwenden und verwalten können, um Ihr App-Design zu steuern.
 
@@ -339,7 +339,7 @@ Einige Personen erwarten, dass Gespräche auf natürliche Weise ablaufen, so wie
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Beispiel für Bots sollte Benutzern helfen, zu verstehen, wie Bots verwendet werden." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Ein Beispiel für Bots sollte Benutzern helfen, zu verstehen, wie Bots verwendet werden." border="false":::
 
 #### <a name="do-provide-help"></a>Do: Hilfe anbieten
 

@@ -2,15 +2,15 @@
 title: Verbreiten von Links
 author: surbhigupta
 description: So führen Sie die Verbreitung von Links mit der Messaging-Erweiterung in einer Microsoft Teams-App durch.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 3f3fca5483fb3828f4e3957d0d22dc1e361f7ffb
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 76e58602bde9dbb3cb58882163f1e86b6e9adef3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726929"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156529"
 ---
 # <a name="link-unfurling"></a>Verbreiten von Links
 
@@ -79,7 +79,7 @@ Die folgenden Kartentypen werden unterstützt:
 * [Office 365 Connectorkarte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Karte](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Sie können eine Vorschau einer adaptiven Karte oder Office 365 Connectorkarte in der Ergebnisliste mithilfe der Vorschaueigenschaft anzeigen. Die Vorschaueigenschaft ist nicht erforderlich, wenn die Ergebnisse bereits Hero- oder Miniaturansichtskarten sind. Wenn Sie die Vorschauanlage verwenden, muss es sich entweder um eine Hero- oder eine Miniaturansichtskarte handeln. Wenn keine Vorschaueigenschaft angegeben ist, schlägt die Vorschau der Karte fehl, und es wird nichts angezeigt.
+Sie können eine Vorschau einer adaptiven Karte oder Office 365 Connectorkarte in der Ergebnisliste mithilfe der Vorschaueigenschaft anzeigen. Die Vorschaueigenschaft ist nicht erforderlich, wenn die Ergebnisse bereits Hero- oder Miniaturansichtskarten sind. Wenn Sie die Vorschauanlage verwenden, muss es sich entweder um eine Hero- oder miniaturansichtskarte handeln. Wenn keine Vorschaueigenschaft angegeben ist, schlägt die Vorschau der Karte fehl, und es wird nichts angezeigt.
 
 ### <a name="example"></a>Beispiel
 
@@ -179,7 +179,7 @@ Es folgt ein Beispiel für die Antwort:
 
 * * *
 
-## <a name="see-also"></a>Weitere Artikel 
+## <a name="see-also"></a>Siehe auch 
 
 * [Karten](~/task-modules-and-cards/what-are-cards.md)
 * [Aufgeklappte Registerkartenverknüpfung und Phasenansicht](~/tabs/tabs-link-unfurling.md)

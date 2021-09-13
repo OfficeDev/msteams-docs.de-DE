@@ -4,23 +4,24 @@ author: Rajeshwari-v
 description: Eine Übersicht über die Integration von Webanwendungen und Gerätefunktionen in Microsoft Teams App.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: dd9498fe60d4e97b41072b78b5134f2fbc3af174
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: 83252b1f93b0c148bafaea4a911ea758e0ec9c14
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345767"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156691"
 ---
 # <a name="integrate-web-apps"></a>Integrieren von Web-Apps
 
-Sie können eine erweiterte Benutzererfahrung bereitstellen, indem Sie die Features einer vorhandenen Webanwendung in Microsoft Teams Plattform integrieren. Stellen Sie sicher, dass [Sie Teams Entwurfsrichtlinien](~/concepts/design/understand-use-cases.md) befolgen, damit Ihre App für Teams systemeigen ist.
-Dieses Dokument bietet eine Übersicht über die Voraussetzungen für die Integration von Webanwendungen in Teams, Power Platform zum Erstellen von Power-Apps, Power Virtual Agents, Virtual Assistant, App-Vorlagen, Umschaltconnectors, Moodle LMS, erstellen einer Share-to-Teams-Schaltfläche für Ihre Website, Hinzufügen einer Microsoft Teams Registerkarte in SharePoint, Erstellen von Deep-Links und Integrieren von Gerätefunktionen.
+Sie können eine erweiterte Benutzererfahrung bereitstellen, indem Sie die Features einer vorhandenen Webanwendung in Microsoft Teams Plattform integrieren. Stellen Sie sicher, dass [Sie Teams Entwurfsrichtlinien](~/concepts/design/understand-use-cases.md) befolgen, damit Ihre App für Teams systemintern ist.
+Dieses Dokument bietet einen Überblick über die Voraussetzungen für die Integration von Webanwendungen in Teams, Power Platform zum Erstellen von Power-Apps, Power Virtual Agents, Virtual Assistant, App-Vorlagen, Umschaltconnectors, Moodle LMS, erstellen einer Share-to-Teams-Schaltfläche für Ihre Website, Hinzufügen einer Microsoft Teams Registerkarte in SharePoint, Erstellen von Deep-Links und Integrieren von Gerätefunktionen.
 
 ## <a name="prerequisites"></a>Voraussetzungen   
 
 Stellen Sie für eine effektive Integration sicher, dass Sie die folgenden Voraussetzungen besser verstehen:
 * Teams Funktionen. 
-* SharePoint Anforderungen an die Datei- und Datenspeicherung.
+* SharePoint Anforderungen für datei- und datenspeicherung.
 * API-Anforderungen.
 * Authentifizierung.
 * Deep linking of your app with Teams.
@@ -39,15 +40,15 @@ Die Microsoft Power-Plattform kombiniert vier stabile Microsoft-Technologien wie
 
 ### <a name="power-apps"></a>Power-Apps
 
-Mit Power Apps können Sie Geschäfts-Apps erstellen, die eine Verbindung zu Ihren Geschäftsdaten herstellen und auf die Anforderungen Ihrer Organisation zugeschnitten sind. Power Apps eine Vielzahl von App-Szenarien ermöglichen, um geschäftliche Herausforderungen durch Canvas-Apps zu lösen. Nach dem Erstellen der App können Sie sie aus dem Power Apps Herstellerportal exportieren und in Microsoft Teams einbetten.
+Mit Power Apps können Sie Geschäfts-Apps erstellen, die eine Verbindung zu Ihren Geschäftsdaten herstellen und auf die Anforderungen Ihrer Organisation zugeschnitten sind. Power Apps eine Vielzahl von App-Szenarien ermöglichen, um geschäftliche Herausforderungen durch Canvas-Apps zu lösen. Nachdem Sie die App erstellt haben, können Sie sie aus dem Power Apps Herstellerportal exportieren und in Microsoft Teams einbetten.
 
 ### <a name="power-virtual-agents"></a>Power Virtual Agents
 
-Power Virtual Agent ist eine codelose, geleitete grafische Schnittstellenlösung. Es basiert auf der Microsoft Power Platform und dem Bot Framework. Sie ermöglicht es jedem Mitglied Ihres Teams, umfassende Chat-Chatbots zu erstellen und zu verwalten, die sich problemlos in die Teams Plattform integrieren lassen. Sie können intelligente virtuelle Agents für Teams entwerfen, entwickeln und veröffentlichen, ohne eine Entwicklungsumgebung einrichten, einen Webdienst erstellen oder sich direkt beim Bot Framework registrieren zu müssen.
+Power Virtual Agent ist eine codelose, geleitete grafische Schnittstellenlösung. Es basiert auf der Microsoft Power Platform und dem Bot Framework. Sie ermöglicht es jedem Mitglied Ihres Teams, umfassende Chat-Chatbots zu erstellen und zu verwalten, die sich problemlos in die Teams-Plattform integrieren lassen. Sie können intelligente virtuelle Agents für Teams entwerfen, entwickeln und veröffentlichen, ohne eine Entwicklungsumgebung einrichten, einen Webdienst erstellen oder sich direkt beim Bot Framework registrieren zu müssen.
 
 ### <a name="create-virtual-assistant"></a>Erstellen eines virtuellen Assistenten
 
-Virtual Assistant ist eine Open-Source-Vorlage von Microsoft, mit der Sie eine stabile Unterhaltungslösung erstellen und gleichzeitig die volle Kontrolle über die Benutzeroberfläche, das Branding der Organisation und die erforderlichen Daten behalten können. 
+Virtual Assistant ist eine Open Source-Vorlage von Microsoft, mit der Sie eine stabile Unterhaltungslösung erstellen und gleichzeitig die volle Kontrolle über die Benutzeroberfläche, das Branding der Organisation und die erforderlichen Daten behalten können. 
 
 ## <a name="app-templates"></a>App-Vorlagen
 
@@ -59,15 +60,15 @@ Teams Arbeitskraftverwaltungsconnectors für Schichten sind produktionsbereite, 
 
 ## <a name="install-moodle-lms"></a>Installieren von Moodle LMS
 
-Moodle ist ein beliebtes Open-Source-Learning Management System (LMS). Es ist jetzt in Microsoft Teams integriert. Diese Integration hilft Lehrkräften und Lehrkräften, bei Moodle-Kursen zusammenzuarbeiten, Fragen zu Noten und Aufgaben zu stellen und mit Benachrichtigungen direkt innerhalb Teams auf dem Laufenden zu bleiben.
+Moodle ist ein beliebtes Open-Source-Learning Management System (LMS). Sie ist jetzt in Microsoft Teams integriert. Diese Integration hilft Lehrkräften und Lehrkräften, bei Moodle-Kursen zusammenzuarbeiten, Fragen zu Noten und Aufgaben zu stellen und mit Benachrichtigungen direkt innerhalb Teams auf dem Laufenden zu bleiben.
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Erstellen einer Schaltfläche zum Teilen in Teams für Ihre Website
 
-Websites von Drittanbietern können das Startprogrammskript verwenden, um "Freigeben" in Teams Schaltflächen auf ihren Webseiten einzubetten. Wenn Sie die Schaltfläche auswählen, wird die Freigabe für Teams Oberfläche in einem Popupfenster gestartet. Auf diese Weise können Sie einen Link direkt für jede Person oder Microsoft Teams Kanal freigeben, ohne den Kontext zu wechseln.
+Websites von Drittanbietern können das Startprogrammskript verwenden, um "Freigeben" in Teams Schaltflächen auf ihren Webseiten einzubetten. Wenn Sie die Schaltfläche auswählen, wird die Freigabe für Teams In einem Popupfenster gestartet. Auf diese Weise können Sie einen Link direkt für jede Person oder Microsoft Teams Kanal freigeben, ohne den Kontext zu wechseln.
 
-## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>Hinzufügen einer Microsoft Teams Registerkarte in SharePoint
+## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>Hinzufügen einer Microsoft Teams-Registerkarte in SharePoint
 
-Sie können eine umfassende Integration zwischen Microsoft Teams und SharePoint erzielen, indem Sie eine Microsoft Teams Registerkarte in SharePoint als SPFx Webpart hinzufügen. 
+Sie können eine umfassende Integrationserfahrung zwischen Microsoft Teams und SharePoint erzielen, indem Sie eine Microsoft Teams Registerkarte in SharePoint als SPFx Webpart hinzufügen. 
 
 ## <a name="create-deep-link"></a>Deep-Link erstellen
 
@@ -75,9 +76,9 @@ Sie können Deep-Links zu den Entitäten in Teams erstellen. Sie können Links z
 
 ## <a name="integrate-device-capabilities"></a>Integrieren von Gerätefunktionen
 
-Microsoft Teams Plattform verbessert die Entwicklerfunktionen kontinuierlich, die sich an den integrierten Oberflächen von Erstanbietern orientieren. Die erweiterte Teams-Plattform ermöglicht Partnern den Zugriff auf und die Integration der systemeigenen Gerätefunktionen wie Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort mithilfe dedizierter APIs, die in Microsoft Teams JavaScript-Client-SDK verfügbar sind. 
+Microsoft Teams Plattform verbessert kontinuierlich die Entwicklerfunktionen, die sich an den integrierten Oberflächen von Erstanbietern orientieren. Die erweiterte Teams-Plattform ermöglicht Partnern den Zugriff auf und die Integration der systemeigenen Gerätefunktionen wie Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort mithilfe dedizierter APIs, die in Microsoft Teams JavaScript-Client-SDK verfügbar sind. 
 
-## <a name="integrate-people-picker"></a>Integrieren der Personenauswahl
+## <a name="integrate-people-picker"></a>Integration der Personenauswahl
 
 Sie können das Teams Systemeigene Personenauswahl-Steuerelement integrieren, mit dem Benutzer Personen in der Web-App-Oberfläche suchen und auswählen können.
 
@@ -86,7 +87,7 @@ Sie können das Teams Systemeigene Personenauswahl-Steuerelement integrieren, mi
 * [Zuordnen der Anwendungsfälle Ihrer App zu Teams Plattformfunktionen](~/concepts/design/map-use-cases.md)
 * [Ermitteln der Einstiegspunkte Ihrer App](~/concepts/extensibility-points.md)
 * [Integrieren von Web-Apps](~/samples/integrating-web-apps.md)
-* [Erstellen von benutzerdefinierten Apps mit wenig Code für Microsoft Teams](~/samples/teams-low-code-solutions.md)
+* [Erstellen von benutzerdefinierten Apps mit geringem Code für Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Hinzufügen eines Power Virtual Agent-Chatbots](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 * [Erstellen eines virtuellen Assistenten](~/samples/virtual-assistant.md)
 * [App-Vorlagen für Microsoft Teams](~/samples/app-templates.md)

@@ -3,14 +3,14 @@ title: Mitwirken an der Teams-Dokumentation
 description: Schritte zum Erstellen und Veröffentlichen Teams Dokumentation
 author: surbhigupta
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: d09f946926f7377b65910c7bccce7cef8e30ef739afa31b94c83354cffbd7c27
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 28fe69d59757bf53ddd105fde403d625d5faf419
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708056"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156692"
 ---
 # <a name="contribute-to-teams-documentation"></a>Mitwirken an der Teams-Dokumentation
 
@@ -21,16 +21,16 @@ Teams Dokumentation ist Teil der technischen **Dokumentationsbibliothek von Micr
 > [!div class="checklist"]
 >
 > * Installieren Sie [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-> * Installieren Sie [Visual Studio Code](https://code.visualstudio.com/) (VS Code).
-> * Installieren Sie [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) direkt aus dem VS Code Marketplace.
+> * Installieren [Sie Visual Studio Code](https://code.visualstudio.com/) (VS Code).
+> * Installieren Sie [das Dokumenterstellungspaket](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) direkt aus dem VS Code Marketplace.
 <br>&emsp;&emsp; Oder
 
 > [!div class="checklist"]
 >
 > * Installieren in VS Code:
 
-   1. Wählen Sie das **Erweiterungssymbol** auf der Seitenaktivitätsleiste aus, oder verwenden Sie den Befehl **Ansicht => Erweiterungen** oder STRG+UMSCHALT+X, und suchen Sie nach **Microsoft Docs Authoring Pack.**
-   1. Wählen Sie **Installieren** aus.
+   1. Wählen Sie das **Symbol Erweiterungen** auf der Seitenaktivitätsleiste aus, oder verwenden Sie den Befehl **Ansicht => Erweiterungen** oder STRG+UMSCHALT+X, und suchen Sie nach **Microsoft Docs Authoring Pack.**
+   1. **Installieren** auswählen.
    1. Nach der Installation wird die Schaltfläche **"Install"** auf die Schaltfläche "Zahnrad **verwalten"** geändert.
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Überprüfen des Leitfadens für Mitwirkende zu Microsoft-Dokumenten
@@ -39,7 +39,7 @@ Der Leitfaden für Mitwirkende gibt die Richtung zum Erstellen, Veröffentlichen
 
 ## <a name="microsoft-writing-style-and-content-guides"></a>Microsoft Writing-, Style- und Inhaltshandbücher
 
-* **[Microsoft Writing Style Guide:](/style-guide/welcome)** Microsoft Writing Style Guide ist eine umfassende Ressource für technisches Schreiben und spiegelt den modernen Ansatz von Microsoft für Sprache und Stil wider. Fügen Sie dieses Onlinehandbuch zum **Favoritenmenü** Ihres Browsers hinzu.
+* **[Microsoft Writing Style Guide:](/style-guide/welcome)** Microsoft Writing Style Guide ist eine umfassende Ressource für technisches Schreiben und spiegelt den modernen Ansatz von Microsoft für Sprache und Stil wider. Fügen Sie dieses Onlinehandbuch zum **Favoritenmenü** Ihres Browsers hinzu, um eine einfache Referenz zu finden.
 
 * **[Schreiben von Entwicklerinhalten:](/style-guide/developer-content/)** Teams bestimmte Inhalte richten sich an eine Entwicklergruppe mit grundlegendem Verständnis von Programmierkonzepten und -prozessen. Es ist wichtig, dass Sie klare, technisch genaue Informationen auf überzeugende Weise bereitstellen und gleichzeitig den Ton und Stil von Microsoft beibehalten.
 
@@ -56,26 +56,26 @@ Wenn Sie relative Pfade verwenden und Links zu anderen Dokumentenmappen erstelle
 Weitere Informationen zu Hyperlinks und Dateipfaden finden Sie unter [Verwenden von Links in der Dokumentation.](/contribute/how-to-write-links)
 
 > [!IMPORTANT]
-> So verweisen Sie auf einen Artikel, **der Teil des** Teams Plattform-Docset ist:<br>
+> So verweisen Sie auf einen Artikel, **der Teil des** Teams-Plattformdokuments ist:<br>
 > &emsp;&#x2714; Verwenden Sie einen relativen Pfad ohne vorangestellten Schrägstrich.<br>
 > &emsp;&#x2714; schließen Sie die Dateierweiterung Markdown ein.<br>
 >Beispiel: **übergeordnetes Verzeichnis/Verzeichnis/Pfad-zu-article.md** – > [Erstellen einer App für Microsoft Teams](../concepts/building-an-app.md) <br><br>
-> So verweisen Sie auf einen Microsoft Docs-Bibliotheksartikel, der nicht Teil des Teams Plattform-Docset **ist:**<br>
+> So verweisen Sie auf einen Microsoft Docs-Bibliotheksartikel, der nicht Teil des Teams Plattform-Docsets **ist:**<br>
 > &emsp;&#x2714; Verwenden Sie einen relativen Pfad, der mit einem Schrägstrich beginnt.<br>
-> &emsp;&#x2714; Dateierweiterung nicht einschließen. <br> Beispiel: **/docset/address-to-file-location** - > [Verwenden der Microsoft Graph-API zum Arbeiten mit Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
+> &emsp;&#x2714; Schließen Sie die Dateierweiterung nicht ein. <br> Beispiel: **/docset/address-to-file-location** – > [Verwenden der Microsoft Graph-API zum Arbeiten mit Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
 > Um auf eine Seite außerhalb der Microsoft Docs-Bibliothek zu verweisen, z. B. GitHub, verwenden Sie den vollständigen `https` Dateipfad.<br>
 
 ## <a name="code-samples-and-snippets"></a>Codebeispiele und Codeausschnitte
 
 Codebeispiele spielen eine wichtige Rolle bei der effektiven Verwendung von APIs und SDKs. Gut dargestellte Codebeispiele können deutlich vermitteln, wie alles funktioniert, als beschreibende Text- und Anleitungsinformationen allein. Ihre Codebeispiele müssen präzise, präzise, gut dokumentiert und leserfreundlicher sein. Code, der leicht zu lesen ist, muss leicht verständlich sein, testen, debuggen, verwalten, ändern und erweitern. Weitere Informationen finden Sie unter ["Einfügen von Code in Dokumente".](/contribute/code-in-docs)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Microsoft-Dokumente](/)
 * [Leitfaden für Mitwirkende](/contribute)
 * [Schnellstart für Dokumentstil und Sprache](/contribute/style-quick-start)
 * [Neuesten Stand: Quellcodelesbarkeit Tipps](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
-* [Teams-Dokumentation](/microsoftteams/platform/overview)
+* [Teams Dokumentation](/microsoftteams/platform/overview)
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
 
 

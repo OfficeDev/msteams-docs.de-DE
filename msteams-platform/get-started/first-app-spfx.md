@@ -5,18 +5,19 @@ description: Erfahren Sie, wie Sie eine benutzerdefinierte Registerkarte mit dem
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
-ms.openlocfilehash: 25f4a815add4a5712883976b9899131fb108046d75f813517c8261c3cca8e5af
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 8197f92e27889c00eae7a75860301890522e5bab
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706926"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156558"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>Erstellen und Ausführen Ihrer ersten Microsoft Teams-App mit SharePoint-Framework (SPFx)
 
 In diesem Lernprogramm erfahren Sie, wie Sie eine neue Microsoft Teams-App in SharePoint-Framework SPFx erstellen, die eine einfache persönliche App implementiert. Beispielsweise enthält eine *persönliche App* eine Reihe von Registerkarten für die individuelle Verwendung. Während des Lernprogramms erfahren Sie mehr über die Struktur einer Teams-App, wie Sie eine App lokal ausführen und wie Sie die App für SharePoint bereitstellen.
 
-## <a name="before-you-begin"></a>Vorabinformationen
+## <a name="before-you-begin"></a>Bevor Sie beginnen:
 
 Stellen Sie sicher, dass Ihre Entwicklungsumgebung eingerichtet ist, indem Sie die erforderlichen Komponenten installieren.
 
@@ -34,7 +35,7 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Öffnen Sie Visual Studio Code.
-1. Wählen Sie das symbol Teams in der Randleiste aus, um das Teams Toolkit zu öffnen.
+1. Wählen Sie das symbol Teams in der Seitenleiste aus, um das Teams Toolkit zu öffnen.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Das Microsoft Teams-Symbol in der Visual Studio Code-Randleiste.":::
 
@@ -50,7 +51,7 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot, der zeigt, wie Ihrer neuen App Funktionen hinzufügt werden können.":::
 
-1. Wählen Sie im Abschnitt **zum Frontend-Hostingtyp** **SharePoint-Framework (SPFx)** aus.
+1. Wählen Sie im Abschnitt zum **Frontend-Hostingtyp** **SharePoint-Framework (SPFx)** aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Screenshot, der zeigt, wie das Hosting für Ihre neue App ausgewählt wird.":::
 
@@ -94,13 +95,13 @@ Die CLI führt durch einige Fragen zum Erstellen des Projekts.  Bei jeder Frage 
 
 ---
 
-- [Weitere Informationen zum Entwickeln für SharePoint-Framework](/sharepoint/dev/spfx/sharepoint-framework-overview)
+- [Weitere Informationen zur Entwicklung für SharePoint-Framework](/sharepoint/dev/spfx/sharepoint-framework-overview)
 
 ## <a name="take-a-tour-of-the-source-code"></a>Machen Sie einen Rundgang durch den Quellcode
 
 Wenn Sie diesen Abschnitt vorerst überspringen möchten, können Sie [Ihre App lokal ausführen](#run-your-app-locally).
 
-Nachdem das Teams Toolkit Ihr Projekt konfiguriert hat, verfügen Sie über die Komponenten zum Erstellen einer einfachen persönlichen App für Teams, die im SharePoint-Framework gehostet wird.  Die Projektverzeichnisse und -dateien werden im Explorer-Bereich von Visual Studio Code angezeigt.
+Nachdem das Teams Toolkit Ihr Projekt konfiguriert hat, verfügen Sie über die Komponenten zum Erstellen einer einfachen persönlichen App für Teams, die in der SharePoint-Framework gehostet wird.  Die Projektverzeichnisse und -dateien werden im Explorer-Bereich von Visual Studio Code angezeigt.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Screenshot der App-Projektdateien für eine persönliche App in Visual Studio Code":::
 
@@ -147,12 +148,12 @@ So erstellen Sie Ihre App und führen sie lokal aus:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Screenshot der SPFx Workbench, die mit dem Popup ausgeführt wird, um eine Webpartauswahl hinzuzufügen.":::
 
-   Ihre App sollte jetzt ausgeführt werden.  Sie können normale Debugaktivitäten ausführen, als ob dies ein anderes SPFx Webpart wäre (z. B. das Festlegen von Haltepunkten).
+   Ihre App sollte jetzt ausgeführt werden.  Sie können normale Debugaktivitäten ausführen, als ob dies ein anderes SPFx-Webpart wäre (z. B. das Festlegen von Haltepunkten).
 
    > [!TIP]
    > Versuchen Sie, Haltepunkte in der Rendermethode des Browserfensters zu platzieren `SPFx/src/webparts/{webpart}/{webpart}.ts` und neu zu laden. VS Code wird an Haltepunkten im Code beendet.
 
-## <a name="deploy-your-app-to-sharepoint"></a>Bereitstellen ihrer App für SharePoint
+## <a name="deploy-your-app-to-sharepoint"></a>Bereitstellen Ihrer App für SharePoint
 
 Stellen Sie sicher, dass in Ihrer Bereitstellung ein SharePoint App-Katalog vorhanden ist.  Wenn eine nicht vorhanden ist, [erstellen Sie eine](/sharepoint/use-app-catalog).  Es kann bis zu 15 Minuten dauern, bis der App-Katalog vollständig erstellt wurde.
 
@@ -170,7 +171,7 @@ Stellen Sie sicher, dass in Ihrer Bereitstellung ein SharePoint App-Katalog vorh
 
 1. Wählen Sie nach Abschluss der Bereitstellung die Option **"In der Cloud bereitstellen"** aus.
 
-1. Derzeit ist keine automatisierte Bereitstellung verfügbar.  Ein Dialogfeld wird angezeigt, in dem Sie aufgefordert werden, manuell zu erstellen und bereitzustellen. Wählen Sie **Build SharePoint Package** aus.
+1. Derzeit ist keine automatisierte Bereitstellung verfügbar.  Ein Dialogfeld wird angezeigt, in dem Sie aufgefordert werden, manuell zu erstellen und bereitzustellen. Wählen Sie **"Build SharePoint Package" aus.**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/build-sharepoint-package.png" alt-text="Screenshot des Dialogfelds &quot;Sharepoint-Paket erstellen&quot;":::
 
@@ -232,11 +233,11 @@ Das SharePoint-Paket befindet sich in `SPFx/sharepoint/solution` Ihrem Projekt. 
     > [!Note]
     > Der Vorgang "Mit Teams synchronisieren" kann einige Minuten dauern.  Auf der rechten Seite des Browsers wird eine Meldung angezeigt, die angibt, dass die App erfolgreich mit Teams synchronisiert wurde.
 
-   Öffnen Sie die Teams Anwendung (oder melden Sie sich bei `https://teams.microsoft.com` ) an.  Drücken Sie den dreistelligen Punkt auf der Seitenleiste, und wählen Sie dann **alle Apps** aus.  Die App wird in der Kategorie "Apps" platziert, die **für Ihre Organisationskategorie erstellt wurden.**  Sie können die App von dort hinzufügen.
+   Öffnen Sie die Teams Anwendung (oder melden Sie sich `https://teams.microsoft.com` an).  Drücken Sie den dreistelligen Punkt auf der Seitenleiste, und wählen Sie dann **alle Apps** aus.  Die App wird in der Kategorie "Apps" platziert, die **für Ihre Organisationskategorie erstellt wurden.**  Sie können die App von dort hinzufügen.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot der App in Teams":::
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Übersicht über Lernprogramme](code-samples.md)
 * [Erstellen einer Unterhaltungs-Bot-App](first-app-bot.md)

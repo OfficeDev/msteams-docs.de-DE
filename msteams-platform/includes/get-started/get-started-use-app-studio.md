@@ -3,7 +3,7 @@
 > [!TIP]
 > **Testen Sie das Entwicklerportal:** App Studio wird in Kürze als entpriesen eingestuft. Konfigurieren, verteilen und verwalten Sie Ihre Teams-Apps mit dem neuen [Entwicklerportal.](https://dev.teams.microsoft.com/)
 
-App Studio ist eine Teams-App, die Sie im Teams Store installieren können. Dies vereinfacht das Erstellen und Registrieren einer App.
+App Studio ist eine Teams-App, die Sie aus dem Teams Store installieren können. Dies vereinfacht das Erstellen und Registrieren einer App.
 
 Führen Sie die folgenden Schritte aus, um das App-Paket zu aktualisieren:
 
@@ -20,7 +20,7 @@ Führen Sie die folgenden Schritte aus, um das App-Paket zu aktualisieren:
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
 
-    Das Beispiel enthält ein eigenes Manifest und ist so konzipiert, dass beim Erstellen des Projekts ein App-Paket erstellt wird. On .NET, the manifest.json file can be located in Visual Studio in Manifest under ```Microsoft.Teams.Samples.HelloWorld.Web``` . In Node.js erfolgt dies durch Eingabe `gulp` an der Befehlszeile im Stammverzeichnis des Projekts.
+    Das Beispiel enthält ein eigenes Manifest und ist so konzipiert, dass beim Erstellen des Projekts ein App-Paket erstellt wird. Auf .NET kann sich die manifest.json-Datei in Visual Studio im Manifest unter ```Microsoft.Teams.Samples.HelloWorld.Web``` befinden. Bei Node.js erfolgt dies durch Eingabe `gulp` an der Befehlszeile im Stammverzeichnis des Projekts.
 
      In Visual Studio befindet sich die manifest.json-Datei unter **Manifest** in `Microsoft.Teams.Samples.HelloWorld.Web` . Dieser Schritt wird in der folgenden Abbildung beschrieben:  
     
@@ -153,7 +153,7 @@ Führen Sie die folgenden Schritte aus, um Ihre Messaging-Erweiterung einzuricht
 
 Führen Sie nach der Eingabe der Details Ihrer App die folgenden Schritte aus, um Ihre App in Teams zu registrieren:
 
-1. Verwenden Sie **"Testen" und verteilen** Sie App Studio, um Ihre App in Teams zu installieren. 
+1. Verwenden Sie **"Testen" und verteilen Sie** App Studio, um Ihre App in Teams zu installieren. 
 1. Aktualisieren Sie Ihre gehostete Anwendung mit der App-ID und dem Kennwort für Ihren Bot. Verwenden Sie für die Beispiel-App die gleiche App-ID und dasselbe Kennwort für Bot- und Messaging-Erweiterungen. 
 1. Wählen Sie **"Testen" und "Verteilen"**  im linken Bereich von App Studio unter **"Fertig stellen"** aus:
 

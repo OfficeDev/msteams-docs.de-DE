@@ -2,15 +2,15 @@
 title: Verwalten Ihrer Apps mit dem Entwicklerportal
 description: Erfahren Sie, wie Sie Ihre Apps mithilfe des Entwicklerportals für Microsoft Teams verwalten.
 keywords: Erste Schritte für Entwicklerportal-Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 6934978c1b30cfa53b2307d772f7093047c1eb454cd4ff2010767b8d5e270bb9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 028086c3ad39f26cdf7874ed574a8488232700c3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707699"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156219"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Verwalten Ihrer Apps mit dem Entwicklerportal für Microsoft Teams
 
@@ -39,7 +39,7 @@ Sie können Umgebungen und globale Variablen konfigurieren, um den Übergang Ihr
 
 1. Wählen Sie im Entwicklerportal die App aus, an der Sie arbeiten.
 2. Wechseln Sie zur Seite **"Umgebungen",** und wählen Sie **+Umgebung hinzufügen** aus.
-3. Wählen Sie **+ Fügen Sie eine Variable** hinzu, um Konfigurationsvariablen für Ihre Umgebung zu erstellen.
+3. Wählen Sie **+ Hinzufügen einer Variablen,** um Konfigurationsvariablen für Ihre Umgebung zu erstellen.
 
 **So verwenden Sie Variablen**
 
@@ -67,13 +67,13 @@ Das Entwicklerportal bietet Optionen zum Testen und Debuggen Ihrer App:
 
 ## <a name="distribute-your-app"></a>Verteilen Ihrer App
 
-Verwenden Sie im Entwicklerportal die Schaltfläche **"Verteilen",** um ein App-Paket herunterzuladen, es in Ihrer Organisation zu veröffentlichen oder im Teams Store zu veröffentlichen.
+Verwenden Sie im Entwicklerportal die Schaltfläche **"Verteilen",** um ein App-Paket herunterzuladen, in Ihrer Organisation zu veröffentlichen oder im Teams Store zu veröffentlichen.
 
 Weitere Informationen finden Sie unter [Verteilen Ihrer Teams-App.](~/concepts/deploy-and-publish/apps-publish-overview.md)
 
 ## <a name="analyze-your-apps-usage"></a>Analysieren der Nutzung Ihrer App
 
-Auf der **Übersichtsseite** sehen Sie die Gesamtzahl der aktiven Benutzer für Ihre App. Diese Metriken sind für Apps verfügbar, die im Teams Store oder im App-Katalog einer Organisation über das Entwicklerportal veröffentlicht und auf die App-ID beschränkt sind.
+Auf der **Übersichtsseite** sehen Sie die Gesamtzahl der aktiven Benutzer für Ihre App. Diese Metriken sind für Apps verfügbar, die im Teams Store oder im App-Katalog einer Organisation über das Entwicklerportal veröffentlicht wurden und auf die App-ID beschränkt sind.
 
 | Metrik | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -86,6 +86,6 @@ Die monatliche und tägliche Nutzung wird für die letzten sieben, 30 und 60 Tag
 
 Das Entwicklerportal enthält auch Tools, mit denen Sie einige wichtige Features von Teams-Apps erstellen können. Einige dieser Tools umfassen:
 
-* **Szenenstudio:** Entwerfen [Sie benutzerdefinierte Szenen im Zusammen-Modus](~/apps-in-teams-meetings/teams-together-mode.md) für Teams Besprechungen.
+* **Szenenstudio:** Entwerfen [sie benutzerdefinierte Szenen im Zusammen-Modus](~/apps-in-teams-meetings/teams-together-mode.md) für Teams Besprechungen.
 * **Editor für adaptive Karten:** Erstellen und Anzeigen einer Vorschau adaptiver Karten, die in Ihre Apps aufgenommen werden sollen.
-* **Microsoft Identity Platform Verwaltung:** Registrieren Sie Ihre Apps bei Azure Active Directory (Azure AD), um Benutzern zu helfen, sich anzumelden und Zugriff auf APIs bereitzustellen.
+* **Microsoft Identity Platform Verwaltung:** Registrieren Sie Ihre Apps bei Azure Active Directory (Azure AD), um Benutzern zu helfen, sich anzumelden und Zugriff auf APIs zu gewähren.

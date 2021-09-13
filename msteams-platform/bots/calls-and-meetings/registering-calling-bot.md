@@ -1,15 +1,15 @@
 ---
 title: Registrieren von Anrufen und Besprechungsbots für Microsoft Teams
-description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanrufbot für Microsoft Teams
+description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanruf-Bot für Microsoft Teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Aufrufen von Bot-Audio-/Video-Audiovideomedien
-ms.openlocfilehash: 5013ebcbce0bc94199e846f20fc6ee52238d302f1dd1b05872245ef2c6e32d91
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2724e9be913b18416f0ad6646f0879a41f134201
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709569"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156872"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrieren von Anrufen und Besprechungsbots für Microsoft Teams
 
@@ -50,7 +50,7 @@ Der nächste Abschnitt enthält eine Liste der Anwendungsberechtigungen, die fü
 
 ## <a name="add-graph-permissions"></a>Hinzufügen Graph Berechtigungen
 
-Die Graph bietet präzise Berechtigungen, um den Zugriff zu steuern, den Apps auf Ressourcen haben. Sie entscheiden, welche Berechtigungen für Graph Ihre App-Anforderungen gelten. Die Graph aufrufenden APIs unterstützen Anwendungsberechtigungen, die von Apps verwendet werden, die ohne angemeldeten Benutzer ausgeführt werden. Ein Mandantenadministrator muss Anwendungsberechtigungen zustimmen.
+Das Graph bietet granulare Berechtigungen, um den Zugriff von Apps auf Ressourcen zu steuern. Sie entscheiden, welche Berechtigungen für Graph Ihre App-Anforderungen gelten. Die Graph aufrufenden APIs unterstützen Anwendungsberechtigungen, die von Apps verwendet werden, die ohne angemeldeten Benutzer ausgeführt werden. Ein Mandantenadministrator muss Anwendungsberechtigungen zustimmen.
 
 ### <a name="application-permissions-for-calls"></a>Anwendungsberechtigungen für Anrufe
 
@@ -78,7 +78,7 @@ Die folgende Tabelle enthält eine Liste der Anwendungsberechtigungen für Onlin
 
 ### <a name="assign-permissions"></a>Berechtigungen zuweisen
 
-Sie müssen die Anwendungsberechtigungen für Ihren Bot im Voraus mithilfe des [Azure-Portals](https://aka.ms/aadapplist) konfigurieren, wenn Sie den [V1-Endpunkt Azure Active Directory (AAD)](/azure/active-directory/develop/azure-ad-endpoint-comparison)verwenden möchten.
+Sie müssen die Anwendungsberechtigungen für Ihren Bot im Voraus mithilfe des [Azure-Portals](https://aka.ms/aadapplist) konfigurieren, wenn Sie den [Azure Active Directory (AAD) V1-Endpunkt](/azure/active-directory/develop/azure-ad-endpoint-comparison)verwenden möchten.
 
 ### <a name="get-tenant-administrator-consent"></a>Einholen der Zustimmung des Mandantenadministrators
 

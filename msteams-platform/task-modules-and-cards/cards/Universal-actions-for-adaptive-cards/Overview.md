@@ -2,13 +2,13 @@
 title: Übersicht über universelle Aktionen für adaptive Karten
 description: Eine kurze Übersicht über universelle Aktionen für adaptive Karten.
 ms.topic: overview
-localization_priority: Normal
-ms.openlocfilehash: 20231245af5a1fe479277558367e6265f4391ff0925dfcf96288912470b09b38
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: e007f6b1f30e9bb1fe05e48272d598300a7942ae
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706364"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156486"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Universal-Aktionen für adaptive Karten
 
@@ -19,7 +19,7 @@ Universelle Aktionen für adaptive Karten stellt den Bot als allgemeines Back-En
 Dieses Dokument hilft Ihnen zu verstehen, wie Sie das Modell für universelle Aktionen verwenden können, um die Benutzerfreundlichkeit der Interaktion mit adaptiven Karten plattform- und anwendungsübergreifend zu verbessern.
 
 > [!NOTE]
-> Unterstützung für universelle Aktionen für adaptive Karten ist nur für Vom Bot gesendete Karten verfügbar. Unterstützung für Karten, die über das Feld zum Verfassen gesendet werden, und die Verbreitung von Karten für Links wird in Kürze verfügbar sein.
+> Unterstützung für universelle Aktionen für adaptive Karten ist nur für vom Bot gesendete Karten verfügbar. Unterstützung für Karten, die über das Feld zum Verfassen gesendet werden, und die Verbreitung von Karten für Links wird in Kürze verfügbar sein.
 
 ## <a name="enhance-user-experiences-with-universal-actions-for-adaptive-cards"></a>Verbessern der Benutzererfahrung mit universellen Aktionen für adaptive Karten
 
@@ -47,7 +47,7 @@ Die folgende Abbildung zeigt das neue Modell für universelle Aktionen:
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="Neue universelle Aktionen für adaptive Karten":::
 
-Sie können jetzt die gleiche Karte an beide senden, Teams und Outlook, und sie mithilfe des zugrunde liegenden Bots miteinander synchronisieren. Alle Aktionen, die auf beiden Plattformen ausgeführt werden, werden mit diesem Build einmal auf die andere Plattform übernommen *und stellen ein beliebiges* Modell (Universelle Aktionen für adaptive Karten) bereit.
+Sie können jetzt die gleiche Karte an beide senden, Teams und Outlook, und sie mithilfe des zugrunde liegenden Bots synchronisieren. Alle Aktionen, die auf beiden Plattformen ausgeführt werden, werden mit diesem Build einmal auf die andere Plattform übernommen *und stellen ein beliebiges* Modell (Universelle Aktionen für adaptive Karten) bereit.
 
 Die folgende Abbildung zeigt die universellen Aktionen für adaptive Karten für Teams und Outlook:
 
@@ -111,7 +111,7 @@ Adaptive Karten sind eine Kombination aus Inhalten, z. B. Text und Grafiken, und
 
 Sie können loslegen, indem Sie Szenarien mithilfe der [Schnellstartanleitung](Work-with-universal-actions-for-adaptive-cards.md) aktualisieren und universelle Aktionen nutzen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Was sind Bots?](~/bots/what-are-bots.md)
 * [Übersicht über adaptive Karten](~/task-modules-and-cards/what-are-cards.md)

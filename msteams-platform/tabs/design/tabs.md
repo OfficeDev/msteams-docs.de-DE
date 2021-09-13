@@ -1,20 +1,20 @@
 ---
 title: Designregisterkarten für Desktop, Web und Mobile
-description: Erfahren Sie, wie Sie eine Teams Registerkarte für Desktop, Web und Mobile entwerfen und das Microsoft Teams UI Kit erhalten.
+description: Erfahren Sie, wie Sie eine Teams Registerkarte für Desktop, Web und Mobilgeräte entwerfen und das Microsoft Teams UI Kit erhalten.
 author: heath-hamilton
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a949687ee53186b4449ad086b4db6c89cc151995
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: a33bc00f26d9a296d4b76e3885cd12d772e8f8e8
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408629"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156105"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Entwerfen Der Registerkarte für Microsoft Teams
 
-Eine Registerkarte ist ein großer Zeichenbereich für Ihre App-Inhalte. Um Ihr App-Design zu leiten, beschreiben und veranschaulichen die folgenden Informationen, wie Benutzer Registerkarten in Teams hinzufügen, verwenden und verwalten können.
+Eine Registerkarte ist ein großer Zeichenbereich für Ihre App-Inhalte. In den folgenden Informationen wird beschrieben, wie Benutzer Registerkarten in Teams hinzufügen, verwenden und verwalten können, um Das App-Design zu steuern.
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
@@ -62,7 +62,7 @@ Es gibt einen kurzen Einrichtungsprozess, um eine App als Kanal, Chat oder Bespr
 |3|**iframe:** Dynamischer Speicherplatz für den Inhalt Ihrer App (z. B. Registerkarteneinstellungen oder Authentifizierung).|
 |4 |**Infolink:** Öffnet ein Dialogfeld mit weiteren Informationen zur App, z. B. eine vollständige Beschreibung, von der App erforderliche Berechtigungen und Links zu Ihren Datenschutzrichtlinien und Nutzungsbedingungen.|
 |5 |**Schaltfläche "Schließen":** Schließt das Dialogfeld.|
-|6 |**Option "Teammitglieder benachrichtigen":** Im Dialogfeld werden Die Benutzer gefragt, ob sie einen Beitrag erstellen möchten, in dem andere darüber informiert werden, dass sie eine Registerkarte hinzugefügt haben.|
+|6 |**Option "Teammitglieder benachrichtigen":** Im Dialogfeld werden Die Benutzer gefragt, ob sie einen Beitrag erstellen möchten, in dem sie andere darüber informiert werden, dass sie eine Registerkarte hinzugefügt haben.|
 |7 |**Schaltfläche "Zurück":** Wechselt basierend auf dem geöffneten Dialogfeld zum vorherigen Schritt.|
 |8 |**Schaltfläche "Speichern":** Schließt die Registerkarteneinrichtung ab.|
 
@@ -72,7 +72,7 @@ Sie können einen Schritt hinzufügen, in dem sich Benutzer zuerst mit ihren Mic
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Beispiel zeigt einen Bildschirm für die Registerkartenauthentifizierung." border="false":::
 
-### <a name="design-a-tab-setup-with-ui-templates"></a>Entwerfen eines Registerkartensetups mit Benutzeroberflächenvorlagen
+### <a name="design-a-tab-setup-with-ui-templates"></a>Entwerfen einer Registerkarteneinrichtung mit Benutzeroberflächenvorlagen
 
 Verwenden Sie eine der folgenden Teams Ui-Vorlagen, um die Registerkarteneinrichtungsoberfläche zu entwerfen:
 
@@ -82,7 +82,7 @@ Verwenden Sie eine der folgenden Teams Ui-Vorlagen, um die Registerkarteneinrich
 
 ## <a name="view-a-tab"></a>Anzeigen einer Registerkarte
 
-Registerkarten bieten eine Weboberfläche im Vollbildmodus in Teams, in der Sie Inhalte für die Zusammenarbeit wie Taskboards und Dashboards sowie wichtige Informationen anzeigen können.
+Registerkarten bieten eine Weboberfläche im Vollbildmodus in Teams, in der Sie Inhalte für die Zusammenarbeit , z. B. Taskboards und Dashboards, sowie wichtige Informationen anzeigen können.
 
 ### <a name="mobile"></a>Mobilgeräte
 
@@ -106,7 +106,7 @@ Registerkarten bieten eine Weboberfläche im Vollbildmodus in Teams, in der Sie 
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Abbildung der Ui-Anatomie einer Registerkarte." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Diese Abbildung zeigt die Ui-Anatomie einer Registerkarte." border="false":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -182,7 +182,7 @@ Sie können Optionen zum Umbenennen, Entfernen oder Ändern einer Registerkarte 
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
-|1|**Einstellungen**: (Optional) Ermöglicht Benutzern, die Einstellungen einer Registerkarte zu ändern, nachdem sie hinzugefügt wurde.|
+|1|**Einstellungen:**(Optional) Ermöglicht Benutzern, die Einstellungen einer Registerkarte zu ändern, nachdem sie hinzugefügt wurde.|
 |2|**Umbenennen:** Benutzer können der Registerkarte einen Namen geben, der für den Kanal, den Chat oder die Besprechung von Bedeutung ist.|
 |3|**Entfernen:** Entfernt die Registerkarte aus dem Kanal, Chat oder der Besprechung.|
 

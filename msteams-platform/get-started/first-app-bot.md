@@ -5,21 +5,22 @@ description: Erstellen Sie mithilfe des Teams-Toolkits einen Unterhaltungs-Bot f
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 2b39dc51c1c175e738b88376a298df82f25a582a
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: f9f35f5b4e639c6568ad3c1eccfc750d3bd9b853
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345641"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156562"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Erstellen Sie Ihren ersten Unterhaltungs-Bot für Microsoft Teams
 
 In diesem Lernprogramm erfahren Sie, wie Sie eine Teams-Bot-App erstellen, ausführen und bereitstellen. Ein Bot agiert als Vermittler zwischen einem Teams-Benutzer und einem Webdienst. Benutzer können mit einem Bot chatten, um schnell Informationen zu erhalten, Workflows zu initiieren, oder für alles andere, was Ihr Webservice tun kann. 
 
 > [!IMPORTANT]
-> Derzeit sind Bots in Government Community Cloud (GCC) verfügbar, aber nicht in GCC-High und DoD (Department of Defense).
+> Derzeit sind Bots in Government Community Cloud (GCC) verfügbar, aber nicht in GCC-High und department of Defense (DOD).
 
-## <a name="before-you-begin"></a>Bevor Sie beginnen
+## <a name="before-you-begin"></a>Bevor Sie beginnen:
 
 Stellen Sie sicher, dass Ihre Entwicklungsumgebung eingerichtet ist, indem Sie die erforderlichen Komponenten installieren.
 
@@ -112,7 +113,7 @@ So erstellen Sie Ihre App und führen sie lokal aus:
 
    > Wenn Sie die App zum ersten Mal ausführen, werden alle Abhängigkeiten heruntergeladen und die App wird erstellt.  Wenn die Erstellung abgeschlossen ist, wird automatisch ein Browserfenster geöffnet.  Dies kann 3 bis 5 Minuten dauern.
 
-1. Ihr Webbrowser beginnt mit der Ausführung der App. Wenn Sie aufgefordert werden, Teams Desktop zu öffnen, wählen Sie **"Abbrechen"** aus, um im Browser zu verbleiben. Sie werden möglicherweise auch aufgefordert, zu anderen Zeiten zu Teams Desktop zu wechseln. wählen Sie in diesem Fall die Teams Web-App aus.
+1. Ihr Webbrowser beginnt mit der Ausführung der App. Wenn Sie aufgefordert werden, Teams Desktop zu öffnen, wählen Sie **"Abbrechen"** aus, um im Browser zu verbleiben. Möglicherweise werden Sie auch aufgefordert, zu anderen Zeiten zu Teams Desktop zu wechseln. wählen Sie in diesem Fall die Teams Web-App aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot, der zeigt, wie die Web-Version von Microsoft Teams beim Start ausgewählt wird.":::
 
@@ -127,7 +128,7 @@ So erstellen Sie Ihre App und führen sie lokal aus:
 <details>
 <summary>Erfahren Sie, was geschieht, wenn Sie Ihre App lokal im Debugger ausführen.</summary>
 
-Wenn Sie **F5** drücken, wird das Teams Toolkit:
+Wenn Sie die **F5-Taste** drücken, wird das Teams Toolkit:
 
 1. Registriert Ihre Anwendung bei Azure Active Directory.
 1. Registriert Ihre Anwendung für das "Querladen" in Microsoft Teams.
@@ -144,7 +145,7 @@ Wenn Sie **F5** drücken, wird das Teams Toolkit:
 Um Ihre App in Teams erfolgreich auszuführen, müssen Sie ein Microsoft 365-Entwicklungskonto haben, das das Querladen von Apps ermöglicht. Weitere Informationen zum Öffnen von Apps finden Sie unter [Erforderliche Komponenten](prerequisites.md#enable-sideloading).
 
 > [!IMPORTANT]
-> Sideloading-Apps sind derzeit in Government Community Cloud (GCC), GCC-Hoch und DOD verfügbar.
+> Derzeit sind Sideloading-Apps in Government Community Cloud (GCC), GCC-High und DOD verfügbar.
 
 > [!TIP]
 > Überprüfen Sie mithilfe des [Tools für die App-Überprüfung](https://dev.teams.microsoft.com/appvalidation.html), das im Toolkit enthalten ist, ob es Probleme gibt, bevor Sie ihre App querladen. Beheben Sie die Probleme, um die App erfolgreich querzuladen.

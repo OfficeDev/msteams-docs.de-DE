@@ -1,16 +1,16 @@
 ---
 title: Verpacken Ihrer App
 description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App zum Testen, Hochladen und Veröffentlichen im Store verpacken.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: fc489f6f00a267cde3ca5fdc8852240ad2f07f4dcc7912cba9550728fdcd9402
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: bcffc581ab832dfa51d0b772f466b92dea731ccf
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703900"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156740"
 ---
-# <a name="create-a-microsoft-teams-app-package"></a>Erstellen eines Microsoft Teams-App-Pakets
+# <a name="create-a-microsoft-teams-app-package"></a>Erstellen eines Microsoft Teams App-Pakets
 
 Sie benötigen ein App-Paket, aber Sie planen, Ihre Microsoft Teams App zu verteilen. Ein gültiges Paket ist eine ZIP-Datei, die Folgendes enthält:
 
@@ -49,7 +49,7 @@ Ein Gliederungssymbol wird in zwei Szenarien angezeigt:
 
 Das Symbol muss 32 x 32 Pixel groß sein. Es kann weiß mit einem transparenten Hintergrund oder transparent mit weißem Hintergrund sein (keine anderen Farben sind zulässig). Das Gliederungssymbol sollte keinen zusätzlichen Abstand um das Symbol aufweisen.
 
-:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams Designanleitung für Gliederungssymbole." border="false":::
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams Entwurfsanleitung für Gliederungssymbole." border="false":::
 
 ### <a name="best-practices"></a>Bewährte Methoden
 
@@ -90,7 +90,7 @@ Hier sehen Sie, wie App-Symbole in verschiedenen Teams Funktionen und Kontexten 
 
 #### <a name="messaging-extension"></a>Messaging-Erweiterung
 
-:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alternativ>" border="false":::
+:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<Alttext>" border="false":::
 
 ## <a name="next-step"></a>Nächster Schritt
 

@@ -2,37 +2,37 @@
 title: Tipps zur App-Übermittlung und häufig fehlgeschlagene Fälle
 description: beschreibt Tipps für eine erfolgreiche Teams Store-Übermittlung und häufige Gründe, warum Übermittlungen fehlschlagen
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: Tipps zur App-Übermittlung häufig fehlgeschlagener Fälle – Validierungsrichtlinien
-ms.openlocfilehash: 91ae68562d93e4ad8770d5251671c3fa756aa0b15482b4495fe016a01e068707
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 99e5a55e4c3cfb63766d4b0ba72a2cc2824bc823
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706533"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156812"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Tipps für eine erfolgreiche Microsoft Teams App-Übermittlung
 
 >[!NOTE]
 >Diese Seite wird bis Mai 2021 veraltet sein. Weitere Informationen zum erfolgreichen Veröffentlichen Ihrer App finden Sie in den [Teams Store-Validierungsrichtlinien.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 
-In diesem Artikel werden häufige Gründe beschrieben, warum die Validierung von übermittelten Apps fehlschlägt. Obwohl es sich nicht um eine vollständige Liste aller potenziellen Probleme mit Ihrer App handelt, erhöht das Befolgen dieses Leitfadens die Wahrscheinlichkeit, dass Ihre App-Übermittlung das erste Mal erfolgreich ist. Weitere Informationen finden Sie unter [Commercial Marketplace-Zertifizierungsrichtlinien](/legal/marketplace/certification-policies) für eine umfassende Liste von Validierungsrichtlinien.
+In diesem Artikel werden häufige Gründe beschrieben, warum die Validierung von übermittelten Apps fehlschlägt. Obwohl es sich nicht um eine vollständige Liste aller potenziellen Probleme mit Ihrer App handelt, erhöht die Verwendung dieses Leitfadens die Wahrscheinlichkeit, dass Ihre App-Übermittlung das erste Mal erfolgreich ist. Weitere Informationen finden Sie unter [Commercial Marketplace-Zertifizierungsrichtlinien](/legal/marketplace/certification-policies) für eine umfassende Liste von Validierungsrichtlinien.
 
 >[!NOTE]
 >**[Abschnitt 1140](/legal/marketplace/certification-policies#1140-teams)** bezieht sich speziell auf Microsoft Teams und **[Unterabschnitt 1140.4](/legal/marketplace/certification-policies#11404-functionality)** befasst sich mit den Funktionalitätsanforderungen für Teams Apps.
 
 ## <a name="validation-guidelines--most-failed-test-cases"></a>Validierungsrichtlinien & meisten fehlgeschlagenen Testfällen
 
-### <a name="9989-general-considerations"></a>allgemeine Überlegungen &#9989;
+### <a name="9989-general-considerations"></a>&#9989; Allgemeine Überlegungen
 
 * Stellen Sie sicher, dass Sie Version 1.4.1 oder höher des [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js)verwenden.
 * Nehmen Sie während des Überprüfungsprozesses keine Änderungen an Ihrer App vor. Dazu ist eine vollständige Erneute Überprüfung Ihrer App erforderlich.
 * Ihre App darf sich nicht aufhängen, unerwartet beendet werden oder Programmierungsfehler enthalten. Wenn ein Problem auftritt, muss Ihre App fehlschlagen und gültige Informationen für die Weiterleitung an den Benutzer bereitstellen.
 * Ihre App darf ausführbaren Code in der Benutzerumgebung nicht automatisch herunterladen, installieren oder starten. Alle Downloads müssen die explizite Berechtigung des Benutzers anfordern.
 * Alle Materialien, die Sie Ihrer Erfahrung zuordnen, z. B. Beschreibungen und Supportdokumentation, müssen korrekt sein. Achten Sie in diesen Materialien auf Rechtschreibung, Zeichensetzung und Grammatik.
-* Bereitstellen von Hilfe- und Supportinformationen. Es wird dringend empfohlen, dass Ihre App einen Hilfe- oder FAQ-Link für die Erste Ausführung enthält. Für alle persönlichen Apps empfehlen wir, Ihre Hilfeseite als persönliche Registerkarte für eine bessere Benutzererfahrung bereitzustellen.
-* Alle Apps müssen über eine visuelle Tour verfügen, z. **B. "Take a Tour"** oder **"App Guide"** auf dem Konfigurationsbildschirm, auf dem über die App-Features und die erforderliche Integration an den folgenden Stellen gesprochen wird:
+* Bereitstellen von Hilfe- und Supportinformationen. Es wird dringend empfohlen, dass Ihre App einen Hilfe- oder FAQ-Link für die Erste Ausführung enthält. Für alle persönlichen Apps empfehlen wir, Ihre Hilfeseite als persönliche Registerkarte bereitzustellen, um eine bessere Benutzererfahrung zu erzielen.
+* Alle Apps müssen über eine visuelle Tour verfügen, z. B. **"Take a Tour"** oder **"App Guide"** auf dem Konfigurationsbildschirm, auf dem über die App-Features und die erforderliche Integration an den folgenden Stellen gesprochen wird:
     * Die Seite für den Store-Eintrag (lange Beschreibung).
     * Registerkartenkonfigurationsbildschirm.
     * Willkommensnachricht für einen Bot.
@@ -54,7 +54,7 @@ In diesem Artikel werden häufige Gründe beschrieben, warum die Validierung von
 
 * Mit persönlichen Apps können Benutzer Inhalte aus einer persönlichen App-Erfahrung mit anderen Teammitgliedern teilen.
 
-### <a name="9989-provide-a-clear-and-simple-sign-in-sign-out-and-sign-up-experience"></a>&#9989; Eine klare und einfache Anmelde-, Abmelde- und Registrierungserfahrung bereitstellen
+### <a name="9989-provide-a-clear-and-simple-sign-in-sign-out-and-sign-up-experience"></a>&#9989; Eine klare und einfache Anmelde-, Abmelde- und Registrierungserfahrung bieten
 
 * Wenn Ihre App oder Ihr Add-In von externen Konten oder Diensten abhängt, müssen die Anmelde-, Abmelde- und Registrierungserfahrung über alle Funktionen ihrer App hinweg offensichtlich und erreichbar sein.
 * Wenn dem Benutzer eine explizite Anmeldeoption zur Verfügung steht, muss eine entsprechende Abmeldeoption vorhanden sein (auch wenn die App die [automatische Authentifizierung](../../../../tabs/how-to/authentication/auth-silent-aad.md)verwendet).
@@ -100,7 +100,7 @@ Weitere Informationen zur Authentifizierung finden Sie unter:
 
 * Registerkarten müssen fokussierte Inhalte bereitstellen und unnötige UI-Elemente vermeiden. Dies bezieht sich in der Regel auf unnötige geschachtelte oder mehrschichtige Navigation, eine überflüssige oder irrelevante Benutzeroberfläche neben dem Inhalt oder links, die den Benutzer zu nicht verbundenen Inhalten führen. In der folgenden Registerkartenansicht werden beispielsweise Navigationsmenüs weggelassen und nur der Hauptinhalt angezeigt:
 
-![SharePoint Webansicht](../../../../assets/images/faq/web-sp.png)  
+![SharePoint-Webansicht](../../../../assets/images/faq/web-sp.png)  
 ![SharePoint Registerkartenansicht](../../../../assets/images/faq/tab-sp.png)
 
 * Registerkarten müssen einfach sein und dürfen keine komplexe Navigation enthalten.
@@ -125,7 +125,7 @@ Weitere Informationen zur Authentifizierung finden Sie unter:
 * Die Konfigurationsumgebung muss im Teams Kontext verbleiben. Der Benutzer sollte die Konfigurationsoberfläche nicht verlassen müssen, um Inhalte zu erstellen, und dann zu Teams zurückkehren, um ihn anheften zu können.
 * Verwenden Sie den verfügbaren Viewportbereich effizient. Verwenden Sie keine großen Logos innerhalb des Konfigurationsfensters.
 
-![OneNote ermöglicht Benutzern das Einfügen eines OneNote Links für den Fall, dass notizen nicht gefunden werden können](../../../../assets/images/faq/tab-onenote-config.png)
+![OneNote ermöglicht Benutzern das Einfügen eines OneNote Links für den Fall, dass Notizen nicht gefunden werden können](../../../../assets/images/faq/tab-onenote-config.png)
 
 ![Benutzer können in Planner immer einen neuen Plan erstellen, falls keine vorhanden sind.](../../../../assets/images/faq/tab-planner-config.png)
 
@@ -146,7 +146,7 @@ Ihr Bot muss für jeden Befehl reagieren und nicht für den Benutzer inaktiv sei
 
 * **Fügen Sie einen Hilfebefehl ein.** Benutzer geben wahrscheinlich "Hilfe" ein, wenn sie verloren gehen oder wenn Ihr Bot nicht wie erwartet reagiert. Fügen Sie einen Hilfebefehl ein, der beschreibt, wie der Wert Ihrer App zusammen mit allen gültigen Befehlen angezeigt wird.
 
-![Flow Hilfebefehl](../../../../assets/images/faq/flow-help.png)
+![Flow-Hilfebefehl](../../../../assets/images/faq/flow-help.png)
 
 * **Fügen Sie Hilfeinhalte oder Anleitungen ein, wenn Ihr Bot verloren geht.** Wenn Ihr Bot die Benutzereingabe nicht verstehen kann, muss er eine alternative Aktion vorschlagen. Beispiel: *"Es tut mir leid, ich kann es nicht verstehen. Geben Sie "Hilfe" ein, um weitere Informationen zu erfahren."* Antworten Sie nicht mit einer Fehlermeldung oder einfach *"Ich kann nicht verstehen".*
 
@@ -196,7 +196,7 @@ Anforderungen für Willkommensnachrichten finden Sie im folgenden Abschnitt:
 
 #### <a name="notification-only-bot-welcome-messages"></a>Nur-Benachrichtigungen für Bot-Willkommensnachrichten
 
-Nur-Benachrichtigung-Bots müssen eine Willkommensnachricht senden, die eine Nachricht mit der Meldung *"Ich bin ein Nur-Benachrichtigung-Bot und kann nicht auf Ihre Chats antworten" enthält.*
+Nur-Benachrichtigung-Bots müssen eine Willkommensnachricht senden, die eine Nachricht mit der Meldung *"Ich bin ein Bot nur für Benachrichtigungen und kann nicht auf Ihre Chats antworten" enthält.*
 
 #### <a name="welcome-messages-in-the-personal-scope"></a>Willkommensnachrichten im persönlichen Bereich
 
@@ -213,20 +213,20 @@ Die Dinge unterscheiden sich etwas, wenn der Bot zum ersten Mal zu einem Kanal h
 
 * Ihre Registerkarten, adaptiven Karten, Botnachrichten und Inhalte in Aufgabenmodulen müssen für eine Vielzahl von Bildschirmgrößen mobiler Geräte reaktionsfähig sein.
 * Apps, die iOS unterstützen, müssen auf dem neuesten iPad Gerät mit der neuesten Version von iOS voll funktionsfähig sein.
-* Sie dürfen keine direkten Verweise auf In-App-Käufe, Testangebote, Angebote für kostenpflichtige Versionen oder Links zu Onlinestores enthalten, in denen Benutzer andere Inhalte, Apps oder Add-Ins aus Ihrer Teams-App unter mobilem Betriebssystem (Android, iOS) erwerben oder erwerben können.
+* Darf keine direkten Verweise auf In-App-Käufe, Testangebote, Angebote für kostenpflichtige Versionen oder Links zu Onlinestores enthalten, in denen Benutzer andere Inhalte, Apps oder Add-Ins aus Ihrer Teams-App unter mobilem Betriebssystem (Android, iOS) erwerben oder erwerben können.
 * Die iOS- oder Android-Version des Add-Ins darf keine Benutzeroberfläche oder Sprache oder keinen Link zu anderen Apps, Add-Ins oder Websites anzeigen, die den Benutzer zur Zahlung auffordern.
-* Die zugehörigen Seiten für Datenschutzrichtlinien und Nutzungsbedingungen müssen ebenfalls frei von Commerce-UI- oder Store-Links sein.
+* Die zugehörigen Seiten für Datenschutzrichtlinien und Nutzungsbedingungen müssen auch frei von Commerce-UI- oder Store-Links sein.
 
 ### <a name="9989-do-not-post-sensitive-data-to-an-audience-not-intended-to-view-the-data"></a>&#9989; Keine vertraulichen Daten an eine Zielgruppe veröffentlichen, die die Daten nicht anzeigen soll
 
 Ihre Teams-App darf keine vertraulichen Daten wie Kreditkarten- oder Zahlungen, personenbezogene Informationen (PIN), Integritäts- oder Kontaktablaufverfolgungsinformationen an eine Zielgruppe veröffentlichen, die diese Daten nicht anzeigen soll.
 
-### <a name="9989-do-not-transmit-financial-payment-details-or-complete-financial-transactions-via-your-teams-app"></a>&#9989; Keine Finanziellen Zahlungsdetails übertragen oder Finanztransaktionen über Ihre Teams-App abschließen
+### <a name="9989-do-not-transmit-financial-payment-details-or-complete-financial-transactions-via-your-teams-app"></a>&#9989; Keine finanziellen Zahlungsdetails übertragen oder Finanztransaktionen über Ihre Teams-App abschließen
 
 * Ihre Teams-App darf Benutzer nicht auffordern, eine Zahlung direkt innerhalb Teams Schnittstelle vorzunehmen.
 * Apps dürfen keine Details zu Finanzinstituten über den Benutzer auf der App-Benutzeroberfläche übertragen. Apps dürfen Links zu sicheren Zahlungsdiensten nur an Benutzer übertragen, wenn dies in den Nutzungsbedingungen, der Datenschutzrichtlinie und jeder Profilseite oder Website für die App offengelegt wird, bevor ein Benutzer der Verwendung der App zustimmt.
 
-### <a name="9989-clear-warning-before-downloading-any-files-or-executable-exe-into-a-users-environment"></a>&#9989; Warnung vor dem Herunterladen von Dateien oder ausführbaren Dateien ( `.exe` ) in die Umgebung eines Benutzers löschen
+### <a name="9989-clear-warning-before-downloading-any-files-or-executable-exe-into-a-users-environment"></a>&#9989; Warnung deaktivieren, bevor Dateien oder ausführbare Dateien ( `.exe` ) in die Umgebung eines Benutzers heruntergeladen werden
 
 Warnen Sie die Benutzer, bevor Ihre App Dateien oder ausführbare Dateien ( `.exe`  )auf den Computer oder die Umgebung des Benutzers herunterlädt.
 
@@ -244,9 +244,9 @@ Warnen Sie die Benutzer, bevor Ihre App Dateien oder ausführbare Dateien ( `.ex
 * Weitere Informationen finden Sie in der Dokumentation zum [Complete Publisher Attestation-Programm.](/microsoft-365-app-certification/docs/attestation)
 * Führen Sie die Schritte im Abschnitt [Publisher Attestation Workflow](/microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow) aus, um den Nachweisprozess des Herausgebers abzuschließen. Schreiben Sie bei Fragen in appcert@microsoft.com.
 * Weitere Informationen finden Sie im [Handbuch zur Problembehandlung.](/azure/active-directory/develop/troubleshoot-publisher-verification)
-* Schließen Sie den Selbstnachweis über das Partner Center ab. Füllen Sie den Self-Assessment Fragebogen unter **App-Compliance** aus.
+* Führen Sie den Selbstnachweis über das Partner Center aus. Füllen Sie den Self-Assessment Fragebogen unter **App-Compliance** aus.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Weitere Informationen zu Teams App-Genehmigungsrichtlinien](/legal/marketplace/certification-policies#1140-teams)
 * [Abschnitt 100 – Allgemein](/legal/marketplace/certification-policies#100-general)

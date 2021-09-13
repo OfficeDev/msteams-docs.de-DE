@@ -2,14 +2,14 @@
 title: Vorbereiten Ihres Microsoft 365-Mandanten
 description: Erste Schritte mit Teams in Microsoft 365
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Konfigurieren Microsoft 365 Mandanten Teams Hochladens
-ms.openlocfilehash: 1cc22c1315084f7ffb96ba091b19f33ed4467077590eee6e0294762a32d0f586
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 83d45d567c11ff26b5c788371cd4a676f9c3ca2c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704429"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156153"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Vorbereiten Ihres Microsoft 365-Mandanten
 
@@ -27,7 +27,7 @@ Microsoft 365 Abonnenten können Apps für Microsoft Teams mit einem der folgend
 
 ## <a name="create-your-development-environment"></a>Erstellen der Entwicklungsumgebung
 
-Wenn Sie nicht über ein Microsoft 365 Konto verfügen, müssen Sie sich für ein [Abonnement für Microsoft 365 Entwicklerprogramm](https://developer.microsoft.com/microsoft-365/dev-program) registrieren. Das Abonnement ist 90 Tage lang kostenlos und wird weiterhin verlängert, solange Sie es für Entwicklungsaktivitäten verwenden. Wenn Sie über ein Visual Studio Enterprise- oder Professional-Abonnement verfügen, enthalten beide Programme ein kostenloses Microsoft 365 [Entwicklerabonnement.](https://aka.ms/MyVisualStudioBenefits) Es ist aktiv, solange Ihr Visual Studio Abonnement aktiv ist. Weitere Informationen finden Sie unter [Einrichten eines Microsoft 365 Entwicklerabonnements.](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)
+Wenn Sie nicht über ein Microsoft 365 Konto verfügen, müssen Sie sich für ein [Abonnement des Microsoft 365 Entwicklerprogramms](https://developer.microsoft.com/microsoft-365/dev-program) registrieren. Das Abonnement ist 90 Tage lang kostenlos und wird weiterhin verlängert, solange Sie es für Entwicklungsaktivitäten verwenden. Wenn Sie über ein Visual Studio Enterprise- oder Professional Abonnement verfügen, enthalten beide Programme ein kostenloses Microsoft 365 [Entwicklerabonnement.](https://aka.ms/MyVisualStudioBenefits) Es ist aktiv, solange Ihr Visual Studio Abonnement aktiv ist. Weitere Informationen finden Sie unter [Einrichten eines Microsoft 365 Entwicklerabonnements.](/office/developer-program/office-365-developer-program-get-started)
 
 ## <a name="enable-teams-for-your-organization"></a>Aktivieren Teams für Ihre Organisation
 
@@ -52,14 +52,14 @@ Aktivieren Sie Teams für Ihre Organisation, und weitere Informationen finden Si
 
 4. Umschalten **Hochladen benutzerdefinierten Apps** auf **die** Ein-Position.
 
-5. Wählen Sie **Speichern** aus. Ihr Testmandant kann das benutzerdefinierte Querladen von Apps zulassen.
+5. Klicken Sie auf **Speichern**. Ihr Testmandant kann das benutzerdefinierte Querladen von Apps zulassen.
 
     > [!Note]
     > Es kann bis zu 24 Stunden dauern, bis das Querladen aktiv ist. In der Zwischenzeit können Sie **Upload \<your tenant>** verwenden, um Ihre App zu testen. Informationen zum Hochladen der .zip-Paketdatei der App finden Sie unter ["Hochladen benutzerdefinierter Apps".](/microsoftteams/upload-custom-apps#upload)
 
     ![Hochladen App-Ansicht](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
-Vollständige Informationen zur Interaktion dieser Einstellungen finden Sie unter [Verwalten von benutzerdefinierten App-Richtlinien und -Einstellungen in Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) und Verwalten von [App-Setuprichtlinien in Teams.](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)
+Vollständige Informationen zur Interaktion dieser Einstellungen finden Sie unter [Verwalten von benutzerdefinierten App-Richtlinien und -Einstellungen in Teams](/microsoftteams/teams-custom-app-policies-and-settings) und Verwalten von [App-Setuprichtlinien in Teams.](/microsoftteams/teams-app-setup-policies)
 
 ## <a name="next-step"></a>Nächster Schritt
 

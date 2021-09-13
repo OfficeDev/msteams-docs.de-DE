@@ -4,22 +4,23 @@ description: Erfahren Sie, wie Sie Probleme mit Ihrer Microsoft Teams Store-Übe
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: a18aff23b8523bc91485835c991cc6608deb8eae93ce175ff3403e699dc6c5e5
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 39ab797bf87638e107f55e8b83d002372a4261f5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705559"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156806"
 ---
 # <a name="resolve-issues-if-your-microsoft-teams-store-submission-fails"></a>Beheben von Problemen, wenn die Übermittlung Microsoft Teams Store fehlschlägt
 
-Apps, die im Microsoft Teams Store veröffentlicht wurden, müssen die [Teams Store-Validierungsrichtlinien](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) und die Richtlinien für [den kommerziellen Marketplace](/legal/marketplace/certification-policies)erfüllen.
+Apps, die im Microsoft Teams Store veröffentlicht werden, müssen den [Teams Store-Validierungsrichtlinien](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) und den Richtlinien für [den kommerziellen Marketplace](/legal/marketplace/certification-policies)entsprechen.
 
 Wenn Ihre Store-Übermittlung fehlschlägt, bietet Microsoft einen Überprüfungsdienst an, mit dem Ihre App kompatibel und veröffentlicht werden kann.
 
 ## <a name="get-help-directly-from-microsoft"></a>Hilfe direkt von Microsoft erhalten
 
-Der von Microsoft bereitgestellte Validierungsdienst hilft Entwicklern, ihre Apps im Teams Store zu veröffentlichen. Als Teil dieses Diensts überprüft Microsoft, ob Ihre App wie beschrieben funktioniert, enthält alle entsprechenden Metadaten und bietet Benutzern einen Wert.
+Der von Microsoft bereitgestellte Überprüfungsdienst hilft Entwicklern, ihre Apps im Teams Store zu veröffentlichen. Als Teil dieses Diensts überprüft Microsoft, ob Ihre App wie beschrieben funktioniert, enthält alle entsprechenden Metadaten und bietet Benutzern einen Wert.
 
 Wenn Ihre App-Übermittlung fehlschlägt, sendet Microsoft Ihnen innerhalb von 24 Stunden nach der Übermittlung einen Prüfbericht mit Empfehlungen.
 
@@ -34,7 +35,7 @@ Sie müssen alle probleme beheben, die vom Microsoft-Validierungsteam gemeldet w
 Der Prozess zum Beheben von Problemen und zum erneuten Übermitteln einer App sieht in der Regel wie folgt aus:
 
 1. Sie beheben alle Probleme im Bericht.
-1. Sie senden Folgendes an das Microsoft-Validierungsteam auf <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com:</a>
+1. Sie senden Folgendes an das Microsoft-Validierungsteam bei <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com:</a>
    * Ein aktualisiertes App-Paket
    * Testnotizen für Ihre App, wenn Sie diese nicht in Ihre ursprüngliche Übermittlung aufgenommen haben:
       * Anmeldeinformationen für mindestens zwei Konten (ein Administrator und ein Nicht-Administrator).
@@ -43,7 +44,7 @@ Der Prozess zum Beheben von Problemen und zum erneuten Übermitteln einer App si
 1. Das Microsoft-Validierungsteam testet Ihre aktualisierte App vollständig.
 1. Sie führen eine der folgenden Aktionen aus:
    * Wenn Ihre App frei von Problemen ist, übermitteln Sie Ihre App erneut im Partner Center.
-   * Wenn Probleme nicht behoben werden oder Microsoft neue Probleme findet, erhalten Sie einen weiteren Bericht darüber, was sie beheben müssen. Beheben Sie diese Probleme, und senden Sie eine aktualisierte Version der App an <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com.</a>
+   * Wenn Probleme nicht behoben werden oder Microsoft neue Probleme findet, erhalten Sie einen weiteren Bericht darüber, was behoben werden soll. Beheben Sie diese Probleme, und senden Sie eine aktualisierte Version der App an <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 
 > [!CAUTION]
 > Um mehrere Übermittlungsfehler zu vermeiden, übermitteln Sie Ihre App erst dann erneut im Partner Center, nachdem das Microsoft-Team für die Validierung Ihrer App ihre App genehmigt hat.

@@ -2,19 +2,19 @@
 title: Entwerfen von Aufgabenmodulen
 author: heath-hamilton
 description: Erfahren Sie, wie Sie Aufgabenmodule für Teams Apps entwerfen und das Microsoft Teams UI Kit erhalten.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 9248fba30726511d025e71957c0d9f2bac4c9866
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 8edcc24d5fca7ba7e8260d2cc20ee8c6d7282af2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408615"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156477"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Entwerfen von Aufgabenmodulen für Ihre Microsoft Teams-App
 
-Sie können modale Popupfunktionen in Ihrer Teams-App mit Aufgabenmodulen erstellen. Verwenden Sie diese Funktion, um umfangreiche Medien und Informationen anzuzeigen oder eine komplexe Aufgabe auszuführen.
+Sie können modale Popup-Oberflächen in Ihrer Teams-App mit Aufgabenmodulen erstellen. Verwenden Sie diese Funktion, um umfangreiche Medien und Informationen anzuzeigen oder eine komplexe Aufgabe auszuführen.
 
 :::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Beispiel zeigt ein Aufgabenmodul." border="false":::
 
@@ -30,9 +30,9 @@ Umfassendere Entwurfsrichtlinien für Aufgabenmodule, einschließlich Elementen,
 Aufgabenmodule können von fast überall in Ihrer App gestartet werden.
 
 * **Registerkarte:** Ein Aufgabenmodul kann über einen beliebigen Link innerhalb einer Registerkarte gestartet werden. Wird in Szenarien verwendet, in denen der Benutzer sich auf eine Interaktion konzentrieren soll.
-* **Bot:** Ein Aufgabenmodul kann über einen Link innerhalb einer Bot-Nachricht gestartet werden.
+* **Bot:** Ein Aufgabenmodul kann über einen Link in einer Bot-Nachricht gestartet werden.
 * **Adaptive Karte:** Ein Aufgabenmodul kann von einer adaptiven Karte (gesendet mit einer Messaging-Erweiterung oder von einem Bot) gestartet werden, wenn ein Benutzer eine Schaltfläche auswählt.
-* **Messaging-Erweiterung (Aktionsbefehle):** Messaging-Erweiterungen ermöglichen Es Ihnen, eine bestimmte Aktion für Nachrichteninhalte auszuführen. Wenn Sie eine Aktion auswählen, wird ein Aufgabenmodul geöffnet.
+* **Messaging-Erweiterung (Aktionsbefehle):** Messaging-Erweiterungen ermöglichen es Ihnen, eine bestimmte Aktion für Nachrichteninhalte auszuführen. Wenn Sie eine Aktion auswählen, wird ein Aufgabenmodul geöffnet.
 * **Messaging-Erweiterung (Verfassenfeldkontext):** Im Feld "Verfassen" können Sie eine Messaging-Erweiterung so entwerfen, dass anstelle des typischen Flyouts ein Aufgabenmodul geöffnet wird. Reservieren Sie Aufgabenmodule für komplexe Interaktionen, z. B. das Ausfüllen eines Formulars.
 
 ## <a name="anatomy"></a>Anatomie

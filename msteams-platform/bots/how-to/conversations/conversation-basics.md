@@ -3,14 +3,14 @@ title: Grundlagen zu Unterhaltungen
 description: Einführung in Unterhaltungen
 ms.topic: overview
 ms.author: anclear
-localization_priority: Normal
+ms.localizationpriority: medium
 keyword: conversations basics messages
-ms.openlocfilehash: 886c2764c2d8dceecb0f6a0e960b3487d9360c3682e46c9a8098f6fb8a2876bf
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 767efd3b6351e3f771f6ffe5cb6ff36181009f4b
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705861"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156991"
 ---
 # <a name="conversation-basics"></a>Grundlagen zu Unterhaltungen
 
@@ -31,7 +31,7 @@ Ein Bot verhält sich abhängig von der Unterhaltung, an der er beteiligt ist, u
 * Bots in einer 1:1-Unterhaltung erfordern keine @mention. Alle vom Benutzer gesendeten Nachrichten werden an Ihren Bot weitergeleitet.
 
 > [!NOTE]
-> Bots können aktiviert werden, um alle Kanalnachrichten in einem Team zu empfangen, ohne mithilfe ressourcenspezifischer Zustimmungsberechtigungen (RSC) @mentioned zu werden. Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../../../resources/dev-preview/developer-preview-intro.md) verfügbar. Weitere Informationen finden Sie unter [Empfangen aller Kanalnachrichten mit RSC.](channel-messages-with-rsc.md)
+> Bots können aktiviert werden, um alle Kanalnachrichten in einem Team zu empfangen, ohne dass sie mithilfe ressourcenspezifischer Zustimmungsberechtigungen (RSC) @mentioned werden. Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../../../resources/dev-preview/developer-preview-intro.md) verfügbar. Weitere Informationen finden Sie unter [Empfangen aller Kanalnachrichten mit RSC.](channel-messages-with-rsc.md)
 
 Damit der Bot in einer bestimmten Unterhaltung oder einem bestimmten Bereich funktioniert, fügen Sie unterstützung zu diesem Bereich im [App-Manifest](~/resources/schema/manifest-schema.md)hinzu.
 
