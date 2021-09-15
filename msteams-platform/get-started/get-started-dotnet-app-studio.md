@@ -6,12 +6,12 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 1ed26ed6869858a3818c7356c3f9b9f59103f616
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 15b08078e15c8ed5ef23d6d9f78d2fc14da02440
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156554"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360729"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>Erstellen Ihrer ersten Teams-App mit C #
 
@@ -69,7 +69,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 ## <a name="build-and-run-the-sample"></a>Erstellen und Ausführen des Beispiels
 
-Sie können das Geklonte erstellen und ausführen. 
+Sie können das Beispiel erstellen und ausführen, nachdem es geklont wurde. 
 
 **So erstellen Sie das geklonte Beispiel und führen es aus**
 
@@ -109,7 +109,7 @@ ngrok http 44327 -host-header=localhost:44327
 1. Öffnen Sie Ihren Browser, und navigieren Sie zu `https://d0ac14a5.ngrok.io/hello`. Dadurch wird die Hello-Seite Ihrer App geladen.
 1. Verwenden Sie anstelle der in Schritt 1 erwähnten URL die Weiterleitungsadresse, die `ngrok` in Ihrer Konsolensitzung angezeigt wird.
     > [!NOTE]
-    > Wenn Sie im [Build- und Ausführungsschritt](#build-and-run-the-sample) einen anderen Port verwendet haben, stellen Sie sicher, dass Sie die gleiche Portnummer zum Einrichten des `ngrok` Tunnels verwenden.
+    > Wenn Sie im [Build- und Ausführungsschritt](#build-and-run-the-sample) einen anderen Port verwendet haben, stellen Sie sicher, dass Sie die gleiche Portnummer verwenden, um den `ngrok` Tunnel einzurichten.
     > [!TIP]
     > Es empfiehlt sich, in einem anderen Terminalfenster ausgeführt zu `ngrok` werden. Dies geschieht, um die `ngrok` Ausführung ohne Beeinträchtigung der App aufzuhalten. Sie müssen die App beenden, neu erstellen und erneut ausführen. Die `ngrok` Sitzung enthält nützliche Debuginformationen in diesem Fenster.
 
@@ -117,7 +117,7 @@ ngrok http 44327 -host-header=localhost:44327
 
 ### <a name="host-in-azure"></a>Hosten in Azure
 
-Microsoft Azure hostet Ihre .NET-Anwendung auf einer kostenlosen Ebene unter Verwendung der freigegebenen Infrastruktur. Dies reicht aus, um das `Hello World` Beispiel auszuführen. Weitere Informationen finden Sie unter [Erstellen eines neuen kostenlosen Azure-Kontos.](https://azure.microsoft.com/free/)
+Microsoft Azure hostet Ihre .NET-Anwendung auf einer kostenlosen Ebene mithilfe der freigegebenen Infrastruktur. Dies reicht aus, um das `Hello World` Beispiel auszuführen. Weitere Informationen finden Sie unter [Erstellen eines neuen kostenlosen Azure-Kontos.](https://azure.microsoft.com/free/)
 
 Visual Studio bietet integrierte Unterstützung für die Bereitstellung von Apps für verschiedene Anbieter, einschließlich Azure:
 
@@ -148,7 +148,7 @@ Visual Studio bietet integrierte Unterstützung für die Bereitstellung von Apps
 
 1. Wählen Sie **"Hello World"** aus, und wählen Sie **"Importieren"** aus. Die **Hello World-App** wird im Entwicklerportal importiert. 
 
-    Sie können Ihre App über das Teams Entwicklerportal konfigurieren. Das Manifest befindet sich unter "Verteilen". Sie können das Manifest verwenden, um Funktionen, erforderliche Ressourcen und andere wichtige Attribute für Ihre App zu konfigurieren. Weitere Informationen zum Konfigurieren Ihrer App mithilfe des Entwicklerportals finden Sie [unter Teams Entwicklerportal.](../concepts/build-and-test/teams-developer-portal.md)
+    Sie können Ihre App über das Teams Entwicklerportal konfigurieren. Das Manifest befindet sich unter "Verteilen". Sie können das Manifest verwenden, um Funktionen, erforderliche Ressourcen und andere wichtige Attribute für Ihre App zu konfigurieren. Weitere Informationen zum Konfigurieren Ihrer App mithilfe des Entwicklerportals finden Sie unter [Teams Entwicklerportal.](../concepts/build-and-test/teams-developer-portal.md)
 
     <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
 ---

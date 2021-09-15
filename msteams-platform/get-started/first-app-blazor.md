@@ -6,16 +6,16 @@ ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: 3154e800ab72e610fb2a4fd20756cbbe3e908606
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d014ba82f8e499b8b38f1dbc13a9ee68ef29f1c9
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156565"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360654"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Erstellen und Ausführen Ihrer ersten Microsoft Teams-App mit Demerz
 
-In diesem Lernprogramm erfahren Sie, wie Sie eine neue Microsoft Teams-App in .NET/Gifzor erstellen, die eine einfache persönliche App zum Abrufen von Informationen aus dem Microsoft Graph implementiert. Beispielsweise enthält eine *persönliche App* eine Reihe von Registerkarten für die individuelle Verwendung. Während des Lernprogramms erfahren Sie mehr über die Struktur einer Teams-App, wie Sie eine App lokal ausführen und wie Sie die App in Azure bereitstellen.
+In diesem Lernprogramm erfahren Sie, wie Sie eine neue Microsoft Teams-App in .NET/Doppelklickzor erstellen, die eine einfache persönliche App zum Abrufen von Informationen aus dem Microsoft-Graph implementiert. Beispielsweise enthält eine *persönliche App* eine Reihe von Registerkarten für die individuelle Verwendung. Während des Lernprogramms erfahren Sie mehr über die Struktur einer Teams-App, wie Sie eine App lokal ausführen und wie Sie die App in Azure bereitstellen.
 
 In der erstellten App werden grundlegende Benutzerinformationen für den aktuellen Benutzer angezeigt.  Wenn die Berechtigung dazu erteilt wurde, stellt die App eine Verbindung mit Microsoft Graph als aktueller Benutzer her, um das vollständige Profil zu erhalten.
 
@@ -30,8 +30,6 @@ Stellen Sie sicher, dass Ihre Entwicklungsumgebung eingerichtet ist, indem Sie d
 
 Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 
-# <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
-
 1. Öffnen Sie Visual Studio 2019.
 
 1. Wählen Sie **"Neues Projekt erstellen"** aus.
@@ -44,40 +42,8 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 
 1. Wählen Sie **Erstellen** aus.  Der Anwendungsname und der Firmenname werden Ihren Endbenutzern angezeigt. Ihre Microsoft Teams-App wird innerhalb weniger Sekunden erstellt.  Nachdem das Projekt erstellt wurde, richten Sie einmaliges Anmelden mit M365 ein:
 
-   1. Wählen Sie **Project**  >  **TeamsFx**  >  **Configure for SSO... aus.**
+   1. Wählen Sie **Project**  >  **TeamsFx**  >  **Konfigurieren für SSO... aus.**
    1. Melden Sie sich bei Ihrem M365-Administratorkonto an, wenn Sie dazu aufgefordert werden.
-
-# <a name="command-line"></a>[Befehlszeile](#tab/cli)
-
-1. Öffnen Sie ein Terminal, und wählen Sie das Verzeichnis aus, in dem Sie das Projekt erstellen möchten.
-
-1. Ausführen, `dotnet new -i` um die Vorlage aus NuGet zu installieren:
-
-   ``` bash
-   dotnet new --install Microsoft.TeamsFx.VisualStudio.ProjectTemplates::0.1.43-beta
-   ```
-
-   Dies ist nur beim ersten Mal oder beim Aktualisieren der Vorlage erforderlich. Überprüfen Sie [NuGet](https://www.nuget.org/packages/Microsoft.TeamsFx.VisualStudio.ProjectTemplates/) nach der neuesten Version dieses Pakets.
-
-1. Erstellen eines Verzeichnisses:
-
-   ``` bash
-   mkdir helloworld
-   ```
-
-1. Ausführen, `dotnet new` um ein neues Projekt zu erstellen:
-
-   ``` bash
-   dotnet new teamsapp --shortName my-teams-app --companyName "My Company"
-   ```
-
-1. Konfigurieren Sie nach dem Erstellen des Gerüsts das Projekt für Teams Bereitstellung:
-
-   ``` bash
-   teamsfx init
-   ```
-
-   Sie können die Lösung jetzt in Visual Studio zum Debuggen öffnen.
 
 ---
 
@@ -138,7 +104,7 @@ Wenn Sie die **F5-Taste** drücken, wird das Teams Toolkit:
 
 1. Registriert Ihre Anwendung bei Azure Active Directory.
 1. Registriert Ihre Anwendung für das "Querladen" in Microsoft Teams.
-1. Startet das Anwendungs-Back-End lokal.
+1. Startet das Anwendungs-Back-End, das lokal ausgeführt wird.
 1. Startet das lokal gehostete Anwendungs-Front-End.
 1. Startet Microsoft Teams in einem Webbrowser mit einem Befehl, um Teams anzuweisen, die Anwendung querzuladen (die URL ist im Anwendungsmanifest registriert).
 
@@ -169,7 +135,7 @@ Die Bereitstellung besteht aus zwei Schritten:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish1.png" alt-text="Auswählen des Veröffentlichungsvorgangs für das Projekt":::
 
-1. Wählen Sie im **Veröffentlichungsfenster** **Azure** aus, und wählen Sie **"Weiter"** aus.
+1. Wählen Sie im Fenster **"Veröffentlichen"** **Azure** aus, und wählen Sie **"Weiter"** aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish2.png" alt-text="Auswählen von Azure als Veröffentlichungsziel":::
 
@@ -197,7 +163,7 @@ Die Bereitstellung besteht aus zwei Schritten:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish7.png" alt-text="Veröffentlichen Ihrer App im App-Dienst":::
 
-   Visual Studio stellt die App in Ihrem Azure App Service bereit, und die Web-App wird in Ihrem Browser geladen.  Fügen Sie `/tab` am Ende der URL hinzu, um Ihre Seite anzuzeigen.
+   Visual Studio stellt die App für Ihren Azure App Service bereit, und die Web-App wird in Ihrem Browser geladen.  Fügen Sie `/tab` am Ende der URL hinzu, um Ihre Seite anzuzeigen.
 
    Im Bereich **"Veröffentlichen"** der Projekteigenschaften werden die Website-URL und andere Details angezeigt. Notieren Sie sich die Website-URL.
 

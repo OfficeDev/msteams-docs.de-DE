@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams Richtlinien für die Speicherüberprüfung
-description: Beschreibt die Richtlinien, die jede an den Teams Store (AppSource) übermittelte App befolgen muss.
+description: Beschreibt die Richtlinien, die jede an den Teams Store übermittelte App (AppSource) befolgen muss.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: none
-ms.openlocfilehash: 43cd037eb6f14dee4ee58cd34b1db834478ae3f5
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ed3dd7abd877a91fce1c321f0f6c68d91fd1b1e3
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156057"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360475"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams Richtlinien für die Speicherüberprüfung
 
@@ -23,11 +23,11 @@ Wenn Sie diese Richtlinien befolgen, erhöht sich die Wahrscheinlichkeit, dass I
 
 ### <a name="app-name"></a>App-Name
 
-Der Name einer App spielt eine wichtige Rolle, wenn es um die Erkennung durch Benutzer im Store geht. Denken Sie an Folgendes zu App-Namen:
+Der Name einer App spielt eine wichtige Rolle dabei, wie Benutzer ihn im Store entdecken. Denken Sie an Folgendes zu App-Namen:
 
 * Der Name muss Ausdrücke enthalten, die für Ihre Benutzer relevant sind.
-* Namen der wichtigsten Teams Features&#8212;wie **Chat,** **Kontakte,** **Kalender,** **Anrufe,** **Dateien,** **Aktivitäten,** **Teams,** **Apps** und **Hilfe**&#8212;sollten nicht im App-Namen enthalten sein.
-* Allgemeine Substantivs müssen mit dem Namen des Entwicklers (z. B. **Contoso Tasks** statt **Tasks)** vorangestellt oder suffixed sein.
+* Namen der wichtigsten Teams Features&#8212;wie **Chat,** **Kontakte,** **Kalender,** **Anrufe,** **Dateien,** **Aktivitäten,** **Teams,** **Apps** und **Hilfe**&#8212;sollten nicht in Ihren App-Namen eingeschlossen werden.
+* Häufig verwendete Substantivs müssen mit dem Namen des Entwicklers (z. B. **Contoso Tasks** statt **Tasks)** vorangestellt oder suffixed sein.
 * Darf keine **Teams** oder andere Microsoft-Produktnamen verwenden, die fälschlicherweise auf Co-Branding oder Co-Verkauf hindeuten. (Weitere Informationen zum Verweisen auf Microsoft-Software, -Produkte und -Dienste finden Sie in den [Microsoft-Richtlinien für Marken und Marken](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)).
 * Wenn Ihre App Teil einer offiziellen Partnerschaft mit Microsoft ist, muss der Name Ihrer App zuerst kommen (z. **B. Contoso Connector für Microsoft Teams).**
 * Der Name einer im Store oder einem anderen Angebot auf dem kommerziellen Marketplace aufgeführten App darf nicht kopiert werden.
@@ -42,7 +42,7 @@ Ihre App muss die Zusammenarbeit in Gruppen erleichtern, die Produktivität eine
 
 ### <a name="similar-platforms-and-services"></a>Ähnliche Plattformen und Dienste
 
-Apps müssen sich auf die Teams Konzentrieren und dürfen keine Namen, Symbole oder Bilder anderer ähnlicher Chat-basierter Plattformen oder Dienste für die Zusammenarbeit enthalten, es sei denn, Ihre App bietet spezifische Interoperabilität.
+Apps müssen sich auf die Teams Konzentrieren und dürfen nicht die Namen, Symbole oder Bilder anderer ähnlicher Chat-basierter Plattformen oder Dienste für die Zusammenarbeit enthalten, es sei denn, Ihre App bietet spezifische Interoperabilität.
 
 ### <a name="feature-names"></a>Featurenamen
 
@@ -54,7 +54,7 @@ App-Featurenamen in Schaltflächen und anderer Benutzeroberflächentext dürfen 
 
 Das [Microsoft 365 App Compliance-Programm](/microsoft-365-app-certification/overview) soll Organisationen dabei helfen, Risiken zu bewerten und zu verwalten, indem Sicherheits- und Complianceinformationen zu Ihrer App ausgewertet werden. Wenn Sie eine App im Teams Store veröffentlichen, müssen Sie die folgenden Stufen des Programms ausführen:
 
-* [Publisher Überprüfung:](/azure/active-directory/develop/publisher-verification-overview)Hilft Administratoren und Endbenutzern, die Authentizität von App-Entwicklern zu verstehen, die sich in die Microsoft Identity Platform integrieren. Nach Abschluss des Vorgangs wird im Zustimmungsdialogfeld Azure Active Directory (Azure AD) und auf anderen Bildschirmen ein blaues Signal "bestätigt" angezeigt. Weitere Informationen finden Sie unter [häufig gestellte Fragen,](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions) [wie Sie Ihre App als herausgebergeprüft kennzeichnen](/azure/active-directory/develop/mark-app-as-publisher-verified)und problembehandlung bei der [Herausgeberüberprüfung](/azure/active-directory/develop/troubleshoot-publisher-verification)durchführen.
+* [Publisher Überprüfung:](/azure/active-directory/develop/publisher-verification-overview)Hilft Administratoren und Endbenutzern, die Authentizität von App-Entwicklern zu verstehen, die sich in die Microsoft Identity Platform integrieren. Nach Abschluss des Vorgangs wird ein blaues Signal "bestätigt" im Zustimmungsdialogfeld Azure Active Directory (Azure AD) und auf anderen Bildschirmen angezeigt. Weitere Informationen finden Sie unter [häufig gestellte Fragen,](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions) [wie Sie Ihre App als herausgebergeprüft kennzeichnen](/azure/active-directory/develop/mark-app-as-publisher-verified)und problembehandlung bei der [Herausgeberüberprüfung](/azure/active-directory/develop/troubleshoot-publisher-verification)durchführen.
 * [Publisher Nachweis:](/microsoft-365-app-certification/docs/attestation)Ein Prozess, bei dem Sie allgemeine Informationen, Datenverarbeitung sowie Sicherheits- und Complianceinformationen freigeben, um potenziellen Kunden zu helfen, fundierte Entscheidungen über die Verwendung Ihrer App zu treffen.
 
 > [!NOTE]
@@ -88,7 +88,7 @@ Beachten Sie Folgendes, wenn Ihre App Benutzer mit einem externen Dienst authent
 
 #### <a name="government-community-cloud-listings"></a>Government Community Cloud-Einträge
 
-Um Ihre App an Government Community Cloud (GCC) Benutzer zu verteilen und doppelte Einträge im Teams Speicher zu vermeiden, muss der Authentifizierungsprozess Benutzer identifizieren und an eine GCC spezifische oder erwartete URL weiterleiten.
+Um Ihre App an Government Community Cloud (GCC) Benutzer zu verteilen und doppelte Einträge im Teams Store zu vermeiden, muss der Authentifizierungsprozess Benutzer identifizieren und an eine GCC spezifische oder erwartete URL weiterleiten.
 
 ### <a name="sensitive-content"></a>Vertrauliche Inhalte
 
@@ -242,7 +242,7 @@ Screenshots bieten eine ansprechende visuelle Vorschau Ihrer App, um den App-Nam
 * Schließen Sie Mockups ein, die die tatsächliche Benutzeroberfläche Ihrer App ungenau wiedergeben, z. B. anzeigen, dass Ihre App außerhalb von Teams verwendet wird.
 
 > [!TIP]
-> Ein Video kann die effektivste Möglichkeit sein, um zu vermitteln, warum Benutzer Ihre App verwenden sollten. Ein Video ist auch das erste, was Benutzer in Ihrem Eintrag sehen (standardmäßig wird ein Video vor Screenshots angezeigt). Weitere Informationen finden Sie unter [Erstellen eines Videos für Ihren Store-Eintrag.](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video)
+> Ein Video kann die effektivste Methode sein, um zu kommunizieren, warum Benutzer Ihre App verwenden sollten. Ein Video ist auch das erste, was Benutzer in Ihrem Eintrag sehen (standardmäßig wird ein Video vor Screenshots angezeigt). Weitere Informationen finden Sie unter [Erstellen eines Videos für Ihren Store-Eintrag.](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video)
 
 ### <a name="privacy-policy"></a>Datenschutz
 
@@ -303,7 +303,6 @@ Wenn Ihre App eine Registerkarte enthält, stellen Sie sicher, dass sie diesen R
 * Registerkarten in einem persönlichen Kontext können Inhalte aus freigegebenen Instanzen der App aggregieren.
 * Registerkarten müssen für Teams Designs reaktionsfähig sein. Wenn ein Benutzer das Design ändert, muss das Design der App die Auswahl widerspiegeln.
 * Registerkarten müssen Teams-Komponenten verwenden, z. B. Teams Schriftarten, Typhierarchien, Farbpaletten, Rastersystem, Bewegung, Tonfall der Stimme usw., wann immer möglich.
-* Sie müssen eine **Einstellungen** Registerkarte einschließen.
 * Registerkarten müssen Teams Interaktionsdesign folgen, z. B. Seitennavigation, Position und Verwendung von Dialogfeldern, Informationshierarchien usw., wann immer möglich.
 * Registerkarteninhalte im iframe dürfen keine Features enthalten, die Teams Kernfunktionen imitieren. Beispielsweise Bots, Messaging-Erweiterungen, Anrufe, Besprechungen usw.
 
@@ -327,7 +326,7 @@ Die Analyse der Benutzereingabe und die Vorhersage der Benutzerabsicht ist schwi
 * Alle Befehle, die Ihr Bot unterstützt, müssen ordnungsgemäß funktionieren, einschließlich des Befehls **"Hallo",** **"Hello"** und **"Hilfe".**
 
 > [!TIP]
-> Fügen Sie für persönliche Bots eine **Registerkarte "Hilfe"** hinzu, die weiter beschreibt, was Ihr Bot tun kann.
+> Fügen Sie für persönliche Bots eine **Hilferegisterkarte** hinzu, die weiter beschreibt, was Ihr Bot tun kann.
 
 ### <a name="bot-welcome-messages"></a>Bot-Willkommensnachrichten
 
@@ -394,7 +393,7 @@ Ein Aufgabenmodul muss ein Symbol und den Kurznamen der App enthalten, der es zu
 Wenn Ihre App eine Besprechungserweiterung enthält, stellen Sie sicher, dass sie diesen Richtlinien entspricht.
 
 > [!TIP]
-> Informationen zum Erstellen einer qualitativ hochwertigen App-Erfahrung finden Sie in den [Designrichtlinien für Teams Besprechungserweiterungen.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+> Informationen zum Erstellen einer qualitativ hochwertigen App-Erfahrung finden Sie in den [Designrichtlinien für Teams Besprechungserweiterung.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
 ### <a name="pre--and-post-meeting-experience"></a>Pre- und Post-Meeting-Erfahrung
 
@@ -447,8 +446,8 @@ Wenn Ihre App die [von Microsoft Graph bereitgestellten Aktivitätsfeed-APIs](/g
 
 ### <a name="navigation-and-layout"></a>Navigation und Layout
 
-* Benachrichtigungen müssen dem layout und der Benutzeroberfläche des Teams Aktivitätsfeeds entsprechen.
-* Wenn Sie eine Benachrichtigung auswählen, muss der Benutzer innerhalb Teams zu relevanten Inhalten weitergeleitet und nicht aus der Teams Erfahrung herausgenommen werden.
+* Benachrichtigungen müssen dem Layout und der Benutzeroberfläche des Teams Aktivitätsfeeds entsprechen.
+* Wenn Sie eine Benachrichtigung auswählen, muss der Benutzer innerhalb Teams zu relevanten Inhalten geleitet und nicht aus der Teams Erfahrung herausgenommen werden.
 
 ## <a name="advertising"></a>Werbung
 

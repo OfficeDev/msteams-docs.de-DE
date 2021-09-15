@@ -1,26 +1,26 @@
 ---
-title: Erste Schritte – Erstellen Sie Ihren ersten Unterhaltungs-Bot
+title: Erste Schritte – Erstellen Ihres ersten Bots
 author: adrianhall
-description: Erstellen Sie mithilfe des Teams-Toolkits einen Unterhaltungs-Bot für Microsoft Teams.
+description: Erstellen Sie einen Bot für Microsoft Teams mit dem Teams Toolkit.
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: f9f35f5b4e639c6568ad3c1eccfc750d3bd9b853
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 7e41de915e63b509da1db5b1cbe8e018be4d586d
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156562"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360604"
 ---
-# <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Erstellen Sie Ihren ersten Unterhaltungs-Bot für Microsoft Teams
+# <a name="build-your-first-bot-for-microsoft-teams"></a>Erstellen Ihres ersten Bots für Microsoft Teams
 
 In diesem Lernprogramm erfahren Sie, wie Sie eine Teams-Bot-App erstellen, ausführen und bereitstellen. Ein Bot agiert als Vermittler zwischen einem Teams-Benutzer und einem Webdienst. Benutzer können mit einem Bot chatten, um schnell Informationen zu erhalten, Workflows zu initiieren, oder für alles andere, was Ihr Webservice tun kann. 
 
 > [!IMPORTANT]
 > Derzeit sind Bots in Government Community Cloud (GCC) verfügbar, aber nicht in GCC-High und department of Defense (DOD).
 
-## <a name="before-you-begin"></a>Bevor Sie beginnen:
+## <a name="before-you-begin"></a>Bevor Sie beginnen
 
 Stellen Sie sicher, dass Ihre Entwicklungsumgebung eingerichtet ist, indem Sie die erforderlichen Komponenten installieren.
 
@@ -93,7 +93,7 @@ Eine Messaging-Erweiterung verwendet das [Bot-Framework](https://docs.botframewo
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/bot-file-layout.png" alt-text="Dateilayout eines Bot-Projekts.":::
 
-Der Bot-Code wird im `bot`-Verzeichnis gespeichert.  Das `bot/teamsBot.js` ist der Haupteinstiegspunkt für den Bot, und die Dialoge werden im `dialogs`-Verzeichnis gespeichert.
+Der Bot-Code wird im `bot` Verzeichnis gespeichert.  Dies `bot/teamsBot.js` ist der Haupteinstiegspunkt für den Bot.
 
 > [!Tip]
 > Machen Sie sich mit Bots außerhalb von Teams vertraut, bevor Sie Ihren ersten Bot in Teams integrieren.  Sie können weitere Informationen zu Bots im Lernprogramme von [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) finden.
@@ -104,7 +104,6 @@ Das Teams-Toolkit ermöglicht es Ihnen, Ihre App lokal zu hosten.  Gehen Sie hie
 
 - Eine Azure Active Directory-Anwendung ist im M365-Mandanten registriert.
 - Ein App-Manifest wird dem Entwickler-Center für Teams übermittelt.
-- Eine API wird mittels der Azure Functions Core Tools lokal ausgeführt, um Ihre App zu unterstützen.
 - [ngrok](https://ngrok.io) ist installiert und wird dazu verwendet, einen Tunnel zwischen Teams und Ihrem Bot-Code bereitzustellen.
 
 So erstellen Sie Ihre App und führen sie lokal aus:
@@ -120,9 +119,9 @@ So erstellen Sie Ihre App und führen sie lokal aus:
 1. Möglicherweise werden Sie aufgefordert, sich anzumelden.  Melden Sie sich in diesem Fall mit Ihrem M365-Konto an.
 1. Wenn Sie aufgefordert werden, die App auf Teams zu installieren, wählen Sie **Hinzufügen** aus.
 
-   Nachdem die App geladen wurde, werden Sie direkt zu einer Chatsitzung mit dem Bot weitergeleitet.  Sie können `intro` eingeben, um einen Einführungskarte anzuzeigen, und `show`, um Ihre Details von Microsoft Graph anzuzeigen.  (Dies benötigt eine zusätzliche Berechtigungsgenehmigung).
+   Nachdem die App geladen wurde, werden Sie direkt zu einer Chatsitzung mit dem Bot weitergeleitet.  Sie können `welcome` eingeben, um eine Einführungskarte anzuzeigen und `learn` die Dokumentation für adaptive Karten und Bot-Befehle zu öffnen. 
 
-   Das Debuggen funktioniert so, wie Sie es normalerweise erwarten – probieren Sie es selbst aus! Öffnen Sie die Datei `bot/dialogs/rootDialog.js`, und suchen Sie die `triggerCommand(...)`-Methode.  Setzen Sie einen Haltepunkt auf dem Standardvorgang.  Geben Sie dann einigen Text ein.
+   Das Debuggen funktioniert so, wie Sie es normalerweise erwarten – probieren Sie es selbst aus! Öffnen Sie die Datei `bot/teamsBot.js`, und suchen Sie die `onMessage()`-Methode.  Legen Sie für jeden Fall einen Haltepunkt fest.  Geben Sie dann einigen Text ein.
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -132,7 +131,6 @@ Wenn Sie die **F5-Taste** drücken, wird das Teams Toolkit:
 
 1. Registriert Ihre Anwendung bei Azure Active Directory.
 1. Registriert Ihre Anwendung für das "Querladen" in Microsoft Teams.
-1. Startet ihr Anwendungs-Back-End, das lokal mithilfe von [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start)ausgeführt wird.
 1. Startet einen ngrok-Tunnel, damit Teams mit Ihrer App kommunizieren können.
 1. Startet Microsoft Teams mit einem Befehl, um Teams anzuweisen, die Anwendung querzuladen.
 
@@ -145,7 +143,7 @@ Wenn Sie die **F5-Taste** drücken, wird das Teams Toolkit:
 Um Ihre App in Teams erfolgreich auszuführen, müssen Sie ein Microsoft 365-Entwicklungskonto haben, das das Querladen von Apps ermöglicht. Weitere Informationen zum Öffnen von Apps finden Sie unter [Erforderliche Komponenten](prerequisites.md#enable-sideloading).
 
 > [!IMPORTANT]
-> Derzeit sind Sideloading-Apps in Government Community Cloud (GCC), GCC-High und DOD verfügbar.
+> Sideloading-Apps sind derzeit in Government Community Cloud (GCC), GCC-Hoch und DOD verfügbar.
 
 > [!TIP]
 > Überprüfen Sie mithilfe des [Tools für die App-Überprüfung](https://dev.teams.microsoft.com/appvalidation.html), das im Toolkit enthalten ist, ob es Probleme gibt, bevor Sie ihre App querladen. Beheben Sie die Probleme, um die App erfolgreich querzuladen.
@@ -160,7 +158,6 @@ Um Ihre App in Teams erfolgreich auszuführen, müssen Sie ein Microsoft 365-Ent
 
 Vor der Bereitstellung wurde die Anwendung lokal ausgeführt:
 
-1. Das Back-End unter Verwendung von _Azure Functions Core Tools_ ausgeführt.
 1. Der HTTP-Endpunkt der Anwendung, an dem Microsoft Teams die Anwendung lädt, wird lokal ausgeführt.
 
    Die Bereitstellung umfasst das Bereitstellen von Ressourcen für ein aktives Azure-Abonnement und das Bereitstellen (Hochladen) des Back-End- und des Frontend-Codes für die Anwendung in Azure. Das Back-End verwendet eine Vielzahl von Azure-Diensten, einschließlich Azure App Service und Azure Bot Service.

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ae75a79ebc6293b99e7e4db310cfb0545ce5037a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2f55661c7941422eb4067023eed46b05d1b757ea
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156931"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360718"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Entwerfen Ihrer persönlichen App für Microsoft Teams
 
@@ -39,7 +39,7 @@ Mit einem privaten Arbeitsbereich können Benutzer App-Inhalte, die für sie von
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomie: Persönliche App (privater Arbeitsbereich)
 
-#### <a name="mobile"></a>Mobilgeräte
+#### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="Beispiel zeigt die Aufbaukomponente der persönlichen Registerkarte." border="false":::
 
@@ -88,11 +88,11 @@ Verwenden Sie eine der folgenden Teams Vorlagen und Komponenten, um Ihre persön
 
 ## <a name="use-a-personal-app-bot"></a>Verwenden einer persönlichen App (Bot)
 
-Persönliche Apps können einen Bot für 1:1-Unterhaltungen und private Benachrichtigungen enthalten (z. B. wenn ein Kollege einen Kommentar auf dem Zeichenboard sendet). Benutzer interagieren mit dem Bot auf einer von Ihnen angegebenen Registerkarte.
+Persönliche Apps können einen Bot für 1:1-Unterhaltungen und private Benachrichtigungen enthalten (z. B. wenn ein Kollege einen Kommentar auf dem Zeichenboard postet). Benutzer interagieren mit dem Bot auf einer von Ihnen angegebenen Registerkarte.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomie: Persönliche App (Bot)
 
-#### <a name="mobile"></a>Mobilgeräte
+#### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="Beispiel zeigt die Anatomie der persönlichen Botkomponente." border="false":::
 
@@ -109,7 +109,7 @@ Persönliche Apps können einen Bot für 1:1-Unterhaltungen und private Benachri
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
-|A|**Bot-Registerkarte:** Fügen Sie beispielsweise eine **Chat-Registerkarte** ein, um auf Bot-Unterhaltungen und -Benachrichtigungen zuzugreifen.|
+|A|**Bot-Registerkarte:** Fügen Sie beispielsweise eine **Chat-Registerkarte** für den Zugriff auf Bot-Unterhaltungen und -Benachrichtigungen ein.|
 |B|**Botnachricht:** Bots senden häufig Nachrichten und Benachrichtigungen in Form einer Karte (z. B. einer adaptiven Karte).|
 |C|**Feld "Verfassen":** Eingabefeld zum Senden von Nachrichten an den Bot.|
 

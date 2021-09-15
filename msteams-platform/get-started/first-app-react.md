@@ -6,16 +6,16 @@ ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: cfe3dc5f303de9035b363f1e3b8224456ff6588e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 468f1bdaa5f27cf6a57ebab8e447d0003c3e3d81
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156561"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360518"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>Erstellen und Ausführen Ihrer ersten Microsoft Teams-App mit React
 
-In diesem Lernprogramm erfahren Sie, wie Sie eine neue Microsoft Teams-App in React erstellen, die eine einfache persönliche App zum Abrufen von Informationen aus dem Microsoft Graph implementiert. Beispielsweise enthält eine *persönliche App* eine Reihe von Registerkarten für die individuelle Verwendung. Während des Lernprogramms erfahren Sie mehr über die Struktur einer Teams-App, wie Sie eine App lokal ausführen und wie Sie die App in Azure bereitstellen.
+In diesem Lernprogramm erfahren Sie, wie Sie eine neue Microsoft Teams-App in React erstellen, die eine einfache persönliche App implementiert, um Informationen aus dem Microsoft Graph abzurufen. Beispielsweise enthält eine *persönliche App* eine Reihe von Registerkarten für die individuelle Verwendung. Während des Lernprogramms erfahren Sie mehr über die Struktur einer Teams-App, wie Sie eine App lokal ausführen und wie Sie die App in Azure bereitstellen.
 
 In der erstellten App werden grundlegende Benutzerinformationen für den aktuellen Benutzer angezeigt. Wenn die Berechtigung dazu erteilt wurde, stellt die App eine Verbindung mit Microsoft Graph als aktueller Benutzer her, um das vollständige Profil zu erhalten.
 
@@ -45,7 +45,7 @@ Verwenden Sie zum Erstellen Ihres ersten Projekts das Microsoft Teams-Toolkit:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Starten des Assistenten für „Neues Projekt erstellen“":::
 
-1. Geben Sie im Abschnitt **"Funktionen auswählen"** an, dass **"Tab"** ausgewählt ist, und wählen Sie **"OK"** aus.
+1. Überprüfen Sie im Abschnitt **"Funktionen auswählen",** ob **die Registerkarte** ausgewählt ist, und wählen Sie **"OK"** aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot, der zeigt, wie Ihrer neuen App Funktionen hinzufügt werden können.":::
 
@@ -96,11 +96,15 @@ Nachdem das Teams Toolkit Ihr Projekt konfiguriert hat, verfügen Sie über die 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Screenshot der App-Projektdateien für eine persönliche App in Visual Studio Code":::
 
-Das Toolkit erstellt im Projektverzeichnis automatisch Ordner basierend auf den Funktionen, die Sie während des Setups hinzugefügt haben. Das Microsoft Teams Toolkit behält seinen Status für Ihre App im `.fx`-Verzeichnis bei.  Weitere Elemente in diesem Verzeichnis:
+Das Toolkit erstellt im Projektverzeichnis automatisch Ordner basierend auf den Funktionen, die Sie während des Setups hinzugefügt haben. Das Microsoft Teams Toolkit behält seinen Status für Ihre App im `.fx`-Verzeichnis bei. 
 
-- Die App-Symbole werden als PNG-Dateien in `color.png` und `outline.png` gespeichert.
-- Das App-Manifest für die Veröffentlichung im Entwicklerportal für Microsoft Teams wird in `manifest.source.json` gespeichert.
-- Die Einstellungen, die Sie beim Erstellen des Projekts ausgewählt haben, werden in `settings.json` gespeichert.
+- Die Einstellungen, die Sie beim Erstellen des Projekts ausgewählt haben, werden in `.fx/settings.json` gespeichert.
+- Der Status Ihres Projekts wird in `.fx/env.*.json` gespeichert.
+
+Und die Teams App-Informationen werden im `appPackage` Verzeichnis gespeichert.
+
+- Die App-Symbole werden als PNG-Dateien in `appPackage/color.png` und `appPackage/outline.png` gespeichert.
+- Das App-Manifest für die Veröffentlichung im Entwicklerportal für Teams wird in `appPackage/manifest.source.json` gespeichert.
 
 Da Sie während des Setups die Registerkartenfunktion ausgewählt haben, erstellt das Microsoft Teams-Toolkit den erforderlichen Code für eine einfache Registerkarte im `tabs`-Verzeichnis. In diesem Verzeichnis befinden sich mehrere wichtige Dateien:
 
@@ -118,7 +122,7 @@ Wenn Sie Cloudfunktionen hinzufügen, werden dem Projekt zusätzliche Verzeichni
 Das Microsoft Teams-Toolkit ermöglicht es Ihnen, Ihre App lokal auszuführen.  Dies besteht aus mehreren Teilen, die für die Bereitstellung der richtigen, von Microsoft Teams erwarteten Infrastruktur erforderlich sind:
 
 - Es wird eine Anwendung bei Azure Active Directory registriert.  Diese Anwendung verfügt über Berechtigungen, die mit dem Speicherort, von dem die App geladen wird, und allen Back-End-Ressourcen verknüpft sind, auf die sie zugreift.
-- Es wird eine Web-API zur Unterstützung von Authentifizierungsaufgaben gehostet, die als Proxy zwischen der App und Azure Active Directory agiert.  Dies wird über die Azure Functions Core Tools ausgeführt.  Der Zugriff darauf ist über die URL-Adresse `https://localhost:5000` möglich.
+- Es wird eine Web-API zur Unterstützung von Authentifizierungsaufgaben gehostet, die als Proxy zwischen der App und Azure Active Directory agiert. Der Zugriff darauf ist über die URL-Adresse `https://localhost:5000` möglich.
 - Die HTML-, CSS- und JavaScript-Ressourcen, aus denen das Front-End der App besteht, werden in einem lokalen Dienst gehostet. Der Zugriff darauf ist über `https://localhost:3000` möglich.
 - Es wird ein App-Manifest generiert und im Entwicklerportal für Microsoft Teams verfügbar gemacht.  Microsoft Teams verwendet das App-Manifest, um die verbundenen Clients darüber zu informieren, von wo die App geladen werden soll.
 
@@ -132,11 +136,14 @@ So erstellen Sie Ihre App und führen sie lokal aus:
 
    > Wenn Sie die App zum ersten Mal ausführen, werden alle Abhängigkeiten heruntergeladen und die App wird erstellt.  Wenn die Erstellung abgeschlossen ist, wird automatisch ein Browserfenster geöffnet.  Dies kann 3 bis 5 Minuten dauern.
 
+   Wenn Sie zum ersten Mal lokal ausgeführt werden, werden Sie aufgefordert, ein Zertifikat für das lokale Debuggen zu installieren. klicken Sie auf "Weiter".
+     :::image type="content" source="../assets/images/teams-toolkit-v2/certificate-prompt.png" alt-text="Screenshot mit Dialogfenster zum Installieren eines SSL-Zertifikats, damit Microsoft Teams Ihre Anwendung von localhost laden kann.":::
+
    Das Toolkit fordert Sie auf, bei Bedarf ein lokales Zertifikat zu installieren. Mit diesem Zertifikat kann Microsoft Teams Ihre Anwendung von `https://localhost` laden. Wählen Sie "Ja" aus, wenn das folgende Dialogfenster angezeigt wird:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot mit Dialogfenster zum Installieren eines SSL-Zertifikats, damit Microsoft Teams Ihre Anwendung von localhost laden kann.":::
 
-1. Ihr Webbrowser beginnt mit der Ausführung der App. Wenn Sie aufgefordert werden, Teams Desktop zu öffnen, wählen Sie **"Abbrechen"** aus, um im Browser zu verbleiben. Möglicherweise werden Sie auch aufgefordert, zu anderen Zeiten zu Teams Desktop zu wechseln. wählen Sie in diesem Fall die Teams Web-App aus.
+1. Ihr Webbrowser beginnt mit der Ausführung der App. Wenn Sie aufgefordert werden, Teams Desktop zu öffnen, wählen Sie **"Abbrechen"** aus, um im Browser zu verbleiben. Möglicherweise werden Sie auch zu anderen Zeiten aufgefordert, zu Teams Desktop zu wechseln. wählen Sie in diesem Fall die Teams Web-App aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot, der zeigt, wie die Web-Version von Microsoft Teams beim Start ausgewählt wird.":::
 

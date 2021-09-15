@@ -4,12 +4,12 @@ author: surbhigupta
 description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 1695b3e63a08935abd2db264ff171ebdf1d49fc3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a3c84667e5d526c00e5c1df0035995c53401ab00
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156400"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360482"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -50,9 +50,6 @@ Das App-Manifest muss den folgenden Codeausschnitt enthalten:
     }
   ]
 ```
-
-> [!NOTE]
-> `meetingStage` ist derzeit nur in der [Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
 ### <a name="context-property"></a>Context-Eigenschaft
 
@@ -108,7 +105,7 @@ Geben Sie in einem Besprechungschat den **@** Schlüssel ein, und wählen **Sie 
 
 Während einer Besprechung können Sie das `meetingSidePanel` Dialogfeld oder das In-Meeting-Dialogfeld verwenden, um einzigartige Erfahrungen für Ihre Apps zu erstellen.
 
-#### <a name="meeting-sidepanel"></a>Sidepanel für Besprechungen
+#### <a name="meeting-sidepanel"></a>Meeting SidePanel
 
 Dies ermöglicht ihnen das Anpassen von `meetingSidePanel` Erfahrungen in einer Besprechung, die Organisatoren und Referenten unterschiedliche Ansichten und Aktionen ermöglichen. Im App-Manifest müssen Sie `meetingSidePanel` dem Kontextarray hinzufügen. In der Besprechung und in allen Szenarien wird die App auf einer Besprechungsregisterkarte mit einer Breite von 320 Pixeln gerendert. Weitere Informationen finden Sie unter [FrameContext-Schnittstelle.](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
 
@@ -117,7 +114,7 @@ Informationen zur Verwendung der API zum Weiterleiten von `userContext` Anforder
 Die Messaging-Erweiterung funktioniert erwartungsgemäß, wenn sich ein Benutzer in einer Besprechungsansicht befindet. Der Benutzer kann Erweiterungskarten zum Verfassen von Nachrichten posten. "AppName in-Meeting" ist eine QuickInfo, die den App-Namen in der Besprechungs-U-Leiste angibt.
 
 > [!NOTE]
-> Verwenden Sie Version 1.7.0 oder höher von [Teams SDK,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)da die vorherigen Versionen den Seitenbereich nicht unterstützen.
+> Verwenden Sie Version 1.7.0 oder höher von [Teams SDK,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)da versionen zuvor den Seitenbereich nicht unterstützen.
 
 #### <a name="in-meeting-dialog-box"></a>Dialogfeld "Besprechungsinterne Besprechung"
 
@@ -131,12 +128,9 @@ Das Besprechungsdialogfeld darf kein Aufgabenmodul verwenden. Das Aufgabenmodul 
 
 #### <a name="shared-meeting-stage"></a>Freigegebene Besprechungsphase
 
-> [!NOTE]
-> Diese Funktion ist derzeit nur in der [Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
-
 Die freigegebene Besprechungsphase ermöglicht es Besprechungsteilnehmern, in Echtzeit mit App-Inhalten zu interagieren und daran zusammenzuarbeiten.
 
-Der erforderliche Kontext befindet `meetingStage` sich im App-Manifest. Voraussetzung ist, dass der Kontext vorhanden ist `meetingSidePanel` und die **Freigabe** in der `meetingSidePanel` .
+Der erforderliche Kontext befindet `meetingStage` sich im App-Manifest. Voraussetzung ist, dass der Kontext vorhanden ist und die `meetingSidePanel` **Freigabe** in der `meetingSidePanel` .
 
 ![Freigeben für die Bereitstellung während der Besprechungserfahrung](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
@@ -166,9 +160,10 @@ Die Konfigurationen für Nach- und [Vorbesprechungen](#before-a-meeting) sind id
 
 ## <a name="code-sample"></a>Codebeispiel
 
-|Beispielname | Beschreibung | Beispiel |
-|----------------|-----------------|--------------|----------------|-----------|
-| Besprechungs-App | Veranschaulicht die Verwendung der Besprechungstoken-Generator-App zum Anfordern eines Tokens. Das Token wird sequenziell generiert, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Das Token ist nützlich in Situationen wie Meetings mit DerBesprechung und Q&A-Sitzungen. | [Anzeigen](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+|Beispielname | Beschreibung | C# | Node.js |
+|----------------|-----------------|--------------|----------------|
+| Besprechungs-App | Veranschaulicht die Verwendung der Besprechungstoken-Generator-App zum Anfordern eines Tokens. Das Token wird sequenziell generiert, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Das Token ist nützlich in Situationen wie Meetings mit DerBesprechung und Q&A-Sitzungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+|Beispiel für Besprechungsphasen | Beispiel-App zum Anzeigen einer Registerkarte in der Besprechungsphase für die Zusammenarbeit | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,7 +1,7 @@
 ### <a name="use-app-studio-to-update-the-app-package"></a>Verwenden von App Studio zum Aktualisieren des App-Pakets
 
 > [!TIP]
-> **Testen Sie das Entwicklerportal:** App Studio wird in Kürze als entpriesen eingestuft. Konfigurieren, verteilen und verwalten Sie Ihre Teams-Apps mit dem neuen [Entwicklerportal.](https://dev.teams.microsoft.com/)
+> **Testen Sie das Entwicklerportal:** App Studio hat sich weiterentwickelt. Konfigurieren, verteilen und verwalten Sie Ihre Teams-Apps mit dem neuen [Entwicklerportal.](https://dev.teams.microsoft.com/)
 
 App Studio ist eine Teams-App, die Sie aus dem Teams Store installieren können. Dies vereinfacht das Erstellen und Registrieren einer App.
 
@@ -20,13 +20,13 @@ Führen Sie die folgenden Schritte aus, um das App-Paket zu aktualisieren:
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
 
-    Das Beispiel enthält ein eigenes Manifest und ist so konzipiert, dass beim Erstellen des Projekts ein App-Paket erstellt wird. Auf .NET kann sich die manifest.json-Datei in Visual Studio im Manifest unter ```Microsoft.Teams.Samples.HelloWorld.Web``` befinden. Bei Node.js erfolgt dies durch Eingabe `gulp` an der Befehlszeile im Stammverzeichnis des Projekts.
+    Das Beispiel enthält ein eigenes Manifest und ist so konzipiert, dass beim Erstellen des Projekts ein App-Paket erstellt wird. Auf .NET kann sich die Datei "manifest.json" in Visual Studio im Manifest unter ```Microsoft.Teams.Samples.HelloWorld.Web``` . Bei Node.js erfolgt dies durch Eingabe `gulp` über die Befehlszeile im Stammverzeichnis des Projekts.
 
-     In Visual Studio befindet sich die manifest.json-Datei unter **Manifest** in `Microsoft.Teams.Samples.HelloWorld.Web` . Dieser Schritt wird in der folgenden Abbildung beschrieben:  
+     In Visual Studio befindet sich die Datei manifest.json unter **Manifest** in `Microsoft.Teams.Samples.HelloWorld.Web` . Dieser Schritt wird in der folgenden Abbildung beschrieben:  
     
     <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
     
-    Sie können das App-Paket auf Node.js erstellen, indem Sie `gulp` an der Befehlszeile im Stammverzeichnis des Projekts eingeben.
+    Sie können das App-Paket auf Node.js erstellen, indem Sie `gulp` in der Befehlszeile im Stammverzeichnis des Projekts eingeben.
 
 
     ```bash
@@ -55,7 +55,7 @@ Führen Sie die folgenden Schritte aus, um das App-Paket zu aktualisieren:
 
     <img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
 
-    Auf der linken Seite des Manifest-Editors finden Sie eine Liste der Schritte. Auf der rechten Seite befindet sich eine Liste der Eigenschaften, die für jeden Schritt ausgefüllt werden müssen. Als Sie mit einer Beispiel-App begonnen haben, sind viele der Informationen bereits abgeschlossen. Mit den nächsten Schritten können Sie die Eigenschaften der Hello World-App aktualisieren.
+    Auf der linken Seite des Manifest-Editors finden Sie eine Liste der Schritte. Auf der rechten Seite gibt es eine Liste der Eigenschaften, die für jeden Schritt ausgefüllt werden müssen. Als Sie mit einer Beispiel-App begonnen haben, sind viele der Informationen bereits abgeschlossen. Mit den nächsten Schritten können Sie die Eigenschaften der Hello World-App aktualisieren.
 
 #### <a name="app-details"></a>App-Details
 
@@ -111,7 +111,7 @@ Führen Sie die folgenden Schritte aus, um Ihren Bot einzurichten:
     <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
 1. Fügen Sie einen Botnamen **"Contoso-Bot"** hinzu, und aktivieren Sie alle drei Kontrollkästchen unter **"Bereich".**
-1. Wählen Sie **"Speichern"** aus, um das Dialogfeld zu beenden. App Studio registriert Ihren Bot bei Microsoft und zeigt Ihren neuen Bot in der Botliste an. 
+1. Wählen Sie **"Speichern"** aus, um das Dialogfeld zu beenden. App Studio registriert Ihren Bot bei Microsoft und zeigt ihren neuen Bot in der Botliste an. 
 1. Öffnen Sie nun eine Textdatei im Editor, und kopieren Sie Ihre neue Bot-ID, und fügen Sie sie ein.
 1. Klicken Sie auf **"Neues Kennwort generieren",** und notieren Sie sich das Kennwort in derselben Textdatei, die Sie als Bot-App-ID angegeben haben.
 1. Aktualisieren Sie die **Bot-Endpunktadresse** auf und ersetzen Sie sie `https://yourteamsapp.ngrok.io/api/messages` durch die `yourteamsapp.ngrok.io` URL, die Sie beim Hosten Ihrer App verwendet haben.
@@ -153,7 +153,7 @@ Führen Sie die folgenden Schritte aus, um Ihre Messaging-Erweiterung einzuricht
 
 Führen Sie nach der Eingabe der Details Ihrer App die folgenden Schritte aus, um Ihre App in Teams zu registrieren:
 
-1. Verwenden Sie **"Testen" und verteilen Sie** App Studio, um Ihre App in Teams zu installieren. 
+1. Verwenden Sie **"Testen" und verteilen** Sie App Studio, um Ihre App in Teams zu installieren. 
 1. Aktualisieren Sie Ihre gehostete Anwendung mit der App-ID und dem Kennwort für Ihren Bot. Verwenden Sie für die Beispiel-App die gleiche App-ID und dasselbe Kennwort für Bot- und Messaging-Erweiterungen. 
 1. Wählen Sie **"Testen" und "Verteilen"**  im linken Bereich von App Studio unter **"Fertig stellen"** aus:
 

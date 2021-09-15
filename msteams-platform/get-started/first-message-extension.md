@@ -6,12 +6,12 @@ ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: 52352d23533b80c9df5422f87e58d318987b6e95
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 39659b6c58b61f8b8880bd277effba1c8f9d115e
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156557"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360685"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Erstellen Sie Ihre erste Messaging-Erweiterung für Microsoft Teams, und führen Sie sie aus.
 
@@ -22,7 +22,7 @@ Es gibt zwei Arten von Teams-**Messaging-Erweiterungen**:
 - Mit [Suchbefehlen](../messaging-extensions/how-to/search-commands/define-search-command.md) können Sie externe Systeme durchsuchen und die Ergebnisse dieser Suche in Form einer Karte in eine Nachricht einfügen.
 - [Aktionsbefehle](../messaging-extensions/how-to/action-commands/define-action-command.md) ermöglichen Ihnen, Ihren Benutzern ein modales Popupfenster zum Sammeln oder Anzeigen von Informationen vorzuführen, ihre Interaktion zu verarbeiten und Informationen an Teams zurückzusenden.
 
-## <a name="before-you-begin"></a>Bevor Sie beginnen:
+## <a name="before-you-begin"></a>Bevor Sie beginnen
 
 Stellen Sie sicher, dass Ihre Entwicklungsumgebung eingerichtet ist, indem Sie die erforderlichen Komponenten installieren.
 
@@ -122,15 +122,19 @@ So erstellen Sie Ihre App und führen sie lokal aus:
 
 1. Wählen Sie **"Hinzufügen"** aus, um die App Ihrem Konto hinzuzufügen.
 
-   Nachdem die App geladen wurde, werden Sie direkt in ein Suchdialogfeld geleitet:
+   Nachdem die App geladen wurde, können Sie versuchen, die Beispielfunktion zu verwenden: Sie können die Nachrichtenerweiterung aus drei Punkten im Verfassenbereich starten und npm-Pakete über die Suchleiste durchsuchen.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Suchbasierte Messaging-Erweiterung in Aktion":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/search-message-extension.png" alt-text="Suchbasierte Messaging-Erweiterung in Aktion":::
+   
+   Sie können auch versuchen, Ihre Nachrichtenerweiterungsinstanz über die Suchleiste in der obersten Zeile von Teams zu @ @ senden und nach npm-Paket zu suchen.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-teams-search-bar.png" alt-text="Suchbasierte Messaging-Erweiterung in Aktion":::
 
-   Geben Sie einen Text in das Suchfeld ein, und wählen Sie dann eine der Optionen aus.  Ihrem Eingabefeld wird eine adaptive Karte hinzugefügt.
+   Geben Sie Text in das Suchfeld ein, und wählen Sie dann eine der Optionen aus. Sie können adaptive Karten der Suchergebnisse erstellen und senden.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-adptive-card.png" alt-text="Suchbasierte Messaging-Erweiterung in Aktion":::
 
 <!-- markdownlint-disable MD033 -->
 <details>
-<summary>Erfahren Sie, was passiert, wenn Sie Ihre App lokal im Debugger ausführen.</summary>
+<summary>Erfahren Sie, was geschieht, wenn Sie Ihre App lokal im Debugger ausführen.</summary>
 
 Wenn Sie die **F5-Taste** drücken, wird das Teams Toolkit:
 
