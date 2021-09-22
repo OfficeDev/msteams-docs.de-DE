@@ -81,12 +81,12 @@ Es wird empfohlen, die Höhe und Breite jedes Bilds mithilfe von XML anzugeben. 
 * Verwenden von `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * `![Duck on a rock](http://aka.ms/Fo983c)` nicht verwenden
 
-## <a name="receiving-messages&quot;></a>Empfangen von Nachrichten
+## <a name="receiving-messages"></a>Empfangen von Nachrichten
 
 Je nachdem, welche Bereiche deklariert werden, kann Ihr Bot Nachrichten in den folgenden Kontexten empfangen:
 
 * **Persönlicher Chat** Benutzer können in einer privaten Unterhaltung mit einem Bot interagieren, indem sie einfach den hinzugefügten Bot im Chatverlauf auswählen oder den Namen oder die App-ID in das Feld &quot;An:&quot; in einen neuen Chat eingeben.
-* **Kanäle** Ein Bot kann in einem Kanal erwähnt werden (&quot;@_Botname"),_ wenn er dem Team hinzugefügt wurde. Beachten Sie, dass für zusätzliche Antworten auf einen Bot in einem Kanal der Bot erwähnt werden muss. Sie antwortet nicht auf Antworten, in denen sie nicht erwähnt wird.
+* **Kanäle** Ein Bot kann in einem Kanal erwähnt werden ("@_Botname"),_ wenn er dem Team hinzugefügt wurde. Beachten Sie, dass für zusätzliche Antworten auf einen Bot in einem Kanal der Bot erwähnt werden muss. Sie antwortet nicht auf Antworten, in denen sie nicht erwähnt wird.
 
 Bei eingehenden Nachrichten empfängt Ihr Bot ein [Activity-Objekt](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) vom Typ `messageType: message` . Obwohl das `Activity` Objekt andere Arten von Informationen enthalten kann, z. B. [Kanalaktualisierungen,](~/resources/bot-v3/bots-notifications.md#channel-updates) die an Ihren Bot gesendet werden, stellt der Typ die `message` Kommunikation zwischen Bot und Benutzer dar.
 
