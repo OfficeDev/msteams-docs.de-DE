@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams-Manifestschema
-ms.openlocfilehash: aadb17d0cd8644908b9d44328dcc30819859fdee
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 07b2c969877dc61c8678bb89099d6275f2cf367c
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360489"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475760"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -423,7 +423,7 @@ Wird verwendet, wenn Ihre App-Erfahrung über eine Registerkartenoberfläche im 
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 Zeichen|✔|Die https:// URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die `team` Bereiche und `groupchat` Bereiche. |
-|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: **true**.|
+|`canUpdateConfiguration`|boolean|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: **true**.|
 |`context` |Array von Enumerationen|6 ||Die Gruppe von `contextItem` Bereichen, in denen eine [Registerkarte unterstützt wird.](../../tabs/how-to/access-teams-context.md) Standard: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Ein relativer Dateipfad zu einem Registerkartenvorschaubild zur Verwendung in SharePoint. Größe 1024 x 768. |
 |`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint zur Verfügung gestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
@@ -463,8 +463,8 @@ Das Element ist ein Array (maximal ein Element &mdash; ist derzeit nur ein Bot p
 |`botId`|string|64 Zeichen|✔|Die eindeutige Microsoft-App-ID für den Bot, wie bei Bot Framework registriert. Die ID kann mit der gesamten [App-ID](#id)übereinstimmen.|
 |`scopes`|Array von Enumerationen|3|✔|Gibt an, ob der Bot eine Umgebung im Kontext eines Kanals in einem `team` oder Gruppenchat (`groupchat`) ist, oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`). Diese Optionen sind nicht exklusiv.|
 |`needsChannelSelector`|Boolescher Wert|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
-|`isNotificationOnly`|boolean|||Gibt an, ob ein Bot ein unidirektionaler Bot ausschließlich für Benachrichtigungen ist (im Gegensatz zu einem dialogorientierten Bot). Standard: **`false`**|
-|`supportsFiles`|boolean|||Gibt an, ob der Bot die Möglichkeit zum Hochladen/Herunterladen von Dateien in persönliche Chats unterstützt. Standard: **`false`**|
+|`isNotificationOnly`|Boolescher Wert|||Gibt an, ob ein Bot ein unidirektionaler Bot ausschließlich für Benachrichtigungen ist (im Gegensatz zu einem dialogorientierten Bot). Standard: **`false`**|
+|`supportsFiles`|Boolescher Wert|||Gibt an, ob der Bot die Möglichkeit zum Hochladen/Herunterladen von Dateien in persönliche Chats unterstützt. Standard: **`false`**|
 |`supportsCalling`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG:** Diese Eigenschaft ist derzeit experimentell. Experimentelle Eigenschaften sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Untersuchungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
 |`supportsVideo`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG:** Diese Eigenschaft ist derzeit experimentell. Experimentelle Eigenschaften sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Untersuchungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
 
@@ -514,7 +514,7 @@ Das Element ist ein Array (maximal ein Element) mit allen Elementen des Typs `ob
 |`botId`|string|64|✔|Die eindeutige Microsoft-App-ID für den Bot, der die Messaging-Erweiterung unterstützt, wie beim Bot Framework registriert. Die ID kann mit der gesamten App-ID übereinstimmen.|
 |`commands`|Array von Objekten|10|✔|Array von Befehlen, die von der Messaging-Erweiterung unterstützt werden.|
 |`canUpdateConfiguration`|boolean|||Ein Wert, der angibt, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann. Standard: **False**.|
-|`messageHandlers`|Array von Objekten|5 ||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind.|
+|`messageHandlers`|Array von Objekten|5||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind.|
 |`messageHandlers.type`|string|||Der Typ des Nachrichtenhandlers. Muss `"link"` sein.|
 |`messageHandlers.value.domains`|Array von Zeichenfolgen|||Array von Domänen, für die sich der Linknachrichtenhandler registrieren kann.|
 
@@ -579,7 +579,7 @@ Eine Liste der gültigen Domänen für Websites, die von der App im Teams-Client
 
 Schließen Sie **nicht** die Domänen von Identitätsanbietern ein, die Sie in Ihrer App unterstützen möchten. Um sich beispielsweise mit einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten. Sie dürfen jedoch keine accounts.google.com in `validDomains[]` einschließen.
 
-Teams Apps, für die ihre eigenen SharePoint-URLs ordnungsgemäß funktionieren müssen, enthält "{teamsitedomain}" in ihrer gültigen Domänenliste.
+Teams Apps, für die eigene SharePoint URLs erforderlich sind, um ordnungsgemäß zu funktionieren, enthält "{teamsitedomain}" in ihre gültige Domänenliste.
 
 > [!IMPORTANT]
 > Fügen Sie keine Domänen hinzu, die sich außerhalb Ihres Steuerelements befinden, entweder direkt oder über Platzhalter. Ist z. `yourapp.onmicrosoft.com` B. gültig, ist jedoch `*.onmicrosoft.com` ungültig.
@@ -590,7 +590,7 @@ Das Objekt ist ein Array mit allen Elementen des Typs `string` .
 
 **Optional**—object
 
-Geben Sie Ihre Azure Active Directory (AAD)-App-ID und Microsoft Graph Informationen an, damit sich Benutzer nahtlos bei Ihrer App anmelden können. Wenn Ihre App in AAD registriert ist, müssen Sie die App-ID angeben. Administratoren können berechtigungen einfach überprüfen und ihre Zustimmung im Teams Admin Center erteilen.
+Geben Sie Ihre Azure Active Directory (AAD)-App-ID und Microsoft Graph Informationen an, um Benutzern zu helfen, sich nahtlos bei Ihrer App anzumelden. Wenn Ihre App in AAD registriert ist, müssen Sie die App-ID angeben. Administratoren können berechtigungen einfach überprüfen und ihre Zustimmung im Teams Admin Center erteilen.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|

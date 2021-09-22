@@ -4,12 +4,12 @@ description: Beschreibt einmaliges Anmelden (Single Sign-On, SSO)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams-Authentifizierungs-SSO-AAD-Api für einmaliges Anmelden
-ms.openlocfilehash: eddbc681155d1fea03ca2c362f5519c4d2542887
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 1901ce16f99b7708bfc289f86440ce240148ada9
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156609"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475685"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>SSO-Unterstützung (Single Sign-On) für Registerkarten
 
@@ -27,7 +27,7 @@ Benutzer melden sich bei Microsoft Teams über ihr Geschäfts-, Schul- oder Micr
 > [!NOTE]
 > **Schnellstart**  
 >
-> Der einfachste Weg zu den ersten Schritten mit Tab-SSO ist das Teams Toolkit für Visual Studio Code. Weitere Informationen finden Sie unter [SSO mit Teams Toolkit und Visual Studio Code für Registerkarten](../../../toolkit/visual-studio-code-tab-sso.md)
+> Der einfachste Weg zu den ersten Schritten mit Registerkarten-SSO ist das Teams Toolkit für Visual Studio Code. Weitere Informationen finden Sie unter [SSO mit Teams Toolkit und Visual Studio Code für Registerkarten.](../../../toolkit/visual-studio-code-tab-sso.md)
 
 ## <a name="how-sso-works-at-runtime"></a>Funktionsweise von SSO zur Laufzeit
 
@@ -44,7 +44,7 @@ Die folgende Abbildung zeigt, wie der SSO-Prozess funktioniert:
 6. Das Token wird in der Registerkartenanwendung mithilfe von JavaScript analysiert, um die erforderlichen Informationen wie die E-Mail-Adresse des Benutzers zu extrahieren.
 
 > [!NOTE]
-> Dies `getAuthToken()` gilt nur für die Zustimmung zu einer begrenzten Gruppe von APIs auf Benutzerebene, bei denen es sich um E-Mails, Profile, offline_access und OpenId handelt. Es wird nicht für weitere Graph Bereichen wie `User.Read` oder `Mail.Read` verwendet. Empfohlene Problemumgehungen finden Sie unter [Abrufen eines Zugriffstokens mit Graph Berechtigungen.](#get-an-access-token-with-graph-permissions)
+> Dies gilt nur für die `getAuthToken()` Zustimmung zu einer begrenzten Gruppe von APIs auf Benutzerebene, die E-Mail, Profil, offline_access und OpenId sind. Es wird nicht für weitere Graph Bereichen wie `User.Read` oder `Mail.Read` verwendet. Mögliche Problemumgehungen finden Sie unter [Abrufen eines Zugriffstokens mit Graph Berechtigungen.](#get-an-access-token-with-graph-permissions)
 
 Die SSO-API funktioniert auch in [Aufgabenmodulen,](../../../task-modules-and-cards/what-are-task-modules.md) die Webinhalte einbetten.
 
@@ -67,6 +67,7 @@ In diesem Abschnitt werden die Aufgaben zum Erstellen einer Teams Registerkarte 
 > * Es werden nur Graph API-Berechtigungen auf Benutzerebene unterstützt, d. h. E-Mail, Profil, offline_access, OpenId. Wenn Sie Zugriff auf andere Graph Bereiche haben müssen, z. B. `User.Read` oder , finden Sie weitere Informationen unter Abrufen eines `Mail.Read` [Zugriffstokens mit Graph Berechtigungen.](#get-an-access-token-with-graph-permissions)
 > * Es ist wichtig, dass der Domänenname Ihrer Anwendung mit dem Domänennamen übereinstimmt, den Sie für Ihre AAD-Anwendung registriert haben.
 > * Derzeit werden mehrere Domänen pro App nicht unterstützt.
+> * Der Benutzer muss `accessTokenAcceptedVersion` auf eine neue Anwendung `v2` festlegen.
 
 **So registrieren Sie Ihre App über das AAD-Portal**
 
@@ -84,7 +85,7 @@ In diesem Abschnitt werden die Aufgaben zum Erstellen einer Teams Registerkarte 
     > Wenn Sie eine App mit einem Bot und einer Registerkarte erstellen, geben Sie den Anwendungs-ID-URI als `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
 
 1. Wählen Sie den Link **"Festlegen"** aus, um den Anwendungs-ID-URI in Form von zu `api://{AppID}` generieren. Fügen Sie Ihren vollqualifizierten Domänennamen mit einem schrägen Schrägstrich "/" an das Ende zwischen den doppelten Schrägstrichen und der GUID ein. Die gesamte ID muss die Form von `api://fully-qualified-domain-name.com/{AppID}` aufweisen. ² Beispiel: `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` . Der vollqualifizierte Domänenname ist der lesbare Domänenname, aus dem Ihre App bereitgestellt wird. Wenn Sie einen Tunneldienst wie ngrok verwenden, müssen Sie diesen Wert aktualisieren, wenn sich Ihre ngrok-Unterdomäne ändert.
-1. Wählen Sie **Bereich hinzufügen**. Geben Sie in das daraufhin geöffnete Panel **access_as_user** als **Bereichsnamen** ein.
+1. Wählen Sie **Bereich hinzufügen**. Geben Sie im daraufhin geöffneten Bereich **access_as_user** als **Bereichsnamen** ein.
 1. Geben Sie im Feld **Wer zustimmen können?** **Administratoren und Benutzer** ein.
 1. Geben Sie die Details in die Felder für die Konfiguration der Aufforderungen zur Administrator- und Benutzerzustimmung mit werten ein, die für den Bereich geeignet `access_as_user` sind:
     * **Titel der Administratoreinwilligung**: Teams kann auf das Benutzerprofil zugreifen.
@@ -94,14 +95,14 @@ In diesem Abschnitt werden die Aufgaben zum Erstellen einer Teams Registerkarte 
 1. Stellen Sie sicher, **Zustand** auf **Aktiviert** festgelegt ist.
 1. Wählen Sie **"Bereich hinzufügen"** aus, um die Details zu speichern. Der Domänenteil des **Bereichsnamens,** der unterhalb des Textfelds angezeigt wird, muss automatisch mit dem im vorherigen Schritt festgelegten **Anwendungs-ID-URI** übereinstimmen, `/access_as_user` wobei er am Ende angefügt `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` wird.
 1. Identifizieren Sie im Abschnitt **"Autorisierte Clientanwendungen"** die Anwendungen, die Sie für die Webanwendung Ihrer App autorisieren möchten. Wählen Sie **"Clientanwendung hinzufügen"** aus. Geben Sie jede der folgenden Client-IDs ein, und wählen Sie den autorisierten Bereich aus, den Sie im vorherigen Schritt erstellt haben:
-    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`für Teams mobile oder Desktopanwendung.
+    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`für Teams Mobile- oder Desktopanwendung.
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`für Teams Webanwendung.
-1. Navigieren Sie zu **API-Berechtigungen.** Wählen **Sie eine Berechtigung Hinzufügen** von Microsoft  >  **Graph** delegierte Berechtigungen  >  **aus,** und fügen Sie dann die folgenden Berechtigungen aus Graph API hinzu:
+1. Navigieren Sie zu **API-Berechtigungen.** Wählen **Sie eine Berechtigung**  >  **hinzufügen, microsoft Graph** delegierte  >  **Berechtigungen,** und fügen Sie dann die folgenden Berechtigungen aus Graph API hinzu:
     * User.Read ist standardmäßig aktiviert
     * email
     * offline_access
     * Openid
-    * Profil
+    * profile
 
 1. Navigieren Sie zur **Authentifizierung.**
 
@@ -116,7 +117,7 @@ In diesem Abschnitt werden die Aufgaben zum Erstellen einer Teams Registerkarte 
     > [!NOTE]
     > Für Tab-SSO ist keine implizite Genehmigung erforderlich.
 
-Herzlichen Glückwunsch! Sie haben die Voraussetzungen für die App-Registrierung erfüllt, um mit Ihrer Registerkarten-SSO-App fortzufahren.
+Herzlichen Glückwunsch! Sie haben die Voraussetzungen für die App-Registrierung erfüllt, um mit Ihrer RegisterkarteN-SSO-App fortzufahren.
 
 > [!NOTE]
 >

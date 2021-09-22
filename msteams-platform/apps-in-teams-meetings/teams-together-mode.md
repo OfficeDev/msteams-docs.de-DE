@@ -3,12 +3,12 @@ title: Szenen im benutzerdefinierten Modus "Zusammen"
 description: Arbeiten mit benutzerdefinierten Szenen im Zusammen-Modus
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 5fb049668247a12231f91aec0e75537608f25b10
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0558b3914ba3cabf2af3937a4a4cadb9342c3844
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156393"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475601"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Benutzerdefinierte Zusammen-Modus-Szenen
 
@@ -26,7 +26,10 @@ Der folgende Prozess bietet eine Übersicht zum Erstellen einer Nur-Szene-App:
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Nur-Szene-App erstellen" border="false":::
 
-Eine Nur-Szene-App ist immer noch eine App in Microsoft Teams. Das Szenenstudio verarbeitet die Erstellung des App-Pakets im Hintergrund. Mehrere Szenen in einem einzelnen App-Paket werden den Benutzern als flache Liste angezeigt.
+Eine Nur-Szene-App ist weiterhin eine App in Microsoft Teams. Das Szenenstudio verarbeitet die Erstellung des App-Pakets im Hintergrund. Mehrere Szenen in einem einzelnen App-Paket werden den Benutzern als flache Liste angezeigt.
+
+> [!NOTE]
+> Benutzer können den Zusammen-Modus nicht über Mobilgeräte initiieren. Nachdem ein Benutzer jedoch über mobile Geräte an einer Besprechung teilnimmt und der Zusammen-Modus vom Desktop aus aktiviert ist, werden die mobilen Benutzer, die das Video aktiviert haben, im Zusammen-Modus auf dem Desktop angezeigt. 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -69,7 +72,7 @@ Die folgende Abbildung zeigt jeden Platz, der als Avatar zum Erstellen der Szene
 
 1. Wechseln Sie zum [Szenen-Editor – Teams Entwicklerportal.](https://dev.teams.microsoft.com/scenes)
 
-    Alternativ können Sie zum Öffnen von Scene Studio die Startseite des [Teams Entwicklerportals](https://dev.teams.microsoft.com/home)aufrufen:
+    Alternativ können Sie zum Öffnen des Szenenstudios zur Startseite des [Teams Entwicklerportals](https://dev.teams.microsoft.com/home)wechseln:
     * Wählen Sie **"Benutzerdefinierte Szenen für Besprechungen erstellen"** aus.
     * Wählen Sie im linken Abschnitt die Option **"Extras"** und dann im Abschnitt **"Extras"** die Option **"Szenenstudio"** aus.
 
@@ -105,13 +108,13 @@ Die folgende Abbildung zeigt jeden Platz, der als Avatar zum Erstellen der Szene
 
     ![Spot zuweisen](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. Wählen Sie **"Speichern"** und **dann "Anzeigen" in Teams** aus, um Die Szene in Microsoft Teams schnell zu testen.
+1. Wählen Sie **"Speichern"** und **dann "Ansicht" in Teams** aus, um Die Szene in Microsoft Teams schnell zu testen.
 
     * Wenn Sie **"Ansicht" in Teams** auswählen, wird automatisch eine Microsoft Teams App erstellt, die auf der Seite **"Apps"** im Teams Entwicklerportal angezeigt werden kann.
-    * Wenn Sie **"Ansicht" in Teams** auswählen, wird automatisch ein App-Paket erstellt, das hinter der Szene appmanifest.jswird. Sie können über das Menü zu  **Apps** wechseln und auf das automatisch erstellte App-Paket zugreifen.
+    * Wenn Sie **"Ansicht" in Teams** auswählen, wird automatisch ein App-Paket erstellt, das "appmanifest.json" hinter der Szene ist. Sie können über das Menü zu  **Apps** wechseln und auf das automatisch erstellte App-Paket zugreifen.
     * Um eine von Ihnen erstellte Szene zu löschen, wählen Sie die Szene auf der oberen Leiste **löschen** aus.
 
-1. Wählen Sie **in "Ansicht" in Teams** in Teams die Option **"Vorschau"** aus.
+1. Wählen Sie **in "Ansicht" in Teams** die Option **"Vorschau" in Teams** aus.
 1. Wählen Sie im daraufhin angezeigten Dialogfeld **"Hinzufügen"** aus.
 
     Die Szene wird getestet oder durch Erstellen einer Testbesprechung und Starten benutzerdefinierter Szenen im Zusammen-Modus aufgerufen. Weitere Informationen finden Sie unter [Aktivieren benutzerdefinierter Szenen im Zusammen-Modus:](#activate-custom-together-mode-scenes)
@@ -124,19 +127,19 @@ Optional können Sie im Dropdownmenü **"Speichern"** die Option **"Freigeben"**
 
 Nach der Vorschau wird die Szene als App an Teams ausgeliefert, indem die Schritte für die App-Übermittlung ausgeführt werden. Für diesen Schritt ist das App-Paket erforderlich. Das App-Paket unterscheidet sich vom Szenenpaket für die Szene, die entworfen wurde. Das automatisch erstellte App-Paket befindet sich im Abschnitt **"Apps"** im Teams Developer Center.
 
-Optional wird das Szenenpaket abgerufen, indem im Dropdownmenü **"Speichern"** die Option **"Exportieren"** ausgewählt wird. Eine **.zip** Datei, bei der es sich um das Szenenpaket handelt, wird heruntergeladen. Das Szenenpaket enthält eine scene.jsund die PNG-Objekte, die zum Erstellen einer Szene verwendet werden. Das Szenenpaket wird auf andere Änderungen überprüft:
+Optional wird das Szenenpaket abgerufen, indem im Dropdownmenü **"Speichern"** die Option **"Exportieren"** ausgewählt wird. Eine .zipDatei, d. h. das Szenenpaket, wird heruntergeladen. Das Szenenpaket enthält "scene.json" und die PNG-Objekte, die zum Erstellen einer Szene verwendet werden. Das Szenenpaket wird auf andere Änderungen überprüft:
 
 ![Exportieren einer Szene](../assets/images/apps-in-meetings/build-a-scene.png)
 
 Eine komplexe Szene, die die Z-Achse verwendet, wird im Schritt-für-Schritt-Beispiel für die ersten Schritte veranschaulicht.
 
-## <a name="sample-scenejson"></a>Beispiel scene.json
+## <a name="sample-scenejson"></a>Beispiel für scene.json
 
-Scene.jszusammen mit den Bildern gibt die genaue Position der Arbeitsplätze an. Eine Szene besteht aus Bitmapbildern, Sprites und Rechtecke, in die Teilnehmervideos eingefügt werden. Diese Sprites und Teilnehmerfelder werden in einem Weltkoordinatensystem definiert. Die X-Achse zeigt nach rechts und die Y-Achse nach unten.
+Scene.json und die Bilder geben die genaue Position der Arbeitsplätze an. Eine Szene besteht aus Bitmapbildern, Sprites und Rechtecke, in die Teilnehmervideos eingefügt werden. Diese Sprites und Teilnehmerfelder werden in einem Weltkoordinatensystem definiert. Die X-Achse zeigt nach rechts und die Y-Achse nach unten.
 
 Szenen im benutzerdefinierten Zusammen-Modus unterstützen das Vergrößern der aktuellen Teilnehmer. Dieses Feature ist hilfreich für kleine Besprechungen in einer großen Szene. Ein Sprite ist ein statisches Bitmapbild, das in der Welt positioniert ist. Der Z-Wert des Sprite bestimmt die Position des Sprite. Das Rendern beginnt mit dem Sprite mit dem niedrigsten Z-Wert, daher bedeutet ein höherer Z-Wert, dass er näher an der Kamera ist. Jeder Teilnehmer verfügt über einen eigenen Videofeed, der segmentiert ist, sodass nur der Vordergrund gerendert wird.
 
-Der folgende Code ist der scene.jsim Beispiel:
+Der folgende Code ist das Scene.json-Beispiel:
 
 ```json
 {
@@ -201,11 +204,11 @@ Der folgende Code ist der scene.jsim Beispiel:
 }
 ```
 
-Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Die Szenen-JSON enthält auch Informationen zu allen Ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Arbeitsplatz eine Platz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Reihenfolge der Auslastung wird automatisch generiert und gemäß Der Einstellung geändert. Die Nummer der Reihenfolge entspricht der Reihenfolge der Personen, die dem Anruf beitreten.
+Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Die Szenen-JSON enthält auch Informationen zu allen Ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Arbeitsplatz eine Platz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Reihenfolge der Auslastung wird automatisch generiert und gemäß ihrer Präferenz geändert. Die Nummer der Reihenfolge entspricht der Reihenfolge der Personen, die dem Anruf beitreten.
 
 Dies stellt die Reihenfolge dar, in `zOrder` der Bilder und Arbeitsplätze entlang der Z-Achse platziert werden. Es gibt bei Bedarf ein Gefühl von Tiefe oder Partition. Sehen Sie sich das Beispiel für schrittweise erste Schritte an. Im Beispiel wird die `zOrder` .
 
-Nachdem Sie nun die Beispiel-scene.jsdurchlaufen haben, können Sie die benutzerdefinierten Szenen im Zusammen-Modus aktivieren, um szenenaktiviert zu werden.
+Nachdem Sie nun die Beispiel-Scene.json durchlaufen haben, können Sie die benutzerdefinierten Szenen im Together-Modus aktivieren, um szenenaktiviert zu werden.
 
 ## <a name="activate-custom-together-mode-scenes"></a>Aktivieren von Szenen im benutzerdefinierten Modus "Zusammen"
 

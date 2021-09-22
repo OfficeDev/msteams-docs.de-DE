@@ -3,12 +3,12 @@ title: Übersicht über universelle Aktionen für adaptive Karten
 description: Eine kurze Übersicht über universelle Aktionen für adaptive Karten.
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: e007f6b1f30e9bb1fe05e48272d598300a7942ae
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ba957456e2926e11b021f6a2577706cef7fb5ad7
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156486"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475713"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Universal-Aktionen für adaptive Karten
 
@@ -19,7 +19,7 @@ Universelle Aktionen für adaptive Karten stellt den Bot als allgemeines Back-En
 Dieses Dokument hilft Ihnen zu verstehen, wie Sie das Modell für universelle Aktionen verwenden können, um die Benutzerfreundlichkeit der Interaktion mit adaptiven Karten plattform- und anwendungsübergreifend zu verbessern.
 
 > [!NOTE]
-> Unterstützung für universelle Aktionen für adaptive Karten ist nur für vom Bot gesendete Karten verfügbar. Unterstützung für Karten, die über das Feld zum Verfassen gesendet werden, und die Verbreitung von Karten für Links wird in Kürze verfügbar sein.
+> Unterstützung für universelle Aktionen für adaptive Karten v1.4 ist nur für vom Bot gesendete Karten verfügbar. Unterstützung für Karten, die über das Feld zum Verfassen gesendet werden, und die Verbreitung von Karten für Links wird in Kürze verfügbar sein.
 
 ## <a name="enhance-user-experiences-with-universal-actions-for-adaptive-cards"></a>Verbessern der Benutzererfahrung mit universellen Aktionen für adaptive Karten
 
@@ -34,7 +34,7 @@ Universelle Aktionen für adaptive Karten verbessern die Benutzererfahrung, inde
 
 Vor den universellen Aktionen für adaptive Karten haben verschiedene Hosts wie folgt unterschiedliche Aktionsmodelle bereitgestellt:
 
-* Teams oder bots verwendet `Action.Submit` , ein Ansatz, der das tatsächliche Kommunikationsmodell auf den zugrunde liegenden Kanal zurücksetzt.
+* Teams oder bots verwendet `Action.Submit` , ein Ansatz, der das tatsächliche Kommunikationsmodell zum zugrunde liegenden Kanal zurücksetzt.
 * Outlook `Action.Http` für die Kommunikation mit dem Back-End-Dienst verwendet, der explizit in der Nutzlast der adaptiven Karte angegeben ist.
 
 Die folgende Abbildung zeigt das aktuelle inkonsistente Aktionsmodell:
@@ -47,7 +47,7 @@ Die folgende Abbildung zeigt das neue Modell für universelle Aktionen:
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="Neue universelle Aktionen für adaptive Karten":::
 
-Sie können jetzt die gleiche Karte an beide senden, Teams und Outlook, und sie mithilfe des zugrunde liegenden Bots synchronisieren. Alle Aktionen, die auf beiden Plattformen ausgeführt werden, werden mit diesem Build einmal auf die andere Plattform übernommen *und stellen ein beliebiges* Modell (Universelle Aktionen für adaptive Karten) bereit.
+Sie können jetzt die gleiche Karte an beide senden, Teams und Outlook, und sie mithilfe des zugrunde liegenden Bots miteinander synchronisieren. Alle Aktionen, die auf beiden Plattformen ausgeführt werden, werden mit diesem Build einmal auf die andere Plattform übernommen *und stellen ein beliebiges* Modell (Universelle Aktionen für adaptive Karten) bereit.
 
 Die folgende Abbildung zeigt die universellen Aktionen für adaptive Karten für Teams und Outlook:
 
@@ -57,7 +57,7 @@ Die folgende Abbildung zeigt die universellen Aktionen für adaptive Karten für
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Dieselbe Karte wie Teams und Outlook":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Gleiche Karte für Teams und Outlook":::
 
 * * *
 

@@ -4,12 +4,12 @@ description: Beschreibt die Authentifizierung in Teams und deren Verwendung in d
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams-Authentifizierung OAuth SSO AAD
-ms.openlocfilehash: 40d5659251b1faff087c6ee6458800ede2a5c840
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 9bcb5eb42cc22185684933caae210c5630414a4c
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156680"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475769"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Authentifizieren von Benutzern in Microsoft Teams
 
@@ -26,7 +26,7 @@ Verwenden Sie den webbasierten Authentifizierungsfluss für [Registerkarten,](~/
 
 * [Fügen Sie dem Teams Bot eine Authentifizierung](~/bots/how-to/authentication/add-authentication.md) hinzu, in der beschrieben wird, wie der webbasierte Authentifizierungsfluss mit einem Unterhaltungs-Bot verwendet wird.
 * [Der Authentifizierungsfluss in Registerkarten](~/tabs/how-to/authentication/auth-flow-tab.md) beschreibt, wie die Registerkartenauthentifizierung in Teams funktioniert. Dies zeigt einen typischen webbasierten Authentifizierungsfluss, der für Registerkarten verwendet wird.
-* [Die AAD-Authentifizierung in Registerkarten](~/tabs/how-to/authentication/auth-tab-AAD.md) beschreibt, wie Sie eine Verbindung mit AAD über eine Registerkarte in der App in Teams herstellen.
+* Die [AAD-Authentifizierung in Registerkarten](~/tabs/how-to/authentication/auth-tab-AAD.md) beschreibt, wie Sie eine Verbindung mit AAD über eine Registerkarte in der App in Teams herstellen.
 * [AAD](~/tabs/how-to/authentication/auth-silent-AAD.md) für die automatische Authentifizierung beschreibt, wie Anmelde- oder Zustimmungsaufforderungen in der App mithilfe von AAD reduziert werden.
 * [.Net oder C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) oder [JavaScript oder Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) enthält Beispiele für die webbasierte Authentifizierung.
 
@@ -37,7 +37,7 @@ Der OAuthPrompt-Flow von Azure Bot Framework erleichtert die Authentifizierung f
 Weitere Informationen zur Verwendung von OAuthPrompt finden Sie unter:
 
 * Die Übersicht über den [Bot-Authentifizierungsfluss](~/bots/how-to/authentication/auth-flow-bot.md) beschreibt, wie die Authentifizierung innerhalb eines Bots in der App in Teams funktioniert. Dies zeigt einen nicht webbasierten Authentifizierungsfluss, der für Bots in Teams Web, Desktop-App und mobilen Apps verwendet wird.
-* [Die Bot-Authentifizierung](~/bots/how-to/authentication/add-authentication.md) beschreibt, wie dem Teams Bot die OAuth-Authentifizierung hinzugefügt wird.
+* [Die Bot-Authentifizierung](~/bots/how-to/authentication/add-authentication.md) beschreibt, wie die OAuth-Authentifizierung dem Teams Bot hinzugefügt wird.
 
 ## <a name="code-sample"></a>Codebeispiel
 
@@ -54,3 +54,4 @@ bietet beispiel für die Bot-Authentifizierung v3 SDK.
 Konfigurieren Sie unabhängig vom Authentifizierungsfluss der App den Identitätsanbieter für die Kommunikation mit der Teams App. Die meisten Beispiele und exemplarischen Vorgehensweisen befassen sich hauptsächlich mit der Verwendung von AAD als Identitätsanbieter. Die Konzepte gelten jedoch unabhängig vom Identitätsanbieter.
 
 Weitere Informationen finden Sie unter [Konfigurieren eines Identitätsanbieters.](~/concepts/authentication/configure-identity-provider.md)
+

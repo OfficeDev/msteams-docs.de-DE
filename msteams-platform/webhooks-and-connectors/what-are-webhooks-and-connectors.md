@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Webhooks und Connectors Ihre Webdienste mit dem T
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 525d6e17400f9dd7b819f50d3c1ca89f155efca8
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3b7dd6b907ec1af0467c40bda53422cc75e503bc
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156986"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475757"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks und Connectors
 
@@ -29,11 +29,11 @@ Connectors ermöglichen Benutzern das Abonnieren von Benachrichtigungen und Nach
 
 ### <a name="incoming-webhooks"></a>Eingehende Webhooks
 
-Eingehende Webhooks helfen beim Veröffentlichen von Nachrichten von Apps in Teams. Wenn eingehende Webhooks für ein Team in einem beliebigen Kanal aktiviert sind, wird der HTTPS-Endpunkt verfügbar gemacht, der korrekt formatierte JSON akzeptiert und die Nachrichten in diesen Kanal einfügt. Sie können beispielsweise einen eingehenden Webhook in Ihrem DevOps Kanal erstellen, Ihren Build konfigurieren und gleichzeitig Dienste bereitstellen und überwachen, um Warnungen zu senden.
+Eingehende Webhooks helfen beim Veröffentlichen von Nachrichten von Apps in Teams. Wenn eingehende Webhooks für ein Team in einem beliebigen Kanal aktiviert sind, wird der HTTPS-Endpunkt verfügbar gemacht, der korrekt formatierte JSON akzeptiert und die Nachrichten in diesen Kanal einfügt. Sie können z. B. einen eingehenden Webhook in Ihrem DevOps Kanal erstellen, Ihren Build konfigurieren und gleichzeitig Dienste bereitstellen und überwachen, um Warnungen zu senden.
 
 ### <a name="office-365-connectors"></a>Office 365-Connectors
 
-Office 365 Mit Connectors können Sie eine benutzerdefinierte Konfigurationsseite für Ihren eingehenden Webhook erstellen und diese als Teil einer Teams-App verpacken. Sie senden Nachrichten in erster Linie mit Office 365 Connectorkarten und haben die Möglichkeit, ihnen einen begrenzten Satz von Kartenaktionen hinzuzufügen. Beispielsweise ein Wetterconnector, mit dem Benutzer einen Ort und eine Uhrzeit auswählen können, um Updates über das Wetter von morgen zu erhalten. Sie werden auf Kanalebene konfiguriert, aber auf Teamebene installiert.
+Office 365 Mit Connectors können Sie eine benutzerdefinierte Konfigurationsseite für Ihren eingehenden Webhook erstellen und diese als Teil einer Teams-App verpacken. Sie senden Nachrichten in erster Linie mit Office 365 Connectorkarten und haben die Möglichkeit, ihnen eine begrenzte Anzahl von Kartenaktionen hinzuzufügen. Beispielsweise ein Wetterconnector, mit dem Benutzer einen Ort und eine Uhrzeit auswählen können, um Updates über das Wetter von morgen zu erhalten. Sie werden auf Kanalebene konfiguriert, aber auf Teamebene installiert.
 
 > [!NOTE]
 > Sie können den Office 365 Connector Teams App an unseren AppStore verteilen.

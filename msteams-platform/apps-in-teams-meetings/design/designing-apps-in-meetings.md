@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Apps in Teams Besprechungen entwerfen und das
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 8b06dbbe7eba948800e9c35934798d4a6545108e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 5597752ad8698e45c33ec7e116cd684f22ff98a3
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156405"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475699"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen ihrer Microsoft Teams Besprechungserweiterung
 
@@ -18,7 +18,7 @@ Sie können Apps erstellen, um Besprechungen produktiver zu gestalten. Bitten Si
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
-Umfassendere Entwurfsrichtlinien, einschließlich Elementen, die Sie bei Bedarf abrufen und ändern können, finden Sie im Microsoft Teams UI Kit.
+Umfassendere Entwurfsrichtlinien, einschließlich Elementen, die Sie nach Bedarf abrufen und ändern können, finden Sie im Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
 > [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -104,7 +104,7 @@ Personen können die Registerkarte "Besprechungsinterne Besprechung" für Folgen
 |2|**App-Name**|
 |3|**Header:** Enthält ihren App-Namen.|
 |4 |**Schaltfläche "Schließen":** Schließt die Registerkarte. Verwenden Sie immer das Symbol zum Schließen oben rechts anstelle einer Aktion in der Fußzeile.|
-|5 |**Benachrichtigungsleiste:** Fehlerwarnungen werden direkt unterhalb der Kopfzeile angezeigt, und der iframe-Inhalt wird um 20 Pixel nach unten verschoben.|
+|5|**Benachrichtigungsleiste:** Fehlerwarnungen werden direkt unterhalb der Kopfzeile angezeigt, und der iframe-Inhalt wird um 20 Pixel nach unten verschoben.|
 |6 |**iframe:** Zeigt Ihre App-Inhalte an.|
 
 ### <a name="spacing"></a>Abstand
@@ -125,7 +125,7 @@ Beachten Sie Folgendes, wenn Sie den Bildlauf zulassen:
 
 ### <a name="navigation"></a>Navigation
 
-Für Szenarien mit Navigationsebenen oder umfangreichen Inhalten wird empfohlen, Dass Benutzer zu einer sekundären Ebene navigieren können. Benutzer müssen in der Lage sein, zur vorherigen Ebene zurückzukehren.
+Für Szenarien mit Navigationsebenen oder umfangreichen Inhalten wird empfohlen, Benutzern das Navigieren zu einer sekundären Ebene zu gestatten. Benutzer müssen in der Lage sein, zur vorherigen Ebene zurückzukehren.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="Beispiel zeigt die Navigation in Besprechungen." border="false":::
 
@@ -171,11 +171,11 @@ Es gibt zwei Kopfzeilenvarianten. Verwenden Sie nach Möglichkeit die Variante m
 |2|**App-Symbol**|
 |3|**App-Name**|
 |4 |**Schaltfläche "Schließen":** Schließt das Dialogfeld.|
-|5 |**Aktionszeichenfolge:** Beschreibt in der Regel, wer das Dialogfeld initiiert hat.|
+|5|**Aktionszeichenfolge:** Beschreibt in der Regel, wer das Dialogfeld initiiert hat.|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>Reaktionsfähiges Verhalten: Dialogfelder in Besprechungen
 
-Dialogfelder in Besprechungen können je nach Größe variieren, um unterschiedliche Szenarien zu berücksichtigen. Achten Sie darauf, abstands- und komponentengrößen beizubehalten.
+Dialogfelder in Besprechungen können je nach Größe variieren, um unterschiedliche Szenarien zu berücksichtigen. Achten Sie darauf, die Auffüllung und Komponentengrößen beizubehalten.
 
 * **Breite:** Sie können die Breite des iframe des Dialogfelds an einer beliebigen Stelle innerhalb des unterstützten Größenbereichs angeben.
 * **Höhe:** Sie können die Höhe des iFrames des Dialogfelds an einer beliebigen Stelle innerhalb des unterstützten Größenbereichs angeben. Sie können Benutzern auch den vertikalen Bildlauf ermöglichen, wenn Der App-Inhalt die maximale Höhe überschreitet.
@@ -186,10 +186,13 @@ Geben Sie zum Implementieren die Breite und Höhe mithilfe des [`externalResourc
 
 ## <a name="use-the-shared-meeting-stage"></a>Verwenden der freigegebenen Besprechungsphase
 
-Die freigegebene Besprechungsphase hilft Besprechungsteilnehmern, in Echtzeit mit App-Inhalten zu interagieren und daran zusammenzuarbeiten. Benutzer können sich beispielsweise auf die Bearbeitung eines Dokuments, brainstorming mit einem Whiteboard oder das Überprüfen eines Dashboards konzentrieren.
+Die freigegebene Besprechungsphase hilft Besprechungsteilnehmern bei der Interaktion und Zusammenarbeit mit App-Inhalten in Echtzeit. Die Benutzer können sich beispielsweise auf die Bearbeitung eines Dokuments, brainstorming mit einem Whiteboard oder das Überprüfen eines Dashboards konzentrieren.
 
 Für die Besprechungsphase freigegebene Apps belegen den gleichen Platz wie ein freigegebener Bildschirm. Die Phase wird für alle Besprechungsteilnehmer neu ausgerichtet.
 
+> [!NOTE]
+> Wenn eine App für die Desktopphase freigegeben ist, wird sie derzeit nur für die Benutzer in einer mobilen Besprechung angezeigt.
+ 
 ### <a name="use-cases"></a>Anwendungsfälle
 
 In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hier sind einige Beispielszenarien, die Ihnen bei den ersten Schritten helfen.
@@ -243,7 +246,7 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
 |2|**Schaltfläche "Für Besprechungsphase freigeben":** Der Einstiegspunkt, an dem die App für die Besprechungsphase freigegeben werden soll. Zeigt an, ob Sie Ihre App für die Verwendung der freigegebenen Besprechungsphase konfigurieren.|
 |3|**iframe:** Zeigt Ihre App-Inhalte an.|
 |4 |**Schaltfläche "Freigabe beenden":** Beendet die Freigabe der App für die Besprechungsphase. Zeigt nur für den Teilnehmer an, der die Freigabe gestartet hat.|
-|5 |**Zuschreibung** des Referenten: Zeigt den Namen des Teilnehmers an, der die App freigegeben hat.|
+|5|**Zuschreibung** des Referenten: Zeigt den Namen des Teilnehmers an, der die App freigegeben hat.|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>Reaktionsfähiges Verhalten: Freigegebene Besprechungsphase
 
@@ -266,7 +269,7 @@ Wenn der Seitenbereich geöffnet ist, beträgt die Besprechungsphase standardmä
 
 ## <a name="after-a-meeting"></a>Nach einer Besprechung
 
-Sie können zu einer Besprechung zurückkehren, nachdem sie beendet wurde, und App-Inhalte anzeigen. In diesem Beispiel kann der Besprechungsorganisator die Umfrageergebnisse auf der Registerkarte **"Contoso"** betrachten. (Hinweis: Aus Entwurfssicht gibt es keinen Unterschied zwischen der Registerkarte "Vor" und "Nach der Besprechung".)
+Sie können zu einer Besprechung zurückkehren, nachdem sie beendet wurde, und App-Inhalte anzeigen. In diesem Beispiel kann sich der Besprechungsorganisator die Umfrageergebnisse auf der Registerkarte **"Contoso"** ansehen. (Hinweis: Aus Entwurfssicht gibt es keinen Unterschied zwischen der Registerkarte "Vor" und "Nach der Besprechung".)
 
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Die Beispieldarstellung zeigt eine Registerkarte nach der Besprechung." border="false":::
 
@@ -360,7 +363,7 @@ Aufgrund des begrenzten Platzes der Besprechungsregisterkarte werden Layouts mit
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="Beispiel, das zeigt, wie primäre Steuerelemente rechts ausgerichtet werden." border="false":::
 
-#### <a name="do-right-align-the-primary-action"></a>Do: Rechtsgündige Ausrichtung der primären Aktion
+#### <a name="do-right-align-the-primary-action"></a>Do: Ausrichtung der primären Aktion nach rechts
 
 Wir empfehlen, die visuell schwerste Aktion am rechten Ort zu positionieren.
 
@@ -370,7 +373,7 @@ Wir empfehlen, die visuell schwerste Aktion am rechten Ort zu positionieren.
 
 #### <a name="dont-left-or-center-align-actions"></a>Nicht empfohlen: Aktionen links oder zentr werden ausgerichtet
 
-Dies weicht vom standard Teams Muster für die Platzierung von Steuerelementen in einem Dialogfeld ab und kann mit einem Dialogfeld hinter dem oberen Dialogfeld in Konflikt geraten.
+Dies weicht vom standard Teams Muster für die Platzierung von Steuerelementen in einem Dialogfeld ab und kann zu Konflikten mit einem Dialogfeld hinter dem oberen Dialogfeld führen.
 
    :::column-end:::
 :::row-end:::
@@ -434,7 +437,7 @@ Besprechungsdialogfelder sind für kurze Interaktionen vorgesehen.
 
 #### <a name="do-focus-on-dark-theme"></a>Do: Fokus auf dunklem Design
 
-Teams Besprechungen sind für dunkles Design optimiert, um visuelles und kognitives Rauschen zu reduzieren, damit sich Benutzer auf die Diskussion und freigegebene Inhalte konzentrieren können. Beachten Sie, dass bestimmte Arten von Apps (z. B. Whiteboarding und Dokumentbearbeitung) keinen dunklen Zeichenbereich benötigen.
+Teams Besprechungen sind für dunkles Design optimiert, um visuelles und kognitives Rauschen zu reduzieren, sodass sich Benutzer auf die Diskussion und freigegebene Inhalte konzentrieren können. Beachten Sie, dass bestimmte Arten von Apps (z. B. Whiteboarding und Dokumentbearbeitung) keinen dunklen Zeichenbereich benötigen.
 
    :::column-end:::
    :::column span="":::
@@ -475,7 +478,7 @@ Das Bereitstellen einer Option zum Schließen von Besprechungsregisterkarteninha
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Beispiel für modale Elemente (oder Aufgabenmodule) innerhalb einer Besprechungsregisterkarte." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Beispiel für modale Elemente (oder Aufgabenmodule) auf einer Besprechungsregisterkarte." border="false":::
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>Vorsicht: Vermeiden Sie modale Elemente auf der Registerkarte "Besprechung".
 
