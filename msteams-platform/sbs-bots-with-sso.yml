@@ -11,114 +11,28 @@ metadata:
   nextTutorialTitle: Weitere Informationen zur Bot-Authentifizierung
   ms.custom: mvc
   ms.localizationpriority: none
-  ms.openlocfilehash: 631caa72700165172619fc7a80a6cff2ad6e072f
-  ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+  ms.openlocfilehash: 499ffa135fb1a4a4066a8780d5113fc8505d86b9
+  ms.sourcegitcommit: e1e37cfbecba3a6b382f19379996cc423cd99dac
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/12/2021
-  ms.locfileid: "59156237"
+  ms.lasthandoff: 09/23/2021
+  ms.locfileid: "59485806"
 items:
 - durationInMinutes: 1
-  content: "Teams Bots sind Unterhaltungs-Bots, die sich wiederholende automatisierte Aufgaben ausführen, die von den Benutzern ausgeführt werden, z. B. den Kundendienst. Der Benutzer muss sich mehrmals mit den Anmeldeinformationen anmelden, um sich wiederholende Aufgaben auszuführen. Die SSO-Authentifizierungsmethode (Single Sign-On) in Azure Active Directory (AAD) aktualisiert das Authentifizierungstoken im Hintergrund. Dies führt dazu, dass Benutzer weniger häufig ihre Anmeldeinformationen eingeben müssen. \n\nEin Bot verhält sich abhängig von der Unterhaltung, an der er beteiligt ist, unterschiedlich:\n\n* Bots in Kanal- und Gruppenchatunterhaltungen erfordern, dass der Benutzer den Bot @mention muss.\n* Für Bots in einer 1:1-Unterhaltung ist keine @Erwähnung erforderlich. Alle vom Benutzer gesendeten Nachrichten werden an den Bot weitergeleitet.\n\nDiese Schritt-für-Schritt-Anleitung hilft Ihnen beim Erstellen eines Bots mit aktivierter SSO-Authentifizierung. Die folgende Ausgabe wird angezeigt:\n\n![Mobile bei Bot angemeldet](~/assets/images/bots/sbs-desktop-mobile.png)\n"
+  content: "Teams Bots sind Unterhaltungsbots, die sich wiederholende automatisierte Aufgaben ausführen, die von den Benutzern ausgeführt werden, z. B. den Kundendienst. Der Benutzer muss sich mehrmals mit den Anmeldeinformationen anmelden, um sich wiederholende Aufgaben auszuführen. Die SSO-Authentifizierungsmethode (Single Sign-On) in Azure Active Directory (AAD) aktualisiert das Authentifizierungstoken im Hintergrund. Dies führt dazu, dass Benutzer weniger häufig ihre Anmeldeinformationen eingeben müssen. \n\nEin Bot verhält sich abhängig von der Unterhaltung, an der er beteiligt ist, unterschiedlich:\n\n* Bots in Kanal- und Gruppenchatunterhaltungen erfordern, dass der Benutzer den Bot @mention muss.\n* Für Bots in einer 1:1-Unterhaltung ist keine @Erwähnung erforderlich. Alle vom Benutzer gesendeten Nachrichten werden an den Bot weitergeleitet.\n\nDiese Schritt-für-Schritt-Anleitung hilft Ihnen beim Erstellen eines Bots mit aktivierter SSO-Authentifizierung. Die folgende Ausgabe wird angezeigt:\n\n![Mobile bei Bot angemeldet](~/assets/images/bots/sbs-desktop-mobile.png)\n"
 - title: Voraussetzungen
   durationInMinutes: 1
   content: "Stellen Sie sicher, dass Sie die folgenden Tools installieren und Ihre Entwicklungsumgebung einrichten:  \n\n* Microsoft Teams mit einem Konto (kein Gastkonto)\n* [ngrok](https://ngrok.com/) oder eine entsprechende Tunnellösung\n* Visual Studio 2019 oder die neueste Version\n* [Microsoft 365 Entwicklerkonto](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) oder Zugriff auf Teams Konto mit den entsprechenden Berechtigungen zum Installieren einer App\n"
 - title: Einrichten eines Bots im Azure Bot Service
   durationInMinutes: 5
-  content: "Um den Bot mit SSO zu authentifizieren, können Sie den Bot im Azure Bot Service einrichten. Registrieren Sie den Bot beim Azure Bot Service, wenn Sie ihn in Azure entwickeln und hosten. Führen Sie die folgenden Schritte durch:\n\n* Verwenden Sie ngrok, um einen Tunnel zu den Endpunkten Ihres Webservers zu erstellen.\n* Erstellen Sie eine Azure Bot-Ressource, um den Bot beim Azure Bot Service zu registrieren.\n* Erstellen Sie einen geheimen Clientschlüssel, der die SSO-Authentifizierung des Bots ermöglicht.\n* Fügen Sie Microsoft Teams Kanal hinzu, um den Bot in einem Teams Kanal bereitzustellen.\n* Fügen Sie dem ngrok-Tunnel, den Sie erstellt haben, einen Messaging-Endpunkt hinzu.\n\nVerwenden Sie ngrok, um einen Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten Ihres lokal ausgeführten Webservers zu erstellen. Führen Sie den folgenden Befehl in ngrok aus:\n\n```bash\nngrok http -host-header=rewrite 3978\n```\n\n**So erstellen Sie eine Azure Bot-Ressource**\n\n1. Gehen Sie zum [Azure-Portal](https://portal.azure.com/).\n1. Wählen Sie **Ressource erstellen** aus.\n1. Geben Sie im Suchfeld den **Azure-Bot** ein, und drücken Sie die EINGABETASTE.\n1. Wählen Sie **Azure Bot** aus.\n\n    ![Erstellen einer Azure-Botkarte](~/assets/images/bots/createazurebot.png)\n\n1. Wählen Sie **Erstellen** aus.\n1. Geben Sie den erforderlichen Bot-Handlenamen in **bot handle** ein.\n1. Wählen Sie in der Dropdownliste **Abonnement** das Abonnement aus.\n1. Wählen Sie in der Dropdownliste **\"Ressourcengruppe\"** die Ressourcengruppe aus.\n    \n    Um eine neue Ressource zu erstellen, wählen Sie **\"Neu erstellen\"** aus, geben Sie den Ressourcennamen ein, wählen Sie **\"OK\"** aus, und wählen Sie den erforderlichen Speicherort aus der Dropdownliste **\"Neuer Ressourcengruppenstandort\"** aus.\n\n    > [!NOTE]\n    > Im Abschnitt \"Microsoft App ID\" ist **\"Neue Microsoft App-ID erstellen\"** bereits ausgewählt. Sie können vorhandene **App-Registrierung** verwenden auswählen, **vorhandene App-ID** eingeben und **vorhandenes App-Kennwort** eingeben.\n\n1. Wählen Sie **Überprüfen + erstellen** aus.\n\n    <img src=\"~/assets/images/bots/Azurebotcreate.png\" alt=\"Create resource Azure bot\" width=\"700\"/>\n\n1. Wenn die Überprüfung erfolgreich ist, wählen Sie **Erstellen** aus.\n\n    Es dauert ein paar Minuten, bis Ihr Bot-Dienst bereitgestellt wurde.\n\n1. Wählen Sie **Zu Ressource wechseln** aus. Der Bot und die zugehörigen Ressourcen werden in der Ressourcengruppe aufgeführt.\n\n    Jetzt wurde Ihr Azure-Bot erstellt.\n\n    ![Azure-Botressource erstellt](~/assets/images/bots/Azurebotresource.png)\n\n**So erstellen Sie einen geheimen Clientschlüssel**\n\n1. Wählen Sie **in Einstellungen** die Option **\"Konfiguration\"** aus. Speichern Sie die **Microsoft App-ID** (Client-ID) für zukünftige Verweise.\n1. Wählen Sie neben **der Microsoft App-ID** die Option **\"Verwalten\"** aus.\n\n    ![Microsoft-App-ID](~/assets/images/bots/MicrosoftAppID.png)\n\n1. Wählen Sie im Abschnitt **\"Geheime Clientschlüssel\"** die Option **\"Neuer geheimer Clientschlüssel\" aus.** Das Fenster **\"Geheimen Clientschlüssel hinzufügen\"** wird angezeigt.  \n\n1. Geben Sie **\"Beschreibung\" ein,** und wählen Sie **\"Hinzufügen\"** aus.\n\n    <img src=\"~/assets/images/bots/addclientsecret.png\" alt=\"Add client secret to app\" width=\"500\"/>\n\n1. Wählen Sie in der Spalte **Wert** die Option **\"In Zwischenablage kopieren\"** aus, und speichern Sie die geheime Clientschlüssel-ID für zukünftige Verweise.\n\n   ![Wert des geheimen Clientschlüssels](~/assets/images/bots/valueclientsecret.png)\n\n**So fügen Sie den Microsoft Teams Kanal hinzu**\n\n1. Go to **Home**.\n\n    <img src=\"~/assets/images/bots/homepage.png\" alt=\"Home page\" width=\"600\"/>\n\n1. Öffnen Sie Ihren Bot, der im Abschnitt **\"Zuletzt verwendete Ressourcen\"** aufgeführt ist.\n1. Wählen Sie im linken Bereich **Kanäle** aus, und wählen Sie **Teams** <img src=\"~/assets/images/bots/teamsicon.png\" alt=\"Teams icon\" width=\"20\"/>.\n1. Klicken Sie auf **Speichern**.\n1. Aktivieren Sie das Kontrollkästchen, um die Nutzungsbedingungen zu akzeptieren, und wählen Sie **\"Zustimmen\"** aus.\n\n**So fügen Sie einen Messaging-Endpunkt hinzu**\n\n1. Wählen Sie **in Einstellungen** für den azure-Bot, den Sie erstellt haben, die Option **\"Konfiguration\"** aus.\n1. Wechseln Sie zu \"ngrok\".\n1. Kopieren Sie die HTTPS-URL (https zu io), wie in der folgenden Abbildung dargestellt:\n\n    ![ngrok HTTPS-URL](~/assets/images/bots/ngrokURL.png)\n\n1. Verwenden Sie im **Messaging-Endpunkt** die HTTPS-URL, die über ngrok verfügbar ist, und fügen Sie am Ende der URL **/api/messages** hinzu.\n\n    <img src=\"~/assets/images/bots/messagingURL.png\" alt=\"Messaging endpoint\" width=\"600\"/>\n\n1. Wählen Sie **Anwenden** aus.\n\n    Sie haben erfolgreich einen Bot im Azure Bot Service eingerichtet, und jetzt müssen Sie eine Bot-Dienstverbindung einrichten.\n"
+  content: "Um den Bot mit SSO zu authentifizieren, können Sie den Bot im Azure Bot Service einrichten. Registrieren Sie den Bot beim Azure Bot Service, wenn Sie ihn in Azure entwickeln und hosten. Führen Sie die folgenden Schritte durch:\n\n* Verwenden Sie ngrok, um einen Tunnel zu den Endpunkten Ihres Webservers zu erstellen.\n* Erstellen Sie eine Azure Bot-Ressource, um den Bot beim Azure Bot Service zu registrieren.\n* Erstellen Sie einen geheimen Clientschlüssel, der die SSO-Authentifizierung des Bots ermöglicht.\n* Fügen Sie Microsoft Teams Kanal hinzu, um den Bot in einem Teams Kanal bereitzustellen.\n* Fügen Sie dem ngrok-Tunnel, den Sie erstellt haben, einen Messaging-Endpunkt hinzu.\n\nVerwenden Sie ngrok, um einen Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten Ihres lokal ausgeführten Webservers zu erstellen. Führen Sie den folgenden Befehl in ngrok aus:\n\n```bash\nngrok http -host-header=rewrite 3978\n```\n\n**So erstellen Sie eine Azure Bot-Ressource**\n\n1. Gehen Sie zum [Azure-Portal](https://portal.azure.com/).\n1. Wählen Sie **Ressource erstellen** aus.\n1. Geben Sie im Suchfeld den **Azure-Bot** ein, und drücken Sie die EINGABETASTE.\n1. Wählen Sie **Azure Bot** aus.\n\n    ![Erstellen einer Azure-Botkarte](~/assets/images/bots/createazurebot.png)\n\n1. Wählen Sie **Erstellen** aus.\n1. Geben Sie den erforderlichen Bot-Handlenamen in **bot handle** ein.\n1. Wählen Sie in der Dropdownliste **Abonnement** das Abonnement aus.\n1. Wählen Sie in der Dropdownliste **\"Ressourcengruppe\"** die Ressourcengruppe aus.\n    \n    Um eine neue Ressource zu erstellen, wählen Sie **\"Neu erstellen\"** aus, geben Sie den Ressourcennamen ein, wählen Sie **\"OK\"** aus, und wählen Sie den erforderlichen Speicherort aus der Dropdownliste **\"Neuer Ressourcengruppenstandort\"** aus.\n\n    > [!NOTE]\n    > Im Abschnitt \"Microsoft App ID\" ist **\"Neue Microsoft App-ID erstellen\"** bereits ausgewählt. Sie können vorhandene **App-Registrierung** verwenden auswählen, **vorhandene App-ID** eingeben und **vorhandenes App-Kennwort** eingeben.\n\n1. Wählen Sie **Überprüfen + erstellen** aus.\n\n    <img src=\"~/assets/images/bots/Azurebotcreate.png\" alt=\"Create resource Azure bot\" width=\"700\"/>\n\n1. Wenn die Überprüfung erfolgreich ist, wählen Sie **Erstellen** aus.\n\n    Es dauert ein paar Minuten, bis Ihr Bot-Dienst bereitgestellt wurde.\n\n1. Wählen Sie **Zu Ressource wechseln** aus. Der Bot und die zugehörigen Ressourcen werden in der Ressourcengruppe aufgeführt.\n\n    Jetzt wurde Ihr Azure-Bot erstellt.\n\n    ![Azure-Botressource erstellt](~/assets/images/bots/Azurebotresource.png)\n\n**So erstellen Sie einen geheimen Clientschlüssel**\n\n1. Wählen Sie **in Einstellungen** die Option **\"Konfiguration\"** aus. Speichern Sie die **Microsoft App-ID** (Client-ID) für zukünftige Verweise.\n1. Wählen Sie neben **der Microsoft App-ID** die Option **\"Verwalten\"** aus.\n\n     ![Microsoft-App-ID](~/assets/images/bots/MicrosoftAppID.png)\n\n1. Wählen Sie im Abschnitt **\"Geheime Clientschlüssel\"** die Option **\"Neuer geheimer Clientschlüssel\" aus.** Das Fenster **\"Geheimen Clientschlüssel hinzufügen\"** wird angezeigt.  \n\n1. Geben Sie **\"Beschreibung\" ein,** und wählen Sie **\"Hinzufügen\"** aus.\n\n    <img src=\"~/assets/images/bots/addclientsecret.png\" alt=\"Add client secret to app\" width=\"500\"/>\n\n1. Wählen Sie in der Spalte **Wert** die Option **\"In Zwischenablage kopieren\"** aus, und speichern Sie die geheime Clientschlüssel-ID für zukünftige Verweise.\n\n     ![Wert des geheimen Clientschlüssels](~/assets/images/bots/valueclientsecret.png)\n   \n**So fügen Sie den Microsoft Teams Kanal hinzu**\n\n1. Go to **Home**.\n\n    <img src=\"~/assets/images/bots/homepage.png\" alt=\"Home page\" width=\"600\"/>\n\n1. Öffnen Sie Ihren Bot, der im Abschnitt **\"Zuletzt verwendete Ressourcen\"** aufgeführt ist.\n1. Wählen Sie im linken Bereich **Kanäle** aus, und wählen Sie **Teams** <img src=\"~/assets/images/bots/teamsicon.png\" alt=\"Teams icon\" width=\"20\"/>.    \n      ![Öffnen Teams über Kanäle](~/assets/images/bots/channel-teams.png)    \n      ![Auswählen Teams](~/assets/images/bots/select-teams.png)    \n1. Wählen Sie **Speichern** aus.\n1. Aktivieren Sie das Kontrollkästchen, um die Nutzungsbedingungen zu akzeptieren, und wählen Sie **\"Zustimmen\"** aus.</br>\n      ![Nutzungsbedingungen](~/assets/images/bots/select-terms-of-service.png)\n\n**So fügen Sie einen Messaging-Endpunkt hinzu**\n\n1. Wählen Sie **in Einstellungen** für den azure-Bot, den Sie erstellt haben, die Option **\"Konfiguration\"** aus.\n1. Wechseln Sie zu \"ngrok\".\n1. Kopieren Sie die HTTPS-URL (https zu io), wie in der folgenden Abbildung dargestellt:\n\n    ![ngrok HTTPS-URL](~/assets/images/bots/ngrokURL.png)\n\n1. Verwenden Sie im **Messaging-Endpunkt** die HTTPS-URL, die über ngrok verfügbar ist, und fügen Sie am Ende der URL **/api/messages** hinzu.\n\n    <img src=\"~/assets/images/bots/messagingURL.png\" alt=\"Messaging endpoint\" width=\"600\"/>\n\n1. Wählen Sie **Anwenden** aus.\n\n    Sie haben erfolgreich einen Bot im Azure Bot Service eingerichtet, und jetzt müssen Sie eine Bot-Dienstverbindung einrichten.\n"
 - title: Konfigurieren von SSO für Ihren Bot
   durationInMinutes: 5
-  content: >
-    Um sicherzustellen, dass der Bot-Dienst benutzern die Anmeldung und den Zugriff auf den Bot ermöglicht, müssen Sie SSO für Ihren Bot konfigurieren. Führen Sie dazu die folgenden Schritte aus:
-
-
-    * Fügen Sie der Azure-Bot-Ressource einen Umleitungs-URI hinzu.
-
-    * Machen Sie den API-Endpunkt verfügbar, um den Speicherort anzugeben, von dem aus auf die Ressourcen zugegriffen werden kann.
-
-    * Einrichten einer Bot-Dienstverbindung.
-
-
-    **So fügen Sie der Azure-Botressource einen Umleitungs-URI hinzu**
-
-
-    1. Wählen Sie im linken Bereich Der Bot-Ressource **Authentifizierung** aus.
-
-    1. Wählen Sie in **Plattformkonfigurationen** **eine Plattform hinzufügen** aus.
-
-    1. Klicken Sie auf **Web**.
-
-
-    1. Geben Sie **Umleitungs-URIs** **https://token.botframework.com/.auth/web/redirect** ein, und wählen Sie **"Konfigurieren" aus.**
-
-        <img src="~/assets/images/bots/redirectURI.png" alt="Configure Redirect URI" width="600"/>
-
-        Der Umleitungs-URI wird der Azure-Bot-Ressource hinzugefügt.
-
-        ![Umleitungs-URI zur Bot-Ressource hinzugefügt](~/assets/images/bots/redirectURIadded.png)
-
-    **So machen Sie den API-Endpunkt verfügbar**
-
-
-    1. Wählen Sie im linken Bereich **"API verfügbar machen"** aus.
-
-    1. Wählen Sie **"Festlegen"** für den Anwendungs-ID-URI aus.
-
-    1. Verwenden Sie den angezeigten Anwendungs-ID-URI, und fügen **Sie api://botid-** am Anfang des URI an.
-
-        <img src="~/assets/images/bots/exposeAPI.png" alt="Expose an API" width="500"/>
-
-    1. Klicken Sie auf **Speichern**. Speichern Sie den **Anwendungs-ID-URI** für zukünftige Verweise.
-
-    1. Wählen Sie **Bereich hinzufügen**.
-
-    1. Geben Sie im **Bereichsnamen** **access_as_user** ein.
-
-    1. Wechseln **Sie in Wer zustimmen können?** zu Administratoren und **Benutzern.**
-
-    1. Geben Sie die folgenden Werte in die Felder ein:
-
-        | Feld | Wert |
-        | ----- | ----- |
-        | Anzeigename der Administratorzustimmung | Teams können auf das Profil des Benutzers zugreifen |
-        | Beschreibung der Administratorzustimmung | Ermöglicht Teams, die Web-APIs der App als aktueller Benutzer aufzurufen. |
-        | Anzeigename der Zustimmung des Benutzers | Teams können auf Ihr Benutzerprofil zugreifen und Anforderungen in Ihrem Auftrag stellen. |
-        | Beschreibung der Zustimmung des Benutzers | Aktivieren Sie Teams, um die APIs dieser App mit den gleichen Rechten aufzurufen, über die Sie verfügen. |
-
-    1. Stellen Sie sicher, **Zustand** auf **Aktiviert** festgelegt ist.
-
-        <img src="~/assets/images/bots/addscope.png" alt="Add a scope to app" width="500"/>
-
-    1. Klicken Sie auf **Bereich hinzufügen**. Der Bereichsname stimmt automatisch mit dem Anwendungs-ID-URI überein, wobei **/access_as_user** am Ende hinzugefügt wird.
-
-        ![API verfügbar gemacht und Bereich hinzugefügt](~/assets/images/bots/ExposeAPIandaddscope.png)
-
-    **So richten Sie eine Bot-Dienstverbindung ein**
-
-
-    1. Wählen **Sie OAuth-Verbindung hinzufügen Einstellungen** aus.
-
-    1. Geben Sie unter **"Neue Verbindungseinstellung"** die folgenden Details ein:
-
-        | Feld | Wert oder Beschreibung |
-        | ----- | ----- |
-        | Name | Geben Sie den Namen für die neue Verbindungseinstellung ein. Sie können den Namen in den Einstellungen Ihres Bot-Dienstcodes verwenden. |
-        | Service Provider | Wählen Sie **Azure Active Directory V2 aus.** |
-        | Client-ID | Zuvor als **Microsoft-App-ID** gespeichert. |
-        | Geheimer Clientschlüssel | Zuvor als **Wert** der geheimen Clientschlüssel-ID gespeichert. |
-        | Token-Exchange-URL | Verwenden Sie die zuvor beim Verfügbarmachen des API-Endpunkts abgerufene **Anwendungs-ID-URL.** |
-        | Mandanten-ID | Geben Sie **allgemeine**. |
-        | Scopes | Geben Sie **"User.Read"** ein, und fügen Sie auch alle erforderlichen **Bereiche** hinzu, während Sie Berechtigungen für downstreame APIs angeben. |
-
-        <img src="~/assets/images/bots/botserviceconnection.png" alt="Bot Service connection" width="300"/>
-
-    1. Klicken Sie auf **Speichern**.
-
-    1. Wählen Sie **Anwenden** aus.
+  content: "Um sicherzustellen, dass der Bot-Dienst benutzern die Anmeldung und den Zugriff auf den Bot ermöglicht, müssen Sie SSO für Ihren Bot konfigurieren. Führen Sie dazu die folgenden Schritte aus:\n\n* Fügen Sie der Azure-Bot-Ressource einen Umleitungs-URI hinzu.\n* Machen Sie den API-Endpunkt verfügbar, um den Speicherort anzugeben, von dem aus auf die Ressourcen zugegriffen werden kann.\n* Autorisieren von Clientanwendungen.\n* Fügen Sie alle erforderlichen API-Berechtigungen für downstream-Aufrufe hinzu.\n* Aktivieren Sie die implizite Genehmigung.\n* Aktualisieren sie das Manifest.\n* Einrichten einer Bot Service-Verbindung.\n\n**So fügen Sie der Azure-Botressource einen Umleitungs-URI hinzu**\n\n1. Wählen Sie neben **der Microsoft App-ID** die Option **\"Verwalten\"** aus.</br>\n    ![Verwalten der App-ID](~/assets/images/bots/select-manage.png)\n1. Wählen Sie im linken Bereich Der Bot-Ressource **Authentifizierung** aus.\n1. Wählen Sie in **Plattformkonfigurationen** **eine Plattform hinzufügen** aus.\n1. Klicken Sie auf **Web**.\n\n1. Geben Sie **Umleitungs-URIs** **https://token.botframework.com/.auth/web/redirect** ein, und wählen Sie **\"Konfigurieren\" aus.**\n\n    <img src=\"~/assets/images/bots/redirectURI.png\" alt=\"Configure Redirect URI\" width=\"600\"/>\n\n    Der Umleitungs-URI wird der Azure-Bot-Ressource hinzugefügt.\n\n    ![Umleitungs-URI zur Bot-Ressource hinzugefügt](~/assets/images/bots/redirectURIadded.png)\n\n**So machen Sie den API-Endpunkt verfügbar**\n\n1. Wählen Sie im linken Bereich **\"API verfügbar machen\"** aus.\n1. Wählen Sie **\"Festlegen\"** für den Anwendungs-ID-URI aus.\n1. Verwenden Sie den angezeigten Anwendungs-ID-URI, und fügen **Sie api://botid** - am Anfang des URI an.\n\n    <img src=\"~/assets/images/bots/exposeAPI.png\" alt=\"Expose an API\" width=\"500\"/>\n\n1. Wählen Sie **Speichern** aus. Speichern Sie den **Anwendungs-ID-URI** für zukünftige Verweise.\n1. Wählen Sie **Bereich hinzufügen**.\n1. Geben Sie im **Bereichsnamen** **access_as_user** ein.\n1. Wechseln **Sie in Wer zustimmen können?** zu Administratoren und **Benutzern.**\n1. Geben Sie die folgenden Werte in die Felder ein:\n\n    | Feld | Wert |\n    | ----- | ----- |\n    | Anzeigename der Administratorzustimmung | Teams können auf das Profil des Benutzers zugreifen |\n    | Beschreibung der Administratorzustimmung | Ermöglicht Teams, die Web-APIs der App als aktueller Benutzer aufzurufen. |\n    | Anzeigename der Zustimmung des Benutzers | Teams können auf Ihr Benutzerprofil zugreifen und Anforderungen in Ihrem Auftrag stellen. |\n    | Beschreibung der Zustimmung des Benutzers | Aktivieren Sie Teams, um die APIs dieser App mit den gleichen Rechten aufzurufen, über die Sie verfügen. |\n\n1. Stellen Sie sicher, **Zustand** auf **Aktiviert** festgelegt ist.\n\n    <img src=\"~/assets/images/bots/addscope.png\" alt=\"Add a scope to app\" width=\"500\"/>\n\n1. Klicken Sie auf **Bereich hinzufügen**. Der Bereichsname stimmt automatisch mit dem Anwendungs-ID-URI überein, wobei **/access_as_user** am Ende hinzugefügt wird.\n\n    ![API verfügbar gemacht und Bereich hinzugefügt](~/assets/images/bots/ExposeAPIandaddscope.png)\n\n**So autorisieren Sie Clientanwendungen**\n\nFügen Sie die folgenden IDs als **autorisierte Clientanwendungen** hinzu, und aktivieren Sie außerdem das Kontrollkästchen für **autorisierte Bereiche:**      \n* 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile oder Desktopanwendung)            \n* 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams Webanwendung)</br>     \n    ![Hinzufügen einer Clientanwendung zur App](~/assets/images/bots/addclientapplication1.png)        \n\n**So fügen Sie alle erforderlichen API-Berechtigungen für downstream-Aufrufe hinzu**\n\n1. Wählen Sie im linken Bereich **API-Berechtigungen** aus.\n1. Fügen Sie alle delegierten Benutzerberechtigungen hinzu, die Ihre App für downstreame APIs benötigt, z. B. User.Read.</br>\n    ![API-Benutzerberechtigungen](~/assets/images/bots/APIpermissions.png)\n\n**So aktivieren Sie die implizite Genehmigung**\n\n1. Wählen Sie im linken Bereich die **Authentifizierung** aus.\n1. Aktivieren Sie die **Kontrollkästchen für Zugriffstoken** und **ID-Token.**</br>\n    ![Authentifizierungskontrollkästchen für die App](~/assets/images/bots/authenticationcheckboxes.png)\n1. Wählen Sie **\"Speichern\"** aus, um die Änderungen zu speichern.\n\n**So aktualisieren Sie das Manifest**\n\n1. Wählen  Sie im linken Bereich Manifest aus.\n1. Stellen Sie sicher, dass das Konfigurationselement auf **\"accessTokenAcceptedVersion\" festgelegt ist: 2**. Wenn nicht, ändern Sie den Wert auf **2,** und wählen Sie **Speichern** aus. (Wenn Sie Ihren Bot bereits in Teams testen, müssen Sie diese App signieren und Teams abmelden. Melden Sie sich dann erneut an, um diese Änderung anzuzeigen).</br>\n    ![Updatemanifest](~/assets/images/bots/update-manifest.png)</br>\n\n**So richten Sie eine Bot-Dienstverbindung ein**\n\n1. Wechseln Sie zur **Seite \"Konfiguration\"**  >  **OAuth-Verbindung Einstellungen hinzufügen.**\n1. Wählen **Sie OAuth-Verbindung hinzufügen Einstellungen** aus.\n1. Geben Sie unter **\"Neue Verbindungseinstellung\"** die folgenden Details ein:\n\n    | Feld | Wert oder Beschreibung |\n    | ----- | ----- |\n    | Name | Geben Sie den Namen für die neue Verbindungseinstellung ein. Sie können den Namen in den Einstellungen Ihres Bot-Dienstcodes verwenden. |\n    | Service Provider | Wählen Sie **Azure Active Directory V2 aus.** |\n    | Client-ID | Zuvor als **Microsoft-App-ID** gespeichert. |\n    | Geheimer Clientschlüssel | Zuvor als **Wert** der geheimen Clientschlüssel-ID gespeichert. |\n    | Token-Exchange-URL | Verwenden Sie die zuvor beim Verfügbarmachen des API-Endpunkts abgerufene **Anwendungs-ID-URL.** |\n    | Mandanten-ID | Geben Sie **allgemeine**. |\n    | Scopes | Geben Sie **\"User.Read\"** ein, und fügen Sie auch alle erforderlichen **Bereiche** hinzu, während Sie Berechtigungen für downstreame APIs angeben. |\n\n    <img src=\"~/assets/images/bots/botserviceconnection.png\" alt=\"Bot Service connection\" width=\"300\"/>\n\n1. Wählen Sie **Speichern** aus.\n1. Wählen Sie **Anwenden** aus.\n"
 - title: Konfigurieren und Ausführen des Bot-Beispiels
   durationInMinutes: 1
   content: >
-    Konfigurieren Sie das Bot-Beispiel, um zu verstehen, wie man unterhaltungsbezogene Bots in Microsoft Teams authentifiziert.
+    Konfigurieren Sie das Bot-Beispiel, um zu verstehen, wie unterhaltungsbezogene Bots in Microsoft Teams authentifiziert werden.
 
 
     **So konfigurieren und führen Sie Ihr Bot-Beispiel aus**
@@ -126,19 +40,19 @@ items:
 
     1. Öffnen Sie Visual Studio.
 
-    1. Wählen Sie in Visual Studio **ein Repository klonen aus.**
+    1. Wählen Sie in Visual Studio ein **Repository klonen aus.**
 
     1. Geben Sie im **Repository-Speicherort** **https://github.com/OfficeDev/Microsoft-Teams-Samples.git** . Stellen Sie sicher, dass Sie den **Pfad** notieren, in dem das Repository geklont wird.
 
     1. Wählen Sie **"Datei > Öffnen > Project/Projektmappe"** aus.
 
-    1. Wechseln Sie zu **Microsoft-Teams-Samples > Beispielen > Ordner "bot-conversation-sso-quickstart" > csharp_dotnetcore.**
+    1. Wechseln Sie zu **Microsoft-Teams-Samples > Beispielen > Ordner "bot-conversation-sso-quickstart > csharp_dotnetcore".**
 
     1. Öffnen Sie die Datei **"BotSSOCSharp.csproj".**
 
-    1. Öffnen Sie die **appsettings.json-Datei.**
+    1. Öffnen Sie die Datei **"appsettings.json".**
 
-    1. Aktualisieren Sie die **appsettings.jsfür** die Konfiguration für den Bot, um die und zu `MicrosoftAppId` `MicrosoftAppPassword` verwenden. Verwenden Sie den OAuth-Verbindungsnamen als **Verbindungsname.**
+    1. Aktualisieren Sie die Konfiguration **"appsettings.json"** für den Bot, um die und zu `MicrosoftAppId` `MicrosoftAppPassword` verwenden. Verwenden Sie den OAuth-Verbindungsnamen als **Verbindungsname.**
 
         > [!NOTE]
         > Sie können `MicrosoftAppId` dies von der Konfigurationsseite des Bots abrufen. Der `MicrosoftAppPassword` Wert für die geheime Clientschlüssel-ID, die Sie zuvor gespeichert haben.
@@ -156,9 +70,9 @@ items:
         Wenn sie den **Fehler "Paket nicht finden"** erhalten, führen Sie die folgenden Schritte aus:
 
         1.  Wechseln Sie zu **Tools**  >  **NuGet Paket-Manager**  >  **Paket-Manager Einstellungen**.
-        1.  Wählen Sie **im** daraufhin angezeigten Optionsfenster **NuGet Paket-Manager**  >  **Paketquellen aus.**
-        1.  Wählen Sie **Hinzufügen** aus.
-        1.  Geben Sie **in** **Name**, nuget.org und in **Source** **https://api.nuget.org/v3/index.json** .
+        1.  Wählen Sie im daraufhin angezeigten Fenster **"Optionen"** **NuGet Paket-Manager**  >  **"Paketquellen" aus.**
+        1.  Klicken Sie auf **Hinzufügen**.
+        1.  Geben Sie **in** **Name** nuget.org und in **Source** **https://api.nuget.org/v3/index.json** .
         1.  Wählen Sie **"Aktualisieren"** und **"OK"** aus.
         1.  Erstellen Sie Ihr Projekt neu.
         <br>
@@ -167,7 +81,7 @@ items:
 - title: Konfigurieren und Ausführen der Teams-App
   durationInMinutes: 2
   content: >
-    Die umfassendste Möglichkeit, Ihren Bot zu testen, besteht darin, ein App-Paket zu erstellen und in Teams hochzuladen. Diese Methode ist die einzige Möglichkeit, die vollständige Funktionalität zu testen, die Ihrem Bot in allen Bereichen zur Verfügung steht. Sie können die Teams App konfigurieren und ausführen, indem Sie die **dateimanifest.zip** hochladen.
+    Die umfassendste Möglichkeit, Ihren Bot zu testen, besteht darin, ein App-Paket zu erstellen und in Teams hochzuladen. Diese Methode ist die einzige Möglichkeit, die vollständige Funktionalität zu testen, die Ihrem Bot in allen Bereichen zur Verfügung steht. Sie können die Teams App konfigurieren und ausführen, indem Sie die **manifest.zip** Datei hochladen.
 
 
     **So führen Sie die Teams-App durch Hochladen der manifest.zip-Datei aus**
@@ -175,11 +89,11 @@ items:
 
     1. Wechseln Sie in Visual Studio zum Ordner **"appPackage/".**
 
-    1. Öffnen Sie die **manifest.json-Datei.**
+    1. Öffnen Sie die Datei **"manifest.json".**
 
-    1. Suchen **Sie** immanifest.json-Datei **nach {TODO: MicrosoftAppId},** und ersetzen Sie sie durch Ihre Microsoft App-ID.
+    1. Suchen Sie in der Datei **"manifest.json"** **nach {TODO: MicrosoftAppId},** und ersetzen Sie sie durch Ihre Microsoft App-ID.
 
-    1. Wechseln Sie Windows Explorer zum **Microsoft-Teams-Samples >-Beispielen > Ordner "bot-conversation-sso-quickstart > csharp_dotnetcore > appPackage".**
+    1. Wechseln Sie Windows Explorer zum **Microsoft-Teams-Samples > Samples > bot-conversation-sso-quickstart > csharp_dotnetcore > appPackage** folder.
 
     1. Zippen Sie den Inhalt des **AppPackage/-Ordners,** um **manifest.zip** zu erstellen.
 
