@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: f2cb661ac20d8313101144be275a54a90f4f2db3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b46ce611ca09c4d5883cc66e0078291422e2b65a
+ms.sourcegitcommit: 211f2eaa05494a11b8c2a050d7f1a9ca1c1c78a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156346"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "59491674"
 ---
 # <a name="messages-in-bot-conversations"></a>Meldungen in Bot-Unterhaltungen
 
@@ -90,7 +90,13 @@ async def on_message_activity(self, turn_context: TurnContext):
         "name": "Teams TestBot"
     },
     "textFormat": "plain",
-    "text": "Hello Teams TestBot",
+    "text": "Hello Teams TestBot.Sending bold-italic rich text",
+    "attachments": [
+      {
+            "contentType": "text/html",
+            "content": "<div><div>Hello Teams TestBot. Sending <strong>bold</strong>-<em>italic</em> rich text.</div>\n</div>"
+      } 
+    ],
     "entities": [
       { 
         "locale": "en-US",
@@ -209,13 +215,13 @@ Nachrichten, die zwischen Benutzern und Bots gesendet werden, enthalten interne 
 
 ## <a name="teams-channel-data"></a>Teams Kanaldaten
 
-Das `channelData` Objekt enthält Teams spezifische Informationen und ist eine endgültige Quelle für Team- und Kanal-IDs. Optional können Sie diese IDs als Schlüssel für den lokalen Speicher zwischenspeichern und verwenden. Im `TeamsActivityHandler` SDK werden wichtige Informationen aus dem Objekt `channelData` abgerufen, damit sie leicht zugänglich sind. Sie können jedoch immer auf die ursprünglichen Daten aus dem `turnContext` Objekt zugreifen.
+Das `channelData` Objekt enthält Teams-spezifische Informationen und ist eine endgültige Quelle für Team- und Kanal-IDs. Optional können Sie diese IDs als Schlüssel für den lokalen Speicher zwischenspeichern und verwenden. Im `TeamsActivityHandler` SDK werden wichtige Informationen aus dem Objekt `channelData` abgerufen, damit sie leicht zugänglich sind. Sie können jedoch immer auf die ursprünglichen Daten aus dem `turnContext` Objekt zugreifen.
 
 Das `channelData` Objekt ist nicht in Nachrichten in persönlichen Unterhaltungen enthalten, da diese außerhalb eines Kanals stattfinden.
 
 Ein `channelData` typisches Objekt in einer an Ihren Bot gesendeten Aktivität enthält die folgenden Informationen:
 
-* `eventType`: Teams Ereignistyp, der nur bei [Kanaländerungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md)übergeben wird.
+* `eventType`: Teams Ereignistyp nur in Fällen von [Kanaländerungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md)übergeben.
 * `tenant.id`: Azure Active Directory Mandanten-ID, die in allen Kontexten übergeben wird.
 * `team`: Wird nur in Kanalkontexten übergeben, nicht im persönlichen Chat.
   * `id`: GUID für den Kanal.
@@ -250,12 +256,12 @@ Nachrichten, die von Ihrem Bot empfangen oder an diesen gesendet werden, können
 
 ## <a name="message-content"></a>Nachrichteninhalt
 
-| Format    | Vom Benutzer zum Bot | Vom Bot zum Benutzer | Anmerkungen                                                                                   |
+| Format    | Vom Benutzer zum Bot | Vom Bot zum Benutzer | Notizen                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich-Text  | ✔                | ✔                | Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und Bilder an Ihren Bot senden.                                                                                        |
 | Bilder  | ✔                | ✔                | Maximal 1024×1024 und 1 MB im PNG-, JPEG- oder GIF-Format. Animierte GIF-Dateien werden nicht unterstützt.  |
 | Karten     | ✖                | ✔                | In der [Teams Kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md) finden Sie unterstützte Karten. |
-| Emojis    | ✖                | ✔                | Teams unterstützt zurzeit Emojis über UTF-16, z. B. U+1F600 für graunendes Gesicht. |
+| Emojis    | ✖                | ✔                | Teams unterstützt derzeit Emojis über UTF-16, z. B. U+1F600 für graunendes Gesicht. |
 
 Sie können Ihrer Nachricht auch mithilfe der Eigenschaft Benachrichtigungen `Notification.Alert` hinzufügen.
 

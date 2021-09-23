@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 5e2f26fcdbd2e11fcb28331cd9d226d63c9a2aad
-ms.sourcegitcommit: 762cd3ed9054c6c19825498fc0edd50cd99634da
+ms.openlocfilehash: 00feea2fe76d346a0313a9677d5a0493771586dd
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59439690"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475706"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
@@ -23,7 +23,7 @@ Das Befolgen dieser Richtlinien erhöht die Wahrscheinlichkeit, dass Ihre App de
 
 ### <a name="app-name"></a>App-Name
 
-Der Name einer App spielt eine entscheidende Rolle dafür, wie Benutzer sie im Store entdecken. Denken Sie bei App-Namen an Folgendes:
+Der Name einer App spielt eine wichtige Rolle bei der Art und Weise, wie Benutzer sie im Store entdecken können. Beachten Sie Folgendes zu App-Namen:
 
 * Der Name muss für Ihre Benutzer relevante Begriffe enthalten.
 * Namen der Kernfunktionen von Teams &#8212;wie **Chat,** **Kontakte,** **Kalender,** **Anrufe,** **Dateien,** **Aktivitäten,** **Teams,** **Apps** und **Hilfe**&#8212;sollten nicht im App-Namen enthalten sein.
@@ -32,7 +32,7 @@ Der Name einer App spielt eine entscheidende Rolle dafür, wie Benutzer sie im S
 * Wenn Ihre App Teil einer offiziellen Partnerschaft mit Microsoft ist, muss der Name Ihrer App an erster Stelle stehen (z. B. **Contoso Connector für Microsoft Teams**).
 * Der Name einer im Store aufgeführten App oder eines anderen Angebots auf dem kommerziellen Marktplatz darf nicht kopiert werden.
 * Darf keine profanen oder abfälligen Begriffe enthalten. Der Name darf auch keine rassen- oder kulturell unsensible Sprache enthalten.
-* Muss eindeutig sein. Sie können beispielsweise nicht mehrere Apps für verschiedene Regionen mit demselben Namen und derselben Funktionalität auflisten.
+* Er muss einzigartig sein. Sie können nicht mehrere Apps für verschiedene Regionen mit demselben Namen und Zweck verzeichnen.
 
 ### <a name="suitable-for-workplace-consumption"></a>Geeignet für den Gebrauch am Arbeitsplatz
 
@@ -68,7 +68,7 @@ Bots müssen immer um Erlaubnis zum Hochladen einer Datei bitten und nach dem Da
 
 ### <a name="external-domains"></a>Externe Domänen
 
-In den meisten Fällen dürfen Sie keine Domänen außerhalb der Kontrolle Ihrer Organisation (einschließlich Wildcards) und Tunneling-Dienste in die Domänenkonfigurationen Ihrer App aufnehmen. Zu den folgenden Ausnahmen zählen:
+In den meisten Fällen dürfen Sie keine Domänen außerhalb der Kontrolle Ihrer Organisation (einschließlich Wildcards) und Tunnelingdienste in die Domänenkonfigurationen Ihrer App einschließen. Zu den folgenden Ausnahmen gehören:
 
 * Wenn Ihre App die OAuthCard des Azure Bot Service verwendet, müssen Sie `token.botframework.com` als gültige Domäne angeben oder die Schaltfläche **Anmelden** funktioniert nicht.
 * Wenn Ihre App auf SharePoint basiert, können Sie die zugehörige SharePoint-Stammsite mithilfe der Kontexteigenschaft `{teamSiteDomain}` als gültige Domäne einschließen.
@@ -192,6 +192,7 @@ Die lange Beschreibung kann eine ansprechende Erzählung bieten, die das Wertver
 * Verwenden Sie aktive Stimme und sprechen Sie direkt mit Benutzern. Zum Beispiel *können Sie ...*.
 * Listen Sie Features mit Aufzählungspunkten auf, damit die Beschreibung einfacher durchsucht werden kann.
 * Beschreiben Sie Einschränkungen, Bedingungen oder Ausnahmen für die in der Auflistung und den zugehörigen Materialien beschriebenen Funktionsweisen, Funktionen und Leistungen klar und deutlich, bevor der Benutzer Ihre App installiert. Die von Ihrer App unterstützten Teams-Funktionen müssen sich auf die in Ihrem Eintrag beschriebenen Kernfunktionen beziehen.
+* Stellen Sie sicher, dass die App-Beschreibung mit der in der Teams-App verfügbaren Funktionalität übereinstimmt. Jeder Verweis auf Workflows außerhalb der Teams-App muss begrenzt und von der Funktionsweise der Teams-App eindeutig hervorgehoben werden.
 * Fügen Sie einen Hilfe- oder Support-Link hinzu.
 * Verweisen Sie auf **Microsoft 365** anstelle von **Office 365**.
 * Wenn Sie auf **Teams** verweisen müssen, schreiben Sie den ersten Verweis als **Microsoft Teams**. Nachfolgende Verweise können auf **Teams** gekürzt werden.
@@ -212,15 +213,19 @@ Die lange Beschreibung kann eine ansprechende Erzählung bieten, die das Wertver
 * Kürzen Sie **Microsoft** als **MS** oder **MSFT**.
 * Geben Sie an, dass es sich bei der App um ein Angebot von Microsoft handelt, einschließlich der Verwendung von Microsoft-Slogans oder Leitsätzen.
 * Verwenden Sie urheberrechtlich geschützte Markennamen, die Ihnen nicht gehören.
-* Fügen Sie Tippfehler, Grammatikfehler und unnötige Großschreibung hinzu (z. B. **Users** anstelle von **users**).
-* Links zu AppSource einschließen.
-* Verwenden Sie die folgende Sprache, es sei denn, Sie sind ein zertifizierter Microsoft-Partner:
+ * Verwenden Sie die folgende Sprache, es sei denn, Sie sind ein zertifizierter Microsoft-Partner:
   * "... zertifiziert für ..."
   * "... unterstützt von ..."
+* Tippfehler, Grammatikfehler und unnötige Groß-/Kleinschreibung einschließen, zum Beispiel **benutzer** anstelle von **Benutzer**.
+* Links zu AppSource einschließen.
+* Nicht überprüfte Ansprüche stellen (beispielsweise "bestbewertet"), es sei denn, die Quelle des Anspruchs steht dem gegenüber.
+* Vergleichen Sie Ihr Angebot mit anderen Marketplace-Angeboten.
+
+
 
 ### <a name="screenshots"></a>Screenshots
 
-Screenshots bieten eine auffällige visuelle Vorschau Ihrer App, um Ihren App-Namen, das Symbol und die Beschreibungen zu ergänzen. Denken Sie an Folgendes zu Screenshots:
+Screenshots bieten eine markante visuelle Vorschau Ihrer App, um den Namen, das Symbol und die Beschreibungen Ihrer App zu ergänzen. Beachten Sie Folgendes zu Screenshots:
 
 * Sie können bis zu fünf Screenshots pro Eintrag erstellen.
 * Unterstützte Dateitypen sind PNG, JPEG und GIF.
@@ -282,18 +287,18 @@ Wenn Ihre App eine Registerkarte enthält, stellen Sie sicher, dass diese diesen
 
 * Der Bereich des Anmeldebildschirms darf keine großen Logos verwenden oder eine ganze Webseite anzeigen.
 * Der Inhalt kann vereinfacht werden, indem er auf mehrere Registerkarten aufgeteilt wird.
-* Registerkarten sollten keine doppelte Kopfzeile haben. Entfernen Sie das Logo aus dem iframe, da das Registerkarten-Framework bereits das App-Symbol und den Namen anzeigt.
+* Registerkarten dürfen keinen doppelten Header aufweisen. Entfernen Sie das Logo aus dem iframe, da das Registerkartenframework bereits das App-Symbol und den Namen anzeigt.
 
 ### <a name="navigation"></a>Navigation
 
 * Registerkarten dürfen nicht mehr als drei Navigationsebenen aufweisen.
 * Registerkarten dürfen keine Navigation bereitstellen, die in Konflikt mit der primären Teams-Navigation steht.
-* Die Sekundär- und Tertiärseiten eines Tabs müssen in einer zweier und dreier Ebene Ansicht im Hauptregisterkartenbereich geöffnet werden, der über Breadcrumbs oder die linke Navigationsleiste navigiert wird. Sie können auch die folgenden Komponenten einschließen, um die Navigation auf den Registerkarten zu unterstützen:
+* Die Sekundär- und Tertiärseiten eines Tabs müssen in einer Ebene 2- und Ebene 3 Ansicht im Hauptregisterkartenbereich geöffnet werden, der über Breadcrumb Navigation oder die linke Navigationsleiste geleitet wird. Sie können auch die folgenden Komponenten einschließen, um die Registerkartennavigation zu unterstützen:
     * Zurück-Schaltflächen
     * Seitenüberschriften
     * Hamburger-Menüs
 * Die Registerkarte sollte kein horizontales Scrollen haben.
-* Deeplinks in Registerkarten dürfen nicht auf eine externe Webseite verweisen, sondern irgendwo in Teams. Zum Beispiel Aufgabenmodule oder andere Registerkarten.
+* Deep-Links in Registerkarten dürfen nicht mit einer externen Webseite, sondern an einer beliebigen Stelle in Teams verknüpft werden. Beispielsweise Aufgabenmodule oder andere Registerkarten.
 * Registerkarten sollten es Benutzern nicht ermöglichen, außerhalb von Teams für die Kernanwendungserfahrung zu navigieren.
 
 ### <a name="usability"></a>Benutzerfreundlichkeit
@@ -303,6 +308,7 @@ Wenn Ihre App eine Registerkarte enthält, stellen Sie sicher, dass diese diesen
 * Registerkarten in einem persönlichen Kontext können Inhalte von freigegebenen Instanzen der App aggregieren.
 * Registerkarten müssen für Teams-Designs reaktionsfähig sein. Wenn ein Benutzer das Design ändert, muss das Design der App die Auswahl widerspiegeln.
 * Registerkarten müssen Komponenten im Stil von Teams verwenden, z-B. Teams-Schriftarten, Typrampen, Farbpaletten, Rastersystem, Bewegung, Tonfall und so weiter, wann immer möglich.
+* Wenn Ihre App-Funktionalität Änderungen an den Einstellungen erfordert, fügen Sie eine **Einstellungen** Registerkarte hinzu.
 * Registerkarten müssen nach Möglichkeit dem Interaktionsdesign von Teams folgen, z. B. seiteninterne Navigation, Position und Verwendung von Dialogfeldern, Informationshierarchien usw.
 * Registerkarteninhalte im iframe dürfen keine Funktionen enthalten, die die Kernfunktionen von Teams nachahmen. Zum Beispiel Bots, Messaging-Erweiterungen, Anrufe, Besprechungen usw.
 
@@ -320,7 +326,7 @@ Wenn Ihre App einen Bot enthält, stellen Sie sicher, dass er diesen Richtlinien
 
 ### <a name="bot-commands"></a>Bot-Befehle
 
-Die Analyse von Benutzereingaben und die Vorhersage der Benutzerabsicht ist schwierig. Bot-Befehle stellen Benutzern eine Reihe von Wörtern oder Ausdrücken bereit, die Ihr Bot versteht, damit sie (und Ihr Bot) nicht raten müssen.
+Das Analysieren von Benutzereingaben und das Vorhersagen der Benutzerabsicht ist schwierig. Botbefehle stellen Benutzern eine Reihe von Wörtern oder Ausdrücken bereit, die Ihr Bot versteht, damit Sie (und Ihr Bot) diese nicht erraten müssen.
 
 * Es wird dringend empfohlen, unterstützte Bot-Befehle in Ihren App-Konfigurationen aufzulisten. Diese Befehle werden im Feld zum Verfassen angezeigt, wenn ein Benutzer versucht, Ihrem Bot eine Nachricht zu senden.
 * Alle Befehle, die Ihr Bot unterstützt, müssen ordnungsgemäß funktionieren, einschließlich des Befehls **"Hi",** **"Hallo"** und **"Hilfe".**
@@ -410,7 +416,7 @@ Wenn Ihre App eine Besprechungserweiterung enthält, stellen Sie sicher, dass si
 
 ### <a name="in-meeting-tabs"></a>Registerkarten in Besprechungen
 
-* Muss reaktionsfähig sein. Achten Sie darauf, die Auffüllung und Komponentengrößen beizubehalten.
+* Muss erreichbar sein. Achten Sie darauf, die Auffüllung und Komponentengrößen beizubehalten.
 * Muss eine Zurück-Schaltfläche haben, wenn mehr als eine Navigationsebene vorhanden ist.
 * Darf nicht mehr als eine Schaltfläche zum Verwerfen oder Schließen enthalten. Dies kann Benutzer verwirren, da es bereits eine integrierte Kopfzeilenschaltfläche zum Schließen der Registerkarte gibt.
 * Darf kein horizontales Scrollen haben.

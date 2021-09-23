@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams-Manifestschema
-ms.openlocfilehash: 07b2c969877dc61c8678bb89099d6275f2cf367c
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: d1fa68cc4ae69e8a35c0d812192bb5c15a7cf130
+ms.sourcegitcommit: 211f2eaa05494a11b8c2a050d7f1a9ca1c1c78a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475760"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "59491681"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -193,7 +193,7 @@ Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen:
           "context": [
             "message"
           ],
-          "description": "Command Description; e.g., Search for a customer",
+          "description": "Command Description; e.g., Add a customer",
           "initialRun": true,
           "fetchTask": true,
           "parameters": [
@@ -204,14 +204,26 @@ Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen:
               "inputType": "text"
             }
           ]
+        },
+         {
+          "id": "exampleCmd3",
+          "title": "Example Command 3",
+          "type": "action",
+          "context": [
+            "compose",
+            "commandBox",
+            "message"
+          ],
+          "description": "Command Description; e.g., Add a customer",
+          "fetchTask": false,
+          "taskInfo": {
+            "title": "Initial dialog title",
+            "width": "Dialog width",
+            "height": "Dialog height",
+            "url": "Initial webview URL"
+          }
         }
       ],
-      "taskInfo": {
-        "title": "Initial dialog title",
-        "width": "Dialog width",
-        "height": "Dialog height",
-        "url": "Initial webview URL"
-      },
       "messageHandlers": [
         {
           "type": "link",
@@ -225,7 +237,7 @@ Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen:
       ]
     }
   ],
-  "permissions": [
+"permissions": [
     "identity",
     "messageTeamMembers"
   ],
@@ -304,7 +316,7 @@ Das Schema definiert die folgenden Eigenschaften:
 
 Optional, aber empfohlen – Zeichenfolge
 
-Die https:// URL, die auf das JSON-Schema für das Manifest verweist.
+Die https://-URL, die auf das JSON-Schema für das Manifest verweist.
 
 ## <a name="manifestversion"></a>manifestVersion
 
@@ -575,7 +587,7 @@ Stellt die systemeigenen Features auf dem Gerät eines Benutzers bereit, auf die
 
 **Optional,** außer **erforderlich,** sofern angegeben.
 
-Eine Liste der gültigen Domänen für Websites, die von der App im Teams-Client geladen werden sollen. Domäneneinträge können Platzhalter enthalten, `*.example.com` z. B. . Die gültige Domäne entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com` . Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der Registerkartenkonfiguration navigiert, muss diese Domäne hier angegeben werden.
+Eine Liste der gültigen Domänen für Websites, die die App innerhalb des Teams-Clients laden möchte. Domäneneinträge können Platzhalter enthalten, `*.example.com` z. B. . Die gültige Domäne entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com` . Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der Registerkartenkonfiguration navigiert, muss diese Domäne hier angegeben werden.
 
 Schließen Sie **nicht** die Domänen von Identitätsanbietern ein, die Sie in Ihrer App unterstützen möchten. Um sich beispielsweise mit einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten. Sie dürfen jedoch keine accounts.google.com in `validDomains[]` einschließen.
 
@@ -721,7 +733,7 @@ Sie können eine der folgenden Eigenschaften definieren:
 * `longDescription`: Die ausführliche Beschreibung der App.
 * `smallImageUrl`: Das Gliederungssymbol der App.
 * `largeImageUrl`: Das Farbsymbol der App.
-* `accentColor`: Die zu verwendende Farbe und ein Hintergrund für Ihre Gliederungssymbole.
+* `accentColor`: Die zu verwendende Farbe und ein Hintergrund für Die Gliederungssymbole.
 * `developerUrl`: Die HTTPS-URL der Website des Entwicklers.
 * `privacyUrl`: Die HTTPS-URL der Datenschutzrichtlinie des Entwicklers.
 * `termsOfUseUrl`: Die HTTPS-URL der Nutzungsbedingungen des Entwicklers.
