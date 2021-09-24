@@ -8,7 +8,7 @@
         "docset_name": "msteams-platform",
         "build_source_folder": "msteams-platform",
         "build_output_subfolder": "msteams-platform",
-        "locale": "de-DE",
+        "locale": "de-de",
         "monikers": [],
         "moniker_ranges": [],
         "open_to_public_contributors": false,
@@ -23,6 +23,10 @@
     "JoinTOCPlugin": [{
         "ConceptualTOC": "/msteams-platform/toc.yml",
         "ReferenceTOCUrl": "/javascript/api/msteams-client-docs-ref-typescript/toc.json?view=msteams-client-js-latest"
+    },
+    {
+      "ConceptualTOC": "msteams-platform/TOC.yml",
+      "ReferenceTOCUrl": "/dotnet/api/msteams-client-docs-ref-dotnet/toc.json?view=msteams-client-dotnet-latest"
     }],
     "notification_subscribers": ["mor-oitac-eng@moravia.com"],
     "branches_to_filter": [
