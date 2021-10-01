@@ -6,18 +6,18 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: e35393a2696ace22068e34566c3dad4a3109bd73
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6fce2deb5dc482a1f348739e6090d4623996df27
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156769"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017338"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Apps für Microsoft Teams erstellen
 
 Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse, in denen sich Menschen zunehmend sammeln, lernen und arbeiten.
 
-Apps erweitern Teams entsprechend Ihren Anforderungen. Erstellen Sie etwas völlig Neues für Teams oder integrieren Sie eine vorhandene App.
+Mit Apps können Sie Teams ihren Anforderungen entsprechend erweitern. Erstellen Sie etwas völlig Neues für Teams oder integrieren Sie eine vorhandene App.
 
 > [!div class="nextstepaction"]
 > [Beginnen Sie hier](get-started/prerequisites.md)
@@ -65,7 +65,7 @@ Teams Apps sind eine Kombination von [Funktionen.](concepts/capabilities-overvie
 :::row:::
    :::column span="1":::
 
-**Verwandeln Sie Wörter in Aktionen:** Unterhaltungen führen häufig dazu, dass sie etwas tun müssen (eine Bestellung generieren, meinen Code überprüfen, den Ticketstatus überprüfen usw.). Ein [Bot](bots/what-are-bots.md) kann diese Arten von Workflows direkt in Teams starten.
+**Verwandeln Sie Wörter in Aktionen:** Unterhaltungen führen häufig dazu, dass sie etwas tun müssen (eine Bestellung generieren, meinen Code überprüfen, den Ticketstatus überprüfen usw.). Ein [Bot](bots/what-are-bots.md) kann diese Arten von Workflows direkt innerhalb Teams starten.
 
    :::column-end:::
 
@@ -166,7 +166,7 @@ Machen Sie sich schnell mit der Erstellung für Teams vertraut, indem Sie Ihre U
 
 ## <a name="integrate-with-teams"></a>Integration in Microsoft Teams
 
-Kombinieren Sie die Features, die Benutzer an einer vorhandenen Web-App, einem Dienst oder system schätzen, mit den Features für die Zusammenarbeit von Teams.
+Kombinieren Sie die Features, die Benutzer an einer vorhandenen Web-App, einem Dienst oder System schätzen, mit den Features für die Zusammenarbeit von Teams.
 
 > [!div class="nextstepaction"]
 > [Integrieren einer vorhandenen App](samples/integrating-web-apps.md)
@@ -208,13 +208,6 @@ Sie möchten sich für die App-Entwicklung inspirieren? Durchsuchen Sie unsere L
 
    :::column-end:::
 :::row-end:::
-
-## <a name="integrate-teams-in-your-external-app"></a>Integrieren von Teams in Ihre externe App
-Diese Seite konzentriert sich auf das Einbetten Ihrer eigenen Erfahrungen in Microsoft Teams, indem sie Teams Apps erstellt. Wenn Sie dieses Modell *umkehren* und Teams oder andere Kommunikationsfunktionen in Ihre eigene externe App integrieren möchten, lesen Sie [Azure Communication Services.](/azure/communication-services/overview) Azure Communication Services sind cloudbasierte Dienste mit REST-APIs und Clientbibliotheks-SDKs, die Ihnen bei der Integration der Kommunikation in Ihre eigenen benutzerdefinierten Anwendungen helfen. Sie können generische oder Teams-formatierte React Webkomponenten für Anrufe und Chats mithilfe der [Benutzeroberflächenbibliothek einbetten.](https://azure.github.io/communication-ui-library/)
-
-Azure Communication Services-Anwendungen können öffentliche Vorschaufunktionen verwenden, um mit Teams zu [zusammenarbeiten](/azure/communication-services/concepts/teams-interop) und Ihrer benutzerdefinierten Anwendung die anonyme Teilnahme an Teams Besprechungen zu ermöglichen. Beispielsweise können Sie Videoanrufe in eine mobile Bankanwendung integrieren und Endbenutzern ermöglichen, sich mithilfe von Microsoft Teams praktisch mit Bankmitarbeitern zu treffen. 
-
-Sie können auch Microsoft 365 Identität integrieren, um externe Anwendungen zu erstellen, die Video- und PSTN-Anrufe im Auftrag eines Teams Benutzers einbetten. Wenn Sie in der Vergangenheit [Skype for Business SDKs](/skype-sdk/appsdk/skypeappsdk) verwendet haben, werden diese Funktionen als Teil von Azure Communication Services als Ersatz empfohlen.
 
 ## <a name="see-also"></a>Siehe auch
 
