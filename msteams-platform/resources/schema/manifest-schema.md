@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams-Manifestschema
-ms.openlocfilehash: 99b41d9caaf2fb37d9721c67555fdbd3d8684fa6
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: ae77a84c52fb3f9934d1d499fd59f517758019d6
+ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017324"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60127259"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
-Das Teams-Manifest beschreibt, wie die App in das Microsoft Teams Produkt integriert wird. Ihr Manifest muss dem schema gehosteten [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) entsprechen. Frühere Versionen 1.0, 1.1,..., und 1.6 werden ebenfalls unterstützt (unter Verwendung von "v1.x" in der URL).
+Das Teams-Manifest beschreibt, wie die App in das Microsoft Teams Produkt integriert wird. Ihr Manifest muss dem schema gehosteten [`https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json) entsprechen. Frühere Versionen 1.0, 1.1,..., und 1.11 werden ebenfalls unterstützt (unter Verwendung von "v1.x" in der URL).
 Weitere Informationen zu den Änderungen, die in jeder Version vorgenommen wurden, finden Sie im [Manifeständerungsprotokoll.](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)
 
 Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen:
@@ -23,8 +23,8 @@ Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.10",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.11",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -290,6 +290,8 @@ Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen:
       }
     ]
   },
+  "defaultBlockUntilAdminAction": true,
+  "publisherDocsUrl": "https://website.com/app-info",
   "defaultInstallScope": "meetings",
   "defaultGroupCapability": {
     "meetings": "tab", 
@@ -316,7 +318,7 @@ Das Schema definiert die folgenden Eigenschaften:
 
 Optional, aber empfohlen – Zeichenfolge
 
-Die https://-URL, die auf das JSON-Schema für das Manifest verweist.
+Die https:// URL, die auf das JSON-Schema für das Manifest verweist.
 
 ## <a name="manifestversion"></a>manifestVersion
 
@@ -328,7 +330,7 @@ Die Version des Manifestschemas, das dieses Manifest verwendet. Es muss 1.10 sei
 
 **Erforderlich**– Zeichenfolge
 
-Die Version einer bestimmten App. Wenn Sie etwas in Ihrem Manifest aktualisieren, muss auch die Version erhöht werden. Auf diese Weise wird bei der Installation des neuen Manifests das vorhandene überschrieben, und der Benutzer erhält die neue Funktionalität. Wenn diese App an den Store übermittelt wurde, muss das neue Manifest erneut gesendet und erneut validiert werden. Die App-Benutzer erhalten das neue aktualisierte Manifest innerhalb weniger Stunden nach der Genehmigung des Manifests automatisch.
+Die Version einer bestimmten App. Wenn Sie etwas in Ihrem Manifest aktualisieren, muss auch die Version erhöht werden. Auf diese Weise wird bei der Installation des neuen Manifests das vorhandene überschrieben, und der Benutzer erhält die neue Funktionalität. Wenn diese App an den Store übermittelt wurde, muss das neue Manifest erneut gesendet und erneut validiert werden. Die App-Benutzer erhalten das neue aktualisierte Manifest automatisch innerhalb weniger Stunden nach der Genehmigung des Manifests.
 
 Wenn sich die App-Anforderungen für Berechtigungen ändern, werden die Benutzer aufgefordert, ein Upgrade durchzuführen und die App erneut zu konfigurieren.
 
@@ -451,7 +453,7 @@ Dieses Element ist ein Array (maximal 16 Elemente) mit allen Elementen des `obje
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`entityId`|string|64 Zeichen|✔|Ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird.|
-|`name`|Zeichenfolge|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanalschnittstelle.|
+|`name`|string|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanalschnittstelle.|
 |`contentUrl`|string||✔|Die https:// URL, die auf die Entitäts-UI verweist, die im Teams Canvas angezeigt werden soll.|
 |`websiteUrl`|string|||Die https:// URL, auf die verweist, wenn sich ein Benutzer für die Anzeige in einem Browser entscheidet.|
 |`searchUrl`|string|||Die https:// URL, auf die für die Suchabfragen eines Benutzers verweist.|
@@ -552,13 +554,13 @@ Jedes Befehlselement ist ein Objekt mit der folgenden Struktur:
 |`taskInfo.url`|string|||Ursprüngliche Webansichts-URL.|
 |`parameters`|Array des Objekts|5 Elemente|✔|Die Liste der Parameter, die der Befehl verwendet. Minimum: 1; Maximum: 5.|
 |`parameters.name`|string|64 Zeichen|✔|Der Name des Parameters, wie er im Client angezeigt wird. Der Parametername ist in der Benutzeranforderung enthalten.|
-|`parameters.title`|Zeichenfolge|32 Zeichen|✔|Benutzerfreundlicher Titel für den Parameter.|
+|`parameters.title`|string|32 Zeichen|✔|Benutzerfreundlicher Titel für den Parameter.|
 |`parameters.description`|string|128 Zeichen||Benutzerfreundliche Zeichenfolge, die den Zweck dieses Parameters beschreibt.|
 |`parameters.value`|string|512 Zeichen||Anfangswert für den Parameter.|
 |`parameters.inputType`|string|128 Zeichen||Definiert den Typ des Steuerelements, das in einem Aufgabenmodul für angezeigt `fetchTask: true` wird. Eine von `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|Array von Objekten|10 Elemente||Die Auswahloptionen für die `choiceset` . Wird nur verwendet, wenn `parameter.inputType` `choiceset` .|
 |`parameters.choices.title`|string|128 Zeichen|✔|Titel der Wahl.|
-|`parameters.choices.value`|Zeichenfolge|512 Zeichen|✔|Value of the choice.|
+|`parameters.choices.value`|string|512 Zeichen|✔|Value of the choice.|
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -587,11 +589,11 @@ Stellt die systemeigenen Features auf dem Gerät eines Benutzers bereit, auf die
 
 **Optional,** außer **erforderlich,** sofern angegeben.
 
-Eine Liste der gültigen Domänen für Websites, die von der App im Teams-Client geladen werden sollen. Domäneneinträge können Platzhalter enthalten, `*.example.com` z. B. . Die gültige Domäne entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com` . Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der Registerkartenkonfiguration navigiert, muss diese Domäne hier angegeben werden.
+Eine Liste der gültigen Domänen für Websites, die die App im Teams-Client laden soll. Domäneneinträge können Platzhalter enthalten, `*.example.com` z. B. . Die gültige Domäne entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com` . Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der Registerkartenkonfiguration navigiert, muss diese Domäne hier angegeben werden.
 
 Schließen Sie **nicht** die Domänen von Identitätsanbietern ein, die Sie in Ihrer App unterstützen möchten. Um sich beispielsweise mit einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten. Sie dürfen jedoch keine accounts.google.com in `validDomains[]` einschließen.
 
-Teams Apps, die ihre eigenen SharePoint URLs benötigen, um ordnungsgemäß zu funktionieren, enthalten "{teamsitedomain}" in ihrer gültigen Domänenliste.
+Teams Apps, die eine eigene SharePoint URLs erfordern, um ordnungsgemäß zu funktionieren, enthält "{teamsitedomain}" in ihre gültige Domänenliste.
 
 > [!IMPORTANT]
 > Fügen Sie keine Domänen hinzu, die sich außerhalb Ihres Steuerelements befinden, entweder direkt oder über Platzhalter. Ist z. `yourapp.onmicrosoft.com` B. gültig, ist jedoch `*.onmicrosoft.com` ungültig.
@@ -602,12 +604,12 @@ Das Objekt ist ein Array mit allen Elementen des Typs `string` .
 
 **Optional**—object
 
-Geben Sie Ihre Azure Active Directory (AAD)-App-ID und Microsoft Graph Informationen an, um Benutzern zu helfen, sich nahtlos bei Ihrer App anzumelden. Wenn Ihre App in AAD registriert ist, müssen Sie die App-ID angeben. Administratoren können berechtigungen einfach überprüfen und ihre Zustimmung im Teams Admin Center erteilen.
+Geben Sie Ihre Azure Active Directory (AAD)-App-ID und Microsoft Graph Informationen an, damit sich Benutzer nahtlos bei Ihrer App anmelden können. Wenn Ihre App in AAD registriert ist, müssen Sie die App-ID angeben. Administratoren können berechtigungen einfach überprüfen und ihre Zustimmung im Teams Admin Center erteilen.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`id`|string|36 Zeichen|✔|AAD-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
-|`resource`|Zeichenfolge|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für SSO. </br> **HINWEIS:** Wenn Sie SSO nicht verwenden, stellen Sie sicher, dass Sie einen Pseudozeichenfolgenwert in dieses Feld in Ihr App-Manifest eingeben, um beispielsweise https://notapplicable eine Fehlerantwort zu vermeiden. |
+|`resource`|string|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für SSO. </br> **HINWEIS:** Wenn Sie SSO nicht verwenden, stellen Sie sicher, dass Sie einen Pseudozeichenfolgenwert in dieses Feld in Ihr App-Manifest eingeben, um beispielsweise https://notapplicable eine Fehlerantwort zu vermeiden. |
 |`applicationPermissions`|array of strings|128 Zeichen||Geben Sie eine präzise [ressourcenspezifische Zustimmung an.](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
@@ -643,7 +645,7 @@ Definieren Sie die Eigenschaften, die Ihre App zum Posten eines Benutzeraktivit�
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`type`|string|32 Zeichen|✔|Der Benachrichtigungstyp. *Siehe unten*.|
-|`description`|Zeichenfolge|128 Zeichen|✔|Eine kurze Beschreibung der Benachrichtigung. *Siehe unten*.|
+|`description`|string|128 Zeichen|✔|Eine kurze Beschreibung der Benachrichtigung. *Siehe unten*.|
 |`templateText`|string|128 Zeichen|✔|Beispiel: "{actor} erstellt Aufgabe {taskId} für Sie"|
 
 ```json
@@ -733,7 +735,21 @@ Sie können eine der folgenden Eigenschaften definieren:
 * `longDescription`: Die ausführliche Beschreibung der App.
 * `smallImageUrl`: Das Gliederungssymbol der App.
 * `largeImageUrl`: Das Farbsymbol der App.
-* `accentColor`: Die zu verwendende Farbe und ein Hintergrund für Die Gliederungssymbole.
+* `accentColor`: Die zu verwendende Farbe und ein Hintergrund für Ihre Gliederungssymbole.
 * `developerUrl`: Die HTTPS-URL der Website des Entwicklers.
 * `privacyUrl`: Die HTTPS-URL der Datenschutzrichtlinie des Entwicklers.
 * `termsOfUseUrl`: Die HTTPS-URL der Nutzungsbedingungen des Entwicklers.
+
+## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
+
+**Optional**-boolean
+ 
+Wenn `defaultBlockUntilAdminAction` die Eigenschaft auf **"true"** festgelegt ist, ist die App standardmäßig für Benutzer ausgeblendet, bis der Administrator sie zulässt. Bei Festlegung auf **"true"** ist die App für alle Mandanten und Endbenutzer ausgeblendet. Mandantenadministratoren können die App im Teams Admin Center anzeigen und Maßnahmen ergreifen, um die App zuzulassen oder zu blockieren. Der Standardwert ist **false**.
+
+## <a name="publisherdocsurl"></a>publisherDocsUrl
+
+**Optional** – Zeichenfolge
+
+**Maximale Größe** – 128 Zeichen
+
+Die Eigenschaft hängt von `defaultBlockUntilAdminAction` . Wenn `defaultBlockUntilAdminAction` die Eigenschaft auf **"true"** festgelegt ist, stellt die `publisherDocsUrl` HTTPS-URL zu einer Informationsseite bereit, auf der Administratoren Richtlinien abrufen können, bevor sie eine App zulassen, die standardmäßig blockiert wird.

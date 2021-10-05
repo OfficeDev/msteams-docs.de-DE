@@ -44,6 +44,8 @@
       href: concepts/design/understand-use-cases.md
     - name: Anwendungsfälle zu Microsoft Teams-App-Funktionen zuordnen
       href: concepts/design/map-use-cases.md
+    - name: Planen reaktionsfähiger Registerkarten für Teams Mobile
+      href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
     - name: Gerätefunktionen
       items:
         - name: Übersicht
@@ -92,7 +94,7 @@
           href: task-modules-and-cards/task-modules/design-teams-task-modules.md
         - name: Aktivitätsfeed-Benachrichtigungen
           href: concepts/design/activity-feed-notifications.md
-    - name: Aktivieren der App-Anpassung
+    - name: App-Anpassung
       href: concepts/design/enable-app-customization.md
 - name: Tools und SDKs
   items:
