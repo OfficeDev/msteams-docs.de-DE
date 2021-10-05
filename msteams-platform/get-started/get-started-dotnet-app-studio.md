@@ -1,17 +1,17 @@
 ---
 title: 'Lernprogramm – Erstellen Ihrer ersten App mit C #'
-description: Erfahren Sie, wie Sie mit C# oder .NET mit dem Erstellen Microsoft Teams Apps beginnen.
+description: Erfahren Sie, wie Sie mit dem Erstellen Microsoft Teams Apps mit C# oder .NET beginnen.
 keywords: Erste Schritte .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 9e830b6681797fcac032c2345a56163e634c446c
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: dac0874850094c7f3bbe83f6cbc4f26209213410
+ms.sourcegitcommit: 5bb12fd185a3bd6e308cc3a65b54341a5ae10af9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096692"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60116758"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>Erstellen Ihrer ersten Teams-App mit C #
 
@@ -37,7 +37,7 @@ Um dieses Lernprogramm abzuschließen, müssen Sie die folgenden Tools installie
 - [Installieren von Git](https://git-scm.com/downloads)
 - [Installieren von Visual Studio](https://www.visualstudio.com/downloads/)
 
-Sie können die kostenlose Community-Edition von Visual Studio installieren. Wenn es während der Installation eine Option zum Hinzufügen `git` zum Pfad gibt, wählen Sie ihn aus. Führen Sie in einem Terminalfenster den folgenden Befehl aus, um die Installation zu `git` überprüfen:
+Sie können die kostenlose Community-Edition von Visual Studio installieren. Wenn es während der Installation eine Option zum Hinzufügen `git` zum Pfad gibt, wählen Sie ihn aus. Führen Sie in einem Terminalfenster den folgenden Befehl aus, um Ihre Installation zu `git` überprüfen:
 
 ```bash
 $ git --version
@@ -117,7 +117,7 @@ ngrok http 44327 -host-header=localhost:44327
 
 ### <a name="host-in-azure"></a>Hosten in Azure
 
-Microsoft Azure hostet Ihre .NET-Anwendung auf einer kostenlosen Ebene mit freigegebener Infrastruktur. Dies reicht aus, um das `Hello World` Beispiel auszuführen. Weitere Informationen finden Sie unter [Erstellen eines neuen kostenlosen Azure-Kontos.](https://azure.microsoft.com/free/)
+Microsoft Azure hostet Ihre .NET-Anwendung auf einer kostenlosen Ebene mithilfe der freigegebenen Infrastruktur. Dies reicht aus, um das `Hello World` Beispiel auszuführen. Weitere Informationen finden Sie unter [Erstellen eines neuen kostenlosen Azure-Kontos.](https://azure.microsoft.com/free/)
 
 Visual Studio bietet integrierte Unterstützung für die Bereitstellung von Apps für verschiedene Anbieter, einschließlich Azure:
 
@@ -134,10 +134,10 @@ Visual Studio bietet integrierte Unterstützung für die Bereitstellung von Apps
 
 # <a name="developer-portal"></a>[Entwicklerportal](#tab/DP)
 
-**So konfigurieren Sie das App-Paket im Entwicklerportal (Vorschau) in Teams**
+**So konfigurieren Sie das App-Paket im Entwicklerportal in Teams**
 
 
-1. 1.Wechseln Sie zum **[Entwicklerportal.](https://dev.teams.microsoft.com/)**
+1. Wechseln Sie zum **[Entwicklerportal.](https://dev.teams.microsoft.com/)**
 
      <img width="600px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
 
