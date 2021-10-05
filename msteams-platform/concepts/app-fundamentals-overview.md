@@ -5,14 +5,14 @@ description: Beschreiben sie die grundlegenden Konzepte der Teams Plattformentwi
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c31df4411f30d8de4c082d8889aa68d5e6ecf654
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6756152ee90c741c7f475fc5153c4b27f9a3bf84
+ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156829"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60119650"
 ---
-# <a name="microsoft-teams-app-development-fundamentals"></a>Grundlagen der app-Entwicklung Microsoft Teams
+# <a name="microsoft-teams-app-development-fundamentals"></a>Grundlagen der Microsoft Teams App-Entwicklung
 
 Microsoft Teams App-Grundlagen geben die Richtung vor, die Sie zum Erstellen Ihrer benutzerdefinierten Teams-App benötigen. Sie können das für die Planung Ihrer Teams-App erforderliche Framework erkennen. Das Dokument hilft Ihnen, die Kommunikation zwischen Benutzern und Apps zu verstehen und herauszufinden, welche Art von App-Oberflächen Sie verwenden müssen oder welche APIs Ihre App möglicherweise im Prozess benötigt. Lassen Sie sich von der Interaktivität inspirieren, die die App-Erfahrung bei der Integration in Teams vertiefen kann.
 
@@ -33,9 +33,12 @@ Sie können Benutzerprobleme erkennen und die Antworten auf einige häufige Prob
 
 [Die Zuordnung Ihrer Anwendungsfälle](../concepts/design/map-use-cases.md) deckt einige häufige Szenarien und die Auswahl der Funktionen Ihrer App ab. Es werden Informationen bereitgestellt, um Ihre App freizugeben und an Elementen in einem externen System zusammenzuarbeiten. Sie können auch erfahren, wie Sie Workflows initiieren und Benachrichtigungen an Benutzer senden. Erhalten Sie zusätzliche Tipps, wie Sie beginnen, wie Sie soziale Netzwerke mit Benutzern, Unterhaltungsbots und die Kombination mehrerer Features erhalten.
 
+## <a name="plan-responsive-tabs-for-teams-mobile"></a>Planen reaktionsfähiger Registerkarten für Teams Mobilgeräte
+[Planen reaktionsfähiger Registerkarten für Teams Mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) deckt gängige Szenarien ab und hilft bei der Planung von Apps für Teams Mobilgeräte. In diesem Dokument wird erläutert, wie Sie die Strategie für Apps auf Mobilgeräten festlegen. Sie können sich auch über die verschiedenen Sättigungen und verschiedene Arten von Teams-App informieren.
+
 ## <a name="integrate-device-capabilities"></a>Integrieren von Gerätefunktionen
 
-Microsoft Teams Plattform verbessert kontinuierlich die Entwicklerfunktionen, die sich an den integrierten Oberflächen von Erstanbietern orientieren. Die erweiterte Teams-Plattform ermöglicht Partnern den Zugriff und die Integration der systemeigenen Gerätefunktionen wie Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort mithilfe dedizierter APIs, die in Microsoft Teams JavaScript-Client-SDK verfügbar sind. 
+Microsoft Teams Plattform verbessert kontinuierlich die Entwicklerfunktionen, die sich an den integrierten Erfahrungen von Erstanbietern orientieren. Die erweiterte Teams-Plattform ermöglicht Partnern den Zugriff auf und die Integration der systemeigenen Gerätefunktionen wie Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort mithilfe dedizierter APIs, die in Microsoft Teams JavaScript-Client-SDK verfügbar sind. 
 
 ## <a name="see-also"></a>Siehe auch
 
