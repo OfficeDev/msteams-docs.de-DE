@@ -5,12 +5,12 @@ description: Lokales Testen und Debuggen Ihres Bots mit einer IDE
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: a143830ad32b42e9613011b3f08cfb9afd838f26
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: c07d1a9eb8a28b328a1a60ba299f05d39b460fbe
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156449"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096556"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Testen und debuggen Sie Ihren Bot lokal
 
@@ -20,8 +20,11 @@ Beim Testen Ihres Bots müssen Sie sowohl den Kontext berücksichtigen, in dem I
 
 Die umfassendste Möglichkeit, Ihren Bot zu testen, besteht darin, ein App-Paket zu erstellen und in Teams hochzuladen. Dies ist die einzige Methode zum Testen der vollständigen Funktionalität, die Ihrem Bot in allen Bereichen zur Verfügung steht.
 
+> [!NOTE]
+>  App Studio wird in Kürze entpriesen. Konfigurieren, verteilen und verwalten Sie Ihre Teams-Apps mit dem neuen [Entwicklerportal.](https://dev.teams.microsoft.com/)
+
 Es gibt zwei Methoden zum Hochladen Ihrer App:
-* Verwenden Sie [App Studio.](~/concepts/build-and-test/app-studio-overview.md)
+* Verwenden Sie [das Entwicklerportal](https://dev.teams.microsoft.com/) oder [App Studio.](~/concepts/build-and-test/app-studio-overview.md)
 * [Erstellen Sie manuell ein App-Paket,](~/concepts/build-and-test/apps-package.md) und [laden Sie ihre App](~/concepts/deploy-and-publish/apps-upload.md)hoch.
 
 > [!NOTE]
@@ -40,13 +43,13 @@ Verwenden Sie den https-Endpunkt, der von ngrok in Ihrem App-Manifest bereitgest
 > [!NOTE]
 > Wenn Sie das Befehlsfenster schließen und neu starten, wird eine neue URL generiert, und Sie müssen die Bot-Endpunktadresse aktualisieren, um sie zu verwenden.
 
-## <a name="test-your-bot-without-uploading-to-teams"></a>Testen Ihres Bots ohne Upload in Teams
+## <a name="test-your-bot-without-uploading-to-teams"></a>Testen Ihres Bots ohne Hochladen in Teams
 
-Gelegentlich kann es erforderlich sein, Ihren Bot zu testen, ohne ihn als App in Teams zu installieren. Wir stellen zwei Methoden zum Testen des Bots bereit. Das Testen Ihres Bots, ohne ihn als App zu installieren, kann hilfreich sein, um sicherzustellen, dass Ihr Bot verfügbar ist und reagiert. Sie können jedoch nicht die gesamte Breite Microsoft Teams Funktionen testen, die Sie Ihrem Bot möglicherweise hinzugefügt haben. Wenn Sie Ihren Bot vollständig testen müssen, sehen Sie sich [die Tests durch Hochladen an.](#test-by-uploading-to-teams)
+Gelegentlich kann es erforderlich sein, Ihren Bot zu testen, ohne ihn als App in Teams zu installieren. Wir stellen zwei Methoden zum Testen des Bots bereit. Das Testen Ihres Bots, ohne ihn als App zu installieren, kann hilfreich sein, um sicherzustellen, dass Ihr Bot verfügbar ist und reagiert. Sie können jedoch nicht die gesamte Breite der Microsoft Teams Funktionen testen, die Sie möglicherweise zu Ihrem Bot hinzugefügt haben. Wenn Sie Ihren Bot vollständig testen müssen, sehen Sie sich [die Tests durch Hochladen an.](#test-by-uploading-to-teams)
 
 ### <a name="use-the-bot-emulator"></a>Verwenden des Bot-Emulator
 
-Die Bot Framework Emulator ist eine Desktopanwendung, mit der Botentwickler ihre Bots lokal oder remote testen und debuggen können. Der Emulator hilft Ihnen, mit Ihrem Bot zu chatten und die Nachrichten zu überprüfen, die Ihr Bot sendet und empfängt. Dies kann nützlich sein, um zu überprüfen, ob Ihr Bot verfügbar ist, und um zu antworten. Mit dem Emulator können Sie jedoch keine Teams-spezifischen Funktionen testen, die Sie dem Bot hinzugefügt haben, noch die Antworten Ihres Bots stellen eine genaue visuelle Darstellung ihrer Darstellung in Teams dar. Wenn Sie eines dieser Dinge testen müssen, ist es am [besten, Ihren Bot hochzuladen.](#test-by-uploading-to-teams)
+Die Bot Framework Emulator ist eine Desktopanwendung, mit der Botentwickler ihre Bots lokal oder remote testen und debuggen können. Der Emulator hilft Ihnen, mit Ihrem Bot zu chatten und die Nachrichten zu überprüfen, die Ihr Bot sendet und empfängt. Dies kann nützlich sein, um zu überprüfen, ob Ihr Bot verfügbar ist, und um zu antworten. Mit dem Emulator können Sie jedoch keine Teams spezifischen Funktionen testen, die Sie dem Bot hinzugefügt haben, und die Antworten Ihres Bots stellen keine genaue visuelle Darstellung ihrer Darstellung in Teams dar. Wenn Sie eines dieser Dinge testen müssen, ist es am [besten, Ihren Bot hochzuladen.](#test-by-uploading-to-teams)
 
 Weitere Informationen finden Sie in [den vollständigen Anweisungen zum Bot Framework Emulator.](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true)
 
@@ -87,7 +90,7 @@ Benutzer können den Bot löschen, indem sie das Papierkorbsymbol in der Bots-Li
 
 ## <a name="disable-a-bot-in-teams"></a>Deaktivieren eines Bots in Teams
 
-Um zu verhindern, dass Ihr Bot Nachrichten empfängt, wechseln Sie zu Ihrem **Bot-Dashboard,** und bearbeiten Sie den Microsoft Teams Kanal. Deaktivieren Sie die Option **"Bei Microsoft Teams aktivieren".** Dadurch wird verhindert, dass Benutzer mit dem Bot interagieren, er ist jedoch weiterhin auffindbar, und Benutzer können ihn weiterhin Teams hinzufügen.
+Um zu verhindern, dass Ihr Bot Nachrichten empfängt, wechseln Sie zu Ihrem **Bot-Dashboard,** und bearbeiten Sie den Microsoft Teams Kanal. Deaktivieren Sie die Option **"Aktivieren bei Microsoft Teams".** Dadurch wird verhindert, dass Benutzer mit dem Bot interagieren, er ist jedoch weiterhin auffindbar, und Benutzer können ihn immer noch Teams hinzufügen.
 
 ## <a name="delete-a-bot-from-teams"></a>Löschen eines Bots aus Teams
 

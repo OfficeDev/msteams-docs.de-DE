@@ -1,17 +1,17 @@
 ---
 title: 'Lernprogramm – Erstellen Ihrer ersten App mit C #'
-description: Erfahren Sie, wie Sie mit dem Erstellen Microsoft Teams Apps mit C# oder .NET beginnen.
+description: Erfahren Sie, wie Sie mit C# oder .NET mit dem Erstellen Microsoft Teams Apps beginnen.
 keywords: Erste Schritte .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 15b08078e15c8ed5ef23d6d9f78d2fc14da02440
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 9e830b6681797fcac032c2345a56163e634c446c
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360729"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096692"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>Erstellen Ihrer ersten Teams-App mit C #
 
@@ -109,7 +109,7 @@ ngrok http 44327 -host-header=localhost:44327
 1. Öffnen Sie Ihren Browser, und navigieren Sie zu `https://d0ac14a5.ngrok.io/hello`. Dadurch wird die Hello-Seite Ihrer App geladen.
 1. Verwenden Sie anstelle der in Schritt 1 erwähnten URL die Weiterleitungsadresse, die `ngrok` in Ihrer Konsolensitzung angezeigt wird.
     > [!NOTE]
-    > Wenn Sie im [Build- und Ausführungsschritt](#build-and-run-the-sample) einen anderen Port verwendet haben, stellen Sie sicher, dass Sie die gleiche Portnummer verwenden, um den `ngrok` Tunnel einzurichten.
+    > Wenn Sie im [Build- und Ausführungsschritt](#build-and-run-the-sample) einen anderen Port verwendet haben, stellen Sie sicher, dass Sie die gleiche Portnummer zum Einrichten des `ngrok` Tunnels verwenden.
     > [!TIP]
     > Es empfiehlt sich, in einem anderen Terminalfenster ausgeführt zu `ngrok` werden. Dies geschieht, um die `ngrok` Ausführung ohne Beeinträchtigung der App aufzuhalten. Sie müssen die App beenden, neu erstellen und erneut ausführen. Die `ngrok` Sitzung enthält nützliche Debuginformationen in diesem Fenster.
 
@@ -117,7 +117,7 @@ ngrok http 44327 -host-header=localhost:44327
 
 ### <a name="host-in-azure"></a>Hosten in Azure
 
-Microsoft Azure hostet Ihre .NET-Anwendung auf einer kostenlosen Ebene mithilfe der freigegebenen Infrastruktur. Dies reicht aus, um das `Hello World` Beispiel auszuführen. Weitere Informationen finden Sie unter [Erstellen eines neuen kostenlosen Azure-Kontos.](https://azure.microsoft.com/free/)
+Microsoft Azure hostet Ihre .NET-Anwendung auf einer kostenlosen Ebene mit freigegebener Infrastruktur. Dies reicht aus, um das `Hello World` Beispiel auszuführen. Weitere Informationen finden Sie unter [Erstellen eines neuen kostenlosen Azure-Kontos.](https://azure.microsoft.com/free/)
 
 Visual Studio bietet integrierte Unterstützung für die Bereitstellung von Apps für verschiedene Anbieter, einschließlich Azure:
 
@@ -125,32 +125,35 @@ Visual Studio bietet integrierte Unterstützung für die Bereitstellung von Apps
 
 **Aktualisieren des App-Pakets**
 
+> [!NOTE]
+>  App Studio wird in Kürze entpriesen. Konfigurieren, verteilen und verwalten Sie Ihre Teams-Apps mit dem neuen [Entwicklerportal.](https://dev.teams.microsoft.com/)
+
 # <a name="app-studio"></a>[App-Studio](#tab/AS)
 
 [!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
 # <a name="developer-portal"></a>[Entwicklerportal](#tab/DP)
 
-**So installieren Sie das Entwicklerportal (Vorschau) in Teams**
+**So konfigurieren Sie das App-Paket im Entwicklerportal (Vorschau) in Teams**
 
 
-1. Wählen Sie unten in der linken Leiste das Symbol **"Apps"** aus, und suchen Sie nach **dem Entwicklerportal.**
+1. 1.Wechseln Sie zum **[Entwicklerportal.](https://dev.teams.microsoft.com/)**
 
-    <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+     <img width="600px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
 
-1. Wählen Sie **"Entwicklerportal"** aus, und wählen Sie **"Öffnen"** aus.
+1. Wechseln Sie zu **"Apps".**
 
-    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
+    <img width="600px" alt="Open Apps" src="~/assets/images/tdp/screen2.png"/>
 
-1. Wählen Sie die Registerkarte "Apps" aus, und wählen Sie **"Vorhandene App importieren"** aus.
+1. Wählen Sie **"Vorhandene App importieren"** aus.
 
-    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
+    <img width="600px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
 
 1. Wählen Sie **"Hello World"** aus, und wählen Sie **"Importieren"** aus. Die **Hello World-App** wird im Entwicklerportal importiert. 
 
-    Sie können Ihre App über das Teams Entwicklerportal konfigurieren. Das Manifest befindet sich unter "Verteilen". Sie können das Manifest verwenden, um Funktionen, erforderliche Ressourcen und andere wichtige Attribute für Ihre App zu konfigurieren. Weitere Informationen zum Konfigurieren Ihrer App mithilfe des Entwicklerportals finden Sie unter [Teams Entwicklerportal.](../concepts/build-and-test/teams-developer-portal.md)
+    Sie können Ihre App über das Teams Entwicklerportal konfigurieren. Das Manifest befindet sich unter "Verteilen". Sie können das Manifest verwenden, um Funktionen, erforderliche Ressourcen und andere wichtige Attribute für Ihre App zu konfigurieren. Weitere Informationen zum Konfigurieren Ihrer App mithilfe des Entwicklerportals finden Sie [unter Teams Entwicklerportal.](../concepts/build-and-test/teams-developer-portal.md)
 
-    <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
+    <img width="600px" alt="Screenshot of configure tdp" src="~/assets/images/tdp/Screen4.png"/>
 ---
 
 <a name="updatecredentials"></a>
@@ -177,7 +180,7 @@ Nachdem Sie die App in Teams installiert haben, müssen Sie sie so konfigurieren
 
 1. Wechseln Sie zu einem Kanal im Team, in dem Sie die Beispiel-App installiert haben, und wählen Sie die Schaltfläche **"+"** aus, um eine neue Registerkarte hinzuzufügen.
 1. Wählen Sie **"Hello World"** aus der **Registerkartenliste hinzufügen** aus. Es wird ein Konfigurationsdialogfeld angezeigt, in dem Sie die Registerkarte auswählen können, die in diesem Kanal angezeigt werden soll. 
-1. Klicken Sie auf **Speichern**. Die `Hello World` Registerkarte wird mit der Registerkarte geladen.
+1. Wählen Sie **Speichern** aus. Die `Hello World` Registerkarte wird mit der Registerkarte geladen.
 
     <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 

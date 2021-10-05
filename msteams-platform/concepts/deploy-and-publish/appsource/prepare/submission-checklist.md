@@ -5,14 +5,14 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 2453a8541a168db2c8417b8a3d80985c95efa12a
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: a01d08e4d1892109395a541522a0bb12e1a9c2e2
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475783"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096563"
 ---
-# <a name="prepare-your-microsoft-teams-store-submission"></a>Vorbereiten der Übermittlung an den Microsoft Teams Store
+# <a name="prepare-your-microsoft-teams-store-submission"></a>Vorbereiten der Übermittlung Microsoft Teams Store
 
 Sie haben Ihre Microsoft Teams-App entworfen, erstellt und getestet. Jetzt können Sie sie auflisten, damit Benutzer Ihre App entdecken und verwenden können.
 
@@ -22,9 +22,14 @@ Bevor Sie Ihre App an [Partner Center](/office/dev/store/use-partner-center-to-s
 
 Während Ihre App möglicherweise in einer Testumgebung funktioniert, sollten Sie Ihr App-Paket überprüfen, um Probleme während des Übermittlungsprozesses zu vermeiden.
 
-Das Microsoft Teams-App-Validierungstool hilft Ihnen bei der Behebung von Problemen, bevor Sie an Partner Center übermitteln. Das Tool überprüft die Konfigurationen Ihrer App automatisch anhand der Testfälle, die während der Store-Überprüfung verwendet werden.
+> [!NOTE]
+>  App Studio wird in Kürze entpriesen. Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps mit dem neuen [Entwicklerportal](https://dev.teams.microsoft.com/)
 
-1. Wechseln Sie zum [Microsoft Teams App-Überprüfungstool.](https://dev.teams.microsoft.com/appvalidation.html) (Hinweis: Das Tool ist auch in [App Studio](../../../build-and-test/app-studio-overview.md)verfügbar.)
+Das Microsoft Teams App-Validierungstool hilft Ihnen, Probleme zu identifizieren und zu beheben, bevor Sie an Partner Center übermitteln. Das Tool überprüft die Konfigurationen Ihrer App automatisch anhand der gleichen Testfälle, die während der Store-Überprüfung verwendet werden.
+
+1. Wechseln Sie im Entwicklerportal zu [Microsoft Teams App-Überprüfungstool.](https://dev.teams.microsoft.com/validation) 
+    > [!NOTE]
+    > Das App-Überprüfungstool ist auch in [App Studio](../../../build-and-test/app-studio-overview.md)verfügbar.
 1. Hochladen Ihr App-Paket, um die automatisierten Tests auszuführen.
 1. Wechseln Sie zur **vorläufigen Checkliste,** und überprüfen Sie die Testfälle, die schwierig zu automatisieren sind.
 1. [Beheben von Problemen mit Ihren Konfigurationen](~/resources/schema/manifest-schema.md) oder Ihrer App im Allgemeinen. Diese Probleme treten auf, wenn die automatisierten Tests Ihnen Fehler liefern oder nicht alle Kriterien in der Prüfliste erfüllt haben.
@@ -64,7 +69,7 @@ Stellen Sie eine Aufzeichnung Ihrer App bereit, damit Microsoft die Funktionalit
 
 ## <a name="create-your-store-listing-details"></a>Erstellen der Details ihres Store-Eintrags
 
-Die Informationen, die Sie an [Partner Center](https://partner.microsoft.com) übermitteln&#8212;einschließlich Name, Beschreibungen, Symbolen und Bildern&#8212;werden zum Teams Store- und Microsoft AppSource-Eintrag für Ihre App.
+Die Informationen, die Sie an [Partner Center](https://partner.microsoft.com)&#8212;übermitteln, einschließlich Name, Beschreibungen, Symbole und Bilder&#8212;werden zum Teams Store- und Microsoft AppSource-Eintrag für Ihre App.
 
 Ein Store-Eintrag kann der erste Eindruck einer Person von Ihrer App sein. Erhöhen Sie Installationen mit einem Eintrag, der die Vorteile, Funktionen und Marken Ihrer App effektiv vermittelt.
 
@@ -139,7 +144,7 @@ Screenshots bieten eine auffällige visuelle Vorschau Ihrer App, um Ihren App-Na
 :::row:::
 
    :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Der Beispiel-Screenshot zeigt, wo App-Screenshots in einem Store-Eintrag angezeigt werden.":::
+      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Im Beispiel-Screenshot wird hervorgehoben, wo App-Screenshots in einem Store-Eintrag angezeigt werden.":::
    :::column-end:::
    :::column span="1":::
    :::column-end:::
@@ -160,7 +165,7 @@ Bewährte Methoden finden Sie in den folgenden Ressourcen:
 
 ### <a name="create-a-video"></a>Erstellen eines Videos
 
-Ein Video in Ihrem Eintrag kann die effektivste Möglichkeit sein, zu kommunizieren, warum Benutzer Ihre App verwenden sollten. Behandeln Sie die folgenden Fragen in einem Video:
+Ein Video in Ihrem Eintrag kann die effektivste Methode sein, um zu vermitteln, warum Benutzer Ihre App verwenden sollten. Behandeln Sie die folgenden Fragen in einem Video:
 
 * Wer ist Ihre App dafür?
 * Welche Probleme kann Ihre App lösen?
@@ -204,7 +209,7 @@ Partner Center unterstützt [lokalisierte Store-Einträge.](/office/dev/store/pr
 [Publisher Nachweis](/microsoft-365-app-certification/docs/attestation) ist auch für Teams im Store aufgeführten Apps erforderlich. Der Prozess umfasst die Durchführung einer Selbstbewertung der Sicherheits-, Datenverarbeitungs- und Compliancepraktiken Ihrer App. Der Prozess kann potenziellen Kunden helfen, fundierte Entscheidungen zur Verwendung Ihrer App zu treffen.
 
 > [!NOTE]
-> Wenn Sie eine neue App übermitteln, können Sie Publisher Nachweis erst offiziell abschließen, wenn Ihre App im Teams Store aufgeführt ist. Wenn Sie eine aufgeführte App aktualisieren, führen Sie Publisher Nachweis aus, bevor Sie die neueste Version der App zur Überprüfung übermitteln.
+> Wenn Sie eine neue App übermitteln, können Sie Publisher Nachweis erst offiziell ausfüllen, wenn Ihre App im Teams Store aufgeführt ist. Wenn Sie eine aufgeführte App aktualisieren, führen Sie Publisher Attestation aus, bevor Sie die neueste Version der App zur Überprüfung übermitteln.
 
 ## <a name="next-step"></a>Nächster Schritt
 
