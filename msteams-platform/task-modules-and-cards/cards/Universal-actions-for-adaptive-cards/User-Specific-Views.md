@@ -4,12 +4,12 @@ description: Beispiel für benutzerspezifische Ansichten mit universellen Aktion
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: d607250d0d34367c097cdfd25050e4180f72eeda
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 10f9b63f59629e592f2dee75d3e91bab97ff9a08
+ms.sourcegitcommit: 31dc5dfac6e7d0c6f33795190a55bb5c741eb32a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156286"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "60223041"
 ---
 # <a name="user-specific-views"></a>Benutzerspezifische Ansichten
 
@@ -43,7 +43,8 @@ Der folgende Code enthält ein Beispiel für adaptive Karten:
       "title": "Refresh",
       "verb": "editOrResolveView",
       "data": {
-              "refresh info": "<refresh info>"
+            "refresh info": "<refresh info>"
+      }
     },
     "userIds": ["<Megan's user MRI>", "<Alex's user MRI>"]
   },
@@ -69,7 +70,7 @@ Der folgende Code enthält ein Beispiel für adaptive Karten:
 
 ## <a name="invoke-request-sent-from-teams-client-to-the-bot"></a>Aufrufen der Vom Teams-Client an den Bot gesendeten Anforderung
 
-Der folgende Code enthält ein Beispiel für eine Aufrufanforderung, die vom Teams-Client von Alex und Megan an den Bot gesendet wurde:
+Der folgende Code enthält ein Beispiel für eine Aufrufanforderung, die vom Teams-Client von Alex und Megan an den Bot gesendet wird:
 
 ```JSON
 { 
@@ -198,7 +199,7 @@ Richtlinien für den Kartenentwurf, die Sie beim Entwerfen benutzerspezifischer 
 * **Basiskarte:** Die Basisversion der Karte, die der Bot-Entwickler an den Chat sendet. Die Basisversion ist die Version der adaptiven Karte für alle Benutzer, die nicht im Abschnitt angegeben `userIds` sind.
 * Eine Nachrichtenaktualisierung kann verwendet werden, um die Basiskarte zu aktualisieren und gleichzeitig die benutzerspezifische Karte zu aktualisieren. Beim Öffnen des Chats oder Kanals wird auch die Karte für Benutzer mit aktivierter Aktualisierung aktualisiert.
 * Für Szenarien mit größeren Gruppen, in denen Benutzer zu einer Aktionsansicht wechseln, die dynamische Updates für Antwortende benötigt, können Sie bis zu 60 Benutzer zur `userIds` Liste hinzufügen. Sie können den Ersten Antwortenden aus der Liste entfernen, wenn der 61. Benutzer antwortet. Für die Benutzer, die aus der Liste entfernt `userIds` werden, können Sie eine manuelle Aktualisierungsschaltfläche bereitstellen oder die Schaltfläche "Aktualisieren" im Menü "Nachrichtenoptionen" verwenden, um das neueste Ergebnis zu erhalten.
-* Geben Sie benutzern eine Eingabeaufforderung, um eine benutzerspezifische Ansicht zu erhalten, in der nur eine bestimmte Ansicht der Karte oder einige Aktionen angezeigt werden.
+* Geben Sie Benutzern eine Eingabeaufforderung, um eine benutzerspezifische Ansicht zu erhalten, in der nur eine bestimmte Ansicht der Karte oder einige Aktionen angezeigt werden.
 
 ## <a name="code-sample"></a>Codebeispiel
 
