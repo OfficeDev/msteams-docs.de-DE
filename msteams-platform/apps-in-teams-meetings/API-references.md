@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams-Apps – Benutzerteilnehmer-Rollen-API für Besprechungen
-ms.openlocfilehash: 31e8f96dd2e701cbb6a6c3b47174d1d70ee36576
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 1a3ca008fbaf5de8e6cdcc3af1be180a9d6eb46a
+ms.sourcegitcommit: cbc6e8f363b4e80b6cbee098508f9f8affbfac09
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360454"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "60221852"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
@@ -23,7 +23,7 @@ Die Besprechungserweiterungen bieten APIs zum Transformieren der Besprechungsumg
 
 Die folgende Tabelle enthält eine Liste der APIs:
 
-|API|Beschreibung|Anforderung|Quelle|
+|API|Beschreibung|Anforderung|Source|
 |---|---|----|---|
 |**GetUserContext**| Mit dieser API können Sie Kontextinformationen abrufen, um relevante Inhalte auf einer Teams Registerkarte anzuzeigen. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams Client SDK|
 |**GetParticipant**| Diese API ermöglicht es einem Bot, Teilnehmerinformationen nach Besprechungs-ID und Teilnehmer-ID abzurufen. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
@@ -56,9 +56,9 @@ Die `GetParticipant` API enthält die folgenden Abfrageparameter:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**meetingId**| String | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
+|**meetingId**| Zeichenfolge | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
 |**participantId**| String | Ja | Die Teilnehmer-ID ist die Benutzer-ID. Es ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Teilnehmer-ID vom Tab-SSO abzurufen. |
-|**tenantId**| String | Ja | Die Mandanten-ID ist für die Mandantenbenutzer erforderlich. Es ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Mandanten-ID vom Tab-SSO abzurufen. |
+|**tenantId**| Zeichenfolge | Ja | Die Mandanten-ID ist für die Mandantenbenutzer erforderlich. Es ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Mandanten-ID vom Tab-SSO abzurufen. |
 
 ### <a name="example"></a>Beispiel
 
@@ -256,7 +256,7 @@ Die Besprechungsdetails-API enthält den folgenden Abfrageparameter:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**meetingId**| String | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar. |
+|**meetingId**| Zeichenfolge | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar. |
 
 ### <a name="example"></a>Beispiel
 
@@ -465,20 +465,22 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 ## <a name="code-sample"></a>Codebeispiel
 
-|Beispielname | Beschreibung | C# | Node.js | 
+|Beispielname | Beschreibung | C # | Node.js | 
 |----------------|-----------------|--------------|--------------|
-| Erweiterbarkeit von Besprechungen | Microsoft Teams Beispiel zur Besprechungserweiterung für das Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Erweiterbarkeit von Besprechungen | Microsoft Teams Beispiel für die Erweiterbarkeit von Besprechungen zum Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Besprechungsinhalts-Blasen-Bot | Microsoft Teams Besprechungserweiterungsbeispiel für die Interaktion mit einem Inhaltsblasen-Bot in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | Meeting MeetingSidePanel | Microsoft Teams Besprechungserweiterungsbeispiel für die Interaktion mit dem Seitenbereich in besprechungsinternen Besprechungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 | Registerkarte "Details" in der Besprechung | Microsoft Teams Besprechungserweiterungsbeispiel für die Interaktion mit der Registerkarte "Details" in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
-|Beispiel für Besprechungsereignisse|Beispiel-App zum Anzeigen von Teams Besprechungsereignissen in Echtzeit|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
+|Beispiel für Besprechungsereignisse|Beispiel-App zum Anzeigen von Teams Besprechungsereignissen in Echtzeit|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
+|Beispiel für die Besprechungsrekrutierung|Beispiel-App zum Anzeigen der Besprechungserfahrung für das Einstellungsszenario.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
+|App-Installation mit QR-Code|Beispiel-App, die den QR-Code generiert und die App mit dem QR-Code installiert|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 
 ## <a name="see-also"></a>Siehe auch
 
 * [Teams Authentifizierungsfluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps für Teams Besprechungen](teams-apps-in-meetings.md)
 
-## <a name="next-step"></a>Nächster Schritt
+## <a name="next-steps"></a>Nächste Schritte
 
 > [!div class="nextstepaction"]
 > [Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen](enable-and-configure-your-app-for-teams-meetings.md)
