@@ -8,8 +8,8 @@
       items:
         - name: Verteilen Ihrer App
           tocHref: /office/dev/store/checklist/
-          topicHref: /microsoftteams/platform//concepts/deploy-and-publish/
+          topicHref: /microsoftteams/platform/concepts/deploy-and-publish/
           items:
             - name: Veröffentlichen im Microsoft Teams-Store
               tocHref: /office/dev/store/checklist/add-in-submission-guide/
-              topicHref: /microsoftteams/platform//concepts/deploy-and-publish/appsource/
+              topicHref: /microsoftteams/platform/concepts/deploy-and-publish/appsource/

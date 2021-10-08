@@ -4,12 +4,12 @@ description: Beispiel für aktuelle Ansichten mit universellem Bot
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b58f214d707f05664e35ddfebb5a265e806a7e70
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 96f87f8795fdd2fed2276b2d67e58d1c394b05f6
+ms.sourcegitcommit: d0f1333d5dc5aede963dc59cfb1c2eca70aaf521
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156601"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "60238237"
 ---
 # <a name="up-to-date-cards"></a>Aktuelle Karten
 
@@ -22,7 +22,7 @@ Mit benutzerspezifischen Ansichten kann eine Karte mit den Schaltflächen **"Gen
 
 * Um den Kartenstatus immer auf dem neuesten Stand zu halten, kann Teams Mechanismus zum Bearbeiten von Nachrichten verwendet werden. Beispielsweise kann der Bot bei jeder Genehmigung eine Nachrichtenbearbeitung für alle Benutzer auslösen. Diese Bot-Nachrichtenbearbeitung löst eine Aufrufanforderung für alle Benutzer der `adaptiveCard/action` automatischen Aktualisierung aus, auf die der Bot mit der aktualisierten benutzerspezifischen Karte antworten kann.
 
-Weitere Informationen finden Sie unter ["Bearbeiten einer Botnachricht"](/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
+Weitere Informationen finden Sie unter ["Bearbeiten einer Botnachricht"](/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
 
 ## <a name="approval-base-card"></a>Genehmigungsbasiskarte
 
@@ -117,7 +117,7 @@ Im Folgenden sind die beiden Rollen aufgeführt, die Benutzern je nach Genehmigu
 
 **So senden Sie die Anforderung zur Genehmigung des Objekts**
 
-1. Alex löst in einer Teams Unterhaltung eine Anforderung zur Genehmigung von Ressourcen aus und weist sie Megan und Nestor zu.
+1. Alex löst in einer Teams Unterhaltung eine Objektgenehmigungsanforderung aus und weist sie Megan und Nestor zu.
 2. Bot sendet die Genehmigungsbasiskarte in der Unterhaltung.
 3. Alle anderen Benutzer in der Unterhaltung sehen die vom Bot gesendete Karte. Die automatische Aktualisierung wird für Megan und Nestor ausgelöst, die nun die benutzerspezifische Karte mit den Schaltflächen **"Genehmigen"** oder **"Ablehnen"** sehen, da ihre Benutzer-MRIs der Liste in der Eigenschaft der adaptiven Karte hinzugefügt `userIds` `refresh` werden.
 

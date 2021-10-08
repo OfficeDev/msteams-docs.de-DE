@@ -1,14 +1,14 @@
 - name: Microsoft Teams-Entwicklerdokumentation
   href: /microsoftteams/platform
 - name: Übersicht
-  expanded: true
+  expanded: false
   items:
     - name: Apps für Microsoft Teams erstellen
       href: overview.md
     - name: Was ist neu?
       href: whats-new.md
 - name: Erste Schritte
-  expanded: true
+  expanded: false
   items:
     - name: Übersicht
       href: get-started/code-samples.md
