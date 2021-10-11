@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanruf-Bot für Micros
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Aufrufen von Bot-Audio-/Video-Audiovideomedien
-ms.openlocfilehash: 2724e9be913b18416f0ad6646f0879a41f134201
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 945066cf58f5b5adcf5b69f18335551913832e87
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156872"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260663"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrieren von Anrufen und Besprechungsbots für Microsoft Teams
 
@@ -21,12 +21,12 @@ Ein Bot, der an Audio- oder Videoanrufen und Onlinebesprechungen teilnimmt, ist 
 
 ## <a name="new-manifest-settings"></a>Neue Manifesteinstellungen
 
-Bots für Anrufe und Onlinebesprechungen verfügen über die folgenden zwei zusätzlichen Einstellungen im manifest.js, die Audio- oder Videofunktionen für Ihren Bot in Teams aktivieren.
+Bots für Anrufe und Onlinebesprechungen verfügen über die folgenden beiden zusätzlichen Einstellungen in "manifest.json", die Audio oder Video für Ihren Bot in Teams aktivieren.
 
 * `bots[0].supportsCalling`. Wenn vorhanden und `true` festgelegt, ermöglicht Teams Ihrem Bot die Teilnahme an Anrufen und Onlinebesprechungen.
 * `bots[0].supportsVideo`. Wenn vorhanden und festgelegt `true` auf , weiß Teams, dass Ihr Bot Video unterstützt.
 
-Wenn Ihre IDE die manifest.jsim Schema für Ihre Anrufe und Besprechungsbots ordnungsgemäß auf diese Werte überprüfen soll, können Sie das `$schema` Attribut wie folgt ändern:
+Wenn Ihre IDE das Manifest.json-Schema für Ihre Aufrufe und Besprechungsbots ordnungsgemäß auf diese Werte überprüfen soll, können Sie das `$schema` Attribut wie folgt ändern:
 
 ```json
 "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
@@ -50,7 +50,7 @@ Der nächste Abschnitt enthält eine Liste der Anwendungsberechtigungen, die fü
 
 ## <a name="add-graph-permissions"></a>Hinzufügen Graph Berechtigungen
 
-Das Graph bietet granulare Berechtigungen, um den Zugriff von Apps auf Ressourcen zu steuern. Sie entscheiden, welche Berechtigungen für Graph Ihre App-Anforderungen gelten. Die Graph aufrufenden APIs unterstützen Anwendungsberechtigungen, die von Apps verwendet werden, die ohne angemeldeten Benutzer ausgeführt werden. Ein Mandantenadministrator muss Anwendungsberechtigungen zustimmen.
+Das Graph bietet granulare Berechtigungen, um den Zugriff zu steuern, den Apps auf Ressourcen haben. Sie entscheiden, welche Berechtigungen für Graph Ihre App-Anforderungen gelten. Die Graph aufrufenden APIs unterstützen Anwendungsberechtigungen, die von Apps verwendet werden, die ohne angemeldeten Benutzer ausgeführt werden. Ein Mandantenadministrator muss Anwendungsberechtigungen zustimmen.
 
 ### <a name="application-permissions-for-calls"></a>Anwendungsberechtigungen für Anrufe
 
@@ -78,13 +78,13 @@ Die folgende Tabelle enthält eine Liste der Anwendungsberechtigungen für Onlin
 
 ### <a name="assign-permissions"></a>Berechtigungen zuweisen
 
-Sie müssen die Anwendungsberechtigungen für Ihren Bot im Voraus mithilfe des [Azure-Portals](https://aka.ms/aadapplist) konfigurieren, wenn Sie den [Azure Active Directory (AAD) V1-Endpunkt](/azure/active-directory/develop/azure-ad-endpoint-comparison)verwenden möchten.
+Sie müssen die Anwendungsberechtigungen für Ihren Bot im Voraus mithilfe des [Azure-Portals](https://aka.ms/aadapplist) konfigurieren, wenn Sie den [V1-Endpunkt Azure Active Directory (AAD)](/azure/active-directory/develop/azure-ad-endpoint-comparison)verwenden möchten.
 
 ### <a name="get-tenant-administrator-consent"></a>Einholen der Zustimmung des Mandantenadministrators
 
 Bei Apps, die den AAD V1-Endpunkt verwenden, kann ein Mandantenadministrator den Anwendungsberechtigungen über das [Azure-Portal](https://portal.azure.com) zustimmen, wenn Ihre App in ihrer Organisation installiert wird. Alternativ können Sie eine Anmeldeumgebung in Ihrer App bereitstellen, über die Administratoren den von Ihnen konfigurierten Berechtigungen zustimmen können. Nachdem die Administratorzustimmung von AAD aufgezeichnet wurde, kann Ihre App Token anfordern, ohne erneut die Zustimmung anfordern zu müssen.
 
-Sie können sich darauf verlassen, dass ein Administrator die Berechtigungen erteilt, die Ihre App im [Azure-Portal](https://portal.azure.com)benötigt. Eine bessere Option ist die Bereitstellung einer Anmeldeumgebung für Administratoren mithilfe des AAD `/adminconsent` V2-Endpunkts. Weitere Informationen finden Sie in den Anweisungen zum Erstellen einer URL für [die Administratorzustimmung.](https://developer.microsoft.com/graph/docs/concepts/auth_v2_service#3-get-administrator-consent)
+Sie können sich darauf verlassen, dass ein Administrator die Berechtigungen erteilt, die Ihre App im [Azure-Portal](https://portal.azure.com)benötigt. Eine bessere Option ist die Bereitstellung einer Anmeldeumgebung für Administratoren mithilfe des AAD `/adminconsent` V2-Endpunkts. Weitere Informationen finden Sie in den Anweisungen zum Erstellen einer URL für [die Administratorzustimmung.](/graph/uth-v2-service#3-get-administrator-consent)
 
 > [!NOTE]
 > Zum Erstellen der Mandanten-Administratorzustimmungs-URL ist ein konfigurierter Umleitungs-URI oder eine Antwort-URL im [App-Registrierungsportal](https://apps.dev.microsoft.com/) erforderlich. Um Antwort-URLs für Ihren Bot hinzuzufügen, greifen Sie auf Ihre Bot-Registrierung zu, und wählen Sie **"Erweiterte Optionen**  >  **Anwendungsmanifest bearbeiten"** aus. Fügen Sie die Umleitungs-URL zur `replyUrls` Sammlung hinzu.

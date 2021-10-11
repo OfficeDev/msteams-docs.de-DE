@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: ngrok-Tunnel für lokale Entwicklung
 ms.date: 11/18/2018
-ms.openlocfilehash: f09457e920a08b1f56973c349209dc07fc539db3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2b3da582f6529fd676ae8964acb09a038e39162a
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156388"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260658"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>Entwickeln von Anruf- und Onlinebesprechungs-Bots auf Ihrem lokalen PC
 
@@ -119,4 +119,6 @@ var mediaPlatform = new MediaPlatformSettings
 
 - Kostenlose Ngrok-Konten bieten **keine** End-to-End-Verschlüsselung. Die HTTPS-Daten enden bei der ngrok-URL, und die Daten werden unverschlüsselt von ngrok zu `localhost` . Wenn Sie eine End-to-End-Verschlüsselung benötigen, erwägen Sie ein kostenpflichtiges ngrok-Konto. Weitere Informationen zum Einrichten sicherer End-to-End-Tunnel finden Sie unter [TLS-Tunnel.](https://ngrok.com/docs#tls)
 - Da die Bot-Rückruf-URL dynamisch ist, müssen Sie in Szenarien mit eingehenden Anrufen häufig Ihre ngrok-Endpunkte aktualisieren. Eine Möglichkeit, dies zu beheben, ist die Verwendung eines kostenpflichtigen ngrok-Kontos, das feste Unterdomänen bereitstellt, auf die Sie Ihren Bot und die Plattform verweisen können.
-- Ngrok-Tunnel können auch mit [Azure Service Fabric](/azure/service-fabric/service-fabric-overview)verwendet werden. Ein Beispiel dafür finden Sie in der [HueBot-Beispiel-App.](/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples/HueBot/HueBot)
+- Ngrok-Tunnel können auch mit [Azure Service Fabric](/azure/service-fabric/service-fabric-overview)verwendet werden. Ein Beispiel dafür finden Sie in der [HueBot-Beispiel-App.](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/HueBot/HueBot)
+
+ 

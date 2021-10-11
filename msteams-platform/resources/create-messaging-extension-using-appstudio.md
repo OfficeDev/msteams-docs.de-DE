@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie eine Microsoft Teams Messaging-Erweiterung mi
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 61bfed969b981bd5000bdb6eca0bbd77196e8086
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6b7de5b5178d893e391b0e97a699f1cba029d59d
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156438"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260646"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Eine Messaging-Erweiterung mit App Studio erstellen
 
@@ -25,7 +25,7 @@ Auf hoher Ebene müssen Sie die folgenden Schritte ausführen, um eine Messaging
 4. Erstellen Ihres App-Pakets
 5. Hochladen Ihres Pakets in Microsoft Teams
 
-Das Erstellen Ihres Webdiensts, das Erstellen Ihres App-Pakets und das Registrieren Ihres Webdiensts beim Bot Framework können in beliebiger Reihenfolge erfolgen. Da diese drei Teile so miteinander verschachtelt sind, müssen Sie unabhängig davon, in welcher Reihenfolge Sie sie ausführen, zurückkehren, um die anderen zu aktualisieren. Ihre Registrierung benötigt den Messaging-Endpunkt von Ihrem bereitgestellten Webdienst, und Ihr Webdienst benötigt die ID und das Kennwort, die aus Ihrer Registrierung erstellt wurden. Ihr App-Manifest benötigt auch diese ID, um Teams mit Ihrem Webdienst zu verbinden.
+Das Erstellen Ihres Webdiensts, das Erstellen Ihres App-Pakets und das Registrieren Ihres Webdiensts beim Bot Framework können in beliebiger Reihenfolge erfolgen. Da diese drei Teile so miteinander verschachtelt sind, müssen Sie unabhängig davon, in welcher Reihenfolge Sie sie ausführen, zurückkehren, um die anderen zu aktualisieren. Ihre Registrierung benötigt den Messaging-Endpunkt von Ihrem bereitgestellten Webdienst, und Ihr Webdienst benötigt die ID und das Kennwort, die aus Ihrer Registrierung erstellt wurden. Ihr App-Manifest benötigt außerdem diese ID, um Teams mit Ihrem Webdienst zu verbinden.
 
 Während Sie Ihre Messaging-Erweiterung erstellen, wechseln Sie regelmäßig zwischen dem Ändern Des App-Manifests und der Bereitstellung von Code für Ihren Webdienst. Beachten Sie bei der Arbeit mit dem App-Manifest, dass Sie die JSON-Datei manuell bearbeiten oder Änderungen über App Studio vornehmen können. In beiden Fällen müssen Sie Ihre App in Teams erneut bereitstellen (hochladen), wenn Sie eine Änderung am Manifest vornehmen. Dies ist jedoch nicht erforderlich, wenn Sie Änderungen an Ihrem Webdienst bereitstellen.
 
@@ -37,12 +37,13 @@ Das Herzstück Ihrer Messaging-Erweiterung ist Ihr Webdienst. Es wird eine einze
 
 * Verwenden Sie eines unserer [Schnellstartlernprogramme,](#learn-more) die Sie durch die Erstellung Ihres Webdiensts führen.
 * Wählen Sie eines der Beispiele für Messaging-Erweiterungen aus, die im [Bot Framework-Beispiel-Repository](https://github.com/Microsoft/BotBuilder-Samples) verfügbar sind, um zu beginnen.
-* Wenn Sie JavaScript verwenden, verwenden Sie den [Yeoman-Generator für Microsoft Teams](https://github.com/OfficeDev/generator-teams) zum Erstellen eines Gerüsts für Ihre Teams-App, einschließlich Ihres Webdiensts.
+* Wenn Sie JavaScript verwenden, verwenden Sie den [Yeoman-Generator für Microsoft Teams,](https://github.com/OfficeDev/generator-teams) um ein Gerüst für Ihre Teams-App einschließlich Ihres Webdiensts zu erstellen.
 * Erstellen Sie Ihren Webdienst von Grund auf neu. Sie können das Bot Framework-SDK für Ihre Sprache hinzufügen oder direkt mit den JSON-Nutzlasten arbeiten.
 
 ## <a name="register-your-web-service-with-the-bot-framework"></a>Registrieren Ihres Webdiensts bei Bot Framework
 
-Messaging-Erweiterungen nutzen das Messaging-Schema und das sichere Kommunikationsprotokoll des Bot-Frameworks. Wenn Sie noch nicht über einen verfügen, müssen Sie Ihren Webdienst im Bot Framework registrieren. Die Microsoft App-ID (wir bezeichnen dies als Ihre Bot-ID innerhalb von Teams, um sie von anderen App-IDs zu identifizieren, mit denen Sie möglicherweise arbeiten) und der Messaging-Endpunkt, mit dem Ihr Register beim Bot Framework registriert ist, wird in Ihrer Messaging-Erweiterung verwendet, um Anforderungen zu empfangen und darauf zu reagieren. Wenn Sie eine vorhandene Registrierung verwenden, stellen Sie sicher, dass Sie [den Microsoft Teams Kanal aktivieren.](/azure/bot-service/bot-service-manage-channels.md?view=azure-bot-service-4.0&preserve-view=true)
+Messaging-Erweiterungen nutzen das Messaging-Schema und das sichere Kommunikationsprotokoll des Bot-Frameworks. Wenn Sie noch nicht über einen verfügen, müssen Sie Ihren Webdienst im Bot Framework registrieren. Die Microsoft App-ID (wir bezeichnen dies als Ihre Bot-ID innerhalb von Teams, um sie von anderen App-IDs zu identifizieren, mit denen Sie möglicherweise arbeiten), und der Messaging-Endpunkt, mit dem Sie sich beim Bot Framework registrieren, wird in Ihrer Messaging-Erweiterung verwendet, um Anforderungen zu empfangen und zu beantworten. Wenn Sie eine vorhandene Registrierung verwenden, stellen Sie sicher, dass Sie [den Microsoft Teams Kanal aktivieren.](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0)
+
 
 Wenn Sie eine der Schnellstarts befolgen oder mit einem der verfügbaren Beispiele beginnen, werden Sie durch die Registrierung Ihres Webdiensts geführt. Wenn Sie Ihren Dienst manuell registrieren möchten, haben Sie drei Möglichkeiten, dies zu tun. Wenn Sie sich für die Registrierung entscheiden, ohne ein Azure-Abonnement zu verwenden, können Sie den vereinfachten OAuth-Authentifizierungsfluss des Bot Frameworks nicht nutzen. Sie können Ihre Registrierung nach der Erstellung zu Azure migrieren.
 
@@ -67,11 +68,11 @@ Sie können die App Studio-App innerhalb des Microsoft Teams-Clients verwenden, 
 7. Die Schaltfläche **"Hinzufügen"** im Abschnitt **"Befehl"** führt Sie durch das Hinzufügen von Befehlen zu Ihrer Messaging-Erweiterung. Links zu weiteren Informationen zum Hinzufügen von Befehlen finden Sie im Abschnitt ["Weitere Informationen".](#learn-more) Denken Sie daran, dass Sie bis zu 10 Befehle für Ihre Messaging-Erweiterung definieren können.
 8. Im Abschnitt **"Nachrichtenhandler"** können Sie eine Domäne hinzufügen, für die Ihr Messaging ausgelöst wird. Weitere Informationen finden Sie [unter "Verbreitung von Links".](~/messaging-extensions/how-to/link-unfurling.md)
 
-Über die Registerkarte **"Fertig stellen => Testen und Verteilen"** können Sie Ihr App-Paket **herunterladen** (das Ihr App-Manifest sowie Ihre App-Symbole enthält) oder das Paket **installieren.**
+Über die Registerkarte **"Fertig stellen => Testen und Verteilen"** **können** Sie Ihr App-Paket herunterladen (das Ihr App-Manifest sowie Ihre App-Symbole enthält) oder das Paket **installieren.**
 
 ### <a name="create-your-app-manifest-manually"></a>Manuelles Erstellen des App-Manifests
 
-Wie bei Bots und Registerkarten aktualisieren Sie das [App-Manifest](~/resources/schema/manifest-schema.md#composeextensions) Ihrer App, um die Eigenschaften der Messaging-Erweiterung einzuschließen. Diese Eigenschaften steuern, wie Ihre Messaging-Erweiterung im Microsoft Teams Client angezeigt wird und wie sie sich verhält. Messaging-Erweiterungen werden ab Version 1.0 des Manifests unterstützt.
+Wie bei Bots und Registerkarten aktualisieren Sie das [App-Manifest](~/resources/schema/manifest-schema.md#composeextensions) Ihrer App, um die Eigenschaften der Messaging-Erweiterung einzuschließen. Diese Eigenschaften steuern, wie Ihre Messaging-Erweiterung im Microsoft Teams-Client angezeigt wird und wie sie sich verhält. Messaging-Erweiterungen werden ab Version 1.0 des Manifests unterstützt.
 
 #### <a name="declare-your-messaging-extension"></a>Deklarieren Der Messaging-Erweiterung
 
@@ -225,7 +226,7 @@ Das folgende Beispiel ist ein einfaches Messaging-Erweiterungsobjekt im App-Mani
 
 ## <a name="add-your-invoke-message-handlers"></a>Hinzufügen der Aufrufnachrichtenhandler
 
-Wenn Ihre Benutzer Ihre Messaging-Erweiterung auslösen, müssen Sie die anfängliche Aufrufnachricht verarbeiten, einige Informationen vom Benutzer sammeln und dann diese Informationen verarbeiten und entsprechend antworten. Dazu müssen Sie zuerst entscheiden, welche Art von Befehlen Sie Ihrer Messaging-Erweiterung hinzufügen möchten, und entweder [Aktionsbefehle oder](~/messaging-extensions/how-to/action-commands/define-action-command.md) [Suchbefehle hinzufügen.](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+Wenn Ihre Benutzer Ihre Messaging-Erweiterung auslösen, müssen Sie die anfängliche Aufrufnachricht verarbeiten, einige Informationen vom Benutzer sammeln und dann diese Informationen verarbeiten und entsprechend antworten. Dazu müssen Sie zunächst entscheiden, welche Art von Befehlen Sie Ihrer Messaging-Erweiterung hinzufügen möchten, und entweder [Aktionsbefehle oder](~/messaging-extensions/how-to/action-commands/define-action-command.md) [Suchbefehle hinzufügen.](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
 ## <a name="messaging-extensions-in-teams-meetings"></a>Messaging-Erweiterungen in Teams Besprechungen
 
@@ -234,7 +235,7 @@ Wenn Ihre Benutzer Ihre Messaging-Erweiterung auslösen, müssen Sie die anfäng
 
 Sobald eine Besprechung beginnt, können Teams Teilnehmer während eines Liveanrufs direkt mit Ihrer Messaging-Erweiterung interagieren. Berücksichtigen Sie beim Erstellen Ihrer Messaging-Erweiterung in Besprechungen Folgendes:
 
-1. **Location**. Ihre Messaging-Erweiterung kann über den Bereich zum Verfassen von Nachrichten, das Befehlsfeld oder @mentioned im Besprechungschat aufgerufen werden.
+1. **Location**. Ihre Messaging-Erweiterung kann im Nachrichtenbereich zum Verfassen, im Befehlsfeld oder @mentioned im Besprechungschat aufgerufen werden.
 
 1. **Metadaten**. Wenn Ihre Messaging-Erweiterung aufgerufen wird, kann sie den Benutzer und Mandanten von `userId` und `tenantId` identifizieren. Die `meetingId`kann als Teil des Objekts `channelData` gefunden werden. Ihre App kann die `userId` `meetingId`  UND für die `GetParticipant` API-Anforderung verwenden, um Benutzerrollen abzurufen.
 

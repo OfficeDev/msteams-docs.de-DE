@@ -6,12 +6,12 @@ keywords: Cookieattribute samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 100bfa29cd8d193e73473bf32834885283f6ba2d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e4f2eff887b84d54de9b59becc850bad8f42a42a
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156757"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260651"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite-Cookieattribut 
 
@@ -29,7 +29,7 @@ Die Cookietypen und ihre entsprechenden Bereiche sind wie folgt:
 
 ## <a name="cookies-and-http-requests"></a>Cookies und HTTP-Anforderungen
 
-Vor der Einführung von SameSite-Einschränkungen wurden die Cookies im Browser gespeichert. Sie wurden an jede HTTP-Webanforderung angefügt und vom `Set Cookie` HTTP-Antwortheader an den Server gesendet. Mit dieser Methode wurden Sicherheitsrisiken eingeführt, z. B. Cross Site Request Forgery, die als CSRF-Angriffe bezeichnet werden. Die SameSite-Komponente reduzierte die Gefährdung durch ihre Implementierung und Verwaltung im SetCookie-Header.
+Vor der Einführung von SameSite-Einschränkungen wurden die Cookies im Browser gespeichert. Sie wurden an jede HTTP-Webanforderung angefügt und über den `Set Cookie` HTTP-Antwortheader an den Server gesendet. Mit dieser Methode wurden Sicherheitsrisiken eingeführt, z. B. Cross Site Request Forgery, die als CSRF-Angriffe bezeichnet werden. Die SameSite-Komponente reduzierte die Gefährdung durch ihre Implementierung und Verwaltung im SetCookie-Header.
 
 ## <a name="samesite-cookie-attribute-initial-release"></a>SameSite-Cookieattribut: erste Version
 
@@ -51,7 +51,7 @@ SameSite-Cookieattribute sind wie folgt:
 
 ## <a name="teams-implications-and-adjustments"></a>Teams Auswirkungen und Anpassungen
 
-1. Aktivieren Sie die entsprechende SameSite-Einstellung für Ihre Cookies, und überprüfen Sie, ob Ihre Apps und Erweiterungen weiterhin in Teams funktionieren.
+1. Aktivieren Sie die relevante SameSite-Einstellung für Ihre Cookies, und überprüfen Sie, ob Ihre Apps und Erweiterungen weiterhin in Teams funktionieren.
 1. Wenn Ihre Apps oder Erweiterungen fehlschlagen, nehmen Sie die erforderlichen Korrekturen vor der Chrome 80-Version vor.
 1. Interne Microsoft-Partner können dem folgenden Team beitreten, um weitere Informationen oder Hilfe zu diesem Problem zu erhalten: <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47> .
 
@@ -60,7 +60,7 @@ SameSite-Cookieattribute sind wie folgt:
 
 ### <a name="tabs-task-modules-and-messaging-extensions"></a>Registerkarten, Aufgabenmodule und Messaging-Erweiterungen
 
-* Teams Registerkarten zum `<iframes>` Einbetten von Inhalten verwendet, die in einem Kontext der obersten Ebene oder der Erstanbieter angezeigt werden.
+* Teams Registerkarten `<iframes>` zum Einbetten von Inhalten, die in einem Kontext der obersten Ebene oder der Erstanbieter angezeigt werden.
 * Aufgabenmodule ermöglichen Ihnen das Erstellen von modalen Popup-Oberflächen in Ihrer Teams-Anwendung. Ähnlich wie bei einer Registerkarte wird ein modales Fenster auf der aktuellen Seite geöffnet.
 * Messaging-Erweiterungen ermöglichen es Ihnen, anreicherte Inhalte aus externen Ressourcen in eine Chatnachricht einzufügen.
 
@@ -84,7 +84,7 @@ Android WebView ist eine Chrome-Systemkomponente, mit der Android-Apps den Webin
 > * Sie müssen Cookies von Erstanbietern entsprechend `SameSite=Lax` `SameSite=Strict` deklarieren.      
 > * Sie müssen Cookies von Drittanbietern als `SameSite=None; Secure` deklarieren.   
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Artikel
 
 * [SameSite-Beispiele](https://github.com/GoogleChromeLabs/samesite-examples)
 * [SameSite-Cookie-Rezept](https://web.dev/samesite-cookie-recipes/)

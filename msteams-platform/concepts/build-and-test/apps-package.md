@@ -3,14 +3,14 @@ title: Verpacken Ihrer App
 description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App zum Testen, Hochladen und Veröffentlichen im Store verpacken.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: bcffc581ab832dfa51d0b772f466b92dea731ccf
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 926d6051024ae6e9a5f3d857bdb97fa02f56e8db
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156740"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260673"
 ---
-# <a name="create-a-microsoft-teams-app-package"></a>Erstellen eines Microsoft Teams App-Pakets
+# <a name="create-a-microsoft-teams-app-package"></a>Erstellen eines Microsoft Teams-App-Pakets
 
 Sie benötigen ein App-Paket, aber Sie planen, Ihre Microsoft Teams App zu verteilen. Ein gültiges Paket ist eine ZIP-Datei, die Folgendes enthält:
 
@@ -21,7 +21,7 @@ Sie benötigen ein App-Paket, aber Sie planen, Ihre Microsoft Teams App zu verte
 
 Die App-Manifestdatei muss sich auf der obersten Ebene des Pakets mit dem Namen `manifest.json` befinden. 
 
-Stellen Sie beim Veröffentlichen im Teams Speicher sicher, dass Ihr Manifest auf das neueste [Schema](~/resources/schema/manifest-schema.md)verweist.
+Stellen Sie beim Veröffentlichen im Teams Speicher sicher, dass Ihre Manifestverweise auf das neueste [Schema](~/resources/schema/manifest-schema.md)verweisen.
 
 ## <a name="app-icons"></a>App-Symbole
 
@@ -34,9 +34,9 @@ Damit Ihre App Teams Store-Überprüfung bestehen kann, müssen diese Symbole di
 
 ### <a name="color-icon"></a>Farbsymbol
 
-Die Farbversion ihres Symbols wird in den meisten Teams Szenarien angezeigt und muss 192 x 192 Pixel groß sein. Das Symbolsymbol (96 x 96 Pixel) kann eine beliebige Farbe sein, muss sich jedoch auf einem durchgezogenen oder vollständig transparenten quadratischen Hintergrund befinden.
+Die Farbversion Ihres Symbols wird in den meisten Teams-Szenarien angezeigt und muss 192x192 Pixel groß sein. Das Symbolsymbol (96 x 96 Pixel) kann eine beliebige Farbe sein, muss sich jedoch auf einem durchgezogenen oder vollständig transparenten quadratischen Hintergrund befinden.
 
-Teams ihr Symbol automatisch zuschneidet, um ein Quadrat mit abgerundeten Ecken in mehreren Szenarien und eine fiktive Form in Bot-Szenarien anzuzeigen. Um das Symbol zuzuschneiden, ohne Details zu verlieren, fügen Sie 48 Pixel Abstand um das Symbol ein.
+Teams ihr Symbol automatisch zuschneidet, um ein Quadrat mit abgerundeten Ecken in mehreren Szenarien und eine fiktive Form in Bot-Szenarien anzuzeigen. Um das Symbol zuzuschneiden, ohne Details zu verlieren, fügen Sie 48 Pixel Abstand um ihr Symbol ein.
 
 :::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams Farbsymbol und Designanleitung." border="false":::
 
@@ -49,7 +49,7 @@ Ein Gliederungssymbol wird in zwei Szenarien angezeigt:
 
 Das Symbol muss 32 x 32 Pixel groß sein. Es kann weiß mit einem transparenten Hintergrund oder transparent mit weißem Hintergrund sein (keine anderen Farben sind zulässig). Das Gliederungssymbol sollte keinen zusätzlichen Abstand um das Symbol aufweisen.
 
-:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams Entwurfsanleitung für Gliederungssymbole." border="false":::
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams Designanleitung für Gliederungssymbole." border="false":::
 
 ### <a name="best-practices"></a>Bewährte Methoden
 
@@ -90,7 +90,7 @@ Hier sehen Sie, wie App-Symbole in verschiedenen Teams Funktionen und Kontexten 
 
 #### <a name="messaging-extension"></a>Messaging-Erweiterung
 
-:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<Alttext>" border="false":::
+:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alternativ>" border="false":::
 
 ## <a name="next-step"></a>Nächster Schritt
 
