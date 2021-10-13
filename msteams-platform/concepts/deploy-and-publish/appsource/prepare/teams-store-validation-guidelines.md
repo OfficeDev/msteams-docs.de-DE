@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 00feea2fe76d346a0313a9677d5a0493771586dd
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: e0d2edea9cdfcdba2cc7c65c15085903bd0d483c
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475706"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260533"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
@@ -83,8 +83,8 @@ Beachten Sie Folgendes, wenn Ihre App Benutzer mit einem externen Dienst authent
 
 * **Anmelde-, Abmelde- und Registrierungserfahrungen**:
   * Apps, die von externen Konten oder Diensten abhängen, müssen klare und einfache Anmelde-, Abmelde- und Registrierungserfahrungen bieten.
-  * Wenn sich ein Benutzer abmeldet, muss er sich nur von der App abmelden und bleibt bei Teams angemeldet.
-* **Erfahrungen beim Teilen von Inhalten**: Apps, die eine Authentifizierung bei einem externen Dienst erfordern, um Inhalte in Teams-Kanälen freizugeben, müssen in der Hilfedokumentation (oder ähnlichen Ressourcen) klar angeben, wie Inhalte getrennt oder freigegeben werden, wenn diese Funktion vom externen Dienst unterstützt wird. Dies bedeutet nicht, dass die Möglichkeit zum Aufheben der Freigabe von Inhalten in Ihrer Teams-App vorhanden sein muss.
+  * Wenn sich ein Benutzer abmeldet, muss er sich nur von der App abmelden, er bleibt jedoch bei Teams angemeldet.
+* **Erfahrungen beim Teilen von Inhalten**: Apps, die eine Authentifizierung bei einem externen Dienst erfordern, um Inhalte in Teams-Kanälen freizugeben, müssen in der Hilfedokumentation (oder ähnlichen Ressourcen) klar angeben, wie Inhalte getrennt oder freigegeben werden, wenn diese Funktion vom externen Dienst unterstützt wird. Dies bedeutet nicht, dass die Fähigkeit zur Aufhebung der Freigabe von Inhalten in Ihrer Teams-App vorhanden sein muss.
 
 #### <a name="government-community-cloud-listings"></a>Community Cloud-Einträge für Behörden
 
@@ -148,7 +148,7 @@ Das Teams-App-Manifest definiert die Konfigurationen Ihrer App.
 
 * Ihr Manifest muss dem neuesten Manifestschema entsprechen. Weitere Informationen finden Sie in der [Manifestreferenz.](~/resources/schema/manifest-schema.md)
 * Wenn Ihre App einen Bot oder eine Messaging-Erweiterung enthält, muss Ihr Manifest mit Bot Framework-Metadaten übereinstimmen, einschließlich Bot-Name, Logo, Link zur Datenschutzrichtlinie und Link zu den Servicebedingungen.
-* Wenn Ihre App Azure Active Directory (Azure AD) für die Authentifizierung verwendet, fügen Sie die Azure AD-Anwendungs-(Client-)ID in das Manifest ein. Weitere Informationen finden Sie in der [Manifestreferenz.](~/resources/schema/manifest-schema.md#webapplicationinfo)
+* Wenn Ihre App Azure Active Directory (Azure AD) für die Authentifizierung verwendet, fügen Sie die Azure AD-Anwendungs-(Client-)ID in das Manifest ein. Weitere Informationen finden Sie in der [Manifest-Referenz](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### <a name="app-icons"></a>App-Symbole
 
@@ -251,7 +251,7 @@ Screenshots bieten eine markante visuelle Vorschau Ihrer App, um den Namen, das 
 
 ### <a name="privacy-policy"></a>Datenschutzrichtlinie
 
-Die Datenschutzrichtlinie kann spezifisch für Ihre Teams-App oder eine allgemeine Richtlinie für alle Ihre Dienste sein.
+Die Datenschutzrichtlinie kann für Ihre Teams-App oder eine allgemeine Richtlinie für alle Ihre Dienste spezifisch sein.
 
 * Wenn Sie eine generische Datenschutzrichtlinienvorlage verwenden, müssen Sie auf **Dienste,** **Anwendungen** und **Plattformen** verweisen, um Ihre Teams-App und Ihren Dienst oder Ihre Website einzuschließen.
 * Muss beinhalten, wie Sie mit der Speicherung, Aufbewahrung und Löschung von Benutzerdaten umgehen. Sie müssen auch die Sicherheitskontrollen beschreiben, die Sie für den Datenschutz verwenden.
@@ -341,7 +341,7 @@ Das Analysieren von Benutzereingaben und das Vorhersagen der Benutzerabsicht ist
 * Nur-Benachrichtigungs-Bots müssen eine Begrüßungsnachricht senden, die vermittelt, dass sie nicht auf die Nachrichten der Benutzer antworten.
 
 > [!TIP]
-> In Begrüßungsnachrichten an einzelne Benutzer kann eine Karusselltour einen effektiven Überblick über Ihren Bot und alle anderen App-Funktionen geben. Das Einschließen von Schaltflächen, mit denen Benutzer Bot-Befehle ausprobieren können, wird empfohlen. Erstellen Sie z. B. **eine Aufgabe**.
+> In Begrüßungsnachrichten an einzelne Benutzer kann eine Karusselltour einen effektiven Überblick über Ihren Bot und alle anderen App-Funktionen geben. Es wird das Einschließen von Schaltflächen empfohlen, mit denen Benutzer Bot-Befehle ausprobieren können. Erstellen Sie z. B. **eine Aufgabe**.
 
 ### <a name="bot-message-spamming"></a>Spam mit Bot-Nachrichten
 
