@@ -4,16 +4,16 @@ description: Beschreibt alle Karten und Kartenaktionen, die Bots in Teams
 ms.localizationpriority: medium
 keywords: Referenz zu Bots-Karten
 ms.topic: reference
-ms.openlocfilehash: 2768b1b156ecd86a6bcc2a7b8b42448db3eeeaae
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: adb8695ad6a7057cea5e95b1760addd27c3713e9
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475594"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291660"
 ---
 # <a name="types-of-cards"></a>Kartentypen
 
-Adaptive, Hero-, List-, Office 365 Connector-, Beleg-, Anmelde- und Miniaturansichtskarten und Kartensammlungen werden in Bots für Microsoft Teams unterstützt. Sie basieren auf Vom Bot Framework definierten Karten, aber Teams unterstützt nicht alle Bot Framework-Karten und hat einige eigene hinzugefügt.
+Adaptive, Hero-, Listen-, Office 365 Connector-, Beleg-, Anmelde- und Miniaturansichtskarten und Kartensammlungen werden in Bots für Microsoft Teams unterstützt. Sie basieren auf Vom Bot Framework definierten Karten, aber Teams unterstützt nicht alle Bot Framework-Karten und hat einige eigene hinzugefügt.
 
 Bevor Sie die verschiedenen Kartentypen identifizieren, sollten Sie wissen, wie Sie eine Favoritenkarte, Miniaturansichtskarte oder adaptive Karte erstellen.
 
@@ -81,7 +81,7 @@ Sie können einige allgemeine Eigenschaften durchgehen, die für alle Karten gel
 
 ### <a name="inline-card-images"></a>Inlinekartenbilder
 
-Die Karte kann ein Inlinebild enthalten, indem ein Link zum öffentlich verfügbaren Bild eingeschlossen wird. Aus Leistungsgründen wird dringend empfohlen, das Image auf einem öffentlichen Content Delivery Network (CDN) zu hosten.
+Die Karte kann ein Inlinebild enthalten, indem ein Link zum öffentlich verfügbaren Bild eingeschlossen wird. Aus Leistungsgründen wird dringend empfohlen, das Bild auf einem öffentlichen Content Delivery Network (CDN) zu hosten.
 
 Bilder werden nach oben oder unten skaliert, um das Seitenverhältnis für die Abdeckung des Bildbereichs beizubehalten. Bilder werden dann von der Mitte zugeschnitten, um das entsprechende Seitenverhältnis für die Karte zu erzielen.
 
@@ -125,7 +125,7 @@ Die folgende Tabelle enthält die Features, die adaptive Karten unterstützen:
 
 > [!NOTE]
 > * Teams Plattform unterstützt v1.4 oder frühere Adaptive Kartenfeatures für vom Bot gesendete Karten und aktionsbasierte Messaging-Erweiterungen.
-> * Teams Plattform unterstützt v1.3 oder früher adaptive Kartenfeatures für andere Funktionen, z. B. von Benutzern gesendete Karten (suchbasierte Messaging-Erweiterungen und Verbreitung von Links), Registerkarten und Aufgabenmodule.
+> * Teams Plattform unterstützt v1.3 oder eine frühere Version adaptiver Kartenfeatures für andere Funktionen, z. B. von Benutzern gesendete Karten (suchbasierte Messaging-Erweiterungen und Verbreitung von Links), Registerkarten und Aufgabenmodule.
 > * Das Formatieren positiver oder destruktiver Aktionen wird in adaptiven Karten auf der Teams Plattform nicht unterstützt.
 > * Medienelemente werden derzeit in adaptiver Karte auf der Teams-Plattform nicht unterstützt.
 
@@ -341,7 +341,7 @@ Der folgende Code zeigt ein Beispiel für eine Hero-Karte:
 
 Bot Framework-Referenz:
 
-* [Hero-Karte Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
+* [Hero card Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
 * [Hero-Karte C #](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-hero-card&preserve-view=true)
 
 ## <a name="list-card"></a>Karte auflisten
@@ -424,7 +424,7 @@ Der folgende Code zeigt ein Beispiel für eine Listenkarte:
 
 ## <a name="office-365-connector-card"></a>Office 365-Connectorkarte
 
-Sie können mit einer Office 365 Connectorkarte arbeiten, die ein flexibles Layout bietet und eine hervorragende Möglichkeit darstellt, nützliche Informationen zu erhalten. Die Office 365 Connectorkarte wird in Teams und nicht in Bot Framework unterstützt. Diese Karte bietet ein flexibles Layout mit mehreren Abschnitten, Feldern, Bildern und Aktionen. Diese Karte enthält eine Connectorkarte, sodass sie von Bots verwendet werden kann. Informationen zu Unterschieden zwischen Connectorkarten und der Office 365 Connectorkarte finden Sie unter [zusätzliche Informationen auf der Office 365 Connector-Karte.](#additional-information-on-the-office-365-connector-card)
+Sie können mit einer Office 365 Connectorkarte arbeiten, die ein flexibles Layout bietet und eine hervorragende Möglichkeit darstellt, nützliche Informationen zu erhalten. Die Office 365 Connectorkarte wird in Teams und nicht in Bot Framework unterstützt. Diese Karte bietet ein flexibles Layout mit mehreren Abschnitten, Feldern, Bildern und Aktionen. Diese Karte enthält eine Connectorkarte, sodass sie von Bots verwendet werden kann. Informationen zu den Unterschieden zwischen Connectorkarten und der Office 365 Connectorkarte finden Sie unter [zusätzliche Informationen auf der Office 365 Connector-Karte.](#additional-information-on-the-office-365-connector-card)
 
 ### <a name="support-for-office-365-connector-cards"></a>Unterstützung für Office 365 Connectorkarten
 
@@ -436,7 +436,7 @@ Die folgende Tabelle enthält die Features, die Office 365 Connectorkarten unter
 
 ### <a name="properties-of-the-office-365-connector-card"></a>Eigenschaften der Office 365-Connectorkarte
 
-Die folgende Tabelle enthält die Eigenschaften der Office 365 Connectorkarte:
+Die folgende Tabelle enthält die Eigenschaften der Office 365-Connectorkarte:
 
 | Eigenschaft | Typ  | Beschreibung |
 | --- | --- | --- |
@@ -471,7 +471,7 @@ Um den Renderingstil für `activityImage` anzugeben, können Sie `activityImageT
 | `avatar` | Standard, `activityImage` wird als Kreis zugeschnitten. |
 | `article` | `activityImage` wird als Rechteck angezeigt und behält das Seitenverhältnis bei. |
 
-Weitere Informationen zu den Eigenschaften der Connectorkarte finden Sie unter [Referenz zu Nachrichtenkarten](/outlook/actionable-messages/card-reference)mit Aktionen. Die einzigen Connectorkarteneigenschaften, die Teams derzeit nicht unterstützt, sind:
+Weitere Informationen zu den Eigenschaften der Connectorkarte finden Sie unter [Referenz zu Nachrichtenkarten](/outlook/actionable-messages/card-reference)mit Aktionen. Die einzigen Connectorkarteneigenschaften, die Teams derzeit nicht unterstützen, sind:
 
 * `heroImage`
 * `hideOriginalBody`
@@ -618,7 +618,7 @@ Bot Framework-Referenz:
 
 ## <a name="signin-card"></a>Anmeldekarte
 
-Die Anmeldekarte in Teams ähnelt der Anmeldekarte im Bot Framework, mit der Ausnahme, dass die Anmeldekarte in Teams nur zwei Aktionen `signin` und `openUrl` unterstützt.
+Die Anmeldekarte in Teams ähnelt der Anmeldekarte im Bot Framework, mit der Ausnahme, dass die Anmeldekarte in Teams nur zwei Aktionen `signin` unterstützt und `openUrl` .
 
 Die Anmeldeaktion kann von einer beliebigen Karte in Teams verwendet werden, nicht nur von der Anmeldekarte. Weitere Informationen finden Sie unter [Teams Authentifizierungsfluss für Bots.](~/bots/how-to/authentication/auth-flow-bot.md)
 
@@ -943,7 +943,7 @@ Eine Liste kann maximal zehn Karten pro Nachricht anzeigen.
 
 ## <a name="cards-not-supported-in-teams"></a>Karten werden in Teams nicht unterstützt
 
-Die folgenden Karten werden vom Bot Framework implementiert, werden jedoch nicht von Teams unterstützt:
+Die folgenden Karten werden vom Bot Framework implementiert, aber nicht von Teams unterstützt:
 
 * Animationskarten
 * Audiokarten

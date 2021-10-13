@@ -5,24 +5,24 @@ description: So führen Sie die Verbreitung von Links mit der Messaging-Erweiter
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 76e58602bde9dbb3cb58882163f1e86b6e9adef3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 99dbfaa2bf66ee50341e52d4e8a274f7ab20a73e
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156529"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291723"
 ---
 # <a name="link-unfurling"></a>Verbreiten von Links
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-In diesem Dokument erfahren Sie, wie Sie Ihrem App-Manifest mithilfe von App Studio und manuell Eine Verknüpfung hinzufügen. Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Die `invoke` enthält die vollständige URL, die in den Bereich zum Verfassen von Nachrichten eingefügt wurde, und Sie können mit einer Karte antworten, die der Benutzer freigeben kann, und zusätzliche Informationen oder Aktionen bereitstellen. Dies funktioniert ähnlich wie ein Suchbefehl mit der URL, die als Suchbegriff dient.
+In diesem Dokument erfahren Sie, wie Sie Ihrem App-Manifest mitHilfe von App Studio und manuell eine Verknüpfung hinzufügen. Bei der Verbreitung von Links kann sich Ihre App registrieren, um eine Aktivität zu `invoke` empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Die `invoke` enthält die vollständige URL, die in den Bereich zum Verfassen von Nachrichten eingefügt wurde, und Sie können mit einer Karte antworten, die der Benutzer freigeben kann, und zusätzliche Informationen oder Aktionen bereitstellen. Dies funktioniert ähnlich wie ein Suchbefehl mit der URL, die als Suchbegriff dient.
 
 > [!NOTE]
 > * Derzeit wird die Verbreitung von Links auf mobilen Clients nicht unterstützt.
 > * Das Ergebnis der Verknüpfungsentrollung wird 30 Minuten zwischengespeichert.
 
-Die Azure DevOps Messaging-Erweiterung verwendet die Verbreitung von Links, um nach URLs zu suchen, die in den Bereich zum Verfassen von Nachrichten eingefügt sind, die auf eine Arbeitsaufgabe verweisen. In der folgenden Abbildung hat ein Benutzer eine URL für eine Arbeitsaufgabe in Azure DevOps eingefügt, die die Messaging-Erweiterung in eine Karte aufgelöst hat:
+Die Azure DevOps Messaging-Erweiterung verwendet die Verbreitung von Links, um nach URLs zu suchen, die in den Bereich zum Verfassen von Nachrichten eingefügt werden, die auf eine Arbeitsaufgabe verweisen. In der folgenden Abbildung hat ein Benutzer eine URL für eine Arbeitsaufgabe in Azure DevOps eingefügt, die die Messaging-Erweiterung in eine Karte aufgelöst hat:
 
 ![Beispiel für die Verbreitung von Links](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -31,7 +31,7 @@ Die Azure DevOps Messaging-Erweiterung verwendet die Verbreitung von Links, um n
 Zum Hinzufügen der Verbreitung von Links zu Ihrem App-Manifest fügen Sie `messageHandlers` dem Abschnitt Ihres App-Manifest-JSON ein neues Array `composeExtensions` hinzu. Sie können das Array entweder mithilfe von App Studio oder manuell hinzufügen. Domäneneinträge können Platzhalter enthalten, `*.example.com` z. B. . Dies entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com` .
 
 > [!NOTE]
-> Fügen Sie keine Domänen hinzu, die sich nicht in Ihrem Steuerelement befinden, entweder direkt oder über Platzhalter. Ist z. `yourapp.onmicrosoft.com` B. gültig, aber `*.onmicrosoft.com` nicht gültig. Außerdem sind die Domänen auf oberster Ebene nicht zulässig. Beispiel: `*.com` , `*.org` .
+> Fügen Sie keine Domänen hinzu, die sich weder direkt noch über Platzhalter in Ihrem Steuerelement befinden. Ist z. `yourapp.onmicrosoft.com` B. gültig, aber `*.onmicrosoft.com` nicht gültig. Außerdem sind die Domänen auf oberster Ebene nicht zulässig. Beispiel: `*.com` , `*.org` .
 
 ### <a name="add-link-unfurling-using-app-studio"></a>Hinzufügen der Verbreitung von Links mit App Studio
 

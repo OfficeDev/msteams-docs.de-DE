@@ -6,16 +6,16 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams importieren Nachrichten-API-Diagramm Microsoft migrieren Migrationsbeitrag
-ms.openlocfilehash: 9c5f45120a1e6d52409360d54a54096554ca86b4
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a34a6efe98e14d5c28126275ed2378a24d34efa0
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156920"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291709"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Plattform-Nachrichten von Drittanbietern mithilfe von Microsoft Graph in Teams importieren
 
-Mit Microsoft Graph können Sie den vorhandenen Nachrichtenverlauf und die Daten von Benutzern aus einem externen System in einen Teams Kanal migrieren. Durch die Aktivierung der Neugestaltung einer Plattform-Messaging-Hierarchie eines Drittanbieters innerhalb Teams können Benutzer ihre Kommunikation nahtlos fortsetzen und ohne Unterbrechung fortfahren.
+Mit Microsoft Graph können Sie den vorhandenen Nachrichtenverlauf und die Daten von Benutzern aus einem externen System in einen Teams Kanal migrieren. Durch die Aktivierung der Neugestaltung einer Drittanbieterplattform-Messaginghierarchie innerhalb Teams können Benutzer ihre Kommunikation nahtlos fortsetzen und ohne Unterbrechung fortfahren.
 
 > [!NOTE]
 > Microsoft kann in Zukunft von Ihnen oder Ihren Kunden fordern, basierend auf der Menge der importierten Daten, zusätzliche Gebühren zu zahlen.
@@ -46,7 +46,7 @@ Auf hoher Ebene besteht der Importvorgang aus folgenden Komponenten:
 
 ## <a name="step-1-create-a-team"></a>Schritt 1: Erstellen eines Teams
 
-Da Sie vorhandene Daten migrieren, sind die Aufrechterhaltung der ursprünglichen Nachrichtenzeitstempel und das Verhindern von Nachrichtenaktivitäten während des Migrationsprozesses der Schlüssel zum Neuerstellen des vorhandenen Nachrichtenflusses des Benutzers in Teams. Dies wird wie folgt erreicht:
+Da Sie vorhandene Daten migrieren, sind die Aufrechterhaltung der ursprünglichen Nachrichtenzeitstempel und das Verhindern von Nachrichtenaktivitäten während des Migrationsprozesses entscheidend, um den vorhandenen Nachrichtenfluss des Benutzers in Teams neu zu erstellen. Dies wird wie folgt erreicht:
 
 > [Erstellen Sie ein neues Team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) mit einem Back-in-Timestamp mithilfe der Teamressourceneigenschaft. `createdDateTime` Platzieren Sie das neue Team in einem speziellen Zustand, der `migration mode` Benutzer von den meisten Aktivitäten innerhalb des Teams bis zum Abschluss des Migrationsprozesses einschränkt. Schließen Sie das `teamCreationMode` Instanzattribut mit dem `migration` Wert in die POST-Anforderung ein, um das neue Team explizit als für die Migration erstellt zu identifizieren.  
 
@@ -325,7 +325,7 @@ Aktion, die für eine `team` aufgerufen wird oder die sich nicht in `channel` `m
 
 ## <a name="step-five-add-team-members"></a>Schritt 5: Hinzufügen von Teammitgliedern
 
-Sie können ein Mitglied zu einem Team [mithilfe der Teams-Benutzeroberfläche](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) oder microsoft Graph [Mitglieder-API hinzufügen:](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true)
+Sie können ein Mitglied zu einem Team [hinzufügen, indem Sie die Teams Benutzeroberfläche](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) verwenden, oder Microsoft Graph [Mitglieder-API hinzufügen:](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 #### <a name="request-add-member"></a>Anforderung (Mitglied hinzufügen)
 

@@ -5,19 +5,19 @@ description: Beschreibt, wie auf die Aufgabenmodul-Sendeaktion über einen Aktio
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 79687dd98f8d88e365ae1528b36806d3ffc559d3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: cab33a36862ed027f9c110eccaac43d4e4aff20e
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157045"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291639"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Reagieren auf die Sendeaktion des Aufgabenmoduls
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 In diesem Dokument erfahren Sie, wie Ihre App auf die Aktionsbefehle reagiert, z. B. das Aufgabenmodul des Benutzers, um eine Aktion zu übermitteln.
-Nachdem ein Benutzer das Aufgabenmodul übermittelt hat, empfängt Ihr Webdienst eine `composeExtension/submitAction` Aufrufnachricht mit der Befehls-ID und den Parameterwerten. Ihre App hat fünf Sekunden Zeit, um auf den Aufruf zu reagieren. Andernfalls erhält der Benutzer die Fehlermeldung **"Die App kann nicht erreicht** werden", und alle Antworten auf den Aufruf werden vom Teams Client ignoriert.
+Nachdem ein Benutzer das Aufgabenmodul übermittelt hat, empfängt Ihr Webdienst eine `composeExtension/submitAction` Aufrufnachricht mit der Befehls-ID und den Parameterwerten. Ihre App hat fünf Sekunden Zeit, um auf den Aufruf zu reagieren. Andernfalls erhält der Benutzer die Fehlermeldung , dass die App nicht erreicht werden **kann,** und alle Antworten auf den Aufruf werden vom Teams Client ignoriert.
 
 Sie haben die folgenden Optionen, um zu antworten:
 
@@ -30,7 +30,7 @@ Sie haben die folgenden Optionen, um zu antworten:
 
 Bei der Authentifizierung oder Konfiguration wird der ursprüngliche Aufruf nach Abschluss des Prozesses erneut an Ihren Webdienst senden. Die folgende Tabelle zeigt, welche Arten von Antworten basierend auf dem Aufrufspeicherort `commandContext` der Messaging-Erweiterung verfügbar sind: 
 
-|Antworttyp | Verfassen | Befehlsleiste | Nachricht |
+|Antworttyp | Verfassen | Befehlsleiste | Message |
 |--------------|:-------------:|:-------------:|:---------:|
 |Kartenantwort | ✔ | ✔ | ✔ |
 |Ein weiteres Aufgabenmodul | ✔ | ✔ | ✔ |
@@ -221,7 +221,7 @@ Das folgende Szenario zeigt, wie die App Polly eine Abfrage konfiguriert, ohne d
 
 ## <a name="respond-to-initial-submit-action"></a>Reagieren auf anfängliche Übermittlungsaktion
 
-Ihr Aufgabenmodul muss auf die anfängliche `composeExtension/submitAction` Nachricht mit einer Vorschau der Karte antworten, die der Bot an den Kanal sendet. Der Benutzer kann die Karte vor dem Senden überprüfen und auch versuchen, ihren Bot in der Unterhaltung zu installieren, wenn der Bot noch nicht installiert ist.
+Ihr Aufgabenmodul muss auf die anfängliche `composeExtension/submitAction` Nachricht mit einer Vorschau der Karte antworten, die der Bot an den Kanal sendet. Der Benutzer kann die Karte vor dem Senden überprüfen und versuchen, ihren Bot in der Unterhaltung zu installieren, wenn der Bot noch nicht installiert ist.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -586,10 +586,10 @@ Der folgende Abschnitt enthält eine Beschreibung der Entitäten im `OnBehalfOf`
 
 |Feld|Typ|Beschreibung|
 |:---|:---|:---|
-|`itemId`|Ganze Zahl|Beschreibt die Identifikation des Elements. Der Wert muss `0` .|
-|`mentionType`|String|Beschreibt die Erwähnung einer "Person".|
+|`itemId`|Ganzzahl|Beschreibt die Identifikation des Elements. Der Wert muss `0` .|
+|`mentionType`|Zeichenfolge|Beschreibt die Erwähnung einer "Person".|
 |`mri`|String|Nachrichtenressourcenbezeichner (Message Resource Identifier, MRI) der Person, in deren Auftrag die Nachricht gesendet wird. Der Name des Absenders der Nachricht würde als " \<user\> bis \<bot name\> " angezeigt.|
-|`displayName`|String|Name der Person. Wird als Fallback verwendet, wenn die Namensauflösung nicht verfügbar ist.|
+|`displayName`|Zeichenfolge|Name der Person. Wird als Fallback verwendet, wenn die Namensauflösung nicht verfügbar ist.|
   
 ## <a name="code-sample"></a>Codebeispiel
 
