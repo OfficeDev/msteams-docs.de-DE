@@ -5,12 +5,12 @@ keywords: Erste Schritte für Entwicklerportal-Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 84f3e5724adf3256fff3086158345fc3777513bb
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: 41aade2eaedee2095e60288a7e4021897bb1a3fa
+ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096574"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60378912"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Verwalten Ihrer Apps mit dem Entwicklerportal für Microsoft Teams
 
@@ -43,7 +43,7 @@ Sie können Umgebungen und globale Variablen konfigurieren, um den Übergang Ihr
 Verwenden Sie die Variablennamen anstelle von hartcodierten Werten, um Ihre App-Konfigurationen festzulegen.
 
 1. Geben Sie `{{` in ein beliebiges Feld im Entwicklerportal ein. Es wird eine Dropdownliste mit allen Variablen angezeigt, die Sie für die ausgewählte Umgebung zusammen mit den globalen Variablen erstellt haben.  
-1. Wählen Sie vor dem Herunterladen des App-Pakets (z. B. wenn Sie sich auf die Veröffentlichung im Teams Store vorbereiten) die Umgebung aus, die Sie verwenden möchten. Ihre App-Konfigurationen werden basierend auf der Umgebung automatisch aktualisiert. 
+1. Wählen Sie vor dem Herunterladen ihres App-Pakets (z. B. wenn Sie sich auf die Veröffentlichung im Teams Store vorbereiten) die Umgebung aus, die Sie verwenden möchten. Ihre App-Konfigurationen werden basierend auf der Umgebung automatisch aktualisiert. 
 
 ## <a name="identify-app-owners"></a>Identifizieren von App-Besitzern
 
@@ -57,7 +57,7 @@ Um Ihre App in Teams zu installieren und zu rendern, müssen Sie eine Reihe von 
 
 ### <a name="basic-app-configuration"></a>Grundlegende App-Konfiguration 
 
-**Grundlegende App-Informationen:** Die Benutzer werden auf der App-Detailseite in Teams angezeigt, z. B. App-ID, App-Namen, Beschreibungen, Entwicklerinformationen, Version, App-URLs und Microsoft Partner Network-ID.
+**Grundlegende App-Informationen:** Die Benutzer werden auf der Seite mit den App-Details in Teams angezeigt, z. B. App-ID, App-Namen, Beschreibungen, Entwicklerinformationen, Version, App-URLs und Microsoft Partner Network-ID.
 
 **Branding:** Apps erfordern ein Farb- und Gliederungssymbol im PNG-Format. Um Ihre App im Teams Store zu veröffentlichen, müssen die Symbole bestimmte Größenanforderungen erfüllen.
 
@@ -81,7 +81,7 @@ Um Ihre App in Teams zu installieren und zu rendern, müssen Sie eine Reihe von 
 
 **App-Paket:** Das App-Paket beschreibt Ihre App-Konfiguration, Funktionen, erforderlichen Ressourcen und andere wichtige Attribute. Beispielsweise das Manifestschema.
 
-**Flights:** Steuern, wer App-Updates erhält. Sie können beispielsweise ein Update an Microsoft-Mitarbeiter freigeben, um Fehler zu identifizieren und zu beheben, bevor Sie es für die Öffentlichkeit freigeben.
+**Flights:** Steuern, wer App-Updates erhält. Sie können z. B. ein Update an Microsoft-Mitarbeiter freigeben, um Fehler zu identifizieren und zu beheben, bevor Sie es für die Öffentlichkeit freigeben.
 
 **Veröffentlichen in Ihrer Organisation (Microsoft):** Stellen Sie Ihre App für Personen in Ihrer Organisation zur Verfügung. Nachdem Sie von Ihrem IT-Administrator genehmigt wurden, wird Ihre App in Teams unter "Apps > Für Ihre Organisation erstellt" angezeigt.
 
@@ -115,6 +115,10 @@ Die monatliche und tägliche Nutzung wird für die letzten sieben Tage, 30 Tage 
 
 Das Entwicklerportal enthält auch Tools, mit denen Sie einige wichtige Features von Teams-Apps erstellen können. Einige dieser Tools umfassen:
 
-* **Szenenstudio:** Entwerfen [sie benutzerdefinierte Szenen im Zusammen-Modus](~/apps-in-teams-meetings/teams-together-mode.md) für Teams Besprechungen.
+* **Szenenstudio:** Entwerfen [Sie benutzerdefinierte Szenen im Zusammen-Modus](~/apps-in-teams-meetings/teams-together-mode.md) für Teams Besprechungen.
 * **Editor für adaptive Karten:** Erstellen und Anzeigen einer Vorschau adaptiver Karten, die in Ihre Apps aufgenommen werden sollen.
-* **Microsoft Identity Platform Verwaltung:** Registrieren Sie Ihre Apps bei Azure Active Directory (Azure AD), um Benutzern zu helfen, sich anzumelden und Zugriff auf APIs bereitzustellen.
+* **Microsoft Identity Platform Verwaltung:** Registrieren Sie Ihre Apps bei Azure Active Directory (Azure AD), um Benutzern zu helfen, sich anzumelden und Zugriff auf APIs zu gewähren.
+
+## <a name="see-also"></a>Siehe auch
+
+[Einschließen eines SaaS-Angebots in Ihre Microsoft Teams-App](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

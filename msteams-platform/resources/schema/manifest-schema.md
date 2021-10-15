@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams-Manifestschema
-ms.openlocfilehash: ae77a84c52fb3f9934d1d499fd59f517758019d6
-ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
+ms.openlocfilehash: 2b23c0378acd82d8f54f419a61699d65bd685709
+ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60127259"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60378891"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -298,7 +298,7 @@ Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen:
     "team": "bot", 
     "groupchat": "bot"
   },
-  "configurableProperties": [
+ "configurableProperties": {
      "name",
      "shortDescription",
      "longDescription",
@@ -308,7 +308,7 @@ Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen:
      "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
-  ]              
+  }
 }
 ```
 
@@ -437,10 +437,10 @@ Wird verwendet, wenn Ihre App-Erfahrung über eine Registerkartenoberfläche im 
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 Zeichen|✔|Die https:// URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die `team` Bereiche und `groupchat` Bereiche. |
-|`canUpdateConfiguration`|boolesch|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: **true**.|
+|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: **true**.|
 |`context` |Array von Enumerationen|6 ||Die Gruppe von `contextItem` Bereichen, in denen eine [Registerkarte unterstützt wird.](../../tabs/how-to/access-teams-context.md) Standard: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Ein relativer Dateipfad zu einem Registerkartenvorschaubild zur Verwendung in SharePoint. Größe 1024 x 768. |
-|`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint zur Verfügung gestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
+|`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint verfügbar gemacht wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -476,11 +476,11 @@ Das Element ist ein Array (maximal ein Element &mdash; ist derzeit nur ein Bot p
 |---|---|---|---|---|
 |`botId`|string|64 Zeichen|✔|Die eindeutige Microsoft-App-ID für den Bot, wie bei Bot Framework registriert. Die ID kann mit der gesamten [App-ID](#id)übereinstimmen.|
 |`scopes`|Array von Enumerationen|3|✔|Gibt an, ob der Bot eine Umgebung im Kontext eines Kanals in einem `team` oder Gruppenchat (`groupchat`) ist, oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`). Diese Optionen sind nicht exklusiv.|
-|`needsChannelSelector`|boolesch|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
-|`isNotificationOnly`|boolesch|||Gibt an, ob ein Bot ein unidirektionaler Bot ausschließlich für Benachrichtigungen ist (im Gegensatz zu einem dialogorientierten Bot). Standard: **`false`**|
-|`supportsFiles`|boolesch|||Gibt an, ob der Bot die Möglichkeit zum Hochladen/Herunterladen von Dateien in persönliche Chats unterstützt. Standard: **`false`**|
-|`supportsCalling`|boolesch|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG:** Diese Eigenschaft ist derzeit experimentell. Experimentelle Eigenschaften sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Untersuchungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
-|`supportsVideo`|boolesch|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG:** Diese Eigenschaft ist derzeit experimentell. Experimentelle Eigenschaften sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Untersuchungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
+|`needsChannelSelector`|Boolescher Wert|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
+|`isNotificationOnly`|Boolescher Wert|||Gibt an, ob ein Bot ein unidirektionaler Bot ausschließlich für Benachrichtigungen ist (im Gegensatz zu einem dialogorientierten Bot). Standard: **`false`**|
+|`supportsFiles`|Boolescher Wert|||Gibt an, ob der Bot die Möglichkeit zum Hochladen/Herunterladen von Dateien in persönliche Chats unterstützt. Standard: **`false`**|
+|`supportsCalling`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG:** Diese Eigenschaft ist derzeit experimentell. Experimentelle Eigenschaften sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Untersuchungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
+|`supportsVideo`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG:** Diese Eigenschaft ist derzeit experimentell. Experimentelle Eigenschaften sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Untersuchungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -527,7 +527,7 @@ Das Element ist ein Array (maximal ein Element) mit allen Elementen des Typs `ob
 |---|---|---|---|---|
 |`botId`|string|64|✔|Die eindeutige Microsoft-App-ID für den Bot, der die Messaging-Erweiterung unterstützt, wie beim Bot Framework registriert. Die ID kann mit der gesamten App-ID übereinstimmen.|
 |`commands`|Array von Objekten|10|✔|Array von Befehlen, die von der Messaging-Erweiterung unterstützt werden.|
-|`canUpdateConfiguration`|boolesch|||Ein Wert, der angibt, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann. Standard: **False**.|
+|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann. Standard: **False**.|
 |`messageHandlers`|Array von Objekten|5||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind.|
 |`messageHandlers.type`|string|||Der Typ des Nachrichtenhandlers. Muss `"link"` sein.|
 |`messageHandlers.value.domains`|Array von Zeichenfolgen|||Array von Domänen, für die sich der Linknachrichtenhandler registrieren kann.|
@@ -544,9 +544,9 @@ Jedes Befehlselement ist ein Objekt mit der folgenden Struktur:
 |`title`|string|32 Zeichen|✔|Der benutzerfreundliche Befehlsname.|
 |`type`|string|64 Zeichen||Typ des Befehls. Eine von `query` oder `action` . Standard: **Abfrage**.|
 |`description`|string|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
-|`initialRun`|boolesch|||Ein boolescher Wert gibt an, ob der Befehl anfänglich ohne Parameter ausgeführt wird. Der Standardwert ist **false**.|
+|`initialRun`|Boolescher Wert|||Ein boolescher Wert gibt an, ob der Befehl anfänglich ohne Parameter ausgeführt wird. Der Standardwert ist **false**.|
 |`context`|Array von Zeichenfolgen|3||Definiert, von wo aus die Nachrichtenerweiterung aufgerufen werden kann. Eine beliebige Kombination von `compose` , `commandBox` , `message` . Der Standardwert lautet `["compose","commandBox"]`.|
-|`fetchTask`|boolesch|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden muss. Der Standardwert ist **false**.|
+|`fetchTask`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden muss. Der Standardwert ist **false**.|
 |`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das vorab geladen werden soll, wenn Sie einen Messaging-Erweiterungsbefehl verwenden.|
 |`taskInfo.title`|string|64 Zeichen||Titel des ersten Dialogfelds.|
 |`taskInfo.width`|string|||Dialogbreite – entweder eine Zahl in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
@@ -589,11 +589,11 @@ Stellt die systemeigenen Features auf dem Gerät eines Benutzers bereit, auf die
 
 **Optional,** außer **erforderlich,** sofern angegeben.
 
-Eine Liste der gültigen Domänen für Websites, die die App im Teams-Client laden soll. Domäneneinträge können Platzhalter enthalten, `*.example.com` z. B. . Die gültige Domäne entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com` . Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der Registerkartenkonfiguration navigiert, muss diese Domäne hier angegeben werden.
+Eine Liste der gültigen Domänen für Websites, die von der App im Teams-Client geladen werden sollen. Domäneneinträge können Platzhalter enthalten, `*.example.com` z. B. . Die gültige Domäne entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com` . Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der Registerkartenkonfiguration navigiert, muss diese Domäne hier angegeben werden.
 
-Schließen Sie **nicht** die Domänen von Identitätsanbietern ein, die Sie in Ihrer App unterstützen möchten. Um sich beispielsweise mit einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten. Sie dürfen jedoch keine accounts.google.com in `validDomains[]` einschließen.
+Schließen Sie **nicht** die Domänen von Identitätsanbietern ein, die Sie in Ihrer App unterstützen möchten. Um sich beispielsweise mithilfe einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten. Sie dürfen jedoch keine accounts.google.com in `validDomains[]` einschließen.
 
-Teams Apps, die eine eigene SharePoint URLs erfordern, um ordnungsgemäß zu funktionieren, enthält "{teamsitedomain}" in ihre gültige Domänenliste.
+Teams Apps, die ihre eigenen SharePoint URLs benötigen, um ordnungsgemäß zu funktionieren, enthalten "{teamsitedomain}" in ihrer gültigen Domänenliste.
 
 > [!IMPORTANT]
 > Fügen Sie keine Domänen hinzu, die sich außerhalb Ihres Steuerelements befinden, entweder direkt oder über Platzhalter. Ist z. `yourapp.onmicrosoft.com` B. gültig, ist jedoch `*.onmicrosoft.com` ungültig.
@@ -604,11 +604,11 @@ Das Objekt ist ein Array mit allen Elementen des Typs `string` .
 
 **Optional**—object
 
-Geben Sie Ihre Azure Active Directory (AAD)-App-ID und Microsoft Graph Informationen an, damit sich Benutzer nahtlos bei Ihrer App anmelden können. Wenn Ihre App in AAD registriert ist, müssen Sie die App-ID angeben. Administratoren können berechtigungen einfach überprüfen und ihre Zustimmung im Teams Admin Center erteilen.
+Geben Sie Ihre Azure Active Directory (AAD)-App-ID und Microsoft Graph Informationen an, damit sich Benutzer nahtlos bei Ihrer App anmelden können. Wenn Ihre App in AAD registriert ist, müssen Sie die App-ID angeben. Administratoren können Berechtigungen ganz einfach überprüfen und ihre Zustimmung im Teams Admin Center erteilen.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`id`|string|36 Zeichen|✔|AAD-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
+|`id`|string|36 Zeichen|✔|AAD Anwendungs-ID der App. Diese ID muss eine GUID sein.|
 |`resource`|string|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für SSO. </br> **HINWEIS:** Wenn Sie SSO nicht verwenden, stellen Sie sicher, dass Sie einen Pseudozeichenfolgenwert in dieses Feld in Ihr App-Manifest eingeben, um beispielsweise https://notapplicable eine Fehlerantwort zu vermeiden. |
 |`applicationPermissions`|array of strings|128 Zeichen||Geben Sie eine präzise [ressourcenspezifische Zustimmung an.](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
 
@@ -732,10 +732,10 @@ Sie können eine der folgenden Eigenschaften definieren:
 
 * `name`: Der Anzeigename der App.
 * `shortDescription`: Die kurze Beschreibung der App.
-* `longDescription`: Die ausführliche Beschreibung der App.
+* `longDescription`: Die lange Beschreibung der App.
 * `smallImageUrl`: Das Gliederungssymbol der App.
 * `largeImageUrl`: Das Farbsymbol der App.
-* `accentColor`: Die zu verwendende Farbe und ein Hintergrund für Ihre Gliederungssymbole.
+* `accentColor`: Die zu verwendende Farbe und ein Hintergrund für Die Gliederungssymbole.
 * `developerUrl`: Die HTTPS-URL der Website des Entwicklers.
 * `privacyUrl`: Die HTTPS-URL der Datenschutzrichtlinie des Entwicklers.
 * `termsOfUseUrl`: Die HTTPS-URL der Nutzungsbedingungen des Entwicklers.
@@ -744,7 +744,7 @@ Sie können eine der folgenden Eigenschaften definieren:
 
 **Optional**-boolean
  
-Wenn `defaultBlockUntilAdminAction` die Eigenschaft auf **"true"** festgelegt ist, ist die App standardmäßig für Benutzer ausgeblendet, bis der Administrator sie zulässt. Bei Festlegung auf **"true"** ist die App für alle Mandanten und Endbenutzer ausgeblendet. Mandantenadministratoren können die App im Teams Admin Center anzeigen und Maßnahmen ergreifen, um die App zuzulassen oder zu blockieren. Der Standardwert ist **false**.
+Wenn `defaultBlockUntilAdminAction` die Eigenschaft auf **"true"** festgelegt ist, ist die App standardmäßig für Benutzer ausgeblendet, bis der Administrator sie zulässt. Bei Festlegung auf **"true"** ist die App für alle Mandanten und Endbenutzer ausgeblendet. Mandantenadministratoren können die App im Teams Admin Center sehen und Maßnahmen ergreifen, um die App zuzulassen oder zu blockieren. Der Standardwert ist **false**.
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 

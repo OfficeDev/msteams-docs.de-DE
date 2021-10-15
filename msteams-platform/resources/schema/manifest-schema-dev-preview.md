@@ -1,23 +1,23 @@
 ---
-title: Referenz zum Entwicklervorschaumanifestschema
-description: Beschreibt das Schema, das vom Manifest für Microsoft Teams
+title: Referenz zum Öffentlichen Entwicklervorschau-Manifestschema
+description: Beschreibt das vom Manifest unterstützte Schema für Microsoft Teams
 ms.topic: reference
 keywords: Teams-Manifestschema – Entwicklervorschau
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 2fd4b3c19fd7e88277d2aa6da025142f8ef8c4a5
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 886b1d69052e9379f71e062da2f6f13eebcee1a2
+ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156285"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60378905"
 ---
-# <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Entwicklervorschau-Manifestschema für Microsoft Teams
+# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referenz: Öffentliches Entwicklervorschaumanifestschema für Microsoft Teams
 
 Informationen zum Aktivieren der Entwicklervorschau finden Sie in der [öffentlichen Entwicklervorschau für Microsoft Teams.](~/resources/dev-preview/developer-preview-intro.md)
 
 > [!NOTE]
-> * Wenn Sie keine Vorschaufeatures für Entwickler verwenden, verwenden Sie stattdessen das [App-Manifest für GA-Features.](~/resources/schema/manifest-schema.md)
+> Wenn Sie keine Vorschaufeatures für Entwickler verwenden, verwenden Sie stattdessen das [App-Manifest für GA-Features.](~/resources/schema/manifest-schema.md)
 
 Das Microsoft Teams-Manifest beschreibt, wie die App in das Microsoft Teams Produkt integriert wird. Ihr Manifest muss dem schema gehosteten [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) entsprechen.
 
@@ -223,6 +223,9 @@ Das Microsoft Teams-Manifest beschreibt, wie die App in das Microsoft Teams Prod
     "meetings": "tab", 
     "team": "bot", 
     "groupchat": "bot"
+  },
+  "subscriptionOffer": {
+    "offerId": "publisherId.offerId"
   }
 }
 ```
@@ -265,7 +268,7 @@ Ein eindeutiger Bezeichner für diese App in umgekehrter Domänenschreibweise; z
 
 ## <a name="developer"></a>developer
 
-**Required**
+**Erforderlich**
 
 Gibt Informationen zu Ihrem Unternehmen an. Bei Apps, die an AppSource (früher Office Store) übermittelt wurden, müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen.
 
@@ -298,7 +301,7 @@ Ein Array von Objekten, die zusätzliche Sprachübersetzungen angeben.
 
 ## <a name="name"></a>name
 
-**Required**
+**Erforderlich**
 
 Der Name Ihrer App-Erfahrung, der Benutzern in der Teams angezeigt wird. Für an AppSource übermittelte Apps müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen. Die Werte von `short` und sollten nicht identisch `full` sein.
 
@@ -309,7 +312,7 @@ Der Name Ihrer App-Erfahrung, der Benutzern in der Teams angezeigt wird. Für an
 
 ## <a name="description"></a>description
 
-**Required**
+**Erforderlich**
 
 Beschreibt Ihre App für Benutzer. Für an AppSource übermittelte Apps müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen.
 
@@ -322,7 +325,7 @@ Stellen Sie sicher, dass Ihre Beschreibung Ihre Erfahrung genau beschreibt und I
 
 ## <a name="icons"></a>Symbole
 
-**Required**
+**Erforderlich**
 
 Symbole, die in der Teams-App verwendet werden. Die Symboldateien müssen als Teil des Uploadpakets enthalten sein.
 
@@ -350,7 +353,7 @@ Das Objekt ist ein Array mit allen Elementen des Typs `object` . Dieser Block is
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 Zeichen|✔|Die https:// URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
-|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: `true`|
+|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: `true`|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die `team` Bereiche und `groupchat` Bereiche. |
 |`sharePointPreviewImage`|String|2048||Ein relativer Dateipfad zu einem Registerkartenvorschaubild zur Verwendung in SharePoint. Größe 1024 x 768. |
 |`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint zur Verfügung gestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
@@ -361,7 +364,7 @@ Das Objekt ist ein Array mit allen Elementen des Typs `object` . Dieser Block is
 
 Definiert eine Gruppe von Registerkarten, die standardmäßig "angeheftet" werden können, ohne dass der Benutzer sie manuell hinzufügt. Im Bereich deklarierte statische `personal` Registerkarten werden immer an die persönliche Benutzeroberfläche der App angeheftet. Statische Registerkarten, die im Bereich deklariert `team` sind, werden derzeit nicht unterstützt.
 
-Rendern Sie Registerkarten mit adaptiven Karten, indem Sie `contentBotId` anstelle `contentUrl` des **staticTabs-Blocks** angeben.
+Rendern sie Registerkarten mit adaptiven Karten, indem Sie `contentBotId` sie anstelle `contentUrl` des **staticTabs-Blocks** angeben.
 
 Das Objekt ist ein Array (maximal 16 Elemente) mit allen Elementen des `object` Typs. Dieser Block ist nur für Lösungen erforderlich, die eine statische Registerkartenlösung bereitstellen.
 
@@ -370,7 +373,7 @@ Das Objekt ist ein Array (maximal 16 Elemente) mit allen Elementen des `object` 
 |---|---|---|---|---|
 |`entityId`|String|64 Zeichen|✔|Ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird.|
 |`name`|String|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanalschnittstelle.|
-|`contentUrl`|String|2048 Zeichen|✔|Die https://-URL, die auf die Entitäts-UI verweist, die im Teams Canvas angezeigt werden soll.|
+|`contentUrl`|String|2048 Zeichen|✔|Die https:// URL, die auf die Entitäts-UI verweist, die im Teams Canvas angezeigt werden soll.|
 |`contentBotId`|   | | | Die Microsoft Teams App-ID, die für den Bot im Bot Framework-Portal angegeben wurde. |
 |`websiteUrl`|String|2048 Zeichen||Die https:// URL, um darauf hinzuweisen, ob sich ein Benutzer für die Anzeige in einem Browser entscheidet.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen statische Registerkarten nur den `personal` Bereich, was bedeutet, dass sie nur als Teil der persönlichen Benutzeroberfläche bereitgestellt werden können.|
@@ -398,7 +401,7 @@ Eine optionale Liste von Befehlen, die Ihr Bot Benutzern empfehlen kann. Das Obj
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`items.scopes`|Array von Enumerationen|3|✔|Gibt den Bereich an, für den die Befehlsliste gültig ist. Mögliche Optionen sind `team`, `personal` und `groupchat`.|
-|`items.commands`|Array von Objekten|10 |✔|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: der Bot-Befehlsname (Zeichenfolge, 32).<br>`description`: eine einfache Beschreibung oder ein Beispiel für die Befehlssyntax und ihr Argument (Zeichenfolge, 128).|
+|`items.commands`|Array von Objekten|10|✔|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: der Bot-Befehlsname (Zeichenfolge, 32).<br>`description`: eine einfache Beschreibung oder ein Beispiel für die Befehlssyntax und ihr Argument (Zeichenfolge, 128).|
 
 ## <a name="connectors"></a>Steckverbinder
 
@@ -428,8 +431,8 @@ Das Objekt ist ein Array (maximal 1 Element) mit allen Elementen des Typs `objec
 |Name| Typ | Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`botId`|String|64|✔|Die eindeutige Microsoft-App-ID für den Bot, der die Messaging-Erweiterung unterstützt, wie beim Bot Framework registriert. Dies kann durchaus mit der gesamten [App-ID](#id)übereinstimmen.|
-|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann. Der Standardwert lautet `false`.|
-|`commands`|Array des Objekts|10 |✔|Array von Befehlen, die von der Messaging-Erweiterung unterstützt werden|
+|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann. Der Standardwert lautet `false`.|
+|`commands`|Array des Objekts|10|✔|Array von Befehlen, die von der Messaging-Erweiterung unterstützt werden|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
@@ -443,23 +446,23 @@ Jedes Befehlselement ist ein Objekt mit der folgenden Struktur:
 |`type`|String|64 Zeichen||Typ des Befehls. Eine von `query` oder `action` . Standard: `query`|
 |`title`|String|32 Zeichen|✔|Der benutzerfreundliche Befehlsname.|
 |`description`|String|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
-|`initialRun`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt werden soll. Standard: `false`|
+|`initialRun`|Boolesch|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt werden soll. Standard: `false`|
 |`context`|Array von Zeichenfolgen|3||Definiert, von wo aus die Nachrichtenerweiterung aufgerufen werden kann. Eine beliebige Kombination von `compose` , `commandBox` , `message` . Der Standardwert ist `["compose", "commandBox"]`|
-|`fetchTask`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden soll.|
+|`fetchTask`|Boolesch|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden soll.|
 |`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das vorab geladen werden soll, wenn Sie einen Messaging-Erweiterungsbefehl verwenden.|
 |`taskInfo.title`|String|64||Titel des ersten Dialogfelds.|
 |`taskInfo.width`|String|||Dialogbreite – entweder eine Zahl in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
 |`taskInfo.height`|String|||Dialoghöhe – entweder eine Zahl in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
 |`taskInfo.url`|String|||Ursprüngliche Webansichts-URL.|
-|`messageHandlers`|Array von Objekten|5 ||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind. Domänen müssen auch in aufgeführt `validDomains` werden.|
+|`messageHandlers`|Array von Objekten|5||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind. Domänen müssen auch in aufgeführt `validDomains` werden.|
 |`messageHandlers.type`|String|||Der Typ des Nachrichtenhandlers. Muss `"link"` sein.|
 |`messageHandlers.value.domains`|Array von Zeichenfolgen|||Array von Domänen, für die sich der Linknachrichtenhandler registrieren kann.|
-|`parameters`|Array des Objekts|5 |✔|Die Liste der Parameter, die der Befehl verwendet. Minimum: 1; Maximum: 5|
+|`parameters`|Array des Objekts|5|✔|Die Liste der Parameter, die der Befehl verwendet. Minimum: 1; Maximum: 5|
 |`parameter.name`|String|64 Zeichen|✔|Der Name des Parameters, wie er im Client angezeigt wird. Dies ist in der Benutzeranforderung enthalten.|
 |`parameter.title`|String|32 Zeichen|✔|Benutzerfreundlicher Titel für den Parameter.|
 |`parameter.description`|String|128 Zeichen||Benutzerfreundliche Zeichenfolge, die den Zweck dieses Parameters beschreibt.|
 |`parameter.inputType`|String|128 Zeichen||Definiert den Typ des Steuerelements, das in einem Aufgabenmodul für angezeigt `fetchTask: true` wird. Einer von `text` , , , , , , `textarea` `number` `date` `time` `toggle` `choiceset` .|
-|`parameter.choices`|Array von Objekten|10 ||Die Auswahloptionen für die `choiceset` . Wird nur verwendet, wenn `parameter.inputType` `choiceset` .|
+|`parameter.choices`|Array von Objekten|10||Die Auswahloptionen für die `choiceset` . Wird nur verwendet, wenn `parameter.inputType` `choiceset` .|
 |`parameter.choices.title`|String|128||Titel der Wahl.|
 |`parameter.choices.value`|String|512||Value of the choice.|
 
@@ -503,11 +506,11 @@ Das Objekt ist ein Array mit allen Elementen des Typs `string` .
 
 **Optional**
 
-Geben Sie Ihre AAD-App-ID und Graph Informationen an, damit sich Benutzer nahtlos bei Ihrer AAD-App anmelden können.
+Geben Sie Ihre Azure AD App-ID und Graph Informationen an, damit sich Benutzer nahtlos bei Ihrer Auzre AD-App anmelden können.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`id`|String|36 Zeichen|✔|AAD-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
+|`id`|String|36 Zeichen|✔|Azure AD Anwendungs-ID der App. Diese ID muss eine GUID sein.|
 |`resource`|String|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für SSO.|
 |`applicationPermissions`|Array|Maximal 100 Elemente|✔|Ressourcenberechtigungen für die Anwendung.|
 
@@ -554,5 +557,15 @@ Wenn ein Gruppeninstallationsbereich ausgewählt ist, wird die Standardfunktion 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`team`|string|||Wenn der ausgewählte Installationsbereich ausgewählt `team` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab` `bot` oder `connector` .|
-|`groupchat`|Zeichenfolge|||Wenn der ausgewählte Installationsbereich ausgewählt `groupchat` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab` `bot` oder `connector` .|
-|`meetings`|Zeichenfolge|||Wenn der ausgewählte Installationsbereich ausgewählt `meetings` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab` `bot` oder `connector` .|
+|`groupchat`|string|||Wenn der ausgewählte Installationsbereich ausgewählt `groupchat` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab` `bot` oder `connector` .|
+|`meetings`|string|||Wenn der ausgewählte Installationsbereich ausgewählt `meetings` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab` `bot` oder `connector` .|
+
+## <a name="subscriptionoffer"></a>subscriptionOffer
+
+**Optional** – Objekt
+
+Gibt das Ihrer App zugeordnete SaaS-Angebot an.
+
+|Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
+|---|---|---|---|---|
+|`offerId`| string | 2.048 Zeichen | ✔ | Ein eindeutiger Bezeichner, der Ihre Publisher-ID und Angebots-ID enthält, die Sie im [Partner Center](https://partner.microsoft.com/dashboard)finden. Sie müssen die Zeichenfolge als `publisherId.offerId` formatieren.|
