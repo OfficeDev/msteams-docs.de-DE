@@ -1,21 +1,18 @@
 ---
 title: Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 author: Rajeshwari-v
-description: Wie Sie einen Link öffnen, die Phasenansicht öffnen und eine Registerkarte mit Microsoft Teams App anheften.
+description: So heben Sie einen Link auf, öffnen sie die Phasenansicht, und heften Sie eine Registerkarte mit Microsoft Teams App an.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: cc77667a8782f2f519d6dc3e6af74949a9dcbed2
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: 04eef9691e1858916827da00f97c1a309bfe4970
+ms.sourcegitcommit: fdfe0cf5bb72ceecf667d02190bb36a51a22934f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017303"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60483499"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
-
-> [!NOTE]
-> Dieses Feature ist nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
 Die Phasenansicht ist eine neue Benutzeroberflächenkomponente, mit der Sie den Inhalt rendern können, der im Vollbildmodus in Teams geöffnet und als Registerkarte angeheftet ist.
  
@@ -34,7 +31,7 @@ Die Phasenansicht bietet eine nahtlosere Erfahrung beim Anzeigen von Inhalten in
 
 |Phasenansicht|Aufgabenmodul|
 |:-----------|:-----------|
-|Die Phasenansicht ist hilfreich, wenn Sie benutzern umfangreiche Inhalte anzeigen können, z. B. eine Seite, ein Dashboard, eine Datei usw. Es bietet umfangreiche Features, mit denen Sie Ihre Inhalte im Vollbildbereich rendern können.|[Das Aufgabenmodul](../task-modules-and-cards/task-modules/task-modules-tabs.md) ist besonders nützlich, um Nachrichten anzuzeigen, die Die Aufmerksamkeit des Benutzers erfordern, oder um Informationen zu sammeln, die zum Nächsten Schritt erforderlich sind.|
+|Die Phasenansicht ist nützlich, wenn Sie benutzern umfangreiche Inhalte anzeigen können, z. B. eine Seite, ein Dashboard, eine Datei usw. Es bietet umfangreiche Features, mit denen Sie Ihre Inhalte im Vollbildbereich rendern können.|[Das Aufgabenmodul](../task-modules-and-cards/task-modules/task-modules-tabs.md) ist besonders nützlich, um Nachrichten anzuzeigen, die Die Aufmerksamkeit des Benutzers erfordern, oder um Informationen zu sammeln, die zum Nächsten Schritt erforderlich sind.|
   
 ## <a name="invoke-stage-view"></a>Aufrufen der Phasenansicht
 
@@ -132,11 +129,11 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 | Eigenschaftenname | Typ | Anzahl der Zeichen | Beschreibung |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | String | 64 | Diese Eigenschaft ist ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird. Dies ist ein Pflichtfeld.|
+| `entityId` | Zeichenfolge | 64 | Diese Eigenschaft ist ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird. Dies ist ein Pflichtfeld.|
 | `name` | String | 128 | Diese Eigenschaft ist der Anzeigename der Registerkarte in der Kanalschnittstelle. Dieses Feld ist optional.|
-| `contentUrl` | String | 2048 | Diese Eigenschaft ist die https:// URL, die auf die Entitätsbenutzeroberfläche verweist, die im Teams Canvas angezeigt werden soll. Dies ist ein Pflichtfeld.|
-| `websiteUrl?` | String | 2048 | Diese Eigenschaft ist die https:// URL, auf die sie zeigen soll, wenn ein Benutzer die Anzeige in einem Browser auswählt. Dies ist ein Pflichtfeld.|
-| `removeUrl?` | String | 2048 | Diese Eigenschaft ist die https:// URL, die auf die Benutzeroberfläche zeigt, die angezeigt werden soll, wenn der Benutzer die Registerkarte löscht. Dies ist ein optionales Feld.|
+| `contentUrl` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, die auf die Entitätsbenutzeroberfläche verweist, die im Teams Canvas angezeigt werden soll. Dies ist ein Pflichtfeld.|
+| `websiteUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, auf die sie zeigen soll, wenn ein Benutzer die Anzeige in einem Browser auswählt. Dies ist ein Pflichtfeld.|
+| `removeUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https://-URL, die auf die Benutzeroberfläche verweist, die angezeigt werden soll, wenn der Benutzer die Registerkarte löscht. Dies ist ein optionales Feld.|
 
 ## <a name="code-sample"></a>Codebeispiel
 
