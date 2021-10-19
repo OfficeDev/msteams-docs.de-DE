@@ -6,16 +6,16 @@ keywords: Systemeigene Geräteberechtigungsmedien für Kamerabildmikrofonfunktio
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 907409b9fec308b118e8e323b91fe6d740abf85e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a6c69aa266eb337f6936cd78ecc1128ffcf95855
+ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156177"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60496200"
 ---
 # <a name="integrate-media-capabilities"></a>Integrieren von Medienfunktionen 
 
-Sie können systemeigene Gerätefunktionen wie **Kamera** und **Mikrofon** in Ihre Teams-App integrieren. Zur Integration können Sie [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)verwenden, das die Tools bereitstellt, die Ihre App für den Zugriff auf [die Geräteberechtigungen](native-device-permissions.md)eines Benutzers benötigt. Verwenden Sie geeignete Medienfunktions-APIs, um die Gerätefunktionen wie **Kamera** und **Mikrofon** in die Teams-Plattform in Ihre Microsoft Teams mobile App zu integrieren und eine umfassendere Umgebung zu schaffen. 
+Sie können systemeigene Gerätefunktionen wie **Kamera** und **Mikrofon** in Ihre Teams App integrieren. Zur Integration können Sie [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)verwenden, das die Tools bereitstellt, die Ihre App für den Zugriff auf [die Geräteberechtigungen](native-device-permissions.md)eines Benutzers benötigt. Verwenden Sie geeignete Medienfunktions-APIs, um die Gerätefunktionen wie **Kamera** und **Mikrofon** in die Teams-Plattform in Ihre Microsoft Teams mobile App zu integrieren und eine umfassendere Umgebung zu schaffen. 
 
 ## <a name="advantage-of-integrating-media-capabilities"></a>Vorteile der Integration von Medienfunktionen
 
@@ -28,11 +28,12 @@ Es ist wichtig, sich mit den [API-Antwortfehlern](#error-handling) vertraut zu m
 
 > [!NOTE] 
 > * Derzeit ist Microsoft Teams Unterstützung für Medienfunktionen nur für mobile Clients verfügbar.   
-> * Derzeit unterstützt Teams keine Geräteberechtigungen für Apps mit mehreren Fenstern, Registerkarten und das Besprechungs-Sidepanel.    
+> * Derzeit unterstützt Teams keine Geräteberechtigungen für Apps mit mehreren Fenstern, Registerkarten und das Besprechungs-Sidepanel.   
+> * Geräteberechtigungen unterscheiden sich im Browser. Weitere Informationen finden Sie unter [Berechtigungen für Browsergeräte.](browser-device-permissions.md) 
 
 ## <a name="update-manifest"></a>Updatemanifest
 
-Aktualisieren Sie die Teams [App-manifest.jsauf](../../resources/schema/manifest-schema.md#devicepermissions) der Datei, indem Sie die Eigenschaft hinzufügen `devicePermissions` und `media` angeben. Damit kann Ihre App die erforderlichen Berechtigungen von Benutzern anfordern, bevor sie mit der Aufnahme des Bilds mit der **Kamera** beginnen, den Katalog öffnen, um ein Bild auszuwählen, das als Anlage übermittelt werden soll, oder das **Mikrofon** verwenden, um die Unterhaltung aufzuzeichnen. Das Update für das App-Manifest lautet wie folgt:
+Aktualisieren Sie ihre Teams App [manifest.json-Datei,](../../resources/schema/manifest-schema.md#devicepermissions) indem Sie die Eigenschaft hinzufügen `devicePermissions` und `media` angeben. Damit kann Ihre App die erforderlichen Berechtigungen von Benutzern anfordern, bevor sie mit der Aufnahme des Bilds mit der **Kamera** beginnen, den Katalog öffnen, um ein Bild auszuwählen, das als Anlage übermittelt werden soll, oder das **Mikrofon** verwenden, um die Unterhaltung aufzuzeichnen. Das Update für das App-Manifest lautet wie folgt:
 
 ``` json
 "devicePermissions": [
@@ -47,7 +48,7 @@ Aktualisieren Sie die Teams [App-manifest.jsauf](../../resources/schema/manifest
 
 Mit den [APIs selectMedia,](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) [getMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)und [viewImages](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true) können Sie systemeigene Medienfunktionen wie folgt verwenden:
 
-* Verwenden Sie das systemeigene **Mikrofon,** um Benutzern das Aufzeichnen von **Audiodaten** (Aufzeichnung von 10 Minuten Unterhaltung) vom Gerät aus zu ermöglichen.
+* Verwenden Sie das systemeigene **Mikrofon,** um Benutzern das Aufzeichnen von **Audiodaten** (Aufzeichnen von 10 Minuten Unterhaltung) vom Gerät aus zu ermöglichen.
 * Verwenden Sie das systemeigene **Kamerasteuerelement,** damit Benutzer **unterwegs Bilder erfassen und anfügen** können.
 * Verwenden Sie die **native Katalogunterstützung,** damit Benutzer **Gerätebilder** als Anlagen auswählen können.
 * Verwenden Sie das systemeigene **Bildanzeige-Steuerelement,** um **mehrere Bilder** gleichzeitig in der Vorschau anzuzeigen.
