@@ -52,6 +52,8 @@
           href: concepts/device-capabilities/device-capabilities-overview.md
         - name: Geräteberechtigungen anfordern
           href: concepts/device-capabilities/native-device-permissions.md
+        - name: Geräteberechtigungen für den Browser
+          href: concepts/device-capabilities/browser-device-permissions.md
         - name: Integrieren von Medienfunktionen
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
         - name: QR- oder Barcode-Scannerfunktion integrieren
