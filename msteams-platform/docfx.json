@@ -39,16 +39,17 @@
             "breadcrumb_path": "/microsoftteams/platform/breadcrumb/TOC.json",
             "extendBreadcrumb": true,
             "manager": "billbl",
-            "author": "laujan",
+            "author": "surbhigupta",
             "ocv-translation-feedback": true,
             "ms.suite": "office365",
             "ms.prod": "msteams",
-            "ms.author": "anclear",
-            "searchScope": ["Teams"],
+            "ms.author": "lajanuar",
+            "searchScope": [ "Teams" ],
             "feedback_system": "None",
             "feedback_github_repo": "MicrosoftDocs/msteams-docs",
             "feedback_product_url": "https://microsoftteams.uservoice.com/forums/555103-public",
-            "titleSuffix": "Teams"
+            "titleSuffix": "Teams",
+            "recommendations": false
         },
         "fileMetadata": {
             "feedback_system": {
