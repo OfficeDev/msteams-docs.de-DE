@@ -5,12 +5,12 @@ description: Definieren sie Suchbefehle für Messaging-Erweiterungen für Micros
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: d87936832e3d302be295e14bbf952379a41aa694
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: aaea89aa14e556dfa00e81e8ec72fe5fb4bbe744
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096599"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566365"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definieren von Suchbefehlen für Messaging-Erweiterungen
 
@@ -28,7 +28,7 @@ Der Suchbefehl wird von einem oder beiden der folgenden Speicherorte aufgerufen:
 * Bereich zum Verfassen von Nachrichten: Die Schaltflächen unten im Bereich zum Verfassen von Nachrichten.
 * Befehlsfeld: Nach @mentioning im Befehlsfeld.
 
-Wenn der Suchbefehl aus dem Bereich zum Verfassen von Nachrichten aufgerufen wird, sendet der Benutzer die Ergebnisse an die Unterhaltung. Wenn sie über das Befehlsfeld aufgerufen wird, interagiert der Benutzer mit der resultierenden Karte oder kopiert sie zur Verwendung an anderer Stelle.
+  Wenn der Suchbefehl aus dem Bereich zum Verfassen von Nachrichten aufgerufen wird, sendet der Benutzer die Ergebnisse an die Unterhaltung. Wenn sie über das Befehlsfeld aufgerufen wird, interagiert der Benutzer mit der resultierenden Karte oder kopiert sie zur Verwendung an anderer Stelle.
 
 In der folgenden Abbildung werden die Aufrufpositionen des Suchbefehls angezeigt:
 
@@ -52,7 +52,7 @@ Sie können suchbefehl mit ** App Studio** oder **Entwicklerportal** erstellen.
 
 **So erstellen Sie einen Suchbefehl**
 
-1. Öffnen Sie **App Studio** im Microsoft Teams-Client, und wählen Sie die Registerkarte **"Manifest-Editor"** aus.
+1. Öffnen Sie **App Studio** über den Microsoft Teams-Client, und wählen Sie die Registerkarte **"Manifest-Editor"** aus.
 1.  Wenn Sie Ihr App-Paket bereits in **App Studio** erstellt haben, wählen Sie aus der Liste aus. Wenn Sie kein App-Paket erstellt haben, importieren Sie ein vorhandenes Paket.
 1. Wählen Sie nach dem Importieren des **App-Pakets Messaging-Erweiterungen** unter **"Funktionen"** aus. Sie erhalten ein Popupfenster zum Einrichten der Messaging-Erweiterung.
 1. Wählen Sie im Fenster **"Einrichten"** aus, um die Messaging-Erweiterung in Ihre App-Oberfläche einzuschließen. In der folgenden Abbildung wird die Einrichtungsseite der Messaging-Erweiterung angezeigt: 

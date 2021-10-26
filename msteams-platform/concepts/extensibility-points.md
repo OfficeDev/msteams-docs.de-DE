@@ -5,16 +5,16 @@ description: Hier wird beschrieben, wo Benutzer Ihre App in Microsoft Teams find
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a23b447a07e0664875acbf9bf75f170a24a51dc2
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3d4f3150447603fe8462b3a8166f6bc76de7cc03
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156570"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566351"
 ---
 # <a name="entry-points-for-teams-apps"></a>Einstiegspunkte für Microsoft Teams-Apps
 
-Die Teams-Plattform bietet eine flexible Gruppe von Einstiegspunkten, z. B. Team, Kanal und Chat, in denen Benutzer Ihre App entdecken und verwenden können. Ihre App kann etwas so Einfachem dienen wie dem Einbetten von vorhandenem Webinhalt in eine Registerkarte, oder eine komplexe Lösung sein, mit der Benutzer in verschiedenen Kontexten interagieren.
+Die Teams-Plattform bietet eine flexible Gruppe von Einstiegspunkten, z. B. Team, Kanal und Chat, an denen Benutzer Ihre App entdecken und verwenden können. Ihre App kann etwas so Einfachem dienen wie dem Einbetten von vorhandenem Webinhalt in eine Registerkarte, oder eine komplexe Lösung sein, mit der Benutzer in verschiedenen Kontexten interagieren.
 Die erfolgreichsten Apps sind systemeigen für Teams. Wählen Sie daher die Einstiegspunkte Ihrer App sorgfältig aus.
 
 ## <a name="shared-app-experiences"></a>Freigegebene App-Erfahrungen
@@ -29,7 +29,7 @@ Die folgende Liste zeigt, wie Teams App-Funktionen häufig in Zusammenarbeitskon
 
 * [**Bots**](~/bots/what-are-bots.md) interagieren mit Mitgliedern der Unterhaltung über chatten und auf Ereignisse reagieren, z. B. ein neues Mitglied hinzufügen oder einen Kanal umbenennen. 
    > [!NOTE]
-   > Unterhaltungen mit einem Bot in diesem Kontext sind für alle Mitglieder des Teams, Kanals oder der Gruppe sichtbar, daher müssen Bot-Unterhaltungen für alle relevant sein.
+   > Unterhaltungen mit einem Bot in diesen Kontexten sind für alle Mitglieder des Teams, Kanals oder der Gruppe sichtbar, daher müssen Bot-Unterhaltungen für alle relevant sein.
 
 * [**Webhooks und Connectors**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) ermöglichen einem externen Dienst das Posten von Nachrichten in einer Unterhaltung und Benutzern wiederum das Senden von Nachrichten an einen Dienst.
 
@@ -39,13 +39,13 @@ Die folgende Liste zeigt, wie Teams App-Funktionen häufig in Zusammenarbeitskon
 
 [Persönliche Apps](../concepts/design/personal-apps.md) sind auf Interaktionen mit einem einzelnen Benutzer ausgerichtet. Die Benutzererfahrung ist in diesem Kontext für jeden Benutzer einmalig.
 
-Die folgende Liste zeigt, wie Teams Funktionen häufig in persönlichen Kontexten verwendet werden:
+Die folgende Liste zeigt, wie Teams Funktionen in persönlichen Kontexten häufig verwendet werden:
 
 * [**Bots**](~/bots/what-are-bots.md) führen persönliche Unterhaltungen mit Benutzern. Bots, die mehrstufige Unterhaltungen erfordern oder Benachrichtigungen bereitstellen, die nur für einen bestimmten Benutzer relevant sind, eignen sich am besten für persönliche Apps.
 
 * [**Registerkarten**](~/tabs/what-are-tabs.md) bieten eine eingebettete Weboberfläche im Vollbildmodus, die für den Benutzer von Bedeutung ist.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Entwurfsrichtlinien für Teams-Apps](../concepts/design/design-teams-app-overview.md) <br>
 [Erstellen Ihrer ersten Microsoft Teams-App](../build-your-first-app/build-first-app-overview.md)

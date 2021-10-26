@@ -5,16 +5,16 @@ description: Leitfaden zum Planen der Erstellung einer App auf Teams Mobilgerät
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: a2c8c601ef2c007c112f1e0e5309f0aa90fce106
-ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
+ms.openlocfilehash: 5ad636f494e57706b280980905e197f03707e379
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60123897"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566148"
 ---
-# <a name="plan-responsive-tabs-for-teams-mobile"></a>Planen reaktionsfähiger Registerkarten für Teams Mobilgeräte
+# <a name="plan-responsive-tabs-for-teams-mobile"></a>Planen reaktionsfähiger Registerkarten für Teams Mobile
 
- Teams Plattform bietet die Möglichkeit, Apps auf Mobilgeräten und Desktops zu erstellen. Ihre App-Benutzer können desktop- oder mobil oder beides bevorzugen. Die Benutzer können Daten auf dem Desktop vorbereiten, aber mehr Daten über Mobilgeräte nutzen und freigeben. Der Schlüssel zum Erstellen einer App besteht darin, die Anforderungen der Benutzer zu verstehen und zu erfüllen. Es gibt Funktionen wie Bots, Messaging-Erweiterungen und Connectors, die nahtlos auf Desktops und mobilen Geräten funktionieren. Das Erstellen von Registerkarten und Aufgabenmodulen erfordert jedoch die Planung für das Hosten Ihrer Webumgebung auf Teams Mobilen. In den Dokumenthandbüchern können Sie Ihre reaktionsfähigen Webseiten auf Teams Mobilen planen.
+ Teams Plattform bietet die Möglichkeit, Apps auf Mobilgeräten und Desktops zu erstellen. Ihre App-Benutzer können desktop- oder mobil oder beides bevorzugen. Die Benutzer können Daten auf dem Desktop vorbereiten, aber mehr Daten über Mobilgeräte nutzen und freigeben. Der Schlüssel zum Erstellen einer App besteht darin, die Anforderungen der Benutzer zu verstehen und zu erfüllen. Es gibt Funktionen wie Bots, Messaging-Erweiterungen und Connectors, die nahtlos auf Desktops und mobilen Geräten funktionieren. Das Erstellen von Registerkarten und Aufgabenmodulen erfordert jedoch die Planung für das Hosten Ihrer Webumgebung auf Teams Mobilen. In den Dokumenthandbüchern können Sie Ihre reaktionsfähigen Webseiten auf Teams Mobilgeräten planen.
 
 ## <a name="identify-apps-scope"></a>Identifizieren des App-Bereichs
 
@@ -22,7 +22,7 @@ Die folgende Liste enthält die wichtigsten Informationen zum Planen der Erstell
 
 * Ziehen Sie die geräteübergreifende Funktionalität Teams App in Betracht. Wenn Sie beispielsweise über eine leistungsfähige App auf dem Desktop verfügen, können Sie untersuchen, wie Sie eine ähnliche App auf mobilen Geräten erstellen können. Anfangs kann es schwierig sein, die gesamte Desktopumgebung auf mobilen Geräten zu ändern. Sie können mit einfachen, aber gängigen Szenarien beginnen. Fügen Sie Funktionen und Funktionen hinzu, nachdem Sie mehr Einblicke und Benutzerfeedback gesammelt haben.
 
-* Stellen Sie sicher, dass die entsprechende Benutzerpersona auf mobilgeräten ausgerichtet ist. Wenn Sie z. B. eine App erstellen, die Dienste für Endbenutzer bereitstellt und Entwicklern und leitenden Managern Datenzugriff bietet, können die Endbenutzer die App mehr verwenden, während Sie mit dem Erstellen einer App auf Teams Mobilgerät beginnen. Sie können jedoch auf alle Personas zugreifen, die Sie in Ihrer Desktop-App haben. Es wird jedoch empfohlen, mit Persona mit einer größeren Basis und möglichen Early Adoptern für eine kleinere Bildschirmerfahrung zu beginnen. Gemäß dem Beispiel sind die Endbenutzer die entsprechenden Benutzerpersonas. Sie können schrittweise Funktionen hinzufügen, um andere Benutzerpersonas auf Ihrem Teams Mobilen zu unterstützen. 
+* Stellen Sie sicher, dass die entsprechende Benutzerpersona auf mobilgeräten ausgerichtet ist. Wenn Sie beispielsweise eine App erstellen, die Dienste für Endbenutzer bereitstellt und Entwicklern und leitenden Managern Datenzugriff bietet, können die Endbenutzer die App mehr verwenden, während Sie mit dem Erstellen einer App auf Teams Mobilgerät beginnen. Sie können jedoch auf alle Personas zugreifen, die Sie in Ihrer Desktop-App haben. Es wird jedoch empfohlen, mit Persona mit einer größeren Basis und möglichen Early Adoptern für eine kleinere Bildschirmerfahrung zu beginnen. Gemäß dem Beispiel sind die Endbenutzer die entsprechenden Benutzerpersonas. Sie können schrittweise Funktionen hinzufügen, um andere Benutzerpersonas auf Ihrem Teams Mobilen zu unterstützen. 
 
 ## <a name="understand-different-stages-to-build-apps"></a>Grundlegendes zu den verschiedenen Phasen zum Erstellen von Apps
 
@@ -41,7 +41,7 @@ Nachdem Sie den App-Bereich identifiziert haben, ist es an der Zeit, die folgend
    Bieten Sie vollständige App-Umgebungen für die Interaktion auf mobilen Geräten. Wenn Ihre Benutzer mit Ihrer App interagieren, bieten Sie eine vollständige immersive Erfahrung auf mobilgeräten, entweder auf der Stufe oder besser als die Desktopumgebung. Um Ihren Benutzern eine gute Erfahrung zu bieten, machen Sie alle Anwendungsfälle auf mobilen Geräten reaktionsfähig.
 
 > [!TIP]
-> Informationen zu den Entwurfsrichtlinien finden Sie im [Entwurfsprozess für Teams-Apps.](design-teams-app-process.md)
+> Informationen zu den Entwurfsrichtlinien finden Sie im [Entwurfsprozess für Teams Apps.](design-teams-app-process.md)
 
 ## <a name="use-cases"></a>Anwendungsfälle
 
@@ -99,7 +99,7 @@ Sie können benutzern folgenden Zugriff gewähren:
 
 <summary><b>Apps für das Onboarding von Aufgaben</b></summary>
 
-Sie können verstehen, wie Sie reaktionsfähige Registerkarten für Aufgaben-Onboarding-Apps auf Teams mobilen Plattform planen.
+Sie können verstehen, wie Sie reaktionsfähige Registerkarten für Taskboard-Apps auf Teams mobilen Plattform planen.
 
 **Verbrauch**
 
@@ -178,11 +178,11 @@ In der dritten Phase bieten Sie Ihren Benutzern eine vollständige Benutzererfah
 
 </details>
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 Die folgenden Design- und Validierungsrichtlinien sind abhängig vom Umfang Ihrer App hilfreich:
 
 * [Entwerfen der Registerkarte](../../tabs/design/tabs.md)
-* [Entwerfen eines Bots](../../bots/design/bots.md)
+* [Entwerfen Ihres Bots](../../bots/design/bots.md)
 * [Entwerfen von Aufgabenmodulen](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [Überprüfen von Richtlinien](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

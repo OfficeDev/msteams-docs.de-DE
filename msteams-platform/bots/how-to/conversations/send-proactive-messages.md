@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 Keywords: Nachricht senden Benutzer-ID Kanal-ID Unterhaltungs-ID abrufen
-ms.openlocfilehash: 43fd90e292c51d81e6f4ad51610b72acb245160e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3069e42904cc7fcb51286cd229108793caaf4360
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156860"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566281"
 ---
 # <a name="proactive-messages"></a>Proaktive Nachrichten
 
@@ -90,8 +90,8 @@ Nachrichten mit schlechter Willkommensseite können dazu führen, dass Benutzer 
 Um Benachrichtigungen mithilfe proaktiver Nachrichten zu senden, stellen Sie sicher, dass Ihre Benutzer über einen klaren Pfad verfügen, um allgemeine Aktionen basierend auf Ihrer Benachrichtigung auszuführen. Stellen Sie sicher, dass die Benutzer genau wissen, warum sie eine Benachrichtigung erhalten haben. Gute Benachrichtigungen umfassen im Allgemeinen Folgendes:
 
 * Was passiert ist: Ein eindeutiger Hinweis darauf, was passiert ist, um die Benachrichtigung zu verursachen.
-* Was war das Ergebnis: Es muss klar sein, welches Element aktualisiert wurde, um die Benachrichtigung zu verursachen.
-* Wer oder was ausgelöst wurde: Wer oder welche Aktion ausgeführt wurde, die das Senden der Benachrichtigung verursacht hat.
+* Was war das Ergebnis: Es muss klar sein, welches Element aktualisiert wird, um die Benachrichtigung zu erhalten.
+* Wer oder was ausgelöst wurde: Wer oder welche Aktion ausgeführt wurde, wodurch die Benachrichtigung gesendet wurde.
 * Was können Benutzer als Reaktion tun: Erleichtern Sie Es Ihren Benutzern, Aktionen basierend auf Ihren Benachrichtigungen zu ergreifen.
 * Wie können Benutzer sich abmelden: Sie müssen einen Pfad angeben, über den Benutzer zusätzliche Benachrichtigungen deaktivieren können.
 
@@ -277,9 +277,9 @@ Die folgende Tabelle enthält ein einfaches Codebeispiel, das den grundlegenden 
 ### <a name="additional-code-sample"></a>Zusätzliches Codebeispiel
 
 > [!div class="nextstepaction"]
-> [Codebeispiele für proaktive Messaging-Teams](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+> [Codebeispiele für proaktives Messaging Teams](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [**Codebeispiele für proaktives Messaging Teams**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 

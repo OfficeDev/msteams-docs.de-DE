@@ -5,12 +5,12 @@ ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: Tipps zur App-Übermittlung häufig fehlgeschlagener Fälle – Validierungsrichtlinien
-ms.openlocfilehash: 99e5a55e4c3cfb63766d4b0ba72a2cc2824bc823
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b080bc49c60e70fda66bf45b3f04a79241f8a57f
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156812"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566309"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Tipps für eine erfolgreiche Microsoft Teams App-Übermittlung
 
@@ -32,7 +32,7 @@ In diesem Artikel werden häufige Gründe beschrieben, warum die Validierung von
 * Ihre App darf ausführbaren Code in der Benutzerumgebung nicht automatisch herunterladen, installieren oder starten. Alle Downloads müssen die explizite Berechtigung des Benutzers anfordern.
 * Alle Materialien, die Sie Ihrer Erfahrung zuordnen, z. B. Beschreibungen und Supportdokumentation, müssen korrekt sein. Achten Sie in diesen Materialien auf Rechtschreibung, Zeichensetzung und Grammatik.
 * Bereitstellen von Hilfe- und Supportinformationen. Es wird dringend empfohlen, dass Ihre App einen Hilfe- oder FAQ-Link für die Erste Ausführung enthält. Für alle persönlichen Apps empfehlen wir, Ihre Hilfeseite als persönliche Registerkarte bereitzustellen, um eine bessere Benutzererfahrung zu erzielen.
-* Alle Apps müssen über eine visuelle Tour verfügen, z. B. **"Take a Tour"** oder **"App Guide"** auf dem Konfigurationsbildschirm, auf dem über die App-Features und die erforderliche Integration an den folgenden Stellen gesprochen wird:
+* Alle Apps müssen über eine visuelle Tour verfügen, z. **B. "Take a Tour"** oder **"App Guide"** auf dem Konfigurationsbildschirm, auf dem über die App-Features und die erforderliche Integration an den folgenden Stellen gesprochen wird:
     * Die Seite für den Store-Eintrag (lange Beschreibung).
     * Registerkartenkonfigurationsbildschirm.
     * Willkommensnachricht für einen Bot.
@@ -54,7 +54,7 @@ In diesem Artikel werden häufige Gründe beschrieben, warum die Validierung von
 
 * Mit persönlichen Apps können Benutzer Inhalte aus einer persönlichen App-Erfahrung mit anderen Teammitgliedern teilen.
 
-### <a name="9989-provide-a-clear-and-simple-sign-in-sign-out-and-sign-up-experience"></a>&#9989; Eine klare und einfache Anmelde-, Abmelde- und Registrierungserfahrung bieten
+### <a name="9989-provide-a-clear-and-simple-sign-in-sign-out-and-sign-up-experience"></a>&#9989; Eine klare und einfache Anmelde-, Abmelde- und Registrierungserfahrung bereitstellen
 
 * Wenn Ihre App oder Ihr Add-In von externen Konten oder Diensten abhängt, müssen die Anmelde-, Abmelde- und Registrierungserfahrung über alle Funktionen ihrer App hinweg offensichtlich und erreichbar sein.
 * Wenn dem Benutzer eine explizite Anmeldeoption zur Verfügung steht, muss eine entsprechende Abmeldeoption vorhanden sein (auch wenn die App die [automatische Authentifizierung](../../../../tabs/how-to/authentication/auth-silent-aad.md)verwendet).
@@ -64,7 +64,7 @@ In diesem Artikel werden häufige Gründe beschrieben, warum die Validierung von
 * Stellen Sie sicher, dass es immer eine Möglichkeit gibt, das folgende (oder ähnliche) Verhalten umzukehren:
   * Anmeldung => Abmelden.
   * Verknüpfen eines Kontos/Diensts => Aufheben der Verknüpfung eines Kontos/Diensts.
-  * Verbinden ein Konto/Dienst => Trennen eines Kontos/Diensts.
+  * Verbinden eines Kontos/Diensts => Trennen eines Kontos/Diensts.
   * Autorisieren eines Kontos/Diensts => Aufheben der Autorisierung/Ablehnung eines Kontos/Diensts.
   * Registrieren eines Kontos/Diensts => die Registrierung eines Kontos/Diensts aufheben/kündigen.
 * Wenn Ihre App ein Konto oder einen Dienst erfordert, müssen Sie dem Benutzer eine Möglichkeit bieten, sich zu registrieren oder eine Registrierungsanforderung zu erstellen. Eine Ausnahme kann gewährt werden, wenn Für Ihre App eine Lizenz erforderlich ist. Stellen Sie in solchen Szenarien klare Anweisungen für einen neuen Benutzer bereit, sich anzumelden.
@@ -82,7 +82,7 @@ In diesem Artikel werden häufige Gründe beschrieben, warum die Validierung von
 
 Weitere Informationen zur Authentifizierung finden Sie unter:
 
-* [Authentifizierungsdokumentation](../../../authentication/authentication.md)
+* [Dokumentation zur Authentifizierung](../../../authentication/authentication.md)
 * [Bot-Authentifizierungsbeispiel in Node](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 * [Registerkartenauthentifizierungsbeispiel in Node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [Registerkarten-/Bot-Authentifizierung in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
@@ -146,7 +146,7 @@ Ihr Bot muss für jeden Befehl reagieren und nicht für den Benutzer inaktiv sei
 
 * **Fügen Sie einen Hilfebefehl ein.** Benutzer geben wahrscheinlich "Hilfe" ein, wenn sie verloren gehen oder wenn Ihr Bot nicht wie erwartet reagiert. Fügen Sie einen Hilfebefehl ein, der beschreibt, wie der Wert Ihrer App zusammen mit allen gültigen Befehlen angezeigt wird.
 
-![Flow-Hilfebefehl](../../../../assets/images/faq/flow-help.png)
+![Flow Hilfebefehl](../../../../assets/images/faq/flow-help.png)
 
 * **Fügen Sie Hilfeinhalte oder Anleitungen ein, wenn Ihr Bot verloren geht.** Wenn Ihr Bot die Benutzereingabe nicht verstehen kann, muss er eine alternative Aktion vorschlagen. Beispiel: *"Es tut mir leid, ich kann es nicht verstehen. Geben Sie "Hilfe" ein, um weitere Informationen zu erfahren."* Antworten Sie nicht mit einer Fehlermeldung oder einfach *"Ich kann nicht verstehen".*
 
@@ -157,7 +157,7 @@ Ihr Bot muss für jeden Befehl reagieren und nicht für den Benutzer inaktiv sei
 
   ![Hilfebefehlsbeispiel](../../../../assets/images/faq/helpcommand.png)
 
-* **Verwenden von adaptiven Karten und Aufgabenmodulen, um Die Bot-Antwort klar und umsetzbar zu machen** Adaptive Karten mit Schaltflächen, die Aufgabenmodule aufrufen, verbessern die Bot-Benutzererfahrung. Diese Karten und Schaltflächen sind auf einem mobilen Gerät einfacher zu verwenden, anstatt dass Der Benutzer die Befehle eingibt. Auch Bot-Antworten dürfen nicht textbezogen mit langem Text sein. Bots müssen adaptive Karten und Aufgabenmodule anstelle von unterhaltungschatbasierter Benutzeroberfläche und langen Textantworten verwenden.
+* **Verwenden von adaptiven Karten und Aufgabenmodulen, um Ihre Bot-Antwort klar und umsetzbar zu machen** Adaptive Karten mit Schaltflächen, die Aufgabenmodule aufrufen, verbessern die Bot-Benutzererfahrung. Diese Karten und Schaltflächen sind auf einem mobilen Gerät einfacher zu verwenden, anstatt dass Der Benutzer die Befehle eingibt. Auch Bot-Antworten dürfen nicht textbezogen mit langem Text sein. Bots müssen adaptive Karten und Aufgabenmodule anstelle von unterhaltungschatbasierter Benutzeroberfläche und langen Textantworten verwenden.
 
 * **Denken Sie durch alle Bereiche.** Achten Sie darauf, dass Ihr Bot geeignete Antworten bereitstellt, wenn er `@*botname*` in einem Kanal und in persönlichen Unterhaltungen erwähnt wird ( ). Wenn Ihr Bot keinen sinnvollen Kontext im persönlichen oder Teams-Bereich bereitstellt, deaktivieren Sie diesen Bereich über das Manifest. (Siehe den `bots` Block in der Microsoft Teams [Manifestschemareferenz.)](../../../../resources/schema/manifest-schema.md#bots)
 
@@ -180,7 +180,7 @@ Anforderungen für Willkommensnachrichten finden Sie im folgenden Abschnitt:
 * Fügen Sie ein Wertversprechen in die Willkommenstour ein.
 * Bereitstellen von Anleitungen für die Verwendung der App.
 * Enthalten Sie Anleitungen zum Registrieren und Konfigurieren Ihrer App.
-* Stellen Sie leicht lesbaren Text und einen einfachen Dialog bereit – vorzugsweise eine Karte mit einer Willkommens-Tour-Schaltfläche mit Aktionen, die ein Aufgabenmodul lädt.
+* Stellen Sie einfach lesbaren Text und direkte Dialoge bereit – vorzugsweise eine Karte mit einer Willkommens-Tour-Schaltfläche mit Aktionen, die ein Aufgabenmodul lädt.
 * Halten Sie es einfach und mit Schaltflächen und Karten verwendbar – vermeiden Sie lange Text, chatty Dialoge.
 * Fügen Sie adaptive Karten und Schaltflächen ein, um die Willkommensnachricht benutzerfreundlicher zu gestalten.
 * Rufen Sie die Willkommensnachricht mit einem Ping auf, nicht mit zwei oder mehr gleichzeitigen Pings.
@@ -213,15 +213,15 @@ Die Dinge unterscheiden sich etwas, wenn der Bot zum ersten Mal zu einem Kanal h
 
 * Ihre Registerkarten, adaptiven Karten, Botnachrichten und Inhalte in Aufgabenmodulen müssen für eine Vielzahl von Bildschirmgrößen mobiler Geräte reaktionsfähig sein.
 * Apps, die iOS unterstützen, müssen auf dem neuesten iPad Gerät mit der neuesten Version von iOS voll funktionsfähig sein.
-* Darf keine direkten Verweise auf In-App-Käufe, Testangebote, Angebote für kostenpflichtige Versionen oder Links zu Onlinestores enthalten, in denen Benutzer andere Inhalte, Apps oder Add-Ins aus Ihrer Teams-App unter mobilem Betriebssystem (Android, iOS) erwerben oder erwerben können.
+* Sie dürfen keine direkten Verweise auf In-App-Käufe, Testangebote, Angebote für kostenpflichtige Versionen oder Links zu Onlinestores enthalten, in denen Benutzer andere Inhalte, Apps oder Add-Ins aus Ihrer Teams-App unter mobilem Betriebssystem (Android, iOS) erwerben oder erwerben können.
 * Die iOS- oder Android-Version des Add-Ins darf keine Benutzeroberfläche oder Sprache oder keinen Link zu anderen Apps, Add-Ins oder Websites anzeigen, die den Benutzer zur Zahlung auffordern.
-* Die zugehörigen Seiten für Datenschutzrichtlinien und Nutzungsbedingungen müssen auch frei von Commerce-UI- oder Store-Links sein.
+* Die zugehörigen Seiten für Datenschutzrichtlinien und Nutzungsbedingungen müssen ebenfalls frei von E-Commerce-UI- oder Store-Links sein.
 
 ### <a name="9989-do-not-post-sensitive-data-to-an-audience-not-intended-to-view-the-data"></a>&#9989; Keine vertraulichen Daten an eine Zielgruppe veröffentlichen, die die Daten nicht anzeigen soll
 
 Ihre Teams-App darf keine vertraulichen Daten wie Kreditkarten- oder Zahlungen, personenbezogene Informationen (PIN), Integritäts- oder Kontaktablaufverfolgungsinformationen an eine Zielgruppe veröffentlichen, die diese Daten nicht anzeigen soll.
 
-### <a name="9989-do-not-transmit-financial-payment-details-or-complete-financial-transactions-via-your-teams-app"></a>&#9989; Keine finanziellen Zahlungsdetails übertragen oder Finanztransaktionen über Ihre Teams-App abschließen
+### <a name="9989-do-not-transmit-financial-payment-details-or-complete-financial-transactions-via-your-teams-app"></a>&#9989; Keine Finanziellen Zahlungsdetails übertragen oder Finanztransaktionen über Ihre Teams-App abschließen
 
 * Ihre Teams-App darf Benutzer nicht auffordern, eine Zahlung direkt innerhalb Teams Schnittstelle vorzunehmen.
 * Apps dürfen keine Details zu Finanzinstituten über den Benutzer auf der App-Benutzeroberfläche übertragen. Apps dürfen Links zu sicheren Zahlungsdiensten nur an Benutzer übertragen, wenn dies in den Nutzungsbedingungen, der Datenschutzrichtlinie und jeder Profilseite oder Website für die App offengelegt wird, bevor ein Benutzer der Verwendung der App zustimmt.
@@ -244,9 +244,9 @@ Warnen Sie die Benutzer, bevor Ihre App Dateien oder ausführbare Dateien ( `.ex
 * Weitere Informationen finden Sie in der Dokumentation zum [Complete Publisher Attestation-Programm.](/microsoft-365-app-certification/docs/attestation)
 * Führen Sie die Schritte im Abschnitt [Publisher Attestation Workflow](/microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow) aus, um den Nachweisprozess des Herausgebers abzuschließen. Schreiben Sie bei Fragen in appcert@microsoft.com.
 * Weitere Informationen finden Sie im [Handbuch zur Problembehandlung.](/azure/active-directory/develop/troubleshoot-publisher-verification)
-* Führen Sie den Selbstnachweis über das Partner Center aus. Füllen Sie den Self-Assessment Fragebogen unter **App-Compliance** aus.
+* Schließen Sie den Selbstnachweis über das Partner Center ab. Füllen Sie den Self-Assessment Fragebogen unter **App-Compliance** aus.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Weitere Informationen zu Teams App-Genehmigungsrichtlinien](/legal/marketplace/certification-policies#1140-teams)
 * [Abschnitt 100 – Allgemein](/legal/marketplace/certification-policies#100-general)

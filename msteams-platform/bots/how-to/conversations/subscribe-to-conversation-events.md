@@ -5,12 +5,12 @@ description: So arbeiten Sie mit Unterhaltungsereignissen aus Ihrem Microsoft Te
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e9dc8649cde02b2d19feaca001b55795c671cecb
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6dbefee88b1af763d02b3647d21bdc44da9541ec
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156985"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566253"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Unterhaltungsereignisse in Ihrem Teams-Bot
 
@@ -229,7 +229,7 @@ async def on_teams_channel_renamed(
 
 ### <a name="channel-deleted"></a>Kanal gelöscht
 
-Das Ereignis "Kanal gelöscht" wird immer dann an Ihren Bot gesendet, wenn ein Kanal in einem Team gelöscht wird, in dem Ihr Bot installiert ist.
+Das Ereignis "Kanal gelöscht" wird an Ihren Bot gesendet, sobald ein Kanal in einem Team gelöscht wird, in dem Ihr Bot installiert ist.
 
 Der folgende Code zeigt ein Beispiel für das Ereignis "Kanal gelöscht":
 
@@ -313,7 +313,7 @@ async def on_teams_channel_deleted(
 
 ### <a name="channel-restored"></a>Kanal wiederhergestellt
 
-Das Wiederherstellungsereignis des Kanals wird immer dann an Ihren Bot gesendet, wenn ein zuvor gelöschter Kanal in einem Team wiederhergestellt wird, in dem Ihr Bot bereits installiert ist.
+Das Wiederherstellungsereignis des Kanals wird an Ihren Bot gesendet, sobald ein Kanal, der zuvor gelöscht wurde, in einem Team wiederhergestellt wird, in dem Ihr Bot bereits installiert ist.
 
 Der folgende Code zeigt ein Beispiel für ein Wiederherstellungsereignis des Kanals:
 
@@ -658,7 +658,7 @@ async def on_teams_members_removed(
 
 ### <a name="team-renamed"></a>Team umbenannt
 
-Ihr Bot wird benachrichtigt, wenn das Team, in dem er sich befindet, umbenannt wurde. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamRenamed` im `channelData` Objekt.
+Ihr Bot wird benachrichtigt, wenn das Team umbenannt wird. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamRenamed` im `channelData` Objekt.
 
 Der folgende Code zeigt ein Beispiel für ein umbenanntes Teamereignis:
 
@@ -738,7 +738,7 @@ async def on_teams_team_renamed(
 
 ### <a name="team-deleted"></a>Team gelöscht
 
-Ihr Bot wird benachrichtigt, wenn das Team, in dem er sich befindet, gelöscht wurde. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamDeleted` im `channelData` Objekt.
+Ihr Bot wird benachrichtigt, wenn das Team gelöscht wird. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamDeleted` im `channelData` Objekt.
 
 Der folgende Code zeigt ein Beispiel für ein Team-Deleted-Ereignis:
 
@@ -894,7 +894,7 @@ async def on_teams_team_restored(
 
 ### <a name="team-archived"></a>Team archiviert
 
-Der Bot erhält eine Benachrichtigung, wenn das Team, in dem er installiert ist, archiviert wird. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamarchived` im `channelData` Objekt.
+Der Bot erhält eine Benachrichtigung, wenn das Team installiert und archiviert wird. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamarchived` im `channelData` Objekt.
 
 Der folgende Code zeigt ein Beispiel für ein teamarchiviertes Ereignis:
 
@@ -975,7 +975,7 @@ async def on_teams_team_archived(
 
 ### <a name="team-unarchived"></a>Team-Archivierung rückgängig gemacht
 
-Der Bot erhält eine Benachrichtigung, wenn das Team, in dem er installiert ist, nicht archiviert wird. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamUnarchived` im `channelData` Objekt.
+Der Bot erhält eine Benachrichtigung, wenn das Team installiert und nicht archiviert wird. Es empfängt ein `conversationUpdate` Ereignis mit `eventType.teamUnarchived` im `channelData` Objekt.
 
 Der folgende Code zeigt ein Beispiel für ein Nichtarchiviertes Teamereignis:
 
@@ -1389,7 +1389,7 @@ Nicht verfügbar
 > [!NOTE]
 > Das Deinstallationsverhalten für persönliche Apps mit Bot ist derzeit nur in der [öffentlichen Entwicklervorschau](../../../resources/dev-preview/developer-preview-intro.md)verfügbar.
 
-Wenn Sie eine App deinstallieren, wird der Bot ebenfalls deinstalliert. Wenn ein Benutzer eine Nachricht an Ihre App sendet, erhält er den Antwortcode 403. Ihr Bot erhält einen 403-Antwortcode für neue Nachrichten, die von Ihrem Bot gepostet wurden. Das Verhalten der Postdeinstallation für Bots im persönlichen Bereich mit den Bereichen Teams und groupChat wird nun ausgerichtet. Sie können keine Nachrichten senden oder empfangen, nachdem eine App deinstalliert wurde.
+Wenn Sie eine App deinstallieren, wird der Bot ebenfalls deinstalliert. Wenn ein Benutzer eine Nachricht an Ihre App sendet, erhält er den Antwortcode 403. Ihr Bot erhält einen 403-Antwortcode für neue Nachrichten, die von Ihrem Bot gepostet wurden. Das Verhalten der Postdeinstallation für Bots im persönlichen Bereich mit den Bereichen Teams und groupChat wird jetzt ausgerichtet. Sie können keine Nachrichten senden oder empfangen, nachdem eine App deinstalliert wurde.
 
 <img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
 
@@ -1397,7 +1397,7 @@ Wenn Sie eine App deinstallieren, wird der Bot ebenfalls deinstalliert. Wenn ein
 
 Wenn Sie diese Installations- und Deinstallationsereignisse verwenden, gibt es einige Fälle, in denen Bots Ausnahmen beim Empfangen unerwarteter Ereignisse von Teams gewähren. Dies geschieht in den folgenden Fällen:
 
-* Sie erstellen Ihren Bot ohne das Microsoft Bot Framework SDK, und daher gibt der Bot eine Ausnahme beim Empfangen eines unerwarteten Ereignisses.
+* Sie erstellen Ihren Bot ohne das Microsoft Bot Framework SDK, und daher gibt der Bot eine Ausnahme beim Empfangen eines unerwarteten Ereignisses aus.
 * Sie erstellen Ihren Bot mit dem Microsoft Bot Framework SDK, und Sie können das Standardereignisverhalten ändern, indem Sie das Basisereignishandle überschreiben.
 
 Es ist wichtig zu wissen, dass neue Ereignisse jederzeit in der Zukunft hinzugefügt werden können und Ihr Bot beginnt, sie zu empfangen. Daher müssen Sie die Möglichkeit entwerfen, unerwartete Ereignisse zu empfangen. Wenn Sie das Bot Framework SDK verwenden, antwortet Ihr Bot automatisch mit einem 200 – OK auf alle Ereignisse, die Sie nicht behandeln möchten.

@@ -5,32 +5,35 @@ description: Eine Übersicht über Messaging-Erweiterungen auf der Microsoft Tea
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 383b376757c1c0922776d8285449460b879ce274
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6df54db100a5a903493cdc20aa805e5e339ab8f1
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156645"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566141"
 ---
 # <a name="messaging-extensions"></a>Messaging-Erweiterungen
 
-Messaging-Erweiterungen ermöglichen benutzern die Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams Client. Sie können Aktionen in einem externen System im Bereich zum Verfassen von Nachrichten, im Befehlsfeld oder direkt in einer Nachricht suchen oder initiieren. Sie können die Ergebnisse dieser Interaktion in Form einer rich-formatierten Karte an den Microsoft Teams Client zurücksenden. Dieses Dokument bietet eine Übersicht über die Messaging-Erweiterung, Aufgaben, die in verschiedenen Szenarien ausgeführt werden, das Arbeiten mit Messaging-Erweiterungen, Aktions- und Suchbefehle sowie die Verbreitung von Links.
+Messaging-Erweiterungen ermöglichen benutzern die Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams Client. Sie können Aktionen in einem externen System im Bereich zum Verfassen von Nachrichten, im Befehlsfeld oder direkt in einer Nachricht suchen oder initiieren. Sie können die Ergebnisse dieser Interaktion in Form einer rich-formatierten Karte an den Microsoft Teams-Client zurücksenden. Dieses Dokument bietet eine Übersicht über die Messaging-Erweiterung, Aufgaben, die in verschiedenen Szenarien ausgeführt werden, das Arbeiten mit Messaging-Erweiterungen, Aktions- und Suchbefehle sowie die Verbreitung von Links.
 
 In der folgenden Abbildung werden die Speicherorte angezeigt, von denen Messaging-Erweiterungen aufgerufen werden:
 
 ![Aufrufen von Speicherorten für Messaging-Erweiterungen](~/assets/images/messaging-extension-invoke-locations.png)
+
+> [!NOTE]
+> @mentioning Nachrichtenerweiterungen werden im Feld zum Verfassen nicht mehr unterstützt.
 
 ## <a name="scenarios-where-messaging-extensions-are-used"></a>Szenarien, in denen Messaging-Erweiterungen verwendet werden
 
 | Szenario | Beispiel |
 |:-----------------|:-----------------|
 |Sie möchten, dass ein externes System eine Aktion ausführt und das Ergebnis der Aktion zurück an Ihre Unterhaltung gesendet wird.|Reservieren Sie eine Ressource, und ermöglichen Sie dem Kanal, das reservierte Zeitfenster zu kennen.|
-|Sie möchten etwas in einem externen System finden und die Ergebnisse für die Unterhaltung freigeben.|Suchen Sie in Azure DevOps nach einer Arbeitsaufgabe, und geben Sie sie als adaptive Karte für die Gruppe frei.|
+|Sie möchten etwas in einem externen System finden und die Ergebnisse für die Unterhaltung freigeben.|Suchen Sie in Azure DevOps nach einer Arbeitsaufgabe, und geben Sie sie für die Gruppe als adaptive Karte frei.|
 |Sie möchten eine komplexe Aufgabe mit mehreren Schritten oder vielen Informationen in einem externen System abschließen und die Ergebnisse mit einer Unterhaltung teilen.|Erstellen Sie einen Fehler in Ihrem Nachverfolgungssystem basierend auf einer Teams Nachricht, weisen Sie diesen Fehler Bob zu, und senden Sie eine Karte mit den Details des Fehlers an den Unterhaltungsthread.|
 
 ## <a name="understand-how-messaging-extensions-work"></a>Grundlegendes zur Funktionsweise von Messaging-Erweiterungen
 
-Eine Messaging-Erweiterung besteht aus einem Webdienst, den Sie hosten, und einem App-Manifest, das definiert, wo Ihr Webdienst im Microsoft Teams-Client aufgerufen wird. Der Webdienst nutzt das Messaging-Schema und das sichere Kommunikationsprotokoll des Bot-Frameworks, daher müssen Sie Ihren Webdienst als Bot im Bot Framework registrieren. 
+Eine Messaging-Erweiterung besteht aus einem Webdienst, den Sie hosten, und einem App-Manifest, das definiert, von wo aus Ihr Webdienst im Microsoft Teams-Client aufgerufen wird. Der Webdienst nutzt das Messaging-Schema und das sichere Kommunikationsprotokoll des Bot-Frameworks, daher müssen Sie Ihren Webdienst als Bot im Bot Framework registrieren. 
 
 > [!NOTE]
 > Obwohl Sie den Webdienst manuell erstellen können, verwenden Sie [das Bot Framework SDK,](https://github.com/microsoft/botframework-sdk) um mit dem Protokoll zu arbeiten.
@@ -49,7 +52,7 @@ Die Aktionsbefehle werden aus dem Bereich zum Verfassen von Nachrichten, aus dem
 
 ### <a name="search-commands"></a>Suchbefehle
 
-MitHilfe von Suchbefehlen können Benutzer ein externes System entweder manuell über ein Suchfeld oder durch Einfügen eines Links zu einer überwachten Domäne in den Bereich zum Verfassen von Nachrichten durchsuchen und die Ergebnisse der Suche in eine Nachricht einfügen. Im grundlegendsten Suchbefehlsfluss enthält die anfängliche Aufrufnachricht die Suchzeichenfolge, die der Benutzer übermittelt hat. Sie antworten mit einer Liste von Karten und Kartenvorschau. Der Teams Client rendert eine Liste der Kartenvorschau für den Benutzer. Wenn der Benutzer eine Karte aus der Liste auswählt, wird die Karte in voller Größe in den Bereich zum Verfassen von Nachrichten eingefügt.
+MitHilfe von Suchbefehlen können Benutzer ein externes System entweder manuell über ein Suchfeld oder durch Einfügen eines Links zu einer überwachten Domäne in den Bereich zum Verfassen von Nachrichten durchsuchen und die Ergebnisse der Suche in eine Nachricht einfügen. Im grundlegendsten Suchbefehlsfluss enthält die anfängliche Aufrufnachricht die Suchzeichenfolge, die der Benutzer übermittelt hat. Sie antworten mit einer Liste von Karten und Kartenvorschau. Der Teams-Client rendert eine Liste der Kartenvorschau für den Benutzer. Wenn der Benutzer eine Karte aus der Liste auswählt, wird die Karte in voller Größe in den Bereich zum Verfassen von Nachrichten eingefügt.
 
 Die Karten werden aus dem Bereich zum Verfassen von Nachrichten oder dem Befehlsfeld ausgelöst und nicht von einer Nachricht ausgelöst. Sie können nicht von einer Nachricht ausgelöst werden.
 In der folgenden Abbildung wird das Befehlsaufgabenmodul für die Messaging-Erweiterungssuche angezeigt:

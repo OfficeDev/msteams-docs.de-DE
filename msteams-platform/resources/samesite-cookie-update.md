@@ -6,12 +6,12 @@ keywords: Cookieattribute samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: e4f2eff887b84d54de9b59becc850bad8f42a42a
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: b5f66a9f3e542b5abff96c695c3da488773d10cb
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260651"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566127"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite-Cookieattribut 
 
@@ -33,7 +33,7 @@ Vor der Einführung von SameSite-Einschränkungen wurden die Cookies im Browser 
 
 ## <a name="samesite-cookie-attribute-initial-release"></a>SameSite-Cookieattribut: erste Version
 
-In Google Chrome, Version 51, wurde die `SetCookie SameSite` Spezifikation als optionales Attribut eingeführt. Ab Build 17672 wurde Windows 10 die SameSite-Cookieunterstützung für den [Microsoft Edge Browser](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/)eingeführt.
+In Google Chrome, Version 51, wurde die `SetCookie SameSite` Spezifikation als optionales Attribut eingeführt. Ab Build 17672 Windows 10 die SameSite-Cookieunterstützung für den [Microsoft Edge Browser](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/)eingeführt.
 
 Sie können das Hinzufügen des SameSite-Cookieattributs zum Header deaktivieren `SetCookie` oder es mit einer der beiden Einstellungen **Lax** und **Strict** hinzufügen. Ein nicht implementiertes SameSite-Attribut wurde als Standardzustand betrachtet.
 
@@ -60,7 +60,7 @@ SameSite-Cookieattribute sind wie folgt:
 
 ### <a name="tabs-task-modules-and-messaging-extensions"></a>Registerkarten, Aufgabenmodule und Messaging-Erweiterungen
 
-* Teams Registerkarten `<iframes>` zum Einbetten von Inhalten, die in einem Kontext der obersten Ebene oder der Erstanbieter angezeigt werden.
+* Teams Registerkarten `<iframes>` zum Einbetten von Inhalten, die auf oberster Ebene oder im Erstanbieterkontext angezeigt werden.
 * Aufgabenmodule ermöglichen Ihnen das Erstellen von modalen Popup-Oberflächen in Ihrer Teams-Anwendung. Ähnlich wie bei einer Registerkarte wird ein modales Fenster auf der aktuellen Seite geöffnet.
 * Messaging-Erweiterungen ermöglichen es Ihnen, anreicherte Inhalte aus externen Ressourcen in eine Chatnachricht einzufügen.
 
@@ -84,7 +84,7 @@ Android WebView ist eine Chrome-Systemkomponente, mit der Android-Apps den Webin
 > * Sie müssen Cookies von Erstanbietern entsprechend `SameSite=Lax` `SameSite=Strict` deklarieren.      
 > * Sie müssen Cookies von Drittanbietern als `SameSite=None; Secure` deklarieren.   
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Weitere Informationen
 
 * [SameSite-Beispiele](https://github.com/GoogleChromeLabs/samesite-examples)
 * [SameSite-Cookie-Rezept](https://web.dev/samesite-cookie-recipes/)

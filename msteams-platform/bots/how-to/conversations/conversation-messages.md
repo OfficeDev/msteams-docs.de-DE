@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 8ef68f351e8d0d7ee39dfc5ae3816337fc592920
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: 5d2855493b4863232655ef808191f671cf784289
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017331"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566239"
 ---
 # <a name="messages-in-bot-conversations"></a>Meldungen in Bot-Unterhaltungen
 
@@ -189,7 +189,7 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> Das Teilen von Nachrichten erfolgt, wenn eine Textnachricht und eine Anlage in derselben Aktivitätsnutzlast gesendet werden. Diese Aktivität wird durch Microsoft Teams in separate Aktivitäten aufgeteilt, eines mit nur einer Textnachricht und das andere mit einer Anlage. Wenn die Aktivität geteilt ist, erhalten Sie nicht die Nachrichten-ID als Antwort, die verwendet wird, um die Nachricht proaktiv zu aktualisieren oder zu [löschen.](~/bots/how-to/update-and-delete-bot-messages.md) Es wird empfohlen, separate Aktivitäten zu senden, anstatt von der Nachrichtenteilung abhängig zu sein.
+> Das Teilen von Nachrichten erfolgt, wenn eine Textnachricht und eine Anlage in derselben Aktivitätsnutzlast gesendet werden. Diese Aktivität wird durch Microsoft Teams in separate Aktivitäten aufgeteilt, eine mit nur einer Textnachricht und die andere mit einer Anlage. Wenn die Aktivität geteilt ist, erhalten Sie nicht die Nachrichten-ID als Antwort, die verwendet wird, um die Nachricht proaktiv zu aktualisieren oder zu [löschen.](~/bots/how-to/update-and-delete-bot-messages.md) Es wird empfohlen, separate Aktivitäten zu senden, anstatt von der Nachrichtenteilung abhängig zu sein.
 
 Nachrichten, die zwischen Benutzern und Bots gesendet werden, enthalten interne Kanaldaten innerhalb der Nachricht. Diese Daten ermöglichen es dem Bot, ordnungsgemäß in diesem Kanal zu kommunizieren. Mit dem Bot Builder SDK können Sie die Nachrichtenstruktur ändern.
 
@@ -201,7 +201,7 @@ Das `channelData` Objekt ist nicht in Nachrichten in persönlichen Unterhaltunge
 
 Ein `channelData` typisches Objekt in einer an Ihren Bot gesendeten Aktivität enthält die folgenden Informationen:
 
-* `eventType`: Teams Ereignistyp, der nur bei [Kanaländerungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md)übergeben wird.
+* `eventType`: Teams Ereignistyp wird nur bei [Kanaländerungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md)übergeben.
 * `tenant.id`: Azure Active Directory Mandanten-ID, die in allen Kontexten übergeben wird.
 * `team`: Wird nur in Kanalkontexten übergeben, nicht im persönlichen Chat.
   * `id`: GUID für den Kanal.
@@ -241,7 +241,7 @@ Nachrichten, die von Ihrem Bot empfangen oder an diesen gesendet werden, können
 | Rich-Text  | ✔                | ✔                | Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und Bilder an Ihren Bot senden.                                                                                        |
 | Bilder  | ✔                | ✔                | Maximal 1024×1024 und 1 MB im PNG-, JPEG- oder GIF-Format. Animierte GIF-Dateien werden nicht unterstützt.  |
 | Karten     | ✖                | ✔                | In der [Teams Kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md) finden Sie unterstützte Karten. |
-| Emojis    | ✖                | ✔                | Teams unterstützt zurzeit Emojis über UTF-16, z. B. U+1F600 für das graunende Gesicht. |
+| Emojis    | ✖                | ✔                | Teams unterstützt zurzeit Emojis über UTF-16, z. B. U+1F600 für graunendes Gesicht. |
 
 Sie können Ihrer Nachricht auch mithilfe der Eigenschaft Benachrichtigungen `Notification.Alert` hinzufügen.
 
@@ -333,7 +333,7 @@ Bilder werden durch Hinzufügen von Anlagen zu einer Nachricht gesendet. Weitere
 
 Bilder können höchstens 1024×1024 und 1 MB im PNG-, JPEG- oder GIF-Format sein. Animierte GIF-Dateien werden nicht unterstützt.
 
-Geben Sie die Höhe und Breite jedes Bilds mithilfe von XML an. In Markdown ist die Bildgröße standardmäßig 256×256. Zum Beispiel: 
+Geben Sie die Höhe und Breite jedes Bilds mithilfe von XML an. In Markdown ist die Bildgröße standardmäßig 256×256. Beispiel:
 
 * Verwenden Sie: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` .
 * Verwenden Sie nicht: `![Duck on a rock](http://aka.ms/Fo983c)` .

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams-Apps – Benutzerteilnehmer-Rollen-API für Besprechungen
-ms.openlocfilehash: 56219323f6106619a9dd4f1b26289ecf86d297f3
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: 2cd0012a36d3cc941ebcf7e83a4156c9780149a6
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017317"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566134"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Voraussetzungen für Apps in Teams-Besprechungen
 
@@ -23,7 +23,7 @@ Mit Apps für Teams Besprechungen können Sie die Funktionen Ihrer Apps über de
 
 * Verwenden Sie Ihre App, die konfigurierbare Registerkarten im Gruppenchatbereich unterstützt. Weitere Informationen finden Sie unter [Gruppenchatbereich](../resources/schema/manifest-schema.md#configurabletabs) und [Erstellen einer Gruppenregisterkarte.](../build-your-first-app/build-channel-tab.md)
 
-* Halten Sie sich an allgemeine Teams Entwurfsrichtlinien für Registerkarten für Szenarien vor und nach der Besprechung. Informationen zu Erfahrungen während Besprechungen finden Sie auf der Registerkarte "Besprechung" und in den Entwurfsrichtlinien des Dialogfelds "In-Meeting". Weitere Informationen finden Sie unter [Teams Entwurfsrichtlinien für Registerkarten,](../tabs/design/tabs.md)Richtlinien für den Entwurf von [Registerkarten in Besprechungen](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)und Entwurfsrichtlinien für [Dialogfelder in Besprechungen.](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
+* Halten Sie sich an allgemeine Teams Entwurfsrichtlinien für Registerkarten für Szenarien vor und nach der Besprechung. Informationen zu Erfahrungen während Besprechungen finden Sie auf der Registerkarte "Besprechung" und in den Entwurfsrichtlinien des Dialogfelds "In-Meeting". Weitere Informationen finden Sie unter [Teams Entwurfsrichtlinien für Registerkarten,](../tabs/design/tabs.md) [Entwurfsrichtlinien für Registerkarten in Besprechungen](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)und Entwurfsrichtlinien für [Dialogfelder in Besprechungen.](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 
 * Unterstützen Sie den `groupchat` Bereich, um Ihre App in Chats vor und nach der Besprechung zu aktivieren. Mit der App-Erfahrung vor der Besprechung können Sie Besprechungs-Apps suchen und hinzufügen und die Aufgaben vor der Besprechung ausführen. Mit der App-Erfahrung nach der Besprechung können Sie die Ergebnisse der Besprechung anzeigen, z. B. Umfrageergebnisse oder Gebühren.
 * Die URL-Parameter der Besprechungs-API müssen `meetingId` über `userId` , und `tenantId` verfügen. Die Parameter sind als Teil der Teams Client SDK- und Bot-Aktivität verfügbar. Sie können auch zuverlässige Informationen zu Benutzer-ID und Mandanten-ID mithilfe der [SSO-Authentifizierung](../tabs/how-to/authentication/auth-aad-sso.md)der Registerkarte abrufen.
@@ -81,9 +81,9 @@ Die `GetParticipant` API enthält die folgenden Abfrageparameter:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**meetingId**| String | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
-|**participantId**| String | Ja | Die Teilnehmer-ID ist die Benutzer-ID. Es ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Teilnehmer-ID vom Tab-SSO abzurufen. |
-|**tenantId**| String | Ja | Die Mandanten-ID ist für die Mandantenbenutzer erforderlich. Es ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Mandanten-ID vom Tab-SSO abzurufen. |
+|**meetingId**| Zeichenfolge | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
+|**participantId**| Zeichenfolge | Ja | Die Teilnehmer-ID ist die Benutzer-ID. Es ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Teilnehmer-ID vom Tab-SSO abzurufen. |
+|**tenantId**| Zeichenfolge | Ja | Die Mandanten-ID ist für die Mandantenbenutzer erforderlich. Es ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Mandanten-ID vom Tab-SSO abzurufen. |
 
 #### <a name="example"></a>Beispiel
 
@@ -215,7 +215,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 replyActivity.channelData = {
     notification: {
         alertInMeeting: true,
-        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID’
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID'
     }
 };
 await context.sendActivity(replyActivity);
@@ -281,7 +281,7 @@ Die `Meeting Details` API enthält den folgenden Abfrageparameter:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**meetingId**| String | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar. |
+|**meetingId**| Zeichenfolge | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar. |
 
 #### <a name="example"></a>Beispiel
 
@@ -333,9 +333,6 @@ Der JSON-Antworttext für die `Meeting Details` API lautet wie folgt:
 ```
 
 ## <a name="real-time-teams-meeting-events"></a>Besprechungsereignisse in Echtzeit Teams
-
-> [!NOTE]
-> Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
 Der Benutzer kann Besprechungsereignisse in Echtzeit empfangen. Sobald eine App einer Besprechung zugeordnet ist, werden die tatsächliche Start- und Besprechungsendzeit für den Bot freigegeben.
 
@@ -499,9 +496,9 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 * Besitzen Sie eine Bot-Registrierung und Bot-ID in der `MeetingDetails` API. Es erfordert Bot SDK, um `TurnContext` .
 
-* Machen Sie sich mit dem `TurnContext` über das Bot SDK verfügbaren Objekt vertraut. Das `Activity` Objekt enthält die Nutzlast mit der `TurnContext` tatsächlichen Start- und Endzeit. Für Echtzeitbesprechungsereignisse ist eine registrierte Bot-ID von der Teams-Plattform erforderlich.
+* Machen Sie sich mit dem `TurnContext` über das Bot SDK verfügbaren Objekt vertraut. Das `Activity` Objekt enthält die Nutzlast mit der `TurnContext` tatsächlichen Start- und Endzeit. Echtzeitbesprechungsereignisse erfordern eine registrierte Bot-ID von der Teams-Plattform.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Entwurfsrichtlinien für Besprechungsdialoge](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams Authentifizierungsfluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md)
