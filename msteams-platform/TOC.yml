@@ -10,26 +10,18 @@
 - name: Erste Schritte
   expanded: false
   items:
-    - name: Übersicht
-      href: get-started/code-samples.md
-    - name: Voraussetzungen
-      href: get-started/prerequisites.md
-    - name: Erstellen Ihrer ersten App mit React
-      href: get-started/first-app-react.md
+    - name: Übersicht über die ersten Schritte
+      href: get-started/get-started-overview.md
+    - name: Erstellen Ihrer ersten App mit JavaScript
+      href: sbs-gs-javascript.yml
     - name: Erstellen Ihrer ersten App mit Blazor
-      href: get-started/first-app-blazor.md
+      href: sbs-gs-blazor.yml
     - name: Erstellen Ihrer ersten App mit SPFx
-      href: get-started/first-app-spfx.md
+      href: sbs-gs-spfx.yml
     - name: Erstellen Ihrer ersten App mit C# oder .NET
-      href: get-started/get-started-dotnet-app-studio.md
+      href: sbs-gs-csharp.yml
     - name: Erstellen Ihrer ersten App mit Node.js
-      href: get-started/get-started-nodejs-app-studio.md
-    - name: Erstellen Ihrer ersten App mit dem Yeoman-Generator
-      href: get-started/get-started-yeoman.md
-    - name: Erstellen Sie Ihren ersten Chatbot
-      href: get-started/first-app-bot.md
-    - name: Erstellen Sie Ihre erste Messagingerweiterung
-      href: get-started/first-message-extension.md
+      href: sbs-gs-nodejs.yml
     - name: Codebeispiele
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: App-Grundlagen
