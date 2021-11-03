@@ -5,12 +5,12 @@ keywords: Erste Schritte für Entwicklerportal-Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 41aade2eaedee2095e60288a7e4021897bb1a3fa
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: c8a31f55131fb594a8d47c05e40533512e7de689
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378912"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720393"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Verwalten Ihrer Apps mit dem Entwicklerportal für Microsoft Teams
 
@@ -20,9 +20,9 @@ Das <a href="https://dev.teams.microsoft.com" target="_blank">Entwicklerportal f
 
 ## <a name="register-an-app"></a>Registrieren einer App
 
-Sie können Ihre Teams-App im Entwicklerportal auf folgende Weise registrieren:
+Das Entwicklerportal bietet verschiedene Möglichkeiten zum Registrieren einer Teams-App:
 
-* Registrieren einer neuen App
+* Registrieren einer völlig neuen App
 * Importieren eines vorhandenen App-Pakets
 
 > [!NOTE]
@@ -30,86 +30,54 @@ Sie können Ihre Teams-App im Entwicklerportal auf folgende Weise registrieren:
 
 ## <a name="set-up-an-environment"></a>Einrichten einer Umgebung
 
-Sie können Umgebungen und globale Variablen konfigurieren, um den Übergang Ihrer App von der lokalen Laufzeit zur Produktion zu unterstützen. Globale Variablen werden in allen Umgebungen verwendet.
+Sie können Umgebungen und globale Variablen konfigurieren, um den Übergang Ihrer App von Ihrer lokalen Laufzeit zur Produktion zu unterstützen. Globale Variablen werden in allen Umgebungen verwendet.
 
-**So konfigurieren Sie eine Umgebung**
+**So richten Sie eine Umgebung ein**
 
 1. Wählen Sie im Entwicklerportal die App aus, an der Sie arbeiten.
-2. Wechseln Sie zu **"Umgebungen",** und wählen Sie **"+ Umgebung hinzufügen"** aus.
-3. Wählen Sie **+ Hinzufügen einer Variablen,** um Konfigurationsvariablen für Ihre Umgebung zu erstellen.
+2. Wechseln Sie zur Seite **"Umgebungen",** und wählen Sie **+Umgebung hinzufügen** aus.
+3. Wählen Sie **+ Fügen Sie eine Variable** hinzu, um Konfigurationsvariablen für Ihre Umgebung zu erstellen.
 
 **So verwenden Sie Variablen**
 
 Verwenden Sie die Variablennamen anstelle von hartcodierten Werten, um Ihre App-Konfigurationen festzulegen.
 
 1. Geben Sie `{{` in ein beliebiges Feld im Entwicklerportal ein. Es wird eine Dropdownliste mit allen Variablen angezeigt, die Sie für die ausgewählte Umgebung zusammen mit den globalen Variablen erstellt haben.  
-1. Wählen Sie vor dem Herunterladen ihres App-Pakets (z. B. wenn Sie sich auf die Veröffentlichung im Teams Store vorbereiten) die Umgebung aus, die Sie verwenden möchten. Ihre App-Konfigurationen werden basierend auf der Umgebung automatisch aktualisiert. 
+1. Wählen Sie vor dem Herunterladen Ihres App-Pakets (z. B. wenn Sie sich auf die Veröffentlichung im Teams Store vorbereiten) die Umgebung aus, die Sie verwenden möchten. Ihre App-Konfigurationen werden basierend auf der Umgebung automatisch aktualisiert. 
 
 ## <a name="identify-app-owners"></a>Identifizieren von App-Besitzern
 
-Jede App enthält **Besitzer,** in denen Sie Ihre App-Registrierung für Kollegen in Ihrer Organisation freigeben können. Die **Rolle "Mitwirkender"** verfügt über die gleichen Berechtigungen wie die **Besitzerrolle,** mit Ausnahme der Möglichkeit, eine App zu löschen.
+Jede App enthält eine **Besitzerseite,** auf der Sie Ihre App-Registrierung für Kollegen in Ihrer Organisation freigeben können. Die **Rolle "Mitwirkender"** verfügt über die gleichen Berechtigungen wie die **Besitzerrolle,** mit Ausnahme der Möglichkeit, eine App zu löschen.
 
 ## <a name="configure-your-apps-capabilities-and-other-important-metadata"></a>Konfigurieren der Funktionen Ihrer App und anderer wichtiger Metadaten
 
 Eine Teams-App ist eine Web-App. Wie alle Web-Apps wird der Quellcode in der Regel in einer IDE oder einem Code-Editor entwickelt und an einer beliebigen Stelle in der Cloud (z. B. Azure) gehostet.
 
-Um Ihre App in Teams zu installieren und zu rendern, müssen Sie eine Reihe von Konfigurationen einschließen, die Teams erkennt. Dies geschieht traditionell durch das Erstellen eines App-Manifests, einer JSON-Datei, die alle Metadaten enthält, die Teams benötigen, um Ihre App-Inhalte anzuzeigen. Das Entwicklerportal abstrahiert diesen Prozess und enthält neue Features und Tools, die Ihnen helfen, erfolgreicher zu sein.
-
-### <a name="basic-app-configuration"></a>Grundlegende App-Konfiguration 
-
-**Grundlegende App-Informationen:** Die Benutzer werden auf der Seite mit den App-Details in Teams angezeigt, z. B. App-ID, App-Namen, Beschreibungen, Entwicklerinformationen, Version, App-URLs und Microsoft Partner Network-ID.
-
-**Branding:** Apps erfordern ein Farb- und Gliederungssymbol im PNG-Format. Um Ihre App im Teams Store zu veröffentlichen, müssen die Symbole bestimmte Größenanforderungen erfüllen.
-
-**Features:** Teams Features, die Sie in Ihre App einschließen können. Je nach Den Anwendungsfällen Ihrer App können Sie ein oder mehrere Features hinzufügen.
-
-**Berechtigungen:** Geben Sie an, welchen Benutzern sie zustimmen müssen, wenn Sie Ihre App verwenden.
-
-**Einmaliges Anmelden:** Konfigurieren Sie Ihre App so, dass Benutzer mit einmaligem Anmelden (Single Sign-On, SSO) authentifiziert werden.
-
-**Domänen:** Listet alle Domänen auf, zu denen Ihre App navigieren muss. Verwenden Sie Platzhalter, um mehrere Unterdomänen einzuschließen. Beispiel: `*.example.com`.
-
-### <a name="advanced-app-configuration"></a>Erweiterte App-Konfiguration
-
-**App-Inhalt:** Konfigurieren Sie die optionalen Features wie Ladeanzeige und Vollbildmodus für Ihre App.
-
-**App-Anpassung:** Wählen Sie die Eigenschaften aus, die Teams Administratoren über Ihre App anpassen können.
-
-**Erstanbietereinstellungen:** Features für Erstanbieteranwendungen, die über die öffentliche Funktionalität hinausgehen.
-
-### <a name="distribute-your-app"></a>Verteilen Ihrer App
-
-**App-Paket:** Das App-Paket beschreibt Ihre App-Konfiguration, Funktionen, erforderlichen Ressourcen und andere wichtige Attribute. Beispielsweise das Manifestschema.
-
-**Flights:** Steuern, wer App-Updates erhält. Sie können z. B. ein Update an Microsoft-Mitarbeiter freigeben, um Fehler zu identifizieren und zu beheben, bevor Sie es für die Öffentlichkeit freigeben.
-
-**Veröffentlichen in Ihrer Organisation (Microsoft):** Stellen Sie Ihre App für Personen in Ihrer Organisation zur Verfügung. Nachdem Sie von Ihrem IT-Administrator genehmigt wurden, wird Ihre App in Teams unter "Apps > Für Ihre Organisation erstellt" angezeigt.
-
-**Im Teams Store veröffentlichen:** Das App-Überprüfungstool überprüft Ihr App-Paket anhand der Testfälle, die Microsoft bei der Überprüfung Ihrer App verwendet. Beheben Sie Fehler oder Warnungen, und lesen Sie die Prüfliste vor der Übermittlung.
+Um Ihre App in Teams zu installieren und zu rendern, müssen Sie eine Reihe von Konfigurationen einschließen, die Teams erkennt. Dazu wurde traditionell ein App-Manifest erstellt, eine JSON-Datei, die alle Metadaten enthält, die Teams zum Anzeigen ihrer App-Inhalte benötigt. Das Entwicklerportal abstrahiert diesen Prozess und enthält neue Features und Tools, die Ihnen helfen, erfolgreicher zu sein.
 
 ## <a name="test-your-app-directly-in-teams"></a>Testen Sie Ihre App direkt in Teams
 
 Das Entwicklerportal bietet Optionen zum Testen und Debuggen Ihrer App:
 
-* In **overview**, you can see a snapshot of whether your app's configurations validate against Teams store test cases.
-* Mit **der Vorschau in Teams** können Sie Ihre App schnell im Teams-Client zum Debuggen starten.
+* Auf der **Übersichtsseite** sehen Sie eine Momentaufnahme, ob die Konfigurationen Ihrer App anhand Teams Store-Testfälle überprüft werden.
+* Mit der Schaltfläche **"Vorschau in Teams"** können Sie Ihre App schnell im Teams-Client zum Debuggen starten.
 
 ## <a name="distribute-your-app"></a>Verteilen Ihrer App
 
-Verwenden Sie im Entwicklerportal **"Verteilen",** um ein App-Paket herunterzuladen, es in Ihrer Organisation zu veröffentlichen oder im Teams Store zu veröffentlichen.
+Verwenden Sie im Entwicklerportal die Schaltfläche **"Verteilen",** um ein App-Paket herunterzuladen, in Ihrer Organisation zu veröffentlichen oder im Teams Store zu veröffentlichen.
 
 Weitere Informationen finden Sie unter [Verteilen Ihrer Teams-App.](~/concepts/deploy-and-publish/apps-publish-overview.md)
 
 ## <a name="analyze-your-apps-usage"></a>Analysieren der Nutzung Ihrer App
 
-In **overview**, you can see the total number of active users for your app. Diese Metriken sind für Apps verfügbar, die im Teams Store oder im App-Katalog einer Organisation über das Entwicklerportal veröffentlicht und auf die App-ID beschränkt sind.
+Auf der **Übersichtsseite** sehen Sie die Gesamtzahl der aktiven Benutzer für Ihre App. Diese Metriken sind für Apps verfügbar, die im Teams Store oder im App-Katalog einer Organisation über das Entwicklerportal veröffentlicht und auf die App-ID beschränkt sind.
 
 | Metrik | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *Monatlich R30* | Die Standardverwendungsmetrik. Es zeigt die Anzahl der eindeutigen aktiven Benutzer an, die Ihre App innerhalb dieses rollenden 30-Tage-Fensters in UTC verwendet haben. |
+| *Monatlich R30* | Die Standardverwendungsmetrik. Sie zeigt die Anzahl der eindeutigen aktiven Benutzer an, die Ihre App innerhalb dieses rollenden 30-Tage-Fensters in UTC verwendet haben. |
 | *Täglich* | Zeigt die Anzahl der eindeutigen aktiven Benutzer an, die Ihre App an einem bestimmten Tag in UTC verwendet haben. |
 
-Die monatliche und tägliche Nutzung wird für die letzten sieben Tage, 30 Tage und 60 Tage angezeigt. Die Nutzung sollte für einen bestimmten Tag innerhalb von 24 bis 48 Stunden widergespiegelt werden. Die Anzeige neuer Apps kann bis zu 3 bis 5 Tage dauern.
+Die monatliche und tägliche Nutzung wird für die letzten sieben, 30 und 60 Tage angezeigt. Die Nutzung sollte innerhalb von 24 bis 48 Stunden für einen bestimmten Tag widergespiegelt werden. Die Anzeige neuer Apps kann bis zu 3 bis 5 Tage dauern.
 
 ## <a name="use-tools-to-create-app-features"></a>Verwenden von Tools zum Erstellen von App-Features
 

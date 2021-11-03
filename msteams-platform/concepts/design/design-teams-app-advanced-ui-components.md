@@ -5,20 +5,20 @@ description: Erfahren Sie mehr über die UI-Komponenten, die in Teams verwendet 
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: a1b9c90b77457e8ff4a478befa36830da0407343
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2e35b83e66e26155b847ad7cb914c1970397676b
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156949"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719847"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Entwerfen Ihrer Microsoft Teams-App mit erweiterten UI-Komponenten
 
-Die folgenden Komponenten sind eine Kombination aus [grundlegenden UI-Komponenten,](~/concepts/design/design-teams-app-basic-ui-components.md) die Sie für allgemeine Teams Entwurfssituationen wie navigation verwenden können.
+Die folgenden Komponenten sind eine Kombination aus [einfachen UI-Komponenten,](~/concepts/design/design-teams-app-basic-ui-components.md) die Sie für allgemeine Teams Entwurfssituationen wie navigation verwenden können.
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
-Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent Benutzeroberfläche</a>enthält das Microsoft Teams UI Kit Komponenten und Muster, die speziell für die Erstellung Teams Apps entwickelt wurden. Im UI-Kit können Sie die hier aufgeführten Komponenten direkt in Ihr Design einfügen und weitere Beispiele für die Verwendung der einzelnen Komponenten anzeigen.
+Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent Ui</a>enthält das Microsoft Teams UI Kit Komponenten und Muster, die speziell für die Erstellung Teams Apps entwickelt wurden. Im UI-Kit können Sie die hier aufgeführten Komponenten direkt in Ihr Design einfügen und weitere Beispiele für die Verwendung der einzelnen Komponenten anzeigen.
 
 > [!div class="nextstepaction"]
 > [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -46,7 +46,7 @@ Verwenden Sie die linke Navigationsleiste, um mehrere Seiten in Ihrer Teams Regi
 
 ### <a name="top-use-cases"></a>Häufigste Anwendungsfälle
 
-* Durchsuchen Sie mehrere Seiten innerhalb einer Teams Registerkarte.
+* Durchsuchen Sie mehrere Seiten auf einer Teams Registerkarte.
 * Teilen Sie komplexe Apps auf mehrere Seiten auf.
 
 ### <a name="mobile"></a>Mobilgeräte
@@ -75,11 +75,11 @@ Eine Benachrichtigungsleiste ist ein dedizierter Bereich zum Anzeigen kurzer, wi
 
 :::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Beispiel zeigt Vorlagen für die Benachrichtigungsleiste auf dem Desktop." border="false":::
 
-## <a name="stage"></a>Stufe
+## <a name="stage-view"></a>Phasenansicht
 
-Mit "Phase" können Benutzer Inhalte wie ein Bild, eine Datei oder eine Website auf einer großen Oberfläche in Teams anzeigen, ohne den Kontext zu wechseln. Die Phase dient in erster Linie zum Anzeigen von Inhalten. Verwenden Sie die Phase nicht für komplexe Interaktionen.
+Mit der Phasenansicht können Benutzer Inhalte wie ein Bild, eine Datei oder eine Website auf einer großen Oberfläche in Teams sehen, ohne den Kontext zu wechseln. Diese Komponente dient in erster Linie zum Anzeigen von Inhalten. Verwenden Sie sie nicht für komplexe Interaktionen.
 
-Erfahren Sie, wie Sie [die Phase](~/tabs/tabs-link-unfurling.md)implementieren.
+Erfahren Sie, wie Sie [die Phasenansicht](~/tabs/tabs-link-unfurling.md)implementieren.
 
 ### <a name="top-use-cases"></a>Häufigste Anwendungsfälle
 

@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 Keywords: Nachricht senden Benutzer-ID Kanal-ID Unterhaltungs-ID abrufen
-ms.openlocfilehash: 3069e42904cc7fcb51286cd229108793caaf4360
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: d51c418c2269bb5fe74f7c80cbcabed6fe98f93a
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566281"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720078"
 ---
 # <a name="proactive-messages"></a>Proaktive Nachrichten
 
@@ -49,13 +49,13 @@ Zum Erstellen eines neuen Unterhaltungs- oder Unterhaltungsthreads in einem Kana
 
 Unabhängig davon, wie Sie die Informationen erhalten, müssen Sie die `tenantId` und entweder die oder zum Erstellen einer neuen Unterhaltung `userId` `channelId` speichern. Sie können den auch `teamId` verwenden, um einen neuen Unterhaltungsthread im allgemeinen oder Standardkanal eines Teams zu erstellen.
 
-Dies `userId` ist für Ihre Bot-ID und einen bestimmten Benutzer eindeutig. Sie können die zwischen Bots nicht `userId` wiederverwenden. Dies `channelId` ist global. Ihr Bot muss jedoch im Team installiert sein, bevor Sie eine proaktive Nachricht an einen Kanal senden können.
+Dies `userId` ist für Ihre Bot-ID und einen bestimmten Benutzer eindeutig. Sie können die `userId` zwischen Bots nicht wiederverwenden. Dies `channelId` ist global. Ihr Bot muss jedoch im Team installiert sein, bevor Sie eine proaktive Nachricht an einen Kanal senden können.
 
 Nachdem Sie die Benutzer- oder Kanalinformationen erhalten haben, müssen Sie die Unterhaltung erstellen.
 
 ## <a name="create-the-conversation"></a>Erstellen der Unterhaltung
 
-Sie müssen die Unterhaltung erstellen, wenn sie nicht vorhanden ist oder Sie die `conversationId` . Sie müssen die Unterhaltung nur einmal erstellen und den Wert oder das `conversationId` `conversationReference` Objekt speichern.
+Sie müssen die Unterhaltung erstellen, wenn sie nicht vorhanden ist oder Sie die Unterhaltung nicht `conversationId` kennen. Sie müssen die Unterhaltung nur einmal erstellen und den Wert oder das `conversationId` `conversationReference` Objekt speichern.
 
 Nachdem die Unterhaltung erstellt wurde, müssen Sie die Unterhaltungs-ID abrufen.
 
@@ -73,7 +73,7 @@ Nachdem Sie die proaktive Nachricht gesendet haben, müssen Sie diese bewährten
 
 ## <a name="best-practices-for-proactive-messaging"></a>Bewährte Methoden für proaktives Messaging
 
-Das Senden proaktiver Nachrichten an Benutzer ist eine sehr effektive Möglichkeit, mit Ihren Benutzern zu kommunizieren. Aus ihrer Sicht kann diese Nachricht jedoch völlig unaufgeladen erscheinen, und im Falle von Willkommensnachrichten ist es das erste Mal, dass sie mit Ihrer App interagiert haben. Daher ist es sehr wichtig, proaktives Messaging sparsam zu verwenden, nicht Ihre Benutzer zu spammen, und genügend Informationen bereitzustellen, damit Benutzer verstehen können, warum sie die Nachrichten empfangen.
+Das Senden proaktiver Nachrichten an die Benutzer ist eine effektive Möglichkeit, mit Ihren Benutzern zu kommunizieren. Aus Sicht des Benutzers wird die Nachricht jedoch nicht angezeigt. Wenn eine Willkommensnachricht vorhanden ist, ist es das erste Mal, dass sie mit Ihrer App interagiert haben. Es ist wichtig, diese Funktion zu verwenden und dem Benutzer die vollständigen Informationen bereitzustellen, um den Zweck dieser Nachricht zu verstehen.
 
 ### <a name="welcome-messages"></a>Willkommensnachrichten
 
@@ -82,8 +82,7 @@ Wenn proaktives Messaging verwendet wird, um eine Willkommensnachricht an einen 
 * Warum ein Benutzer die Nachricht empfängt: Dem Benutzer muss klar sein, warum er die Nachricht empfängt. Wenn Ihr Bot in einem Kanal installiert wurde und Sie eine Willkommensnachricht an alle Benutzer gesendet haben, teilen Sie ihm mit, in welchem Kanal er installiert wurde und wer ihn installiert hat.
 * Was bieten Sie an: Benutzer müssen in der Lage sein, zu erkennen, was sie mit Ihrer App tun können und welchen Wert Sie ihnen bieten können.
 * Was sollten sie als Nächstes tun: Benutzer einladen, einen Befehl auszuprobieren oder mit Ihrer App zu interagieren.
-
-Nachrichten mit schlechter Willkommensseite können dazu führen, dass Benutzer Ihren Bot blockieren. Schreiben Sie auf den Punkt, und löschen Sie Willkommensnachrichten. Iterieren Sie die Willkommensnachrichten, wenn sie nicht den gewünschten Effekt haben.
+Nachrichten mit schlechter Willkommensseite können dazu führen, dass die Benutzer Ihren Bot blockieren. Schreiben Sie auf den Punkt, und löschen Sie Willkommensnachrichten. Iterieren Sie die Willkommensnachrichten, wenn sie nicht den gewünschten Effekt haben.
 
 ### <a name="notification-messages"></a>Benachrichtigungen
 
@@ -101,10 +100,10 @@ Um Nachrichten an eine große Gruppe von Benutzern zu senden, z. B. an Ihre Orga
 
 Wenn Sie proaktive Nachrichten verwenden, um geplante Nachrichten an Benutzer zu senden, überprüfen Sie, ob Ihre Zeitzone auf ihre Zeitzone aktualisiert wurde. Dadurch wird sichergestellt, dass die Nachrichten zum entsprechenden Zeitpunkt an die Benutzer übermittelt werden. Zum Planen von Nachrichten gehören in der Regel:
 
-* Warum erhält der Benutzer die Nachricht: Machen Sie es Ihren Benutzern leicht, den Grund zu verstehen, aus dem sie die Nachricht empfangen.
+* Warum erhält der Benutzer die Nachricht: Machen Sie es Ihren Benutzern leicht, den Grund zu verstehen, aus dem sie die Nachricht erhalten.
 * Was der Benutzer als Nächstes tun kann: Benutzer können die erforderliche Aktion basierend auf dem Nachrichteninhalt ausführen.
 
-## <a name="proactively-install-your-app-using-graph"></a>Proaktives Installieren Ihrer App mit Graph
+## <a name="proactively-install-your-app-using-graph"></a>Proaktive Installation Ihrer App mit Graph
 
 > [!Note]
 > Die proaktive Installation von Apps mit Graph befindet sich derzeit in der Betaversion.
@@ -279,7 +278,7 @@ Die folgende Tabelle enthält ein einfaches Codebeispiel, das den grundlegenden 
 > [!div class="nextstepaction"]
 > [Codebeispiele für proaktives Messaging Teams](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [**Codebeispiele für proaktives Messaging Teams**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 

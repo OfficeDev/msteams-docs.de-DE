@@ -5,24 +5,24 @@ description: So aktivieren Sie die SSO-Unterstützung für Ihre Messaging-Erweit
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: efda0e946204a756d75874a55ac728f81f8ebaef
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: fb9f323b81ff6e42e0ae78bc2bb476b629bfb206
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156522"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720057"
 ---
-# <a name="single-sign-on-sso-support-for-messaging-extensions"></a>SSO-Unterstützung (Single Sign-On) für Messaging-Erweiterungen
+# <a name="single-sign-on-support-for-messaging-extensions"></a>Unterstützung für einmaliges Anmelden für Messaging-Erweiterungen
  
-Unterstützung für einmaliges Anmelden ist jetzt für Messaging-Erweiterungen und die Verbreitung von Links verfügbar. Wenn Sie einmaliges Anmelden (Single Sign-On, SSO) für Messaging-Erweiterungen aktivieren, wird das Authentifizierungstoken automatisch aktualisiert, wodurch die Anzahl der Male minimiert wird, die Sie zum Eingeben ihrer Anmeldeinformationen für Microsoft Teams benötigen.
+SSO-Unterstützung (Single Sign-On) ist jetzt für Messaging-Erweiterungen und die Verbreitung von Links verfügbar. Wenn Sie das einmalige Anmelden für Messaging-Erweiterungen standardmäßig aktivieren, wird das Authentifizierungstoken aktualisiert. Dadurch wird minimiert, wie oft Sie die Anmeldeinformationen für Microsoft Teams eingeben müssen.
 
-In diesem Dokument erfahren Sie, wie Sie SSO aktivieren und Ihr Authentifizierungstoken speichern, falls erforderlich.
+In diesem Dokument erfahren Sie, wie Sie das SSO aktivieren und Bei Bedarf Ihr Authentifizierungstoken speichern.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Die Voraussetzungen zum Aktivieren von SSO für Messaging-Erweiterungen und die Verbreitung von Links sind wie folgt:
 * Sie benötigen [](https://azure.microsoft.com/free/) ein Azure-Konto.
-* Sie müssen Ihre App über das AAD-Portal konfigurieren und Ihr Teams Anwendungsmanifest für Ihren Bot aktualisieren, wie in [der Registrierung Ihrer App über das AAD-Portal](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)definiert.
+* Sie müssen Ihre App über das AAD Portal konfigurieren und Teams Anwendungsmanifest Ihres Bots aktualisieren, wie in [der Registrierung Ihrer App über das AAD-Portal](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)definiert.
 
 > [!NOTE]
 > Weitere Informationen zum Erstellen eines Azure-Kontos und aktualisieren Ihres App-Manifests finden Sie unter [SSO-Unterstützung (Single Sign-On) für Bots.](../../bots/how-to/authentication/auth-aad-sso-bots.md)

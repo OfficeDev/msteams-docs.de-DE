@@ -4,31 +4,34 @@ description: Karten und Aufgabenmodule.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 245d2d27f62dba27c9468be84cf9aa514b319923
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 89185baa9900f2c8dbef62ab9a2fc85242fc49a1
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156489"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719833"
 ---
 # <a name="cards-and-task-modules"></a>Karten und Aufgabenmodule
 
-Karten bieten Benutzern eine Vielzahl von visuellen, Audio- und auswählbaren Nachrichten und unterstützen den Unterhaltungsfluss.
+Karten bieten Benutzern verschiedene visuelle, audio- und auswählbare Nachrichten und Hilfe beim Unterhaltungsfluss.
 
-Mit Aufgabenmodulen können Sie modale Popupfunktionen in Microsoft Teams erstellen. Sie eignen sich besonders zum Starten und Abschließen von Aufgaben oder zum Anzeigen umfangreicher Informationen wie Videos oder Power Business Intelligence (BI)-Dashboards.
+Mit Aufgabenmodulen können Sie modale Popupfunktionen in Microsoft Teams erstellen. Sie sind nützlich, um die Aufgaben zu starten und abzuschließen oder umfassende Informationen wie Videos oder Power Business Intelligence (BI)-Dashboards anzuzeigen.
 
 Die folgenden Arten von Karten werden in Bots für Teams unterstützt:
 
 * Adaptive Karte
 * Hero-Karte
-* Karte auflisten
+* Karte auflisten 
 * Office 365 Connectorkarte
 * Belegkarte
 * Anmeldekarte
 * Miniaturansichtskarte
 * Kartensammlungen
 
-Sie können Kartentext je nach Kartentyp mithilfe einer Teilmenge von XML- oder HTML-Formatierungen oder Markdown formatieren. Sie können Kartenaktionen hinzufügen und darauf reagieren, die eine URL öffnen, Nachrichten und Nutzlast an den Bot senden oder den OAuth-Fluss initiieren.
+Sie können Kartentext mithilfe einer Teilmenge von XML- oder HTML-Formatierungen oder Markdown formatieren, je nach Kartentyp. Sie können Kartenaktionen hinzufügen und darauf reagieren, die:
+* Öffnen einer URL
+* Senden von Nachrichten und Nutzlast an den Bot
+* Initiieren des OAuth-Flusses
 
 Sie können die Aufgabenmodule in Kanal- oder persönlichen Registerkarten, Bots oder Deep-Links aufrufen. Die Benutzererfahrung für Workflows, die Dateneingaben erfordern, kann verbessert werden, indem der Registerkarte des Benutzers ein Aufgabenmodul hinzugefügt wird. Sie können Aufgabenmodule von Teams Bots mithilfe von Schaltflächen auf adaptiven Karten und Bot Framework-Karten aufrufen.
 

@@ -1,16 +1,16 @@
 ---
 title: Vorbereiten der Übermittlung an den Store
-description: Beschreibt die letzten Schritte, bevor Sie Ihre Microsoft Teams App übermitteln, die im Store aufgeführt werden soll.
+description: Beschreibt die letzten Schritte, bevor Sie Ihre Microsoft Teams-App übermitteln, die im Store aufgeführt werden soll.
 ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 8ff8282ae54612c0e1eee1d353777e5dae0b7990
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: 617c7d962dc27964c28af74b73c252b08a39f307
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260540"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720351"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Vorbereiten der Übermittlung Microsoft Teams Store
 
@@ -25,11 +25,9 @@ Während Ihre App möglicherweise in einer Testumgebung funktioniert, sollten Si
 > [!NOTE]
 >  App Studio wird in Kürze eingestellt. Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps mit dem neuen [Entwicklerportal](https://dev.teams.microsoft.com/)
 
-Das Microsoft Teams App-Überprüfungstool hilft Ihnen bei der Identifizierung und Behebung von Problemen vor der Übermittlung an Partner Center. Das Tool überprüft die Konfigurationen Ihrer App automatisch anhand der gleichen Testfälle, die während der Store-Überprüfung verwendet werden.
+Das Microsoft Teams App-Validierungstool hilft Ihnen, Probleme zu identifizieren und zu beheben, bevor Sie an Partner Center übermitteln. Das Tool überprüft die Konfigurationen Ihrer App automatisch anhand der gleichen Testfälle, die während der Store-Überprüfung verwendet werden.
 
-1. Wechseln Sie im Entwicklerportal zu [Microsoft Teams App-Überprüfungstool.](https://dev.teams.microsoft.com/validation) 
-    > [!NOTE]
-    > Das App-Überprüfungstool ist auch in [App Studio](../../../build-and-test/app-studio-overview.md)verfügbar.
+1. Wechseln Sie zum [Microsoft Teams App-Überprüfungstool.](https://dev.teams.microsoft.com/appvalidation.html) (Hinweis: Das Tool ist auch in [App Studio](../../../build-and-test/app-studio-overview.md)verfügbar.)
 1. Hochladen Ihr App-Paket, um die automatisierten Tests auszuführen.
 1. Wechseln Sie zur **vorläufigen Checkliste,** und überprüfen Sie die Testfälle, die schwierig zu automatisieren sind.
 1. [Beheben von Problemen mit Ihren Konfigurationen](~/resources/schema/manifest-schema.md) oder Ihrer App im Allgemeinen. Diese Probleme treten auf, wenn die automatisierten Tests Ihnen Fehler liefern oder nicht alle Kriterien in der Prüfliste erfüllt haben.
@@ -189,7 +187,7 @@ Während der Übermittlung werden Sie aufgefordert, Ihre App zu kategorisieren. 
 |:---------------------|:---------------|
 | Analyse und BI | Analyse, Datenvisualisierung und BI |
 | Entwickler und IT | Entwicklertools, IT-Administrator |
-| Education | Education |
+| Bildung | Bildung |
 | Personalwesen | Personal und Personalwesen |
 | Produktivität | Inhaltsverwaltung, Dateien und Dokumente, Produktivität, Schulungen und Lernprogramme und Hilfsprogramme |
 | Projektmanagement | Kommunikations-, Project-, Workflow- und Unternehmensverwaltung |
@@ -204,12 +202,12 @@ Partner Center unterstützt [lokalisierte Store-Einträge.](/office/dev/store/pr
 
 [Publisher Überprüfung](/azure/active-directory/develop/publisher-verification-overview) ist für Teams im Store aufgeführten Apps erforderlich. Weitere Informationen finden Sie unter [Häufig gestellte Fragen](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions), [wie Sie Ihre App als vom Publisher bestätigt markieren](/azure/active-directory/develop/mark-app-as-publisher-verified)und [Fehlerbehebung bei der Publisher-Verifizierung](/azure/active-directory/develop/troubleshoot-publisher-verification).
 
-## <a name="complete-publisher-attestation"></a>Vollständiges Publisher Attestation
+## <a name="complete-publisher-attestation"></a>Vollständige Publisher Nachweis
 
 [Publisher Nachweis](/microsoft-365-app-certification/docs/attestation) ist auch für Teams im Store aufgeführten Apps erforderlich. Der Prozess umfasst die Durchführung einer Selbstbewertung der Sicherheits-, Datenverarbeitungs- und Compliancepraktiken Ihrer App. Der Prozess kann potenziellen Kunden helfen, fundierte Entscheidungen zur Verwendung Ihrer App zu treffen.
 
 > [!NOTE]
-> Wenn Sie eine neue App übermitteln, können Sie Publisher Nachweis erst offiziell ausfüllen, wenn Ihre App im Teams Store aufgeführt ist. Wenn Sie eine aufgeführte App aktualisieren, führen Sie Publisher Nachweis aus, bevor Sie die neueste Version der App zur Überprüfung übermitteln.
+> Wenn Sie eine neue App übermitteln, können Sie Publisher Nachweis erst offiziell ausfüllen, wenn Ihre App im Teams Store aufgeführt ist. Wenn Sie eine aufgeführte App aktualisieren, führen Sie Publisher Attestation aus, bevor Sie die neueste Version der App zur Überprüfung übermitteln.
 
 ## <a name="next-step"></a>Nächster Schritt
 

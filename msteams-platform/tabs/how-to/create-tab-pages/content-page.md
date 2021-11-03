@@ -6,12 +6,12 @@ keywords: teams tabs group channel configurable static
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1f83f1c46e637a73b52373740d21e32d3eb387e7
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e85e643179bf3c1c8b9aa3951f560e1f85dad0bc
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156028"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720313"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Erstellen einer Inhaltsseite für Ihre Registerkarte
 
@@ -29,9 +29,9 @@ Das übergeordnete Ziel Ihrer Registerkarte besteht darin, den Zugriff auf aussa
 
 Weitere Informationen finden Sie unter [Registerkartenentwurfsrichtlinien](~/tabs/design/tabs.md) und [Microsoft Teams Richtlinien für die Speichervalidierung.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 
-## <a name="integrate-your-code-with-teams"></a>Integrieren Von Code in Teams
+## <a name="integrate-your-code-with-teams"></a>Integrieren von Code in Teams
 
-Damit Ihre Seite in Teams angezeigt werden kann, müssen Sie das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) und einen Aufruf nach `microsoftTeams.initialize()` dem Laden der Seite einschließen. 
+Damit Ihre Seite in Teams angezeigt werden kann, müssen Sie das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) und einen Aufruf nach dem `microsoftTeams.initialize()` Laden der Seite einschließen. 
 
 Der folgende Code enthält ein Beispiel dafür, wie Ihre Seite und der Teams-Client kommunizieren:
 
@@ -55,7 +55,7 @@ Der folgende Code enthält ein Beispiel dafür, wie Ihre Seite und der Teams-Cli
 
 ## <a name="access-additional-content"></a>Zugreifen auf zusätzliche Inhalte
 
-Sie können mithilfe des SDK auf zusätzliche Inhalte zugreifen, um mit Teams zu interagieren, Deep-Links zu erstellen, Aufgabenmodule zu verwenden und zu überprüfen, ob URL-Domänen im Array enthalten `validDomains` sind.
+Sie können auf zusätzliche Inhalte zugreifen, indem Sie das SDK verwenden, um mit Teams zu interagieren, Deep-Links zu erstellen, Aufgabenmodule zu verwenden und zu überprüfen, ob URL-Domänen im Array enthalten `validDomains` sind.
 
 ### <a name="use-the-sdk-to-interact-with-teams"></a>Verwenden des SDK für die Interaktion mit Teams
 
@@ -83,7 +83,7 @@ Ab [Manifestschema v1.7](../../../resources/schema/manifest-schema.md)können Si
 > [!NOTE]
 > * Das Verhalten auf mobilen Clients kann nicht über die systemeigene Ladeindikatoreigenschaft konfiguriert werden. Mobile Clients zeigen diesen Indikator standardmäßig auf Inhaltsseiten und iframebasierten Aufgabenmodulen an. Dieser Indikator wird auf mobilen Geräten angezeigt, wenn eine Anforderung zum Abrufen von Inhalten gestellt wird, und wird geschlossen, sobald die Anforderung abgeschlossen ist.
 
-Wenn Sie `showLoadingIndicator : true`  in Ihrem App-Manifest angeben, müssen alle Registerkartenkonfigurations-, Inhalts- und Entfernungsseiten und alle iframebasierten Aufgabenmodule die folgenden Schritte ausführen:
+Wenn Sie `showLoadingIndicator : true`  in Ihrem App-Manifest angeben, müssen alle Registerkartenkonfigurationen, Inhalte, Entfernungsseiten und alle iframebasierten Aufgabenmodule die folgenden Schritte ausführen:
 
 **So zeigen Sie die Ladeanzeige an**
 
@@ -91,7 +91,7 @@ Wenn Sie `showLoadingIndicator : true`  in Ihrem App-Manifest angeben, müssen a
 1. Aufrufen von `microsoftTeams.initialize();`
 1. Rufen Sie als **obligatorischen** Schritt `microsoftTeams.appInitialization.notifySuccess()` Teams auf, dass Ihre App erfolgreich geladen wurde. Teams blendet dann ggf. die Ladeanzeige aus. Wenn `notifySuccess`  die App nicht innerhalb von 30 Sekunden aufgerufen wird, wird davon ausgegangen, dass ein Timeout für Ihre App aufgetreten ist und ein Fehlerbildschirm mit einer Wiederholungsoption angezeigt wird.
 1. **Optional** können Sie, wenn Sie bereit sind, auf dem Bildschirm zu drucken und den restlichen Inhalt Der Anwendung zu laden, die Ladeanzeige manuell ausblenden, indem Sie `microsoftTeams.appInitialization.notifyAppLoaded();` aufrufen.
-1. Wenn die Anwendung nicht geladen werden kann, können Sie Teams mitteilen, `microsoftTeams.appInitialization.notifyFailure(reason);` dass ein Fehler aufgetreten ist. Dem Benutzer wird ein Fehlerbildschirm angezeigt. Der folgende Code enthält ein Beispiel für Anwendungsfehlerursachen:
+1. Wenn ihre Anwendung nicht geladen werden kann, können Sie `microsoftTeams.appInitialization.notifyFailure(reason);` Teams mitteilen, dass ein Fehler aufgetreten ist. Dem Benutzer wird ein Fehlerbildschirm angezeigt. Der folgende Code enthält ein Beispiel für Anwendungsfehlerursachen:
 
     ```typescript
     /* List of failure reasons */
@@ -107,7 +107,6 @@ Wenn Sie `showLoadingIndicator : true`  in Ihrem App-Manifest angeben, müssen a
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
 * [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
-* [Erstellen einer Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 

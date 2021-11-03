@@ -1,16 +1,16 @@
 ---
 title: Definieren von Suchbefehlen für Messaging-Erweiterungen
 author: surbhigupta
-description: Definieren sie Suchbefehle für Messaging-Erweiterungen für Microsoft Teams Apps.
+description: Definieren Sie Suchbefehle für Messaging-Erweiterungen für Microsoft Teams Apps.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: aaea89aa14e556dfa00e81e8ec72fe5fb4bbe744
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 0842b47a688de210dbfb197e886dce7fed21dce5
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566365"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720127"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definieren von Suchbefehlen für Messaging-Erweiterungen
 
@@ -38,21 +38,13 @@ In der folgenden Abbildung werden die Aufrufpositionen des Suchbefehls angezeigt
 
 Um den Suchbefehl zu Ihrem App-Manifest hinzuzufügen, müssen Sie ein neues `composeExtension` Objekt auf der obersten Ebene Ihres App-Manifest-JSON hinzufügen. Sie können den Suchbefehl entweder mithilfe von App Studio oder manuell hinzufügen.
 
-### <a name="create-a-search-command"></a>Erstellen eines Suchbefehls 
+### <a name="create-a-search-command-using-app-studio"></a>Erstellen eines Suchbefehls mit App Studio
 
-Sie können suchbefehl mit ** App Studio** oder **Entwicklerportal** erstellen.
-
-> [!NOTE]
->  App Studio wird in Kürze entpriesen. Konfigurieren, verteilen und verwalten Sie Ihre Teams-Apps mit dem neuen [Entwicklerportal.](https://dev.teams.microsoft.com/)
-
-# <a name="app-studio"></a>[App-Studio](#tab/AS)
-
-> [!NOTE]
-> Voraussetzung für die Erstellung eines Suchbefehls ist, dass Sie bereits eine Messaging-Erweiterung erstellt haben müssen. Informationen zum Erstellen einer Messaging-Erweiterung finden Sie unter [Erstellen einer Messaging-Erweiterung.](~/messaging-extensions/how-to/create-messaging-extension.md)
+Voraussetzung für die Erstellung eines Suchbefehls ist, dass Sie bereits eine Messaging-Erweiterung erstellt haben müssen. Informationen zum Erstellen einer Messaging-Erweiterung finden Sie unter [Erstellen einer Messaging-Erweiterung.](~/messaging-extensions/how-to/create-messaging-extension.md)
 
 **So erstellen Sie einen Suchbefehl**
 
-1. Öffnen Sie **App Studio** über den Microsoft Teams-Client, und wählen Sie die Registerkarte **"Manifest-Editor"** aus.
+1. Öffnen Sie **App Studio** im Microsoft Teams-Client, und wählen Sie die Registerkarte **"Manifest-Editor"** aus.
 1.  Wenn Sie Ihr App-Paket bereits in **App Studio** erstellt haben, wählen Sie aus der Liste aus. Wenn Sie kein App-Paket erstellt haben, importieren Sie ein vorhandenes Paket.
 1. Wählen Sie nach dem Importieren des **App-Pakets Messaging-Erweiterungen** unter **"Funktionen"** aus. Sie erhalten ein Popupfenster zum Einrichten der Messaging-Erweiterung.
 1. Wählen Sie im Fenster **"Einrichten"** aus, um die Messaging-Erweiterung in Ihre App-Oberfläche einzuschließen. In der folgenden Abbildung wird die Einrichtungsseite der Messaging-Erweiterung angezeigt: 
@@ -78,54 +70,11 @@ In der folgenden Abbildung wird die Befehlserweiterung für die Messaging-Erweit
 
 1. Fügen Sie Den Suchparameter hinzu, und wählen Sie **"Speichern"** aus.
 
-# <a name="developer-portal"></a>[Entwicklerportal](#tab/DP)
-
-**So erstellen Sie einen Suchbefehl mithilfe des Entwicklerportals**
-
-1. Wechseln Sie zum **[Entwicklerportal.](https://dev.teams.microsoft.com/)**
-    
-   <img src="~/assets/images/tdp/tdp_home_1.png" alt="Screenshot of TDP" width="500"/>
-    
-1. Wechseln Sie zu **"Apps".**
-    
-    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
-    
-1. Wenn Sie Ihr App-Paket bereits im **Entwicklerportal** erstellt haben, wählen Sie es aus der Liste aus. Wenn Sie kein App-Paket erstellt haben, wählen Sie **"Vorhandene App importieren"** aus.
-
-    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
-
-1. Wechseln Sie zu **App-Features.**  
-
-    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
-
-1. Wählen Sie **Messaging-Erweiterungen** aus **App-Features** aus. Ein Popupfenster wird angezeigt, um die Messaging-Erweiterung einzurichten.
-    
-   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
-
-1. Wählen Sie in der Dropdownliste unter **Nachrichtenerweiterungs-ID** **einen Nachrichtenerweiterungs-Bot** aus, und wählen Sie **"Speichern"** aus.
-
-    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
-
-1. Wählen Sie **"Befehl hinzufügen"** aus. Ein Popupfenster wird angezeigt, um einen Befehl hinzuzufügen.
-
-    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
-
-1. Wählen Sie **suchbasiert** aus, um den Befehl zu suchen, und geben Sie Befehlsfelder ein.
-
-    <img width="500px" alt="TDP messaging extension search command" src="~/assets/images/tdp/tdp-me-search-command.png"/>
-
-1. Geben Sie Parameterfelder ein, und wählen Sie **"Speichern"** aus.
-
-    <img width="500px" alt="TDP messaging extension search parameter" src="~/assets/images/tdp/tdp-me-search-parameter.png"/>
-
----
-
-
 ### <a name="create-a-search-command-manually"></a>Manuelles Erstellen eines Suchbefehls 
 
 Zum manuellen Hinzufügen des Suchbefehls für die Messaging-Erweiterung zu Ihrem App-Manifest müssen Sie dem Array von Objekten die folgenden Parameter `composeExtension.commands` hinzufügen:
 
-| Eigenschaftenname | Zweck | Pflichtfeld? | Mindestversion des Manifests |
+| Eigenschaftsname | Zweck | Pflichtfeld? | Mindestversion des Manifests |
 |---|---|---|---|
 | `id` | Diese Eigenschaft ist eine eindeutige ID, die Sie dem Suchbefehl zuweisen. Die Benutzeranforderung enthält diese ID. | Ja | 1.0 |
 | `title` | Diese Eigenschaft ist ein Befehlsname. Dieser Wert wird auf der Benutzeroberfläche angezeigt. | Ja | 1.0 |
@@ -136,7 +85,7 @@ Zum manuellen Hinzufügen des Suchbefehls für die Messaging-Erweiterung zu Ihre
 
 Sie müssen die Details des Suchparameters hinzufügen, der den Text definiert, der für Den Benutzer im Teams-Client sichtbar ist.
 
-| Eigenschaftenname | Zweck | Ist erforderlich? | Mindestversion des Manifests |
+| Eigenschaftsname | Zweck | Ist erforderlich? | Mindestversion des Manifests |
 |---|---|---|---|
 | `parameters` | Diese Eigenschaft definiert eine statische Liste von Parametern für den Befehl. | Nein | 1.0 |
 | `parameter.name` | Diese Eigenschaft beschreibt den Namen des Parameters. Dies wird in der Benutzeranforderung an Ihren Dienst gesendet. | Ja | 1.0 |

@@ -1,20 +1,20 @@
 ---
 title: Entwerfen von Aktivitätsfeedbenachrichtigungen
 author: heath-hamilton
-description: Erfahren Sie, wie Sie Aktivitätsfeedbenachrichtigungen für Ihre Teams-App entwerfen und das Microsoft Teams UI Kit erhalten.
+description: Erfahren Sie, wie Sie Aktivitätsfeedbenachrichtigungen für Ihre Teams-App entwerfen und das Microsoft Teams UI Kit abrufen.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 552541e17422d20297d857a4273ec807d11e6928
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d566def261d6fd1177fed46c31466d248c8e5e3b
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156805"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719917"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Entwerfen von Aktivitätsfeedbenachrichtigungen für Ihre Microsoft Teams-App
 
-Der Aktivitätsfeed ist eine Oberfläche, auf der Benutzer auf ihre Benachrichtigungen in Microsoft Teams zugreifen können. Der Feed behält Benachrichtigungen aus den letzten vier Wochen bei.
+Der Aktivitätsfeed ist eine Oberfläche, über die Benutzer auf ihre Benachrichtigungen in Microsoft Teams zugreifen können. Der Feed behält Benachrichtigungen aus den letzten vier Wochen bei.
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
@@ -36,8 +36,8 @@ Der Aktivitätsfeed ist eine Oberfläche, auf der Benutzer auf ihre Benachrichti
 |2|**Aktivitätstyp/App-Symbol:** Stellt den Aktivitätstyp dar. Bei App-Benachrichtigungen wird das Liniensymbol durch ein App-Symbol ersetzt.|
 |3|**Titel (erste Zeile): Akteur + Grund:** *Akteur:* Name des Benutzers oder der App, der die Aktivität initiiert hat. *Grund:* Beschreibt die Aktivität.|
 |4 |**Zeitstempel:** Zeigt an, wann die Aktivität stattgefunden hat.|
-|5 |**Ort (zweite Zeile):** Zeigt an, wo die Aktivität in Teams stattgefunden hat.|
-|6 |**Tertiäre Informationen (dritte Zeile):** Optional. Zeigt Vorschautext oder zusätzliche Informationen an.|
+|5|**Ort (zweite Zeile):** Zeigt an, wo die Aktivität in Teams stattgefunden hat.|
+|6 |**Textvorschau (dritte Zeile):** Zeigt eine abgeschnittene Zeile ab dem Anfang der Benachrichtigung an.|
 
 ## <a name="types-of-activity-feed-notification-cards"></a>Arten von Aktivitätsfeed-Benachrichtigungskarten
 

@@ -5,12 +5,12 @@ description: Ermitteln Sie, wie die Anwendungsfälle Ihrer App innerhalb der Tea
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: bb5f15d1b8d6b7b04c78bdd3110f97891c0a6165
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: c424b2c03f71449c5c43adc345ed0197eb6ef247
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566288"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720386"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Zuordnen von Anwendungsfällen zu Teams App-Funktionen
 
@@ -60,7 +60,7 @@ Apps für Microsoft Teams ist eine hervorragende Möglichkeit, mit Ihren Daten z
 
 ## <a name="initiate-workflows-and-processes"></a>Initiieren von Workflows und Prozessen
 
-Manchmal benötigen Sie nur eine schnelle Möglichkeit, einen Prozess oder Workflow in einem externen System zu starten.
+Manchmal benötigen Sie nur eine schnelle Möglichkeit, einen Prozess oder Workflow in einem externen System zu initiieren.
 
 * **Aktionsbefehle für Messaging-Erweiterungen:** Auslösen von Nachrichten, sodass Ihre Benutzer den Inhalt einer Nachricht schnell an Ihre Webdienste senden können.
 
@@ -88,20 +88,20 @@ Die Menschen haben Fragen, und Sie haben wahrscheinlich viele der Antworten, die
 
 ## <a name="get-social"></a>Soziale Netzwerke abrufen
 
-Eine Plattform für die Zusammenarbeit ist inhärent eine soziale Plattform. Lassen Sie Ihre kreative Seite kostenlos sein und Ihrem Arbeitsplatz etwas Spaß machen. Alle Benutzer müssen in der Lage sein, Ausfälle zu senden, Kudos zu geben, memes zu erhalten, emojis auszusenden oder alles andere, was Ihnen auffällt.
+Eine Plattform für die Zusammenarbeit ist inhärent eine soziale Plattform. Lassen Sie Ihre kreative Seite kostenlos sein und Ihrem Arbeitsplatz etwas Spaß machen. Alle Benutzer müssen in der Lage sein, Witze zu senden, Kudos zu geben, memes zu erhalten, emojis auszusenden oder alles andere, was Ihnen auffällt.
 
 ## <a name="think-in-terms-of-a-single-page-app"></a>Denken Sie an eine Einzelseiten-App
 
 Registerkarten sind eingebettete Webseiten. So ziemlich alles, was Sie in einer SPA tun können, können Sie auf einer Registerkarte in Teams tun. Achten Sie darauf, den Bereich zu berücksichtigen. Gruppen- und Kanalregisterkarten sind für freigegebene Erfahrungen und persönliche Registerkarten für persönliche Erfahrungen. Die Liste der Füllungen des Teams wird auf der Kanalregisterkarte und die Liste Ihrer Füllungen auf der persönlichen Registerkarte angezeigt.
 
-## <a name="start-small"></a>Klein starten
+## <a name="initiate-small"></a>Klein initiieren
 
-Sie sind sich nicht sicher, wo Sie beginnen sollen? Fühlen Sie sich etwas überfordert mit der großartigen Auswahl an Optionen, die Ihnen zur Verfügung stehen? Sie müssen ein Kernfeature Ihrer App auswählen und dort starten. Nachdem Sie ein Gefühl für den Informationsfluss durch die verschiedenen Kontexte in Teams erhalten haben, ist es viel einfacher, eine komplexere Interaktion zu erstellen.
+Sie sind sich nicht sicher, wo sie initiiert werden sollen? Fühlen Sie sich etwas überfordert mit der großartigen Auswahl an Optionen, die Ihnen zur Verfügung stehen? Sie müssen ein Kernfeature Ihrer App auswählen und dort initiieren. Nachdem Sie ein Gefühl für den Informationsfluss durch die verschiedenen Kontexte in Teams erhalten haben, ist es viel einfacher, eine komplexere Interaktion zu erstellen.
 
 ## <a name="put-it-all-together"></a>Alles zusammenstellen
 
 Abgesehen davon kombinieren die besten Apps in der Regel mehrere Features, wodurch eine App erstellt wird, die Benutzer im richtigen Kontext mit der richtigen Funktionalität zur richtigen Zeit einschaltet. Sie dürfen keine Funktionalität an einem Ort erzwingen, zu dem sie nicht gehört. Nur weil Sie über einen guten 1:1-Unterhaltungsbot verfügen, bedeutet dies nicht, dass Sie ihn zu einem Team hinzufügen. Unterschiedliche Erweiterbarkeitspunkte eignen sich für unterschiedliche Dinge und spielen ihre Stärken beim Erstellen einer erfolgreichen App aus.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Erstellen Ihrer ersten Microsoft Teams-App](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)
+[Erstellen Ihrer ersten Microsoft Teams-App](../../get-started/get-started-overview.md)

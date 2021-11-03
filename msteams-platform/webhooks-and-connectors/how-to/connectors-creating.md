@@ -6,22 +6,22 @@ keywords: Teams O365-Connector
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 39c2533f112f5cb3c72446ad8a5638687dd3db2e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d2f245b63d58c8de775786304026a41fd65081e3
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156040"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720204"
 ---
 # <a name="create-office-365-connectors"></a>Erstellen von Office 365-Connectors
 
-Mit Microsoft Teams Apps können Sie Ihren vorhandenen Office 365 Connector hinzufügen oder innerhalb Teams einen neuen erstellen. Weitere Informationen finden Sie unter [Erstellen Eines eigenen Connectors.](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector)
+Mit Microsoft Teams Apps können Sie Ihren vorhandenen Office 365 Connector hinzufügen oder einen neuen connector in Teams erstellen. Weitere Informationen finden Sie unter [Erstellen Eines eigenen Connectors.](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector)
 
 ## <a name="add-a-connector-to-teams-app"></a>Hinzufügen eines Connectors zu Teams App
 
-Sie können Ihren Connector im Rahmen Ihrer AppSource-Übermittlung [verpacken](~/concepts/build-and-test/apps-package.md) und [veröffentlichen.](~/concepts/deploy-and-publish/apps-publish.md) Sie können Ihren registrierten Connector als Teil Ihres Teams-App-Pakets verteilen. Informationen zu Einstiegspunkten für Teams App finden Sie unter ["Funktionen".](~/concepts/extensibility-points.md) Sie können das Paket auch direkt für Benutzer bereitstellen, um es in Teams hochzuladen.
+Sie können ein [Paket](~/concepts/build-and-test/apps-package.md) erstellen und Ihren Connector im Rahmen Ihrer AppSource-Übermittlung [veröffentlichen.](~/concepts/deploy-and-publish/apps-publish.md) Sie können Ihren registrierten Connector als Teil Ihres Teams-App-Pakets verteilen. Informationen zu Einstiegspunkten für Teams App finden Sie unter ["Funktionen".](~/concepts/extensibility-points.md) Sie können das Paket auch direkt für Benutzer bereitstellen, um es in Teams hochzuladen.
 
-Um Den Connector zu verteilen, müssen Sie sich über [das Connectors Developer Dashboard](https://outlook.office.com/connectors/home/login/#/publish)registrieren. Wenn ein Connector registriert ist, wird davon ausgegangen, dass er in allen Office 365 Produkten funktioniert, die Anwendungen unterstützen, einschließlich Outlook und Teams. Wenn dies nicht der Fall ist und Sie einen Connector erstellen müssen, der nur in Microsoft Teams funktioniert, wenden Sie sich an: [Microsoft Teams E-Mail-Adresse für App-Übermittlungen.](mailto:teamsubm@microsoft.com)
+Um Den Connector zu verteilen, müssen Sie sich über [das Connectors Developer Dashboard](https://aka.ms/connectorsdashboard)registrieren. Wenn ein Connector registriert ist, wird davon ausgegangen, dass er in allen Office 365 Produkten funktioniert, die Anwendungen unterstützen, einschließlich Outlook und Teams. Wenn dies nicht der Fall ist und Sie einen Connector erstellen müssen, der nur in Microsoft Teams funktioniert, wenden Sie sich an: [Microsoft Teams E-Mail-Adresse für App-Übermittlungen.](mailto:teamsubm@microsoft.com)
 
 > [!IMPORTANT]
 > Ihr Connector wird registriert, nachdem Sie im Connectors Developer Dashboard die Option **"Speichern"** ausgewählt haben. Wenn Sie Ihren Connector in AppSource veröffentlichen möchten, folgen Sie den Anweisungen in der [Veröffentlichung Ihrer Microsoft Teams-App in AppSource.](~/concepts/deploy-and-publish/apps-publish.md) Wenn Sie Ihre App nicht in AppSource veröffentlichen möchten, verteilen Sie sie direkt an die Organisation. Nach der [Veröffentlichung von Connectors für Ihre Organisation](#publish-connectors-for-the-organization)sind keine weiteren Aktionen im Connector-Dashboard erforderlich.
@@ -36,7 +36,7 @@ Benutzer können die gesamte Connectorkonfiguration abschließen, ohne den Teams
 
     > [!NOTE]
     > * Der Code kann das Speicherereignis verarbeiten, indem die Webhook-Einstellungen abgerufen werden. Ihr Code speichert den Webhook, um Ereignisse später zu posten.
-    > * Die Konfigurationsoberfläche wird inline innerhalb Teams geladen.
+    > * Die Konfigurationsoberfläche wird inline in Teams geladen.
 
 Sie können Ihre vorhandene Webkonfigurationsoberfläche wiederverwenden oder eine separate Version erstellen, die speziell in Teams gehostet werden soll. Ihr Code muss das Microsoft Teams JavaScript SDK enthalten. Dadurch erhält Ihr Code Zugriff auf APIs, um allgemeine Vorgänge auszuführen, z. B. den aktuellen Benutzer-, Kanal- oder Teamkontext abzurufen und Authentifizierungsflüsse zu initiieren.
 
@@ -158,12 +158,12 @@ Laden Sie das automatisch generierte `Teams app manifest` Aus dem Portal herunte
 1. [Zwei Symbole einschließen](../../concepts/build-and-test/apps-package.md#app-icons).
 1. Ändern Sie den `icons` Teil des Manifests so, dass er die Dateinamen der Symbole anstelle von URLs enthält.
 
-Die folgende manifest.jsenthält die Elemente, die zum Testen und Übermitteln der App erforderlich sind:
+Die folgende Datei manifest.json enthält die Elemente, die zum Testen und Übermitteln der App erforderlich sind:
 
 > [!NOTE]
 > Ersetzen Sie `id` im folgenden Beispiel die `connectorId` GUID des Connectors.
 
-#### <a name="example-of-manifestjson-with-connector"></a>Beispiel für manifest.jseinschalten mit Connector
+#### <a name="example-of-manifestjson-with-connector"></a>Beispiel für "manifest.json" mit Connector
 
 ```json
 {
@@ -224,7 +224,7 @@ Weitere Informationen zum Austausch von PowerShell-Modulen finden Sie unter ["Se
 
 ## <a name="test-your-connector"></a>Testen des Connectors
 
-Laden Sie den Connector mit einer anderen App in ein Team hoch, um den Connector zu testen. Sie können ein .zip-Paket mithilfe der Manifestdatei aus den beiden Symboldateien und Connectors-Entwicklerdashboard erstellen, wie unter ["Einschließen des Connectors in Ihr Manifest"](#include-the-connector-in-your-manifest)geändert.
+Laden Sie den Connector mit einer anderen App in ein Team hoch, um den Connector zu testen. Sie können ein .zip Paket mithilfe der Manifestdatei aus den beiden Symboldateien und Connectors Erstellen Entwicklerdashboard, geändert wie in ["Einschließen des Connectors in Ihr Manifest"](#include-the-connector-in-your-manifest)angegeben.
 
 Nachdem Sie die App hochgeladen haben, öffnen Sie die Liste der Connectors aus einem beliebigen Kanal. Scrollen Sie nach unten, um Ihre App im Abschnitt **"Hochgeladen"** anzuzeigen:
 
@@ -251,9 +251,9 @@ Nachdem Sie das App-Paket hochgeladen haben, um den Connector in einem Team zu k
 1. Wählen Sie im Dropdownmenü in der unteren rechten Ecke des Dialogfelds die Option **"Connector einrichten"** aus.
 
 > [!IMPORTANT]
-> Derzeit sind benutzerdefinierte Connectors in Government Community Cloud (GCC), GCC-High und DoD (Department of Defense) nicht verfügbar.
+> Derzeit sind benutzerdefinierte Connectors in Government Community Cloud (GCC), GCC-High und Department of Defense (DOD) nicht verfügbar.
 
-Der Connector ist im Abschnitt &#9679;&#9679;&#9679; > **Weitere Optionen Connectors**  >    >  **alle** Connectors für Ihr  >  **Team** für dieses Team verfügbar. Sie können navigieren, indem Sie zu diesem Abschnitt scrollen oder nach der Connector-App suchen. Um den Connector zu konfigurieren oder zu ändern, wählen Sie **Konfigurieren** aus.
+Der Connector ist im Abschnitt &#9679;&#9679;&#9679; > **Weitere Optionen** Connectors  >    >  **alle** Connectors für Ihr  >  **Team** für dieses Team verfügbar. Sie können navigieren, indem Sie zu diesem Abschnitt scrollen oder nach der Connector-App suchen. Um den Connector zu konfigurieren oder zu ändern, wählen Sie **Konfigurieren** aus.
 
 ## <a name="distribute-webhook-and-connector"></a>Verteilen von Webhook und Connector
 

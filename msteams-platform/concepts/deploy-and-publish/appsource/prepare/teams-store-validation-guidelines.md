@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e54581a809cd72257ad7c285f9c36acc0691f922
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: 96bcb97fbb6189a657c9ac2aea167aaaa7f74592
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378898"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720225"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
@@ -191,7 +191,7 @@ Die lange Beschreibung kann eine ansprechende Erzählung bieten, die das Wertver
 
 **Dos:**
 
-* Verwenden Sie [Markdown,](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) um Ihre Beschreibung zu formatieren.
+* Verwenden Sie Markdown, um Ihre Beschreibung zu formatieren.
 * Verwenden Sie aktive Stimme und sprechen Sie direkt mit Benutzern. Zum Beispiel *können Sie ...*.
 * Listen Sie Features mit Aufzählungspunkten auf, damit die Beschreibung einfacher durchsucht werden kann.
 * Beschreiben Sie Einschränkungen, Bedingungen oder Ausnahmen für die in der Auflistung und den zugehörigen Materialien beschriebenen Funktionsweisen, Funktionen und Leistungen klar und deutlich, bevor der Benutzer Ihre App installiert. Die von Ihrer App unterstützten Teams-Funktionen müssen sich auf die in Ihrem Eintrag beschriebenen Kernfunktionen beziehen.

@@ -5,18 +5,18 @@ description: So erstellen Sie ein Befehlsmenü für Ihren Microsoft Teams-Bot
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: f29261a1d22f7629ffe17b444b42af6f5df1e792
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: af987ae2fa538ffb785e782f191c674132440311
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156450"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720106"
 ---
 # <a name="bot-command-menus"></a>Bot-Befehlsmenüs
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Um eine Reihe von Kernbefehlen zu definieren, auf die Ihr Bot reagieren kann, können Sie ein Befehlsmenü mit einer Dropdownliste von Befehlen für Ihren Bot hinzufügen. Die Liste der Befehle wird den Benutzern im Bereich zum Verfassen von Nachrichten angezeigt, wenn sie sich in Einer Unterhaltung mit Ihrem Bot befinden. Wählen Sie einen Befehl aus der Liste aus, um die Befehlszeichenfolge in das Feld zum Verfassen von Nachrichten einzufügen, und wählen Sie **"Senden"** aus.
+Um eine Reihe von Kernbefehlen zu definieren, auf die Ihr Bot antworten kann, können Sie ein Befehlsmenü mit einer Dropdownliste mit Befehlen für Ihren Bot hinzufügen. Die Liste der Befehle wird den Benutzern im Bereich zum Verfassen von Nachrichten angezeigt, wenn sie sich in Einer Unterhaltung mit Ihrem Bot befinden. Wählen Sie einen Befehl aus der Liste aus, um die Befehlszeichenfolge in das Feld zum Verfassen von Nachrichten einzufügen, und wählen Sie **"Senden"** aus.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
@@ -44,7 +44,7 @@ Eine Voraussetzung zum Erstellen eines Befehlsmenüs für Ihren Bot ist, dass Si
 
     ![App-Studio](./conversations/media/AppStudio.png)
 
-2. Wählen Sie in **App Studio** die Registerkarte **"Manifest-Editor"** aus. Wenn Sie nicht über ein vorhandenes App-Paket verfügen, können Sie eine vorhandene App erstellen oder importieren. Weitere Informationen finden Sie unter [Aktualisieren eines App-Pakets.](~/get-started/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package)
+2. Wählen Sie in **App Studio** die Registerkarte **"Manifest-Editor"** aus. Wenn Sie nicht über ein vorhandenes App-Paket verfügen, können Sie eine vorhandene App erstellen oder importieren. Weitere Informationen finden Sie unter [Aktualisieren eines App-Pakets.](~/get-started/deploy-csharp-app-studio.md)
 
 3. Wählen Sie im linken Bereich des **Manifest-Editors** und im Abschnitt **"Funktionen"** die Option **"Bots" aus.**
 
@@ -60,7 +60,7 @@ Eine Voraussetzung zum Erstellen eines Befehlsmenüs für Ihren Bot ist, dass Si
 
     ![Menüschaltfläche für neue Befehle in App Studio](./conversations/media/AppStudio-NewCommandMenu.png)
 
-### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Erstellen sie ein Befehlsmenü für Ihren Bot, indem Sie Manifest.jsaktivieren
+### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Erstellen eines Befehlsmenüs für Ihren Bot durch Bearbeiten von Manifest.json
 
 Eine weitere Möglichkeit zum Erstellen eines Befehlsmenüs besteht darin, es direkt in der Manifestdatei zu erstellen, während Sie Ihren Bot-Quellcode entwickeln. Gehen Sie folgendermaßen vor, um diese Methode zu verwenden:
 
@@ -169,7 +169,7 @@ Bots in einer Gruppe oder einem Kanal reagieren nur, wenn sie in einer Nachricht
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
-Sie können den **\@ Erwähnungsteil** des Nachrichtentexts mithilfe einer statischen Methode analysieren, die mit dem Microsoft Bot Framework bereitgestellt wird. Es handelt sich um eine Methode der `Activity` Klasse mit dem Namen `RemoveRecipientMention` .
+Sie können den **\@ Mention-Teil** des Nachrichtentexts mithilfe einer statischen Methode analysieren, die mit dem Microsoft Bot Framework bereitgestellt wird. Es handelt sich um eine Methode der `Activity` Klasse mit dem Namen `RemoveRecipientMention` .
 
 Der C#-Code zum Analysieren des **\@ Erwähnungsteils** des Nachrichtentexts lautet wie folgt:
 

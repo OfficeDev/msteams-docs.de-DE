@@ -1,16 +1,16 @@
 ---
 title: Grundlegendes zu den Anwendungsfällen Ihrer App
 author: heath-hamilton
-description: Bei der Planung Ihrer Microsoft Teams-App sollten Sie zuerst verstehen, welche Probleme Ihre App zu lösen versucht.
+description: Bei der Planung Ihrer Microsoft Teams-App sollten Sie zunächst verstehen, welche Probleme Ihre App zu lösen versucht.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 151e9d24015f45f9085bd07604bc1cc7882266de
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6257475dfdb80128fbfc857bb760306583ad16ee
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156932"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720155"
 ---
 # <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
 
@@ -22,15 +22,15 @@ Jede Interaktionsmethode mit Ihren Benutzern hat ihre Stärken und Schwachstelle
 
 ## <a name="understand-the-problem"></a>Verstehen des Problems
 
-Jede gute App hat ein Kernproblem oder eine Notwendigkeit, die sie zu lösen versucht. Bevor Sie mit dem Erstellen einer App beginnen, müssen Sie das Problem erläutern. Im Kern ist Teams eine Plattform für die Zusammenarbeit, sodass Apps, die Lücken bei der Erzielung einer effektiven Zusammenarbeit schließen, gut geeignet sind. Es ist auch eine plattformübergreifende soziale Plattform, befindet sich im Mittelpunkt Office 365 und bietet eine persönliche Canvas für Sie zum Erstellen von Apps. In dieser sozialen Plattform gibt es eine Vielzahl von Anforderungen, die mit einer Teams App gelöst werden können. Sie können eine Vielzahl von Problemen lösen, vorausgesetzt, Sie wissen, welches Sie lösen möchten. Stellen Sie vor dem Erstellen einer App relevante Fragen, z. B.:
+Jede App hat ein Kernproblem oder eine Lösungsnöte. Bevor Sie mit dem Erstellen einer App beginnen, müssen Sie das Problem erläutern. Im Kern ist Teams eine Plattform für die Zusammenarbeit, sodass Apps, die Lücken bei der Erzielung einer effektiven Zusammenarbeit schließen, gut geeignet sind. Es ist auch eine Plattform für soziale Netzwerke, nativ plattformübergreifend, befindet sich im Mittelpunkt von Office 365 und bietet eine persönliche Canvas für Sie zum Erstellen von Apps. In dieser sozialen Plattform gibt es eine Vielzahl von Anforderungen, die mit einer Teams App gelöst werden können. Sie können eine Vielzahl von Problemen lösen, vorausgesetzt, Sie wissen, welches Sie lösen möchten. Stellen Sie vor dem Erstellen einer App relevante Fragen, z. B.:
 
 * Welche Vor- und Nachteile des aktuellen Zustandssystems werden von Ihren Benutzern verwendet?
-* Welche Probleme haben Ihre Benutzer ab heute, die Sie behandeln möchten?
+* Welche Probleme haben Ihre Benutzer, die Sie beheben möchten?
 * Welche Features oder Funktionen gefällt und schätzen Ihre Benutzer in ihrer aktuellen Vorgehensweise?
 
 ## <a name="understand-your-user"></a>Grundlegendes zu Ihrem Benutzer
 
-Verstehen Sie, wer Ihr Benutzer ist, und Sie können das richtige Verteilungsmodell identifizieren, aber noch wichtiger ist, dass es Ihnen hilft, zu identifizieren, wie Benutzer Teams verwenden. Stellen Sie relevante Fragen, z. B.:
+Verstehen Sie, wer Ihr Benutzer ist und Sie das richtige Verteilungsmodell identifizieren können. Es hilft Ihnen zu identifizieren, wie Benutzer Teams verwenden. Stellen Sie relevante Fragen, z. B.:
 
 * Sind die Benutzer in erster Linie Mitarbeiter im Front-Line-Dienst auf mobilen Clients?
 * Erwarten Sie, dass viele Gastbenutzer Zugriff auf Ihre App benötigen?
@@ -42,10 +42,10 @@ Manchmal lautet die Antwort: *Wir möchten dieses Problem für alle Teams Benutz
 
 ## <a name="understand-the-limitations-of-the-app"></a>Verstehen der Einschränkungen der App
 
-Wenn Sie die Einschränkungen der Apps hinsichtlich der Datenbarrierefreiheit und der Datenaufbewahrung kennen, können Sie bessere Apps entwerfen. Dies ist wichtig, da sich Informationen darüber, wem die Daten und die Verfügbarkeit von APIs gehören, auf die Lösungsarchitektur auswirken. Stellen Sie auch hier relevante Fragen, z. B.:
+Wenn Sie die Einschränkungen der Apps für die Barrierefreiheit von Daten und die Datenaufbewahrung kennen, können Sie bessere Apps entwerfen. Dies ist wichtig, da sich Informationen darüber, wem die Daten und die Verfügbarkeit von APIs gehören, auf die Lösungsarchitektur auswirken. Stellen Sie auch hier relevante Fragen, z. B.:
 
 * Was sind die Herausforderungen bei der Back-End-Integration der aktuellen App?
-* Wer gehören die Back-End-Daten? In-House oder Drittanbieter.
+* Wer besitzt die Back-End-Daten? In-House oder Drittanbieter.
 * Gibt es Firewalls, die sich auf die Funktionsweise der App auswirken?
 * Gibt es APIs für den Zugriff auf die Daten, die Sie für die Funktion Ihrer App benötigen? 
 
@@ -60,16 +60,16 @@ Sie müssen frühzeitig ermitteln, ob Sie die Dienste, die Sie verfügbar machen
 
 ## <a name="decide-what-goes-in-teams"></a>Entscheiden, was in Teams
 
-Ob Sie eine neue Lösung erstellen oder eine vorhandene Lösung in Teams bringen, ist es wichtig zu entscheiden, ob sich die gesamte App innerhalb des Teams-Clients befindet. Überprüfen Sie, ob es sinnvoll ist, nur einen Teil der Erfahrung einzubringen. Mit einer Kombination aus Registerkarten, Messaging-Erweiterungen, Aufgabenmodulen, adaptiven Karten und Unterhaltungsbots können Sie komplexe Apps vollständig in Teams erstellen.
+Ob Sie etwas Neues erstellen oder eine vorhandene Lösung in Teams bringen, ist es wichtig zu entscheiden, ob sich die gesamte App innerhalb des Teams-Clients befindet. Überprüfen Sie, ob es sinnvoll ist, nur einen Teil der Erfahrung einzubringen. Mit einer Kombination aus Registerkarten, Messaging-Erweiterungen, Aufgabenmodulen, adaptiven Karten und Unterhaltungsbots können Sie komplexe Apps vollständig in Teams erstellen.
 Denken Sie daran, wer Ihre Benutzer sind und welche Probleme Sie lösen möchten. Verfügen sie bereits über ein System zur Lösung des großteils des Problems, oder müssen Sie lediglich einen Untersatz der Funktionalität auf Teams erweitern? Wenn Sie einen Teil Ihrer Lösung bereitstellen möchten, müssen Sie sich in der Regel auf die Freigabe, Zusammenarbeit, Initiierung und Überwachung von Workflows konzentrieren.
 
-## <a name="plan-the-onboarding-experience"></a>Planen der Onboarding-Erfahrung
+## <a name="plan-the-onboarding-experience"></a>Planen Sie die Benutzererfahrung
 
-Ihre Onboarding-Erfahrung kann der Unterschied zwischen Erfolg oder Fehler für Ihre App sein. Für jede Funktion Ihrer App und jeden Kontext, in dem die Funktion installiert werden kann, müssen Sie einen Plan haben, wie Sie sich selbst einführen. Wie Sie Ihren Unterhaltungs-Bot einführen, wenn er in einem Kanal mit 1.000 Personen installiert wird, ist anders, wenn er in einem 1:1-Chat installiert wird. Was geschieht, wenn ein Benutzer Ihre Registerkarte zum ersten Mal in einem Kanal konfiguriert? Wenn Sie Karten mit einer Messaging-Erweiterung teilen, ist es sinnvoll, einen kleinen Link zu einer Seite mit **weiteren Informationen** hinzuzufügen, um Benutzern die weiteren Möglichkeiten Ihrer App vorzustellen?
+Die Onboarding-Erfahrung kann einen Unterschied zwischen Erfolg oder Fehler für Ihre App ausmachen. Für jede Funktion Ihrer App und jeden Kontext, in dem die Funktion installiert werden kann, müssen Sie einen Plan haben, wie Sie sich selbst einführen. Wie Sie Ihren Unterhaltungs-Bot einführen, wenn er in einem Kanal mit 1.000 Personen installiert wird, ist anders, wenn er in einem 1:1-Chat installiert wird. Was geschieht, wenn ein Benutzer Ihre Registerkarte zum ersten Mal in einem Kanal konfiguriert? Wenn Sie Karten mit einer Messaging-Erweiterung teilen, ist es sinnvoll, einen kleinen Link zu einer Seite mit **weiteren Informationen** hinzuzufügen, um Benutzern die weiteren Möglichkeiten Ihrer App vorzustellen?
 
 Wenn Sie wissen, wer Ihre Benutzer sind, können Sie die richtige Oberfläche erstellen. Erwarten Sie, dass die meisten Benutzer bereits einen Kontext ihrer App haben oder Ihre Dienste bereits in einem anderen Kontext verwendet haben? Kommen sie ohne Vorkenntnisse zu Ihrer App? Gestalten Sie Ihre Onboarding-Erfahrung mit Ihren wichtigsten Benutzern.
 
-Denken Sie daran, dass Benutzer Ihre App auf verschiedene Arten entdecken können. Sie werden möglicherweise installiert, oder sie werden ihrer App eingeführt, wenn ein anderer Benutzer sie zum Freigeben von Inhalten verwendet. Wenn Sie möchten, dass mehr Benutzer Ihre App verwenden, müssen Sie nach Möglichkeiten suchen, sich allen vorzustellen.
+Denken Sie daran, dass Benutzer Ihre App auf verschiedene Weise entdecken können. Sie werden möglicherweise installiert, oder sie werden ihrer App eingeführt, wenn ein anderer Benutzer sie zum Freigeben von Inhalten verwendet. Wenn Sie möchten, dass mehr Benutzer Ihre App verwenden, müssen Sie nach Möglichkeiten suchen, sich allen vorzustellen.
 
 Denken Sie vor allem daran, dass niemand Spam mag. Persönliche und Kanalnachrichten sind eine gute Möglichkeit, um schnell uninstalliert zu werden!
 

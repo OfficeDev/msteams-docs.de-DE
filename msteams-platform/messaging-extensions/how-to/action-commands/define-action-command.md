@@ -5,12 +5,12 @@ description: Eine Übersicht über Aktionsbefehle für Messaging-Erweiterungen
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6f4dd3b68d1012b2abc6534fedaddcd76a2a9538
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: d3876d0fc5d58b54ececaabb9e88da0a6e355b47
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291674"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720141"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definieren von Aktionsbefehlen für Messaging-Erweiterungen
 
@@ -29,7 +29,7 @@ Bevor Sie den Aktionsbefehl erstellen, müssen Sie die folgenden Faktoren festle
 Zunächst müssen Sie den Speicherort festlegen, an dem der Aktionsbefehl aufgerufen werden muss. Durch Angeben des `context` Befehls im App-Manifest kann der Befehl von einem oder mehreren der folgenden Speicherorte aufgerufen werden:
 
 * Bereich zum Verfassen von Nachrichten: Die Schaltflächen unten im Bereich zum Verfassen von Nachrichten.
-* Befehlsfeld: Durch @mentioning Ihrer App im Befehlsfeld. 
+* Befehlsfeld: Durch @mentioning Ihre App im Befehlsfeld. 
    > [!NOTE]
    > Wenn die Messaging-Erweiterung über das Befehlsfeld aufgerufen wird, können Sie nicht mit einer Botnachricht antworten, die direkt in die Unterhaltung eingefügt wurde.
 
@@ -94,7 +94,7 @@ In der folgenden Abbildung wird die Befehlserweiterung für die Messaging-Erweit
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
 
-1. Wählen Sie **"Zulassen, dass Benutzer Aktionen in externen Diensten innerhalb von Teams auslösen"** aus. In der folgenden Abbildung wird die Aktionsbefehlsauswahl angezeigt:
+1. Wählen Sie **"Benutzern das Auslösen von Aktionen in externen Diensten innerhalb von Teams erlauben"** aus. In der folgenden Abbildung wird die Aktionsbefehlsauswahl angezeigt:
 
     <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
     
@@ -121,64 +121,14 @@ In der folgenden Abbildung wird die Befehlserweiterung für die Messaging-Erweit
 
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern** aus.
 1. Um weitere Parameter hinzuzufügen, wählen Sie die Schaltfläche **"Hinzufügen"** im Abschnitt **"Parameter"** aus.
-
-# <a name="developer-portal"></a>[Entwicklerportal](#tab/DP)
-
-**So erstellen Sie einen Aktionsbefehl mithilfe des Entwicklerportals**
-
-1. Wechseln Sie zum **[Entwicklerportal.](https://dev.teams.microsoft.com/)**
-    
-      ![Screenshot von TDP](~/assets/images/tdp/tdp_home_1.png)
-
-1. Wechseln Sie zu **"Apps".**
-    
-    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
-    
-1. Wenn Sie Ihr App-Paket bereits im **Entwicklerportal** erstellt haben, wählen Sie es aus der Liste aus. Wenn nicht, wählen Sie **eine vorhandene App importieren** aus.
-
-    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
-
-1. Wechseln Sie zu **App-Features.** 
-
-    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
-
-1. Wählen Sie **Messaging-Erweiterungen** aus **App-Features** aus. Ein Popupfenster wird angezeigt, um die Messaging-Erweiterung einzurichten.
-    
-   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
- 
-1. Wählen Sie **einen Nachrichtenerweiterungs-Bot** aus der Dropdownliste unter **Messag-Erweiterungs-ID** aus, und wählen Sie **Speichern** aus.
-
-    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
-
-1. Wählen Sie **"Befehl hinzufügen"** aus. Ein Popupfenster wird angezeigt, um einen Befehl hinzuzufügen.
-
-    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
-
-1. Wählen Sie den Typ des Befehls als **aktionsbasiert** aus, um die Messaging-Erweiterung zu konfigurieren. Wählen Sie **dynamische Parameter** aus, um einen dynamischen Aktionsbefehl zu erstellen.
-
-    <img width="500px" alt="TDP messaging extension dynamic action command" src="~/assets/images/tdp/tdp-me-action-command-dynamic.png"/>
-
-1. Wählen Sie **statische Parameter** aus, um einen statischen Aktionsbefehl zu erstellen.   
-
-    <img width="500px" alt="TDP messaging extension static action command" src="~/assets/images/tdp/tdp-me-action-command-static.png"/>
-
-1. Geben Sie die Befehlsfelder ein. 
-
-    <img width="500px" alt="TDP messaging extension action command" src="~/assets/images/tdp/tdp-me-action-command.png"/>  
-
-1. Geben Sie Parameterfelder ein, und wählen Sie **"Speichern"** aus.
-
-    <img width="500px" alt="TDP messaging extension action parameter" src="~/assets/images/tdp/tdp-me-action-parameter.png"/>
- 
----
 
 ### <a name="create-an-action-command-manually"></a>Manuelles Erstellen eines Aktionsbefehls
 
 Zum manuellen Hinzufügen des aktionsbasierten Messaging-Erweiterungsbefehls zum App-Manifest müssen Sie dem Array von Objekten die folgenden Parameter `composeExtension.commands` hinzufügen:
 
-| Eigenschaftenname | Zweck | Pflichtfeld? | Mindestversion des Manifests |
+| Eigenschaftsname | Zweck | Pflichtfeld? | Mindestversion des Manifests |
 |---|---|---|---|
 | `id` | Diese Eigenschaft ist eine eindeutige ID, die Sie diesem Befehl zuweisen. Die Benutzeranforderung enthält diese ID. | Ja | 1.0 |
 | `title` | Diese Eigenschaft ist ein Befehlsname. Dieser Wert wird in der Benutzeroberfläche angezeigt. | Ja | 1.0 |
@@ -188,7 +138,7 @@ Zum manuellen Hinzufügen des aktionsbasierten Messaging-Erweiterungsbefehls zum
 
 Wenn Sie eine statische Liste von Parametern verwenden, müssen Sie auch die folgenden Parameter hinzufügen:
 
-| Eigenschaftenname | Zweck | Ist erforderlich? | Mindestversion des Manifests |
+| Eigenschaftsname | Zweck | Ist erforderlich? | Mindestversion des Manifests |
 |---|---|---|---|
 | `parameters` | Diese Eigenschaft beschreibt die statische Liste der Parameter für den Befehl. Wird nur verwendet, wenn `fetchTask` `false` . | Nein | 1.0 |
 | `parameter.name` | Diese Eigenschaft beschreibt den Namen des Parameters. Dies wird in der Benutzeranforderung an Ihren Dienst gesendet. | Ja | 1.0 |
@@ -198,7 +148,7 @@ Wenn Sie eine statische Liste von Parametern verwenden, müssen Sie auch die fol
 
 Wenn Sie eine eingebettete Webansicht verwenden, können Sie optional das Objekt hinzufügen, `taskInfo` um Ihre Webansicht abzurufen, ohne Ihren Bot direkt aufzurufen. Wenn Sie diese Option auswählen, ähnelt das Verhalten der Verwendung einer statischen Liste von Parametern. In that the first interaction with your bot is [responding to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Wenn Sie ein `taskInfo` Objekt verwenden, müssen Sie den `fetchTask` Parameter auf `false` .
 
-| Eigenschaftenname | Zweck | Ist erforderlich? | Mindestversion des Manifests |
+| Eigenschaftsname | Zweck | Ist erforderlich? | Mindestversion des Manifests |
 |---|---|---|---|
 |`taskInfo`|Geben Sie das Aufgabenmodul an, das vorab geladen werden soll, wenn Sie einen Messaging-Erweiterungsbefehl verwenden. | Nein | 1.4 |
 |`taskInfo.title`|Titel des anfänglichen Aufgabenmoduls. |Nein | 1.4 |
