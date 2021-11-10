@@ -1,17 +1,18 @@
 ---
 title: Grundlegendes zu App-Funktionen
 author: heath-hamilton
-description: Teams erläuterte App-Funktionen
+description: Beschreibung Teams App-Funktionen, z. B. Registerkarten, Bots, Messaging-Erweiterungen und Webhooks und Connectors.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: eae30ddfd735730208c4f1ac47cfd5ec2a8c2c88
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+keywords: tabs bots messaging extensions webhooks connectors gcc
+ms.openlocfilehash: e4db8bde75d2d396ada5c0789b8cc06731701443
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566295"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888146"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Grundlegendes zu Microsoft Teams App-Funktionen
 
@@ -30,7 +31,7 @@ Ihre Teams-Apps verfügen über eine oder alle der folgenden Kernfunktionen:
 
 Ihre App kann auch erweiterte Funktionen nutzen, z. B. die [Microsoft Graph-API für Teams.](/graph/teams-concept-overview)
 
-In der folgenden Abbildung erhalten Sie eine Vorstellung davon, welche Funktionen die gewünschten Features in Ihrer App bereitstellen:
+Die folgende Abbildung gibt Ihnen eine Vorstellung davon, welche Funktionen die gewünschten Features in Ihrer App bereitstellen:
 
 :::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Mind map illustrating what Teams app capabilities are.":::
 
@@ -47,7 +48,7 @@ Die folgende Tabelle enthält Teams Features und Verfügbarkeit für GCC, GCC-Ho
 
 | Features   | GCC | GCC – hoch | DOD |
 |-------------|---------|
-| Teams eigenen Apps wie in intern entwickelten Apps | ✔️ App ist aktiviert, wenn sie über GCC verfügt. | ✔️ App ist aktiviert, wenn sie über GCC-Hoch verfügt. | ✔️ App ist aktiviert, wenn sie ÜBER DOD verfügt. |
+| Teams eigenen Apps wie in intern entwickelten Apps | ✔️ App ist aktiviert, wenn sie über GCC verfügt. | ✔️ App ist aktiviert, wenn sie über GCC-Hoch verfügt. | ✔️ app is enabled if it has DOD. |
 | Microsoft-Apps | ✔️ Microsoft-Apps, die mit GCC kompatibel sind | ✔️ Microsoft-Apps, die mit GCC-High kompatibel sind | ✔️ Microsoft-Apps, die DOD-konform sind |
 | 3p- oder Drittanbieter-Apps | ✔️ Drittanbieter-Apps sind verfügbar. Standardmäßig deaktiviert, und mandantenadministratoren verwenden ihren eigenen Ermessen, um es zu aktivieren. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
@@ -61,15 +62,15 @@ Die folgende Liste hilft, die Verfügbarkeit von GCC, GCC-Hoch und DOD für die 
 
 * Informationen zu Drittanbieter-Apps finden Sie unter [Web-Apps](../samples/integrating-web-apps.md) und [Besprechungs-App-Erweiterbarkeit.](../apps-in-teams-meetings/meeting-app-extensibility.md)
 * Informationen zu Bots finden Sie unter [Erstellen Ihres ersten Unterhaltungs-Bots für Teams,](../get-started/first-app-bot.md)Entwerfen Ihres Teams [Bots, Hinzufügen von Bots zu Microsoft Teams Apps](../resources/bot-v3/bots-overview.md)und [Bots in Teams](../bots/what-are-bots.md). [](../bots/design/bots.md)
-* Informationen zum Querladen von Apps finden Sie unter [Aktivieren der anpassungsfähigen Teams-App,](../concepts/design/enable-app-customization.md) [Verteilen Ihrer Microsoft Teams-App](../concepts/deploy-and-publish/apps-publish-overview.md)und [Hochladen Ihrer App in Teams.](../concepts/deploy-and-publish/apps-upload.md)
+* Informationen zum Querladen von Apps finden Sie unter [Aktivieren der Anpassung Ihrer Teams-App,](../concepts/design/enable-app-customization.md)Verteilen Ihrer [Microsoft Teams-App](../concepts/deploy-and-publish/apps-publish-overview.md)und [Hochladen Ihrer App in Teams.](../concepts/deploy-and-publish/apps-upload.md)
 * Benutzerdefinierte Connectors finden Sie unter [Erstellen Office 365 Connectors für Teams.](../webhooks-and-connectors/how-to/connectors-creating.md)
-
-## <a name="see-also"></a>Weitere Informationen
-
-[Erstellen von Apps für Teams](../overview.md) 
- [Erstellen Ihrer ersten Microsoft Teams-App](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Microsoft Teams-App-Einstiegspunkte](../concepts/extensibility-points.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Erstellen von Apps für Teams](../overview.md) 
+ [Erstellen Ihrer ersten Microsoft Teams-App](../build-your-first-app/build-first-app-overview.md)

@@ -1,16 +1,16 @@
 ---
 title: Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 author: Rajeshwari-v
-description: Wie Sie einen Link öffnen, die Phasenansicht öffnen und eine Registerkarte mit Microsoft Teams App anheften.
+description: Erfahren Sie, wie Sie einen Link freigeben, die Phasenansicht öffnen und eine Registerkarte mit Microsoft Teams App anheften. Erfahren Sie mehr über die Phasenansicht und deren Aufruf mithilfe einer adaptiven Karte mithilfe von Codebeispielen und Beispielen.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 86525e0a26dbc9b80d03751078cb6ee248b876fb
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: dab2b08c7393bc44ecda59f18160f0b113733f74
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720344"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887567"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 
@@ -22,13 +22,13 @@ Die Phasenansicht ist eine Vollbild-UI-Komponente, die Sie aufrufen können, um 
 
 ## <a name="advantage-of-stage-view"></a>Vorteile der Phasenansicht
 
-Die Phasenansicht bietet eine nahtlosere Erfahrung beim Anzeigen von Inhalten in Teams. Benutzer können die von Ihrer App bereitgestellten Inhalte öffnen und anzeigen, ohne den Kontext zu verlassen, und sie können die Inhalte an den Chat oder Kanal anheften, um später schnell auf Ihre App zugreifen zu können, was zu einer höheren Benutzerbindung führt.
+Die Phasenansicht bietet eine nahtlosere Erfahrung beim Anzeigen von Inhalten in Teams. Benutzer können die von Ihrer App bereitgestellten Inhalte öffnen und anzeigen, ohne den Kontext zu verlassen, und sie können die Inhalte an den Chat oder Kanal anheften, um später schnell auf Ihre App zugreifen zu können, was zu einer größeren Benutzerbindung führt.
 
 ## <a name="stage-view-vs-task-module"></a>Phasenansicht im Vergleich zum Aufgabenmodul
 
 |Phasenansicht|Aufgabenmodul|
 |:-----------|:-----------|
-|Die Phasenansicht ist nützlich, wenn Sie benutzern umfangreiche Inhalte anzeigen können, z. B. eine Seite, ein Dashboard, eine Datei usw. Es bietet umfangreiche Features, mit denen Sie Ihre Inhalte im Vollbildbereich rendern können.|[Das Aufgabenmodul](../task-modules-and-cards/task-modules/task-modules-tabs.md) ist besonders nützlich, um Nachrichten anzuzeigen, die Die Aufmerksamkeit des Benutzers erfordern, oder um Informationen zu sammeln, die zum Nächsten Schritt erforderlich sind.|
+|Die Phasenansicht ist hilfreich, wenn Sie benutzern umfangreiche Inhalte anzeigen können, z. B. eine Seite, ein Dashboard, eine Datei usw. Es bietet umfangreiche Features, mit denen Sie Ihre Inhalte im Vollbildbereich rendern können.|[Das Aufgabenmodul](../task-modules-and-cards/task-modules/task-modules-tabs.md) ist besonders nützlich, um Nachrichten anzuzeigen, die Die Aufmerksamkeit des Benutzers erfordern, oder um Informationen zu sammeln, die zum Nächsten Schritt erforderlich sind.|
   
 ## <a name="invoke-stage-view"></a>Aufrufen der Phasenansicht
 
@@ -86,7 +86,7 @@ Nachfolgend sehen Sie den Prozess zum Aufrufen der Phasenansicht:
 * Der Bot antwortet mit einem `200` Code.
 
 > [!NOTE]
-> Auf Teams mobilen Clients öffnet das Aufrufen der Phasenansicht für Apps, die über den [Teams Store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) verteilt werden und keine mobliesoptimierte Oberfläche haben, den Standardwebbrowser des Geräts. Der Browser öffnet die im Parameter des Objekts angegebene `websiteUrl` `TabInfo` URL.
+> Auf Teams mobilen Clients öffnet das Aufrufen der Phasenansicht für Apps, die über den [Teams Store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) verteilt werden, ohne über eine mobliesoptimierte Oberfläche zu verfügen, den Standardwebbrowser des Geräts. Der Browser öffnet die im Parameter des Objekts angegebene `websiteUrl` `TabInfo` URL.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Aufrufen der Phasenansicht über deep-Link
 
@@ -123,20 +123,25 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 ## <a name="tab-information-property"></a>Tabinformationseigenschaft
 
-| Eigenschaftsname | Typ | Anzahl der Zeichen | Beschreibung |
+| Eigenschaftenname | Typ | Anzahl der Zeichen | Beschreibung |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Zeichenfolge | 64 | Diese Eigenschaft ist ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird. Dies ist ein Pflichtfeld.|
 | `name` | Zeichenfolge | 128 | Diese Eigenschaft ist der Anzeigename der Registerkarte in der Kanalschnittstelle. Dieses Feld ist optional.|
-| `contentUrl` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https://-URL, die auf die Entitätsbenutzeroberfläche verweist, die im Teams Canvas angezeigt werden soll. Dies ist ein Pflichtfeld.|
+| `contentUrl` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, die auf die Entitätsbenutzeroberfläche verweist, die im Teams Canvas angezeigt werden soll. Dies ist ein Pflichtfeld.|
 | `websiteUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, auf die sie zeigen soll, wenn ein Benutzer die Anzeige in einem Browser auswählt. Dies ist ein Pflichtfeld.|
-| `removeUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https://-URL, die auf die Benutzeroberfläche zeigt, die angezeigt werden soll, wenn der Benutzer die Registerkarte löscht. Dies ist ein optionales Feld.|
+| `removeUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, die auf die Benutzeroberfläche zeigt, die angezeigt werden soll, wenn der Benutzer die Registerkarte löscht. Dies ist ein optionales Feld.|
 
 ## <a name="code-sample"></a>Codebeispiel
 
 | Beispielname | Beschreibung | C# |Node.js|
 |-------------|-------------|------|----|
-|Registerkarte in der Phasenansicht |Microsoft Teams Registerkartenbeispiel-App zum Demonstrieren der Registerkarte in der Phasenansicht.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+|Registerkarte in der Phasenansicht |Microsoft Teams Registerkartenbeispiel-App zum Demonstrieren der Registerkarte in der Phasenansicht.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
     
+
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Registerkarten für Unterhaltungen erstellen](~/tabs/how-to/conversational-tabs.md)
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -144,8 +149,3 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
 * [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Registerkarten für Unterhaltungen erstellen](~/tabs/how-to/conversational-tabs.md)

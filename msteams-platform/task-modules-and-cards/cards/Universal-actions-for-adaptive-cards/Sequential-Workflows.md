@@ -1,15 +1,15 @@
 ---
 title: Sequenzielle Workflows
-description: Beispiel für sequenzielle Workflows mit universellen Aktionen
+description: Informationen zu sequenziellen Workflows für adaptive Karten mit universellen Aktionen mit Codebeispielen
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: c3065080a0a470104fa2b7c06c9b0c8105a829a6
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e80f3d41e4dcbd281654c8070862fd5df9b0c128
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156485"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889111"
 ---
 # <a name="sequential-workflows"></a>Sequenzielle Workflows
 

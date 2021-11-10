@@ -1,15 +1,15 @@
 ---
 title: Konfigurieren der Standardinstallationsoptionen für Ihre App
-description: Beschreibt, wie die Standardinstallationsoptionen Für Ihre App angegeben werden.
+description: Beschreibt, wie Die Standardinstallationsoptionen und die Standardfunktion Ihrer App für freigegebene Bereiche angegeben werden.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 48f12faca9d8f67ec78e08736f16f8ad5a43dcd2
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ad59f6645e0d302e973647f9ff63b2898362f6ee
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156823"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889090"
 ---
 # <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>Konfigurieren der Standardinstallationsoptionen für Ihre Microsoft Teams-App
 

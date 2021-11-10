@@ -1,16 +1,16 @@
 ---
 title: Definieren von Aktionsbefehlen für Messaging-Erweiterungen
 author: surbhigupta
-description: Eine Übersicht über Aktionsbefehle für Messaging-Erweiterungen
+description: Eine Übersicht über Aktionsbefehle für Messaging-Erweiterungen mit App-Manifestbeispiel
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d3876d0fc5d58b54ececaabb9e88da0a6e355b47
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: d2d872810794c46fe424371268d8ef210f8f528c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720141"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887992"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definieren von Aktionsbefehlen für Messaging-Erweiterungen
 
@@ -45,7 +45,7 @@ In der folgenden Abbildung werden die Speicherorte angezeigt, an denen der Aktio
 
 Sie müssen nicht nur auswählen, von wo aus Der Befehl aufgerufen werden kann, sie müssen auch auswählen, wie das Formular im Aufgabenmodul für Ihre Benutzer aufgefüllt werden soll. Sie haben die folgenden drei Optionen zum Erstellen des Formulars, das innerhalb des Aufgabenmoduls gerendert wird:   
 
-* **Statische Liste von Parametern:** Dies ist die einfachste Methode. Sie können eine Liste von Parametern in Ihrem App-Manifest definieren, die vom Teams Client gerendert wird, die Formatierung kann in diesem Fall jedoch nicht gesteuert werden.
+* **Statische Liste von Parametern:** Dies ist die einfachste Methode. Sie können eine Liste von Parametern in Ihrem App-Manifest definieren, die vom Teams Client gerendert wird, aber in diesem Fall nicht steuern.
 * **Adaptive Karte:** Sie können eine adaptive Karte verwenden, die eine bessere Kontrolle über die Benutzeroberfläche bietet, Sie jedoch weiterhin auf die verfügbaren Steuerelemente und Formatierungsoptionen beschränkt.
 * **Eingebettete Webansicht:** Sie können eine benutzerdefinierte Webansicht in das Aufgabenmodul einbetten, um eine vollständige Kontrolle über die Benutzeroberfläche und die Steuerelemente zu haben. 
 
@@ -94,11 +94,11 @@ In der folgenden Abbildung wird die Befehlserweiterung für die Messaging-Erweit
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
 
-1. Wählen Sie **"Benutzern das Auslösen von Aktionen in externen Diensten innerhalb von Teams erlauben"** aus. In der folgenden Abbildung wird die Aktionsbefehlsauswahl angezeigt:
+1. Wählen Sie **"Zulassen, dass Benutzer Aktionen in externen Diensten innerhalb von Teams auslösen"** aus. In der folgenden Abbildung wird die Aktionsbefehlsauswahl angezeigt:
 
     <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
     
-1. Um einen statischen Parametersatz zum Erstellen des Aufgabenmoduls zu verwenden, wählen Sie **einen Satz statischer Parameter für den Befehl** definieren aus. 
+1. Um einen statischen Satz von Parametern zum Erstellen des Aufgabenmoduls zu verwenden, wählen Sie **einen Satz statischer Parameter für den Befehl** definieren aus. 
 
     In der folgenden Abbildung wird die Auswahl der statischen Parameter des Aktionsbefehls angezeigt:
 
@@ -121,14 +121,14 @@ In der folgenden Abbildung wird die Befehlserweiterung für die Messaging-Erweit
 
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
-1. Wählen Sie **Speichern** aus.
+1. Klicken Sie auf **Speichern**.
 1. Um weitere Parameter hinzuzufügen, wählen Sie die Schaltfläche **"Hinzufügen"** im Abschnitt **"Parameter"** aus.
 
 ### <a name="create-an-action-command-manually"></a>Manuelles Erstellen eines Aktionsbefehls
 
 Zum manuellen Hinzufügen des aktionsbasierten Messaging-Erweiterungsbefehls zum App-Manifest müssen Sie dem Array von Objekten die folgenden Parameter `composeExtension.commands` hinzufügen:
 
-| Eigenschaftsname | Zweck | Pflichtfeld? | Mindestversion des Manifests |
+| Eigenschaftenname | Zweck | Pflichtfeld? | Mindestversion des Manifests |
 |---|---|---|---|
 | `id` | Diese Eigenschaft ist eine eindeutige ID, die Sie diesem Befehl zuweisen. Die Benutzeranforderung enthält diese ID. | Ja | 1.0 |
 | `title` | Diese Eigenschaft ist ein Befehlsname. Dieser Wert wird in der Benutzeroberfläche angezeigt. | Ja | 1.0 |
@@ -138,7 +138,7 @@ Zum manuellen Hinzufügen des aktionsbasierten Messaging-Erweiterungsbefehls zum
 
 Wenn Sie eine statische Liste von Parametern verwenden, müssen Sie auch die folgenden Parameter hinzufügen:
 
-| Eigenschaftsname | Zweck | Ist erforderlich? | Mindestversion des Manifests |
+| Eigenschaftenname | Zweck | Ist erforderlich? | Mindestversion des Manifests |
 |---|---|---|---|
 | `parameters` | Diese Eigenschaft beschreibt die statische Liste der Parameter für den Befehl. Wird nur verwendet, wenn `fetchTask` `false` . | Nein | 1.0 |
 | `parameter.name` | Diese Eigenschaft beschreibt den Namen des Parameters. Dies wird in der Benutzeranforderung an Ihren Dienst gesendet. | Ja | 1.0 |
@@ -148,12 +148,12 @@ Wenn Sie eine statische Liste von Parametern verwenden, müssen Sie auch die fol
 
 Wenn Sie eine eingebettete Webansicht verwenden, können Sie optional das Objekt hinzufügen, `taskInfo` um Ihre Webansicht abzurufen, ohne Ihren Bot direkt aufzurufen. Wenn Sie diese Option auswählen, ähnelt das Verhalten der Verwendung einer statischen Liste von Parametern. In that the first interaction with your bot is [responding to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Wenn Sie ein `taskInfo` Objekt verwenden, müssen Sie den `fetchTask` Parameter auf `false` .
 
-| Eigenschaftsname | Zweck | Ist erforderlich? | Mindestversion des Manifests |
+| Eigenschaftenname | Zweck | Ist erforderlich? | Mindestversion des Manifests |
 |---|---|---|---|
 |`taskInfo`|Geben Sie das Aufgabenmodul an, das vorab geladen werden soll, wenn Sie einen Messaging-Erweiterungsbefehl verwenden. | Nein | 1.4 |
 |`taskInfo.title`|Titel des anfänglichen Aufgabenmoduls. |Nein | 1.4 |
 |`taskInfo.width`|Die Breite des Aufgabenmoduls, entweder eine Zahl in Pixeln oder ein Standardlayout wie `large` , `medium` oder `small` . |Nein | 1.4 |
-|`taskInfo.height`|Die Höhe des Aufgabenmoduls, entweder eine Zahl in Pixel oder ein Standardlayout wie `large` , `medium` oder `small` .|Nein | 1.4 |
+|`taskInfo.height`|Die Höhe des Aufgabenmoduls, entweder eine Zahl in Pixeln oder ein Standardlayout wie `large` , `medium` oder `small` .|Nein | 1.4 |
 |`taskInfo.url`|Ursprüngliche Webansichts-URL.|Nein | 1.4 | 
 
 #### <a name="app-manifest-example"></a>Beispiel für ein App-Manifest
@@ -213,7 +213,7 @@ Der folgende Abschnitt ist ein Beispiel für ein `composeExtensions` Objekt, das
 | Beispielname           | Beschreibung | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams Messaging-Erweiterungsaktion| Beschreibt, wie Aktionsbefehle definiert, Aufgabenmodul erstellt und auf Aufgabenmodul-Sendeaktion reagiert wird. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams Messaging-Erweiterungssuche   |  Beschreibt, wie Suchbefehle definiert und auf Suchvorgänge reagiert wird.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams Suche nach Messaging-Erweiterungen   |  Beschreibt, wie Suchbefehle definiert und auf Suchvorgänge reagiert wird.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Nächster Schritt
 
@@ -222,8 +222,7 @@ Wenn Sie eine adaptive Karte oder eine eingebettete Webansicht ohne `taskInfo` O
 > [!div class="nextstepaction"]
 > [Erstellen und Antworten mit einem Aufgabenmodul](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-Wenn Sie die Parameter oder eine eingebettete Webansicht mit einem `taskInfo` Objekt verwenden, besteht der nächste Schritt darin:
+Wenn Sie die Parameter oder eine eingebettete Webansicht mit einem `taskInfo` Objekt verwenden, besteht der nächste Schritt in folgenden Schritten:
 
 > [!div class="nextstepaction"]
 > [Antworten auf das Senden des Aufgabenmoduls](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
-

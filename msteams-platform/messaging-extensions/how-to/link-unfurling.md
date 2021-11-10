@@ -1,28 +1,28 @@
 ---
 title: Verbreiten von Links
 author: surbhigupta
-description: So führen Sie die Verbreitung von Links mit der Messaging-Erweiterung in einer Microsoft Teams-App durch.
+description: Erfahren Sie, wie Sie die Verbreitung von Links mit der Messaging-Erweiterung in einer Microsoft Teams-App mit App-Manifest oder manuell unter Verwendung von Codebeispielen und Beispielen hinzufügen.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 99dbfaa2bf66ee50341e52d4e8a274f7ab20a73e
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: f702ac2600dbfb3c8fd2992c41cc1c72754252ca
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291723"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889398"
 ---
 # <a name="link-unfurling"></a>Verbreiten von Links
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-In diesem Dokument erfahren Sie, wie Sie Ihrem App-Manifest mitHilfe von App Studio und manuell eine Verknüpfung hinzufügen. Bei der Verbreitung von Links kann sich Ihre App registrieren, um eine Aktivität zu `invoke` empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Die `invoke` enthält die vollständige URL, die in den Bereich zum Verfassen von Nachrichten eingefügt wurde, und Sie können mit einer Karte antworten, die der Benutzer freigeben kann, und zusätzliche Informationen oder Aktionen bereitstellen. Dies funktioniert ähnlich wie ein Suchbefehl mit der URL, die als Suchbegriff dient.
+In diesem Dokument erfahren Sie, wie Sie Ihrem App-Manifest mithilfe von App Studio und manuell Eine Verknüpfung hinzufügen. Bei der Verbreitung von Links kann sich Ihre App registrieren, um eine Aktivität zu `invoke` empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Die `invoke` enthält die vollständige URL, die in den Bereich zum Verfassen von Nachrichten eingefügt wurde, und Sie können mit einer Karte antworten, die der Benutzer freigeben kann, und zusätzliche Informationen oder Aktionen bereitstellen. Dies funktioniert ähnlich wie ein Suchbefehl mit der URL, die als Suchbegriff dient.
 
 > [!NOTE]
 > * Derzeit wird die Verbreitung von Links auf mobilen Clients nicht unterstützt.
 > * Das Ergebnis der Verknüpfungsentrollung wird 30 Minuten zwischengespeichert.
 
-Die Azure DevOps Messaging-Erweiterung verwendet die Verbreitung von Links, um nach URLs zu suchen, die in den Bereich zum Verfassen von Nachrichten eingefügt werden, die auf eine Arbeitsaufgabe verweisen. In der folgenden Abbildung hat ein Benutzer eine URL für eine Arbeitsaufgabe in Azure DevOps eingefügt, die die Messaging-Erweiterung in eine Karte aufgelöst hat:
+Die Azure DevOps Messaging-Erweiterung verwendet die Verbreitung von Links, um nach URLs zu suchen, die in den Bereich zum Verfassen von Nachrichten eingefügt sind, die auf eine Arbeitsaufgabe verweisen. In der folgenden Abbildung hat ein Benutzer eine URL für eine Arbeitsaufgabe in Azure DevOps eingefügt, die die Messaging-Erweiterung in eine Karte aufgelöst hat:
 
 ![Beispiel für die Verbreitung von Links](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -79,7 +79,7 @@ Die folgenden Kartentypen werden unterstützt:
 * [Office 365 Connectorkarte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Karte](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Sie können eine Vorschau einer adaptiven Karte oder Office 365 Connectorkarte in der Ergebnisliste mithilfe der Vorschaueigenschaft anzeigen. Die Vorschaueigenschaft ist nicht erforderlich, wenn die Ergebnisse bereits Hero- oder Miniaturansichtskarten sind. Wenn Sie die Vorschauanlage verwenden, muss es sich entweder um eine Hero- oder miniaturansichtskarte handeln. Wenn keine Vorschaueigenschaft angegeben ist, schlägt die Vorschau der Karte fehl, und es wird nichts angezeigt.
+Sie können eine Vorschau einer adaptiven Karte oder Office 365 Connectorkarte in der Ergebnisliste mithilfe der Vorschaueigenschaft anzeigen. Die Vorschaueigenschaft ist nicht erforderlich, wenn die Ergebnisse bereits Hero- oder Miniaturansichtskarten sind. Wenn Sie die Vorschauanlage verwenden, muss es sich entweder um eine Hero- oder eine Miniaturansichtskarte handeln. Wenn keine Vorschaueigenschaft angegeben ist, schlägt die Vorschau der Karte fehl, und es wird nichts angezeigt.
 
 ### <a name="example"></a>Beispiel
 

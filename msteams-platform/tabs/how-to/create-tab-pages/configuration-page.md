@@ -1,21 +1,21 @@
 ---
 title: Erstellen einer Konfigurationsseite
 author: surbhigupta
-description: So erstellen Sie eine Konfigurationsseite
+description: Erfahren Sie, wie Sie eine Konfigurationsseite erstellen, um einen Kanal- oder Gruppenchat für Einstellungen zu konfigurieren, z. B. das Abrufen von Kontextdaten, das Einfügen von Platzhaltern und die Authentifizierung mithilfe von Codebeispielen.
 keywords: Konfigurierbarer Gruppenkanal für Teams-Registerkarten
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 48137f7e922ac0b504d7b88465adb42edd3ba4e4
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 76381e717f0955ade16c0965a0448a1854822fe8
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720190"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888020"
 ---
 # <a name="create-a-configuration-page"></a>Erstellen einer Konfigurationsseite
 
-Eine Konfigurationsseite ist ein spezieller [Inhaltsseitentyp.](content-page.md) Die Benutzer konfigurieren einige Aspekte der Microsoft Teams-App mithilfe der Konfigurationsseite und verwenden diese Konfiguration als Teil der folgenden:
+Eine Konfigurationsseite ist ein spezieller [Inhaltsseitentyp.](content-page.md) Die Benutzer konfigurieren einige Aspekte der Microsoft Teams App mithilfe der Konfigurationsseite und verwenden diese Konfiguration als Teil der folgenden:
 
 * Registerkarte "Kanal- oder Gruppenchat": Sammeln sie Informationen von den Benutzern, und legen Sie `contentUrl` die anzuzeigende Inhaltsseite fest.
 * Eine [Messaging-Erweiterung](~/messaging-extensions/what-are-messaging-extensions.md).
@@ -123,7 +123,7 @@ Weitere Informationen zu den Eigenschaften, die für die Registerkartenkonfigura
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Einfügen von Platzhaltern in die `configurationUrl`
 
-Fügen Sie Ihrer Basis Platzhalter für die Kontextschnittstelle `configurationUrl` hinzu. Beispiel:
+Fügen Sie Ihrer Basis Platzhalter für die Kontextschnittstelle `configurationUrl` hinzu. Zum Beispiel:
 
 ##### <a name="base-url"></a>Basis-URL
 
@@ -178,7 +178,7 @@ Der folgende Code enthält ein Beispiel für das Hinzufügen dieser Funktion zur
 
 ## <a name="context-and-authentication"></a>Kontext und Authentifizierung
 
-Authentifizieren Sie sich, bevor ein Benutzer Ihre App konfigurieren kann. Andernfalls können Ihre Inhalte Quellen mit ihren Authentifizierungsprotokollen enthalten. Weitere Informationen finden Sie unter [Authentifizieren eines Benutzers auf einer Microsoft Teams Registerkarte.](~/tabs/how-to/authentication/auth-flow-tab.md) Verwenden Sie Kontextinformationen, um die URLs für Authentifizierungsanforderungen und Autorisierungsseiten zu erstellen. Stellen Sie sicher, dass alle Domänen, die auf Ihren Registerkartenseiten verwendet werden, im `manifest.json` `validDomains` Und-Array aufgeführt sind.
+Authentifizieren Sie sich, bevor ein Benutzer Ihre App konfigurieren kann. Andernfalls können Ihre Inhalte Quellen mit ihren Authentifizierungsprotokollen enthalten. Weitere Informationen finden Sie unter ["Authentifizieren eines Benutzers in einer Microsoft Teams Registerkarte".](~/tabs/how-to/authentication/auth-flow-tab.md) Verwenden Sie Kontextinformationen, um die URLs für Authentifizierungsanforderungen und Autorisierungsseiten zu erstellen. Stellen Sie sicher, dass alle Domänen, die auf Ihren Registerkartenseiten verwendet werden, im `manifest.json` `validDomains` Und-Array aufgeführt sind.
 
 ## <a name="modify-or-remove-a-tab"></a>Ändern oder Entfernen einer Registerkarte
 
@@ -200,6 +200,11 @@ microsoftTeams.settings.setSettings({
 
 Wenn Ihre Kanal- oder Gruppenregisterkarte auf den Teams mobilen Clients angezeigt werden soll, muss die `setSettings()` Konfiguration einen Wert für `websiteUrl` aufweisen. Weitere Informationen finden Sie unter [Anleitungen für Registerkarten auf mobilen Geräten.](~/tabs/design/tabs-mobile.md)
 
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Erstellen einer Seite zum Entfernen ihrer Registerkarte](~/tabs/how-to/create-tab-pages/removal-page.md)
+
 ## <a name="see-also"></a>Siehe auch
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
@@ -207,8 +212,3 @@ Wenn Ihre Kanal- oder Gruppenregisterkarte auf den Teams mobilen Clients angezei
 * [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
 * [Erstellen einer Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md)
 * [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
-
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Erstellen einer Seite zum Entfernen ihrer Registerkarte](~/tabs/how-to/create-tab-pages/removal-page.md)

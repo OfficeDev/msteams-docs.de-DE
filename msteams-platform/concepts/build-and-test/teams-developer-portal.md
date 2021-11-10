@@ -1,16 +1,16 @@
 ---
 title: Verwalten Ihrer Apps mit dem Entwicklerportal
-description: Erfahren Sie, wie Sie Ihre Apps mithilfe des Entwicklerportals für Microsoft Teams verwalten.
+description: Erfahren Sie, wie Sie Ihre Apps mithilfe des Entwicklerportals für Microsoft Teams konfigurieren, verteilen und verwalten.
 keywords: Erste Schritte für Entwicklerportal-Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: c8a31f55131fb594a8d47c05e40533512e7de689
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 598ee5fae79ff7c4c4a4c1096d1d234ecab89629
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720393"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888552"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Verwalten Ihrer Apps mit dem Entwicklerportal für Microsoft Teams
 
@@ -53,7 +53,7 @@ Jede App enthält eine **Besitzerseite,** auf der Sie Ihre App-Registrierung fü
 
 Eine Teams-App ist eine Web-App. Wie alle Web-Apps wird der Quellcode in der Regel in einer IDE oder einem Code-Editor entwickelt und an einer beliebigen Stelle in der Cloud (z. B. Azure) gehostet.
 
-Um Ihre App in Teams zu installieren und zu rendern, müssen Sie eine Reihe von Konfigurationen einschließen, die Teams erkennt. Dazu wurde traditionell ein App-Manifest erstellt, eine JSON-Datei, die alle Metadaten enthält, die Teams zum Anzeigen ihrer App-Inhalte benötigt. Das Entwicklerportal abstrahiert diesen Prozess und enthält neue Features und Tools, die Ihnen helfen, erfolgreicher zu sein.
+Um Ihre App in Teams zu installieren und zu rendern, müssen Sie eine Reihe von Konfigurationen einschließen, die Teams erkennt. Dies geschieht traditionell durch das Erstellen eines App-Manifests, einer JSON-Datei, die alle Metadaten enthält, die Teams zum Anzeigen ihrer App-Inhalte benötigt. Das Entwicklerportal abstrahiert diesen Prozess und enthält neue Features und Tools, die Ihnen helfen, erfolgreicher zu sein.
 
 ## <a name="test-your-app-directly-in-teams"></a>Testen Sie Ihre App direkt in Teams
 
@@ -83,7 +83,7 @@ Die monatliche und tägliche Nutzung wird für die letzten sieben, 30 und 60 Tag
 
 Das Entwicklerportal enthält auch Tools, mit denen Sie einige wichtige Features von Teams-Apps erstellen können. Einige dieser Tools umfassen:
 
-* **Szenenstudio:** Entwerfen [Sie benutzerdefinierte Szenen im Zusammen-Modus](~/apps-in-teams-meetings/teams-together-mode.md) für Teams Besprechungen.
+* **Szenenstudio:** Entwerfen [sie benutzerdefinierte Szenen im Zusammen-Modus](~/apps-in-teams-meetings/teams-together-mode.md) für Teams Besprechungen.
 * **Editor für adaptive Karten:** Erstellen und Anzeigen einer Vorschau adaptiver Karten, die in Ihre Apps aufgenommen werden sollen.
 * **Microsoft Identity Platform Verwaltung:** Registrieren Sie Ihre Apps bei Azure Active Directory (Azure AD), um Benutzern zu helfen, sich anzumelden und Zugriff auf APIs zu gewähren.
 

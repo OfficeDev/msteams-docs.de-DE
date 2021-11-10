@@ -5,12 +5,12 @@ keywords: Teams-Bots- Kartenformat
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 8afbd5f4904a378a4433965c128136fa8b39590d
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 526b20146c81ba10ef026412adc111fe33a01814
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475812"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887609"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatieren von Karten in Microsoft Teams
 
@@ -20,9 +20,9 @@ Es folgen die beiden Möglichkeiten zum Hinzufügen von Rich-Text-Formatierungen
 
 Karten unterstützen die Formatierung nur in der Texteigenschaft, nicht in den Titel- oder Untertiteleigenschaften. Die Formatierung kann je nach Kartentyp mithilfe einer Teilmenge von XML- oder HTML-Formatierungen oder Markdown angegeben werden. Für die aktuelle und zukünftige Entwicklung adaptiver Karten wird die Markdown-Formatierung empfohlen.
 
-Die Formatierungsunterstützung unterscheidet sich zwischen Kartentypen. Das Rendern der Karte kann sich geringfügig zwischen dem Desktop- und dem mobilen Microsoft Teams-Clients sowie Teams im Desktopbrowser unterscheiden.
+Die Formatierungsunterstützung unterscheidet sich zwischen Kartentypen. Das Rendern der Karte kann sich geringfügig zwischen dem Desktop und den mobilen Microsoft Teams-Clients sowie Teams im Desktopbrowser unterscheiden.
 
-Sie können ein Inlinebild in eine beliebige Teams Karte einschließen. Bilder können als , oder Dateien formatiert werden `.png` `.jpg` und `.gif` dürfen 1024 ×1024 px oder 1 MB nicht überschreiten. Animierte GIF-Dateien werden nicht unterstützt. Weitere Informationen finden Sie unter [Kartentypen.](./cards-reference.md#inline-card-images)
+Sie können ein Inlinebild mit einer beliebigen Teams Karte einfügen. Bilder können als , oder Dateien formatiert werden `.png` `.jpg` und `.gif` dürfen 1024 ×1024 px oder 1 MB nicht überschreiten. Animierte GIF-Dateien werden nicht unterstützt. Weitere Informationen finden Sie unter [Kartentypen.](./cards-reference.md#inline-card-images)
 
 Sie können adaptive Karten und Office 365 Connectorkarten mit Markdown formatieren, die bestimmte unterstützte Formatvorlagen enthalten.
 
@@ -63,7 +63,7 @@ Sie können die `\r` `\n` Oder Escapesequenzen für Newlines in Listen verwenden
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops für adaptive Karten
 
-Auf dem Desktop wird die Markdown-Formatierung für adaptive Karten wie in der folgenden Abbildung sowohl in Webbrowsern als auch in der Teams Clientanwendung angezeigt:
+Auf dem Desktop wird die Markdown-Formatierung für adaptive Karten wie in der folgenden Abbildung in Webbrowsern und in der Teams Clientanwendung angezeigt:
 
 ![Markdown-Formatierung für adaptive Karten im Desktopclient](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
@@ -118,7 +118,7 @@ Der folgende Code zeigt ein Beispiel für die Formatierung adaptiver Karten:
 
 ### <a name="mention-support-within-adaptive-cards"></a>Erwähnen der Unterstützung in adaptiven Karten 
 
-Sie können @mentions in einem Textkörper für adaptive Karten für Bots und Nachrichtenerweiterungsantworten hinzufügen. Um @mentions in Karten hinzuzufügen, befolgen Sie die gleiche Benachrichtigungslogik und dasselbe Rendering wie nachrichtenbasierte [Erwähnungen in Kanal- und Gruppenchatunterhaltungen.](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)
+Sie können @mentions in einem Textkörper für adaptive Karten für Bots und Nachrichtenerweiterungsantworten hinzufügen. Um @mentions in Karten hinzuzufügen, folgen Sie der gleichen Benachrichtigungslogik und dem Rendern wie nachrichtenbasierte [Erwähnungen in Kanal- und Gruppenchatunterhaltungen.](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)
 
 Bots und Messaging-Erweiterungen können Erwähnungen innerhalb des Karteninhalts in [TextBlock-](https://adaptivecards.io/explorer/TextBlock.html) und [FactSet-Elementen](https://adaptivecards.io/explorer/FactSet.html) enthalten.
 
@@ -165,20 +165,20 @@ Der folgende Code zeigt ein Beispiel für eine adaptive Karte mit einer Erwähnu
 }
 ```
 
-### <a name="aad-object-id-and-upn-in-user-mention"></a>AAD-Objekt-ID und UPN in Benutzererwähnung 
+### <a name="aad-object-id-and-upn-in-user-mention"></a>AAD Objekt-ID und UPN in Benutzererwähnung 
 
-Teams Plattform ermöglicht es, Benutzer zusätzlich zu den vorhandenen Erwähnungs-IDs mit ihrer AAD-Objekt-ID und dem Benutzerprinzipalnamen (User Principle Name, UPN) zu erwähnen. Bots mit adaptiven Karten und Connectors mit eingehenden Webhooks unterstützen die beiden Benutzererwähnungs-IDs. 
+Teams Plattform ermöglicht es, Benutzer zusätzlich zu den vorhandenen Erwähnungs-IDs mit ihrer AAD Objekt-ID und dem Benutzerprinzipalnamen (User Principle Name, UPN) zu erwähnen. Bots mit adaptiven Karten und Connectors mit eingehenden Webhooks unterstützen die beiden Benutzererwähnungs-IDs. 
 
 In der folgenden Tabelle werden die neu unterstützten Benutzererwähnungs-IDs beschrieben:
 
 |Ids  | Unterstützende Funktionen |   Beschreibung | Beispiel |
 |----------|--------|---------------|---------|
-| AAD-Objekt-ID | Bot, Connector |  Objekt-ID des AAD-Benutzers |  49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | Bot, Connector | UPN eines AAD-Benutzers | john.smith@microsoft.com |
+| AAD-Objekt-ID | Bot, Connector |  AAD Objekt-ID des Benutzers |  49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | Bot, Connector | UPN AAD Benutzers | john.smith@microsoft.com |
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>Benutzererwähnung in Bots mit adaptiven Karten 
 
-Bots unterstützen die Erwähnung von Benutzern mit der AAD-Objekt-ID und dem UPN zusätzlich zu den vorhandenen IDs. Die Unterstützung für zwei neue IDs ist in Bots für Textnachrichten, den Textkörper adaptiver Karten und die Antwort auf Messaging-Erweiterungen verfügbar. Bots unterstützen die Erwähnungs-IDs in Unterhaltungen und `invoke` Szenarien. Der Benutzer erhält eine Aktivitätsfeedbenachrichtigung, wenn er mit den IDs @mentioned wird. 
+Bots unterstützen die Benutzererwähnung mit der AAD-Objekt-ID und upn zusätzlich zu den vorhandenen IDs. Die Unterstützung für zwei neue IDs ist in Bots für Textnachrichten, den Textkörper adaptiver Karten und die Antwort auf Messaging-Erweiterungen verfügbar. Bots unterstützen die Erwähnungs-IDs in Unterhaltungen und `invoke` Szenarien. Der Benutzer erhält eine Aktivitätsfeedbenachrichtigung, wenn er mit den IDs @mentioned wird. 
 
 > [!NOTE]
 > Schemaupdates und Ui/UX-Änderungen sind für Benutzererwähnungen mit adaptiven Karten in Bot nicht erforderlich.
@@ -230,8 +230,8 @@ Die folgende Abbildung zeigt die Benutzererwähnung mit adaptiver Karte in Bot:
 Eingehende Webhooks unterstützen die Erwähnung von Benutzern in adaptiven Karten mit der AAD-Objekt-ID und dem UPN.
 
 > [!NOTE]    
-> * Aktivieren Sie die Benutzererwähnung im Schema für eingehende Webhooks, um AAD-Objekt-ID und UPN zu unterstützen. 
-> * Benutzeroberflächen-/UX-Änderungen sind für Benutzererwähnungen mit AAD-Objekt-ID und UPN nicht erforderlich.      
+> * Aktivieren Sie die Benutzererwähnung im Schema für eingehende Webhooks, um AAD Objekt-ID und UPN zu unterstützen. 
+> * Benutzeroberflächen-/UX-Änderungen sind für Benutzererwähnungen mit AAD Objekt-ID und UPN nicht erforderlich.      
 > * Die Aktivitätsfeedbenachrichtigung für eingehenden Webhook mit Benutzererwähnung wird in der zukünftigen Version verfügbar sein.
 
 ##### <a name="example"></a>Beispiel 
@@ -320,7 +320,7 @@ Sie können die `msteams` Eigenschaft verwenden, um die Breite einer adaptiven K
 
 #### <a name="construct-full-width-cards"></a>Erstellen von Karten mit voller Breite
 
-Um eine adaptive Karte mit voller Breite zu erstellen, muss das `width` Objekt in der Eigenschaft im `msteams` Karteninhalt auf . `Full`
+Um eine adaptive Karte mit voller Breite zu erstellen, muss das `width` Objekt in der Eigenschaft im `msteams` Karteninhalt auf festgelegt `Full` werden.
 
 #### <a name="sample-adaptive-card-with-full-width"></a>Beispiel für adaptive Karte mit voller Breite
 
@@ -506,7 +506,7 @@ Der folgende Code zeigt ein Beispiel für die Formatierung von Markdown-Connecto
 
 Die folgenden Kartentypen unterstützen HTML-Formatierung in Teams:
 
-* Office 365 Connectorkarten: Eingeschränkte Markdown- und HTML-Formatierung wird in Office 365 Connector-Karten unterstützt.
+* Office 365 Connectorkarten: Eingeschränkte Markdown- und HTML-Formatierung wird in Office 365 Connectorkarten unterstützt.
 * Favoriten- und Miniaturansichtskarten: HTML-Tags werden für einfache Karten unterstützt, z. B. die Favoriten- und Miniaturansichtskarten.
 
 Die Formatierung unterscheidet sich zwischen der Desktopversion und der mobilen Version von Teams für Office 365 Connectorkarten und einfache Karten. In diesem Abschnitt können Sie das HTML-Formatbeispiel für Konnektorkarten und einfache Karten durchgehen.
@@ -530,7 +530,7 @@ Connectorkarten unterstützen eingeschränkte Markdown- und HTML-Formatierungen.
 
 In Connectorkarten werden Newlines mithilfe des Tags in HTML `<p>` gerendert.
 
-### <a name="mobile-and-desktop-differences-for-connector-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops für Connectorkarten
+### <a name="mobile-and-desktop-differences-for-connector-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops bei Connectorkarten
 
 Auf dem Desktop wird die HTML-Formatierung für Connectorkarten wie in der folgenden Abbildung dargestellt angezeigt:
 
@@ -651,4 +651,6 @@ Sie können die Formatierung in Ihren eigenen Karten testen, indem Sie diesen Co
 ## <a name="see-also"></a>Siehe auch
 
 * [Kartenaktionen](./cards-actions.md)
+* [Verwenden von Aufgabenmodulen aus Bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Aufgabenmodule](~/task-modules-and-cards/cards/cards-format.md)
+* [Formatieren von Bot-Nachrichten](~/bots/how-to/format-your-bot-messages.md)

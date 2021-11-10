@@ -4,14 +4,14 @@ description: Erste Schritte zum Erstellen von großartigen Apps in Microsoft Tea
 keywords: Erste Schritte mit App Studio-Teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 22fb1deb55671120d3f40fc9d6e5cbfc2f27330f
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: adbd6bf8c2c2ec0dae8444d222fc3f3b26279e8f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156649"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888566"
 ---
-# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Verwalten Von Apps mit App Studio für Microsoft Teams
+# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Verwalten Ihrer Apps mit App Studio für Microsoft Teams
 
 > [!TIP]
 > **Testen Sie das Entwicklerportal:** App Studio hat sich weiterentwickelt. Konfigurieren, verteilen und verwalten Sie Ihre Teams-Apps mit dem neuen [Entwicklerportal.](https://dev.teams.microsoft.com/)
@@ -121,14 +121,14 @@ Auf Ihrer Projekthomepage können Sie Ihre App in ein Team hochladen, Ihre App f
 
 Bei einer Karte handelt es sich um einen Container für kurze oder verknüpfte Informationen. Microsoft Teams unterstützt Karten, die mehrere Eigenschaften und Anhänge haben können. Karten sind eine wichtige Methode, mit der Bots und Konnektoren verwertbare Informationen an Benutzer weitergeben. 
 
-Um diesen Vorgang einfacher und weniger fehleranfällig zu machen, können Sie auf der Registerkarte "Karten-Editor" Hero-Karten oder Miniaturansichtskarten mithilfe eines Formulars erstellen und die resultierende Karte (genau wie ein Benutzer sie sehen würde) über einen Bot überprüfen und testen. Er enthält auch den entsprechenden JSON-, C#- oder Node.js-Code für die Karte, die Sie in den Quellcode Ihrer App kopieren/einfügen können.
+Um diesen Prozess einfacher und weniger fehleranfällig zu machen, können Sie auf der Registerkarte "Karten-Editor" Hero-Karten oder Miniaturansichtskarten mithilfe eines Formulars erstellen und die resultierende Karte (genau wie ein Benutzer sie sehen würde) über einen Bot überprüfen und testen. Er enthält auch den entsprechenden JSON-, C#- oder Node.js-Code für die Karte, die Sie in den Quellcode Ihrer App kopieren/einfügen können.
 
 Wenn Sie bereits über eine Karte verfügen, die Sie in Teams überprüfen möchten, können Sie den JSON für diese Karte in die Registerkarte JSON unter *Karteninformationen hinzufügen* einfügen und an sich selbst senden, um zu sehen, wie er in einem Chat aussieht.
 
 ### <a name="react-control-library"></a>React-Steuerelementbibliothek
 
 >[!Note]
-> Diese React Steuerelementbibliothek ist in Zukunft veraltet. Erwägen Sie die Verwendung der [React-Steuerelemente Fluent-UI als alternative](https://microsoft.github.io/fluent-ui-react/) zuvor Stardust-UI.
+> Diese React Steuerelementbibliothek ist in Zukunft veraltet. Erwägen Sie die Verwendung der [React-Steuerelemente Fluent-UI als alternative](https://microsoft.github.io/fluent-ui-react/) zuvor Stardust-Benutzeroberfläche.
 
 Das Erstellen einer App, die Teams‘ Bewährte Methoden befolgt, ist eine hervorragende Möglichkeit, Ihrer App ein Erscheinungsbild zu verleihen, das sich nahtlos in die Kundenerfahrung in Teams einfügt. Die von Ihnen verwendeten UI-Steuerelemente sind entscheidend, um dieses Ziel zu erreichen. Um das Erstellen einer konsistenten Benutzeroberfläche zu vereinfachen, bietet App Studio verschiedene Kategorien von Steuerelementen für die Benutzeroberfläche, die den Entwurfsprinzipien von Teams entsprechen.
 
@@ -148,3 +148,7 @@ Steuerelemente enthalten:
 * Registerkarten
 * Tabellen
 * Symbole
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwalten Ihrer Apps mit dem Entwicklerportal für Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)

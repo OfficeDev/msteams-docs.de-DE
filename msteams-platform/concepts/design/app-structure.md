@@ -5,12 +5,13 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 481ed07682767a303efed50ec06a22cbbb393408
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: Mobile Desktop-Erweiterungen für Chatbesprechungen für Drahtframes
+ms.openlocfilehash: 3d63cc705ac567b0b19db2e3caf4a84420dae9bd
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156800"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887574"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Grundlegendes zur Microsoft Teams App-Struktur
 
@@ -34,11 +35,11 @@ Persönliche Apps bieten eine große Canvas, um Ihre App-Inhalte für einzelne B
 
 Die Canvas ist eine Webansicht, sodass Sie die Oberfläche vollständig anpassen können.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für persönliche Apps auf mobilgeräten anpassen können." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für persönliche Apps auf Mobilgeräten anpassen können." border="false":::
 
 ### <a name="desktop"></a>Desktop
 
-Die Canvas ist ein iFrame, sodass Sie die Benutzeroberfläche vollständig anpassen können.
+Die Canvas ist ein iFrame, damit Sie die Benutzeroberfläche vollständig anpassen können.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für persönliche Apps auf dem Desktop anpassen können." border="false":::
 
@@ -56,7 +57,7 @@ Die Canvas ist eine Webansicht, sodass Sie die Oberfläche vollständig anpassen
 
 ### <a name="desktop"></a>Desktop
 
-Die Canvas ist ein iFrame, sodass Sie die Benutzeroberfläche vollständig anpassen können.
+Die Canvas ist ein iFrame, damit Sie die Benutzeroberfläche vollständig anpassen können.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Registerkarten auf Desktops anpassen können." border="false":::
 
@@ -76,7 +77,7 @@ Bots sind Unterhaltungs-Apps, die mit Teams systemeigenen Messaging-Features int
 
 ## <a name="messaging-extensions"></a>Messaging-Erweiterungen
 
-Messagingerweiterungen sind Tastenkombinationen zum Einfügen von App-Inhalten oder zum Bearbeiten einer Nachricht, ohne von der Konversation weg zu navigieren. Aktionsbasierte Messaging-Erweiterungen bieten Ihnen mehr Kontrolle über die Benutzeroberfläche, während Teams viel von dem verarbeitet, was für suchbasierte Messaging-Erweiterungen gerendert wird.
+Messagingerweiterungen sind Tastenkombinationen zum Einfügen von App-Inhalten oder zum Bearbeiten einer Nachricht, ohne von der Konversation weg zu navigieren. Action-based messaging extensions give you more control of the experience, while Teams handles much of what renders for search-based messaging extensions.
 
 ***Unterstützte Bereiche:** Persönlich, Kanäle, Chats, Besprechungen*
 
@@ -102,6 +103,6 @@ Die Oberfläche ist eine Webansicht, mit der Sie die Benutzeroberfläche anpasse
 
 ### <a name="desktop"></a>Desktop
 
-Die Oberfläche ist ein iFrame, mit dem Sie die Benutzeroberfläche anpassen können. Bedenken Sie jedoch, dass diese Apps während Besprechungen dunkles Design verwenden und schmal sind.
+Die Oberfläche ist ein iFrame, mit dem Sie die Benutzeroberfläche anpassen können. Bedenken Sie jedoch, dass diese Apps in Besprechungen dunkles Design verwenden und schmal sind.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Besprechungserweiterungen auf dem Desktop anpassen können." border="false":::

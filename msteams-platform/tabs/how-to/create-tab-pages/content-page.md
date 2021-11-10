@@ -6,12 +6,12 @@ keywords: teams tabs group channel configurable static
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e85e643179bf3c1c8b9aa3951f560e1f85dad0bc
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: a3db1f535532fb00589cdff408e04d7addba234e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720313"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888384"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Erstellen einer Inhaltsseite für Ihre Registerkarte
 
@@ -21,7 +21,7 @@ Eine Inhaltsseite ist eine Webseite, die im Teams-Client gerendert wird. Diese s
 * Eine benutzerdefinierte Kanal- oder Gruppenregisterkarte: Die Inhaltsseite wird angezeigt, nachdem der Benutzer die Registerkarte im entsprechenden Kontext angeheftet und konfiguriert hat.
 * Ein [Aufgabenmodul:](~/task-modules-and-cards/what-are-task-modules.md)Sie können eine Inhaltsseite erstellen und als Webansicht in ein Aufgabenmodul einbetten. Die Seite wird innerhalb des modalen Popups gerendert.
 
-Dieser Artikel ist spezifisch für die Verwendung von Inhaltsseiten als Registerkarten. Der Großteil der hier aufgeführten Anleitungen gilt jedoch unabhängig davon, wie die Inhaltsseite für den Benutzer angezeigt wird.
+Dieser Artikel ist spezifisch für die Verwendung von Inhaltsseiten als Registerkarten. Der Großteil der hier aufgeführten Anleitungen gilt jedoch unabhängig davon, wie die Inhaltsseite dem Benutzer angezeigt wird.
 
 ## <a name="tab-content-and-design-guidelines"></a>Registerkarteninhalte und Entwurfsrichtlinien
 
@@ -83,7 +83,7 @@ Ab [Manifestschema v1.7](../../../resources/schema/manifest-schema.md)können Si
 > [!NOTE]
 > * Das Verhalten auf mobilen Clients kann nicht über die systemeigene Ladeindikatoreigenschaft konfiguriert werden. Mobile Clients zeigen diesen Indikator standardmäßig auf Inhaltsseiten und iframebasierten Aufgabenmodulen an. Dieser Indikator wird auf mobilen Geräten angezeigt, wenn eine Anforderung zum Abrufen von Inhalten gestellt wird, und wird geschlossen, sobald die Anforderung abgeschlossen ist.
 
-Wenn Sie `showLoadingIndicator : true`  in Ihrem App-Manifest angeben, müssen alle Registerkartenkonfigurationen, Inhalte, Entfernungsseiten und alle iframebasierten Aufgabenmodule die folgenden Schritte ausführen:
+Wenn Sie `showLoadingIndicator : true`  im App-Manifest angeben, müssen alle Registerkartenkonfiguration, Inhalte, Entfernungsseiten und alle iframebasierten Aufgabenmodule die folgenden Schritte ausführen:
 
 **So zeigen Sie die Ladeanzeige an**
 
@@ -91,7 +91,7 @@ Wenn Sie `showLoadingIndicator : true`  in Ihrem App-Manifest angeben, müssen a
 1. Aufrufen von `microsoftTeams.initialize();`
 1. Rufen Sie als **obligatorischen** Schritt `microsoftTeams.appInitialization.notifySuccess()` Teams auf, dass Ihre App erfolgreich geladen wurde. Teams blendet dann ggf. die Ladeanzeige aus. Wenn `notifySuccess`  die App nicht innerhalb von 30 Sekunden aufgerufen wird, wird davon ausgegangen, dass ein Timeout für Ihre App aufgetreten ist und ein Fehlerbildschirm mit einer Wiederholungsoption angezeigt wird.
 1. **Optional** können Sie, wenn Sie bereit sind, auf dem Bildschirm zu drucken und den restlichen Inhalt Der Anwendung zu laden, die Ladeanzeige manuell ausblenden, indem Sie `microsoftTeams.appInitialization.notifyAppLoaded();` aufrufen.
-1. Wenn ihre Anwendung nicht geladen werden kann, können Sie `microsoftTeams.appInitialization.notifyFailure(reason);` Teams mitteilen, dass ein Fehler aufgetreten ist. Dem Benutzer wird ein Fehlerbildschirm angezeigt. Der folgende Code enthält ein Beispiel für Anwendungsfehlerursachen:
+1. Wenn die Anwendung nicht geladen werden kann, können Sie `microsoftTeams.appInitialization.notifyFailure(reason);` Teams mitteilen, dass ein Fehler aufgetreten ist. Dem Benutzer wird ein Fehlerbildschirm angezeigt. Der folgende Code enthält ein Beispiel für Anwendungsfehlerursachen:
 
     ```typescript
     /* List of failure reasons */
@@ -102,13 +102,15 @@ Wenn Sie `showLoadingIndicator : true`  in Ihrem App-Manifest angeben, müssen a
     }
     ```
 
-## <a name="see-also"></a>Siehe auch
-
-* [registerkarten Teams](~/tabs/what-are-tabs.md)
-* [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
-* [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
-
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Erstellen einer Konfigurationsseite](~/tabs/how-to/create-tab-pages/configuration-page.md)
+
+## <a name="see-also"></a>Siehe auch
+ 
+* [registerkarten Teams](~/tabs/what-are-tabs.md)
+* [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
+* [Aufgeklappte Registerkartenverknüpfung und Phasenansicht](~/tabs/tabs-link-unfurling.md)
+* [Erstellen einer Konfigurationsseite](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Entwicklertools für Microsoft Teams-Registerkarten](~/tabs/how-to/developer-tools.md)

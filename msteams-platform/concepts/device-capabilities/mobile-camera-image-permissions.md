@@ -1,21 +1,21 @@
 ---
 title: Integrieren von Medienfunktionen
 author: Rajeshwari-v
-description: So verwenden Sie Teams JavaScript-Client-SDK, um Medienfunktionen zu aktivieren
-keywords: Systemeigene Geräteberechtigungsmedien für Kamerabildmikrofonfunktionen
+description: Erfahren Sie, wie Sie Teams JavaScript-Client-SDK verwenden, um Medienfunktionen mithilfe von Codebeispielen zu aktivieren.
+keywords: Kamerabild-Mikrofonfunktionen – Medien-API für systemeigene Geräteberechtigungen
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: f1c091195b85bab84d01ea88cc8234d2e415b9f7
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 2540383b0c546dea956cf8f534ba0669c0c16fa9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566120"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887734"
 ---
-# <a name="integrate-media-capabilities"></a>Integrieren von Medienfunktionen 
+# <a name="integrate-media-capabilities"></a>Integrieren von Medienfunktionen
 
-Sie können systemeigene Gerätefunktionen wie **Kamera** und **Mikrofon** in Ihre Teams App integrieren. Zur Integration können Sie [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)verwenden, das die Tools bereitstellt, die Ihre App für den Zugriff auf [die Geräteberechtigungen](native-device-permissions.md)eines Benutzers benötigt. Verwenden Sie geeignete Medienfunktions-APIs, um die Gerätefunktionen wie **Kamera** und **Mikrofon** in die Teams-Plattform in Ihre Microsoft Teams mobile App zu integrieren und eine umfassendere Oberfläche zu schaffen. 
+Sie können systemeigene Gerätefunktionen wie **Kamera** und **Mikrofon** in Ihre Teams App integrieren. Zur Integration können Sie [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)verwenden, das die Tools bereitstellt, die Ihre App für den Zugriff auf [die Geräteberechtigungen](native-device-permissions.md)eines Benutzers benötigt. Verwenden Sie geeignete Medienfunktions-APIs, um die Gerätefunktionen wie **Kamera** und **Mikrofon** in die Teams-Plattform in Ihre Microsoft Teams mobile App zu integrieren und eine umfassendere Oberfläche zu erstellen.
 
 ## <a name="advantage-of-integrating-media-capabilities"></a>Vorteile der Integration von Medienfunktionen
 
@@ -26,10 +26,10 @@ Für eine effektive Integration müssen Sie über ein gutes Verständnis von [Co
 
 Es ist wichtig, sich mit den [API-Antwortfehlern](#error-handling) vertraut zu machen, um die Fehler in Ihrer Teams-App zu behandeln.
 
-> [!NOTE] 
-> * Derzeit ist Microsoft Teams Unterstützung für Medienfunktionen nur für mobile Clients verfügbar.   
-> * Derzeit unterstützt Teams keine Geräteberechtigungen für Apps mit mehreren Fenstern, Registerkarten und den Besprechungsbereich.   
-> * Geräteberechtigungen unterscheiden sich im Browser. Weitere Informationen finden Sie unter [Berechtigungen für Browsergeräte.](browser-device-permissions.md) 
+> [!NOTE]
+> * Derzeit ist Microsoft Teams Unterstützung für Medienfunktionen nur für mobile Clients verfügbar.
+> * Derzeit unterstützt Teams keine Geräteberechtigungen für Apps mit mehreren Fenstern, Registerkarten und den besprechungsseitigen Bereich.
+> * Geräteberechtigungen unterscheiden sich im Browser. Weitere Informationen finden Sie unter [Berechtigungen für Browsergeräte.](browser-device-permissions.md)
 
 ## <a name="update-manifest"></a>Updatemanifest
 
@@ -48,7 +48,7 @@ Aktualisieren Sie ihre Teams App [manifest.json-Datei,](../../resources/schema/m
 
 Mit den [APIs selectMedia,](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) [getMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)und [viewImages](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true) können Sie systemeigene Medienfunktionen wie folgt verwenden:
 
-* Verwenden Sie das systemeigene **Mikrofon,** um Benutzern das Aufzeichnen von **Audiodaten** (Aufzeichnen von 10 Minuten Unterhaltung) vom Gerät aus zu ermöglichen.
+* Verwenden Sie das systemeigene **Mikrofon,** um Benutzern das Aufzeichnen von **Audiodaten** (Aufzeichnung von 10 Minuten Unterhaltung) vom Gerät aus zu ermöglichen.
 * Verwenden Sie das systemeigene **Kamerasteuerelement,** damit Benutzer **unterwegs Bilder erfassen und anfügen** können.
 * Verwenden Sie die **native Katalogunterstützung,** damit Benutzer **Gerätebilder** als Anlagen auswählen können.
 * Verwenden Sie das systemeigene **Bildanzeige-Steuerelement,** um **mehrere Bilder** gleichzeitig in der Vorschau anzuzeigen.
@@ -79,7 +79,7 @@ Die folgende Abbildung zeigt die Web-App-Erfahrung der `selectMedia` API für Mi
 
 ## <a name="error-handling"></a>Fehlerbehandlung
 
-Sie müssen sicherstellen, dass diese Fehler in Ihrer Teams App ordnungsgemäß behandelt werden. In der folgenden Tabelle sind die Fehlercodes und die Bedingungen aufgeführt, unter denen die Fehler generiert werden: 
+Sie müssen sicherstellen, dass diese Fehler in Ihrer Teams-App ordnungsgemäß behandelt werden. In der folgenden Tabelle sind die Fehlercodes und die Bedingungen aufgeführt, unter denen die Fehler generiert werden: 
 
 |Fehlercode |  Fehlername     | Bedingung|
 | --------- | --------------- | -------- |
@@ -251,9 +251,9 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 });
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Integrieren von QR- oder Strichcodescannern in Teams](qr-barcode-scanner-capability.md)
 * [Integrieren von Standortfunktionen in Teams](location-capability.md)
 * [Integrieren der Personenauswahl in Teams](people-picker-capability.md)
-
+* [Anforderungen und Überlegungen für von der Anwendung gehostete Medienbots](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)

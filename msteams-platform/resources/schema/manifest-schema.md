@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams-Manifestschema
-ms.openlocfilehash: 2b23c0378acd82d8f54f419a61699d65bd685709
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: e542378a45262312978d0d091439938907b974ac
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378891"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888286"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -534,7 +534,7 @@ Das Element ist ein Array (maximal ein Element) mit allen Elementen des Typs `ob
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-Ihre Messaging-Erweiterung muss einen oder mehrere Befehle mit maximal 10 Befehlen deklarieren. Jeder Befehl wird in Microsoft Teams als potenzielle Interaktion vom UI-basierten Einstiegspunkt angezeigt.
+Ihre Messaging-Erweiterung muss mindestens einen Befehl mit maximal 10 Befehlen deklarieren. Jeder Befehl wird in Microsoft Teams als potenzielle Interaktion vom UI-basierten Einstiegspunkt angezeigt.
 
 Jedes Befehlselement ist ein Objekt mit der folgenden Struktur:
 
@@ -591,9 +591,9 @@ Stellt die systemeigenen Features auf dem Gerät eines Benutzers bereit, auf die
 
 Eine Liste der gültigen Domänen für Websites, die von der App im Teams-Client geladen werden sollen. Domäneneinträge können Platzhalter enthalten, `*.example.com` z. B. . Die gültige Domäne entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com` . Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der Registerkartenkonfiguration navigiert, muss diese Domäne hier angegeben werden.
 
-Schließen Sie **nicht** die Domänen von Identitätsanbietern ein, die Sie in Ihrer App unterstützen möchten. Um sich beispielsweise mithilfe einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten. Sie dürfen jedoch keine accounts.google.com in `validDomains[]` einschließen.
+Schließen Sie **nicht** die Domänen von Identitätsanbietern ein, die Sie in Ihrer App unterstützen möchten. Um sich beispielsweise mit einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten. Sie dürfen jedoch keine accounts.google.com in `validDomains[]` einschließen.
 
-Teams Apps, die ihre eigenen SharePoint URLs benötigen, um ordnungsgemäß zu funktionieren, enthalten "{teamsitedomain}" in ihrer gültigen Domänenliste.
+Teams Apps, für die eigene SharePoint URLs erforderlich sind, um ordnungsgemäß zu funktionieren, enthält "{teamsitedomain}" in ihre gültige Domänenliste.
 
 > [!IMPORTANT]
 > Fügen Sie keine Domänen hinzu, die sich außerhalb Ihres Steuerelements befinden, entweder direkt oder über Platzhalter. Ist z. `yourapp.onmicrosoft.com` B. gültig, ist jedoch `*.onmicrosoft.com` ungültig.
@@ -723,7 +723,7 @@ Wenn ein Gruppeninstallationsbereich ausgewählt ist, wird die Standardfunktion 
 
 **Optional** – Array
 
-Der `configurableProperties` Block definiert die App-Eigenschaften, die Teams Administratoren anpassen können. Weitere Informationen finden Sie unter Aktivieren der [App-Anpassung.](~/concepts/design/enable-app-customization.md)
+Der `configurableProperties` Block definiert die App-Eigenschaften, die Teams Administratoren anpassen können. Weitere Informationen finden Sie unter Aktivieren der [App-Anpassung.](~/concepts/design/enable-app-customization.md) Das App-Anpassungsfeature wird in benutzerdefinierten oder branchenspezifischen Apps nicht unterstützt.
 
 > [!NOTE]
 > Es muss mindestens eine Eigenschaft definiert werden. Sie können maximal neun Eigenschaften in diesem Block definieren.
@@ -735,7 +735,7 @@ Sie können eine der folgenden Eigenschaften definieren:
 * `longDescription`: Die lange Beschreibung der App.
 * `smallImageUrl`: Das Gliederungssymbol der App.
 * `largeImageUrl`: Das Farbsymbol der App.
-* `accentColor`: Die zu verwendende Farbe und ein Hintergrund für Die Gliederungssymbole.
+* `accentColor`: Die zu verwendende Farbe und ein Hintergrund für Ihre Gliederungssymbole.
 * `developerUrl`: Die HTTPS-URL der Website des Entwicklers.
 * `privacyUrl`: Die HTTPS-URL der Datenschutzrichtlinie des Entwicklers.
 * `termsOfUseUrl`: Die HTTPS-URL der Nutzungsbedingungen des Entwicklers.
@@ -744,7 +744,8 @@ Sie können eine der folgenden Eigenschaften definieren:
 
 **Optional**-boolean
  
-Wenn `defaultBlockUntilAdminAction` die Eigenschaft auf **"true"** festgelegt ist, ist die App standardmäßig für Benutzer ausgeblendet, bis der Administrator sie zulässt. Bei Festlegung auf **"true"** ist die App für alle Mandanten und Endbenutzer ausgeblendet. Mandantenadministratoren können die App im Teams Admin Center sehen und Maßnahmen ergreifen, um die App zuzulassen oder zu blockieren. Der Standardwert ist **false**.
+Wenn `defaultBlockUntilAdminAction` die Eigenschaft auf **"true"** festgelegt ist, ist die App standardmäßig für Benutzer ausgeblendet, bis der Administrator sie zulässt. Bei Festlegung auf **"true"** ist die App für alle Mandanten und Endbenutzer ausgeblendet. Mandantenadministratoren können die App im Teams Admin Center sehen und Maßnahmen ergreifen, um die App zuzulassen oder zu blockieren. Der Standardwert ist **false**. Weitere Informationen zum Standardmäßigen App-Block finden Sie unter [Ausblenden Teams App, bis der Administrator dies genehmigt.](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)
+
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 
@@ -753,3 +754,11 @@ Wenn `defaultBlockUntilAdminAction` die Eigenschaft auf **"true"** festgelegt is
 **Maximale Größe** – 128 Zeichen
 
 Die Eigenschaft hängt von `defaultBlockUntilAdminAction` . Wenn `defaultBlockUntilAdminAction` die Eigenschaft auf **"true"** festgelegt ist, stellt die `publisherDocsUrl` HTTPS-URL zu einer Informationsseite bereit, auf der Administratoren Richtlinien abrufen können, bevor sie eine App zulassen, die standardmäßig blockiert wird.
+
+## <a name="see-also"></a>Siehe auch
+
+* [Grundlegendes zur Microsoft Teams App-Struktur](~/concepts/design/app-structure.md)
+* [Aktivieren der App-Anpassung](~/concepts/design/enable-app-customization.md)
+* [Lokalisieren IhrerApp](~/concepts/build-and-test/apps-localization.md)
+* [Integrieren von Medienfunktionen](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Schemareferenz für das Entwicklervorschaumanifest – Teams](~/resources/schema/manifest-schema-dev-preview.md)

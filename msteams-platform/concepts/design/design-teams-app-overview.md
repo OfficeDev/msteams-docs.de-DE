@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Microsoft Teams-Apps entwerfen. Zu den Ressou
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: f2e0043162081ba85e328182257d79161fb7875d
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 59af1528941b06d6a951ee8dd38e663c1b492624
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360468"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888139"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Entwerfen Ihrer Microsoft Teams-App
 
@@ -20,11 +20,11 @@ Unabhängig davon, ob Sie Designer, Produktmanager, Entwickler oder Entwickler m
 
 ## <a name="creating-a-cohesive-experience"></a>Erstellen einer zusammenhängenden Oberfläche
 
-Das Entwerfen einer Teams-App ähnelt dem Entwerfen einer herkömmlichen Web-App, unterscheidet sich jedoch auch etwas. Ein effektives Design hebt die einzigartigen Attribute Ihrer App hervor und passt sich natürlich mit Teams Features und Kontexten an.
+Das Entwerfen einer Teams-App ähnelt dem Entwerfen einer herkömmlichen Web-App, unterscheidet sich jedoch auch etwas. Ein effektives Design hebt die einzigartigen Attribute Ihrer App hervor und passt sich natürlich Teams Features und Kontexte an.
 
-Diese Richtlinien und Ressourcen können Ihnen dabei helfen, dieses Gleichgewicht zu finden. Sie wissen, was Sie tun müssen und was Sie beim Entwerfen Ihrer Teams-App vermeiden müssen (z. B. Navigation auf mehreren Ebenen auf einer Registerkarte).
+Diese Richtlinien und Ressourcen können Ihnen dabei helfen, dieses Gleichgewicht zu finden. Sie wissen, was Sie tun müssen und was Sie vermeiden müssen, wenn Sie Ihre Teams-App entwerfen (z. B. navigation auf einer Registerkarte mit mehreren Ebenen).
 
-## <a name="teams-app-design-principles"></a>Teams App-Entwurfsgrundsätze
+## <a name="teams-app-design-principles"></a>Teams App-Entwurfsprinzipien
 
 Teams Apps helfen Menschen, gemeinsam mehr zu erreichen. Verwenden Sie diese Prinzipien, um Ihr Design zu leiten.
 
@@ -129,7 +129,7 @@ Erfahren Sie, wie Benutzer Teams Apps hinzufügen, verwenden und verwalten, um d
 
 ## <a name="ui-templates"></a>Vorlagen für Benutzeroberflächen
 
-Erstellen Sie schnell komplexe, präzise Designs mit [Vorlagen für allgemeine Teams Anwendungsfälle und Workflows.](design-teams-app-ui-templates.md)
+Erstellen Sie schnell komplexe, präzise Designs mit [Vorlagen für häufige Teams Anwendungsfälle und Workflows.](design-teams-app-ui-templates.md)
 
 ## <a name="basic-ui-components"></a>Grundlegende Benutzeroberflächenkomponenten
 
@@ -165,7 +165,7 @@ Sie können eine Beispiel-App hochladen, um zu sehen, wie Apps im Teams-Client a
 > [!div class="nextstepaction"]
 > [Abrufen der Beispiel-App (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
-## <a name="other-resources"></a>Sonstige Ressourcen
+## <a name="other-resources"></a>Weitere Ressourcen
 
 Um mehr zu erfahren, probieren Sie eine der folgenden Ressourcen aus:
 
@@ -182,3 +182,10 @@ Entwerfen Sie adaptive Karten in unserem webbasierten Tool.
 
 > [!div class="nextstepaction"]
 > [Designer für adaptive Karten testen](https://adaptivecards.io/designer/)
+
+## <a name="see-also"></a>Siehe auch
+
+* [Voraussetzungen und API-Verweise für Apps in Teams-Besprechungen](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)
+* [Entwerfen Ihres Microsoft Teams-Bots](~/bots/design/bots.md)
+* [Erstellen eines virtuellen Assistenten](~/samples/virtual-assistant.md)
+* [Entwerfen von Aufgabenmodulen für Ihre Microsoft Teams-App](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)

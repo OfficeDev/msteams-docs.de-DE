@@ -1,15 +1,15 @@
 ---
 title: Optimieren eines Bots mit Ratenbegrenzung in Teams
-description: Begrenzung der Raten und bewährte Methoden in Microsoft Teams
+description: In codebeispielen erfahren Sie mehr über die Handhabung der Ratengrenze für Bots mit pro Bot-pro-Thread-Limit und pro Grenzwert für alle Bots. Darüber hinaus lernen Sie, die Best Practices in Microsoft Teams zu begrenzen.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams-Bots – Begrenzung der Raten
-ms.openlocfilehash: f1e874c5e3db572c5f3111f0a5e6f8a4c6f3d87d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 1be6377a6d7497b4f1b53f034eb631547dcf4a5c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156345"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889293"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimieren eines Bots mit Ratenbegrenzung in Teams
 
@@ -125,7 +125,7 @@ Der Grenzwert pro Bot und Thread steuert den Datenverkehr, den ein Bot in einer 
 >[!NOTE]
 > * Das Threadlimit von 3600 Sekunden und 1800 Vorgängen gilt nur, wenn mehrere Bot-Nachrichten an einen einzelnen Benutzer gesendet werden. 
 > * Das globale Limit pro App und Mandant beträgt 50 Anforderungen pro Sekunde (RPS). Daher darf die Gesamtzahl der Botnachrichten pro Sekunde das Threadlimit nicht überschreiten.
-> * Das Teilen von Nachrichten auf Dienstebene führt zu höher als erwarteten RPS. Wenn Sie sich Sorgen machen, die Grenzwerte zu erreichen, müssen Sie die [Backoff-Strategie](#backoff-example)implementieren. Die in diesem Abschnitt angegebenen Werte dienen nur der Schätzung.
+> * Das Teilen von Nachrichten auf Dienstebene führt zu einem höheren RPS als erwartet. Wenn Sie sich Sorgen machen, die Grenzwerte zu erreichen, müssen Sie die [Backoff-Strategie](#backoff-example)implementieren. Die in diesem Abschnitt angegebenen Werte dienen nur der Schätzung.
 
 Die folgende Tabelle enthält die Grenzwerte pro Bot und Thread:
 
@@ -140,11 +140,11 @@ Die folgende Tabelle enthält die Grenzwerte pro Bot und Thread:
 | Unterhaltung erstellen | 30 | 60 |
 | Unterhaltung erstellen | 3600 | 1800 |
 | Abrufen von Unterhaltungsmitgliedern| 1 | 14  |
-| Abrufen von Unterhaltungsmitgliedern| 2 | 16  |
+| Abrufen von Unterhaltungsmitgliedern| 2 | 16 |
 | Abrufen von Unterhaltungsmitgliedern| 30 | 120 |
 | Abrufen von Unterhaltungsmitgliedern| 3600 | 3600 |
 | Unterhaltungen abrufen | 1 | 14  |
-| Unterhaltungen abrufen | 2 | 16  |
+| Unterhaltungen abrufen | 2 | 16 |
 | Unterhaltungen abrufen | 30 | 120 |
 | Unterhaltungen abrufen | 3600 | 3600 |
 
@@ -162,11 +162,11 @@ Die folgende Tabelle enthält den Grenzwert pro Thread für alle Bots:
 | Szenario | Zeitraum in Sekunden | Maximal zulässige Vorgänge |
 | --- | --- | --- |
 | An Unterhaltung senden | 1 | 14  |
-| An Unterhaltung senden | 2 | 16  |
+| An Unterhaltung senden | 2 | 16 |
 | Unterhaltung erstellen | 1 | 14  |
-| Unterhaltung erstellen | 2 | 16  |
+| Unterhaltung erstellen | 2 | 16 |
 | Unterhaltung erstellen| 1 | 14  |
-| Unterhaltung erstellen| 2 | 16  |
+| Unterhaltung erstellen| 2 | 16 |
 | Abrufen von Unterhaltungsmitgliedern| 1 | 28 |
 | Abrufen von Unterhaltungsmitgliedern| 2 | 32 |
 | Unterhaltungen abrufen | 1 | 28 |
@@ -176,4 +176,3 @@ Die folgende Tabelle enthält den Grenzwert pro Thread für alle Bots:
 
 > [!div class="nextstepaction"]
 > [Anrufe und Besprechungsbots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
-

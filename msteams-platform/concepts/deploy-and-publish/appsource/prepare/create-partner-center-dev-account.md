@@ -1,16 +1,16 @@
 ---
 title: Erstellen Ihres Partner Center-Entwicklerkontos
-description: Um Ihre App im Microsoft Teams Store zu veröffentlichen, benötigen Sie ein Partner Center-Entwicklerkonto.
+description: Häufig gestellte Fragen zum Erstellen eines Partner Center-Entwicklerkontos für die Veröffentlichung Ihrer App im Microsoft Teams Store.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 9a650326be832a5961a45ac4b7e418f29d073ea0
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a6570c2f3a6a054457ff3f64a65ae4c2398db93a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156817"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889419"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Erstellen eines Partner Center-Entwicklerkontos
 
@@ -95,7 +95,7 @@ Weitere Informationen finden Sie unter [Verwalten von Kontoeinstellungen und Pro
 
 <summary><b>Warum wird die Meldung "Dieses Konto ist nicht veröffentlichungsberechtigt" angezeigt, wenn ich versuche, meine App zu übermitteln?</b></summary>
 
-Sie haben diese Fehlermeldung erhalten, da ihr [Kontoüberprüfungsstatus](/partner-center/verification-responses) aussteht. Überprüfen Sie Ihren Status im Partner [Center-Dashboard.](https://partner.microsoft.com/dashboard) Wählen Sie das **Zahnradsymbol Einstellungen** aus, und wählen Sie **"Entwicklereinstellungen > Konto > Kontoeinstellungen"** aus.
+Sie haben diese Fehlermeldung erhalten, da ihr [Kontoüberprüfungsstatus](/partner-center/verification-responses) aussteht. Überprüfen Sie Ihren Status im Partner [Center-Dashboard.](https://partner.microsoft.com/dashboard) Wählen Sie das **Zahnradsymbol Einstellungen** aus, und wählen Sie **die Entwicklereinstellungen > Konto > Kontoeinstellungen** aus.
 
 ![Partner Center-Überprüfungsstatus](~/assets/images/partner-center-verification-status.png)
 
@@ -121,7 +121,7 @@ Nach Abschluss des Überprüfungsprozesses ändert sich der Status Ihrer Registr
 
 <summary><b>Mein Kontoüberprüfungsstatus hat sich nicht über den E-Mail-Besitz hinaus entwickelt. Wie sollte ich fortfahren?</b></summary>
 
-Während der Überprüfung des **E-Mail-Besitzes** wird eine Überprüfungs-E-Mail an den primären Kontakt gesendet. Überprüfen Sie den Posteingang Ihres primären Kontakts auf eine E-Mail von **maccount@microsoft.com** mit der erforderlichen **Betreffzeile": Überprüfen Sie Ihr E-Mail-Konto bei Microsoft,** und schließen Sie den E-Mail-Überprüfungsprozess ab. Die Überprüfungs-E-Mail wird an die Adresse gesendet, die in den Einstellungen Ihres Partner Center-Kontos aufgeführt ist.
+Während der Überprüfung des **E-Mail-Besitzes** wird eine Überprüfungs-E-Mail an den primären Kontakt gesendet. Überprüfen Sie den Posteingang Ihres primären Kontakts auf eine E-Mail von **maccount@microsoft.com** mit der **betreffzeile Aktion, die erforderlich ist: Überprüfen Sie Ihr E-Mail-Konto bei Microsoft,** und schließen Sie den E-Mail-Überprüfungsprozess ab. Die Überprüfungs-E-Mail wird an die Adresse gesendet, die in den Einstellungen Ihres Partner Center-Kontos aufgeführt ist.
 
 Beachten Sie Folgendes zum E-Mail-Überprüfungsprozess:
 
@@ -153,7 +153,7 @@ Versuchen Sie, das Problem durch folgende Maßnahme zu beheben:
 * Löschen Sie den Browsercache, wechseln Sie zu Ihrem Partner Center-Kontodashboard, und wählen Sie **Bestätigungs-E-Mail erneut senden** aus.
 * Versuchen Sie, über einen anderen Browser auf den **E-Mail-Link** zur Erneuten Überprüfung zuzugreifen.
 * Arbeiten Sie mit Ihrer IT-Abteilung, um sicherzustellen, dass die Überprüfungs-E-Mails nicht von Ihrem E-Mail-Server blockiert werden.
-* Passen Sie den Spamfilter Ihres Servers so an, dass alle E-Mails von **maccount@microsoft.com** zugelassen oder sicher aufgelistet werden.
+* Passen Sie den Spamfilter Ihres Servers so an, dass alle E-Mails von maccount@microsoft.com zugelassen oder sicher aufgelistet **werden.**
 
 <br>
 

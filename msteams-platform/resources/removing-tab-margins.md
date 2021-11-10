@@ -6,12 +6,12 @@ keywords: Registerkarte zum Entfernen des Abstands von Rändern
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 79c4d887a028d9da722325985f9bbd62740e3781
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 5540354405c87d829245dfb01629aa8f06a5e93d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157004"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888076"
 ---
 # <a name="tab-margin-changes"></a>Änderungen am Registerkartenrand
 
@@ -46,7 +46,7 @@ Nein, Sie müssen Ihren eigenen Abstand oder Ränder links und rechts von allen 
 > [!IMPORTANT]
 > * Alle Registerkarten haben ihre Ränder entfernt: persönliche Registerkarten, (Gruppen-)Chat-Registerkarten, Besprechungsregisterkarten und Kanalregisterkarten.
 > * Die Änderung des Registerkartenrands gilt für alle Registerkarten. Es gibt keine Möglichkeit, die Änderung abzumelden oder abzuwählen. 
-> * Die Änderung von Registerkartenrändern kann sich auf Registerkarten auswirken, die auf Microsoft Teams angewiesen sind, um Ränder zu ihrer Benutzeroberfläche bereitzustellen.
+> * Die Änderung von Registerkartenrändern kann sich auf Registerkarten auswirken, die auf Microsoft Teams angewiesen sind, um Ränder zur Verfügung zu stellen, die ihre Benutzeroberfläche umgeben.
 
 ## <a name="see-also"></a>Siehe auch
 

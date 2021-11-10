@@ -5,12 +5,12 @@ ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 7648f0f4ae1a3a89e051bea45249855c41befd9d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 02ea6d9caf4acc43bcd9a361113baf7ce9f8464a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156333"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888188"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Hochladen Ihrer App in Microsoft Teams
 
@@ -21,7 +21,7 @@ Sie können Microsoft Teams Apps querladen, ohne sie in Ihrer Organisation oder 
 * Sie haben eine App für eine kleine Gruppe von Benutzern erstellt, z. B. Für Ihre Arbeitsgruppe.
 
 > [!IMPORTANT]
-> Sideloading-Apps sind derzeit in Government Community Cloud (GCC) verfügbar, aber nicht für GCC-High und das Verteidigungsministerium (Department of Defense, DOD).
+> Sideloading-Apps sind derzeit in Government Community Cloud (GCC) verfügbar, aber nicht für GCC-High und dod (Department of Defense).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -36,7 +36,7 @@ Sie können Ihre App in ein Team, einen Chat, eine Besprechung oder zur persönl
 1. Melden Sie sich mit Ihrem [Microsoft 365 Entwicklungskonto](~/build-your-first-app/build-and-run.md#prerequisites)beim Teams-Client an.
 1. Wählen Sie **"Apps"** aus, und wählen Sie **Hochladen einer benutzerdefinierten App** aus.
 1. Wählen Sie Ihr App-Paket .zip Datei aus. Ein Installationsdialogfeld wird angezeigt.
-:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot eines Beispiels für ein Dialogfeld für Teams App-Installation.":::
+:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot eines Beispiels für ein Dialogfeld für die App-Installation Teams.":::
 1. Fügen Sie Ihre App Teams hinzu.
 
 ## <a name="troubleshoot-upload-issues"></a>Behandeln von Problemen beim Hochladen
@@ -57,7 +57,7 @@ Sie müssen Ihre App nicht erneut querladen, wenn Sie Codeänderungen vornehmen 
 
 ## <a name="remove-your-app"></a>Entfernen Ihrer App
 
-Um Ihre App zu entfernen, klicken Sie in Teams mit der rechten Maustaste auf das App-Symbol, und wählen Sie **Deinstallieren aus.**
+Um Ihre App zu entfernen, klicken Sie mit der rechten Maustaste auf das App-Symbol in Teams, und wählen Sie **Deinstallieren aus.**
 
 > [!NOTE]
 > Persönliche Bot-Aktivitäten können nicht vollständig entfernt werden. Wenn Sie die App entfernen und erneut hinzufügen, wird eine neue Kommunikation mit dem Bot an die vorherige Unterhaltung mit ihr angefügt.
@@ -66,3 +66,8 @@ Um Ihre App zu entfernen, klicken Sie in Teams mit der rechten Maustaste auf das
 
 > [!div class="nextstepaction"]
 > [Verwenden Ihrer Teams-App](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)
+
+## <a name="see-also"></a>Siehe auch
+
+* [Konfigurieren der Standardinstallationsoptionen](~/concepts/deploy-and-publish/add-default-install-scope.md)
+* [Verwalten der veröffentlichten Microsoft Teams-App](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)

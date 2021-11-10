@@ -3,16 +3,16 @@ title: Verwenden von Aufgabenmodulen in Microsoft Teams Bots
 description: Verwenden von Aufgabenmodulen mit Microsoft Teams Bots, einschließlich Bot Framework-Karten, adaptiven Karten und Deep-Links.
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: Taskmodule Teams-Bots
-ms.openlocfilehash: a548f0d0ae3853f447ba55409bf9edbecced4e60
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: Taskmodule Teams Bots Deep Links adaptive Karte
+ms.openlocfilehash: c46b647ca9fa446db6ae51ae6d33dbabdef18296
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156883"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888307"
 ---
 # <a name="use-task-modules-from-bots"></a>Verwenden von Aufgabenmodulen aus Bots
-
+ 
 Aufgabenmodule können von Microsoft Teams Bots mithilfe von Schaltflächen auf adaptiven Karten und Bot Framework-Karten aufgerufen werden, die Hero, Miniaturansicht und Office 365 Connector sind. Aufgabenmodule sind häufig eine bessere Benutzererfahrung als mehrere Unterhaltungsschritte. Verfolgen Sie den Botstatus, und erlauben Sie dem Benutzer, die Sequenz zu unterbrechen oder abzubrechen.
 
 Es gibt zwei Möglichkeiten zum Aufrufen von Aufgabenmodulen:
@@ -62,7 +62,7 @@ Der nächste Abschnitt enthält Details zum Übermitteln des Ergebnisses eines A
 
 Wenn der Benutzer mit dem Aufgabenmodul fertig ist, ähnelt das Senden des Ergebnisses an den Bot der Funktionsweise mit Registerkarten. Weitere Informationen finden Sie im [Beispiel zum Übermitteln des Ergebnisses eines Aufgabenmoduls.](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module) Es gibt einige Unterschiede:
 
-* HTML oder JavaScript, d. `TaskInfo.url` h.: Nachdem Sie überprüft haben, was der Benutzer eingegeben hat, rufen Sie die SDK-Funktion auf, `microsoftTeams.tasks.submitTask()` die nachfolgend als aus `submitTask()` Lesbarkeitsgründen bezeichnet wird. Sie können `submitTask()` ohne Parameter aufrufen, wenn Teams das Aufgabenmodul schließen möchten, Aber Sie müssen ein Objekt oder eine Zeichenfolge an Ihre `submitHandler` übergeben. Übergeben Sie ihn als ersten Parameter, `result` . Teams aufruft, `submitHandler` `err` ist `null` und `result` ist das Objekt oder die Zeichenfolge, an die Sie übergeben `submitTask()` haben. Wenn Sie `submitTask()` mit einem Parameter `result` aufrufen, müssen Sie ein oder ein Array von `appId` `appId` Zeichenfolgen übergeben. Dadurch können Teams überprüfen, ob die App, die das Ergebnis sendet, dieselbe ist, die das Aufgabenmodul aufgerufen hat. Ihr Bot empfängt eine `task/submit` Nachricht einschließlich `result` . Weitere Informationen finden Sie unter [Nutzlast `task/fetch` und `task/submit` Nachrichten.](#payload-of-taskfetch-and-tasksubmit-messages)
+* HTML oder JavaScript, d. `TaskInfo.url` h.: Nachdem Sie überprüft haben, was der Benutzer eingegeben hat, rufen Sie die SDK-Funktion auf, `microsoftTeams.tasks.submitTask()` die nachfolgend als aus `submitTask()` Lesbarkeitsgründen bezeichnet wird. Sie können `submitTask()` ohne Parameter aufrufen, wenn Teams das Aufgabenmodul schließen möchten, Aber Sie müssen ein Objekt oder eine Zeichenfolge an Ihre `submitHandler` übergeben. Übergeben Sie ihn als ersten Parameter, `result` . Teams aufgerufen `submitHandler` `err` wird, ist `null` und ist das Objekt oder die `result` Zeichenfolge, das Bzw. die Sie übergeben `submitTask()` haben. Wenn Sie `submitTask()` mit einem Parameter `result` aufrufen, müssen Sie ein oder ein Array von `appId` `appId` Zeichenfolgen übergeben. Dadurch können Teams überprüfen, ob die App, die das Ergebnis sendet, dieselbe ist, die das Aufgabenmodul aufgerufen hat. Ihr Bot empfängt eine `task/submit` Nachricht einschließlich `result` . Weitere Informationen finden Sie unter [Nutzlast `task/fetch` und `task/submit` Nachrichten.](#payload-of-taskfetch-and-tasksubmit-messages)
 * Adaptive Karte, d. `TaskInfo.card` h.: Der vom Benutzer ausgefüllte Textkörper der adaptiven Karte wird über eine Nachricht an den Bot `task/submit` gesendet, wenn der Benutzer eine beliebige Schaltfläche auswählt. `Action.Submit`
 
 Der nächste Abschnitt enthält Details zur Flexibilität von `task/submit` .
@@ -73,7 +73,7 @@ Wenn der Benutzer mit einem Aufgabenmodul fertig ist, das von einem Bot aufgeruf
 
 | HTTP-Textkörperantwort                      | Szenario                                |
 | --------------------------------------- | --------------------------------------- |
-| Keine ignoriert die `task/submit` Nachricht | Die einfachste Antwort ist überhaupt keine Antwort. Ihr Bot muss nicht antworten, wenn der Benutzer mit dem Aufgabenmodul fertig ist. |
+| Keine ignoriert die `task/submit` Nachricht | Die einfachste Antwort ist gar keine Antwort. Ihr Bot muss nicht antworten, wenn der Benutzer mit dem Aufgabenmodul fertig ist. |
 | <pre>{<br/>  "task": {<br/>    "type": "message",<br/>    "value": "Message text"<br/>  }<br/>}</pre> | Teams zeigt den Wert `value` in einem Popup-Meldungsfeld an. |
 | <pre>{<br/>  "task": {<br/>    "type": "continue",<br/>    "value": &lt;TaskInfo object&gt;<br/>  }<br/>}</pre> | Ermöglicht ihnen das Verketten von Sequenzen adaptiver Karten in einem Assistenten oder einer mehrstufigen Oberfläche. |
 
@@ -94,7 +94,7 @@ In diesem Abschnitt wird das Schema definiert, was Ihr Bot empfängt, wenn er ei
 
 Der nächste Abschnitt enthält ein Beispiel für das Empfangen und Reagieren auf und Aufrufen von `task/fetch` `task/submit` Nachrichten in Node.js.
 
-## <a name="example-of-taskfetch-and-tasksubmit-invoke-messages-in-nodejs-and-c"></a>Beispiel für "Task/Fetch"- und "Task/Submit"-Aufrufnachrichten in Node.js und C #
+## <a name="example-of-taskfetch-and-tasksubmit-invoke-messages-in-nodejs-and-c"></a>Beispiel für Task-/Fetch- und Task/Submit-Aufrufnachrichten in Node.js und C #
 
 # <a name="nodejs"></a>[Node.js](#tab/nodejs)
 

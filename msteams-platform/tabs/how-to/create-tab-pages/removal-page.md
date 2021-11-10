@@ -6,12 +6,12 @@ keywords: Teams-Registerkarten Gruppenkanal konfigurierbare Löschung entfernen
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b519b4ff7251979f97affb0c567f0e9813142b6e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a94578a065d1514d74d33638485be26b27c77718
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156291"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889237"
 ---
 # <a name="create-a-removal-page"></a>Erstellen einer Seite zum Entfernen
 
@@ -19,11 +19,11 @@ Sie können die Benutzererfahrung erweitern und verbessern, indem Sie Entfernung
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Aktivieren der Neukonfiguration Ihrer Registerkarte nach der Installation
 
-Ihre **manifest.jsdefiniert** die Features und Funktionen Ihrer Registerkarte. Die `canUpdateConfiguration` Registerkarteninstanzeigenschaft verwendet einen booleschen Wert, der angibt, ob ein Benutzer die Registerkarte ändern oder neu konfigurieren kann, nachdem sie erstellt wurde. Die folgende Tabelle enthält die Eigenschaftendetails:
+**manifest.json** definiert die Features und Funktionen Ihrer Registerkarte. Die `canUpdateConfiguration` Registerkarteninstanzeigenschaft verwendet einen booleschen Wert, der angibt, ob ein Benutzer die Registerkarte ändern oder neu konfigurieren kann, nachdem sie erstellt wurde. Die folgende Tabelle enthält die Eigenschaftendetails:
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte vom Benutzer nach der Erstellung aktualisiert werden kann. Der Standardwert lautet `true`. |
+|`canUpdateConfiguration`|Boolean|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte vom Benutzer nach der Erstellung aktualisiert werden kann. Der Standardwert lautet `true`. |
 
 Wenn Ihre Registerkarte in einen Kanal- oder Gruppenchat hochgeladen wird, fügt Teams ein Dropdownmenü mit der rechten Maustaste für Ihre Registerkarte hinzu. Die verfügbaren Optionen werden durch die `canUpdateConfiguration` Einstellung bestimmt. Die folgende Tabelle enthält die Einstellungsdetails:
 
@@ -39,7 +39,7 @@ Die optionale Seite zum Entfernen ist eine HTML-Seite, die Sie hosten, und wird 
 
 ### <a name="register-a-remove-handler"></a>Registrieren eines Remove-Handlers
 
-Optional können Sie innerhalb der Logik für die Entfernungsseite den Ereignishandler aufrufen, `registerOnRemoveHandler((RemoveEvent) => {}` wenn der Benutzer eine vorhandene Registerkartenkonfiguration entfernt. Die Methode übernimmt die [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) Schnittstelle und führt den Code im Handler aus, wenn ein Benutzer versucht, Inhalte zu entfernen. Die Methode wird zum Ausführen von Bereinigungsvorgängen verwendet, z. B. zum Entfernen der zugrunde liegenden Ressource, die den Registerkarteninhalt angibt. Gleichzeitig kann nur ein Remove-Handler registriert werden.
+Optional können Sie innerhalb der Logik für die Entfernungsseite den Ereignishandler aufrufen, `registerOnRemoveHandler((RemoveEvent) => {}` wenn der Benutzer eine vorhandene Registerkartenkonfiguration entfernt. Die Methode übernimmt die [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) Schnittstelle und führt den Code im Handler aus, wenn ein Benutzer versucht, Inhalte zu entfernen. Die Methode wird verwendet, um Bereinigungsvorgänge auszuführen, z. B. das Entfernen der zugrunde liegenden Ressource, die den Registerkarteninhalt ansteuert. Gleichzeitig kann nur ein Remove-Handler registriert werden.
 
 Die `RemoveEvent` Schnittstelle beschreibt ein Objekt mit zwei Methoden:
 
@@ -87,9 +87,14 @@ Wenn ein Benutzer im Dropdownmenü der Registerkarte **"Entfernen"** auswählt, 
 Nachdem der Remove-Handler ausgeführt `removeEvent.notifySuccess()` wurde, oder `removeEvent.notifyFailure()` benachrichtigt Teams über das Ergebnis der Inhaltsentfernung.
 
 >[!NOTE]
-> * Um sicherzustellen, dass die Kontrolle eines autorisierten Benutzers über eine Registerkarte nicht unterdrückt wird, entfernt Teams die Registerkarte sowohl in Erfolgs- als auch in Fehlerfällen.
+> * Um sicherzustellen, dass die Kontrolle eines autorisierten Benutzers über eine Registerkarte nicht gehemmt wird, entfernt Teams die Registerkarte in Erfolgs- und Fehlerfällen.
 > * Teams aktiviert die Schaltfläche **"Entfernen"** nach fünf Sekunden, auch wenn die Registerkarte nicht aufgerufen `setValidityState()` wurde.
 > * Wenn der Benutzer **"Entfernen"** auswählt, entfernt Teams die Registerkarte nach 30 Sekunden, unabhängig davon, ob die Aktionen abgeschlossen wurden oder nicht.
+
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -97,8 +102,3 @@ Nachdem der Remove-Handler ausgeführt `removeEvent.notifySuccess()` wurde, oder
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
 * [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
 * [Erstellen einer Konfigurationsseite](~/tabs/how-to/create-tab-pages/configuration-page.md)
-
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)

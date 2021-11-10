@@ -1,16 +1,16 @@
 ---
 title: Hinzufügen einer Authentifizierung zu Ihrer Messaging-Erweiterung
 author: surbhigupta
-description: So fügen Sie einer Messaging-Erweiterung eine Authentifizierung hinzu
+description: Erfahren Sie, wie Sie einer Messaging-Erweiterung mithilfe von Codebeispielen und Beispielen eine Authentifizierung hinzufügen.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 85353608e062d30529d67184716f65c3e2de1863
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 2d8bcb6896d1a97e6350b397e725afad2e8961a9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719861"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889405"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Hinzufügen einer Authentifizierung zu Ihrer Messaging-Erweiterung
 
@@ -28,17 +28,17 @@ Jede Anforderung an Ihre Dienste enthält die Benutzer-ID, den Anzeigenamen des 
 },
 ```
 
-Die `id` und die Werte sind für den `aadObjectId` authentifizierten Teams Benutzer garantiert. Sie werden als Schlüssel verwendet, um die Anmeldeinformationen oder einen zwischengespeicherten Status in Ihrem Dienst nachzuschlagen. Darüber hinaus enthält jede Anforderung die Azure Active Directory Mandanten-ID, die verwendet wird, um die Organisation des Benutzers zu identifizieren. Falls zutreffend, enthält die Anforderung auch die Team-ID und Kanal-ID, von denen die Anforderung stammt.
+Die `id` und die Werte sind für den `aadObjectId` authentifizierten Teams Benutzer garantiert. Sie werden als Schlüssel verwendet, um die Anmeldeinformationen oder einen zwischengespeicherten Status in Ihrem Dienst nachzuschlagen. Darüber hinaus enthält jede Anforderung die Azure Active Directory Mandanten-ID, die verwendet wird, um die Organisation des Benutzers zu identifizieren. Falls zutreffend, enthält die Anforderung auch die Team-ID und kanal-ID, von denen die Anforderung stammt.
 
 ## <a name="authentication"></a>Authentifizierung
 
 Wenn Ihr Dienst eine Benutzerauthentifizierung erfordert, müssen sich die Benutzer anmelden, bevor sie die Messaging-Erweiterung verwenden. Die Authentifizierungsschritte ähneln denen eines Bots oder einer Registerkarte. Die Sequenz sieht wie folgt aus:
 
 1. Der Benutzer gibt eine Abfrage aus, oder die Standardabfrage wird automatisch an Ihren Dienst gesendet.
-1. Ihr Dienst überprüft anhand der Teams Benutzer-ID, ob der Benutzer authentifiziert ist.
+1. Ihr Dienst überprüft, ob der Benutzer authentifiziert ist, indem er die Teams Benutzer-ID überprüft.
 1. Wenn der Benutzer nicht authentifiziert ist, senden Sie eine `auth` Antwort mit einer vorgeschlagenen Aktion einschließlich der `openUrl` Authentifizierungs-URL zurück.
-1. Der Microsoft Teams Client startet ein Dialogfeld, in dem Ihre Webseite mithilfe der angegebenen Authentifizierungs-URL gehostet wird.
-1. Nachdem sich der Benutzer angemeldet hat, sollten Sie das Fenster schließen und einen **Authentifizierungscode** an den Teams Client senden.
+1. Der Microsoft Teams-Client startet ein Dialogfeld, in dem Ihre Webseite mithilfe der angegebenen Authentifizierungs-URL gehostet wird.
+1. Nachdem sich der Benutzer angemeldet hat, sollten Sie ihr Fenster schließen und einen **Authentifizierungscode** an den Teams Client senden.
 1. Der Teams-Client sendet dann die Abfrage erneut an Ihren Dienst, der den in Schritt 5 übergebenen Authentifizierungscode enthält.
 
 Ihr Dienst sollte überprüfen, ob der in Schritt 6 empfangene Authentifizierungscode mit dem aus Schritt 5 übereinstimmt. Dadurch wird sichergestellt, dass ein böswilliger Benutzer nicht versucht, den Anmeldefluss zu spoofen oder zu kompromittieren. Dadurch wird die Schleife "geschlossen", um die sichere Authentifizierungssequenz abzuschließen.
@@ -67,11 +67,11 @@ Um einen nicht authentifizierten Benutzer zur Anmeldung aufzufordern, antworten 
 ```
 
 > [!NOTE]
-> Damit die Anmeldeumgebung in einem Teams Popupfenster gehostet wird, muss sich der Domänenteil der URL in der Liste der gültigen Domänen Ihrer App befinden. Weitere Informationen finden Sie unter ["validDomains"](~/resources/schema/manifest-schema.md#validdomains) im Manifestschema.
+> Damit die Anmeldeumgebung in einem Teams Popupfenster gehostet werden kann, muss sich der Domänenteil der URL in der Liste der gültigen Domänen Ihrer App befinden. Weitere Informationen finden Sie unter ["validDomains"](~/resources/schema/manifest-schema.md#validdomains) im Manifestschema.
 
 ### <a name="start-the-sign-in-flow"></a>Starten des Anmeldeflusses
 
-Die Anmeldeerfahrung muss reaktionsfähig sein und in ein Popupfenster passen. Es sollte in das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client)integriert werden, das die Nachrichtenübergabe verwendet.
+Die Anmeldeerfahrung muss reaktionsfähig sein und in ein Popupfenster passen. Es sollte in das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client)integriert werden, das nachrichtenübergaben verwendet.
 
 Wie bei anderen eingebetteten Oberflächen, die in Microsoft Teams ausgeführt werden, muss Ihr Code innerhalb des Fensters zuerst aufgerufen `microsoftTeams.initialize()` werden. Wenn Ihr Code einen OAuth-Fluss durchführt, können Sie die Teams Benutzer-ID an Ihr Fenster übergeben, das sie dann an die OAuth-Anmelde-URL übergibt.
 
@@ -138,4 +138,6 @@ An diesem Punkt wird das Fenster geschlossen, und das Steuerelement wird an den 
 |----------------|-----------------|--------------|----------------|
 |Messaging-Erweiterungen – Authentifizierung und Konfiguration | Eine Messaging-Erweiterung, die über eine Konfigurationsseite verfügt, Suchanforderungen akzeptiert und Ergebnisse zurückgibt, nachdem sich der Benutzer angemeldet hat. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
- 
+## <a name="see-also"></a>Siehe auch
+
+[SSO-Unterstützung (Single Sign-On) für Messaging-Erweiterungen](~/messaging-extensions/how-to/enable-sso-auth-me.md)

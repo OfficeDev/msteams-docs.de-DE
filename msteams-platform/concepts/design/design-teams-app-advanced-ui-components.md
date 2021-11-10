@@ -1,20 +1,20 @@
 ---
 title: Entwerfen Ihrer App mit erweiterten UI-Komponenten
 author: heath-hamilton
-description: Erfahren Sie mehr über die UI-Komponenten, die in Teams verwendet werden.
+description: Erfahren Sie mehr über die Teams UI-Komponenten, z. B. Breadcrumbs, Benachrichtigungsleiste, Phasenansicht sowie relevante Anwendungsfälle.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 2e35b83e66e26155b847ad7cb914c1970397676b
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: d42205ff7d62d1c65956baed4f7841c8fe70b2e5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719847"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889258"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Entwerfen Ihrer Microsoft Teams-App mit erweiterten UI-Komponenten
 
-Die folgenden Komponenten sind eine Kombination aus [einfachen UI-Komponenten,](~/concepts/design/design-teams-app-basic-ui-components.md) die Sie für allgemeine Teams Entwurfssituationen wie navigation verwenden können.
+Die folgenden Komponenten sind eine Kombination aus [grundlegenden UI-Komponenten,](~/concepts/design/design-teams-app-basic-ui-components.md) die Sie für allgemeine Teams Entwurfssituationen wie navigation verwenden können.
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
@@ -46,7 +46,7 @@ Verwenden Sie die linke Navigationsleiste, um mehrere Seiten in Ihrer Teams Regi
 
 ### <a name="top-use-cases"></a>Häufigste Anwendungsfälle
 
-* Durchsuchen Sie mehrere Seiten auf einer Teams Registerkarte.
+* Durchsuchen Sie mehrere Seiten innerhalb einer Teams Registerkarte.
 * Teilen Sie komplexe Apps auf mehrere Seiten auf.
 
 ### <a name="mobile"></a>Mobilgeräte

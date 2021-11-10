@@ -1,16 +1,16 @@
 ---
 title: Aktualisieren und Löschen von Nachrichten, die von Ihrem Bot gesendet wurden
 author: WashingtonKayaker
-description: Aktualisieren und Löschen von Nachrichten, die von Ihrem Microsoft Teams-Bot gesendet wurden
+description: Erfahren Sie, wie Sie Nachrichten, die von Ihrem Microsoft Teams Bot gesendet werden, in verschiedenen Umgebungen und mit REST-APIs mithilfe von Codebeispielen aktualisieren und löschen.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 2db2ad28da41fd464f82ce5836acc8202f118923
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b92eb5c566df1d23b0228a218afa546160a3bb91
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156339"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889342"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>Aktualisieren und Löschen von Nachrichten, die von Ihrem Bot gesendet wurden
 
@@ -112,7 +112,7 @@ await turn_context.update_activity(updated_activity)
 # <a name="rest-api"></a>[REST API](#tab/rest)
 
 > [!NOTE]
-> Sie können Teams Apps in einer beliebigen Webprogrammiertechnologie entwickeln und die [REST-APIs des Bot Connector-Diensts](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)direkt aufrufen. Dazu müssen Sie [Authentifizierungssicherheitsverfahren](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) mit Ihren API-Anforderungen implementieren.
+> Sie können Teams-Apps in jeder Webprogrammiertechnologie entwickeln und direkt die [REST-APIs des Bot-Konnektordiensts](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)aufrufen. Dazu müssen Sie [Authentifizierungssicherheitsverfahren](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) mit Ihren API-Anforderungen implementieren.
 
 Um eine vorhandene Aktivität in einer Unterhaltung zu aktualisieren, schließen Sie den `conversationId` und `activityId` in den Anforderungsendpunkt ein. Um dieses Szenario abzuschließen, müssen Sie die Aktivitäts-ID zwischenspeichern, die vom ursprünglichen Post-Aufruf zurückgegeben wird.
 
@@ -130,7 +130,7 @@ Nachdem Sie nun Karten aktualisiert haben, können Sie Nachrichten mithilfe des 
 
 ## <a name="delete-messages"></a>Löschen von Nachrichten
 
-Im Bot Framework hat jede Nachricht ihren eindeutigen Aktivitätsbezeichner. Nachrichten können mithilfe der Bot Framework-Methode gelöscht `DeleteActivity` werden.
+Im Bot Framework verfügt jede Nachricht über einen eindeutigen Aktivitätsbezeichner. Nachrichten können mithilfe der Bot Framework-Methode gelöscht `DeleteActivity` werden.
 
 # <a name="c"></a>[C#](#tab/dotnet)
 

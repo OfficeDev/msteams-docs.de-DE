@@ -1,23 +1,23 @@
 ---
 title: Integration von Standortfunktionen
 author: Rajeshwari-v
-description: So verwenden Sie Teams JavaScript-Client-SDK, um Standortfunktionen zu nutzen
+description: Erfahren Sie, wie Sie Teams JavaScript-Client-SDK verwenden, um Standortfunktionen mit Codeausschnitten und Beispielen zu nutzen.
 keywords: Systemeigene Geräteberechtigungen für Standortzuordnungsfunktionen
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 66cd0c4f1b0d095551db79f7ed928477124e326b
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: db86b2bf80bcc0f4f56c9998a573f0a7cbd1e9c3
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719791"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888440"
 ---
-# <a name="integrate-location-capabilities"></a>Integration von Standortfunktionen 
+# <a name="integrate-location-capabilities"></a>Integration von Standortfunktionen
 
-Sie können die Standortfunktionen des nativen Geräts in Ihre Teams-App integrieren.  
+Sie können die Standortfunktionen des systemeigenen Geräts in Ihre Teams-App integrieren.  
 
-Sie können [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)verwenden, das die Tools bereitstellt, die Ihre App für den Zugriff auf die [systemeigenen Gerätefunktionen](native-device-permissions.md)des Benutzers benötigt. Verwenden Sie die Standort-APIs, z. B. [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) und [showLocation,](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) um die Funktionen in Ihre App zu integrieren. 
+Sie können [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)verwenden, das die tools bereitstellt, die Ihre App für den Zugriff auf die [systemeigenen Gerätefunktionen](native-device-permissions.md)des Benutzers benötigt. Verwenden Sie die Standort-APIs, z. B. [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) und [showLocation,](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) um die Funktionen in Ihre App zu integrieren. 
 
 ## <a name="advantages-of-integrating-location-capabilities"></a>Vorteile der Integration von Standortfunktionen
 
@@ -34,7 +34,7 @@ Um Standortfunktionen zu integrieren, müssen Sie die App-Manifestdatei aktualis
 
 ## <a name="update-manifest"></a>Updatemanifest
 
-Aktualisieren Sie ihre Teams App [manifest.json-Datei,](../../resources/schema/manifest-schema.md#devicepermissions) indem Sie die `devicePermissions` Eigenschaft hinzufügen und `geolocation` angeben. Damit kann Ihre App die erforderlichen Berechtigungen von Benutzern anfordern, bevor sie mit der Verwendung der Standortfunktionen beginnen. Das Update für das App-Manifest lautet wie folgt:
+Aktualisieren Sie ihre Teams App [manifest.json-Datei,](../../resources/schema/manifest-schema.md#devicepermissions) indem Sie die Eigenschaft hinzufügen `devicePermissions` und `geolocation` angeben. Damit kann Ihre App die erforderlichen Berechtigungen von Benutzern anfordern, bevor sie mit der Verwendung der Standortfunktionen beginnen. Das Update für das App-Manifest lautet wie folgt:
 
 ``` json
 "devicePermissions": [
@@ -98,7 +98,7 @@ Sie müssen sicherstellen, dass diese Fehler in Ihrer Teams-App ordnungsgemäß 
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | Die API wird auf der aktuellen Plattform nicht unterstützt.|
 | **500** | INTERNAL_ERROR | Beim Ausführen des erforderlichen Vorgangs ist ein interner Fehler aufgetreten.|
-| **1000** | PERMISSION_DENIED |Der Benutzer hat standortbezogene Berechtigungen für die Teams App oder die Web-App verweigert.|
+| **1000** | PERMISSION_DENIED |Dem Benutzer wurden Standortberechtigungen für die Teams App oder die Web-App verweigert.|
 | **4000** | INVALID_ARGUMENTS | Die API wird mit falschen oder nicht ausreichenden obligatorischen Argumenten aufgerufen.|
 | **8000** | USER_ABORT |Der Benutzer hat den Vorgang abgebrochen.|
 | **9000** | OLD_PLATFORM | Der Benutzer befindet sich auf einem alten Plattformbuild, in dem die Implementierung der API nicht vorhanden ist. Das Upgrade des Builds sollte das Problem beheben.|

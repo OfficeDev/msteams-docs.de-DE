@@ -1,17 +1,17 @@
 ---
 title: Registerkarten für Unterhaltungen erstellen
 author: surbhigupta
-description: Erstellen eines Unterhaltungsunterunterhaltungschats für Ihre Kanalregisterkarten
+description: Erfahren Sie, wie Sie unterhaltungsunterhaltungschats für Ihre Kanalregisterkarten erstellen, um Unterhaltungen mithilfe von Codebeispielen zu verwalten.
 keywords: Kanal "Teams-Registerkarten" konfigurierbar
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: none
-ms.openlocfilehash: 7426ca8d994a9009b05e5a3eece05d4938f07f80
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 63f6310faa4bec78f246857cbd7c1368acee8edf
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720372"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889363"
 ---
 # <a name="create-conversational-tabs"></a>Registerkarten für Unterhaltungen erstellen
 
@@ -21,7 +21,7 @@ Unterhaltungsunterteilungen werden nur in Kanälen unterstützt. Sie können von
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Um Unterhaltungsunterhaltungen zu unterstützen, muss Ihre Registerkartenwebanwendung in der Lage sein, eine Zuordnung zwischen Untergeordneten ↔ Unterhaltungen in einer Back-End-Datenbank zu speichern. Die `conversationId` wird bereitgestellt, aber Sie müssen dies speichern `conversationId` und an Teams zurückgeben, damit Benutzer die Unterhaltung fortsetzen können.
+Um unterhaltungsbezogene Subentitäten zu unterstützen, muss Ihre Registerkartenwebanwendung in der Lage sein, eine Zuordnung zwischen Untergeordneten ↔ Unterhaltungen in einer Back-End-Datenbank zu speichern. Die `conversationId` wird bereitgestellt, aber Sie müssen dies speichern `conversationId` und an Teams zurückgeben, damit Benutzer die Unterhaltung fortsetzen können.
 
 ## <a name="start-a-new-conversation"></a>Starten einer neuen Unterhaltung
 
@@ -62,7 +62,7 @@ Das `conversationResponse` Objekt enthält Informationen zu der unterhaltung, di
 
 ## <a name="continue-a-conversation"></a>Unterhaltung fortsetzen
 
-Nachdem eine Unterhaltung gestartet wurde, müssen nachfolgende Aufrufe `openConversation()` erforderlich sein, dass Sie auch die gleichen Eingaben wie beim [Starten einer neuen Unterhaltung](#start-a-new-conversation)angeben, aber auch die **conversationId** einschließen. Der Unterhaltungsbereich wird für die Benutzer geöffnet, für die die entsprechende Unterhaltung angezeigt wird. Benutzer können neue oder eingehende Nachrichten in Echtzeit sehen.
+Nachdem eine Unterhaltung gestartet wurde, müssen nachfolgende Aufrufe `openConversation()` erforderlich sein, dass Sie auch die gleichen Eingaben wie beim [Starten einer neuen Unterhaltung](#start-a-new-conversation)bereitstellen, aber auch die **conversationId** einschließen. Der Unterhaltungsbereich wird für die Benutzer geöffnet, für die die entsprechende Unterhaltung angezeigt wird. Benutzer können neue oder eingehende Nachrichten in Echtzeit sehen.
 
 Die folgende Abbildung zeigt den Unterhaltungsbereich mit der entsprechenden Unterhaltung:
 
@@ -94,7 +94,12 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 | Beispielname | Beschreibung | C# |Node.js|
 |-------------|-------------|------|----|
-|Registerkarte "Unterhaltung erstellen"| Microsoft Teams Registerkarten-Beispiel-App zum Demonstrieren der Registerkarte "Unterhaltung erstellen". | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|Registerkarte "Unterhaltung erstellen"| Microsoft Teams Registerkarten-Beispiel-App zum Demonstrieren der Registerkarte "Unterhaltung erstellen". | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Änderungen am Registerkartenrand](~/resources/removing-tab-margins.md)
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -103,8 +108,3 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 * [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
 * [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
 * [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)
-
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Änderungen am Registerkartenrand](~/resources/removing-tab-margins.md)

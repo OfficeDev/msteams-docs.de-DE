@@ -5,12 +5,12 @@ description: Hinzufügen modaler Popup-Oberflächen zum Sammeln oder Anzeigen vo
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a82552f43456aa1ddee0b68f13a8c5435165ed64
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0b726712ccbf954238c5102afa81d8ed412217fe
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156751"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888300"
 ---
 # <a name="task-modules"></a>Aufgabenmodule
 
@@ -22,7 +22,7 @@ Mit Aufgabenmodulen können Sie modale Popupfunktionen in Ihrer Teams-Anwendung 
 
 Aufgabenmodule eignen sich zum Initiieren und Abschließen von Aufgaben oder zum Anzeigen umfangreicher Informationen, z. B. Videos oder Power Business Intelligence (BI)-Dashboards. Eine Popupoberfläche ist für Benutzer, die Aufgaben initiieren und ausführen, im Vergleich zu einer Registerkarte oder einer unterhaltungsbasierten Bot-Erfahrung oft natürlicher.
 
-Aufgabenmodule basieren auf der Grundlage Microsoft Teams Registerkarten. Sie sind im Wesentlichen eine Registerkarte in einem Popupfenster. Sie verwenden das gleiche SDK, wenn Sie also eine Registerkarte erstellt haben, sind Sie bereits mit dem Erstellen eines Aufgabenmoduls vertraut.
+Aufgabenmodule basieren auf der Grundlage von Microsoft Teams Registerkarten. Sie sind im Wesentlichen eine Registerkarte in einem Popupfenster. Sie verwenden das gleiche SDK, wenn Sie also eine Registerkarte erstellt haben, sind Sie bereits mit dem Erstellen eines Aufgabenmoduls vertraut.
 
 Aufgabenmodule können auf drei Arten aufgerufen werden:
 
@@ -50,11 +50,11 @@ Ein Aufgabenmodul enthält Folgendes, wie in der vorherigen Abbildung dargestell
 6. Wenn Sie eine adaptive Karte mithilfe der `card` Eigenschaft des [TaskInfo -Objekts](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) anzeigen, wird der Abstand für Sie hinzugefügt. Weitere Informationen finden Sie unter [Aufgabenmodul-CSS für HTML- oder JavaScript-Aufgabenmodule.](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules)
 7. Schaltflächen für adaptive Karten werden gerendert, nachdem Sie **"Registrieren"** ausgewählt haben. Wenn Sie Ihre eigene Seite verwenden, erstellen Sie Ihre eigenen Schaltflächen.
 
-## <a name="see-also"></a>Siehe auch
-
-[Karten](~/task-modules-and-cards/what-are-cards.md)
-
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Aufrufen und Schließen von Aufgabenmodulen](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Karten](~/task-modules-and-cards/what-are-cards.md)

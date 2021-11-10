@@ -1,14 +1,14 @@
 ---
 title: Übersicht über universelle Aktionen für adaptive Karten
-description: Eine kurze Übersicht über universelle Aktionen für adaptive Karten.
+description: Eine kurze Übersicht über universelle Aktionen für adaptive Karten, z. B. benutzerspezifische Ansichten, sequenzielle Workflowunterstützung und vieles mehr für Desktop- und mobile Umgebungen
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: ba957456e2926e11b021f6a2577706cef7fb5ad7
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: c294e235074bd6a2c9ae148c20e355a9c86325c5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475713"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889356"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Universal-Aktionen für adaptive Karten
 
@@ -34,7 +34,7 @@ Universelle Aktionen für adaptive Karten verbessern die Benutzererfahrung, inde
 
 Vor den universellen Aktionen für adaptive Karten haben verschiedene Hosts wie folgt unterschiedliche Aktionsmodelle bereitgestellt:
 
-* Teams oder bots verwendet `Action.Submit` , ein Ansatz, der das tatsächliche Kommunikationsmodell zum zugrunde liegenden Kanal zurücksetzt.
+* Teams oder bots verwendet `Action.Submit` , ein Ansatz, der das eigentliche Kommunikationsmodell auf den zugrunde liegenden Kanal zurücksetzt.
 * Outlook `Action.Http` für die Kommunikation mit dem Back-End-Dienst verwendet, der explizit in der Nutzlast der adaptiven Karte angegeben ist.
 
 Die folgende Abbildung zeigt das aktuelle inkonsistente Aktionsmodell:
@@ -57,7 +57,7 @@ Die folgende Abbildung zeigt die universellen Aktionen für adaptive Karten für
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Gleiche Karte für Teams und Outlook":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Dieselbe Karte für Teams und Outlook":::
 
 * * *
 
@@ -67,7 +67,7 @@ Heute sieht jeder Benutzer im Teams Chat oder Kanal genau die gleichen Ansichts-
 
 Wenn Sie beispielsweise eine Karte für die Schadensberichterstattung in einem Chat oder Kanal senden, muss nur dem Benutzer, dem der Vorfall zugewiesen ist, eine Schaltfläche **"Auflösen"** angezeigt werden. Andererseits muss dem Ersteller des Vorfalls eine Schaltfläche **"Bearbeiten"** angezeigt werden, und alle anderen Benutzer dürfen nur Details des Vorfalls anzeigen können. Dies wird durch benutzerspezifische Ansichten ermöglicht, die von der Eigenschaft aktiviert `refresh` werden.
 
-Die folgende Abbildung zeigt ein Beispiel für eine Ticketing Messaging Extension (ME), bei der verschiedene Benutzer im Chat basierend auf der Anforderung unterschiedliche Aktionen angezeigt werden:
+Die folgende Abbildung zeigt ein Beispiel für eine Ticketing-Messaging-Erweiterung (ME), bei der verschiedenen Benutzern im Chat basierend auf der Anforderung unterschiedliche Aktionen angezeigt werden:
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
@@ -111,14 +111,14 @@ Adaptive Karten sind eine Kombination aus Inhalten, z. B. Text und Grafiken, und
 
 Sie können loslegen, indem Sie Szenarien mithilfe der [Schnellstartanleitung](Work-with-universal-actions-for-adaptive-cards.md) aktualisieren und universelle Aktionen nutzen.
 
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Mit Universal-Aktionen für adaptive Karten arbeiten](Work-with-universal-actions-for-adaptive-cards.md)
+
 ## <a name="see-also"></a>Siehe auch
 
 * [Was sind Bots?](~/bots/what-are-bots.md)
 * [Übersicht über adaptive Karten](~/task-modules-and-cards/what-are-cards.md)
 * [Adaptive Karten @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [Adaptive Karten @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
-
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Mit Universal-Aktionen für adaptive Karten arbeiten](Work-with-universal-actions-for-adaptive-cards.md)

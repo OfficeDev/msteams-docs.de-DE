@@ -1,20 +1,20 @@
 ---
 title: Automatische Authentifizierung
-description: Beschreibt die automatische Authentifizierung
+description: Beschreibt die automatische Authentifizierung, einmaliges Anmelden Azure Active Directory für Registerkarten
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Teams-Authentifizierungs-SSO – automatische AAD
-ms.openlocfilehash: fef5a52d836ce906e9fe835f29bcee1bef9088d7
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+keywords: Registerkarte "Teams-Authentifizierungs-SSO im hintergrund AAD"
+ms.openlocfilehash: 2b3981ce43f09cc05bb2cb3837a90c0a92ef6deb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291625"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888027"
 ---
 # <a name="silent-authentication"></a>Automatische Authentifizierung
 
 > [!NOTE]
-> Damit die Authentifizierung für Ihre Registerkarte auf mobilen Clients funktioniert, stellen Sie sicher, dass Sie mindestens 1.4.1-Version des Teams JavaScript SDK verwenden.
+> Damit die Authentifizierung für Ihre Registerkarte auf mobilen Clients funktioniert, stellen Sie sicher, dass Sie mindestens version 1.4.1 des Teams JavaScript SDK verwenden.
 
 Die automatische Authentifizierung in Azure Active Directory (AAD) minimiert, wie oft ein Benutzer seine Anmeldeinformationen eingibt, indem das Authentifizierungstoken im Hintergrund aktualisiert wird. Eine echte Unterstützung für einmaliges Anmelden finden Sie in der [SSO-Dokumentation.](~/tabs/how-to/authentication/auth-aad-sso.md)
 
@@ -27,7 +27,7 @@ Obwohl die ADAL.js-Bibliothek für AngularJS-Anwendungen optimiert ist, funktion
 
 ## <a name="how-silent-authentication-works"></a>Funktionsweise der automatischen Authentifizierung
 
-Die ADAL.js-Bibliothek erstellt einen ausgeblendeten iframe für den impliziten OAuth 2.0-Genehmigungsfluss. Die Bibliothek gibt jedoch `prompt=none` an, dass Azure AD niemals die Anmeldeseite anzeigt. Wenn eine Benutzerinteraktion erforderlich ist, weil sich der Benutzer anmelden oder Zugriff auf die Anwendung gewähren muss, gibt AAD sofort einen Fehler zurück, der ADAL.js An Ihre App meldet. An diesem Punkt kann Ihre App bei Bedarf eine Anmeldeschaltfläche anzeigen.
+Die ADAL.js Bibliothek erstellt einen ausgeblendeten iframe für den impliziten OAuth 2.0-Genehmigungsfluss. Die Bibliothek gibt jedoch `prompt=none` an, dass Azure AD niemals die Anmeldeseite anzeigt. Wenn eine Benutzerinteraktion erforderlich ist, da sich der Benutzer anmelden oder Zugriff auf die Anwendung gewähren muss, gibt AAD sofort einen Fehler zurück, der ADAL.js An Ihre App meldet. An diesem Punkt kann Ihre App bei Bedarf eine Anmeldeschaltfläche anzeigen.
 
 ## <a name="how-to-do-silent-authentication"></a>So führen Sie die automatische Authentifizierung durch
 
@@ -105,7 +105,7 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### <a name="process-the-return-value"></a>Verarbeiten des Rückgabewerts
 
-ADAL.js analysiert das Ergebnis aus AAD durch Aufrufen `AuthenticationContext.handleWindowCallback(hash)` der Rückrufseite für die Anmeldung.
+ADAL.js analysiert das Ergebnis aus AAD, indem `AuthenticationContext.handleWindowCallback(hash)` die Rückrufseite für die Anmeldung aufgerufen wird.
 
 Überprüfen Sie, ob Sie über einen gültigen Benutzer und Anruf verfügen, oder melden Sie `microsoftTeams.authentication.notifySuccess()` den Status ihrer `microsoftTeams.authentication.notifyFailure()` Hauptregisterkarten-Inhaltsseite.
 
@@ -135,3 +135,6 @@ localStorage.clear();
 window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
+## <a name="see-also"></a>Siehe auch
+
+[Konfigurieren von Identitätsanbietern für die Verwendung von AAD](~/concepts/authentication/configure-identity-provider.md)

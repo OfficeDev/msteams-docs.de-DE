@@ -1,16 +1,16 @@
 ---
 title: Hinzufügen von Testdaten zu Ihrem Microsoft 365 Testmandanten
-description: Einrichten Ihres Office 365 Entwicklerprogrammabonnements für erfolgreiche Tests von Microsoft Teams Apps
+description: Richten Sie Ihr Office 365-Entwicklerprogrammabonnement für erfolgreiche Tests von Microsoft Teams Apps mit Codeausschnitten ein.
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Testen von Teams des Entwicklerprogramms für Apps
 ms.date: 11/01/2019
-ms.openlocfilehash: fd5f5d1d372a5ddaaa48ed1e971268d28553d5f4
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f0a7c823d8f590fe1b207c6bb1037be6825b03a6
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156824"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888412"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Hinzufügen von Testdaten zu Ihrem Microsoft 365 Testmandanten
 
@@ -33,7 +33,7 @@ Standardmäßig können nur globale Administratoren oder Teams Dienstadministrat
 
 ## <a name="create-teams-and-channels-for-testing"></a>Erstellen von Teams und Kanälen für Tests
 
-1. Speichern Sie den folgenden Codeausschnitt als **.xml** Datei, und notieren Sie sich den Dateipfad. Dieser XML-Code definiert die Struktur des Teams und Kanals, der zusammen mit seinen Mitgliedern erstellt wird:
+1. Speichern Sie den folgenden Codeausschnitt als **.xml** Datei, und notieren Sie sich den Dateipfad. Dieser XML-Code definiert die Struktur des Teams und Kanals, das zusammen mit seinen Mitgliedern erstellt wird:
 
     ```xml
     <?xml version="1.0"?>

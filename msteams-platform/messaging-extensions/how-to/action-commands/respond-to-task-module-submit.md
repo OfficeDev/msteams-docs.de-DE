@@ -1,23 +1,23 @@
 ---
 title: Reagieren auf die Sendeaktion des Aufgabenmoduls
 author: surbhigupta
-description: Beschreibt, wie auf die Aufgabenmodul-Sendeaktion über einen Aktionsbefehl für Messaging-Erweiterungen reagiert wird
+description: Beschreibt, wie sie auf das Aufgabenmodul reagieren, um eine Aktion über einen Aktionsbefehl für messagingerweiterungen mit proaktiver Nachricht, einem anderen Aufgabenmodul, einem adaptiven Kartenbot und mehr mithilfe von Codebeispielen zu senden.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 92a7080d57b1ea6de3924da53a968d3fc960029a
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: ac74fb4536f5e7b36e40982cf13a7cf4edfa1644
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566386"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889412"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Reagieren auf die Sendeaktion des Aufgabenmoduls
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 In diesem Dokument erfahren Sie, wie Ihre App auf die Aktionsbefehle reagiert, z. B. das Aufgabenmodul des Benutzers, um eine Aktion zu übermitteln.
-Nachdem ein Benutzer das Aufgabenmodul übermittelt hat, empfängt Ihr Webdienst eine `composeExtension/submitAction` Aufrufnachricht mit der Befehls-ID und den Parameterwerten. Ihre App hat fünf Sekunden Zeit, um auf den Aufruf zu reagieren. Andernfalls erhält der Benutzer eine Fehlermeldung, **die die App nicht erreichen kann,** und jede Aufforderung wird vom Teams Client ignoriert.
+Nachdem ein Benutzer das Aufgabenmodul übermittelt hat, empfängt Ihr Webdienst eine `composeExtension/submitAction` Aufrufnachricht mit der Befehls-ID und den Parameterwerten. Ihre App hat fünf Sekunden Zeit, um auf den Aufruf zu reagieren. Andernfalls erhält der Benutzer eine Fehlermeldung, dass die App nicht erreicht werden **kann,** und jede Aufforderung wird vom Teams Client ignoriert.
 
 Sie haben die folgenden Optionen, um zu antworten:
 
@@ -203,9 +203,9 @@ Die Antwortmethode ist identisch mit [der Antwort auf das ursprüngliche `fetchT
 ## <a name="bot-response-with-adaptive-card"></a>Bot-Antwort mit adaptiver Karte
 
 > [!NOTE]
-> Voraussetzung für das Abrufen der Bot-Antwort mit einer adaptiven Karte ist, dass Sie das `bot` Objekt Ihrem App-Manifest hinzufügen und den erforderlichen Bereich für den Bot definieren müssen. Verwenden Sie die gleiche ID wie Ihre Messaging-Erweiterung für Ihren Bot.
+> Die Voraussetzung für das Abrufen der Bot-Antwort mit einer adaptiven Karte besteht darin, dass Sie das `bot` Objekt Ihrem App-Manifest hinzufügen und den erforderlichen Bereich für den Bot definieren müssen. Verwenden Sie die gleiche ID wie Ihre Messaging-Erweiterung für Ihren Bot.
  
-Sie können auch darauf reagieren, indem Sie `submitAction` eine Nachricht mit einer adaptiven Karte mit einem Bot in den Kanal einfügen. Der Benutzer kann eine Vorschau der Nachricht anzeigen, bevor er sie übermittelt. Dies ist nützlich in Szenarien, in denen Sie Informationen von den Benutzern sammeln, bevor Sie eine Adaptive Kartenantwort erstellen, oder wenn Sie die Karte aktualisieren, nachdem jemand damit interagiert hat. 
+Sie können auch darauf reagieren, indem Sie `submitAction` eine Nachricht mit einer adaptiven Karte mit einem Bot in den Kanal einfügen. Der Benutzer kann eine Vorschau der Nachricht anzeigen, bevor er sie übermittelt. Dies ist nützlich in Szenarien, in denen Sie Informationen von den Benutzern sammeln, bevor Sie eine Antwort für adaptive Karten erstellen, oder wenn Sie die Karte aktualisieren, nachdem jemand damit interagiert hat. 
 
 Das folgende Szenario zeigt, wie die App Polly eine Abfrage konfiguriert, ohne die Konfigurationsschritte in die Kanalunterhaltung aufzunehmen:
 
@@ -407,7 +407,7 @@ Weitere Informationen zum Reagieren auf das ursprüngliche `fetchTask` Ereignis 
 
 ### <a name="respond-to-botmessagepreview-send"></a>Antworten auf botMessagePreview-Senden
 
-Nachdem der Benutzer das **Senden** ausgewählt hat, erhalten Sie einen `composeExtension/submitAction` Aufruf mit `value.botMessagePreviewAction = send` . Ihr Webdienst muss eine proaktive Nachricht mit der adaptiven Karte erstellen und an die Unterhaltung senden sowie auf den Aufruf antworten.
+Nachdem der Benutzer **"Senden"** ausgewählt hat, erhalten Sie einen `composeExtension/submitAction` Aufruf mit `value.botMessagePreviewAction = send` . Ihr Webdienst muss eine proaktive Nachricht mit der adaptiven Karte erstellen und an die Unterhaltung senden sowie auf den Aufruf antworten.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -589,19 +589,22 @@ Der folgende Abschnitt enthält eine Beschreibung der Entitäten im `OnBehalfOf`
 |Feld|Typ|Beschreibung|
 |:---|:---|:---|
 |`itemId`|Ganzzahl|Beschreibt die Identifikation des Elements. Der Wert muss `0` .|
-|`mentionType`|Zeichenfolge|Beschreibt die Erwähnung einer "Person".|
-|`mri`|Zeichenfolge|Nachrichtenressourcenbezeichner (Message Resource Identifier, MRI) der Person, in deren Auftrag die Nachricht gesendet wird. Der Name des Absenders der Nachricht würde als " \<user\> bis \<bot name\> " angezeigt.|
-|`displayName`|Zeichenfolge|Name der Person. Wird als Fallback verwendet, wenn die Namensauflösung nicht verfügbar ist.|
+|`mentionType`|String|Beschreibt die Erwähnung einer "Person".|
+|`mri`|String|Nachrichtenressourcenbezeichner (Message Resource Identifier, MRI) der Person, in deren Auftrag die Nachricht gesendet wird. Der Name des Absenders der Nachricht würde als " \<user\> bis \<bot name\> " angezeigt.|
+|`displayName`|String|Name der Person. Wird als Fallback verwendet, wenn die Namensauflösung nicht verfügbar ist.|
   
 ## <a name="code-sample"></a>Codebeispiel
 
 | Beispielname           | Beschreibung | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams Messaging-Erweiterungsaktion| Beschreibt, wie Aktionsbefehle definiert, Aufgabenmodul erstellt und auf Aufgabenmodul-Sendeaktion reagiert wird. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams Messaging-Erweiterungssuche   |  Beschreibt, wie Suchbefehle definiert und auf Suchvorgänge reagiert wird.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams Suche nach Messaging-Erweiterungen   |  Beschreibt, wie Suchbefehle definiert und auf Suchvorgänge reagiert wird.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Definition von Suchbefehlen](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
+## <a name="see-also"></a>Siehe auch
+
+[Auf Suchbefehl antworten](~/messaging-extensions/how-to/search-commands/respond-to-search.md)

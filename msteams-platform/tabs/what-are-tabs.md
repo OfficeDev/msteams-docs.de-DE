@@ -5,16 +5,16 @@ description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Tea
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 6f18760670f81bea0e0c2bad6da9f15bd1982f0f
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: d84a0a293ad4c0de507dfc56078db4d214649b1d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719840"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887399"
 ---
 # <a name="microsoft-teams-tabs"></a>Registerkarten für Microsoft Teams
 
-Registerkarten sind Teams-fähige Webseiten, die in Microsoft Teams eingebettet sind. Es handelt sich um einfache HTML-<\> iframe-Tags, die auf Domänen verweisen, die im App-Manifest deklariert sind und als Teil eines Kanals innerhalb eines Teams, eines Gruppenchats oder einer persönlichen App für einen einzelnen Benutzer hinzugefügt werden können. Sie können benutzerdefinierte Registerkarten in Ihre App einschließen, um Ihre eigenen Webinhalte in Teams einzubetten, oder Teams-spezifische Funktionalität zu Ihren Webinhalten hinzufügen. Weitere Informationen finden Sie unter [Teams JavaScript-Client-SDK.](/javascript/api/overview/msteams-client)
+Registerkarten sind Teams-fähige Webseiten, die in Microsoft Teams eingebettet sind. Es handelt sich um einfache HTML-<\> iframe-Tags, die auf Domänen verweisen, die im App-Manifest deklariert sind und als Teil eines Kanals innerhalb eines Teams, eines Gruppenchats oder einer persönlichen App für einen einzelnen Benutzer hinzugefügt werden können. Sie können benutzerdefinierte Registerkarten in Ihre App einschließen, um Ihre eigenen Webinhalte in Teams einzubetten, oder Teams-spezifische Funktionen zu Ihren Webinhalten hinzufügen. Weitere Informationen finden Sie unter [Teams JavaScript-Client-SDK.](/javascript/api/overview/msteams-client)
 
 > [!IMPORTANT]
 > Derzeit sind benutzerdefinierte Registerkarten in Government Community Cloud (GCC), GCC-High und DOD (Department of Defense) verfügbar.
@@ -50,7 +50,7 @@ Die Registerkartenfeatures sind wie folgt:
 * SSO-Funktion (Single Sign-On), falls unterstützt.
 * Möglichkeit, Bots oder App-Benachrichtigungen für deep-Links zur Registerkarte oder zu einer Unterentität innerhalb des Diensts zu verwenden, z. B. eine einzelne Arbeitsaufgabe.
 * Die Möglichkeit, ein Aufgabenmodul über Links auf einer Registerkarte zu öffnen.
-* Wiederverwendung von SharePoint-Webparts auf der Registerkarte.
+* Wiederverwendung von SharePoint Webparts auf der Registerkarte.
 
 ## <a name="tabs-user-scenarios"></a>Registerkartenbenutzerszenarien
 
@@ -84,14 +84,15 @@ Sie können über mehrere Kanäle oder Gruppenregisterkarten und bis zu 16 pers�
 * [Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code](../toolkit/visual-studio-code-overview.md)
 * [Microsoft Teams-Toolkit-Erweiterung für Visual Studio](../toolkit/visual-studio-overview.md)
 
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Voraussetzungen](~/tabs/how-to/tab-requirements.md)
+
 ## <a name="see-also"></a>Siehe auch
 
 * [Geräteberechtigungen anfordern](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrieren von Medienfunktionen](../concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [Integrieren eines QR- oder Strichcodescanners](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integration von Standortfunktionen](../concepts/device-capabilities/location-capability.md)
-
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Voraussetzungen](~/tabs/how-to/tab-requirements.md)
+* [Registerkarten auf mobilen Geräten](design/tabs-mobile.md#tabs-on-mobile)

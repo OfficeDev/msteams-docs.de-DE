@@ -1,22 +1,23 @@
 ---
 title: Erstellen eines Befehlsmenüs für Ihren Bot
 author: surbhigupta
-description: So erstellen Sie ein Befehlsmenü für Ihren Microsoft Teams-Bot
+description: Erfahren Sie, wie Sie ein Befehlsmenü für Ihren Microsoft Teams Bot mit Codebeispielen erstellen.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: af987ae2fa538ffb785e782f191c674132440311
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: Befehlsmenü Unterhaltung zum Verfassen von Nachrichten @mention
+ms.openlocfilehash: bf9b6963b482a335175e5a9c75b6c928104ead26
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720106"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888237"
 ---
 # <a name="bot-command-menus"></a>Bot-Befehlsmenüs
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Um eine Reihe von Kernbefehlen zu definieren, auf die Ihr Bot antworten kann, können Sie ein Befehlsmenü mit einer Dropdownliste mit Befehlen für Ihren Bot hinzufügen. Die Liste der Befehle wird den Benutzern im Bereich zum Verfassen von Nachrichten angezeigt, wenn sie sich in Einer Unterhaltung mit Ihrem Bot befinden. Wählen Sie einen Befehl aus der Liste aus, um die Befehlszeichenfolge in das Feld zum Verfassen von Nachrichten einzufügen, und wählen Sie **"Senden"** aus.
+Um eine Reihe von Kernbefehlen zu definieren, auf die Ihr Bot reagieren kann, können Sie ein Befehlsmenü mit einer Dropdownliste von Befehlen für Ihren Bot hinzufügen. Die Liste der Befehle wird den Benutzern im Bereich zum Verfassen von Nachrichten angezeigt, wenn sie sich in Einer Unterhaltung mit Ihrem Bot befinden. Wählen Sie einen Befehl aus der Liste aus, um die Befehlszeichenfolge in das Feld zum Verfassen von Nachrichten einzufügen, und wählen Sie **"Senden"** aus.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
@@ -38,7 +39,7 @@ Eine Voraussetzung zum Erstellen eines Befehlsmenüs für Ihren Bot ist, dass Si
 
 **So erstellen Sie ein Befehlsmenü für Ihren Bot mit App Studio**
 
-1. Öffnen Sie Teams, und wählen Sie im linken Bereich **Apps** aus. Suchen Sie auf der Seite **"Apps"** nach **App Studio,** und wählen Sie **"Öffnen"** aus. 
+1. Öffnen Sie Teams, und wählen Sie im linken Bereich **Apps** aus. Suchen Sie auf der Seite **"Apps"** nach **App Studio,** und wählen Sie **"Öffnen"** aus.
    > [!NOTE]
    > Wenn Sie nicht über **App Studio** verfügen, können Sie es herunterladen. Weitere Informationen finden Sie unter [Installieren von App Studio.](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)
 
@@ -169,7 +170,7 @@ Bots in einer Gruppe oder einem Kanal reagieren nur, wenn sie in einer Nachricht
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
-Sie können den **\@ Mention-Teil** des Nachrichtentexts mithilfe einer statischen Methode analysieren, die mit dem Microsoft Bot Framework bereitgestellt wird. Es handelt sich um eine Methode der `Activity` Klasse mit dem Namen `RemoveRecipientMention` .
+Sie können den **\@ Erwähnungsteil** des Nachrichtentexts mithilfe einer statischen Methode analysieren, die mit dem Microsoft Bot Framework bereitgestellt wird. Es handelt sich um eine Methode der `Activity` Klasse mit dem Namen `RemoveRecipientMention` .
 
 Der C#-Code zum Analysieren des **\@ Erwähnungsteils** des Nachrichtentexts lautet wie folgt:
 
@@ -189,7 +190,7 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # <a name="python"></a>[Python](#tab/python)
 
-Sie können den **@Mention** Teil des Nachrichtentexts mithilfe einer statischen Methode analysieren, die im Bot Framework bereitgestellt wird. Es handelt sich um eine Methode der `TurnContext` Klasse mit dem Namen `remove_recipient_mention` .
+Sie können den **@Mention** Teil des Nachrichtentexts mithilfe einer statischen Methode analysieren, die mit bot Framework bereitgestellt wird. Es handelt sich um eine Methode der `TurnContext` Klasse mit dem Namen `remove_recipient_mention` .
 
 Der Python-Code zum Analysieren des **\@ Erwähnungsteils** des Nachrichtentexts lautet wie folgt:
 

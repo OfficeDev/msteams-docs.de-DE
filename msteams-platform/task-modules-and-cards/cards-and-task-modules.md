@@ -1,15 +1,15 @@
 ---
 title: Karten und Aufgabenmodule
-description: Karten und Aufgabenmodule.
+description: Erfahren Sie mehr über arten von Karten, die in Bots für Teams unterstützt werden, z. B. adaptive Karten, Hero-Karte, Miniaturansichtskarte und vieles mehr. Erfahren Sie mehr über Kartenaktionen und das Aufrufen von Aufgabenmodulen in Kanälen, Bots oder Deep-Links.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 89185baa9900f2c8dbef62ab9a2fc85242fc49a1
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: b154f82b1148760f3dbb6f1b92f914fa7222977d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719833"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888272"
 ---
 # <a name="cards-and-task-modules"></a>Karten und Aufgabenmodule
 
@@ -21,14 +21,16 @@ Die folgenden Arten von Karten werden in Bots für Teams unterstützt:
 
 * Adaptive Karte
 * Hero-Karte
-* Karte auflisten 
+* Karte auflisten
 * Office 365 Connectorkarte
 * Belegkarte
 * Anmeldekarte
 * Miniaturansichtskarte
 * Kartensammlungen
 
-Sie können Kartentext mithilfe einer Teilmenge von XML- oder HTML-Formatierungen oder Markdown formatieren, je nach Kartentyp. Sie können Kartenaktionen hinzufügen und darauf reagieren, die:
+Sie können Kartentext mithilfe einer Teilmenge von XML- oder HTML-Formatierungen oder Markdown formatieren, je nach Kartentyp.
+
+Sie können Kartenaktionen hinzufügen und darauf reagieren, die:
 * Öffnen einer URL
 * Senden von Nachrichten und Nutzlast an den Bot
 * Initiieren des OAuth-Flusses

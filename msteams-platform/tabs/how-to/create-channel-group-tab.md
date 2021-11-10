@@ -1,16 +1,16 @@
 ---
 title: Erstellen einer Kanal- oder Gruppenregisterkarte
 author: laujan
-description: Eine Schnellstartanleitung zum Erstellen eines Kanals und einer Gruppenregisterkarte mit dem Yeoman-Generator für Microsoft Teams.
+description: Eine Schnellstartanleitung zum Erstellen einer Kanal- und Gruppenregisterkarte mit dem Yeoman-Generator für Microsoft Teams, einschließlich der Überprüfung des Quellcodes mit Codebeispielen.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 5f63a5217ad5da5ec82ab5b3abb5b8f7142ecf1d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 94e26c1edbc6f8a92cad6c5b4b19c422cb09bc70
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156226"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887448"
 ---
 # <a name="create-a-channel-or-group-tab"></a>Erstellen einer Kanal- oder Gruppenregisterkarte
 
@@ -20,10 +20,10 @@ Sie können eine Kanal- oder Gruppenregisterkarte mit Node.js und yeoman Generat
 
 # <a name="nodejs"></a>[Node.js](#tab/nodejs)
 
-### <a name="create-a-custom-channel-and-group-tab-using-nodejs-and-the-yeoman-generator"></a>Erstellen einer benutzerdefinierten Kanal- und Gruppenregisterkarte mit Node.js und dem Yeoman-Generator
+### <a name="create-a-custom-channel-and-group-tab-using-nodejs-and-the-yeoman-generator"></a>Erstellen eines benutzerdefinierten Kanals und einer gruppenregisterkarte mit Node.js und dem Yeoman-Generator
 
 > [!NOTE]
-> Dieser Artikel folgt den Schritten, die im [Build Ihres ersten Microsoft Teams App-Wiki](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) im Microsoft OfficeDev GitHub Repository beschrieben sind.
+> Dieser Artikel folgt den Schritten, die im [Build Ihres ersten Microsoft Teams App-Wiki](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) im Microsoft OfficeDev GitHub-Repository beschrieben sind.
 
 Sie können eine benutzerdefinierte Kanal- oder Gruppenregisterkarte mithilfe des [Teams Yeoman-Generators](https://github.com/OfficeDev/generator-teams/)erstellen.
 
@@ -31,10 +31,10 @@ Sie können eine benutzerdefinierte Kanal- oder Gruppenregisterkarte mithilfe de
 
 Sie müssen die folgenden Voraussetzungen verstehen:
 
-- Sie benötigen einen Office 365 Mandanten und ein Team, für das das **Hochladen benutzerdefinierter Apps** zugelassen ist. Weitere Informationen finden Sie unter [Vorbereiten Ihres Office 365 Mandanten.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+- Sie müssen einen Office 365 Mandanten und ein Team mit aktivierter Option **"Hochladen benutzerdefinierter Apps zulassen"** konfiguriert haben. Weitere Informationen finden Sie unter [Vorbereiten Ihres Office 365 Mandanten.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
     > [!NOTE]
-    > Wenn Sie derzeit nicht über ein Office 365 Konto verfügen, können Sie sich über das Office 365-Entwicklerprogramm für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden. Willkommen [beim Office 365-Entwicklerprogramm.](/office/developer-program/microsoft-365-developer-program)
+    > Wenn Sie derzeit kein Office 365 Konto haben, können Sie sich über das Office 365-Entwicklerprogramm für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden. Willkommen [beim Office 365-Entwicklerprogramm.](/office/developer-program/microsoft-365-developer-program)
 
 Darüber hinaus muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung installiert sein:
 
@@ -66,7 +66,7 @@ Darüber hinaus muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung
     yo teams
     ```
 
-1. Geben Sie als Nächstes eine Reihe von Werten an, die in der **manifest.js** der Anwendung in der Datei verwendet werden:
+1. Geben Sie als Nächstes eine Reihe von Werten an, die in der **Manifest.json-Datei** Ihrer Anwendung verwendet werden:
 
     ![Screenshot zum Öffnen des Generators](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -112,7 +112,7 @@ Darüber hinaus muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung
 
    **Möchten Sie, dass persönliche Apps ohne eine Registerkarten-Kopfleiste dargestellt werden?**
 
-    Fügen Sie **keine** persönlichen Apps ein, die ohne Registerkartenkopfleiste gerendert werden sollen. Der Standardwert ist "Nein", geben Sie **"n"** ein.
+    Verwenden Sie **keine** persönlichen Apps, die ohne Registerkartenkopfleiste gerendert werden sollen. Der Standardwert ist "Nein", geben Sie **"n"** ein.
 
     **Möchten Sie testframework und erste Tests einbeziehen? (y/N)**
 
@@ -120,7 +120,7 @@ Darüber hinaus muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung
 
     **Möchten Sie Azure Applications Insights für Telemetrie verwenden? (y/N)**
 
-    Wählen **Sie, dass** Azure [Application Insights](/azure/azure-monitor/app/app-insights-overview)nicht eingeschlossen werden soll. Der Standardwert ist "nein". geben Sie **n** ein.
+    Wählen Sie **aus, dass** [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview)nicht eingeschlossen werden soll. Der Standardwert ist "nein". geben Sie **n** ein.
 
     **Standardregisterkartenname (max. 16 Zeichen)?**
 
@@ -136,7 +136,7 @@ Darüber hinaus muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung
 
     **Benötigen Sie Azure AD Single-Sign-On-Unterstützung für die Registerkarte?**
 
-    Wählen Sie aus, dass die Azure AD-Single Sign-On-Unterstützung für die Registerkarte **nicht** eingeschlossen werden soll. Der Standardwert ist "Ja", geben Sie **"n"** ein.
+    Wählen Sie, Azure AD Single Sign-On-Unterstützung für die Registerkarte **nicht** einzuschließen. Der Standardwert ist "Ja", geben Sie **"n"** ein.
 
     **Soll diese Registerkarte in SharePoint Online verfügbar sein? (J/n)**
 
@@ -175,9 +175,9 @@ Sie müssen über ein App-Paket verfügen, um Ihre Registerkarte in Teams zu tes
 
 - Ein **Vollfarbsymbol** mit einer Auflösung von 192 x 192 Pixeln.
 - Ein **transparentes Gliederungssymbol** mit einer Auflösung von 32 x 32 Pixeln.
-- Ein **manifest.jsfür** die Datei, die die Attribute Ihrer App angibt.
+- Eine **Manifest.json-Datei,** die die Attribute Ihrer App angibt.
 
-Das Paket wird über eine gulp-Aufgabe erstellt, die die manifest.json-Datei überprüft und den ZIP-Ordner im **./package-Verzeichnis** generiert. Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:
+Das Paket wird über eine gulp-Aufgabe erstellt, die die Datei manifest.json überprüft und den ZIP-Ordner im **Verzeichnis ./package** generiert. Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:
 
 ```bash
 gulp manifest
@@ -220,23 +220,23 @@ gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> Nachdem Ihre Registerkarte in Microsoft Teams hochgeladen und erfolgreich gespeichert wurde, können Sie sie im Registerkartenkatalog anzeigen, der Registerkartenleiste hinzufügen und damit interagieren, bis Ihre ngrok-Tunnelsitzung endet. Wenn Sie Ihre ngrok-Sitzung neu starten, müssen Sie Ihre App mit der neuen URL aktualisieren.
+> Nachdem Ihre Registerkarte in Microsoft Teams hochgeladen und erfolgreich gespeichert wurde, können Sie sie im Registerkartenkatalog anzeigen, sie der Registerkartenleiste hinzufügen und damit interagieren, bis Ihre ngrok-Tunnelsitzung endet. Wenn Sie Ihre ngrok-Sitzung neu starten, müssen Sie Ihre App mit der neuen URL aktualisieren.
 
 ### <a name="upload-your-application-to-teams"></a>Hochladen Der Anwendung Teams
 
-**So laden Sie Ihre Anwendung in Teams**
+**So laden Sie Ihre Anwendung in Teams hoch**
 
 1. Wechseln Sie zu Microsoft Teams. Wenn Sie die [webbasierte Version](https://teams.microsoft.com) verwenden, können Sie Ihren Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md)Ihres Browsers überprüfen.
-1. Wählen Sie in Ihren Teams im linken Bereich die Ellipsen &#x25CF;&#x25CF;&#x25CF; neben dem Team aus, das Sie zum Testen Ihrer Registerkarte verwenden, und wählen Sie **"Team verwalten"** aus.
-1. Wählen Sie im Hauptbereich in der Registerkartenleiste **Apps** aus, und wählen Sie **Hochladen eine benutzerdefinierte App** in der unteren rechten Ecke der Seite aus.
+1. Wählen Sie in Ihren Teams im linken Bereich die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; neben dem Team aus, das Sie zum Testen Ihrer Registerkarte verwenden, und wählen Sie **"Team verwalten"** aus.
+1. **Wählen** Sie im Hauptbereich in der Registerkartenleiste Apps aus, und wählen Sie Hochladen **eine benutzerdefinierte App** in der unteren rechten Ecke der Seite aus.
 1. Wechseln Sie zum Projektverzeichnis, navigieren Sie zum **Ordner "./package",** wählen Sie den ZIP-Ordner des App-Pakets aus, und wählen Sie **"Öffnen"** aus.
 
     ![Kanalregisterkarte hinzugefügt](../../assets/images/tab-images/channeltabadded.png)
 
 1. Wählen  Sie im Dialogfeld Hinzufügen die Option Hinzufügen aus. Ihre Registerkarte wird in Teams hochgeladen.
-1. Kehren Sie zu Ihrem Team zurück, wählen Sie den Kanal aus, in dem Sie die Registerkarte anzeigen möchten, wählen Sie ➕ aus der Registerkartenleiste aus, und wählen Sie Ihre Registerkarte im Katalog aus.
+1. Kehren Sie zu Ihrem Team zurück, wählen Sie den Kanal aus, in dem Sie die Registerkarte anzeigen möchten, wählen Sie ➕ aus der Registerkartenleiste und dann Ihre Registerkarte aus dem Katalog aus.
 1. Befolgen Sie die Anweisungen zum Hinzufügen einer Registerkarte. Es gibt ein benutzerdefiniertes Konfigurationsdialogfeld für Die Kanal- oder Gruppenregisterkarte.
-1. Wählen Sie **"Speichern"** aus, und Ihre Registerkarte wird der Registerkartenleiste des Kanals hinzugefügt.
+1. Wählen Sie **Speichern aus,** und Ihre Registerkarte wird der Registerkartenleiste des Kanals hinzugefügt.
 
     ![Registerkarte "Kanal" hochgeladen](../../assets/images/tab-images/channeltabuploaded.png)
 
@@ -250,12 +250,12 @@ Sie können eine benutzerdefinierte Kanal- oder Gruppenregisterkarte mit C# und 
 
 Sie müssen die folgenden Voraussetzungen verstehen:
 
-- Sie benötigen einen Office 365 Mandanten und ein Team, für das das **Hochladen benutzerdefinierter Apps** zugelassen ist. Weitere Informationen finden Sie unter [Vorbereiten Ihres Office 365 Mandanten.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+- Sie müssen einen Office 365 Mandanten und ein Team mit aktivierter Option **"Hochladen benutzerdefinierter Apps zulassen"** konfiguriert haben. Weitere Informationen finden Sie unter [Vorbereiten Ihres Office 365 Mandanten.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
     > [!NOTE]
     > Wenn Sie derzeit kein Microsoft 365 Konto haben, können Sie sich über das [Microsoft-Entwicklerprogramm](https://developer.microsoft.com/en-us/microsoft-365/dev-program)für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden.
 
-- Verwenden Sie App Studio, um Ihre Anwendung in Teams zu importieren. Um App Studio zu installieren, wählen Sie **Apps** ![ Store App in der ](~/assets/images/tab-images/storeApp.png) unteren linken Ecke der Teams-App aus, und suchen Sie nach **App Studio.** Nachdem Sie die Kachel gefunden haben, wählen Sie sie aus, und wählen Sie im Popupdialogfeld **"Hinzufügen"** aus, um sie zu installieren.
+- Verwenden Sie App Studio, um Ihre Anwendung in Teams zu importieren. Um App Studio zu installieren, wählen Sie **Apps** ![ Store App in der ](~/assets/images/tab-images/storeApp.png) unteren linken Ecke der Teams App aus, und suchen Sie nach **App Studio.** Nachdem Sie die Kachel gefunden haben, wählen Sie sie aus, und wählen Sie im Popupdialogfeld **"Hinzufügen"** aus, um sie zu installieren.
 
 Darüber hinaus muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung installiert sein:
 
@@ -320,13 +320,13 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
 - Ein **Vollfarbsymbol** mit einer Auflösung von 192 x 192 Pixeln.
 - Ein **transparentes Gliederungssymbol** mit einer Auflösung von 32 x 32 Pixeln.
-- Ein **manifest.jsfür** die Datei, die die Attribute Ihrer App angibt.
+- Eine **Manifest.json-Datei,** die die Attribute Ihrer App angibt.
 
 Diese Dateien müssen in einem App-Paket gezippt werden, um Ihre Registerkarte auf Teams hochzuladen. Wenn ein Benutzer die Registerkarte hinzufügt oder aktualisiert, lädt Microsoft Teams das `configurationUrl` angegebene Element in Ihrem Manifest, einbettet es in einen IFrame und rendert es auf der Registerkarte.
 
 #### <a name="csproj"></a>CSPROJ
 
-Klicken Sie im Fenster Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **"Bearbeiten Project Datei"** aus. Am Ende der Datei wird der folgende Code angezeigt, der Ihren ZIP-Ordner erstellt und aktualisiert, wenn die Anwendung erstellt wird:
+Klicken Sie im Fenster Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Project Datei bearbeiten** aus. Am Ende der Datei wird der folgende Code angezeigt, der Ihren ZIP-Ordner erstellt und aktualisiert, wenn die Anwendung erstellt wird:
 
 ```xml
 <PropertyGroup>
@@ -348,7 +348,7 @@ Klicken Sie im Fenster Visual Studio Projektmappen-Explorer mit der rechten Maus
 
 ### <a name="establish-a-secure-tunnel-to-your-tab-for-teams"></a>Einrichten eines sicheren Tunnels zu Ihrer Registerkarte für Teams
 
-Microsoft Teams ist ein cloudbasiertes Produkt und erfordert, dass Ihre Registerkarteninhalte über HTTPS-Endpunkte aus der Cloud verfügbar sind. Teams lässt kein lokales Hosting zu. Sie müssen Ihre Registerkarte entweder über eine öffentliche URL veröffentlichen oder einen Proxy verwenden, der Ihren lokalen Port für eine internetbasierte URL verfügbar macht.
+Microsoft Teams ist ein cloudbasiertes Produkt und erfordert, dass Ihre Registerkarteninhalte über HTTPS-Endpunkte aus der Cloud verfügbar sind. Teams lässt kein lokales Hosting zu. Sie müssen ihre Registerkarte entweder über eine öffentliche URL veröffentlichen oder einen Proxy verwenden, der Ihren lokalen Port für eine internetbasierte URL verfügbar macht.
 
 Verwenden Sie zum Testen Der Registerkarte [ngrok](https://ngrok.com/docs). Die Webendpunkte Ihres Servers sind verfügbar, während ngrok auf Ihrem Computer ausgeführt wird. In der kostenlosen Version von ngrok unterscheiden sich die URLs beim nächsten Start von ngrok, wenn Sie ngrok schließen.
 
@@ -368,7 +368,7 @@ Innerhalb von **Tab.cshtml** zeigt die Anwendung dem Benutzer zwei Optionsschalt
 
 #### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-Damit Die Registerkarte in Teams angezeigt werden kann, müssen Sie das **Microsoft Teams JavaScript-Client-SDK** und einen Aufruf nach `microsoftTeams.initialize()` dem Laden der Seite einschließen. So kommunizieren Ihre Registerkarte und der Teams-Client:
+Damit Ihre Registerkarte in Teams angezeigt werden kann, müssen Sie das **Microsoft Teams JavaScript-Client-SDK** und einen Aufruf nach `microsoftTeams.initialize()` dem Laden der Seite einschließen. So kommunizieren Ihre Registerkarte und der Teams-Client:
 
 Wechseln Sie zum **Freigegebenen** Ordner, öffnen **Sie _Layout.cshtml,** und fügen Sie dem Tag Folgendes `<head>` hinzu:
 
@@ -430,12 +430,12 @@ Wechseln Sie zum **Freigegebenen** Ordner, öffnen **Sie _Layout.cshtml,** und f
 1. Stellen Sie sicher, dass **ngrok** ausgeführt wird und ordnungsgemäß funktioniert, indem Sie Ihren Browser öffnen und über die ngrok-HTTPS-URL, die im Eingabeaufforderungsfenster bereitgestellt wurde, zur Inhaltsseite wechseln.
 
 > [!TIP]
-> Sie müssen ihre Anwendung sowohl in Visual Studio als auch in ngrok ausführen, um die in diesem Artikel beschriebenen Schritte auszuführen. Wenn Sie die Ausführung der Anwendung in Visual Studio beenden müssen, um daran zu arbeiten, **führen Sie ngrok weiter aus.** Beim Neustart in Visual Studio wird die Weiterleitung der Anwendungsanforderung überwacht und fortgesetzt. Wenn Sie den ngrok-Dienst neu starten müssen, wird eine neue URL zurückgegeben, und Sie müssen Ihre Anwendung mit der neuen URL aktualisieren.
+> Sie müssen ihre Anwendung sowohl in Visual Studio als auch in ngrok ausführen, um die in diesem Artikel beschriebenen Schritte auszuführen. Wenn Sie die Ausführung Ihrer Anwendung in Visual Studio beenden müssen, um daran zu arbeiten, **führen Sie ngrok weiter** aus. Sie überwacht und setzt das Weiterleiten der Anforderung Ihrer Anwendung fort, wenn sie in Visual Studio neu gestartet wird. Wenn Sie den ngrok-Dienst neu starten müssen, wird eine neue URL zurückgegeben, und Sie müssen Ihre Anwendung mit der neuen URL aktualisieren.
 
-### <a name="upload-your-tab-for-teams"></a>Hochladen Sie Ihre Registerkarte für Teams
+### <a name="upload-your-tab-for-teams"></a>Hochladen Ihrer Registerkarte für Teams
 
 > [!NOTE]
-> App Studio kann verwendet werden, um Ihre **manifest.jszu** bearbeiten und das fertige Paket in Teams hochzuladen. Sie können die **manifest.js** auch manuell bearbeiten. Stellen Sie in diesem Fall sicher, dass Sie die Lösung erneut erstellen, um die hochzuladende **tab.zipdatei** zu erstellen.
+> App Studio kann verwendet werden, um Ihre **Manifest.json-Datei** zu bearbeiten und das fertige Paket in Teams hochzuladen. Sie können die Datei **"manifest.json"** auch manuell bearbeiten. Stellen Sie in diesem Fall sicher, dass Sie die Lösung erneut erstellen, um die hochzuladende **tab.zipdatei** zu erstellen.
 
 **So laden Sie Ihre Registerkarte mit App Studio hoch**
 
@@ -449,7 +449,7 @@ Wechseln Sie zum **Freigegebenen** Ordner, öffnen **Sie _Layout.cshtml,** und f
     /bin/Debug/netcoreapp2.2/tab.zip
     ```
 
-1. Hochladen zu App Studio **tab.zip.**
+1. Hochladen **tab.zip** zu App Studio.
 
 #### <a name="update-your-app-package-with-manifest-editor"></a>Aktualisieren des App-Pakets mit dem Manifest-Editor
 
@@ -457,7 +457,7 @@ Nachdem Sie Das App-Paket in App Studio hochgeladen haben, müssen Sie es konfig
 
 Wählen Sie die Kachel für Ihre neu importierte Registerkarte im rechten Bereich der Willkommensseite des Manifest-Editors aus.
 
-Es gibt eine Liste der Schritte auf der linken Seite des Manifest-Editors und auf der rechten Seite eine Liste der Eigenschaften, die Werte für jeden dieser Schritte aufweisen müssen. Ein Großteil der Informationen wurde von Ihrem **manifest.js** bereitgestellt, es gibt jedoch Felder, die Sie aktualisieren müssen.
+Es gibt eine Liste der Schritte auf der linken Seite des Manifest-Editors und auf der rechten Seite eine Liste der Eigenschaften, die Werte für jeden dieser Schritte aufweisen müssen. Ein Großteil der Informationen wurde von **"manifest.json"** bereitgestellt, es gibt jedoch Felder, die Sie aktualisieren müssen.
 
 ##### <a name="details-app-details"></a>Details: App-Details
 
@@ -517,7 +517,7 @@ Sie können eine benutzerdefinierte Kanal- oder Gruppenregisterkarte mit C# und 
     > [!NOTE]
     > Wenn Sie derzeit kein Microsoft 365 Konto haben, können Sie sich über das [Microsoft-Entwicklerprogramm](https://developer.microsoft.com/en-us/microsoft-365/dev-program)für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden.
 
-- Verwenden Sie App Studio, um Ihre Anwendung in Teams zu importieren. Um App Studio zu installieren, wählen Sie **Apps** ![ Store App in der ](~/assets/images/tab-images/storeApp.png) unteren linken Ecke der Teams-App aus, und suchen Sie nach **App Studio.** Nachdem Sie die Kachel gefunden haben, wählen Sie sie aus, und wählen Sie im Popupdialogfeld **"Hinzufügen"** aus, um sie zu installieren.
+- Verwenden Sie App Studio, um Ihre Anwendung in Teams zu importieren. Um App Studio zu installieren, wählen Sie **Apps** ![ Store App in der ](~/assets/images/tab-images/storeApp.png) unteren linken Ecke der Teams App aus, und suchen Sie nach **App Studio.** Nachdem Sie die Kachel gefunden haben, wählen Sie sie aus, und wählen Sie im Popupdialogfeld **"Hinzufügen"** aus, um sie zu installieren.
 
 Darüber hinaus muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung installiert sein:
 
@@ -537,7 +537,7 @@ Alternativ können Sie den Quellcode abrufen, indem Sie den ZIP-Ordner herunterl
 
 **So erstellen Sie das Registerkartenprojekt und führen es aus**
 
-1. Nachdem Sie über den Quellcode verfügen, wechseln Sie zu Visual Studio, und wählen Sie **"Projekt oder Projektmappe öffnen"** aus.
+1. Nachdem Sie über den Quellcode verfügen, wechseln Sie zu Visual Studio, und wählen Sie **"Projekt oder Lösung öffnen"** aus.
 1. Wechseln Sie zum Registerkartenanwendungsverzeichnis, und öffnen **Sie ChannelGroupTabMVC.sln**.
 1. Drücken Sie **F5,** oder wählen Sie im Menü **"Debuggen"** die Option **"Debuggen starten"** aus, um die Anwendung zu erstellen und auszuführen.
 1. Navigieren Sie in einem Browser zu den folgenden URLs, und stellen Sie sicher, dass die Anwendung ordnungsgemäß geladen wurde:
@@ -574,7 +574,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
 - Ein **Vollfarbsymbol** mit einer Auflösung von 192 x 192 Pixeln.
 - Ein **transparentes Gliederungssymbol** mit einer Auflösung von 32 x 32 Pixeln.
-- Ein **manifest.jsfür** die Datei, die die Attribute Ihrer App angibt.
+- Eine **Manifest.json-Datei,** die die Attribute Ihrer App angibt.
 
 Diese Dateien müssen in einem App-Paket gezippt werden, um Ihre Registerkarte auf Teams hochzuladen.
 
@@ -636,14 +636,15 @@ Innerhalb von **Tab.cshtml** zeigt die Anwendung dem Benutzer zwei Optionsschalt
 
 ---
 
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Erstellen einer Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md)
+
 ## <a name="see-also"></a>Siehe auch
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
 * [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
 * [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)
-
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Erstellen einer Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md)
+* [Erstellen einer Seite zum Entfernen](~/tabs/how-to/create-tab-pages/removal-page.md)

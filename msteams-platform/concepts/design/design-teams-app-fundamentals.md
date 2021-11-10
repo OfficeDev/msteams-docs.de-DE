@@ -1,20 +1,21 @@
 ---
 title: Entwerfen Ihrer App – Grundlegendes zum Entwurfssystem
-description: Erfahren Sie mehr über die Grundlagen des Entwerfens Ihrer Microsoft Teams-App, einschließlich Layout, Farbschema und mehr.
+description: Erfahren Sie mehr über die Grundlagen des Entwerfens Ihrer Microsoft Teams-App, einschließlich Avatare, Layout, Symbole, Farbschema und mehr.
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: cfcba2da5560e54fb260fd29f817404a68a4d8cd
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: Layoutraster-Avatare symbole segoe ui typography
+ms.openlocfilehash: 6e372f049b18e5e95b1381c81f8f2f1f1f2a1e8d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156944"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887748"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teams App-Entwurfssystem
 
-Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleitungen und Beispiele finden Sie im <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft Teams UI Kit (Kitsma).</a>
+Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleitungen und Beispiele finden Sie im <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft Teams UI Kit (Gifma).</a>
 
 ## <a name="layout"></a>Layout
 
@@ -40,7 +41,7 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
    :::column span="3":::
 
-      Ein Avatar ist eine grafische Darstellung einer Person, eines Teams, bots oder einer Entität in Teams. Eine Avatargruppe wird häufig verwendet, um Liveaktivitäten zu vermitteln oder eine Liste so darzustellen, dass der vertikale Raum erhalten bleibt. 
+      Ein Avatar ist eine grafische Darstellung einer Person, eines Teams, bots oder einer Entität in Teams. Eine Avatargruppe wird häufig verwendet, um Liveaktivitäten zu vermitteln oder eine Teilnehmerliste so darzustellen, dass der vertikale Raum erhalten bleibt. 
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Vollständige Avatar-Richtlinien (Avatarma) anzeigen</a>
 
@@ -62,8 +63,8 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
       Sie können auch Fluent BENUTZERoberflächensymbole in Der gesamten App verwenden:
 
-      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Abrufen des neuesten Fluent-Symbolsatzes (Fluent Symbolsatz (Fluent Symbolsatz)</a>
-      * [Implementieren der Symbole (Fluent Benutzeroberfläche)](https://developer.microsoft.com/fluentui#/styles/web/icons)
+      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Abrufen des neuesten Fluent Symbolsatzes (Fluent Symbolsatz)</a>
+      * [Implementieren der Symbole (Fluent Ui)](https://developer.microsoft.com/fluentui#/styles/web/icons)
 
    :::column-end:::
    :::column span="1":::
@@ -79,7 +80,7 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
    :::column span="3":::
 
-      Teams verwendet Segoe UI für seine Typhierarchie und verschiedene Schriftgrade und -gewichtungen, um Hierarchien zu erstellen und die Lesbarkeit zu gewährleisten.
+      Teams verwendet Segoe UI für seine Typhierarchie und verschiedene Schriftgrade und -gewichtungen, um eine Hierarchie zu erstellen und die Lesbarkeit sicherzustellen.
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Siehe vollständige Typrichtlinien (Numma)</a>
       * [Implementieren der Typografie (Fluent Ui)](https://developer.microsoft.com/fluentui#/styles/web/typography)
@@ -119,7 +120,7 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
       Mithilfe von Form und Rechteerweiterung können Sie eine zusätzliche Hierarchie in Ihrer App erstellen. 
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Vollständige Richtlinien für Formen und Erhöhungen anzeigen (Abb. )</a>
-      * [Implementieren von Shape und Erhöhung (Fluent Ui)](https://developer.microsoft.com/fluentui#/styles/web/elevation)
+      * [Implementieren von Formen und Erhöhungen (Fluent Ui)](https://developer.microsoft.com/fluentui#/styles/web/elevation)
 
    :::column-end:::
    :::column span="1":::
@@ -135,7 +136,7 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
    :::column span="3":::
 
-      Um sich als Teil der Teams zu fühlen, sollte Ihre App-Kopie im Allgemeinen den folgenden [Microsoft-Sprachprinzipien](/style-guide/brand-voice-above-all-simple-human)entsprechen: warm und ungezwungen, klar und klar und bereit, Hand zu verleihen.
+      Um sich als Teil der Teams zu fühlen, sollte Ihre App-Kopie im Allgemeinen den folgenden [Microsoft-Sprachprinzipien](/style-guide/brand-voice-above-all-simple-human)entsprechen: warm und ungezwungen, scharf und klar und bereit, Hand zu verleihen.
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Sehen Sie sich die Richtlinien für vollständige Kopien und Inhalte an, einschließlich des Schreibens für Bots (Telemetrma).</a>
 

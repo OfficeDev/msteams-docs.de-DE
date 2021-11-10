@@ -1,15 +1,15 @@
 ---
 title: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 author: surbhigupta
-description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
+description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen und verschiedene Besprechungsszenarien, Aktualisieren des App-Manifests, Konfigurieren von Features wie In-Meeting-Dialog, freigegebener Besprechungsphase, Besprechungs-SidePanel und mehr
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 7f6f1454f92fcc223c8511a05aa5e43133c3f828
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 62423d92537cc6cb2d0f8f409d8e50b492fa00fd
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720211"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887713"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -62,7 +62,7 @@ Die `context` Eigenschaft bestimmt, was angezeigt werden muss, wenn ein Benutzer
 | **meetingChatTab** | Eine Registerkarte in der Kopfzeile eines Gruppenchats zwischen einer Gruppe von Benutzern für eine geplante Besprechung. Sie können entweder **meetingChatTab** oder **meetingDetailsTab** angeben, um sicherzustellen, dass die Apps auf mobilgeräten funktionieren. |
 | **meetingDetailsTab** | Eine Registerkarte in der Kopfzeile der Besprechungsdetails-Ansicht des Kalenders. Sie können entweder **meetingChatTab** oder **meetingDetailsTab** angeben, um sicherzustellen, dass die Apps auf mobilgeräten funktionieren. |
 | **meetingSidePanel** | Ein Besprechungsbereich, der über die einheitliche Leiste (U-Leiste) geöffnet wird. |
-| **meetingStage** | Eine App von der `meetingSidePanel` kann für die Besprechungsphase freigegeben werden. Sie können diese App nicht auf mobilgeräten verwenden. |
+| **meetingStage** | Eine App von der `meetingSidePanel` kann für die Besprechungsphase freigegeben werden. Sie können diese App weder auf mobilen Clients noch auf Teams Raumclients verwenden. |
 
 Nachdem Sie Ihre App für Teams Besprechungen aktiviert haben, müssen Sie Ihre App vor einer Besprechung, während einer Besprechung und nach einer Besprechung konfigurieren.
 
@@ -110,7 +110,7 @@ Während einer Besprechung können Sie das `meetingSidePanel` Dialogfeld oder da
 
 Dies ermöglicht ihnen das Anpassen von `meetingSidePanel` Erfahrungen in einer Besprechung, die Organisatoren und Referenten unterschiedliche Ansichten und Aktionen ermöglichen. Im App-Manifest müssen Sie `meetingSidePanel` dem Kontextarray hinzufügen. In der Besprechung und in allen Szenarien wird die App auf einer Besprechungsregisterkarte mit einer Breite von 320 Pixeln gerendert. Weitere Informationen finden Sie unter [FrameContext-Schnittstelle.](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
 
-Informationen zur Verwendung der `userContext` API zum Weiterleiten von Anforderungen finden Sie unter Teams [SDK.](../tabs/how-to/access-teams-context.md#user-context) Weitere Informationen finden Sie unter [Teams Authentifizierungsfluss für Registerkarten.](../tabs/how-to/authentication/auth-flow-tab.md) Der Authentifizierungsfluss für Registerkarten ähnelt dem Authentifizierungsfluss für Websites. Registerkarten können daher OAuth 2.0 direkt verwenden. Weitere Informationen finden Sie unter [Microsoft Identity Platform und OAuth 2.0-Autorisierungscodefluss.](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
+Informationen zur Verwendung der API zum Weiterleiten von `userContext` Anforderungen finden Sie unter Teams [SDK.](../tabs/how-to/access-teams-context.md#user-context) Weitere Informationen finden Sie unter [Teams Authentifizierungsfluss für Registerkarten.](../tabs/how-to/authentication/auth-flow-tab.md) Der Authentifizierungsfluss für Registerkarten ähnelt dem Authentifizierungsfluss für Websites. Registerkarten können daher OAuth 2.0 direkt verwenden. Weitere Informationen finden Sie unter [Microsoft Identity Platform und OAuth 2.0-Autorisierungscodefluss.](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
 
 Die Messaging-Erweiterung funktioniert erwartungsgemäß, wenn sich ein Benutzer in einer Besprechungsansicht befindet. Der Benutzer kann Erweiterungskarten zum Verfassen von Nachrichten posten. "AppName in-Meeting" ist eine QuickInfo, die den App-Namen in der Besprechungs-U-Leiste angibt.
 
@@ -131,7 +131,7 @@ Das Besprechungsdialogfeld darf kein Aufgabenmodul verwenden. Das Aufgabenmodul 
 
 Die freigegebene Besprechungsphase ermöglicht es Besprechungsteilnehmern, in Echtzeit mit App-Inhalten zu interagieren und daran zusammenzuarbeiten.
 
-Der erforderliche Kontext befindet `meetingStage` sich im App-Manifest. Voraussetzung ist, dass der Kontext vorhanden ist und die `meetingSidePanel` **Freigabe** in der `meetingSidePanel` .
+Der erforderliche Kontext befindet `meetingStage` sich im App-Manifest. Voraussetzung ist, dass der Kontext vorhanden ist `meetingSidePanel` und die **Freigabe** in der `meetingSidePanel` .
 
 ![Freigeben für die Bereitstellung während der Besprechungserfahrung](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
@@ -170,3 +170,4 @@ Die Konfigurationen für Nach- und [Vorbesprechungen](#before-a-meeting) sind id
 
 * [Entwurfsrichtlinien für Besprechungsdialoge](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams Authentifizierungsfluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Hinzufügen von Apps zu Besprechungen über Microsoft Graph](/graph/api/chat-post-installedapps.md)

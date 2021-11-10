@@ -5,16 +5,16 @@ description: Eine Übersicht über Messaging-Erweiterungen auf der Microsoft Tea
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6df54db100a5a903493cdc20aa805e5e339ab8f1
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 1ef83dd8dc87b54f7ec02e110565b9ecb0a14667
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566141"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889370"
 ---
 # <a name="messaging-extensions"></a>Messaging-Erweiterungen
 
-Messaging-Erweiterungen ermöglichen benutzern die Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams Client. Sie können Aktionen in einem externen System im Bereich zum Verfassen von Nachrichten, im Befehlsfeld oder direkt in einer Nachricht suchen oder initiieren. Sie können die Ergebnisse dieser Interaktion in Form einer rich-formatierten Karte an den Microsoft Teams-Client zurücksenden. Dieses Dokument bietet eine Übersicht über die Messaging-Erweiterung, Aufgaben, die in verschiedenen Szenarien ausgeführt werden, das Arbeiten mit Messaging-Erweiterungen, Aktions- und Suchbefehle sowie die Verbreitung von Links.
+Messaging-Erweiterungen ermöglichen benutzern die Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams Client. Sie können Aktionen in einem externen System im Bereich zum Verfassen von Nachrichten, im Befehlsfeld oder direkt in einer Nachricht suchen oder initiieren. Sie können die Ergebnisse dieser Interaktion in Form einer rich-formatierten Karte an den Microsoft Teams Client zurücksenden. Dieses Dokument bietet eine Übersicht über die Messaging-Erweiterung, Aufgaben, die in verschiedenen Szenarien ausgeführt werden, das Arbeiten mit Messaging-Erweiterungen, Aktions- und Suchbefehle sowie die Verbreitung von Links.
 
 In der folgenden Abbildung werden die Speicherorte angezeigt, von denen Messaging-Erweiterungen aufgerufen werden:
 
@@ -76,12 +76,7 @@ Die folgenden Bilder zeigen das Feature zum Aufheben von Links, wenn ein Link in
 | **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
 |------------|-------------|----------------|------------|
 | Messaging-Erweiterung mit aktionsbasierten Befehlen | In diesem Beispiel wird veranschaulicht, wie Sie eine aktionsbasierte Messaging-Erweiterung erstellen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
-| Messaging-Erweiterung mit suchbasierten Befehlen | In diesem Beispiel wird veranschaulicht, wie Sie eine suchbasierte Messaging-Erweiterung erstellen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
-
-## <a name="see-also"></a>Siehe auch
-
-[Erstellen einer Messaging-Erweiterung](../build-your-first-app/build-messaging-extension.md)
-
+| Messaging-Erweiterung mit suchbasierten Befehlen | In diesem Beispiel wird veranschaulicht, wie Sie eine suchbasierte Messaging-Erweiterung erstellen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
 ## <a name="next-step"></a>Nächster Schritt
 
@@ -90,3 +85,7 @@ Die folgenden Bilder zeigen das Feature zum Aufheben von Links, wenn ein Link in
 
 > [!div class="nextstepaction"]
 > [Definieren des Befehls für die Messaging-Erweiterung für die Suche](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+
+## <a name="see-also"></a>Siehe auch
+
+* [Erstellen einer Messaging-Erweiterung](../build-your-first-app/build-messaging-extension.md)

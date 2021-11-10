@@ -1,20 +1,20 @@
 ---
 title: Referenz zum Öffentlichen Entwicklervorschau-Manifestschema
-description: Beschreibt das vom Manifest unterstützte Schema für Microsoft Teams
+description: Beispielmanifestdatei und Beschreibung aller komponenten, die für Microsoft Teams unterstützt werden
 ms.topic: reference
 keywords: Teams-Manifestschema – Entwicklervorschau
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 886b1d69052e9379f71e062da2f6f13eebcee1a2
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: f1b3a7d3d002f9aec698509b36bc72b4421eb138
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378905"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888545"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referenz: Öffentliches Entwicklervorschaumanifestschema für Microsoft Teams
 
-Informationen zum Aktivieren der Entwicklervorschau finden Sie in der [öffentlichen Entwicklervorschau für Microsoft Teams.](~/resources/dev-preview/developer-preview-intro.md)
+Informationen zum Aktivieren der Entwicklervorschau finden Sie in der [öffentlichen Entwicklervorschau für Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
 > Wenn Sie keine Vorschaufeatures für Entwickler verwenden, verwenden Sie stattdessen das [App-Manifest für GA-Features.](~/resources/schema/manifest-schema.md)
@@ -270,7 +270,7 @@ Ein eindeutiger Bezeichner für diese App in umgekehrter Domänenschreibweise; z
 
 **Erforderlich**
 
-Gibt Informationen zu Ihrem Unternehmen an. Bei Apps, die an AppSource (früher Office Store) übermittelt wurden, müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen.
+Gibt Informationen zu Ihrem Unternehmen an. Bei An AppSource übermittelten Apps (früher Office Store) müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen.
 
 |Name| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|
@@ -352,8 +352,8 @@ Das Objekt ist ein Array mit allen Elementen des Typs `object` . Dieser Block is
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 Zeichen|✔|Die https:// URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
-|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: `true`|
+|`configurationUrl`|Zeichenfolge|2048 Zeichen|✔|Die https:// URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
+|`canUpdateConfiguration`|Boolean|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: `true`|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die `team` Bereiche und `groupchat` Bereiche. |
 |`sharePointPreviewImage`|String|2048||Ein relativer Dateipfad zu einem Registerkartenvorschaubild zur Verwendung in SharePoint. Größe 1024 x 768. |
 |`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint zur Verfügung gestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
@@ -364,7 +364,7 @@ Das Objekt ist ein Array mit allen Elementen des Typs `object` . Dieser Block is
 
 Definiert eine Gruppe von Registerkarten, die standardmäßig "angeheftet" werden können, ohne dass der Benutzer sie manuell hinzufügt. Im Bereich deklarierte statische `personal` Registerkarten werden immer an die persönliche Benutzeroberfläche der App angeheftet. Statische Registerkarten, die im Bereich deklariert `team` sind, werden derzeit nicht unterstützt.
 
-Rendern sie Registerkarten mit adaptiven Karten, indem Sie `contentBotId` sie anstelle `contentUrl` des **staticTabs-Blocks** angeben.
+Rendern Sie Registerkarten mit adaptiven Karten, indem Sie `contentBotId` anstelle `contentUrl` des **staticTabs-Blocks** angeben.
 
 Das Objekt ist ein Array (maximal 16 Elemente) mit allen Elementen des `object` Typs. Dieser Block ist nur für Lösungen erforderlich, die eine statische Registerkartenlösung bereitstellen.
 
@@ -373,9 +373,9 @@ Das Objekt ist ein Array (maximal 16 Elemente) mit allen Elementen des `object` 
 |---|---|---|---|---|
 |`entityId`|String|64 Zeichen|✔|Ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird.|
 |`name`|String|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanalschnittstelle.|
-|`contentUrl`|String|2048 Zeichen|✔|Die https:// URL, die auf die Entitäts-UI verweist, die im Teams Canvas angezeigt werden soll.|
+|`contentUrl`|Zeichenfolge|2048 Zeichen|✔|Die https:// URL, die auf die Entitäts-UI verweist, die im Teams Canvas angezeigt werden soll.|
 |`contentBotId`|   | | | Die Microsoft Teams App-ID, die für den Bot im Bot Framework-Portal angegeben wurde. |
-|`websiteUrl`|String|2048 Zeichen||Die https:// URL, um darauf hinzuweisen, ob sich ein Benutzer für die Anzeige in einem Browser entscheidet.|
+|`websiteUrl`|String|2048 Zeichen||Die https://-URL, die darauf zeigt, ob ein Benutzer die Anzeige in einem Browser annimmt.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen statische Registerkarten nur den `personal` Bereich, was bedeutet, dass sie nur als Teil der persönlichen Benutzeroberfläche bereitgestellt werden können.|
 
 ## <a name="bots"></a>Bots
@@ -413,7 +413,7 @@ Das Objekt ist ein Array (maximal 1 Element) mit allen Elementen des Typs `objec
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 Zeichen|✔|Die https:// URL, die beim Konfigurieren des Connectors verwendet werden soll.|
+|`configurationUrl`|Zeichenfolge|2048 Zeichen|✔|Die https:// URL, die beim Konfigurieren des Connectors verwendet werden soll.|
 |`connectorId`|String|64 Zeichen|✔|Ein eindeutiger Bezeichner für den Connector, der seiner ID im [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard)entspricht.|
 |`scopes`|Array von Enumerationen|1|✔|Gibt an, ob der Connector eine Erfahrung im Kontext eines Kanals in einem oder `team` eine Benutzeroberfläche bietet, die auf einen einzelnen Benutzer beschränkt ist ( `personal` ). Derzeit wird nur der `team` Bereich unterstützt.|
 
@@ -430,7 +430,7 @@ Das Objekt ist ein Array (maximal 1 Element) mit allen Elementen des Typs `objec
 
 |Name| Typ | Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`botId`|String|64|✔|Die eindeutige Microsoft-App-ID für den Bot, der die Messaging-Erweiterung unterstützt, wie beim Bot Framework registriert. Dies kann durchaus mit der gesamten [App-ID](#id)übereinstimmen.|
+|`botId`|Zeichenfolge|64|✔|Die eindeutige Microsoft-App-ID für den Bot, der die Messaging-Erweiterung unterstützt, wie beim Bot Framework registriert. Dies kann durchaus mit der gesamten [App-ID](#id)übereinstimmen.|
 |`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann. Der Standardwert lautet `false`.|
 |`commands`|Array des Objekts|10|✔|Array von Befehlen, die von der Messaging-Erweiterung unterstützt werden|
 
@@ -446,13 +446,13 @@ Jedes Befehlselement ist ein Objekt mit der folgenden Struktur:
 |`type`|String|64 Zeichen||Typ des Befehls. Eine von `query` oder `action` . Standard: `query`|
 |`title`|String|32 Zeichen|✔|Der benutzerfreundliche Befehlsname.|
 |`description`|String|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
-|`initialRun`|Boolesch|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt werden soll. Standard: `false`|
+|`initialRun`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt werden soll. Standard: `false`|
 |`context`|Array von Zeichenfolgen|3||Definiert, von wo aus die Nachrichtenerweiterung aufgerufen werden kann. Eine beliebige Kombination von `compose` , `commandBox` , `message` . Der Standardwert ist `["compose", "commandBox"]`|
-|`fetchTask`|Boolesch|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden soll.|
+|`fetchTask`|Boolean|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden soll.|
 |`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das vorab geladen werden soll, wenn Sie einen Messaging-Erweiterungsbefehl verwenden.|
-|`taskInfo.title`|String|64||Titel des ersten Dialogfelds.|
-|`taskInfo.width`|String|||Dialogbreite – entweder eine Zahl in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
-|`taskInfo.height`|String|||Dialoghöhe – entweder eine Zahl in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
+|`taskInfo.title`|Zeichenfolge|64||Titel des ersten Dialogfelds.|
+|`taskInfo.width`|Zeichenfolge|||Dialogbreite – entweder eine Zahl in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
+|`taskInfo.height`|Zeichenfolge|||Dialoghöhe – entweder eine Zahl in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
 |`taskInfo.url`|String|||Ursprüngliche Webansichts-URL.|
 |`messageHandlers`|Array von Objekten|5||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind. Domänen müssen auch in aufgeführt `validDomains` werden.|
 |`messageHandlers.type`|String|||Der Typ des Nachrichtenhandlers. Muss `"link"` sein.|
@@ -460,11 +460,11 @@ Jedes Befehlselement ist ein Objekt mit der folgenden Struktur:
 |`parameters`|Array des Objekts|5|✔|Die Liste der Parameter, die der Befehl verwendet. Minimum: 1; Maximum: 5|
 |`parameter.name`|String|64 Zeichen|✔|Der Name des Parameters, wie er im Client angezeigt wird. Dies ist in der Benutzeranforderung enthalten.|
 |`parameter.title`|String|32 Zeichen|✔|Benutzerfreundlicher Titel für den Parameter.|
-|`parameter.description`|String|128 Zeichen||Benutzerfreundliche Zeichenfolge, die den Zweck dieses Parameters beschreibt.|
+|`parameter.description`|Zeichenfolge|128 Zeichen||Benutzerfreundliche Zeichenfolge, die den Zweck dieses Parameters beschreibt.|
 |`parameter.inputType`|String|128 Zeichen||Definiert den Typ des Steuerelements, das in einem Aufgabenmodul für angezeigt `fetchTask: true` wird. Einer von `text` , , , , , , `textarea` `number` `date` `time` `toggle` `choiceset` .|
 |`parameter.choices`|Array von Objekten|10||Die Auswahloptionen für die `choiceset` . Wird nur verwendet, wenn `parameter.inputType` `choiceset` .|
 |`parameter.choices.title`|String|128||Titel der Wahl.|
-|`parameter.choices.value`|String|512||Value of the choice.|
+|`parameter.choices.value`|Zeichenfolge|512||Value of the choice.|
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -495,7 +495,7 @@ Gibt die systemeigenen Features auf dem Gerät eines Benutzers an, auf die Ihre 
 
 Eine Liste der gültigen Domänen, von denen die App erwartet, dass inhalte geladen werden. Domäneneinträge können Platzhalter enthalten, `*.example.com` z. B. . Dies entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com` . Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der für die Registerkartenkonfiguration verwendeten navigieren muss, muss diese Domäne hier angegeben werden.
 
-Es ist jedoch **nicht** erforderlich, die Domänen von Identitätsanbietern, die Sie unterstützen möchten, in Ihre App einzuschließen. Um sich beispielsweise mithilfe einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten, sie sollten jedoch keine accounts.google.com in `validDomains[]` einschließen.
+Es ist jedoch **nicht** erforderlich, die Domänen von Identitätsanbietern, die Sie unterstützen möchten, in Ihre App einzuschließen. Um sich beispielsweise mithilfe einer Google-ID zu authentifizieren, müssen Sie zu accounts.google.com umleiten, sie sollten jedoch keine accounts.google.com in `validDomains[]` einschließen.
 
 > [!IMPORTANT]
 > Fügen Sie keine Domänen hinzu, die sich außerhalb Ihres Steuerelements befinden, entweder direkt oder über Platzhalter. Ist z. `yourapp.onmicrosoft.com` B. gültig, aber `*.onmicrosoft.com` nicht gültig.
@@ -510,7 +510,7 @@ Geben Sie Ihre Azure AD App-ID und Graph Informationen an, damit sich Benutzer n
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`id`|String|36 Zeichen|✔|Azure AD Anwendungs-ID der App. Diese ID muss eine GUID sein.|
+|`id`|Zeichenfolge|36 Zeichen|✔|Azure AD Anwendungs-ID der App. Diese ID muss eine GUID sein.|
 |`resource`|String|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für SSO.|
 |`applicationPermissions`|Array|Maximal 100 Elemente|✔|Ressourcenberechtigungen für die Anwendung.|
 

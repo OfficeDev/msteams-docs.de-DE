@@ -1,16 +1,17 @@
 ---
 title: Abrufen Teams spezifischen Kontexts für Ihren Bot
 author: surbhigupta
-description: So erhalten Sie den spezifischen Kontext des Microsoft-Teams für Ihren Bot, einschließlich der Unterhaltungsliste, Details und Kanalliste.
+description: Erfahren Sie, wie Sie den spezifischen Kontext von Microsoft Team für Ihren Bot abrufen, einschließlich der Unterhaltungsliste, Details eines einzelnen Mitglieds oder Teams, Kanalliste und Codebeispiele.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 8baf33c7c66ebee69248306cd9273c33b6123db3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: Benutzerprofilkanalliste für Bot-Kontextliste
+ms.openlocfilehash: eb935515e4f130e57cf634dd9716306cce9f3a05
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156980"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888244"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Abrufen Teams spezifischen Kontexts für Ihren Bot
 
@@ -20,7 +21,7 @@ Ein Bot kann auf zusätzliche Kontextdaten zu einem Team oder Chat zugreifen, in
 
 ## <a name="fetch-the-roster-or-user-profile"></a>Abrufen des Listen- oder Benutzerprofils
 
-Ihr Bot kann die Liste der Mitglieder und deren grundlegende Benutzerprofile abfragen, einschließlich Teams Benutzer-IDs und Azure Active Directory (AAD)-Informationen, z. B. Name und objectId. Sie können diese Informationen verwenden, um Benutzeridentitäten zu korrelieren. Um beispielsweise zu überprüfen, ob sich ein Benutzer über AAD-Anmeldeinformationen bei einer Registerkarte angemeldet hat, ist er Mitglied des Teams. Zum Abrufen von Unterhaltungsmitgliedern hängt die minimale oder maximale Seitengröße von der Implementierung ab. Seitengröße kleiner als 50, werden als 50 behandelt und größer als 500, sind auf 500 begrenzt. Auch wenn Sie die nicht seitenweise Version verwenden, ist sie in großen Teams unzuverlässig und darf nicht verwendet werden. Weitere Informationen finden Sie unter [Änderungen an Teams Bot-APIs zum Abrufen von Team- oder Chatmitgliedern.](~/resources/team-chat-member-api-changes.md)
+Ihr Bot kann die Liste der Mitglieder und deren grundlegende Benutzerprofile abfragen, einschließlich Teams Benutzer-IDs und Azure Active Directory (AAD)-Informationen, z. B. Name und objectId. Sie können diese Informationen verwenden, um Benutzeridentitäten zu korrelieren. Um beispielsweise zu überprüfen, ob sich ein Benutzer über AAD Anmeldeinformationen bei einer Registerkarte angemeldet hat, ist er Mitglied des Teams. Zum Abrufen von Unterhaltungsmitgliedern hängt die minimale oder maximale Seitengröße von der Implementierung ab. Seitengröße kleiner als 50, werden als 50 behandelt und größer als 500, sind auf 500 begrenzt. Auch wenn Sie die nicht seitenweise Version verwenden, ist sie in großen Teams unzuverlässig und darf nicht verwendet werden. Weitere Informationen finden Sie unter [Änderungen an Teams Bot-APIs zum Abrufen von Team- oder Chatmitgliedern.](~/resources/team-chat-member-api-changes.md)
 
 Im folgenden Beispielcode wird der seitenierte Endpunkt zum Abrufen der Teilnehmerliste verwendet:
 
@@ -123,11 +124,11 @@ Response body
 
 * * *
 
-Nachdem Sie das Listen- oder Benutzerprofil abgerufen haben, können Sie Details zu einem einzelnen Mitglied abrufen. Verwenden Sie derzeit die Microsoft Teams-Bot-APIs `TeamsInfo.GetMembersAsync` für C# oder TypeScript-APIs, um Informationen für ein oder mehrere Mitglieder eines Chats oder `TeamsInfo.getMembers` Teams abzurufen.
+Nachdem Sie die Liste oder das Benutzerprofil abgerufen haben, können Sie Details zu einem einzelnen Mitglied abrufen. Verwenden Sie derzeit die Microsoft Teams-Bot-APIs `TeamsInfo.GetMembersAsync` für C# oder TypeScript-APIs, um Informationen für ein oder mehrere Mitglieder eines Chats oder `TeamsInfo.getMembers` Teams abzurufen.
 
 ## <a name="get-single-member-details"></a>Abrufen von Details zu einzelnen Membern
 
-Sie können die Details eines bestimmten Benutzers auch mithilfe seiner Teams Benutzer-ID, UPN oder AAD-Objekt-ID abrufen.
+Sie können die Details eines bestimmten Benutzers auch mithilfe seiner Teams Benutzer-ID, UPN oder AAD Objekt-ID abrufen.
 
 Der folgende Beispielcode wird verwendet, um Details zu einzelnen Membern abzurufen:
 
@@ -211,7 +212,7 @@ Nachdem Sie Details zu einem einzelnen Mitglied erhalten haben, können Sie Deta
 
 ## <a name="get-teams-details"></a>Abrufen von Teamdetails
 
-Wenn er in einem Team installiert ist, kann Ihr Bot Metadaten zu diesem Team abfragen, einschließlich der AAD-Gruppen-ID.
+Wenn er in einem Team installiert ist, kann Ihr Bot Metadaten zu diesem Team abfragen, einschließlich der AAD Gruppen-ID.
 
 Der folgende Beispielcode wird verwendet, um die Details des Teams abzurufen:
 
@@ -282,7 +283,7 @@ Response body
 
 * * *
 
-Nachdem Sie Details zum Team erhalten haben, können Sie die Liste der Kanäle in einem Team abrufen. Verwenden Sie derzeit die Microsoft Teams-Bot-APIs `TeamsInfo.GetTeamChannelsAsync` für C# oder TypeScript-APIs, um Informationen zu einer Liste von Kanälen in einem Team `TeamsInfo.getTeamChannels` abzurufen.
+Nachdem Sie Details zum Team erhalten haben, können Sie die Liste der Kanäle in einem Team abrufen. Um Informationen zu einer Liste von Kanälen in einem Team abzurufen, verwenden Sie derzeit die Microsoft Teams-Bot-APIs `TeamsInfo.GetTeamChannelsAsync` für C# oder `TeamsInfo.getTeamChannels` für TypeScript-APIs.
 
 ## <a name="get-the-list-of-channels-in-a-team"></a>Abrufen der Liste der Kanäle in einem Team
 

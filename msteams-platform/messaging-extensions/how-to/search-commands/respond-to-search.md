@@ -1,16 +1,16 @@
 ---
 title: Auf Suchbefehl antworten
 author: surbhigupta
-description: Antworten auf den Suchbefehl aus einer Messaging-Erweiterung in einer Microsoft Teams-App.
+description: Erfahren Sie, wie Sie mithilfe von Codebeispielen und Beispielen auf den Suchbefehl aus einer Messaging-Erweiterung in einer Microsoft Teams-App antworten.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 23c4e6d2db9396fc03ed2a75ccc09052f1130423
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 46c5d1ef47d9c31552efac00baef347baf3c7470
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156033"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889377"
 ---
 # <a name="respond-to-search-command"></a>Auf Suchbefehl antworten
 
@@ -79,7 +79,7 @@ Der json unten ist gekürzt, um die relevantesten Abschnitte hervorzuheben.
 
 ## <a name="respond-to-user-requests"></a>Antworten auf Benutzeranforderungen
 
-Wenn der Benutzer eine Abfrage ausführt, Microsoft Teams eine synchrone HTTP-Anforderung an Ihren Dienst ausstellt. An diesem Punkt hat Ihr Code Sekunden Zeit, `5` um eine HTTP-Antwort auf die Anforderung bereitzustellen. Während dieser Zeit kann Ihr Dienst zusätzliche Nachschlagevorgänge oder eine beliebige andere Geschäftslogik ausführen, die für die Bearbeitung der Anforderung erforderlich ist.
+Wenn der Benutzer eine Abfrage durchführt, Microsoft Teams eine synchrone HTTP-Anforderung an Ihren Dienst ausstellt. An diesem Punkt hat Ihr Code Sekunden Zeit, `5` um eine HTTP-Antwort auf die Anforderung bereitzustellen. Während dieser Zeit kann Ihr Dienst zusätzliche Nachschlagevorgänge oder eine beliebige andere Geschäftslogik ausführen, die für die Bearbeitung der Anforderung erforderlich ist.
 
 Ihr Dienst muss mit den Ergebnissen antworten, die der Benutzerabfrage entsprechen. Die Antwort muss einen HTTP-Statuscode `200 OK` und ein gültiges Anwendungs- oder JSON-Objekt mit den folgenden Eigenschaften angeben:
 
@@ -105,7 +105,7 @@ Um ein besseres Verständnis und einen besseren Überblick über Karten zu haben
 
 Informationen zur Verwendung der Miniaturansicht- und Herokartentypen finden Sie unter [Hinzufügen von Karten und Kartenaktionen.](~/task-modules-and-cards/cards/cards-actions.md)
 
-Weitere Informationen zur Office 365 Connectorkarte finden Sie unter [Verwenden Office 365 Connectorkarten.](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+Weitere Informationen zur Office 365 Connectorkarte finden Sie unter [Verwenden von Office 365 Connectorkarten.](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 
 Die Ergebnisliste wird auf der Microsoft Teams Benutzeroberfläche mit einer Vorschau der einzelnen Elemente angezeigt. Die Vorschau wird auf eine der beiden folgenden Arten generiert:
 
@@ -113,7 +113,7 @@ Die Ergebnisliste wird auf der Microsoft Teams Benutzeroberfläche mit einer Vor
 * Extrahiert aus den `title` grundlegenden `text` , und Eigenschaften `image` der Anlage. Diese werden nur verwendet, wenn die `preview` Eigenschaft nicht festgelegt ist und diese Eigenschaften verfügbar sind.
 * Die Schaltfläche "Hero"- oder "Miniaturansichtskarte" und tippen auf Aktionen mit Ausnahme des Aufrufs werden in der Vorschaukarte nicht unterstützt.
 
-Sie können eine Vorschau einer adaptiven Karte oder Office 365 Connectorkarte in der Ergebnisliste mithilfe der Vorschaueigenschaft anzeigen. Die Vorschaueigenschaft ist nicht erforderlich, wenn die Ergebnisse bereits Hero- oder Miniaturansichtskarten sind. Wenn Sie die Vorschauanlage verwenden, muss es sich entweder um eine Hero- oder miniaturansichtskarte handeln. Wenn keine Vorschaueigenschaft angegeben ist, schlägt die Vorschau der Karte fehl, und es wird nichts angezeigt.
+Sie können eine Vorschau einer adaptiven Karte oder Office 365 Connectorkarte in der Ergebnisliste mithilfe der Vorschaueigenschaft anzeigen. Die Vorschaueigenschaft ist nicht erforderlich, wenn die Ergebnisse bereits Hero- oder Miniaturansichtskarten sind. Wenn Sie die Vorschauanlage verwenden, muss es sich entweder um eine Hero- oder eine Miniaturansichtskarte handeln. Wenn keine Vorschaueigenschaft angegeben ist, schlägt die Vorschau der Karte fehl, und es wird nichts angezeigt.
 
 ### <a name="response-example"></a>Anforderungsbeispiel
 
@@ -344,16 +344,13 @@ Die Standardabfrage weist die gleiche Struktur wie jede normale Benutzerabfrage 
 | Beispielname           | Beschreibung | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams Messaging-Erweiterungsaktion| Beschreibt, wie Aktionsbefehle definiert, Aufgabenmodul erstellt und auf Aufgabenmodul-Sendeaktion reagiert wird. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams Messaging-Erweiterungssuche   |  Beschreibt, wie Suchbefehle definiert und auf Suchvorgänge reagiert wird.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
-
-## <a name="see-also"></a>Siehe auch
-
-[Hinzufügen einer Konfiguration zu einer Messaging-Erweiterung](~/get-started/first-message-extension.md)
+|Teams Suche nach Messaging-Erweiterungen   |  Beschreibt, wie Suchbefehle definiert und auf Suchvorgänge reagiert wird.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Hinzufügen der Authentifizierung zu einer Messaging-Erweiterung](~/messaging-extensions/how-to/add-authentication.md)
 
+## <a name="see-also"></a>Siehe auch
 
-
+[Hinzufügen einer Konfiguration zu einer Messaging-Erweiterung](~/get-started/first-message-extension.md)

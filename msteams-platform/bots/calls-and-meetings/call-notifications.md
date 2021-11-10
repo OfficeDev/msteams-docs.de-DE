@@ -1,16 +1,16 @@
 ---
 title: Eingehende Anrufbenachrichtigungen
-description: Detaillierte technische Informationen zur Behandlung von Benachrichtigungen bei eingehenden Anrufen
+description: Erfahren Sie mehr über detaillierte technische Informationen zum Umgang mit Benachrichtigungen bei eingehenden Anrufen, zum Umleiten und Authentifizieren von Anrufen mithilfe von Codebeispielen.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Anrufbenachrichtigungen Rückrufregion Affinität aufrufen
 ms.date: 04/02/2019
-ms.openlocfilehash: eb05499b32a0e62b9aa5b073770632c081b8526a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d1d0371f714f64d2f64dbcb9512be77318cf1fb5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156159"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889160"
 ---
 # <a name="incoming-call-notifications"></a>Eingehende Anrufbenachrichtigungen
 
@@ -18,13 +18,13 @@ Bei [der Registrierung eines Bots für Anrufe und Besprechungen für Microsoft T
 
 ## <a name="protocol-determination"></a>Protokollermittlung
 
-Die eingehende Benachrichtigung wird aus Gründen der Kompatibilität mit dem vorherigen [Skype-Protokoll](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)in einem älteren Format bereitgestellt. Um den Aufruf in das Microsoft Graph-Protokoll zu konvertieren, muss Ihr Bot ermitteln, ob die Benachrichtigung ein Älteres Format aufweist, und die folgende Antwort bereitstellen:
+Die eingehende Benachrichtigung wird aus Gründen der Kompatibilität mit dem vorherigen [Skype-Protokoll](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)in einem älteren Format bereitgestellt. Um den Aufruf in das Microsoft Graph-Protokoll zu konvertieren, muss Ihr Bot ermitteln, ob die Benachrichtigung ein Legacyformat aufweist, und die folgende Antwort bereitstellen:
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-Ihr Bot empfängt die Benachrichtigung erneut, aber dieses Mal im Microsoft Graph-Protokoll.
+Ihr Bot empfängt die Benachrichtigung erneut, dieses Mal jedoch im Microsoft Graph-Protokoll.
 
 In einer zukünftigen Version der Real-Time Media Platform können Sie das Protokoll konfigurieren, das Ihre Anwendung unterstützt, um zu vermeiden, dass der anfängliche Rückruf im Legacyformat empfangen wird.
 
@@ -41,7 +41,7 @@ Location: your-new-location
 
 Ermöglichen Sie Ihrem Bot, einen eingehenden Anruf mithilfe der [Antwort-API](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) zu beantworten. Sie können den `callbackUri` für diesen bestimmten Aufruf zu verwendenden Wert angeben. Dies ist nützlich für zustandsbehaftete Instanzen, in denen Ihr Anruf von einer bestimmten Partition verarbeitet wird, und Sie möchten diese Informationen für das `callbackUri` Routing an die richtige Instanz einbetten.
 
-Der nächste Abschnitt enthält Details zum Authentifizieren des Rückrufs, indem das token überprüft wird, das in Ihrem Webhook veröffentlicht wurde.
+Der nächste Abschnitt enthält Details zum Authentifizieren des Rückrufs, indem das Token überprüft wird, das in Ihrem Webhook veröffentlicht wurde.
 
 ## <a name="authenticate-the-callback"></a>Authentifizieren des Rückrufs
 

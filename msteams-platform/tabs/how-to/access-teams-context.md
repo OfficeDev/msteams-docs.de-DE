@@ -4,12 +4,12 @@ description: Beschreibt, wie Sie Benutzerkontext zu Ihren Registerkarten abrufen
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams Registerkarten Benutzerkontext
-ms.openlocfilehash: 187e3dda7aacee2ddaaaca6b5c5dbc8686ac5575
-ms.sourcegitcommit: 762cd3ed9054c6c19825498fc0edd50cd99634da
+ms.openlocfilehash: 5a85aaf23089cbe8215c64b7cc342ee3577510bd
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59439697"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887539"
 ---
 # <a name="get-context-for-your-tab"></a>Kontext für Ihre Registerkarte erhalten
 
@@ -24,10 +24,10 @@ Ihre Registerkarte erfordert Kontextinformationen, um relevante Inhalte anzuzeig
 Der Kontext über den Benutzer, das Team oder das Unternehmen kann besonders hilfreich sein, wenn:
 
 * Sie erstellen ressourcen in Ihrer App oder ordnen sie dem angegebenen Benutzer oder Team zu.
-* Sie initiieren einen Authentifizierungsfluss von Azure Active Directory (AAD) oder einem anderen Identitätsanbieter, und Sie müssen den Benutzer nicht erneut ihren Benutzernamen eingeben. Weitere Informationen finden Sie unter [Authentifizieren eines Benutzers auf der Registerkarte Microsoft Teams](~/concepts/authentication/authentication.md).
+* Sie initiieren einen Authentifizierungsfluss von Azure Active Directory (AAD) oder einem anderen Identitätsanbieter, und Sie müssen den Benutzer nicht erneut eingeben. Weitere Informationen finden Sie unter [Authentifizieren eines Benutzers auf der Registerkarte Microsoft Teams.](~/concepts/authentication/authentication.md)
 
 > [!IMPORTANT]
-> Obwohl diese Benutzerinformationen zu einer reibungslosen Benutzererfahrung beitragen können, dürfen Sie sie nicht als Identitätsnachweis verwenden. Beispielsweise kann ein Angreifer Ihre Seite in einem Browser laden und schädliche Informationen oder Anforderungen rendern.
+> Obwohl diese Benutzerinformationen zu einer reibungslosen Benutzererfahrung beitragen können, dürfen Sie sie nicht als Identitätsnachweis verwenden.  Beispielsweise kann ein Angreifer Ihre Seite in einem Browser laden und schädliche Informationen oder Anforderungen rendern.
 
 ## <a name="access-context-information"></a>Zugreifen auf Kontextinformationen
 
@@ -42,12 +42,12 @@ Verwenden Sie Platzhalter in Ihren Konfigurations-oder Inhalts-URLs. Microsoft T
 
 * {entityId}: Die ID, die Sie für das Element auf dieser Registerkarte beim ersten [Konfigurieren der Registerkarte](~/tabs/how-to/create-tab-pages/configuration-page.md) angegeben haben.
 * {subEntityId}: Die ID, die Sie beim Generieren eines [Deep-Links](~/concepts/build-and-test/deep-links.md) für ein bestimmtes Element auf dieser Registerkarte angegeben haben. Dies muss verwendet werden, um einen bestimmten Zustand innerhalb einer Entität wiederherzustellen. Beispiel: Scrollen zu oder Aktivieren eines bestimmten Inhaltselements.
-* {loginHint}: Ein Wert, der als Anmeldehinweis für AAD geeignet ist. Dies ist in der Regel der Anmeldename des aktuellen Benutzers in seiner Startseitenmandanten.
+* {loginHint}: Ein Wert, der als Anmeldehinweis für AAD geeignet ist. Dies ist in der Regel der Anmeldename des aktuellen Benutzers in dessen Home-Mandant.
 * {userPrincipalName}: Der Benutzerprinzipalname des aktuellen Benutzers im aktuellen Mandanten.
-* {userObjectId}: Die AAD-Objekt-ID des aktuellen Benutzers im aktuellen Mandanten.
+* {userObjectId}: Die AAD Objekt-ID des aktuellen Benutzers im aktuellen Mandanten.
 * {theme}: Das aktuelle Benutzeroberflächendesign wie `default` , `dark` oder `contrast` .
 * {groupId}: Die ID der Office 365 Gruppe, in der sich die Registerkarte befindet.
-* {tid}: Die AAD-Mandanten-ID des aktuellen Benutzers.
+* {tid}: Die AAD Mandanten-ID des aktuellen Benutzers.
 * {locale}: Das aktuelle Gebietsschema des Benutzers, das als languageId-countryId formatiert ist. Beispiel: en-us.
 
 > [!NOTE]
@@ -121,8 +121,8 @@ Wenn Ihre Inhaltsseite in einem privaten Kanal geladen wird, werden die Daten, d
 * `teamId`: Auf die threadId des privaten Kanals festgelegt
 * `teamName`: Auf den Namen des privaten Kanals festgelegt
 * `teamSiteUrl`: Legen Sie die URL einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal fest.
-* `teamSitePath`: Legen Sie den Pfad einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal fest
-* `teamSiteDomain`: Auf die Domäne einer eindeutigen, eindeutigen SharePoint-Websitedomäne für den privaten Kanal festgelegt
+* `teamSitePath`: Legen Sie den Pfad einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal fest.
+* `teamSiteDomain`: Festlegen auf die Domäne einer eindeutigen SharePoint-Websitedomäne für den privaten Kanal
 
 Wenn Ihre Seite einen dieser Werte verwendet, müssen Sie das Feld überprüfen, `channelType` um festzustellen, ob Die Seite in einem privaten Kanal geladen ist, und entsprechend reagieren.
 
@@ -135,14 +135,15 @@ Sie können Ihre App registrieren, um informiert zu werden, wenn sich das Design
 
 Das `theme` Argument in der Funktion ist eine Zeichenfolge mit dem Wert , oder `default` `dark` `contrast` .
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)
+
+## <a name="see-also"></a>Siehe auch
 
 * [Richtlinien für den Registerkartenentwurf](../../tabs/design/tabs.md)
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
 * [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Verwenden von Aufgabenmodulen in Registerkarten](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

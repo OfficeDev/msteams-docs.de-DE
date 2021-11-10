@@ -1,21 +1,21 @@
 ---
 title: Verwenden von Aufgabenmodulen in Microsoft Teams Registerkarten
-description: Erläutert das Aufrufen von Aufgabenmodulen von Teams Registerkarten mithilfe des Microsoft Teams-Client-SDKs.
+description: Erläutert, wie Sie Aufgabenmodule über Teams Registerkarten aufrufen und ihr Ergebnis mithilfe des Microsoft Teams-Client-SDKs übermitteln. Es enthält Codebeispiele.
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams-Registerkarten-Client-SDK für Aufgabenmodule
-ms.openlocfilehash: 0f6c1569a1aa18921df4635bdbaab505526c1e2e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 618775644b43f16a6de49f7bc2fa92a512b73591
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156686"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888559"
 ---
 # <a name="use-task-modules-in-tabs"></a>Verwenden von Aufgabenmodulen in Registerkarten
 
 Fügen Sie Ihrer Registerkarte ein Aufgabenmodul hinzu, um die Benutzererfahrung für workflows zu vereinfachen, die eine Dateneingabe erfordern. Mit Aufgabenmodulen können Sie ihre Eingaben in einem Microsoft Teams-Aware-Popup erfassen. Ein gutes Beispiel hierfür ist das Bearbeiten von Planner-Karten. Sie können Aufgabenmodule verwenden, um eine ähnliche Oberfläche zu erstellen.
 
-Zur Unterstützung des Aufgabenmodulfeatures werden dem [Teams-Client-SDK](/javascript/api/overview/msteams-client)zwei neue Funktionen hinzugefügt. Der folgende Code zeigt ein Beispiel für diese beiden Funktionen:
+Zur Unterstützung des Aufgabenmodulfeatures werden dem [Teams Client-SDK](/javascript/api/overview/msteams-client)zwei neue Funktionen hinzugefügt. Der folgende Code zeigt ein Beispiel für diese beiden Funktionen:
 
 ```typescript
 microsoftTeams.tasks.startTask(
@@ -80,9 +80,9 @@ Wenn kein Aufruffehler auftritt und der Benutzer X nicht auswählt, um es zu sch
 
 ### <a name="html-or-javascript-taskinfourl"></a>HTML oder JavaScript `TaskInfo.url`
 
-Rufen Sie nach dem Überprüfen der Eingaben des Benutzers die `microsoftTeams.tasks.submitTask()` SDK-Funktion auf, die als `submitTask()` bezeichnet wird. Rufen `submitTask()` Sie ohne Parameter auf, wenn Sie nur Teams möchten, um das Aufgabenmodul zu schließen. Sie können ein Objekt oder eine Zeichenfolge an Ihre `submitHandler` übergeben.
+Rufen Sie nach dem Überprüfen der Eingaben des Benutzers die `microsoftTeams.tasks.submitTask()` SDK-Funktion auf, die als `submitTask()` bezeichnet wird. Rufen `submitTask()` Sie ohne Parameter auf, wenn Sie nur möchten, dass Teams das Aufgabenmodul schließt. Sie können ein Objekt oder eine Zeichenfolge an Ihre `submitHandler` übergeben.
 
-Übergeben Sie Ihr Ergebnis als ersten Parameter. Teams ruft auf, wo sich das Objekt oder die Zeichenfolge befindet `submitHandler` `err` und `null` `result` ist, die Sie an übergeben `submitTask()` haben. Wenn Sie `submitTask()` mit einem Parameter `result` aufrufen, müssen Sie ein oder ein Array von `appId` `appId` Zeichenfolgen übergeben. Dadurch können Teams überprüfen, ob die App, die das Ergebnis sendet, mit dem aufgerufenen Aufgabenmodul übereinstimmt.
+Übergeben Sie Ihr Ergebnis als ersten Parameter. Teams ruft auf, wo sich das Objekt oder die Zeichenfolge befindet `submitHandler` `err` und `null` `result` ist, an die Sie übergeben `submitTask()` haben. Wenn Sie `submitTask()` mit einem Parameter `result` aufrufen, müssen Sie ein oder ein Array von `appId` `appId` Zeichenfolgen übergeben. Dadurch können Teams überprüfen, ob die App, die das Ergebnis sendet, mit dem aufgerufenen Aufgabenmodul übereinstimmt.
 
 ### <a name="adaptive-card-taskinfocard"></a>Adaptive Karte `TaskInfo.card`
 
@@ -131,13 +131,13 @@ Die folgende Tabelle enthält die möglichen `err` Werte, die von Ihnen empfange
 
 |Beispielname | Beschreibung | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|Aufgabenmodul-Beispielregisterkarten und Bots-V3 | Beispiele zum Erstellen von Aufgabenmodulen. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
-
-## <a name="see-also"></a>Siehe auch
-
-[Aufrufen und Schließen von Aufgabenmodulen](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+|Aufgabenmodul-Beispielregisterkarten und Bots-V3 | Beispiele zum Erstellen von Aufgabenmodulen. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Verwenden von Aufgabenmodulen von Bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Aufrufen und Schließen von Aufgabenmodulen](~/task-modules-and-cards/task-modules/invoking-task-modules.md)

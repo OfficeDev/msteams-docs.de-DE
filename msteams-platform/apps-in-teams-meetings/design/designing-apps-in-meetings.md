@@ -1,16 +1,17 @@
 ---
 title: Entwerfen Ihrer Besprechungserweiterung
 author: heath-hamilton
-description: Erfahren Sie, wie Sie Apps in Teams Besprechungen entwerfen und das Microsoft Teams UI Kit erhalten.
+description: Erfahren Sie, wie Sie Apps in Teams Besprechungen entwerfen und das Microsoft Teams UI Kit, die Registerkarte für Besprechungen und Anwendungsfälle, das reaktionsfähige Verhalten und die freigegebene Besprechungsphase sowie das Design und die Navigation abrufen.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5597752ad8698e45c33ec7e116cd684f22ff98a3
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+keywords: UI-Kit-Vorlage in besprechungsbasiertem reaktionsfähigem Verhalten – freigegebene Besprechungsphase
+ms.openlocfilehash: 39d0ef00d6a012726f2a3645f3d8e2bf00ebaf33
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475699"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887845"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen ihrer Microsoft Teams Besprechungserweiterung
 
@@ -59,20 +60,20 @@ Vor einer Besprechung steht Ihre App Benutzern auf einer Registerkarte zur Verf�
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
-|1|**Registerkartenname:** Navigationsbezeichnung für Ihre Registerkarte.|
-|2|**Registerkartenüberlauf:** Öffnet Registerkartenaktionen, z. B. Umbenennen und Entfernen.|
-|3|**iframe:** Zeigt Ihre App-Inhalte an.|
+|1|**Registerkartenname**:Navigationsbezeichnung für Ihre Registerkarte.|
+|2|**Registerkartenüberlauf**: Öffnet Registerkartenaktionen, z. B. Umbenennen und Entfernen.|
+|3|**iframe**: Zeigt Ihre App-Inhalte an.|
 
 ### <a name="design-with-ui-templates"></a>Entwerfen mit Benutzeroberflächenvorlagen
 
 Verwenden Sie eine der folgenden Teams Ui-Vorlagen, um die Besprechungsregisterkarte zu entwerfen:
 
-* [Liste:](../../concepts/design/design-teams-app-ui-templates.md#list)Listen können verwandte Elemente in einem scannbaren Format anzeigen und Benutzern ermöglichen, Aktionen für eine gesamte Liste oder einzelne Elemente auszuführen.
-* [Task Board:](../../concepts/design/design-teams-app-ui-templates.md#task-board)Ein Task Board, manchmal auch als "Tickets Board" oder "Sperre" bezeichnet, ist eine Sammlung von Karten, die häufig verwendet werden, um den Status von Arbeitselementen oder Tickets nachzuverfolgen.
-* [Dashboard:](../../concepts/design/design-teams-app-ui-templates.md#dashboard)Ein Dashboard ist eine Canvas mit mehreren Karten, die eine Übersicht über Daten oder Inhalte bieten.
-* [Formular:](../../concepts/design/design-teams-app-ui-templates.md#form)Formulare dienen zum strukturierten Sammeln, Überprüfen und Übermitteln von Benutzereingaben.
-* [Leerer Zustand:](../../concepts/design/design-teams-app-ui-templates.md#empty-state)Die leere Statusvorlage kann für viele Szenarien verwendet werden, einschließlich Anmeldung, Erste Ausführung, Fehlermeldungen und vieles mehr.
-* [Linke Navigation:](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav)Die linke Navigationskomponente kann hilfreich sein, wenn ihre Registerkarte eine Navigation erfordert. Im Allgemeinen sollten Sie die Navigation auf ein Minimum beschränken.
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem übersichtlichen Format anzeigen und Benutzern ermöglichen, Aktionen für eine gesamte Liste oder einzelne Elemente auszuführen.
+* [Task Board](../../concepts/design/design-teams-app-ui-templates.md#task-board): Ein Task Board, manchmal auch als „Kanban-Board“ oder „Organisationsprozessdarstellungen“ bezeichnet, ist eine Sammlung von Karten, die häufig verwendet werden, um den Status von Arbeitselementen oder Tickets nachzuverfolgen.
+* [Dashboard](../../concepts/design/design-teams-app-ui-templates.md#dashboard): Ein Dashboard ist ein Zeichenbereich mit mehreren Karten, die eine Übersicht über Daten oder Inhalte bieten.
+* [Formular](../../concepts/design/design-teams-app-ui-templates.md#form): Formulare dienen zum strukturierten Sammeln, Überprüfen und Übermitteln von Benutzereingaben.
+* [Leerer Zustand](../../concepts/design/design-teams-app-ui-templates.md#empty-state): Die leere Statusvorlage kann für viele Szenarien verwendet werden, einschließlich der Anmeldung, der ersten Ausführung, der Fehlermeldungen und vieles mehr.
+* [Linke Navigation](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav): Die linke Navigationskomponente kann hilfreich sein, wenn ihre Registerkarte eine Navigation erfordert. Im Allgemeinen sollten Sie die Navigation auf ein Minimum beschränken.
 
 ## <a name="use-an-in-meeting-tab"></a>Verwenden einer Besprechungsregisterkarte
 
@@ -103,9 +104,9 @@ Personen können die Registerkarte "Besprechungsinterne Besprechung" für Folgen
 |1|**App-Symbol (ausgewählt):** 16 Pixel transparentes App-Logo.|
 |2|**App-Name**|
 |3|**Header:** Enthält ihren App-Namen.|
-|4 |**Schaltfläche "Schließen":** Schließt die Registerkarte. Verwenden Sie immer das Symbol zum Schließen oben rechts anstelle einer Aktion in der Fußzeile.|
+|4|**Schaltfläche "Schließen":** Schließt die Registerkarte. Verwenden Sie immer das Symbol zum Schließen oben rechts anstelle einer Aktion in der Fußzeile.|
 |5|**Benachrichtigungsleiste:** Fehlerwarnungen werden direkt unterhalb der Kopfzeile angezeigt, und der iframe-Inhalt wird um 20 Pixel nach unten verschoben.|
-|6 |**iframe:** Zeigt Ihre App-Inhalte an.|
+|6 |**iframe**: Zeigt Ihre App-Inhalte an.|
 
 ### <a name="spacing"></a>Abstand
 
@@ -157,7 +158,7 @@ In-Meeting-Dialogfelder werden von einem Benutzer (z. B. dem Besprechungsorganis
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
 |1|**Kopfzeile:** Enthält das App-Symbol, den Namen, die Aktionszeichenfolge und das Schließen-Symbol.|
-|2|**iframe:** Zeigt Ihre App-Inhalte an.|
+|2|**iframe**: Zeigt Ihre App-Inhalte an.|
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomie: Kopfzeile des Besprechungsdialogfelds
 
@@ -170,7 +171,7 @@ Es gibt zwei Kopfzeilenvarianten. Verwenden Sie nach Möglichkeit die Variante m
 |1|**Avatar**: Person, die das Besprechungsdialogfeld initiiert.|
 |2|**App-Symbol**|
 |3|**App-Name**|
-|4 |**Schaltfläche "Schließen":** Schließt das Dialogfeld.|
+|4|**Schaltfläche "Schließen":** Schließt das Dialogfeld.|
 |5|**Aktionszeichenfolge:** Beschreibt in der Regel, wer das Dialogfeld initiiert hat.|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>Reaktionsfähiges Verhalten: Dialogfelder in Besprechungen
@@ -191,7 +192,7 @@ Die freigegebene Besprechungsphase hilft Besprechungsteilnehmern bei der Interak
 Für die Besprechungsphase freigegebene Apps belegen den gleichen Platz wie ein freigegebener Bildschirm. Die Phase wird für alle Besprechungsteilnehmer neu ausgerichtet.
 
 > [!NOTE]
-> Wenn eine App für die Desktopphase freigegeben ist, wird sie derzeit nur für die Benutzer in einer mobilen Besprechung angezeigt.
+> Alle Benutzer in der Besprechung können die App sehen, wenn sie vom Desktop freigegeben werden. Die Funktion zum Freigeben einer App für die Bereitstellung über mobilgeräte ist derzeit jedoch nicht verfügbar.
  
 ### <a name="use-cases"></a>Anwendungsfälle
 
@@ -244,13 +245,13 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
 |----------|-----------|
 |1|**App-Symbol:** Das hervorgehobene Symbol gibt an, dass die Registerkarte "In-Meeting" der App geöffnet ist.|
 |2|**Schaltfläche "Für Besprechungsphase freigeben":** Der Einstiegspunkt, an dem die App für die Besprechungsphase freigegeben werden soll. Zeigt an, ob Sie Ihre App für die Verwendung der freigegebenen Besprechungsphase konfigurieren.|
-|3|**iframe:** Zeigt Ihre App-Inhalte an.|
-|4 |**Schaltfläche "Freigabe beenden":** Beendet die Freigabe der App für die Besprechungsphase. Zeigt nur für den Teilnehmer an, der die Freigabe gestartet hat.|
+|3|**iframe**: Zeigt Ihre App-Inhalte an.|
+|4|**Schaltfläche "Freigabe beenden":** Beendet die Freigabe der App für die Besprechungsphase. Zeigt nur für den Teilnehmer an, der die Freigabe gestartet hat.|
 |5|**Zuschreibung** des Referenten: Zeigt den Namen des Teilnehmers an, der die App freigegeben hat.|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>Reaktionsfähiges Verhalten: Freigegebene Besprechungsphase
 
-Apps, die für die Besprechungsphase freigegeben wurden, variieren je nach Dem Status der Besprechung und der Größe des Fensters durch den Benutzer. Verwalten Sie den Abstand und das dynamische Layout von Navigation und Steuerelementen genau wie in einem Browser.
+Apps, die für die Besprechungsphase freigegeben wurden, variieren je nach Größe des Besprechungsstatus und der Größe des Fensters durch den Benutzer. Verwalten Sie den Abstand und das dynamische Layout von Navigation und Steuerelementen genau wie in einem Browser.
 
 * **Seitenbereich:** Ein Benutzer kann den Seitenbereich jederzeit während einer Besprechung öffnen lassen, um zu chatten, die Teilnehmerliste anzuzeigen oder eine App zu verwenden (z. B. die Registerkarte "In-Meeting"). Die Phase wird dynamisch neu angeordnet, wenn das Panel geöffnet ist.
 * **Video- und Audioraster:** Das Video- und Audioraster ist immer sichtbar, um Besprechungsteilnehmer anzuzeigen. Wenn ein Benutzer eine Person in der Besprechung ins Blickfeld rückt oder anheftet, erhöht dies die Höhe oder Breite des Teilnehmerrasters je nach Ausrichtung.
@@ -363,7 +364,7 @@ Aufgrund des begrenzten Platzes der Besprechungsregisterkarte werden Layouts mit
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="Beispiel, das zeigt, wie primäre Steuerelemente rechts ausgerichtet werden." border="false":::
 
-#### <a name="do-right-align-the-primary-action"></a>Do: Ausrichtung der primären Aktion nach rechts
+#### <a name="do-right-align-the-primary-action"></a>Do: Rechtsgündige Ausrichtung der primären Aktion
 
 Wir empfehlen, die visuell schwerste Aktion am rechten Ort zu positionieren.
 
@@ -373,7 +374,7 @@ Wir empfehlen, die visuell schwerste Aktion am rechten Ort zu positionieren.
 
 #### <a name="dont-left-or-center-align-actions"></a>Nicht empfohlen: Aktionen links oder zentr werden ausgerichtet
 
-Dies weicht vom standard Teams Muster für die Platzierung von Steuerelementen in einem Dialogfeld ab und kann zu Konflikten mit einem Dialogfeld hinter dem oberen Dialogfeld führen.
+Dies weicht vom standard Teams Muster für die Platzierung von Steuerelementen in einem Dialogfeld ab und kann mit einem Dialogfeld hinter dem oberen Dialogfeld in Konflikt geraten.
 
    :::column-end:::
 :::row-end:::
@@ -437,7 +438,7 @@ Besprechungsdialogfelder sind für kurze Interaktionen vorgesehen.
 
 #### <a name="do-focus-on-dark-theme"></a>Do: Fokus auf dunklem Design
 
-Teams Besprechungen sind für dunkles Design optimiert, um visuelles und kognitives Rauschen zu reduzieren, sodass sich Benutzer auf die Diskussion und freigegebene Inhalte konzentrieren können. Beachten Sie, dass bestimmte Arten von Apps (z. B. Whiteboarding und Dokumentbearbeitung) keinen dunklen Zeichenbereich benötigen.
+Teams Besprechungen sind für dunkles Design optimiert, um visuelles und kognitives Rauschen zu reduzieren, damit sich Benutzer auf die Diskussion und freigegebene Inhalte konzentrieren können. Beachten Sie, dass bestimmte Arten von Apps (z. B. Whiteboarding und Dokumentbearbeitung) keinen dunklen Zeichenbereich benötigen.
 
    :::column-end:::
    :::column span="":::

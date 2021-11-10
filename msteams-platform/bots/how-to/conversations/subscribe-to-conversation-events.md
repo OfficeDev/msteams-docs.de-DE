@@ -1,16 +1,17 @@
 ---
 title: Unterhaltungsereignisse
 author: WashingtonKayaker
-description: So arbeiten Sie mit Unterhaltungsereignissen aus Ihrem Microsoft Teams-Bot.
+description: So arbeiten Sie mit Unterhaltungsereignissen aus Ihrem Microsoft Teams Bot, Kanalereignisupdates, Teammitgliedsereignissen und Nachrichtenreaktionsereignissen mit Codebeispielen.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6dbefee88b1af763d02b3647d21bdc44da9541ec
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+keywords: Ereignis-Bot-Kanal-Nachrichtenreaktionsunterhaltung
+ms.openlocfilehash: bc99091e3eac4a35514cbab4327082223edffa40
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566253"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888279"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Unterhaltungsereignisse in Ihrem Teams-Bot
 
@@ -1389,7 +1390,7 @@ Nicht verfügbar
 > [!NOTE]
 > Das Deinstallationsverhalten für persönliche Apps mit Bot ist derzeit nur in der [öffentlichen Entwicklervorschau](../../../resources/dev-preview/developer-preview-intro.md)verfügbar.
 
-Wenn Sie eine App deinstallieren, wird der Bot ebenfalls deinstalliert. Wenn ein Benutzer eine Nachricht an Ihre App sendet, erhält er den Antwortcode 403. Ihr Bot erhält einen 403-Antwortcode für neue Nachrichten, die von Ihrem Bot gepostet wurden. Das Verhalten der Postdeinstallation für Bots im persönlichen Bereich mit den Bereichen Teams und groupChat wird jetzt ausgerichtet. Sie können keine Nachrichten senden oder empfangen, nachdem eine App deinstalliert wurde.
+Wenn Sie eine App deinstallieren, wird der Bot ebenfalls deinstalliert. Wenn ein Benutzer eine Nachricht an Ihre App sendet, erhält er den Antwortcode 403. Ihr Bot erhält einen 403-Antwortcode für neue Nachrichten, die von Ihrem Bot gepostet wurden. Das Verhalten der Postdeinstallation für Bots im persönlichen Bereich mit den Bereichen Teams und groupChat wird nun ausgerichtet. Sie können keine Nachrichten senden oder empfangen, nachdem eine App deinstalliert wurde.
 
 <img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
 

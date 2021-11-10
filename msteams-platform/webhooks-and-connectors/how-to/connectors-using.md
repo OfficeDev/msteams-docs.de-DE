@@ -5,12 +5,12 @@ description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Te
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams O365-Connector
-ms.openlocfilehash: 6d10a173079fb31db303e98bfaf0800ff048a187
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 46a0bc8ad797d5fc856e44fe662faf208cb7b5bb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156997"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887392"
 ---
 # <a name="create-and-send-messages"></a>Nachrichten erstellen und senden
 
@@ -168,7 +168,7 @@ Diese Nachricht enthält die folgende Karte im Kanal:
     > [!NOTE]
     > Wenn der POST erfolgreich ist, müssen Sie eine einfache Ausgabe von **1** `curl` sehen.
 
-1. Überprüfen Sie den Microsoft Teams-Client für die neue bereitgestellte Karte.
+1. Überprüfen Sie den Microsoft Teams-Client auf die neue bereitgestellte Karte.
 
 # <a name="powershell"></a>[PowerShell](#tab/PowerShell)
 
@@ -251,7 +251,7 @@ Die folgende Tabelle enthält die zeitbasierten Transaktionsdetails:
 
 | Zeit in Sekunden  | Maximal zulässige Anforderungen  |
 |---|---|
-| 1   | 4   |  
+| 1   | 4  |  
 | 30   | 60  |  
 | 3600   | 100  |
 | 7200 | 150  |
@@ -285,3 +285,5 @@ Diese Grenzwerte sind vorhanden, um das Spamming eines Kanals über einen Connec
 * [Office 365 Connectors für Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Erstellen eines eingehenden Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Erstellen eines ausgehenden Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [Begrenzung der Raten für Teams Bots-Nachrichten](~/bots/how-to/rate-limit.md)
+* [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)

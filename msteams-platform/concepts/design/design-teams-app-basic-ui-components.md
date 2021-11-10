@@ -1,20 +1,21 @@
 ---
 title: Entwerfen Ihrer App mit einfachen Fluent UI-Komponenten
 author: heath-hamilton
-description: Erfahren Sie mehr über die grundtypischen UI-Komponenten, die häufig zum Erstellen Microsoft Teams Apps und zum Abrufen des Microsoft Teams UI Kit verwendet werden.
+description: Erfahren Sie mehr über die grundtypischen UI-Komponenten, die häufig zum Erstellen Microsoft Teams Apps und zum Abrufen des Microsoft Teams UI Kit verwendet werden. Erfahren Sie mehr über Komponenten wie Breadcrumbs, Karte, Karussell, Dropdown, Busmark, Auswahl, Pivot, Umschalter, QuickInfo und mehr.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: b905a95f35abb083b5c8bba7c096e1012adb223d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: Ui-Komponenten Fluent Kit Breadcrumb-Schaltflächenkarte Karussell-Dropdown-Busmark-Auswahl-Pivot-QuickInfo
+ms.openlocfilehash: af5d7b63ebdca96f0e9563049e4cc22d00f1f45a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156597"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887497"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Entwerfen Ihrer Microsoft Teams-App mit einfachen Fluent UI-Komponenten
 
-Sie können Ihre Teams-App mit den folgenden grundlegenden Fluent UI-Komponenten von Grund auf neu erstellen. Diese so flach wie möglich gestalteten Komponenten können in verschiedenen Anwendungsfällen, Designs und Bildschirmgrößen verwendet werden.
+Mit den folgenden grundlegenden Fluent UI-Komponenten können Sie Ihre Teams-App von Grund auf neu erstellen. Diese so flach wie möglich gestalteten Komponenten können in verschiedenen Anwendungsfällen, Designs und Bildschirmgrößen verwendet werden.
 
 Die Abbildungen auf dieser Seite zeigen, wie Komponenten in Teams Standarddesigns (hell) und in dunklen Designs aussehen.
 
@@ -103,7 +104,7 @@ Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_bl
 
 ## <a name="scrollbar"></a>Scrollbar
 
-:::image type="content" source="../../assets/images/components/scrollbar.png" alt-text="Beispiel zeigt eine Komponente der Bildlaufleisten-Benutzeroberfläche." border="false":::
+:::image type="content" source="../../assets/images/components/scrollbar.png" alt-text="Beispiel zeigt eine Komponente der Bildlaufleisten-BENUTZEROBERFLÄCHE." border="false":::
 
 ## <a name="search-box"></a>Suchfeld
 
@@ -131,7 +132,7 @@ Hinweis: In Fluent Ui ist die Umschaltfläche ein Kontrollkästchentyp.
 
 :::image type="content" source="../../assets/images/components/tooltip.png" alt-text="Beispiel zeigt eine QuickInfo-UI-Komponente." border="false":::
 
-## <a name="other-resources"></a>Sonstige Ressourcen
+## <a name="other-resources"></a>Weitere Ressourcen
 
 Erhalten Sie Codebeispiele und Implementierungsdetails für einige der hier und im Microsoft Teams UI Kit aufgeführten Komponenten.
 

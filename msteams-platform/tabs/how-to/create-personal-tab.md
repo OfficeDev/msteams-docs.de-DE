@@ -1,16 +1,17 @@
 ---
 title: Erstellen einer persönlichen Registerkarte
 author: laujan
-description: Eine Schnellstartanleitung zum Erstellen einer persönlichen Registerkarte mit dem Yeoman-Generator für Microsoft Teams.
+description: Eine Schnellstartanleitung zum Erstellen einer persönlichen Registerkarte mit dem Yeoman-Generator, ASP.NET Core oder ASP.NET Core MVC zum Microsoft Teams mit Node.js und zum Aktualisieren des App-Manifests.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 8048f317fa0e22353d58b6363271b281a6f3849e
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: Yeoman ASP.NET Berechtigungsspeicher des MVC-Pakets "appmanifest conversation"
+ms.openlocfilehash: 98f72b41e13c9b06f00a1b32a1fb52bb6b82fd2e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719936"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888041"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
@@ -34,7 +35,7 @@ Sie müssen die folgenden Voraussetzungen verstehen:
 - Sie müssen einen Office 365 Mandanten und ein Team mit aktivierter Option **"Hochladen benutzerdefinierter Apps zulassen"** konfiguriert haben. Weitere Informationen finden Sie unter [Vorbereiten Ihres Office 365 Mandanten.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
     > [!NOTE]
-    > Wenn Sie nicht über ein Office 365 Konto verfügen, können Sie sich über das Office 365-Entwicklerprogramm für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden. Willkommen [beim Office 365-Entwicklerprogramm.](/office/developer-program/microsoft-365-developer-program)
+    > Wenn Sie kein Office 365 Konto haben, können Sie sich über das Office 365-Entwicklerprogramm für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden. Willkommen [beim Office 365-Entwicklerprogramm.](/office/developer-program/microsoft-365-developer-program)
 
 Außerdem muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung installiert sein:
 
@@ -112,7 +113,7 @@ Außerdem muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung insta
 
     **Möchten Sie, dass persönliche Apps ohne eine Registerkarten-Kopfleiste dargestellt werden?**
 
-    Fügen Sie **keine** persönlichen Apps ein, die ohne Registerkartenkopfleiste gerendert werden sollen. Der Standardwert ist "Nein", geben Sie **"n"** ein.
+    Verwenden Sie **keine** persönlichen Apps, die ohne Registerkartenkopfleiste gerendert werden sollen. Der Standardwert ist "Nein", geben Sie **"n"** ein.
 
     **Möchten Sie testframework und erste Tests einbeziehen? (y/N)**
 
@@ -136,7 +137,7 @@ Außerdem muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung insta
 
     **Benötigen Sie Azure AD Single-Sign-On-Unterstützung für die Registerkarte?**
 
-    Wählen Sie aus, Azure AD Single Sign-On-Unterstützung für die Registerkarte **nicht** einzuschließen. Der Standardwert ist "Ja", geben Sie **"n"** ein.
+    Wählen Sie, Azure AD Single Sign-On-Unterstützung für die Registerkarte **nicht** einzuschließen. Der Standardwert ist "Ja", geben Sie **"n"** ein.
 
     > [!IMPORTANT]
     > The path component **yourDefaultTabNameTab** is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
@@ -147,7 +148,7 @@ Außerdem muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung insta
 
 **Um dieser Anwendung eine persönliche Registerkarte hinzuzufügen, erstellen Sie eine Inhaltsseite, und aktualisieren Sie vorhandene Dateien.**
 
-1. Erstellen Sie im Code-Editor eine neue HTML-Datei **personal.html,** und fügen Sie das folgende Markup hinzu:
+1. Erstellen Sie in Ihrem Code-Editor eine neue HTML-Datei **personal.html,** und fügen Sie das folgende Markup hinzu:
 
     ```html
     <!DOCTYPE html>
@@ -257,7 +258,7 @@ gulp build
 
 Microsoft Teams ist ein cloudbasiertes Produkt und erfordert, dass Ihre Registerkarteninhalte über HTTPS-Endpunkte aus der Cloud verfügbar sind. Teams lässt kein lokales Hosting zu. Veröffentlichen Sie Ihre Registerkarte unter einer öffentlichen URL, oder verwenden Sie einen Proxy, der Ihren lokalen Port für eine internetbasierte URL verfügbar macht.
 
-Verwenden Sie zum Testen der [Registerkartenerweiterung ngrok,](https://ngrok.com/docs)das in diese Anwendung integriert ist. Ngrok ist ein Reverseproxy-Softwaretool. Ngrok erstellt einen Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten ihres lokal ausgeführten Webservers. Die Webendpunkte Ihres Servers sind während der aktuellen Sitzung auf Ihrem Computer verfügbar. Wenn der Computer heruntergefahren wird oder in den Ruhezustand wechselt, ist der Dienst nicht mehr verfügbar.
+Verwenden Sie zum Testen der [Registerkartenerweiterung ngrok,](https://ngrok.com/docs)das in diese Anwendung integriert ist. Ngrok ist ein Reverseproxy-Softwaretool. Ngrok erstellt einen Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten Ihres lokal ausgeführten Webservers. Die Webendpunkte Ihres Servers sind während der aktuellen Sitzung auf Ihrem Computer verfügbar. Wenn der Computer heruntergefahren wird oder in den Ruhezustand wechselt, ist der Dienst nicht mehr verfügbar.
 
 Beenden Sie an der Eingabeaufforderung "localhost", und geben Sie den folgenden Befehl ein:
 
@@ -266,7 +267,7 @@ gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> Nachdem Die Registerkarte über **ngrok** in Microsoft Teams hochgeladen und erfolgreich gespeichert wurde, können Sie sie in Teams anzeigen, bis die Tunnelsitzung endet.
+> Nachdem Ihre Registerkarte in Microsoft Teams über **ngrok** hochgeladen und erfolgreich gespeichert wurde, können Sie sie in Teams anzeigen, bis Ihre Tunnelsitzung endet.
 
 ### <a name="upload-your-application-to-teams"></a>Hochladen Der Anwendung Teams
 
@@ -291,22 +292,22 @@ Wählen Sie in der Navigationsleiste ganz links in Teams Ellipsen &#x25CF;&#x25C
 
 ### <a name="create-a-custom-personal-tab-using-aspnet-core"></a>Erstellen einer benutzerdefinierten persönlichen Registerkarte mit ASP.NET Core
 
-Sie können eine benutzerdefinierte persönliche Registerkarte mit C# und ASP.NET Core Razor-Seiten erstellen. [App Studio](~/concepts/build-and-test/app-studio-overview.md) wird auch verwendet, um Das App-Manifest abzuschließen und die Registerkarte für Teams bereitzustellen.
+Sie können eine benutzerdefinierte persönliche Registerkarte mit C# und ASP.NET Core Razor-Seiten erstellen. [App Studio](~/concepts/build-and-test/app-studio-overview.md) wird auch verwendet, um Das App-Manifest abzuschließen und ihre Registerkarte für Teams bereitzustellen.
 
 ### <a name="prerequisites-for-personal-tab"></a>Voraussetzungen für die persönliche Registerkarte
 
 Sie müssen die folgenden Voraussetzungen verstehen:
 
-- Sie müssen einen Office 365 Mandanten und ein Team mit aktivierter Option **"Hochladen benutzerdefinierter Apps zulassen"** konfiguriert haben. Weitere Informationen finden Sie unter [Vorbereiten Ihres Office 365 Mandanten.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+- Sie benötigen einen Office 365 Mandanten und ein Team, für das das **Hochladen benutzerdefinierter Apps** zugelassen ist. Weitere Informationen finden Sie unter [Vorbereiten Ihres Office 365 Mandanten.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
     > [!NOTE]
-    > Wenn Sie über kein Microsoft 365 Konto verfügen, können Sie sich über das [Microsoft-Entwicklerprogramm](https://developer.microsoft.com/en-us/microsoft-365/dev-program)für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden.
+    > Wenn Sie kein Microsoft 365 Konto haben, können Sie sich über das [Microsoft-Entwicklerprogramm](https://developer.microsoft.com/en-us/microsoft-365/dev-program)für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden.
 
 - Verwenden Sie App Studio, um Ihre Anwendung in Teams zu importieren. Um App Studio zu installieren, wählen Sie **Apps** ![ Store App in der ](~/assets/images/tab-images/storeApp.png) unteren linken Ecke der Teams App aus, und suchen Sie nach **App Studio.** Nachdem Sie die Kachel gefunden haben, wählen Sie sie aus, und wählen Sie im Popupdialogfeld **"Hinzufügen"** aus, um sie zu installieren.
 
 Außerdem muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung installiert sein:
 
-- Die aktuelle Version der Visual Studio-IDE, in der die **plattformübergreifende .NET CORE-Entwicklungsworkload** installiert ist. Wenn Sie noch nicht über Visual Studio verfügen, können Sie die neueste [Microsoft Visual Studio Community Version](https://visualstudio.microsoft.com/downloads) kostenlos herunterladen und installieren.
+- Die aktuelle Version der Visual Studio IDE, in der die **plattformübergreifende .NET CORE-Entwicklungsworkload** installiert ist. Wenn Sie noch nicht über Visual Studio verfügen, können Sie die neueste [Microsoft Visual Studio Community Version](https://visualstudio.microsoft.com/downloads) kostenlos herunterladen und installieren.
 
 - Das [ngrok-Reverseproxytool.](https://ngrok.com) Verwenden Sie ngrok, um einen Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten Ihres lokal ausgeführten Webservers zu erstellen. Sie können [ngrok herunterladen.](https://ngrok.com/download)
 
@@ -322,8 +323,8 @@ Alternativ können Sie den Quellcode abrufen, indem Sie den ZIP-Ordner herunterl
 
 **So erstellen Sie das Registerkartenprojekt und führen es aus**
 
-1. Nachdem Sie den Quellcode abgerufen haben, wechseln Sie zu Visual Studio, und wählen Sie **"Projekt oder Projektmappe öffnen"** aus.
-1. Wechseln Sie zum Registerkartenanwendungsverzeichnis, und öffnen **Sie PersonalTab.sln**.
+1. Nachdem Sie den Quellcode abgerufen haben, wechseln Sie zu Visual Studio, und wählen Sie **"Projekt oder Lösung öffnen"** aus.
+1. Wechseln Sie zum Registerkartenanwendungsverzeichnis, und öffnen **Sie "PersonalTab.sln".**
 1. Drücken Sie **F5,** oder wählen Sie im Menü **"Debuggen"** die Option **"Debuggen starten"** aus, um die Anwendung zu erstellen und auszuführen.
 1. Wechseln Sie in einem Browser zu den folgenden URLs, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde:
 
@@ -336,7 +337,7 @@ Alternativ können Sie den Quellcode abrufen, indem Sie den ZIP-Ordner herunterl
 
 #### <a name="startupcs"></a>Startup.cs
 
-Dieses Projekt wurde aus einer leeren Vorlage für ASP.NET Core 2.2-Webanwendung erstellt, wobei das Kontrollkästchen **"Erweitert – Für HTTPS konfigurieren"** beim Setup aktiviert ist. Die MVC-Dienste werden durch die Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage nicht standardmäßig die Bereitstellung statischer Inhalte, sodass die Middleware für statische Dateien der Methode mit dem folgenden Code hinzugefügt `Configure()` wird:
+Dieses Projekt wurde aus einer leeren Vorlage ASP.NET Core 2.2 Webanwendung erstellt, wobei das Kontrollkästchen **"Erweitert – Für HTTPS konfigurieren"** beim Setup aktiviert ist. Die MVC-Dienste werden durch die Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage nicht standardmäßig die Bereitstellung statischer Inhalte, sodass die Middleware für statische Dateien der Methode mit dem folgenden Code hinzugefügt `Configure()` wird:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -366,11 +367,11 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 - Ein **transparentes Gliederungssymbol** mit einer Auflösung von 32 x 32 Pixeln.
 - Eine **Manifest.json-Datei,** die die Attribute Ihrer App angibt.
 
-Diese Dateien müssen in einem App-Paket gezippt werden, um Ihre Registerkarte in Teams hochzuladen. Microsoft Teams das angegebene `contentUrl` Element in Ihrem Manifest lädt, es in einen <iframe einbettet \> und auf der Registerkarte rendert.
+Diese Dateien müssen in einem App-Paket gezippt werden, um Ihre Registerkarte auf Teams hochzuladen. Microsoft Teams das angegebene `contentUrl` Element in Ihrem Manifest lädt, es in einen <iframe einbettet \> und auf der Registerkarte rendert.
 
 #### <a name="csproj"></a>CSPROJ
 
-Klicken Sie im Fenster Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Project Datei bearbeiten** aus. Am Ende der Datei wird der folgende Code angezeigt, der Ihren ZIP-Ordner erstellt und aktualisiert, wenn die Anwendung erstellt wird:
+Klicken Sie im Fenster Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **"Bearbeiten Project Datei"** aus. Am Ende der Datei wird der folgende Code angezeigt, der Ihren ZIP-Ordner erstellt und aktualisiert, wenn die Anwendung erstellt wird:
 
 ```xml
 <PropertyGroup>
@@ -394,9 +395,9 @@ Klicken Sie im Fenster Visual Studio Projektmappen-Explorer mit der rechten Maus
 
 #### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-Damit Die Registerkarte in Teams angezeigt werden kann, müssen Sie das **Microsoft Teams JavaScript-Client-SDK** und einen Aufruf nach `microsoftTeams.initialize()` dem Laden der Seite einschließen. Ihre Registerkarte und die Teams-App kommunizieren auf folgende Weise:
+Damit Ihre Registerkarte in Teams angezeigt werden kann, müssen Sie das **Microsoft Teams JavaScript-Client-SDK** und einen Aufruf nach `microsoftTeams.initialize()` dem Laden der Seite einschließen. Ihre Registerkarte und die Teams-App kommunizieren auf folgende Weise:
 
-Wechseln Sie zum **Freigegebenen** Ordner, öffnen Sie **_Layout.cshtml,** und fügen Sie dem Abschnitt "Tags" Folgendes `<head>` hinzu:
+Wechseln Sie zum Ordner **"Freigegeben",** öffnen Sie **_Layout.cshtml,** und fügen Sie dem Abschnitt "Tags" Folgendes `<head>` hinzu:
 
 ```html
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -430,11 +431,11 @@ Verwenden Sie zum Testen Der Registerkarte [ngrok](https://ngrok.com/docs). Die 
 2. Stellen Sie sicher, dass **ngrok** ausgeführt wird und ordnungsgemäß funktioniert, indem Sie Ihren Browser öffnen und über die ngrok-HTTPS-URL, die im Eingabeaufforderungsfenster bereitgestellt wurde, zu Ihrer Inhaltsseite wechseln.
 
 > [!TIP]
-> Sie müssen ihre Anwendung sowohl in Visual Studio als auch in ngrok ausführen, um die in diesem Artikel beschriebenen Schritte auszuführen. Wenn Sie die Ausführung der Anwendung in Visual Studio beenden müssen, um daran zu arbeiten, **führen Sie ngrok weiter** aus. Sie überwacht und setzt das Weiterleiten der Anforderung Ihrer Anwendung fort, wenn sie in Visual Studio neu gestartet wird. Wenn Sie den ngrok-Dienst neu starten müssen, wird eine neue URL zurückgegeben, und Sie müssen jeden Ort aktualisieren, der diese URL verwendet.
+> Sie müssen ihre Anwendung sowohl in Visual Studio als auch in ngrok ausführen, um die in diesem Artikel beschriebenen Schritte auszuführen. Wenn Sie die Ausführung Ihrer Anwendung in Visual Studio beenden müssen, um daran zu arbeiten, **führen Sie ngrok weiter** aus. Beim Neustart in Visual Studio wird die Weiterleitung der Anwendungsanforderung überwacht und fortgesetzt. Wenn Sie den ngrok-Dienst neu starten müssen, wird eine neue URL zurückgegeben, und Sie müssen jeden Ort aktualisieren, der diese URL verwendet.
 
 #### <a name="run-your-application"></a>Ausführen der Anwendung
 
-Drücken Sie in Visual Studio **F5,** oder wählen Sie im **Menü "Debuggen"** der Anwendung die Option **"Debuggen starten"** aus.
+Drücken Sie in Visual Studio **F5,** oder wählen Sie **"Debuggen starten"** aus dem **Debugmenü** Ihrer Anwendung aus.
 
 ### <a name="upload-your-tab-with-app-studio-for-teams"></a>Hochladen Sie Ihre Registerkarte mit App Studio für Teams
 
@@ -491,7 +492,7 @@ Im Abschnitt **"Registerkarten":**
 
     ![Details zu persönlichen Registerkarten](../../assets/images/tab-images/personaltabdetails.png)
 
-1. Wählen Sie **Speichern** aus.
+1. Klicken Sie auf **Speichern**.
 
 ##### <a name="finish-domains-and-permissions"></a>Fertig stellen: Domänen und Berechtigungen
 
@@ -502,7 +503,7 @@ Im Abschnitt **"Domänen und Berechtigungen"** müssen **Domänen von Ihren Regi
 > [!IMPORTANT]
 > Auf der rechten Seite wird in der **Beschreibung** die folgende Warnung angezeigt:
 >
-> &#9888; **Das Array "validDomains" darf keine Tunnelwebsite enthalten...**
+> &#9888; Das **Array "validDomains" darf keine Tunnelwebsite enthalten...**
 >
 > Diese Warnung kann beim Testen der Registerkarte ignoriert werden.
 
@@ -526,10 +527,10 @@ Sie können eine benutzerdefinierte persönliche Registerkarte mit C# und ASP.NE
 
 ### <a name="prerequisites-for-personal-tab-with-aspnet-core-mvc"></a>Voraussetzungen für die persönliche Registerkarte mit ASP.NET Core MVC
 
-- Sie müssen einen Microsoft 365 Mandanten und ein Team mit aktivierter **Option "Hochladen benutzerdefinierter Apps zulassen"** konfiguriert haben. Weitere Informationen finden Sie unter [Vorbereiten Ihres Office 365 Mandanten.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+- Sie müssen einen Microsoft 365 Mandanten und ein Team mit aktivierter Option **"Hochladen benutzerdefinierter Apps zulassen"** konfiguriert haben. Weitere Informationen finden Sie unter [Vorbereiten Ihres Office 365 Mandanten.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
     > [!NOTE]
-    > Wenn Sie nicht über ein Microsoft 365 Konto verfügen, können Sie sich über das [Microsoft-Entwicklerprogramm](https://developer.microsoft.com/en-us/microsoft-365/dev-program)für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden.
+    > Wenn Sie kein Microsoft 365 Konto haben, können Sie sich über das [Microsoft-Entwicklerprogramm](https://developer.microsoft.com/en-us/microsoft-365/dev-program)für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden.
 
 - Verwenden Sie App Studio, um Ihre Anwendung in Teams zu importieren. Um App Studio zu installieren, wählen Sie **Apps** ![ Store App in der ](~/assets/images/tab-images/storeApp.png) unteren linken Ecke der Teams App aus, und suchen Sie nach **App Studio.** Nachdem Sie die Kachel gefunden haben, wählen Sie sie aus, und wählen Sie im Popupdialogfeld **"Hinzufügen"** aus, um sie zu installieren.
 
@@ -551,7 +552,7 @@ Alternativ können Sie den Quellcode abrufen, indem Sie den ZIP-Ordner herunterl
 
 **So erstellen Sie das Registerkartenprojekt und führen es aus**
 
-1. Nachdem Sie über den Quellcode verfügen, wechseln Sie zu Visual Studio, und wählen Sie **"Projekt oder Projektmappe öffnen"** aus.
+1. Nachdem Sie über den Quellcode verfügen, wechseln Sie zu Visual Studio, und wählen Sie **"Projekt oder Lösung öffnen"** aus.
 1. Wechseln Sie zum Registerkartenanwendungsverzeichnis, und öffnen **Sie PersonalTabMVC.sln**.
 1. Drücken Sie **F5,** oder wählen Sie im Menü **"Debuggen"** die Option **"Debuggen starten"** aus, um die Anwendung zu erstellen und auszuführen.
 1. Wechseln Sie in einem Browser zu den folgenden URLs, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde:
@@ -564,7 +565,7 @@ Alternativ können Sie den Quellcode abrufen, indem Sie den ZIP-Ordner herunterl
 
 #### <a name="startupcs"></a>Startup.cs
 
-Dieses Projekt wurde aus einer leeren Vorlage für ASP.NET Core 2.2-Webanwendung erstellt, wobei das Kontrollkästchen **"Erweitert – Für HTTPS konfigurieren"** beim Setup aktiviert ist. Die MVC-Dienste werden durch die Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage nicht standardmäßig die Bereitstellung statischer Inhalte, sodass die Middleware für statische Dateien der Methode mit dem folgenden Code hinzugefügt `Configure()` wird:
+Dieses Projekt wurde aus einer leeren Vorlage ASP.NET Core 2.2 Webanwendung erstellt, wobei das Kontrollkästchen **"Erweitert – Für HTTPS konfigurieren"** beim Setup aktiviert ist. Die MVC-Dienste werden durch die Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage nicht standardmäßig die Bereitstellung statischer Inhalte, sodass die Middleware für statische Dateien der Methode mit dem folgenden Code hinzugefügt `Configure()` wird:
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -590,11 +591,11 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 * Ein **transparentes Gliederungssymbol** mit einer Auflösung von 32 x 32 Pixeln.
 * Eine **Manifest.json-Datei,** die die Attribute Ihrer App angibt.
 
-Diese Dateien müssen in einem App-Paket gezippt werden, um Ihre Registerkarte in Teams hochzuladen. Microsoft Teams das angegebene `contentUrl` Element in Ihrem Manifest lädt, es in einen IFrame einbettet und auf der Registerkarte rendert.
+Diese Dateien müssen in einem App-Paket gezippt werden, um Ihre Registerkarte auf Teams hochzuladen. Microsoft Teams das `contentUrl` angegebene Element in Ihrem Manifest lädt, es in einen IFrame einbettet und auf der Registerkarte rendert.
 
 #### <a name="csproj"></a>CSPROJ
 
-Klicken Sie im Fenster Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Project Datei bearbeiten** aus. Am Ende der Datei wird der folgende Code angezeigt, der Ihren ZIP-Ordner erstellt und aktualisiert, wenn die Anwendung erstellt wird:
+Klicken Sie im Fenster Visual Studio Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **"Bearbeiten Project Datei"** aus. Am Ende der Datei wird der folgende Code angezeigt, der Ihren ZIP-Ordner erstellt und aktualisiert, wenn die Anwendung erstellt wird:
 
 ``` xml
 <PropertyGroup>
@@ -649,11 +650,11 @@ Die Controller verwenden die `ViewBag` Eigenschaft, um Werte dynamisch in die An
 1. Stellen Sie sicher, dass **ngrok** ausgeführt wird und ordnungsgemäß funktioniert, indem Sie Ihren Browser öffnen und über die ngrok-HTTPS-URL, die im Eingabeaufforderungsfenster bereitgestellt wurde, zu Ihrer Inhaltsseite wechseln.
 
 > [!TIP]
-> Sie müssen ihre Anwendung sowohl in Visual Studio als auch in ngrok ausführen, um die in diesem Artikel beschriebenen Schritte auszuführen. Wenn Sie die Ausführung der Anwendung in Visual Studio beenden müssen, um daran zu arbeiten, **führen Sie ngrok weiter aus.** Beim Neustart in Visual Studio wird die Weiterleitung der Anwendungsanforderung überwacht und fortgesetzt. Wenn Sie den ngrok-Dienst neu starten müssen, wird eine neue URL zurückgegeben, und Sie müssen jeden Ort aktualisieren, der diese URL verwendet.
+> Sie müssen ihre Anwendung sowohl in Visual Studio als auch in ngrok ausführen, um die in diesem Artikel beschriebenen Schritte auszuführen. Wenn Sie die Ausführung Ihrer Anwendung in Visual Studio beenden müssen, um daran zu arbeiten, **führen Sie ngrok weiter** aus. Sie überwacht und setzt das Weiterleiten der Anforderung Ihrer Anwendung fort, wenn sie in Visual Studio neu gestartet wird. Wenn Sie den ngrok-Dienst neu starten müssen, wird eine neue URL zurückgegeben, und Sie müssen jeden Ort aktualisieren, der diese URL verwendet.
 
 #### <a name="run-your-application"></a>Ausführen der Anwendung
 
-Drücken Sie in Visual Studio **F5,** oder wählen Sie im **Menü "Debuggen"** der Anwendung die Option **"Debuggen starten"** aus.
+Drücken Sie in Visual Studio **F5,** oder wählen Sie **"Debuggen starten"** aus dem **Debugmenü** Ihrer Anwendung aus.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
@@ -663,7 +664,7 @@ Drücken Sie in Visual Studio **F5,** oder wählen Sie im **Menü "Debuggen"** d
 
 Ab Manifestversion 1.7 können Entwickler alle Registerkarten in ihrer persönlichen App neu anordnen. Insbesondere kann ein Entwickler die **Registerkarte "Bot-Chat",** die standardmäßig immer an die erste Position festgelegt ist, an eine beliebige Stelle in der Kopfzeile der persönlichen App-Registerkarte verschieben. Es werden zwei reservierte `entityId` Registerkartenschlüsselwörter deklariert, **Unterhaltungen** und **informationen.**
 
-Wenn Sie einen Bot mit einem **persönlichen** Bereich erstellen, wird er standardmäßig an der ersten Registerkartenposition in einer persönlichen App angezeigt. Wenn Sie es an eine andere Position verschieben möchten, müssen Sie Ihrem Manifest ein statisches Registerkartenobjekt mit dem reservierten Schlüsselwort **Unterhaltungen** hinzufügen. Die  Unterhaltungsregisterkarte wird im Web oder Desktop angezeigt, je nachdem, wo Sie die **Unterhaltungsregisterkarte** im Array `staticTabs` hinzufügen.
+Wenn Sie einen Bot mit einem **persönlichen** Bereich erstellen, wird er standardmäßig an der ersten Registerkartenposition in einer persönlichen App angezeigt. Wenn Sie es an eine andere Position verschieben möchten, müssen Sie Ihrem Manifest ein statisches Registerkartenobjekt mit dem reservierten Schlüsselwort **Unterhaltungen** hinzufügen. Die **Registerkarte "Unterhaltung"** wird im Web oder Desktop angezeigt, je nachdem, wo Sie die **Unterhaltungsregisterkarte** im Array `staticTabs` hinzufügen.
 
 ```json
 {
@@ -703,8 +704,8 @@ function handleFocusEnter(navigateForward: boolean): void
 ```
 
 Nachdem der Handler mit dem Schlüsselwort ausgelöst `focusEnter` wurde, wird der Handler `registerFocusEnterHandler` mit einer Rückruffunktion `focusEnterHandler` aufgerufen, die einen aufgerufenen Parameter `navigateForward` akzeptiert. Der Wert von `navigateForward` bestimmt den Ereignistyp. Sie `focusEnterHandler` wird nur durch STRG+F6 und nicht durch die Tabulatortaste aufgerufen.   
-Folgende Schlüssel sind für das Verschieben von Ereignissen innerhalb Teams hilfreich:    
-* Forward-Ereignis - > STRG+F6-TASTEN
+Die folgenden Schlüssel sind für das Verschieben von Ereignissen innerhalb Teams hilfreich:    
+* Forward-Ereignis - > TASTEN STRG+F6
 * Backward-Ereignis - > TASTEN STRG+UMSCHALT+F6
 
 ```csharp
@@ -735,7 +736,7 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 
 #### <a name="personal-app---forward-event"></a>Persönliche App – Weiterleitungsereignis
 
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="Beispiel zeigt Optionen zum Hinzufügen der registerOnFocussed-API-Vorwärtsbewegung" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="Beispiel zeigt Optionen zum Hinzufügen von registerOnFocussed-API-Vorwärtsbewegung" border="false":::
 
 #### <a name="personal-app---backward-event"></a>Persönliche App – Abwärtsereignis
 
@@ -745,14 +746,14 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="Beispiel zeigt Optionen zum Hinzufügen der registerOnFocussed-API für Registerkarten" border="false":::
 
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
+
 ## <a name="see-also"></a>Siehe auch
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
 * [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Registerkarten für Unterhaltungen erstellen](~/tabs/how-to/conversational-tabs.md)
-
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)

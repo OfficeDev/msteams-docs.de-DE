@@ -1,21 +1,21 @@
 ---
 title: Gerätefunktionen – Übersicht
 author: Rajeshwari-v
-description: Übersicht über systemeigene Gerätefunktionen.
+description: Übersicht über systemeigene Gerätefunktionen wie Kamera, Bild, Medien, Mikrofon, Mikrofon, QR-Code und mehr.
 ms.author: surbhigupta
 keywords: Kamerabild Medienmikrofon Mikrofon QR Code Qrcode Barcode Barcode Scan Location Map Capabilities native Geräteberechtigungen
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 9c08b727808f33ad128709ce15ecab2ecc3602b3
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 51f09880d638e1da48233aa2b6ff396f9908fa23
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566267"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889139"
 ---
 # <a name="device-capabilities"></a>Gerätefunktionen
 
-Microsoft Teams Plattform verbessert kontinuierlich die Entwicklerfunktionen, die sich an den integrierten Oberflächen von Erstanbietern orientieren. Die erweiterte Teams-Plattform ermöglicht Partnern die Integration von Gerätefunktionen wie Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort in ihre Web-Apps. Diese Integration reduziert die Barriere für die App-Entwicklung, beschleunigt den Entwicklungszyklus und erstellt neue Szenarien oder Anwendungsfälle für die Entwicklercommunity.
+Microsoft Teams Plattform verbessert die Entwicklerfunktionen kontinuierlich, die sich an den integrierten Erfahrungen von Erstanbietern orientieren. Die erweiterte Teams-Plattform ermöglicht Partnern die Integration von Gerätefunktionen wie Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort in ihre Web-Apps. Diese Integration reduziert die Barriere für die App-Entwicklung, beschleunigt den Entwicklungszyklus und erstellt neue Szenarien oder Anwendungsfälle für die Entwicklercommunity.
 
 Geräteberechtigungen unterscheiden sich im Browser. Weitere Informationen finden Sie unter [Berechtigungen für Browsergeräte.](browser-device-permissions.md)
 
@@ -33,7 +33,7 @@ Nachdem Sie Zugriff auf die Gerätefunktionen erhalten haben, können Sie sie in
 
 ## <a name="request-device-permissions"></a>Geräteberechtigungen anfordern
 
-Verwenden Sie die tools in [Microsoft Teams JavaScript-Client-SDK,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) um die erforderlichen [Berechtigungen](native-device-permissions.md) für den Zugriff auf die systemeigenen Gerätefunktionen anzufordern. Während der Zugriff auf diese Funktionen in modernen Webbrowsern standard ist, müssen Sie Teams über die Funktionen informieren, die Sie verwenden, indem Sie Ihr App-Manifest aktualisieren. Mit diesem Update können Sie Berechtigungen anfordern, während Ihre App auf Teams mobilen oder Desktopclients ausgeführt wird.
+Verwenden Sie die in [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) vorhandenen Tools, um die erforderlichen [Berechtigungen](native-device-permissions.md) für den Zugriff auf die systemeigenen Gerätefunktionen anzufordern. Während der Zugriff auf diese Funktionen in modernen Webbrowsern standard ist, müssen Sie Teams über die Funktionen informieren, die Sie verwenden, indem Sie Ihr App-Manifest aktualisieren. Mit diesem Update können Sie Berechtigungen anfordern, während Ihre App auf Teams mobilen Clients oder Desktopclients ausgeführt wird.
  
  ## <a name="integrate-device-capabilities"></a>Integrieren von Gerätefunktionen
 

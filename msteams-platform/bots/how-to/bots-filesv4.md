@@ -1,16 +1,16 @@
 ---
 title: Senden und Empfangen von Dateien über den Bot
-description: Beschreibt, wie Dateien über den Bot gesendet und empfangen werden
+description: Erfahren Sie, wie Sie Dateien über den Bot senden und empfangen, Graph APIs für alle Teams Bereiche verwenden und Teams Bot-APIs mit Codebeispielen und Beispielen verwenden.
 keywords: Teams-Bots senden Empfangen von Dateien
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: cb82643ad55439ac12d707d9fff0378afa99e363
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a65db945c5d32586c648bb2aeec9d1ad7b08112f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156351"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889174"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Senden und Empfangen von Dateien über den Bot
 
@@ -28,7 +28,7 @@ Es gibt zwei Möglichkeiten, Dateien an einen Bot zu senden und von einem Bot zu
 
 ## <a name="use-the-graph-apis"></a>Verwenden der Graph-APIs
 
-Posten Sie Nachrichten mit Kartenanlagen, die auf vorhandene SharePoint Dateien verweisen, mithilfe der Graph-APIs für [OneDrive und SharePoint.](/onedrive/developer/rest-api/) Um die Graph-APIs zu verwenden, erhalten Sie Über den standardmäßigen OAuth 2.0-Autorisierungsfluss Zugriff auf eine der folgenden Optionen:
+Posten Sie Nachrichten mit Kartenanlagen, die auf vorhandene SharePoint-Dateien verweisen, mithilfe der Graph-APIs für [OneDrive und SharePoint.](/onedrive/developer/rest-api/) Um die Graph-APIs zu verwenden, erhalten Sie Über den standardmäßigen OAuth 2.0-Autorisierungsfluss Zugriff auf eine der folgenden Komponenten:
 
 * Der OneDrive Ordner eines Benutzers für `personal` und `groupchat` dateien.
 * Die Dateien im Kanal eines Teams für `channel` Dateien.
@@ -42,7 +42,7 @@ Alternativ können Sie Dateien mithilfe der Teams-Bot-APIs an einen Bot senden u
 > [!NOTE]
 > Teams Bot-APIs funktionieren nur im `personal` Kontext. Sie funktionieren weder im Kontext noch im `channel` `groupchat` Kontext.
 
-Mithilfe Teams APIs kann der Bot Dateien mit Benutzern im `personal` Kontext, auch als persönliche Chats bezeichnet, direkt senden und empfangen. Implementieren Sie Features wie Spesenabrechnung, Bilderkennung, Dateiarchivierung und E-Signaturen, die die Bearbeitung von Dateiinhalten betreffen. In Teams freigegebene Dateien werden in der Regel als Karten angezeigt und ermöglichen eine umfassende In-App-Anzeige.
+Mit Teams APIs kann der Bot Dateien mit Benutzern im `personal` Kontext, auch als persönliche Chats bezeichnet, direkt senden und empfangen. Implementieren Sie Features wie Spesenabrechnung, Bilderkennung, Dateiarchivierung und E-Signaturen, die die Bearbeitung von Dateiinhalten betreffen. In Teams freigegebene Dateien werden in der Regel als Karten angezeigt und ermöglichen eine umfassende In-App-Anzeige.
 
 In den nächsten Abschnitten wird beschrieben, wie Sie Dateiinhalte als direkte Benutzerinteraktion senden, z. B. das Senden einer Nachricht. Diese API wird als Teil der Teams Bot-Plattform bereitgestellt.
 
@@ -127,7 +127,7 @@ In der folgenden Tabelle werden die Inhaltseigenschaften der Anlage beschrieben:
 | Eigenschaft | Zweck |
 | --- | --- |
 | `description` | Beschreibt den Zweck der Datei oder fasst den Inhalt zusammen. |
-| `sizeInBytes` | Stellt dem Benutzer eine Schätzung der Dateigröße und des Speicherplatzes bereit, den er in OneDrive benötigt. |
+| `sizeInBytes` | Stellt dem Benutzer eine Schätzung der Dateigröße und des Speicherplatzes bereit, der in OneDrive benötigt wird. |
 | `acceptContext` | Zusätzlicher Kontext, der automatisch an den Bot übertragen wird, wenn der Benutzer die Datei akzeptiert. |
 | `declineContext` | Zusätzlicher Kontext, der im Hintergrund an den Bot übertragen wird, wenn der Benutzer die Datei ablehnt. |
 
@@ -157,7 +157,7 @@ Der folgende Code zeigt ein Beispiel für eine präzise Version der Aufrufaktivi
 }
 ```
 
-Wenn der Benutzer die Datei ablehnt, empfängt der Bot auf ähnliche Weise das folgende Ereignis mit dem gleichen Gesamtaktivitätsnamen:
+Wenn der Benutzer die Datei ablehnt, empfängt der Bot auf ähnliche Weise das folgende Ereignis mit demselben Gesamtaktivitätsnamen:
 
 ```json
 {

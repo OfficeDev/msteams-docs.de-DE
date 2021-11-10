@@ -1,16 +1,17 @@
 ---
 title: Erstellen adaptiver Kartenregisterkarten
 author: KirtiPereira
-description: Erstellen von Registerkarten mit adaptiven Karten
+description: Erfahren Sie mehr über das Erstellen von Registerkarten mit adaptiven Karten mit Codebeispielen, einschließlich des Aufrufens von Aktivitäten, des Verständnisses des Aufgabenmodulworkflows und der Authentifizierung.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 09e5a6133ac4c2b33dbf6ffae273e8107a4c67ce
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: Datenfluss der Authentifizierungsdaten für persönliche Apps für adaptive Karten
+ms.openlocfilehash: ba8a28a25665370420b05de64d8302d8ef160687
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720330"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887560"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
@@ -227,7 +228,7 @@ Der folgende Code enthält Beispiele für `tab/submit` Anforderung und Antwort:
 
 Das Aufgabenmodul verwendet auch adaptive Karte zum Aufrufen `task/fetch` und `task/submit` Anfordern und Antworten. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Microsoft Teams Bots.](../../task-modules-and-cards/task-modules/task-modules-bots.md)
 
-Mit der Einführung der Registerkarte "Adaptive Karte" gibt es eine Änderung in der Art und Weise, wie der Bot auf eine `task/submit` Anforderung antwortet. Wenn Sie eine Registerkarte für adaptive Karten verwenden, antwortet der Bot auf die `task/submit` Aufrufanforderung mit der Standardregisterkarte **"Continue"-Antwort** und schließt das Aufgabenmodul. Die Registerkarte "Adaptive Karte" wird aktualisiert, indem die neue Liste der Im Antworttext der Registerkarte **"Fortsetzen"** bereitgestellten Karten gerendert wird.
+Mit der Einführung der Registerkarte "Adaptive Karte" gibt es eine Änderung in der Art und Weise, wie der Bot auf eine `task/submit` Anforderung antwortet. Wenn Sie eine Registerkarte für adaptive Karten verwenden, antwortet der Bot auf die `task/submit` Aufrufanforderung mit der Standardregisterkarte **"Continue"-Antwort** und schließt das Aufgabenmodul. Die Registerkarte "Adaptive Karte" wird aktualisiert, indem die neue Liste der Karten gerendert wird, die im Antworttext der Registerkarte **"Fortsetzen"** bereitgestellt wird.
 
 ### <a name="invoke-taskfetch"></a>Aufrufen `task/fetch`
 
@@ -426,7 +427,12 @@ Der folgende Code zeigt ein neu ausgestelltes Anforderungsbeispiel:
 
 |**Beispielname** | **Beschreibung** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| Adaptive Karten auf Teams Registerkarte anzeigen | Microsoft Teams Beispielcode für Registerkarten, der veranschaulicht, wie adaptive Karten in Teams angezeigt werden. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| Adaptive Karten auf Teams Registerkarte anzeigen | Microsoft Teams Beispielcode der Registerkarte, der veranschaulicht, wie adaptive Karten in Teams angezeigt werden. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Aufgeklappte Registerkartenverknüpfung und Phasenansicht](~/tabs/tabs-link-unfurling.md)
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -435,8 +441,3 @@ Der folgende Code zeigt ein neu ausgestelltes Anforderungsbeispiel:
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
 * [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
 * [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
-
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Aufgeklappte Registerkartenverknüpfung und Phasenansicht](~/tabs/tabs-link-unfurling.md)

@@ -4,12 +4,12 @@ description: Beschreibt Kartenaktionen in Microsoft Teams und deren Verwendung i
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: Teams-Bots – Kartenaktionen
-ms.openlocfilehash: fb1ff1df6e91c17efd5a01123935fb03f0a0ed98
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3509ab49f8e2031176743a9330ee3b6757b70277
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156478"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889328"
 ---
 # <a name="card-actions"></a>Kartenaktionen
 
@@ -556,12 +556,14 @@ Der folgende Code zeigt ein Beispiel für adaptive Karten mit `invoke`-Aktion mi
   }
 }
 ```
-
-## <a name="see-also"></a>Siehe auch
-
-[Kartenreferenz](./cards-reference.md)
-
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Universal-Aktionen für adaptive Karten](../cards/Universal-actions-for-adaptive-cards/Overview.md)
+
+## <a name="see-also"></a>Siehe auch
+
+* [Kartenreferenz](./cards-reference.md)
+* [Verwenden von Aufgabenmodulen aus Bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Adaptive Karten in Bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
+* [Universal-Aktionen für adaptive Karten](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)

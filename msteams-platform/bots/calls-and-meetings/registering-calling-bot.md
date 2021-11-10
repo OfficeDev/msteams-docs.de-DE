@@ -1,15 +1,15 @@
 ---
 title: Registrieren von Anrufen und Besprechungsbots für Microsoft Teams
-description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanruf-Bot für Microsoft Teams
+description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanrufbot für Microsoft Teams registrieren, einen neuen Bot erstellen oder Anruffunktionen hinzufügen und Graph-Berechtigungen hinzufügen.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Aufrufen von Bot-Audio-/Video-Audiovideomedien
-ms.openlocfilehash: 945066cf58f5b5adcf5b69f18335551913832e87
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: 144e623ea21da51b8a06bf20f50a60345dda081a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260663"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889104"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrieren von Anrufen und Besprechungsbots für Microsoft Teams
 
@@ -21,7 +21,7 @@ Ein Bot, der an Audio- oder Videoanrufen und Onlinebesprechungen teilnimmt, ist 
 
 ## <a name="new-manifest-settings"></a>Neue Manifesteinstellungen
 
-Bots für Anrufe und Onlinebesprechungen verfügen über die folgenden beiden zusätzlichen Einstellungen in "manifest.json", die Audio oder Video für Ihren Bot in Teams aktivieren.
+Bots für Anrufe und Onlinebesprechungen haben die folgenden beiden zusätzlichen Einstellungen in "manifest.json", die Audio- oder Videodaten für Ihren Bot in Teams aktivieren.
 
 * `bots[0].supportsCalling`. Wenn vorhanden und `true` festgelegt, ermöglicht Teams Ihrem Bot die Teilnahme an Anrufen und Onlinebesprechungen.
 * `bots[0].supportsVideo`. Wenn vorhanden und festgelegt `true` auf , weiß Teams, dass Ihr Bot Video unterstützt.
@@ -36,7 +36,7 @@ Im nächsten Abschnitt können Sie einen neuen Bot erstellen oder Ihrem vorhande
 
 ## <a name="create-new-bot-or-add-calling-capabilities"></a>Erstellen eines neuen Bots oder Hinzufügen von Anruffunktionen
 
-Informationen zum Erstellen von Bots finden Sie unter [Erstellen eines Bots für Teams](../how-to/create-a-bot-for-teams.md).
+Informationen zum Erstellen von Bots finden Sie unter [Erstellen eines Bots für Teams.](../how-to/create-a-bot-for-teams.md)
 
 **So erstellen Sie einen neuen Bot für Teams**
 
@@ -96,3 +96,8 @@ Sie können sich darauf verlassen, dass ein Administrator die Berechtigungen ert
 
 > [!div class="nextstepaction"]
 > [Eingehende Anrufbenachrichtigungen](~/bots/calls-and-meetings/call-notifications.md)
+
+## <a name="see-also"></a>Siehe auch
+
+* [Eingehende Anrufbenachrichtigungen](~/bots/calls-and-meetings/call-notifications.md)
+* [Entwickeln von Anruf- und Onlinebesprechungs-Bots auf Ihrem lokalen PC](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

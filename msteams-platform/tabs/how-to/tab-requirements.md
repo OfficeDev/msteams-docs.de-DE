@@ -6,12 +6,12 @@ keywords: Konfigurierbarer Gruppenkanal für Teams-Registerkarten
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 786b4a74085acb57b4b87a5671a3a9b7ae9b0a41
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6b2233307d457e3f41e7eccd49bd6e099d593a9f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156413"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888055"
 ---
 # <a name="prerequisites"></a>Voraussetzungen
 
@@ -43,17 +43,15 @@ Teams Registerkarten müssen die folgenden Voraussetzungen erfüllen:
 * [Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
 * [Microsoft Teams-Toolkit-Erweiterung für Visual Studio](../../toolkit/visual-studio-overview.md)
 
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
+
 ## <a name="see-also"></a>Siehe auch
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Erstellen Ihrer ersten App mit React](../../get-started/first-app-react.md)
 * [Erstellen Ihrer ersten App mit Blazor](../../get-started/first-app-blazor.md)
 * [Erstellen Ihrer ersten App mit SPFx](../../get-started/first-app-spfx.md)
-* [Erstellen Sie Ihren ersten Chatbot](../../get-started/first-app-bot.md)
-* [Erstellen Ihrer ersten Nachrichtenerweiterung](../../get-started/first-message-extension.md)
 * [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
-
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)

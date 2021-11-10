@@ -4,12 +4,12 @@ description: Beschreibt Deep-Links und deren Verwendung in Ihren Apps
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: DeepLink für Teams
-ms.openlocfilehash: fbf4d933db63ee634000bb5fc277c385fc3cfa44
-ms.sourcegitcommit: 31dc5dfac6e7d0c6f33795190a55bb5c741eb32a
+ms.openlocfilehash: 0d1ad5b74c434a20a1e2d7f55e970e5811c34890
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "60223048"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889153"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links 
 
@@ -32,7 +32,7 @@ Sie können Links zu Informationen und Features in Teams erstellen. Die folgende
 >
 > **Chat**:  
 > ✔ Textnachrichten-Hyperlinkmarkdown: Navigiert direkt zur Deeplink-URL.  
-> ✔ In allgemeine Chatunterhaltung eingefügte Link: Navigiert direkt zur Deeplink-URL.
+> ✔ Link, der in einer allgemeinen Chatunterhaltung eingefügt wird: Navigiert direkt zur Deeplink-URL.
 
 ## <a name="deep-linking-to-your-tab"></a>Deep-Verknüpfung zu Ihrer Registerkarte
 
@@ -69,8 +69,8 @@ Verwenden Sie das folgende Format für einen Deep-Link, den Sie in einer Bot-, C
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
-> Wenn der Bot eine Nachricht `TextBlock` mit einem Deep-Link sendet, wird eine neue Browserregisterkarte geöffnet, wenn der Benutzer den Link auswählt. Dies geschieht in Chrome und in der Microsoft Teams Desktop-App, die beide unter Linux ausgeführt werden.
-> Wenn der Bot dieselbe Deep-Link-URL in eine `Action.OpenUrl` sendet, wird die Registerkarte Teams in der aktuellen Browserregisterkarte geöffnet, wenn der Benutzer den Link auswählt. Eine neue Browserregisterkarte wird nicht geöffnet.
+> Wenn der Bot eine Nachricht `TextBlock` mit einem Deep-Link sendet, wird eine neue Browserregisterkarte geöffnet, wenn der Benutzer den Link auswählt. Dies geschieht in Chrome und in der Microsoft Teams-Desktop-App, die beide unter Linux ausgeführt werden.
+> Wenn der Bot dieselbe Deep-Link-URL an eine `Action.OpenUrl` sendet, wird die Registerkarte Teams auf der aktuellen Browserregisterkarte geöffnet, wenn der Benutzer den Link auswählt. Eine neue Browserregisterkarte wird nicht geöffnet.
 
 Die Abfrageparameter sind:
 
@@ -102,7 +102,7 @@ Beispiele:
 
 ### <a name="consume-a-deep-link-from-a-tab"></a>Verwenden eines Deep-Links von einer Registerkarte
 
-Beim Navigieren zu einem Deep-Link navigiert Microsoft Teams einfach zur Registerkarte und bietet einen Mechanismus über die Microsoft Teams JavaScript-Bibliothek, um die Unterentitäts-ID abzurufen, falls vorhanden.
+Beim Navigieren zu einem Deep-Link navigiert Microsoft Teams einfach zur Registerkarte und stellt einen Mechanismus über die Microsoft Teams JavaScript-Bibliothek bereit, um die Unterentitäts-ID abzurufen, falls vorhanden.
 
 Der [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) Aufruf gibt einen Kontext zurück, der das Feld `subEntityId` enthält, wenn die Registerkarte durch einen Deep-Link navigiert wird.
 
@@ -140,7 +140,7 @@ Beispiel: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@cont
 
 Die Abfrageparameter sind:
 
-* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Chats darstellen. Der Benutzer, der die Aktion ausführt, ist immer als Teilnehmer enthalten. Derzeit unterstützt das Feld "Benutzer-ID" den Azure AD UserPrincipalName, z. B. nur eine E-Mail-Adresse.
+* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Chats darstellen. Der Benutzer, der die Aktion ausführt, ist immer als Teilnehmer enthalten. Derzeit unterstützt das Benutzer-ID-Feld den Azure AD UserPrincipalName, z. B. nur eine E-Mail-Adresse.
 * `topicName`: Ein optionales Feld für den Anzeigenamen des Chats, im Falle eines Chats mit 3 oder mehr Benutzern. Wenn dieses Feld nicht angegeben ist, basiert der Anzeigename des Chats auf den Namen der Teilnehmer.
 * `message`: Ein optionales Feld für den Nachrichtentext, den Sie in das Feld zum Verfassen des aktuellen Benutzers einfügen möchten, während sich der Chat im Entwurfszustand befindet.
 
@@ -166,7 +166,7 @@ Die Abfrageparameter sind:
 > [!NOTE]
 > Sie können die URL aus dem Kanal anzeigen `threadId` und `groupId` in dieser anzeigen.  
 
-Das folgende Deep Link-Format wird in einer Bot-, Connector- oder Messaging-Erweiterungskarte verwendet: `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
+Das folgende Deep-Link-Format wird in einer Bot-, Connector- oder Messaging-Erweiterungskarte verwendet: `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 Das folgende Beispielformat zeigt den Deeplink zu Dateien:
 
@@ -222,7 +222,7 @@ Verwenden Sie das folgende Format für einen Deep-Link, den Sie in einer Bot-, C
 Beispiel: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
 > [!NOTE]
-> Die Suchparameter unterstützen kein `+` Signal anstelle von Leerzeichen ( ` ` ). Stellen Sie sicher, dass Der URI-Codierungscode für Leerzeichen zurückgegeben `%20` wird, z. B. `?subject=test%20subject` gut, aber `?subject=test+subject` schlecht ist.
+> Die Suchparameter unterstützen kein `+` Signal anstelle von Leerzeichen ( ` ` ). Stellen Sie sicher, dass der URI-Codierungscode für Leerzeichen zurückgegeben `%20` wird, z. B. `?subject=test%20subject` gut, aber `?subject=test+subject` schlecht ist.
 
 Die Abfrageparameter sind:
 
@@ -237,14 +237,17 @@ Die Abfrageparameter sind:
 
 Um diesen Deep-Link mit Ihrem Bot zu verwenden, können Sie dies als URL-Ziel in der Schaltfläche Ihrer Karte angeben oder über den Aktionstyp auf die Aktion `openUrl` tippen.
 
-## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>Deep-Links zu einem Audio- oder Audiovideoanruf
+## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>Deep linking to an audio or audio-video call
 
-Sie können Deep-Links erstellen, um nur Audio- oder Audiovideoanrufe an einen einzelnen Benutzer oder eine Gruppe von Benutzern aufzurufen, indem Sie den Anruftyp als *Audio* oder *Av* und die Teilnehmer angeben. Nachdem der Deep-Link aufgerufen wurde und bevor der Anruf erfolgt ist, fordert Teams Desktopclient eine Bestätigung für den Anruf an. Im Falle eines Gruppenanrufs können Sie eine Gruppe von VoIP-Benutzern und eine Gruppe von PSTN-Benutzern im selben Deeplink-Aufruf aufrufen. 
+Sie können Deep-Links erstellen, um nur Audio- oder Audiovideoanrufe an einen einzelnen Benutzer oder eine Gruppe von Benutzern aufzurufen, indem Sie den Anruftyp als *Audio* oder *Av* und die Teilnehmer angeben. Nachdem der Deep-Link aufgerufen wurde und bevor er den Anruf abgibt, fordert Teams Desktopclient eine Bestätigung für den Anruf an. Im Falle eines Gruppenanrufs können Sie eine Gruppe von VoIP-Benutzern und eine Gruppe von PSTN-Benutzern im selben Deeplink-Aufruf aufrufen. 
 
 Bei einem Videoanruf fordert der Client die Bestätigung an und aktiviert das Video des Anrufers für den Anrufer. Der Empfänger des Anrufs kann über das Teams Anrufbenachrichtigungsfenster nur über Audio oder Audio und Video antworten.
 
 > [!NOTE]
 > Dieser Deeplink kann nicht zum Aufrufen einer Besprechung verwendet werden.
+
+> [!NOTE]
+> Derzeit wird deeplink to call auf Teams mobilen Geräten nicht unterstützt.
 
 ### <a name="generate-a-deep-link-to-a-call"></a>Generieren eines Deep-Links zu einem Anruf
 
@@ -253,20 +256,20 @@ Bei einem Videoanruf fordert der Client die Bestätigung an und aktiviert das Vi
 | Tätigen eines Audioanrufs | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
 | Tätigen eines Audio- und Videoanrufs | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withVideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true |
 |Tätigen eines Audio- und Videoanrufs mit einer optionalen Parameterquelle | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withVideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp |  
-| Tätigen eines Audio- und Videoanrufs für eine Kombination aus VoIP- und PSTN-Benutzern | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; ,4: &lt; Phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
+| Tätigen eines Audio- und Videoanrufs an eine Kombination aus VoIP- und PSTN-Benutzern | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; ,4: &lt; Phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 Es folgen die Abfrageparameter:
-* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Anrufs darstellen. Derzeit unterstützt das Benutzer-ID-Feld den Azure AD UserPrincipalName, in der Regel eine E-Mail-Adresse, oder im Falle eines PSTN-Anrufs unterstützt es eine pstn mri 4: &lt; &gt; Telefonnummer.
-* `withVideo`: Dies ist ein optionaler Parameter, den Sie für einen Videoanruf verwenden können. Durch Festlegen dieses Parameters wird nur die Kamera des Anrufers aktiviert. Der Empfänger des Anrufs hat die Wahl, über audio- oder audio- und videoanruf über das Teams Anrufbenachrichtigungsfenster zu beantworten. 
+* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Anrufs darstellen. Derzeit unterstützt das Benutzer-ID-Feld den Azure AD UserPrincipalName, in der Regel eine E-Mail-Adresse, oder im Falle eines PSTN-Anrufs unterstützt es eine pstn mri 4: &lt; Phonenumber &gt; .
+* `withVideo`: Dies ist ein optionaler Parameter, den Sie für einen Videoanruf verwenden können. Durch Festlegen dieses Parameters wird nur die Kamera des Anrufers aktiviert. Der Empfänger des Anrufs hat die Möglichkeit, audio- oder audio- und videoanrufe über das Teams Anrufbenachrichtigungsfenster zu beantworten. 
 * `Source`: Dies ist ein optionaler Parameter, der über die Quelle des Deeplinks informiert.
 
 ## <a name="code-sample"></a>Codebeispiel
 
-| Beispielname | Beschreibung | C # |Node.js|
+| Beispielname | Beschreibung | C# |Node.js|
 |-------------|-------------|------|----|
-|Deep Link consuming Subentity ID  |Microsoft Teams Beispiel-App zum Demonstrieren von Deeplink vom Bot-Chat zum Tabulator der Unterentitäts-ID.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|Deep Link consuming Subentity ID  |Microsoft Teams Beispiel-App zum Demonstrieren von Deeplink vom Bot-Chat zu registerkartenverwendenden Subentity-ID.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## <a name="see-also"></a>Siehe auch
 
-[Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
-
+* [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
+* [Moodle LMS](~/resources/moodleinstructions.md)

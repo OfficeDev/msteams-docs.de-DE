@@ -1,16 +1,16 @@
 ---
 title: Grundlagen zu Unterhaltungen
-description: Einführung in Unterhaltungen
+description: Einführung in Bot-Unterhaltungen in einem Kanal, persönlichen Chat und einer Gruppenchatumgebung.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-keyword: conversations basics messages
-ms.openlocfilehash: 767efd3b6351e3f771f6ffe5cb6ff36181009f4b
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keyword: conversations basics messages groupchap group channel
+ms.openlocfilehash: ec8e5b2d632912aac6cc9e1e06e6db3a7f1ed948
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156991"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887441"
 ---
 # <a name="conversation-basics"></a>Grundlagen zu Unterhaltungen
 
@@ -37,7 +37,7 @@ Damit der Bot in einer bestimmten Unterhaltung oder einem bestimmten Bereich fun
 
 Jede Nachricht in einer Bot-Unterhaltung ist ein `Activity` Objekt vom Typ `messageType: message` . Wenn ein Benutzer eine Nachricht sendet, Teams die Nachricht an Ihren Bot sendet und der Bot die Nachricht verarbeitet. Darüber hinaus können Sie zum Definieren der Kernbefehle, auf die Ihr Bot reagiert, ein Befehlsmenü mit einer Dropdownliste von Befehlen für Ihren Bot hinzufügen. Bots in einer Gruppe oder einem Kanal empfangen Nachrichten nur, wenn sie @botname erwähnt werden. Teams sendet Benachrichtigungen an Ihren Bot für Unterhaltungsereignisse, die in Bereichen stattfinden, in denen Ihr Bot aktiv ist. Sie können diese Ereignisse in Ihrem Code erfassen und entsprechende Maßnahmen ergreifen.
 
-Ein Bot kann auch proaktive Nachrichten an Benutzer senden. Eine proaktive Nachricht ist jede Nachricht, die von einem Bot gesendet wird, die nicht als Antwort auf eine Anforderung eines Benutzers erfolgt. Sie können Ihre Botnachrichten so formatieren, dass sie umfangreiche Karten enthalten, die interaktive Elemente wie Schaltflächen, Text, Bilder, Audio, Video usw. enthalten. Bot kann Nachrichten nach dem Senden dynamisch aktualisieren, anstatt Ihre Nachrichten als statische Momentaufnahmen von Daten zu verwenden. Nachrichten können auch mithilfe der Bot Framework-Methode gelöscht `DeleteActivity` werden.
+Ein Bot kann auch proaktive Nachrichten an Benutzer senden. Eine proaktive Nachricht ist jede Nachricht, die von einem Bot gesendet wird, die nicht als Antwort auf eine Anforderung eines Benutzers erfolgt. Sie können Ihre Bot-Nachrichten so formatieren, dass sie umfangreiche Karten enthalten, die interaktive Elemente wie Schaltflächen, Text, Bilder, Audio, Video usw. enthalten. Bot kann Nachrichten nach dem Senden dynamisch aktualisieren, anstatt Ihre Nachrichten als statische Momentaufnahmen von Daten zu verwenden. Nachrichten können auch mithilfe der Bot Framework-Methode gelöscht `DeleteActivity` werden.
 
 ## <a name="next-step"></a>Nächster Schritt
 

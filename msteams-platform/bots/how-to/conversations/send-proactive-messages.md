@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 Keywords: Nachricht senden Benutzer-ID Kanal-ID Unterhaltungs-ID abrufen
-ms.openlocfilehash: d51c418c2269bb5fe74f7c80cbcabed6fe98f93a
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 3cd3388491ef8a29a3fb6321dbe778149eda66fb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720078"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889300"
 ---
 # <a name="proactive-messages"></a>Proaktive Nachrichten
 
@@ -22,7 +22,7 @@ Eine proaktive Nachricht ist jede Nachricht, die von einem Bot gesendet wird, di
 * Benachrichtigungen
 * Geplante Nachrichten
 
-Damit Ihr Bot eine proaktive Nachricht an einen Benutzer, einen Gruppenchat oder ein Team senden kann, muss er Zugriff haben, um die Nachricht zu senden. Für einen Gruppenchat oder ein Team muss die App, die Ihren Bot enthält, zuerst an diesem Speicherort installiert werden. Sie können [Ihre App proaktiv mithilfe von Microsoft Graph](#proactively-install-your-app-using-graph) in einem Team installieren, falls erforderlich, oder eine [App-Richtlinie](/microsoftteams/teams-custom-app-policies-and-settings) verwenden, um Apps an Teams und Benutzer in Ihrem Mandanten zu senden. Für Benutzer muss Ihre App entweder für den Benutzer installiert werden, oder Ihr Benutzer muss Teil eines Teams sein, in dem Ihre App installiert ist.
+Damit Ihr Bot eine proaktive Nachricht an einen Benutzer, einen Gruppenchat oder ein Team senden kann, muss er Zugriff haben, um die Nachricht zu senden. Für einen Gruppenchat oder ein Team muss die App, die Ihren Bot enthält, zuerst an diesem Speicherort installiert werden. Sie können Ihre App proaktiv mit Microsoft Graph in einem Team [installieren,](#proactively-install-your-app-using-graph) falls erforderlich, oder eine [App-Richtlinie](/microsoftteams/teams-custom-app-policies-and-settings) verwenden, um Apps an Teams und Benutzer in Ihrem Mandanten zu senden. Für Benutzer muss Ihre App entweder für den Benutzer installiert werden, oder Ihr Benutzer muss Teil eines Teams sein, in dem Ihre App installiert ist.
 
 Das Senden einer proaktiven Nachricht unterscheidet sich vom Senden einer regulären Nachricht. Es ist nicht aktiv `turnContext` für eine Antwort zu verwenden. Sie müssen die Unterhaltung erstellen, bevor Sie die Nachricht senden. Beispielsweise ein neuer 1:1-Chat oder ein neuer Unterhaltungsthread in einem Kanal. Sie können keinen neuen Gruppenchat oder einen neuen Kanal in einem Team mit proaktiven Nachrichten erstellen.
 
@@ -67,7 +67,7 @@ Nachdem Sie die entsprechenden Adressinformationen erhalten haben, können Sie I
 
 ## <a name="send-the-message"></a>Senden der Nachricht
 
-Nachdem Sie nun über die richtigen Adressinformationen verfügen, können Sie Ihre Nachricht senden. Wenn Sie das SDK verwenden, müssen Sie die `continueConversation` Methode und die und einen direkten `conversationId` `tenantId` API-Aufruf verwenden. Sie müssen die richtige Einstellung `conversationParameters` festlegen, um Ihre Nachricht erfolgreich zu senden. Sehen Sie [sich](#samples) den Beispielabschnitt an, oder verwenden Sie eines der Im [Codebeispielabschnitt](#code-sample) aufgeführten Beispiele.
+Nachdem Sie nun über die richtigen Adressinformationen verfügen, können Sie Ihre Nachricht senden. Wenn Sie das SDK verwenden, müssen Sie die `continueConversation` Methode und die und einen direkten `conversationId` `tenantId` API-Aufruf verwenden. Sie müssen den richtigen Wert `conversationParameters` festlegen, um Ihre Nachricht erfolgreich senden zu können. Sehen Sie [sich](#samples) den Beispielabschnitt an, oder verwenden Sie eines der Im [Codebeispielabschnitt](#code-sample) aufgeführten Beispiele.
 
 Nachdem Sie die proaktive Nachricht gesendet haben, müssen Sie diese bewährten Methoden befolgen und proaktive Nachrichten senden, um einen besseren Informationsaustausch zwischen Benutzern und dem Bot zu erzielen.
 
@@ -103,7 +103,7 @@ Wenn Sie proaktive Nachrichten verwenden, um geplante Nachrichten an Benutzer zu
 * Warum erhält der Benutzer die Nachricht: Machen Sie es Ihren Benutzern leicht, den Grund zu verstehen, aus dem sie die Nachricht erhalten.
 * Was der Benutzer als Nächstes tun kann: Benutzer können die erforderliche Aktion basierend auf dem Nachrichteninhalt ausführen.
 
-## <a name="proactively-install-your-app-using-graph"></a>Proaktive Installation Ihrer App mit Graph
+## <a name="proactively-install-your-app-using-graph"></a>Proaktives Installieren Ihrer App mit Graph
 
 > [!Note]
 > Die proaktive Installation von Apps mit Graph befindet sich derzeit in der Betaversion.
@@ -276,13 +276,15 @@ Die folgende Tabelle enthält ein einfaches Codebeispiel, das den grundlegenden 
 ### <a name="additional-code-sample"></a>Zusätzliches Codebeispiel
 
 > [!div class="nextstepaction"]
-> [Codebeispiele für proaktives Messaging Teams](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
-
-## <a name="see-also"></a>Siehe auch
-
-[**Codebeispiele für proaktives Messaging Teams**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+> [Codebeispiele für proaktive Messaging-Teams](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Formatieren von Bot-Nachrichten](~/bots/how-to/format-your-bot-messages.md)
+
+## <a name="see-also"></a>Siehe auch
+
+* [**Codebeispiele für proaktives Messaging Teams**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+* [Kanal- und Gruppenchatunterhaltungen mit einem Bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
+* [Reagieren auf die Sendeaktion des Aufgabenmoduls](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

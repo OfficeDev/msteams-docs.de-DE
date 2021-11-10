@@ -1,14 +1,14 @@
 ---
 title: Mit Universal-Aktionen für adaptive Karten arbeiten
-description: Mit Universal-Aktionen für adaptive Karten arbeiten.
+description: Erfahren Sie, wie Sie mit den universellen Aktionen für adaptive Karten arbeiten, einschließlich Schema für UniversalActions für adaptive Karten, Aktualisierungsmodell und Abwärtskompatibilität mithilfe von Codebeispielen.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b732308586d89f378b50056d7c98884a2990fb11
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 488385d560f3f372be8149631eb1a04a3642f65f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156481"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888363"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Mit Universal-Aktionen für adaptive Karten arbeiten
 
@@ -19,7 +19,7 @@ Universelle Aktionen für adaptive Karten bieten eine Möglichkeit zum Implement
 * [`adaptiveCard/action` Aufrufaktivität](#adaptivecardaction-invoke-activity)
 * [Abwärtskompatibilität](#backward-compatibility)
 
-## <a name="quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams"></a>Schnellstarthandbuch für die Verwendung von universellen Aktionen für adaptive Karten in Teams
+## <a name="quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams"></a>Schnellstartanleitung zur Verwendung von universellen Aktionen für adaptive Karten in Teams
 
 1. Ersetzen Sie alle Instanzen von `Action.Submit` durch `Action.Execute`, um ein vorhandenes Szenario in Teams zu aktualisieren.
 2. Fügen Sie ihrer adaptiven Karte eine `refresh` Klausel hinzu, wenn Sie das automatische Aktualisierungsmodell verwenden möchten oder wenn Ihr Szenario benutzerspezifische Ansichten erfordert.
@@ -112,3 +112,5 @@ Weitere Informationen finden Sie unter [Abwärtskompatibilität in Teams](/adapt
 
 * [Adaptive Kartenaktionen in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [Wie Bots funktionieren](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
+* [Sequenzielle Workflows](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)
+* [Aktuelle Karten](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)

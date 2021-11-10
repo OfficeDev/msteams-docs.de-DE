@@ -5,16 +5,16 @@ description: Entwerfen Sie Ihre App schneller mit standardisierten UI-Komponente
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: ef1fbe41c7618518dab64c25b3ac17eaf8f925d1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d84d03af2ce1428b7c75a232690e9f1e2fa6112f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156937"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887803"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Entwerfen Ihrer Microsoft Teams-App mit UI-Vorlagen
 
-Entwerfen Sie Ihre Microsoft Teams-App schneller mit UI-Vorlagen. Die Vorlagen sind eine Sammlung von Fluent UI-basierten Komponenten, die in gängigen Teams Anwendungsfällen funktionieren, sodass Sie mehr Zeit haben, um die beste Benutzererfahrung zu ermitteln.
+Entwerfen Sie Ihre Microsoft Teams-App schneller mit UI-Vorlagen. Die Vorlagen sind eine Sammlung von Fluent UI-basierten Komponenten, die in allgemeinen Teams Anwendungsfällen funktionieren, sodass Sie mehr Zeit haben, um die beste Benutzererfahrung zu ermitteln.
 
 ## <a name="getting-started-with-tools-and-samples"></a>Erste Schritte mit Tools und Beispielen
 
@@ -161,7 +161,7 @@ Sie können App-Anmeldeflüsse für unterschiedliche Teams Kontexte und Identit�
 
 ### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="Beispiel zeigt eine Vorlage für die Anmeldung auf mobilen Geräten." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="Beispiel zeigt eine Benutzeroberflächenvorlage für die Anmeldung auf mobilgeräten." border="false":::
 
 ### <a name="desktop"></a>Desktop
 
@@ -212,3 +212,9 @@ Ein Assistent führt einen Benutzer durch mehrere Bildschirme, um eine Aufgabe a
 ### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Beispiel zeigt eine Assistenten-UI-Vorlage auf dem Desktop." border="false":::
+
+## <a name="see-also"></a>Siehe auch
+
+* [Entwerfen Ihrer App mit einfachen Fluent UI-Komponenten](~/concepts/design/design-teams-app-basic-ui-components.md)
+* [Entwerfen Ihrer Microsoft Teams-App mit erweiterten UI-Komponenten](~/concepts/design/design-teams-app-advanced-ui-components.md)
+* [Formatieren von Bot-Nachrichten](~/bots/how-to/format-your-bot-messages.md)

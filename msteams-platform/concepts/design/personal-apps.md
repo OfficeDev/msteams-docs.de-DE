@@ -1,29 +1,30 @@
 ---
 title: Entwerfen Ihrer persönlichen App
-description: Erfahren Sie, wie Sie eine Teams persönliche App entwerfen und das Microsoft Teams UI Kit erhalten.
+description: Erfahren Sie, wie Sie eine Teams persönliche App entwerfen und das Microsoft Teams UI Kit erhalten, Komponenten wie Dashboard, Formular, Task Board für Mobile und Desktop erstellen. Lernen Sie die bewährten Methoden für die Entwicklung persönlicher Apps kennen.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 2f55661c7941422eb4067023eed46b05d1b757ea
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+keywords: Ui Kit Persönliche App Webview Navigation Bot Registerkarte iframe Dashboard Formularvorlage
+ms.openlocfilehash: 44196ee6b1d91754e29b62dd3f6c6e40b3246602
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360718"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888160"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Entwerfen Ihrer persönlichen App für Microsoft Teams
 
 Eine persönliche App kann ein Bot, ein privater Arbeitsbereich oder beides sein. Manchmal funktioniert es wie ein Ort zum Erstellen oder Anzeigen von Inhalten, in anderen Fällen bietet es dem Benutzer einen Blick auf alles, was ihnen liegt, wenn die App als Registerkarte in mehreren Kanälen konfiguriert wurde.
 
-Um Ihr App-Design zu leiten, wird in den folgenden Informationen beschrieben und veranschaulicht, wie Personen persönliche Apps in Teams hinzufügen, verwenden und verwalten können.
+Zur Anleitung ihres App-Designs beschreiben und veranschaulichen die folgenden Informationen, wie Benutzer persönliche Apps in Teams hinzufügen, verwenden und verwalten können.
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
-Im Microsoft Teams UI Kit finden Sie umfassende Designrichtlinien für persönliche Apps, einschließlich Elementen, die Sie nach Bedarf abrufen und ändern können. Das UI-Kit enthält auch wichtige Themen wie Barrierefreiheit und dynamische Größenanpassung, die hier nicht behandelt werden.
+Im Microsoft Teams UI Kit finden Sie umfassende Designrichtlinien für persönliche Apps, einschließlich Elementen, die Sie nach Bedarf abrufen und ändern können. Der Benutzeroberflächenbausatz enthält auch wichtige Themen wie Barrierefreiheit und dynamische Größenanpassung, die hier nicht behandelt werden.
 
 > [!div class="nextstepaction"]
-> [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Holen Sie sich den Microsoft Teams-Benutzeroberflächenbausatz (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-personal-app"></a>Hinzufügen einer persönlichen App
 
@@ -39,7 +40,7 @@ Mit einem privaten Arbeitsbereich können Benutzer App-Inhalte, die für sie von
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomie: Persönliche App (privater Arbeitsbereich)
 
-#### <a name="mobile"></a>Mobil
+#### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="Beispiel zeigt die Aufbaukomponente der persönlichen Registerkarte." border="false":::
 
@@ -55,7 +56,7 @@ Mit einem privaten Arbeitsbereich können Benutzer App-Inhalte, die für sie von
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
 |A|**Registerkarten:** Bietet Navigation für Ihre persönliche App.|
-|1|**webview:** Zeigt Ihre App-Inhalte an.|
+|1|**webview**: Zeigt Ihre App-Inhalte an.|
 
 #### <a name="desktop"></a>Desktop
 
@@ -73,17 +74,17 @@ Mit einem privaten Arbeitsbereich können Benutzer App-Inhalte, die für sie von
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
 |A|**Registerkarten:** Bietet Navigation für Ihre persönliche App.|
-|1|**iframe:** Zeigt Ihre App-Inhalte an.|
+|1|**iframe**: Zeigt Ihre App-Inhalte an.|
 
 ### <a name="design-with-ui-templates-and-advanced-components"></a>Design mit Benutzeroberflächenvorlagen und erweiterten Komponenten
 
 Verwenden Sie eine der folgenden Teams Vorlagen und Komponenten, um Ihre persönliche Registerkarte zu entwerfen:
 
-* [Liste:](../../concepts/design/design-teams-app-ui-templates.md#list)Listen können verwandte Elemente in einem scannbaren Format anzeigen und Benutzern ermöglichen, Aktionen für eine gesamte Liste oder einzelne Elemente auszuführen.
-* [Task Board:](../../concepts/design/design-teams-app-ui-templates.md#task-board)Ein Task Board, manchmal auch als "Tickets Board" oder "Sperre" bezeichnet, ist eine Sammlung von Karten, die häufig verwendet werden, um den Status von Arbeitselementen oder Tickets nachzuverfolgen.
-* [Dashboard:](../../concepts/design/design-teams-app-ui-templates.md#dashboard)Ein Dashboard ist eine Canvas mit mehreren Karten, die eine Übersicht über Daten oder Inhalte bieten.
-* [Formular:](../../concepts/design/design-teams-app-ui-templates.md#form)Formulare dienen zum strukturierten Sammeln, Überprüfen und Übermitteln von Benutzereingaben.
-* [Leerer Zustand:](../../concepts/design/design-teams-app-ui-templates.md#empty-state)Die leere Statusvorlage kann für viele Szenarien verwendet werden, einschließlich Anmeldung, Erste Ausführung, Fehlermeldungen und vieles mehr.
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem übersichtlichen Format anzeigen und Benutzern ermöglichen, Aktionen für eine gesamte Liste oder einzelne Elemente auszuführen.
+* [Task Board](../../concepts/design/design-teams-app-ui-templates.md#task-board): Ein Task Board, manchmal auch als „Kanban-Board“ oder „Organisationsprozessdarstellungen“ bezeichnet, ist eine Sammlung von Karten, die häufig verwendet werden, um den Status von Arbeitselementen oder Tickets nachzuverfolgen.
+* [Dashboard](../../concepts/design/design-teams-app-ui-templates.md#dashboard): Ein Dashboard ist ein Zeichenbereich mit mehreren Karten, die eine Übersicht über Daten oder Inhalte bieten.
+* [Formular](../../concepts/design/design-teams-app-ui-templates.md#form): Formulare dienen zum strukturierten Sammeln, Überprüfen und Übermitteln von Benutzereingaben.
+* [Leerer Zustand](../../concepts/design/design-teams-app-ui-templates.md#empty-state): Die leere Statusvorlage kann für viele Szenarien verwendet werden, einschließlich der Anmeldung, der ersten Ausführung, der Fehlermeldungen und vieles mehr.
 * [Linke Navigation:](~/concepts/design/design-teams-app-advanced-ui-components.md#left-nav)Die linke Navigationskomponente kann hilfreich sein, wenn Ihre persönliche App eine Navigation erfordert. Im Allgemeinen sollten Sie die Navigation auf ein Minimum beschränken.
 
 ## <a name="use-a-personal-app-bot"></a>Verwenden einer persönlichen App (Bot)
@@ -92,7 +93,7 @@ Persönliche Apps können einen Bot für 1:1-Unterhaltungen und private Benachri
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomie: Persönliche App (Bot)
 
-#### <a name="mobile"></a>Mobil
+#### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="Beispiel zeigt die Anatomie der persönlichen Botkomponente." border="false":::
 
@@ -109,7 +110,7 @@ Persönliche Apps können einen Bot für 1:1-Unterhaltungen und private Benachri
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
-|A|**Bot-Registerkarte:** Fügen Sie beispielsweise eine **Chat-Registerkarte** für den Zugriff auf Bot-Unterhaltungen und -Benachrichtigungen ein.|
+|A|**Bot-Registerkarte:** Fügen Sie beispielsweise eine **Chat-Registerkarte** ein, um auf Bot-Unterhaltungen und -Benachrichtigungen zuzugreifen.|
 |B|**Botnachricht:** Bots senden häufig Nachrichten und Benachrichtigungen in Form einer Karte (z. B. einer adaptiven Karte).|
 |C|**Feld "Verfassen":** Eingabefeld zum Senden von Nachrichten an den Bot.|
 
@@ -189,7 +190,7 @@ Zeigen Sie in persönlichen Kontexten keine Inhalte für Teams an, zu der ein Be
 
 #### <a name="do-allow-users-to-access-complex-features-in-a-browser"></a>Do: Benutzern den Zugriff auf komplexe Features in einem Browser gestatten
 
-Ihre App sollte sich auf kernaufgaben in Teams konzentrieren, Sie können jedoch weiterhin die vollständige eigenständige App in einem Browser anzeigen.
+Ihre App sollte sich auf die Kernaufgaben in Teams konzentrieren, Sie können jedoch weiterhin die vollständige eigenständige App in einem Browser anzeigen.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="Beispiel zeigt, wie komplexe App-Features mit einer persönlichen App behandelt werden." border="false":::
 
