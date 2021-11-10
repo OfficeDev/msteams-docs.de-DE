@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 96bcb97fbb6189a657c9ac2aea167aaaa7f74592
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 5b485e08029ba6a1028ffa19482cd767007b2444
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720225"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888510"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
@@ -466,3 +466,10 @@ Apps dürfen keine Werbung anzeigen, einschließlich dynamischer Anzeigen, Banne
 
 > [!div class="nextstepaction"]
 > [Erstellen Sie ein Partner Center-Konto](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
+
+## <a name="see-also"></a>Siehe auch
+
+* [Verteilen Ihrer App](~/concepts/deploy-and-publish/apps-publish-overview.md)
+* [Vorbereiten der Übermittlung an den Store](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+* [Testen und Debuggen Ihrer App](~/concepts/build-and-test/debug.md)
+* [Erstellen eines Partner Center-Entwicklerkontos](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
