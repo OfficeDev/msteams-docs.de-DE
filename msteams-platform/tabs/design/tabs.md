@@ -1,16 +1,17 @@
 ---
 title: Designregisterkarten für Desktop, Web und Mobilgeräte
-description: Weitere Informationen darüber, wie Sie eine Teams Registerkarte für Desktop, Web und Mobilgeräte entwerfen und den Microsoft Teams-Benutzeroberflächenbausatz erhalten.
+description: Weitere Informationen darüber, wie Sie eine Teams Registerkarte für Desktop, Web und Mobilgeräte entwerfen und den Microsoft Teams-Benutzeroberflächenbausatz erhalten. Erfahren Sie mehr über die Registerkartenfunktionalität und -darstellung, das Erstellen einer Benutzerauthentifizierung, Registerkartenbenachrichtigungen und Deep Linking auf Registerkarten.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 99588b35e5de0a4d6c06e5d1353af312429081cc
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+keywords: Diskussionsthread zur SSO Deep Linking-rollenbasierten Ansichtder Einrichtung der Registerkarte „Verwalten“ des Benutzeroberflächenkits
+ms.openlocfilehash: 42f5a76c0499b3f50d90608d1f08e701caa13984
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475629"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887922"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Entwerfen Sie Ihre Registerkarte für Microsoft Teams
 
@@ -62,9 +63,9 @@ Es gibt einen kurzen Einrichtungsprozess, um eine App als Kanal, Chat oder Bespr
 |3|**iframe**:Dynamischer Speicherplatz für den Inhalt Ihrer App (z. B. Registerkarteneinstellungen oder Authentifizierung).|
 |4|**Infolink:** Öffnet ein Dialogfeld mit weiteren Informationen zur App, z. B. eine vollständige Beschreibung, von der App erforderliche Berechtigungen und Links zu Ihren Datenschutzrichtlinien und Nutzungsbedingungen.|
 |5|**Schaltfläche „Schließen“**:Schließt das Dialogfeld.|
-|6|**Option „Teammitglieder benachrichtigen“**:Im Dialogfeld werden die Benutzer gefragt, ob sie einen Beitrag erstellen möchten, in dem sie andere darüber informiert werden, dass sie eine Registerkarte hinzugefügt haben.|
-|7|**Schaltfläche „Zurück“**:Wechselt basierend auf dem geöffneten Dialogfeld zum vorherigen Schritt.|
-|8|**Schaltfläche „Speichern“**: Schließt die Registerkarteneinrichtung ab.|
+|6 |**Option „Teammitglieder benachrichtigen“**:Im Dialogfeld werden die Benutzer gefragt, ob sie einen Beitrag erstellen möchten, in dem sie andere darüber informiert werden, dass sie eine Registerkarte hinzugefügt haben.|
+|7 |**Schaltfläche „Zurück“**:Wechselt basierend auf dem geöffneten Dialogfeld zum vorherigen Schritt.|
+|8 |**Schaltfläche „Speichern“**: Schließt die Registerkarteneinrichtung ab.|
 
 ### <a name="tab-authentication-with-single-sign-on"></a>Registerkartenauthentifizierung mit Single Sign-On
 
@@ -282,3 +283,7 @@ Wenn Sie keine Teams-Farbtoken verwenden, sind Ihre Designs weniger skalierbar u
 
    :::column-end:::
 :::row-end:::
+
+## <a name="see-also"></a>Siehe auch
+
+[Änderungen am Registerkartenrand](~/resources/removing-tab-margins.md)
