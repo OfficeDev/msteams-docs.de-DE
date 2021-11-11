@@ -4,12 +4,12 @@ description: Erstellen von aktionsbasierten Messaging-Erweiterungen, damit Benut
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Messaging-Erweiterungen für Teams – Suche nach Messaging-Erweiterungen
-ms.openlocfilehash: 56dcf316eb430b9745856469eaf837ffe7c0bc00
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 76948946e3a194bfdde4518a0e9d9d4dc2428729
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720379"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912227"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Initiieren von Aktionen mit Messaging-Erweiterungen
 
@@ -106,11 +106,12 @@ Um Aktionen von einer Messaging-Erweiterung aus zu initiieren, legen Sie den `ty
           "description": "Reassign a todo item",
           "title": "Reassign a todo item",
           "type": "action",
-          "fetchTask": true,
+          "fetchTask": false,
           "parameters": [
             {
               "name": "Name",
               "title": "Title"
+              "inputType": "text"
             }
           ]
         }
@@ -130,7 +131,7 @@ Um Aktionen von einer Messaging-Erweiterung aus zu initiieren, legen Sie den `ty
 
 ### <a name="initiate-actions-from-messages"></a>Initiieren von Aktionen aus Nachrichten
 
-Zusätzlich zum Initiieren von Aktionen aus dem Bereich zum Verfassen von Nachrichten können Sie auch Ihre Messaging-Erweiterung verwenden, um eine Aktion aus einer Nachricht auszulösen. Auf diese Weise können Sie den Nachrichteninhalt zur Verarbeitung an Ihren Bot senden und optional mit einer Antwort mithilfe der Methode antworten, die unter [Antworten zum Senden](#responding-to-submit)beschrieben wird. Die Antwort wird als Antwort auf die Nachricht eingefügt, die Ihre Benutzer vor dem Senden bearbeiten können. Ihre Benutzer können über das Überlaufmenü auf die Messaging-Erweiterung zugreifen `...` und dann wie in der folgenden Abbildung `Take action` auswählen:
+Zusätzlich zum Initiieren von Aktionen aus dem Bereich zum Verfassen von Nachrichten können Sie auch Ihre Messaging-Erweiterung verwenden, um eine Aktion aus einer Nachricht auszulösen. Auf diese Weise können Sie den Nachrichteninhalt zur Verarbeitung an Ihren Bot senden und optional mit einer Antwort mithilfe der Methode antworten, die unter [Antworten auf die Übermittlung](#responding-to-submit)beschrieben wird. Die Antwort wird als Antwort auf die Nachricht eingefügt, die Ihre Benutzer vor dem Senden bearbeiten können. Ihre Benutzer können über das Überlaufmenü auf die Messaging-Erweiterung zugreifen `...` und dann wie in der folgenden Abbildung `Take action` auswählen:
 
 ![Beispiel für das Initiieren einer Aktion aus einer Nachricht](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
@@ -228,7 +229,7 @@ Unten sehen Sie ein Beispiel für das `value` Objekt, das die Nachrichtendetails
 
 Sie können Ihre Messaging-Erweiterung testen, indem Sie Ihre App hochladen. Weitere Informationen finden Sie unter [Hochladen Ihrer App in einem Team.](~/concepts/deploy-and-publish/apps-upload.md)
 
-Um Ihre Messaging-Erweiterung zu öffnen, navigieren Sie zu einem Ihrer Chats oder Kanäle. Wählen Sie die Schaltfläche **"Weitere Optionen"** **(&#8943;)** im Feld "Verfassen" aus, und wählen Sie Ihre Messaging-Erweiterung aus.
+Um Ihre Messaging-Erweiterung zu öffnen, navigieren Sie zu einem Ihrer Chats oder Kanäle. Wählen Sie im Feld "Verfassen" die Schaltfläche **"Weitere Optionen"** **(&#8943;)** aus, und wählen Sie Ihre Messaging-Erweiterung aus.
 
 ## <a name="collecting-input-from-users"></a>Sammeln von Eingaben von Benutzern
 

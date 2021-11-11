@@ -1,25 +1,25 @@
 ---
 author: heath-hamilton
-description: Bewährte Methoden für die Integration vorhandener Web-Apps in Microsoft Teams
+description: Bewährte Methoden oder Überlegungen für die Integration vorhandener Web-Apps in Microsoft Teams
 ms.author: v-heha
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Web-Apps
-ms.openlocfilehash: 60eab032e35ebb823161d5e32f27e2bdf3bb4ab2
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+title: Überlegungen zur Teams Integration
+ms.openlocfilehash: cf60c1c30697fd503dcc935f35f32e9281a89cdd
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889209"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912255"
 ---
-# <a name="web-apps"></a>Web-Apps 
+# <a name="considerations-for-teams-integration"></a>Überlegungen zur Teams Integration 
 
 Sie können Web-Apps für soziale und zusammenarbeitende Features Teams eignen, indem Sie sie ordnungsgemäß in Teams integrieren.
   
-Die verschiedenen Arten von Apps, die Sie in Teams integrieren können, sind wie folgt:
+Die verschiedenen Arten von Apps, die Sie in Teams integrieren können, sind folgende:
 * **Eigenständige Apps:** Eine eigenständige App ist eine einzelseitige oder große und komplexe App. Der Benutzer kann einige Aspekte davon in Teams verwenden.
-* Apps für die **Zusammenarbeit:** Eine App, die bereits für soziale und zusammenarbeitende Features erstellt wurde, die mit Teams verbunden sind.
+* Apps für **die Zusammenarbeit:** Eine App, die bereits für soziale und zusammenarbeitende Features erstellt wurde, die mit Teams verbunden sind.
 * **SharePoint:** Eine SharePoint Seite, die in Teams angezeigt werden soll.
 
 Sie können die entsprechende Richtlinie für Ihr Integrationsszenario zuordnen und befolgen.
@@ -48,7 +48,7 @@ Ihre Teams-App muss erforderliche und erwartete Features für die Zusammenarbeit
 
 Die Integration aller Features einer vorhandenen Anwendung in Teams führt häufig zu einer erzwungenen oder unnatürlichen Benutzererfahrung, insbesondere in größeren Apps. Beginnen Sie mit den wirkungsvollsten Features und den Features, die sich natürlicher in Teams integrieren. Sie können Benutzern erlauben, die Haupt-App zu starten und auf den gesamten Satz von Features zuzugreifen.
 
-**Voraussetzungen für die Integration Ihrer App in Teams** Nachfolgend sind die Voraussetzungen für die Integration Ihrer App in Teams. 
+**Voraussetzungen für die Integration Ihrer App in Teams** Nachfolgend sind die Voraussetzungen für die Integration Ihrer App in Teams beschrieben. 
 
 1. Ordnen Sie die [Anwendungsfälle Ihrer App Teams Plattformfunktionen zu.](../concepts/design/map-use-cases.md)
 1. [Bestimmen Sie die Einstiegspunkte Ihrer App.](../concepts/extensibility-points.md) Ist es für den persönlichen Gebrauch, die Zusammenarbeit oder beides?
@@ -59,7 +59,7 @@ Die Integration aller Features einer vorhandenen Anwendung in Teams führt häuf
 
 Um eine vorhandene [SharePoint Seite](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites) als Teams Registerkarte zu integrieren, müssen Sie Folgendes berücksichtigen:
 
-* Es muss eine *moderne* SharePoint Onlineseite sein.
+* Dies muss eine *moderne* SharePoint Onlineseite sein.
 * Es werden nur persönliche Registerkarten unterstützt. Sie können Ihre Seite nicht als Kanalregisterkarte integrieren.
 
 Alternativ können Sie [mithilfe der](/sharepoint/dev/spfx/integrate-with-teams-introduction)SharePoint-Framework eine Teams Registerkarte erstellen.
@@ -74,9 +74,9 @@ Wenn Ihre App von mehreren Organisationen verwendet wird, erwägen Sie mehrinsta
 
 ***Integrationsszenarien:** eigenständige Apps, Apps für die Zusammenarbeit*
 
-Sie müssen dafür sorgen, dass die vorhandenen APIs und Datenstrukturen Ihrer App die App bei der Integration mit Teams unterstützen. Um die Unterstützung zu erweitern, müssen Sie die APIs und Datenstrukturen mit kontextbezogenen Informationen zu Teams für [identitätszuordnung,](../concepts/authentication/configure-identity-provider.md) [Deep-Link-Unterstützung](../concepts/build-and-test/deep-links.md)und [Integration von Microsoft Graph](/graph/teams-concept-overview)erweitern.
+Sie müssen dafür sorgen, dass die vorhandenen APIs und Datenstrukturen Ihrer App die App bei der Integration in Teams unterstützen. Um die Unterstützung zu erweitern, müssen Sie die APIs und Datenstrukturen mit kontextbezogenen Informationen zu Teams für [identitätszuordnung,](../concepts/authentication/configure-identity-provider.md) [Deep-Link-Unterstützung](../concepts/build-and-test/deep-links.md)und [Integration von Microsoft Graph](/graph/teams-concept-overview)erweitern.
 
-Erfahren Sie mehr über das Abrufen des Kontexts für Ihre Teams [Registerkarte](../tabs/how-to/access-teams-context.md) oder [den Bot.](../bots/how-to/get-teams-context.md)
+Erfahren Sie mehr über das Abrufen des Kontexts für Ihre Teams [Registerkarte](../tabs/how-to/access-teams-context.md) oder [Ihren Bot.](../bots/how-to/get-teams-context.md)
 
 ## <a name="understand-authentication-options"></a>Grundlegendes zu Authentifizierungsoptionen
 
@@ -84,7 +84,7 @@ Erfahren Sie mehr über das Abrufen des Kontexts für Ihre Teams [Registerkarte]
 
 Azure Active Directory (AD) ist der Identitätsanbieter für Teams. Wenn Ihre App einen anderen Identitätsanbieter verwendet, müssen Sie entweder eine Identitätszuordnungsübung durchführen oder mit Azure AD kombinieren.
 
-Teams verfügt über SSO-Mechanismen (Single Sign-On) mit Azure AD für Drittanbieter-Apps. Es enthält auch die Anleitung für Authentifizierungsflüsse an andere Identitätsanbieter mitHilfe von Standards wie OAuth und Open ID Verbinden, die als OIDC bezeichnet werden.
+Teams verfügt über SSO-Mechanismen (Single Sign-On) mit Azure AD für Apps von Drittanbietern. Es enthält auch die Anleitung für Authentifizierungsflüsse an andere Identitätsanbieter mitHilfe von Standards wie OAuth und Open ID Verbinden, die als OIDC bezeichnet werden.
 
 > [!IMPORTANT]
 > Derzeit sind Apps von Drittanbietern in Government Community Cloud (GCC) verfügbar, aber nicht für GCC-High und das Verteidigungsministerium (Department of Defense, DOD). Drittanbieter-Apps sind für GCC standardmäßig deaktiviert. Informationen zum Aktivieren von Drittanbieter-Apps für GCC finden Sie unter [Verwalten von App-Berechtigungsrichtlinien](/microsoftteams/teams-app-permission-policies) und [Verwalten von Apps.](/microsoftteams/manage-apps)
@@ -97,7 +97,7 @@ Weitere Informationen zur [Authentifizierung in Teams](../concepts/authenticatio
 
 ***Integrationsszenarien:** eigenständige Apps, Apps für die Zusammenarbeit*
 
-Stellen Sie sicher, dass [Sie Teams Entwurfsrichtlinien](../concepts/design/understand-use-cases.md) befolgen, damit Ihre App für Teams systemeigen ist. Sie können einen vorhandenen App-Inhalt nicht zu einer Teams Registerkarte migrieren. Weitere Informationen zum App-Design finden Sie unter [Fluent Design System](https://fluentsite.z22.web.core.windows.net/).
+Stellen Sie sicher, dass [Sie Teams Entwurfsrichtlinien](../concepts/design/understand-use-cases.md) befolgen, damit Ihre App für Teams systemeigen ist. Sie können vorhandene App-Inhalte nicht zu einer Teams Registerkarte migrieren. Weitere Informationen zum App-Design finden Sie unter [Fluent Design System](https://fluentsite.z22.web.core.windows.net/).
 
 ## <a name="maximize-deep-linking"></a>Maximieren der Deep-Verknüpfung
 
@@ -113,14 +113,14 @@ Verwenden Sie einen [Bot](../bots/what-are-bots.md) in Ihrer Teams-App für Mult
 
 Bots ermöglichen es Ihnen auch, **proaktive Nachrichten** an einzelne Benutzer oder Kanäle zu senden. Bei den proaktiven Nachrichten handelt es sich um nicht empfangene Nachrichten, die durch ein externes Ereignis ausgelöst werden, und nicht um eine an einen Bot gesendete Nachricht. Beispielsweise sendet Ihr Bot eine Willkommensnachricht, wenn er installiert ist oder ein neuer Benutzer einem Kanal beitritt.
 
-Zum Senden proaktiver Nachrichten sind Teams-spezifische Bezeichner erforderlich. Sie können die Informationen erfassen, indem Sie [Listen- oder Benutzerprofildaten abrufen,](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile) [Unterhaltungsereignisse abonnieren](../bots/how-to/conversations/subscribe-to-conversation-events.md)oder [Microsoft Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams)verwenden.
+Das Senden proaktiver Nachrichten erfordert Teams-spezifischen Bezeichner. Sie können die Informationen erfassen, indem Sie [Listen- oder Benutzerprofildaten abrufen,](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile) [Unterhaltungsereignisse abonnieren](../bots/how-to/conversations/subscribe-to-conversation-events.md)oder [Microsoft Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams)verwenden.
 
-Spamen Sie Benutzer nicht mit übermäßigen Nachrichten. Wenn die Teams-Funktion dies unterstützt, können die Benutzer Benachrichtigungseinstellungen für Ihre App konfigurieren.
+Spamen Sie Benutzer nicht mit übermäßigen Nachrichten. Wenn die Teams Funktion dies unterstützt, können die Benutzer Benachrichtigungseinstellungen für Ihre App konfigurieren.
 Nachfolgend sehen Sie ein Beispiel für eine Benachrichtigung: **Senden Sie mir keine nicht empfangenen Nachrichten.**
 
 ## <a name="use-sharepoint-for-file-and-data-storage"></a>Verwenden von SharePoint für die Datei- und Datenspeicherung
 
-***Integrationsszenarien:** Eigenständige Apps, Apps für die Zusammenarbeit, SharePoint Seiten*
+***Integrationsszenarien:** Eigenständige Apps, Apps für die Zusammenarbeit SharePoint Seiten*
 
 Wenn ein Team erstellt wird, wird auch eine [SharePoint Websitesammlung](/microsoftteams/sharepoint-onedrive-interact) bereitgestellt, um die Datei- und Datenspeicherung für dieses Team zu unterstützen. Ihre App muss dieses Feature nutzen, wenn sie mit Dateien interagiert. Verwenden Sie die Websitesammlung, um Rohdaten in SharePoint Listen und Excel zu speichern.
 

@@ -1,21 +1,21 @@
 ---
-title: Anpassen Ihrer Teams-App
+title: Anpassen ihrer Teams-App
 author: heath-hamilton
 description: Erfahren Sie, wie Teams Administratoren Ihre App für ihre Organisation anpassen können.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
 keywords: Akzentfarbenmarke blendet App-Genehmigung aus
-ms.openlocfilehash: 3519ad5dc91b27d947c752161bfe3c477281f1f7
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2061b638034a0b6359f1853163c49f7d696381c6
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888167"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912213"
 ---
-# <a name="customize-your-teams-app"></a>Anpassen Ihrer Teams-App
+# <a name="customize-your-teams-app"></a>Anpassen ihrer Teams-App
 
-## <a name="enable-your-microsoft-teams-app-to-be-customized"></a>Aktivieren der Anpassung Ihrer Microsoft Teams-App
+## <a name="enable-your-microsoft-teams-app-to-be-customized"></a>Aktivieren der anpassungsfähigen Microsoft Teams-App
 
 Sie können Es Kunden ermöglichen, einige Aspekte Ihrer Microsoft Teams-App im Teams Admin Center anzupassen. Dieses Feature wird nur für Apps unterstützt, die im Teams Store veröffentlicht wurden. Quergeladene Apps und Apps, die für eine Organisation veröffentlicht wurden, können nicht angepasst werden.
 
@@ -24,7 +24,7 @@ Einige mögliche Beispiele für dieses Feature sind:
 * Ändern der Akzentfarbe der App entsprechend der Marke einer Organisation.
 * Aktualisieren des App-Namens von *Contoso* auf *Contoso-Agent*, bei dem es sich um den Namen handelt, der Benutzern in der Organisation angezeigt wird. (Hinweis: Benutzern, die einen Connector zu einem Chat oder Kanal hinzufügen, wird weiterhin der ursprüngliche App-Name *Contoso* angezeigt.)
 
-Sie können dieses Feature im [Entwicklerportal für Teams](https://dev.teams.microsoft.com/home)aktivieren. Dadurch `configurableProperties` wird konfiguriert, was in Versionen vor 1.10 des Teams App-Manifests nicht verfügbar ist.
+Sie können dieses Feature im [Entwicklerportal für Teams](https://dev.teams.microsoft.com/home)aktivieren. Dadurch `configurableProperties` wird konfiguriert, was in Versionen vor 1.10 des Teams-App-Manifests nicht verfügbar ist.
 
 ### <a name="test-your-app"></a>Testen eigener Apps
 
@@ -36,7 +36,7 @@ Bereitstellen von Richtlinien für Kunden (insbesondere Teams Administratoren), 
 
 ## <a name="hide-teams-app-until-admin-approves"></a>Ausblenden Teams App bis zur Genehmigung durch den Administrator
 
-Um Teams App-Erfahrung zu verbessern, können Sie eine App standardmäßig vor Benutzern ausblenden, bis der Administrator das Einblenden der App zulässt. Contoso Electronic hat beispielsweise eine Helpdesk-App für Teams erstellt. Um eine ordnungsgemäße Funktionsweise der App zu ermöglichen, möchte Contoso Electronic, dass die Kunden zuerst bestimmte Eigenschaften der App einrichten. Die App ist standardmäßig ausgeblendet und für Benutzer nur verfügbar, nachdem der Administrator sie erlaubt hat.
+Um Teams App-Erfahrung zu verbessern, können Sie eine App standardmäßig vor Benutzern ausblenden, bis der Administrator das Einblenden der App erlaubt. Contoso Electronic hat beispielsweise eine Helpdesk-App für Teams erstellt. Um eine ordnungsgemäße Funktionsweise der App zu ermöglichen, möchte Contoso Electronic, dass die Kunden zuerst bestimmte Eigenschaften der App einrichten. Die App ist standardmäßig ausgeblendet und für Benutzer nur verfügbar, nachdem der Administrator sie erlaubt hat.
 
 Um die App auszublenden, legen Sie die Eigenschaft in der App-Manifestdatei `defaultBlockUntilAdminAction` auf `true` . Wenn die Eigenschaft auf ", in Teams Admin Center > Verwalten von Apps festgelegt `true` ist, wird **vom Herausgeber blockiert** im **App-Status** angezeigt: 
 
@@ -53,6 +53,6 @@ Wenn die App standardmäßig nicht ausgeblendet werden soll, können Sie die `de
 
 ## <a name="see-also"></a>Siehe auch
 
-* [App-Manifesh-Schema](/MicrosoftTeams/manifest-schema)
+* [App-Manifestschema](/MicrosoftTeams/manifest-schema)
 * [Anpassen von Apps im Teams Admin Center](/MicrosoftTeams/customize-apps)
 

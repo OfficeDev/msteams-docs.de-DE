@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams-Manifestschema
-ms.openlocfilehash: e542378a45262312978d0d091439938907b974ac
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 8032228dd9032c0465a9d408b0c78700bdc2341e
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888286"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912206"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -298,7 +298,7 @@ Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen:
     "team": "bot", 
     "groupchat": "bot"
   },
- "configurableProperties": {
+ "configurableProperties": [
      "name",
      "shortDescription",
      "longDescription",
@@ -308,6 +308,9 @@ Das folgende Schemabeispiel zeigt alle Erweiterbarkeitsoptionen:
      "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
+ ],
+  "subscriptionOffer": {
+    "offerId": "publisherId.offerId"
   }
 }
 ```
@@ -744,8 +747,7 @@ Sie können eine der folgenden Eigenschaften definieren:
 
 **Optional**-boolean
  
-Wenn `defaultBlockUntilAdminAction` die Eigenschaft auf **"true"** festgelegt ist, ist die App standardmäßig für Benutzer ausgeblendet, bis der Administrator sie zulässt. Bei Festlegung auf **"true"** ist die App für alle Mandanten und Endbenutzer ausgeblendet. Mandantenadministratoren können die App im Teams Admin Center sehen und Maßnahmen ergreifen, um die App zuzulassen oder zu blockieren. Der Standardwert ist **false**. Weitere Informationen zum Standardmäßigen App-Block finden Sie unter [Ausblenden Teams App, bis der Administrator dies genehmigt.](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)
-
+Wenn `defaultBlockUntilAdminAction` die Eigenschaft auf **"true"** festgelegt ist, ist die App standardmäßig für Benutzer ausgeblendet, bis der Administrator sie zulässt. Bei Festlegung auf **"true"** ist die App für alle Mandanten und Endbenutzer ausgeblendet. Mandantenadministratoren können die App im Teams Admin Center sehen und Maßnahmen ergreifen, um die App zuzulassen oder zu blockieren. Der Standardwert ist **false**. Weitere Informationen zum standardmäßigen App-Block finden Sie unter [Ausblenden Teams App, bis der Administrator dies genehmigt.](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 
@@ -755,10 +757,20 @@ Wenn `defaultBlockUntilAdminAction` die Eigenschaft auf **"true"** festgelegt is
 
 Die Eigenschaft hängt von `defaultBlockUntilAdminAction` . Wenn `defaultBlockUntilAdminAction` die Eigenschaft auf **"true"** festgelegt ist, stellt die `publisherDocsUrl` HTTPS-URL zu einer Informationsseite bereit, auf der Administratoren Richtlinien abrufen können, bevor sie eine App zulassen, die standardmäßig blockiert wird.
 
+## <a name="subscriptionoffer"></a>subscriptionOffer
+
+**Optional** – Objekt
+
+Gibt das Ihrer App zugeordnete SaaS-Angebot an.
+
+|Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
+|---|---|---|---|---|
+|`offerId`| string | 2.048 Zeichen | ✔ | Ein eindeutiger Bezeichner, der Ihre Publisher-ID und Angebots-ID enthält, die Sie im [Partner Center](https://partner.microsoft.com/dashboard)finden. Sie müssen die Zeichenfolge als `publisherId.offerId` formatieren.|
+
 ## <a name="see-also"></a>Siehe auch
 
 * [Grundlegendes zur Microsoft Teams App-Struktur](~/concepts/design/app-structure.md)
 * [Aktivieren der App-Anpassung](~/concepts/design/enable-app-customization.md)
 * [Lokalisieren IhrerApp](~/concepts/build-and-test/apps-localization.md)
 * [Integrieren von Medienfunktionen](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
-* [Schemareferenz für das Entwicklervorschaumanifest – Teams](~/resources/schema/manifest-schema-dev-preview.md)
+* [Referenz zum Entwicklervorschaumanifestschema – Teams](~/resources/schema/manifest-schema-dev-preview.md)
