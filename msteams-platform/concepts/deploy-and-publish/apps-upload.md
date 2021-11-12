@@ -5,12 +5,12 @@ ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 02ea6d9caf4acc43bcd9a361113baf7ce9f8464a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e14e521941d253a3f259cf93f36bff4d620d55f2
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888188"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949061"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Hochladen Ihrer App in Microsoft Teams
 
@@ -36,7 +36,7 @@ Sie können Ihre App in ein Team, einen Chat, eine Besprechung oder zur persönl
 1. Melden Sie sich mit Ihrem [Microsoft 365 Entwicklungskonto](~/build-your-first-app/build-and-run.md#prerequisites)beim Teams-Client an.
 1. Wählen Sie **"Apps"** aus, und wählen Sie **Hochladen einer benutzerdefinierten App** aus.
 1. Wählen Sie Ihr App-Paket .zip Datei aus. Ein Installationsdialogfeld wird angezeigt.
-:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot eines Beispiels für ein Dialogfeld für die App-Installation Teams.":::
+:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot eines Beispiels für ein Dialogfeld für Teams App-Installation.":::
 1. Fügen Sie Ihre App Teams hinzu.
 
 ## <a name="troubleshoot-upload-issues"></a>Behandeln von Problemen beim Hochladen
@@ -57,7 +57,7 @@ Sie müssen Ihre App nicht erneut querladen, wenn Sie Codeänderungen vornehmen 
 
 ## <a name="remove-your-app"></a>Entfernen Ihrer App
 
-Um Ihre App zu entfernen, klicken Sie mit der rechten Maustaste auf das App-Symbol in Teams, und wählen Sie **Deinstallieren aus.**
+Um Ihre App zu entfernen, klicken Sie mit der rechten Maustaste auf das App-Symbol in Teams, und wählen Sie **Deinstallieren** aus.
 
 > [!NOTE]
 > Persönliche Bot-Aktivitäten können nicht vollständig entfernt werden. Wenn Sie die App entfernen und erneut hinzufügen, wird eine neue Kommunikation mit dem Bot an die vorherige Unterhaltung mit ihr angefügt.
@@ -70,4 +70,4 @@ Um Ihre App zu entfernen, klicken Sie mit der rechten Maustaste auf das App-Symb
 ## <a name="see-also"></a>Siehe auch
 
 * [Konfigurieren der Standardinstallationsoptionen](~/concepts/deploy-and-publish/add-default-install-scope.md)
-* [Verwalten der veröffentlichten Microsoft Teams-App](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)
+* [Verwalten Ihrer veröffentlichten Microsoft Teams-App](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)

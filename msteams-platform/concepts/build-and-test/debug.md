@@ -4,12 +4,12 @@ description: Beschreibt Optionen zum Testen und Debuggen Microsoft Teams Apps in
 keywords: Teams führen Debug-Apps lokal in der Cloud gehosteten Host aus
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: b6cc4bcebcfe5d859ba0a9c6c935287ee8944d06
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2c28090d82737d5231ed68a2fd3ef6896d701022
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889073"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949019"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Auswählen eines Setups zum Testen und Debuggen Ihrer Microsoft Teams-App
 
@@ -19,7 +19,7 @@ Microsoft Teams Apps eine oder mehrere Funktionen enthalten, und die Möglichkei
 * **Lokal in Teams gehostet:** Dies umfasst das lokale Ausführen der App in Tunnelingsoftware und [das Erstellen eines Pakets](~/concepts/build-and-test/apps-package.md) zum [Hochladen](~/concepts/deploy-and-publish/apps-upload.md) in Teams. Auf diese Weise können Sie Ihre App einfach im Teams-Client ausführen und debuggen.
 * **In der Cloud gehostet in Teams:** Dadurch wird die Unterstützung auf Produktionsebene für eine Teams App simuliert. Sie müssen Ihre Lösung auf Ihren extern zugänglichen Server oder Cloudanbieter ihrer Wahl hochladen und ein Paket zum [Hochladen](~/concepts/deploy-and-publish/apps-upload.md) in Teams [erstellen.](~/concepts/build-and-test/apps-package.md)
 
-Führen Sie die Benutzeroberfläche von Ihrem eigenen Computer aus, um rein lokale oder lokale Teams zu testen. Auf diese Weise können Sie in Ihrer integrierten Entwicklungsumgebung kompilieren und ausführen und alle Techniken nutzen, z. B. Haltepunkte und Schrittdebugging.
+Führen Sie die Erfahrung von Ihrem eigenen Computer aus, um rein lokale oder lokale Teams zu testen. Auf diese Weise können Sie in Ihrer integrierten Entwicklungsumgebung kompilieren und ausführen und alle Techniken nutzen, z. B. Haltepunkte und Schrittdebugging.
 
 > [!NOTE]
 > Für Debuggen und Tests im Produktionsmaßstab empfehlen wir, dass Sie Ihre eigenen Unternehmensrichtlinien befolgen, um sicherzustellen, dass Sie Tests, Staging und Bereitstellung über Ihre eigenen Prozesse unterstützen können.
@@ -29,12 +29,12 @@ Verwenden Sie mehrere Manifeste und Pakete, um die Trennung zwischen Produktions
 ## <a name="purely-local"></a>Rein lokal
 
 > [!NOTE]
-> Wenn Sie den Bot lokal ausführen, erhalten Sie keinen Zugriff auf Teams App-Funktionen oder Teams-spezifischen Bot-Funktionen wie Listenaufrufe und andere kanalspezifische Funktionen. Darüber hinaus sind einige Funktionen vom Bot Framework im Bot-Emulator zulässig, die möglicherweise nicht funktionieren, wenn sie in Microsoft Teams ausgeführt werden.
+> Wenn Sie den Bot lokal ausführen, erhalten Sie keinen Zugriff auf Teams App-Funktionalität oder Teams-spezifischen Bot-Funktionen wie Listenaufrufe und andere kanalspezifische Funktionen. Darüber hinaus sind einige Funktionen vom Bot Framework im Bot-Emulator zulässig, die möglicherweise nicht funktionieren, wenn sie in Microsoft Teams ausgeführt werden.
 
 Ihr Bot kann innerhalb des Bot-Emulator ausgeführt werden. Auf diese Weise können Sie einige der Kernlogik des Bots testen, ein grobes Layout von Nachrichten anzeigen und einfache Tests durchführen. Führen Sie die folgenden Schritte aus:
 
 1. Führen Sie den Code lokal aus.
-2. Starten Sie die Bot-Emulator, und legen Sie die URL fest:
+2. Starten Sie den Bot Emulator, und legen Sie die URL fest:
    * Node.js: `http://localhost:3978/api/messages`
    * .NET/C#: `http://localhost:3979/api/messages`
 3. Lassen Sie die Microsoft-App-ID und das Microsoft-App-Kennwort leer, um den Standardumgebungsvariablen zu entsprechen.
@@ -73,7 +73,7 @@ Sie können einen beliebigen extern adressierbaren Dienst verwenden, um Ihren En
 Um Ihre Oberfläche in Microsoft Teams zu laden und auszuführen, müssen Sie ein Paket erstellen und in Teams hochladen. Weitere Informationen finden Sie unter:
 
 * [Erstellen Sie das Paket für Ihre Microsoft Teams-App.](~/concepts/build-and-test/apps-package.md)
-* [Hochladen Ihrer App in Microsoft Teams.](~/concepts/deploy-and-publish/apps-upload.md)
+* [Hochladen Ihrer App in Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).
 
 ## <a name="next-step"></a>Nächster Schritt
 

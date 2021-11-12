@@ -6,12 +6,12 @@ author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: Bereitstellen von Veröffentlichungs-App-Upload gcc
-ms.openlocfilehash: 0436388365c2d7fc355c3f8cb40a9f05283124b8
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6a4cb297c7f78ef09796adb3793ee1848236fdb6
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889188"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949110"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Verteilen Ihrer Microsoft Teams-App
 
@@ -22,7 +22,7 @@ Sie können Ihre Microsoft Teams-App einer Person, einem Team, einer Organisatio
 Querladen einer App für den persönlichen Gebrauch, Zusammenarbeit mit Ihrem Team oder Testen und Debuggen. Für diese Art der Verteilung ist kein formaler Überprüfungsprozess erforderlich.
 
 > [!IMPORTANT]
-> Sideloading-Apps sind derzeit in Government Community Cloud (GCC) verfügbar, aber nicht für GCC-High und das Verteidigungsministerium (Department of Defense, DOD).
+> Sideloading-Apps sind derzeit in Government Community Cloud (GCC) verfügbar, aber nicht für GCC-High und dod (Department of Defense).
 
 Weitere Informationen finden Sie unter [Hochladen Ihrer App in Teams.](apps-upload.md)
 
@@ -52,4 +52,4 @@ Weitere Informationen finden Sie unter [Veröffentlichen im Teams Store.](~/conc
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Microsoft 365 Compliance-Programm](/microsoft-365-app-certification/overview)
+[Microsoft 365-App-Compliance Program](/microsoft-365-app-certification/overview)

@@ -1,17 +1,17 @@
 ---
 title: Vorbereiten der Übermittlung an den Store
-description: Beschreibt die letzten Schritte, bevor Sie Ihre Microsoft Teams-App übermitteln, die im Store aufgeführt werden soll. Erfahren Sie, wie Sie Ihr App-Paket überprüfen, Testanweisungen kompilieren und Details zum Store-Eintrag erstellen.
+description: Beschreibt die letzten Schritte, bevor Sie Ihre Microsoft Teams App übermitteln, die im Store aufgeführt werden soll. Erfahren Sie, wie Sie Ihr App-Paket überprüfen, Testanweisungen kompilieren und Details zum Store-Eintrag erstellen.
 ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: Verteilen von Validierungsrichtlinien für App-Pakete im Übermittlungsspeicher lokalisieren
-ms.openlocfilehash: 08155408e68869b76f814788afcb408afd1a72a9
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 4da374d9ced3231437aef278c7c90c68fc0c19de
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889167"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949068"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Vorbereiten der Übermittlung Microsoft Teams Store
 
@@ -68,7 +68,7 @@ Stellen Sie eine Aufzeichnung Ihrer App bereit, damit Microsoft die Funktionalit
 
 ## <a name="create-your-store-listing-details"></a>Erstellen der Details ihres Store-Eintrags
 
-Die Informationen, die Sie an [Partner Center](https://partner.microsoft.com) übermitteln&#8212;einschließlich Name, Beschreibungen, Symbolen und Bildern&#8212;werden zum Teams Store- und Microsoft AppSource-Eintrag für Ihre App.
+Die Informationen, die Sie an [Partner Center](https://partner.microsoft.com) übermitteln,&#8212;einschließlich Name, Beschreibungen, Symbolen und Bildern&#8212;werden zum Teams Store- und Microsoft AppSource-Eintrag für Ihre App.
 
 Ein Store-Eintrag kann der erste Eindruck einer Person von Ihrer App sein. Erhöhen Sie Installationen mit einem Eintrag, der die Vorteile, Funktionen und Marken Ihrer App effektiv vermittelt.
 
@@ -143,7 +143,7 @@ Screenshots bieten eine auffällige visuelle Vorschau Ihrer App, um Ihren App-Na
 :::row:::
 
    :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Der Beispiel-Screenshot zeigt, wo App-Screenshots in einem Store-Eintrag angezeigt werden.":::
+      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Im Beispiel-Screenshot wird hervorgehoben, wo App-Screenshots in einem Store-Eintrag angezeigt werden.":::
    :::column-end:::
    :::column span="1":::
    :::column-end:::
@@ -197,7 +197,7 @@ Während der Übermittlung werden Sie aufgefordert, Ihre App zu kategorisieren. 
 
 ### <a name="localize-your-store-listing"></a>Lokalisieren Des Store-Eintrags
 
-Partner Center unterstützt [lokalisierte Store-Einträge.](/office/dev/store/prepare-localized-solutions) Weitere Informationen finden Sie unter [Lokalisieren Ihres Teams App-Eintrags.](../../../../concepts/build-and-test/apps-localization.md)
+Partner Center unterstützt [lokalisierte Store-Einträge.](/office/dev/store/prepare-localized-solutions) Weitere Informationen finden Sie unter [Lokalisieren ihres Teams App-Eintrags.](../../../../concepts/build-and-test/apps-localization.md)
 
 ## <a name="complete-publisher-verification"></a>Abschließen Publisher Überprüfung
 
@@ -205,7 +205,7 @@ Partner Center unterstützt [lokalisierte Store-Einträge.](/office/dev/store/pr
 
 ## <a name="complete-publisher-attestation"></a>Vollständige Publisher Nachweis
 
-[Publisher Nachweis](/microsoft-365-app-certification/docs/attestation) ist auch für Teams Apps erforderlich, die im Store aufgeführt sind. Der Prozess umfasst die Durchführung einer Selbstbewertung der Sicherheits-, Datenverarbeitungs- und Compliancepraktiken Ihrer App. Der Prozess kann potenziellen Kunden helfen, fundierte Entscheidungen zur Verwendung Ihrer App zu treffen.
+[Publisher Nachweis](/microsoft-365-app-certification/docs/attestation) ist auch für Teams im Store aufgeführten Apps erforderlich. Der Prozess umfasst die Durchführung einer Selbstbewertung der Sicherheits-, Datenverarbeitungs- und Compliancepraktiken Ihrer App. Der Prozess kann potenziellen Kunden helfen, fundierte Entscheidungen zur Verwendung Ihrer App zu treffen.
 
 > [!NOTE]
 > Wenn Sie eine neue App übermitteln, können Sie Publisher Nachweis erst offiziell ausfüllen, wenn Ihre App im Teams Store aufgeführt ist. Wenn Sie eine aufgeführte App aktualisieren, führen Sie Publisher Nachweis aus, bevor Sie die neueste Version der App zur Überprüfung übermitteln.
@@ -217,4 +217,4 @@ Partner Center unterstützt [lokalisierte Store-Einträge.](/office/dev/store/pr
 
 ## <a name="see-also"></a>Siehe auch
 
-[Beheben von Problemen, wenn die Übermittlung ihres Microsoft Teams Speichers fehlschlägt](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)
+[Beheben von Problemen, wenn die Übermittlung Microsoft Teams Store fehlschlägt](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)

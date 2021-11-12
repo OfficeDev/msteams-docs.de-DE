@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie einer Messaging-Erweiterung mithilfe von Code
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 808ff41c848864bfd86d12fe0dc236e249fa3157
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 83c7ce4f7897014345fd071b28273ade5907a917
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948628"
+ms.locfileid: "60949096"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Hinzufügen einer Authentifizierung zu Ihrer Messaging-Erweiterung
 
@@ -136,7 +136,7 @@ An diesem Punkt wird das Fenster geschlossen, und das Steuerelement wird an den 
 ## <a name="code-sample"></a>Codebeispiel
 |**Beispielname** | **Beschreibung** |**.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
-|Messaging-Erweiterungen – Authentifizierung und Konfiguration | Eine Messaging-Erweiterung, die über eine Konfigurationsseite verfügt, Suchanforderungen akzeptiert und Ergebnisse zurückgibt, nachdem sich der Benutzer angemeldet hat. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
+|Messaging-Erweiterungen – Authentifizierung und Konfiguration | Eine Messaging-Erweiterung, die über eine Konfigurationsseite verfügt, Suchanforderungen akzeptiert und Ergebnisse zurückgibt, nachdem sich der Benutzer angemeldet hat. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
 ## <a name="see-also"></a>Siehe auch
 

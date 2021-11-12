@@ -3,14 +3,14 @@ title: Verpacken Ihrer App
 description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App zum Testen, Hochladen und Veröffentlichen im Store verpacken.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 44b8f21361c39bd723ff375b385569125b65ea27
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1879bcab13ff9ba355bcebdf68e4c8c061f153a1
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889307"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949075"
 ---
-# <a name="create-a-microsoft-teams-app-package"></a>Erstellen eines Microsoft Teams-App-Pakets
+# <a name="create-a-microsoft-teams-app-package"></a>Erstellen eines Microsoft Teams App-Pakets
 
 Sie benötigen ein App-Paket, aber Sie planen, Ihre Microsoft Teams App zu verteilen. Ein gültiges Paket ist eine ZIP-Datei, die Folgendes enthält:
 
@@ -36,7 +36,7 @@ Damit Ihre App Teams Store-Überprüfung bestehen kann, müssen diese Symbole di
 
 Die Farbversion Ihres Symbols wird in den meisten Teams-Szenarien angezeigt und muss 192x192 Pixel groß sein. Das Symbolsymbol (96 x 96 Pixel) kann eine beliebige Farbe sein, muss sich jedoch auf einem durchgezogenen oder vollständig transparenten quadratischen Hintergrund befinden.
 
-Teams ihr Symbol automatisch zuschneidet, um ein Quadrat mit abgerundeten Ecken in mehreren Szenarien und eine fiktive Form in Bot-Szenarien anzuzeigen. Um das Symbol zuzuschneiden, ohne Details zu verlieren, fügen Sie 48 Pixel Abstand um das Symbol ein.
+Teams ihr Symbol automatisch zuschneidet, um ein Quadrat mit abgerundeten Ecken in mehreren Szenarien und eine fiktive Form in Bot-Szenarien anzuzeigen. Um das Symbol zuzuschneiden, ohne Details zu verlieren, fügen Sie 48 Pixel Abstand um ihr Symbol ein.
 
 :::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams Farbsymbol und Designanleitung." border="false":::
 
@@ -44,12 +44,12 @@ Teams ihr Symbol automatisch zuschneidet, um ein Quadrat mit abgerundeten Ecken 
 
 Ein Gliederungssymbol wird in zwei Szenarien angezeigt:
 
-* Wenn Ihre App verwendet wird und auf der App-Leiste auf der linken Seite von Teams "hervorgehoben" wird.
+* Wenn Ihre App verwendet und auf der App-Leiste auf der linken Seite von Teams "hervorgehoben" wird.
 * Wenn ein Benutzer die Messaging-Erweiterung Ihrer App anheftet.
 
 Das Symbol muss 32 x 32 Pixel groß sein. Es kann weiß mit einem transparenten Hintergrund oder transparent mit weißem Hintergrund sein (keine anderen Farben sind zulässig). Das Gliederungssymbol sollte keinen zusätzlichen Abstand um das Symbol aufweisen.
 
-:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams Anleitung zum Entwerfen von Gliederungssymbolen." border="false":::
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams Entwurfsanleitung für Gliederungssymbole." border="false":::
 
 ### <a name="best-practices"></a>Bewährte Methoden
 
@@ -67,7 +67,7 @@ Die RGB-Werte von Weiß, das in Ihrem Symbol verwendet wird, müssen Rot sein: 2
 
 #### <a name="dont-crop-in-a-circular-or-rounded-square-shape"></a>Nicht empfohlen: Zuschneiden in einer kreisförmigen oder abgerundeten Quadratform
 
-Das in Ihrem App-Paket übermittelte Farbsymbol muss quadratisch sein. Runden Sie nicht die Ecken Des Symbols. Teams passt automatisch den Winkelradius an.
+Das in Ihrem App-Paket übermittelte Farbsymbol muss quadratisch sein. Runden Sie nicht die Ecken Des Symbols. Teams passt den Winkelradius automatisch an.
 
    :::column-end:::
 :::row-end:::
@@ -90,7 +90,7 @@ Hier sehen Sie, wie App-Symbole in verschiedenen Teams Funktionen und Kontexten 
 
 #### <a name="messaging-extension"></a>Messaging-Erweiterung
 
-:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<Alttext>" border="false":::
+:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alternativ>" border="false":::
 
 ## <a name="next-step"></a>Nächster Schritt
 

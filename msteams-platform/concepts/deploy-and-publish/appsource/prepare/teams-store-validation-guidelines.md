@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 5b485e08029ba6a1028ffa19482cd767007b2444
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 19a14553d7fcf5ba4af316f9259c641751778932
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888510"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949103"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
