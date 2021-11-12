@@ -5,12 +5,12 @@ description: Beschreibt Einstiegspunkte für Ihre App, z. B. Team, Kanal und Cha
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 1bfaed5ec9c2ef1bec9dc3699dbb5914be213a44
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2dd2670787c3da9140b5798db3e7d28b30271f70
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889079"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948418"
 ---
 # <a name="entry-points-for-teams-apps"></a>Einstiegspunkte für Microsoft Teams-Apps
 
@@ -39,7 +39,7 @@ Die folgende Liste zeigt, wie Teams App-Funktionen häufig in Zusammenarbeitskon
 
 [Persönliche Apps](../concepts/design/personal-apps.md) sind auf Interaktionen mit einem einzelnen Benutzer ausgerichtet. Die Benutzererfahrung ist in diesem Kontext für jeden Benutzer einmalig.
 
-Die folgende Liste zeigt, wie Teams Funktionen häufig in persönlichen Kontexten verwendet werden:
+Die folgende Liste zeigt, wie Teams Funktionen in persönlichen Kontexten häufig verwendet werden:
 
 * [**Bots**](~/bots/what-are-bots.md) führen persönliche Unterhaltungen mit Benutzern. Bots, die mehrstufige Unterhaltungen erfordern oder Benachrichtigungen bereitstellen, die nur für einen bestimmten Benutzer relevant sind, eignen sich am besten für persönliche Apps.
 
@@ -52,5 +52,5 @@ Die folgende Liste zeigt, wie Teams Funktionen häufig in persönlichen Kontexte
 
 ## <a name="see-also"></a>Siehe auch
 
-[Entwurfsrichtlinien für Teams-Apps](../concepts/design/design-teams-app-overview.md) <br>
-[Erstellen Ihrer ersten Microsoft Teams-App](../build-your-first-app/build-first-app-overview.md)
+* [Entwurfsrichtlinien für Teams-Apps](../concepts/design/design-teams-app-overview.md) <br>
+* [Erstellen Ihrer ersten Microsoft Teams-App](../build-your-first-app/build-first-app-overview.md)

@@ -5,24 +5,24 @@ description: Planen Sie Ihre App, verstehen Sie Ihre Benutzer und ihre Anforderu
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 835e40e2c93387ee7db9fab7eb1f8c56951019c9
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 93ab668a4ac317228186508eb721f1900add0de8
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888419"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948389"
 ---
 # <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
 
 Die Microsoft Teams-Plattform bietet eine Vielzahl von [Einstiegspunkten und UI-Elementen, die](../../concepts/extensibility-points.md) Ihre App nutzen kann.
 > [!NOTE]
-> Bevor Sie mit der Erstellung ihrer Anwendungsfälle beginnen, müssen Sie über ein gutes Verständnis der Teams Funktionen und der Möglichkeiten auf der Teams Plattform verfügen, die sie verwendet.
+> Bevor Sie mit der Erstellung Ihrer Anwendungsfälle beginnen, müssen Sie über ein gutes Verständnis der Teams Funktionen und der Möglichkeiten auf der Teams Plattform verfügen, die sie verwendet.
 
 Jede Interaktionsmethode mit Ihren Benutzern hat ihre Stärken und Schwachstellen. Beim Erstellen einer großartigen Teams App geht es darum, die richtige Kombination zu finden, um die Anforderungen Ihrer Benutzer zu erfüllen. Wenn Sie diese Anforderungen erfüllen, müssen Sie sie zuerst verstehen.
 
 ## <a name="understand-the-problem"></a>Verstehen des Problems
 
-Jede App hat ein Kernproblem oder eine Lösungsnöte. Bevor Sie mit dem Erstellen einer App beginnen, müssen Sie das Problem erläutern. Im Kern ist Teams eine Plattform für die Zusammenarbeit, sodass Apps, die Lücken bei der Erzielung einer effektiven Zusammenarbeit schließen, gut geeignet sind. Es ist auch eine Plattform für soziale Netzwerke, nativ plattformübergreifend, befindet sich im Mittelpunkt Office 365 und bietet eine persönliche Canvas für Sie zum Erstellen von Apps. In dieser sozialen Plattform gibt es eine Vielzahl von Anforderungen, die mit einer Teams App gelöst werden können. Sie können eine Vielzahl von Problemen lösen, vorausgesetzt, Sie wissen, welches Sie lösen möchten. Stellen Sie vor dem Erstellen einer App relevante Fragen, z. B.:
+Jede App hat ein Kernproblem oder eine Lösungsnöte. Bevor Sie mit dem Erstellen einer App beginnen, müssen Sie das Problem erläutern. Im Kern ist Teams eine Plattform für die Zusammenarbeit, sodass Apps, die Lücken bei der Erzielung einer effektiven Zusammenarbeit schließen, gut geeignet sind. Es ist auch eine plattformübergreifende soziale Plattform, befindet sich im Mittelpunkt Office 365 und bietet eine persönliche Canvas für Sie zum Erstellen von Apps. In dieser sozialen Plattform gibt es eine Vielzahl von Anforderungen, die mit einer Teams App gelöst werden können. Sie können eine Vielzahl von Problemen lösen, vorausgesetzt, Sie wissen, welches Sie lösen möchten. Stellen Sie vor dem Erstellen einer App relevante Fragen, z. B.:
 
 * Welche Vor- und Nachteile des aktuellen Zustandssystems werden von Ihren Benutzern verwendet?
 * Welche Probleme haben Ihre Benutzer, die Sie beheben möchten?
@@ -45,13 +45,13 @@ Manchmal lautet die Antwort: *Wir möchten dieses Problem für alle Teams Benutz
 Wenn Sie die Einschränkungen der Apps für die Barrierefreiheit von Daten und die Datenaufbewahrung kennen, können Sie bessere Apps entwerfen. Dies ist wichtig, da sich Informationen darüber, wem die Daten und die Verfügbarkeit von APIs gehören, auf die Lösungsarchitektur auswirken. Stellen Sie auch hier relevante Fragen, z. B.:
 
 * Was sind die Herausforderungen bei der Back-End-Integration der aktuellen App?
-* Wer besitzt die Back-End-Daten? In-House oder Drittanbieter.
+* Wer besitzen die Back-End-Daten? In-House oder Drittanbieter.
 * Gibt es Firewalls, die sich auf die Funktionsweise der App auswirken?
 * Gibt es APIs für den Zugriff auf die Daten, die Sie für die Funktion Ihrer App benötigen? 
 
 ## <a name="provide-authentication"></a>Bereitstellen der Authentifizierung
 
-Sie müssen frühzeitig ermitteln, ob Sie die Dienste, die Sie verfügbar machen, und auf welcher Ebene schützen müssen. Denken Sie daran, dass die webdienste, die in Ihrer Teams-App verfügbar gemacht werden, über das Internet öffentlich verfügbar sind. Wenn Sie also sicher sein müssen, dass sie jetzt darüber nachdenken. Wenn Sie eine Lösung benötigen, die erfordert, dass Sie Benutzern außerhalb des Mandanten Gastzugriff gewähren, müssen Zugriffseinschränkungen und -berechtigungen platziert werden, um vertrauliche Informationen zu schützen. Sie müssen Apps unter Berücksichtigung der Einschränkungen entwerfen, die mit dem Gastbenutzerzugriff verbunden sind. Stellen Sie daher Fragen, z. B.: 
+Sie müssen frühzeitig ermitteln, ob Sie die Dienste, die Sie verfügbar machen, und auf welcher Ebene schützen müssen. Denken Sie daran, dass die webdienste, die in Ihrer Teams App verfügbar gemacht werden, über das Internet öffentlich verfügbar sind. Wenn Sie also sicher sein müssen, dass sie jetzt darüber nachdenken. Wenn Sie eine Lösung benötigen, die erfordert, dass Sie Benutzern außerhalb des Mandanten Gastzugriff gewähren, müssen Zugriffseinschränkungen und -berechtigungen platziert werden, um vertrauliche Informationen zu schützen. Sie müssen Apps unter Berücksichtigung der Einschränkungen entwerfen, die mit dem Gastbenutzerzugriff verbunden sind. Stellen Sie daher Fragen, z. B.: 
 
 * Greifen die Benutzer basierend auf ihren Rollen auf unterschiedliche Ansichten von Daten zu?
 * Sind personenbezogene Informationen beteiligt?
@@ -60,7 +60,7 @@ Sie müssen frühzeitig ermitteln, ob Sie die Dienste, die Sie verfügbar machen
 
 ## <a name="decide-what-goes-in-teams"></a>Entscheiden, was in Teams
 
-Unabhängig davon, ob Sie eine neue Lösung erstellen oder eine vorhandene Lösung in Teams bringen, ist es wichtig zu entscheiden, ob sich die gesamte App innerhalb des Teams-Clients befindet. Überprüfen Sie, ob es sinnvoll ist, nur einen Teil der Erfahrung einzubringen. Mit einer Kombination aus Registerkarten, Messaging-Erweiterungen, Aufgabenmodulen, adaptiven Karten und Unterhaltungsbots können Sie komplexe Apps vollständig in Teams erstellen.
+Ob Sie eine neue Lösung erstellen oder eine vorhandene Lösung in Teams bringen, ist es wichtig zu entscheiden, ob sich die gesamte App innerhalb des Teams-Clients befindet. Überprüfen Sie, ob es sinnvoll ist, nur einen Teil der Erfahrung einzubringen. Mit einer Kombination aus Registerkarten, Messaging-Erweiterungen, Aufgabenmodulen, adaptiven Karten und Unterhaltungsbots können Sie komplexe Apps vollständig in Teams erstellen.
 Denken Sie daran, wer Ihre Benutzer sind und welche Probleme Sie lösen möchten. Verfügen sie bereits über ein System zur Lösung der meisten Probleme, oder müssen Sie lediglich einen Untersatz der Funktionalität in Teams erweitern? Wenn Sie einen Teil Ihrer Lösung bereitstellen möchten, müssen Sie sich in der Regel auf die Freigabe, Zusammenarbeit, Initiierung und Überwachung von Workflows konzentrieren.
 
 ## <a name="plan-the-onboarding-experience"></a>Planen Sie die Benutzererfahrung

@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie adaptive Karten für Teams entwerfen und das 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b016df98d57b9a3f5fe03e6cf26b31ad2d7b8db9
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 86b5bdea89f49f6e98ce84920e3fbe1cdb4f378e
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887964"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948642"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Entwerfen adaptiver Karten für Ihre Microsoft Teams-App
 
@@ -683,7 +683,7 @@ Es ist einfach, mehrere Karten in eine Unterhaltung zu senden, aber sobald Karte
 ## <a name="see-also"></a>Siehe auch
 
 * [Karten- und Aufgabenmodule](~/task-modules-and-cards/cards-and-task-modules.md)
-* [Karten- und Aufgabenmodule, die im Teams-Bot unterstützt werden](~/task-modules-and-cards/what-are-task-modules.md)
+* [Im Teams-Bot unterstützte Karten- und Aufgabenmodule](~/task-modules-and-cards/what-are-task-modules.md)
 * [Mit Universal-Aktionen für adaptive Karten arbeiten](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
 * [Auf die Aktion zum Absenden des Aufgabenmoduls reagieren](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 * [Benutzerspezifische Ansichten](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md)

@@ -5,12 +5,12 @@ description: Übersicht über die Tools und SDKs zum Erstellen Microsoft Teams B
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d6a1ce32fce03ada547cf769ff5a634f9d6f01de
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 3c39ed5c39a92967ebf8b90760bd28e7bb6366f3
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888426"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948383"
 ---
 # <a name="bots-and-sdks"></a>Tools und SDKs
 
@@ -23,11 +23,11 @@ Sie können einen Bot erstellen, der in Microsoft Teams mit einem der folgenden 
 
 ## <a name="bots-with-the-microsoft-bot-framework"></a>Bots mit der Microsoft Bot Framework
 
-Ihr Teams Bot besteht aus Folgendem:
+Ihr Teams Bot besteht aus folgenden Komponenten:
 
 * Ein öffentlich zugänglicher Webdienst, der von Ihnen gehostet wird.
 * Eine Bot Framework-Registrierung für Ihren Webdienst.
-* Das Teams-App-Paket, das den Teams-Client mit Ihrem Webdienst verbindet.
+* Ihr Teams App-Paket, das den Teams-Client mit Ihrem Webdienst verbindet.
 
 > [!TIP]
 > Verwenden Sie das Entwicklerportal, um Ihren Webdienst beim Bot Framework zu registrieren und Ihre App-Konfigurationen anzugeben. Weitere Informationen finden Sie unter [Verwalten Ihrer Apps mit dem Entwicklerportal für Teams.](~/concepts/build-and-test/teams-developer-portal.md)
@@ -39,11 +39,11 @@ Das [Bot Framework](https://dev.botframework.com/) ist ein umfangreiches SDK, da
 * Verarbeiten Sie Messaging-Erweiterungsanforderungen.
 
 > [!IMPORTANT]
-> Sie können Teams-Apps in einer beliebigen Webprogrammiertechnologie entwickeln und die [Bot Framework-REST-APIs](/bot-framework/rest-api/bot-framework-rest-overview) direkt aufrufen. Sie müssen jedoch in allen Fällen die Tokenverarbeitung durchführen.
+> Sie können Teams-Apps in jeder Webprogrammiertechnologie entwickeln und die [Bot Framework-REST-APIs](/bot-framework/rest-api/bot-framework-rest-overview) direkt aufrufen. Sie müssen jedoch in allen Fällen die Tokenverarbeitung durchführen.
 
 ## <a name="bots-with-power-virtual-agents"></a>Bots mit Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) ist ein Chatbot-Dienst, der auf der Microsoft Power-Plattform und dem Bot Framework basiert. Der Power Virtual Agent-Entwicklungsprozess verwendet einen geführten, codefreien und grafischen Schnittstellenansatz, der Es Ihren Teammitgliedern ermöglicht, einfach einen intelligenten virtuellen Agent zu erstellen und zu verwalten. Nachdem Sie Ihren Chatbot im [Power Virtual Agents Portal](https://powervirtualagents.microsoft.com)erstellt haben, können Sie ihn problemlos in [Teams integrieren.](how-to/add-power-virtual-agents-bot-to-teams.md) Weitere Informationen zu den ersten Schritten finden Sie [in Power Virtual Agents Dokumentation.](/power-virtual-agents)
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) ist ein Chatbot-Dienst, der auf der Microsoft Power-Plattform und bot Framework basiert. Der Power Virtual Agent-Entwicklungsprozess verwendet einen geführten, codefreien und grafischen Schnittstellenansatz, der Es Ihren Teammitgliedern ermöglicht, einfach einen intelligenten virtuellen Agent zu erstellen und zu verwalten. Nachdem Sie Ihren Chatbot im [Power Virtual Agents Portal](https://powervirtualagents.microsoft.com)erstellt haben, können Sie ihn problemlos in [Teams integrieren.](how-to/add-power-virtual-agents-bot-to-teams.md) Weitere Informationen zu den ersten Schritten finden Sie [in Power Virtual Agents Dokumentation.](/power-virtual-agents)
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots mit Webhooks und Connectors
 
@@ -82,7 +82,7 @@ Ein 1:1-Chat ist eine herkömmliche Möglichkeit für einen Unterhaltungsbot, mi
 * F&A-Bots
 * Bots, die Workflows in anderen Systemen initiieren 
 * Bots, die Witze erzählen
-* Bots, die Notizen machen, bevor Sie One-to-One-Chatbots erstellen, sollten überlegen, ob eine unterhaltungsbasierte Schnittstelle die beste Möglichkeit ist, Ihre Funktionalität darzustellen.
+* Bots, die Notizen machen, bevor Sie 1:1-Chatbots erstellen, sollten überlegen, ob eine unterhaltungsbasierte Schnittstelle die beste Möglichkeit ist, Ihre Funktionalität darzustellen.
 
 ## <a name="disadvantages-of-bots"></a>Nachteile von Bots
 

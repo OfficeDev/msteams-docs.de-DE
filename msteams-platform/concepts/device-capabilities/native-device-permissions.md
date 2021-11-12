@@ -4,16 +4,16 @@ keywords: Teams-App-Funktionen – Geräte-natives Scan-Qr-Barcode-Bild-Audiovid
 description: So aktualisieren Sie Ihr App-Manifest, um Zugriff auf systemeigene Features anzufordern, die in der Regel eine Zustimmung des Benutzers erfordern, z. B. Scan-QR, Barcode, Bild, Audio, Videofunktionen
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 185552c213d6313ea6c8b50af72a0220d9abe7fc
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 04518d8620ce95d5d3ca72c86684ff0208b1333f
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889118"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948432"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Anfordern von Geräteberechtigungen für Ihre Microsoft Teams-App
 
-Sie können Ihre Teams-App mit systemeigenen Gerätefunktionen wie Kamera, Mikrofon und Standort erweitern. In diesem Dokument erfahren Sie, wie Sie die Zustimmung des Benutzers anfordern und auf die systemeigenen Geräteberechtigungen zugreifen können.
+Sie können Ihre Teams-App mit systemeigenen Gerätefunktionen wie Kamera, Mikrofon und Position erweitern. In diesem Dokument erfahren Sie, wie Sie die Zustimmung des Benutzers anfordern und auf die systemeigenen Geräteberechtigungen zugreifen können.
 
 > [!NOTE]
 > * Informationen zum Integrieren von Medienfunktionen in Ihre Microsoft Teams mobilen App finden Sie unter [Integrieren von Medienfunktionen.](mobile-camera-image-permissions.md)
@@ -47,7 +47,7 @@ Während der Zugriff auf diese Features in modernen Webbrowsern standard ist, m�
 ## <a name="manage-permissions"></a>
             Berechtigungen verwalten
 
-Ein Benutzer kann Geräteberechtigungen in Teams Einstellungen verwalten, indem **er** Berechtigungen für bestimmte Apps zulassen oder verweigern auswählt. 
+Ein Benutzer kann Geräteberechtigungen in Teams Einstellungen verwalten, indem er Berechtigungen für bestimmte Apps **zulassen** oder verweigern auswählt. 
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
@@ -115,7 +115,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 });
 ```
 
-## <a name="use-teams-apis-to-get-device-permissions"></a>Verwenden von Teams-APIs zum Abrufen von Geräteberechtigungen
+## <a name="use-teams-apis-to-get-device-permissions"></a>Verwenden Teams-APIs zum Abrufen von Geräteberechtigungen
 
 Nutzen Sie die entsprechende HTML5- oder Teams-API, um eine Eingabeaufforderung für den Zugriff auf Geräteberechtigungen anzuzeigen.
 
@@ -136,7 +136,7 @@ Zum Beispiel:
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
     ```
 
- * Um das Bild auf mobilgeräten zu erfassen, fordert Teams Mobile beim Anruf die Berechtigung `captureImage()` an:
+ * Um das Bild auf mobilen Geräten zu erfassen, fragt Teams Mobile beim Anruf nach der `captureImage()` Berechtigung:
 
     ```Javascript
     microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
@@ -166,7 +166,7 @@ Zum Beispiel:
     });
     ```
 
-* Um den Benutzer aufzufordern, den Standort auf der Kartenoberfläche freizugeben, fordert Teams Mobile beim Aufrufen die Berechtigung `getLocation()` an:
+* Um den Benutzer aufzufordern, den Standort auf der Kartenoberfläche freizugeben, fragt Teams Mobile beim Aufrufen die `getLocation()` Berechtigung:
 
     ```JavaScript 
     microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
@@ -186,7 +186,7 @@ Zum Beispiel:
 
 ## <a name="permission-behavior-across-login-sessions"></a>Berechtigungsverhalten über Anmeldesitzungen hinweg
 
-Geräteberechtigungen werden für jede Anmeldesitzung gespeichert. Wenn Sie sich also bei einer anderen Instanz von Teams anmelden, z. B. auf einem anderen Computer, sind Ihre Geräteberechtigungen aus ihren vorherigen Sitzungen nicht verfügbar. Daher müssen Sie den Geräteberechtigungen für die neue Sitzung erneut zustimmen. Dies bedeutet auch, dass Ihre Geräteberechtigungen aus der vorherigen Anmeldesitzung gelöscht werden, wenn Sie sich von Teams abmelden oder mandanten in Teams wechseln.  
+Geräteberechtigungen werden für jede Anmeldesitzung gespeichert. Wenn Sie sich also bei einer anderen Instanz von Teams anmelden, z. B. auf einem anderen Computer, sind Ihre Geräteberechtigungen aus Ihren vorherigen Sitzungen nicht verfügbar. Daher müssen Sie den Geräteberechtigungen für die neue Sitzung erneut zustimmen. Dies bedeutet auch, dass Ihre Geräteberechtigungen aus der vorherigen Anmeldesitzung gelöscht werden, wenn Sie sich von Teams abmelden oder Mandanten in Teams wechseln.  
 
 > [!NOTE]
 > Wenn Sie den systemeigenen Geräteberechtigungen zustimmen, ist sie nur für Ihre _aktuelle_ Anmeldesitzung gültig.
@@ -197,13 +197,12 @@ Geräteberechtigungen werden für jede Anmeldesitzung gespeichert. Wenn Sie sich
 |---------------|--------------|--------|
 |Geräteberechtigungen | Verwenden Microsoft Teams Registerkartenbeispiel-App zum Veranschaulichen von Geräteberechtigungen |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Integrieren von Medienfunktionen in Teams](mobile-camera-image-permissions.md)
 
-> [!div class="nextstepaction"]
-> [Integrieren von QR- oder Strichcodescannern in Teams](qr-barcode-scanner-capability.md)
+## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Integrieren von Standortfunktionen in Teams](location-capability.md)
+* [Integrieren der QR- oder Strichcodescannerfunktion in Teams](qr-barcode-scanner-capability.md)
+* [Integrieren von Standortfunktionen in Teams](location-capability.md)

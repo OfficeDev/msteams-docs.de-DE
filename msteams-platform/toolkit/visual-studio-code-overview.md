@@ -5,16 +5,16 @@ keywords: Teams Visual Studio Code Toolkit
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: f2bb0d5dbd999a5d935c051d854bd94b21ce3f19
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 8eeaadf28b9bdb46c91a803a66b4855d2a5e848c
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889321"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948439"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Erstellen von Apps mit dem Teams Toolkit und Visual Studio Code
 
-Das Teams Toolkit für Visual Studio Code hilft Entwicklern beim Erstellen und Bereitstellen Teams Apps mit integrierter Identität, Zugriff auf Cloudspeicher, Daten von Microsoft Graph und anderen Diensten in Azure und M365 mit einem Nullkonfigurationsansatz für die Entwicklerumgebung.  
+Das Teams Toolkit für Visual Studio Code unterstützt Entwickler beim Erstellen und Bereitstellen Teams Apps mit integrierter Identität, Zugriff auf Cloudspeicher, Daten von Microsoft Graph und anderen Diensten in Azure und M365 mit einem Nullkonfigurationsansatz für die Entwicklerumgebung.  
 
 Sie können das Toolkit auch mit Visual Studio oder als CLI `teamsfx` (genannt) verwenden.
 
@@ -22,7 +22,7 @@ Sie können das Toolkit auch mit Visual Studio oder als CLI `teamsfx` (genannt) 
 
 1. Öffnen Sie Visual Studio Code.
 1. Wählen Sie die Erweiterungsansicht (**STRG+UMSCHALT+X**  /  **⌘⇧-X** oder **Ansicht > Erweiterungen) aus.**
-1. Geben Sie in das Suchfeld _Teams Toolkit_ ein.
+1. Geben Sie im Suchfeld _Teams Toolkit_ ein.
 1. Klicken Sie auf die grüne Installationsschaltfläche neben dem Teams Toolkit.
 
 Sie finden auch das Teams Toolkit auf dem [Visual Studio Code Marketplace.](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
@@ -85,16 +85,16 @@ Das Teams Toolkit kann React Apps erstellen, die in Azure gehostet werden, oder 
 
 1. Geben Sie einen passenden Namen für Ihre App ein, wie z. B. `helloworld`. Der Name der App darf nur aus alphanumerischen Zeichen bestehen.  Drücken Sie die **EINGABETASTE**, um fortzufahren.
 
-Ihre Teams-App wird innerhalb weniger Sekunden erstellt. Die Gerüst-App enthält Code zum Behandeln des einmaligen Anmeldens mit Azure Active Directory und zugriff auf die Microsoft Graph.  Wenn Sie Azure-Ressourcen ausgewählt haben, ist auch der Code für diese Ressourcen verfügbar.
+Ihre Teams-App wird innerhalb weniger Sekunden erstellt. Die Gerüst-App enthält Code für die Behandlung des einmaligen Anmeldens mit Azure Active Directory und den Zugriff auf die Microsoft-Graph.  Wenn Sie Azure-Ressourcen ausgewählt haben, ist auch der Code für diese Ressourcen verfügbar.
 
-Eine exemplarische Vorgehensweise zum Erstellungs- und Veröffentlichungsprozess SPFx finden Sie im [Lernprogramm SPFx.](../get-started/first-app-spfx.md)
+Eine exemplarische Vorgehensweise zum SPFx Erstellungs- und Veröffentlichungsprozess finden Sie im [SPFx Lernprogramm.](../get-started/first-app-spfx.md)
 
 ## <a name="configure-your-app"></a>Konfigurieren Sie die App
 
 Im Kern umfasst die Teams App drei Komponenten:
 
   1. Der Microsoft Teams-Client (Web, Desktop oder Mobil), auf dem Benutzer mit Ihrer App interagieren.
-  1. Ein Server, der auf Anforderungen für Inhalte antwortet, die in Teams angezeigt werden. Beispiel: HTML-Registerkarteninhalt oder eine adaptive Bot-Karte.
+  1. Ein Server, der auf Anforderungen für Inhalte reagiert, die in Teams angezeigt werden. Beispiel: HTML-Registerkarteninhalt oder eine adaptive Bot-Karte.
   1. Ein Teams-App-Paket besteht aus drei Dateien:
 
       > [!div class="checklist"]
@@ -103,10 +103,10 @@ Im Kern umfasst die Teams App drei Komponenten:
       > - Ein [Farbsymbol](../resources/schema/manifest-schema.md#icons) für Ihre App, das im öffentlichen App- oder Organisations-App-Katalog angezeigt werden soll.
       > - Ein [Gliederungssymbol](../resources/schema/manifest-schema.md#icons) für die Anzeige auf der Teams Aktivitätsleiste.
 
-Das Manifest und die Symbole werden im `.fx` Ordner Ihres Projekts gespeichert, bevor sie in Teams hochgeladen werden. Wenn eine App installiert ist, analysiert der Teams Client die Manifestdatei, um die erforderlichen Informationen wie den Namen Ihrer App und die URL zu ermitteln, unter der sich die Dienste befinden.
+Das Manifest und die Symbole werden im `.fx` Ordner Ihres Projekts gespeichert, bevor sie in Teams hochgeladen werden. Wenn eine App installiert ist, analysiert der Teams-Client die Manifestdatei, um die erforderlichen Informationen wie den Namen Ihrer App und die URL zu ermitteln, unter der sich die Dienste befinden.
 
 1. Navigieren Sie zum Konfigurieren Ihrer App zur Registerkarte **Teams Toolkit** in Visual Studio Code.
-1. Wählen Sie im Abschnitt **Project** den **Manifest-Editor** aus.
+1. Wählen Sie im **Project** Abschnitt den **Manifest-Editor** aus.
 
 Durch bearbeiten der Felder auf der Seite "App-Details" wird der Inhalt der Datei "manifest.json" aktualisiert, die letztendlich als Teil des App-Pakets ausgeliefert wird.
 
@@ -122,7 +122,7 @@ So erstellen Sie Ihre App und führen sie lokal aus:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot mit Dialogfenster zum Installieren eines SSL-Zertifikats, damit Microsoft Teams Ihre Anwendung von localhost laden kann.":::
 
-1. Ihr Webbrowser wird gestartet, um die Anwendung auszuführen. Wenn Sie zum Öffnen von Microsoft Teams aufgefordert werden, wählen Sie „Abbrechen“ aus, um im Browser zu verbleiben. Sie werden möglicherweise auch aufgefordert, zu anderen Zeiten zur Teams-Anwendung zu wechseln. Wählen Sie in diesem Fall die Web-App aus.
+1. Ihr Webbrowser wird gestartet, um die Anwendung auszuführen. Wenn Sie zum Öffnen von Microsoft Teams aufgefordert werden, wählen Sie „Abbrechen“ aus, um im Browser zu verbleiben. Möglicherweise werden Sie auch aufgefordert, zu anderen Zeiten zur Teams-Anwendung zu wechseln. Wählen Sie in diesem Fall die Web-App aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot, der zeigt, wie die Web-Version von Microsoft Teams beim Start ausgewählt wird.":::
 
@@ -136,7 +136,7 @@ Sowohl das Back-End als auch der Frontend sind in den Visual Studio Code Debugge
 Bevor sie von anderen Personen verwendet werden kann, müssen Sie Ihre App im Entwicklerportal für Teams veröffentlichen.
 
 1. Navigieren Sie zum Veröffentlichen Ihrer App zur Registerkarte **Teams Toolkit** in Visual Studio Code.
-1. Wählen Sie im Abschnitt **Project** in **Teams** veröffentlichen aus.
+1. Wählen Sie im Abschnitt **Project** in **Teams veröffentlichen** aus.
 
 Wenn Sie Azure-Hosting verwenden, müssen Sie in der Cloud bereitgestellt und bereitgestellt haben. Eine exemplarische Vorgehensweise zum SPFx Veröffentlichungsprozess finden Sie im [SPFx Lernprogramm.](../get-started/first-app-spfx.md)
 

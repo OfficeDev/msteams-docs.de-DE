@@ -1,19 +1,19 @@
 ---
-title: Anpassen ihrer Teams-App
+title: Anpassen Ihrer Teams-App
 author: heath-hamilton
 description: Erfahren Sie, wie Teams Administratoren Ihre App für ihre Organisation anpassen können.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
 keywords: Akzentfarbenmarke blendet App-Genehmigung aus
-ms.openlocfilehash: 2061b638034a0b6359f1853163c49f7d696381c6
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: 1487a1a44991143b93b87bf47bdb93180d97cb8c
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912213"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948614"
 ---
-# <a name="customize-your-teams-app"></a>Anpassen ihrer Teams-App
+# <a name="customize-your-teams-app"></a>Anpassen Ihrer Teams-App
 
 ## <a name="enable-your-microsoft-teams-app-to-be-customized"></a>Aktivieren der anpassungsfähigen Microsoft Teams-App
 
@@ -44,7 +44,7 @@ Um die App auszublenden, legen Sie die Eigenschaft in der App-Manifestdatei `def
 
 Der Administrator erhält eine Anforderung zum Ergreifen von Maßnahmen, bevor ein Benutzer auf die App zugreifen kann. Unter **"Apps verwalten"** können die Administratoren **"Zulassen"** auswählen, um die App mit dem Status **"Vom Herausgeber blockiert"** zuzulassen:
 
-![Apps verwalten](../../assets/images/apps-in-meetings/manageapp.png)
+![Verwalten von Apps](../../assets/images/apps-in-meetings/manageapp.png)
 
 Wenn die App standardmäßig nicht ausgeblendet werden soll, können Sie die `defaultBlockUntilAdminAction` Eigenschaft auf `false` aktualisieren. Wenn die neue Version der App genehmigt wird, ist die App standardmäßig zulässig, solange der Administrator keine explizite Aktion ausgeführt hat.
 
@@ -53,6 +53,6 @@ Wenn die App standardmäßig nicht ausgeblendet werden soll, können Sie die `de
 
 ## <a name="see-also"></a>Siehe auch
 
-* [App-Manifestschema](/MicrosoftTeams/manifest-schema)
+* [App-Manifestschema](/microsoftteams/platform/resources/schema/manifest-schema)
 * [Anpassen von Apps im Teams Admin Center](/MicrosoftTeams/customize-apps)
 

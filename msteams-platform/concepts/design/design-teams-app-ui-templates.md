@@ -5,12 +5,12 @@ description: Entwerfen Sie Ihre App schneller mit standardisierten UI-Komponente
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: d84d03af2ce1428b7c75a232690e9f1e2fa6112f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 78c8854771c72280014489259ebda829d5915be2
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887803"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948446"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Entwerfen Ihrer Microsoft Teams-App mit UI-Vorlagen
 
@@ -20,9 +20,9 @@ Entwerfen Sie Ihre Microsoft Teams-App schneller mit UI-Vorlagen. Die Vorlagen s
 
 Die folgenden Ressourcen können Ihnen beim Entwerfen und Entwickeln Ihrer App mithilfe von Benutzeroberflächenvorlagen helfen.
 
-### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
+### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-Benutzeroberflächenbausatz
 
-Nutzen Sie UI-Vorlagen für Ihr App-Design aus dem Microsoft Teams UI Kit, das auch umfassende Informationen zur Nutzung, Anatomie, Barrierefreiheit und bewährten Methoden enthält.
+Nutzen Sie UI-Vorlagen für Ihr App-Design aus dem Microsoft Teams UI Kit, das auch umfassende Informationen zur Verwendung, Anatomie, Barrierefreiheit und bewährten Methoden enthält.
 
 > [!div class="nextstepaction"]
 > [Abrufen des UI-Kits (Numma)](https://www.figma.com/community/file/916836509871353159)
@@ -201,7 +201,7 @@ Ein Assistent führt einen Benutzer durch mehrere Bildschirme, um eine Aufgabe a
 
 ### <a name="top-use-cases"></a>Häufigste Anwendungsfälle
 
-* Setup
+* Einrichtung
 * Onboarding
 * Erfahrungen bei der ersten Ausführung
 

@@ -5,12 +5,12 @@ description: Eine Übersicht über Messaging-Erweiterungen auf der Microsoft Tea
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 1ef83dd8dc87b54f7ec02e110565b9ecb0a14667
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1448cb334521b6937ab87514c35e2b628a3e8106
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889370"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948558"
 ---
 # <a name="messaging-extensions"></a>Messaging-Erweiterungen
 
@@ -29,7 +29,7 @@ In der folgenden Abbildung werden die Speicherorte angezeigt, von denen Messagin
 |:-----------------|:-----------------|
 |Sie möchten, dass ein externes System eine Aktion ausführt und das Ergebnis der Aktion zurück an Ihre Unterhaltung gesendet wird.|Reservieren Sie eine Ressource, und ermöglichen Sie dem Kanal, das reservierte Zeitfenster zu kennen.|
 |Sie möchten etwas in einem externen System finden und die Ergebnisse für die Unterhaltung freigeben.|Suchen Sie in Azure DevOps nach einer Arbeitsaufgabe, und geben Sie sie für die Gruppe als adaptive Karte frei.|
-|Sie möchten eine komplexe Aufgabe mit mehreren Schritten oder vielen Informationen in einem externen System abschließen und die Ergebnisse mit einer Unterhaltung teilen.|Erstellen Sie einen Fehler in Ihrem Nachverfolgungssystem basierend auf einer Teams Nachricht, weisen Sie diesen Fehler Bob zu, und senden Sie eine Karte mit den Details des Fehlers an den Unterhaltungsthread.|
+|Sie möchten eine komplexe Aufgabe mit mehreren Schritten oder vielen Informationen in einem externen System abschließen und die Ergebnisse mit einer Unterhaltung teilen.|Erstellen Sie einen Fehler in Ihrem Tracking-System basierend auf einer Teams Nachricht, weisen Sie diesen Fehler Bob zu, und senden Sie eine Karte mit den Details des Fehlers an den Unterhaltungsthread.|
 
 ## <a name="understand-how-messaging-extensions-work"></a>Grundlegendes zur Funktionsweise von Messaging-Erweiterungen
 
@@ -83,9 +83,7 @@ Die folgenden Bilder zeigen das Feature zum Aufheben von Links, wenn ein Link in
 > [!div class="nextstepaction"]
 > [Definieren des Befehls für die Messaging-Erweiterung für Aktionen](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
-> [!div class="nextstepaction"]
-> [Definieren des Befehls für die Messaging-Erweiterung für die Suche](~/messaging-extensions/how-to/search-commands/define-search-command.md)
-
 ## <a name="see-also"></a>Siehe auch
 
+* [Definieren des Befehls für die Messaging-Erweiterung für die Suche](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [Erstellen einer Messaging-Erweiterung](../build-your-first-app/build-messaging-extension.md)

@@ -1,16 +1,16 @@
 ---
 title: Entwerfen Ihrer benutzerdefinierten App
 author: heath-hamilton
-description: Erfahren Sie, wie Sie Microsoft Teams-Apps entwerfen. Zu den Ressourcen gehören das Microsoft Teams UI Kit, bewährte Methoden, Beispiele und vieles mehr.
+description: Erfahren Sie, wie Sie Microsoft Teams Apps entwerfen. Zu den Ressourcen gehören das Microsoft Teams UI Kit, bewährte Methoden, Beispiele und vieles mehr.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 59af1528941b06d6a951ee8dd38e663c1b492624
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 20626290af2ae94eb9f3913d7063ba8d8b207bda
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888139"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948565"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Entwerfen Ihrer Microsoft Teams-App
 
@@ -20,9 +20,9 @@ Unabhängig davon, ob Sie Designer, Produktmanager, Entwickler oder Entwickler m
 
 ## <a name="creating-a-cohesive-experience"></a>Erstellen einer zusammenhängenden Oberfläche
 
-Das Entwerfen einer Teams-App ähnelt dem Entwerfen einer herkömmlichen Web-App, unterscheidet sich jedoch auch etwas. Ein effektives Design hebt die einzigartigen Attribute Ihrer App hervor und passt sich natürlich Teams Features und Kontexte an.
+Das Entwerfen einer Teams App ähnelt dem Entwerfen einer herkömmlichen Web-App, unterscheidet sich jedoch auch etwas. Ein effektives Design hebt die einzigartigen Attribute Ihrer App hervor und passt sich natürlich mit Teams Features und Kontexten an.
 
-Diese Richtlinien und Ressourcen können Ihnen dabei helfen, dieses Gleichgewicht zu finden. Sie wissen, was Sie tun müssen und was Sie vermeiden müssen, wenn Sie Ihre Teams-App entwerfen (z. B. navigation auf einer Registerkarte mit mehreren Ebenen).
+Diese Richtlinien und Ressourcen können Ihnen dabei helfen, dieses Gleichgewicht zu finden. Sie wissen, was Sie tun müssen und was Sie beim Entwerfen Ihrer Teams-App vermeiden müssen (z. B. Navigation auf mehreren Ebenen auf einer Registerkarte).
 
 ## <a name="teams-app-design-principles"></a>Teams App-Entwurfsprinzipien
 
@@ -139,14 +139,14 @@ Basierend auf Fluent Ui sind dies die [Kernelemente,](design-teams-app-basic-ui-
 
 Die folgenden Tools können Designern und Entwicklern bei den ersten Schritten helfen:
 
-### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
+### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-Benutzeroberflächenbausatz
 
-Entwerfen Sie eine Teams-App mit UI-Komponenten, Vorlagen und Beispielen, die Sie nach Bedarf ziehen, ablegen und ändern können. Das UI-Kit enthält auch umfassende Informationen dazu, wie Apps in unterschiedlichen Teams Szenarien aussehen und sich verhalten sollten.
+Entwerfen Sie eine Teams-App mit UI-Komponenten, Vorlagen und Beispielen, die Sie nach Bedarf ziehen, ablegen und ändern können. Das UI-Kit enthält auch umfassende Informationen dazu, wie Apps in verschiedenen Teams Szenarien aussehen und sich verhalten sollten.
 
 > [!div class="nextstepaction"]
 > [Abrufen des UI-Kits (Numma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft Teams UI-Bibliothek
+### <a name="microsoft-teams-ui-library"></a>Microsoft Teams-Benutzeroberflächenbibliothek
 
 Anzeigen und Testen einzelner Teams UI-Vorlagen und zugehöriger Komponenten in Ihrem Browser.
 
@@ -169,7 +169,7 @@ Sie können eine Beispiel-App hochladen, um zu sehen, wie Apps im Teams-Client a
 
 Um mehr zu erfahren, probieren Sie eine der folgenden Ressourcen aus:
 
-### <a name="fluent-ui-documentation"></a>Fluent Dokumentation zur Benutzeroberfläche
+### <a name="fluent-ui-documentation"></a>Dokumentation zur Fluent Benutzeroberfläche
 
 Rufen Sie Codebeispiele und Implementierungsdetails für die grundlegenden Fluent UI-Komponenten ab, die zum Erstellen Teams Oberflächen verwendet werden.
 

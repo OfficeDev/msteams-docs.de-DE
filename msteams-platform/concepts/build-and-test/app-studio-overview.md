@@ -4,14 +4,14 @@ description: Erste Schritte zum Erstellen von großartigen Apps in Microsoft Tea
 keywords: Erste Schritte mit App Studio-Teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: adbd6bf8c2c2ec0dae8444d222fc3f3b26279e8f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 92f24fbb7d4a41a192178ead1e2cb40dd7446b25
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888566"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948635"
 ---
-# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Verwalten Ihrer Apps mit App Studio für Microsoft Teams
+# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Verwalten Von Apps mit App Studio für Microsoft Teams
 
 > [!TIP]
 > **Testen Sie das Entwicklerportal:** App Studio hat sich weiterentwickelt. Konfigurieren, verteilen und verwalten Sie Ihre Teams-Apps mit dem neuen [Entwicklerportal.](https://dev.teams.microsoft.com/)
@@ -128,7 +128,7 @@ Wenn Sie bereits über eine Karte verfügen, die Sie in Teams überprüfen möch
 ### <a name="react-control-library"></a>React-Steuerelementbibliothek
 
 >[!Note]
-> Diese React Steuerelementbibliothek ist in Zukunft veraltet. Erwägen Sie die Verwendung der [React-Steuerelemente Fluent-UI als alternative](https://microsoft.github.io/fluent-ui-react/) zuvor Stardust-Benutzeroberfläche.
+> Diese React Steuerelementbibliothek ist in Zukunft veraltet. Erwägen Sie die Verwendung der [React-Steuerelemente Fluent-UI als alternative](https://microsoft.github.io/fluent-ui-react/) zuvor Stardust-UI.
 
 Das Erstellen einer App, die Teams‘ Bewährte Methoden befolgt, ist eine hervorragende Möglichkeit, Ihrer App ein Erscheinungsbild zu verleihen, das sich nahtlos in die Kundenerfahrung in Teams einfügt. Die von Ihnen verwendeten UI-Steuerelemente sind entscheidend, um dieses Ziel zu erreichen. Um das Erstellen einer konsistenten Benutzeroberfläche zu vereinfachen, bietet App Studio verschiedene Kategorien von Steuerelementen für die Benutzeroberfläche, die den Entwurfsprinzipien von Teams entsprechen.
 

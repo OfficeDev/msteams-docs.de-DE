@@ -4,16 +4,16 @@ description: Grundlegendes zu den wichtigsten Konzepten beim Erstellen eines Bot
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 'Audiostream-Videostream: Audio-/Videoanrufe bei Besprechungen in Echtzeit, medienanwendungsgehostete Medien, die vom Mediendienst gehostet werden'
-ms.openlocfilehash: bff216848262412a05de8794bb716eb6a3f4c75a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e35ce08bc0efed328687f7aacf311cf94c3e8830
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889062"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948551"
 ---
-# <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Echtzeit-Medienanrufe und -besprechungen mit Microsoft Teams
+# <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Echtzeit-Medienanrufe und Besprechungen mit Microsoft Teams
 
-Die Echtzeitmedienplattform ermöglicht Bots die Interaktion mit Microsoft Teams Anrufen und Besprechungen mithilfe von Sprach-, Video- und Bildschirmfreigabe in Echtzeit. Die Echtzeit-Medienplattform ist eine erweiterte Funktion, mit der der Bot Sprach- und Videoinhaltsframes nach Frame senden und empfangen kann. Der Bot hat unformatierten Zugriff auf die Mediendatenströme Sprach-, Video- und Bildschirmfreigabe. Es gibt einfachere vom Dienst gehostete Medienbots, die für die gesamte Medienverarbeitung auf der Echtzeit-Medienplattform basieren. Bots, die Medien selbst verarbeiten, werden als von der Anwendung gehostete Medienbots bezeichnet.
+Die Echtzeit-Medienplattform ermöglicht Bots die Interaktion mit Microsoft Teams Anrufen und Besprechungen mithilfe von Sprach-, Video- und Bildschirmfreigabe in Echtzeit. Die Echtzeit-Medienplattform ist eine erweiterte Funktion, mit der der Bot Sprach- und Videoinhaltsframes nach Frame senden und empfangen kann. Der Bot hat unformatierten Zugriff auf die Mediendatenströme Sprach-, Video- und Bildschirmfreigabe. Es gibt einfachere vom Dienst gehostete Medienbots, die für die gesamte Medienverarbeitung auf der Echtzeit-Medienplattform basieren. Bots, die Medien selbst verarbeiten, werden als von der Anwendung gehostete Medienbots bezeichnet.
 
 Beispielsweise erhält der Bot bei einem 1:1-Anruf mit einem Bot, während der Benutzer spricht, 50 Audioframes pro Sekunde. Der Bot empfängt Audioframes mit jeweils 20 Millisekunden (ms) Audio. Ein von der Anwendung gehosteter Medienbot kann die Spracherkennung in Echtzeit durchführen, wenn die Audioframes empfangen werden. Es ist nicht erforderlich, auf eine Aufzeichnung zu warten, nachdem der Benutzer aufgehört hat zu sprechen. Der Bot kann auch Video mit hoher Auflösung senden und empfangen, einschließlich videobasierter Bildschirmfreigabeinhalte.
 
@@ -37,13 +37,13 @@ Der nächste Abschnitt enthält Details zum Audio- und Videoformat, das in Echtz
 
 ## <a name="audio-and-video-format"></a>Audio- und Videoformat
 
-Im Audioformat wird jede Audiosekunde als 16.000 Beispiele dargestellt, wobei jedes Beispiel 16 Bit Daten enthält. Ein 20 Ms großer Audioframe enthält 320 Beispiele mit 640 Byte Daten.
+Im Audioformat wird jede Audiosekunde als 16.000 Beispiele dargestellt, wobei jedes Beispiel 16 Bit Daten enthält. Ein 20 Ms großer Audioframe enthält 320 Beispiele, die 640 Byte Daten enthalten.
 
 Im Videoformat werden mehrere Formate unterstützt. Zwei wichtige Eigenschaften eines Videoformats sind die Framegröße und das Farbformat. Unterstützte Framegrößen umfassen 640 x 360 Pixel, 1280 x 720 Pixel und 1920 x 1080 pixel. Unterstützte Farbformate sind NV12 mit 12 Bit pro Pixel und RGB24 mit 24 Bit pro Pixel.
 
 Ein Videoframe mit 720 p enthält 921.600 Pixel, was 1280 Mal 720 Pixeln entspricht. Im RGB24-Farbformat wird jedes Pixel als 3 Byte dargestellt, das 24 Bit groß ist, einschließlich jeweils 1 Byte der Farbkomponenten Rot, Grün und Blau. Ein einzelner RGB24-Videoframe mit 720p erfordert 2.764.800 Bytes an Daten, was 921.600 Pixel mal 3 Bytes pro Pixel entspricht. Bei einer variablen Framerate bedeutet das Senden von RGB24-Videoframes mit 720p etwa 80 Megabyte pro Sekunde Inhalt. 80 Megabyte werden durch den H.264-Videocodec vor der Netzwerkübertragung erheblich komprimiert.
 
-Eine erweiterte Funktion der Plattform ermöglicht es einem Bot, Videos als codierte H.264-Frames zu senden oder zu empfangen. Bots, die einen eigenen H.264-Encoder oder -Decoder bereitstellen, werden unterstützt, oder der in rgb24- oder NV12-Bitmaps decodierte Videodatenstrom ist nicht erforderlich.
+Eine erweiterte Funktion der Plattform ermöglicht es einem Bot, Videos als codierte H.264-Frames zu senden oder zu empfangen. Bots, die einen eigenen H.264-Encoder oder Decoder bereitstellen, werden unterstützt, oder der in rgb24- oder NV12-Bitmaps decodierte Videodatenstrom ist nicht erforderlich.
 
 Der nächste Abschnitt enthält Details darüber, welche Besprechungsteilnehmer sprechen, welche aktive und dominante Referenten sind.
 
@@ -61,7 +61,7 @@ Der nächste Abschnitt enthält Details dazu, was Sie installieren müssen, und 
 
 ## <a name="developer-resources"></a>Entwicklerressourcen
 
-Um einen von der Anwendung gehosteten Medienbot zu entwickeln, müssen Sie die [Microsoft.Graph installieren. Calls.Media .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) NuGet package within your Visual Studio project.
+Um einen von der Anwendung gehosteten Medienbot zu entwickeln, müssen Sie [microsoft.Graph installieren. Calls.Media .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) NuGet package within your Visual Studio project.
 
 In der Anwendung gehostete Medienbots erfordern .NET oder C# und Windows Server. Weitere Informationen finden Sie unter [Anforderungen und Überlegungen für von der Anwendung gehostete Medienbots.](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development)
 

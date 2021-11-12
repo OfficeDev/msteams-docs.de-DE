@@ -1,10 +1,10 @@
 ### YamlMime:Hub
 title: Microsoft Teams Entwicklerdokumentation
-summary: 'Erhalten Sie Dokumentation, Beispielcode, Lernprogramme und mehr, um Benutzerdefinierte Microsoft Teams-Apps zu erstellen.'
+summary: 'Hier erhalten Sie Dokumentationen, Beispielcode, Lernprogramme und mehr, um Benutzerdefinierte Microsoft Teams-Apps zu erstellen.'
 brand: teams
 metadata:
-  title: Microsoft Teams Dokumentation für Plattformentwickler
-  description: 'Die Microsoft Teams Entwicklerplattform erleichtert Entwicklern die Integration ihrer eigenen Apps und Dienste, um die Produktivität zu steigern, Entscheidungen schneller zu treffen, den Fokus zu legen, indem sie den Kontextwechsel reduziert und die Zusammenarbeit an vorhandenen Inhalten und Workflows erstellt.'
+  title: Microsoft Teams Plattform-Entwicklerdokumentation
+  description: 'Die Microsoft Teams Entwicklerplattform erleichtert Entwicklern die Integration eigener Apps und Dienste, um die Produktivität zu steigern, Entscheidungen schneller zu treffen, den Fokus zu legen, indem sie den Kontextwechsel reduziert und die Zusammenarbeit an vorhandenen Inhalten und Workflows erstellt.'
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
@@ -74,9 +74,9 @@ conceptualContent:
         - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
           itemType: overview
           text: Apps für Teams Besprechungen
-        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
+        - url: /microsoftteams/platform/task-modules-and-cards/cards-and-task-modules
           itemType: concept
-          text: Karten und Aufgabenmodule
+          text: Karten- und Aufgabenmodule
         - url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
           itemType: overview
           text: Webhooks und Connectors
@@ -96,7 +96,7 @@ conceptualContent:
           text: Manifestschema für Teams-Apps
         - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
           itemType: reference
-          text: Erstellen von Szenarien für Teams-Apps
+          text: Erstellen von Szenarien für Teams Apps
         - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
           itemType: reference
           text: Bewährte Methoden für Teams App-Szenarien
@@ -127,13 +127,13 @@ conceptualContent:
           text: Microsoft Teams-Entwicklerblog
         - url: 'https://aka.ms/microsoftteamscommunitycall'
           itemType: overview
-          text: Microsoft Teams Communityanrufe
+          text: Microsoft Teams Community-Anrufe
         - url: 'https://docs.microsoft.com/en-us/teamblog/'
           itemType: whats-new
           text: Announcements
         - url: /microsoftteams/platform/feedback
           itemType: overview
-          text: Microsoft Teams Entwickler Community und Antwort
+          text: Microsoft Teams Community und Antwort von Entwicklern
         - url: /microsoftteams/platform/resources/teams-contributor-reference
           itemType: overview
           text: Mitwirken an Microsoft Teams Dokumentation
