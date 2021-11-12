@@ -5,16 +5,16 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams veröffentlichen die AppSource-Lokalisierungssprache für Store-Veröffentlichungen
 ms.date: 05/15/2018
-ms.openlocfilehash: 50dc306a5a06dd7a73a47fbcf94a8a70aa5d6aa6
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 82174caf6154e78a3cae80640c0b9d1d7fe00a68
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887553"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949572"
 ---
 # <a name="localize-your-app"></a>Lokalisieren IhrerApp
 
-Sie müssen die folgenden Faktoren berücksichtigen, um Ihre Microsoft Teams-App zu lokalisieren:
+Berücksichtigen Sie die folgenden Faktoren, um Ihre Microsoft Teams App zu lokalisieren:
 
 1. [Lokalisieren Sie Ihren AppSource-Eintrag.](#localize-your-appsource-listing)
 1. [Lokalisieren Sie Zeichenfolgen in Ihrem App-Manifest.](#localize-strings-in-your-app-manifest) 
@@ -88,7 +88,7 @@ Sie können zusätzliche JSON-Dateien mit Übersetzungen aller benutzerorientier
 
 Der Teams Client wendet die Zeichenfolgen in der folgenden Reihenfolge an: Standardsprachenzeichenfolgen – > Sprache des Benutzers nur Zeichenfolgen – > Sprache des Benutzers + Regionszeichenfolgen des Benutzers.
 
-Sie geben beispielsweise die Standardsprache "fr" (Französisch, alle Regionen) und zusätzliche Sprachdateien für "en" (Englisch, alle Regionen) und "en-gb" (Englisch, großes Großbritannien) an. Die Sprache des Benutzers ist auf "en-gb" festgelegt. Die folgenden Änderungen erfolgen basierend auf der Sprachauswahl:
+Beispielsweise geben Sie die Standardsprache "fr" (Französisch, alle Regionen) und zusätzliche Sprachdateien für "en" (Englisch, alle Regionen) und "en-gb" (Englisch, großes Großbritannien) an. Die Sprache des Benutzers ist auf "en-gb" festgelegt. Die folgenden Änderungen erfolgen basierend auf der Sprachauswahl:
 
 1. Der Teams Client übernimmt die Zeichenfolgen "fr" und überschreibt sie mit den Zeichenfolgen "en".
 1. Überschreiben Sie die Zeichenfolgen "en" mit den Zeichenfolgen "en-gb".
@@ -157,7 +157,7 @@ Wenn Sie lokalisierte Versionen Ihrer Anwendung bereitstellen, antworten die Ben
 
 | Beispielname | Beschreibung | .NET | Node.js |
 |-------------|-------------|------|------|
-| App-Lokalisierung | Microsoft Teams App-Lokalisierung mit bot und tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
+| App-Lokalisierung | Microsoft Teams App-Lokalisierung mit bot und tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 

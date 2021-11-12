@@ -4,12 +4,12 @@ description: Beschreibt die Features in der Public Developer Preview von Microso
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams– Vorschau für Entwicklerfeatures
-ms.openlocfilehash: 756d30b0cbeb47be2b355bc9fe126e3bc39b3806
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 9337a0fbc89b02783db9253cc2975a68658b4268
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888503"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949586"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Öffentliche Entwicklervorschau für Microsoft Teams
 
@@ -28,14 +28,14 @@ Möglicherweise ist es hilfreich, App Studio zum Erstellen der Nicht-Entwicklerv
 
 Die Entwicklervorschau ist pro Client aktiviert, die Option zum Aktivieren der Entwicklervorschau wird jedoch auf Organisationsebene gesteuert. Um die Option zum Aktivieren der Entwicklervorschau für eine Einzelperson zu aktivieren, müssen Sie sicherstellen, dass diese benutzerdefinierte Apps hochladen können. Weitere Informationen finden Sie unter ["Einrichten Ihres Mandanten".](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
-Die Verwendung einer App mit Entwicklervorschaufeatures kann dazu führen, dass sich Clients, die die Entwicklervorschau nicht aktiviert haben, unerwartet verhalten. Wenn kein Eintrag für die Entwicklervorschau angezeigt wird, ist der wahrscheinlichste Grund, dass Ihre Organisation nicht für das Hochladen von Apps konfiguriert ist.
+Die Verwendung einer App, die Entwicklervorschaufeatures enthält, kann dazu führen, dass sich Clients, die die Entwicklervorschau nicht aktiviert haben, unerwartet verhalten. Wenn kein Eintrag für die Entwicklervorschau angezeigt wird, ist der wahrscheinlichste Grund, dass Ihre Organisation nicht für das Hochladen von Apps konfiguriert ist.
 
 ### <a name="on-a-desktop-or-web-client"></a>Auf einem Desktop- oder Webclient
 
 Um die öffentliche Entwicklervorschau auf einem Desktop- oder Webclient zu aktivieren, müssen Sie folgendermaßen vorgehen:
 
 1. Aktivieren des Hochladens von Apps in der Verwaltungskonsole Ihres Mandanten, wie [hier](~/concepts/build-and-test/prepare-your-o365-tenant.md)beschrieben.
-1. Klicken Sie auf Ihr Profil (entweder in der oberen rechten oder unteren linken Ecke der Teams-Schnittstelle), um das Teams Menü anzuzeigen.
+1. Klicken Sie auf Ihr Profil (entweder in der oberen rechten oder unteren linken Ecke der Teams Oberfläche), um das Teams Menü anzuzeigen.
 1. Wählen Sie "Info → Entwicklervorschau" aus.
 1. Wählen Sie **"Zur Entwicklervorschau wechseln" aus.**
 

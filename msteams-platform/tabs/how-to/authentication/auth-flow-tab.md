@@ -4,18 +4,18 @@ description: Beschreibt den Authentifizierungsfluss in Registerkarten, OAuth nac
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Registerkarten des Teams-Authentifizierungsflusses
-ms.openlocfilehash: 0b58e0182714921745fa911cc747aa1c314d3df2
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2d054ef841bf4f05be4e662d77b999c654670f45
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888447"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949649"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams Authentifizierungsfluss für Registerkarten
 
 > [!NOTE]
 > Damit die Authentifizierung für Ihre Registerkarte auf mobilen Clients funktioniert, müssen Sie sicherstellen, dass Sie mindestens 1.4.1-Version des Microsoft Teams JavaScript SDK verwenden.  
-> Teams DAS SDK startet ein separates Fenster für den Authentifizierungsfluss. Legen Sie das `SameSite` Attribut auf **"Lax"** fest. Teams Desktopclient oder ältere Versionen von Chrome oder Safari unterstützen `SameSite` keine.
+> Teams SDK startet ein separates Fenster für den Authentifizierungsfluss. Legen Sie das `SameSite` Attribut auf **"Lax"** fest. Teams Desktopclient oder ältere Versionen von Chrome oder Safari unterstützen `SameSite` keine.
 
 OAuth 2.0 ist ein offener Standard für die Authentifizierung und Autorisierung, der von Azure Active Directory (AAD) und vielen anderen Identitätsanbietern verwendet wird. Ein grundlegendes Verständnis von OAuth 2.0 ist eine Voraussetzung für die Arbeit mit der Authentifizierung in Teams. Weitere Informationen finden Sie unter ["OAuth 2 vereinfacht",](https://aaronparecki.com/oauth-2-simplified/) das einfacher zu befolgen ist als die [formale Spezifikation.](https://oauth.net/2/) Der Authentifizierungsfluss für Registerkarten und Bots unterscheidet sich, da Registerkarten Websites ähneln, sodass sie OAuth 2.0 direkt verwenden können. Bots führen einige Dinge anders aus, aber die Kernkonzepte sind identisch.
 
@@ -51,9 +51,9 @@ Beispielcode für den Vorgang der Registerkartenauthentifizierung:
 
 | **Beispielname** | **Beschreibung** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
-| Teams Registerkartenauthentifizierung | Authentifizierungsprozess für Registerkarten mit AAD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
+| Teams Registerkartenauthentifizierung | Authentifizierungsprozess für Registerkarten mit AAD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
-## <a name="more-details"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 Eine ausführliche Implementierung für die Registerkartenauthentifizierung mit AAD finden Sie unter:
 

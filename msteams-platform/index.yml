@@ -1,10 +1,10 @@
 ### YamlMime:Hub
 title: Microsoft Teams Entwicklerdokumentation
-summary: 'Hier erhalten Sie Dokumentationen, Beispielcode, Lernprogramme und mehr, um Benutzerdefinierte Microsoft Teams-Apps zu erstellen.'
+summary: 'Erhalten Sie Dokumentation, Beispielcode, Lernprogramme und mehr, um Benutzerdefinierte Microsoft Teams-Apps zu erstellen.'
 brand: teams
 metadata:
   title: Microsoft Teams Plattform-Entwicklerdokumentation
-  description: 'Die Microsoft Teams Entwicklerplattform erleichtert Entwicklern die Integration eigener Apps und Dienste, um die Produktivität zu steigern, Entscheidungen schneller zu treffen, den Fokus zu legen, indem sie den Kontextwechsel reduziert und die Zusammenarbeit an vorhandenen Inhalten und Workflows erstellt.'
+  description: 'Die Microsoft Teams Entwicklerplattform erleichtert Entwicklern die Integration ihrer eigenen Apps und Dienste, um die Produktivität zu steigern, Entscheidungen schneller zu treffen, den Fokus zu legen, indem sie den Kontextwechsel reduziert und die Zusammenarbeit an vorhandenen Inhalten und Workflows erstellt.'
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
@@ -18,7 +18,7 @@ highlightedContent:
       url: /microsoftteams/platform/whats-new
     - title: "Neu bei Teams Entwicklung? \U0001F680Beginnen Sie hier!"
       itemType: get-started
-      url: /microsoftteams/platform/overview
+      url: /microsoftteams/platform/get-started/get-started-overview
     - title: Planen Ihrer App
       itemType: overview
       url: /microsoftteams/platform/concepts/design/understand-use-cases
@@ -34,9 +34,9 @@ highlightedContent:
     - title: Veröffentlichen Ihrer App im Teams Store
       itemType: deploy
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
-    - title: Lernprogramme und Codebeispiele
+    - title: Codebeispiele
       itemType: sample
-      url: /microsoftteams/platform/get-started/code-samples
+      url: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 conceptualContent:
   title: Handbücher und Ressourcen
   items:

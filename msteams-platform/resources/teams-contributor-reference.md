@@ -5,12 +5,12 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: d9b696af2fe493c24de54afd8587f8aea70584d1
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: d6a984f4e0816cd3a2312f82f669b8299467948b
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889244"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949642"
 ---
 # <a name="contribute-to-teams-documentation"></a>Mitwirken an der Teams-Dokumentation
 
@@ -27,7 +27,7 @@ Teams Dokumentation ist Teil der technischen **Dokumentationsbibliothek von Micr
 
 > [!div class="checklist"]
 >
-> * Installation in VS Code:
+> * Installieren in VS Code:
 
    1. Wählen Sie das **Erweiterungssymbol** auf der Seitenaktivitätsleiste aus, oder verwenden Sie den Befehl **Ansicht => Erweiterungen** oder STRG+UMSCHALT+X, und suchen Sie nach **Microsoft Docs Authoring Pack.**
    1. Wählen Sie **Installieren** aus.
@@ -56,7 +56,7 @@ Wenn Sie relative Pfade verwenden und Links zu anderen Dokumentenmappen erstelle
 Weitere Informationen zu Hyperlinks und Dateipfaden finden Sie unter [Verwenden von Links in der Dokumentation.](/contribute/how-to-write-links)
 
 > [!IMPORTANT]
-> So verweisen Sie auf einen Artikel, **der Teil des** Teams Plattform-Docsets ist:<br>
+> So verweisen Sie auf einen Artikel, **der Teil des** Teams-Plattformdokuments ist:<br>
 > &emsp;&#x2714; Verwenden Sie einen relativen Pfad ohne vorangestellten Schrägstrich.<br>
 > &emsp;&#x2714; schließen Sie die Dateierweiterung Markdown ein.<br>
 >Beispiel: **übergeordnetes Verzeichnis/Verzeichnis/Pfad-zu-article.md** – > [Erstellen einer App für Microsoft Teams](../concepts/building-an-app.md) <br><br>
