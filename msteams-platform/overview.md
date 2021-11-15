@@ -6,18 +6,18 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 878b6fd22373edb8f9cbbf28c15c8d5dd10ee3e0
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: adf95bb9eca4f6cd5ac07385212b1fd388a47079
+ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888034"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "60960236"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Apps für Microsoft Teams erstellen
 
 Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse, in denen sich Menschen zunehmend sammeln, lernen und arbeiten.
 
-Mit Apps erweitern Sie Teams an Ihre Anforderungen. Erstellen Sie etwas völlig Neues für Teams oder integrieren Sie eine vorhandene App.
+Mit Apps erweitern Sie Teams entsprechend Ihren Anforderungen. Erstellen Sie etwas völlig Neues für Teams oder integrieren Sie eine vorhandene App.
 
 > [!div class="nextstepaction"]
 > [Beginnen Sie hier](get-started/get-started-overview.md)
@@ -117,7 +117,7 @@ Teams Apps sind eine Kombination aus [Funktionen.](concepts/capabilities-overvie
 
    :::column span="":::
 
-**Kommunikation mit externen Apps:** [Eingehende Webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sind eine einfache Möglichkeit, automatisch Benachrichtigungen von einer anderen App an einen Teams Kanal zu senden. Senden Sie bei [ausgehenden Webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)eine Nachricht an Ihren Webdienst mit einem @mention.
+**Kommunikation mit externen Apps:** [Eingehende Webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sind eine einfache Möglichkeit zum automatischen Senden von Benachrichtigungen von einer anderen App an einen Teams Kanal. Senden Sie bei [ausgehenden Webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)eine Nachricht an Ihren Webdienst mit einem @mention.
 
    :::column-end:::
 
@@ -208,6 +208,13 @@ Sie möchten sich für die App-Entwicklung inspirieren? Durchsuchen Sie unsere L
 
    :::column-end:::
 :::row-end:::
+
+## <a name="test-your-app-running-across-microsoft-365"></a>Testen Ihrer App, die über Microsoft 365 ausgeführt wird
+
+Mit Microsoft Teams JavaScript-Client-SDK v2 Preview können Sie eine Vorschau Ihrer Teams Apps anzeigen, die in anderen umgebungen mit hoher Nutzung Microsoft 365 ausgeführt werden.
+
+> [!div class="nextstepaction"]
+> [Erweitern Ihrer App](m365-apps/overview.md)
 
 ## <a name="see-also"></a>Siehe auch
 

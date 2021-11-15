@@ -1,25 +1,25 @@
 ---
 title: Referenz zum Öffentlichen Entwicklervorschau-Manifestschema
-description: Beispielmanifestdatei und Beschreibung aller komponenten, die für Microsoft Teams unterstützt werden
+description: Beispielmanifestdatei und Beschreibung aller komponenten, die für Microsoft Teams
 ms.topic: reference
 keywords: Teams-Manifestschema – Entwicklervorschau
 ms.localizationpriority: medium
-ms.date: 05/20/2019
-ms.openlocfilehash: f1b3a7d3d002f9aec698509b36bc72b4421eb138
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.date: 11/15/2021
+ms.openlocfilehash: a5543ce8c8e5f7d232704caa5cdb4eb8a507264a
+ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888545"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "60960222"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referenz: Öffentliches Entwicklervorschaumanifestschema für Microsoft Teams
 
-Informationen zum Aktivieren der Entwicklervorschau finden Sie in der [öffentlichen Entwicklervorschau für Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
+Informationen zum Aktivieren der Entwicklervorschau finden Sie in der [öffentlichen Entwicklervorschau für Microsoft Teams.](~/resources/dev-preview/developer-preview-intro.md)
 
 > [!NOTE]
-> Wenn Sie keine Vorschaufeatures für Entwickler verwenden, verwenden Sie stattdessen das [App-Manifest für GA-Features.](~/resources/schema/manifest-schema.md)
+> Wenn Sie keine Entwicklervorschaufeatures verwenden, z. B. [Teams persönliche Registerkarten und Messaging-Erweiterungen in Outlook und Office](../../m365-apps/overview.md)ausführen, verwenden Sie stattdessen das [App-Manifest für GA-Features.](~/resources/schema/manifest-schema.md)
 
-Das Microsoft Teams-Manifest beschreibt, wie die App in das Microsoft Teams Produkt integriert wird. Ihr Manifest muss dem schema gehosteten [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) entsprechen.
+Das Microsoft Teams-Manifest beschreibt, wie die App in die Microsoft Teams-Plattform integriert wird. Ihr Manifest muss dem schema gehosteten [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) entsprechen.
 
 ## <a name="sample-full-manifest"></a>Vollständiges Beispielmanifest
 
@@ -236,13 +236,13 @@ Das Schema definiert die folgenden Eigenschaften:
 
 *Optional, aber empfohlen* &ndash; Schnur
 
-Die https:// URL, die auf das JSON-Schema für das Manifest verweist.
+Die `https://` URL, die auf das JSON-Schema für das Manifest verweist.
 
 ## <a name="manifestversion"></a>manifestVersion
 
 **Erforderlich** &ndash; Schnur
 
-Die Version des Manifestschemas, das dieses Manifest verwendet. Es sollte "devPreview" sein.
+Die Version des Manifestschemas, das dieses Manifest verwendet. Verwenden Sie dies nur, wenn Sie eine Vorschau Teams Apps anzeigen, die `m365DevPreview` in Office und Outlook ausgeführt [werden.](../../m365-apps/overview.md) Verwenden Sie andernfalls `devPreview` alle anderen Teams Vorschaufeatures.
 
 ## <a name="version"></a>Version
 
@@ -372,10 +372,10 @@ Das Objekt ist ein Array (maximal 16 Elemente) mit allen Elementen des `object` 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`entityId`|String|64 Zeichen|✔|Ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird.|
-|`name`|String|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanalschnittstelle.|
-|`contentUrl`|Zeichenfolge|2048 Zeichen|✔|Die https:// URL, die auf die Entitäts-UI verweist, die im Teams Canvas angezeigt werden soll.|
-|`contentBotId`|   | | | Die Microsoft Teams App-ID, die für den Bot im Bot Framework-Portal angegeben wurde. |
-|`websiteUrl`|String|2048 Zeichen||Die https://-URL, die darauf zeigt, ob ein Benutzer die Anzeige in einem Browser annimmt.|
+|`name`|Zeichenfolge|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanalschnittstelle.|
+|`contentUrl`|String|2048 Zeichen|✔|Die https:// URL, die auf die Entitäts-UI verweist, die im Teams Canvas angezeigt werden soll.|
+|`contentBotId`|   | | | Die Microsoft Teams App-ID, die für den Bot im Bot Framework-Portal angegeben ist. |
+|`websiteUrl`|Zeichenfolge|2048 Zeichen||Die https:// URL, die darauf zeigt, ob sich ein Benutzer für die Anzeige in einem Browser entscheidet.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen statische Registerkarten nur den `personal` Bereich, was bedeutet, dass sie nur als Teil der persönlichen Benutzeroberfläche bereitgestellt werden können.|
 
 ## <a name="bots"></a>Bots
@@ -431,7 +431,7 @@ Das Objekt ist ein Array (maximal 1 Element) mit allen Elementen des Typs `objec
 |Name| Typ | Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`botId`|Zeichenfolge|64|✔|Die eindeutige Microsoft-App-ID für den Bot, der die Messaging-Erweiterung unterstützt, wie beim Bot Framework registriert. Dies kann durchaus mit der gesamten [App-ID](#id)übereinstimmen.|
-|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann. Der Standardwert lautet `false`.|
+|`canUpdateConfiguration`|Boolean|||Ein Wert, der angibt, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann. Der Standardwert lautet `false`.|
 |`commands`|Array des Objekts|10|✔|Array von Befehlen, die von der Messaging-Erweiterung unterstützt werden|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -444,27 +444,27 @@ Jedes Befehlselement ist ein Objekt mit der folgenden Struktur:
 |---|---|---|---|---|
 |`id`|String|64 Zeichen|✔|Die ID für den Befehl.|
 |`type`|String|64 Zeichen||Typ des Befehls. Eine von `query` oder `action` . Standard: `query`|
-|`title`|String|32 Zeichen|✔|Der benutzerfreundliche Befehlsname.|
-|`description`|String|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
-|`initialRun`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt werden soll. Standard: `false`|
-|`context`|Array von Zeichenfolgen|3||Definiert, von wo aus die Nachrichtenerweiterung aufgerufen werden kann. Eine beliebige Kombination von `compose` , `commandBox` , `message` . Der Standardwert ist `["compose", "commandBox"]`|
+|`title`|Zeichenfolge|32 Zeichen|✔|Der benutzerfreundliche Befehlsname.|
+|`description`|Zeichenfolge|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
+|`initialRun`|Boolean|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt werden soll. Standard: `false`|
+|`context`|Array von Zeichenfolgen|3||Definiert, von wo aus die Messaging-Erweiterung aufgerufen werden kann. Eine beliebige Kombination von `compose` , `commandBox` , `message` . Der Standardwert ist `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden soll.|
 |`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das vorab geladen werden soll, wenn Sie einen Messaging-Erweiterungsbefehl verwenden.|
 |`taskInfo.title`|Zeichenfolge|64||Titel des ersten Dialogfelds.|
 |`taskInfo.width`|Zeichenfolge|||Dialogbreite – entweder eine Zahl in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
 |`taskInfo.height`|Zeichenfolge|||Dialoghöhe – entweder eine Zahl in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
-|`taskInfo.url`|String|||Ursprüngliche Webansichts-URL.|
+|`taskInfo.url`|Zeichenfolge|||Ursprüngliche Webansichts-URL.|
 |`messageHandlers`|Array von Objekten|5||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind. Domänen müssen auch in aufgeführt `validDomains` werden.|
 |`messageHandlers.type`|String|||Der Typ des Nachrichtenhandlers. Muss `"link"` sein.|
 |`messageHandlers.value.domains`|Array von Zeichenfolgen|||Array von Domänen, für die sich der Linknachrichtenhandler registrieren kann.|
 |`parameters`|Array des Objekts|5|✔|Die Liste der Parameter, die der Befehl verwendet. Minimum: 1; Maximum: 5|
 |`parameter.name`|String|64 Zeichen|✔|Der Name des Parameters, wie er im Client angezeigt wird. Dies ist in der Benutzeranforderung enthalten.|
 |`parameter.title`|String|32 Zeichen|✔|Benutzerfreundlicher Titel für den Parameter.|
-|`parameter.description`|Zeichenfolge|128 Zeichen||Benutzerfreundliche Zeichenfolge, die den Zweck dieses Parameters beschreibt.|
+|`parameter.description`|String|128 Zeichen||Benutzerfreundliche Zeichenfolge, die den Zweck dieses Parameters beschreibt.|
 |`parameter.inputType`|String|128 Zeichen||Definiert den Typ des Steuerelements, das in einem Aufgabenmodul für angezeigt `fetchTask: true` wird. Einer von `text` , , , , , , `textarea` `number` `date` `time` `toggle` `choiceset` .|
 |`parameter.choices`|Array von Objekten|10||Die Auswahloptionen für die `choiceset` . Wird nur verwendet, wenn `parameter.inputType` `choiceset` .|
-|`parameter.choices.title`|String|128||Titel der Wahl.|
-|`parameter.choices.value`|Zeichenfolge|512||Value of the choice.|
+|`parameter.choices.title`|Zeichenfolge|128||Titel der Wahl.|
+|`parameter.choices.value`|String|512||Value of the choice.|
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -495,7 +495,7 @@ Gibt die systemeigenen Features auf dem Gerät eines Benutzers an, auf die Ihre 
 
 Eine Liste der gültigen Domänen, von denen die App erwartet, dass inhalte geladen werden. Domäneneinträge können Platzhalter enthalten, `*.example.com` z. B. . Dies entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com` . Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der für die Registerkartenkonfiguration verwendeten navigieren muss, muss diese Domäne hier angegeben werden.
 
-Es ist jedoch **nicht** erforderlich, die Domänen von Identitätsanbietern, die Sie unterstützen möchten, in Ihre App einzuschließen. Um sich beispielsweise mithilfe einer Google-ID zu authentifizieren, müssen Sie zu accounts.google.com umleiten, sie sollten jedoch keine accounts.google.com in `validDomains[]` einschließen.
+Es ist jedoch **nicht** erforderlich, die Domänen von Identitätsanbietern, die Sie unterstützen möchten, in Ihre App einzuschließen. Um sich beispielsweise mit einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten, sie sollten jedoch keine accounts.google.com in `validDomains[]` einschließen.
 
 > [!IMPORTANT]
 > Fügen Sie keine Domänen hinzu, die sich außerhalb Ihres Steuerelements befinden, entweder direkt oder über Platzhalter. Ist z. `yourapp.onmicrosoft.com` B. gültig, aber `*.onmicrosoft.com` nicht gültig.
@@ -511,7 +511,7 @@ Geben Sie Ihre Azure AD App-ID und Graph Informationen an, damit sich Benutzer n
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`id`|Zeichenfolge|36 Zeichen|✔|Azure AD Anwendungs-ID der App. Diese ID muss eine GUID sein.|
-|`resource`|String|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für SSO.|
+|`resource`|Zeichenfolge|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für SSO.|
 |`applicationPermissions`|Array|Maximal 100 Elemente|✔|Ressourcenberechtigungen für die Anwendung.|
 
 ## <a name="configurableproperties"></a>configurableProperties
@@ -557,8 +557,8 @@ Wenn ein Gruppeninstallationsbereich ausgewählt ist, wird die Standardfunktion 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`team`|string|||Wenn der ausgewählte Installationsbereich ausgewählt `team` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab` `bot` oder `connector` .|
-|`groupchat`|string|||Wenn der ausgewählte Installationsbereich ausgewählt `groupchat` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab` `bot` oder `connector` .|
-|`meetings`|string|||Wenn der ausgewählte Installationsbereich ausgewählt `meetings` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab` `bot` oder `connector` .|
+|`groupchat`|Zeichenfolge|||Wenn der ausgewählte Installationsbereich ausgewählt `groupchat` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab` `bot` oder `connector` .|
+|`meetings`|Zeichenfolge|||Wenn der ausgewählte Installationsbereich ausgewählt `meetings` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab` `bot` oder `connector` .|
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
 
