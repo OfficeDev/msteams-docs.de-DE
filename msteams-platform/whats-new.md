@@ -4,12 +4,12 @@ description: Beschreibt alle neuen Entwicklerfeatures in Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 'Teams: Neuigkeiten'
-ms.openlocfilehash: 370a23392c8b6233802b9faa0cc1edb9a6215e73
-ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
+ms.openlocfilehash: baca6a204c183f421479be7e69f426ef74ca901f
+ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60960160"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "61041695"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -17,6 +17,14 @@ Entdecken Sie Microsoft Teams Plattformfeatures, die allgemein verfügbar sind (
 
 > [!IMPORTANT]
 > Sie können jetzt die neuesten Teams Plattformupdates abrufen, indem Sie den [ ![ RSS-Feed-Downloadfeed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)abonnieren. Weitere Informationen finden Sie unter [Konfigurieren des RSS-Feeds.](#get-latest-updates)
+
+## <a name="latest-updates-bullhorn-icon"></a>Aktuelle Updates ![Symbol "sandhorn"](~/assets/images/bullhorn.png)
+
+| Datum | Update | Hier finden Sie  |
+| --- | --- | --- |
+| 11/15/2021 | Persönliche Registerkarten und Messaging-Erweiterungen werden in Outlook und Office ausgeführt (Vorschau) | [Erweitern Teams Apps über Microsoft 365](~/m365-apps/overview.md) |
+| 11/13/2021| Bots können aktiviert werden, um alle Kanalnachrichten mithilfe der ressourcenspezifischen Zustimmung (RSC) zu empfangen. | • Erstellen von Bots > Bot-Unterhaltungen > Nachrichten in Bot-Unterhaltungen > [Empfangen aller Kanalnachrichten mit RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Bot-Unterhaltungsübersicht](~/bots/how-to/conversations/conversation-basics.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Kanal- und Gruppenunterhaltungen](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+|
 
 ## <a name="ga-features"></a>GA-Features
 
@@ -28,49 +36,49 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 <summary><b>2021</b></summary>
 
-| **Date** | **Notizen** | **Geänderte Themen** |
+| **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
-|11/13/2021|Bots können aktiviert werden, um alle Kanalnachrichten mithilfe der ressourcenspezifischen Zustimmung (RSC) zu empfangen.|[Empfangen aller Nachrichten mit RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md) [Bot-Unterhaltungsübersicht](~/bots/how-to/conversations/conversation-basics.md)sowie [Kanal- und Gruppenunterhaltungen](~/bots/how-to/conversations/channel-and-group-conversations.md)|
-|10/28/2021 | Monetarisieren Sie Ihre Teams-App mit einem transaktionsfähigen SaaS-Angebot.| [Einschließen eines SaaS-Angebots in Ihre Teams-App](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)|
-|10/25/2021| Aktualisiertes Modul "Erste Schritte" für Microsoft Teams Entwicklerdokumentation mit neuer Struktur und Verfahren in einer schrittweisen Anleitung.| [Erste Schritte mit Ihrer ersten Teams-App](get-started/get-started-overview.md)|
-|10/21/2021| Fügen Sie eine `registerOnFocused` API für Registerkarten oder persönliche Apps hinzu. |[Hinzufügen einer `registerOnFocused` API für Registerkarten oder persönliche Apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps)|
-|10/20/2021| Die Besprechungsphase ist jetzt in ga verfügbar.|[Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
-|10/20/2021| Besprechungsdetails-API und Echtzeit-Teams Besprechungsereignisse. | [Apps für Teams-Besprechungen erstellen](~/apps-in-teams-meetings/API-references.md#meeting-details-api)|
-|10/18/2021|Registerkarten verknüpfen Verbreitung und Phasenansicht.|[Registerkartenlink- Und Phasenansicht](tabs/tabs-link-unfurling.md)|
-|10/08/2021|Neue bewährte Methoden für das Entwerfen adaptiver Karten.|[Entwerfen adaptiver Karten für Ihre Teams-App](task-modules-and-cards/cards/design-effective-cards.md)|
-|10/05/2021| Blenden Sie Teams App aus, bis der Administrator das Ausblenden der App aufheben kann.| [Ausblenden Teams App bis zur Genehmigung durch den Administrator](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)|
-|10/05/2021|Planen Sie Ihre Apps für Teams Mobile.|[Planen reaktionsfähiger Registerkarten für Teams Mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
-|10/04/2021| Das neue Entwicklerportal für Teams für die Verwaltung Ihrer Teams-Apps eingeführt.| [Entwicklerportal für Teams](concepts/build-and-test/teams-developer-portal.md)|
-|09/21/2021|Teams unterstützt AAD Objekt-ID und UPN in Benutzererwähnungen für Bots und eingehende Webhooks.|[AAD Objekt-ID und UPN in Benutzererwähnung,](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) [Karten – Übersicht](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
-|08/16/2021| Unterstützung für die Eingabeüberprüfung für adaptive Karten (v1.3 für alle Funktionen) und universelle Aktionen (v1.4 für vom Bot gesendete Karten). |[Eingabeüberprüfung,](/adaptive-cards/authoring-cards/input-validation) [Universelle Aktionen für adaptive Karten v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)|
-|08/30/2021| Die Szenenfunktion für den benutzerdefinierten Modus kombiniert Teilnehmer in einer einzelnen virtuellen Szene und platziert ihre Videostreams auf vordefinierten Arbeitsplätzen.| [Szenen des benutzerdefinierten Zusammen-Modus](~/apps-in-teams-meetings/teams-together-mode.md)|
-|08/25/2021| Schrittweise Anleitung zum Erstellen eines Teams Bots mit einmaligem Anmelden (Single Sign-On, SSO) eingeführt.| [Schritt-für-Schritt-Anleitung zum Erstellen Teams Bots mit SSO](sbs-bots-with-sso.yml)|
-|08/19/2021| Installationsupdateereignis, das beim Installieren eines Bots in einem Unterhaltungsthread empfangen wurde.| [Installationsupdateereignis](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event)|
-|08/12/2021|Erstellen sie Registerkarten mit adaptiven Karten.|[Erstellen von Registerkarten mit adaptiven Karten](tabs/how-to/build-adaptive-card-tabs.md)|
-|08/04/2021|Registerkarten haben keine Ränder mehr, die ihre Benutzererfahrung umgeben.| [Entfernen von Registerkartenrändern](resources/removing-tab-margins.md)|
-|07/08/2021|Teams Mobile fügt Unterstützung für Apps in Besprechungen hinzu. |[Erweiterbarkeit der Besprechungs-App](apps-in-teams-meetings/meeting-app-extensibility.md)|
-|06/28/2021|Integrieren sie die Funktion "Personenauswahl".|[Integration der Personenauswahlfunktion](concepts/device-capabilities/people-picker-capability.md)|  
-|06/25/2021| Schrittweise Anleitung zum Senden proaktiver Nachrichten eingeführt.| [Schrittweise Anleitung zum Senden proaktiver Nachrichten](sbs-send-proactive.yml)|
-|06/09/2021| Phasenansicht für Bilder in adaptiven Karten mit `allowExpand` Attribut.| [Phasenansicht für Bilder in adaptiven Karten](~/task-modules-and-cards/cards/cards-format.md)|
-|05/31/2021| Registerkarten für Unterhaltungen. | [Starten und Fortsetzen von Unterhaltungen zu Inhalten in Ihren Registerkarten](~/tabs/how-to/conversational-tabs.md)|
-|05/24/2021| Aktualisierte Teams App-Entwurfsrichtlinien mit mobilen Mustern.|[Entwerfen Ihrer Teams-App](~/concepts/design/design-teams-app-overview.md)|
-|05/13/2021| Informationen zu mConnect und Skooler hinzugefügt.|[Moodle-Lernverwaltungssystem](resources/moodle-overview.md)|
-|05/10/2021| App-Manifest v1.10 veröffentlicht.|[Manifestschema](resources/schema/manifest-schema.md) |
-|05/10/2021| Neue App-Anpassungsfunktion.| [Aktivieren von Organisationen zum Anpassen Ihrer App](concepts/design/enable-app-customization.md)|
-|05/07/2021| Deep-Links für Audio- und Videoanrufe im Chat. |[Deep-Links](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call)|
-|04/30/2021|Neue Anleitung zum Veröffentlichen von Apps im Teams Store.|[Veröffentlichen Ihrer App im Teams Store,](concepts/deploy-and-publish/appsource/publish.md) [Teams Store-Validierungsrichtlinien](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
-|04/29/2021 | Unterstützung für universelle Aktionen für adaptive Karten v1.4. | [Universal-Aktionen für adaptive Karten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/29/2021 | Benutzerspezifische Ansichten. | [Benutzerspezifische Ansichten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
-|04/29/2021 | Sequenzielle Workflows. | [Sequenzielle Workflows](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
-|04/29/2021 | Aktuelle Karten. | [Aktuelle Karten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
-|04/08/2021| App-Anpassungsfeature.|[Übersicht über die Entwurfsteams-App,](concepts/design/enable-app-customization.md) [App Studio-Übersicht](concepts/build-and-test/app-studio-overview.md#connectors)und [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
-|03/18/2021|Hinweis: Aktualisieren Sie auf Version 4.10 oder höher des Bot Framework SDK, da wir mit dem Veralteten Prozess für und begonnen `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` haben. | [Bot API-Änderungen für Team-/Chatmitglieder](resources/team-chat-member-api-changes.md) |
-|03/05/2021|Standardfunktion für Installationsumfang und -gruppe.| [Standardfunktion für Installationsumfang und -gruppe](concepts/deploy-and-publish/add-default-install-scope.md) |
-|03/05/2021|Ordnen Sie persönliche App-Registerkarten neu an.|[Neuanordnen der Chatregisterkarte in persönlichen Apps](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs)|
-|03/04/2021|Informationsformatierung in adaptiven Karten.| [Informationsformatierung in adaptiven Karten](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
-|02/19/2021|Standortfunktionen hinzugefügt. <br/> Informationen zu Standortfunktionen werden in der Übersicht über die Gerätefunktionen, systemeigenen Geräteberechtigungen, Integration von Medienfunktionen und QR- oder Strichcodescanner-Funktionsdateien hinzugefügt.|[Übersicht,](concepts/device-capabilities/device-capabilities-overview.md) [Geräteberechtigungen anfordern,](concepts/device-capabilities/native-device-permissions.md) [Medienfunktionen integrieren,](concepts/device-capabilities/mobile-camera-image-permissions.md) [QR- oder Strichcodescanner-Funktion integrieren,](concepts/device-capabilities/qr-barcode-scanner-capability.md) [Standortfunktionen integrieren](concepts/device-capabilities/location-capability.md) |
-|02/18/2021|Qr- oder Strichcodescannerfunktion hinzugefügt. <br/> Informationen zu QR- oder Strichcodescanner-Funktionen werden in der Übersicht über die Gerätefunktionen, systemeigenen Geräteberechtigungen und integrationsbezogenen Medienfunktionen hinzugefügt.|[Übersicht,](concepts/device-capabilities/device-capabilities-overview.md) [Geräteberechtigungen anfordern,](concepts/device-capabilities/native-device-permissions.md) [Medienfunktionen integrieren,](concepts/device-capabilities/mobile-camera-image-permissions.md) [QR- oder Strichcodescanner-Funktion integrieren](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
-|02/09/2021|Übersicht über die Gerätefunktionen hinzugefügt. <br/> Mikrofonfunktionsinformationen werden in den systemeigenen Geräteberechtigungen hinzugefügt und integrieren Medienfunktionendateien.|[Übersicht,](concepts/device-capabilities/device-capabilities-overview.md) [Geräteberechtigungen anfordern,](concepts/device-capabilities/native-device-permissions.md) [Medienfunktionen integrieren](concepts/device-capabilities/mobile-camera-image-permissions.md)|
+| 11/13/2021| Bots können aktiviert werden, um alle Kanalnachrichten mithilfe der ressourcenspezifischen Zustimmung (RSC) zu empfangen. | • Erstellen von Bots > Bot-Unterhaltungen > Nachrichten in Bot-Unterhaltungen > [Empfangen aller Kanalnachrichten mit RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Bot-Unterhaltungsübersicht](~/bots/how-to/conversations/conversation-basics.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Kanal- und Gruppenunterhaltungen](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+|10/28/2021 | Monetarisieren Sie Ihre Teams-App mit einem transaktionsfähigen SaaS-Angebot.| Verteilen Ihrer App > Veröffentlichen im Teams Store > [Einschließen eines SaaS-Angebots in Ihre Teams-App](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
+|10/25/2021| Aktualisiertes Modul "Erste Schritte" für Microsoft Teams Entwicklerdokumentation mit neuer Struktur und Verfahren in einer schrittweisen Anleitung.| Erste Schritte > [Erste Schritte mit Ihrer ersten Teams-App](get-started/get-started-overview.md) |
+|10/21/2021| Fügen Sie eine `registerOnFocused` API für Registerkarten oder persönliche Apps hinzu. | Erstellen von Registerkarten > Erstellen persönlicher Registerkarten > [Hinzufügen einer API für `registerOnFocused` Registerkarten oder persönliche Apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
+|10/20/2021| Die Besprechungsphase ist jetzt in ga verfügbar. | Erstellen von Apps für Teams Besprechungen > [Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
+|10/20/2021| Besprechungsdetails-API und Echtzeit-Teams Besprechungsereignissen. | Erstellen von Apps für Teams Besprechungen > [Erstellen von Apps für Teams Besprechungen](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
+|10/18/2021| Registerkarten verknüpfen Verbreitung und Phasenansicht. | Erstellen von Registerkarten > [Der Link "Registerkarten" entrollt und die Phasenansicht](tabs/tabs-link-unfurling.md) |
+|10/08/2021| Neue bewährte Methoden für das Entwerfen adaptiver Karten. | Entwerfen Ihrer App > UI-Komponenten > [Entwerfen adaptiver Karten für Ihre Teams-App](task-modules-and-cards/cards/design-effective-cards.md) |
+|10/05/2021| Blenden Sie Teams App aus, bis der Administrator das Ausblenden der App aufheben kann.| Entwerfen Ihrer App > [Ausblenden Teams App bis](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) zur Genehmigung durch den Administrator |
+|10/05/2021| Planen Sie Ihre Apps für Teams Mobile. | App-Grundlagen > [Planen reaktionsfähiger Registerkarten für Teams Mobilgeräte](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
+|10/04/2021| Das neue Entwicklerportal für Teams für die Verwaltung Ihrer Teams-Apps eingeführt.| Tools und SDK > [Developer Portal für Teams](concepts/build-and-test/teams-developer-portal.md) |
+|09/21/2021|Teams unterstützt AAD Objekt-ID und UPN in Benutzererwähnungen für Bots und eingehende Webhooks.| • Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [AAD Objekt-ID und UPN in der Benutzererwähnung](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention) </br> • Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Karten – Übersicht](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
+|08/16/2021| Unterstützung für die Eingabeüberprüfung für adaptive Karten (v1.3 für alle Funktionen) und universelle Aktionen (v1.4 für vom Bot gesendete Karten). | • Adaptive Karten > Erstellungskarten > [Eingabeüberprüfung](/adaptive-cards/authoring-cards/input-validation)</br> • Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > universellen Aktionen für adaptive Karten > [Universelle Aktionen für adaptive Karten v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|08/30/2021| Die Szenenfunktion für den benutzerdefinierten Modus kombiniert Teilnehmer in einer einzelnen virtuellen Szene und platziert ihre Videostreams auf vordefinierten Arbeitsplätzen.| Erstellen von Apps für Teams Besprechungen > [Szenen im benutzerdefinierten Zusammen-Modus](~/apps-in-teams-meetings/teams-together-mode.md) |
+|08/25/2021| Schrittweise Anleitung zum Erstellen eines Teams Bots mit einmaligem Anmelden (Single Sign-On, SSO) eingeführt.| Hinzufügen von Authentifizierung > Bots > [Schritt-für-Schritt-Anleitung zum Erstellen Teams Bots mit SSO](sbs-bots-with-sso.yml) |
+|08/19/2021| Installationsupdateereignis, das beim Installieren eines Bots in einem Unterhaltungsthread empfangen wurde.| Erstellen von Bots > Bot-Unterhaltungen > [Installationsupdateereignis](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
+|08/12/2021|Erstellen sie Registerkarten mit adaptiven Karten.| Erstellen von Registerkarten > [Erstellen von Registerkarten mit adaptiven Karten](tabs/how-to/build-adaptive-card-tabs.md) |
+|08/04/2021|Registerkarten haben keine Ränder mehr, die ihre Benutzererfahrung umgeben.| Erstellen von Registerkarten > [Entfernen von Registerkartenrändern](resources/removing-tab-margins.md) |
+|07/08/2021|Teams Mobile fügt Unterstützung für Apps in Besprechungen hinzu. | Erstellen von Apps für Teams Besprechungen > Erweiterbarkeit der [Besprechungs-App](apps-in-teams-meetings/meeting-app-extensibility.md) |
+|06/28/2021|Integrieren sie die Funktion "Personenauswahl". | Integration in Teams > [Integration der Personenauswahlfunktion](concepts/device-capabilities/people-picker-capability.md) |  
+|06/25/2021| Schrittweise Anleitung zum Senden proaktiver Nachrichten eingeführt. | Erstellen von Bots > Bot-Unterhaltungen > Proaktive Nachrichten > [Schrittweise Anleitung zum Senden proaktiver Nachrichten](sbs-send-proactive.yml) |
+|06/09/2021| Phasenansicht für Bilder in adaptiven Karten mit `allowExpand` Attribut.| Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Phasenansicht für Bilder in adaptiven Karten](task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards) |
+|05/31/2021| Registerkarten für Unterhaltungen. | Erstellen von Registerkarten > [Starten und Fortsetzen von Unterhaltungen zu Inhalten in Ihren Registerkarten](~/tabs/how-to/conversational-tabs.md) |
+|05/24/2021| Aktualisierte Teams App-Entwurfsrichtlinien mit mobilen Mustern. | Entwerfen Ihrer App > [Entwerfen Ihrer Teams-App](~/concepts/design/design-teams-app-overview.md) |
+|05/13/2021| Informationen zu mConnect und Skooler hinzugefügt.| Integration in Teams > Moodle LMS > [Moodle Learning Management System](resources/moodle-overview.md)|
+|05/10/2021| App-Manifest v1.10 veröffentlicht. | App-Manifest > [Manifestschema](resources/schema/manifest-schema.md) |
+|05/10/2021| Neue App-Anpassungsfunktion. | Entwerfen Ihrer App > [Aktivieren von Organisationen zum Anpassen Ihrer App](concepts/design/enable-app-customization.md) |
+|05/07/2021| Deep-Links für Audio- und Videoanrufe im Chat. | Integration in Teams > [Deep-Links](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
+|04/30/2021|Neue Anleitung zum Veröffentlichen von Apps im Teams Store. | • Veröffentlichen im Teams Store > [Veröffentlichen Ihrer App im Teams Store](concepts/deploy-and-publish/appsource/publish.md)</br> • Veröffentlichen im Teams Store > [Teams Speicherüberprüfungsrichtlinien](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
+|04/29/2021 | Unterstützung für universelle Aktionen für adaptive Karten v1.4. | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > universellen Aktionen für adaptive Karten > [Universelle Aktionen für adaptive Karten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/29/2021 | Benutzerspezifische Ansichten. | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > universellen Aktionen für adaptive Karten > [benutzerspezifische Ansichten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
+|04/29/2021 | Sequenzielle Workflows. | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > universellen Aktionen für adaptive Karten > [sequenzielle Workflows](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
+|04/29/2021 | Aktuelle Karten. | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > Universelle Aktionen für adaptive Karten > [Aktuelle Karten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
+|04/08/2021| App-Anpassungsfeature.| • Entwerfen Ihrer Apps > [– Übersicht über die Teams-App entwerfen](concepts/design/enable-app-customization.md)</br> • Tools und SDKs > [Developer Portal](concepts/build-and-test/teams-developer-portal.md) </br> • App-Manifest > Öffentliche Entwicklervorschau > [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
+|03/18/2021| Hinweis: Aktualisieren Sie auf Version 4.10 oder höher des Bot Framework SDK, da wir mit dem Veralteten Prozess für und begonnen `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` haben. | Erstellen von Bots > [Bot-API-Änderungen für Team-/Chatmitglieder](resources/team-chat-member-api-changes.md) |
+|03/05/2021|Standardfunktion für Installationsumfang und -gruppe.| Verteilen Ihrer App > [Standardinstallationsbereich und -gruppenfunktion](concepts/deploy-and-publish/add-default-install-scope.md) |
+|03/05/2021|Ordnen Sie persönliche App-Registerkarten neu an. | Erstellen von Registerkarten > [Neuanordnen der Chatregisterkarte in persönlichen Apps](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs) |
+|03/04/2021|Informationsformatierung in adaptiven Karten.| Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Informationsformatierung in adaptiven Karten](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
+|02/19/2021|Standortfunktionen hinzugefügt. <br/> Informationen zu Standortfunktionen werden in der Übersicht über die Gerätefunktionen, systemeigenen Geräteberechtigungen, Integration von Medienfunktionen und QR- oder Strichcodescanner-Funktionsdateien hinzugefügt.| • App-Grundlagen > Gerätefunktionen > [Übersicht](concepts/device-capabilities/device-capabilities-overview.md) </br> • App-Grundlagen > Gerätefunktionen > [Anfordern von Geräteberechtigungen](concepts/device-capabilities/native-device-permissions.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von Medienfunktionen](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von QR- oder Strichcodescannern](concepts/device-capabilities/qr-barcode-scanner-capability.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von Standortfunktionen](concepts/device-capabilities/location-capability.md) |
+|02/18/2021|Qr- oder Strichcodescannerfunktion hinzugefügt. <br/> Informationen zu QR- oder Strichcodescanner-Funktionen werden in der Übersicht über die Gerätefunktionen, systemeigenen Geräteberechtigungen und integrationsbezogenen Medienfunktionen hinzugefügt.| • App-Grundlagen > Gerätefunktionen > [Übersicht](concepts/device-capabilities/device-capabilities-overview.md) </br> • App-Grundlagen > Gerätefunktionen > [Anfordern von Geräteberechtigungen](concepts/device-capabilities/native-device-permissions.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von Medienfunktionen](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von QR- oder Strichcodescannern](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
+|02/09/2021|Übersicht über die Gerätefunktionen hinzugefügt. <br/> Mikrofonfunktionsinformationen werden in den systemeigenen Geräteberechtigungen hinzugefügt und integrieren Medienfunktionendateien.|• App-Grundlagen > Gerätefunktionen > [Übersicht](concepts/device-capabilities/device-capabilities-overview.md) </br> App-Grundlagen > • Gerätefunktionen > [Anfordern von Geräteberechtigungen](concepts/device-capabilities/native-device-permissions.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von Medienfunktionen](concepts/device-capabilities/mobile-camera-image-permissions.md)|
 
 <br>
 
@@ -79,10 +87,13 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 <br>
 
 <details>
+<summary><b>Ältere Updates</b></summary>
+
+<details>
   
 <summary><b>2020</b></summary>
 
-| **Date** | **Notizen** | **Geänderte Themen** |
+| **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
 |11/30/2020|Identitätsplattformintegration mit Teams Toolkit und Visual Studio Code für Registerkarten.|[Single Sign-On-Authentifizierung mit Teams Toolkit und Visual Studio Code für Registerkarten](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams App-Manifest auf Version 1.8 aktualisiert.|[Referenz: Manifestschema für Microsoft Teams](resources/schema/manifest-schema.md)|
@@ -116,7 +127,7 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
   
 <summary><b>2019</b></summary>
 
-| **Date** | **Notizen** | **Geänderte Themen** |
+| **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | Der `replyToId` Parameter in Nutzlasten, die an einen Bot gesendet werden, ist nicht mehr verschlüsselt, sodass Sie diesen Wert verwenden können, um Deeplinks zu diesen Nachrichten zu erstellen. Nachrichtennutzlasten enthalten die verschlüsselten Werte im `legacy.replyToId` Parameter.  |
 | 11/05/2019 | Einmaliges Anmelden mit dem Teams JavaScript SDK. | [Einmaliges Anmelden](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -124,7 +135,7 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 | 10/31/2019 | Neue Dokumentationsstruktur und Hauptartikelumgestaltung. Melden Sie alle inaktiven Links oder 404er, indem Sie ein GitHub Problem erstellen. | Alle! |
 | 09/13/2019 | Der Anforderungsbot wird von der aktionsbasierten Messaging-Erweiterung installiert. | [Initiieren von Aktionen mit Messaging-Erweiterungen](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
 | 08/28/2019 | Unterstützung für private Kanäle in Registerkarten und Connectors. | [Kontext für Ihre Registerkarte erhalten](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) |
-| 06/20/2019 | Teilen Sie eine externe Website von einer externen Website in einen Teams Kanal. | [Freigeben für Teams](~/share-to-teams.md) |
+| 06/20/2019 | Teilen Sie eine externe Website von einer externen Website in einem Teams Kanal. | [Freigeben für Teams](~/share-to-teams.md) |
 | 05/25/2019 | Antworten Mit Bot-Nachricht vom Aufgabenmodul. | [Antworten mit Bot-Nachricht vom Aufgabenmodul](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 05/25/2019 | Bots in Gruppenchats. | [Interagieren mit einem Bot in Einem Gruppenchat oder Kanal](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
 | 05/20/2019 | Lokalisierung des App-Manifests. | [App-Lokalisierung](~/publishing/apps-localization.md) |
@@ -146,7 +157,7 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 <summary><b>2018</b></summary>
 
-| **Date** | **Notizen** | **Geänderte Themen** |
+| **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
 | 12.11.2018 | Registerkarten im Gruppenchat sind jetzt in der veröffentlichten Version von Teams verfügbar. Im Rahmen dieser Arbeit wurde der Abschnitt "Registerkarten" aus Gründen der Übersichtlichkeit überarbeitet.| [Konfigurierbare Registerkarten](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | Erste Schritte für Node JS und .NET/C# wurden aktualisiert, um App Studio in Teams zu verwenden, und ein neuer Abschnitt zum Hosten von Node-basierten Teams-Apps in Azure wurde hinzugefügt. | [Erste Schritte mit der Microsoft Teams-Plattform mit C#/.NET und App Studio,](~/get-started/get-started-dotnet-app-studio.md) [erste Schritte mit der Microsoft Teams-Plattform mit Node JS und App Studio,](~/get-started/get-started-nodejs-app-studio.md) [Hosten Ihrer Node Teams-App in Azure](~/get-started/get-started-nodejs-in-azure.md)|
@@ -160,7 +171,7 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 | 08/10/2018 | Clientunterstützung für DevTools.| [DevTools für den Microsoft Teams-Desktopclient](~/resources/dev-preview/developer-preview-tools.md)|
 | 08/08/2018 | Messaging-Erweiterungen unterstützen jetzt mehrere Befehle. | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
 | 08/07/2018 | Die Inlinekonfiguration wird jetzt in Connectors unterstützt. Die Connectors-Dokumentation wurde ebenfalls überarbeitet und aus Gründen der Übersichtlichkeit erweitert.| [Connectors](~/concepts/connectors/connectors.md)|
-| 08/06/2018 | Ihr Bot kann jetzt Dateien senden und empfangen.| [Senden und Empfangen von Dateien über Ihren Bot](~/bots/how-to/bots-filesv4.md)|
+| 08/06/2018 | Ihr Bot kann jetzt Dateien senden und empfangen. | [Senden und Empfangen von Dateien über Ihren Bot](~/bots/how-to/bots-filesv4.md)|
 | 07/23/2018 | Informationen zur App-Neuzertifizierung wurden dem Abschnitt "Veröffentlichen" hinzugefügt. |[Manifestberechtigungen](resources/schema/manifest-schema.md#permissions)|
 | 07/16/2018 | Der Registerkartenkonfigurationsseite wurde mehr Speicherplatz zugewiesen. | [Die Registerkartenkonfigurationsseite ist wesentlich höher](tabs/design/tabs.md)|
 | 07/12/2018 | Informationen zum Gastzugriff. | [Gastzugriff in Microsoft Teams](/microsoftteams/guest-access#guest-access-overview)|
@@ -173,25 +184,26 @@ Microsoft Teams Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 | 04/02/2018 | Verwenden von Bots zum Senden von Benachrichtigungen für Ihre App. |[Reine Benachrichtigungsbots](~/concepts/bots/bots-notification-only.md)|
 | 03/27/2018 | Erweiterte Dokumentation für proaktives Messaging. |[Beginn einer Unterhaltung](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
 | 03/15/2018 | Umgestaltete Dokumentation für Karten. |[Karten,](~/concepts/cards/cards.md) [Kartenaktionen,](~/concepts/cards/cards-actions.md) [Kartenformatierung,](~/concepts/cards/cards-format.md) [Kartenreferenz](~/concepts/cards/cards-reference.md)|
-| 03/03/2018 | Dokumentation für Teams App Studio hinzugefügt. |[Schnelles Entwickeln](~/get-started/get-started-app-studio.md)von Apps mit Teams App Studio [mithilfe der Steuerelementbibliothek in App Studio](~/get-started/app-studio-component-library.md)|
+| 03/03/2018 | Dokumentation für Teams App Studio hinzugefügt. |[Schnelles Entwickeln](~/get-started/get-started-app-studio.md)von Apps mit Teams App Studio [unter Verwendung der Steuerelementbibliothek in App Studio](~/get-started/app-studio-component-library.md)|
 | 02/27/2018 | Beispielcode zum Veranschaulichen der AsTeamsChannelAccounts()-Methode hinzugefügt. |[Kontext für Ihren Bot erhalten](~/concepts/bots/bots-context.md)|
 | 02/05/2018 | Themen für die ersten Schritte mit C# hinzugefügt. |[Erste Schritte mit der Microsoft Teams-Plattform mit C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
 
 <br>
 
 </details>
+</details>
 
 ## <a name="developer-preview"></a>Developer Preview
 
 Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff auf nicht freigegebene Teams Plattformfeatures bietet.  
 
-| **Date** | **Notizen** | **Geänderte Themen** |
+| **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
-|11/15/2021|Persönliche Registerkarten und Messaging-Erweiterungen werden in Outlook und Office ausgeführt|[Erweitern Teams Apps über Microsoft 365](m365-apps/overview.md)
-|10/28/2021|Bots können aktiviert werden, um alle Kanalnachrichten mithilfe der ressourcenspezifischen Zustimmung (RSC) zu empfangen.|[Empfangen aller Nachrichten mit RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md) [Bot-Unterhaltungsübersicht,](~/bots/how-to/conversations/conversation-basics.md) [Kanal- und Gruppenunterhaltungen](~/bots/how-to/conversations/channel-and-group-conversations.md)und [Entwicklervorschau-Manifestschema](~/resources/schema/manifest-schema-dev-preview.md)|
-|10/19/2021|Geräteberechtigungen für den Browser.| [Geräteberechtigungen für den Browser](concepts/device-capabilities/browser-device-permissions.md)|
-|06/21/2021|Deinstallationsverhalten für persönliche Apps mit Bot.| [Deinstallieren von Verhaltensupdates in persönlichen Apps mit Bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
-|06/16/2021| Ressourcenspezifische Zustimmung für Chats.|[Ressourcenspezifische Zustimmung,](graph-api/rsc/resource-specific-consent.md) [ressourcenspezifische Zustimmungsberechtigungen in Teams testen](graph-api/rsc/test-resource-specific-consent.md)|
+| 11/15/2021 | Persönliche Registerkarten und Messaging-Erweiterungen werden in Outlook und Office ausgeführt | [Erweitern Teams Apps über Microsoft 365](~/m365-apps/overview.md) |
+|10/28/2021|Bots können aktiviert werden, um alle Kanalnachrichten mithilfe der ressourcenspezifischen Zustimmung (RSC) zu empfangen.| • Erstellen von Bots > Bot-Unterhaltungen > Nachrichten in Bot-Unterhaltungen > [Empfangen aller Nachrichten mit RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Bot-Unterhaltungsübersicht](~/bots/how-to/conversations/conversation-basics.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Kanal- und Gruppenunterhaltungen](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • App-Manifest > Öffentliche Entwicklervorschau > [Entwicklervorschau-Manifestschema](~/resources/schema/manifest-schema-dev-preview.md) |
+|10/19/2021|Geräteberechtigungen für den Browser.| App-Grundlagen > Gerätefunktionen > [Geräteberechtigungen für den Browser](concepts/device-capabilities/browser-device-permissions.md) |
+|06/21/2021|Deinstallationsverhalten für persönliche Apps mit Bot.| Erstellen von Bots > Bot-Unterhaltungen > [Deinstallieren von Verhaltensupdates in persönlichen Apps mit Bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
+|06/16/2021| Ressourcenspezifische Zustimmung für Chats.| • Nutzen Teams Daten mit der [ressourcenspezifischen Zustimmung](graph-api/rsc/resource-specific-consent.md) von Microsoft Graph > </br> • Testen Ihrer App > Microsoft Graph > [Testen von ressourcenspezifischen Zustimmungsberechtigungen in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
 Weitere Informationen finden Sie in der [öffentlichen Entwicklervorschau für Teams.](~/resources/dev-preview/developer-preview-intro.md)
 
@@ -207,7 +219,7 @@ Wir empfehlen Teams Entwicklern, Fragen zu stellen, Fehler zu beheben, Featurean
 
 Sie können die neuesten Teams Plattformupdates abrufen, indem Sie den [RSS-Feed](https://aka.ms/TeamsPlatformUpdates)konfigurieren.
 
-**So konfigurieren Sie RSS-Feed**
+### <a name="to-configure-rss-feed"></a>So konfigurieren Sie RSS-Feed
 
 1. Öffnen Sie Microsoft Teams.
 1. Wählen Sie im linken Bereich **Teams** aus.
@@ -216,6 +228,6 @@ Sie können die neuesten Teams Plattformupdates abrufen, indem Sie den [RSS-Feed
 1. Suchen Sie im daraufhin angezeigten Dialogfeld **Connectors** nach **RSS.**
 1. Wählen Sie **"Konfigurieren" aus.**
 1. Geben Sie einen Namen in **der Eingabe eines Namens für Ihre RSS-Verbindung ein.**
-1. Geben Sie **https://aka.ms/TeamsPlatformUpdates** die **Adresse für RSS-Feed** ein.
+1. Geben Sie **<https://aka.ms/TeamsPlatformUpdates>** die **Adresse für RSS-Feed** ein.
 1. Wählen Sie die Häufigkeit des Feeds aus der Dropdownliste für **die Digesthäufigkeit** aus.
 1. Wählen Sie **Speichern**.

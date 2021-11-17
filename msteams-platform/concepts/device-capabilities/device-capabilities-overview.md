@@ -6,18 +6,18 @@ ms.author: surbhigupta
 keywords: Kamerabild Medienmikrofon Mikrofon QR Code Qrcode Barcode Barcode Scan Location Map Capabilities native Geräteberechtigungen
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 51f09880d638e1da48233aa2b6ff396f9908fa23
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: d51b9532822a6cb9df2f69975722d16da6ee2531
+ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889139"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "61041713"
 ---
 # <a name="device-capabilities"></a>Gerätefunktionen
 
-Microsoft Teams Plattform verbessert die Entwicklerfunktionen kontinuierlich, die sich an den integrierten Erfahrungen von Erstanbietern orientieren. Die erweiterte Teams-Plattform ermöglicht Partnern die Integration von Gerätefunktionen wie Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort in ihre Web-Apps. Diese Integration reduziert die Barriere für die App-Entwicklung, beschleunigt den Entwicklungszyklus und erstellt neue Szenarien oder Anwendungsfälle für die Entwicklercommunity.
+Microsoft Teams Plattform verbessert kontinuierlich die Entwicklerfunktionen, die sich an den integrierten Erfahrungen von Erstanbietern orientieren. Die erweiterte Teams-Plattform ermöglicht Partnern die Integration von Gerätefunktionen wie Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort in ihre Web-Apps. Diese Integration reduziert die Barriere für die App-Entwicklung, beschleunigt den Entwicklungszyklus und erstellt neue Szenarien oder Anwendungsfälle für die Entwicklercommunity.
 
-Geräteberechtigungen unterscheiden sich im Browser. Weitere Informationen finden Sie unter [Berechtigungen für Browsergeräte.](browser-device-permissions.md)
+Geräteberechtigungen unterscheiden sich im Browser. Bisher wurde im Browser behandelt, wie Zugriffsberechtigungen erteilt werden, und jetzt werden diese Berechtigungen in Microsoft Teams behandelt. Weitere Informationen finden Sie unter [Berechtigungen für Browsergeräte.](browser-device-permissions.md)
 
 ## <a name="native-device-capabilities"></a>Systemeigene Gerätefunktionen
 
@@ -27,13 +27,13 @@ Ein Mobilgerät oder Desktop verfügt über integrierte Geräte, z. B. Kamera un
     * Mikrofon
     * Katalog
     * QR- oder Strichcodescanner
-* Speicherort
+* Standort
 
 Nachdem Sie Zugriff auf die Gerätefunktionen erhalten haben, können Sie sie in die Teams-Plattform integrieren, um die Zusammenarbeit zu verbessern. 
 
 ## <a name="request-device-permissions"></a>Geräteberechtigungen anfordern
 
-Verwenden Sie die in [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) vorhandenen Tools, um die erforderlichen [Berechtigungen](native-device-permissions.md) für den Zugriff auf die systemeigenen Gerätefunktionen anzufordern. Während der Zugriff auf diese Funktionen in modernen Webbrowsern standard ist, müssen Sie Teams über die Funktionen informieren, die Sie verwenden, indem Sie Ihr App-Manifest aktualisieren. Mit diesem Update können Sie Berechtigungen anfordern, während Ihre App auf Teams mobilen Clients oder Desktopclients ausgeführt wird.
+Verwenden Sie die in [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) vorhandenen Tools, um die erforderlichen [Berechtigungen](native-device-permissions.md) für den Zugriff auf die systemeigenen Gerätefunktionen anzufordern. Während der Zugriff auf diese Funktionen in modernen Webbrowsern standard ist, müssen Sie Teams über die Funktionen informieren, die Sie verwenden, indem Sie Ihr App-Manifest aktualisieren. Mit diesem Update können Sie Berechtigungen anfordern, während Ihre App auf Teams mobilen oder Desktopclients ausgeführt wird.
  
  ## <a name="integrate-device-capabilities"></a>Integrieren von Gerätefunktionen
 
@@ -44,4 +44,4 @@ Verwenden Sie nach dem Zugriff auf Gerätefunktionen Teams Medienfunktionen-APIs
 * Aufzeichnen von Audiodaten über das Mikrofon.
 * Freigeben des Standorts mithilfe der [Standortauswahl.](location-capability.md)
 
-Darüber hinaus können Sie das steuerelement Teams systemeigenen [Personenauswahl](people-picker-capability.md) integrieren, mit dem Benutzer Personen in der Web-App-Oberfläche suchen und auswählen können.
+Darüber hinaus können Sie das Teams Systemeigene [Personenauswahl-Steuerelement](people-picker-capability.md) integrieren, mit dem Benutzer Personen in der Web-App-Oberfläche suchen und auswählen können.
