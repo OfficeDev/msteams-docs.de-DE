@@ -1,17 +1,17 @@
 ---
 title: Entwerfen Ihrer Besprechungserweiterung
 author: heath-hamilton
-description: Erfahren Sie, wie Sie Apps in Teams Besprechungen entwerfen und das Microsoft Teams UI Kit, die Registerkarte für Besprechungen und Anwendungsfälle, das reaktionsfähige Verhalten und die freigegebene Besprechungsphase sowie das Design und die Navigation abrufen.
+description: Erfahren Sie, wie Sie Apps in Teams Besprechungen entwerfen und das Microsoft Teams UI Kit, die Registerkarte für Besprechungen und Anwendungsfälle, das reaktionsfähige Verhalten und die gemeinsame Besprechungsphase sowie das Design und die Navigation abrufen.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: UI-Kit-Vorlage in besprechungsbasiertem reaktionsfähigem Verhalten – freigegebene Besprechungsphase
-ms.openlocfilehash: 39d0ef00d6a012726f2a3645f3d8e2bf00ebaf33
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+keywords: UI-Kit-Vorlage für reaktionsfähiges Verhalten in Besprechungen – freigegebene Besprechungsphase
+ms.openlocfilehash: d66dc257ae26a17519468cf11d1d0b5593ba9d33
+ms.sourcegitcommit: 3dd69ae18bca8dd2e0666d09746a4012cd8c8e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887845"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61051196"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen ihrer Microsoft Teams Besprechungserweiterung
 
@@ -126,7 +126,7 @@ Beachten Sie Folgendes, wenn Sie den Bildlauf zulassen:
 
 ### <a name="navigation"></a>Navigation
 
-Für Szenarien mit Navigationsebenen oder umfangreichen Inhalten wird empfohlen, Benutzern das Navigieren zu einer sekundären Ebene zu gestatten. Benutzer müssen in der Lage sein, zur vorherigen Ebene zurückzukehren.
+Für Szenarien mit Navigationsebenen oder umfangreichen Inhalten wird empfohlen, Dass Benutzer zu einer sekundären Ebene navigieren können. Benutzer müssen in der Lage sein, zur vorherigen Ebene zurückzukehren.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="Beispiel zeigt die Navigation in Besprechungen." border="false":::
 
@@ -192,7 +192,7 @@ Die freigegebene Besprechungsphase hilft Besprechungsteilnehmern bei der Interak
 Für die Besprechungsphase freigegebene Apps belegen den gleichen Platz wie ein freigegebener Bildschirm. Die Phase wird für alle Besprechungsteilnehmer neu ausgerichtet.
 
 > [!NOTE]
-> Alle Benutzer in der Besprechung können die App sehen, wenn sie vom Desktop freigegeben werden. Die Funktion zum Freigeben einer App für die Bereitstellung über mobilgeräte ist derzeit jedoch nicht verfügbar.
+> Alle Benutzer in der Besprechung können die App sehen, wenn sie vom Desktop freigegeben werden. Derzeit können mobile Benutzer App-Inhalte nicht für die Besprechungsphase freigeben.
  
 ### <a name="use-cases"></a>Anwendungsfälle
 
@@ -438,7 +438,7 @@ Besprechungsdialogfelder sind für kurze Interaktionen vorgesehen.
 
 #### <a name="do-focus-on-dark-theme"></a>Do: Fokus auf dunklem Design
 
-Teams Besprechungen sind für dunkles Design optimiert, um visuelles und kognitives Rauschen zu reduzieren, damit sich Benutzer auf die Diskussion und freigegebene Inhalte konzentrieren können. Beachten Sie, dass bestimmte Arten von Apps (z. B. Whiteboarding und Dokumentbearbeitung) keinen dunklen Zeichenbereich benötigen.
+Teams Besprechungen sind für dunkles Design optimiert, um visuelles und kognitives Rauschen zu reduzieren, damit sich Benutzer auf die Diskussion und die freigegebenen Inhalte konzentrieren können. Beachten Sie, dass bestimmte Arten von Apps (z. B. Whiteboarding und Dokumentbearbeitung) keinen dunklen Zeichenbereich benötigen.
 
    :::column-end:::
    :::column span="":::
@@ -479,7 +479,7 @@ Das Bereitstellen einer Option zum Schließen von Besprechungsregisterkarteninha
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Beispiel für modale Elemente (oder Aufgabenmodule) auf einer Besprechungsregisterkarte." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Beispiel für modale Elemente (oder Aufgabenmodule) innerhalb einer Besprechungsregisterkarte." border="false":::
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>Vorsicht: Vermeiden Sie modale Elemente auf der Registerkarte "Besprechung".
 
@@ -504,7 +504,7 @@ App-Inhalte sollten in kleineren Fenstern dynamisch angepasst und verkleinert we
 
 #### <a name="dont-crop-or-clip-primary-ui-components"></a>Nicht empfohlen: Zuschneiden oder Beschneiden der primären UI-Komponenten
 
-Die unverankerte Navigation und Steuerelemente außerhalb des Bildschirms und das Suchen eines Bildlaufs können für Benutzer verwirrend sein. Ihre App-Inhalte sollten nicht horizontal scrollen, wenn sie nicht in den iframe passen können.
+Die unverankerte Navigation und Steuerelemente außerhalb des Bildschirms und die Notwendigkeit, einen Bildlauf zu finden, können für Benutzer verwirrend sein. Ihre App-Inhalte sollten nicht horizontal scrollen, wenn sie nicht in den iframe passen können.
 
    :::column-end:::
 :::row-end:::
