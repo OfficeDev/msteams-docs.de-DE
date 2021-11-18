@@ -3,12 +3,12 @@ title: Szenen im benutzerdefinierten Modus "Zusammen"
 description: Arbeiten mit benutzerdefinierten Szenen im Zusammen-Modus
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: ad33262e5e836badcaf3135138770a241f51f9c6
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: 3820a711dfa759e3ad9429efd6b848cbe47e4623
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912241"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075458"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Benutzerdefinierte Zusammen-Modus-Szenen
 
@@ -17,8 +17,6 @@ Szenen im benutzerdefinierten Zusammen-Modus in Microsoft Teams eine immersive u
 * Bringen Sie Personen zusammen und ermutigen Sie sie, ihr Video zu aktivieren. 
 * Kombinieren Sie Teilnehmer digital in einer einzelnen virtuellen Szene. 
 * Platzieren Sie die Videostreams der Teilnehmer in vordefinierten Arbeitsplätzen, die vom Szenenersteller entworfen und behoben wurden.
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
 In szenen des benutzerdefinierten Zusammen-Modus ist die Szene ein Artefakt. Die Szene wird vom Szenenentwickler mithilfe des Microsoft Scene Studio erstellt. In einer erzwungenen Szeneneinstellung verfügen Die Teilnehmer über Arbeitsplätze mit Videostreams. Die Videos werden auf diesen Arbeitsplätzen gerendert. Nur Szenen-Apps werden empfohlen, da die Benutzeroberfläche für solche Apps klar ist.
 
@@ -52,7 +50,7 @@ Berücksichtigen Sie die folgenden Methoden für die Erstellung von Szenen:
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>Erstellen einer Szene mithilfe des Szenenstudios
 
-Microsoft verfügt über ein Szenenstudio, mit dem Sie Szenen erstellen können. Es ist im [Szenen-Editor](https://dev.teams.microsoft.com/scenes)– Teams Entwicklerportal verfügbar. Dieses Dokument verweist auf Scene Studio im Microsoft Teams Entwicklerportal. Die Benutzeroberfläche und Funktionen sind im App Studio Scene Designer identisch.
+Microsoft verfügt über ein Szenenstudio, mit dem Sie Szenen erstellen können. Es ist im [Szenen-Editor verfügbar – Teams Entwicklerportal.](https://dev.teams.microsoft.com/scenes) Dieses Dokument verweist auf Scene Studio im Microsoft Teams Entwicklerportal. Die Benutzeroberfläche und Funktionen sind im App Studio Scene Designer identisch.
 
 Eine Szene im Kontext des Szenenstudios ist ein Artefakt, das die folgenden Elemente enthält:
 
@@ -72,7 +70,7 @@ Die folgende Abbildung zeigt jeden Platz, der als Avatar zum Erstellen der Szene
 
 1. Wechseln Sie zum [Szenen-Editor – Teams Entwicklerportal.](https://dev.teams.microsoft.com/scenes)
 
-    Alternativ können Sie zum Öffnen des Szenenstudios zur Startseite des [Teams Entwicklerportals](https://dev.teams.microsoft.com/home)wechseln:
+    Alternativ können Sie zum Öffnen von Scene Studio zur Startseite des [Teams Entwicklerportals](https://dev.teams.microsoft.com/home)wechseln:
     * Wählen Sie **"Benutzerdefinierte Szenen für Besprechungen erstellen"** aus.
     * Wählen Sie im linken Abschnitt die Option **"Extras"** und dann im Abschnitt **"Extras"** die Option **"Szenenstudio"** aus.
 
@@ -108,7 +106,7 @@ Die folgende Abbildung zeigt jeden Platz, der als Avatar zum Erstellen der Szene
 
     ![Spot zuweisen](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. Wählen Sie **"Speichern"** und **dann "Anzeigen" in Teams** aus, um Ihre Szene in Microsoft Teams schnell zu testen.
+1. Wählen Sie **"Speichern"** und **dann "Anzeigen" in Teams** aus, um Die Szene in Microsoft Teams schnell zu testen.
 
     * Wenn Sie **"Ansicht" in Teams** auswählen, wird automatisch eine Microsoft Teams App erstellt, die auf der Seite **"Apps"** im Teams Entwicklerportal angezeigt werden kann.
     * Wenn Sie **"Ansicht" in Teams** auswählen, wird automatisch ein App-Paket erstellt, das "appmanifest.json" hinter der Szene ist. Sie können über das Menü zu  **Apps** wechseln und auf das automatisch erstellte App-Paket zugreifen.
@@ -125,9 +123,9 @@ Die folgende Abbildung zeigt jeden Platz, der als Avatar zum Erstellen der Szene
 
 Optional können Sie im Dropdownmenü **"Speichern"** die Option **"Freigeben"** auswählen. Sie können einen freigabefähigen Link erstellen, um Ihre Szenen für andere Benutzer zu verteilen. Der Benutzer kann den Link öffnen, um die Szene zu installieren und damit zu beginnen.
 
-Nach der Vorschau wird die Szene als App an Teams ausgeliefert, indem die Schritte für die App-Übermittlung ausgeführt werden. Für diesen Schritt ist das App-Paket erforderlich. Das App-Paket unterscheidet sich vom Szenenpaket für die Szene, die entworfen wurde. Das automatisch erstellte App-Paket befindet sich im Abschnitt **"Apps"** im Teams Developer Center.
+Nach der Vorschau wird die Szene als App an Teams ausgeliefert, indem die Schritte für die App-Übermittlung ausgeführt werden. Dieser Schritt erfordert das App-Paket. Das App-Paket unterscheidet sich vom Szenenpaket für die Szene, die entworfen wurde. Das automatisch erstellte App-Paket befindet sich im Abschnitt **"Apps"** im Teams Developer Center.
 
-Optional wird das Szenenpaket abgerufen, indem im Dropdownmenü **"Speichern"** die Option **"Exportieren"** ausgewählt wird. Eine .zip-Datei, d. h. das Szenenpaket, wird heruntergeladen. Das Szenenpaket enthält "scene.json" und die PNG-Objekte, die zum Erstellen einer Szene verwendet werden. Das Szenenpaket wird auf andere Änderungen überprüft:
+Optional wird das Szenenpaket abgerufen, indem im Dropdownmenü **"Speichern"** die Option **"Exportieren"** ausgewählt wird. Eine .zipDatei, bei der es sich um das Szenenpaket handelt, wird heruntergeladen. Das Szenenpaket enthält "scene.json" und die PNG-Objekte, die zum Erstellen einer Szene verwendet werden. Das Szenenpaket wird auf andere Änderungen überprüft:
 
 ![Exportieren einer Szene](../assets/images/apps-in-meetings/build-a-scene.png)
 
@@ -204,7 +202,7 @@ Der folgende Code ist das Scene.json-Beispiel:
 }
 ```
 
-Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Die Szenen-JSON enthält auch Informationen zu allen Ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Arbeitsplatz eine Platz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Reihenfolge der Auslastung wird automatisch generiert und gemäß ihrer Präferenz geändert. Die Nummer der Reihenfolge entspricht der Reihenfolge der Personen, die dem Anruf beitreten.
+Jede Szene hat eine eindeutige ID und einen eindeutigen Namen. Die Szenen-JSON enthält auch Informationen zu allen Ressourcen, die für die Szene verwendet werden. Jede Ressource enthält einen Dateinamen, eine Breite, eine Höhe und eine Position auf der X- und Y-Achse. Entsprechend enthält jeder Arbeitsplatz eine Platz-ID, Breite, Höhe und Position auf der X- und Y-Achse. Die Reihenfolge der Auslastung wird automatisch generiert und gemäß Der Einstellung geändert. Die Nummer der Reihenfolge entspricht der Reihenfolge der Personen, die dem Anruf beitreten.
 
 Dies stellt die Reihenfolge dar, in `zOrder` der Bilder und Arbeitsplätze entlang der Z-Achse platziert werden. Es gibt bei Bedarf ein Gefühl von Tiefe oder Partition. Sehen Sie sich das Beispiel für schrittweise erste Schritte an. Im Beispiel wird die `zOrder` .
 
@@ -236,12 +234,12 @@ Erhalten Sie weitere Informationen dazu, wie sich ein Benutzer mit Szenen in ben
 
 ## <a name="open-a-custom-together-mode-scenes-scene-package"></a>Öffnen eines benutzerdefinierten Szenenpakets für den Gemeinsamen Modus
 
-Sie können das Szenenpaket, das eine aus dem Szenenstudio abgerufene .zip datei ist, für andere Ersteller freigeben, um die Szene weiter zu verbessern. Die Funktion zum **Importieren einer Szene** hilft beim Entpacken eines Szenenpakets, damit der Ersteller die Szene weiter erstellen kann.
+Sie können das Szenenpaket, das eine aus dem Szenenstudio abgerufene .zip-Datei ist, für andere Ersteller freigeben, um die Szene weiter zu verbessern. Die Funktion zum **Importieren einer Szene** hilft beim Entpacken eines Szenenpakets, damit der Ersteller die Szene weiter erstellen kann.
 
 ![Szenen-ZIP-Datei](../assets/images/apps-in-meetings/scene-zip-file.png)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Apps für Teams Besprechungen](teams-apps-in-meetings.md)
 * [Bots für Anrufe und Besprechungen ](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
-* [Echtzeit-Medienanrufe und -besprechungen mit Microsoft Teams](~/bots/calls-and-meetings/real-time-media-concepts.md)
+* [Echtzeit-Medienanrufe und Besprechungen mit Microsoft Teams](~/bots/calls-and-meetings/real-time-media-concepts.md)

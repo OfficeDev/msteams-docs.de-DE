@@ -4,12 +4,12 @@ author: surbhigupta
 description: Erfahren Sie mehr über den Besprechungslebenszyklus, die Erstellung der Besprechungserfahrung des Benutzers während des gesamten Besprechungslebenszyklus in desktop- und mobilen Umgebungen, Teilnehmerrollen und Benutzertypen. Darüber hinaus erfahren Sie mehr über die Integration von Bots und Messaging-Erweiterungen in den Besprechungslebenszyklus.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 083db357450c2ad715f1e4a0e9580a6c5cbd97a9
-ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+ms.openlocfilehash: 51e04b9a43cab20b6854ae9dc8a08b174f36add7
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "61041706"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075465"
 ---
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 
@@ -18,8 +18,6 @@ Teams einheitlichen Besprechungs-Apps basieren auf den folgenden Konzepten:
 * Der Besprechungslebenszyklus hat verschiedene Phasen: vor der Besprechung, in der Besprechung und nach der Besprechung.  
 * Es gibt drei unterschiedliche Teilnehmerrollen in einer Besprechung: Organisator, Referent und Teilnehmer. Weitere Informationen finden Sie [unter Rollen in einer Teams Besprechung.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)  
 * Es gibt verschiedene [Benutzertypen](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) in einer Besprechung: Mandanten-, [Gast-,](/microsoftteams/guest-access) [Verbund-](/microsoftteams/manage-external-access)und anonyme Benutzer.
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/rrNpFJbxqrg]
 
 Dieser Artikel behandelt die Informationen zum Besprechungslebenszyklus und zum Integrieren von Registerkarten, Bots und Messaging-Erweiterungen. Es identifiziert verschiedene Teilnehmerrollen und Benutzertypen.
 
@@ -99,7 +97,7 @@ Das Dialogfeld in der Besprechung wird angezeigt, in dem Sie Ihre Antwort als Fe
 ---
 
 > [!NOTE]
-> * Apps können das Teams Client SDK nutzen, um auf das Client-SDK `meetingId` `userMri` zuzugreifen und `frameContext` die Oberfläche entsprechend zu rendern.
+> * Apps können das Teams Client SDK nutzen, um auf das Client-SDK zuzugreifen `meetingId` und die Oberfläche entsprechend zu `userMri` `frameContext` rendern.
 > * Wenn das Dialogfeld in der Besprechung erfolgreich gerendert wird, wird eine Benachrichtigung gesendet, dass die Ergebnisse erfolgreich heruntergeladen wurden.
 > * Ihr App-Manifest gibt die Stellen an, an denen die Apps angezeigt werden sollen. Dies kann durch Angeben des Kontextfelds im Manifest erfolgen. Sie ist auch Teil einer Gemeinsamen Besprechungsphase, die den angegebenen [Entwurfsrichtlinien](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md)unterliegt.
 
@@ -150,7 +148,7 @@ Bots, die im Gruppenchatbereich aktiviert sind, funktionieren in Besprechungen. 
 
 Um die Messaging-Erweiterung zu implementieren, beginnen Sie mit dem [Erstellen einer Messaging-Erweiterung,](../messaging-extensions/how-to/create-messaging-extension.md) und fahren Sie dann mit dem Erstellen von [Apps für Teams Besprechungen](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)fort.
 
-Die Teams einheitlichen Besprechungs-Apps ermöglichen es Ihnen, Ihre App basierend auf den Teilnehmerrollen in einer Besprechung zu entwerfen.
+Mit den Teams einheitlichen Besprechungs-Apps können Sie Ihre App basierend auf den Teilnehmerrollen in einer Besprechung entwerfen.
 
 ## <a name="participant-roles-in-a-meeting"></a>Teilnehmerrollen in einer Besprechung
 
@@ -158,7 +156,7 @@ Die Teams einheitlichen Besprechungs-Apps ermöglichen es Ihnen, Ihre App basier
 
 Die Standardeinstellungen für Teilnehmer werden vom IT-Administrator einer Organisation bestimmt. Es folgen die Teilnehmerrollen in einer Besprechung:
 
-* **Organisator:** Der Organisator plant eine Besprechung, legt die Besprechungsoptionen fest, weist Besprechungsrollen zu und startet die Besprechung. Die Benutzer mit Microsoft 365 Konto und Teams-Lizenz können nur die Organisatoren sein und die Teilnehmerberechtigungen steuern. Ein Besprechungsorganisator kann die Einstellungen für eine bestimmte Besprechung ändern. Organisatoren können diese Änderungen auf der **Besprechungsoptionen-Webseite** vornehmen.
+* **Organisator:** Der Organisator plant eine Besprechung, legt die Besprechungsoptionen fest, weist Besprechungsrollen zu und startet die Besprechung. Die Benutzer mit Microsoft 365 Konto und Teams Lizenz können nur die Organisatoren sein und die Teilnehmerberechtigungen steuern. Ein Besprechungsorganisator kann die Einstellungen für eine bestimmte Besprechung ändern. Organisatoren können diese Änderungen auf der **Besprechungsoptionen-Webseite** vornehmen.
 * **Referent:** Die Referenten verfügen über die gleichen Funktionen der Organisatoren mit Ausschlüssen. Ein Referent kann einen Organisator nicht aus der Sitzung entfernen oder Besprechungsoptionen für die Sitzung ändern. Standardmäßig haben Teilnehmer, die an einer Besprechung teilnehmen, die Rolle des Referenten.
 * **Teilnehmer:** Ein Teilnehmer ist ein Benutzer, der zur Teilnahme an einer Besprechung eingeladen wurde. Die Teilnehmer sind jedoch nicht berechtigt, als Referent zu fungieren. Teilnehmer können mit anderen Besprechungsmitgliedern interagieren, aber keine der Besprechungseinstellungen verwalten oder den Inhalt freigeben.
 
@@ -178,9 +176,9 @@ Benutzertypen wie Organisator, Referent oder Teilnehmer in einer Besprechung kö
 
 In der folgenden Liste werden die verschiedenen Benutzertypen zusammen mit ihrer Barrierefreiheit und Leistung aufgeführt:
 
-* **Mandanteninterne** Benutzer: Mandanteninterne Benutzer gehören zur Organisation und verfügen über Anmeldeinformationen in Azure Active Directory (AAD) für den Mandanten. Es handelt sich um Vollzeit-, Vor-Ort- oder Remotemitarbeiter. Ein mandanteninterner Benutzer kann ein Organisator, Referent oder Teilnehmer sein.
-* **Gast:** Ein Gast ist ein Teilnehmer aus einer anderen Organisation, der eingeladen ist, auf Teams oder andere Ressourcen im Mandanten der Organisation zuzugreifen. Gäste werden den AAD der Organisation hinzugefügt und verfügen über dieselben Teams Funktionen wie ein systemeigenes Teammitglied. Sie haben Zugriff auf Teamchats, Besprechungen und Dateien. Ein Gast kann ein Organisator, Referent oder Teilnehmer sein. Weitere Informationen finden Sie unter [Gastzugriff in Teams.](/microsoftteams/guest-access)
-* **Partnerbenutzer oder externer** Benutzer: Ein Verbundbenutzer ist ein externer Teams Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Verbundbenutzer verfügen über gültige Anmeldeinformationen bei Verbundpartnern und sind von Teams autorisiert. Sie haben keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen aus Ihrer Organisation. Der Gastzugriff ist eine bessere Option für externe Benutzer, um Zugriff auf Teams und Kanäle zu haben. Weitere Informationen finden Sie unter [Verwalten des externen Zugriffs in Teams.](/microsoftteams/manage-external-access)
+* **Mandanteninterne** Benutzer gehören zur Organisation und verfügen über Anmeldeinformationen in Azure Active Directory (AAD) für den Mandanten. Es handelt sich um Vollzeit-, Vor-Ort- oder Remotemitarbeiter. Ein mandanteninterner Benutzer kann ein Organisator, Referent oder Teilnehmer sein.
+* **Gast:** Ein Gast ist ein Teilnehmer aus einer anderen Organisation, der eingeladen ist, auf Teams oder andere Ressourcen im Mandanten der Organisation zuzugreifen. Gäste werden den AAD der Organisation hinzugefügt und verfügen über dieselben Teams Funktionen wie ein systemeigenes Teammitglied. Sie haben Zugriff auf Teamchats, Besprechungen und Dateien. Ein Gast kann ein Organisator, Referent oder Teilnehmer sein. Weitere Informationen finden Sie unter [Gastzugriff in Teams](/microsoftteams/guest-access).
+* **Partnerbenutzer oder extern:** Ein Verbundbenutzer ist ein externer Teams Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Verbundbenutzer verfügen über gültige Anmeldeinformationen bei Verbundpartnern und sind von Teams autorisiert. Sie haben keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen aus Ihrer Organisation. Der Gastzugriff ist eine bessere Option für externe Benutzer, um Zugriff auf Teams und Kanäle zu haben. Weitere Informationen finden Sie unter [Verwalten des externen Zugriffs in Teams.](/microsoftteams/manage-external-access)
 
     > [!NOTE]
     > Ihre Teams Benutzer können Apps hinzufügen, wenn sie Besprechungen oder Chats mit anderen Organisationen hosten. Die Benutzer können Apps verwenden, die von externen Benutzern freigegeben wurden, wenn Ihre Benutzer an Besprechungen oder Chats teilnehmen, die von anderen Organisationen gehostet werden. Die Datenrichtlinien der Organisation des hostenden Benutzers sowie die Datenfreigabepraktiken der Drittanbieter-Apps, die von der Organisation dieses Benutzers freigegeben werden, werden wirksam.

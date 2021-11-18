@@ -5,12 +5,12 @@ keywords: Visual Studio-Toolkit für Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: af4f4c1511460e79a99d437dbcc75e2c748d1506
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e4caacc495fdd7510575a373f33db129c08bad87
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888013"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075472"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Erstellen von Apps mit dem Teams Toolkit und Visual Studio
 
@@ -26,7 +26,7 @@ Mithilfe des Microsoft Teams-Toolkits können Sie benutzerdefinierte Teams-Apps 
 
 ## <a name="install-the-teams-toolkit"></a>Installieren des Teams Toolkits
 
-Das Microsoft Teams Toolkit für Visual Studio steht im [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit) oder direkt im Menü **"Erweiterungen"** in Visual Studio zum Download zur Verfügung.
+The Microsoft Teams Toolkit for Visual Studio is available to download from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit) or directly from the **Extensions** menu within Visual Studio.
 
 ## <a name="use-the-toolkit"></a>Verwenden des Toolkits
 
@@ -36,7 +36,7 @@ Das Microsoft Teams Toolkit für Visual Studio steht im [Visual Studio Marketpla
 - [Validieren Ihrer App](#validate-your-app)
 - [Veröffentlichen eigener Apps](#publish-your-app-to-teams)
 
-## <a name="set-up-a-new-teams-project"></a>Einrichten eines neuen Teams Projekts
+## <a name="set-up-a-new-teams-project"></a>Einrichten eines neuen Teams-Projekts
 
 1. Starten Sie Visual Studio 2019.
 2. Wählen Sie **"Neues Projekt erstellen"** aus.
@@ -49,7 +49,7 @@ Das Microsoft Teams Toolkit für Visual Studio steht im [Visual Studio Marketpla
 
 Im Kern umfasst die Teams App drei Komponenten:
 
-- Der Microsoft Teams Client (Web, Desktop oder Mobil), auf dem Benutzer mit Ihrer App interagieren.
+- Der Microsoft Teams-Client (Web, Desktop oder Mobil), auf dem Benutzer mit Ihrer App interagieren.
 - Ein Server, der auf Anforderungen für Inhalte reagiert, die in Teams angezeigt werden. Beispiel: HTML-Registerkarteninhalt oder eine adaptive Bot-Karte.
 - Ein Teams-App-Paket besteht aus drei Dateien:
 
@@ -59,12 +59,12 @@ Im Kern umfasst die Teams App drei Komponenten:
     > - Ein [Farbsymbol](../resources/schema/manifest-schema.md#icons) für Ihre App, das im öffentlichen App- oder Organisations-App-Katalog angezeigt werden soll.
     > - Ein [Gliederungssymbol](../resources/schema/manifest-schema.md#icons) für die Anzeige auf der Teams Aktivitätsleiste.
 
-Wenn eine App installiert ist, analysiert der Teams Client die Manifestdatei, um die erforderlichen Informationen wie den Namen Ihrer App und die URL zu ermitteln, unter der sich die Dienste befinden.
+Wenn eine App installiert ist, analysiert der Teams-Client die Manifestdatei, um die erforderlichen Informationen wie den Namen Ihrer App und die URL zu ermitteln, unter der sich die Dienste befinden.
 
 > [!NOTE]
->Wenn dies noch nicht geschehen ist, müssen Sie sich bei Ihrem Microsoft 365 Konto anmelden, um den Entwicklungsprozess fortzusetzen.
+>Wenn sie dies noch nicht getan haben, müssen Sie sich bei Ihrem Microsoft 365 Konto anmelden, um den Entwicklungsprozess fortzusetzen.
 >
-> Wenn Sie nicht über ein Microsoft 365 Konto verfügen, können Sie sich für ein [Abonnement für Microsoft 365 Entwicklerprogramm](https://developer.microsoft.com/microsoft-365/dev-program) registrieren. Es ist 90 Tage kostenlos und wird verlängert, solange Sie es für Entwicklungsaktivitäten verwenden. Wenn Sie über ein Visual Studio Enterprise oder Professional Abonnement verfügen, enthalten beide Programme ein kostenloses Microsoft 365 [Entwicklerabonnement,](https://aka.ms/MyVisualStudioBenefits)das für die Lebensdauer Ihres Visual Studio Abonnements aktiv ist. Weitere Informationen finden Sie unter [Einrichten eines Microsoft 365 Entwicklerabonnements.](/office/developer-program/office-365-developer-program-get-started)
+> Wenn Sie über kein Microsoft 365 Konto verfügen, können Sie sich für ein Abonnement des [Microsoft 365 Entwicklerprogramms](https://developer.microsoft.com/microsoft-365/dev-program) registrieren. Es ist 90 Tage kostenlos und wird verlängert, solange Sie es für Entwicklungsaktivitäten verwenden. Wenn Sie über ein Visual Studio Enterprise oder Professional Abonnement verfügen, enthalten beide Programme ein kostenloses Microsoft 365 [Entwicklerabonnement,](https://aka.ms/MyVisualStudioBenefits)das für die Lebensdauer Ihres Visual Studio Abonnements aktiv ist. Weitere Informationen finden Sie unter [Einrichten eines Microsoft 365 Entwicklerabonnements.](/office/developer-program/office-365-developer-program-get-started)
 
 ### <a name="configuration-steps"></a>Konfigurationsschritte 
 
@@ -86,8 +86,3 @@ Im [Teams Entwicklerportal](https://dev.teams.microsoft.com/home)können Sie Ihr
 
 - Ihr IT-Administrator wird diese Übermittlungen überprüfen.
 - Sie können zur **Veröffentlichungsseite** zurückkehren, um ihren Übermittlungsstatus zu überprüfen und zu erfahren, ob Ihre App von Ihrem IT-Administrator genehmigt oder abgelehnt wurde. Hier können Sie auch Updates für Ihre App übermitteln oder alle derzeit aktiven Übermittlungen abbrechen.
-
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Erstellen und Ausführen Ihrer ersten Microsoft Teams-App mit Demerz](../get-started/first-app-blazor.md)

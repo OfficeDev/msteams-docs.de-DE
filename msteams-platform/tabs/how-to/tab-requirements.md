@@ -6,12 +6,12 @@ keywords: Konfigurierbarer Gruppenkanal für Teams-Registerkarten
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 72fd6e291d282787ad406e2677c2e3ef58a4fe47
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 42d022bb5083e97996da74d033866a1eb92ecc7a
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948607"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075423"
 ---
 # <a name="prerequisites"></a>Voraussetzungen
 
@@ -48,10 +48,9 @@ Teams Registerkarten müssen die folgenden Voraussetzungen erfüllen:
 > [!div class="nextstepaction"]
 > [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Erstellen Ihrer ersten App mit JavaScript](../../get-started/first-app-react.md)
-* [Erstellen Ihrer ersten App mit Blazor](../../get-started/first-app-blazor.md)
 * [Erstellen Ihrer ersten App mit SPFx](../../get-started/first-app-spfx.md)
 * [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)

@@ -5,17 +5,14 @@ description: Beschreibt die Typaheadsuche mit dem Input.ChoiceSet-Steuerelement 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: ef77d35bc92726ac0d9d0264585a32249dbeb75b
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+ms.openlocfilehash: 95041b1a24ac083329a809b8a5989d77e2430e26
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61062073"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075583"
 ---
-# <a name="typeahead-search-in-adaptive-cards"></a>Typaheadsuche in adaptiven Karten  
-
-> [!NOTE]
-> Derzeit ist dieses Feature nur in der [öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md) verfügbar.
+# <a name="typeahead-search-in-adaptive-cards"></a>Typaheadsuche in adaptiven Karten
 
 Die Suchfunktion "Typeahead" in adaptiven Karten bietet eine erweiterte Suchumgebung für `input.choiceset` Komponenten. Es enthält eine Liste der Auswahlmöglichkeiten zum Eingeben von Text in das Suchfeld. Sie können die Typaheadsuche mit adaptiven Karten integrieren, um Daten zu suchen und auszuwählen.
 
@@ -92,7 +89,7 @@ Die folgenden Eigenschaften sind die neuen Ergänzungen des [`Input.ChoiceSet`](
 |-----------|------|----------|-------------|
 | Typ | Data.Query | Ja | Gibt an, dass es sich um ein Data.Query-Objekt handelt.|
 | Dataset | Zeichenfolge | Ja | Gibt den Datentyp an, der dynamisch abgerufen wird. |
-| value | String | Nein | Füllt die Aufrufanforderung an den Bot mit der Eingabe auf, die der Benutzer für die `ChoiceSet` bereitgestellt hat. |
+| value | Zeichenfolge | Nein | Füllt die Aufrufanforderung an den Bot mit der Eingabe auf, die der Benutzer für die `ChoiceSet` bereitgestellt hat. |
 | count | Zahl | Nein | Füllt die Aufrufanforderung an den Bot auf, um die Anzahl der Elemente anzugeben, die zurückgegeben werden müssen. Der Bot ignoriert ihn, wenn die Benutzer einen anderen Betrag senden möchten. | 
 | skip | Zahl | Nein | Füllt die Aufrufanforderung an den Bot auf, um anzugeben, dass Benutzer in der Liste paginieren und fortfahren möchten. |
 
@@ -300,4 +297,7 @@ Die Beispielnutzlast, die die statische und dynamische Typaheadsuche mit einzeln
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
+
+* [Universal-Aktionen für adaptive Karten](Universal-actions-for-adaptive-cards/Overview.md)
+* [Aufgabenmodule](../what-are-task-modules.md)

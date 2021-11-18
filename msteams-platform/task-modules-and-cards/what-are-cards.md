@@ -4,23 +4,23 @@ description: Beschreibt Karten und deren Verwendung in Bots, Connectors und Mess
 ms.localizationpriority: medium
 keywords: Connectors Bots Karten Messaging
 ms.topic: overview
-ms.openlocfilehash: 1f443dd72acd263901d39311465a368fbeb59f1b
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+ms.openlocfilehash: 0a33cab35db2873df9ee8b93b4a0cbd2f616ace0
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61061958"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075444"
 ---
 # <a name="cards"></a>Karten
 
 Eine Karte ist ein Benutzeroberflächencontainer für kurze oder verwandte Informationen. Karten können mehrere Eigenschaften und Anlagen aufweisen und Schaltflächen enthalten, die [Kartenaktionen](~/task-modules-and-cards/cards/cards-actions.md)auslösen. Mithilfe von Karten können Sie Informationen in Gruppen organisieren und Benutzern die Möglichkeit geben, mit bestimmten Teilen der Informationen zu interagieren.
 
-Die Bots für Teams unterstützen die folgenden Arten von Karten:
+Die Bots für Teams die folgenden Kartentypen unterstützen:
  
 - Adaptive Karte
 - Hero-Karte
 - Karte auflisten
-- Office 365-Connectorkarte
+- Office 365 Connectorkarte
 - Belegkarte
 - Anmeldekarte
 - Miniaturansichtskarte
@@ -54,8 +54,6 @@ Alle von Teams verwendeten Karten werden in [Kartentypen](~/task-modules-and-car
 
 ## <a name="adaptive-cards"></a>Adaptive Karten
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
-
 [Adaptive Karten](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) sind eine neue produktübergreifende Spezifikation für Karten in Microsoft-Produkten, einschließlich Bots, Cortana, Outlook und Windows. Sie sind der empfohlene Kartentyp für neue Teams Entwicklung. Allgemeine Informationen vom Team für adaptive Karten finden Sie unter ["Übersicht über adaptive Karten".](/adaptive-cards) Sie können adaptive Karten überall verwenden, wo Sie vorhandene Hero-Karten, Office 365 karten und Miniaturansichtskarten verwenden.
 
 Zusätzlich zu adaptiven Karten unterstützt Teams zwei andere Arten von Karten:
@@ -69,8 +67,6 @@ Geben Sie die vorausgehende Suche ein, die als Eingabesteuerelement in adaptiven
 
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>Adaptive Karten und eingehende Webhooks
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/y5pbJI43Zvg]
-
 > [!NOTE]
 > * Alle systemeigenen Schemaelemente adaptiver Karten mit Ausnahme `Action.Submit` von , werden vollständig unterstützt.
 > * Die unterstützten Aktionen sind [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)und [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
@@ -79,14 +75,14 @@ Mit adaptiven Karten mit eingehenden Webhooks können Sie die umfangreichen und 
 
 ## <a name="support-for-aad-object-id-and-upn-in-user-mention"></a>Unterstützung für AAD-Objekt-ID und UPN in Benutzererwähnung 
 
-Bots mit adaptiven Karten unterstützen erwähnungs-IDs von Benutzern, z. B. AAD Objekt-ID und Benutzerprinzipalname (USER Principle Name, UPN) zusätzlich zu den vorhandenen IDs. Eingehende Webhooks unterstützen die Benutzererwähnung auf der adaptiven Karte mit der AAD-Objekt-ID und dem UPN.
+Bots mit adaptiven Karten unterstützen Erwähnungs-IDs von Benutzern, z. B. AAD Objekt-ID und Benutzerprinzipalname (USER Principle Name, UPN) zusätzlich zu den vorhandenen IDs. Eingehende Webhooks unterstützen die Benutzererwähnung auf der adaptiven Karte mit der AAD-Objekt-ID und dem UPN.
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Kartentypen](~/task-modules-and-cards/cards/cards-reference.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Formatieren von Karten in Teams](~/task-modules-and-cards/cards/cards-format.md)
 * [Entwerfen adaptiver Karten](~/task-modules-and-cards/cards/design-effective-cards.md)

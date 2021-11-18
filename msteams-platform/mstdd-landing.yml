@@ -1,17 +1,17 @@
 ### YamlMime:Landing
 title: Microsoft Teams-Entwicklerdokumentation
-summary: Willkommen bei der Übersicht über Microsoft Teams Entwicklerdokumentation. Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse, in denen Sichten, Lernen und Arbeiten zunehmend sammeln.
+summary: Willkommen bei der Übersicht über Microsoft Teams Entwicklerdokumentation. Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse, in denen sich Menschen zunehmend sammeln, lernen und arbeiten.
 metadata:
   title: Microsoft Teams-Entwicklerdokumentation
   description: Einführung in das Erstellen von Apps für Teams
   ms.date: 11/10/2021
   ms.topic: landing-page
-  ms.openlocfilehash: 0d60a1c4611511d56938a3d4bd7e2d6bdce2f033
-  ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+  ms.openlocfilehash: 30e47cc11a2799442aa8f7639000f13690046d21
+  ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/17/2021
-  ms.locfileid: "61061951"
+  ms.lasthandoff: 11/18/2021
+  ms.locfileid: "61075576"
 landingContent:
 - title: Entdecken Sie die neuesten
   linkLists:
@@ -51,8 +51,6 @@ landingContent:
     links:
     - text: Erstellen einer App mit JavaScript
       url: sbs-gs-javascript.yml
-    - text: Erstellen einer App mit Demerz
-      url: sbs-gs-blazor.yml
     - text: Erstellen einer App mit SPFx
       url: sbs-gs-spfx.yml
     - text: Erstellen einer App mit C# oder .NET
@@ -93,6 +91,14 @@ landingContent:
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: App-Manifest
       url: ../msteams-platform/resources/schema/manifest-schema.md
+- title: Teams-App-Szenarien
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Erstellen von Szenarien für Teams-App
+      url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
+    - text: Bewährte Methoden für Teams App-Szenarien
+      url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
 - title: Veröffentlichen und Verteilen
   linkLists:
   - linkListType: concept

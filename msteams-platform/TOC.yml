@@ -300,6 +300,8 @@
           href: task-modules-and-cards/cards/cards-format.md
         - name: Kartenaktionen
           href: task-modules-and-cards/cards/cards-actions.md
+        - name: Typeahead-Suche in adaptiver Karte
+          href: task-modules-and-cards/cards/dynamic-search.md
         - name: Universal-Aktionen für adaptive Karten
           items:
             - name: Übersicht
