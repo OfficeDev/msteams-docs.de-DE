@@ -1,17 +1,17 @@
 ---
-title: Karten und Aufgabenmodule
+title: Karten- und Aufgabenmodule
 description: Erfahren Sie mehr über arten von Karten, die in Bots für Teams unterstützt werden, z. B. adaptive Karten, Hero-Karte, Miniaturansichtskarte und vieles mehr. Erfahren Sie mehr über Kartenaktionen und das Aufrufen von Aufgabenmodulen in Kanälen, Bots oder Deep-Links.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b154f82b1148760f3dbb6f1b92f914fa7222977d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 08128a81c913134c8c2e7d5b124c796661636b85
+ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888272"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61061972"
 ---
-# <a name="cards-and-task-modules"></a>Karten und Aufgabenmodule
+# <a name="cards-and-task-modules"></a>Karten- und Aufgabenmodule
 
 Karten bieten Benutzern verschiedene visuelle, audio- und auswählbare Nachrichten und Hilfe beim Unterhaltungsfluss.
 
@@ -35,6 +35,7 @@ Sie können Kartenaktionen hinzufügen und darauf reagieren, die:
 * Senden von Nachrichten und Nutzlast an den Bot
 * Initiieren des OAuth-Flusses
 
+Sie können eine [dynamische Suchumgebung](~/task-modules-and-cards/cards/dynamic-search.md) innerhalb eines großen Datasets mithilfe des Steuerelements "Type Ahead" in adaptiven Karten bereitstellen. Sie können auch eine typorientierte statische Suche innerhalb einer begrenzten Anzahl von Auswahlmöglichkeiten durchführen. Sie können die Aufgabenmodule in Kanal- oder persönlichen Registerkarten, Bots oder Deep-Links aufrufen. Die Benutzererfahrung für Workflows, die Dateneingaben erfordern, kann verbessert werden, indem der Registerkarte des Benutzers ein Aufgabenmodul hinzugefügt wird. Sie können Aufgabenmodule von Teams Bots mithilfe von Schaltflächen auf adaptiven Karten und Bot Framework-Karten aufrufen.
 Sie können die Aufgabenmodule in Kanal- oder persönlichen Registerkarten, Bots oder Deep-Links aufrufen. Die Benutzererfahrung für Workflows, die Dateneingaben erfordern, kann verbessert werden, indem der Registerkarte des Benutzers ein Aufgabenmodul hinzugefügt wird. Sie können Aufgabenmodule von Teams Bots mithilfe von Schaltflächen auf adaptiven Karten und Bot Framework-Karten aufrufen.
 
 ## <a name="see-also"></a>Siehe auch

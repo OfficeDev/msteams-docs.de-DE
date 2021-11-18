@@ -1,17 +1,17 @@
 ### YamlMime:Landing
 title: Microsoft Teams-Entwicklerdokumentation
-summary: Willkommen bei der Übersicht über Microsoft Teams Entwicklerdokumentation. Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse, in denen sich Menschen zunehmend sammeln, lernen und arbeiten.
+summary: Willkommen bei der Übersicht über Microsoft Teams Entwicklerdokumentation. Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse, in denen Sichten, Lernen und Arbeiten zunehmend sammeln.
 metadata:
   title: Microsoft Teams-Entwicklerdokumentation
   description: Einführung in das Erstellen von Apps für Teams
   ms.date: 11/10/2021
   ms.topic: landing-page
-  ms.openlocfilehash: 9d08880e0cb4d1788d0a88f5f3b38cc71bdfc396
-  ms.sourcegitcommit: 3dd69ae18bca8dd2e0666d09746a4012cd8c8e42
+  ms.openlocfilehash: 0d60a1c4611511d56938a3d4bd7e2d6bdce2f033
+  ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
   ms.translationtype: MT
   ms.contentlocale: de-DE
   ms.lasthandoff: 11/17/2021
-  ms.locfileid: "61051189"
+  ms.locfileid: "61061951"
 landingContent:
 - title: Entdecken Sie die neuesten
   linkLists:
@@ -19,6 +19,8 @@ landingContent:
     links:
     - text: Persönliche Registerkarten und Messaging-Erweiterungen werden in Outlook und Office ausgeführt (Vorschau)
       url: ~/m365-apps/overview.md
+    - text: Typaheadsuche in adaptiver Karte
+      url: ~/task-modules-and-cards/cards/dynamic-search.md
     - text: Bots das Empfangen aller Kanalnachrichten mithilfe der ressourcenspezifischen Zustimmung (RSC) ermöglichen
       url: ~/bots/how-to/conversations/channel-messages-with-rsc.md
     - text: Monetarisieren Ihrer Teams-App mit einem transaktionsfähigen SaaS-Angebot
