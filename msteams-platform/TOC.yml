@@ -14,8 +14,6 @@
       href: get-started/get-started-overview.md
     - name: Erstellen Ihrer ersten App mit JavaScript
       href: sbs-gs-javascript.yml
-    - name: Erstellen Ihrer ersten App mit Blazor
-      href: sbs-gs-blazor.yml
     - name: Erstellen Ihrer ersten App mit SPFx
       href: sbs-gs-spfx.yml
     - name: Erstellen Ihrer ersten App mit C# oder .NET
