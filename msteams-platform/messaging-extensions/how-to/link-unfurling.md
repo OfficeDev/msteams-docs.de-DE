@@ -1,16 +1,16 @@
 ---
 title: Verbreiten von Links
 author: surbhigupta
-description: Erfahren Sie, wie Sie die Verbreitung von Links mit der Messaging-Erweiterung in einer Microsoft Teams-App mit App-Manifest oder manuell unter Verwendung von Codebeispielen und Beispielen hinzufügen.
+description: Erfahren Sie, wie Sie die Verbreitung von Links mit messaging-Erweiterung in einer Microsoft Teams-App mit App-Manifest oder manuell unter Verwendung von Codebeispielen und Beispielen hinzufügen.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f702ac2600dbfb3c8fd2992c41cc1c72754252ca
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 98926d386d55250d72815a918c3f180c4a8421de
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889398"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178293"
 ---
 # <a name="link-unfurling"></a>Verbreiten von Links
 
@@ -35,11 +35,12 @@ Zum Hinzufügen der Verbreitung von Links zu Ihrem App-Manifest fügen Sie `mess
 
 ### <a name="add-link-unfurling-using-app-studio"></a>Hinzufügen der Verbreitung von Links mit App Studio
 
-1. Öffnen Sie **App Studio** im Microsoft Teams-Client, und wählen Sie die Registerkarte **"Manifest-Editor"** aus.
+1. Öffnen Sie **App Studio** über den Microsoft Teams Client, und wählen Sie die Registerkarte **"Manifest-Editor"** aus.
 1. Laden Sie Das App-Manifest.
 1. Fügen Sie auf der Seite **"Messaging-Erweiterung"** die Domäne hinzu, nach der Sie im Abschnitt **"Nachrichtenhandler"** suchen möchten. In der folgenden Abbildung wird der Prozess erläutert:
 
     ![Abschnitt "message handlers" in App Studio](~/assets/images/link-unfurling.png)
+
     
 ### <a name="add-link-unfurling-manually"></a>Manuelles Hinzufügen der Verknüpfungsweitergabe
 
@@ -79,7 +80,7 @@ Die folgenden Kartentypen werden unterstützt:
 * [Office 365 Connectorkarte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Karte](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Sie können eine Vorschau einer adaptiven Karte oder Office 365 Connectorkarte in der Ergebnisliste mithilfe der Vorschaueigenschaft anzeigen. Die Vorschaueigenschaft ist nicht erforderlich, wenn die Ergebnisse bereits Hero- oder Miniaturansichtskarten sind. Wenn Sie die Vorschauanlage verwenden, muss es sich entweder um eine Hero- oder eine Miniaturansichtskarte handeln. Wenn keine Vorschaueigenschaft angegeben ist, schlägt die Vorschau der Karte fehl, und es wird nichts angezeigt.
+Weitere Informationen finden Sie unter [Aufrufen des Aktionstyps.](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke)
 
 ### <a name="example"></a>Beispiel
 
@@ -179,7 +180,7 @@ Es folgt ein Beispiel für die Antwort:
 
 * * *
 
-## <a name="see-also"></a>Siehe auch 
+## <a name="see-also"></a>Weitere Informationen 
 
 * [Karten](~/task-modules-and-cards/what-are-cards.md)
 * [Aufgeklappte Registerkartenverknüpfung und Phasenansicht](~/tabs/tabs-link-unfurling.md)

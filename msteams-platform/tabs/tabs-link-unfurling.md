@@ -1,16 +1,16 @@
 ---
 title: Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 author: Rajeshwari-v
-description: Erfahren Sie, wie Sie einen Link freigeben, die Phasenansicht öffnen und eine Registerkarte mit Microsoft Teams App anheften. Erfahren Sie mehr über die Phasenansicht und deren Aufruf mithilfe einer adaptiven Karte mithilfe von Codebeispielen und Beispielen.
+description: Erfahren Sie, wie Sie einen Link öffnen, die Phasenansicht öffnen und eine Registerkarte mit Microsoft Teams App anheften. Erfahren Sie mehr über die Phasenansicht und deren Aufruf mithilfe einer adaptiven Karte mithilfe von Codebeispielen und Beispielen.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: dab2b08c7393bc44ecda59f18160f0b113733f74
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 17eb7fd6376bee2836ce271b0201aae31881b457
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887567"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178264"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 
@@ -43,9 +43,9 @@ Wenn der Benutzer eine URL auf dem Teams Desktopclient eingibt, wird der Bot auf
 
 Die folgenden Bilder zeigen eine Phase, die von einer adaptiven Karte geöffnet wurde:
 
-<img src="~/assets/images/tab-images/open-stage-from-adaptive-card1.png" alt="Open a stage from Adaptive Card" width="700"/>
+[![Öffnen einer Phase über eine adaptive Karte](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
 
-<img src="~/assets/images/tab-images/open-stage-from-adaptive-card2.png" alt="Open a stage" width="700"/>
+[![Öffnen einer Phase](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox) 
 
 ### <a name="example"></a>Beispiel
 
@@ -86,7 +86,7 @@ Nachfolgend sehen Sie den Prozess zum Aufrufen der Phasenansicht:
 * Der Bot antwortet mit einem `200` Code.
 
 > [!NOTE]
-> Auf Teams mobilen Clients öffnet das Aufrufen der Phasenansicht für Apps, die über den [Teams Store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) verteilt werden, ohne über eine mobliesoptimierte Oberfläche zu verfügen, den Standardwebbrowser des Geräts. Der Browser öffnet die im Parameter des Objekts angegebene `websiteUrl` `TabInfo` URL.
+> Auf Teams mobilen Clients öffnet das Aufrufen der Phasenansicht für Apps, die über den [Teams Store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) verteilt werden und keine mobliesoptimierte Oberfläche haben, den Standardwebbrowser des Geräts. Der Browser öffnet die im Parameter des Objekts angegebene `websiteUrl` `TabInfo` URL.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Aufrufen der Phasenansicht über deep-Link
 
@@ -127,9 +127,9 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Zeichenfolge | 64 | Diese Eigenschaft ist ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird. Dies ist ein Pflichtfeld.|
 | `name` | Zeichenfolge | 128 | Diese Eigenschaft ist der Anzeigename der Registerkarte in der Kanalschnittstelle. Dieses Feld ist optional.|
-| `contentUrl` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, die auf die Entitätsbenutzeroberfläche verweist, die im Teams Canvas angezeigt werden soll. Dies ist ein Pflichtfeld.|
+| `contentUrl` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https://-URL, die auf die Entitätsbenutzeroberfläche verweist, die im Teams Canvas angezeigt werden soll. Dies ist ein Pflichtfeld.|
 | `websiteUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, auf die sie zeigen soll, wenn ein Benutzer die Anzeige in einem Browser auswählt. Dies ist ein Pflichtfeld.|
-| `removeUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, die auf die Benutzeroberfläche zeigt, die angezeigt werden soll, wenn der Benutzer die Registerkarte löscht. Dies ist ein optionales Feld.|
+| `removeUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https://-URL, die auf die Benutzeroberfläche verweist, die angezeigt werden soll, wenn der Benutzer die Registerkarte löscht. Dies ist ein optionales Feld.|
 
 ## <a name="code-sample"></a>Codebeispiel
 
@@ -143,7 +143,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 > [!div class="nextstepaction"]
 > [Registerkarten für Unterhaltungen erstellen](~/tabs/how-to/conversational-tabs.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Verbreitung von Messaging-Erweiterungen](~/messaging-extensions/how-to/link-unfurling.md)
 * [registerkarten Teams](~/tabs/what-are-tabs.md)

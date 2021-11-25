@@ -5,16 +5,16 @@ description: Erfahren Sie, wie Sie die SSO-Unterstützung für Ihre Messaging-Er
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: cccd27f5507125d0525c5a2d180379dad213dcae
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 3da2c19debd3275266b4f96ce62bdfb0c85c353b
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889391"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178251"
 ---
 # <a name="single-sign-on-support-for-messaging-extensions"></a>Unterstützung für einmaliges Anmelden für Messaging-Erweiterungen
  
-SSO-Unterstützung (Single Sign-On) ist jetzt für Messaging-Erweiterungen und die Verbreitung von Links verfügbar. Wenn Sie das einmalige Anmelden für Messaging-Erweiterungen standardmäßig aktivieren, wird das Authentifizierungstoken aktualisiert, wodurch die Anzahl der Eingaben der Anmeldeinformationen für Microsoft Teams minimiert wird.
+SSO-Unterstützung (Single Sign-On) ist jetzt für Messaging-Erweiterungen und die Verbreitung von Links verfügbar. Wenn Sie das einmalige Anmelden für Messaging-Erweiterungen standardmäßig aktivieren, wird das Authentifizierungstoken aktualisiert. Dadurch wird minimiert, wie oft Sie die Anmeldeinformationen für Microsoft Teams eingeben müssen.
 
 In diesem Dokument erfahren Sie, wie Sie das SSO aktivieren und Bei Bedarf Ihr Authentifizierungstoken speichern.
 
@@ -87,15 +87,16 @@ Nachdem die Voraussetzungen erfüllt sind, können Sie SSO für Messaging-Erweit
                 JObject valueObject = JObject.FromObject(turnContext.Activity.Value);
                 var tokenExchangeRequest =
                 ((JObject)valueObject["authentication"])?.ToObject<TokenExchangeInvokeRequest>();
-                tokenExchangeResponse = await (turnContext.Adapter as IExtendedUserTokenProvider).ExchangeTokenAsync(
-                 turnContext,
-                 _connectionName,
-                 turnContext.Activity.From.Id,
-                 new TokenExchangeRequest
+                var userTokenClient = turnContext.TurnState.Get<UserTokenClient>();
+                tokenExchangeResponse = await userTokenClient.ExchangeTokenAsync(
+                                turnContext.Activity.From.Id,
+                                 _connectionName,
+                                 turnContext.Activity.ChannelId,
+                                 new TokenExchangeRequest
                  {
                      Token = tokenExchangeRequest.Token,
                  },
-                 cancellationToken).ConfigureAwait(false);
+                  cancellationToken).ConfigureAwait(false);
             }
     #pragma warning disable CA1031 //Do not catch general exception types (ignoring, see comment below)
             catch
@@ -114,7 +115,7 @@ Nachdem die Voraussetzungen erfüllt sind, können Sie SSO für Messaging-Erweit
     
     ```    
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Hinzufügen der Authentifizierung zu Ihren Messaging-Erweiterungen](add-authentication.md)
 * [Verwenden von SSO für Bots](../../bots/how-to/authentication/auth-aad-sso-bots.md)

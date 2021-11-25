@@ -5,12 +5,12 @@ description: Beschreibt, wie sie auf das Aufgabenmodul reagieren, um eine Aktion
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e660a7fb289e8047316d8d1405c09df65bc5c8ca
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: fba79695458374e80cfe604377fd7d7c5e05a2ff
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948411"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178285"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Auf die Aktion zum Absenden des Aufgabenmoduls reagieren
 
@@ -21,12 +21,12 @@ Nachdem ein Benutzer das Aufgabenmodul übermittelt hat, empfängt Ihr Webdienst
 
 Sie haben die folgenden Optionen, um zu antworten:
 
-* Keine Antwort: Verwenden Sie die Absenden-Aktion, um einen Prozess in einem externen System auszulösen, und geben Sie dem Benutzer kein Feedback, das für lange laufende Prozesse nützlich ist, und wählen Sie aus, ob Sie alternativ Feedback geben möchten. Sie können z. B. Feedback mit einer [proaktiven Nachricht](~/bots/how-to/conversations/send-proactive-messages.md)geben.
+* Keine Antwort: Verwenden Sie die Sendeaktion, um einen Prozess in einem externen System auszulösen und dem Benutzer kein Feedback zu geben. Es ist nützlich, lange dauernde Prozesse zu verwenden und alternativ Feedback zu geben. Sie können z. B. Feedback mit einer [proaktiven Nachricht](~/bots/how-to/conversations/send-proactive-messages.md)geben.
 * [Ein weiteres Aufgabenmodul:](#respond-with-another-task-module)Sie können im Rahmen einer mehrstufigen Interaktion mit einem zusätzlichen Aufgabenmodul antworten.
 * [Kartenantwort:](#respond-with-a-card-inserted-into-the-compose-message-area)Sie können mit einer Karte antworten, mit der der Benutzer interagieren oder in eine Nachricht einfügen kann.
 * [Adaptive Karte vom Bot:](#bot-response-with-adaptive-card)Fügen Sie eine adaptive Karte direkt in die Unterhaltung ein.
 * [Fordern Sie den Benutzer auf, sich zu authentifizieren.](~/messaging-extensions/how-to/add-authentication.md)
-* [Fordern Sie den Benutzer auf, eine zusätzliche Konfiguration bereitzustellen]~/get-started/first-message-extension.md).
+* [Fordern Sie den Benutzer auf, zusätzliche Konfiguration bereitzustellen.](~/get-started/first-message-extension.md)
 
 Bei der Authentifizierung oder Konfiguration wird der ursprüngliche Aufruf nach Abschluss des Prozesses erneut an Ihren Webdienst senden. Die folgende Tabelle zeigt, welche Arten von Antworten basierend auf dem Aufrufspeicherort `commandContext` der Messaging-Erweiterung verfügbar sind: 
 
@@ -203,9 +203,9 @@ Die Antwortmethode ist identisch mit [der Antwort auf das ursprüngliche `fetchT
 ## <a name="bot-response-with-adaptive-card"></a>Bot-Antwort mit adaptiver Karte
 
 > [!NOTE]
-> Voraussetzung für das Abrufen der Bot-Antwort mit einer adaptiven Karte ist, dass Sie das `bot` Objekt Ihrem App-Manifest hinzufügen und den erforderlichen Bereich für den Bot definieren müssen. Verwenden Sie die gleiche ID wie Ihre Messaging-Erweiterung für Ihren Bot.
+> Die Voraussetzung für das Abrufen der Bot-Antwort mit einer adaptiven Karte besteht darin, dass Sie das `bot` Objekt Ihrem App-Manifest hinzufügen und den erforderlichen Bereich für den Bot definieren müssen. Verwenden Sie die gleiche ID wie Ihre Messaging-Erweiterung für Ihren Bot.
  
-Sie können auch darauf reagieren, indem Sie `submitAction` eine Nachricht mit einer adaptiven Karte mit einem Bot in den Kanal einfügen. Der Benutzer kann eine Vorschau der Nachricht anzeigen, bevor er sie übermittelt. Dies ist nützlich in Szenarien, in denen Sie Informationen von den Benutzern sammeln, bevor Sie eine Adaptive Kartenantwort erstellen, oder wenn Sie die Karte aktualisieren, nachdem jemand damit interagiert hat. 
+Sie können auch darauf reagieren, indem Sie `submitAction` eine Nachricht mit einer adaptiven Karte mit einem Bot in den Kanal einfügen. Der Benutzer kann eine Vorschau der Nachricht anzeigen, bevor er sie übermittelt. Dies ist nützlich in Szenarien, in denen Sie Informationen von den Benutzern sammeln, bevor Sie eine Antwort für adaptive Karten erstellen, oder wenn Sie die Karte aktualisieren, nachdem jemand damit interagiert hat. 
 
 Das folgende Szenario zeigt, wie die App Polly eine Abfrage konfiguriert, ohne die Konfigurationsschritte in die Kanalunterhaltung aufzunehmen:
 
@@ -598,13 +598,13 @@ Der folgende Abschnitt enthält eine Beschreibung der Entitäten im `OnBehalfOf`
 | Beispielname           | Beschreibung | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams Messaging-Erweiterungsaktion| Beschreibt, wie Aktionsbefehle definiert, Aufgabenmodul erstellt und auf Aufgabenmodul-Sendeaktion reagiert wird. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams Messaging-Erweiterungssuche   |  Beschreibt, wie Suchbefehle definiert und auf Suchvorgänge reagiert wird.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams Suche nach Messaging-Erweiterungen   |  Beschreibt, wie Suchbefehle definiert und auf Suchvorgänge reagiert wird.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Definition von Suchbefehlen](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Auf Suchbefehl antworten](~/messaging-extensions/how-to/search-commands/respond-to-search.md)

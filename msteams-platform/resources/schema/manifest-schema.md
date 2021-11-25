@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams-Manifestschema
-ms.openlocfilehash: 8032228dd9032c0465a9d408b0c78700bdc2341e
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: 57936f553d07d984f819c8af84c6a9bfd0a1f26f
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912206"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178244"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -333,7 +333,7 @@ Die Version des Manifestschemas, das dieses Manifest verwendet. Es muss 1.10 sei
 
 **Erforderlich**– Zeichenfolge
 
-Die Version einer bestimmten App. Wenn Sie etwas in Ihrem Manifest aktualisieren, muss auch die Version erhöht werden. Auf diese Weise wird bei der Installation des neuen Manifests das vorhandene überschrieben, und der Benutzer erhält die neue Funktionalität. Wenn diese App an den Store übermittelt wurde, muss das neue Manifest erneut gesendet und erneut validiert werden. Die App-Benutzer erhalten das neue aktualisierte Manifest automatisch innerhalb weniger Stunden nach der Genehmigung des Manifests.
+Die Version einer bestimmten App. Wenn Sie etwas in Ihrem Manifest aktualisieren, muss auch die Version erhöht werden. Auf diese Weise wird bei der Installation des neuen Manifests das vorhandene überschrieben, und der Benutzer erhält die neue Funktionalität. Wenn diese App an den Store übermittelt wurde, muss das neue Manifest erneut gesendet und erneut validiert werden. Die App-Benutzer erhalten das neue aktualisierte Manifest innerhalb weniger Stunden nach der Genehmigung des Manifests automatisch.
 
 Wenn sich die App-Anforderungen für Berechtigungen ändern, werden die Benutzer aufgefordert, ein Upgrade durchzuführen und die App erneut zu konfigurieren.
 
@@ -443,7 +443,7 @@ Wird verwendet, wenn Ihre App-Erfahrung über eine Registerkartenoberfläche im 
 |`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: **true**.|
 |`context` |Array von Enumerationen|6 ||Die Gruppe von `contextItem` Bereichen, in denen eine [Registerkarte unterstützt wird.](../../tabs/how-to/access-teams-context.md) Standard: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Ein relativer Dateipfad zu einem Registerkartenvorschaubild zur Verwendung in SharePoint. Größe 1024 x 768. |
-|`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint verfügbar gemacht wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
+|`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint zur Verfügung gestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -559,7 +559,7 @@ Jedes Befehlselement ist ein Objekt mit der folgenden Struktur:
 |`parameters.name`|string|64 Zeichen|✔|Der Name des Parameters, wie er im Client angezeigt wird. Der Parametername ist in der Benutzeranforderung enthalten.|
 |`parameters.title`|string|32 Zeichen|✔|Benutzerfreundlicher Titel für den Parameter.|
 |`parameters.description`|string|128 Zeichen||Benutzerfreundliche Zeichenfolge, die den Zweck dieses Parameters beschreibt.|
-|`parameters.value`|string|512 Zeichen||Anfangswert für den Parameter.|
+|`parameters.value`|string|512 Zeichen||Anfangswert für den Parameter. Derzeit wird der Wert nicht unterstützt.|
 |`parameters.inputType`|string|128 Zeichen||Definiert den Typ des Steuerelements, das in einem Aufgabenmodul für angezeigt `fetchTask: true` wird. Eine von `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|Array von Objekten|10 Elemente||Die Auswahloptionen für die `choiceset` . Wird nur verwendet, wenn `parameter.inputType` `choiceset` .|
 |`parameters.choices.title`|string|128 Zeichen|✔|Titel der Wahl.|
@@ -596,7 +596,7 @@ Eine Liste der gültigen Domänen für Websites, die von der App im Teams-Client
 
 Schließen Sie **nicht** die Domänen von Identitätsanbietern ein, die Sie in Ihrer App unterstützen möchten. Um sich beispielsweise mit einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten. Sie dürfen jedoch keine accounts.google.com in `validDomains[]` einschließen.
 
-Teams Apps, für die eigene SharePoint URLs erforderlich sind, um ordnungsgemäß zu funktionieren, enthält "{teamsitedomain}" in ihre gültige Domänenliste.
+Teams Apps, für die eigene SharePoint URLs erforderlich sind, um ordnungsgemäß zu funktionieren, enthält "{teamsitedomain}" in ihrer gültigen Domänenliste.
 
 > [!IMPORTANT]
 > Fügen Sie keine Domänen hinzu, die sich außerhalb Ihres Steuerelements befinden, entweder direkt oder über Platzhalter. Ist z. `yourapp.onmicrosoft.com` B. gültig, ist jedoch `*.onmicrosoft.com` ungültig.
@@ -738,7 +738,7 @@ Sie können eine der folgenden Eigenschaften definieren:
 * `longDescription`: Die lange Beschreibung der App.
 * `smallImageUrl`: Das Gliederungssymbol der App.
 * `largeImageUrl`: Das Farbsymbol der App.
-* `accentColor`: Die zu verwendende Farbe und ein Hintergrund für Ihre Gliederungssymbole.
+* `accentColor`: Die zu verwendende Farbe und ein Hintergrund für Die Gliederungssymbole.
 * `developerUrl`: Die HTTPS-URL der Website des Entwicklers.
 * `privacyUrl`: Die HTTPS-URL der Datenschutzrichtlinie des Entwicklers.
 * `termsOfUseUrl`: Die HTTPS-URL der Nutzungsbedingungen des Entwicklers.
@@ -747,7 +747,7 @@ Sie können eine der folgenden Eigenschaften definieren:
 
 **Optional**-boolean
  
-Wenn `defaultBlockUntilAdminAction` die Eigenschaft auf **"true"** festgelegt ist, ist die App standardmäßig für Benutzer ausgeblendet, bis der Administrator sie zulässt. Bei Festlegung auf **"true"** ist die App für alle Mandanten und Endbenutzer ausgeblendet. Mandantenadministratoren können die App im Teams Admin Center sehen und Maßnahmen ergreifen, um die App zuzulassen oder zu blockieren. Der Standardwert ist **false**. Weitere Informationen zum standardmäßigen App-Block finden Sie unter [Ausblenden Teams App, bis der Administrator dies genehmigt.](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)
+Wenn `defaultBlockUntilAdminAction` die Eigenschaft auf **"true"** festgelegt ist, ist die App standardmäßig für Benutzer ausgeblendet, bis der Administrator sie zulässt. Bei Festlegung auf **"true"** ist die App für alle Mandanten und Endbenutzer ausgeblendet. Mandantenadministratoren können die App im Teams Admin Center sehen und Maßnahmen ergreifen, um die App zuzulassen oder zu blockieren. Der Standardwert ist **false**. Weitere Informationen zum Standardmäßigen App-Block finden Sie unter [Ausblenden Teams App, bis der Administrator dies genehmigt.](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 
@@ -767,10 +767,10 @@ Gibt das Ihrer App zugeordnete SaaS-Angebot an.
 |---|---|---|---|---|
 |`offerId`| string | 2.048 Zeichen | ✔ | Ein eindeutiger Bezeichner, der Ihre Publisher-ID und Angebots-ID enthält, die Sie im [Partner Center](https://partner.microsoft.com/dashboard)finden. Sie müssen die Zeichenfolge als `publisherId.offerId` formatieren.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Grundlegendes zur Microsoft Teams App-Struktur](~/concepts/design/app-structure.md)
 * [Aktivieren der App-Anpassung](~/concepts/design/enable-app-customization.md)
 * [Lokalisieren IhrerApp](~/concepts/build-and-test/apps-localization.md)
 * [Integrieren von Medienfunktionen](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
-* [Referenz zum Entwicklervorschaumanifestschema – Teams](~/resources/schema/manifest-schema-dev-preview.md)
+* [Schemareferenz für das Entwicklervorschaumanifest – Teams](~/resources/schema/manifest-schema-dev-preview.md)
