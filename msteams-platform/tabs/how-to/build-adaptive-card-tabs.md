@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: Datenfluss der Authentifizierungsdaten für persönliche Apps für adaptive Karten
-ms.openlocfilehash: ba8a28a25665370420b05de64d8302d8ef160687
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 27cd42b7477019a09af0c23e8a3559d2cc540305
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887560"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216097"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
@@ -155,7 +155,7 @@ Der folgende Code enthält Beispiele für `tab/fetch` Anforderung und Antwort:
                 },
                 {
                     "card": adaptiveCard2,
-                }
+                },
                 {
                     "card": adaptiveCard3
                 }  
@@ -427,7 +427,7 @@ Der folgende Code zeigt ein neu ausgestelltes Anforderungsbeispiel:
 
 |**Beispielname** | **Beschreibung** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| Adaptive Karten auf Teams Registerkarte anzeigen | Microsoft Teams Beispielcode der Registerkarte, der veranschaulicht, wie adaptive Karten in Teams angezeigt werden. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| Anzeigen adaptiver Karten auf Teams Registerkarte | Microsoft Teams Beispielcode der Registerkarte, der veranschaulicht, wie adaptive Karten in Teams angezeigt werden. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

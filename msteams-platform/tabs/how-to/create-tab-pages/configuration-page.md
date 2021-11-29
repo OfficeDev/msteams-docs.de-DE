@@ -6,16 +6,16 @@ keywords: Konfigurierbarer Gruppenkanal für Teams-Registerkarten
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 76381e717f0955ade16c0965a0448a1854822fe8
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6e182c305950188e316c290e2c3d3fd5732adcf4
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888020"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216216"
 ---
 # <a name="create-a-configuration-page"></a>Erstellen einer Konfigurationsseite
 
-Eine Konfigurationsseite ist ein spezieller [Inhaltsseitentyp.](content-page.md) Die Benutzer konfigurieren einige Aspekte der Microsoft Teams App mithilfe der Konfigurationsseite und verwenden diese Konfiguration als Teil der folgenden:
+Eine Konfigurationsseite ist ein spezieller [Inhaltsseitentyp.](content-page.md) Die Benutzer konfigurieren einige Aspekte der Microsoft Teams App mithilfe der Konfigurationsseite und verwenden diese Konfiguration als Teil der folgenden Komponenten:
 
 * Registerkarte "Kanal- oder Gruppenchat": Sammeln sie Informationen von den Benutzern, und legen Sie `contentUrl` die anzuzeigende Inhaltsseite fest.
 * Eine [Messaging-Erweiterung](~/messaging-extensions/what-are-messaging-extensions.md).
@@ -108,6 +108,7 @@ Der Code der Konfigurationsseite informiert Teams, dass die Konfigurationsanford
 
 >[!NOTE]
 >
+>* Sie haben 30 Sekunden Zeit, um den Speichervorgang (den Rückruf für registerOnSaveHandler) vor dem Timeout abzuschließen. Nach dem Timeout wird eine generische Fehlermeldung angezeigt.
 >* Wenn Sie einen Speicherhandler mithilfe `microsoftTeams.settings.registerOnSaveHandler()` registrieren, muss der Rückruf aufgerufen `saveEvent.notifySuccess()` werden oder das Ergebnis der Konfiguration `saveEvent.notifyFailure()` angeben.
 >* Wenn Sie keinen Speicherhandler registrieren, wird der `saveEvent.notifySuccess()` Aufruf automatisch ausgeführt, wenn der Benutzer **"Speichern"** auswählt.
 
@@ -123,7 +124,7 @@ Weitere Informationen zu den Eigenschaften, die für die Registerkartenkonfigura
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Einfügen von Platzhaltern in die `configurationUrl`
 
-Fügen Sie Ihrer Basis Platzhalter für die Kontextschnittstelle `configurationUrl` hinzu. Zum Beispiel:
+Fügen Sie Ihrer Basis Platzhalter für die Kontextschnittstelle `configurationUrl` hinzu. Beispiel:
 
 ##### <a name="base-url"></a>Basis-URL
 
@@ -184,7 +185,7 @@ Authentifizieren Sie sich, bevor ein Benutzer Ihre App konfigurieren kann. Ander
 
 Legen Sie die Eigenschaft Ihres Manifests `canUpdateConfiguration` auf , die es benutzern `true` ermöglicht, einen Kanal oder eine Gruppenregisterkarte zu ändern, neu zu konfigurieren oder umzubenennen. Geben Sie außerdem an, was mit dem Inhalt geschieht, wenn eine Registerkarte entfernt wird, indem Sie eine Seite mit Den entfernten Optionen in die App einschließen und einen Wert für die `removeUrl` Eigenschaft in der Konfiguration  `setSettings()` festlegen. Der Benutzer kann persönliche Registerkarten deinstallieren, aber nicht ändern. Weitere Informationen finden Sie unter [Erstellen einer Seite zum Entfernen ihrer Registerkarte.](~/tabs/how-to/create-tab-pages/removal-page.md)
 
-`setSettings()`Microsoft Teams Konfigurationsseite für die Entfernungsseite:
+Microsoft Teams `setSettings()` Konfiguration für die Entfernungsseite:
 
 ```javascript
 microsoftTeams.settings.setSettings({

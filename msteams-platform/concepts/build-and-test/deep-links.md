@@ -4,12 +4,12 @@ description: Beschreibt Deep-Links und deren Verwendung in Ihren Apps
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: DeepLink für Teams
-ms.openlocfilehash: 0d1ad5b74c434a20a1e2d7f55e970e5811c34890
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 112331c30e48ce9f151a79142c8bbec20990e03c
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889153"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216181"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links 
 
@@ -32,7 +32,7 @@ Sie können Links zu Informationen und Features in Teams erstellen. Die folgende
 >
 > **Chat**:  
 > ✔ Textnachrichten-Hyperlinkmarkdown: Navigiert direkt zur Deeplink-URL.  
-> ✔ Link, der in einer allgemeinen Chatunterhaltung eingefügt wird: Navigiert direkt zur Deeplink-URL.
+> ✔ In allgemeine Chatunterhaltung eingefügte Link: Navigiert direkt zur Deeplink-URL.
 
 ## <a name="deep-linking-to-your-tab"></a>Deep-Verknüpfung zu Ihrer Registerkarte
 
@@ -69,8 +69,8 @@ Verwenden Sie das folgende Format für einen Deep-Link, den Sie in einer Bot-, C
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
-> Wenn der Bot eine Nachricht `TextBlock` mit einem Deep-Link sendet, wird eine neue Browserregisterkarte geöffnet, wenn der Benutzer den Link auswählt. Dies geschieht in Chrome und in der Microsoft Teams-Desktop-App, die beide unter Linux ausgeführt werden.
-> Wenn der Bot dieselbe Deep-Link-URL an eine `Action.OpenUrl` sendet, wird die Registerkarte Teams auf der aktuellen Browserregisterkarte geöffnet, wenn der Benutzer den Link auswählt. Eine neue Browserregisterkarte wird nicht geöffnet.
+> Wenn der Bot eine Nachricht `TextBlock` mit einem Deep-Link sendet, wird eine neue Browserregisterkarte geöffnet, wenn der Benutzer den Link auswählt. Dies geschieht in Chrome und in der Microsoft Teams Desktop-App, die beide unter Linux ausgeführt werden.
+> Wenn der Bot dieselbe Deep-Link-URL in eine `Action.OpenUrl` sendet, wird die Registerkarte Teams auf der aktuellen Browserregisterkarte geöffnet, wenn der Benutzer den Link auswählt. Eine neue Browserregisterkarte wird nicht geöffnet.
 
 Die Abfrageparameter sind:
 
@@ -140,7 +140,7 @@ Beispiel: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@cont
 
 Die Abfrageparameter sind:
 
-* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Chats darstellen. Der Benutzer, der die Aktion ausführt, ist immer als Teilnehmer enthalten. Derzeit unterstützt das Benutzer-ID-Feld den Azure AD UserPrincipalName, z. B. nur eine E-Mail-Adresse.
+* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Chats darstellen. Der Benutzer, der die Aktion ausführt, ist immer als Teilnehmer enthalten. Derzeit unterstützt das Feld "Benutzer-ID" den Azure AD UserPrincipalName, z. B. nur eine E-Mail-Adresse.
 * `topicName`: Ein optionales Feld für den Anzeigenamen des Chats, im Falle eines Chats mit 3 oder mehr Benutzern. Wenn dieses Feld nicht angegeben ist, basiert der Anzeigename des Chats auf den Namen der Teilnehmer.
 * `message`: Ein optionales Feld für den Nachrichtentext, den Sie in das Feld zum Verfassen des aktuellen Benutzers einfügen möchten, während sich der Chat im Entwurfszustand befindet.
 
@@ -188,7 +188,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## <a name="deep-linking-to-an-app"></a>Deep-Links zu einer App
 
-Erstellen Sie Deeplinks für die App, nachdem die App im Teams Store aufgeführt wurde. Um einen Link zum Starten Teams zu erstellen, fügen Sie die folgende URL an Ihre App-ID an: `https://teams.microsoft.com/l/app/<your-app-id>` . Ein Dialogfeld wird angezeigt, um die App zu installieren. 
+Erstellen Sie Deeplinks für die App, nachdem die App im Teams Store aufgeführt wurde. Um einen Link zum Starten Teams zu erstellen, fügen Sie die App-ID an die folgende URL an: `https://teams.microsoft.com/l/app/<your-app-id>` . Ein Dialogfeld wird angezeigt, um die App zu installieren. 
   
 ## <a name="deep-linking-for-sharepoint-framework-tabs"></a>Deep-Verknüpfung für SharePoint-Framework Registerkarten
 
@@ -259,7 +259,7 @@ Bei einem Videoanruf fordert der Client die Bestätigung an und aktiviert das Vi
 | Tätigen eines Audio- und Videoanrufs an eine Kombination aus VoIP- und PSTN-Benutzern | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; ,4: &lt; Phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 Es folgen die Abfrageparameter:
-* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Anrufs darstellen. Derzeit unterstützt das Benutzer-ID-Feld den Azure AD UserPrincipalName, in der Regel eine E-Mail-Adresse, oder im Falle eines PSTN-Anrufs unterstützt es eine pstn mri 4: &lt; Phonenumber &gt; .
+* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Anrufs darstellen. Derzeit unterstützt das Benutzer-ID-Feld die Azure AD UserPrincipalName, in der Regel eine E-Mail-Adresse, oder im Falle eines PSTN-Anrufs unterstützt es eine pstn mri 4: &lt; Phonenumber &gt; .
 * `withVideo`: Dies ist ein optionaler Parameter, den Sie für einen Videoanruf verwenden können. Durch Festlegen dieses Parameters wird nur die Kamera des Anrufers aktiviert. Der Empfänger des Anrufs hat die Möglichkeit, audio- oder audio- und videoanrufe über das Teams Anrufbenachrichtigungsfenster zu beantworten. 
 * `Source`: Dies ist ein optionaler Parameter, der über die Quelle des Deeplinks informiert.
 
@@ -267,7 +267,7 @@ Es folgen die Abfrageparameter:
 
 | Beispielname | Beschreibung | C# |Node.js|
 |-------------|-------------|------|----|
-|Deep Link consuming Subentity ID  |Microsoft Teams Beispiel-App zum Demonstrieren von Deeplink vom Bot-Chat zu registerkartenverwendenden Subentity-ID.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|Deep Link consuming Subentity ID  |Microsoft Teams Beispiel-App zum Demonstrieren von Deeplink vom Bot-Chat zum Tab, der die Unterentitäts-ID verwendet.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## <a name="see-also"></a>Siehe auch
 

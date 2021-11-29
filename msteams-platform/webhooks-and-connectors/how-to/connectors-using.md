@@ -5,12 +5,12 @@ description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Te
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams O365-Connector
-ms.openlocfilehash: 46a0bc8ad797d5fc856e44fe662faf208cb7b5bb
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 49f14862870fae216de1a6d810eacd4b23c81540
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887392"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216195"
 ---
 # <a name="create-and-send-messages"></a>Nachrichten erstellen und senden
 
@@ -18,7 +18,7 @@ Sie können Nachrichten mit Aktionen erstellen und über eingehenden Webhook ode
 
 ## <a name="create-actionable-messages"></a>Erstellen von Nachrichten mit Aktionen
 
-Die Aktionen erfordernden Nachrichten enthalten drei sichtbare Schaltflächen auf der Karte. Jede Schaltfläche wird in der `potentialAction` Eigenschaft der Nachricht mithilfe von Aktionen `ActionCard` definiert, die jeweils einen Eingabetyp, ein Textfeld, eine Datumsauswahl oder eine Mehrfachauswahlliste enthalten. Jeder `ActionCard` hat eine zugeordnete Aktion, `HttpPOST` z. B. .
+Die Aktionen erfordernden Nachrichten enthalten sechs sichtbare Schaltflächen auf der Karte. Jede Schaltfläche wird in der `potentialAction` Eigenschaft der Nachricht mithilfe von Aktionen `ActionCard` definiert, die jeweils einen Eingabetyp, ein Textfeld, eine Datumsauswahl oder eine Mehrfachauswahlliste enthalten. Jeder `ActionCard` hat eine zugeordnete Aktion, `HttpPOST` z. B. .
 
 Die Connectorkarten unterstützen die folgenden Aktionen:
 
@@ -168,7 +168,7 @@ Diese Nachricht enthält die folgende Karte im Kanal:
     > [!NOTE]
     > Wenn der POST erfolgreich ist, müssen Sie eine einfache Ausgabe von **1** `curl` sehen.
 
-1. Überprüfen Sie den Microsoft Teams-Client auf die neue bereitgestellte Karte.
+1. Überprüfen Sie den Microsoft Teams-Client für die neue bereitgestellte Karte.
 
 # <a name="powershell"></a>[PowerShell](#tab/PowerShell)
 
@@ -287,3 +287,4 @@ Diese Grenzwerte sind vorhanden, um das Spamming eines Kanals über einen Connec
 * [Erstellen eines ausgehenden Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Begrenzung der Raten für Teams Bots-Nachrichten](~/bots/how-to/rate-limit.md)
 * [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Formatieren von Karten in Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md)

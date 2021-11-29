@@ -4,12 +4,12 @@ description: Beschreibt, wie Sie Benutzerkontext zu Ihren Registerkarten abrufen
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams Registerkarten Benutzerkontext
-ms.openlocfilehash: 5a85aaf23089cbe8215c64b7cc342ee3577510bd
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 336173f1c3a59e0dde6989fd21f60077c897c9df
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887539"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216104"
 ---
 # <a name="get-context-for-your-tab"></a>Kontext für Ihre Registerkarte erhalten
 
@@ -24,7 +24,9 @@ Ihre Registerkarte erfordert Kontextinformationen, um relevante Inhalte anzuzeig
 Der Kontext über den Benutzer, das Team oder das Unternehmen kann besonders hilfreich sein, wenn:
 
 * Sie erstellen ressourcen in Ihrer App oder ordnen sie dem angegebenen Benutzer oder Team zu.
-* Sie initiieren einen Authentifizierungsfluss von Azure Active Directory (AAD) oder einem anderen Identitätsanbieter, und Sie müssen den Benutzer nicht erneut eingeben. Weitere Informationen finden Sie unter [Authentifizieren eines Benutzers auf der Registerkarte Microsoft Teams.](~/concepts/authentication/authentication.md)
+* Sie initiieren einen Authentifizierungsfluss von Azure Active Directory (AAD) oder einem anderen Identitätsanbieter, und Sie müssen nicht erneut den Benutzernamen des Benutzers eingeben. 
+
+Weitere Informationen finden Sie unter [Authentifizieren eines Benutzers in Ihrem Microsoft Teams.](~/concepts/authentication/authentication.md)
 
 > [!IMPORTANT]
 > Obwohl diese Benutzerinformationen zu einer reibungslosen Benutzererfahrung beitragen können, dürfen Sie sie nicht als Identitätsnachweis verwenden.  Beispielsweise kann ein Angreifer Ihre Seite in einem Browser laden und schädliche Informationen oder Anforderungen rendern.
@@ -48,23 +50,23 @@ Verwenden Sie Platzhalter in Ihren Konfigurations-oder Inhalts-URLs. Microsoft T
 * {theme}: Das aktuelle Benutzeroberflächendesign wie `default` , `dark` oder `contrast` .
 * {groupId}: Die ID der Office 365 Gruppe, in der sich die Registerkarte befindet.
 * {tid}: Die AAD Mandanten-ID des aktuellen Benutzers.
-* {locale}: Das aktuelle Gebietsschema des Benutzers, das als languageId-countryId formatiert ist. Beispiel: en-us.
+* {locale}: Das aktuelle Gebietsschema des Benutzers, das als languageId-countryId(en-us) formatiert ist.
 
 > [!NOTE]
 > Der bisherige Platzhalter `{upn}` ist nun veraltet. Aus Gründen der Abwärtskompatibilität ist es derzeit ein Synonym für `{loginHint}`.
 
 In Ihrem Registerkartenmanifest legen Sie das Attribut beispielsweise `configURL` auf `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` fest, dass der angemeldete Benutzer die folgenden Attribute hat:
 
-* Ihr Benutzername ist **user@example.com.**
+* Ihr Benutzername ist **user@example.com**.
 * Die Mandanten-ID des Unternehmens lautet **e2653c usw.**
-* Sie sind Mitglied der Office 365-Gruppe mit der ID **00209384 usw.**
+* Sie sind Mitglied der Office 365-Gruppe mit id **00209384-usw.**
 * Der Benutzer hat sein Teams Design auf **dunkel** festgelegt.
 
 Wenn sie die Registerkarte konfigurieren, ruft Teams die folgende URL auf:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
-### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Abrufen des Kontexts mithilfe der Microsoft Teams JavaScript-Bibliothek
+### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Abrufen von Kontext mithilfe der Microsoft Teams JavaScript-Bibliothek
 
 Sie können die zuvor aufgeführten Informationen auch mithilfe des [JavaScript-Client-SDKs von Microsoft Teams](/javascript/api/overview/msteams-client) abrufen, indem Sie `microsoftTeams.getContext(function(context) { /* ... */ })` aufrufen.
 
@@ -106,7 +108,8 @@ Der folgende Code enthält ein Beispiel für eine Kontextvariable:
     "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
     "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
     "meetingId": "The meeting ID used by tab when running in meeting context",
-    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel"
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "isMultiWindow": "The indication whether the tab is in a pop out window"
 }
 ```
 
@@ -115,14 +118,16 @@ Der folgende Code enthält ein Beispiel für eine Kontextvariable:
 > [!Note]
 > Private Kanäle befinden sich derzeit in der privaten Entwicklervorschau.
 
-Wenn Ihre Inhaltsseite in einem privaten Kanal geladen wird, werden die Daten, die Sie vom Anruf erhalten, `getContext` verborgen, um den Datenschutz des Kanals zu schützen. Die folgenden Felder werden geändert, wenn sich Die Inhaltsseite in einem privaten Kanal befindet:
+Wenn Ihre Inhaltsseite in einem privaten Kanal geladen wird, werden die Daten, die Sie vom Anruf erhalten, `getContext` verborgen, um den Datenschutz des Kanals zu schützen. 
+
+Die folgenden Felder werden geändert, wenn sich Die Inhaltsseite in einem privaten Kanal befindet:
 
 * `groupId`: Nicht definiert für private Kanäle
 * `teamId`: Auf die threadId des privaten Kanals festgelegt
 * `teamName`: Auf den Namen des privaten Kanals festgelegt
-* `teamSiteUrl`: Legen Sie die URL einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal fest.
-* `teamSitePath`: Legen Sie den Pfad einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal fest.
-* `teamSiteDomain`: Festlegen auf die Domäne einer eindeutigen SharePoint-Websitedomäne für den privaten Kanal
+* `teamSiteUrl`: Legen Sie die URL einer eindeutigen SharePoint-Website für den privaten Kanal fest.
+* `teamSitePath`: Auf den Pfad einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal festgelegt
+* `teamSiteDomain`: Auf die Domäne einer eindeutigen, eindeutigen SharePoint-Websitedomäne für den privaten Kanal festgelegt
 
 Wenn Ihre Seite einen dieser Werte verwendet, müssen Sie das Feld überprüfen, `channelType` um festzustellen, ob Die Seite in einem privaten Kanal geladen ist, und entsprechend reagieren.
 

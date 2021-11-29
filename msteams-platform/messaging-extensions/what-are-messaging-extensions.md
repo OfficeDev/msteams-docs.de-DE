@@ -5,12 +5,12 @@ description: Eine Übersicht über Messaging-Erweiterungen auf der Microsoft Tea
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 1448cb334521b6937ab87514c35e2b628a3e8106
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: baef9ac9bb15b3b2efd7b05b36966c5e6d30083c
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948558"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216223"
 ---
 # <a name="messaging-extensions"></a>Messaging-Erweiterungen
 
@@ -28,8 +28,8 @@ In der folgenden Abbildung werden die Speicherorte angezeigt, von denen Messagin
 | Szenario | Beispiel |
 |:-----------------|:-----------------|
 |Sie möchten, dass ein externes System eine Aktion ausführt und das Ergebnis der Aktion zurück an Ihre Unterhaltung gesendet wird.|Reservieren Sie eine Ressource, und ermöglichen Sie dem Kanal, das reservierte Zeitfenster zu kennen.|
-|Sie möchten etwas in einem externen System finden und die Ergebnisse für die Unterhaltung freigeben.|Suchen Sie in Azure DevOps nach einer Arbeitsaufgabe, und geben Sie sie für die Gruppe als adaptive Karte frei.|
-|Sie möchten eine komplexe Aufgabe mit mehreren Schritten oder vielen Informationen in einem externen System abschließen und die Ergebnisse mit einer Unterhaltung teilen.|Erstellen Sie einen Fehler in Ihrem Tracking-System basierend auf einer Teams Nachricht, weisen Sie diesen Fehler Bob zu, und senden Sie eine Karte mit den Details des Fehlers an den Unterhaltungsthread.|
+|Sie möchten etwas in einem externen System finden und die Ergebnisse für die Unterhaltung freigeben.|Suchen Sie in Azure DevOps nach einer Arbeitsaufgabe, und geben Sie sie als adaptive Karte für die Gruppe frei.|
+|Sie möchten eine komplexe Aufgabe mit mehreren Schritten oder vielen Informationen in einem externen System abschließen und die Ergebnisse mit einer Unterhaltung teilen.|Erstellen Sie einen Fehler in Ihrem Tracking-System basierend auf einer Teams Nachricht, weisen Sie bob diesen Fehler zu, und senden Sie eine Karte mit den Details des Fehlers an den Unterhaltungsthread.|
 
 ## <a name="understand-how-messaging-extensions-work"></a>Grundlegendes zur Funktionsweise von Messaging-Erweiterungen
 
@@ -38,7 +38,7 @@ Eine Messaging-Erweiterung besteht aus einem Webdienst, den Sie hosten, und eine
 > [!NOTE]
 > Obwohl Sie den Webdienst manuell erstellen können, verwenden Sie [das Bot Framework SDK,](https://github.com/microsoft/botframework-sdk) um mit dem Protokoll zu arbeiten.
 
-Im App-Manifest für Microsoft Teams App wird eine einzelne Messaging-Erweiterung mit bis zu zehn verschiedenen Befehlen definiert. Jeder Befehl definiert einen Typ, z. B. Aktion oder Suche und die Speicherorte im Client, von wo aus er aufgerufen wird. Die Aufrufspeicherorte sind Verfassen-Nachrichtenbereich, Befehlsleiste und Nachricht. Beim Aufrufen empfängt der Webdienst eine HTTPS-Nachricht mit einer JSON-Nutzlast, die alle relevanten Informationen enthält. Antworten Sie mit einer JSON-Nutzlast, sodass der Teams-Client die nächste zu aktivierende Interaktion kennen kann. 
+Im App-Manifest für Microsoft Teams App wird eine einzelne Messaging-Erweiterung mit bis zu zehn verschiedenen Befehlen definiert. Jeder Befehl definiert einen Typ, z. B. Aktion oder Suche und die Speicherorte im Client, von wo aus er aufgerufen wird. Die Aufrufspeicherorte sind Verfassen-Nachrichtenbereich, Befehlsleiste und Nachricht. Beim Aufrufen empfängt der Webdienst eine HTTPS-Nachricht mit einer JSON-Nutzlast, die alle relevanten Informationen enthält. Antworten Sie mit einer JSON-Nutzlast, sodass der Teams Client die nächste zu aktivierende Interaktion kennen kann. 
 
 ## <a name="types-of-messaging-extension-commands"></a>Typen von Messaging-Erweiterungsbefehlen
 
@@ -74,9 +74,10 @@ Die folgenden Bilder zeigen das Feature zum Aufheben von Links, wenn ein Link in
 ## <a name="code-sample"></a>Codebeispiel
 
 | **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
-|------------|-------------|----------------|------------|
+|------------|-------------|----------------|------------|------------|
 | Messaging-Erweiterung mit aktionsbasierten Befehlen | In diesem Beispiel wird veranschaulicht, wie Sie eine aktionsbasierte Messaging-Erweiterung erstellen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | Messaging-Erweiterung mit suchbasierten Befehlen | In diesem Beispiel wird veranschaulicht, wie Sie eine suchbasierte Messaging-Erweiterung erstellen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+|Messaging-Erweiterungsaktion für die Aufgabenplanung|In diesem Beispiel wird veranschaulicht, wie Sie eine Aufgabe über den Aktionsbefehl für die Messaging-Erweiterung planen und eine Erinnerungskarte zu einem geplanten Datum und zu einer geplanten Uhrzeit abrufen.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
 
 ## <a name="next-step"></a>Nächster Schritt
 

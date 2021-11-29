@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams-Apps besprechungen – Benutzerteilnehmer-Rollen-API – Signalsignalabfrage für Benutzerteilnehmer
-ms.openlocfilehash: ba7996e0c33823c3f296d18350ea33421c844c68
-ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+ms.openlocfilehash: 251f8bbd65bf8ba563f09302b16bf7285a5c4267
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "61041629"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216069"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
@@ -25,10 +25,13 @@ Die folgende Tabelle enthält eine Liste der APIs:
 
 |API|Beschreibung|Anforderung|Source|
 |---|---|----|---|
-|**GetUserContext**| Mit dieser API können Sie Kontextinformationen abrufen, um relevante Inhalte auf einer Teams Registerkarte anzuzeigen. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams Client SDK|
-|**GetParticipant**| Diese API ermöglicht es einem Bot, Teilnehmerinformationen nach Besprechungs-ID und Teilnehmer-ID abzurufen. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
-|**NotificationSignal** | Mit dieser API können Sie Besprechungssignale bereitstellen, die mithilfe der vorhandenen Unterhaltungsbenachrichtigungs-API für den Benutzer-Bot-Chat übermittelt werden. Sie können ein Signal basierend auf einer Benutzeraktion senden, die ein Dialogfeld in der Besprechung anzeigt. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
-|**Besprechungsdetails** | Mit dieser API können Sie statische Besprechungsmetadaten abrufen. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
+|**GetUserContext**| Ermöglicht das Abrufen von Kontextinformationen, um relevante Inhalte auf einer Teams Registerkarte anzuzeigen. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams-Client-SDK|
+|**GetParticipant**| Ermöglicht es einem Bot, Teilnehmerinformationen nach Besprechungs-ID und Teilnehmer-ID abzurufen. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
+|**NotificationSignal** | Ermöglicht die Bereitstellung von Besprechungssignalen, die mithilfe der vorhandenen Unterhaltungsbenachrichtigungs-API für den Benutzer-Bot-Chat übermittelt werden. Sie können ein Signal basierend auf einer Benutzeraktion senden, die ein Dialogfeld in der Besprechung anzeigt. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
+|**Besprechungsdetails** | Ermöglicht das Abrufen statischer Besprechungsmetadaten. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
+|**shareAppContentToStage**| Ermöglicht es Ihnen, bestimmte Teile der App über den App-Seitenbereich in einer Besprechung für die Besprechungsphase freizugeben. |_**microsoftTeams.meeting.shareAppContentToStage((err, result) => {} , appContentUrl)**_|Microsoft Teams-Client-SDK|
+|**getAppContentStageSharingState**| Ermöglicht das Abrufen von Informationen zum Freigabestatus von Apps in der Besprechungsphase. |_**microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {}**_|Microsoft Teams-Client-SDK|
+|**getAppContentStageSharingCapabilities**| Ermöglicht es Ihnen, die Funktionen der Apps für die Freigabe in der Besprechungsphase abzurufen. |_**microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {}**_|Microsoft Teams-Client-SDK|
 
 Die folgende Tabelle enthält die Bot Framework SDK-Methoden für die APIs:
 
@@ -56,8 +59,8 @@ Die `GetParticipant` API enthält die folgenden Abfrageparameter:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**meetingId**| String | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
-|**participantId**| String | Ja | Die Teilnehmer-ID ist die Benutzer-ID. Es ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Teilnehmer-ID vom Tab-SSO abzurufen. |
+|**meetingId**| Zeichenfolge | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
+|**participantId**| Zeichenfolge | Ja | Die Teilnehmer-ID ist die Benutzer-ID. Es ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Teilnehmer-ID vom Tab-SSO abzurufen. |
 |**tenantId**| Zeichenfolge | Ja | Die Mandanten-ID ist für die Mandantenbenutzer erforderlich. Es ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Mandanten-ID vom Tab-SSO abzurufen. | 
 
 ### <a name="example"></a>Beispiel
@@ -307,6 +310,185 @@ Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
 } 
 ```
 
+## <a name="shareappcontenttostage-api"></a>shareAppContentToStage-API
+
+Mit `shareAppContentToStage` der API können Sie bestimmte Teile Ihrer App für die Besprechungsphase freigeben. Die API ist über das Teams Client-SDK verfügbar.
+
+### <a name="prerequisite"></a>Voraussetzungen
+
+Um die API zu `shareAppContentToStage` verwenden, müssen Sie die RSC-Berechtigungen abrufen. Konfigurieren Sie im App-Manifest die `authorization` Eigenschaft und das Und im `name` `type` `resourceSpecific` Feld. Beispiel:
+
+```json
+"authorization": {
+    "permission": { 
+    "resourceSpecific": [
+      { 
+      "name": "MeetingStage.Write.Chat",
+      "type": "Delegated"
+      }
+    ]
+   }
+}
+ ```
+
+### <a name="query-parameter"></a>Abfrageparameter
+
+Die `shareAppContentToStage` API enthält die folgenden Parameter:
+
+|Wert|Typ|Erforderlich|Beschreibung|
+|---|---|----|---|
+|**callback**| Zeichenfolge | Ja | Rückruf enthält zwei Parameter, Fehler und Ergebnis. Der *Fehler* kann entweder einen Fehler vom Typ *SdkError* enthalten, im Falle eines Fehlers, oder null, wenn die Freigabe erfolgreich ist. Das *Ergebnis* kann im Falle einer erfolgreichen Freigabe entweder einen true-Wert enthalten oder null, wenn die Freigabe fehlschlägt.|
+|**appContentURL**| Zeichenfolge | Ja | URL, die für die Phase freigegeben wird.|
+
+### <a name="example"></a>Beispiel
+
+Die folgenden Codes enthalten `shareAppContentToStage` API-Beispiele:
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+Nicht verfügbar
+
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
+
+```typescript
+
+const appContentUrl = "https://www.bing.com/";
+
+microsoftTeams.meeting.shareAppContentToStage ((err, result) => {
+if(result) {
+  this.setState({ isAppSharing: true });
+ }
+if(err) {
+  this.setState({ sharingError: err, isAppSharing: false })
+ }
+}, appContentUrl); 
+
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+Nicht verfügbar
+
+---
+
+### <a name="response-codes"></a>Antwortcodes
+
+Die `shareAppContentToStage` API gibt die folgenden Antwortcodes zurück:
+
+|Antwortcode|Beschreibung|
+|---|---|
+| **500** | Interner Fehler. |
+| **501** | Die API wird im aktuellen Kontext nicht unterstützt.|
+| **1000** | Die App verfügt nicht über die richtigen Berechtigungen, um die Freigabe in der Phase zuzulassen.|
+
+## <a name="getappcontentstagesharingstate-api"></a>getAppContentStageSharingState-API
+
+Mit `getAppContentStageSharingState` der API können Sie Informationen zur Freigabe von Apps in der Besprechungsphase abrufen.
+
+### <a name="query-parameter"></a>Abfrageparameter
+
+Die `getAppContentStageSharingState` API enthält den folgenden Parameter:
+
+|Wert|Typ|Erforderlich|Beschreibung|
+|---|---|----|---|
+|**callback**| Zeichenfolge | Ja | Rückruf enthält zwei Parameter, Fehler und Ergebnis. Der *Fehler* kann entweder einen Fehler vom Typ *SdkError* enthalten, im Falle eines Fehlers, oder null, wenn die Freigabe erfolgreich ist. Das *Ergebnis* kann entweder ein `AppContentStageSharingState` Objekt enthalten, das einen erfolgreichen Abruf angibt, oder null, was auf einen fehlgeschlagenen Abruf hinweist.|
+
+### <a name="example"></a>Beispiel
+
+Die folgenden Codes enthalten `getAppContentStageSharingState` API-Beispiele:
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+Nicht verfügbar
+
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
+
+```microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {
+  if(result.isAppSharing) {
+    this.setState({ isGameSessionOver: false });
+   }
+  });
+``` 
+
+# <a name="json"></a>[JSON](#tab/json)
+
+Nicht verfügbar
+
+---
+
+Der JSON-Antworttext für die `getAppContentStageSharingState` API lautet:
+
+```json
+{
+   "isAppSharing":true
+  }
+  
+```
+
+
+### <a name="response-codes"></a>Antwortcodes
+
+Die `getAppContentStageSharingState` API gibt die folgenden Antwortcodes zurück:
+
+|Antwortcode|Beschreibung|
+|---|---|
+| **500** | Interner Fehler. |
+| **501** | Die API wird im aktuellen Kontext nicht unterstützt.|
+| **1000** | Die App verfügt nicht über die richtigen Berechtigungen, um die Freigabe in der Phase zuzulassen.|
+
+## <a name="getappcontentstagesharingcapabilities-api"></a>getAppContentStageSharingCapabilities-API
+
+Mit `getAppContentStageSharingCapabilities` der API können Sie die Funktionen der Apps für die Freigabe in die Besprechungsphase abrufen.
+
+### <a name="query-parameter"></a>Abfrageparameter
+
+Dies `getAppContentStageSharingCapabilities` umfasst die folgenden Parameter:
+
+|Wert|Typ|Erforderlich|Beschreibung|
+|---|---|----|---|
+|**callback**| Zeichenfolge | Ja | Rückruf enthält zwei Parameter, Fehler und Ergebnis. Der *Fehler* kann entweder einen Fehler vom Typ *SdkError* enthalten, im Falle eines Fehlers, oder null, wenn die Freigabe erfolgreich ist. Das Ergebnis kann entweder ein `AppContentStageSharingState` Objekt enthalten, das einen erfolgreichen Abruf angibt, oder null, was auf einen fehlgeschlagenen Abruf hinweist.|
+
+### <a name="example"></a>Beispiel
+
+Die folgenden Codes enthalten `getAppContentStageSharingCapabilities` API-Beispiele:
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+Nicht verfügbar
+
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
+
+```microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {
+  if(result.doesAppHaveSharePermission) {
+    this.setState({ isAppAllowedToShare: true });
+   }
+  });
+``` 
+
+# <a name="json"></a>[JSON](#tab/json)
+
+Nicht verfügbar
+
+---
+
+Der JSON-Antworttext für `getAppContentStageSharingCapabilities` die API lautet:
+
+```json
+{
+   "doesAppHaveSharePermission":true
+  }
+  
+```
+
+### <a name="response-codes"></a>Antwortcodes
+
+Die `getAppContentStageSharingCapabilities` API gibt die folgenden Antwortcodes zurück:
+
+|Antwortcode|Beschreibung|
+|---|---|
+| **500** | Interner Fehler. |
+| **1000** | Die App verfügt nicht über die Berechtigungen zum Bereitstellen der Freigabe.|
+
 ## <a name="real-time-teams-meeting-events"></a>Besprechungsereignisse in Echtzeit Teams
 
 Der Benutzer kann Besprechungsereignisse in Echtzeit empfangen. Sobald eine App einer Besprechung zugeordnet ist, werden die tatsächliche Start- und Endzeit der Besprechung für den Bot freigegeben.
@@ -472,7 +654,13 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 |Beispiel für die Besprechungsrekrutierung|Beispiel-App zum Anzeigen der Besprechungserfahrung für das Einstellungsszenario.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |App-Installation mit QR-Code|Beispiel-App, die den QR-Code generiert und die App mit dem QR-Code installiert|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 
+
 ## <a name="see-also"></a>Siehe auch
 
 * [Teams Authentifizierungsfluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps für Teams Besprechungen](teams-apps-in-meetings.md)
+
+## <a name="next-steps"></a>Nächste Schritte
+
+> [!div class="nextstepaction"]
+> [Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen](enable-and-configure-your-app-for-teams-meetings.md)
