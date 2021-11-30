@@ -1,23 +1,30 @@
 ### YamlMime:Landing
 title: Microsoft Teams-Entwicklerdokumentation
-summary: Willkommen bei der Übersicht über Microsoft Teams Entwicklerdokumentation. Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse, in denen Sichten, Lernen und Arbeiten zunehmend sammeln.
+summary: Willkommen bei der Übersicht über Microsoft Teams Entwicklerdokumentation. Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse, in denen sich Menschen zunehmend sammeln, lernen und arbeiten.
 metadata:
   title: Microsoft Teams-Entwicklerdokumentation
-  description: Einführung in das Erstellen von Apps für Teams
-  ms.date: 11/10/2021
+  description: Einführung in die Erstellung von Apps für Teams
+  ms.service: service
+  ms.subservice: subservice
   ms.topic: landing-page
-  ms.openlocfilehash: 39b4f4de53d5cae2e01e5e6217fa3e05361e347c
-  ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+  ms.collection: collection
+  author: surbhigupta12
+  ms.author: msauthor
+  ms.date: 11/10/2021
+  ms.openlocfilehash: 219966cbb2398239c7875620be55e79f3f9800e7
+  ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/29/2021
-  ms.locfileid: "61216174"
+  ms.lasthandoff: 11/30/2021
+  ms.locfileid: "61227828"
 landingContent:
 - title: Entdecken Sie die neuesten
   linkLists:
   - linkListType: concept
     links:
-    - text: Interaktiver Modus zum Freigeben der Besprechungsphase
+    - text: Teams Toolkit für Visual Studio Code (Vorschau)
+      url: ~/toolkit/teams-toolkit-fundamentals.md
+    - text: Interaktiver Modus zum Freigeben der Besprechungsphase (Vorschau)
       url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage
     - text: Richtlinien zur Validierung von Microsoft Teams-Speichern
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
@@ -45,6 +52,8 @@ landingContent:
       url: ~/sbs-send-proactive.yml
     - text: Schritt-für-Schritt-Anleitung zum Hinzufügen der Authentifizierung zu Bots
       url: ~/sbs-bots-with-sso.yml
+    - text: Schritt-für-Schritt-Anleitung zum Generieren von Besprechungstoken
+      url: ~/sbs-meeting-token-generator.yml
 - title: Erste Schritte
   linkLists:
   - linkListType: get-started
