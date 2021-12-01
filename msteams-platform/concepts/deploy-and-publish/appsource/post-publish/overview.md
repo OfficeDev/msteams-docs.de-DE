@@ -5,18 +5,23 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: ef4ccb10dbfecd10610ef30971ddd43285c0cb0e
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: b62dd1050dead3174738d5f72a5b667d928128b4
+ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260631"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "61246085"
 ---
-# <a name="maintain-your-published-microsoft-teams-app"></a>Verwalten der veröffentlichten Microsoft Teams-App
+# <a name="maintain-your-published-microsoft-teams-app"></a>Verwalten Ihrer veröffentlichten Microsoft Teams-App
 
 Nachdem Ihre App im Microsoft Teams Store aufgeführt ist, überlegen Sie, wie Sie die App in Zukunft verwalten und Downloads und Nutzung erhöhen.
 
 ## <a name="publish-updates-to-your-app"></a>Veröffentlichen von Updates für Ihre App
+
+> [!NOTE]
+> Teams Store hat sich weiterentwickelt:
+> 
+> Zuvor wurden die Links kopiert, indem Ellipsen auf der App-Kachel ausgewählt wurden. Mit der aktualisierten Teams Store-Erfahrung greifen Sie auf der Registerkarte "Details" der Apps auf dasselbe zu. Dieses Update wird bis zum 1. März 2022 allgemein verfügbar sein.
 
 Sie können Änderungen an Ihrer App (z. B. neue Features oder sogar Metadaten) im Partner Center übermitteln. Diese Änderungen erfordern einen neuen Überprüfungsprozess.
 
@@ -29,7 +34,6 @@ Stellen Sie beim Veröffentlichen von Updates Folgendes sicher:
 ### <a name="app-updates-requiring-user-consent"></a>App-Updates, die eine Zustimmung des Benutzers erfordern
 
 Wenn ein Benutzer Ihre App installiert, muss er der App die Berechtigung erteilen, auf die Dienste und Informationen zuzugreifen, die die App für die Funktion benötigt. In den meisten Fällen müssen Benutzer dies einmal tun, und neue Versionen Ihrer App werden automatisch installiert.
-
 Wenn Sie jedoch eine der folgenden Änderungen an Ihrer App vornehmen, müssen Ihre vorhandenen Benutzer eine andere Berechtigungsanforderung akzeptieren, um das Update zu installieren:
 
 * Fügen Sie einen Bot hinzu oder entfernen Sie einen Bot.
@@ -40,7 +44,7 @@ Wenn Sie jedoch eine der folgenden Änderungen an Ihrer App vornehmen, müssen I
 * Fügen Sie eine persönliche Registerkarte hinzu.
 * Fügen Sie einen Kanal und eine Gruppenregisterkarte hinzu.
 * Fügen Sie einen Connector hinzu.
-* Ändern Sie Konfigurationen im Zusammenhang mit Ihrer Azure Active Directory (Azure AD)-App-Registrierung. Weitere Informationen finden Sie unter [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Ändern Von Konfigurationen im Zusammenhang mit ihrer Azure Active Directory (Azure AD)-App-Registrierung. Weitere Informationen finden Sie unter [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Beheben von Problemen mit Ihrer veröffentlichten App
 
@@ -54,8 +58,8 @@ Erstellen Sie den Link mithilfe der folgenden URL, die mit Ihrer App-ID angefüg
 
 ## <a name="complete-microsoft-365-certification"></a>Abschließen Microsoft 365 Zertifizierung
 
-[Microsoft 365 Zertifizierung](/microsoft-365-app-certification/docs/certification) bietet Zusicherungen, dass Daten und Datenschutz angemessen gesichert und geschützt sind, wenn ein Office-App oder Add-In eines Drittanbieters in Ihrem Microsoft 365-Ökosystem installiert wird. Die Zertifizierung bestätigt, dass Ihre App mit Microsoft-Technologien kompatibel ist, den bewährten Methoden für cloudbasierte App-Sicherheit entspricht und von Microsoft unterstützt wird.
+[Microsoft 365 Zertifizierung](/microsoft-365-app-certification/docs/certification) bietet Zusicherungen, dass Daten und Datenschutz angemessen gesichert und geschützt sind, wenn ein drittanbieterbasiertes Office-App oder Add-In in Ihrem Microsoft 365 Ökosystem installiert ist. Die Zertifizierung bestätigt, dass Ihre App mit Microsoft-Technologien kompatibel ist, den bewährten Methoden für cloudbasierte App-Sicherheit entspricht und von Microsoft unterstützt wird.
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Siehe auch
 
 [Monetarisieren Sie Ihre App über den Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

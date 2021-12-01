@@ -1,22 +1,22 @@
 ---
 title: Grundlegendes zu App-Funktionen
 author: heath-hamilton
-description: Beschreibung der Teams App-Funktionen, z. B. Registerkarten, Bots, Messaging-Erweiterungen und Webhooks und Connectors.
+description: Beschreibung Teams App-Funktionen, z. B. Registerkarten, Bots, Messaging-Erweiterungen und Webhooks und Connectors.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: tabs bots messaging extensions webhooks connectors gcc
-ms.openlocfilehash: 4e5d5e17984fd38f3d5c3d511784a2d8a9d955fe
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 9b60556fce448eeecb1f3b96460ea53c8abd5be5
+ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948404"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "61246078"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Grundlegendes zu Microsoft Teams App-Funktionen
 
-Erweiterbarkeit oder Einstiegspunkte sind unterschiedliche Möglichkeiten, wie sich eine App für einen Benutzer manifestieren kann. Beispielsweise kann ein Benutzer mit einer App auf einer Canvas-Registerkarte interagieren, um eine Aktivität zu machen, oder er kann sich dafür entscheiden, dies mithilfe eines Unterhaltungs-Bots zu tun. Die verschiedenen Funktionen, die zum Erstellen Ihrer Teams-App verwendet werden, ermöglichen es Ihnen, den Nutzungsbereich zu erhöhen.
+Erweiterbarkeit oder Einstiegspunkte sind unterschiedliche Möglichkeiten, wie sich eine App für einen Benutzer manifestieren kann. Beispielsweise kann ein Benutzer mit einer App auf einer Canvas-Registerkarte interagieren, um eine Aktivität zu machen, oder er kann sich dafür entscheiden, dies mithilfe eines Unterhaltungs-Bots zu tun. Die verschiedenen Funktionen, die zum Erstellen Ihrer Teams App verwendet werden, ermöglichen es Ihnen, den Nutzungsbereich zu erhöhen.
 
 Es gibt mehrere Möglichkeiten, Teams zu erweitern, sodass jede App einzigartig ist. Einige verfügen nur über eine Funktion, z. B. einen Webhook, während andere über mehrere Funktionen verfügen, um Benutzern verschiedene Optionen zu bieten. Ihre App kann beispielsweise Daten an einem zentralen Ort anzeigen, d. h. auf der **Registerkarte** und diese Informationen über eine Unterhaltungsschnittstelle, d. h. den **Bot,** darstellen.
 
@@ -31,7 +31,7 @@ Ihre Teams-Apps verfügen über eine oder alle der folgenden Kernfunktionen:
 
 Ihre App kann auch erweiterte Funktionen nutzen, z. B. die [Microsoft Graph-API für Teams.](/graph/teams-concept-overview)
 
-In der folgenden Abbildung erhalten Sie eine Vorstellung davon, welche Funktionen die gewünschten Features in Ihrer App bereitstellen:
+Die folgende Abbildung gibt Ihnen eine Vorstellung davon, welche Funktionen die gewünschten Features in Ihrer App bereitstellen:
 
 :::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Mind map illustrating what Teams app capabilities are.":::
 
@@ -44,11 +44,16 @@ Sie können beispielsweise Benutzereingaben in einem Formular sammeln, das als R
 
 Government Community Cloud ist eine Auf Regierung ausgerichtete Kopie der kommerziellen Umgebung. Das Verteidigungsministerium (Department of Defense, DOD) und Die Auftragnehmer des Bundes müssen die strengen Anforderungen an Cybersicherheit und Compliance erfüllen. Zu diesem Zweck wurde GCC-High erstellt, um die Anforderungen von DOD und Bundesauftragnehmern zu erfüllen. GCC-High ist eine Kopie der DOD-Cloud, aber in einer eigenen unabhängigen Umgebung vorhanden. Die DOD-Cloud wurde nur für das Verteidigungsministerium erstellt.
 
+> [!NOTE]
+> Teams Store wurde weiterentwickelt:
+> 
+> Zuvor wurden die BRANCHEN-Apps durch Auswählen der Ellipsen auf der Kachel aktualisiert. Mit der aktualisierten Teams Store-Erfahrung können Sie jetzt die branchenspezifischen Apps aktualisieren, indem Sie sich beim [Teams Admin Center](https://admin.teams.microsoft.com)anmelden.
+
 Die folgende Tabelle enthält Teams Features und Verfügbarkeit für GCC, GCC-Hoch und DOD:
 
 | Features   | GCC | GCC – hoch | DOD |
 |-------------|---------|
-| Teams eigenen Apps wie in intern entwickelten Apps | ✔️ App ist aktiviert, wenn sie über GCC verfügt. | ✔️ App ist aktiviert, wenn sie über GCC-Hoch verfügt. | ✔️ App ist aktiviert, wenn sie ÜBER DOD verfügt. |
+| Teams eigenen Apps wie in intern entwickelten Apps | ✔️ App ist aktiviert, wenn sie über GCC verfügt. | ✔️ App ist aktiviert, wenn sie über GCC-High verfügt. | ✔️ App ist aktiviert, wenn sie über DOD verfügt. |
 | Microsoft-Apps | ✔️ Microsoft-Apps, die mit GCC kompatibel sind | ✔️ Microsoft-Apps, die mit GCC-High kompatibel sind | ✔️ Microsoft-Apps, die DOD-konform sind |
 | 3p- oder Drittanbieter-Apps | ✔️ Drittanbieter-Apps sind verfügbar. Standardmäßig deaktiviert, und mandantenadministratoren verwenden ihren eigenen Ermessen, um es zu aktivieren. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
