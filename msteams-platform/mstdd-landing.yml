@@ -1,9 +1,9 @@
 ### YamlMime:Landing
 title: Microsoft Teams-Entwicklerdokumentation
-summary: Willkommen bei der Übersicht über Microsoft Teams Entwicklerdokumentation. Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse, in denen sich Menschen zunehmend sammeln, lernen und arbeiten.
+summary: Willkommen bei der Übersicht über Microsoft Teams Entwicklerdokumentation. Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse, in denen Sichten, Lernen und Arbeiten zunehmend sammeln.
 metadata:
   title: Microsoft Teams-Entwicklerdokumentation
-  description: Einführung in die Erstellung von Apps für Teams
+  description: Einführung in das Erstellen von Apps für Teams
   ms.service: service
   ms.subservice: subservice
   ms.topic: landing-page
@@ -11,17 +11,19 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: 219966cbb2398239c7875620be55e79f3f9800e7
-  ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+  ms.openlocfilehash: f7b9281097adfb5fc86722f4cba584b7d37285c7
+  ms.sourcegitcommit: 49cff75a7621f8a191fedbf3b92f10b1db321e71
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/30/2021
-  ms.locfileid: "61227828"
+  ms.lasthandoff: 12/01/2021
+  ms.locfileid: "61246699"
 landingContent:
 - title: Entdecken Sie die neuesten
   linkLists:
   - linkListType: concept
     links:
+    - text: Neues Store-Symbol eingeführt
+      url: ~/concepts/design/personal-apps.md
     - text: Teams Toolkit für Visual Studio Code (Vorschau)
       url: ~/toolkit/teams-toolkit-fundamentals.md
     - text: Interaktiver Modus zum Freigeben der Besprechungsphase (Vorschau)
