@@ -6,16 +6,16 @@ keywords: Teams-Registerkarten Gruppenkanal konfigurierbare Löschung entfernen
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a94578a065d1514d74d33638485be26b27c77718
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 094e12667fc17db9cc02c0cdf50eaa935dc7ced9
+ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889237"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "61323296"
 ---
 # <a name="create-a-removal-page"></a>Erstellen einer Seite zum Entfernen
 
-Sie können die Benutzererfahrung erweitern und verbessern, indem Sie Entfernungs- und Änderungsoptionen in Ihrer App unterstützen. Teams ermöglicht Benutzern das Umbenennen oder Entfernen einer Kanal- oder Gruppenregisterkarte, und Sie können Benutzern erlauben, Ihre Registerkarte nach der Installation neu zu konfigurieren. Darüber hinaus bietet die Registerkartenentfernung den Benutzern Optionen zum Löschen oder Archivieren von Inhalten nach dem Entfernen.
+Sie können die Benutzererfahrung erweitern und verbessern, indem Sie Entfernungs- und Änderungsoptionen in Ihrer App unterstützen. Teams ermöglicht Benutzern das Umbenennen oder Entfernen einer Kanal- oder Gruppenregisterkarte, und Sie können Benutzern erlauben, ihre Registerkarte nach der Installation neu zu konfigurieren. Darüber hinaus bietet die Registerkartenentfernung den Benutzern Optionen zum Löschen oder Archivieren von Inhalten nach dem Entfernen.
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Aktivieren der Neukonfiguration Ihrer Registerkarte nach der Installation
 
@@ -23,7 +23,7 @@ Sie können die Benutzererfahrung erweitern und verbessern, indem Sie Entfernung
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Boolean|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte vom Benutzer nach der Erstellung aktualisiert werden kann. Der Standardwert lautet `true`. |
+|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob eine Instanz der Konfiguration der Registerkarte vom Benutzer nach der Erstellung aktualisiert werden kann. Der Standardwert ist `true`. |
 
 Wenn Ihre Registerkarte in einen Kanal- oder Gruppenchat hochgeladen wird, fügt Teams ein Dropdownmenü mit der rechten Maustaste für Ihre Registerkarte hinzu. Die verfügbaren Optionen werden durch die `canUpdateConfiguration` Einstellung bestimmt. Die folgende Tabelle enthält die Einstellungsdetails:
 
@@ -79,7 +79,6 @@ Es folgt ein Beispielcodeblock zum Entfernen von Registerkarten:
     }
   </script>
 </body>
-
 ```
 
 Wenn ein Benutzer im Dropdownmenü der Registerkarte **"Entfernen"** auswählt, lädt Teams die optionale Seite, die `removeUrl` auf der **Konfigurationsseite** zugewiesen ist, in einen IFrame. Dem Benutzer wird eine Schaltfläche angezeigt, die mit der Funktion geladen `onClick()` ist, `microsoftTeams.settings.setValidityState(true)` die die Schaltfläche **"Entfernen"** am unteren Rand der IFrame-Entfernungsseite aufruft und aktiviert.
@@ -88,7 +87,7 @@ Nachdem der Remove-Handler ausgeführt `removeEvent.notifySuccess()` wurde, oder
 
 >[!NOTE]
 > * Um sicherzustellen, dass die Kontrolle eines autorisierten Benutzers über eine Registerkarte nicht gehemmt wird, entfernt Teams die Registerkarte in Erfolgs- und Fehlerfällen.
-> * Teams aktiviert die Schaltfläche **"Entfernen"** nach fünf Sekunden, auch wenn die Registerkarte nicht aufgerufen `setValidityState()` wurde.
+> * Nachdem Sie den Ereignishandler aufgerufen `registerOnRemoveHandler` haben, haben Sie 15 Sekunden Zeit, um auf die Methode zu reagieren. Standardmäßig aktiviert Teams die Schaltfläche **"Entfernen"** nach fünf Sekunden, auch wenn Sie nicht `setValidityState(true)` aufrufen. 
 > * Wenn der Benutzer **"Entfernen"** auswählt, entfernt Teams die Registerkarte nach 30 Sekunden, unabhängig davon, ob die Aktionen abgeschlossen wurden oder nicht.
 
 ## <a name="next-step"></a>Nächster Schritt
