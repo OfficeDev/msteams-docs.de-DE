@@ -1,6 +1,6 @@
 ### YamlMime:Hub
 title: Microsoft Teams Entwicklerdokumentation
-summary: 'Erhalten Sie Dokumentation, Beispielcode, Lernprogramme und vieles mehr, um Benutzerdefinierte Microsoft Teams-Apps zu erstellen.'
+summary: 'Hier erhalten Sie Dokumentation, Beispielcode, Lernprogramme und mehr, um Benutzerdefinierte Microsoft Teams-Apps zu erstellen.'
 brand: teams
 metadata:
   title: Microsoft Teams Plattform-Entwicklerdokumentation
@@ -59,7 +59,7 @@ conceptualContent:
           text: Sammeln von Eingaben und Sammeln von Informationen mit Aufgabenmodulen
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: Verbinden Von Webdiensten an Kanäle und Teams mit Webhooks und Office 365 Connectors
+          text: Verbinden von Webdiensten an Kanäle und Teams mit Webhooks und Office 365 Connectors
         - url: /microsoftteams/platform/m365-apps/overview
           itemType: overview
           text: Erweitern Teams Apps über Microsoft 365
@@ -85,6 +85,9 @@ conceptualContent:
           text: Webhooks und Connectors
     - title: Durchsuchen
       links:
+        - url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer
+          itemType: concept
+          text: Monetarisieren Ihrer Teams-App mit einem transaktionsfähigen SaaS-Angebot
         - url: /microsoftteams/platform/concepts/authentication/authentication
           itemType: concept
           text: Benutzerauthentifizierung und SSO
@@ -99,7 +102,7 @@ conceptualContent:
           text: Manifestschema für Teams-Apps
         - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
           itemType: reference
-          text: Erstellen von Szenarien für Teams-Apps
+          text: Erstellen von Szenarien für Teams Apps
         - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
           itemType: reference
           text: Bewährte Methoden für Teams App-Szenarien
@@ -113,7 +116,7 @@ conceptualContent:
           text: Integrieren der Schaltfläche "Share-to-Teams" für Ihre Website
         - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
           itemType: reference
-          text: Integrieren einer Teams Registerkarte in SharePoint
+          text: Integrieren einer Teams-Registerkarte in SharePoint
         - url: /microsoftteams/platform/resources/moodleinstructions
           itemType: how-to-guide
           text: Integration in das Moodle-Lernverwaltungssystem
@@ -130,13 +133,13 @@ conceptualContent:
           text: Microsoft Teams-Entwicklerblog
         - url: 'https://aka.ms/microsoftteamscommunitycall'
           itemType: overview
-          text: Microsoft Teams Communityanrufe
+          text: Microsoft Teams Community-Anrufe
         - url: 'https://docs.microsoft.com/en-us/teamblog/'
           itemType: whats-new
-          text: Announcements
+          text: Ankündigungen
         - url: /microsoftteams/platform/feedback
           itemType: overview
-          text: Microsoft Teams Community und Antwort von Entwicklern
+          text: Microsoft Teams Developer Community und Antwort
         - url: /microsoftteams/platform/resources/teams-contributor-reference
           itemType: overview
           text: Mitwirken an Microsoft Teams Dokumentation

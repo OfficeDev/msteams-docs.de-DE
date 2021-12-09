@@ -5,12 +5,12 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: a6570c2f3a6a054457ff3f64a65ae4c2398db93a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: eab34d853c4aa10ea3c03b5c669464390e9288eb
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889419"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391673"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Erstellen eines Partner Center-Entwicklerkontos
 
@@ -121,23 +121,13 @@ Nach Abschluss des Überprüfungsprozesses ändert sich der Status Ihrer Registr
 
 <summary><b>Mein Kontoüberprüfungsstatus hat sich nicht über den E-Mail-Besitz hinaus entwickelt. Wie sollte ich fortfahren?</b></summary>
 
-Während der Überprüfung des **E-Mail-Besitzes** wird eine Überprüfungs-E-Mail an den primären Kontakt gesendet. Überprüfen Sie den Posteingang Ihres primären Kontakts auf eine E-Mail von **maccount@microsoft.com** mit der **betreffzeile Aktion, die erforderlich ist: Überprüfen Sie Ihr E-Mail-Konto bei Microsoft,** und schließen Sie den E-Mail-Überprüfungsprozess ab. Die Überprüfungs-E-Mail wird an die Adresse gesendet, die in den Einstellungen Ihres Partner Center-Kontos aufgeführt ist.
+Während der Überprüfung des **E-Mail-Besitzes** wird eine Überprüfungs-E-Mail an den primären Kontakt gesendet. Überprüfen Sie den Posteingang Ihres primären Kontakts auf eine E-Mail von **maccount@microsoft.com,** wobei die Betreffzeile **"Aktion" erforderlich ist: Überprüfen Sie Ihr E-Mail-Konto bei Microsoft,** und schließen Sie den E-Mail-Überprüfungsprozess ab. Die Überprüfungs-E-Mail wird an die Adresse gesendet, die in den Einstellungen Ihres Partner Center-Kontos aufgeführt ist.
 
 Beachten Sie Folgendes zum E-Mail-Überprüfungsprozess:
 
 * Der E-Mail-Überprüfungslink ist nur für sieben Tage gültig.
 * Sie können anfordern, die E-Mail erneut zu senden, indem Sie ihre Partnerprofilseite besuchen und den **E-Mail-Link** zur Erneuten Überprüfung auswählen.
 * Um sicherzustellen, dass Sie die E-Mail erhalten, **microsoft.com** sichere Liste als sichere Domäne, und überprüfen Sie Ihre Junk-E-Mail-Ordner.
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>Wie erhalte ich weiteren Support für probleme im Zusammenhang mit meinem Konto?</b></summary>
-
-Weitere Informationen finden Sie [im Support für das Commercial Marketplace-Programm im Partner Center.](/azure/marketplace/partner-center-portal/support)
 
 <br>
 
@@ -153,7 +143,7 @@ Versuchen Sie, das Problem durch folgende Maßnahme zu beheben:
 * Löschen Sie den Browsercache, wechseln Sie zu Ihrem Partner Center-Kontodashboard, und wählen Sie **Bestätigungs-E-Mail erneut senden** aus.
 * Versuchen Sie, über einen anderen Browser auf den **E-Mail-Link** zur Erneuten Überprüfung zuzugreifen.
 * Arbeiten Sie mit Ihrer IT-Abteilung, um sicherzustellen, dass die Überprüfungs-E-Mails nicht von Ihrem E-Mail-Server blockiert werden.
-* Passen Sie den Spamfilter Ihres Servers so an, dass alle E-Mails von maccount@microsoft.com zugelassen oder sicher aufgelistet **werden.**
+* Passen Sie den Spamfilter Ihres Servers so an, dass alle E-Mails von **maccount@microsoft.com** zugelassen oder sicher aufgelistet werden.
 
 <br>
 

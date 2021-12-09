@@ -6,12 +6,12 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: bb58e7f54fe3ad75b2a52148540119ae5dbbc9e6
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: 42949c9cdd3cb8e117925f170b2ab44e3bda1a1d
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61228001"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391680"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Zusammenarbeit an Teams Projekt mit Teams Toolkit
 
@@ -40,7 +40,7 @@ Teams Toolkit unterstützt jetzt die Zusammenarbeitsfunktion, damit ein Entwickl
 > [!NOTE]
 > Bevor Mitarbeiter für eine Umgebung hinzugefügt werden, muss der Projektbesitzer das Projekt zuerst [bereitstellen.](provision.md)
 
-* Im Abschnitt **"UMGEBUNG"** auf Teams Toolkit bewegen Sie den Mauszeiger über den Namen der Umgebung, um **Schaltflächen** für Mitarbeiter zu finden. Eine ist die Schaltfläche **"Add M365 Teams App (with AAD App) Owners",** die andere ist die Schaltfläche **"List M365 Teams App (with AAD App) Owners",** wie in der folgenden Abbildung dargestellt:
+* Bewegen Sie im Abschnitt **"UMGEBUNG"** auf Teams Toolkit den Mauszeiger auf den Namen der Umgebung, um **Schaltflächen** für Mitarbeiter zu finden. Eine ist die Schaltfläche **"M365 Teams App hinzufügen "Besitzer" (mit AAD App),** die andere schaltfläche **"M365 Teams App (mit AAD App)-Besitzern",** wie in der folgenden Abbildung dargestellt:
 
   ![Schaltflächen für die Zusammenarbeit](./images/collaboration-buttons.png)
 
@@ -48,11 +48,11 @@ Teams Toolkit unterstützt jetzt die Zusammenarbeitsfunktion, damit ein Entwickl
 
   ![E-Mail-Adresse eines Mitwirkenden eingeben](./images/collaboration-add-owner-email.png)
 
-* Um Mitarbeiter in der aktuellen Umgebung anzuzeigen, wählen Sie die Schaltfläche **"List M365 Teams App (with AAD App) Owners" aus,** und die Mitarbeiter werden im Ausgabekanal aufgeführt, wie in der folgenden Abbildung dargestellt:
+* Um Mitarbeiter in der aktuellen Umgebung anzuzeigen, wählen Sie die Schaltfläche **"M365-Teams-App auflisten (mit AAD App)-Besitzern",** und die Mitarbeiter werden dann im Ausgabekanal aufgeführt, wie in der folgenden Abbildung dargestellt:
 
   ![Besitzer der Zusammenarbeitsliste](./images/collaboration-list-owners.png)
 
-* Verschieben Sie das Projekt an GitHub.
+* Schieben Sie das Projekt an GitHub.
 
 > [!NOTE]
 > Der neu hinzugefügte Mitarbeiter erhält keine Benachrichtigung. Project Besitzer muss den Mitarbeiter benachrichtigen.
@@ -82,9 +82,7 @@ Teams Toolkit unterstützt jetzt die Zusammenarbeitsfunktion, damit ein Entwickl
       4. Wechseln Sie zu [Azure Active Directory,](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)wählen Sie **die App-Registrierung** im linken Bereich aus, und suchen Sie Ihre AAD-App.
       5. Wählen Sie auf der AAD App-Verwaltungsseite im linken Bereich **"Besitzer"** aus.
       6. Suchen und entfernen Sie den Mitarbeiter.
-    
 
-1. Die Zusammenarbeitsfunktion unterstützt nur in Azure gehostete Projekte, SPFx gehostete Projekt wird in Zukunft unterstützt.
 
 1. Mitarbeiter, die Ihrem Projekt hinzugefügt wurden, erhalten keine Benachrichtigung. Project Besitzer muss Mitarbeiter offline benachrichtigen.
 

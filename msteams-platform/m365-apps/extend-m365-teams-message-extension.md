@@ -3,36 +3,37 @@ title: Erweitern einer Teams Nachrichtenerweiterung über Microsoft 365
 description: Hier erfahren Sie, wie Sie Ihre suchbasierte Teams Messaging-Erweiterung so aktualisieren, dass sie in Outlook
 ms.date: 11/15/2021
 ms.topic: tutorial
-ms.openlocfilehash: 6adde57b6c5f59d28234afaacc721fba3812bd24
-ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
+ms.custom: m365apps
+ms.openlocfilehash: 9a8fc4135a2238d1402e25ef31ad7ebb918475b8
+ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60960338"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391356"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Erweitern einer Teams Nachrichtenerweiterung über Microsoft 365
 
 > [!NOTE]
 > *Das Erweitern einer Teams Nachrichtenerweiterung über Microsoft 365* ist derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md)verfügbar. Features, die in der Vorschau enthalten sind, sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie in der Veröffentlichung verfügbar werden. Sie werden nur zu Test- und Untersuchungszwecken bereitgestellt. Sie sollten nicht in Produktionsanwendungen verwendet werden.
 
-Suchbasierte [Messaging-Erweiterungen](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) ermöglichen Es Benutzern, ein externes System zu durchsuchen und Ergebnisse über den Nachrichtenbereich zum Verfassen des Microsoft Teams-Clients freizugeben. Indem [Sie Ihre Teams-Apps auf Microsoft 365 (Vorschau) erweitern,](overview.md)können Sie jetzt Ihre suchbasierten Teams Nachrichtenerweiterungen für Windows Desktop- und Webumgebungen Outlook.
+Suchbasierte [Messaging-Erweiterungen](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) ermöglichen Es Benutzern, ein externes System zu durchsuchen und Ergebnisse über den Nachrichtenbereich zum Verfassen des Microsoft Teams-Clients freizugeben. Indem [Sie Ihre Teams-Apps auf Microsoft 365 (Vorschau) erweitern,](overview.md)können Sie ihre suchbasierten Teams Nachrichtenerweiterungen nun Outlook für Windows Desktop- und Webumgebungen bereitstellen.
 
-Der Vorgang zum Aktualisieren der suchbasierten Teams Nachrichtenerweiterung, um Outlook auszuführen, umfasst die folgenden Schritte:
+Der Vorgang zum Aktualisieren ihrer suchbasierten Teams Nachrichtenerweiterung zur Ausführung Outlook umfasst die folgenden Schritte:
 
 > [!div class="checklist"]
 > * Aktualisieren des App-Manifests
 > * Hinzufügen eines Outlook Kanals für Ihren Bot
 > * Querladen der aktualisierten App in Teams
 
-Der Rest dieses Leitfadens führt Sie durch diese Schritte und zeigt Ihnen, wie Sie eine Vorschau ihrer Nachrichtenerweiterung in Outlook für Windows Desktop und Web anzeigen.
+Der Rest dieses Handbuchs führt Sie durch diese Schritte und zeigt Ihnen, wie Sie eine Vorschau Ihrer Nachrichtenerweiterung sowohl in Outlook für Windows Desktop als auch im Web anzeigen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Zum Abschließen dieses Lernprogramms benötigen Sie Folgendes:
 
  - Ein Sandkastenmandant des Microsoft 365-Entwicklerprogramms
- - Ihr Sandkastenmandant, der in *Office 365 Targeted Releases* registriert ist
- - Eine Testumgebung mit Office Apps, die über den Microsoft 365 Apps *Betakanal* installiert sind
+ - Ihr Sandkastenmandant, der bei *Office 365 Targeted Releases* registriert ist
+ - Eine Testumgebung mit Office aus dem Microsoft 365 Apps *Betakanal* installierten Apps
  - Visual Studio Code mit der Erweiterung Teams Toolkit (Vorschau) (Optional)
 
 > [!div class="nextstepaction"]
@@ -42,7 +43,9 @@ Zum Abschließen dieses Lernprogramms benötigen Sie Folgendes:
 
 Wenn Sie über eine vorhandene Messaging-Erweiterung verfügen, erstellen Sie zum Testen eine Kopie oder einen Zweig Ihres Produktionsprojekts, und aktualisieren Sie Ihre App-ID im App-Manifest so, dass sie einen neuen Bezeichner verwendet (der sich von der Produktions-App-ID unterscheidet).
 
-Wenn Sie Beispielcode zum Abschließen dieses Lernprogramms verwenden möchten, führen Sie die Setupschritte in Teams Suchbeispiel für [Messaging-Erweiterungen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) aus, um schnell einen Bot zu erstellen und zu registrieren.
+Wenn Sie beispielcode zum Abschließen dieses Lernprogramms verwenden möchten, führen Sie die Setupschritte in Teams Suchbeispiel für [Messaging-Erweiterungen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) aus, um schnell eine Microsoft Teams suchbasierte Messaging-Erweiterung zu erstellen. Sie können auch mit dem gleichen Teams beispiel für die Suche nach Messaging-Erweiterungen beginnen, das [für TeamsJS SDK v2 Preview aktualisiert wurde,](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/NPM-search-connector-M365) und mit [der Vorschau Ihrer Messaging-Erweiterung in Outlook](#preview-your-message-extension-in-outlook)fortfahren. Das aktualisierte Beispiel ist auch in Teams Toolkit-Erweiterung verfügbar:  >  *Entwicklungsansichtsbeispiele*  >  **NPM Search Connector.**
+
+:::image type="content" source="images/toolkit-search-sample.png" alt-text="NPM-Suchconnectorbeispiel in Teams Toolkit":::
 
 ## <a name="update-the-app-manifest"></a>Aktualisieren des App-Manifests
 
@@ -73,7 +76,7 @@ Wenn Sie Teams Toolkit zum Erstellen Ihrer Messaging-Erweiterungs-App verwendet 
 
 ## <a name="add-an-outlook-channel-for-your-bot"></a>Hinzufügen eines Outlook Kanals für Ihren Bot
 
-In Microsoft Teams besteht eine Messaging-Erweiterung aus einem Webdienst, den Sie hosten, und einem App-Manifest, das definiert, wo Ihr Webdienst gehostet wird. Der Webdienst nutzt das [Bot Framework SDK-Messagingschema](/azure/bot-service/bot-service-overview) und das sichere Kommunikationsprotokoll über einen für Ihren Bot registrierten Teams Kanal.
+In Microsoft Teams besteht eine Messaging-Erweiterung aus einem Webdienst, den Sie hosten, und einem App-Manifest, das definiert, wo Ihr Webdienst gehostet wird. Der Webdienst nutzt das [Bot Framework SDK-Messagingschema](/azure/bot-service/bot-service-overview) und das sichere Kommunikationsprotokoll über einen Teams Kanal, der für Ihren Bot registriert ist.
 
 Damit Benutzer über Outlook mit Ihrer Messaging-Erweiterung interagieren können, müssen Sie Ihrem Bot einen Outlook Kanal hinzufügen:
 
@@ -93,15 +96,15 @@ Damit Benutzer über Outlook mit Ihrer Messaging-Erweiterung interagieren könne
 
 Der letzte Schritt besteht darin, die aktualisierte Messaging-Erweiterung[(App-Paket)](/microsoftteams/platform/concepts/build-and-test/apps-package)in Microsoft Teams querzuladen. Nach Abschluss des Vorgangs wird Ihre Messaging-Erweiterung in den installierten *Apps* aus dem Bereich zum Verfassen von Nachrichten angezeigt.
 
-1. Verpacken Sie Ihre Teams Anwendung (Manifest- und [App-Symbole)](/microsoftteams/platform/resources/schema/manifest-schema#icons)in einer ZIP-Datei. Wenn Sie Teams Toolkit zum Erstellen Ihrer App verwendet haben, können Sie dies ganz einfach mit der Option **zip Teams Metadatenpaket** im *Bereitstellungsmenü* von Teams Toolkit tun:
+1. Verpacken Sie Ihre Teams Anwendung (Manifest- und [App-Symbole)](/microsoftteams/platform/resources/schema/manifest-schema#icons)in einer ZIP-Datei. Wenn Sie Teams Toolkit zum Erstellen Ihrer App verwendet haben, können Sie dies ganz einfach mithilfe der Option **zip Teams Metadatenpakets** im *Bereitstellungsmenü* von Teams Toolkit tun:
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Option &quot;Zip-Teams-Metadatenpaket&quot; in Teams Toolkit-Erweiterung für Visual Studio Code":::
 
-1. Melden Sie sich mit Ihrem Sandkastenmandantenkonto bei Teams an, und überprüfen Sie, ob Sie sich in der *Öffentlichen Entwicklervorschau* befinden, indem Sie auf das Menü mit den Auslassungspunkten (**...**) ihres Benutzerprofils klicken und **"Info"** öffnen, um zu überprüfen, ob die Option *"Entwicklervorschau"* aktiviert ist.
+1. Melden Sie sich bei Teams mit Ihrem Sandkastenmandantenkonto an, und überprüfen Sie, ob Sie sich in der *Öffentlichen Entwicklervorschau* befinden, indem Sie auf die Auslassungszeichen (**...**) ihres Benutzerprofils klicken und **"Info"** öffnen, um zu überprüfen, ob die *Option "Entwicklervorschau"* aktiviert ist.
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="Öffnen Sie im Menü Teams Auslassungspunkte &quot;Info&quot;, und überprüfen Sie, ob die Option &quot;Entwicklervorschau&quot; aktiviert ist.":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="Öffnen Sie im Menü Teams Ellipsen &quot;Info&quot;, und überprüfen Sie, ob die Option &quot;Entwicklervorschau&quot; aktiviert ist.":::
 
-1. Öffnen Sie den *Bereich "Apps",* und klicken Sie auf **Hochladen einer benutzerdefinierten App,** und **Hochladen Sie dann für mich oder meine Teams.**
+1. Öffnen Sie den *Bereich "Apps",* klicken Sie auf **Hochladen einer benutzerdefinierten App** und Hochladen für mich oder meine **Teams.**
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Schaltfläche &quot;Hochladen einer benutzerdefinierten App&quot; im Bereich Teams &quot;Apps&quot;":::
 
@@ -114,24 +117,24 @@ Nach dem Querladen über Teams ist Ihre Messaging-Erweiterung in Outlook im Web 
 Jetzt können Sie Ihre Messaging-Erweiterung testen, die in Outlook auf Windows Desktop und im Web ausgeführt wird. Während Ihre aktualisierte Messaging-Erweiterung weiterhin in Teams mit vollständiger [Featureunterstützung für Messaging-Erweiterungen](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)ausgeführt wird, gibt es in dieser frühen Vorschau der Outlook-aktivierten Erfahrung Einschränkungen, die Sie beachten sollten:
 
 * Messaging-Erweiterungen in Outlook sind auf den Kontext zum [ *Verfassen von*](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions)E-Mails beschränkt. Auch wenn Ihre Teams Nachrichtenerweiterung als Kontext im Manifest enthalten `commandBox` ist, ist die aktuelle Vorschau auf die E-Mail-Kompositionsoption ( )  `compose` beschränkt. Das Aufrufen einer Nachrichtenerweiterung aus dem globalen Outlook *Suchfeld* wird nicht unterstützt.
-* [Aktionsbasierte Messaging-Erweiterungsbefehle](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) werden in Outlook nicht unterstützt. Wenn Ihre App sowohl such- als auch aktionsbasierte Befehle hat, wird sie in Outlook angezeigt, aber das Aktionsmenü ist nicht verfügbar.
+* [Aktionsbasierte Messaging-Erweiterungsbefehle](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) werden in Outlook nicht unterstützt. Wenn Ihre App sowohl such- als auch aktionsbasierte Befehle aufweist, wird sie in Outlook angezeigt, aber das Aktionsmenü ist nicht verfügbar.
 * [Die automatische Authentifizierung](/microsoftteams/platform/messaging-extensions/how-to/enable-sso-auth-me) für einmaliges Anmelden wird für Messaging-Erweiterungen in Outlook nicht unterstützt.
 * Das Einfügen von mehr als fünf [adaptiven Karten](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in eine E-Mail wird nicht unterstützt. Adaptive Karten v1.4 und höher werden nicht unterstützt.
 * [Kartenaktionen](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) vom Typ `messageBack` , , und werden für `imBack` `invoke` `signin` eingefügte Karten nicht unterstützt. Die Unterstützung ist auf Folgendes `openURL` beschränkt: Wenn Sie klicken, wird der Benutzer auf einer neuen Registerkarte an die angegebene URL umgeleitet.
 
-Beim Testen Der Messaging-Erweiterung können Sie die Quelle (von Teams im Vergleich zu Outlook) von Bot-Anforderungen durch die [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) des [Activity -Objekts](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) identifizieren. Wenn ein Benutzer eine Abfrage durchführt, empfängt Ihr Dienst ein standardmäßiges Bot `Activity` Framework-Objekt. Eine der Eigenschaften im Activity -Objekt ist `channelId` , die den Wert oder , je `msteams` `outlook` nachdem, wo die Bot-Anforderung stammt. Weitere Informationen finden Sie unter [Search Based Messaging Extensions SDK.](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions)
+Beim Testen Ihrer Messaging-Erweiterung können Sie die Quelle (von Teams im Vergleich zu Outlook) von Bot-Anforderungen anhand der [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) des [Activity-Objekts](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) identifizieren. Wenn ein Benutzer eine Abfrage durchführt, empfängt Ihr Dienst ein standardmäßiges Bot `Activity` Framework-Objekt. Eine der Eigenschaften im Activity -Objekt ist `channelId` , die den Wert oder , je `msteams` `outlook` nachdem, wo die Bot-Anforderung stammt. Weitere Informationen finden Sie unter [Search Based Messaging Extensions SDK.](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions)
 
 ### <a name="outlook"></a>Outlook
 
-Um eine Vorschau Ihrer App anzuzeigen, die in Outlook auf Windows Desktop ausgeführt wird, öffnen Sie Outlook mit Anmeldeinformationen für Ihren Testmandanten angemeldet. Klicken Sie auf **"Neue E-Mail".** Öffnen Sie das Flyoutmenü **"Weitere Apps"** im oberen Menüband. Ihre Nachrichtenerweiterung wird aufgelistet. Sie können es von dort aus aufrufen und wie beim Verfassen einer Nachricht in Teams verwenden.
+Öffnen Sie Outlook mit Anmeldeinformationen für Ihren Testmandanten angemeldet, um eine Vorschau ihrer App anzuzeigen, die in Outlook auf Windows Desktop ausgeführt wird. Klicken Sie auf **"Neue E-Mail".** Öffnen Sie das Flyoutmenü **"Weitere Apps"** im oberen Menüband. Ihre Nachrichtenerweiterung wird aufgelistet. Sie können sie von dort aus aufrufen und wie beim Verfassen einer Nachricht in Teams verwenden.
 
 ### <a name="outlook-on-the-web"></a>Outlook im Web
 
-Melden Sie sich bei outlook.com unter Verwendung von Anmeldeinformationen für Ihren Testmandanten an, um eine Vorschau Der App anzuzeigen, die in [Outlook im Web](https://www.outlook.com) ausgeführt wird. Klicken Sie auf **"Neue Nachricht".** Öffnen Sie das Flyoutmenü **"Weitere Apps"** am unteren Rand des Kompositionsfensters. Ihre Nachrichtenerweiterung wird aufgelistet. Sie können es von dort aus aufrufen und wie beim Verfassen einer Nachricht in Teams verwenden.
+Melden Sie sich bei outlook.com unter Verwendung von Anmeldeinformationen für Ihren Testmandanten an, um eine Vorschau Der App anzuzeigen, die in [Outlook im Web](https://www.outlook.com) ausgeführt wird. Klicken Sie auf **"Neue Nachricht".** Öffnen Sie das Flyoutmenü **"Weitere Apps"** am unteren Rand des Kompositionsfensters. Ihre Nachrichtenerweiterung wird aufgelistet. Sie können sie von dort aus aufrufen und wie beim Verfassen einer Nachricht in Teams verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Outlook aktivierte Teams Messaging-Erweiterungen befinden sich in der Vorschau und werden für die Produktionsverwendung nicht unterstützt. Hier erfahren Sie, wie Sie Ihre Outlook-aktivierte Messaging-Erweiterung zu Testzwecken an Die Zielgruppe in der Vorschau verteilen.
+Outlook aktivierte Teams Messaging-Erweiterungen befinden sich in der Vorschau und werden für die Produktionsverwendung nicht unterstützt. Im Folgenden erfahren Sie, wie Sie Ihre Outlook-aktivierte Messaging-Erweiterung zu Testzwecken in der Vorschau anzeigen.
 
 ### <a name="single-tenant-distribution"></a>Einzelmandantenverteilung
 
