@@ -4,12 +4,12 @@ author: surbhigupta
 description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen und verschiedene Besprechungsszenarien, Aktualisieren des App-Manifests, Konfigurieren von Features wie In-Meeting-Dialog, freigegebener Besprechungsphase, Besprechungs-SidePanel und mehr
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 21cbe3c038644ec3d28e4fbd68e91d0b0212eca0
-ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+ms.openlocfilehash: bca634c69df202fc0bfdd36cdd6a561441d2baaa
+ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391666"
+ms.locfileid: "61392491"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -142,7 +142,7 @@ Die Konfigurationen für Nach- und [Vorbesprechungen](#before-a-meeting) sind id
 ## <a name="step-by-step-guides"></a>Schritt-für-Schritt-Anleitungen
 
 * Befolgen Sie die [schrittweise Anleitung,](../sbs-meeting-token-generator.yml) um **Besprechungstoken** in Ihrer Teams Besprechung zu generieren.
-* Befolgen Sie die [schrittweise Anleitung,](../sbs-meetings-sidepanel.yml) um **meetingSidePanel** in Ihrer Teams Besprechung zu generieren.
+* Befolgen Sie die [schrittweise Anleitung](../sbs-meetings-sidepanel.yml) zum Generieren von **Besprechungs-Sidepanels** in Ihrer Teams Besprechung.
 * Befolgen Sie die [schrittweise Anleitung,](../sbs-meetings-stage-view.yml) um die Besprechungsphasenansicht in Ihrer Teams Besprechung zu generieren.
 
 ## <a name="next-step"></a>Nächster Schritt

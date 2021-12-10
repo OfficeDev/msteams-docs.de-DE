@@ -4,102 +4,107 @@ description: Hier sind die Voraussetzungen für die Erweiterung Ihrer Teams-Apps
 ms.date: 11/15/2021
 ms.topic: how-to
 ms.custom: m365apps
-ms.openlocfilehash: 967e45bb59c431476ead902e1413ab743c566779
-ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
+ms.openlocfilehash: 2b11f940eba27fb3a2f44a89f3617d9d932881a7
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391346"
+ms.locfileid: "61391712"
 ---
-# <a name="set-up-your-dev-environment-for-extending-teams-apps-across-m365-preview"></a>Einrichten der Entwicklungsumgebung für die Erweiterung Teams Apps über M365 hinweg (Vorschau)
+# <a name="set-up-your-dev-environment-for-extending-teams-apps-across-m365"></a>Einrichten der Entwicklungsumgebung für die Erweiterung Teams Apps über M365 hinweg
 
-Die Entwicklungsumgebung für die Erweiterung Teams Apps über Microsoft 365 ist vergleichbar mit der, die Sie für Microsoft Teams Entwicklung verwenden. In diesem Artikel werden bestimmte Konfigurationen erläutert, die zum Ausführen von Vorschaubuilds von Microsoft Teams- und Microsoft Office-Anwendungen erforderlich sind, um eine Vorschau Teams Apps anzuzeigen, die in Outlook und Office ausgeführt werden. Um Ihre Entwicklungsumgebung einzurichten, müssen Sie Folgendes tun:
+> [!NOTE]
+> Erweiterung der Teams-App über Microsoft 365 ist derzeit nur in der [öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md)verfügbar.
+
+Die Entwicklungsumgebung für die Erweiterung Teams Apps über Microsoft 365 hinweg ähnelt Microsoft Teams Entwicklung. In diesem Artikel werden bestimmte Konfigurationen erläutert, die zum Ausführen von Vorschaubuilds von Microsoft Teams- und Microsoft Office-Anwendungen erforderlich sind, um eine Vorschau Teams Apps anzuzeigen, die in Outlook und Office ausgeführt werden.
+
+So richten Sie die Entwicklungsumgebung ein:
 
 > [!div class="checklist"]
-> * [Abrufen eines Mandanten für M365-Entwickler (Sandbox) und Aktivieren des Querladens](#prepare-a-developer-tenant-for-testing)
+> * [Abrufen des Mandanten für M365-Entwickler (Sandbox) und Aktivieren des Querladens](#prepare-a-developer-tenant-for-testing)
 > * [Registrieren Ihres M365-Mandanten in *Office 365 gezielten Versionen*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
 > * [Konfigurieren Ihres Kontos für den Zugriff auf Vorschauversionen von Outlook und Office](#install-office-apps-in-your-test-environment)
-> * [Wechseln sie zur Developer Preview-Version von Teams](#switch-to-the-developer-preview-version-of-teams)
+> * [Wechseln Sie zur Developer Preview-Version von Teams](#switch-to-the-developer-preview-version-of-teams)
 > * [*Optional*] [Installieren Teams Toolkit-Erweiterung für Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-preview-extension)
 
 ## <a name="prepare-a-developer-tenant-for-testing"></a>Vorbereiten eines Entwicklermandanten für Tests
 
-Wenn Sie noch nicht über einen verfügen, erstellen Sie einen Sandkastenmandanten [für Microsoft 365 Entwicklerabonnement,](/office/developer-program/microsoft-365-developer-program-get-started) oder rufen Sie einen Testmandanten über Ihre Organisation ab.
+Sie benötigen einen Sandkastenmandanten für Microsoft 365 Entwicklerabonnement, um Ihre Entwicklungsumgebung einzurichten. Wenn Sie noch nicht über einen verfügen, erstellen Sie einen [Sandkastenmandanten,](/office/developer-program/microsoft-365-developer-program-get-started) oder rufen Sie einen Testmandanten über Ihre Organisation ab.
 
-Nachdem Sie über einen Mandanten verfügen, müssen Sie das Querladen für Ihren Mandanten [aktivieren,](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading) indem Sie sich bei [Microsoft 365 Admin Center](https://admin.microsoft.com) anmelden und zu "Alle > Teams > Teams Apps > Setuprichtlinien > **Global** anzeigen" navigieren.  Umschalten auf **Hochladen benutzerdefinierten Apps** und **Speichern**.
+Nachdem Sie über einen Mandanten verfügen, müssen Sie das Querladen für Ihren Mandanten aktivieren. Weitere Informationen finden Sie unter [Aktivieren des Querladens.](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading) Um zu überprüfen, ob das Querladen aktiviert ist, melden Sie sich bei Teams an, wählen Sie **Apps** aus, und suchen Sie dann **nach Hochladen einer benutzerdefinierten** App-Option.
 
-Wenn Sie über einen vorhandenen Mandanten verfügen, überprüfen Sie, ob das Querladen aktiviert ist, indem Sie sich bei Teams anmelden und **Apps** auswählen. Sie sehen die **Hochladen einer benutzerdefinierten** App-Option, wenn das Querladen für Ihren Mandanten aktiviert ist.
-
-:::image type="content" source="images/teams-sideloading-enabled.png" alt-text="Das Querladen ist für Ihren Mandanten aktiviert, wenn die Option &quot;Hochladen einer benutzerdefinierten App&quot; im Bereich Teams &quot;Apps&quot; angezeigt wird.":::
+:::image type="content" source="images/teams-sideloading-enabled.png" alt-text="Hochladen einer benutzerdefinierten App-Option":::
 
 ## <a name="enroll-your-developer-tenant-for-office-365-targeted-releases"></a>Registrieren Ihres Entwicklermandanten für Office 365 Gezielten Versionen
 
 > [!IMPORTANT]
-> Lesen Sie die neuesten Informationen in [Microsoft Teams – Microsoft 365 Entwicklerblog,](https://devblogs.microsoft.com/microsoft365dev/category/teams/) um zu überprüfen, ob outlook.com und office.com Unterstützung für Teams Apps für Ihren Testmandanten verfügbar ist.
+> Lesen Sie die neuesten Updates auf [Microsoft Teams – Microsoft 365 Entwicklerblog,](https://devblogs.microsoft.com/microsoft365dev/) um zu überprüfen, ob Outlook.com- und Office.com-Unterstützung für Teams Apps für Ihren Testmandanten verfügbar ist.
 
-Um eine Vorschau Teams Apps anzuzeigen, die in outlook.com oder office.com ausgeführt werden, aktivieren Sie Ihren Testmandanten, um [gezielte Versionen](/microsoft-365/admin/manage/release-options-in-office-365#targeted-release)zu Office 365.
+So registrieren Sie Ihren Testmandanten für Office 365 Zielversionen:
 
-1. Melden Sie sich mithilfe von Anmeldeinformationen für Ihren Testmandanten bei Microsoft 365 Admin Center an, und navigieren Sie zur Registerkarte ["Organisationsprofil"](https://admin.microsoft.com/AdminPortal/Home?#/Settings/OrganizationProfile) (*Einstellungen*  >    >>  **Organisationseinstellungen "Organisationsprofil").** Wählen Sie **"Versionseinstellungen"** aus, und wählen Sie eine der Einstellungen für die *gezielte Veröffentlichung* aus:
+1. Melden Sie sich mit Ihren Testmandantenanmeldeinformationen bei [Microsoft 365 Admin Center](https://admin.microsoft.com) an.
+1. Wechseln Sie zu **Einstellungen**  >  **Organisationsprofil Einstellungen**  >  **Organisation.**
+1. Wählen Sie **"Versionseinstellungen" aus.**
+1. Wählen Sie eine beliebige *Einstellung für die gezielte Veröffentlichung aus:*
+    1. **Zielversion für alle Benutzer**
+    1. **Zielversion für ausgewählte Benutzer**
 
-  :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Microsoft 365 Admin Center Menü &quot;Versionseinstellungen&quot; mit ausgewählter Option für die gezielte Veröffentlichung":::
+    :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Microsoft 365 Admin Center Menü &quot;Versionseinstellungen&quot; mit ausgewählter Option für die gezielte Veröffentlichung":::
+    
+1. Klicken Sie auf **Speichern**.
 
-  Weitere Informationen zu Office 365 Releaseoptionen finden Sie unter [Einrichten der Standard- oder Targeted Release-Optionen](/microsoft-365/admin/manage/release-options-in-office-365) in *Microsoft 365 Admin Center Hilfe.*
-
-1. Stellen Sie sicher, dass Ihr Mandant Unterstützung für Teams persönlichen Registerkarten hat, die auf office.com und outlook.com ausgeführt werden, indem Sie sich mit Ihren Testmandantenanmeldeinformationen anmelden. Wenn eine Ellipse (**...**) Option auf der Seitenleiste (der Einstiegspunkt für quergeladene Teams persönliche Registerkarten) angezeigt wird, hat Ihr Mandant Unterstützung.
-
-  :::image type="content" source="images/outlook-web-ellipses.png" alt-text="Ellipses '...' Einstiegspunkt für quergeladene Teams Registerkarten-Apps in outlook.com":::
-
-1. Überprüfen Sie die Testmandantenunterstützung für Messaging-Erweiterungen in outlook.com, indem Sie die Option **"Weitere Apps"** im Outlook Bereich zum Verfassen von Nachrichten überprüfen.
-
-> [!NOTE]
-> Wenn Sie sich für gezielte Versionen entschieden haben, diese Optionen jedoch nicht angezeigt werden, ist es wahrscheinlich, dass die Vorschaufeatureunterstützung noch in der Einführung für Ihren Mandanten erfolgt. Die neuesten Updates finden Sie im [Microsoft Teams Entwicklerblog.](https://devblogs.microsoft.com/microsoft365dev/category/teams/)
+Weitere Informationen zu Office 365 Releaseoptionen finden Sie unter [Einrichten der Standard- oder Targeted Release-Optionen](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) in *Microsoft 365 Admin Center Hilfe.*
 
 ## <a name="install-office-apps-in-your-test-environment"></a>Installieren Office Apps in Ihrer Testumgebung
 
 > [!IMPORTANT]
-> Lesen Sie die neuesten [Microsoft Teams – Microsoft 365 Entwicklerblog,](https://devblogs.microsoft.com/microsoft365dev/category/teams/) um zu überprüfen, ob Outlook für Windows Desktopunterstützung für Teams Nachrichtenerweiterungen für Ihren Testmandanten verfügbar ist.
+> Lesen Sie die neuesten Updates auf [Microsoft Teams – Microsoft 365 Entwicklerblog,](https://devblogs.microsoft.com/microsoft365dev/) um zu überprüfen, ob Outlook für Windows Desktopunterstützung für Teams Nachrichtenerweiterungen für Ihren Testmandanten verfügbar ist.
 
-Sie können eine Vorschau Teams Apps anzeigen, die in Outlook auf Windows Desktop ausgeführt werden, indem Sie einen aktuellen *Betakanalbuild* verwenden. Um einen Outlook Betakanalbuild in Ihrer Testumgebung zu installieren, müssen Sie wahrscheinlich [den Microsoft 365 Apps Updatekanal](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) für Ihren Testmandanten ändern.
+Sie können eine Vorschau Teams Apps anzeigen, die in Outlook auf Windows Desktop ausgeführt werden, indem Sie einen aktuellen *Betakanalbuild verwenden.* Überprüfen Sie, ob Sie [den Microsoft 365 Apps Updatekanal](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) für Ihren Testmandanten ändern müssen, um einen Office 365 Betakanalbuild zu installieren.
 
-Hier sind die Schritte zum Installieren Office 365 *Betakanalanwendungen* in Ihrer Testumgebung:
+So installieren Sie Office 365 Betakanalanwendungen in Ihrer Testumgebung:
 
-1. Melden Sie sich mit Ihrem Testmandantenkonto bei Ihrer Testumgebung an.
-1. Laden Sie das [Office-Bereitstellungstool herunter,](https://www.microsoft.com/download/details.aspx?id=49117) und extrahieren Sie es in einen lokalen Ordner.
-1. Öffnen *Sieconfiguration-Office365-x86.xml* (oder das **x64.xml*, je nach Umgebung) in einem Text-Editor, und aktualisieren Sie den *Kanalwert* auf `BetaChannel` .
-1. Führen Sie an einer Eingabeaufforderung mit erhöhten Rechten `setup.exe /configure configuration-Office365-x86.xml` die Datei **x64.xml* aus, je nach Setup).
+1. Melden Sie sich mit Ihren Anmeldeinformationen für den Testmandanten bei Ihrer Testumgebung an.
+1. Laden Sie das [Office-Bereitstellungstool](https://www.microsoft.com/download/details.aspx?id=49117) herunter, und extrahieren Sie es in einen lokalen Ordner.
+1. Wechseln Sie zum lokalen Ordner, und öffnen *Sieconfiguration-Office365-x86.xml* (oder **x64.xml,* je nach Umgebung) in einem Text-Editor, und aktualisieren Sie den *Kanalwert* auf `BetaChannel` .
+1. Öffnen Sie die Eingabeaufforderung, und navigieren Sie zum pfad des lokalen Ordners.
+1. Führen Sie `setup.exe /configure configuration-Office365-x86.xml` die **x64.xml-Datei* aus (oder verwenden Sie sie, je nach Setup).
 1. Öffnen Sie Outlook (Desktopclient), und richten Sie das E-Mail-Konto mit Ihren Testmandantenanmeldeinformationen ein.
-1. Öffnen Sie in Outlook **"Datei**  >  **Office Konto** über  >  **Outlook",** und vergewissern Sie sich, dass Sie sich jetzt im *Betakanal* befinden und dass Ihre Buildnummer **14416** oder höher ist.
-1. Umschalten der Schaltfläche **"Bald verfügbar"** in der Ecke ihres Outlook Clientfensters:
-
-   :::image type="content" source="images/outlook-coming-soon.png" alt-text="Schaltfläche &quot;Bald verfügbar&quot; in Outlook Desktop auf &quot;Ein&quot; umgeschaltet":::
-
-  > [!NOTE]
-  > Möglicherweise müssen Sie Outlook schließen und ihren Computer neu starten, damit die Schaltfläche *"Bald verfügbar"* angezeigt wird.
-
-Sie können überprüfen, ob Ihr Mandant Teams persönliche Registerkarten unterstützt, die auf Outlook für Windows Desktop ausgeführt werden, indem Sie sich mit Ihren Testmandantenanmeldeinformationen anmelden und auf der Seitenleiste nach einer Ellipse **(...**) suchen (der Einstiegspunkt für quergeladene Teams persönliche Registerkarten).
-
-:::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="Ellipses '...' Einstiegspunkt für quergeladene Teams Registerkarten-Apps in Outlook für Desktop":::
-
-Auf ähnliche Weise können Sie die Mandantenunterstützung für Messaging-Erweiterungen in Outlook für Windows Desktop überprüfen, indem Sie im Menüband zum Outlook Verfassen von Nachrichten nach der Option **"Weitere Apps"** suchen.
+1. Öffnen **Sie**  >  **"Datei Office Konto** über  >  **Outlook".**  
+   Wenn die Buildnummer **14416** oder höher ist und der Kanal *"Betakanal"* ist, führen Sie Microsoft 365 Betakanalbuild aus.
+1. Aktivieren Sie in der oberen rechten Ecke die Umschaltfläche **Bald** verfügbar.
+    
+    :::image type="content" source="images/outlook-coming-soon.png" alt-text="Weitere Apps":::
 
 > [!NOTE]
-> Wenn Sie sich für Betakanalversionen entschieden haben, aber diese Ellipsenoptionen nicht angezeigt werden, ist es wahrscheinlich, dass die Vorschaufeatureunterstützung noch im Rollout für Ihren Mandanten erfolgt. Die neuesten Updates finden Sie im [Microsoft Teams Entwicklerblog.](https://devblogs.microsoft.com/microsoft365dev/category/teams/)
+> Möglicherweise müssen Sie Outlook schließen und ihren Computer neu starten, damit die Schaltfläche *"Bald verfügbar"* angezeigt wird.
 
-## <a name="switch-to-the-developer-preview-version-of-teams"></a>Wechseln sie zur Developer Preview-Version von Teams
+Sie können die Mandantenunterstützung für Ihr Mandantenkonto testen:
 
-Stellen Sie sicher, dass Sie sich von Ihrem Microsoft Teams Client für die [*öffentliche Entwicklervorschau*](../resources/dev-preview/developer-preview-intro.md) anmelden.
+* Melden Sie sich bei Teams persönlichen Registerkarten, die auf office.com, outlook.com und Outlook für Windows Desktop ausgeführt werden, mit Ihren Testmandantenanmeldeinformationen an, und überprüfen Sie im linken unteren Bereich nach Ellipsen (**...**).
 
-1. Melden Sie sich mit Ihrem Sandkastenmandantenkonto bei Teams an.
-1. Wählen Sie im Menü mit den Auslassungspunkten (**...**) neben Ihrem Benutzerprofil die Option **"Info"** und dann die Option **"Entwicklervorschau"** aus.
-1. Nachdem das Dialogfeld angezeigt wurde, wählen Sie **"Zur Entwicklervorschau wechseln"** aus, um Teams neu zu starten, und überprüfen Sie, ob die Entwicklervorschau jetzt aktiviert ist.
+    :::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="Ellipsen" lightbox="images/outlook-desktop-ellipses.png":::
 
-:::image type="content" source="images/teams-dev-preview.png" alt-text="Öffnen Sie im Menü Teams Ellipsen &quot;Info&quot;, und überprüfen Sie, ob die Option &quot;Entwicklervorschau&quot; aktiviert ist.":::
+* Für Messaging-Erweiterungen in outlook.com und Outlook für Windows, suchen Sie im Menüband zum Outlook Verfassen von Nachrichten nach der Option **"Weitere Apps".**
+
+> [!NOTE]
+> Wenn Sie sich für Betakanalversionen entschieden haben, aber diese Ellipsenoptionen nicht angezeigt werden, ist es wahrscheinlich, dass die Vorschaufeatureunterstützung für Ihren Mandanten bereitgestellt wird. Die neuesten Updates finden Sie im [Microsoft Teams Entwicklerblog.](https://devblogs.microsoft.com/microsoft365dev/)
+
+## <a name="switch-to-the-developer-preview-version-of-teams"></a>Wechseln Sie zur Developer Preview-Version von Teams
+
+Stellen Sie sicher, dass Sie von Ihrem Microsoft Teams-Client zur [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) wechseln.
+
+1. Melden Sie sich mit Ihren Sandkastenmandantenanmeldeinformationen bei Teams an.
+1. Wählen Sie im Menü mit den Auslassungspunkten (**...**) neben Ihrem Benutzerprofil die Option **"Informationen**  >  **zur Entwicklervorschau"** aus. Ein Dialogfeld wird angezeigt, wählen **Sie "Zur Entwicklervorschau wechseln" aus.**
+1. Nachdem die Teams App neu gestartet wurde, wechseln Sie zum Menü mit den Auslassungspunkten (**...**) neben Ihrem Benutzerprofil, und überprüfen Sie, ob **die Entwicklervorschau** ausgewählt ist.
+
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="Öffentliche Entwicklervorschau" lightbox="images/teams-dev-preview.png":::
 
 ## <a name="install-visual-studio-code-and-teams-toolkit-preview-extension"></a>Installieren Visual Studio Code und Teams Toolkit Preview-Erweiterung
 
-Optional können Sie [Visual Studio Code](https://code.visualstudio.com/) nutzen, um Teams Apps auf Office und Outlook zu erweitern.
+Optional können Sie [Visual Studio Code](https://code.visualstudio.com/) verwenden, um Teams Apps auf Office und Outlook zu erweitern.
 
-Die Erweiterung [Teams Toolkit für Visual Studio Code](https://aka.ms/teams-toolkit) `v2.10.0` (oder höher) bietet Befehle, mit denen Sie Ihren vorhandenen Teams-Code so ändern können, dass er mit Outlook und Office kompatibel ist. Aktivieren Sie weiterhin [Teams persönliche Registerkarte für Office und Outlook,](extend-m365-teams-personal-tab.md) um mehr zu erfahren.
+Die Erweiterung [Teams Toolkit für Visual Studio Code](https://aka.ms/teams-toolkit) `v2.10.0` (oder höher) bietet Befehle, mit denen Sie Ihren vorhandenen Teams-Code so ändern können, dass er mit Outlook und Office kompatibel ist. Weitere Informationen finden Sie unter [aktivieren Teams persönliche Registerkarte für Office und Outlook](extend-m365-teams-personal-tab.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

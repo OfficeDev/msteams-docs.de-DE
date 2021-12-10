@@ -8,18 +8,18 @@ metadata:
   ms.date: 12/06/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-  nextTutorialTitle: Weitere Informationen zum Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
+  nextTutorialTitle: Weitere Informationen zum Aktivieren und Konfigurieren von Apps für Besprechungen
   ms.custom: mvc
   ms.localizationpriority: none
-  ms.openlocfilehash: 8238f49b75caf000370ef0541d1efac2a82f0864
-  ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+  ms.openlocfilehash: 8009dfaa6faf4ca7a061f982e379829dc456e0da
+  ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
   ms.translationtype: MT
   ms.contentlocale: de-DE
   ms.lasthandoff: 12/09/2021
-  ms.locfileid: "61391892"
+  ms.locfileid: "61392386"
 items:
 - durationInMinutes: 1
-  content: "Die Besprechungsphasenansicht hilft Ihnen, Ihre Apps für Teams Besprechungen zu aktivieren und zu konfigurieren. Es hilft Benutzern, die Besprechungsphase zu teilen, ermöglicht besprechungsteilnehmern das Hinzufügen von Statusdetails zu früheren, aktuellen und zukünftigen Aufgaben, wodurch Teams Besprechungserfahrung verbessert wird. \n\n>[!NOTE]\n>Derzeit ist diese Funktion nur in der Entwicklervorschau verfügbar.\n\n**Wichtige Features der Besprechungsphasenansicht**\n\n* Fügen Sie Statusdetails im seitenseitigen Bereich hinzu.\n* Fügen Sie Details für die Zusammenarbeit hinzu.\n\nDiese schrittweise Anleitung hilft Ihnen beim Generieren der Besprechungsphasenansicht, um Statusdetails für die Zusammenarbeit in Teams hinzuzufügen. Die folgende Ausgabe wird angezeigt:\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png\" alt-text=\"Besprechungsphasenansicht\" border=\"false\":::\n"
+  content: "Die Besprechungsphasenansicht hilft Ihnen, Ihre Apps für Teams Besprechungen zu aktivieren und zu konfigurieren. Sie hilft Benutzern bei der Freigabe der Besprechungsphase, ermöglicht Besprechungsteilnehmern das Hinzufügen von Statusdetails zu früheren, aktuellen und zukünftigen Aufgaben, wodurch Teams Besprechungserfahrung verbessert wird. \n\n**Wichtige Features der Besprechungsphasenansicht**\n\n* Fügen Sie Statusdetails im seitenseitigen Bereich hinzu.\n* Fügen Sie Details für die Zusammenarbeit hinzu.\n\nDiese schrittweise Anleitung hilft Ihnen beim Generieren der Besprechungsphasenansicht, um Statusdetails für die Zusammenarbeit in Teams hinzuzufügen. Die folgende Ausgabe wird angezeigt:\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png\" alt-text=\"Besprechungsphasenansicht\" border=\"false\":::\n"
 - title: Voraussetzungen
   durationInMinutes: 1
   content: "Stellen Sie sicher, dass Sie die folgenden Tools installieren und Ihre Entwicklungsumgebung einrichten:  \n\n* [Microsoft Teams mit einem Konto (kein Gastkonto)](https://developer.microsoft.com/en-us/microsoft-365/dev-program)\n* [Visual Studio Code](https://code.visualstudio.com/Download)\n* [nodejs](https://nodejs.org/en/download/) LTS Version 10.21.0 oder höher\n* [ngrok](https://ngrok.com/download) neueste Version (nur für Devbox-Tests) oder eine entsprechende Tunnelinglösung wie eingabeaufforderung\n\nStellen Sie sicher, dass Sie über Arbeitskenntnisse der folgenden Technologien verfügen:\n\n* [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n* [ECMAScript6](http://es6-features.org/#Constants)\n* [ASP.NET Kernversion](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) 3.1\n* [React.JS](https://reactjs.org/tutorial/tutorial.html) Version 16 oder höher\n"
