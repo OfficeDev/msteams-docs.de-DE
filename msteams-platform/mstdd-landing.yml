@@ -3,7 +3,7 @@ title: Microsoft Teams-Entwicklerdokumentation
 summary: Willkommen bei der Übersicht über Microsoft Teams Entwicklerdokumentation. Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse, in denen sich Menschen zunehmend sammeln, lernen und arbeiten.
 metadata:
   title: Microsoft Teams-Entwicklerdokumentation
-  description: Einführung in die Erstellung von Apps für Teams
+  description: Einführung in das Erstellen von Apps für Teams
   ms.service: service
   ms.subservice: subservice
   ms.topic: landing-page
@@ -11,17 +11,19 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: 22d603225eb3dacc15b6491ea2daede0fdcfc690
-  ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
+  ms.openlocfilehash: ad54e998cf2097686ad41ba4db9fe44f44219ff2
+  ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 12/09/2021
-  ms.locfileid: "61392365"
+  ms.lasthandoff: 12/20/2021
+  ms.locfileid: "61569490"
 landingContent:
 - title: Entdecken Sie die neuesten
   linkLists:
   - linkListType: concept
     links:
+    - text: Richtlinien für Apps, die mit dem SaaS-Angebot verknüpft sind
+      url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
     - text: Neues Store-Symbol eingeführt
       url: ~/concepts/design/personal-apps.md
     - text: Teams Toolkit für Visual Studio Code (Vorschau)
@@ -38,7 +40,7 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     - text: Erstellen von benutzerdefinierten Apps mit geringem Code
       url: ~/samples/teams-low-code-solutions.md
-- title: Lernprogramme
+- title: Tutorials
   linkLists:
   - linkListType: concept
     links:
@@ -48,6 +50,8 @@ landingContent:
       url: ~/bots/how-to/authentication/add-authentication.md
     - text: Aktivieren und Konfigurieren von Apps für Besprechungen
       url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+    - text: Verwenden der SSO-Authentifizierung für Registerkarten
+      url: tabs/how-to/authentication/auth-aad-sso.md
   - linkListType: tutorial
     links:
     - text: Schrittweise Anleitung für proaktive Nachrichten
@@ -56,10 +60,14 @@ landingContent:
       url: ~/sbs-bots-with-sso.yml
     - text: Schritt-für-Schritt-Anleitung zum Generieren von Besprechungstoken
       url: ~/sbs-meeting-token-generator.yml
+    - text: Schritt-für-Schritt-Anleitung für Besprechungsinhaltsblase
+      url: ~/sbs-meeting-content-bubble.yml
     - text: Schritt-für-Schritt-Anleitung zum Erstellen von Besprechungs-SidePanel
       url: ~/sbs-meetings-sidepanel.yml
     - text: Schritt-für-Schritt-Anleitung für die Besprechungsphasenansicht
       url: ~/sbs-meetings-stage-view.yml
+    - text: Schritt-für-Schritt-Anleitung mit SSO für Registerkarten und Messaging-Erweiterungen
+      url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
 - title: Erste Schritte
   linkLists:
   - linkListType: get-started

@@ -5,12 +5,12 @@ keywords: Teams-Bots- Kartenformat
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 409ba9c0d96712ff3f5cfc40b64b406ce57818b8
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 0c012db1936907c15082ba12c4d681540483bb95
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216230"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569532"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatieren von Karten in Microsoft Teams
 
@@ -20,9 +20,9 @@ Es folgen die beiden Möglichkeiten zum Hinzufügen von Rich-Text-Formatierungen
 
 Karten unterstützen die Formatierung nur in der Texteigenschaft, nicht in den Titel- oder Untertiteleigenschaften. Die Formatierung kann je nach Kartentyp mithilfe einer Teilmenge von XML- oder HTML-Formatierungen oder Markdown angegeben werden. Für die aktuelle und zukünftige Entwicklung adaptiver Karten wird die Markdown-Formatierung empfohlen.
 
-Die Formatierungsunterstützung unterscheidet sich zwischen Kartentypen. Das Rendern der Karte kann sich geringfügig zwischen dem Desktop und dem mobilen Microsoft Teams-Clients sowie Teams im Desktopbrowser unterscheiden.
+Die Formatierungsunterstützung unterscheidet sich zwischen Kartentypen. Das Rendern der Karte kann sich geringfügig zwischen dem Desktop- und dem mobilen Microsoft Teams-Clients sowie Teams im Desktopbrowser unterscheiden.
 
-Sie können ein Inlinebild mit einer beliebigen Teams Karte einfügen. Bilder können als , oder Dateien formatiert werden `.png` `.jpg` und `.gif` dürfen 1024 ×1024 px oder 1 MB nicht überschreiten. Animierte GIF-Dateien werden nicht unterstützt. Weitere Informationen finden Sie unter [Kartentypen.](./cards-reference.md#inline-card-images)
+Sie können ein Inlinebild in eine beliebige Teams Karte einschließen. Bilder können als , oder Dateien formatiert werden `.png` `.jpg` und `.gif` dürfen 1024 ×1024 px oder 1 MB nicht überschreiten. Animierte GIF-Dateien werden nicht unterstützt. Weitere Informationen finden Sie unter [Kartentypen.](./cards-reference.md#inline-card-images)
 
 Sie können adaptive Karten und Office 365 Connectorkarten mit Markdown formatieren, die bestimmte unterstützte Formatvorlagen enthalten.
 
@@ -31,7 +31,7 @@ Sie können adaptive Karten und Office 365 Connectorkarten mit Markdown formatie
 Die folgenden Kartentypen unterstützen Markdown-Formatierung in Teams:
 
 * Adaptive Karten: Markdown wird im Feld für adaptive Karten `Textblock` sowie `Fact.Title` und `Fact.Value` unterstützt. HTML wird in adaptiven Karten nicht unterstützt.
-* Office 365 Connectorkarten: Markdown und beschränkter HTML-Code werden in Office 365 Connector-Karten in den Textfeldern unterstützt.
+* Office 365 Connectorkarten: Markdown- und eingeschränkte HTML-Code werden in Office 365 Connector-Karten in den Textfeldern unterstützt.
 
 Sie können Newlines für adaptive Karten verwenden `\r` oder `\n` Escapesequenzen für Newlines in Listen verwenden. Die Formatierung unterscheidet sich zwischen der Desktopversion und der mobilen Version von Teams für adaptive Karten. Kartenbasierte Erwähnungen werden in Web-, Desktop- und mobilen Clients unterstützt. Sie können die Eigenschaft zum Maskieren von Informationen verwenden, um bestimmte Informationen zu maskieren, z. B. Kennwort oder vertrauliche Informationen von Benutzern innerhalb des Eingabeelements für adaptive `Input.Text` Karten. Sie können die Breite einer adaptiven Karte mithilfe des `width` Objekts erweitern. Sie können die Typaheadunterstützung in adaptiven Karten aktivieren und die Eingabeauswahl filtern, während der Benutzer die Eingabe eingibt. Mit der Eigenschaft können Sie die Möglichkeit zum selektiven Anzeigen von `msteams` Bildern in der Phasenansicht hinzufügen.
 
@@ -63,7 +63,7 @@ Sie können die `\r` `\n` Oder Escapesequenzen für Newlines in Listen verwenden
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>Unterschiede zwischen Mobilgeräten und Desktops für adaptive Karten
 
-Auf dem Desktop wird die Markdown-Formatierung für adaptive Karten wie in der folgenden Abbildung in Webbrowsern und in der Teams Clientanwendung angezeigt:
+Auf dem Desktop wird die Markdown-Formatierung für adaptive Karten wie in der folgenden Abbildung sowohl in Webbrowsern als auch in der Teams Clientanwendung angezeigt:
 
 ![Markdown-Formatierung für adaptive Karten im Desktopclient](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
@@ -118,7 +118,7 @@ Der folgende Code zeigt ein Beispiel für die Formatierung adaptiver Karten:
 
 ### <a name="mention-support-within-adaptive-cards"></a>Erwähnen der Unterstützung in adaptiven Karten 
 
-Sie können @mentions in einem Textkörper für adaptive Karten für Bots und Nachrichtenerweiterungsantworten hinzufügen. Um @mentions in Karten hinzuzufügen, befolgen Sie die gleiche Benachrichtigungslogik und dasselbe Rendering wie nachrichtenbasierte [Erwähnungen in Kanal- und Gruppenchatunterhaltungen.](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)
+Sie können @mentions in einem Textkörper für adaptive Karten für Bots und Messaging-Erweiterungsantworten hinzufügen. Um @mentions in Karten hinzuzufügen, befolgen Sie die gleiche Benachrichtigungslogik und dasselbe Rendering wie nachrichtenbasierte [Erwähnungen in Kanal- und Gruppenchatunterhaltungen.](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)
 
 Bots und Messaging-Erweiterungen können Erwähnungen innerhalb des Karteninhalts in [TextBlock-](https://adaptivecards.io/explorer/TextBlock.html) und [FactSet-Elementen](https://adaptivecards.io/explorer/FactSet.html) enthalten.
 
@@ -165,7 +165,7 @@ Der folgende Code zeigt ein Beispiel für eine adaptive Karte mit einer Erwähnu
 }
 ```
 
-### <a name="aad-object-id-and-upn-in-user-mention"></a>AAD Objekt-ID und UPN in der Benutzererwähnung 
+### <a name="aad-object-id-and-upn-in-user-mention"></a>AAD-Objekt-ID und UPN in Benutzererwähnung 
 
 Teams Plattform ermöglicht es, Benutzer zusätzlich zu den vorhandenen Erwähnungs-IDs mit ihrer AAD Objekt-ID und dem Benutzerprinzipalnamen (User Principle Name, UPN) zu erwähnen. Bots mit adaptiven Karten und Connectors mit eingehenden Webhooks unterstützen die beiden Benutzererwähnungs-IDs. 
 
@@ -178,7 +178,7 @@ In der folgenden Tabelle werden die neu unterstützten Benutzererwähnungs-IDs b
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>Benutzererwähnung in Bots mit adaptiven Karten 
 
-Bots unterstützen die Benutzererwähnung mit der AAD Objekt-ID und upn zusätzlich zu den vorhandenen IDs. Die Unterstützung für zwei neue IDs ist in Bots für Textnachrichten, den Textkörper adaptiver Karten und die Antwort auf Messaging-Erweiterungen verfügbar. Bots unterstützen die Erwähnungs-IDs in Unterhaltungen und `invoke` Szenarien. Der Benutzer erhält eine Aktivitätsfeedbenachrichtigung, wenn er mit den IDs @mentioned wird. 
+Bots unterstützen die Benutzererwähnung mit der AAD-Objekt-ID und upn zusätzlich zu den vorhandenen IDs. Die Unterstützung für zwei neue IDs ist in Bots für Textnachrichten, den Textkörper adaptiver Karten und die Antwort auf Messaging-Erweiterungen verfügbar. Bots unterstützen die Erwähnungs-IDs in Unterhaltungen und `invoke` Szenarien. Der Benutzer erhält eine Aktivitätsfeedbenachrichtigung, wenn er mit den IDs @mentioned wird. 
 
 > [!NOTE]
 > Schemaupdates und Ui/UX-Änderungen sind für Benutzererwähnungen mit adaptiven Karten in Bot nicht erforderlich.
@@ -296,7 +296,7 @@ Verwenden Sie die Eigenschaft zum Maskieren von Informationen, um bestimmte Info
 > [!NOTE]
 > Das Feature unterstützt nur die clientseitige Informationsmaske. Der maskierte Eingabetext wird als Klartext an die HTTPS-Endpunktadresse gesendet, die während der [Botkonfiguration](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint)angegeben wurde.
 
-Um Informationen in adaptiven Karten zu maskieren, fügen Sie die `isMasked` Eigenschaft zum **Eingeben** `Input.Text` hinzu, und legen Sie ihren Wert auf **"true"** fest.
+Um Informationen in adaptiven Karten zu maskieren, fügen Sie die `style` Eigenschaft zum **Eingeben** `input.text` hinzu, und legen Sie ihren Wert auf **"Password"** fest.
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>Beispiel für adaptive Karte mit Maskierungseigenschaft
 
@@ -411,7 +411,7 @@ In der Phasenansicht können Benutzer das Bild vergrößern und verkleinern. Sie
 
 > [!NOTE]
 > * Die Funktion zum Vergrößern und Verkleinern gilt nur für die Bildelemente, bei denen es sich um einen Bildtyp in einer adaptiven Karte handelt.
-> * Für Teams mobilen Apps ist die Phasenansichtsfunktion für Bilder in adaptiven Karten standardmäßig verfügbar. Benutzer können Adaptive Kartenbilder in der Phasenansicht anzeigen, indem sie einfach auf das Bild tippen, unabhängig davon, ob das `allowExpand` Attribut vorhanden ist oder nicht.
+> * Für Teams mobile Apps ist die Phasenansichtsfunktion für Bilder in adaptiven Karten standardmäßig verfügbar. Benutzer können Adaptive Kartenbilder in der Phasenansicht anzeigen, indem sie einfach auf das Bild tippen, unabhängig davon, ob das `allowExpand` Attribut vorhanden ist oder nicht.
 
 # <a name="markdown-format-for-office-365-connector-cards"></a>[Markdownformat für Office 365 Connectorkarten](#tab/connector-md)
 
@@ -506,7 +506,7 @@ Der folgende Code zeigt ein Beispiel für die Formatierung von Markdown-Connecto
 
 Die folgenden Kartentypen unterstützen HTML-Formatierung in Teams:
 
-* Office 365 Connectorkarten: Eingeschränkte Markdown- und HTML-Formatierungen werden in Office 365 Connector-Karten unterstützt.
+* Office 365 Connectorkarten: Eingeschränkte Markdown- und HTML-Formatierungen werden in Office 365 Connectorkarten unterstützt.
 * Favoriten- und Miniaturansichtskarten: HTML-Tags werden für einfache Karten unterstützt, z. B. die Favoriten- und Miniaturansichtskarten.
 
 Die Formatierung unterscheidet sich zwischen der Desktopversion und der mobilen Version von Teams für Office 365 Connectorkarten und einfache Karten. In diesem Abschnitt können Sie das HTML-Formatbeispiel für Konnektorkarten und einfache Karten durchgehen.

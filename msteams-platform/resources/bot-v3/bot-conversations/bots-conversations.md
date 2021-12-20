@@ -5,12 +5,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 keywords: Teams-Bots-Nachrichten
 ms.date: 05/20/2019
-ms.openlocfilehash: c82f96c42992f49f61d19c2bf5c6a19283e8ee95
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 49b05e48a82208776beaa0b62b1b44f8fec0652f
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156641"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569518"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Unterhaltung mit einem Microsoft Teams Bot
 
@@ -41,7 +41,7 @@ Bots können an einer Unterhaltung teilnehmen oder eine initiieren. Der Großtei
 
 Jede Nachricht ist ein `Activity`-Objekt vom Typ `messageType: message`. Wenn ein Benutzer eine Nachricht sendet, postet Teams die Nachricht auf Ihrem Bot. Spezifisch erfolgt dies durch Senden eines JSON-Objekts an den Nachrichtenendpunkt des Bots. Ihr Bot überprüft die Nachricht, um ihren Typ zu ermitteln, und antwortet entsprechend.
 
-Bots unterstützen auch Nachrichten im Ereignisstil. Weitere Informationen finden Sie unter [Behandeln von Botereignissen in Microsoft Teams.](~/resources/bot-v3/bots-notifications.md) Die Spracherkennung wird derzeit nicht unterstützt.
+Bots unterstützen auch Nachrichten im Ereignisstil. Weitere Informationen finden Sie unter [Behandeln von Botereignissen in Microsoft Teams](~/resources/bot-v3/bots-notifications.md). Die Spracherkennung wird derzeit nicht unterstützt.
 
 Nachrichten sind in allen Bereichen größtenteils gleich, aber es gibt Unterschiede in der Art und Weise, wie auf den Bot in der Benutzeroberfläche zugegriffen wird, und Unterschiede im Hintergrund, die Sie kennen müssen.
 
@@ -55,8 +55,8 @@ Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und
 | --- | :---: | :---: | --- |
 | Rich-Text  | ✔ | ✔ |  |
 | Bilder | ✔ | ✔ | Maximal 1024×1024 und 1 MB im PNG-, JPEG- oder GIF-Format; Animierte GIF-Dateien werden nicht unterstützt. |
-| Karten | ✖ | ✔ | In der [Teams Kartenreferenz finden](~/task-modules-and-cards/cards/cards-reference.md) Sie unterstützte Karten. |
-| Emojis | ✖ | ✔ | Teams unterstützt zurzeit Emojis über UTF-16, z. B. U+1F600 für graunendes Gesicht. |
+| Karten | ✖ | ✔ | Unterstützte Karten finden Sie in der [Teams-Kartenreferenz.](~/task-modules-and-cards/cards/cards-reference.md) |
+| Emojis | ✖ | ✔ | Teams unterstützt zurzeit Emojis über UTF-16, z. B. U+1F600 für das graunen Gesicht. |
 |
 
 Weitere Informationen zu den Vom Bot Framework unterstützten Bot-Interaktionstypen, auf denen Bots in Teams basieren, finden Sie in der Bot Framework-Dokumentation zum [Unterhaltungsfluss](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) und verwandten Konzepten in der Dokumentation für [das Bot Builder SDK für .NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true) und das Bot Builder SDK für [Node.js. ](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true)
@@ -76,7 +76,7 @@ Bilder werden durch Hinzufügen von Anlagen zu einer Nachricht gesendet. Weitere
 
 Bilder können höchstens 1024×1024 und 1 MB im PNG-, JPEG- oder GIF-Format sein. Animierte GIF-Dateien werden nicht unterstützt.
 
-Es wird empfohlen, die Höhe und Breite jedes Bilds mithilfe von XML anzugeben. Wenn Sie Markdown verwenden, ist die Bildgröße standardmäßig 256×256. Beispiel:
+Es wird empfohlen, die Höhe und Breite jedes Bilds mithilfe von XML anzugeben. Wenn Sie Markdown verwenden, beträgt die Bildgröße standardmäßig 256×256. Beispiel:
 
 * Verwenden von `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * `![Duck on a rock](http://aka.ms/Fo983c)` nicht verwenden
@@ -85,7 +85,7 @@ Es wird empfohlen, die Höhe und Breite jedes Bilds mithilfe von XML anzugeben. 
 
 Je nachdem, welche Bereiche deklariert werden, kann Ihr Bot Nachrichten in den folgenden Kontexten empfangen:
 
-* **Persönlicher Chat** Benutzer können in einer privaten Unterhaltung mit einem Bot interagieren, indem sie einfach den hinzugefügten Bot im Chatverlauf auswählen oder den Namen oder die App-ID in das Feld &quot;An:&quot; in einen neuen Chat eingeben.
+* **Persönlicher Chat** Benutzer können in einer privaten Unterhaltung mit einem Bot interagieren, indem sie einfach den hinzugefügten Bot im Chatverlauf auswählen oder den Namen oder die App-ID in das Feld "An:" in einen neuen Chat eingeben.
 * **Kanäle** Ein Bot kann in einem Kanal erwähnt werden ("@_Botname"),_ wenn er dem Team hinzugefügt wurde. Beachten Sie, dass für zusätzliche Antworten auf einen Bot in einem Kanal der Bot erwähnt werden muss. Sie antwortet nicht auf Antworten, in denen sie nicht erwähnt wird.
 
 Bei eingehenden Nachrichten empfängt Ihr Bot ein [Activity-Objekt](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) vom Typ `messageType: message` . Obwohl das `Activity` Objekt andere Arten von Informationen enthalten kann, z. B. [Kanalaktualisierungen,](~/resources/bot-v3/bots-notifications.md#channel-updates) die an Ihren Bot gesendet werden, stellt der Typ die `message` Kommunikation zwischen Bot und Benutzer dar.
@@ -158,12 +158,10 @@ Bei der Interaktion in einem Kanal sollte Ihr Bot intelligent sein, bestimmte Un
 
 Das `channelData` Objekt enthält Teams-spezifische Informationen und ist die endgültige Quelle für Team- und Kanal-IDs. Sie sollten diese IDs zwischenspeichern und als Schlüssel für den lokalen Speicher verwenden.
 
-Das `channelData` Objekt ist nicht in Nachrichten in persönlichen Unterhaltungen enthalten, da diese außerhalb eines Kanals stattfinden.
-
 Ein typisches channelData-Objekt in einer Aktivität, die an Ihren Bot gesendet wird, enthält die folgenden Informationen:
 
-* `eventType`Teams Ereignistyp; wird nur in Fällen von [Kanaländerungsereignissen](~/resources/bot-v3/bots-notifications.md#channel-updates)übergeben.
-* `tenant.id`Azure Active Directory Mandanten-ID; in allen Kontexten übergeben.
+* `eventType`Teams Ereignistyp; wird nur bei [Kanaländerungsereignissen](~/resources/bot-v3/bots-notifications.md#channel-updates)übergeben.
+* `tenant.id`Azure Active Directory Mandanten-ID; wird in allen Kontexten übergeben.
 * `team` Wird nur in Kanalkontexten übergeben, nicht im persönlichen Chat.
   * `id` GUID für den Kanal.
   * `name` Name des Teams; wird nur in Fällen von [Team-Umbenennungsereignissen](~/resources/bot-v3/bots-notifications.md#team-name-updates)übergeben.
@@ -193,7 +191,7 @@ Ein typisches channelData-Objekt in einer Aktivität, die an Ihren Bot gesendet 
 
 ### <a name="net-example"></a>.NET-Beispiel
 
-Das [Paket "Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet" stellt ein `TeamsChannelData` spezielles Objekt bereit, das Eigenschaften für den Zugriff auf Teams-spezifische Informationen verfügbar macht.
+Das [Paket "Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet" bietet ein `TeamsChannelData` spezielles Objekt, das Eigenschaften für den Zugriff auf Teams-spezifische Informationen verfügbar macht.
 
 ```csharp
 TeamsChannelData channelData = activity.GetChannelData<TeamsChannelData>();
@@ -275,7 +273,7 @@ function sendCardUpdate(bot, session, originalMessage, address) {
 
 ## <a name="starting-a-conversation-proactive-messaging"></a>Starten einer Unterhaltung (proaktives Messaging)
 
-Sie können eine persönliche Unterhaltung mit einem Benutzer erstellen oder eine neue Antwortkette in einem Kanal für Ihren Team-Bot starten. Auf diese Weise können Sie Ihre Benutzer benachrichtigen, ohne dass sie zuerst kontakt mit Ihrem Bot initiieren müssen. Weitere Informationen finden Sie in den folgenden Themen:
+Sie können eine persönliche Unterhaltung mit einem Benutzer erstellen oder eine neue Antwortkette in einem Kanal für Ihren Team-Bot starten. Auf diese Weise können Sie Ihre Benutzer benachrichtigen, ohne dass sie zuerst Kontakt mit Ihrem Bot aufnehmen müssen. Weitere Informationen finden Sie in den folgenden Themen:
 
 Weitere allgemeine Informationen zu [Unterhaltungen,](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) die von Bots gestartet werden, finden Sie unter Proaktives Messaging für Bots.
 

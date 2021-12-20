@@ -4,12 +4,12 @@ description: Übersicht über die ersten Schritte für Microsoft Teams-Entwickle
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams Entwicklerbeispiele
-ms.openlocfilehash: ee986f04ca760fbf9090f7dda94e1378261db7df
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: cb498d176b8893a2097e19ca76120a33a5f7221c
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075479"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569497"
 ---
 # <a name="get-started"></a>Erste Schritte
 
@@ -23,9 +23,9 @@ Hier ist eine Vorstellung davon, was Sie lernen werden:
 - Machen Sie sich mit dem Toolkit und SDKs vertraut.
 - Konfigurieren und erstellen Sie verschiedene Arten von Teams-Apps.
 
-Werfen wir einen kurzen Blick auf die Optionen der Buildumgebung, aus denen Sie wählen können, und die Roadmap zum Erstellen und Bereitstellen einer Teams-App.
+Werfen wir einen kurzen Blick auf die Optionen der Buildumgebung, aus denen Sie wählen können, und die Roadmap zum Erstellen und Bereitstellen einer Teams App.
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Abbildung der grundlegenden Schritte zum Erstellen und Bereitstellen einer Teams App.":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Abbildung der grundlegenden Schritte zum Erstellen und Bereitstellen einer Teams App":::
 
 ## <a name="app-capabilities-and-development-tools"></a>App-Funktionen und Entwicklungstools
 
@@ -60,3 +60,7 @@ Nun erstellen wir Ihre erste Teams-App. Wählen Sie jedoch zunächst Ihre Sprach
 
 > [!div class="nextstepaction"]
 > [Erstellen einer Teams-App mit Node.js](../sbs-gs-nodejs.yml)
+
+## <a name="see-also"></a>Siehe auch
+
+[Beispiele für Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
