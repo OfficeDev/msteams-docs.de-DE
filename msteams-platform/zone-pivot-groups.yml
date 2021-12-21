@@ -1,0 +1,19 @@
+### YamlMime:ZonePivotGroups
+groups:
+- id: personal-tab
+  title: Umgebungstyp "Persönliche Registerkarte"
+  prompt: 'Wählen Sie den Typ der Umgebung aus, in der Sie eine persönliche Registerkarte erstellen möchten:'
+  pivots:
+  - id: node-js
+    title: Node.js
+  - id: asp-net-core
+    title: ASP.NET Core
+  - id: asp-net-core-mvc
+    title: ASP.NET Core MVC
+metadata:
+  ms.openlocfilehash: 0e886a6d5a1dce0320ea803bff9646cd01687011
+  ms.sourcegitcommit: f7eebbf863370b10493d822e23969ff689b1145e
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 12/21/2021
+  ms.locfileid: "61574609"
