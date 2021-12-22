@@ -6,12 +6,12 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: e11c66e7e818a090305e320ed21080c7ca897856
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: c8899131876533fdd64913fb6790cff9f258e8f5
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61228082"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591785"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Verwenden von Teams Toolkit zum Bereitstellen von Cloudressourcen
 
@@ -41,7 +41,7 @@ Die Bereitstellung erfolgt mit einem einzigen Befehl im Teams Toolkit für Visua
 Wenn Sie den Bereitstellungsbefehl in Teams Toolkit oder TeamsFx CLI auslösen, können Sie die folgenden Ressourcen abrufen:
 
 * AAD Anwendung unter Ihrem Microsoft 365 Mandanten
-* Teams App-Registrierung unter der Teams Plattform Ihres Microsoft 365 Mandanten
+* Teams App-Registrierung unter der Teams-Plattform Ihres Microsoft 365 Mandanten
 * Azure-Ressourcen unter Ihrem ausgewählten Azure-Abonnement
 
 Wenn Sie ein neues Projekt erstellen, erhalten Sie alle zu erstellenden Azure-Ressourcen. Die generierte ARM-Vorlage definiert alle Azure-Ressourcen und hilft bei der Erstellung der erforderlichen Azure-Ressourcen während der Bereitstellung. Wenn Sie einem vorhandenen Projekt [neue Funktionen/Ressourcen hinzufügen,](./add-resource.md) spiegelt die aktualisierte ARM-Vorlage die aktuelle Änderung wider.
@@ -49,7 +49,7 @@ Wenn Sie ein neues Projekt erstellen, erhalten Sie alle zu erstellenden Azure-Re
 > [!NOTE]
 > Azure-Dienste verursachen Kosten in Ihrem Abonnement. Eine Schätzung finden Sie im [Preisrechner.](https://azure.microsoft.com/pricing/calculator/)
 
-### <a name="resource-creation-for-teams-tab-application"></a>Ressourcenerstellung für Teams Registerkartenanwendung
+### <a name="resource-creation-for-teams-tab-application"></a>Erstellen von Ressourcen für Teams Registerkartenanwendung
 
 |Ressourcen|Zweck dieser Ressource| Anmerkungen |
 |----------|--------------------------------|-----|
@@ -94,9 +94,9 @@ Wenn Sie ein neues Projekt erstellen, erhalten Sie alle zu erstellenden Azure-Re
 | API-Verwaltung OAuth Server | Ermöglicht Microsoft Power Platform den Zugriff auf Ihre in der Funktions-App gehosteten APIs. |
 | Benutzer zugewiesene Identität | Authentifizieren von Azure Service-zu-Service-Anforderungen |
 
-## <a name="customize-resource-provision"></a>Anpassen der Ressourcenbereitstellung 
+## <a name="customize-resource-provision"></a>Anpassen der Ressourcenbereitstellung
 
-mit Teams Toolkit können Sie eine Infrastruktur als Codeansatz verwenden, um zu definieren, welche Azure-Ressourcen Sie bereitstellen und wie Sie diese konfigurieren möchten. Die Tools verwenden die ARM-Vorlage, um Azure-Ressourcen zu definieren. Bei der ARM-Vorlage handelt es sich um eine Reihe von Biicep-Dateien, die die Infrastruktur und Konfiguration für Ihr Projekt definieren. Sie können erstellte Azure-Ressourcen anpassen, indem Sie die ARM-Vorlage ändern. Weitere Informationen finden Sie unter [Bicep-Dokument.](/azure/azure-resource-manager/bicep.md) Die Bereitstellung mit ARM umfasst das Ändern der folgenden beiden Sätze von Dateien, Parametern und Vorlagen:
+Teams Toolkit ermöglicht es Ihnen, eine Infrastruktur als Codeansatz zu verwenden, um zu definieren, welche Azure-Ressourcen Sie bereitstellen und wie Sie diese konfigurieren möchten. Die Tools verwenden die ARM-Vorlage, um Azure-Ressourcen zu definieren. Bei der ARM-Vorlage handelt es sich um eine Reihe von Biicep-Dateien, die die Infrastruktur und Konfiguration für Ihr Projekt definieren. Sie können erstellte Azure-Ressourcen anpassen, indem Sie die ARM-Vorlage ändern. Weitere Informationen finden Sie unter [Bicep-Dokument.](/azure/azure-resource-manager/bicep.md) Die Bereitstellung mit ARM umfasst das Ändern der folgenden beiden Sätze von Dateien, Parametern und Vorlagen:
 
 * ARM-Parameterdateien ( `azure.parameters.{your_env_name}.json` ) befinden sich im `.fx/configs` Ordner, um Parameter an Vorlagen zu übergeben.
 * ARM-Vorlagendateien befinden sich unter `templates/azure` , dieser Ordner enthält die folgenden Dateien:
@@ -163,7 +163,7 @@ In der Zwischenzeit sind die folgenden Parameter mit Werten verfügbar, die wäh
 | botAadAppClientId | {{state.fx-resource-bot.botId}} | Bots AAD App-Client-ID, die während der Bereitstellung erstellt wurde | Informationen zum Anpassen des Werts finden Sie [in diesem Abschnitt.](#use-an-existing-aad-app-for-your-bot) |
 | botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bots AAD Geheimen App-Clientschlüssel, der während der Bereitstellung erstellt wurde | Informationen zum Anpassen des Werts finden Sie [in diesem Abschnitt.](#use-an-existing-aad-app-for-your-bot) |
 | apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM-AAD App-Client-ID, die während der Bereitstellung erstellt wurde | Löschen des Platzhalters und Ausfüllen des tatsächlichen Werts |
-| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | Der AAD clientschlüssel der APIM, der während der Bereitstellung erstellt wurde | Löschen des Platzhalters und Ausfüllen des tatsächlichen Werts |
+| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | APIM-AAD App-Clientschlüssel, der während der Bereitstellung erstellt wurde | Löschen des Platzhalters und Ausfüllen des tatsächlichen Werts |
 
 ##### <a name="azure-resource-related-parameters"></a>Ressourcenbezogene Azure-Parameter
 
@@ -204,7 +204,7 @@ Dies sind einige häufige Szenarien, in denen Sie das Bereitstellungsverhalten a
 
 #### <a name="use-an-existing-aad-app-for-your-teams-app"></a>Verwenden einer vorhandenen AAD-App für Ihre Teams-App
 
-Sie können der Datei den folgenden Konfigurationsausschnitt `.fx/configs/config.{env}.json` hinzufügen, um eine AAD App zu verwenden, die Sie selbst für Ihre Teams-App erstellt haben. Informationen zum Erstellen einer AAD-App finden Sie unter <https://aka.ms/teamsfx-existing-aad-doc> .
+Sie können den folgenden Konfigurationsausschnitt zur `.fx/configs/config.{env}.json` Datei hinzufügen, um eine AAD-App zu verwenden, die Sie selbst für Ihre Teams-App erstellt haben. Informationen zum Erstellen einer AAD-App finden Sie unter <https://aka.ms/teamsfx-existing-aad-doc> .
 
 ```json
 "auth": {
@@ -218,11 +218,11 @@ Sie können der Datei den folgenden Konfigurationsausschnitt `.fx/configs/config
 Nachdem Sie den obigen Codeausschnitt hinzugefügt haben, fügen Sie Ihren geheimen Schlüssel der zugehörigen Umgebungsvariablen hinzu, damit die Tools den tatsächlichen geheimen Schlüssel während der Bereitstellung auflösen können.
 
 > [!NOTE]
-> Sie sollten keine AAD App in mehreren Umgebungen freigeben. Wenn Sie nicht über die Berechtigung zum Aktualisieren der AAD App verfügen, erhalten Sie eine Warnung mit Anweisungen zum manuellen Aktualisieren der AAD-App. Befolgen Sie die Anweisungen, um Ihre AAD-App nach der Bereitstellung zu aktualisieren.
+> Sie sollten keine AAD App in mehreren Umgebungen freigeben. Wenn Sie nicht über die Berechtigung zum Aktualisieren der AAD-App verfügen, erhalten Sie eine Warnung mit Anweisungen zum manuellen Aktualisieren der AAD-App. Befolgen Sie die Anweisungen, um Ihre AAD-App nach der Bereitstellung zu aktualisieren.
 
 #### <a name="use-an-existing-aad-app-for-your-bot"></a>Verwenden einer vorhandenen AAD-App für Ihren Bot
 
-Sie können den folgenden Konfigurationsausschnitt zur `.fx/configs/config.{env}.json` Datei hinzufügen, um eine AAD-App zu verwenden, die Sie selbst für Ihren Bot erstellt haben.
+Sie können den folgenden Konfigurationsausschnitt zur `.fx/configs/config.{env}.json` Datei hinzufügen, um eine AAD App zu verwenden, die Sie selbst für Ihren Bot erstellt haben.
 
 ```json
 "bot": {
@@ -236,7 +236,7 @@ Nachdem Sie den obigen Codeausschnitt hinzugefügt haben, fügen Sie Ihren gehei
 > [!NOTE]
 > Sie sollten keine AAD App in mehreren Umgebungen freigeben.
 
-#### <a name="skip-adding-user-for-sql-database"></a>Überspringen des Hinzufügens eines Benutzers für SQL Datenbank
+#### <a name="skip-adding-user-for-sql-database"></a>Überspringen des Hinzufügens von Benutzern für SQL Datenbank
 
 Manchmal erhalten Sie möglicherweise einen Fehler aufgrund unzureichender Berechtigungen, wenn das Tool versucht, SQL Datenbank Einen Benutzer hinzuzufügen. Sie können der Datei den folgenden Konfigurationsausschnitt `.fx/configs/config.{env}.json` hinzufügen, um das Hinzufügen SQL Datenbankbenutzers zu überspringen.
 
@@ -281,7 +281,7 @@ Betrachten Sie das Szenario, sie möchten Ihrem Azure Function-Back-End Azure St
 
 1. Erstellen eines Registerkartenprojekts
 2. Fügen Sie dem Projekt eine Funktion hinzu. Weitere Informationen zum Hinzufügen von Ressourcen finden Sie unter ["Ressourcen hinzufügen".](./add-resource.md)
-3. Deklarieren Sie die neue Storage-Konto in der ARM-Vorlage. Zur Vereinfachung deklarieren wir die Ressource `templates/azure/provision/function.bicep` direkt. Sie können die Ressourcen an anderen Stellen deklarieren.
+3. Deklarieren Sie das neue Storage Konto in der ARM-Vorlage. Zur Vereinfachung deklarieren wir die Ressource `templates/azure/provision/function.bicep` direkt. Sie können die Ressourcen an anderen Stellen deklarieren.
 
     `````````bicep
     var applicationStorageAccountName = 'myapp${uniqueString(resourceGroup().id)}'
@@ -314,7 +314,7 @@ Betrachten Sie das Szenario, sie möchten Ihrem Azure Function-Back-End Azure St
 
 <summary><b>Problembehandlung</b></summary>
 
-Wenn in Visual Studio Code Fehler mit Teams Toolkit aufgetreten sind, können Sie auf die `Get Help` Schaltfläche in der Fehlerbenachrichtigung klicken, um zum zugehörigen Hilfedokument zu navigieren. Wenn Sie TeamsFx CLI verwenden, wird am Ende der Fehlermeldung ein Hyperlink angezeigt, der auf das Hilfedokument verweist. Sie können das [Bereitstellungshilfedokument](https://aka.ms/teamsfx-arm-help) auch direkt anzeigen.
+Wenn Teams Toolkit in Visual Studio Code Fehler aufgetreten sind, können Sie auf die `Get Help` Schaltfläche in der Fehlerbenachrichtigung klicken, um zum zugehörigen Hilfedokument zu navigieren. Wenn Sie TeamsFx CLI verwenden, wird am Ende der Fehlermeldung ein Hyperlink angezeigt, der auf das Hilfedokument verweist. Sie können das [Bereitstellungshilfedokument](https://aka.ms/teamsfx-arm-help) auch direkt anzeigen.
 
 <br>
 
@@ -349,7 +349,7 @@ Vor der Bereitstellung werden Sie vom Tool gefragt, ob Sie eine neue Ressourceng
 Sie können der [Bereitstellung SharePoint-basierten App](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch) folgen, um SharePoint-basierte App bereitzustellen.
 
 > [!NOTE]
-> Derzeit verfügt das Erstellen Teams App mit SharePoint-Framework mit Teams Toolkit nicht über eine direkte Integration in Azure, die Inhalte in diesem Dokument gelten nicht für SPFx-basierte Apps.
+> Derzeit verfügt das Erstellen Teams App mit SharePoint-Framework mit Teams Toolkit nicht über eine direkte Integration in Azure. Die Inhalte in diesem Dokument gelten nicht für SPFx-basierte Apps.
 
 
 <br>

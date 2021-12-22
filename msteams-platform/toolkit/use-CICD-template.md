@@ -6,17 +6,16 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ff5b77b7891d36e63f2fd3260ae114cbf536384d
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: acd12a96365bf97bd419045c415e71efd3a118e2
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61228044"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591778"
 ---
 # <a name="ci-or-cd-support-for-teams-application-developers"></a>CI- oder CD-Unterstützung für Teams Anwendungsentwickler
 
-TeamsFx hilft beim Automatisieren Ihres Entwicklungsworkflows beim Erstellen Teams Anwendung. Das Dokument enthält Tools und vorgefertigte Vorlagen für die ersten Schritte beim Einrichten von CI- oder CD-Pipelines mit den beliebtesten Entwicklungsplattformen wie GitHub, Azure Devops und Jenops.
-
+TeamsFx hilft beim Automatisieren Ihres Entwicklungsworkflows beim Erstellen Teams Anwendung. Das Dokument bietet Tools und vorgefertigte Vorlagen für die ersten Schritte beim Einrichten von CI- oder CD-Pipelines mit den beliebtesten Entwicklungsplattformen wie GitHub, Azure Devops und Jenops.
 
 |Tools und Vorlagen|Beschreibung|
 |---|---|
@@ -48,18 +47,18 @@ Sie können die folgenden Änderungen vornehmen, um den Workflow für Ihr Projek
 Die folgenden Schritte zum Anpassen des CD-Workflows:
 
 1. Standardmäßig wird der CD-Workflow ausgelöst, wenn neue Commits für die `main` Verzweigung ausgeführt werden.
-1. Erstellen Sie GitHub [repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) by environment to hold Azure or Microsoft 365 login credentials. In der folgenden Tabelle sind alle geheimen Schlüssel aufgeführt, die Sie für GitHub erstellen müssen. Informationen zur detaillierten Verwendung finden Sie im GitHub Aktionen [README.md.](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md)
+1. Erstellen Sie GitHub [geheimen Repositoryschlüssel](https://docs.github.com/en/actions/reference/encrypted-secrets) nach Umgebung, um Azure- oder Microsoft 365 Anmeldeinformationen zu speichern. In der folgenden Tabelle sind alle geheimen Schlüssel aufgeführt, die Sie für GitHub erstellen müssen. Eine detaillierte Verwendung finden Sie in den GitHub Aktionen [README.md.](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md)
 1. Ändern Sie ggf. die Buildskripts.
 1. Entfernen Sie die Testskripts, wenn Sie keine Tests haben.
 
 > [!Note]
-> Der Bereitstellungsschritt ist nicht in der CD-Vorlage enthalten, da er normalerweise nur einmal ausgeführt wird. Sie können entweder die Bereitstellung in Teams Toolkit, TeamsFx CLI oder mithilfe eines getrennten Workflows ausführen. Bitte denken Sie daran, nach der Bereitstellung einen Commit auszuführen (Ergebnisse der Bereitstellung werden innerhalb des `.fx` Ordners abgelegt) und speichern Sie den Dateiinhalt `.fx/states/{YOUR_ENV_NAME}.userdata` in GitHub [Repositoryschlüssel](https://docs.github.com/en/actions/reference/encrypted-secrets) mit Namen `USERDATA_CONTENT` für die zukünftige Verwendung.
+> Der Bereitstellungsschritt ist nicht in der CD-Vorlage enthalten, da er normalerweise nur einmal ausgeführt wird. Sie können entweder die Bereitstellung in Teams Toolkit, TeamsFx CLI oder mithilfe eines separaten Workflows ausführen. Denken Sie daran, nach der Bereitstellung einen Commit auszuführen (Ergebnisse der Bereitstellung werden innerhalb des `.fx` Ordners abgelegt), und speichern Sie den Dateiinhalt `.fx/states/{YOUR_ENV_NAME}.userdata` in GitHub [Repositoryschlüssel](https://docs.github.com/en/actions/reference/encrypted-secrets) mit Namen `USERDATA_CONTENT` für die zukünftige Verwendung.
 
 ### <a name="environment-variables"></a>Umgebungsvariablen
 
 Schritte zum Erstellen von Umgebungsvariablen in GitHub:
 
-1. Navigieren Sie **auf** der Projekt Einstellungen Seite zum Abschnitt **"Umgebungen",** und wählen Sie **"Neue Umgebung"** aus.
+1. Navigieren Sie auf der Projekt **Einstellungen** Seite zum Abschnitt **"Umgebungen",** und wählen Sie **"Neue Umgebung"** aus.
 1. Geben Sie einen Namen für Ihre Umgebung ein. Der in der Vorlage bereitgestellte Standardumgebungsname lautet `test_environment` . Wählen Sie **"Umgebung konfigurieren"** aus, um fortzufahren.
 1. Wählen Sie auf der nächsten Seite **"Geheimen Schlüssel hinzufügen"** aus, um geheime Schlüssel für jedes der in der folgenden Tabelle aufgeführten Elemente hinzuzufügen.
 
@@ -69,10 +68,12 @@ Schritte zum Erstellen von Umgebungsvariablen in GitHub:
 |AZURE_ACCOUNT_PASSWORD|Das Kennwort des Azure-Kontos.|
 |AZURE_SUBSCRIPTION_ID|So identifizieren Sie das Abonnement, in dem die Ressourcen bereitgestellt werden.|
 |AZURE_TENANT_ID|So identifizieren Sie den Mandanten, in dem sich das Abonnement befindet.|
-|Microsoft 365_ACCOUNT_NAME|Das Microsoft 365-Konto zum Erstellen und Veröffentlichen der Teams-App.|
+|Microsoft 365_ACCOUNT_NAME|Das Microsoft 365 Konto zum Erstellen und Veröffentlichen der Teams-App.|
 |Microsoft 365_ACCOUNT_PASSWORD|Das Kennwort des Microsoft 365 Kontos.|
-|Microsoft 365_TENANT_ID|Um den Mandanten zu identifizieren, in dem die Teams-App erstellt/veröffentlicht wird. Dieser Wert ist optional, es sei denn, Sie verfügen über ein mehrinstanzenfähiges Konto und möchten einen anderen Mandanten verwenden. Erfahren Sie mehr [darüber, wie Sie Ihre Microsoft 365 Mandanten-ID finden.](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
-> Hinweis: Lesen Sie die Informationen zum [Konfigurieren von Microsoft 365/Azure-Anmeldeinformationen,](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) um sicherzustellen, dass Sie die mehrstufige Authentifizierung und die Sicherheitsstandards für die im Workflow verwendeten Anmeldeinformationen deaktiviert haben.
+|Microsoft 365_TENANT_ID|Um den Mandanten zu identifizieren, in dem die Teams App erstellt/veröffentlicht wird. Dieser Wert ist optional, es sei denn, Sie verfügen über ein mehrinstanzenfähiges Konto und möchten einen anderen Mandanten verwenden. Erfahren Sie mehr [darüber, wie Sie Ihre Microsoft 365 Mandanten-ID finden.](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
+
+> [!NOTE]
+> Lesen Sie die Informationen unter ["Konfigurieren Microsoft 365/Azure-Anmeldeinformationen",](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) um sicherzustellen, dass Sie die mehrstufige Authentifizierung und die Sicherheitsstandards für die im Workflow verwendeten Anmeldeinformationen deaktiviert haben.
 
 ## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>Einrichten von CI- oder CD-Pipelines mit Azure DevOps
 
@@ -146,7 +147,6 @@ steps:
   env:
     AZURE_ACCOUNT_NAME: $(AZURE_ACCOUNT_NAME)
     AZURE_ACCOUNT_PASSWORD: $(AZURE_ACCOUNT_PASSWORD)
-    AZURE_SUBSCRIPTION_ID: $(AZURE_SUBSCRIPTION_ID)
     AZURE_TENANT_ID: $(AZURE_TENANT_ID)
     Microsoft 365_ACCOUNT_NAME: $(Microsoft 365_ACCOUNT_NAME)
     Microsoft 365_ACCOUNT_PASSWORD: $(Microsoft 365_ACCOUNT_PASSWORD)
@@ -163,7 +163,7 @@ Die möglichen Änderungen, die Sie für das Skript oder die Workflowdefinition 
 1. Stellen Sie sicher, dass Sie über ein npm-Testskript verfügen, das null zurückgibt, um erfolgreich zu sein, und/oder ändern Sie die Testbefehle.
 
 > [!Note]
-> Der Bereitstellungsschritt ist nicht in der CD-Vorlage enthalten, da er normalerweise nur einmal ausgeführt wird. Sie können entweder die Bereitstellung in Teams Toolkit, TeamsFx CLI oder mithilfe eines getrennten Workflows ausführen. Bitte denken Sie daran, nach der Bereitstellung einen Commit auszuführen (Ergebnisse der Bereitstellung werden innerhalb des `.fx` Ordners abgelegt) und `.fx/states/{YOUR_ENV_NAME}.userdata` in Azure DevOps sichere [Dateien](/azure/devops/pipelines/library/secure-files) für die zukünftige Verwendung hochzuladen.
+> Der Bereitstellungsschritt ist nicht in der CD-Vorlage enthalten, da er normalerweise nur einmal ausgeführt wird. Sie können entweder die Bereitstellung in Teams Toolkit, TeamsFx CLI oder mithilfe eines getrennten Workflows ausführen. Denken Sie daran, nach der Bereitstellung einen Commit auszuführen (Ergebnisse der Bereitstellung werden im `.fx` Ordner abgelegt) und in Azure DevOps sichere `.fx/states/{YOUR_ENV_NAME}.userdata` [Dateien](/azure/devops/pipelines/library/secure-files) für die zukünftige Verwendung hochzuladen.
 
 ### <a name="environment-variables-for-azure-devops"></a>Umgebungsvariablen für Azure DevOps
 
@@ -184,7 +184,8 @@ Schritte zum Erstellen von Pipelinevariablen in Azure DevOps:
 |Microsoft 365_ACCOUNT_PASSWORD|Das Kennwort des Microsoft 365 Kontos.|
 |Microsoft 365_TENANT_ID|Um den Mandanten zu identifizieren, in dem die Teams App erstellt/veröffentlicht wird. Dieser Wert ist optional, es sei denn, Sie verfügen über ein mehrinstanzenfähiges Konto und möchten einen anderen Mandanten verwenden. Erfahren Sie mehr [darüber, wie Sie Ihre Microsoft 365 Mandanten-ID finden.](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
 
-> ! Hinweis: Lesen Sie die Informationen zum [Konfigurieren von Microsoft 365/Azure-Anmeldeinformationen,](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) um sicherzustellen, dass Sie die mehrstufige Authentifizierung und die Sicherheitsstandards für die im Workflow verwendeten Anmeldeinformationen deaktiviert haben.
+> [!NOTE]
+> Der Bereitstellungsschritt ist nicht in der CD-Vorlage enthalten, da er normalerweise nur einmal ausgeführt wird. Sie können entweder die Bereitstellung in Teams Toolkit, TeamsFx CLI oder mithilfe eines getrennten Workflows ausführen. Denken Sie daran, nach der Bereitstellung einen Commit auszuführen (Ergebnisse der Bereitstellung werden im `.fx` Ordner abgelegt) und speichern Sie den Dateiinhalt `.fx/states/{YOUR_ENV_NAME}.userdata` in Jenkins-Anmeldeinformationen für die zukünftige Verwendung.
 
 ## <a name="ci-or-cd-pipeline-templates-in-jenkins"></a>CI- oder CD-Pipelinevorlagen in Jenkins
 
@@ -219,7 +220,7 @@ Es gibt einige potenzielle Änderungen, die Sie vornehmen können, um Ihr Projek
 1. Entfernen Sie die Testskripts, wenn Sie keine Tests haben.
 
 > [!Note]
- Der Bereitstellungsschritt ist nicht in der CD-Vorlage enthalten, da er normalerweise nur einmal ausgeführt wird. Sie können entweder die Bereitstellung in Teams Toolkit, TeamsFx CLI oder mithilfe eines getrennten Workflows ausführen. Denken Sie daran, nach der Bereitstellung einen Commit auszuführen (Ergebnisse der Bereitstellung werden im `.fx` Ordner abgelegt) und speichern Sie den Dateiinhalt `.fx/states/{YOUR_ENV_NAME}.userdata` in Jenkins-Anmeldeinformationen für die zukünftige Verwendung.
+ Der Bereitstellungsschritt ist nicht in der CD-Vorlage enthalten, da er normalerweise nur einmal ausgeführt wird. Sie können entweder die Bereitstellung in Teams Toolkit, TeamsFx CLI oder mithilfe eines separaten Workflows ausführen. Denken Sie daran, nach der Bereitstellung einen Commit auszuführen (Ergebnisse der Bereitstellung werden im `.fx` Ordner abgelegt) und speichern Sie den Dateiinhalt `.fx/states/{YOUR_ENV_NAME}.userdata` in Jenkins-Anmeldeinformationen für die zukünftige Verwendung.
 
 ### <a name="environment-variables-for-jenkins"></a>Umgebungsvariablen für Jenkins
 
@@ -249,6 +250,19 @@ Die Skripts basieren auf einem plattformübergreifenden TeamsFx-Befehlszeilentoo
 > Um `@microsoft/teamsfx-cli` die Ausführung im CI-Modus zu aktivieren, aktivieren Sie `CI_ENABLED` nach `export CI_ENABLED=true` . Im CI-Modus `@microsoft/teamsfx-cli` ist für CI oder CD geeignet.
 
 Stellen Sie sicher, dass Azure- und M365-Anmeldeinformationen in Ihren Umgebungsvariablen sicher festgelegt werden. Wenn Sie beispielsweise GitHub als Quellcoderepository verwenden, können Sie die [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) verwenden, um Ihre Umgebungsvariablen sicher zu speichern.
+
+## <a name="publish-teams-app-using-teams-developer-portal"></a>Veröffentlichen Teams App mit Teams Entwicklerportal
+
+Wenn Änderungen im Zusammenhang mit Teams Manifestdatei der App vorgenommen werden, sollten Sie die Teams-App erneut veröffentlichen, um das Manifest zu aktualisieren.
+
+Um Teams App manuell zu veröffentlichen, können Sie [das Entwicklerportal für Teams](https://dev.teams.microsoft.com/home)verwenden.
+
+**So veröffentlichen Sie Ihre App**
+
+1. Melden Sie sich im [Entwicklerportal für Teams](https://dev.teams.microsoft.com) mit dem entsprechenden Konto an.
+2. Importieren Sie Ihr App-Paket in ZIP, indem Sie `App -> Import app -> Replace` .
+3. Wählen Sie die Ziel-App in der App-Liste aus, und wechseln Sie zur Übersichtsseite.
+4. Veröffentlichen Sie Ihre App, indem Sie `Publish -> Publish to your org`
 
 ### <a name="see-also"></a>Siehe auch
 

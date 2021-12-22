@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: Befehlsmenü Unterhaltung zum Verfassen von Nachrichten @mention
-ms.openlocfilehash: bf9b6963b482a335175e5a9c75b6c928104ead26
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 739d2c32bb07ef63c6e886c0172d24a7fbc17ff6
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888237"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591792"
 ---
 # <a name="bot-command-menus"></a>Bot-Befehlsmenüs
 
@@ -163,7 +163,7 @@ Sie müssen Menübefehle in Ihrem Bot-Code behandeln, während Sie Nachrichten v
 
 ## <a name="handle-menu-commands-in-your-bot-code"></a>Behandeln von Menübefehlen in Ihrem Bot-Code
 
-Bots in einer Gruppe oder einem Kanal reagieren nur, wenn sie in einer Nachricht erwähnt `@botname` werden. Jede Nachricht, die von einem Bot empfangen wird, wenn sie sich in einem Gruppen- oder Kanalbereich befindet, enthält ihren Namen im zurückgegebenen Nachrichtentext. Vor der Verarbeitung des zurückgegebenen Befehls muss ihre Nachrichtenparsing die Nachricht verarbeiten, die von einem Bot mit seinem Namen empfangen wurde.
+Bots in einer Gruppe oder einem Kanal reagieren nur, wenn sie in einer Nachricht erwähnt `@botname` werden. Jede Nachricht, die von einem Bot empfangen wird, wenn sie sich in einem Gruppen- oder Kanalbereich befindet, enthält ihren Namen im Nachrichtentext. Vor der Verarbeitung des zurückgegebenen Befehls muss ihre Nachrichtenparsing die Nachricht verarbeiten, die von einem Bot mit seinem Namen empfangen wurde.
 
 > [!NOTE]
 > Um die Befehle im Code zu verarbeiten, werden sie als reguläre Nachricht an Ihren Bot gesendet. Sie müssen sie so behandeln, wie Sie andere Nachrichten von Ihren Benutzern behandeln würden. Die Befehle im Code fügen vorkonfigurierten Text in das Textfeld ein. Der Benutzer muss dann diesen Text wie bei jeder anderen Nachricht senden.
@@ -190,7 +190,7 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # <a name="python"></a>[Python](#tab/python)
 
-Sie können den **@Mention** Teil des Nachrichtentexts mithilfe einer statischen Methode analysieren, die mit bot Framework bereitgestellt wird. Es handelt sich um eine Methode der `TurnContext` Klasse mit dem Namen `remove_recipient_mention` .
+Sie können den **@Mention** Teil des Nachrichtentexts mithilfe einer statischen Methode analysieren, die im Bot Framework bereitgestellt wird. Es handelt sich um eine Methode der `TurnContext` Klasse mit dem Namen `remove_recipient_mention` .
 
 Der Python-Code zum Analysieren des **\@ Erwähnungsteils** des Nachrichtentexts lautet wie folgt:
 
