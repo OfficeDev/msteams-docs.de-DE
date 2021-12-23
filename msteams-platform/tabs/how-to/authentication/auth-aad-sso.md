@@ -4,12 +4,12 @@ description: Beschreibt einmaliges Anmelden (Single Sign-On, SSO)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams-Authentifizierungs-SSO AAD Single Sign-On-API
-ms.openlocfilehash: f935b9632c083fe3c78f0b134c398e51d88b9cdc
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 107c03fe7ecb2bc6fd38ede7797e6a2a23bac012
+ms.sourcegitcommit: 9a06b09ea4bd265096b35c792aa43cf1c0671d5d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569504"
+ms.lasthandoff: 12/23/2021
+ms.locfileid: "61598948"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>SSO-Unterstützung (Single Sign-On) für Registerkarten
 
@@ -172,7 +172,7 @@ Nachdem Sie das Zugriffstoken im Erfolgsrückruf erhalten haben, decodieren Sie 
 
 ### <a name="get-an-access-token-with-graph-permissions"></a>Abrufen eines Zugriffstokens mit Graph Berechtigungen
 
-Unsere aktuelle Implementierung für SSO erteilt nur die Zustimmung für Berechtigungen auf Benutzerebene, die nicht für Graph Aufrufe verwendet werden können. Um die Berechtigungen (Bereiche) abzurufen, die zum Ausführen eines Graph Aufrufs erforderlich sind, müssen SSO-Lösungen einen benutzerdefinierten Webdienst implementieren, um das vom Teams JavaScript SDK abgerufene Token gegen ein Token auszutauschen, das die erforderlichen Bereiche enthält. Dies geschieht mithilfe des [Im-Auftrag-von-Flusses AAD.](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)
+Unsere aktuelle Implementierung für SSO erteilt nur die Zustimmung für Berechtigungen auf Benutzerebene, die nicht für Graph Aufrufe verwendet werden können. Um die Berechtigungen (Bereiche) abzurufen, die zum Ausführen eines Graph Aufrufs erforderlich sind, müssen SSO-Lösungen einen benutzerdefinierten Webdienst implementieren, um das vom Teams JavaScript SDK abgerufene Token gegen ein Token auszutauschen, das die erforderlichen Bereiche enthält. Dies geschieht mithilfe [des Im-Auftrag-von-Flusses AAD.](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)
 
 #### <a name="tenant-admin-consent"></a>Mandantenadministratorzustimmung
 
@@ -180,29 +180,30 @@ Eine einfache Möglichkeit, im Namen einer Organisation als Mandantenadministrat
 
 #### <a name="ask-for-consent-using-the-auth-api"></a>Anfordern der Zustimmung mithilfe der Auth-API
 
-Ein weiterer Ansatz zum Abrufen Graph Bereichen besteht darin, ein Zustimmungsdialogfeld mithilfe unseres vorhandenen [webbasierten Azure AD Authentifizierungsansatz](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page)zu präsentieren. Bei diesem Ansatz wird ein Azure AD Zustimmungsdialogfeld angezeigt.
+Ein weiterer Ansatz zum Abrufen Graph Bereichen besteht darin, ein Zustimmungsdialogfeld mithilfe unseres vorhandenen [webbasierten Azure AD Authentifizierungsansatz zu](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page)präsentieren. Bei diesem Ansatz wird ein Azure AD Zustimmungsdialogfeld angezeigt.
 
 **So fordern Sie eine zusätzliche Zustimmung mithilfe der Auth-API an**
 
 1. Das abgerufene Token `getAuthToken()` muss serverseitig mit AAD [Im-Auftrag-von-Fluss](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) ausgetauscht werden, um Zugriff auf diese anderen Graph-APIs zu erhalten. Stellen Sie sicher, dass Sie den v2-Graph-Endpunkt für diesen Austausch verwenden.
-2. Wenn der Austausch fehlschlägt, gibt AAD eine Ausnahme für ungültige Berechtigungen zurück. Es gibt in der Regel eine von zwei Fehlermeldungen `invalid_grant` oder `interaction_required` .
+2. Wenn der Austausch fehlschlägt, gibt AAD eine Ausnahme für ungültige Genehmigungen zurück. Es gibt in der Regel eine von zwei Fehlermeldungen `invalid_grant` oder `interaction_required` .
 3. Wenn der Austausch fehlschlägt, müssen Sie die Zustimmung anfordern. Zeigen Sie eine Benutzeroberfläche an, auf der der Benutzer aufgefordert wird, eine andere Zustimmung zu erteilen. Diese Benutzeroberfläche muss eine Schaltfläche enthalten, die mithilfe unserer [AAD-Authentifizierungs-API](~/concepts/authentication/auth-silent-aad.md)ein AAD Zustimmungsdialogfeld auslöst.
-4. Wenn Sie mehr Zustimmung von AAD anfordern, müssen Sie `prompt=consent` den [Abfragezeichenfolgenparameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) in AAD einschließen, andernfalls AAD nicht nach den anderen Bereichen fragt.
+4. Wenn Sie mehr Zustimmung von AAD anfordern, müssen Sie `prompt=consent` den [Abfragezeichenfolgenparameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) in AAD einschließen, andernfalls werden AAD nicht nach den anderen Bereichen gefragt.
     * Statt `?scope={scopes}`
     * Verwenden Sie diese `?prompt=consent&scope={scopes}`
     * Stellen Sie sicher, dass `{scopes}` alle Bereiche enthalten sind, für die Sie den Benutzer auffordern, z. B. Mail.Read oder User.Read.
 5. Nachdem der Benutzer mehr Berechtigungen erteilt hat, wiederholen Sie den "Im Auftrag von"-Fluss, um Zugriff auf diese anderen APIs zu erhalten.
 
-### <a name="non-aad-authentication"></a>Nicht AAD Authentifizierung
+### <a name="non-aad-authentication"></a>Nicht-AAD-Authentifizierung
 
-Die oben beschriebene Authentifizierungslösung funktioniert nur für Apps und Dienste, die AAD als Identitätsanbieter unterstützen. Apps, die sich mit nicht AAD basierten Diensten authentifizieren möchten, müssen weiterhin den Popup-basierten [Webauthentifizierungsfluss verwenden.](~/concepts/authentication.md)
+Die oben beschriebene Authentifizierungslösung funktioniert nur für Apps und Dienste, die AAD als Identitätsanbieter unterstützen. Apps, die sich mit nicht AAD basierten Diensten authentifizieren möchten, müssen weiterhin den Popup-basierten [Webauthentifizierungsfluss](~/concepts/authentication.md)verwenden.
 
 > [!NOTE]
-> SSO wird für kundeneigene Apps innerhalb der AAD B2C-Mandanten unterstützt.
+> SSO wird für Apps im Besitz von Kunden innerhalb der AAD B2C-Mandanten unterstützt.
 
-## <a name="step-by-step-guide"></a>Schrittweise Anleitung
+## <a name="step-by-step-guides"></a>Schritt-für-Schritt-Anleitungen
 
-Befolgen Sie die [schrittweise Anleitung](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) zum Authentifizieren von Registerkarten und Messaging-Erweiterungen.
+* Befolgen Sie die [schrittweise Anleitung](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) zum Authentifizieren von Registerkarten und Messaging-Erweiterungen.
+* Befolgen Sie die [schrittweise Anleitung,](../../../sbs-tab-with-adaptive-cards.yml) um Registerkarten mit adaptiven Karten zu erstellen.
 
 ## <a name="see-also"></a>Siehe auch
 [Teams Bot mit einmaligem Anmelden](../../../sbs-bots-with-sso.yml)

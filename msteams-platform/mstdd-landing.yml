@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Microsoft Teams-Entwicklerdokumentation
-summary: Willkommen bei der Übersicht über Microsoft Teams Entwicklerdokumentation. Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse, in denen sich Menschen zunehmend sammeln, lernen und arbeiten.
+summary: Willkommen bei der Übersicht über Microsoft Teams Entwicklerdokumentation. Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse, in denen Sichten, Lernen und Arbeiten zunehmend sammeln.
 metadata:
   title: Microsoft Teams-Entwicklerdokumentation
   description: Einführung in das Erstellen von Apps für Teams
@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: ad54e998cf2097686ad41ba4db9fe44f44219ff2
-  ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+  ms.openlocfilehash: 34d96608af3a7f42063f4a1bf8d1c713b5f42266
+  ms.sourcegitcommit: 9a06b09ea4bd265096b35c792aa43cf1c0671d5d
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 12/20/2021
-  ms.locfileid: "61569490"
+  ms.lasthandoff: 12/23/2021
+  ms.locfileid: "61598941"
 landingContent:
 - title: Entdecken Sie die neuesten
   linkLists:
@@ -54,6 +54,8 @@ landingContent:
       url: tabs/how-to/authentication/auth-aad-sso.md
   - linkListType: tutorial
     links:
+    - text: Schrittweise Anleitung für Registerkarten mit adaptiven Karten
+      url: ~/sbs-tab-with-adaptive-cards.yml
     - text: Schrittweise Anleitung für proaktive Nachrichten
       url: ~/sbs-send-proactive.yml
     - text: Schritt-für-Schritt-Anleitung zum Hinzufügen der Authentifizierung zu Bots
