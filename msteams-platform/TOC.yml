@@ -237,9 +237,6 @@
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
         - name: Proaktive Nachrichten
           href: bots/how-to/conversations/send-proactive-messages.md
-          items:
-            - name: Schrittweise Anleitung
-              href: sbs-send-proactive.yml
         - name: Formatieren von Bot-Nachrichten
           href: bots/how-to/format-your-bot-messages.md
         - name: Bot-Nachrichten aktualisieren und löschen
@@ -376,8 +373,6 @@
           href: bots/how-to/authentication/add-authentication.md
         - name: Verwenden von SSO-Authentifizierung (einmaliges Anmelden)
           href: bots/how-to/authentication/auth-aad-sso-bots.md
-        - name: Schrittweise Anleitung für Bots mit SSO
-          href: sbs-bots-with-sso.yml
     - name: Messaging-Erweiterungen
       items:
         - name: Hinzufügen einer Authentifizierung zu Ihrer Messaging-Erweiterung

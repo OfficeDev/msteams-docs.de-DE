@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: 34d96608af3a7f42063f4a1bf8d1c713b5f42266
-  ms.sourcegitcommit: 9a06b09ea4bd265096b35c792aa43cf1c0671d5d
+  ms.openlocfilehash: 4151f03b3e2772860e5d7df4c6fd673e3cc6289e
+  ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 12/23/2021
-  ms.locfileid: "61598941"
+  ms.lasthandoff: 12/27/2021
+  ms.locfileid: "61608454"
 landingContent:
 - title: Entdecken Sie die neuesten
   linkLists:
@@ -52,8 +52,12 @@ landingContent:
       url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - text: Verwenden der SSO-Authentifizierung für Registerkarten
       url: tabs/how-to/authentication/auth-aad-sso.md
+    - text: Geräteberechtigung für Browser
+      url: concepts/device-capabilities/browser-device-permissions.md
   - linkListType: tutorial
     links:
+    - text: Schritt-für-Schritt-Anleitung für Berechtigungen für Registerkartengeräte
+      url: ~/sbs-tab-device-permissions.yml
     - text: Schrittweise Anleitung für Registerkarten mit adaptiven Karten
       url: ~/sbs-tab-with-adaptive-cards.yml
     - text: Schrittweise Anleitung für proaktive Nachrichten
@@ -120,7 +124,7 @@ landingContent:
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: App-Manifest
       url: ../msteams-platform/resources/schema/manifest-schema.md
-- title: Teams-App-Szenarien
+- title: Teams App-Szenarien
   linkLists:
   - linkListType: reference
     links:
