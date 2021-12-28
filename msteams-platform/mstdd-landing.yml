@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: 4151f03b3e2772860e5d7df4c6fd673e3cc6289e
-  ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+  ms.openlocfilehash: 6c4f9fcdc64a470eaeed96b2575e00b5c2439c76
+  ms.sourcegitcommit: 8935f54330c5685ff091f01e2b18c70502428054
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 12/27/2021
-  ms.locfileid: "61608454"
+  ms.lasthandoff: 12/28/2021
+  ms.locfileid: "61619795"
 landingContent:
 - title: Entdecken Sie die neuesten
   linkLists:
@@ -40,7 +40,7 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     - text: Erstellen von benutzerdefinierten Apps mit geringem Code
       url: ~/samples/teams-low-code-solutions.md
-- title: Tutorials
+- title: Lernprogramme
   linkLists:
   - linkListType: concept
     links:
@@ -80,6 +80,8 @@ landingContent:
     links:
     - text: Erste Schritte beim Erstellen von Apps
       url: ../msteams-platform/get-started/get-started-overview.md
+    - text: Erste Schritte mit GitHub
+      url: /contribute/additional-resources
   - linkListType: tutorial
     links:
     - text: Erstellen einer App mit JavaScript
@@ -124,7 +126,7 @@ landingContent:
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: App-Manifest
       url: ../msteams-platform/resources/schema/manifest-schema.md
-- title: Teams App-Szenarien
+- title: Teams-App-Szenarien
   linkLists:
   - linkListType: reference
     links:

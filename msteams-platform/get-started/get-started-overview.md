@@ -4,12 +4,12 @@ description: Übersicht über die ersten Schritte für Microsoft Teams-Entwickle
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams Entwicklerbeispiele
-ms.openlocfilehash: cb498d176b8893a2097e19ca76120a33a5f7221c
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 9ab8014ad528aff9cfb0f4e271332981af3a8f29
+ms.sourcegitcommit: 8935f54330c5685ff091f01e2b18c70502428054
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569497"
+ms.lasthandoff: 12/28/2021
+ms.locfileid: "61619802"
 ---
 # <a name="get-started"></a>Erste Schritte
 
@@ -23,7 +23,7 @@ Hier ist eine Vorstellung davon, was Sie lernen werden:
 - Machen Sie sich mit dem Toolkit und SDKs vertraut.
 - Konfigurieren und erstellen Sie verschiedene Arten von Teams-Apps.
 
-Werfen wir einen kurzen Blick auf die Optionen der Buildumgebung, aus denen Sie wählen können, und die Roadmap zum Erstellen und Bereitstellen einer Teams App.
+Werfen wir einen kurzen Blick auf die Optionen der Buildumgebung, aus denen Sie wählen können, und die Roadmap zum Erstellen und Bereitstellen einer Teams-App.
 
 :::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Abbildung der grundlegenden Schritte zum Erstellen und Bereitstellen einer Teams App":::
 
@@ -33,7 +33,7 @@ Wählen Sie je nach gewünschten Funktionen für Ihre App einen geeigneten Satz 
 
 | App-Funktionen | Benutzerinteraktionen | Empfohlene Tools | SDKs | Technologiestapel/Sprachen |
 |--------|-------------|--------|--------|--------|
-| Registerkarten | Eine eingebettete Weboberfläche im Vollbildmodus. | VS Code mit Teams Toolkit-Erweiterung oder [TeamsFx CLI,](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) wenn Sie CLI bevorzugen | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) für kernbibliotheken und [Teams-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) für UI-Funktionen | Webtechnologie im Allgemeinen HTML, CSS und JavaScript (incl. React). |
+| Registerkarten | Eine eingebettete Weboberfläche im Vollbildmodus. | VS Code mit Teams Toolkit-Erweiterung oder [TeamsFx CLI,](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) wenn Sie CLI bevorzugen | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) für die wichtigsten Libs und [Teams-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) für UI-Funktionen | Webtechnologie im Allgemeinen HTML, CSS und JavaScript (incl. React). |
 | Bots | Ein Chat-Bot, der sich mit Mitgliedern unterhält. | VS Code mit Teams Toolkit-Erweiterung oder [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) und [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, Java und Python. |
 | Messaging-Erweiterungen | Verknüpfungen zum Einfügen externer Inhalte in eine Unterhaltung oder zum Ausführen von Aktionen für Nachrichten. | VS Code mit Teams Toolkit-Erweiterung oder [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) und [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, Java und Python. |
 
@@ -63,4 +63,5 @@ Nun erstellen wir Ihre erste Teams-App. Wählen Sie jedoch zunächst Ihre Sprach
 
 ## <a name="see-also"></a>Siehe auch
 
-[Beispiele für Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [beispiele für Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Git- und GitHub-Ressourcen](/contribute/additional-resources)
