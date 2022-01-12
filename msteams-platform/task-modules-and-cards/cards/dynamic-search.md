@@ -5,12 +5,12 @@ description: Beschreibt die Typaheadsuche mit dem Input.ChoiceSet-Steuerelement 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 95041b1a24ac083329a809b8a5989d77e2430e26
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: 6c2c26ee6853b23283ae04dbbfec4a78425e2ea5
+ms.sourcegitcommit: f85d0a40326f45b1ffdd3bd1b61b2d6af76b6e85
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075583"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "61722182"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>Typaheadsuche in adaptiven Karten
 
@@ -88,8 +88,8 @@ Die folgenden Eigenschaften sind die neuen Ergänzungen des [`Input.ChoiceSet`](
 | Eigenschaft| Typ | Erforderlich | Beschreibung |
 |-----------|------|----------|-------------|
 | Typ | Data.Query | Ja | Gibt an, dass es sich um ein Data.Query-Objekt handelt.|
-| Dataset | Zeichenfolge | Ja | Gibt den Datentyp an, der dynamisch abgerufen wird. |
-| value | Zeichenfolge | Nein | Füllt die Aufrufanforderung an den Bot mit der Eingabe auf, die der Benutzer für die `ChoiceSet` bereitgestellt hat. |
+| Dataset | String | Ja | Gibt den Datentyp an, der dynamisch abgerufen wird. |
+| value | String | Nein | Füllt die Aufrufanforderung an den Bot mit der Eingabe auf, die der Benutzer für die `ChoiceSet` bereitgestellt hat. |
 | count | Zahl | Nein | Füllt die Aufrufanforderung an den Bot auf, um die Anzahl der Elemente anzugeben, die zurückgegeben werden müssen. Der Bot ignoriert ihn, wenn die Benutzer einen anderen Betrag senden möchten. | 
 | skip | Zahl | Nein | Füllt die Aufrufanforderung an den Bot auf, um anzugeben, dass Benutzer in der Liste paginieren und fortfahren möchten. |
 
@@ -297,7 +297,125 @@ Die Beispielnutzlast, die die statische und dynamische Typaheadsuche mit einzeln
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="code-snippets-for-invoke-request-and-response"></a>Codeausschnitte für aufrufanforderung und -antwort
+
+### <a name="invoke-request"></a>Anforderung aufrufen
+
+```json
+{
+    "name": "application/search",
+    "type": "invoke",
+    "value": {
+        "queryText": "fluentui",
+        "queryOptions": {
+            "skip": 0,
+            "top": 15
+        },
+        "dataset": "npm"
+    },
+    "locale": "en-US",
+    "localTimezone": "America/Los_Angeles",
+    // …. other fields
+}
+```
+
+### <a name="response"></a>Antwort
+
+#### <a name="c"></a>[C#](#tab/csharp)
+
+```csharp
+protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+    if (turnContext.Activity.Name == "application/search")
+    {
+    var packages = new[] {
+            new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+            new { title = "Fluent UI Library", value = "FluentUI" }};
+
+    var searchResponseData = new
+    {
+        type = "application/vnd.microsoft.search.searchResponse",
+        value = new
+        {
+        results = packages
+        }
+    };
+    var jsonString = JsonConvert.SerializeObject(searchResponseData);
+    JObject jsonData = JObject.Parse(jsonString);
+    return new InvokeResponse()
+    {
+        Status = 200,
+        Body = jsonData
+    };
+    }
+
+    return null;
+}
+```
+
+#### <a name="nodejs"></a>[Node.js](#tab/nodejs)
+ 
+```nodejs
+  async onInvokeActivity(context) {
+    if (context._activity.name == 'application/search') {
+      // let searchQuery = context._activity.value.queryText;  // This can be used to filter the results
+      var successResult = {
+        status: 200,
+        body: {
+          "type": "application/vnd.microsoft.search.searchResponse",
+          "value": {
+            "results": [
+              {
+                "value": "FluentAssertions",
+                "title": "A very extensive set of extension methods"
+              },
+              {
+                "value": "FluentUI",
+                "title": "Fluent UI Library"
+              }
+            ]
+          }
+        }
+      }
+
+      return successResult;
+
+    }
+  }
+```
+
+####  <a name="json"></a>[JSON](#tab/json)
+
+```json
+{
+    "status": 200,
+    "body" : {
+        "type": "application/vnd.microsoft.search.searchResponse",
+        "value": {
+           "results": [
+                {
+                    "value": "FluentAssertions",
+                    "title": "A very extensive set of extension methods."
+                },
+                {
+                    "value": "FluentUI",
+                    "title": "Fluent UI Library"
+                }
+            ]
+        }
+    }
+}
+```
+
+---
+
+## <a name="code-sample"></a>Codebeispiel
+
+|Beispielname | Beschreibung | C# | Node.js |
+|----------------|-----------------|--------------|----------------|
+| Eingabe eines Voraussuchsteuerelements auf adaptiven Karten | Das Beispiel zeigt die Features des Steuerelements für die statische und dynamische Suche vor der Suche in adaptiven Karten. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+
+## <a name="see-also"></a>Siehe auch
 
 * [Universal-Aktionen für adaptive Karten](Universal-actions-for-adaptive-cards/Overview.md)
 * [Aufgabenmodule](../what-are-task-modules.md)
