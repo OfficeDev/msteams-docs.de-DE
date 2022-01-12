@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie einer Messaging-Erweiterung mithilfe von Code
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 83c7ce4f7897014345fd071b28273ade5907a917
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: 5c990bd46f145d34616b20e25dc6a0f776f022f9
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949096"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768447"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Hinzufügen einer Authentifizierung zu Ihrer Messaging-Erweiterung
 
@@ -35,10 +35,10 @@ Die `id` und die Werte sind für den `aadObjectId` authentifizierten Teams Benut
 Wenn Ihr Dienst eine Benutzerauthentifizierung erfordert, müssen sich die Benutzer anmelden, bevor sie die Messaging-Erweiterung verwenden. Die Authentifizierungsschritte ähneln denen eines Bots oder einer Registerkarte. Die Sequenz sieht wie folgt aus:
 
 1. Der Benutzer gibt eine Abfrage aus, oder die Standardabfrage wird automatisch an Ihren Dienst gesendet.
-1. Ihr Dienst überprüft, ob der Benutzer authentifiziert ist, indem er die Teams Benutzer-ID überprüft.
+1. Ihr Dienst überprüft anhand der Teams Benutzer-ID, ob der Benutzer authentifiziert ist.
 1. Wenn der Benutzer nicht authentifiziert ist, senden Sie eine `auth` Antwort mit einer vorgeschlagenen Aktion einschließlich der `openUrl` Authentifizierungs-URL zurück.
 1. Der Microsoft Teams-Client startet ein Dialogfeld, in dem Ihre Webseite mithilfe der angegebenen Authentifizierungs-URL gehostet wird.
-1. Nachdem sich der Benutzer angemeldet hat, sollten Sie Ihr Fenster schließen und einen **Authentifizierungscode** an den Teams Client senden.
+1. Nachdem sich der Benutzer angemeldet hat, sollten Sie das Fenster schließen und einen **Authentifizierungscode** an den Teams Client senden.
 1. Der Teams-Client sendet dann die Abfrage erneut an Ihren Dienst, der den in Schritt 5 übergebenen Authentifizierungscode enthält.
 
 Ihr Dienst sollte überprüfen, ob der in Schritt 6 empfangene Authentifizierungscode mit dem aus Schritt 5 übereinstimmt. Dadurch wird sichergestellt, dass ein böswilliger Benutzer nicht versucht, den Anmeldefluss zu spoofen oder zu kompromittieren. Dadurch wird die Schleife "geschlossen", um die sichere Authentifizierungssequenz abzuschließen.
@@ -67,11 +67,12 @@ Um einen nicht authentifizierten Benutzer zur Anmeldung aufzufordern, antworten 
 ```
 
 > [!NOTE]
-> Damit die Anmeldeumgebung in einem Teams Popupfenster gehostet wird, muss sich der Domänenteil der URL in der Liste der gültigen Domänen Ihrer App befinden. Weitere Informationen finden Sie unter ["validDomains"](~/resources/schema/manifest-schema.md#validdomains) im Manifestschema.
+> * Damit die Anmeldeumgebung in einem Teams Popupfenster gehostet wird, muss sich der Domänenteil der URL in der Liste der gültigen Domänen Ihrer App befinden. Weitere Informationen finden Sie unter ["validDomains"](~/resources/schema/manifest-schema.md#validdomains) im Manifestschema.
+> * Die Größe des Authentifizierungspop-Up kann definiert werden, indem Abfragezeichenfolgenparameter der Breite und Höhe eingeschlossen `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",` werden.
 
 ### <a name="start-the-sign-in-flow"></a>Starten des Anmeldeflusses
 
-Die Anmeldeerfahrung muss reaktionsfähig sein und in ein Popupfenster passen. Es sollte in das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client)integriert werden, das die Nachrichtenübergabe verwendet.
+Die Anmeldeerfahrung muss reaktionsfähig sein und in ein Popupfenster passen. Es sollte in das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client)integriert werden, das nachrichtenübergaben verwendet.
 
 Wie bei anderen eingebetteten Oberflächen, die in Microsoft Teams ausgeführt werden, muss Ihr Code innerhalb des Fensters zuerst aufgerufen `microsoftTeams.initialize()` werden. Wenn Ihr Code einen OAuth-Fluss durchführt, können Sie die Teams Benutzer-ID an Ihr Fenster übergeben, das sie dann an die OAuth-Anmelde-URL übergibt.
 

@@ -5,12 +5,12 @@ description: Eine Übersicht über Aktionsbefehle für Messaging-Erweiterungen m
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d2d872810794c46fe424371268d8ef210f8f528c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 3590309abf3e994333c907c69785f58af0162890
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887992"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768238"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definieren von Aktionsbefehlen für Messaging-Erweiterungen
 
@@ -29,11 +29,20 @@ Bevor Sie den Aktionsbefehl erstellen, müssen Sie die folgenden Faktoren festle
 Zunächst müssen Sie den Speicherort festlegen, an dem der Aktionsbefehl aufgerufen werden muss. Durch Angeben des `context` Befehls im App-Manifest kann der Befehl von einem oder mehreren der folgenden Speicherorte aufgerufen werden:
 
 * Bereich zum Verfassen von Nachrichten: Die Schaltflächen unten im Bereich zum Verfassen von Nachrichten.
-* Befehlsfeld: Durch @mentioning Ihre App im Befehlsfeld. 
+
+    Befehlskontext = Verfassen
+
+* Befehlsfeld: Durch @mentioning Ihre App im Befehlsfeld.
+
+    Befehlskontext = commandBox
+
    > [!NOTE]
    > Wenn die Messaging-Erweiterung über das Befehlsfeld aufgerufen wird, können Sie nicht mit einer Botnachricht antworten, die direkt in die Unterhaltung eingefügt wurde.
 
-* Nachricht: Direkt aus einer vorhandenen Nachricht über das `...` Überlaufmenü einer Nachricht. 
+* Nachricht: Direkt aus einer vorhandenen Nachricht über das `...` Überlaufmenü einer Nachricht.
+
+    Befehlskontext = Nachricht
+
     > [!NOTE] 
     > Der anfängliche Aufruf für Ihren Bot enthält ein JSON-Objekt, das die Nachricht enthält, aus der er aufgerufen wurde. Sie können die Nachricht verarbeiten, bevor Sie sie mit einem Aufgabenmodul präsentieren.
 
@@ -45,7 +54,7 @@ In der folgenden Abbildung werden die Speicherorte angezeigt, an denen der Aktio
 
 Sie müssen nicht nur auswählen, von wo aus Der Befehl aufgerufen werden kann, sie müssen auch auswählen, wie das Formular im Aufgabenmodul für Ihre Benutzer aufgefüllt werden soll. Sie haben die folgenden drei Optionen zum Erstellen des Formulars, das innerhalb des Aufgabenmoduls gerendert wird:   
 
-* **Statische Liste von Parametern:** Dies ist die einfachste Methode. Sie können eine Liste von Parametern in Ihrem App-Manifest definieren, die vom Teams Client gerendert wird, aber in diesem Fall nicht steuern.
+* **Statische Liste von Parametern:** Dies ist die einfachste Methode. Sie können eine Liste von Parametern in Ihrem App-Manifest definieren, die vom Teams Client gerendert wird, die Formatierung kann in diesem Fall jedoch nicht gesteuert werden.
 * **Adaptive Karte:** Sie können eine adaptive Karte verwenden, die eine bessere Kontrolle über die Benutzeroberfläche bietet, Sie jedoch weiterhin auf die verfügbaren Steuerelemente und Formatierungsoptionen beschränkt.
 * **Eingebettete Webansicht:** Sie können eine benutzerdefinierte Webansicht in das Aufgabenmodul einbetten, um eine vollständige Kontrolle über die Benutzeroberfläche und die Steuerelemente zu haben. 
 
@@ -94,7 +103,7 @@ In der folgenden Abbildung wird die Befehlserweiterung für die Messaging-Erweit
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
 
-1. Wählen Sie **"Zulassen, dass Benutzer Aktionen in externen Diensten innerhalb von Teams auslösen"** aus. In der folgenden Abbildung wird die Aktionsbefehlsauswahl angezeigt:
+1. Wählen Sie **"Benutzer das Auslösen von Aktionen in externen Diensten innerhalb von Teams zulassen"** aus. In der folgenden Abbildung wird die Aktionsbefehlsauswahl angezeigt:
 
     <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
     
@@ -213,7 +222,7 @@ Der folgende Abschnitt ist ein Beispiel für ein `composeExtensions` Objekt, das
 | Beispielname           | Beschreibung | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams Messaging-Erweiterungsaktion| Beschreibt, wie Aktionsbefehle definiert, Aufgabenmodul erstellt und auf Aufgabenmodul-Sendeaktion reagiert wird. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams Suche nach Messaging-Erweiterungen   |  Beschreibt, wie Suchbefehle definiert und auf Suchvorgänge reagiert wird.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams Messaging-Erweiterungssuche   |  Beschreibt, wie Suchbefehle definiert und auf Suchvorgänge reagiert wird.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Nächster Schritt
 

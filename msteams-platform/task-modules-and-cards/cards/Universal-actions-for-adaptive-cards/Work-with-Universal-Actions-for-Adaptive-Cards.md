@@ -3,12 +3,12 @@ title: Mit Universal-Aktionen für adaptive Karten arbeiten
 description: Erfahren Sie, wie Sie mit den universellen Aktionen für adaptive Karten arbeiten, einschließlich Schema für UniversalActions für adaptive Karten, Aktualisierungsmodell und Abwärtskompatibilität mithilfe von Codebeispielen.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 488385d560f3f372be8149631eb1a04a3642f65f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1ae881ff985d39865da480596ea2ece8bef2b075
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888363"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768608"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Mit Universal-Aktionen für adaptive Karten arbeiten
 
@@ -73,6 +73,16 @@ Im Folgenden sind die Features von UserIds aufgeführt, die aktualisiert werden:
 * Die UserIds-Eigenschaft wird hinzugefügt, da Kanäle in Teams eine große Anzahl von Mitgliedern enthalten können. Wenn alle Mitglieder den Kanal gleichzeitig anzeigen, führt eine bedingungslose automatische Aktualisierung zu vielen gleichzeitigen Aufrufen des Bots. Die `userIds` Eigenschaft muss immer eingeschlossen werden, um zu identifizieren, welche Benutzer eine automatische Aktualisierung mit maximal *60 (60) Benutzer-MRIs* erhalten müssen.
 
 * Sie können Teams Benutzer-MRIs eines Unterhaltungsmitglieds abrufen. Weitere Informationen zum Hinzufügen der Liste "userIds" im Aktualisierungsbereich der adaptiven Karte finden Sie unter Abrufen der Teilnehmerliste oder des [Benutzerprofils.](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)
+
+ Mit dem folgenden Beispiel können Sie die MRI des Benutzers für Kanal-, Gruppen- oder 1:1-Chat abrufen:
+
+ 1. Verwenden von TurnContext  
+
+     `userMRI= turnContext.Activity.From.Id`
+
+ 1. Verwenden der GetMemberAsync-Methode
+  
+     `var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);var userMRI = member.Id;`
 
 * MRI des Teams-Beispielbenutzers ist `29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 

@@ -1,17 +1,17 @@
 ---
 title: Erstellen eines eingehenden Webhooks
 author: laujan
-description: beschreibt, wie eingehender Webhook zu Teams App hinzugefügt und externe Anforderungen an Teams mit eingehenden Webhooks gesendet werden.
+description: beschreibt, wie eingehende Webhooks zu Teams App hinzugefügt und externe Anforderungen an Teams mit eingehenden Webhooks gesendet werden.
 keywords: Teams-Registerkarten für ausgehenden Webhook
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 9950bc6d610b280deff83c44ff26a5e4359d3b98
-ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+ms.openlocfilehash: c398776e2858283a8c4a8f7b5087e2efd365c7d3
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/27/2021
-ms.locfileid: "61608391"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768140"
 ---
 # <a name="create-incoming-webhook"></a>Erstellen eines eingehenden Webhooks
 
@@ -58,7 +58,7 @@ Die folgende Tabelle enthält die Features und die Beschreibung des eingehenden 
 
 Der Webhook ist im Teams Kanal verfügbar.
 
-Sie können Nachrichten mit Aktionen über eingehenden Webhook oder Office 365 Connector erstellen und senden. Weitere Informationen finden Sie unter [Erstellen und Senden von Nachrichten.](/webhooks-and-connectors/how-to/connectors-using?tabs=cURL)
+Sie können Nachrichten mit Aktionen über eingehenden Webhook oder Office 365 Connector erstellen und senden. Weitere Informationen finden Sie unter [Erstellen und Senden von Nachrichten.](~/webhooks-and-connectors/how-to/connectors-using.md)
 
 > [!NOTE]
 > Wählen Sie in Teams **Einstellungen**  >  **Mitgliedsberechtigungen** aus, damit Mitglieder Connectors  >  **erstellen, aktualisieren und entfernen können,** damit jedes Teammitglied einen Connector hinzufügen, ändern oder löschen kann.

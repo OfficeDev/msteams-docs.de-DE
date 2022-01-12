@@ -4,13 +4,13 @@ description: Beschreibt die Richtlinien, die jede an den Teams Store (AppSource)
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.localizationpriority: high
-ms.openlocfilehash: e431aed168edb4d948b88af82707875741386a21
-ms.sourcegitcommit: 2e0764cdb955cf12c5dce7b9ec671a653fec218c
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 23b3f67f5f949080dc9389e82dc459a33fbf029a
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "61424107"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768280"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 

@@ -6,64 +6,51 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 3f7dc4b320bccfa8a6017f87045b27a37d8199f7
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: 0eeda4842ad3f0443d46b5075b1520b0042130ec
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61227737"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768378"
 ---
 # <a name="deploy-to-the-cloud"></a>Bereitstellen in der Cloud
 
-Teams Toolkit hilft Ihnen, den Front-End- und Back-End-Code in Ihrer Anwendung bereitzustellen oder in Ihre bereitgestellten Cloudressourcen in Azure hochzuladen.
+Teams Toolkit hilft Ihnen, den Front-End- und Back-End-Code in Ihrer Anwendung in Ihre bereitgestellten Cloudressourcen in Azure bereitzustellen oder hochzuladen.
 
-* Die Registerkarte, z. B. Front-End-Anwendungen, wird im Azure-Speicher bereitgestellt und für statisches Webhosting oder eine SharePoint Website konfiguriert.
+* Die Registerkarte, z. B. Front-End-Anwendungen, wird im Azure-Speicher bereitgestellt und für statisches Webhosting oder eine SharePoint-Website konfiguriert.
 * Die Back-End-APIs werden in Azure-Funktionen bereitgestellt.
-* Die Bot- oder Messaging-Erweiterung wird im Azure App Service bereitgestellt.
+* Der Bot oder die Messaging-Erweiterung wird im Azure-App-Dienst bereitgestellt.
 
 ## <a name="prerequisite"></a>Voraussetzungen
 
 * [Installieren Sie Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Version v3.0.0+.
 
-> [!TIP]
-> Sie sollten bereits ein Teams App-Projekt in VS-Code geöffnet haben.
-
 > [!NOTE]
-> Bevor Sie Projektcode in der Cloud bereitstellen, führen Sie zuerst die Schritte zur Bereitstellung von [Cloudressourcen](provision.md) aus.
-
+> * Stellen Sie sicher, dass Teams App-Projekt im VS-Code geöffnet ist.
+> * Bevor Sie Projektcode in der Cloud bereitstellen, [stellen Sie die Cloudressourcen bereit.](provision.md)
 
 ## <a name="deploy-teams-apps-using-teams-toolkit"></a>Bereitstellen Teams Apps mit Teams Toolkit
 
-In Lernprogrammen für die ersten Schritte finden Sie schrittweise Anleitungen zur Bereitstellung mit Teams Toolkit. Sie können Folgendes verwenden, um Ihre Teams-App bereitzustellen:
-
+Die Anleitungen für die ersten Schritte helfen Ihnen bei der Bereitstellung mit Teams Toolkit. Sie können Folgendes verwenden, um Ihre Teams-App bereitzustellen:
 * [Bereitstellen Ihrer App in Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
-* [Bereitstellen Ihrer App für SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
+* [Bereitstellen ihrer App für SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
 
-## <a name="details-on-teams-app-workloads"></a>Details zu Teams App-Workloads
+## <a name="details-on-teams-app-workload"></a>Details zu Teams App-Workload
 
-| Teams App-Workloads| Quellcode | Erstellen Artifacts| Zielressourcen |
+| Teams App-Workload | Quellcode | Buildartefakt| Zielressource |
 |-------------|----------|---------------|---------------|
-|Registerkarten mit React </br> Die Front-End-Workload| `yourProjectFolder/tabs`| `tabs/build` |Azure Storage |
+|Registerkarten mit React </br> Die Front-End-Workload| `yourProjectFolder/tabs`| `tabs/build` |Azure-Speicher |
 |Registerkarten mit SharePoint </br> Die Front-End-Workload | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint App-Katalog |
-|APIs für Azure-Funktionen </br> Die Back-End-Workload | `yourProjectFolder/api`| Nicht zutreffend |Azure Functions |
-|Bots und Messaging-Erweiterungen </br> Die Back-End-Workload | `yourProjectFolder/bot` | Nicht zutreffend | Azure App Service |
+|APIs für Azure-Funktionen </br> Die Back-End-Workload | `yourProjectFolder/api`| Nicht zutreffend |Azure-Funktionen |
+|Bots und Messaging-Erweiterungen </br> Die Back-End-Workload | `yourProjectFolder/bot` | Nicht zutreffend | Azure-App-Dienst |
 
 > [!NOTE]
-> Wenn Sie die Azure-API-Verwaltungsressource in Ihr Projekt einschließen und die Bereitstellung auslösen. Sie können Ihre APIs in Azure Functions im Azure API Management Service veröffentlichen.
+> Wenn Sie die Azure-API-Verwaltungsressource in Ihr Projekt einschließen und die Bereitstellung auslösen. Sie können Ihre APIs in Azure-Funktionen im Azure-API-Verwaltungsdienst veröffentlichen.
 
 ## <a name="see-also"></a>Siehe auch
 
-> [!div class="nextstepaction"]
-> [Hinzufügen weiterer Cloudressourcen](add-resource.md)
-
-> [!div class="nextstepaction"]
-> [Hinzufügen weiterer Teams App-Funktionen](add-capability.md)
-
-> [!div class="nextstepaction"]
-> [Bereitstellen von Projektcode mit CI/CD-Pipelines](use-CICD-template.md)
-
-> [!div class="nextstepaction"]
-> [Verwalten mehrerer Umgebungen](TeamsFx-multi-env.md)
-
-> [!div class="nextstepaction"]
-> [Zusammenarbeit mit anderen Entwicklern an Teams Projekt](TeamsFx-collaboration.md)
+* [Hinzufügen weiterer Cloudressourcen](add-resource.md)
+* [Hinzufügen weiterer Teams App-Funktionen](add-capability.md)
+* [Bereitstellen von Projektcode mit CI/CD-Pipelines](use-CICD-template.md)
+* [Verwalten mehrerer Umgebungen](TeamsFx-multi-env.md)
+* [Zusammenarbeit mit anderen Entwicklern an Teams Projekt](TeamsFx-collaboration.md)
