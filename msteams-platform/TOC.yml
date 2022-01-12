@@ -106,7 +106,7 @@
           href: toolkit/publish.md
         - name: Hinzufügen von Funktionen zur Teams-App
           href: toolkit/add-capability.md
-        - name: Hinzufügen von Ressourcen zur Teams-App
+        - name: Hinzufügen von Cloudressourcen zur Teams-App
           href: toolkit/add-resource.md
         - name: Anpassen des Teams-App-Manifests
           href: toolkit/TeamsFx-manifest-customization.md
@@ -116,7 +116,7 @@
           href: toolkit/TeamsFx-multi-env.md
         - name: Zusammenarbeit mit anderen Entwicklern am Teams-Toolkit
           href: toolkit/TeamsFx-collaboration.md
-        - name: CI/CD-Workflow verwenden
+        - name: CI/CD-Leitfaden
           href: toolkit/use-CICD-template.md
         - name: Teams-Toolkit-CLI
           href: toolkit/TeamsFx-CLI.md
