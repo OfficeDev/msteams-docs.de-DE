@@ -5,21 +5,21 @@ description: Eine Übersicht über Bots in Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: c02fe1508261c1392472f87e7266e38fed7c12b1
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: a9f53654ba3240b973b77c05cd64a22c80237350
+ms.sourcegitcommit: a6c39106ccc002d02a65e11627659e0c48981d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075607"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "62014563"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots in Microsoft Teams
 
-Ein Bot, der auch als Chatbot oder Unterhaltungsbot bezeichnet wird, ist eine App, die einfache und wiederholte automatisierte Aufgaben ausführt, die von den Benutzern ausgeführt werden, z. B. Kundendienst- oder Supportmitarbeiter. Beispiele für Bots im täglichen Gebrauch sind Bots, die Informationen über das Wetter bereitstellen, Reservierungen vornehmen oder Reiseinformationen bereitstellen. Eine Bot-Interaktion kann eine schnelle Frage und Antwort sein oder eine komplexe Unterhaltung, die Zugriff auf Dienste bietet.
+Ein Bot wird auch als Chatbot oder Unterhaltungs-Bot bezeichnet. Es handelt sich um eine App, die einfache und sich wiederholende Aufgaben von Benutzern wie Kundendienst oder Supportmitarbeitern ausführt. Die tägliche Verwendung von Bots umfasst Bots, die Informationen über das Wetter bereitstellen, Reservierungen vornehmen oder Reiseinformationen bereitstellen. Interaktionen mit Bots können schnell fragen und beantworten oder eine komplexe Unterhaltung sein.
 
 > [!IMPORTANT]
-> Derzeit sind Bots in Government Community Cloud (GCC) verfügbar, aber nicht in GCC-High und department of Defense (DOD).
+> Derzeit sind Bots in Government Community Cloud (GCC) und nicht in GCC-High und Department of Defense (DOD) verfügbar.
 
-Unterhaltungsbots ermöglichen Benutzern, mit Ihrem Webdienst über Text, interaktive Karten und Aufgabenmodule zu interagieren.
+Unterhaltungs-Bots ermöglichen Benutzern die Interaktion mit Ihrem Webdienst mithilfe von Text, interaktiven Karten und Aufgabenmodulen.
 
 ![Aufrufen eines Bots mithilfe von Text](~/assets/images/invokebotwithtext.png)
 
@@ -27,30 +27,39 @@ Unterhaltungsbots ermöglichen Benutzern, mit Ihrem Webdienst über Text, intera
 
 <img src="~/assets/images/task-module-example.png" alt="Invoke bot using task module" width="400"/>
 
-Unterhaltungs-Bots sind unglaublich flexibel und können so ausgelegt werden, dass sie einige einfache Befehle oder komplexe, von künstlicher Intelligenz unterstützte Und Verarbeitungsaufgaben in natürlicher Sprache verarbeiten. Sie können ein Aspekt einer größeren Anwendung oder vollständig eigenständig sein.
+Unterhaltungsbots sind unglaublich flexibel. Bots können einige grundlegende Befehle oder komplexe Aufgaben verarbeiten, die künstliche Intelligenz und verarbeitung natürlicher Sprache umfassen. Bots können Teil einer größeren Anwendung oder eigenständig sein.
 
-Die richtige Mischung aus Karten, Text und Aufgabenmodulen zu finden, ist der Schlüssel zum Erstellen eines nützlichen Bots. Die folgende Abbildung zeigt einen Benutzer, der sich mit einem Bot in einem 1:1-Chat mit textbasierten und interaktiven Karten unterhält:
+Verwenden Sie die richtige Mischung aus Karten, Text und Aufgabenmodulen, um einen nützlichen Bot zu erstellen. Die folgende Abbildung zeigt einen Benutzer, der sich mit einem Bot in einem 1:1-Chat mit Text und interaktiven Karten unterhält.
 
 :::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Beispiel für häufig gestellte Fragen (FAQ)-Bot" border="true":::
 
-Jede Interaktion zwischen dem Benutzer und dem Bot wird als Aktivität dargestellt. Wenn ein Bot eine Aktivität empfängt, übergibt er sie an seine Aktivitätshandler. Weitere Informationen finden Sie unter [Bot-Aktivitätshandler.](~/bots/bot-basics.md) 
+Jede Interaktion zwischen dem Benutzer und dem Bot wird als Aktivität dargestellt. Wenn ein Bot eine Aktivität empfängt, übergibt er sie an seine Aktivitätshandler. Siehe [Bot-Aktivitätshandler.](~/bots/bot-basics.md)
 
-Darüber hinaus sind Bots Apps, die über eine Unterhaltungsoberfläche verfügen. Sie können mit einem Bot mit Text, interaktiven Karten und Sprache interagieren. Ein Bot verhält sich anders, je nachdem, ob es sich bei der Unterhaltung um eine Kanal- oder Gruppenchatunterhaltung oder um eine 1:1-Unterhaltung handelt. Unterhaltungen werden über den Bot Framework-Connector verarbeitet. Weitere Informationen finden Sie unter [Unterhaltungsgrundlagen.](~/bots/how-to/conversations/conversation-basics.md)
+Bots sind Apps, die über eine Unterhaltungsoberfläche verfügen. Sie können mit einem Bot mit Text, interaktiven Karten und Sprache interagieren. Ein Bot verhält sich in einer Kanal- oder Gruppenchatunterhaltung und in einer 1:1-Unterhaltung anders. Unterhaltungen werden über den Bot Framework-Connector verarbeitet. Grundlegendes [zu Unterhaltungen.](~/bots/how-to/conversations/conversation-basics.md)
 
-Ihr Bot erfordert Kontextinformationen, z. B. Benutzerprofildetails, um auf relevante Inhalte zuzugreifen und die Bot-Erfahrung zu verbessern. Weitere Informationen finden Sie unter [abrufen Teams Kontext.](~/bots/how-to/get-teams-context.md) 
+Ihr Bot erfordert Kontextinformationen, z. B. Benutzerprofildetails, um auf relevante Inhalte zuzugreifen und die Bot-Erfahrung zu verbessern. Weitere Informationen finden Sie [unter abrufen Teams Kontext.](~/bots/how-to/get-teams-context.md)
 
-Sie können Dateien auch über den Bot senden und empfangen, indem Sie Graph-APIs oder Teams-Bot-APIs verwenden. Weitere Informationen finden Sie unter [Senden und Empfangen von Dateien über den Bot.](~/bots/how-to/bots-filesv4.md)
+Sie können Dateien über den Bot senden und empfangen, indem Sie Graph-APIs oder Teams-Bot-APIs verwenden. Siehe ["Senden und Empfangen von Dateien über den Bot".](~/bots/how-to/bots-filesv4.md)
 
-Darüber hinaus wird die Ratenbegrenzung verwendet, um Bots zu optimieren, die für Ihre Teams-Anwendung verwendet werden. Um Microsoft Teams und ihre Benutzer zu schützen, bieten die Bot-APIs ein Preislimit für eingehende Anforderungen. Weitere Informationen finden Sie unter [Optimieren Ihres Bots mit einer Begrenzung](~/bots/how-to/rate-limit.md)der Rate in Teams.
+Die Begrenzung der Raten wird verwendet, um Bots zu optimieren, die für Ihre Teams-Anwendung verwendet werden. Um Microsoft Teams und ihre Benutzer zu schützen, bieten die Bot-APIs ein Preislimit für eingehende Anforderungen. Sehen Sie [sich die Optimierung Ihres Bots mit einer Begrenzung der Raten in Teams an.](~/bots/how-to/rate-limit.md)
 
-Mit Microsoft Graph-APIs für Anrufe und Onlinebesprechungen können Microsoft Teams Apps jetzt mit Benutzern über Sprache und Video interagieren. Weitere Informationen finden Sie unter ["Bots für Anrufe und Besprechungen".](~/bots/calls-and-meetings/calls-meetings-bots-overview.md) 
+Mit Microsoft Graph-APIs für Anrufe und Onlinebesprechungen können Microsoft Teams Apps jetzt mit Benutzern per Sprach- und Videofunktion interagieren. Siehe [Anrufe und Besprechungen Bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
 
-Sie können die Teams-Bot-APIs verwenden, um Informationen für ein oder mehrere Mitglieder eines Chats oder Teams abzurufen. Weitere Informationen finden Sie unter [Änderungen an Teams Bot-APIs zum Abrufen von Team- oder Chatmitgliedern.](~/resources/team-chat-member-api-changes.md)
+Sie können die Teams-Bot-APIs verwenden, um Informationen für Mitglieder eines Chats oder Teams abzurufen. Änderungen [an Teams Bot-APIs zum Abrufen von Team- oder Chatmitgliedern](~/resources/team-chat-member-api-changes.md)finden Sie unter .
+
+<!--- TBD: For quick scanning, see if the above information can be itemized as a list.
+--->
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Tools und SDKs](~/bots/bot-features.md)
+
+## <a name="code-sample"></a>Codebeispiel
+
+|Beispielname | Beschreibung | C # | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Tägliche Bot-Aufgabenerinnerung| Vorführen, wie sie eine Terminserie planen und zu einem geplanten Zeitpunkt eine Erinnerung erhalten. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 
