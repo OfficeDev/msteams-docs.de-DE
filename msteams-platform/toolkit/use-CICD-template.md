@@ -6,12 +6,12 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 5ca5f81fd857296f2e81dbce97673f5a10c66ab7
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: b8a6506707626a80cabc9c730eef6fe11160e386
+ms.sourcegitcommit: 7cccec0b2512f4e9366eb7c88998c5181a52681d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768573"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059068"
 ---
 # <a name="cicd-guide"></a>CI/CD-Leitfaden
 
@@ -77,11 +77,9 @@ In der folgenden Tabelle sind alle geheimen Schlüssel aufgeführt, die zum Erst
 |M365_ACCOUNT_PASSWORD|Das Kennwort des M365-Kontos.|
 |M365_TENANT_ID|Um den Mandanten zu identifizieren, in dem die Teams App erstellt/veröffentlicht wird. Dieser Wert ist optional, es sei denn, Sie verfügen über ein mehrinstanzenfähiges Konto und möchten einen anderen Mandanten verwenden. Weitere Informationen finden Sie unter [Suchen Ihrer M365-Mandanten-ID.](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
 
-> [!NOTE]
-> Derzeit wird der nicht interaktive Authentifizierungsstil für M365 in CI- oder CD-Workflows verwendet. Stellen Sie sicher, dass Ihr M365-Konto über ausreichende Berechtigungen in Ihrem Mandanten verfügt und keine mehrstufige Authentifizierung oder andere erweiterte Sicherheitsfeatures aktiviert ist. Weitere Informationen finden Sie unter [Konfigurieren von M365-Anmeldeinformationen,](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) um sicherzustellen, dass Sie die mehrstufige Authentifizierung und Die Sicherheitsstandards für die im Workflow verwendeten Anmeldeinformationen deaktiviert haben.
 
 > [!NOTE]
-> Derzeit wird der Dienstprinzipal für Azure in CI/CD-Workflows verwendet. Weitere Informationen finden Sie unter[Erstellen von Azure-Dienstprinzipien.](#create-azure-service-principals)
+> Derzeit wird der Dienstprinzipal für Azure in CI/CD-Workflows verwendet. Weitere Informationen finden Sie unter [Erstellen von Azure-Dienstprinzipien.](#create-azure-service-principals)
 
 ## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>Einrichten von CI- oder CD-Pipelines mit Azure DevOps
 
@@ -126,7 +124,7 @@ Es folgen die Änderungen, die Sie für das Skript oder die Workflowdefinition v
 ### <a name="set-up-cd-pipeline"></a>Einrichten der CD-Pipeline
 
 1. Fügen Sie [CD-Skripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh) zu Ihrem Azure DevOps-Repository hinzu, und führen Sie die erforderlichen Anpassungen aus, wie Sie aus den Kommentaren in der Skriptdatei ableiten können.
-1. Erstellen Sie Ihre Azure DevOps-Pipeline für CD. Weitere Informationen finden Sie unter [Erstellen der ersten Pipeline.](/azure/devops/pipelines/create-first-pipeline) Auf die Definition der Pipeline kann auf die folgende Beispieldefinition für die CI-Pipeline verwiesen werden.
+1. Erstellen Sie Ihre Azure DevOps Pipeline für CD. Weitere Informationen finden Sie unter [Erstellen der ersten Pipeline.](/azure/devops/pipelines/create-first-pipeline) Auf die Definition der Pipeline kann auf die folgende Beispieldefinition für die CI-Pipeline verwiesen werden.
 1. Fügen Sie die erforderlichen Variablen durch Definieren von [Variablen](/azure/devops/pipelines/process/variables)hinzu, und machen Sie sie bei Bedarf als geheime Schlüssel.
 
 ```yml
@@ -247,9 +245,9 @@ Stellen Sie sicher, dass Azure- und M365-Anmeldeinformationen in Ihren Umgebungs
 Um Ressourcen für Azure innerhalb von CI/CD bereitzustellen und bereitzustellen, müssen Sie einen Azure-Dienstprinzipal für die Verwendung erstellen.
 
 Führen Sie die folgenden Schritte aus, um Azure-Dienstprinzipale zu erstellen:
-1. Registrieren Sie eine Azure AD Anwendung in einem einzelnen Mandanten.
+1. Registrieren sie eine Azure AD Anwendung in einem einzelnen Mandanten.
 2. Weisen Sie Ihrer Azure AD-Anwendung eine Rolle für den Zugriff auf Ihr Azure-Abonnement zu, und `Contributor` die Rolle wird empfohlen. 
-3. Erstellen Sie einen neuen Azure AD Anwendungsschlüssel.
+3. Erstellen Sie einen neuen geheimen Azure AD Anwendungsschlüssel.
 
 > [!TIP]
 > Speichern Sie Ihre Mandanten-ID, Anwendungs-ID(AZURE_SERVICE_PRINCIPAL_NAME) und den geheimen Schlüssel (AZURE_SERVICE_PRINCIPAL_PASSWORD) für die zukünftige Verwendung.
@@ -260,7 +258,7 @@ Weitere Informationen finden Sie in den [Richtlinien für Azure-Dienstprinzipale
 * [Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
 
 ## <a name="publish-teams-app-using-teams-developer-portal"></a>Veröffentlichen Teams App mit Teams Entwicklerportal
-Wenn Änderungen im Zusammenhang mit Teams Manifestdatei der App vorgenommen werden, sollten Sie die Teams-App erneut veröffentlichen, um das Manifest zu aktualisieren.
+Wenn Änderungen im Zusammenhang mit Teams Manifestdatei der App vorgenommen werden, sollten Sie die Teams App erneut veröffentlichen, um das Manifest zu aktualisieren.
 
 Um Teams App manuell zu veröffentlichen, können Sie [das Entwicklerportal für Teams](https://dev.teams.microsoft.com/home)verwenden.
 
@@ -273,6 +271,6 @@ Führen Sie die folgenden Schritte aus, um Ihre App zu veröffentlichen:
 ### <a name="see-also"></a>Siehe auch
 
 * [Schnellstart für GitHub-Aktionen](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
-* [Erstellen Der ersten Azure DevOps Pipeline](/azure/devops/pipelines/create-first-pipeline)
+* [Erstellen Ihrer ersten Azure DevOps-Pipeline](/azure/devops/pipelines/create-first-pipeline)
 * [Erstellen Ihrer ersten Jenpipeline](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
 * [Verwalten Ihrer Apps mit dem Entwicklerportal für Microsoft Teams](/concepts/build-and-test/teams-developer-portal)
