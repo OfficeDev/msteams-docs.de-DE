@@ -5,16 +5,16 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: b78ca5b46442f30db3adfe314d627d3fc95682be
-ms.sourcegitcommit: 25a33b31cc56c05169fc52c65d44c65c601aefef
+ms.openlocfilehash: 10bc7de187b5303d70e0106737f656fef25da046
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "62043231"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059779"
 ---
 # <a name="messages-in-bot-conversations"></a>Meldungen in Bot-Unterhaltungen
 
-Jede Nachricht in einer Unterhaltung ist ein `Activity` Objekt vom Typ `messageType: message` . Wenn ein Benutzer eine Nachricht sendet, sendet Teams die Nachricht an Ihren Bot. Teams sendet ein JSON-Objekt an den Messaging-Endpunkt Ihres Bots. Ihr Bot überprüft die Nachricht, um ihren Typ zu ermitteln, und antwortet entsprechend.
+Jede Nachricht in einer Unterhaltung ist ein `Activity` Objekt vom Typ `messageType: message` . Wenn ein Benutzer eine Nachricht sendet, Teams die Nachricht an Ihren Bot sendet. Teams sendet ein JSON-Objekt an den Messaging-Endpunkt Ihres Bots. Ihr Bot überprüft die Nachricht, um ihren Typ zu ermitteln, und antwortet entsprechend.
 
 Grundlegende Unterhaltungen werden über den Bot Framework-Connector, eine einzelne REST-API, verarbeitet. Diese API ermöglicht Es Ihrem Bot, mit Teams und anderen Kanälen zu kommunizieren. Das Bot Builder SDK bietet die folgenden Features:
 
@@ -214,7 +214,7 @@ Ein `channelData` typisches Objekt in einer an Ihren Bot gesendeten Aktivität e
 * `channelData.teamsTeamId`: Veraltet. Diese Eigenschaft ist nur aus Gründen der Abwärtskompatibilität enthalten.
 * `channelData.teamsChannelId`: Veraltet. Diese Eigenschaft ist nur aus Gründen der Abwärtskompatibilität enthalten.
 
-### <a name="example-channeldata-object-or-channelcreated-event"></a>Beispiel für channelData-Objekt oder channelCreated-Ereignis
+### <a name="example-channeldata-object-channelcreated-event"></a>ChannelData-Beispielobjekt (channelCreated-Ereignis)
 
 Der folgende Code zeigt ein Beispiel für ein channelData-Objekt:
 
@@ -234,22 +234,20 @@ Der folgende Code zeigt ein Beispiel für ein channelData-Objekt:
 }
 ```
 
-Nachrichten, die von Ihrem Bot empfangen oder an diesen gesendet werden, können unterschiedliche Arten von Nachrichteninhalten enthalten.
-
 ## <a name="message-content"></a>Nachrichteninhalt
+
+Nachrichten, die von Ihrem Bot empfangen oder an diesen gesendet werden, können unterschiedliche Arten von Nachrichteninhalten enthalten.
 
 | Format    | Vom Benutzer zum Bot | Vom Bot zum Benutzer | Anmerkungen                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich-Text  | ✔                | ✔                | Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und Bilder an Ihren Bot senden.                                                                                        |
 | Bilder  | ✔                | ✔                | Maximal 1024×1024 und 1 MB im PNG-, JPEG- oder GIF-Format. Animierte GIF-Dateien werden nicht unterstützt.  |
 | Karten     | ✖                | ✔                | In der [Teams Kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md) finden Sie unterstützte Karten. |
-| Emojis    | ✖                | ✔                | Teams unterstützt zurzeit Emojis über UTF-16, z. B. U+1F600 für das graunen Gesicht. |
-
-Sie können Ihrer Nachricht auch mithilfe der Eigenschaft Benachrichtigungen `Notification.Alert` hinzufügen.
+| Emojis    | ✔                | ✔                | Teams unterstützt zurzeit Emojis über UTF-16, z. B. U+1F600 für graunendes Gesicht. |
 
 ## <a name="notifications-to-your-message"></a>Benachrichtigungen an Ihre Nachricht
 
-Benachrichtigungen informieren Benutzer über neue Aufgaben, Erwähnungen und Kommentare. Diese Warnungen beziehen sich darauf, worum es sich bei Benutzern handelt oder was sie sich ansehen müssen, indem sie einen Hinweis in ihren Aktivitätsfeed einfügen. Damit Benachrichtigungen von Ihrer Botnachricht ausgelöst werden, legen Sie die `TeamsChannelData` `Notification.Alert` Objekteigenschaft auf *"true"* fest. Ob eine Benachrichtigung ausgelöst wird, hängt von den Teams Einstellungen des einzelnen Benutzers ab, und Sie können diese Einstellungen nicht außer Kraft setzen. Der Benachrichtigungstyp ist entweder ein Banner oder sowohl ein Banner als auch eine E-Mail.
+Sie können Ihrer Nachricht auch mithilfe der Eigenschaft Benachrichtigungen `Notification.Alert` hinzufügen. Benachrichtigungen informieren Benutzer über neue Aufgaben, Erwähnungen und Kommentare. Diese Warnungen beziehen sich darauf, worum es sich bei Benutzern handelt oder was sie sich ansehen müssen, indem sie einen Hinweis in ihren Aktivitätsfeed einfügen. Damit Benachrichtigungen von Ihrer Botnachricht ausgelöst werden, legen Sie die `TeamsChannelData` `Notification.Alert` Objekteigenschaft auf *"true"* fest. Ob eine Benachrichtigung ausgelöst wird, hängt von den Teams Einstellungen des einzelnen Benutzers ab, und Sie können diese Einstellungen nicht außer Kraft setzen. Der Benachrichtigungstyp ist entweder ein Banner oder sowohl ein Banner als auch eine E-Mail.
 
 > [!NOTE]
 > Im **Feld Zusammenfassung** wird beliebiger Text des Benutzers als Benachrichtigung im Feed angezeigt.
@@ -335,7 +333,7 @@ Bilder werden durch Hinzufügen von Anlagen zu einer Nachricht gesendet. Weitere
 
 Bilder können höchstens 1024×1024 und 1 MB im PNG-, JPEG- oder GIF-Format sein. Animierte GIF-Dateien werden nicht unterstützt.
 
-Geben Sie die Höhe und Breite jedes Bilds mithilfe von XML an. In Markdown ist die Bildgröße standardmäßig 256×256. Beispiel:
+Geben Sie die Höhe und Breite jedes Bilds mithilfe von XML an. In Markdown ist die Bildgröße standardmäßig 256×256. Zum Beispiel:
 
 * Verwenden Sie: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` .
 * Verwenden Sie nicht: `![Duck on a rock](http://aka.ms/Fo983c)` .

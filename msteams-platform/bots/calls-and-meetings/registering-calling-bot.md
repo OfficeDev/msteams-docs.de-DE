@@ -1,27 +1,27 @@
 ---
 title: Registrieren von Anrufen und Besprechungsbots für Microsoft Teams
-description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanruf-Bot für Microsoft Teams registrieren, einen neuen Bot erstellen oder Anruffunktionen hinzufügen und Graph-Berechtigungen hinzufügen.
+description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanrufbot für Microsoft Teams registrieren, einen neuen Bot erstellen oder Anruffunktionen hinzufügen und Graph-Berechtigungen hinzufügen.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Aufrufen von Bot-Audio-/Video-Audiovideomedien
-ms.openlocfilehash: d1cf0049c37f7f586abf19f9e9d0290c74e230ac
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 6b90cea6adef1e59c1b075b6581c1415cf5a4786
+ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948621"
+ms.lasthandoff: 01/18/2022
+ms.locfileid: "62062509"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrieren von Anrufen und Besprechungsbots für Microsoft Teams
 
 Ein Bot, der an Audio- oder Videoanrufen und Onlinebesprechungen teilnimmt, ist ein regulärer Microsoft Teams Bot mit den folgenden zusätzlichen Features, die zum Registrieren des Bots verwendet werden:
 
-* Es gibt eine neue Version des Teams-App-Manifests mit zwei zusätzlichen Einstellungen `supportsCalling` und `supportsVideo` . Diese Einstellungen sind in der [Entwicklervorschauversion](../../resources/dev-preview/developer-preview-intro.md) des Teams-App-Manifests enthalten.
+* Es gibt eine neue Version des Teams-App-Manifests mit zwei zusätzlichen Einstellungen `supportsCalling` und `supportsVideo` . Diese Einstellungen sind im [Manifestschema für Microsoft Teams](../../resources/schema/manifest-schema.md)enthalten.
 * [Microsoft Graph Berechtigungen](./registering-calling-bot.md#add-graph-permissions) müssen für die Microsoft App-ID Ihres Bots konfiguriert werden.
 * Die APIs für Graph Anrufe und Onlinebesprechungen erfordern die Zustimmung des Mandantenadministrators.
 
 ## <a name="new-manifest-settings"></a>Neue Manifesteinstellungen
 
-Bots für Anrufe und Onlinebesprechungen verfügen über die folgenden beiden zusätzlichen Einstellungen in "manifest.json", die Audio- oder Videodaten für Ihren Bot in Teams aktivieren.
+Bots für Anrufe und Onlinebesprechungen haben die folgenden beiden zusätzlichen Einstellungen in "manifest.json", die Audio- oder Videodaten für Ihren Bot in Teams aktivieren.
 
 * `bots[0].supportsCalling`. Wenn vorhanden und `true` festgelegt, ermöglicht Teams Ihrem Bot die Teilnahme an Anrufen und Onlinebesprechungen.
 * `bots[0].supportsVideo`. Wenn vorhanden und festgelegt `true` auf , weiß Teams, dass Ihr Bot Video unterstützt.
@@ -29,7 +29,7 @@ Bots für Anrufe und Onlinebesprechungen verfügen über die folgenden beiden zu
 Wenn Ihre IDE das Manifest.json-Schema für Ihre Aufrufe und Besprechungsbots ordnungsgemäß auf diese Werte überprüfen soll, können Sie das `$schema` Attribut wie folgt ändern:
 
 ```json
-"$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
 ```
 
 Im nächsten Abschnitt können Sie einen neuen Bot erstellen oder Ihrem vorhandenen Bot Anruffunktionen hinzufügen.
@@ -50,7 +50,7 @@ Der nächste Abschnitt enthält eine Liste der Anwendungsberechtigungen, die fü
 
 ## <a name="add-graph-permissions"></a>Hinzufügen Graph Berechtigungen
 
-Das Graph bietet granulare Berechtigungen, um den Zugriff zu steuern, den Apps auf Ressourcen haben. Sie entscheiden, welche Berechtigungen für Graph Ihre App-Anforderungen gelten. Die Graph aufrufenden APIs unterstützen Anwendungsberechtigungen, die von Apps verwendet werden, die ohne angemeldeten Benutzer ausgeführt werden. Ein Mandantenadministrator muss Anwendungsberechtigungen zustimmen.
+Die Graph bietet granulare Berechtigungen, um den Zugriff zu steuern, den Apps auf Ressourcen haben. Sie entscheiden, welche Berechtigungen für Graph Ihre App-Anforderungen gelten. Die Graph aufrufenden APIs unterstützen Anwendungsberechtigungen, die von Apps verwendet werden, die ohne angemeldeten Benutzer ausgeführt werden. Ein Mandantenadministrator muss Anwendungsberechtigungen zustimmen.
 
 ### <a name="application-permissions-for-calls"></a>Anwendungsberechtigungen für Anrufe
 
@@ -84,7 +84,7 @@ Sie müssen die Anwendungsberechtigungen für Ihren Bot im Voraus mithilfe des [
 
 Bei Apps, die den AAD V1-Endpunkt verwenden, kann ein Mandantenadministrator den Anwendungsberechtigungen über das [Azure-Portal](https://portal.azure.com) zustimmen, wenn Ihre App in ihrer Organisation installiert wird. Alternativ können Sie eine Anmeldeumgebung in Ihrer App bereitstellen, über die Administratoren den von Ihnen konfigurierten Berechtigungen zustimmen können. Nachdem die Administratorzustimmung von AAD aufgezeichnet wurde, kann Ihre App Token anfordern, ohne erneut die Zustimmung anfordern zu müssen.
 
-Sie können sich darauf verlassen, dass ein Administrator die Berechtigungen erteilt, die Ihre App im [Azure-Portal](https://portal.azure.com)benötigt. Eine bessere Option ist die Bereitstellung einer Anmeldeerfahrung für Administratoren mithilfe des AAD `/adminconsent` V2-Endpunkts. Weitere Informationen finden Sie in den Anweisungen zum Erstellen einer URL für [die Administratorzustimmung.](/graph/uth-v2-service#3-get-administrator-consent)
+Sie können sich darauf verlassen, dass ein Administrator die Berechtigungen erteilt, die Ihre App im [Azure-Portal](https://portal.azure.com)benötigt. Eine bessere Option ist die Bereitstellung einer Anmeldeumgebung für Administratoren mithilfe des AAD `/adminconsent` V2-Endpunkts. Weitere Informationen finden Sie in den Anweisungen zum Erstellen einer URL für [die Administratorzustimmung.](/graph/uth-v2-service#3-get-administrator-consent)
 
 > [!NOTE]
 > Zum Erstellen der Mandanten-Administratorzustimmungs-URL ist ein konfigurierter Umleitungs-URI oder eine Antwort-URL im [App-Registrierungsportal](https://apps.dev.microsoft.com/) erforderlich. Um Antwort-URLs für Ihren Bot hinzuzufügen, greifen Sie auf Ihre Bot-Registrierung zu, und wählen Sie **"Erweiterte Optionen**  >  **Anwendungsmanifest bearbeiten"** aus. Fügen Sie die Umleitungs-URL zur `replyUrls` Sammlung hinzu.
