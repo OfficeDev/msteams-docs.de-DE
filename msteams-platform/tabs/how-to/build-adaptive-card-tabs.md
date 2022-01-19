@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: Datenfluss der Authentifizierungsdaten für persönliche Apps für adaptive Karten
-ms.openlocfilehash: 27cd42b7477019a09af0c23e8a3559d2cc540305
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: f2b6c78293a2bc6f25e3989f6eba4c4e2833aaee
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216097"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62080967"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
@@ -427,12 +427,12 @@ Der folgende Code zeigt ein neu ausgestelltes Anforderungsbeispiel:
 
 |**Beispielname** | **Beschreibung** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| Anzeigen adaptiver Karten auf Teams Registerkarte | Microsoft Teams Beispielcode der Registerkarte, der veranschaulicht, wie adaptive Karten in Teams angezeigt werden. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| Adaptive Karten auf Teams Registerkarte anzeigen | Microsoft Teams Beispielcode der Registerkarte, der veranschaulicht, wie adaptive Karten in Teams angezeigt werden. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Aufgeklappte Registerkartenverknüpfung und Phasenansicht](~/tabs/tabs-link-unfurling.md)
+> [Registerkarten-Link - Verbreitung und Phasenansicht](~/tabs/tabs-link-unfurling.md)
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -441,3 +441,4 @@ Der folgende Code zeigt ein neu ausgestelltes Anforderungsbeispiel:
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
 * [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
 * [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
+* [Feedback zum Ausfüllen des Formulars](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

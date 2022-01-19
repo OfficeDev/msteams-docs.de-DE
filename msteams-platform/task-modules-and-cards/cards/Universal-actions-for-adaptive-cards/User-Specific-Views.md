@@ -1,15 +1,15 @@
 ---
 title: Benutzerspezifische Ansichten
-description: Erfahren Sie mehr über benutzerspezifische Ansichten mit universellen Aktionen mit Codebeispiel
+description: Informationen zu benutzerspezifischen Ansichten mit universellen Aktionen mit Codebeispiel
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: e6dc1cc87f5a9896933566475d69ce9ad311fbfb
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: a4c110c8b1d1adf7140334d08073f2ef7780fbc5
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889202"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081065"
 ---
 # <a name="user-specific-views"></a>Benutzerspezifische Ansichten
 
@@ -68,9 +68,9 @@ Der folgende Code enthält ein Beispiel für adaptive Karten:
 3. Bei Megan löst die automatische Aktualisierung eine `adaptiveCard/action` Aufrufanforderung an den Bot aus. Der Bot kann eine Vorfallerstellerkarte mit `Edit` schaltfläche als Antwort auf diese Aufrufanforderung zurückgeben.
 4. Auf ähnliche Weise löst die automatische Aktualisierung für Alex eine weitere `adaptiveCard/action` Aufrufanforderung an den Bot aus. Der Bot kann eine `Resolve` Vorfallbesitzer-Kartenschaltfläche als Antwort auf diese Aufrufanforderung zurückgeben.
 
-## <a name="invoke-request-sent-from-teams-client-to-the-bot"></a>Aufrufen der Vom Teams-Client an den Bot gesendeten Anforderung
+## <a name="invoke-request-sent-from-teams-client-to-the-bot"></a>Aufrufen einer Anforderung, die vom Teams-Client an den Bot gesendet wurde
 
-Der folgende Code enthält ein Beispiel für eine Aufrufanforderung, die vom Teams-Client von Alex und Megan an den Bot gesendet wird:
+Der folgende Code enthält ein Beispiel für eine Aufrufanforderung, die von Alex' und Megans Teams-Client an den Bot gesendet wurde:
 
 ```JSON
 { 
@@ -199,7 +199,7 @@ Richtlinien für den Kartenentwurf, die Sie beim Entwerfen benutzerspezifischer 
 * **Basiskarte:** Die Basisversion der Karte, die der Bot-Entwickler an den Chat sendet. Die Basisversion ist die Version der adaptiven Karte für alle Benutzer, die nicht im Abschnitt angegeben `userIds` sind.
 * Eine Nachrichtenaktualisierung kann verwendet werden, um die Basiskarte zu aktualisieren und gleichzeitig die benutzerspezifische Karte zu aktualisieren. Beim Öffnen des Chats oder Kanals wird auch die Karte für Benutzer mit aktivierter Aktualisierung aktualisiert.
 * Für Szenarien mit größeren Gruppen, in denen Benutzer zu einer Aktionsansicht wechseln, die dynamische Updates für Antwortende benötigt, können Sie bis zu 60 Benutzer zur `userIds` Liste hinzufügen. Sie können den Ersten Antwortenden aus der Liste entfernen, wenn der 61. Benutzer antwortet. Für die Benutzer, die aus der Liste entfernt `userIds` werden, können Sie eine manuelle Aktualisierungsschaltfläche bereitstellen oder die Schaltfläche "Aktualisieren" im Menü "Nachrichtenoptionen" verwenden, um das neueste Ergebnis zu erhalten.
-* Geben Sie Benutzern eine Eingabeaufforderung, um eine benutzerspezifische Ansicht zu erhalten, in der nur eine bestimmte Ansicht der Karte oder einige Aktionen angezeigt werden.
+* Geben Sie benutzern eine Eingabeaufforderung, um eine benutzerspezifische Ansicht zu erhalten, in der nur eine bestimmte Ansicht der Karte oder einige Aktionen angezeigt werden.
 
 ## <a name="code-sample"></a>Codebeispiel
 
@@ -211,3 +211,4 @@ Richtlinien für den Kartenentwurf, die Sie beim Entwerfen benutzerspezifischer 
 
 * [Mit Universal-Aktionen für adaptive Karten arbeiten](Work-with-universal-actions-for-adaptive-cards.md)
 * [Aktuelle Ansichten](Up-To-Date-Views.md)
+* [Feedback zum Ausfüllen des Formulars](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

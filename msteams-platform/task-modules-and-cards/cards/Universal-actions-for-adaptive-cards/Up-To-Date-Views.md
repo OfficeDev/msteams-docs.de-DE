@@ -5,18 +5,18 @@ author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Genehmigungsbasiskarte ablehnen adaptiv
-ms.openlocfilehash: 2e7feb96ecefd0e6253c0f3a86e3863e0ae7a53b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 0fce06ee940a172c02b00c3ae417f6b31090f5e0
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887406"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081149"
 ---
 # <a name="up-to-date-cards"></a>Aktuelle Karten
 
 Jetzt können Sie Ihren Benutzern auf adaptiven Karten die neuesten Informationen zur Verfügung stellen. Fügen Sie eine Kombination aus Aktualisierungs- und Nachrichtenbearbeitungen in Teams ein. Aktualisieren Sie die benutzerspezifischen Ansichten dynamisch auf den neuesten Status, wenn eine Änderung für Ihren Dienst vorliegt. Aktualisieren Sie z. B. für Projektmanagement- oder Ticketkarten Kommentare und den Aufgabenstatus. Für Genehmigungen wird der neueste Status widergespiegelt, während auch differenzierte Informationen und Aktionen bereitgestellt werden.
 
-Beispielsweise kann ein Benutzer in einer Teams Unterhaltung eine Objektgenehmigungsanforderung erstellen. Alex erstellt eine Genehmigungsanforderung und weist sie Megan und Nestor zu. Im Folgenden werden die beiden Teile zum Erstellen der Genehmigungsanforderung aufgeführt:
+Beispielsweise kann ein Benutzer eine Anforderung zur Genehmigung von Ressourcen in einer Teams Unterhaltung erstellen. Alex erstellt eine Genehmigungsanforderung und weist sie Megan und Nestor zu. Im Folgenden werden die beiden Teile zum Erstellen der Genehmigungsanforderung aufgeführt:
 
 * Benutzerspezifische Ansichten können mithilfe der Eigenschaft der adaptiven Karten angewendet `refresh` werden.
 Mit benutzerspezifischen Ansichten kann eine Karte mit den Schaltflächen **"Genehmigen"** oder **"Ablehnen"** für eine Gruppe von Benutzern und eine Karte ohne diese Schaltflächen für andere Benutzer angezeigt werden.
@@ -270,3 +270,4 @@ Der folgende Code enthält ein Beispiel für adaptive Karten, die als Antwort au
 
 * [Mit Universal-Aktionen für adaptive Karten arbeiten](Work-with-universal-actions-for-adaptive-cards.md)
 * [Benutzerspezifische Ansichten](User-Specific-Views.md)
+* [Feedback zum Ausfüllen des Formulars](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

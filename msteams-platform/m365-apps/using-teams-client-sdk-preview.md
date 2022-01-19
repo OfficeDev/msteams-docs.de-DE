@@ -5,16 +5,16 @@ ms.date: 11/15/2021
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a8b5ed919cac07b1d0710a1f23c0ade0cca2ffb
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 4214cc4a738b979a7fa95b2bd9c5110ea0360c68
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059821"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081093"
 ---
 # <a name="microsoft-teams-javascript-client-sdk-v2-preview"></a>Microsoft Teams JavaScript-Client-SDK v2 Preview
 
-Mit dem [Microsoft Teams JavaScript-Client-SDK v2 Preview](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true)wurde das vorhandene Teams SDK ( `@microsoft/teams-js` oder einfach ) `TeamsJS` umgestaltet, um Teams Entwicklern die Möglichkeit zu bieten, [Teams Apps für die Ausführung in Outlook und Office zu erweitern.](overview.md) Aus funktionaler Sicht ist das TeamsJS SDK v2 Preview `@microsoft/teams-js@next` () eine Obermenge des aktuellen TeamsJS SDK und unterstützt vorhandene Teams App-Funktionen und bietet gleichzeitig die Möglichkeit, Teams Apps in Outlook und Office zu hosten.
+Mit dem [Microsoft Teams JavaScript-Client-SDK v2 Preview](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true)wurde das vorhandene Teams SDK ( `@microsoft/teams-js` oder einfach ) `TeamsJS` umgestaltet, um Teams Entwicklern die Möglichkeit zu bieten, [Teams Apps für die Ausführung in Outlook und Office zu erweitern.](overview.md) Aus funktionaler Sicht ist das TeamsJS SDK v2 Preview ( `@microsoft/teams-js@next` ) eine Obermenge des aktuellen TeamsJS SDK und unterstützt vorhandene Teams App-Funktionen und bietet gleichzeitig die Möglichkeit, Teams Apps in Outlook und Office zu hosten.
 
 Es gibt zwei wesentliche Änderungen im TeamsJS SDK v2 Preview, die Ihr Code berücksichtigen muss, um in anderen Microsoft 365-Anwendungen ausgeführt werden zu können:
 
@@ -25,11 +25,11 @@ Es gibt zwei wesentliche Änderungen im TeamsJS SDK v2 Preview, die Ihr Code ber
  Sie können die [Teams Toolkit-Erweiterung](https://aka.ms/teams-toolkit) für Visual Studio Code verwenden, um den Updateprozess für Ihre Teams-App zu vereinfachen, wie im folgenden Abschnitt beschrieben.
 
 > [!NOTE]
-> Um die Ausführung einer vorhandenen Teams-App in Outlook und Office zu ermöglichen, sind beides erforderlich:
+> Die Aktivierung einer vorhandenen Teams-App in Outlook und Office erfordert beides:
 > 1. Abhängigkeit von der `@microsoft/teams-js@2.0.0-beta.1` oder höher und
 > 2. Ändern des vorhandenen Anwendungscodes gemäß den in diesem Dokument beschriebenen erforderlichen Änderungen.
 >
->  Wenn Sie `@microsoft/teams-js@2.0.0-beta.1` in einer vorhandenen Teams-App auf (oder höher) verweisen, werden Veraltete Warnungen angezeigt, wenn Ihr Code geänderte APIs aufruft. Eine API-Übersetzungsebene (Zuordnung des aktuellen SDK zur Vorschau von SDK-API-Aufrufen) wird bereitgestellt, damit vorhandene Teams-Apps weiterhin in Teams arbeiten können, bis sie Code aktualisieren können, um mit dem TeamsJS SDK v2 Preview zu arbeiten. Nachdem Sie Den Code mit den in diesem Artikel beschriebenen Änderungen aktualisiert haben, wird Ihre persönliche Registerkarte auch in Outlook und Office ausgeführt.
+>  Wenn Sie `@microsoft/teams-js@2.0.0-beta.1` von einer vorhandenen Teams-App (oder höher) referenzieren, werden Veraltete Warnungen angezeigt, wenn Ihr Code geänderte APIs aufruft. Eine API-Übersetzungsebene (Zuordnung des aktuellen SDK zur Vorschau von SDK-API-Aufrufen) wird bereitgestellt, damit vorhandene Teams-Apps weiterhin in Teams arbeiten können, bis sie Code aktualisieren können, um mit dem TeamsJS SDK v2 Preview zu arbeiten. Nachdem Sie Den Code mit den in diesem Artikel beschriebenen Änderungen aktualisiert haben, wird Ihre persönliche Registerkarte auch in Outlook und Office ausgeführt.
 
 ## <a name="updating-to-the-teams-client-sdk-v2-preview"></a>Aktualisieren auf das Teams Client SDK v2 Preview
 
@@ -37,7 +37,7 @@ Die einfachste Möglichkeit, Ihre Teams-App für die Verwendung des TeamsJS SDK 
 
 ### <a name="1-install-the-latest-teams-toolkit-vs-code-extension"></a>1. Installieren Sie die neueste Teams Toolkit-VS Code-Erweiterung
 
-Suchen Sie im *Visual Studio Code Extensions Marketplace* nach Teams **Toolkit,** und installieren Sie die Version `2.10.0` oder höher. Das Toolkit bietet zwei Befehle zur Unterstützung des Prozesses:
+Suchen *Sie* im Visual Studio Code Extensions Marketplace nach **Teams Toolkit,** und installieren Sie die Version `2.10.0` oder höher. Das Toolkit bietet zwei Befehle zur Unterstützung des Prozesses:
 
 1. Ein Befehl zum Aktualisieren des Manifestschemas
 1. Ein Befehl zum Aktualisieren ihrer SDK-Verweise und Aufrufen von Websites
@@ -112,7 +112,7 @@ Muss aktualisiert werden auf:
 ```js
 import { app, Context } from "@microsoft/teams-js";
 
-app.getContext().then((context: Context) => {
+app.getContext().then((context) => {
     /*...*/
 });
 ```
@@ -315,7 +315,7 @@ Sie können die Änderungen auch visualisieren, indem Sie die  [`transformLegacy
 | Originalname in `Context` Schnittstelle | Neuer Standort in `app.Context` |
 | - | - |
 | `appIconPosition` | `app.Context.app.iconPositionVertical` |
-| `appLaunchId`| *NOT IN Teams Client SDK v2 Preview* |
+| `appLaunchId`| *NICHT IN Teams Client SDK v2 Preview* |
 | `appSessionId` | `app.Context.app.sessionId`|
 | `channelId`| `app.Context.channel.id` |
 | `channelName`| `app.Context.channel.displayName`|

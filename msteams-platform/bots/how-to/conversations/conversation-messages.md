@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 10bc7de187b5303d70e0106737f656fef25da046
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: b54a0843074f6689a5c946ea265a02cda92bc682
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059779"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081104"
 ---
 # <a name="messages-in-bot-conversations"></a>Meldungen in Bot-Unterhaltungen
 
@@ -197,7 +197,7 @@ Nachrichten, die zwischen Benutzern und Bots gesendet werden, enthalten interne 
 
 ## <a name="teams-channel-data"></a>Teams Kanaldaten
 
-Das `channelData` Objekt enthält Teams spezifische Informationen und ist eine endgültige Quelle für Team- und Kanal-IDs. Optional können Sie diese IDs als Schlüssel für den lokalen Speicher zwischenspeichern und verwenden. Im `TeamsActivityHandler` SDK werden wichtige Informationen aus dem Objekt `channelData` abgerufen, damit sie leicht zugänglich sind. Sie können jedoch immer auf die ursprünglichen Daten aus dem `turnContext` Objekt zugreifen.
+Das `channelData` Objekt enthält Teams-spezifische Informationen und ist eine endgültige Quelle für Team- und Kanal-IDs. Optional können Sie diese IDs als Schlüssel für den lokalen Speicher zwischenspeichern und verwenden. Im `TeamsActivityHandler` SDK werden wichtige Informationen aus dem Objekt `channelData` abgerufen, damit sie leicht zugänglich sind. Sie können jedoch immer auf die ursprünglichen Daten aus dem `turnContext` Objekt zugreifen.
 
 Das `channelData` Objekt ist nicht in Nachrichten in persönlichen Unterhaltungen enthalten, da diese außerhalb eines Kanals stattfinden.
 
@@ -369,6 +369,24 @@ Der folgende Code zeigt ein Beispiel für das Senden einer einfachen adaptiven K
     ]
 }
 ```
+
+### <a name="form-completion-feedback"></a>Feedback zum Ausfüllen des Formulars
+
+Die Nachricht zum Ausfüllen des Formulars wird in adaptiven Karten angezeigt, während eine Antwort an den Bot gesendet wird. Die Meldung kann zwei Typen aufweisen: Fehler oder Erfolg:
+
+* **Fehler:** Wenn eine an den Bot gesendete Antwort nicht erfolgreich ist, **ist etwas schief gelaufen,** Die Meldung wird erneut angezeigt.
+
+    ![Fehlermeldung](~/assets/images/Cards/error-message.png)
+
+* **Erfolgreich:** Wenn eine an den Bot gesendete Antwort erfolgreich ist, **wird Ihre Antwort an die App-Nachricht gesendet.**
+
+    ![Erfolgsmeldung](~/assets/images/Cards/success.PNG)
+
+Sie können **"Chat schließen"** oder "Chat wechseln" auswählen, um die Nachricht zu schließen.    
+
+**Antwort auf Mobilgeräten:**
+
+Die Fehlermeldung wird unten auf der adaptiven Karte angezeigt.
 
 Weitere Informationen zu Karten und Karten in Bots finden Sie in der [Kartendokumentation.](~/task-modules-and-cards/what-are-cards.md)
 

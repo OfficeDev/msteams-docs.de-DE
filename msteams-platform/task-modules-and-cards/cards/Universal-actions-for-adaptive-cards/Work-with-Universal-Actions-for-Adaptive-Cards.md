@@ -3,12 +3,12 @@ title: Mit Universal-Aktionen für adaptive Karten arbeiten
 description: Erfahren Sie, wie Sie mit den universellen Aktionen für adaptive Karten arbeiten, einschließlich Schema für UniversalActions für adaptive Karten, Aktualisierungsmodell und Abwärtskompatibilität mithilfe von Codebeispielen.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ae881ff985d39865da480596ea2ece8bef2b075
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 6a7160e1aa2dff6500335dc6b8557fcd94e836d8
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768608"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62080953"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Mit Universal-Aktionen für adaptive Karten arbeiten
 
@@ -124,3 +124,4 @@ Weitere Informationen finden Sie unter [Abwärtskompatibilität in Teams](/adapt
 * [Wie Bots funktionieren](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Sequenzielle Workflows](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)
 * [Aktuelle Karten](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
+* [Feedback zum Ausfüllen des Formulars](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

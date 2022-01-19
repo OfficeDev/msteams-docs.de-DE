@@ -12,18 +12,20 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: ea705be66fdf5521fc68cedeb89eeb6d97319c32
-  ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+  ms.openlocfilehash: de250e7f4e744b293abce91998fa7b65ab22c215
+  ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/18/2022
-  ms.locfileid: "62062490"
+  ms.lasthandoff: 01/19/2022
+  ms.locfileid: "62081044"
 landingContent:
 - title: Entdecken Sie die neuesten
   linkLists:
   - linkListType: concept
     links:
-    - text: Personenauswahl in adaptiven Karten
+    - text: Feedback zum Abschluss des Formulars für adaptive Karten
+      url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
+    - text: Personenauswahl in Adaptiven Karten
       url: ~/task-modules-and-cards/cards/people-picker.md
     - text: Teams Toolkit für Visual Studio Code (Vorschau)
       url: ~/toolkit/teams-toolkit-fundamentals.md
@@ -131,7 +133,7 @@ landingContent:
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: App-Manifest
       url: ../msteams-platform/resources/schema/manifest-schema.md
-- title: Teams App-Szenarien
+- title: Teams-App-Szenarien
   linkLists:
   - linkListType: reference
     links:
@@ -147,7 +149,7 @@ landingContent:
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Veröffentlichen in Teams Store
       url: ~/concepts/deploy-and-publish/appsource/publish.md
-    - text: Store Validierungsrichtlinien
+    - text: Richtlinien für die Store-Validierung
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
     - text: Verwalten Ihrer veröffentlichten App
       url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md

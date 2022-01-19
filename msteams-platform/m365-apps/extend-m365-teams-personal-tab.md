@@ -5,19 +5,19 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 17ad9b3a2e30a2daf25dd31344b4e674f3db3d25
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 27d690ca72ffe41fdcdfe39fcd5d7c203c9b3e7c
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059630"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081076"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Erweitern einer Teams persönlichen Registerkarte über Microsoft 365
 
 > [!NOTE]
-> *Das Erweitern einer Teams persönlichen Registerkarte über Microsoft 365* ist derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md)verfügbar. Features, die in der Vorschau enthalten sind, sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie in der Veröffentlichung verfügbar werden. Sie werden nur zu Test- und Untersuchungszwecken bereitgestellt. Sie sollten nicht in Produktionsanwendungen verwendet werden.
+> *Das Erweitern einer Teams persönlichen Registerkarte über Microsoft 365* ist derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md)verfügbar. Die in der Vorschau enthaltenen Features sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie in der öffentlichen Version verfügbar werden. Sie werden nur zu Test- und Untersuchungszwecken bereitgestellt. Sie sollten nicht in Produktionsanwendungen verwendet werden.
 
-Persönliche Registerkarten bieten eine hervorragende Möglichkeit, die Microsoft Teams Erfahrung zu verbessern. Mit persönlichen Registerkarten können Sie einem Benutzer direkt innerhalb Teams Zugriff auf seine Anwendung gewähren, ohne dass der Benutzer die Benutzeroberfläche verlassen oder sich erneut anmelden muss. Mit dieser Vorschau können persönliche Registerkarten in anderen Microsoft 365-Anwendungen angezeigt werden. In diesem Lernprogramm wird gezeigt, wie Sie eine vorhandene Teams persönliche Registerkarte verwenden und aktualisieren, damit sie sowohl in Outlook Desktop- und Webumgebungen als auch Office im Web (office.com) ausgeführt wird.
+Persönliche Registerkarten bieten eine hervorragende Möglichkeit, um die Microsoft Teams Erfahrung zu verbessern. Mit persönlichen Registerkarten können Sie einem Benutzer direkt innerhalb Teams Zugriff auf seine Anwendung gewähren, ohne dass der Benutzer die Benutzeroberfläche verlassen oder sich erneut anmelden muss. Mit dieser Vorschau können persönliche Registerkarten in anderen Microsoft 365-Anwendungen angezeigt werden. In diesem Lernprogramm wird gezeigt, wie Sie eine vorhandene Teams persönliche Registerkarte verwenden und aktualisieren, damit sie sowohl in Outlook Desktop- und Webumgebungen als auch Office im Web (office.com) ausgeführt wird.
 
 Das Aktualisieren Ihrer persönlichen App für die Ausführung in Outlook und Office Home umfasst die folgenden Schritte:
 
@@ -42,8 +42,8 @@ Zum Abschließen dieses Lernprogramms benötigen Sie Folgendes:
 
 * Ein Sandkastenmandant des Microsoft 365-Entwicklerprogramms
 * Ihr Sandkastenmandant, der in *Office 365 Targeted Releases* registriert ist
-* Ein Computer mit Office aus dem Microsoft 365 Apps *Betakanal* installierten Apps
-* (Optional) [Teams Toolkit-Erweiterung](https://aka.ms/teams-toolkit) für Visual Studio Code, um Ihren Code zu aktualisieren
+* Ein Computer mit Office Apps, die über den Microsoft 365 Apps *Betakanal* installiert sind
+* (Optional) [Teams Toolkit-Erweiterung](https://aka.ms/teams-toolkit) für Visual Studio Code zur Aktualisierung des Codes
 
 > [!div class="nextstepaction"]
 > [Erforderliche Komponenten installieren](prerequisites.md)
@@ -52,14 +52,14 @@ Zum Abschließen dieses Lernprogramms benötigen Sie Folgendes:
 
 Wenn Sie über eine vorhandene persönliche Registerkarten-App verfügen, erstellen Sie eine Kopie oder einen Zweig Ihres Produktionsprojekts zum Testen, und aktualisieren Sie Ihre App-ID im App-Manifest, um einen neuen Bezeichner zu verwenden (der sich von der Produktions-App-ID unterscheidet).
 
-Wenn Sie beispielcode verwenden möchten, um dieses Lernprogramm abzuschließen, führen Sie die Setupschritte in ["Erste Schritte mit Todo List Sample" aus,](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) um eine persönliche Registerkarten-App mithilfe der Teams Toolkit-Erweiterung für Visual Studio Code zu erstellen. Sie können auch mit demselben [Todo-Listenbeispiel](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) beginnen, das für TeamsJS SDK v2 Preview aktualisiert wurde, und mit [der Vorschau Ihrer persönlichen Registerkarte in anderen Microsoft 365 Fortfahren.](#preview-your-personal-tab-in-other-microsoft-365-experiences) Das aktualisierte Beispiel ist auch in Teams Toolkit-Erweiterung verfügbar:  >  Todo-Liste der *Entwicklungsansichtsbeispiele*  >  **(funktioniert in Teams, Outlook und Office).**
+Wenn Sie beispielcode verwenden möchten, um dieses Lernprogramm abzuschließen, führen Sie die Setupschritte in ["Erste Schritte mit Todo-Listenbeispiel" aus,](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) um eine persönliche Registerkarten-App mithilfe der Teams Toolkit-Erweiterung für Visual Studio Code zu erstellen. Sie können auch mit dem gleichen [Todo-Listenbeispiel](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) beginnen, das für TeamsJS SDK v2 Preview aktualisiert wurde, und mit [der Vorschau Ihrer persönlichen Registerkarte in anderen Microsoft 365-Umgebungen](#preview-your-personal-tab-in-other-microsoft-365-experiences)fortfahren. Das aktualisierte Beispiel ist auch in Teams Toolkit-Erweiterung verfügbar:  >  Todo-Liste mit *Entwicklungsansichtsbeispielen*  >  **(funktioniert in Teams, Outlook und Office).**
 
 :::image type="content" source="images/toolkit-todo-sample.png" alt-text="Todo List-Beispiel (Funktioniert in Teams, Outlook und Office) in Teams Toolkit":::
 
 
 ## <a name="update-the-app-manifest"></a>Aktualisieren des App-Manifests
 
-Sie müssen das [Teams Entwicklervorschau-Manifestschema](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) und die `m365DevPreview` Manifestversion verwenden, damit Ihre persönliche Registerkarte Teams in Office und Outlook ausgeführt werden kann.
+Sie müssen das [Teams Entwicklervorschau-Manifestschema](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) und die `m365DevPreview` Manifestversion verwenden, damit Ihre Teams persönliche Registerkarte in Office und Outlook ausgeführt werden kann.
 
 Sie können entweder Teams Toolkit verwenden, um Ihr App-Manifest zu aktualisieren, oder die Änderungen manuell anwenden:
 
@@ -86,7 +86,7 @@ Wenn Sie Teams Toolkit zum Erstellen Ihrer persönlichen App verwendet haben, k�
 
 ## <a name="update-sdk-references"></a>Aktualisieren von SDK-Verweisen
 
-Um in Outlook und Office ausgeführt zu werden, muss Ihre App vom npm-Paket `@microsoft/teams-js@2.0.0-beta.1` (oder einer späteren *Betaversion)* abhängig sein. Während code with downlevel versions of `@microsoft/teams-js` is supported in Outlook and Office, deprecation warnings will be logged, and support for downlevel versions of in Outlook and Office will eventually `@microsoft/teams-js` ends.
+Um in Outlook und Office ausgeführt zu werden, muss Ihre App vom npm-Paket `@microsoft/teams-js@2.0.0-beta.1` (oder einer späteren *Betaversion)* abhängig sein. Während Code mit Vorgängerversionen von `@microsoft/teams-js` in Outlook und Office unterstützt wird, werden veraltete Warnungen protokolliert, und die Unterstützung für Vorgängerversionen von in Outlook und Office wird schließlich `@microsoft/teams-js` eingestellt.
 
 Sie können Teams Toolkit verwenden, um einige der Codeänderungen zu automatisieren, um die nächste Version von zu `@microsoft/teams-js` übernehmen. Wenn Sie die Schritte jedoch manuell ausführen möchten, finden Sie weitere Informationen [in Microsoft Teams JavaScript-Client-SDK-Vorschau.](using-teams-client-sdk-preview.md)
 
@@ -103,14 +103,14 @@ Nach Abschluss des Vorgangs hat das Hilfsprogramm Ihre `package.json` Datei mit 
 > * `TODO` Kommentarerinnerungen, um sicherzustellen, dass die [Konvertierung in Zusagenfunktionen aus Rückrufstilfunktionen](using-teams-client-sdk-preview.md#callbacks-converted-to-promises) auf jeder Aufrufwebsite, die das Tool gefunden hat, gut funktioniert hat
 
 > [!IMPORTANT]
-> Code innerhalb *.html* Dateien wird von den Upgradetools nicht unterstützt und erfordert manuelle Änderungen.
+> Code in *.html* Dateien wird von den Upgradetools nicht unterstützt und erfordert manuelle Änderungen.
 
 > [!NOTE]
-> Wenn Sie Ihren Code manuell aktualisieren möchten, lesen Sie [Microsoft Teams JavaScript Client SDK Preview,](using-teams-client-sdk-preview.md) um mehr über die erforderlichen Änderungen zu erfahren.
+> Wenn Sie Ihren Code manuell aktualisieren möchten, lesen Sie [Microsoft Teams JavaScript-Client-SDK-Vorschau,](using-teams-client-sdk-preview.md) um mehr über die erforderlichen Änderungen zu erfahren.
 
 ## <a name="configure-content-security-policy-headers"></a>Konfigurieren von Kopfzeilen für Inhaltssicherheitsrichtlinien
 
-[Wie in Microsoft Teams](/microsoftteams/platform/tabs/what-are-tabs)werden Registerkartenanwendungen in Office und Outlook Webclients gehostet ([iframe-Elemente).](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)
+[Wie in Microsoft Teams](/microsoftteams/platform/tabs/what-are-tabs)werden Registerkartenanwendungen in ([iframe-Elementen](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)) in Office und Outlook Webclients gehostet.
 
 Wenn Ihre App [CSP-Header (Content Security Policy)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) verwendet, stellen Sie sicher, dass Sie alle folgenden [Frame-Vorgänger](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) in Ihren CSP-Headern zulassen:
 
@@ -122,7 +122,7 @@ Wenn Ihre App [CSP-Header (Content Security Policy)](https://developer.mozilla.o
 
 ## <a name="update-aad-app-registration-for-sso"></a>Aktualisieren AAD App-Registrierung für SSO
 
-Azure Active Directory Einmaliges Anmelden (Single Sign On, SSO) für persönliche Registerkarten funktioniert in Office und Outlook auf die gleiche Weise [wie in Teams.](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso)Sie müssen jedoch der AAD App-Registrierung Ihrer Registerkarten-App im *App-Registrierungsportal* Ihres Mandanten mehrere Clientanwendungsbezeichner hinzufügen.
+Azure Active Directory Einmaliges Anmelden (Single Sign On, SSO) für persönliche Registerkarten funktioniert in Office und Outlook auf die gleiche Weise [wie in Teams.](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso)Sie müssen jedoch der AAD App-Registrierung Ihrer Registerkarten-App im *App-Registrierungsportal* Ihres Mandanten mehrere Clientanwendungs-IDs hinzufügen.
 
 1. Melden Sie sich mit Ihrem Sandkastenmandantenkonto beim [Azure-Portal](https://portal.azure.com) an.
 1. Öffnen Sie das Blatt **"App-Registrierungen".**
@@ -133,7 +133,7 @@ Azure Active Directory Einmaliges Anmelden (Single Sign On, SSO) für persönlic
 
 Stellen Sie im Abschnitt **"Autorisierte Clientanwendungen"** sicher, dass alle folgenden `Client Id` Werte hinzugefügt werden:
 
-|Microsoft 365-Clientanwendung | Client-ID |
+|Microsoft 365 Clientanwendung | Client-ID |
 |--|--|
 |Teams Desktop, Mobil |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
 |Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
@@ -144,19 +144,19 @@ Stellen Sie im Abschnitt **"Autorisierte Clientanwendungen"** sicher, dass alle 
 |Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
 |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
-## <a name="sideload-your-app-in-teams"></a>Querladen Ihrer App in Teams
+## <a name="sideload-your-app-in-teams"></a>Querladen der App in Microsoft Teams
 
-Der letzte Schritt besteht darin, die aktualisierte persönliche Registerkarte[(App-Paket)](/microsoftteams/platform/concepts/build-and-test/apps-package)in Microsoft Teams querzuladen. Nach Abschluss des Vorgangs kann Ihre App zusätzlich zu Teams in Office und Outlook ausgeführt werden.
+Der letzte Schritt besteht darin, ihre aktualisierte persönliche Registerkarte[(App-Paket)](/microsoftteams/platform/concepts/build-and-test/apps-package)in Microsoft Teams querzuladen. Nach Abschluss des Vorgangs kann Ihre App zusätzlich zu Teams auch in Office und Outlook ausgeführt werden.
 
-1. Verpacken Sie Ihre Teams Anwendung (Manifest- und [App-Symbole)](/microsoftteams/platform/resources/schema/manifest-schema#icons)in einer ZIP-Datei. Wenn Sie Teams Toolkit zum Erstellen Ihrer App verwendet haben, können Sie dies ganz einfach mithilfe der Option **zip Teams Metadatenpaket** im *Bereitstellungsmenü* von Teams Toolkit oder in der Befehlspalette `Ctrl+Shift+P` von Visual Studio Code tun:
+1. Verpacken Sie Ihre Teams Anwendung (Manifest- und [App-Symbole)](/microsoftteams/platform/resources/schema/manifest-schema#icons)in einer ZIP-Datei. Wenn Sie Teams Toolkit zum Erstellen Ihrer App verwendet haben, können Sie dies ganz einfach mithilfe der **Option zip Teams Metadatenpaket** im *Bereitstellungsmenü* von Teams Toolkit oder in der Befehlspalette `Ctrl+Shift+P` von Visual Studio Code tun:
 
-    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Option &quot;Zip-Teams-Metadatenpaket&quot; in Teams Toolkit-Erweiterung für Visual Studio Code":::
+    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Option &quot;Zip Teams Metadata Package&quot; in Teams Toolkit-Erweiterung für Visual Studio Code":::
 
 1. Melden Sie sich mit Ihrem Sandkastenmandantenkonto bei Teams an, und stellen Sie sicher, dass Sie sich in der Public Developer Preview befinden. Sie können überprüfen, ob Sie sich auf der Vorschau im Teams-Client befinden, indem Sie auf das Menü mit den Auslassungspunkten (**...**) ihres Benutzerprofils klicken und **"Info"** öffnen, um zu überprüfen, ob die Option *"Entwicklervorschau"* aktiviert ist.
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="Öffnen Sie im Menü Teams Auslassungspunkte &quot;Info&quot;, und überprüfen Sie, ob die Option &quot;Entwicklervorschau&quot; aktiviert ist.":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="Öffnen Sie im Menü Teams Ellipsen &quot;Info&quot;, und überprüfen Sie, ob die Option &quot;Entwicklervorschau&quot; aktiviert ist.":::
 
-1. Öffnen Sie den *Bereich "Apps",* klicken Sie auf **Hochladen einer benutzerdefinierten App** und Hochladen dann für mich oder meine **Teams.**
+1. Öffnen Sie den *Bereich "Apps",* und klicken Sie auf **Hochladen einer benutzerdefinierten App,** und **Hochladen Sie dann für mich oder meine Teams.**
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Schaltfläche &quot;Hochladen einer benutzerdefinierten App&quot; im Bereich Teams &quot;Apps&quot;":::
 
@@ -171,13 +171,13 @@ Sie können die App für den Schnellzugriff anheften, oder Sie finden Ihre App i
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>Anzeigen einer Vorschau Ihrer persönlichen Registerkarte in anderen Microsoft 365-Umgebungen
 
-Wenn Sie Ihre Teams persönliche Registerkarte aktualisieren und in Teams querladen, wird sie auch in Outlook Desktop- und Webclients und Office im Web (office.com) ausgeführt. Hier erfahren Sie, wie Sie anhand dieser Microsoft 365 Oberflächen eine Vorschau anzeigen können.
+Wenn Sie Ihre Teams persönliche Registerkarte aktualisieren und in Teams querladen, wird sie auch in Outlook Desktop- und Webclients und Office im Web (office.com) ausgeführt. Hier erfahren Sie, wie Sie eine Vorschau dieser Microsoft 365-Umgebungen anzeigen.
 
 ### <a name="outlook"></a>Outlook
 
 Um Ihre App anzuzeigen, die in Outlook auf Windows Desktop ausgeführt wird, starten Sie Outlook und melden Sie sich mit Ihrem Dev-Mandantenkonto an. Klicken Sie auf die Auslassungspunkte (**...**) auf der Seitenleiste. Der Titel der quergeladenen App wird unter den installierten Apps angezeigt.
 
-:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste auf die Option &quot;Weitere Apps&quot;, um die installierten persönlichen Registerkarten anzuzeigen.":::
+:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste Office Desktopclients auf die Option &quot;Weitere Apps&quot;, um die installierten persönlichen Registerkarten anzuzeigen.":::
 
 Klicken Sie auf das App-Symbol, um Ihre App in Outlook zu starten.
 
@@ -185,23 +185,28 @@ Klicken Sie auf das App-Symbol, um Ihre App in Outlook zu starten.
 
 Um Ihre App in Outlook im Web anzuzeigen, besuchen https://outlook.office.com Sie Ihr Dev-Mandantenkonto, und melden Sie sich an. Klicken Sie auf die Auslassungspunkte (**...**) auf der Seitenleiste. Der Titel der quergeladenen App wird unter den installierten Apps angezeigt.
 
+:::image type="content" source="images/outlook-web-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste von outlook.com auf die Option &quot;Weitere Apps&quot;, um die installierten persönlichen Registerkarten anzuzeigen.":::
+
 Klicken Sie auf das App-Symbol, um die App in Outlook im Web zu starten und eine Vorschau anzuzeigen.
 
 ### <a name="office-on-the-web"></a>Office im Web
 
-Melden Sie sich mit testmandantenanmeldeinformationen bei office.com an, um eine Vorschau ihrer app ausgeführt in Office im Web ausgeführt. Klicken Sie auf die Auslassungspunkte (**...**) auf der Seitenleiste. Der Titel der quergeladenen App wird unter den installierten Apps angezeigt.
+> [!IMPORTANT]
+> Lesen Sie die neuesten Updates auf [Microsoft Teams – Microsoft 365 Entwicklerblog,](https://devblogs.microsoft.com/microsoft365dev/) um zu überprüfen, ob Office.com-Unterstützung für Teams persönliche Apps für Ihren Testmandanten verfügbar ist.
 
-Klicken Sie auf das App-Symbol, um Ihre App in Office Startseite zu starten.
+Melden Sie sich mit testmandantenanmeldeinformationen bei office.com an, um eine Vorschau Ihrer app ausgeführt in Office im Web ausgeführt. Klicken Sie auf die Auslassungspunkte (**...**) auf der Seitenleiste. Der Titel der quergeladenen App wird unter den installierten Apps angezeigt.
+
+Klicken Sie auf das App-Symbol, um Ihre App in Office Start zu starten.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Outlook- und Office-aktivierten persönlichen Registerkarten befinden sich in der Vorschau und werden für die Produktionsverwendung nicht unterstützt. Hier erfahren Sie, wie Sie Ihre persönliche Registerkarten-App zu Testzwecken in der Vorschau anzeigen.
+Outlook- und Office-aktivierte persönliche Registerkarten befinden sich in der Vorschau und werden für die Produktionsverwendung nicht unterstützt. Hier erfahren Sie, wie Sie Ihre persönliche Registerkarten-App zu Testzwecken in der Vorschau anzeigen.
 
 ### <a name="single-tenant-distribution"></a>Einzelmandantenverteilung
 
-Outlook- und Office-fähige persönliche Registerkarten können auf drei Arten an eine Vorschaugruppe über einen Testmandanten (oder Produktionsmandanten) verteilt werden:
+Outlook- und Office-aktivierte persönliche Registerkarten können auf drei Arten an eine Vorschaugruppe über einen Testmandanten (oder Produktionsmandanten) verteilt werden:
 
-#### <a name="teams-client"></a>Teams-Client
+#### <a name="teams-client"></a>Teams Client
 
 Wählen Sie im Menü *"Apps"* die Option *"Apps verwalten"* aus,  >  **um eine App an Ihre Organisation zu übermitteln.** Dies erfordert die Genehmigung durch Ihren IT-Administrator.
 

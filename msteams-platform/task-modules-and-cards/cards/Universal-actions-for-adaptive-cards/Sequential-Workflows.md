@@ -4,12 +4,12 @@ description: Informationen zu sequenziellen Workflows für adaptive Karten mit u
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: e80f3d41e4dcbd281654c8070862fd5df9b0c128
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 468fd5168c58e7bc99b4f269e10f76484fc16b1d
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889111"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081051"
 ---
 # <a name="sequential-workflows"></a>Sequenzielle Workflows
 
@@ -136,3 +136,4 @@ var adaptiveCardResponse = JObject.FromObject(new
 * [Adaptive Kartenaktionen in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [Wie Bots funktionieren](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Mit Universal-Aktionen für adaptive Karten arbeiten](Work-with-universal-actions-for-adaptive-cards.md)
+* [Feedback zum Ausfüllen des Formulars](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
