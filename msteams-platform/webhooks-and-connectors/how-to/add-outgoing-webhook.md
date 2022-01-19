@@ -1,21 +1,21 @@
 ---
 title: Erstellen eines ausgehenden Webhooks
 author: laujan
-description: beschreibt, wie ein ausgehender Webhook erstellt wird
+description: beschreibt, wie ein ausgehender Webhook erstellt wird.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
-keywords: Teams-Registerkarten ausgehende Webhook-Nachricht mit Aktionen überprüfen Webhook
-ms.openlocfilehash: 2039ffdbc307b266e7bc0f93c1638450a8be9037
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
-ms.translationtype: MT
+keywords: Teams-Registerkarten ausgehende Webhook-Aktionen erfordernde Nachricht überprüfen Webhook
+ms.openlocfilehash: 0c41abe8078e05fa6e52a8c5379f91a21601eac3
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156453"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059749"
 ---
-# <a name="create-outgoing-webhook"></a>Erstellen eines ausgehenden Webhooks
+# <a name="create-outgoing-webhook"></a>Ausgehenden Webhook erstellen
 
-Der ausgehende Webhook fungiert als Bot und sucht **mithilfe von @mention** nach Nachrichten in Kanälen. Es sendet Benachrichtigungen an externe Webdienste und antwortet mit umfangreichen Nachrichten, die Karten und Bilder enthalten. Es hilft, den Prozess der Erstellung von Bots über die [Microsoft Bot Framework](https://dev.botframework.com/)zu überspringen.
+Der ausgehende Webhook fungiert als Bot und sucht mithilfe von **@mention** nach Nachrichten in Kanälen. Es sendet Benachrichtigungen an externe Webdienste und antwortet mit umfangreichen Nachrichten, die Karten und Bilder enthalten. Es hilft, den Erstellungsprozess von Bots über die [Microsoft Bot Framework](https://dev.botframework.com/) zu überspringen.
 
 ## <a name="key-features-of-outgoing-webhook"></a>Wichtige Features des ausgehenden Webhooks
 
@@ -23,81 +23,81 @@ Die folgende Tabelle enthält die Features und die Beschreibung ausgehender Webh
 
 | Features | Beschreibung |
 | ------- | ----------- |
-| Bereichskonfiguration| Webhooks sind auf Teamebene beschränkt. Der obligatorische Einrichtungsprozess für jedes Add-In fügt einen ausgehenden Webhook hinzu. |
-| Reaktives Messaging| Benutzer müssen @mention verwenden, damit der Webhook Nachrichten empfängt. Derzeit können Benutzer nur einen ausgehenden Webhook in öffentlichen Kanälen und nicht innerhalb des persönlichen oder privaten Bereichs senden. |
-|Standardmäßiger HTTP-Nachrichtenaustausch|Antworten werden in derselben Kette wie die ursprüngliche Anforderungsnachricht angezeigt und können beliebige Bot Framework-Nachrichteninhalte enthalten, z. B. Rich-Text, Bilder, Karten und Emojis. Ausgehende Webhooks können zwar Karten verwenden, jedoch keine Kartenaktionen mit Ausnahme `openURL` von .|
-| Teams API-Methodenunterstützung|Ausgehende Webhooks senden einen HTTP POST an einen Webdienst und erhalten eine Antwort. Sie können nicht auf andere APIs zugreifen, z. B. auf die Liste oder die Liste der Kanäle in einem Team.|
+| Konfigurationsbereich| Webhooks werden auf Teamebene definiert. Der obligatorische Einrichtungsprozess für jeden einzelnen fügt einen ausgehenden Webhook hinzu. |
+| Reaktives Messaging| Benutzer müssen @mention verwenden, damit der Webhook Nachrichten empfängt. Derzeit können Benutzer nur eine Nachricht an einen ausgehenden Webhook in öffentlichen Kanälen senden und nicht innerhalb des persönlichen oder privaten Bereichs. |
+|Standard-HTTP-Nachrichtenaustausch|Antworten werden in derselben Kette wie die ursprüngliche Anforderungsnachricht angezeigt und können beliebigen Bot Framework-Nachrichteninhalt enthalten, z. B. Rich-Text, Bilder, Karten und Emojis. Ausgehende Webhooks können zwar Karten verwenden, jedoch keine Kartenaktionen mit Ausnahme von `openURL`.|
+| Unterstützung der Teams-API-Methode|Ausgehende Webhooks senden einen HTTP POST an einen Webdienst und erhalten eine Antwort. Sie können auf keine anderen APIs zugreifen, wie z. B. den Dienstplan oder die Liste der Kanäle in einem Team abrufen.|
 
 ## <a name="create-outgoing-webhooks"></a>Erstellen ausgehender Webhooks
 
-Erstellen Sie ausgehende Webhooks, und fügen Sie Teams benutzerdefinierte Bots hinzu.
+Erstellen Sie ausgehende Webhooks, und fügen Sie Benutzerdefinierte Bots zu Teams hinzu.
 
-**So erstellen Sie einen ausgehenden Webhook**
+**Erstellen eines ausgehenden Webhooks**
 
-1. Wählen Sie im linken Bereich **Teams** aus. Die **Teams** Seite wird angezeigt:
+1. Wählen Sie im linken Bereich **Teams** aus. Die **Teams**-Seite wird angezeigt:
 
     ![Teams channel](~/assets/images/teamschannel.png)
 
-1. Wählen Sie auf der **Seite Teams** das erforderliche Team aus, um einen ausgehenden Webhook zu erstellen, und wählen Sie die &#8226;&#8226;&#8226; aus. Wählen Sie im Dropdownmenü **"Team verwalten"** aus:
+1. Wählen Sie auf der **Teams**-Seite das erforderliche Team aus, um einen ausgehenden Webhook zu erstellen, und wählen Sie &#8226;&#8226;&#8226; aus. Wählen Sie im Dropdownmenü **Team verwalten** aus:
 
-    ![Erstellen eines ausgehenden Webhooks](~/assets/images/outgoingwebhook1.png)
+    ![Ausgehenden Webhook erstellen](~/assets/images/outgoingwebhook1.png)
 
-1. Wählen Sie die Registerkarte **"Apps"** auf der Kanalseite aus:
+1. Wählen Sie die Registerkarte **Apps** auf der Kanalseite aus:
 
     ![Erstellen eines ausgehenden Webhooks](~/assets/images/outgoingwebhook2.png)
 
-1. Wählen Sie **"Ausgehenden Webhook erstellen" aus:**
+1. Wählen Sie **Erstellen eines ausgehenden Webhooks** aus:
 
     ![Erstellen ausgehender Webhooks](~/assets/images/outgoingwebhook3.png)
 
-1. Geben Sie die folgenden Details auf der Seite **"Erstellen eines ausgehenden Webhooks" ein:**
+1. Geben Sie auf der Seite **Erstellen eines ausgehenden Webhooks** die folgenden Details ein:
 
-    * **Name:** Der Webhook-Titel und @mention Registerkarte.
-    * **Rückruf-URL:** Der HTTPS-Endpunkt, der JSON-Nutzlasten akzeptiert und POST-Anforderungen von Teams empfängt.
-    * **Beschreibung:** Eine detaillierte Zeichenfolge, die auf der Profilkarte und im App-Dashboard auf Teamebene angezeigt wird.
-    * **Profilbild:** Ein App-Symbol für Ihren Webhook, das optional ist.
+    * **Name**: Der Webhooktitel und die Registerkarte @mention.
+    * **Rückruf-URL**: Der HTTPS-Endpunkt, der JSON-Nutzlasten akzeptiert und POST-Anforderungen von Teams empfängt.
+    * **Beschreibung**: Eine ausführliche Zeichenfolge, die auf der Profilkarte und im App-Dashboard auf Teamebene angezeigt wird.
+    * **Profilbild**: Ein App-Symbol für Ihren Webhook, das optional ist.
 
 1. Wählen Sie **Erstellen** aus. Der ausgehende Webhook wird dem Kanal des aktuellen Teams hinzugefügt:
 
-    ![Erstellen von ausgehenden Webhooks](~/assets/images/outgoingwebhook.png)
+    ![Ausgehenden Webhook erstellen](~/assets/images/outgoingwebhook.png)
 
-Ein [Hashbasiertes Dialogfeld mit dem Nachrichtenauthentifizierungscode (Message Authentication Code, HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) wird angezeigt. Es handelt sich um ein Sicherheitstoken, das zum Authentifizieren von Aufrufen zwischen Teams und dem angegebenen externen Dienst verwendet wird.
+Ein [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) Dialogfeld wird angezeigt. Es handelt sich um ein Sicherheitstoken, das zum Authentifizieren von Anrufen zwischen Teams und dem angegebenen externen Dienst verwendet wird.
 
 >[!NOTE]
 > Der ausgehende Webhook steht den Benutzern des Teams nur zur Verfügung, wenn die URL gültig ist und die Server- und Clientauthentifizierungstoken gleich sind. Beispielsweise ein HMAC-Handshake.
 
 Das folgende Szenario enthält die Details zum Hinzufügen eines ausgehenden Webhooks:
 
-* Szenario: Push-Änderungsstatusbenachrichtigungen auf einem Teams Kanaldatenbankserver an Ihre App.
-* Beispiel: Sie verfügen über eine Branchen-App, die alle CRUD-Vorgänge verfolgt, z. B. erstellen, lesen, aktualisieren und löschen. Diese Vorgänge werden den Mitarbeiterdatensätzen von Teams Kanal-HR-Benutzern über einen Office 365 Mandanten vorgenommen.
+* Szenario: Pushen von Änderungsstatusbenachrichtigungen auf einem Teams-Kanaldatenbankserver an Ihre App.
+* Beispiel: Sie verfügen über eine Branchen-App, die alle CRUD-Vorgänge nachzeichnet, z. B. Erstellen, Lesen, Aktualisieren und Löschen. Diese Vorgänge werden von Benutzern der Personalabteilung des Teams-Kanals in einem Office 365-Mandanten an die Mitarbeiterdatensätze vorgenommen.
 
-# <a name="url-json-payload"></a>[JSON-URL-Nutzlast](#tab/urljsonpayload)
-**Erstellen Sie eine URL auf dem Server Ihrer App, um eine POST-Anforderung mit einer JSON-Nutzlast zu akzeptieren und zu verarbeiten.**
+# <a name="url-json-payload"></a>[JSON-Nutzlast der URL](#tab/urljsonpayload)
+**erstellen Sie eine URL auf dem Server Ihrer App, um eine POST-Anforderung mit einer JSON-Nutzlast zu akzeptieren und zu verarbeiten**
 
-Ihr Dienst empfängt Nachrichten in einem standardmäßigen Nachrichtenschema des Azure-Botdiensts. Der Bot Framework-Connector ist ein REST-Dienst, der es ermöglicht, den Austausch von JSON-formatierten Nachrichten über HTTPS-Protokolle zu verarbeiten, wie in der [Azure Bot Service-API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference)dokumentiert. Alternativ können Sie dem Microsoft Bot Framework SDK folgen, um Nachrichten zu verarbeiten und zu analysieren. Weitere Informationen finden Sie in [der Übersicht über Azure Bot Service.](/azure/bot-service/bot-service-overview-introduction)
+Ihr Dienst empfängt Nachrichten in einem standardmäßigen Azure Bot Service-Messagingschema. Der Bot Framework-Connector ist ein RESTful-Dienst, der es ermöglicht, den Austausch von Nachrichten im JSON-Format über HTTPS-Protokolle zu verarbeiten, wie in der [Azure Bot Service-API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference) dokumentiert. Alternativ können Sie dem Microsoft Bot Framework SDK folgen, um Nachrichten zu verarbeiten und zu analysieren. Weitere Informationen finden Sie unter [Übersicht über Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
 
-Ausgehende Webhooks sind auf die Ebene beschränkt `team` und für alle Teammitglieder sichtbar. Benutzer müssen den Namen des ausgehenden Webhooks **\@ erwähnen,** um ihn im Kanal aufzurufen.
+Ausgehende Webhooks sind auf die `team`-Ebene beschränkt und für alle Teammitglieder sichtbar. Benutzer müssen den Namen des ausgehenden Webhooks **\@erwähnen**, um ihn im Kanal aufzurufen.
 
-# <a name="verify-hmac-token"></a>[Überprüfen des HMAC-Tokens](#tab/verifyhmactoken)
+# <a name="verify-hmac-token"></a>[HMAC-Token überprüfen](#tab/verifyhmactoken)
 **Erstellen einer Methode zum Überprüfen des HMAC-Tokens für ausgehenden Webhook**
 
-Using example of inbound message and ID: "contoso" of SigningKeyDictionary of {"contoso", "vqF0En+Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA=" }.
+Beispiel für eingehende Nachricht und ID: "contoso" von SigningKeyDictionary von {"contoso", "vqF0En+Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA=" }.
 
 Verwenden Sie den Wert "HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs+mO41mPL+R1e1U=" in der Autorisierung des Anforderungsheaders.
 
-Um sicherzustellen, dass Ihr Dienst nur Aufrufe von tatsächlichen Teams Clients empfängt, stellt Teams einen HMAC-Code im `hmac` HTTP-Autorisierungsheader bereit. Fügen Sie immer den Code in Ihr Authentifizierungsprotokoll ein.
+Um sicherzustellen, dass Ihr Dienst nur Anrufe von tatsächlichen Teams-Clients empfängt, stellt Teams einen HMAC-Code im HTTP-`hmac`-Autorisierungsheader bereit. Schließen Sie den Code immer in Ihr Authentifizierungsprotokoll ein.
 
 Ihr Code muss die in der Anforderung enthaltene HMAC-Signatur immer wie folgt überprüfen:
 
-* Generieren Sie das HMAC-Token aus dem Anforderungstext der Nachricht. Es gibt Standardbibliotheken, um dies auf den meisten Plattformen zu tun, z. [B. Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) für Node.js und [Teams Webhook-Beispiel](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) für C \# ). Microsoft Teams verwendet standard SHA256 HMAC-Kryptografie. Sie müssen den Textkörper in UTF8 in ein Bytearray konvertieren.
-* Berechnen Sie den Hash aus dem Bytearray des Sicherheitstokens, das von Teams bereitgestellt wird, wenn Sie den ausgehenden Webhook im Teams-Client registriert haben. Siehe [Erstellen eines ausgehenden Webhooks.](#create-outgoing-webhook)
-* Konvertieren Sie den Hash in eine Zeichenfolge mithilfe der UTF-8-Codierung.
-* Vergleichen Sie den Zeichenfolgenwert des generierten Hash mit dem in der HTTP-Anforderung angegebenen Wert.
+* Generieren Sie das HMAC-Token aus dem Anforderungstext der Nachricht. Für die meisten Plattformen gibt es Standardbibliotheken, z. B. [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) für Node.js und [Teams-Webhookbeispiel](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) für C\#). Microsoft Teams verwendet SHA256 HMAC-Standardkryptografie. Sie müssen den Text in ein Bytearray in UTF8 konvertieren.
+* Berechnen Sie den Hash aus dem Bytearray des Sicherheitstokens, das von Teams bereitgestellt wird, wenn Sie den ausgehenden Webhook im Teams-Client registriert haben. Weitere Informationen finden Sie unter [Erstellen eines ausgehenden Webhooks](#create-outgoing-webhook).
+* Konvertieren Sie den Hash mithilfe der UTF-8-Codierung in eine Zeichenfolge.
+* Vergleichen Sie den Zeichenfolgenwert des generierten Hashs mit dem in der HTTP-Anforderung angegebenen Wert.
 
-# <a name="method-to-respond"></a>[Zu reagierende Methode](#tab/methodtorespond)
+# <a name="method-to-respond"></a>[Antwortmethode](#tab/methodtorespond)
 **Erstellen einer Methode zum Senden einer Erfolgs- oder Fehlerantwort**
 
-Antworten von ausgehenden Webhooks werden in der gleichen Antwortkette wie die ursprüngliche Nachricht angezeigt. Wenn der Benutzer eine Abfrage ausführt, gibt Microsoft Teams eine synchrone HTTP-Anforderung an Ihren Dienst aus, und Ihr Code erhält fünf Sekunden, um auf die Nachricht zu reagieren, bevor die Verbindung abläuft und beendet wird.
+Antworten von ausgehenden Webhooks werden in derselben Antwortkette wie die ursprüngliche Nachricht angezeigt. Wenn der Benutzer eine Abfrage ausführt, gibt Microsoft Teams eine synchrone HTTP-Anforderung an Ihren Dienst aus, und Ihr Code erhält fünf Sekunden Zeit, um auf die Nachricht zu reagieren, bevor ein Timeout der Verbindung auftritt und diese beendet wird.
 
 ### <a name="example-response"></a>Beispielantwort
 
@@ -110,10 +110,10 @@ Antworten von ausgehenden Webhooks werden in der gleichen Antwortkette wie die u
 ---
 
 > [!NOTE]
-> * Sie können adaptive Karte, Hero-Karte und Textnachrichten als Anlage mit ausgehenden Webhook senden.
-> * Karten unterstützen die Formatierung. Weitere Informationen finden Sie unter [Formatieren von Karten mit Markdown.](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown)
+> * Sie können adaptive Karten, Herokarten und SMS als Anlage mit ausgehendem Webhook senden.
+> * Karten unterstützen die Formatierung. Weitere Informationen finden Sie unter [Formatkarten mit Markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown).
 
-Die folgenden Codes sind Beispiele für eine Adaptive Kartenantwort:
+Die folgenden Codes sind Beispiele für eine adaptive Karten-Antwort:
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -217,7 +217,7 @@ var responseMsg = JSON.stringify({
 
 |**Beispielname** | **Beschreibung** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Ausgehende Webhooks | Beispiele zum Erstellen von benutzerdefinierten Bots, die in Microsoft Teams verwendet werden.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| Ausgehende Webhooks | Beispiele zum Erstellen von benutzerdefinierten Bots für die Verwendung in Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## <a name="see-also"></a>Siehe auch
 * [Erstellen eines eingehenden Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
