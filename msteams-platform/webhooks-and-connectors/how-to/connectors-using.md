@@ -3,45 +3,45 @@ title: Nachrichten erstellen und senden
 author: laujan
 description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Teams
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: Teams O365-Connector
-ms.openlocfilehash: 49f14862870fae216de1a6d810eacd4b23c81540
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
-ms.translationtype: MT
+ms.openlocfilehash: 01ce665d9fa165827ab4f03a9f08ff5ac12ee806
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216195"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059742"
 ---
 # <a name="create-and-send-messages"></a>Nachrichten erstellen und senden
 
-Sie können Nachrichten mit Aktionen erstellen und über eingehenden Webhook oder Office 365 Connector senden.
+Sie können Aktionen erfordernde Nachrichten erstellen und sie über eingehende Webhooks oder Office 365 Connector versenden.
 
-## <a name="create-actionable-messages"></a>Erstellen von Nachrichten mit Aktionen
+## <a name="create-actionable-messages"></a>Erstellen von Aktionen erfordernden Nachrichten
 
-Die Aktionen erfordernden Nachrichten enthalten sechs sichtbare Schaltflächen auf der Karte. Jede Schaltfläche wird in der `potentialAction` Eigenschaft der Nachricht mithilfe von Aktionen `ActionCard` definiert, die jeweils einen Eingabetyp, ein Textfeld, eine Datumsauswahl oder eine Mehrfachauswahlliste enthalten. Jeder `ActionCard` hat eine zugeordnete Aktion, `HttpPOST` z. B. .
+Aktionen erfordernden Nachrichten umfassen sechs sichtbare Schaltflächen auf der Karte. Jede Schaltfläche wird in der `potentialAction`-Eigenschaft der Nachricht mithilfe von `ActionCard`-Aktionen definiert, die jeweils einen Eingabetyp umfassen: ein Textfeld, eine Datumsauswahl oder eine Mehrfachauswahlliste. Jeder `ActionCard` ist eine Aktion zugeordnet, z. B. `HttpPOST`.
 
 Die Connectorkarten unterstützen die folgenden Aktionen:
 
 - `ActionCard`: Stellt einen oder mehrere Eingabetypen und zugeordnete Aktionen dar.
-- `HttpPOST`: Sendet die POST-Anforderung an eine URL.
-- `OpenUri`: Öffnet den URI in einem separaten Browser oder einer separaten App und richtet sich optional auf unterschiedliche URIs basierend auf Betriebssystemen.
+- `HttpPOST`: Sendet eine POST-Anforderung an eine URL.
+- `OpenUri`: Öffnet einen URI in einem separaten Browser oder in einer anderen App; ist optional auf unterschiedliche URIs basierend auf Betriebssystemen ausgerichtet.
 
 Die `ActionCard`-Aktion unterstützt drei Eingabetypen:
 
-- `TextInput`: Ein einzeiliges oder mehrzeiliges Textfeld mit optionaler Längenbeschränkung.
-- `DateInput`: Eine Datumsauswahl mit einer optionalen Uhrzeitauswahl.
-- `MultichoiceInput`: Eine aufgezählte Liste von Auswahlmöglichkeiten, die entweder eine einzelne oder mehrere Auswahlmöglichkeiten bietet.
+- `TextInput`: Ein ein- oder mehrzeiliges Textfeld mit optionaler Längenbegrenzung.
+- `DateInput`: Eine Datumsauswahl mit optionaler Zeitauswahl.
+- `MultichoiceInput`: Eine Liste mit Auswahlmöglichkeiten, die entweder die Auswahl einer einzelnen Option oder mehrerer Optionen bietet.
 
-`MultichoiceInput` unterstützt eine `style`-Eigenschaft über die festgelegt wird, ob die Liste anfänglich vollständig erweitert angezeigt wird. Der Standardwert `style` von hängt vom Folgenden `isMultiSelect` ab:
+`MultichoiceInput` unterstützt eine `style`-Eigenschaft über die festgelegt wird, ob die Liste anfänglich vollständig erweitert angezeigt wird. Der Standardwert von `style` hängt vom Wert von `isMultiSelect` wie folgt ab:
 
 | `isMultiSelect` | `style`-Standardeinstellung |
 | --- | --- |
 | `false` oder nicht angegeben | `compact` |
 | `true` | `expanded` |
 
-Um die Mehrfachauswahlliste im kompakten Format anzuzeigen, müssen Sie beide `"isMultiSelect": true` und `"style": true` angeben.
+Damit die Mehrfachauswahlliste kompakt angezeigt wird, müssen Sie sowohl `"isMultiSelect": true` als auch `"style": true` angeben.
 
-Weitere Informationen zu Connectorkartenaktionen finden Sie unter ["Aktionen".](/outlook/actionable-messages/card-reference#actions)
+Weitere Informationen zu Connectorkarten-Aktionen finden Sie unter [Aktionen](/outlook/actionable-messages/card-reference#actions).
 
 > [!NOTE]
 > * Die Angabe von `compact` für die `style`-Eigenschaft in Microsoft Teams entspricht der Angabe von `normal` für die `style`-Eigenschaft in Microsoft Outlook.
@@ -49,13 +49,13 @@ Weitere Informationen zu Connectorkartenaktionen finden Sie unter ["Aktionen".](
 
 ## <a name="send-a-message-through-incoming-webhook-or-office-365-connector"></a>Senden einer Nachricht über eingehenden Webhook oder Office 365 Connector
 
-Um eine Nachricht über Ihren eingehenden Webhook oder Office 365 Connector zu senden, posten Sie eine JSON-Nutzlast an die Webhook-URL. Diese Nutzlast muss in Form einer [Office 365 Connectorkarte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)sein.
+Um eine Nachricht über Ihren eingehenden Webhook oder Office 365 Connector zu senden, senden Sie eine JSON-Nutzlast an die Webhook-URL. Diese Nutzlast muss in einer [Office 365- Connectorkarte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card) bestehen.
 
-Sie können diesen JSON-Code auch verwenden, um Karten mit umfangreichen Eingaben zu erstellen, z. B. Texteingabe, Mehrfachauswahl oder Auswählen von Datum und Uhrzeit. Der Code, der die Karte generiert und an die Webhook-URL sendet, kann auf jedem gehosteten Dienst ausgeführt werden. Diese Karten werden als Teil von Nachrichten mit Aktionen definiert und auch in [Karten](~/task-modules-and-cards/what-are-cards.md)unterstützt, die in Teams Bots und Messaging-Erweiterungen verwendet werden.
+Sie können diesen JSON-Code auch zum Erstellen von Karten mit umfassenden Eingabeoptionen verwenden, wie z. B. Texteingabe, Mehrfachauswahl oder Auswählen eines Datums und einer Uhrzeit. Der Code, der die Karte generiert und an die Webhook-URL sendet, kann in jedem gehosteten Dienst ausgeführt werden. Diese Karten sind als Bestandteil von Aktionen erfordernde Nachrichten definiert und werden auch in [Karten](~/task-modules-and-cards/what-are-cards.md) unterstützt, die in Microsoft Teams-Bots und Messaging-Erweiterungen verwendet werden.
 
 ### <a name="example-of-connector-message"></a>Beispiel für eine Connectornachricht
 
-Ein Beispiel für eine Connectornachricht ist:
+Ein Beispiel für eine Connectornachricht:
 
 ```json
 {
@@ -141,17 +141,17 @@ Ein Beispiel für eine Connectornachricht ist:
 }
 ```
 
-Diese Nachricht enthält die folgende Karte im Kanal:
+Diese Nachricht erzeugt die folgende Karte im Kanal:
 
 ![Screenshot einer Connectorkarte](~/assets/images/connectorcard.png)
 
 ## <a name="send-messages-using-curl-and-powershell"></a>Senden von Nachrichten mit cURL und PowerShell
 
-# <a name="curl"></a>[Curl](#tab/cURL)
+# <a name="curl"></a>[cURL](#tab/cURL)
 
 **So posten Sie eine Nachricht im Webhook mit cURL**
 
-1. Installieren Sie cURL mithilfe von: https://curl.haxx.se/ .
+1. Installieren Sie cURL über https://curl.haxx.se/.
 
 1. Geben Sie den folgenden cURL-Befehl in die Befehlszeile ein:
 
@@ -166,15 +166,15 @@ Diese Nachricht enthält die folgende Karte im Kanal:
    ```
 
     > [!NOTE]
-    > Wenn der POST erfolgreich ist, müssen Sie eine einfache Ausgabe von **1** `curl` sehen.
+    > Wenn der POST-Vorgang erfolgreich ist, sollte eine einfache **1** durch `curl` ausgegeben werden.
 
-1. Überprüfen Sie den Microsoft Teams-Client für die neue bereitgestellte Karte.
+1. Überprüfen Sie den Microsoft Teams-Client auf die neue gepostete Karte.
 
 # <a name="powershell"></a>[PowerShell](#tab/PowerShell)
 
- Voraussetzung: Installation von PowerShell und Einarbeitung in die grundlegende Verwendung.
+ Voraussetzung: Installation von PowerShell und Vertrautheit mit dessen grundlegender Verwendung.
 
-**So posten Sie eine Nachricht mit PowerShell an den Webhook**
+**So senden Sie eine Nachricht an den Webhook mit PowerShell**
 
 1. Geben Sie in der PowerShell-Eingabeaufforderung den folgenden Befehl ein:
 
@@ -183,25 +183,25 @@ Diese Nachricht enthält die folgende Karte im Kanal:
    ```
 
     > [!NOTE]
-    > Wenn der POST erfolgreich ist, müssen Sie eine einfache Ausgabe von **1** `Invoke-RestMethod` sehen.
+    > Wenn der POST-Vorgang erfolgreich ist, sollte eine einfache **1** durch `Invoke-RestMethod` ausgegeben werden.
 
-1. Überprüfen Sie den Microsoft Teams-Kanal, der der Webhook-URL zugeordnet ist. Sie können die neue Karte sehen, die im Kanal veröffentlicht wurde. Bevor Sie den Connector zum Testen oder Veröffentlichen Ihrer App verwenden, müssen Sie folgendermaßen vorgehen:
+1. Überprüfen Sie den Microsoft Teams-Kanal, der der Webhook-URL zugeordnet ist. Die neue Karte wird nun im Kanal angezeigt. Bevor Sie den Connector zum Testen oder Veröffentlichen Ihrer App verwenden, müssen Sie folgendes tun:
 
     - [Zwei Symbole einschließen](../../concepts/build-and-test/apps-package.md#app-icons).
-    - Ändern Sie den `icons` Teil des Manifests an die Dateinamen der Symbole anstelle von URLs.
+    - Ändern Sie den `icons`-Teil des Manifests in die Dateinamen der Symbole anstelle von URLs.
 
 ---
 
-## <a name="send-adaptive-cards-using-an-incoming-webhook"></a>Senden adaptiver Karten mit einem eingehenden Webhook
+## <a name="send-adaptive-cards-using-an-incoming-webhook"></a>Senden von adaptiven Karten mithilfe eines eingehenden Webhooks
 
 > [!NOTE]
-> * Alle systemeigenen Schemaelemente adaptiver Karten mit Ausnahme `Action.Submit` von , werden vollständig unterstützt.
-> * Die unterstützten Aktionen sind [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)und [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
+> * Alle systemeigenen Schemaelemente adaptiver Karten, mit Ausnahme von `Action.Submit`, werden vollständig unterstützt.
+> * Die unterstützten Aktionen sind [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html) und [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
 **So senden Sie adaptive Karten über einen eingehenden Webhook**
 
-1. [Richten Sie einen benutzerdefinierten Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams ein.
-1. Erstellen Sie die JSON-Datei für adaptive Karten mit dem folgenden Code:
+1. [Richten Sie einen benutzerdefinierten Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) in Microsoft Teams ein.
+1. Erstellen Sie die JSON-Datei für adaptive Karten mithilfe des folgenden Codes:
 
     ```json
     {
@@ -230,24 +230,24 @@ Diese Nachricht enthält die folgende Karte im Kanal:
 
     * Das Feld `"type"` muss vom Typ `"message"` sein.
     * Das Array `"attachments"` enthält eine Reihe von Kartenobjekten.
-    * Das `"contentType"` Feld muss auf den Typ "Adaptive Karte" festgelegt sein.
+    * Das Feld `"contentType"` muss auf den Typ "adaptive Karte" festgelegt werden.
     * Das Objekt `"content"` ist die in JSON formatierte Karte.
 
 1. Testen Sie Ihre adaptive Karte mit Postman:
 
-    * Testen Sie die adaptive Karte mit [Postman,](https://www.postman.com) um eine POST-Anforderung an die URL zu senden, die erstellt wurde, um eingehenden Webhook einzurichten.
-    * Fügen Sie die JSON-Datei in den Textkörper der Anforderung ein, und zeigen Sie die Adaptive Kartennachricht in Teams an.
+    * Testen Sie die adaptive Karte mit [Postman](https://www.postman.com), um eine POST-Anforderung an die URL zu senden, die zum Einrichten des eingehenden Webhooks erstellt wurde.
+    * Fügen Sie die JSON-Datei in den Textkörper der Anforderung ein, und zeigen Sie die Nachricht der adaptiven Karte in Microsoft Teams an.
 
 > [!TIP]
 > Verwenden Sie [Codebeispiele und Vorlagen](https://adaptivecards.io/samples) für adaptive Karten, um den Textkörper der POST-Anforderung zu testen.
 
 ## <a name="rate-limiting-for-connectors"></a>Begrenzung der Datenübertragungsrate für Connectors
 
-Anwendungsratenbeschränkungen steuern den Datenverkehr, den ein Connector oder ein eingehender Webhook in einem Kanal generieren darf. Teams Anforderungen mithilfe eines Fensters mit fester Rate und eines inkrementellen Indikators in Sekunden nachverfolgen. Wenn in einer Sekunde mehr als vier Anforderungen gestellt werden, wird die Clientverbindung gedrosselt, bis das Fenster für die Dauer der festen Rate aktualisiert wird.
+Die Grenzwerte für die Datenübertragungsrate von Anwendungen steuern, wieviel Datenverkehr von einem Connector oder eingehenden Webhook in einem Kanal generiert werden darf. Microsoft Teams verfolgt Anforderungen anhand eines Fensters mit fester Datenübertragungsrate und über einen inkrementellen Zähler, der in Sekunden misst. Wenn in einer Sekunde mehr als vier Anforderungen gestellt werden, wird die Clientverbindung gedrosselt, bis das Fenster auf die Dauer der festen Datenübertragungsrate aktualisiert wird.
 
 ### <a name="transactions-per-second-thresholds"></a>Schwellenwerte für Transaktionen pro Sekunde
 
-Die folgende Tabelle enthält die zeitbasierten Transaktionsdetails:
+Die folgende Tabelle enthält die Details zu zeitbasierten Transaktionen:
 
 | Zeit in Sekunden  | Maximal zulässige Anforderungen  |
 |---|---|
@@ -257,10 +257,10 @@ Die folgende Tabelle enthält die zeitbasierten Transaktionsdetails:
 | 7200 | 150  |
 | 86400  | 1800  |
 
-Eine [Wiederholungslogik mit exponentieller Back-Off](/azure/architecture/patterns/retry) kann die Ratenbegrenzung für Fälle verringern, in denen Anforderungen die Grenzwerte innerhalb einer Sekunde überschreiten. Befolgen Sie [bewährte Methoden,](../../bots/how-to/rate-limit.md) um zu vermeiden, dass die Ratengrenzen erreicht werden.
+Eine [Wiederholungslogik mit exponentiellem Backoff](/azure/architecture/patterns/retry) kann die Begrenzung der Datenübertragungsrate in Fällen verringern, in denen Anforderungen die Grenzwerte innerhalb einer Sekunde überschreiten. Wenden Sie [bewährte Methoden](../../bots/how-to/rate-limit.md) an, um zu vermeiden, dass die Ratenbegrenzungen überschritten werden.
 
 > [!NOTE]
-> Eine [Wiederholungslogik mit exponentieller Back-Off](/azure/architecture/patterns/retry) kann die Ratenbegrenzung für Fälle verringern, in denen Anforderungen die Grenzwerte innerhalb einer Sekunde überschreiten. Lesen Sie die [HTTP 429-Antworten](../../bots/how-to/rate-limit.md#handle-http-429-responses), um zu vermeiden, dass die Ratenbegrenzungen überschritten werden.
+> Eine [Wiederholungslogik mit exponentiellem Backoff](/azure/architecture/patterns/retry) kann die Begrenzung der Datenübertragungsrate in Fällen verringern, in denen Anforderungen die Grenzwerte innerhalb einer Sekunde überschreiten. Lesen Sie die [HTTP 429-Antworten](../../bots/how-to/rate-limit.md#handle-http-429-responses), um zu vermeiden, dass die Ratenbegrenzungen überschritten werden.
 
 ```csharp
 // Please note that response body needs to be extracted and read 
@@ -278,13 +278,13 @@ try
 }
 ```
 
-Diese Grenzwerte sind vorhanden, um das Spamming eines Kanals über einen Connector zu reduzieren und eine optimale Benutzererfahrung sicherzustellen.
+Diese Begrenzungen haben den Zweck, das Spamming eines Kanals durch einen Connector zu verringern und Endbenutzern eine optimale Benutzererfahrung zu gewährleisten.
 
 ## <a name="see-also"></a>Siehe auch
 
 * [Office 365 Connectors für Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Erstellen eines eingehenden Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Erstellen eines ausgehenden Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
-* [Begrenzung der Raten für Teams Bots-Nachrichten](~/bots/how-to/rate-limit.md)
+* [Ratenbegrenzungen für Microsoft Teams-Bot-Nachrichten](~/bots/how-to/rate-limit.md)
 * [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Formatieren von Karten in Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md)

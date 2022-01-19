@@ -1,122 +1,122 @@
 ---
 title: Senden proaktiver Nachrichten
-description: Beschreibt, wie proaktive Nachrichten mit Ihrem Microsoft Teams Bot gesendet werden.
+description: Beschreibt, wie Proaktive Nachrichten mit Ihrem Microsoft Teams-Bot gesendet werden.
 ms.topic: conceptual
 ms.author: anclear
-ms.localizationpriority: medium
-Keywords: Nachricht senden Benutzer-ID Kanal-ID Unterhaltungs-ID abrufen
-ms.openlocfilehash: c4e84461af7a9e162c9f4391a01284be735392de
-ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
-ms.translationtype: MT
+ms.localizationpriority: high
+Keywords: 'Nachricht senden: Kanal-ID der Benutzer-ID abrufen: Konversations-ID'
+ms.openlocfilehash: fc08e9413925f04a0f6e1a01ed7feb6fccd5e8d2
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/27/2021
-ms.locfileid: "61608440"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059772"
 ---
 # <a name="proactive-messages"></a>Proaktive Nachrichten
 
 [!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
-Eine proaktive Nachricht ist jede Nachricht, die von einem Bot gesendet wird, die nicht als Antwort auf eine Anforderung eines Benutzers erfolgt. Dies kann Nachrichten umfassen, z. B.:
+Eine proaktive Nachricht ist jede Nachricht, die von einem Bot gesendet wird, die nicht als Antwort auf eine Anforderung eines Benutzers gesendet wurde. Dies kann Nachrichten enthalten, wie z. B.:
 
 * Willkommensnachrichten
 * Benachrichtigungen
 * Geplante Nachrichten
 
-Damit Ihr Bot eine proaktive Nachricht an einen Benutzer, einen Gruppenchat oder ein Team senden kann, muss er Zugriff haben, um die Nachricht zu senden. Für einen Gruppenchat oder ein Team muss die App, die Ihren Bot enthält, zuerst an diesem Speicherort installiert werden. Sie können [Ihre App proaktiv mithilfe von Microsoft Graph](#proactively-install-your-app-using-graph) in einem Team installieren, falls erforderlich, oder eine [App-Richtlinie](/microsoftteams/teams-custom-app-policies-and-settings) verwenden, um Apps an Teams und Benutzer in Ihrem Mandanten zu senden. Für Benutzer muss Ihre App entweder für den Benutzer installiert werden, oder Ihr Benutzer muss Teil eines Teams sein, in dem Ihre App installiert ist.
+Damit Ihr Bot eine proaktive Nachricht an einen Benutzer, einen Gruppenchat oder ein Team senden kann, muss er Zugriff haben, um die Nachricht zu senden. Für einen Gruppenchat oder ein Team muss die App, die Ihren Bot enthält, zuerst an diesem Speicherort installiert werden. Sie können bei Bedarf in einem Team [Ihre App proaktiv mithilfe von Microsoft Graph installieren](#proactively-install-your-app-using-graph) oder eine [App-Richtlinie](/microsoftteams/teams-custom-app-policies-and-settings) verwenden, um Apps an Teams und Benutzer in Ihrem Mandanten zu pushen. Für Benutzer muss Ihre App entweder für den Benutzer installiert sein, oder Ihr Benutzer muss Teil eines Teams sein, in dem Ihre App installiert ist.
 
-Das Senden einer proaktiven Nachricht unterscheidet sich vom Senden einer regulären Nachricht. Es ist nicht aktiv `turnContext` für eine Antwort zu verwenden. Sie müssen die Unterhaltung erstellen, bevor Sie die Nachricht senden. Beispielsweise ein neuer 1:1-Chat oder ein neuer Unterhaltungsthread in einem Kanal. Sie können keinen neuen Gruppenchat oder einen neuen Kanal in einem Team mit proaktiven Nachrichten erstellen.
+Das Senden einer proaktiven Nachricht unterscheidet sich vom Senden einer regulären Nachricht. Es ist keine aktive `turnContext` für eine Antwort vorhanden. Sie müssen die Unterhaltung erstellen, bevor Sie die Nachricht senden. Beispielsweise ein neuer 1:1-Chat oder ein neuer Unterhaltungsthread in einem Kanal. Sie können keinen neuen Gruppenchat oder einen neuen Kanal in einem Team mit proaktivem Messaging erstellen.
 
-**So senden Sie eine proaktive Nachricht**
+**Um eine proaktive Nachricht zu senden**
 
-1. Rufen Sie bei Bedarf [die Benutzer-ID, Team-ID oder Kanal-ID](#get-the-user-id-team-id-or-channel-id)ab.
-1. [Erstellen Sie die Unterhaltung,](#create-the-conversation)falls erforderlich.
-1. [Rufen Sie die Unterhaltungs-ID](#get-the-conversation-id)ab.
-1. [Senden Sie die Nachricht.](#send-the-message)
+1. [Rufen Sie die Benutzer-ID, Team-ID oder Kanal-ID ab](#get-the-user-id-team-id-or-channel-id), falls erforderlich.
+1. [Erstellen der Unterhaltung](#create-the-conversation), falls erforderlich.
+1. [Abrufen der Konversations-ID](#get-the-conversation-id).
+1. [Senden der Nachricht](#send-the-message).
 
-Die Codeausschnitte im [Beispielabschnitt](#samples) dienen zum Erstellen einer 1:1-Unterhaltung. Links zum Ausführen von Arbeitsbeispielen für 1:1-Unterhaltungen und Gruppen oder Kanäle finden Sie im [Codebeispiel.](#code-sample)
+Die Codeausschnitte im Abschnitt [Beispiele](#samples) dienen zum Erstellen einer 1:1-Konversation. Links zu vollständigen Arbeitsbeispielen für 1:1-Unterhaltungen und Gruppen oder Kanäle finden Sie unter [Codebeispiel](#code-sample).
 
-Informationen zur effektiven Verwendung proaktiver Nachrichten finden Sie in [den bewährten Methoden für proaktives Messaging.](#best-practices-for-proactive-messaging) Für bestimmte Szenarien müssen Sie [Ihre App proaktiv mit Graph installieren.](#proactively-install-your-app-using-graph) Die Codeausschnitte im [Beispielabschnitt](#samples) dienen zum Erstellen einer 1:1-Unterhaltung. Vollständige Arbeitsbeispiele für 1:1-Unterhaltungen und Gruppen oder Kanäle finden Sie im [Codebeispiel.](#code-sample)
+Informationen zur effektiven Verwendung proaktiver Nachrichten finden Sie unter [bewährten Methoden für proaktives Messaging](#best-practices-for-proactive-messaging). Für bestimmte Szenarien müssen Sie [Ihre App proaktiv mithilfe von Graph installieren](#proactively-install-your-app-using-graph). Die Codeausschnitte im Abschnitt [Beispiele](#samples) dienen zum Erstellen einer 1:1-Konversation. Vollständige Arbeitsbeispiele für 1:1-Unterhaltungen und Gruppen oder Kanäle finden Sie unter [Codebeispiel](#code-sample).
 
 ## <a name="get-the-user-id-team-id-or-channel-id"></a>Abrufen der Benutzer-ID, Team-ID oder Kanal-ID
 
-Zum Erstellen eines neuen Unterhaltungs- oder Unterhaltungsthreads in einem Kanal benötigen Sie die richtige ID. Sie können diese ID mit einer der folgenden Optionen empfangen oder abrufen:
+Um eine neue Unterhaltung oder einen neuen Konversationsthread in einem Kanal zu erstellen, müssen Sie über die richtige ID verfügen. Sie können diese ID mit einer der folgenden Methoden empfangen oder abrufen:
 
-* Wenn Ihre App in einem bestimmten Kontext installiert ist, erhalten Sie eine [ `onMembersAdded` Aktivität.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-* Wenn ein neuer Benutzer zu einem Kontext hinzugefügt wird, in dem Ihre App installiert ist, erhalten Sie eine [ `onMembersAdded` Aktivität.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-* Sie können die [Liste der Kanäle](~/bots/how-to/get-teams-context.md) in einem Team abrufen, in dem Ihre App installiert ist.
+* Wenn Ihre App in einem bestimmten Kontext installiert ist, erhalten Sie eine [`onMembersAdded` Aktivität](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* Wenn ein neuer Benutzer zu einem Kontext hinzugefügt wird, in dem Ihre App installiert ist, erhalten Sie eine [`onMembersAdded` Aktivität](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* Sie können in einem Team, in dem Ihre App installiert ist, die [Liste der Kanäle](~/bots/how-to/get-teams-context.md) abrufen.
 * Sie können die [Liste der Mitglieder](~/bots/how-to/get-teams-context.md) eines Teams abrufen, in dem Ihre App installiert ist.
 * Jede Aktivität, die Ihr Bot empfängt, muss die erforderlichen Informationen enthalten.
 
-Unabhängig davon, wie Sie die Informationen erhalten, müssen Sie die `tenantId` und entweder die oder zum Erstellen einer neuen Unterhaltung `userId` `channelId` speichern. Sie können den auch `teamId` verwenden, um einen neuen Unterhaltungsthread im allgemeinen oder Standardkanal eines Teams zu erstellen.
+Unabhängig davon, wie Sie die Informationen erhalten, müssen Sie die `tenantId` und entweder die `userId` oder `channelId` speichern, um eine neue Unterhaltung zu erstellen. Sie können auch die `teamId` verwenden, um einen neuen Unterhaltungsthread im allgemeinen oder Standardkanal eines Teams zu erstellen.
 
-Dies `userId` ist für Ihre Bot-ID und einen bestimmten Benutzer eindeutig. Sie können die `userId` zwischen Bots nicht wiederverwenden. Dies `channelId` ist global. Ihr Bot muss jedoch im Team installiert sein, bevor Sie eine proaktive Nachricht an einen Kanal senden können.
+Die `userId` ist für Ihre Bot-ID und einen bestimmten Benutzer eindeutig. Sie können die `userId` zwischen Bots nicht wiederverwenden. Die `channelId` ist global. Ihr Bot muss jedoch im Team installiert sein, bevor Sie eine proaktive Nachricht an einen Kanal senden können.
 
-Nachdem Sie die Benutzer- oder Kanalinformationen erhalten haben, müssen Sie die Unterhaltung erstellen.
+Nachdem Sie über die Benutzer- oder Kanalinformationen verfügen, müssen Sie die Unterhaltung erstellen.
 
 ## <a name="create-the-conversation"></a>Erstellen der Unterhaltung
 
-Sie müssen die Unterhaltung erstellen, wenn sie nicht vorhanden ist oder Sie die Unterhaltung nicht `conversationId` kennen. Sie müssen die Unterhaltung nur einmal erstellen und den Wert oder das `conversationId` `conversationReference` Objekt speichern.
+Sie müssen die Konversation erstellen, wenn sie nicht vorhanden ist oder Sie die `conversationId` nicht kennen. Sie dürfen die Konversation nur einmal erstellen und den `conversationId` Wert oder `conversationReference` Objekt speichern.
 
-Nachdem die Unterhaltung erstellt wurde, müssen Sie die Unterhaltungs-ID abrufen.
+Nachdem die Unterhaltung erstellt wurde, müssen Sie die Konversations-ID abrufen.
 
-## <a name="get-the-conversation-id"></a>Abrufen der Unterhaltungs-ID
+## <a name="get-the-conversation-id"></a>Abrufen der Konversations-ID
 
-Verwenden Sie entweder das `conversationReference` Objekt oder senden Sie die `conversationId` `tenantId` Nachricht. Sie können diese ID abrufen, indem Sie entweder die Unterhaltung erstellen oder sie aus jeder Aktivität speichern, die Aus diesem Kontext an Sie gesendet wird. Store diese ID als Referenz.
+Verwenden Sie entweder das `conversationReference`-Objekt oder `conversationId` und `tenantId`, um die Nachricht zu senden. Sie können diese ID abrufen, indem Sie entweder die Konversation erstellen oder sie aus jeder Aktivität speichern, die aus diesem Kontext an Sie gesendet wird. Speichern Sie diese ID als Referenz.
 
 Nachdem Sie die entsprechenden Adressinformationen erhalten haben, können Sie Ihre Nachricht senden.
 
 ## <a name="send-the-message"></a>Senden der Nachricht
 
-Nachdem Sie nun über die richtigen Adressinformationen verfügen, können Sie Ihre Nachricht senden. Wenn Sie das SDK verwenden, müssen Sie die `continueConversation` Methode und die und einen direkten `conversationId` `tenantId` API-Aufruf verwenden. Sie müssen den richtigen Wert `conversationParameters` festlegen, um Ihre Nachricht erfolgreich senden zu können. Sehen Sie [sich](#samples) den Beispielabschnitt an, oder verwenden Sie eines der Im [Codebeispielabschnitt](#code-sample) aufgeführten Beispiele.
+Nachdem Sie nun über die richtigen Adressinformationen verfügen, können Sie Ihre Nachricht senden. Wenn Sie das SDK verwenden, müssen Sie die `continueConversation`-Methode sowie die `conversationId` und `tenantId` verwenden, um einen direkten API-Aufruf zu tätigen. Sie müssen die `conversationParameters` richtig festlegen, um Ihre Nachricht erfolgreich zu senden. Sehen Sie sich den Abschnitt [Beispiele](#samples) an, oder verwenden Sie eines der Beispiele, die im Abschnitt [Codebeispiel](#code-sample) aufgeführt sind.
 
-Nachdem Sie die proaktive Nachricht gesendet haben, müssen Sie diese bewährten Methoden befolgen und proaktive Nachrichten senden, um einen besseren Informationsaustausch zwischen Benutzern und dem Bot zu erzielen.
+Nachdem Sie die proaktive Nachricht gesendet haben, müssen Sie diese bewährten Methoden befolgen und proaktive Nachrichten senden, um einen besseren Informationsaustausch zwischen Benutzern und dem Bot zu ermöglichen.
 
 ## <a name="best-practices-for-proactive-messaging"></a>Bewährte Methoden für proaktives Messaging
 
-Das Senden proaktiver Nachrichten an die Benutzer ist eine effektive Möglichkeit, mit Ihren Benutzern zu kommunizieren. Aus Sicht des Benutzers wird die Nachricht jedoch nicht angezeigt. Wenn eine Willkommensnachricht vorhanden ist, ist es das erste Mal, dass sie mit Ihrer App interagiert haben. Es ist wichtig, diese Funktion zu verwenden und dem Benutzer die vollständigen Informationen bereitzustellen, um den Zweck dieser Nachricht zu verstehen.
+Das Senden proaktiver Nachrichten an die Benutzer ist eine effektive Möglichkeit, mit Ihren Benutzern zu kommunizieren. Aus Sicht des Benutzers wird die Nachricht jedoch unaufgefordert angezeigt. Wenn es eine Willkommensnachricht gibt, ist dies das erste Mal, dass sie mit Ihrer App interagieren. Es ist wichtig, diese Funktion zu verwenden und dem Benutzer die vollständigen Informationen bereitzustellen, damit sie den Zweck dieser Nachricht verstehen.
 
 ### <a name="welcome-messages"></a>Willkommensnachrichten
 
-Wenn proaktives Messaging verwendet wird, um eine Willkommensnachricht an einen Benutzer zu senden, gibt es keinen Kontext dafür, warum die Benutzer die Nachricht empfangen. Dies ist auch das erste Mal, dass Benutzer mit Ihrer App interagieren. Es ist eine Gelegenheit, einen guten ersten Eindruck zu erzeugen. Die besten Willkommensnachrichten müssen Folgendes enthalten:
+Wenn proaktives Messaging verwendet wird, um eine Willkommensnachricht an einen Benutzer zu senden, gibt es keinen Kontext dafür, warum die Benutzer die Nachricht erhalten. Dies ist auch das erste Mal, dass Benutzer mit Ihrer App interagieren. Es ist eine Gelegenheit, einen guten ersten Eindruck zu hinterlassen. Die besten Willkommensnachrichten müssen Folgendes enthalten:
 
-* Warum ein Benutzer die Nachricht empfängt: Dem Benutzer muss klar sein, warum er die Nachricht empfängt. Wenn Ihr Bot in einem Kanal installiert wurde und Sie eine Willkommensnachricht an alle Benutzer gesendet haben, teilen Sie ihm mit, in welchem Kanal er installiert wurde und wer ihn installiert hat.
-* Was bieten Sie an: Benutzer müssen in der Lage sein, zu erkennen, was sie mit Ihrer App tun können und welchen Wert Sie ihnen bieten können.
-* Was sollten sie als Nächstes tun: Benutzer einladen, einen Befehl auszuprobieren oder mit Ihrer App zu interagieren.
-Nachrichten mit schlechter Willkommensseite können dazu führen, dass die Benutzer Ihren Bot blockieren. Schreiben Sie auf den Punkt, und löschen Sie Willkommensnachrichten. Iterieren Sie die Willkommensnachrichten, wenn sie nicht den gewünschten Effekt haben.
+* Warum ein Benutzer die Nachricht empfängt: Es muss für den Benutzer sehr klar sein, warum er die Nachricht empfängt. Wenn Ihr Bot in einem Kanal installiert wurde und Sie allen Benutzern eine Willkommensnachricht gesendet haben, teilen Sie ihnen mit, in welchem Kanal er installiert wurde und wer ihn installiert hat.
+* Was bieten Sie: Benutzer müssen in der Lage sein, zu identifizieren, was sie mit Ihrer App tun können und welchen Wert Sie ihnen bieten können.
+* Was sollten sie als Nächstes tun: Laden Sie Benutzer ein, einen Befehl auszuprobieren oder mit Ihrer App zu interagieren.
+Schlechte Willkommensnachricht können dazu führen, dass die Benutzer Ihren Bot blockieren. Schreiben Sie klare und deutliche Willkommensnachrichten. Probieren Sie verschiedene Versionen der Willkommensnachrichten, wenn sie nicht den gewünschten Effekt haben.
 
 ### <a name="notification-messages"></a>Benachrichtigungen
 
-Um Benachrichtigungen mithilfe proaktiver Nachrichten zu senden, stellen Sie sicher, dass Ihre Benutzer über einen klaren Pfad verfügen, um allgemeine Aktionen basierend auf Ihrer Benachrichtigung auszuführen. Stellen Sie sicher, dass die Benutzer genau wissen, warum sie eine Benachrichtigung erhalten haben. Gute Benachrichtigungen umfassen im Allgemeinen Folgendes:
+Um Benachrichtigungen mit proaktivem Messaging zu senden, stellen Sie sicher, dass Ihre Benutzer einen eindeutigen Pfad haben, um allgemeine Aktionen basierend auf Ihrer Benachrichtigung auszuführen. Stellen Sie sicher, dass Benutzer über ein klares Verständnis dafür verfügen, warum sie eine Benachrichtigung erhalten haben. Gute Benachrichtigungen umfassen im Allgemeinen Folgendes:
 
-* Was passiert ist: Ein eindeutiger Hinweis darauf, was passiert ist, um die Benachrichtigung zu verursachen.
+* Was passiert ist: Ein eindeutiger Hinweis darauf, was die Benachrichtigung verursacht hat.
 * Was war das Ergebnis: Es muss klar sein, welches Element aktualisiert wird, um die Benachrichtigung zu erhalten.
-* Wer oder was ausgelöst wurde: Wer oder welche Aktion ausgeführt wurde, wodurch die Benachrichtigung gesendet wurde.
-* Was können Benutzer als Reaktion tun: Erleichtern Sie Es Ihren Benutzern, Aktionen basierend auf Ihren Benachrichtigungen zu ergreifen.
-* Wie können Benutzer sich abmelden: Sie müssen einen Pfad angeben, über den Benutzer zusätzliche Benachrichtigungen deaktivieren können.
+* Wer oder was es ausgelöst hat: Wer oder was eine Aktion ausgeführt hat, die dazu geführt hat, dass die Benachrichtigung gesendet wurde.
+* Was können Benutzer als Reaktion tun: Erleichtern Sie Es Ihren Benutzern, Aktionen basierend auf Ihren Benachrichtigungen durchzuführen.
+* Wie können Benutzer sich abmelden? Sie müssen einen Pfad angeben, über den Benutzer zusätzliche Benachrichtigungen deaktivieren können.
 
-Um Nachrichten an eine große Gruppe von Benutzern zu senden, z. B. an Ihre Organisation, installieren Sie Ihre App proaktiv mit Graph.
+Um Nachrichten an eine große Gruppe von Benutzern zu senden, z. B. an Ihre Organisation, installieren Sie Ihre App proaktiv mithilfe von Graph.
 
 ### <a name="scheduled-messages"></a>Geplante Nachrichten
 
-Wenn Sie proaktive Nachrichten verwenden, um geplante Nachrichten an Benutzer zu senden, überprüfen Sie, ob Ihre Zeitzone auf ihre Zeitzone aktualisiert wurde. Dadurch wird sichergestellt, dass die Nachrichten zum entsprechenden Zeitpunkt an die Benutzer übermittelt werden. Zum Planen von Nachrichten gehören in der Regel:
+Wenn Sie proaktives Messaging verwenden, um geplante Nachrichten an Benutzer zu senden, überprüfen Sie, ob Ihre Zeitzone auf ihre Zeitzone aktualisiert wurde. Dadurch wird sichergestellt, dass die Nachrichten zum entsprechenden Zeitpunkt an die Benutzer übermittelt werden. Geplante Nachrichten umfassen in der Regel Folgendes:
 
-* Warum erhält der Benutzer die Nachricht: Machen Sie es Ihren Benutzern leicht, den Grund zu verstehen, aus dem sie die Nachricht erhalten.
+* Warum erhält der Benutzer die Nachricht: Erleichtern Sie es Ihren Benutzern, den Grund zu verstehen, aus dem sie die Nachricht erhalten.
 * Was der Benutzer als Nächstes tun kann: Benutzer können die erforderliche Aktion basierend auf dem Nachrichteninhalt ausführen.
 
-## <a name="proactively-install-your-app-using-graph"></a>Proaktive Installation Ihrer App mit Graph
+## <a name="proactively-install-your-app-using-graph"></a>Proaktives Installieren Ihrer App mit Graph
 
 > [!Note]
-> Die proaktive Installation von Apps mit Graph befindet sich derzeit in der Betaversion.
+> Die proaktive Installation von Apps mit Graph befindet sich derzeit in der Betaphase.
 
-Proaktive Meldung von Benutzern, die zuvor nicht installiert oder mit Ihrer App interagiert haben. Sie möchten z. B. den [Unternehmenskommunikator](~/samples/app-templates.md#company-communicator) verwenden, um Nachrichten an Ihre gesamte Organisation zu senden. In diesem Fall können Sie die Graph-API verwenden, um Ihre App proaktiv für Ihre Benutzer zu installieren. Speichern Sie die erforderlichen Werte aus dem Ereignis zwischen, das `conversationUpdate` Ihre App bei der Installation empfängt.
+Proaktive Nachricht an Benutzer senden, die Ihre App zuvor nicht installiert oder mit Ihr interagiert haben. Sie sollten beispielsweise den [Unternehmens-Communicator](~/samples/app-templates.md#company-communicator) verwenden, um Nachrichten an Ihre gesamte Organisation zu senden. In diesem Fall können Sie die Graph-API verwenden, um Ihre App proaktiv für Ihre Benutzer zu installieren. Speichern Sie die erforderlichen Werte aus dem `conversationUpdate` Ereignis zwischen, das Ihre App bei der Installation empfängt.
 
-Sie können nur Apps installieren, die sich im App-Katalog Ihrer Organisation oder im Teams App-Store befinden.
+Sie können nur Apps installieren, die sich im App-Katalog Ihrer Organisation oder im Teams-App Store befinden.
 
-Informationen zum [Installieren von Apps für Benutzer](/graph/api/userteamwork-post-installedapps) finden Sie in der Dokumentation zu Graph und [proaktiver Bot-Installation und Messaging in Teams mit Graph.](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) Es gibt auch ein [Microsoft .NET Framework-Beispiel](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) auf der GitHub-Plattform.
+Weitere Informationen finden Sie unter [Installieren von Apps für Benutzer](/graph/api/userteamwork-post-installedapps) in der Graph-Dokumentation und [proaktive Botinstallation und -messaging in Teams mit Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). Es gibt auch ein [Microsoft .NET Frameworkbeispiel](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) auf der GitHub-Plattform.
 
 ## <a name="samples"></a>Beispiele
 
-Der folgende Code zeigt, wie proaktive Nachrichten gesendet werden:
+Der folgende Code zeigt, wie Proaktive Nachrichten gesendet werden:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -265,22 +265,22 @@ Sie müssen die Benutzer-ID und die Mandanten-ID angeben. Wenn der Aufruf erfolg
 
 ## <a name="code-sample"></a>Codebeispiel
 
-Die folgende Tabelle enthält ein einfaches Codebeispiel, das den grundlegenden Unterhaltungsfluss in eine Teams Anwendung integriert und wie Sie einen neuen Unterhaltungsthread in einem Kanal in Teams erstellen:
+Die folgende Tabelle enthält ein einfaches Codebeispiel, das den grundlegenden Konversationsfluss in eine Teams-Anwendung einbezieht und wie Sie einen neuen Konversationsthread in einem Kanal in Teams erstellen:
 
 | **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|
-| Grundlagen zu Teams Unterhaltungen  | Veranschaulicht die Grundlagen von Unterhaltungen in Teams, einschließlich des Sendens proaktiver 1:1-Nachrichten.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
+| Grundlagen zu Teams-Unterhaltungen  | Veranschaulicht die Grundlagen von Unterhaltungen in Teams, einschließlich des Sendens proaktiver 1:1-Nachrichten.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | Starten eines neuen Threads in einem Kanal | Veranschaulicht das Erstellen eines neuen Threads in einem Kanal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
-| Proaktive Installation der App und Senden proaktiver Benachrichtigungen | Dieses Beispiel zeigt, wie Sie die proaktive Installation von Apps für Benutzer verwenden und proaktive Benachrichtigungen senden können, indem Sie Microsoft Graph APIs aufrufen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
+| Proaktive Installation der App und Senden proaktiver Benachrichtigungen | Dieses Beispiel zeigt, wie Sie die proaktive Installation der App für Benutzer verwenden und proaktive Benachrichtigungen senden können, indem Sie Microsoft Graph APIs aufrufen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
 
 ### <a name="additional-code-sample"></a>Zusätzliches Codebeispiel
 
 > [!div class="nextstepaction"]
-> [Codebeispiele für proaktives Messaging Teams](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+> [Codebeispiele für proaktives Messaging in Teams](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
 ## <a name="step-by-step-guide"></a>Schrittweise Anleitung
 
-Befolgen Sie die [schrittweise Anleitung,](../../../sbs-send-proactive.yml)die Ihnen hilft, eine proaktive Nachricht von einem Bot zu senden.
+Befolgen Sie die [schrittweisen Anleitung](../../../sbs-send-proactive.yml), die Ihnen hilft, eine proaktive Nachricht von einem Bot zu senden.
 
 ## <a name="next-step"></a>Nächster Schritt
 
@@ -289,6 +289,6 @@ Befolgen Sie die [schrittweise Anleitung,](../../../sbs-send-proactive.yml)die I
 
 ## <a name="see-also"></a>Siehe auch
 
-* [**Codebeispiele für proaktives Messaging Teams**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+* [**Codebeispiele für proaktives Messaging in Teams**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 * [Kanal- und Gruppenchatunterhaltungen mit einem Bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
 * [Auf die Aktion zum Absenden des Aufgabenmoduls reagieren](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
