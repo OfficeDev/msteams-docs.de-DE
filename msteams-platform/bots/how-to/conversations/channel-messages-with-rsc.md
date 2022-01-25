@@ -4,12 +4,12 @@ author: surbhigupta12
 description: Empfangen aller Kanalnachrichten mit RSC-Berechtigungen
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: abe6bc821c9e4ffe05b1cf35480f9c559401014e
-ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
+ms.openlocfilehash: e499b414a91f815bfe84172a8559f3b7cfd6d839
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "62185442"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212454"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Empfangen aller Kanalnachrichten mit RSC
 
@@ -35,7 +35,7 @@ Damit Ihr Bot alle Kanalnachrichten empfangen kann, muss RSC im Teams App-Manife
 
 Es folgt ein Beispiel für das `webApplicationInfo` Objekt:
 
-* **id:** Ihre Azure Active Directory -App-ID (AAD). Dies kann mit Ihrer Bot-ID identisch sein.
+* **id:** Ihre Azure Active Directory App-ID. Dies kann mit Ihrer Bot-ID identisch sein.
 * **ressource:** Eine beliebige Zeichenfolge. Dieses Feld verfügt über keinen Vorgang in RSC, muss jedoch hinzugefügt werden und einen Wert aufweisen, um eine Fehlerantwort zu vermeiden.
 * **applicationPermissions:** RSC-Berechtigungen für Ihre App mit `ChannelMessage.Read.Group` müssen angegeben werden. Weitere Informationen finden Sie unter [ressourcenspezifische Berechtigungen.](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions)
 
@@ -56,7 +56,7 @@ Der folgende Code enthält ein Beispiel für das App-Manifest:
 Wenn Sie in einem Team querladen möchten, um zu testen, ob alle Kanalnachrichten in einem Team mit RSC empfangen werden, ohne @mentioned:
 
 1. Wählen Sie ein Team aus, oder erstellen Sie es.
-1. Wählen Sie die auslassungspunkte &#x25CF;&#x25CF;&#x25CF; im linken Bereich aus. Das Dropdownmenü wird angezeigt.
+1. Wählen Sie die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; im linken Bereich aus. Das Dropdownmenü wird angezeigt.
 1. Wählen Sie im Dropdownmenü die Option **"Team verwalten"** aus. Die Details werden angezeigt.
 
    ![Verwalten von Apps im Team](~/bots/how-to/conversations/Media/managingteam.png)

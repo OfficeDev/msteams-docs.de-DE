@@ -6,16 +6,16 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams importieren Nachrichten-API-Diagramm Microsoft migrieren Migrationsbeitrag
-ms.openlocfilehash: a34a6efe98e14d5c28126275ed2378a24d34efa0
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: d20212bf5f5766e71b1be7a4476518510b8de80b
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291709"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212524"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Plattform-Nachrichten von Drittanbietern mithilfe von Microsoft Graph in Teams importieren
 
-Mit Microsoft Graph können Sie den vorhandenen Nachrichtenverlauf und die Daten von Benutzern aus einem externen System in einen Teams Kanal migrieren. Durch die Aktivierung der Neugestaltung einer Drittanbieterplattform-Messaginghierarchie innerhalb Teams können Benutzer ihre Kommunikation nahtlos fortsetzen und ohne Unterbrechung fortfahren.
+Mit Microsoft Graph können Sie den vorhandenen Nachrichtenverlauf und die Daten von Benutzern aus einem externen System in einen Teams Kanal migrieren. Durch die Aktivierung der Neugestaltung einer Plattform-Messaging-Hierarchie eines Drittanbieters innerhalb Teams können Benutzer ihre Kommunikation nahtlos fortsetzen und ohne Unterbrechung fortfahren.
 
 > [!NOTE]
 > Microsoft kann in Zukunft von Ihnen oder Ihren Kunden fordern, basierend auf der Menge der importierten Daten, zusätzliche Gebühren zu zahlen.
@@ -42,7 +42,7 @@ Auf hoher Ebene besteht der Importvorgang aus folgenden Komponenten:
 ### <a name="set-up-your-office-365-tenant"></a>Einrichten des Office 365-Mandanten
 
 * Stellen Sie sicher, dass für die Importdaten ein Office 365 Mandant vorhanden ist. Weitere Informationen zum Einrichten eines Office 365 Mandanten für Teams finden Sie unter [Vorbereiten Ihres Office 365 Mandanten.](../../concepts/build-and-test/prepare-your-o365-tenant.md)
-* Stellen Sie sicher, dass sich Teammitglieder in Azure Active Directory (AAD) befinden. Weitere Informationen finden Sie unter [Hinzufügen eines neuen Benutzers](/azure/active-directory/fundamentals/add-users-azure-active-directory) zu AAD.
+* Stellen Sie sicher, dass sich Teammitglieder in Azure Active Directory befinden. Weitere Informationen finden Sie unter [Hinzufügen eines neuen Benutzers](/azure/active-directory/fundamentals/add-users-azure-active-directory) zu Azure AD.
 
 ## <a name="step-1-create-a-team"></a>Schritt 1: Erstellen eines Teams
 
@@ -93,7 +93,7 @@ Content-Location: /teams/{team-id}
 Sie können die Fehlermeldung in den folgenden Szenarien erhalten:
 
 * Wenn `createdDateTime` für die Zukunft festgelegt ist.
-* Wenn `createdDateTime` richtig angegeben, aber `teamCreationMode` instanzattribut fehlt oder auf ungültigen Wert festgelegt ist.
+* Wenn `createdDateTime` richtig angegeben, aber `teamCreationMode` das Instanzattribut fehlt oder auf einen ungültigen Wert festgelegt ist.
 
 ## <a name="step-2-create-a-channel"></a>Schritt 2: Erstellen eines Kanals
 
@@ -149,7 +149,7 @@ HTTP/1.1 202 Accepted
 Sie können die Fehlermeldung in den folgenden Szenarien erhalten:
 
 * Wenn `createdDateTime` für die Zukunft festgelegt ist.
-* Wenn `createdDateTime` richtig angegeben ist, das `channelCreationMode` Instanzattribut jedoch fehlt oder auf einen ungültigen Wert festgelegt ist.
+* Wenn `createdDateTime` richtig angegeben, aber `channelCreationMode` instanzattribut fehlt oder auf ungültigen Wert festgelegt ist.
 
 ## <a name="step-3-import-messages"></a>Schritt 3: Importieren von Nachrichten
 
@@ -325,7 +325,7 @@ Aktion, die für eine `team` aufgerufen wird oder die sich nicht in `channel` `m
 
 ## <a name="step-five-add-team-members"></a>Schritt 5: Hinzufügen von Teammitgliedern
 
-Sie können ein Mitglied zu einem Team [hinzufügen, indem Sie die Teams Benutzeroberfläche](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) verwenden, oder Microsoft Graph [Mitglieder-API hinzufügen:](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true)
+Sie können ein Mitglied zu einem Team [hinzufügen, indem Sie die Teams-Benutzeroberfläche](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) verwenden, oder Microsoft Graph [Mitglieder-API hinzufügen:](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 #### <a name="request-add-member"></a>Anforderung (Mitglied hinzufügen)
 
@@ -373,7 +373,7 @@ Die folgende Tabelle enthält den Inhaltsbereich:
 |Inlinebilder als Teil der Nachricht|Bei Erwähnungen|
 |Links zu vorhandenen Dateien in SPO oder OneDrive|Reaktionen|
 |Nachrichten mit Rich-Text|Videos|
-|Nachrichtenantwortkette|Announcements|
+|Nachrichtenantwortkette|Ankündigungen|
 |Verarbeitung mit hohem Durchsatz|Codeausschnitte|
 ||Sticker|
 ||Emojis|

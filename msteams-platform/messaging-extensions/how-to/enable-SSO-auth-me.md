@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie die SSO-Unterstützung für Ihre Messaging-Er
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 3da2c19debd3275266b4f96ce62bdfb0c85c353b
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: de0f08cf73c5ba353398693b95c94d45be2eb727
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178251"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212552"
 ---
 # <a name="single-sign-on-support-for-messaging-extensions"></a>Unterstützung für einmaliges Anmelden für Messaging-Erweiterungen
  
@@ -21,8 +21,9 @@ In diesem Dokument erfahren Sie, wie Sie das SSO aktivieren und Bei Bedarf Ihr A
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Die Voraussetzungen zum Aktivieren von SSO für Messaging-Erweiterungen und die Verbreitung von Links sind wie folgt:
+
 * Sie benötigen [](https://azure.microsoft.com/free/) ein Azure-Konto.
-* Sie müssen Ihre App über das AAD-Portal konfigurieren und Teams Anwendungsmanifest Ihres Bots aktualisieren, wie in [der Registrierung Ihrer App über das AAD-Portal](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)definiert.
+* Sie müssen Ihre App über das Azure AD Portal konfigurieren und Teams Anwendungsmanifest Ihres Bots aktualisieren, wie in [der Registrierung Ihrer App über das Azure AD-Portal](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-azure-ad-portal)definiert.
 
 > [!NOTE]
 > Weitere Informationen zum Erstellen eines Azure-Kontos und aktualisieren Ihres App-Manifests finden Sie unter [SSO-Unterstützung (Single Sign-On) für Bots.](../../bots/how-to/authentication/auth-aad-sso-bots.md)
@@ -115,7 +116,7 @@ Nachdem die Voraussetzungen erfüllt sind, können Sie SSO für Messaging-Erweit
     
     ```    
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Hinzufügen der Authentifizierung zu Ihren Messaging-Erweiterungen](add-authentication.md)
 * [Verwenden von SSO für Bots](../../bots/how-to/authentication/auth-aad-sso-bots.md)

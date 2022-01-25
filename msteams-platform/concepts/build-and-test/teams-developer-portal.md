@@ -5,12 +5,12 @@ keywords: Erste Schritte für Entwicklerportal-Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 598ee5fae79ff7c4c4a4c1096d1d234ecab89629
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 246ea41b30fe920562989b32c3643813238fb083
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888552"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212538"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Verwalten Ihrer Apps mit dem Entwicklerportal für Microsoft Teams
 
@@ -36,7 +36,7 @@ Sie können Umgebungen und globale Variablen konfigurieren, um den Übergang Ihr
 
 1. Wählen Sie im Entwicklerportal die App aus, an der Sie arbeiten.
 2. Wechseln Sie zur Seite **"Umgebungen",** und wählen Sie **+Umgebung hinzufügen** aus.
-3. Wählen Sie **+ Fügen Sie eine Variable** hinzu, um Konfigurationsvariablen für Ihre Umgebung zu erstellen.
+3. Wählen Sie **+ Hinzufügen einer Variablen,** um Konfigurationsvariablen für Ihre Umgebung zu erstellen.
 
 **So verwenden Sie Variablen**
 
@@ -77,15 +77,15 @@ Auf der **Übersichtsseite** sehen Sie die Gesamtzahl der aktiven Benutzer für 
 | *Monatlich R30* | Die Standardverwendungsmetrik. Sie zeigt die Anzahl der eindeutigen aktiven Benutzer an, die Ihre App innerhalb dieses rollenden 30-Tage-Fensters in UTC verwendet haben. |
 | *Täglich* | Zeigt die Anzahl der eindeutigen aktiven Benutzer an, die Ihre App an einem bestimmten Tag in UTC verwendet haben. |
 
-Die monatliche und tägliche Nutzung wird für die letzten sieben, 30 und 60 Tage angezeigt. Die Nutzung sollte innerhalb von 24 bis 48 Stunden für einen bestimmten Tag widergespiegelt werden. Die Anzeige neuer Apps kann bis zu 3 bis 5 Tage dauern.
+Die monatliche und tägliche Nutzung wird für die letzten sieben, 30 und 60 Tage angezeigt. Die Nutzung sollte für einen bestimmten Tag innerhalb von 24 bis 48 Stunden widergespiegelt werden. Die Anzeige neuer Apps kann bis zu 3 bis 5 Tage dauern.
 
 ## <a name="use-tools-to-create-app-features"></a>Verwenden von Tools zum Erstellen von App-Features
 
 Das Entwicklerportal enthält auch Tools, mit denen Sie einige wichtige Features von Teams-Apps erstellen können. Einige dieser Tools umfassen:
 
-* **Szenenstudio:** Entwerfen [sie benutzerdefinierte Szenen im Zusammen-Modus](~/apps-in-teams-meetings/teams-together-mode.md) für Teams Besprechungen.
+* **Szenenstudio:** Entwerfen [Sie benutzerdefinierte Szenen im Zusammen-Modus](~/apps-in-teams-meetings/teams-together-mode.md) für Teams Besprechungen.
 * **Editor für adaptive Karten:** Erstellen und Anzeigen einer Vorschau adaptiver Karten, die in Ihre Apps aufgenommen werden sollen.
-* **Microsoft Identity Platform Verwaltung:** Registrieren Sie Ihre Apps bei Azure Active Directory (Azure AD), um Benutzern zu helfen, sich anzumelden und Zugriff auf APIs zu gewähren.
+* **Microsoft Identity Platform Verwaltung:** Registrieren Sie Ihre Apps bei Azure Active Directory, um Benutzern zu helfen, sich anzumelden und Zugriff auf APIs zu gewähren.
 
 ## <a name="see-also"></a>Siehe auch
 

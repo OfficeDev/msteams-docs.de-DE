@@ -1,15 +1,15 @@
 ---
 title: Konfigurieren von OAuth 2.0-Identitätsanbietern
-description: Beschreibt, wie Identitätsanbieter konfiguriert werden, die den Schwerpunkt auf Azure AD
+description: Beschreibt, wie Identitätsanbieter konfiguriert werden, deren Schwerpunkt auf Azure AD
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Teams-Authentifizierung AAD oauth-Identitätsanbieter
-ms.openlocfilehash: cae2cc3d2feba8c17ad895864fd1b5995095f71b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+keywords: Teams-Authentifizierung Azure AD oauth-Identitätsanbieter
+ms.openlocfilehash: 0e0b1e21bf3c2e877ddef790677ba2f4c227339e
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887434"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212335"
 ---
 # <a name="configure-identity-providers"></a>Identitätsanbieter konfigurieren
 
@@ -29,6 +29,6 @@ Ersetzen Sie `<hostname>` dies durch Ihren tatsächlichen Host, bei dem es sich 
 
 ## <a name="other-authentication-providers"></a>Andere Authentifizierungsanbieter
 
-* **LinkedIn:** Folgen Sie den Anweisungen beim [Konfigurieren Ihrer LinkedIn-Anwendung.](/linkedin/talent/apply-with-linkedin)
+* **Linkedin:** Folgen Sie den Anweisungen beim [Konfigurieren Ihrer LinkedIn-Anwendung.](/linkedin/talent/apply-with-linkedin)
 
 * **Google:** Abrufen von OAuth 2.0-Clientanmeldeinformationen aus der [Google API-Konsole](https://console.developers.google.com/)

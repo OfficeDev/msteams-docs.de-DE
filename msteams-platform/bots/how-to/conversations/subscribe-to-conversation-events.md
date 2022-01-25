@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: Ereignis-Bot-Kanal-Nachrichtenreaktionsunterhaltung
-ms.openlocfilehash: 6c77e6b7675a45c27a8af42811b520b4942d7428
-ms.sourcegitcommit: a6c39106ccc002d02a65e11627659e0c48981d8a
+ms.openlocfilehash: 4cb48c73b139ece4d16f935b611701def35e89b7
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "62014556"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212545"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Unterhaltungsereignisse in Ihrem Teams-Bot
 
@@ -1346,7 +1346,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
   "serviceUrl": "https://smba.trafficmanager.net/amer/", 
   "from": { 
     "id": "sample id", 
-    "aadObjectId": "sample AAD Object ID" 
+    "aadObjectId": "sample Azure AD Object ID" 
   },
   "conversation": { 
     "isGroup": true, 
@@ -1406,7 +1406,7 @@ async def on_installation_update(self, turn_context: TurnContext):
 > [!NOTE]
 > Das Deinstallationsverhalten für persönliche Apps mit Bot ist derzeit nur in der [öffentlichen Entwicklervorschau](../../../resources/dev-preview/developer-preview-intro.md)verfügbar.
 
-Wenn Sie eine App deinstallieren, wird der Bot ebenfalls deinstalliert. Wenn ein Benutzer eine Nachricht an Ihre App sendet, erhält er den Antwortcode 403. Ihr Bot erhält einen 403-Antwortcode für neue Nachrichten, die von Ihrem Bot gepostet wurden. Das Verhalten der Postdeinstallation für Bots im persönlichen Bereich mit den Bereichen Teams und groupChat wird jetzt ausgerichtet. Sie können keine Nachrichten senden oder empfangen, nachdem eine App deinstalliert wurde.
+Wenn Sie eine App deinstallieren, wird der Bot ebenfalls deinstalliert. Wenn ein Benutzer eine Nachricht an Ihre App sendet, erhält er den Antwortcode 403. Ihr Bot erhält einen 403-Antwortcode für neue Nachrichten, die von Ihrem Bot gepostet wurden. Das Verhalten der Postdeinstallation für Bots im persönlichen Bereich mit den Bereichen Teams und groupChat wird nun ausgerichtet. Sie können keine Nachrichten senden oder empfangen, nachdem eine App deinstalliert wurde.
 
 <img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
 
@@ -1414,7 +1414,7 @@ Wenn Sie eine App deinstallieren, wird der Bot ebenfalls deinstalliert. Wenn ein
 
 Wenn Sie diese Installations- und Deinstallationsereignisse verwenden, gibt es einige Fälle, in denen Bots Ausnahmen beim Empfangen unerwarteter Ereignisse von Teams gewähren. Dies geschieht in den folgenden Fällen:
 
-* Sie erstellen Ihren Bot ohne das Microsoft Bot Framework SDK, und daher gibt der Bot eine Ausnahme beim Empfangen eines unerwarteten Ereignisses.
+* Sie erstellen Ihren Bot ohne das Microsoft Bot Framework SDK, und daher gibt der Bot eine Ausnahme beim Empfangen eines unerwarteten Ereignisses aus.
 * Sie erstellen Ihren Bot mit dem Microsoft Bot Framework SDK, und Sie können das Standardereignisverhalten ändern, indem Sie das Basisereignishandle überschreiben.
 
 Es ist wichtig zu wissen, dass neue Ereignisse jederzeit in der Zukunft hinzugefügt werden können und Ihr Bot beginnt, sie zu empfangen. Daher müssen Sie die Möglichkeit entwerfen, unerwartete Ereignisse zu empfangen. Wenn Sie das Bot Framework SDK verwenden, antwortet Ihr Bot automatisch mit einem 200 – OK auf alle Ereignisse, die Sie nicht behandeln möchten.
@@ -1423,7 +1423,7 @@ Es ist wichtig zu wissen, dass neue Ereignisse jederzeit in der Zukunft hinzugef
 
 | **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
-| Unterhaltungsbot | Beispielcode für Bots-Unterhaltungsereignisse. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Unterhaltungsbot | Beispielcode für Bots-Unterhaltungsereignisse. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

@@ -1,19 +1,19 @@
 ---
-title: Personenauswahl in adaptiven Karten
+title: Personenauswahl in Adaptiven Karten
 description: Beschreibt die Verwendung des Personenauswahl-Steuerelements in adaptiven Karten
 localization_priority: Normal
 keywords: Personenauswahl für adaptive Karten
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: d0183ea8f00c14e93586c0c12e02b837a41572c9
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+ms.openlocfilehash: b09293c26dac6721b92fcf1d574560a3da7e281a
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062546"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212475"
 ---
-# <a name="people-picker-in-adaptive-cards"></a>Personenauswahl in adaptiven Karten
+# <a name="people-picker-in-adaptive-cards"></a>Personenauswahl in Adaptiven Karten
 
 >[!NOTE]
 > Derzeit ist die Personenauswahl in adaptiven Karten in der [öffentlichen Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) nur für mobilgeräte und allgemein verfügbar (GA) für Desktops verfügbar.
@@ -107,7 +107,7 @@ Die folgenden Eigenschaften sind Ergänzungen zum `Input.ChoiceSet` Schema, um d
 
 |Eigenschaft |Typ |Erforderlich |Beschreibung|
 |--|--|--|--|
-|**Dataset** |String |Ja |Der Datentyp, der dynamisch abgerufen werden muss.|   
+|**Dataset** |Zeichenfolge |Ja |Der Datentyp, der dynamisch abgerufen werden muss.|   
 
 #### <a name="dataset"></a>Dataset
 Die folgende Tabelle enthält vordefinierte Werte als **Dataset** für die Personenauswahl:   
@@ -160,25 +160,25 @@ Um die Suche in einer Liste von Unterhaltungsmitgliedern zu aktivieren, verwende
 
 ### <a name="data-submission"></a>Datenübermittlung
 
-Sie können ausgewählte Daten verwenden `Action.Submit` oder an Ihren Bot `Action.Execute` übermitteln. Die `invoke` auf Ihrem Bot empfangene Nutzlast ist eine Liste der AAD-IDs oder der in der statischen Liste bereitgestellten IDs.
-Wenn in der Personenauswahl ein Benutzer im Steuerelement ausgewählt wird, `AAD ID` ist der Benutzer der zurückgegebene Wert. Dies `AAD ID` ist eine Zeichenfolge und identifiziert einen Benutzer im Verzeichnis eindeutig.
+Sie können ausgewählte Daten verwenden `Action.Submit` oder an Ihren Bot `Action.Execute` übermitteln. Die `invoke` auf Ihrem Bot empfangene Nutzlast ist eine Liste der Azure AD-IDs oder der in der statischen Liste bereitgestellten IDs.
+Wenn in der Personenauswahl ein Benutzer im Steuerelement ausgewählt wird, `Azure AD ID` ist der Benutzer der zurückgegebene Wert. Dies `Azure AD ID` ist eine Zeichenfolge und identifiziert einen Benutzer im Verzeichnis eindeutig.
 
 Das Format des an den Bot übermittelten Werts hängt vom Wert der `isMultiSelect` Eigenschaft ab:
 
 |Wert von `isMultiSelect`|Format|
 |--|--|
-|false _(einzelne Auswahl)_|<selected_AAD_ID>|
-|true _(Mehrfachauswahl)_|<selected_AAD_ID_1>,<selected_AAD_ID_2>,<selected_AAD_ID_3>|  
+|false _(einzelne Auswahl)_|<selected_Azure_AD_ID>|
+|true _(Mehrfachauswahl)_|<selected_Azure_AD_ID_1>,<selected_Azure_AD_ID_2>,<selected_Azure_AD_ID_3>|  
 
-Mit der wählt die `AAD ID` Personenauswahl den entsprechenden Benutzer vorab aus. 
+Mit der wählt die `Azure AD ID` Personenauswahl den entsprechenden Benutzer vorab aus. 
 
 ## <a name="preselection-of-user"></a>Vorauswahl des Benutzers
 
 Die Personenauswahl unterstützt die Vorabauswahl des Benutzers im Steuerelement beim Erstellen und Senden einer adaptiven Karte. `Input.ChoiceSet` unterstützt die `value` Eigenschaft, die für die Vorabauswahl eines Benutzers verwendet wird. Das Format dieser `value` Eigenschaft entspricht dem format des übermittelten Werts in der [Datenübermittlung.](#data-submission)  
 Die folgende Liste enthält die Informationen für die Vorabauswahl von Benutzern:
 
-* Geben Sie für einen einzelnen Benutzer im Steuerelement `AAD ID` den Benutzer als `value` . 
-* Geben Sie für mehrere Benutzer, z. B. `isMultiSelect` `true` eine durch Trennzeichen getrennte Zeichenfolge von s `AAD ID` an.  
+* Geben Sie für einen einzelnen Benutzer im Steuerelement `Azure AD ID` den Benutzer als `value` . 
+* Geben Sie für mehrere Benutzer, z. B. `isMultiSelect` `true` eine durch Trennzeichen getrennte Zeichenfolge von s `Azure AD ID` an.  
 
 Im folgenden Beispiel wird die Vorauswahl eines einzelnen Benutzers beschrieben:
 
@@ -200,7 +200,7 @@ Im folgenden Beispiel wird die Vorauswahl eines einzelnen Benutzers beschrieben:
                 "dataset": "graph.microsoft.com/users"
             },
             "id": "people-picker",
-            "value": "<AAD ID 1>"
+            "value": "<Azure AD ID 1>"
         }
     ],
     "actions": [
@@ -235,7 +235,7 @@ Im folgenden Beispiel wird die Vorauswahl mehrerer Benutzer beschrieben:
             },
             "id": "people-picker",
             "isMultiSelect": true,
-            "value": "<AAD ID 1>,<AAD ID 2>,<AAD ID 3>"
+            "value": "<Azure AD ID 1>,<Azure AD ID 2>,<Azure AD ID 3>"
         }
     ],
     "actions": [

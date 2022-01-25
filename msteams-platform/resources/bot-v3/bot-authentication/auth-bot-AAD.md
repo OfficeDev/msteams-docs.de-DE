@@ -1,22 +1,22 @@
 ---
 title: Authentifizierung für Bots mit Azure Active Directory
 description: Beschreibt Azure AD Authentifizierung in Teams und wie sie in Ihren Bots verwendet wird
-keywords: Teams-Authentifizierungs-Bots AAD
+keywords: Teams-Authentifizierungs-Bots Azure AD
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
-ms.openlocfilehash: 1f13e561e94029f007ff055627f335d00ee1c441
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 7456580b3c0cd45ed9f2032e08068d542986cfea
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720071"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212398"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>Authentifizieren eines Benutzers in einem Microsoft Teams-Bot
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Es gibt viele Dienste, die Sie in Ihrer Teams-App nutzen möchten, und die meisten dienste erfordern Authentifizierung und Autorisierung, um zugriff zu erhalten. Zu den Diensten gehören Facebook, Twitter und Teams. Benutzer von Teams haben Benutzerprofilinformationen in Azure Active Directory (Azure AD) unter Verwendung von Microsoft Graph gespeichert. In diesem Thema geht es um die Authentifizierung mithilfe von Azure AD, um Zugriff zu erhalten.
+Es gibt viele Dienste, die Sie in Ihrer Teams-App nutzen möchten, und die meisten dieser Dienste erfordern Authentifizierung und Autorisierung, um den Zugriff zu erhalten. Zu den Diensten gehören Facebook, Twitter und Teams. Benutzer von Teams verfügen über Benutzerprofilinformationen, die in Azure Active Directory unter Verwendung von Microsoft Graph gespeichert sind. In diesem Thema geht es um die Authentifizierung mithilfe von Azure AD, um Zugriff zu erhalten.
 OAuth 2.0 ist ein offener Standard für die Authentifizierung, der von Azure AD und vielen anderen Dienstanbietern verwendet wird. Das Verständnis von OAuth 2.0 ist eine Voraussetzung für die Arbeit mit der Authentifizierung in Teams und Azure AD. In den folgenden Beispielen wird der Fluss "Implizite OAuth 2.0-Genehmigung" verwendet, um die Profilinformationen des Benutzers aus Azure AD und Microsoft Graph zu lesen.
 
 Der in diesem Thema beschriebene Authentifizierungsfluss ähnelt den Registerkarten, mit der Ausnahme, dass Registerkarten den webbasierten Authentifizierungsfluss verwenden können und Bots die Authentifizierung aus Code gesteuert werden müssen. Die Konzepte in diesem Thema sind auch hilfreich bei der Implementierung der Authentifizierung über die mobile Plattform.
@@ -25,11 +25,11 @@ Eine allgemeine Übersicht über den Authentifizierungsfluss für Bots finden Si
 
 ## <a name="configuring-identity-providers"></a>Konfigurieren von Identitätsanbietern
 
-Ausführliche Schritte zum Konfigurieren von OAuth 2.0-Rückrufumleitungs-URL(n) bei Verwendung von Azure Active Directory als Identitätsanbieter finden Sie im Thema "Konfigurieren von [Identitätsanbietern".](~/concepts/authentication/configure-identity-provider.md)
+Ausführliche Schritte zum Konfigurieren von OAuth 2.0-Rückrufumleitungs-URL(n) bei Verwendung von Azure Active Directory als Identitätsanbieter finden Sie im Thema ["Konfigurieren](~/concepts/authentication/configure-identity-provider.md) von Identitätsanbietern".
 
 ## <a name="initiate-authentication-flow"></a>Initiieren des Authentifizierungsflusses
 
-Der Authentifizierungsfluss sollte durch eine Benutzeraktion ausgelöst werden. Öffnen Sie das Authentifizierungspop-Up nicht automatisch, da es möglicherweise den Popupblocker des Browsers auslöst und den Benutzer verwirren kann.
+Der Authentifizierungsfluss sollte durch eine Benutzeraktion ausgelöst werden. Öffnen Sie das Authentifizierungs-Popup nicht automatisch, da es möglicherweise den Popupblocker des Browsers auslöst und den Benutzer verwirren kann.
 
 ## <a name="add-ui-to-start-authentication"></a>Hinzufügen einer Benutzeroberfläche zum Starten der Authentifizierung
 
@@ -60,7 +60,7 @@ Der Hero-Karte wurden drei Schaltflächen hinzugefügt: Anmelden, Profil anzeige
 
 ## <a name="sign-the-user-in"></a>Anmelden des Benutzers
 
-Aufgrund der Überprüfung, die aus Sicherheitsgründen durchgeführt werden muss, und der Unterstützung für die mobilen Versionen von Teams wird der Code hier nicht angezeigt. Hier ist jedoch [ein Beispiel für den Code, der den Prozess startet, wenn der Benutzer die Anmeldeschaltfläche drückt.](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/e84020562d7c8b83f4a357a4a4d91298c5d2989d/src/dialogs/BaseIdentityDialog.ts#L154-L195)
+Aufgrund der Überprüfung, die aus Sicherheitsgründen durchgeführt werden muss, und der Unterstützung für die mobilen Versionen von Teams wird der Code hier nicht angezeigt, aber [hier ist ein Beispiel für den Code, der den Prozess startet, wenn der Benutzer die Anmeldeschaltfläche drückt.](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/e84020562d7c8b83f4a357a4a4d91298c5d2989d/src/dialogs/BaseIdentityDialog.ts#L154-L195)
 
 Die Validierung und die mobile Unterstützung werden im Thema [Authentifizierungsfluss in Bots](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)erläutert.
 

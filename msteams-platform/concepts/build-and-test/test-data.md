@@ -1,16 +1,16 @@
 ---
 title: Hinzufügen von Testdaten zu Ihrem Microsoft 365 Testmandanten
-description: Richten Sie Ihr Office 365-Entwicklerprogrammabonnement für erfolgreiche Tests von Microsoft Teams Apps mit Codeausschnitten ein.
+description: Richten Sie Ihr Office 365-Entwicklerprogrammabonnement für erfolgreiche Tests von Microsoft Teams Apps mithilfe von Codeausschnitten ein.
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Testen von Teams des Entwicklerprogramms für Apps
 ms.date: 11/01/2019
-ms.openlocfilehash: f0a7c823d8f590fe1b207c6bb1037be6825b03a6
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 92079eb8184e0d7618d87de97058f667bf85deda
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888412"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212559"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Hinzufügen von Testdaten zu Ihrem Microsoft 365 Testmandanten
 
@@ -21,8 +21,8 @@ Sie können Ihre Microsoft Teams-App mit Beispieldaten mit einem Microsoft 365 E
 1. [Treten Sie dem Microsoft 365-Entwicklerprogramm bei,](/office/developer-program/office-365-developer-program)wenn Sie keinen Testmandanten haben.
 2. [Richten Sie ein Microsoft 365 Entwicklerabonnement ein.](/office/developer-program/office-365-developer-program-get-started)
 3. [Verwenden Sie Beispieldatenpakete mit Ihrem Microsoft 365 Entwicklerabonnement, um das Inhaltspaket "Benutzer" zu installieren.](/office/developer-program/install-sample-packs)
-4. [Installieren Sie das powerShell-Modul Teams.](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
-5. [Installieren Sie das Azure AD PowerShell-Modul.](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)
+4. [Installieren Sie das Teams PowerShell-Modul.](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
+5. [Installieren Sie das powerShell-Modul Azure AD.](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)
 
 > [!NOTE]
 > Sie benötigen globale Administratorberechtigungen im Mandanten, um die Skripts ausführen zu können.
@@ -147,7 +147,7 @@ Standardmäßig können nur globale Administratoren oder Teams Dienstadministrat
     </Teams>
     ```
 
-2. Speichern Sie den folgenden Codeausschnitt als PowerShell-Skript (.ps1), und notieren Sie sich, wo Sie es gespeichert haben. Dieses Skript führt die Schritte aus, um das Team und den Kanal zu erstellen und ihnen Mitglieder hinzuzufügen:
+2. Speichern Sie den folgenden Codeausschnitt als PowerShell-Skript (.ps1), und notieren Sie sich, wo Sie ihn gespeichert haben. Dieses Skript führt die Schritte aus, um das Team und den Kanal zu erstellen und ihnen Mitglieder hinzuzufügen:
 
     ```powershell
     Param(
@@ -168,7 +168,7 @@ Standardmäßig können nur globale Administratoren oder Teams Dienstadministrat
 
             $creds = Get-Credential
 
-            # Connecting to AAD PowerShell
+            # Connecting to Azure AD PowerShell
             Connect-AzureAD -Credential $creds | Out-Null
 
             # Connect to Microsoft Teams PowerShell

@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: 1c0bb7eb75ee982e7c08d3039e59f03fc7f18146
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 5aa701bc884a290c5030d54c67d31dd47d794d94
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768464"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212468"
 ---
 # <a name="manage-multiple-environments-in-teams-toolkit"></a>Verwalten mehrerer Umgebungen in Teams Toolkit
 
@@ -19,7 +19,7 @@ ms.locfileid: "61768464"
 
  Mit mehreren Umgebungen können Sie Folgendes ausführen:
 
-1. **Testen vor der Produktion:** Es ist üblich, mehrere Umgebungen wie Entwicklung, Test und Staging einzurichten, bevor Sie eine Teams-App in der Produktionsumgebung im Modern App-Entwicklungslebenszyklus veröffentlichen.
+1. **Testen vor der Produktion:** Es ist üblich, mehrere Umgebungen wie Entwicklungs-, Test- und Stagingumgebungen einzurichten, bevor sie eine Teams App in der Produktionsumgebung im modernen App-Entwicklungslebenszyklus veröffentlichen.
 
 2. **Verwalten des App-Verhaltens in verschiedenen Umgebungen:** Sie können unterschiedliche Verhaltensweisen für mehrere Umgebungen festlegen, z. B. Telemetrie in der Produktionsumgebung aktivieren, aber in der Entwicklungsumgebung deaktivieren.
 
@@ -28,7 +28,7 @@ ms.locfileid: "61768464"
 * [Installieren Sie Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Version v3.0.0+.
 
 > [!TIP]
-> Stellen Sie sicher, dass Teams App-Projekt im VS-Code geöffnet ist.
+> Stellen Sie sicher, dass Teams App-Projekt in VS-Code geöffnet ist.
 
 ## <a name="create-a-new-environment"></a>Erstellen einer neuen Umgebung
 
@@ -40,7 +40,7 @@ Nach dem Erstellen eines neuen Projekts erstellt Teams Toolkit standardmäßig F
 > [!NOTE]
 > Jedes Projekt kann nur eine `local` Umgebung, aber mehrere Remoteumgebungen haben.
 
-Um eine weitere Remoteumgebung hinzuzufügen, wählen Sie das Symbol Teams in der Seitenleiste aus, und wählen Sie im Abschnitt "Umgebung" die Option "Neue Umgebung erstellen" aus, wie in der folgenden Abbildung dargestellt:
+Um eine weitere Remoteumgebung hinzuzufügen, wählen Sie das symbol Teams in der Seitenleiste aus, und wählen Sie im Abschnitt "Umgebung" die Option "Neue Umgebung erstellen" aus, wie in der folgenden Abbildung dargestellt:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
 
@@ -57,7 +57,7 @@ Sie können die Zielumgebung für alle umgebungsbezogenen Vorgänge auswählen. 
 
 Nach dem Erstellen des Projekts können Sie die Projektordner und -dateien im Explorer-Bereich von Visual Studio Code anzeigen. Neben den benutzerdefinierten Codes werden einige Dateien von Teams Toolkit verwendet, um die Konfiguration, den Status und die Vorlage der App zu verwalten. Die folgende Liste enthält Dateien und beschreibt deren Beziehung mit mehreren Umgebungen.
 
-- `.fx/configs`: Konfigurieren von Dateien, die der Benutzer für die Teams-App anpassen kann.
+- `.fx/configs`: Konfigurieren von Dateien, die der Benutzer für die Teams App anpassen kann.
   - `config.<envName>.json`: Konfigurationsdatei pro Umgebung.
   - `azure.parameters.<envName>.json`: Parameterdatei pro Umgebung für die Azure-Biicep-Bereitstellung.
   - `projectSettings.json`: Globale Projekteinstellungen, die für alle Umgebungen gelten.
@@ -75,13 +75,13 @@ Teams Toolkit ermöglicht es Ihnen, die Konfigurationsdateien und Vorlagendateie
 
 In der folgenden Tabelle sind die allgemeinen Szenarien aufgeführt, die für die angepasste Bereitstellung unterstützt werden, und die Möglichkeiten zum Anpassen:
 
-| Szenarien | Ort| Beschreibung |
+| Szenarien | Standort| Beschreibung |
 | --- | --- | --- |
 | Anpassen der Azure-Ressource | <ul> <li>Bicep-Dateien unter `templates/azure` .</li> <li>`.fx/azure.parameters.<envName>.json`.</li></ul> | [Passen Sie ARM-Parameter und -Vorlagen an.](provision.md#customize-arm-parameters-and-templates) |
-| Wiederverwenden vorhandener AAD-App für Teams-App | <ul> <li>`auth` abschnitt in `.fx/config.<envName>.json` .</li> </ul> |  [Verwenden Sie eine vorhandene AAD-App für Ihre Teams-App.](provision.md#use-an-existing-aad-app-for-your-teams-app) |
-| Wiederverwenden vorhandener AAD-App für Bot | <ul> <li>`bot` abschnitt in `.fx/config.<envName>.json` .</li> </ul> | [Verwenden Sie eine vorhandene AAD-App für Ihren Bot.](provision.md#use-an-existing-aad-app-for-your-bot) |
+| Wiederverwenden vorhandener Azure AD-App für Teams-App | <ul> <li>`auth` abschnitt in `.fx/config.<envName>.json` .</li> </ul> |  [Verwenden Sie eine vorhandene Azure AD-App für Ihre Teams-App.](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Wiederverwenden vorhandener Azure AD-App für Bot | <ul> <li>`bot` abschnitt in `.fx/config.<envName>.json` .</li> </ul> | [Verwenden Sie eine vorhandene Azure AD-App für Ihren Bot.](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
 | Überspringen des Hinzufügens von Benutzern während der Bereitstellung SQL | <ul> <li>`skipAddingSqlUser` -Eigenschaft in `.fx/config.<envName>.json` .</li> </ul> | [Überspringen Sie das Hinzufügen von Benutzern für SQL Datenbank.](provision.md#skip-adding-user-for-sql-database) |
-| Anpassen des App-Manifests | <ul> <li>`templates/manifest.remote.template.json`.</li> <li>`manifest` abschnitt in `.fx/config.<envName>.json` .</li>  </ul> | [Passen Sie Teams App-Manifest im Teams Toolkit an.](TeamsFx-manifest-customization.md) |
+| Anpassen des App-Manifests | <ul> <li>`templates/manifest.remote.template.json`.</li> <li>`manifest` abschnitt in `.fx/config.<envName>.json` .</li>  </ul> | [Passen Sie Teams App-Manifest in Teams Toolkit an.](TeamsFx-manifest-customization.md) |
 
 ## <a name="scenarios"></a>Szenarien
 
@@ -117,7 +117,7 @@ Führen Sie die folgenden Schritte zur Anpassung aus:
 
 ### <a name="scenario-2-customize-teams-app-description-for-different-environment"></a>Szenario 2: Anpassen Teams App-Beschreibung für verschiedene Umgebungen
 
-In diesem Szenario erfahren Sie, wie Sie verschiedene Teams App-Beschreibung für verschiedene Umgebungen festlegen:
+In diesem Szenario erfahren Sie, wie Sie unterschiedliche Teams App-Beschreibung für verschiedene Umgebungen festlegen:
 
 - Für die Standardumgebung `dev` lautet die Beschreibung `my app description for dev` ;
 - Für die Stagingumgebung `staging` lautet die Beschreibung `my app description for staging` ;

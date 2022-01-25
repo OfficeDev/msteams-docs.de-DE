@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 23b3f67f5f949080dc9389e82dc459a33fbf029a
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
-ms.translationtype: HT
+ms.openlocfilehash: b4fc1d7b0e0ce1e32b82e0a82d490491f92ca387
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768280"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212124"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
@@ -271,7 +271,7 @@ Das Manifest der Teams-App definiert die Konfiguration Ihrer App.
 
 * Ihr Manifest muss einem öffentlich freigegebenen Manifest-Schema entsprechen. Weitere Informationen finden Sie in den[Manifest-Hinweisen.](~/resources/schema/manifest-schema.md) Reichen Sie Ihre App nicht mit einer Vorschauversion des Manifests ein.
 * Wenn Ihre App eine Bot- oder Messaging-Erweiterung enthält, müssen die Details im App-Manifest mit den Bot Framework-Metadaten konsistent sein, einschließlich Bot-Name, Logo, Link zur Datenschutzrichtlinie und Link zu den Nutzungsbedingungen.
-* Wenn Ihre App Azure Active Directory (Azure AD) für die Authentifizierung verwendet, fügen Sie die Azure AD-Anwendungs-(Client-)ID in das Manifest ein. Weitere Informationen finden Sie in der [Manifest-Referenz](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Wenn Ihre App Azure Active Directory für die Authentifizierung verwendet, fügen Sie die Azure AD Anwendungs-ID (Client-ID) in das Manifest ein. Weitere Informationen finden Sie in der [Manifestreferenz.](~/resources/schema/manifest-schema.md#webapplicationinfo)
 
 ### <a name="app-icons"></a>App-Symbole
 
@@ -1423,7 +1423,7 @@ Wenn Ihre App die von [Microsoft Graph bereitgestellten Aktivitätsfeed-APIs](/g
 
 Das Microsoft 365 App Compliance-Programm soll Organisationen dabei helfen, Risiken zu bewerten und zu verwalten, indem Sicherheits- und Compliance-Informationen zu Ihrer App ausgewertet werden. Wenn Sie eine App im Teams Store veröffentlichen, müssen Sie die folgenden Stufen des Programms abschließen: 
 
-  * **Publisher Überprüfung:** Hilft Administratoren und Endbenutzern, die Authentizität von App-Entwicklern zu verstehen, die sich in die Microsoft Identity Platform integrieren. Nach Abschluss des Vorgangs wird im Zustimmungsdialog von Azure Active Directory (Azure AD) und auf anderen Bildschirmen ein blaues **verifiziertes** Zeichen angezeigt. Weitere Informationen finden Sie unter [Markieren Ihrer App als vom Herausgeber überprüft](/azure/active-directory/develop/mark-app-as-publisher-verified).  
+  * **Publisher Überprüfung:** Hilft Administratoren und Endbenutzern, die Authentizität von App-Entwicklern zu verstehen, die sich in die Microsoft Identity Platform integrieren. Nach Abschluss des Vorgangs wird ein blaues **verifiziertes** Signal im Dialogfeld Azure Active Directory Zustimmung und auf anderen Bildschirmen angezeigt. Weitere Informationen finden Sie unter [Markieren Ihrer App als vom Herausgeber überprüft](/azure/active-directory/develop/mark-app-as-publisher-verified).  
 
 :::row::: 
     :::column span="":::

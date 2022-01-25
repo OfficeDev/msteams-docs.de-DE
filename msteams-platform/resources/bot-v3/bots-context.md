@@ -1,18 +1,18 @@
 ---
-title: Abrufen des Kontexts für Ihren Microsoft Teams-Bot
+title: Kontext für Ihren Microsoft Teams-Bot abrufen
 description: Beschreibt, wie Kontext für Bots in Microsoft Teams
 keywords: Teams-Bots-Kontext
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 5c9dac9712f6bdc9a62262614ceaf90fd100e19e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 4d737564a77cdccc693a8fa3889476a1cf015be2
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156637"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212040"
 ---
-# <a name="get-context-for-your-microsoft-teams-bot"></a>Abrufen des Kontexts für Ihren Microsoft Teams-Bot
+# <a name="get-context-for-your-microsoft-teams-bot"></a>Kontext für Ihren Microsoft Teams-Bot abrufen
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -21,12 +21,12 @@ Ihr Bot kann auf zusätzlichen Kontext über das Team oder den Chat zugreifen, z
 > [!NOTE]
 >
 > * Microsoft Teams-spezifischen Bot-APIs können Sie am besten über unsere Erweiterungen für das Bot Builder SDK aufrufen.
-> * Laden Sie für C# oder .NET unser [Paket "Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet" herunter.
+> * Laden Sie für C# oder .NET unser [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet-Paket herunter.
 > * Für Node.js Entwicklung ist der Bot Builder für Teams Funktionalität in das [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6 integriert.
 
 ## <a name="fetch-the-team-roster"></a>Abrufen der Teamliste
 
-Ihr Bot kann die Liste der Teammitglieder und deren grundlegende Profile abfragen. Die grundlegenden Profile umfassen Teams Benutzer-IDs und Azure Active Directory (AAD)-Informationen wie Name und Objekt-ID. Sie können diese Informationen verwenden, um Benutzeridentitäten zu korrelieren. Überprüfen Sie beispielsweise, ob ein Benutzer, der sich über AAD-Anmeldeinformationen bei einer Registerkarte angemeldet hat, ein Teammitglied ist.
+Ihr Bot kann die Liste der Teammitglieder und deren grundlegende Profile abfragen. Die grundlegenden Profile umfassen Teams Benutzer-IDs und Azure Active Directory Informationen wie Name und Objekt-ID. Sie können diese Informationen verwenden, um Benutzeridentitäten zu korrelieren. Überprüfen Sie beispielsweise, ob sich ein Benutzer über Azure AD Anmeldeinformationen ein Teammitglied ist.
 
 ### <a name="rest-api-example"></a>REST-API-Beispiel
 

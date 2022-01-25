@@ -5,14 +5,14 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: b62dd1050dead3174738d5f72a5b667d928128b4
-ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
+ms.openlocfilehash: 5c85d30e595d30a236318d13535584d949b1075a
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "61246085"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212412"
 ---
-# <a name="maintain-your-published-microsoft-teams-app"></a>Verwalten Ihrer veröffentlichten Microsoft Teams-App
+# <a name="maintain-your-published-microsoft-teams-app"></a>Unterhalt Ihrer veröffentlichte Microsoft Teams-App
 
 Nachdem Ihre App im Microsoft Teams Store aufgeführt ist, überlegen Sie, wie Sie die App in Zukunft verwalten und Downloads und Nutzung erhöhen.
 
@@ -44,7 +44,7 @@ Wenn Sie jedoch eine der folgenden Änderungen an Ihrer App vornehmen, müssen I
 * Fügen Sie eine persönliche Registerkarte hinzu.
 * Fügen Sie einen Kanal und eine Gruppenregisterkarte hinzu.
 * Fügen Sie einen Connector hinzu.
-* Ändern Von Konfigurationen im Zusammenhang mit ihrer Azure Active Directory (Azure AD)-App-Registrierung. Weitere Informationen finden Sie unter [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Ändern Sie Konfigurationen im Zusammenhang mit ihrer Azure Active Directory App-Registrierung. Weitere Informationen finden Sie unter [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Beheben von Problemen mit Ihrer veröffentlichten App
 
@@ -58,7 +58,7 @@ Erstellen Sie den Link mithilfe der folgenden URL, die mit Ihrer App-ID angefüg
 
 ## <a name="complete-microsoft-365-certification"></a>Abschließen Microsoft 365 Zertifizierung
 
-[Microsoft 365 Zertifizierung](/microsoft-365-app-certification/docs/certification) bietet Zusicherungen, dass Daten und Datenschutz angemessen gesichert und geschützt sind, wenn ein drittanbieterbasiertes Office-App oder Add-In in Ihrem Microsoft 365 Ökosystem installiert ist. Die Zertifizierung bestätigt, dass Ihre App mit Microsoft-Technologien kompatibel ist, den bewährten Methoden für cloudbasierte App-Sicherheit entspricht und von Microsoft unterstützt wird.
+[Microsoft 365 Zertifizierung](/microsoft-365-app-certification/docs/certification) bietet Zusicherungen, dass Daten und Datenschutz angemessen gesichert und geschützt sind, wenn ein Office-App oder Add-In eines Drittanbieters in Ihrem Microsoft 365 Ökosystem installiert wird. Die Zertifizierung bestätigt, dass Ihre App mit Microsoft-Technologien kompatibel ist, den bewährten Methoden für cloudbasierte App-Sicherheit entspricht und von Microsoft unterstützt wird.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -6,16 +6,16 @@ keywords: Personenauswahl-Steuerelement
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 5f686b247397c89a5a1ab8fe80ac9e97017ea051
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0c4bac7a92042d339f35c4b3eeb2c7302e5f0e1a
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156594"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212580"
 ---
 # <a name="integrate-people-picker"></a>Integration der Personenauswahl  
 
-Die Personenauswahl ist ein Steuerelement zum Suchen und Auswählen von Personen. Dies ist eine systemeigene Funktion, die in Teams Plattform verfügbar ist. Sie können Teams systemeigene Personenauswahl-Eingabesteuerelement in Ihre Web-Apps integrieren. Sie können zwischen einzelner oder mehrfacher Auswahl und Konfigurationen auswählen, z. B. das Einschränken der Suche in einem Chat, in Kanälen oder in der gesamten Organisation.
+Die Personenauswahl ist ein Steuerelement zum Suchen und Auswählen von Personen. Dies ist eine systemeigene Funktion, die in Teams Plattform verfügbar ist. Sie können Teams systemeigene Personenauswahl-Eingabesteuerung in Ihre Web-Apps integrieren. Sie können zwischen einzelner oder mehrfacher Auswahl und Konfigurationen auswählen, z. B. das Einschränken der Suche in einem Chat, in Kanälen oder in der gesamten Organisation.
 
 Sie können [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)verwenden, das `selectPeople` eine API zum Integrieren der Personenauswahl in Ihre Web-App bereitstellt. 
 
@@ -26,7 +26,7 @@ Sie können [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/mst
 * Die Personenauswahl hilft bei Szenarien mit Aufgabenzuweisung, Tagging und Benachrichtigung eines Benutzers. 
 * Sie können dieses leicht verfügbare Steuerelement in Ihrer Web-App verwenden. Es spart den Aufwand und die Zeit, um ein solches Steuerelement selbst zu erstellen.
 
-Sie müssen die API aufrufen, um das `selectPeople` Personenauswahl-Steuerelement in Ihre Teams-App zu integrieren. Um eine effektive Integration zu ermöglichen, müssen Sie über Kenntnisse des [Codeausschnitts](#code-snippet) für den Aufruf der API verfügen. Es ist wichtig, sich mit den [API-Antwortfehlern](#error-handling) vertraut zu machen, um die Fehler in Ihrer Web-App zu behandeln.
+Sie müssen die API aufrufen, um das `selectPeople` Steuerelement "Personenauswahl" in Ihre Teams-App zu integrieren. Um eine effektive Integration zu ermöglichen, müssen Sie über Kenntnisse des [Codeausschnitts](#code-snippet) für den Aufruf der API verfügen. Es ist wichtig, sich mit den [API-Antwortfehlern](#error-handling) vertraut zu machen, um die Fehler in Ihrer Web-App zu behandeln.
 
 > [!NOTE] 
 > Derzeit ist Microsoft Teams Unterstützung für die Personenauswahl nur für mobile Clients verfügbar.
@@ -44,10 +44,10 @@ Die `selectPeople` API enthält die folgenden Eingabekonfigurationen:
 
 |Konfigurationsparameter|Typ|Beschreibung| Standardwert|
 |-----|------|--------------|------|
-|`title`| String| Es handelt sich um einen optionalen Parameter. Er legt den Titel für das Steuerelement "Personenauswahl" fest. | Auswählen von Personen|
-|`setSelected`|String| Es handelt sich um einen optionalen Parameter. Sie müssen AAD-IDs der Personen übergeben, die vorab ausgewählt werden sollen. Dieser Parameter wählt Personen beim Starten des Personenauswahl-Steuerelements vorab aus. Bei einer einzelnen Auswahl wird nur der erste gültige Benutzer vorbefüllt, wobei der Rest ignoriert wird. |Null| 
-|`openOrgWideSearchInChatOrChannel`|Boolescher Wert | Es handelt sich um einen optionalen Parameter. Wenn sie auf "true" festgelegt ist, wird die Personenauswahl im organisationsweiten Bereich gestartet, auch wenn die App zu einem Chat oder Kanal hinzugefügt wird. |Falsch|
-|`singleSelect`|Boolescher Wert|Es handelt sich um einen optionalen Parameter. Wenn sie auf "true" festgelegt ist, wird die Personenauswahl gestartet, wodurch die Auswahl auf nur einen Benutzer beschränkt wird. |Falsch|
+|`title`| Zeichenfolge| Es handelt sich um einen optionalen Parameter. Er legt den Titel für das Steuerelement "Personenauswahl" fest. | Auswählen von Personen|
+|`setSelected`|Zeichenfolge| Es handelt sich um einen optionalen Parameter. Sie müssen Azure AD IDs der Personen übergeben, die vorab ausgewählt werden sollen. Dieser Parameter wählt Personen beim Starten des Personenauswahl-Steuerelements vorab aus. Bei einer einzelnen Auswahl wird nur der erste gültige Benutzer vorbefüllt, wobei der Rest ignoriert wird. |Null| 
+|`openOrgWideSearchInChatOrChannel`|Boolean | Es handelt sich um einen optionalen Parameter. Wenn sie auf "true" festgelegt ist, wird die Personenauswahl im organisationsweiten Bereich gestartet, auch wenn die App zu einem Chat oder Kanal hinzugefügt wird. |Falsch|
+|`singleSelect`|Boolean|Es handelt sich um einen optionalen Parameter. Wenn sie auf "true" festgelegt ist, wird die Personenauswahl gestartet, wodurch die Auswahl auf nur einen Benutzer beschränkt wird. |Falsch|
 
 Die folgende Abbildung zeigt die Erfahrung der Personenauswahl in einer Beispiel-Web-App:
 
@@ -55,7 +55,7 @@ Die folgende Abbildung zeigt die Erfahrung der Personenauswahl in einer Beispiel
 
 ### <a name="code-snippet"></a>Codeausschnitt
 
-**Anrufe `selectPeople` API** zum Auswählen von Personen aus einer Liste:
+**Aufrufen `selectPeople` API** zum Auswählen von Personen aus einer Liste:
 
 ```javascript
  microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
