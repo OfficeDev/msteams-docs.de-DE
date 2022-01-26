@@ -4,12 +4,12 @@ description: Beschreibung von Karten und deren Verwendung in Bots, Connectors un
 ms.localizationpriority: high
 keywords: Connectors Bots Karten Messaging
 ms.topic: overview
-ms.openlocfilehash: 077da748ec7dd594b5ba029e3e53b0642610f1ee
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+ms.openlocfilehash: 39fec1897aaf660acd5d5d4d4335c777015e4f8f
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062523"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212328"
 ---
 # <a name="cards"></a>Karten
 
@@ -77,9 +77,9 @@ Die Vorschlagssuche, die als Eingabesteuerelement adaptiven Karten hinzugefügt 
 
 Mit adaptiven Karten mit eingehenden Webhooks können Sie die umfangreichen und flexiblen Funktionen adaptiver Karten nutzen. Dabei werden Daten mithilfe eingehender Webhooks in Microsoft Teams über ihren Webdienst gesendet.
 
-## <a name="support-for-aad-object-id-and-upn-in-user-mention"></a>Unterstützung für AAD-Objekt-ID und UPN in Benutzererwähnungen 
+## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>Unterstützung für Azure AD Objekt-ID und UPN in Benutzererwähnung 
 
-Bots mit adaptiven Karten unterstützen Benutzererwähnungs-IDs, z. B. AAD-Objekt-IDs und Benutzerprinzipalname (User Principle Name, UPN) zusätzlich zu den bestehenden IDs. Eingehende Webhooks beginnen mit der Unterstützung von Benutzererwähnungen in adaptiven Karten mit der AAD-Objekt-ID und dem UPN.
+Bots mit adaptiven Karten unterstützen Benutzererwähnungs-IDs, z. B. Azure AD-Objekt-IDs und Benutzerprinzipalname (User Principle Name, UPN) zusätzlich zu den bestehenden IDs. Eingehende Webhooks beginnen mit der Unterstützung der Benutzererwähnung in der adaptiven Karte mit der Azure AD-Objekt-ID und dem UPN.
 
 ## <a name="next-step"></a>Nächster Schritt
 
