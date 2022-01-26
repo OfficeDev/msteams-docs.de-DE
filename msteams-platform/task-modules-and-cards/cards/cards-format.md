@@ -5,12 +5,12 @@ keywords: Kartenformat für Teams-Bots
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: d660d58b00624b4d91ce4241829b204c66ba95df
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 1d1ecf16c07744a895db931516c943d068c91d51
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059602"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212377"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatieren von Karten in Microsoft Teams
 
@@ -165,20 +165,20 @@ Der folgende Code zeigt ein Beispiel einer adaptiven Karte mit einer Erwähnung:
 }
 ```
 
-### <a name="aad-object-id-and-upn-in-user-mention"></a>AAD-Objekt-ID und UPN in einer Benutzererwähnung 
+### <a name="azure-ad-object-id-and-upn-in-user-mention"></a>Azure AD-Objekt-ID und UPN in einer Benutzererwähnung 
 
-Die Teams-Plattform ermöglicht es, Benutzer mit ihrer AAD-Objekt-ID und dem Benutzerprinzipalnamen (User Principle Name, UPN) zu erwähnen, zusätzlich zu den bestehenden Erwähnungs-IDs. Bots mit adaptiven Karten und Connectors mit eingehenden Webhooks unterstützen die zwei Benutzererwähnungs-IDs. 
+Die Teams-Plattform ermöglicht es, Benutzer mit ihrer Azure AD-Objekt-ID und dem Benutzerprinzipalnamen (User Principle Name, UPN) zu erwähnen, zusätzlich zu den bestehenden Erwähnungs-IDs. Bots mit adaptiven Karten und Connectors mit eingehenden Webhooks unterstützen die zwei Benutzererwähnungs-IDs. 
 
 In der folgenden Tabelle werden die neu unterstützten Benutzererwähnungs-IDs beschrieben:
 
 |IDs  | Unterstützende Funktionen |   Beschreibung | Beispiel |
 |----------|--------|---------------|---------|
-| AAD-Objekt-ID | Bot, Connector |  Objekt-ID des AAD-Benutzers |  49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | Bot, Connector | UPN des AAD-Benutzers | john.smith@microsoft.com |
+| Azure AD-Objekt-ID | Bot, Connector |  Objekt-ID des Azure AD-Benutzers |    49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | Bot, Connector | UPN des Azure AD-Benutzers | john.smith@microsoft.com |
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>Benutzererwähnung in Bots mit adaptiven Karten 
 
-Bots unterstützen die Benutzererwähnung mit der AAD-Objekt-ID und dem UPN zusätzlich zu den vorhandenen IDs. Die Unterstützung für zwei neue IDs ist in Bots für Textnachrichten, adaptiven Kartentext und die Messaging-Erweiterungsantwort verfügbar. Bots unterstützen die Erwähnungs-IDs in Unterhaltungen und `invoke`-Szenarien. Der Benutzer erhält eine Aktivitätsfeedbenachrichtigung, wenn er mit den IDs @erwähnt wird. 
+Bots unterstützen die Benutzererwähnung mit der Azure AD-Objekt-ID und dem UPN, zusätzlich zu den vorhandenen IDs. Die Unterstützung für zwei neue IDs ist in Bots für Textnachrichten, adaptiven Kartentext und die Messaging-Erweiterungsantwort verfügbar. Bots unterstützen die Erwähnungs-IDs in Unterhaltungen und `invoke`-Szenarien. Der Benutzer erhält eine Aktivitätsfeedbenachrichtigung, wenn er mit den IDs @erwähnt wird. 
 
 > [!NOTE]
 > Schemaupdates und Änderungen der Benutzeroberfläche/-erfahrung sind für Benutzererwähnungen mit adaptiven Karten im Bot nicht erforderlich.
@@ -195,7 +195,7 @@ Beispiel für die Benutzererwähnung in Bots mit adaptiven Karten wie folgt:
   "body": [
     {
       "type": "TextBlock",
-      "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+      "text": "Hi <at>Adele UPN</at>, <at>Adele Azure AD</at>"
     }
   ],
   "msteams": {
@@ -210,7 +210,7 @@ Beispiel für die Benutzererwähnung in Bots mit adaptiven Karten wie folgt:
       },
       {
         "type": "mention",
-        "text": "<at>Adele AAD</at>",
+        "text": "<at>Adele Azure AD</at>",
         "mentioned": {
           "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
           "name": "Adele Vance"
@@ -227,11 +227,11 @@ Die folgende Abbildung veranschaulicht die Benutzererwähnung mit adaptiver Kart
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Benutzererwähnung im eingehenden Webhook mit adaptiven Karten 
 
-Eingehende Webhooks beginnen mit der Unterstützung der Benutzererwähnung in adaptiven Karten mit der AAD-Objekt-ID und dem UPN.
+Eingehende Webhooks beginnen mit der Unterstützung der Benutzererwähnung in adaptiven Karten mit der Azure AD-Objekt-ID und dem UPN.
 
 > [!NOTE]    
-> * Aktivieren Sie die Benutzererwähnung im Schema für eingehende Webhooks, um die AAD-Objekt-ID und den UPN zu unterstützen. 
-> * Änderungen der Benutzeroberfläche/-erfahrung sind für Benutzererwähnungen mit AAD-Objekt-ID und UPN nicht erforderlich.      
+> * Aktivieren Sie die Benutzererwähnung im Schema für eingehende Webhooks, um die Azure AD-Objekt-ID und den UPN zu unterstützen. 
+> * Änderungen der Benutzeroberfläche/-erfahrung sind für Benutzererwähnungen mittels Azure AD-Objekt-ID und UPN nicht erforderlich.      
 
 ##### <a name="example"></a>Beispiel 
 
@@ -254,7 +254,7 @@ Beispiel für die Benutzererwähnung im eingehenden Webhook wie folgt:
                 },
                 {
                     "type": "TextBlock",
-                    "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+                    "text": "Hi <at>Adele UPN</at>, <at>Adele Azure AD</at>"
                 }
             ],
             "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -271,7 +271,7 @@ Beispiel für die Benutzererwähnung im eingehenden Webhook wie folgt:
                       },
                       {
                         "type": "mention",
-                        "text": "<at>Adele AAD</at>",
+                        "text": "<at>Adele Azure AD</at>",
                         "mentioned": {
                           "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
                           "name": "Adele Vance"
