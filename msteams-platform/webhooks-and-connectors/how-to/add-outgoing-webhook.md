@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: Teams-Registerkarten ausgehende Webhook-Aktionen erfordernde Nachricht überprüfen Webhook
-ms.openlocfilehash: 0c41abe8078e05fa6e52a8c5379f91a21601eac3
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 816a09a85af0e47f1dea5da6a4c02608c986573e
+ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059749"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "62281763"
 ---
 # <a name="create-outgoing-webhook"></a>Ausgehenden Webhook erstellen
 
@@ -25,8 +25,8 @@ Die folgende Tabelle enthält die Features und die Beschreibung ausgehender Webh
 | ------- | ----------- |
 | Konfigurationsbereich| Webhooks werden auf Teamebene definiert. Der obligatorische Einrichtungsprozess für jeden einzelnen fügt einen ausgehenden Webhook hinzu. |
 | Reaktives Messaging| Benutzer müssen @mention verwenden, damit der Webhook Nachrichten empfängt. Derzeit können Benutzer nur eine Nachricht an einen ausgehenden Webhook in öffentlichen Kanälen senden und nicht innerhalb des persönlichen oder privaten Bereichs. |
-|Standard-HTTP-Nachrichtenaustausch|Antworten werden in derselben Kette wie die ursprüngliche Anforderungsnachricht angezeigt und können beliebigen Bot Framework-Nachrichteninhalt enthalten, z. B. Rich-Text, Bilder, Karten und Emojis. Ausgehende Webhooks können zwar Karten verwenden, jedoch keine Kartenaktionen mit Ausnahme von `openURL`.|
-| Unterstützung der Teams-API-Methode|Ausgehende Webhooks senden einen HTTP POST an einen Webdienst und erhalten eine Antwort. Sie können auf keine anderen APIs zugreifen, wie z. B. den Dienstplan oder die Liste der Kanäle in einem Team abrufen.|
+|Standard-HTTP-Nachrichtenaustausch|Antworten werden in derselben Kette wie die ursprüngliche Anforderungsnachricht angezeigt und können beliebige Bot Framework-Nachrichteninhalte enthalten. Beispielsweise Rich-Text, Bilder, Karten und Emojis. Ausgehende Webhooks können zwar Karten, jedoch keine Kartenaktionen (mit Ausnahme von `openURL`) verwenden.|
+| Unterstützung der Teams-API-Methode|Ausgehende Webhooks senden einen HTTP POST an einen Webdienst und erhalten eine Antwort. Sie können nicht auf andere APIs zugreifen, um z. B. die Liste oder die Liste der Kanäle in einem Team abzurufen.|
 
 ## <a name="create-outgoing-webhooks"></a>Erstellen ausgehender Webhooks
 
@@ -61,7 +61,7 @@ Erstellen Sie ausgehende Webhooks, und fügen Sie Benutzerdefinierte Bots zu Tea
 
     ![Ausgehenden Webhook erstellen](~/assets/images/outgoingwebhook.png)
 
-Ein [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) Dialogfeld wird angezeigt. Es handelt sich um ein Sicherheitstoken, das zum Authentifizieren von Anrufen zwischen Teams und dem angegebenen externen Dienst verwendet wird.
+Ein [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) Dialogfeld wird angezeigt. Es handelt sich um ein Sicherheitstoken, das zum Authentifizieren von Aufrufen zwischen Teams und dem angegebenen externen Dienst verwendet wird. Das HMAC-Sicherheitstoken läuft nicht ab und ist für jede Konfiguration eindeutig.
 
 >[!NOTE]
 > Der ausgehende Webhook steht den Benutzern des Teams nur zur Verfügung, wenn die URL gültig ist und die Server- und Clientauthentifizierungstoken gleich sind. Beispielsweise ein HMAC-Handshake.
@@ -69,7 +69,7 @@ Ein [Hash-based Message Authentication Code (HMAC)](https://security.stackexchan
 Das folgende Szenario enthält die Details zum Hinzufügen eines ausgehenden Webhooks:
 
 * Szenario: Pushen von Änderungsstatusbenachrichtigungen auf einem Teams-Kanaldatenbankserver an Ihre App.
-* Beispiel: Sie verfügen über eine Branchen-App, die alle CRUD-Vorgänge nachzeichnet, z. B. Erstellen, Lesen, Aktualisieren und Löschen. Diese Vorgänge werden von Benutzern der Personalabteilung des Teams-Kanals in einem Office 365-Mandanten an die Mitarbeiterdatensätze vorgenommen.
+* Beispiel: Sie haben eine Branchen-App, die alle CRUD-Vorgänge (Erstellen, Lesen, Aktualisieren und Löschen) verfolgt. Diese Vorgänge werden von Benutzern der Personalabteilung des Teams-Kanals in einem Office 365-Mandanten an die Mitarbeiterdatensätze vorgenommen.
 
 # <a name="url-json-payload"></a>[JSON-Nutzlast der URL](#tab/urljsonpayload)
 **erstellen Sie eine URL auf dem Server Ihrer App, um eine POST-Anforderung mit einer JSON-Nutzlast zu akzeptieren und zu verarbeiten**
