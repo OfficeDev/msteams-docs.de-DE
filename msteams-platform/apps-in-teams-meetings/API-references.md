@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams-Apps besprechungen – Benutzerteilnehmer-Rollen-API – Signalsignalabfrage für Benutzerteilnehmer
-ms.openlocfilehash: 3ec6539e8a4970a00650c1bc35d72ea656a0eb38
-ms.sourcegitcommit: 0ae40fdf74b43834160821956b754cab94a60bb7
+ms.openlocfilehash: dd46dc2622915055e46e07ae34d48c690d6d8d8e
+ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "61558708"
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "62323148"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
@@ -23,16 +23,17 @@ Die Besprechungserweiterungen bieten APIs zum Transformieren der Besprechungsumg
 
 Die folgende Tabelle enthält eine Liste der APIs:
 
-|API|Beschreibung|Anforderung|Quelle|
+|API|Beschreibung|Anforderung|Source|
 |---|---|----|---|
-|**GetUserContext**| Ermöglicht das Abrufen von Kontextinformationen, um relevante Inhalte auf einer Teams Registerkarte anzuzeigen. |_**microsoftTeams.getContext( ) => { /*...* / } )**_|Microsoft Teams-Client-SDK|
+|**GetUserContext**| Ermöglicht das Abrufen von Kontextinformationen zum Anzeigen relevanter Inhalte auf einer Teams Registerkarte. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams-Client-SDK|
 |**GetParticipant**| Ermöglicht es einem Bot, Teilnehmerinformationen nach Besprechungs-ID und Teilnehmer-ID abzurufen. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | Ermöglicht die Bereitstellung von Besprechungssignalen, die mithilfe der vorhandenen Unterhaltungsbenachrichtigungs-API für den Benutzer-Bot-Chat übermittelt werden. Sie können ein Signal basierend auf einer Benutzeraktion senden, die ein Dialogfeld in der Besprechung anzeigt. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 |**Besprechungsdetails** | Ermöglicht das Abrufen statischer Besprechungsmetadaten. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
+|**WARENKORB**|Ermöglicht das Posten von Beschriftungen für eine Besprechung, die gestartet wurde.|**POST /cartcaption?meetingid=04751eac-30e6-47d9-9c3f-0b4ebe8e30d9&token=04751eac&lang=en-us HTTP/1.1**|Microsoft Teams-Client-SDK|
 
 ## <a name="getusercontext-api"></a>GetUserContext-API
 
-Informationen zum Identifizieren und Abrufen von Kontextinformationen für Ihre Registerkarteninhalte finden Sie unter Abrufen des [Kontexts für Ihre Teams Registerkarte.](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library) `meetingId` Wird von einer Registerkarte verwendet, wenn sie im Besprechungskontext ausgeführt wird, und wird für die Antwortnutzlast hinzugefügt.
+Informationen zum Identifizieren und Abrufen von Kontextinformationen für Ihre Registerkarteninhalte finden Sie unter [Abrufen des Kontexts für Ihre Teams Registerkarte](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` Wird von einer Registerkarte verwendet, wenn sie im Besprechungskontext ausgeführt wird, und wird für die Antwortnutzlast hinzugefügt.
 
 ## <a name="getparticipant-api"></a>GetParticipant-API
 
@@ -50,7 +51,7 @@ Die `GetParticipant` API enthält die folgenden Abfrageparameter:
 |---|---|----|---|
 |**meetingId**| Zeichenfolge | Ja | Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar.|
 |**participantId**| Zeichenfolge | Ja | Die Teilnehmer-ID ist die Benutzer-ID. Es ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Teilnehmer-ID vom Tab-SSO abzurufen. |
-|**tenantId**| Zeichenfolge | Ja | Die Mandanten-ID ist für die Mandantenbenutzer erforderlich. Es ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Mandanten-ID vom Tab-SSO abzurufen. | 
+|**tenantId**| Zeichenfolge | Ja | Die Mandanten-ID ist für die Mandantenbenutzer erforderlich. Es ist in Tab SSO, Bot Invoke und Teams Client SDK verfügbar. Es wird empfohlen, eine Mandanten-ID vom Tab-SSO abzurufen. |
 
 ### <a name="example"></a>Beispiel
 
@@ -139,7 +140,7 @@ Die `GetParticipant` API gibt die folgenden Antwortcodes zurück:
 
 ## <a name="notificationsignal-api"></a>NotificationSignal-API
 
-Alle Benutzer in einer Besprechung erhalten die Benachrichtigungen, die über die API gesendet `NotificationSignal` werden.
+Alle Benutzer in einer Besprechung erhalten die Benachrichtigungen, die über die `NotificationSignal` API gesendet werden.
 
 > [!NOTE]
 > * Wenn ein Dialogfeld in einer Besprechung aufgerufen wird, wird der Inhalt als Chatnachricht angezeigt.
@@ -160,9 +161,9 @@ Die `NotificationSignal` API enthält den folgenden Abfrageparameter:
 Der `Bot ID` wird im Manifest deklariert, und der Bot erhält ein Ergebnisobjekt.
 
 > [!NOTE]
-> * Der `completionBotId` Parameter des Parameters ist im `externalResourceUrl` angeforderten Nutzlastbeispiel optional. `Bot ID` wird im Manifest deklariert, und der Bot erhält ein Ergebnisobjekt.
-> * Die `externalResourceUrl` Parameter für Breite und Höhe müssen in Pixeln angegeben werden. Um sicherzustellen, dass die Abmessungen innerhalb der zulässigen Grenzwerte liegen, lesen Sie die [Entwurfsrichtlinien.](design/designing-apps-in-meetings.md)
-> * Die URL ist die Seite, die als in das Dialogfeld in der Besprechung geladen `<iframe>` wird. Die Domäne muss sich im Array der App `validDomains` in Ihrem App-Manifest befinden.
+> * Der `completionBotId` Parameter des `externalResourceUrl` Parameters ist im angeforderten Nutzlastbeispiel optional. `Bot ID` wird im Manifest deklariert, und der Bot erhält ein Ergebnisobjekt.
+> * Die `externalResourceUrl` Parameter für Breite und Höhe müssen in Pixeln angegeben werden. Um sicherzustellen, dass die Abmessungen den zulässigen Grenzwerten entsprechen, lesen Sie die [Entwurfsrichtlinien](design/designing-apps-in-meetings.md).
+> * Die URL ist die Seite, die als `<iframe>` in das Dialogfeld in der Besprechung geladen wird. Die Domäne muss sich im Array der App `validDomains` in Ihrem App-Manifest befinden.
 
 Die `NotificationSignal` API enthält die folgenden Beispiele:
 
@@ -231,9 +232,9 @@ Die API ist über Bot Services verfügbar.
 ### <a name="prerequisite"></a>Voraussetzungen
 
 > [!NOTE] 
-> Überprüfen Sie, ob Ihre App alle unter [Voraussetzungen für Apps in Teams Besprechungen aufgeführten](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)Voraussetzungen erfüllt.
+> Überprüfen Sie, ob Ihre App alle unter ["Voraussetzungen für Apps" in Teams Besprechungen aufgeführten](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) Voraussetzungen erfüllt.
 
-Um die Besprechungsdetails-API zu verwenden, müssen Sie RSC-Berechtigungen abrufen. Verwenden Sie das folgende Beispiel, um die Eigenschaft Ihres App-Manifests zu `webApplicationInfo` konfigurieren:
+Um die Besprechungsdetails-API zu verwenden, müssen Sie RSC-Berechtigungen abrufen. Verwenden Sie das folgende Beispiel, um die Eigenschaft Ihres App-Manifests `webApplicationInfo` zu konfigurieren:
 
 ```json
 "webApplicationInfo": {
@@ -300,6 +301,63 @@ Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
     }
 } 
 ```
+
+## <a name="cart-api"></a>CART-API
+
+Die KOMMUNIKATIONSZUGRIFF-CART-API (Real-Time Translation) stellt einen POST-Endpunkt für Microsoft Teams CART-Untertitel, vom Menschen eingegebene Untertitel, bereit. Textinhalte, die an diesen Endpunkt gesendet werden, werden Endbenutzern in einer Microsoft Teams Besprechung angezeigt, wenn beschriftungen aktiviert sind.
+
+### <a name="cart-url"></a>EINKAUFSWAGEN-URL
+
+Sie können die CART-URL für den POST-Endpunkt auf der Seite **"Besprechungsoptionen**" in einer Microsoft Teams Besprechung abrufen. Weitere Informationen finden Sie unter [CART-Beschriftungen in einer Microsoft Teams Besprechung](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Sie müssen die CART-URL nicht ändern, um CART-Beschriftungen zu verwenden.
+
+#### <a name="query-parameter"></a>Abfrageparameter
+
+Die CART-URL enthält die folgenden Abfrageparameter:
+
+|Wert|Typ|Erforderlich|Beschreibung|
+|---|---|----|----|
+|**meetingId**| Zeichenfolge | Ja |Der Besprechungsbezeichner ist über Bot Invoke und Teams Client SDK verfügbar. <br/>Beispiel: meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
+|**Token**| Zeichenfolge | Ja |Autorisierungstoken.<br/> Beispiel: token=04751eac |
+
+#### <a name="example"></a>Beispiel
+
+```http
+https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d&token=gjs44ra
+```
+
+### <a name="method"></a>Methode
+
+|Ressource|Methode|Beschreibung|
+|----|----|----|
+|/cartcaption|POST|Behandeln von Beschriftungen für eine Besprechung, die gestartet wurde|
+
+> [!NOTE]
+> Stellen Sie sicher, dass der Inhaltstyp für alle Anforderungen Nur-Text mit UTF-8-Codierung ist. Der Anforderungstext enthält nur Beschriftungen.
+
+#### <a name="example"></a>Beispiel
+
+```http
+POST /cartcaption?meetingid=04751eac-30e6-47d9-9c3f-0b4ebe8e30d9&token=04751eac&lang=en-us HTTP/1.1
+Host: api.captions.office.microsoft.com
+Content-Type: text/plain
+Content-Length: 22
+Hello I’m Cortana, welcome to my meeting. 
+```
+
+> [!Note]  
+> Jede POST-Anforderung generiert eine neue Beschriftungszeile. Um sicherzustellen, dass der Endbenutzer genügend Zeit zum Lesen des Inhalts hat, beschränken Sie jeden POST-Anforderungstext auf 80 bis 120 Zeichen.
+
+### <a name="error-codes"></a>Fehlercodes
+
+Die CART-API enthält die folgenden Fehlercodes:
+
+|Fehlercode|Beschreibung|
+|---|---|
+| **400** | Ungültige Anforderung. Der Antworttext enthält weitere Informationen. Beispielsweise werden nicht alle erforderlichen Parameter angezeigt.|
+| **401** | Unbefugte. Ungültiges oder abgelaufenes Token. Wenn dieser Fehler angezeigt wird, generieren Sie eine neue EINKAUFSWAGEN-URL in Teams. |
+| **404** | Besprechung nicht gefunden oder nicht gestartet. Wenn dieser Fehler angezeigt wird, stellen Sie sicher, dass Sie die Besprechung starten und Die Überschriften starten auswählen. Nachdem Beschriftungen in der Besprechung aktiviert wurden, können Sie mit dem Posting von Beschriftungen in der Besprechung beginnen.|
+| **500** |Internal server error. (Interner Serverfehler) Wenden [Sie sich an den Support, oder geben Sie Feedback, um weitere Informationen zu erhalten](../feedback.md).|
+
 ## <a name="real-time-teams-meeting-events"></a>Besprechungsereignisse in Echtzeit Teams
 
 Der Benutzer kann Besprechungsereignisse in Echtzeit empfangen. Sobald eine App einer Besprechung zugeordnet ist, werden die tatsächliche Start- und Endzeit der Besprechung für den Bot freigegeben.
@@ -309,7 +367,7 @@ Die tatsächliche Start- und Endzeit einer Besprechung unterscheidet sich von de
 ### <a name="prerequisite"></a>Voraussetzungen
 
 > [!NOTE] 
-> Überprüfen Sie, ob Ihre App alle unter [Voraussetzungen für Apps in Teams Besprechungen aufgeführten](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)Voraussetzungen erfüllt.
+> Überprüfen Sie, ob Ihre App alle unter ["Voraussetzungen für Apps in Teams Besprechungen" aufgeführten](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) Voraussetzungen erfüllt.
 
 Ihr App-Manifest muss über die `webApplicationInfo` Eigenschaft verfügen, um die Besprechungsstart- und -endereignisse zu empfangen. Verwenden Sie das folgende Beispiel, um Ihr Manifest zu konfigurieren:
 
@@ -434,11 +492,11 @@ Ihr Bot empfängt das Ereignis über den `OnEventActivityAsync` Handler.
 Um die JSON-Nutzlast zu deserialisieren, wird ein Modellobjekt eingeführt, um die Metadaten einer Besprechung abzurufen. Die Metadaten einer Besprechung befinden sich in der `value` Eigenschaft in der Ereignisnutzlast. Das `MeetingStartEndEventvalue` Modellobjekt wird erstellt, dessen Membervariablen den Schlüsseln unter der `value` Eigenschaft in der Ereignisnutzlast entsprechen.
      
 > [!NOTE]      
-> * Abrufen der Besprechungs-ID von `turnContext.ChannelData` .    
+> * Abrufen der Besprechungs-ID von `turnContext.ChannelData`.    
 > * Verwenden Sie die Unterhaltungs-ID nicht als Besprechungs-ID.     
-> * Verwenden Sie keine Besprechungs-ID aus der Nutzlast für `turncontext.activity.value` Besprechungsereignisse. 
+> * Verwenden Sie keine Besprechungs-ID aus der Nutzlast `turncontext.activity.value`für Besprechungsereignisse. 
       
-Der folgende Code zeigt, wie die Metadaten einer Besprechung erfasst werden, die , `MeetingType` , , und aus einem `Title` `Id` `JoinUrl` `StartTime` `EndTime` Besprechungsstart-/-end-Ereignis besteht:
+Der folgende Code zeigt, wie die Metadaten einer Besprechung erfasst werden, die , , , `JoinUrl`und aus einem Besprechungsstart-/-end-Ereignis besteht`MeetingType``Title`:`EndTime` `StartTime``Id`
 
 Besprechungsstartereignis
 ```csharp
@@ -460,11 +518,11 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 |Beispielname | Beschreibung | C# | Node.js | 
 |----------------|-----------------|--------------|--------------|
-| Erweiterbarkeit von Besprechungen | Microsoft Teams Beispiel für die Besprechungserweiterung für das Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Besprechungsinhalts-Blasen-Bot | Microsoft Teams Besprechungserweiterungsbeispiel für die Interaktion mit einem Inhaltsblasen-Bot in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Meeting MeetingSidePanel | Microsoft Teams Besprechungserweiterungsbeispiel für die Interaktion mit dem Seitenbereich in besprechungsinternen Besprechungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Registerkarte "Details" in der Besprechung | Microsoft Teams Besprechungserweiterungsbeispiel für die Interaktion mit der Registerkarte "Details" in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
-|Beispiel für Besprechungsereignisse|Beispiel-App zum Anzeigen von Teams Besprechungsereignissen in Echtzeit|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
+| Erweiterbarkeit von Besprechungen | Microsoft Teams Beispiel für die Erweiterbarkeit von Besprechungen zum Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Besprechungsinhalts-Blasen-Bot | Microsoft Teams Besprechungserweiterungsbeispiel für die Interaktion mit einem Inhaltsblasen-Bot in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| Meeting MeetingSidePanel | Microsoft Teams Besprechungserweiterungsbeispiel für die Interaktion mit dem Seitenbereich in besprechungsinternen Besprechungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Registerkarte "Details" in der Besprechung | Microsoft Teams Besprechungserweiterungsbeispiel für die Interaktion mit der Registerkarte "Details" in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+|Beispiel für Besprechungsereignisse|Beispiel-App zum Anzeigen von Teams Besprechungsereignissen in Echtzeit|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |Beispiel für die Besprechungsrekrutierung|Beispiel-App zum Anzeigen der Besprechungserfahrung für das Einstellungsszenario.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |App-Installation mit QR-Code|Beispiel-App, die den QR-Code generiert und die App mit dem QR-Code installiert|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 
@@ -472,7 +530,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 ## <a name="see-also"></a>Siehe auch
 
 * [Teams Authentifizierungsfluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md)
-* [Apps für Teams Besprechungen](teams-apps-in-meetings.md)
+* [Apps für Teams-Besprechungen](teams-apps-in-meetings.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
