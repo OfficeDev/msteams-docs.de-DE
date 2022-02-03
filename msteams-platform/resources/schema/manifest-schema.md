@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: Manifestschema für Microsoft Teams
-ms.openlocfilehash: a723a0d0d72f032b08addd1df68aa5c2f688d184
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 88fd025229a90ac6e3888763f643829950912633
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059693"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212019"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -607,11 +607,11 @@ Das Objekt ist ein Array, wobei alle Elemente vom Typ `string` sind.
 
 **Optional** – Objekt
 
-Geben Sie Ihre Azure Active Directory (AAD)-App-ID und Microsoft Graph-Informationen an, um Benutzern zu helfen, sich nahtlos bei Ihrer App anzumelden. Falls Ihre App in AAD registriert ist, müssen Sie die App-ID angeben. Administratoren können im Microsoft Teams Admin Center Berechtigungen einfach überprüfen und ihre Zustimmung erteilen.
+Geben Sie Ihre Azure Active Directory-App-ID und Microsoft Graph-Informationen an, um Benutzern zu helfen, sich nahtlos bei Ihrer App anzumelden. Falls Ihre App in Azure AD registriert ist, müssen Sie die App-ID angeben. Administratoren können im Microsoft Teams Admin Center Berechtigungen einfach überprüfen und ihre Zustimmung erteilen.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`id`|string|36 Zeichen|✔|AAD-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
+|`id`|string|36 Zeichen|✔|Azure AD-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
 |`resource`|string|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für Einmaliges Anmelden. </br> **HINWEIS:** Wenn Sie Einmaliges Anmelden nicht verwenden, geben Sie einen Dummyzeichenfolgenwert in dieses Feld in Ihr App-Manifest ein (z. B. https://notapplicable), um eine Fehlermeldung zu vermeiden. |
 |`applicationPermissions`|array of strings|128 Zeichen||Geben Sie eine präzise [ressourcenspezifische Einwilligung](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions) an.|
 

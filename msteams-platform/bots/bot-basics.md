@@ -6,22 +6,22 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: Ereignis des Bot-Karten-Zustimmungskanals für das Aktivitätshandlerframework
-ms.openlocfilehash: 6350d9f0e280f345780eeac277e334fef867a67f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 54583fedadbd5a9791daaebf6df842b83aff1f6f
+ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889132"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62214332"
 ---
 # <a name="bot-activity-handlers"></a>Bot-Aktivitätenhandler
 
-Dieses Dokument baut auf dem Artikel zur [Funktionsweise von Bots](https://aka.ms/how-bots-work) in der Grundlegenden [Bot Framework-Dokumentation](https://aka.ms/azure-bot-service-docs)auf. Der Hauptunterschied zwischen Bots, die für Microsoft Teams entwickelt wurden, und dem Core Bot Framework sind die Features, die in Teams bereitgestellt werden.
+Dieses Dokument baut auf dem Artikel zur [Funktionsweise von Bots](https://aka.ms/how-bots-work) in der Grundlegenden [Bot Framework-Dokumentation](https://aka.ms/azure-bot-service-docs)auf. Der Hauptunterschied zwischen Bots, die für Microsoft Teams entwickelt wurden, und dem Core Bot Framework sind die In Teams bereitgestellten Features.
 
 Um die Unterhaltungslogik für Ihren Bot zu organisieren, wird ein Aktivitätshandler verwendet. Aktivitäten werden mithilfe von Teams Aktivitätshandlern und Botlogik auf zwei Arten behandelt. Der Teams-Aktivitätshandler fügt Unterstützung für Microsoft Teams-spezifische Ereignisse und Interaktionen hinzu. Das Bot-Objekt enthält die unterhaltungsbezogene Logik oder Logik für eine Drehung und macht einen Turnhandler verfügbar, der die Methode ist, die eingehende Aktivitäten vom Botadapter akzeptieren kann.
 
 ## <a name="teams-activity-handlers"></a>Teams-Aktivitätshandler
 
-Teams Aktivitätshandler wird vom Aktivitätshandler Microsoft Bot Framework abgeleitet. Es leitet alle Teams Aktivitäten weiter, bevor nicht Teams bestimmte Aktivitäten verarbeitet werden können.
+Teams Aktivitätshandler wird vom Aktivitätshandler Microsoft Bot Framework abgeleitet. Es leitet alle Teams Aktivitäten weiter, bevor nicht Teams bestimmte Aktivitäten behandelt werden können.
 
 Wenn ein Bot für Teams eine Aktivität empfängt, wird er an die Aktivitätshandler weitergeleitet. Alle Aktivitäten werden über einen Basishandler weitergeleitet, der als Turnhandler bezeichnet wird. Der Turnhandler ruft den erforderlichen Aktivitätshandler auf, um empfangene Aktivitäten zu verwalten. Der Teams Bot wird von `TeamsActivityHandler` der Klasse abgeleitet, die von der Klasse des Bot-Frameworks abgeleitet `ActivityHandler` wird.
 
@@ -31,7 +31,69 @@ Bots werden mithilfe des Bot Frameworks erstellt. Wenn die Bots eine Nachrichten
 
 In der Teams Aktivitätshandlerklasse gibt es zwei primäre Teams Aktivitätshandler `OnConversationUpdateActivityAsync` und `OnInvokeActivityAsync` . `OnConversationUpdateActivityAsync`leitet alle Unterhaltungsaktualisierungsaktivitäten weiter und `OnInvokeActivityAsync` leitet alle Teams Aufrufen von Aktivitäten weiter.
 
-Um Ihre Logik für Teams bestimmte Aktivitätshandler zu implementieren, müssen Sie die Methoden in Ihrem Bot außer Kraft setzen, wie im Abschnitt zur [Botlogik](#bot-logic) dargestellt. Es gibt keine Basisimplementierung für diese Handler. Daher müssen Sie die gewünschte Logik in der Außerkraftsetzung hinzufügen.
+Um Ihre Logik für Teams bestimmten Aktivitätshandlern zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im Abschnitt ["Botlogik"](#bot-logic) gezeigt. Es gibt keine Basisimplementierung für diese Handler. Daher müssen Sie die gewünschte Logik in der Außerkraftsetzung hinzufügen.
+
+Die Codeausschnitte für Teams-Aktivitätshandler:
+
+`OnTeamsChannelCreatedAsync`
+
+```csharp
+
+protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsChannelDeletedAsync`
+
+```csharp
+
+protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsChannelRenamedAsync`
+
+```csharp
+
+protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsTeamRenamedAsync`
+
+```csharp
+
+protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsMembersAddedAsync`
+
+```csharp
+
+protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsMembersRemovedAsync`
+
+```csharp
+
+protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
+        {
+            // Code logic here
+        }
+```
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
@@ -39,7 +101,69 @@ Bots werden mithilfe des Bot Frameworks erstellt. Wenn die Bots eine Nachrichten
 
 In der Teams Aktivitätshandlerklasse gibt es zwei primäre Teams Aktivitätshandler `dispatchConversationUpdateActivity` und `onInvokeActivity` . `dispatchConversationUpdateActivity`leitet alle Unterhaltungsaktualisierungsaktivitäten weiter und `onInvokeActivity` leitet alle Teams Aufrufen von Aktivitäten weiter.
 
-Um Ihre Logik für Teams bestimmte Aktivitätshandler zu implementieren, müssen Sie die Methoden in Ihrem Bot außer Kraft setzen, wie im Abschnitt zur [Botlogik](#bot-logic) dargestellt. Definieren Sie Ihre Botlogik für diese Handler, und rufen Sie `next()` sie dann am Ende auf. Durch Aufrufen `next()` stellen Sie sicher, dass der nächste Handler ausgeführt wird.
+Um Ihre Logik für Teams bestimmten Aktivitätshandlern zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im Abschnitt ["Botlogik"](#bot-logic) gezeigt. Definieren Sie Ihre Botlogik für diese Handler, und rufen Sie `next()` sie dann am Ende auf. Durch Aufrufen `next()` stellen Sie sicher, dass der nächste Handler ausgeführt wird.
+
+Die Codeausschnitte für Teams-Aktivitätshandler:
+
+`OnTeamsChannelCreatedAsync`
+
+```javascript
+
+onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+        await next()
+    });
+```
+
+`OnTeamsChannelDeletedAsync`
+
+```javascript
+
+onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsChannelRenamedAsync`
+
+```javascript
+
+onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsTeamRenamedAsync`
+
+```javascript
+
+onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsMembersAddedAsync`
+
+```javascript
+
+onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
+       // code for handling
+       await next();
+    });
+```
+
+`OnTeamsMembersRemovedAsync`
+
+```javascript
+
+onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
+       // code for handling
+       await next();
+    });
+```
 
 # <a name="python"></a>[Python](#tab/python)
 
@@ -47,7 +171,7 @@ Bots werden mithilfe des Bot Frameworks erstellt. Wenn die Bots eine Nachrichten
 
 In der Teams Aktivitätshandlerklasse gibt es zwei primäre Teams Aktivitätshandler `on_conversation_update_activity` und `on_invoke_activity` . `on_conversation_update_activity`leitet alle Unterhaltungsaktualisierungsaktivitäten weiter und `on_invoke_activity` leitet alle Teams Aufrufen von Aktivitäten weiter.
 
-Um Ihre Logik für Teams bestimmte Aktivitätshandler zu implementieren, müssen Sie die Methoden in Ihrem Bot außer Kraft setzen, wie im Abschnitt zur [Botlogik](#bot-logic) dargestellt. Es gibt keine Basisimplementierung für diese Handler. Daher müssen Sie die gewünschte Logik in der Außerkraftsetzung hinzufügen.
+Um Ihre Logik für Teams bestimmten Aktivitätshandlern zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im Abschnitt ["Botlogik"](#bot-logic) gezeigt. Es gibt keine Basisimplementierung für diese Handler. Daher müssen Sie die gewünschte Logik in der Außerkraftsetzung hinzufügen.
 
 ---
 
@@ -91,7 +215,7 @@ Die `TeamsActivityHandler` Liste der Handler im Core Bot Framework-Handlerabschn
 | MembersAdded | `OnTeamsMembersAddedAsync` | Diese Methode ruft die `OnMembersAddedAsync` Methode in `ActivityHandler` auf. Die Methode kann überschrieben werden, um Mitglieder zu behandeln, die einem Team beitreten. Weitere Informationen finden Sie unter Teammitglieder, die in [Unterhaltungsaktualisierungsereignissen](https://aka.ms/azure-bot-subscribe-to-conversation-events) [hinzugefügt wurden.](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added)|
 | MembersRemoved | `OnTeamsMembersRemovedAsync` | Diese Methode ruft die `OnMembersRemovedAsync` Methode in `ActivityHandler` auf. Die Methode kann überschrieben werden, um Mitglieder zu behandeln, die ein Team verlassen. Weitere Informationen finden Sie unter Teammitglieder, die in [Aktualisierungsereignissen](https://aka.ms/azure-bot-subscribe-to-conversation-events)für [Unterhaltungen entfernt wurden.](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed)|
 
-#### <a name="teams-invoke-activities"></a>Teams Aufrufen von Aktivitäten
+#### <a name="teams-invoke-activities"></a>aufrufende Aktivitäten Teams
 
 Die Liste der vom `OnInvokeActivityAsync` Teams-Aktivitätshandler aufgerufenen Teams Aktivitätshandler umfasst Folgendes:
 
@@ -106,7 +230,7 @@ Die Liste der vom `OnInvokeActivityAsync` Teams-Aktivitätshandler aufgerufenen 
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um Logik bereitzustellen, wenn ein Aufgabenmodul abgerufen wird. |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um Beim Senden eines Aufgabenmoduls Logik bereitzustellen. |
 
-Die in diesem Abschnitt aufgeführten Aufrufaktivitäten gelten für Unterhaltungsbots in Teams. Das Bot Framework SDK unterstützt auch Aufrufaktivitäten, die für Messaging-Erweiterungen spezifisch sind. Weitere Informationen finden Sie unter ["Messaging-Erweiterungen".](https://aka.ms/azure-bot-what-are-messaging-extensions)
+Die in diesem Abschnitt aufgeführten Aufrufaktivitäten gelten für Unterhaltungs-Bots in Teams. Das Bot Framework SDK unterstützt auch Aufrufaktivitäten, die für Messaging-Erweiterungen spezifisch sind. Weitere Informationen finden Sie unter ["Messaging-Erweiterungen".](https://aka.ms/azure-bot-what-are-messaging-extensions)
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
@@ -136,14 +260,14 @@ Die `TeamsActivityHandler` Liste der Handler im Core Bot Framework-Handlerabschn
 
 | Ereignis | Handler | Beschreibung |
 | :-- | :-- | :-- |
-| channelCreated | `OnTeamsChannelCreatedAsync` | Diese Methode kann überschrieben werden, um einen zu erstellenden Teams Kanal zu verarbeiten. Weitere Informationen finden Sie im Kanal, der in [Unterhaltungsaktualisierungsereignissen](https://aka.ms/azure-bot-subscribe-to-conversation-events) [erstellt wurde.](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) |
+| channelCreated | `OnTeamsChannelCreatedAsync` | Diese Methode kann überschrieben werden, um einen Teams Kanal zu verarbeiten, der erstellt wird. Weitere Informationen finden Sie im Kanal, der in [Unterhaltungsaktualisierungsereignissen](https://aka.ms/azure-bot-subscribe-to-conversation-events) [erstellt wurde.](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) |
 | channelDeleted | `OnTeamsChannelDeletedAsync` | Diese Methode kann überschrieben werden, um einen Teams zu löschenden Kanal zu verarbeiten. Weitere Informationen finden Sie unter "In [Unterhaltungsaktualisierungsereignissen](https://aka.ms/azure-bot-subscribe-to-conversation-events) [gelöschter Kanal".](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)|
 | channelRenamed | `OnTeamsChannelRenamedAsync` | Diese Methode kann überschrieben werden, um einen Teams Kanal zu verarbeiten, der umbenannt wird. Weitere Informationen finden Sie unter ["Kanal umbenannt"](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) in [Unterhaltungsaktualisierungsereignissen.](https://aka.ms/azure-bot-subscribe-to-conversation-events) |
 | teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;`Diese Methode kann überschrieben werden, um ein Teams Team zu verarbeiten, das umbenannt wird. Weitere Informationen finden Sie unter [team renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 | MembersAdded | `OnTeamsMembersAddedAsync` | Diese Methode ruft die `OnMembersAddedAsync` Methode in `ActivityHandler` auf. Die Methode kann überschrieben werden, um Mitglieder zu behandeln, die einem Team beitreten. Weitere Informationen finden Sie unter Teammitglieder, die in [Unterhaltungsaktualisierungsereignissen](https://aka.ms/azure-bot-subscribe-to-conversation-events) [hinzugefügt wurden.](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) |
 | MembersRemoved | `OnTeamsMembersRemovedAsync` | Diese Methode ruft die `OnMembersRemovedAsync` Methode in `ActivityHandler` auf. Die Methode kann überschrieben werden, um Mitglieder zu behandeln, die ein Team verlassen. Weitere Informationen finden Sie unter Teammitglieder, die in [Aktualisierungsereignissen](https://aka.ms/azure-bot-subscribe-to-conversation-events)für [Unterhaltungen entfernt wurden.](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed) |
 
-#### <a name="teams-invoke-activities"></a>Teams Aufrufen von Aktivitäten
+#### <a name="teams-invoke-activities"></a>aufrufende Aktivitäten Teams
 
 Die Liste der vom `onInvokeActivity` Teams-Aktivitätshandler aufgerufenen Teams Aktivitätshandler umfasst Folgendes:
 
@@ -158,7 +282,7 @@ Die Liste der vom `onInvokeActivity` Teams-Aktivitätshandler aufgerufenen Teams
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um Logik bereitzustellen, wenn ein Aufgabenmodul abgerufen wird. |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um Beim Senden eines Aufgabenmoduls Logik bereitzustellen. |
 
-Die in diesem Abschnitt aufgeführten Aufrufaktivitäten gelten für Unterhaltungsbots in Teams. Das Bot Framework SDK unterstützt auch Aufrufaktivitäten, die für Messaging-Erweiterungen spezifisch sind. Weitere Informationen finden Sie unter ["Messaging-Erweiterungen".](https://aka.ms/azure-bot-what-are-messaging-extensions)
+Die in diesem Abschnitt aufgeführten Aufrufaktivitäten gelten für Unterhaltungs-Bots in Teams. Das Bot Framework SDK unterstützt auch Aufrufaktivitäten, die für Messaging-Erweiterungen spezifisch sind. Weitere Informationen finden Sie unter ["Messaging-Erweiterungen".](https://aka.ms/azure-bot-what-are-messaging-extensions)
 
 # <a name="python"></a>[Python](#tab/python)
 
@@ -189,16 +313,16 @@ Die `TeamsActivityHandler` Liste der Handler aus dem Core Bot Framework-Handlera
 
 | Ereignis | Handler | Beschreibung |
 | :-- | :-- | :-- |
-| channelCreated | `on_teams_channel_created` | Diese Methode kann überschrieben werden, um einen zu erstellenden Teams Kanal zu verarbeiten. Weitere Informationen finden Sie im Kanal, der in [Unterhaltungsaktualisierungsereignissen](https://aka.ms/azure-bot-subscribe-to-conversation-events) [erstellt wurde.](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) |
+| channelCreated | `on_teams_channel_created` | Diese Methode kann überschrieben werden, um einen Teams Kanal zu verarbeiten, der erstellt wird. Weitere Informationen finden Sie im Kanal, der in [Unterhaltungsaktualisierungsereignissen](https://aka.ms/azure-bot-subscribe-to-conversation-events) [erstellt wurde.](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) |
 | channelDeleted | `on_teams_channel_deleted` | Diese Methode kann überschrieben werden, um einen Teams zu löschenden Kanal zu verarbeiten. Weitere Informationen finden Sie unter "In [Unterhaltungsaktualisierungsereignissen](https://aka.ms/azure-bot-subscribe-to-conversation-events) [gelöschter Kanal".](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)|
 | channelRenamed | `on_teams_channel_renamed` | Diese Methode kann überschrieben werden, um einen Teams Kanal zu verarbeiten, der umbenannt wird. Weitere Informationen finden Sie unter ["Kanal umbenannt"](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) in [Unterhaltungsaktualisierungsereignissen.](https://aka.ms/azure-bot-subscribe-to-conversation-events)|
 | teamRenamed | `on_teams_team_renamed` | `return Task.CompletedTask;`Diese Methode kann überschrieben werden, um ein Teams Team zu verarbeiten, das umbenannt wird. Weitere Informationen finden Sie unter [team renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 | MembersAdded | `on_teams_members_added` | Diese Methode ruft die `OnMembersAddedAsync` Methode in `ActivityHandler` auf. Die Methode kann überschrieben werden, um Mitglieder zu behandeln, die einem Team beitreten. Weitere Informationen finden Sie unter Teammitglieder, die in [Unterhaltungsaktualisierungsereignissen](https://aka.ms/azure-bot-subscribe-to-conversation-events) [hinzugefügt wurden.](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added)|
 | MembersRemoved | `on_teams_members_removed` | Diese Methode ruft die `OnMembersRemovedAsync` Methode in `ActivityHandler` auf. Die Methode kann überschrieben werden, um Mitglieder zu behandeln, die ein Team verlassen. Weitere Informationen finden Sie unter Teammitglieder, die in [Aktualisierungsereignissen](https://aka.ms/azure-bot-subscribe-to-conversation-events)für [Unterhaltungen entfernt wurden.](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed)|
 
-#### <a name="teams-invoke-activities"></a>Teams Aufrufen von Aktivitäten
+#### <a name="teams-invoke-activities"></a>aufrufende Aktivitäten Teams
 
-Die Liste der Teams Aktivitätshandler, die vom Teams Aktivitätshandler aufgerufen werden, `on_invoke_activity` umfasst Folgendes:
+Die Liste der vom `on_invoke_activity` Teams-Aktivitätshandler aufgerufenen Teams Aktivitätshandler umfasst Folgendes:
 
 | Aufrufen von Typen                    | Handler                              | Beschreibung                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -211,7 +335,7 @@ Die Liste der Teams Aktivitätshandler, die vom Teams Aktivitätshandler aufgeru
 | task/fetch                      | `on_teams_task_module_fetch`        | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um Logik bereitzustellen, wenn ein Aufgabenmodul abgerufen wird. |
 | task/submit                     | `on_teams_task_module_submit`       | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um Beim Senden eines Aufgabenmoduls Logik bereitzustellen. |
 
-Die in diesem Abschnitt aufgeführten Aufrufaktivitäten gelten für Unterhaltungsbots in Teams. Das Bot Framework SDK unterstützt auch Aufrufaktivitäten, die für Messaging-Erweiterungen spezifisch sind. Weitere Informationen finden Sie unter ["Messaging-Erweiterungen".](https://aka.ms/azure-bot-what-are-messaging-extensions)
+Die in diesem Abschnitt aufgeführten Aufrufaktivitäten gelten für Unterhaltungs-Bots in Teams. Das Bot Framework SDK unterstützt auch Aufrufaktivitäten, die für Messaging-Erweiterungen spezifisch sind. Weitere Informationen finden Sie unter ["Messaging-Erweiterungen".](https://aka.ms/azure-bot-what-are-messaging-extensions)
 
 ---
 
