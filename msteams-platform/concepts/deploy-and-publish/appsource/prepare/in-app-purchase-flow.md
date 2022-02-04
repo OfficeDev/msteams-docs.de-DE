@@ -1,20 +1,15 @@
 ---
 title: In-App-Kaufablauf für die Monetarisierung von Apps
-description: Lernen Sie die grundlegenden Aufgaben und Konzepte kennen, die erforderlich sind, um In-App-Käufe und Testfunktionen in Teams-Apps zu implementieren.
+description: 'Lernen Sie die grundlegenden Aufgaben und Konzepte kennen, die erforderlich sind, um In-App-Käufe und Testfunktionen in Teams-Apps zu implementieren.'
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 455809e64a934384d28e00bdf721ae8c66cb7d19
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62363437"
 ---
+
 # <a name="in-app-purchases"></a>In-App-Käufe
 
-Microsoft Teams APIs bereitstellen, mit denen Sie die In-App-Käufe implementieren können, um von kostenlos auf kostenpflichtige Teams Apps zu aktualisieren. Mit dem In-App-Kauf können Sie Benutzer von kostenlos in kostenpflichtige Pläne direkt aus Ihrer App heraus konvertieren.
+Microsoft Teams APIs bereitstellen, mit denen Sie die In-App-Käufe implementieren können, um von kostenlosen auf kostenpflichtige Teams-Apps zu aktualisieren. Mit dem In-App-Kauf können Sie Benutzer von kostenlos in kostenpflichtige Pläne direkt aus Ihrer App heraus konvertieren.
 
 > [!NOTE]
 > In-App-Käufe für Teams Apps sind derzeit nur in der [**Entwicklervorschau**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro) verfügbar.
@@ -35,7 +30,7 @@ Die In-App-Kauferfahrung kann entweder durch Aktualisieren der Datei **"manifest
 
 ### <a name="update-manifest"></a>Updatemanifest
 
-Um die In-App-Kauferfahrung zu aktivieren, aktualisieren Sie ihre Teams **App-Manifest.json-Datei**, indem Sie die RSC-Berechtigungen hinzufügen. Es ermöglicht Ihren App-Benutzern, ein Upgrade auf eine kostenpflichtige Version Ihrer App durchzuführen und neue Funktionen zu verwenden. Das Update für das App-Manifest lautet wie folgt:
+Um die In-App-Kauferfahrung zu aktivieren, aktualisieren Sie Ihre Teams App **manifest.json-Datei**, indem Sie die RSC-Berechtigungen hinzufügen. Es ermöglicht Ihren App-Benutzern, ein Upgrade auf eine kostenpflichtige Version Ihrer App durchzuführen und neue Funktionen zu verwenden. Das Update für das App-Manifest lautet wie folgt:
 
 ```json
 
@@ -106,6 +101,10 @@ Im folgenden Beispiel werden die Benutzer zum Erwerben von Abonnementplänen fü
 
     :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Angebotsseite des Abonnements." border="true":::
 
+## <a name="next-step"></a>Nächster Schritt
+
+> [!div class="nextstepaction"]
+> [Testvorschau für monetarisierte Apps](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
 
 ## <a name="see-also"></a>Siehe auch
 

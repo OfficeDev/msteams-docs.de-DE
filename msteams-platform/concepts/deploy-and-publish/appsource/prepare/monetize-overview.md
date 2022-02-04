@@ -1,17 +1,12 @@
 ---
 title: Monetarisieren Der App-Übersicht
-description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App monetisieren.
+description: 'Erfahren Sie, wie Sie Ihre Microsoft Teams-App monetisieren.'
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 8bf223dbb2ff63eca1ae466354c854af6466e523
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362900"
 ---
+
 # <a name="monetize-your-app"></a>Monetarisieren Ihrer App
 
 Microsoft Teams App-Store Features bereitstellen, mit denen Sie Ihre Apps monetarisieren und Kunden gewinnen können, indem Sie mit Ihren Benutzern interagieren. Die Themen in diesem Abschnitt zeigen Ihnen, wie Sie diese Features in Ihre App integrieren.
@@ -45,6 +40,18 @@ Sie können eine kostenlose Testversion Ihrer App anbieten, um mehr Kunden dazu 
 :::row-end:::
 :::row:::
     :::column:::
+        ![In-App-Käufe](~/assets/images/saas-offer/pricing-in-app-purchases.png)
+    :::column-end:::
+    :::column span="2":::
+**In-App-Käufe**
+
+Unabhängig davon, ob Sie einen Preis für Ihre App berechnen oder kostenlos anbieten, können Sie In-App-Käufe in Ihrer App verwenden, um einen laufenden Umsatzstrom bereitzustellen. Verwenden Sie In-App-Käufe, um Kunden das Upgrade von einer kostenlosen auf eine kostenpflichtige Version Ihrer App zu ermöglichen.
+
+[Verwenden von In-App-Käufen](~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
         :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-image.png" alt-text="SaaS-Angebot für Testvorschau":::
     :::column-end:::
     :::column span="2":::
@@ -57,20 +64,6 @@ Mit einem SaaS-Angebot (Transactable Software as a Service) können Sie die End-
 
     :::column-end:::
 :::row-end:::
-
-:::row:::
-    :::column:::
-        ![In-App-Käufe](~/assets/images/saas-offer/pricing-in-app-purchases.png)
-    :::column-end:::
-    :::column span="2":::
-**In-App-Käufe**
-
-Unabhängig davon, ob Sie einen Preis für Ihre App berechnen oder kostenlos anbieten, können Sie In-App-Käufe in Ihrer App verwenden, um einen laufenden Umsatzstrom bereitzustellen. Verwenden Sie In-App-Käufe, um Kunden das Upgrade von einer kostenlosen auf eine kostenpflichtige Version Ihrer App zu ermöglichen.
-
-[Verwenden von In-App-Käufen](~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
-    :::column-end:::
-:::row-end:::
-
 ## <a name="next-step"></a>Nächster Schritt
 
 [Einschließen eines SaaS-Angebots in Ihre Microsoft Teams-App](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

@@ -6,13 +6,8 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams-Apps– Benutzerteilnehmer-Rollen-API für Benutzerkontextbenachrichtigung – Signalabfrage
-ms.openlocfilehash: 2335233db1c973ed134968c7192a32d4bf9b5a34
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362725"
 ---
+
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
 Die Besprechungserweiterung bietet APIs, um die Besprechungserfahrung zu verbessern. Mithilfe der aufgeführten APIs können Sie Folgendes ausführen:
@@ -28,12 +23,12 @@ Die folgende Tabelle enthält eine Liste der APIs, die in den SDKs Microsoft Tea
 |[**Abrufen des Benutzerkontexts**](#get-user-context-api)| Rufen Sie Kontextinformationen ab, um relevante Inhalte auf einer Teams Registerkarte anzuzeigen.| MSTC SDK|
 |[**Teilnehmer abrufen**](#get-participant-api)| Abrufen von Teilnehmerinformationen nach Besprechungs-ID und Teilnehmer-ID. |MSBF SDK|
 |[**Benachrichtigungssignal senden**](#send-notification-signal-api)| Bereitstellen von Besprechungssignalen mithilfe der vorhandenen Unterhaltungsbenachrichtigungs-API für den Benutzer-Bot-Chat und Benachrichtigen von Benutzeraktionen, die ein Dialogfeld in einer Besprechung anzeigen. |MSBF SDK|
-|[**Besprechungsdetails abrufen**](#get-meeting-details-api)| Abrufen der statischen Metadaten einer Besprechung. |Bot SDK |
+|[**Besprechungsdetails abrufen**](#get-meeting-details-api)| Abrufen der statischen Metadaten einer Besprechung. |MSBF SDK |
 |[**Senden von Untertiteln in Echtzeit**](#send-real-time-captions-api)| Senden von Untertiteln in Echtzeit an eine laufende Besprechung. |MSTC SDK|
 |[**Freigeben von App-Inhalten für die Phase**](#share-app-content-to-stage-api)| Geben Sie bestimmte Teile der App über den App-Seitenbereich in einer Besprechung für die Besprechungsphase frei. |MSTC SDK|
 |[**Abrufen des Freigabestatus der App-Inhaltsphasen**](#get-app-content-stage-sharing-state-api)| Abrufen von Informationen zum Freigabestatus von Apps in der Besprechungsphase. |MSTC SDK|
 |[**Abrufen von Funktionen für die Freigabe von App-Inhalten**](#get-app-content-stage-sharing-capabilities-api)| Rufen Sie die Funktionen der Apps für die Freigabe in die Besprechungsphase ab. |MSTC SDK|
-|[**Abrufen von Teams Besprechungsereignissen in Echtzeit**](#get-real-time-teams-meeting-events-api)|Abrufen von Echtzeitbesprechungsereignissen, z. B. der tatsächlichen Start- und Endzeit.| Bot SDK|
+|[**Abrufen von Echtzeit-Teams Besprechungsereignissen**](#get-real-time-teams-meeting-events-api)|Abrufen von Echtzeitbesprechungsereignissen, z. B. der tatsächlichen Start- und Endzeit.| MSBF SDK|
 
 ## <a name="get-user-context-api"></a>Abrufen der Benutzerkontext-API
 
