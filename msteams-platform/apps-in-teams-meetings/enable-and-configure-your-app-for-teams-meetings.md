@@ -4,12 +4,12 @@ author: surbhigupta
 description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen und verschiedene Besprechungsszenarien, Aktualisieren des App-Manifests, Konfigurieren von Features wie In-Meeting-Dialog, freigegebener Besprechungsphase, Besprechungs-SidePanel und mehr
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: e0bf9f06d9a72f711e45291cd5f212ef1b2718c3
-ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
+ms.openlocfilehash: cc1e3abc2801e750cc838a73459e707ed1913271
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62323176"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362767"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -119,13 +119,59 @@ Die Messaging-Erweiterung funktioniert erwartungsgemäß, wenn sich ein Benutzer
 
 #### <a name="in-meeting-dialog-box"></a>Dialogfeld "Besprechungsinterne Besprechung"
 
-Das Dialogfeld in der Besprechung wird verwendet, um Teilnehmer während der Besprechung einzubeziehen und Während der Besprechung Informationen oder Feedback zu sammeln. Verwenden Sie die [`NotificationSignal`](API-references.md#notificationsignal-api) API, um eine Blasenbenachrichtigung auszulösen. Fügen Sie als Teil der Benachrichtigungsanforderungsnutzlast die URL ein, unter der der anzuzeigende Inhalt gehostet wird.
+Das Dialogfeld in der Besprechung wird verwendet, um Teilnehmer während der Besprechung einzubeziehen und Während der Besprechung Informationen oder Feedback zu sammeln. Verwenden Sie die [SendNotificationSignal-API](API-references.md#send-notification-signal-api) , um eine Blasenbenachrichtigung auszulösen. Fügen Sie als Teil der Benachrichtigungsanforderungsnutzlast die URL ein, unter der der anzuzeigende Inhalt gehostet wird.
 
 Das Besprechungsdialogfeld darf kein Aufgabenmodul verwenden. Das Aufgabenmodul wird in einem Besprechungschat nicht aufgerufen. Eine externe Ressourcen-URL wird verwendet, um die Inhaltsblase in einer Besprechung anzuzeigen. Sie können die `submitTask` Methode verwenden, um Daten in einem Besprechungschat zu übermitteln.
 
 > [!NOTE]
-> * Sie müssen die [SubmitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) -Funktion aufrufen, um sie automatisch zu schließen, nachdem ein Benutzer eine Aktion in der Webansicht ausgeführt hat. Dies ist eine Anforderung für die App-Übermittlung. Weitere Informationen finden Sie unter [Teams SDK-Aufgabenmodul](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-tasks-submittask&preserve-view=true).
-> * Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss die Anforderungsnutzlast für den ersten Aufruf auf Anforderungsmetadaten im `from` Objekt basieren, nicht `from.aadObjectId` auf `from.id` Anforderungsmetadaten. `from.id`ist die Benutzer-ID und `from.aadObjectId` die Azure Active Directory-ID des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+> * Sie müssen die [SubmitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) -Funktion aufrufen, um sie automatisch zu schließen, nachdem ein Benutzer eine Aktion in der Webansicht ausgeführt hat. Dies ist eine Anforderung für die App-Übermittlung. Weitere Informationen finden Sie unter [Teams SDK-Aufgabenmodul](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
+> * Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss die Anforderungsnutzlast für den ersten Aufruf auf Anforderungsmetadaten im `from` Objekt basieren, nicht `from.aadObjectId` auf `from.id` Anforderungsmetadaten. `from.id`ist die Benutzer-ID und `from.aadObjectId` die Azure Active Directory -ID (AAD) des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+
+#### <a name="shared-meeting-stage"></a>Freigegebene Besprechungsphase
+
+> [!NOTE]
+> Derzeit ist dieses Feature nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
+
+Die freigegebene Besprechungsphase ermöglicht es Besprechungsteilnehmern, in Echtzeit mit App-Inhalten zu interagieren und daran zusammenzuarbeiten. Sie können Ihre Apps auf folgende Weise für die Besprechungsphase für die Zusammenarbeit freigeben:
+
+* [Teilen Sie die gesamte App in der Phase](#share-entire-app-to-stage) mithilfe der Schaltfläche "Freigabe für Phase" in Teams Client.
+* [Teilen Sie bestimmte Teile der App, die](#share-specific-parts-of-the-app-to-stage) mithilfe von APIs im Teams-Client-SDK bereitgestellt werden sollen.
+
+##### <a name="share-entire-app-to-stage"></a>Freigeben der gesamten App für die Phase
+
+Teilnehmer können die gesamte App für die Besprechungsphase für die Zusammenarbeit freigeben, indem sie die Schaltfläche "Freigabe für Phase" aus dem App-Seitenbereich verwenden.
+
+<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+
+Um die gesamte App für die Phase freizugeben, müssen Sie im App-Manifest und `meetingSidePanel` als Framekontext konfigurieren`meetingStage`. Beispiel:
+
+```json
+"configurableTabs": [
+    {
+      "configurationUrl": "https://contoso.com/teamstab/configure",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "groupchat"
+      ],
+      "context":[
+        "meetingSidePanel",
+        "meetingStage"
+     ]
+    }
+  ]
+```
+
+Weitere Informationen finden Sie unter [App-Manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs). 
+
+##### <a name="share-specific-parts-of-the-app-to-stage"></a>Freigeben bestimmter Teile der App für die Phasen
+
+Teilnehmer können bestimmte Teile der App für die Gemeinsame Besprechungsphase freigeben, indem sie die APIs für die Freigabe in Phasen verwenden. Die APIs sind im Teams Client-SDK verfügbar und werden über den App-Seitenbereich aufgerufen.
+
+<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
+
+Um bestimmte Teile der App für die Phasen freizugeben, müssen Sie die zugehörigen APIs in der Teams Client-SDK-Bibliothek aufrufen. Weitere Informationen finden Sie in der [API-Referenz](API-references.md).
+
+Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss die Anforderungsnutzlast für den ersten Aufruf auf Anforderungsmetadaten im `from` Objekt basieren, nicht `from.aadObjectId` auf `from.id` Anforderungsmetadaten. `from.id`ist die Benutzer-ID und `from.aadObjectId` die Azure Active Directory-ID des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="after-a-meeting"></a>Nach einer Besprechung
 
@@ -137,7 +183,7 @@ Die Konfigurationen für Nach [- und Vorbesprechungen](#before-a-meeting) sind i
 |----------------|-----------------|--------------|----------------|
 | Besprechungs-App | Veranschaulicht die Verwendung der Besprechungstoken-Generator-App zum Anfordern eines Tokens. Das Token wird sequenziell generiert, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Das Token ist nützlich in Situationen wie Meetings mit DerBesprechung und Q&A-Sitzungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |Beispiel für Besprechungsphasen | Beispiel-App zum Anzeigen einer Registerkarte in der Besprechungsphase für die Zusammenarbeit | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
-|Besprechungsseitiger Bereich | Beispiel-App zum Hinzufügen von Tagesordnungen in einem besprechungsseitigen Bereich | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
+|Besprechungsseitiger Bereich | Beispiel-App zum Hinzufügen von Tagesordnungen in einem besprechungsseitigen Bereich | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
 ## <a name="step-by-step-guides"></a>Schritt-für-Schritt-Anleitungen
 

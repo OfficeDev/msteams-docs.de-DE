@@ -5,12 +5,12 @@ description: Entwerfen Sie Ihre App schneller mit standardisierten UI-Komponente
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 78c8854771c72280014489259ebda829d5915be2
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 4429c895bde9b2fd432b2d41c953c69e78f5ea92
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948446"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362942"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Entwerfen Ihrer Microsoft Teams-App mit UI-Vorlagen
 
@@ -20,9 +20,9 @@ Entwerfen Sie Ihre Microsoft Teams-App schneller mit UI-Vorlagen. Die Vorlagen s
 
 Die folgenden Ressourcen können Ihnen beim Entwerfen und Entwickeln Ihrer App mithilfe von Benutzeroberflächenvorlagen helfen.
 
-### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-Benutzeroberflächenbausatz
+### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
-Nutzen Sie UI-Vorlagen für Ihr App-Design aus dem Microsoft Teams UI Kit, das auch umfassende Informationen zur Verwendung, Anatomie, Barrierefreiheit und bewährten Methoden enthält.
+Nutzen Sie UI-Vorlagen für Ihr App-Design aus dem Microsoft Teams UI Kit, das auch umfassende Informationen zur Nutzung, Anatomie, Barrierefreiheit und bewährten Methoden enthält.
 
 > [!div class="nextstepaction"]
 > [Abrufen des UI-Kits (Numma)](https://www.figma.com/community/file/916836509871353159)
@@ -46,9 +46,23 @@ Installieren Sie eine Beispiel-App, um zu sehen, wie UI-Vorlagen in Teams Kontex
 > [!div class="nextstepaction"]
 > [Abrufen der Beispiel-App (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
+## <a name="calendar"></a>Kalender
+
+In Teams ist ein Kalender der Ort, an dem ein Benutzer bevorstehende und vergangene Ereignisse für sich selbst oder eine Gruppe anzeigt, plant und verwaltet.
+
+### <a name="top-use-cases"></a>Häufigste Anwendungsfälle
+
+* Planen von Besprechungen und Ereignissen
+* Abrufen von Erinnerungen an anstehende Besprechungen und Ereignisse
+* Anzeigen von Zeitplänen
+
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="Beispiel zeigt eine Kalender-UI-Vorlage auf dem Desktop." border="false":::
+
 ## <a name="dashboard"></a>Dashboard
 
-Ein Dashboard zeigt verschiedene Inhaltstypen an einem zentralen Ort an (Teams persönliche App oder Registerkarte). Benutzer sollten in der Lage sein, zumindest einige der Elemente anzupassen, die sie auf einem Dashboard sehen.
+Ein Dashboard zeigt verschiedene Inhaltstypen an einem zentralen Ort an (z. B. eine Teams persönliche App oder Registerkarte). Benutzer sollten in der Lage sein, zumindest einige der Elemente anzupassen, die sie auf einem Dashboard sehen.
 
 ### <a name="top-use-cases"></a>Häufigste Anwendungsfälle
 
@@ -153,7 +167,7 @@ Sie können eine Liste verwenden, um verwandte Elemente in einem scannbaren Form
 
 ## <a name="sign-in"></a>Anmelden
 
-Sie können App-Anmeldeflüsse für unterschiedliche Teams Kontexte und Identitätsanbieter entwerfen. Das folgende Beispiel enthält einmaliges Anmelden (Single Sign-On, SSO), das wir für die einfachste Authentifizierung empfehlen.
+Sie können App-Anmeldeflüsse für verschiedene Teams Kontexte und Identitätsanbieter entwerfen. Das folgende Beispiel enthält einmaliges Anmelden (Single Sign-On, SSO), das wir für die einfachste Authentifizierung empfehlen.
 
 ### <a name="top-use-case"></a>Häufigster Anwendungsfall
 
@@ -169,7 +183,7 @@ Sie können App-Anmeldeflüsse für unterschiedliche Teams Kontexte und Identit�
 
 ## <a name="settings"></a>Einstellungen
 
-Einstellungen Bildschirme können Benutzer ihre Einstellungen mit Ihrer App konfigurieren. (Hinweis: Einstellungen ist ein Container für [grundlegende UI-Komponenten.)](~/concepts/design/design-teams-app-basic-ui-components.md)
+Einstellungen Bildschirme können Benutzer ihre Einstellungen mit Ihrer App konfigurieren. (Hinweis: Einstellungen ist ein Container für [grundlegende UI-Komponenten](~/concepts/design/design-teams-app-basic-ui-components.md).)
 
 ### <a name="top-use-case"></a>Häufigster Anwendungsfall
 
@@ -201,7 +215,7 @@ Ein Assistent führt einen Benutzer durch mehrere Bildschirme, um eine Aufgabe a
 
 ### <a name="top-use-cases"></a>Häufigste Anwendungsfälle
 
-* Einrichtung
+* Setup
 * Onboarding
 * Erfahrungen bei der ersten Ausführung
 
