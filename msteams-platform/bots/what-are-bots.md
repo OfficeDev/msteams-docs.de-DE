@@ -5,16 +5,10 @@ description: Eine Übersicht über Bots in Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: def589633f6529e4ac1275ade438729344c5a004
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059735"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots in Microsoft Teams
 
-Ein Bot wird auch als Chatbot oder Unterhaltungsbot bezeichnet. Es handelt sich um eine App, die einfache und sich wiederholende Aufgaben von Benutzern ausführt, z. B. Kundendienst- oder Supportmitarbeiter. Die tägliche Verwendung von Bots umfasst Bots, die Informationen über das Wetter bereitstellen, Essensreservierungen durchführen oder Reiseinformationen bereitstellen. Interaktionen mit Bots können schnelle Fragen und Antworten sein, oder eine komplexe Unterhaltung.
+Ein Bot wird auch als Chatbot oder Unterhaltungsbot bezeichnet. Es handelt sich um eine App, die einfache und sich wiederholende Aufgaben von Benutzern ausführt, z. B. Kundendienst- oder Supportmitarbeiter. Die tägliche Verwendung von Bots umfasst Bots, die Informationen über das Wetter bereitstellen, Essensreservierungen durchführen oder Reiseinformationen bereitstellen. Interaktionen mit Bots können kurze Fragen und Antworten oder komplexe Unterhaltungen sein.
 
 > [!IMPORTANT]
 > Derzeit sind Bots in Government Community Cloud (GCC) verfügbar, aber nicht in GCC-High und Department of Defense (DOD).
