@@ -6,13 +6,8 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: d0ec446b51363bbbe4c3322ec1d840ad4068ff74
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768371"
 ---
+
 # <a name="teamsfx-sdk-for-typescript-or-javascript"></a>TeamsFx SDK für TypeScript oder JavaScript
 
 TeamsFx zielt darauf ab, aufgaben der Implementierung von Identität und Zugriff auf Cloudressourcen auf einzeilige Anweisungen ohne Konfiguration zu reduzieren.
@@ -21,16 +16,16 @@ Verwenden Sie die Bibliothek für Folgendes:
 
 - Greifen Sie auf ähnliche Weise auf Kernfunktionen in der Client- und Serverumgebung zu.
 - Schreiben von Benutzerauthentifizierungscode auf vereinfachte Weise.
- 
+
 ## <a name="get-started"></a>Erste Schritte
 
 TeamsFx SDK ist im Gerüstprojekt mithilfe des TeamsFx-Toolkits oder der CLI vorkonfiguriert.
-Weitere Informationen finden Sie unter [Teams App-Projekt.](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md)
+Weitere Informationen finden Sie unter [Teams App-Projekt](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
-- Node.js Oder `10.x.x` höher.
-- Wenn Ihr Projekt `botbuilder` verwandte [Pakete](https://github.com/Microsoft/botbuilder-js#packages) als Abhängigkeiten installiert hat, stellen Sie sicher, dass sie die gleiche Version aufweisen und die Version `>= 4.9.3` ist. ([Problem – alle BOTBUILDER-Pakete sollten dieselbe Version sein)](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548)
+- Node.js Version `10.x.x` oder höher.
+- Wenn Ihr Projekt verwandte [Pakete](https://github.com/Microsoft/botbuilder-js#packages) als Abhängigkeiten installiert `botbuilder` hat, stellen Sie sicher, dass sie die gleiche Version aufweisen und die Version ist.`>= 4.9.3` ([Problem – alle BOTBUILDER-Pakete sollten dieselbe Version sein](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548)))
 
 Weitere Informationen finden Sie unter:
 * [Quellcode](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
@@ -40,7 +35,7 @@ Weitere Informationen finden Sie unter:
 
 ### <a name="install-the-microsoftteamsfx-package"></a>Installieren des `@microsoft/teamsfx` Pakets
 
-Installieren Sie das TeamsFx SDK für TypeScript oder JavaScript `npm` mit:
+Installieren Sie das TeamsFx SDK für TypeScript oder JavaScript mit `npm`:
 
 ```bash
 npm install @microsoft/teamsfx
@@ -56,13 +51,12 @@ Zum Erstellen eines Graph-Clientobjekts für den Zugriff auf die Microsoft Graph
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
 ```
 
-- In nodeJS-Umgebungen wie Azure Function können Sie einfach `loadConfiguration` aufrufen. Es wird standardmäßig aus Umgebungsvariablen geladen.
+- In nodeJS-Umgebungen wie Azure Function können Sie einfach aufrufen `loadConfiguration`. Es wird standardmäßig aus Umgebungsvariablen geladen.
 
 ```ts
 loadConfiguration();
@@ -76,7 +70,6 @@ Verwenden Sie den folgenden Codeausschnitt:
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -114,17 +107,17 @@ Anmeldeinformationsklassen implementieren `TokenCredential` eine Schnittstelle, 
 
 ### <a name="bots"></a>Bots
 
-Bot-bezogene Klassen werden im [Bot-Ordner](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot)gespeichert.
+Bot-bezogene Klassen werden im [Bot-Ordner](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot) gespeichert.
 
 `TeamsBotSsoPrompt` kann in das Bot-Framework integriert werden. Es vereinfacht den Authentifizierungsprozess für die Entwicklung einer Bot-Anwendung.
 
 ### <a name="helper-functions"></a>Hilfsfunktionen
 
-Das TeamsFx SDK bietet Hilfsfunktionen, um die Konfiguration für Drittanbieterbibliotheken zu vereinfachen. Sie befinden sich unter dem [Hauptordner.](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core)
+Das TeamsFx SDK bietet Hilfsfunktionen, um die Konfiguration für Drittanbieterbibliotheken zu vereinfachen. Sie befinden sich unter dem [Hauptordner](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
 
 ### <a name="error-handling"></a>Fehlerbehandlung
 
-Die API-Fehlerantwort lautet `ErrorWithCode` , die Fehlercode und Fehlermeldung enthält.
+Die API-Fehlerantwort lautet `ErrorWithCode`, die Fehlercode und Fehlermeldung enthält.
 
 Um beispielsweise einen bestimmten Fehler herauszufiltern, können Sie den folgenden Codeausschnitt verwenden:
 
@@ -163,15 +156,14 @@ try {
 
 Der folgende Abschnitt enthält mehrere Codeausschnitte für häufige Szenarien:
 
-### <a name="use-graph-api-in-tab-app"></a>Verwenden der Graph-API in der Registerkarten-App
+### <a name="use-graph-api-in-tab-app"></a>Verwenden Graph-API in der Registerkarten-App
 
-Use `TeamsUserCredential` and `createMicrosoftGraphClient` .
+Use `TeamsUserCredential` and `createMicrosoftGraphClient`.
 
 ```ts
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -188,7 +180,6 @@ Verwenden Sie `axios` die Bibliothek, um eine HTTP-Anforderung an Azure Function
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -205,13 +196,16 @@ const response = await axios.default.get(apiConfig.endpoint + "api/httptrigger1"
 
 ### <a name="access-sql-database-in-azure-function"></a>Zugreifen auf SQL Datenbank in Azure Function
 
-Verwenden Sie `tedious` die Bibliothek, um auf SQL zuzugreifen und `DefaultTediousConnectionConfiguration` die Authentifizierung zu verwalten.
-Abgesehen davon `tedious` können Sie auch Verbindungskonfigurationen anderer SQL Bibliotheken basierend auf dem Ergebnis von `sqlConnectionConfig.getConfig()` erstellen.
+Verwenden Sie `tedious` die Bibliothek, um auf SQL zuzugreifen und die Authentifizierung zu verwalten`DefaultTediousConnectionConfiguration`.
+Abgesehen davon `tedious`können Sie auch Verbindungskonfigurationen anderer SQL Bibliotheken basierend auf dem Ergebnis von `sqlConnectionConfig.getConfig()`erstellen.
 
 ```ts
 loadConfiguration();
 const sqlConnectConfig = new DefaultTediousConnectionConfiguration();
+// If there's only one SQL database
 const config = await sqlConnectConfig.getConfig();
+// If there are multiple SQL databases
+const config2 = await sqlConnectConfig.getConfig("your database name");
 const connection = new Connection(config);
 connection.on("connect", (error) => {
   if (error) {
@@ -235,7 +229,7 @@ loadConfiguration({
 
 ### <a name="use-graph-api-in-bot-application"></a>Verwenden der Graph-API in der Bot-Anwendung
 
-Zum `TeamsBotSsoPrompt` Dialogfeldsatz hinzufügen.
+Zum Dialogfeldsatz hinzufügen `TeamsBotSsoPrompt` .
 
 ```ts
 const { ConversationState, MemoryStorage } = require("botbuilder");
