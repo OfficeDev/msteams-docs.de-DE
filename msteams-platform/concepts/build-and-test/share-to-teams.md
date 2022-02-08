@@ -3,27 +3,27 @@ title: Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
 description: Erfahren Sie, wie Sie die Freigabe mithilfe von Codebeispielen Teams eingebetteten Schaltfläche auf Ihrer Website mit einer Websitevorschau hinzufügen.
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: Freigeben Teams Share-to-Teams
-ms.openlocfilehash: 0f9425ae28312aeb9700d260d9ac2cf208351d4c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+keywords: Freigeben von Teams share-to-Teams
+ms.openlocfilehash: dc70e35d8a02d4dc6349a062d0b4a38fd0a2f0a3
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889286"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435705"
 ---
 # <a name="create-share-to-teams-button"></a>Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
 
-Websites von Drittanbietern können das Startprogrammskript verwenden, um Share-to-Teams-Schaltflächen auf ihren Webseiten einzubetten. Wenn Sie diese Option auswählen, wird die Share-to-Teams-Oberfläche in einem Popupfenster gestartet. Auf diese Weise können Sie einen Link direkt für jede Person oder Microsoft Teams Kanal freigeben, ohne den Kontext zu wechseln. In diesem Dokument erfahren Sie, wie Sie eine Schaltfläche für Teams freigeben für Ihre Website erstellen und einbetten, Eine Websitevorschau erstellen und share-to-Teams für Education erweitern.
+Websites von Drittanbietern können das Startprogrammskript verwenden, um Share-to-Teams-Schaltflächen auf ihren Webseiten einzubetten. Wenn Sie dies auswählen, wird die Share-to-Teams-Oberfläche in einem Popupfenster gestartet. Auf diese Weise können Sie einen Link direkt für jede Person oder Microsoft Teams Kanal freigeben, ohne den Kontext zu wechseln. In diesem Dokument erfahren Sie, wie Sie eine Schaltfläche für Teams freigeben für Ihre Website erstellen und einbetten, eine Websitevorschau erstellen und share-to-Teams für Education erweitern.
 
 > [!NOTE]
-> * Nur die Desktopversionen von Edge und Chrome werden unterstützt.
+> * Nur die Desktopversionen von Microsoft Edge und Google Chrome werden unterstützt.
 > * Die Verwendung von Freemium- oder Gastkonten wird nicht unterstützt.  
 
 In der folgenden Abbildung wird die Popupoberfläche "Share-to-Teams" angezeigt:
 
 ![Share-to-Teams-Popup](~/assets/images/share-to-teams-popup.png)
 
-## <a name="embed-a-share-to-teams-button"></a>Schaltfläche zum Einbetten einer Freigabe in Teams
+## <a name="embed-a-share-to-teams-button"></a>Einbetten einer Freigabe in Teams Schaltfläche
 
 1. Fügen Sie das `launcher.js` Skript auf Ihrer Webseite hinzu.
 
@@ -40,11 +40,11 @@ In der folgenden Abbildung wird die Popupoberfläche "Share-to-Teams" angezeigt:
     </div>
     ```
 
-    Nach Abschluss dieses Vorgangs wird das symbol Microsoft Teams zu Ihrer Website hinzugefügt. Die folgende Abbildung zeigt das Symbol "Freigeben für Teams":
+    Nach Abschluss dieses Vorgangs wird das Microsoft Teams-Symbol zu Ihrer Website hinzugefügt. Die folgende Abbildung zeigt das Symbol "Freigeben für Teams":
 
     ![Symbol "Für Teams freigeben"](~/assets/icons/share-to-teams-icon.png)
 
-1. Wenn Sie eine andere Symbolgröße für die Schaltfläche "Freigeben bis Teams" wünschen, verwenden Sie alternativ das `data-icon-px-size` Attribut.
+1. Wenn Sie eine andere Symbolgröße für die Schaltfläche "Freigeben an Teams" wünschen, verwenden Sie alternativ das `data-icon-px-size` Attribut.
 
     ```html
     <div
@@ -53,7 +53,7 @@ In der folgenden Abbildung wird die Popupoberfläche "Share-to-Teams" angezeigt:
       data-icon-px-size="64">
     </div>
     ```
-1. Wenn für den freigegebenen Link eine Benutzerauthentifizierung erforderlich ist und die URL-Vorschau ihres Links, der freigegeben werden soll, in Teams nicht gut gerendert wird, können Sie die URL-Vorschau deaktivieren, indem Sie das Attribut hinzufügen, `data-preview` das auf festgelegt `false` ist.
+1. Wenn der freigegebene Link eine Benutzerauthentifizierung erfordert und die URL-Vorschau ihres Links, der freigegeben werden soll, in Teams nicht gut gerendert wird, können Sie die URL-Vorschau deaktivieren, indem Sie das Attribut hinzufügen, das `data-preview` auf `false`festgelegt ist.
 
     ```html
     <div
@@ -67,7 +67,7 @@ In der folgenden Abbildung wird die Popupoberfläche "Share-to-Teams" angezeigt:
 
 ## <a name="craft-your-website-preview"></a>Erstellen der Websitevorschau
 
-Wenn Ihre Website für Teams freigegeben wird, enthält die Karte, die in den ausgewählten Kanal eingefügt wird, eine Vorschau Ihrer Website. Sie können das Verhalten dieser Vorschau steuern, indem Sie sicherstellen, dass der freigegebenen Website die entsprechenden Metadaten hinzugefügt werden, `data-href` z. B. die URL.  
+Wenn Ihre Website für Teams freigegeben wird, enthält die Karte, die in den ausgewählten Kanal eingefügt wird, eine Vorschau Ihrer Website. Sie können das Verhalten dieser Vorschau steuern, indem Sie sicherstellen, dass der freigegebenen Website die entsprechenden Metadaten hinzugefügt werden, z. B. die `data-href` URL.  
 
 **So zeigen Sie die Vorschau an**
 
@@ -86,7 +86,7 @@ Sie können entweder die HTML-Standardversionen oder die Open Graph-Version verw
 
 ## <a name="share-to-teams-for-education"></a>Freigeben für Teams für Education
 
-Für Lehrer, die die Schaltfläche "Freigeben" zum Teams verwenden, gibt es eine zusätzliche Option für `Create an Assignment` . Auf diese Weise können Sie basierend auf dem freigegebenen Link schnell eine Aufgabe im ausgewählten Team erstellen. Die folgende Abbildung zeigt Share-to-Teams für Bildungseinrichtungen: 
+Für Lehrer, die die Schaltfläche "Freigeben" zum Teams verwenden, gibt es eine zusätzliche Option für `Create an Assignment`. Auf diese Weise können Sie basierend auf dem freigegebenen Link schnell eine Aufgabe im ausgewählten Team erstellen. Die folgende Abbildung zeigt Share-to-Teams für Bildungseinrichtungen: 
 
 ![Freigeben für Teams Popup-Bildungseinrichtungen](~/assets/images/share-to-teams-popup-edu.png)
 

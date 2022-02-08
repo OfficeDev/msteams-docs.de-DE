@@ -6,9 +6,14 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 0f723edb3cc890ef0668dbd3b8f87648935e20c3
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435677"
 ---
-
-# <a name="create-new-teams-project-using-teams-toolkit"></a>Erstellen eines neuen Teams-Projekts mit Teams Toolkit
+# <a name="create-new-teams-project-using-teams-toolkit"></a>Erstellen eines neuen Teams Projekts mit Teams Toolkit
 
 Um neue Teams Projekt mit Teams Toolkit zu erstellen, wählen Sie **"Erstellen eines neuen Teams App-Projekts**" oder **"Start" aus einem Beispiel aus**.
 
@@ -25,7 +30,7 @@ Die folgenden Handbücher helfen Ihnen beim Erstellen eines neuen Teams App-Proj
 
  Sie können ein neues Projekt aus dem **Beispielkatalog** erstellen. Wählen Sie das erforderliche Beispiel zum Erstellen von Apps aus. Die folgenden Schritte führen Sie zum Erstellen von Apps anhand von Beispielen:
 
- 1. Öffnen **Sie Teams Toolkit** aus Visual Studio Code.
+ 1. Öffnen Sie **Teams Toolkit** aus Microsoft Visual Studio Code.
  1. Wählen Sie den Abschnitt **"ENTWICKLUNG** " in der Strukturansicht aus.
  1. Wählen Sie **Beispiele anzeigen aus**. Der Beispielkatalog wird wie in der folgenden Abbildung dargestellt angezeigt:
    

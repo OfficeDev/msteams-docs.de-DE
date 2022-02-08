@@ -4,27 +4,27 @@ description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanrufbot für Microso
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Aufrufen von Bot-Audio-/Video-Audiovideomedien
-ms.openlocfilehash: 2d2a3411d8db09c6bdf2199efb9cb5e721701135
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 5368f8e5b5241ba91a1e4ad14b5d46f9ab778a12
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212489"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435153"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
 
 Ein Bot, der an Audio- oder Videoanrufen und Onlinebesprechungen teilnimmt, ist ein regulärer Microsoft Teams Bot mit den folgenden zusätzlichen Features, die zum Registrieren des Bots verwendet werden:
 
-* Es gibt eine neue Version des Teams-App-Manifests mit zwei zusätzlichen Einstellungen `supportsCalling` und `supportsVideo` . Diese Einstellungen sind im [Manifestschema für Microsoft Teams](../../resources/schema/manifest-schema.md)enthalten.
+* Es gibt eine neue Version des Teams-App-Manifests mit zwei zusätzlichen Einstellungen und `supportsCalling` `supportsVideo`. Diese Einstellungen sind im [ Manifestschema für Microsoft Teams](../../resources/schema/manifest-schema.md) enthalten.
 * [Microsoft Graph Berechtigungen](./registering-calling-bot.md#add-graph-permissions) müssen für die Microsoft App-ID Ihres Bots konfiguriert werden.
 * Die APIs für Graph Anrufe und Onlinebesprechungen erfordern die Zustimmung des Mandantenadministrators.
 
 ## <a name="new-manifest-settings"></a>Neue Manifesteinstellungen
 
-Anruf- und Onlinebesprechungs-Bots verfügen über die folgenden zwei zusätzlichen Einstellungen in "manifest.json", die Audio- oder Videodaten für Ihren Bot in Teams aktivieren.
+Bots für Anrufe und Onlinebesprechungen verfügen über die folgenden beiden zusätzlichen Einstellungen in "manifest.json", die Audio- oder Videofunktionen für Ihren Bot in Teams aktivieren.
 
-* `bots[0].supportsCalling`. Wenn vorhanden und `true` festgelegt, ermöglicht Teams Ihrem Bot die Teilnahme an Anrufen und Onlinebesprechungen.
-* `bots[0].supportsVideo`. Wenn vorhanden und festgelegt `true` auf , weiß Teams, dass Ihr Bot Video unterstützt.
+* `bots[0].supportsCalling`. Wenn vorhanden und festgelegt`true`, ermöglicht Teams Ihrem Bot die Teilnahme an Anrufen und Onlinebesprechungen.
+* `bots[0].supportsVideo`. Wenn vorhanden und festgelegt auf `true`, weiß Teams, dass Ihr Bot Video unterstützt.
 
 Wenn Ihre IDE das Manifest.json-Schema für Ihre Aufrufe und Besprechungsbots ordnungsgemäß auf diese Werte überprüfen soll, können Sie das `$schema` Attribut wie folgt ändern:
 
@@ -40,9 +40,9 @@ Informationen zum Erstellen von Bots finden Sie unter [Erstellen eines Bots für
 
 **So erstellen Sie einen neuen Bot für Teams**
 
-1. Verwenden Sie diesen Link, um einen neuen Bot zu `https://dev.botframework.com/bots/new` erstellen. Wenn Sie alternativ die Schaltfläche **"Bot** erstellen" im Bot Framework-Portal auswählen, erstellen Sie Ihren Bot in Microsoft Azure, für die Sie über ein Azure-Konto verfügen müssen.
+1. Verwenden Sie diesen Link, um einen neuen Bot zu erstellen. `https://dev.botframework.com/bots/new` Wenn Sie alternativ die Schaltfläche "**Bot** erstellen" im Bot Framework-Portal auswählen, erstellen Sie Ihren Bot in Microsoft Azure, für die Sie über ein Azure-Konto verfügen müssen.
 1. Fügen Sie den Teams Kanal hinzu.
-1. Wählen Sie die Registerkarte **"Anrufe"** auf der Teams Kanalseite aus. Wählen Sie **"Anruf aktivieren"** aus, und aktualisieren Sie dann **Webhook (für Anrufe)** mit Ihrer HTTPS-URL, unter der Sie eingehende Benachrichtigungen erhalten, z. `https://contoso.com/teamsapp/api/calling` B. . Weitere Informationen finden Sie unter [Konfigurieren von Kanälen.](/bot-framework/portal-configure-channels)
+1. Wählen Sie die Registerkarte **"Anrufe**" auf der Teams Kanalseite aus. Wählen Sie **"Anruf aktivieren"** aus, und aktualisieren Sie dann **Webhook (für Anrufe)** mit Ihrer HTTPS-URL, unter der Sie eingehende Benachrichtigungen erhalten, z. B `https://contoso.com/teamsapp/api/calling`. . Weitere Informationen finden Sie unter ["Konfigurieren von Kanälen"](/bot-framework/portal-configure-channels).
 
     ![Konfigurieren Teams Kanalinformationen](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
@@ -65,7 +65,7 @@ Die folgende Tabelle enthält eine Liste der Anwendungsberechtigungen für Aufru
 | Calls.AccessMedia.All |Zugreifen auf Mediendatenströme in einem Anruf als App-Vorschau. |Ermöglicht der App, direkten Zugriff auf Medienstreams in einem Anruf ohne einen angemeldeten Benutzer zu erhalten.|Ja|
 
 > [!IMPORTANT]
-> Sie können die Medienzugriffs-API nicht verwenden, um Medieninhalte aus Anrufen oder Besprechungen aufzuzeichnen oder anderweitig zu speichern, auf die Ihre Anwendung zugreift oder Daten aus diesem Medieninhaltseintrag oder dieser Aufzeichnung abgeleitet. Sie müssen zuerst die [ `updateRecordingStatus` API](/graph/api/call-updaterecordingstatus) aufrufen, um anzugeben, dass die Aufzeichnung begonnen hat, und eine Erfolgsantwort von dieser API erhalten. Wenn Ihre Anwendung mit der Aufzeichnung einer Besprechung oder eines Anrufs beginnt, muss sie die Aufzeichnung beenden, bevor die API aufgerufen `updateRecordingStatus` wird, um anzugeben, dass die Aufzeichnung beendet wurde.
+> Sie können die Medienzugriffs-API nicht verwenden, um Medieninhalte aus Anrufen oder Besprechungen aufzuzeichnen oder anderweitig zu speichern, auf die Ihre Anwendung zugreift oder Daten aus diesem Medieninhaltseintrag oder dieser Aufzeichnung abgeleitet. Sie müssen zuerst die [`updateRecordingStatus` API](/graph/api/call-updaterecordingstatus) aufrufen, um anzugeben, dass die Aufzeichnung begonnen hat, und eine Erfolgsantwort von dieser API erhalten. Wenn Ihre Anwendung mit der Aufzeichnung einer Besprechung oder eines Anrufs beginnt, muss sie die Aufzeichnung beenden, bevor die `updateRecordingStatus` API aufgerufen wird, um anzugeben, dass die Aufzeichnung beendet wurde.
 
 ### <a name="application-permissions-for-online-meetings"></a>Anwendungsberechtigungen für Onlinebesprechungen
 
@@ -78,16 +78,16 @@ Die folgende Tabelle enthält eine Liste der Anwendungsberechtigungen für Onlin
 
 ### <a name="assign-permissions"></a>Berechtigungen zuweisen
 
-Sie müssen die Anwendungsberechtigungen für Ihren Bot im Voraus mithilfe des [Azure-Portals](https://aka.ms/aadapplist) konfigurieren, wenn Sie den [Azure Active Directory V1-Endpunkt](/azure/active-directory/develop/azure-ad-endpoint-comparison)verwenden möchten.
+Sie müssen die Anwendungsberechtigungen für Ihren Bot im Voraus mithilfe des [Microsoft Azure-Portals](https://aka.ms/aadapplist) konfigurieren, wenn Sie den [Azure Active Directory V1-Endpunkt](/azure/active-directory/develop/azure-ad-endpoint-comparison) verwenden möchten.
 
 ### <a name="get-tenant-administrator-consent"></a>Einholen der Zustimmung des Mandantenadministrators
 
-Bei Apps, die den Azure AD V1-Endpunkt verwenden, kann ein Mandantenadministrator den Anwendungsberechtigungen über das [Azure-Portal](https://portal.azure.com) zustimmen, wenn Ihre App in ihrer Organisation installiert wird. Alternativ können Sie eine Anmeldeumgebung in Ihrer App bereitstellen, über die Administratoren den von Ihnen konfigurierten Berechtigungen zustimmen können. Nachdem die Administratorzustimmung von Azure AD aufgezeichnet wurde, kann Ihre App Token anfordern, ohne erneut die Zustimmung anfordern zu müssen.
+Bei Apps, die den Azure AD V1-Endpunkt verwenden, kann ein Mandantenadministrator den Anwendungsberechtigungen über das [Microsoft Azure-Portal](https://portal.azure.com) zustimmen, wenn Ihre App in ihrer Organisation installiert ist. Alternativ können Sie eine Anmeldeumgebung in Ihrer App bereitstellen, über die Administratoren den von Ihnen konfigurierten Berechtigungen zustimmen können. Nachdem die Administratorzustimmung von Azure AD aufgezeichnet wurde, kann Ihre App Token anfordern, ohne erneut die Zustimmung anfordern zu müssen.
 
-Sie können sich darauf verlassen, dass ein Administrator die Berechtigungen erteilt, die Ihre App im [Azure-Portal](https://portal.azure.com)benötigt. Eine bessere Option ist die Bereitstellung einer Anmeldeumgebung für Administratoren mithilfe des Azure AD `/adminconsent` V2-Endpunkts. Weitere Informationen finden Sie in den Anweisungen zum Erstellen einer URL für [die Administratorzustimmung.](/graph/uth-v2-service#3-get-administrator-consent)
+Sie können sich darauf verlassen, dass ein Administrator die Berechtigungen erteilt, die Ihre App im [Microsoft Azure-Portal](https://portal.azure.com) benötigt. Eine bessere Option ist die Bereitstellung einer Anmeldeumgebung für Administratoren mithilfe des Azure AD V2-Endpunkts`/adminconsent`. Weitere Informationen finden Sie in [den Anweisungen zum Erstellen einer ADMINISTRATORzustimmungs-URL](/graph/uth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
-> Zum Erstellen der Mandanten-Administratorzustimmungs-URL ist ein konfigurierter Umleitungs-URI oder eine Antwort-URL im [App-Registrierungsportal](https://apps.dev.microsoft.com/) erforderlich. Um Antwort-URLs für Ihren Bot hinzuzufügen, greifen Sie auf Ihre Bot-Registrierung zu, und wählen Sie **"Erweiterte Optionen**  >  **Anwendungsmanifest bearbeiten"** aus. Fügen Sie die Umleitungs-URL zur `replyUrls` Sammlung hinzu.
+> Zum Erstellen der Mandanten-Administratorzustimmungs-URL ist ein konfigurierter Umleitungs-URI oder eine Antwort-URL im [App-Registrierungsportal](https://apps.dev.microsoft.com/) erforderlich. Um Antwort-URLs für Ihren Bot hinzuzufügen, greifen Sie auf Ihre Bot-Registrierung zu, und wählen Sie **"Erweiterte** **OptionenEdit-Anwendungsmanifest** > " aus. Fügen Sie die Umleitungs-URL zur `replyUrls` Sammlung hinzu.
 
 > [!IMPORTANT]
 > Jedes Mal, wenn Sie eine Änderung an den Berechtigungen Ihrer Anwendung vornehmen, müssen Sie auch den Administratorzustimmungsprozess wiederholen. Änderungen, die im App-Registrierungsportal vorgenommen wurden, werden erst widergespiegelt, wenn die Zustimmung vom Administrator des Mandanten erneut angewendet wurde.

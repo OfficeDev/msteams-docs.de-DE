@@ -4,16 +4,16 @@ description: Beschreibt, wie ein Benutzertoken abgerufen wird. Derzeit kann ein 
 keywords: Token, Benutzertoken, SSO-Unterstützung für Bots, Berechtigung, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 7ce49841522187570944d304224dba557d38ccc6
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 0c354c4f60ff334ba5cc8a98fb3d3a346a8bb06e
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212573"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435691"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>SSO-Unterstützung (Single Sign-On) für Bots
 
-Die Single Sign-On-Authentifizierung in Azure Active Directory aktualisiert im Hintergrund das Authentifizierungstoken, um zu minimieren, wie oft Benutzer ihre Anmeldeinformationen eingeben müssen. Wenn Benutzer der Verwendung Ihrer App zustimmen, müssen sie auf einem anderen Gerät nicht erneut zustimmen, da sie automatisch angemeldet sind. Registerkarten und Bots weisen einen ähnlichen Ablauf für die SSO-Unterstützung auf. Bot [fordert](#request-a-bot-token) jedoch Token an und [empfängt Antworten](#receive-the-bot-token) mit einem anderen Protokoll.
+Die Single Sign-On-Authentifizierung in Azure Active Directory aktualisiert das Authentifizierungstoken im Hintergrund, um zu minimieren, wie oft Benutzer ihre Anmeldeinformationen eingeben müssen. Wenn Benutzer der Verwendung Ihrer App zustimmen, müssen sie auf einem anderen Gerät nicht erneut zustimmen, da sie automatisch angemeldet sind. Registerkarten und Bots weisen einen ähnlichen Ablauf für die SSO-Unterstützung auf. Bot [fordert jedoch Token an](#request-a-bot-token) und [empfängt Antworten](#receive-the-bot-token) mit einem anderen Protokoll.
 
 >[!NOTE]
 > OAuth 2.0 ist ein offener Standard für die Authentifizierung und Autorisierung, der von Azure AD und vielen anderen Identitätsanbietern verwendet wird. Ein grundlegendes Verständnis von OAuth 2.0 ist eine Voraussetzung für die Arbeit mit der Authentifizierung in Teams.
@@ -26,7 +26,7 @@ Die folgende Abbildung veranschaulicht den Fluss von SSO in Bots:
 
 Die folgenden Schritte helfen Ihnen bei Authentifizierungs- und Bot-Anwendungstoken:
 
-1. Der Bot sendet eine Nachricht an Teams mit einer OAuthCard, die `tokenExchangeResource` ein Authentifizierungstoken für die Botanwendung enthält. Der Benutzer erhält auf allen aktiven Benutzerendpunkten Nachrichten.
+1. Der Bot sendet eine Nachricht an Teams mit einer OAuthCard, die ein Authentifizierungstoken für die Botanwendung enthält`tokenExchangeResource`. Der Benutzer erhält auf allen aktiven Benutzerendpunkten Nachrichten.
 
    > [!NOTE]
    >
@@ -43,7 +43,7 @@ Die folgenden Schritte helfen Ihnen bei Authentifizierungs- und Bot-Anwendungsto
 
 1. Azure AD sendet das Botanwendungstoken an die Teams Anwendung.
 
-1. Teams sendet das Token an den Bot als Teil des Wertobjekts, das vom Aufrufen mit **Anmeldung/tokenExchange** zurückgegeben wird.
+1. Teams sendet das Token als Teil des Wertobjekts, das durch das Aufrufen mit **Anmeldung/tokenExchange** zurückgegeben wird, an den Bot.
   
 1. Das analysierte Token in der Bot-Anwendung stellt die erforderlichen Informationen zur Verfügung, wie z. B. die E-Mail-Adresse des Benutzers.
   
@@ -51,25 +51,25 @@ Die folgenden Schritte helfen Ihnen bei Authentifizierungs- und Bot-Anwendungsto
   
 Die folgenden Schritte führen Sie zum Entwickeln von SSO Teams Bot:
 
-1. [Registrieren Sie Ihre App über das Azure AD Portal.](#register-your-app-through-the-azure-ad-portal)
-1. [Aktualisieren Sie Ihr Teams Anwendungsmanifest für Ihren Bot.](#update-your-teams-application-manifest-for-your-bot)
-1. [Fügen Sie den Code hinzu, um ein Bottoken anzufordern und zu erhalten.](#add-the-code-to-request-and-receive-a-bot-token)
+1. [Registrieren Sie Ihre App über das Azure AD Portal](#register-your-app-through-the-azure-ad-portal).
+1. [Aktualisieren Sie Ihr Teams Anwendungsmanifest für Ihren Bot](#update-your-teams-application-manifest-for-your-bot).
+1. [Fügen Sie den Code hinzu, um ein Bottoken anzufordern und zu erhalten](#add-the-code-to-request-and-receive-a-bot-token).
 
-### <a name="register-your-app-through-the-azure-ad-portal"></a>Registrieren Ihrer App über das Azure AD Portal
+### <a name="register-your-app-through-the-azure-ad-portal"></a>Registrieren Ihrer App über das Azure AD-Portal
 
-Die Schritte zum Registrieren Ihrer App über das Azure AD-Portal ähneln dem [SSO-Fluss](../../../tabs/how-to/authentication/auth-aad-sso.md)der Registerkarte. Die folgenden Schritte führen Sie zum Registrieren Ihrer App:
+Die Schritte zum Registrieren Ihrer App über das Azure AD-Portal ähneln dem [SSO-Fluss der Registerkarte](../../../tabs/how-to/authentication/auth-aad-sso.md). Die folgenden Schritte führen Sie zum Registrieren Ihrer App:
 
-1. Registrieren Sie eine neue Anwendung im [Portal Azure Active Directory – App-Registrierungen.](https://go.microsoft.com/fwlink/?linkid=2083908)
+1. Registrieren Sie eine neue Anwendung im [Portal Azure Active Directory – App-Registrierungen](https://go.microsoft.com/fwlink/?linkid=2083908).
 
 1. Wählen Sie **Neue Registrierung** aus. Die Seite **Anwendung registrieren** wird angezeigt.
 
     ![Neue Registrierung](~/assets/images/authentication/SSO-bots-auth/app-registration.png)
 
-1. Führen Sie in der **Datei "Anwendung registrieren"** die folgenden Schritte aus:
+1. **Führen Sie im Register an application** die folgenden Schritte aus:
 
    > [!NOTE]
    >
-   > Die Benutzer werden nicht um Zustimmung gebeten und erhalten sofort Zugriffstoken, wenn die Azure AD-App im selben Mandanten registriert ist, in dem sie eine Authentifizierungsanforderung in Teams stellen. Die Benutzer müssen jedoch den Berechtigungen zustimmen, wenn die Azure AD App in einem anderen Mandanten registriert ist.
+   > Die Benutzer werden nicht zur Zustimmung aufgefordert und erhalten sofort Zugriffstoken, wenn die Azure AD App im selben Mandanten registriert ist, in dem sie eine Authentifizierungsanforderung in Teams stellen. Die Benutzer müssen jedoch den Berechtigungen zustimmen, wenn die Azure AD-App in einem anderen Mandanten registriert ist.
 
     * Geben Sie **den Namen** für Ihre App ein.
     * Wählen Sie **unterstützte Kontotypen** aus, z. B. einzelmandant oder mehrinstanzenfähig.
@@ -79,44 +79,44 @@ Die Schritte zum Registrieren Ihrer App über das Azure AD-Portal ähneln dem [S
 
 1. Wechseln Sie zur Übersichtsseite.
 1. Kopieren Sie den Wert der **Anwendungs-ID (Client-ID).**
-1. Wechseln Sie unter **"Verwalten"** zu **"API verfügbar machen".**
+1. Wechseln **Sie unter "Verwalten**" zu **"API verfügbar machen**".
 
    > [!TIP]
-   > Um Ihr App-Manifest später zu aktualisieren, speichern Sie den Wert der **Anwendungs-ID (Client-ID).**
+   > Um Ihr App-Manifest später zu aktualisieren, speichern Sie den **Wert der Anwendungs-ID (Client-ID).**
 
    > [!IMPORTANT]
-   > * Wenn Sie einen eigenständigen Bot erstellen, geben Sie den Anwendungs-ID-URI als `api://botid-{YourBotId}` . Hier *ist YourBotId* Ihre Azure AD Anwendungs-ID.
+   > * Wenn Sie einen eigenständigen Bot erstellen, geben Sie den Anwendungs-ID-URI als `api://botid-{YourBotId}`. Hier *ist YourBotId* Ihre Azure AD Anwendungs-ID.
    > * Wenn Sie eine App mit einem Bot und einer Registerkarte erstellen, geben Sie den Anwendungs-ID-URI als `api://fully-qualified-domain-name.com/botid-{YourBotId}` ein.
 
 1. Wählen Sie die Berechtigungen aus, die Ihre Anwendung für den Azure AD Endpunkt und optional für Microsoft Graph benötigt.
 1. [Erteilen von Berechtigungen](/azure/active-directory/develop/v2-permissions-and-consent) für Teams Desktop-, Web- und mobile Anwendungen.
 1. Wählen Sie **Bereich hinzufügen**.
-1. Geben Sie im daraufhin angezeigten Bereich `access_as_user` den **Bereichsnamen** ein.
+1. Geben Sie `access_as_user` in dem Eingabeaufforderungsbereich als **Bereichsname** ein.
 
    >[!NOTE]
    > Der Bereich "access_as_user", der zum Hinzufügen einer Client-App verwendet wird, richtet sich an "Administratoren und Benutzer".
    >
    > Sie müssen sich der folgenden wichtigen Einschränkungen bewusst sein:
    >
-   > * Es werden nur Microsoft Graph-API-Berechtigungen auf Benutzerebene unterstützt, z. B. E-Mail, Profil, offline_access und OpenId. Wenn Sie Zugriff auf andere Microsoft Graph Bereiche benötigen, z. B. `User.Read` oder , finden Sie weitere Informationen unter Abrufen eines `Mail.Read` [Zugriffstokens mit Graph Berechtigungen.](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions)
+   > * Es werden nur Microsoft Graph API-Berechtigungen auf Benutzerebene unterstützt, z. B. E-Mail, Profil, offline_access und OpenId. Wenn Sie Zugriff auf andere Microsoft Graph Bereiche benötigen, z`User.Read`. B. oder `Mail.Read`, finden Sie weitere Informationen unter [Abrufen eines Zugriffstokens mit Graph Berechtigungen](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions).
    > * Der Domänenname Ihrer Anwendung muss mit dem Domänennamen übereinstimmen, den Sie für Ihre Azure AD Anwendung registriert haben.
    > * Mehrere Domänen pro App werden derzeit nicht unterstützt.
-   > * Anwendungen, die die Domäne verwenden, werden nicht unterstützt, da sie häufig vorkommen `azurewebsites.net` und ein Sicherheitsrisiko darstellen können.
+   > * Anwendungen, die die `azurewebsites.net` Domäne verwenden, werden nicht unterstützt, da sie häufig vorkommen und ein Sicherheitsrisiko darstellen können.
 
 1. Geben Sie in der **Wer zustimmen können?** **Administratoren und Benutzer** ein.
-1. Geben Sie die folgenden Details ein, um die Administrator- und Benutzerzustimmungsaufforderungen mit werten zu konfigurieren, die für den Bereich geeignet `access_as_user` sind.
-    * **Anzeigename der Administratorzustimmung:** Teams können auf das Profil des Benutzers zugreifen.
+1. Geben Sie die folgenden Details ein, um die Administrator- und Benutzerzustimmungsaufforderungen mit werten zu konfigurieren, die für den `access_as_user`Bereich geeignet sind.
+    * **Anzeigename der Administratorzustimmung**: Teams können auf das Profil des Benutzers zugreifen.
     * **Beschreibung der Administratoreinwilligung**: Teams können die Web-APIs der App als aktueller Benutzer aufrufen.
-    * **Anzeigename der Benutzergenehmigung:** Teams können auf Ihr Profil zugreifen und Anforderungen in Ihrem Auftrag stellen.
-    * Beschreibung der **Benutzerbewilligung:** Teams können die APIs dieser App mit den gleichen Rechten aufrufen wie Sie.
+    * **Anzeigename der Benutzergenehmigung**: Teams können auf Ihr Profil zugreifen und Anforderungen in Ihrem Auftrag stellen.
+    * **Beschreibung der Benutzergenehmigung**: Teams können die APIs dieser App mit den gleichen Rechten aufrufen wie Sie.
 
     ![Administrator und Benutzer](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
 
-1. Stellen Sie sicher, dass der Status **aktiviert** ist.
+1. Stellen Sie sicher, dass der Status auf **"Aktiviert**" festgelegt ist.
 
     ![Status](~/assets/images/authentication/SSO-bots-auth/enabled-state.png)
 
-1. Wählen Sie **Bereich hinzufügen** aus, um die Details zu speichern. Der Domänenteil des angezeigten **Bereichsnamens** muss automatisch mit dem **Anwendungs-ID-URI** übereinstimmen, der im vorherigen Schritt festgelegt wurde, und `/access_as_user` muss am Ende angefügt `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` werden.
+1. Wählen Sie **Bereich hinzufügen** aus, um die Details zu speichern. Der Domänenteil des angezeigten **Bereichsnamens** muss automatisch mit dem **Anwendungs-ID-URI** übereinstimmen, der im vorherigen Schritt festgelegt wurde, und `/access_as_user` muss am Ende `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`angefügt werden.
 
 1. Identifizieren Sie in den **autorisierten Clientanwendungen** die Anwendungen, die Sie für die Webanwendung Ihrer App autorisieren möchten.
 1. **Hinzufügen einer Clientanwendung** auswählen.
@@ -129,8 +129,8 @@ Die Schritte zum Registrieren Ihrer App über das Azure AD-Portal ähneln dem [S
 
     ![Client-ID](~/assets/images/authentication/SSO-bots-auth/add-client-id.png)
 
-1. Wechseln Sie zur **Authentifizierung.**
-1. Wählen Sie in **Plattformkonfigurationen** **eine Plattform hinzufügen** aus.
+1. Wechseln Sie zur **Authentifizierung**.
+1. Wählen Sie in **Plattformkonfigurationen** **die Option "Plattform hinzufügen**" aus.
 
     ![Plattform](~/assets/images/authentication/SSO-bots-auth/platform-configuration.png)
 
@@ -145,23 +145,23 @@ Die Schritte zum Registrieren Ihrer App über das Azure AD-Portal ähneln dem [S
 
     ![Umleitungs-URIs](~/assets/images/authentication/SSO-bots-auth/configure-web.png)
 
-1. Fügen Sie die erforderlichen **API-Berechtigungen hinzu.**
+1. Fügen Sie die erforderlichen **API-Berechtigungen hinzu**.
     * Wählen Sie **API-Berechtigungen** auf der linken Ebene aus.
-    * Wählen Sie **"Plattform hinzufügen"** aus, um alle delegierten Benutzerberechtigungen hinzuzufügen, die Ihre App für downstreame APIs benötigt, z. B. User.Read.
+    * Wählen Sie " **Plattform hinzufügen** " aus, um alle delegierten Benutzerberechtigungen hinzuzufügen, die Ihre App für downstreame APIs benötigt, z. B. User.Read.
 
 1. Die folgenden Schritte helfen Ihnen beim Aktivieren der impliziten Genehmigung:
     * Wählen Sie im linken Bereich die **Authentifizierung** aus.
-    * Aktivieren Sie die **Kontrollkästchen für Zugriffstoken** und **ID-Token.**
+    * Aktivieren Sie die Kontrollkästchen **für Zugriffstoken** und **ID-Token** .
     
     ![Genehmigungsfluss](~/assets/images/authentication/SSO-bots-auth/grant-flow.png)
     
-    * Wählen Sie **"Speichern"** aus, um die Änderungen zu speichern.
+    * Wählen Sie **"Speichern** " aus, um die Änderungen zu speichern.
 
-#### <a name="update-manifest-in-azure-portal"></a>Updatemanifest im Azure-Portal
+#### <a name="update-manifest-in-microsoft-azure-portal"></a>Aktualisieren des Manifests im Microsoft Azure-Portal
 
-Die folgenden Schritte führen Sie zum Aktualisieren des Bot-Manifests im Azure-Portal:
+Die folgenden Schritte führen Sie zum Aktualisieren des Bot-Manifests in Microsoft Azure Portal:
 
-1. Wählen  Sie im linken Bereich Manifest aus.
+1. Select **Manifest** from the left pane.
 1. Stellen Sie sicher, dass das Konfigurationselement auf **"accessTokenAcceptedVersion" festgelegt ist: 2**. Wenn dies nicht der Fall ist, ändern Sie den Wert in **2**.
 
     ![Updatemanifest](~/assets/images/bots/update-manifest.png)
@@ -170,34 +170,34 @@ Die folgenden Schritte führen Sie zum Aktualisieren des Bot-Manifests im Azure-
    >[!NOTE]
    > Wenn Sie Ihren Bot bereits in Teams testen, müssen Sie sich von dieser App abmelden und sich von Teams abmelden. Melden Sie sich dann erneut an, um diese Änderung zu sehen.
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern** aus.
 
 #### <a name="update-the-azure-portal-with-the-oauth-connection"></a>Aktualisieren des Azure-Portals mit der OAuth-Verbindung
 
-Die folgenden Schritte führen Sie zum Aktualisieren des Azure-Portals mit der OAuth-Verbindung:
+Die folgenden Schritte führen Sie zum Aktualisieren des Microsoft Azure-Portals mit der OAuth-Verbindung:
 
-1. Wechseln Sie im Azure-Portal zu [ **AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
-1. Wechseln Sie im linken Bereich zu **"Konfiguration".**
-1. Wählen **Sie OAuth-Verbindung hinzufügen Einstellungen** aus.
+1. Wechseln Sie im Microsoft Azure-Portal zu [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
+1. Wechseln Sie im linken Bereich zu **"Konfiguration** ".
+1. Wählen **Sie "OAuth-Verbindung hinzufügen" Einstellungen** aus.
 
     ![Konfigurationseinstellung](~/assets/images/authentication/SSO-bots-auth/auth-setting2.png)
 
-1. Die folgenden Schritte führen Sie zum Ausfüllen des Formulars für neue **Verbindungseinstellungen:**
+1. Die folgenden Schritte führen Sie zum Ausfüllen des Formulars für neue **Verbindungseinstellungen** :
 
    >[!NOTE]
-   > **Die implizite Genehmigung** kann in der Azure AD Anwendung erforderlich sein.
+   > **Die implizite Genehmigung** kann in der Azure AD-Anwendung erforderlich sein.
 
-    * Geben Sie auf der Seite **"Neue Verbindungseinstellung"** den **Namen** ein.
+    * Geben Sie auf der Seite **"Neue Verbindungseinstellung**" den **Namen** ein.
 
     >[!NOTE]
-    > Der **Name** wird auf die Einstellungen Ihres Bot-Dienstcodes in *Schritt 5* von [Bot SSO zur Laufzeit](#bot-sso-at-runtime)verwiesen.
+    > Der **Name** wird auf die Einstellungen Ihres Bot-Dienstcodes in *Schritt 5* von [Bot SSO zur Laufzeit](#bot-sso-at-runtime) verwiesen.
 
-    * Wählen Sie in der Dropdownliste **"Dienstanbieter"** **Azure Active Directory v2** aus.
+    * Wählen Sie in der Dropdownliste "**Dienstanbieter**" **Azure Active Directory v2** aus.
     * Geben Sie die Clientanmeldeinformationen ein, z. B. **Client-ID** und **geheimer Clientschlüssel** für die Azure AD Anwendung.
-    * Verwenden Sie für die **TOKEN-Exchange-URL** den bereichswert, der in [Update Your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot)definiert ist. Die TOKEN-Exchange-URL gibt dem SDK an, dass diese Azure AD-Anwendung für SSO konfiguriert ist.
-    * Geben Sie in der **Mandanten-ID** *allgemeine*.
+    * Verwenden Sie für die **TOKEN-Exchange-URL** den Bereichswert, der in ["Aktualisieren Ihres Teams Anwendungsmanifests für Ihren Bot](#update-your-teams-application-manifest-for-your-bot)" definiert ist. Die TOKEN-Exchange-URL gibt dem SDK an, dass diese Azure AD-Anwendung für SSO konfiguriert ist.
+    * Geben Sie in der **Mandanten-ID** *"Allgemein*" ein.
     * Fügen Sie alle **Bereiche** hinzu, die beim Angeben von Berechtigungen für downstream-APIs für Ihre Azure AD-Anwendung konfiguriert sind. Mit der bereitgestellten Client-ID und dem geheimen Clientschlüssel tauscht der Tokenspeicher das Token gegen ein Diagrammtoken mit definierten Berechtigungen aus.
-    * Klicken Sie auf **Speichern**.
+    * Wählen Sie **Speichern** aus.
     * Wählen Sie **Anwenden** aus.
    
     ![Verbindungseinstellung](~/assets/images/authentication/Bot-connection-setting.png)
@@ -225,8 +225,8 @@ Wenn die Anwendung einen Bot und eine Registerkarte enthält, verwenden Sie den 
 
 **webApplicationInfo** ist das übergeordnete Element der folgenden Elemente:
 
-* **id** – Die Client-ID der Anwendung. Dies ist die Anwendungs-ID, die Sie beim Registrieren der Anwendung bei Azure AD erhalten haben. Geben Sie diese Anwendungs-ID nicht für mehrere Teams-Apps frei. Erstellen Sie eine neue Azure AD-App für jedes Anwendungsmanifest, das `webApplicationInfo` verwendet.
-* **ressource** – Die Domäne und Unterdomäne Ihrer Anwendung. Es handelt sich um den gleichen URI, einschließlich des `api://` Protokolls, das Sie beim Erstellen `scope` Ihrer App in ["Registrieren" über das Azure AD-Portal](#register-your-app-through-the-azure-ad-portal)registriert haben. Fügen Sie den Pfad nicht `access_as_user` in Ihre Ressource ein. Der Domänenteil dieses URI muss mit der Domäne und den Unterdomänen übereinstimmen, die in den URLs Ihres Teams Anwendungsmanifests verwendet werden.
+* **id** – Die Client-ID der Anwendung. Dies ist die Anwendungs-ID, die Sie beim Registrieren der Anwendung bei Azure AD erhalten haben. Geben Sie diese Anwendungs-ID nicht für mehrere Teams-Apps frei. Erstellen Sie eine neue Azure AD-App für jedes Anwendungsmanifest, das verwendet`webApplicationInfo`.
+* **ressource** – Die Domäne und Unterdomäne Ihrer Anwendung. Es handelt sich um den gleichen URI, einschließlich des Protokolls, das `api://` Sie beim Erstellen Ihrer `scope` [App in "Registrieren" über das Azure AD-Portal registriert haben](#register-your-app-through-the-azure-ad-portal). Fügen Sie den `access_as_user` Pfad nicht in Ihre Ressource ein. Der Domänenteil dieses URI muss mit der Domäne und den Unterdomänen übereinstimmen, die in den URLs Ihres Teams Anwendungsmanifests verwendet werden.
 
 ### <a name="add-the-code-to-request-and-receive-a-bot-token"></a>Hinzufügen des Codes zum Anfordern und Empfangen eines Bottokens
 
@@ -235,7 +235,7 @@ Wenn die Anwendung einen Bot und eine Registerkarte enthält, verwenden Sie den 
 Die Anforderung zum Abrufen des Tokens ist eine normale POST-Nachrichtenanforderung mithilfe des vorhandenen Nachrichtenschemas. Es ist in den Anlagen einer OAuthCard enthalten. Das Schema für die OAuthCard-Klasse ist in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) definiert und ähnelt einer Anmeldekarte. Teams behandelt diese Anforderung als automatische Tokenerfassung, wenn die `TokenExchangeResource` Eigenschaft auf der Karte aufgefüllt wird. Für den Teams Kanal wird nur die `Id` Eigenschaft berücksichtigt, die eine Tokenanforderung eindeutig identifiziert.
 
 >[!NOTE]
-> Die Microsoft Bot Framework `OAuthPrompt` oder wird für die `MultiProviderAuthDialog` SSO-Authentifizierung unterstützt.
+> Die Microsoft Bot Framework `OAuthPrompt` oder die wird für die `MultiProviderAuthDialog` SSO-Authentifizierung unterstützt.
 
 Wenn der Benutzer die Anwendung zum ersten Mal verwendet und die Zustimmung des Benutzers erforderlich ist, wird das folgende Dialogfeld angezeigt, um mit der Zustimmung fortzufahren:
 
@@ -243,7 +243,7 @@ Wenn der Benutzer die Anwendung zum ersten Mal verwendet und die Zustimmung des 
 
 Wenn der Benutzer **Weiter** auswählt, treten die folgenden Ereignisse auf:
 
-* Wenn der Bot eine Anmeldeschaltfläche definiert, wird der Anmeldefluss für Bots aktiviert, der dem Anmeldefluss von einer OAuth-Kartenschaltfläche in einem Nachrichtendatenstrom ähnelt. Der Entwickler muss entscheiden, welche Berechtigungen die Zustimmung des Benutzers erfordern. Dieser Ansatz wird empfohlen, wenn Sie ein Token mit berechtigungen `openId` übersteigt. Wenn Sie z. B. das Token gegen Graph-Ressourcen austauschen möchten.
+* Wenn der Bot eine Anmeldeschaltfläche definiert, wird der Anmeldefluss für Bots aktiviert, der dem Anmeldefluss von einer OAuth-Kartenschaltfläche in einem Nachrichtendatenstrom ähnelt. Der Entwickler muss entscheiden, welche Berechtigungen die Zustimmung des Benutzers erfordern. Dieser Ansatz wird empfohlen, wenn Sie ein Token mit berechtigungen übersteigt `openId`. Wenn Sie z. B. das Token gegen Graph-Ressourcen austauschen möchten.
 
 * Wenn der Bot keine Anmeldeschaltfläche auf der OAuth-Karte bereitstellt, ist die Zustimmung des Benutzers für einen minimalen Satz von Berechtigungen erforderlich. Dieses Token ist nützlich für die Standardauthentifizierung und zum Abrufen der E-Mail-Adresse des Benutzers.
 
@@ -271,7 +271,7 @@ Wenn der Benutzer **Weiter** auswählt, treten die folgenden Ereignisse auf:
 
 #### <a name="receive-the-bot-token"></a>Empfangen des Bottokens
 
-Die Antwort mit dem Token wird über eine Aufrufaktivität mit demselben Schema wie andere Aufrufaktivitäten gesendet, die die Bots heute erhalten. Der einzige Unterschied ist der Aufrufname, **die Anmeldung/tokenExchange** und das **Wertfeld.** Das **Wertfeld** enthält die **ID**, eine Zeichenfolge der anfänglichen Anforderung zum Abrufen des Tokens und das **Tokenfeld,** einen Zeichenfolgenwert einschließlich des Tokens.
+Die Antwort mit dem Token wird über eine Aufrufaktivität mit demselben Schema wie andere Aufrufaktivitäten gesendet, die die Bots heute erhalten. Der einzige Unterschied ist der Aufrufname, **die Anmeldung/tokenExchange** und das **Wertfeld** . Das **Wertfeld** enthält die **ID**, eine Zeichenfolge der anfänglichen Anforderung zum Abrufen des Tokens und das **Tokenfeld** , einen Zeichenfolgenwert einschließlich des Tokens.
 
 >[!NOTE]
 > Sie erhalten möglicherweise mehrere Antworten auf eine bestimmte Anforderung, wenn der Benutzer über mehrere aktive Endpunkte verfügt. Sie müssen die Antworten mit dem Token deduplizieren.
@@ -327,7 +327,7 @@ Um zu verstehen, was der Bot tut, wenn der Tokenaustausch keine Zustimmungsauffo
 1. Der Client startet eine Unterhaltung mit dem Bot, der ein OAuth-Szenario auslöst.
 2. Der Bot sendet eine OAuth-Karte an den Client zurück.
 3. Der Client fängt die OAuth-Karte ab, bevor sie dem Benutzer angezeigt wird, und überprüft, ob sie eine `TokenExchangeResource` Eigenschaft enthält.
-4. Wenn die Eigenschaft vorhanden ist, sendet der Client einen `TokenExchangeInvokeRequest` an den Bot. Der Client muss über ein austauschbares Token für den Benutzer verfügen, das ein Azure AD v2-Token sein muss und dessen Zielgruppe mit der Eigenschaft identisch sein `TokenExchangeResource.Uri` muss. Der Client sendet eine Aufrufaktivität mit dem folgenden Code an den Bot:
+4. Wenn die Eigenschaft vorhanden ist, sendet der Client einen `TokenExchangeInvokeRequest` an den Bot. Der Client muss über ein austauschbares Token für den Benutzer verfügen, bei dem es sich um ein Azure AD v2-Token handelt und dessen Zielgruppe mit der Eigenschaft identisch `TokenExchangeResource.Uri` sein muss. Der Client sendet eine Aufrufaktivität mit dem folgenden Code an den Bot:
 
     ```json
     {
@@ -342,7 +342,7 @@ Um zu verstehen, was der Bot tut, wenn der Tokenaustausch keine Zustimmungsauffo
     }
     ```
 
-5. Der Bot verarbeitet die `TokenExchangeInvokeRequest` und gibt einen Zurück an den Client `TokenExchangeInvokeResponse` zurück. Der Client muss warten, bis er die `TokenExchangeInvokeResponse` .
+5. Der Bot verarbeitet die `TokenExchangeInvokeRequest` und gibt einen `TokenExchangeInvokeResponse` Zurück an den Client zurück. Der Client muss warten, bis er die `TokenExchangeInvokeResponse`.
 
     ```json
     {
@@ -356,12 +356,12 @@ Um zu verstehen, was der Bot tut, wenn der Tokenaustausch keine Zustimmungsauffo
     }
     ```
 
-6. Wenn dies der Fall ist, zeigt `TokenExchangeInvokeResponse` `status` der Client die `200` OAuth-Karte nicht an. Sehen Sie sich das [normale Flussbild an.](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true) Bei anderen `status` Oder wenn der Client nicht empfangen `TokenExchangeInvokeResponse` wird, zeigt der Client dem Benutzer die OAuth-Karte an. Sehen Sie sich das [Fallback-Flussbild](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true)an. Wenn Fehler oder nicht erfüllte Abhängigkeiten wie die Zustimmung des Benutzers vorhanden sind, stellt diese Aktivität sicher, dass der SSO-Fluss auf den normalen OAuthCard-Fluss zurückfällt.
+6. Wenn dies `TokenExchangeInvokeResponse` der `status` `200`Fall ist, zeigt der Client die OAuth-Karte nicht an. Sehen Sie sich das [normale Flussbild an](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). Bei anderen `status` Oder wenn der `TokenExchangeInvokeResponse` Client nicht empfangen wird, zeigt der Client dem Benutzer die OAuth-Karte an. Sehen Sie sich das [Fallback-Flussbild an](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). Wenn Fehler oder nicht erfüllte Abhängigkeiten wie die Zustimmung des Benutzers vorhanden sind, stellt diese Aktivität sicher, dass der SSO-Fluss auf den normalen OAuthCard-Fluss zurückfällt.
 
 
 ### <a name="update-the-auth-sample"></a>Aktualisieren des Authentifizierungsbeispiels
 
-Öffnen [Sie Teams Authentifizierungsbeispiel,](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) und führen Sie dann die folgenden Schritte aus, um es zu aktualisieren:
+Öffnen [Sie Teams Authentifizierungsbeispiel](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth), und führen Sie dann die folgenden Schritte aus, um es zu aktualisieren:
 
 1. Aktualisieren Sie TeamsBot, um die Deduping der eingehenden Anforderung zu verarbeiten, indem Sie den folgenden Code einschließen:
 
@@ -376,15 +376,15 @@ Um zu verstehen, was der Bot tut, wenn der Tokenaustausch keine Zustimmungsauffo
             }
     ```
   
-2. Aktualisieren `appsettings.json` Sie, um das `botId` Kennwort und den im Update des [Azure-Portals mit der OAuth-Verbindung](#update-the-azure-portal-with-the-oauth-connection)definierten Verbindungsnamen einzuschließen.
-3. Aktualisieren Sie das Manifest, und stellen Sie sicher, dass es `token.botframework.com` sich in der Liste der gültigen Domänen befindet. Weitere Informationen finden Sie unter [Teams Authentifizierungsbeispiel.](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)
-4. Zippen Sie das Manifest mit den Profilimages, und installieren Sie es in Teams.
+2. Aktualisieren Sie `appsettings.json` , um das `botId`Kennwort und den im [Azure-Portal mit der OAuth-Verbindung](#update-the-azure-portal-with-the-oauth-connection) definierten Verbindungsnamen einzuschließen.
+3. Aktualisieren Sie das Manifest, und stellen Sie sicher, dass es `token.botframework.com` sich in der Liste der gültigen Domänen befindet. Weitere Informationen finden Sie unter [Teams Authentifizierungsbeispiel](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).
+4. Zippen Sie das Manifest mit den Profilbildern, und installieren Sie es in Teams.
 
 ## <a name="code-sample"></a>Codebeispiel
 |**Beispielname** | **Beschreibung** |**.NET** | 
 |----------------|-----------------|--------------|
-|Bot framework SDK | Beispiel für die Verwendung des Bot Framework SDK. |[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
+|Bot framework SDK | Beispiel für die Verwendung des Bot Framework SDK. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
 
 ## <a name="step-by-step-guide"></a>Schrittweise Anleitung
 
-Befolgen Sie die [schrittweise Anleitung,](../../../sbs-bots-with-sso.yml)die Sie beim Erstellen eines Bots mit aktivierter SSO-Authentifizierung unterstützt.
+Befolgen Sie die [schrittweise Anleitung](../../../sbs-bots-with-sso.yml), die Ihnen beim Erstellen eines Bots mit aktivierter SSO-Authentifizierung hilft.

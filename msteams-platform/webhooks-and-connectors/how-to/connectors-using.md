@@ -4,13 +4,13 @@ author: laujan
 description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: Teams O365-Connector
-ms.openlocfilehash: 01ce665d9fa165827ab4f03a9f08ff5ac12ee806
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+keywords: Teams-Office365-Connector
+ms.openlocfilehash: 478bf9805c5f045e1f8c43ff7647dd418f6bd8af
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059742"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435866"
 ---
 # <a name="create-and-send-messages"></a>Nachrichten erstellen und senden
 

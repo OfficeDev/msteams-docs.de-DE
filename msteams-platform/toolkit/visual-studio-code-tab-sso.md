@@ -1,25 +1,25 @@
 ---
-title: Single Sign-On-Authentifizierung mit Teams Toolkit und Visual Studio Code für Registerkarten
-description: Erstellen Einer Registerkarte, die einmaliges Anmelden und Microsoft Graph Aufrufe direkt in Visual Studio Code mit dem Microsoft Teams Toolkit unterstützt
+title: SSO-Authentifizierung mit Teams Toolkit und Visual Studio Code für Registerkarten
+description: Erstellen sie eine Registerkarte, die einmaliges Anmelden unterstützt, und Microsoft Graph Aufrufe direkt in Visual Studio Code mit dem Microsoft Teams Toolkit
 keywords: Teams Visual Studio Code Toolkit Registerkarten sso Graph-Authentifizierung Azure Identity Platform
 localization_priority: Normal
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 2ef409a45b92240cced09d2d77793af33945589e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 75e3a6b9c1a777b48d5d1a896c7547f53702eaf4
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156745"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435859"
 ---
-# <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>Single Sign-On-Authentifizierung mit Teams Toolkit und Visual Studio Code für Registerkarten
+# <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>SSO-Authentifizierung mit Teams Toolkit und Visual Studio Code für Registerkarten
 
 > [!IMPORTANT]
-> **Dieses Dokument bezieht sich auf eine alte Version von Teams Toolkit.**
+> **Dieses Dokument bezieht sich auf eine alte Version des Teams Toolkits.**
 >
-> Aktuelle Informationen finden Sie unter den [Voraussetzungen,](../get-started/prerequisites.md) und folgen Sie einem der neueren Lernprogramme.
+> Aktuelle Informationen finden Sie unter den [Voraussetzungen](../get-started/prerequisites.md) , und folgen Sie einem der neueren Lernprogramme.
 
-Mit dem Microsoft Teams Toolkit können Sie die SSO-Authentifizierung (Single Sign-On) für Registerkarten-Apps direkt in Visual Studio Code erstellen. Das Toolkit führt Sie durch den Prozess und bietet alles, was Sie benötigen, einschließlich der Bereitstellung Ihrer Microsoft Identity Platform Registrierung im Azure-Portal.
+Mit dem Microsoft Teams Toolkit können Sie die SSO-Authentifizierung (Single Sign-On) für Registerkarten-Apps direkt in Visual Studio Code erstellen. Das Toolkit führt Sie durch den Prozess und bietet alles, was Sie benötigen, einschließlich der Bereitstellung Ihrer Microsoft Identity Platform Registrierung im Microsoft Azure Portal.
 
 ## <a name="get-started--create-a-project"></a>Erste Schritte – Erstellen eines Projekts
 
@@ -36,18 +36,18 @@ Mit dem Microsoft Teams Toolkit können Sie die SSO-Authentifizierung (Single Si
 1. Geben Sie die URL ein, unter der Ihre App gehostet wird, und wählen Sie **als Nächstes** aus. Ihre App-Registrierung wird mithilfe der bereitgestellten URL konfiguriert.
 1. Die Konfigurationsdetails der App-Registrierung werden in den `.env` Dateien im Quellcode Ihres Projekts gespeichert.
 
-Wenn Sie mehr darüber erfahren möchten, wie Ihre Azure-App-Registrierung bereitgestellt wird, _lesen_ Sie unsere [SSO-Unterstützung (Single Sign-On) für die Dokumentation zu Registerkarten.](../tabs/how-to/authentication/auth-aad-sso.md)
+Wenn Sie mehr darüber erfahren möchten, wie Ihre Azure-App-Registrierung bereitgestellt wird, _lesen_  Sie unsere [SSO-Unterstützung (Single Sign-On) für die Dokumentation zu Registerkarten](../tabs/how-to/authentication/auth-aad-sso.md) .
 
 > [!TIP]
-> Sie müssen zu **Azure App-Registrierungen** wechseln und Ihren *API-URI* aktualisieren und *URLs umleiten,* wenn Sie diese URL ändern.
+> Sie müssen zu **Azure App-Registrierungen** wechseln und Ihren *API-URI* aktualisieren und *URLs umleiten* , wenn Sie diese URL ändern.
 
 ## <a name="run-your-project"></a>Ausführen ihres Projekts
 
-1. Wählen Sie **"npm install"** aus dem `api-server` Ordner aus. Dann **npm start**.
-1. Wählen Sie **"npm install"** aus dem `.src` Ordner aus. Dann **npm start**.
-1. Wenn Sie einen Tunneldienst wie [ngrok](https://ngrok.com/)verwenden, führen Sie ihn aus, und stellen Sie sicher, dass die URL mit dem übereinstimmt, was Sie im Projekterstellungs-Assistenten eingegeben haben. Wenn dies nicht der Fall ist, müssen Sie Ihren _API-URI_ und die _Umleitungs-URL_ in der App-Registrierung aktualisieren, die in Azure erstellt wurde.
+1. Wählen Sie **"npm install** " aus dem `api-server` Ordner aus. Dann **npm start**.
+1. Wählen Sie **"npm install** " aus dem `.src` Ordner aus. Dann **npm start**.
+1. Wenn Sie einen Tunneldienst wie [ngrok](https://ngrok.com/) verwenden, führen Sie ihn aus, und stellen Sie sicher, dass die URL mit dem übereinstimmt, was Sie im Projekterstellungs-Assistenten eingegeben haben. Wenn dies nicht der Fall ist, müssen Sie Ihren API-URI und die _Umleitungs-URL_ in der _App-Registrierung_ aktualisieren, die in Azure erstellt wurde.
 1. Navigieren Sie zur Aktivitätsleiste auf der linken Seite des Visual Studio Code Fensters.
-1. Wählen Sie das **Symbol "Ausführen"** aus, um die Ansicht **"Ausführen" und "Debuggen"** anzuzeigen.
+1. Wählen Sie das **Symbol "Ausführen** " aus, um die Ansicht **"Ausführen" und "Debuggen"** anzuzeigen.
 1. Sie können auch die Tastenkombination **STRG+UMSCHALT+D** verwenden.
 
 > [!TIP]
