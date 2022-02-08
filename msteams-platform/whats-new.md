@@ -4,12 +4,12 @@ description: Beschreibt alle neuen oder aktuellen Entwicklerfunktionen in Micros
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 'Teams: Was sind die neuesten Updates oder Entwicklervorschau und Features'
-ms.openlocfilehash: 88287c26ce2531b2eb76bca2b5352fbfccd4a3e8
-ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
+ms.openlocfilehash: a33e704b8c66d460b6946b60947601bac9fb9269
+ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62214342"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "62443972"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -22,10 +22,16 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 
 | Datum | Update | Hier finden  |
 | --- | --- | --- |
-|25.01.2022| CART-API | Erstellen von Apps für Teams-Besprechungen > API-Referenzen für Besprechungs-Apps> [API-Referenzen für Besprechungs-Apps](apps-in-teams-meetings/API-references.md#cart-api)|
+|08.02.2022| Schrittweise Anleitung zum Erstellen eines Anruf- und Besprechungsbots vorgestellt.| Bots erstellen > Anruf- und Besprechungsbots > Registrieren von Anruf- und Besprechungsbots > [Schrittweise Anleitung zum Erstellen eines Anruf- und Besprechungsbots](sbs-calling-and-meeting.yml) |
+|07.02.2022| Tools und SDKs |Teams-Toolkit für Visual Studio Code > </br> • Hinzufügen von Funktionen zur Teams-App> [Fügen Sie Funktionen für Ihre Teams-Apps hinzu](toolkit/add-capability.md) </br> • Hinzufügen von Cloudressourcen zur Teams-App> [Fügen Sie Cloudressourcen für Ihre Teams-App hinzu](toolkit/add-resource.md) |
+|03.02.2022| App-Manifestversion 1.12 eingeführt | • App-Manifest > [App-Manifestschema](resources/schema/manifest-schema.md) </br> • App-Manifest > Public Developer Preview > [Manifest-Schema](resources/schema/manifest-schema-dev-preview.md) |
+|03.02.2022| Interaktiver Modus zum Teilen der Besprechungsbühne| • Erstellen von Apps für Teams-Besprechungen > [Freigegebene Besprechungsbühne](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Erstellen von Apps für Teams-Besprechungen > [API-Referenzen für Besprechungs-Apps](apps-in-teams-meetings/API-references.md) </br> • App-Manifest > Öffentliche Entwickler-Vorschau > [Manifest-Schema für die Entwickler-Vorschau](resources/schema/manifest-schema-dev-preview.md)|
+|03.02.2022| Testvorschau für monetarisierte Apps (Entwicklervorschau)| Monetarisieren Ihrer App > [Testvorschau für monetarisierte Apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
+|03.02.2022| In-App-Kaufablauf für die Monetarisierung von Apps (Entwicklervorschau) | Monetarisieren Ihrer App > [In-App-Käufe](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+|25.01.2022| API zum Senden von Beschriftungen in Echtzeit | Erstellen von Apps für Teams-Besprechungen > API-Referenzen für Besprechungs-Apps> [API-Referenzen für Besprechungs-Apps](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |19.01.2022| Rückmeldung zum Ausfüllen von Formularen mit adaptiven Karten | Erstellen von Bots > Bot-Unterhaltungen > Nachrichten in Bot-Unterhaltungen > [Feedback zum Ausfüllen von Formularen](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |17.01.2022| Personenauswahl in adaptiven Karten (Entwicklervorschau für Mobilgeräte und allgemein verfügbar für Desktop) | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Personenauswahl in Adaptiven Karten](task-modules-and-cards/cards/people-picker.md)|
-|10.01.2022 | Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code | Tools und SDKs > Teams Toolkit for Visual Studio Code > [Grundlagen des Teams Toolkit](toolkit/teams-toolkit-fundamentals.md) |
+|10.01.2022| Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code | Tools und SDKs > Teams Toolkit for Visual Studio Code > [Grundlagen des Teams Toolkit](toolkit/teams-toolkit-fundamentals.md) |
 
 ## <a name="ga-features"></a>Allgemeine Verfügbarkeitsfunktionen
 
@@ -39,7 +45,9 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
-|25.01.2022| CART-API | Erstellen von Apps für Teams-Besprechungen > API-Referenzen für Besprechungs-Apps> [API-Referenzen für Besprechungs-Apps](apps-in-teams-meetings/API-references.md#cart-api)|
+|08.02.2022| Schrittweise Anleitung zum Erstellen eines Anruf- und Besprechungsbots vorgestellt.| Bots erstellen > Anruf- und Besprechungsbots > Registrieren von Anruf- und Besprechungsbots > [Schrittweise Anleitung zum Erstellen eines Anruf- und Besprechungsbots](sbs-calling-and-meeting.yml) |
+|02.02.2022| App-Manifestversion 1.12 eingeführt | App-Manifest > [App-Manifestschema](resources/schema/manifest-schema.md) |
+|25.01.2022| API zum Senden von Beschriftungen in Echtzeit | Erstellen von Apps für Teams-Besprechungen > API-Referenzen für Besprechungs-Apps> [API-Referenzen für Besprechungs-Apps](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |19.01.2022| Rückmeldung zum Ausfüllen von Formularen mit adaptiven Karten | Erstellen von Bots > Bot-Unterhaltungen > Nachrichten in Bot-Unterhaltungen > [Feedback zum Ausfüllen von Formularen](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |17.01.2022| Personenauswahl in adaptiven Karten für Desktop | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Personenauswahl in Adaptiven Karten](task-modules-and-cards/cards/people-picker.md)|
 
@@ -72,7 +80,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 |25.10.2021| Aktualisiertes Modul „Erste Schritte“ für die Microsoft Teams-Entwicklerdokumentation mit neuer Struktur und neuen Verfahren in einer schrittweisen Anleitung | Erste Schritte > [Starten Sie mit Ihrer ersten Teams-App](get-started/get-started-overview.md) |
 |21.10.2021| Hinzufügen einer `registerOnFocused` -API für Registerkarten oder persönliche Apps | Erstellen von Registerkarten > Erstellen persönlicher Registerkarten > [Hinzufügen `registerOnFocused` einer API für Registerkarten oder persönliche Apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |20.10.2021| Die Besprechungsphase ist jetzt in der allgemein verfügbaren Version verfügbar. | Erstellen von Apps für Teams-Besprechungen > [Aktivieren und Konfigurieren Ihrer Apps für Teams-Besprechungen](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
-|20.10.2021| Besprechungsdetails-API und Teams-Besprechungsereignisse in Echtzeit | Erstellen von Apps für Teams-Besprechungen > [Erstellen von Apps für Teams-Besprechungen](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
+|20.10.2021| Meeting Details-API und Teams Meeting-Events in Echtzeit. | Erstellen von Apps für Teams-Besprechungen > [Laden der API zum Abrufen von Besprechungsdetails](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |18.10.2021| Registerkartenlink aufklappen und Phasenansicht. | Erstellen von Registerkarten > [Registerkartenlink aufklappen und Phasenansicht](tabs/tabs-link-unfurling.md) |
 |08.10.2021| Neue Best Practices für die Gestaltung Adaptiver Karten | Entwerfen Ihrer App > UI-Komponenten > [Entwerfen von adaptiven Karten für Ihre Teams-App](task-modules-and-cards/cards/design-effective-cards.md) |
 |05.10.2021| Teams-App ausblenden, bis der Administrator das Anzeigen der App zulässt.| Entwerfen Ihrer App > [Teams-App ausblenden, bis der Administrator sie genehmigt](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
@@ -228,6 +236,11 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
+|07.02.2022| Tools und SDKs |Teams-Toolkit für Visual Studio Code > </br> • Hinzufügen von Funktionen zur Teams-App> [Fügen Sie Funktionen für Ihre Teams-Apps hinzu](toolkit/add-capability.md) </br> • Hinzufügen von Cloudressourcen zur Teams-App> [Fügen Sie Cloudressourcen für Ihre Teams-App hinzu](toolkit/add-resource.md) |
+|02.02.2022| App-Manifestversion 1.12 eingeführt | App-Manifest > Öffentliche Entwicklervorschau > [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
+|03.02.2022 |Interaktiver Modus zum Teilen der Besprechungsbühne| • Erstellen von Apps für Teams-Besprechungen > [Freigegebene Besprechungsbühne](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Erstellen von Apps für Teams-Besprechungen > [API-Referenzen für Besprechungs-Apps](apps-in-teams-meetings/API-references.md) </br> • App-Manifest > Öffentliche Entwickler-Vorschau > [Manifest-Schema für die Entwickler-Vorschau](resources/schema/manifest-schema-dev-preview.md)|
+|03.02.2022| Testvorschau für monetarisierte Apps| Monetarisieren Ihrer App > [Testvorschau für monetarisierte Apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
+|03.02.2022| In-App-Kaufablauf für die Monetarisierung von Apps | Monetarisieren Ihrer App > [In-App-Käufe](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
 |17.01.2022| Personenauswahl in Adaptiven Karten für Mobilgeräte  | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Personenauswahl in Adaptiven Karten](task-modules-and-cards/cards/people-picker.md)|
 |10.01.2022 | Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code | Tools und SDKs > Teams Toolkit for Visual Studio Code > [Grundlagen des Teams Toolkit](toolkit/teams-toolkit-fundamentals.md) |
 |24.12.2021| Schritt-für-Schritt-Anleitung zum Erteilen von Berechtigungen für Tab-Geräte eingeführt. | App-Grundlagen > Gerätefunktionen > [Schritt-für-Schritt-Anleitung zum Erteilen von Berechtigungen für Tab-Geräte](sbs-tab-device-permissions.yml) |
