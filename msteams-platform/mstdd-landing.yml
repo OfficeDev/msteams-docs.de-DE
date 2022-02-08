@@ -3,7 +3,7 @@ title: Microsoft Teams-Entwicklerdokumentation
 summary: Willkommen bei der Übersicht über Microsoft Teams Entwicklerdokumentation. Microsoft Teams Apps bieten wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse in einen Bereich, in dem sich immer mehr Menschen treffen, lernen und arbeiten.
 metadata:
   title: Microsoft Teams-Entwicklerdokumentation
-  description: Einführung in das Erstellen von Apps für Teams
+  description: Einführung in die Erstellung von Apps für Teams
   ms.service: service
   ms.subservice: subservice
   ms.topic: landing-page
@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 7fcabd8bd0eda4bb39718d250e39e2bc228ab191
-  ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+  ms.openlocfilehash: b1c728fd27b1cecdf8e2fd7c62e6eaabf01b3cc7
+  ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 02/03/2022
-  ms.locfileid: "62362732"
+  ms.lasthandoff: 02/08/2022
+  ms.locfileid: "62443895"
 landingContent:
 - title: Entdecken Sie die neuesten
   linkLists:
@@ -27,7 +27,7 @@ landingContent:
       url: ~/resources/schema/manifest-schema.md
     - text: Öffentliches Entwicklervorschaumanifestschema
       url: ~/resources/schema/manifest-schema-dev-preview.md
-    - text: Interaktiver Modus zum Freigeben der Besprechungsphase
+    - text: Interaktiver Modus zum Teilen der Besprechungsbühne
       url: ~/apps-in-teams-meetings/API-references.md
     - text: Testvorschau für monetarisierte Apps
       url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
@@ -35,7 +35,7 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
     - text: Rückmeldung zum Ausfüllen von Formularen mit adaptiven Karten
       url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
-    - text: Personenauswahl in adaptiven Karten
+    - text: Personenauswahl in Adaptiven Karten
       url: ~/task-modules-and-cards/cards/people-picker.md
     - text: Teams Toolkit für Visual Studio Code (Vorschau)
       url: ~/toolkit/teams-toolkit-fundamentals.md
@@ -53,10 +53,12 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     - text: Erkunden von Apps mit wenig Code für Teams
       url: ~/samples/teams-low-code-solutions.md
-- title: Tutorials
+- title: Lernprogramme
   linkLists:
   - linkListType: concept
     links:
+    - text: Teams Anruf- und Besprechungsbot
+      url: bots/calls-and-meetings/registering-calling-bot.md
     - text: Geräteberechtigung für Browser
       url: concepts/device-capabilities/browser-device-permissions.md
     - text: Verwenden der SSO-Authentifizierung für Registerkarten
@@ -69,6 +71,8 @@ landingContent:
       url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - linkListType: tutorial
     links:
+    - text: Erstellen eines Anruf- und Besprechungsbots
+      url: ~/sbs-calling-and-meeting.yml
     - text: Konfigurieren von Geräteberechtigungen für Registerkarten
       url: ~/sbs-tab-device-permissions.yml
     - text: Konfigurieren von SSO für Registerkarten und Messaging-Erweiterungen
@@ -139,7 +143,7 @@ landingContent:
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: App-Manifest
       url: ../msteams-platform/resources/schema/manifest-schema.md
-- title: Teams App-Szenarien
+- title: Teams-App-Szenarien
   linkLists:
   - linkListType: reference
     links:

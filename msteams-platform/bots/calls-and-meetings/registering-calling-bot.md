@@ -1,15 +1,15 @@
 ---
 title: Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
-description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanrufbot für Microsoft Teams registrieren, einen neuen Bot erstellen oder Anruffunktionen hinzufügen und Graph-Berechtigungen hinzufügen.
+description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanruf-Bot für Microsoft Teams registrieren, einen neuen Bot erstellen oder Anruffunktionen hinzufügen und Graph-Berechtigungen hinzufügen.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Aufrufen von Bot-Audio-/Video-Audiovideomedien
-ms.openlocfilehash: 5368f8e5b5241ba91a1e4ad14b5d46f9ab778a12
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 8bb685d8d7ba470b7a9e76da084b7b165f83c23c
+ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435153"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "62443927"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
 
@@ -21,7 +21,7 @@ Ein Bot, der an Audio- oder Videoanrufen und Onlinebesprechungen teilnimmt, ist 
 
 ## <a name="new-manifest-settings"></a>Neue Manifesteinstellungen
 
-Bots für Anrufe und Onlinebesprechungen verfügen über die folgenden beiden zusätzlichen Einstellungen in "manifest.json", die Audio- oder Videofunktionen für Ihren Bot in Teams aktivieren.
+Bots für Anrufe und Onlinebesprechungen verfügen über die folgenden beiden zusätzlichen Einstellungen in "manifest.json", die Audio- oder Videodaten für Ihren Bot in Teams aktivieren.
 
 * `bots[0].supportsCalling`. Wenn vorhanden und festgelegt`true`, ermöglicht Teams Ihrem Bot die Teilnahme an Anrufen und Onlinebesprechungen.
 * `bots[0].supportsVideo`. Wenn vorhanden und festgelegt auf `true`, weiß Teams, dass Ihr Bot Video unterstützt.
@@ -50,7 +50,7 @@ Der nächste Abschnitt enthält eine Liste der Anwendungsberechtigungen, die fü
 
 ## <a name="add-graph-permissions"></a>Hinzufügen Graph Berechtigungen
 
-Die Graph bietet präzise Berechtigungen, um den Zugriff zu steuern, den Apps auf Ressourcen haben. Sie entscheiden, welche Berechtigungen für Graph Ihre App-Anforderungen gelten. Die Graph aufrufenden APIs unterstützen Anwendungsberechtigungen, die von Apps verwendet werden, die ohne angemeldeten Benutzer ausgeführt werden. Ein Mandantenadministrator muss Anwendungsberechtigungen zustimmen.
+Das Graph bietet granulare Berechtigungen, um den Zugriff von Apps auf Ressourcen zu steuern. Sie entscheiden, welche Berechtigungen für Graph Ihre App-Anforderungen gelten. Die Graph aufrufenden APIs unterstützen Anwendungsberechtigungen, die von Apps verwendet werden, die ohne angemeldeten Benutzer ausgeführt werden. Ein Mandantenadministrator muss Anwendungsberechtigungen zustimmen.
 
 ### <a name="application-permissions-for-calls"></a>Anwendungsberechtigungen für Anrufe
 
@@ -82,15 +82,19 @@ Sie müssen die Anwendungsberechtigungen für Ihren Bot im Voraus mithilfe des [
 
 ### <a name="get-tenant-administrator-consent"></a>Einholen der Zustimmung des Mandantenadministrators
 
-Bei Apps, die den Azure AD V1-Endpunkt verwenden, kann ein Mandantenadministrator den Anwendungsberechtigungen über das [Microsoft Azure-Portal](https://portal.azure.com) zustimmen, wenn Ihre App in ihrer Organisation installiert ist. Alternativ können Sie eine Anmeldeumgebung in Ihrer App bereitstellen, über die Administratoren den von Ihnen konfigurierten Berechtigungen zustimmen können. Nachdem die Administratorzustimmung von Azure AD aufgezeichnet wurde, kann Ihre App Token anfordern, ohne erneut die Zustimmung anfordern zu müssen.
+Bei Apps, die den Azure AD V1-Endpunkt verwenden, kann ein Mandantenadministrator den Anwendungsberechtigungen über das [Microsoft Azure Portal](https://portal.azure.com) zustimmen, wenn Ihre App in ihrer Organisation installiert wird. Alternativ können Sie eine Anmeldeumgebung in Ihrer App bereitstellen, über die Administratoren den von Ihnen konfigurierten Berechtigungen zustimmen können. Nachdem die Administratorzustimmung von Azure AD aufgezeichnet wurde, kann Ihre App Token anfordern, ohne erneut die Zustimmung anfordern zu müssen.
 
-Sie können sich darauf verlassen, dass ein Administrator die Berechtigungen erteilt, die Ihre App im [Microsoft Azure-Portal](https://portal.azure.com) benötigt. Eine bessere Option ist die Bereitstellung einer Anmeldeumgebung für Administratoren mithilfe des Azure AD V2-Endpunkts`/adminconsent`. Weitere Informationen finden Sie in [den Anweisungen zum Erstellen einer ADMINISTRATORzustimmungs-URL](/graph/uth-v2-service#3-get-administrator-consent).
+Sie können sich darauf verlassen, dass ein Administrator die Berechtigungen erteilt, die Ihre App im [Microsoft Azure-Portal](https://portal.azure.com) benötigt. Eine bessere Option ist die Bereitstellung einer Anmeldeerfahrung für Administratoren mithilfe des Azure AD V2-Endpunkts`/adminconsent`. Weitere Informationen finden Sie in [den Anweisungen zum Erstellen einer ADMINISTRATORzustimmungs-URL](/graph/uth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
 > Zum Erstellen der Mandanten-Administratorzustimmungs-URL ist ein konfigurierter Umleitungs-URI oder eine Antwort-URL im [App-Registrierungsportal](https://apps.dev.microsoft.com/) erforderlich. Um Antwort-URLs für Ihren Bot hinzuzufügen, greifen Sie auf Ihre Bot-Registrierung zu, und wählen Sie **"Erweiterte** **OptionenEdit-Anwendungsmanifest** > " aus. Fügen Sie die Umleitungs-URL zur `replyUrls` Sammlung hinzu.
 
 > [!IMPORTANT]
 > Jedes Mal, wenn Sie eine Änderung an den Berechtigungen Ihrer Anwendung vornehmen, müssen Sie auch den Administratorzustimmungsprozess wiederholen. Änderungen, die im App-Registrierungsportal vorgenommen wurden, werden erst widergespiegelt, wenn die Zustimmung vom Administrator des Mandanten erneut angewendet wurde.
+
+## <a name="step-by-step-guide"></a>Schrittweise Anleitung
+
+Befolgen Sie die [schrittweise Anleitung](../../sbs-calling-and-meeting.yml) zum Einrichten von Anrufen und Besprechungen in einem Bot.
 
 ## <a name="next-step"></a>Nächster Schritt
 

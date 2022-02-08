@@ -5,12 +5,12 @@ ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 47ff6d557a76c457dee9d7d976df6f8316d40b89
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: bcb5661c4f6d09499700456bc44ce962ac710ea9
+ms.sourcegitcommit: 83d67e73427ea1e93bb9aea5a8ca8ae05b68e302
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281756"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62430299"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Hochladen Ihrer App in Microsoft Teams
 
@@ -40,7 +40,7 @@ Sie können Ihre App in ein Team, einen Chat, eine Besprechung oder zur persönl
 1. Fügen Sie Ihre App zu Teams hinzu.
 
 > [!NOTE]
-> Wenn Sie den Bot zu Microsoft Teams hinzufügen, können Sie kein Microsoft Teams-Gebietsschema abrufen, da die Bot-Aktivität nicht durch eine Benutzeraktion, wie z. B. das Senden einer Nachricht, initiiert wird und `turnContext.Activity.GetLocale();` daher einen NULL-Wert zurückgibt.
+> `onInstallationUpdateActivityAsync()`-Methode wird verwendet, um Microsoft Teams Locale abzurufen, während der Bot zu Microsoft Teams hinzugefügt wird.
 
 ## <a name="troubleshoot-upload-issues"></a>Behandeln von Problemen beim Hochladen
 
