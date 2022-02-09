@@ -5,12 +5,12 @@ description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Tea
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 97803e89c225c45aee82c6969c8168dec7bf5cac
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 3e339853729fc97623fba78d94be23b0562d4dbb
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212503"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435181"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Registerkarten für Microsoft Teams erstellen
 
@@ -79,7 +79,7 @@ Für Kanal- oder Gruppenregisterkarten können Sie auch eine zusätzliche Konfig
 Sie können mehrere Kanäle oder Gruppenregisterkarten und bis zu 16 persönliche Registerkarten pro App haben.
 
 ### <a name="tools-you-can-use-to-build-tabs"></a>Tools, die Sie zum Erstellen von Registerkarten verwenden können
-* [Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code](../toolkit/visual-studio-code-overview.md)
+* [Teams-Toolkit für Microsoft Visual Studio Code](../toolkit/visual-studio-code-overview.md)
 * [Microsoft Teams-Toolkit-Erweiterung für Visual Studio](../toolkit/visual-studio-overview.md)
 
 ## <a name="next-step"></a>Nächster Schritt
