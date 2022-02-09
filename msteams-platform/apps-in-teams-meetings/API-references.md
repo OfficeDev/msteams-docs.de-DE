@@ -6,8 +6,13 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams-Apps– Benutzerteilnehmer-Rollen-API für Benutzerkontextbenachrichtigung – Signalabfrage
+ms.openlocfilehash: 681929c85d23f83ffa6742afdae2860ac8dfc356
+ms.sourcegitcommit: f5c2090fdd5b55d21ecd9c395423fa277e18d74a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62470788"
 ---
-
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
 Die Besprechungserweiterung bietet APIs, um die Besprechungserfahrung zu verbessern. Mithilfe der aufgeführten APIs können Sie Folgendes ausführen:
@@ -28,11 +33,11 @@ Die folgende Tabelle enthält eine Liste der APIs, die in den SDKs Microsoft Tea
 |[**Freigeben von App-Inhalten für die Phase**](#share-app-content-to-stage-api)| Geben Sie bestimmte Teile der App über den App-Seitenbereich in einer Besprechung für die Besprechungsphase frei. |MSTC SDK|
 |[**Abrufen des Freigabestatus der App-Inhaltsphasen**](#get-app-content-stage-sharing-state-api)| Abrufen von Informationen zum Freigabestatus der App in der Besprechungsphase. |MSTC SDK|
 |[**Abrufen von Funktionen für die Freigabe von App-Inhalten**](#get-app-content-stage-sharing-capabilities-api)| Rufen Sie die Funktionen der App für die Freigabe in der Besprechungsphase ab. |MSTC SDK|
-|[**Abrufen von Echtzeit-Teams Besprechungsereignissen**](#get-real-time-teams-meeting-events-api)|Abrufen von Echtzeitbesprechungsereignissen, z. B. der tatsächlichen Start- und Endzeit.| MSBF SDK|
+|[**Abrufen von Teams Besprechungsereignissen in Echtzeit**](#get-real-time-teams-meeting-events-api)|Abrufen von Echtzeitbesprechungsereignissen, z. B. der tatsächlichen Start- und Endzeit.| MSBF SDK|
 
 ## <a name="get-user-context-api"></a>Abrufen der Benutzerkontext-API
 
-Informationen zum Identifizieren und Abrufen von Kontextinformationen für Ihre Registerkarteninhalte finden Sie unter [Abrufen des Kontexts für Ihre Teams Registerkarte](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` Wird von einer Registerkarte verwendet, die im Besprechungskontext ausgeführt wird, und wird für die Antwortnutzlast hinzugefügt.
+Informationen zum Identifizieren und Abrufen von Kontextinformationen für Ihre Registerkarteninhalte finden Sie unter [Abrufen des Kontexts für Ihre Teams Registerkarte](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` Wird von einer Registerkarte verwendet, die im Besprechungskontext ausgeführt wird und für die Antwortnutzlast hinzugefügt wird.
 
 ## <a name="get-participant-api"></a>Teilnehmer-API abrufen
 
@@ -362,11 +367,11 @@ Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
 
 ## <a name="send-real-time-captions-api"></a>API zum Senden von Beschriftungen in Echtzeit
 
-Die API zum Senden von Echtzeituntertiteln stellt einen POST-Endpunkt für Microsoft Teams Kommunikationszugriff auf Untertitel für Echtzeitübersetzungen (CART) und vom Menschen eingegebene Untertitel bereit. Textinhalte, die an diesen Endpunkt gesendet werden, werden Endbenutzern in einer Microsoft Teams Besprechung angezeigt, wenn beschriftungen aktiviert sind.
+Die API zum Senden von Echtzeituntertiteln macht einen POST-Endpunkt für Microsoft Teams Kommunikationszugriff auf Cart-Untertitel (Real-Time Translation, Untertitel von Menschen) verfügbar. Textinhalte, die an diesen Endpunkt gesendet werden, werden Endbenutzern in einer Microsoft Teams Besprechung angezeigt, wenn beschriftungen aktiviert sind.
 
 ### <a name="cart-url"></a>EINKAUFSWAGEN-URL
 
-Sie können die CART-URL für den POST-Endpunkt auf der Seite **"Besprechungsoptionen**" in einer Microsoft Teams Besprechung abrufen. Weitere Informationen finden Sie unter [CART-Beschriftungen in einer Microsoft Teams Besprechung](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Sie müssen die CART-URL nicht ändern, um CART-Beschriftungen zu verwenden.
+Sie können die CART-URL für den POST-Endpunkt über die Seite **"Besprechungsoptionen**" in einer Microsoft Teams Besprechung abrufen. Weitere Informationen finden Sie unter [CART-Beschriftungen in einer Microsoft Teams Besprechung](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Sie müssen die CART-URL nicht ändern, um CART-Beschriftungen zu verwenden.
 
 #### <a name="query-parameter"></a>Abfrageparameter
 
@@ -422,11 +427,11 @@ Mit `shareAppContentToStage` der API können Sie bestimmte Teile Ihrer App für 
 
 ### <a name="prerequisite"></a>Voraussetzungen
 
-Um die `shareAppContentToStage` API zu verwenden, müssen Sie die RSC-Berechtigungen abrufen. Konfigurieren Sie im App-Manifest die `authorization` Eigenschaft und das `name` Und `type` im `resourceSpecific` Feld. Beispiel:
+Um die `shareAppContentToStage` API zu verwenden, müssen Sie die RSC-Berechtigungen abrufen. Konfigurieren Sie im App-Manifest die `authorization` Eigenschaft und das `name` Und `type` im `resourceSpecific` Feld. Zum Beispiel:
 
 ```json
 "authorization": {
-    "permission": { 
+    "permissions": { 
     "resourceSpecific": [
       { 
       "name": "MeetingStage.Write.Chat",
@@ -443,7 +448,7 @@ Die folgende Tabelle enthält die Abfrageparameter:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**callback**| String | Ja | Rückruf enthält zwei Parameter, Fehler und Ergebnis. Der *Fehler* kann entweder einen Fehler vom Typ *SdkError* oder null enthalten, wenn die Freigabe erfolgreich ist. Das *Ergebnis* kann im Falle einer erfolgreichen Freigabe entweder einen true-Wert enthalten oder null, wenn die Freigabe fehlschlägt.|
+|**callback**| Zeichenfolge | Ja | Rückruf enthält zwei Parameter, Fehler und Ergebnis. Der *Fehler* kann entweder einen Fehler vom Typ *SdkError* oder null enthalten, wenn die Freigabe erfolgreich ist. Das *Ergebnis* kann im Falle einer erfolgreichen Freigabe entweder einen true-Wert enthalten oder null, wenn die Freigabe fehlschlägt.|
 |**appContentURL**| String | Ja | Die URL, die für die Phase freigegeben wird.|
 
 ### <a name="example"></a>Beispiel
@@ -481,7 +486,7 @@ Die folgende Tabelle enthält die Abfrageparameter:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**callback**| String | Ja | Rückruf enthält zwei Parameter, Fehler und Ergebnis. Der *Fehler* kann entweder einen Fehler vom Typ *SdkError* enthalten, falls ein Fehler auftritt, oder null, wenn die Freigabe erfolgreich ist. Das *Ergebnis* kann entweder ein `AppContentStageSharingState` Objekt enthalten, das einen erfolgreichen Abruf angibt, oder null, was auf einen fehlgeschlagenen Abruf hinweist.|
+|**callback**| Zeichenfolge | Ja | Rückruf enthält zwei Parameter, Fehler und Ergebnis. Der *Fehler* kann entweder einen Fehler vom Typ *SdkError* enthalten, falls ein Fehler auftritt, oder null, wenn die Freigabe erfolgreich ist. Das *Ergebnis* kann entweder ein `AppContentStageSharingState` Objekt enthalten, das einen erfolgreichen Abruf angibt, oder null, was auf einen fehlgeschlagenen Abruf hinweist.|
 
 ### <a name="example"></a>Beispiel
 
@@ -521,7 +526,7 @@ Die folgende Tabelle enthält die Abfrageparameter:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**callback**| String | Ja | Rückruf enthält zwei Parameter, Fehler und Ergebnis. Der *Fehler* kann entweder einen Fehler vom Typ *SdkError* oder null enthalten, wenn die Freigabe erfolgreich ist. Das Ergebnis kann entweder ein `AppContentStageSharingState` Objekt enthalten, das einen erfolgreichen Abruf angibt, oder null, was auf einen fehlgeschlagenen Abruf hinweist.|
+|**callback**| Zeichenfolge | Ja | Rückruf enthält zwei Parameter, Fehler und Ergebnis. Der *Fehler* kann entweder einen Fehler vom Typ *SdkError* oder null enthalten, wenn die Freigabe erfolgreich ist. Das Ergebnis kann entweder ein `AppContentStageSharingState` Objekt enthalten, das einen erfolgreichen Abruf angibt, oder null, was auf einen fehlgeschlagenen Abruf hinweist.|
 
 ### <a name="example"></a>Beispiel
 
@@ -550,7 +555,7 @@ Die folgende Tabelle enthält die Antwortcodes:
 | **500** | Interner Fehler. |
 | **1000** | Die App verfügt nicht über die Berechtigungen zum Bereitstellen der Freigabe.|
 
-## <a name="get-real-time-teams-meeting-events-api"></a>Abrufen Teams Besprechungsereignis-API in Echtzeit
+## <a name="get-real-time-teams-meeting-events-api"></a>Abrufen der API für Besprechungsereignisse in Echtzeit Teams
 
 Der Benutzer kann Besprechungsereignisse in Echtzeit empfangen. Sobald eine App einer Besprechung zugeordnet ist, werden die tatsächliche Start- und Endzeit der Besprechung für den Bot freigegeben. Die tatsächliche Start- und Endzeit einer Besprechung unterscheidet sich von der geplanten Start- und Endzeit. Die Besprechungsdetails-API stellt die geplante Start- und Endzeit bereit. Das Ereignis gibt die tatsächliche Start- und Endzeit an.
 
@@ -740,9 +745,9 @@ Der folgende Code enthält ein Beispiel für die Nutzlast des Besprechungsendere
 
 |Beispielname | Beschreibung | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Erweiterbarkeit von Besprechungen | Microsoft Teams Beispiel für die Erweiterbarkeit von Besprechungen zum Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Erweiterbarkeit von Besprechungen | Microsoft Teams Beispiel für besprechungserweiterbarkeit für das Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Besprechungsinhalts-Blasen-Bot | Microsoft Teams Besprechungserweiterungsbeispiel für die Interaktion mit einem Inhaltsblasen-Bot in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Meeting MeetingSidePanel | Microsoft Teams Besprechungserweiterungsbeispiel für die Interaktion mit dem Seitenbereich in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Meeting MeetingSidePanel | Microsoft Teams Besprechungserweiterungsbeispiel für die Interaktion mit dem Seitenbereich in besprechungsinternen Besprechungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 | Registerkarte "Details" in der Besprechung | Microsoft Teams Besprechungserweiterungsbeispiel für die Interaktion mit der Registerkarte "Details" in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 |Beispiel für Besprechungsereignisse|Beispiel-App zum Anzeigen von Teams Besprechungsereignissen in Echtzeit|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |Beispiel für die Besprechungsrekrutierung|Beispiel-App zum Anzeigen der Besprechungserfahrung für das Einstellungsszenario.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
