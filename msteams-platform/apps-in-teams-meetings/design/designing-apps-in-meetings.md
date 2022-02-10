@@ -1,17 +1,17 @@
 ---
 title: Entwerfen Ihrer Besprechungserweiterung
 author: heath-hamilton
-description: Erfahren Sie, wie Sie Apps in Teams Besprechungen entwerfen und das Microsoft Teams UI Kit, die Registerkarte für Besprechungen und Anwendungsfälle, das reaktionsfähige Verhalten und die gemeinsame Besprechungsphase sowie das Design und die Navigation abrufen.
+description: Erfahren Sie, wie Sie Apps in Teams Besprechungen entwerfen und das Microsoft Teams UI Kit, die Registerkarte für Besprechungen und Anwendungsfälle, das reaktionsfähige Verhalten und die freigegebene Besprechungsphase sowie das Design und die Navigation abrufen.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: UI-Kit-Vorlage für reaktionsfähiges Verhalten in Besprechungen – freigegebene Besprechungsphase
-ms.openlocfilehash: d66dc257ae26a17519468cf11d1d0b5593ba9d33
-ms.sourcegitcommit: 3dd69ae18bca8dd2e0666d09746a4012cd8c8e42
+ms.openlocfilehash: e62146a4fb32f37145a818855749d68e64bee384
+ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61051196"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62523795"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen ihrer Microsoft Teams Besprechungserweiterung
 
@@ -38,13 +38,13 @@ In den Besprechungsdetails können Benutzer **eine Registerkarte hinzufügen +**
 
 #### <a name="mobile"></a>Mobilgeräte
 
-Nachdem die App hinzugefügt wurde (z. B. auf dem Desktop), können Benutzer in einer Besprechung auf die App zugreifen, indem sie **"Mehr"** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: auswählen.
+Nachdem die App hinzugefügt wurde (z. B. auf dem Desktop), können Benutzer in einer Besprechung auf die App zugreifen, indem sie **"Mehr**:::image type="icon" source="../../assets/icons/teams-client-more.png":::" auswählen.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Beispiel zeigt, wie sie während einer Besprechung auf mobilen Geräten eine Besprechungserweiterung hinzufügen." border="false":::
 
 #### <a name="desktop"></a>Desktop
 
-In einer Besprechung können Benutzer **weitere** :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **Apps hinzufügen** und die gewünschte App auswählen.
+In einer Besprechung können Benutzer **weitere** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **Apps hinzufügen** und die gewünschte App auswählen.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Beispiel zeigt, wie sie während einer Besprechung eine Besprechungserweiterung hinzufügen." border="false":::
 
@@ -101,11 +101,11 @@ Personen können die Registerkarte "Besprechungsinterne Besprechung" für Folgen
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
-|1|**App-Symbol (ausgewählt):** 16 Pixel transparentes App-Logo.|
+|1|**App-Symbol (ausgewählt):** Transparentes App-Logo mit 16 Pixeln.|
 |2|**App-Name**|
-|3|**Header:** Enthält ihren App-Namen.|
-|4|**Schaltfläche "Schließen":** Schließt die Registerkarte. Verwenden Sie immer das Symbol zum Schließen oben rechts anstelle einer Aktion in der Fußzeile.|
-|5|**Benachrichtigungsleiste:** Fehlerwarnungen werden direkt unterhalb der Kopfzeile angezeigt, und der iframe-Inhalt wird um 20 Pixel nach unten verschoben.|
+|3|**Header**: Enthält ihren App-Namen.|
+|4|**Schaltfläche "Schließen"**: Schließt die Registerkarte. Verwenden Sie immer das Symbol zum Schließen oben rechts anstelle einer Aktion in der Fußzeile.|
+|5|**Benachrichtigungsleiste**: Fehlerwarnungen werden direkt unterhalb der Kopfzeile angezeigt, und der Rest des iframe-Inhalts wird um 20 Pixel nach unten verschoben.|
 |6 |**iframe**: Zeigt Ihre App-Inhalte an.|
 
 ### <a name="spacing"></a>Abstand
@@ -157,7 +157,7 @@ In-Meeting-Dialogfelder werden von einem Benutzer (z. B. dem Besprechungsorganis
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
-|1|**Kopfzeile:** Enthält das App-Symbol, den Namen, die Aktionszeichenfolge und das Schließen-Symbol.|
+|1|**Kopfzeile**: Enthält das App-Symbol, den Namen, die Aktionszeichenfolge und das Schließen-Symbol.|
 |2|**iframe**: Zeigt Ihre App-Inhalte an.|
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomie: Kopfzeile des Besprechungsdialogfelds
@@ -171,29 +171,33 @@ Es gibt zwei Kopfzeilenvarianten. Verwenden Sie nach Möglichkeit die Variante m
 |1|**Avatar**: Person, die das Besprechungsdialogfeld initiiert.|
 |2|**App-Symbol**|
 |3|**App-Name**|
-|4|**Schaltfläche "Schließen":** Schließt das Dialogfeld.|
-|5|**Aktionszeichenfolge:** Beschreibt in der Regel, wer das Dialogfeld initiiert hat.|
+|4|**Schaltfläche "Schließen"**: Schließt das Dialogfeld.|
+|5|**Aktionszeichenfolge**: Beschreibt in der Regel, wer das Dialogfeld initiiert hat.|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>Reaktionsfähiges Verhalten: Dialogfelder in Besprechungen
 
 Dialogfelder in Besprechungen können je nach Größe variieren, um unterschiedliche Szenarien zu berücksichtigen. Achten Sie darauf, die Auffüllung und Komponentengrößen beizubehalten.
 
-* **Breite:** Sie können die Breite des iframe des Dialogfelds an einer beliebigen Stelle innerhalb des unterstützten Größenbereichs angeben.
-* **Höhe:** Sie können die Höhe des iFrames des Dialogfelds an einer beliebigen Stelle innerhalb des unterstützten Größenbereichs angeben. Sie können Benutzern auch den vertikalen Bildlauf ermöglichen, wenn Der App-Inhalt die maximale Höhe überschreitet.
-
-Geben Sie zum Implementieren die Breite und Höhe mithilfe des [`externalResourceUrl`](~/apps-in-teams-meetings/API-references.md#notificationsignal-api) Schlüssels an.
+* **Breite**: Sie können die Breite des iframe des Dialogfelds an einer beliebigen Stelle innerhalb des unterstützten Größenbereichs angeben.
+* **Höhe**: Sie können die Höhe des iframe des Dialogfelds an einer beliebigen Stelle innerhalb des unterstützten Größenbereichs angeben. Sie können Benutzern auch den vertikalen Bildlauf ermöglichen, wenn Der App-Inhalt die maximale Höhe überschreitet.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Beispiel zeigt das Dialogfeld &quot;In-Meeting&quot;. Breite: Min.-280 Pixel (248 Pixel iframe). Max-460 Pixel (428 Pixel iframe). Höhe: 300 Pixel (iframe)." border="false":::
 
 ## <a name="use-the-shared-meeting-stage"></a>Verwenden der freigegebenen Besprechungsphase
 
-Die freigegebene Besprechungsphase hilft Besprechungsteilnehmern bei der Interaktion und Zusammenarbeit mit App-Inhalten in Echtzeit. Die Benutzer können sich beispielsweise auf die Bearbeitung eines Dokuments, brainstorming mit einem Whiteboard oder das Überprüfen eines Dashboards konzentrieren.
+Sie können Benutzern erlauben, einige oder alle App-Inhalte in der Besprechungsphase freizugeben und mit ihnen zu interagieren. Hier sind Beispiele dafür, wie Personen dieses Feature während einer Besprechung verwenden können:
 
-Für die Besprechungsphase freigegebene Apps belegen den gleichen Platz wie ein freigegebener Bildschirm. Die Phase wird für alle Besprechungsteilnehmer neu ausgerichtet.
+* Bearbeiten eines Dokuments
+* Whiteboarding
+* Überprüfen eines Dashboards
+* Ansehen eines Videos
+* Spielen eines Spiels
+
+Für die Besprechungsphase freigegebene Apps belegen den gleichen Platz wie ein freigegebener Bildschirm. Die Phase wird auch für alle Besprechungsteilnehmer auf die gleiche Weise neu ausgerichtet.
 
 > [!NOTE]
-> Alle Benutzer in der Besprechung können die App sehen, wenn sie vom Desktop freigegeben werden. Derzeit können mobile Benutzer App-Inhalte nicht für die Besprechungsphase freigeben.
- 
+> Derzeit können mobile Benutzer App-Inhalte nicht für die Besprechungsphase freigeben. Sie können jedoch Inhalte sehen, die vom Desktop freigegeben wurden.
+
 ### <a name="use-cases"></a>Anwendungsfälle
 
 In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hier sind einige Beispielszenarien, die Ihnen bei den ersten Schritten helfen.
@@ -201,12 +205,14 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
 :::row:::
    :::column span="1":::
 
-**Bearbeiten und Überprüfen:** Befassen Sie sich mit Dashboards und planen Sie mit allen Personen in der Besprechung.
+**Bearbeiten und Überprüfen**: Machen Sie sich mit Dashboards vertraut und planen Sie mit allen Personen in der Besprechung.
 
    :::column-end:::
    :::column span="3":::
 
 :::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="Beispiel zeigt ein Dashboard, das in der freigegebenen Besprechungsphase überprüft wird." border="false":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="Beispiel zeigt eine Dashboardkomponente, die in der freigegebenen Besprechungsphase überprüft wird." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -214,7 +220,7 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
 :::row:::
    :::column span="1":::
 
-**Whiteboard:** Zeichnen und Zusammenstellen auf einer freigegebenen Canvas.
+**Whiteboard**: Zeichnen und Zusammenstellen auf einer freigegebenen Canvas.
 
    :::column-end:::
    :::column span="3":::
@@ -227,7 +233,7 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
 :::row:::
    :::column span="1":::
 
-**Quiz:** Testen Sie Wissen und gewinnen Sie Einblicke mit interaktiven Materialien.
+**Quiz**: Testen Sie Wissen und gewinnen Sie Einblicke mit interaktiven Materialien.
 
    :::column-end:::
    :::column span="3":::
@@ -237,24 +243,36 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
    :::column-end:::
 :::row-end:::
 
-### <a name="anatomy-shared-meeting-stage"></a>Anatomie: Gemeinsame Besprechungsphase
+### <a name="anatomy-share-all-app-content-to-a-meeting"></a>Anatomie: Freigeben aller App-Inhalte für eine Besprechung
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Die Abbildung zeigt die Design-Anatomie der freigegebenen Besprechungsphase." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Die Abbildung zeigt die Design-Anatomie der freigegebenen Besprechungsphase, wenn alle App-Inhalte freigegeben werden." border="false":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
-|1|**App-Symbol:** Das hervorgehobene Symbol gibt an, dass die Registerkarte "In-Meeting" der App geöffnet ist.|
-|2|**Schaltfläche "Für Besprechungsphase freigeben":** Der Einstiegspunkt, an dem die App für die Besprechungsphase freigegeben werden soll. Zeigt an, ob Sie Ihre App für die Verwendung der freigegebenen Besprechungsphase konfigurieren.|
-|3|**iframe**: Zeigt Ihre App-Inhalte an.|
-|4|**Schaltfläche "Freigabe beenden":** Beendet die Freigabe der App für die Besprechungsphase. Zeigt nur für den Teilnehmer an, der die Freigabe gestartet hat.|
-|5|**Zuschreibung** des Referenten: Zeigt den Namen des Teilnehmers an, der die App freigegeben hat.|
+|1|**App-Symbol**: Das hervorgehobene Symbol gibt an, dass die Besprechungsregisterkarte der App geöffnet ist.|
+|2|**Schaltfläche "Für Besprechung freigeben"**: Der Einstiegspunkt zum Freigeben der App für die Besprechung. Zeigt an, ob Sie Ihre App für die Verwendung der freigegebenen Besprechungsphase konfigurieren.|
+|3|**Zuschreibung des Referenten**: Zeigt den Namen des Teilnehmers an, der die App freigegeben hat.|
+|4|**iframe**: Zeigt Ihre App-Inhalte an.|
+|5|**Schaltfläche "Freigabe beenden"**: Beendet die Freigabe der App für die Besprechungsphase. Zeigt nur für den Teilnehmer an, der die Freigabe gestartet hat.|
+
+### <a name="anatomy-share-specific-app-content-to-a-meeting"></a>Anatomie: Freigeben bestimmter App-Inhalte für eine Besprechung
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="Die Abbildung zeigt die Design-Anatomie der freigegebenen Besprechungsphase, wenn nur bestimmte App-Inhalte freigegeben werden." border="false":::
+
+|Leistungsindikator|Beschreibung|
+|----------|-----------|
+|1|**App-Symbol**: Das hervorgehobene Symbol gibt an, dass die Besprechungsregisterkarte der App geöffnet ist.|
+|2|**Schaltfläche "Für Besprechung freigeben"**: Der Einstiegspunkt zum Freigeben der App für die Besprechung. Verwenden Sie für eine konsistente Benutzererfahrung immer das Standardsymbol Teams Freigeben. **"Für Besprechung freigeben** " ist der empfohlene Standardtext, Sie können ihn jedoch auch für Ihre Anwendungsfälle anpassen. **Spielen Sie beispielsweise gemeinsam** für eine Spiele-App oder **schauen Sie sich eine** Video-App an. Machen Sie in beiden Fällen deutlich, dass die Aktion eine gemeinsame, interaktive Umgebung für alle In der Besprechung erstellt.|
+|3|**Zuschreibung des Referenten**: Zeigt den Namen des Teilnehmers an, der die App freigegeben hat.|
+|4|**iframe**: Zeigt Ihre App-Inhalte an.|
+|5|**Schaltfläche "Freigabe beenden"**: Beendet die Freigabe der App für die Besprechungsphase. Zeigt nur für den Teilnehmer an, der die Freigabe gestartet hat.|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>Reaktionsfähiges Verhalten: Freigegebene Besprechungsphase
 
 Apps, die für die Besprechungsphase freigegeben wurden, variieren je nach Größe des Besprechungsstatus und der Größe des Fensters durch den Benutzer. Verwalten Sie den Abstand und das dynamische Layout von Navigation und Steuerelementen genau wie in einem Browser.
 
-* **Seitenbereich:** Ein Benutzer kann den Seitenbereich jederzeit während einer Besprechung öffnen lassen, um zu chatten, die Teilnehmerliste anzuzeigen oder eine App zu verwenden (z. B. die Registerkarte "In-Meeting"). Die Phase wird dynamisch neu angeordnet, wenn das Panel geöffnet ist.
-* **Video- und Audioraster:** Das Video- und Audioraster ist immer sichtbar, um Besprechungsteilnehmer anzuzeigen. Wenn ein Benutzer eine Person in der Besprechung ins Blickfeld rückt oder anheftet, erhöht dies die Höhe oder Breite des Teilnehmerrasters je nach Ausrichtung.
+* **Seitenbereich**: Ein Benutzer kann den Seitenbereich jederzeit während einer Besprechung öffnen lassen, um zu chatten, die Teilnehmerliste anzuzeigen oder eine App zu verwenden (z. B. die Registerkarte "In-Meeting"). Die Phase wird dynamisch neu angeordnet, wenn das Panel geöffnet ist.
+* **Video- und Audioraster**: Das Video- und Audioraster ist immer sichtbar, um Besprechungsteilnehmer anzuzeigen. Wenn ein Benutzer eine Person in der Besprechung ins Blickfeld rückt oder anheftet, erhöht dies die Höhe oder Breite des Teilnehmerrasters je nach Ausrichtung.
 
 #### <a name="meeting-stage-without-side-panel"></a>Besprechungsphase (ohne Seitenbereich)
 
@@ -270,7 +288,7 @@ Wenn der Seitenbereich geöffnet ist, beträgt die Besprechungsphase standardmä
 
 ## <a name="after-a-meeting"></a>Nach einer Besprechung
 
-Sie können zu einer Besprechung zurückkehren, nachdem sie beendet wurde, und App-Inhalte anzeigen. In diesem Beispiel kann sich der Besprechungsorganisator die Umfrageergebnisse auf der Registerkarte **"Contoso"** ansehen. (Hinweis: Aus Entwurfssicht gibt es keinen Unterschied zwischen der Registerkarte "Vor" und "Nach der Besprechung".)
+Sie können zu einer Besprechung zurückkehren, nachdem sie beendet wurde, und App-Inhalte anzeigen. In diesem Beispiel kann sich der Besprechungsorganisator die Umfrageergebnisse auf der Registerkarte **"Contoso** " ansehen. (Hinweis: Aus Entwurfssicht gibt es keinen Unterschied zwischen der Registerkarte "Vor" und "Nach der Besprechung".)
 
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Die Beispieldarstellung zeigt eine Registerkarte nach der Besprechung." border="false":::
 
@@ -438,7 +456,7 @@ Besprechungsdialogfelder sind für kurze Interaktionen vorgesehen.
 
 #### <a name="do-focus-on-dark-theme"></a>Do: Fokus auf dunklem Design
 
-Teams Besprechungen sind für dunkles Design optimiert, um visuelles und kognitives Rauschen zu reduzieren, damit sich Benutzer auf die Diskussion und die freigegebenen Inhalte konzentrieren können. Beachten Sie, dass bestimmte Arten von Apps (z. B. Whiteboarding und Dokumentbearbeitung) keinen dunklen Zeichenbereich benötigen.
+Teams Besprechungen sind für dunkles Design optimiert, um visuelles und kognitives Rauschen zu reduzieren, damit sich Benutzer auf die Diskussion und freigegebene Inhalte konzentrieren können. Beachten Sie, dass bestimmte Arten von Apps (z. B. Whiteboarding und Dokumentbearbeitung) keinen dunklen Zeichenbereich benötigen.
 
    :::column-end:::
    :::column span="":::
@@ -449,7 +467,7 @@ Teams Besprechungen sind für dunkles Design optimiert, um visuelles und kogniti
 
 #### <a name="dont-use-unfamiliar-colors"></a>Don't: Verwenden Sie unbekannte Farben
 
-Farben, die mit der Besprechungsumgebung in Konflikt stehen, können ablenkend sein und für Teams weniger nativ erscheinen. Erfahren Sie mehr über die Teams [Farbhierarchie,](https://developer.microsoft.com/fluentui#/styles/web/colors/products)einschließlich Anrufdesign-Neutralen.
+Farben, die mit der Besprechungsumgebung in Konflikt stehen, können ablenkend sein und für Teams weniger nativ erscheinen. Erfahren Sie mehr über die Teams [Farbhierarchie](https://developer.microsoft.com/fluentui#/styles/web/colors/products), einschließlich Anrufdesign-Neutralen.
 
    :::column-end:::
 :::row-end:::
