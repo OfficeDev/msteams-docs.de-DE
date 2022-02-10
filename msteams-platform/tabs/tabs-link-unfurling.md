@@ -5,20 +5,20 @@ description: Erfahren Sie, wie Sie einen Link öffnen, die Phasenansicht öffnen
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 17eb7fd6376bee2836ce271b0201aae31881b457
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: 48c7ae69b10702d58be933b5619fd6bdeb8cecf3
+ms.sourcegitcommit: 3332ca6f61d2d60ddb20140f6d163905ea177157
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178264"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62516519"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 
-Die Phasenansicht ist eine neue Benutzeroberflächenkomponente, mit der Sie den Inhalt rendern können, der im Vollbildmodus in Teams geöffnet und als Registerkarte angeheftet wird.
+Die Phasenansicht ist eine neue Benutzeroberflächenkomponente, mit der Sie den Inhalt rendern können, der im Vollbildmodus in Teams geöffnet und als Registerkarte angeheftet ist.
  
 ## <a name="stage-view"></a>Phasenansicht
 
-Die Phasenansicht ist eine Vollbild-UI-Komponente, die Sie aufrufen können, um Ihre Webinhalte anzuzeigen. Der vorhandene Link-Verbreitungsdienst wird so aktualisiert, dass er verwendet wird, um URLs mithilfe einer adaptiven Karte und Chatdiensten in eine Registerkarte umzuwandeln. Wenn ein Benutzer eine URL in einem Chat oder Kanal sendet, wird die URL auf eine adaptive Karte entrollt. Der Benutzer kann auf der Karte **"Anzeigen"** auswählen und den Inhalt direkt in der Phasenansicht als Registerkarte anheften.
+Die Phasenansicht ist eine Vollbild-UI-Komponente, die Sie aufrufen können, um Ihre Webinhalte anzuzeigen. Der vorhandene Link-Verbreitungsdienst wird so aktualisiert, dass er verwendet wird, um URLs mithilfe einer adaptiven Karte und Chatdiensten in eine Registerkarte umzuwandeln. Wenn ein Benutzer eine URL in einem Chat oder Kanal sendet, wird die URL auf eine adaptive Karte entrollt. Der Benutzer kann auf der Karte " **Anzeigen** " auswählen und den Inhalt direkt in der Phasenansicht als Registerkarte anheften.
 
 ## <a name="advantage-of-stage-view"></a>Vorteile der Phasenansicht
 
@@ -39,7 +39,7 @@ Sie können die Phasenansicht auf folgende Weise aufrufen:
 
 ## <a name="invoke-stage-view-from-adaptive-card"></a>Aufrufen der Phasenansicht von einer adaptiven Karte
 
-Wenn der Benutzer eine URL auf dem Teams Desktopclient eingibt, wird der Bot aufgerufen und gibt eine [adaptive Karte](../task-modules-and-cards/cards/cards-actions.md) mit der Option zum Öffnen der URL in einer Phase zurück. Nachdem eine Phase gestartet und `tabInfo` bereitgestellt wurde, können Sie die Phase als Registerkarte anheften.  
+Wenn der Benutzer eine URL auf dem Teams Desktopclient eingibt, wird der Bot aufgerufen und gibt eine [adaptive Karte](../task-modules-and-cards/cards/cards-actions.md) mit der Option zum Öffnen der URL in einer Phase zurück. Nachdem eine Phase gestartet und bereitgestellt `tabInfo` wurde, können Sie die Phase als Registerkarte anheften.  
 
 Die folgenden Bilder zeigen eine Phase, die von einer adaptiven Karte geöffnet wurde:
 
@@ -72,35 +72,31 @@ Es folgt der Code zum Öffnen einer Phase von einer adaptiven Karte aus:
 } 
 ```
 
-Der `invoke` Anforderungstyp muss `composeExtension/queryLink` .
+Der Anforderungstyp `invoke` muss .`composeExtension/queryLink`
 
 > [!NOTE]
 > * `invoke` workflow is similar to the current `appLinking` workflow. 
-> * Um die Konsistenz zu gewährleisten, wird empfohlen, den Namen `Action.Submit` `View` ".
-> * `websiteUrl` ist eine erforderliche Eigenschaft, die im Objekt übergeben werden `TabInfo` muss.
+> * Um die Konsistenz zu gewährleisten, wird empfohlen, den Namen `Action.Submit` " `View`.
+> * `websiteUrl` ist eine erforderliche Eigenschaft, die `TabInfo` im Objekt übergeben werden muss.
 
 Nachfolgend sehen Sie den Prozess zum Aufrufen der Phasenansicht:
 
-* Wenn der Benutzer **"Anzeigen"** auswählt, erhält der Bot eine `invoke` Anforderung. Der Anforderungstyp lautet `composeExtension/queryLink` .
+* Wenn der Benutzer **"Anzeigen**" auswählt, erhält der Bot eine `invoke` Anforderung. Der Anforderungstyp lautet `composeExtension/queryLink`.
 * `invoke` antwort von Bot enthält eine adaptive Karte mit Typ `tab/tabInfoAction` darin.
 * Der Bot antwortet mit einem `200` Code.
 
 > [!NOTE]
-> Auf Teams mobilen Clients öffnet das Aufrufen der Phasenansicht für Apps, die über den [Teams Store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) verteilt werden und keine mobliesoptimierte Oberfläche haben, den Standardwebbrowser des Geräts. Der Browser öffnet die im Parameter des Objekts angegebene `websiteUrl` `TabInfo` URL.
+> Auf Teams mobilen Clients öffnet das Aufrufen der Phasenansicht für Apps, die über den [Teams Store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) verteilt werden und keine mobliesoptimierte Oberfläche haben, den Standardwebbrowser des Geräts. Der Browser öffnet die im `websiteUrl` Parameter des `TabInfo` Objekts angegebene URL.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Aufrufen der Phasenansicht über deep-Link
 
-Um die Phasenansicht über den Deep-Link von Ihrer Registerkarte aus aufzurufen, müssen Sie die DEEP-Link-URL in der `microsoftTeams.executeDeeplink(url)` API umschließen. Der Deep-Link kann auch über eine Aktion auf der Karte übergeben `OpenURL` werden.
-
-In der folgenden Abbildung wird eine Phasenansicht angezeigt, die über einen Deep-Link aufgerufen wird:
-
-<img src="~/assets/images/tab-images/invoke-stage-view-through-deep-link.png" alt="Invoke a Stage View through a deep link" width="400"/>
+Um die Phasenansicht über den Deep-Link von Ihrer Registerkarte aus aufzurufen, müssen Sie die DEEP-Link-URL in der `microsoftTeams.executeDeeplink(url)` API umschließen. Der Deep-Link kann auch über eine `OpenURL` Aktion auf der Karte übergeben werden.
 
 ### <a name="syntax"></a>Syntax
 
 Es folgt die Deeplinksyntax: 
 
-https://teams.microsoft.com/l/stage/{appId}/0?context={\"contentUrl \" : \" "[contentUrl]" \" , \" websiteUrl \" : \" "[websiteUrl]" \" , name : Contoso \" \" \" \" }
+https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}
  
 ### <a name="examples"></a>Beispiele
 
@@ -110,15 +106,30 @@ Nachfolgend sind die Deep-Linkbeispiele zum Aufrufen der Phasenansicht aufgefüh
 
 **Beispiel 1**
 
-https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","websiteUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","name":"Contoso"}
+Nicht codiert
+ 
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","websiteUrl:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","name":"Contoso"}
+
+Codiert
+
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context=%7B%22contentUrl%22%3A%22https%253A%252F%252Fmicrosoft.sharepoint.com%252Fteams%252FLokisSandbox%252FSitePages%252FSandbox-Page.aspx%22%2C%22websiteUrl%0A%3A%22https%253A%252F%252Fmicrosoft.sharepoint.com%252Fteams%252FLokisSandbox%252FSitePages%252FSandbox-Page.aspx%22%2C%22name%22%3A%22Contoso%22%7D
+
 
 **Beispiel 2**
 
-https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","websiteUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","name":"Contoso"}
+Nicht codiert
+
+https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":""https://microsoft.sharepoint.com/teams/LokisSandbox/SitePages/Sandbox-Page.aspx,"websiteUrl":""https://microsoft.sharepoint.com/teams/LokisSandbox/SitePages/Sandbox-Page.aspx,"name":"Contoso"}
+
+Codiert
+
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx%22%2C%22name%22%3A%22Contoso%22%7D
+
 
 > [!NOTE]
+> Alle Deeplinks müssen vor dem Einfügen der URL codiert werden. Nicht codierte URLs werden nicht unterstützt.
 > * Dies `name` ist optional im Deep-Link. Wenn er nicht enthalten ist, wird er durch den App-Namen ersetzt.
-> * Der Deep-Link kann auch über eine Aktion übergeben `OpenURL` werden.
+> * Der Deep-Link kann auch über eine `OpenURL` Aktion übergeben werden.
 > * Wenn Sie eine Phase aus einem bestimmten Kontext starten, stellen Sie sicher, dass Ihre App in diesem Kontext funktioniert. Wenn Ihre Phasenansicht beispielsweise über eine persönliche App gestartet wird, müssen Sie sicherstellen, dass Ihre App einen persönlichen Bereich aufweist.
 
 ## <a name="tab-information-property"></a>Tabinformationseigenschaft
@@ -127,9 +138,9 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Zeichenfolge | 64 | Diese Eigenschaft ist ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird. Dies ist ein Pflichtfeld.|
 | `name` | Zeichenfolge | 128 | Diese Eigenschaft ist der Anzeigename der Registerkarte in der Kanalschnittstelle. Dieses Feld ist optional.|
-| `contentUrl` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https://-URL, die auf die Entitätsbenutzeroberfläche verweist, die im Teams Canvas angezeigt werden soll. Dies ist ein Pflichtfeld.|
+| `contentUrl` | String | 2048 | Diese Eigenschaft ist die https://-URL, die auf die Entitätsbenutzeroberfläche verweist, die im Teams Canvas angezeigt werden soll. Dies ist ein Pflichtfeld.|
 | `websiteUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, auf die sie zeigen soll, wenn ein Benutzer die Anzeige in einem Browser auswählt. Dies ist ein Pflichtfeld.|
-| `removeUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https://-URL, die auf die Benutzeroberfläche verweist, die angezeigt werden soll, wenn der Benutzer die Registerkarte löscht. Dies ist ein optionales Feld.|
+| `removeUrl?` | String | 2048 | Diese Eigenschaft ist die https:// URL, die auf die Benutzeroberfläche verweist, die angezeigt werden soll, wenn der Benutzer die Registerkarte löscht. Dies ist ein optionales Feld.|
 
 ## <a name="code-sample"></a>Codebeispiel
 
@@ -143,7 +154,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 > [!div class="nextstepaction"]
 > [Registerkarten für Unterhaltungen erstellen](~/tabs/how-to/conversational-tabs.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Artikel
 
 * [Verbreitung von Messaging-Erweiterungen](~/messaging-extensions/how-to/link-unfurling.md)
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
