@@ -1,23 +1,23 @@
 ---
 title: Referenz zum Öffentlichen Entwicklervorschau-Manifestschema
-description: Beispielmanifestdatei und Beschreibung aller komponenten, die für Microsoft Teams unterstützt werden
+description: Beispielmanifestdatei und Beschreibung aller komponenten, die für Microsoft Teams
 ms.topic: reference
 keywords: Teams-Manifestschema – Entwicklervorschau
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: c014495e3ae2a969bbebc28aed62aded18576c82
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: fd73fbdacf17c6c25a80071ec438c0dc97c6ee6a
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362935"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518548"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referenz: Öffentliches Entwicklervorschaumanifestschema für Microsoft Teams
 
 Informationen zum Aktivieren der Entwicklervorschau finden Sie in der [öffentlichen Entwicklervorschau für Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
-> Wenn Sie keine Entwicklervorschaufeatures verwenden, z. [B. das Ausführen Teams persönlichen Registerkarten und Messaging-Erweiterungen in Outlook und Office](../../m365-apps/overview.md), verwenden Sie stattdessen das [App-Manifest für GA-Features](~/resources/schema/manifest-schema.md).
+> Wenn Sie keine Entwicklervorschaufeatures verwenden, z. B. [das Ausführen Teams persönlichen Registerkarten und Messaging-Erweiterungen in Outlook und Office](../../m365-apps/overview.md), verwenden Sie stattdessen das [App-Manifest für GA-Features](~/resources/schema/manifest-schema.md).
 
 Das Microsoft Teams-Manifest beschreibt, wie die App in die Microsoft Teams-Plattform integriert wird. Ihr Manifest muss dem unter [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) gehosteten Schema entsprechen.
 
@@ -284,7 +284,7 @@ Die `https://` URL, die auf das JSON-Schema für das Manifest verweist.
 
 **Erforderlich** &ndash; Schnur
 
-Die Version des Manifestschemas, das dieses Manifest verwendet. Verwenden Sie dies `m365DevPreview` nur, wenn Sie [eine Vorschau Teams Apps anzeigen, die in Office und Outlook ausgeführt werden](../../m365-apps/overview.md). Verwenden Sie `devPreview` andernfalls alle anderen Teams Vorschaufeatures.
+Die Version des Manifestschemas, das dieses Manifest verwendet. Verwenden Sie dies `m365DevPreview` nur, wenn Sie eine Vorschau Teams Apps anzeigen, die [in Office und Outlook ausgeführt werden](../../m365-apps/overview.md). Verwenden Sie `devPreview` andernfalls alle anderen Teams Vorschaufeatures.
 
 ## <a name="version"></a>Version
 
@@ -395,7 +395,7 @@ Das Objekt ist ein Array, wobei alle Elemente vom Typ `object` sind. Dieser Bloc
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`configurationUrl`|Zeichenfolge|2048 Zeichen|✔|Die https://-URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
-|`canUpdateConfiguration`|Boolean|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: `true`|
+|`canUpdateConfiguration`|Boolesch|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: `true`|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die Bereiche `team` und `groupchat`. |
 |`context` |Array von Enumerationen|6 ||Die Gruppe von `contextItem`-Bereichen, in denen eine [Registerkarte unterstützt wird](../../tabs/how-to/access-teams-context.md). Standard: `channelTab`, `privateChatTab`, , `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`und `meetingStage`.|
 |`sharePointPreviewImage`|Zeichenfolge|2048||Ein relativer Dateipfad zu einem Registerkartenvorschaubild zur Verwendung in SharePoint. Größe: 1024 x 768. |
@@ -415,10 +415,10 @@ Das Objekt ist ein Array (maximal 16 Elemente) mit allen Elementen des Typs `obj
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`entityId`|String|64 Zeichen|✔|Ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird.|
-|`name`|Zeichenfolge|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanal-Benutzeroberfläche.|
-|`contentUrl`|Zeichenfolge|2048 Zeichen|✔|Die https://-URL, die auf die Entitäts-Benutzeroberfläche verweist, die im Microsoft Teams-Canvas angezeigt werden soll.|
-|`contentBotId`|   | | | Die Microsoft Teams App-ID, die für den Bot im Bot Framework-Portal angegeben ist. |
-|`websiteUrl`|Zeichenfolge|2048 Zeichen||Die https:// URL, die darauf zeigt, ob sich ein Benutzer für die Anzeige in einem Browser entscheidet.|
+|`name`|String|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanal-Benutzeroberfläche.|
+|`contentUrl`|String|2048 Zeichen|✔|Die https://-URL, die auf die Entitäts-Benutzeroberfläche verweist, die im Microsoft Teams-Canvas angezeigt werden soll.|
+|`contentBotId`|   | | | Die Microsoft Teams App-ID, die für den Bot im Bot Framework-Portal angegeben wurde. |
+|`websiteUrl`|String|2048 Zeichen||Die https:// URL, die darauf zeigt, ob sich ein Benutzer für die Anzeige in einem Browser entscheidet.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen statische Registerkarten nur den `personal`-Bereich. Das bedeutet, dass sie nur als Teil der persönlichen Benutzeroberfläche bereitgestellt werden können.|
 
 ## <a name="bots"></a>Bots
@@ -474,7 +474,7 @@ Das Objekt ist ein Array (maximal 1 Element) mit allen Elementen des Typs `objec
 |Name| Typ | Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`botId`|Zeichenfolge|64|✔|Die eindeutige Microsoft-App-ID für den Bot, welcher der Messaging-Erweiterung zugeordnet ist, wie beim Bot Framework registriert. Dies kann durchaus mit der gesamten [App-ID](#id) übereinstimmen.|
-|`canUpdateConfiguration`|Boolean|||Ein Wert, der angibt, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann. Der Standardwert lautet `false`.|
+|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann. Der Standardwert lautet `false`.|
 |`commands`|Array des Objekts|10|✔|Array von Befehlen, die von der Messaging-Erweiterung unterstützt werden|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -487,24 +487,24 @@ Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 |---|---|---|---|---|
 |`id`|String|64 Zeichen|✔|Die ID für den Befehl.|
 |`type`|String|64 Zeichen||Der Befehlstyp. Entweder `query` oder `action`. Standard: `query`|
-|`title`|Zeichenfolge|32 Zeichen|✔|Der benutzerfreundliche Name des Befehls.|
-|`description`|Zeichenfolge|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
-|`initialRun`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt werden soll. Standard: `false`|
+|`title`|String|32 Zeichen|✔|Der benutzerfreundliche Name des Befehls.|
+|`description`|String|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
+|`initialRun`|Boolean|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt werden soll. Standard: `false`|
 |`context`|Array von Zeichenfolgen|3||Definiert, von wo aus die Messaging-Erweiterung aufgerufen werden kann. Eine beliebige Kombination von `compose`, `commandBox`, `message`. Der Standardwert ist `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden soll.|
+|`fetchTask`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden soll.|
 |`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das vorab geladen werden soll, wenn Sie einen Messaging-Erweiterungsbefehl verwenden.|
-|`taskInfo.title`|String|64||Titel des ersten Dialogfelds.|
+|`taskInfo.title`|Zeichenfolge|64||Titel des ersten Dialogfelds.|
 |`taskInfo.width`|Zeichenfolge|||Dialogfensterbreite: entweder eine Angabe in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
-|`taskInfo.height`|String|||Dialogfensterhöhe: entweder eine Angabe in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
-|`taskInfo.url`|Zeichenfolge|||Anfängliche WebView-URL.|
+|`taskInfo.height`|Zeichenfolge|||Dialogfensterhöhe: entweder eine Angabe in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
+|`taskInfo.url`|String|||Anfängliche WebView-URL.|
 |`messageHandlers`|Array von Objekten|5||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind. Domänen müssen auch in `validDomains`aufgeführt werden.|
-|`messageHandlers.type`|String|||Der Typ des Nachrichtenhandlers. Muss `"link"` sein.|
+|`messageHandlers.type`|Zeichenfolge|||Der Typ des Nachrichtenhandlers. Muss `"link"` sein.|
 |`messageHandlers.value.domains`|Array von Zeichenfolgen|||Array von Domänen, für die sich der Link-Nachrichtenhandler registrieren kann.|
 |`parameters`|Array des Objekts|5|✔|Die Liste der Parameter, die der Befehl verwendet. Minimum: 1; Maximum: 5|
 |`parameter.name`|String|64 Zeichen|✔|Der Name des Parameters, wie er im Client angezeigt wird. Dies ist in der Benutzeranforderung enthalten.|
 |`parameter.title`|String|32 Zeichen|✔|Benutzerfreundlicher Titel für den Parameter.|
 |`parameter.description`|String|128 Zeichen||Benutzerfreundliche Zeichenfolge, die den Zweck dieses Parameters beschreibt.|
-|`parameter.inputType`|Zeichenfolge|128 Zeichen||Definiert den Typ des Steuerelements, das in einem Aufgabenmodul für `fetchTask: true`angezeigt wird. Einer von `text`, , `textarea`, `number`, `date`, `time`, `toggle`. `choiceset`|
+|`parameter.inputType`|String|128 Zeichen||Definiert den Typ des Steuerelements, das in einem Aufgabenmodul für `fetchTask: true`angezeigt wird. Einer von `text`, , `textarea`, `number`, `date`, `time`, `toggle`. `choiceset`|
 |`parameter.choices`|Array von Objekten|10||Die Auswahloptionen für die `choiceset`. Wird nur verwendet, wenn `parameter.inputType` .`choiceset`|
 |`parameter.choices.title`|String|128||Titel der Auswahl.|
 |`parameter.choices.value`|String|512||Value of the choice.|
@@ -538,7 +538,7 @@ Gibt die systemeigenen Features auf dem Gerät eines Benutzers an, auf die Ihre 
 
 Eine Liste der gültigen Domänen, von denen die App erwartet, dass inhalte geladen werden. Domäneneinträge können Platzhalter enthalten, z. B `*.example.com`. . Dies entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com`. Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der für die Registerkartenkonfiguration verwendeten navigieren muss, muss diese Domäne hier angegeben werden.
 
-Es ist jedoch **nicht** erforderlich, die Domänen von Identitätsanbietern, die Sie unterstützen möchten, in Ihre App einzuschließen. Um sich beispielsweise mit einer Google-ID zu authentifizieren, müssen Sie zu accounts.google.com umleiten, sie sollten jedoch keine accounts.google.com in `validDomains[]`einschließen.
+Es ist jedoch **nicht** erforderlich, die Domänen von Identitätsanbietern, die Sie unterstützen möchten, in Ihre App einzuschließen. Um sich beispielsweise mithilfe einer Google-ID zu authentifizieren, müssen Sie zu accounts.google.com umleiten, sie sollten jedoch keine accounts.google.com in `validDomains[]`einschließen.
 
 > [!IMPORTANT]
 > Fügen Sie keine Domänen hinzu, die sich außerhalb Ihres Steuerelements befinden, entweder direkt oder über Platzhalter. Ist z. `yourapp.onmicrosoft.com` B. gültig, aber `*.onmicrosoft.com` nicht gültig.
@@ -549,11 +549,11 @@ Das Objekt ist ein Array, wobei alle Elemente vom Typ `string` sind.
 
 **Optional**
 
-Geben Sie Ihre Azure AD App-ID und Graph Informationen an, damit sich Benutzer nahtlos bei Ihrer Auzre AD-App anmelden können.
+Geben Sie Ihre Microsoft Azure Active Directory -App-ID (Azure AD) und Graph Informationen an, damit sich Benutzer nahtlos bei Ihrer Auzre AD-App anmelden können.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`id`|Zeichenfolge|36 Zeichen|✔|Azure AD-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
+|`id`|Zeichenfolge|36 Zeichen|✔|Microsoft Azure Active Directory (Azure AD) Anwendungs-ID der App. Diese ID muss eine GUID sein.|
 |`resource`|Zeichenfolge|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für SSO.|
 |`applicationPermissions`|Array|Maximal 100 Elemente|✔|Ressourcenberechtigungen für die Anwendung.|
 
@@ -617,11 +617,11 @@ Gibt das Ihrer App zugeordnete SaaS-Angebot an.
 
 **Optional** – Objekt
 
-Geben Sie die Definition der Besprechungserweiterung an. Weitere Informationen finden Sie unter ["Benutzerdefinierte Szenen im Zusammen-Modus" in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
+Geben Sie die Besprechungserweiterungsdefinition an. Weitere Informationen finden Sie unter [benutzerdefinierten Szenen im Zusammen-Modus in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`scenes`|Array von Objekten| 5 Elemente||Unterstützte Szenen für Besprechungen.|
+|`scenes`|Array von Objekten| 5 Elemente||Unterstützte Besprechungsszenen.|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 
@@ -631,31 +631,31 @@ Geben Sie die Definition der Besprechungserweiterung an. Weitere Informationen f
 |`name`| string | 128 Zeichen |✔| Der Name der Szene. |
 |`file`|||✔| Der relative Dateipfad zur JSON-Metadatendatei der Szenen. |
 |`preview`|||✔| Der relative Dateipfad zum PNG-Vorschausymbol der Szenen. |
-|`maxAudience`| ganze Zahl | 50  |✔| Die maximale Anzahl von in der Szene unterstützten Zielgruppen. |
-|`seatsReservedForOrganizersOrPresenters`| ganze Zahl | 50 |✔| Die Anzahl der Arbeitsplätze, die für Organisatoren oder Referenten reserviert sind.|
+|`maxAudience`| ganze Zahl | 50  |✔| Die maximale Anzahl von Zielgruppen, die in der Szene unterstützt werden. |
+|`seatsReservedForOrganizersOrPresenters`| ganze Zahl | 50 |✔| Die Anzahl der Plätze, die für Organisatoren oder Moderatoren reserviert sind.|
 
 ## <a name="authorization"></a>Autorisierung
 
-**Optional** - Objekt
+**Optional** – Objekt
 
-Angeben und Konsolidieren von Autorisierungsinformationen für die App.
+Spezifizieren und konsolidieren Sie autorisierungsbezogene Informationen für die App.
 
 |Name| Typ|Maximale Größe|Erforderlich |Beschreibung|
 |---|---|---|---|---|
-|`permissions`||||Liste der Berechtigungen, die die App für die Funktion benötigt.|
+|`permissions`||||Liste der Berechtigungen, welche die App benötigt, um zu funktionieren.|
 
 ### <a name="authorizationpermissions"></a>authorization.permissions
 
 |Name| Typ|Maximale Größe|Erforderlich |Beschreibung|
 |---|---|---|---|---|
-|`resourceSpecific`| Array von Objekten|16 Elemente||Berechtigungen, die den Datenzugriff auf Ressourceninstanzebene schützen.|
+|`resourceSpecific`| Array von Objekten|16 Elemente||Berechtigungen, die den Datenzugriff auf Ebene der Ressourceninstanz schützen.|
 
 ### <a name="authorizationpermissionsresourcespecific"></a>authorization.permissions.resourceSpecific
 
 |Name| Typ|Maximale Größe|Erforderlich |Beschreibung|
 |---|---|---|---|---|
 |`type`|string||✔| Der Typ der ressourcenspezifischen Berechtigung. Optionen: `Application` und `Delegated`.|
-|`name`|string|128 Zeichen|✔|Der Name der ressourcenspezifischen Berechtigung. <br> Weitere Informationen finden Sie unter ["Anwendungsberechtigungen](../../graph-api/rsc/resource-specific-consent.md) " und ["Delegierte Berechtigungen"](#delegated-permissions).|
+|`name`|string|128 Zeichen|✔|Der Name der ressourcenspezifischen Berechtigung. <br> Weitere Informationen finden Sie unter [Anwendungsberechtigungen](../../graph-api/rsc/resource-specific-consent.md) und [Delegierte Berechtigungen](#delegated-permissions).|
 
 ### <a name="delegated-permissions"></a>Delegierte Berechtigungen
 
@@ -665,24 +665,24 @@ Delegierte Berechtigungen ermöglichen der App den Zugriff auf Daten im Namen de
 
     |**Name**|**Beschreibung**|
     |---|---|
-    |`ChannelMeetingParticipant.Read.Group`| Ermöglicht der App das Lesen von Teilnehmerinformationen, einschließlich Name, Rolle, ID, verbundener und linker Zeiten, von Kanalbesprechungen, die diesem Team zugeordnet sind, im Namen des angemeldeten Benutzers.|
-    |`InAppPurchase.Allow.Group`| Ermöglicht der App, Marketplace-Angebote für Benutzer in diesem Team anzuzeigen und ihre Einkäufe innerhalb der App im Namen des angemeldeten Benutzers abzuschließen.|
-    |`ChannelMeetingStage.Write.Group`| Ermöglicht der App, Inhalte in der Besprechungsphase in Kanalbesprechungen anzuzeigen, die diesem Team zugeordnet sind, im Namen des angemeldeten Benutzers.|
+    |`ChannelMeetingParticipant.Read.Group`| Ermöglicht es der App, im Namen des angemeldeten Benutzers die Teilnehmerinformationen (Name, Rolle, ID, Beitritts- und Abwesenheitszeiten) von Channel-Meetings zu lesen, die mit diesem Team verbunden sind.|
+    |`InAppPurchase.Allow.Group`| Ermöglicht der App, Marketplace-Angebote für Benutzer in diesem Team anzuzeigen und ihre Käufe innerhalb der App im Namen des angemeldeten Benutzers abzuschließen.|
+    |`ChannelMeetingStage.Write.Group`| Ermöglicht es der App, in Channel-Meetings, die mit diesem Team verbunden sind, im Namen des angemeldeten Benutzers Inhalte auf der Meetingbühne anzuzeigen.|
 
 * **Ressourcenspezifische Berechtigungen für Chats oder Besprechungen**
 
     |**Name**|**Beschreibung**|
     |---|---|
-    |`InAppPurchase.Allow.Chat`|Ermöglicht der App, den Benutzern in diesem Chat marketplace-Angebote sowie alle zugehörigen Besprechungen anzuzeigen und ihre Einkäufe in der App im Namen des angemeldeten Benutzers abzuschließen.|
-    |`MeetingStage.Write.Chat`|Ermöglicht der App, Inhalte in der Besprechungsphase in Besprechungen im Zusammenhang mit diesem Chat im Namen des angemeldeten Benutzers anzuzeigen.|
-    |`OnlineMeetingParticipant.Read.Chat`|Ermöglicht der App das Lesen von Teilnehmerinformationen, einschließlich Name, Rolle, ID, Verbunden- und Linken-Zeiten der besprechung, die diesem Chat zugeordnet ist, im Namen des angemeldeten Benutzers.|
-    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Ermöglicht der App, eingehende Audiodaten für Teilnehmer in Besprechungen im Zusammenhang mit diesem Chat im Namen des angemeldeten Benutzers umzuschalten.|
+    |`InAppPurchase.Allow.Chat`|Ermöglicht es der App, den Nutzern in diesem Chat und allen damit verbundenen Treffen Marktplatzangebote zu zeigen und ihre Einkäufe innerhalb der App im Namen des angemeldeten Nutzers abzuschließen.|
+    |`MeetingStage.Write.Chat`|Ermöglicht es der App, in Meetings, die mit diesem Chat verbunden sind, im Namen des angemeldeten Benutzers Inhalte auf der Meeting-Bühne zu zeigen.|
+    |`OnlineMeetingParticipant.Read.Chat`|Ermöglicht es der App, im Namen des angemeldeten Benutzers die Teilnehmerinformationen, einschließlich Name, Rolle, ID, Beitritts- und Austrittszeiten, der mit diesem Chat verbundenen Besprechung zu lesen.|
+    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Ermöglicht der App, eingehende Audiodaten für Teilnehmer an Meetings, die mit diesem Chat verknüpft sind, im Namen des angemeldeten Benutzers umzuschalten.|
 
 * **Ressourcenspezifische Berechtigungen für Benutzer**
 
     |**Name**|**Beschreibung**|
     |---|---|
-    |`InAppPurchase.Allow.User`|Ermöglicht der App, die Marketplace-Angebote des Benutzers anzuzeigen und die Einkäufe des Benutzers in der App im Namen des angemeldeten Benutzers abzuschließen.|
+    |`InAppPurchase.Allow.User`|Ermöglicht es der App, dem Benutzer Angebote auf dem Marktplatz zu zeigen und die Einkäufe des Benutzers innerhalb der App im Namen des angemeldeten Benutzers abzuschließen.|
 
 ## <a name="see-also"></a>Siehe auch
 

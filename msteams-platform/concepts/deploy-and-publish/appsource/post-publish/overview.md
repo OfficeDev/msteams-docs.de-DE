@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 5c85d30e595d30a236318d13535584d949b1075a
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: cbb4eff47d21180bbdfe4aad49cb749a745386c2
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212412"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518562"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Unterhalt Ihrer veröffentlichte Microsoft Teams-App
 
@@ -44,7 +44,7 @@ Wenn Sie jedoch eine der folgenden Änderungen an Ihrer App vornehmen, müssen I
 * Fügen Sie eine persönliche Registerkarte hinzu.
 * Fügen Sie einen Kanal und eine Gruppenregisterkarte hinzu.
 * Fügen Sie einen Connector hinzu.
-* Ändern Sie Konfigurationen im Zusammenhang mit ihrer Azure Active Directory App-Registrierung. Weitere Informationen finden Sie unter [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Ändern Sie Konfigurationen im Zusammenhang mit ihrer Microsoft Azure Active Directory (Azure AD)-App-Registrierung. Weitere Informationen finden Sie unter [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Beheben von Problemen mit Ihrer veröffentlichten App
 
@@ -54,12 +54,12 @@ Microsoft führt tägliche Automatisierungstests für Apps aus, die im Teams Sto
 
 Wenn Ihre App im Teams Store aufgeführt ist, können Sie einen Link erstellen, der Teams startet und ein Dialogfeld zum Installieren Ihrer App anzeigt. Sie können diesen Link z. B. mit einer Downloadschaltfläche auf der Marketingseite Ihres Produkts einschließen.
 
-Erstellen Sie den Link mithilfe der folgenden URL, die mit Ihrer App-ID angefügt wurde: `https://teams.microsoft.com/l/app/<your-app-id>` .
+Erstellen Sie den Link mithilfe der folgenden URL, die mit Ihrer App-ID angefügt wurde: `https://teams.microsoft.com/l/app/<your-app-id>`.
 
 ## <a name="complete-microsoft-365-certification"></a>Abschließen Microsoft 365 Zertifizierung
 
-[Microsoft 365 Zertifizierung](/microsoft-365-app-certification/docs/certification) bietet Zusicherungen, dass Daten und Datenschutz angemessen gesichert und geschützt sind, wenn ein Office-App oder Add-In eines Drittanbieters in Ihrem Microsoft 365 Ökosystem installiert wird. Die Zertifizierung bestätigt, dass Ihre App mit Microsoft-Technologien kompatibel ist, den bewährten Methoden für cloudbasierte App-Sicherheit entspricht und von Microsoft unterstützt wird.
+[Microsoft 365 Zertifizierung](/microsoft-365-app-certification/docs/certification) bietet Zusicherungen, dass Daten und Datenschutz angemessen gesichert und geschützt sind, wenn ein Office-App oder Add-In eines Drittanbieters in Ihrem Microsoft 365 Ökosystem installiert ist. Die Zertifizierung bestätigt, dass Ihre App mit Microsoft-Technologien kompatibel ist, den bewährten Methoden für cloudbasierte App-Sicherheit entspricht und von Microsoft unterstützt wird.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Artikel
 
 [Monetarisieren Sie Ihre App über den Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

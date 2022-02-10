@@ -6,12 +6,12 @@ keywords: Personenauswahl für adaptive Karten
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: b09293c26dac6721b92fcf1d574560a3da7e281a
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 449c3d764cf3e4db68207560890e954bef14c7b4
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212475"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518303"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>Personenauswahl in Adaptiven Karten
 
@@ -46,7 +46,7 @@ Benutzer A (Robert) erhält ein Ticket für eine Aufgabe in einem Kanal und erke
 
 **So weisen Sie eine Aufgabe neu zu**
 
-1. Wählen Sie **"Neu zuweisen"** aus, wo das Personenauswahlfeld mit dem Namen vorgefüllt wird, um die Aufgabe dem gewünschten Benutzer neu zuzuweisen.
+1. Wählen Sie **"Neu zuweisen** " aus, wo das Personenauswahlfeld mit dem Namen vorgefüllt wird, um die Aufgabe dem gewünschten Benutzer neu zuzuweisen.
 1. Entfernen Sie den falschen Benutzernamen. 
 1. Wählen Sie die gewünschten Benutzer gemäß Bildszenario, Benutzer B (Dropdown) und Benutzer C (Robin) für die Aufgabe aus. 
 1. Wählen Sie **Zuweisen** aus. Nach der Zuweisung werden die Informationen an den Bot gesendet. 
@@ -69,7 +69,7 @@ Benutzer A (Robert) erhält ein Ticket für eine Aufgabe in einem Kanal und erke
 
 **So weisen Sie eine Aufgabe neu zu**
 
-1. Wählen Sie **"Neu zuweisen"** aus, wo das Personenauswahlfeld mit dem Namen vorgefüllt wird, um die Aufgabe dem gewünschten Benutzer neu zuzuweisen.
+1. Wählen Sie **"Neu zuweisen** " aus, wo das Personenauswahlfeld mit dem Namen vorgefüllt wird, um die Aufgabe dem gewünschten Benutzer neu zuzuweisen.
 1. Entfernen Sie den falschen Benutzernamen.
 1. Wählen Sie die gewünschten Benutzer gemäß Bildszenario, Benutzer B (Dropdown) und Benutzer C (Robin) für die Aufgabe aus.
 1. Wählen Sie **Fertig** aus.
@@ -91,11 +91,11 @@ Die Personenauswahl wird als Erweiterung des [Input.ChoiceSet-Steuerelements](ht
 * Kontrollkästchen, z. B. Mehrfachauswahl.  
 
 > [!NOTE]
-> Das `Input.ChoiceSet` Steuerelement basiert auf den Eigenschaften und den `style` `isMultiSelect` Eigenschaften.  
+> Das `Input.ChoiceSet` Steuerelement basiert auf den Eigenschaften und `isMultiSelect` den `style` Eigenschaften.  
 
 ### <a name="update-schema"></a>Schema aktualisieren
 
-Die folgenden Eigenschaften sind Ergänzungen zum `Input.ChoiceSet` Schema, um die Personenauswahl auf der Karte zu aktivieren:  
+Die folgenden Eigenschaften sind Ergänzungen zum Schema, um die `Input.ChoiceSet` Personenauswahl auf der Karte zu aktivieren:  
 
 #### <a name="inputchoiceset-control"></a>Input.ChoiceSet-Steuerelement
 
@@ -107,7 +107,7 @@ Die folgenden Eigenschaften sind Ergänzungen zum `Input.ChoiceSet` Schema, um d
 
 |Eigenschaft |Typ |Erforderlich |Beschreibung|
 |--|--|--|--|
-|**Dataset** |Zeichenfolge |Ja |Der Datentyp, der dynamisch abgerufen werden muss.|   
+|**Dataset** |String |Ja |Der Datentyp, der dynamisch abgerufen werden muss.|   
 
 #### <a name="dataset"></a>Dataset
 Die folgende Tabelle enthält vordefinierte Werte als **Dataset** für die Personenauswahl:   
@@ -160,8 +160,8 @@ Um die Suche in einer Liste von Unterhaltungsmitgliedern zu aktivieren, verwende
 
 ### <a name="data-submission"></a>Datenübermittlung
 
-Sie können ausgewählte Daten verwenden `Action.Submit` oder an Ihren Bot `Action.Execute` übermitteln. Die `invoke` auf Ihrem Bot empfangene Nutzlast ist eine Liste der Azure AD-IDs oder der in der statischen Liste bereitgestellten IDs.
-Wenn in der Personenauswahl ein Benutzer im Steuerelement ausgewählt wird, `Azure AD ID` ist der Benutzer der zurückgegebene Wert. Dies `Azure AD ID` ist eine Zeichenfolge und identifiziert einen Benutzer im Verzeichnis eindeutig.
+Sie können ausgewählte Daten verwenden `Action.Submit` oder `Action.Execute` an Ihren Bot übermitteln. Die `invoke` auf Ihrem Bot empfangene Nutzlast ist eine Liste der Microsoft Azure Active Directory (Azure AD)-IDs oder der in der statischen Liste bereitgestellten IDs.
+Wenn in der Personenauswahl ein Benutzer im Steuerelement ausgewählt wird, ist der `Microsoft Azure Active Directory (Azure AD) ID` Benutzer der zurückgegebene Wert. Dies `Microsoft Azure Active Directory (Azure AD) ID` ist eine Zeichenfolge und identifiziert einen Benutzer im Verzeichnis eindeutig.
 
 Das Format des an den Bot übermittelten Werts hängt vom Wert der `isMultiSelect` Eigenschaft ab:
 
@@ -170,15 +170,15 @@ Das Format des an den Bot übermittelten Werts hängt vom Wert der `isMultiSelec
 |false _(einzelne Auswahl)_|<selected_Azure_AD_ID>|
 |true _(Mehrfachauswahl)_|<selected_Azure_AD_ID_1>,<selected_Azure_AD_ID_2>,<selected_Azure_AD_ID_3>|  
 
-Mit der wählt die `Azure AD ID` Personenauswahl den entsprechenden Benutzer vorab aus. 
+Mit der wählt die `Azure AD ID`Personenauswahl den entsprechenden Benutzer vorab aus. 
 
 ## <a name="preselection-of-user"></a>Vorauswahl des Benutzers
 
-Die Personenauswahl unterstützt die Vorabauswahl des Benutzers im Steuerelement beim Erstellen und Senden einer adaptiven Karte. `Input.ChoiceSet` unterstützt die `value` Eigenschaft, die für die Vorabauswahl eines Benutzers verwendet wird. Das Format dieser `value` Eigenschaft entspricht dem format des übermittelten Werts in der [Datenübermittlung.](#data-submission)  
+Die Personenauswahl unterstützt die Vorabauswahl des Benutzers im Steuerelement beim Erstellen und Senden einer adaptiven Karte. `Input.ChoiceSet` unterstützt die `value` Eigenschaft, die für die Vorabauswahl eines Benutzers verwendet wird. Das Format dieser `value` Eigenschaft entspricht dem format des übermittelten Werts in der [Datenübermittlung](#data-submission).  
 Die folgende Liste enthält die Informationen für die Vorabauswahl von Benutzern:
 
-* Geben Sie für einen einzelnen Benutzer im Steuerelement `Azure AD ID` den Benutzer als `value` . 
-* Geben Sie für mehrere Benutzer, z. B. `isMultiSelect` `true` eine durch Trennzeichen getrennte Zeichenfolge von s `Azure AD ID` an.  
+* Geben Sie für einen einzelnen Benutzer im Steuerelement den `Microsoft Azure Active Directory (Azure AD) ID` Benutzer als `value`. 
+* Geben Sie für mehrere Benutzer, z `isMultiSelect` `true`. B. eine durch Trennzeichen getrennte Zeichenfolge von `Microsoft Azure Active Directory (Azure AD) ID`s an.  
 
 Im folgenden Beispiel wird die Vorauswahl eines einzelnen Benutzers beschrieben:
 
@@ -256,7 +256,7 @@ Die statische Auswahl unterstützt Szenarien, in denen benutzerdefinierte Profil
 > [!NOTE]
 > Statisch `choices` werden mit dynamischen Datasets verwendet. 
 
-Die Auswahl besteht aus `title` und `value` . Wenn diese Auswahl zusammen mit der Personenauswahl verwendet wird, werden diese Optionen in Benutzerprofile übersetzt, `title` die den Namen und den `value` Bezeichner aufweisen. Diese benutzerdefinierten Profile sind auch Teil der Suchergebnisse, wenn die Suchabfrage mit der angegebenen `title` übereinstimmt.    
+Die Auswahl besteht aus `title` und `value`. Wenn diese Auswahl zusammen mit der Personenauswahl verwendet wird, werden diese Optionen in Benutzerprofile übersetzt, die `title` den Namen und den `value` Bezeichner aufweisen. Diese benutzerdefinierten Profile sind auch Teil der Suchergebnisse, wenn die Suchabfrage mit der angegebenen `title`übereinstimmt.    
 Im folgenden Beispiel werden statische Auswahlmöglichkeiten beschrieben: 
 
 ```json
@@ -307,7 +307,7 @@ Die folgende Abbildung zeigt die Personenauswahl in adaptiven Karten mit statisc
 
 Sie können die Personenauswahl für eine effiziente Aufgabenverwaltung in verschiedenen Szenarien implementieren.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Artikel
 
 [Kartenreferenz](cards-reference.md)
 

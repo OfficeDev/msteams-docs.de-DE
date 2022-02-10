@@ -1,24 +1,24 @@
 ---
 title: Testen von ressourcenspezifischen Zustimmungsberechtigungen in Teams
-description: Details zum Testen der ressourcenspezifischen Zustimmung in Teams mit Postman mit Codebeispielen
+description: Details zum Testen der ressourcenspezifischen Zustimmung in Teams verwendung von Postman mit Codebeispielen
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
-keywords: Teams-Autorisierung OAuth SSO Azure AD rsc Postman Graph
-ms.openlocfilehash: 8bde324791199d1369c5accf454774cdc1c9a828
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+keywords: Teams-Autorisierung OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
+ms.openlocfilehash: 15a2a80a8f1ce280b462ed6e6e99242fb30f0dc3
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362928"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518121"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Testen von ressourcenspezifischen Zustimmungsberechtigungen in Teams
 
 > [!NOTE]
 > Die ressourcenspezifische Zustimmung für den Chatbereich ist nur in der [öffentlichen Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
-Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams- und Graph-API-Integration, mit der Ihre App API-Endpunkte verwenden kann, um bestimmte Ressourcen innerhalb einer Organisation zu verwalten – entweder Teams oder Chats. Weitere Informationen finden Sie unter [Ressourcenspezifische Zustimmung (RSC) – Microsoft Teams Graph API](resource-specific-consent.md).
+Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams- und Graph-API-Integration, mit der Ihre App API-Endpunkte verwenden kann, um bestimmte Ressourcen innerhalb einer Organisation zu verwalten – entweder Teams oder Chats. Weitere Informationen finden Sie unter ["Ressourcenspezifische Zustimmung (RSC) – Microsoft Teams Graph-API](resource-specific-consent.md)".
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -34,14 +34,14 @@ Fügen Sie ihrem [App-Manifest einen webApplicationInfo-Schlüssel](../../resour
 
 |Name| Typ | Beschreibung|
 |---|---|---|
-|`id` |Zeichenfolge |Ihre Azure AD-App-ID. Weitere Informationen finden Sie unter [Registrieren Ihrer App im Azure AD Portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`id` |Zeichenfolge |Ihre Microsoft Azure Active Directory -App-ID (Azure AD). Weitere Informationen finden Sie unter [Registrieren Ihrer App im portal Microsoft Azure Active Directory (Azure AD).](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)|
 |`resource`|Zeichenfolge| Dieses Feld hat keinen Vorgang in RSC, muss jedoch hinzugefügt werden und einen Wert aufweisen, um eine Fehlerantwort zu vermeiden. Jede Zeichenfolge wird ausgeführt.|
 
 Geben Sie die von der App benötigten Berechtigungen an.
 
 |Name| Typ | Beschreibung|
 |---|---|---|
-|`authorization`|Object|Liste der Berechtigungen, die die App für die Funktion benötigt. Weitere Informationen finden Sie unter [Autorisierung](../../resources/schema/manifest-schema.md#authorization).|
+|`authorization`|Object|Liste der Berechtigungen, welche die App benötigt, um zu funktionieren. Weitere Informationen finden Sie unter [Autorisierung](../../resources/schema/manifest-schema.md#authorization).|
 
 Beispiel für RSC in einem Team
 
@@ -200,8 +200,8 @@ Fügen Sie ihrem [App-Manifest einen webApplicationInfo-Schlüssel](../../resour
 
 |Name| Typ | Beschreibung|
 |---|---|---|
-|`id` |String |Ihre Azure AD-App-ID. Weitere Informationen finden Sie unter [Registrieren Ihrer App im Azure AD Portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
-|`resource`|Zeichenfolge| Dieses Feld hat keinen Vorgang in RSC, muss jedoch hinzugefügt werden und einen Wert aufweisen, um eine Fehlerantwort zu vermeiden. Jede Zeichenfolge wird ausgeführt.|
+|`id` |Zeichenfolge |Ihre Microsoft Azure Active Directory -App-ID (Azure AD). Weitere Informationen finden Sie unter [Registrieren Ihrer App im portal Microsoft Azure Active Directory (Azure AD).](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)|
+|`resource`|String| Dieses Feld hat keinen Vorgang in RSC, muss jedoch hinzugefügt werden und einen Wert aufweisen, um eine Fehlerantwort zu vermeiden. Jede Zeichenfolge wird ausgeführt.|
 |`applicationPermissions`|Array aus Zeichenfolgen|RSC-Berechtigungen für Ihre App. Weitere Informationen finden Sie unter [ressourcenspezifische Berechtigungen](resource-specific-consent.md#resource-specific-permissions).|
 
 Beispiel für RSC in einem Team
@@ -265,20 +265,20 @@ Beispiel für RSC in einem Chat
 > Fügen Sie in Ihrem App-Manifest nur die RSC-Berechtigungen ein, über die Ihre App verfügen soll.
 
 > [!NOTE]
-> Wenn die App auf Anruf-/Medien-APIs zugreifen soll, sollte dies `webApplicationInfo.Id` die Azure AD App-ID eines [Azure Bot Service](/graph/cloud-communications-get-started#register-a-bot) sein.
+> Wenn die App für den Zugriff auf Anruf-/Medien-APIs vorgesehen ist, sollte dies `webApplicationInfo.Id` die Microsoft Azure Active Directory (Azure AD)-App-ID eines [Azure Bot Service](/graph/cloud-communications-get-started#register-a-bot) sein.
 
 ## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>Testen hinzugefügter RSC-Berechtigungen zu einem Team mithilfe der Postman-App
 
 Um zu überprüfen, ob die RSC-Berechtigungen von der API-Anforderungsnutzlast berücksichtigt werden, müssen Sie den [RSC JSON-Testcode für das Team](test-team-rsc-json-file.md) in Ihre lokale Umgebung kopieren und die folgenden Werte aktualisieren:
 
-* `azureADAppId`: Die Azure AD App-ID Ihrer App.
-* `azureADAppSecret`: Ihr Azure AD App-Kennwort.
+* `azureADAppId`: Die Microsoft Azure Active Directory (Azure AD)-App-ID Ihrer App.
+* `azureADAppSecret`: Ihr Microsoft Azure Active Directory (Azure AD)-App-Kennwort.
 * `token_scope`: Der Bereich ist erforderlich, um ein Token abzurufen. legen Sie den Wert auf https://graph.microsoft.com/.default.
 * `teamGroupId`: Sie können die Teamgruppen-ID wie folgt vom Teams-Client abrufen:
 
     1. Wählen Sie im Teams Client in der Navigationsleiste ganz links **Teams** aus.
     2. Wählen Sie im Dropdownmenü das Team aus, in dem die App installiert ist.
-    3. Wählen Sie das Symbol **"Weitere Optionen** " aus (&#8943;).
+    3. Wählen Sie das Symbol **"Weitere Optionen"** aus (&#8943;).
     4. Wählen Sie **"Link zum Team abrufen" aus**. 
     5. Kopieren und speichern Sie den **groupId-Wert** aus der Zeichenfolge.
 
@@ -286,13 +286,13 @@ Um zu überprüfen, ob die RSC-Berechtigungen von der API-Anforderungsnutzlast b
 
 Um zu überprüfen, ob die RSC-Berechtigungen von der API-Anforderungsnutzlast berücksichtigt werden, müssen Sie den [RSC JSON-Testcode für Chats](test-chat-rsc-json-file.md) in Ihre lokale Umgebung kopieren und die folgenden Werte aktualisieren:
 
-* `azureADAppId`: Die Azure AD App-ID Ihrer App.
-* `azureADAppSecret`: Ihr Azure AD App-Kennwort.
+* `azureADAppId`: Die Microsoft Azure Active Directory (Azure AD)-App-ID Ihrer App.
+* `azureADAppSecret`: Ihr Microsoft Azure Active Directory (Azure AD)-App-Kennwort.
 * `token_scope`: Der Bereich ist erforderlich, um ein Token abzurufen. legen Sie den Wert auf https://graph.microsoft.com/.default.
-* `tenantId`: Der Name oder die Azure AD Objekt-ID Ihres Mandanten.
+* `tenantId`: Der Name oder die Microsoft Azure Active Directory (Azure AD)-Objekt-ID Ihres Mandanten.
 * `chatId`: Sie können die Chatthread-ID wie folgt vom *Teams-Webclient* abrufen:
 
-    1. Wählen Sie im Teams Webclient in der Navigationsleiste ganz links die Option **"Chat**" aus.
+    1. Wählen Sie im Teams Webclient in der linken Navigationsleiste "**Chat**" aus.
     2. Wählen Sie im Dropdownmenü den Chat aus, in dem die App installiert ist.
     3. Kopieren Sie die Web-URL, und speichern Sie die Chatthread-ID aus der Zeichenfolge.
 ![Chatthread-ID von Web-URL.](../../assets/images/chat-thread-id.png)
@@ -317,7 +317,7 @@ Führen Sie die gesamte Berechtigungssammlung für jeden API-Aufruf aus. Die ber
     2. [Test hat RSC-Berechtigungen zu einem Chat mit Postman hinzugefügt](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
 3. Überprüfen Sie alle Antwortstatuscodes, um zu überprüfen, ob die spezifischen **API-Aufrufe mit einem HTTP 403-Statuscode fehlgeschlagen sind**.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Artikel
 
 * [Microsoft Graph-API und Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
 * [Ressourcenspezifische Zustimmung](~/graph-api/rsc/resource-specific-consent.md)

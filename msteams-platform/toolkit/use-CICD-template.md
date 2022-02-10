@@ -6,12 +6,12 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: e9292dc6d3157df4d226d39ea0d0fb0ac53c2c5d
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: f8de6dd66b281f8cf842e5439d3a217598f46047
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435747"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518114"
 ---
 # <a name="cicd-guide"></a>CI/CD-Leitfaden
 
@@ -75,7 +75,7 @@ In der folgenden Tabelle sind alle geheimen Schlüssel aufgeführt, die zum Erst
 |`AZURE_TENANT_ID`|So identifizieren Sie den Mandanten, in dem sich das Abonnement befindet.|
 |`M365_ACCOUNT_NAME`|Das Microsoft 365 Konto zum Erstellen und Veröffentlichen Teams App.|
 |`M365_ACCOUNT_PASSWORD`|Das Kennwort des Microsoft 365 Kontos.|
-|`M365_TENANT_ID`|Um den Mandanten zu identifizieren, in dem die Teams App erstellt/veröffentlicht wird. Dieser Wert ist optional, es sei denn, Sie verfügen über ein mehrinstanzenfähiges Konto und möchten einen anderen Mandanten verwenden. Weitere Informationen finden Sie unter ["Suchen ihrer Microsoft 365 Mandanten-ID"](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+|`M365_TENANT_ID`|Um den Mandanten zu identifizieren, in dem die Teams App erstellt/veröffentlicht wird. Dieser Wert ist optional, es sei denn, Sie verfügen über ein mehrinstanzenfähiges Konto und möchten einen anderen Mandanten verwenden. Weitere Informationen finden Sie unter ["Suchen Ihrer Microsoft 365 Mandanten-ID"](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
 > [!NOTE]
 > Derzeit wird der Dienstprinzipal für Azure in CI/CD-Workflows verwendet. Weitere Informationen finden Sie unter [Erstellen von Azure-Dienstprinzipien](#create-azure-service-principals).
@@ -174,7 +174,7 @@ Führen Sie die folgenden Schritte aus, um Pipelinevariablen in Azure DevOps zu 
 |`AZURE_SERVICE_PRINCIPAL_PASSWORD`|Das Kennwort des Azure-Dienstprinzipals.|
 |`AZURE_SUBSCRIPTION_ID`|So identifizieren Sie das Abonnement, in dem die Ressourcen bereitgestellt werden.|
 |`AZURE_TENANT_ID`|So identifizieren Sie den Mandanten, in dem sich das Abonnement befindet.|
-|`M365_ACCOUNT_NAME`|Das Microsoft 365-Konto zum Erstellen und Veröffentlichen der Teams-App.|
+|`M365_ACCOUNT_NAME`|Das Microsoft 365 Konto zum Erstellen und Veröffentlichen der Teams-App.|
 |`M365_ACCOUNT_PASSWORD`|Das Kennwort des Microsoft 365 Kontos.|
 |`M365_TENANT_ID`|Um den Mandanten zu identifizieren, in dem die Teams App erstellt/veröffentlicht wird. Dieser Wert ist optional, es sei denn, Sie verfügen über ein mehrinstanzenfähiges Konto und möchten einen anderen Mandanten verwenden. Erfahren Sie mehr [darüber, wie Sie Ihre Microsoft 365 Mandanten-ID finden](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
@@ -206,7 +206,7 @@ Führen Sie die folgenden Schritte aus, um die CD-Pipeline anzupassen:
 
 1. Benennen Sie die Vorlagendatei in **Jenkinfile** um, und platzieren Sie sie unter der Zielverzweigung, z. B. der **Hauptverzweigung** .
 1. Ändern Sie den CD-Fluss. Wir verwenden standardmäßig die Trigger von **pollSCM**, wenn eine neue Änderung in die Hauptverzweigung  verschoben wird.
-1. Erstellen Sie [Anmeldeinformationen](https://www.jenkins.io/doc/book/using/using-credentials/) der Jenpipeline, um Anmeldeinformationen für Azure-Dienstprinzipale und Microsoft 365 Konto zu speichern.
+1. Erstellen Sie [Anmeldeinformationen](https://www.jenkins.io/doc/book/using/using-credentials/) für die Jenpipeline, um Anmeldeinformationen für Azure-Dienstprinzipale und Microsoft 365 Konto zu speichern.
 1. Ändern Sie ggf. die Buildskripts.
 1. Entfernen Sie die Testskripts, wenn Sie keine Tests haben.
 
@@ -220,9 +220,9 @@ Folgen Sie ["using-credentials"](https://www.jenkins.io/doc/book/using/using-cre
 |`AZURE_SERVICE_PRINCIPAL_PASSWORD`|Das Kennwort des Azure-Dienstprinzipals.|
 |`AZURE_SUBSCRIPTION_ID`|So identifizieren Sie das Abonnement, in dem die Ressourcen bereitgestellt werden.|
 |`AZURE_TENANT_ID`|So identifizieren Sie den Mandanten, in dem sich das Abonnement befindet.|
-|`M365_ACCOUNT_NAME`|Das Microsoft 365-Konto zum Erstellen und Veröffentlichen der Teams-App.|
+|`M365_ACCOUNT_NAME`|Das Microsoft 365 Konto zum Erstellen und Veröffentlichen der Teams-App.|
 |`M365_ACCOUNT_PASSWORD`|Das Kennwort des Microsoft 365 Kontos.|
-|`M365_TENANT_ID`|So identifizieren Sie den Mandanten, in dem die Teams App erstellt oder veröffentlicht wird. Der Wert ist optional, es sei denn, Sie verfügen über ein mehrinstanzenfähiges Konto und möchten einen anderen Mandanten verwenden. Erfahren Sie mehr [darüber, wie Sie Ihre Microsoft 365 Mandanten-ID finden](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+|`M365_TENANT_ID`|Um den Mandanten zu identifizieren, in dem die Teams App erstellt oder veröffentlicht wird. Der Wert ist optional, es sei denn, Sie verfügen über ein mehrinstanzenfähiges Konto und möchten einen anderen Mandanten verwenden. Erfahren Sie mehr [darüber, wie Sie Ihre Microsoft 365 Mandanten-ID finden](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
 ## <a name="get-started-guide-for-other-platforms"></a>Leitfaden für die ersten Schritte für andere Plattformen
 
@@ -244,9 +244,9 @@ Stellen Sie sicher, dass Azure- und Microsoft365-Anmeldeinformationen in Ihren U
 Um Ressourcen für Azure innerhalb von CI/CD bereitzustellen und bereitzustellen, müssen Sie einen Azure-Dienstprinzipal für die Verwendung erstellen.
 
 Führen Sie die folgenden Schritte aus, um Azure-Dienstprinzipale zu erstellen:
-1. Registrieren Sie eine Azure AD Anwendung in einem einzelnen Mandanten.
-2. Weisen Sie Ihrer Azure AD-Anwendung eine Rolle zu, um auf Ihr Azure-Abonnement zuzugreifen, und `Contributor` es wird eine Rolle empfohlen. 
-3. Erstellen Sie einen neuen Azure AD Anwendungsgeheimnis.
+1. Registrieren Sie eine Microsoft Azure Active Directory (Azure AD)-Anwendung in einem einzelnen Mandanten.
+2. Weisen Sie Ihrer Microsoft Azure Active Directory (Azure AD)-Anwendung eine Rolle zu, um auf Ihr Azure-Abonnement zuzugreifen, und `Contributor` die Rolle wird empfohlen. 
+3. Erstellen Sie einen neuen geheimen Microsoft Azure Active Directory (Azure AD) Anwendungsschlüssel.
 
 > [!TIP]
 > Speichern Sie Ihre Mandanten-ID, Anwendungs-ID(AZURE_SERVICE_PRINCIPAL_NAME) und den geheimen Schlüssel (AZURE_SERVICE_PRINCIPAL_PASSWORD) für die zukünftige Verwendung.
@@ -257,7 +257,7 @@ Weitere Informationen finden Sie in den [Richtlinien für Azure-Dienstprinzipale
 * [Microsoft Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
 
 ## <a name="publish-teams-app-using-teams-developer-portal"></a>Veröffentlichen Teams App mit Teams Entwicklerportal
-Wenn Änderungen im Zusammenhang mit Teams Manifestdatei der App vorhanden sind, sollten Sie die Teams-App erneut veröffentlichen, um das Manifest zu aktualisieren.
+Wenn Änderungen im Zusammenhang mit Teams Manifestdatei der App vorgenommen werden, sollten Sie die Teams App erneut veröffentlichen, um das Manifest zu aktualisieren.
 
 Um Teams App manuell zu veröffentlichen, können Sie [das Entwicklerportal für Teams](https://dev.teams.microsoft.com/home) nutzen.
 
@@ -267,9 +267,9 @@ Führen Sie die folgenden Schritte aus, um Ihre App zu veröffentlichen:
 3. Wählen Sie die Ziel-App in der App-Liste aus.
 4. Veröffentlichen Sie Ihre App, indem Sie `Publish -> Publish to your org`
 
-### <a name="see-also"></a>Siehe auch
+### <a name="see-also"></a>Weitere Artikel
 
 * [Schnellstart für GitHub-Aktionen](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
-* [Erstellen Ihrer ersten Azure DevOps Pipeline](/azure/devops/pipelines/create-first-pipeline)
+* [Erstellen Ihrer ersten Azure DevOps-Pipeline](/azure/devops/pipelines/create-first-pipeline)
 * [Erstellen Ihrer ersten Jenpipeline](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
 * [Verwalten Ihrer Apps mit dem Entwicklerportal für Microsoft Teams](/concepts/build-and-test/teams-developer-portal)

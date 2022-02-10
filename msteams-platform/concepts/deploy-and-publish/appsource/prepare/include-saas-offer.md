@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 0efaea87af8128086db3e0e6416014d97f0af5a2
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: 837c311bf777b337187dbc54555b5268082a103f
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362774"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62517988"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Einschließen eines SaaS-Angebots in Ihre Microsoft Teams-App
 
@@ -48,8 +48,8 @@ Eine umfassende Anleitung finden Sie unter [der Planung eines SaaS-Angebots für
 Bei der Planung der Monetarisierung Ihrer Teams-App sollten Sie folgende Punkte berücksichtigen:
 
 * Entscheiden Sie sich für Ihr Abonnementmodell. Ein transaktionsfähiges SaaS-Angebot kann mehrere Abonnementpläne enthalten. Öffentliche Abonnementpläne, die für jeden verfügbar sind, sind am häufigsten, aber Sie möchten möglicherweise auch bestimmte Kunden mit Angeboten nur für sie ansprechen. Weitere Informationen finden Sie unter [private Angebote auf dem kommerziellen Microsoft-Marketplace](/azure/marketplace/private-offers).
-* Informieren Sie sich über die Option "[*Über Microsoft verkaufen*](/azure/marketplace/plan-saas-offer#listing-options)" für Ihr SaaS-Angebot, die erforderlich ist, wenn Benutzer Abonnementpläne für Ihre App direkt über den Teams Store erwerben möchten.
-* Erfahren Sie, wie [Azure Active Directory einmaliges Anmelden (Single Sign-On, SSO)](/azure/marketplace/azure-ad-saas) Ihren Kunden hilft, Abonnements zu erwerben und zu verwalten. (Azure AD SSO ist für Teams Apps mit SaaS-Angeboten erforderlich.)
+* Informieren Sie sich über die Option zum [*Verkaufen über Microsoft-Angebote*](/azure/marketplace/plan-saas-offer#listing-options) für Ihr SaaS-Angebot, die erforderlich ist, wenn Benutzer Abonnementpläne für Ihre App direkt über den Teams Store erwerben möchten.
+* Erfahren Sie, wie [Azure Active Directory einmaliges Anmelden (Single Sign-On, SSO)](/azure/marketplace/azure-ad-saas) Ihren Kunden hilft, Abonnements zu erwerben und zu verwalten. (Microsoft Azure Active Directory (Azure AD) SSO ist für Teams Apps mit SaaS-Angeboten erforderlich.)
 * Verstehen Sie, dass Sie für das Verwalten und Bezahlen der Infrastruktur verantwortlich sind, die erforderlich ist, um die Nutzung Ihres SaaS-Angebots durch Ihre Kunden zu unterstützen.
 * Planen sie mobile Geräte. Um zu verhindern, dass Die App Store-Richtlinien von Drittanbietern verletzt werden, kann Ihre App keine Links enthalten, mit denen Benutzer Abonnementpläne auf Mobilgeräten erwerben können. Sie können jedoch weiterhin angeben, ob Ihre App über Features verfügt, die einen Abonnementplan erfordern. Weitere Informationen finden Sie in den zugehörigen [Zertifizierungsrichtlinien für den kommerziellen Marketplace](/legal/marketplace/certification-policies#114048-mobile-experience).
 
@@ -67,7 +67,7 @@ Vollständige Anweisungen und API-Referenz finden Sie in der [Dokumentation zu S
 
 ### <a name="best-practices-for-implementing-subscription-management"></a>Bewährte Methoden für die Implementierung der Abonnementverwaltung
 
-* Bei transaktionensfähigen SaaS-Angeboten für Teams Apps sollten Abonnementpläne (Lizenzen) einzelnen Benutzern und nicht Gruppen oder einer gesamten Organisation zugewiesen werden.
+* Bei transaktionensfähigen SaaS-Angeboten für Teams Apps sollten Abonnementpläne (Lizenzen) einzelnen Benutzern und nicht Gruppen oder einer ganzen Organisation zugewiesen werden.
 * Wenn Benutzern ein Abonnementplan zugewiesen ist, benachrichtigen Sie sie über einen Teams Bot oder eine E-Mail. Fügen Sie informationen zum Hinzufügen der App zu Teams und zu den ersten Schritten in das Messaging ein.
 * Unterstützen Sie die Idee mehrerer Administratoren. Mit anderen Worten, mehrere Benutzer in derselben Organisation können ihre eigenen Abonnements erwerben und verwalten.
 
@@ -79,9 +79,9 @@ Vollständige Anweisungen finden Sie unter [Erstellen der Angebotsseite für Ihr
 
 ### <a name="best-practices-for-landing-pages"></a>Bewährte Methoden für Angebotsseiten
 
-Berücksichtigen Sie die folgenden Ansätze beim Erstellen einer Zielseite für die Teams App, die Sie monetarisieren. Sehen Sie sich eine Beispiel-Angebotsseite in der [Endbenutzer-Einkaufsumgebung an](#end-user-purchasing-experience).
+Berücksichtigen Sie die folgenden Ansätze beim Erstellen einer Zielseite für die Teams-App, die Sie monetarisieren. Sehen Sie sich eine Beispiel-Angebotsseite in der [Endbenutzer-Einkaufsumgebung an](#end-user-purchasing-experience).
 
-* Benutzer müssen sich mit denselben Azure AD Anmeldeinformationen, die sie zum Kauf des Abonnements verwendet haben, bei Ihrer Zielseite anmelden können. Weitere Informationen finden Sie unter [Azure AD und transaktionensfähigen SaaS-Angeboten auf dem kommerziellen Marketplace](/azure/marketplace/azure-ad-saas).
+* Benutzer müssen sich mit denselben Microsoft Azure Active Directory (Azure AD)-Anmeldeinformationen, die sie zum Kauf des Abonnements verwendet haben, bei Ihrer Zielseite anmelden können. Weitere Informationen finden Sie unter [Microsoft Azure Active Directory (Azure AD) und transaktionensfähigen SaaS-Angeboten auf dem kommerziellen Marketplace](/azure/marketplace/azure-ad-saas).
 * Zulassen, dass Benutzer die folgenden Aktionen auf Ihrer Zielseite ausführen. Vergessen Sie nicht, zu überlegen, was für die Rolle und die Berechtigungen eines Benutzers geeignet ist (Sie können beispielsweise zulassen, dass nur Abonnementadministratoren nach Benutzern suchen):
   * Suchen Sie mithilfe von E-Mails oder einer anderen Identitätsform nach Benutzern in ihrer Organisation.
   * Anzeigen von Benutzern, denen sie Lizenzen zuweisen können, in einer Liste.
@@ -121,9 +121,9 @@ Vollständige Anweisungen dazu finden Sie unter [Erstellen eines SaaS-Angebots](
 Es wird dringend empfohlen, die End-to-End-Einkaufserfahrung zu überprüfen, bevor Sie Ihr SaaS-Angebot veröffentlichen. Sie können dies tun, indem Sie ein separates Angebot nur zu Testzwecken erstellen. Vollständige Informationen finden Sie unter [Testangebotsübersicht](/azure/marketplace/plan-saas-offer#test-offer), [Erstellen eines Testangebots](/azure/marketplace/create-saas-dev-test-offer) und [Anzeigen einer Vorschau Ihres Angebots](/azure/marketplace/test-publish-saas-offer).
 
 > [!IMPORTANT]
-> Sie können eine End-to-End-Transaktion in Teams testen, bis Ihre App die Store-Validierung abgeschlossen hat. Weitere Informationen finden Sie unter [Testvorschau für monetarisierte Apps](Test-preview-for-monetized-apps.md).
+> Sie können eine End-to-End-Transaktion in Teams testen, bis Ihre App die Store-Überprüfung abgeschlossen hat. Weitere Informationen finden Sie unter [Testvorschau für monetarisierte Apps](Test-preview-for-monetized-apps.md).
 
-Aus Teams Sicht müssen diese Tests überprüfen, ob die Anzahl der Lizenzen und Zuweisungen mit den Im Teams Admin Center übereinstimmt, wenn Benutzer:
+Aus Teams Sicht müssen diese Tests überprüfen, ob die Anzahl der Lizenzen und Zuweisungen mit denen im Teams Admin Center übereinstimmt, wenn Benutzer:
 
 * Aktivieren und konfigurieren Sie den Abonnementplan auf Ihrer Zielseite.
 * Zuweisen, Entfernen oder erneutes Zuweisen von Lizenzen zu sich selbst oder anderen Benutzern.
@@ -135,7 +135,7 @@ Nachdem Sie die Tests abgeschlossen haben, [veröffentlichen Sie Ihr Angebot liv
 
 ## <a name="configure-your-app-for-the-saas-offer"></a>Konfigurieren Ihrer App für das SaaS-Angebot
 
-Sie haben Ihr SaaS-Angebot veröffentlicht, müssen es jedoch weiterhin mit Ihrer Teams-App verknüpfen, damit Benutzer Ihre Abonnementpläne im Teams Store sehen können.
+Sie haben Ihr SaaS-Angebot veröffentlicht, müssen es jedoch trotzdem mit Ihrer Teams-App verknüpfen, damit Benutzer Ihre Abonnementpläne im Teams Store sehen können.
 
 1. Wechseln Sie zum [Entwicklerportal](https://dev.teams.microsoft.com/) , und wählen Sie **"Apps" aus**.
 1. Wählen Sie auf der Seite **"Apps** " die App aus, mit der Sie das SaaS-Angebot verknüpfen.
@@ -156,9 +156,9 @@ Sie haben Ihr SaaS-Angebot veröffentlicht, müssen es jedoch weiterhin mit Ihre
 Sie haben Ihr SaaS-Angebot erstellt und mit Ihrer Teams-App verknüpft – jetzt ist es an der Zeit, Ihre App im Teams Store zu veröffentlichen. Vollständige Anweisungen finden Sie unter [Veröffentlichen Ihrer App im Teams Store](~/concepts/deploy-and-publish/appsource/publish.md).
 
 > [!IMPORTANT]
-> Auch wenn Ihre App bereits im Teams Store aufgeführt ist, müssen Sie den Überprüfungsprozess des Stores erneut durchlaufen, um Ihr SaaS-Angebot einzuschließen.
+> Auch wenn Ihre App bereits im Teams Store aufgeführt ist, müssen Sie den Store-Validierungsprozess erneut durchlaufen, um Ihr SaaS-Angebot einzuschließen.
 
-Nach der Veröffentlichung wird benutzern im Dialogfeld "App-Details" eine **Option zum Kaufen eines Abonnements** angezeigt, wenn sie versuchen, Ihre App Teams hinzuzufügen.
+Nach der Veröffentlichung wird Benutzern im Dialogfeld "App-Details" eine **Option zum Kaufen eines Abonnements** angezeigt, wenn sie versuchen, Ihre App Teams hinzuzufügen.
 
 ## <a name="end-user-purchasing-experience"></a>Endbenutzer-Einkaufserfahrung
 
@@ -200,9 +200,9 @@ Wenn Sie die Verknüpfung eines SaaS-Angebots aufheben, das in Ihrem Teams Store
 1. Wählen Sie auf der Seite **"Apps** " die App aus, aus der Sie das Angebot entfernen.
 1. Wechseln Sie zur Seite **"Pläne und Preise** ", und wählen Sie **"Zurücksetzen**" aus.
 1. Sobald das Angebot nicht mehr verknüpft ist, führen Sie die folgenden Schritte aus, um Ihren Store-Eintrag zu aktualisieren:
-   1. Wählen Sie **"Verteilen > Veröffentlichen im Teams Store**" aus.
+   1. Wählen Sie **"Verteilen > Im Teams Store veröffentlichen**" aus.
    1. Wählen Sie **"Open Partner Center** " aus, um mit der erneuten Veröffentlichung Ihrer App ohne das Angebot zu beginnen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Artikel
 
 [Verwalten und Unterstützen Ihrer veröffentlichten App](../post-publish/overview.md)

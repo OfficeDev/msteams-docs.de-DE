@@ -1,18 +1,23 @@
 ---
 title: In-App-Kaufablauf für die Monetarisierung von Apps
-description: 'Lernen Sie die grundlegenden Aufgaben und Konzepte kennen, die erforderlich sind, um In-App-Käufe und Testfunktionen in Teams-Apps zu implementieren.'
+description: Lernen Sie die grundlegenden Aufgaben und Konzepte kennen, die erforderlich sind, um In-App-Käufe und Testfunktionen in Teams-Apps zu implementieren.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
+ms.openlocfilehash: 90b1bf713e898a0f61c540e76ee5dde77603e70b
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518240"
 ---
-
 # <a name="in-app-purchases"></a>In-App-Käufe
 
-Microsoft Teams APIs bereitstellen, mit denen Sie die In-App-Käufe implementieren können, um von kostenlosen auf kostenpflichtige Teams-Apps zu aktualisieren. Mit dem In-App-Kauf können Sie Benutzer von kostenlos in kostenpflichtige Pläne direkt aus Ihrer App heraus konvertieren.
+Microsoft Teams APIs bereitstellen, mit denen Sie die In-App-Käufe implementieren können, um von kostenlos auf kostenpflichtige Teams Apps zu aktualisieren. Mit dem In-App-Kauf können Sie Benutzer von kostenlos in kostenpflichtige Pläne direkt aus Ihrer App heraus konvertieren.
 
 > [!NOTE]
-> In-App-Käufe für Teams Apps sind derzeit nur in der [**Entwicklervorschau**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro) verfügbar.
+> In-App-Käufe für Teams-Apps sind derzeit nur in der [**Entwicklervorschau**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro) verfügbar.
 
 ## <a name="implement-in-app-purchases"></a>Implementieren von In-App-Käufen
 
@@ -30,7 +35,7 @@ Die In-App-Kauferfahrung kann entweder durch Aktualisieren der Datei **"manifest
 
 ### <a name="update-manifest"></a>Updatemanifest
 
-Um die In-App-Kauferfahrung zu aktivieren, aktualisieren Sie Ihre Teams App **manifest.json-Datei**, indem Sie die RSC-Berechtigungen hinzufügen. Es ermöglicht Ihren App-Benutzern, ein Upgrade auf eine kostenpflichtige Version Ihrer App durchzuführen und neue Funktionen zu verwenden. Das Update für das App-Manifest lautet wie folgt:
+Um die In-App-Kauferfahrung zu aktivieren, aktualisieren Sie ihre Teams App **manifest.json-Datei**, indem Sie die RSC-Berechtigungen hinzufügen. Es ermöglicht Ihren App-Benutzern, ein Upgrade auf eine kostenpflichtige Version Ihrer App durchzuführen und neue Funktionen zu verwenden. Das Update für das App-Manifest lautet wie folgt:
 
 ```json
 
@@ -38,10 +43,11 @@ Um die In-App-Kauferfahrung zu aktivieren, aktualisieren Sie Ihre Teams App **ma
     "permissions": {
         "resourceSpecific": [
             {
-             "name": "InAppPurchase.Allow.User",
-             "type": "Delegated"
+                "name": "InAppPurchase.Allow.User",
+                "type": "Delegated"
             }
         ]
+    }
 }
 ```
 
@@ -78,7 +84,7 @@ Es folgt ein Beispiel für den Aufruf der API aus der App:
 
 ## <a name="end-user-in-app-purchasing-experience"></a>In-App-Kauferfahrung für Endbenutzer
 
-Im folgenden Beispiel werden die Benutzer zum Erwerben von Abonnementplänen für eine fiktive Teams-App namens *Contoso Tasks for Teams* gezeigt:
+Das folgende Beispiel zeigt die Benutzer zum Kauf von Abonnementplänen für eine fiktive Teams-App namens *Contoso Tasks for Teams*:
 
 1. Suchen Sie im Teams **Store** die App, und wählen Sie sie aus.
 
@@ -106,7 +112,7 @@ Im folgenden Beispiel werden die Benutzer zum Erwerben von Abonnementplänen fü
 > [!div class="nextstepaction"]
 > [Testvorschau für monetarisierte Apps](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Artikel
 
 * [Einschließen eines SaaS-Angebots in Ihre Microsoft Teams-App](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
 * [Erstellen eines SaaS-Angebots (Software as a Service)](include-saas-offer.md#create-your-saas-offer)
