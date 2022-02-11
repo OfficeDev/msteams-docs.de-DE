@@ -4,12 +4,12 @@ description: Beschreibt Deeplinks und deren Verwendung in Ihren Apps
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Deeplink für Teams
-ms.openlocfilehash: 63aa2849360d709e261c88472090caaf066f98c1
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 8f71bad37f858c2dff4cd1009168221ff02a6559
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059305"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518247"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links 
 
@@ -140,7 +140,7 @@ Beispiel: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@cont
 
 Die Abfrageparameter sind:
 
-* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, auf der die Chat-Teilnehmer angegeben sind. Der Benutzer, der die Aktion ausführt, ist immer als Teilnehmer enthalten. Derzeit unterstützt das Feld „Benutzer-ID“ nur den Azure AD UserPrincipalName, wie z. B. eine E-Mail-Adresse.
+* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, auf der die Chat-Teilnehmer angegeben sind. Der Benutzer, der die Aktion ausführt, ist immer als Teilnehmer enthalten. Derzeit unterstützt das Feld „Benutzer-ID“ das Microsoft Azure Active Directory (Azure AD) UserPrincipalName, wie z. B. nur eine E-Mail-Adresse.
 * `topicName`: Ein optionales Feld für den Anzeigenamen des Chats, für einen Chats mit 3 oder mehr Benutzern. Wenn dieses Feld nicht angegeben ist, basiert der Anzeigename des Chats auf den Namen der Teilnehmer.
 * `message`: Ein optionales Feld für den Nachrichtentext, den Sie in das Feld zum Verfassen des aktuellen Benutzers einfügen möchten, während sich der Chat im Entwurfszustand befindet.
 
@@ -226,7 +226,7 @@ Beispiel: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atte
 
 Die Abfrageparameter sind:
 
-* `attendees`: Die optionale durch Kommas getrennte Liste der Benutzer-IDs, auf der die Teilnehmer der Besprechung angegeben sind. Der Benutzer, der die Aktion ausführt, ist der Besprechungsorganisator. Derzeit unterstützt das Feld „Benutzer-ID“ nur den Azure AD UserPrincipalName, in der Regel eine E-Mail-Adresse.
+* `attendees`: Die optionale durch Kommas getrennte Liste der Benutzer-IDs, auf der die Teilnehmer der Besprechung angegeben sind. Der Benutzer, der die Aktion ausführt, ist der Besprechungsorganisator. Das Feld „Benutzer-ID“ unterstützt derzeit nur das Microsoft Azure Active Directory (Azure AD) UserPrincipalName, in der Regel ist dies eine E-Mail-Adresse.
 * `startTime`: Die optionale Startzeit des Ereignisses. Diese sollte im [langen ISO 8601-Format](https://en.wikipedia.org/wiki/ISO_8601)vorliegen, wie z. B. *2018-03-12T23:55:25+02:00*.
 * `endTime`: Die optionale Endzeit des Ereignisses, ebenfalls im ISO 8601-Format.
 * `subject`: Ein optionales Feld für den Betreff der Besprechung.
@@ -259,7 +259,7 @@ Bei einem Videoanruf fordert der Client eine Bestätigung an und aktiviert das V
 | Tätigen eines Audio- und Videoanrufs an eine Kombination aus VoIP- und PSTN-Benutzern | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,4:&lt;phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 Nachfolgend sind die Abfrageparameter aufgeführt:
-* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Anrufs darstellen. Derzeit unterstützt das Benutzer-ID-Feld die Azure AD UserPrincipalName, in der Regel eine E-Mail-Adresse. Bei einem PSTN-Anruf unterstützt es eine pstn mri 4:&lt;phonenumber&gt;.
+* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Anrufs darstellen. Derzeit unterstützt das Feld „Benutzer-ID“ das Microsoft Azure Active Directory (Azure AD) UserPrincipalName, in der Regel ist dies eine E-Mail-Adresse, oder im Fall eines PSTN-Anrufs ist es pstn mri 4:&lt;phonenumber&gt;.
 * `withVideo`: Dies ist ein optionaler Parameter, den Sie für einen Videoanruf verwenden können. Durch Festlegen dieses Parameters wird nur die Kamera des Anrufers aktiviert. Der Empfänger des Anrufs hat die Möglichkeit, Audio- oder Audio- und Videoanrufe über das Teams Anrufbenachrichtigungsfenster entgegen zu nehmen. 
 * `Source`: Dies ist ein optionaler Parameter, der über die Deeplink-Quelle informiert.
 
