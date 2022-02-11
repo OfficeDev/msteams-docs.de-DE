@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: Manifestschema für Microsoft Teams
-ms.openlocfilehash: e81e50a5efba56c91bef5c59b1239f2d273b3354
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: b7b2e175f144811118310bde1fcf63b88717a20e
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362886"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518359"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -624,11 +624,11 @@ Das Objekt ist ein Array, wobei alle Elemente vom Typ `string` sind.
 
 **Optional** – Objekt
 
-Geben Sie Ihre Azure Active Directory-App-ID und Microsoft Graph-Informationen an, um Benutzern zu helfen, sich nahtlos bei Ihrer App anzumelden. Falls Ihre App in Azure AD registriert ist, müssen Sie die App-ID angeben. Administratoren können im Microsoft Teams Admin Center Berechtigungen einfach überprüfen und ihre Zustimmung erteilen.
+Geben Sie Ihre Azure Active Directory-App-ID und Microsoft Graph-Informationen an, um Benutzern zu helfen, sich nahtlos bei Ihrer App anzumelden. Falls Ihre App in Microsoft Azure Active Directory (Azure AD) registriert ist, müssen Sie die App-ID angeben. Administratoren können im Microsoft Teams Admin Center Berechtigungen einfach überprüfen und ihre Zustimmung erteilen.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`id`|string|36 Zeichen|✔|Azure AD-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
+|`id`|string|36 Zeichen|✔|Microsoft Azure Active Directory (Azure AD)-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
 |`resource`|string|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für Einmaliges Anmelden. </br> **HINWEIS:** Wenn Sie Einmaliges Anmelden nicht verwenden, geben Sie einen Dummyzeichenfolgenwert in dieses Feld in Ihr App-Manifest ein (z. B. https://notapplicable), um eine Fehlermeldung zu vermeiden. |
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator

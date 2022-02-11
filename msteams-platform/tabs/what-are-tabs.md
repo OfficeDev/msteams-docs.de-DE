@@ -5,12 +5,12 @@ description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Tea
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 3e339853729fc97623fba78d94be23b0562d4dbb
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: c9d4e7a97cc9272faab32408683f6d8d43338a0d
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435181"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518345"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Registerkarten für Microsoft Teams erstellen
 
@@ -43,7 +43,7 @@ Sie können Registerkarten mit adaptiven Karten erstellen und alle Teams-App-Fun
 Die Registerkartenfeatures sind wie folgt:
 
 * Wenn eine Registerkarte zu einer App hinzugefügt wird, die auch über einen Bot verfügt, wird der Bot ebenfalls zum Team hinzugefügt.
-* Kenntnis der Azure Active Directory-ID des aktuellen Benutzers.
+* Kenntnis der Microsoft Azure Active Directory-ID (Azure AD) des aktuellen Benutzers.
 * Gebietsschemakenntnis für den Benutzer, um die Sprache anzugeben, die `en-us` ist.
 * SSO-Funktion (Single Sign-On), falls unterstützt.
 * Möglichkeit zum Verwenden von Bots oder App-Benachrichtigungen zum Deep-Link zur Registerkarte oder zu einer Unterentität innerhalb des Diensts, z. B. zu einem einzelnen Arbeitselement.
