@@ -4,12 +4,12 @@ description: Beschreibt alle neuen oder aktuellen Entwicklerfunktionen in Micros
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 'Teams: Was sind die neuesten Updates oder Entwicklervorschau und Features'
-ms.openlocfilehash: 4c4a145db5ce66a13d4f605419c5a402eef2c3b7
-ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
+ms.openlocfilehash: 2c20fcb473fea847e19451d3ca883cf4b93337a4
+ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62523787"
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "62801390"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -22,6 +22,7 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 
 | Datum | Update | Hier finden  |
 | --- | --- | --- |
+|09.02.2022| Schritt-für-Schritt-Anleitung zum Hochladen von Dateien zu Teams aus einem Bot eingeführt | Erstellen von Bots > Senden und Empfangen von Dateien > [Schritt-für-Schritt-Anleitung zum Hochladen von Dateien zu Teams aus einem Bot](sbs-file-handling-in-bot.yml) |
 |11.02.2022| Freigegebenes Besprechungsfreigabefenster| • Erstellen von Apps für Teams-Besprechungen > [Freigegebene Besprechungsbühne](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Erstellen von Apps für Teams-Besprechungen > [API-Referenzen für Besprechungs-Apps](apps-in-teams-meetings/API-references.md) </br> • App-Manifest > Öffentliche Entwickler-Vorschau > [Manifest-Schema für die Entwickler-Vorschau](resources/schema/manifest-schema-dev-preview.md)|
 |08.02.2022| Schrittweise Anleitung zum Erstellen eines Anruf- und Besprechungsbots vorgestellt.| Bots erstellen > Anruf- und Besprechungsbots > Registrieren von Anruf- und Besprechungsbots > [Schrittweise Anleitung zum Erstellen eines Anruf- und Besprechungsbots](sbs-calling-and-meeting.yml) |
 |07.02.2022| Tools und SDKs |Teams-Toolkit für Visual Studio Code > </br> • Hinzufügen von Funktionen zur Teams-App> [Fügen Sie Funktionen für Ihre Teams-Apps hinzu](toolkit/add-capability.md) </br> • Hinzufügen von Cloudressourcen zur Teams-App> [Fügen Sie Cloudressourcen für Ihre Teams-App hinzu](toolkit/add-resource.md) |
@@ -45,6 +46,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
+|09.02.2022| Schritt-für-Schritt-Anleitung zum Hochladen von Dateien zu Teams aus einem Bot eingeführt | Erstellen von Bots > Senden und Empfangen von Dateien > [Schritt-für-Schritt-Anleitung zum Hochladen von Dateien zu Teams aus einem Bot](sbs-file-handling-in-bot.yml) |
 |11.02.2022| Freigegebenes Besprechungsfreigabefenster| • Erstellen von Apps für Teams-Besprechungen > [Freigegebene Besprechungsbühne](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Erstellen von Apps für Teams-Besprechungen > [API-Referenzen für Besprechungs-Apps](apps-in-teams-meetings/API-references.md) </br> • App-Manifest > Öffentliche Entwickler-Vorschau > [Manifest-Schema für die Entwickler-Vorschau](resources/schema/manifest-schema-dev-preview.md)|
 |08.02.2022| Schrittweise Anleitung zum Erstellen eines Anruf- und Besprechungsbots vorgestellt.| Bots erstellen > Anruf- und Besprechungsbots > Registrieren von Anruf- und Besprechungsbots > [Schrittweise Anleitung zum Erstellen eines Anruf- und Besprechungsbots](sbs-calling-and-meeting.yml) |
 |02.02.2022| App-Manifestversion 1.12 eingeführt | App-Manifest > [App-Manifestschema](resources/schema/manifest-schema.md) |
