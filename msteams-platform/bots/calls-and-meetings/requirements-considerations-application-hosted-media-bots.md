@@ -1,20 +1,20 @@
 ---
 title: Anforderungen und Überlegungen für von der Anwendung gehostete Medienbots
-description: Grundlegendes zu wichtigen Anforderungen und Überlegungen sowie Überlegungen zur Skalierbarkeit und Leistung im Zusammenhang mit dem Erstellen von anwendungsgehosteten Medienbots für Microsoft Teams mithilfe von Codebeispielen und Beispielen.
+description: Verstehen sie wichtige Anforderungen und Überlegungen sowie Überlegungen zur Skalierbarkeit und Leistung im Zusammenhang mit dem Erstellen von in der Anwendung gehosteten Medienbots für Microsoft Teams mithilfe von Codebeispielen und Beispielen.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Von der Anwendung gehostete Medien Windows Azure-VM des Servers
 ms.date: 11/16/2018
-ms.openlocfilehash: c3c6f76b5062f003902c9967191be9cd0be336aa
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 1e9fa106376a3068039dd74c8e0b4f2b8c8802d6
+ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435712"
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "62801369"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Anforderungen und Überlegungen für von der Anwendung gehostete Medienbots
 
-Ein von der Anwendung gehosteter Medienbot benötigt die [`Microsoft.Graph.Communications.Calls.Media` .NET-Bibliothek](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) , um auf die Audio- und Videomediendatenströme zuzugreifen. Der Bot muss auf einem Windows Servercomputer oder Windows Gastbetriebssystem (Os) in Azure bereitgestellt werden.
+Ein von der Anwendung gehosteter Medienbot benötigt die [`Microsoft.Graph.Communications.Calls.Media` .NET-Bibliothek](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) , um auf die Audio- und Videomediendatenströme zuzugreifen. Der Bot muss auf einem lokalen Windows Servercomputer oder einem Windows Gastbetriebssystem (Os) in Azure bereitgestellt werden.
 
 > [!NOTE]
 > * Die Anleitungen für die Entwicklung von Messaging- und Interactive Voice Response (IVR)-Bots gelten nicht vollständig für das Erstellen von in der Anwendung gehosteten Medienbots.
@@ -24,7 +24,7 @@ Ein von der Anwendung gehosteter Medienbot benötigt die [`Microsoft.Graph.Commu
 
 Ein von der Anwendung gehosteter Medienbot erfordert Folgendes:
 
-- Der Bot muss in C# und dem Standard-.NET Framework entwickelt und in Microsoft Azure bereitgestellt werden. Sie können keine C++- oder Node.js-APIs für den Zugriff auf Echtzeitmedien verwenden, und .NET Core wird für einen von der Anwendung gehosteten Medienbot nicht unterstützt.
+- Der Bot muss in C# und der Standard-.NET Framework entwickelt und in Microsoft Azure bereitgestellt werden. Sie können C++ oder Node.js-APIs nicht für den Zugriff auf Echtzeitmedien verwenden, und .NET Core wird für einen von der Anwendung gehosteten Medienbot nicht unterstützt.
 
 - Der Bot kann in einer der folgenden Azure-Dienstumgebungen gehostet werden:
     - Cloud-Dienst.
