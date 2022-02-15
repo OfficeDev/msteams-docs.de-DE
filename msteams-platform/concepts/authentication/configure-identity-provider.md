@@ -1,21 +1,21 @@
 ---
 title: Konfigurieren von OAuth 2.0-Identitätsanbietern
-description: Beschreibt, wie Identitätsanbieter konfiguriert werden, deren Schwerpunkt auf Microsoft Azure Active Directory liegt (Azure AD)
+description: Beschreibt, wie Identitätsanbieter konfiguriert werden, deren Schwerpunkt auf Microsoft Azure Active Directory (Azure AD) liegt.
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Teams-Authentifizierungs-Microsoft Azure Active Directory (Azure AD) oauth-Identitätsanbieter
-ms.openlocfilehash: 93622275a8bfc9007af751d8b9f6304a73450ec7
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+keywords: Teams-Authentifizierung Azure AD oauth-Identitätsanbieter
+ms.openlocfilehash: b35f28f2cb306a6dfc3ae3151616925da1525069
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517974"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821353"
 ---
 # <a name="configure-identity-providers"></a>Identitätsanbieter konfigurieren
 
-## <a name="configuring-an-application-to-use-microsoft-azure-active-directory-azure-ad-as-an-identity-provider"></a>Konfigurieren einer Anwendung für die Verwendung von Microsoft Azure Active Directory (Azure AD) als Identitätsanbieter
+## <a name="configuring-an-application-to-use-azure-ad-as-an-identity-provider"></a>Konfigurieren einer Anwendung für die Verwendung von Azure AD als Identitätsanbieter
 
-Identitätsanbieter, die OAuth 2.0 unterstützen, authentifizieren keine Anforderungen von unbekannten Anwendungen; Anwendungen müssen vorab registriert werden. Führen Sie die folgenden Schritte aus, um dies mit Microsoft Azure Active Directory (Azure AD) zu tun:
+Identitätsanbieter, die OAuth 2.0 unterstützen, authentifizieren keine Anforderungen von unbekannten Anwendungen; Anwendungen müssen vorab registriert werden. Führen Sie die folgenden Schritte aus, um dies mit Azure AD zu tun:
 
 1. Öffnen Sie das [Anwendungsregistrierungsportal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 

@@ -1,19 +1,19 @@
 ---
-title: Verwenden von Teams Toolkit zum Bereitstellen von Cloudressourcen
+title: Verwenden Teams Toolkits zum Bereitstellen von Cloudressourcen
 author: MuyangAmigo
 description: Bereitstellen von Cloudressourcen
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 6a922c98dc158105abf1225a6f292c95d063428d
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: db295beddf8b0492816c757703e89f3010666eab
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517960"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821563"
 ---
-# <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Verwenden von Teams Toolkit zum Bereitstellen von Cloudressourcen
+# <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Verwenden Teams Toolkits zum Bereitstellen von Cloudressourcen
 
 TeamsFx lässt sich in Azure und Microsoft 365 Cloud integrieren, sodass Sie Ihre Anwendung mit einem einzigen Befehl in Azure platzieren können. TeamsFx lässt sich in Azure Resource Manager integrieren, mit dem Sie Azure-Ressourcen bereitstellen können, die Ihre Anwendung für den Codeansatz benötigt.  
 
@@ -48,7 +48,7 @@ Wenn Sie ein neues Projekt erstellen, können Sie alle Azure-Ressourcen verwende
 > [!NOTE]
 > Azure-Dienste verursachen Kosten in Ihrem Abonnement. Weitere Informationen zur Kostenberechnung finden Sie [im Preisrechner](https://azure.microsoft.com/pricing/calculator/).
 
-### <a name="resource-creation-for-teams-tab-application"></a>Erstellen von Ressourcen für Teams Registerkartenanwendung
+### <a name="resource-creation-for-teams-tab-application"></a>Ressourcenerstellung für Teams Tab-Anwendung
 
 |Ressource|Zweck|Beschreibung |
 |----------|--------------------------------|-----|
@@ -71,7 +71,7 @@ Wenn Sie ein neues Projekt erstellen, können Sie alle Azure-Ressourcen verwende
 |Ressource|Zweck| Beschreibung|
 |----------|--------------------------------|-----|
 | App-Dienstplan für Funktions-App | Hosten der Funktions-App |Nicht zutreffend |
-| Funktions-App | Hosten Ihrer Azure-Funktions-APIs | Fügt eine vom Benutzer zugewiesene Identität hinzu, um auf andere Azure-Ressourcen zuzugreifen. <br /> Fügt eine CORS-Regel (Cross-Origin Resource Sharing) hinzu, um Anforderungen von Ihrer Registerkarten-App zuzulassen. <br /> Fügt eine Authentifizierungseinstellung hinzu, die nur Anforderungen von Ihrer Teams-App zulässt. <br /> Fügt App-Einstellungen hinzu, die für [das TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) erforderlich sind |
+| Funktions-App | Hosten Ihrer Azure-Funktions-APIs | Fügt eine vom Benutzer zugewiesene Identität hinzu, um auf andere Azure-Ressourcen zuzugreifen. <br /> Fügt eine CORS-Regel (Cross-Origin Resource Sharing) hinzu, um Anforderungen von Ihrer Registerkarten-App zuzulassen. <br /> Fügt eine Authentifizierungseinstellung hinzu, die nur Anforderungen von Ihrer Teams App zulässt. <br /> Fügt App-Einstellungen hinzu, die für [das TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) erforderlich sind |
 | Azure-Speicher für Funktions-App | Erforderlich zum Erstellen einer Funktions-App |Nicht zutreffend|
 | Vom Benutzer zugewiesene Identität | Authentifizieren von Azure Service-zu-Service-Anforderungen | Gemeinsam genutzt für verschiedene Funktionen und Ressourcen |
 
@@ -87,7 +87,7 @@ Wenn Sie ein neues Projekt erstellen, können Sie alle Azure-Ressourcen verwende
 
 |Ressource|Zweck|
 |----------|--------------------------------|
-| Microsoft Azure Active Directory anwendung (Azure AD) für den API-Verwaltungsdienst | Ermöglicht Microsoft Power Platform-Zugriffs-APIs, die vom API-Verwaltungsdienst verwaltet werden |
+| Azure AD-Anwendung für API-Verwaltungsdienst | Ermöglicht Microsoft Power Platform-Zugriffs-APIs, die vom API-Verwaltungsdienst verwaltet werden |
 | API-Verwaltungsdienst | Verwalten Der in der Funktions-App gehosteten APIs |
 | API-Verwaltungsprodukt | Gruppieren Sie Ihre APIs, definieren Sie Nutzungsbedingungen und Laufzeitrichtlinien |
 | API-Verwaltungs-OAuth-Server | Ermöglicht Microsoft Power Platform den Zugriff auf Ihre in der Funktions-App gehosteten APIs. |
@@ -97,7 +97,7 @@ Wenn Sie ein neues Projekt erstellen, können Sie alle Azure-Ressourcen verwende
 
 |Ressourcen|Zweck dieser Ressource|
 |----------|--------------------------------|
-| Azure Key Vault Service | Verwalten geheimer Schlüssel (z. B. Microsoft Azure Active Directory (Azure AD) geheimer App-Clientschlüssel), die von anderen Azure-Diensten verwendet werden |
+| Azure Key Vault Service | Verwalten von geheimen Schlüsseln (z. B. Azure AD geheimen App-Clientschlüssel), die von anderen Azure-Diensten verwendet werden |
 | Benutzer zugewiesene Identität | Authentifizieren von Azure Service-zu-Service-Anforderungen |
 
 ## <a name="customize-resource-provision"></a>Anpassen der Ressourcenbereitstellung
@@ -166,13 +166,13 @@ In der Zwischenzeit sind die folgenden Parameter mit Werten verfügbar, die wäh
 | Parametername | Platzhalter für Standardwerte | Bedeutung des Platzhalters | Anpassen |
 | --- | --- | --- | --- |
 | Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Die Azure AD App-Client-ID Ihrer App, die während der Bereitstellung erstellt wurde | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-teams-app) |
-| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Der Azure AD clientschlüssel Ihrer App, der während der Bereitstellung erstellt wurde | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Der Azure AD geheimen Clientschlüssel Ihrer App, der während der Bereitstellung erstellt wurde | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-teams-app)  |
 | Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Mandanten-ID der Azure AD App Ihrer App | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-teams-app)  |
 | Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth-Autoritätshost der Azure AD App Ihrer App | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-teams-app) |
 | botAadAppClientId | {{state.fx-resource-bot.botId}} | Bots Azure AD App-Client-ID, die während der Bereitstellung erstellt wurde | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-bot) |
-| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Der Azure AD clientschlüssel des Bots, der während der Bereitstellung erstellt wurde | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-bot) |
+| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bots Azure AD geheimer App-Clientschlüssel, der während der Bereitstellung erstellt wurde | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-bot) |
 | apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM-Azure AD App-Client-ID, die während der Bereitstellung erstellt wurde | Löschen des Platzhalters und Ausfüllen des tatsächlichen Werts |
-| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | Der Azure AD clientschlüssel der APIM, der während der Bereitstellung erstellt wurde | Löschen des Platzhalters und Ausfüllen des tatsächlichen Werts |
+| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | APIM-Azure AD App-Clientschlüssel, der während der Bereitstellung erstellt wurde | Löschen des Platzhalters und Ausfüllen des tatsächlichen Werts |
 
 ##### <a name="azure-resource-related-parameters"></a>Ressourcenbezogene Azure-Parameter
 
@@ -214,7 +214,7 @@ Sie können die folgenden Szenarien anpassen:
 
 #### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>Verwenden einer vorhandenen Azure AD-App für Ihren Bot
 
-Sie können der Datei den folgenden Konfigurationsausschnitt `.fx/configs/config.{env}.json` hinzufügen, um eine Microsoft Azure Active Directory (Azure AD)-App zu verwenden, die Sie selbst für Ihre Teams-App erstellt haben. Informationen zum Erstellen einer Microsoft Azure Active Directory -App (Azure AD) finden Sie unter <https://aka.ms/teamsfx-existing-aad-doc>.
+Sie können der Datei den folgenden Konfigurationsausschnitt `.fx/configs/config.{env}.json` hinzufügen, um eine Azure AD App zu verwenden, die Sie selbst für Ihre Teams-App erstellt haben. Informationen zum Erstellen einer Azure AD-App finden Sie unter <https://aka.ms/teamsfx-existing-aad-doc>.
 
 ```json
 "auth": {
@@ -228,11 +228,11 @@ Sie können der Datei den folgenden Konfigurationsausschnitt `.fx/configs/config
 Nachdem Sie den Codeausschnitt hinzugefügt haben, fügen Sie Ihren geheimen Schlüssel der zugehörigen Umgebungsvariablen hinzu, damit das Tool den tatsächlichen geheimen Schlüssel während der Bereitstellung auflösen kann.
 
 > [!NOTE]
-> Stellen Sie sicher, dass Sie nicht dieselbe Microsoft Azure Active Directory (Azure AD)-App in mehreren Umgebungen freigeben. Wenn Sie nicht über die Berechtigung zum Aktualisieren der Microsoft Azure Active Directory -App (Azure AD) verfügen, erhalten Sie eine Warnung mit Anweisungen zum manuellen Aktualisieren der Microsoft Azure Active Directory -App (Azure AD). Folgen Sie den Anweisungen, um Ihre Microsoft Azure Active Directory (Azure AD)-App nach der Bereitstellung zu aktualisieren.
+> Stellen Sie sicher, dass Sie nicht dieselbe Azure AD App in mehreren Umgebungen freigeben. Wenn Sie nicht über die Berechtigung zum Aktualisieren der Azure AD-App verfügen, erhalten Sie eine Warnung mit Anweisungen zum manuellen Aktualisieren der Azure AD-App. Befolgen Sie die Anweisungen, um Ihre Azure AD-App nach der Bereitstellung zu aktualisieren.
 
 #### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Verwenden einer vorhandenen Azure AD-App für Ihre Teams-App
 
-Sie können der `.fx/configs/config.{env}.json` Datei den folgenden Konfigurationsausschnitt hinzufügen, um eine Microsoft Azure Active Directory (Azure AD)-App zu verwenden, die Sie selbst für Ihren Bot erstellt haben:
+Sie können den folgenden Konfigurationsausschnitt zur `.fx/configs/config.{env}.json` Datei hinzufügen, um eine Azure AD-App zu verwenden, die Sie selbst für Ihren Bot erstellt haben:
 
 ```json
 "bot": {
@@ -243,9 +243,9 @@ Sie können der `.fx/configs/config.{env}.json` Datei den folgenden Konfiguratio
 
 Nachdem Sie den vorherigen Codeausschnitt hinzugefügt haben, fügen Sie Ihren geheimen Schlüssel der zugehörigen Umgebungsvariablen hinzu, damit das Tool den tatsächlichen geheimen Schlüssel während der Bereitstellung auflösen kann.
 
-#### <a name="skip-adding-user-for-sql-database"></a>Überspringen des Hinzufügens von Benutzern für SQL Datenbank
+#### <a name="skip-adding-user-for-sql-database"></a>Überspringen des Hinzufügens eines Benutzers für SQL Datenbank
 
-Wenn beim Versuch des Tools, SQL Datenbank Benutzer hinzuzufügen, nicht genügend Berechtigungsfehler auftreten, können Sie der Datei den folgenden Konfigurationsausschnitt hinzufügen, um das Hinzufügen SQL Datenbankbenutzers zu `.fx/configs/config.{env}.json` überspringen:
+Wenn beim Versuch des Tools, Benutzer zu SQL Datenbank hinzuzufügen, ein Fehler aufgrund unzureichender Berechtigungen auftritt, können Sie den folgenden Konfigurationsausschnitt zur Datei hinzufügen, um das Hinzufügen SQL Datenbankbenutzers zu `.fx/configs/config.{env}.json` überspringen:
 
 ```json
 "skipAddingSqlUser": true
@@ -321,7 +321,7 @@ Betrachten Sie das Szenario, in dem Sie Ihrem Azure-Funktions-Back-End Azure-Spe
 
 <summary><b>Problembehandlung</b></summary>
 
-Wenn Sie fehler mit Teams Toolkit in Visual Studio Code erhalten, können Sie in der Fehlerbenachrichtigung **Hilfe** auswählen, um zum zugehörigen Dokument zu navigieren. Wenn Sie TeamsFx CLI verwenden, wird am Ende der Fehlermeldung ein Link angezeigt, der auf das Hilfedokument verweist. Sie können das [Bereitstellungshilfedokument](https://aka.ms/teamsfx-arm-help) auch direkt anzeigen.
+Wenn in Visual Studio Code Fehler mit Teams Toolkit auftreten, können Sie in der Fehlerbenachrichtigung **Hilfe** auswählen, um zum zugehörigen Dokument zu navigieren. Wenn Sie TeamsFx CLI verwenden, wird am Ende der Fehlermeldung ein Link angezeigt, der auf das Hilfedokument verweist. Sie können das [Bereitstellungshilfedokument](https://aka.ms/teamsfx-arm-help) auch direkt anzeigen.
 
 <br>
 
@@ -363,7 +363,7 @@ Sie können die [Bereitstellung SharePoint-basierten App](/microsoftteams/platfo
 
 </details>
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Siehe auch
 
 * [Bereitstellen der Teams-App in der Cloud](deploy.md)
 * [Verwalten mehrerer Umgebungen](TeamsFx-multi-env.md)

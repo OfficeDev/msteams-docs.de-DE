@@ -1,15 +1,15 @@
 ---
 title: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 author: surbhigupta
-description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen und verschiedene Besprechungsszenarien, Aktualisieren des App-Manifests, Konfigurieren von Features, z. B. In-Meeting-Dialog, freigegebene Besprechungsphase, Besprechungs-SidePanel und vieles mehr
+description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen und verschiedene Besprechungsszenarien, Aktualisieren des App-Manifests, Konfigurieren von Features wie In-Meeting-Dialog, freigegebener Besprechungsphase, Besprechungs-SidePanel und mehr
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 7eacd4c406dc81a2f6704a05d678eb6b70912856
-ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
+ms.openlocfilehash: 17dc9bce0bb6a54aea09d0f41b01840e5d2ca621
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62523780"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821591"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -97,7 +97,7 @@ Vor einer Besprechung können Benutzer Registerkarten, Bots und Messaging-Erweit
 Geben Sie in einem Besprechungschat den **@** Schlüssel ein, und wählen **Sie "Bots abrufen" aus**.
 
 > [!NOTE]
-> * Die Inhaltsblase sendet eine adaptive Karte oder eine Karte gleichzeitig im Besprechungschat, auf den Benutzer zugreifen können. Dies hilft den Benutzern, wenn die Besprechung oder die Teams App minimiert wird.
+> * Die Inhaltsblase sendet eine adaptive Karte oder eine Karte gleichzeitig im Besprechungschat, auf den Benutzer zugreifen können. Dies hilft den Benutzern, wenn die Besprechung oder die Teams-App minimiert wird.
 > * Die Benutzeridentität muss mit [tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md) bestätigt werden. Nach der Authentifizierung kann die App die Benutzerrolle mithilfe der `GetParticipant` API abrufen.
 > * Basierend auf der Benutzerrolle kann die App rollenspezifische Benutzeroberflächen bereitstellen. Eine Abruf-App ermöglicht beispielsweise nur Organisatoren und Referenten das Erstellen einer neuen Umfrage.
 > * Rollenzuweisungen können geändert werden, während eine Besprechung ausgeführt wird. Weitere Informationen finden Sie [unter Rollen in einer Teams Besprechung](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
@@ -127,11 +127,11 @@ Das Besprechungsdialogfeld darf kein Aufgabenmodul verwenden. Das Aufgabenmodul 
 > * Sie müssen die [SubmitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) -Funktion aufrufen, um sie automatisch zu schließen, nachdem ein Benutzer eine Aktion in der Webansicht ausgeführt hat. Dies ist eine Anforderung für die App-Übermittlung. Weitere Informationen finden Sie unter [Teams SDK-Aufgabenmodul](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
 > * Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss die Anforderungsnutzlast für den ersten Aufruf auf Anforderungsmetadaten im `from` Objekt basieren, nicht `from.aadObjectId` auf `from.id` Anforderungsmetadaten. `from.id`ist die Benutzer-ID und `from.aadObjectId` die Microsoft Azure Active Directory -ID (Azure AD) des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
-#### <a name="shared-meeting-stage"></a>Freigegebene Besprechungsphase
+#### <a name="shared-meeting-stage"></a>Freigegebenes Besprechungsfreigabefenster
 
 Die freigegebene Besprechungsphase ermöglicht es Besprechungsteilnehmern, in Echtzeit mit App-Inhalten zu interagieren und daran zusammenzuarbeiten. Sie können Ihre Apps auf folgende Weise für die Besprechungsphase für die Zusammenarbeit freigeben:
 
-* [Freigeben der gesamten App für die Phasen](#share-entire-app-to-stage) mithilfe der Schaltfläche "Freigabe für Phase" in Teams Client.
+* [Teilen Sie die gesamte App mithilfe](#share-entire-app-to-stage) der Schaltfläche "Freigabe für Phase" in Teams Client.
 * [Teilen Sie bestimmte Teile der App, die](#share-specific-parts-of-the-app-to-stage) mithilfe von APIs im Teams-Client-SDK bereitgestellt werden sollen.
 
 ##### <a name="share-entire-app-to-stage"></a>Freigeben der gesamten App für die Phase
@@ -140,7 +140,7 @@ Teilnehmer können die gesamte App für die Besprechungsphase für die Zusammena
 
 <img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
-Um die gesamte App für die Phase freizugeben, müssen Sie im App-Manifest und `meetingSidePanel` als Framekontext konfigurieren`meetingStage`. Beispiel:
+Um die gesamte App für die Phase freizugeben, müssen Sie im App-Manifest und `meetingSidePanel` als Framekontext konfigurieren`meetingStage`. Zum Beispiel: 
 
 ```json
 "configurableTabs": [
@@ -162,13 +162,13 @@ Weitere Informationen finden Sie unter [App-Manifest](../resources/schema/manife
 
 ##### <a name="share-specific-parts-of-the-app-to-stage"></a>Freigeben bestimmter Teile der App für die Phasen
 
-Teilnehmer können bestimmte Teile der App für die Gemeinsame Besprechungsphase freigeben, indem sie die APIs für die Freigabe in Phasen verwenden. Die APIs sind im Teams-Client-SDK verfügbar und werden aus dem App-Seitenbereich aufgerufen.
+Teilnehmer können bestimmte Teile der App für die Gemeinsame Besprechungsphase freigeben, indem sie die APIs für die Freigabe in Phasen verwenden. Die APIs sind im Teams Client-SDK verfügbar und werden aus dem App-Seitenbereich aufgerufen.
 
 <img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
 Um bestimmte Teile der App für die Phasen freizugeben, müssen Sie die zugehörigen APIs in der Teams Client-SDK-Bibliothek aufrufen. Weitere Informationen finden Sie in der [API-Referenz](API-references.md).
 
-Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss die Anforderungsnutzlast für den ersten Aufruf auf Anforderungsmetadaten im `from` Objekt basieren, nicht `from.aadObjectId` auf `from.id` Anforderungsmetadaten. `from.id`ist die Benutzer-ID und `from.aadObjectId` die Microsoft Azure Active Directory -ID (Azure AD) des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss die Anforderungsnutzlast für den ersten Aufruf auf Anforderungsmetadaten im `from` Objekt basieren, nicht `from.aadObjectId` auf `from.id` Anforderungsmetadaten. `from.id`ist die Benutzer-ID und `from.aadObjectId` die Azure AD-ID des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="after-a-meeting"></a>Nach einer Besprechung
 
@@ -178,9 +178,9 @@ Die Konfigurationen für Nach [- und Vorbesprechungen](#before-a-meeting) sind i
 
 |Beispielname | Beschreibung | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Besprechungs-App | Veranschaulicht die Verwendung der Besprechungstoken-Generator-App zum Anfordern eines Tokens. Das Token wird sequenziell generiert, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Das Token ist nützlich in Situationen wie Meetings in DerBesprechung und Q&A-Sitzungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Besprechungs-App | Veranschaulicht die Verwendung der Besprechungstoken-Generator-App zum Anfordern eines Tokens. Das Token wird sequenziell generiert, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Das Token ist nützlich in Situationen wie Meetings mit DerBesprechung und Q&A-Sitzungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |Beispiel für Besprechungsphasen | Beispiel-App zum Anzeigen einer Registerkarte in der Besprechungsphase für die Zusammenarbeit | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
-|Besprechungsseitiger Bereich | Beispiel-App zum Hinzufügen von Tagesordnungen in einem besprechungsseitigen Bereich | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
+|Besprechungsseitiger Bereich | Beispiel-App zum Hinzufügen von Tagesordnungen in einem besprechungsseitigen Bereich | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
 ## <a name="step-by-step-guides"></a>Schritt-für-Schritt-Anleitungen
 
@@ -194,7 +194,7 @@ Die Konfigurationen für Nach [- und Vorbesprechungen](#before-a-meeting) sind i
 > [!div class="nextstepaction"]
 > [API-Referenzen für Besprechungs-Apps](API-references.md)
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Siehe auch
 
 * [Entwurfsrichtlinien für Besprechungsdialoge](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams Authentifizierungsfluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md)

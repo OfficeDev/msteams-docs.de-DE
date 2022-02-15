@@ -1,15 +1,15 @@
 ---
 title: Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
-description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanruf-Bot für Microsoft Teams registrieren, einen neuen Bot erstellen oder Anruffunktionen hinzufügen und Graph-Berechtigungen hinzufügen.
+description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanrufbot für Microsoft Teams registrieren, einen neuen Bot erstellen oder Anruffunktionen hinzufügen und Graph-Berechtigungen hinzufügen.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Aufrufen von Bot-Audio-/Video-Audiovideomedien
-ms.openlocfilehash: 33163314f5d1d37b79562532ec2f15b6002d90ce
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 140a5c13df392a99dd7beea54cbb9cfd15ad8486
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518289"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821367"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
 
@@ -24,7 +24,7 @@ Ein Bot, der an Audio- oder Videoanrufen und Onlinebesprechungen teilnimmt, ist 
 Bots für Anrufe und Onlinebesprechungen haben die folgenden beiden zusätzlichen Einstellungen in "manifest.json", die Audio- oder Videodaten für Ihren Bot in Teams aktivieren.
 
 * `bots[0].supportsCalling`. Wenn vorhanden und festgelegt, `true`ermöglicht Teams Ihrem Bot die Teilnahme an Anrufen und Onlinebesprechungen.
-* `bots[0].supportsVideo`. Wenn vorhanden und festgelegt auf `true`, weiß Teams, dass Ihr Bot Video unterstützt.
+* `bots[0].supportsVideo`. Wenn vorhanden und festgelegt, `true`weiß Teams, dass Ihr Bot Video unterstützt.
 
 Wenn Ihre IDE das Manifest.json-Schema für Ihre Aufrufe und Besprechungsbots ordnungsgemäß auf diese Werte überprüfen soll, können Sie das `$schema` Attribut wie folgt ändern:
 
@@ -50,7 +50,7 @@ Der nächste Abschnitt enthält eine Liste der Anwendungsberechtigungen, die fü
 
 ## <a name="add-graph-permissions"></a>Hinzufügen Graph Berechtigungen
 
-Das Graph bietet granulare Berechtigungen, um den Zugriff zu steuern, den Apps auf Ressourcen haben. Sie entscheiden, welche Berechtigungen für Graph Ihre App-Anforderungen gelten. Die Graph aufrufenden APIs unterstützen Anwendungsberechtigungen, die von Apps verwendet werden, die ohne angemeldeten Benutzer ausgeführt werden. Ein Mandantenadministrator muss Anwendungsberechtigungen zustimmen.
+Die Graph bietet präzise Berechtigungen, um den Zugriff zu steuern, den Apps auf Ressourcen haben. Sie entscheiden, welche Berechtigungen für Graph Ihre App-Anforderungen gelten. Die Graph aufrufenden APIs unterstützen Anwendungsberechtigungen, die von Apps verwendet werden, die ohne angemeldeten Benutzer ausgeführt werden. Ein Mandantenadministrator muss Anwendungsberechtigungen zustimmen.
 
 ### <a name="application-permissions-for-calls"></a>Anwendungsberechtigungen für Anrufe
 
@@ -82,9 +82,9 @@ Sie müssen die Anwendungsberechtigungen für Ihren Bot im Voraus mithilfe des [
 
 ### <a name="get-tenant-administrator-consent"></a>Einholen der Zustimmung des Mandantenadministrators
 
-Bei Apps, die den Microsoft Azure Active Directory (Azure AD) V1-Endpunkt verwenden, kann ein Mandantenadministrator den Anwendungsberechtigungen über das [Microsoft Azure Portal](https://portal.azure.com) zustimmen, wenn Ihre App in ihrer Organisation installiert wird. Alternativ können Sie eine Anmeldeumgebung in Ihrer App bereitstellen, über die Administratoren den von Ihnen konfigurierten Berechtigungen zustimmen können. Nachdem die Administratorzustimmung von Microsoft Azure Active Directory (Azure AD) aufgezeichnet wurde, kann Ihre App Token anfordern, ohne erneut die Zustimmung anfordern zu müssen.
+Bei Apps, die den Azure AD V1-Endpunkt verwenden, kann ein Mandantenadministrator den Anwendungsberechtigungen über das [Microsoft Azure Portal](https://portal.azure.com) zustimmen, wenn Ihre App in ihrer Organisation installiert ist. Alternativ können Sie eine Anmeldeumgebung in Ihrer App bereitstellen, über die Administratoren den von Ihnen konfigurierten Berechtigungen zustimmen können. Nachdem die Administratorzustimmung von Azure AD aufgezeichnet wurde, kann Ihre App Token anfordern, ohne erneut die Zustimmung anfordern zu müssen.
 
-Sie können sich darauf verlassen, dass ein Administrator die Berechtigungen erteilt, die Ihre App im [Microsoft Azure-Portal](https://portal.azure.com) benötigt. Eine bessere Option ist die Bereitstellung einer Anmeldeumgebung für Administratoren mithilfe des Microsoft Azure Active Directory (Azure AD) V2-Endpunkts`/adminconsent`. Weitere Informationen finden Sie in [den Anweisungen zum Erstellen einer ADMINISTRATORzustimmungs-URL](/graph/uth-v2-service#3-get-administrator-consent).
+Sie können sich darauf verlassen, dass ein Administrator die Berechtigungen erteilt, die Ihre App im [Microsoft Azure-Portal](https://portal.azure.com) benötigt. Eine bessere Option ist die Bereitstellung einer Anmeldeumgebung für Administratoren mithilfe des Azure AD V2-Endpunkts`/adminconsent`. Weitere Informationen finden Sie in [den Anweisungen zum Erstellen einer ADMINISTRATORzustimmungs-URL](/graph/uth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
 > Zum Erstellen der Mandanten-Administratorzustimmungs-URL ist ein konfigurierter Umleitungs-URI oder eine Antwort-URL im [App-Registrierungsportal](https://apps.dev.microsoft.com/) erforderlich. Um Antwort-URLs für Ihren Bot hinzuzufügen, greifen Sie auf Ihre Bot-Registrierung zu, und wählen Sie **"Erweiterte** **OptionenEdit-Anwendungsmanifest** > " aus. Fügen Sie die Umleitungs-URL zur `replyUrls` Sammlung hinzu.
@@ -101,7 +101,7 @@ Befolgen Sie die [schrittweise Anleitung](../../sbs-calling-and-meeting.yml) zum
 > [!div class="nextstepaction"]
 > [Eingehende Anrufbenachrichtigungen](~/bots/calls-and-meetings/call-notifications.md)
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Siehe auch
 
 * [Eingehende Anrufbenachrichtigungen](~/bots/calls-and-meetings/call-notifications.md)
 * [Entwickeln von Anruf- und Onlinebesprechungs-Bots auf Ihrem lokalen PC](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

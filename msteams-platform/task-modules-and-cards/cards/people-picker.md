@@ -1,19 +1,19 @@
 ---
-title: Personenauswahl in Adaptiven Karten
+title: Personenauswahl in adaptiven Karten
 description: Beschreibt die Verwendung des Personenauswahl-Steuerelements in adaptiven Karten
 localization_priority: Normal
 keywords: Personenauswahl für adaptive Karten
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 449c3d764cf3e4db68207560890e954bef14c7b4
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 18e4268258e008485617cb10fd11070963cf3ed1
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518303"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821633"
 ---
-# <a name="people-picker-in-adaptive-cards"></a>Personenauswahl in Adaptiven Karten
+# <a name="people-picker-in-adaptive-cards"></a>Personenauswahl in adaptiven Karten
 
 >[!NOTE]
 > Derzeit ist die Personenauswahl in adaptiven Karten in der [öffentlichen Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) nur für mobilgeräte und allgemein verfügbar (GA) für Desktops verfügbar.
@@ -107,7 +107,7 @@ Die folgenden Eigenschaften sind Ergänzungen zum Schema, um die `Input.ChoiceSe
 
 |Eigenschaft |Typ |Erforderlich |Beschreibung|
 |--|--|--|--|
-|**Dataset** |String |Ja |Der Datentyp, der dynamisch abgerufen werden muss.|   
+|**Dataset** |Zeichenfolge |Ja |Der Datentyp, der dynamisch abgerufen werden muss.|   
 
 #### <a name="dataset"></a>Dataset
 Die folgende Tabelle enthält vordefinierte Werte als **Dataset** für die Personenauswahl:   
@@ -161,7 +161,7 @@ Um die Suche in einer Liste von Unterhaltungsmitgliedern zu aktivieren, verwende
 ### <a name="data-submission"></a>Datenübermittlung
 
 Sie können ausgewählte Daten verwenden `Action.Submit` oder `Action.Execute` an Ihren Bot übermitteln. Die `invoke` auf Ihrem Bot empfangene Nutzlast ist eine Liste der Microsoft Azure Active Directory (Azure AD)-IDs oder der in der statischen Liste bereitgestellten IDs.
-Wenn in der Personenauswahl ein Benutzer im Steuerelement ausgewählt wird, ist der `Microsoft Azure Active Directory (Azure AD) ID` Benutzer der zurückgegebene Wert. Dies `Microsoft Azure Active Directory (Azure AD) ID` ist eine Zeichenfolge und identifiziert einen Benutzer im Verzeichnis eindeutig.
+Wenn in der Personenauswahl ein Benutzer im Steuerelement ausgewählt wird, ist der `Azure AD ID` Benutzer der zurückgegebene Wert. Dies `Azure AD ID` ist eine Zeichenfolge und identifiziert einen Benutzer im Verzeichnis eindeutig.
 
 Das Format des an den Bot übermittelten Werts hängt vom Wert der `isMultiSelect` Eigenschaft ab:
 
@@ -177,8 +177,8 @@ Mit der wählt die `Azure AD ID`Personenauswahl den entsprechenden Benutzer vora
 Die Personenauswahl unterstützt die Vorabauswahl des Benutzers im Steuerelement beim Erstellen und Senden einer adaptiven Karte. `Input.ChoiceSet` unterstützt die `value` Eigenschaft, die für die Vorabauswahl eines Benutzers verwendet wird. Das Format dieser `value` Eigenschaft entspricht dem format des übermittelten Werts in der [Datenübermittlung](#data-submission).  
 Die folgende Liste enthält die Informationen für die Vorabauswahl von Benutzern:
 
-* Geben Sie für einen einzelnen Benutzer im Steuerelement den `Microsoft Azure Active Directory (Azure AD) ID` Benutzer als `value`. 
-* Geben Sie für mehrere Benutzer, z `isMultiSelect` `true`. B. eine durch Trennzeichen getrennte Zeichenfolge von `Microsoft Azure Active Directory (Azure AD) ID`s an.  
+* Geben Sie für einen einzelnen Benutzer im Steuerelement den `Azure AD ID` Benutzer als `value`. 
+* Geben Sie für mehrere Benutzer, z `isMultiSelect` `true`. B. eine durch Trennzeichen getrennte Zeichenfolge von `Azure AD ID`s an.  
 
 Im folgenden Beispiel wird die Vorauswahl eines einzelnen Benutzers beschrieben:
 
@@ -307,7 +307,7 @@ Die folgende Abbildung zeigt die Personenauswahl in adaptiven Karten mit statisc
 
 Sie können die Personenauswahl für eine effiziente Aufgabenverwaltung in verschiedenen Szenarien implementieren.  
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Siehe auch
 
 [Kartenreferenz](cards-reference.md)
 

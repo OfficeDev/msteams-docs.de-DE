@@ -4,12 +4,12 @@ description: Beschreibt, wie Sie Benutzerkontext zu Ihren Registerkarten abrufen
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams Registerkarten Benutzerkontext
-ms.openlocfilehash: ca77ba61a880bb12067f884e8c294700938cc6be
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: a8e8fe6d638f8887a30f65dbf812046738d12dfb
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518128"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821731"
 ---
 # <a name="get-context-for-your-tab"></a>Kontext für Ihre Registerkarte erhalten
 
@@ -44,12 +44,12 @@ Verwenden Sie Platzhalter in Ihren Konfigurations-oder Inhalts-URLs. Microsoft T
 
 * {entityId}: Die ID, die Sie für das Element auf dieser Registerkarte beim ersten [Konfigurieren der Registerkarte](~/tabs/how-to/create-tab-pages/configuration-page.md) angegeben haben.
 * {subEntityId}: Die ID, die Sie beim Generieren eines [Deep-Links](~/concepts/build-and-test/deep-links.md) für ein bestimmtes Element auf dieser Registerkarte angegeben haben. Dies muss verwendet werden, um einen bestimmten Zustand innerhalb einer Entität wiederherzustellen. Beispiel: Scrollen zu oder Aktivieren eines bestimmten Inhaltselements.
-* {loginHint}: Ein Wert, der als Anmeldehinweis für Microsoft Azure Active Directory (Azure AD) geeignet ist. Dies ist in der Regel der Anmeldename des aktuellen Benutzers in dessen Home-Mandant.
+* {loginHint}: Ein Wert, der als Anmeldehinweis für Azure AD geeignet ist. Dies ist in der Regel der Anmeldename des aktuellen Benutzers in dessen Home-Mandant.
 * {userPrincipalName}: Der Benutzerprinzipalname des aktuellen Benutzers im aktuellen Mandanten.
-* {userObjectId}: Die Microsoft Azure Active Directory (Azure AD)-Objekt-ID des aktuellen Benutzers im aktuellen Mandanten.
+* {userObjectId}: Die Azure AD Objekt-ID des aktuellen Benutzers im aktuellen Mandanten.
 * {theme}: Das aktuelle Benutzeroberflächendesign wie `default`, `dark`oder `contrast`.
 * {groupId}: Die ID der Office 365 Gruppe, in der sich die Registerkarte befindet.
-* {tid}: Die Microsoft Azure Active Directory (Azure AD)-Mandanten-ID des aktuellen Benutzers.
+* {tid}: Die Azure AD-Mandanten-ID des aktuellen Benutzers.
 * {locale}: Das aktuelle Gebietsschema des Benutzers, das als languageId-countryId(en-us) formatiert ist.
 
 > [!NOTE]
@@ -82,10 +82,10 @@ Der folgende Code enthält ein Beispiel für eine Kontextvariable:
     "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
     "entityId": "The developer-defined unique ID for the entity this content points to",
     "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
-    "loginHint": "A value suitable as a login hint for Microsoft Azure Active Directory (Azure AD). This is usually the login name of the current user, in their home tenant",
+    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
     "userPrincipalName": "The principal name of the current user, in the current tenant",
-    "userObjectId": "The Microsoft Azure Active Directory (Azure AD) object id of the current user, in the current tenant",
-    "tid": "The Microsoft Azure Active Directory (Azure AD) tenant ID of the current user",
+    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
+    "tid": "The Azure AD tenant ID of the current user",
     "groupId": "Guid identifying the current Office 365 Group ID",
     "theme": "The current UI theme: default | dark | contrast",
     "isFullScreen": "Indicates if the tab is in full-screen",
@@ -125,9 +125,9 @@ Die folgenden Felder werden geändert, wenn sich Die Inhaltsseite in einem priva
 * `groupId`: Nicht definiert für private Kanäle
 * `teamId`: Auf die threadId des privaten Kanals festgelegt
 * `teamName`: Auf den Namen des privaten Kanals festgelegt
-* `teamSiteUrl`: Legen Sie die URL einer eindeutigen SharePoint-Website für den privaten Kanal fest.
-* `teamSitePath`: Legen Sie den Pfad einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal fest.
-* `teamSiteDomain`: Auf die Domäne einer eindeutigen, eindeutigen SharePoint-Websitedomäne für den privaten Kanal festgelegt
+* `teamSiteUrl`: Legen Sie die URL einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal fest.
+* `teamSitePath`: Auf den Pfad einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal festgelegt
+* `teamSiteDomain`: Auf die Domäne einer eindeutigen SharePoint-Websitedomäne für den privaten Kanal festgelegt
 
 Wenn Ihre Seite einen dieser Werte verwendet, müssen Sie das `channelType` Feld überprüfen, um festzustellen, ob Die Seite in einem privaten Kanal geladen ist, und entsprechend reagieren.
 
@@ -145,7 +145,7 @@ Das `theme` Argument in der Funktion ist eine Zeichenfolge mit dem Wert `default
 > [!div class="nextstepaction"]
 > [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Siehe auch
 
 * [Richtlinien für den Registerkartenentwurf](../../tabs/design/tabs.md)
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
