@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: Manifestschema für Microsoft Teams
-ms.openlocfilehash: b7b2e175f144811118310bde1fcf63b88717a20e
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7513b79ee25e4de3e7c2ffecf8f2fd91a23f170b
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518359"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821661"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -628,7 +628,7 @@ Geben Sie Ihre Azure Active Directory-App-ID und Microsoft Graph-Informationen a
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`id`|string|36 Zeichen|✔|Microsoft Azure Active Directory (Azure AD)-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
+|`id`|string|36 Zeichen|✔|Azure AD-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
 |`resource`|string|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für Einmaliges Anmelden. </br> **HINWEIS:** Wenn Sie Einmaliges Anmelden nicht verwenden, geben Sie einen Dummyzeichenfolgenwert in dieses Feld in Ihr App-Manifest ein (z. B. https://notapplicable), um eine Fehlermeldung zu vermeiden. |
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
