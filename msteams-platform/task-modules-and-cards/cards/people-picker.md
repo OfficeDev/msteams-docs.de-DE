@@ -6,12 +6,12 @@ keywords: Personenauswahl für adaptive Karten
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 18e4268258e008485617cb10fd11070963cf3ed1
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 4fda2916c6eaeb3cc0878911c21eb20e276844f3
+ms.sourcegitcommit: 20b84e13b5cb6899f4eb54ca90a13b6da7a3e3d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821633"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62855893"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>Personenauswahl in adaptiven Karten
 
@@ -306,6 +306,13 @@ Die folgende Abbildung zeigt die Personenauswahl in adaptiven Karten mit statisc
 
 
 Sie können die Personenauswahl für eine effiziente Aufgabenverwaltung in verschiedenen Szenarien implementieren.  
+
+## <a name="code-sample"></a>Codebeispiel
+
+| Beispielname           | Beschreibung | C#    | Node.js   |   
+|:---------------------|:--------------|:---------|:--------|
+|Personenauswahl-Steuerelement in adaptiven Karten| In diesem Beispiel wird die Verwendung des Personenauswahl-Steuerelements in adaptiven Karten veranschaulicht.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) | 
+
 
 ## <a name="see-also"></a>Siehe auch
 
