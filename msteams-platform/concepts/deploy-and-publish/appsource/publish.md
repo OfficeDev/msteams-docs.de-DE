@@ -1,135 +1,135 @@
 ---
-title: Übersicht – Teams App Store-Veröffentlichungsprozess
-description: Beschreibt das Verfahren zum Übermitteln Ihrer App an Partner Center und zum Veröffentlichen der App im Microsoft Teams Store (und AppSource).
+title: Übersicht– Veröffentlichungsprozess im Teams-App-Store
+description: Beschreibt den Prozess zum Übermitteln Ihrer App an Partner Center und zum Veröffentlichen im Microsoft Teams Store (und AppSource).
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
-ms.localizationpriority: none
-ms.openlocfilehash: eaebde76a3d1f387ba16c9fdc77670144d22fa61
-ms.sourcegitcommit: 40aade608ee21f5d7d813bd145bef5736dc647f1
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: fd7d2075d79e5c54e9257b71f8bf351fe3cd6823
+ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "62881651"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62896320"
 ---
-# <a name="publish-your-app-to-the-microsoft-teams-store"></a>Veröffentlichen Ihrer App im Microsoft Teams Store
+# <a name="publish-your-app-to-the-microsoft-teams-store"></a>Veröffentlichen Sie Ihre App im Microsoft Teams Store
 
-Sie können Ihre App direkt an den Store innerhalb Microsoft Teams verteilen und Millionen von Benutzern auf der ganzen Welt erreichen. Wenn Ihre App auch im Store enthalten ist, können Sie potenzielle Kunden sofort erreichen.
+Sie können Ihre App direkt an den Store in Microsoft Teams verteilen und Millionen von Benutzern auf der ganzen Welt erreichen. Wenn Ihre App auch im Store vorgestellt wird, können Sie potenzielle Kunden sofort erreichen.
 
-Im Teams Store veröffentlichte Apps werden auch automatisch auf [Microsoft AppSource](https://appsource.microsoft.com) aufgeführt, dem offiziellen Marketplace für Microsoft 365 Apps und Lösungen.
+Apps, die im Teams Store veröffentlicht werden, werden auch automatisch auf [Microsoft AppSource](https://appsource.microsoft.com) gelistet, dem offiziellen Marketplace für Microsoft 365 Apps und Lösungen.
 
 ## <a name="understand-the-publishing-process"></a>Grundlegendes zum Veröffentlichungsprozess
 
-Wenn Sie den Eindruck haben, dass Ihre App bereit für die Produktion ist, können Sie damit beginnen, sie im Teams Store zu veröffentlichen.
+Wenn Sie der Meinung sind, dass Ihre App für die Produktion bereit ist, können Sie damit beginnen, sie im Teams Store zu veröffentlichen.
 
 > [!TIP]
-> Wenn Sie die Schritte vor der Übermittlung genau befolgen, kann dies die Möglichkeit erhöhen, dass Microsoft Ihre App für die Veröffentlichung genehmigt.
+> Wenn Sie die Schritte vor der Übermittlung genau befolgen, kann dies die Wahrscheinlichkeit erhöhen, dass Microsoft Ihre App für die Veröffentlichung genehmigt.
 
 :::row:::
    :::column span="":::
       
    :::column-end:::
    :::column span="3":::
-      :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Teams App Store-Veröffentlichungsprozess" lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
+      :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Teams-App-Store-Veröffentlichungsprozess" lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
    :::column-end:::
    :::column span="":::
       
    :::column-end:::
 :::row-end:::
 
-1. [Überprüfen Sie die Teams Store-Validierungsrichtlinien](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md), um sicherzustellen, dass Ihre App Teams App- und Store-Standards erfüllt.
+1. [Überprüfen Sie die Teams Store-Validierungsrichtlinien](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md), um sicherzustellen, dass Ihre App die Teams-App- und Store-Standards erfüllt.
 
 1. [Erstellen Sie ein Partner Center-Entwicklerkonto](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md).
 
-1. [Bereiten Sie Ihre Store-Übermittlung vor](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md). Dazu gehören das Ausführen automatisierter Tests, das Kompilieren von Testnotizen, das Erstellen eines Store-Eintrags sowie andere wichtige Aufgaben, um den Überprüfungsprozess zu beschleunigen.
+1. [Bereiten Sie Ihre Store-Übermittlung](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md) vor. Dazu gehören das Ausführen automatisierter Tests, das Kompilieren von Testnotizen, das Erstellen eines Store-Eintrags und andere wichtige Aufgaben, um den Überprüfungsprozess zu beschleunigen.
 
-1. [Übermitteln Sie Ihre App](/office/dev/store/add-in-submission-guide) über Partner Center.
+1. [Übermitteln Sie Ihre App](/office/dev/store/add-in-submission-guide) über das Partner Center.
 
-1. Wenn Ihre Übermittlung fehlschlägt, wenden Sie sich direkt an Microsoft, um [die Probleme zu beheben, und übermitteln Sie Ihre App erneut](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).
+1. Wenn Ihre Übermittlung fehlschlägt, wenden Sie sich direkt an Microsoft, um [die Probleme zu beheben und Ihre App erneut zu übermitteln](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).
 
-## <a name="what-to-expect-after-you-submit-your-app"></a>Was ist nach dem Übermitteln ihrer App zu erwarten?
+## <a name="what-to-expect-after-you-submit-your-app"></a>Was ist zu erwarten, nachdem Sie Ihre App eingereicht haben?
 
-* **Umfassende Funktions- und Erfahrungstests**
+* **Umfassende Funktions- und Benutzerfreundlichkeitstests**
 
-  Ihre App wird von einem Validator sorgfältig überprüft, um die Einhaltung der [Zertifizierungsrichtlinien für den Microsoft Commercial Marketplace](/legal/marketplace/certification-policies) sicherzustellen, wobei der Schwerpunkt auf umfassenden Funktions- und Benutzerfreundlichkeitstests, Benutzerfreundlichkeitsprüfungen und Metadatenüberprüfungen liegt. Die App-Überprüfung wird auf Desktop-, Web- und mobilen Clients durchgeführt.
+  Ihre App wird von einem Validierungssteuerelement gründlich überprüft, um die Einhaltung der [Microsoft Commercial Marketplace-Zertifizierungsrichtlinien](/legal/marketplace/certification-policies) mit schwerpunktmäßig umfassenden Funktions- und Benutzerfreundlichkeitstests, Benutzerfreundlichkeitsprüfungen und Metadatenüberprüfungen sicherzustellen. Die App-Überprüfung wird auf Desktop-, Web- und mobilen Clients durchgeführt.
 
-* **Veröffentlichung der geführten App über den Service**
+* **Geführte App-Veröffentlichung über den Concierge-Dienst**
 
-  Wenn keine Probleme mit Ihrer App auftreten, wird Ihre App genehmigt und im Teams Store veröffentlicht. Wenn Probleme auftreten, erhalten Sie einen automatisierten Überprüfungsbericht vom Partner Center mit den Fehlerdetails. Um Ihnen zu helfen, Ihre App erfolgreich im Teams Store zu veröffentlichen und Sie durch diesen Prozess zu führen, sendet Ihnen das Validierungsteam eine personalisierte E-Mail von unserem [Service teamsubm@microsoft.com](mailto:teamsubm@microsoft.com), die die folgenden Informationen enthält:
+  Wenn keine Probleme mit Ihrer App auftreten, wird Ihre App genehmigt und im Teams Store veröffentlicht. Wenn Probleme auftreten, erhalten Sie vom Partner Center einen automatisierten Überprüfungsbericht mit den Fehlerdetails. Um Sie bei der erfolgreichen Veröffentlichung Ihrer App im Teams Store zu unterstützen und Sie durch diesen Prozess zu führen, sendet Ihnen das Validierungsteam eine personalisierte E-Mail von unserem Concierge-Dienst [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com), die die folgenden Informationen enthält:
 
    * Zusammenfassung aller Probleme
 
    * Details zu Fehlern oder Problemen mit Richtlinienlinks und Kategorisierung: 
 
-     * Obligatorische Korrektur: Diese Probleme müssen vor der App-Genehmigung behoben werden.
+     * Obligatorische Fehlerbehebung: Diese Probleme müssen vor der App-Genehmigung behoben werden.
 
-     * Empfohlene Lösung: Diese Probleme können nach der App-Genehmigung behoben werden, da dies Empfehlungen zur Verbesserung der App-Erfahrung sind.
+     * Empfohlene Korrektur: Diese Probleme können nach der App-Genehmigung behoben werden, da es sich hierbei um Empfehlungen zur Verbesserung der App-Erfahrung handelt.
 
-     * Blocker: Diese Probleme verhindern, dass das Validierungsteam Ihre App-Funktionen weiter testet, und müssen behoben werden, damit die Überprüfung fortgesetzt werden kann.
+     * Blocker: Diese Probleme verhindern, dass das Validierungsteam Ihre App-Funktionalität weiter testet, und müssen gelöst werden, damit die Validierung fortgesetzt werden kann.
 
      * Abfrage: Diese Abfragen können freigegeben werden, um Antworten auf bestimmte Fragen im Zusammenhang mit Ihrer App zu erhalten.
 
-   * Schritte zum Neuerstellen von Problemen durch schriftliche Anweisungen oder das Videoformat.
+   * Schritte zum Neuerstellen von Problemen über schriftliche Anweisungen oder das Videoformat.
 
-   * Empfehlungen, um die gemeldeten Probleme mit Links zu Anleitungsdokumenten zu beheben.
+   * Empfehlungen zum Beheben der gemeldeten Probleme mit Links zu Anleitungsdokumenten.
  
-  Nachdem Sie die Liste der Probleme überprüft haben, beheben Sie alle gemeldeten Probleme, und geben Sie das aktualisierte App-Paket per E-Mail frei, damit das Validierungsteam Ihre App gründlich erneut überprüft. Wenn Sie Abfragen im Zusammenhang mit den gemeldeten Problemen haben, wenden Sie sich unter [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) an das Validierungsteam.
+  Nachdem Sie die Liste der Probleme überprüft haben, beheben Sie alle gemeldeten Probleme, und geben Sie das aktualisierte App-Paket per E-Mail frei, damit das Validierungsteam Ihre App erneut gründlich überprüft. Wenn Sie Abfragen im Zusammenhang mit den gemeldeten Problemen haben, wenden Sie sich unter [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) an das Validierungsteam.
 
-  Wenn in Ihrer App Probleme verbleiben oder Regressionsprobleme auftreten, gibt das Validierungsteam einen aktualisierten Validierungsbericht für Sie frei. Wenn Ihre App Blocker hatte, werden möglicherweise neue Probleme gemeldet, wenn Ihre App überprüft wird, nachdem die Blocker behoben wurden. Manchmal hat das Überprüfungsteam auch Regressionsprobleme in Apps nach der Bereitstellung von Fixes bemerkt. Es dauert einige erneute Übermittlungen, um alle Probleme für eine App zu schließen, die aus Fehlern besteht, und die Genehmigung für die Veröffentlichung im Teams Store zu erhalten.
+  Wenn in Ihrer App weiterhin Probleme oder Regressionsprobleme auftreten, erhalten Sie einen aktualisierten Validierungsbericht vom Validierungsteam. Wenn Ihre App Blocker aufwies, werden möglicherweise neue Probleme gemeldet, wenn Ihre App überprüft wird, nachdem die Blocker behoben wurden. Manchmal hat das Validierungsteam auch Regressionsprobleme in Apps nach der Bereitstellung von Fehlerbehebungen bemerkt. Es bedarf einiger erneuter Übermittlungen, um alle Probleme für eine App zu abzuschließen, die Fehlern beinhaltet, und die Genehmigung für die Veröffentlichung im Teams Store zu erhalten.
 
-  Nachdem alle gemeldeten Probleme geschlossen wurden und die endgültige Übermittlung im Partner Center erfolgt ist, genehmigt und veröffentlicht das Validierungsteam Ihre App. Lassen Sie zu, dass die App mindestens einen Arbeitstag im Teams Store verfügbar ist.
+  Nachdem alle gemeldeten Probleme abgeschlossen wurden und die endgültige Übermittlung im Partner Center erfolgt ist, genehmigt und veröffentlicht das Validierungsteam Ihre App. Es dauert mindestens einen Arbeitstag bis die App im Teams Store verfügbar ist.
 
-## <a name="tips-for-rapid-approval-to-publish-your-app"></a>Tipps zur schnellen Genehmigung der Veröffentlichung Ihrer App
+## <a name="tips-for-rapid-approval-to-publish-your-app"></a>Tipps für eine schnelle Genehmigung zum Veröffentlichen Ihrer App
 
 * **Während der Entwurfsphase**
 
-  Überprüfen Sie die [Richtlinien für die Store-Validierung](prepare/teams-store-validation-guidelines.md) frühzeitig im Lebenszyklus Ihrer App (Entwurfsphase), um sicherzustellen, dass Sie Ihre App entsprechend den Store-Anforderungen erstellen. Wenn Sie Ihre App gemäß diesen Richtlinien erstellen, werden dadurch aufgrund der Nichteinhaltung von Store-Richtlinien keine Überarbeitungen ausgeführt.
+  Lesen Sie die [Store-Validierungsrichtlinien](prepare/teams-store-validation-guidelines.md) früh im Lebenszyklus Ihrer App (Entwurfsphase), um sicherzustellen, dass Sie Ihre App in Übereinstimmung mit den Store-Anforderungen erstellen. Wenn Sie Ihre App gemäß diesen Richtlinien erstellen, werden dadurch jegliche Überarbeitungen aufgrund der Nichteinhaltung von Store-Richtlinien verhindert.
 
 * **Vor der App-Übermittlung**
 
-  1. [Erstellen Sie Ihr Partner Center-Konto](prepare/create-partner-center-dev-account.md) bereits im Voraus. Wenn Sie probleme mit Ihrem [Partner Center-Konto](prepare/create-partner-center-dev-account.md) haben, erstellen Sie ein [Supportticket](/azure/marketplace/partner-center-portal/support).
+  1. [Erstellen Sie Ihr Partner Center-Konto](prepare/create-partner-center-dev-account.md) weit im Voraus. Wenn Sie Probleme mit Ihrem [Partner Center-Konto](prepare/create-partner-center-dev-account.md) haben, erstellen Sie ein [Supportticket](/azure/marketplace/partner-center-portal/support).
 
-  1. Überprüfen Sie erneut die Richtlinien für die [Store-Validierung](prepare/teams-store-validation-guidelines.md) , um sicherzustellen, dass Ihre App den Store-Anforderungen entspricht. Dies trägt dazu bei, die Anzahl der in Ihrer App festgestellten Probleme zu verringern und folglich die Zeit für die Genehmigung Ihrer App zu reduzieren.
+  1. Überprüfen Sie die [Store-Validierungsrichtlinien](prepare/teams-store-validation-guidelines.md) erneut, um sicherzustellen, dass Ihre App den Store-Anforderungen entspricht. Dies trägt dazu bei, die Anzahl der in Ihrer App festgestellten Probleme, und somit die Zeit zu reduzieren, die für die Genehmigung Ihrer App benötigt wird.
 
   1. Testen und erneutes Testen Ihrer App:
 
-     1. Überprüfen Sie Ihr App-Paket mithilfe des Teams [Entwicklerportals](https://dev.teams.microsoft.com/home), um Paketfehler zu identifizieren und zu beheben.
+     1. Überprüfen Sie Ihr App-Paket mithilfe des Teams- [Entwicklerportals](https://dev.teams.microsoft.com/home), um Paketfehler zu identifizieren und zu beheben.
 
-        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Speicherüberprüfung":::
+        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Store-Validierung":::
  
-     1. Testen Sie Ihre App sorgfältig vor der App-Übermittlung, um sicherzustellen, dass sie den Store-Richtlinien entspricht. Laden Sie die App in Teams quer, und testen Sie die End-to-End-Benutzerabläufe für Ihre App. Stellen Sie sicher, dass die Funktionalität wie erwartet funktioniert, Links nicht beschädigt sind, die Benutzeroberfläche nicht blockiert wird und alle Einschränkungen deutlich hervorgehoben sind.
+     1. Testen Sie Ihre App vor der App-Übermittlung gründlich, um sicherzustellen, dass sie den Store-Richtlinien entspricht. Laden Sie die App in Teams quer, und testen Sie die End-to-End-Benutzerflows für Ihre App. Stellen Sie sicher, dass die Funktionalität wie erwartet funktioniert, Links nicht beschädigt sind, die Benutzererfahrung nicht blockiert wird und alle Einschränkungen deutlich hervorgehoben sind.
 
-     1. Testen Sie Ihre App auf Desktop-, Web- und mobilen Clients. Stellen Sie sicher, dass die App über verschiedene Formfaktoren hinweg reaktionsfähig ist.
+     1. Testen Sie Ihre App auf Desktop-, Web- und mobilen Clients. Stellen Sie sicher, dass die App über verschiedene Formfaktoren hinweg reagiert.
 
-  1. Führen Sie die [Herausgeberüberprüfung](/azure/active-directory/develop/publisher-verification-overview) aus, bevor Sie Ihre App übermitteln. Wenn Probleme auftreten, können Sie ein [Supportticket](/azure/marketplace/partner-center-portal/support) für die Lösung erstellen.
+  1. Führen Sie die [Herausgeberüberprüfung](/azure/active-directory/develop/publisher-verification-overview) aus, bevor Sie Ihre App übermitteln. Wenn Probleme auftreten, können Sie ein [Supportticket](/azure/marketplace/partner-center-portal/support) zur Behebung erstellen.
 
-  1. Befolgen Sie bei der Vorbereitung der App-Übermittlung [die Checkliste](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist) , und fügen Sie die folgenden Details als Teil Ihres Übermittlungspakets ein:
+  1. Während Sie sich auf die App-Übermittlung vorbereiten, befolgen Sie [die Checkliste](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist) und schließen Sie die folgenden Details als Teil Ihres Übermittlungspakets ein:
 
       1. Sorgfältig überprüftes App-Paket.
 
-      1. Benutzeranmeldeinformationen für Arbeitsadministratoren und Benutzer, die keine Administratoren sind, um Ihre App-Funktionalität zu testen (wenn Ihre App ein Premiumabonnementmodell bietet).
+      1. Die Anmeldeinformationen von Administratoren und Benutzern ohne Administratorrechte zum Testen Ihrer App-Funktionalität (wenn Ihre App ein Premium-Abonnementmodell bietet).
 
-      1. Testanweisungen, die die App-Funktionalität und die unterstützten Szenarien detailliert beschreiben.
+      1. Testanweisungen mit Details zur App-Funktionalität und unterstützten Szenarien.
 
-      1. Einrichtungsanweisungen, wenn ihre App eine zusätzliche Konfiguration für den Zugriff auf app-Funktionen erfordert. Wenn Ihre App eine komplexe Konfiguration erfordert, können Sie alternativ auch einen [bereitgestellten Demomandanten](/office/developer-program/microsoft-365-developer-program-get-started) mit Administratorzugriff bereitstellen, damit unsere Validierer die Konfigurationsschritte überspringen können.
+      1. Einrichtungsanweisungen, wenn Ihre App eine zusätzliche Konfiguration für den Zugriff auf die App-Funktionalität erfordert. Wenn Ihre App eine komplexe Konfiguration erfordert, können Sie alternativ auch einen [bereitgestellten Demomandanten](/office/developer-program/microsoft-365-developer-program-get-started) mit Administratorzugriff bereitstellen, damit unsere Validierungssteuerelemente die Konfigurationsschritte überspringen können.
 
-      1. Link zu einem Demo-Video-Aufzeichnungsschlüssel-Benutzerablauf für Ihre App. Dies wird dringend empfohlen.
+      1. Link zu einem Demovideo zum Aufzeichnen des Schlüsselbenutzerflows für Ihre App. Dies wird dringend empfohlen.
 
-* **Posten der App-Übermittlung**
+* **Nach der App-Übermittlung**
 
-  * Nachdem Sie den Überprüfungsbericht überprüft haben, antworten Sie mit allen Abfragen im Zusammenhang mit dem Überprüfungsbericht auf den E-Mail-Thread, oder wenn Sie zusätzliche Unterstützung benötigen, um die gemeldeten Probleme zu beheben.
+  * Nachdem Sie den Validierungsbericht überprüft haben, beantworten Sie den E-Mail-Thread mit allen Abfragen im Zusammenhang mit dem Validierungsbericht, oder wenn Sie zusätzliche Unterstützung benötigen, um die gemeldeten Probleme zu beheben.
 
-  * Stellen Sie sicher, dass Sie über eine ausreichende Entwicklerbandbreite verfügen, um alle gemeldeten Probleme zu beheben, bis die App genehmigt wurde.
+  * Stellen Sie sicher, dass Sie über eine ausreichende Entwicklerbandbreite verfügen, um gemeldete Probleme zu beheben, bis die App genehmigt wird.
 
-  * Stellen Sie sicher, dass Sie [alle Probleme behoben](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) haben, die ihnen vom Service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) gemeldet wurden, bevor Sie Ihr App-Paket für weitere Tests freigeben. Dies reduziert die Anzahl der Iterationen, die zum Überprüfen Ihrer App erforderlich sind, und folglich die Zeit für die Genehmigung Ihrer App.
+  * Stellen Sie sicher, dass Sie [alle Probleme behoben haben](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues), die vom Concierge-Dienst [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) gemeldet wurden, bevor Sie Ihr App-Paket für weitere Tests freigeben. Dies trägt dazu bei, die Anzahl der Iterationen zu reduzieren, die zum Überprüfen Ihrer App erforderlich sind, und somit die Zeit, die zum Genehmigen Ihrer App benötigt wird.
   
-  * Vermeiden Sie es, die App-Funktionalität während des Überprüfungsprozesses zu ändern. Dies kann zur Ermittlung neuer Probleme führen und die Zeit für die Genehmigung Ihrer App erhöhen.
+  * Vermeiden Sie das Ändern der App-Funktionalität während des Überprüfungsprozesses. Dies kann zur Ermittlung neuer Probleme führen und die Zeit verlängern, die zum Genehmigen Ihrer App benötigt wird.
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Veröffentlichen in Microsoft 365 App Stores](/office/dev/store/)
+* [Veröffentlichung in Microsoft 365 App Stores](/office/dev/store/)
 * [Hochladen Ihrer Teams-App](~/concepts/deploy-and-publish/apps-upload.md)
 * [Veröffentlichen Ihrer Teams-App in Ihrer Organisation](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
-* [Planen der Onboarding-Erfahrung für Benutzer](../../design/understand-use-cases.md#plan-the-onboarding-experience)
-* [Verteilen von Registerkarten-Apps auf mobilgeräten](../../../tabs/design/tabs-mobile.md#distribution)
+* [Planen der Onboardingerfahrung für Benutzer](../../design/understand-use-cases.md#plan-the-onboarding-experience)
+* [Bereitstellen von Tablet-Apps auf mobilen Geräten](../../../tabs/design/tabs-mobile.md#distribution)
 * [Testvorschau für monetarisierte Apps](prepare/Test-preview-for-monetized-apps.md)
