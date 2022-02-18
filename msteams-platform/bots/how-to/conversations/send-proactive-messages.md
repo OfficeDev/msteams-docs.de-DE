@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: 'Nachricht senden: Kanal-ID der Benutzer-ID abrufen: Konversations-ID'
-ms.openlocfilehash: fc08e9413925f04a0f6e1a01ed7feb6fccd5e8d2
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 15d564af900e0b13024d051ef4711025c4b16060
+ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059772"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62896327"
 ---
 # <a name="proactive-messages"></a>Proaktive Nachrichten
 
@@ -104,9 +104,6 @@ Wenn Sie proaktives Messaging verwenden, um geplante Nachrichten an Benutzer zu 
 * Was der Benutzer als Nächstes tun kann: Benutzer können die erforderliche Aktion basierend auf dem Nachrichteninhalt ausführen.
 
 ## <a name="proactively-install-your-app-using-graph"></a>Proaktives Installieren Ihrer App mit Graph
-
-> [!Note]
-> Die proaktive Installation von Apps mit Graph befindet sich derzeit in der Betaphase.
 
 Proaktive Nachricht an Benutzer senden, die Ihre App zuvor nicht installiert oder mit Ihr interagiert haben. Sie sollten beispielsweise den [Unternehmens-Communicator](~/samples/app-templates.md#company-communicator) verwenden, um Nachrichten an Ihre gesamte Organisation zu senden. In diesem Fall können Sie die Graph-API verwenden, um Ihre App proaktiv für Ihre Benutzer zu installieren. Speichern Sie die erforderlichen Werte aus dem `conversationUpdate` Ereignis zwischen, das Ihre App bei der Installation empfängt.
 
@@ -259,9 +256,6 @@ Sie müssen die Benutzer-ID und die Mandanten-ID angeben. Wenn der Aufruf erfolg
 ```
 
 ---
-
-> [!NOTE]
-> Derzeit können Bots keinen Gruppenchat über Bot-APIs oder Graph erstellen. `createConversation` ist nur für 1:1-Chats verfügbar.
 
 ## <a name="code-sample"></a>Codebeispiel
 
