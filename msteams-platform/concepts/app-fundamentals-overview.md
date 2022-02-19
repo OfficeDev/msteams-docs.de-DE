@@ -1,52 +1,107 @@
 ---
-title: Übersicht über die Grundlagen der App-Entwicklung
+title: Planen der App-Übersicht
 author: heath-hamilton
-description: Beschreiben Sie die grundlegenden Konzepte der Teams Plattformentwicklung, z. B. App-Funktionen und Einstiegspunkte, das Verständnis von Anwendungsfällen und deren Zuordnung zu App-Funktionen sowie die Planung von Apps.
+description: Einführung in die Elemente der Planung einer App, des Verständnisses von Anwendungsfällen, App-Funktionen und anderer Teams-Funktionen.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
-keywords: Erweiterbarkeit von Einstiegspunkten – Anwendungsfälle – Gerätefunktion
-ms.openlocfilehash: fcb5da4fd7feac225b67341d6fe22187dd30a713
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
-ms.translationtype: MT
+keywords: 'Einstiegspunkte: Erweiterbarkeit – Anwendungsfälle – Gerätefunktion'
+ms.openlocfilehash: 904b2b0ccf9ed815cbe750514818289b86a2f58b
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948425"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62898052"
 ---
-# <a name="microsoft-teams-app-development-fundamentals"></a>Grundlagen der Microsoft Teams App-Entwicklung
+# <a name="plan-your-app-with-teams-features"></a>Planen Ihrer App mit Teams-Features
 
-Microsoft Teams App-Grundlagen geben Die Richtung, die Sie zum Erstellen Ihrer benutzerdefinierten Teams-App benötigen. Sie können das für die Planung Ihrer Teams-App erforderliche Framework erkennen. Das Dokument hilft Ihnen, die Kommunikation zwischen Benutzern und Apps zu verstehen und herauszufinden, welche Art von App-Oberflächen Sie verwenden müssen oder welche APIs Ihre App möglicherweise im Prozess benötigt. Lassen Sie sich von der Interaktivität inspirieren, die die App-Erfahrung bei der Integration in Teams vertiefen kann.
+Beim Erstellen einer großartigen Teams-App geht es darum, die richtige Kombination von Features zu finden, um die Anforderungen Ihrer Benutzer zu erfüllen. Das Design, die Features und die Funktionen einer App ergeben sich aus diesem Zweck.
 
-## <a name="capabilities-and-entry-points"></a>Funktionen und Einstiegspunkte
+Im Kern ist Teams eine Plattform für die Zusammenarbeit. Es ist auch eine soziale Plattform, ist von Haus aus plattformübergreifend, bildet das Herzstück von Office 365 und bietet Ihnen einen persönlichen Arbeitsbereich für die Erstellung von Anwendungen.
 
-Sie können Ihre Teams-App auf mehrere Arten erweitern. Um Ihre App erweitern zu können, müssen Sie alle Kernfunktionen und Einstiegspunkte verstehen, die in einem Gemeinsamen Raum funktionieren. Sie können mit den Erweiterungspunkten für die Erstellung Ihrer Apps experimentieren. Wichtige App-Projektkomponenten helfen Ihnen, Ihre App-Seite ordnungsgemäß zu konfigurieren. Teams App kann [über mehrere Funktionen](../concepts/capabilities-overview.md) und [Einstiegspunkte verfügen.](../concepts/extensibility-points.md)
+In diesem Abschnitt erfahren Sie, wie Sie:
 
-## <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
+ - Identifizieren und Zuordnen von Anwendungsfällen zu Teams-Features.
+ - Planungscheckliste verwenden.
+ - Planen Sie über die App-Bereitstellung hinaus.
 
-Sie können Benutzerprobleme erkennen und die Antworten auf einige häufige Probleme identifizieren, mit denen die Benutzer konfrontiert sind. Sie können Ihre Teams-App erstellen, indem Sie die richtige Kombination finden, um die Anforderungen Ihrer Benutzer zu erfüllen. [Verstehen von Anwendungsfällen,](../concepts/design/understand-use-cases.md) um zu wissen, wie ein Endbenutzer mit Ihrer App interagiert. Sie lernen, den Benutzer und sein Problem zu verstehen. Einige häufig beantwortete Fragen sind:
+## <a name="plan-with-teams"></a>Planen mit Teams
 
-* Benötigen Sie Authentifizierung?
-* Welches Problem wird Ihre App lösen?
-* Wer sind die Endbenutzer der App?
-* Wie sollte die Onboarding-Erfahrung sein und was die App sonst noch tun kann?
+Teams als Plattform bietet Ihnen Toolkits, Bibliotheken und Apps in jeder Phase der App-Entwicklung. Schauen wir uns den Lebenszyklus der App-Entwicklung an:
 
-## <a name="map-your-use-cases-to-teams-app-capabilities"></a>Zuordnen von Anwendungsfällen zu Teams App-Funktionen
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Abbildung zeigt die Planung Ihrer App" border="true":::
 
-[Die Zuordnung Ihrer Anwendungsfälle](../concepts/design/map-use-cases.md) deckt einige häufige Szenarien und die Auswahl der Funktionen Ihrer App ab. Es werden Informationen bereitgestellt, um Ihre App freizugeben und an Elementen in einem externen System zusammenzuarbeiten. Sie können auch erfahren, wie Sie Workflows initiieren und Benachrichtigungen an Benutzer senden. Erhalten Sie zusätzliche Tipps, wie Sie beginnen, wie Sie soziale Netzwerke mit Benutzern, Unterhaltungsbots und die Kombination mehrerer Features erhalten.
+- [Vor dem Erstellen](#before-you-build)
+- [Während der Erstellung](#during-build)
+- [Nach der Erstellung](#post-build)
+- [Planungscheckliste](../concepts/design/planning-checklist.md)
 
-## <a name="plan-responsive-tabs-for-teams-mobile"></a>Planen reaktionsfähiger Registerkarten für Teams Mobile
-[Die Planung reaktionsfähiger Registerkarten für Teams Mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) deckt gängige Szenarien ab und hilft bei der Planung von Apps für Teams Mobilgeräte. In diesem Dokument wird erläutert, wie Sie die Strategie für Apps auf Mobilgeräten festlegen. Sie können sich auch über die verschiedenen Sättigungen und verschiedene Arten von Teams-App informieren.
+### <a name="before-you-build"></a>Vor dem Erstellen
 
-## <a name="integrate-device-capabilities"></a>Integrieren von Gerätefunktionen
+Das Verstehen des Nutzers und seines Anliegens sind die ersten Indikatoren dafür, wie eine Teams-App helfen kann. Stellen Sie Ihren Anwendungsfall um das Problem herum auf, bestimmen Sie, wie eine App dieses Problem lösen kann, und entwerfen Sie eine Lösung.
 
-Microsoft Teams Plattform verbessert kontinuierlich die Entwicklerfunktionen, die sich an den integrierten Erfahrungen von Erstanbietern orientieren. Die erweiterte Teams-Plattform ermöglicht Partnern den Zugriff auf und die Integration der systemeigenen Gerätefunktionen wie Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort mithilfe dedizierter APIs, die in Microsoft Teams JavaScript-Client-SDK verfügbar sind.
+- **Verstehen Ihres Anwendungsfalls und der Teams-App-Features**: Verstehen Sie die Anforderungen Ihres Benutzers, und Sie können die richtigen Features identifizieren.
+
+- **Ihre Anwendungsfälle zuordnen**: Ordnen Sie gängige Anwendungsfälle Teams-Features basierend auf Anforderungen zu, z. B. Freigabe, Zusammenarbeit, Workflows, relevante soziale Plattformen und mehr.
+
+- **Planen von reaktionsfähigen Registerkarten für Teams Mobile**: Es behandelt gängige Szenarien und hilft bei der Planung von Apps für Teams Mobile.
+
+### <a name="during-build"></a>Während der Erstellung
+
+- **Entwickeln und Erstellen eines App-Projekts**: Mit Teams können Sie die Build-Umgebung auswählen, die Ihren App-Anforderungen am besten entspricht. Verwenden Sie das Teams-Toolkit oder andere SDKs wie C#, Blazor, Node.js und vieles mehr, um loszulegen.
+
+- **Entwerfen der App-Benutzeroberfläche**: Verwenden Sie Teams UI Toolkit und UI Library, um das Layout Ihrer App zu entwerfen.
+
+- **Verwenden von Teams als Plattform**: Die Teams-Plattform unterstützt Sie beim Erstellen einer Einzel- oder Mehrfunktions-App. Ihre Teams-App basiert auf den integrierten Produkten und Diensten, die das App-Erlebnis verbessern.
+
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Konzeptionelle Darstellung der Teams-Lösung." border="true":::
+
+    Ihre Apps werden in Teams als Tabs, Bots, Messaging Extensions, Connectors und Webhooks oder als App mit mehreren Funktionen angezeigt. Diese Funktionen werden im Hintergrund von Azure, Microsoft Graph, SharePoint und Power Apps unterstützt, mit denen Aufgaben und Prozesse automatisiert werden können.
+
+    Zusammen erwecken diese Funktionen Ihre App-Lösung zum Leben.
+
+- **Integrieren von Gerätefunktionen**: Sie können die nativen Gerätefunktionen in Ihre App integrieren, z. B. Kamera, QR- oder Barcodescanner, Fotogalerie, Mikrofon und Standort.
+
+### <a name="post-build"></a>Nach der Erstellung
+
+- Integrieren Sie Ihre App in Teams und andere Apps, z. B. Microsoft 365, Microsoft Graph und vieles mehr.
+- Verwenden Sie das Developer Portal zur Konfiguration, Verwaltung und Bereitstellung Ihrer Anwendung.
+
+<details>
+<summary><b>Erfahren Sie mehr über Government Community Cloud (GCC)</b></summary>
+
+Government Community Cloud ist eine auf Behörden ausgerichtete Kopie der kommerziellen Umgebung. Das Verteidigungsministerium (Department of Defense, DOD) und Auftragnehmer des Bundes müssen die strengen Anforderungen an Cybersicherheit und Compliance erfüllen. Zu diesem Zweck wurde GCC-High erstellt, um die Anforderungen von DOD und Bundesauftragnehmern zu erfüllen. GCC-High ist eine Kopie der DOD-Cloud, existiert aber in einer eigenen souveränen Umgebung. Die DOD-Cloud wurde nur für das Verteidigungsministerium entwickelt.
+
+Die folgende Tabelle enthält Teams-Features und -Verfügbarkeit für GCC, GCC-High und DOD:
+
+| Features   | GCC | GCC – hoch | DOD |
+|-------------|---------|---|---|
+| Apps im Besitz von Teams wie bei intern entwickelten Apps | ✔️ Die App ist aktiviert, wenn sie über GCC verfügt. | ✔️ Die App ist aktiviert, wenn sie über GCC-High verfügt. | ✔️ Die App ist aktiviert, wenn sie über DOD verfügt. |
+| Microsoft-Apps | ✔️ Mit GCC kompatible Microsoft-Apps | ✔️ Mit GCC-High kompatible Microsoft-Apps | ✔️ Microsoft-Apps, die mit DOD kompatibel sind |
+| 3P- oder Drittanbieter-Apps | ✔️ Drittanbieter-Apps sind verfügbar. Standardmäßig deaktiviert, und es liegt im Ermessen des Mandantenadministrators, es zu aktivieren. | ❌ | ❌ |
+| Bots | ✔️ | ❌ | ❌ |
+| Benutzerdefinierte oder Branchenregisterkarten-Apps |  ✔️ | ✔️ | ✔️ |
+| Sideloading von Apps | ✔️ | ❌ | ❌ |
+| Benutzerdefinierte oder branchenspezifische Bots | ✔️ | ❌ | ❌ |
+| Benutzerdefinierte Messagingerweiterungen | ❌ | ❌ | ❌ |
+| Benutzerdefinierte Connectors | ❌ | ❌ | ❌ |
+
+Mithilfe der folgenden Liste können Sie die Verfügbarkeit von GCC, GCC-High und DOD für die Features ermitteln:
+
+- Informationen zu Drittanbieter-Apps finden Sie unter [Web-Apps](../samples/integrating-web-apps.md) und [Erweiterbarkeit von Besprechungs-Apps](../apps-in-teams-meetings/meeting-app-extensibility.md).
+- Informationen zu Bots finden Sie unter [Erstellen Ihres ersten Konversationsbots für Teams](../get-started/first-app-bot.md), [Entwerfen Ihres Teams-Bots](../bots/design/bots.md), [Hinzufügen von Bots zu Microsoft Teams-Apps](../resources/bot-v3/bots-overview.md)und [Bots in Teams](../bots/what-are-bots.md).
+- Informationen zum Sideloading von Apps finden Sie unter [Ermöglichen der Anpassung Ihrer Teams-App](../concepts/design/enable-app-customization.md), [Vermarkten Ihrer Microsoft Teams-App](../concepts/deploy-and-publish/apps-publish-overview.md)und [Hochladen Ihrer App in Teams](../concepts/deploy-and-publish/apps-upload.md).
+- Informationen zu benutzerdefinierten Connectors finden Sie unter [Erstellen von Office 365-Connectors für Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
+
+</details>
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Grundlegendes zu Teams App-Funktionen](capabilities-overview.md)
+> [Anwendungsfälle und Teams-Features](design/understand-use-cases.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Überlegungen zur Teams Integration](../samples/integrating-web-apps.md)
-* [Erstellen Ihrer ersten Microsoft Teams-App](../build-your-first-app/build-first-app-overview.md)
+- [Planungscheckliste](../concepts/design/planning-checklist.md)
+- [Überlegungen zur Microsoft Teams-Integration](../samples/integrating-web-apps.md)
+- [Erstellen Ihrer ersten Microsoft Teams-App](../build-your-first-app/build-first-app-overview.md)
