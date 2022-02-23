@@ -1,79 +1,163 @@
 ---
-title: Grundlegendes zu App-Funktionen
+title: Grundlegendes zu App-Features
 author: heath-hamilton
-description: Beschreibung Teams App-Funktionen, z. B. Registerkarten, Bots, Messaging-Erweiterungen und Webhooks und Connectors.
+description: Beschreibung der Funktionen von Teams-Apps, z. B. Registerkarten, Bots, Messagingerweiterungen und Webhooks und Connectors; App-Bereich, z. B. persönliche und freigegebene Apps
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 09/22/2020
-keywords: tabs bots messaging extensions webhooks connectors gcc
-ms.openlocfilehash: 9b60556fce448eeecb1f3b96460ea53c8abd5be5
-ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
-ms.translationtype: MT
+keywords: Registerkarten Bots Messaging-Erweiterungen Webhooks Connectors
+ms.openlocfilehash: 53ee8ffb0fdf51b5c4069cc79ff7022dbc46777d
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "61246078"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62897970"
 ---
-# <a name="understand-microsoft-teams-app-capabilities"></a>Grundlegendes zu Microsoft Teams App-Funktionen
+# <a name="understand-microsoft-teams-app-features"></a>Grundlegendes zu Microsoft Teams-App-Features
 
-Erweiterbarkeit oder Einstiegspunkte sind unterschiedliche Möglichkeiten, wie sich eine App für einen Benutzer manifestieren kann. Beispielsweise kann ein Benutzer mit einer App auf einer Canvas-Registerkarte interagieren, um eine Aktivität zu machen, oder er kann sich dafür entscheiden, dies mithilfe eines Unterhaltungs-Bots zu tun. Die verschiedenen Funktionen, die zum Erstellen Ihrer Teams App verwendet werden, ermöglichen es Ihnen, den Nutzungsbereich zu erhöhen.
+Es gibt mehrere Möglichkeiten, Teams zu erweitern, sodass jede App einzigartig ist. Eine Teams-App kann sich für einen Benutzer auf unterschiedliche Weise bemerkbar machen. Zu den Features einer Teams-App gehören:
 
-Es gibt mehrere Möglichkeiten, Teams zu erweitern, sodass jede App einzigartig ist. Einige verfügen nur über eine Funktion, z. B. einen Webhook, während andere über mehrere Funktionen verfügen, um Benutzern verschiedene Optionen zu bieten. Ihre App kann beispielsweise Daten an einem zentralen Ort anzeigen, d. h. auf der **Registerkarte** und diese Informationen über eine Unterhaltungsschnittstelle, d. h. den **Bot,** darstellen.
+- App-Funktionen
+- App-Bereich
+
+Beispielsweise kann ein Benutzer mit einer App auf einer Canvas-Registerkarte interagieren, um eine Aktivität auszuführen, oder er kann sich dafür entscheiden, dies mithilfe eines Konversationsbots zu tun. Sie können nur eine Funktion verwenden, z. B. einen Webhook, während andere über mehrere Funktionen verfügen, um Benutzern verschiedene Optionen zu bieten.
+
+Diese Funktionen können in verschiedenen Bereichen vorhanden sein. Ihre App kann z. B. Daten an einem zentralen freigegebenen Ort anzeigen, d. h. auf der Registerkarte, und dieselben Informationen über eine persönliche Konversationsschnittstelle, d. h. den Bot, darstellen.
 
 ## <a name="app-capabilities"></a>App-Funktionen
 
+Um Ihre App erweitern zu können, müssen Sie alle Kernfunktionen und Einstiegspunkte verstehen, die in einem Gemeinsamen Bereich funktionieren. Sie können mit den Erweiterungspunkten zum Erstellen Ihrer Apps experimentieren. Wichtige App-Projektkomponenten helfen Ihnen, Ihre App-Seite ordnungsgemäß zu konfigurieren.
+
 Ihre Teams-Apps verfügen über eine oder alle der folgenden Kernfunktionen:
 
-* [Registerkarten](../tabs/what-are-tabs.md)
-* [Messaging-Erweiterungen](../messaging-extensions/what-are-messaging-extensions.md)
-* [Bots](../bots/what-are-bots.md)
-* [Webhooks und Connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+:::row:::
+   :::column span="":::
+### <a name="personal-apps"></a>Persönliche Apps
 
-Ihre App kann auch erweiterte Funktionen nutzen, z. B. die [Microsoft Graph-API für Teams.](/graph/teams-concept-overview)
+Eine [persönliche App](../concepts/design/personal-apps.md) ist ein dedizierter Bereich oder Bot, der Nutzern hilft, sich auf ihre eigenen Aufgaben zu konzentrieren oder für sie wichtige Aktivitäten anzuzeigen.
 
-Die folgende Abbildung gibt Ihnen eine Vorstellung davon, welche Funktionen die gewünschten Features in Ihrer App bereitstellen:
+   :::column-end:::
 
-:::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Mind map illustrating what Teams app capabilities are.":::
+   :::column span="":::
 
-## <a name="always-consider-your-user"></a>Berücksichtigen Sie immer Ihren Benutzer
+:::image type="content" source="../assets/images/overview-personal-apps-2021.png" alt-text="Konzeptionelle Darstellung, wie persönliche Apps im Teams-Client aussehen." border="false":::
 
-Wenn Sie sich mit Teams App-Entwicklung vertraut machen, verstehen Sie die grundlegenden Grundlagen. Sie wissen, dass es mehrere Möglichkeiten gibt, bestimmte Features zu erstellen. Überlegen Sie in solchen Szenarien, wie Sie Ihren Benutzern eine nativeere Benutzeroberfläche bieten können.
-Sie können beispielsweise Benutzereingaben in einem Formular sammeln, das als Registerkarte in der App erstellt wurde. Sie können dies auch mithilfe eines Aufgabenmoduls tun, ohne die Ansichten zu wechseln und den Workflow des Benutzers zu unterbrechen. Es ist wichtig, Erweiterungspunkte auszuwählen, die die geringste Abweichung vom regulären Workflow eines Benutzers bereitstellen.
+   :::column-end:::
 
-## <a name="government-community-cloud-gcc"></a>Government Community Cloud (GCC)
+:::row-end:::
 
-Government Community Cloud ist eine Auf Regierung ausgerichtete Kopie der kommerziellen Umgebung. Das Verteidigungsministerium (Department of Defense, DOD) und Die Auftragnehmer des Bundes müssen die strengen Anforderungen an Cybersicherheit und Compliance erfüllen. Zu diesem Zweck wurde GCC-High erstellt, um die Anforderungen von DOD und Bundesauftragnehmern zu erfüllen. GCC-High ist eine Kopie der DOD-Cloud, aber in einer eigenen unabhängigen Umgebung vorhanden. Die DOD-Cloud wurde nur für das Verteidigungsministerium erstellt.
+:::row:::
+   :::column span="":::
+
+### <a name="tabs"></a>Registerkarten
+
+Zeigen Sie Ihre webbasierten Inhalte auf einer [Registerkarte](../tabs/what-are-tabs.md) an, auf der Personen darüber diskutieren und gemeinsam daran arbeiten können.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../assets/images/overview-channel-chat-apps-2021.png" alt-text="Konzeptionelle Darstellung, wie Registerkarten im Teams-Client aussehen." border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+### <a name="bots"></a>Bots
+
+Unterhaltungen führen häufig dazu, etwas tun müssen (eine Bestellung generieren, meinen Code überprüfen, den Ticketstatus überprüfen usw.). Ein [Bot](../bots/what-are-bots.md) kann diese Arten von Workflows direkt in Teams starten.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../assets/images/overview-bots-2021.png" alt-text="Konzeptionelle Darstellung, wie Bots im Teams-Client aussehen." border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+### <a name="messaging-extensions"></a>Messaging-Erweiterungen
+
+Mit [Messagingerweiterungen](../messaging-extensions/what-are-messaging-extensions.md)können Sie schnell externe Informationen in einer Unterhaltung freigeben. Sie können auch auf eine Nachricht reagieren, z. B. durch das Erstellen eines Hilfetickets basierend auf dem Inhalt eines Kanalbeitrags.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../assets/images/overview-messaging-extensions-2021.png" alt-text="Konzeptionelle Darstellung, wie Messaging-Erweiterungen im Teams-Client aussehen." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+### <a name="meeting-extensions"></a>Besprechungserweiterungen
+
+Es gibt einige Möglichkeiten,[Ihre App in die Teams-Anrufe einzubinden](../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../assets/images/overview-meeting-extensions-2021.png" alt-text="Konzeptionelle Darstellung, wie Besprechungserweiterungen im Teams-Client aussehen." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+### <a name="webhooks-and-connectors"></a>Webhooks und Connectors
+
+[Eingehende Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sind eine einfache Möglichkeit, automatisch Benachrichtigungen von einer anderen App an einen Teams-Kanal zu senden. Mit [ausgehenden Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks) senden Sie eine Nachricht mit einem @mention an Ihren Webdienst.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../assets/images/overview-connectors.png" alt-text="Konzeptionelle Darstellung, wie Connectors im Teams-Client aussehen." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+### <a name="microsoft-graph-for-teams"></a>Microsoft Graph für Teams
+
+Die [Microsoft Graph-API für Teams](/graph/teams-concept-overview) bietet Zugriff auf Informationen zu Teams, Kanälen, Nutzern und Nachrichten, die Ihnen helfen können, Features für Ihre App zu erstellen oder zu verbessern (z. B. Rich Notifications).
+
+   :::column-end:::
 
 > [!NOTE]
-> Teams Store wurde weiterentwickelt:
+> Teams Store hat sich weiterentwickelt:
 > 
-> Zuvor wurden die BRANCHEN-Apps durch Auswählen der Ellipsen auf der Kachel aktualisiert. Mit der aktualisierten Teams Store-Erfahrung können Sie jetzt die branchenspezifischen Apps aktualisieren, indem Sie sich beim [Teams Admin Center](https://admin.teams.microsoft.com)anmelden.
+> Zuvor wurden die BRANCHEN-Apps durch Auswahl der Ellipsen auf der Kachel aktualisiert. Mit der aktualisierten Teams Store-Oberfläche können Sie jetzt die branchenspezifischen Apps aktualisieren, indem Sie sich beim [Teams Admin Center](https://admin.teams.microsoft.com)anmelden.
 
-Die folgende Tabelle enthält Teams Features und Verfügbarkeit für GCC, GCC-Hoch und DOD:
+:::image type="content" source="../assets/images/overview-graph.png" alt-text="Konzeptionelle Darstellung der Microsoft Graph-API für Teams." border="false":::
 
-| Features   | GCC | GCC – hoch | DOD |
-|-------------|---------|
-| Teams eigenen Apps wie in intern entwickelten Apps | ✔️ App ist aktiviert, wenn sie über GCC verfügt. | ✔️ App ist aktiviert, wenn sie über GCC-High verfügt. | ✔️ App ist aktiviert, wenn sie über DOD verfügt. |
-| Microsoft-Apps | ✔️ Microsoft-Apps, die mit GCC kompatibel sind | ✔️ Microsoft-Apps, die mit GCC-High kompatibel sind | ✔️ Microsoft-Apps, die DOD-konform sind |
-| 3p- oder Drittanbieter-Apps | ✔️ Drittanbieter-Apps sind verfügbar. Standardmäßig deaktiviert, und mandantenadministratoren verwenden ihren eigenen Ermessen, um es zu aktivieren. | ❌ | ❌ |
-| Bots | ✔️ | ❌ | ❌ |
-| Benutzerdefinierte oder Branchenregisterkarten-Apps |  ✔️ | ✔️ | ✔️ |
-| Querladen von Apps | ✔️ | ❌ | ❌ |
-| Benutzerdefinierte oder Lob-Bots | ✔️ | ❌ | ❌ |
-| Benutzerdefinierte Messaging-Erweiterungen | ❌ | ❌ | ❌ |
-| Benutzerdefinierte Connectors | ❌ | ❌ | ❌ |
+   :::column-end:::
+:::row-end:::
 
-Die folgende Liste hilft, die Verfügbarkeit von GCC, GCC-Hoch und DOD für die Features zu ermitteln:
+## <a name="choose-the-correct-scope-for-your-app"></a>Wählen Sie den richtigen Bereich für Ihre App aus.
 
-* Informationen zu Drittanbieter-Apps finden Sie unter [Web-Apps](../samples/integrating-web-apps.md) und [Besprechungs-App-Erweiterbarkeit.](../apps-in-teams-meetings/meeting-app-extensibility.md)
-* Informationen zu Bots finden Sie unter [Erstellen Ihres ersten Unterhaltungs-Bots für Teams](../get-started/first-app-bot.md), Entwerfen Ihres Teams [Bots, Hinzufügen von Bots zu Microsoft Teams Apps](../resources/bot-v3/bots-overview.md)und [Bots in Teams](../bots/what-are-bots.md). [](../bots/design/bots.md)
-* Informationen zum Querladen von Apps finden Sie unter [Aktivieren der Anpassung Ihrer Teams-App,](../concepts/design/enable-app-customization.md)Verteilen Ihrer [Microsoft Teams-App](../concepts/deploy-and-publish/apps-publish-overview.md)und [Hochladen Ihrer App in Teams.](../concepts/deploy-and-publish/apps-upload.md)
-* Benutzerdefinierte Connectors finden Sie unter [Erstellen Office 365 Connectors für Teams.](../webhooks-and-connectors/how-to/connectors-creating.md)
+Sie können den App-Bereich wie folgt auswählen:
 
-## <a name="next-step"></a>Nächster Schritt
-
-> [!div class="nextstepaction"]
-> [Microsoft Teams-App-Einstiegspunkte](../concepts/extensibility-points.md)
+- Persönliche App-Erfahrung: Eine persönliche App ist ein dedizierter Bereich oder Bot, der Nutzern hilft, sich auf ihre eigenen Aufgaben zu konzentrieren oder für sie wichtige Aktivitäten anzuzeigen.
+- Freigegebene App-Erfahrung: Team, Kanal und Chat sind Bereiche für die Zusammenarbeit. Apps in diesen Kontexten sind für alle Nutzer in diesem Bereich verfügbar. Zusammenarbeitsbereiche konzentrieren sich in der Regel auf Workflows für die Interaktionen Ihrer App oder die Erschließung neuer sozialer Interaktionen.
 
 ## <a name="see-also"></a>Siehe auch
 

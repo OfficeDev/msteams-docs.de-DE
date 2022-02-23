@@ -4,12 +4,12 @@ description: Beschreibt Deeplinks und deren Verwendung in Ihren Apps
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Deeplink für Teams
-ms.openlocfilehash: 9d9e0ff794d413be1959e8e8ddaef1086acc307d
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 624bc47887950e98e49aa834f0a040e7ee234045
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821388"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62897914"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links 
 
@@ -80,16 +80,32 @@ Die Abfrageparameter sind:
 | `entityId`&emsp; | Die ID für das Element auf der Registerkarte, die Sie beim [Konfigurieren der Registerkarte](~/tabs/how-to/create-tab-pages/configuration-page.md)angegeben haben.|Tasklist123|
 | `entityWebUrl` oder `subEntityWebUrl`&emsp; | Ein optionales Feld mit einer Fallback-URL, das verwendet werden soll, wenn der Client das Rendern der Registerkarte nicht unterstützt. | `https://tasklist.example.com/123` oder `https://tasklist.example.com/list123/task456` |
 | `entityLabel` oder `subEntityLabel`&emsp; | Eine Beschriftung für das Element auf Ihrer Registerkarte, die beim Anzeigen des Deeplinks verwendet werden soll. | Task List 123 oder Task 456 |
-| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| Ein JSON-Objekt, das die folgenden Felder enthält:</br></br> * Eine ID für das Element auf der Registerkarte. </br></br> * Die Microsoft Teams Kanal-ID, die auf der Registerkarte [Kontext](~/tabs/how-to/access-teams-context.md) verfügbar ist. | 
-| `subEntityId`&emsp; | Eine ID für das Element auf der Registerkarte. |Task456 |
-| `channelId`&emsp; | Die Microsoft Teams Kanal-ID, die auf der Registerkarte [Kontext](~/tabs/how-to/access-teams-context.md) verfügbar ist. Diese Eigenschaft ist nur in konfigurierbaren Registerkarten mit einem **Team**-Bereich verfügbar. Sie ist nicht auf statischen Registerkarten verfügbar, die über einen **persönlichen** Bereich verfügen.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `context.subEntityId`&emsp; | Eine ID für das Element auf der Registerkarte. |Task456 |
+| `context.channelId`&emsp; | Microsoft Teams-Kanal-ID, die auf der Registerkarte [Kontext](~/tabs/how-to/access-teams-context.md)verfügbar ist. Diese Eigenschaft ist nur in konfigurierbaren Registerkarten mit einem **Team**-Bereich verfügbar. Sie ist nicht auf statischen Registerkarten verfügbar, die über einen **persönlichen** Bereich verfügen.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `chatId`&emsp; | ChatId, die auf der Registerkarte [Kontext](~/tabs/how-to/access-teams-context.md) für Gruppen- und Besprechungschats verfügbar ist | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
+| `contextType`&emsp; |  Chat ist der einzige unterstützte contextType für Besprechungen. | Chat |
 
-Beispiele:
+**Beispiele**:
 
-* Link zu der jeweiligen konfigurierbaren Registerkarte: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* Link zu einem Aufgabenelement auf der konfigurierbaren Registerkarte: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* Link zu der jeweiligen statischen Registerkarte: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
-* Link zu einem Aufgabenelement auf der statischen Registerkarte: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+* Link zu einer eigentlichen statischen (persönlichen) Registerkarte:
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
+
+* Link zu einem Aufgabenelement auf der statischen (persönlichen) Registerkarte:
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+
+* Link zu der jeweiligen konfigurierbaren Registerkarte: 
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+
+* Link zu einem Aufgabenelement auf der konfigurierbaren Registerkarte: 
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+    
+* Link zu einer Registerkarten-App, die einem Besprechungs- oder Gruppenchat hinzugefügt wurde: 
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass alle Abfrageparameter ordnungsgemäß URI-codiert sind. Sie müssen den vorangehenden Beispielen mithilfe des letzten Beispiels folgen:
