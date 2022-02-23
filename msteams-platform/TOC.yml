@@ -2,11 +2,19 @@
   href: mstdd-landing.yml
 - name: Was ist neu?
   href: whats-new.md
+- name: Glossar
+  href: get-started/glossary.md
 - name: Übersicht
   expanded: false
   items:
-    - name: Apps für Microsoft Teams erstellen
+    - name: 'Eine Teams-App, die passt'
       href: overview.md
+    - name: Von Ideen zur Teams-App
+      href: overview-story.md
+    - name: Erkunden der Features der Teams-Plattform
+      href: overview-explore.md
+    - name: Die Teams-Lösung
+      href: overview-solution.md
 - name: Erste Schritte
   expanded: false
   items:
@@ -22,34 +30,18 @@
       href: sbs-gs-nodejs.yml
     - name: Codebeispiele
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
-- name: App-Grundlagen
+- name: Planen Ihrer App
   items:
     - name: Übersicht
       href: concepts/app-fundamentals-overview.md
-    - name: Microsoft Teams-App-Funktionen
-      href: concepts/capabilities-overview.md
-    - name: Microsoft Teams-App-Einstiegspunkte
-      href: concepts/extensibility-points.md
-    - name: Grundlegendes zu Ihren Anwendungsfällen
+    - name: Grundlegendes zu Ihrem Anwendungsfall
       href: concepts/design/understand-use-cases.md
-    - name: Anwendungsfälle zu Microsoft Teams-App-Funktionen zuordnen
+    - name: Zuordnen Ihres Anwendungsfalls zu Teams-Features
       href: concepts/design/map-use-cases.md
+    - name: Prüfliste für die Teams App-Planung
+      href: concepts/design/planning-checklist.md
     - name: Planen reaktionsfähiger Registerkarten für Teams Mobile
       href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
-    - name: Gerätefunktionen
-      items:
-        - name: Übersicht
-          href: concepts/device-capabilities/device-capabilities-overview.md
-        - name: Geräteberechtigungen anfordern
-          href: concepts/device-capabilities/native-device-permissions.md
-        - name: Geräteberechtigungen für den Browser
-          href: concepts/device-capabilities/browser-device-permissions.md
-        - name: Integrieren von Medienfunktionen
-          href: concepts/device-capabilities/mobile-camera-image-permissions.md
-        - name: QR- oder Barcode-Scannerfunktion integrieren
-          href: concepts/device-capabilities/qr-barcode-scanner-capability.md
-        - name: Integration von Standortfunktionen
-          href: concepts/device-capabilities/location-capability.md
 - name: Entwerfen Ihrer App
   items:
     - name: Übersicht
@@ -381,6 +373,20 @@
           href: messaging-extensions/how-to/add-authentication.md
         - name: Aktivieren von SSO für Messaging-Erweiterungen
           href: messaging-extensions/how-to/enable-SSO-auth-me.md
+- name: Integrieren von Gerätefunktionen
+  items:
+    - name: Übersicht
+      href: concepts/device-capabilities/device-capabilities-overview.md
+    - name: Geräteberechtigungen anfordern
+      href: concepts/device-capabilities/native-device-permissions.md
+    - name: Geräteberechtigungen für den Browser
+      href: concepts/device-capabilities/browser-device-permissions.md
+    - name: Integrieren von Medienfunktionen
+      href: concepts/device-capabilities/mobile-camera-image-permissions.md
+    - name: QR- oder Barcode-Scannerfunktion integrieren
+      href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+    - name: Integration von Standortfunktionen
+      href: concepts/device-capabilities/location-capability.md
 - name: Nutzung von Microsoft Teams-Daten mit Microsoft Graph
   items:
     - name: Übersicht

@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: fd7d2075d79e5c54e9257b71f8bf351fe3cd6823
-ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
+ms.openlocfilehash: 205b95e84d834d1171227d967257e72bc6dee16b
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/18/2022
-ms.locfileid: "62896320"
+ms.locfileid: "62898065"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Veröffentlichen Sie Ihre App im Microsoft Teams Store
 
@@ -95,7 +95,7 @@ Wenn Sie der Meinung sind, dass Ihre App für die Produktion bereit ist, können
 
      1. Überprüfen Sie Ihr App-Paket mithilfe des Teams- [Entwicklerportals](https://dev.teams.microsoft.com/home), um Paketfehler zu identifizieren und zu beheben.
 
-        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Store-Validierung":::
+        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Teams Store-App-Überprüfung in Entwicklerportal" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
  
      1. Testen Sie Ihre App vor der App-Übermittlung gründlich, um sicherzustellen, dass sie den Store-Richtlinien entspricht. Laden Sie die App in Teams quer, und testen Sie die End-to-End-Benutzerflows für Ihre App. Stellen Sie sicher, dass die Funktionalität wie erwartet funktioniert, Links nicht beschädigt sind, die Benutzererfahrung nicht blockiert wird und alle Einschränkungen deutlich hervorgehoben sind.
 
@@ -130,6 +130,6 @@ Wenn Sie der Meinung sind, dass Ihre App für die Produktion bereit ist, können
 * [Veröffentlichung in Microsoft 365 App Stores](/office/dev/store/)
 * [Hochladen Ihrer Teams-App](~/concepts/deploy-and-publish/apps-upload.md)
 * [Veröffentlichen Ihrer Teams-App in Ihrer Organisation](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
-* [Planen der Onboardingerfahrung für Benutzer](../../design/understand-use-cases.md#plan-the-onboarding-experience)
+* [Planen der Onboardingerfahrung für Benutzer](../../design/planning-checklist.md#plan-beyond-app-building)
 * [Bereitstellen von Tablet-Apps auf mobilen Geräten](../../../tabs/design/tabs-mobile.md#distribution)
 * [Testvorschau für monetarisierte Apps](prepare/Test-preview-for-monetized-apps.md)
