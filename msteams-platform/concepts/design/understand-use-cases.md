@@ -1,87 +1,190 @@
 ---
-title: Grundlegendes zu den Anwendungsfällen Ihrer App
+title: Grundlegendes zu Anwendungsfällen und Teams-Features Ihrer App
 author: heath-hamilton
-description: Planen Sie Ihre App, verstehen Sie Ihre Benutzer und ihre Anforderungen, verstehen Sie die Benutzerprobleme, die Ihre App lösen würde, planen Sie die Benutzerauthentifizierung und deren Onboarding-Erfahrung.
+description: Planen Sie Ihre App, verstehen Sie Ihren Nutzer und seine Anforderungen, verstehen Sie die Benutzerprobleme, die Ihre App lösen würde, planen Sie die Nutzerauthentifizierung und deren Onboarding-Erfahrung.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 93ab668a4ac317228186508eb721f1900add0de8
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
-ms.translationtype: MT
+ms.openlocfilehash: 6bd2bd7d4c9016d99ae653f9ca6889f661806a8e
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948389"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62898154"
 ---
 # <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
 
-Die Microsoft Teams-Plattform bietet eine Vielzahl von [Einstiegspunkten und UI-Elementen, die](../../concepts/extensibility-points.md) Ihre App nutzen kann.
+Im gemeinsamen sozialen Rahmen von Teams gibt es eine Vielzahl von Nutzeranforderungen, die Sie mit einer Teams-App lösen können. Zum Beispiel ist eine App, die eine Lücke in der effektiven Zusammenarbeit schließt, eine hervorragende Lösung.
+
+Der App-Benutzer und die Anforderungen an seine App sind die grundlegenden Richtlinien, die alle App-Auswahlen bestimmen, die Sie treffen werden. Das Design der App, die Auswahl der Funktionen, die Festlegung der Build- und Testumgebung und die Vermarktung der App richten sich nach den Anforderungen des Benutzers an die App.
+
+Wenn Sie die Benutzeranforderungen mit Ihrer App erfüllen sollen, müssen Sie diese zunächst verstehen.
+
+- **Grundlegendes zum Benutzer**:
+  - Erkennen sie Nutzerprobleme und identifizieren Sie die Lösungen für einige häufige Probleme, mit denen die Nutzer konfrontiert sind.
+  - Erstellen Sie Ihre Teams-App, indem Sie die richtige Kombination von Teams-Features finden, um die Anforderungen Ihrer Nutzer zu erfüllen.
+  - Verstehen Sie Anwendungsfälle, um zu erkennen, wie ein Endbenutzer mit Ihrer Anwendung interagiert.
+
+- **Verstehen des Problems**: Ermitteln Sie das Kernproblem, das Ihre App lösen muss.
+
+- **Berücksichtigen Sie die Integration**: Identifizieren Sie die Anwendungen und Dienste, die Ihre App benötigt, wie Authentifizierung, Microsoft Graph oder Webanwendungen.
+
+## <a name="microsoft-teams-app-features"></a>Microsoft Teams-App-Features
+
+Es gibt mehrere Möglichkeiten, Teams so zu erweitern, dass jede App einzigartig ist. Teams-App-Features bieten Folgendes:
+
+- [App-Funktionen](#app-capabilities)
+- [App-Bereich](#app-scope)
+
+### <a name="app-capabilities"></a>App-Funktionen
+
+Fähigkeiten sind die Kernfunktionen, die Sie in Ihre App einbauen können. Sie werden auch als Einstiegs- oder Erweiterungspunkte bezeichnet, da sie Integration und Interaktion ermöglichen.
+
+Ihre Teams-Apps verfügen über eine oder alle der folgenden Kernfunktionen:
+
+:::row:::
+   :::column span="":::
+
+#### <a name="personal-apps"></a>Persönliche Apps
+
+Eine [persönliche App](../../concepts/design/personal-apps.md) ist ein bestimmter Bereich oder Bot, der Nutzern hilft, sich auf ihre eigenen Aufgaben zu konzentrieren oder relevante Aktivitäten anzuzeigen.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Konzeptionelle Darstellung, wie persönliche Apps im Teams-Client aussehen." border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+#### <a name="tabs"></a>Registerkarten
+
+Zeigen Sie Ihre webbasierten Inhalte auf einer [Registerkarte](../../tabs/what-are-tabs.md) an, auf der Personen darüber diskutieren und gemeinsam daran arbeiten können.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Konzeptionelle Darstellung, wie Registerkarten im Teams-Client aussehen." border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+#### <a name="bots"></a>Bots
+
+Gespräche führen oft zu der Notwendigkeit, etwas zu tun (eine Bestellung zu erstellen, Code zu überprüfen, den Ticketstatus zu kontrollieren usw.). Ein [Bot](../../bots/what-are-bots.md) kann diese Arten von Workflows direkt in Teams starten.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Konzeptionelle Darstellung, wie Bots im Teams-Client aussehen." border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="messaging-extensions"></a>Messaging-Erweiterungen
+
+Mit [Messagingerweiterungen](../../messaging-extensions/what-are-messaging-extensions.md)können Sie externe Informationen durchsuchen und freigeben. Sie können auch auf eine Nachricht reagieren, z. B. durch das Erstellen eines Hilfetickets basierend auf dem Inhalt eines Kanalbeitrags.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Konzeptionelle Darstellung, wie Messaging-Erweiterungen im Teams-Client aussehen." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="meeting-extensions"></a>Besprechungserweiterungen
+
+Es gibt einige Möglichkeiten,[Ihre App in die Teams-Anrufe einzubinden](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Konzeptionelle Darstellung, wie Besprechungserweiterungen im Teams-Client aussehen." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="webhooks-and-connectors"></a>Webhooks und Connectors
+
+[Eingehende Webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sind eine einfache Möglichkeit, automatisch Benachrichtigungen von einer anderen App an einen Teams-Kanal zu senden. Mit [ausgehenden Webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)können Sie Ihrem Webdienst eine Nachricht mit einem @mention senden.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Konzeptionelle Darstellung, wie Connectors im Teams-Client aussehen." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="microsoft-graph-for-teams"></a>Microsoft Graph für Teams
+
+Die [Microsoft Graph-API für Teams](/graph/teams-concept-overview) bietet Zugriff auf Informationen zu Teams, Kanälen, Nutzern und Nachrichten, die Ihnen helfen können, Features für Ihre App zu erstellen oder zu verbessern.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-graph.png" alt-text="Konzeptionelle Darstellung der Microsoft Graph-API für Teams." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
 > [!NOTE]
-> Bevor Sie mit der Erstellung Ihrer Anwendungsfälle beginnen, müssen Sie über ein gutes Verständnis der Teams Funktionen und der Möglichkeiten auf der Teams Plattform verfügen, die sie verwendet.
+> Teams Store hat sich weiterentwickelt:
+> 
+> Zuvor wurden die BRANCHEN-Apps durch Auswahl der Ellipsen auf der Kachel aktualisiert. Mit der aktualisierten Teams Store-Oberfläche können Sie jetzt die branchenspezifischen Apps aktualisieren, indem Sie sich beim [Teams Admin Center](https://admin.teams.microsoft.com)anmelden.
 
-Jede Interaktionsmethode mit Ihren Benutzern hat ihre Stärken und Schwachstellen. Beim Erstellen einer großartigen Teams App geht es darum, die richtige Kombination zu finden, um die Anforderungen Ihrer Benutzer zu erfüllen. Wenn Sie diese Anforderungen erfüllen, müssen Sie sie zuerst verstehen.
+### <a name="app-scope"></a>App-Bereich
 
-## <a name="understand-the-problem"></a>Verstehen des Problems
+Ihre App kann einen der folgenden Bereiche aufweisen:
 
-Jede App hat ein Kernproblem oder eine Lösungsnöte. Bevor Sie mit dem Erstellen einer App beginnen, müssen Sie das Problem erläutern. Im Kern ist Teams eine Plattform für die Zusammenarbeit, sodass Apps, die Lücken bei der Erzielung einer effektiven Zusammenarbeit schließen, gut geeignet sind. Es ist auch eine plattformübergreifende soziale Plattform, befindet sich im Mittelpunkt Office 365 und bietet eine persönliche Canvas für Sie zum Erstellen von Apps. In dieser sozialen Plattform gibt es eine Vielzahl von Anforderungen, die mit einer Teams App gelöst werden können. Sie können eine Vielzahl von Problemen lösen, vorausgesetzt, Sie wissen, welches Sie lösen möchten. Stellen Sie vor dem Erstellen einer App relevante Fragen, z. B.:
+- **Persönliche App-Benutzeroberfläche**: Eine persönliche App ist ein bestimmter Bereich oder Bot, der Nutzern hilft, sich auf ihre eigenen Aufgaben zu konzentrieren oder für sie wichtige Aktivitäten anzuzeigen.
+- **Gemeinsame App-Erfahrung**: Team, Kanal und Chat sind Bereiche für die Zusammenarbeit. Apps in diesen Kontexten sind für alle Nutzer in diesem Bereich verfügbar. Zusammenarbeitsbereiche konzentrieren sich in der Regel auf Workflows für die Interaktionen Ihrer App oder das Freischalten neuer sozialer Interaktionen.
 
-* Welche Vor- und Nachteile des aktuellen Zustandssystems werden von Ihren Benutzern verwendet?
-* Welche Probleme haben Ihre Benutzer, die Sie beheben möchten?
-* Welche Features oder Funktionen gefällt und schätzen Ihre Benutzer in ihrer aktuellen Vorgehensweise?
+Eine App kann über verschiedene Bereiche hinweg vorhanden sein. Beispiel:
 
-## <a name="understand-your-user"></a>Grundlegendes zu Ihrem Benutzer
+- Ihre App kann Daten an einem zentralen freigegebenen Speicherort anzeigen, d. h. auf einer Registerkarte.
+- Sie kann dieselben Informationen auch über eine persönliche Konversationsschnittstelle, d. h. einen Bot, darstellen.
 
-Verstehen Sie, wer Ihr Benutzer ist und Sie das richtige Verteilungsmodell identifizieren können. Es hilft Ihnen zu identifizieren, wie Benutzer Teams verwenden. Stellen Sie relevante Fragen, z. B.:
-
-* Sind die Benutzer in erster Linie Mitarbeiter im Front-Line-Dienst auf mobilen Clients?
-* Erwarten Sie, dass viele Gastbenutzer Zugriff auf Ihre App benötigen?
-* Verwenden sie Teams und Kanäle oder hauptsächlich Gruppenchats?
-* Wie technisch ausgereift sind Ihre primären Benutzer?
-* Benötigen Sie eine sorgfältige Onboarding-Erfahrung oder einige Zeiger?
-
-Manchmal lautet die Antwort: *Wir möchten dieses Problem für alle Teams Benutzer überall lösen.* Wenn dies für Sie der Fall ist, müssen Sie etwas Zeit damit verbringen, [zu verstehen, was erforderlich ist, um in AppSource veröffentlicht zu werden.](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
-
-## <a name="understand-the-limitations-of-the-app"></a>Verstehen der Einschränkungen der App
-
-Wenn Sie die Einschränkungen der Apps für die Barrierefreiheit von Daten und die Datenaufbewahrung kennen, können Sie bessere Apps entwerfen. Dies ist wichtig, da sich Informationen darüber, wem die Daten und die Verfügbarkeit von APIs gehören, auf die Lösungsarchitektur auswirken. Stellen Sie auch hier relevante Fragen, z. B.:
-
-* Was sind die Herausforderungen bei der Back-End-Integration der aktuellen App?
-* Wer besitzen die Back-End-Daten? In-House oder Drittanbieter.
-* Gibt es Firewalls, die sich auf die Funktionsweise der App auswirken?
-* Gibt es APIs für den Zugriff auf die Daten, die Sie für die Funktion Ihrer App benötigen? 
-
-## <a name="provide-authentication"></a>Bereitstellen der Authentifizierung
-
-Sie müssen frühzeitig ermitteln, ob Sie die Dienste, die Sie verfügbar machen, und auf welcher Ebene schützen müssen. Denken Sie daran, dass die webdienste, die in Ihrer Teams App verfügbar gemacht werden, über das Internet öffentlich verfügbar sind. Wenn Sie also sicher sein müssen, dass sie jetzt darüber nachdenken. Wenn Sie eine Lösung benötigen, die erfordert, dass Sie Benutzern außerhalb des Mandanten Gastzugriff gewähren, müssen Zugriffseinschränkungen und -berechtigungen platziert werden, um vertrauliche Informationen zu schützen. Sie müssen Apps unter Berücksichtigung der Einschränkungen entwerfen, die mit dem Gastbenutzerzugriff verbunden sind. Stellen Sie daher Fragen, z. B.: 
-
-* Greifen die Benutzer basierend auf ihren Rollen auf unterschiedliche Ansichten von Daten zu?
-* Sind personenbezogene Informationen beteiligt?
-* Basieren die Interaktionen auch auf den Benutzerrollen?
-* Greifen externe Benutzer auf die App zu?
-
-## <a name="decide-what-goes-in-teams"></a>Entscheiden, was in Teams
-
-Ob Sie eine neue Lösung erstellen oder eine vorhandene Lösung in Teams bringen, ist es wichtig zu entscheiden, ob sich die gesamte App innerhalb des Teams-Clients befindet. Überprüfen Sie, ob es sinnvoll ist, nur einen Teil der Erfahrung einzubringen. Mit einer Kombination aus Registerkarten, Messaging-Erweiterungen, Aufgabenmodulen, adaptiven Karten und Unterhaltungsbots können Sie komplexe Apps vollständig in Teams erstellen.
-Denken Sie daran, wer Ihre Benutzer sind und welche Probleme Sie lösen möchten. Verfügen sie bereits über ein System zur Lösung der meisten Probleme, oder müssen Sie lediglich einen Untersatz der Funktionalität in Teams erweitern? Wenn Sie einen Teil Ihrer Lösung bereitstellen möchten, müssen Sie sich in der Regel auf die Freigabe, Zusammenarbeit, Initiierung und Überwachung von Workflows konzentrieren.
-
-## <a name="plan-the-onboarding-experience"></a>Planen Sie die Benutzererfahrung
-
-Die Onboarding-Erfahrung kann einen Unterschied zwischen Erfolg oder Fehler für Ihre App ausmachen. Für jede Funktion Ihrer App und jeden Kontext, in dem die Funktion installiert werden kann, müssen Sie einen Plan haben, wie Sie sich selbst einführen. Wie Sie Ihren Unterhaltungs-Bot einführen, wenn er in einem Kanal mit 1.000 Personen installiert wird, ist anders, wenn er in einem 1:1-Chat installiert wird. Was geschieht, wenn ein Benutzer Ihre Registerkarte zum ersten Mal in einem Kanal konfiguriert? Wenn Sie Karten mit einer Messaging-Erweiterung teilen, ist es sinnvoll, einen kleinen Link zu einer Seite mit **weiteren Informationen** hinzuzufügen, um Benutzern die weiteren Möglichkeiten Ihrer App vorzustellen?
-
-Wenn Sie wissen, wer Ihre Benutzer sind, können Sie die richtige Oberfläche erstellen. Erwarten Sie, dass die meisten Benutzer bereits einen Kontext ihrer App haben oder Ihre Dienste bereits in einem anderen Kontext verwendet haben? Kommen sie ohne Vorkenntnisse zu Ihrer App? Gestalten Sie Ihre Onboarding-Erfahrung mit Ihren wichtigsten Benutzern.
-
-Denken Sie daran, dass Benutzer Ihre App auf verschiedene Weise entdecken können. Sie werden möglicherweise installiert, oder sie werden ihrer App eingeführt, wenn ein anderer Benutzer sie zum Freigeben von Inhalten verwendet. Wenn Sie möchten, dass mehr Benutzer Ihre App verwenden, müssen Sie nach Möglichkeiten suchen, sich allen vorzustellen.
-
-Denken Sie vor allem daran, dass niemand Spam mag. Persönliche und Kanalnachrichten sind eine gute Möglichkeit, um schnell uninstalliert zu werden!
-
-## <a name="plan-for-the-future"></a>Planen der Zukunft
-
-Ermitteln Sie, welche neuen Features der Benutzer in der aktuellen Lösung bevorzugen wird. Wenn Sie über eine Roadmap für neue Features verfügen, die der App hinzugefügt werden sollen, sind das Design und die Architektur betroffen.
+Ein Nutzer kann mit einer App auf einer Canvas-Registerkarte interagieren, um eine Aktivität auszuführen, oder er kann dies mithilfe eines Konversationsbots tun.
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Zuordnen von Anwendungsfällen](../../concepts/design/map-use-cases.md)
+> [Zuordnen Ihrer Anwendungsfälle](../../concepts/design/map-use-cases.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Gerätefunktionen](~/concepts/device-capabilities/device-capabilities-overview.md)
+[Integrieren von Gerätefunktionen](~/concepts/device-capabilities/device-capabilities-overview.md)
