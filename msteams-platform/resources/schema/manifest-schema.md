@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: Manifestschema für Microsoft Teams
-ms.openlocfilehash: 7513b79ee25e4de3e7c2ffecf8f2fd91a23f170b
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 18c42cf4a8ea6350214c2e459f0dcde1a1d8f66c
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821661"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356420"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -394,7 +394,7 @@ Der Name Ihrer App-Lösung, der Benutzern in der Microsoft Teams-Umgebung angeze
 
 **Erforderlich** – Objekt
 
-Beschreibt Ihre App für Benutzer. Für Apps, die an AppSource übermittelt werden, müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen.
+Beschreibt Ihre App für Benutzer. Für an AppSource übermittelte Apps müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen.
 
 Stellen Sie sicher, dass Ihre Beschreibung Ihre Lösung beschreibt und potenziellen Kunden hilft zu verstehen, worin ihre Funktion besteht. Sie müssen in der vollständigen Beschreibung angeben, ob ein externes Konto für die Verwendung der App erforderlich ist. Die Werte von `short` und `full` müssen unterschiedlich sein. Die Kurzbeschreibung darf nicht innerhalb der ausführlichen Beschreibung wiederholt werden und darf keinen anderen App-Namen enthalten.
 
@@ -407,13 +407,13 @@ Stellen Sie sicher, dass Ihre Beschreibung Ihre Lösung beschreibt und potenziel
 
 **Optional** – Zeichenfolge
 
-Ein eindeutiger Bezeichner für die App in umgekehrter Domänenschreibweise; z. B. "com.example.myapp". Maximale Länge: 64 Zeichen.
+Ein eindeutiger Bezeichner für die App in umgekehrter Domänenschreibweise; zum Beispiel com.example.myapp. Maximale Länge: 64 Zeichen.
 
 ## <a name="localizationinfo"></a>localizationInfo
 
 **Optional** – Objekt
 
-Ermöglicht die Angabe einer Standardsprache und stellt Zeiger auf weitere Sprachdateien bereit. Weitere Informationen finden Sie unter [Lokalisierung](~/concepts/build-and-test/apps-localization.md).
+Ermöglicht die Angabe einer Standardsprache und stellt Verweise auf weitere Sprachdateien bereit. Weitere Informationen finden Sie unter [Lokalisierung](~/concepts/build-and-test/apps-localization.md).
 
 |Name| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|
@@ -457,10 +457,10 @@ Wird verwendet, wenn Ihre App-Lösung über Teamkanal-Registerkarten verfügt, d
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 Zeichen|✔|Die https://-URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die Bereiche `team` und `groupchat`. |
-|`canUpdateConfiguration`|boolean|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: **true**.|
+|`canUpdateConfiguration`|Boolescher Wert|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: **true**.|
 |`context` |Array von Enumerationen|6 ||Die Gruppe von `contextItem`-Bereichen, in denen eine [Registerkarte unterstützt wird](../../tabs/how-to/access-teams-context.md). Standard: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
-|`sharePointPreviewImage`|string|2048||Ein relativer Dateipfad zu einem Registerkartenvorschaubild zur Verwendung in SharePoint. Größe: 1024 x 768. |
-|`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint zur Verfügung gestellt wird. Optionen: `sharePointFullPage` und `sharePointWebPart` |
+|`sharePointPreviewImage`|string|2048||Ein relativer Dateipfad zu einem Registerkarten-Vorschaubild zur Verwendung in SharePoint. Größe 1024 x 768. |
+|`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint zur Verfügung gestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -481,8 +481,7 @@ Dieses Element ist ein Array (maximal 16 Elemente), wobei alle Elemente vom Typ 
 |`context` | Array von Enumerationen| 2|| Die Gruppe von `contextItem`-Bereichen, in denen eine Registerkarte unterstützt wird.|
 
 > [!NOTE]
->  Das searchUrl-Feature ist für Drittanbieterentwickler nicht verfügbar.
-> Wenn Ihre Registerkarten kontextabhängige Informationen zum Anzeigen relevanter Inhalte oder zum Initiieren eines Authentifizierungsvorgangs benötigen, finden Sie entsprechende Informationen unter [Abrufen von Kontext für Ihre Microsoft Teams-Registerkarte](../../tabs/how-to/access-teams-context.md).
+>  Die searchUrl-Funktion ist für Drittentwickler nicht verfügbar. Wenn Ihre Registerkarten kontextabhängige Informationen zum Anzeigen relevanter Inhalte oder zum Initiieren eines Authentifizierungsvorgangs benötigen, finden Sie entsprechende Informationen unter [Abrufen von Kontext für Ihre Microsoft Teams-Registerkarte](../../tabs/how-to/access-teams-context.md).
 
 ## <a name="bots"></a>Bots
 
@@ -496,11 +495,11 @@ Das Element ist ein Array (maximal ein Element &mdash; derzeit ist nur ein Bot p
 |---|---|---|---|---|
 |`botId`|string|64 Zeichen|✔|Die eindeutige Microsoft-App-ID für den Bot, wie bei Bot Framework registriert. Die ID kann mit der Gesamt-[App-ID](#id)übereinstimmen.|
 |`scopes`|Array von Enumerationen|3|✔|Gibt an, ob der Bot eine Umgebung im Kontext eines Kanals in einem `team` oder Gruppenchat (`groupchat`) ist, oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`). Diese Optionen sind nicht exklusiv.|
-|`needsChannelSelector`|boolean|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
-|`isNotificationOnly`|boolean|||Gibt an, ob ein Bot ein unidirektionaler Bot ausschließlich für Benachrichtigungen ist (im Gegensatz zu einem dialogorientierten Bot). Standard: **`false`**|
-|`supportsFiles`|boolean|||Gibt an, ob der Bot die Möglichkeit zum Hochladen/Herunterladen von Dateien in persönliche Chats unterstützt. Standard: **`false`**|
-|`supportsCalling`|boolean|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
-|`supportsVideo`|boolean|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
+|`needsChannelSelector`|Boolescher Wert|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
+|`isNotificationOnly`|Boolescher Wert|||Gibt an, ob es sich bei einem Bot um einen unidirektionalen Bot mit nur Benachrichtigungsfunktion und nicht um einen dialogorientierten Bot handelt. Standard: **`false`**|
+|`supportsFiles`|Boolescher Wert|||Gibt an, ob der Bot die Möglichkeit unterstützt, Dateien im persönlichen Chat hoch-/herunterzuladen. Standard: **`false`**|
+|`supportsCalling`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
+|`supportsVideo`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -508,7 +507,7 @@ Eine optionale Liste von Befehlen, die Ihr Bot Benutzern vorschlagen kann. Das O
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`items.scopes`|Array von Enumerationen|3|✔|Gibt den Bereich an, für den die Befehlsliste gültig ist. Mögliche Optionen sind `team`, `personal` und `groupchat`.|
+|`items.scopes`|Array von Enumerationen|3|✔|Gibt den Bereich an, für den die Befehlsliste gültig ist. Optionen sind `team`, `personal` und `groupchat`.|
 |`items.commands`|Array von Objekten|10|✔|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: Name des Bot-Befehls (string, 32)<br>`description`: Eine einfache Beschreibung oder ein Beispiel für die Befehlssyntax und zugehörige Argumente (string, 128)|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
@@ -529,7 +528,7 @@ Das Objekt ist ein Array (maximal ein Element), wobei alle Elemente vom Typ `obj
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 Zeichen|✔|Die https://-URL, die beim Konfigurieren des Connectors verwendet werden soll.|
-|`scopes`|Array von Enumerationen|1|✔|Gibt an, ob der Connector eine Umgebung im Kontext eines Kanals in einem `team` oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`) bietet. Derzeit wird nur der `team`-Bereich unterstützt.|
+|`scopes`|Array von Enumerationen|1|✔|Gibt an, ob der Connector eine Umgebung im Kontext eines Kanals in einem `team` oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`) bietet. Derzeit wird nur der `team` Bereich unterstützt.|
 |`connectorId`|string|64 Zeichen|✔|Ein eindeutiger Bezeichner für den Connector, der seiner ID im [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) entspricht.|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -547,7 +546,7 @@ Das Element ist ein Array (maximal ein Element), wobei alle Elemente vom Typ `ob
 |---|---|---|---|---|
 |`botId`|string|64|✔|Die eindeutige Microsoft-App-ID für den Bot, welcher der Messaging-Erweiterung zugeordnet ist, wie beim Bot Framework registriert. Die ID kann mit der Gesamt-App-ID übereinstimmen.|
 |`commands`|Array von Objekten|10|✔|Array von Befehlen, die von der Messaging-Erweiterung unterstützt werden.|
-|`canUpdateConfiguration`|boolean|||Ein Wert, der angibt, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann. Standard: **False**.|
+|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann. Standard: **false**.|
 |`messageHandlers`|Array von Objekten|5||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind.|
 |`messageHandlers.type`|string|||Der Typ des Nachrichtenhandlers. Muss `"link"` sein.|
 |`messageHandlers.value.domains`|Array aus Zeichenfolgen|||Array von Domänen, für die sich der Link-Nachrichtenhandler registrieren kann.|
@@ -564,9 +563,9 @@ Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 |`title`|string|32 Zeichen|✔|Der benutzerfreundliche Name des Befehls.|
 |`type`|string|64 Zeichen||Der Befehlstyp. Entweder `query` oder `action`. Standard: **query**.|
 |`description`|string|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
-|`initialRun`|boolean|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt wird. Der Standardwert ist **false**.|
+|`initialRun`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt wird. Standard ist **false**.|
 |`context`|Array aus Zeichenfolgen|3||Definiert, wo die Nachrichtenerweiterung aufgerufen werden kann. Eine beliebige Kombination aus `compose`, `commandBox`, `message`. Der Standardwert ist `["compose","commandBox"]`.|
-|`fetchTask`|boolean|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden muss. Der Standardwert ist **false**.|
+|`fetchTask`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden muss. Standard ist **false**.|
 |`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das vorab geladen werden soll, wenn ein Messaging-Erweiterungsbefehl verwendet wird.|
 |`taskInfo.title`|string|64 Zeichen||Titel des ersten Dialogfelds.|
 |`taskInfo.width`|string|||Dialogfensterbreite: entweder eine Angabe in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
@@ -577,7 +576,7 @@ Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 |`parameters.title`|string|32 Zeichen|✔|Benutzerfreundlicher Titel für den Parameter.|
 |`parameters.description`|string|128 Zeichen||Benutzerfreundliche Zeichenfolge, die den Zweck dieses Parameters beschreibt.|
 |`parameters.value`|string|512 Zeichen||Anfangswert für den Parameter. Derzeit wird der Wert nicht unterstützt.|
-|`parameters.inputType`|string|128 Zeichen||Definiert den Typ des Steuerelements, das in einem Aufgabenmodul für `fetchTask: true` angezeigt wird. Einer der folgenden: `text, textarea, number, date, time, toggle, choiceset`.|
+|`parameters.inputType`|string|128 Zeichen||Definiert den Typ des Steuerelements, das in einem Aufgabenmodul für `fetchTask: true` angezeigt wird. Einer von `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|Array von Objekten|10 Elemente||Die Auswahloptionen für `choiceset`. Wird nur verwendet, wenn `parameter.inputType` `choiceset` ist.|
 |`parameters.choices.title`|string|128 Zeichen|✔|Titel der Auswahl.|
 |`parameters.choices.value`|string|512 Zeichen|✔|Value of the choice.|
@@ -597,7 +596,7 @@ Wenn Sie diese Berechtigungen während der App-Aktualisierung ändern, müssen I
 
 **Optional** – Array von Zeichenfolgen
 
-Stellt die systemeigenen Features auf dem Gerät eines Benutzers bereit, für die Ihre App Zugriff anfordert. Mögliche Optionen sind:
+Stellt die systemeigenen Features auf dem Gerät eines Benutzers bereit, für die Ihre App Zugriff anfordert. Die Optionen sind:
 
 * `geolocation`
 * `media`
@@ -633,18 +632,18 @@ Geben Sie Ihre Azure Active Directory-App-ID und Microsoft Graph-Informationen a
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
-**Optional** – boolescher Wert
+**Optional** – Boolescher Wert
 
-Gibt an, ob die Ladefortschritt angezeigt werden soll, während eine App oder Registerkarte geladen wird. Der Standardwert ist **false**.
+Gibt an, ob die Ladefortschritt angezeigt werden soll, während eine App oder Registerkarte geladen wird. Standard ist **false**.
 >[!NOTE]
 >Wenn Sie für `showLoadingIndicator` im App-Manifest "true" auswählen, ändern Sie zum ordnungsgemäßen Laden der Seite die Inhaltsseiten Ihrer Registerkarten und Aufgabenmodule, wie im Dokument [Anzeigen eines systemeigenen Lade-Indikators](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator).
 
 
 ## <a name="isfullscreen"></a>isFullScreen
 
- **Optional** – boolescher Wert
+ **Optional** – Boolescher Wert
 
-Gibt an, wo eine persönliche App mit oder ohne Registerkartenkopfleiste gerendert wird. Der Standardwert ist **false**.
+Gibt an, wo eine persönliche App mit oder ohne Registerkartenkopfleiste gerendert wird. Standard ist **false**.
 
 > [!NOTE]
 > `isFullScreen` funktioniert nur für Apps, die in Ihrer Organisation veröffentlicht wurden.
@@ -727,16 +726,16 @@ Gibt den standardmäßig für diese App definierten Installationsbereich an. Der
 
 **Optional** – Objekt
 
-Wenn ein Gruppeninstallationsbereich ausgewählt ist, wird die Standardfunktion definiert, wenn der Benutzer die App installiert. Mögliche Optionen sind:
+Wenn ein Gruppeninstallationsbereich ausgewählt ist, wird die Standardfunktion definiert, wenn der Benutzer die App installiert. Die Optionen sind:
 * `team`
 * `groupchat`
 * `meetings`
  
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`team`|string|||Wenn der ausgewählte Installationsbereich `team` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab`, `bot` oder `connector`.|
-|`groupchat`|string|||Wenn der ausgewählte Installationsbereich `groupchat` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab`, `bot` oder `connector`.|
-|`meetings`|string|||Wenn der ausgewählte Installationsbereich `meetings` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab`, `bot` oder `connector`.|
+|`team`|string|||Wenn der ausgewählte Installationsbereich `team` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab`, `bot`, oder `connector`|
+|`groupchat`|string|||Wenn der ausgewählte Installationsbereich `groupchat` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab`, `bot`, oder `connector`|
+|`meetings`|string|||Wenn der ausgewählte Installationsbereich `meetings` ist, gibt dieses Feld die verfügbare Standardfunktion an. Optionen: `tab`, `bot`, oder `connector`|
 
 ## <a name="configurableproperties"></a>configurableProperties
 
@@ -761,7 +760,7 @@ Sie können eine der folgenden Eigenschaften definieren:
 
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 
-**Optional** – boolescher Wert
+**Optional** – Boolescher Wert
  
 Wenn die `defaultBlockUntilAdminAction`-Eigenschaft auf **true** festgelegt ist, ist die App so lange standardmäßig für Benutzer ausgeblendet, bis der Administrator sie zulässt. Bei Festlegung auf **true** ist die App für alle Mandanten und Endbenutzer ausgeblendet. Mandantenadministratoren können die App im Microsoft Teams Admin Center sehen und Maßnahmen ergreifen, um sie zuzulassen oder zu blockieren. Der Standardwert ist **false**. Weitere Informationen zum standardmäßigen App-Block finden Sie unter [Ausblenden von Microsoft Teams-App, bis sie vom Administrator genehmigt werden](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
 
@@ -787,7 +786,7 @@ Gibt das Ihrer App zugeordnete SaaS-Angebot an.
 
 **Optional** – Objekt
 
-Geben Sie die Besprechungserweiterungsdefinition an. Weitere Informationen finden Sie unter [benutzerdefinierten Szenen im Zusammen-Modus in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
+Geben Sie die Definition der Besprechungserweiterung an. Weitere Informationen finden Sie unter [benutzerdefinierten Szenen im Zusammen-Modus in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
@@ -824,7 +823,7 @@ Spezifizieren und konsolidieren Sie autorisierungsbezogene Informationen für di
 
 |Name| Typ|Maximale Größe|Erforderlich |Beschreibung|
 |---|---|---|---|---|
-|`type`|string||✔| Der Typ der ressourcenspezifischen Berechtigung. Optionen: `Application` und `Delegated`.|
+|`type`|string||✔| Der Typ der ressourcenspezifischen Berechtigung. Optionen: `Application` und `Delegated`|
 |`name`|string|128 Zeichen|✔|Der Name der ressourcenspezifischen Berechtigung. <br> Weitere Informationen finden Sie unter [Anwendungsberechtigungen](../../graph-api/rsc/resource-specific-consent.md) und [Delegierte Berechtigungen](#delegated-permissions).|
 
 ### <a name="delegated-permissions"></a>Delegierte Berechtigungen
