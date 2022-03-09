@@ -5,12 +5,12 @@ description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Te
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams-Office365-Connector
-ms.openlocfilehash: 816dfd4327f0ee3076431e2fdc0e855b40f729c3
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7b6b7adc8231e3bdcdb9bfec868702eaa3264c42
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517967"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355636"
 ---
 # <a name="create-and-send-messages"></a>Nachrichten erstellen und senden
 
@@ -22,15 +22,15 @@ Aktionen erfordernden Nachrichten umfassen sechs sichtbare Schaltflächen auf de
 
 Die Connectorkarten unterstützen die folgenden Aktionen:
 
-- `ActionCard`: Stellt einen oder mehrere Eingabetypen und zugeordnete Aktionen dar.
-- `HttpPOST`: Sendet eine POST-Anforderung an eine URL.
-- `OpenUri`: Öffnet einen URI in einem separaten Browser oder in einer anderen App; ist optional auf unterschiedliche URIs basierend auf Betriebssystemen ausgerichtet.
+* `ActionCard`: Stellt einen oder mehrere Eingabetypen und zugeordnete Aktionen dar.
+* `HttpPOST`: Sendet eine POST-Anforderung an eine URL.
+* `OpenUri`: Öffnet einen URI in einem separaten Browser oder in einer anderen App; ist optional auf unterschiedliche URIs basierend auf Betriebssystemen ausgerichtet.
 
 Die `ActionCard`-Aktion unterstützt drei Eingabetypen:
 
-- `TextInput`: Ein ein- oder mehrzeiliges Textfeld mit optionaler Längenbegrenzung.
-- `DateInput`: Eine Datumsauswahl mit optionaler Zeitauswahl.
-- `MultichoiceInput`: Eine Liste mit Auswahlmöglichkeiten, die entweder die Auswahl einer einzelnen Option oder mehrerer Optionen bietet.
+* `TextInput`: Ein ein- oder mehrzeiliges Textfeld mit optionaler Längenbegrenzung.
+* `DateInput`: Eine Datumsauswahl mit optionaler Zeitauswahl.
+* `MultichoiceInput`: Eine Liste mit Auswahlmöglichkeiten, die entweder die Auswahl einer einzelnen Option oder mehrerer Optionen bietet.
 
 `MultichoiceInput` unterstützt eine `style`-Eigenschaft über die festgelegt wird, ob die Liste anfänglich vollständig erweitert angezeigt wird. Der Standardwert von `style` hängt vom Wert von `isMultiSelect` wie folgt ab:
 
@@ -39,7 +39,7 @@ Die `ActionCard`-Aktion unterstützt drei Eingabetypen:
 | `false` oder nicht angegeben | `compact` |
 | `true` | `expanded` |
 
-Damit die Mehrfachauswahlliste kompakt angezeigt wird, müssen Sie sowohl `"isMultiSelect": true` als auch `"style": true` angeben.
+Um die Mehrfachauswahlliste im Kompaktformat anzuzeigen, geben Sie `"isMultiSelect": true` und `"style": true` an.
 
 Weitere Informationen zu Connectorkarten-Aktionen finden Sie unter [Aktionen](/outlook/actionable-messages/card-reference#actions).
 
@@ -149,9 +149,9 @@ Diese Nachricht erzeugt die folgende Karte im Kanal:
 
 # <a name="curl"></a>[cURL](#tab/cURL)
 
-**So posten Sie eine Nachricht im Webhook mit cURL**
+Führen Sie die folgenden Schritte aus, um eine Nachricht im Webhook mit cURL zu posten:
 
-1. Installieren Sie cURL über https://curl.haxx.se/.
+1. Installieren Sie cURL von der [cURL-Website](https://curl.haxx.se/).
 
 1. Geben Sie den folgenden cURL-Befehl in die Befehlszeile ein:
 
@@ -174,7 +174,7 @@ Diese Nachricht erzeugt die folgende Karte im Kanal:
 
  Voraussetzung: Installation von PowerShell und Vertrautheit mit dessen grundlegender Verwendung.
 
-**So senden Sie eine Nachricht an den Webhook mit PowerShell**
+Führen Sie die folgenden Schritte aus, um eine Nachricht an den Webhook mit PowerShell zu posten:
 
 1. Geben Sie in der PowerShell-Eingabeaufforderung den folgenden Befehl ein:
 
@@ -198,7 +198,7 @@ Diese Nachricht erzeugt die folgende Karte im Kanal:
 > * Alle systemeigenen Schemaelemente adaptiver Karten, mit Ausnahme von `Action.Submit`, werden vollständig unterstützt.
 > * Die unterstützten Aktionen sind [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html) und [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
-**So senden Sie adaptive Karten über einen eingehenden Webhook**
+Führen Sie die folgenden Schritte aus, um adaptive Karten über einen eingehenden Webhook zu senden:
 
 1. [Richten Sie einen benutzerdefinierten Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) in Microsoft Teams ein.
 1. Erstellen Sie die JSON-Datei für adaptive Karten mithilfe des folgenden Codes:
@@ -257,7 +257,7 @@ Die folgende Tabelle enthält die Details zu zeitbasierten Transaktionen:
 | 7200 | 150  |
 | 86400  | 1800  |
 
-Eine [Wiederholungslogik mit exponentiellem Backoff](/azure/architecture/patterns/retry) kann die Begrenzung der Datenübertragungsrate in Fällen verringern, in denen Anforderungen die Grenzwerte innerhalb einer Sekunde überschreiten. Wenden Sie [bewährte Methoden](../../bots/how-to/rate-limit.md) an, um zu vermeiden, dass die Ratenbegrenzungen überschritten werden.
+Eine [Wiederholungslogik mit exponentiellem Backoff](/azure/architecture/patterns/retry) kann die Begrenzung der Datenübertragungsrate in Fällen verringern, in denen Anforderungen die Grenzwerte innerhalb einer Sekunde überschreiten. Befolgen Sie die [bewährten Methoden](../../bots/how-to/rate-limit.md), um zu vermeiden, dass die Ratenbegrenzungen erreicht werden.
 
 > [!NOTE]
 > Eine [Wiederholungslogik mit exponentiellem Backoff](/azure/architecture/patterns/retry) kann die Begrenzung der Datenübertragungsrate in Fällen verringern, in denen Anforderungen die Grenzwerte innerhalb einer Sekunde überschreiten. Lesen Sie die [HTTP 429-Antworten](../../bots/how-to/rate-limit.md#handle-http-429-responses), um zu vermeiden, dass die Ratenbegrenzungen überschritten werden.

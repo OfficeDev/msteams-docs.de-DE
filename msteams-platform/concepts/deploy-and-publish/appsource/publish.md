@@ -1,16 +1,16 @@
 ---
-title: Übersicht– Veröffentlichungsprozess im Teams-App-Store
+title: Übersicht – Veröffentlichen Sie Ihre App im Microsoft Teams Store
 description: Beschreibt den Prozess zum Übermitteln Ihrer App an Partner Center und zum Veröffentlichen im Microsoft Teams Store (und AppSource).
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 205b95e84d834d1171227d967257e72bc6dee16b
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 777892c0e1437b3e8022cf2929b160e3602fe035
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898065"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355748"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Veröffentlichen Sie Ihre App im Microsoft Teams Store
 
@@ -57,27 +57,33 @@ Wenn Sie der Meinung sind, dass Ihre App für die Produktion bereit ist, können
 
   Wenn keine Probleme mit Ihrer App auftreten, wird Ihre App genehmigt und im Teams Store veröffentlicht. Wenn Probleme auftreten, erhalten Sie vom Partner Center einen automatisierten Überprüfungsbericht mit den Fehlerdetails. Um Sie bei der erfolgreichen Veröffentlichung Ihrer App im Teams Store zu unterstützen und Sie durch diesen Prozess zu führen, sendet Ihnen das Validierungsteam eine personalisierte E-Mail von unserem Concierge-Dienst [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com), die die folgenden Informationen enthält:
 
-   * Zusammenfassung aller Probleme
+  * Zusammenfassung aller Probleme
 
-   * Details zu Fehlern oder Problemen mit Richtlinienlinks und Kategorisierung: 
+  * Details zu Fehlern oder Problemen mit Richtlinienlinks und Kategorisierung: 
 
-     * Obligatorische Fehlerbehebung: Diese Probleme müssen vor der App-Genehmigung behoben werden.
+    * Obligatorische Fehlerbehebung: Diese Probleme müssen vor der App-Genehmigung behoben werden.
 
-     * Empfohlene Korrektur: Diese Probleme können nach der App-Genehmigung behoben werden, da es sich hierbei um Empfehlungen zur Verbesserung der App-Erfahrung handelt.
+    * Empfohlene Korrektur: Diese Probleme können nach der App-Genehmigung behoben werden, da es sich hierbei um Empfehlungen zur Verbesserung der App-Erfahrung handelt.
 
-     * Blocker: Diese Probleme verhindern, dass das Validierungsteam Ihre App-Funktionalität weiter testet, und müssen gelöst werden, damit die Validierung fortgesetzt werden kann.
+    * Blocker: Diese Probleme verhindern, dass das Validierungsteam Ihre App-Funktionalität weiter testet, und müssen gelöst werden, damit die Validierung fortgesetzt werden kann.
 
-     * Abfrage: Diese Abfragen können freigegeben werden, um Antworten auf bestimmte Fragen im Zusammenhang mit Ihrer App zu erhalten.
+    * Abfrage: Diese Abfragen können freigegeben werden, um Antworten auf bestimmte Fragen im Zusammenhang mit Ihrer App zu erhalten.
 
-   * Schritte zum Neuerstellen von Problemen über schriftliche Anweisungen oder das Videoformat.
+  * Schritte zum Neuerstellen von Problemen über schriftliche Anweisungen oder das Videoformat.
 
-   * Empfehlungen zum Beheben der gemeldeten Probleme mit Links zu Anleitungsdokumenten.
- 
+  * Empfehlungen zum Beheben der gemeldeten Probleme mit Links zu Anleitungsdokumenten.
+
   Nachdem Sie die Liste der Probleme überprüft haben, beheben Sie alle gemeldeten Probleme, und geben Sie das aktualisierte App-Paket per E-Mail frei, damit das Validierungsteam Ihre App erneut gründlich überprüft. Wenn Sie Abfragen im Zusammenhang mit den gemeldeten Problemen haben, wenden Sie sich unter [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) an das Validierungsteam.
 
   Wenn in Ihrer App weiterhin Probleme oder Regressionsprobleme auftreten, erhalten Sie einen aktualisierten Validierungsbericht vom Validierungsteam. Wenn Ihre App Blocker aufwies, werden möglicherweise neue Probleme gemeldet, wenn Ihre App überprüft wird, nachdem die Blocker behoben wurden. Manchmal hat das Validierungsteam auch Regressionsprobleme in Apps nach der Bereitstellung von Fehlerbehebungen bemerkt. Es bedarf einiger erneuter Übermittlungen, um alle Probleme für eine App zu abzuschließen, die Fehlern beinhaltet, und die Genehmigung für die Veröffentlichung im Teams Store zu erhalten.
 
   Nachdem alle gemeldeten Probleme abgeschlossen wurden und die endgültige Übermittlung im Partner Center erfolgt ist, genehmigt und veröffentlicht das Validierungsteam Ihre App. Es dauert mindestens einen Arbeitstag bis die App im Teams Store verfügbar ist.
+
+* **Analysieren der App-Nutzung**
+
+  Nachdem Ihre App genehmigt und veröffentlicht wurde, können Sie Ihre App-Nutzung im [Teams App-Nutzungsbericht](/office/dev/store/teams-apps-usage) im Partner Center nachverfolgen. Zu den Metriken gehören aktive monatliche, tägliche und wöchentliche Benutzer sowie Aufbewahrungs- und Intensitätsdiagramme, mit denen Sie Änderungen und Nutzungshäufigkeit nachverfolgen können.
+
+  Bei Daten für neu veröffentlichte Apps dauert es etwa eine Woche, bis sie im Bericht angezeigt werden.
 
 ## <a name="tips-for-rapid-approval-to-publish-your-app"></a>Tipps für eine schnelle Genehmigung zum Veröffentlichen Ihrer App
 
@@ -96,7 +102,7 @@ Wenn Sie der Meinung sind, dass Ihre App für die Produktion bereit ist, können
      1. Überprüfen Sie Ihr App-Paket mithilfe des Teams- [Entwicklerportals](https://dev.teams.microsoft.com/home), um Paketfehler zu identifizieren und zu beheben.
 
         :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Teams Store-App-Überprüfung in Entwicklerportal" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
- 
+
      1. Testen Sie Ihre App vor der App-Übermittlung gründlich, um sicherzustellen, dass sie den Store-Richtlinien entspricht. Laden Sie die App in Teams quer, und testen Sie die End-to-End-Benutzerflows für Ihre App. Stellen Sie sicher, dass die Funktionalität wie erwartet funktioniert, Links nicht beschädigt sind, die Benutzererfahrung nicht blockiert wird und alle Einschränkungen deutlich hervorgehoben sind.
 
      1. Testen Sie Ihre App auf Desktop-, Web- und mobilen Clients. Stellen Sie sicher, dass die App über verschiedene Formfaktoren hinweg reagiert.
@@ -133,3 +139,4 @@ Wenn Sie der Meinung sind, dass Ihre App für die Produktion bereit ist, können
 * [Planen der Onboardingerfahrung für Benutzer](../../design/planning-checklist.md#plan-beyond-app-building)
 * [Bereitstellen von Tablet-Apps auf mobilen Geräten](../../../tabs/design/tabs-mobile.md#distribution)
 * [Testvorschau für monetarisierte Apps](prepare/Test-preview-for-monetized-apps.md)
+* [Bewertungsparameter für Microsoft Teams-Store](post-publish/teams-store-ranking-parameters.md)

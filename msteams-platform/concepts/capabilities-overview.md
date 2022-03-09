@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: Registerkarten Bots Messaging-Erweiterungen Webhooks Connectors
-ms.openlocfilehash: 53ee8ffb0fdf51b5c4069cc79ff7022dbc46777d
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: ecc7ddc9ff1a80aa4eb5b37c55088f5fa5721b37
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62897970"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355545"
 ---
 # <a name="understand-microsoft-teams-app-features"></a>Grundlegendes zu Microsoft Teams-App-Features
 
@@ -142,15 +142,15 @@ Die [Microsoft Graph-API für Teams](/graph/teams-concept-overview) bietet Zugri
 
    :::column-end:::
 
-> [!NOTE]
-> Teams Store hat sich weiterentwickelt:
-> 
-> Zuvor wurden die BRANCHEN-Apps durch Auswahl der Ellipsen auf der Kachel aktualisiert. Mit der aktualisierten Teams Store-Oberfläche können Sie jetzt die branchenspezifischen Apps aktualisieren, indem Sie sich beim [Teams Admin Center](https://admin.teams.microsoft.com)anmelden.
+   :::column span="":::
 
 :::image type="content" source="../assets/images/overview-graph.png" alt-text="Konzeptionelle Darstellung der Microsoft Graph-API für Teams." border="false":::
 
    :::column-end:::
 :::row-end:::
+
+> [!NOTE]
+> Der Teams Store hat sich weiterentwickelt: Zuvor wurden die branchenspezifischen Apps aktualisiert, indem die Auslassungspunkte auf der Kachel ausgewählt wurden. Mit der aktualisierten Teams Store-Oberfläche können Sie jetzt die branchenspezifischen Apps aktualisieren, indem Sie sich beim [Teams Admin Center](https://admin.teams.microsoft.com)anmelden.
 
 ## <a name="choose-the-correct-scope-for-your-app"></a>Wählen Sie den richtigen Bereich für Ihre App aus.
 
