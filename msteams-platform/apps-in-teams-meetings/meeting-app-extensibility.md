@@ -4,12 +4,12 @@ author: surbhigupta
 description: Erfahren Sie mehr über den Besprechungslebenszyklus, die Erstellung der Besprechungserfahrung des Benutzers während des gesamten Besprechungslebenszyklus in desktop- und mobilen Umgebungen, Teilnehmerrollen und Benutzertypen. Darüber hinaus erfahren Sie mehr über die Integration von Bots und Messaging-Erweiterungen in den Besprechungslebenszyklus.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 84fab8e118ff83b36f2d0ac6f911d85e3d36c1c8
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 253cc365263b1d385d18d1043da7a779a1ed2355
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355589"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398848"
 ---
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 
@@ -33,6 +33,7 @@ Registerkarten ermöglichen es Teammitgliedern, auf Dienste und Inhalte in einem
 > Wenn Sie eine Registerkarte in Ihre Besprechung integriert haben, muss Ihre App den Teams [SSO-Authentifizierungsfluss (Single Sign-On) für Registerkarten](../tabs/how-to/authentication/auth-aad-sso.md) befolgen.
 
 > [!NOTE]
+>
 > * Die privaten geplanten Besprechungen unterstützen nur Apps.
 > * Die Option "App hinzufügen" für Teams Registerkarte "Besprechungserweiterung" wird in Teams Webclient nicht unterstützt.
 
@@ -40,7 +41,7 @@ Registerkarten ermöglichen es Teammitgliedern, auf Dienste und Inhalte in einem
 
 Über die Pre-Meeting-App-Umgebung können Sie Besprechungs-Apps suchen und hinzufügen. Sie können auch im Vorfeld der Besprechung Dinge erledigen wie z. B. eine Umfrage erstellen, um die Besprechungsteilnehmer über etwas zu befragen.
 
-**So fügen Sie einer vorhandenen Besprechung Registerkarten hinzu**
+So fügen Sie einer vorhandenen Besprechung Registerkarten hinzu:
 
 1. Wählen Sie in Ihrem Kalender eine Besprechung aus, der Sie eine Registerkarte hinzufügen möchten.
 1. Wählen Sie die Registerkarte **"Details** " aus, und wählen Sie <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. Der Registerkartenkatalog wird angezeigt.
@@ -50,6 +51,7 @@ Registerkarten ermöglichen es Teammitgliedern, auf Dienste und Inhalte in einem
 1. Wählen Sie im Registerkartenkatalog die App aus, die Sie hinzufügen möchten, und führen Sie die erforderlichen Schritte aus. Die App wird als Registerkarte installiert.
 
    > [!NOTE]
+   >
    > * Sie können einer vorhandenen Besprechung auch über die Registerkarte " **Besprechungschat** " eine Registerkarte hinzufügen.
    > * Das Registerkartenlayout muss sich in einem organisierten Zustand befinden, wenn mehr als 10 Umfragen oder Umfragen vorhanden sind.
 
@@ -71,7 +73,7 @@ Nachdem Sie die Registerkarten zu einer vorhandenen Besprechung auf mobilen Ger�
 
 Für mobile Geräte sind Besprechungs-Apps über **Apps** > auslassungspunkte &#x25CF;&#x25CF;&#x25CF; in der Besprechung verfügbar. Wählen Sie **"Apps"** aus, um alle in der Besprechung verfügbaren Apps anzuzeigen.
 
-**So verwenden Sie Registerkarten während einer Besprechung**
+So verwenden Sie Registerkarten während einer Besprechung:
 
 1. Wechseln Sie zu Teams.
 1. Wählen Sie in Ihrem Kalender eine Besprechung aus, in der Sie eine Registerkarte verwenden möchten.
@@ -97,6 +99,7 @@ Das Dialogfeld in der Besprechung wird angezeigt, in dem Sie Ihre Antwort als Fe
 ---
 
 > [!NOTE]
+>
 > * Apps können das Teams Client SDK nutzen, `userMri`um auf das `meetingId`Client-SDK zuzugreifen und `frameContext` die Oberfläche entsprechend zu rendern.
 > * Wenn das Dialogfeld in der Besprechung erfolgreich gerendert wird, wird eine Benachrichtigung gesendet, dass die Ergebnisse erfolgreich heruntergeladen wurden.
 > * Ihr App-Manifest gibt die Stellen an, an denen die Apps angezeigt werden sollen. Dies kann durch Angeben des Kontextfelds im Manifest erfolgen. Sie ist auch Teil einer Gemeinsamen Besprechungsphase, die den angegebenen [Entwurfsrichtlinien](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md) unterliegt.

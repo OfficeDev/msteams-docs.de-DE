@@ -4,12 +4,12 @@ author: surbhigupta
 description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen und verschiedene Besprechungsszenarien, Aktualisieren des App-Manifests, Konfigurieren von Features wie In-Meeting-Dialog, freigegebener Besprechungsphase, Besprechungs-SidePanel und mehr
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 160518c147ac2bc1d1378a3f1bd31fde9de1723c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 99467135f75f46d89b565c4d6a6e4948ab905d7b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355800"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398862"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -24,6 +24,7 @@ Um Ihre App für Teams Besprechungen zu aktivieren, aktualisieren Sie Ihr App-Ma
 Die Funktionen der Besprechungs-App werden in Ihrem App-Manifest mithilfe von `configurableTabs`, `scopes`und `context` Arrays deklariert. Der Bereich definiert, auf wen zugegriffen werden kann, und der Kontext definiert, wo Ihre App verfügbar ist.
 
 > [!NOTE]
+>
 > * Sie müssen Ihr App-Manifest mit dem [Manifestschema](../resources/schema/manifest-schema-dev-preview.md) aktualisieren.
 > * Apps in Besprechungen erfordern den `groupchat` Bereich. Der `team` Bereich funktioniert nur für Registerkarten in Kanälen.
 
@@ -78,7 +79,7 @@ Teams Besprechungen bieten eine Zusammenarbeit für Ihre Organisation. Konfiguri
 
 Vor einer Besprechung können Benutzer Registerkarten, Bots und Messaging-Erweiterungen hinzufügen. Benutzer mit Organisator- und Referentenrollen können einer Besprechung Registerkarten hinzufügen.
 
-**So fügen Sie einer Besprechung eine Registerkarte hinzu**
+So fügen Sie einer Besprechung eine Registerkarte hinzu:
 
 1. Wählen Sie in Ihrem Kalender eine Besprechung aus, der Sie eine Registerkarte hinzufügen möchten.
 1. Wählen Sie die Registerkarte **"Details** " aus, und wählen Sie <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
@@ -87,16 +88,17 @@ Vor einer Besprechung können Benutzer Registerkarten, Bots und Messaging-Erweit
 
 1. Wählen Sie im daraufhin angezeigten Registerkartenkatalog die App aus, die Sie hinzufügen möchten, und führen Sie die erforderlichen Schritte aus. Die App wird als Registerkarte installiert.
 
-**So fügen Sie einer Besprechung eine Messaging-Erweiterung hinzu**
+So fügen Sie einer Besprechung eine Messaging-Erweiterung hinzu:
 
 1. Wählen Sie die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; aus, die sich im Bereich zum Verfassen von Nachrichten im Chat befinden.
 1. Wählen Sie die App aus, die Sie hinzufügen möchten, und führen Sie die Schritte nach Bedarf aus. Die App wird als Messaging-Erweiterung installiert.
 
-**So fügen Sie einer Besprechung einen Bot hinzu**
+So fügen Sie einer Besprechung einen Bot hinzu:
 
 Geben Sie in einem Besprechungschat den **@** Schlüssel ein, und wählen **Sie "Bots abrufen" aus**.
 
 > [!NOTE]
+>
 > * Die Inhaltsblase sendet eine adaptive Karte oder eine Karte gleichzeitig im Besprechungschat, auf den Benutzer zugreifen können. Dies hilft den Benutzern, wenn die Besprechung oder die Teams-App minimiert wird.
 > * Die Benutzeridentität muss mit [tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md) bestätigt werden. Nach der Authentifizierung kann die App die Benutzerrolle mithilfe der `GetParticipant` API abrufen.
 > * Basierend auf der Benutzerrolle kann die App rollenspezifische Benutzeroberflächen bereitstellen. Eine Abruf-App ermöglicht beispielsweise nur Organisatoren und Referenten das Erstellen einer neuen Umfrage.
@@ -156,7 +158,7 @@ Um die gesamte App für die Phase freizugeben, müssen Sie im App-Manifest und `
   ]
 ```
 
-Weitere Informationen finden Sie unter [App-Manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs). 
+Weitere Informationen finden Sie unter [App-Manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
 
 ##### <a name="share-specific-parts-of-the-app-to-stage"></a>Freigeben bestimmter Teile der App für die Phasen
 
@@ -178,7 +180,7 @@ Die Konfigurationen für Nach [- und Vorbesprechungen](#before-a-meeting) sind i
 |----------------|-----------------|--------------|----------------|
 | Besprechungs-App | Veranschaulicht die Verwendung der Besprechungstoken-Generator-App zum Anfordern eines Tokens. Das Token wird sequenziell generiert, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Das Token ist nützlich in Situationen wie Meetings in DerBesprechung und Q&A-Sitzungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |Beispiel für Besprechungsphasen | Beispiel-App zum Anzeigen einer Registerkarte in der Besprechungsphase für die Zusammenarbeit | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
-|Besprechungsseitiger Bereich | Beispiel-App zum Hinzufügen von Tagesordnungen in einem besprechungsseitigen Bereich | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
+|Besprechungsseitiger Bereich | Beispiel-App zum Hinzufügen von Tagesordnungen in einem besprechungsseitigen Bereich | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
 ## <a name="step-by-step-guides"></a>Schritt-für-Schritt-Anleitungen
 

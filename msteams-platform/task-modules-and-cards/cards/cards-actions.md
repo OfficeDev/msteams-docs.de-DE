@@ -4,12 +4,12 @@ description: Beschreibt Kartenaktionen in Microsoft Teams und deren Verwendung i
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: Teams-Bots – Kartenaktionen
-ms.openlocfilehash: 9add163801cee511ccc636ab3abbb95c35b26590
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 756ff357947980ecf4a0c7c88c375c427e016d61
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081058"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398603"
 ---
 # <a name="card-actions"></a>Kartenaktionen
 
@@ -27,6 +27,7 @@ Karten, die von Bots und Messagingerweiterungen in Teams verwendet werden, unter
 | `signin` | Initiiert den OAuth-Fluss, sodass Bots eine Verbindung mit sicheren Diensten herstellen können. |
 
 > [!NOTE]
+>
 >* Teams unterstützt keine `CardAction`-Typen, die in der vorherigen Tabelle nicht aufgeführt sind.
 >* Teams unterstützt die `potentialActions`-Eigenschaft nicht.
 >* Kartenaktionen unterscheiden sich von [vorgeschlagenen Aktionen](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot-Framework oder Azure Bot Service. Vorgeschlagene Aktionen werden in Microsoft Teams nicht unterstützt. Wenn Schaltflächen in einer Teams-Botnachricht angezeigt werden sollen, verwenden Sie eine Karte.
@@ -556,6 +557,7 @@ Der folgende Code zeigt ein Beispiel für adaptive Karten mit `invoke`-Aktion mi
   }
 }
 ```
+
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]

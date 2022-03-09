@@ -4,16 +4,16 @@ description: Erfahren Sie, wie Ihre Microsoft Teams-Apps mit Benutzern per Sprac
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Anrufe Audio Video IVR Voice Online-Besprechungen Echtzeit Medienstreams Bot
-ms.openlocfilehash: 17464683c8a5f6aa515d67be721968d56d1d2fb7
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: a0172bff6487da25ff7d482a24fa797f97b049b6
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889146"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398673"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots für Anrufe und Onlinebesprechungen
 
-Bots können mit Teams Anrufen und Besprechungen in Echtzeit mit Sprach-, Video- und Bildschirmfreigabe interagieren. Mit [Microsoft Graph-APIs für Anrufe und Onlinebesprechungen](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)können Teams Apps jetzt mit Benutzern interagieren, indem sie Sprach- und Videofunktionen verwenden, um die Benutzererfahrung zu verbessern. Mit diesen APIs können Sie die folgenden neuen Features hinzufügen:
+Bots können mit Teams Anrufen und Besprechungen in Echtzeit mit Sprach-, Video- und Bildschirmfreigabe interagieren. Mit [Microsoft Graph-APIs für Anrufe und Onlinebesprechungen](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true) können Teams Apps jetzt mit Benutzern interagieren, indem Sie Sprach- und Videofunktionen verwenden, um die Benutzererfahrung zu verbessern. Mit diesen APIs können Sie die folgenden neuen Features hinzufügen:
 
 * Interaktive Sprachantwort (Interactive Voice Response, IVR).
 * Anrufsteuerung.
@@ -23,7 +23,7 @@ Um diese Graph-APIs in einer Teams-App zu verwenden, erstellen Sie einen Bot und
 
 Darüber hinaus ermöglicht die Echtzeit-Medienplattform Bots die Interaktion mit Teams Anrufen und Besprechungen mithilfe von Echtzeit-Sprach-, Video- und Bildschirmfreigabe. Ein Bot, der an Audio- oder Videoanrufen und Onlinebesprechungen teilnimmt, ist ein regulärer Microsoft Teams Bot mit einigen zusätzlichen Features, die zum Registrieren des Bots verwendet werden.
 
-Mit dem Teams App-Manifest mit zwei zusätzlichen Einstellungen `supportsCalling` und Graph Berechtigungen für die Microsoft App-ID Ihres Bots und der Zustimmung des `supportsVideo` Mandantenadministrators können Sie den Bot registrieren. Bei der Registrierung eines Bots für Anrufe und Besprechungen für Teams wird die Webhook-URL erwähnt, die der Webhook-Endpunkt für alle eingehenden Anrufe an Ihren Bot ist. Für einen von der Anwendung gehosteten Medienbot ist Microsoft erforderlich. Graph. Communications.Calls.Media .NET library to access the audio and video media streams, and the bot must be deployed on a Windows Server machine or Windows Server guest operating system (OS) in Azure. Bots auf Teams unterstützen nur eine bestimmte Gruppe von Medienformaten für Audio- und Videoinhalte.
+Mit dem Teams App-Manifest mit zwei zusätzlichen Einstellungen `supportsCalling` und `supportsVideo`Graph Berechtigungen für die Microsoft App-ID Ihres Bots und der Zustimmung des Mandantenadministrators können Sie den Bot registrieren. Bei der Registrierung eines Bots für Anrufe und Besprechungen für Teams wird die Webhook-URL erwähnt, die der Webhook-Endpunkt für alle eingehenden Anrufe an Ihren Bot ist. Für einen von der Anwendung gehosteten Medienbot ist Microsoft erforderlich. Graph. Communications.Calls.Media .NET library to access the audio and video media streams, and the bot must be deployed on a Windows Server machine or Windows Server guest Operating System (OS) in Azure. Bots auf Teams unterstützen nur eine bestimmte Gruppe von Medienformaten für Audio- und Videoinhalte.
 
 Jetzt müssen Sie einige grundlegende Konzepte, Terminologie und Konventionen verstehen.
 
@@ -70,7 +70,7 @@ Es gibt zwei Arten von Signalen: eingehende Anrufe und Eingehende Anrufe. Es fol
 
 ### <a name="calls-and-online-meetings"></a>Anrufe und Onlinebesprechungen
 
-Aus Sicht eines Teams Benutzers gibt es zwei Arten von Onlinebesprechungen, Ad-hoc-Besprechungen und geplante. Aus Sicht eines Bots sind beide Onlinebesprechungen identisch. Für einen Bot ist eine Onlinebesprechung ein Anruf mit mehreren Teilnehmern zwischen einer Gruppe von Teilnehmern und enthält Besprechungskoordinaten. Besprechungskoordinaten sind die Metadaten für die Besprechung, einschließlich `botId` , der Besprechung zugeordnet `chatId` `joinUrl` `startTime` `endTime` usw.
+Aus sicht eines Teams Benutzers gibt es zwei Arten von Onlinebesprechungen, Ad-hoc-Besprechungen und geplante. Aus Sicht eines Bots sind beide Onlinebesprechungen identisch. Für einen Bot ist eine Onlinebesprechung ein Anruf mit mehreren Teilnehmern zwischen einer Gruppe von Teilnehmern und enthält Besprechungskoordinaten. Besprechungskoordinaten sind die Metadaten für die Besprechung, einschließlich `botId`, der Besprechung `joinUrl``startTime` zugeordnet usw`endTime``chatId`.
 
 ### <a name="real-time-media"></a>Echtzeitmedien
 
@@ -78,21 +78,21 @@ Wenn ein Bot an einem Anruf oder einer Onlinebesprechung teilnimmt, muss er audi
 
 Echtzeitmedien beziehen sich auf Szenarien, in denen Medien in Echtzeit verarbeitet werden müssen, im Gegensatz zur Wiedergabe von zuvor aufgezeichneten Audio- oder Videodaten. Der Umgang mit Mediendatenströmen, insbesondere Echtzeit-Medienstreams, ist äußerst komplex. Microsoft hat die Echtzeitmedienplattform erstellt, um diese Szenarien zu verarbeiten und so viel wie möglich von den herkömmlichen Aufgaben der Echtzeitmedienverarbeitung zu entladen. Wenn der Bot einen eingehenden Anruf entgegennimmt oder einem neuen oder vorhandenen Anruf beitritt, muss er der Echtzeit-Medienplattform mitteilen, wie Medien behandelt werden. Wenn Sie eine IVR-Anwendung erstellen, können Sie die kostspielige Audioverarbeitung an Microsoft auslagern. Alternativ wird auch dieses Szenario unterstützt, wenn Ihr Bot direkten Zugriff auf Medienstreams benötigt. Es gibt zwei Arten der Medienverarbeitung:
 
-* **Vom Dienst gehostete Medien:** Bots konzentrieren sich auf die Verwaltung des Anwendungsworkflows, z. B. das Weiterleiten von Anrufen und das Auslagern der Audioverarbeitung an die Microsoft Real-Time Media Platform. Bei vom Dienst gehosteten Medien stehen Ihnen mehrere Optionen zum Implementieren und Hosten Ihres Bots zur Verfügung. Ein vom Dienst gehosteter Medienbot kann als statusfreier Dienst implementiert werden, da er keine Medien lokal verarbeitet. Vom Dienst gehostete Medienbots können die folgenden APIs verwenden:
+* **Vom Dienst gehostete Medien**: Bots konzentrieren sich auf die Verwaltung des Anwendungsworkflows, z. B. das Weiterleiten von Anrufen und das Auslagern der Audioverarbeitung an die Microsoft Real-Time Media Platform. Bei vom Dienst gehosteten Medien stehen Ihnen mehrere Optionen zum Implementieren und Hosten Ihres Bots zur Verfügung. Ein vom Dienst gehosteter Medienbot kann als statusfreier Dienst implementiert werden, da er keine Medien lokal verarbeitet. Vom Dienst gehostete Medienbots können die folgenden APIs verwenden:
 
-    * `PlayPrompt` zum Wiedergeben eines Audioclips.
-    * `Record` für die Aufzeichnung von Audioclips.
-    * `SubscribeToTone` zum Abonnieren von DTMF-Tönen (Dual Tone Multiple Frequency).
+  * `PlayPrompt` zum Wiedergeben eines Audioclips.
+  * `Record` für die Aufzeichnung von Audioclips.
+  * `SubscribeToTone` zum Abonnieren von DTMF-Tönen (Dual Tone Multiple Frequency).
 
     Beispielsweise wissen, wann ein Benutzer **0** gedrückt hat, um den Operator zu erreichen.
 
-* In der **Anwendung gehostete Medien:** Damit ein Bot direkten Zugriff auf die Medien erhält, benötigt er eine bestimmte Graph Berechtigung. Nachdem Ihr Bot über die Berechtigung verfügt, hilft Ihnen die [Real-Time Media Library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)und das [Graph aufrufende SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) beim Erstellen umfangreicher Echtzeitmedien und aufrufenden Bots. Ein in der Anwendung gehosteter Bot muss in einer Windows-Umgebung gehostet werden. Weitere Informationen finden Sie unter [von der Anwendung gehostete Medienbots.](./requirements-considerations-application-hosted-media-bots.md)
+* **In der Anwendung gehostete Medien**: Damit ein Bot direkten Zugriff auf die Medien erhält, benötigt er eine bestimmte Graph Berechtigung. Nachdem Ihr Bot über die Berechtigung verfügt, hilft Ihnen die [Echtzeit-Medienbibliothek](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) und das [Graph aufrufenden SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) beim Erstellen umfangreicher Echtzeitmedien und aufrufenden Bots. Ein in der Anwendung gehosteter Bot muss in einer Windows-Umgebung gehostet werden. Weitere Informationen finden Sie unter [von der Anwendung gehostete Medienbots](./requirements-considerations-application-hosted-media-bots.md).
 
 ## <a name="code-sample"></a>Codebeispiel
 
 | **Beispielname** | **Beschreibung** | **Graph** |
 |---------------|----------|--------|
-| Graph Kommunikation | Graph Kommunikation für die Interaktion mit der Kommunikationsplattform von Microsoft. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
+| Graph Kommunikation | Graph Kommunikation, um mit der Kommunikationsplattform von Microsoft zu interagieren. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 | Anruf- und Besprechungsbot | Die Beispiel-App zeigt, wie Bot Anrufe erstellen, an Besprechungen teilnehmen und Anrufe übertragen kann. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="next-step"></a>Nächster Schritt
@@ -102,10 +102,10 @@ Echtzeitmedien beziehen sich auf Szenarien, in denen Medien in Echtzeit verarbei
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Graph API-Referenz](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
-- [Beispielapps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-- [Registrieren eines Bots, der Anrufe und Onlinebesprechungen unterstützt](./registering-calling-bot.md)
-- [Graph Berechtigungen für Anruf- und Onlinebesprechungs-Bots](./registering-calling-bot.md#add-graph-permissions)
-- [So entwickeln Sie Anruf- und Onlinebesprechungs-Bots auf Ihrem Computer](./debugging-local-testing-calling-meeting-bots.md)
-- [Anforderungen und Überlegungen für von der Anwendung gehostete Medienbots](./requirements-considerations-application-hosted-media-bots.md)
-- [Technische Informationen zur Behandlung eingehender Anrufbenachrichtigungen](./call-notifications.md)
+* [Graph API-Referenz](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+* [Beispielapps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+* [Registrieren eines Bots, der Anrufe und Onlinebesprechungen unterstützt](./registering-calling-bot.md)
+* [Graph Berechtigungen für Anruf- und Onlinebesprechungs-Bots](./registering-calling-bot.md#add-graph-permissions)
+* [So entwickeln Sie Anruf- und Onlinebesprechungs-Bots auf Ihrem Computer](./debugging-local-testing-calling-meeting-bots.md)
+* [Anforderungen und Überlegungen für von der Anwendung gehostete Medienbots](./requirements-considerations-application-hosted-media-bots.md)
+* [Technische Informationen zur Behandlung eingehender Anrufbenachrichtigungen](./call-notifications.md)

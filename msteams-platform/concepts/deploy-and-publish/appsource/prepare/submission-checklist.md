@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: Verteilen von Validierungsrichtlinien für App-Pakete im Übermittlungsspeicher lokalisieren
-ms.openlocfilehash: 579744dc8081eb8ca3e967cce1b4d696350d0a56
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: da0daf5daf927dcaf4346171fe78c3db6e874259
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356427"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398946"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Vorbereiten der Übermittlung an den Microsoft Teams Store
 
@@ -24,7 +24,7 @@ Bevor Sie Ihre App an [Partner Center](/office/dev/store/use-partner-center-to-s
 Während Ihre App möglicherweise in einer Testumgebung funktioniert, sollten Sie Ihr App-Paket überprüfen, um Probleme während des Übermittlungsprozesses zu vermeiden.
 
 > [!NOTE]
->  App Studio wird in Kürze eingestellt. Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps mit dem neuen [Entwicklerportal](https://dev.teams.microsoft.com/)
+> App Studio wird in Kürze eingestellt. Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps mit dem neuen [Entwicklerportal](https://dev.teams.microsoft.com/)
 
 Das Microsoft Teams App-Überprüfungstool hilft Ihnen, Probleme zu identifizieren und zu beheben, bevor Sie an Partner Center übermitteln. Das Tool überprüft die Konfigurationen Ihrer App automatisch anhand der gleichen Testfälle, die während der Store-Überprüfung verwendet werden.
 
@@ -36,6 +36,7 @@ Das Microsoft Teams App-Überprüfungstool hilft Ihnen, Probleme zu identifizier
 ## <a name="compile-testing-instructions"></a>Kompilieren von Testanweisungen
 
 Stellen Sie Anweisungen und Ressourcen bereit, um die Prüfer beim Testen Ihrer App zu unterstützen, einschließlich:
+
 * Testkonten
 * Anmeldeinformationen
 * Lizenzschlüssel
@@ -188,7 +189,7 @@ Während der Übermittlung werden Sie aufgefordert, Ihre App zu kategorisieren. 
 |:---------------------|:---------------|
 | Analyse und BI | Analyse, Datenvisualisierung und BI |
 | Entwickler und IT | Entwicklertools, IT-Administrator |
-| Education | Education |
+| Bildung | Bildung |
 | Personalwesen | Personal und Personalwesen |
 | Produktivität | Inhaltsverwaltung, Dateien und Dokumente, Produktivität, Schulungen und Lernprogramme und Hilfsprogramme |
 | Projektmanagement | Kommunikations-, Project-, Workflow- und Unternehmensverwaltung |

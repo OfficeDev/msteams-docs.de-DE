@@ -4,27 +4,27 @@ description: Beschreibung von Karten und deren Verwendung in Bots, Connectors un
 ms.localizationpriority: high
 keywords: Connectors Bots Karten Messaging
 ms.topic: overview
-ms.openlocfilehash: 7ab05607e7c5abf897c790bb777e5c697edc9e08
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 249a83c8a41ddfa3a7409ce897238389114db165
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821584"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398652"
 ---
 # <a name="cards"></a>Karten
 
 Bei einer Karte handelt es sich um einen Benutzeroberflächencontainer für kurze oder verknüpfte Informationen. Karten können mehrere Eigenschaften und Anhänge aufweisen sowie Schaltflächen enthalten, über die [Kartenaktionen](~/task-modules-and-cards/cards/cards-actions.md) ausgelöst werden können. Mithilfe von Karten können Sie Informationen in Gruppen organisieren und Benutzern die Möglichkeit geben, mit bestimmten Teilen der Informationen zu interagieren.
 
 Die Bots für Microsoft Teams unterstützen die folgenden Arten von Karten:
- 
-- Adaptive Karte
-- Hero-Karte
-- Listenkarte
-- Office 365-Connectorkarte
-- Belegkarte
-- Anmeldekarte
-- Miniaturbildkarte
-- Kartensammlungen
+
+* Adaptive Karte
+* Hero-Karte
+* Listenkarte
+* Office 365-Connectorkarte
+* Belegkarte
+* Anmeldekarte
+* Miniaturbildkarte
+* Kartensammlungen
 
 Je nach Kartentyp können Sie Ihren Karten Rich-Text-Formatierung mittels Markdown oder HTML hinzufügen. Karten, die von Bots und Messaging-Erweiterungen in Microsoft Teams verwendet werden, fügen die folgenden Kartenaktionen hinzu bzw. reagieren darauf: `openUrl`, `messageBack`, `imBack`, `invoke` und `signin`.
 
@@ -63,21 +63,22 @@ Neben adaptiven Karten unterstützt Microsoft Teams noch zwei andere Arten von K
 
 ### <a name="people-picker-in-adaptive-cards"></a>Personenauswahl in adaptiven Karten
 
-Die [Personenauswahl](cards/people-picker.md#people-picker-in-adaptive-cards), die als Eingabesteuerelement adaptiven Karten hinzugefügt wurde, ermöglicht die Suche und Auswahl von Personen. Sie können sie in Chats, Kanälen, Aufgabenmodulen und Registerkarten verwenden. Mobilgeräte- und Desktopclients unterstützen die Personenauswahl, die eine Inlineeingabe ermöglicht. 
+Die [Personenauswahl](cards/people-picker.md#people-picker-in-adaptive-cards), die als Eingabesteuerelement adaptiven Karten hinzugefügt wurde, ermöglicht die Suche und Auswahl von Personen. Sie können sie in Chats, Kanälen, Aufgabenmodulen und Registerkarten verwenden. Mobilgeräte- und Desktopclients unterstützen die Personenauswahl, die eine Inlineeingabe ermöglicht.
 
 ### <a name="type-ahead-search-in-adaptive-cards"></a>Vorschlagssuche in adaptiven Karten  
 
-Die Vorschlagssuche, die als Eingabesteuerelement adaptiven Karten hinzugefügt wurde, liefert eine [dynamische Suchfunktion](~/task-modules-and-cards/cards/dynamic-search.md) über ein dynamisch geladenes Dataset. Darüber hinaus können Benutzer innerhalb einer Liste mit einer begrenzten Anzahl von Auswahlmöglichkeiten eine statische Vorschlagssuche durchführen. Mobilgeräte- und Desktopclients unterstützen die dynamische Vorschlagssuche. 
+Die Vorschlagssuche, die als Eingabesteuerelement adaptiven Karten hinzugefügt wurde, liefert eine [dynamische Suchfunktion](~/task-modules-and-cards/cards/dynamic-search.md) über ein dynamisch geladenes Dataset. Darüber hinaus können Benutzer innerhalb einer Liste mit einer begrenzten Anzahl von Auswahlmöglichkeiten eine statische Vorschlagssuche durchführen. Mobilgeräte- und Desktopclients unterstützen die dynamische Vorschlagssuche.
 
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>Adaptive Karten und eingehende Webhooks
 
 > [!NOTE]
+>
 > * Alle systemeigenen Schemaelemente adaptiver Karten, mit Ausnahme von `Action.Submit`, werden vollständig unterstützt.
 > * Die unterstützten Aktionen sind [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)und [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
 Mit adaptiven Karten mit eingehenden Webhooks können Sie die umfangreichen und flexiblen Funktionen adaptiver Karten nutzen. Dabei werden Daten mithilfe eingehender Webhooks in Microsoft Teams über ihren Webdienst gesendet.
 
-## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>Unterstützung für Azure AD Objekt-ID und UPN in Benutzererwähnung 
+## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>Unterstützung für Azure AD Objekt-ID und UPN in Benutzererwähnung
 
 Bots mit adaptiven Karten unterstützen Benutzererwähnungs-IDs, z. B. Microsoft Azure Active Directory (Azure AD)-Objekt-IDs und den Benutzerprinzipalnamen (User Principle Name, UPN) zusätzlich zu den bestehenden IDs. Eingehende Webhooks beginnen mit der Unterstützung der Benutzererwähnung in der adaptiven Karte mit der Azure AD-Objekt-ID und dem UPN.
 

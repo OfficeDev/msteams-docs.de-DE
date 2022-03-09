@@ -6,12 +6,12 @@ keywords: Teams-Office365-Connector
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 880bede3a33d974c8424bdcaeb8e250bdc97edca
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 9914f721e155f01a05813441587d0d1ea71e09ae
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356098"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399198"
 ---
 # <a name="create-office-365-connectors"></a>Erstellen von Office 365-Connectors
 
@@ -37,12 +37,13 @@ Benutzer können die gesamte Connectorkonfiguration abschließen, ohne den Teams
 1. Der Benutzer wählt **"Speichern"** aus, wodurch ein Rückruf im Code ausgelöst wird.
 
     > [!NOTE]
+    >
     > * Der Code kann das Speicherereignis verarbeiten, indem die Webhook-Einstellungen abgerufen werden. Ihr Code speichert den Webhook, um Ereignisse später zu posten.
     > * Die Konfigurationsoberfläche wird inline in Teams geladen.
 
 Sie können Ihre vorhandene Webkonfiguration wiederverwenden oder eine separate Version erstellen, die speziell in Teams gehostet werden soll. Ihr Code muss das Microsoft Teams JavaScript SDK enthalten. Dadurch erhält Ihr Code Zugriff auf APIs, um allgemeine Vorgänge auszuführen, z. B. den aktuellen Benutzer-, Kanal- oder Teamkontext abzurufen und Authentifizierungsflüsse zu initiieren.
 
-**So integrieren Sie die Konfigurationsumgebung**
+So integrieren Sie die Konfigurationsumgebung:
 
 1. Initialisieren Sie das SDK durch Aufrufen von `microsoftTeams.initialize()`.
 1. Aufruf `microsoftTeams.settings.setValidityState(true)` zum Aktivieren von **"Speichern"**.
@@ -143,9 +144,9 @@ Die folgende Tabelle enthält die Parameter und die Details der `GetSetting` Ant
 
 Ihr Code muss Benutzer verarbeiten, die zurückkehren, um eine vorhandene Connectorkonfiguration zu bearbeiten. Rufen `microsoftTeams.settings.setSettings()` Sie dazu während der Anfänglichen Konfiguration die folgenden Parameter auf:
 
-- `entityId` ist die benutzerdefinierte ID, die darstellt, was der Benutzer von Ihrem Dienst konfiguriert und verstanden hat.
-- `configName` ist ein Name, den Konfigurationscode abrufen kann.
-- `contentUrl` ist eine benutzerdefinierte URL, die geladen wird, wenn ein Benutzer eine vorhandene Connectorkonfiguration bearbeitet.
+* `entityId` ist die benutzerdefinierte ID, die darstellt, was der Benutzer von Ihrem Dienst konfiguriert und verstanden hat.
+* `configName` ist ein Name, den Konfigurationscode abrufen kann.
+* `contentUrl` ist eine benutzerdefinierte URL, die geladen wird, wenn ein Benutzer eine vorhandene Connectorkonfiguration bearbeitet.
 
 Dieser Aufruf erfolgt als Teil des Speicherereignishandlers. Wenn der `contentUrl` Code geladen wird, muss er dann aufgerufen `getSettings()` werden, um alle Einstellungen oder Formulare in der Konfigurationsbenutzeroberfläche vorab auszufüllen.
 
@@ -218,7 +219,7 @@ Führen Sie die folgenden Befehle in Exchange Online PowerShell aus:
 * So deaktivieren Sie Connectors für den Mandanten: `Set-OrganizationConfig -ConnectorsEnabled:$false`.
 * So deaktivieren Sie Nachrichten mit Aktionen für den Mandanten: `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false`.
 * Führen Sie die folgenden Befehle aus, um Connectors für Teams zu aktivieren:
-  * `Set-OrganizationConfig -ConnectorsEnabled:$true `
+  * `Set-OrganizationConfig -ConnectorsEnabled:$true`
   * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
   * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
@@ -243,7 +244,7 @@ Wenn der Connector nur für die Benutzer in Ihrer Organisation verfügbar sein s
 
 Nachdem Sie das App-Paket hochgeladen haben, um den Connector in einem Team zu konfigurieren und zu verwenden, installieren Sie den Connector aus dem App-Katalog der Organisation.
 
-**So richten Sie einen Connector ein**
+So richten Sie einen Connector ein:
 
 1. Wählen Sie in der linken Navigationsleiste **Apps** aus.
 1. Wählen Sie im Abschnitt **"Apps** " **Connectors aus**.
@@ -269,8 +270,8 @@ Die folgende Tabelle enthält den Beispielnamen und dessen Beschreibung:
 
 |**Beispielname** | **Beschreibung** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Connectors    | Beispiel für Office 365 Connector, der Benachrichtigungen an Teams Kanal generiert.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
-| Beispiel für generische Connectors |Beispielcode für einen generischen Connector, der für jedes System, das Webhooks unterstützt, einfach angepasst werden kann.|  | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+| Connectors | Beispiel für Office 365 Connector, der Benachrichtigungen an Teams Kanal generiert.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| Beispiel für generische Connectors |Beispielcode für einen generischen Connector, der für jedes System, das Webhooks unterstützt, einfach angepasst werden kann.| | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## <a name="see-also"></a>Siehe auch
 

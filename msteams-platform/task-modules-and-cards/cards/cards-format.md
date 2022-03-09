@@ -5,16 +5,17 @@ keywords: Kartenformat für Teams-Bots
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b0d171134b58606a2d9eefa81bf1b5c16d27138e
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 0c374904c122cfd9c35680763b3fccd30fea6bbb
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356441"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398736"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatieren von Karten in Microsoft Teams
 
 Im Folgenden werden die beiden Möglichkeiten zum Hinzufügen von Rich-Text-Formatierungen für Ihre Karten beschrieben:
+
 * [Markdown](#format-cards-with-markdown)
 * [HTML](#format-cards-with-html)
 
@@ -124,13 +125,14 @@ Adaptive Karten unterstützen Emoji. Der folgende Code zeigt ein Beispiel für A
 
 :::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="Adaptive Karte mit einem Emoji" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
 
-### <a name="mention-support-within-adaptive-cards"></a>Unterstützung von Erwähnungen innerhalb adaptiver Karten 
+### <a name="mention-support-within-adaptive-cards"></a>Unterstützung von Erwähnungen innerhalb adaptiver Karten
 
 Sie können @erwähnen in einem Textblock einer adaptiven Karte für Bots und Messaging-Erweiterungsantworten hinzufügen. Um @erwähnen in Karten hinzuzufügen, folgen Sie der gleichen Benachrichtigungslogik und demselben Rendering wie bei nachrichtenbasierten [Erwähnungen in Kanal- und Gruppenchatunterhaltungen](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
 Bots und Messaging-Erweiterungen können Erwähnungen innerhalb des Karteninhalts in den Elementen [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) und [FactSet](https://adaptivecards.io/explorer/FactSet.html) enthalten.
 
 > [!NOTE]
+>
 > * [Medienelemente](https://adaptivecards.io/explorer/Media.html) werden in adaptiven Karten auf der Teams-Plattform derzeit nicht unterstützt.
 > * Kanal- und Teamerwähnungen werden in Botnachrichten nicht unterstützt.
 
@@ -173,29 +175,29 @@ Der folgende Code zeigt ein Beispiel einer adaptiven Karte mit einer Erwähnung:
 }
 ```
 
-### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>Microsoft Azure Active Directory(Azure AD)-Objekt-ID und UPN in Benutzererwähnung 
+### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>Microsoft Azure Active Directory(Azure AD)-Objekt-ID und UPN in Benutzererwähnung
 
-Die Teams-Plattform ermöglicht es, Benutzer mit ihrer Azure AD-Objekt-ID und dem Benutzerprinzipalnamen (User Principle Name, UPN) zu erwähnen, zusätzlich zu den bestehenden Erwähnungs-IDs. Bots mit adaptiven Karten und Connectors mit eingehenden Webhooks unterstützen die zwei Benutzererwähnungs-IDs. 
+Die Teams-Plattform ermöglicht es, Benutzer mit ihrer Azure AD-Objekt-ID und dem Benutzerprinzipalnamen (User Principle Name, UPN) zu erwähnen, zusätzlich zu den bestehenden Erwähnungs-IDs. Bots mit adaptiven Karten und Connectors mit eingehenden Webhooks unterstützen die zwei Benutzererwähnungs-IDs.
 
 In der folgenden Tabelle werden die neu unterstützten Benutzererwähnungs-IDs beschrieben:
 
-|IDs  | Unterstützende Funktionen |   Beschreibung | Beispiel |
+|IDs  | Unterstützende Funktionen | Beschreibung | Beispiel |
 |----------|--------|---------------|---------|
-| Azure AD-Objekt-ID | Bot, Connector |  Objekt-ID des Azure AD-Benutzers |    49c4641c-ab91-4248-aebb-6a7de286397b |
+| Azure AD-Objekt-ID | Bot, Connector |  Objekt-ID des Azure AD-Benutzers | 49c4641c-ab91-4248-aebb-6a7de286397b |
 | UPN | Bot, Connector | UPN des Azure AD-Benutzers | john.smith@microsoft.com |
 
-#### <a name="user-mention-in-bots-with-adaptive-cards"></a>Benutzererwähnung in Bots mit adaptiven Karten 
+#### <a name="user-mention-in-bots-with-adaptive-cards"></a>Benutzererwähnung in Bots mit adaptiven Karten
 
-Bots unterstützen die Benutzererwähnung mit der Azure AD-Objekt-ID und dem UPN, zusätzlich zu den vorhandenen IDs. Die Unterstützung für zwei neue IDs ist in Bots für Textnachrichten, adaptiven Kartentext und die Messaging-Erweiterungsantwort verfügbar. Bots unterstützen die Erwähnungs-IDs in Unterhaltungen und `invoke`-Szenarien. Der Benutzer erhält eine Aktivitätsfeedbenachrichtigung, wenn er mit den IDs @erwähnt wird. 
+Bots unterstützen die Benutzererwähnung mit der Azure AD-Objekt-ID und dem UPN, zusätzlich zu den vorhandenen IDs. Die Unterstützung für zwei neue IDs ist in Bots für Textnachrichten, adaptiven Kartentext und die Messaging-Erweiterungsantwort verfügbar. Bots unterstützen die Erwähnungs-IDs in Unterhaltungen und `invoke`-Szenarien. Der Benutzer erhält eine Aktivitätsfeedbenachrichtigung, wenn er mit den IDs @erwähnt wird.
 
 > [!NOTE]
 > Schemaupdates und Änderungen der Benutzeroberfläche/-erfahrung sind für Benutzererwähnungen mit adaptiven Karten im Bot nicht erforderlich.
 
-##### <a name="example"></a>Beispiel 
+##### <a name="example"></a>Beispiel
 
 Beispiel für die Benutzererwähnung in Bots mit adaptiven Karten wie folgt:
 
-```json 
+```json
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "version": "1.0",
@@ -233,15 +235,16 @@ Die folgende Abbildung veranschaulicht die Benutzererwähnung mit adaptiver Kart
 
 ![Benutzererwähnung im Bot mit adaptiver Karte](~/assets/images/authentication/user-mention-in-bot.png)
 
-#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Benutzererwähnung im eingehenden Webhook mit adaptiven Karten 
+#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Benutzererwähnung im eingehenden Webhook mit adaptiven Karten
 
 Eingehende Webhooks beginnen mit der Unterstützung der Benutzererwähnung in adaptiven Karten mit der Azure AD-Objekt-ID und dem UPN.
 
-> [!NOTE]    
-> * Aktivieren Sie die Benutzererwähnung im Schema für eingehende Webhooks, um die Azure AD-Objekt-ID und den UPN zu unterstützen. 
-> * Änderungen der Benutzeroberfläche/-erfahrung sind für Benutzererwähnungen mittels Azure AD-Objekt-ID und UPN nicht erforderlich.      
+> [!NOTE]
+>
+> * Aktivieren Sie die Benutzererwähnung im Schema für eingehende Webhooks, um die Azure AD-Objekt-ID und den UPN zu unterstützen.
+> * Änderungen der Benutzeroberfläche/-erfahrung sind für Benutzererwähnungen mittels Azure AD-Objekt-ID und UPN nicht erforderlich.
 
-##### <a name="example"></a>Beispiel 
+##### <a name="example"></a>Beispiel
 
 Beispiel für die Benutzererwähnung im eingehenden Webhook wie folgt:
 
@@ -417,6 +420,7 @@ Das Bild wird in der Bühnenansicht angezeigt, wenn der Benutzer das Erweiterung
 In der Bühnenansicht können Benutzer das Bild vergrößern und verkleinern. Sie können die Bilder auf Ihrer adaptiven Karte auswählen, die über diese Funktion verfügen muss.
 
 > [!NOTE]
+>
 > * Die Funktion zum Vergrößern und Verkleinern gilt nur für Bildelemente, die in einer adaptiven Karte den Typ „Bild“ aufweisen.
 > * Für mobile Teams-Apps ist die Funktionen der Bühnenansicht für Bilder in adaptiven Karten standardmäßig verfügbar. Benutzer können adaptive Kartenbilder in der Bühnenansicht anzeigen, indem sie einfach auf das Bild tippen, unabhängig davon, ob das `allowExpand`-Attribut vorhanden ist oder nicht.
 
@@ -427,7 +431,7 @@ Connector-Karten unterstützen eingeschränkte Markdown- und HTML-Formatierung.
 | Format | Beispiel | Markdown |
 | --- | --- | --- |
 | Fett | **text** | `**text**` |
-| Kursiv | *text* | `*text*` |
+| Kursiv | _text_ | `*text*` |
 | Header (Stufe 1&ndash;3) | **Text** | `### Text`|
 | Durchgestrichen | ~~text~~ | `~~text~~` |
 | Unsortierte Liste | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
@@ -525,7 +529,7 @@ Connector-Karten unterstützen eingeschränkte Markdown- und HTML-Formatierung.
 | Format | Beispiel | HTML |
 | --- | --- | --- |
 | Fett | **text** | `<strong>text</strong>` |
-| Kursiv | *text* | `<em>text</em>` |
+| Kursiv | _text_ | `<em>text</em>` |
 | Header (Stufe 1&ndash;3) | **Text** | `<h3>Text</h3>` |
 | Durchgestrichen | ~~text~~ | `<strike>text</strike>` |
 | Unsortierte Liste | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
@@ -615,7 +619,7 @@ HTML-Tags werden für einfache Karten unterstützt, z. B. Hero- und Miniaturansi
 | Format | Beispiel | HTML |
 | --- | --- | --- |
 | Fett | **text** | `<strong>text</strong>` |
-| Kursiv | *text* | `<em>text</em>` |
+| Kursiv | _text_ | `<em>text</em>` |
 | Header (Stufe 1&ndash;3) | **Text** | `<h3>Text</h3>` |
 | Durchgestrichen | ~~text~~ | `<strike>text</strike>` |
 | Unsortierte Liste | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |

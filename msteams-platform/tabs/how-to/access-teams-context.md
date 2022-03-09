@@ -4,12 +4,12 @@ description: Beschreibt, wie Sie Benutzerkontext zu Ihren Registerkarten abrufen
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams Registerkarten Benutzerkontext
-ms.openlocfilehash: 4c18ba7f7e7dbb90f6a357a567b2b6145afcd827
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: b4e693e127b06469a1f31a486fa8db9cc7ab4ba5
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356266"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398806"
 ---
 # <a name="get-context-for-your-tab"></a>Kontext für Ihre Registerkarte erhalten
 
@@ -24,7 +24,7 @@ Ihre Registerkarte erfordert Kontextinformationen, um relevante Inhalte anzuzeig
 Der Kontext über den Benutzer, das Team oder das Unternehmen kann besonders hilfreich sein, wenn:
 
 * Sie erstellen ressourcen in Ihrer App oder ordnen sie dem angegebenen Benutzer oder Team zu.
-* Sie initiieren einen Authentifizierungsfluss von Microsoft Azure Active Directory (Azure AD) oder einem anderen Identitätsanbieter, und Sie müssen den Benutzer nicht erneut eingeben. 
+* Sie initiieren einen Authentifizierungsfluss von Microsoft Azure Active Directory (Azure AD) oder einem anderen Identitätsanbieter, und Sie müssen den Benutzer nicht erneut eingeben.
 
 Weitere Informationen finden Sie unter [Authentifizieren eines Benutzers in Ihrem Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -115,7 +115,7 @@ Der folgende Code enthält ein Beispiel für eine Kontextvariable:
 
 ## <a name="retrieve-context-in-private-channels"></a>Abrufen von Kontext in privaten Kanälen
 
-Wenn Ihre Inhaltsseite in einem privaten Kanal geladen wird, werden die Daten, die `getContext` Sie vom Anruf erhalten, verborgen, um den Datenschutz des Kanals zu schützen. 
+Wenn Ihre Inhaltsseite in einem privaten Kanal geladen wird, werden die Daten, die `getContext` Sie vom Anruf erhalten, verborgen, um den Datenschutz des Kanals zu schützen.
 
 Die folgenden Felder werden geändert, wenn sich Die Inhaltsseite in einem privaten Kanal befindet:
 
@@ -133,7 +133,7 @@ Wenn Ihre Seite einen dieser Werte verwendet, muss der Wert des `channelType` Fe
 > [!NOTE]
 > Derzeit befinden sich Microsoft Teams Verbinden freigegebenen Kanäle nur in der [Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md).
 
-Wenn Ihre Inhaltsseite in einem Microsoft Teams Verbinden freigegebenen Kanal geladen wird, werden die Daten, die `getContext` Sie vom Anruf erhalten, aufgrund der eindeutigen Liste der Benutzer in freigegebenen Kanälen geändert. 
+Wenn Ihre Inhaltsseite in einem Microsoft Teams Verbinden freigegebenen Kanal geladen wird, werden die Daten, die `getContext` Sie vom Anruf erhalten, aufgrund der eindeutigen Liste der Benutzer in freigegebenen Kanälen geändert.
 
 Die folgenden Felder werden geändert, wenn sich Die Inhaltsseite in einem freigegebenen Kanal befindet:
 

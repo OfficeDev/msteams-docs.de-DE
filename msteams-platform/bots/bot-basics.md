@@ -6,32 +6,32 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: Ereignis des Bot-Karten-Zustimmungskanals für das Aktivitätshandlerframework
-ms.openlocfilehash: af6823a0a1395c5f33af9d914c3199d76854a050
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 5094ce68aae25cb4c22c3b0b3b3b3d39e565e4ab
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435796"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398645"
 ---
 # <a name="bot-activity-handlers"></a>Bot-Aktivitätenhandler
 
-Dieses Dokument baut auf dem Artikel zur [Funktionsweise von Bots in der Grundlegenden](https://aka.ms/how-bots-work) [Bot Framework-Dokumentation](https://aka.ms/azure-bot-service-docs) auf. Der Hauptunterschied zwischen Bots, die für Microsoft Teams entwickelt wurden, und dem Core Bot Framework sind die Features, die in Teams bereitgestellt werden.
+Dieses Dokument baut auf dem Artikel zur [Funktionsweise von Bots in der Grundlegenden](https://aka.ms/how-bots-work) [Bot Framework-Dokumentation](https://aka.ms/azure-bot-service-docs) auf. Der Hauptunterschied zwischen Bots, die für Microsoft Teams entwickelt wurden, und dem Core Bot Framework sind die In Teams bereitgestellten Features.
 
-Um die Unterhaltungslogik für Ihren Bot zu organisieren, wird ein Aktivitätshandler verwendet. Aktivitäten werden auf zwei Arten mit Teams Aktivitätshandlern und Botlogik behandelt. Der Teams-Aktivitätshandler fügt Unterstützung für Microsoft Teams-spezifische Ereignisse und Interaktionen hinzu. Das Bot-Objekt enthält die unterhaltungsbezogene Logik oder Logik für eine Drehung und macht einen Turnhandler verfügbar, der die Methode ist, die eingehende Aktivitäten vom Botadapter akzeptieren kann.
+Um die Unterhaltungslogik für Ihren Bot zu organisieren, wird ein Aktivitätshandler verwendet. Aktivitäten werden mithilfe von Teams Aktivitätshandlern und Botlogik auf zwei Arten behandelt. Der Teams-Aktivitätshandler fügt Unterstützung für Microsoft Teams-spezifische Ereignisse und Interaktionen hinzu. Das Bot-Objekt enthält die unterhaltungsbezogene Logik oder Logik für eine Drehung und macht einen Turnhandler verfügbar, der die Methode ist, die eingehende Aktivitäten vom Botadapter akzeptieren kann.
 
 ## <a name="teams-activity-handlers"></a>Teams-Aktivitätshandler
 
-Teams Aktivitätshandler wird vom Aktivitätshandler Microsoft Bot Framework abgeleitet. Es leitet alle Teams Aktivitäten weiter, bevor nicht Teams bestimmte Aktivitäten behandelt werden können.
+Teams Aktivitätshandler wird vom Aktivitätshandler Microsoft Bot Framework abgeleitet. Es leitet alle Teams Aktivitäten weiter, bevor nicht Teams bestimmte Aktivitäten verarbeitet werden können.
 
 Wenn ein Bot für Teams eine Aktivität empfängt, wird er an die Aktivitätshandler weitergeleitet. Alle Aktivitäten werden über einen Basishandler weitergeleitet, der als Turnhandler bezeichnet wird. Der Turnhandler ruft den erforderlichen Aktivitätshandler auf, um empfangene Aktivitäten zu verwalten. Der Teams Bot wird von der `TeamsActivityHandler` Klasse abgeleitet, die von der Klasse des Bot-Frameworks `ActivityHandler` abgeleitet wird.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-Bots werden mithilfe des Bot Frameworks erstellt. Wenn die Bots eine Nachrichtenaktivität erhalten, erhält der Turnhandler eine Benachrichtigung über diese eingehende Aktivität. Der Turnhandler sendet dann die eingehende Aktivität an den Aktivitätshandler `OnMessageActivityAsync` . In Teams bleibt diese Funktionalität unverändert. Wenn der Bot eine Unterhaltungsaktualisierungsaktivität empfängt, empfängt der Turnhandler eine Benachrichtigung über diese eingehende Aktivität und sendet die eingehende Aktivität an `OnConversationUpdateActivityAsync`. Der Teams-Aktivitätshandler überprüft zuerst nach Teams bestimmten Ereignissen. Wenn keine Ereignisse gefunden werden, werden diese an den Aktivitätshandler des Bot-Frameworks übergeben.
+Bots werden mithilfe des Bot Frameworks erstellt. Wenn die Bots eine Nachrichtenaktivität erhalten, erhält der Turnhandler eine Benachrichtigung über diese eingehende Aktivität. Der Turnhandler sendet dann die eingehende Aktivität an den Aktivitätshandler `OnMessageActivityAsync` . In Teams bleibt diese Funktionalität unverändert. Wenn der Bot eine Unterhaltungsaktualisierungsaktivität empfängt, empfängt der Turnhandler eine Benachrichtigung über diese eingehende Aktivität und sendet die eingehende Aktivität an `OnConversationUpdateActivityAsync`. Der Teams Aktivitätshandler überprüft zuerst nach Teams bestimmten Ereignissen. Wenn keine Ereignisse gefunden werden, werden diese an den Aktivitätshandler des Bot-Frameworks übergeben.
 
-In der Teams Aktivitätshandlerklasse gibt es zwei primäre Teams Aktivitätshandler `OnConversationUpdateActivityAsync` und `OnInvokeActivityAsync`. `OnConversationUpdateActivityAsync`leitet alle Unterhaltungsaktualisierungsaktivitäten weiter und `OnInvokeActivityAsync` leitet alle Teams Aufrufen von Aktivitäten weiter.
+In der Teams Aktivitätshandlerklasse gibt es zwei primäre Teams Aktivitätshandler und `OnConversationUpdateActivityAsync` `OnInvokeActivityAsync`. `OnConversationUpdateActivityAsync`leitet alle Unterhaltungsaktualisierungsaktivitäten weiter und `OnInvokeActivityAsync` leitet alle Teams Aufrufen von Aktivitäten weiter.
 
-Um Ihre Logik für Teams bestimmte Aktivitätshandler zu implementieren, müssen Sie die Methoden in Ihrem Bot außer Kraft setzen, wie im [Abschnitt zur Botlogik](#bot-logic) dargestellt. Es gibt keine Basisimplementierung für diese Handler. Daher müssen Sie die gewünschte Logik in der Außerkraftsetzung hinzufügen.
+Um Ihre Logik für Teams bestimmten Aktivitätshandlern zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im [Abschnitt "Botlogik](#bot-logic)" gezeigt. Es gibt keine Basisimplementierung für diese Handler. Daher müssen Sie die gewünschte Logik in der Außerkraftsetzung hinzufügen.
 
 Die Codeausschnitte für Teams-Aktivitätshandler:
 
@@ -60,9 +60,9 @@ protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, Team
 ```csharp
 
 protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsTeamRenamedAsync`
@@ -70,9 +70,9 @@ protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, Team
 ```csharp
 
 protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsMembersAddedAsync`
@@ -80,9 +80,9 @@ protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<
 ```csharp
 
 protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsMembersRemovedAsync`
@@ -90,18 +90,18 @@ protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> team
 ```csharp
 
 protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-Bots werden mithilfe des Bot Frameworks erstellt. Wenn die Bots eine Nachrichtenaktivität erhalten, erhält der Turnhandler eine Benachrichtigung über diese eingehende Aktivität. Der Turnhandler sendet dann die eingehende Aktivität an den Aktivitätshandler `onMessage` . In Teams bleibt diese Funktionalität unverändert. Wenn der Bot eine Unterhaltungsaktualisierungsaktivität empfängt, empfängt der Turnhandler eine Benachrichtigung über diese eingehende Aktivität und sendet die eingehende Aktivität an `dispatchConversationUpdateActivity`. Der Teams-Aktivitätshandler überprüft zuerst nach Teams bestimmten Ereignissen. Wenn keine Ereignisse gefunden werden, werden diese an den Aktivitätshandler des Bot-Frameworks übergeben.
+Bots werden mithilfe des Bot Frameworks erstellt. Wenn die Bots eine Nachrichtenaktivität erhalten, erhält der Turnhandler eine Benachrichtigung über diese eingehende Aktivität. Der Turnhandler sendet dann die eingehende Aktivität an den Aktivitätshandler `onMessage` . In Teams bleibt diese Funktionalität unverändert. Wenn der Bot eine Unterhaltungsaktualisierungsaktivität empfängt, empfängt der Turnhandler eine Benachrichtigung über diese eingehende Aktivität und sendet die eingehende Aktivität an `dispatchConversationUpdateActivity`. Der Teams Aktivitätshandler überprüft zuerst nach Teams bestimmten Ereignissen. Wenn keine Ereignisse gefunden werden, werden diese an den Aktivitätshandler des Bot-Frameworks übergeben.
 
-In der Teams Aktivitätshandlerklasse gibt es zwei primäre Teams Aktivitätshandler `dispatchConversationUpdateActivity` und `onInvokeActivity`. `dispatchConversationUpdateActivity`leitet alle Unterhaltungsaktualisierungsaktivitäten weiter und `onInvokeActivity` leitet alle Teams Aufrufen von Aktivitäten weiter.
+In der Teams Aktivitätshandlerklasse gibt es zwei primäre Teams Aktivitätshandler und `dispatchConversationUpdateActivity` `onInvokeActivity`. `dispatchConversationUpdateActivity`leitet alle Unterhaltungsaktualisierungsaktivitäten weiter und `onInvokeActivity` leitet alle Teams Aufrufen von Aktivitäten weiter.
 
-Um Ihre Logik für Teams bestimmte Aktivitätshandler zu implementieren, müssen Sie die Methoden in Ihrem Bot außer Kraft setzen, wie im [Abschnitt zur Botlogik](#bot-logic) dargestellt. Definieren Sie Ihre Botlogik für diese Handler, und rufen `next()` Sie sie dann am Ende auf. Durch Aufrufen `next()` stellen Sie sicher, dass der nächste Handler ausgeführt wird.
+Um Ihre Logik für Teams bestimmten Aktivitätshandlern zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im [Abschnitt "Botlogik](#bot-logic)" gezeigt. Definieren Sie Ihre Botlogik für diese Handler, und rufen `next()` Sie sie dann am Ende auf. Durch Aufrufen `next()` stellen Sie sicher, dass der nächste Handler ausgeführt wird.
 
 Die Codeausschnitte für Teams-Aktivitätshandler:
 
@@ -151,7 +151,7 @@ onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
 
 onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
        // code for handling
-       await next();
+    await next();
     });
 ```
 
@@ -161,17 +161,17 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 
 onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
        // code for handling
-       await next();
+    await next();
     });
 ```
 
 # <a name="python"></a>[Python](#tab/python)
 
-Bots werden mithilfe des Bot Frameworks erstellt. Wenn die Bots eine Nachrichtenaktivität erhalten, erhält der Turnhandler eine Benachrichtigung über diese eingehende Aktivität. Der Turnhandler sendet dann die eingehende Aktivität an den Aktivitätshandler `on_message_activity` . In Teams bleibt diese Funktionalität unverändert. Wenn der Bot eine Unterhaltungsaktualisierungsaktivität empfängt, empfängt der Turnhandler eine Benachrichtigung über diese eingehende Aktivität und sendet die eingehende Aktivität an `on_conversation_update_activity`. Der Teams-Aktivitätshandler überprüft zuerst nach Teams bestimmten Ereignissen. Wenn keine Ereignisse gefunden werden, werden diese an den Aktivitätshandler des Bot-Frameworks übergeben.
+Bots werden mithilfe des Bot Frameworks erstellt. Wenn die Bots eine Nachrichtenaktivität erhalten, erhält der Turnhandler eine Benachrichtigung über diese eingehende Aktivität. Der Turnhandler sendet dann die eingehende Aktivität an den Aktivitätshandler `on_message_activity` . In Teams bleibt diese Funktionalität unverändert. Wenn der Bot eine Unterhaltungsaktualisierungsaktivität empfängt, empfängt der Turnhandler eine Benachrichtigung über diese eingehende Aktivität und sendet die eingehende Aktivität an `on_conversation_update_activity`. Der Teams Aktivitätshandler überprüft zuerst nach Teams bestimmten Ereignissen. Wenn keine Ereignisse gefunden werden, werden diese an den Aktivitätshandler des Bot-Frameworks übergeben.
 
-In der Teams Aktivitätshandlerklasse gibt es zwei primäre Teams Aktivitätshandler `on_conversation_update_activity` und `on_invoke_activity`. `on_conversation_update_activity`leitet alle Unterhaltungsaktualisierungsaktivitäten weiter und `on_invoke_activity` leitet alle Teams Aufrufen von Aktivitäten weiter.
+In der Teams Aktivitätshandlerklasse gibt es zwei primäre Teams Aktivitätshandler und `on_conversation_update_activity` `on_invoke_activity`. `on_conversation_update_activity`leitet alle Unterhaltungsaktualisierungsaktivitäten weiter und `on_invoke_activity` leitet alle Teams Aufrufen von Aktivitäten weiter.
 
-Um Ihre Logik für Teams bestimmte Aktivitätshandler zu implementieren, müssen Sie die Methoden in Ihrem Bot außer Kraft setzen, wie im [Abschnitt zur Botlogik](#bot-logic) dargestellt. Es gibt keine Basisimplementierung für diese Handler. Daher müssen Sie die gewünschte Logik in der Außerkraftsetzung hinzufügen.
+Um Ihre Logik für Teams bestimmten Aktivitätshandlern zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im [Abschnitt "Botlogik](#bot-logic)" gezeigt. Es gibt keine Basisimplementierung für diese Handler. Daher müssen Sie die gewünschte Logik in der Außerkraftsetzung hinzufügen.
 
 ---
 
@@ -202,7 +202,7 @@ Die Liste der definierten `ActivityHandler` Handler umfasst Folgendes:
 | Empfangene Ereignisaktivität ohne Tokenantwort | `OnEventAsync` | Diese Methode kann überschrieben werden, um andere Ereignistypen zu behandeln. |
 | Anderer empfangener Aktivitätstyp | `OnUnrecognizedActivityTypeAsync` | Diese Methode kann überschrieben werden, um alle Aktivitätstypen zu behandeln, die andernfalls nicht behandelt werden. |
 
-#### <a name="teams-specific-activity-handlers"></a>Teams bestimmten Aktivitätshandlern
+#### <a name="teams-specific-activity-handlers"></a>Teams bestimmter Aktivitätshandler
 
 Die `TeamsActivityHandler` Liste der Handler im Core Bot Framework-Handlerabschnitt wird erweitert, um Folgendes einzuschließen:
 
@@ -254,7 +254,7 @@ Die Liste der definierten `ActivityHandler` Handler umfasst Folgendes:
 | Empfangene Token-Antwort-Ereignisaktivität | `onTokenResponseEvent` | Diese Methode hilft bei der Behandlung von Tokenantwortereignissen. |
 | Anderer empfangener Aktivitätstyp | `onUnrecognizedActivityType` | Diese Methode hilft bei der Behandlung aller Aktivitätstypen, die andernfalls nicht behandelt werden. |
 
-#### <a name="teams-specific-activity-handlers"></a>Teams bestimmten Aktivitätshandlern
+#### <a name="teams-specific-activity-handlers"></a>Teams bestimmter Aktivitätshandler
 
 Die `TeamsActivityHandler` Liste der Handler im Core Bot Framework-Handlerabschnitt wird erweitert, um Folgendes einzuschließen:
 
@@ -282,7 +282,7 @@ Die Liste der vom Teams-Aktivitätshandler aufgerufenen `onInvokeActivity` Teams
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um Logik bereitzustellen, wenn ein Aufgabenmodul abgerufen wird. |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um Beim Senden eines Aufgabenmoduls Logik bereitzustellen. |
 
-Die in diesem Abschnitt aufgeführten Aufrufaktivitäten gelten für Unterhaltungsbots in Teams. Das Bot Framework SDK unterstützt auch Aufrufaktivitäten, die für Messaging-Erweiterungen spezifisch sind. Weitere Informationen finden Sie unter ["Messaging-Erweiterungen"](https://aka.ms/azure-bot-what-are-messaging-extensions).
+Die in diesem Abschnitt aufgeführten Aufrufaktivitäten gelten für Unterhaltungs-Bots in Teams. Das Bot Framework SDK unterstützt auch Aufrufaktivitäten, die für Messaging-Erweiterungen spezifisch sind. Weitere Informationen finden Sie unter ["Messaging-Erweiterungen"](https://aka.ms/azure-bot-what-are-messaging-extensions).
 
 # <a name="python"></a>[Python](#tab/python)
 
@@ -307,7 +307,7 @@ Die Liste der definierten `ActivityHandler` Handler umfasst Folgendes:
 | Empfangene Ereignisaktivität ohne Tokenantwort | `on_event` | Diese Methode kann überschrieben werden, um andere Ereignistypen zu behandeln. |
 | Andere empfangene Aktivitätstypen | `on_unrecognized_activity_type` | Diese Methode kann überschrieben werden, um jede Art von Aktivität zu behandeln, die nicht behandelt wird. |
 
-#### <a name="teams-specific-activity-handlers"></a>Teams bestimmten Aktivitätshandlern
+#### <a name="teams-specific-activity-handlers"></a>Teams bestimmter Aktivitätshandler
 
 Die `TeamsActivityHandler` Liste der Handler aus dem Core Bot Framework-Handlerabschnitt wird um Folgendes erweitert:
 
@@ -335,11 +335,11 @@ Die Liste der vom Teams-Aktivitätshandler aufgerufenen `on_invoke_activity` Tea
 | task/fetch                      | `on_teams_task_module_fetch`        | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um Logik bereitzustellen, wenn ein Aufgabenmodul abgerufen wird. |
 | task/submit                     | `on_teams_task_module_submit`       | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um Beim Senden eines Aufgabenmoduls Logik bereitzustellen. |
 
-Die in diesem Abschnitt aufgeführten Aufrufaktivitäten gelten für Unterhaltungsbots in Teams. Das Bot Framework SDK unterstützt auch Aufrufaktivitäten, die für Messaging-Erweiterungen spezifisch sind. Weitere Informationen finden Sie unter ["Messaging-Erweiterungen"](https://aka.ms/azure-bot-what-are-messaging-extensions).
+Die in diesem Abschnitt aufgeführten Aufrufaktivitäten gelten für Unterhaltungs-Bots in Teams. Das Bot Framework SDK unterstützt auch Aufrufaktivitäten, die für Messaging-Erweiterungen spezifisch sind. Weitere Informationen finden Sie unter ["Messaging-Erweiterungen"](https://aka.ms/azure-bot-what-are-messaging-extensions).
 
 ---
 
-* * *
+---
 
 Nachdem Sie sich nun mit Bot-Aktivitätshandlern vertraut machen, können wir sehen, wie sich Bots je nach Unterhaltung und den empfangenen oder gesendeten Nachrichten unterschiedlich verhalten.
 

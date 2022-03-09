@@ -4,17 +4,17 @@ description: Erste Schritte zum Erstellen von großartigen Apps in Microsoft Tea
 keywords: Erste Schritte mit App Studio-Teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 92f24fbb7d4a41a192178ead1e2cb40dd7446b25
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: d03fae40ee0d003f3556e40c52ad876bb8949b5b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948635"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399177"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Verwalten Von Apps mit App Studio für Microsoft Teams
 
 > [!TIP]
-> **Testen Sie das Entwicklerportal:** App Studio hat sich weiterentwickelt. Konfigurieren, verteilen und verwalten Sie Ihre Teams-Apps mit dem neuen [Entwicklerportal.](https://dev.teams.microsoft.com/)
+> **Testen Sie das Entwicklerportal**: App Studio wurde weiterentwickelt. Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps mit dem neuen [Entwicklerportal](https://dev.teams.microsoft.com/).
 
 Mit App Studio können Sie ganz einfach mit dem Erstellen oder Integrieren Ihrer eigenen Microsoft Teams-Apps beginnen, unabhängig davon, ob Sie benutzerdefinierte Apps für Ihr Unternehmen oder SaaS-Anwendungen für Teams auf der ganzen Welt entwickeln, indem Sie die Erstellung des Manifests und Pakets für Ihre App optimieren und nützliche Tools wie Karteneditor und eine React-Steuerelementbibliothek bereitstellen.
 
@@ -27,7 +27,7 @@ Mit App Studio können Sie ganz einfach mit dem Erstellen oder Integrieren Ihrer
 
 ## <a name="installing-app-studio"></a>Installieren von App Studio
 
-App Studio ist eine Teams-App und verfügbar im Teams Store. Folgen Sie diesem Link, um [App Studio](https://aka.ms/InstallTeamsAppStudio)direkt herunterzuladen. Sie finden die App auch im App Store.
+App Studio ist eine Teams-App und verfügbar im Teams Store. Folgen Sie diesem Link, um [App Studio](https://aka.ms/InstallTeamsAppStudio) direkt herunterzuladen. Sie finden die App auch im App Store.
 
 Suchen Sie im Store nach App Studio.
 
@@ -66,7 +66,7 @@ Der Detailabschnitt des Manifest-Editors definiert die allgemeine Beschreibung d
 Im Abschnitt "Funktionen" des Manifest-Editors werden die Funktionen der App definiert und Details zu den einzelnen Funktionen aufgelistet.
 
 > [!NOTE]
-> Als bewährte Methode müssen Sie Anpassungsrichtlinien für App-Benutzer und -Kunden bereitstellen, die sie beim Anpassen Ihrer App befolgen können. Weitere Informationen finden Sie unter [Anpassen von Apps in Microsoft Teams.](/MicrosoftTeams/customize-apps)
+> Als bewährte Methode müssen Sie Anpassungsrichtlinien für App-Benutzer und -Kunden bereitstellen, die sie beim Anpassen Ihrer App befolgen können. Weitere Informationen finden Sie unter [Anpassen von Apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 ##### <a name="tabs"></a>Registerkarten
 
@@ -108,18 +108,19 @@ Jeder Befehl erfordert einen Titel und eine ID. Der Befehl kann optional eine Be
 * Eine optionale Beschreibung.
 
 > [!NOTE]
-> Informationen zum Erstellen von Messaging-Erweiterungen mit App Studio finden Sie unter ["Erstellen einer Messaging-Erweiterung mit App Studio".](~/resources/create-messaging-extension-using-appstudio.md)
+> Informationen zum Erstellen von Messaging-Erweiterungen mit App Studio finden Sie unter ["Erstellen einer Messaging-Erweiterung mit App Studio](~/resources/create-messaging-extension-using-appstudio.md)".
 
 #### <a name="test-and-distribute"></a>Testen und Verteilen
 
 Nachdem Sie Ihre App definiert haben, können Sie im Abschnitt "Testen und Verteilen" die Definition Ihrer Anwendung als Zip-Datei exportieren, die dann freigegeben und zum Testen in den Teams-Client hochgeladen werden kann. Wenn Sie auf "Exportieren" klicken, wird die Zip-Datei als *appname.zip* in Ihr Standard-Download-Verzeichnis heruntergeladen.
 
 ##### <a name="publish-your-app-to-teams"></a>Veröffentlichen Ihrer App in Teams
+
 Auf Ihrer Projekthomepage können Sie Ihre App in ein Team hochladen, Ihre App für Benutzer in Ihrer Organisation an den benutzerdefinierten App Store Ihres Unternehmens senden oder Ihre App für alle Teambenutzer an App Source senden. Ihr IT-Administrator wird diese Übermittlungen überprüfen. Sie können zur Seite *Veröffentlichen* zurückkehren, um Ihren Übermittlungsstatus zu überprüfen und zu erfahren, ob Ihre App von Ihrem IT-Administrator genehmigt oder abgelehnt wurde. Hier können Sie auch Updates für Ihre App einreichen oder derzeit aktive Übermittlungen abbrechen.
 
 ### <a name="card-editor"></a>Karten-Editor
 
-Bei einer Karte handelt es sich um einen Container für kurze oder verknüpfte Informationen. Microsoft Teams unterstützt Karten, die mehrere Eigenschaften und Anhänge haben können. Karten sind eine wichtige Methode, mit der Bots und Konnektoren verwertbare Informationen an Benutzer weitergeben. 
+Bei einer Karte handelt es sich um einen Container für kurze oder verknüpfte Informationen. Microsoft Teams unterstützt Karten, die mehrere Eigenschaften und Anhänge haben können. Karten sind eine wichtige Methode, mit der Bots und Konnektoren verwertbare Informationen an Benutzer weitergeben.
 
 Um diesen Prozess einfacher und weniger fehleranfällig zu machen, können Sie auf der Registerkarte "Karten-Editor" Hero-Karten oder Miniaturansichtskarten mithilfe eines Formulars erstellen und die resultierende Karte (genau wie ein Benutzer sie sehen würde) über einen Bot überprüfen und testen. Er enthält auch den entsprechenden JSON-, C#- oder Node.js-Code für die Karte, die Sie in den Quellcode Ihrer App kopieren/einfügen können.
 
@@ -128,7 +129,7 @@ Wenn Sie bereits über eine Karte verfügen, die Sie in Teams überprüfen möch
 ### <a name="react-control-library"></a>React-Steuerelementbibliothek
 
 >[!Note]
-> Diese React Steuerelementbibliothek ist in Zukunft veraltet. Erwägen Sie die Verwendung der [React-Steuerelemente Fluent-UI als alternative](https://microsoft.github.io/fluent-ui-react/) zuvor Stardust-UI.
+> Diese React Steuerelementbibliothek ist in Zukunft veraltet. Erwägen Sie die Verwendung der [React-Steuerelemente Fluent-UI als alternative zuvor Stardust-UI](https://microsoft.github.io/fluent-ui-react/).
 
 Das Erstellen einer App, die Teams‘ Bewährte Methoden befolgt, ist eine hervorragende Möglichkeit, Ihrer App ein Erscheinungsbild zu verleihen, das sich nahtlos in die Kundenerfahrung in Teams einfügt. Die von Ihnen verwendeten UI-Steuerelemente sind entscheidend, um dieses Ziel zu erreichen. Um das Erstellen einer konsistenten Benutzeroberfläche zu vereinfachen, bietet App Studio verschiedene Kategorien von Steuerelementen für die Benutzeroberfläche, die den Entwurfsprinzipien von Teams entsprechen.
 

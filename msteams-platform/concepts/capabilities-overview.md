@@ -7,19 +7,19 @@ ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: Registerkarten Bots Messaging-Erweiterungen Webhooks Connectors
-ms.openlocfilehash: ecc7ddc9ff1a80aa4eb5b37c55088f5fa5721b37
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 7200e785bc7c857aa65cf8b228720fe8e1d40a66
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355545"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398953"
 ---
 # <a name="understand-microsoft-teams-app-features"></a>Grundlegendes zu Microsoft Teams-App-Features
 
 Es gibt mehrere Möglichkeiten, Teams zu erweitern, sodass jede App einzigartig ist. Eine Teams-App kann sich für einen Benutzer auf unterschiedliche Weise bemerkbar machen. Zu den Features einer Teams-App gehören:
 
-- App-Funktionen
-- App-Bereich
+* App-Funktionen
+* App-Bereich
 
 Beispielsweise kann ein Benutzer mit einer App auf einer Canvas-Registerkarte interagieren, um eine Aktivität auszuführen, oder er kann sich dafür entscheiden, dies mithilfe eines Konversationsbots zu tun. Sie können nur eine Funktion verwenden, z. B. einen Webhook, während andere über mehrere Funktionen verfügen, um Benutzern verschiedene Optionen zu bieten.
 
@@ -33,6 +33,7 @@ Ihre Teams-Apps verfügen über eine oder alle der folgenden Kernfunktionen:
 
 :::row:::
    :::column span="":::
+
 ### <a name="personal-apps"></a>Persönliche Apps
 
 Eine [persönliche App](../concepts/design/personal-apps.md) ist ein dedizierter Bereich oder Bot, der Nutzern hilft, sich auf ihre eigenen Aufgaben zu konzentrieren oder für sie wichtige Aktivitäten anzuzeigen.
@@ -156,8 +157,8 @@ Die [Microsoft Graph-API für Teams](/graph/teams-concept-overview) bietet Zugri
 
 Sie können den App-Bereich wie folgt auswählen:
 
-- Persönliche App-Erfahrung: Eine persönliche App ist ein dedizierter Bereich oder Bot, der Nutzern hilft, sich auf ihre eigenen Aufgaben zu konzentrieren oder für sie wichtige Aktivitäten anzuzeigen.
-- Freigegebene App-Erfahrung: Team, Kanal und Chat sind Bereiche für die Zusammenarbeit. Apps in diesen Kontexten sind für alle Nutzer in diesem Bereich verfügbar. Zusammenarbeitsbereiche konzentrieren sich in der Regel auf Workflows für die Interaktionen Ihrer App oder die Erschließung neuer sozialer Interaktionen.
+* Persönliche App-Erfahrung: Eine persönliche App ist ein dedizierter Bereich oder Bot, der Nutzern hilft, sich auf ihre eigenen Aufgaben zu konzentrieren oder für sie wichtige Aktivitäten anzuzeigen.
+* Freigegebene App-Erfahrung: Team, Kanal und Chat sind Bereiche für die Zusammenarbeit. Apps in diesen Kontexten sind für alle Nutzer in diesem Bereich verfügbar. Zusammenarbeitsbereiche konzentrieren sich in der Regel auf Workflows für die Interaktionen Ihrer App oder die Erschließung neuer sozialer Interaktionen.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -5,12 +5,12 @@ keywords: Erste Schritte für Entwicklerportal-Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 02f344c82f6350fe324b423b198e5cbcb048a2b4
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 52a6f925caa8296908febdb2b963edcf2de2eba3
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355713"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399324"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Verwalten Ihrer Apps mit dem Entwicklerportal für Microsoft Teams
 
@@ -18,7 +18,7 @@ Das <a href="https://dev.teams.microsoft.com" target="_blank">Entwicklerportal f
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot der Startseite des Entwicklerportals für Teams.":::
 
-> [!NOTE] 
+> [!NOTE]
 > Derzeit ist das Entwicklerportal nicht für Government Community Cloud (GCC), GCC-High- oder DOD-Mandanten (Department of Defense) verfügbar.
 
 ## <a name="register-an-app"></a>Registrieren einer App
@@ -35,18 +35,18 @@ Das Entwicklerportal bietet verschiedene Möglichkeiten zum Registrieren einer T
 
 Sie können Umgebungen und globale Variablen konfigurieren, um den Übergang Ihrer App von Ihrer lokalen Laufzeit zur Produktion zu unterstützen. Globale Variablen werden in allen Umgebungen verwendet.
 
-**So richten Sie eine Umgebung ein**
+So richten Sie eine Umgebung ein:
 
 1. Wählen Sie im Entwicklerportal die App aus, an der Sie arbeiten.
 2. Wechseln Sie zur Seite **"Umgebungen",** und wählen Sie **"+ Umgebung hinzufügen**" aus.
 3. Wählen Sie **+ Hinzufügen einer Variablen** , um Konfigurationsvariablen für Ihre Umgebung zu erstellen.
 
-**So verwenden Sie Variablen**
+So verwenden Sie Variablen:
 
 Verwenden Sie die Variablennamen anstelle von hartcodierten Werten, um Ihre App-Konfigurationen festzulegen.
 
 1. Geben Sie `{{` in ein beliebiges Feld im Entwicklerportal ein. Es wird eine Dropdownliste mit allen Variablen angezeigt, die Sie für die ausgewählte Umgebung zusammen mit den globalen Variablen erstellt haben.  
-1. Wählen Sie vor dem Herunterladen Ihres App-Pakets (z. B. wenn Sie sich auf die Veröffentlichung im Teams Store vorbereiten) die Umgebung aus, die Sie verwenden möchten. Ihre App-Konfigurationen werden basierend auf der Umgebung automatisch aktualisiert. 
+1. Wählen Sie vor dem Herunterladen Ihres App-Pakets (z. B. wenn Sie sich auf die Veröffentlichung im Teams Store vorbereiten) die Umgebung aus, die Sie verwenden möchten. Ihre App-Konfigurationen werden basierend auf der Umgebung automatisch aktualisiert.
 
 ## <a name="identify-app-owners"></a>Identifizieren von App-Besitzern
 

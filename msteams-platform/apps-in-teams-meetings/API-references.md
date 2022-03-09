@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams-Apps– Benutzerteilnehmer-Rollen-API für Benutzerkontextbenachrichtigung – Signalabfrage
-ms.openlocfilehash: 2ed9f1682ff3de9022d3de3f93bbfc07933e7b4c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 3f77e0c1c24ad624fae268d4ca0621f7217ab24a
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355790"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398869"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
@@ -42,6 +42,7 @@ Informationen zum Identifizieren und Abrufen von Kontextinformationen für Ihre 
 ## <a name="get-participant-api"></a>Teilnehmer-API abrufen
 
 > [!NOTE]
+>
 > * Teilnehmerrollen nicht zwischenspeichern, da der Besprechungsorganisator die Rollen jederzeit ändern kann.
 > * Derzeit wird die `GetParticipant` API nur für Verteilerlisten oder Listen mit weniger als 350 Teilnehmern unterstützt.
 
@@ -141,11 +142,12 @@ Die folgende Tabelle enthält die Antwortcodes:
 Alle Benutzer in einer Besprechung erhalten die Benachrichtigungen, die über die In-Meeting-Benachrichtigungsnutzlast gesendet werden. Die Nutzlast der In-Meeting-Benachrichtigung löst eine In-Meeting-Benachrichtigung aus und ermöglicht es Ihnen, Besprechungssignale bereitzustellen, die mithilfe der vorhandenen Unterhaltungsbenachrichtigungs-API für den Benutzer-Bot-Chat übermittelt werden. Sie können eine Besprechungsbenachrichtigung basierend auf einer Benutzeraktion senden. Die Nutzlast ist über Bot Services verfügbar.
 
 > [!NOTE]
+>
 > * Wenn eine In-Meeting-Benachrichtigung aufgerufen wird, wird der Inhalt als Chatnachricht angezeigt.
 > * Derzeit wird das Senden von gezielten Benachrichtigungen und die Unterstützung für Webapp nicht unterstützt.
 > * Sie müssen die [SubmitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) -Funktion aufrufen, um sie automatisch zu schließen, nachdem ein Benutzer eine Aktion in der Webansicht ausgeführt hat. Dies ist eine Anforderung für die App-Übermittlung. Weitere Informationen finden Sie unter [Teams SDK-Aufgabenmodul](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
 > * Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss die Anforderungsnutzlast für den ersten Aufruf auf Anforderungsmetadaten im `from` Objekt basieren, nicht `from.aadObjectId` auf `from.id` Anforderungsmetadaten. `from.id`ist die Benutzer-ID und `from.aadObjectId` die Microsoft Azure Active Directory -ID (Azure AD) des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
-
+>
 ### <a name="query-parameter"></a>Abfrageparameter
 
 Die folgende Tabelle enthält die Abfrageparameter:
@@ -159,6 +161,7 @@ Die folgende Tabelle enthält die Abfrageparameter:
 Der `Bot ID` wird im Manifest deklariert, und der Bot erhält ein Ergebnisobjekt.
 
 > [!NOTE]
+>
 > * Der `completionBotId` Parameter des `externalResourceUrl` Parameters ist im angeforderten Nutzlastbeispiel optional.
 > * Die `externalResourceUrl` Parameter für Breite und Höhe müssen in Pixeln angegeben werden. Weitere Informationen finden Sie in den [Entwurfsrichtlinien](design/designing-apps-in-meetings.md).
 > * Die URL ist die Seite, die wie `<iframe>` in der Besprechungsbenachrichtigung geladen wird. Die Domäne muss sich im Array der Apps `validDomains` in Ihrem App-Manifest befinden.
@@ -308,7 +311,7 @@ Verwenden Sie das folgende Beispiel, um die Eigenschaft Ihres App-Manifests `web
 
 > [!NOTE]
 > Der Bot kann Besprechungsstart- oder -endereignisse automatisch von allen Besprechungen empfangen, die in allen Kanälen erstellt wurden, indem er dem Manifest für die RSC-Berechtigung hinzugefügt `ChannelMeeting.ReadBasic.Group` wird.
- 
+
 ### <a name="query-parameter"></a>Abfrageparameter
 
 In der folgenden Tabelle ist der Abfrageparameter aufgeführt:
@@ -495,7 +498,7 @@ microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
         // Indicates app has permission to share contents to meeting stage.
     }
 });
-``` 
+```
 
 Der JSON-Antworttext für die `getAppContentStageSharingState` API lautet:
 
@@ -535,7 +538,7 @@ microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
         // Indicates app has permission to share contents to meeting stage.
     }
 });
-``` 
+```
 
 Der JSON-Antworttext für `getAppContentStageSharingCapabilities` die API lautet:
 
@@ -614,6 +617,7 @@ Ihr App-Manifest muss über die `webApplicationInfo` Eigenschaft verfügen, um d
 Der Bot empfängt das Ereignis über den `OnEventActivityAsync` Handler. Um die JSON-Nutzlast zu deserialisieren, wird ein Modellobjekt eingeführt, um die Metadaten einer Besprechung abzurufen. Die Metadaten einer Besprechung befinden sich in der `value` Eigenschaft in der Ereignisnutzlast. Das `MeetingStartEndEventvalue` Modellobjekt wird erstellt, dessen Membervariablen den Schlüsseln unter der `value` Eigenschaft in der Ereignisnutzlast entsprechen.
 
 > [!NOTE]
+>
 > * Abrufen der Besprechungs-ID von `turnContext.ChannelData`.
 > * Verwenden Sie die Unterhaltungs-ID nicht als Besprechungs-ID.
 > * Verwenden Sie keine Besprechungs-ID aus der Nutzlast `turncontext.activity.value`für Besprechungsereignisse.
@@ -621,6 +625,7 @@ Der Bot empfängt das Ereignis über den `OnEventActivityAsync` Handler. Um die 
 Der folgende Code zeigt, wie die Metadaten einer Besprechung erfasst werden, die , , , `JoinUrl`und aus einem Besprechungsstart-/-end-Ereignis besteht`MeetingType``Title`:`EndTime` `StartTime``Id`
 
 Besprechungsstartereignis
+
 ```csharp
 protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -629,6 +634,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 ```
 
 Besprechungsendereignis
+
 ```csharp
 protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {

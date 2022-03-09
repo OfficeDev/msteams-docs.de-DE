@@ -5,12 +5,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 keywords: Teams-Bots-Nachrichten
 ms.date: 05/20/2019
-ms.openlocfilehash: ce3d3d1dd39707d08c720e75c67ec61b606f676a
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 0f77606b0fcc73e2bb68fc08e964662fdcba4df7
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518499"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399219"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Unterhaltung mit einem Microsoft Teams Bot
 
@@ -49,14 +49,14 @@ Grundlegende Unterhaltungen werden über den Bot Framework-Connector verarbeitet
 
 ## <a name="message-content"></a>Nachrichteninhalt
 
-Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und Bilder an Ihren Bot senden. Sie können den Inhaltstyp angeben, den Ihr Bot auf der Seite Microsoft Teams Einstellungen für Ihren Bot verarbeiten kann.
+Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und Bilder an Ihren Bot senden. Sie können den Inhaltstyp angeben, den Ihr Bot auf der Einstellungsseite Microsoft Teams für Ihren Bot verarbeiten kann.
 
-| Format | Vom Benutzer zum Bot  | Vom Bot zum Benutzer |  Notes |
+| Format | Vom Benutzer zum Bot  | Vom Bot zum Benutzer |  Notizen |
 | --- | :---: | :---: | --- |
 | Rich-Text  | ✔ | ✔ |  |
 | Bilder | ✔ | ✔ | Maximal 1024×1024 und 1 MB im PNG-, JPEG- oder GIF-Format; Animierte GIF-Dateien werden nicht unterstützt. |
-| Karten | ✖ | ✔ | Unterstützte Karten finden Sie in der [Teams-Kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md). |
-| Emojis | ✖ | ✔ | Teams unterstützt zurzeit Emojis über UTF-16, z. B. U+1F600 für das graunen Gesicht. |
+| Karten | ✖ | ✔ | In der [Teams Kartenreferenz finden](~/task-modules-and-cards/cards/cards-reference.md) Sie unterstützte Karten. |
+| Emojis | ✖ | ✔ | Teams unterstützt derzeit Emojis über UTF-16, z. B. U+1F600 für das graunen Gesicht. |
 |
 
 Weitere Informationen zu den Vom Bot Framework unterstützten Bot-Interaktionstypen, auf denen Bots in Teams basieren, finden Sie in der Bot Framework-Dokumentation zum [Unterhaltungsfluss](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) und verwandten Konzepten in der Dokumentation für [das Bot Builder SDK für .NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true) und [das Bot Builder SDK für Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true).
@@ -86,7 +86,7 @@ Es wird empfohlen, die Höhe und Breite jedes Bilds mithilfe von XML anzugeben. 
 Je nachdem, welche Bereiche deklariert werden, kann Ihr Bot Nachrichten in den folgenden Kontexten empfangen:
 
 * **Persönlicher Chat** Benutzer können in einer privaten Unterhaltung mit einem Bot interagieren, indem sie einfach den hinzugefügten Bot im Chatverlauf auswählen oder den Namen oder die App-ID in das Feld "An:" in einen neuen Chat eingeben.
-* **Kanäle** Ein Bot kann in einem Kanal ("@_botname_") erwähnt werden, wenn er dem Team hinzugefügt wurde. Beachten Sie, dass für zusätzliche Antworten auf einen Bot in einem Kanal der Bot erwähnt werden muss. Sie antwortet nicht auf Antworten, in denen sie nicht erwähnt wird.
+* **Kanäle** Ein Bot kann in einem Kanal ("@*botname*") erwähnt werden, wenn er dem Team hinzugefügt wurde. Beachten Sie, dass für zusätzliche Antworten auf einen Bot in einem Kanal der Bot erwähnt werden muss. Sie antwortet nicht auf Antworten, in denen sie nicht erwähnt wird.
 
 Bei eingehenden Nachrichten empfängt Ihr Bot ein [Activity-Objekt](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) vom Typ `messageType: message`. Obwohl das `Activity` Objekt andere Arten von Informationen enthalten kann, z. B. [Kanalaktualisierungen](~/resources/bot-v3/bots-notifications.md#channel-updates) , die an Ihren Bot gesendet werden, stellt der Typ die `message` Kommunikation zwischen Bot und Benutzer dar.
 
@@ -156,7 +156,7 @@ Bei der Interaktion in einem Kanal sollte Ihr Bot intelligent sein, bestimmte Un
 
 ## <a name="teams-channel-data"></a>Teams Kanaldaten
 
-Das `channelData` Objekt enthält Teams-spezifische Informationen und ist die endgültige Quelle für Team- und Kanal-IDs. Sie sollten diese IDs zwischenspeichern und als Schlüssel für den lokalen Speicher verwenden.
+Das `channelData` Objekt enthält Teams spezifische Informationen und ist die endgültige Quelle für Team- und Kanal-IDs. Sie sollten diese IDs zwischenspeichern und als Schlüssel für den lokalen Speicher verwenden.
 
 Ein typisches channelData-Objekt in einer Aktivität, die an Ihren Bot gesendet wird, enthält die folgenden Informationen:
 

@@ -5,12 +5,12 @@ description: Eine Schnellstartanleitung zum Erstellen einer Kanal- und Gruppenre
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 0a5a72a7889dba040295f1d17858f701ff762099
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: b576e2515df65dba06686740508c07a645fb5bd7
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355846"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399338"
 ---
 # <a name="create-a-channel-or-group-tab"></a>Erstellen einer Kanal- oder Gruppenregisterkarte
 
@@ -31,24 +31,24 @@ Sie können eine benutzerdefinierte Kanal- oder Gruppenregisterkarte mit dem [Te
 
 Sie müssen die folgenden Voraussetzungen verstehen:
 
-- Sie müssen einen Office 365 Mandanten und ein Team mit aktivierter Option **"Hochladen benutzerdefinierter Apps zulassen**" konfiguriert haben. Weitere Informationen finden Sie unter [Vorbereiten Ihres Office 365 Mandanten](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+* Sie müssen einen Office 365 Mandanten und ein Team mit aktivierter Option **"Hochladen benutzerdefinierter Apps zulassen**" konfiguriert haben. Weitere Informationen finden Sie unter [Vorbereiten Ihres Office 365 Mandanten](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
     > Wenn Sie derzeit kein Office 365 Konto haben, können Sie sich über das Office 365-Entwicklerprogramm für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden. Willkommen [beim Office 365-Entwicklerprogramm](/office/developer-program/microsoft-365-developer-program).
 
 Darüber hinaus muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung installiert sein:
 
-- Ein beliebiger Text-Editor oder eine beliebige IDE. Sie können [Microsoft Visual Studio Code](https://code.visualstudio.com/download) kostenlos installieren und verwenden.
+* Ein beliebiger Text-Editor oder eine beliebige IDE. Sie können [Microsoft Visual Studio Code](https://code.visualstudio.com/download) kostenlos installieren und verwenden.
 
-- [Node.js/npm](https://nodejs.org/en/). Verwenden Sie die neueste LTS-Version. Die Node Paket-Manager (npm) wird in Ihrem System mit der Installation von Node.js installiert.
+* [Node.js/npm](https://nodejs.org/en/). Verwenden Sie die neueste LTS-Version. Die Node Paket-Manager (npm) wird in Ihrem System mit der Installation von Node.js installiert.
 
-- Nachdem Sie Node.js erfolgreich installiert haben, installieren Sie die [Yeoman](https://yeoman.io/) - und [gulp-cli-Pakete](https://www.npmjs.com/package/gulp-cli) , indem Sie in der Eingabeaufforderung Folgendes eingeben:
+* Nachdem Sie Node.js erfolgreich installiert haben, installieren Sie die [Yeoman](https://yeoman.io/) - und [gulp-cli-Pakete](https://www.npmjs.com/package/gulp-cli) , indem Sie in der Eingabeaufforderung Folgendes eingeben:
 
     ```bash
     npm install yo gulp-cli --global
     ```
 
-- Installieren Sie den Microsoft Teams Apps-Generator, indem Sie in der Eingabeaufforderung Folgendes eingeben:
+* Installieren Sie den Microsoft Teams Apps-Generator, indem Sie in der Eingabeaufforderung Folgendes eingeben:
 
     ```bash
     npm install generator-teams --global
@@ -173,9 +173,9 @@ Darüber hinaus muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung
 
 Sie benötigen ein App-Paket, um Ihre Registerkarte in Teams zu testen. Es handelt sich um einen ZIP-Ordner, der die folgenden erforderlichen Dateien enthält:
 
-- Ein **Vollfarbsymbol** mit einer Auflösung von 192 x 192 Pixeln.
-- Ein **transparentes Gliederungssymbol** mit einer Auflösung von 32 x 32 Pixeln.
-- Eine **Manifest.json-Datei** , die die Attribute Ihrer App angibt.
+* Ein **Vollfarbsymbol** mit einer Auflösung von 192 x 192 Pixeln.
+* Ein **transparentes Gliederungssymbol** mit einer Auflösung von 32 x 32 Pixeln.
+* Eine **Manifest.json-Datei** , die die Attribute Ihrer App angibt.
 
 The package is created through a gulp task that validates the manifest.json file and generates the zip folder in the **./package directory**. Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:
 
@@ -253,15 +253,15 @@ Sie müssen die folgenden Voraussetzungen verstehen:
 - Sie müssen einen Office 365 Mandanten und ein Team mit aktivierter Option **"Hochladen benutzerdefinierter Apps zulassen**" konfiguriert haben. Weitere Informationen finden Sie unter [Vorbereiten Ihres Office 365 Mandanten](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
-    > Wenn Sie derzeit kein Microsoft 365 Konto haben, können Sie sich über das [Microsoft-Entwicklerprogramm](https://developer.microsoft.com/en-us/microsoft-365/dev-program) für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden.
+    > Wenn Sie derzeit kein Microsoft 365 Konto haben, können Sie sich über das [Microsoft-Entwicklerprogramm](https://developer.microsoft.com/microsoft-365/dev-program) für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden.
 
-- Verwenden Sie App Studio, um Ihre Anwendung in Teams zu importieren. Um App Studio zu installieren, wählen Sie **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) in der unteren linken Ecke des Teams App aus, und suchen Sie nach **App Studio**. Nachdem Sie die Kachel gefunden haben, wählen Sie sie aus, und wählen Sie im Popupdialogfeld " **Hinzufügen** " aus, um sie zu installieren.
+* Verwenden Sie App Studio, um Ihre Anwendung in Teams zu importieren. Um App Studio zu installieren, wählen Sie **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) in der unteren linken Ecke des Teams App aus, und suchen Sie nach **App Studio**. Nachdem Sie die Kachel gefunden haben, wählen Sie sie aus, und wählen Sie im Popupdialogfeld " **Hinzufügen** " aus, um sie zu installieren.
 
 Darüber hinaus muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung installiert sein:
 
-- Die aktuelle Version der Visual Studio IDE, in der die **plattformübergreifende .NET CORE-Entwicklungsworkload** installiert ist. Wenn Sie noch nicht über Visual Studio verfügen, können Sie die neueste [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) Version kostenlos herunterladen und installieren.
+* Die aktuelle Version der Visual Studio IDE, in der die **plattformübergreifende .NET CORE-Entwicklungsworkload** installiert ist. Wenn Sie noch nicht über Visual Studio verfügen, können Sie die neueste [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) Version kostenlos herunterladen und installieren.
 
-- Das [ngrok-Reverseproxytool](https://ngrok.com) . Verwenden Sie ngrok, um einen Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten Ihres lokal ausgeführten Webservers zu erstellen. Sie können [ngrok herunterladen](https://ngrok.com/download).
+* Das [ngrok-Reverseproxytool](https://ngrok.com) . Verwenden Sie ngrok, um einen Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten Ihres lokal ausgeführten Webservers zu erstellen. Sie können [ngrok herunterladen](https://ngrok.com/download).
 
 ### <a name="get-the-source-code"></a>Abrufen des Quellcodes
 
@@ -280,15 +280,15 @@ Alternativ können Sie den Quellcode abrufen, indem Sie den ZIP-Ordner herunterl
 1. Drücken Sie **F5**, oder wählen Sie im Menü "**Debuggen**" die Option **"Debuggen starten**" aus, um die Anwendung zu erstellen und auszuführen.
 1. Wechseln Sie in einem Browser zu den folgenden URLs, und überprüfen Sie, ob die Anwendung ordnungsgemäß geladen wurde:
 
-    - `http://localhost:44355`
-    - `http://localhost:44355/privacy`
-    - `http://localhost:44355/tou`
+    * `http://localhost:44355`
+    * `http://localhost:44355/privacy`
+    * `http://localhost:44355/tou`
 
 ### <a name="review-the-source-code"></a>Überprüfen des Quellcodes
 
 #### <a name="startupcs"></a>Startup.cs
 
-Dieses Projekt wurde aus einer leeren Vorlage ASP.NET Core 2.2-Webanwendung erstellt, wobei das Kontrollkästchen **"Erweitert – Für HTTPS konfigurieren**" beim Setup aktiviert ist. Die MVC-Dienste werden durch die Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage nicht standardmäßig die Bereitstellung statischer Inhalte, sodass die Middleware für statische Dateien der Methode mit dem folgenden Code hinzugefügt `Configure()` wird:
+Dieses Projekt wurde aus einer leeren Vorlage für ASP.NET Core 2.2-Webanwendung erstellt, wobei das Kontrollkästchen **Erweitert * Für HTTPS** konfigurieren beim Setup aktiviert ist. Die MVC-Dienste werden durch die Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage nicht standardmäßig die Bereitstellung statischer Inhalte, sodass die Middleware für statische Dateien der Methode mit dem folgenden Code hinzugefügt `Configure()` wird:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -318,9 +318,9 @@ Diese C#-Datei enthält eine Methode, die während der Konfiguration von **Tab.c
 
 Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
-- Ein **Vollfarbsymbol** mit einer Auflösung von 192 x 192 Pixeln.
-- Ein **transparentes Gliederungssymbol** mit einer Auflösung von 32 x 32 Pixeln.
-- Eine **Manifest.json-Datei** , die die Attribute Ihrer App angibt.
+* Ein **Vollfarbsymbol** mit einer Auflösung von 192 x 192 Pixeln.
+* Ein **transparentes Gliederungssymbol** mit einer Auflösung von 32 x 32 Pixeln.
+* Eine **Manifest.json-Datei** , die die Attribute Ihrer App angibt.
 
 Diese Dateien müssen in einem App-Paket gezippt werden, um Ihre Registerkarte in Teams hochzuladen. Wenn ein Benutzer die Registerkarte hinzufügt oder aktualisiert, lädt Microsoft Teams das `configurationUrl` angegebene Element in Ihrem Manifest, einbettet es in einen IFrame und rendert es auf der Registerkarte.
 
@@ -352,15 +352,15 @@ Microsoft Teams ist ein cloudbasiertes Produkt und erfordert, dass Ihre Register
 
 Verwenden Sie zum Testen der Registerkarte [ngrok](https://ngrok.com/docs). Die Webendpunkte Ihres Servers sind verfügbar, während ngrok auf Ihrem Computer ausgeführt wird. In der kostenlosen Version von ngrok unterscheiden sich die URLs beim nächsten Start von ngrok, wenn Sie ngrok schließen.
 
-- Führen Sie an einer Eingabeaufforderung im Stammverzeichnis des Projekts den folgenden Befehl aus:
+* Führen Sie an einer Eingabeaufforderung im Stammverzeichnis des Projekts den folgenden Befehl aus:
 
     ```bash
     ngrok http https://localhost:44355 -host-header="localhost:44355"
     ```
 
-- Ngrok lauscht auf Anforderungen aus dem Internet und leitet sie an Ihre Anwendung weiter, wenn sie auf Port 44355 ausgeführt wird. Es sollte etwa so aussehen `https://y8rCgT2b.ngrok.io/` , wo **y8rCgT2b** durch Ihre alphangrok-numerische HTTPS-URL ersetzt wird.
+* Ngrok lauscht auf Anforderungen aus dem Internet und leitet sie an Ihre Anwendung weiter, wenn sie auf Port 44355 ausgeführt wird. Es sollte etwa so aussehen `https://y8rCgT2b.ngrok.io/` , wo **y8rCgT2b** durch Ihre alphangrok-numerische HTTPS-URL ersetzt wird.
 
-- Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und notieren Sie sich die URL.
+* Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und notieren Sie sich die URL.
 
 ### <a name="update-your-application"></a>Aktualisieren Der Anwendung
 
@@ -512,18 +512,18 @@ Sie können eine benutzerdefinierte Kanal- oder Gruppenregisterkarte mit C# und 
 
 ### <a name="prerequisites-for-custom-channel-or-group-tab"></a>Voraussetzungen für benutzerdefinierte Kanal- oder Gruppenregisterkarten
 
-- Sie müssen einen Microsoft 365 Mandanten und ein Team mit aktivierter **Option "Hochladen benutzerdefinierter Apps zulassen**" konfiguriert haben. Weitere Informationen finden Sie unter [Vorbereiten Ihres Office 365 Mandanten](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+* Sie müssen einen Microsoft 365 Mandanten und ein Team mit aktivierter **Option "Hochladen benutzerdefinierter Apps zulassen**" konfiguriert haben. Weitere Informationen finden Sie unter [Vorbereiten Ihres Office 365 Mandanten](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
-    > Wenn Sie derzeit kein Microsoft 365 Konto haben, können Sie sich über das [Microsoft-Entwicklerprogramm](https://developer.microsoft.com/en-us/microsoft-365/dev-program) für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden.
+    > Wenn Sie derzeit kein Microsoft 365 Konto haben, können Sie sich über das [Microsoft-Entwicklerprogramm](https://developer.microsoft.com/microsoft-365/dev-program) für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden.
 
-- Verwenden Sie App Studio, um Ihre Anwendung in Teams zu importieren. Um App Studio zu installieren, wählen Sie **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) in der unteren linken Ecke des Teams App aus, und suchen Sie nach **App Studio**. Nachdem Sie die Kachel gefunden haben, wählen Sie sie aus, und wählen Sie im Popupdialogfeld " **Hinzufügen** " aus, um sie zu installieren.
+* Verwenden Sie App Studio, um Ihre Anwendung in Teams zu importieren. Um App Studio zu installieren, wählen Sie **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) in der unteren linken Ecke des Teams App aus, und suchen Sie nach **App Studio**. Nachdem Sie die Kachel gefunden haben, wählen Sie sie aus, und wählen Sie im Popupdialogfeld " **Hinzufügen** " aus, um sie zu installieren.
 
 Darüber hinaus muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung installiert sein:
 
-- Die aktuelle Version der Visual Studio IDE, in der die **plattformübergreifende .NET CORE-Entwicklungsworkload** installiert ist. Wenn Sie noch nicht über Visual Studio verfügen, können Sie die neueste [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) Version kostenlos herunterladen und installieren.
+* Die aktuelle Version der Visual Studio IDE, in der die **plattformübergreifende .NET CORE-Entwicklungsworkload** installiert ist. Wenn Sie noch nicht über Visual Studio verfügen, können Sie die neueste [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) Version kostenlos herunterladen und installieren.
 
-- Das [ngrok-Reverseproxytool](https://ngrok.com) . Verwenden Sie ngrok, um einen Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten Ihres lokal ausgeführten Webservers zu erstellen. Sie können [ngrok herunterladen](https://ngrok.com/download).
+* Das [ngrok-Reverseproxytool](https://ngrok.com) . Verwenden Sie ngrok, um einen Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten Ihres lokal ausgeführten Webservers zu erstellen. Sie können [ngrok herunterladen](https://ngrok.com/download).
 
 ### <a name="get-the-source-code"></a>Abrufen des Quellcodes
 
@@ -542,9 +542,9 @@ Alternativ können Sie den Quellcode abrufen, indem Sie den ZIP-Ordner herunterl
 1. Drücken Sie **F5**, oder wählen Sie im Menü "**Debuggen**" die Option **"Debuggen starten**" aus, um die Anwendung zu erstellen und auszuführen.
 1. Navigieren Sie in einem Browser zu den folgenden URLs, und stellen Sie sicher, dass die Anwendung ordnungsgemäß geladen wurde:
 
-    - `http://localhost:44360`
-    - `http://localhost:44360/privacy`
-    - `http://localhost:44360/tou`
+    * `http://localhost:44360`
+    * `http://localhost:44360/privacy`
+    * `http://localhost:44360/tou`
 
 ### <a name="review-the-source-code"></a>Überprüfen des Quellcodes
 
@@ -572,9 +572,9 @@ In ASP.NET Core sucht die Anwendung im Webstammordner nach statischen Dateien.
 
 Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
-- Ein **Vollfarbsymbol** mit einer Auflösung von 192 x 192 Pixeln.
-- Ein **transparentes Gliederungssymbol** mit einer Auflösung von 32 x 32 Pixeln.
-- Eine **Manifest.json-Datei** , die die Attribute Ihrer App angibt.
+* Ein **Vollfarbsymbol** mit einer Auflösung von 192 x 192 Pixeln.
+* Ein **transparentes Gliederungssymbol** mit einer Auflösung von 32 x 32 Pixeln.
+* Eine **Manifest.json-Datei** , die die Attribute Ihrer App angibt.
 
 Diese Dateien müssen in einem App-Paket gezippt werden, um Ihre Registerkarte in Teams hochzuladen.
 

@@ -4,15 +4,15 @@ description: Verwenden von Aufgabenmodulen mit Microsoft Teams Bots, einschließ
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Taskmodule Teams Bots Deep Links adaptive Karte
-ms.openlocfilehash: 39df7f3845cc11e6e15da03c72b0c792a795af35
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 932bcaf858d0788a773b417647a92d2f52e9e45b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355720"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399051"
 ---
 # <a name="use-task-modules-from-bots"></a>Verwenden von Aufgabenmodulen aus Bots
- 
+
 Aufgabenmodule können von Microsoft Teams Bots mithilfe von Schaltflächen auf adaptiven Karten und Bot Framework-Karten aufgerufen werden, die Hero-, Miniaturansicht- und Office 365 Connector sind. Aufgabenmodule sind häufig eine bessere Benutzererfahrung als mehrere Unterhaltungsschritte. Verfolgen Sie den Botstatus, und erlauben Sie dem Benutzer, die Sequenz zu unterbrechen oder abzubrechen.
 
 Es gibt zwei Möglichkeiten zum Aufrufen von Aufgabenmodulen:

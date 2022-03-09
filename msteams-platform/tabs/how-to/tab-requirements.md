@@ -6,12 +6,12 @@ keywords: Konfigurierbarer Gruppenkanal für Teams-Registerkarten
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 31910fa5e8cd7e4d4f1045b8c05d94a336d07726
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: eeb83f6bdd335c4d536f18915cff8b04a85761a5
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435139"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399191"
 ---
 # <a name="prerequisites"></a>Voraussetzungen
 
@@ -40,7 +40,8 @@ Teams Registerkarten müssen die folgenden Voraussetzungen erfüllen:
 * Die Registerkarte "MS Teams" unterstützt nicht die Möglichkeit, Intranetwebsites zu laden, die selbstsignte Zertifikate verwenden.
 
 ## <a name="tools-you-can-use-to-build-tabs"></a>Tools, die Sie zum Erstellen von Registerkarten verwenden können
-* [Teams Toolkit für Microsoft Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
+
+* [Teams-Toolkit für Microsoft Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
 * [Microsoft Teams-Toolkit-Erweiterung für Visual Studio](../../toolkit/visual-studio-overview.md)
 
 ## <a name="next-step"></a>Nächster Schritt

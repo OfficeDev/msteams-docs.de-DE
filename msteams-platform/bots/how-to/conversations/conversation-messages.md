@@ -5,16 +5,16 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: c13482e886cc4e2207faa84ff01bbb60e93661a5
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 2078e63dfbc95071cec3ba620643bd9a8fddf723
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517995"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399352"
 ---
 # <a name="messages-in-bot-conversations"></a>Meldungen in Bot-Unterhaltungen
 
-Jede Nachricht in einer Unterhaltung ist ein `Activity` Objekt vom Typ `messageType: message`. Wenn ein Benutzer eine Nachricht sendet, Teams die Nachricht an Ihren Bot sendet. Teams sendet ein JSON-Objekt an den Messaging-Endpunkt Ihres Bots. Ihr Bot überprüft die Nachricht, um ihren Typ zu ermitteln, und antwortet entsprechend.
+Jede Nachricht in einer Unterhaltung ist ein `Activity` Objekt vom Typ `messageType: message`. Wenn ein Benutzer eine Nachricht sendet, sendet Teams die Nachricht an Ihren Bot. Teams sendet ein JSON-Objekt an den Messaging-Endpunkt Ihres Bots. Ihr Bot überprüft die Nachricht, um ihren Typ zu ermitteln, und antwortet entsprechend.
 
 Grundlegende Unterhaltungen werden über den Bot Framework-Connector, eine einzelne REST-API, verarbeitet. Diese API ermöglicht Es Ihrem Bot, mit Teams und anderen Kanälen zu kommunizieren. Das Bot Builder SDK bietet die folgenden Features:
 
@@ -238,12 +238,12 @@ Der folgende Code zeigt ein Beispiel für ein channelData-Objekt:
 
 Nachrichten, die von Ihrem Bot empfangen oder an diesen gesendet werden, können unterschiedliche Arten von Nachrichteninhalten enthalten.
 
-| Format    | Vom Benutzer zum Bot | Vom Bot zum Benutzer | Notes                                                                                   |
+| Format    | Vom Benutzer zum Bot | Vom Bot zum Benutzer | Notizen                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich-Text  | ✔                | ✔                | Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und Bilder an Ihren Bot senden.                                                                                        |
 | Bilder  | ✔                | ✔                | Maximal 1024×1024 und 1 MB im PNG-, JPEG- oder GIF-Format. Animierte GIF-Dateien werden nicht unterstützt.  |
 | Karten     | ✖                | ✔                | In der [Teams Kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md) finden Sie unterstützte Karten. |
-| Emojis    | ✔                | ✔                | Teams unterstützt derzeit Emojis über UTF-16, z. B. U+1F600 für graunendes Gesicht. |
+| Emojis    | ✔                | ✔                | Teams unterstützt zurzeit Emojis über UTF-16, z. B. U+1F600 für das graunen Gesicht. |
 
 ## <a name="notifications-to-your-message"></a>Benachrichtigungen an Ihre Nachricht
 
@@ -382,7 +382,7 @@ Die Nachricht zum Ausfüllen des Formulars wird in adaptiven Karten angezeigt, w
 
     ![Erfolgsmeldung](~/assets/images/Cards/success.PNG)
 
-Sie können " **Chat schließen** " oder "Chat wechseln" auswählen, um die Nachricht zu schließen.    
+Sie können " **Chat schließen** " oder "Chat wechseln" auswählen, um die Nachricht zu schließen.
 
 **Antwort auf Mobilgeräten**:
 
@@ -416,7 +416,7 @@ Nachfolgend sind die Statuscodes und deren Fehlercode sowie Meldungswerte aufgef
 > [!div class="nextstepaction"]
 > [Bot-Befehlsmenüs](~/bots/how-to/create-a-bot-commands-menu.md)
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Siehe auch
 
 * [Senden proaktiver Nachrichten](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Abonnieren von Unterhaltungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

@@ -1,15 +1,15 @@
 ---
 title: Karten- und Aufgabenmodule
-description: Erfahren Sie mehr über typen von Karten, die in Bots für Teams unterstützt werden, z. B. adaptive Karten, Hero-Karte, Miniaturansichtskarte und vieles mehr. Erfahren Sie mehr über Kartenaktionen und das Aufrufen von Aufgabenmodulen in Kanälen, Bots oder Deep-Links.
+description: Erfahren Sie mehr über arten von Karten, die in Bots für Teams unterstützt werden, z. B. adaptive Karten, Hero-Karte, Miniaturansichtskarte und vieles mehr. Erfahren Sie mehr über Kartenaktionen und das Aufrufen von Aufgabenmodulen in Kanälen, Bots oder Deep-Links.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: ac5d7605b73d9aeb41bd41cca919e59fa47afff9
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+ms.openlocfilehash: 516ca3a0fbfc1e1fb386632eb06c1c3a60918485
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062516"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399044"
 ---
 # <a name="cards-and-task-modules"></a>Karten- und Aufgabenmodule
 
@@ -21,11 +21,11 @@ Die folgenden Arten von Karten werden in Bots für Teams unterstützt:
 
 * Adaptive Karte
 * Hero-Karte
-* Karte auflisten
-* Office 365 Connectorkarte
+* Listenkarte
+* Office 365-Connectorkarte
 * Belegkarte
 * Anmeldekarte
-* Miniaturansichtskarte
+* Miniaturbildkarte
 * Kartensammlungen
 
 Sie können Kartentext mithilfe einer Teilmenge von XML- oder HTML-Formatierungen oder Markdown formatieren, je nach Kartentyp.
@@ -33,6 +33,7 @@ Sie können Kartentext mithilfe einer Teilmenge von XML- oder HTML-Formatierunge
 [Die Personenauswahl in adaptiven Karten](cards/people-picker.md) in adaptiver Karte hilft bei der Suche, Auswahl, Neuzuweisung und Vorabauswahl von Benutzern innerhalb von Chats oder Kanälen.
 
 Sie können Kartenaktionen hinzufügen und darauf reagieren, die:
+
 * Öffnen einer URL
 * Senden von Nachrichten und Nutzlast an den Bot
 * Initiieren des OAuth-Flusses

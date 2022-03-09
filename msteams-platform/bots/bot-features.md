@@ -5,12 +5,12 @@ description: Übersicht über die Tools und SDKs zum Erstellen Microsoft Teams B
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: fda6092165fa55accbf5348b9850ac94396c05b5
-ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
+ms.openlocfilehash: 9aef0786d643c80879700ed6c2d4b05ce7c2e09a
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "62185422"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398659"
 ---
 # <a name="bots-and-sdks"></a>Tools und SDKs
 
@@ -27,27 +27,27 @@ Ihr Teams Bot besteht aus folgenden Komponenten:
 
 * Ein öffentlich zugänglicher Webdienst, der von Ihnen gehostet wird.
 * Eine Bot Framework-Registrierung für Ihren Webdienst.
-* Ihr Teams-App-Paket, das den Teams-Client mit Ihrem Webdienst verbindet.
+* Ihr Teams App-Paket, das den Teams-Client mit Ihrem Webdienst verbindet.
 
 > [!TIP]
-> Verwenden Sie das Entwicklerportal, um Ihren Webdienst beim Bot Framework zu registrieren und Ihre App-Konfigurationen anzugeben. Weitere Informationen finden Sie unter [Verwalten Ihrer Apps mit dem Entwicklerportal für Teams.](~/concepts/build-and-test/teams-developer-portal.md)
+> Verwenden Sie das Entwicklerportal, um Ihren Webdienst beim Bot Framework zu registrieren und Ihre App-Konfigurationen anzugeben. Weitere Informationen finden Sie unter [Verwalten Ihrer Apps mit dem Entwicklerportal für Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
-Das [Bot Framework](https://dev.botframework.com/) ist ein umfangreiches SDK, das zum Erstellen von Bots mit C#, Java, Python und JavaScript verwendet wird. Wenn Sie bereits über einen Bot verfügen, der auf dem Bot Framework basiert, können Sie ihn einfach so ändern, dass er in Teams funktioniert. Verwenden Sie C# oder Node.js, um unsere SDKs zu [nutzen.](/microsoftteams/platform/#pivot=sdk-tools) Diese Pakete erweitern die grundlegenden Klassen und Methoden des Bot Builder-SDKs folgendermaßen:
+Das [Bot Framework](https://dev.botframework.com/) ist ein umfangreiches SDK, das zum Erstellen von Bots mit C#, Java, Python und JavaScript verwendet wird. Wenn Sie bereits über einen Bot verfügen, der auf bot Framework basiert, können Sie ihn ganz einfach so ändern, dass er in Teams funktioniert. Verwenden Sie C# oder Node.js, um unsere [SDKs zu nutzen](/microsoftteams/platform/#pivot=sdk-tools). Diese Pakete erweitern die grundlegenden Klassen und Methoden des Bot Builder-SDKs folgendermaßen:
 
-* Verwenden Sie spezielle Kartentypen wie die Office 365 Connectorkarte.
+* Verwenden Sie spezielle Kartentypen wie die Office 365-Connectorkarte.
 * Legen Sie Teams-spezifische Kanaldaten für Aktivitäten fest.
 * Verarbeiten Sie Messaging-Erweiterungsanforderungen.
 
 > [!IMPORTANT]
-> Sie können Teams-Apps in einer beliebigen Webprogrammiertechnologie entwickeln und die [Bot Framework-REST-APIs](/bot-framework/rest-api/bot-framework-rest-overview) direkt aufrufen. Sie müssen jedoch in allen Fällen die Tokenverarbeitung durchführen.
+> Sie können Teams-Apps in jeder Webprogrammiertechnologie entwickeln und die [Bot Framework-REST-APIs](/bot-framework/rest-api/bot-framework-rest-overview) direkt aufrufen. Sie müssen jedoch in allen Fällen die Tokenverarbeitung durchführen.
 
 ## <a name="bots-with-power-virtual-agents"></a>Bots mit Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) ist ein Chatbot-Dienst, der auf der Microsoft Power-Plattform und dem Bot Framework basiert. Der Power Virtual Agent-Entwicklungsprozess verwendet einen geführten, codefreien und grafischen Schnittstellenansatz, der Es Ihren Teammitgliedern ermöglicht, einfach einen intelligenten virtuellen Agent zu erstellen und zu verwalten. Nachdem Sie Ihren Chatbot im [Power Virtual Agents Portal](https://powervirtualagents.microsoft.com)erstellt haben, können Sie ihn problemlos in [Teams integrieren.](how-to/add-power-virtual-agents-bot-to-teams.md) Weitere Informationen zu den ersten Schritten finden Sie [in Power Virtual Agents Dokumentation.](/power-virtual-agents)
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) ist ein Chatbot-Dienst, der auf der Microsoft Power-Plattform und bot Framework basiert. Der Power Virtual Agent-Entwicklungsprozess verwendet einen geführten, codefreien und grafischen Schnittstellenansatz, der Es Ihren Teammitgliedern ermöglicht, einfach einen intelligenten virtuellen Agent zu erstellen und zu verwalten. Nachdem Sie Ihren Chatbot im [Power Virtual Agents-Portal](https://powervirtualagents.microsoft.com) erstellt haben, können Sie ihn ganz einfach [in Teams integrieren](how-to/add-power-virtual-agents-bot-to-teams.md). Weitere Informationen zu den ersten Schritten finden Sie [in Power Virtual Agents Dokumentation](/power-virtual-agents).
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots mit Webhooks und Connectors
 
-Webhooks und Connectors verbinden Ihren Bot mit Ihren Webdiensten. Mithilfe von Webhooks und Connectors können Sie einen einfachen Bot für grundlegende Interaktionen erstellen, z. B. das Erstellen eines Workflows oder anderer einfacher Befehle. Sie sind nur in dem Team verfügbar, in dem Sie sie erstellen, und sind für einfache Prozesse vorgesehen, die für den Workflow Ihres Unternehmens spezifisch sind. Weitere Informationen finden Sie unter [Webhooks und Connectors.](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+Webhooks und Connectors verbinden Ihren Bot mit Ihren Webdiensten. Mithilfe von Webhooks und Connectors können Sie einen einfachen Bot für grundlegende Interaktionen erstellen, z. B. das Erstellen eines Workflows oder anderer einfacher Befehle. Sie sind nur in dem Team verfügbar, in dem Sie sie erstellen, und sind für einfache Prozesse vorgesehen, die für den Workflow Ihres Unternehmens spezifisch sind. Weitere Informationen finden Sie unter [Webhooks und Connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 ## <a name="advantages-of-bots"></a>Vorteile von Bots
 
@@ -61,7 +61,7 @@ Bots in Microsoft Teams können Teil einer 1:1-Unterhaltung, eines Gruppenchats 
 
 ### <a name="in-a-channel"></a>In einem Kanal
 
-Kanäle enthalten Threadunterhaltungen zwischen mehreren Personen, sogar bis zu 2.000. Dies ermöglicht Ihrem Bot möglicherweise eine enorme Reichweite, aber die einzelnen Interaktionen müssen präzise sein. Herkömmliche Multi-Turn-Interaktionen funktionieren nicht. Stattdessen müssen Sie interaktive Karten oder Aufgabenmodule verwenden oder die Unterhaltung in eine 1:1-Unterhaltung verschieben, um viele Informationen zu sammeln. Ihr Bot hat nur Zugriff auf Nachrichten, in denen er sich `@mentioned` befindet. Sie können zusätzliche Nachrichten aus der Unterhaltung mit microsoft Graph und Berechtigungen auf Organisationsebene abrufen.
+Kanäle enthalten Threadunterhaltungen zwischen mehreren Personen, sogar bis zu 2.000. Dies ermöglicht Ihrem Bot möglicherweise eine enorme Reichweite, aber die einzelnen Interaktionen müssen präzise sein. Herkömmliche Multi-Turn-Interaktionen funktionieren nicht. Stattdessen müssen Sie interaktive Karten oder Aufgabenmodule verwenden oder die Unterhaltung in eine 1:1-Unterhaltung verschieben, um viele Informationen zu sammeln. Ihr Bot hat nur Zugriff auf Nachrichten, in denen er sich befindet `@mentioned`. Sie können zusätzliche Nachrichten aus der Unterhaltung mit microsoft Graph und Berechtigungen auf Organisationsebene abrufen.
 
 Bots funktionieren in den folgenden Fällen besser in einem Kanal:
 
@@ -72,15 +72,16 @@ Bots funktionieren in den folgenden Fällen besser in einem Kanal:
 
 ### <a name="in-a-group-chat"></a>In einem Gruppenchat
 
-Gruppenchats sind Unterhaltungen ohne Threading zwischen drei oder mehr Personen. Sie weisen tendenziell weniger Mitglieder auf als ein Kanal und sind kurzlebiger. Ähnlich wie ein Kanal hat Ihr Bot nur Zugriff auf Nachrichten, in denen er `@mentioned` sich direkt befindet.
+Gruppenchats sind Unterhaltungen ohne Threading zwischen drei oder mehr Personen. Sie weisen tendenziell weniger Mitglieder auf als ein Kanal und sind kurzlebiger. Ähnlich wie ein Kanal hat Ihr Bot nur Zugriff auf Nachrichten, in denen er sich direkt befindet `@mentioned` .
 
 In den Fällen, in denen Bots in einem Kanal besser funktionieren, funktionieren sie auch besser in einem Gruppenchat.
 
 ### <a name="in-a-one-to-one-chat"></a>In einem 1:1-Chat.
 
 Ein 1:1-Chat ist eine herkömmliche Möglichkeit für einen Unterhaltungsbot, mit einem Benutzer zu interagieren. Ein paar Beispiele für 1:1-Unterhaltungs-Bots sind:
+
 * F&A-Bots
-* Bots, die Workflows in anderen Systemen initiieren 
+* Bots, die Workflows in anderen Systemen initiieren
 * Bots, die Witze erzählen
 * Bots, die Notizen machen, bevor Sie One-to-One-Chatbots erstellen, sollten überlegen, ob eine unterhaltungsbasierte Schnittstelle die beste Möglichkeit ist, Ihre Funktionalität darzustellen.
 
@@ -90,7 +91,7 @@ Ein umfangreiches Dialogfeld zwischen Ihrem Bot und dem Benutzer ist eine langsa
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>Multi-Turn-Erfahrungen im Chat
 
-Für ein umfangreiches Dialogfeld muss der Entwickler den Status beibehalten. Um diesen Zustand zu beenden, muss ein Benutzer entweder ein Timeout oder **abbrechen** auswählen. Außerdem ist der Prozess mühsam. Sehen Sie sich beispielsweise das folgende Unterhaltungsszenario an:
+Für ein umfangreiches Dialogfeld muss der Entwickler den Status beibehalten. Um diesen Status zu beenden, muss ein Benutzer entweder ein Timeout ausführen oder **"Abbrechen**" auswählen. Außerdem ist der Prozess mühsam. Sehen Sie sich beispielsweise das folgende Unterhaltungsszenario an:
 
 BENUTZER: Plane eine Besprechung mit Marie.
 
@@ -170,7 +171,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 {
     turnContext.Activity.RemoveRecipientMention();
     var text = turnContext.Activity.Text.Trim().ToLower();
-        await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
+  await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
 }
 ```
 
