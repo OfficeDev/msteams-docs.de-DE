@@ -3,17 +3,17 @@ title: Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
 description: Erfahren Sie, wie Sie die Freigabe mithilfe von Codebeispielen Teams eingebetteten Schaltfläche auf Ihrer Website mit einer Websitevorschau hinzufügen.
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: Freigeben Teams freigabebasierter Teams
-ms.openlocfilehash: a2c94ad690864b6af89005af4f96866f1ebda0b6
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+keywords: Freigeben Teams Teams
+ms.openlocfilehash: 05e64033d16d4b94c6ac2f9f230c296218f75517
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518492"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355874"
 ---
 # <a name="create-share-to-teams-button"></a>Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
 
-Websites von Drittanbietern können das Startprogrammskript verwenden, um Share-to-Teams-Schaltflächen auf ihren Webseiten einzubetten. Wenn Sie diese Option auswählen, wird die Share-to-Teams-Oberfläche in einem Popupfenster gestartet. Auf diese Weise können Sie einen Link direkt für jede Person oder Microsoft Teams Kanal freigeben, ohne den Kontext zu wechseln. In diesem Dokument erfahren Sie, wie Sie eine Schaltfläche für Teams freigeben für Ihre Website erstellen und einbetten, Eine Websitevorschau erstellen und share-to-Teams für Education erweitern.
+Websites von Drittanbietern können das Startprogrammskript verwenden, um Share-to-Teams-Schaltflächen auf ihren Webseiten einzubetten. Wenn Sie dies auswählen, wird die Share-to-Teams-Oberfläche in einem Popupfenster gestartet. Auf diese Weise können Sie einen Link direkt für jede Person oder Microsoft Teams Kanal freigeben, ohne den Kontext zu wechseln. In diesem Dokument erfahren Sie, wie Sie eine Schaltfläche für Teams freigeben für Ihre Website erstellen und einbetten, eine Websitevorschau erstellen und share-to-Teams für Education erweitern.
 
 > [!NOTE]
 > * Nur die Desktopversionen von MicrosoftEdge&nbsp; und Google Chrome werden unterstützt.
@@ -53,7 +53,7 @@ In der folgenden Abbildung wird die Popupoberfläche "Share-to-Teams" angezeigt:
       data-icon-px-size="64">
     </div>
     ```
-1. Wenn der freigegebene Link eine Benutzerauthentifizierung erfordert und die URL-Vorschau ihres Links, der freigegeben werden soll, in Teams nicht gut gerendert wird, können Sie die URL-Vorschau deaktivieren, indem Sie das Attribut hinzufügen, das `data-preview` auf `false`festgelegt ist.
+1. Wenn der freigegebene Link eine Benutzerauthentifizierung erfordert und die URL-Vorschau ihres Links, der freigegeben werden soll, in Teams nicht gut gerendert wird, können Sie die URL-Vorschau deaktivieren, indem Sie das Attribut hinzufügen, auf das `data-preview` festgelegt wurde`false`.
 
     ```html
     <div
@@ -99,7 +99,7 @@ Für Lehrer, die die Schaltfläche "Freigeben" zum Teams verwenden, gibt es eine
 | iconPxSize | `data-icon-px-size` | Zahl (als Zeichenfolge) | `32` | Die Größe der zu rendernden Schaltfläche "Share-to-Teams" in Pixeln. |
 | msgText | `data-msg-text` | string | n/v | Standardtext, der vor dem Link in das Feld zum Verfassen von Nachrichten eingefügt werden soll. Die maximale Anzahl von Zeichen beträgt 200 Zeichen. |
 | assignInstr | `data-assign-instr` | string | n/v | Standardtext, der in das Zuordnungsfeld Anweisungen eingefügt werden soll. Die maximale Anzahl von Zeichen beträgt 200 Zeichen. |
-| assignTitle | `data-assign-title` | string | n/v | Standardtext, der in das Zuordnungsfeld Titel eingefügt werden soll. Die maximale Anzahl von Zeichen beträgt 50 Zeichen. |
+| assignTitle | `data-assign-title` | Zeichenfolge | n/v | Standardtext, der in das Zuordnungsfeld Titel eingefügt werden soll. Die maximale Anzahl von Zeichen beträgt 50 Zeichen. |
 
 ### <a name="methods"></a>Methoden
 

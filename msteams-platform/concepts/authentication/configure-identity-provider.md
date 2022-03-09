@@ -1,15 +1,15 @@
 ---
 title: Konfigurieren von OAuth 2.0-Identitätsanbietern
-description: Beschreibt, wie Identitätsanbieter konfiguriert werden, deren Schwerpunkt auf Microsoft Azure Active Directory (Azure AD) liegt.
+description: Beschreibt, wie Identitätsanbieter konfiguriert werden, deren Schwerpunkt auf Microsoft Azure Active Directory liegt (Azure AD)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams-Authentifizierung Azure AD oauth-Identitätsanbieter
-ms.openlocfilehash: b35f28f2cb306a6dfc3ae3151616925da1525069
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 36e81839b1837fca8a124b60701c3d5f95608851
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821353"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356413"
 ---
 # <a name="configure-identity-providers"></a>Identitätsanbieter konfigurieren
 
@@ -32,3 +32,11 @@ Ersetzen Sie `<hostname>` dies durch Ihren tatsächlichen Host, bei dem es sich 
 * **Linkedin:** Folgen Sie den Anweisungen beim [Konfigurieren Ihrer LinkedIn-Anwendung](/linkedin/talent/apply-with-linkedin).
 
 * **Google:** Abrufen von OAuth 2.0-Clientanmeldeinformationen aus der [Google API-Konsole](https://console.developers.google.com/)
+
+* **Externe OAuth-Anbieter von Registerkarten:** Weitere Informationen finden Sie unter [Verwenden externer OAuth-Anbieter](../../tabs/how-to/authentication/auth-oauth-provider.md)
+
+## <a name="see-also"></a>Siehe auch 
+
+* [Authentifizieren eines Benutzers in einem Microsoft Teams-Bot](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
+* [Unterstützung für einmaliges Anmelden (SSO) für Registerkarten](../../tabs/how-to/authentication/auth-aad-sso.md)
+* [Authentifizieren eines Benutzers auf einer Microsoft Teams Registerkarte](../../tabs/how-to/authentication/auth-tab-aad.md)

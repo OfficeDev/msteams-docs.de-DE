@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: UI-Kit-Vorlage für reaktionsfähiges Verhalten in Besprechungen – freigegebene Besprechungsphase
-ms.openlocfilehash: e62146a4fb32f37145a818855749d68e64bee384
-ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
+ms.openlocfilehash: bb83da351a6b9d2b1219ef1e265e5e6269b34f26
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62523795"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355823"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen ihrer Microsoft Teams Besprechungserweiterung
 
@@ -97,7 +97,7 @@ Personen können die Registerkarte "Besprechungsinterne Besprechung" für Folgen
 
 ### <a name="anatomy-in-meeting-tab"></a>Anatomie: Registerkarte "In-Meeting"
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-anatomy.png" alt-text="Beispiel zeigt die strukturelle Anatomie einer Besprechungsregisterkarte." border="false":::
+:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="Beispiel zeigt die strukturelle Anatomie einer Besprechungsregisterkarte." border="false":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -132,7 +132,7 @@ Für Szenarien mit Navigationsebenen oder umfangreichen Inhalten wird empfohlen,
 
 ## <a name="use-an-in-meeting-dialog"></a>Verwenden eines Besprechungsdialogfelds
 
-Dialogfelder in Besprechungen werden auf der Teams Besprechungsphase angezeigt. Sie erfordern die Aufmerksamkeit, Bestätigung oder Interaktion eines Benutzers, sind aber dezent und unterbrechen die Besprechung nicht. Sie sollten diese sparsam und für Szenarien verwenden, die leicht und aufgabenorientiert sind.
+Dialogfelder in Besprechungen werden in der Teams Besprechungsphase angezeigt. Sie erfordern die Aufmerksamkeit, Bestätigung oder Interaktion eines Benutzers, sind aber dezent und unterbrechen die Besprechung nicht. Sie sollten diese sparsam und für Szenarien verwenden, die leicht und aufgabenorientiert sind.
 
 ### <a name="use-cases"></a>Anwendungsfälle
 
@@ -153,7 +153,7 @@ In-Meeting-Dialogfelder werden von einem Benutzer (z. B. dem Besprechungsorganis
 
 ### <a name="anatomy-in-meeting-dialog"></a>Anatomie: Besprechungsdialogfeld
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-anatomy.png" alt-text="Beispiel zeigt die strukturelle Anatomie eines Besprechungsdialogfelds." border="false":::
+:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="Beispiel zeigt die strukturelle Anatomie eines Besprechungsdialogfelds." border="false":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -392,7 +392,7 @@ Wir empfehlen, die visuell schwerste Aktion am rechten Ort zu positionieren.
 
 #### <a name="dont-left-or-center-align-actions"></a>Nicht empfohlen: Aktionen links oder zentr werden ausgerichtet
 
-Dies weicht vom standard Teams Muster für die Platzierung von Steuerelementen in einem Dialogfeld ab und kann mit einem Dialogfeld hinter dem oberen Dialogfeld in Konflikt geraten.
+Dies weicht vom standardmäßigen Teams Muster für die Platzierung von Steuerelementen in einem Dialogfeld ab und kann mit einem Dialogfeld hinter dem oberen Dialogfeld in Konflikt geraten.
 
    :::column-end:::
 :::row-end:::
@@ -408,7 +408,7 @@ Dies weicht vom standard Teams Muster für die Platzierung von Steuerelementen i
 
 #### <a name="do-scroll-vertically"></a>Do: Vertikaler Bildlauf
 
-Benutzer erwarten einen vertikalen Bildlauf in Teams (und an anderer Stelle). Dies gilt möglicherweise nicht, wenn Sie über eine kreative Canvas verfügen, z. B. ein Whiteboard, das Benutzer über die X- und Y-Achse schwenken können.
+Benutzer erwarten den vertikalen Bildlauf in Teams (und an anderer Stelle). Dies gilt möglicherweise nicht, wenn Sie über eine kreative Canvas verfügen, z. B. ein Whiteboard, das Benutzer über die X- und Y-Achse schwenken können.
 
    :::column-end:::
    :::column span="":::
@@ -419,7 +419,7 @@ Benutzer erwarten einen vertikalen Bildlauf in Teams (und an anderer Stelle). Di
 
 #### <a name="dont-scroll-horizontally"></a>Nicht ausführen: Horizontaler Bildlauf
 
-Horizontaler Bildlauf ist kein erwartetes Verhalten in Teams (einschließlich der Besprechungsumgebung).
+Der horizontale Bildlauf ist kein erwartetes Verhalten in Teams (einschließlich der Besprechungsumgebung).
 
    :::column-end:::
 :::row-end:::

@@ -1,23 +1,23 @@
 ---
 title: Vorbereiten der Übermittlung an den Store
-description: Beschreibt die letzten Schritte, bevor Sie Ihre Microsoft Teams App übermitteln, die im Store aufgeführt werden soll. Erfahren Sie, wie Sie Ihr App-Paket überprüfen, Testanweisungen kompilieren und Details zum Store-Eintrag erstellen.
+description: Beschreibt die letzten Schritte, bevor Sie Ihre Microsoft Teams-App übermitteln, die im Store aufgeführt werden soll. Erfahren Sie, wie Sie Ihr App-Paket überprüfen, Testanweisungen kompilieren und Details zum Store-Eintrag erstellen.
 ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: Verteilen von Validierungsrichtlinien für App-Pakete im Übermittlungsspeicher lokalisieren
-ms.openlocfilehash: 4da374d9ced3231437aef278c7c90c68fc0c19de
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: 579744dc8081eb8ca3e967cce1b4d696350d0a56
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949068"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356427"
 ---
-# <a name="prepare-your-microsoft-teams-store-submission"></a>Vorbereiten der Übermittlung Microsoft Teams Store
+# <a name="prepare-your-microsoft-teams-store-submission"></a>Vorbereiten der Übermittlung an den Microsoft Teams Store
 
 Sie haben Ihre Microsoft Teams-App entworfen, erstellt und getestet. Jetzt können Sie sie auflisten, damit Benutzer Ihre App entdecken und verwenden können.
 
-Bevor Sie Ihre App an [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource)übermitteln, stellen Sie sicher, dass Sie Folgendes getan haben.
+Bevor Sie Ihre App an [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource) übermitteln, stellen Sie sicher, dass Sie Folgendes getan haben.
 
 ## <a name="validate-your-app-package"></a>Überprüfen des App-Pakets
 
@@ -28,9 +28,9 @@ Während Ihre App möglicherweise in einer Testumgebung funktioniert, sollten Si
 
 Das Microsoft Teams App-Überprüfungstool hilft Ihnen, Probleme zu identifizieren und zu beheben, bevor Sie an Partner Center übermitteln. Das Tool überprüft die Konfigurationen Ihrer App automatisch anhand der gleichen Testfälle, die während der Store-Überprüfung verwendet werden.
 
-1. Wechseln Sie zum [Microsoft Teams App-Überprüfungstool.](https://dev.teams.microsoft.com/appvalidation.html) (Hinweis: Das Tool ist auch in [App Studio](../../../build-and-test/app-studio-overview.md)verfügbar.)
+1. Wechseln Sie zum [Microsoft Teams App-Überprüfungstool](https://dev.teams.microsoft.com/appvalidation.html). (Hinweis: Das Tool ist auch in [App Studio](../../../build-and-test/app-studio-overview.md) verfügbar.)
 1. Hochladen Ihr App-Paket, um die automatisierten Tests auszuführen.
-1. Wechseln Sie zur **vorläufigen Checkliste,** und überprüfen Sie die Testfälle, die schwierig zu automatisieren sind.
+1. Wechseln Sie zur **vorläufigen Checkliste** , und überprüfen Sie die Testfälle, die schwierig zu automatisieren sind.
 1. [Beheben von Problemen mit Ihren Konfigurationen](~/resources/schema/manifest-schema.md) oder Ihrer App im Allgemeinen. Diese Probleme treten auf, wenn die automatisierten Tests Ihnen Fehler liefern oder sie nicht alle Kriterien in der Prüfliste erfüllt haben.
 
 ## <a name="compile-testing-instructions"></a>Kompilieren von Testanweisungen
@@ -44,7 +44,7 @@ Sie können Anweisungen im Partner Center hinzufügen oder an einen öffentlich 
 
 ### <a name="feature-list"></a>Featureliste
 
-Geben Sie Details zu den Funktionen Ihrer App in Teams und den Schritten zum Testen der einzelnen Apps an.
+Geben Sie Details zu den Funktionen Ihrer App in Teams und Schritten zum Testen der einzelnen Funktionen an.
 
 ### <a name="accounts"></a>Konten
 
@@ -68,13 +68,13 @@ Stellen Sie eine Aufzeichnung Ihrer App bereit, damit Microsoft die Funktionalit
 
 ## <a name="create-your-store-listing-details"></a>Erstellen der Details ihres Store-Eintrags
 
-Die Informationen, die Sie an [Partner Center](https://partner.microsoft.com) übermitteln,&#8212;einschließlich Name, Beschreibungen, Symbolen und Bildern&#8212;werden zum Teams Store- und Microsoft AppSource-Eintrag für Ihre App.
+Die Informationen, die Sie an [Partner Center](https://partner.microsoft.com) übermitteln&#8212;einschließlich Name, Beschreibungen, Symbolen und Bildern&#8212;werden zum Teams Store- und Microsoft AppSource-Eintrag für Ihre App.
 
 Ein Store-Eintrag kann der erste Eindruck einer Person von Ihrer App sein. Erhöhen Sie Installationen mit einem Eintrag, der die Vorteile, Funktionen und Marken Ihrer App effektiv vermittelt.
 
 ### <a name="specify-a-short-name"></a>Angeben eines Kurznamens
 
-Der Name Ihrer App (insbesondere der [*Kurzname)*](~/resources/schema/manifest-schema.md#name)spielt eine wichtige Rolle, wenn es darum geht, wie Benutzer sie im Store entdecken.
+Der Name Ihrer App (insbesondere der [*Kurzname*](~/resources/schema/manifest-schema.md#name)) spielt eine wichtige Rolle, wenn es darum geht, wie Benutzer sie im Store entdecken.
 
 :::row:::
 
@@ -86,7 +86,7 @@ Der Name Ihrer App (insbesondere der [*Kurzname)*](~/resources/schema/manifest-s
 
 :::row-end:::
 
-Stellen Sie sicher, dass Ihr Kurzname den Richtlinien für die [Speichervalidierung](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name)entspricht.
+Stellen Sie sicher, dass Ihr Kurzname den Richtlinien für die [Store-Validierung](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name) entspricht.
 
 ### <a name="write-descriptions"></a>Beschreibungen schreiben
 
@@ -106,7 +106,7 @@ Eine kurze Zusammenfassung Ihrer App, die originell, ansprechend und an Ihre Zie
 
 :::row-end:::
 
-Stellen Sie sicher, dass Ihre kurze Beschreibung den Richtlinien für die [Store-Validierung](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description)entspricht.
+Stellen Sie sicher, dass Ihre kurze Beschreibung den Richtlinien für die [Store-Validierung](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description) entspricht.
 
 #### <a name="long-description"></a>Lange Beschreibung
 
@@ -128,13 +128,13 @@ Obwohl diese Beschreibung bis zu 4 000 Zeichen lang sein kann, werden die meiste
 
 :::row-end:::
 
-Stellen Sie sicher, dass Ihre lange Beschreibung den Richtlinien für die [Store-Validierung](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description)entspricht.
+Stellen Sie sicher, dass Ihre lange Beschreibung den Richtlinien für die [Store-Validierung](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description) entspricht.
 
 ### <a name="adhere-to-icon-design-guidelines"></a>Befolgen von Richtlinien für das Design von Symbolen
 
 Symbole sind eines der Hauptelemente, die Benutzern beim Durchsuchen des Stores angezeigt werden. Ihre Symbole sollten die Marke und den Zweck Ihrer App kommunizieren und gleichzeitig Teams Anforderungen erfüllen.
 
-Weitere Informationen finden Sie unter [Anleitungen zum Erstellen von Teams App-Symbolen.](~/concepts/build-and-test/apps-package.md#app-icons)
+Weitere Informationen finden Sie unter [Anleitungen zum Erstellen von Teams App-Symbolen](~/concepts/build-and-test/apps-package.md#app-icons).
 
 ### <a name="capture-screenshots"></a>Screenshots erfassen
 
@@ -153,8 +153,8 @@ Screenshots bieten eine auffällige visuelle Vorschau Ihrer App, um Ihren App-Na
 Denken Sie an die folgenden bewährten Methoden für Screenshots:
 
 * Sie können bis zu fünf Screenshots pro Eintrag erstellen.
-* Unterstützte Dateitypen sind PNG, JPEG und GIF.
-* Die Dimensionen sollten 1366 x 768 Pixel betragen.
+* Zu den unterstützten Dateitypen gehören .png-, JPEG- und GIF-Bildformate.
+* Die Abmessungen sollten 1366 x 768 Pixel betragen.
 * Maximale Größe von 1 024 KB.
 
 Bewährte Methoden finden Sie in den folgenden Ressourcen:
@@ -182,13 +182,13 @@ Sie können eine URL für Ihr YouTube- oder YouTube-Video hinzufügen.
 
 ### <a name="select-a-category-for-your-app"></a>Auswählen einer Kategorie für Ihre App
 
-Während der Übermittlung werden Sie aufgefordert, Ihre App zu kategorisieren. In der folgenden Tabelle werden Teams Store Kategorien den im [Partner Center](https://aka.ms/PartnerCenterHomePage)aufgeführten Kategorien zugeordnet.
+Während der Übermittlung werden Sie aufgefordert, Ihre App zu kategorisieren. In der folgenden Tabelle werden Teams Store Kategorien den im [Partner Center](https://aka.ms/PartnerCenterHomePage) aufgeführten Kategorien zugeordnet.
 
 | Teams Kategorien       | Partner Center-Kategorien  |
 |:---------------------|:---------------|
 | Analyse und BI | Analyse, Datenvisualisierung und BI |
 | Entwickler und IT | Entwicklertools, IT-Administrator |
-| Schulung und Weiterbildung | Schulung und Weiterbildung |
+| Education | Education |
 | Personalwesen | Personal und Personalwesen |
 | Produktivität | Inhaltsverwaltung, Dateien und Dokumente, Produktivität, Schulungen und Lernprogramme und Hilfsprogramme |
 | Projektmanagement | Kommunikations-, Project-, Workflow- und Unternehmensverwaltung |
@@ -197,7 +197,7 @@ Während der Übermittlung werden Sie aufgefordert, Ihre App zu kategorisieren. 
 
 ### <a name="localize-your-store-listing"></a>Lokalisieren Des Store-Eintrags
 
-Partner Center unterstützt [lokalisierte Store-Einträge.](/office/dev/store/prepare-localized-solutions) Weitere Informationen finden Sie unter [Lokalisieren ihres Teams App-Eintrags.](../../../../concepts/build-and-test/apps-localization.md)
+Partner Center unterstützt [lokalisierte Store-Einträge](/office/dev/store/prepare-localized-solutions). Weitere Informationen finden Sie unter ["Lokalisieren ihres Teams App-Eintrags](../../../../concepts/build-and-test/apps-localization.md)".
 
 ## <a name="complete-publisher-verification"></a>Abschließen Publisher Überprüfung
 
@@ -208,7 +208,7 @@ Partner Center unterstützt [lokalisierte Store-Einträge.](/office/dev/store/pr
 [Publisher Nachweis](/microsoft-365-app-certification/docs/attestation) ist auch für Teams im Store aufgeführten Apps erforderlich. Der Prozess umfasst die Durchführung einer Selbstbewertung der Sicherheits-, Datenverarbeitungs- und Compliancepraktiken Ihrer App. Der Prozess kann potenziellen Kunden helfen, fundierte Entscheidungen zur Verwendung Ihrer App zu treffen.
 
 > [!NOTE]
-> Wenn Sie eine neue App übermitteln, können Sie Publisher Nachweis erst offiziell ausfüllen, wenn Ihre App im Teams Store aufgeführt ist. Wenn Sie eine aufgeführte App aktualisieren, führen Sie Publisher Nachweis aus, bevor Sie die neueste Version der App zur Überprüfung übermitteln.
+> Wenn Sie eine neue App übermitteln, können Sie Publisher Nachweis erst offiziell abschließen, wenn Ihre App im Teams Store aufgeführt ist. Wenn Sie eine aufgeführte App aktualisieren, führen Sie Publisher Nachweis aus, bevor Sie die neueste Version der App zur Überprüfung übermitteln.
 
 ## <a name="next-step"></a>Nächster Schritt
 

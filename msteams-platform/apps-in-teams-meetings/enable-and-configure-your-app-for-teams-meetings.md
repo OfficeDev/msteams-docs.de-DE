@@ -4,12 +4,12 @@ author: surbhigupta
 description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen und verschiedene Besprechungsszenarien, Aktualisieren des App-Manifests, Konfigurieren von Features wie In-Meeting-Dialog, freigegebener Besprechungsphase, Besprechungs-SidePanel und mehr
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 17dc9bce0bb6a54aea09d0f41b01840e5d2ca621
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 160518c147ac2bc1d1378a3f1bd31fde9de1723c
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821591"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355800"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -68,7 +68,7 @@ Nachdem Sie Ihre App für Teams Besprechungen aktiviert haben, müssen Sie Ihre 
 
 ## <a name="configure-your-app-for-meeting-scenarios"></a>Konfigurieren Ihrer App für Besprechungsszenarien
 
-Teams Besprechungen bieten eine Zusammenarbeitserfahrung für Ihre Organisation. Konfigurieren Sie Ihre App für verschiedene Besprechungsszenarien, und verbessern Sie die Besprechungserfahrung. Jetzt können Sie ermitteln, welche Aktionen in den folgenden Besprechungsszenarien ausgeführt werden können:
+Teams Besprechungen bieten eine Zusammenarbeit für Ihre Organisation. Konfigurieren Sie Ihre App für verschiedene Besprechungsszenarien, und verbessern Sie die Besprechungserfahrung. Jetzt können Sie ermitteln, welche Aktionen in den folgenden Besprechungsszenarien ausgeführt werden können:
 
 * [Vor einer Besprechung](#before-a-meeting)
 * [Während einer Besprechung](#during-a-meeting)
@@ -100,11 +100,11 @@ Geben Sie in einem Besprechungschat den **@** Schlüssel ein, und wählen **Sie 
 > * Die Inhaltsblase sendet eine adaptive Karte oder eine Karte gleichzeitig im Besprechungschat, auf den Benutzer zugreifen können. Dies hilft den Benutzern, wenn die Besprechung oder die Teams-App minimiert wird.
 > * Die Benutzeridentität muss mit [tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md) bestätigt werden. Nach der Authentifizierung kann die App die Benutzerrolle mithilfe der `GetParticipant` API abrufen.
 > * Basierend auf der Benutzerrolle kann die App rollenspezifische Benutzeroberflächen bereitstellen. Eine Abruf-App ermöglicht beispielsweise nur Organisatoren und Referenten das Erstellen einer neuen Umfrage.
-> * Rollenzuweisungen können geändert werden, während eine Besprechung ausgeführt wird. Weitere Informationen finden Sie [unter Rollen in einer Teams Besprechung](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+> * Rollenzuweisungen können geändert werden, während eine Besprechung ausgeführt wird. Weitere Informationen finden Sie [unter Rollen in einer Teams-Besprechung](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 ### <a name="during-a-meeting"></a>Während einer Besprechung
 
-Während einer Besprechung können Sie das `meetingSidePanel` Dialogfeld oder das In-Meeting-Dialogfeld verwenden, um einzigartige Erfahrungen für Ihre Apps zu erstellen.
+Während einer Besprechung können Sie die Benachrichtigung oder Benachrichtigung innerhalb einer `meetingSidePanel` Besprechung verwenden, um einzigartige Erfahrungen für Ihre Apps zu erstellen.
 
 #### <a name="meeting-sidepanel"></a>Meeting SidePanel
 
@@ -117,21 +117,19 @@ Die Messaging-Erweiterung funktioniert erwartungsgemäß, wenn sich ein Benutzer
 > [!NOTE]
 > Verwenden Sie Version 1.7.0 oder höher von [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), da die vorherigen Versionen den Seitenbereich nicht unterstützen.
 
-#### <a name="in-meeting-dialog-box"></a>Dialogfeld "Besprechungsinterne Besprechung"
+#### <a name="in-meeting-notification"></a>In-Meeting-Benachrichtigung
 
-Das Dialogfeld in der Besprechung wird verwendet, um Teilnehmer während der Besprechung einzubeziehen und Während der Besprechung Informationen oder Feedback zu sammeln. Verwenden Sie die [SendNotificationSignal-API](API-references.md#send-notification-signal-api) , um eine Blasenbenachrichtigung auszulösen. Fügen Sie als Teil der Benachrichtigungsanforderungsnutzlast die URL ein, unter der der anzuzeigende Inhalt gehostet wird.
+Die In-Meeting-Benachrichtigung wird verwendet, um Teilnehmer während der Besprechung einzubeziehen und Informationen oder Feedback während der Besprechung zu sammeln. Verwenden Sie eine [In-Meeting-Benachrichtigungsnutzlast](API-references.md#send-an-in-meeting-notification) , um eine In-Meeting-Benachrichtigung auszulösen. Fügen Sie als Teil der Benachrichtigungsanforderungsnutzlast die URL ein, unter der der anzuzeigende Inhalt gehostet wird.
 
-Das Besprechungsdialogfeld darf kein Aufgabenmodul verwenden. Das Aufgabenmodul wird in einem Besprechungschat nicht aufgerufen. Eine externe Ressourcen-URL wird verwendet, um die Inhaltsblase in einer Besprechung anzuzeigen. Sie können die `submitTask` Methode verwenden, um Daten in einem Besprechungschat zu übermitteln.
+In-Meeting-Benachrichtigungen dürfen kein Aufgabenmodul verwenden. Das Aufgabenmodul wird in einem Besprechungschat nicht aufgerufen. Zum Anzeigen von In-Meeting-Benachrichtigungen wird eine externe Ressourcen-URL verwendet. Sie können die `submitTask` Methode verwenden, um Daten in einem Besprechungschat zu übermitteln.
 
-> [!NOTE]
-> * Sie müssen die [SubmitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) -Funktion aufrufen, um sie automatisch zu schließen, nachdem ein Benutzer eine Aktion in der Webansicht ausgeführt hat. Dies ist eine Anforderung für die App-Übermittlung. Weitere Informationen finden Sie unter [Teams SDK-Aufgabenmodul](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
-> * Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss die Anforderungsnutzlast für den ersten Aufruf auf Anforderungsmetadaten im `from` Objekt basieren, nicht `from.aadObjectId` auf `from.id` Anforderungsmetadaten. `from.id`ist die Benutzer-ID und `from.aadObjectId` die Microsoft Azure Active Directory -ID (Azure AD) des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Beispiel zeigt, wie Sie ein Besprechungsdialogfeld verwenden können." border="true":::
 
 #### <a name="shared-meeting-stage"></a>Freigegebenes Besprechungsfreigabefenster
 
 Die freigegebene Besprechungsphase ermöglicht es Besprechungsteilnehmern, in Echtzeit mit App-Inhalten zu interagieren und daran zusammenzuarbeiten. Sie können Ihre Apps auf folgende Weise für die Besprechungsphase für die Zusammenarbeit freigeben:
 
-* [Teilen Sie die gesamte App mithilfe](#share-entire-app-to-stage) der Schaltfläche "Freigabe für Phase" in Teams Client.
+* [Teilen Sie die gesamte App in der Phase](#share-entire-app-to-stage) mithilfe der Schaltfläche "Freigabe für Phase" in Teams Client.
 * [Teilen Sie bestimmte Teile der App, die](#share-specific-parts-of-the-app-to-stage) mithilfe von APIs im Teams-Client-SDK bereitgestellt werden sollen.
 
 ##### <a name="share-entire-app-to-stage"></a>Freigeben der gesamten App für die Phase
@@ -140,7 +138,7 @@ Teilnehmer können die gesamte App für die Besprechungsphase für die Zusammena
 
 <img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
-Um die gesamte App für die Phase freizugeben, müssen Sie im App-Manifest und `meetingSidePanel` als Framekontext konfigurieren`meetingStage`. Zum Beispiel: 
+Um die gesamte App für die Phase freizugeben, müssen Sie im App-Manifest und `meetingSidePanel` als Framekontext konfigurieren`meetingStage`. Beispiel:
 
 ```json
 "configurableTabs": [
@@ -178,14 +176,14 @@ Die Konfigurationen für Nach [- und Vorbesprechungen](#before-a-meeting) sind i
 
 |Beispielname | Beschreibung | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Besprechungs-App | Veranschaulicht die Verwendung der Besprechungstoken-Generator-App zum Anfordern eines Tokens. Das Token wird sequenziell generiert, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Das Token ist nützlich in Situationen wie Meetings mit DerBesprechung und Q&A-Sitzungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Besprechungs-App | Veranschaulicht die Verwendung der Besprechungstoken-Generator-App zum Anfordern eines Tokens. Das Token wird sequenziell generiert, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Das Token ist nützlich in Situationen wie Meetings in DerBesprechung und Q&A-Sitzungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |Beispiel für Besprechungsphasen | Beispiel-App zum Anzeigen einer Registerkarte in der Besprechungsphase für die Zusammenarbeit | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 |Besprechungsseitiger Bereich | Beispiel-App zum Hinzufügen von Tagesordnungen in einem besprechungsseitigen Bereich | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
 ## <a name="step-by-step-guides"></a>Schritt-für-Schritt-Anleitungen
 
 * Befolgen Sie die [schrittweise Anleitung](../sbs-meeting-token-generator.yml), um Besprechungstoken in Ihrer Teams Besprechung zu generieren.
-* Befolgen Sie die [schrittweise Anleitung](../sbs-meetings-sidepanel.yml) zum Generieren von Besprechungs-Sidepanels in Ihrer Teams Besprechung.
+* Befolgen Sie die [schrittweise Anleitung zum Generieren von Besprechungs-Sidepanels](../sbs-meetings-sidepanel.yml) in Ihrer Teams Besprechung.
 * Befolgen Sie die [schrittweise Anleitung](../sbs-meetings-stage-view.yml), um die Besprechungsphasenansicht in Ihrer Teams Besprechung zu generieren.
 * Befolgen Sie die [schrittweise Anleitung](../sbs-meeting-content-bubble.yml), um eine Besprechungsinhaltsblase in Ihrer Teams Besprechung zu generieren.
 

@@ -5,16 +5,22 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: cbb4eff47d21180bbdfe4aad49cb749a745386c2
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 3226b56ad784c0780ae01e8776704062e1add753
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518562"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356014"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Unterhalt Ihrer veröffentlichte Microsoft Teams-App
 
 Nachdem Ihre App im Microsoft Teams Store aufgeführt ist, überlegen Sie, wie Sie die App in Zukunft verwalten und Downloads und Nutzung erhöhen.
+
+## <a name="analyze-app-usage"></a>Analysieren der App-Nutzung
+
+Sie können Ihre App-Nutzung im [Bericht Teams App-Nutzung](/office/dev/store/teams-apps-usage) im Partner Center nachverfolgen. Zu den Metriken gehören aktive monatliche, tägliche und wöchentliche Benutzer sowie Aufbewahrungs- und Intensitätsdiagramme, mit denen Sie Änderungen und Nutzungshäufigkeit nachverfolgen können.
+
+Daten für neu veröffentlichte Apps dauern etwa eine Woche, bis sie im Bericht angezeigt werden.
 
 ## <a name="publish-updates-to-your-app"></a>Veröffentlichen von Updates für Ihre App
 
@@ -58,8 +64,8 @@ Erstellen Sie den Link mithilfe der folgenden URL, die mit Ihrer App-ID angefüg
 
 ## <a name="complete-microsoft-365-certification"></a>Abschließen Microsoft 365 Zertifizierung
 
-[Microsoft 365 Zertifizierung](/microsoft-365-app-certification/docs/certification) bietet Zusicherungen, dass Daten und Datenschutz angemessen gesichert und geschützt sind, wenn ein Office-App oder Add-In eines Drittanbieters in Ihrem Microsoft 365 Ökosystem installiert ist. Die Zertifizierung bestätigt, dass Ihre App mit Microsoft-Technologien kompatibel ist, den bewährten Methoden für cloudbasierte App-Sicherheit entspricht und von Microsoft unterstützt wird.
+[Microsoft 365 Zertifizierung](/microsoft-365-app-certification/docs/certification) bietet Zusicherungen, dass Daten und Datenschutz angemessen gesichert und geschützt sind, wenn ein Office-App oder Add-In eines Drittanbieters in Ihrem Microsoft 365 Ökosystem installiert wird. Die Zertifizierung bestätigt, dass Ihre App mit Microsoft-Technologien kompatibel ist, den bewährten Methoden für cloudbasierte App-Sicherheit entspricht und von Microsoft unterstützt wird.
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Siehe auch
 
 [Monetarisieren Sie Ihre App über den Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

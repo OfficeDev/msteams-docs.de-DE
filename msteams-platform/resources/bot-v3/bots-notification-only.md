@@ -5,12 +5,12 @@ keywords: Teams-Bots-Benachrichtigung
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 01/29/2020
-ms.openlocfilehash: 71dbc07445a57194e90ba3985c3aff1e2d4f2cdf
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d3ee5343ea159950859237f2a488557d9063eb6e
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156117"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355727"
 ---
 # <a name="notification-only-bots-in-microsoft-teams"></a>Bots nur für Benachrichtigungen in Microsoft Teams
 
@@ -22,14 +22,14 @@ Wenn der einzige Zweck Ihres Bots darin besteht, Benachrichtigungen an Benutzer 
 * Benutzer können den Bot nicht @mention.
 
 > [!NOTE]
-> Die reinen Bot-Apps werden in beiden Fällen in der persönlichen App-Leiste angezeigt: `isNotificationOnly: true` oder `isNotificationOnly: false` .
+> Die reinen Bot-Apps werden in beiden Fällen in der persönlichen App-Leiste angezeigt: `isNotificationOnly: true` oder `isNotificationOnly: false`.
 
 ## <a name="app-manifest"></a>App-Manifest
 
-Um dies zu aktivieren, legen Sie den Wert `isNotificationOnly` auf `true` .
+Um dies zu aktivieren, legen Sie den Wert `isNotificationOnly` auf `true`.
 
 > [!NOTE]
-> Beachten Sie, dass der Wert von `isNotificationOnly` Boolean und nicht String ist.
+> Der Wert von `isNotificationOnly` Boolean ist keine Zeichenfolge.
 
 ```json
 {
@@ -50,4 +50,4 @@ Um dies zu aktivieren, legen Sie den Wert `isNotificationOnly` auf `true` .
 
 ## <a name="best-practices-and-limitations"></a>Bewährte Methoden und Einschränkungen
 
-* Bots, die nur Benachrichtigungen verwenden, verwenden proaktives Messaging, um mit dem Benutzer zu kommunizieren. Weitere Informationen finden Sie unter [Proaktives Messaging für Bots.](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)
+* Bots, die nur Benachrichtigungen verwenden, verwenden proaktives Messaging, um mit dem Benutzer zu kommunizieren. Weitere Informationen finden Sie unter [Proaktives Messaging für Bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).

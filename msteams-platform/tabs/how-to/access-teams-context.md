@@ -4,12 +4,12 @@ description: Beschreibt, wie Sie Benutzerkontext zu Ihren Registerkarten abrufen
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams Registerkarten Benutzerkontext
-ms.openlocfilehash: a8e8fe6d638f8887a30f65dbf812046738d12dfb
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 4c18ba7f7e7dbb90f6a357a567b2b6145afcd827
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821731"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356266"
 ---
 # <a name="get-context-for-your-tab"></a>Kontext für Ihre Registerkarte erhalten
 
@@ -115,9 +115,6 @@ Der folgende Code enthält ein Beispiel für eine Kontextvariable:
 
 ## <a name="retrieve-context-in-private-channels"></a>Abrufen von Kontext in privaten Kanälen
 
-> [!Note]
-> Private Kanäle befinden sich derzeit in der privaten Entwicklervorschau.
-
 Wenn Ihre Inhaltsseite in einem privaten Kanal geladen wird, werden die Daten, die `getContext` Sie vom Anruf erhalten, verborgen, um den Datenschutz des Kanals zu schützen. 
 
 Die folgenden Felder werden geändert, wenn sich Die Inhaltsseite in einem privaten Kanal befindet:
@@ -125,14 +122,34 @@ Die folgenden Felder werden geändert, wenn sich Die Inhaltsseite in einem priva
 * `groupId`: Nicht definiert für private Kanäle
 * `teamId`: Auf die threadId des privaten Kanals festgelegt
 * `teamName`: Auf den Namen des privaten Kanals festgelegt
-* `teamSiteUrl`: Legen Sie die URL einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal fest.
+* `teamSiteUrl`: Legen Sie die URL einer eindeutigen SharePoint-Website für den privaten Kanal fest.
 * `teamSitePath`: Auf den Pfad einer bestimmten, eindeutigen SharePoint-Website für den privaten Kanal festgelegt
-* `teamSiteDomain`: Auf die Domäne einer eindeutigen SharePoint-Websitedomäne für den privaten Kanal festgelegt
+* `teamSiteDomain`: Festlegen auf die Domäne einer eindeutigen SharePoint-Websitedomäne für den privaten Kanal
 
-Wenn Ihre Seite einen dieser Werte verwendet, müssen Sie das `channelType` Feld überprüfen, um festzustellen, ob Die Seite in einem privaten Kanal geladen ist, und entsprechend reagieren.
+Wenn Ihre Seite einen dieser Werte verwendet, muss der Wert des `channelType` Felds sein `Private` , um zu bestimmen, ob Die Seite in einem privaten Kanal geladen ist und entsprechend reagieren kann.
 
-> [!Note]
-> `teamSiteUrl` funktioniert auch gut für Standardkanäle.
+## <a name="retrieve-context-in-microsoft-teams-connect-shared-channels"></a>Abrufen von Kontext in Microsoft Teams Verbinden freigegebenen Kanälen
+
+> [!NOTE]
+> Derzeit befinden sich Microsoft Teams Verbinden freigegebenen Kanäle nur in der [Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md).
+
+Wenn Ihre Inhaltsseite in einem Microsoft Teams Verbinden freigegebenen Kanal geladen wird, werden die Daten, die `getContext` Sie vom Anruf erhalten, aufgrund der eindeutigen Liste der Benutzer in freigegebenen Kanälen geändert. 
+
+Die folgenden Felder werden geändert, wenn sich Die Inhaltsseite in einem freigegebenen Kanal befindet:
+
+* `groupId`: Nicht definiert für freigegebene Kanäle.
+* `teamId`: Auf das `threadId` Team festgelegt, wird der Kanal für den aktuellen Benutzer freigegeben. Wenn der Benutzer Zugriff auf mehrere Teams hat, wird dieser `teamId` auf das Team festgelegt, das den freigegebenen Kanal hostet (erstellt).
+* `teamName`: Auf den Namen des Teams festgelegt, wird der Kanal für den aktuellen Benutzer freigegeben. Wenn der Benutzer Zugriff auf mehrere Teams hat, wird dieser `teamName` auf das Team festgelegt, das den freigegebenen Kanal hostet (erstellt).
+* `teamSiteUrl`: Legen Sie die URL einer eindeutigen, eindeutigen SharePoint-Website für den freigegebenen Kanal fest.
+* `teamSitePath`: Legen Sie den Pfad einer bestimmten, eindeutigen SharePoint-Website für den freigegebenen Kanal fest.
+* `teamSiteDomain`: Legen Sie die Domäne einer eindeutigen SharePoint-Websitedomäne für den freigegebenen Kanal fest.
+
+Zusätzlich zu diesen Feldänderungen stehen zwei neue Felder für freigegebene Kanäle zur Verfügung:
+
+* `hostTeamGroupId`: Festgelegt auf das `groupId` dem Hostingteam zugeordnete Team oder das Team, das den freigegebenen Kanal erstellt hat. Die Eigenschaft kann Microsoft Graph API-Aufrufe dazu bringen, die Mitgliedschaft des freigegebenen Kanals abzurufen.
+* `hostTeamTenantId`: Festgelegt auf das `tenantId` dem Hostingteam zugeordnete Team oder das Team, das den freigegebenen Kanal erstellt hat. Auf die Eigenschaft kann mit der Mandanten-ID des aktuellen Benutzers verwiesen werden, die `tid` im Feld von `getContext` gefunden wird, um festzustellen, ob der Benutzer intern oder außerhalb des Mandanten des Hostingteams ist.
+
+Wenn Ihre Seite einen dieser Werte verwendet, muss der Wert des `channelType` Felds sein `Shared` , um zu bestimmen, ob Die Seite in einem freigegebenen Kanal geladen ist und entsprechend reagieren kann.
 
 ## <a name="handle-theme-change"></a>Behandeln von Designänderungen
 

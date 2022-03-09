@@ -1,16 +1,16 @@
 ---
 title: Definieren von Suchbefehlen für Messaging-Erweiterungen
 author: surbhigupta
-description: Erfahren Sie mehr über Suchbefehle für Messaging-Erweiterungen für Microsoft Teams Apps, um einen Suchbefehl über das App-Manifest zu erstellen und Codebeispiele und Beispiel manuell zu verwenden.
+description: Erfahren Sie mehr über Suchbefehle für Messaging-Erweiterungen für Microsoft Teams-Apps, um einen Suchbefehl über das App-Manifest und manuell anhand von Codebeispielen und Beispielen zu erstellen.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 9ff1d6c51320db07e0363dff9f72bd513acc6199
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: a68d43fc067e1a67b914ed49f042d535e6c8de5a
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281749"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356357"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definieren von Suchbefehlen für Messaging-Erweiterungen
 
@@ -44,7 +44,7 @@ Voraussetzung für die Erstellung eines Suchbefehls ist, dass Sie bereits eine M
 
 **So erstellen Sie einen Suchbefehl**
 
-1. Öffnen Sie **App Studio** über den Microsoft Teams-Client, und wählen Sie die Registerkarte **"Manifest-Editor**" aus.
+1. Öffnen Sie **App Studio** im Microsoft Teams-Client, und wählen Sie die Registerkarte **"Manifest-Editor**" aus.
 1.  Wenn Sie Ihr App-Paket bereits in **App Studio** erstellt haben, wählen Sie aus der Liste aus. Wenn Sie kein App-Paket erstellt haben, importieren Sie ein vorhandenes Paket.
 1. Wählen Sie nach dem Importieren des **App-Pakets messaging-Erweiterungen** unter **"Funktionen"** aus. Sie erhalten ein Popupfenster zum Einrichten der Messaging-Erweiterung.
 1. Wählen Sie im Fenster **"Einrichten** " aus, um die Messaging-Erweiterung in Ihre App-Oberfläche einzuschließen. In der folgenden Abbildung wird die Einrichtungsseite der Messaging-Erweiterung angezeigt: 
@@ -128,6 +128,10 @@ Das vollständige App-Manifest finden Sie unter [App-Manifestschema](~/resources
 | Beispielname           | Beschreibung | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
 |Teams Messaging-Erweiterungssuche   |  Beschreibt, wie Suchbefehle definiert und auf Suchvorgänge reagiert wird.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+
+## <a name="step-by-step-guide"></a>Schrittweise Anleitung
+
+Befolgen Sie die [schrittweise Anleitung](../../../sbs-messagingextension-searchcommand.yml) zum Erstellen einer suchbasierten Messaging-Erweiterung.
 
 ## <a name="next-step"></a>Nächster Schritt
 

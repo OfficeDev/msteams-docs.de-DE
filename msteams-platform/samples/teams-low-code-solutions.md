@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über die verfügbaren Low- und No-Code-Lösungen
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: bd5a36505e028739edde9645c5eb3e1b8355dc5e
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 65db2dc2e6ffa7647d1b90dca6065b47b070cb13
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887894"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356287"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Erstellen von benutzerdefinierten Apps mit wenig Code für Microsoft Teams
 
@@ -20,7 +20,7 @@ Plattformen mit wenig Code bieten einen intuitiven Ansatz für die Softwareentwi
 
 ## <a name="teams-and-microsoft-power-platform"></a>Teams und Microsoft Power Platform
 
-Die Microsoft Power Platform kombiniert vier stabile Microsoft-Technologien wie Power BI, Power Apps, Power Automate, früher Microsoft Flow und Power Virtual Agents in einer leistungsstarken Anwendungsplattform. Mit diesen Technologien können Sie Lösungen erstellen, Prozesse automatisieren, Daten analysieren und virtuelle Agents in einer einheitlichen und integrierten Umgebung erstellen:
+Microsoft Power Platform kombiniert vier stabile Microsoft-Technologien wie Power BI, Power Apps, Power Automate, früher Microsoft Flow und Power Virtual Agents in einer leistungsstarken Anwendungsplattform. Mit diesen Technologien können Sie Lösungen erstellen, Prozesse automatisieren, Daten analysieren und virtuelle Agents in einer einheitlichen und integrierten Umgebung erstellen:
 
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Power Platform-Dienste":::
 
@@ -29,27 +29,27 @@ Die Microsoft Power Platform kombiniert vier stabile Microsoft-Technologien wie 
 
 ### <a name="-teams-and-power-bi"></a>✔ Teams und Power BI
 
-Die [Registerkarte Power BI für Microsoft Teams](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) fügt Unterstützung für Berichte im Teams Arbeitsbereich hinzu und ermöglicht Benutzern das Freigeben [interaktiver Power BI Inhalte](/power-bi/collaborate-share/service-embed-report-microsoft-teams) und die Zusammenarbeit mit anderen Benutzern in [Teams](/power-bi/collaborate-share/service-collaborate-microsoft-teams) Kanälen und Chats. Sie können verpackte [Power BI App-Inhalte](/power-bi/collaborate-share/service-create-distribute-apps) von Grund auf neu erstellen und als App verteilen oder [eine Vorlagen-App in Power BI erstellen.](/power-bi/connect-data/service-template-apps-create) Verwenden Sie außerdem die neue [Power BI-App in Teams,](https://go.microsoft.com/fwlink/?linkid=2143643) um Ihre gesamte grundlegende Power BI-Diensterfahrung in Teams zu bringen.
+Die [Registerkarte Power BI für Microsoft Teams](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) fügt Unterstützung für Berichte im Teams Arbeitsbereich hinzu und ermöglicht Benutzern das [Freigeben interaktiver Power BI Inhalte](/power-bi/collaborate-share/service-embed-report-microsoft-teams) und [die Zusammenarbeit mit anderen Benutzern in Teams](/power-bi/collaborate-share/service-collaborate-microsoft-teams) Kanälen und Chats. Sie können verpackte [Power BI App-Inhalte](/power-bi/collaborate-share/service-create-distribute-apps) von Grund auf neu erstellen und als App verteilen oder [eine Vorlagen-App in Power BI erstellen](/power-bi/connect-data/service-template-apps-create). Verwenden Sie außerdem die neue [Power BI-App in Teams](https://go.microsoft.com/fwlink/?linkid=2143643), um Ihre gesamte grundlegende Power BI-Diensterfahrung in Teams zu bringen.
 
 ### <a name="-teams-and-power-apps"></a>✔ Teams und Power Apps
 
-Mit [Power Apps](/powerapps/powerapps-overview)können Sie Geschäfts-Apps erstellen, die eine Verbindung zu Ihren Geschäftsdaten herstellen und auf die Anforderungen Ihrer Organisation zugeschnitten sind.  Power Apps eine Vielzahl von App-Szenarien ermöglichen, um geschäftliche Herausforderungen durch [Canvas-Apps](/powerapps/maker/#canvas-apps)zu lösen. Nach der Erstellung können Sie die App aus dem Power Apps Maker-Portal exportieren und [in Microsoft Teams einbetten.](/power-platform/admin/embed-app-teams)
+Mit [Power Apps](/powerapps/powerapps-overview) können Sie Geschäfts-Apps erstellen, die eine Verbindung zu Ihren Geschäftsdaten herstellen und auf die Anforderungen Ihrer Organisation zugeschnitten sind.  Power Apps eine Vielzahl von App-Szenarien ermöglichen, um geschäftliche Herausforderungen durch [Canvas-Apps](/powerapps/maker/#canvas-apps) zu lösen. Nach der Erstellung können Sie die App aus dem Power Apps Herstellerportal exportieren und [in Microsoft Teams einbetten](/power-platform/admin/embed-app-teams).
 
 Die neue [Power Apps-App](https://go.microsoft.com/fwlink/?linkid=2143374) in Teams bietet App-Entwicklern eine integrierte Oberfläche zum Erstellen und Bearbeiten von Apps und Workflows innerhalb Teams. Sie können die Apps schnell veröffentlichen und für Teammitglieder freigeben. Die Mitglieder können die Apps verwenden, ohne zwischen mehreren Apps und Diensten wechseln zu müssen.
 
 ### <a name="-teams-and-power-automate"></a>✔ Teams und Power Automate
 
-Mit der [Power Automate-App in](/power-automate/flows-teams)Teams können Sie [Flüsse erstellen, um sich wiederholende Arbeitsaufgaben](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) direkt in der Teams Umgebung zu automatisieren. Sie können [einen Fluss von einer beliebigen Nachricht in Microsoft Teams auslösen](/power-automate/trigger-flow-teams-message) und adaptive Karten in Power Automate [verwenden.](/power-automate/create-adaptive-cards) Darüber hinaus können Sie Flüsse erstellen, um Microsoft Teams in der neuen [Power Apps-App](https://go.microsoft.com/fwlink/?linkid=2143539) in Teams anzupassen und einen weiteren Wert hinzuzufügen.
+Mit der [Power Automate-App in](/power-automate/flows-teams) Teams können Sie [Flüsse erstellen, um sich wiederholende Arbeitsaufgaben](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) direkt in der Teams Umgebung zu automatisieren. Sie können [einen Fluss von einer beliebigen Nachricht in Microsoft Teams auslösen](/power-automate/trigger-flow-teams-message) und [adaptive Karten innerhalb Power Automate verwenden](/power-automate/create-adaptive-cards). Darüber hinaus können Sie Flüsse erstellen, um Microsoft Teams innerhalb der neuen [Power Apps-App](https://go.microsoft.com/fwlink/?linkid=2143539) in Teams anzupassen und einen weiteren Wert hinzuzufügen.
 
 ### <a name="-teams-and-power-virtual-agents"></a>✔ Teams und Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) ist eine codelose, geleitete grafische Schnittstellenlösung, die auf der Microsoft Power Platform und dem Bot Framework basiert. Es ermöglicht jedem Mitglied Ihres Teams, umfassende, unterhaltungsbezogene Chatbots zu erstellen und zu verwalten, die sich problemlos in die Teams-Plattform integrieren lassen. Alle in Power Virtual Agents erstellten Inhalte werden natürlich in Teams gerendert, und Power Virtual Agents Bots interagieren mit Benutzern im Teams nativen Chat-Canvas. Sie können Ihren Power Virtual Agents Chatbot über das [Power Virtual Agents Portal](https://powervirtualagents.microsoft.com)in Teams [integrieren.](/power-virtual-agents/publication-add-bot-to-microsoft-teams)
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) ist eine codelose, geleitete Grafische Oberflächenlösung, die auf der Microsoft Power Platform und dem Bot Framework basiert. Sie ermöglicht es jedem Mitglied Ihres Teams, umfassende, unterhaltungsbezogene Chatbots zu erstellen und zu verwalten, die sich problemlos in die Teams-Plattform integrieren lassen. Alle in Power Virtual Agents erstellten Inhalte werden natürlich in Teams gerendert, und Power Virtual Agents Bots interagieren mit Benutzern im Teams nativen Chat-Canvas. Sie können [Ihren Power Virtual Agents Chatbot](/power-virtual-agents/publication-add-bot-to-microsoft-teams) in Teams über das [Power Virtual Agents Portal](https://powervirtualagents.microsoft.com) integrieren.
 
 Verwenden Sie die neue [Power Virtual Agents-App](https://aka.ms/pva-teams-docs) in Teams, um Chat-Chatbots einfach in Teams zu erstellen, zu verwalten und zu veröffentlichen. Sie können Ihre Bots mit anderen Personen in Ihrer Organisation teilen, um zu chatten und Antworten auf ihre Fragen zu erhalten.
 
 ### <a name="-virtual-assistant-for-teams"></a>✔ Virtual Assistant für Teams
 
-Virtual Assistant ist eine Open Source-Vorlage von Microsoft, mit der Sie eine stabile Unterhaltungslösung erstellen und gleichzeitig die volle Kontrolle über die Benutzeroberfläche, das Branding der Organisation und die erforderlichen Daten behalten können. Sie können Ihren virtuellen Assistenten für [die Integration in die Teams Umgebung](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro)konfigurieren. 
+Virtual Assistant ist eine Open-Source-Vorlage von Microsoft, mit der Sie eine stabile Unterhaltungslösung erstellen und gleichzeitig die volle Kontrolle über die Benutzeroberfläche, das Branding der Organisation und die erforderlichen Daten behalten können. Sie können Ihren virtuellen Assistenten für [die Integration in die Teams Umgebung](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro) konfigurieren.
 
 ### <a name="-power-platform-learn-modules"></a>✔ Power Platform Learn-Module
 
@@ -63,7 +63,7 @@ Virtual Assistant ist eine Open Source-Vorlage von Microsoft, mit der Sie eine s
 ### <a name="-project-oakdale-preview"></a>✔ Project Oakdale (Vorschau)
 
 > [!NOTE]
-> Project Wird **in** Project **Dataverse für Teams** umbenannt.
+> Project **Wird in** Project **Dataverse für Teams** umbenannt.
 
 [Project Ist eine](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
 ) neue Low-Code-Datenplattform, die in Kürze Microsoft Teams wird. Entwickler können Teams Power Platform-Lösungen direkt in Teams erstellen. Weitere Informationen zu Project Oakdale finden Sie unter [Teams Blog Microsoft Project Oakdale](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams).

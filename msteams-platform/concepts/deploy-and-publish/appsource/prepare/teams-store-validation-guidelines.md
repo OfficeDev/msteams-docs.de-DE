@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: dd8a3f31cd7c8e98a913c9a86ce2d705a7ba0279
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 2aa433731d71f672182339bca82f851a61ec5895
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518233"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356063"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
@@ -19,7 +19,7 @@ Wenn Sie diese Richtlinien befolgen, erhöht sich die Wahrscheinlichkeit, dass I
 > [!NOTE]
 > * Einige Richtlinien gelten möglicherweise nicht für Ihre App. Wenn Ihre App beispielsweise keinen Bot enthält, können Sie botbezogene Richtlinien ignorieren.
 > * Wir haben diese Richtlinien mit Querverweisen auf die kommerziellen Zertifizierungsrichtlinien von Microsoft versehen und Do's und Don'ts mit Beispielen für erfolgreiche oder nicht erfolgreiche Szenarien in unserem Validierungsprozess hinzugefügt.
-> * Bestimmte Richtlinien sind als *obligatorische Korrektur* gekennzeichnet. Wenn Ihre App-Einreichung diese obligatorischen Richtlinien nicht erfüllt, erhalten Sie von uns einen Fehlerbericht mit Maßnahmen zur Behebung des Problems. Ihre App-Einreichung wird die Microsoft Teams Store-Validierung erst bestehen, nachdem Sie die Probleme behoben haben. 
+> * Bestimmte Richtlinien sind als *obligatorische Korrektur* gekennzeichnet. Wenn Ihre App-Einreichung diese obligatorischen Richtlinien nicht erfüllt, erhalten Sie von uns einen Fehlerbericht mit Maßnahmen zur Behebung des Problems. Ihre App-Übermittlung übergibt Microsoft Teams Store-Validierung erst, nachdem Sie die Probleme behoben haben. 
 > * Andere Leitlinien sind als *„Vorgeschlagene Lösung“* gekennzeichnet. Für ein optimales Nutzererlebnis empfehlen wir Ihnen, die Probleme zu beheben. Ihre App wird jedoch nicht für die Veröffentlichung im Teams Store gesperrt, wenn Sie die Probleme nicht beheben. 
 
 
@@ -103,7 +103,7 @@ Weitere Informationen zum Implementieren der App-Authentifizierung finden Sie un
   * Apps, die eine einmalige Einrichtung durch den Tenant-Administrator erfordern, müssen darauf hinweisen, dass der Tenant-Administrator die App konfigurieren muss (bevor ein anderer Tenant-Benutzer die App installieren und nutzen kann).  
   Die Abhängigkeit muss im App-Manifest, in der AppSource-Langbeschreibung, an allen Berührungspunkten beim ersten Start (Bot-Begrüßungsnachricht, Registerkarten-Einrichtung oder Konfigurationsseite), im Hilfetext, der als Teil der Bot-Antwort für notwendig erachtet wird, in der Compose-Erweiterung oder im statischen Registerkarteninhalt angegeben werden.
   
-* **Erfahrungen beim Teilen von Inhalten**: Apps, die für die Freigabe von Inhalten in Teams-Kanälen eine Authentifizierung bei einem externen Dienst erfordern, müssen in der Hilfedokumentation (oder ähnlichen Ressourcen) klar angeben, wie die Verbindung zu Inhalten getrennt oder die Freigabe aufgehoben werden kann, wenn diese Funktion für den externen Dienst unterstützt wird. Dies bedeutet nicht, dass die Möglichkeit zum Aufheben der Freigabe von Inhalten in Ihrer Teams-App vorhanden sein muss.
+* **Erfahrungen beim Teilen von Inhalten**: Apps, die für die Freigabe von Inhalten in Teams-Kanälen eine Authentifizierung bei einem externen Dienst erfordern, müssen in der Hilfedokumentation (oder ähnlichen Ressourcen) klar angeben, wie die Verbindung zu Inhalten getrennt oder die Freigabe aufgehoben werden kann, wenn diese Funktion für den externen Dienst unterstützt wird. Dies bedeutet nicht, dass die Möglichkeit, die Freigabe von Inhalten aufzuheben, in Ihrer Teams App vorhanden sein muss.
 
 ## <a name="security"></a>Sicherheit
 > [!NOTE]  
@@ -191,7 +191,7 @@ Bots müssen immer die Berechtigung zum Hochladen einer Datei und zum Anzeigen e
 > [!NOTE]
 > Dieser Abschnitt steht im Einklang mit der [Microsoft Commercial Marketplace-Richtlinie Nr. 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) und enthält eine Anleitung für Entwickler zur Verwendung eingeschränkter Domänen in der `validDomains` Manifest-Eigenschaft.
 
-Nehmen Sie keine Domänen außerhalb der Kontrolle Ihrer Organisation (einschließlich Platzhalter) und Tunneldienste in die Domain-Konfigurationen Ihrer App auf. Zu den folgenden Ausnahmen zählen:
+Schließen Sie keine Domänen außerhalb der Kontrolle Ihrer Organisation (einschließlich Platzhalter) und Tunneldienste in die Domänenkonfigurationen Ihrer App ein. Zu den folgenden Ausnahmen zählen:
 
   * Wenn Ihre App die OAuthCard des Azure Bot Service verwendet, müssen Sie `token.botframework.com` als gültige Domäne angeben oder die Schaltfläche **Anmelden** funktioniert nicht.
   * Wenn Ihre App auf SharePoint basiert, können Sie die zugehörige SharePoint-Stammsite mithilfe der Kontexteigenschaft `{teamSiteDomain}` als gültige Domäne einschließen.
@@ -271,7 +271,7 @@ Das Manifest der Teams-App definiert die Konfiguration Ihrer App.
 
 * Ihr Manifest muss einem öffentlich freigegebenen Manifest-Schema entsprechen. Weitere Informationen finden Sie in den[Manifest-Hinweisen.](~/resources/schema/manifest-schema.md) Reichen Sie Ihre App nicht mit einer Vorschauversion des Manifests ein.
 * Wenn Ihre App eine Bot- oder Messaging-Erweiterung enthält, müssen die Details im App-Manifest mit den Bot Framework-Metadaten konsistent sein, einschließlich Bot-Name, Logo, Link zur Datenschutzrichtlinie und Link zu den Nutzungsbedingungen.
-* Wenn Ihre App Azure Active Directory für die Authentifizierung verwendet, fügen Sie die Microsoft Azure Active Directory (Azure AD)-Anwendungs-ID (Client)-ID in das Manifest ein. Weitere Informationen finden Sie in der [Manifestreferenz.](~/resources/schema/manifest-schema.md#webapplicationinfo)
+* Wenn Ihre App Azure Active Directory für die Authentifizierung verwendet, fügen Sie die Microsoft Azure Active Directory (Azure AD) Anwendungs-ID (Client)-ID in das Manifest ein. Weitere Informationen finden Sie in der [Manifestreferenz.](~/resources/schema/manifest-schema.md#webapplicationinfo)
 
 ### <a name="app-icons"></a>App-Symbole
 
@@ -279,7 +279,7 @@ Das Manifest der Teams-App definiert die Konfiguration Ihrer App.
 
 Symbole sind eines der Hauptelemente, die Benutzer beim Durchsuchen des Teams-Speichers sehen. Ihre Symbole müssen die Marke und den Zweck Ihrer App unter Einhaltung der folgenden Anforderungen kommunizieren:
 
-* Ihr App-Paket muss zwei PNG-Versionen Ihres App-Symbols enthalten: Ein Farbsymbol und ein Umrisssymbol.
+* Ihr App-Paket muss zwei .png Versionen des App-Symbols enthalten: ein Farbsymbol und ein Gliederungssymbol.
 * Die Farbversion Ihres Symbols muss 192 x 192 Pixel betragen. Ihr Symbol kann eine beliebige Farbe oder mehrere Farben haben, muss aber auf einem einfarbigen oder vollständig transparenten quadratischen Hintergrund stehen.
 * In den folgenden Szenarien wird die Kontur-Version Ihres Symbols angezeigt:
   * Wenn Ihre App in Gebrauch ist und auf der App-Leiste auf der linken Seite von Teams **gehostet** wird.
@@ -1367,7 +1367,7 @@ Verwenden Sie die folgenden Richtlinien für die Erweiterung von Besprechungen:
 * Darf keine Aufgabenmodule verwenden.
 * Muss mit der Mitte der Besprechungsbereich ausgerichtet sein.
 
-:::row::: 
+:::row:::
     :::column span="":::
    :::column-end:::
    :::column span="3":::     
@@ -1375,13 +1375,12 @@ Verwenden Sie die folgenden Richtlinien für die Erweiterung von Besprechungen:
    :::column-end:::
    :::column span="":::
    :::column-end:::
-:::row-end::: 
-     
+:::row-end:::
 
 * Muss geschlossen werden, nachdem ein Benutzer eine Schaltfläche ausgewählt oder eine Aktion ausgeführt hat.
 
-* **Zusammen-Modus**: Stellen Sie sicher, dass Sie die folgenden Best Practices für den Aufbau einer Szene beachten: 
-  * Alle Bilder haben das PNG-Format.
+* **Zusammen-Modus**: Stellen Sie sicher, dass Sie die folgenden Best Practices für den Aufbau einer Szene beachten:
+  * Alle Bilder haben .png Format.
   * Das endgültige Paket mit allen zusammengestellten Bildern darf die Auflösung von 1920 x 1080 nicht überschreiten. Die Auflösung ist eine gerade Zahl. Diese Auflösung ist eine Voraussetzung dafür, dass Szenen erfolgreich angezeigt werden.
   * Die maximale Größe einer Szene beträgt 10 MB.
   * Die maximale Größe jedes Bilds beträgt 5 MB. Eine Szene ist eine Sammlung mehrerer Bilder. Der Grenzwert gilt für jedes einzelne Bild.

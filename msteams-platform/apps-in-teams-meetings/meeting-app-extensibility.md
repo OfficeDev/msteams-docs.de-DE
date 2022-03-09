@@ -4,12 +4,12 @@ author: surbhigupta
 description: Erfahren Sie mehr über den Besprechungslebenszyklus, die Erstellung der Besprechungserfahrung des Benutzers während des gesamten Besprechungslebenszyklus in desktop- und mobilen Umgebungen, Teilnehmerrollen und Benutzertypen. Darüber hinaus erfahren Sie mehr über die Integration von Bots und Messaging-Erweiterungen in den Besprechungslebenszyklus.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: ae4fbbd7f970752d936cd19944a6083da41a163e
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 84fab8e118ff83b36f2d0ac6f911d85e3d36c1c8
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821605"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355589"
 ---
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 
@@ -61,7 +61,7 @@ Registerkarten ermöglichen es Teammitgliedern, auf Dienste und Inhalte in einem
 
 Nachdem Sie die Registerkarten zu einer vorhandenen Besprechung auf mobilen Geräten hinzugefügt haben, können Sie die gleichen Apps in der Umgebung vor der Besprechung unter **"Weitere** Informationen" der Besprechungsdetails sehen.
 
-<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
 
 ---
 
@@ -105,7 +105,7 @@ Die folgende Abbildung veranschaulicht den besprechungsinternen Bereich:
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-![Besprechungsseitiger Bereich](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+![Besprechungsseitiger Bereich](../assets/images/in-meeting-dialog.png)
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
@@ -148,7 +148,7 @@ Bots, die im Gruppenchatbereich aktiviert sind, funktionieren in Besprechungen. 
 
 Um die Messaging-Erweiterung zu implementieren, beginnen Sie mit dem [Erstellen einer Messaging-Erweiterung](../messaging-extensions/how-to/create-messaging-extension.md), und fahren Sie dann mit dem [Erstellen von Apps für Teams Besprechungen](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references) fort.
 
-Die Teams einheitlichen Besprechungs-Apps ermöglichen es Ihnen, Ihre App basierend auf den Teilnehmerrollen in einer Besprechung zu entwerfen.
+Mit den Teams einheitlichen Besprechungs-Apps können Sie Ihre App basierend auf den Teilnehmerrollen in einer Besprechung entwerfen.
 
 ## <a name="participant-roles-in-a-meeting"></a>Teilnehmerrollen in einer Besprechung
 
@@ -177,8 +177,8 @@ Benutzertypen, z. B. Organisator, Referent oder Teilnehmer an einer Besprechung,
 In der folgenden Liste werden die verschiedenen Benutzertypen zusammen mit ihrer Barrierefreiheit und Leistung aufgeführt:
 
 * **Mandanteninterne** Benutzer gehören zur Organisation und verfügen über Anmeldeinformationen in Microsoft Azure Active Directory (Azure AD) für den Mandanten. Es handelt sich um Vollzeit-, Vor-Ort- oder Remotemitarbeiter. Ein mandanteninterner Benutzer kann ein Organisator, Referent oder Teilnehmer sein.
-* **Gast**: Ein Gast ist ein Teilnehmer aus einer anderen Organisation, der eingeladen ist, auf Teams oder andere Ressourcen im Mandanten der Organisation zuzugreifen. Gäste werden dem Azure AD der Organisation hinzugefügt und verfügen über dieselben Teams Funktionen wie ein systemeigenes Teammitglied. Sie haben Zugriff auf Teamchats, Besprechungen und Dateien. Ein Gast kann ein Organisator, Referent oder Teilnehmer sein. Weitere Informationen finden Sie unter [Gastzugriff in Teams](/microsoftteams/guest-access).
-* **Verbunden oder extern**: Ein Verbundbenutzer ist ein externer Teams Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Verbundbenutzer verfügen über gültige Anmeldeinformationen bei Verbundpartnern und sind von Teams autorisiert. Sie haben keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen aus Ihrer Organisation. Der Gastzugriff ist eine bessere Option für externe Benutzer, um Zugriff auf Teams und Kanäle zu haben. Weitere Informationen finden Sie unter [Verwalten des externen Zugriffs in Teams](/microsoftteams/manage-external-access).
+* **Gast**: Ein Gast ist ein Teilnehmer aus einer anderen Organisation, der eingeladen ist, auf Teams oder andere Ressourcen im Mandanten der Organisation zuzugreifen. Gäste werden den Azure AD der Organisation hinzugefügt und verfügen über dieselben Teams Funktionen wie ein systemeigenes Teammitglied. Sie haben Zugriff auf Teamchats, Besprechungen und Dateien. Ein Gast kann ein Organisator, Referent oder Teilnehmer sein. Weitere Informationen finden Sie unter [Gastzugriff in Teams](/microsoftteams/guest-access).
+* **Verbunden oder extern**: Ein Verbundbenutzer ist ein externer Teams Benutzer in einer anderen Organisation, der zur Teilnahme an einer Besprechung eingeladen wurde. Verbundbenutzer verfügen über gültige Anmeldeinformationen bei Verbundpartnern und werden von Teams autorisiert. Sie haben keinen Zugriff auf Ihre Teams oder andere freigegebene Ressourcen aus Ihrer Organisation. Der Gastzugriff ist eine bessere Option für externe Benutzer, um Zugriff auf Teams und Kanäle zu haben. Weitere Informationen finden Sie unter [Verwalten des externen Zugriffs in Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
     > Ihre Teams Benutzer können Apps hinzufügen, wenn sie Besprechungen oder Chats mit anderen Organisationen hosten. Die Benutzer können Apps verwenden, die von externen Benutzern freigegeben wurden, wenn Ihre Benutzer an Besprechungen oder Chats teilnehmen, die von anderen Organisationen gehostet werden. Die Datenrichtlinien der Organisation des hostenden Benutzers sowie die Datenfreigabepraktiken der Drittanbieter-Apps, die von der Organisation dieses Benutzers freigegeben werden, werden wirksam.
@@ -198,7 +198,7 @@ Die folgende Tabelle enthält die Benutzertypen und listet die Features auf, auf
 | Benutzertyp | Registerkarten | Bots | Messaging-Erweiterungen | Adaptive Karten | Aufgabenmodule | Dialogfeld "Besprechung" | Besprechungsphase | Inhaltsblase |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Anonymer Benutzer | Nicht verfügbar | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat von einer adaptiven Karte sind zulässig. | Nicht verfügbar | Kann die App in der Besprechungsphase anzeigen und mit ihr interagieren | Nicht verfügbar |
-| Gast, Teil des Mandanten Azure AD | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat von einer adaptiven Karte sind zulässig. | Verfügbar | Kann die App in der Besprechungsphase starten, anzeigen und mit ihr interagieren | Verfügbar |
+| Gast, Teil des Mandanten-Azure AD | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat von einer adaptiven Karte sind zulässig. | Verfügbar | Kann die App in der Besprechungsphase starten, anzeigen und mit ihr interagieren | Verfügbar |
 | Weitere Informationen finden Sie unter ["Nicht standardmäßige Benutzer"](/microsoftteams/non-standard-users). | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Interaktion ist zulässig. Das Abrufen, Aktualisieren und Löschen ist nicht zulässig. | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat von einer adaptiven Karte sind zulässig. | Nicht verfügbar | Kann die App in der Besprechungsphase starten, anzeigen und mit ihr interagieren | Nicht verfügbar |
 
 ## <a name="next-step"></a>Nächster Schritt
@@ -209,6 +209,6 @@ Die folgende Tabelle enthält die Benutzertypen und listet die Features auf, auf
 ## <a name="see-also"></a>Siehe auch
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
-* [Bot](../bots/what-are-bots.md)
+* [Bot](../bots/what-are-bots.md):
 * [Messaging-Erweiterung](../messaging-extensions/what-are-messaging-extensions.md)
 * [Entwerfen Ihrer App](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)

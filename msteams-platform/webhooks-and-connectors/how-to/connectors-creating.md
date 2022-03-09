@@ -6,24 +6,24 @@ keywords: Teams-Office365-Connector
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 64400b3f80aa5ba322ce7318e0261e8b694e7e18
-ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
+ms.openlocfilehash: 880bede3a33d974c8424bdcaeb8e250bdc97edca
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "62801383"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356098"
 ---
 # <a name="create-office-365-connectors"></a>Erstellen von Office 365-Connectors
 
-Mit Microsoft Teams Apps können Sie Ihren vorhandenen Office 365 Connector hinzufügen oder einen neuen in Teams erstellen. Weitere Informationen finden Sie unter [Erstellen eines eigenen Connectors](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
+Mit Microsoft Teams Apps können Sie Ihren vorhandenen Office 365-Connector hinzufügen oder einen neuen in Teams erstellen. Weitere Informationen finden Sie unter [Erstellen eines eigenen Connectors](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
 ## <a name="add-a-connector-to-teams-app"></a>Hinzufügen eines Connectors zu Teams App
 
-Sie können ein [Paket](~/concepts/build-and-test/apps-package.md) erstellen und Ihren Connector im Rahmen Ihrer AppSource-Übermittlung [veröffentlichen](~/concepts/deploy-and-publish/apps-publish.md) . Sie können Ihren registrierten Connector als Teil Ihres Teams-App-Pakets verteilen. Informationen zu Einstiegspunkten für Teams App finden Sie unter ["Funktionen"](~/concepts/extensibility-points.md). Sie können das Paket auch direkt für Benutzer bereitstellen, um es in Teams hochzuladen.
+Sie können ein [Paket](~/concepts/build-and-test/apps-package.md) erstellen und Ihren Connector im Rahmen Ihrer AppSource-Übermittlung [veröffentlichen](~/concepts/deploy-and-publish/apps-publish.md) . Sie können Ihren registrierten Connector als Teil Ihres Teams-App-Pakets verteilen. Informationen zu Einstiegspunkten für Teams App finden Sie unter ["Funktionen"](~/concepts/extensibility-points.md). Sie können das Paket benutzern auch direkt zum Hochladen in Teams bereitstellen.
 
 Registrieren Sie den Connector im [Connectors-Entwicklerdashboard](https://aka.ms/connectorsdashboard), um den Connector zu verteilen.
 
-Damit ein Connector nur in Microsoft Teams funktioniert, befolgen Sie die Anweisungen zum Übermitteln des Connectors, um [Ihre App im Artikel Microsoft Teams Store zu veröffentlichen](~/concepts/deploy-and-publish/appsource/publish.md). Andernfalls funktioniert ein registrierter Connector in allen Office 365 Produkten, die Anwendungen unterstützen, einschließlich Outlook und Teams.
+Damit ein Connector nur in Microsoft Teams funktioniert, befolgen Sie die Anweisungen zum Übermitteln des Connectors in [der Veröffentlichung Ihrer App im Artikel Microsoft Teams Store](~/concepts/deploy-and-publish/appsource/publish.md). Andernfalls funktioniert ein registrierter Connector in allen Office 365 Produkten, die Anwendungen unterstützen, einschließlich Outlook und Teams.
 
 > [!IMPORTANT]
 > Ihr Connector wird registriert, nachdem Sie im Connectors Developer Dashboard die Option **"Speichern** " ausgewählt haben. Wenn Sie Ihren Connector in AppSource veröffentlichen möchten, befolgen Sie die Anweisungen in der [Veröffentlichung Ihrer Microsoft Teams-App in AppSource](~/concepts/deploy-and-publish/apps-publish.md). Wenn Sie Ihre App nicht in AppSource veröffentlichen möchten, verteilen Sie sie direkt an die Organisation. Nach der [Veröffentlichung von Connectors für Ihre Organisation](#publish-connectors-for-the-organization) sind keine weiteren Aktionen im Connector-Dashboard erforderlich.
@@ -40,7 +40,7 @@ Benutzer können die gesamte Connectorkonfiguration abschließen, ohne den Teams
     > * Der Code kann das Speicherereignis verarbeiten, indem die Webhook-Einstellungen abgerufen werden. Ihr Code speichert den Webhook, um Ereignisse später zu posten.
     > * Die Konfigurationsoberfläche wird inline in Teams geladen.
 
-Sie können Ihre vorhandene Webkonfigurationsoberfläche wiederverwenden oder eine separate Version erstellen, die speziell in Teams gehostet werden soll. Ihr Code muss das Microsoft Teams JavaScript SDK enthalten. Dadurch erhält Ihr Code Zugriff auf APIs, um allgemeine Vorgänge auszuführen, z. B. den aktuellen Benutzer-, Kanal- oder Teamkontext abzurufen und Authentifizierungsflüsse zu initiieren.
+Sie können Ihre vorhandene Webkonfiguration wiederverwenden oder eine separate Version erstellen, die speziell in Teams gehostet werden soll. Ihr Code muss das Microsoft Teams JavaScript SDK enthalten. Dadurch erhält Ihr Code Zugriff auf APIs, um allgemeine Vorgänge auszuführen, z. B. den aktuellen Benutzer-, Kanal- oder Teamkontext abzurufen und Authentifizierungsflüsse zu initiieren.
 
 **So integrieren Sie die Konfigurationsumgebung**
 
@@ -136,7 +136,7 @@ Die folgende Tabelle enthält die Parameter und die Details der `GetSetting` Ant
 | `configName`  | Der Konfigurationsname, wie er vom Code beim Aufrufen `setSettings()`festgelegt wird. |
 | `contentUrl` | Die URL der Konfigurationsseite, die vom Code beim Aufrufen `setSettings()`festgelegt wird. |
 | `webhookUrl` | Die für den Connector erstellte Webhook-URL. Verwenden Sie die Webhook-URL, um strukturierten JSON-Code zu POSTEN, um Karten an den Kanal zu senden. Wird `webhookUrl` nur zurückgegeben, wenn die Anwendung Daten erfolgreich zurückgibt. |
-| `appType` | Die zurückgegebenen Werte können `mail``groups``teams` den Office 365 E-Mail-, Office 365- oder Microsoft Teams entsprechen. |
+| `appType` | Die zurückgegebenen Werte können `mail``groups`dem Office 365 Mail-, Office 365- oder `teams` Microsoft Teams entsprechen. |
 | `userObjectId` | Die eindeutige ID, die dem Office 365 Benutzer entspricht, der die Einrichtung des Connectors initiiert hat. Sie muss gesichert werden. Dieser Wert kann verwendet werden, um den Benutzer in Office 365 zuzuordnen, der die Konfiguration in Ihrem Dienst eingerichtet hat. |
 
 #### <a name="handle-edits"></a>Bearbeiten behandeln
@@ -226,7 +226,7 @@ Weitere Informationen zum Austausch von PowerShell-Modulen finden Sie unter ["Se
 
 ## <a name="test-your-connector"></a>Testen des Connectors
 
-Laden Sie den Connector mit einer anderen App in ein Team hoch, um den Connector zu testen. Sie können ein .zip-Paket mithilfe der Manifestdatei aus den beiden Symboldateien und connectors Developer Dashboard erstellen, wie unter ["Einschließen des Connectors in Ihr Manifest](#include-the-connector-in-your-manifest)" geändert.
+Laden Sie den Connector mit einer anderen App in ein Team hoch, um den Connector zu testen. Sie können ein .zip-Paket mithilfe der Manifestdatei aus den beiden Symboldateien und Connectors-Entwicklerdashboard erstellen, die wie unter ["Einschließen des Connectors in Ihr Manifest"](#include-the-connector-in-your-manifest) angegeben geändert wurden.
 
 Nachdem Sie die App hochgeladen haben, öffnen Sie die Liste der Connectors aus einem beliebigen Kanal. Scrollen Sie nach unten, um Ihre App im Abschnitt **"Hochgeladen** " anzuzeigen:
 
@@ -253,13 +253,13 @@ Nachdem Sie das App-Paket hochgeladen haben, um den Connector in einem Team zu k
 1. Wählen Sie im Dropdownmenü in der unteren rechten Ecke des Dialogfelds die Option **"Connector einrichten** " aus.
 
 > [!IMPORTANT]
-> Derzeit sind benutzerdefinierte Connectors in Government Community Cloud (GCC), GCC-High und DoD (Department of Defense) nicht verfügbar.
+> Derzeit sind benutzerdefinierte Connectors in Government Community Cloud (GCC), GCC-High und Department of Defense (DOD) nicht verfügbar.
 
 Der Connector ist im Abschnitt &#9679;&#9679;&#9679; > **Weitere** **OptionenConnectorsAllConnectors** >  >  >  **für Ihr Team** für dieses Team verfügbar. Sie können navigieren, indem Sie zu diesem Abschnitt scrollen oder nach der Connector-App suchen. Um den Connector zu konfigurieren oder zu ändern, wählen Sie " **Konfigurieren" aus**.
 
 ## <a name="distribute-webhook-and-connector"></a>Verteilen von Webhook und Connector
 
-1. [Richten Sie einen eingehenden Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-incoming-webhook) direkt für Ihr Team ein.
+1. [Richten Sie einen eingehenden Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-an-incoming-webhook) direkt für Ihr Team ein.
 1. Fügen Sie eine [Konfigurationsseite](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#integrate-the-configuration-experience) hinzu, und [veröffentlichen Sie Ihren eingehenden Webhook](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#publish-connectors-for-the-organization) in einem Office 365 Connector.
 1. Verpacken und veröffentlichen Sie Ihren Connector als Teil Ihrer [AppSource-Übermittlung](~/concepts/deploy-and-publish/office-store-guidance.md) .
 
@@ -269,7 +269,7 @@ Die folgende Tabelle enthält den Beispielnamen und dessen Beschreibung:
 
 |**Beispielname** | **Beschreibung** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Connectors    | Beispiel Office 365 Connector, der Benachrichtigungen an Teams Kanal generiert.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| Connectors    | Beispiel für Office 365 Connector, der Benachrichtigungen an Teams Kanal generiert.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | Beispiel für generische Connectors |Beispielcode für einen generischen Connector, der für jedes System, das Webhooks unterstützt, einfach angepasst werden kann.|  | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## <a name="see-also"></a>Siehe auch

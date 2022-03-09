@@ -5,12 +5,12 @@ description: Eine Übersicht über Aktionsbefehle für Messaging-Erweiterungen m
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1c533dacca3b50fb96311ad95a9828e9978ba5f9
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: fe3cb2296eabd38f94f0e2978e7232ea5f70acc3
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281910"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355888"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definieren von Aktionsbefehlen für Messaging-Erweiterungen
 
@@ -78,7 +78,7 @@ Um den Aktionsbefehl zum App-Manifest hinzuzufügen, müssen Sie der obersten Eb
 Sie können einen Aktionsbefehl mit **App Studio** oder **dem Entwicklerportal** erstellen.
 
 > [!NOTE]
-> App Studio wird in Kürze eingestellt. Konfigurieren, verteilen und verwalten Sie Ihre Teams-Apps mit dem neuen [Entwicklerportal](https://dev.teams.microsoft.com/).
+> App Studio wird in Kürze eingestellt. Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps mit dem neuen [Entwicklerportal](https://dev.teams.microsoft.com/).
 
 # <a name="app-studio"></a>[App-Studio](#tab/AS)
 
@@ -130,7 +130,7 @@ In der folgenden Abbildung wird die Befehlserweiterung für die Messaging-Erweit
 
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern** aus.
 1. Um weitere Parameter hinzuzufügen, wählen Sie die Schaltfläche **"Hinzufügen** " im Abschnitt **"Parameter"** aus.
 
 ### <a name="create-an-action-command-manually"></a>Manuelles Erstellen eines Aktionsbefehls
@@ -223,6 +223,11 @@ Der folgende Abschnitt ist ein Beispiel für ein `composeExtensions` Objekt, das
 |:---------------------|:--------------|:---------|:--------|
 |Teams Messaging-Erweiterungsaktion| Beschreibt, wie Aktionsbefehle definiert, Aufgabenmodul erstellt und auf Aufgabenmodul-Sendeaktion reagiert wird. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 
+
+## <a name="step-by-step-guide"></a>Schrittweise Anleitung
+
+Befolgen Sie die [schrittweise Anleitung](../../../sbs-meetingextension-action.yml) zum Erstellen Teams aktionsbasierten Messaging-Erweiterung.
+
 ## <a name="next-step"></a>Nächster Schritt
 
 Wenn Sie eine adaptive Karte oder eine eingebettete Webansicht ohne `taskInfo` Objekt verwenden, besteht der nächste Schritt in folgenden Schritten:
@@ -234,3 +239,4 @@ Wenn Sie die Parameter oder eine eingebettete Webansicht mit einem `taskInfo` Ob
 
 > [!div class="nextstepaction"]
 > [Antworten auf das Senden des Aufgabenmoduls](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+

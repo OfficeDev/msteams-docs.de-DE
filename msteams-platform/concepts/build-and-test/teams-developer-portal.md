@@ -5,18 +5,21 @@ keywords: Erste Schritte für Entwicklerportal-Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 246ea41b30fe920562989b32c3643813238fb083
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 02f344c82f6350fe324b423b198e5cbcb048a2b4
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212538"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355713"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Verwalten Ihrer Apps mit dem Entwicklerportal für Microsoft Teams
 
 Das <a href="https://dev.teams.microsoft.com" target="_blank">Entwicklerportal für Teams</a> ist das primäre Tool zum Konfigurieren, Verteilen und Verwalten Ihrer Microsoft Teams-Apps. Mit dem Entwicklerportal können Sie mit Kollegen an Ihrer App zusammenarbeiten, Laufzeitumgebungen einrichten und vieles mehr.
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot der Startseite des Entwicklerportals für Teams.":::
+
+> [!NOTE] 
+> Derzeit ist das Entwicklerportal nicht für Government Community Cloud (GCC), GCC-High- oder DOD-Mandanten (Department of Defense) verfügbar.
 
 ## <a name="register-an-app"></a>Registrieren einer App
 
@@ -26,7 +29,7 @@ Das Entwicklerportal bietet verschiedene Möglichkeiten zum Registrieren einer T
 * Importieren eines vorhandenen App-Pakets
 
 > [!NOTE]
-> Wenn Sie eine App mit dem [Microsoft Teams Toolkit für Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)erstellen, können Sie diese App im Entwicklerportal verwalten.
+> Wenn Sie eine App mit dem [Microsoft Teams Toolkit für Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) erstellen, können Sie diese App im Entwicklerportal verwalten.
 
 ## <a name="set-up-an-environment"></a>Einrichten einer Umgebung
 
@@ -35,8 +38,8 @@ Sie können Umgebungen und globale Variablen konfigurieren, um den Übergang Ihr
 **So richten Sie eine Umgebung ein**
 
 1. Wählen Sie im Entwicklerportal die App aus, an der Sie arbeiten.
-2. Wechseln Sie zur Seite **"Umgebungen",** und wählen Sie **+Umgebung hinzufügen** aus.
-3. Wählen Sie **+ Hinzufügen einer Variablen,** um Konfigurationsvariablen für Ihre Umgebung zu erstellen.
+2. Wechseln Sie zur Seite **"Umgebungen",** und wählen Sie **"+ Umgebung hinzufügen**" aus.
+3. Wählen Sie **+ Hinzufügen einer Variablen** , um Konfigurationsvariablen für Ihre Umgebung zu erstellen.
 
 **So verwenden Sie Variablen**
 
@@ -47,7 +50,7 @@ Verwenden Sie die Variablennamen anstelle von hartcodierten Werten, um Ihre App-
 
 ## <a name="identify-app-owners"></a>Identifizieren von App-Besitzern
 
-Jede App enthält eine **Besitzerseite,** auf der Sie Ihre App-Registrierung für Kollegen in Ihrer Organisation freigeben können. Die **Rolle "Mitwirkender"** verfügt über die gleichen Berechtigungen wie die **Besitzerrolle,** mit Ausnahme der Möglichkeit, eine App zu löschen.
+Jede App enthält eine **Besitzerseite** , auf der Sie Ihre App-Registrierung für Kollegen in Ihrer Organisation freigeben können. Die **Rolle "Mitwirkender** " verfügt über die gleichen Berechtigungen wie die **Besitzerrolle** , mit Ausnahme der Möglichkeit, eine App zu löschen.
 
 ## <a name="configure-your-apps-capabilities-and-other-important-metadata"></a>Konfigurieren der Funktionen Ihrer App und anderer wichtiger Metadaten
 
@@ -60,13 +63,13 @@ Um Ihre App in Teams zu installieren und zu rendern, müssen Sie eine Reihe von 
 Das Entwicklerportal bietet Optionen zum Testen und Debuggen Ihrer App:
 
 * Auf der **Übersichtsseite** sehen Sie eine Momentaufnahme, ob die Konfigurationen Ihrer App anhand Teams Store-Testfälle überprüft werden.
-* Mit der Schaltfläche **"Vorschau in Teams"** können Sie Ihre App schnell im Teams-Client zum Debuggen starten.
+* Mit der Schaltfläche **"Vorschau in Teams**" können Sie Ihre App schnell im Teams-Client zum Debuggen starten.
 
 ## <a name="distribute-your-app"></a>Verteilen Ihrer App
 
-Verwenden Sie im Entwicklerportal die Schaltfläche **"Verteilen",** um ein App-Paket herunterzuladen, in Ihrer Organisation zu veröffentlichen oder im Teams Store zu veröffentlichen.
+Verwenden Sie im Entwicklerportal die Schaltfläche "**Verteilen**", um ein App-Paket herunterzuladen, es in Ihrer Organisation zu veröffentlichen oder im Teams Store zu veröffentlichen.
 
-Weitere Informationen finden Sie unter [Verteilen Ihrer Teams-App.](~/concepts/deploy-and-publish/apps-publish-overview.md)
+Weitere Informationen finden Sie unter [Verteilen Ihrer Teams-App](~/concepts/deploy-and-publish/apps-publish-overview.md).
 
 ## <a name="analyze-your-apps-usage"></a>Analysieren der Nutzung Ihrer App
 
@@ -83,9 +86,9 @@ Die monatliche und tägliche Nutzung wird für die letzten sieben, 30 und 60 Tag
 
 Das Entwicklerportal enthält auch Tools, mit denen Sie einige wichtige Features von Teams-Apps erstellen können. Einige dieser Tools umfassen:
 
-* **Szenenstudio:** Entwerfen [Sie benutzerdefinierte Szenen im Zusammen-Modus](~/apps-in-teams-meetings/teams-together-mode.md) für Teams Besprechungen.
-* **Editor für adaptive Karten:** Erstellen und Anzeigen einer Vorschau adaptiver Karten, die in Ihre Apps aufgenommen werden sollen.
-* **Microsoft Identity Platform Verwaltung:** Registrieren Sie Ihre Apps bei Azure Active Directory, um Benutzern zu helfen, sich anzumelden und Zugriff auf APIs zu gewähren.
+* **Szenenstudio**: Entwerfen [Sie benutzerdefinierte Szenen im Zusammen-Modus](~/apps-in-teams-meetings/teams-together-mode.md) für Teams Besprechungen.
+* **Editor für adaptive Karten**: Erstellen und Anzeigen einer Vorschau adaptiver Karten, die in Ihre Apps eingeschlossen werden sollen.
+* **Microsoft Identity Platform Verwaltung**: Registrieren Sie Ihre Apps bei Azure Active Directory, um Benutzern zu helfen, sich anzumelden und Zugriff auf APIs zu gewähren.
 
 ## <a name="see-also"></a>Siehe auch
 

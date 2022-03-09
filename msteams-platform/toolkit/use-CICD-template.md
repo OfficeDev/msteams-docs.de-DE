@@ -6,18 +6,18 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 1ae613332f7a07ae0d0ae9ed65b75429db64b429
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: ac2a79014ed0dfedf9942f30ab67c759642ee850
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821577"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356175"
 ---
 # <a name="cicd-guide"></a>CI/CD-Leitfaden
 
-TeamsFx hilft beim Automatisieren Ihres Entwicklungsworkflows beim Erstellen Teams Anwendung. Das Dokument enthält Tools und Vorlagen für die ersten Schritte beim Einrichten von CI- oder CD-Pipelines mit GitHub, Azure Devops und Jenops.
+TeamsFx hilft beim Automatisieren Ihres Entwicklungsworkflows beim Erstellen Teams Anwendung. Das Dokument enthält Tools und Vorlagen für die ersten Schritte beim Einrichten von CI- oder CD-Pipelines mit GitHub, Azure Devops und Jenkins.
 
-|Tools und Vorlagen|Beschreibung| 
+|Tools und Vorlagen|Beschreibung|
 |---|---|
 |[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub Aktion, die in TeamsFx CLI integriert ist.|
 |[github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) und [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHub CI- oder CD-Vorlagen für Teams App. |
@@ -26,7 +26,7 @@ TeamsFx hilft beim Automatisieren Ihres Entwicklungsworkflows beim Erstellen Tea
 
 ## <a name="ci-or-cd-workflow-templates-in-github"></a>CI- oder CD-Workflowvorlagen in GitHub
 
-**So schließen Sie CI- oder CD-Workflows ein, um Teams App-Entwicklungsprozess in GitHub zu automatisieren**:
+**So integrieren Sie CI- oder CD-Workflows, um Teams App-Entwicklungsprozess in GitHub zu automatisieren**:
 
 1. Ordner erstellen unter `.github/workflows`
 1. Kopieren Sie eine der folgenden Vorlagendateien:
@@ -38,7 +38,7 @@ TeamsFx hilft beim Automatisieren Ihres Entwicklungsworkflows beim Erstellen Tea
 
 Führen Sie die folgenden Schritte aus, um den Workflow für Ihr Projekt anzupassen:
 
-1. Ändern Sie den CI-Fluss. 
+1. Ändern Sie den CI-Fluss.
 1. Verwenden Sie das npm-Buildskript, oder passen Sie die Art und Weise an, wie Sie das Projekt im Automatisierungscode erstellen.
 1. Verwenden Sie npm test script which returns zero for success, and change the test commands.
 
@@ -47,7 +47,7 @@ Führen Sie die folgenden Schritte aus, um den Workflow für Ihr Projekt anzupas
 Führen Sie die folgenden Schritte aus, um den CD-Workflow anzupassen:
 
 1. Standardmäßig wird der CD-Workflow ausgelöst, wenn neue Commits für die `main` Verzweigung ausgeführt werden.
-1. Erstellen Sie GitHub [repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) by environment to hold Azure service principal and Microsoft 365 account login credentials. Weitere Informationen finden Sie unter [GitHub Aktionen](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
+1. Erstellen Sie GitHub [geheimen Repositoryschlüssel](https://docs.github.com/en/actions/reference/encrypted-secrets) nach Umgebung, um Azure-Dienstprinzipal- und Microsoft 365-Kontoanmeldeinformationen zu speichern. Weitere Informationen finden Sie unter [GitHub Aktionen](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
 1. Ändern Sie ggf. die Buildskripts.
 1. Entfernen Sie die Testskripts nach Bedarf.
 
@@ -61,7 +61,7 @@ In der folgenden Tabelle sind alle geheimen Schlüssel aufgeführt, die Sie zum 
 1. Wählen Sie **Einstellungen** aus.
 1. Wechseln Sie zum Abschnitt **"Umgebungen** ".
 1. Wählen Sie **"Neue Umgebung**" aus.
-1. Geben Sie einen Namen für Ihre Umgebung ein. Der in der Vorlage bereitgestellte Standardumgebungsname lautet `test_environment`. 
+1. Geben Sie einen Namen für Ihre Umgebung ein. Der in der Vorlage bereitgestellte Standardumgebungsname lautet `test_environment`.
 1. Wählen Sie **"Umgebung konfigurieren" aus**.
 1. Wählen Sie **"Geheimen Schlüssel hinzufügen" aus**.
 
@@ -174,15 +174,15 @@ Führen Sie die folgenden Schritte aus, um Pipelinevariablen in Azure DevOps zu 
 |`AZURE_SERVICE_PRINCIPAL_PASSWORD`|Das Kennwort des Azure-Dienstprinzipals.|
 |`AZURE_SUBSCRIPTION_ID`|So identifizieren Sie das Abonnement, in dem die Ressourcen bereitgestellt werden.|
 |`AZURE_TENANT_ID`|So identifizieren Sie den Mandanten, in dem sich das Abonnement befindet.|
-|`M365_ACCOUNT_NAME`|Das Microsoft 365-Konto zum Erstellen und Veröffentlichen der Teams-App.|
+|`M365_ACCOUNT_NAME`|Das Microsoft 365 Konto zum Erstellen und Veröffentlichen der Teams-App.|
 |`M365_ACCOUNT_PASSWORD`|Das Kennwort des Microsoft 365 Kontos.|
-|`M365_TENANT_ID`|Um den Mandanten zu identifizieren, in dem die Teams App erstellt/veröffentlicht wird. Dieser Wert ist optional, es sei denn, Sie verfügen über ein mehrinstanzenfähiges Konto und möchten einen anderen Mandanten verwenden. Erfahren Sie mehr [darüber, wie Sie Ihre Microsoft 365 Mandanten-ID finden](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+|`M365_TENANT_ID`|So identifizieren Sie den Mandanten, in dem die Teams App erstellt oder veröffentlicht wird. Dieser Wert ist optional, es sei denn, Sie verfügen über ein mehrinstanzenfähiges Konto und möchten einen anderen Mandanten verwenden. Erfahren Sie mehr [darüber, wie Sie Ihre Microsoft 365 Mandanten-ID finden](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
 ## <a name="ci-or-cd-pipeline-templates-in-jenkins"></a>CI- oder CD-Pipelinevorlagen in Jenkins
 
 Zum Hinzufügen dieser Vorlagen zu Ihrem Repository benötigen Sie die Versionen der [Jenkin-ci-Vorlage. Jenkinfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) und  [jenkin-cd-template. Jenkinfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile) , um sich in Ihrem Repository nach Verzweigung zu befinden.
 
-Außerdem müssen Sie CI- oder CD-Pipelines in Jenkin erstellen, die entsprechend auf die jeweilige **Jenkinfile** verweisen.
+Außerdem müssen Sie CI- oder CD-Pipelines in Jenkin erstellen, die entsprechend auf die jeweiligen `Jenkinsfile` Verweisen verweisen.
 
 Führen Sie die Schritte aus, um zu überprüfen, wie Sie Jenkin mit verschiedenen SCM-Plattformen verbinden:
 
@@ -204,9 +204,9 @@ Es folgen einige der Änderungen, die Sie vornehmen können, um Ihr Projekt anzu
 
 Führen Sie die folgenden Schritte aus, um die CD-Pipeline anzupassen:
 
-1. Benennen Sie die Vorlagendatei in **Jenkinfile** um, und platzieren Sie sie unter der Zielverzweigung, z. B. der **Hauptverzweigung** .
-1. Ändern Sie den CD-Fluss. Wir verwenden standardmäßig die Trigger von **pollSCM**, wenn eine neue Änderung in die Hauptverzweigung  verschoben wird.
-1. Erstellen Sie [Anmeldeinformationen](https://www.jenkins.io/doc/book/using/using-credentials/) für die Jenpipeline, um Azure-Dienstprinzipal- und Microsoft 365 Anmeldeinformationen für das Konto zu speichern.
+1. Benennen Sie die Vorlagendatei um `Jenkinsfile`, und platzieren Sie sie in der Zielverzweigung, z. B. der `main` Verzweigung.
+1. Ändern Sie den CD-Fluss. Standardmäßig werden die Trigger verwendet `pollSCM` , wenn eine neue Änderung in die `main` Verzweigung verschoben wird.
+1. Erstellen Sie [Anmeldeinformationen](https://www.jenkins.io/doc/book/using/using-credentials/) für die Jenpipeline, um Azure-Dienstprinzipal- und Microsoft 365-Kontoanmeldeinformationen zu speichern.
 1. Ändern Sie ggf. die Buildskripts.
 1. Entfernen Sie die Testskripts, wenn Sie keine Tests haben.
 
@@ -220,7 +220,7 @@ Folgen Sie ["using-credentials"](https://www.jenkins.io/doc/book/using/using-cre
 |`AZURE_SERVICE_PRINCIPAL_PASSWORD`|Das Kennwort des Azure-Dienstprinzipals.|
 |`AZURE_SUBSCRIPTION_ID`|So identifizieren Sie das Abonnement, in dem die Ressourcen bereitgestellt werden.|
 |`AZURE_TENANT_ID`|So identifizieren Sie den Mandanten, in dem sich das Abonnement befindet.|
-|`M365_ACCOUNT_NAME`|Das Microsoft 365-Konto zum Erstellen und Veröffentlichen der Teams-App.|
+|`M365_ACCOUNT_NAME`|Das Microsoft 365 Konto zum Erstellen und Veröffentlichen der Teams-App.|
 |`M365_ACCOUNT_PASSWORD`|Das Kennwort des Microsoft 365 Kontos.|
 |`M365_TENANT_ID`|So identifizieren Sie den Mandanten, in dem die Teams App erstellt oder veröffentlicht wird. Der Wert ist optional, es sei denn, Sie verfügen über ein mehrinstanzenfähiges Konto und möchten einen anderen Mandanten verwenden. Erfahren Sie mehr [darüber, wie Sie Ihre Microsoft 365 Mandanten-ID finden](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
@@ -235,33 +235,37 @@ Die Skripts basieren auf einem plattformübergreifenden TeamsFx-Befehlszeilentoo
 
 > [!NOTE]
 > * Um die Ausführung im CI-Modus zu aktivieren `@microsoft/teamsfx-cli` , aktivieren Sie `CI_ENABLED` nach `export CI_ENABLED=true`. Im CI-Modus `@microsoft/teamsfx-cli` ist für CI oder CD geeignet.
-> * Um die Ausführung im nicht interaktiven Modus zu aktivieren `@microsoft/teamsfx-cli` , legen Sie eine globale Konfiguration mit folgendem Befehl fest: `teamsfx config set -g interactive false`. Im nicht interaktiven Modus `@microsoft/teamsfx-cli` werden eingabeinteraktiv keine Fragen gestellt.
+> * Um die Ausführung im nicht interaktiven Modus zu aktivieren `@microsoft/teamsfx-cli` , legen Sie eine globale Konfiguration mit folgendem Befehl fest: `teamsfx config set -g interactive false`. Im nicht interaktiven Modus `@microsoft/teamsfx-cli` werden eingabeaufforderungen nicht angezeigt.
 
-Stellen Sie sicher, dass Azure- und Microsoft365-Anmeldeinformationen in Ihren Umgebungsvariablen sicher festgelegt werden. Wenn Sie beispielsweise GitHub als Quellcode-Repository verwenden. Weitere Informationen finden Sie unter [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
+Stellen Sie sicher, dass Azure- und Microsoft 365-Anmeldeinformationen in Ihren Umgebungsvariablen sicher festgelegt werden. Wenn Sie beispielsweise GitHub als Quellcode-Repository verwenden. Weitere Informationen finden Sie unter [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
 ## <a name="create-azure-service-principals"></a>Erstellen von Azure-Dienstprinzipalen
 
 Um Ressourcen für Azure innerhalb von CI/CD bereitzustellen und bereitzustellen, müssen Sie einen Azure-Dienstprinzipal für die Verwendung erstellen.
 
 Führen Sie die folgenden Schritte aus, um Azure-Dienstprinzipale zu erstellen:
+
 1. Registrieren Sie eine Microsoft Azure Active Directory (Azure AD)-Anwendung in einem einzelnen Mandanten.
-2. Weisen Sie Ihrer Azure AD-Anwendung eine Rolle zu, um auf Ihr Azure-Abonnement zuzugreifen, und `Contributor` es wird eine Rolle empfohlen. 
-3. Erstellen Sie einen neuen Azure AD Anwendungsgeheimnis.
+2. Weisen Sie Ihrer Azure AD-Anwendung eine Rolle zu, um auf Ihr Azure-Abonnement zuzugreifen, und `Contributor` es wird eine Rolle empfohlen.
+3. Erstellen Sie einen neuen geheimen Azure AD Anwendungsschlüssel.
 
 > [!TIP]
 > Speichern Sie Ihre Mandanten-ID, Anwendungs-ID(AZURE_SERVICE_PRINCIPAL_NAME) und den geheimen Schlüssel (AZURE_SERVICE_PRINCIPAL_PASSWORD) für die zukünftige Verwendung.
 
-Weitere Informationen finden Sie in den [Richtlinien für Azure-Dienstprinzipale](/azure/active-directory/develop/howto-create-service-principal-portal). Es folgen die drei Methoden zum Erstellen des Dienstprinzipals: 
+Weitere Informationen finden Sie in den [Richtlinien für Azure-Dienstprinzipale](/azure/active-directory/develop/howto-create-service-principal-portal). Es folgen die drei Methoden zum Erstellen des Dienstprinzipals:
+
 * [Microsoft Azure-Portal](/azure/active-directory/develop/howto-create-service-principal-portal)
 * [Windows PowerShell](/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
 * [Microsoft Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
 
 ## <a name="publish-teams-app-using-teams-developer-portal"></a>Veröffentlichen Teams App mit Teams Entwicklerportal
+
 Wenn Änderungen im Zusammenhang mit Teams Manifestdatei der App vorgenommen werden, sollten Sie die Teams App erneut veröffentlichen, um das Manifest zu aktualisieren.
 
 Um Teams App manuell zu veröffentlichen, können Sie [das Entwicklerportal für Teams](https://dev.teams.microsoft.com/home) nutzen.
 
 Führen Sie die folgenden Schritte aus, um Ihre App zu veröffentlichen:
+
 1. Melden Sie sich beim [Entwicklerportal für Teams](https://dev.teams.microsoft.com) mit dem entsprechenden Konto an.
 2. Importieren Sie Ihr App-Paket in ZIP, indem Sie .`App -> Import app -> Replace`
 3. Wählen Sie die Ziel-App in der App-Liste aus.

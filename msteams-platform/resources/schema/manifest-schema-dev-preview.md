@@ -1,23 +1,23 @@
 ---
 title: Referenz zum Öffentlichen Entwicklervorschau-Manifestschema
-description: Beispielmanifestdatei und Beschreibung aller komponenten, die für Microsoft Teams
+description: Beispielmanifestdatei und Beschreibung aller komponenten, die für Microsoft Teams unterstützt werden
 ms.topic: reference
 keywords: Teams-Manifestschema – Entwicklervorschau
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: fd73fbdacf17c6c25a80071ec438c0dc97c6ee6a
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: bf2bcb1d7c72dc1fbd02de6ecab9ec0848c604c4
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518548"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356259"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referenz: Öffentliches Entwicklervorschaumanifestschema für Microsoft Teams
 
 Informationen zum Aktivieren der Entwicklervorschau finden Sie in der [öffentlichen Entwicklervorschau für Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
-> Wenn Sie keine Entwicklervorschaufeatures verwenden, z. B. [das Ausführen Teams persönlichen Registerkarten und Messaging-Erweiterungen in Outlook und Office](../../m365-apps/overview.md), verwenden Sie stattdessen das [App-Manifest für GA-Features](~/resources/schema/manifest-schema.md).
+> Wenn Sie keine Entwicklervorschaufeatures verwenden, einschließlich der Ausführung [Teams persönlichen Registerkarten und Messaging-Erweiterungen in Outlook und Office](../../m365-apps/overview.md), verwenden Sie stattdessen das [App-Manifest für GA-Features](~/resources/schema/manifest-schema.md).
 
 Das Microsoft Teams-Manifest beschreibt, wie die App in die Microsoft Teams-Plattform integriert wird. Ihr Manifest muss dem unter [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) gehosteten Schema entsprechen.
 
@@ -395,7 +395,7 @@ Das Objekt ist ein Array, wobei alle Elemente vom Typ `object` sind. Dieser Bloc
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`configurationUrl`|Zeichenfolge|2048 Zeichen|✔|Die https://-URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
-|`canUpdateConfiguration`|Boolesch|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: `true`|
+|`canUpdateConfiguration`|Boolescher Wert|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: `true`|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die Bereiche `team` und `groupchat`. |
 |`context` |Array von Enumerationen|6 ||Die Gruppe von `contextItem`-Bereichen, in denen eine [Registerkarte unterstützt wird](../../tabs/how-to/access-teams-context.md). Standard: `channelTab`, `privateChatTab`, , `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`und `meetingStage`.|
 |`sharePointPreviewImage`|Zeichenfolge|2048||Ein relativer Dateipfad zu einem Registerkartenvorschaubild zur Verwendung in SharePoint. Größe: 1024 x 768. |
@@ -417,8 +417,8 @@ Das Objekt ist ein Array (maximal 16 Elemente) mit allen Elementen des Typs `obj
 |`entityId`|String|64 Zeichen|✔|Ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird.|
 |`name`|String|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanal-Benutzeroberfläche.|
 |`contentUrl`|String|2048 Zeichen|✔|Die https://-URL, die auf die Entitäts-Benutzeroberfläche verweist, die im Microsoft Teams-Canvas angezeigt werden soll.|
-|`contentBotId`|   | | | Die Microsoft Teams App-ID, die für den Bot im Bot Framework-Portal angegeben wurde. |
-|`websiteUrl`|String|2048 Zeichen||Die https:// URL, die darauf zeigt, ob sich ein Benutzer für die Anzeige in einem Browser entscheidet.|
+|`contentBotId`|   | | | Die Microsoft Teams App-ID, die für den Bot im Bot Framework-Portal angegeben ist. |
+|`websiteUrl`|String|2048 Zeichen||Die https:// URL, um darauf hinzuweisen, ob sich ein Benutzer für die Anzeige in einem Browser entscheidet.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen statische Registerkarten nur den `personal`-Bereich. Das bedeutet, dass sie nur als Teil der persönlichen Benutzeroberfläche bereitgestellt werden können.|
 
 ## <a name="bots"></a>Bots
@@ -474,7 +474,7 @@ Das Objekt ist ein Array (maximal 1 Element) mit allen Elementen des Typs `objec
 |Name| Typ | Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`botId`|Zeichenfolge|64|✔|Die eindeutige Microsoft-App-ID für den Bot, welcher der Messaging-Erweiterung zugeordnet ist, wie beim Bot Framework registriert. Dies kann durchaus mit der gesamten [App-ID](#id) übereinstimmen.|
-|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann. Der Standardwert lautet `false`.|
+|`canUpdateConfiguration`|Boolescher Wert|||Ein Wert, der angibt, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann. Der Standardwert lautet `false`.|
 |`commands`|Array des Objekts|10|✔|Array von Befehlen, die von der Messaging-Erweiterung unterstützt werden|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -488,8 +488,8 @@ Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 |`id`|String|64 Zeichen|✔|Die ID für den Befehl.|
 |`type`|String|64 Zeichen||Der Befehlstyp. Entweder `query` oder `action`. Standard: `query`|
 |`title`|String|32 Zeichen|✔|Der benutzerfreundliche Name des Befehls.|
-|`description`|String|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
-|`initialRun`|Boolean|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt werden soll. Standard: `false`|
+|`description`|Zeichenfolge|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
+|`initialRun`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt werden soll. Standard: `false`|
 |`context`|Array von Zeichenfolgen|3||Definiert, von wo aus die Messaging-Erweiterung aufgerufen werden kann. Eine beliebige Kombination von `compose`, `commandBox`, `message`. Der Standardwert ist `["compose", "commandBox"]`|
 |`fetchTask`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden soll.|
 |`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das vorab geladen werden soll, wenn Sie einen Messaging-Erweiterungsbefehl verwenden.|
@@ -538,7 +538,7 @@ Gibt die systemeigenen Features auf dem Gerät eines Benutzers an, auf die Ihre 
 
 Eine Liste der gültigen Domänen, von denen die App erwartet, dass inhalte geladen werden. Domäneneinträge können Platzhalter enthalten, z. B `*.example.com`. . Dies entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com`. Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der für die Registerkartenkonfiguration verwendeten navigieren muss, muss diese Domäne hier angegeben werden.
 
-Es ist jedoch **nicht** erforderlich, die Domänen von Identitätsanbietern, die Sie unterstützen möchten, in Ihre App einzuschließen. Um sich beispielsweise mithilfe einer Google-ID zu authentifizieren, müssen Sie zu accounts.google.com umleiten, sie sollten jedoch keine accounts.google.com in `validDomains[]`einschließen.
+Es ist jedoch **nicht** erforderlich, die Domänen von Identitätsanbietern, die Sie unterstützen möchten, in Ihre App einzuschließen. Um sich beispielsweise mit einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten, sie sollten jedoch keine accounts.google.com in `validDomains[]`einschließen.
 
 > [!IMPORTANT]
 > Fügen Sie keine Domänen hinzu, die sich außerhalb Ihres Steuerelements befinden, entweder direkt oder über Platzhalter. Ist z. `yourapp.onmicrosoft.com` B. gültig, aber `*.onmicrosoft.com` nicht gültig.
@@ -549,11 +549,11 @@ Das Objekt ist ein Array, wobei alle Elemente vom Typ `string` sind.
 
 **Optional**
 
-Geben Sie Ihre Microsoft Azure Active Directory -App-ID (Azure AD) und Graph Informationen an, damit sich Benutzer nahtlos bei Ihrer Auzre AD-App anmelden können.
+Geben Sie Ihre Microsoft Azure Active Directory -App-ID (Azure AD) und Graph Informationen an, um Benutzern zu helfen, sich nahtlos bei Ihrer Auzre AD-App anzumelden.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`id`|Zeichenfolge|36 Zeichen|✔|Microsoft Azure Active Directory (Azure AD) Anwendungs-ID der App. Diese ID muss eine GUID sein.|
+|`id`|Zeichenfolge|36 Zeichen|✔|Microsoft Azure Active Directory (Azure AD)-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
 |`resource`|Zeichenfolge|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für SSO.|
 |`applicationPermissions`|Array|Maximal 100 Elemente|✔|Ressourcenberechtigungen für die Anwendung.|
 

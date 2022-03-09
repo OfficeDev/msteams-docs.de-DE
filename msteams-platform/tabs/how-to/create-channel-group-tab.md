@@ -5,18 +5,18 @@ description: Eine Schnellstartanleitung zum Erstellen einer Kanal- und Gruppenre
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: a9759c33187a6eedeacd9820594615eaaa94a8c8
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 0a5a72a7889dba040295f1d17858f701ff762099
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518261"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355846"
 ---
 # <a name="create-a-channel-or-group-tab"></a>Erstellen einer Kanal- oder Gruppenregisterkarte
 
 ## <a name="create-a-custom-channel-or-group-tab"></a>Erstellen einer benutzerdefinierten Kanal- oder Gruppenregisterkarte
 
-Sie können eine Kanal- oder Gruppenregisterkarte mit Node.js und dem Yeoman-Generator, ASP, erstellen. NETCore oder ASP. NETCore MVC.
+Sie können einen Kanal oder eine Gruppenregisterkarte mit Node.js und dem Yeoman-Generator, ASP, erstellen. NETCore oder ASP. NETCore MVC. Eine Kanal- oder Gruppenregisterkarte auf Microsoft Teams Mobilen finden Sie unter ["Registerkarten auf mobilgeräten](~/tabs/design/tabs-mobile.md)".
 
 # <a name="nodejs"></a>[Node.js](#tab/nodejs)
 
@@ -25,7 +25,7 @@ Sie können eine Kanal- oder Gruppenregisterkarte mit Node.js und dem Yeoman-Gen
 > [!NOTE]
 > Dieser Artikel folgt den Schritten, die im [Build Ihres ersten Microsoft Teams-App-Wiki](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) im Microsoft OfficeDev-GitHub-Repository beschrieben sind.
 
-Sie können eine benutzerdefinierte Kanal- oder Gruppenregisterkarte mithilfe des [Teams Yeoman-Generators](https://github.com/OfficeDev/generator-teams/) erstellen.
+Sie können eine benutzerdefinierte Kanal- oder Gruppenregisterkarte mit dem [Teams Yeoman-Generator](https://github.com/OfficeDev/generator-teams/) erstellen.
 
 ### <a name="prerequisites-for-apps"></a>Voraussetzungen für Apps
 
@@ -78,7 +78,7 @@ Darüber hinaus muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung
 
     Sie befinden sich derzeit in Ihrem Projektverzeichnis. Drücken Sie **die EINGABETASTE**.
 
-    **Titel Ihres Microsoft Teams App-Projekts?**
+    **Titel Ihres Microsoft Teams-App-Projekts?**
 
     Dies ist der Name Ihres App-Pakets und wird im App-Manifest und in der Beschreibung verwendet. Geben Sie einen Titel ein, oder drücken Sie **die EINGABETASTE** , um den Standardnamen zu übernehmen.
 
@@ -171,7 +171,7 @@ Darüber hinaus muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung
 
 #### <a name="create-the-app-package"></a>Erstellen des App-Pakets
 
-Sie müssen über ein App-Paket verfügen, um Ihre Registerkarte in Teams zu testen. Es handelt sich um einen ZIP-Ordner, der die folgenden erforderlichen Dateien enthält:
+Sie benötigen ein App-Paket, um Ihre Registerkarte in Teams zu testen. Es handelt sich um einen ZIP-Ordner, der die folgenden erforderlichen Dateien enthält:
 
 - Ein **Vollfarbsymbol** mit einer Auflösung von 192 x 192 Pixeln.
 - Ein **transparentes Gliederungssymbol** mit einer Auflösung von 32 x 32 Pixeln.
@@ -224,10 +224,10 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Hochladen Der Anwendung Teams
 
-**So laden Sie Ihre Anwendung in Teams hoch**
+**So laden Sie Ihre Anwendung in Teams**
 
 1. Wechseln Sie zu Microsoft Teams. Wenn Sie die [webbasierte Version verwenden,](https://teams.microsoft.com) können Sie Ihren Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md) Ihres Browsers überprüfen.
-1. Wählen Sie in Ihren Teams im linken Bereich die Ellipsen &#x25CF;&#x25CF;&#x25CF; neben dem Team aus, das Sie zum Testen Ihrer Registerkarte verwenden, und wählen Sie " **Team verwalten**" aus.
+1. Wählen Sie in Ihren Teams im linken Bereich die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; neben dem Team aus, das Sie zum Testen Ihrer Registerkarte verwenden, und wählen Sie " **Team verwalten**" aus.
 1. Wählen Sie im Hauptbereich in der Registerkartenleiste **Apps** aus, und wählen Sie **Hochladen eine benutzerdefinierte App** in der unteren rechten Ecke der Seite aus.
 1. Wechseln Sie zum Projektverzeichnis, navigieren Sie zum **Ordner "./package** ", wählen Sie den ZIP-Ordner des App-Pakets aus, und wählen Sie " **Öffnen**" aus.
 
@@ -255,7 +255,7 @@ Sie müssen die folgenden Voraussetzungen verstehen:
     > [!NOTE]
     > Wenn Sie derzeit kein Microsoft 365 Konto haben, können Sie sich über das [Microsoft-Entwicklerprogramm](https://developer.microsoft.com/en-us/microsoft-365/dev-program) für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden.
 
-- Verwenden Sie App Studio, um Ihre Anwendung in Teams zu importieren. Um App Studio zu installieren, wählen Sie **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) in der unteren linken Ecke der Teams-App aus, und suchen Sie nach **App Studio**. Nachdem Sie die Kachel gefunden haben, wählen Sie sie aus, und wählen Sie im Popupdialogfeld " **Hinzufügen** " aus, um sie zu installieren.
+- Verwenden Sie App Studio, um Ihre Anwendung in Teams zu importieren. Um App Studio zu installieren, wählen Sie **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) in der unteren linken Ecke des Teams App aus, und suchen Sie nach **App Studio**. Nachdem Sie die Kachel gefunden haben, wählen Sie sie aus, und wählen Sie im Popupdialogfeld " **Hinzufügen** " aus, um sie zu installieren.
 
 Darüber hinaus muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung installiert sein:
 
@@ -288,7 +288,7 @@ Alternativ können Sie den Quellcode abrufen, indem Sie den ZIP-Ordner herunterl
 
 #### <a name="startupcs"></a>Startup.cs
 
-Dieses Projekt wurde aus einer leeren Vorlage für ASP.NET Core 2.2-Webanwendung erstellt, wobei das Kontrollkästchen **"Erweitert – Für HTTPS konfigurieren**" beim Setup aktiviert ist. Die MVC-Dienste werden durch die Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage nicht standardmäßig die Bereitstellung statischer Inhalte, sodass die Middleware für statische Dateien der Methode mit dem folgenden Code hinzugefügt `Configure()` wird:
+Dieses Projekt wurde aus einer leeren Vorlage ASP.NET Core 2.2-Webanwendung erstellt, wobei das Kontrollkästchen **"Erweitert – Für HTTPS konfigurieren**" beim Setup aktiviert ist. Die MVC-Dienste werden durch die Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage nicht standardmäßig die Bereitstellung statischer Inhalte, sodass die Middleware für statische Dateien der Methode mit dem folgenden Code hinzugefügt `Configure()` wird:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -322,7 +322,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 - Ein **transparentes Gliederungssymbol** mit einer Auflösung von 32 x 32 Pixeln.
 - Eine **Manifest.json-Datei** , die die Attribute Ihrer App angibt.
 
-Diese Dateien müssen in einem App-Paket gezippt werden, um Ihre Registerkarte auf Teams hochzuladen. Wenn ein Benutzer die Registerkarte hinzufügt oder aktualisiert, lädt Microsoft Teams das `configurationUrl` angegebene Element in Ihrem Manifest, einbettet es in einen IFrame und rendert es auf der Registerkarte.
+Diese Dateien müssen in einem App-Paket gezippt werden, um Ihre Registerkarte in Teams hochzuladen. Wenn ein Benutzer die Registerkarte hinzufügt oder aktualisiert, lädt Microsoft Teams das `configurationUrl` angegebene Element in Ihrem Manifest, einbettet es in einen IFrame und rendert es auf der Registerkarte.
 
 #### <a name="csproj"></a>CSPROJ
 
@@ -368,9 +368,9 @@ Innerhalb von **Tab.cshtml** zeigt die Anwendung dem Benutzer zwei Optionsschalt
 
 #### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-Damit die Registerkarte in Teams angezeigt wird, müssen Sie das **Microsoft Teams JavaScript-Client-SDK** und einen Aufruf `microsoftTeams.initialize()` nach dem Laden der Seite einschließen. So kommunizieren Ihre Registerkarte und der Teams-Client:
+Damit Ihre Registerkarte in Teams angezeigt werden kann, müssen Sie das **Microsoft Teams JavaScript-Client-SDK** und einen Aufruf `microsoftTeams.initialize()` nach dem Laden der Seite einschließen. So kommunizieren Ihre Registerkarte und der Teams-Client:
 
-Wechseln Sie zum Ordner **"Freigegeben"** , öffnen **Sie _Layout.cshtml**, und fügen Sie dem Tag Folgendes `<head>` hinzu:
+Wechseln **Sie zum** Freigegebenen Ordner, öffnen **Sie _Layout.cshtml**, und fügen Sie dem `<head>` Tag Folgendes hinzu:
 
 ```html
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -430,7 +430,7 @@ Wechseln Sie zum Ordner **"Freigegeben"** , öffnen **Sie _Layout.cshtml**, und 
 1. Stellen Sie sicher, dass **ngrok** ausgeführt wird und ordnungsgemäß funktioniert, indem Sie Ihren Browser öffnen und über die ngrok-HTTPS-URL, die im Eingabeaufforderungsfenster bereitgestellt wurde, zur Inhaltsseite wechseln.
 
 > [!TIP]
-> Sie müssen sowohl Ihre Anwendung in Visual Studio als auch in ngrok ausführen, um die in diesem Artikel beschriebenen Schritte auszuführen. Wenn Sie die Ausführung der Anwendung in Visual Studio beenden müssen, um daran zu arbeiten, **führen Sie ngrok weiter** aus. Sie überwacht und setzt das Weiterleiten der Anforderung Ihrer Anwendung fort, wenn sie in Visual Studio neu gestartet wird. Wenn Sie den ngrok-Dienst neu starten müssen, wird eine neue URL zurückgegeben, und Sie müssen Ihre Anwendung mit der neuen URL aktualisieren.
+> Sie müssen ihre Anwendung sowohl in Visual Studio als auch in ngrok ausführen, um die in diesem Artikel beschriebenen Schritte auszuführen. Wenn Sie die Ausführung Der Anwendung in Visual Studio beenden müssen, um daran zu arbeiten, **lassen Sie ngrok ausgeführt**. Beim Neustart der Anwendung in Visual Studio wird die Weiterleitung der Anwendung überwacht und fortgesetzt. Wenn Sie den ngrok-Dienst neu starten müssen, wird eine neue URL zurückgegeben, und Sie müssen Ihre Anwendung mit der neuen URL aktualisieren.
 
 ### <a name="upload-your-tab-for-teams"></a>Hochladen Sie Ihre Registerkarte für Teams
 
@@ -449,7 +449,7 @@ Wechseln Sie zum Ordner **"Freigegeben"** , öffnen **Sie _Layout.cshtml**, und 
     /bin/Debug/netcoreapp2.2/tab.zip
     ```
 
-1. Hochladen zu App Studio **tab.zip**.
+1. Hochladen **app Studiotab.zip**.
 
 #### <a name="update-your-app-package-with-manifest-editor"></a>Aktualisieren des App-Pakets mit dem Manifest-Editor
 
@@ -517,7 +517,7 @@ Sie können eine benutzerdefinierte Kanal- oder Gruppenregisterkarte mit C# und 
     > [!NOTE]
     > Wenn Sie derzeit kein Microsoft 365 Konto haben, können Sie sich über das [Microsoft-Entwicklerprogramm](https://developer.microsoft.com/en-us/microsoft-365/dev-program) für ein kostenloses Abonnement registrieren. Das Abonnement bleibt aktiv, solange Sie es für die fortlaufende Entwicklung verwenden.
 
-- Verwenden Sie App Studio, um Ihre Anwendung in Teams zu importieren. Um App Studio zu installieren, wählen Sie **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) in der unteren linken Ecke der Teams-App aus, und suchen Sie nach **App Studio**. Nachdem Sie die Kachel gefunden haben, wählen Sie sie aus, und wählen Sie im Popupdialogfeld " **Hinzufügen** " aus, um sie zu installieren.
+- Verwenden Sie App Studio, um Ihre Anwendung in Teams zu importieren. Um App Studio zu installieren, wählen Sie **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) in der unteren linken Ecke des Teams App aus, und suchen Sie nach **App Studio**. Nachdem Sie die Kachel gefunden haben, wählen Sie sie aus, und wählen Sie im Popupdialogfeld " **Hinzufügen** " aus, um sie zu installieren.
 
 Darüber hinaus muss für dieses Projekt Folgendes in Ihrer Entwicklungsumgebung installiert sein:
 
@@ -550,7 +550,7 @@ Alternativ können Sie den Quellcode abrufen, indem Sie den ZIP-Ordner herunterl
 
 #### <a name="startupcs"></a>Startup.cs
 
-Dieses Projekt wurde aus einer leeren Vorlage für ASP.NET Core 2.2-Webanwendung erstellt, wobei das Kontrollkästchen **"Erweitert – Für HTTPS konfigurieren**" beim Setup aktiviert ist. Die MVC-Dienste werden durch die Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage nicht standardmäßig die Bereitstellung statischer Inhalte, sodass die Middleware für statische Dateien der Methode mit dem folgenden Code hinzugefügt `Configure()` wird:
+Dieses Projekt wurde aus einer leeren Vorlage ASP.NET Core 2.2-Webanwendung erstellt, wobei das Kontrollkästchen **"Erweitert – Für HTTPS konfigurieren**" beim Setup aktiviert ist. Die MVC-Dienste werden durch die Methode des Abhängigkeitsinjektionsframeworks `ConfigureServices()` registriert. Darüber hinaus ermöglicht die leere Vorlage nicht standardmäßig die Bereitstellung statischer Inhalte, sodass die Middleware für statische Dateien der Methode mit dem folgenden Code hinzugefügt `Configure()` wird:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -610,7 +610,7 @@ Dies sind die verschiedenen Ansichten in ASP.NET Core MVC:
 
 * Start: ASP.NET Core behandelt Dateien mit dem Namen **Index** als Standard- oder Startseite für die Website. Wenn Ihre Browser-URL auf den Stamm der Website zeigt, wird **Index.cshtml** als Startseite für Ihre Anwendung angezeigt.
 
-* Freigegeben: Das Partielle Ansichtsmarkup **_Layout.cshtml** enthält die allgemeine Seitenstruktur der Anwendung und freigegebene visuelle Elemente. Außerdem wird auf die Teams-Bibliothek verwiesen.
+* Freigegeben: Das Partielle Ansichtsmarkup **_Layout.cshtml** enthält die allgemeine Seitenstruktur der Anwendung und freigegebene visuelle Elemente. Außerdem wird auf die Teams Bibliothek verwiesen.
 
 #### <a name="controllers"></a>Controller
 
@@ -641,7 +641,7 @@ Innerhalb von **Tab.cshtml** zeigt die Anwendung dem Benutzer zwei Optionsschalt
 > [!div class="nextstepaction"]
 > [Erstellen einer Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md)
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Siehe auch
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)

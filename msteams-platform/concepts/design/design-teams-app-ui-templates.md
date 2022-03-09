@@ -5,12 +5,12 @@ description: Entwerfen Sie Ihre App schneller mit standardisierten UI-Komponente
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 4429c895bde9b2fd432b2d41c953c69e78f5ea92
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: f77517774237cce49976990a790987972d79118d
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362942"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356434"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Entwerfen Ihrer Microsoft Teams-App mit UI-Vorlagen
 
@@ -27,7 +27,7 @@ Nutzen Sie UI-Vorlagen für Ihr App-Design aus dem Microsoft Teams UI Kit, das a
 > [!div class="nextstepaction"]
 > [Abrufen des UI-Kits (Numma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft Teams UI-Bibliothek
+### <a name="microsoft-teams-ui-library"></a>Microsoft Teams-Benutzeroberflächenbibliothek
 
 Anzeigen und Testen einzelner Teams UI-Vorlagen und zugehöriger Komponenten in Ihrem Browser.
 
@@ -62,7 +62,7 @@ In Teams ist ein Kalender der Ort, an dem ein Benutzer bevorstehende und vergang
 
 ## <a name="dashboard"></a>Dashboard
 
-Ein Dashboard zeigt verschiedene Inhaltstypen an einem zentralen Ort an (z. B. eine Teams persönliche App oder Registerkarte). Benutzer sollten in der Lage sein, zumindest einige der Elemente anzupassen, die sie auf einem Dashboard sehen.
+Ein Dashboard zeigt unterschiedliche Inhaltstypen an einem zentralen Ort an (z. B. eine Teams persönliche App oder Registerkarte). Benutzer sollten in der Lage sein, zumindest einige der Elemente anzupassen, die sie auf einem Dashboard sehen.
 
 ### <a name="top-use-cases"></a>Häufigste Anwendungsfälle
 
@@ -146,7 +146,7 @@ Formulare werden verwendet, um Benutzereingaben strukturiert zu erfassen, zu üb
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Beispiel zeigt eine Formular-UI-Vorlage auf dem Desktop." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="Beispiel zeigt eine Formular-UI-Vorlage auf dem Desktop." border="false":::
 
 ## <a name="list"></a>Liste
 
@@ -167,7 +167,7 @@ Sie können eine Liste verwenden, um verwandte Elemente in einem scannbaren Form
 
 ## <a name="sign-in"></a>Anmelden
 
-Sie können App-Anmeldeflüsse für verschiedene Teams Kontexte und Identitätsanbieter entwerfen. Das folgende Beispiel enthält einmaliges Anmelden (Single Sign-On, SSO), das wir für die einfachste Authentifizierung empfehlen.
+Sie können App-Anmeldeflüsse für unterschiedliche Teams Kontexte und Identitätsanbieter entwerfen. Das folgende Beispiel enthält einmaliges Anmelden (Single Sign-On, SSO), das wir für die einfachste Authentifizierung empfehlen.
 
 ### <a name="top-use-case"></a>Häufigster Anwendungsfall
 
