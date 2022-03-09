@@ -2,15 +2,15 @@
 title: Hochladen Ihrer benutzerdefinierten App
 description: Erfahren Sie, wie Sie Ihre App in Microsoft Teams querladen. Das Querladen ist beim Testen und Debuggen einer App während der Entwicklung üblich.
 ms.topic: how-to
-author: KirtiPereira
+author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: bcb5661c4f6d09499700456bc44ce962ac710ea9
-ms.sourcegitcommit: 83d67e73427ea1e93bb9aea5a8ca8ae05b68e302
+ms.openlocfilehash: d602750a8f41d8331f30d64e06b2aafb026e0ff4
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62430299"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356280"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Hochladen Ihrer App in Microsoft Teams
 
@@ -63,7 +63,7 @@ Sie müssen Ihre App nicht erneut querladen, wenn Sie Codeänderungen vornehmen 
 Um Ihre App zu entfernen, klicken Sie mit der rechten Maustaste auf das App-Symbol in Teams, und wählen Sie **Deinstallieren** aus.
 
 > [!NOTE]
-> Sie können persönliche Botaktivitäten nicht vollständig entfernen. Wenn Sie die App entfernen und erneut hinzufügen, wird die neue Unterhaltung mit dem Bot an die vorherige Unterhaltung mit ihm angefügt.
+> Sie können persönliche Botaktivitäten nicht vollständig entfernen. Wenn Sie die App entfernen und erneut hinzufügen, wird die neue Kommunikation mit dem Bot an die vorherige Konversation mit ihm angefügt.
 
 ## <a name="next-step"></a>Nächster Schritt
 

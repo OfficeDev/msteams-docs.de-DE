@@ -5,12 +5,12 @@ keywords: Kartenformat für Teams-Bots
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 08c78748039fd8feccc1750abd17af7bcbc2d441
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: b0d171134b58606a2d9eefa81bf1b5c16d27138e
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821675"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356441"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatieren von Karten in Microsoft Teams
 
@@ -22,7 +22,7 @@ Karten unterstützen die Formatierung nur in der Texteigenschaft, nicht in den T
 
 Die Formatierungsunterstützung unterscheidet sich zwischen Kartentypen. Das Rendern der Karte kann sich geringfügig zwischen dem Desktopclient und den mobilen Microsoft Teams-Clients sowie Teams im Desktopbrowser unterscheiden.
 
-Sie können ein Inlinebild mit einer beliebigen Teams-Karte einschließen. Bilder können als `.png`-, `.jpg`- oder `.gif`-Dateien formatiert werden und dürfen nicht größer als 1024 x 1024 Pixel oder 1 MB sein. Animierte GIF-Dateien werden nicht unterstützt. Weitere Informationen finden Sie unter [Typen von Karten](./cards-reference.md#inline-card-images).
+Sie können ein Inlinebild mit einer beliebigen Teams-Karte einschließen. Unterstützte Bildformate sind PNG-, JPG- oder GIF-Formate. Halten Sie die Abmessungen innerhalb von 1024 x 1024 Pixel und die Dateigröße kleiner als 1 MB. Animierte GIF-Bilder werden nicht unterstützt. Weitere Informationen finden Sie unter [Typen von Karten](./cards-reference.md#inline-card-images).
 
 Sie können adaptive Karten und Office 365-Connector-Karten mit Markdown formatieren, die bestimmte unterstützte Formatvorlagen enthalten.
 
@@ -116,7 +116,7 @@ Der folgende Code zeigt ein Beispiel der Formatierung für adaptive Karten:
 }
 ```
 
-Adaptive Karten unterstützen Emoji. Der folgende Code zeigt ein Beispiel für adaptive Karten mit einem Emoji:
+Adaptive Karten unterstützen Emoji. Der folgende Code zeigt ein Beispiel für Adaptive Karten mit einem Emoji:
 
 ``` json
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
