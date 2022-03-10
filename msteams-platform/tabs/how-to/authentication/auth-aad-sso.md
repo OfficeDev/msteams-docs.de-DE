@@ -4,12 +4,12 @@ description: Beschreibt Einmaliges Anmelden (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams-Authentifizierungs-SSO – Microsoft Azure Active Directory (Azure AD)-Single Sign-On-API
-ms.openlocfilehash: edd7e08167c0efb93b7a578de12b7e1873aa193f
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 9fd975aee587bd2a5602cc08a8c988773be276af
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821724"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356105"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Unterstützung für einmaliges Anmelden (SSO) für Registerkarten
 
@@ -21,8 +21,8 @@ Benutzer melden sich bei Microsoft Teams über ihr Geschäfts-, Schul- oder Micr
 > ✔Teams für Android (1416/1.0.0.2020073101 und höher)
 >
 > ✔Teams für iOS (_Version_: 2.0.18 und höher)  
-> 
-> ✔Teams JavaScript SDK (_Version_: 1.10 und höher) für SSO, um im Besprechungsseitenbereich zu arbeiten. 
+>
+> ✔Teams JavaScript SDK (_Version_: 1.10 und höher) für SSO, um im Besprechungsseitenbereich zu arbeiten.
 >
 > Für eine optimale Benutzererfahrung verwenden Sie die jeweils neueste Version von iOS und Android.
 
@@ -30,6 +30,14 @@ Benutzer melden sich bei Microsoft Teams über ihr Geschäfts-, Schul- oder Micr
 > **Schnellstart**  
 >
 > Der einfachste Weg, um mit der Registerkarte SSO zu beginnen, ist das Teams-Toolkit für Microsoft Visual Studio Code. Weitere Informationen finden Sie unter [SSO mit Teams Toolkit und Visual Studio Code für Tabs](../../../toolkit/visual-studio-code-tab-sso.md)
+
+<!--- TBD: Edit this article.
+* Admonitions/alerts seem to be overused.
+* Don't add note for a list of items.
+* Don't add numbers to headings.
+* Don't copy-paste superscript characters as is. Use HTML entities. See https://sitefarm.ucdavis.edu/training/all/using-wysiwyg/special-characters for the values.
+* Same for the check marks added in the content in the note above. The content should not be in a note anyway.
+--->
 
 ## <a name="how-sso-works-at-runtime"></a>Funktionsweise von SSO zur Laufzeit
 
@@ -39,7 +47,7 @@ Das folgende Bild veranschaulicht die Funktionsweise des SSO-Prozesses:
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
 1. In der Registerkarte wird ein JavaScript-Aufruf an `getAuthToken()` durchgeführt. `getAuthToken()` weist Teams an, ein Zugriffstoken für die Registerkartenanwendung abzurufen.
-2. Wenn der aktuelle Benutzer Ihre Registerkartenanwendung zum ersten Mal verwendet, wird eine Aufforderung zur Zustimmung angefordert, wenn eine Zustimmung erforderlich ist. Alternativ gibt es eine Aufforderung, eine erhöhte Authentifizierung durchführen, z. B. die zweistufige Authentifizierung.
+2. Wenn der aktuelle Benutzer Ihre Registerkartenanwendung zum ersten Mal verwendet, wird eine Aufforderung zur Zustimmung angefordert, wenn eine Zustimmung erforderlich ist. Alternativ gibt es eine Anforderungsaufforderung für die Verarbeitung der schrittweisen Authentifizierung, z. B. die zweistufige Authentifizierung.
 3. Teams fordert das Registerkartenzugriffstoken vom Azure AD-Endpunkt für den aktuellen Benutzer an.
 4. Azure AD sendet das Registerkartenzugriffstoken an die Teams Anwendung.
 5. Teams sendet das Registerkartenzugriffstoken als Teil des Ergebnisobjekts, das vom `getAuthToken()`-Aufruf zurückgegeben wird, an die Registerkarte.
@@ -52,7 +60,7 @@ Die SSO-API funktioniert auch in [Aufgabenmodulen](../../../task-modules-and-car
 
 ## <a name="develop-an-sso-microsoft-teams-tab"></a>Entwickeln einer Microsoft Teams-Registerkarte für einmaliges Anmelden
 
-In diesem Abschnitt werden die Aufgaben beschrieben, die bei der Erstellung einer Teams-Registerkarte, das SSO verwendet, ausgeführt werden müssen. Diese Aufgaben sind sprach- und frameworkunabhängig.
+In diesem Abschnitt werden die Aufgaben beschrieben, die bei der Erstellung einer Teams-Registerkarte, die SSO verwendet, ausgeführt werden müssen. Diese Aufgaben sind sprach- und frameworkunabhängig.
 
 ### <a name="1-create-your-azure-ad-application"></a>1. Erstellen einer Azure AD-Anwendung
 
@@ -64,13 +72,13 @@ In diesem Abschnitt werden die Aufgaben beschrieben, die bei der Erstellung eine
 > * Derzeit werden mehrere Domänen pro App nicht unterstützt.
 > * Der Benutzer muss für eine neue Anwendung `accessTokenAcceptedVersion` auf `2` festlegen.
 
-**So registrieren Sie Ihre App über das Azure AD Portal**
+Führen Sie die folgenden Schritte aus, um Ihre App über das Azure AD-Portal zu registrieren:
 
 1. Registrieren Sie eine neue Anwendung im Portal [Azure AD-App-Registrierungen](https://go.microsoft.com/fwlink/?linkid=2083908).
 1. Wählen Sie **Neue Registrierung** aus. Die Seite **Anwendung registrieren** wird angezeigt.
 1. Geben Sie auf der Seite **Registrierung einer Anwendung** folgende Werte ein:
     1. Geben Sie einen **Namen** für Ihre App ein.
-    2. Wählen Sie die **Unterstützten Kontotypen** aus, wählen Sie den Kontotyp "Einzelmandant" oder "Mehrfachmandant" aus. ¹
+    2. Wählen Sie **Unterstützte Kontotypen** aus, wählen Sie den Kontotyp „Einzelmandant“ oder „Mehrfachmandant“ aus.
     * Lassen Sie **URI umleiten** leer.
     3. Wählen Sie **Registrieren** aus.
 1. Kopieren Sie auf der Übersichtsseite den **Application (client) ID** und speichern Sie ihn. Sie müssen ihn später haben, wenn Sie Ihr Teams-Anwendungsmanifest aktualisieren.
@@ -80,7 +88,7 @@ In diesem Abschnitt werden die Aufgaben beschrieben, die bei der Erstellung eine
     > Wenn Sie eine App mit einem Bot und einer Registerkarte erstellen, geben Sie den Anwendungs-ID-URI als `api://fully-qualified-domain-name.com/botid-{YourBotId}` ein.
 
 1. Wählen Sie den Link **Festlegen** aus, um die Anwendungs-ID-URI im Formular `api://{AppID}` zu generieren. Fügen Sie Ihren vollqualifizierten Domänennamen mit am Ende angehängten Schrägstrich „/“ zwischen den doppelten Schrägstrichen und der GUID ein. Die gesamte ID muss die Form von `api://fully-qualified-domain-name.com/{AppID}` aufweisen. ² Zum Beispiel `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. Der vollqualifizierte Domänenname ist der lesbare Domänenname, aus dem Ihre App bereitgestellt wird. Wenn Sie einen Tunneldienst wie ngrok verwenden, müssen Sie diesen Wert aktualisieren, wenn sich Ihre ngrok-Unterdomäne ändert.
-1. Wählen Sie **Bereich hinzufügen**. Geben Sie im Bereich, der nun geöffnet wird, **access_as_user** für **Bereichsname** ein.
+1. Wählen Sie **Bereich hinzufügen** aus. Geben Sie im Bereich, der nun geöffnet wird, **access_as_user** für **Bereichsname** ein.
 1. Geben Sie im Feld **Wer kann zustimmen?** **Administratoren und Benutzer** ein.
 1. Geben Sie die Details in die Felder für die Konfiguration der Aufforderungen zur Administrator- und Benutzereinwilligung mit werten ein, die für den Bereich geeignet `access_as_user` sind:
     * **Titel der Administratoreinwilligung**: Teams kann auf das Benutzerprofil zugreifen.
@@ -88,7 +96,7 @@ In diesem Abschnitt werden die Aufgaben beschrieben, die bei der Erstellung eine
     * **Titel der Benutzereinwilligung**: Teams können auf Ihr Profil zugreifen und Anforderungen in Ihrem Namen senden.
     * **Beschreibung der Benutzereinwilligung**: Teams können die APIs dieser App mit denselben Rechten wie Sie aufrufen.
 1. Stellen Sie sicher, **Zustand** auf **Aktiviert** festgelegt ist.
-1. Wählen Sie **Bereich hinzufügen** aus, um die Details zu speichern. Der Domänenteil des von **Bereichsname**, der unter dem Textfeld angezeigt wird, muss automatisch mit dem im vorherigen Schritt festgelegten **Anwendungs-ID**-URI übereinstimmen, mit `/access_as_user` am Ende angefügt `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
+1. Wählen Sie **Bereich hinzufügen** aus, um die Details zu speichern. Der Domänenteil des **Bereichsnamen**, der unter dem Textfeld angezeigt wird, muss automatisch mit dem im vorherigen Schritt festgelegten **Anwendungs-ID**-URI übereinstimmen, wobei `/access_as_user` an das Ende `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` angefügt wird.
 1. Identifizieren Sie im Bereich **Autorisierte Clientanwendungen** die Anwendungen, die Sie für die Webanwendung Ihrer App autorisieren möchten. **Hinzufügen einer Clientanwendung** auswählen. Geben Sie jede der folgenden Client-IDs ein, und wählen Sie den autorisierten Bereich aus, den Sie im vorherigen Schritt erstellt haben:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` für Teams Mobile oder Desktopanwendung.
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` für Teams-Webanwendung.
@@ -112,7 +120,7 @@ In diesem Abschnitt werden die Aufgaben beschrieben, die bei der Erstellung eine
     > [!NOTE]
     > Für Registerkarten-SSO ist keine implizite Genehmigung erforderlich.
 
-Herzlichen Glückwunsch! Sie haben die Voraussetzungen für die App-Registrierung erfüllt, um mit Ihrer Registerkarten-SSO-App fortzufahren.
+Glückwunsch! Sie haben die Voraussetzungen für die App-Registrierung erfüllt, um mit Ihrer Registerkarten-SSO-App fortzufahren.
 
 > [!NOTE]
 >
@@ -143,6 +151,9 @@ Verwenden Sie den folgenden Code, um ihrem Teams Manifest neue Eigenschaften hin
 >* Sie müssen die Manifestversion 1.5 oder höher verwenden, um das Feld `webApplicationInfo` zu implementieren.
 
 ### <a name="3-get-an-access-token-from-your-client-side-code"></a>3. Abrufen eines Zugriffstokens aus ihrem clientseitigen Code
+
+> [!NOTE]
+> Um Fehler wie beispielsweise `Teams SDK Error: resourceDisabled` zu vermeiden, stellen Sie sicher, dass der Anwendungs-ID-URI in Azure AD App-Registrierung und in Ihrer Teams-App ordnungsgemäß konfiguriert ist.
 
 Verwenden Sie die folgende Authentifizierungs-API:
 
@@ -244,7 +255,7 @@ Eine einfache Möglichkeit, im Namen einer Organisation als Mandantenadministrat
 
 Ein weiterer Ansatz zum Abrufen von Graph-Bereichen besteht darin, ein Zustimmungsdialogfeld mithilfe unseres vorhandenen [webbasierten Azure AD-Authentifizierungsansatzes](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page) anzuzeigen. Bei diesem Ansatz wird ein Azure AD-Zustimmungsdialogfeld angezeigt.
 
-**So fordern Sie eine zusätzliche Zustimmung mithilfe der Auth-API an**
+Führen Sie die folgenden Schritte aus, um mithilfe der Auth-API um zusätzliche Zustimmung zu bitten:
 
 1. Das abgerufene Token `getAuthToken()` muss serverseitig mit dem Azure AD-[On-Behalf-Of-Fluss](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) ausgetauscht werden, um Zugriff auf diese anderen Graph-APIs zu erhalten. Stellen Sie sicher, dass Sie den v2-Graph-Endpunkt für diesen Austausch verwenden.
 2. Wenn der Austausch fehlschlägt, gibt Azure AD eine Ausnahme für ungültige Genehmigungen zurück. Es gibt in der Regel eine von zwei Fehlermeldungen, `invalid_grant` oder `interaction_required`.
@@ -268,4 +279,5 @@ Die oben beschriebene Authentifizierungslösung funktioniert nur für Apps und D
 * Befolgen Sie die [Schritt-für-Schritt-Anleitung](../../../sbs-tab-with-adaptive-cards.yml), um Registerkarten mit adaptiven Karten zu erstellen.
 
 ## <a name="see-also"></a>Siehe auch
+
 [Teams-Bot mit einmaligem Anmelden](../../../sbs-bots-with-sso.yml)
