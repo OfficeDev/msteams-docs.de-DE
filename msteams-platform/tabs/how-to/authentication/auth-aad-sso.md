@@ -4,12 +4,12 @@ description: Beschreibt Einmaliges Anmelden (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams-Authentifizierungs-SSO – Microsoft Azure Active Directory (Azure AD)-Single Sign-On-API
-ms.openlocfilehash: 9fd975aee587bd2a5602cc08a8c988773be276af
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 63ffaa8ee11f728a262094f0300db37259f79a8d
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356105"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398890"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Unterstützung für einmaliges Anmelden (SSO) für Registerkarten
 
@@ -24,9 +24,7 @@ Benutzer melden sich bei Microsoft Teams über ihr Geschäfts-, Schul- oder Micr
 >
 > ✔Teams JavaScript SDK (_Version_: 1.10 und höher) für SSO, um im Besprechungsseitenbereich zu arbeiten.
 >
-> Für eine optimale Benutzererfahrung verwenden Sie die jeweils neueste Version von iOS und Android.
-
-> [!NOTE]
+> Für eine optimale Benutzererfahrung verwenden Sie die jeweils neueste Version von iOS und Android.[!NOTE]
 > **Schnellstart**  
 >
 > Der einfachste Weg, um mit der Registerkarte SSO zu beginnen, ist das Teams-Toolkit für Microsoft Visual Studio Code. Weitere Informationen finden Sie unter [SSO mit Teams Toolkit und Visual Studio Code für Tabs](../../../toolkit/visual-studio-code-tab-sso.md)
@@ -47,7 +45,7 @@ Das folgende Bild veranschaulicht die Funktionsweise des SSO-Prozesses:
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
 1. In der Registerkarte wird ein JavaScript-Aufruf an `getAuthToken()` durchgeführt. `getAuthToken()` weist Teams an, ein Zugriffstoken für die Registerkartenanwendung abzurufen.
-2. Wenn der aktuelle Benutzer Ihre Registerkartenanwendung zum ersten Mal verwendet, wird eine Aufforderung zur Zustimmung angefordert, wenn eine Zustimmung erforderlich ist. Alternativ gibt es eine Anforderungsaufforderung für die Verarbeitung der schrittweisen Authentifizierung, z. B. die zweistufige Authentifizierung.
+2. Wenn der aktuelle Benutzer Ihre Registerkartenanwendung zum ersten Mal verwendet, wird eine Aufforderung zur Zustimmung angefordert, wenn eine Zustimmung erforderlich ist. Alternativ gibt es eine Anforderungsaufforderung für die Verarbeitung der schrittweisen Authentifizierung, z. B. die zweistufige Authentifizierung.
 3. Teams fordert das Registerkartenzugriffstoken vom Azure AD-Endpunkt für den aktuellen Benutzer an.
 4. Azure AD sendet das Registerkartenzugriffstoken an die Teams Anwendung.
 5. Teams sendet das Registerkartenzugriffstoken als Teil des Ergebnisobjekts, das vom `getAuthToken()`-Aufruf zurückgegeben wird, an die Registerkarte.
@@ -78,7 +76,7 @@ Führen Sie die folgenden Schritte aus, um Ihre App über das Azure AD-Portal zu
 1. Wählen Sie **Neue Registrierung** aus. Die Seite **Anwendung registrieren** wird angezeigt.
 1. Geben Sie auf der Seite **Registrierung einer Anwendung** folgende Werte ein:
     1. Geben Sie einen **Namen** für Ihre App ein.
-    2. Wählen Sie **Unterstützte Kontotypen** aus, wählen Sie den Kontotyp „Einzelmandant“ oder „Mehrfachmandant“ aus.
+    2. Wählen Sie **Unterstützte Kontotypen** aus, wählen Sie den Kontotyp „Einzelmandant“ oder „Mehrfachmandant“ aus. ¹
     * Lassen Sie **URI umleiten** leer.
     3. Wählen Sie **Registrieren** aus.
 1. Kopieren Sie auf der Übersichtsseite den **Application (client) ID** und speichern Sie ihn. Sie müssen ihn später haben, wenn Sie Ihr Teams-Anwendungsmanifest aktualisieren.
@@ -142,9 +140,9 @@ Verwenden Sie den folgenden Code, um ihrem Teams Manifest neue Eigenschaften hin
 * **WebApplicationInfo** ist das übergeordnete Element der folgenden Elemente:
 
 > [!div class="checklist"]
+>
 > * **id** – Die Client-ID der Anwendung. Dies ist die Anwendungs-ID, die Sie beim Registrieren der Anwendung bei Azure AD erhalten haben.
 >* **ressource** – Die Domäne und Unterdomäne Ihrer Anwendung. Hierbei handelt es sich um den gleichen URI (einschließlich des Protokolls `api://`), den Sie bei der Erstellung Ihres `scope` im Schritt 6 verwendet haben. Sie dürfen den Pfad `access_as_user` nicht in Ihre Ressource einschließen. Der Domänenteil dieses URI muss mit der Domäne übereinstimmen, einschließlich aller Unterdomänen, die in den URLs Ihres Teams-Anwendungsmanifests verwendet werden.
-
 > [!NOTE]
 >
 >* Die Ressource für eine Azure AD-App ist in der Regel der Stamm der Website-URL und der App-ID (z. B. `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`). Dieser Wert wird auch verwendet, um sicherzustellen, dass Ihre Anforderung von derselben Domäne stammt. Stellen Sie sicher, dass die `contentURL` für Ihre Registerkarte dieselben Domänen wie Ihre Ressourceneigenschaft verwendet.
@@ -233,6 +231,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
             });
         });
 ```
+
 ---
 
 ## <a name="code-sample"></a>Codebeispiel

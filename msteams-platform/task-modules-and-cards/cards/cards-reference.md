@@ -4,12 +4,12 @@ description: Beschreibt alle für Bots in Teams verfügbaren Karten und Kartenak
 ms.localizationpriority: high
 keywords: Referenz zu Bots-Karten
 ms.topic: reference
-ms.openlocfilehash: 741bd83b6888527e8e89b5be51dd408bb802fad3
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 7144887b0b53d0542f2756d4f473e8e2e5807e58
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081135"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399380"
 ---
 # <a name="types-of-cards"></a>Kartentypen
 
@@ -19,7 +19,7 @@ Bevor Sie die verschiedenen Kartentypen identifizieren, sollten Sie wissen, wie 
 
 ## <a name="create-a-hero-card-thumbnail-card-or-adaptive-card"></a>Erstellen einer Hero-, Miniaturansichts- oder Adaptiven Karte
 
-**So erstellen Sie eine Hero-, Miniaturansichts- oder Adaptive Karte in App Studio**
+So erstellen Sie eine Hero-, Miniaturansichts- oder adaptive Karte in App Studio:
 
 1. Wechseln Sie von Teams zu **App Studio**.
 1. Wählen Sie den **Karteneditor** aus.
@@ -85,7 +85,7 @@ Die Karte kann ein Inlinebild enthalten, indem Sie einen Link zum öffentlich ve
 
 Bilder werden vergrößert oder verkleinert, um das Seitenverhältnis für die Abdeckung des Bildbereichs beizubehalten. Die Bilder werden dann von der Mitte her zugeschnitten, um das entsprechende Seitenverhältnis für die Karte zu erhalten.
 
-Bilder dürfen höchstens 1024×1024 groß sein und müssen im PNG-, JPEG- oder GIF-Format vorliegen. Animierte GIF-Dateien werden nicht unterstützt.
+Bilder dürfen höchstens 1024×1024 groß sein und müssen im PNG-, JPEG- oder GIF-Format vorliegen. Animiertes GIF wird nicht unterstützt.
 
 Die folgende Tabelle enthält die Eigenschaften von Inline-Kartenbildern:
 
@@ -95,7 +95,7 @@ Die folgende Tabelle enthält die Eigenschaften von Inline-Kartenbildern:
 | alt | Zeichenfolge | Barrierefreie Beschreibung des Bilds. |
 
 > [!NOTE]
-> Wenn eine Karte eine Bild-URL enthält, die vor dem endgültigen Bild umgeleitet wird, wird die Umleitung in der Bild-URL nicht unterstützt. Dazu kommt es bei Bildern, die in der öffentlichen Cloud freigegeben sind.
+> Wenn eine Karte eine Bild-URL enthält, die vor dem endgültigen Bild umgeleitet wird, wird die Umleitung in der Bild-URL nicht unterstützt. Dies gilt für Bilder, die in der öffentlichen Cloud freigegeben werden.
 
 ### <a name="buttons"></a>Schaltflächen
 
@@ -111,7 +111,7 @@ Nachdem Sie die allgemeinen Eigenschaften für alle Karten identifiziert haben, 
 
 ## <a name="adaptive-card"></a>Adaptive Karte
 
-Eine Adaptive Karte ist eine anpassbare Karte, die eine beliebige Kombination aus Text, Sprache, Bildern, Schaltflächen und Eingabefeldern enthalten kann. Weitere Informationen finden Sie unter [Adaptive Karten](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
+Eine adaptive Karte ist eine anpassbare Karte, die eine beliebige Kombination aus Text, Sprache, Bildern, Schaltflächen und Eingabefeldern enthalten kann. Weitere Informationen finden Sie unter [Adaptive Karten](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
 
 ### <a name="support-for-adaptive-cards"></a>Unterstützung für Adaptive Karten
 
@@ -122,6 +122,7 @@ Die folgende Tabelle enthält die Features, die Adaptive Karten unterstützen:
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
+>
 > * Die Teams-Plattform unterstützt v1.4 oder frühere adaptive Kartenfeatures für von Bots gesendete Karten und aktionsbasierte Messaging-Erweiterungen.
 > * Die Teams-Plattform unterstützt v1.3 oder frühere Features von Adaptiven Karten für andere Funktionen, z. B. von Benutzern gesendeten Karten (suchbasierte Messaging-Erweiterungen und Verbreitung von Links), Registerkarten und Aufgabenmodule.
 > * Das Formatieren positiver oder destruktiver Aktionen wird in Adaptiven Karten auf der Teams-Plattform nicht unterstützt.
@@ -297,7 +298,7 @@ Die folgende Tabelle enthält die Eigenschaften einer Hero-Karte:
 | Untertitel | Rich-Text  | Untertitel der Karte. Maximal zwei Zeilen.|
 | text | Rich-Text  | Text wird unter dem Untertitel angezeigt. Formatierungsoptionen finden Sie unter [Kartenformatierung](~/task-modules-and-cards/cards/cards-format.md). |
 | Bilder | Anordnung von Bildern | Bild, das oben auf der Karte angezeigt wird. Seitenverhältnis 16:9. |
-| Schaltflächen | Anordnung von Aktionsobjekten | Aktionssatz, der für die aktuelle Karte gilt. Maximal sechs. |
+| Schaltflächen | Anordnung von Aktionsobjekten | Aktionssätze, die für die aktuelle Karte gelten. Das Maximum ist sechs. |
 | Tippen | Action-Objekt | Wird aktiviert, wenn der Benutzer auf die Karte selbst tippt. |
 
 ### <a name="example-of-a-hero-card"></a>Beispiel für eine Hero-Karte
@@ -362,7 +363,7 @@ Die folgende Tabelle enthält die Eigenschaften einer Listenkarte:
 | --- | --- | --- |
 | title | Rich-Text  | Titel der Karte. Maximal 2 Zeilen.|
 | items | Anordnung von Listenelementen | Satz von Elementen, die auf die Karte anwendbar sind.|
-| Schaltflächen | Anordnung von Aktionsobjekten | Aktionssatz, der für die aktuelle Karte gilt. Maximal 6. |
+| Schaltflächen | Anordnung von Aktionsobjekten | Aktionssätze, die für die aktuelle Karte gelten. Das Maximum ist 6. |
 
 ### <a name="example-of-a-list-card"></a>Beispiel für eine Listenkarte
 
@@ -447,7 +448,7 @@ Die folgende Tabelle enthält die Eigenschaften der Office 365-Connectorkarte:
 
 Office 365-Connectorkarten funktionieren ordnungsgemäß in Microsoft Teams, einschließlich [`ActionCard`Aktionen](/outlook/actionable-messages/card-reference#actioncard-action).
 
-Der wichtige Unterschied zwischen der Verwendung von Connectorkarten von einem Connector und der Verwendung von Connectorkarten in Ihrem Bot besteht in der Verarbeitung von Kartenaktionen. In der folgenden Tabelle sind die Unterschiede aufgeführt:
+Der wichtige Unterschied zwischen der Verwendung von Connectorkarten von einem Connector und der Verwendung von Connectorkarten in Ihrem Bot besteht in der Verarbeitung von Kartenaktionen. Die Unterschiede sind in der folgenden Tabelle aufgelistet:
 
 | Connector | Bot |
 | --- | --- |
@@ -659,7 +660,7 @@ Die folgende Tabelle enthält die Eigenschaften einer Miniaturansichtskarte:
 | Untertitel | Rich-Text  | Untertitel der Karte. Maximal 2 Zeilen.|
 | text | Rich-Text  | Text wird unter dem Untertitel angezeigt. Formatierungsoptionen finden Sie unter [Kartenformatierung](~/task-modules-and-cards/cards/cards-format.md). |
 | Bilder | Anordnung von Bildern | Bild, das oben auf der Karte angezeigt wird. Seitenverhältnis 1:1 quadratisch. |
-| Schaltflächen | Anordnung von Aktionsobjekten | Aktionssatz, der für die aktuelle Karte gilt. Maximal 6. |
+| Schaltflächen | Anordnung von Aktionsobjekten | Aktionssätze, die für die aktuelle Karte gelten. Das Maximum ist 6. |
 | Tippen | Action-Objekt | Wird aktiviert, wenn der Benutzer auf die Karte selbst tippt. |
 
 ### <a name="example-of-a-thumbnail-card"></a>Beispiel für eine Miniaturansichtskarte
