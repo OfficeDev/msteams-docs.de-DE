@@ -3,12 +3,12 @@ title: Verpacken Ihrer App
 description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App zum Testen, Hochladen und Veröffentlichen im Store verpacken.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: f3f725280e24296f1f2d9c919a14585e07d86c75
-ms.sourcegitcommit: 6e33289c55a1a83adb9b7b38c42d781c699786f7
+ms.openlocfilehash: 7b895f30230a71db5953ffebc5dce2aa04972abb
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62345391"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356070"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Erstellen eines Microsoft Teams-App-Pakets
 
@@ -25,13 +25,13 @@ Wenn ein Benutzer Ihre App in Teams installiert, wird ein App-Paket installiert,
 
 ## <a name="app-manifest"></a>App-Manifest
 
-Ihre App-Manifestdatei muss sich auf der obersten Ebene des Pakets befinden und den Namen `manifest.json` aufweisen. 
+Ihre App-Manifestdatei muss sich auf der obersten Ebene des Pakets befinden und den Namen `manifest.json` aufweisen.
 
 Stellen Sie beim Veröffentlichen im Microsoft Teams-Store sicher, dass Ihr Manifest auf das neueste [Schema](~/resources/schema/manifest-schema.md) verweist.
 
 ## <a name="app-icons"></a>App-Symbole
 
-Ihr App-Paket muss zwei PNG-Versionen Ihres App-Symbols enthalten: eine Farb- und eine Konturversion.
+Ihr App-Paket muss zwei .png-Versionen Ihres App-Symbols enthalten: eine Farb- und eine Konturversion.
 
 > [!Note]
 > Wenn Ihre App über eine Bot- oder Messaging-Erweiterung verfügt, werden Ihre Symbole auch in Ihre Microsoft Azure Bot Service-Registrierung einbezogen.

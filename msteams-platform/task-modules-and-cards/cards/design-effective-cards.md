@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie adaptive Karten für Teams entwerfen und das 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 86b5bdea89f49f6e98ce84920e3fbe1cdb4f378e
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 6d908c47585c44718e25ec92dc8e06bff0ef5c9e
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948642"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398624"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Entwerfen adaptiver Karten für Ihre Microsoft Teams-App
 
@@ -188,15 +188,15 @@ Karten, die für eine schmale Bildschirmskalierung auf breiteren Bildschirmen ko
 Dient [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) zum Formatieren des Karteninhalts in eine Tabelle oder ein Raster. Es gibt mehrere Optionen zum Formatieren der Spaltenbreite. Diese Richtlinien helfen Ihnen zu verstehen, wann sie jeweils verwendet werden.
 
 * `"width": "auto"`: Passt die Größe jeder Spalte in der `ColumnSet` Anpassung an den App-Inhalt an, den Sie in diese Spalte einschließen.
-   * **Do:** Verwenden Sie dies, wenn Sie Inhalte mit unterschiedlicher Breite haben und eine bestimmte Spalte nicht priorisieren müssen.
-   * **Do**: Für jede `TextBlock`, legen Sie `"wrap": true` fest, da Text standardmäßig nicht umbrochen wird.
-   * **Don‘t**: Legen Sie `"width": "auto"` für jeden Spaltencontainer fest. Wenn Sie beispielsweise eine Eingabe und eine Schaltfläche nebeneinander haben, wird die Schaltfläche möglicherweise auf einigen Bildschirmen abgeschnitten. Legen Sie stattdessen `auto` für die Spalte mit Schaltflächen und anderen Inhalten fest, die immer vollständig sichtbar sein müssen.
+  * **Do:** Verwenden Sie dies, wenn Sie Inhalte mit unterschiedlicher Breite haben und eine bestimmte Spalte nicht priorisieren müssen.
+  * **Do**: Für jede `TextBlock`, legen Sie `"wrap": true` fest, da Text standardmäßig nicht umbrochen wird.
+  * **Don‘t**: Legen Sie `"width": "auto"` für jeden Spaltencontainer fest. Wenn Sie beispielsweise eine Eingabe und eine Schaltfläche nebeneinander haben, wird die Schaltfläche möglicherweise auf einigen Bildschirmen abgeschnitten. Legen Sie stattdessen `auto` für die Spalte mit Schaltflächen und anderen Inhalten fest, die immer vollständig sichtbar sein müssen.
 * `"width": "stretch"`: Ändert die Spaltengröße basierend auf der verfügbaren `ColumnSet`-Breite. Wenn mehrere Spalten den `"stretch"`-Wert verwenden, teilen sie sich gleichermaßen die verfügbare Breite.
-   * **Do**: Verwenden Sie eine Spalte, wenn alle anderen Spalten eine statische Breite haben. Beispielsweise haben Sie Miniaturbilder in einer Spalte, die alle 50 Pixel breit sind.
-* `"width": "<number>"`: Ändert die Größe von Spalten mit einem Anteil der verfügbaren `ColumnSet`-Breite. Wenn Sie beispielsweise drei Spalten mit `"width": "1"`, `"width": "4"` und `"width": "5"`festlegen, nehmen die Spalten 10, 40 und 50 Prozent der verfügbaren Breite in Anspruch.
+  * **Do**: Verwenden Sie eine Spalte, wenn alle anderen Spalten eine statische Breite haben. Beispielsweise haben Sie Miniaturbilder in einer Spalte, die alle 50 Pixel breit sind.
+* `"width": "<number>"`: Passt die Spaltengröße im Verhältnis zur verfügbaren Breite von `ColumnSet` an. Wenn Sie beispielsweise drei Spalten mit `"width": "1"`, `"width": "4"` und `"width": "5"` festlegen, nehmen die Spalten 10, 40 und 50 Prozent der verfügbaren Breite in Anspruch.
 * `"width": "<number>px"`: Passt die Spaltengröße auf eine bestimmte Pixelbreite an. Dieser Ansatz ist beim Erstellen von Tabellen nützlich.
-   * **Do**: Verwenden Sie diese Einstellung, wenn sich die Breite der Anzeige nicht ändern muss (z. B. Zahlen und Prozentsätze).
-   * **Don‘t**: Versehentlich die Breite der Anzeige der Karte überschreiten. Beachten Sie, dass die verfügbare Bildschirmbreite vom Gerät abhängt. Teams Mobile unterstützt auch kein horizontales Scrollen wie Teams Desktop.
+  * **Do**: Verwenden Sie diese Einstellung, wenn sich die Breite der Anzeige nicht ändern muss (z. B. Zahlen und Prozentsätze).
+  * **Don‘t**: Versehentlich die Breite der Anzeige der Karte überschreiten. Beachten Sie, dass die verfügbare Bildschirmbreite vom Gerät abhängt. Teams Mobile unterstützt auch kein horizontales Scrollen wie Teams Desktop.
 
 #### <a name="example-knowing-when-to-stretch-columns"></a>Beispiel: Wissen, wann Spalten gestreckt werden sollen
 
@@ -647,9 +647,9 @@ Befolgen Sie diese Richtlinien, wenn Sie Bilder in Ihre Karten einschließen.
 * **Do**: Wenn Sie die genaue Größe Ihrer Bilder steuern müssen, verwenden Sie die Eigenschaften "`width`" und "`height`".
 * **Don‘t**: Fügen Sie die Auffüllung in Ihre Bilder ein. Dies führt in der Regel zu unerwünschten Abständen und Layoutproblemen.
 * In Bezug auf die Hintergrundfarbe:
-   * **Do**: Verwenden Sie transparente Hintergründe, damit sich Ihre Bilder an jedes Teams-Design anpassen. 
-   * **Don‘t**: Fügen Sie eine feste Hintergrundfarbe ein, es sei denn, eine bestimmte Farbe muss für Ihre Benutzer sichtbar sein.
-   * **Don‘t**: Fügen Sie einer "`TextBlock`" eine Hintergrundfarbe hinzu, die die Lesbarkeit beeinträchtigt. Wenn Ihr Hintergrund z. B. dunkel ist, verwenden Sie eine hellere Textfarbe und umgekehrt.
+  * **Do**: Verwenden Sie transparente Hintergründe, damit sich Ihre Bilder an jedes Teams-Design anpassen.
+  * **Don‘t**: Fügen Sie eine feste Hintergrundfarbe ein, es sei denn, eine bestimmte Farbe muss für Ihre Benutzer sichtbar sein.
+  * **Don‘t**: Fügen Sie einer "`TextBlock`" eine Hintergrundfarbe hinzu, die die Lesbarkeit beeinträchtigt. Wenn Ihr Hintergrund z. B. dunkel ist, verwenden Sie eine hellere Textfarbe und umgekehrt.
 
 ### <a name="actions"></a>Aktionen
 
