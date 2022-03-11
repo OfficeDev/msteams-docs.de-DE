@@ -5,12 +5,12 @@ description: 'Fragen, die Sie bei der Planung Ihrer App berücksichtigen sollten
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 8b8f60909f6e88caea46e38b21735cf2851036ed
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 5fdce83ed954c3751f34d7680b4400092c7531a3
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898190"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399317"
 ---
 # <a name="teams-app-planning-checklist"></a>Prüfliste für die Teams App-Planung
 
@@ -34,7 +34,7 @@ Hier ist eine Checkliste mit Fragen, die Sie bei der Planung Ihrer App berücksi
 | 3 | Verwenden sie Teams und Kanäle oder hauptsächlich Gruppenchats? |
 | 4 | Wie technisch versiert sind Ihre Hauptnutzer? |
 | 5 | Benötigen Sie ein umfassendes Onboarding-Erlebnis oder reichen ein paar Hinweise aus? |
-|
+
 </details>
 <br>
 <details>
@@ -45,7 +45,7 @@ Hier ist eine Checkliste mit Fragen, die Sie bei der Planung Ihrer App berücksi
 | 1 | Welche Vor- und Nachteile hat das derzeitige System, das von Ihren Nutzern verwendet wird? |
 | 2 | Welche Probleme haben Ihre Nutzer, die Sie beheben möchten? |
 | 3 | Welche Funktionen oder Möglichkeiten schätzen Ihre Nutzer bei ihrer derzeitigen Arbeitsweise? |
-|
+
 </details>
 <br>
 <details>
@@ -57,7 +57,7 @@ Hier ist eine Checkliste mit Fragen, die Sie bei der Planung Ihrer App berücksi
 | 2 | Wer ist Eigentümer der Backend-Daten – intern oder Drittanbieter? |
 | 3 | Gibt es Firewalls, die sich auf die Funktionsweise der App auswirken? |
 | 4 | Gibt es APIs für den Zugriff auf die Daten, die Sie für die Funktion Ihrer App benötigen? |
-|
+
 </details>
 <br>
 <details>
@@ -69,7 +69,7 @@ Hier ist eine Checkliste mit Fragen, die Sie bei der Planung Ihrer App berücksi
 | 2 | Sind personenbezogene Informationen betroffen? |
 | 3 | Basieren die Interaktionen auch auf den Nutzerrollen? |
 | 4 | Greifen externe Nutzer auf die App zu? |
-|
+
 </details>
 <br>
 <details>
@@ -81,7 +81,7 @@ Hier ist eine Checkliste mit Fragen, die Sie bei der Planung Ihrer App berücksi
 | 2 | Wenn Sie Karten mit einer Messaging-Erweiterung austauschen, ist es dann sinnvoll, einen kleinen Link zu einer Seite mit weiteren Informationen hinzuzufügen, um den Nutzern zu zeigen, was Ihre App sonst noch kann? |
 | 3 | Erwarten Sie, dass die meisten Personen bereits einen gewissen Kontext haben, für den Ihre App gedacht ist, oder dass sie Ihre Dienste bereits in einem anderen Kontext genutzt haben? |
 | 4 | Kommen sie ohne Vorkenntnisse zu Ihrer App? |
-|
+
 </details>
 <br>
 <details>
@@ -92,7 +92,7 @@ Hier ist eine Checkliste mit Fragen, die Sie bei der Planung Ihrer App berücksi
 | 1 | Gibt es 1:1-Interaktionen mit der App, die aus Datenschutz- oder anderen Gründen erforderlich sind? Beispielsweise das Überprüfen des Restguthabens oder anderer privater Informationen. |
 | 2 | Gibt es eine Zusammenarbeit zwischen Nutzern, die möglicherweise keine gemeinsamen Teams haben? Beispiel: Suchen nach bevorstehenden organisationsweiten Ereignissen in einem Unternehmen. |
 | 3 | Gibt es personalisierte Benachrichtigungen oder Nachrichten, die während der Nutzung der Teams-App an den Nutzer gesendet werden müssen? |
-|
+
 </details>
 <br>
 <details>
@@ -100,10 +100,10 @@ Hier ist eine Checkliste mit Fragen, die Sie bei der Planung Ihrer App berücksi
 
 | # | Erwägen Sie... |
 | --- | --- |
-| 1 | Sind die Informationen, die von der App auf der Registerkarte oder über einen Bot angezeigt werden, für die meisten Mitglieder eines Teams relevant und nützlich? Beispiel: Die App „Scrum“. |
+| 1 | Sind die informationen, die von der App auf der Registerkarte oder über einen Bot angezeigt werden, für die meisten Mitglieder eines Teams relevant und nützlich? Beispiel: Scrum-App. |
 | 2 | Kann sich der Appkontext ändern, je nachdem, in welchem Team diese hinzugefügt wird? Aufgaben der Planer unterscheiden sich beispielsweise in verschiedenen Teams. |
-| 3 | Ist es möglich, dass alle Mitglieder einer Persona, die zusammenarbeiten müssen, Teil eines einzigen Teams sind? Beispielsweise Agenten, die an einem Ticket arbeiten. |
-|
+| 3 | Ist es möglich, dass alle Mitglieder einer Persona, die zusammenarbeiten müssen, Teil eines einzelnen Teams sind? Beispielsweise Mitarbeiter, die an einem Ticket arbeiten. |
+
 </details>
 <br>
 <details>

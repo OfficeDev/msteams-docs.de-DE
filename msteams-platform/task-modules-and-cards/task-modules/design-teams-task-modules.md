@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Aufgabenmodule für Teams-Apps entwerfen und 
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 1cf22c8ff94e5d1a6132bd382395067d3623b4bf
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 460e9b4d51949ccc5e1a4cafb48c30eba60b4262
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475636"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355968"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Entwerfen von Aufgabenmodulen für Ihre Microsoft Teams-App
 
@@ -37,7 +37,7 @@ Aufgabenmodule können von fast überall in Ihrer App gestartet werden.
 
 ## <a name="anatomy"></a>Anatomie
 
-Aufgabenmodule bieten eine flexible Oberfläche für gehostete App-Erfahrungen. Sie werden mithilfe eines iFrame (Desktop) oder einer WebView (Mobilgerät) erstellt, sodass Sie Aufgabenmodule mit unseren Benutzeroberflächenvorlagen (empfohlen) oder von Grund auf neu entwerfen können.
+Aufgabenmodule bieten eine flexible Oberfläche für gehostete App-Umgebungen. Sie werden mithilfe eines IFrames (Desktop) oder einer Webansicht (mobil) erstellt, sodass Sie Aufgabenmodule mit unseren Benutzeroberflächenvorlagen (empfohlen) oder von Grund auf neu entwerfen können.
 
 Sie können auch mit dem Framework für [Adaptive Karten](../../task-modules-and-cards/cards/design-effective-cards.md) erstellt werden. Dies kann eine einfachere und schnellere Möglichkeit sein, häufige Szenarien (z. B. Formulare) zu vereinfachen.
 
@@ -64,14 +64,14 @@ Sie können auch mit dem Framework für [Adaptive Karten](../../task-modules-and
 |3|**Kopfzeile**: Erstellen Sie Ihre Kopfzeilen klar und präzise. Beschreiben Sie die Aufgabe, die Benutzer ausführen sollen.
 |4|**Schaltfläche „Schließen“**: Schließt das Aufgabenmodul. Wendet keine ungespeicherten Änderungen in App-Inhalten an.|
 |5|**iFrame**: Reaktionsfähiger Bereich, der Ihre App-Inhalte hostet.|
-|6|**Aktionen (optional)**: Schaltflächen im Zusammenhang mit Ihren App-Inhalten.|
+|6 |**Aktionen (optional)**: Schaltflächen im Zusammenhang mit Ihren App-Inhalten.|
 
 ## <a name="designing-with-ui-templates"></a>Entwerfen mit Benutzeroberflächenvorlagen
 
-Erwägen Sie die Verwendung von Vorlagen für allgemeine Layouts innerhalb Ihrer Aufgabenmodule. Jede besteht aus kleineren Komponenten, um ein elegantes, reaktionsfähiges Design zu erstellen, das sofort verwendet oder für Ihr Szenario oder das Look & Feel Ihrer Marke angepasst werden kann.
+Erwägen Sie die Verwendung von Vorlagen für allgemeine Layouts in Ihren Aufgabenmodulen. Sie werden mithilfe eines iFrame (Desktop) oder einer WebView (Mobilgerät) erstellt, sodass Sie Aufgabenmodule mit unseren Benutzeroberflächenvorlagen (empfohlen) oder von Grund auf neu entwerfen können.
 
-* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem durchsuchbaren Format anzeigen und es Benutzern ermöglichen, Aktionen für eine ganze Liste oder einzelne Elemente auszuführen.
-* [Formular](../../concepts/design/design-teams-app-ui-templates.md#form): Formulare dienen zum Sammeln, Überprüfen und Übermitteln von Benutzereingaben auf strukturierte Weise.
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem übersichtlichen Format anzeigen und Benutzern ermöglichen, Aktionen für eine gesamte Liste oder einzelne Elemente auszuführen.
+* [Formular](../../concepts/design/design-teams-app-ui-templates.md#form): Formulare dienen zum strukturierten Sammeln, Überprüfen und Übermitteln von Benutzereingaben.
 * [Leerer Status](../../concepts/design/design-teams-app-ui-templates.md#empty-state): Die Vorlage „leerer Status“ kann für viele Szenarien verwendet werden, z. B. für die Anmeldung, die Erfahrung beim ersten Ausführen, Fehlermeldungen und vieles mehr.
 
 ## <a name="examples"></a>Beispiele
@@ -98,7 +98,7 @@ Aufgabenmodule eignen sich hervorragend zum Anzeigen von Formularen mit sequenzi
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/task-module/form.png" alt-text="Beispielformular in einem Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="Beispielformular in einem Aufgabenmodul." border="false":::
 
 ### <a name="sign-in"></a>Anmelden
 
