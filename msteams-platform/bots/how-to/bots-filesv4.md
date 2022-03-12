@@ -1,16 +1,16 @@
 ---
 title: Senden und Empfangen von Dateien über den Bot
-description: Erfahren Sie, wie Sie Dateien über den Bot senden und empfangen, Graph-APIs für alle Teams Bereiche verwenden und Teams Bot-APIs mit Codebeispielen und Beispielen verwenden.
+description: Erfahren Sie, wie Sie Dateien über den Bot senden und empfangen, Graph APIs für alle Teams Bereiche verwenden und Teams Bot-APIs mit Codebeispielen und Beispielen verwenden.
 keywords: Teams-Bots senden Empfangen von Dateien
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: ec77aeff3771efd648b77215ca2eb53a4bcad8e9
-ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
+ms.openlocfilehash: 0a7b98cb3e9070dc0b5c9df998c7457fabd3538e
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "62801355"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452844"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Senden und Empfangen von Dateien über den Bot
 
@@ -28,14 +28,14 @@ Es gibt zwei Möglichkeiten, Dateien an einen Bot zu senden und von einem Bot zu
 
 ## <a name="use-the-graph-apis"></a>Verwenden der Graph-APIs
 
-Posten Sie Nachrichten mit Kartenanlagen, die auf vorhandene SharePoint-Dateien verweisen, mithilfe der Graph-APIs für [OneDrive und SharePoint](/onedrive/developer/rest-api/). Um die Graph-APIs zu verwenden, erhalten Sie Über den standardmäßigen OAuth 2.0-Autorisierungsfluss Zugriff auf eine der folgenden Optionen:
+Veröffentlichen Sie Nachrichten mit Kartenanlagen, die auf vorhandene SharePoint-Dateien verweisen, mithilfe der Graph-APIs für [OneDrive und SharePoint](/onedrive/developer/rest-api/). Um die Graph-APIs zu verwenden, erhalten Sie Über den standardmäßigen OAuth 2.0-Autorisierungsfluss Zugriff auf eine der folgenden Optionen:
 
 * Der OneDrive Ordner eines Benutzers für `personal` und `groupchat` dateien.
 * Die Dateien im Kanal eines Teams für `channel` Dateien.
 
 Graph APIs funktionieren in allen Teams Bereichen. Weitere Informationen finden Sie unter ["Senden von Anlagen für Chatnachrichtendateien"](/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-4-file-attachments&preserve-view=true).
 
-Alternativ können Sie Dateien mithilfe der Teams-Bot-APIs an einen Bot senden und von einem Bot empfangen.
+Alternativ können Sie Dateien mithilfe der Teams Bot-APIs an einen Bot senden und von einem Bot empfangen.
 
 ## <a name="use-the-teams-bot-apis"></a>Verwenden der Teams-Bot-APIs
 
@@ -80,15 +80,15 @@ In der folgenden Tabelle werden die Inhaltseigenschaften der Anlage beschrieben:
 
 | Eigenschaft | Zweck |
 | --- | --- |
-| `downloadUrl` | OneDrive URL zum Abrufen des Dateiinhalts. Der Benutzer kann eine `HTTP GET` direkt von dieser URL aus ausgeben. |
+| `downloadUrl` | OneDrive URL zum Abrufen des Inhalts der Datei. Der Benutzer kann eine `HTTP GET` direkt von dieser URL aus ausgeben. |
 | `uniqueId` | Eindeutige Datei-ID. Dies ist die OneDrive Laufwerkelement-ID, falls der Benutzer eine Datei an den Bot sendet. |
 | `fileType` | Dateityp, z. B. .pdf oder .docx. |
 
 Als bewährte Methode sollten Sie den Dateiupload bestätigen, indem Sie eine Nachricht zurück an den Benutzer senden.
 
-### <a name="upload-files-to-personal-chat"></a>Hochladen von Dateien zu persönlichen Chats
+### <a name="upload-files-to-personal-chat"></a>Hochladen von Dateien in persönlichen Chat
 
-**So laden Sie eine Datei an einen Benutzer hoch**
+So laden Sie eine Datei an einen Benutzer hoch:
 
 1. Senden Sie eine Nachricht an den Benutzer, der die Berechtigung zum Schreiben der Datei anfordert. Diese Nachricht muss eine `FileConsentCard` Anlage mit dem Namen der hochzuladenden Datei enthalten.
 2. Wenn der Benutzer den Dateidownload akzeptiert, empfängt der Bot eine Aufrufaktivität mit einer Speicherort-URL.
@@ -127,7 +127,7 @@ In der folgenden Tabelle werden die Inhaltseigenschaften der Anlage beschrieben:
 | Eigenschaft | Zweck |
 | --- | --- |
 | `description` | Beschreibt den Zweck der Datei oder fasst den Inhalt zusammen. |
-| `sizeInBytes` | Stellt dem Benutzer eine Schätzung der Dateigröße und des Speicherplatzes bereit, den er in OneDrive benötigt. |
+| `sizeInBytes` | Stellt dem Benutzer eine Schätzung der Dateigröße und des Speicherplatzes bereit, der in OneDrive benötigt wird. |
 | `acceptContext` | Zusätzlicher Kontext, der automatisch an den Bot übertragen wird, wenn der Benutzer die Datei akzeptiert. |
 | `declineContext` | Zusätzlicher Kontext, der im Hintergrund an den Bot übertragen wird, wenn der Benutzer die Datei ablehnt. |
 

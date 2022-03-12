@@ -4,17 +4,16 @@ description: Glossar für Microsoft Teams-Entwicklerdokumentation
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams-Entwicklerdefinition
-ms.openlocfilehash: af5d713076419c016b65983e4876f52803d8d1fe
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: eab4779a862aa9a3e5183d52977fa012b1fc254f
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398707"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452746"
 ---
 # <a name="glossary"></a>Glossar
 
 Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation verwendet werden.
-
 
 ## <a name="a"></a>Ein
 

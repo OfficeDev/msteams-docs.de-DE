@@ -6,12 +6,12 @@ keywords: Beispielbeispiele für Microsoft Teams Vorlagen
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: e5821894793ae99ae559ebedba068331a48b1aed
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 961ad0ff22a528dc1267023d4f4ff288ba7202ca
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398743"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453138"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -111,7 +111,8 @@ Das Onboarding neuer Mitarbeiter ist eine integrierte Microsoft Teams und [Share
 Codebeispiele für App-Vorlagen sind eine Sammlung von Beispiel-Apps für Microsoft Teams Plattformfunktionen.
 
 > [!NOTE]
-> Microsoft verwaltet den Quellcode nicht aktiv. Der vollständige Quellcode ist Open Source, und Sie können den Quellcode erkunden, verzweigen und ändern, um Ihre spezifischen Anforderungen zu erfüllen.
+> * Microsoft verwaltet den Quellcode nicht aktiv. Der vollständige Quellcode ist Open Source, und Sie können den Quellcode erkunden, verzweigen und ändern, um Ihre spezifischen Anforderungen zu erfüllen.
+> * Sie dürfen Microsoft Power Platform nicht zum Erstellen von Apps verwenden, die im Teams App Store veröffentlicht werden sollen. Microsoft Power Platform-Apps können nur im App Store einer Organisation veröffentlicht werden.
 
 In der folgenden Tabelle werden Codebeispiele für App-Vorlagen beschrieben:  
 

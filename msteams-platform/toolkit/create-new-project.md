@@ -6,34 +6,34 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 0f723edb3cc890ef0668dbd3b8f87648935e20c3
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: bac67621e14d12b61b04eac3ec24c90cb3057a79
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435677"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452557"
 ---
 # <a name="create-new-teams-project-using-teams-toolkit"></a>Erstellen eines neuen Teams Projekts mit Teams Toolkit
 
-Um neue Teams Projekt mit Teams Toolkit zu erstellen, wählen Sie **"Erstellen eines neuen Teams App-Projekts**" oder **"Start" aus einem Beispiel aus**.
+Um neue Teams Projekt mit Teams Toolkit zu erstellen, wählen Sie **"Erstellen eines neuen Teams-App-Projekts**" oder **"Start" aus einem Beispiel aus**.
 
 ## <a name="create-new-project"></a>Erstellen eines neuen Projekts
 
 Die folgenden Handbücher helfen Ihnen beim Erstellen eines neuen Teams App-Projekts mit Teams Toolkit:
 
-- [Erstellen einer neuen Teams-Registerkarten-App (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
-- [Erstellen einer neuen Teams Bot-App](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
-- [Erstellen einer neuen Nachrichtenerweiterungs-App](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6&branch)
-- [Erstellen einer neuen Teams-Registerkarten-App (SharePoint-Framework)](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
+* [Erstellen einer neuen Teams-Registerkarten-App (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
+* [Erstellen einer neuen Teams Bot-App](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
+* [Erstellen einer neuen Nachrichtenerweiterungs-App](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6&branch)
+* [Erstellen einer neuen Teams-Registerkarten-App (SharePoint-Framework)](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
 
 ## <a name="create-from-samples"></a>Erstellen anhand von Beispielen
 
  Sie können ein neues Projekt aus dem **Beispielkatalog** erstellen. Wählen Sie das erforderliche Beispiel zum Erstellen von Apps aus. Die folgenden Schritte führen Sie zum Erstellen von Apps anhand von Beispielen:
 
- 1. Öffnen Sie **Teams Toolkit** aus Microsoft Visual Studio Code.
+ 1. Öffnen **Sie Teams Toolkit** aus Microsoft Visual Studio Code.
  1. Wählen Sie den Abschnitt **"ENTWICKLUNG** " in der Strukturansicht aus.
  1. Wählen Sie **Beispiele anzeigen aus**. Der Beispielkatalog wird wie in der folgenden Abbildung dargestellt angezeigt:
-   
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/view samples.png" alt-text="Proben":::
 
 Sie können Beispiele erkunden und herunterladen und Apps entweder lokal oder remote ausführen, um eine Vorschau in Teams Webclient anzuzeigen. Folgen Sie den Anweisungen der einzelnen Beispiele, oder durchsuchen Sie den Quellcode von Beispielen, indem Sie **"Ansicht" auf GitHub** auswählen, um auf das Open Source-Repository für Beispiele zuzugreifen.

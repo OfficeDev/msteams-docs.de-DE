@@ -4,16 +4,16 @@ description: Beschreibt, wie Die Standardinstallationsoptionen und die Standardf
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: ad59f6645e0d302e973647f9ff63b2898362f6ee
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: a6857e549c688bd7078aeaceae4b9f5a885ae2c3
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889090"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453208"
 ---
 # <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>Konfigurieren der Standardinstallationsoptionen für Ihre Microsoft Teams-App
 
-Es ist üblich, dass eine App mehrere Szenarien in Teams unterstützt, aber Sie haben sie möglicherweise mit einem bestimmten Bereich und einer bestimmten Funktion entworfen. Wenn Ihre App beispielsweise in erster Linie für die Verwendung im Team oder Kanal vorgesehen ist, können Sie sicherstellen, dass die erste Installationsoption, die Benutzern im Store angezeigt wird, **"Zu einem Team hinzufügen"** lautet.
+Es ist üblich, dass eine App mehrere Szenarien in Teams unterstützt, aber Sie haben sie möglicherweise mit einem bestimmten Bereich und einer bestimmten Funktion entworfen. Wenn Ihre App beispielsweise in erster Linie für die Verwendung im Team oder Kanal vorgesehen ist, können Sie sicherstellen, dass die erste Installationsoption, die Benutzern im Store angezeigt wird, **"Zu einem Team hinzufügen**" ist.
 
 :::row:::
    :::column span="2":::
@@ -31,17 +31,17 @@ Wenn die primäre Funktion Ihrer App ein Bot ist, können Sie den Bot auch als S
 
 Konfigurieren Sie den Standardinstallationsbereich für Ihre App. Sie können jeweils nur einen Bereich festlegen.
 
-**So konfigurieren Sie den Standardinstallationsbereich in Ihrem App-Manifest**
+So konfigurieren Sie den Standardinstallationsbereich in Ihrem App-Manifest:
 
 1. Öffnen Sie Das App-Manifest, und fügen Sie die `defaultInstallScope` Eigenschaft hinzu.
-2. Legen Sie den Standardmäßigen Installationsbereichswert als , `personal` `team` , oder `groupchat` `meetings` fest.
+2. Legen Sie den Standardmäßigen Installationsbereichswert als , `personal`, `team``groupchat`oder `meetings`fest.
 
     ```json
     "defaultInstallScope": "meetings",
     ```
 
 > [!NOTE]
-> Weitere Informationen finden Sie im [App-Manifestschema.](~/resources/schema/manifest-schema.md)
+> Weitere Informationen finden Sie im [App-Manifestschema](~/resources/schema/manifest-schema.md).
 
 ## <a name="configure-the-default-capability-for-shared-scopes"></a>Konfigurieren der Standardfunktion für freigegebene Bereiche
 
@@ -50,14 +50,14 @@ Konfigurieren Sie die Standardfunktion, wenn Ihre App für ein Team, eine Bespre
 > [!NOTE]
 > `defaultGroupCapability` stellt die Standardfunktion bereit, die dem Team, dem Gruppenchat oder der Besprechung hinzugefügt wird. Wählen Sie eine Registerkarte, einen Bot oder einen Connector als Standardfunktion für Ihre App aus. Sie müssen jedoch sicherstellen, dass Sie die ausgewählte Funktion in Ihrer App-Definition bereitgestellt haben.
 
-**So konfigurieren Sie Details im App-Manifest**
+So konfigurieren Sie Details im App-Manifest:
 
 1. Öffnen Sie Ihr App-Manifest, und fügen Sie die `defaultGroupCapability` Eigenschaft hinzu.
-2. Legen Sie den Wert `team` , `groupchat` or `meetings` fest.
-3. Für die ausgewählte Gruppenfunktion sind die verfügbaren Gruppenfunktionen `bot` , `tab` oder `connector` . 
+2. Legen Sie den Wert `team`, `groupchat`or fest `meetings`.
+3. Für die ausgewählte Gruppenfunktion sind die verfügbaren Gruppenfunktionen , `bot``tab`oder `connector`.
 
     > [!NOTE]
-    > Sie können nur eine Standardfunktion `bot` oder für die ausgewählte `tab` `connector` Gruppenfunktion auswählen.
+    > Sie können nur eine Standardfunktion `bot``tab`oder `connector` für die ausgewählte Gruppenfunktion auswählen.
 
     ```json
     "defaultGroupCapability": {
@@ -68,7 +68,7 @@ Konfigurieren Sie die Standardfunktion, wenn Ihre App für ein Team, eine Bespre
     ```
 
 > [!NOTE]
-> Weitere Informationen finden Sie im [App-Manifestschema.](~/resources/schema/manifest-schema.md)
+> Weitere Informationen finden Sie im [App-Manifestschema](~/resources/schema/manifest-schema.md).
 
 ## <a name="next-step"></a>Nächster Schritt
 

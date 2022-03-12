@@ -3,12 +3,12 @@ title: Mit Universal-Aktionen für adaptive Karten arbeiten
 description: Erfahren Sie, wie Sie mit den universellen Aktionen für adaptive Karten arbeiten, einschließlich Schema für UniversalActions für adaptive Karten, Aktualisierungsmodell und Abwärtskompatibilität mithilfe von Codebeispielen.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a7160e1aa2dff6500335dc6b8557fcd94e836d8
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: c0893f5aaa9e454ab8a4091ce5b08c132c110746
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62080953"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452578"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Mit Universal-Aktionen für adaptive Karten arbeiten
 
@@ -72,7 +72,7 @@ Im Folgenden sind die Features von UserIds aufgeführt, die aktualisiert werden:
 
 * Die UserIds-Eigenschaft wird hinzugefügt, da Kanäle in Teams eine große Anzahl von Mitgliedern enthalten können. Wenn alle Mitglieder den Kanal gleichzeitig anzeigen, führt eine bedingungslose automatische Aktualisierung zu vielen gleichzeitigen Aufrufen des Bots. Die `userIds` Eigenschaft muss immer eingeschlossen werden, um zu identifizieren, welche Benutzer eine automatische Aktualisierung mit maximal *60 (60) Benutzer-MRIs* erhalten müssen.
 
-* Sie können Teams Benutzer-MRIs eines Unterhaltungsmitglieds abrufen. Weitere Informationen zum Hinzufügen der Liste "userIds" im Aktualisierungsbereich der adaptiven Karte finden Sie unter Abrufen der Teilnehmerliste oder des [Benutzerprofils.](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)
+* Sie können Teams Benutzer-MRIs eines Unterhaltungsmitglieds abrufen. Weitere Informationen zum Hinzufügen der Liste "userIds" im Abschnitt "Aktualisieren" der adaptiven Karte finden Sie unter [Abrufen der Teilnehmerliste oder des Benutzerprofils](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
 
  Mit dem folgenden Beispiel können Sie die MRI des Benutzers für Kanal-, Gruppen- oder 1:1-Chat abrufen:
 

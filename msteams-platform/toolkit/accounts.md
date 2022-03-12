@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 302cac17ae6905899e43a8768882f61f0a2b9056
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 9dbfa97b892f2234b53eb42b5d5764b8f6fd6e93
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518324"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452571"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Vorbereiten von Konten zum Erstellen Teams Apps
 
@@ -25,9 +25,9 @@ Wenn Sie über kein vorhandenes Microsoft 365 Konto mit einem gültigen Abonneme
 
 Wenn Sie Ihre App-bezogenen Ressourcen hosten oder auf Ressourcen in Azure zugreifen möchten, benötigen Sie ein Azure-Abonnement. Sie können [ein kostenloses Konto erstellen](https://azure.microsoft.com/free/) , bevor Sie beginnen.
 
-## <a name="join-microsoft-365-developer-program"></a>Teilnehmen am Microsoft 365-Entwicklerprogramm 
+## <a name="join-microsoft-365-developer-program"></a>Teilnehmen am Microsoft 365-Entwicklerprogramm
 
-Wenn Sie über kein Microsoft 365 Konto verfügen, müssen Sie sich für ein [Abonnement für ein Microsoft 365 Entwicklerprogramm](https://developer.microsoft.com/microsoft-365/dev-program) registrieren. Das Abonnement ist 90 Tage lang kostenlos und wird weiterhin verlängert, solange Sie es für Entwicklungsaktivitäten verwenden. Wenn Sie über ein Visual Studio Enterprise oder Professional Abonnement verfügen, enthalten beide Programme ein kostenloses Microsoft 365 [Entwicklerabonnement](https://aka.ms/MyVisualStudioBenefits). Es ist aktiv, solange Ihr Visual Studio Abonnement aktiv ist. Weitere Informationen finden Sie unter [Einrichten eines Microsoft 365 Entwicklerabonnements](https://developer.microsoft.com/microsoft-365/dev-program).
+Wenn Sie über kein Microsoft 365 Konto verfügen, müssen Sie sich für ein [Abonnement für ein Microsoft 365 Entwicklerprogramm](https://developer.microsoft.com/microsoft-365/dev-program) registrieren. Das Abonnement ist 90 Tage lang kostenlos und wird weiterhin verlängert, solange Sie es für Entwicklungsaktivitäten verwenden. Wenn Sie über ein Visual Studio Enterprise- oder Professional-Abonnement verfügen, enthalten beide Programme ein kostenloses Microsoft 365 [Entwicklerabonnement](https://aka.ms/MyVisualStudioBenefits). Es ist aktiv, solange Ihr Visual Studio Abonnement aktiv ist. Weitere Informationen finden Sie unter [Einrichten eines Microsoft 365 Entwicklerabonnements](https://developer.microsoft.com/microsoft-365/dev-program).
 
 1. Wechseln Sie zum [Microsoft 365-Entwicklerprogramm](https://developer.microsoft.com/microsoft-365/dev-program).
 2. Wählen Sie **"Jetzt beitreten" aus**.
@@ -40,17 +40,17 @@ Wenn Sie über kein Microsoft 365 Konto verfügen, müssen Sie sich für ein [Ab
 
 Sie können sich mit einem der folgenden Kontotypen für das Entwicklerprogramm registrieren:
 
-- **Microsoft-Konto für die persönliche Verwendung** 
+* **Microsoft-Konto für die persönliche Verwendung**
 
-  Bietet Zugriff auf alle kundenorientierten Microsoft-Produkte und Clouddienste, z. B. Outlook, Messenger, OneDrive, MSN, Xbox Live oder Microsoft 365. Durch Registrieren für ein Outlook.com-Postfach wird automatisch ein Microsoft-Konto erstellt. Nachdem ein Microsoft-Konto erstellt wurde, kann es verwendet werden, um auf Microsoft Cloud-Dienste oder Azure für Verbraucher zuzugreifen.
+  Bietet Zugriff auf alle verbraucherorientierten Microsoft-Produkte und Clouddienste, z. B. Outlook, Messenger, OneDrive, MSN, Xbox Live oder Microsoft 365. Durch Registrieren für ein Outlook.com-Postfach wird automatisch ein Microsoft-Konto erstellt. Nachdem ein Microsoft-Konto erstellt wurde, kann es verwendet werden, um auf Microsoft Cloud-Dienste oder Azure für Verbraucher zuzugreifen.
 
-- **Geschäftskonto**
+* **Geschäftskonto**
 
-  Bietet Zugriff auf alle kleinen, mittleren und geschäftlichen Microsoft-Clouddienste, z. B. Azure, Microsoft Intune oder Microsoft 365. Wenn Sie sich bei einem dieser Dienste als Organisation registrieren, wird automatisch ein cloudbasiertes Verzeichnis in Microsoft Azure Active Directory (Azure AD) bereitgestellt, um Ihre Organisation darzustellen.
+  Bietet Zugriff auf alle kleinen, mittleren und geschäftlichen Microsoft-Clouddienste auf Unternehmensebene, z. B. Azure, Microsoft Intune oder Microsoft 365. Wenn Sie sich bei einem dieser Dienste als Organisation registrieren, wird automatisch ein cloudbasiertes Verzeichnis in Microsoft Azure Active Directory (Azure AD) bereitgestellt, um Ihre Organisation darzustellen.
 
-- **Visual Studio-ID**
+* **Visual Studio-ID**
 
-  Sie können für Ihre Visual Studio Professional- oder Enterprise-Abonnements erstellen . Es wird empfohlen, dass Sie diese Option verwenden, um am Entwicklerprogramm aus dem Visual Studio Katalog teilzunehmen, um die vorteile als Visual Studio-Abonnent in vollem Umfang zu nutzen.
+  Sie können für Ihre Visual Studio Professional oder Enterprise Abonnements erstellen . Es wird empfohlen, dass Sie diese Option verwenden, um am Entwicklerprogramm aus dem Visual Studio Katalog teilzunehmen, um die vorteile als Visual Studio-Abonnent in vollem Umfang zu nutzen.
 
 ## <a name="teams-customer-app-upload-or-sideload-permission"></a>Teams Berechtigung zum Hochladen oder Querladen von Kunden-Apps
 
@@ -104,14 +104,14 @@ Wenn **Hochladen einer benutzerdefinierten App-Option** nicht angezeigt wird, be
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="Umschalten":::
 
-5. Wählen Sie **Speichern**. 
+5. Wählen Sie **Speichern**.
 
 > [!Note]
 > Es kann bis zu 24 Stunden dauern, bis das Querladen aktiv ist. In der Zwischenzeit können Sie **upload für Ihren Mandanten** verwenden, um Ihre App zu testen. Informationen zum Hochladen der .zip-Paketdatei der App finden Sie unter ["Hochladen benutzerdefinierter Apps"](/microsoftteams/teams-app-setup-policies).
 
 Weitere Informationen finden Sie unter [Verwalten von benutzerdefinierten App-Richtlinien und -Einstellungen in Teams](/microsoftteams/teams-custom-app-policies-and-settings) und [Verwalten von App-Setuprichtlinien in Teams](/microsoftteams/teams-app-setup-policies).
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Siehe auch
 
 * [Erstellen eines neuen Teams Projekts](create-new-project.md)
 * [Bereitstellen von Cloudressourcen](provision.md)

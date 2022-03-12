@@ -5,12 +5,12 @@ description: Übersicht über die Tools und SDKs zum Erstellen Microsoft Teams B
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 9aef0786d643c80879700ed6c2d4b05ce7c2e09a
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 5a95159df887033bca339efd871261938aecb07d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398659"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453887"
 ---
 # <a name="bots-and-sdks"></a>Tools und SDKs
 
@@ -44,6 +44,9 @@ Das [Bot Framework](https://dev.botframework.com/) ist ein umfangreiches SDK, da
 ## <a name="bots-with-power-virtual-agents"></a>Bots mit Power Virtual Agents
 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) ist ein Chatbot-Dienst, der auf der Microsoft Power-Plattform und bot Framework basiert. Der Power Virtual Agent-Entwicklungsprozess verwendet einen geführten, codefreien und grafischen Schnittstellenansatz, der Es Ihren Teammitgliedern ermöglicht, einfach einen intelligenten virtuellen Agent zu erstellen und zu verwalten. Nachdem Sie Ihren Chatbot im [Power Virtual Agents-Portal](https://powervirtualagents.microsoft.com) erstellt haben, können Sie ihn ganz einfach [in Teams integrieren](how-to/add-power-virtual-agents-bot-to-teams.md). Weitere Informationen zu den ersten Schritten finden Sie [in Power Virtual Agents Dokumentation](/power-virtual-agents).
+
+>[!NOTE]
+>Sie dürfen Microsoft Power Platform nicht zum Erstellen von Apps verwenden, die im Teams App Store veröffentlicht werden sollen. Microsoft Power Platform-Apps können nur im App Store einer Organisation veröffentlicht werden.
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots mit Webhooks und Connectors
 
@@ -199,7 +202,7 @@ this.onMessage(async (context, next) => {
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Anrufe und Besprechungsbots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [Bots für Anrufe und Besprechungen](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [Bot-Unterhaltungen](~/bots/how-to/conversations/conversation-basics.md)
 * [Bot-Befehlsmenüs](~/bots/how-to/create-a-bot-commands-menu.md)
 * [Authentifizierungsfluss für Bots in Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)

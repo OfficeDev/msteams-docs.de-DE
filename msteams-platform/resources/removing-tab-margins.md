@@ -6,22 +6,22 @@ keywords: Registerkarte zum Entfernen des Abstands von Rändern
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 5540354405c87d829245dfb01629aa8f06a5e93d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7260c0baf6a33b69988d07cb6d0aef7f90b6c62f
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888076"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452837"
 ---
 # <a name="tab-margin-changes"></a>Änderungen am Registerkartenrand
 
 In diesem Dokument wird beschrieben, wie das Entfernen von Rändern um alle Registerkarten in Microsoft Teams die App-Erstellung verbessert. Dies ist eine Erweiterung, die in Microsoft Teams 2021 eingeführt wurde.
-Sie können Apps erstellen, die systemeigener für Teams aussehen, indem Sie die Ränder um alle Registerkarten entfernen. Registerkarten mit entfernten Rändern entsprechen Microsoft Teams [UI-Kit-Designs.](~/tabs/design/tabs.md) Die meisten Apps verfügen über ein verbessertes Aussehen ohne Ränder.
+Sie können Apps erstellen, die systemeigener für Teams aussehen, indem Sie die Ränder um alle Registerkarten entfernen. Registerkarten mit entfernten Rändern richten sich nach Microsoft Teams [UI-Kit-Designs](~/tabs/design/tabs.md). Die meisten Apps verfügen über ein verbessertes Aussehen ohne Ränder.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tabstopp und ohne Ränder" border="false":::
 
 > [!NOTE]
-> Dieses Feature gilt nicht für mobile Clients, da die in den mobilen Clients angezeigten Registerkarten keine Ränder aufweisen. 
+> Dieses Feature gilt nicht für mobile Clients, da die in den mobilen Clients angezeigten Registerkarten keine Ränder aufweisen.
 
 ## <a name="guidelines"></a>Anleitungen
 
@@ -44,9 +44,10 @@ Nein, Sie müssen Ihren eigenen Abstand oder Ränder links und rechts von allen 
 * Unten: 0px
 
 > [!IMPORTANT]
+>
 > * Alle Registerkarten haben ihre Ränder entfernt: persönliche Registerkarten, (Gruppen-)Chat-Registerkarten, Besprechungsregisterkarten und Kanalregisterkarten.
-> * Die Änderung des Registerkartenrands gilt für alle Registerkarten. Es gibt keine Möglichkeit, die Änderung abzumelden oder abzuwählen. 
-> * Die Änderung von Registerkartenrändern kann sich auf Registerkarten auswirken, die auf Microsoft Teams angewiesen sind, um Ränder zur Verfügung zu stellen, die ihre Benutzeroberfläche umgeben.
+> * Die Änderung des Registerkartenrands gilt für alle Registerkarten. Es gibt keine Möglichkeit, die Änderung abzumelden oder abzuwählen.
+> * Die Änderung von Registerkartenrändern kann sich auf Registerkarten auswirken, die auf Microsoft Teams angewiesen sind, um Ränder rund um die Benutzeroberfläche bereitzustellen.
 
 ## <a name="see-also"></a>Siehe auch
 

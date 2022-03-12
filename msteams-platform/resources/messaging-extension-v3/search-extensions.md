@@ -5,12 +5,12 @@ keywords: Messaging-Erweiterungen für Teams – Suche nach Messaging-Erweiterun
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: ecaa841e6f8870b7e7c9284535082c4ec08112f2
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: dca01a22d4479d1f7c59689c5321483371c4aff2
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443986"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453712"
 ---
 # <a name="search-with-messaging-extensions"></a>Suchen mit Messaging-Erweiterungen
 
@@ -24,11 +24,11 @@ In den folgenden Abschnitten wird dies beschrieben:
 
 [!include[common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
-### <a name="search-type-message-extensions"></a>Suchtyp-Nachrichtenerweiterungen
+## <a name="search-type-message-extensions"></a>Suchtyp-Nachrichtenerweiterungen
 
 Legen Sie für suchbasierte Messaging-Erweiterung den `type` Parameter auf `query`. Unten sehen Sie ein Beispiel für ein Manifest mit einem einzigen Suchbefehl. Einer einzelnen Messaging-Erweiterung können bis zu 10 verschiedene Befehle zugeordnet sein. Dies kann sowohl mehrere Suchbefehle als auch mehrere aktionsbasierte Befehle umfassen.
 
-#### <a name="complete-app-manifest-example"></a>Beispiel für ein vollständiges App-Manifest
+### <a name="complete-app-manifest-example"></a>Beispiel für ein vollständiges App-Manifest
 
 ```json
 {
@@ -85,11 +85,11 @@ Legen Sie für suchbasierte Messaging-Erweiterung den `type` Parameter auf `quer
 }
 ```
 
-### <a name="test-via-uploading"></a>Testen per Upload
+## <a name="test-via-uploading"></a>Testen per Upload
 
 Sie können Ihre Messaging-Erweiterung testen, indem Sie Ihre App hochladen.
 
-Um Ihre Messaging-Erweiterung zu öffnen, navigieren Sie zu einem Ihrer Chats oder Kanäle. Wählen Sie die Schaltfläche **"Weitere Optionen** " (**&#8943;**) im Feld "Verfassen" aus, und wählen Sie Ihre Messaging-Erweiterung aus.
+Um Ihre Messaging-Erweiterung zu öffnen, navigieren Sie zu einem Ihrer Chats oder Kanäle. Wählen Sie im Feld "Verfassen" die Schaltfläche **"Weitere Optionen** " (**&#8943;**) aus, und wählen Sie Ihre Messaging-Erweiterung aus.
 
 ## <a name="add-event-handlers"></a>Hinzufügen von Ereignishandlern
 
@@ -97,7 +97,7 @@ Der Großteil Ihrer Arbeit umfasst das `onQuery` Ereignis, das alle Interaktione
 
 Wenn Sie dies im Manifest festlegen `canUpdateConfiguration` `true`, aktivieren Sie das **Einstellungen** Menüelement für Ihre Messaging-Erweiterung und müssen auch behandeln `onQuerySettingsUrl` und `onSettingsUpdate`.
 
-### <a name="handle-onquery-events"></a>Behandeln von onQuery-Ereignissen
+## <a name="handle-onquery-events"></a>Behandeln von onQuery-Ereignissen
 
 Eine Messaging-Erweiterung empfängt ein `onQuery` Ereignis, wenn im Messaging-Erweiterungsfenster etwas passiert oder an das Fenster gesendet wird.
 
@@ -109,7 +109,7 @@ Wenn Ihre Messaging-Erweiterung eine Authentifizierung erfordert, überprüfen S
 
 Der restliche Handler fordert `onQuery` den Benutzer zur Eingabe von Informationen auf, zeigt eine Liste der Vorschaukarten an und gibt die vom Benutzer ausgewählte Karte zurück.
 
-### <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>Behandeln von onQuerySettingsUrl- und onSettingsUpdate-Ereignissen
+## <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>Behandeln von onQuerySettingsUrl- und onSettingsUpdate-Ereignissen
 
 Die Ereignisse und ereignisse arbeiten zusammen, um das **Einstellungen** Menüelement zu aktivieren.`onQuerySettingsUrl` `onSettingsUpdate`
 
@@ -134,7 +134,7 @@ Zusätzlich zu den standardmäßigen Bot-Aktivitätseigenschaften enthält die N
 |`from.id`| DIE ID des Benutzers, der die Anforderung gesendet hat. |
 |`from.name`| Name des Benutzers, der die Anforderung gesendet hat. |
 |`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
-|`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD)-Mandanten-ID. |
+|`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD) Mandanten-ID. |
 |`channelData.channel.id`| Kanal-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
 |`channelData.team.id`| Team-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
 |`clientInfo`|Optionale Metadaten über die Clientsoftware, die zum Senden der Nachricht eines Benutzers verwendet wird. Die Entität kann zwei Eigenschaften enthalten:<br>Das `country` Feld enthält den vom Benutzer erkannten Speicherort.<br>Das `platform` Feld beschreibt die Messaging-Clientplattform. <br>Weitere Informationen *finden Sie unter* [Nicht-IRI-Entitätstypen – clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
@@ -445,7 +445,7 @@ Jede Anforderung an Ihre Dienste enthält die verborgene ID des Benutzers, der d
 },
 ```
 
-Die `id` und `aadObjectId` die Werte sind garantiert die des authentifizierten Teams Benutzers. Sie können als Schlüssel zum Nachschlagen von Anmeldeinformationen oder eines zwischengespeicherten Status in Ihrem Dienst verwendet werden. Darüber hinaus enthält jede Anforderung die Microsoft Azure Active Directory (Azure AD)-Mandanten-ID des Benutzers, die verwendet werden kann, um die Organisation des Benutzers zu identifizieren. Falls zutreffend, enthält die Anforderung auch die Team- und Kanal-IDs, von denen die Anforderung stammt.
+Die `id` Werte sind `aadObjectId` garantiert die des authentifizierten Teams Benutzers. Sie können als Schlüssel zum Nachschlagen von Anmeldeinformationen oder eines zwischengespeicherten Status in Ihrem Dienst verwendet werden. Darüber hinaus enthält jede Anforderung die Microsoft Azure Active Directory (Azure AD)-Mandanten-ID des Benutzers, die verwendet werden kann, um die Organisation des Benutzers zu identifizieren. Falls zutreffend, enthält die Anforderung auch die Team- und Kanal-IDs, von denen die Anforderung stammt.
 
 ## <a name="authentication"></a>Authentifizierung
 
@@ -454,10 +454,10 @@ Wenn Ihr Dienst eine Benutzerauthentifizierung erfordert, müssen Sie sich beim 
 Die Sequenz sieht wie folgt aus:
 
 1. Der Benutzer gibt eine Abfrage aus, oder die Standardabfrage wird automatisch an Ihren Dienst gesendet.
-2. Ihr Dienst überprüft, ob sich der Benutzer zuerst authentifiziert hat, indem er die Teams Benutzer-ID überprüft.
+2. Ihr Dienst überprüft, ob der Benutzer sich zuerst authentifiziert hat, indem er die Teams Benutzer-ID überprüft.
 3. Wenn sich der Benutzer nicht authentifiziert hat, senden Sie eine `auth` Antwort mit einer `openUrl` vorgeschlagenen Aktion einschließlich der Authentifizierungs-URL zurück.
 4. Der Microsoft Teams-Client startet ein Popupfenster, in dem Ihre Webseite mithilfe der angegebenen Authentifizierungs-URL gehostet wird.
-5. Nachdem sich der Benutzer angemeldet hat, sollten Sie ihr Fenster schließen und einen "Authentifizierungscode" an den Teams Client senden.
+5. Nachdem sich der Benutzer angemeldet hat, sollten Sie ihr Fenster schließen und einen "Authentifizierungscode" an den Teams-Client senden.
 6. Der Teams-Client sendet dann die Abfrage erneut an Ihren Dienst, der den in Schritt 5 übergebenen Authentifizierungscode enthält.
 
 Ihr Dienst sollte überprüfen, ob der in Schritt 6 empfangene Authentifizierungscode mit dem aus Schritt 5 übereinstimmt. Dadurch wird sichergestellt, dass ein böswilliger Benutzer nicht versucht, den Anmeldefluss zu spoofen oder zu kompromittieren. Dadurch wird die Schleife "geschlossen", um die sichere Authentifizierungssequenz abzuschließen.
@@ -492,7 +492,7 @@ Um einen nicht authentifizierten Benutzer zur Anmeldung aufzufordern, antworten 
 
 Ihre Anmeldeerfahrung sollte reaktionsfähig sein und in ein Popupfenster passen. Es sollte in das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client) integriert werden, das die Nachrichtenübergabe verwendet.
 
-Wie bei anderen eingebetteten Oberflächen, die in Microsoft Teams ausgeführt werden, muss Ihr Code innerhalb des Fensters zuerst aufgerufen werden`microsoftTeams.initialize()`. Wenn Ihr Code einen OAuth-Fluss durchführt, können Sie die Teams Benutzer-ID an Ihr Fenster übergeben, die sie dann an die OAuth-Anmelde-URL übergeben kann.
+Wie bei anderen eingebetteten Oberflächen, die in Microsoft Teams ausgeführt werden, muss Ihr Code innerhalb des Fensters zuerst aufgerufen werden`microsoftTeams.initialize()`. Wenn Ihr Code einen OAuth-Fluss durchführt, können Sie die Teams-Benutzer-ID an Ihr Fenster übergeben, die sie dann an die OAuth-Anmelde-URL übergeben kann.
 
 ### <a name="complete-the-sign-in-flow"></a>Abschließen des Anmeldeflusses
 

@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 3226b56ad784c0780ae01e8776704062e1add753
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: cfbfc1cb1796bcdcf1946c87756e3fa2285eff69
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356014"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453579"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Unterhalt Ihrer veröffentlichte Microsoft Teams-App
 
@@ -20,13 +20,13 @@ Nachdem Ihre App im Microsoft Teams Store aufgeführt ist, überlegen Sie, wie S
 
 Sie können Ihre App-Nutzung im [Bericht Teams App-Nutzung](/office/dev/store/teams-apps-usage) im Partner Center nachverfolgen. Zu den Metriken gehören aktive monatliche, tägliche und wöchentliche Benutzer sowie Aufbewahrungs- und Intensitätsdiagramme, mit denen Sie Änderungen und Nutzungshäufigkeit nachverfolgen können.
 
-Daten für neu veröffentlichte Apps dauern etwa eine Woche, bis sie im Bericht angezeigt werden.
+Bei Daten für neu veröffentlichte Apps dauert es etwa eine Woche, bis sie im Bericht angezeigt werden.
 
 ## <a name="publish-updates-to-your-app"></a>Veröffentlichen von Updates für Ihre App
 
 > [!NOTE]
 > Teams Store hat sich weiterentwickelt:
-> 
+>
 > Zuvor wurden die Links kopiert, indem Ellipsen auf der App-Kachel ausgewählt wurden. Mit der aktualisierten Teams Store-Erfahrung greifen Sie auf der Registerkarte "Details" der Apps auf dasselbe zu. Dieses Update wird bis zum 1. März 2022 allgemein verfügbar sein.
 
 Sie können Änderungen an Ihrer App (z. B. neue Features oder sogar Metadaten) im Partner Center übermitteln. Diese Änderungen erfordern einen neuen Überprüfungsprozess.

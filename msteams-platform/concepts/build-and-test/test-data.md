@@ -1,16 +1,16 @@
 ---
 title: Hinzufügen von Testdaten zu Ihrem Microsoft 365 Testmandanten
-description: Richten Sie Ihr Office 365-Entwicklerprogrammabonnement für erfolgreiche Tests von Microsoft Teams Apps mitHilfe von Codeausschnitten ein.
+description: Richten Sie Ihr Office 365-Entwicklerprogrammabonnement für erfolgreiche Tests von Microsoft Teams Apps mit Codeausschnitten ein.
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Testen von Teams des Entwicklerprogramms für Apps
 ms.date: 11/01/2019
-ms.openlocfilehash: 82fff61f174b4dc08d30c466d9d404042bb3a4e0
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 907b6e7b6734a16afa1335cf5198d2d88cad645b
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435845"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452704"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Hinzufügen von Testdaten zu Ihrem Microsoft 365 Testmandanten
 
@@ -19,9 +19,9 @@ Sie können Ihre Microsoft Teams-App mit Beispieldaten mit einem Microsoft 365 E
 ## <a name="prerequisites"></a>Voraussetzungen
 
 1. [Treten Sie dem Microsoft 365-Entwicklerprogramm](/office/developer-program/office-365-developer-program) bei, wenn Sie keinen Testmandanten haben.
-2. [Richten Sie ein Microsoft 365 Entwicklerabonnement ein](/office/developer-program/office-365-developer-program-get-started).
+2. [Richten Sie ein Microsoft 365-Entwicklerabonnement ein](/office/developer-program/office-365-developer-program-get-started).
 3. [Verwenden Sie Beispieldatenpakete mit Ihrem Microsoft 365 Entwicklerabonnement, um das Inhaltspaket "Benutzer" zu installieren](/office/developer-program/install-sample-packs).
-4. [Installieren Sie das powerShell-Modul Teams](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
+4. [Installieren Sie das Teams PowerShell-Modul](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
 5. [Installieren Sie das Azure AD PowerShell-Modul](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
 
 > [!NOTE]
@@ -147,7 +147,7 @@ Standardmäßig können nur globale Administratoren oder Teams Dienstadministrat
     </Teams>
     ```
 
-2. Speichern Sie den folgenden Codeausschnitt als PowerShell-Skript (.ps1), und notieren Sie, wo Sie es gespeichert haben. Dieses Skript führt die Schritte aus, um das Team und den Kanal zu erstellen und ihnen Mitglieder hinzuzufügen:
+2. Speichern Sie den folgenden Codeausschnitt als PowerShell-Skript (.ps1), und notieren Sie sich, wo Sie es gespeichert haben. Dieses Skript führt die Schritte aus, um das Team und den Kanal zu erstellen und ihnen Mitglieder hinzuzufügen:
 
     ```powershell
     Param(
@@ -244,10 +244,10 @@ Standardmäßig können nur globale Administratoren oder Teams Dienstadministrat
     > [!Note]
     > Schließen Sie die PowerShell-Sitzung nicht, da die Ausführung des Skripts mehrere Minuten dauert. Wenn Sie die Benutzer in Ihrem Abonnement von dem geändert haben, was im Standardinhaltspaket erstellt wurde, werden einige Benutzer möglicherweise nicht zu Teams hinzugefügt. Während der Ausführung des Skripts werden erfolgreiche oder fehlgeschlagene Aktionen angezeigt.
 
-5. Nachdem das Skript die Ausführung abgeschlossen hat, können Sie sich mit einem der Benutzerkonten beim Teams-Client anmelden und die neu erstellten Teams anzeigen.
+5. Nachdem das Skript die Ausführung abgeschlossen hat, können Sie sich mit einem der Benutzerkonten beim Teams Client anmelden und die neu erstellten Teams anzeigen.
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Debuggen der Registerkarte](~/tabs/how-to/developer-tools.md) 
+* [Debuggen der Registerkarte](~/tabs/how-to/developer-tools.md)
 * [Debuggen Von Bots](~/bots/how-to/debug/locally-with-an-ide.md)
 * [Testen von RSC-Berechtigungen](~/graph-api/rsc/test-resource-specific-consent.md)

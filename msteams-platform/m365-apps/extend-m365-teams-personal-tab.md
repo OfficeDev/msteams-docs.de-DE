@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: e914793fcd0d7bbaa2442f282224c4ca94d99a85
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 65002e300527a03ef2b7468a97aef06295ce76a8
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356305"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453719"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Erweitern einer Teams persönlichen Registerkarte über Microsoft 365
 
@@ -22,14 +22,16 @@ Persönliche Registerkarten bieten eine hervorragende Möglichkeit, die Microsof
 Das Aktualisieren Ihrer persönlichen App für die Ausführung in Outlook und Office Home umfasst die folgenden Schritte:
 
 > [!div class="checklist"]
+>
 > * Aktualisieren des App-Manifests
-> * Aktualisieren Ihrer TeamsJS SDK-Referenzen 
+> * Aktualisieren Ihrer TeamsJS SDK-Referenzen
 > * Ändern der Kopfzeilen der Inhaltssicherheitsrichtlinie
 > * Aktualisieren der Microsoft Azure Active Directory (Azure AD)-App-Registrierung für einmaliges Anmelden (Single Sign On, SSO)
 
 Zum Testen Ihrer App sind die folgenden Schritte erforderlich:
 
 > [!div class="checklist"]
+>
 > * Registrieren Ihres Microsoft 365 Mandanten in *Office 365 gezielten Versionen*
 > * Konfigurieren Ihres Kontos für den Zugriff auf Vorschauversionen von Outlook- und Office-Apps
 > * Querladen der aktualisierten App in Teams
@@ -56,7 +58,6 @@ Wenn Sie beispielcode verwenden möchten, um dieses Lernprogramm abzuschließen,
 
 :::image type="content" source="images/toolkit-todo-sample.png" alt-text="Todo List-Beispiel (Funktioniert in Teams, Outlook und Office) in Teams Toolkit":::
 
-
 ## <a name="update-the-app-manifest"></a>Aktualisieren des App-Manifests
 
 Sie müssen das [Teams Entwicklervorschau-Manifestschema](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) und die `Microsoft 365 DevPreview` Manifestversion verwenden, damit Ihre persönliche Registerkarte Teams in Office und Outlook ausgeführt werden kann.
@@ -78,6 +79,7 @@ Sie können entweder Teams Toolkit verwenden, um Ihr App-Manifest zu aktualisier
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
 Wenn Sie Teams Toolkit zum Erstellen Ihrer persönlichen App verwendet haben, können Sie sie auch verwenden, um die Änderungen an Ihrer Manifestdatei zu überprüfen und Fehler zu identifizieren. Öffnen Sie die Befehlspalette`Ctrl+Shift+P`, und suchen Sie **nach Teams: Überprüfen der Manifestdatei**, oder wählen Sie die Option im Bereitstellungsmenü des Teams Toolkits aus (suchen Sie auf der linken Seite von Visual Studio Code nach dem Symbol Teams).
@@ -96,6 +98,7 @@ Sie können Teams Toolkit verwenden, um einige der Codeänderungen zu automatisi
 Nach Abschluss des Vorgangs hat das Hilfsprogramm Ihre `package.json` Datei mit der Abhängigkeit von TeamsJS SDK Preview (`@microsoft/teams-js@2.0.0-beta.1` oder höher) aktualisiert, und Ihre `*.js/.ts` Und-Dateien `*.jsx/.tsx` werden mit Folgendem aktualisiert:
 
 > [!div class="checklist"]
+>
 > * `package.json` Verweise auf TeamsJS SDK Preview
 > * Importanweisungen für TeamsJS SDK Preview
 > * [Funktions-, Enumerations- und Schnittstellenaufrufe](using-teams-client-sdk-preview.md#apis-organized-into-capabilities) von TeamsJS SDK Preview
@@ -116,8 +119,8 @@ Wenn Ihre App CSP-Header ( [Content Security Policy](https://developer.mozilla.o
 
 |Microsoft 365 Host| Frame-Vorgängerberechtigung|
 |--|--|
-| Microsoft Teams | `teams.microsoft.com` |
-| Office | `*.office.com` |
+| Teams | `teams.microsoft.com` |
+| Büro | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>Aktualisieren Azure AD App-Registrierung für SSO
@@ -126,7 +129,7 @@ Azure Active Directory Einmaliges Anmelden (Single Sign On, SSO) für persönlic
 
 1. Melden Sie sich mit Ihrem Sandkastenmandantenkonto bei [Microsoft Azure Portal](https://portal.azure.com) an.
 1. Öffnen Sie das Blatt " **App-Registrierungen** ".
-1. Wählen Sie den Namen Ihrer persönlichen Registerkartenanwendung aus, um die App-Registrierung zu öffnen. 
+1. Wählen Sie den Namen Ihrer persönlichen Registerkartenanwendung aus, um die App-Registrierung zu öffnen.
 1. Wählen Sie  **"API verfügbar machen** " (unter *"Verwalten*") aus.
 
 :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorisieren von Client-IDs aus dem Blatt &quot;*App-Registrierungen*&quot; im Azure-Portal":::
@@ -179,7 +182,7 @@ So zeigen Sie Ihre App an, die in Outlook auf Windows Desktop ausgeführt wird:
 
 1. Starten Sie Outlook und melden Sie sich mit Ihrem Dev-Mandantenkonto an.
 1. Klicken Sie auf die Auslassungspunkte (**...**) auf der Seitenleiste. Der Titel der quergeladenen App wird unter den installierten Apps angezeigt.
-1.  Klicken Sie auf das App-Symbol, um Ihre App in Outlook zu starten.
+1. Klicken Sie auf das App-Symbol, um Ihre App in Outlook zu starten.
 
 :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste Outlook Desktopclients auf die Option &quot;Weitere Apps&quot;, um die installierten persönlichen Registerkarten anzuzeigen.":::
 
@@ -187,13 +190,13 @@ So zeigen Sie Ihre App an, die in Outlook auf Windows Desktop ausgeführt wird:
 
 So zeigen Sie Ihre App in Outlook im Web an:
 
-1. Navigieren Sie zu https://outlook.office.com Ihrem Dev-Mandantenkonto, und melden Sie sich an.
+1. Navigieren Sie zu [Outlook im Web](https://outlook.office.com) und melden Sie sich mit Ihrem Dev-Mandantenkonto an.
 1. Klicken Sie auf die Auslassungspunkte (**...**) auf der Seitenleiste. Der Titel der quergeladenen App wird unter den installierten Apps angezeigt.
 1. Klicken Sie auf das App-Symbol, um die App zu starten und eine Vorschau anzuzeigen, die in Outlook im Web ausgeführt wird.
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste von outlook.com auf die Option &quot;Weitere Apps&quot;, um die installierten persönlichen Registerkarten anzuzeigen.":::
 
-### <a name="office"></a>Office
+### <a name="office"></a>Büro
 
 So zeigen Sie Ihre App an, die in Office auf Windows Desktop ausgeführt wird:
 
@@ -227,11 +230,11 @@ Wählen Sie im Menü *"Apps*" die Option *"Apps verwaltenSubmit* >  **einer App 
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams Admin Center
 
-Als Teams-Administrator können Sie das App-Paket für den Mandanten Ihrer Organisation hochladen https://admin.teams.microsoft.com/und vorab installieren. Weitere Informationen finden Sie [unter Hochladen Ihrer benutzerdefinierten Apps im Microsoft Teams Admin Center](/MicrosoftTeams/upload-custom-apps).
+Als Teams-Administrator können Sie das App-Paket für den Mandanten Ihrer Organisation von [Teams Administrator](https://admin.teams.microsoft.com/) hochladen und vorinstallieren. Weitere Informationen finden Sie [unter Hochladen Ihrer benutzerdefinierten Apps im Microsoft Teams Admin Center](/MicrosoftTeams/upload-custom-apps).
 
 #### <a name="microsoft-admin-center"></a>Microsoft Admin Center
 
-Als globaler Administrator können Sie das App-Paket hochladen und vorab installieren.https://admin.microsoft.com/ Weitere Informationen finden Sie [unter Testen und Bereitstellen von Microsoft 365 Apps von Partnern im Portal für integrierte Apps](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps).
+Als globaler Administrator können Sie das App-Paket von [Microsoft-Administrator](https://admin.microsoft.com/) hochladen und vorab installieren. Weitere Informationen finden Sie [unter Testen und Bereitstellen von Microsoft 365 Apps von Partnern im Portal für integrierte Apps](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps).
 
 ### <a name="multitenant-distribution"></a>Mehrinstanzenfähige Verteilung
 

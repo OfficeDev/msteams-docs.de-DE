@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Implementierung von Registerkarten auf 
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Gruppenauthentifizierungsverteilung für mobile Registerkartenkanal-Apps
-ms.openlocfilehash: eb0bc5b0415f1879619cc704a77501406bcea397
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 520cad9d295b4f63ca437db5f69abc3ba9464faa
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356371"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452592"
 ---
 # <a name="tabs-on-mobile"></a>Registerkarten auf mobilen Geräten
 
@@ -25,6 +25,7 @@ Apps[, die über den Teams Store verteilt werden,](~/concepts/deploy-and-publish
 | **Kanal- und Gruppenregisterkarten** | Die Registerkarte wird im Teams Client mit geöffnet`contentUrl`. | Die Registerkarte wird in einem Browser außerhalb des Teams-Clients mithilfe `websiteUrl`von geöffnet. |
 
 > [!NOTE]
+>
 > * Apps, die zur Veröffentlichung auf Teams an [AppSource](https://appsource.microsoft.com) übermittelt werden, werden automatisch auf die Reaktionsfähigkeit mobiler Geräte ausgewertet. Wenden Sie sich bei Abfragen an teamsubm@microsoft.com.
 > * Für alle Apps, die nicht über AppSource verteilt werden, werden die Registerkarten standardmäßig in einer In-App-Webansicht innerhalb der Teams Clients geöffnet, und es ist kein separater Genehmigungsprozess erforderlich.
 > * Das Standardverhalten von Apps gilt nur, wenn sie über den Teams Store verteilt werden. Standardmäßig werden alle Registerkarten im Teams Client geöffnet.

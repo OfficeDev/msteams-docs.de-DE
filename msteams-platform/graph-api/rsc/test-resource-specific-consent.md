@@ -1,24 +1,24 @@
 ---
 title: Testen von ressourcenspezifischen Zustimmungsberechtigungen in Teams
-description: Details zum Testen der ressourcenspezifischen Zustimmung in Teams mit Postman mit Codebeispielen
+description: Details zum Testen der ressourcenspezifischen Zustimmung in Teams Verwendung von Postman mit Codebeispielen
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
-keywords: teams authorization OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.openlocfilehash: 4e8affcc75682390f403be5b2c0ebb99029dbe19
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+keywords: Teams-Autorisierung OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
+ms.openlocfilehash: ad99a06873ba3e5cff0ca6a957270a35ef668b8c
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821626"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453859"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Testen von ressourcenspezifischen Zustimmungsberechtigungen in Teams
 
 > [!NOTE]
 > Die ressourcenspezifische Zustimmung für den Chatbereich ist nur in der [öffentlichen Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
-Die ressourcenspezifische Zustimmung (RSC) ist eine Microsoft Teams- und Graph-API-Integration, mit der Ihre App API-Endpunkte verwenden kann, um bestimmte Ressourcen innerhalb einer Organisation zu verwalten – entweder Teams oder Chats. Weitere Informationen finden Sie unter ["Ressourcenspezifische Zustimmung (RSC) – Microsoft Teams Graph-API"](resource-specific-consent.md).
+Die ressourcenspezifische Zustimmung (RESOURCE-Specific Consent, RSC) ist eine Microsoft Teams- und Graph-API-Integration, mit der Ihre App API-Endpunkte verwenden kann, um bestimmte Ressourcen innerhalb einer Organisation zu verwalten – entweder Teams oder Chats. Weitere Informationen finden Sie unter [Resource-specific consent (RSC) – Microsoft Teams Graph API](resource-specific-consent.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -184,7 +184,7 @@ Beispiel für RSC in einem Chat
     }
 }
 ```
-    
+
 > [!NOTE]
 > Wenn die App die Installation sowohl im Team- als auch im Chatbereich unterstützen soll, können sowohl Team- als auch Chatberechtigungen im selben Manifest unter `authorization`angegeben werden.
 
@@ -258,7 +258,7 @@ Beispiel für RSC in einem Chat
 
 > [!NOTE]
 > Wenn die App die Installation sowohl im Team- als auch im Chatbereich unterstützen soll, können sowohl Team- als auch Chatberechtigungen im selben Manifest unter `applicationPermissions`angegeben werden.
-    
+
 </details>
 
 > [!IMPORTANT]
@@ -278,8 +278,8 @@ Um zu überprüfen, ob die RSC-Berechtigungen von der API-Anforderungsnutzlast b
 
     1. Wählen Sie im Teams Client in der Navigationsleiste ganz links **Teams** aus.
     2. Wählen Sie im Dropdownmenü das Team aus, in dem die App installiert ist.
-    3. Wählen Sie das Symbol **"Weitere Optionen** " aus (&#8943;).
-    4. Wählen Sie **"Link zum Team abrufen" aus**. 
+    3. Klicken Sie auf das Symbol **"Weitere Optionen** " (&#8943;).
+    4. Wählen Sie **"Link zum Team abrufen" aus**.
     5. Kopieren und speichern Sie den **groupId-Wert** aus der Zeichenfolge.
 
 ## <a name="test-added-rsc-permissions-to-a-chat-using-the-postman-app"></a>Testen hinzugefügter RSC-Berechtigungen zu einem Chat mithilfe der Postman-App
@@ -292,7 +292,7 @@ Um zu überprüfen, ob die RSC-Berechtigungen von der API-Anforderungsnutzlast b
 * `tenantId`: Der Name oder die Azure AD Objekt-ID Ihres Mandanten.
 * `chatId`: Sie können die Chatthread-ID wie folgt vom *Teams-Webclient* abrufen:
 
-    1. Wählen Sie im Teams Webclient in der Navigationsleiste ganz links "**Chat**" aus.
+    1. Wählen Sie im Teams Webclient in der linken Navigationsleiste ganz links "**Chat**" aus.
     2. Wählen Sie im Dropdownmenü den Chat aus, in dem die App installiert ist.
     3. Kopieren Sie die Web-URL, und speichern Sie die Chatthread-ID aus der Zeichenfolge.
 ![Chatthread-ID von Web-URL.](../../assets/images/chat-thread-id.png)
@@ -301,7 +301,7 @@ Um zu überprüfen, ob die RSC-Berechtigungen von der API-Anforderungsnutzlast b
 
 1. Öffnen Sie die [Postman-App](https://www.postman.com) .
 2. Wählen Sie **"****FileImportImport** >  > "-**Datei** aus, um die aktualisierte JSON-Datei aus Ihrer Umgebung hochzuladen.  
-3. Wählen Sie die Registerkarte **"Sammlungen" aus** . 
+3. Wählen Sie die Registerkarte **"Sammlungen" aus** .
 4. Wählen Sie das Chevron **>** neben dem **Test RSC** aus, um die Detailansicht zu erweitern und die API-Anforderungen anzuzeigen.
 
 Führen Sie die gesamte Berechtigungssammlung für jeden API-Aufruf aus. Die berechtigungen, die Sie in Ihrem App-Manifest angegeben haben, müssen erfolgreich sein, während die nicht angegebenen Berechtigungen mit einem HTTP 403-Statuscode fehlschlagen müssen. Überprüfen Sie alle Antwortstatuscodes, um zu überprüfen, ob das Verhalten der RSC-Berechtigungen in Ihrer App die Erwartungen erfüllt.
@@ -312,7 +312,7 @@ Führen Sie die gesamte Berechtigungssammlung für jeden API-Aufruf aus. Die ber
 ## <a name="test-revoked-rsc-permissions-using-postman"></a>Testen widerrufener RSC-Berechtigungen mit [Postman](https://www.postman.com/)
 
 1. Deinstallieren Sie die App aus der jeweiligen Ressource.
-2. Führen Sie die Schritte für Chat oder Team aus: 
+2. Führen Sie die Schritte für Chat oder Team aus:
     1. [Test hat RSC-Berechtigungen zu einem Team mitHilfe von Postman hinzugefügt](#test-added-rsc-permissions-to-a-team-using-the-postman-app).
     2. [Test hat RSC-Berechtigungen zu einem Chat mit Postman hinzugefügt](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
 3. Überprüfen Sie alle Antwortstatuscodes, um zu überprüfen, ob die spezifischen **API-Aufrufe mit einem HTTP 403-Statuscode fehlgeschlagen sind**.

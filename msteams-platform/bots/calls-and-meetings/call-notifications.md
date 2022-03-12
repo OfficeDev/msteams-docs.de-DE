@@ -5,20 +5,20 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Anrufbenachrichtigungen Rückrufregion Affinität aufrufen
 ms.date: 04/02/2019
-ms.openlocfilehash: 75c6b33db6431901665b71674cb4f4fd93248c12
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: a1d2362347643badc06a23d967120c8f14a17200
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216090"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453054"
 ---
 # <a name="incoming-call-notifications"></a>Eingehende Anrufbenachrichtigungen
 
-Bei [der Registrierung eines Bots für Anrufe und Besprechungen für Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)wird der Webhook für die Anruf-URL erwähnt. Diese URL ist der Webhook-Endpunkt für alle eingehenden Anrufe an Ihren Bot.
+Bei [der Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities) wird der Webhook für die Anruf-URL erwähnt. Diese URL ist der Webhook-Endpunkt für alle eingehenden Anrufe an Ihren Bot.
 
 ## <a name="protocol-determination"></a>Protokollermittlung
 
-Die eingehende Benachrichtigung wird aus Gründen der Kompatibilität mit dem vorherigen [Skype-Protokoll](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)in einem älteren Format bereitgestellt. Um den Aufruf in das Microsoft Graph-Protokoll zu konvertieren, muss Ihr Bot bestimmen, ob die Benachrichtigung ein Legacyformat aufweist, und die folgende Antwort bereitstellen:
+Die eingehende Benachrichtigung wird aus Gründen der Kompatibilität mit dem vorherigen [Skype-Protokoll](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true) in einem älteren Format bereitgestellt. Um den Aufruf in das Microsoft Graph-Protokoll zu konvertieren, muss Ihr Bot bestimmen, ob die Benachrichtigung ein Legacyformat aufweist, und die folgende Antwort bereitstellen:
 
 ```http
 HTTP/1.1 204 No Content
@@ -40,7 +40,6 @@ Location: your-new-location
 ```
 
 Ermöglichen Sie Ihrem Bot, einen eingehenden Anruf mithilfe der [Antwort-API](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) zu beantworten. Sie können den `callbackUri` für diesen bestimmten Aufruf zu verwendenden Wert angeben. Dies ist nützlich für zustandsbehaftete Instanzen, in denen Ihr Anruf von einer bestimmten Partition verarbeitet wird, und Sie möchten diese Informationen für das `callbackUri` Routing an die richtige Instanz einbetten.
-
 
 Der nächste Abschnitt enthält Details zum Authentifizieren des Rückrufs, indem das Token überprüft wird, das in Ihrem Webhook veröffentlicht wurde.
 
@@ -82,15 +81,15 @@ Das OAuth-Token hat die folgenden Werte und wird von Skype signiert:
 }
 ```
 
-Die openID-Konfiguration, die unter veröffentlicht <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> wurde, kann verwendet werden, um das Token zu überprüfen. Jeder OAuth-Tokenwert wird wie folgt verwendet:
+Die openID-Konfiguration, die unter <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> veröffentlicht wurde, kann verwendet werden, um das Token zu überprüfen. Jeder OAuth-Tokenwert wird wie folgt verwendet:
 
 * `aud` dabei ist "audience" der app-ID-URI, der für die Anwendung angegeben ist.
 * `tid` ist die Mandanten-ID für Contoso.com.
-* `iss` ist der `https://api.botframework.com` Tokenaussteller.
+* `iss`ist der Tokenaussteller. `https://api.botframework.com`
 
 Für die Codeverarbeitung muss der Webhook das Token überprüfen, sicherstellen, dass es nicht abgelaufen ist, und überprüfen, ob es von der veröffentlichten OpenID-Konfiguration signiert wurde. Sie müssen auch überprüfen, ob "aud" ihrer App-ID entspricht, bevor Sie die Rückrufanforderung annehmen.
 
-Weitere Informationen finden Sie unter [Überprüfen eingehender Anforderungen.](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)
+Weitere Informationen finden Sie unter [Überprüfen eingehender Anforderungen](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
 
 ## <a name="next-step"></a>Nächster Schritt
 

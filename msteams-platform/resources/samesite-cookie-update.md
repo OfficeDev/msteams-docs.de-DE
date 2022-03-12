@@ -1,17 +1,17 @@
 ---
 title: SameSite-Cookieattribut
 author: laujan
-description: Erfahren Sie mehr über Arten von Cookies, einschließlich SameSite-Cookies, deren Attribute, deren Auswirkungen auf Teams Registerkarten, Aufgabenmodule und Messaging-Erweiterungen und ihre Authentifizierung in Teams
+description: Erfahren Sie mehr über Arten von Cookies, einschließlich SameSite-Cookies, deren Attribute, deren Auswirkungen auf Teams Registerkarten, Aufgabenmodule und Messaging-Erweiterungen und deren Authentifizierung in Teams
 keywords: Cookieattribute samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 3c587056821eff3c24358a1dfbf6ecc63351a3c3
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 8a1d8cff46612091749ba6801f42c79a3d997c97
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518478"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452585"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite-Cookieattribut
 
@@ -21,7 +21,7 @@ Cookies sind Textzeichenfolgen, die von Websites gesendet und vom Webbrowser auf
 
 Die Cookietypen und ihre entsprechenden Bereiche sind wie folgt:
 
-|Cookie|Umfang|
+|Cookie|Bereich|
 | ------ | ------ |
 |Cookies von Erstanbietern|Ein Erstanbieter-Cookie wird von Websites erstellt, die ein Benutzer besucht. Es wird verwendet, um Daten wie Einkaufswagenelemente und Anmeldeinformationen zu speichern. Beispielsweise Authentifizierungscookies und andere Analysen.|
 |Cookies von Drittanbietern|Ein Drittanbietercookie ist technisch identisch mit einem Erstanbietercookie. Der Unterschied besteht darin, dass Daten mit einer zweiten Partei über einen Datenpartnerschaftsvertrag geteilt werden. Beispielsweise [Microsoft Teams Analyse und Berichterstellung](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). |
@@ -40,10 +40,10 @@ Sie können das Hinzufügen des SameSite-Cookieattributs zum `SetCookie` Header 
 ## <a name="samesite-cookie-attribute-2020-release"></a>SameSite-Cookieattribut: Version 2020
 
 Chrome 80, veröffentlicht im Februar 2020, führt neue Cookiewerte ein und erlegt standardmäßig Cookierichtlinien auf. Drei Werte werden an das aktualisierte SameSite-Attribut übergeben: **Strict**, **Lax** oder **None**. Wenn nicht angegeben, verwendet das Cookies SameSite-Attribut standardmäßig den Wert `SameSite=Lax` .
- 
+
 SameSite-Cookieattribute sind wie folgt:
 
-|Einstellung | Durchsetzung | Wert |Attributspezifikation |
+|Setting | Durchsetzung | Wert |Attributspezifikation |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Cookies werden automatisch nur in einem **Erstanbieterkontext** und mit HTTP GET-Anforderungen gesendet. SameSite-Cookies werden bei websiteübergreifenden Unteranforderungen, z. B. Aufrufen zum Laden von Bildern oder iframes, beibehalten. Sie werden gesendet, wenn ein Benutzer von einer externen Website zu der URL navigiert, z. B. durch Folgen eines Links.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Streng** |Der Browser sendet Cookies nur für Erstanbieterkontextanforderungen. Dies sind Anforderungen, die von der Website stammen, die das Cookie festgelegt hat. Wenn die Anforderung von einer anderen URL als der des aktuellen Speicherorts stammt, werden keine der mit dem `Strict` Attribut markierten Cookies gesendet.| Optional |`Set-Cookie: key=value; SameSite=Strict`|
@@ -51,7 +51,7 @@ SameSite-Cookieattribute sind wie folgt:
 
 ## <a name="teams-implications-and-adjustments"></a>Teams Auswirkungen und Anpassungen
 
-1. Aktivieren Sie die entsprechende SameSite-Einstellung für Ihre Cookies, und überprüfen Sie, ob Ihre Apps und Erweiterungen weiterhin in Teams funktionieren.
+1. Aktivieren Sie die relevante SameSite-Einstellung für Ihre Cookies, und überprüfen Sie, ob Ihre Apps und Erweiterungen weiterhin in Teams funktionieren.
 1. Wenn Ihre Apps oder Erweiterungen fehlschlagen, nehmen Sie die erforderlichen Korrekturen vor der Chrome 80-Version vor.
 1. Interne Microsoft-Partner können dem folgenden Team beitreten, um weitere Informationen oder Hilfe zu diesem Problem zu erhalten: <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47>.
 
@@ -60,7 +60,7 @@ SameSite-Cookieattribute sind wie folgt:
 
 ### <a name="tabs-task-modules-and-messaging-extensions"></a>Registerkarten, Aufgabenmodule und Messaging-Erweiterungen
 
-* Teams Registerkarten zum Einbetten von Inhalten, `<iframes>` die auf oberster Ebene oder im Erstanbieterkontext angezeigt werden.
+* Teams Registerkarten verwenden`<iframes>`, um Inhalte einzubetten, die auf oberster Ebene oder im Erstanbieterkontext angezeigt werden.
 * Aufgabenmodule ermöglichen Ihnen das Erstellen von modalen Popup-Oberflächen in Ihrer Teams-Anwendung. Ähnlich wie bei einer Registerkarte wird ein modales Fenster auf der aktuellen Seite geöffnet.
 * Messaging-Erweiterungen ermöglichen es Ihnen, anreicherte Inhalte aus externen Ressourcen in eine Chatnachricht einzufügen.
 
@@ -81,10 +81,11 @@ Gemäß den aktualisierten SameSite-Einschränkungen fügt ein Browser kein Cook
 Android WebView ist eine Chrome-Systemkomponente, mit der Android-Apps den Webinhalt anzeigen können. Die neuen Einschränkungen sind zwar Standard, beginnend mit Chrome 80, werden jedoch nicht sofort in WebViews erzwungen. Sie werden in Zukunft angewendet. Zur Vorbereitung ermöglicht Android nativen Apps das direkte Festlegen von Cookies über die [CookieManager-API](https://developer.android.com/reference/android/webkit/CookieManager).
 
 > [!NOTE]
+>
 > * Sie müssen Cookies von Erstanbietern entsprechend `SameSite=Lax` deklarieren `SameSite=Strict`.
 > * Sie müssen Cookies von Drittanbietern als `SameSite=None; Secure`deklarieren.
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Siehe auch
 
 * [SameSite-Beispiele](https://github.com/GoogleChromeLabs/samesite-examples)
 * [SameSite-Cookie-Rezept](https://web.dev/samesite-cookie-recipes/)

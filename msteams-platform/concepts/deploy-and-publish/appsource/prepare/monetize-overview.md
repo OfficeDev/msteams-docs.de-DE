@@ -1,12 +1,17 @@
 ---
 title: Monetarisieren Der App-Übersicht
-description: 'Erfahren Sie, wie Sie Ihre Microsoft Teams-App monetisieren.'
+description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App monetarisieren.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
+ms.openlocfilehash: e371bcfe003ec2ff7122444e66df009c2436db7a
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453320"
 ---
-
 # <a name="monetize-your-app"></a>Monetarisieren Ihrer App
 
 Microsoft Teams App-Store Features bereitstellen, mit denen Sie Ihre Apps monetarisieren und Kunden gewinnen können, indem Sie mit Ihren Benutzern interagieren. Die Themen in diesem Abschnitt zeigen Ihnen, wie Sie diese Features in Ihre App integrieren.
@@ -19,7 +24,7 @@ Microsoft Teams App-Store Features bereitstellen, mit denen Sie Ihre Apps moneta
     :::column-end:::
     :::column span="2":::
 
-**Einschließen eines SaaS-Angebots mit Ihrer App**
+Fügen Sie ein SaaS-Angebot in Ihre App ein:
 
 Mit einem transaktionsfähigen [SaaS-Angebot (Software-as-a-Service)](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) können Sie Ihre Teams-App monetarisieren, indem Sie Abonnementpläne direkt aus Ihrem Teams Store-Eintrag verkaufen.
 
@@ -32,7 +37,7 @@ Mit einem transaktionsfähigen [SaaS-Angebot (Software-as-a-Service)](~/concepts
     :::column-end:::
     :::column span="2":::
 
-**Kostenlose Testversionen**
+Kostenlose Testversionen:
 
 Sie können eine kostenlose Testversion Ihrer App anbieten, um mehr Kunden dazu zu bringen, sie auszuprobieren. Um Kunden zum Kauf der Vollversion zu locken, können Sie die Features in der Testversion einschränken (z. B. nur eine begrenzte Anzahl von Antworten für eine Woche) oder einen Zeitraum für die Testversion angeben.
 
@@ -56,7 +61,7 @@ Unabhängig davon, ob Sie einen Preis für Ihre App berechnen oder kostenlos anb
     :::column-end:::
     :::column span="2":::
 
-**Testvorschau für monetarisierte Apps**
+Testvorschau für monetarisierte Apps:
 
 Mit einem SaaS-Angebot (Transactable Software as a Service) können Sie die End-to-End-Kauferfahrung für Ihre monetarisierten Apps in Teams testen, bevor Sie sie veröffentlichen.
 
@@ -64,6 +69,7 @@ Mit einem SaaS-Angebot (Transactable Software as a Service) können Sie die End-
 
     :::column-end:::
 :::row-end:::
+
 ## <a name="next-step"></a>Nächster Schritt
 
 [Einschließen eines SaaS-Angebots in Ihre Microsoft Teams-App](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

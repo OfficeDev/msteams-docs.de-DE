@@ -7,12 +7,12 @@ ms.date: 03/09/2020
 ms.localizationpriority: medium
 keywords: Microsoft Teams Connectors kronos
 ms.author: lajanuar
-ms.openlocfilehash: 21ea28e3b5d53226a2ab50ac22db31fef561596a
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 84e16f26dbe8597089e601e0d7eadca12a4a4446
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355741"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453103"
 ---
 # <a name="production-ready-shifts-connectors"></a>Produktionsfertige Shifts-Connectors  
 
@@ -36,7 +36,7 @@ Es folgen die wichtigsten Vorteile von Teams Shifts WFM-Connectors:
 
 * **Nahtlose Integration:** Die Integration zwischen WFM-Lösungen und Teams Schichten ermöglicht Mitarbeitern in Service und Produktion die Verwendung der Teams Shifts-App, um ihre Zeitpläne und Schichtzeiten anzuzeigen oder zu verwalten, und alle anderen umfassenden Funktionen für die Zusammenarbeit in Teams direkt von ihrem mobilen Gerät oder Desktop aus zu verwenden, ohne den Kontext zu einer anderen App wechseln zu müssen.  
 
-**Ansicht "Schichten öffnen" in Teams**
+Ansicht "Schichten öffnen" in Teams:
 
 Die Schichtansicht in Teams wird in der folgenden Abbildung angezeigt:
 

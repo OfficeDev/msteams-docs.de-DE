@@ -6,12 +6,12 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 692eebc774de42bddb2f832cb22681991ac0d87b
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 423e03e373edb1980186ea3dc43f2817d2e25636
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821381"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452564"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Zusammenarbeit an Teams Projekt mit Teams Toolkit
 
@@ -40,7 +40,7 @@ Die folgende Liste führt uns dazu, den Zusammenarbeitsprozess und dessen Einsch
 > [!NOTE]
 > Bevor Mitarbeiter für eine Umgebung hinzugefügt werden, muss der Projektbesitzer das Projekt zuerst [bereitstellen](provision.md) .
 
-* Wählen Sie im Abschnitt **"UMGEBUNG**" auf Teams Toolkit **Mitarbeiter aus**. Es zeigt die Optionen **"Add Microsoft 365 Teams App (with Azure AD App) Owners"** und **"List Microsoft 365 Teams App"-Besitzer (mit Azure AD App)-Besitzern** an, wie in den folgenden Abbildungen gezeigt:
+* Wählen Sie im Abschnitt **"UMGEBUNG"** auf Teams Toolkit **Mitarbeiter aus**. Es zeigt die Optionen **"Add Microsoft 365 Teams App (with Azure AD App) Owners"** und **"List Microsoft 365 Teams App"-Besitzer (mit Azure AD App)-Besitzern** an, wie in den folgenden Abbildungen gezeigt:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="Mitarbeiter":::
 
@@ -78,12 +78,13 @@ Mitarbeiter können nicht direkt aus Teams Toolkit-Erweiterung entfernt werden. 
   2. Wählen Sie **"Besitzer"** aus dem linken Bereich aus.
   3. Wählen Sie den Mitarbeiter aus, und entfernen Sie den Mitarbeiter.
   4. Wechseln Sie zu [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), wählen Sie **die App-Registrierung** im linken Bereich aus, und suchen Sie Ihre Azure AD-App.
-  5. Wählen Sie **"Besitzer"** im linken Bereich auf Azure AD App-Verwaltungsseite aus.
+  5. Wählen Sie **"Besitzer"** im linken Bereich auf Azure AD Seite "App-Verwaltung" aus.
   6. Wählen Sie den Mitarbeiter aus, und entfernen Sie den Mitarbeiter.
 
 > [!NOTE]
+>
 > * Mitarbeiter, die Ihrem Projekt hinzugefügt wurden, erhalten keine Benachrichtigung. Project Besitzer muss Mitarbeiter offline benachrichtigen.
-> * Azure-bezogene Berechtigungen müssen manuell vom Azure-Abonnementadministrator auf Microsoft Azure Portal festgelegt werden. Das Azure-Konto muss über eine Mitwirkenderolle für das Abonnement verfügen, damit Entwickler an der Bereitstellung und Bereitstellung des TeamsFx-Projekts zusammenarbeiten können.
+> * Azure-bezogene Berechtigungen müssen vom Azure-Abonnementadministrator auf Microsoft Azure Portal manuell festgelegt werden. Das Azure-Konto muss über eine Mitwirkenderolle für das Abonnement verfügen, damit Entwickler an der Bereitstellung und Bereitstellung des TeamsFx-Projekts zusammenarbeiten können.
 
 ## <a name="see-also"></a>Siehe auch
 

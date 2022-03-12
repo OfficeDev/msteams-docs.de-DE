@@ -5,12 +5,12 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 5ee1be71c0ba07612808dc8d1cfb766e2f40c36b
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 10c7bbf952311dd1668a3fa1b013228d9dd58000
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435258"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453117"
 ---
 # <a name="contribute-to-teams-documentation"></a>Mitwirken an der Teams-Dokumentation
 
@@ -21,13 +21,12 @@ Teams Dokumentation ist Teil der technischen **Dokumentationsbibliothek von Micr
 > [!div class="checklist"]
 >
 > * Installieren Sie [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-> * Installieren sie [Microsoft Visual Studio Code](https://code.visualstudio.com/) (VS Code).
+> * Installieren Sie [Microsoft Visual Studio Code](https://code.visualstudio.com/) (VS Code).
 > * Installieren Sie [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) direkt aus dem VS Code Marketplace.
 <br>&emsp;&emsp; Oder
-
 > [!div class="checklist"]
 >
-> * Installation in VS Code:
+> * Installieren in VS Code:
 
    1. Wählen Sie das **Erweiterungssymbol** auf der Seitenaktivitätsleiste aus, oder verwenden Sie den Befehl **Ansicht => Erweiterungen** oder STRG+UMSCHALT+X, und suchen Sie nach **Microsoft Docs Authoring Pack**.
    1. Wählen Sie **Installieren** aus.
@@ -35,13 +34,13 @@ Teams Dokumentation ist Teil der technischen **Dokumentationsbibliothek von Micr
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Überprüfen des Leitfadens für Mitwirkende zu Microsoft-Dokumenten
 
-Der Leitfaden für Mitwirkende gibt die Richtung zum Erstellen, Veröffentlichen und Aktualisieren von technischen **Inhalten auf der Microsoft Docs-Plattform an** . 
+Der Leitfaden für Mitwirkende gibt die Richtung zum Erstellen, Veröffentlichen und Aktualisieren von technischen **Inhalten auf der Microsoft Docs-Plattform an** .
 
 ## <a name="microsoft-writing-style-and-content-guides"></a>Microsoft Writing-, Style- und Inhaltshandbücher
 
 * **[Microsoft Writing Style Guide](/style-guide/welcome)**: Microsoft Writing Style Guide ist eine umfassende Ressource für technisches Schreiben und spiegelt den modernen Ansatz von Microsoft für Sprache und Stil wider. Fügen Sie dieses Onlinehandbuch zum **Favoritenmenü** Ihres Browsers hinzu, um eine einfache Referenz zu finden.
 
-* **[Schreiben von Entwicklerinhalten](/style-guide/developer-content/)**: Teams bestimmte Inhalte richten sich an eine Entwicklergruppe mit grundlegendem Verständnis von Programmierkonzepten und -prozessen. Es ist wichtig, dass Sie klare, technisch genaue Informationen auf überzeugende Weise bereitstellen und gleichzeitig den Ton und Stil von Microsoft beibehalten.
+* **[Schreiben von Entwicklerinhalten](/style-guide/developer-content/)**: Teams bestimmten Inhalten richtet sich an eine Entwicklergruppe mit grundlegendem Verständnis von Programmierkonzepten und -prozessen. Es ist wichtig, dass Sie klare, technisch genaue Informationen auf überzeugende Weise bereitstellen und gleichzeitig den Ton und Stil von Microsoft beibehalten.
 
 * **[Schrittweise Anleitungen](/style-guide/procedures-instructions/writing-step-by-step-instructions)**: Angewendete und interaktive Benutzeroberflächen sind eine großartige Möglichkeit für Entwickler, sich über Microsoft-Produkte und -Technologien zu informieren. Das Darstellen komplexer oder einfacher Prozeduren in einem progressiven Format ist natürlich und benutzerfreundlicher.
 
@@ -52,17 +51,18 @@ Der Leitfaden für Mitwirkende gibt die Richtung zum Erstellen, Veröffentlichen
 ## <a name="file-paths"></a>Dateipfade
 
 Wenn Sie relative Pfade verwenden und Links zu anderen Dokumentenmappen erstellen, ist es wichtig, einen gültigen Dateipfad für Hyperlinks in Ihrer Dokumentation festzulegen. Ihr Build ist auf GitHub nur erfolgreich, wenn der Dateipfad korrekt oder gültig ist.
- 
+
 Weitere Informationen zu Hyperlinks und Dateipfaden finden Sie unter ["Verwenden von Links" in der Dokumentation](/contribute/how-to-write-links).
 
 > [!IMPORTANT]
 > So verweisen Sie auf einen Artikel, **der Teil des** Teams Plattform-Docsets ist:<br>
 > &emsp;&#x2714; Verwenden Sie einen relativen Pfad ohne vorangestellten Schrägstrich.<br>
-> &emsp;&#x2714; Schließen Sie die Dateierweiterung Markdown ein.<br>
+> &emsp;&#x2714; schließen Sie die Dateierweiterung Markdown ein.<br>
 >Beispiel: **übergeordnetes Verzeichnis/Verzeichnis/Pfad-zu-article.md** – > [Erstellen einer App für Microsoft Teams](../concepts/building-an-app.md) <br><br>
 > So verweisen Sie auf einen Microsoft Docs-Bibliotheksartikel, **der nicht Teil des** Teams Plattform-Docsets ist:<br>
 > &emsp;&#x2714; Verwenden Sie einen relativen Pfad, der mit einem Schrägstrich beginnt.<br>
-> &emsp;&#x2714; Dateierweiterung nicht einschließen. <br> Beispiel: **/docset/address-to-file-location** - > [Verwenden der Microsoft Graph-API zum Arbeiten mit Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
+> &emsp;&#x2714; Dateierweiterung nicht einschließen. <br>
+> Beispiel: **/docset/address-to-file-location** - > [Verwenden der Microsoft Graph-API zum Arbeiten mit Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
 > Um auf eine Seite außerhalb der Microsoft Docs-Bibliothek zu verweisen, z. B. GitHub, verwenden Sie den vollständigen `https` Dateipfad.<br>
 
 ## <a name="code-samples-and-snippets"></a>Codebeispiele und Codeausschnitte

@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie Sie Ihre suchbasierte Teams Messaging-Erweit
 ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 743181b11d595aabdd9d7972674e843b598826af
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 0cb9cf0d1963e7d9fd2b8d27f245c251ef99c625
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356007"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453516"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Erweitern einer Teams Messaging-Erweiterung über Microsoft 365
 
@@ -21,6 +21,7 @@ Suchbasierte [Messaging-Erweiterungen](/microsoftteams/platform/messaging-extens
 Der Prozess zum Aktualisieren Ihrer suchbasierten Teams Messaging-Erweiterung zur Ausführung Outlook umfasst die folgenden Schritte:
 
 > [!div class="checklist"]
+>
 > * Aktualisieren des App-Manifests
 > * Hinzufügen eines Outlook Kanals für Ihren Bot
 > * Querladen der aktualisierten App in Teams
@@ -31,10 +32,10 @@ Der Rest dieses Handbuchs führt Sie durch diese Schritte und zeigt Ihnen, wie S
 
 Zum Abschließen dieses Lernprogramms benötigen Sie Folgendes:
 
- - Ein Sandkastenmandant des Microsoft 365-Entwicklerprogramms
- - Ihr Sandkastenmandant, der in *Office 365 Targeted Releases registriert ist*
- - Eine Testumgebung mit Office apps installiert aus dem Microsoft 365 Apps *Betakanal*
- - Microsoft Visual Studio Code mit der Erweiterung Teams Toolkit (Vorschau) (Optional)
+* Ein Sandkastenmandant des Microsoft 365-Entwicklerprogramms
+* Ihr Sandkastenmandant, der in *Office 365 Targeted Releases registriert ist*
+* Eine Testumgebung mit Office apps installiert aus dem Microsoft 365 Apps *Betakanal*
+* Microsoft Visual Studio Code mit der Erweiterung Teams Toolkit (Vorschau) (Optional)
 
 > [!div class="nextstepaction"]
 > [Erforderliche Komponenten installieren](prerequisites.md)
@@ -68,6 +69,7 @@ Sie haben zwei Optionen zum Aktualisieren Des App-Manifests:
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
 Wenn Sie Teams Toolkit zum Erstellen Ihrer Messaging-Erweiterungs-App verwendet haben, können Sie sie verwenden, um die Änderungen an Ihrer Manifestdatei zu überprüfen und Fehler zu identifizieren. Öffnen Sie die Befehlspalette`Ctrl+Shift+P`, und suchen Sie **nach Teams: Überprüfen der Manifestdatei**, oder wählen Sie die Option im Bereitstellungsmenü des Teams Toolkits aus (suchen Sie auf der linken Seite von Visual Studio Code nach dem Symbol Teams).
@@ -181,11 +183,11 @@ Wählen Sie im Menü *"Apps*" die Option *"Apps verwaltenSubmit* >  **einer App 
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams Admin Center
 
-Als Teams-Administrator können Sie das App-Paket für den Mandanten Ihrer Organisation hochladen https://admin.teams.microsoft.com/und vorab installieren. Weitere Informationen finden Sie [unter Hochladen Ihrer benutzerdefinierten Apps im Microsoft Teams Admin Center](/MicrosoftTeams/upload-custom-apps).
+Als Teams-Administrator können Sie das App-Paket für den Mandanten Ihrer Organisation von [Teams Administrator](https://admin.teams.microsoft.com/) hochladen und vorinstallieren. Weitere Informationen finden Sie [unter Hochladen Ihrer benutzerdefinierten Apps im Microsoft Teams Admin Center](/MicrosoftTeams/upload-custom-apps).
 
 #### <a name="microsoft-admin-center"></a>Microsoft Admin Center
 
-Als globaler Administrator können Sie das App-Paket hochladen und vorab installieren.https://admin.microsoft.com/ Weitere Informationen finden Sie [unter Testen und Bereitstellen von Microsoft 365 Apps von Partnern im Portal für integrierte Apps](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps).
+Als globaler Administrator können Sie das App-Paket von [Microsoft-Administrator](https://admin.microsoft.com/) hochladen und vorab installieren. Weitere Informationen finden Sie [unter Testen und Bereitstellen von Microsoft 365 Apps von Partnern im Portal für integrierte Apps](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps).
 
 ### <a name="multitenant-distribution"></a>Mehrinstanzenfähige Verteilung
 

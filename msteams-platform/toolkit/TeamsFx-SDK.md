@@ -6,16 +6,21 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 1e78827d4105eefb112bef40d059804a94050f2d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453621"
 ---
-
 # <a name="teamsfx-sdk-for-typescript-or-javascript"></a>TeamsFx SDK für TypeScript oder JavaScript
 
 TeamsFx zielt darauf ab, aufgaben der Implementierung von Identität und Zugriff auf Cloudressourcen auf einzeilige Anweisungen ohne Konfiguration zu reduzieren.
 
 Verwenden Sie die Bibliothek für Folgendes:
 
-- Greifen Sie auf ähnliche Weise auf Kernfunktionen in der Client- und Serverumgebung zu.
-- Schreiben von Benutzerauthentifizierungscode auf vereinfachte Weise.
+* Greifen Sie auf ähnliche Weise auf Kernfunktionen in der Client- und Serverumgebung zu.
+* Schreiben von Benutzerauthentifizierungscode auf vereinfachte Weise.
 
 ## <a name="get-started"></a>Erste Schritte
 
@@ -24,13 +29,14 @@ Weitere Informationen finden Sie unter [Teams App-Projekt](https://github.com/Of
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
-- Node.js Version `10.x.x` oder höher.
-- Wenn Ihr Projekt verwandte [Pakete](https://github.com/Microsoft/botbuilder-js#packages) als Abhängigkeiten installiert `botbuilder` hat, stellen Sie sicher, dass sie die gleiche Version aufweisen und die Version ist.`>= 4.9.3` ([Problem – alle BOTBUILDER-Pakete sollten dieselbe Version sein](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548)))
+* Node.js Oder höher `10.x.x` .
+* Wenn Ihr Projekt verwandte [Pakete](https://github.com/Microsoft/botbuilder-js#packages) als Abhängigkeiten installiert `botbuilder` hat, stellen Sie sicher, dass sie die gleiche Version aufweisen und die Version ist.`>= 4.9.3` ([Problem – alle BOTBUILDER-Pakete sollten dieselbe Version sein](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548)))
 
 Weitere Informationen finden Sie unter:
-* [Quellcode](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
-* [Paket (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
-* [API-Referenzdokumentation](https://aka.ms/teamsfx-sdk-help) 
+
+* [Quellcode](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
+* [Paket (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
+* [API-Referenzdokumentation](https://aka.ms/teamsfx-sdk-help)
 * [Beispiele](https://github.com/OfficeDev/TeamsFx-Samples)
 
 ### <a name="install-the-microsoftteamsfx-package"></a>Installieren des `@microsoft/teamsfx` Pakets
@@ -45,7 +51,7 @@ npm install @microsoft/teamsfx
 
 Zum Erstellen eines Graph-Clientobjekts für den Zugriff auf die Microsoft Graph-API benötigen Sie die Anmeldeinformationen, um sich zu authentifizieren. Das SDK bietet mehrere Anmeldeinformationsklassen zur Auswahl, die verschiedene Anforderungen erfüllen. Sie müssen die Konfiguration laden, bevor Sie Anmeldeinformationen verwenden.
 
-- In der Browserumgebung müssen Sie die Konfigurationsparameter explizit übergeben. Das Gerüst React Projekts hat zu verwendende Umgebungsvariablen bereitgestellt.
+* In der Browserumgebung müssen Sie die Konfigurationsparameter explizit übergeben. Das Gerüst React Projekts hat zu verwendende Umgebungsvariablen bereitgestellt.
 
 ```ts
 loadConfiguration({
@@ -56,7 +62,7 @@ loadConfiguration({
 });
 ```
 
-- In nodeJS-Umgebungen wie Azure Function können Sie einfach aufrufen `loadConfiguration`. Es wird standardmäßig aus Umgebungsvariablen geladen.
+* In nodeJS-Umgebungen wie Azure Function können Sie einfach aufrufen `loadConfiguration`. Es wird standardmäßig aus Umgebungsvariablen geladen.
 
 ```ts
 loadConfiguration();
@@ -77,6 +83,7 @@ const credential = new TeamsUserCredential();
 const graphClient = createMicrosoftGraphClient(credential, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
 const profile = await graphClient.api("/me").get();
 ```
+
 > [!NOTE]
 > Sie können diese Anmeldeinformationsklasse in der Browseranwendung verwenden, z. B. Teams Tab-App.
 

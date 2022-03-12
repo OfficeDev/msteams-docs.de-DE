@@ -6,22 +6,22 @@ keywords: Kameramedien qr code qrcode barcode barcode scanner scan capabilities 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: c21408ccbca6cd12d37d2066cf50f3468b669012
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 799306024980a9bb4e7a44b5ca654865303dec24
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887999"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452956"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR- oder Barcode-Scannerfunktion integrieren
 
-Barcode ist eine Methode zum Darstellen von Daten in einem visuellen und maschinenlesbaren Formular. Der Barcode enthält Informationen zu einem Produkt, z. B. Typ, Größe, Hersteller und Ursprungsland in Form von Balken und Leerzeichen. Der Code wird mithilfe des optischen Scanners auf Ihrer nativen Gerätekamera gelesen. Für eine umfassendere Zusammenarbeit können Sie die QR- oder Strichcodescanner-Funktion in die Teams-Plattform in Ihre Teams-App integrieren.   
+Barcode ist eine Methode zum Darstellen von Daten in einem visuellen und maschinenlesbaren Formular. Der Barcode enthält Informationen zu einem Produkt, z. B. Typ, Größe, Hersteller und Ursprungsland in Form von Balken und Leerzeichen. Der Code wird mithilfe des optischen Scanners auf Ihrer nativen Gerätekamera gelesen. Für eine umfassendere Zusammenarbeit können Sie die QR- oder Strichcodescanner-Funktion, die in der Teams-Plattform bereitgestellt wird, in Ihre Teams-App integrieren.
 
-Sie können [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)verwenden, das die tools bereitstellt, die Ihre App für den Zugriff auf die [systemeigenen Gerätefunktionen](native-device-permissions.md)des Benutzers benötigt. Verwenden Sie die [scanBarCode-API,](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) um die Scannerfunktion in Ihre App zu integrieren.
+Sie können [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) verwenden, das die tools bereitstellt, die Ihre App für den Zugriff auf die [systemeigenen Gerätefunktionen](native-device-permissions.md) des Benutzers benötigt. Verwenden Sie die [scanBarCode-API](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) , um die Scannerfunktion in Ihre App zu integrieren.
 
 ## <a name="advantage-of-integrating-qr-or-barcode-scanner-capability"></a>Vorteile der Integration von QR- oder Strichcodescannern
 
-Nachfolgend sind die Vorteile der Integration von QR- oder Strichcodescanner-Funktionen aufgeführt: 
+Nachfolgend sind die Vorteile der Integration von QR- oder Strichcodescanner-Funktionen aufgeführt:
 
 * Die Integration ermöglicht Web-App-Entwicklern auf Teams Plattform die Nutzung von QR- oder Strichcodescanfunktionen mit Teams JavaScript-Client-SDK.
 * Mit diesem Feature muss der Benutzer nur einen QR- oder Barcode innerhalb eines Frames in der Mitte der Scanner-UI ausrichten, und der Code wird automatisch gescannt. Die gespeicherten Daten werden wieder mit der aufrufenden Web-App geteilt. Dadurch werden die Unannehmlichkeiten und menschlichen Fehler vermieden, wenn lange Produktcodes oder andere relevante Informationen manuell eingegeben werden.
@@ -29,12 +29,12 @@ Nachfolgend sind die Vorteile der Integration von QR- oder Strichcodescanner-Fun
 Um DIE QR- oder Strichcodescanner-Funktion zu integrieren, müssen Sie die App-Manifestdatei aktualisieren und die [scanBarCode-API](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) aufrufen. Für eine effektive Integration müssen Sie über ein gutes Verständnis des [Codeausschnitts](#code-snippet) für den Aufruf der [scanBarCode-API](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) verfügen, mit dem Sie native QR- oder Strichcodescanner-Funktionen verwenden können. Die API gibt einen Fehler für einen nicht unterstützten Strichcodestandard aus.
 Es ist wichtig, sich mit den [API-Antwortfehlern](#error-handling) vertraut zu machen, um die Fehler in Ihrer Teams-App zu behandeln.
 
-> [!NOTE] 
-> Derzeit ist Microsoft Teams Unterstützung für QR- oder Strichcodescanner nur für mobile Clients verfügbar.
+> [!NOTE]
+> Derzeit ist Microsoft Teams Unterstützung für QR- oder Strichcodescanner-Funktionen nur für mobile Clients verfügbar.
 
 ## <a name="update-manifest"></a>Updatemanifest
 
-Aktualisieren Sie ihre Teams App [manifest.json-Datei,](../../resources/schema/manifest-schema.md#devicepermissions) indem Sie die Eigenschaft hinzufügen `devicePermissions` und `media` angeben. Damit kann Ihre App die erforderlichen Berechtigungen von Benutzern anfordern, bevor sie mit der Verwendung der QR- oder Strichcodescanner-Funktion beginnen. Das Update für das App-Manifest lautet wie folgt:
+Aktualisieren Sie ihre Teams App [manifest.json-Datei](../../resources/schema/manifest-schema.md#devicepermissions), indem Sie die `devicePermissions` Eigenschaft hinzufügen und angeben`media`. Damit kann Ihre App die erforderlichen Berechtigungen von Benutzern anfordern, bevor sie mit der Verwendung der QR- oder Strichcodescanner-Funktion beginnen. Das Update für das App-Manifest lautet wie folgt:
 
 ``` json
 "devicePermissions": [
@@ -43,20 +43,20 @@ Aktualisieren Sie ihre Teams App [manifest.json-Datei,](../../resources/schema/m
 ```
 
 > [!NOTE]
-> Die Eingabeaufforderung **"Berechtigungen anfordern"** wird automatisch angezeigt, wenn eine relevante Teams-API initiiert wird. Weitere Informationen finden Sie unter Anfordern von [Geräteberechtigungen.](native-device-permissions.md)
+> Die Eingabeaufforderung **"Berechtigungen anfordern**" wird automatisch angezeigt, wenn eine relevante Teams-API initiiert wird. Weitere Informationen finden Sie unter [Anfordern von Geräteberechtigungen](native-device-permissions.md).
 
 ## <a name="scanbarcode-api"></a>ScanBarCode-API
 
 Die [scanBarCode-API](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) ruft das Scannersteuerelement auf, mit dem der Benutzer verschiedene Barcodetypen scannen kann, und gibt das Ergebnis als Zeichenfolge zurück.
 
-Um die Strichcodeüberprüfung anzupassen, wird die optionale [Strichcodekonfiguration](/javascript/api/@microsoft/teams-js/microsoftteams.media.barcodeconfig?view=msteams-client-js-latest&preserve-view=true) als Eingabe an die [scanBarCode-API](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) übergeben. Sie können das Intervall für das Scantimeout in Sekunden angeben, indem Sie `timeOutIntervalInSec` . Der Standardwert ist 30 Sekunden und der Maximalwert beträgt 60 Sekunden.
+Um die Strichcodeüberprüfung anzupassen, wird die optionale [Strichcodekonfiguration](/javascript/api/@microsoft/teams-js/microsoftteams.media.barcodeconfig?view=msteams-client-js-latest&preserve-view=true) als Eingabe an die [scanBarCode-API](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) übergeben. Sie können das Intervall für das Scantimeout in Sekunden angeben, indem `timeOutIntervalInSec`Sie . Der Standardwert ist 30 Sekunden und der Maximalwert beträgt 60 Sekunden.
 
-Die **scanBarCode()-API** unterstützt die folgenden Strichcodetypen:
+Die **scanBarCode()** -API unterstützt die folgenden Strichcodetypen:
 
 | Strichcodetyp | Unterstützt unter Android | Unterstützt unter iOS |
 | ---------- | ---------- | ------------ |
 | Codeleiste | Ja | Nein |
-| Code 39 | Ja | Ja | 
+| Code 39 | Ja | Ja |
 | Code 93 | Ja | Ja |
 | Code 128 | Ja | Ja |
 | EAN-13 | Ja | Ja |
@@ -74,7 +74,7 @@ Die folgende Abbildung zeigt die Web-App-Erfahrung der QR- oder Strichcodescanne
 
 ## <a name="error-handling"></a>Fehlerbehandlung
 
-Sie müssen sicherstellen, dass diese Fehler in Ihrer Teams-App ordnungsgemäß behandelt werden. In der folgenden Tabelle sind die Fehlercodes und die Bedingungen aufgeführt, unter denen die Fehler generiert werden: 
+Sie müssen sicherstellen, dass diese Fehler in Ihrer Teams-App ordnungsgemäß behandelt werden. In der folgenden Tabelle sind die Fehlercodes und die Bedingungen aufgeführt, unter denen die Fehler generiert werden:
 
 |Fehlercode |  Fehlername     | Bedingung|
 | --------- | --------------- | -------- |
@@ -89,7 +89,7 @@ Sie müssen sicherstellen, dass diese Fehler in Ihrer Teams-App ordnungsgemäß 
 
 ## <a name="code-snippet"></a>Codeausschnitt
 
-**Anrufe `ScanBarCode()` API** zum Scannen von QR oder Strichcode mithilfe der Kamera:
+**Aufrufen `ScanBarCode()` API** zum Scannen von QR oder Strichcode mithilfe der Kamera:
 
 ```javascript
 const config: microsoftTeams.media.BarCodeConfig = {

@@ -1,21 +1,21 @@
 ---
 title: Hinzufügen von Funktionen zu Ihren Teams-Apps
 author: MuyangAmigo
-description: Beschreibt die Add-Funktionen von Teams Toolkit
+description: Beschreibt das Hinzufügen von Funktionen des Teams Toolkits
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 3e704b08caa9a3aafc388fe4aa2e8851292c944f
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 246a871c26b0194d74e7d1fc8a3cb8be64d55fe6
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435803"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453236"
 ---
 # <a name="add-capabilities-to-your-teams-apps"></a>Hinzufügen von Funktionen zu Ihren Teams-Apps
 
-Sie können eine neue Teams-App mit einer der Teams-App-Funktionen erstellen. Während der App-Entwicklung können Sie Teams Toolkit verwenden, um Ihrer Teams App weitere Funktionen hinzuzufügen. In der folgenden Tabelle sind die Teams App-Funktionen aufgeführt:
+Sie können eine neue Teams-App mit einer der Teams App-Funktionen erstellen. Während der App-Entwicklung können Sie Teams Toolkit verwenden, um Ihrer Teams App weitere Funktionen hinzuzufügen. In der folgenden Tabelle sind die Teams App-Funktionen aufgeführt:
 
 |**Funktion**|**Beschreibung**|
 |--------|-------------|
@@ -41,8 +41,8 @@ Sie können eine neue Teams-App mit einer der Teams-App-Funktionen erstellen. W�
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add capabilities.png" alt-text="capabilities":::
 
-   Sie können auch die Befehlspalette öffnen und **Teams: Hinzufügen von Funktionen** eingeben: 
-      
+   Sie können auch die Befehlspalette öffnen und **Teams: Hinzufügen von Funktionen** eingeben:
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/tree view capabilities.png" alt-text="Alternative Funktionen":::
 
 1. Wählen Sie im Popup die Funktionen aus, die in Ihr Projekt eingeschlossen werden sollen:
@@ -66,11 +66,11 @@ Die ausgewählten Funktionen werden ihrem Projekt erfolgreich hinzugefügt. Das 
 
 ## <a name="supported-capabilities-matrix"></a>Matrix der unterstützten Funktionen
 
-Neben den Funktionen, die Ihre Teams-App bereits hat, können Sie ihrer Teams App verschiedene Funktionen hinzufügen. Die folgende Tabelle enthält die verschiedenen Teams App-Funktionen: 
+Abgesehen von den Funktionen, über die Ihre Teams-App bereits verfügt, können Sie Ihrer Teams App verschiedene Funktionen hinzufügen. Die folgende Tabelle enthält die verschiedenen Teams App-Funktionen:
 
 |Vorhandene Funktionen|Weitere unterstützte Funktionen können hinzugefügt werden|
 |--------------------|--------------------|
-|Registerkarten mit SPFx|None|
+|Registerkarten mit SPFx|Keine|
 |Registerkarten mit Azure|Bot- und Messaging-Erweiterung|
 |Bot|Registerkarten|
 |Messaging-Erweiterung|Registerkarten und Bot|
@@ -83,26 +83,26 @@ Neben den Funktionen, die Ihre Teams-App bereits hat, können Sie ihrer Teams Ap
 
 Nach dem Hinzufügen von Bot- und Messaging-Erweiterungen sind die Änderungen in Ihrem Projekt wie folgt:
 
-- Ein Botvorlagencode wird einem Unterordner mit Pfad `yourProjectFolder/bot`hinzugefügt. Dies schließt eine **Hello** World-Bot-Anwendungsvorlage in Ihr Projekt ein.
-- `launch.json`und `task.json` unter `.vscode` Ordner aktualisiert werden, die erforderliche Skripts für Visual Studio Code enthalten und ausgeführt werden, wenn Sie Ihre Anwendung lokal debuggen möchten. 
-- `manifest.remote.template.json`und `manifest.local.template.json` datei unter `templates/appPackage` Ordner aktualisiert werden, die Bot-bezogene Informationen in der Manifestdatei enthält, die Ihre Anwendung in der Teams-Plattform darstellt. Folgende Änderungen stehen zur Verfügung:
-  - Die ID Ihres Bots.
-  - Die Bereiche Ihres Bots.
-  - Die Befehle, auf die die Hello World-Bot-Anwendung reagieren kann.
-- Die Dateien unter `templates/azure/teamsfx` werden aktualisiert, und `templates/azure/provision/xxx`die Bicep-Datei wird neu generiert.
-- Die dateien unter `.fx/config` werden neu generiert, wodurch sichergestellt wird, dass Ihr Projekt mit den richtigen Konfigurationen für neu hinzugefügte Funktionen festgelegt ist.
+* Ein Botvorlagencode wird einem Unterordner mit Pfad `yourProjectFolder/bot`hinzugefügt. Dies schließt eine **Hello** World-Bot-Anwendungsvorlage in Ihr Projekt ein.
+* `launch.json`und `task.json` unter `.vscode` Ordner aktualisiert werden, die erforderliche Skripts für Visual Studio Code enthalten und ausgeführt werden, wenn Sie Ihre Anwendung lokal debuggen möchten.
+* `manifest.remote.template.json`und `manifest.local.template.json` datei unter `templates/appPackage` Ordner aktualisiert werden, die Bot-bezogene Informationen in der Manifestdatei enthält, die Ihre Anwendung in der Teams-Plattform darstellt. Folgende Änderungen stehen zur Verfügung:
+  * Die ID Ihres Bots.
+  * Die Bereiche Ihres Bots.
+  * Die Befehle, auf die die Hello World-Bot-Anwendung reagieren kann.
+* Die Dateien unter `templates/azure/teamsfx` werden aktualisiert, und `templates/azure/provision/xxx`die Bicep-Datei wird neu generiert.
+* Die dateien unter `.fx/config` werden neu generiert, wodurch sichergestellt wird, dass Ihr Projekt mit den richtigen Konfigurationen für neu hinzugefügte Funktionen festgelegt ist.
 
 Nach dem Hinzufügen der Registerkarte sind die Änderungen in Ihrem Projekt wie folgt:
 
-- In einem Unterordner mit Pfad `yourProjectFolder/tab`wird ein Vorlagencode für die Front-End-Registerkarte hinzugefügt, der eine Anwendungsvorlage für **hello world-Registerkarten** in Ihr Projekt einschließt.
-- `launch.json`und `task.json` unter `.vscode` Ordner aktualisiert werden, die erforderliche Skripts für Visual Studio Code enthalten und ausgeführt werden, wenn Sie Ihre Anwendung lokal debuggen möchten. 
-- `manifest.remote.template.json`und `manifest.local.template.json` datei unter `templates/appPackage` Ordner aktualisiert werden, die Registerkartenbezogene Informationen in der Manifestdatei enthält, die Ihre Anwendung in der Teams Plattform darstellt, die Änderungen sind wie folgt:
-  - Die konfigurierbaren und statischen Registerkarten.
-  - Die Bereiche der Registerkarten.
-- Die Dateien unter `templates/azure/teamsfx` werden aktualisiert, und `templates/azure/provision/xxx`die Bicep-Datei wird neu generiert.
-- Die Datei unter `.fx/config` wird neu generiert, wodurch sichergestellt wird, dass Ihr Projekt mit den richtigen Konfigurationen für neu hinzugefügte Funktionen festgelegt ist.
+* In einem Unterordner mit Pfad `yourProjectFolder/tab`wird ein Vorlagencode für die Front-End-Registerkarte hinzugefügt, der eine Anwendungsvorlage für **hello world-Registerkarten** in Ihr Projekt einschließt.
+* `launch.json`und `task.json` unter `.vscode` Ordner aktualisiert werden, die erforderliche Skripts für Visual Studio Code enthalten und ausgeführt werden, wenn Sie Ihre Anwendung lokal debuggen möchten.
+* `manifest.remote.template.json`und `manifest.local.template.json` datei unter `templates/appPackage` Ordner aktualisiert werden, die registerkartenbezogene Informationen in der Manifestdatei enthält, die Ihre Anwendung in der Teams Plattform darstellt, sind die Änderungen wie folgt:
+  * Die konfigurierbaren und statischen Registerkarten.
+  * Die Bereiche der Registerkarten.
+* Die Dateien unter `templates/azure/teamsfx` werden aktualisiert, und `templates/azure/provision/xxx`die Bicep-Datei wird neu generiert.
+* Die Datei unter `.fx/config` wird neu generiert, wodurch sichergestellt wird, dass Ihr Projekt mit den richtigen Konfigurationen für neu hinzugefügte Funktionen festgelegt ist.
 
-## <a name="limitations"></a>Begrenzungen
+## <a name="limitations"></a>Einschränkungen
 
 Die Einschränkungen für TeamsFx beim Hinzufügen weiterer Funktionen sind wie folgt:
 

@@ -1,38 +1,38 @@
 ---
-title: Personenauswahl in adaptiven Karten
+title: Personenauswahl in Adaptiven Karten
 description: Beschreibt die Verwendung des Personenauswahl-Steuerelements in adaptiven Karten
 localization_priority: Normal
 keywords: Personenauswahl für adaptive Karten
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 4fda2916c6eaeb3cc0878911c21eb20e276844f3
-ms.sourcegitcommit: 20b84e13b5cb6899f4eb54ca90a13b6da7a3e3d1
+ms.openlocfilehash: 715ed7460b248323a1187ac1f41054f301e37cd0
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "62855893"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453082"
 ---
-# <a name="people-picker-in-adaptive-cards"></a>Personenauswahl in adaptiven Karten
+# <a name="people-picker-in-adaptive-cards"></a>Personenauswahl in Adaptiven Karten
 
 >[!NOTE]
 > Derzeit ist die Personenauswahl in adaptiven Karten in der [öffentlichen Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) nur für mobilgeräte und allgemein verfügbar (GA) für Desktops verfügbar.
 
-Die Personenauswahl hilft Benutzern, Benutzer auf einer adaptiven Karte zu suchen und auszuwählen. Sie können die Personenauswahl als Eingabesteuerelement zur adaptiven Karte hinzufügen, die in Chats, Kanälen, Aufgabenmodulen und Registerkarten funktioniert. Die Personenauswahl unterstützt die folgenden Features:        
+Die Personenauswahl hilft Benutzern, Benutzer auf einer adaptiven Karte zu suchen und auszuwählen. Sie können die Personenauswahl als Eingabesteuerelement zur adaptiven Karte hinzufügen, die in Chats, Kanälen, Aufgabenmodulen und Registerkarten funktioniert. Die Personenauswahl unterstützt die folgenden Features:
 
 * Durchsucht einzelne oder mehrere Benutzer.
-* Wählt einzelne oder mehrere Benutzer aus. 
-* Weist einzelnen oder mehreren Benutzern neu zu. 
+* Wählt einzelne oder mehrere Benutzer aus.
+* Weist einzelnen oder mehreren Benutzern neu zu.
 * Füllt den Namen der ausgewählten Benutzer vorab auf.
 
-## <a name="popular-scenarios"></a>Beliebte Szenarien 
+## <a name="popular-scenarios"></a>Beliebte Szenarien
 
 Die folgende Tabelle enthält häufig verwendete Szenarien für die Personenauswahl in adaptiven Karten und die entsprechenden Aktionen:
 
 |Szenarien|Aktionen|
 |----------|-------------------------|
 |Genehmigungsbasierte Szenarien| Um die Genehmigung basierend auf der Anforderung anzufordern, zuzuweisen und dem gewünschten Benutzer neu zuzuweisen.|
-|Verwaltung von Sicherheitsvorfällen| Zum Nachverfolgen von Vorfällen und benachrichtigen, zuweisen und dem vorgesehenen Benutzer zur sofortigen Aktion erneut zuweisen.| 
+|Verwaltung von Sicherheitsvorfällen| Zum Nachverfolgen von Vorfällen und benachrichtigen, zuweisen und dem vorgesehenen Benutzer zur sofortigen Aktion erneut zuweisen.|
 |Projektmanagement| So weisen Sie bestimmten Benutzern Tickets oder Fehler zu.|
 |Benutzersuche| So suchen Sie in der gesamten Organisation nach Benutzern.|
 
@@ -42,17 +42,17 @@ Der Web- und Desktopclient unterstützt personenauswahl in adaptiver Karte. Bei 
 
 ### <a name="reassignment-scenario-example"></a>Beispiel für ein Neuzuweisungsszenario
 
-Benutzer A (Robert) erhält ein Ticket für eine Aufgabe in einem Kanal und erkennt einen falschen Zugewiesenen. Benutzer A weist die Aufgabe, die die Informationen zurück an den Bot sendet, neu zu. 
+Benutzer A (Robert) erhält ein Ticket für eine Aufgabe in einem Kanal und erkennt einen falschen Zugewiesenen. Benutzer A weist die Aufgabe, die die Informationen zurück an den Bot sendet, neu zu.
 
-**So weisen Sie eine Aufgabe neu zu**
+So weisen Sie alle Aufgaben neu zu:
 
 1. Wählen Sie **"Neu zuweisen** " aus, wo das Personenauswahlfeld mit dem Namen vorgefüllt wird, um die Aufgabe dem gewünschten Benutzer neu zuzuweisen.
-1. Entfernen Sie den falschen Benutzernamen. 
-1. Wählen Sie die gewünschten Benutzer gemäß Bildszenario, Benutzer B (Dropdown) und Benutzer C (Robin) für die Aufgabe aus. 
-1. Wählen Sie **Zuweisen** aus. Nach der Zuweisung werden die Informationen an den Bot gesendet. 
-   Der Bot aktualisiert die adaptive Karte und benachrichtigt die beabsichtigten Benutzer. 
- 
-Die folgende Abbildung zeigt das Neuzuweisungsszenario:    
+1. Entfernen Sie den falschen Benutzernamen.
+1. Wählen Sie die gewünschten Benutzer gemäß Bildszenario, Benutzer B (Dropdown) und Benutzer C (Robin) für die Aufgabe aus.
+1. Wählen Sie **Zuweisen** aus. Nach der Zuweisung werden die Informationen an den Bot gesendet.
+   Der Bot aktualisiert die adaptive Karte und benachrichtigt die beabsichtigten Benutzer.
+
+Die folgende Abbildung zeigt das Neuzuweisungsszenario:
 
 ![Personenauswahl auf desktop](../../assets/images/cards/desktoppp.gif)
 
@@ -65,18 +65,18 @@ Mobile Android- und iOS-Clients unterstützen personenauswahl in adaptiven Karte
 
 ### <a name="reassignment-scenario-example"></a>Beispiel für ein Neuzuweisungsszenario
 
-Benutzer A (Robert) erhält ein Ticket für eine Aufgabe in einem Kanal und erkennt einen falschen Zugewiesenen. Benutzer A weist die Aufgabe, die die Informationen zurück an den Bot sendet, neu zu. 
+Benutzer A (Robert) erhält ein Ticket für eine Aufgabe in einem Kanal und erkennt einen falschen Zugewiesenen. Benutzer A weist die Aufgabe, die die Informationen zurück an den Bot sendet, neu zu.
 
-**So weisen Sie eine Aufgabe neu zu**
+So weisen Sie alle Aufgaben neu zu:
 
 1. Wählen Sie **"Neu zuweisen** " aus, wo das Personenauswahlfeld mit dem Namen vorgefüllt wird, um die Aufgabe dem gewünschten Benutzer neu zuzuweisen.
 1. Entfernen Sie den falschen Benutzernamen.
 1. Wählen Sie die gewünschten Benutzer gemäß Bildszenario, Benutzer B (Dropdown) und Benutzer C (Robin) für die Aufgabe aus.
 1. Wählen Sie **Fertig** aus.
-1. Wählen Sie **Zuweisen** aus. Nach der Zuweisung werden die Informationen an den Bot gesendet. 
-   Der Bot aktualisiert die adaptive Karte und benachrichtigt die beabsichtigten Benutzer. 
+1. Wählen Sie **Zuweisen** aus. Nach der Zuweisung werden die Informationen an den Bot gesendet.
+   Der Bot aktualisiert die adaptive Karte und benachrichtigt die beabsichtigten Benutzer.
 
-Die folgende Abbildung zeigt das Neuzuweisungsszenario: 
+Die folgende Abbildung zeigt das Neuzuweisungsszenario:
 
 ![Personenauswahl auf Mobilgeräten](../../assets/images/cards/mobilepp.gif)
 
@@ -84,7 +84,7 @@ Die folgende Abbildung zeigt das Neuzuweisungsszenario:
 
 ## <a name="implement-people-picker"></a>Implementieren der Personenauswahl
 
-Die Personenauswahl wird als Erweiterung des [Input.ChoiceSet-Steuerelements](https://adaptivecards.io/explorer/Input.ChoiceSet.html) implementiert. Das Eingabesteuerelement enthält die folgenden Auswahlen:   
+Die Personenauswahl wird als Erweiterung des [Input.ChoiceSet-Steuerelements](https://adaptivecards.io/explorer/Input.ChoiceSet.html) implementiert. Das Eingabesteuerelement enthält die folgenden Auswahlen:
 
 * Dropdown, z. B. eine erweiterte Auswahl.
 * Optionsfeld, z. B. eine einzelne Auswahl.
@@ -107,48 +107,50 @@ Die folgenden Eigenschaften sind Ergänzungen zum Schema, um die `Input.ChoiceSe
 
 |Eigenschaft |Typ |Erforderlich |Beschreibung|
 |--|--|--|--|
-|**Dataset** |Zeichenfolge |Ja |Der Datentyp, der dynamisch abgerufen werden muss.|   
+|**Dataset** |Zeichenfolge |Ja |Der Datentyp, der dynamisch abgerufen werden muss.|
 
 #### <a name="dataset"></a>Dataset
-Die folgende Tabelle enthält vordefinierte Werte als **Dataset** für die Personenauswahl:   
+
+Die folgende Tabelle enthält vordefinierte Werte als **Dataset** für die Personenauswahl:
 
 |Dataset|Suchbereich
 |--|--|
 |**graph.microsoft.com/users** |Durchsuchen Sie alle Mitglieder in der gesamten Organisation.|
-|**graph.microsoft.com/users?scope=currentContext** |Suchen Sie innerhalb der Mitglieder der aktuellen Unterhaltung, z. B. Chat oder Kanal, in dem die bestimmte Karte gesendet wird.|        
+|**graph.microsoft.com/users?scope=currentContext** |Suchen Sie innerhalb der Mitglieder der aktuellen Unterhaltung, z. B. Chat oder Kanal, in dem die bestimmte Karte gesendet wird.|
 
 ### <a name="example"></a>Beispiel
+
 Das Codebeispiel für das Erstellen der Personenauswahl mit der Organisationssuche lautet wie folgt:
 
-```json 
+```json
 {
-    "type": "AdaptiveCard",
-    "body": [
-        {
-            "type": "TextBlock",
-            "size": "Medium",
-            "weight": "Bolder",
-            "text": "People Picker with Org search enabled"
-        },
-        {
-            "type": "Input.ChoiceSet",
-            "choices": [],
-            "choices.data": {
-                "type": "Data.Query",
-                "dataset": "graph.microsoft.com/users"
-            },
-            "id": "people-picker",
-            "isMultiSelect": true
-        }
-    ],
-    "actions": [
-        {
-            "type": "Action.Submit",
-            "title": "Submit"
-        }
-    ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.2"
+ "type": "AdaptiveCard",
+ "body": [
+  {
+   "type": "TextBlock",
+   "size": "Medium",
+   "weight": "Bolder",
+   "text": "People Picker with Org search enabled"
+  },
+  {
+   "type": "Input.ChoiceSet",
+   "choices": [],
+   "choices.data": {
+    "type": "Data.Query",
+    "dataset": "graph.microsoft.com/users"
+   },
+   "id": "people-picker",
+   "isMultiSelect": true
+  }
+ ],
+ "actions": [
+  {
+   "type": "Action.Submit",
+   "title": "Submit"
+  }
+ ],
+ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+ "version": "1.2"
 }
 ```  
 
@@ -170,47 +172,47 @@ Das Format des an den Bot übermittelten Werts hängt vom Wert der `isMultiSelec
 |false _(einzelne Auswahl)_|<selected_Azure_AD_ID>|
 |true _(Mehrfachauswahl)_|<selected_Azure_AD_ID_1>,<selected_Azure_AD_ID_2>,<selected_Azure_AD_ID_3>|  
 
-Mit der wählt die `Azure AD ID`Personenauswahl den entsprechenden Benutzer vorab aus. 
+Mit der wählt die `Azure AD ID`Personenauswahl den entsprechenden Benutzer vorab aus.
 
 ## <a name="preselection-of-user"></a>Vorauswahl des Benutzers
 
 Die Personenauswahl unterstützt die Vorabauswahl des Benutzers im Steuerelement beim Erstellen und Senden einer adaptiven Karte. `Input.ChoiceSet` unterstützt die `value` Eigenschaft, die für die Vorabauswahl eines Benutzers verwendet wird. Das Format dieser `value` Eigenschaft entspricht dem format des übermittelten Werts in der [Datenübermittlung](#data-submission).  
 Die folgende Liste enthält die Informationen für die Vorabauswahl von Benutzern:
 
-* Geben Sie für einen einzelnen Benutzer im Steuerelement den `Azure AD ID` Benutzer als `value`. 
+* Geben Sie für einen einzelnen Benutzer im Steuerelement den `Azure AD ID` Benutzer als `value`.
 * Geben Sie für mehrere Benutzer, z `isMultiSelect` `true`. B. eine durch Trennzeichen getrennte Zeichenfolge von `Azure AD ID`s an.  
 
 Im folgenden Beispiel wird die Vorauswahl eines einzelnen Benutzers beschrieben:
 
 ```json
 {
-    "type": "AdaptiveCard",
-    "body": [
-        {
-            "type": "TextBlock",
-            "size": "Medium",
-            "weight": "Bolder",
-            "text": "People Picker with Org search enabled"
-        },
-        {
-            "type": "Input.ChoiceSet",
-            "choices": [],
-            "choices.data": {
-                "type": "Data.Query",
-                "dataset": "graph.microsoft.com/users"
-            },
-            "id": "people-picker",
-            "value": "<Azure AD ID 1>"
-        }
-    ],
-    "actions": [
-        {
-            "type": "Action.Submit",
-            "title": "Submit"
-        }
-    ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.2"
+ "type": "AdaptiveCard",
+ "body": [
+  {
+   "type": "TextBlock",
+   "size": "Medium",
+   "weight": "Bolder",
+   "text": "People Picker with Org search enabled"
+  },
+  {
+   "type": "Input.ChoiceSet",
+   "choices": [],
+   "choices.data": {
+    "type": "Data.Query",
+    "dataset": "graph.microsoft.com/users"
+   },
+   "id": "people-picker",
+   "value": "<Azure AD ID 1>"
+  }
+ ],
+ "actions": [
+  {
+   "type": "Action.Submit",
+   "title": "Submit"
+  }
+ ],
+ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+ "version": "1.2"
 }
 ```  
 
@@ -218,85 +220,85 @@ Im folgenden Beispiel wird die Vorauswahl mehrerer Benutzer beschrieben:
 
 ```json
 {
-    "type": "AdaptiveCard",
-    "body": [
-        {
-            "type": "TextBlock",
-            "size": "Medium",
-            "weight": "Bolder",
-            "text": "People Picker with Org search enabled"
-        },
-        {
-            "type": "Input.ChoiceSet",
-            "choices": [],
-            "choices.data": {
-                "type": "Data.Query",
-                "dataset": "graph.microsoft.com/users"
-            },
-            "id": "people-picker",
-            "isMultiSelect": true,
-            "value": "<Azure AD ID 1>,<Azure AD ID 2>,<Azure AD ID 3>"
-        }
-    ],
-    "actions": [
-        {
-            "type": "Action.Submit",
-            "title": "Submit"
-        }
-    ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.2"
+ "type": "AdaptiveCard",
+ "body": [
+  {
+   "type": "TextBlock",
+   "size": "Medium",
+   "weight": "Bolder",
+   "text": "People Picker with Org search enabled"
+  },
+  {
+   "type": "Input.ChoiceSet",
+   "choices": [],
+   "choices.data": {
+    "type": "Data.Query",
+    "dataset": "graph.microsoft.com/users"
+   },
+   "id": "people-picker",
+   "isMultiSelect": true,
+   "value": "<Azure AD ID 1>,<Azure AD ID 2>,<Azure AD ID 3>"
+  }
+ ],
+ "actions": [
+  {
+   "type": "Action.Submit",
+   "title": "Submit"
+  }
+ ],
+ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+ "version": "1.2"
 }
 ```
- 
+
 ## <a name="static-choices"></a>Statische Auswahlmöglichkeiten
 
 Die statische Auswahl unterstützt Szenarien, in denen benutzerdefinierte Profile in die vordefinierten Datasets eingefügt werden müssen. `Input.ChoiceSet` unterstützt die statische Angabe `choices` in der JSON. Die statische Auswahl wird verwendet, um die Auswahlmöglichkeiten zu erstellen, aus denen der Benutzer auswählen kann.
 
 > [!NOTE]
-> Statisch `choices` werden mit dynamischen Datasets verwendet. 
+> Statisch `choices` werden mit dynamischen Datasets verwendet.
 
-Die Auswahl besteht aus `title` und `value`. Wenn diese Auswahl zusammen mit der Personenauswahl verwendet wird, werden diese Optionen in Benutzerprofile übersetzt, die `title` den Namen und den `value` Bezeichner aufweisen. Diese benutzerdefinierten Profile sind auch Teil der Suchergebnisse, wenn die Suchabfrage mit der angegebenen `title`übereinstimmt.    
-Im folgenden Beispiel werden statische Auswahlmöglichkeiten beschrieben: 
+Die Auswahl besteht aus `title` und `value`. Wenn diese Auswahl zusammen mit der Personenauswahl verwendet wird, werden diese Optionen in Benutzerprofile übersetzt, die `title` den Namen und den `value` Bezeichner aufweisen. Diese benutzerdefinierten Profile sind auch Teil der Suchergebnisse, wenn die Suchabfrage mit der angegebenen `title`übereinstimmt.
+Im folgenden Beispiel werden statische Auswahlmöglichkeiten beschrieben:
 
 ```json
 {
-    "type": "AdaptiveCard",
-    "body": [
-        {
-            "type": "TextBlock",
-            "size": "Medium",
-            "weight": "Bolder",
-            "text": "People Picker with Org search enabled"
-        },
-        {
-            "type": "Input.ChoiceSet",
-            "choices": [
-                {
-                    "title": "Custom Profile 1",
-                    "value": "Profile1"
-                },
-                {
-                    "title": "Custom Profile 2",
-                    "value": "Profile2"
-                }
-            ],
-            "choices.data": {
-                "type": "Data.Query",
-                "dataset": "graph.microsoft.com/users"
-            },
-            "id": "people-picker",
-            "isMultiSelect": true
-        }
-    ],
-    "actions": [
-        {
-            "type": "Action.Submit",
-            "title": "Submit"
-        }
-    ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.2"
+ "type": "AdaptiveCard",
+ "body": [
+  {
+   "type": "TextBlock",
+   "size": "Medium",
+   "weight": "Bolder",
+   "text": "People Picker with Org search enabled"
+  },
+  {
+   "type": "Input.ChoiceSet",
+   "choices": [
+    {
+     "title": "Custom Profile 1",
+     "value": "Profile1"
+    },
+    {
+     "title": "Custom Profile 2",
+     "value": "Profile2"
+    }
+   ],
+   "choices.data": {
+    "type": "Data.Query",
+    "dataset": "graph.microsoft.com/users"
+   },
+   "id": "people-picker",
+   "isMultiSelect": true
+  }
+ ],
+ "actions": [
+  {
+   "type": "Action.Submit",
+   "title": "Submit"
+  }
+ ],
+ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+ "version": "1.2"
 }
 ```
 
@@ -304,17 +306,14 @@ Die folgende Abbildung zeigt die Personenauswahl in adaptiven Karten mit statisc
 
 ![Statische Auswahl der Personenauswahl](../../assets/images/cards/peoplepicker-static-choice.png)
 
-
 Sie können die Personenauswahl für eine effiziente Aufgabenverwaltung in verschiedenen Szenarien implementieren.  
 
 ## <a name="code-sample"></a>Codebeispiel
 
-| Beispielname           | Beschreibung | C#    | Node.js   |   
+| Beispielname           | Beschreibung | C#    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Personenauswahl-Steuerelement in adaptiven Karten| In diesem Beispiel wird die Verwendung des Personenauswahl-Steuerelements in adaptiven Karten veranschaulicht.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) | 
-
+|Personenauswahl-Steuerelement in adaptiven Karten| In diesem Beispiel wird die Verwendung des Personenauswahl-Steuerelements in adaptiven Karten veranschaulicht.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 
 [Kartenreferenz](cards-reference.md)
-

@@ -1,18 +1,18 @@
 ---
-title: Kontext für Ihren Microsoft Teams Bot abrufen
+title: Abrufen des Kontexts für Ihren Microsoft Teams-Bot
 description: Beschreibt, wie Kontext für Bots in Microsoft Teams
 keywords: Teams-Bots-Kontext
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 94d94f3f4c9c522a0fbccb448ba371e96da6c070
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: c4f2df1168b5e429b1d5a1107cd07264e10243bc
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443993"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453145"
 ---
-# <a name="get-context-for-your-microsoft-teams-bot"></a>Kontext für Ihren Microsoft Teams Bot abrufen
+# <a name="get-context-for-your-microsoft-teams-bot"></a>Abrufen des Kontexts für Ihren Microsoft Teams-Bot
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -21,7 +21,7 @@ Ihr Bot kann auf zusätzlichen Kontext über das Team oder den Chat zugreifen, z
 > [!NOTE]
 >
 > * Microsoft Teams-spezifischen Bot-APIs können Sie am besten über unsere Erweiterungen für das Bot Builder SDK aufrufen.
-> * Laden Sie für C# oder .NET das [Paket "Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet" herunter.
+> * Laden Sie für C# oder .NET unser [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet-Paket herunter.
 > * Für Node.js Entwicklung ist der Bot Builder für Teams Funktionalität in das [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6 integriert.
 
 ## <a name="fetch-the-team-roster"></a>Abrufen der Teamliste
@@ -95,7 +95,7 @@ foreach (var member in members.AsTeamsChannelAccounts())
 await context.PostAsync($"People in this conversation: {sb.ToString()}");
 ```
 
-### <a name="nodejs-or-typescript-example"></a>beispiel für Node.js oder TypeScript
+### <a name="nodejs-or-typescript-example"></a>Node.js- oder TypeScript-Beispiel
 
 ```typescript
 

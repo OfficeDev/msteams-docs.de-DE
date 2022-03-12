@@ -2,12 +2,12 @@
 title: Richten Sie Ihre Entwicklungsumgebung für die Erweiterung Teams Apps über Microsoft 365
 description: Hier sind die Voraussetzungen für die Erweiterung Ihrer Teams-Apps über Microsoft 365
 ms.date: 02/11/2022
-ms.openlocfilehash: eec44e149e81b420c507b0580896d2c5a4a99cc2
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 1f9b893c185d7cbae249ccc77de2a52cbdcb409a
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356000"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452739"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Richten Sie Ihre Entwicklungsumgebung für die Erweiterung Teams Apps über Microsoft 365
 
@@ -19,6 +19,7 @@ Die Entwicklungsumgebung für die Erweiterung Teams Apps über Microsoft 365 hin
 So richten Sie die Entwicklungsumgebung ein:
 
 > [!div class="checklist"]
+>
 > * [Abrufen Microsoft 365 Entwicklermandanten (Sandbox) und Aktivieren des Querladens](#prepare-a-developer-tenant-for-testing)
 > * [Registrieren Ihres Microsoft 365 Mandanten in *Office 365 gezielten Versionen*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
 > * [Konfigurieren Ihres Kontos für den Zugriff auf Vorschauversionen von Outlook und Office](#install-office-apps-in-your-test-environment)
@@ -48,8 +49,8 @@ So registrieren Sie Ihren Testmandanten für Office 365 Zielversionen:
     1. **Zielversion für ausgewählte Benutzer**
 
     :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Microsoft 365 Admin Center Menü &quot;Versionseinstellungen&quot; mit ausgewählter Option für die gezielte Veröffentlichung":::
-    
-1. Wählen Sie **Speichern** aus.
+
+1. Wählen Sie **Speichern**.
 
 Weitere Informationen zu Office 365 Releaseoptionen finden Sie unter ["Einrichten der Standard- oder Targeted Release-Optionen](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release)" in *Microsoft 365 Admin Center Hilfe*.
 
@@ -71,7 +72,7 @@ So installieren Sie Office 365 Betakanalanwendungen in Ihrer Testumgebung:
 1. Öffnen Sie **"Datei** >  **Office AccountAbout** >  **Outlook**.  
    Wenn die Buildnummer **14416** oder höher ist und der Kanal *"Betakanal*" ist, führen Sie Microsoft 365 Betakanalbuild aus.
 1. In the top-right corner, turn on the **Coming Soon** toggle.
-    
+
     :::image type="content" source="images/outlook-coming-soon.png" alt-text="Umschaltoption &quot;Bald verfügbar&quot; in Outlook":::
 
 > [!NOTE]
@@ -108,5 +109,5 @@ Die Erweiterung [Teams Toolkit für Visual Studio Code](https://aka.ms/teams-too
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Aktivieren einer persönlichen Teams-Registerkarte für Office und Outlook](extend-m365-teams-personal-tab.md)
-- [Aktivieren einer Teams-Messaging-Erweiterung für Outlook](extend-m365-teams-message-extension.md)
+* [Aktivieren einer persönlichen Teams-Registerkarte für Office und Outlook](extend-m365-teams-personal-tab.md)
+* [Aktivieren einer Teams-Messaging-Erweiterung für Outlook](extend-m365-teams-message-extension.md)

@@ -6,12 +6,12 @@ keywords: Listenliste für Bot-Framework-APIs-Teammitglieder
 ms.localizationpriority: medium
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: 7adcd3ee4619ca9b54af719da79e44d71dc166d3
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: d37f748e646ecd8a91edc43cecf69bf5de64750c
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518366"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453278"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teams Bot-API-Änderungen zum Abrufen von Team- oder Chatmitgliedern
 
@@ -35,7 +35,7 @@ Der folgende Code stellt eine JSON-Beispieldarstellung der von Teams Bot-APIs zu
     "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
     "name": "Anon1 (Guest)",
     "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
-    "userRole": "anonymous"
+ "userRole": "anonymous"
 }, {
     "id": "29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
     "objectId": "76b0b09f-d410-48fd-993e-84da521a597b",
@@ -44,7 +44,7 @@ Der folgende Code stellt eine JSON-Beispieldarstellung der von Teams Bot-APIs zu
     "email": "johnp@fabrikam.com",
     "userPrincipalName": "johnp@fabrikam.com",
     "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
-    "userRole": "user"
+ "userRole": "user"
 }, {
     "id": "29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
     "objectId": "6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
@@ -53,7 +53,7 @@ Der folgende Code stellt eine JSON-Beispieldarstellung der von Teams Bot-APIs zu
     "email": "Rick.Stevens@fabrikam.com",
     "userPrincipalName": "rstevens@fabrikam.com",
     "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
-    "userRole": "user"
+ "userRole": "user"
 }]
 ```
 

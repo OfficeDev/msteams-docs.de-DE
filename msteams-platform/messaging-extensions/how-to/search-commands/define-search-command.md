@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über Suchbefehle für Messaging-Erweiterungen f�
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: a68d43fc067e1a67b914ed49f042d535e6c8de5a
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ba8fdf2426fbedb88d7df11cee1957deaba9b721
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356357"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452970"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definieren von Suchbefehlen für Messaging-Erweiterungen
 
@@ -42,12 +42,12 @@ Um den Suchbefehl zu Ihrem App-Manifest hinzuzufügen, müssen Sie ein neues `co
 
 Voraussetzung für die Erstellung eines Suchbefehls ist, dass Sie bereits eine Messaging-Erweiterung erstellt haben müssen. Informationen zum Erstellen einer Messaging-Erweiterung finden Sie unter [Erstellen einer Messaging-Erweiterung](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-**So erstellen Sie einen Suchbefehl**
+So erstellen Sie einen Suchbefehl:
 
 1. Öffnen Sie **App Studio** im Microsoft Teams-Client, und wählen Sie die Registerkarte **"Manifest-Editor**" aus.
-1.  Wenn Sie Ihr App-Paket bereits in **App Studio** erstellt haben, wählen Sie aus der Liste aus. Wenn Sie kein App-Paket erstellt haben, importieren Sie ein vorhandenes Paket.
+1. Wenn Sie Ihr App-Paket bereits in **App Studio** erstellt haben, wählen Sie aus der Liste aus. Wenn Sie kein App-Paket erstellt haben, importieren Sie ein vorhandenes Paket.
 1. Wählen Sie nach dem Importieren des **App-Pakets messaging-Erweiterungen** unter **"Funktionen"** aus. Sie erhalten ein Popupfenster zum Einrichten der Messaging-Erweiterung.
-1. Wählen Sie im Fenster **"Einrichten** " aus, um die Messaging-Erweiterung in Ihre App-Oberfläche einzuschließen. In der folgenden Abbildung wird die Einrichtungsseite der Messaging-Erweiterung angezeigt: 
+1. Wählen Sie im Fenster **"Einrichten** " aus, um die Messaging-Erweiterung in Ihre App-Oberfläche einzuschließen. In der folgenden Abbildung wird die Einrichtungsseite der Messaging-Erweiterung angezeigt:
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
 
@@ -55,7 +55,7 @@ Voraussetzung für die Erstellung eines Suchbefehls ist, dass Sie bereits eine M
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
-1. Wählen Sie im **Abschnitt "Befehl"** der Seite "Messaging-Erweiterungen" die Option "**Hinzufügen**" aus, um die Befehle einzuschließen, die das Verhalten der Messaging-Erweiterung bestimmen.   
+1. Wählen Sie im **Abschnitt "Befehl"** der Seite "Messaging-Erweiterungen" die Option "**Hinzufügen**" aus, um die Befehle einzuschließen, die das Verhalten der Messaging-Erweiterung bestimmen.
 In der folgenden Abbildung wird die Befehlserweiterung für die Messaging-Erweiterung angezeigt:
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
@@ -121,6 +121,7 @@ Der folgende Abschnitt ist ein Beispiel für das einfache App-Manifest des Objek
 ...
 }
 ```
+
 Das vollständige App-Manifest finden Sie unter [App-Manifestschema](~/resources/schema/manifest-schema.md).
 
 ## <a name="code-sample"></a>Codebeispiel
@@ -137,4 +138,3 @@ Befolgen Sie die [schrittweise Anleitung](../../../sbs-messagingextension-search
 
 > [!div class="nextstepaction"]
 > [Antworten Sie auf die Suchbefehle](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
-

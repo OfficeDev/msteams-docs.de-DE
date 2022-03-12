@@ -4,12 +4,12 @@ description: Informationen zu benutzerspezifischen Ansichten mit universellen Ak
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 284fda042d5862929004f7809aea9080d0c5d3fd
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 472620da2bcd15f34b111afe170eb74e31e64492
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356364"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453110"
 ---
 # <a name="user-specific-views"></a>Benutzerspezifische Ansichten
 
@@ -64,7 +64,7 @@ Der folgende Code enthält ein Beispiel für adaptive Karten:
 }
 ```
 
-**Um adaptive Karten zu senden, aktualisieren Sie benutzerspezifische Ansichten, und rufen Sie Anforderungen an den Bot auf.**
+Aktualisieren Sie zum Senden adaptiver Karten benutzerspezifische Ansichten, und rufen Sie Anforderungen an den Bot auf:
 
 1. Wenn Megan einen neuen Vorfall erstellt, sendet der Bot die adaptive Karte oder allgemeine Karte mit Vorfalldetails in der Teams Unterhaltung.
 2. Jetzt wird diese Karte automatisch auf die benutzerspezifische Ansicht für Megan und Alex aktualisiert. Alex und Megans Benutzer-MRIs werden als `userIds` Eigenschaft der `refresh` Adaptive Card JSON hinzugefügt. Die Karte bleibt für andere Benutzer in der Unterhaltung gleich.
@@ -216,7 +216,7 @@ const cardRes = {
 
 ```
 
----
+***
 
 Richtlinien für den Kartenentwurf, die Sie beim Entwerfen benutzerspezifischer Ansichten beachten sollten:
 

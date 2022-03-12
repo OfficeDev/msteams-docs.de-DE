@@ -6,12 +6,12 @@ ms.author: yanjiang
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: d232ac1d0ac96d46aa5f265f3fedd7b65afb3a86
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: c705e9fe724a21d5159092f813157cee78d6dbe9
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435761"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453593"
 ---
 # <a name="publish-teams-apps-using-teams-toolkit"></a>Veröffentlichen von Teams-Apps mithilfe von Teams-Toolkits
 
@@ -32,7 +32,7 @@ Die Benutzer können Teams benutzerdefinierte Apps hinzufügen, indem sie ein Ap
 * Erstellen Sie eine App für sich selbst, z. B. zum Automatisieren eines Workflows.
 * Erstellen Sie eine App für kleine Benutzer, z. B. Ihre Arbeitsgruppe.
 
-Sie können eine App nur für die interne Verwendung erstellen und für Ihr Team freigeben, ohne sie an den Teams App-Katalog im Teams App Store zu übermitteln.
+Sie können eine App nur zur internen Verwendung erstellen und für Ihr Team freigeben, ohne sie an den Teams App-Katalog im Teams App Store zu übermitteln.
 
 **So erstellen Sie Ihre App auf *.zip App-Paketdatei**
 
@@ -50,15 +50,15 @@ Führen Sie die folgenden Schritte aus, um das App-Paket hochzuladen:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/uplo.png" alt-text="Hochladen":::
 
-## <a name="publish-to-your-organization"></a>In Ihrer Organisation veröffentlichen 
+## <a name="publish-to-your-organization"></a>In Ihrer Organisation veröffentlichen
 
-Wenn die App für die Verwendung in der Produktion bereit ist, können Sie die App mithilfe der Teams App-Übermittlungs-API übermitteln, die von Graph API aufgerufen wird, einer integrierten Entwicklungsumgebung (Integrated Development Environment, IDE), z. B. Microsoft Visual Studio Code, der mit Teams Toolkit installiert ist. Sie können entweder in **der Strukturansicht** von Teams Toolkit die Option "**Veröffentlichen in Teams**" auswählen oder **Teams auslösen: Veröffentlichen in Teams** über die Befehlspalette. Wählen Sie dann **"Installieren" für Ihre Organisation** aus:
+Wenn die App für die Verwendung in der Produktion bereit ist, können Sie die App mithilfe der Teams App-Übermittlungs-API übermitteln, die von Graph-API aufgerufen wird, einer integrierten Entwicklungsumgebung (Integrated Development Environment, IDE), z. B. Microsoft Visual Studio Code, der mit Teams Toolkit installiert ist. Sie können entweder in **der Strukturansicht** von Teams Toolkit "**Veröffentlichen in Teams**" auswählen oder **Teams auslösen: Veröffentlichen in Teams** über die Befehlspalette. Wählen Sie dann **"Installieren" für Ihre Organisation** aus:
 
 ![Installieren für Ihre Organisation](./images/installforyourorganization.png)
 
 Die App ist im **Manage apps** of Microsoft Teams Admin Center verfügbar, in dem Sie und der Administrator sie überprüfen und genehmigen können.
 
-Als Administrator können Sie im [Microsoft Teams Admin Center](https://admin.teams.microsoft.com/policies/manage-apps) **Apps verwalten**, in denen Sie alle Teams-Apps für Ihre Organisation anzeigen und verwalten können. Sie können den Status und die Eigenschaften von Apps auf Organisationsebene anzeigen, neue benutzerdefinierte Apps im App Store Ihrer Organisation genehmigen oder hochladen, Apps auf Organisationsebene blockieren oder zulassen, Apps zu Teams hinzufügen, Dienste für Drittanbieter-Apps kaufen, von Apps angeforderte Berechtigungen anzeigen, Apps Administratorzustimmung erteilen und [organisationsweite App-Einstellungen verwalten](https://admin.teams.microsoft.com/policies/manage-apps).
+Als Administrator können Sie im [Microsoft Teams Admin Center](https://admin.teams.microsoft.com/policies/manage-apps) **Apps verwalten**, in denen Sie alle Teams Apps für Ihre Organisation anzeigen und verwalten können. Sie können den Status und die Eigenschaften von Apps auf Organisationsebene anzeigen, neue benutzerdefinierte Apps im App Store Ihrer Organisation genehmigen oder hochladen, Apps auf Organisationsebene blockieren oder zulassen, Apps zu Teams hinzufügen, Dienste für Drittanbieter-Apps kaufen, von Apps angeforderte Berechtigungen anzeigen, Apps Administratorzustimmung erteilen und [organisationsweite App-Einstellungen verwalten](https://admin.teams.microsoft.com/policies/manage-apps).
 
 Teams Toolkit für Visual Studio Code auf der Teams App-Übermittlungs-API aufbauen und ermöglicht es Ihnen, den Übermittlungs-zu-Genehmigungsprozess für benutzerdefinierte Apps auf Teams zu automatisieren.
 
@@ -67,7 +67,7 @@ Teams Toolkit für Visual Studio Code auf der Teams App-Übermittlungs-API aufba
 
 ## <a name="admin-approval-for-teams-apps"></a>Administratorgenehmigung für Teams-Apps
 
-Der Administrator Ihres Teams Mandanten kann dann im Microsoft Teams Admin Center zu "**Apps verwalten**" wechseln. Wechseln Sie in der linken Navigationsleiste zu Teams Apps > Verwalten von Apps. Sie können alle Teams-Apps für Ihre Organisation anzeigen. Im Widget "Genehmigung ausstehend" oben auf der Seite erfahren Sie, wann eine benutzerdefinierte App zur Genehmigung übermittelt wird.
+Der Administrator Ihres Teams Mandanten kann dann im Microsoft Teams Admin Center zu "**Apps verwalten**" wechseln. Wechseln Sie im linken Navigationsbereich zu Teams Apps > Verwalten von Apps. Sie können alle Teams-Apps für Ihre Organisation anzeigen. Im Widget "Genehmigung ausstehend" oben auf der Seite erfahren Sie, wann eine benutzerdefinierte App zur Genehmigung übermittelt wird.
 In der Tabelle veröffentlicht eine neu übermittelte App automatisch den Status übermittelter und blockierter Apps. Sie können die Veröffentlichungsstatusspalte in absteigender Reihenfolge sortieren, um die App zu finden:
 
  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/admin-approval-for-teams-app-1.png" alt-text="Genehmigung":::
@@ -84,9 +84,9 @@ Nachdem Sie die App veröffentlicht haben, ändert sich der Veröffentlichungsst
 
 ## <a name="publish-to-microsoft-store"></a>Veröffentlichen im Microsoft Store
 
-Sie können Ihre App direkt an den Store innerhalb Microsoft Teams verteilen und Millionen von Benutzern auf der ganzen Welt erreichen. Wenn Ihre App auch im Store enthalten ist, können Sie potenzielle Kunden sofort erreichen. Die im Teams Store veröffentlichten Apps werden auch automatisch in Microsoft AppSource aufgeführt, dem offiziellen Marketplace für Microsoft 365 Apps und Lösungen.
+Sie können Ihre App direkt an den Store in Microsoft Teams verteilen und Millionen von Benutzern auf der ganzen Welt erreichen. Wenn Ihre App auch im Store vorgestellt wird, können Sie potenzielle Kunden sofort erreichen. Die im Teams Store veröffentlichten Apps werden auch automatisch in Microsoft AppSource aufgeführt, dem offiziellen Marketplace für Microsoft 365 Apps und Lösungen.
 
-Weitere Informationen finden Sie unter ["Veröffentlichen im Microsoft Teams Store]([Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store))"
+Weitere Informationen finden Sie unter ["Veröffentlichen im Microsoft Teams Store"]([Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store))
 
 ## <a name="see-also"></a>Siehe auch
 

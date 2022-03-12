@@ -5,12 +5,12 @@ keywords: Erstellen von Teams-Bots-Menüs
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 14100c9032f0adf964975abbe436c84194475a99
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6f339f23298c14607eb1d9ca12daa50bcc98775b
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157040"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452900"
 ---
 # <a name="add-a-bot-menu-in-microsoft-teams"></a>Hinzufügen eines Botmenüs in Microsoft Teams
 
@@ -23,12 +23,13 @@ Um die Ermittlung zu unterstützen und Benutzer über die Funktionen Ihres Bots 
 Wenn ein Benutzer ein Menüelement auswählt, wird die Befehlszeichenfolge in das Textfeld eingefügt, um den Benutzer beim Abschließen der Bot-Nachricht zu unterstützen.
 
 ## <a name="bot-menu-support-on-teams-mobile-app"></a>Bot-Menüunterstützung für Teams mobile App
-> [!NOTE] 
+
+> [!NOTE]
 > Bot-Menüs werden nicht auf mobilen Geräten angezeigt.
 
 ## <a name="app-manifest"></a>App-Manifest
 
-Um ein Botmenü zu erstellen, fügen Sie [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) Ihrem App-Manifest unter dem Bot-Abschnitt ein neues Objekt hinzu. Sie können einzelne Menüs mit separaten Befehlen für jeden Bereich deklarieren, den Ihr Bot unterstützt ( `personal` oder ) Jedes Menü unterstützt bis zu `groupChat` `team` 10 Befehle.
+Um ein Botmenü zu erstellen, fügen Sie Ihrem App-Manifest unter dem Bot-Abschnitt ein neues [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) Objekt hinzu. Sie können einzelne Menüs mit separaten Befehlen für jeden Bereich deklarieren, `groupChat`den Ihr Bot unterstützt (`personal`oder `team`) Jedes Menü unterstützt bis zu 10 Befehle.
 
 ### <a name="manifest-excerpt---single-menu-for-both-scopes"></a>Manifestauszug – einzelnes Menü für beide Bereiche
 

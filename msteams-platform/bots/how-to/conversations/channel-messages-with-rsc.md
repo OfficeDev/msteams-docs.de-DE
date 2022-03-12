@@ -4,12 +4,12 @@ author: surbhigupta12
 description: Empfangen aller Kanalnachrichten mit RSC-Berechtigungen
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: d573e6e52f09537a9cb5e815529ff9ee2ab31cae
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: b18b4f64d34abc1dec71c526c1f604978dc77cdf
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518311"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453453"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Empfangen aller Kanalnachrichten mit RSC
 
@@ -21,16 +21,17 @@ Weitere Informationen zum Aktivieren von RSC für Ihre App finden Sie unter ["Re
 
 ## <a name="enable-bots-to-receive-all-channel-messages"></a>Bots den Empfang aller Kanalnachrichten ermöglichen
 
-Die `ChannelMessage.Read.Group` RSC-Berechtigung wird auf Bots erweitert. Mit der Zustimmung des Benutzers ermöglicht diese Berechtigung Graph-Anwendungen, alle Nachrichten in einer Unterhaltung abzurufen, und Bots, um alle Kanalnachrichten zu empfangen, ohne @mentioned zu werden.
+Die `ChannelMessage.Read.Group` RSC-Berechtigung wird auf Bots erweitert. Mit der Zustimmung des Benutzers ermöglicht diese Berechtigung Graph-Anwendungen, alle Nachrichten in einer Unterhaltung abzurufen und Bots alle Kanalnachrichten zu empfangen, ohne @mentioned zu werden.
 
 > [!NOTE]
+>
 > * Dienste, die Zugriff auf alle Teams Nachrichtendaten benötigen, müssen die Graph-APIs verwenden, die auch Zugriff auf archivierte Daten in Kanälen und Chats bieten.
 > * Bots müssen die `ChannelMessage.Read.Group` RSC-Berechtigung entsprechend verwenden, um ansprechende Erfahrungen für Benutzer im Team zu erstellen und zu verbessern, oder sie bestehen die Store-Genehmigung nicht. Die App-Beschreibung muss enthalten, wie der Bot die gelesenen Daten verwendet.
-> * Die `ChannelMessage.Read.Group` RSC-Berechtigung darf von Bots nicht als Möglichkeit verwendet werden, große Mengen von Kundendaten zu extrahieren. 
+> * Die `ChannelMessage.Read.Group` RSC-Berechtigung darf von Bots nicht als Möglichkeit verwendet werden, große Mengen von Kundendaten zu extrahieren.
 
 ## <a name="update-app-manifest"></a>Aktualisieren des App-Manifests
 
-Damit Ihr Bot alle Kanalnachrichten empfängt, muss RSC im Teams App-Manifest mit der `ChannelMessage.Read.Group` in der `webApplicationInfo` Eigenschaft angegebenen Berechtigung konfiguriert werden.
+Damit Ihr Bot alle Kanalnachrichten empfangen kann, muss RSC im Teams App-Manifest mit der `ChannelMessage.Read.Group` in der `webApplicationInfo` Eigenschaft angegebenen Berechtigung konfiguriert sein.
 ![Aktualisieren des App-Manifests](~/bots/how-to/conversations/Media/appmanifest.png)
 
 Es folgt ein Beispiel für das `webApplicationInfo` Objekt:
@@ -56,7 +57,7 @@ Der folgende Code enthält ein Beispiel für das App-Manifest:
 Wenn Sie in einem Team querladen möchten, um zu testen, ob alle Kanalnachrichten in einem Team mit RSC empfangen werden, ohne @mentioned:
 
 1. Wählen Sie ein Team aus, oder erstellen Sie es.
-1. Wählen Sie die Ellipsen &#x25CF;&#x25CF;&#x25CF; im linken Bereich aus. Das Dropdownmenü wird angezeigt.
+1. Wählen Sie die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; im linken Bereich aus. Das Dropdownmenü wird angezeigt.
 1. Wählen Sie im Dropdownmenü die Option **"Team verwalten** " aus. Die Details werden angezeigt.
 
    ![Verwalten von Apps im Team](~/bots/how-to/conversations/Media/managingteam.png)
@@ -93,7 +94,7 @@ Der folgende Code enthält ein Beispiel für RSC-Berechtigungen:
 // When rsc is enabled the method will be called even when bot is addressed without being @mentioned
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-        await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channels in team without being @mentioned."));
+  await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channels in team without being @mentioned."));
 }
 ```
 
@@ -115,7 +116,7 @@ this.onMessage(async (context, next) => {
 
 | Beispielname | Beschreibung | C# |Node.js|
 |-------------|-------------|------|----|
-|Kanalnachrichten mit RSC-Berechtigungen| Microsoft Teams Beispiel-App veranschaulicht, wie ein Bot alle Kanalnachrichten mit RSC empfangen kann, ohne @mentioned zu werden.|  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |    [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
+|Kanalnachrichten mit RSC-Berechtigungen| Microsoft Teams Beispiel-App veranschaulicht, wie ein Bot alle Kanalnachrichten mit RSC empfangen kann, ohne @mentioned zu werden.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 

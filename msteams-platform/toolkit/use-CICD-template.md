@@ -6,12 +6,12 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ac2a79014ed0dfedf9942f30ab67c759642ee850
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 4db593c82ef2efb97b99fbb2a00b88bc622394d6
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356175"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453411"
 ---
 # <a name="cicd-guide"></a>CI/CD-Leitfaden
 
@@ -234,6 +234,7 @@ Sie können den aufgeführten vordefinierten Beispiel-Bash-Skripts folgen, um CI
 Die Skripts basieren auf einem plattformübergreifenden TeamsFx-Befehlszeilentool [TeamsFx-CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli). Sie können es installieren `npm install -g @microsoft/teamsfx-cli` und der [Dokumentation](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) folgen, um die Skripts anzupassen.
 
 > [!NOTE]
+>
 > * Um die Ausführung im CI-Modus zu aktivieren `@microsoft/teamsfx-cli` , aktivieren Sie `CI_ENABLED` nach `export CI_ENABLED=true`. Im CI-Modus `@microsoft/teamsfx-cli` ist für CI oder CD geeignet.
 > * Um die Ausführung im nicht interaktiven Modus zu aktivieren `@microsoft/teamsfx-cli` , legen Sie eine globale Konfiguration mit folgendem Befehl fest: `teamsfx config set -g interactive false`. Im nicht interaktiven Modus `@microsoft/teamsfx-cli` werden eingabeaufforderungen nicht angezeigt.
 

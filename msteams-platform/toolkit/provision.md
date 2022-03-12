@@ -6,12 +6,12 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: db295beddf8b0492816c757703e89f3010666eab
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: adf168daf1e85370324f114e8dc74b509d9fd9c2
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821563"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453572"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Verwenden Teams Toolkits zum Bereitstellen von Cloudressourcen
 
@@ -21,8 +21,8 @@ TeamsFx lässt sich in Azure und Microsoft 365 Cloud integrieren, sodass Sie Ihr
 
 * Kontovoraussetzungen Zum Bereitstellen von Cloudressourcen benötigen Sie die folgenden Konten:
 
-    * Microsoft 365 Konto mit gültigem Abonnement
-    * Azure mit gültigem Abonnement Weitere Informationen finden Sie unter [Vorbereiten von Konten für die Erstellung Teams App](accounts.md).
+  * Microsoft 365 Konto mit gültigem Abonnement
+  * Azure mit gültigem Abonnement Weitere Informationen finden Sie unter [Vorbereiten von Konten für das Erstellen Teams App](accounts.md).
 
 * [Installieren Sie Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Version v3.0.0+.
 
@@ -48,7 +48,7 @@ Wenn Sie ein neues Projekt erstellen, können Sie alle Azure-Ressourcen verwende
 > [!NOTE]
 > Azure-Dienste verursachen Kosten in Ihrem Abonnement. Weitere Informationen zur Kostenberechnung finden Sie [im Preisrechner](https://azure.microsoft.com/pricing/calculator/).
 
-### <a name="resource-creation-for-teams-tab-application"></a>Ressourcenerstellung für Teams Tab-Anwendung
+### <a name="resource-creation-for-teams-tab-application"></a>Erstellen von Ressourcen für Teams Registerkartenanwendung
 
 |Ressource|Zweck|Beschreibung |
 |----------|--------------------------------|-----|
@@ -71,7 +71,7 @@ Wenn Sie ein neues Projekt erstellen, können Sie alle Azure-Ressourcen verwende
 |Ressource|Zweck| Beschreibung|
 |----------|--------------------------------|-----|
 | App-Dienstplan für Funktions-App | Hosten der Funktions-App |Nicht zutreffend |
-| Funktions-App | Hosten Ihrer Azure-Funktions-APIs | Fügt eine vom Benutzer zugewiesene Identität hinzu, um auf andere Azure-Ressourcen zuzugreifen. <br /> Fügt eine CORS-Regel (Cross-Origin Resource Sharing) hinzu, um Anforderungen von Ihrer Registerkarten-App zuzulassen. <br /> Fügt eine Authentifizierungseinstellung hinzu, die nur Anforderungen von Ihrer Teams App zulässt. <br /> Fügt App-Einstellungen hinzu, die für [das TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) erforderlich sind |
+| Funktions-App | Hosten Ihrer Azure-Funktions-APIs | Fügt eine vom Benutzer zugewiesene Identität hinzu, um auf andere Azure-Ressourcen zuzugreifen. <br /> Fügt eine CORS-Regel (Cross-Origin Resource Sharing) hinzu, um Anforderungen von Ihrer Registerkarten-App zuzulassen. <br /> Fügt eine Authentifizierungseinstellung hinzu, die nur Anforderungen von Ihrer Teams-App zulässt. <br /> Fügt App-Einstellungen hinzu, die für [das TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) erforderlich sind |
 | Azure-Speicher für Funktions-App | Erforderlich zum Erstellen einer Funktions-App |Nicht zutreffend|
 | Vom Benutzer zugewiesene Identität | Authentifizieren von Azure Service-zu-Service-Anforderungen | Gemeinsam genutzt für verschiedene Funktionen und Ressourcen |
 
@@ -87,7 +87,7 @@ Wenn Sie ein neues Projekt erstellen, können Sie alle Azure-Ressourcen verwende
 
 |Ressource|Zweck|
 |----------|--------------------------------|
-| Azure AD-Anwendung für API-Verwaltungsdienst | Ermöglicht Microsoft Power Platform-Zugriffs-APIs, die vom API-Verwaltungsdienst verwaltet werden |
+| Azure AD-Anwendung für den API-Verwaltungsdienst | Ermöglicht Microsoft Power Platform-Zugriffs-APIs, die vom API-Verwaltungsdienst verwaltet werden |
 | API-Verwaltungsdienst | Verwalten Der in der Funktions-App gehosteten APIs |
 | API-Verwaltungsprodukt | Gruppieren Sie Ihre APIs, definieren Sie Nutzungsbedingungen und Laufzeitrichtlinien |
 | API-Verwaltungs-OAuth-Server | Ermöglicht Microsoft Power Platform den Zugriff auf Ihre in der Funktions-App gehosteten APIs. |
@@ -102,7 +102,7 @@ Wenn Sie ein neues Projekt erstellen, können Sie alle Azure-Ressourcen verwende
 
 ## <a name="customize-resource-provision"></a>Anpassen der Ressourcenbereitstellung
 
-mit Teams Toolkit können Sie eine Infrastruktur als Codeansatz verwenden, um zu definieren, welche Azure-Ressourcen Sie bereitstellen und wie Sie sie konfigurieren möchten. Das Tool verwendet die ARM-Vorlage, um Azure-Ressourcen zu definieren. Bei der ARM-Vorlage handelt es sich um eine Reihe von Biicep-Dateien, die die Infrastruktur und Konfiguration für Ihr Projekt definieren. Sie können Azure-Ressourcen anpassen, indem Sie die ARM-Vorlage ändern. Weitere Informationen finden Sie im [Biicep-Dokument](/azure/azure-resource-manager/bicep.md). 
+mit Teams Toolkit können Sie eine Infrastruktur als Codeansatz verwenden, um zu definieren, welche Azure-Ressourcen Sie bereitstellen und wie Sie sie konfigurieren möchten. Das Tool verwendet die ARM-Vorlage, um Azure-Ressourcen zu definieren. Bei der ARM-Vorlage handelt es sich um eine Reihe von Biicep-Dateien, die die Infrastruktur und Konfiguration für Ihr Projekt definieren. Sie können Azure-Ressourcen anpassen, indem Sie die ARM-Vorlage ändern. Weitere Informationen finden Sie im [Biicep-Dokument](/azure/azure-resource-manager/bicep.md).
 
 Die Bereitstellung mit ARM umfasst das Ändern der folgenden Sätze von Dateien, Parametern und Vorlagen:
 
@@ -166,13 +166,13 @@ In der Zwischenzeit sind die folgenden Parameter mit Werten verfügbar, die wäh
 | Parametername | Platzhalter für Standardwerte | Bedeutung des Platzhalters | Anpassen |
 | --- | --- | --- | --- |
 | Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Die Azure AD App-Client-ID Ihrer App, die während der Bereitstellung erstellt wurde | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-teams-app) |
-| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Der Azure AD geheimen Clientschlüssel Ihrer App, der während der Bereitstellung erstellt wurde | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Der Azure AD clientschlüssel Ihrer App, der während der Bereitstellung erstellt wurde | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-teams-app)  |
 | Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Mandanten-ID der Azure AD App Ihrer App | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-teams-app)  |
-| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth-Autoritätshost der Azure AD App Ihrer App | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth-Autoritätshost der Azure AD-App Ihrer App | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-teams-app) |
 | botAadAppClientId | {{state.fx-resource-bot.botId}} | Bots Azure AD App-Client-ID, die während der Bereitstellung erstellt wurde | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-bot) |
 | botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bots Azure AD geheimer App-Clientschlüssel, der während der Bereitstellung erstellt wurde | [Anpassen des Werts](#use-an-existing-azure-ad-app-for-your-bot) |
 | apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM-Azure AD App-Client-ID, die während der Bereitstellung erstellt wurde | Löschen des Platzhalters und Ausfüllen des tatsächlichen Werts |
-| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | APIM-Azure AD App-Clientschlüssel, der während der Bereitstellung erstellt wurde | Löschen des Platzhalters und Ausfüllen des tatsächlichen Werts |
+| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | DER AZURE AD clientschlüssel der APIM, der während der Bereitstellung erstellt wurde | Löschen des Platzhalters und Ausfüllen des tatsächlichen Werts |
 
 ##### <a name="azure-resource-related-parameters"></a>Ressourcenbezogene Azure-Parameter
 
@@ -245,7 +245,7 @@ Nachdem Sie den vorherigen Codeausschnitt hinzugefügt haben, fügen Sie Ihren g
 
 #### <a name="skip-adding-user-for-sql-database"></a>Überspringen des Hinzufügens eines Benutzers für SQL Datenbank
 
-Wenn beim Versuch des Tools, Benutzer zu SQL Datenbank hinzuzufügen, ein Fehler aufgrund unzureichender Berechtigungen auftritt, können Sie den folgenden Konfigurationsausschnitt zur Datei hinzufügen, um das Hinzufügen SQL Datenbankbenutzers zu `.fx/configs/config.{env}.json` überspringen:
+Wenn beim Versuch des Tools, benutzer zu SQL Datenbank hinzuzufügen, nicht genügend Berechtigungsfehler auftreten, können Sie der Datei den folgenden Konfigurationsausschnitt hinzufügen, um das Hinzufügen SQL Datenbankbenutzers zu `.fx/configs/config.{env}.json` überspringen:
 
 ```json
 "skipAddingSqlUser": true
@@ -280,9 +280,9 @@ Die folgenden Schritte sind:
     }
     ```
 
-### <a name="scenerio"></a>Scenerio 
+### <a name="scenerio"></a>Scenerio
 
-**So fügen Sie der Anwendung weitere Azure-Ressourcen oder Speicher hinzu**
+So fügen Sie der Anwendung weitere Azure-Ressourcen oder Speicher hinzu:
 
 Betrachten Sie das Szenario, in dem Sie Ihrem Azure-Funktions-Back-End Azure-Speicher hinzufügen möchten, um Blobdaten zu speichern. Es gibt keinen automatischen Fluss, um die Biicep-Vorlage mit Azure-Speicherunterstützung zu aktualisieren. Sie können jedoch die Biicep-Datei bearbeiten und die Ressource hinzufügen. Führen Sie dazu folgende Schritte aus:
 
@@ -357,7 +357,6 @@ Sie können die [Bereitstellung SharePoint-basierten App](/microsoftteams/platfo
 
 > [!NOTE]
 > Derzeit verfügt das Erstellen Teams App mit SharePoint-Framework mit Teams Toolkit nicht über eine direkte Integration in Azure, der Inhalt des Dokuments gilt nicht für SPFx-basierte Apps.
-
 
 <br>
 

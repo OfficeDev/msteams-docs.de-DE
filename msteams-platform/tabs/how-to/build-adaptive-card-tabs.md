@@ -6,16 +6,17 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: Datenfluss der Authentifizierungsdaten für persönliche Apps für adaptive Karten
-ms.openlocfilehash: 5ecd8ec7820adf07efbd588d0220c2849a11df0d
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 2747dbe089ee847e7f5465d3a19fa58dbf945be5
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355863"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453264"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
 > [!IMPORTANT]
+>
 > * Registerkarten mit adaptiven Karten werden derzeit nur als persönliche Apps unterstützt.
 
 Beim Entwickeln einer Registerkarte mithilfe der herkömmlichen Methode können folgende Probleme auftreten:
@@ -107,6 +108,7 @@ Es folgt ein Beispiel für ein Registerkartenmanifest für adaptive Karten:
 Die Kommunikation zwischen Ihrer Registerkarte "Adaptive Karte" und Ihrem Bot erfolgt über `invoke` Aktivitäten. Jede `invoke` Aktivität hat einen entsprechenden **Namen**. Verwenden Sie den Namen jeder Aktivität, um jede Anforderung zu unterscheiden. `tab/fetch` und `tab/submit` sind die in diesem Abschnitt behandelten Aktivitäten.
 
 > [!NOTE]
+>
 > * Bots müssen alle Antworten an die [Dienst-URL](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true) senden. Die Dienst-URL wird als Teil der eingehenden `activity` Nutzlast empfangen.
 > * Die Nutzlastgröße des Aufrufs wurde auf 80 KB erhöht.
 
@@ -235,6 +237,7 @@ Mit der Einführung der Registerkarte "Adaptive Karte" gibt es eine Änderung in
 Der folgende Code enthält Beispiele für `task/fetch` Anforderung und Antwort:
 
 **`task/fetch` Anfrage**
+
 ```json
 // task/fetch POST request: agents/{botId}/invoke
 {
@@ -432,7 +435,7 @@ Der folgende Code zeigt ein neu ausgestelltes Anforderungsbeispiel:
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Aufgeklappte Registerkartenverknüpfung und Phasenansicht](~/tabs/tabs-link-unfurling.md)
+> [Registerkarten-Link - Verbreitung und Phasenansicht](~/tabs/tabs-link-unfurling.md)
 
 ## <a name="see-also"></a>Siehe auch
 

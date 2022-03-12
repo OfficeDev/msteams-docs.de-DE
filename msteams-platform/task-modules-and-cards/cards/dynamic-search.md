@@ -1,18 +1,18 @@
 ---
-title: Typaheadsuche in adaptiven Karten
+title: Vorausschauende Suche in Adaptiven Karten
 author: Rajeshwari-v
 description: Beschreibt die Typaheadsuche mit dem Input.ChoiceSet-Steuerelement in adaptiven Karten
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 6c2c26ee6853b23283ae04dbbfec4a78425e2ea5
-ms.sourcegitcommit: f85d0a40326f45b1ffdd3bd1b61b2d6af76b6e85
+ms.openlocfilehash: 2f9a8844d4e976e4d0a975e7e3a901fe3b93ba85
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2022
-ms.locfileid: "61722182"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453831"
 ---
-# <a name="typeahead-search-in-adaptive-cards"></a>Typaheadsuche in adaptiven Karten
+# <a name="typeahead-search-in-adaptive-cards"></a>Vorausschauende Suche in Adaptiven Karten
 
 Die Suchfunktion "Typeahead" in adaptiven Karten bietet eine erweiterte Suchumgebung für `input.choiceset` Komponenten. Es enthält eine Liste der Auswahlmöglichkeiten zum Eingeben von Text in das Suchfeld. Sie können die Typaheadsuche mit adaptiven Karten integrieren, um Daten zu suchen und auszuwählen.
 
@@ -23,7 +23,7 @@ Sie können die Typaheadsuche für die folgenden Suchvorgänge verwenden:
 
 ## <a name="static-typeahead-search"></a>Statische Typaheadsuche
 
-Mit der statischen Typaheadsuche können Benutzer anhand von Werten suchen, die in der Nutzlast der adaptiven Karte angegeben `input.choiceset` sind. Die statische Typaheadsuche kann verwendet werden, um dem Benutzer mehrere Auswahlmöglichkeiten anzuzeigen. Die Nutzlastgröße in der statischen Suche nimmt mit der Anzahl der in der Nutzlast angegebenen Auswahlmöglichkeiten zu.
+Mit der statischen Typaheadsuche können Benutzer anhand von Werten suchen, die in `input.choiceset` der Nutzlast der adaptiven Karte angegeben sind. Die statische Typaheadsuche kann verwendet werden, um dem Benutzer mehrere Auswahlmöglichkeiten anzuzeigen. Die Nutzlastgröße in der statischen Suche nimmt mit der Anzahl der in der Nutzlast angegebenen Auswahlmöglichkeiten zu.
 Wenn der Benutzer mit der Eingabe der Texte beginnt, werden die Auswahlmöglichkeiten gefiltert, die teilweise mit der Eingabe übereinstimmen. In der Dropdownliste werden die Eingabezeichen hervorgehoben, die der Suche entsprechen.
 
 Die folgende Abbildung zeigt die statische Typaheadsuche:
@@ -51,7 +51,7 @@ John ist ein Store-Mitarbeiter, der in einem Xbox-Einzelhandelsgeschäft arbeite
 **So verwenden Sie die Typaheadsuche in adaptiven Karten**
 
 1. Benutzer A öffnet den Store-Bot.
-1. Benutzer A sendet einen Befehl an den Bot für eine **Neue Kundenanfrage.** Der Bot antwortet mit der adaptiven Karte, die `Input.ChoiceSet` über eine Komponente verfügt.
+1. Benutzer A sendet einen Befehl an den Bot für eine **Neue Kundenanfrage**. Der Bot antwortet mit der adaptiven Karte, die über eine Komponente verfügt `Input.ChoiceSet` .
 1. Benutzer A verwendet die Typaheadsuche, um die Informationen basierend auf der Wahl des Kunden zu suchen und auszuwählen.
 
 Die folgende Abbildung veranschaulicht die mobile Erfahrung der Typaheadsuche:
@@ -72,11 +72,11 @@ Die folgende Abbildung veranschaulicht die mobile Erfahrung der Typaheadsuche:
 * Kontrollkästchen, z. B. Mehrfachauswahl.
 
 > [!NOTE]
-> Das `Input.ChoiceSet` Steuerelement basiert auf der Formatvorlage und den `isMultiSelect` Eigenschaften.
+> Das `Input.ChoiceSet` Steuerelement basiert auf der Formatvorlage und `isMultiSelect` den Eigenschaften.
 
 ### <a name="schema-properties"></a>Schemaeigenschaften
 
-Die folgenden Eigenschaften sind die neuen Ergänzungen des [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) Schemas, um die Typaheadsuche zu aktivieren:
+Die folgenden Eigenschaften sind die neuen Ergänzungen des Schemas, um die [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) Typaheadsuche zu aktivieren:
 
 | Eigenschaft| Typ | Erforderlich | Beschreibung |
 |-----------|------|----------|-------------|
@@ -88,9 +88,9 @@ Die folgenden Eigenschaften sind die neuen Ergänzungen des [`Input.ChoiceSet`](
 | Eigenschaft| Typ | Erforderlich | Beschreibung |
 |-----------|------|----------|-------------|
 | Typ | Data.Query | Ja | Gibt an, dass es sich um ein Data.Query-Objekt handelt.|
-| Dataset | String | Ja | Gibt den Datentyp an, der dynamisch abgerufen wird. |
-| value | String | Nein | Füllt die Aufrufanforderung an den Bot mit der Eingabe auf, die der Benutzer für die `ChoiceSet` bereitgestellt hat. |
-| count | Zahl | Nein | Füllt die Aufrufanforderung an den Bot auf, um die Anzahl der Elemente anzugeben, die zurückgegeben werden müssen. Der Bot ignoriert ihn, wenn die Benutzer einen anderen Betrag senden möchten. | 
+| Dataset | Zeichenfolge | Ja | Gibt den Datentyp an, der dynamisch abgerufen wird. |
+| value | Zeichenfolge | Nein | Füllt die Aufrufanforderung an den Bot mit der Eingabe auf, die der Benutzer für die `ChoiceSet`bereitgestellt hat. |
+| count | Zahl | Nein | Füllt die Aufrufanforderung an den Bot auf, um die Anzahl der Elemente anzugeben, die zurückgegeben werden müssen. Der Bot ignoriert ihn, wenn die Benutzer einen anderen Betrag senden möchten. |
 | skip | Zahl | Nein | Füllt die Aufrufanforderung an den Bot auf, um anzugeben, dass Benutzer in der Liste paginieren und fortfahren möchten. |
 
 ### <a name="example"></a>Beispiel
@@ -328,25 +328,25 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 {
     if (turnContext.Activity.Name == "application/search")
     {
-    var packages = new[] {
-            new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
-            new { title = "Fluent UI Library", value = "FluentUI" }};
+ var packages = new[] {
+   new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+   new { title = "Fluent UI Library", value = "FluentUI" }};
 
-    var searchResponseData = new
-    {
-        type = "application/vnd.microsoft.search.searchResponse",
-        value = new
-        {
-        results = packages
-        }
-    };
-    var jsonString = JsonConvert.SerializeObject(searchResponseData);
-    JObject jsonData = JObject.Parse(jsonString);
-    return new InvokeResponse()
-    {
-        Status = 200,
-        Body = jsonData
-    };
+ var searchResponseData = new
+ {
+     type = "application/vnd.microsoft.search.searchResponse",
+     value = new
+     {
+  results = packages
+     }
+ };
+ var jsonString = JsonConvert.SerializeObject(searchResponseData);
+ JObject jsonData = JObject.Parse(jsonString);
+ return new InvokeResponse()
+ {
+     Status = 200,
+     Body = jsonData
+ };
     }
 
     return null;
@@ -354,7 +354,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 ```
 
 #### <a name="nodejs"></a>[Node.js](#tab/nodejs)
- 
+
 ```nodejs
   async onInvokeActivity(context) {
     if (context._activity.name == 'application/search') {
@@ -384,7 +384,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
   }
 ```
 
-####  <a name="json"></a>[JSON](#tab/json)
+#### <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -411,9 +411,9 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 ## <a name="code-sample"></a>Codebeispiel
 
-|Beispielname | Beschreibung | C# | Node.js |
+|**Beispielname** | **Beschreibung** | **C#** | **Node.js** |
 |----------------|-----------------|--------------|----------------|
-| Eingabe eines Voraussuchsteuerelements auf adaptiven Karten | Das Beispiel zeigt die Features des Steuerelements für die statische und dynamische Suche vor der Suche in adaptiven Karten. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+| Typeahead-Suchsteuerelement auf adaptiven Karten | Das Beispiel zeigt die Features des statischen und dynamischen Typahead-Suchsteuerelements in adaptiven Karten. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -5,12 +5,12 @@ description: Ermitteln Sie, wie die Anwendungsfälle für Ihre App innerhalb der
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: a14a906cf0f3e0ea5cc2c9671b6c972f59329542
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 8cc1694a5ce5ee8472a48f86edf09eb7255a4810
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398904"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452830"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>Zuordnen von Anwendungsfällen zu Microsoft Teams-App-Features
 
@@ -18,9 +18,9 @@ Ein gut definierter Anwendungsfall hilft Ihnen, das Framework von Features zu er
 
 Sie können Ihren Anwendungsfall basierend auf folgenden Elementen zuordnen:
 
-- Freigeben von und Zusammenarbeit an Elementen in einem externen System
-- Starten von Workflows und Senden von Benachrichtigungen an Benutzer
-- Verwenden von Social Media-Plattformen, Unterhaltungs-Bots und Kombinieren mehrerer Features
+* Freigeben von und Zusammenarbeit an Elementen in einem externen System
+* Starten von Workflows und Senden von Benachrichtigungen an Benutzer
+* Verwenden von Social Media-Plattformen, Unterhaltungs-Bots und Kombinieren mehrerer Features
 
 ## <a name="common-use-cases-mapped-to-teams-capabilities"></a>Häufige Anwendungsfälle, die Microsoft Teams-Funktionen zugeordnet sind
 
@@ -92,10 +92,10 @@ Sehen wir uns an, wie Microsoft Teams-Funktionen verschiedene Features für Ihre
 
 Beispiel:
 
-- Verwenden Sie die **Registerkartenfunktion**, um Aufgabenmodule anzuzeigen, Geräteberechtigungen anzufordern, <`iframe`> Inhalte anzuzeigen oder Deep-Links zu verwenden.
-- Verwenden Sie die **Messaging-Erweiterungsfunktion**, um Karten zu senden, Links zu öffnen oder Aktionen für Nachrichten auszuführen.
+* Verwenden Sie die **Registerkartenfunktion**, um Aufgabenmodule anzuzeigen, Geräteberechtigungen anzufordern, <`iframe`> Inhalte anzuzeigen oder Deep-Links zu verwenden.
+* Verwenden Sie die **Messaging-Erweiterungsfunktion**, um Karten zu senden, Links zu öffnen oder Aktionen für Nachrichten auszuführen.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Planungscheckliste](../design/planning-checklist.md)
-- [Erstellen Ihrer ersten Microsoft Teams-App](../../get-started/get-started-overview.md)
+* [Planungscheckliste](../design/planning-checklist.md)
+* [Erstellen Ihrer ersten Microsoft Teams-App](../../get-started/get-started-overview.md)
