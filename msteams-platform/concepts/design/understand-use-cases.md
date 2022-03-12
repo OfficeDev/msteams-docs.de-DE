@@ -5,12 +5,12 @@ description: Planen Sie Ihre App, verstehen Sie Ihren Nutzer und seine Anforderu
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 6bd2bd7d4c9016d99ae653f9ca6889f661806a8e
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 117ad5a99662194fef0707ff355d129e4b487cfe
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898154"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399058"
 ---
 # <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
 
@@ -163,7 +163,7 @@ Die [Microsoft Graph-API für Teams](/graph/teams-concept-overview) bietet Zugri
 
 > [!NOTE]
 > Teams Store hat sich weiterentwickelt:
-> 
+>
 > Zuvor wurden die BRANCHEN-Apps durch Auswahl der Ellipsen auf der Kachel aktualisiert. Mit der aktualisierten Teams Store-Oberfläche können Sie jetzt die branchenspezifischen Apps aktualisieren, indem Sie sich beim [Teams Admin Center](https://admin.teams.microsoft.com)anmelden.
 
 ### <a name="app-scope"></a>App-Bereich
@@ -171,9 +171,9 @@ Die [Microsoft Graph-API für Teams](/graph/teams-concept-overview) bietet Zugri
 Ihre App kann einen der folgenden Bereiche aufweisen:
 
 - **Persönliche App-Benutzeroberfläche**: Eine persönliche App ist ein bestimmter Bereich oder Bot, der Nutzern hilft, sich auf ihre eigenen Aufgaben zu konzentrieren oder für sie wichtige Aktivitäten anzuzeigen.
-- **Gemeinsame App-Erfahrung**: Team, Kanal und Chat sind Bereiche für die Zusammenarbeit. Apps in diesen Kontexten sind für alle Nutzer in diesem Bereich verfügbar. Zusammenarbeitsbereiche konzentrieren sich in der Regel auf Workflows für die Interaktionen Ihrer App oder das Freischalten neuer sozialer Interaktionen.
+- **Gemeinsame App-Erfahrung**: Team, Kanal und Chat sind Bereiche für die Zusammenarbeit. Apps in diesen Kontexten sind für alle Nutzer in diesem Bereich verfügbar. Zusammenarbeitsbereiche konzentrieren sich in der Regel auf Workflows für die Interaktionen Ihrer App oder die Erschließung neuer sozialer Interaktionen.
 
-Eine App kann über verschiedene Bereiche hinweg vorhanden sein. Beispiel:
+Eine App kann in verschiedenen Bereichen vorhanden sein. Zum Beispiel:
 
 - Ihre App kann Daten an einem zentralen freigegebenen Speicherort anzeigen, d. h. auf einer Registerkarte.
 - Sie kann dieselben Informationen auch über eine persönliche Konversationsschnittstelle, d. h. einen Bot, darstellen.

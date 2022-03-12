@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 96728036f330eb2181f9818411e218e1ec3c2016
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: a201994bc71e0131bb03d33215d800e13d3428de
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898191"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398967"
 ---
 # <a name="explore-teams-platform-features"></a>Erkunden der Features der Teams-Plattform
 
@@ -32,7 +32,6 @@ Mit Teams können Sie Ihre App in einer funktionsreichen Umgebung erstellen. Wen
 | Microsoft Graph | Microsoft Graph ist das Tor zu Daten und Intelligenz in Microsoft 365 und kann in jede Art von Teams-App integriert werden. | Erstellen, verwalten, suchen und archivieren Sie eine große Anzahl von Teams und füllen Sie sie mit Benutzern und Kanälen auf. |
 | Adaptive Karte | Karten helfen Ihnen, Informationen in Gruppen zu organisieren und Benutzern die Möglichkeit zu geben, mit bestimmten Teilen der Informationen zu interagieren. | Freigabe mithilfe von Text und Bildern; Sammeln von Informationen mithilfe von Eingabeformularen. |
 | Aufgabenmodule | Mit Aufgabenmodulen können Sie modale Pop-up-Erlebnisse in Ihrer Teams-Anwendung erstellen. | Führen Sie Ihren eigenen benutzerdefinierten HTML- oder JavaScript-Code aus. Zeigen Sie ein <`iframe`>-basiertes Widget an, z. B. ein YouTube- oder Microsoft Stream-Video. |
-|
 
 ## <a name="dive-deeper"></a>Tiefer tauchen
 

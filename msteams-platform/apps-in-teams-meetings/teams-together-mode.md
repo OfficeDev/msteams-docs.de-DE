@@ -3,19 +3,19 @@ title: Benutzerdefinierte Zusammen-Modus-Szenen
 description: Arbeiten mit benutzerdefinierte Zusammen-Modus-Szenen
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 0f2f57cb36ba7caed7acaffa3bcfc1e2e57c59c2
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 7249c907cd5afc68714be4a38a8f033c22382181
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059665"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356084"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Benutzerdefinierte Zusammen-Modus-Szenen
 
 Benutzerdefinierte Zusammen-Modus-Szenen in Microsoft Teams bieten eine immersive und ansprechende Besprechungsumgebung mit den folgenden Aktionen:
 
-* Bringen Sie Personen zusammen, und ermutigen Sie sie, ihre Videofunktion zu aktivieren. 
-* Kombinieren Sie Teilnehmer digital zu einer einzelnen virtuellen Szene. 
+* Bringen Sie Personen zusammen, und ermutigen Sie sie, ihre Videofunktion zu aktivieren.
+* Kombinieren Sie Teilnehmer digital zu einer einzelnen virtuellen Szene.
 * Platzieren Sie die Videostreams der Teilnehmer an vorab festgelegten Plätzen, die vom Szenenersteller entworfen und festgelegt wurden.
 
 In benutzerdefinierte Zusammen-Modus-Szenen ist die Szene ein Artefakt. Die Szene wird vom Szenenentwickler mithilfe des Microsoft Scene Studio erstellt. In einer festgelegten Szeneeinstellung haben Teilnehmer Plätze mit Videostreams. Die Videos werden auf diesen Plätzen gerendert. Nur-Szenen-Apps werden empfohlen, da die Oberfläche für solche Apps klar ist.
@@ -27,7 +27,7 @@ Der folgende Prozess bietet einen Überblick über das Erstellen einer Nur-Szene
 Eine Nur-Szenen-App ist immer noch eine App in Microsoft Teams. Das Scene Studio verarbeitet die Erstellung des App-Pakets im Hintergrund. Mehrere Szenen in einem einzelnen App-Paket werden den Benutzern als flache Liste angezeigt.
 
 > [!NOTE]
-> Benutzer können den Zusammen-Modus nicht über mobile Geräte initiieren. Nachdem ein Benutzer jedoch über mobile Geräte an einer Besprechung teilnimmt und der Zusammen-Modus vom Desktop aus aktiviert ist, werden die mobilen Benutzer, die das Video aktiviert haben, im Zusammen-Modus auf dem Desktop angezeigt. 
+> Benutzer können den Together-Modus nicht vom Mobiltelefon aus initiieren. Wenn ein Benutzer jedoch über ein Mobiltelefon an einem Meeting teilnimmt und der Together-Modus auf dem Desktop aktiviert wird, werden die mobilen Benutzer, die das Video aktiviert haben, auf dem Desktop im Together-Modus angezeigt.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -54,7 +54,7 @@ Microsoft verfügt über ein Scene Studio, mit dem Sie Szenen erstellen können.
 
 Eine Szene im Kontext des Scene Studio ist ein Artefakt, das die folgenden Elemente enthält:
 
-* Reservierte Plätze für Besprechungsorganisatoren und Besprechungsreferenten. Der Referent verweist nicht auf den Benutzer, der aktiv teilt. Er bezieht sich auf die [Besprechungsrolle](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+* Reservierte Plätze für Besprechungsorganisatoren und Besprechungsreferenten. Der Referent verweist nicht auf den Benutzer, der aktiv teilt. Er bezieht sich auf die [Besprechungsrolle](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 * Platz und Bild für jeden Teilnehmer mit anpassbarer Breite und Höhe. Für das Bild wird nur das PNG-Format unterstützt.
 
@@ -66,7 +66,7 @@ Die folgende Abbildung zeigt jeden Platz, der als Avatar zum Erstellen der Szene
 
 ![Scene Studio](../assets/images/apps-in-meetings/scene-design-studio.png)
 
-**So erstellen Sie eine Szene mithilfe des Scene Studio**
+Führen Sie die folgenden Schritte aus, um eine Szene mithilfe des Szenenstudios zu erstellen:
 
 1. Wechseln Sie zu [Szenen-Editor – Teams Entwicklerportal](https://dev.teams.microsoft.com/scenes).
 
@@ -86,7 +86,7 @@ Die folgende Abbildung zeigt jeden Platz, der als Avatar zum Erstellen der Szene
     ![Hinzufügen von Bildern zur Umgebung](../assets/images/apps-in-meetings/addimages.png)
 
     >[!NOTE]
-    > * Sie können die [SampleSxia.zip-](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) und [SampleApp.zip-](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) Dateien mit den Bildern herunterladen.
+    >Sie können die [SampleSxia.zip-](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) und [SampleApp.zip-](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) Dateien mit den Bildern herunterladen.
 
 1. Wählen Sie das Bild aus, das Sie hinzugefügt haben.
 
@@ -212,7 +212,7 @@ Nachdem Sie nun die Beispieldatei "scene.json" durchgegangen sind, können Sie d
 
 Erhalten Sie weitere Informationen dazu, wie ein Benutzer mit Benutzerdefinierte Zusammen-Modus-Szenen interagiert.
 
-**Szenen auswählen und Benutzerdefinierte Zusammen-Modus-Szenen aktivieren**
+Führen Sie die folgenden Schritte aus, um Szenen auszuwählen und benutzerdefinierte Szenen im Together-Modus zu aktivieren:
 
 1. Erstellen Sie eine neue Testbesprechung.
 
@@ -241,5 +241,5 @@ Sie können das Szenenpaket, bei dem es sich um eine ZIP-Datei handelt, die aus 
 ## <a name="see-also"></a>Siehe auch
 
 * [Apps für Teams-Besprechungen](teams-apps-in-meetings.md)
-* [Bots für Anrufe und Besprechungen ](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [Bots für Anrufe und Besprechungen](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [Medienanrufe und Besprechungen in Echtzeit mit Microsoft Teams](~/bots/calls-and-meetings/real-time-media-concepts.md)

@@ -5,12 +5,12 @@ description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Te
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams-Office365-Connector
-ms.openlocfilehash: 7b6b7adc8231e3bdcdb9bfec868702eaa3264c42
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 348b133ea4df73d52f8b35a2271ccf9be6f4ff8e
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355636"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398876"
 ---
 # <a name="create-and-send-messages"></a>Nachrichten erstellen und senden
 
@@ -44,6 +44,7 @@ Um die Mehrfachauswahlliste im Kompaktformat anzuzeigen, geben Sie `"isMultiSele
 Weitere Informationen zu Connectorkarten-Aktionen finden Sie unter [Aktionen](/outlook/actionable-messages/card-reference#actions).
 
 > [!NOTE]
+>
 > * Die Angabe von `compact` für die `style`-Eigenschaft in Microsoft Teams entspricht der Angabe von `normal` für die `style`-Eigenschaft in Microsoft Outlook.
 > * Bei der HttpPOST-Aktion ist das Bearertoken in den Anforderungen enthalten. Dieses Token enthält die Microsoft Azure Active Directory (Azure AD)-Identität des Office 365-Benutzers, der die Aktion ausgeführt hat.
 
@@ -187,14 +188,15 @@ Führen Sie die folgenden Schritte aus, um eine Nachricht an den Webhook mit Pow
 
 1. Überprüfen Sie den Microsoft Teams-Kanal, der der Webhook-URL zugeordnet ist. Die neue Karte wird nun im Kanal angezeigt. Bevor Sie den Connector zum Testen oder Veröffentlichen Ihrer App verwenden, müssen Sie folgendes tun:
 
-    - [Zwei Symbole einschließen](../../concepts/build-and-test/apps-package.md#app-icons).
-    - Ändern Sie den `icons`-Teil des Manifests in die Dateinamen der Symbole anstelle von URLs.
+    * [Zwei Symbole einschließen](../../concepts/build-and-test/apps-package.md#app-icons).
+    * Ändern Sie den `icons`-Teil des Manifests in die Dateinamen der Symbole anstelle von URLs.
 
 ---
 
 ## <a name="send-adaptive-cards-using-an-incoming-webhook"></a>Senden von adaptiven Karten mithilfe eines eingehenden Webhooks
 
 > [!NOTE]
+>
 > * Alle systemeigenen Schemaelemente adaptiver Karten, mit Ausnahme von `Action.Submit`, werden vollständig unterstützt.
 > * Die unterstützten Aktionen sind [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html) und [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
@@ -260,7 +262,7 @@ Die folgende Tabelle enthält die Details zu zeitbasierten Transaktionen:
 Eine [Wiederholungslogik mit exponentiellem Backoff](/azure/architecture/patterns/retry) kann die Begrenzung der Datenübertragungsrate in Fällen verringern, in denen Anforderungen die Grenzwerte innerhalb einer Sekunde überschreiten. Befolgen Sie die [bewährten Methoden](../../bots/how-to/rate-limit.md), um zu vermeiden, dass die Ratenbegrenzungen erreicht werden.
 
 > [!NOTE]
-> Eine [Wiederholungslogik mit exponentiellem Backoff](/azure/architecture/patterns/retry) kann die Begrenzung der Datenübertragungsrate in Fällen verringern, in denen Anforderungen die Grenzwerte innerhalb einer Sekunde überschreiten. Lesen Sie die [HTTP 429-Antworten](../../bots/how-to/rate-limit.md#handle-http-429-responses), um zu vermeiden, dass die Ratenbegrenzungen überschritten werden.
+> Eine [Wiederholungslogik mit exponentiellem Backoff](/azure/architecture/patterns/retry) kann die Begrenzung der Datenübertragungsrate in Fällen verringern, in denen Anforderungen die Grenzwerte innerhalb einer Sekunde überschreiten. Verweisen Sie auf [HTTP 429-Antworten](../../bots/how-to/rate-limit.md#handle-http-429-responses), um zu vermeiden, dass die Ratenbegrenzungen erreicht werden.
 
 ```csharp
 // Please note that response body needs to be extracted and read 

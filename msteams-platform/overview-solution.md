@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 6bee9d01aa89d04eccbc1f20e9a7fca1efb62ab3
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: bb05bc85c4b070870a88d8c71cb80e4d7ef4390c
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898268"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398722"
 ---
 # <a name="the-teams-solution"></a>Die Teams-Lösung
 
@@ -21,7 +21,7 @@ Die Microsoft Teams-Plattform ist eine leistungsstarke und flexible Plattform zu
 
 Sie haben eine Ansicht der Teams-Angebote erhalten. Sie können sie nun den Benutzeranforderungen zuordnen. Sehen wir uns das Szenario noch einmal an.
 
-Der Entwickler der Tours and Travel Agency möchte eine App für seine Nutzer, die Reisenden, entwickeln. Die App muss:
+Der Entwickler eines Reisebüros möchte eine App für seine Nutzer, die Reisenden, entwickeln. Die App muss:
 
 - Überprüfung und Übermittlung der Vorhersage an die im Reisebüro registrierten Reisenden.
 - Benachrichtigung der Nutzer einen Tag vor dem Abflugdatum, damit sie planen können.
@@ -34,7 +34,6 @@ Sortieren und Zuordnen von Anforderungen zu Teams-Features:
 | **Integration** | &nbsp; | &nbsp; | Microsoft Graph, Wetter-API |
 | **Scope** | &nbsp; | Persönliche App | &nbsp; |
 | **Integrationspunkt** | &nbsp; | Chat | &nbsp; |
-|
 
 **Teams-App-Lösung**: Eine *persönliche Chat-Bot*-App von Teams, die Prognosen prüft und *registrierten Nutzern* vor ihrem Reisedatum *eine Prognose-Benachrichtigung sendet*.
 
@@ -67,10 +66,10 @@ Als Plattform zum Erstellen von Apps bietet Teams die gesamte Palette von Apps u
 
 :::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Beschreiben eines Lebenszyklus der Teams-App-Entwicklung. Planen, Entwerfen, Erstellen, Erweitern, Testen, Bereitstellen, Vermarkten. Details werden unten in einer Aufzählung angezeigt." border="false":::
 
-Vom Entwerfen bis hin zum Erstellen und Vermarkten einer Teams-App können Sie verschiedene Tools und Dienste verwenden. Ein Beispiel für einen Entwicklungsablauf könnte sein:
+Vom Entwurf bis zur Erstellung und Vermarktung einer Teams-App können Sie verschiedene Tools und Dienste nutzen. Ein Beispiel für einen Entwicklungsablauf kann sein:
 
 1. Planen Sie Ihr Projekt und ermitteln Sie die Anforderung.
-1. Entwerfen Sie die App. Verwenden Sie das Teams UI Kit und die UI Library für die Gestaltung der Benutzeroberfläche von Registerkarten.
+1. Entwerfen Sie die App. Verwenden Sie Teams UI Kit und UI Library für die Gestaltung der Benutzeroberfläche von Registerkarten.
 1. Erstellen Sie die App mit JavaScript mithilfe des Teams-Toolkits.
 1. Erweitern Sie die Funktionalität, indem Sie weitere Teams-Funktionen und M365-Daten mit Microsoft Graph hinzufügen.
 1. Testen Sie die App auf einem Entwicklermandanten mit Beispiel-Nutzerdaten.
@@ -122,7 +121,7 @@ Vom Entwerfen bis hin zum Erstellen und Vermarkten einer Teams-App können Sie v
         **Erstellen Sie Ihre Anwendung**
     :::column-end:::
     :::column span="2":::
-        Sie möchten sich für die App-Entwicklung inspirieren lassen? Durchsuchen Sie unsere Liste der realen Szenarien und Branchenlösungen mit High Fidelity-Konzeptmodellen, um die verschiedenen Möglichkeiten zu verstehen, wie eine Teams-App Ihren Nutzern helfen kann.
+        Suchen Sie nach Inspiration für die App-Entwicklung? Stöbern Sie in unserer Liste mit realen Szenarien und Branchenlösungen mit High Fidelity-Konzeptmodellen, um die verschiedenen Möglichkeiten zu verstehen, wie eine Teams-App Ihren Benutzern helfen kann.
 
         > [!div class="nextstepaction"]
         > [Anzeigen von App-Szenarien](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
@@ -182,7 +181,7 @@ Vom Entwerfen bis hin zum Erstellen und Vermarkten einer Teams-App können Sie v
         **Selbst ein kleiner Code kann viel bewirken**
     :::column-end:::
     :::column span="2":::
-        Sie müssen kein erfahrener Programmierer sein, um eine großartige Teams-App zu erstellen. Probieren Sie eine von mehreren Lösungen mit nur wenig Code aus.
+        Sie müssen kein erfahrener Programmierer sein, um eine großartige Teams-App zu entwickeln. Probieren Sie eine der verschiedenen Low-Code-Lösungen aus.
 
         > [!div class="nextstepaction"]
         > [Erstellen einer App mit wenig Code](samples/teams-low-code-solutions.md)

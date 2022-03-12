@@ -4,12 +4,12 @@ description: Beschreibt alle neuen oder aktuellen Entwicklerfunktionen in Micros
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 'Teams: Was sind die neuesten Updates oder Entwicklervorschau und Features'
-ms.openlocfilehash: 069e0a0147dd4f0dfb6ec3a8f1a3394d9686c242
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: d0e3d200c4d3f1d174cae02a4e364ca4622611f4
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356077"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398813"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -22,15 +22,15 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 
 | Datum | Update | Hier finden |
 | --- | --- | --- |
-|03.03.2022 | So fügen Sie die Authentifizierung mithilfe eines externen OAuth-Anbieters hinzu| Authentifizierung hinzufügen > Registerkarten > [Verwenden externer OAuth-Anbieter](tabs/how-to/authentication/auth-oauth-provider.md) |
+|03.03.2022 | So fügen Sie die Authentifizierung mithilfe eines externen OAuth-Anbieters hinzu.| Authentifizierung hinzufügen > Registerkarten > [Verwenden externer OAuth-Anbieter](tabs/how-to/authentication/auth-oauth-provider.md) |
 |25.02.2022| Schrittweise Anleitung zum Aufrufen von Aufgabenmodulen in Teams eingeführt| Erstellen von Karten und Aufgabenmodulen > Erstellen von Aufgabenmodulen > Verwenden von Aufgabenmodulen aus Bots > [Aufrufen des Aufgabenmoduls von Teams](sbs-botbuilder-taskmodule.yml)|
 |24.02.2022| Schrittweise Anleitung zum Erstellen einer aktionsbasierten Messaging-Erweiterung eingeführt | Erstellen von Messaging-Erweiterungen > Aktionsbefehle > Definieren von Aktionsbefehlen > [Erstellen einer aktionsbasierten Messaging-Erweiterung](sbs-meetingextension-action.yml)|
 |24.02.2022| Schrittweise Anleitung zum Erstellen einer suchbasierten Messaging-Erweiterung eingeführt | Erstellen von Messaging-Erweiterungen > Suchbefehle > Definieren von Suchbefehlen > [Erstellen einer suchbasierten Messaging-Erweiterung](sbs-messagingextension-searchcommand.yml)|
 |24.02.2022| Schrittweise Anleitung zum Erstellen ausgehender Webhooks eingeführt | Erstellen von Webhooks und Connectors > Erstellen ausgehender Webhooks > [Erstellen ausgehender Webhooks](sbs-outgoing-webhooks.yml)|
-| 23.02.2022 |Bewertungsparameter für Microsoft Teams-Store| Verteilen Ihrer App > Veröffentlichen im Teams Store > [Bewertungsparameter für Microsoft Teams Store](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+| 23.02.2022 |Bewertungsparameter für Microsoft Teams-Store| Vermarkten Ihrer App > Veröffentlichen im Teams Store > [Bewertungsparameter für Microsoft Teams Store](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 18.02.2022 | Ein umfangreiches Glossar für die Microsoft Teams-Entwicklerdokumentation wurde eingeführt, damit Sie die Definition eines Begriffs schnell finden können. | [Glossar](~/get-started/glossary.md) |
-| 18.02.2022 | Das Übersichtsmodul zum Zuordnen der Teams App zu Unternehmenszielen, einem Anwendungsfall und zum Erkunden Teams App-Features wurde aktualisiert | [Übersicht > Passende Teams App](overview.md) |
-| 18.02.2022 | Das Modul „App-Grundlagen“ wurde aktualisiert, um Ihre App so zu planen, dass sie die Zuordnung von Anwendungsfällen zu Teams-Features und eine Checkliste für die App-Planung enthält | [Planen ihrer App > Übersicht](~/concepts/app-fundamentals-overview.md) |
+| 18.02.2022 | Aktualisierung des Übersichtsmoduls für die Zuordnung der Teams-App zu den Unternehmenszielen, der Benutzergeschichte und der Erkundung der Funktionen der Teams-App | [Übersicht > Passende Teams-App](overview.md) |
+| 18.02.2022 | Das Modul „App-Grundlagen“ wurde aktualisiert, um Ihre App so zu planen, dass sie die Zuordnung von Anwendungsfällen zu Teams-Features und eine Checkliste für die App-Planung enthält. | [Planen ihrer App > Übersicht](~/concepts/app-fundamentals-overview.md) |
 |17.02.2022| Was ist zu erwarten, nachdem Sie Ihre App eingereicht haben?| Verteilen Ihrer App > Im Teams-Store veröffentlichen > [Übersicht](concepts/deploy-and-publish/appsource/publish.md)|
 |15.02.2022| Schritt-für-Schritt-Anleitung zum Hochladen von Dateien zu Teams aus einem Bot eingeführt | Erstellen von Bots > Senden und Empfangen von Dateien > [Schritt-für-Schritt-Anleitung zum Hochladen von Dateien zu Teams aus einem Bot](sbs-file-handling-in-bot.yml) |
 |11.02.2022| Freigegebenes Besprechungsfreigabefenster| • Erstellen von Apps für Teams-Besprechungen > [Freigegebene Besprechungsbühne](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Erstellen von Apps für Teams-Besprechungen > [API-Referenzen für Besprechungs-Apps](apps-in-teams-meetings/API-references.md) </br> • App-Manifest > Öffentliche Entwickler-Vorschau > [Manifest-Schema für die Entwickler-Vorschau](resources/schema/manifest-schema-dev-preview.md)|
@@ -39,7 +39,6 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 |03.02.2022| App-Manifestversion 1.12 eingeführt | • App-Manifest > [App-Manifestschema](resources/schema/manifest-schema.md) </br> • App-Manifest > Public Developer Preview > [Manifest-Schema](resources/schema/manifest-schema-dev-preview.md) |
 |03.02.2022| Testvorschau für monetarisierte Apps (Entwicklervorschau)| Monetarisieren Ihrer App > [Testvorschau für monetarisierte Apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |03.02.2022| In-App-Kaufablauf für die Monetarisierung von Apps (Entwicklervorschau) | Monetarisieren Ihrer App > [In-App-Käufe](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
-
 
 ## <a name="ga-features"></a>Allgemeine Verfügbarkeitsfunktionen
 
@@ -52,15 +51,15 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
-|03.03.2022 | So fügen Sie die Authentifizierung mithilfe eines externen OAuth-Anbieters hinzu| Authentifizierung hinzufügen > Registerkarten > [Verwenden externer OAuth-Anbieter](tabs/how-to/authentication/auth-oauth-provider.md) |
+|03.03.2022 | So fügen Sie die Authentifizierung mithilfe eines externen OAuth-Anbieters hinzu.| Authentifizierung hinzufügen > Registerkarten > [Verwenden externer OAuth-Anbieter](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 25.02.2022| Schrittweise Anleitung zum Aufrufen von Aufgabenmodulen in Teams eingeführt| Erstellen von Karten und Aufgabenmodulen > Erstellen von Aufgabenmodulen > Verwenden von Aufgabenmodulen aus Bots > [Aufrufen des Aufgabenmoduls von Teams](sbs-botbuilder-taskmodule.yml)|
 | 24.02.2022| Schrittweise Anleitung zum Erstellen einer aktionsbasierten Messaging-Erweiterung eingeführt | Erstellen von Messaging-Erweiterungen > Aktionsbefehle > Definieren von Aktionsbefehlen > [Erstellen einer aktionsbasierten Messaging-Erweiterung](sbs-meetingextension-action.yml)|
 | 24.02.2022| Schrittweise Anleitung zum Erstellen einer suchbasierten Messaging-Erweiterung eingeführt | Erstellen von Messaging-Erweiterungen > Suchbefehle > Definieren von Suchbefehlen > [Erstellen einer suchbasierten Messaging-Erweiterung](sbs-messagingextension-searchcommand.yml)|
 | 24.02.2022| Schrittweise Anleitung zum Erstellen ausgehender Webhooks eingeführt | Erstellen von Webhooks und Connectors > Erstellen ausgehender Webhooks > [Erstellen ausgehender Webhooks](sbs-outgoing-webhooks.yml)|
-| 23.02.2022 |Bewertungsparameter für Microsoft Teams-Store| Verteilen Ihrer App > Veröffentlichen im Teams Store > [Bewertungsparameter für Microsoft Teams Store](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+| 23.02.2022 |Bewertungsparameter für Microsoft Teams-Store| Vermarkten Ihrer App > Veröffentlichen im Teams Store > [Bewertungsparameter für Microsoft Teams Store](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 18.02.2022 | Ein umfangreiches Glossar für die Microsoft Teams-Entwicklerdokumentation wurde eingeführt, damit Sie die Definition eines Begriffs schnell finden können. | [Glossar](~/get-started/glossary.md) |
-| 18.02.2022 | Das Übersichtsmodul zum Zuordnen der Teams App zu Unternehmenszielen, einem Anwendungsfall und zum Erkunden Teams App-Features wurde aktualisiert | [Übersicht > Passende Teams App](overview.md) |
-| 18.02.2022 | Das Modul „App-Grundlagen“ wurde aktualisiert, um Ihre App so zu planen, dass sie die Zuordnung von Anwendungsfällen zu Teams-Features und eine Checkliste für die App-Planung enthält | [Planen ihrer App > Übersicht](~/concepts/app-fundamentals-overview.md) |
+| 18.02.2022 | Aktualisierung des Übersichtsmoduls für die Zuordnung der Teams-App zu den Unternehmenszielen, der Benutzergeschichte und der Erkundung der Funktionen der Teams-App | [Übersicht > Passende Teams-App](overview.md) |
+| 18.02.2022 | Das Modul „App-Grundlagen“ wurde aktualisiert, um Ihre App so zu planen, dass sie die Zuordnung von Anwendungsfällen zu Teams-Features und eine Checkliste für die App-Planung enthält. | [Planen ihrer App > Übersicht](~/concepts/app-fundamentals-overview.md) |
 | 17.02.2022 | Was ist zu erwarten, nachdem Sie Ihre App eingereicht haben?| Verteilen Ihrer App > Im Teams-Store veröffentlichen > [Übersicht](concepts/deploy-and-publish/appsource/publish.md) |
 | 15.02.2022 | Schritt-für-Schritt-Anleitung zum Hochladen von Dateien zu Teams aus einem Bot eingeführt | Erstellen von Bots > Senden und Empfangen von Dateien > [Schritt-für-Schritt-Anleitung zum Hochladen von Dateien zu Teams aus einem Bot](sbs-file-handling-in-bot.yml) |
 | 11.02.2022 | Freigegebenes Besprechungsfreigabefenster| • Erstellen von Apps für Teams-Besprechungen > [Freigegebene Besprechungsbühne](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Erstellen von Apps für Teams-Besprechungen > [API-Referenzen für Besprechungs-Apps](apps-in-teams-meetings/API-references.md) </br> • App-Manifest > Öffentliche Entwickler-Vorschau > [Manifest-Schema für die Entwickler-Vorschau](resources/schema/manifest-schema-dev-preview.md)|
@@ -71,15 +70,14 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 | 17.01.2022 | Personenauswahl in adaptiven Karten für Desktop | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Personenauswahl in Adaptiven Karten](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
- 
+
 <br>
 
 <details>
 <summary><b>Ältere Updates</b></summary>
 <br>
-Erkunden Sie Updates aus den vorherigen GA-Versionen, die hier aufgeführt sind.
+Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier aufgeführt sind.
 <br><br>
-
 
 <details>
 <summary><b>2021</b></summary>
@@ -185,7 +183,7 @@ Erkunden Sie Updates aus den vorherigen GA-Versionen, die hier aufgeführt sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
-| 26.12.2019 | Der Parameter `replyToId` in Nutzlasten, die an einen Bot gesendet werden, wird nicht mehr verschlüsselt, so dass Sie diesen Wert verwenden können, um Deeplinks zu diesen Nachrichten zu erstellen. Nachrichtennutzlasten enthalten die verschlüsselten Werte im Parameter `legacy.replyToId`.  |
+| 26.12.2019 | Der `replyToId`Parameter in Payloads, die an einen Bot gesendet werden, wird nicht mehr verschlüsselt, sodass Sie diesen Wert verwenden können, um Deeplinks zu diesen Nachrichten zu erstellen. Nachrichten-Payloads enthalten die verschlüsselten Werte im Parameter`legacy.replyToId`.  |
 | 05.11.2019 | Einmaliges Anmelden mit dem Teams JavaScript-SDK. | [Einmaliges Anmelden](tabs/how-to/authentication/auth-aad-sso.md) |
 | 31.10.2019 | Konversations-Bots und Messaging-Erweiterungsdokumentation wurden aktualisiert, um das 4.6 Bot Framework SDK widerzuspiegeln. Die Dokumentation für das v3 SDK ist im Abschnitt „Ressourcen“ verfügbar. | Alle Dokumentationen zu Bot- und Messaging-Erweiterungen |
 | 31.10.2019 | Neue Dokumentationsstruktur und Überarbeitung wichtiger Artikel. Bitte melden Sie alle toten Links oder 404's, indem Sie ein GitHub-Problem erstellen. | Alle! |
@@ -253,7 +251,7 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 |07.02.2022| Tools und SDKs |Teams-Toolkit für Visual Studio Code > </br> • Hinzufügen von Funktionen zur Teams-App> [Fügen Sie Funktionen für Ihre Teams-Apps hinzu](toolkit/add-capability.md) </br> • Hinzufügen von Cloudressourcen zur Teams-App> [Fügen Sie Cloudressourcen für Ihre Teams-App hinzu](toolkit/add-resource.md) |
 |02.02.2022| App-Manifestversion 1.12 eingeführt | App-Manifest > Öffentliche Entwicklervorschau > [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
 |03.02.2022| Testvorschau für monetarisierte Apps| Monetarisieren Ihrer App > [Testvorschau für monetarisierte Apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|03.02.2022| In-App-Kaufablauf für die Monetarisierung von Apps | Monetarisieren Ihrer App > [In-App-Käufe](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
+|03.02.2022| In-App-Kaufablauf für die Monetarisierung von Apps | Monetarisieren Ihrer App > [In-App-Käufe](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |17.01.2022| Personenauswahl in Adaptiven Karten für Mobilgeräte  | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Personenauswahl in Adaptiven Karten](task-modules-and-cards/cards/people-picker.md)|
 |10.01.2022 | Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code | Tools und SDKs > Teams Toolkit for Visual Studio Code > [Grundlagen des Teams Toolkit](toolkit/teams-toolkit-fundamentals.md) |
 |24.12.2021| Schrittweise Anleitung zum Erteilen von Berechtigungen für Registerkartengeräte eingeführt | App-Grundlagen > Gerätefunktionen > [Schritt-für-Schritt-Anleitung zum Erteilen von Berechtigungen für Tab-Geräte](sbs-tab-device-permissions.yml) |
