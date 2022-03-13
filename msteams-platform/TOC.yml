@@ -501,14 +501,14 @@
       href: samples/integrate-web-apps-overview.md
     - name: Überlegungen zur Teams-Integration
       href: samples/integrating-web-apps.md
+    - name: Erstellen eines virtuellen Assistenten
+      href: samples/virtual-assistant.md
     - name: Power Plattform-Apps
       items:
         - name: Übersicht
           href: samples/teams-low-code-solutions.md
         - name: Hinzufügen eines Power Virtual Agent-Chatbots
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-        - name: Erstellen eines virtuellen Assistenten
-          href: samples/virtual-assistant.md
     - name: App-Vorlagen für Microsoft Teams
       href: samples/app-templates.md
     - name: Produktionsfertige Shifts-Connectors
@@ -517,8 +517,12 @@
       items:
         - name: Übersicht
           href: resources/moodle-overview.md
-        - name: Installieren von Moodle LMS
-          href: resources/moodleInstructions.md
+        - name: Microsoft 365-Plugins
+          href: resources/m365-plugins/m365-plugins-overview.md
+        - name: Partner-Apps für Moodle
+          href: resources/partner-apps-for-moodle.md
+        - name: Häufig gestellte Fragen zu Moodle
+          href: resources/faqs.md
     - name: Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
       href: concepts/build-and-test/share-to-teams.md
     - name: Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint

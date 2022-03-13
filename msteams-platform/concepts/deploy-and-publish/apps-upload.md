@@ -5,19 +5,19 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d602750a8f41d8331f30d64e06b2aafb026e0ff4
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: e3a22378819d8fb1e865e2122b7977bcbabbbb74
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356280"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453337"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Hochladen Ihrer App in Microsoft Teams
 
-Sie können Microsoft Teams-Apps querladen, ohne sie in Ihrer Organisation oder im Teams-Store veröffentlichen zu müssen. Dies ist in den folgenden Szenarien sinnvoll:
+In den folgenden Szenarien können Sie Microsoft Teams-Apps querladen, ohne sie in Ihrer Organisation oder im Teams Store veröffentlichen zu müssen:
 
 * Sie möchten eine App lokal selbst oder mit anderen Entwicklern testen und debuggen.
-* Sie haben eine App nur für sich selbst erstellt. Beispielsweise, um einen Workflow zu automatisieren.
+* Sie haben eine App für sich selbst erstellt, um einen Workflow zu automatisieren.
 * Sie haben eine App für eine kleine Gruppe von Benutzern erstellt, z. B. Ihre Arbeitsgruppe.
 
 > [!IMPORTANT]
@@ -34,21 +34,24 @@ Sie können Microsoft Teams-Apps querladen, ohne sie in Ihrer Organisation oder 
 Sie können Ihre App in ein Team, einen Chat, eine Besprechung oder zur persönlichen Verwendung querladen, je nachdem, wie Sie den Bereich Ihrer App konfiguriert haben.
 
 1. Melden Sie sich beim Teams-Client mit Ihrem [Microsoft 365-Entwicklungskonto](~/build-your-first-app/build-and-run.md#prerequisites) an.
-1. Wählen Sie **Apps** und dann **Hochladen einer benutzerdefinierten App** aus.
-1. Wählen Sie die ZIP-Datei Ihres App-Pakets aus. Ein Installationsdialogfeld wird angezeigt.
-:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot mit einem Beispiel eines Teams-App-Installationsdialogfelds.":::
-1. Fügen Sie Ihre App zu Teams hinzu.
+1. Wählen Sie **Apps** und dann **Apps** verwalten aus.
+1. Wählen Sie **Benutzerdefinierte App hochladen** aus.
+1. Wählen Sie die ZIP-Datei Ihres App-Pakets aus. Der folgende Bildschirm wird angezeigt:
 
-> [!NOTE]
-> `onInstallationUpdateActivityAsync()`-Methode wird verwendet, um Microsoft Teams Locale abzurufen, während der Bot zu Microsoft Teams hinzugefügt wird.
+    :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot mit einem Beispiel eines Teams-App-Installationsdialogfelds.":::
 
-## <a name="troubleshoot-upload-issues"></a>Behandeln von Problemen beim Hochladen
+1. Wählen Sie **Hinzufügen** aus, um Ihre App zu Teams hinzuzufügen.
 
-Wenn Ihre App nicht quergeladen werden kann, führen Sie die folgenden Schritte aus, bis das Problem behoben ist:
+    > [!NOTE]
+    > `onInstallationUpdateActivityAsync()`-Methode wird verwendet, um Microsoft Teams Locale abzurufen, während der Bot zu Microsoft Teams hinzugefügt wird.
 
-1. Gehen Sie zurück zu den Anweisungen für das [Erstellung Ihres App-Pakets](../../concepts/build-and-test/apps-package.md).
-1. [Überprüfen Sie Ihre App-Paket](https://dev.teams.microsoft.com/appvalidation.html) erneut.
-1. Stellen Sie sicher, dass Ihr App-Manifest mit dem neuesten [Schema](../../resources/schema/manifest-schema.md) übereinstimmt.
+## <a name="troubleshooting"></a>Problembehandlung
+
+Wenn Ihre App nicht quergeladen werden kann oder Probleme beim Hochladen auftreten, versuchen Sie die folgenden Optionen:
+
+1. Stellen Sie sicher, dass Sie alle Anweisungen für [Erstellung Ihres App-Pakets](../../concepts/build-and-test/apps-package.md) befolgt haben.
+1. [Überprüfen Sie Ihr App-Paket](https://dev.teams.microsoft.com/appvalidation.html).
+1. Stellen Sie sicher, dass Ihr App-Manifest mit dem aktuellen [Schema](../../resources/schema/manifest-schema.md) übereinstimmt.
 
 ## <a name="access-your-app"></a>Zugriff auf Ihre App
 

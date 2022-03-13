@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: Manifestschema für Microsoft Teams
-ms.openlocfilehash: 25de3d14019bbe37a202f2252749e816fc7b3edc
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 14f1bdaa546fd18612e9869efc2f1216c1aef8db
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399100"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453768"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -498,7 +498,7 @@ Das Element ist ein Array (maximal ein Element &mdash; derzeit ist nur ein Bot p
 |`needsChannelSelector`|Boolean|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
 |`isNotificationOnly`|Boolesch|||Gibt an, ob es sich bei einem Bot um einen unidirektionalen Bot mit nur Benachrichtigungsfunktion und nicht um einen dialogorientierten Bot handelt. Standard: **`false`**|
 |`supportsFiles`|Boolean|||Gibt an, ob der Bot die Möglichkeit unterstützt, Dateien im persönlichen Chat hoch-/herunterzuladen. Standard: **`false`**|
-|`supportsCalling`|Boolesch|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
+|`supportsCalling`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
 |`supportsVideo`|Boolean|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
@@ -825,13 +825,17 @@ Spezifizieren und konsolidieren Sie autorisierungsbezogene Informationen für di
 |Name| Typ|Maximale Größe|Erforderlich |Beschreibung|
 |---|---|---|---|---|
 |`type`|string||✔| Der Typ der ressourcenspezifischen Berechtigung. Optionen: `Application` und `Delegated`.|
-|`name`|string|128 Zeichen|✔|Der Name der ressourcenspezifischen Berechtigung. <br> Weitere Informationen finden Sie unter [Anwendungsberechtigungen](../../graph-api/rsc/resource-specific-consent.md) und [Delegierte Berechtigungen](#delegated-permissions).|
+|`name`|string|128 Zeichen|✔|Der Name der ressourcenspezifischen Berechtigung. Weitere Informationen finden Sie unter [Ressourcenspezifische Anwendungsberechtigungen](#resource-specific-application-permissions) und [Ressourcenspezifische delegierte Berechtigungen](#resource-specific-delegated-permissions)|
 
-### <a name="delegated-permissions"></a>Delegierte Berechtigungen
+#### <a name="resource-specific-application-permissions"></a>Ressourcenspezifische Anwendungsberechtigungen
+
+Anwendungsberechtigungen ermöglichen der App den Zugriff auf Daten, ohne dass ein Benutzer angemeldet ist. Informationen zu Anwendungsberechtigungen finden Sie unter [Ressourcenspezifische Zustimmung für MS Graph und MS BotSDK](../../graph-api/rsc/resource-specific-consent.md).
+
+#### <a name="resource-specific-delegated-permissions"></a>Ressourcenspezifische delegierte Berechtigungen
 
 Delegierte Berechtigungen ermöglichen der App den Zugriff auf Daten im Namen des angemeldeten Benutzers.
 
-* **Ressourcenspezifische Berechtigungen für Teams**
+* **Ressourcenspezifische delegierte Berechtigungen für Teams**
 
     |**Name**|**Beschreibung**|
     |---|---|
@@ -839,7 +843,7 @@ Delegierte Berechtigungen ermöglichen der App den Zugriff auf Daten im Namen de
     |`InAppPurchase.Allow.Group`| Ermöglicht der App, Marketplace-Angebote für Benutzer in diesem Team anzuzeigen und ihre Käufe innerhalb der App im Namen des angemeldeten Benutzers abzuschließen.|
     |`ChannelMeetingStage.Write.Group`| Ermöglicht es der App, in Channel-Meetings, die mit diesem Team verbunden sind, im Namen des angemeldeten Benutzers Inhalte auf der Meetingbühne anzuzeigen.|
 
-* **Ressourcenspezifische Berechtigungen für Chats oder Besprechungen**
+* **Ressourcenspezifische delegierte Berechtigungen für Chats oder Besprechungen**
 
     |**Name**|**Beschreibung**|
     |---|---|
@@ -848,7 +852,7 @@ Delegierte Berechtigungen ermöglichen der App den Zugriff auf Daten im Namen de
     |`OnlineMeetingParticipant.Read.Chat`|Ermöglicht es der App, im Namen des angemeldeten Benutzers die Teilnehmerinformationen, einschließlich Name, Rolle, ID, Beitritts- und Austrittszeiten, der mit diesem Chat verbundenen Besprechung zu lesen.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Ermöglicht der App, eingehende Audiodaten für Teilnehmer an Meetings, die mit diesem Chat verknüpft sind, im Namen des angemeldeten Benutzers umzuschalten.|
 
-* **Ressourcenspezifische Berechtigungen für Benutzer**
+* **Ressourcespezifische delegierte Berechtigungen für Benutzer**
 
     |**Name**|**Beschreibung**|
     |---|---|

@@ -4,12 +4,12 @@ description: Beschreibt alle neuen oder aktuellen Entwicklerfunktionen in Micros
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 'Teams: Was sind die neuesten Updates oder Entwicklervorschau und Features'
-ms.openlocfilehash: d0e3d200c4d3f1d174cae02a4e364ca4622611f4
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 4aa1bd8555d2ebd017a3a09a1c736d566e40ed81
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398813"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453439"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -22,6 +22,7 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 
 | Datum | Update | Hier finden |
 | --- | --- | --- |
+|10.03.2022| Informationen zu Moodle LMS und Microsoft 365-Plug-Ins hinzugefügt | Integrieren mit Teams > Moodle LMS >[ Moodle Lernmanagementsystem](resources/moodle-overview.md)|
 |03.03.2022 | So fügen Sie die Authentifizierung mithilfe eines externen OAuth-Anbieters hinzu.| Authentifizierung hinzufügen > Registerkarten > [Verwenden externer OAuth-Anbieter](tabs/how-to/authentication/auth-oauth-provider.md) |
 |25.02.2022| Schrittweise Anleitung zum Aufrufen von Aufgabenmodulen in Teams eingeführt| Erstellen von Karten und Aufgabenmodulen > Erstellen von Aufgabenmodulen > Verwenden von Aufgabenmodulen aus Bots > [Aufrufen des Aufgabenmoduls von Teams](sbs-botbuilder-taskmodule.yml)|
 |24.02.2022| Schrittweise Anleitung zum Erstellen einer aktionsbasierten Messaging-Erweiterung eingeführt | Erstellen von Messaging-Erweiterungen > Aktionsbefehle > Definieren von Aktionsbefehlen > [Erstellen einer aktionsbasierten Messaging-Erweiterung](sbs-meetingextension-action.yml)|
@@ -51,6 +52,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
+|10.03.2022 | Informationen zu Moodle LMS und Microsoft 365-Plug-Ins hinzugefügt | Integrieren mit Teams > Moodle LMS >[ Moodle Lernmanagementsystem](resources/moodle-overview.md)|  
 |03.03.2022 | So fügen Sie die Authentifizierung mithilfe eines externen OAuth-Anbieters hinzu.| Authentifizierung hinzufügen > Registerkarten > [Verwenden externer OAuth-Anbieter](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 25.02.2022| Schrittweise Anleitung zum Aufrufen von Aufgabenmodulen in Teams eingeführt| Erstellen von Karten und Aufgabenmodulen > Erstellen von Aufgabenmodulen > Verwenden von Aufgabenmodulen aus Bots > [Aufrufen des Aufgabenmoduls von Teams](sbs-botbuilder-taskmodule.yml)|
 | 24.02.2022| Schrittweise Anleitung zum Erstellen einer aktionsbasierten Messaging-Erweiterung eingeführt | Erstellen von Messaging-Erweiterungen > Aktionsbefehle > Definieren von Aktionsbefehlen > [Erstellen einer aktionsbasierten Messaging-Erweiterung](sbs-meetingextension-action.yml)|
