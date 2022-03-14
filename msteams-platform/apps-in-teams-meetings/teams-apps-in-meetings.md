@@ -1,21 +1,21 @@
 ---
-title: Apps für Teams Besprechungen
+title: Apps für Teams-Besprechungen
 author: surbhigupta
 description: Übersicht über Apps in Teams Besprechungen basierend auf Teilnehmer- und Benutzerrolle
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams-Apps – Benutzerteilnehmer-Rollen-API für Besprechungen
-ms.openlocfilehash: 0ae8a3b5f080258e870e4b21c91071de6aac4fd5
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: 9715467d17205a7a913f36da099782a0f0da69df
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075451"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466425"
 ---
-# <a name="apps-for-teams-meetings"></a>Apps für Teams Besprechungen
+# <a name="apps-for-teams-meetings"></a>Apps für Teams-Besprechungen
 
-Besprechungen ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikation und gemeinsames Feedback. Die Besprechungs-App kann eine Benutzererfahrung für jede Phase des Besprechungslebenszyklus bereitstellen. Der Besprechungslebenszyklus umfasst die App-Erfahrung vor der Besprechung, in besprechungsbesprechung und nach der Besprechung, je nach Status des Teilnehmers.
+Besprechungen ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikation und geteiltes Feedback. Die Besprechungs-App kann eine Benutzererfahrung für jede Phase des Besprechungslebenszyklus bereitstellen. Der Besprechungslebenszyklus umfasst die App-Erfahrung vor der Besprechung, während der Besprechung und nach der Besprechung, abhängig vom Status des Teilnehmers.
 
 Die Benutzer können in Besprechungen über den Registerkartenkatalog aus ihrem Kalender auf Apps zugreifen, z. B.:
 
@@ -42,9 +42,8 @@ Mit der neuen benutzerdefinierten Szenenfunktion für den gemeinsamen Modus kön
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Voraussetzungen und API-Verweise für Apps in Teams-Besprechungen](create-apps-for-teams-meetings.md)
 * [Entwerfen ihrer Microsoft Teams Besprechungserweiterung](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [API-Referenzen für Besprechungs-Apps – Teams](~/apps-in-teams-meetings/api-references.md)
 * [Szenen des benutzerdefinierten Zusammen-Modus](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
-* [Besprechungslebenszyklus](meeting-app-extensibility.md#meeting-lifecycle)
+* [Der Besprechungslebenszyklus](meeting-app-extensibility.md#meeting-lifecycle)

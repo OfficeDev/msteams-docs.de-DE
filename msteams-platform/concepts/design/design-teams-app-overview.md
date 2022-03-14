@@ -1,16 +1,16 @@
 ---
 title: Entwerfen Ihrer benutzerdefinierten App
 author: heath-hamilton
-description: Erfahren Sie, wie Sie Microsoft Teams Apps entwerfen. Zu den Ressourcen gehören das Microsoft Teams UI Kit, bewährte Methoden, Beispiele und vieles mehr.
+description: Erfahren Sie, wie Sie Microsoft Teams-Apps entwerfen. Zu den Ressourcen gehören das Microsoft Teams UI Kit, bewährte Methoden, Beispiele und vieles mehr.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 20626290af2ae94eb9f3913d7063ba8d8b207bda
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 7a7a6d380341c94f4ed2eef92bf4407ac1a7681f
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948565"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466528"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Entwerfen Ihrer Microsoft Teams-App
 
@@ -20,9 +20,9 @@ Unabhängig davon, ob Sie Designer, Produktmanager, Entwickler oder Entwickler m
 
 ## <a name="creating-a-cohesive-experience"></a>Erstellen einer zusammenhängenden Oberfläche
 
-Das Entwerfen einer Teams App ähnelt dem Entwerfen einer herkömmlichen Web-App, unterscheidet sich jedoch auch etwas. Ein effektives Design hebt die einzigartigen Attribute Ihrer App hervor und passt sich natürlich mit Teams Features und Kontexten an.
+Das Entwerfen einer Teams-App ähnelt dem Entwerfen einer herkömmlichen Web-App, unterscheidet sich jedoch auch etwas. Ein effektives Design hebt die einzigartigen Attribute Ihrer App hervor und passt sich natürlich mit Teams Features und Kontexten an.
 
-Diese Richtlinien und Ressourcen können Ihnen dabei helfen, dieses Gleichgewicht zu finden. Sie wissen, was Sie tun müssen und was Sie beim Entwerfen Ihrer Teams-App vermeiden müssen (z. B. Navigation auf mehreren Ebenen auf einer Registerkarte).
+Diese Richtlinien und Ressourcen können Ihnen dabei helfen, dieses Gleichgewicht zu finden. Sie wissen, was Sie tun müssen und was Sie beim Entwerfen Ihrer Teams-App vermeiden müssen (z. B. navigation auf einer Registerkarte mit mehreren Ebenen).
 
 ## <a name="teams-app-design-principles"></a>Teams App-Entwurfsprinzipien
 
@@ -50,7 +50,7 @@ Die App ist sicher und konform. Benutzer können auf einfache Weise Informatione
 
 ### <a name="globally-inclusive"></a>Global inklusiv
 
-Personen aller Hintergründe, Fähigkeiten und Fächer können die App verwenden. Es ist kulturell, rassisch und social aware.
+Personen aller Hintergründe, Fähigkeiten und Fächer können die App verwenden. Es ist kulturell, rassisch und  social aware.
 
    :::column-end:::
    :::column span="":::
@@ -67,7 +67,7 @@ Die App konzentriert sich auf Kernszenarien, die sich mit Teams Workflows verbin
 
 ### <a name="native-or-distinct"></a>Systemeigen oder unterschiedlich
 
-Die App verwendet systemeigene Teams Designkomponenten oder Eigene. Es gibt keine Mischung aus Farbschemas, Steuerelementen usw.
+Die App verwendet systemeigene Teams Designkomponenten oder Ihre eigenen. Es gibt keine Mischung aus Farbschemas, Steuerelementen usw.
 
    :::column-end:::
    :::column span="":::
@@ -115,7 +115,7 @@ Text, Symbole und Bilder machen deutlich, wozu die App dient und wie sie verwend
 
 ## <a name="teams-design-system"></a>Teams-Entwurfssystem
 
-Lernen Sie die [Grundlagen des Teams App-Designs](design-teams-app-fundamentals.md)kennen, einschließlich Layout, Farbschemas und mehr.
+Lernen Sie die [Grundlagen des Teams App-Designs](design-teams-app-fundamentals.md) kennen, einschließlich Layout, Farbschemas und mehr.
 
 ## <a name="app-capabilities"></a>App-Funktionen
 
@@ -129,11 +129,11 @@ Erfahren Sie, wie Benutzer Teams Apps hinzufügen, verwenden und verwalten, um d
 
 ## <a name="ui-templates"></a>Vorlagen für Benutzeroberflächen
 
-Erstellen Sie schnell komplexe, präzise Designs mit [Vorlagen für häufige Teams Anwendungsfälle und Workflows.](design-teams-app-ui-templates.md)
+Erstellen Sie schnell komplexe, präzise Designs mit [Vorlagen für gängige Teams Anwendungsfälle und Workflows](design-teams-app-ui-templates.md).
 
 ## <a name="basic-ui-components"></a>Grundlegende Benutzeroberflächenkomponenten
 
-Basierend auf Fluent Ui sind dies die [Kernelemente,](design-teams-app-basic-ui-components.md) die Sie verwenden können, um Teams Oberflächen von Grund auf neu zu erstellen.
+Basierend auf Fluent Ui sind [dies die Kernelemente](design-teams-app-basic-ui-components.md), die Sie verwenden können, um Teams Oberflächen von Grund auf neu zu erstellen.
 
 ## <a name="tools-and-samples"></a>Tools und Beispiele
 
@@ -141,7 +141,7 @@ Die folgenden Tools können Designern und Entwicklern bei den ersten Schritten h
 
 ### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-Benutzeroberflächenbausatz
 
-Entwerfen Sie eine Teams-App mit UI-Komponenten, Vorlagen und Beispielen, die Sie nach Bedarf ziehen, ablegen und ändern können. Das UI-Kit enthält auch umfassende Informationen dazu, wie Apps in verschiedenen Teams Szenarien aussehen und sich verhalten sollten.
+Entwerfen Sie eine Teams-App mit UI-Komponenten, Vorlagen und Beispielen, die Sie nach Bedarf ziehen, ablegen und ändern können. Das UI-Kit enthält auch umfassende Informationen dazu, wie Apps in unterschiedlichen Teams Szenarien aussehen und sich verhalten sollten.
 
 > [!div class="nextstepaction"]
 > [Abrufen des UI-Kits (Numma)](https://www.figma.com/community/file/916836509871353159)
@@ -185,7 +185,7 @@ Entwerfen Sie adaptive Karten in unserem webbasierten Tool.
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Voraussetzungen und API-Verweise für Apps in Teams-Besprechungen](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)
+* [Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen](../../apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Entwerfen Ihres Microsoft Teams-Bots](~/bots/design/bots.md)
 * [Erstellen eines virtuellen Assistenten](~/samples/virtual-assistant.md)
 * [Entwerfen von Aufgabenmodulen für Ihre Microsoft Teams-App](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)

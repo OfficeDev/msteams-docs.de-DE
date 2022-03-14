@@ -4,12 +4,12 @@ author: surbhigupta
 description: Erfahren Sie mehr über den Besprechungslebenszyklus, die Erstellung der Besprechungserfahrung des Benutzers während des gesamten Besprechungslebenszyklus in desktop- und mobilen Umgebungen, Teilnehmerrollen und Benutzertypen. Darüber hinaus erfahren Sie mehr über die Integration von Bots und Messaging-Erweiterungen in den Besprechungslebenszyklus.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 253cc365263b1d385d18d1043da7a779a1ed2355
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 01b24c96e19f11fe32ac511bc1c3f091f23b6cfb
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398848"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466500"
 ---
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 
@@ -46,7 +46,7 @@ So fügen Sie einer vorhandenen Besprechung Registerkarten hinzu:
 1. Wählen Sie in Ihrem Kalender eine Besprechung aus, der Sie eine Registerkarte hinzufügen möchten.
 1. Wählen Sie die Registerkarte **"Details** " aus, und wählen Sie <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. Der Registerkartenkatalog wird angezeigt.
 
-    <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
+    :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="Pre-Meeting-App-Umgebung":::
 
 1. Wählen Sie im Registerkartenkatalog die App aus, die Sie hinzufügen möchten, und führen Sie die erforderlichen Schritte aus. Die App wird als Registerkarte installiert.
 
@@ -57,7 +57,7 @@ So fügen Sie einer vorhandenen Besprechung Registerkarten hinzu:
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-![Registerkartenansicht vor der Besprechung](../assets/images/apps-in-meetings/PreMeetingTab.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/PreMeetingTab.png" alt-text="Registerkarten während einer Besprechung":::
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
@@ -69,7 +69,7 @@ Nachdem Sie die Registerkarten zu einer vorhandenen Besprechung auf mobilen Ger�
 
 #### <a name="in-meeting-app-experience"></a>In-Meeting-App-Umgebung
 
-Über die In-Meeting-App-Umgebung können Sie während der Besprechung mithilfe von Apps und dem Dialogfeld die Teilnehmer einbeziehen. Die Besprechungs-Apps werden auf der Symbolleiste des Besprechungsfensters als Registerkarten in der Besprechung gehostet. Im Dialogfeld in der Besprechung können Aktionen erfordernde Inhalte für Besprechungsteilnehmer angezeigt werden. Weitere Informationen finden Sie unter [Erstellen von Apps für Teams Besprechungen](create-apps-for-teams-meetings.md).
+Über die In-Meeting-App-Umgebung können Sie während der Besprechung mithilfe von Apps und dem Dialogfeld die Teilnehmer einbeziehen. Die Besprechungs-Apps werden auf der Symbolleiste des Besprechungsfensters als Registerkarten in der Besprechung gehostet. Im Dialogfeld in der Besprechung können Aktionen erfordernde Inhalte für Besprechungsteilnehmer angezeigt werden. Weitere Informationen finden Sie unter [Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen](enable-and-configure-your-app-for-teams-meetings.md).
 
 Für mobile Geräte sind Besprechungs-Apps über **Apps** > auslassungspunkte &#x25CF;&#x25CF;&#x25CF; in der Besprechung verfügbar. Wählen Sie **"Apps"** aus, um alle in der Besprechung verfügbaren Apps anzuzeigen.
 
@@ -82,8 +82,6 @@ So verwenden Sie Registerkarten während einer Besprechung:
 1. Geben Sie im Dialogfeld in der Besprechung Ihre Antwort als Feedback ein.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
-
-![Dialogfeldansicht](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
@@ -132,11 +130,11 @@ In der folgenden Abbildung wird die Registerkarte **"Contoso** " mit den Ergebni
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-![Ansicht "Besprechung posten"](../assets/images/apps-in-meetings/PostMeeting.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/post.png" alt-text="Contoso-Registerkarte mit Ergebnissen":::
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
-<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile post meeting view" width="200"/>
+:::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="App-Erfahrung nach besprechungsbesprechung":::
 
 ---
 
@@ -155,7 +153,7 @@ Mit den Teams einheitlichen Besprechungs-Apps können Sie Ihre App basierend auf
 
 ## <a name="participant-roles-in-a-meeting"></a>Teilnehmerrollen in einer Besprechung
 
-![Teilnehmer an einer Besprechung](../assets/images/apps-in-meetings/participant-roles.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/participant-roles.png" alt-text="Teilnehmerrollen in einer Besprechung":::
 
 Die Standardeinstellungen für Teilnehmer werden vom IT-Administrator einer Organisation bestimmt. Es folgen die Teilnehmerrollen in einer Besprechung:
 
@@ -207,7 +205,7 @@ Die folgende Tabelle enthält die Benutzertypen und listet die Features auf, auf
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Voraussetzungen und API-Verweise für Apps in Teams-Besprechungen](create-apps-for-teams-meetings.md)
+> [Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## <a name="see-also"></a>Siehe auch
 

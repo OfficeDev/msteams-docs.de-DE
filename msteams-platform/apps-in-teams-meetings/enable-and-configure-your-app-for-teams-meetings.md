@@ -4,16 +4,28 @@ author: surbhigupta
 description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen und verschiedene Besprechungsszenarien, Aktualisieren des App-Manifests, Konfigurieren von Features wie In-Meeting-Dialog, freigegebener Besprechungsphase, Besprechungs-SidePanel und mehr
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 99467135f75f46d89b565c4d6a6e4948ab905d7b
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 0211cb1458b13a0727fce9915d1a50d227ed1a53
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398862"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63464359"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
 Jedes Team hat eine andere Art, Aufgaben zu kommunizieren und zusammenzuarbeiten. Um diese unterschiedlichen Aufgaben zu erreichen, passen Sie Teams mit Apps für Besprechungen an. Aktivieren Sie Ihre Apps für Teams Besprechungen, und konfigurieren Sie die Apps so, dass sie im Besprechungsbereich innerhalb ihres App-Manifests verfügbar sind.
+
+## <a name="prerequisites"></a>Voraussetzungen
+
+Mit Apps für Teams Besprechungen können Sie die Funktionen Ihrer Apps über den gesamten Besprechungslebenszyklus erweitern. Bevor Sie mit Apps für Teams Besprechungen arbeiten, müssen Sie die folgenden Voraussetzungen erfüllen:
+
+* Erfahren Sie, wie Sie Teams-Apps entwickeln. Weitere Informationen zum Entwickeln Teams App finden Sie unter [Teams App-Entwicklung](../overview.md).
+
+* Verwenden Sie Ihre App, die konfigurierbare Registerkarten im Gruppenchatbereich unterstützt. Weitere Informationen finden Sie unter [Gruppenchatbereich](../resources/schema/manifest-schema.md#configurabletabs) und [Erstellen einer Gruppenregisterkarte](../build-your-first-app/build-channel-tab.md).
+
+* Halten Sie sich an allgemeine [Teams Entwurfsrichtlinien für Registerkarten](../tabs/design/tabs.md) für Szenarien vor und nach der Besprechung. Informationen zu Erfahrungen während Besprechungen finden Sie [in den Entwurfsrichtlinien für registerkarteninterne](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) Besprechungen und [in Besprechungsdialogen](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
+
+* Damit Ihre App in Echtzeit aktualisiert werden kann, muss sie basierend auf den Ereignisaktivitäten in der Besprechung auf dem neuesten Stand sein. Diese Ereignisse können sich innerhalb des Besprechungsdialogfelds und in anderen Phasen des Besprechungslebenszyklus befinden. Das Dialogfeld "In-Meeting" finden Sie unter `completionBotId` Parameter [in der Nutzlast der In-Meeting-Benachrichtigung](API-references.md#send-an-in-meeting-notification).
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Aktivieren Ihrer App für Teams Besprechungen
 
@@ -54,7 +66,11 @@ Das App-Manifest muss den folgenden Codeausschnitt enthalten:
 
 ### <a name="context-property"></a>Context-Eigenschaft
 
-Die `context` Eigenschaft bestimmt, was angezeigt werden muss, wenn ein Benutzer eine App in einer Besprechung aufruft, je nachdem, wo der Benutzer die App aufruft. Mit der Registerkarte `context` und `scopes` den Eigenschaften können Sie bestimmen, wo Ihre App angezeigt werden muss. Die Registerkarten im `team` Bereich können `groupchat` mehrere Kontexte aufweisen. Es folgen die Werte für die `context` Eigenschaft, aus der Sie alle oder einige der Werte verwenden können:
+Die `context` Eigenschaft bestimmt, was angezeigt werden muss, wenn ein Benutzer eine App in einer Besprechung aufruft, je nachdem, wo der Benutzer die App aufruft. Mit der Registerkarte `context` und `scopes` den Eigenschaften können Sie bestimmen, wo Ihre App angezeigt werden muss. Die Registerkarten im `team` Bereich können `groupchat` mehrere Kontexte aufweisen.
+
+Unterstützen Sie den `groupchat` Bereich, um Ihre App in Chats vor und nach der Besprechung zu aktivieren. Mit der App-Erfahrung vor der Besprechung können Sie Besprechungs-Apps suchen und hinzufügen und die Aufgaben vor der Besprechung ausführen. Mit der App-Erfahrung nach der Besprechung können Sie die Ergebnisse der Besprechung anzeigen, z. B. Umfrageergebnisse oder Gebühren.
+
+ Es folgen die Werte für die `context` Eigenschaft, aus der Sie alle oder einige der Werte verwenden können:
 
 |Wert|Beschreibung|
 |---|---|
@@ -178,9 +194,9 @@ Die Konfigurationen für Nach [- und Vorbesprechungen](#before-a-meeting) sind i
 
 |Beispielname | Beschreibung | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Besprechungs-App | Veranschaulicht die Verwendung der Besprechungstoken-Generator-App zum Anfordern eines Tokens. Das Token wird sequenziell generiert, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Das Token ist nützlich in Situationen wie Meetings in DerBesprechung und Q&A-Sitzungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-|Beispiel für Besprechungsphasen | Beispiel-App zum Anzeigen einer Registerkarte in der Besprechungsphase für die Zusammenarbeit | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
-|Besprechungsseitiger Bereich | Beispiel-App zum Hinzufügen von Tagesordnungen in einem besprechungsseitigen Bereich | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
+| Besprechungs-App | Veranschaulicht die Verwendung der Besprechungstoken-Generator-App zum Anfordern eines Tokens. Das Token wird sequenziell generiert, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Das Token ist nützlich in Situationen wie Meetings in DerBesprechung und Q&A-Sitzungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+|Beispiel für Besprechungsphasen | Beispiel-App zum Anzeigen einer Registerkarte in der Besprechungsphase für die Zusammenarbeit | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+|Besprechungsseitiger Bereich | Beispiel-App zum Hinzufügen von Tagesordnungen in einem besprechungsseitigen Bereich | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
 ## <a name="step-by-step-guides"></a>Schritt-für-Schritt-Anleitungen
 

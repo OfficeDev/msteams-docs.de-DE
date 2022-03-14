@@ -4,12 +4,12 @@ description: Glossar für Microsoft Teams-Entwicklerdokumentation
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams-Entwicklerdefinition
-ms.openlocfilehash: eab4779a862aa9a3e5183d52977fa012b1fc254f
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: dc29c40cfa79f267e2fde866974badc97d1900b7
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452746"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466562"
 ---
 # <a name="glossary"></a>Glossar
 
@@ -124,8 +124,8 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | [Besprechungsphase](../sbs-meetings-stage-view.yml) | Ein Feature der Besprechungserweiterungs-App. Es handelt sich um einen freigegebenen Bereich, auf den alle Teilnehmer während der Besprechung zugriffen können. Es hilft Teilnehmern, in Echtzeit mit App-Inhalten zu interagieren und zusammenzuarbeiten. <br>**Weitere Informationen unter**: [Phasenansicht](#s) |
 | [Messaging-Erweiterung](../messaging-extensions/what-are-messaging-extensions.md) | Messaging-Erweiterungen sind Verknüpfungen zum Einfügen von App-Inhalten oder zum Interagieren mit einer Nachricht. Sie können eine Messaging-Erweiterung verwenden, ohne die Unterhaltung zu verlassen.<br>**Weitere Informationen unter**: [Suchbefehle](#s); [Aktionsbefehle](#a) |
 | [Besprechungserweiterung](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | Eine App, die während des Besprechungslebenszyklus verwendet werden soll, um sie produktiver zu machen, wie z. B. Whiteboard, Dashboard und viele mehr. |
-| [Microsoft 365 Konto](../toolkit/accounts.md#microsoft-365-account) | Microsoft 365 Konto umfasst 25 Benutzerlizenzen, einschließlich des Administrators, nur für Entwicklungszwecke. |
-| [Microsoft 365-Entwicklerprogramm](../toolkit/accounts.md#join-microsoft-365-developer-program) | Das Microsoft 365-Entwicklerprogramm hilft Ihnen beim Erstellen von Apps, die Microsoft 365 erweitern. |
+| [Microsoft 365 Konto](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 Konto umfasst 25 Benutzerlizenzen, einschließlich des Administrators, nur für Entwicklungszwecke. |
+| [Microsoft 365-Entwicklerprogramm](../toolkit/accounts.md)| Das Microsoft 365-Entwicklerprogramm hilft Ihnen beim Erstellen von Apps, die Microsoft 365 erweitern. |
 | [Microsoft Graph-Tester](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | Das Gateway zu Daten und Informationen in Microsoft 365. Microsoft Graph bietet ein einheitliches Programmierbarkeitsmodell, mit dem Sie auf Daten in Microsoft 365, Windows 10 und Enterprise Mobility + Security zugreifen können. |
 | [Microsoft Teams](../overview.md) | Microsoft Teams ist eine Software für die Gruppenzusammenarbeit, die verwendet werden kann, um Teams bei der Remotearbeit zu unterstützen. |
 | [Microsoft Teams-Plattform](../concepts/app-fundamentals-overview.md) | Die Microsoft Teams Entwicklerplattform erleichtert Entwicklern die Integration eigener Apps und Dienste in Teams. |
