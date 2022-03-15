@@ -4,12 +4,12 @@ description: Beschreibt alle neuen oder aktuellen Entwicklerfunktionen in Micros
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 'Teams: Was sind die neuesten Updates oder Entwicklervorschau und Features'
-ms.openlocfilehash: 5ac1def2d45938d8bc162b4d6ed4fddb9f547e86
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: 9ad67a1ecfe9947ed0dc665827dd4e127e3a4e69
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/14/2022
-ms.locfileid: "63466535"
+ms.locfileid: "63492988"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -22,6 +22,7 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 
 | Datum | Update | Hier finden |
 | --- | --- | --- |
+|14.03.2022| Schritt-für-Schritt-Anleitung zum Erstellen und Testen eines Connectors in Microsoft Teams eingeführt. | Erstellen von Webhooks und Connectors > Erstellen von Office 365-Connectors > [Erstellen von Teams-Connectors](sbs-teams-connectors.yml)|
 |10.03.2022| Informationen zu Moodle LMS und Microsoft 365-Plug-Ins hinzugefügt | Integrieren mit Teams > Moodle LMS >[ Moodle Lernmanagementsystem](resources/moodle-overview.md)|
 |03.03.2022 | So fügen Sie die Authentifizierung mithilfe eines externen OAuth-Anbieters hinzu.| Authentifizierung hinzufügen > Registerkarten > [Verwenden externer OAuth-Anbieter](tabs/how-to/authentication/auth-oauth-provider.md) |
 |25.02.2022| Schrittweise Anleitung zum Aufrufen von Aufgabenmodulen in Teams eingeführt| Erstellen von Karten und Aufgabenmodulen > Erstellen von Aufgabenmodulen > Verwenden von Aufgabenmodulen aus Bots > [Aufrufen des Aufgabenmoduls von Teams](sbs-botbuilder-taskmodule.yml)|
@@ -50,6 +51,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
+|14.03.2022| Schritt-für-Schritt-Anleitung zum Erstellen und Testen eines Connectors in Microsoft Teams eingeführt. | Erstellen von Webhooks und Connectors > Erstellen von Office 365-Connectors > [Erstellen von Teams-Connectors](sbs-teams-connectors.yml)|
 |10.03.2022 | Informationen zu Moodle LMS und Microsoft 365-Plug-Ins hinzugefügt | Integrieren mit Teams > Moodle LMS >[ Moodle Lernmanagementsystem](resources/moodle-overview.md)|  
 |03.03.2022 | So fügen Sie die Authentifizierung mithilfe eines externen OAuth-Anbieters hinzu.| Authentifizierung hinzufügen > Registerkarten > [Verwenden externer OAuth-Anbieter](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 25.02.2022| Schrittweise Anleitung zum Aufrufen von Aufgabenmodulen in Teams eingeführt| Erstellen von Karten und Aufgabenmodulen > Erstellen von Aufgabenmodulen > Verwenden von Aufgabenmodulen aus Bots > [Aufrufen des Aufgabenmoduls von Teams](sbs-botbuilder-taskmodule.yml)|
