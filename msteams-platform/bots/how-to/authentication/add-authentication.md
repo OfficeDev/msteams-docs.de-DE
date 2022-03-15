@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: Ressourcengruppen-Botregistrierung Azure-Emulator-Botmanifest
-ms.openlocfilehash: 0151cc8fd756ee7ed7dbaecaef5739690f7f9302
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 8b624b36dca9a280ec35e062861a95513859c0c5
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399373"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63493033"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Authentifizierung für Ihren Teams-Bot hinzufügen
 
@@ -141,15 +141,16 @@ So fügen Sie den Microsoft Teams-Kanal hinzu:
     ![Bot-Startseite](~/assets/images/adaptive-cards/bot-home-page.png)
 
 1. Öffnen Sie Ihren Bot, der im Abschnitt **"Zuletzt verwendete Ressourcen** " aufgeführt ist.
-1. Wählen Sie im linken Bereich **Kanäle** aus, und wählen Sie **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    ![Kanal Teams](~/assets/images/adaptive-cards/channel-teams.png)
+1. Wählen Sie im linken Bereich **Kanäle** aus, und wählen Sie **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png" border="false":::aus.
+
+   :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Kanal Teams":::
 
 1. Aktivieren Sie das Kontrollkästchen, um die Nutzungsbedingungen zu akzeptieren, und wählen Sie **"Zustimmen**" aus.</br>
 
     ![Nutzungsbedingungen auswählen](~/assets/images/adaptive-cards/select-terms-of-service.png)
 
-1. Wählen Sie **Speichern** aus.
+1. Wählen Sie **Speichern**.
 
     ![Auswählen Teams](~/assets/images/adaptive-cards/select-teams.png)
 
@@ -218,7 +219,7 @@ In der folgenden Abbildung wird die entsprechende Auswahl auf der Ressourcenseit
 
     ![App-Authentifizierungs-Verbindungszeichenfolge adv1-Ansicht für Teams-Bots](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
-1. Wählen Sie **Speichern** aus.
+1. Wählen Sie **Speichern**.
 
 #### <a name="microsoft-azure-active-directory-azure-ad-v2"></a>Microsoft Azure Active Directory (Azure AD) V2
 
@@ -242,7 +243,7 @@ In der folgenden Abbildung wird die entsprechende Auswahl auf der Ressourcenseit
 
     1. Geben Sie für **Bereiche** eine durch Leerzeichen getrennte Liste von Diagrammberechtigungen ein, die diese Anwendung erfordert, z. B.: User.Read User.ReadBasic.All Mail.Read
 
-1. Wählen Sie **Speichern** aus.
+1. Wählen Sie **Speichern**.
 
 ### <a name="test-the-connection"></a>Testen der Verbindung
 
