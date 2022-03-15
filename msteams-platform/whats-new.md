@@ -4,12 +4,12 @@ description: Beschreibt alle neuen oder aktuellen Entwicklerfunktionen in Micros
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 'Teams: Was sind die neuesten Updates oder Entwicklervorschau und Features'
-ms.openlocfilehash: 4aa1bd8555d2ebd017a3a09a1c736d566e40ed81
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 5ac1def2d45938d8bc162b4d6ed4fddb9f547e86
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453439"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466535"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -38,8 +38,6 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 |08.02.2022| Schritt-für-Schritt-Anleitung für die Erstellung eines Anruf- und Besprechungsbots eingeführt| Bots erstellen > Anruf- und Besprechungsbots > Registrieren von Anruf- und Besprechungsbots > [Schrittweise Anleitung zum Erstellen eines Anruf- und Besprechungsbots](sbs-calling-and-meeting.yml) |
 |07.02.2022| Tools und SDKs |Teams-Toolkit für Visual Studio Code > </br> • Hinzufügen von Funktionen zur Teams-App> [Fügen Sie Funktionen für Ihre Teams-Apps hinzu](toolkit/add-capability.md) </br> • Hinzufügen von Cloudressourcen zur Teams-App> [Fügen Sie Cloudressourcen für Ihre Teams-App hinzu](toolkit/add-resource.md) |
 |03.02.2022| App-Manifestversion 1.12 eingeführt | • App-Manifest > [App-Manifestschema](resources/schema/manifest-schema.md) </br> • App-Manifest > Public Developer Preview > [Manifest-Schema](resources/schema/manifest-schema-dev-preview.md) |
-|03.02.2022| Testvorschau für monetarisierte Apps (Entwicklervorschau)| Monetarisieren Ihrer App > [Testvorschau für monetarisierte Apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|03.02.2022| In-App-Kaufablauf für die Monetarisierung von Apps (Entwicklervorschau) | Monetarisieren Ihrer App > [In-App-Käufe](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
 
 ## <a name="ga-features"></a>Allgemeine Verfügbarkeitsfunktionen
 
@@ -156,7 +154,7 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 |10.11.2020|Entwurfsanleitungen für Teams-Bots |[Bot-Entwurfsrichtlinien](bots/design/bots.md)|
 |30.09.2020|Das Senden und Empfangen von Dateien mit Bots auf mobilen Geräten wird jetzt unterstützt. |[Senden und Empfangen von Dateien über Ihren Bot](resources/bot-v3/bots-files.md)|
 |22.09.2020|Neue Informationen für den Einstieg in die Entwicklung mit Teams |[Erstellen Ihrer ersten Teams App– Übersicht](build-your-first-app/build-first-app-overview.md)|
-|18.09.2020|Unterstützung für „In Besprechung“-Teams-Apps (Versionsvorschau) |[Erstellen von Apps für Teams-Besprechungen](apps-in-teams-meetings/create-apps-for-teams-meetings.md) und [Apps in Teams-Besprechungen](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|18.09.2020|Unterstützung für „In Besprechung“-Teams-Apps (Versionsvorschau) |[Apps in Teams-Besprechungen](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |19.08.2020|Importieren Sie Teams-Nachrichten mit Microsoft Graph |[Plattform-Nachrichten von Drittanbietern mithilfe von Microsoft Graph in Teams importieren](graph-api/import-messages/import-external-messages-to-teams.md)
 |12.08.2020 |Die Unterstützung adaptiver Karten in eingehenden Webhooks wurde in „allgemeine Verfügbarkeit“ verschoben |[Senden von adaptiven Karten mithilfe eines eingehenden Webhooks](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |10.08.2020|Erste Schritte beim Erstellen von Teams-Apps mit dem Visual Studio-Toolkit |[Erstellen von Apps mit dem Microsoft Teams Toolkit und Visual Studio Code](toolkit/visual-studio-overview.md) |
