@@ -1,21 +1,21 @@
 ---
-title: Monetarisieren Der App-Übersicht
+title: Übersicht über die Monetarisierung Ihrer App
 description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App monetarisieren.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
-localization_priority: Normal
-ms.openlocfilehash: e371bcfe003ec2ff7122444e66df009c2436db7a
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 6c1847b700bf3771314dd01b95b5927b9e3e4820
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453320"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501977"
 ---
 # <a name="monetize-your-app"></a>Monetarisieren Ihrer App
 
-Microsoft Teams App-Store Features bereitstellen, mit denen Sie Ihre Apps monetarisieren und Kunden gewinnen können, indem Sie mit Ihren Benutzern interagieren. Die Themen in diesem Abschnitt zeigen Ihnen, wie Sie diese Features in Ihre App integrieren.
-
+Der Microsoft Teams App-Store bietet Features, mit denen Sie Ihre Apps monetarisieren und Kunden gewinnen können, indem Sie mit Ihren Benutzern interagieren. Die Themen in diesem Abschnitt zeigen Ihnen, wie Sie diese Features in Ihre App integrieren.
+ 
 ## <a name="choose-a-pricing-model"></a>Auswählen eines Preismodells
 
 :::row:::
@@ -24,7 +24,7 @@ Microsoft Teams App-Store Features bereitstellen, mit denen Sie Ihre Apps moneta
     :::column-end:::
     :::column span="2":::
 
-Fügen Sie ein SaaS-Angebot in Ihre App ein:
+**Einschließen eines SaaS-Angebots mit Ihrer App**
 
 Mit einem transaktionsfähigen [SaaS-Angebot (Software-as-a-Service)](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) können Sie Ihre Teams-App monetarisieren, indem Sie Abonnementpläne direkt aus Ihrem Teams Store-Eintrag verkaufen.
 
@@ -37,7 +37,7 @@ Mit einem transaktionsfähigen [SaaS-Angebot (Software-as-a-Service)](~/concepts
     :::column-end:::
     :::column span="2":::
 
-Kostenlose Testversionen:
+**Kostenlose Testversionen**
 
 Sie können eine kostenlose Testversion Ihrer App anbieten, um mehr Kunden dazu zu bringen, sie auszuprobieren. Um Kunden zum Kauf der Vollversion zu locken, können Sie die Features in der Testversion einschränken (z. B. nur eine begrenzte Anzahl von Antworten für eine Woche) oder einen Zeitraum für die Testversion angeben.
 
@@ -48,6 +48,7 @@ Sie können eine kostenlose Testversion Ihrer App anbieten, um mehr Kunden dazu 
         ![In-App-Käufe](~/assets/images/saas-offer/pricing-in-app-purchases.png)
     :::column-end:::
     :::column span="2":::
+
 **In-App-Käufe**
 
 Unabhängig davon, ob Sie einen Preis für Ihre App berechnen oder kostenlos anbieten, können Sie In-App-Käufe in Ihrer App verwenden, um einen laufenden Umsatzstrom bereitzustellen. Verwenden Sie In-App-Käufe, um Kunden das Upgrade von einer kostenlosen auf eine kostenpflichtige Version Ihrer App zu ermöglichen.
@@ -61,9 +62,9 @@ Unabhängig davon, ob Sie einen Preis für Ihre App berechnen oder kostenlos anb
     :::column-end:::
     :::column span="2":::
 
-Testvorschau für monetarisierte Apps:
+**Testvorschau für monetarisierte Apps**
 
-Mit einem SaaS-Angebot (Transactable Software as a Service) können Sie die End-to-End-Kauferfahrung für Ihre monetarisierten Apps in Teams testen, bevor Sie sie veröffentlichen.
+Mit einem transaktionsfähigen SaaS-Angebot (Software as a Service) können Sie die End-to-End-Kauferfahrung für Ihre monetarisierten Apps in Teams testen, bevor Sie sie veröffentlichen.
 
 [Testvorschau für monetarisierte Apps](Test-preview-for-monetized-apps.md)
 
@@ -72,4 +73,4 @@ Mit einem SaaS-Angebot (Transactable Software as a Service) können Sie die End-
 
 ## <a name="next-step"></a>Nächster Schritt
 
-[Einschließen eines SaaS-Angebots in Ihre Microsoft Teams-App](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+[Einschließen eines SaaS-Angebots mit Ihrer Microsoft Teams-App](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
