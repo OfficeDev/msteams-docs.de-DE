@@ -1,117 +1,135 @@
 ---
-title: Vorbereiten von Konten zum Erstellen Teams Apps
+title: Vorbereiten von Konten zum Erstellen von Teams-Apps
 author: zyxiaoyuer
-description: Vorbereiten von Konten zum Erstellen Teams Apps
-ms.author: zhany
-ms.localizationpriority: medium
+description: Vorbereiten von Konten zum Erstellen von Teams-Apps
+ms.author: surbhigupta
+ms.localizationpriority: high
 ms.topic: overview
-ms.date: 11/29/2021
-ms.openlocfilehash: 9dbfa97b892f2234b53eb42b5d5764b8f6fd6e93
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.date: 03/14/2022
+ms.openlocfilehash: 21de5611daacbc00630cd7fa4b2aa3704788ed5e
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452571"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63464316"
 ---
-# <a name="prepare-accounts-to-build-teams-apps"></a>Vorbereiten von Konten zum Erstellen Teams Apps
+# <a name="prepare-accounts-to-build-teams-apps"></a>Vorbereiten von Konten zum Erstellen von Teams-Apps
 
-Zum Entwickeln Teams App benötigen Sie mindestens ein Microsoft 365 Konto mit gültigem Abonnement. Wenn Sie Ihre Back-End-Ressourcen in Azure hosten möchten, benötigen Sie ein Azure-Konto. Das Azure-Konto ist optional, wenn Ihre vorhandene Anwendung auf einem anderen Cloudanbieter gehostet wird und Sie die vorhandene Anwendung in Teams Plattform integrieren möchten.
+Um eine Teams App zu erstellen und hochzuladen, müssen Sie die folgenden Konten vorbereiten:
+
+* [Microsoft 365 Konto mit gültigem Abonnement.](accounts.md#microsoft-365-account)
+* [Azure-Konto zum Hosten der Back-End-Ressourcen in Azure](accounts.md#azure-account-to-host-backend-resources).
 
 ## <a name="microsoft-365-account"></a>Microsoft 365 Konto
 
-Wenn Sie über kein vorhandenes Microsoft 365 Konto mit einem gültigen Abonnement verfügen, können Sie ein Konto erstellen, indem Sie dem [Microsoft 365 Entwicklerprogramm](https://developer.microsoft.com/microsoft-365/dev-program) beitreten. Das Microsoft 365-Entwicklerprogramm enthält ein Microsoft 365 E5 Entwicklerabonnement, mit dem Sie Ihre eigene Sandbox erstellen und unabhängig von Ihrer Produktionsumgebung Lösungen entwickeln können.
+Um ein Microsoft 365 Konto zu erstellen, registrieren Sie sich für ein Microsoft 365 Entwicklerprogrammabonnement. Das Abonnement ist 90 Tage lang kostenlos und wird weiterhin verlängert, solange Sie es für Entwicklungsaktivitäten verwenden.
 
-## <a name="azure-account"></a>Azure-Konto
+Wenn Sie über ein Visual Studio Enterprise- oder Professional-Abonnement verfügen, enthalten beide Programme ein kostenloses Microsoft 365 [Entwicklerabonnement](https://aka.ms/MyVisualStudioBenefits). Es ist aktiv, solange Ihr Visual Studio Abonnement aktiv ist. Weitere Informationen finden Sie unter [Einrichten eines Microsoft 365 Developer-Abonnements](https://developer.microsoft.com/microsoft-365/dev-program).
 
-Wenn Sie Ihre App-bezogenen Ressourcen hosten oder auf Ressourcen in Azure zugreifen möchten, benötigen Sie ein Azure-Abonnement. Sie können [ein kostenloses Konto erstellen](https://azure.microsoft.com/free/) , bevor Sie beginnen.
+### <a name="microsoft-365-developer-program"></a>Microsoft 365-Entwicklerprogramm
 
-## <a name="join-microsoft-365-developer-program"></a>Teilnehmen am Microsoft 365-Entwicklerprogramm
+Um ein kostenloses Teams Entwicklerkonto zu erhalten, treten Sie dem Microsoft 365-Entwicklerprogramm bei, und führen Sie die folgenden Schritte aus:
 
-Wenn Sie über kein Microsoft 365 Konto verfügen, müssen Sie sich für ein [Abonnement für ein Microsoft 365 Entwicklerprogramm](https://developer.microsoft.com/microsoft-365/dev-program) registrieren. Das Abonnement ist 90 Tage lang kostenlos und wird weiterhin verlängert, solange Sie es für Entwicklungsaktivitäten verwenden. Wenn Sie über ein Visual Studio Enterprise- oder Professional-Abonnement verfügen, enthalten beide Programme ein kostenloses Microsoft 365 [Entwicklerabonnement](https://aka.ms/MyVisualStudioBenefits). Es ist aktiv, solange Ihr Visual Studio Abonnement aktiv ist. Weitere Informationen finden Sie unter [Einrichten eines Microsoft 365 Entwicklerabonnements](https://developer.microsoft.com/microsoft-365/dev-program).
+1. Gehen Sie zu [Microsoft 365-Entwicklerprogramm](https://developer.microsoft.com/microsoft-365/dev-program).
+2. Wählen Sie **Jetzt beitreten** aus.
+3. Wählen Sie **E5-Abonnement einrichten** aus.
+4. Einrichten Ihres Administratorkontos.
 
-1. Wechseln Sie zum [Microsoft 365-Entwicklerprogramm](https://developer.microsoft.com/microsoft-365/dev-program).
-2. Wählen Sie **"Jetzt beitreten" aus**.
-3. Wählen Sie **"E5-Abonnement einrichten**" aus.
-4. Richten Sie Ihr Administratorkonto ein. Nach Abschluss des Vorgangs sollte der folgende Bildschirm angezeigt werden:
+   Die folgende Abbildung wird angezeigt, nachdem Sie das Abonnement abgeschlossen haben:
 
-:::image type="content" source="./images/m365-developer-program.png" alt-text="Diagramm, das Microsoft 365-Programm zeigt":::
+    :::image type="content" source="./images/m365-developer-program.png" alt-text="Diagramm, das das Microsoft 365-Programm zeigt":::
 
-## <a name="accounts-for-microsoft-365-developer-program"></a>Konten für Microsoft 365-Entwicklerprogramm
+### <a name="microsoft-365-developer-account-types"></a>Microsoft 365 Entwicklerkontotypen
 
 Sie können sich mit einem der folgenden Kontotypen für das Entwicklerprogramm registrieren:
 
-* **Microsoft-Konto für die persönliche Verwendung**
+- **Microsoft-Konto für die persönliche Verwendung**
 
-  Bietet Zugriff auf alle verbraucherorientierten Microsoft-Produkte und Clouddienste, z. B. Outlook, Messenger, OneDrive, MSN, Xbox Live oder Microsoft 365. Durch Registrieren für ein Outlook.com-Postfach wird automatisch ein Microsoft-Konto erstellt. Nachdem ein Microsoft-Konto erstellt wurde, kann es verwendet werden, um auf Microsoft Cloud-Dienste oder Azure für Verbraucher zuzugreifen.
+    Der Microsoft-Konto bietet Ihnen Zugriff auf Microsoft-Produkte und Clouddienste wie Outlook, Messenger, OneDrive, MSN, Xbox Live oder Microsoft 365. Sie können sich für ein Outlook.com-Postfach registrieren, um ein Microsoft-Konto zu erstellen, das für den Zugriff auf verbraucherbezogene Microsoft-Clouddienste oder Azure verwendet werden kann.
 
-* **Geschäftskonto**
+- **Microsoft-Geschäftskonto für Unternehmen**
 
-  Bietet Zugriff auf alle kleinen, mittleren und geschäftlichen Microsoft-Clouddienste auf Unternehmensebene, z. B. Azure, Microsoft Intune oder Microsoft 365. Wenn Sie sich bei einem dieser Dienste als Organisation registrieren, wird automatisch ein cloudbasiertes Verzeichnis in Microsoft Azure Active Directory (Azure AD) bereitgestellt, um Ihre Organisation darzustellen.
+     Dieses Konto bietet Zugriff auf alle kleinen, mittleren und unternehmensweiten Microsoft-Clouddienste wie Azure, Microsoft Intune oder Microsoft 365. Wenn Sie sich bei einem dieser Dienste als Organisation registrieren, wird automatisch ein cloudbasiertes Verzeichnis in Microsoft Azure Active Directory (Azure AD) bereitgestellt, um Ihre Organisation darzustellen.
 
-* **Visual Studio-ID**
+- **Visual Studio Benutzer-ID**
 
-  Sie können für Ihre Visual Studio Professional oder Enterprise Abonnements erstellen . Es wird empfohlen, dass Sie diese Option verwenden, um am Entwicklerprogramm aus dem Visual Studio Katalog teilzunehmen, um die vorteile als Visual Studio-Abonnent in vollem Umfang zu nutzen.
+    Die Benutzer-ID, die für die Verwendung für Visual Studio Professional- oder Enterprise-Abonnements erstellt wurde, kann verwendet werden, um dem Entwicklerprogramm im Visual Studio-Katalog beizutreten, damit die vollen Vorteile des Visual Studio Abonnements genutzt werden können.
 
-## <a name="teams-customer-app-upload-or-sideload-permission"></a>Teams Berechtigung zum Hochladen oder Querladen von Kunden-Apps
+## <a name="azure-account-to-host-backend-resources"></a>Azure-Konto zum Hosten von Back-End-Ressourcen
 
-> [!IMPORTANT]
-> Während der Entwicklung müssen Sie Ihre App innerhalb Ihrer Teams laden, ohne sie zu verteilen. Dies wird als **Querladen** bezeichnet.
+Das Azure-Konto ist optional, wenn Ihre vorhandene Anwendung auf einem anderen Cloudanbieter gehostet wird und Sie die vorhandene Anwendung auf der Teams-Plattform integrieren möchten.
 
-Die folgende Liste enthält Schritte, um zu überprüfen, ob das Querladen der App-Berechtigung aktiviert ist. Es gibt zwei verschiedene Möglichkeiten:
+**Visual Studio-ID**
 
-* **So verwenden Sie Microsoft Visual Studio-Code**
+Wenn Sie Ihre anwendungsbezogenen Ressourcen hosten oder auf Ressourcen in Azure zugreifen möchten, können Sie [ein kostenloses Konto erstellen](https://azure.microsoft.com/free/), bevor Sie beginnen. Alternativ können Sie ihre Back-End-Ressourcen mit einem anderen Cloudanbieter oder auf Ihren eigenen Servern hosten, wenn diese über die öffentliche Domäne verfügbar sind.
 
-    1. Öffnen **Sie Visual Studio Code**.
-    1. Wählen Sie im linken Bereich **Teams Toolkit** aus.
-    1. Wählen Sie **"Konten"** aus, und melden Sie sich bei Ihrem Microsoft 365 Konto an.
-    1. Überprüfen Sie, ob die Option **"Querladen" wie** in der Abbildung dargestellt aktiviert angezeigt wird:
-
-       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Aktivieren des Querladens":::
-
-* **So verwenden Sie Teams Konto**
-
-    1. Öffnen **Sie Microsoft Teams**.
-    2. Wählen Sie **"Apps"** in der linken Leiste aus.
-    3. Wählen Sie **"App veröffentlichen" aus**.
-
-       :::image type="content" source="../assets/images/teams-toolkit-v2/publish.png" alt-text="Einer App veröffentlichen":::
-
-    4. Überprüfen Sie, ob die Option **Hochladen einer benutzerdefinierten App** angezeigt wird, wie in der Abbildung dargestellt:
-
-       :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Hochladen einer benutzerdefinierten App":::
-
-Wenn **Hochladen einer benutzerdefinierten App-Option** nicht angezeigt wird, bedeutet dies, dass Sie nicht über die Berechtigung zum Querladen verfügen. Ohne Querladen-Berechtigung können Sie kein lokales oder Remotedebugging ausführen. Daher ist es sehr wichtig, die Querladen-Berechtigung für Ihr Konto zu erhalten, bevor Sie ein Debuggen für Ihre Teams-App durchführen. Wenn Sie Administrator für Ihren Mandanten sind, können Sie die Einstellung für das Querladen für Ihren Mandanten oder Ihre Organisation öffnen. Wenn Sie kein Administrator sind, wenden Sie sich an Ihren Mandantenadministrator, um die Berechtigung zu erhalten.
-
-## <a name="enable-custom-app-uploading-for-your-organization"></a>Aktivieren des hochladens von benutzerdefinierten Apps für Ihre Organisation
+## <a name="teams-custom-app-upload-or-sideload-permission"></a>Berechtigung zum Hochladen oder Querladen benutzerdefinierter Teams-Apps
 
 > [!IMPORTANT]
-> Um das hochladen oder Querladen der benutzerdefinierten App für Ihren Entwicklermandanten zu aktivieren, müssen Sie der Administrator für Ihren Mandanten sein.
+> Nachdem Sie die App erstellt haben, müssen Sie ihre App in Teams laden, ohne sie zu verteilen. Dieser Vorgang wird als **Querladen** bezeichnet.
 
-1. Melden Sie sich mit Ihren Administratoranmeldeinformationen bei [Microsoft 365 Admin Center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) an.
+   Sie können überprüfen, ob die Berechtigung zum Querladen entweder mit Visual Studio Code oder Teams Client aktiviert ist.
 
-2. Wählen Sie **"Alle** >  anzeigen **Teams** aus.
+* **Überprüfen der Berechtigung zum Querladen mithilfe von Visual Studio Code**
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="Alle anzeigen":::
+    1. Öffnen Sie **Visual Studio Code**.
+    1. Wählen Sie im linken Bereich **Teams Toolkit** aus. Wenn die Option nicht angezeigt wird, stellen Sie sicher, dass Sie die Teams Toolkit-Erweiterung installiert haben.
+    1. Wählen Sie **Konten** aus, und melden Sie sich bei Ihrem Microsoft 365 Konto an.
+    1. Überprüfen Sie, ob Sie die Option **Querladen aktiviert** anzeigen können, wie in der folgenden Abbildung dargestellt:
 
-> [!NOTE]
-> Es kann **bis zu 24 Stunden** dauern, bis die **Option Teams** angezeigt wird. Sie können [Ihre benutzerdefinierte App in eine Teams Umgebung hochladen, um](/microsoftteams/upload-custom-apps) sie zu testen und zu überprüfen.
+       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Querladen aktivieren" border="true":::
 
-3. Navigieren Sie zu **Teams appsSetup** >  **PoliciesGlobal** > .
+* **Überprüfen der Berechtigung zum Querladen mithilfe von Teams Client**
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="Festlegen von Olicies":::
+    1. Öffnen Sie **Microsoft Teams**.
+    2. Wählen Sie **Apps** im linken Bereich aus.
+    3. Wählen Sie **In App veröffentlichen** aus.
 
-4. Umschalten Hochladen benutzerdefinierten Apps **auf die** Ein-Position.
+       :::image type="content" source="../assets/images/teams-toolkit-v2/publish.png" alt-text="Einer App veröffentlichen" border="true":::
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="Umschalten":::
+    4. Überprüfen Sie, ob die Option **Hochladen einer benutzerdefinierten App** angezeigt wird, wie in der folgenden Abbildung dargestellt:
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Benutzerdefinierte App hochladen" border="true":::
+
+        Wenn Sie die Option **Benutzerdefinierte App hochladen** nicht anzeigen können, bedeutet dies, dass Sie nicht über die erforderliche Berechtigung zum Querladen verfügen.
+        * Aktivieren Sie für einen Mandantenadministrator die Einstellung für das Querladen Ihres Mandanten oder Ihrer Organisation im Teams Admin Center.
+        * Wenn Sie kein Mandantenadministrator sind, müssen Sie sich an Ihren Mandantenadministrator wenden, um das Querladen zu aktivieren.
+
+### <a name="upload-your-custom-app"></a>Hochladen Ihrer benutzerdefinierten App
+
+> [!IMPORTANT]
+> Um das hochladen oder Querladen benutzerdefinierter Apps für Ihren Entwicklermandanten zu aktivieren, müssen Sie der Administrator für Ihren Mandanten sein.
+
+**Hochladen der benutzerdefinierten App**
+
+1. Melden Sie sich mit Ihren Administratoranmeldeinformationen beim [Microsoft 365 Admin Center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) an.
+
+2. Wählen Sie **Alle anzeigen** > **Teams** aus.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="Alle anzeigen" border="true":::
+
+   > [!Note]
+   > Es kann **bis zu 24 Stunden dauern,** bis die Option **Teams** angezeigt wird. Sie können [Ihre benutzerdefinierte App zu Test- und Validierungszwecken in eine Teams-Umgebung](/microsoftteams/upload-custom-apps) hochladen.
+
+3. Navigieren Sie zu **Teams-Apps** > **Setuprichtlinien**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="Festlegen von Richtlinien":::
+
+4. Stellen Sie die Umschaltfläche **Benutzerdefinierte Apps hochladen** auf die Position **Ein**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="Umschaltfläche":::
 
 5. Wählen Sie **Speichern**.
 
-> [!Note]
-> Es kann bis zu 24 Stunden dauern, bis das Querladen aktiv ist. In der Zwischenzeit können Sie **upload für Ihren Mandanten** verwenden, um Ihre App zu testen. Informationen zum Hochladen der .zip-Paketdatei der App finden Sie unter ["Hochladen benutzerdefinierter Apps"](/microsoftteams/teams-app-setup-policies).
+   > [!Note]
+   > Es kann bis zu 24 Stunden dauern, bis das Querladen aktiv wird. In der Zwischenzeit können Sie **Upload für Ihren Mandanten** verwenden, um Ihre App zu testen. Informationen zum Hochladen der .zip-Paketdatei der App finden Sie unter [Hochladen benutzerdefinierten Apps](/microsoftteams/teams-app-setup-policies).
 
 Weitere Informationen finden Sie unter [Verwalten von benutzerdefinierten App-Richtlinien und -Einstellungen in Teams](/microsoftteams/teams-custom-app-policies-and-settings) und [Verwalten von App-Setuprichtlinien in Teams](/microsoftteams/teams-app-setup-policies).
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Erstellen eines neuen Teams Projekts](create-new-project.md)
+* [Erstellen einer neuen Teams-App mit Teams Toolkit](create-new-project.md)
 * [Bereitstellen von Cloudressourcen](provision.md)
+* [Bereitstellen der Teams-App in der Cloud](deploy.md)
+* [Veröffentlichen Ihrer Teams-App](TeamsFx-collaboration.md)
+* [Verwalten mehrerer Umgebungen](TeamsFx-multi-env.md)
