@@ -42,6 +42,8 @@
       href: concepts/design/planning-checklist.md
     - name: Planen reaktionsfähiger Registerkarten für Teams Mobile
       href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+    - name: Monetarisieren Ihrer App planen
+      href: concepts/design/plan-to-monetize.md
 - name: Entwerfen Ihrer App
   items:
     - name: Übersicht
@@ -473,16 +475,16 @@
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
         - name: Bewertungsparameter für Microsoft Teams-Store
           href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
-    - name: Monetarisieren Ihrer App
-      items:
-        - name: Übersicht
-          href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-        - name: Einschließen eines SaaS-Angebots mit Ihrer App
-          href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-        - name: In-App-Käufe
-          href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-        - name: Testvorschau für monetarisierte Apps
-          href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+- name: Monetarisieren Ihrer App
+  items:
+    - name: Übersicht
+      href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
+    - name: Einschließen eines SaaS-Angebots mit Ihrer App
+      href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+    - name: In-App-Käufe
+      href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+    - name: Testvorschau für monetarisierte Apps
+      href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: App-Manifest
   items:
     - name: App-Manifestschema

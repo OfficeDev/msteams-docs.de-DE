@@ -1,41 +1,41 @@
 ---
-title: In-App-Kaufablauf für die Monetarisierung von Apps
-description: Lernen Sie die grundlegenden Aufgaben und Konzepte kennen, die erforderlich sind, um In-App-Käufe und Testfunktionen in Teams-Apps zu implementieren.
+title: In-App-Kauffluss für die Monetarisierung von Apps
+description: Lernen Sie die grundlegenden Aufgaben und Konzepte kennen, die erforderlich sind, um In-App-Käufe und Testfunktionalitäten in Teams-Apps zu implementieren.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
-localization_priority: Normal
-ms.openlocfilehash: 059322af212641988560853caf3d5a495e36f674
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: fcb8c700ecd6f925c011ba1773989622e6221e78
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356471"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501984"
 ---
 # <a name="in-app-purchases"></a>In-App-Käufe
 
-Microsoft Teams APIs bereitstellen, mit denen Sie die In-App-Käufe implementieren können, um von kostenlosen auf kostenpflichtige Teams Apps zu aktualisieren. Mit dem In-App-Kauf können Sie Benutzer von kostenlos in kostenpflichtige Pläne direkt aus Ihrer App heraus konvertieren.
+Microsoft Teams stellt APIs zur Verfügung, mit denen Sie die In-App-Käufe implementieren können, um von kostenlosen auf kostenpflichtige Teams-Apps aufzurüsten. Mit dem In-App-Kauf können Sie Benutzer direkt in Ihrer App von kostenlosen zu kostenpflichtigen Plänen konvertieren.
 
 > [!NOTE]
-> In-App-Käufe für Teams Apps sind derzeit nur in der [**Entwicklervorschau**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro) verfügbar.
+> In-App-Käufe für Teams-Apps sind derzeit nur in der [**Entwicklervorschau**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro) verfügbar.
 
 ## <a name="implement-in-app-purchases"></a>Implementieren von In-App-Käufen
 
 Um den Benutzern Ihrer App eine In-App-Kauferfahrung zu bieten, stellen Sie Folgendes sicher:
 
-* Die App basiert auf [Teams Client-SDK-Bibliothek](https://github.com/OfficeDev/microsoft-teams-library-js).
+* Die App basiert auf der [Teams Client-SDK-Bibliothek](https://github.com/OfficeDev/microsoft-teams-library-js).
 
 * Die App ist mit einem transaktionsfähigen [SaaS-Angebot](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) aktiviert.
 
 * Die App ist mit [RSC-Berechtigungen](#update-manifest) aktiviert.
 
-* Die App wird mit [`openPurchaseExperience` der API](#purchase-experience-api) aufgerufen.
+* Die App wird mit der [`openPurchaseExperience`-API](#purchase-experience-api) aufgerufen.
 
-Die In-App-Kauferfahrung kann entweder durch Aktualisieren der Datei **"manifest.json** " oder durch Aktivieren von **"In-App-Kaufangebote anzeigen" im** Abschnitt **"Berechtigungen** " Ihres **Entwicklerportals** aktiviert werden.
+Die In-App-Kauferfahrung kann entweder durch Aktualisieren der Datei **manifest.json** oder durch Aktivieren von **In-App-Kaufangebote anzeigen** im Abschnitt **Berechtigungen** Ihres **Entwicklerportals** aktiviert werden.
 
-### <a name="update-manifest"></a>Updatemanifest
+### <a name="update-manifest"></a>Aktualisieren des Manifests
 
-Um die In-App-Kauferfahrung zu aktivieren, aktualisieren Sie Ihre Teams App **manifest.json-Datei**, indem Sie die RSC-Berechtigungen hinzufügen. Es ermöglicht Ihren App-Benutzern, ein Upgrade auf eine kostenpflichtige Version Ihrer App durchzuführen und neue Funktionen zu verwenden. Das Update für das App-Manifest lautet wie folgt:
+Um die In-App-Kauferfahrung zu aktivieren, aktualisieren Sie Ihre Teams-App-Datei **manifest.json**, indem Sie die RSC-Berechtigungen hinzufügen. Dies ermöglicht Ihren App-Benutzern, ein Upgrade auf eine kostenpflichtige Version Ihrer App durchzuführen und neue Funktionalitäten zu verwenden. Das Update für das App-Manifest lautet wie folgt:
 
 ```json
 
@@ -51,11 +51,11 @@ Um die In-App-Kauferfahrung zu aktivieren, aktualisieren Sie Ihre Teams App **ma
 }
 ```
 
-### <a name="purchase-experience-api"></a>Einkaufserfahrungs-API
+### <a name="purchase-experience-api"></a>Kauferfahrungs-API
 
-Rufen Sie die API aus Ihrer Web-App auf, um den In-App-Kauf für die `openPurchaseExperience` App auszulösen.
+Rufen Sie die `openPurchaseExperience`-API über Ihre Web-App auf, um In-App-Käufe für die App auszulösen.
 
-Es folgt ein Beispiel für den Aufruf der API aus der App:
+Nachfolgend finden Sie ein Beispiel für den Aufruf der API von der Anwendung aus:
 
 ```json
 <body> 
@@ -84,27 +84,27 @@ Es folgt ein Beispiel für den Aufruf der API aus der App:
 
 ## <a name="end-user-in-app-purchasing-experience"></a>In-App-Kauferfahrung für Endbenutzer
 
-Im folgenden Beispiel werden die Benutzer zum Erwerben von Abonnementplänen für eine fiktive Teams-App namens *Contoso Tasks for Teams* gezeigt:
+Im folgenden Beispiel zeigt, wie Benutzer Abonnementpläne für eine fiktive Teams-App namens *Contoso Tasks for Teams* erwerben:
 
 1. Suchen Sie im Teams **Store** die App, und wählen Sie sie aus.
 
-1. Wählen Sie im Dialogfeld "App-Details" **die Option "Abonnement kaufen** " oder **"Für mich hinzufügen**" aus.
+1. Wählen Sie im Dialogfeld „App-Details“ die Option **Abonnement kaufen** oder **Für mich hinzufügen** aus.
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Kauf des Abonnements für die ausgewählte App." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Kaufen des Abonnements für die ausgewählte App." border="true":::
 
-1. **Add for me** offers a free trial version of the app and later **Upgrade** it to a paid version.
+1. **Für mich hinzufügen** stellt eine kostenlose Testversion der App zur Verfügung und bietet später ein **Upgrade** auf eine kostenpflichtige Version an.
 
-    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Upgrade auf das Abonnement für die ausgewählte App." lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Upgraden auf das Abonnement für die ausgewählte App." lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
 
-1. Wählen Sie im Dialogfeld **"Abonnementplan auswählen** " den Plan aus, und wählen Sie **"Auschecken"** aus.
+1. Wählen Sie im Dialogfeld **Abonnementplan auswählen** den Plan und dann **Kasse** aus.
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Auswählen des entsprechenden Abonnementplans." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
 
-1. Schließen Sie die Transaktion ab, und wählen Sie **"Jetzt konfigurieren** " aus, um Ihr Abonnement einzurichten.
+1. Schließen Sie die Transaktion ab, und wählen Sie **Jetzt konfigurieren** aus, um Ihr Abonnement einzurichten.
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Einrichten des Abonnements." lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
 
-    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Angebotsseite des Abonnements." lightbox="../../../../assets/images/saas-offer/getstarted.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Zielseite des Abonnements." lightbox="../../../../assets/images/saas-offer/getstarted.png" border="true":::
 
 ## <a name="next-step"></a>Nächster Schritt
 

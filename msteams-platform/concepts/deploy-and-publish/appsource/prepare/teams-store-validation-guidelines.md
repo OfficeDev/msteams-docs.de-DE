@@ -4,13 +4,13 @@ description: Beschreibt die Richtlinien, die jede an den Teams Store (AppSource)
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.localizationpriority: medium
-ms.openlocfilehash: 6326c8ff28857ab75436e61de5b8783842642acb
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 387731176778eb17f7c6322778e9a9bb48b640f1
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399135"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501928"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
@@ -20,8 +20,8 @@ Wenn Sie diese Richtlinien befolgen, erhöht sich die Wahrscheinlichkeit, dass I
 >
 > * Einige Richtlinien gelten möglicherweise nicht für Ihre App. Wenn Ihre App beispielsweise keinen Bot enthält, können Sie botbezogene Richtlinien ignorieren.
 > * Wir haben diese Richtlinien mit Querverweisen auf die kommerziellen Zertifizierungsrichtlinien von Microsoft versehen und Do's und Don'ts mit Beispielen für erfolgreiche oder nicht erfolgreiche Szenarien in unserem Validierungsprozess hinzugefügt.
-> * Bestimmte Richtlinien sind als *obligatorische Korrektur* gekennzeichnet. Wenn Ihre App-Einreichung diese obligatorischen Richtlinien nicht erfüllt, erhalten Sie von uns einen Fehlerbericht mit Maßnahmen zur Behebung des Problems. Ihre App-Übermittlung übergibt Microsoft Teams Store-Validierung erst, nachdem Sie die Probleme behoben haben.
-> * Andere Leitlinien sind als *„Vorgeschlagene Lösung“* gekennzeichnet. Für ein optimales Nutzererlebnis empfehlen wir Ihnen, die Probleme zu beheben. Ihre App wird jedoch nicht für die Veröffentlichung im Teams Store gesperrt, wenn Sie die Probleme nicht beheben.
+> * Bestimmte Richtlinien sind als *obligatorische Korrektur* gekennzeichnet. Wenn Ihre App-Einreichung diese obligatorischen Richtlinien nicht erfüllt, erhalten Sie von uns einen Fehlerbericht mit Maßnahmen zur Behebung des Problems. Ihre App-Einreichung wird die Microsoft Teams Store-Validierung erst bestehen, nachdem Sie die Probleme behoben haben.
+> * Andere Richtlinien sind als *vorgeschlagene Korrektur* markiert. Für ein optimales Nutzererlebnis empfehlen wir Ihnen, die Probleme zu beheben. Ihre App wird jedoch nicht für die Veröffentlichung im Teams Store gesperrt, wenn Sie die Probleme nicht beheben.
 
 ## <a name="value-proposition"></a>Wertbeitrag 
 
@@ -104,7 +104,7 @@ Weitere Informationen zum Implementieren der App-Authentifizierung finden Sie un
   * Apps, die eine einmalige Einrichtung durch den Tenant-Administrator erfordern, müssen darauf hinweisen, dass der Tenant-Administrator die App konfigurieren muss (bevor ein anderer Tenant-Benutzer die App installieren und nutzen kann).  
   Die Abhängigkeit muss im App-Manifest, in der AppSource-Langbeschreibung, an allen Berührungspunkten beim ersten Start (Bot-Begrüßungsnachricht, Registerkarten-Einrichtung oder Konfigurationsseite), im Hilfetext, der als Teil der Bot-Antwort für notwendig erachtet wird, in der Compose-Erweiterung oder im statischen Registerkarteninhalt angegeben werden.
   
-* **Erfahrungen beim Teilen von Inhalten**: Apps, die für die Freigabe von Inhalten in Teams-Kanälen eine Authentifizierung bei einem externen Dienst erfordern, müssen in der Hilfedokumentation (oder ähnlichen Ressourcen) klar angeben, wie die Verbindung zu Inhalten getrennt oder die Freigabe aufgehoben werden kann, wenn diese Funktion für den externen Dienst unterstützt wird. Dies bedeutet nicht, dass die Möglichkeit, die Freigabe von Inhalten aufzuheben, in Ihrer Teams App vorhanden sein muss.
+* **Erfahrungen beim Teilen von Inhalten**: Apps, die eine Authentifizierung bei einem externen Dienst erfordern, um Inhalte in Teams-Kanälen freizugeben, müssen in der Hilfedokumentation (oder ähnlichen Ressourcen) klar angeben, wie Inhalte getrennt oder freigegeben werden, wenn diese Funktion vom externen Dienst unterstützt wird. Dies bedeutet nicht, dass die Fähigkeit zur Aufhebung der Freigabe von Inhalten in Ihrer Teams-App vorhanden sein muss.
 
 ## <a name="security"></a>Sicherheit
 
@@ -159,7 +159,7 @@ Apps, die auf der iOS- oder Android-Version von Teams ausgeführt werden, müsse
 :::row-end:::
 
 * Wenn Ihre App ein Konto erfordert, können sich Benutzer kostenlos für ein Konto registrieren. Die Verwendung des Begriffs **kostenlos** oder **kostenloser Account** ist untersagt.
-* Sie können festlegen, ob ein Konto unbegrenzt oder für einen begrenzten Zeitraum aktiv ist. Wenn das Konto abläuft, darf die App keine Benutzeroberfläche, Texte oder Links anzeigen, die auf die Notwendigkeit einer Zahlung hinweisen.
+* Sie können bestimmen, ob ein Konto unbegrenzt oder für einen begrenzten Zeitraum aktiv ist. Wenn das Konto abläuft, darf die App keine Benutzeroberfläche, keinen Text oder keine Links anzeigen, die auf die Notwendigkeit der Zahlung hinweisen.
 * Die Datenschutzrichtlinien und Nutzungsbedingungen Ihrer App müssen frei von kommerziellen UI oder Links sein.
 
 ### <a name="bots"></a>Bots
@@ -190,7 +190,7 @@ Bots müssen immer die Berechtigung zum Hochladen einer Datei und zum Anzeigen e
 > [!NOTE]
 > Dieser Abschnitt steht im Einklang mit der [Microsoft Commercial Marketplace-Richtlinie Nr. 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) und enthält eine Anleitung für Entwickler zur Verwendung eingeschränkter Domänen in der `validDomains` Manifest-Eigenschaft.
 
-Schließen Sie keine Domänen außerhalb der Kontrolle Ihrer Organisation (einschließlich Platzhalter) und Tunneldienste in die Domänenkonfigurationen Ihrer App ein. Zu den folgenden Ausnahmen zählen:
+Sie dürfen keine Domänen außerhalb der Kontrolle Ihrer Organisation (einschließlich Wildcards) und Tunnelingdienste in die Domänenkonfigurationen Ihrer App einschließen. Zu den folgenden Ausnahmen gehören:
 
 * Wenn Ihre App die OAuthCard des Azure Bot Service verwendet, müssen Sie `token.botframework.com` als gültige Domäne angeben oder die Schaltfläche **Anmelden** funktioniert nicht.
 * Wenn Ihre App auf SharePoint basiert, können Sie die zugehörige SharePoint-Stammsite mithilfe der Kontexteigenschaft `{teamSiteDomain}` als gültige Domäne einschließen.
@@ -230,7 +230,7 @@ Die Apps müssen auf den neuesten Versionen der folgenden Betriebssysteme und Br
 
 * Microsoft Windows
 * macOS
-* MicrosoftEdge&nbsp;
+* Microsoft&nbsp;Edge
 * Google Chrome
 * iOS
 * Android
@@ -271,7 +271,7 @@ Das Manifest der Teams-App definiert die Konfiguration Ihrer App.
 
 * Ihr Manifest muss einem öffentlich freigegebenen Manifest-Schema entsprechen. Weitere Informationen finden Sie in den[Manifest-Hinweisen.](~/resources/schema/manifest-schema.md) Reichen Sie Ihre App nicht mit einer Vorschauversion des Manifests ein.
 * Wenn Ihre App eine Bot- oder Messaging-Erweiterung enthält, müssen die Details im App-Manifest mit den Bot Framework-Metadaten konsistent sein, einschließlich Bot-Name, Logo, Link zur Datenschutzrichtlinie und Link zu den Nutzungsbedingungen.
-* Wenn Ihre App Azure Active Directory für die Authentifizierung verwendet, fügen Sie die Microsoft Azure Active Directory (Azure AD) Anwendungs-ID (Client)-ID in das Manifest ein. Weitere Informationen finden Sie in der [Manifestreferenz.](~/resources/schema/manifest-schema.md#webapplicationinfo)
+* Wenn Ihre App Azure Active Directory für die Authentifizierung verwendet, fügen Sie die Azure Active Directory (Azure AD)-Anwendungs-(Client-)ID in das Manifest ein. Weitere Informationen finden Sie in der [Manifestreferenz.](~/resources/schema/manifest-schema.md#webapplicationinfo)
 
 ### <a name="app-icons"></a>App-Symbole
 
@@ -279,7 +279,7 @@ Das Manifest der Teams-App definiert die Konfiguration Ihrer App.
 
 Symbole sind eines der Hauptelemente, die Benutzer beim Durchsuchen des Teams-Speichers sehen. Ihre Symbole müssen die Marke und den Zweck Ihrer App unter Einhaltung der folgenden Anforderungen kommunizieren:
 
-* Ihr App-Paket muss zwei .png Versionen des App-Symbols enthalten: ein Farbsymbol und ein Gliederungssymbol.
+* Ihr App-Paket muss zwei .png-Versionen Ihres App-Symbols enthalten: Ein Farbsymbol und ein Umrisssymbol.
 * Die Farbversion Ihres Symbols muss 192 x 192 Pixel betragen. Ihr Symbol kann eine beliebige Farbe oder mehrere Farben haben, muss aber auf einem einfarbigen oder vollständig transparenten quadratischen Hintergrund stehen.
 * In den folgenden Szenarien wird die Kontur-Version Ihres Symbols angezeigt:
   * Wenn Ihre App in Gebrauch ist und auf der App-Leiste auf der linken Seite von Teams **gehostet** wird.
@@ -357,7 +357,7 @@ Die lange Beschreibung kann eine ansprechende Erzählung bieten, die das Wertver
 
 ### <a name="screenshots"></a>Screenshots
 
-Screenshots bieten eine auffällige visuelle Vorschau Ihrer App, um Ihren App-Namen, das Symbol und die Beschreibungen zu ergänzen. Beachten Sie Folgendes:
+Screenshots bieten eine markante visuelle Vorschau Ihrer App, um den Namen, das Symbol und die Beschreibungen Ihrer App zu ergänzen. Beachten Sie Folgendes:
 
 * Sie können bis zu fünf Screenshots pro Eintrag erstellen.
 * Unterstützte Dateitypen sind PNG, JPEG und GIF.
@@ -519,7 +519,7 @@ Wenn Ihre App eine Registerkarte enthält, stellen Sie sicher, dass sie diesen R
    :::column-end:::
 :::row-end:::
 
-* Der Konfigurationsbildschirm der Registerkarte darf nicht eine ganze Website einbetten. Konzentrieren Sie sich auf Ihre Konfigurationserfahrung. Wenn Sie z. B. eine Projektmanagement-Anwendung entwickeln, mit der Benutzer ein Projekt in einem Kanal konfigurieren können, sollten Sie den Konfigurationsbildschirm für die Registerkarte so gestalten, dass der Benutzer ein Projekt aus Ihrer Anwendung auswählen kann, um es im Kanal zu konfigurieren. [*Obligatorischer Fix*]
+* Der Registerkartenkonfigurationsbildschirm darf keine gesamte Website einbetten. Konzentrieren Sie sich auf Ihre Konfigurationserfahrung. Wenn Sie z. B. eine Projektmanagement-Anwendung entwickeln, mit der Benutzer ein Projekt in einem Kanal konfigurieren können, sollten Sie den Konfigurationsbildschirm für die Registerkarte so gestalten, dass der Benutzer ein Projekt aus Ihrer Anwendung auswählen kann, um es im Kanal zu konfigurieren. [*obligatorischer Fix*]
 
 :::row:::
    :::column span="":::
@@ -577,7 +577,7 @@ Wenn Ihre App eine Registerkarte enthält, stellen Sie sicher, dass sie diesen R
    :::column-end:::
 :::row-end:::
 
-* Inhalte können vereinfacht werden, indem sie auf mehrere Registerkarten verteilt werden. [*Vorgeschlagene Korrektur*]
+* Inhalte können vereinfacht werden, indem sie auf mehrere Registerkarten verteilt werden. [*Vorgeschlagener Fix*]
 
 :::row:::
    :::column span="":::
@@ -589,7 +589,7 @@ Wenn Ihre App eine Registerkarte enthält, stellen Sie sicher, dass sie diesen R
    :::column-end:::
 :::row-end:::
 
-* Registerkarten sollten keine doppelte Kopfzeile haben. Entfernen Sie das doppelte Logo aus dem iframe, da das Tab-Framework bereits das App-Symbol und den Namen anzeigt. [*Vorgeschlagene Korrektur*]
+* Registerkarten dürfen keinen doppelten Header aufweisen. Entfernen Sie das doppelte Logo aus dem iframe, da das Registerkartenframework bereits das App-Symbol und den Namen anzeigt. [*Vorgeschlagener Fix*]
 
  :::row:::
     :::column span="":::
@@ -671,13 +671,13 @@ Entwerfen Sie Ihre App mit [einfachen](~/concepts/design/design-teams-app-basic-
    :::column-end:::
 :::row-end:::  
 
-* Die zweiten und dritten Seiten einer Registerkarte müssen in einer Ansicht der Ebene zwei (L2) und der Ebene drei (L3) im Hauptbereich der Registerkarte geöffnet werden, in dem über Breadcrumbs oder die linke Navigation navigiert wird. Sie können auch die folgenden Komponenten einschließen, um die Registerkartennavigation zu unterstützen: [*Obligatorische Korrektur*]
+* Die Zweit- und Drittseiten eines Tabs müssen in einer Ebene Zwei (L2)- und Ebene Drei (L3)-Ansicht im Hauptregisterkartenbereich geöffnet werden, der über Breadcrumb Navigation oder die linke Navigationsleiste geleitet wird. Sie können auch die folgenden Komponenten einschließen, um die Registerkartennavigation zu unterstützen: [*Obligatorischer Fix*]
   * Zurück-Schaltflächen
   * Seitenüberschriften
   * Hamburger-Menüs
-* Die Registerkarte darf keinen horizontalen Bildlauf aufweisen. Whiteboarding-Apps und andere Apps, die eine größere Arbeitsfläche benötigen, damit die Benutzer zusammenarbeiten können, ohne dass das Gefühl entsteht, dass die App nicht funktioniert, können je nach geschäftlichem Bedarf einen horizontalen Bildlauf verwenden . [*Vorgeschlagene Korrektur*]
+* Die Registerkarte darf keinen horizontalen Bildlauf aufweisen. Whiteboarding-Apps und andere Apps, die eine größere Arbeitsfläche benötigen, damit die Benutzer zusammenarbeiten können, ohne dass das Gefühl entsteht, dass die App nicht funktioniert, können je nach geschäftlichem Bedarf einen horizontalen Bildlauf verwenden. [*Vorgeschlagene Korrektur*]
 
-* Deeplinks in Registerkarten dürfen nicht auf eine externe Webseite verweisen, sondern nur innerhalb von Teams. Zum Beispiel Aufgabenmodule oder andere Registerkarten. [*Obligatorischer Fix*]
+* Deep-Links in Registerkarten dürfen nicht mit einer externen Webseite, sondern an einer Stelle in Teams verknüpft werden. Beispielsweise Aufgabenmodule oder andere Registerkarten. [*Obligatorischer Fix*]
 
 :::row:::
     :::column span="":::
@@ -783,7 +783,7 @@ Entwerfen Sie Ihre App mit [einfachen](~/concepts/design/design-teams-app-basic-
    :::column-end:::
 :::row-end:::
 
-* Die Registerkarten müssen, wann immer es möglich ist, Komponenten im Team-Stil verwenden, wie z. B. Team-Schriftarten, Typraster, Farbpaletten, Rastersystem, Bewegung, Tonfall usw. Weitere Informationen finden Sie in den [Richtlinien für das Registerkartendesign.](/microsoftteams/platform/tabs/design/tabs) [*Vorgeschlagene Korrektur*]
+* Registerkarten müssen nach Möglichkeit Komponenten im Teams-Stil verwenden, z. B. Teams-Schriftarten, Typraster, Farbpaletten, Rastersystem, Bewegung, Ton der Stimme usw. Weitere Informationen finden Sie unter [Richtlinien für den Registerkartenentwurf](/microsoftteams/platform/tabs/design/tabs). [*vorgeschlagene Korrektur*]
 
 :::row:::
     :::column span="":::
@@ -796,7 +796,7 @@ Entwerfen Sie Ihre App mit [einfachen](~/concepts/design/design-teams-app-basic-
 :::row-end:::
 
 * Wenn Ihre App-Funktionalität Änderungen an den Einstellungen erfordert, fügen Sie eine **Registerkarte „Einstellungen“** ein. [*Vorgeschlagene Korrektur*]
-* Registerkarten müssen dem Interaktionsdesign von Teams folgen, z. B. In-Page-Navigation, Position und Verwendung von Dialogfeldern, Informationshierarchien usw. Weitere Informationen finden Sie unter [Microsoft Teams Fluent UI Kit](~/concepts/design/design-teams-app-basic-ui-components.md)
+* Registerkarten müssen dem Teams-Interaktionsentwurf folgen, z. B. seiteninterne Navigation, Position und Verwendung von Dialogfeldern, Informationshierarchien usw. Weitere Informationen finden Sie unter [Microsoft Teams Fluent UI Kit](~/concepts/design/design-teams-app-basic-ui-components.md)
 
 * Registerkarteninhalte im iframe dürfen keine Funktionen enthalten, die die Kernfunktionen von Teams nachahmen. Zum Beispiel Bots, Messaging-Erweiterungen, Anrufe, Besprechungen usw.
 
@@ -847,7 +847,7 @@ Wenn Ihre App einen Bot enthält, stellen Sie sicher, dass er diesen Richtlinien
 
 ### <a name="bot-commands"></a>Bot-Befehle
 
-Die Analyse von Benutzereingaben und die Vorhersage der Benutzerabsicht ist schwierig. Botbefehle stellen Benutzern eine Reihe von Wörtern oder Ausdrücken bereit, die Ihr Bot verstehen kann.
+Das Analysieren von Benutzereingaben und das Vorhersagen der Benutzerabsicht ist schwierig. Botbefehle stellen Benutzern eine Reihe von Wörtern oder Ausdrücken bereit, die Ihr Bot versteht.
 
 * Es wird dringend empfohlen, unterstützte Bot-Befehle in Ihren App-Konfigurationen aufzulisten. Diese Befehle werden im Feld zum Verfassen angezeigt, wenn ein Benutzer versucht, Ihrem Bot eine Nachricht zu senden.
 
@@ -1342,7 +1342,7 @@ Verwenden Sie die folgenden Richtlinien für die Erweiterung von Besprechungen:
 * Muss geschlossen werden, nachdem ein Benutzer eine Schaltfläche ausgewählt oder eine Aktion ausgeführt hat.
 
 * **Zusammen-Modus**: Stellen Sie sicher, dass Sie die folgenden Best Practices für den Aufbau einer Szene beachten:
-  * Alle Bilder haben .png Format.
+  * Alle Bilder haben das .png-Format.
   * Das endgültige Paket mit allen zusammengestellten Bildern darf die Auflösung von 1920 x 1080 nicht überschreiten. Die Auflösung ist eine gerade Zahl. Diese Auflösung ist eine Voraussetzung dafür, dass Szenen erfolgreich angezeigt werden.
   * Die maximale Größe einer Szene beträgt 10 MB.
   * Die maximale Größe jedes Bilds beträgt 5 MB. Eine Szene ist eine Sammlung mehrerer Bilder. Der Grenzwert gilt für jedes einzelne Bild.
@@ -1384,7 +1384,7 @@ Wenn Ihre App die von [Microsoft Graph bereitgestellten Aktivitätsfeed-APIs](/g
 
 Das Microsoft 365 App Compliance-Programm soll Organisationen dabei helfen, Risiken zu bewerten und zu verwalten, indem Sicherheits- und Compliance-Informationen zu Ihrer App ausgewertet werden. Wenn Sie eine App im Teams Store veröffentlichen, müssen Sie die folgenden Stufen des Programms abschließen:
 
-* **Publisher Überprüfung:** Hilft Administratoren und Endbenutzern, die Authentizität von App-Entwicklern zu verstehen, die sich in die Microsoft Identity Platform integrieren. Nach Abschluss des Vorgangs wird ein blaues **, überprüftes** Signal im Dialogfeld Azure Active Directory Zustimmung und auf anderen Bildschirmen angezeigt. Weitere Informationen finden Sie unter [Markieren Ihrer App als vom Herausgeber überprüft](/azure/active-directory/develop/mark-app-as-publisher-verified).  
+* **Publisher Überprüfung:** Hilft Administratoren und Endbenutzern, die Authentizität von App-Entwicklern zu verstehen, die sich in die Microsoft Identity Platform integrieren. Nach Abschluss des Vorgangs wird im Zustimmungsdialog von Azure Active Directory und auf anderen Bildschirmen ein blaues **verifiziert** Zeichen angezeigt. Weitere Informationen finden Sie unter [Markieren Ihrer App als vom Herausgeber überprüft](/azure/active-directory/develop/mark-app-as-publisher-verified).  
 
 :::row:::
     :::column span="":::
