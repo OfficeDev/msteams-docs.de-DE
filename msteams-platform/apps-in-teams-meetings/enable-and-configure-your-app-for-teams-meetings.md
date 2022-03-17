@@ -4,12 +4,12 @@ author: surbhigupta
 description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen und verschiedene Besprechungsszenarien, Aktualisieren des App-Manifests, Konfigurieren von Features wie In-Meeting-Dialog, freigegebener Besprechungsphase, Besprechungs-SidePanel und mehr
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 0211cb1458b13a0727fce9915d1a50d227ed1a53
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: eaa3e17c2045383307949f031d20723f3d420510
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63464359"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558838"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -183,8 +183,6 @@ Teilnehmer können bestimmte Teile der App für die Gemeinsame Besprechungsphase
 <img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
 Um bestimmte Teile der App für die Phasen freizugeben, müssen Sie die zugehörigen APIs in der Teams Client-SDK-Bibliothek aufrufen. Weitere Informationen finden Sie in der [API-Referenz](API-references.md).
-
-Wenn Sie möchten, dass Ihre App anonyme Benutzer unterstützt, muss die Anforderungsnutzlast für den ersten Aufruf auf Anforderungsmetadaten im `from` Objekt basieren, nicht `from.aadObjectId` auf `from.id` Anforderungsmetadaten. `from.id`ist die Benutzer-ID und `from.aadObjectId` die Azure AD-ID des Benutzers. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen in Registerkarten](../task-modules-and-cards/task-modules/task-modules-tabs.md) und [Erstellen und Senden des Aufgabenmoduls](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="after-a-meeting"></a>Nach einer Besprechung
 

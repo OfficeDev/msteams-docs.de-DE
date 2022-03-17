@@ -4,12 +4,12 @@ author: surbhigupta
 description: Erfahren Sie mehr über den Besprechungslebenszyklus, die Erstellung der Besprechungserfahrung des Benutzers während des gesamten Besprechungslebenszyklus in desktop- und mobilen Umgebungen, Teilnehmerrollen und Benutzertypen. Darüber hinaus erfahren Sie mehr über die Integration von Bots und Messaging-Erweiterungen in den Besprechungslebenszyklus.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 01b24c96e19f11fe32ac511bc1c3f091f23b6cfb
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: cfcd21d17bffcb1ec8eb172fe7e296a7a8fd6e69
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63466500"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558845"
 ---
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 
@@ -24,6 +24,9 @@ Dieser Artikel behandelt die Informationen zum Besprechungslebenszyklus und zum 
 ## <a name="meeting-lifecycle"></a>Der Besprechungslebenszyklus
 
 Den Phasen des Besprechungslebenszyklus entsprechen in der App drei Umgebungen: vor der Besprechung, in der Besprechung und nach der Besprechung. Sie können Registerkarten, Bots und Messaging-Erweiterungen in jedes der Freigabefenster des Besprechungslebenszyklus integrieren.
+
+> [!NOTE]
+> Besprechungserweiterungen wie Bots, Karten, Nachrichtenerweiterungen und Nachrichtenaktionen werden im Webclient unterstützt. Gehostete Erfahrungen wie Registerkarten, Inhaltsbubblasen und freigabeweise Freigaben werden derzeit jedoch nicht vollständig unterstützt.
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>Integrieren von Registerkarten in den Besprechungslebenszyklus
 
@@ -158,8 +161,14 @@ Mit den Teams einheitlichen Besprechungs-Apps können Sie Ihre App basierend auf
 Die Standardeinstellungen für Teilnehmer werden vom IT-Administrator einer Organisation bestimmt. Es folgen die Teilnehmerrollen in einer Besprechung:
 
 * **Organisator**: Der Organisator plant eine Besprechung, legt die Besprechungsoptionen fest, weist Besprechungsrollen zu und startet die Besprechung. Die Benutzer mit Microsoft 365 Konto und Teams Lizenz können nur die Organisatoren sein und die Teilnehmerberechtigungen steuern. Ein Besprechungsorganisator kann die Einstellungen für eine bestimmte Besprechung ändern. Organisatoren können diese Änderungen auf der **Besprechungsoptionen-Webseite** vornehmen.
+
 * **Referent**: Die Referenten verfügen über die gleichen Funktionen der Organisatoren mit Ausschlüssen. Ein Referent kann einen Organisator nicht aus der Sitzung entfernen oder Besprechungsoptionen für die Sitzung ändern. Standardmäßig haben Teilnehmer, die an einer Besprechung teilnehmen, die Rolle des Referenten.
-* **Teilnehmer**: Ein Teilnehmer ist ein Benutzer, der zur Teilnahme an einer Besprechung eingeladen wurde. Die Teilnehmer sind jedoch nicht berechtigt, als Referent zu fungieren. Teilnehmer können mit anderen Besprechungsmitgliedern interagieren, aber keine der Besprechungseinstellungen verwalten oder den Inhalt freigeben.
+
+* **Teilnehmer**: Ein Teilnehmer ist ein Benutzer, der zur Teilnahme an der Besprechung eingeladen wird. Teilnehmer verfügen während der Besprechung über eingeschränkte Funktionen, z. B.:
+  * Sie können mit anderen Besprechungsmitgliedern interagieren, aber keine der Besprechungseinstellungen verwalten oder den Inhalt freigeben.  
+  * Sie können die Registerkarten-App in der Besprechungsphase anzeigen oder mit ihr interagieren, ohne die App zu installieren oder ohne App-Berechtigungen.
+  * Sie können die App im Seitenbereich ohne App-Berechtigungen nicht anzeigen oder mit ihr interagieren.
+  * Sie sind nicht berechtigt, als Referent zu fungieren.
 
 > [!NOTE]
 > Nur ein Organisator oder Referent kann Apps hinzufügen, entfernen oder deinstallieren.
@@ -200,7 +209,7 @@ Die folgende Tabelle enthält die Benutzertypen und listet die Features auf, auf
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Anonymer Benutzer | Nicht verfügbar | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat von einer adaptiven Karte sind zulässig. | Nicht verfügbar | Kann die App in der Besprechungsphase anzeigen und mit ihr interagieren | Nicht verfügbar |
 | Gast, Teil des Mandanten-Azure AD | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat von einer adaptiven Karte sind zulässig. | Verfügbar | Kann die App in der Besprechungsphase starten, anzeigen und mit ihr interagieren | Verfügbar |
-| Weitere Informationen finden Sie unter ["Nicht standardmäßige Benutzer"](/microsoftteams/non-standard-users). | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Interaktion ist zulässig. Das Abrufen, Aktualisieren und Löschen ist nicht zulässig. | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat von einer adaptiven Karte sind zulässig. | Nicht verfügbar | Kann die App in der Besprechungsphase starten, anzeigen und mit ihr interagieren | Nicht verfügbar |
+| Partnerbenutzer finden weitere Informationen unter [nicht standardmäßige Benutzer](/microsoftteams/non-standard-users). | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Interaktion ist zulässig. Das Abrufen, Aktualisieren und Löschen ist nicht zulässig. | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat von einer adaptiven Karte sind zulässig. | Nicht verfügbar | Kann die App in der Besprechungsphase starten, anzeigen und mit ihr interagieren | Nicht verfügbar |
 
 ## <a name="next-step"></a>Nächster Schritt
 

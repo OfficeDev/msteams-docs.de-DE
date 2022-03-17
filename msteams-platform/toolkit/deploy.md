@@ -1,17 +1,17 @@
 ---
 title: Bereitstellen in der Cloud
 author: MuyangAmigo
-description: Bereitstellen in der Cloud
+description: Bereitstellen der App in der Cloud, Azure oder SharePoint
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9c15d145fb4f37073342edc9bb8d07f2fe0b53e6
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 2e2d288340f3a806857f1e62ae832be0e6c4068c
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452550"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558817"
 ---
 # <a name="deploy-to-the-cloud"></a>Bereitstellen in der Cloud
 
@@ -55,4 +55,4 @@ Die Anleitungen für die ersten Schritte helfen Ihnen bei der Bereitstellung mit
 * [Hinzufügen weiterer Teams App-Funktionen](add-capability.md)
 * [Bereitstellen von Projektcode mit CI/CD-Pipelines](use-CICD-template.md)
 * [Verwalten mehrerer Umgebungen](TeamsFx-multi-env.md)
-* [Zusammenarbeit mit anderen Entwicklern an Teams Projekt](TeamsFx-collaboration.md)
+* [Zusammenarbeit mit anderen Entwicklern am Teams-Projekt](TeamsFx-collaboration.md)

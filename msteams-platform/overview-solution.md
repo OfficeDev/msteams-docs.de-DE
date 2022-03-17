@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: bb05bc85c4b070870a88d8c71cb80e4d7ef4390c
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: d93e27c7180938a7329eec94ff54a9988b851430
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398722"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501963"
 ---
 # <a name="the-teams-solution"></a>Die Teams-Lösung
 
@@ -74,7 +74,7 @@ Vom Entwurf bis zur Erstellung und Vermarktung einer Teams-App können Sie versc
 1. Erweitern Sie die Funktionalität, indem Sie weitere Teams-Funktionen und M365-Daten mit Microsoft Graph hinzufügen.
 1. Testen Sie die App auf einem Entwicklermandanten mit Beispiel-Nutzerdaten.
 1. Stellen Sie die App in Azure bereit.
-1. Verwalten und Veröffentlichen der Apps im Store mit dem Developer Portal.
+1. Verwalten und Veröffentlichen der Apps im Store mit dem Developer Portal. Monetarisieren Sie Ihre App mit Optionen wie SaaS-Angeboten, In-App-Käufen uvm.
 
 ## <a name="next-step"></a>Nächster Schritt
 
@@ -161,6 +161,18 @@ Vom Entwurf bis zur Erstellung und Vermarktung einer Teams-App können Sie versc
 
         > [!div class="nextstepaction"]
         > [Verteilen Ihrer App](~/concepts/deploy-and-publish/apps-publish-overview.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **Monetarisieren Ihrer App**
+    :::column-end:::
+    :::column span="2":::
+        Teams Store bietet Optionen zur Monetarisierung von Apps, z. B. SaaS-Angebote und In-App-Käufe. Wählen Sie die beste Monetarisierungsoption aus, die für Ihre Teams-App geeignet ist.
+
+        > [!div class="nextstepaction"]
+        > [Monetarisieren Ihrer App](concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)
     :::column-end:::
 :::row-end:::
 
