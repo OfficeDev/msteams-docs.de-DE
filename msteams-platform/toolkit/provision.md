@@ -6,12 +6,12 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: adf168daf1e85370324f114e8dc74b509d9fd9c2
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: ef087add6e69d8168a065bf52f4e265a55559755
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453572"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674992"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Verwenden Teams Toolkits zum Bereitstellen von Cloudressourcen
 
@@ -33,7 +33,7 @@ TeamsFx lässt sich in Azure und Microsoft 365 Cloud integrieren, sodass Sie Ihr
 
 Die Bereitstellung erfolgt mit einem einzigen Befehl im Teams Toolkit für Visual Studio Code oder TeamsFx CLI wie folgt:
 
-[Bereitstellen einer Azure-basierten App](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
+[Bereitstellen einer Azure-basierten App](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8)
 
 ## <a name="resource-creation"></a>Erstellen von Ressourcen
 
@@ -137,14 +137,14 @@ Die folgende Tabelle enthält eine Liste der verfügbaren vordefinierten Paramet
 | simpleAuthWebAppName | ${resourceBaseName}simpleAuth | Name einer einfachen Authentifizierungs-Web-App | 2-60 Alphanumerics und Bindestriche <br /> Kann nicht mit Bindestrich beginnen oder enden |
 | simpleAuthSku | F1 | SKU eines einfachen Authentifizierungs-App-Dienstplans | Nicht zutreffend |
 | frontendHostingStorageName | Registerkarte "${resourceBaseName}" | Name des Front-End-Hostingspeicherkontos | 3-24 Kleinbuchstaben und Zahlen |
-| frontendHostingStorageSku | Standard_LRS | SKU des Front-End-Hostingspeicherkontos |[Verfügbare SKUs](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep&branch)|
+| frontendHostingStorageSku | Standard_LRS | SKU des Front-End-Hostingspeicherkontos |[Verfügbare SKUs](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep)|
 | functionServerfarmsName | ${resourceBaseName}-API | Name des Dienstplans für Funktions-Apps | 1-40 Alphanumerics und Bindestriche |
 | functionServerfarmsSku | Y1 | SKU des Dienstplans für Funktions-Apps | Nicht zutreffend|
 | functionAppName | ${resourceBaseName}-API | Name der Funktions-App | 2-60 Alphanumerics und Bindestriche <br /> Kann nicht mit Bindestrich beginnen oder enden |
 | functionStorageName | ${resourceBaseName}-API | Name des Speicherkontos der Funktions-App | 3-24 Kleinbuchstaben und Zahlen |
-| functionStorageSku | Standard_LRS | SKU des Speicherkontos der Funktions-App | [Verfügbare SKUs](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep&branch=pr-en-us-4713) |
+| functionStorageSku | Standard_LRS | SKU des Speicherkontos der Funktions-App | [Verfügbare SKUs](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep) |
 | botServiceName | ${resourceBaseName} | Name des Azure-Bot-Diensts | 2-64 Alphanumerics, Unterstriche, Punkte und Bindestriche <br /> Beginnen Sie mit alphanumerisch |
-| botServiceSku | F0 | SKU des Azure-Botdiensts | [Verfügbare SKUs](/azure/templates/microsoft.botservice/2021-05-01-preview/botservices?tabs=bicep&branch) |
+| botServiceSku | F0 | SKU des Azure-Botdiensts | [Verfügbare SKUs](/azure/templates/microsoft.botservice/2021-05-01-preview/botservices?tabs=bicep) |
 | botDisplayName | ${resourceBaseName} | Anzeigename Ihres Bots | 1 bis 42 Zeichen |
 | botServerfarmsName | ${resourceBaseName}-Bot | Name des App-Serviceplans des Bots | 1-40 Alphanumerics und Bindestriche |
 | botWebAppName | ${resourceBaseName}-Bot | Name der Web-App des Bots | 2-60 Alphanumerics und Bindestriche <br /> Kann nicht mit Bindestrich beginnen oder enden |
@@ -154,7 +154,7 @@ Die folgende Tabelle enthält eine Liste der verfügbaren vordefinierten Paramet
 | sqlDatabaseName | ${resourceBaseName} | Name der Azure SQL-Datenbank | 1 bis 128 Zeichen, kann <>*%&:\/? oder Steuerelementzeichen <br /> Kann nicht mit Punkt oder Leerzeichen enden |
 | sqlDatabaseSku | Standard | SKU der Azure SQL-Datenbank | Nicht zutreffend  |
 | apimServiceName | ${resourceBaseName} | Name des APIM-Diensts | 1-50 Alphanumerics und Bindestriche <br /> Mit Buchstaben beginnen und mit Alphanumerisch enden |
-| apimServiceSku | Verbrauch | SKU des APIM-Diensts | [Verfügbare SKUs](/azure/templates/microsoft.apimanagement/service?tabs=bicep&branch) |
+| apimServiceSku | Verbrauch | SKU des APIM-Diensts | [Verfügbare SKUs](/azure/templates/microsoft.apimanagement/service?tabs=bicep) |
 | apimProductName | ${resourceBaseName} | Name des APIM-Produkts | 1-80 Alphanumerics und Bindestriche <br /> Mit Buchstaben beginnen und mit Alphanumerisch enden |
 | apimOauthServerName | ${resourceBaseName} | Name des APIM-OAuth-Servers | 1-80 Alphanumerics und Bindestriche <br /> Mit Buchstaben beginnen und mit Alphanumerisch enden |
 | keyVaultSkuName | Standard | SKU-Name des Azure Key Vault Service| |
@@ -197,10 +197,10 @@ Im folgenden Beispiel wird der Wert des Parameters aus der `mySelfHostedDbConnec
 
 #### <a name="customize-arm-template-files"></a>Anpassen von ARM-Vorlagendateien
 
-Wenn die vordefinierten Vorlagen Ihre Anwendungsanforderung nicht erfüllen, können Sie die ARM-Vorlagen im `templates/azure` Ordner anpassen. Beispielsweise können Sie die ARM-Vorlage anpassen, um einige zusätzliche Azure-Ressourcen für Ihre App zu erstellen. Sie benötigen Grundkenntnisse der Biicep-Sprache, die zum Erstellen der ARM-Vorlage verwendet wird. Sie können mit Bicep in [der Bicep-Dokumentation](/azure/azure-resource-manager/bicep/?branch) beginnen.
+Wenn die vordefinierten Vorlagen Ihre Anwendungsanforderung nicht erfüllen, können Sie die ARM-Vorlagen im `templates/azure` Ordner anpassen. Beispielsweise können Sie die ARM-Vorlage anpassen, um einige zusätzliche Azure-Ressourcen für Ihre App zu erstellen. Sie benötigen Grundkenntnisse der Biicep-Sprache, die zum Erstellen der ARM-Vorlage verwendet wird. Sie können mit Bicep in [der Bicep-Dokumentation](/azure/azure-resource-manager/bicep/) beginnen.
 
 > [!NOTE]
-> Die ARM-Vorlage wird von allen Umgebungen gemeinsam verwendet. Sie können die [bedingte Bereitstellung](/azure/azure-resource-manager/bicep/conditional-resource-deployment?branch) verwenden, wenn das Bereitstellungsverhalten zwischen umgebungen unterschiedlich ist.
+> Die ARM-Vorlage wird von allen Umgebungen gemeinsam verwendet. Sie können die [bedingte Bereitstellung](/azure/azure-resource-manager/bicep/conditional-resource-deployment) verwenden, wenn das Bereitstellungsverhalten zwischen umgebungen unterschiedlich ist.
 
 Um sicherzustellen, dass das TeamsFx-Tool ordnungsgemäß funktioniert, stellen Sie sicher, dass Sie die ARM-Vorlage anpassen, die die folgende Anforderung erfüllt. Wenn Sie ein anderes Tool für die weitere Entwicklung verwenden, können Sie diese Anforderungen ignorieren.
 
@@ -353,7 +353,7 @@ Vor der Bereitstellung werden Sie vom Tool gefragt, ob Sie eine neue Ressourceng
 
 <summary><b>Wie kann ich sharepointbasierte Apps bereitstellen?</b></summary>
 
-Sie können die [Bereitstellung SharePoint-basierten App](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch) befolgen.
+Sie können die [Bereitstellung SharePoint-basierten App](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4) befolgen.
 
 > [!NOTE]
 > Derzeit verfügt das Erstellen Teams App mit SharePoint-Framework mit Teams Toolkit nicht über eine direkte Integration in Azure, der Inhalt des Dokuments gilt nicht für SPFx-basierte Apps.
@@ -366,4 +366,4 @@ Sie können die [Bereitstellung SharePoint-basierten App](/microsoftteams/platfo
 
 * [Bereitstellen der Teams-App in der Cloud](deploy.md)
 * [Verwalten mehrerer Umgebungen](TeamsFx-multi-env.md)
-* [Zusammenarbeit mit anderen Entwicklern an Teams Projekt](TeamsFx-collaboration.md)
+* [Zusammenarbeit mit anderen Entwicklern am Teams-Projekt](TeamsFx-collaboration.md)

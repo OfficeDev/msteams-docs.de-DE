@@ -1,10 +1,10 @@
 ### YamlMime:Hub
 title: Microsoft Teams Entwicklerdokumentation
-summary: 'Hier erhalten Sie Dokumentation, Beispielcode, Lernprogramme und mehr, um Benutzerdefinierte Microsoft Teams-Apps zu erstellen.'
+summary: 'Erhalten Sie Dokumentation, Beispielcode, Lernprogramme und mehr, um Benutzerdefinierte Microsoft Teams-Apps zu erstellen.'
 brand: teams
 metadata:
   title: Microsoft Teams Plattform-Entwicklerdokumentation
-  description: 'Die Microsoft Teams-Entwicklerplattform erleichtert Entwicklern die Integration eigener Apps und Dienste, um die Produktivität zu steigern, Entscheidungen schneller zu treffen, den Fokus durch die Reduzierung des Kontextwechsels bereitzustellen und die Zusammenarbeit an vorhandenen Inhalten und Workflows zu schaffen.'
+  description: 'Die Microsoft Teams Entwicklerplattform erleichtert Entwicklern die Integration ihrer eigenen Apps und Dienste, um die Produktivität zu steigern, Entscheidungen schneller zu treffen, den Fokus zu legen, indem sie den Kontextwechsel reduziert und die Zusammenarbeit an vorhandenen Inhalten und Workflows erstellt.'
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
@@ -59,10 +59,10 @@ conceptualContent:
           text: Sammeln von Eingaben und Sammeln von Informationen mit Aufgabenmodulen
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: Verbinden von Webdiensten an Kanäle und Teams mit Webhooks und Office 365 Connectors
+          text: Verbinden Webdienste für Kanäle und Teams mit Webhooks und Office 365 Connectors
         - url: /microsoftteams/platform/m365-apps/overview
           itemType: overview
-          text: Erweitern Teams Apps über Microsoft 365
+          text: Erweitern von Teams-Apps auf Microsoft 365
     - title: Funktionen
       links:
         - url: /microsoftteams/platform/tabs/what-are-tabs
@@ -76,7 +76,7 @@ conceptualContent:
           text: Messaging-Erweiterungen
         - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
           itemType: overview
-          text: Apps für Teams Besprechungen
+          text: Apps für Teams-Besprechungen
         - url: /microsoftteams/platform/task-modules-and-cards/cards-and-task-modules
           itemType: concept
           text: Karten- und Aufgabenmodule
@@ -102,8 +102,8 @@ conceptualContent:
           text: Manifestschema für Teams-Apps
         - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
           itemType: reference
-          text: Erstellen von Szenarien für Teams Apps
-        - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
+          text: Erstellen von Szenarien für Teams-Apps
+        - url: 'https://developer.microsoft.com/microsoft-teams/app-development-resources'
           itemType: reference
           text: Bewährte Methoden für Teams App-Szenarien
     - title: Integrieren
@@ -134,12 +134,12 @@ conceptualContent:
         - url: 'https://aka.ms/microsoftteamscommunitycall'
           itemType: overview
           text: Microsoft Teams Community-Anrufe
-        - url: 'https://docs.microsoft.com/en-us/teamblog/'
+        - url: 'https://docs.microsoft.com/teamblog/'
           itemType: whats-new
           text: Ankündigungen
         - url: /microsoftteams/platform/feedback
           itemType: overview
-          text: Microsoft Teams Developer Community und Antwort
+          text: Microsoft Teams Community und Antwort von Entwicklern
         - url: /microsoftteams/platform/resources/teams-contributor-reference
           itemType: overview
           text: Mitwirken an Microsoft Teams Dokumentation
@@ -151,7 +151,7 @@ conceptualContent:
         - url: /microsoftteams/microsoft-teams
           itemType: concept
           text: IT-Spezialisten
-        - url: 'https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics'
+        - url: 'https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b'
           itemType: concept
           text: Endbenutzer
 tools:

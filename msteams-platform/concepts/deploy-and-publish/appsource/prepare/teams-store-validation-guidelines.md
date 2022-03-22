@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 387731176778eb17f7c6322778e9a9bb48b640f1
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 8999f6005775c4719de3f1e91ae26fa43ce7cb27
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501928"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674978"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
@@ -425,7 +425,8 @@ Wenn Ihre App Lokalisierung unterstützt, muss Ihr App-Paket eine Datei mit Spra
 ## <a name="apps-linked-to-saas-offer"></a>Apps, die mit dem SaaS-Angebot verknüpft sind
 
 * ISVs müssen die Möglichkeit unterstützen, dass mehrere Benutzer (Abonnenten) im selben Tenant ihr eigenes Abonnement verwalten und den Benutzern im Tenant Lizenzen zuweisen können.
-* Das Angebot muss alle [technischen Anforderungen](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer?branch=pr-en-us-2759) für Teams-Apps erfüllen, die mit einem SaaS-Angebot verknüpft sind.
+*
+ Das Angebot muss alle [technischen Anforderungen](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer) für Teams-Apps erfüllen, die mit einem SaaS-Angebot verknüpft sind.
 * Die mit dem SaaS-Angebot verbundenen Teams-Apps müssen alle in [1000 Software-As-A-Service (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas)definierten Anforderungen erfüllen.
 * `subscriptionOffer` die in der Manifest-Datei erwähnten Details müssen korrekt sein. Fügen Sie in Ihrem App-Manifest den Knoten `subscriptionOffer` mit dem Wert `publisherId.offerId`hinzu oder aktualisieren Sie ihn. Wenn Ihre Herausgeber-ID beispielsweise `contoso1234` und Ihre Angebots-ID `offer01`ist, muss der Wert, den Sie in Ihrem App-Manifest angeben, `contoso1234.offer01`lauten.
 * Das mit der Teams-App verknüpfte SaaS-Angebot muss in AppSource live sein, und Vorschau-Angebote werden nicht zur Genehmigung im Store akzeptiert.
@@ -444,7 +445,7 @@ Wenn Ihre App Lokalisierung unterstützt, muss Ihr App-Paket eine Datei mit Spra
 
 * Stellen Sie Abonnenten eine Einführung in die Verwendung des Produkts bereit.
 * Zulassen, dass der Abonnent Lizenzen zuweist.
-* Bieten Sie verschiedene Möglichkeiten, sich bei Problemen an den Support zu wenden, z. B. FAQ, Wissensdatenbank und E-Mail-Adresse.
+* Stellen Sie verschiedene Möglichkeiten bereit, sich bei Problemen an den Support zu wenden, z. B. FAQ, Wissensdatenbank und E-Mail-Adresse.
 * Überprüfen Sie die Benutzer, um sicherzustellen, dass ihnen nicht bereits eine Lizenz durch einen anderen Benutzer zugewiesen wurde.
 * Benutzer nach der Lizenzzuweisung benachrichtigen.
 * Führen Sie die Benutzer über den Teams-Chatbot oder per E-Mail durch die Hinzufügung der App zu Teams und die ersten Schritte.
@@ -452,8 +453,8 @@ Wenn Ihre App Lokalisierung unterstützt, muss Ihr App-Paket eine Datei mit Spra
 ### <a name="usability-and-functionality"></a>Benutzerfreundlichkeit und Funktionalität  
 
 * Nach dem erfolgreichen Kauf und der Zuweisung von Lizenzen müssen Sie Folgendes angeben:
-  * Zugang zu Nutzern für abonnierte Plan-Features.
-  * Zusätzlicher Nutzen und bedeutende Vorteile des Abonnements für die Nutzer.
+* Zugang zu Nutzern für abonnierte Plan-Features.
+* Zusätzlicher Nutzen und bedeutende Vorteile des Abonnements für die Nutzer.
 * Stellen Sie in Ihrer Teams-App einen Link zur Startseite der SaaS-Anwendung bereit, auf der Abonnenten die Lizenzen in Zukunft verwalten können.
 
 ### <a name="configure-and-test-saas-application"></a>Konfigurieren und Testen der SaaS-Anwendung

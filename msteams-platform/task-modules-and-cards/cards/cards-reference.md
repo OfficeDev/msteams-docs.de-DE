@@ -4,12 +4,12 @@ description: Beschreibt alle für Bots in Teams verfügbaren Karten und Kartenak
 ms.localizationpriority: high
 keywords: Referenz zu Bots-Karten
 ms.topic: reference
-ms.openlocfilehash: 7144887b0b53d0542f2756d4f473e8e2e5807e58
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 4bd890268641de5c228f77c8b65e5e93fcf66094
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399380"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558828"
 ---
 # <a name="types-of-cards"></a>Kartentypen
 
@@ -130,7 +130,7 @@ Die folgende Tabelle enthält die Features, die Adaptive Karten unterstützen:
 
 ### <a name="example-of-adaptive-card"></a>Beispiel für Adaptive Card
 
-![Beispiel für eine Adaptive Karte](~/assets/images/cards/adaptivecard.png)
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Beispiel für eine Adaptive Karte" border="true":::
 
 Der folgende Code zeigt ein Beispiel für eine Adaptive Karte:
 
@@ -273,6 +273,8 @@ Bot Framework-Referenz:
 
 * [Adaptive Cards Node](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
 * [Adaptive Card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+
+Weitere Informationen zu adaptive Karten finden Sie unter [Adaptive Karten](/adaptive-cards/).
 
 Sie können jetzt mit einer Hero-Karte arbeiten, bei der es sich um eine Mehrzweckkarte handelt, die verwendet wird, um eine mögliche Benutzerauswahl visuell hervorzuheben.
 

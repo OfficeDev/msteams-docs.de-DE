@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über das Aufrufen und Schließen von Aufgabenmod
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 93d25847b0be86822f15c9443c28907031b98fea
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 84cca74d6e81dce9bbcd7637b5d0b6537524d831
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399331"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674726"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>Aufrufen und Schließen von Aufgabenmodulen
 
@@ -208,7 +208,7 @@ Der nächste Abschnitt enthält Details zur Verwendung einer Tastatur mit dem Au
 
 Bei HTML- oder JavaScript-basierten Aufgabenmodulen müssen Sie sicherstellen, dass das Aufgabenmodul Ihrer App mit einer Tastatur verwendet werden kann. Sprachausgabeprogramme sind auch von der Möglichkeit abhängig, mit der Tastatur zu navigieren. Dazu gehören die folgenden beiden Dinge:
 
-* Verwenden des [Tabindex-Attributs](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) in Ihren HTML-Tags, um zu steuern, welche Elemente fokussiert werden können. Verwenden Sie außerdem das tabindex-Attribut, um zu ermitteln, wo es an der sequenziellen Tastaturnavigation beteiligt ist, in der Regel mit den Tasten <kbd>Tab und</kbd> <kbd>UMSCHALTTASTE</kbd> .
+* Verwenden des [Tabindex-Attributs](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/tabindex) in Ihren HTML-Tags, um zu steuern, welche Elemente fokussiert werden können. Verwenden Sie außerdem das tabindex-Attribut, um zu ermitteln, wo es an der sequenziellen Tastaturnavigation beteiligt ist, in der Regel mit den Tasten <kbd>Tab und</kbd> <kbd>UMSCHALTTASTE</kbd> .
 * Behandeln des <kbd>Esc-Schlüssels</kbd> im JavaScript für Ihr Aufgabenmodul. Der folgende Code enthält ein Beispiel für die Behandlung des <kbd>Esc-Schlüssels</kbd> :
 
     ```javascript

@@ -6,12 +6,12 @@ keywords: Systemeigene Geräteberechtigungen für Standortzuordnungsfunktionen
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 40b0f3da9b6811a7172aa5207dd7680c70db7719
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: a375d8f7c2692c9da8e220474c2c0ece97b623c2
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452823"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63675013"
 ---
 # <a name="integrate-location-capabilities"></a>Integration von Standortfunktionen
 
@@ -34,7 +34,7 @@ Es ist wichtig, sich mit den [API-Antwortfehlern](#error-handling) vertraut zu m
 > [!NOTE]
 > Derzeit ist Microsoft Teams Unterstützung für Standortfunktionen nur für mobile Clients verfügbar.
 
-## <a name="update-manifest"></a>Updatemanifest
+## <a name="update-manifest"></a>Aktualisieren des Manifests
 
 Aktualisieren Sie ihre Teams App [manifest.json-Datei](../../resources/schema/manifest-schema.md#devicepermissions), indem Sie die `devicePermissions` Eigenschaft hinzufügen und angeben`geolocation`. Damit kann Ihre App die erforderlichen Berechtigungen von Benutzern anfordern, bevor sie mit der Verwendung der Standortfunktionen beginnen. Das Update für das App-Manifest lautet wie folgt:
 
@@ -45,7 +45,6 @@ Aktualisieren Sie ihre Teams App [manifest.json-Datei](../../resources/schema/ma
 ```
 
 > [!NOTE]
->
 > * Die Eingabeaufforderung **"Berechtigungen anfordern**" wird automatisch angezeigt, wenn eine relevante Teams-API initiiert wird. Weitere Informationen finden Sie unter [Anfordern von Geräteberechtigungen](native-device-permissions.md).
 > * Geräteberechtigungen unterscheiden sich im Browser. Weitere Informationen finden Sie unter ["Berechtigungen für Browsergeräte"](browser-device-permissions.md).
 
