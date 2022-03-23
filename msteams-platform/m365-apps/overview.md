@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: overview
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 895660e49e468583d7443799dd0c55d7950619e0
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 1936e6a660d77855e53257f40925cf54b05de0de
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355513"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727291"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Erweitern von Teams-Apps auf Microsoft 365
 
@@ -39,6 +39,8 @@ Nach dem Querladen in Teams wird Ihre persönliche Registerkarte als eine ihrer 
 Mit dieser Vorschau können Sie Ihre suchbasierten Teams Messaging-Erweiterungen auf Outlook im Web und Windows Desktop erweitern, sodass Kunden zusätzlich zu Microsoft Teams Clients über den Outlook Nachrichtenbereich zum Verfassen von Nachrichten suchen und Ergebnisse freigeben können.
 
 Nach dem Querladen an Teams wird Ihre Messaging-Erweiterung als eine ihrer installierten Apps im Outlook Bereich zum Verfassen von Nachrichten angezeigt.
+
+:::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="Messaging-Erweiterung, die in Outlook und Teams ausgeführt wird":::
 
 ## <a name="next-steps"></a>Nächste Schritte
 

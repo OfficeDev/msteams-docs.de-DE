@@ -4,12 +4,12 @@ author: surbhigupta
 description: Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen und verschiedene Besprechungsszenarien, Aktualisieren des App-Manifests, Konfigurieren von Features wie In-Meeting-Dialog, freigegebener Besprechungsphase, Besprechungs-SidePanel und mehr
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: eaa3e17c2045383307949f031d20723f3d420510
-ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
+ms.openlocfilehash: 576ee5dc7d34ae49b6b166a43bd59e8251d519a2
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63558838"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727302"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -184,6 +184,10 @@ Teilnehmer können bestimmte Teile der App für die Gemeinsame Besprechungsphase
 
 Um bestimmte Teile der App für die Phasen freizugeben, müssen Sie die zugehörigen APIs in der Teams Client-SDK-Bibliothek aufrufen. Weitere Informationen finden Sie in der [API-Referenz](API-references.md).
 
+> [!NOTE]
+> * Verwenden Sie Teams Manifestversion 1.12 oder höher, um bestimmte Teile der App für die Phasenfreigabe freizugeben.
+> * Das Freigeben bestimmter Teile der App für die Phasen wird nur für Teams Desktopclients unterstützt.
+
 ### <a name="after-a-meeting"></a>Nach einer Besprechung
 
 Die Konfigurationen für Nach [- und Vorbesprechungen](#before-a-meeting) sind identisch.
@@ -192,9 +196,9 @@ Die Konfigurationen für Nach [- und Vorbesprechungen](#before-a-meeting) sind i
 
 |Beispielname | Beschreibung | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Besprechungs-App | Veranschaulicht die Verwendung der Besprechungstoken-Generator-App zum Anfordern eines Tokens. Das Token wird sequenziell generiert, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Das Token ist nützlich in Situationen wie Meetings in DerBesprechung und Q&A-Sitzungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-|Beispiel für Besprechungsphasen | Beispiel-App zum Anzeigen einer Registerkarte in der Besprechungsphase für die Zusammenarbeit | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
-|Besprechungsseitiger Bereich | Beispiel-App zum Hinzufügen von Tagesordnungen in einem besprechungsseitigen Bereich | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
+| Besprechungs-App | Veranschaulicht die Verwendung der Besprechungstoken-Generator-App zum Anfordern eines Tokens. Das Token wird sequenziell generiert, sodass jeder Teilnehmer eine angemessene Gelegenheit hat, an einer Besprechung mitzuwirken. Das Token ist nützlich in Situationen wie Meetings in DerBesprechung und Q&A-Sitzungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+|Beispiel für Besprechungsphasen | Beispiel-App zum Anzeigen einer Registerkarte in der Besprechungsphase für die Zusammenarbeit | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+|Besprechungsseitiger Bereich | Beispiel-App zum Hinzufügen von Tagesordnungen in einem besprechungsseitigen Bereich | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
 ## <a name="step-by-step-guides"></a>Schritt-für-Schritt-Anleitungen
 

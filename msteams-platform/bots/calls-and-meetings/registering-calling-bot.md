@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanrufbot für Microso
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Aufrufen von Bot-Audio-/Video-Audiovideomedien
-ms.openlocfilehash: c05f0e84dd0b56f9bdb503a73886cfa0cd5024fa
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: d449ac242cde4432348f9fa5108206df55daee1c
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398666"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727565"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
 
@@ -91,6 +91,12 @@ Sie können sich darauf verlassen, dass ein Administrator die Berechtigungen ert
 
 > [!IMPORTANT]
 > Jedes Mal, wenn Sie eine Änderung an den Berechtigungen Ihrer Anwendung vornehmen, müssen Sie auch den Administratorzustimmungsprozess wiederholen. Änderungen, die im App-Registrierungsportal vorgenommen wurden, werden erst widergespiegelt, wenn die Zustimmung vom Administrator des Mandanten erneut angewendet wurde.
+
+## <a name="code-sample"></a>Codebeispiel
+
+| **Beispielname** | **Beschreibung** | **Graph** |
+|---------------|----------|--------|
+| Anruf- und Besprechungsbot | Die Beispiel-App zeigt, wie Bot Anrufe erstellen, an Besprechungen teilnehmen und Anrufe übertragen kann. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="step-by-step-guide"></a>Schrittweise Anleitung
 

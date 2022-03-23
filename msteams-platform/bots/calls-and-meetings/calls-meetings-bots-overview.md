@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Ihre Microsoft Teams-Apps mit Benutzern per Sprac
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Anrufe Audio Video IVR Voice Online-Besprechungen Echtzeit Medienstreams Bot
-ms.openlocfilehash: a0172bff6487da25ff7d482a24fa797f97b049b6
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 2339431e6643d9ecf986b7a327f5fb7ee764fa00
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398673"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727632"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots für Anrufe und Onlinebesprechungen
 
@@ -93,7 +93,6 @@ Echtzeitmedien beziehen sich auf Szenarien, in denen Medien in Echtzeit verarbei
 | **Beispielname** | **Beschreibung** | **Graph** |
 |---------------|----------|--------|
 | Graph Kommunikation | Graph Kommunikation, um mit der Kommunikationsplattform von Microsoft zu interagieren. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
-| Anruf- und Besprechungsbot | Die Beispiel-App zeigt, wie Bot Anrufe erstellen, an Besprechungen teilnehmen und Anrufe übertragen kann. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

@@ -4,12 +4,12 @@ description: Beschreibt alle neuen oder aktuellen Entwicklerfunktionen in Micros
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 'Teams: Was sind die neuesten Updates oder Entwicklervorschau und Features'
-ms.openlocfilehash: 9ad67a1ecfe9947ed0dc665827dd4e127e3a4e69
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+ms.openlocfilehash: cccd5865c93a41c858d12b8e4e268f4169e672e7
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63492988"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727281"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -22,6 +22,8 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 
 | Datum | Update | Hier finden |
 | --- | --- | --- |
+|22.03.2022| „Erste Schritte mit Blazor App für Teams“ aktualisiert |  • Erste Schritte > [Erstellen Ihrer ersten App mit Blazor](sbs-gs-blazorapp.yml)|
+|22.03.2022| Informationen zum Debugprozess hinzugefügt| • Tools und SDKs> Teams Toolkit für Visual Studio Code > [Lokales Debuggen Ihrer Teams-App](toolkit/debug-local.md) </br> • Tools und SDKs> Teams Toolkit für Visual Studio Code > [Debug-Hintergrundprozess](toolkit/debug-background-process.md)|
 |14.03.2022| Schritt-für-Schritt-Anleitung zum Erstellen und Testen eines Connectors in Microsoft Teams eingeführt. | Erstellen von Webhooks und Connectors > Erstellen von Office 365-Connectors > [Erstellen von Teams-Connectors](sbs-teams-connectors.yml)|
 |10.03.2022| Informationen zu Moodle LMS und Microsoft 365-Plug-Ins hinzugefügt | Integrieren mit Teams > Moodle LMS >[ Moodle Lernmanagementsystem](resources/moodle-overview.md)|
 |03.03.2022 | So fügen Sie die Authentifizierung mithilfe eines externen OAuth-Anbieters hinzu.| Authentifizierung hinzufügen > Registerkarten > [Verwenden externer OAuth-Anbieter](tabs/how-to/authentication/auth-oauth-provider.md) |
@@ -51,6 +53,8 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
+|22.03.2022| „Erste Schritte mit Blazor App für Teams“ aktualisiert|  • Erste Schritte > [Erstellen Ihrer ersten App mit Blazor](sbs-gs-blazorapp.yml)|
+|22.03.2022| Informationen zum Debugprozess hinzugefügt| • Tools und SDKs> Teams Toolkit für Visual Studio Code > [Lokales Debuggen Ihrer Teams-App](toolkit/debug-local.md) </br> • Tools und SDKs> Teams Toolkit für Visual Studio Code > [Debug-Hintergrundprozess](toolkit/debug-background-process.md)|
 |14.03.2022| Schritt-für-Schritt-Anleitung zum Erstellen und Testen eines Connectors in Microsoft Teams eingeführt. | Erstellen von Webhooks und Connectors > Erstellen von Office 365-Connectors > [Erstellen von Teams-Connectors](sbs-teams-connectors.yml)|
 |10.03.2022 | Informationen zu Moodle LMS und Microsoft 365-Plug-Ins hinzugefügt | Integrieren mit Teams > Moodle LMS >[ Moodle Lernmanagementsystem](resources/moodle-overview.md)|  
 |03.03.2022 | So fügen Sie die Authentifizierung mithilfe eines externen OAuth-Anbieters hinzu.| Authentifizierung hinzufügen > Registerkarten > [Verwenden externer OAuth-Anbieter](tabs/how-to/authentication/auth-oauth-provider.md) |

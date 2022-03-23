@@ -10,7 +10,7 @@ Die Bereitstellung besteht aus zwei Schritten.  Zunächst werden erforderliche C
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-Wählen Sie das Symbol Teams Toolkits :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: in der Visual Studio Code-Randleiste aus.
+Wählen Sie das Teams-Toolkit-Symbol :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: in der Visual Studio Code-Randleiste aus.
 
 1. Wählen Sie **"Bereitstellung in der Cloud" aus**.
 
@@ -51,7 +51,7 @@ Jetzt können Sie den gleichen Prozess verwenden, um Ihre Bot- und Nachrichtener
 
 In Ihrem Terminalfenster:
 
-1. Ausführen `teamsfx provision`.
+1. Führen Sie `teamsfx provision`aus.
 
    ``` bash
    teamsfx provision
@@ -62,7 +62,7 @@ In Ihrem Terminalfenster:
    > [!NOTE]
    > Es werden immer einige Azure-Ressourcen zum Hosten Ihrer App verwendet.
 
-1. Ausführen `teamsfx deploy`.
+1. Führen Sie `teamsfx deploy`aus.
 
    ``` bash
    teamsfx deploy
@@ -80,7 +80,8 @@ Sobald die Bereitstellungs- und Bereitstellungsschritte abgeschlossen sind:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot der Remotestart-App." border="false":::
 
-1. Wählen Sie **Hinzufügen**.
+1. Klicken Sie auf **Hinzufügen**.
+
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot der installierten App." border="false":::
 
    Ihre App wird auf der Azure-Website geladen.

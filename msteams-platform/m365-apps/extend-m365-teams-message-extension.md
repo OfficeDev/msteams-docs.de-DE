@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie Sie Ihre suchbasierte Teams Messaging-Erweit
 ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 0cb9cf0d1963e7d9fd2b8d27f245c251ef99c625
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: d2369d5a07652055a9474be586470f906ed3de5b
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453516"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727526"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Erweitern einer Teams Messaging-Erweiterung über Microsoft 365
 
@@ -152,8 +152,10 @@ Beim Testen Ihrer Messaging-Erweiterung können Sie die Quelle (von Teams im Ver
 So zeigen Sie eine Vorschau ihrer App an, die in Outlook im Web ausgeführt wird:
 
 1. Melden Sie sich mithilfe von Anmeldeinformationen für Ihren Testmandanten bei [outlook.com](https://www.outlook.com) an.
-1. Klicken Sie auf **"Neue Nachricht"**.
-1. Öffnen Sie das Flyoutmenü **"Weitere Apps** " am unteren Rand des Kompositionsfensters.
+1. Wählen Sie **"Neue Nachricht" aus**.
+1. Öffnen Sie das Flyoutmenü " **Weitere Apps** " am unteren Rand des Kompositionsfensters.
+
+:::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Klicken Sie auf das Menü &quot;Weitere Apps&quot; am unteren Rand des Fensters für die E-Mail-Komposition, um Ihre Nachrichtenerweiterung zu verwenden.":::
 
 Ihre Messaging-Erweiterung wird aufgelistet. Sie können es von dort aus aufrufen und wie beim Verfassen einer Nachricht in Teams verwenden.
 
