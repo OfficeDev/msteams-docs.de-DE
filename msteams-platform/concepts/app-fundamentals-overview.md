@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: 'Einstiegspunkte: Erweiterbarkeit – Anwendungsfälle – Gerätefunktion'
-ms.openlocfilehash: 02a41631931f24fa23e2ddaaadaf2a94c63c5b23
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 0c1b2289734a54ced4298062260e8424b3454a09
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399170"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766037"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planen Ihrer App mit Teams-Features
 
@@ -21,9 +21,9 @@ Im Kern ist Teams eine Plattform für die Zusammenarbeit. Es ist auch eine sozia
 
 In diesem Abschnitt erfahren Sie, wie Sie:
 
-* Identifizieren und Zuordnen von Anwendungsfällen zu Teams-Features.
-* Planungscheckliste verwenden.
-* Planen Sie über die App-Bereitstellung hinaus.
+* Identifizieren und Zuordnen von Anwendungsfällen zu Teams-Features
+* Planungscheckliste verwenden
+* Planen Sie über die Anwendungsbereitstellung hinaus.
 
 ## <a name="plan-with-teams"></a>Planen mit Teams
 
@@ -52,7 +52,7 @@ Das Verstehen des Nutzers und seines Anliegens sind die ersten Indikatoren dafü
 
 * **Entwerfen der App-Benutzeroberfläche**: Verwenden Sie Teams UI Toolkit und UI Library, um das Layout Ihrer App zu entwerfen.
 
-* **Verwenden von Teams als Plattform**: Die Teams-Plattform unterstützt Sie beim Erstellen einer Einzel- oder Mehrfunktions-App. Ihre Teams-App basiert auf den integrierten Produkten und Diensten, die das App-Erlebnis verbessern.
+* **Verwenden von Teams als Plattform**: Die Teams-Plattform unterstützt Sie beim Erstellen einer Einzel- oder Mehrfunktions-App. Ihre Teams-App wird von den integrierten Produkten und Diensten unterstützt, die die App-Erfahrung verbessern.
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Konzeptionelle Darstellung der Teams-Lösung." border="true":::
 

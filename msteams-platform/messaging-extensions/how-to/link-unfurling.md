@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie die Verbreitung von Links mit messaging-Erwei
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1ecab904f21d84cfa329e1c390d51ebade6a8e05
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 006f1194fc15d633f442802891a1f5f28151f81e
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453866"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766156"
 ---
 # <a name="link-unfurling"></a>Verbreiten von Links
 
@@ -178,6 +178,10 @@ Es folgt ein Beispiel für die Antwort:
 ```
 
 * * *
+
+## <a name="step-by-step-guide"></a>Schrittweise Anleitung
+
+Befolgen Sie die [schrittweise Anleitung](../../sbs-botbuilder-linkunfurling.yml), um Links in Teams mithilfe von Bot zu erweitern.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -5,12 +5,12 @@ description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Tea
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 72c1ae8b22ff4d3ac96ad7c6c07a98dd37266a99
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+ms.openlocfilehash: b39d6b29704e7894e747c02323dda7d96bc6985a
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63492972"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727916"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Registerkarten für Microsoft Teams erstellen
 
@@ -90,6 +90,7 @@ Sie können mehrere Kanäle oder Gruppenregisterkarten und bis zu 16 persönlich
 
 ## <a name="see-also"></a>Siehe auch
 
+* [Benutzerdefinierte Registerkarten in Microsoft Teams](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
 * [Geräteberechtigungen anfordern](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrieren von Medienfunktionen](../concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [Integrieren eines QR- oder Barcodescanners](../concepts/device-capabilities/qr-barcode-scanner-capability.md)

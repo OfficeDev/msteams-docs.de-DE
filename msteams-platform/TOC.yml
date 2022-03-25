@@ -118,10 +118,10 @@
           href: toolkit/TeamsFx-collaboration.md
         - name: CI/CD-Leitfaden
           href: toolkit/use-CICD-template.md
-        - name: Teams-Toolkit-CLI
-          href: toolkit/TeamsFx-CLI.md
         - name: TeamsFx SDK
           href: toolkit/TeamsFx-SDK.md
+    - name: Teams-Toolkit-CLI
+      href: toolkit/TeamsFx-CLI.md
     - name: Microsoft Teams-Toolkit-Erweiterung für Visual Studio
       href: toolkit/visual-studio-overview.md
     - name: Yeoman-Generator für Microsoft Teams (GitHub)

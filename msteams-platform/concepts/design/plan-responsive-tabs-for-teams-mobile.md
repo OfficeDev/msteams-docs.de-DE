@@ -5,16 +5,16 @@ description: Leitfaden zum Planen der Erstellung einer App auf Teams Mobilgerät
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: ad9fb6500aa74cf4de43ed837a60aeeff0485dc2
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4a32f5e0045def6571f347ebd1bbf8b56f4e082b
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453523"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766128"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planen reaktionsfähiger Registerkarten für Teams Mobile
 
- Teams Plattform bietet die Möglichkeit, Apps auf Mobilgeräten und Desktops zu erstellen. Ihre App-Benutzer können desktop- oder mobil oder beides bevorzugen. Die Benutzer können Daten auf dem Desktop vorbereiten, aber mehr Daten über Mobilgeräte nutzen und freigeben. Der Schlüssel zum Erstellen einer App besteht darin, die Anforderungen der Benutzer zu verstehen und zu erfüllen. Es gibt Funktionen wie Bots, Messaging-Erweiterungen und Connectors, die nahtlos auf Desktops und mobilen Geräten funktionieren. Das Erstellen von Registerkarten und Aufgabenmodulen erfordert jedoch die Planung für das Hosten Ihrer Webumgebung auf Teams Mobilen. In den Dokumenthandbüchern können Sie Ihre reaktionsfähigen Webseiten auf Teams Mobilen planen.
+ Teams Plattform bietet die Möglichkeit, Apps auf Mobilgeräten und Desktops zu erstellen. Ihre App-Benutzer können desktop- oder mobil oder beides bevorzugen. Die Benutzer können Daten auf dem Desktop vorbereiten, aber mehr Daten über Mobilgeräte nutzen und freigeben. Der Schlüssel zum Erstellen einer App besteht darin, die Anforderungen der Benutzer zu verstehen und zu erfüllen. Es gibt Funktionen wie Bots, Messaging-Erweiterungen und Connectors, die nahtlos auf Desktops und mobilen Geräten funktionieren. Das Erstellen von Registerkarten und Aufgabenmodulen erfordert jedoch die Planung für das Hosten Ihrer Webumgebung auf Teams Mobilen. Der Artikel enthält Anleitungen zum Planen ihrer reaktionsfähigen Webseiten auf Teams Mobilgeräten.
 
 ## <a name="identify-apps-scope"></a>Identifizieren des App-Bereichs
 

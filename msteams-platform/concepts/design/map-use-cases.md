@@ -5,12 +5,12 @@ description: Ermitteln Sie, wie die Anwendungsfälle für Ihre App innerhalb der
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 8cc1694a5ce5ee8472a48f86edf09eb7255a4810
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 006b639509d8aaaef96c8f4a3b57235097f1d531
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452830"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765939"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>Zuordnen von Anwendungsfällen zu Microsoft Teams-App-Features
 
@@ -26,7 +26,7 @@ Sie können Ihren Anwendungsfall basierend auf folgenden Elementen zuordnen:
 
 Der nächste Schritt besteht darin, Anwendungsfälle App-Funktionen zuzuordnen.
 
-Im Folgenden finden Sie eine Liste allgemeiner Benutzerszenarien, die Microsoft Teams-Funktionen zugeordnet sind. Es handelt sich nicht um eine vollständige Liste, aber sie hilft Ihnen, einige Ihrer Möglichkeiten zu kennenzulernen.
+Im Folgenden finden Sie eine Liste allgemeiner Benutzerszenarien, die Microsoft Teams-Funktionen zugeordnet sind. Es handelt sich nicht um eine vollständige Liste, sondern hilft Ihnen dabei, einige der Möglichkeiten zu durchdenken, die Ihnen zur Verfügung stehen.
 </br>
 </br>
 <details>

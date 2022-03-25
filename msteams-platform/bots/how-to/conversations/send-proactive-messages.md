@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: 'Nachricht senden: Kanal-ID der Benutzer-ID abrufen: Konversations-ID'
-ms.openlocfilehash: e62f5715017deac6919de6b0b70f83ff626fd64b
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: dc8c600c08c3f0e381a85aeef6c268ad8a5cbb96
+ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355734"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63784009"
 ---
 # <a name="proactive-messages"></a>Proaktive Nachrichten
 
@@ -287,3 +287,4 @@ Befolgen Sie die [schrittweisen Anleitung](../../../sbs-send-proactive.yml), die
 * [**Codebeispiele für proaktives Messaging in Teams**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 * [Kanal- und Gruppenchatunterhaltungen mit einem Bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
 * [Auf die Aktion zum Absenden des Aufgabenmoduls reagieren](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+* [Proaktive Benachrichtigungen an Benutzer senden](/azure/bot-service/bot-builder-howto-proactive-message)

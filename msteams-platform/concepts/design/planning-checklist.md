@@ -5,12 +5,12 @@ description: 'Fragen, die Sie bei der Planung Ihrer App berücksichtigen sollten
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 5fdce83ed954c3751f34d7680b4400092c7531a3
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 6a2440ea05c1a89f4e1306b6fb54635287fb2d6d
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399317"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765932"
 ---
 # <a name="teams-app-planning-checklist"></a>Prüfliste für die Teams App-Planung
 
@@ -91,7 +91,7 @@ Hier ist eine Checkliste mit Fragen, die Sie bei der Planung Ihrer App berücksi
 | --- | --- |
 | 1 | Gibt es 1:1-Interaktionen mit der App, die aus Datenschutz- oder anderen Gründen erforderlich sind? Beispielsweise das Überprüfen des Restguthabens oder anderer privater Informationen. |
 | 2 | Gibt es eine Zusammenarbeit zwischen Nutzern, die möglicherweise keine gemeinsamen Teams haben? Beispiel: Suchen nach bevorstehenden organisationsweiten Ereignissen in einem Unternehmen. |
-| 3 | Gibt es personalisierte Benachrichtigungen oder Nachrichten, die während der Nutzung der Teams-App an den Nutzer gesendet werden müssen? |
+| 3 | Gibt es personalisierte Benachrichtigungen oder Nachrichten, die während der gesamten Teams-App an einen Benutzer gesendet werden müssen? |
 
 </details>
 <br>

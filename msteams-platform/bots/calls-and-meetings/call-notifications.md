@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Anrufbenachrichtigungen Rückrufregion Affinität aufrufen
 ms.date: 04/02/2019
-ms.openlocfilehash: a1d2362347643badc06a23d967120c8f14a17200
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: d7939bd7fa613636d225e6f5437434c394a8c0bd
+ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453054"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63783995"
 ---
 # <a name="incoming-call-notifications"></a>Eingehende Anrufbenachrichtigungen
 
@@ -95,3 +95,8 @@ Weitere Informationen finden Sie unter [Überprüfen eingehender Anforderungen](
 
 > [!div class="nextstepaction"]
 > [Anforderungen und Überlegungen für von der Anwendung gehostete Medienbots](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
+
+## <a name="see-also"></a>Siehe auch
+
+* [Einrichten einer automatischen Telefonzentrale](/microsoftteams/create-a-phone-system-auto-attendant)
+* [Einrichten der automatischen Antwort für Microsoft Teams-Räume auf Android- und Teams-Videotelefongeräten](/microsoftteams/set-up-auto-answer-on-teams-android)
