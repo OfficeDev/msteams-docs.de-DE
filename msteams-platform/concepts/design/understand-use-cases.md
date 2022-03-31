@@ -1,16 +1,16 @@
 ---
 title: Grundlegendes zu Anwendungsfällen und Teams-Features Ihrer App
 author: heath-hamilton
-description: Planen Sie Ihre App, verstehen Sie Ihren Nutzer und seine Anforderungen, verstehen Sie die Benutzerprobleme, die Ihre App lösen würde, planen Sie die Nutzerauthentifizierung und deren Onboarding-Erfahrung.
+description: In diesem Artikel erfahren Sie mehr über die Möglichkeiten der Microsoft Teams-App, planen Ihre Teams-App, verstehen Ihre App-Nutzer und deren Bedürfnisse, verstehen die Nutzerprobleme, die Ihre Teams-App lösen würde, planen die Nutzerauthentifizierung und deren Onboarding-Erfahrung.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 95ed5ed7af2eaf8c5b542a9a510484b5ec964b3e
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 55955972bb9ebfbb3699ebcbc2cc131afc00fbd1
+ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63766121"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498231"
 ---
 # <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
 

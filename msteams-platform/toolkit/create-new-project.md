@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 1c4b219ed4f664e92d144b18c7aa3734c79c0c61
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: 55596671f6799145e5bd3de0d9ee4fb1b9ad4942
+ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63464269"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498217"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Erstellen einer neuen Teams-App mit dem Teams-Toolkit
 
@@ -34,7 +34,7 @@ Sie können eine neue App erstellen, indem Sie **Anzeigebeispiele** erkunden und
 
  1. Öffnen Sie das **Teams-Toolkit** aus Microsoft Visual Studio Code.
  1. Wählen Sie den Abschnitt **ENTWICKLUNG** in der Baumansicht aus.
- 1. Wählen Sie **Anzeigebeispiele** aus. Der Beispielkatalog wird wie in der folgenden Abbildung dargestellt angezeigt:
+ 1. Wählen Sie **Beispiele anzeigen** aus. Der Beispielkatalog wird wie in der folgenden Abbildung dargestellt angezeigt:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="Anzeigebeispiele":::
 
@@ -42,10 +42,17 @@ Sie können Beispiele erkunden und herunterladen und Ihre App entweder lokal ode
 
 Weitere Informationen finden Sie unter [Erstellen einer neuen Teams-Registerkarten-App (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2).
 
+## <a name="step-by-step-guides-using-teams-toolkit"></a>Schritt-für-Schritt-Anleitungen mithilfe des Teams-Toolkits
+
+* [Erstellen einer Teams-App mit Blazor](../sbs-gs-blazorapp.yml)
+* [Erstellen einer Teams-App mit JavaScript, mithilfe von React](../sbs-gs-javascript.yml)
+* [Erstellen einer Teams-App mit SPFx](../sbs-gs-spfx.yml)
+* [Erstellen einer Teams-App mit C# oder .NET](../sbs-gs-csharp.yml)
+
 ## <a name="see-also"></a>Siehe auch
 
 * [Bereitstellen von Cloudressourcen](provision.md)
 * [Bereitstellen der Teams-App in der Cloud](deploy.md)
-* [Veröffentlichung Ihrer Teams-App](TeamsFx-collaboration.md)
+* [Veröffentlichen Ihrer Teams-App](TeamsFx-collaboration.md)
 * [Verwalten mehrerer Umgebungen](TeamsFx-multi-env.md)
 * [Zusammenarbeit mit anderen Entwicklern am Teams-Projekt](TeamsFx-collaboration.md)

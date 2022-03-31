@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: Ereignis des Bot-Karten-Zustimmungskanals für das Aktivitätshandlerframework
-ms.openlocfilehash: 5094ce68aae25cb4c22c3b0b3b3b3d39e565e4ab
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 59c03c339187010867d9fd380d4ac9798e3aa20c
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398645"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464775"
 ---
 # <a name="bot-activity-handlers"></a>Bot-Aktivitätenhandler
 
@@ -184,7 +184,9 @@ Die Botlogik verarbeitet eingehende Aktivitäten von einem oder mehreren Ihrer B
 #### <a name="core-bot-framework-handlers"></a>Core Bot Framework-Handler
 
 >[!NOTE]
-> Mit Ausnahme der **hinzugefügten** und **entfernten** Aktivitäten von Mitgliedern funktionieren alle in diesem Abschnitt beschriebenen Aktivitätshandler weiterhin wie bei einem Nicht-Teams-Bot.
+>
+>* Mit Ausnahme der **hinzugefügten** und **entfernten** Aktivitäten von Mitgliedern funktionieren alle in diesem Abschnitt beschriebenen Aktivitätshandler weiterhin wie bei einem Nicht-Teams-Bot.
+>* `onInstallationUpdateActivityAsync()`wird verwendet, um Teams Gebietsschema abzurufen, während der Bot zu Teams hinzugefügt wird.
 
 Aktivitätshandler unterscheiden sich im Kontext eines Teams, in dem dem Team ein neues Mitglied anstelle eines Nachrichtenthreads hinzugefügt wird.
 

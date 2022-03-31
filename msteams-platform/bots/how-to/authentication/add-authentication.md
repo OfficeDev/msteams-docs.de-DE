@@ -5,13 +5,13 @@ description: Hinzufügen der OAuth-Authentifizierung zu einem Bot in Microsoft T
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: Ressourcengruppen-Botregistrierung Azure-Emulator-Botmanifest
-ms.openlocfilehash: 8b624b36dca9a280ec35e062861a95513859c0c5
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+keywords: Bereitstellen des Ressourcengruppen-Botregistrierungs-Azure-Emulator-Botmanifests
+ms.openlocfilehash: f0dafb52774c43a511076134d2b39b91de0743a7
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63493033"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464824"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Authentifizierung für Ihren Teams-Bot hinzufügen
 
@@ -150,7 +150,7 @@ So fügen Sie den Microsoft Teams-Kanal hinzu:
 
     ![Nutzungsbedingungen auswählen](~/assets/images/adaptive-cards/select-terms-of-service.png)
 
-1. Wählen Sie **Speichern**.
+1. Klicken Sie auf **Speichern**.
 
     ![Auswählen Teams](~/assets/images/adaptive-cards/select-teams.png)
 
@@ -219,7 +219,7 @@ In der folgenden Abbildung wird die entsprechende Auswahl auf der Ressourcenseit
 
     ![App-Authentifizierungs-Verbindungszeichenfolge adv1-Ansicht für Teams-Bots](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
-1. Wählen Sie **Speichern**.
+1. Klicken Sie auf **Speichern**.
 
 #### <a name="microsoft-azure-active-directory-azure-ad-v2"></a>Microsoft Azure Active Directory (Azure AD) V2
 
@@ -243,7 +243,7 @@ In der folgenden Abbildung wird die entsprechende Auswahl auf der Ressourcenseit
 
     1. Geben Sie für **Bereiche** eine durch Leerzeichen getrennte Liste von Diagrammberechtigungen ein, die diese Anwendung erfordert, z. B.: User.Read User.ReadBasic.All Mail.Read
 
-1. Wählen Sie **Speichern**.
+1. Klicken Sie auf **Speichern**.
 
 ### <a name="test-the-connection"></a>Testen der Verbindung
 
@@ -436,7 +436,7 @@ and when for these, and just reference that from here, along with the set of ste
     1. Stellen Sie sicher, dass die **Bot-App-ID** , die Sie zum Zeitpunkt der Bot-Registrierung erhalten haben, `id` zugewiesen ist und `botId`.
     1. Weisen Sie diesen Wert zu: `validDomains: [ "token.botframework.com" ]`.
 1. Wählen Sie die Dateien aus, `outline.png`und `color.png` **zippen** Sie sie`manifest.json`.
-1. Öffnen **Sie Microsoft Teams**.
+1. Öffnen Sie **Microsoft Teams**.
 1. Wählen Sie unten im linken Bereich das **Symbol "Apps" aus**.
 1. Wählen Sie im rechten Bereich unten **Hochladen einer benutzerdefinierten App** aus.
 1. Navigieren Sie zum `TeamsAppManifest` Ordner, und laden Sie das gezippte Manifest hoch.

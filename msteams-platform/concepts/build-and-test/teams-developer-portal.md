@@ -5,12 +5,12 @@ keywords: Erste Schritte für Entwicklerportal-Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 52a6f925caa8296908febdb2b963edcf2de2eba3
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: c6c5ea448d8b1f793b2aa881c62325a1016f4508
+ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399324"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64511234"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Verwalten Ihrer Apps mit dem Entwicklerportal für Microsoft Teams
 
@@ -19,7 +19,9 @@ Das <a href="https://dev.teams.microsoft.com" target="_blank">Entwicklerportal f
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot der Startseite des Entwicklerportals für Teams.":::
 
 > [!NOTE]
-> Derzeit ist das Entwicklerportal nicht für Government Community Cloud (GCC), GCC-High- oder DOD-Mandanten (Department of Defense) verfügbar.
+>
+> * Derzeit ist das Entwicklerportal nicht für Government Community Cloud (GCC), GCC-High- oder DOD-Mandanten (Department of Defense) verfügbar.
+> * Sie können jedoch einen regulären Mandanten verwenden, um eine App im Entwicklerportal zu erstellen, die App herunterzuladen und die App [mithilfe von Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) in eine nationale Cloud hochzuladen. Weitere Informationen finden Sie unter ["Nationale Cloudbereitstellungen"](/graph/deployments).
 
 ## <a name="register-an-app"></a>Registrieren einer App
 
@@ -70,17 +72,6 @@ Das Entwicklerportal bietet Optionen zum Testen und Debuggen Ihrer App:
 Verwenden Sie im Entwicklerportal die Schaltfläche "**Verteilen**", um ein App-Paket herunterzuladen, es in Ihrer Organisation zu veröffentlichen oder im Teams Store zu veröffentlichen.
 
 Weitere Informationen finden Sie unter [Verteilen Ihrer Teams-App](~/concepts/deploy-and-publish/apps-publish-overview.md).
-
-## <a name="analyze-your-apps-usage"></a>Analysieren der Nutzung Ihrer App
-
-Auf der **Übersichtsseite** sehen Sie die Gesamtzahl der aktiven Benutzer für Ihre App. Diese Metriken sind für Apps verfügbar, die im Teams Store oder im App-Katalog einer Organisation über das Entwicklerportal veröffentlicht und auf die App-ID beschränkt sind.
-
-| Metrik | Definition |
-| :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *Monatlich R30* | Die Standardverwendungsmetrik. Sie zeigt die Anzahl der eindeutigen aktiven Benutzer an, die Ihre App innerhalb dieses rollenden 30-Tage-Fensters in UTC verwendet haben. |
-| *Täglich* | Zeigt die Anzahl der eindeutigen aktiven Benutzer an, die Ihre App an einem bestimmten Tag in UTC verwendet haben. |
-
-Die monatliche und tägliche Nutzung wird für die letzten sieben, 30 und 60 Tage angezeigt. Die Nutzung sollte für einen bestimmten Tag innerhalb von 24 bis 48 Stunden widergespiegelt werden. Die Anzeige neuer Apps kann bis zu 3 bis 5 Tage dauern.
 
 ## <a name="use-tools-to-create-app-features"></a>Verwenden von Tools zum Erstellen von App-Features
 

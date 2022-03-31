@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8999f6005775c4719de3f1e91ae26fa43ce7cb27
-ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+ms.openlocfilehash: c395324daba877b0e8f6030f4929dbbe5ce0dc6f
+ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63674978"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64511256"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
@@ -25,15 +25,13 @@ Wenn Sie diese Richtlinien befolgen, erhöht sich die Wahrscheinlichkeit, dass I
 
 ## <a name="value-proposition"></a>Wertbeitrag 
 
-> [!NOTE]  
-> Dieser Abschnitt steht im Einklang mit der [ kommerziellen Zertifizierungsrichtlinie von Microsoft mit der Nummer 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) und bietet Entwicklern von Microsoft Teams-Apps zusätzliche Anleitungen zum Wertversprechen ihres Angebots.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der kommerziellen Zertifizierungsrichtlinie von Microsoft Nr. 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) und bietet Entwicklern von Microsoft Teams-Apps zusätzliche Anleitungen zum Wertversprechen ihres Angebots.
 
 ### <a name="app-name"></a>App-Name
 
 [*Obligatorischer Fix*]
 
-> [!NOTE]  
-> Dieser Abschnitt steht im Einklang mit der Microsoft-[Zertifizierungsrichtlinie Nr. 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) und bietet Entwicklern zusätzliche Hinweise zur Benennung ihrer Anwendungen.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit der Microsoft[-Zertifizierungsrichtlinie Nr. 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) und bietet Entwicklern zusätzliche Hinweise zur Benennung ihrer Anwendungen.
 
 Der Name einer App spielt eine entscheidende Rolle dafür, wie Benutzer sie im Store entdecken. Verwenden Sie die folgenden Richtlinien, um eine App zu benennen:
 
@@ -63,8 +61,7 @@ Der Name einer App spielt eine entscheidende Rolle dafür, wie Benutzer sie im S
 
 [*Obligatorischer Fix*]
 
-> [!NOTE]  
-> Dieser Abschnitt steht im Einklang mit den kommerziellen Zertifizierungsrichtlinien [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness), [100.8](/legal/marketplace/certification-policies#1008-significant-value)und [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) von Microsoft und bietet Entwicklern zusätzliche Anleitungen zum Erstellen arbeitsplatzgerechter Apps.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit den kommerziellen Zertifizierungsrichtlinien von Microsoft Nr. [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness), [100.8](/legal/marketplace/certification-policies#1008-significant-value) und [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) und bietet Entwicklern zusätzliche Anleitungen für die Erstellung arbeitsplatzgerechter Anwendungen.
 
 App-Inhalte müssen für die allgemeine Nutzung am Arbeitsplatz geeignet sein und alle Einschränkungen einhalten, die in den Zertifizierungsrichtlinien für kommerzielle Marktplätze aufgeführt sind. Inhalte mit Bezug zu Religion, Politik, Glücksspielen und längerer Unterhaltung sind verboten.
 
@@ -74,8 +71,7 @@ Ihre Anwendung muss die Zusammenarbeit in der Gruppe ermöglichen, die Produktiv
 
 [*Obligatorischer Fix*]
 
-> [!NOTE]  
-> Dieser Abschnitt steht im Einklang mit [der Microsoft-Richtlinie zur kommerziellen Zertifizierung Nr. 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie zur kommerziellen Zertifizierung Nr. 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services).
 
 Apps müssen sich auf die Teams-Erfahrung konzentrieren und dürfen keine Namen, Symbole oder Bilder anderer ähnlicher Chat-basierter Plattformen oder Dienste für die Zusammenarbeit im App-Inhalt oder in den App-Metadaten enthalten, es sei denn, die App bietet eine bestimmte Interoperabilität.
 
@@ -87,14 +83,13 @@ Die Namen von App-Funktionen in Schaltflächen und anderen UI-Texten dürfen sic
 
 [*Obligatorischer Fix*]
 
-> [!NOTE]  
-> Dieser Abschnitt steht im Einklang mit der [kommerziellen Microsoft-Zertifizierungsrichtlinie 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) und bietet Entwicklern eine Anleitung zur Authentifizierung ihrer Apps mit externen Diensten.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der kommerziellen Microsoft-Zertifizierungsrichtlinie Nr. 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) und bietet Entwicklern eine Anleitung für die Authentifizierung ihrer Anwendungen mit externen Diensten.
 
 Weitere Informationen zum Implementieren der App-Authentifizierung finden Sie unter [Authentifizierung in Teams](~/concepts/authentication/authentication.md).
 
 #### <a name="authenticating-with-external-services"></a>Authentifizieren mit externen Diensten
 
- Wenn Ihre App Benutzer mit einem externen Dienst authentifiziert, befolgen Sie die folgenden Richtlinien:
+Wenn Ihre App Benutzer mit einem externen Dienst authentifiziert, befolgen Sie die folgenden Richtlinien:
 
 * **Anmelde-, Abmelde- und Registrierungserfahrungen**:
   * Apps, die von externen Konten oder Diensten abhängen, müssen eine klare und einfache Anmeldung, Abmeldung und Registrierung ermöglichen.
@@ -108,15 +103,14 @@ Weitere Informationen zum Implementieren der App-Authentifizierung finden Sie un
 
 ## <a name="security"></a>Sicherheit
 
-> [!NOTE]  
-> Dieser Abschnitt steht im Einklang mit [der Microsoft-Richtlinie zur kommerziellen Zertifizierung Nr. 1140.3](/legal/marketplace/certification-policies#11403-security).
+
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie zur kommerziellen Zertifizierung Nr. 1140.3](/legal/marketplace/certification-policies#11403-security).
 
 ### <a name="financial-information"></a>Finanzinformationen
 
 [*Obligatorischer Fix*]
 
-> [!NOTE]  
-> Dieser Abschnitt steht im Einklang mit [der kommerziellen Zertifizierungsrichtlinie Nr. 1140.3.1 von Microsoft](/legal/marketplace/certification-policies#114031-financial-transactions) und bietet eine Anleitung zur Übermittlung von Finanzinformationen innerhalb der Teams-Schnittstelle und informiert Entwickler über eingeschränkte Zahlungsszenarien in der mobilen Version (Android und iOS) ihrer Teams-App.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der kommerziellen Zertifizierungsrichtlinie Nr. 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions) von Microsoft und bietet eine Anleitung zur Übermittlung von Finanzinformationen innerhalb der Teams-Schnittstelle und informiert Entwickler über eingeschränkte Zahlungsszenarien in der mobilen Version (Android und iOS) ihrer Teams-App.
 
 Apps dürfen Benutzer nicht auffordern, Zahlungen innerhalb der Teams-Benutzeroberfläche zu tätigen und Finanzinformationen über eine Bot-Schnittstelle an Benutzer zu übermitteln.  
 
@@ -166,8 +160,7 @@ Apps, die auf der iOS- oder Android-Version von Teams ausgeführt werden, müsse
 
 [*Obligatorischer Fix*]
 
-> [!NOTE]
-> Dieser Abschnitt steht im Einklang mit [der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für den kommerziellen Marktplatz Nr. 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension).
 
 Bei Apps, die den Microsoft Azure Bot Service verwenden (z. B. Bots und Messaging-Erweiterungen), müssen Sie alle in den Microsoft [Online Services-Bedingungen](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46) definierten Anforderungen erfüllen.
 
@@ -187,8 +180,7 @@ Bots müssen immer die Berechtigung zum Hochladen einer Datei und zum Anzeigen e
 
 [*Obligatorischer Fix*]
 
-> [!NOTE]
-> Dieser Abschnitt steht im Einklang mit der [Microsoft Commercial Marketplace-Richtlinie Nr. 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) und enthält eine Anleitung für Entwickler zur Verwendung eingeschränkter Domänen in der `validDomains` Manifest-Eigenschaft.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit der [Microsoft Richtlinie Nr. 1140.3.3 für kommerzielle Marktplätze](/legal/marketplace/certification-policies#114033-external-domains) und enthält eine Anleitung für Entwickler zur Verwendung eingeschränkter Domänen in der `validDomains` Manifest-Eigenschaft.
 
 Sie dürfen keine Domänen außerhalb der Kontrolle Ihrer Organisation (einschließlich Wildcards) und Tunnelingdienste in die Domänenkonfigurationen Ihrer App einschließen. Zu den folgenden Ausnahmen gehören:
 
@@ -209,8 +201,7 @@ Die App muss die Benutzer warnen, bevor sie Dateien oder ausführbare Dateien (.
 
 ## <a name="general-functionality-and-performance"></a>Allgemeine Funktionalität und Leistung
 
-> [!NOTE]
-> Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4](/legal/marketplace/certification-policies#11404-functionality).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4](/legal/marketplace/certification-policies#11404-functionality).
 
 ### <a name="launching-external-functionality"></a>Externe Funktionen starten
 
@@ -466,8 +457,7 @@ Wenn die Einrichtung Ihrer Anwendung zu Testzwecken komplex ist, stellen Sie ein
 
 ## <a name="tabs"></a>Registerkarten
 
-> [!NOTE]  
-> Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.2](/legal/marketplace/certification-policies#114042-tabs).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.2](/legal/marketplace/certification-policies#114042-tabs).
 Wenn Ihre App eine Registerkarte enthält, stellen Sie sicher, dass sie diesen Richtlinien entspricht.
 > [!TIP]
 > Weitere Informationen zum Erstellen einer qualitativ hochwertigen App finden Sie unter [Richtlinien zum Entwerfen von Teams-Registerkarten](~/tabs/design/tabs.md).
@@ -838,8 +828,7 @@ Entwerfen Sie Ihre App mit [einfachen](~/concepts/design/design-teams-app-basic-
 
 ## <a name="bots"></a>Bots
 
-> [!NOTE]
-> Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.3](/legal/marketplace/certification-policies#114043-bots).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.3](/legal/marketplace/certification-policies#114043-bots).
 
 Wenn Ihre App einen Bot enthält, stellen Sie sicher, dass er diesen Richtlinien entspricht.
 
@@ -1074,8 +1063,7 @@ Apps, die nur Benachrichtigungen mit Inhalten bereitstellen wie **“Sie haben e
 
 ## <a name="messaging-extensions"></a>Messaging-Erweiterungen
 
-> [!NOTE]
-> Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions).
 
 Wenn Ihre App eine Messaging-Erweiterung enthält, stellen Sie sicher, dass sie diesen Richtlinien entspricht.
 
@@ -1217,8 +1205,7 @@ Apps, die nur zur Verbreitung von Links dienen, bieten in Teams keinen nennenswe
 
 ## <a name="task-modules"></a>Aufgabenmodule
 
-> [!NOTE]
-> Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules).
 
 Ein Aufgabenmodul muss ein Symbol und den Kurznamen der App enthalten, mit der es verknüpft ist. Aufgabenmodule dürfen nicht eine ganze App einbetten, sondern nur die Komponenten anzeigen, die für die Durchführung einer bestimmten Aktion erforderlich sind. [*Obligatorischer Fix*]
 
@@ -1249,8 +1236,8 @@ Weitere Informationen finden Sie unter [Entwurfsrichtlinien für Teams-Aufgabenm
 
 ## <a name="meeting-extensions"></a>Besprechungserweiterungen
 
-> [!NOTE]
-> Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions).[!TIP]
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions).
+> [!TIP]
 > Weitere Informationen zum Erstellen einer qualitativ hochwertigen App-Erfahrung finden Sie in den [Designrichtlinien für die Erweiterung von Teams-Meetings](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
 Verwenden Sie die folgenden Richtlinien für die Erweiterung von Besprechungen:
@@ -1351,8 +1338,7 @@ Verwenden Sie die folgenden Richtlinien für die Erweiterung von Besprechungen:
 
 ## <a name="notifications"></a>Benachrichtigungen
 
-> [!NOTE]
-> Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis).
 
 Wenn Ihre App die von [Microsoft Graph bereitgestellten Aktivitätsfeed-APIs](/graph/teams-send-activityfeednotifications) verwendet, stellen Sie sicher, dass sie die folgenden Richtlinien einhält.
 
@@ -1380,8 +1366,7 @@ Wenn Ihre App die von [Microsoft Graph bereitgestellten Aktivitätsfeed-APIs](/g
 
 ## <a name="microsoft-365-app-compliance-program"></a>Microsoft 365-App-Compliance Program
 
-> [!NOTE]
-> Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation).
 
 Das Microsoft 365 App Compliance-Programm soll Organisationen dabei helfen, Risiken zu bewerten und zu verwalten, indem Sicherheits- und Compliance-Informationen zu Ihrer App ausgewertet werden. Wenn Sie eine App im Teams Store veröffentlichen, müssen Sie die folgenden Stufen des Programms abschließen:
 
@@ -1399,13 +1384,11 @@ Das Microsoft 365 App Compliance-Programm soll Organisationen dabei helfen, Risi
 
 * **Publisher-Bestätigung:** Ein Prozess, bei dem Sie allgemeine Informationen zur Datenverarbeitung sowie Sicherheits- und Compliance-Informationen weitergeben, um potenziellen Kunden zu helfen, fundierte Entscheidungen über die Verwendung Ihrer App zu treffen.
 
-> [!NOTE]
-> Wenn Sie eine App einreichen, die zuvor nicht aufgeführt wurde, können Sie die Publisher-Bestätigung nicht offiziell abschließen, bis sich Ihre App im Teams Store befindet. Wenn Sie eine aufgeführte App aktualisieren, führen Sie die Publisher-Bestätigung durch, bevor Sie die neueste Version der App einreichen.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Wenn Sie eine App übermitteln, die zuvor noch nicht aufgeführt wurde, können Sie den Herausgebernachweis erst dann offiziell abschließen, wenn sich Ihre App im Teams Store befindet. Wenn Sie eine aufgeführte App aktualisieren, führen Sie die Publisher-Bestätigung durch, bevor Sie die neueste Version der App einreichen.
 
 ## <a name="advertising"></a>Werbung
 
-> [!NOTE]
-> Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.7](/legal/marketplace/certification-policies#11407-advertising).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.7](/legal/marketplace/certification-policies#11407-advertising).
 
 Apps dürfen keine Werbung anzeigen, einschließlich dynamischer Anzeigen, Banneranzeigen und Anzeigen in Nachrichten.
 

@@ -4,12 +4,12 @@ description: Beschreibt Einmaliges Anmelden (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams-Authentifizierungs-SSO – Microsoft Azure Active Directory (Azure AD)-Single Sign-On-API
-ms.openlocfilehash: 63ffaa8ee11f728a262094f0300db37259f79a8d
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 4a7854ef9cefffab04026b3fe3257154cc81f7ac
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398890"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464810"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Unterstützung für einmaliges Anmelden (SSO) für Registerkarten
 
@@ -22,7 +22,7 @@ Benutzer melden sich bei Microsoft Teams über ihr Geschäfts-, Schul- oder Micr
 >
 > ✔Teams für iOS (_Version_: 2.0.18 und höher)  
 >
-> ✔Teams JavaScript SDK (_Version_: 1.10 und höher) für SSO, um im Besprechungsseitenbereich zu arbeiten.
+> ✔Teams JavaScript SDK (_Version_: 1.11 und höher) für SSO, um im Besprechungsseitenbereich zu arbeiten.
 >
 > Für eine optimale Benutzererfahrung verwenden Sie die jeweils neueste Version von iOS und Android.[!NOTE]
 > **Schnellstart**  

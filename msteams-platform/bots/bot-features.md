@@ -5,12 +5,12 @@ description: Übersicht über die Tools und SDKs zum Erstellen Microsoft Teams B
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 5a95159df887033bca339efd871261938aecb07d
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 1818ebfa102ce55d8243c16f460fa688fc67fdc3
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453887"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464768"
 ---
 # <a name="bots-and-sdks"></a>Tools und SDKs
 
@@ -50,7 +50,7 @@ Das [Bot Framework](https://dev.botframework.com/) ist ein umfangreiches SDK, da
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots mit Webhooks und Connectors
 
-Webhooks und Connectors verbinden Ihren Bot mit Ihren Webdiensten. Mithilfe von Webhooks und Connectors können Sie einen einfachen Bot für grundlegende Interaktionen erstellen, z. B. das Erstellen eines Workflows oder anderer einfacher Befehle. Sie sind nur in dem Team verfügbar, in dem Sie sie erstellen, und sind für einfache Prozesse vorgesehen, die für den Workflow Ihres Unternehmens spezifisch sind. Weitere Informationen finden Sie unter [Webhooks und Connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+Webhooks und Connectors verbinden Ihren Bot mit Ihren Webdiensten. Mithilfe von Webhooks und Connectors können Sie einen Bot für grundlegende Interaktionen erstellen, z. B. das Erstellen eines Workflows oder anderer einfacher Befehle. Sie sind nur in dem Team verfügbar, in dem Sie sie erstellen, und sind für einfache Prozesse vorgesehen, die für den Workflow Ihres Unternehmens spezifisch sind. Weitere Informationen finden Sie unter [Webhooks und Connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 ## <a name="advantages-of-bots"></a>Vorteile von Bots
 
@@ -194,6 +194,7 @@ this.onMessage(async (context, next) => {
 |Beispielname | Beschreibung | .NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Teams-Unterhaltungsbot | Behandlung von Nachrichten- und Unterhaltungsereignissen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
+| Bot-Beispiele | Satz von Bot-Beispielen | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) | |
 
 ## <a name="next-step"></a>Nächster Schritt
 
