@@ -5,15 +5,15 @@ ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Überlegungen zur Teams Integration
-ms.openlocfilehash: a21bb050008af935ee370d3e65d95a63a7090fb0
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+title: Überlegungen zur Microsoft Teams-Integration
+ms.openlocfilehash: f545acf25cc6b54a92dc8c7556b348394379abc5
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356252"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590738"
 ---
-# <a name="considerations-for-teams-integration"></a>Überlegungen zur Teams Integration
+# <a name="considerations-for-teams-integration"></a>Überlegungen zur Microsoft Teams-Integration
 
 Sie können Web-Apps für soziale und zusammenarbeitende Features Teams eignen, indem Sie sie ordnungsgemäß in Teams integrieren.
   
@@ -58,7 +58,7 @@ Im Folgenden sind die Voraussetzungen für die Integration Ihrer App in Teams.
 
 ***Integrationsszenarien**: SharePoint*
 
-Um eine vorhandene [SharePoint Seite](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites) als Teams Registerkarte zu integrieren, müssen Sie Folgendes berücksichtigen:
+Um eine vorhandene [SharePoint Seite](/sharepoint/dev/general-development/overview-of-the-sharepoint-page-model) als Teams Registerkarte zu integrieren, müssen Sie Folgendes berücksichtigen:
 
 * Dies muss eine *moderne* SharePoint Onlineseite sein.
 * Es werden nur persönliche Registerkarten unterstützt. Sie können Ihre Seite nicht als Kanalregisterkarte integrieren.

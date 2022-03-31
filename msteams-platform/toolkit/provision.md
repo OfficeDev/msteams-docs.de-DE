@@ -1,19 +1,19 @@
 ---
-title: Verwenden Teams Toolkits zum Bereitstellen von Cloudressourcen
+title: Verwenden des Teams-Toolkits zum Bereitstellen von Cloudressourcen
 author: MuyangAmigo
 description: Bereitstellen von Cloudressourcen
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ef087add6e69d8168a065bf52f4e265a55559755
-ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+ms.openlocfilehash: 0528654b2867552af802fb95e3a6e47ca3228414
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63674992"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590647"
 ---
-# <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Verwenden Teams Toolkits zum Bereitstellen von Cloudressourcen
+# <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Verwenden des Teams-Toolkits zum Bereitstellen von Cloudressourcen
 
 TeamsFx lässt sich in Azure und Microsoft 365 Cloud integrieren, sodass Sie Ihre Anwendung mit einem einzigen Befehl in Azure platzieren können. TeamsFx lässt sich in Azure Resource Manager integrieren, mit dem Sie Azure-Ressourcen bereitstellen können, die Ihre Anwendung für den Codeansatz benötigt.  
 
@@ -66,7 +66,7 @@ Wenn Sie ein neues Projekt erstellen, können Sie alle Azure-Ressourcen verwende
 | Web-App für Bot | Hosten Ihrer Bot-App | Fügt eine vom Benutzer zugewiesene Identität hinzu, um auf andere Azure-Ressourcen zuzugreifen. <br /> Fügt App-Einstellungen hinzu, die für [das TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) erforderlich sind |
 | Vom Benutzer zugewiesene Identität | Authentifizieren von Azure Service-zu-Service-Anforderungen | Gemeinsam genutzt für verschiedene Funktionen und Ressourcen |
 
-### <a name="resource-creation-for-azure-functions-in-the-project"></a>Erstellen von Ressourcen für Azure-Funktionen im Projekt
+### <a name="resource-creation-for-azure-functions-in-the-project"></a>Erstellen von Ressourcen für Azure Functions im Projekt
 
 |Ressource|Zweck| Beschreibung|
 |----------|--------------------------------|-----|
@@ -79,7 +79,7 @@ Wenn Sie ein neues Projekt erstellen, können Sie alle Azure-Ressourcen verwende
 
 |Ressource|Zweck | Beschreibung |
 |----------|--------------------------------|-----|
-| Azure SQL-Server | Hosten der Azure SQL-Datenbankinstanz | Ermöglicht allen Azure-Diensten den Zugriff auf den Server |
+| Azure SQL Server | Hosten der Azure SQL Datenbankinstanz | Ermöglicht allen Azure-Diensten den Zugriff auf den Server |
 | Azure SQL-Datenbank | Store Daten für Ihre App | Gewährt dem Benutzer zugewiesene Identität, Lese- oder Schreibberechtigung für die Datenbank |
 | Vom Benutzer zugewiesene Identität | Authentifizieren von Azure Service-zu-Service-Anforderungen | Gemeinsam genutzt für verschiedene Funktionen und Ressourcen |
 
@@ -93,16 +93,16 @@ Wenn Sie ein neues Projekt erstellen, können Sie alle Azure-Ressourcen verwende
 | API-Verwaltungs-OAuth-Server | Ermöglicht Microsoft Power Platform den Zugriff auf Ihre in der Funktions-App gehosteten APIs. |
 | Vom Benutzer zugewiesene Identität | Authentifizieren von Azure Service-zu-Service-Anforderungen |
 
-### <a name="resources-created-when-including-azure-key-vault-in-the-project"></a>Ressourcen, die erstellt werden, wenn Azure Key Vault in das Projekt eingeschlossen wird
+### <a name="resources-created-when-including-azure-key-vault-in-the-project"></a>Ressourcen, die erstellt werden, wenn Azure Key Vault in das Projekt eingeschlossen werden
 
 |Ressourcen|Zweck dieser Ressource|
 |----------|--------------------------------|
-| Azure Key Vault Service | Verwalten von geheimen Schlüsseln (z. B. Azure AD geheimen App-Clientschlüssel), die von anderen Azure-Diensten verwendet werden |
+| Azure Key Vault-Dienst | Verwalten von geheimen Schlüsseln (z. B. Azure AD geheimen App-Clientschlüssel), die von anderen Azure-Diensten verwendet werden |
 | Benutzer zugewiesene Identität | Authentifizieren von Azure Service-zu-Service-Anforderungen |
 
 ## <a name="customize-resource-provision"></a>Anpassen der Ressourcenbereitstellung
 
-mit Teams Toolkit können Sie eine Infrastruktur als Codeansatz verwenden, um zu definieren, welche Azure-Ressourcen Sie bereitstellen und wie Sie sie konfigurieren möchten. Das Tool verwendet die ARM-Vorlage, um Azure-Ressourcen zu definieren. Bei der ARM-Vorlage handelt es sich um eine Reihe von Biicep-Dateien, die die Infrastruktur und Konfiguration für Ihr Projekt definieren. Sie können Azure-Ressourcen anpassen, indem Sie die ARM-Vorlage ändern. Weitere Informationen finden Sie im [Biicep-Dokument](/azure/azure-resource-manager/bicep.md).
+mit Teams Toolkit können Sie eine Infrastruktur als Codeansatz verwenden, um zu definieren, welche Azure-Ressourcen Sie bereitstellen und wie Sie sie konfigurieren möchten. Das Tool verwendet die ARM-Vorlage, um Azure-Ressourcen zu definieren. Bei der ARM-Vorlage handelt es sich um eine Reihe von Biicep-Dateien, die die Infrastruktur und Konfiguration für Ihr Projekt definieren. Sie können Azure-Ressourcen anpassen, indem Sie die ARM-Vorlage ändern. Weitere Informationen finden Sie im [Biicep-Dokument](/azure/azure-resource-manager/bicep).
 
 Die Bereitstellung mit ARM umfasst das Ändern der folgenden Sätze von Dateien, Parametern und Vorlagen:
 
@@ -148,16 +148,16 @@ Die folgende Tabelle enthält eine Liste der verfügbaren vordefinierten Paramet
 | botDisplayName | ${resourceBaseName} | Anzeigename Ihres Bots | 1 bis 42 Zeichen |
 | botServerfarmsName | ${resourceBaseName}-Bot | Name des App-Serviceplans des Bots | 1-40 Alphanumerics und Bindestriche |
 | botWebAppName | ${resourceBaseName}-Bot | Name der Web-App des Bots | 2-60 Alphanumerics und Bindestriche <br /> Kann nicht mit Bindestrich beginnen oder enden |
-| botWebAppSKU | F1 | SKU des Bot-App-Serviceplans | Nicht zutreffend |
+| botWebAppSKU | F1 | SKU des Bot-App Service-Plans | Nicht zutreffend |
 | userAssignedIdentityName | ${resourceBaseName} | Name der vom Benutzer zugewiesenen Identität | 3-128 Alphanumerics, Bindestriche und Unterstriche <br /> Mit Buchstabe oder Zahl beginnen |
-| sqlServerName | ${resourceBaseName} | Name des Azure SQL-Servers | 1 bis 63 Kleinbuchstaben, Zahlen und Bindestriche <br /> Kann nicht mit Bindestrich beginnen oder enden |
-| sqlDatabaseName | ${resourceBaseName} | Name der Azure SQL-Datenbank | 1 bis 128 Zeichen, kann <>*%&:\/? oder Steuerelementzeichen <br /> Kann nicht mit Punkt oder Leerzeichen enden |
+| sqlServerName | ${resourceBaseName} | Name Azure SQL Servers | 1 bis 63 Kleinbuchstaben, Zahlen und Bindestriche <br /> Kann nicht mit Bindestrich beginnen oder enden |
+| sqlDatabaseName | ${resourceBaseName} | Name der Azure SQL Datenbank | 1 bis 128 Zeichen, kann <>*%&:\/? oder Steuerelementzeichen <br /> Kann nicht mit Punkt oder Leerzeichen enden |
 | sqlDatabaseSku | Standard | SKU der Azure SQL-Datenbank | Nicht zutreffend  |
 | apimServiceName | ${resourceBaseName} | Name des APIM-Diensts | 1-50 Alphanumerics und Bindestriche <br /> Mit Buchstaben beginnen und mit Alphanumerisch enden |
 | apimServiceSku | Verbrauch | SKU des APIM-Diensts | [Verfügbare SKUs](/azure/templates/microsoft.apimanagement/service?tabs=bicep) |
 | apimProductName | ${resourceBaseName} | Name des APIM-Produkts | 1-80 Alphanumerics und Bindestriche <br /> Mit Buchstaben beginnen und mit Alphanumerisch enden |
 | apimOauthServerName | ${resourceBaseName} | Name des APIM-OAuth-Servers | 1-80 Alphanumerics und Bindestriche <br /> Mit Buchstaben beginnen und mit Alphanumerisch enden |
-| keyVaultSkuName | Standard | SKU-Name des Azure Key Vault Service| |
+| keyVaultSkuName | Standard | SKU-Name des Azure Key Vault-Diensts| |
 
 In der Zwischenzeit sind die folgenden Parameter mit Werten verfügbar, die während der Bereitstellung aufgefüllt werden. Der Zweck dieser Platzhalter besteht darin, sicherzustellen, dass wir neue Ressourcen für Sie in einer neuen Umgebung erstellen können. Die tatsächlichen Werte werden von `.fx/states/state.{env}.json`aufgelöst.
 
@@ -178,8 +178,8 @@ In der Zwischenzeit sind die folgenden Parameter mit Werten verfügbar, die wäh
 
 | Parametername | Platzhalter für Standardwerte | Bedeutung des Platzhalters | Anpassen |
 | --- | --- | --- | --- |
-| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Azure SQL Server Administratorkonto, das Sie während der Bereitstellung bereitgestellt haben | Löschen des Platzhalters und Ausfüllen des tatsächlichen Werts |
-| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Azure SQL Server Administratorkennwort, das Sie während der Bereitstellung angegeben haben | Löschen des Platzhalters und Ausfüllen des tatsächlichen Werts |
+| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Azure SQL Serveradministratorkonto, das Sie während der Bereitstellung bereitgestellt haben | Löschen des Platzhalters und Ausfüllen des tatsächlichen Werts |
+| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Azure SQL Serveradministratorkennwort, das Sie während der Bereitstellung angegeben haben | Löschen des Platzhalters und Ausfüllen des tatsächlichen Werts |
 | apimPublisherEmail | {{state.fx-resource-apim.publisherEmail}} | DIE HERAUSGEBER-E-Mail von APIM. Der Standardwert ist Ihr Azure-Konto. | Löschen des Platzhalters und Ausfüllen des tatsächlichen Werts |
 | apimPublisherName | {{state.fx-resource-apim.publisherName}} | Der Herausgebername von APIM. Der Standardwert ist Ihr Azure-Konto. | Löschen des Platzhalters und Ausfüllen des tatsächlichen Werts |
 
@@ -362,7 +362,7 @@ Sie können die [Bereitstellung SharePoint-basierten App](/microsoftteams/platfo
 
 </details>
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Bereitstellen der Teams-App in der Cloud](deploy.md)
 * [Verwalten mehrerer Umgebungen](TeamsFx-multi-env.md)

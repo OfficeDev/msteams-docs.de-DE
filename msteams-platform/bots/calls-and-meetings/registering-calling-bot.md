@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanrufbot für Microso
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Aufrufen von Bot-Audio-/Video-Audiovideomedien
-ms.openlocfilehash: d449ac242cde4432348f9fa5108206df55daee1c
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 1a90e430ba0c5bc4ae1ab246baa85a5d33507a43
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727565"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590766"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
 
@@ -84,7 +84,7 @@ Sie müssen die Anwendungsberechtigungen für Ihren Bot im Voraus mithilfe des [
 
 Bei Apps, die den Azure AD V1-Endpunkt verwenden, kann ein Mandantenadministrator den Anwendungsberechtigungen über das [Microsoft Azure-Portal](https://portal.azure.com) zustimmen, wenn Ihre App in ihrer Organisation installiert wird. Alternativ können Sie eine Anmeldeumgebung in Ihrer App bereitstellen, über die Administratoren den von Ihnen konfigurierten Berechtigungen zustimmen können. Nachdem die Administratorzustimmung von Azure AD aufgezeichnet wurde, kann Ihre App Token anfordern, ohne erneut die Zustimmung anfordern zu müssen.
 
-Sie können sich darauf verlassen, dass ein Administrator die Berechtigungen erteilt, die Ihre App im [Microsoft Azure-Portal](https://portal.azure.com) benötigt. Eine bessere Option ist die Bereitstellung einer Anmeldeumgebung für Administratoren mithilfe des Azure AD V2-Endpunkts`/adminconsent`. Weitere Informationen finden Sie in [den Anweisungen zum Erstellen einer ADMINISTRATORzustimmungs-URL](/graph/uth-v2-service#3-get-administrator-consent).
+Sie können sich darauf verlassen, dass ein Administrator die Berechtigungen erteilt, die Ihre App im [Microsoft Azure-Portal](https://portal.azure.com) benötigt. Eine bessere Option ist die Bereitstellung einer Anmeldeumgebung für Administratoren mithilfe des Azure AD V2-Endpunkts`/adminconsent`. Weitere Informationen finden Sie in [den Anweisungen zum Erstellen einer ADMINISTRATORzustimmungs-URL](/graph/auth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
 > Zum Erstellen der Mandanten-Administratorzustimmungs-URL ist ein konfigurierter Umleitungs-URI oder eine Antwort-URL im [App-Registrierungsportal](https://apps.dev.microsoft.com/) erforderlich. Um Antwort-URLs für Ihren Bot hinzuzufügen, greifen Sie auf Ihre Bot-Registrierung zu, und wählen Sie **"Erweiterte** **OptionenEdit-Anwendungsmanifest** > " aus. Fügen Sie die Umleitungs-URL zur `replyUrls` Sammlung hinzu.
@@ -107,7 +107,8 @@ Befolgen Sie die [schrittweise Anleitung](../../sbs-calling-and-meeting.yml) zum
 > [!div class="nextstepaction"]
 > [Eingehende Anrufbenachrichtigungen](~/bots/calls-and-meetings/call-notifications.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Eingehende Anrufbenachrichtigungen](~/bots/calls-and-meetings/call-notifications.md)
 * [Entwickeln von Anruf- und Onlinebesprechungs-Bots auf Ihrem lokalen PC](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
+* [Anzeigen der App-Berechtigung und Erteilen der Administratorzustimmung](/MicrosoftTeams/app-permissions-admin-center)

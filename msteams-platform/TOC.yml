@@ -21,7 +21,7 @@
     - name: Übersicht über die ersten Schritte
       href: get-started/get-started-overview.md
     - name: Erstellen Ihrer ersten App mit Blazor
-      href: sbs-gs-blazorapp.yml
+      href: sbs-gs-blazorupdate.yml
     - name: Erstellen Ihrer ersten App mit JavaScript
       href: sbs-gs-javascript.yml
     - name: Erstellen Ihrer ersten App mit SPFx
@@ -139,7 +139,7 @@
     - name: .NET Bot Framework für Bots und Messaging-Erweiterungen (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
     - name: Microsoft Graph-SDKs
-      href: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
+      href: /graph/sdks/sdks-overview
     - name: Veraltete SDKs
       items:
         - name: Bots-SDK (v3)
@@ -398,11 +398,11 @@
 - name: Nutzung von Microsoft Teams-Daten mit Microsoft Graph
   items:
     - name: Übersicht
-      href: 'https://docs.microsoft.com/graph/teams-concept-overview'
+      href: /graph/teams-concept-overview
     - name: Microsoft Graph-Toolkit
-      href: 'https://docs.microsoft.com/graph/toolkit/overview'
+      href: /graph/toolkit/overview
     - name: Erste Schritte
-      href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
+      href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
     - name: Ressourcenspezifische Zustimmung
       href: graph-api/rsc/resource-specific-consent.md
     - name: Proaktive Installation von Apps über die Graph-API zum Senden von Nachrichten

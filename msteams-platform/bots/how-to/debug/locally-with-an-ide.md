@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über das lokale Testen und Debuggen Ihres Bots m
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: db4b9143dfbaa8dbbb3a5aa965836d151ad8cd46
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 0085d38ef2dafc4708772222fb9b173a12afedd7
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453369"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590703"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Testen und debuggen Sie Ihren Bot lokal
 
@@ -27,7 +27,7 @@ Es gibt zwei Methoden zum Hochladen Ihrer App:
 
 > [!NOTE]
 > Um das Manifest zu ändern und Ihre App erneut hochzuladen, [löschen Sie den Bot](#delete-a-bot-from-teams) , bevor Sie das geänderte App-Paket hochladen.
-> Um den Bot zu testen, aktivieren Sie das Querladen in Teams. Siehe [Aktivieren des Querladens](/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+> Um den Bot zu testen, aktivieren Sie das Querladen in Teams. Siehe [Aktivieren des Querladens](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 ## <a name="debug-your-bot-locally"></a>Lokal Debuggen des Bots
 
@@ -98,7 +98,7 @@ Um zu verhindern, dass Ihr Bot Nachrichten empfängt, wechseln Sie zu Ihrem **Bo
 
 Um Ihren Bot vollständig aus Teams zu entfernen, wechseln Sie zu Ihrem **Bot-Dashboard**, und bearbeiten Sie den Microsoft Teams Kanal. Klicken Sie unten auf die Schaltfläche " **Löschen** ". Dadurch wird verhindert, dass Benutzer Ihren Bot entdecken, hinzufügen und mit diesem interagieren. Dadurch wird der Bot nicht aus den Teams Instanzen anderer Benutzer entfernt, es funktioniert jedoch auch nicht mehr für ihn.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Bot mit Inspektions-Middleware debuggen](/azure/bot-service/bot-service-debug-inspection-middleware)
 * [Anruf- und Besprechungsbot lokal debuggen](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

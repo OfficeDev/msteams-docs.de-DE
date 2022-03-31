@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie eine Microsoft Teams Messaging-Erweiterung mi
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: cf4d2efae2c5628ad32beadbc61174ea2bb037a8
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 0dc7e8798301e57cc55814938e3311173ad82ce3
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452907"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590682"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Eine Messaging-Erweiterung mit App Studio erstellen
 
@@ -42,7 +42,7 @@ Das Herzstück Ihrer Messaging-Erweiterung ist Ihr Webdienst. Es wird eine einze
 
 ## <a name="register-your-web-service-with-the-bot-framework"></a>Registrieren Ihres Webdiensts bei Bot Framework
 
-Messaging-Erweiterungen nutzen das Messaging-Schema und das sichere Kommunikationsprotokoll des Bot-Frameworks. Wenn Sie noch nicht über einen verfügen, müssen Sie Ihren Webdienst im Bot Framework registrieren. Die Microsoft App-ID (wir bezeichnen dies als Ihre Bot-ID innerhalb von Teams, um sie anhand anderer App-IDs zu identifizieren, mit denen Sie möglicherweise arbeiten), und der Messaging-Endpunkt, mit dem Sie sich beim Bot Framework registrieren, wird in Ihrer Messaging-Erweiterung verwendet, um Anforderungen zu empfangen und darauf zu reagieren. Wenn Sie eine vorhandene Registrierung verwenden, stellen Sie sicher, dass Sie [den Microsoft Teams Kanal aktivieren](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0).
+Messaging-Erweiterungen nutzen das Messaging-Schema und das sichere Kommunikationsprotokoll des Bot-Frameworks. Wenn Sie noch nicht über einen verfügen, müssen Sie Ihren Webdienst im Bot Framework registrieren. Die Microsoft App-ID (wir bezeichnen dies als Ihre Bot-ID innerhalb von Teams, um sie anhand anderer App-IDs zu identifizieren, mit denen Sie möglicherweise arbeiten), und der Messaging-Endpunkt, mit dem Sie sich beim Bot Framework registrieren, wird in Ihrer Messaging-Erweiterung verwendet, um Anforderungen zu empfangen und darauf zu reagieren. Wenn Sie eine vorhandene Registrierung verwenden, stellen Sie sicher, dass Sie [den Microsoft Teams Kanal aktivieren](/azure/bot-service/bot-service-manage-channels?preserve-view=true&view=azure-bot-service-4.0).
 
 Wenn Sie eine der Schnellstarts befolgen oder mit einem der verfügbaren Beispiele beginnen, werden Sie durch die Registrierung Ihres Webdiensts geführt. Wenn Sie Ihren Dienst manuell registrieren möchten, haben Sie drei Möglichkeiten, dies zu tun. Wenn Sie sich für die Registrierung entscheiden, ohne ein Azure-Abonnement zu verwenden, können Sie den vereinfachten OAuth-Authentifizierungsfluss des Bot Frameworks nicht nutzen. Sie können Ihre Registrierung nach der Erstellung zu Azure migrieren.
 

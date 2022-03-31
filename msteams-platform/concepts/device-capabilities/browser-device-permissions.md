@@ -4,18 +4,14 @@ keywords: Berechtigungen für Teams-Apps-Funktionen
 description: Sicheres Zurücksetzen der Geräteberechtigungsunterstützung für Apps in unserem Webclient
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: 2b1d00a6bd0059df042dacedb043d89c73a972f9
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 02a3602f17923506cba6aa6e83548595aac60852
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453005"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571474"
 ---
 # <a name="device-permissions-for-the-browser"></a>Geräteberechtigungen für den Browser
-
-> [!NOTE]
-> Das neueste Update zur Behandlung von Geräteberechtigungen im Browser ist derzeit nur in der [öffentlichen Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md) verfügbar.
-> Dieses Update ist ab dem 1. Februar 2022 allgemein verfügbar und wird Ende Februar bereitgestellt.
 
 Teams App, für die Geräteberechtigungen erforderlich sind, z. B. Kamera- oder Mikrofonzugriff, müssen Benutzer jetzt manuell Berechtigungen pro App-Ebene im Webbrowser erteilen. Zuvor hat der Browser behandelt, wie Zugriffsberechtigungen erteilt werden, aber jetzt werden diese Berechtigungen in Microsoft Teams behandelt. Dies hat Auswirkungen auf die Art und Weise, wie Sie Ihre Anwendung entwerfen und ob sie diese Berechtigungen im Browser benötigen.
 
@@ -52,7 +48,7 @@ Teams App, die Geräteberechtigungen im Browser benötigt, muss Den Benutzern An
 
 Befolgen Sie die [schrittweise Anleitung](../../sbs-tab-device-permissions.yml), um registerkartengeräteberechtigungen in Microsoft Teams zu erteilen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Übersicht über die Gerätefunktionen](device-capabilities-overview.md)
 * [Geräteberechtigungen anfordern](native-device-permissions.md)

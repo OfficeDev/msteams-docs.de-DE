@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 829adc0d066b10ef9bce74c91abce27f3f7b061c
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: 376d12b1fce2352ebfd92312c3154806b9bda5e2
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464817"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590759"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Erweitern einer Teams persönlichen Registerkarte über Microsoft 365
 
@@ -54,7 +54,7 @@ Zum Abschließen dieses Lernprogramms benötigen Sie Folgendes:
 
 Wenn Sie über eine vorhandene persönliche Registerkarten-App verfügen, erstellen Sie eine Kopie oder einen Zweig Ihres Produktionsprojekts zum Testen, und aktualisieren Sie Ihre App-ID im App-Manifest, um einen neuen Bezeichner zu verwenden (der sich von der Produktions-App-ID unterscheidet).
 
-Wenn Sie beispielcode verwenden möchten, um dieses Lernprogramm abzuschließen, führen Sie die Setupschritte in "[Erste Schritte mit Todo-Listenbeispiel](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend)" aus, um eine persönliche Registerkarten-App mithilfe der Teams Toolkit-Erweiterung für Visual Studio Code zu erstellen. Sie können auch mit dem gleichen [Todo-Listenbeispiel beginnen, das für TeamsJS SDK v2 Preview aktualisiert wurde](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365), und mit [der Vorschau Ihrer persönlichen Registerkarte in anderen Microsoft 365 Fortfahren](#preview-your-personal-tab-in-other-microsoft-365-experiences). Das aktualisierte Beispiel ist auch in Teams Toolkit-Erweiterung verfügbar: *DevelopmentView* >  **samplesTodo List (Funktioniert in Teams, Outlook und Office)**. > 
+Wenn Sie beispielcode verwenden möchten, um dieses Lernprogramm abzuschließen, führen Sie die Setupschritte in [Erste Schritte mit Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) aus, um eine persönliche Registerkarten-App mithilfe der Teams Toolkit-Erweiterung für Visual Studio Code zu erstellen. Sie können auch mit dem gleichen [Todo-Listenbeispiel beginnen, das für TeamsJS SDK v2 Preview aktualisiert wurde](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365), und mit [der Vorschau Ihrer persönlichen Registerkarte in anderen Microsoft 365 Fortfahren](#preview-your-personal-tab-in-other-microsoft-365-experiences). Das aktualisierte Beispiel ist auch in Teams Toolkit-Erweiterung verfügbar: *DevelopmentView* >  **samplesTodo List (Funktioniert in Teams, Outlook und Office)**. > 
 
 :::image type="content" source="images/toolkit-todo-sample.png" alt-text="Todo List-Beispiel (Funktioniert in Teams, Outlook und Office) in Teams Toolkit":::
 
@@ -125,14 +125,14 @@ Wenn Ihre App CSP-Header ( [Content Security Policy](https://developer.mozilla.o
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>Aktualisieren Azure AD App-Registrierung für SSO
 
-Azure Active Directory Einmaliges Anmelden (Single Sign On, SSO) für persönliche Registerkarten funktioniert in Office und Outlook auf die gleiche Weise [wie in Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso). Sie müssen jedoch der Azure AD App-Registrierung Ihrer Registerkarten-App im *App-Registrierungsportal* Ihres Mandanten mehrere Clientanwendungs-IDs hinzufügen.
+Azure Active Directory einmaliges Anmelden (Single Sign On, SSO) für persönliche Registerkarten funktioniert auf die gleiche Weise in Office und Outlook [wie in Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso). Sie müssen jedoch der Azure AD App-Registrierung Ihrer Registerkarten-App in der App Ihres Mandanten mehrere Clientanwendungs-IDs *hinzufügen. App-Registrierungen* Portal.
 
 1. Melden Sie sich mit Ihrem Sandkastenmandantenkonto bei [Microsoft Azure Portal](https://portal.azure.com) an.
-1. Öffnen Sie das Blatt " **App-Registrierungen** ".
+1. Öffnen **Sie das Blatt App-Registrierungen**.
 1. Wählen Sie den Namen Ihrer persönlichen Registerkartenanwendung aus, um die App-Registrierung zu öffnen.
 1. Wählen Sie  **"API verfügbar machen** " (unter *"Verwalten*") aus.
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorisieren von Client-IDs aus dem Blatt &quot;*App-Registrierungen*&quot; im Azure-Portal":::
+:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorisieren von Client-IDs aus dem Blatt *App-Registrierungen* auf Azure-Portal":::
 
 Stellen Sie im Abschnitt **"Autorisierte Clientanwendungen** " sicher, dass alle folgenden `Client Id` Werte hinzugefügt werden:
 
@@ -173,9 +173,9 @@ Sie können die App für den Schnellzugriff anheften, oder Sie finden Ihre App i
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>Anzeigen einer Vorschau Ihrer persönlichen Registerkarte in anderen Microsoft 365-Umgebungen
 
-Wenn Sie Ihre Teams persönliche Registerkarte aktualisieren und in Teams querladen, wird sie auch in Outlook Desktop- und Webclients und Office im Web (office.com) ausgeführt. Hier erfahren Sie, wie Sie eine Vorschau dieser Microsoft 365-Umgebungen anzeigen.
+Wenn Sie Ihre Teams persönliche Registerkarte aktualisieren und in Teams querladen, wird sie in Outlook auf Windows, im Web Office auf Windows und im Web (office.com) ausgeführt. Hier erfahren Sie, wie Sie eine Vorschau dieser Microsoft 365-Umgebungen anzeigen.
 
-### <a name="outlook"></a>Outlook
+### <a name="outlook-on-windows"></a>Outlook unter Windows
 
 So zeigen Sie Ihre App an, die in Outlook auf Windows Desktop ausgeführt wird:
 
@@ -195,7 +195,7 @@ So zeigen Sie Ihre App in Outlook im Web an:
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste von outlook.com auf die Option &quot;Weitere Apps&quot;, um die installierten persönlichen Registerkarten anzuzeigen.":::
 
-### <a name="office"></a>Büro
+### <a name="office-on-windows"></a>Office unter Windows
 
 So zeigen Sie Ihre App an, die in Office auf Windows Desktop ausgeführt wird:
 

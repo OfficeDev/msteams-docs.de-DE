@@ -5,12 +5,12 @@ keywords: Erste Schritte für Entwicklerportal-Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: c6c5ea448d8b1f793b2aa881c62325a1016f4508
-ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
+ms.openlocfilehash: 03fd1f75363f303a33a8349f88e13e3444316fc3
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64511234"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464782"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Verwalten Ihrer Apps mit dem Entwicklerportal für Microsoft Teams
 
@@ -19,9 +19,7 @@ Das <a href="https://dev.teams.microsoft.com" target="_blank">Entwicklerportal f
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot der Startseite des Entwicklerportals für Teams.":::
 
 > [!NOTE]
->
-> * Derzeit ist das Entwicklerportal nicht für Government Community Cloud (GCC), GCC-High- oder DOD-Mandanten (Department of Defense) verfügbar.
-> * Sie können jedoch einen regulären Mandanten verwenden, um eine App im Entwicklerportal zu erstellen, die App herunterzuladen und die App [mithilfe von Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) in eine nationale Cloud hochzuladen. Weitere Informationen finden Sie unter ["Nationale Cloudbereitstellungen"](/graph/deployments).
+> Derzeit ist das Entwicklerportal nicht für Government Community Cloud (GCC), GCC-High- oder DOD-Mandanten (Department of Defense) verfügbar.
 
 ## <a name="register-an-app"></a>Registrieren einer App
 

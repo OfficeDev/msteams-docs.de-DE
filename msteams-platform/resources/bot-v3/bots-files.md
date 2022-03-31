@@ -1,16 +1,16 @@
 ---
 title: Senden und Empfangen von Dateien von einem Bot
-description: Beschreibt, wie Dateien von einem Bot gesendet und empfangen werden
+description: Erfahren Sie, wie Sie Dateien über den Bot mit Graph-APIs für persönliche, Kanal- und Gruppenchatbereiche senden und empfangen. Verwenden Sie Teams Bot-APIs mit Codebeispielen, die auf dem v3 Bot Framework SDK basieren.
 keywords: Teams-Bots senden Empfangen von Dateien
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 7bf1d63ae5a77b8240719f7a123a34a8556a2391
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: c95ddbc4bfe0d491f48101b12d8658f7714c0075
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156613"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590752"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>Senden und Empfangen von Dateien über Ihren Bot
 
@@ -27,12 +27,12 @@ Es gibt zwei Möglichkeiten, Dateien an und von einem Bot zu senden:
 
 ## <a name="using-the-microsoft-graph-apis"></a>Verwenden der Microsoft Graph-APIs
 
-Sie können Nachrichten mit Kartenanlagen veröffentlichen, die auf vorhandene SharePoint Dateien verweisen, indem Sie die Microsoft Graph-APIs für [OneDrive und SharePoint](/onedrive/developer/rest-api/)verwenden. Die Verwendung der Graph APIs erfordert den Zugriff auf den OneDrive Ordner eines Benutzers (für `personal` und `groupchat` Dateien) oder die Dateien in den Kanälen eines Teams (für `channel` Dateien) über den standardmäßigen OAuth 2.0-Autorisierungsfluss. Diese Methode funktioniert in allen Teams Bereichen.
+Sie können Nachrichten mit Kartenanlagen veröffentlichen, die auf vorhandene SharePoint Dateien verweisen, indem Sie die Microsoft Graph-APIs für [OneDrive und SharePoint](/onedrive/developer/rest-api/) verwenden. Die Verwendung der Graph APIs erfordert den Zugriff auf den OneDrive Ordner eines Benutzers (für `personal` und `groupchat` Dateien) oder die Dateien in den Kanälen eines Teams (für `channel` Dateien) über den standardmäßigen OAuth 2.0-Autorisierungsfluss. Diese Methode funktioniert in allen Teams Bereichen.
 
-## <a name="using-the-teams-bot-apis"></a>Verwenden der Teams Bot-APIs
+## <a name="using-the-teams-bot-apis"></a>Verwenden der Teams-Bot-APIs
 
 > [!NOTE]
-> Diese Methode funktioniert nur im `personal` Kontext. Es funktioniert nicht im `channel` `groupchat` Oder Kontext.
+> Diese Methode funktioniert nur im `personal` Kontext. Es funktioniert nicht im `channel` Oder `groupchat` Kontext.
 
 Ihr Bot kann Dateien mit Benutzern im `personal` Kontext, auch als persönliche Chats bezeichnet, mit Teams APIs direkt senden und empfangen. Auf diese Weise können Sie Spesenabrechnung, Bilderkennung, Dateiarchivierung, E-Signaturen und andere Szenarien implementieren, die eine direkte Manipulation von Dateiinhalten betreffen. In Teams freigegebene Dateien werden in der Regel als Karten angezeigt und ermöglichen eine umfassende In-App-Anzeige.
 
@@ -40,9 +40,9 @@ In den folgenden Abschnitten wird beschrieben, wie Sie dies tun können, um Date
 
 ### <a name="configure-your-bot-to-support-files"></a>Konfigurieren Ihres Bots zur Unterstützung von Dateien
 
-Um Dateien in Ihrem Bot zu senden und zu empfangen, müssen Sie die `supportsFiles` Eigenschaft im Manifest auf `true` . Diese Eigenschaft wird im [Bots-Abschnitt](~/resources/schema/manifest-schema.md#bots) der Manifestreferenz beschrieben.
+Um Dateien in Ihrem Bot zu senden und zu empfangen, müssen Sie die `supportsFiles` Eigenschaft im Manifest auf `true`. Diese Eigenschaft wird im [Bots-Abschnitt](~/resources/schema/manifest-schema.md#bots) der Manifestreferenz beschrieben.
 
-Die Definition sieht wie folgt aus: `"supportsFiles": true` . Wenn Ihr Bot nicht aktiviert `supportsFiles` ist, funktionieren die folgenden Features nicht.
+Die Definition sieht wie folgt aus: `"supportsFiles": true`. Wenn Ihr Bot nicht aktiviert `supportsFiles`ist, funktionieren die folgenden Features nicht.
 
 ### <a name="receiving-files-in-personal-chat"></a>Empfangen von Dateien im persönlichen Chat
 
@@ -117,13 +117,13 @@ In der folgenden Tabelle werden die Inhaltseigenschaften der Anlage beschrieben:
 | Eigenschaft | Zweck |
 | --- | --- |
 | `description` | Beschreibung der Datei. Kann dem Benutzer angezeigt werden, um seinen Zweck zu beschreiben oder seinen Inhalt zusammenzufassen. |
-| `sizeInBytes` | Stellt dem Benutzer eine Schätzung der Dateigröße und des Speicherplatzes bereit, den er in OneDrive benötigt. |
+| `sizeInBytes` | Stellt dem Benutzer eine Schätzung der Dateigröße und des Speicherplatzes bereit, der in OneDrive benötigt wird. |
 | `acceptContext` | Zusätzlicher Kontext, der automatisch an Ihren Bot übertragen wird, wenn der Benutzer die Datei akzeptiert. |
 | `declineContext` | Zusätzlicher Kontext, der im Hintergrund an Ihren Bot übertragen wird, wenn der Benutzer die Datei ablehnt. |
 
 #### <a name="invoke-activity-when-the-user-accepts-the-file"></a>Aktivität aufrufen, wenn der Benutzer die Datei akzeptiert
 
-Wenn und wann der Benutzer die Datei akzeptiert, wird eine Aufrufaktivität an Ihren Bot gesendet. Es enthält die OneDrive for Business Platzhalter-URL, in die Ihr Bot dann eine ausstellen `PUT` kann, um den Dateiinhalt zu übertragen. Informationen zum Hochladen in die OneDrive-URL finden Sie in diesem Artikel: [Hochladen Bytes zur Uploadsitzung.](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session)
+Wenn und wann der Benutzer die Datei akzeptiert, wird eine Aufrufaktivität an Ihren Bot gesendet. Es enthält die OneDrive for Business Platzhalter-URL, in die Ihr Bot dann eine `PUT` ausstellen kann, um den Dateiinhalt zu übertragen. Informationen zum Hochladen in die OneDrive-URL finden Sie in diesem Artikel: [Hochladen Bytes zur Uploadsitzung](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
 Das folgende Beispiel zeigt eine gekürzte Version der Aufrufaktivität, die Ihr Bot empfängt:
 

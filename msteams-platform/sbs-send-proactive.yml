@@ -2,7 +2,7 @@
 title: Proaktive Nachrichten senden
 metadata:
   title: Proaktive Nachrichten senden
-  description: In diesem Szenario erfahren Sie, wie Sie proaktive Nachrichten senden.
+  description: In diesem Modul erfahren Sie, wie Sie proaktive Nachrichten senden, z. B. Begrüßungsnachrichten, geplante Nachrichten und Benachrichtigungen von einem Bot
   audience: Developer
   level: Beginner
   ms.date: 06/23/2021
@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Weitere Informationen zu proaktiven Nachrichten
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 0a89892df09816785a3848db442c1573ba9f04f8
-  ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+  ms.openlocfilehash: 9738be897a0f520c137424eb8f5d062c41396f13
+  ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63674845"
+  ms.lasthandoff: 03/31/2022
+  ms.locfileid: "64571222"
 items:
 - durationInMinutes: 1
   content: "Eine proaktive Nachricht ist jede Nachricht, die von einem Bot gesendet wird, die nicht als Antwort auf eine Anforderung eines Benutzers erfolgt. Dies kann Nachrichten enthalten, wie z. B.:\n - Willkommensnachrichten\n - Benachrichtigungen\n - Geplante Nachrichten\n \nDiese schrittweise Anleitung hilft Ihnen, eine proaktive Nachricht von einem Bot zu senden. Es werden die folgenden Ausgaben angezeigt:\n\n* Proaktive Hello-Nachricht im Chat        \n![Proaktives Hallo im Chat](~/assets/images/proactive-scenario/proactive-helo.png)\n\n* Proaktive Hello-Nachricht als adaptive Karte    \n![Proaktives Hello in adaptiver Karte](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) \n"
