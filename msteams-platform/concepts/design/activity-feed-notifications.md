@@ -1,24 +1,24 @@
 ---
 title: Entwerfen von Aktivitätsfeedbenachrichtigungen
 author: heath-hamilton
-description: Erfahren Sie, wie Sie Aktivitätsfeedbenachrichtigungen für Ihre Teams-App entwerfen und das Microsoft Teams UI Kit abrufen.
+description: 'Erfahren Sie, wie Sie Aktivitätsfeedbenachrichtigungen für Ihre Teams-App entwerfen und das Teams UI Kit erhalten. Entwickeln von Benachrichtigungen aus Teams Kanal in Visual Studio C #'
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: d566def261d6fd1177fed46c31466d248c8e5e3b
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 06e6b0ed28208f9ce446a0fc037b7477a562c596
+ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719917"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64612622"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Entwerfen von Aktivitätsfeedbenachrichtigungen für Ihre Microsoft Teams-App
 
-Der Aktivitätsfeed ist eine Oberfläche, über die Benutzer auf ihre Benachrichtigungen in Microsoft Teams zugreifen können. Der Feed behält Benachrichtigungen aus den letzten vier Wochen bei.
+Der Aktivitätsfeed ist eine Oberfläche, auf der Benutzer auf ihre Benachrichtigungen in Microsoft Teams zugreifen können. Der Feed behält Benachrichtigungen aus den letzten vier Wochen bei.
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
-:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="Beispiel zeigt eine App-Benachrichtigung, die im Teams Aktivitätsfeed auf mobilgeräten angezeigt wird." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="Beispiel zeigt eine App-Benachrichtigung, die im Teams-Aktivitätsfeed auf mobilgeräten angezeigt wird." border="false":::
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
@@ -33,9 +33,9 @@ Der Aktivitätsfeed ist eine Oberfläche, über die Benutzer auf ihre Benachrich
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
 |1|**Avatar**: Zeigt an, wer die Aktivität initiiert hat.|
-|2|**Aktivitätstyp/App-Symbol:** Stellt den Aktivitätstyp dar. Bei App-Benachrichtigungen wird das Liniensymbol durch ein App-Symbol ersetzt.|
-|3|**Titel (erste Zeile): Akteur + Grund:** *Akteur:* Name des Benutzers oder der App, der die Aktivität initiiert hat. *Grund:* Beschreibt die Aktivität.|
-|4 |**Zeitstempel:** Zeigt an, wann die Aktivität stattgefunden hat.|
+|2|**Aktivitätstyp/App-Symbol**: Stellt den Aktivitätstyp dar. Bei App-Benachrichtigungen wird das Liniensymbol durch ein App-Symbol ersetzt.|
+|3|**Titel (erste Zeile): Akteur + Grund**: *Akteur*: Name des Benutzers oder der App, der die Aktivität initiiert hat. *Grund*: Beschreibt die Aktivität.|
+|4|**Zeitstempel**: Zeigt an, wann die Aktivität stattgefunden hat.|
 |5|**Ort (zweite Zeile):** Zeigt an, wo die Aktivität in Teams stattgefunden hat.|
 |6 |**Textvorschau (dritte Zeile):** Zeigt eine abgeschnittene Zeile ab dem Anfang der Benachrichtigung an.|
 

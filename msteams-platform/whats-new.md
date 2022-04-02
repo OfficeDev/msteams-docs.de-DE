@@ -4,12 +4,12 @@ description: Beschreibt alle neuen oder aktuellen Entwicklerfunktionen in Micros
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 'Teams: Was sind die neuesten Updates oder Entwicklervorschau und Features'
-ms.openlocfilehash: fe6eb9a35173ee01ef5df8857bfe92892abc3630
-ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
+ms.openlocfilehash: 334d397ac2bc0e5c08c0b1df5bf6309d5f0a57ee
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64511241"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571488"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -22,7 +22,11 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 
 | Datum | Update | Hier finden |
 | --- | --- | --- |
+|30.03.2022| Das Modul „Erste Schritte mit der Blazor-App mithilfe von Registerkarten und Bots“ wurde aktualisiert|  Erste Schritte > [Erstellen Ihrer ersten App mit Blazor](sbs-gs-blazorupdate.yml)|
+|30.03.2022|Geräteberechtigungen für den Browser | Integrieren der Gerätefunktionen > [Geräteberechtigungen für den Browser](concepts/device-capabilities/browser-device-permissions.md) |
+|29.03.2022 | Integration der Personenauswahl | Integrieren in Teams > [Integrieren der Personenauswahl](concepts/device-capabilities/people-picker-capability.md)|
 |23.03.2022| Schritt-für-Schritt-Anleitung zum Entfalten von Links in Teams mithilfe des Bots wurde eingeführt | Erstellen von Nachrichtenerweiterungen > Entfalten von Links hinzufügen > [Entfalten von Links in Teams mittels Bot](sbs-botbuilder-linkunfurling.yml)|
+|22.03.2022| „Erste Schritte mit Blazor App für Teams“ aktualisiert |  • Erste Schritte > [Erstellen Ihrer ersten App mit Blazor](sbs-gs-blazorapp.yml)|
 |22.03.2022| „Erste Schritte mit Blazor App für Teams“ aktualisiert |  Erste Schritte > [Erstellen Ihrer ersten App mit Blazor](sbs-gs-blazorapp.yml)|
 |22.03.2022| Informationen zum Debugprozess hinzugefügt| • Tools und SDKs> Teams Toolkit für Visual Studio Code > [Lokales Debuggen Ihrer Teams-App](toolkit/debug-local.md) </br> • Tools und SDKs> Teams Toolkit für Visual Studio Code > [Debug-Hintergrundprozess](toolkit/debug-background-process.md)|
 |14.03.2022| Schritt-für-Schritt-Anleitung zum Erstellen und Testen eines Connectors in Microsoft Teams wurde eingeführt | Erstellen von Webhooks und Connectors > Erstellen von Office 365-Connectors > [Erstellen von Teams-Connectors](sbs-teams-connectors.yml)|
@@ -40,7 +44,11 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
-|23.03.2022| Schritt-für-Schritt-Anleitung zum Entfalten von Links in Teams mithilfe des Bots wurde eingeführt | Erstellen von Nachrichtenerweiterungen > Entfalten von Links hinzufügen > [Entfalten von Links in Teams mittels Bot](sbs-botbuilder-linkunfurling.yml)|
+|30.03.2022| Das Modul „Erste Schritte mit der Blazor-App mithilfe von Registerkarten und Bots“ wurde aktualisiert|  Erste Schritte > [Erstellen Ihrer ersten App mit Blazor](sbs-gs-blazorupdate.yml)|
+|30.03.2022|Geräteberechtigungen für den Browser | Integrieren der Gerätefunktionen > [Geräteberechtigungen für den Browser](concepts/device-capabilities/browser-device-permissions.md) |
+|29.03.2022 |Integration der Personenauswahl | Integrieren in Teams > [Integrieren der Personenauswahl](concepts/device-capabilities/people-picker-capability.md)
+|23.03.2022| Schritt-für-Schritt-Anleitung zum Entfalten von Links in Teams mithilfe des Bots wurde eingeführt | Erstellen von Nachrichtenerweiterungen > Entfalten von Links hinzufügen > [Entfalten von Links in Teams mittels Bot](sbs-botbuilder-linkunfurling.yml)|  
+|22.03.2022| „Erste Schritte mit Blazor App für Teams“ aktualisiert|  • Erste Schritte > [Erstellen Ihrer ersten App mit Blazor](sbs-gs-blazorapp.yml)|
 |22.03.2022| „Erste Schritte mit Blazor App für Teams“ aktualisiert|  Erste Schritte > [Erstellen Ihrer ersten App mit Blazor](sbs-gs-blazorapp.yml)|
 |22.03.2022| Informationen zum Debugprozess hinzugefügt| • Tools und SDKs> Teams Toolkit für Visual Studio Code > [Lokales Debuggen Ihrer Teams-App](toolkit/debug-local.md) </br> • Tools und SDKs> Teams Toolkit für Visual Studio Code > [Debug-Hintergrundprozess](toolkit/debug-background-process.md)|
 |14.03.2022| Schritt-für-Schritt-Anleitung zum Erstellen und Testen eines Connectors in Microsoft Teams wurde eingeführt | Erstellen von Webhooks und Connectors > Erstellen von Office 365-Connectors > [Erstellen von Teams-Connectors](sbs-teams-connectors.yml)|
@@ -251,7 +259,6 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 |24.12.2021| Schrittweise Anleitung zum Erteilen von Berechtigungen für Registerkartengeräte eingeführt | App-Grundlagen > Gerätefunktionen > [Schritt-für-Schritt-Anleitung zum Erteilen von Berechtigungen für Tab-Geräte](sbs-tab-device-permissions.yml) |
 |15.11.2021| Persönliche Registerkarten und Messaging-Erweiterungen werden in Outlook und Office ausgeführt | [Erweitern von Teams-Apps auf Microsoft 365](~/m365-apps/overview.md) |
 |28.10.2021|Bots können aktiviert werden, um alle Kanalnachrichten mit ressourcenspezifischer Zustimmung (RESOURCE-Specific Consent, RSC) zu empfangen. | • Erstellen von Bots > Bot-Unterhaltungen > Nachrichten in Bot-Unterhaltungen > [Empfangen aller Nachrichten mit RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Übersicht über Bot-Unterhaltungen](~/bots/how-to/conversations/conversation-basics.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Kanal- und Gruppenunterhaltungen](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • App-Manifest > Öffentliche Entwickler-Vorschau > [Manifest-Schema für Entwickler-Vorschau](~/resources/schema/manifest-schema-dev-preview.md) |
-|19.10.2021|Geräteberechtigungen für den Browser | App-Grundlagen > Gerätefunktionen > [Geräteberechtigungen für den Browser](concepts/device-capabilities/browser-device-permissions.md) |
 |21.06.2021|Deinstallationsverhalten für eine persönliche App mit Bot | Erstellen von Bots > Bot-Unterhaltungen > [Verhaltensaktualisierungen in persönlichen Apps mit Bots deinstallieren](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |16.06.2021| Ressourcenspezifische Zustimmung für Chats | • Verwenden von Teams-Daten mit Microsoft Graph > [Ressourcenspezifische Zustimmung](graph-api/rsc/resource-specific-consent.md) </br> • Testen Ihrer App > Microsoft Graph > [Testen ressourcenspezifischer Genehmigungen in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 

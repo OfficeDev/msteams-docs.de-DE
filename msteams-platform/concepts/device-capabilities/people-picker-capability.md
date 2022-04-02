@@ -1,62 +1,75 @@
 ---
 title: Integration der Personenauswahl
-author: Rajeshwari-v
-description: So verwenden Sie Teams JavaScript-Client-SDK zum Integrieren des Personenauswahl-Steuerelements
-keywords: Personenauswahl-Steuerelement
+description: Verwenden des Microsoft Teams JavaScript-Client-SDK zum Integrieren Personenauswahl Steuerelements
+keywords: Steuerelement „Personenauswahl“
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: b12cda18e8144c64e7b533af63f8a49283fff593
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: cd7039693b146abb53e938ba020077a48c343bda
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452998"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571459"
 ---
-# <a name="integrate-people-picker"></a>Integration der Personenauswahl  
+# <a name="integrate-people-picker"></a>Integration der Personenauswahl
 
-Die Personenauswahl ist ein Steuerelement zum Suchen und Auswählen von Personen. Dies ist eine systemeigene Funktion, die in Teams Plattform verfügbar ist. Sie können Teams systemeigene Personenauswahl-Eingabesteuerelement in Ihre Web-Apps integrieren. Sie können zwischen einzelner oder mehrfacher Auswahl und Konfigurationen auswählen, z. B. das Einschränken der Suche in einem Chat, in Kanälen oder in der gesamten Organisation.
+Die Personenauswahl ist ein Eingabesteuerelement in Microsoft Teams, mit dem Benutzer Personen suchen und auswählen können. Sie können die Personenauswahl in eine Web-App integrieren, sodass Endbenutzer verschiedene Funktionen ausführen können, z. B. Personen in einem Chat, Kanal oder in der gesamten Organisation innerhalb Microsoft Teams suchen und auswählen. Das Personenauswahl-Steuerelement ist für alle Microsoft Teams-Clients verfügbar, z. B. Web, Desktop und Mobil.
 
-Sie können [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) verwenden, das eine API zum Integrieren der Personenauswahl in Ihre Web-App bereitstellt`selectPeople`.
+Sie können das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) verwenden, das die `selectPeople`-API zum Integrieren der Personenauswahl in Ihre Web-App bereitstellt.
 
-## <a name="advantages-of-integrating-the-native-people-picker"></a>Vorteile der Integration der systemeigenen Personenauswahl
+## <a name="advantages-of-using-people-picker"></a>Vorteile der Verwendung der Personenauswahl
 
-* Das Steuerelement "Personenauswahl" funktioniert auf allen Teams Oberflächen, z. B. in einem Aufgabenmodul, einem Chat, einem Kanal, einer Besprechungsregisterkarte und einer persönlichen App.
-* Mit diesem Steuerelement können Sie innerhalb eines Chats, Kanals oder der gesamten Organisation nach Benutzern suchen und diese auswählen.
-* Die Personenauswahl hilft bei Szenarien mit Aufgabenzuweisung, Tagging und Benachrichtigung eines Benutzers.
-* Sie können dieses leicht verfügbare Steuerelement in Ihrer Web-App verwenden. Es spart den Aufwand und die Zeit, um ein solches Steuerelement selbst zu erstellen.
+* Funktioniert für alle Microsoft Teams-Funktionen, z. B. Aufgabenmodul, Chat, Kanal, Besprechungsregisterkarte und persönliche Apps.
+* Ermöglicht es dem Benutzer, Personen in einem Chat, Kanal oder der gesamten Organisation innerhalb Microsoft Teams zu suchen und auszuwählen.
+* Hilft in Szenarien mit Aufgabenzuweisung, Tagging und Benachrichtigung von Benutzern.
+* Spart im Vergleich zum Erstellen eines ähnlichen Steuerelements viel Zeit und Mühe.
 
-Sie müssen die API aufrufen, um das `selectPeople` Personenauswahl-Steuerelement in Ihre Teams-App zu integrieren. Um eine effektive Integration zu ermöglichen, müssen Sie über Kenntnisse des [Codeausschnitts](#code-snippet) für den Aufruf der API verfügen.
-Es ist wichtig, sich mit den [API-Antwortfehlern](#error-handling) vertraut zu machen, um die Fehler in Ihrer Web-App zu behandeln.
+Verwenden Sie die [`selectPeople`](#selectpeople-api) API, um die Personenauswahl in Ihre Microsoft Teams-App zu integrieren. Um die API zu integrieren und aufzurufen, müssen Sie über ein gutes Verständnis des zugehörigen [Codeausschnitts](#code-snippet) verfügen. Außerdem benötigen Sie Kenntnisse über [API-Antwortfehler](#error-handling).
 
-> [!NOTE]
-> Derzeit ist Microsoft Teams Unterstützung für die Personenauswahl nur für mobile Clients verfügbar.
+## <a name="selectpeople-api"></a>`selectPeople`-API
 
-## <a name="selectpeople-api"></a>`selectPeople` API
+Mit der `selectPeople`-API können Sie den Web-Apps die Personenauswahl von Microsoft Teams hinzufügen. Weitere Vorteile:
 
-`selectPeople`Mit der API können Sie Ihren Web-Apps Teams nativen `People Picker input control` Hinzufügen hinzufügen.  
-Die API-Beschreibung lautet wie folgt:
+* Ermöglicht es dem Benutzer, eine oder mehrere Personen in einer Liste zu suchen und auszuwählen.
+* Gibt die ID, den Namen und die E-Mail-Adresse ausgewählter Benutzer an die Web-App zurück.
 
-| API      | Beschreibung  |
-| --- | --- |
-|**selectPeople**|Startet eine Personenauswahl und ermöglicht es dem Benutzer, eine oder mehrere Personen in der Liste zu suchen und auszuwählen.<br/><br/>Diese API gibt die ID, den Namen und die E-Mail-Adresse ausgewählter Benutzer an die aufrufende Web-App zurück.<br/><br/>Bei einer persönlichen App durchsucht das Steuerelement die gesamte Organisation. Wenn die App einem Chat oder Kanal hinzugefügt wird, wird der Suchkontext je nach Szenario konfiguriert. Die Suche ist innerhalb der Mitglieder dieses Chats, Kanals oder in der gesamten Organisation eingeschränkt.|
+Bei einer persönlichen App sucht das Steuerelement in der Organisation nach Namen oder E-Mail-ID innerhalb Microsoft Teams. Wenn die App einem Chat oder Kanal hinzugefügt wird, wird der Suchkontext basierend auf dem Szenario konfiguriert. Die Suche ist auf die Mitglieder dieses Chats oder Kanals beschränkt.
 
-Die `selectPeople` API enthält die folgenden Eingabekonfigurationen:
+Die `selectPeople`-API umfasst die folgenden Eingabekonfigurationen:
 
 |Konfigurationsparameter|Typ|Beschreibung| Standardwert|
 |-----|------|--------------|------|
-|`title`| Zeichenfolge| Es handelt sich um einen optionalen Parameter. Er legt den Titel für das Steuerelement "Personenauswahl" fest. | Auswählen von Personen|
-|`setSelected`|Zeichenfolge| Es handelt sich um einen optionalen Parameter. Sie müssen Microsoft Azure Active Directory (Azure AD)-IDs der Personen übergeben, die vorab ausgewählt werden sollen. Dieser Parameter wählt Personen beim Starten des Personenauswahl-Steuerelements vorab aus. Bei einer einzelnen Auswahl wird nur der erste gültige Benutzer vorbefüllt, wobei der Rest ignoriert wird. |Null|
-|`openOrgWideSearchInChatOrChannel`|Boolean | Es handelt sich um einen optionalen Parameter. Wenn sie auf "true" festgelegt ist, wird die Personenauswahl im organisationsweiten Bereich gestartet, auch wenn die App zu einem Chat oder Kanal hinzugefügt wird. |False|
-|`singleSelect`|Boolean|Es handelt sich um einen optionalen Parameter. Wenn sie auf "true" festgelegt ist, wird die Personenauswahl gestartet, wodurch die Auswahl auf nur einen Benutzer beschränkt wird. |False|
+|`title`|Zeichenfolge| Ein optionaler Parameter; legt den Titel für das Steuerelement "Personenauswahl" fest.|`selectPeople`|
+|`setSelected`|Zeichenfolge| Ein optionaler Parameter. Sie müssen Microsoft Azure Active Directory (Azure AD)-IDs der Personen übergeben, die vorab ausgewählt werden sollen. Dieser Parameter wählt Personen beim Starten der Personenauswahl vorab aus. Bei einer einzelnen Auswahl wird nur der erste gültige Benutzer vorab geladen, während der Rest ignoriert wird.|**Null**|
+|`openOrgWideSearchInChatOrChannel`|Boolescher Wert| Optionaler Parameter. Wenn er auf "true" festgelegt ist, wird die Personenauswahl mit organisationsweitem Bereich gestartet, auch wenn die App einem Chat oder Kanal hinzugefügt wird.|**False**|
+|`singleSelect`|Boolean|Optionaler Parameter. Wenn er auf "true" festgelegt ist, wird die Personenauswahl gestartet und die Auswahl auf nur einen Benutzer beschränkt.|**False**|
 
-Die folgende Abbildung zeigt die Erfahrung der Personenauswahl in einer Beispiel-Web-App:
+Die folgende Abbildung zeigt die Personenauswahl auf Mobilgeräten und Desktops:
 
-![Web-App-Erfahrung der Personenauswahl](../../assets/images/tabs/people-picker-control-capability.png)
+# <a name="mobile"></a>[Mobil](#tab/Samplemobileapp)
 
-### <a name="code-snippet"></a>Codeausschnitt
+Die Personenauswahl ermöglicht dem Benutzer das Suchen und Hinzufügen von Personen mithilfe der folgenden Schritte:
 
-**Aufrufen `selectPeople` API** zum Auswählen von Personen aus einer Liste:
+1. Geben Sie den Namen der erforderlichen Person ein. Eine Liste mit Namensvorschlägen wird angezeigt.
+1. Wählen Sie den Namen der erforderlichen Person aus der Liste aus. 
+
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Auswahl auf Mobilgerät" border="true":::
+
+# <a name="desktop"></a>[Desktop](#tab/Sampledesktop)
+
+Die Personenauswahl für Web oder Desktop wird in einem modalen Fenster über Ihrer Web-App gestartet, und zum Hinzufügen von Personen führen Sie die folgenden Schritte aus:
+
+1. Geben Sie den Namen der erforderlichen Person ein. Eine Liste mit Namensvorschlägen wird angezeigt.
+1. Wählen Sie den Namen der erforderlichen Person aus der Liste aus. 
+
+   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Personenauswahl nach Name auf Desktop" border="true":::
+
+---
+
+## <a name="code-snippet"></a>Codeausschnitt
+
+Der folgende Codeausschnitt zeigt die Verwendung der `selectPeople`-API für eine Liste an:
 
 ```javascript
  microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
@@ -81,18 +94,18 @@ Die folgende Abbildung zeigt die Erfahrung der Personenauswahl in einer Beispiel
 
 ## <a name="error-handling"></a>Fehlerbehandlung
 
-Sie müssen sicherstellen, dass die Fehler in Ihrer Web-App ordnungsgemäß behandelt werden. In der folgenden Tabelle sind die Fehlercodes und die Bedingungen aufgeführt, unter denen die Fehler generiert werden:
+In der folgenden Tabelle sind die Fehlercodes und deren Beschreibungen aufgeführt:
 
-|Fehlercode |  Fehlername     | Bedingung|
-| --------- | --------------- | -------- |
+|Fehlercode |  Fehlername     | Beschreibung|
+| --------- | --------------- | --------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | Die API wird auf der aktuellen Plattform nicht unterstützt.|
-| **500** | INTERNAL_ERROR | Beim Starten der Personenauswahl ist ein interner Fehler aufgetreten.|
+| **500** | INTERNAL_ERROR | Interner Fehler beim Starten der Personenauswahl.|
 | **4000** | INVALID_ARGUMENTS | Die API wird mit falschen oder nicht ausreichenden obligatorischen Argumenten aufgerufen.|
 | **8000** | USER_ABORT |Der Benutzer hat den Vorgang abgebrochen.|
-| **9000** | OLD_PLATFORM | Der Benutzer befindet sich auf einem alten Plattformbuild, in dem die Implementierung der API nicht vorhanden ist.  Das Upgrade des Builds behebt das Problem.|
+| **9000** | OLD_PLATFORM | Der Benutzer befindet sich auf einem alten Plattformbuild, in dem die Implementierung der API nicht verfügbar ist. Führen Sie ein Upgrade auf die neueste Version des Builds durch, um das Problem zu beheben.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-* [Integrieren von Medienfunktionen in Teams](mobile-camera-image-permissions.md)
-* [Integrieren von QR-Code oder Strichcodescanner-Funktion in Teams](qr-barcode-scanner-capability.md)
-* [Integrieren von Standortfunktionen in Teams](location-capability.md)
+* [Integrieren von Medienfunktionen in Microsoft Teams](mobile-camera-image-permissions.md)
+* [Integrieren von QR-Code- oder Strichcodescanner-Funktionen in Microsoft Teams](qr-barcode-scanner-capability.md)
+* [Integrieren von Standortfunktionen in Microsoft Teams](location-capability.md)

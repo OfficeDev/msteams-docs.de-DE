@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: Yeoman ASP.NET Berechtigungsspeicher des MVC-Pakets "appmanifest conversation"
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 43302047a3c5712a17e2bc506eca2eeb350db825
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: 25eb2c75ea59c52cb7fb8878e3cfddde02f0db6d
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571364"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614544"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
@@ -23,8 +23,6 @@ Stellen Sie sicher, dass Sie über alle [Vorabversionen](~/tabs/how-to/tab-requi
 ::: zone pivot="node-java-script"
 
 ## <a name="create-a-personal-tab-with-nodejs"></a>Erstellen einer persönlichen Registerkarte mit Node.js
-
-So erstellen Sie eine persönliche Registerkarte mit Node.js
 
 1. Installieren Sie an der Eingabeaufforderung die [Yeoman](https://yeoman.io/) - und [gulp-cli-Pakete](https://www.npmjs.com/package/gulp-cli) , indem Sie nach der Installation des Node.js den folgenden Befehl eingeben:
 
@@ -178,8 +176,8 @@ Erstellen Sie eine Inhaltsseite, und aktualisieren Sie die vorhandenen Dateien d
     {
         "entityId": "personalTab",
         "name": "Personal Tab ",
-        "contentUrl": "https://{{HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
-        "websiteUrl": "https://{{HOSTNAME}}",
+        "contentUrl": "https://{{PUBLIC_HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
+        "websiteUrl": "https://{{PUBLIC_HOSTNAME}}",
         "scopes": ["personal"]
     }
     ```
@@ -279,8 +277,6 @@ gulp ngrok-serve
 ::: zone pivot="razor-csharp"
 
 ## <a name="create-a-personal-tab-with-aspnet-core"></a>Erstellen einer persönlichen Registerkarte mit ASP.NET Core
-
-Sie können eine benutzerdefinierte persönliche Registerkarte mit C# und ASP.NET Core Razor-Seiten erstellen. So erstellen Sie eine persönliche Registerkarte mit ASP.NET Core
 
 1. Erstellen Sie an der Eingabeaufforderung ein neues Verzeichnis für Ihr Registerkartenprojekt.
 
@@ -417,7 +413,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Wählen Sie in **app-Features** persönliche App aus, geben Sie den Namen ein, und aktualisieren **Sie die Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer.
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern**.
 
 1. Im Abschnitt "Domänen" müssen Domänen von Ihren Registerkarten Ihre ngrok-URL ohne das HTTPS-Präfix `<yourngrokurl>.ngrok.io`enthalten.
 
@@ -444,8 +440,6 @@ ngrok http 3978 --host-header=localhost
 ::: zone pivot="mvc-csharp"
 
 ## <a name="create-a-personal-tab-with-aspnet-core-mvc"></a>Erstellen einer persönlichen Registerkarte mit ASP.NET Core MVC
-
-Sie können eine benutzerdefinierte persönliche Registerkarte mit C# und ASP.NET Core MVC erstellen. So erstellen Sie eine persönliche Registerkarte mit ASP.NET Core MVC
 
 1. Erstellen Sie an der Eingabeaufforderung ein neues Verzeichnis für Ihr Registerkartenprojekt.
 
@@ -594,7 +588,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Wählen Sie in **app-Features** persönliche App aus, geben Sie den Namen ein, und aktualisieren **Sie die Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer.
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern**.
 
 1. Im Abschnitt "Domänen" müssen Domänen von Ihren Registerkarten Ihre ngrok-URL ohne das HTTPS-Präfix `<yourngrokurl>.ngrok.io`enthalten.
 

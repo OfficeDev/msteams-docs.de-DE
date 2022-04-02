@@ -5,12 +5,12 @@ description: So senden, empfangen und verarbeiten Sie Nachrichten für einen Bot
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6c3d476ec51c75431d4a39e35b7307771b919d26
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 737aba65007f3e5ed359bc67a49c3fb3e7cc5479
+ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727499"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64612629"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Kanal- und Gruppenchatunterhaltungen mit einem Bot
 
@@ -272,11 +272,15 @@ Senden Sie in den folgenden Fällen keine Nachricht:
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
+## <a name="step-by-step-guide"></a>Schrittweise Anleitung
+
+Befolgen Sie die [schrittweise Anleitung](../../../sbs-teams-conversation-bot.yml), um einen Teams Unterhaltungs-Bot zu erstellen.
+
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Abonnieren von Unterhaltungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Abrufen Teams Kontexts](~/bots/how-to/get-teams-context.md)

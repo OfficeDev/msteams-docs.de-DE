@@ -4,12 +4,12 @@ description: Beschreibt alle für Bots in Teams verfügbaren Karten und Kartenak
 ms.localizationpriority: high
 keywords: Referenz zu Bots-Karten
 ms.topic: reference
-ms.openlocfilehash: 4bd890268641de5c228f77c8b65e5e93fcf66094
-ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
+ms.openlocfilehash: 2eab0ee575efb1abf0aed025243d3e4d891b60fd
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63558828"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571495"
 ---
 # <a name="types-of-cards"></a>Kartentypen
 
@@ -268,6 +268,20 @@ Der folgende Code zeigt ein Beispiel für eine Adaptive Karte:
 ```
 
 #### <a name="additional-information-on-adaptive-cards"></a>Zusätzliche Informationen zu Adaptiven Karten
+
+Sie können dynamische Werte in einer adaptiven Karte mit dem Dollarsymbol ($) und geschweiften Klammern übergeben. Weitere Informationen finden Sie unter [Vorlagenerstellung für adaptive Karten](/adaptive-cards/templating/).
+
+Beispiel:
+
+```json
+{ 
+ "type": "TextBlock",
+ "text": "${titleText}",
+ "size": "default",
+ "weight": "bolder"
+}
+
+```
 
 Bot Framework-Referenz:
 

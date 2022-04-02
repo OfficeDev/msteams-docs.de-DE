@@ -4,12 +4,12 @@ description: Beschreibt Einmaliges Anmelden (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams-Authentifizierungs-SSO – Microsoft Azure Active Directory (Azure AD)-Single Sign-On-API
-ms.openlocfilehash: 4a7854ef9cefffab04026b3fe3257154cc81f7ac
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: 8ac1e44ecb36d3b863a6800b0167ce7ec9ce1803
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464810"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571320"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Unterstützung für einmaliges Anmelden (SSO) für Registerkarten
 
@@ -83,7 +83,10 @@ Führen Sie die folgenden Schritte aus, um Ihre App über das Azure AD-Portal zu
 1. Wählen Sie unter **Verwalten** die Option **Eine API verfügbar machen** aus.
 
     > [!NOTE]
-    > Wenn Sie eine App mit einem Bot und einer Registerkarte erstellen, geben Sie den Anwendungs-ID-URI als `api://fully-qualified-domain-name.com/botid-{YourBotId}` ein.
+    >
+    > * Wenn Sie eine App mit einem Bot und einer Registerkarte erstellen, geben Sie den Anwendungs-ID-URI als `api://fully-qualified-domain-name.com/botid-{YourBotId}` ein.
+    >
+    > * Verwenden Sie Kleinbuchstaben als Domänennamen, keine Großbuchstaben. Um beispielsweise einen App-Dienst oder eine Web-App zu erstellen, geben Sie den Basisressourcennamen als `demoapplication` ein, dann wird die URL `https://demoapplication.azurewebsites.net` sein. Wenn Sie jedoch den Basisressourcennamen als `DemoApplication` verwenden, dann wird die URL `https://DemoApplication.azurewebsites.net` sein und wird in Desktop, Web und iOS unterstützt, aber nicht in Android.
 
 1. Wählen Sie den Link **Festlegen** aus, um die Anwendungs-ID-URI im Formular `api://{AppID}` zu generieren. Fügen Sie Ihren vollqualifizierten Domänennamen mit am Ende angehängten Schrägstrich „/“ zwischen den doppelten Schrägstrichen und der GUID ein. Die gesamte ID muss die Form von `api://fully-qualified-domain-name.com/{AppID}` aufweisen. ² Zum Beispiel `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. Der vollqualifizierte Domänenname ist der lesbare Domänenname, aus dem Ihre App bereitgestellt wird. Wenn Sie einen Tunneldienst wie ngrok verwenden, müssen Sie diesen Wert aktualisieren, wenn sich Ihre ngrok-Unterdomäne ändert.
 1. Wählen Sie **Bereich hinzufügen** aus. Geben Sie im Bereich, der nun geöffnet wird, **access_as_user** für **Bereichsname** ein.

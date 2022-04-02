@@ -1,17 +1,17 @@
 ---
-title: CI- oder CD-Unterstützung für Teams Anwendungsentwickler
+title: Erfahren Sie, wie Sie CI- oder CD-Pipelinevorlagen in GitHub, Azure Devops und Jenkins für Teams Anwendungsentwickler verwenden.
 author: MuyangAmigo
 description: CICD-Vorlagen
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 4db593c82ef2efb97b99fbb2a00b88bc622394d6
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 5fa12248969f589282ecf8fd80c4d908ff42e8d8
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453411"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614537"
 ---
 # <a name="cicd-guide"></a>CI/CD-Leitfaden
 
@@ -47,7 +47,7 @@ Führen Sie die folgenden Schritte aus, um den Workflow für Ihr Projekt anzupas
 Führen Sie die folgenden Schritte aus, um den CD-Workflow anzupassen:
 
 1. Standardmäßig wird der CD-Workflow ausgelöst, wenn neue Commits für die `main` Verzweigung ausgeführt werden.
-1. Erstellen Sie GitHub [geheimen Repositoryschlüssel](https://docs.github.com/en/actions/reference/encrypted-secrets) nach Umgebung, um Azure-Dienstprinzipal- und Microsoft 365-Kontoanmeldeinformationen zu speichern. Weitere Informationen finden Sie unter [GitHub Aktionen](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
+1. Erstellen Sie GitHub [geheimen Repositoryschlüssel](https://docs.github.com/en/actions/reference/encrypted-secrets) nach Umgebung, um Azure-Dienstprinzipal- und Microsoft 365-Kontoanmeldeinformationen zu speichern. Weitere Informationen finden Sie unter [GitHub Actions](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
 1. Ändern Sie ggf. die Buildskripts.
 1. Entfernen Sie die Testskripts nach Bedarf.
 
@@ -224,7 +224,7 @@ Folgen Sie ["using-credentials"](https://www.jenkins.io/doc/book/using/using-cre
 |`M365_ACCOUNT_PASSWORD`|Das Kennwort des Microsoft 365 Kontos.|
 |`M365_TENANT_ID`|So identifizieren Sie den Mandanten, in dem die Teams App erstellt oder veröffentlicht wird. Der Wert ist optional, es sei denn, Sie verfügen über ein mehrinstanzenfähiges Konto und möchten einen anderen Mandanten verwenden. Erfahren Sie mehr [darüber, wie Sie Ihre Microsoft 365 Mandanten-ID finden](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
-## <a name="get-started-guide-for-other-platforms"></a>Leitfaden für die ersten Schritte für andere Plattformen
+## <a name="get-started-guide-for-other-platforms"></a>Erste Schritte Handbuch für andere Plattformen
 
 Sie können den aufgeführten vordefinierten Beispiel-Bash-Skripts folgen, um CI- oder CD-Pipelines auf anderen Plattformen zu erstellen und anzupassen:
 
@@ -272,9 +272,9 @@ Führen Sie die folgenden Schritte aus, um Ihre App zu veröffentlichen:
 3. Wählen Sie die Ziel-App in der App-Liste aus.
 4. Veröffentlichen Sie Ihre App, indem Sie `Publish -> Publish to your org`
 
-### <a name="see-also"></a>Siehe auch
+### <a name="see-also"></a>Weitere Informationen
 
-* [Schnellstart für GitHub-Aktionen](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
+* [Schnellstart für GitHub Actions](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [Erstellen Ihrer ersten Azure DevOps-Pipeline](/azure/devops/pipelines/create-first-pipeline)
 * [Erstellen Ihrer ersten Jenpipeline](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
 * [Verwalten Ihrer Apps mit dem Entwicklerportal für Microsoft Teams](/concepts/build-and-test/teams-developer-portal)

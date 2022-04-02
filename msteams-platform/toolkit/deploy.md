@@ -1,19 +1,19 @@
 ---
-title: Bereitstellen in der Cloud
+title: Bereitstellen in die Cloud
 author: MuyangAmigo
 description: Bereitstellen der App in der Cloud, Azure oder SharePoint
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 2e2d288340f3a806857f1e62ae832be0e6c4068c
-ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
+ms.openlocfilehash: 35a60e718bb97cdcc24de66729e3929b2d21a59f
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63558817"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614530"
 ---
-# <a name="deploy-to-the-cloud"></a>Bereitstellen in der Cloud
+# <a name="deploy-to-the-cloud"></a>Bereitstellen in die Cloud
 
 Teams Toolkit hilft Ihnen, den Front-End- und Back-End-Code in Ihrer Anwendung bereitzustellen oder in Ihre bereitgestellten Cloudressourcen in Azure hochzuladen.
 
@@ -49,9 +49,10 @@ Die Anleitungen für die ersten Schritte helfen Ihnen bei der Bereitstellung mit
 > [!NOTE]
 > Wenn Sie die Azure-API-Verwaltungsressource in Ihr Projekt einschließen und die Bereitstellung auslösen. Sie können Ihre APIs in Azure-Funktionen im Azure-API-Verwaltungsdienst veröffentlichen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Hinzufügen weiterer Cloudressourcen](add-resource.md)
+* [Erstellen und Bereitstellen eines Azure-Clouddiensts](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [Hinzufügen weiterer Teams App-Funktionen](add-capability.md)
 * [Bereitstellen von Projektcode mit CI/CD-Pipelines](use-CICD-template.md)
 * [Verwalten mehrerer Umgebungen](TeamsFx-multi-env.md)
