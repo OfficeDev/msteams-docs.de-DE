@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 7d74a49ff85986b27ec30eeffbc15ca836a6a94b
-ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
+ms.openlocfilehash: 31da2a8ee267ef42e6c0abd4e3bd695cf69d2f01
+ms.sourcegitcommit: 3d6aa10d2f58a63c6a4281a30e8771469dba0d0b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64590668"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64636147"
 ---
 # <a name="channel-or-group-tab"></a>Kanal- oder Gruppenregisterkarte
 
@@ -171,7 +171,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Standardregisterkarte" border="true":::
 
-1. Um die Registerkartenkonfigurationsseite anzuzeigen, wechseln Sie zu `https://localhost:3007/<yourDefaultAppNameTab>/config.html`. Es wird Folgendes gezeigt:
+1. Um die Registerkartenkonfigurationsseite anzuzeigen, wechseln Sie zu `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. Es wird Folgendes gezeigt:
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Registerkartenkonfigurationsseite" border="true":::
 
@@ -198,7 +198,7 @@ gulp ngrok-serve
     
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Registerkarte &quot;Hochgeladener Kanal&quot;" border="true":::
 
-1. Wählen Sie im Popupfenster " **Hinzufügen** " aus. Ihre Registerkarte wird in Teams hochgeladen.
+1. Wählen Sie im Dialogfeld **"Hinzufügen** " aus. Ihre Registerkarte wird in Teams hochgeladen.
     
     > [!NOTE]
     > Wenn  **"Hinzufügen** " nicht im Dialogfeld angezeigt wird, entfernen Sie den folgenden Code aus dem Manifest des zip-Ordners des hochgeladenen App-Pakets. Zippen Sie den Ordner erneut, und laden Sie ihn in Teams hoch.
@@ -210,11 +210,12 @@ gulp ngrok-serve
     >"composeExtensions": [],
     >```
 
-1. Kehren Sie zu Ihrem Team zurück, wählen Sie den Kanal aus, in dem Sie die Registerkarte hinzufügen möchten, wählen Sie ➕ aus der Registerkartenleiste aus, und wählen Sie Ihre Registerkarte aus der Liste aus.
-1. Befolgen Sie die Anweisungen zum Hinzufügen einer Registerkarte. Es gibt ein benutzerdefiniertes Konfigurationsdialogfeld für Die Kanal- oder Gruppenregisterkarte.
+1. Befolgen Sie die Anweisungen zum Hinzufügen einer Registerkarte. Es gibt ein benutzerdefiniertes Konfigurationsdialogfeld für Ihre Kanal- oder Gruppenregisterkarte.
 1. Wählen Sie **Speichern aus** , und Ihre Registerkarte wird der Registerkartenleiste des Kanals hinzugefügt.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Registerkarte &quot;Kanal&quot; hochgeladen" border="true":::
+    
+    Jetzt haben Sie erfolgreich Ihre Kanal- oder Gruppenregisterkarte in Teams erstellt und hinzugefügt.
 
 ::: zone-end
 
@@ -245,7 +246,7 @@ Nachfolgend finden Sie die Schritte zum Erstellen einer Kanal- oder Gruppenregis
 
 1. Wechseln Sie zum Ordner "Microsoft-Teams-Samplessamplestab-channel-grouprazor-csharp >  >  > ", und öffnen Sie **"channelGroupTab.sln"**.
 
-1. Drücken Sie in Visual Studio **F5**, oder wählen Sie **"Debuggen starten**" aus dem **Debugmenü** der Anwendung aus, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde. Wechseln Sie in einem Browser zu den folgenden URLs:
+1. Wählen Sie in Visual Studio **F5** aus, oder wählen Sie im **Menü "Debuggen**" der Anwendung die Option **"Debuggen starten**" aus, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde. Wechseln Sie in einem Browser zu den folgenden URLs:
 
     * https://localhost:3978/
     * https://localhost:3978/privacy
@@ -328,7 +329,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und
 
 ### <a name="update-your-application"></a>Aktualisieren Der Anwendung
 
-1. Wechseln Sie zum Ordner **"****PagesShared** > ", öffnen **Sie _Layout.cshtml**, und fügen Sie Folgendes zu der Datei hinzu. <head> Tags-Abschnitt:
+1. Öffnen Sie Visual Studio Projektmappen-Explorer, wechseln Sie zum Ordner **"****PagesShared** > ", öffnen **Sie _Layout.cshtml**, und fügen Sie Folgendes zum <head> Tags-Abschnitt:
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -338,9 +339,9 @@ Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und
     > [!IMPORTANT]
     > Kopieren Sie die `<script src="...">` URLs von dieser Seite nicht, und fügen Sie sie nicht ein, da sie nicht die neueste Version darstellen. Um die neueste Version des SDK zu erhalten, wechseln Sie immer zu [Microsoft Teams JavaScript-API](https://www.npmjs.com/package/@microsoft/teams-js).
     
-1. Fügen Sie oben im `script` Tag einen Aufruf von `microsoftTeams.initialize();`ein.
+1. Fügen Sie einen Aufruf `microsoftTeams.initialize();` in das `script` Tag ein.
 
-1. Wechseln Sie zum Ordner **"Pages** ", und öffnen **Sie "Tab.cshtml"**
+1. Wechseln Sie in Visual Studio Projektmappen-Explorer zum Ordner **"Seiten**", und öffnen **Sie "Tab.cshtml".**
 
     Innerhalb von **Tab.cshtml** zeigt die Anwendung dem Benutzer zwei Optionsschaltflächen zum Anzeigen der Registerkarte mit einem roten oder grauen Symbol an. Durch Auswählen der Schaltfläche "**Grau auswählen**" oder "**Rot auswählen**" wird die Schaltfläche "**Speichern**" auf der Konfigurationsseite festgelegt `saveGray()` bzw`saveRed()`. aktiviert`settings.setValidityState(true)`. Dieser Code teilt Teams mit, dass Sie die Konfigurationsanforderungen erfüllt haben und die Installation fortgesetzt werden kann. Die Parameter von `settings.setSettings` sind festgelegt. Schließlich wird aufgerufen, `saveEvent.notifySuccess()` um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
 
@@ -379,7 +380,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und
 
 ### <a name="build-and-run-your-application"></a>Erstellen und Ausführen der Anwendung
 
-1. Drücken Sie in Visual Studio **F5**, oder wählen Sie im Menü "**Debuggen**" die Option **"Debuggen starten**" aus.
+1. Wählen Sie in Visual Studio **F5** aus, oder wählen Sie im Menü "**Debuggen**" die Option **"Debuggen starten**" aus.
 
 1. Stellen Sie sicher, dass **ngrok** ausgeführt wird und ordnungsgemäß funktioniert, indem Sie Ihren Browser öffnen und über die ngrok-HTTPS-URL, die im Eingabeaufforderungsfenster bereitgestellt wurde, zur Inhaltsseite wechseln.
 
@@ -390,7 +391,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und
 
 1. Wechseln Sie zu Microsoft Teams. Wenn Sie die [webbasierte Version](https://teams.microsoft.com) verwenden, können Sie Ihren Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md) Ihres Browsers überprüfen.
 
-1. Navigieren Sie in Teams zu Ihrem **Entwicklerportal**.
+1. Wechseln Sie zum [**Entwicklerportal**](https://dev.teams.microsoft.com/home).
 
 1. Öffnen Sie **Apps** , und wählen Sie **"App importieren**" aus.
 
@@ -410,7 +411,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und
 
 1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen, `https://<yourngrokurl>/tou` und speichern Sie sie.
 
-1. Wählen Sie in **app-Features** persönliche App aus, geben Sie den Namen ein, und aktualisieren **Sie die Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer. 
+1. Wählen Sie in **den App-Features** "Gruppe" und "Kanal-App" aus. Aktualisieren Sie die **Konfigurations-URL** , `https://<yourngrokurl>/tab` und wählen Sie Ihre Registerkarte " **Bereich" aus**.
 
 1. Klicken Sie auf **Speichern**.
 
@@ -418,17 +419,13 @@ Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und
 
 ### <a name="preview-your-app-in-teams"></a>Anzeigen einer Vorschau Ihrer App in Teams
 
-1. Wählen Sie in Teams auf der Symbolleiste des Entwicklerportals die Option **"Vorschau**" aus. Das Entwicklerportal informiert Sie darüber, dass Ihre App erfolgreich quergeladen wurde.
+1. Wählen Sie **in Teams** auf der Symbolleiste des Entwicklerportals die Vorschau aus. Entwicklerportal informiert Sie darüber, dass Ihre App erfolgreich quergeladen wurde. Die Seite **"Hinzufügen**" wird für Ihre App in Teams angezeigt.
 
-1. Wählen Sie **"Apps verwalten" aus**. Ihre App ist in den quergeladenen Apps aufgeführt.
-
-1. Suchen Sie Ihre App mithilfe der Suche, wählen Sie &#x25CF;&#x25CF;&#x25CF; aus.
-
-1. Wählen Sie die Option **"Details anzeigen** " aus. Das Fenster "App-Details" wird für Ihre App angezeigt.
-
-1. Wählen Sie :::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="&quot;App-Details" border="true":::&nbsp; **dropdownAdd**&nbsp; >  to team" aus, um die Registerkarte in einem Team zu laden. Ihre Registerkarte ist jetzt in Teams verfügbar.
+1. Wählen Sie **"Zu Team hinzufügen** " aus, um die Registerkarte in einem Team einzurichten. Konfigurieren Sie Ihre Registerkarte, und wählen Sie **"Speichern**" aus. Ihre Registerkarte ist jetzt in Teams verfügbar.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Kanalregisterkarte ASPNET hochgeladen" border="true":::
+    
+    Jetzt haben Sie erfolgreich Ihre Kanal- oder Gruppenregisterkarte in Teams erstellt und hinzugefügt.
 
 ::: zone-end
 
@@ -459,7 +456,7 @@ Nachfolgend finden Sie die Schritte zum Erstellen einer Kanal- oder Gruppenregis
 
 1. Wechseln Sie zum Ordner "Microsoft-Teams-Samplessamplestab-channel-groupmvc-csharp >  >  > ", und öffnen Sie **"ChannelGroupTabMVC.sln"**.
 
-1. Drücken Sie in Visual Studio **F5**, oder wählen Sie **"Debuggen starten**" aus dem **Debugmenü** der Anwendung aus, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde. Wechseln Sie in einem Browser zu den folgenden URLs:
+1. Wählen Sie in Visual Studio **F5** aus, oder wählen Sie im **Menü "Debuggen**" der Anwendung die Option **"Debuggen starten**" aus, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde. Wechseln Sie in einem Browser zu den folgenden URLs:
 
     * https://localhost:3978/
     * https://localhost:3978/privacy
@@ -550,7 +547,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und
 
 ### <a name="update-your-application"></a>Aktualisieren Der Anwendung
 
-1. Wechseln Sie zum Ordner **"****ViewsShared** > ", öffnen **Sie _Layout.cshtml**, und fügen Sie Folgendes zu dem Ordner hinzu. <head> Tags-Abschnitt:
+1. Öffnen Sie Visual Studio Projektmappen-Explorer, wechseln Sie zum Ordner **"****ViewsShared** > ", öffnen **Sie _Layout.cshtml**, und fügen Sie Folgendes zum <head> Tags-Abschnitt:
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -560,9 +557,9 @@ Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und
     > [!IMPORTANT]
     > Kopieren Sie die `<script src="...">` URLs von dieser Seite nicht, und fügen Sie sie nicht ein, da sie nicht die neueste Version darstellen. Um die neueste Version des SDK zu erhalten, wechseln Sie immer zu [Microsoft Teams JavaScript-API](https://www.npmjs.com/package/@microsoft/teams-js).
     
-1. Fügen Sie oben im `script` Tag einen Aufruf von `microsoftTeams.initialize();`ein.
+1. Fügen Sie einen Aufruf `microsoftTeams.initialize();` in das `script` Tag ein.
 
-1. Wechseln Sie zum Ordner **"Tab"** , und öffnen **Sie "Tab.cshtml"**
+1. Wechseln Sie in Visual Studio Projektmappen-Explorer zum Ordner **"Tab"**, und öffnen **Sie "Tab.cshtml".**
 
     Innerhalb von **Tab.cshtml** zeigt die Anwendung dem Benutzer zwei Optionsschaltflächen zum Anzeigen der Registerkarte mit einem roten oder grauen Symbol an. Durch Auswählen der Schaltfläche "**Grau auswählen**" oder "**Rot auswählen**" wird die Schaltfläche "**Speichern**" auf der Konfigurationsseite festgelegt `saveGray()` bzw`saveRed()`. aktiviert`settings.setValidityState(true)`. Dieser Code teilt Teams mit, dass Sie die Konfigurationsanforderungen erfüllt haben und die Installation fortgesetzt werden kann. Die Parameter von `settings.setSettings` sind festgelegt. Schließlich wird aufgerufen, `saveEvent.notifySuccess()` um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde. 
 
@@ -601,7 +598,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und
 
 ### <a name="build-and-run-your-application"></a>Erstellen und Ausführen der Anwendung
 
-1. Drücken Sie in Visual Studio **F5**, oder wählen Sie im Menü "**Debuggen**" die Option **"Debuggen starten**" aus.
+1. Wählen Sie in Visual Studio **F5** aus, oder wählen Sie im Menü "**Debuggen**" die Option **"Debuggen starten**" aus.
 
 1. Stellen Sie sicher, dass **ngrok** ausgeführt wird und ordnungsgemäß funktioniert, indem Sie Ihren Browser öffnen und über die ngrok-HTTPS-URL, die im Eingabeaufforderungsfenster bereitgestellt wurde, zur Inhaltsseite wechseln.
 
@@ -612,7 +609,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und
 
 1. Wechseln Sie zu Microsoft Teams. Wenn Sie die [webbasierte Version](https://teams.microsoft.com) verwenden, können Sie Ihren Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md) Ihres Browsers überprüfen.
 
-1. Wechseln Sie zum **Entwicklerportal** in Teams.
+1. Wechseln Sie zum [**Entwicklerportal**](https://dev.teams.microsoft.com/home).
 
 1. Öffnen Sie **Apps** , und wählen Sie **"App importieren**" aus.
 
@@ -632,7 +629,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und
 
 1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen, `https://<yourngrokurl>/tou` und speichern Sie sie.
 
-1. Wählen Sie in **app-Features** persönliche App aus, geben Sie den Namen ein, und aktualisieren **Sie die Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer.
+1. Wählen Sie in **den App-Features** "Gruppe" und "Kanal-App" aus. Aktualisieren Sie die **Konfigurations-URL** , `https://<yourngrokurl>/tab` und wählen Sie Ihre Registerkarte " **Bereich" aus**.
 
 1. Klicken Sie auf **Speichern**.
 
@@ -640,17 +637,13 @@ Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und
 
 ### <a name="preview-your-app-in-teams"></a>Anzeigen einer Vorschau Ihrer App in Teams
 
-1. Wählen Sie in Teams auf der Symbolleiste des Entwicklerportals die Option **"Vorschau**" aus. Das Entwicklerportal informiert Sie darüber, dass Ihre App erfolgreich quergeladen wurde.
+1. Wählen Sie **in Teams** auf der Symbolleiste des Entwicklerportals die Vorschau aus. Entwicklerportal informiert Sie darüber, dass Ihre App erfolgreich quergeladen wurde. Die Seite **"Hinzufügen**" wird für Ihre App in Teams angezeigt.
 
-1. Wählen Sie **"Apps verwalten" aus**. Ihre App ist in den quergeladenen Apps aufgeführt.
-
-1. Suchen Sie Ihre App mithilfe der Suche, wählen Sie &#x25CF;&#x25CF;&#x25CF; aus.
-
-1. Wählen Sie die Option **"Details anzeigen** " aus. Das Fenster "App-Details" wird für Ihre App angezeigt.
-
-1. Wählen Sie &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="&quot;Kanalregisterkarte ASPNET uploadedAdd" border="true":::&nbsp; >  **to team**" aus, um die Registerkarte auf Teams zu laden. Ihre Registerkarte ist jetzt in Teams verfügbar.
+1. Wählen Sie **"Zu Team hinzufügen** " aus, um die Registerkarte in einem Team einzurichten. Konfigurieren Sie Ihre Registerkarte, und wählen Sie **"Speichern**" aus. Ihre Registerkarte ist jetzt in Teams verfügbar.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Kanalregisterkarte ASPNET MVC hochgeladen" border="true":::
+    
+    Jetzt haben Sie erfolgreich Ihre Kanal- oder Gruppenregisterkarte in Teams erstellt und hinzugefügt.
 
 ::: zone-end
 
@@ -659,7 +652,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und
 > [!div class="nextstepaction"]
 > [Erstellen einer Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)

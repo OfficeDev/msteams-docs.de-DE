@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: Yeoman ASP.NET Berechtigungsspeicher des MVC-Pakets "appmanifest conversation"
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 25eb2c75ea59c52cb7fb8878e3cfddde02f0db6d
-ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
+ms.openlocfilehash: d19ecc04aa14561d443a65d4ea896c210fdf4d94
+ms.sourcegitcommit: 3d6aa10d2f58a63c6a4281a30e8771469dba0d0b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64614544"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64636164"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Hinzufügen Ihrer persönlichen Registerkarte" border="true":::
 
-1. Wählen Sie im Popupfenster " **Hinzufügen** " aus. Ihre Registerkarte wird in Teams hochgeladen.
+1. Wählen Sie im Dialogfeld **"Hinzufügen** " aus. Ihre Registerkarte wird in Teams hochgeladen.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Persönliche Registerkarte hochgeladen" border="true":::
 
@@ -370,14 +370,14 @@ Klicken Sie in Visual Studio Projektmappen-Explorer mit der rechten Maustaste au
 
 ### <a name="update-and-run-your-application"></a>Aktualisieren und Ausführen der Anwendung
 
-1. Wechseln Sie zum Ordner **"PagesShared** > "**,** öffnen **Sie _Layout.cshtml**, und fügen Sie Dem Tags-Abschnitt Folgendes `<head>` hinzu:
+1. Öffnen Sie Visual Studio Projektmappen-Explorer, wechseln Sie zum Ordner **"****PagesShared** > ", öffnen **Sie _Layout.cshtml**, und fügen Sie Dem `<head>` Tags-Abschnitt Folgendes hinzu:
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Öffnen Sie **"PersonalTab.cshtml**" im Ordner **"Pages**", fügen Sie die `<script>` Tags hinzu`microsoftTeams.initialize()`, und speichern Sie sie.
+1. Öffnen Sie in Visual Studio Projektmappen-Explorer **den Ordner "PersonalTab.cshtml**" aus dem Ordner **"Seiten**", fügen Sie die `<script>` Tags hinzu`microsoftTeams.initialize()`, und speichern Sie sie.
 
 1. Wählen Sie in Visual Studio **F5** aus, oder wählen Sie im **Menü "Debuggen**" der Anwendung die Option **"Debuggen starten**" aus.
 
@@ -391,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Aktualisieren Des App-Pakets mit dem Entwicklerportal
 
-1. Wechseln Sie zum **Entwicklerportal** in Teams.
+1. Wechseln Sie zum [**Entwicklerportal**](https://dev.teams.microsoft.com/home).
 
 1. Öffnen Sie **Apps** , und wählen Sie **"App importieren**" aus.
 
@@ -411,23 +411,17 @@ ngrok http 3978 --host-header=localhost
 
 1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen, `https://<yourngrokurl>/tou` und speichern Sie sie.
 
-1. Wählen Sie in **app-Features** persönliche App aus, geben Sie den Namen ein, und aktualisieren **Sie die Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer.
+1. Wählen Sie in **den App-Features** **"Persönliche appCreate** > **" ihre erste persönliche App-Registerkarte** aus, geben Sie den Namen ein, und aktualisieren **Sie die Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer, und wählen Sie **"Kontext** " als "PersonalTab" aus der Dropdownliste und **"Hinzufügen**" aus.
 
-1. Wählen Sie **Speichern**.
+1. Klicken Sie auf **Speichern**.
 
 1. Im Abschnitt "Domänen" müssen Domänen von Ihren Registerkarten Ihre ngrok-URL ohne das HTTPS-Präfix `<yourngrokurl>.ngrok.io`enthalten.
 
 ### <a name="preview-your-app-in-teams"></a>Anzeigen einer Vorschau Ihrer App in Teams
 
-1. Wählen Sie in Teams auf der Symbolleiste des Entwicklerportals die Option **"Vorschau**" aus. Das Entwicklerportal informiert Sie darüber, dass Ihre App erfolgreich quergeladen wurde.
+1. Wählen Sie **in Teams** auf der Symbolleiste des Entwicklerportals die Vorschau aus. Entwicklerportal informiert Sie darüber, dass Ihre App erfolgreich quergeladen wurde. Die Seite **"Hinzufügen**" wird für Ihre App in Teams angezeigt.
 
-1. Wählen Sie **"Apps verwalten" aus**. Ihre App ist in den quergeladenen Apps aufgeführt.
-
-1. Suchen Sie Ihre App mithilfe der Suche, und wählen Sie die drei Punkte in der Zeile aus.
-
-1. Wählen Sie die Option **"Anzeigen** " aus. Die Seite **"Hinzufügen"** wird für Ihre App angezeigt.
-
-1. Wählen Sie **"Hinzufügen**" aus, um die Registerkarte auf Teams zu laden. Ihre Registerkarte ist jetzt in Teams verfügbar.
+1. Wählen Sie **"Hinzufügen**" aus, um die Registerkarte in Teams zu laden. Ihre Registerkarte ist jetzt in Teams verfügbar.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Standardregisterkarte" border="true":::
 
@@ -545,14 +539,14 @@ Die Controller verwenden die `ViewBag` Eigenschaft, um Werte dynamisch in die An
 
 ### <a name="update-and-run-your-application"></a>Aktualisieren und Ausführen der Anwendung
 
-1. Wechseln Sie zum Ordner **"****ViewsShared** > ", öffnen Sie **_Layout.cshtml**, und fügen Sie dem `<head>` Tags-Abschnitt Folgendes hinzu:
+1. Öffnen Sie Visual Studio Projektmappen-Explorer, wechseln Sie zum Ordner **"****ViewsShared** > ", öffnen **Sie _Layout.cshtml**, und fügen Sie dem Abschnitt "`<head>`tags" Folgendes hinzu:
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Öffnen Sie **"PersonalTab.cshtml**" im Ordner **"ViewsPersonalTab** > **",** fügen Sie sie in die `<script>` Tags ein`microsoftTeams.initialize()`, und speichern Sie sie.
+1. Öffnen Sie in Visual Studio Projektmappen-Explorer den Ordner **"PersonalTab.cshtml**" aus dem Ordner **"ViewsPersonalTab** > "**,** fügen Sie die `<script>` Tags hinzu`microsoftTeams.initialize()`, und speichern Sie sie.
 
 1. Wählen Sie in Visual Studio **F5** aus, oder wählen Sie im **Menü "Debuggen**" der Anwendung die Option **"Debuggen starten**" aus.
 
@@ -566,7 +560,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Aktualisieren Des App-Pakets mit dem Entwicklerportal
 
-1. Wechseln Sie zum **Entwicklerportal** in Teams.
+1. Wechseln Sie zum [**Entwicklerportal**](https://dev.teams.microsoft.com/home).
 
 1. Öffnen Sie **Apps** , und wählen Sie **"App importieren**" aus.
 
@@ -586,21 +580,15 @@ ngrok http 3978 --host-header=localhost
 
 1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen, `https://<yourngrokurl>/tou` und speichern Sie sie.
 
-1. Wählen Sie in **app-Features** persönliche App aus, geben Sie den Namen ein, und aktualisieren **Sie die Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer.
+1. Wählen Sie in **den App-Features** **"Persönliche appCreate** > **" ihre erste persönliche App-Registerkarte** aus, geben Sie den Namen ein, und aktualisieren **Sie die Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer, und wählen Sie **"Kontext** " als "PersonalTab" aus der Dropdownliste und **"Hinzufügen**" aus.
 
-1. Wählen Sie **Speichern**.
+1. Klicken Sie auf **Speichern**.
 
 1. Im Abschnitt "Domänen" müssen Domänen von Ihren Registerkarten Ihre ngrok-URL ohne das HTTPS-Präfix `<yourngrokurl>.ngrok.io`enthalten.
 
 ### <a name="preview-your-app-in-teams"></a>Anzeigen einer Vorschau Ihrer App in Teams
 
-1. Wählen Sie in Teams auf der Symbolleiste des Entwicklerportals die Option **"Vorschau**" aus. Das Entwicklerportal informiert Sie darüber, dass Ihre App erfolgreich quergeladen wurde.
-
-1. Wählen Sie **"Apps verwalten" aus**. Ihre App ist in den quergeladenen Apps aufgeführt.
-
-1. Suchen Sie Ihre App mithilfe der Suche, und wählen Sie die drei Punkte in der Zeile aus.
-
-1. Wählen Sie die Option **"Anzeigen** " aus. Die Seite **"Hinzufügen"** wird für Ihre App angezeigt.
+1. Wählen Sie **in Teams** auf der Symbolleiste des Entwicklerportals die Vorschau aus. Entwicklerportal informiert Sie darüber, dass Ihre App erfolgreich quergeladen wurde. Die Seite **"Hinzufügen**" wird für Ihre App in Teams angezeigt.
 
 1. Wählen Sie **"Hinzufügen**" aus, um die Registerkarte auf Teams zu laden. Ihre Registerkarte ist jetzt in Teams verfügbar.
 
@@ -710,7 +698,7 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 > [!div class="nextstepaction"]
 > [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [registerkarten Teams](~/tabs/what-are-tabs.md)
 * [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
