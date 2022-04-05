@@ -1,16 +1,11 @@
 ---
 title: Einheitliche Besprechungs-Apps
 author: surbhigupta
-description: Erfahren Sie mehr über Teams Besprechungslebenszyklus und die Besprechungserfahrung des Benutzers in der Desktop- und mobilen Umgebung, die Rollen und Typen von Teilnehmern und Benutzern, die Integration von Bots und Messaging-Erweiterungen in den Besprechungslebenszyklus.
+description: 'Erfahren Sie mehr über Teams Besprechungslebenszyklus und die Besprechungserfahrung des Benutzers in der Desktop- und mobilen Umgebung, die Rollen und Typen von Teilnehmern und Benutzern, die Integration von Bots und Messaging-Erweiterungen in den Besprechungslebenszyklus.'
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 16a969c7f863bf1f4c01f6f81b9ddfb848eaaf22
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571131"
 ---
+
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 
 Teams einheitlichen Besprechungs-Apps basieren auf den folgenden Konzepten:
@@ -85,6 +80,9 @@ So verwenden Sie Registerkarten während einer Besprechung:
 1. Geben Sie im Dialogfeld in der Besprechung Ihre Antwort als Feedback ein.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
+
+:::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="Desktopansicht":::
+
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
@@ -216,7 +214,7 @@ Die folgende Tabelle enthält die Benutzertypen und listet die Features auf, auf
 > [!div class="nextstepaction"]
 > [Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen](enable-and-configure-your-app-for-teams-meetings.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md):
