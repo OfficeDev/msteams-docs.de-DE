@@ -6,12 +6,12 @@ keywords: Teams-Registerkarte „Ausgehender Webhook“
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c2705778251f44bde945efde7bfa8b519b88c8f3
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: HT
+ms.openlocfilehash: 8545f36d8449e2cf86b7af841690b8bfb8d66c6c
+ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399114"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64685625"
 ---
 # <a name="create-an-incoming-webhook"></a>Erstellen eines eingehenden Webhooks
 
@@ -95,5 +95,5 @@ Führen Sie die folgenden Schritte aus, um einen eingehenden Webhook aus einem T
 * [Erstellen eines ausgehenden Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Erstellen eines Office 365-Connectors](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Nachrichten erstellen und senden](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [Erstellen einer Schaltfläche zum Teilen in Microsoft Teams](../../concepts/build-and-test/share-to-teams.md#create-share-to-teams-button)
+* [Freigeben für Teams aus Web-Apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)

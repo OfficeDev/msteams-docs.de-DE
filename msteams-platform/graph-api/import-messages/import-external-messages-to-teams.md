@@ -1,57 +1,57 @@
 ---
 title: Verwenden von Microsoft Graph zum Importieren externer Plattformnachrichten in Teams
-description: Beschreibt, wie Microsoft Graph zum Importieren von Nachrichten von einer externen Plattform in Teams
+description: Beschreibt die Verwendung von Microsoft Graph zum Importieren von Nachrichten von einer externen Plattform in Teams
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-keywords: Teams importieren Nachrichten-API-Diagramm Microsoft migrieren Migrationsbeitrag
-ms.openlocfilehash: 559dcc1c6ab19032854ca5a431268bed0ea2540f
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+keywords: Teams importieren Nachrichten-API Graph Microsoft Migrate Migration Post
+ms.openlocfilehash: 5a33334367d0f5c229874decd5e45c5bb89ceafc
+ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398638"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64685632"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Plattform-Nachrichten von Drittanbietern mithilfe von Microsoft Graph in Teams importieren
 
-Mit Microsoft Graph können Sie den vorhandenen Nachrichtenverlauf und die Daten von Benutzern aus einem externen System in einen Teams Kanal migrieren. Durch die Aktivierung der Neugestaltung einer Plattform-Messaging-Hierarchie eines Drittanbieters innerhalb Teams können Benutzer ihre Kommunikation nahtlos fortsetzen und ohne Unterbrechung fortfahren.
+Mit Microsoft Graph können Sie den vorhandenen Nachrichtenverlauf und die Daten der Benutzer aus einem externen System in einen Teams Kanal migrieren. Durch die Aktivierung der Wiederherstellung einer Drittanbieterplattform-Messaginghierarchie innerhalb Teams können Benutzer ihre Kommunikation nahtlos fortsetzen und ohne Unterbrechung fortfahren.
 
 > [!NOTE]
 > Microsoft kann in Zukunft von Ihnen oder Ihren Kunden fordern, basierend auf der Menge der importierten Daten, zusätzliche Gebühren zu zahlen.
 
-## <a name="import-overview"></a>Übersicht über den Import
+## <a name="import-overview"></a>Importübersicht
 
-Auf hoher Ebene besteht der Importvorgang aus folgenden Komponenten:
+Auf hoher Ebene besteht der Importprozess aus folgenden Komponenten:
 
 1. [Erstellen Sie ein Team mit einem Back-in-Time-Zeitstempel](#step-1-create-a-team).
-1. [Erstellen Sie einen Kanal mit einem Back-in-Time-Zeitstempel](#step-2-create-a-channel).
-1. [Importieren externer Nachrichten mit Zurück-in-Time-Benachrichtigungen](#step-3-import-messages).
-1. [Schließen Sie den Migrationsprozess für Team und Kanal ab](#step-4-complete-migration-mode).
+1. [Erstellen Eines Kanals mit einem Zeitstempel "Zurück in die Zeit"](#step-2-create-a-channel).
+1. [Importieren externer nachrichten mit Back-in-Time-Datum](#step-3-import-messages).
+1. [Abschließen des Team- und Kanalmigrationsprozesses](#step-4-complete-migration-mode).
 1. [Fügen Sie Teammitglieder hinzu](#step-five-add-team-members).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 ### <a name="analyze-and-prepare-message-data"></a>Analysieren und Vorbereiten von Nachrichtendaten
 
-* Überprüfen Sie die Drittanbieterdaten, um zu entscheiden, was migriert wird.  
+* Überprüfen Sie die Drittanbieterdaten, um zu entscheiden, was migriert werden soll.  
 * Extrahieren Sie die ausgewählten Daten aus dem Drittanbieter-Chatsystem.  
 * Ordnen Sie die Chatstruktur eines Drittanbieters der Teams Struktur zu.  
-* Konvertieren von Importdaten in das für die Migration erforderliche Format.  
+* Konvertieren Von Importdaten in das für die Migration erforderliche Format.  
 
 ### <a name="set-up-your-office-365-tenant"></a>Einrichten des Office 365-Mandanten
 
-* Stellen Sie sicher, dass für die Importdaten ein Office 365 Mandanten vorhanden ist. Weitere Informationen zum Einrichten eines Office 365 Mandanten für Teams finden Sie unter [Vorbereiten Ihres Office 365 Mandanten](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+* Stellen Sie sicher, dass ein Office 365 Mandanten für die Importdaten vorhanden ist. Weitere Informationen zum Einrichten eines Office 365 Mandanten für Teams finden Sie unter [Vorbereiten Ihres Office 365 Mandanten](../../concepts/build-and-test/prepare-your-o365-tenant.md).
 * Stellen Sie sicher, dass sich Teammitglieder in Azure Active Directory befinden. Weitere Informationen finden Sie unter [Hinzufügen eines neuen Benutzers](/azure/active-directory/fundamentals/add-users-azure-active-directory) zu Azure AD.
 
 ## <a name="step-1-create-a-team"></a>Schritt 1: Erstellen eines Teams
 
 Da Sie vorhandene Daten migrieren, sind die Aufrechterhaltung der ursprünglichen Nachrichtenzeitstempel und das Verhindern von Nachrichtenaktivitäten während des Migrationsprozesses entscheidend, um den vorhandenen Nachrichtenfluss des Benutzers in Teams neu zu erstellen. Dies wird wie folgt erreicht:
 
-> [Erstellen Sie ein neues Team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) mit einem Back-in-Timestamp mithilfe der Teamressourceneigenschaft `createdDateTime` . Platzieren Sie das neue Team in `migration mode`einem speziellen Zustand, der Benutzer von den meisten Aktivitäten innerhalb des Teams bis zum Abschluss des Migrationsprozesses einschränkt. Schließen Sie das `teamCreationMode` Instanzattribut mit dem `migration` Wert in die POST-Anforderung ein, um das neue Team explizit als für die Migration erstellt zu identifizieren.  
+> [Erstellen Sie ein neues Team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) mit einem Back-in-Time-Zeitstempel mithilfe der Teamressourceneigenschaft `createdDateTime` . Platzieren Sie das neue Team in `migration mode`einem speziellen Zustand, der Benutzer von den meisten Aktivitäten innerhalb des Teams bis zum Abschluss des Migrationsprozesses einschränkt. Schließen Sie das `teamCreationMode` Instanzattribut mit dem `migration` Wert in die POST-Anforderung ein, um das neue Team explizit als für die Migration erstellt zu identifizieren.  
 
 > [!NOTE]
-> Das `createdDateTime` Feld wird nur für Instanzen eines Teams oder Kanals ausgefüllt, die migriert wurden.
+> Das `createdDateTime` Feld wird nur für Instanzen eines Teams oder Kanals aufgefüllt, die migriert wurden.
 
 <!-- markdownlint-disable MD001 -->
 
@@ -59,7 +59,7 @@ Da Sie vorhandene Daten migrieren, sind die Aufrechterhaltung der ursprüngliche
 
 |ScopeName|DisplayName|Beschreibung|Typ|Administratorzustimmung?|Behandelte Entitäten/APIs|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Migration zu Microsoft Teams verwalten|Erstellen und Verwalten von Ressourcen für die Migration zu Microsoft Teams.|**Nur-Anwendung**|**Ja**|`POST /teams`|
+|`Teamwork.Migrate.All`|Migration zu Microsoft Teams verwalten|Erstellen und Verwalten von Ressourcen für die Migration zu Microsoft Teams.|**Nur Anwendung**|**Ja**|`POST /teams`|
 
 #### <a name="request-create-a-team-in-migration-state"></a>Anforderung (Erstellen eines Teams im Migrationsstatus)
 
@@ -97,15 +97,15 @@ Sie können die Fehlermeldung in den folgenden Szenarien erhalten:
 
 ## <a name="step-2-create-a-channel"></a>Schritt 2: Erstellen eines Kanals
 
-Das Erstellen eines Kanals für die importierten Nachrichten ähnelt dem Szenario "Team erstellen":
+Das Erstellen eines Kanals für die importierten Nachrichten ähnelt dem Szenario zum Erstellen eines Teams:
 
-> [Erstellen Sie einen neuen Kanal](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) mit einem Back-in-Timestamp mithilfe der Kanalressourceneigenschaft `createdDateTime` . Platzieren Sie den neuen Kanal in `migration mode`einem speziellen Zustand, der Benutzer von den meisten Chataktivitäten innerhalb des Kanals bis zum Abschluss des Migrationsvorgangs einschränkt. Schließen Sie das `channelCreationMode` Instanzattribut mit dem `migration` Wert in die POST-Anforderung ein, um das neue Team explizit als für die Migration erstellt zu identifizieren.  
+> [Erstellen Sie einen neuen Kanal](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) mit einem Back-in-Time-Zeitstempel mithilfe der Kanalressourceneigenschaft `createdDateTime` . Platzieren Sie den neuen Kanal in `migration mode`einem speziellen Zustand, der Benutzer von den meisten Chataktivitäten innerhalb des Kanals bis zum Abschluss des Migrationsprozesses einschränkt. Schließen Sie das `channelCreationMode` Instanzattribut mit dem `migration` Wert in die POST-Anforderung ein, um das neue Team explizit als für die Migration erstellt zu identifizieren.  
 <!-- markdownlint-disable MD024 -->
 #### <a name="permission"></a>Berechtigung
 
 |ScopeName|DisplayName|Beschreibung|Typ|Administratorzustimmung?|Behandelte Entitäten/APIs|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Migration zu Microsoft Teams verwalten|Erstellen und Verwalten von Ressourcen für die Migration zu Microsoft Teams.|**Nur-Anwendung**|**Ja**|`POST /teams`|
+|`Teamwork.Migrate.All`|Migration zu Microsoft Teams verwalten|Erstellen und Verwalten von Ressourcen für die Migration zu Microsoft Teams.|**Nur Anwendung**|**Ja**|`POST /teams`|
 
 #### <a name="request-create-a-channel-in-migration-state"></a>Anforderung (Erstellen eines Kanals im Migrationsstatus)
 
@@ -150,17 +150,17 @@ HTTP/1.1 202 Accepted
 Sie können die Fehlermeldung in den folgenden Szenarien erhalten:
 
 * Wenn `createdDateTime` für die Zukunft festgelegt ist.
-* Wenn `createdDateTime` richtig angegeben, aber `channelCreationMode` instanzattribut fehlt oder auf ungültigen Wert festgelegt ist.
+* Wenn `createdDateTime` richtig angegeben, aber `channelCreationMode` das Instanzattribut fehlt oder auf einen ungültigen Wert festgelegt ist.
 
 ## <a name="step-3-import-messages"></a>Schritt 3: Importieren von Nachrichten
 
-Nachdem das Team und der Kanal erstellt wurden, können Sie mit dem Senden von Back-in-Time-Nachrichten mithilfe der `createdDateTime`  Schlüssel im `from` Anforderungstext beginnen.
+Nachdem das Team und der Kanal erstellt wurden, können Sie mit dem Senden von Back-in-Time-Nachrichten beginnen, indem Sie die `createdDateTime`  Schlüssel `from` im Anforderungstext verwenden.
 
 > [!NOTE]
 >
-> * Nachrichten, die mit `createdDateTime` früher als dem Nachrichtenthread `createdDateTime` importiert wurden, werden nicht unterstützt.
-> * `createdDateTime` muss nachrichtenübergreifend im selben Thread eindeutig sein.
-> * `createdDateTime` unterstützt Zeitstempel mit Millisekunden-Genauigkeit. Wenn die eingehende Anforderungsnachricht beispielsweise den Wert `createdDateTime` *2020-09-16T05:50:31.0025302Z* hat, wird sie in *2020-09-16T05:50:31.002Z* konvertiert, wenn die Nachricht aufgenommen wird.
+> * Nachrichten, die mit `createdDateTime` einer früheren Version als dem Nachrichtenthread `createdDateTime` importiert wurden, werden nicht unterstützt.
+> * `createdDateTime` muss für alle Nachrichten im selben Thread eindeutig sein.
+> * `createdDateTime` unterstützt Zeitstempel mit Millisekundengenauigkeit. Wenn die eingehende Anforderungsnachricht beispielsweise den Wert `createdDateTime` *"2020-09-16T05:50:31.0025302Z*" aufweist, wird sie in *2020-09-16T05:50:31.002Z* konvertiert, wenn die Nachricht erfasst wird.
 
 #### <a name="request-post-message-that-is-text-only"></a>Anforderung (NUR-TEXT-POST-Nachricht)
 
@@ -231,12 +231,12 @@ HTTP/1.1 200 OK
 400 Bad Request
 ```
 
-#### <a name="request-post-a-message-with-inline-image"></a>Anforderung (POST eine Nachricht mit Inlinebild)
+#### <a name="request-post-a-message-with-inline-image"></a>Anforderung (POST einer Nachricht mit Inlinebild)
 
 > [!NOTE]
 >
 > * In diesem Szenario gibt es keine speziellen Berechtigungsbereiche, da die Anforderung Teil von `chatMessage`ist.
-> * Hier gelten die Bereiche, die gelten `chatMessage` .
+> * Die hier zutreffenden `chatMessage` Bereiche.
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
@@ -297,9 +297,9 @@ HTTP/1.1 200 OK
 
 ## <a name="step-4-complete-migration-mode"></a>Schritt 4: Abschließen des Migrationsmodus
 
-Nachdem der Nachrichtenmigrationsprozess abgeschlossen ist, werden sowohl das Team als auch der Kanal mithilfe der Methode aus dem  `completeMigration` Migrationsmodus ausgeschlossen. In diesem Schritt werden die Team- und Kanalressourcen für die allgemeine Verwendung durch Teammitglieder geöffnet. Die Aktion ist an die `team` Instanz gebunden. Bevor das Team abgeschlossen ist, müssen alle Kanäle außerhalb des Migrationsmodus abgeschlossen sein.
+Nach Abschluss des Nachrichtenmigrationsprozesses werden sowohl das Team als auch der Kanal mithilfe der Methode aus dem  `completeMigration` Migrationsmodus genommen. In diesem Schritt werden die Team- und Kanalressourcen für die allgemeine Verwendung durch Teammitglieder geöffnet. Die Aktion ist an die `team` Instanz gebunden. Bevor das Team abgeschlossen ist, müssen alle Kanäle außerhalb des Migrationsmodus abgeschlossen sein.
 
-#### <a name="request-end-channel-migration-mode"></a>Anforderung (Ende des Kanalmigrationsmodus)
+#### <a name="request-end-channel-migration-mode"></a>Anforderung (Kanalmigrationsmodus beenden)
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/completeMigration
@@ -324,11 +324,11 @@ POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
 HTTP/1.1 204 NoContent
 ```
 
-Aktion, die für eine `team` aufgerufen wird oder `channel` die sich nicht in `migrationMode`befindet.
+Aktion, die für eine `team` oder `channel` die nicht in `migrationMode`aufgerufen wird.
 
 ## <a name="step-five-add-team-members"></a>Schritt 5: Hinzufügen von Teammitgliedern
 
-Sie können ein Mitglied zu einem Team [hinzufügen, indem Sie die Teams-Benutzeroberfläche](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) oder Microsoft Graph [Mitglieder-API hinzufügen](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true):
+Sie können ein Mitglied zu einem Team [hinzufügen, indem Sie die Teams-Benutzeroberfläche](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) oder die Microsoft Graph [Member-API hinzufügen](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true):
 
 #### <a name="request-add-member"></a>Anforderung (Mitglied hinzufügen)
 
@@ -358,30 +358,31 @@ HTTP/1.1 204 No Content
 
 * Sie können dem neuen Team nur Teammitglieder hinzufügen, nachdem die `completeMigration` Anforderung eine erfolgreiche Antwort zurückgegeben hat.
 
-* Einschränkung: Nachrichten werden mit fünf RPS pro Kanal importiert.
+* Drosselung: Nachrichten werden mit fünf RPS pro Kanal importiert.
 
 * Wenn Sie eine Korrektur an den Migrationsergebnissen vornehmen müssen, müssen Sie das Team löschen und die Schritte wiederholen, um das Team und den Kanal zu erstellen und die Nachrichten erneut zu migrieren.
 
 > [!NOTE]
-> Derzeit sind Inlinebilder der einzige Medientyp, der vom Importnachrichten-API-Schema unterstützt wird.
+> Derzeit sind Inlinebilder der einzige Medientyp, der vom Api-Schema für den Import von Nachrichten unterstützt wird.
 
-##### <a name="import-content-scope"></a>Importieren des Inhaltsbereichs
+##### <a name="import-content-scope"></a>Inhaltsbereich importieren
 
 Die folgende Tabelle enthält den Inhaltsbereich:
 
-|In-Scope | Derzeit außerhalb des Gültigkeitsbereichs|
+|Bereichsbezogener Bereich | Derzeit außerhalb des Gültigkeitsbereichs|
 |----------|--------------------------|
 |Team- und Kanalnachrichten|1:1- und Gruppenchatnachrichten|
-|Erstellungszeitpunkt der ursprünglichen Nachricht|Private Kanäle|
+|Erstellungszeit der ursprünglichen Nachricht|Private Kanäle|
 |Inlinebilder als Teil der Nachricht|Bei Erwähnungen|
 |Links zu vorhandenen Dateien in SPO oder OneDrive|Reaktionen|
 |Nachrichten mit Rich-Text|Videos|
-|Nachrichtenantwortkette|Ankündigungen|
+|Nachrichtenantwortkette|Announcements|
 |Verarbeitung mit hohem Durchsatz|Codeausschnitte|
 ||Sticker|
 ||Emojis|
 ||Zitate|
-||Beiträge zwischen Kanälen querstellen|
+||Übergreifende Beiträge zwischen Kanälen|
+||Freigegebene Kanäle|
 
 ## <a name="see-also"></a>Siehe auch
 
