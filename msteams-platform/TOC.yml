@@ -529,8 +529,14 @@
           href: resources/partner-apps-for-moodle.md
         - name: Häufig gestellte Fragen zu Moodle
           href: resources/faqs.md
-    - name: Erstellen einer Schaltfläche zum Teilen in Microsoft Teams
-      href: concepts/build-and-test/share-to-teams.md
+    - name: Für Teams freigeben
+      items:
+        - name: Übersicht
+          href: concepts/build-and-test/share-to-teams-overview.md
+        - name: Von Web-Apps für Teams freigeben
+          href: concepts/build-and-test/share-to-teams-from-web-apps.md
+        - name: Für Teams über persönliche App oder Registerkarte freigeben
+          href: concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
     - name: Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint
       href: tabs/how-to/tabs-in-sharepoint.md
     - name: Erstellen von Deep-Links

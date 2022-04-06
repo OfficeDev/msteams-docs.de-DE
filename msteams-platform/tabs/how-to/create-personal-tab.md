@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: Yeoman ASP.NET MVC-Paket-Appmanifest-Domänenberechtigungsspeicher für Unterhaltungen
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: b0da768a74ab6925f95ce89e38cecdaa96e084e6
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.openlocfilehash: 91099b1acdea7b89305db9aad894c94019de4695
+ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685646"
+ms.locfileid: "64686683"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
@@ -252,12 +252,8 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Hochladen Der Anwendung Teams
 
-1. Wechseln Sie zu Microsoft Teams, und wählen Sie **Store**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store"::: aus.
-1. Wählen Sie **"Apps verwalten" aus.**
-1. Wählen Sie **"App veröffentlichen**" und **Hochladen einer benutzerdefinierten App** aus.
-
-    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Hochladen benutzerdefinierte App" border="true":::
-
+1. Wechseln Sie zu Microsoft Teams, und wählen Sie **"Apps**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store&quot; aus":::.
+1. Wählen Sie **"Apps verwalten"** und **Hochladen einer benutzerdefinierten App** aus.
 1. Wechseln Sie zu Ihrem Projektverzeichnis, navigieren Sie zum Ordner **"./package** ", wählen Sie den ZIP-Ordner aus, und wählen Sie **"Öffnen**" aus.
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Hinzufügen Ihrer persönlichen Registerkarte" border="true":::
