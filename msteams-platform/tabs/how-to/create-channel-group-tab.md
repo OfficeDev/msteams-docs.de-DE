@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 736b8821a7d0f9e1eda35377bc4937e68c035c75
-ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
+ms.openlocfilehash: bc7cb1fceef586959be44ba680874914c4f07cc1
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64686676"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64737046"
 ---
 # <a name="channel-or-group-tab"></a>Kanal- oder Gruppenregisterkarte
 
@@ -51,7 +51,7 @@ Im Folgenden sind die Schritte zum Erstellen einer Kanal- oder Gruppenregisterka
     yo teams
     ```
 
-1. Stellen Sie Ihre Werte für eine Reihe von Fragen bereit, die von Microsoft Teams App-Generator aufgefordert werden, ihre **Datei manifest.json** zu aktualisieren:
+1. Stellen Sie Ihre Werte für eine Reihe von Fragen bereit, die Microsoft Teams App-Generator zum Aktualisieren Der `manifest.json` Datei auffordert:
 
     ![Screenshot zum Öffnen des Generators](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -137,13 +137,17 @@ Im Folgenden sind die Schritte zum Erstellen einer Kanal- oder Gruppenregisterka
     </details>
 
 > [!IMPORTANT]
-> Die Pfadkomponente **"yourDefaultTabNameTab** " ist der Wert, den Sie im Generator für den **Standardregisterkartennamen** plus das Wort **Tab** eingegeben haben.
->
-> Beispiel: "DefaultTabName" ist **"MyTab"** und " **/MyTabTab/"**
+> Die Pfadkomponente **"yourDefaultTabNameTab** " ist der Wert, den Sie im Generator für den **Standardregisterkartennamen** plus das Wort **Tab** eingegeben haben. `DefaultTabName` Beispiel: **"MyTab"** und " **/MyTabTab/"**.
+
+<!--- TBD: this info seems removed from the main branch.
+* A **full color icon** measuring 192 x 192 pixels.
+* A **transparent outline icon** measuring 32 x 32 pixels.
+* A `manifest.json` file that specifies the attributes of your app.
+--->
 
 ### <a name="create-your-app-package"></a>Erstellen Ihres App-Pakets
 
-Sie müssen über ein App-Paket verfügen, um Ihre Anwendung in Teams erstellen und ausführen zu können. Das App-Paket wird mithilfe einer gulp-Aufgabe erstellt, die die Datei **manifest.json** überprüft und den ZIP-Ordner im Verzeichnis **"./package** " generiert. Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:
+Sie müssen über ein App-Paket verfügen, um Ihre Anwendung in Teams erstellen und ausführen zu können. Das App-Paket wird mithilfe einer gulp-Aufgabe erstellt, die die `manifest.json` Datei überprüft und den ZIP-Ordner im `./package` Verzeichnis generiert. Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:
 
 ```cmd
 gulp manifest
@@ -153,7 +157,7 @@ gulp manifest
 
 #### <a name="build-your-application"></a>Erstellen Ihrer Anwendung
 
-Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um die Lösung in den Ordner **"./dist** " zu transpilieren:
+Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um ihre Lösung in den `./dist` Ordner zu transpilieren:
 
 ```cmd
 gulp build
@@ -191,11 +195,11 @@ gulp ngrok-serve
 1. Wechseln Sie zu Microsoft Teams, und wählen Sie **"Apps**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store&quot; aus":::.
 1. Wählen Sie **"Apps verwalten"** und **Hochladen einer benutzerdefinierten App** aus.
 1. Wechseln Sie zu Ihrem Projektverzeichnis, navigieren Sie zum Ordner **"./package** ", wählen Sie den ZIP-Ordner des App-Pakets aus, und wählen Sie **"Öffnen**" aus.
-    
+
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Registerkarte &quot;Hochgeladener Kanal&quot;" border="true":::
 
 1. Wählen Sie im Dialogfeld **"Hinzufügen"** aus. Ihre Registerkarte wird in Teams hochgeladen.
-    
+
     > [!NOTE]
     > Wenn  **"Hinzufügen"** nicht im Dialogfeld angezeigt wird, entfernen Sie den folgenden Code aus dem Manifest des hochgeladenen Postfachordners des App-Pakets. Zippen Sie den Ordner erneut, und laden Sie ihn in Teams hoch.
     >
@@ -210,7 +214,7 @@ gulp ngrok-serve
 1. Wählen Sie **"Speichern"** aus, und Ihre Registerkarte wird der Registerkartenleiste des Kanals hinzugefügt.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Kanalregisterkarte hochgeladen" border="true":::
-    
+
     Jetzt haben Sie erfolgreich Ihre Kanal- oder Gruppenregisterkarte in Teams erstellt und hinzugefügt.
 
 ::: zone-end
@@ -285,7 +289,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
 * Ein **Vollfarbsymbol** mit einer Abmessung von 192 x 192 Pixeln.
 * Ein **transparentes Gliederungssymbol** mit einer Abmessung von 32 x 32 Pixeln.
-* Eine **manifest.json-Datei** , die die Attribute Ihrer App angibt.
+* Eine `manifest.json` Datei, die die Attribute Ihrer App angibt.
 
 Diese Dateien müssen in einem App-Paket gezippt werden, damit Sie Ihre Registerkarte in Teams hochladen können. Wenn ein Benutzer ihre Registerkarte hinzufügen oder aktualisieren möchte, lädt Microsoft Teams die `configurationUrl` in Ihrem Manifest angegebene Datei, bettet sie in einen IFrame ein und rendert sie auf Ihrer Registerkarte.
 
@@ -383,6 +387,11 @@ Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und
     > [!TIP]
     > Sie müssen sowohl Ihre Anwendung in Visual Studio als auch ngrok ausführen, um die in diesem Artikel beschriebenen Schritte auszuführen. Wenn Sie die Ausführung Ihrer Anwendung in Visual Studio beenden müssen, um daran zu arbeiten, führen Sie **ngrok weiter** aus. Beim Neustart in Visual Studio wird die Anforderung der Anwendung überwacht und fortgesetzt. Wenn Sie den ngrok-Dienst neu starten müssen, wird eine neue URL zurückgegeben, und Sie müssen Ihre Anwendung mit der neuen URL aktualisieren.
 
+<!--- TBD: This note seems to be removed from main. Commenting it for now.
+> [!NOTE]
+> App Studio can be used to edit your `manifest.json` file and upload the completed package to Teams. You can also manually edit the `manifest.json` file. If you do, ensure that you build the solution again to create the `tab.zip` file to upload.
+--->
+
 ### <a name="update-your-app-package-with-developer-portal"></a>Aktualisieren Ihres App-Pakets mit dem Entwicklerportal
 
 1. Wechseln Sie zu Microsoft Teams. Wenn Sie die [webbasierte Version](https://teams.microsoft.com) verwenden, können Sie Ihren Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md) Ihres Browsers überprüfen.
@@ -391,13 +400,18 @@ Stellen Sie sicher, dass die Eingabeaufforderung mit ngrok ausgeführt wird, und
 
 1. Öffnen Sie **Apps** , und wählen Sie **"App importieren**" aus.
 
-1. Der Name Des App-Pakets ist **tab.zip**. Es ist im folgenden Pfad verfügbar:
+<!--- TBD: This steps seems to be removed from main now so commenting it for now.
+
+1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+--->
+
+1. Der Name Ihres App-Pakets lautet `tab.zip`. Es ist im folgenden Pfad verfügbar:
 
     ```bash
     /bin/Debug/netcoreapp3.1/tab.zip
     ```
 
-1. Wählen Sie **tab.zip** aus, und öffnen Sie es im Entwicklerportal.
+1. Wählen Sie sie aus, und öffnen Sie `tab.zip` sie im Entwicklerportal.
 
 1. Eine **Standard-App-ID** wird im Abschnitt **"Grundlegende Informationen** " erstellt und aufgefüllt.
 
@@ -487,7 +501,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
 * Ein **Vollfarbsymbol** mit einer Abmessung von 192 x 192 Pixeln.
 * Ein **transparentes Gliederungssymbol** mit einer Abmessung von 32 x 32 Pixeln.
-* Eine **manifest.json-Datei** , die die Attribute Ihrer App angibt.
+* Eine `manifest.json` Datei, die die Attribute Ihrer App angibt.
 
 Diese Dateien müssen in einem App-Paket gezippt werden, damit Sie Ihre Registerkarte in Teams hochladen können.
 

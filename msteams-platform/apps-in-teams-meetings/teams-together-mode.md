@@ -3,12 +3,12 @@ title: Benutzerdefinierte Zusammen-Modus-Szenen
 description: Arbeiten mit benutzerdefinierte Zusammen-Modus-Szenen
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 7249c907cd5afc68714be4a38a8f033c22382181
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 047e2aa04bfb0196ab7a01e91ce54b01d61f64bf
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356084"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64736872"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Benutzerdefinierte Zusammen-Modus-Szenen
 
@@ -125,7 +125,7 @@ Optional können Sie **Freigeben** im Dropdownmenü **Speichern** auswählen. Si
 
 Nach der Vorschau wird die Szene als App an Teams gesendet, indem die Schritte für die App-Übermittlung ausgeführt werden. Für diesen Schritt ist das App-Paket erforderlich. Das App-Paket unterscheidet sich vom Szenenpaket für die Szene, die entworfen wurde. Das automatisch erstellte App-Paket befindet sich im Abschnitt **Apps** im Teams Developer Center.
 
-Optional wird das Szenenpaket abgerufen, indem sie **Exportieren** im Dropdownmenü **Speichern** auswählen. Eine **.zip**-Datei, d. h. das Szenenpaket, wird heruntergeladen. Das Szenenpaket enthält "scene.json" und die PNG-Objekte, die zum Erstellen einer Szene verwendet werden. Das Szenenpaket wird überprüft, um andere Änderungen zu integrieren:
+Optional wird das Szenenpaket abgerufen, indem sie **Exportieren** im Dropdownmenü **Speichern** auswählen. Eine .zip-Datei, d. h. das Szenenpaket, wird heruntergeladen. Das Szenenpaket enthält "scene.json" und die PNG-Objekte, die zum Erstellen einer Szene verwendet werden. Das Szenenpaket wird überprüft, um andere Änderungen zu integrieren:
 
 ![Eine Szene exportieren](../assets/images/apps-in-meetings/build-a-scene.png)
 

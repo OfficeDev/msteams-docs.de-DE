@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: Yeoman ASP.NET MVC-Paket-Appmanifest-Domänenberechtigungsspeicher für Unterhaltungen
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 91099b1acdea7b89305db9aad894c94019de4695
-ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
+ms.openlocfilehash: 40afdd1692b0f5d7c99eaaf228969ba8c95ba20b
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64686683"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64737212"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
@@ -55,7 +55,7 @@ Im Folgenden sind die Schritte zum Erstellen einer persönlichen Registerkarte a
     yo teams
     ```
 
-1. Stellen Sie Ihre Werte für eine Reihe von Fragen bereit, die von Microsoft Teams App-Generator aufgefordert werden, ihre **Manifest.json-Datei** zu aktualisieren.
+1. Stellen Sie Ihre Werte für eine Reihe von Fragen bereit, die Microsoft Teams App-Generator zum Aktualisieren Der `manifest.json` Datei auffordert.
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams-Generator" border="true":::
 
@@ -164,7 +164,7 @@ Erstellen Sie eine Inhaltsseite, und aktualisieren Sie die vorhandenen Dateien d
     ./src/public/<yourDefaultTabNameTab>/personal.html
     ```
 
-1. Öffnen Sie **manifest.json** am folgenden Speicherort in Ihrem Visual Studio Code:
+1. Öffnen Sie `manifest.json` in Ihrem Visual Studio Code den folgenden Speicherort:
 
     ```
      ./src/manifest/manifest.json
@@ -189,7 +189,7 @@ Erstellen Sie eine Inhaltsseite, und aktualisieren Sie die vorhandenen Dateien d
 
 1. Aktualisieren Sie die **contentURL-Pfadkomponente** **"yourDefaultTabNameTab** " mit Ihrem tatsächlichen Registerkartennamen.
 
-1. Speichern Sie die aktualisierte Datei **manifest.json** .
+1. Speichern Sie die aktualisierte `manifest.json` Datei.
 
 1. Öffnen Sie **Tab.ts** in Ihrem Visual Studio Code über den folgenden Pfad, um Die Inhaltsseite in einem IFrame bereitzustellen:
 
@@ -207,11 +207,7 @@ Erstellen Sie eine Inhaltsseite, und aktualisieren Sie die vorhandenen Dateien d
 
 ### <a name="create-your-app-package"></a>Erstellen Ihres App-Pakets
 
-Sie müssen über ein App-Paket verfügen, um Ihre Anwendung in Teams erstellen und ausführen zu können. Das App-Paket wird mithilfe einer gulp-Aufgabe erstellt, die die Datei **manifest.json** überprüft und den ZIP-Ordner im Verzeichnis **"./package** " generiert. Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:
-
-```cmd
-gulp manifest
-```
+Sie müssen über ein App-Paket verfügen, um Ihre Anwendung in Teams erstellen und ausführen zu können. Das App-Paket wird mithilfe einer gulp-Aufgabe erstellt, die die `manifest.json` Datei überprüft und den ZIP-Ordner im `./package` Verzeichnis generiert. Verwenden Sie an der Eingabeaufforderung den Befehl `gulp manifest`.
 
 ### <a name="build-and-run-your-application"></a>Erstellen und Ausführen der Anwendung
 
@@ -334,9 +330,9 @@ ASP.NET Core behandelt Dateien, die als **Index** bezeichnet werden, als Standar
 
 Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
-* Ein **Vollfarbsymbol** mit einer Abmessung von 192 x 192 Pixeln.
-* Ein **transparentes Gliederungssymbol** mit einer Abmessung von 32 x 32 Pixeln.
-* Eine **manifest.json-Datei** , die die Attribute Ihrer App angibt.
+* Ein Vollfarbsymbol mit einer Abmessung von 192 x 192 Pixeln.
+* Ein transparentes Gliederungssymbol mit einer Abmessung von 32 x 32 Pixeln.
+* Eine `manifest.json` Datei, die die Attribute Ihrer App angibt.
 
 Diese Dateien müssen in einem App-Paket gezippt werden, damit Sie Ihre Registerkarte in Teams hochladen können. Microsoft Teams lädt das `contentUrl` in Ihrem Manifest angegebene Element, bettet es in einen <iframe\> ein und rendert es auf der Registerkarte.
 
@@ -391,13 +387,9 @@ ngrok http 3978 --host-header=localhost
 
 1. Öffnen Sie **Apps** , und wählen Sie **"App importieren**" aus.
 
-1. Der Name Des App-Pakets ist **tab.zip**. Es ist im folgenden Pfad verfügbar:
+1. Der Dateiname des App-Pakets ist `tab.zip` und ist im `/bin/Debug/netcoreapp3.1/tab.zip` Pfad verfügbar.
 
-    ```
-    /bin/Debug/netcoreapp3.1/tab.zip
-    ```
-
-1. Wählen Sie **tab.zip** aus, und öffnen Sie es im Entwicklerportal.
+1. Wählen Sie sie aus, und öffnen Sie `tab.zip` sie im Entwicklerportal.
 
 1. Eine **Standard-App-ID** wird im Abschnitt **"Grundlegende Informationen** " erstellt und aufgefüllt.
 
@@ -489,7 +481,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
 * Ein **Vollfarbsymbol** mit einer Abmessung von 192 x 192 Pixeln.
 * Ein **transparentes Gliederungssymbol** mit einer Abmessung von 32 x 32 Pixeln.
-* Eine **manifest.json-Datei** , die die Attribute Ihrer App angibt.
+* Eine `manifest.json` Datei, die die Attribute Ihrer App angibt.
 
 Diese Dateien müssen in einem App-Paket gezippt werden, damit Sie Ihre Registerkarte in Teams hochladen können. Microsoft Teams lädt die `contentUrl` in Ihrem Manifest angegebene Datei, bettet sie in einen IFrame ein und rendert sie auf ihrer Registerkarte.
 

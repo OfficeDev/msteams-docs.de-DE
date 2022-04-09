@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: fcb8c700ecd6f925c011ba1773989622e6221e78
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 4f606363b62126731afcbc8b7f065951d8cd1a13
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501984"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64736879"
 ---
 # <a name="in-app-purchases"></a>In-App-Käufe
 
@@ -31,11 +31,11 @@ Um den Benutzern Ihrer App eine In-App-Kauferfahrung zu bieten, stellen Sie Folg
 
 * Die App wird mit der [`openPurchaseExperience`-API](#purchase-experience-api) aufgerufen.
 
-Die In-App-Kauferfahrung kann entweder durch Aktualisieren der Datei **manifest.json** oder durch Aktivieren von **In-App-Kaufangebote anzeigen** im Abschnitt **Berechtigungen** Ihres **Entwicklerportals** aktiviert werden.
+Die In-App-Kauferfahrung kann entweder durch Aktualisieren der Datei `manifest.json` oder durch Aktivieren von **In-App-Kaufangebote anzeigen** im Abschnitt **Berechtigungen** Ihres **Entwicklerportals** aktiviert werden.
 
 ### <a name="update-manifest"></a>Aktualisieren des Manifests
 
-Um die In-App-Kauferfahrung zu aktivieren, aktualisieren Sie Ihre Teams-App-Datei **manifest.json**, indem Sie die RSC-Berechtigungen hinzufügen. Dies ermöglicht Ihren App-Benutzern, ein Upgrade auf eine kostenpflichtige Version Ihrer App durchzuführen und neue Funktionalitäten zu verwenden. Das Update für das App-Manifest lautet wie folgt:
+Um die In-App-Kauferfahrung zu aktivieren, aktualisieren Sie Ihre Teams-App-Datei `manifest.json`, indem Sie die RSC-Berechtigungen hinzufügen. Dies ermöglicht Ihren App-Benutzern, ein Upgrade auf eine kostenpflichtige Version Ihrer App durchzuführen und neue Funktionalitäten zu verwenden. Das Update für das App-Manifest lautet wie folgt:
 
 ```json
 
