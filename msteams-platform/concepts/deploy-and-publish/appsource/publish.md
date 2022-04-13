@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d367824e633e129129a5c4de8900d8f1e3a19013
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 248830328e68ce5c8e844a200501d240ff9e82ea
+ms.sourcegitcommit: 1346b0eab13704807fca98f85c452214701d3fa2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398932"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64793797"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Veröffentlichen Sie Ihre App im Microsoft Teams Store
 
@@ -51,7 +51,7 @@ Wenn Sie der Meinung sind, dass Ihre App für die Produktion bereit ist, können
 
 * **Umfassende Funktions- und Benutzerfreundlichkeitstests**
 
-  Ihre App wird von einem Validierungssteuerelement gründlich überprüft, um die Einhaltung der [Microsoft Commercial Marketplace-Zertifizierungsrichtlinien](/legal/marketplace/certification-policies) mit schwerpunktmäßig umfassenden Funktions- und Benutzerfreundlichkeitstests, Benutzerfreundlichkeitsprüfungen und Metadatenüberprüfungen sicherzustellen. Die App-Überprüfung wird auf Desktop-, Web- und mobilen Clients durchgeführt.
+  Ihre App wird von einem Prüfer gründlich geprüft, um sicherzustellen, dass sie den [Zertifizierungsrichtlinien des Microsoft Commercial Marketplace](/legal/marketplace/certification-policies) entspricht. Der Schwerpunkt liegt dabei auf tiefgreifenden Funktions- und Benutzererfahrungstests, Prüfungen der Benutzerfreundlichkeit und Metadatenprüfungen. Die App-Validierung wird für Desktop-, Web- und mobile Clients durchgeführt. Wir bemühen uns, Ihnen innerhalb von 24 Arbeitsstunden nach der Einreichung einen detaillierten Testbericht zur Verfügung zu stellen.
 
 * **Geführte App-Veröffentlichung über den Concierge-Dienst**
 
