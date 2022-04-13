@@ -4,12 +4,12 @@ author: surbhigupta
 description: Erfahren Sie mehr über Teams Besprechungslebenszyklus und die Besprechungserfahrung des Benutzers in der Desktop- und mobilen Umgebung, Teilnehmer- und Benutzerrollen und -typen, integrieren Sie Bots und Messaging-Erweiterungen in den Besprechungslebenszyklus.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 3d6ae0769f7138ff1ecd9946372153e1c8aae769
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 4a99759d5d165f79cff374622abbfe805bb3b208
+ms.sourcegitcommit: 1d9531cf751b72ed1784da6409cfc89d5f53950e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826985"
+ms.locfileid: "64827190"
 ---
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 
@@ -107,6 +107,7 @@ Das Dialogfeld "In der Besprechung" wird angezeigt, in dem Sie Ihre Antwort als 
 > * Apps können das Teams Client SDK nutzen, um auf das `meetingId``userMri`Client-SDK zuzugreifen und `frameContext` die Benutzeroberfläche entsprechend zu rendern.
 > * Wenn das Dialogfeld in der Besprechung erfolgreich gerendert wird, wird eine Benachrichtigung gesendet, dass die Ergebnisse erfolgreich heruntergeladen wurden.
 > * Ihr App-Manifest gibt die Orte an, an denen die Apps angezeigt werden sollen. Dies kann durch Angeben des Kontextfelds im Manifest erfolgen. Sie ist auch Teil einer Freigabe-Besprechungsphase, die den [angegebenen Entwurfsrichtlinien](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md) unterliegt.
+> * Die Besprechungsphase wird für anonyme Benutzer und Teams Webclient nicht unterstützt.
 
 Die folgende Abbildung veranschaulicht den Besprechungsseitenbereich:
 
@@ -169,9 +170,10 @@ Die Standardeinstellungen für Teilnehmer werden vom IT-Administrator einer Orga
 
 * **Teilnehmer**: Ein Teilnehmer ist ein Benutzer, der zur Teilnahme an der Besprechung eingeladen wird. Teilnehmer haben während der Besprechung eingeschränkte Funktionen, z. B.:
   * Sie können mit anderen Besprechungsmitgliedern interagieren, aber keine der Besprechungseinstellungen verwalten oder den Inhalt freigeben.  
-  * Sie können die Registerkarten-App auf der Besprechungsstufe anzeigen oder mit ihr interagieren, ohne die App zu installieren oder ohne App-Berechtigungen.
+  * Sie können die Registerkarten-App auf der Besprechungsphase in Teams Desktopclient anzeigen oder mit ihr interagieren, ohne die App oder app-Berechtigungen zu installieren. Sie können die App nicht in der Besprechungsphase in einem Teams Webclient anzeigen oder mit ihr interagieren.
   * Sie können die App im Seitenbereich ohne App-Berechtigungen nicht anzeigen oder mit ihr interagieren.
   * Sie sind nicht berechtigt, als Referent zu fungieren.
+  * Wenn der Teilnehmer als anonymer Benutzer beitritt, kann er die Registerkarten-App auf der Besprechungsphase weder in Teams Web- noch in Desktopclients anzeigen oder mit ihr interagieren.
 
 > [!NOTE]
 > Nur ein Organisator oder Referent kann Apps hinzufügen, entfernen oder deinstallieren.
@@ -199,7 +201,7 @@ In der folgenden Liste werden die verschiedenen Benutzertypen zusammen mit ihrer
     > [!IMPORTANT]
     > Derzeit sind Drittanbieter-Apps in Government Community Cloud (GCC) verfügbar, aber nicht für GCC-High und das Verteidigungsministerium (DEPARTMENT of Defense, DOD). Drittanbieter-Apps sind für GCC standardmäßig deaktiviert. Informationen zum Aktivieren von Apps von Drittanbietern für GCC finden Sie unter [Verwalten von App-Berechtigungsrichtlinien](/microsoftteams/teams-app-permission-policies) und [Verwalten von Apps](/microsoftteams/manage-apps).
 
-* **Anonym**: Anonyme Benutzer haben keine Azure AD Identität und sind nicht mit einem Mandanten verbunden. Die anonymen Teilnehmer sind wie externe Benutzer, aber ihre Identität wird in der Besprechung nicht angezeigt. Anonyme Benutzer können in einem Besprechungsfenster nicht auf Apps zugreifen. Ein anonymer Benutzer kann kein Organisator, aber Referent oder Teilnehmer sein.
+* **Anonym**: Anonyme Benutzer haben keine Azure AD Identität und sind nicht mit einem Mandanten verbunden. Die anonymen Teilnehmer sind wie externe Benutzer, aber ihre Identität wird in der Besprechung nicht angezeigt. Anonyme Benutzer können nicht auf Apps in einem Besprechungsfenster und einer Besprechungsphase zugreifen. Ein anonymer Benutzer kann kein Organisator, aber Referent oder Teilnehmer sein.
 
     > [!NOTE]
     > Anonyme Benutzer erben die globale Standard-App-Berechtigungsrichtlinie auf Benutzerebene. Weitere Informationen finden Sie [unter "Apps verwalten](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)".
@@ -211,15 +213,15 @@ Die folgende Tabelle enthält die Benutzertypen und listet die Features auf, auf
 | Benutzertyp | Registerkarten | Bots | Messaging-Erweiterungen | Adaptive Karten | Aufgabenmodule | Dialogfeld "Besprechung" | Besprechungsphase |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Anonymer Benutzer | Nicht verfügbar | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Nicht verfügbar | Nicht verfügbar |
-| Gast, Teil der Mandanten-Azure AD | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Verfügbar | Kann die App auf der Besprechungsphase starten, anzeigen und mit ihr interagieren |
-| Verbundbenutzer finden weitere Informationen unter [nicht standardmäßigen Benutzern](/microsoftteams/non-standard-users). | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Interaktion ist zulässig. Abrufen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Interaktionen im Besprechungschat sind zulässig. | Kann [starten](~/apps-in-teams-meetings/API-references.md?tabs=dotnet#share-app-content-to-stage-api) (über die SDK-API), anzeigen und mit der App auf der Besprechungsphase interagieren |
+| Gast, Teil der Mandanten-Azure AD | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Verfügbar | Kann nur auf Teams Desktopclient starten, anzeigen und mit der App in der Besprechungsphase interagieren |
+| Verbundbenutzer finden weitere Informationen unter [nicht standardmäßigen Benutzern](/microsoftteams/non-standard-users). | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Interaktion ist zulässig. Abrufen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Nicht verfügbar | Kann die App nur auf Teams Desktopclient starten, anzeigen und mit der App in der Besprechungsphase interagieren. |
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen](enable-and-configure-your-app-for-teams-meetings.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md):
