@@ -4,12 +4,12 @@ author: surbhigupta
 description: Aktivieren und konfigurieren Sie Ihre Apps für Teams Besprechungen und verschiedene Besprechungsszenarien, aktualisieren Sie das App-Manifest, konfigurieren Sie Features, z. B. In-Besprechungsdialogfeld, freigegebene Besprechungsphase, Besprechungsseite und vieles mehr
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 1f77d0924eec9c52dc2f3d10566010c2953bd66b
-ms.sourcegitcommit: 5201e7f390fbb2a9190cae1781c2f09e1746c8f7
+ms.openlocfilehash: 719019439e095abf1ef6befccb3f9f6eaa8cd22b
+ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/13/2022
-ms.locfileid: "64820195"
+ms.locfileid: "64826978"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -25,7 +25,7 @@ Mit Apps für Teams Besprechungen können Sie die Funktionen Ihrer Apps über de
 
 * Halten Sie sich an allgemeine [Teams Richtlinien für den Registerkartenentwurf](../tabs/design/tabs.md) für Szenarien vor und nach der Besprechung. Informationen zu Erfahrungen während Besprechungen finden Sie [in den Entwurfsrichtlinien für die Registerkarte "In Besprechung"](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) und den [Entwurfsrichtlinien für das Dialogfeld "In-Besprechung"](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
-* Damit Ihre App in Echtzeit aktualisiert werden kann, muss sie auf der Grundlage der Ereignisaktivitäten in der Besprechung auf dem neuesten Stand sein. Diese Ereignisse können sich im Dialogfeld "Besprechung" und in anderen Phasen des Besprechungslebenszyklus befinden. Informationen zum Dialogfeld "In der Besprechung" finden Sie `completionBotId` unter "Parameter in der [Benachrichtigungsnutzlast](API-references.md#send-an-in-meeting-notification) in der Besprechung".
+* Damit Ihre App in Echtzeit aktualisiert werden kann, muss sie auf der Grundlage der Ereignisaktivitäten in der Besprechung auf dem neuesten Stand sein. Diese Ereignisse können sich innerhalb des Dialogfelds "Besprechung" und in anderen Phasen des Besprechungslebenszyklus befinden. Informationen zum Dialogfeld "Besprechung" finden Sie `completionBotId` unter "Parameter in der [Benachrichtigungsnutzlast](API-references.md#send-an-in-meeting-notification) in der Besprechung".
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Aktivieren Ihrer App für Teams Besprechungen
 
@@ -114,8 +114,7 @@ So fügen Sie einen Bot zu einer Besprechung hinzu:
 Geben Sie in einem Besprechungschat den **@** Schlüssel ein, und wählen Sie **"Bots abrufen" aus**.
 
 > [!NOTE]
->
-> * Die Inhaltsblase sendet eine adaptive Karte oder eine Karte gleichzeitig im Besprechungschat, auf die Benutzer zugreifen können. Dies hilft den Benutzern, wenn die Besprechung oder die Teams-App minimiert wird.
+> * Das Dialogfeld "In der Besprechung" zeigt ein Dialogfeld in einer Besprechung an und veröffentlicht gleichzeitig eine adaptive Karte im Besprechungschat, auf die Benutzer zugreifen können. Die adaptive Karte im Besprechungschat hilft Benutzern bei der Teilnahme an der Besprechung oder wenn die Teams-App minimiert ist.
 > * Die Benutzeridentität muss mit [tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md) bestätigt werden. Nach der Authentifizierung kann die App die Benutzerrolle mithilfe der `GetParticipant` API abrufen.
 > * Basierend auf der Benutzerrolle kann die App rollenspezifische Erfahrungen bereitstellen. Eine Abfrage-App ermöglicht beispielsweise nur Organisatoren und Referenten das Erstellen einer neuen Umfrage.
 > * Rollenzuweisungen können geändert werden, während eine Besprechung ausgeführt wird. Weitere Informationen finden Sie [unter Rollen in einer Teams Besprechung](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).

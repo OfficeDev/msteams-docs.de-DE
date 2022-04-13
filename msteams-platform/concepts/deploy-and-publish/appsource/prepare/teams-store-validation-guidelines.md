@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c395324daba877b0e8f6030f4929dbbe5ce0dc6f
-ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
+ms.openlocfilehash: aaef04fc6e624f1d6863ac8a575c5d2662643ecd
+ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64511256"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64826992"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
@@ -1027,9 +1027,9 @@ Weitere Informationen zu Karten finden Sie unter:
 
 Die Bot-Erfahrung muss auf Mobilgeräten vollständig responsiv sein. Die Bot-Antworten müssen gegebenenfalls einen Weg nach vorn aufzeigen. Bots müssen reaktionsschnell sein und bei Fehlern eine ansprechende Fehlermeldung anzeigen. Bot-Nachrichten, die im persönlichen Bereich an die Basis des Benutzers auf Triggern in einem gemeinsamen Bereich gesendet werden, müssen kontextbezogene Informationen (einschließlich des Nachrichtenursprungs) bereitstellen.
 
-### <a name="notification-only-bots"></a>Nur Benachrichtigungs-Bots
+### <a name="notification-only-bots"></a>Nur Benachrichtigungsbots
 
-Apps, die aus reinen Benachrichtigungs-Bots bestehen, bieten dem Nutzer einen Mehrwert, indem sie auf der Grundlage bestimmter Auslöser oder Ereignisse in der Hauptanwendung oder im Backend Benachrichtigungen für den Nutzer auslösen. Beispielsweise wird ein neuer Vertriebsleiter oder Einsteiger hinzugefügt, den das Vertriebsteam weiter verfolgen kann.
+Apps, die aus reinen Benachrichtigungs-Bots bestehen, bieten dem Nutzer einen Mehrwert, indem sie auf der Grundlage bestimmter Auslöser oder Ereignisse in der Hauptanwendung oder im Backend Benachrichtigungen für den Nutzer auslösen. Beispielsweise wird ein neuer Vertriebsleiter oder Einsteiger hinzugefügt, den das Vertriebsteam weiter verfolgen kann. Ein sehr guter Benachrichtigungsbot benachrichtigt die Benutzer regelmäßig über bestimmte Ereignisvervollständigungen, z. B. Workflowvervollständigungen oder Warnungen.
 
 Eine Meldung ist für Teams von Nutzen, wenn:
 
