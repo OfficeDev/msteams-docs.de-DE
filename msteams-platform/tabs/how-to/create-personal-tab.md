@@ -7,16 +7,16 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: Yeoman ASP.NET MVC-Paket-Appmanifest-Domänenberechtigungsspeicher für Unterhaltungen
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 40afdd1692b0f5d7c99eaaf228969ba8c95ba20b
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: fda21b5bf9908529a9a20820867551202b761362
+ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737212"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64838481"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
-Persönliche Registerkarten sind zusammen mit auf eine Person bezogene Bots Bestandteil persönlicher Apps und sind auf einen einzelnen Benutzer beschränkt. Sie können an den linken Bereich angeheftet werden, um einfach darauf zugreifen zu können. Sie können auch die API für persönliche Registerkarten [neu anordnen](#reorder-static-personal-tabs) und hinzufügen[`registerOnFocused`](#add-registeronfocused-api-for-tabs-or-personal-apps).
+Persönliche Registerkarten sind zusammen mit auf eine Person bezogene Bots Bestandteil persönlicher Apps und sind auf einen einzelnen Benutzer beschränkt. Sie können an den linken Bereich angeheftet werden, um einfach darauf zugreifen zu können. Sie können auch Ihre persönlichen Registerkarten [neu anordnen](#reorder-static-personal-tabs) .
 
 Stellen Sie sicher, dass Sie über alle [Prerequsites](~/tabs/how-to/tab-requirements.md) zum Erstellen Ihrer persönlichen Registerkarte verfügen.
 
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
    Jetzt haben Sie erfolgreich Ihre persönliche Registerkarte in Teams erstellt und hinzugefügt.
   
-   Da Ihre persönliche Registerkarte in Teams ist, können Sie auch die API für Ihre persönliche Registerkarte [neu anordnen](#reorder-static-personal-tabs) und hinzufügen[`registerOnFocused`](#add-registeronfocused-api-for-tabs-or-personal-apps).
+   Da Ihre persönliche Registerkarte in Teams ist, können Sie auch Ihre persönliche Registerkarte [neu anordnen](#reorder-static-personal-tabs).
 
 ::: zone-end
 
@@ -401,7 +401,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Wählen Sie in **app-Features** **persönliche appErstellen** >  **Sie Ihre erste persönliche App-Registerkarte** aus, geben Sie den Namen ein, und aktualisieren Sie die **Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer, und wählen Sie **"Kontext** als persönliche Registerkarte" aus der Dropdownliste und **"Hinzufügen"** aus.
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern**.
 
 1. Im Abschnitt "Domänen" müssen Domänen von Ihren Registerkarten Ihre ngrok-URL ohne das HTTPS-Präfix `<yourngrokurl>.ngrok.io`enthalten.
 
@@ -415,7 +415,7 @@ ngrok http 3978 --host-header=localhost
 
    Jetzt haben Sie erfolgreich Ihre persönliche Registerkarte in Teams erstellt und hinzugefügt.
   
-   Da Ihre persönliche Registerkarte in Teams ist, können Sie auch die API für Ihre persönliche Registerkarte [neu anordnen](#reorder-static-personal-tabs) und hinzufügen[`registerOnFocused`](#add-registeronfocused-api-for-tabs-or-personal-apps).
+   Da Ihre persönliche Registerkarte in Teams ist, können Sie auch Ihre persönliche Registerkarte [neu anordnen](#reorder-static-personal-tabs).
 
 ::: zone-end
 
@@ -570,7 +570,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Wählen Sie in **app-Features** **persönliche appErstellen** >  **Sie Ihre erste persönliche App-Registerkarte** aus, geben Sie den Namen ein, und aktualisieren Sie die **Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer, und wählen Sie **"Kontext** als persönliche Registerkarte" aus der Dropdownliste und **"Hinzufügen"** aus.
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern**.
 
 1. Im Abschnitt "Domänen" müssen Domänen von Ihren Registerkarten Ihre ngrok-URL ohne das HTTPS-Präfix `<yourngrokurl>.ngrok.io`enthalten.
 
@@ -584,7 +584,7 @@ ngrok http 3978 --host-header=localhost
   
    Jetzt haben Sie erfolgreich Ihre persönliche Registerkarte in Teams erstellt und hinzugefügt.
 
-   Da Ihre persönliche Registerkarte in Teams ist, können Sie auch die API für Ihre persönliche Registerkarte [neu anordnen](#reorder-static-personal-tabs) und hinzufügen[`registerOnFocused`](#add-registeronfocused-api-for-tabs-or-personal-apps).
+   Da Ihre persönliche Registerkarte in Teams ist, können Sie auch Ihre persönliche Registerkarte [neu anordnen](#reorder-static-personal-tabs).
 
 ::: zone-end
 
@@ -611,75 +611,6 @@ Wenn Sie einen Bot mit einem **persönlichen** Bereich erstellen, wird er standa
 }
 
 ```
-
-## <a name="add-registeronfocused-api-for-tabs-or-personal-apps"></a>Hinzufügen `registerOnFocused` einer API für Registerkarten oder persönliche Apps
-
-Mit `registerOnFocused` der SDK-API können Sie eine Tastatur auf Teams verwenden. Sie können zu einer persönlichen App zurückkehren und mithilfe von STRG, UMSCHALT und F6 den Fokus auf einer Registerkarte oder persönlichen App behalten. Sie können z. B. von der persönlichen App weggehen, um nach etwas zu suchen, und dann zur persönlichen App zurückkehren oder STRG+F6 verwenden, um die erforderlichen Stellen zu durchlaufen.
-
-Der folgende Code enthält ein Beispiel für eine Handlerdefinition im `registerFocusEnterHandler` SDK, wenn der Fokus auf die Registerkarte oder persönliche App zurückgegeben werden muss:
-
-``` C#
-
-export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
-void {
-  HandlersPrivate.focusEnterHandler = handler;
-  handler && sendMessageToParent('registerHandler', ['focusEnter']);
-}
-function handleFocusEnter(navigateForward: boolean): void
- {
-  if (HandlersPrivate.focusEnterHandler)
-   {
-    HandlersPrivate.focusEnterHandler(navigateForward);
-  }
-}
-
-```
-
-Nachdem der Handler mit dem Schlüsselwort `focusEnter`ausgelöst wurde, wird der Handler `registerFocusEnterHandler` mit einer Rückruffunktion `focusEnterHandler` aufgerufen, die einen Parameter namens `navigateForward`übernimmt. Der Wert von `navigateForward` bestimmt den Ereignistyp. Dies `focusEnterHandler` wird nur durch STRG+F6 und nicht durch die TAB-TASTE aufgerufen.
-Die folgenden Tasten sind für Verschiebungsereignisse innerhalb Teams hilfreich:
-
-* Forward-Ereignis: STRG+F6-Tasten
-* Backward-Ereignis: STRG+UMSCHALT+F6-Tasten
-
-``` C#
-
-case 'focusEnter':     
-this.registerFocusEnterHandler((navigateForward: boolean = true) => {
-this.sdkWindowMessageHandler.sendRequestMessage(this.frame, this.constants.SdkMessageTypes.focusEnter, [navigateForward]);
-// Set focus on iframe or webview
-if (this.frame && this.frame.sourceElem) {
-  this.frame.sourceElem.focus();
-}
-return true;
-});
-}
-
-// callback function to be passed to the handler
-private focusEnterHandler: (navigateForward: boolean) => boolean;
-
-// function that gets invoked after handler is registered.
-private registerFocusEnterHandler(focusEnterHandler: (navigateForward: boolean) => boolean): void {
-this.focusEnterHandler = focusEnterHandler;
-this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
-}
-
-```
-
-### <a name="personal-app"></a>Persönliche App
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="Beispiel zeigt Optionen zum Hinzufügen der registerOnFocussed-API" border="true":::
-
-#### <a name="personal-app-forward-event"></a>Persönliche App: Forward-Ereignis
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="Beispiel zeigt Optionen zum Hinzufügen von registerOnFocussed-API-Vorwärtsverschiebung" border="true":::
-
-#### <a name="personal-app-backward-event"></a>Persönliche App: Backward-Ereignis
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="Beispiel zeigt Optionen zum Hinzufügen der registerOnFocussed-API nach hinten" border="true":::
-
-### <a name="tab"></a>Registerkarte
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="Beispiel zeigt Optionen zum Hinzufügen der registerOnFocussed-API für die Registerkarte" border="true":::
 
 ## <a name="next-step"></a>Nächster Schritt
 

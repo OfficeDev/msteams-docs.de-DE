@@ -4,12 +4,12 @@ description: Beschreibt alle neuen oder aktuellen Entwicklerfunktionen in Micros
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 'Teams: Was sind die neuesten Updates oder Entwicklervorschau und Features'
-ms.openlocfilehash: e977349c2a1b9685fff58ea555d1e86984246100
-ms.sourcegitcommit: 7bae0aa77b9f4818efc72133eb582d682e126cb3
+ms.openlocfilehash: a3138a2fe02ecf8b061edab82e6954195512208d
+ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64706158"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64838475"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -116,7 +116,6 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 |13.11.2021| Bots können aktiviert werden, um alle Kanalnachrichten mit ressourcenspezifischer Zustimmung (RESOURCE-Specific Consent, RSC) zu empfangen. | • Erstellen von Bots > Bot-Unterhaltungen > Nachrichten in Bot-Unterhaltungen > [Empfangen aller Kanalnachrichten mit RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Übersicht über Bot-Unterhaltungen](~/bots/how-to/conversations/conversation-basics.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Kanal- und Gruppenunterhaltungen](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 |28.10.2021| Monetarisieren Ihrer Teams-App mit einem transaktionsfähigen SaaS-Angebot | Vermarkten Ihrer App > Veröffentlichen im Teams Store > [Hinzufügen eines SaaS-Angebots in Ihrer Teams-App](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |25.10.2021| Aktualisiertes Modul „Erste Schritte“ für die Microsoft Teams-Entwicklerdokumentation mit neuer Struktur und neuen Verfahren in einer schrittweisen Anleitung | Erste Schritte > [Starten Sie mit Ihrer ersten Teams-App](get-started/get-started-overview.md) |
-|21.10.2021| Hinzufügen einer `registerOnFocused` -API für Registerkarten oder persönliche Apps | Erstellen von Registerkarten > Erstellen persönlicher Registerkarten > [Hinzufügen `registerOnFocused` einer API für Registerkarten oder persönliche Apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |20.10.2021| Die Besprechungsbühne ist jetzt allgemein verfügbar | Erstellen von Apps für Teams-Besprechungen > [Aktivieren und Konfigurieren Ihrer Apps für Teams-Besprechungen](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
 |20.10.2021| Besprechungsdetails-API und Teams-Besprechungsereignisse in Echtzeit | Erstellen von Apps für Teams-Besprechungen > [Laden der API zum Abrufen von Besprechungsdetails](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |18.10.2021| Registerkartenlink entfalten und Bühnenansicht | Erstellen von Registerkarten > [Registerkartenlink aufklappen und Phasenansicht](tabs/tabs-link-unfurling.md) |

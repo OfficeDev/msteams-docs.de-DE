@@ -4,12 +4,12 @@ author: surbhigupta
 description: Erfahren Sie mehr über Teams Besprechungslebenszyklus und die Besprechungserfahrung des Benutzers in der Desktop- und mobilen Umgebung, Teilnehmer- und Benutzerrollen und -typen, integrieren Sie Bots und Messaging-Erweiterungen in den Besprechungslebenszyklus.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 4a99759d5d165f79cff374622abbfe805bb3b208
-ms.sourcegitcommit: 1d9531cf751b72ed1784da6409cfc89d5f53950e
+ms.openlocfilehash: 4eb3b65213414b7e793795490613c343fc84ad3a
+ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/13/2022
-ms.locfileid: "64827190"
+ms.locfileid: "64838464"
 ---
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 
@@ -221,7 +221,7 @@ Die folgende Tabelle enthält die Benutzertypen und listet die Features auf, auf
 > [!div class="nextstepaction"]
 > [Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen](enable-and-configure-your-app-for-teams-meetings.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md):
