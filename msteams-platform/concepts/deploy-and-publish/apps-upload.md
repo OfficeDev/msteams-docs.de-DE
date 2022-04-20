@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: a9ac73d3c3e41c5c57892273e788855a16642457
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: d095bc5536742ad1e0b6d3e9053c6a18e5f1c0f3
+ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571107"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64952353"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Hochladen Ihrer App in Microsoft Teams
 
@@ -34,17 +34,22 @@ In den folgenden Szenarien können Sie Microsoft Teams-Apps querladen, ohne sie 
 Sie können Ihre App in ein Team, einen Chat, eine Besprechung oder zur persönlichen Verwendung querladen, je nachdem, wie Sie den Bereich Ihrer App konfiguriert haben.
 
 1. Melden Sie sich beim Teams-Client mit Ihrem [Microsoft 365-Entwicklungskonto](https://developer.microsoft.com/en-us/microsoft-365/dev-program) an.
-1. Wählen Sie **Apps** und dann **Apps** verwalten aus.
+1. Wählen Sie **Apps** > **Verwalten Ihrer Apps aus** und **Veröffentlichen einer App**.
+
+    :::image type="content" source="~/assets/images/publish-app/manage-apps.png" alt-text="Einer App veröffentlichen" border="true":::
+
 1. Wählen Sie **Benutzerdefinierte App hochladen** aus.
+
+   :::image type="content" source="~/assets/images/publish-app/publish-app.png" alt-text="Benutzerdefinierte App hochladen" border="true":::
+
 1. Wählen Sie die ZIP-Datei Ihres App-Pakets aus.
-2. Fügen Sie Ihre App gemäß Ihren Anforderungen zu Teams hinzu:</br>
+1. Fügen Sie Ihre App gemäß Ihren Anforderungen zu Teams hinzu:</br>
 
-   a. Wählen Sie **Hinzufügen** aus, um Ihre persönliche App hinzuzufügen.</br>
-   b. Verwenden Sie das Dropdownmenü, um Ihre App einem Team oder Chat hinzuzufügen.
+   a. Wählen Sie **Hinzufügen** aus, um Ihre persönliche App hinzuzufügen.</br> b. Verwenden Sie das Dropdownmenü, um Ihre App einem Team oder Chat hinzuzufügen.
 
-![Erstellen einer Teams-App](~/assets/videos/app-teams.gif)
+    :::image type="content" source="~/assets/videos/app-teams.gif" alt-text="Erstellen einer Teams-App" border="true":::
 
-## <a name="troubleshooting"></a>Problembehandlung
+## <a name="troubleshoot"></a>Troubleshooting
 
 Wenn Ihre App nicht quergeladen werden kann oder Probleme beim Hochladen auftreten, versuchen Sie die folgenden Optionen:
 
@@ -52,17 +57,55 @@ Wenn Ihre App nicht quergeladen werden kann oder Probleme beim Hochladen auftret
 1. [Überprüfen Sie Ihr App-Paket](https://dev.teams.microsoft.com/appvalidation.html).
 1. Stellen Sie sicher, dass Ihr App-Manifest mit dem aktuellen [Schema](../../resources/schema/manifest-schema.md) übereinstimmt.
 
-## <a name="access-your-app"></a>Zugriff auf Ihre App
+## <a name="manage-your-apps"></a>Ihre Apps verwalten
 
+„Verwalten Ihrer Apps“ bietet Benutzern einen dedizierten Ort zum Verwalten, Aktualisieren und Entfernen ihrer Apps, Berechtigungen und Abonnements auf dem Teams-Client. Die Benutzer können die Apps über **Verwalten Ihrer Apps** installieren.
+
+### <a name="access-your-app"></a>Zugriff auf Ihre App
+
+Führen Sie die folgenden Schritte aus, um über **Verwalten Ihrer Apps** auf Apps zuzugreifen:
+
+1. Wechseln Sie zu **Apps**, und wählen Sie **Verwalten Ihrer Apps** in Teams aus, um die installierten Apps in allen Ihren Kanälen oder zur persönlichen Verwendung in einem Listenformat anzuzeigen.
+
+    :::image type="content" source="~/assets/images/publish-app/manage-apps-list.png" alt-text="Zugriff auf die Liste der Teams-Apps" border="true":::
+    
+1. Wählen Sie das App-Dropdown aus, um alle Bereiche anzuzeigen, in denen die App installiert ist.
+    
+    :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Zugreifen auf den Teams-App-Bereich" border="true":::
+    
+1. Wählen Sie den Bereich der App aus, um zur App in der Kanal- oder der persönlichen Ansicht zu wechseln. Die Liste der Bereiche besteht nur aus dem persönlichen Bereich und dem Teams-Bereich. Apps, die im Gruppenchatbereich installiert sind, werden in dieser Ansicht derzeit nicht angezeigt.
+    
 Teams bietet mehrere Möglichkeiten zum Öffnen von Apps. Weitere Informationen finden Sie unter [Zugriff auf Ihre Apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
-## <a name="update-your-app"></a>Aktualisieren Ihrer App
+### <a name="update-your-app"></a>Aktualisieren Ihrer App
 
 Sie müssen Ihre App nicht erneut querladen, wenn Sie Codeänderungen vornehmen (diese werden in Teams in Echtzeit widerspiegelt). Sie müssen sie jedoch neu installieren, wenn Sie App-Konfigurationen ändern.
 
-## <a name="remove-your-app"></a>Entfernen Ihrer App
+Wenn für Ihre App ein Update verfügbar ist, ist die **Update verfügbar**-Option aktiviert. Führen Sie zum Aktualisieren die folgenden Schritte aus:
 
-Um Ihre App zu entfernen, klicken Sie mit der rechten Maustaste auf das App-Symbol in Teams, und wählen Sie **Deinstallieren** aus.
+1. Wählen Sie **Update verfügbar** aus, um die Aktualisierung anzuzeigen.
+
+     :::image type="content" source="~/assets/images/publish-app/update-available.png" alt-text="Aktualisieren der Teams-App" border="true":::
+
+1. Wählen Sie **Aktualisierung anzeigen** aus und ein Fenster mit Aktualisierungsoptionen erscheint.
+1. Wählen Sie die Schaltfläche **Aktualisieren** aus, um Ihre App zu aktualisieren.
+    
+     :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="Aktualisieren der Teams App in der App-Verwaltung" border="true":::
+
+     :::image type="content" source="~/assets/images/publish-app/updated-app.png" alt-text="Aktualisierte App" border="true":::
+
+### <a name="remove-your-app"></a>Entfernen Ihrer App
+
+Führen Sie die folgenden Schritte aus, um die App aus Teams zu entfernen:
+
+1. Finden Sie die App unter **Verwalten Ihrer App**.
+1. Wählen Sie &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="App aus Teams entfernen" border="false":::&nbsp; im Bereich der installierten App aus.
+        
+    :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="Entfernen der App in einem Kanal" border="true":::
+
+1. Wählen Sie **Entfernen** aus, um Ihre App zu entfernen.
+    
+    :::image type="content" source="~/assets/images/publish-app/remove-app-teams.png" alt-text="Entfernen einer App aus Teams" border="true":::
 
 > [!NOTE]
 >
