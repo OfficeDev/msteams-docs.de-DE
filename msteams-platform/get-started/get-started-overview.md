@@ -4,12 +4,12 @@ description: Übersicht über die ersten Schritte für Microsoft Teams-Entwickle
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams Entwicklerbeispiele
-ms.openlocfilehash: 6ab9c3c531f7919b8558c45b200a5bf679591e34
-ms.sourcegitcommit: 123a64d7bcd310352dcff9f769b5f7f9cafd6aeb
+ms.openlocfilehash: 779bd362924e30743981043a5d856986eb3faadb
+ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64910543"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64952296"
 ---
 # <a name="get-started"></a>Erste Schritte
 
@@ -51,7 +51,7 @@ Nun erstellen wir Ihre erste Teams-App. Wählen Sie jedoch zunächst Ihre Sprach
 > [!div class="nextstepaction"]
 > [Erstellen einer Teams-App mit JavaScript, mithilfe von React](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]
-> [Erstellen einer Teams-App mit Blazor](../sbs-gs-blazor.yml)
+> [Erstellen einer Teams-App mit Blazor](../sbs-gs-blazorupdate.yml)
 > [!div class="nextstepaction"]
 > [Erstellen einer Teams-App mit SPFx](../sbs-gs-spfx.yml)
 > [!div class="nextstepaction"]
