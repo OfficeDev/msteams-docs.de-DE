@@ -4,12 +4,12 @@ description: Beschreibt alle neuen oder aktuellen Entwicklerfunktionen in Micros
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 'Teams: Was sind die neuesten Updates oder Entwicklervorschau und Features'
-ms.openlocfilehash: a3138a2fe02ecf8b061edab82e6954195512208d
-ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
+ms.openlocfilehash: 936d5eff50453801527425cbd4a61f6928fb1d30
+ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64838475"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64952387"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -22,6 +22,7 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 
 | Datum | Update | Hier finden |
 | --- | --- | --- |
+|19.04.2022 | Hochladen Ihrer App in Microsoft Teams | Verteilen Ihrer App > [Hochladen Ihrer App](concepts/deploy-and-publish/apps-upload.md)|
 |06.04.2022| Für Teams über persönliche App oder Registerkarte freigeben (Entwicklervorschau) | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus einer persönlichen App oder Registerkarte](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |01.04.2022| Schritt-für-Schritt-Anleitung für die Erstellung von Teams-Unterhaltungs-Bots eingeführt| Erstellen von Bots > Bot-Unterhaltungen > Kanal- und Gruppenunterhaltungen > [Schrittweise Anleitung zum Erstellen von Teams Unterhaltungs-Bots](sbs-teams-conversation-bot.yml) |
 |30.03.2022| Das Modul „Erste Schritte mit der Blazor-App mithilfe von Registerkarten und Bots“ wurde aktualisiert|  Erste Schritte > [Erstellen Ihrer ersten App mit Blazor](sbs-gs-blazorupdate.yml)|
@@ -60,6 +61,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
+|19.04.2022 | Hochladen Ihrer App in Microsoft Teams | Verteilen Ihrer App > [Hochladen Ihrer App](concepts/deploy-and-publish/apps-upload.md)|
 |01.04.2022| Schritt-für-Schritt-Anleitung für die Erstellung von Teams-Unterhaltungs-Bots eingeführt| Erstellen von Bots > Bot-Unterhaltungen > Kanal- und Gruppenunterhaltungen > [Schrittweise Anleitung zum Erstellen von Teams Unterhaltungs-Bots](sbs-teams-conversation-bot.yml) |
 |30.03.2022| Das Modul „Erste Schritte mit der Blazor-App mithilfe von Registerkarten und Bots“ wurde aktualisiert|  Erste Schritte > [Erstellen Ihrer ersten App mit Blazor](sbs-gs-blazorupdate.yml)|
 |30.03.2022|Geräteberechtigungen für den Browser | Integrieren der Gerätefunktionen > [Geräteberechtigungen für den Browser](concepts/device-capabilities/browser-device-permissions.md) |

@@ -20,10 +20,10 @@
   items:
     - name: Übersicht über die ersten Schritte
       href: get-started/get-started-overview.md
-    - name: Erstellen Ihrer ersten App mit Blazor
-      href: sbs-gs-blazorupdate.yml
     - name: Erstellen Ihrer ersten App mit JavaScript
       href: sbs-gs-javascript.yml
+    - name: Erstellen Ihrer ersten App mit Blazor
+      href: sbs-gs-blazorupdate.yml
     - name: Erstellen Ihrer ersten App mit SPFx
       href: sbs-gs-spfx.yml
     - name: Erstellen Ihrer ersten App mit C# oder .NET

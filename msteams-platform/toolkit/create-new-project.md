@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 55596671f6799145e5bd3de0d9ee4fb1b9ad4942
-ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
+ms.openlocfilehash: 8723e88e7b4ccf297edace9276af06a160e76f87
+ms.sourcegitcommit: 123a64d7bcd310352dcff9f769b5f7f9cafd6aeb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498217"
+ms.lasthandoff: 04/18/2022
+ms.locfileid: "64910550"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Erstellen einer neuen Teams-App mit dem Teams-Toolkit
 
@@ -44,7 +44,7 @@ Weitere Informationen finden Sie unter [Erstellen einer neuen Teams-Registerkart
 
 ## <a name="step-by-step-guides-using-teams-toolkit"></a>Schritt-für-Schritt-Anleitungen mithilfe des Teams-Toolkits
 
-* [Erstellen einer Teams-App mit Blazor](../sbs-gs-blazorapp.yml)
+* [Erstellen einer Teams-App mit Blazor](../sbs-gs-blazorupdate.yml)
 * [Erstellen einer Teams-App mit JavaScript, mithilfe von React](../sbs-gs-javascript.yml)
 * [Erstellen einer Teams-App mit SPFx](../sbs-gs-spfx.yml)
 * [Erstellen einer Teams-App mit C# oder .NET](../sbs-gs-csharp.yml)
