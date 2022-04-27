@@ -5,19 +5,16 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 4f606363b62126731afcbc8b7f065951d8cd1a13
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: f404c80a8b5db61636e175ca6439b32938358cac
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64736879"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073300"
 ---
 # <a name="in-app-purchases"></a>In-App-Käufe
 
 Microsoft Teams stellt APIs zur Verfügung, mit denen Sie die In-App-Käufe implementieren können, um von kostenlosen auf kostenpflichtige Teams-Apps aufzurüsten. Mit dem In-App-Kauf können Sie Benutzer direkt in Ihrer App von kostenlosen zu kostenpflichtigen Plänen konvertieren.
-
-> [!NOTE]
-> In-App-Käufe für Teams-Apps sind derzeit nur in der [**Entwicklervorschau**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro) verfügbar.
 
 ## <a name="implement-in-app-purchases"></a>Implementieren von In-App-Käufen
 

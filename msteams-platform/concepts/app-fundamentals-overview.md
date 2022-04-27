@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: 'Einstiegspunkte: Erweiterbarkeit – Anwendungsfälle – Gerätefunktion'
-ms.openlocfilehash: 0c1b2289734a54ced4298062260e8424b3454a09
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 13ad637e4e6ef6831d5d268d866538c6ce99e33f
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63766037"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073111"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planen Ihrer App mit Teams-Features
 
@@ -67,10 +67,9 @@ Das Verstehen des Nutzers und seines Anliegens sind die ersten Indikatoren dafü
 * Integrieren Sie Ihre App in Teams und andere Apps, z. B. Microsoft 365, Microsoft Graph und vieles mehr.
 * Verwenden Sie das Developer Portal zur Konfiguration, Verwaltung und Bereitstellung Ihrer Anwendung.
 
-<details>
-<summary><b>Erfahren Sie mehr über Government Community Cloud (GCC)</b></summary>
+#### <a name="government-community-cloud"></a>Government Community Cloud
 
-Government Community Cloud ist eine auf Behörden ausgerichtete Kopie der kommerziellen Umgebung. Das Verteidigungsministerium (Department of Defense, DOD) und Auftragnehmer des Bundes müssen die strengen Anforderungen an Cybersicherheit und Compliance erfüllen. Zu diesem Zweck wurde GCC-High erstellt, um die Anforderungen von DOD und Bundesauftragnehmern zu erfüllen. GCC-High ist eine Kopie der DOD-Cloud, existiert aber in einer eigenen souveränen Umgebung. Die DOD-Cloud wurde nur für das Verteidigungsministerium entwickelt.
+Government Community Cloud (GCC) ist eine auf Behörden ausgerichtete Kopie der kommerziellen Umgebung. Das Verteidigungsministerium (Department of Defense, DOD) und Auftragnehmer des Bundes müssen die strengen Anforderungen an Cybersicherheit und Compliance erfüllen. Zu diesem Zweck wurde GCC-High erstellt, um die Anforderungen von DOD und Bundesauftragnehmern zu erfüllen. GCC-High ist eine Kopie der DOD-Cloud, existiert aber in einer eigenen souveränen Umgebung. Die DOD-Cloud wurde nur für das Verteidigungsministerium entwickelt.
 
 Die folgende Tabelle enthält Teams-Features und -Verfügbarkeit für GCC, GCC-High und DOD:
 

@@ -6,38 +6,39 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 047cd9bcd86c103c3c9cab22793fb7d187f7493d
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: de85674891a53c1e87b43ae1d472daf35716c348
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453600"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073540"
 ---
-# <a name="customize-app-manifest-in-teams-toolkit"></a>Anpassen des App-Manifests im Teams Toolkit
+# <a name="customize-app-manifest-in-toolkit"></a>Anpassen des App-Manifests im Toolkit
 
-Teams Toolkit besteht aus den folgenden Manifestvorlagendateien im `templates/appPackage` Ordner:
+Teams Toolkit besteht aus den folgenden Manifestvorlagendateien unter `manifest.template.json` ordnerübergreifenden lokalen und Remoteumgebungen:
 
-* `manifest.local.template.json` – lokale Debug-Teams-App
-* `manifest.remote.template.json` – in allen Umgebungen freigegeben
+* `manifest.template.json`
+* `templates/appPackage`
+
 
 ## <a name="prerequisite"></a>Voraussetzungen
 
-* [Installieren Sie Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Version v3.0.0+.
+* Installieren Sie die [neueste Version des Teams-Toolkits](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 > [!TIP]
 > Stellen Sie sicher, dass Teams App-Projekt in Visual Studio Code geöffnet ist.
 
-Während der Bereitstellung lädt Teams Toolkit das Manifest aus `manifest.remote.template.json`, kombiniert mit Konfigurationen von `state.{env}.json` und `config.{env}.json`erstellt teams-App im [Dev Portal](https://dev.teams.microsoft.com/apps).
+Während des lokalen Debuggens oder der lokalen Bereitstellung lädt Teams Toolkit manifest aus `manifest.template.json`, mit Konfigurationen von `state.{env}.json`, `config.{env}.json`und erstellt die Teams-App im [Dev Portal](https://dev.teams.microsoft.com/apps).
 
-Während des lokalen Debuggens lädt Teams Toolkit das Manifest aus `manifest.local.template.json`, kombiniert mit Konfigurationen von `localSettings.json`, und erstellt die Teams-App im [Dev Portal](https://dev.teams.microsoft.com/apps).
 
-## <a name="supported-placeholder-in-manifestremotetemplatejson"></a>Unterstützter Platzhalter in "manifest.remote.template.json"
+## <a name="placeholders-supported-in-manifesttemplatejson"></a>In manifest.template.json unterstützte Platzhalter
 
-* `{{state.xx}}`ist ein vordefinierter Platzhalter, dessen Wert durch Teams Toolkit aufgelöst wird, definiert in `state.{env}.json`. Ändern Sie die Werte nicht im Zustand. {env}.json.
-* `{{config.manifest.xx}}`ist ein angepasster Platzhalter, dessen Wert aufgelöst wird.`config.{env}.json`
-  * Sie können einen angepassten Parameter wie folgt hinzufügen:
-    * Fügen Sie einen Platzhalter in "manifest.remote.template.json" mit Muster hinzu: `{{config.manifest.xx}}`
-    * Fügen Sie einen Konfigurationswert in der Konfiguration hinzu. {env}.json
+* `{{state.xx}}`ist vordefinierter Platzhalter, und sein Wert wird durch Teams Toolkit aufgelöst, definiert in `state.{env}.json`. Stellen Sie sicher, dass die Werte nicht im Zustand geändert werden. {env}.json
+* `{{config.manifest.xx}}` ist benutzerdefinierter Platzhalter, und sein Wert wird von `config.{env}.json`
+
+  1. Sie können einen benutzerdefinierten Parameter wie folgt hinzufügen:
+      1. Fügen Sie einen Platzhalter in "manifest.template.json" mit dem Muster hinzu: `{{config.manifest.xx}}`
+      2. Fügen Sie einen Config-Wert in config hinzu. {env}.json
 
         ```json
         {
@@ -47,15 +48,8 @@ Während des lokalen Debuggens lädt Teams Toolkit das Manifest aus `manifest.lo
         }
         ```
 
-    Neben jedem Konfigurationsplatzhalter in `manifest.remote.template.json`gibt es eine `Go to config file`. Sie können zur Konfigurationsdatei navigieren, indem Sie sie auswählen.
-
-## <a name="supported-placeholder-in-manifestlocaltemplatejson"></a>Unterstützter Platzhalter in "manifest.local.template.json"
-
-`{{localSettings.xx}}`ist ein vordefinierter Platzhalter, dessen Wert durch Teams Toolkit aufgelöst wird, definiert in `localSettings.json`. Ändern Sie die Werte in "localSettings.json" nicht.
-
- > [!NOTE]
- > Stellen Sie sicher, dass Sie das lokale Manifest nicht anpassen.
+   2. Sie können zur Konfigurationsdatei navigieren, indem Sie einen der Konfigurationsplatzhalter " **Gehe zu Konfigurationsdatei** " oder **"Statusdatei anzeigen** in" auswählen. `manifest.template.json`
 
 ## <a name="see-also"></a>Siehe auch
 
-[Vorschau Teams App-Manifests in Teams Toolkit](TeamsFx-manifest-preview.md)
+[Vorschau Teams App-Manifests im Teams Toolkit](TeamsFx-manifest-preview.md)

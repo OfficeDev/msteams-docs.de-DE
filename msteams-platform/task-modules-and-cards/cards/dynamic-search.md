@@ -1,71 +1,71 @@
 ---
 title: Vorausschauende Suche in Adaptiven Karten
 author: Rajeshwari-v
-description: Beschreibt die Typaheadsuche mit dem Input.ChoiceSet-Steuerelement in adaptiven Karten
+description: Beschreibt die Typkopfsuche mit dem Input.ChoiceSet-Steuerelement in adaptiven Karten.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 2f9a8844d4e976e4d0a975e7e3a901fe3b93ba85
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: d33fce44cbf1ff550d9aa21686111746318bb17e
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453831"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073795"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>Vorausschauende Suche in Adaptiven Karten
 
-Die Suchfunktion "Typeahead" in adaptiven Karten bietet eine erweiterte Suchumgebung für `input.choiceset` Komponenten. Es enthält eine Liste der Auswahlmöglichkeiten zum Eingeben von Text in das Suchfeld. Sie können die Typaheadsuche mit adaptiven Karten integrieren, um Daten zu suchen und auszuwählen.
+Die Typeahead-Suchfunktion in adaptiven Karten bietet eine erweiterte Sucherfahrung für `input.choiceset` die Komponente. Es enthält eine Liste der Auswahlmöglichkeiten zum Eingeben von Text in das Suchfeld. Sie können die Typkopfsuche mit adaptiven Karten integrieren, um Daten zu durchsuchen und auszuwählen.
 
-Sie können die Typaheadsuche für die folgenden Suchvorgänge verwenden:
+Sie können die Typeahead-Suche für die folgenden Suchvorgänge verwenden:
 
 * [Statische Suche](#static-typeahead-search)
 * [Dynamische Suche](#dynamic-typeahead-search)
 
-## <a name="static-typeahead-search"></a>Statische Typaheadsuche
+## <a name="static-typeahead-search"></a>Statische Typeaheadsuche
 
-Mit der statischen Typaheadsuche können Benutzer anhand von Werten suchen, die in `input.choiceset` der Nutzlast der adaptiven Karte angegeben sind. Die statische Typaheadsuche kann verwendet werden, um dem Benutzer mehrere Auswahlmöglichkeiten anzuzeigen. Die Nutzlastgröße in der statischen Suche nimmt mit der Anzahl der in der Nutzlast angegebenen Auswahlmöglichkeiten zu.
+Mit der statischen Typeaheadsuche können Benutzer nach Werten suchen, die in `input.choiceset` der Nutzlast der adaptiven Karte angegeben sind. Die statische Typeaheadsuche kann verwendet werden, um dem Benutzer mehrere Auswahlmöglichkeiten anzuzeigen. Die Nutzlastgröße in der statischen Suche nimmt mit der Anzahl der in der Nutzlast angegebenen Auswahlmöglichkeiten zu.
 Wenn der Benutzer mit der Eingabe der Texte beginnt, werden die Auswahlmöglichkeiten gefiltert, die teilweise mit der Eingabe übereinstimmen. In der Dropdownliste werden die Eingabezeichen hervorgehoben, die der Suche entsprechen.
 
-Die folgende Abbildung zeigt die statische Typaheadsuche:
+Die folgende Abbildung veranschaulicht die statische Typeaheadsuche:
 
-![Statische Typaheadsuche](~/assets/images/Cards/static-typeahead-search.gif)
+![Statische Typeaheadsuche](~/assets/images/Cards/static-typeahead-search.gif)
 
-## <a name="dynamic-typeahead-search"></a>Dynamische Typaheadsuche
+## <a name="dynamic-typeahead-search"></a>Dynamische Typeaheadsuche
 
-Die dynamische Typaheadsuche ist nützlich, um Daten aus großen Datasets zu suchen und auszuwählen. Die Datensätze werden dynamisch aus dem in der Kartennutzlast angegebenen Dataset geladen. Die Funktionalität "Typ voraus" hilft beim Herausfiltern der Vom Benutzer eingegebenen Auswahlmöglichkeiten.
+Die dynamische Typeaheadsuche ist nützlich, um Daten aus großen Datensätzen zu durchsuchen und auszuwählen. Die Datensätze werden dynamisch aus dem in der Kartennutzlast angegebenen Dataset geladen. Die Typ-voraus-Funktionalität hilft, die Auswahlmöglichkeiten beim Eingeben durch den Benutzer herauszufiltern.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-![Dynamische Typaheadsuche](~/assets/images/Cards/dynamic-typeahead-search-desktop.png)
+:::image type="content" source="../../assets/images/Cards/dynamic-typeahead-search-desktop.png" alt-text="Dynamische Typeaheadsuche":::
 
-![Dynamische Typahead-Suchbild 2](~/assets/images/Cards/dynamic-typeahead-search-desktop-2.png)
+:::image type="content" source="../../assets/images/Cards/dynamic-typeahead-search-desktop-2.png" alt-text="Dynamische Typeaheadsuche 2":::
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
-Mobile Android- und iOS-Clients unterstützen die Typaheadsuche in adaptiven Karten.
+Mobile Android- und iOS-Clients unterstützen die Typkopfsuche in adaptiven Karten.
 
 **Szenario**
 
-John ist ein Store-Mitarbeiter, der in einem Xbox-Einzelhandelsgeschäft arbeitet. Der Store verwendet einen Bot, um neue Kaufanforderungen von Kunden zu übernehmen. Ein Kunde kann aus den Tausenden von verfügbaren Spielen suchen. Die Typaheadsuche in adaptiven Karten wird verwendet, um die Auswahlmöglichkeiten von Kunden zu suchen und auszuwählen.
+John ist ein Store-Mitarbeiter, der in einem Xbox-Einzelhandelsgeschäft arbeitet. Der Store verwendet einen Bot, um neue Kaufanfragen von Kunden zu erhalten. Ein Kunde kann aus tausenden verfügbaren Spielen suchen. Die Typkopfsuche in adaptiven Karten wird verwendet, um die Auswahl der Kunden zu suchen und auszuwählen.
 
-**So verwenden Sie die Typaheadsuche in adaptiven Karten**
+**So verwenden Sie die Typkopfsuche in adaptiven Karten**
 
 1. Benutzer A öffnet den Store-Bot.
-1. Benutzer A sendet einen Befehl an den Bot für eine **Neue Kundenanfrage**. Der Bot antwortet mit der adaptiven Karte, die über eine Komponente verfügt `Input.ChoiceSet` .
-1. Benutzer A verwendet die Typaheadsuche, um die Informationen basierend auf der Wahl des Kunden zu suchen und auszuwählen.
+1. Benutzer A sendet einen Befehl für eine **Neue Kundenanfrage** an den Bot. Der Bot antwortet mit der adaptiven Karte, die über eine Komponente verfügt `Input.ChoiceSet` .
+1. Benutzer A verwendet die Typkopfsuche, um die Informationen basierend auf der Auswahl des Kunden zu durchsuchen und auszuwählen.
 
-Die folgende Abbildung veranschaulicht die mobile Erfahrung der Typaheadsuche:
+Die folgende Abbildung veranschaulicht die mobile Erfahrung der Typeahead-Suche:
 
-![Statische Typaheadsuche](~/assets/images/Cards/static-typeahead-search.gif)
+![Statische Typeaheadsuche](~/assets/images/Cards/static-typeahead-search.gif)
 
 ---
 
 > [!NOTE]
-> Mit der dynamischen Suche, z. B. abfragebasierten Messaging-Erweiterungen, können Sie keine umfangreichen Kartenfunktionen abrufen.
+> Mit der dynamischen Suche, z. B. abfragebasierten Messaging-Erweiterungen, können Sie keine umfangreichen Kartenfunktionen erhalten.
 
-## <a name="implement-typeahead-search"></a>Implementieren der Typaheadsuche
+## <a name="implement-typeahead-search"></a>Implementieren der Typeahead-Suche
 
-`Input.ChoiceSet` ist eine der wichtigen Eingabekomponenten in adaptiven Karten. Sie können ein Typeahead-Suchsteuerelement zur `Input.ChoiceSet` Komponente hinzufügen, um die Typaheadsuche zu implementieren. Sie können die erforderlichen Informationen mit der folgenden Auswahl durchsuchen und auswählen:
+`Input.ChoiceSet` ist eine der wichtigen Eingabekomponenten in adaptiven Karten. Sie können der Komponente ein Typeahead-Suchsteuerelement `Input.ChoiceSet` hinzufügen, um die Typeahead-Suche zu implementieren. Sie können die erforderlichen Informationen mit den folgenden Auswahlmöglichkeiten suchen und auswählen:
 
 * Dropdown, z. B. erweiterte Auswahl.
 * Optionsfeld, z. B. einzelne Auswahl.
@@ -76,26 +76,26 @@ Die folgende Abbildung veranschaulicht die mobile Erfahrung der Typaheadsuche:
 
 ### <a name="schema-properties"></a>Schemaeigenschaften
 
-Die folgenden Eigenschaften sind die neuen Ergänzungen des Schemas, um die [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) Typaheadsuche zu aktivieren:
+Die folgenden Eigenschaften sind die neuen Ergänzungen des Schemas, um die [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) Typeahead-Suche zu aktivieren:
 
 | Eigenschaft| Typ | Erforderlich | Beschreibung |
 |-----------|------|----------|-------------|
-| style | Compact <br/> Erweitert <br/> Filtered | Nein | Fügt der Liste der unterstützten Überprüfungen für statische Typen eine gefilterte Formatvorlage hinzu.|
-| choices.data | Data.Query | Nein | Ermöglicht dynamisches Vorausgehen beim Eingeben von Benutzern, indem eine Remoteauswahl aus einem Back-End abgerufen wird. |
+| style | Compact <br/> Erweitert <br/> Filtered | Nein | Fügt der Liste der unterstützten Überprüfungen für statische Type-Ahead gefilterte Formatvorlagen hinzu.|
+| choices.data | Data.Query | Nein | Ermöglicht dynamisches Vorausschreiben während der Benutzereingabe, indem ein Remotesatz von Auswahlmöglichkeiten aus einem Back-End abgerufen wird. |
 
 ### <a name="dataquery-definition"></a>Data.Query-Definition
 
 | Eigenschaft| Typ | Erforderlich | Beschreibung |
 |-----------|------|----------|-------------|
-| Typ | Data.Query | Ja | Gibt an, dass es sich um ein Data.Query-Objekt handelt.|
+| Typ | Data.Query | Ja | Gibt an, dass es sich um ein Data.Query-Objekt handeln soll.|
 | Dataset | Zeichenfolge | Ja | Gibt den Datentyp an, der dynamisch abgerufen wird. |
-| value | Zeichenfolge | Nein | Füllt die Aufrufanforderung an den Bot mit der Eingabe auf, die der Benutzer für die `ChoiceSet`bereitgestellt hat. |
-| count | Zahl | Nein | Füllt die Aufrufanforderung an den Bot auf, um die Anzahl der Elemente anzugeben, die zurückgegeben werden müssen. Der Bot ignoriert ihn, wenn die Benutzer einen anderen Betrag senden möchten. |
-| skip | Zahl | Nein | Füllt die Aufrufanforderung an den Bot auf, um anzugeben, dass Benutzer in der Liste paginieren und fortfahren möchten. |
+| value | Zeichenfolge | Nein | Füllt für die Aufrufanforderung an den Bot die Eingabe auf, die der Benutzer für die `ChoiceSet`bereitgestellt hat. |
+| count | Zahl | Nein | Füllt die Aufrufanforderung an den Bot auf, um die Anzahl der Elemente anzugeben, die zurückgegeben werden müssen. Der Bot ignoriert dies, wenn die Benutzer einen anderen Betrag senden möchten. |
+| skip | Zahl | Nein | Füllt die Aufrufanforderung an den Bot auf, um anzugeben, dass Benutzer paginieren und in der Liste vorankommen möchten. |
 
 ### <a name="example"></a>Beispiel
 
-Die Beispielnutzlast, die die statische und dynamische Typaheadsuche mit einzelnen & Multiauswahloptionen wie folgt enthält:
+Die Beispielnutzlast mit statischer und dynamischer Typeaheadsuche mit einzelnen & Multiauswahloptionen wie folgt:
 
 ```json
 {
@@ -297,9 +297,9 @@ Die Beispielnutzlast, die die statische und dynamische Typaheadsuche mit einzeln
 }
 ```
 
-## <a name="code-snippets-for-invoke-request-and-response"></a>Codeausschnitte für aufrufanforderung und -antwort
+## <a name="code-snippets-for-invoke-request-and-response"></a>Codeausschnitte für Aufrufanforderung und -antwort
 
-### <a name="invoke-request"></a>Anforderung aufrufen
+### <a name="invoke-request"></a>Aufrufanforderung
 
 ```json
 {
@@ -413,7 +413,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 |**Beispielname** | **Beschreibung** | **C#** | **Node.js** |
 |----------------|-----------------|--------------|----------------|
-| Typeahead-Suchsteuerelement auf adaptiven Karten | Das Beispiel zeigt die Features des statischen und dynamischen Typahead-Suchsteuerelements in adaptiven Karten. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+| Typeahead-Suchsteuerelement auf adaptiven Karten | Das Beispiel zeigt die Features des statischen und dynamischen Typeahead-Suchsteuerelements in adaptiven Karten. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 
