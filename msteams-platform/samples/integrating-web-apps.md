@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Überlegungen zur Microsoft Teams-Integration
-ms.openlocfilehash: eb278d078c7b195ff5d2d2a2f980ffc9db74f748
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.openlocfilehash: bbd5b046d7b1afca5cc3fa5c8afb21a3698f43eb
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685597"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104350"
 ---
 # <a name="considerations-for-teams-integration"></a>Überlegungen zur Microsoft Teams-Integration
 
@@ -35,8 +35,8 @@ Ihre Teams-App muss erforderliche und erwartete Features für die Zusammenarbeit
 |Allgemeine App-Features   |Teams Plattformfunktionen   |
 |----------|-----------|
 |Eingebettete Webseite, Homepage oder Webview  |[Registerkarten](../tabs/what-are-tabs.md)  |
-|Freigeben von Tastenkombinationen und Erweiterungen  |[Messaging-Erweiterungen](../messaging-extensions/what-are-messaging-extensions.md)  |
-|Aktionsverknüpfungen und -erweiterungen  |[Messaging-Erweiterungen](../messaging-extensions/what-are-messaging-extensions.md)  |
+|Freigeben von Tastenkombinationen und Erweiterungen  |[Nachrichtenerweiterungen](../messaging-extensions/what-are-messaging-extensions.md)  |
+|Aktionsverknüpfungen und -erweiterungen  |[Nachrichtenerweiterungen](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Chatbots |[Bots](../bots/what-are-bots.md) |
 |Kanalbenachrichtigungen  |[Bots](../bots/what-are-bots.md)<br/>[Eingehende Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Office 365-Connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |Externe Nachrichtendienste  |[Bots](../bots/what-are-bots.md)<br/>[Ausgehende Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
@@ -129,6 +129,6 @@ Wenn ein Team erstellt wird, wird auch eine [SharePoint Websitesammlung](/micros
 
 * [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
 * [Low-Code- und No-Code-Lösungen für Microsoft Teams](~/samples/teams-low-code-solutions.md)
-* [Freigeben für Teams aus Web-Apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
+* [Von Web-Apps für Teams freigeben](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [SameSite-Cookieattribute](~/resources/samesite-cookie-update.md)
 * [Integrieren Power Virtual Agents Chatbots](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)

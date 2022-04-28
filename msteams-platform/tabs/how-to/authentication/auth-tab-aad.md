@@ -1,42 +1,42 @@
 ---
 title: Authentifizierung für Registerkarten mit Azure Active Directory
-description: Beschreibt die Authentifizierung in Teams und die Verwendung in Registerkarten
+description: Beschreibt die Authentifizierung in Teams und deren Verwendung auf Registerkarten
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: ae0f14195ef686bf915884b86e1ba71c15c08133
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 41d2a3f0cb9d05acfe879654c255e1d012c1f874
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398988"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104056"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Authentifizieren eines Benutzers auf einer Microsoft Teams Registerkarte
 
 > [!Note]
 > Damit die Authentifizierung für Ihre Registerkarte auf mobilen Clients funktioniert, müssen Sie sicherstellen, dass Sie Version 1.4.1 oder höher des Teams JavaScript SDK verwenden.
 
-Es gibt viele Dienste, die Sie in Ihrer Teams-App nutzen möchten, und die meisten dieser Dienste erfordern Authentifizierung und Autorisierung, um Zugriff auf den Dienst zu erhalten. Zu den Diensten gehören Facebook, Twitter und Teams. Teams Benutzerprofilinformationen werden in Azure AD mithilfe von Microsoft Graph gespeichert, und dieser Artikel konzentriert sich auf die Authentifizierung mit Azure AD, um Zugriff auf diese Informationen zu erhalten.
+Es gibt viele Dienste, die Sie möglicherweise in Ihrer Teams-App nutzen möchten, und die meisten dieser Dienste erfordern Authentifizierung und Autorisierung, um Zugriff auf den Dienst zu erhalten. Zu den Diensten gehören Facebook, Twitter und Teams. Teams Benutzerprofilinformationen werden in Azure AD mithilfe von Microsoft Graph gespeichert, und dieser Artikel konzentriert sich auf die Authentifizierung mithilfe von Azure AD, um Zugriff auf diese Informationen zu erhalten.
 
-OAuth 2.0 ist ein offener Standard für die Authentifizierung, der von Azure AD und vielen anderen Dienstanbietern verwendet wird. Das Verständnis von OAuth 2.0 ist eine Voraussetzung für die Arbeit mit der Authentifizierung in Teams und Azure AD. In den folgenden Beispielen wird der Fluss "Implizite OAuth 2.0-Genehmigung" verwendet, um die Profilinformationen des Benutzers aus Azure AD und Microsoft Graph zu lesen.
+OAuth 2.0 ist ein offener Standard für die Authentifizierung, der von Azure AD und vielen anderen Dienstanbietern verwendet wird. Das Verständnis von OAuth 2.0 ist eine Voraussetzung für das Arbeiten mit der Authentifizierung in Teams und Azure AD. In den folgenden Beispielen wird der Fluss der impliziten OAuth 2.0-Genehmigung verwendet, um schließlich die Profilinformationen des Benutzers aus Azure AD und Microsoft Graph zu lesen.
 
-Der Code in diesem Artikel stammt aus der Teams Beispiel-App [Microsoft Teams Beispiel für die Registerkartenauthentifizierung (Node).](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) Sie enthält eine statische Registerkarte, die ein Zugriffstoken für Microsoft Graph anfordert und die grundlegenden Profilinformationen des aktuellen Benutzers von Azure AD anzeigt.
+Der Code in diesem Artikel stammt aus dem Beispiel für Teams Beispiel-App [Microsoft Teams Registerkartenauthentifizierung (Node).](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) Sie enthält eine statische Registerkarte, die ein Zugriffstoken für Microsoft Graph anfordert und die grundlegenden Profilinformationen des aktuellen Benutzers aus Azure AD anzeigt.
 
-Eine allgemeine Übersicht über den Authentifizierungsfluss für Registerkarten finden Sie unter [Authentifizierungsfluss auf Registerkarten](~/tabs/how-to/authentication/auth-flow-tab.md).
+Eine allgemeine Übersicht über den Authentifizierungsfluss für Registerkarten finden Sie [unter Authentifizierungsfluss auf Registerkarten](~/tabs/how-to/authentication/auth-flow-tab.md).
 
-Der Authentifizierungsfluss in Registerkarten unterscheidet sich geringfügig vom Authentifizierungsfluss in Bots.
+Der Authentifizierungsfluss auf Registerkarten unterscheidet sich geringfügig vom Authentifizierungsfluss in Bots.
 
 ## <a name="configuring-identity-providers"></a>Konfigurieren von Identitätsanbietern
 
-Ausführliche Schritte zum Konfigurieren von OAuth 2.0-Rückrufumleitungs-URLs bei Verwendung von Azure AD als Identitätsanbieter finden Sie im Thema ["Konfigurieren von Identitätsanbietern](~/concepts/authentication/configure-identity-provider.md)".
+Ausführliche Schritte zum Konfigurieren von OAuth 2.0-Rückrufumleitungs-URLs bei Verwendung von Azure AD als Identitätsanbieter finden Sie im Thema [Konfigurieren von Identitätsanbietern](~/concepts/authentication/configure-identity-provider.md).
 
 ## <a name="initiate-authentication-flow"></a>Initiieren des Authentifizierungsflusses
 
-Der Authentifizierungsfluss sollte durch eine Benutzeraktion ausgelöst werden. Sie sollten das Authentifizierungs-Popup nicht automatisch öffnen, da dies wahrscheinlich den Popupblocker des Browsers auslöst und den Benutzer verwirren kann.
+Der Authentifizierungsfluss sollte durch eine Benutzeraktion ausgelöst werden. Sie sollten das Authentifizierungspopup nicht automatisch öffnen, da dies wahrscheinlich den Popupblocker des Browsers auslöst und den Benutzer verwirren wird.
 
-Fügen Sie ihrer Konfigurations- oder Inhaltsseite eine Schaltfläche hinzu, damit sich der Benutzer bei Bedarf anmelden kann. Dies kann auf der [Registerkartenkonfigurationsseite](~/tabs/how-to/create-tab-pages/configuration-page.md) oder auf einer beliebigen [Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md) erfolgen.
+Fügen Sie Ihrer Konfigurations- oder Inhaltsseite eine Schaltfläche hinzu, damit sich der Benutzer bei Bedarf anmelden kann. Dies kann auf der [Registerkartenkonfigurationsseite](~/tabs/how-to/create-tab-pages/configuration-page.md) oder auf einer beliebigen [Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md) erfolgen.
 
-Azure AD lässt wie die meisten Identitätsanbieter nicht zu, dass der Inhalt in einem iFrame platziert wird. Dies bedeutet, dass Sie eine Popupseite hinzufügen müssen, um den Identitätsanbieter zu hosten. Im folgenden Beispiel ist `/tab-auth/simple-start`diese Seite . Verwenden Sie die `microsoftTeams.authenticate()` Funktion des Microsoft Teams Client-SDKs, um diese Seite zu starten, wenn Die Schaltfläche ausgewählt ist.
+Azure AD lässt wie die meisten Identitätsanbieter nicht zu, dass seine Inhalte in einem iframe platziert werden. Dies bedeutet, dass Sie eine Popupseite hinzufügen müssen, um den Identitätsanbieter zu hosten. Im folgenden Beispiel ist `/tab-auth/simple-start`diese Seite . Verwenden Sie die `microsoftTeams.authenticate()` Funktion des Microsoft Teams-Client-SDK, um diese Seite zu starten, wenn Die Schaltfläche ausgewählt ist.
 
 ```javascript
 microsoftTeams.authentication.authenticate({
@@ -52,17 +52,17 @@ microsoftTeams.authentication.authenticate({
 });
 ```
 
-### <a name="notes"></a>Notizen
+### <a name="notes"></a>Anmerkungen
 
-* Die URL, an die Sie übergeben, `microsoftTeams.authentication.authenticate()` ist die Startseite des Authentifizierungsflusses. In diesem Beispiel ist dies `/tab-auth/simple-start`. Dies sollte mit dem übereinstimmen, was Sie im [Azure AD Anwendungsregistrierungsportal registriert haben](https://apps.dev.microsoft.com).
+* Die URL, die Sie übergeben, `microsoftTeams.authentication.authenticate()` ist die Startseite des Authentifizierungsflusses. In diesem Beispiel ist dies `/tab-auth/simple-start`. Dies sollte mit dem übereinstimmen, was Sie im [Azure AD-Anwendungsregistrierungsportal](https://apps.dev.microsoft.com) registriert haben.
 
 * Der Authentifizierungsfluss muss auf einer Seite beginnen, die sich in Ihrer Domäne befindet. Diese Domäne sollte auch im [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) Abschnitt des Manifests aufgeführt werden. Andernfalls wird ein leeres Popup angezeigt.
 
-* Wenn sie nicht verwendet `microsoftTeams.authentication.authenticate()` wird, tritt ein Problem auf, wenn das Popup am Ende des Anmeldevorgangs nicht geschlossen wird.
+* Wenn sie nicht verwendet `microsoftTeams.authentication.authenticate()` wird, tritt ein Problem auf, da das Popup am Ende des Anmeldevorgangs nicht geschlossen wird.
 
-## <a name="navigate-to-the-authorization-page-from-your-pop-up-page"></a>Navigieren Sie von ihrer Popupseite zur Autorisierungsseite
+## <a name="navigate-to-the-authorization-page-from-your-pop-up-page"></a>Navigieren Sie von ihrer Popupseite zur Autorisierungsseite.
 
-Wenn Die Popupseite (`/tab-auth/simple-start`) angezeigt wird, wird der folgende Code ausgeführt. Das Hauptziel dieser Seite besteht darin, zu Ihrem Identitätsanbieter umzuleiten, damit sich der Benutzer anmelden kann. Diese Umleitung kann serverseitig mit HTTP 302 erfolgen, in diesem Fall erfolgt die Umleitung jedoch auf clientseitiger Basis mithilfe eines Aufrufs von `window.location.assign()`. Dies ermöglicht `microsoftTeams.getContext()` auch das Abrufen von Hinweisinformationen, die an Azure AD übergeben werden können.
+Wenn Ihre Popupseite (`/tab-auth/simple-start`) angezeigt wird, wird der folgende Code ausgeführt. Das Hauptziel dieser Seite besteht darin, zu Ihrem Identitätsanbieter umzuleiten, damit sich der Benutzer anmelden kann. Diese Umleitung kann serverseitig mitHILFE von HTTP 302 erfolgen, in diesem Fall erfolgt dies jedoch clientseitig mithilfe eines Aufrufs von `window.location.assign()`. Dies ermöglicht `microsoftTeams.getContext()` auch das Abrufen von Hinweisinformationen, die an Azure AD übergeben werden können.
 
 ```javascript
 microsoftTeams.getContext(function (context) {
@@ -89,20 +89,20 @@ microsoftTeams.getContext(function (context) {
 });
 ```
 
-Nachdem der Benutzer die Autorisierung abgeschlossen hat, wird der Benutzer zur Rückrufseite umgeleitet, die Sie für Ihre App unter `/tab-auth/simple-end`angegeben haben.
+Nachdem der Benutzer die Autorisierung abgeschlossen hat, wird der Benutzer zu der Rückrufseite umgeleitet, die Sie für Ihre App unter `/tab-auth/simple-end`angegeben haben.
 
-### <a name="notes"></a>Notizen
+### <a name="notes"></a>Anmerkungen
 
-* Hilfe beim Erstellen von Authentifizierungsanforderungen und URLs finden Sie unter ["Abrufen von Benutzerkontextinformationen](~/tabs/how-to/access-teams-context.md) ". Sie können z. B. den Anmeldenamen des Benutzers als `login_hint` Wert für Azure AD Anmeldung verwenden, was bedeutet, dass der Benutzer möglicherweise weniger eingeben muss. Denken Sie daran, dass Sie diesen Kontext nicht direkt als Identitätsnachweis verwenden sollten, da ein Angreifer Ihre Seite in einem schädlichen Browser laden und ihm alle gewünschten Informationen bereitstellen könnte.
-* Obwohl der Registerkartenkontext nützliche Informationen zum Benutzer bereitstellt, verwenden Sie diese Informationen nicht, um den Benutzer zu authentifizieren, unabhängig davon, ob Sie ihn als URL-Parameter zu Ihrer URL für Registerkarteninhalte erhalten, oder indem Sie die `microsoftTeams.getContext()` Funktion im Microsoft Teams Client SDK aufrufen. Ein böswilliger Akteur könnte Ihre URL für Registerkarteninhalte mit eigenen Parametern aufrufen, und eine Webseite, die den Identitätswechsel Microsoft Teams könnte die URL des Registerkarteninhalts in einem iframe laden und eigene Daten an die `getContext()` Funktion zurückgeben. Sie sollten die identitätsbezogenen Informationen im Registerkartenkontext einfach als Hinweise behandeln und sie vor der Verwendung überprüfen.
-* Der `state` Parameter wird verwendet, um zu bestätigen, dass der Dienst, der den Rückruf-URI aufruft, der von Ihnen aufgerufene Dienst ist. Wenn der `state` Parameter im Rückruf nicht mit dem Parameter übereinstimmt, den Sie während des Anrufs gesendet haben, wird der Rückgabeaufruf nicht überprüft und sollte beendet werden.
-* Es ist nicht erforderlich, die Domäne des Identitätsanbieters in die Liste in der `validDomains` Manifest.json-Datei der App einzuschließen.
+* Informationen zum [Abrufen von Benutzerkontextinformationen](~/tabs/how-to/access-teams-context.md) finden Sie unter Hilfe beim Erstellen von Authentifizierungsanforderungen und URLs. Sie können z. B. den Anmeldenamen des Benutzers als `login_hint` Wert für Azure AD Anmeldung verwenden, was bedeutet, dass der Benutzer möglicherweise weniger eingeben muss. Denken Sie daran, dass Sie diesen Kontext nicht direkt als Identitätsnachweis verwenden sollten, da ein Angreifer Ihre Seite in einem böswilligen Browser laden und diese mit allen gewünschten Informationen versehen kann.
+* Obwohl der Registerkartenkontext nützliche Informationen zum Benutzer bereitstellt, verwenden Sie diese Informationen nicht, um den Benutzer zu authentifizieren, unabhängig davon, ob Sie ihn als URL-Parameter zu Ihrer Registerkarteninhalts-URL oder durch Aufrufen der `microsoftTeams.getContext()` Funktion im Microsoft Teams Client SDK erhalten. Ein böswilliger Akteur könnte Ihre Registerkarteninhalts-URL mit eigenen Parametern aufrufen, und eine Webseite, die die Identität Microsoft Teams angibt, könnte die URL des Registerkarteninhalts in einem iFrame laden und seine eigenen Daten an die `getContext()` Funktion zurückgeben. Sie sollten die identitätsbezogenen Informationen im Registerkartenkontext einfach als Hinweise behandeln und vor der Verwendung überprüfen.
+* Der `state` Parameter wird verwendet, um zu bestätigen, dass der Dienst, der den Rückruf-URI aufruft, der Dienst ist, den Sie aufgerufen haben. Wenn der `state` Parameter im Rückruf nicht mit dem Parameter übereinstimmt, den Sie während des Aufrufs gesendet haben, wird der Rückgabeaufruf nicht überprüft und sollte beendet werden.
+* Es ist nicht erforderlich, die Domäne des Identitätsanbieters in die `validDomains` Liste in der Datei "manifest.json" der App aufzunehmen.
 
 ## <a name="the-callback-page"></a>Die Rückrufseite
 
-Im letzten Abschnitt haben Sie den Azure AD Autorisierungsdienst aufgerufen und Benutzer- und App-Informationen übergeben, damit Azure AD dem Benutzer eine eigene benutzerdefinierte Autorisierungserfahrung präsentieren können. Ihre App hat keine Kontrolle darüber, was in dieser Oberfläche geschieht. Sie weiß nur, was zurückgegeben wird, wenn Azure AD die von Ihnen bereitgestellte Rückrufseite aufruft (`/tab-auth/simple-end`).
+Im letzten Abschnitt haben Sie den Azure AD Autorisierungsdienst aufgerufen und Benutzer- und App-Informationen übergeben, damit Azure AD dem Benutzer eine eigene monolithische Autorisierungserfahrung bieten können. Ihre App hat keine Kontrolle darüber, was in dieser Umgebung geschieht. Sie wissen nur, was zurückgegeben wird, wenn Azure AD die von Ihnen angegebene Rückrufseite aufruft (`/tab-auth/simple-end`).
 
-Auf dieser Seite müssen Sie Erfolg oder Fehler anhand der Informationen bestimmen, die von Azure AD und Anruf `microsoftTeams.authentication.notifySuccess()` oder `microsoftTeams.authentication.notifyFailure()`zurückgegeben werden. Wenn die Anmeldung erfolgreich war, haben Sie Zugriff auf Dienstressourcen.
+Auf dieser Seite müssen Sie Erfolg oder Fehler basierend auf den Informationen ermitteln, die von Azure AD und Anruf `microsoftTeams.authentication.notifySuccess()` oder `microsoftTeams.authentication.notifyFailure()`zurückgegeben werden. Wenn die Anmeldung erfolgreich war, haben Sie Zugriff auf Dienstressourcen.
 
 ````javascript
 // Split the key-value pairs passed from Azure AD
@@ -134,38 +134,38 @@ if (hashParams["error"]) {
 }
 ````
 
-Dieser Code analysiert die Schlüssel-Wert-Paare, die von Azure AD mithilfe `window.location.hash` der `getHashParameters()` Hilfsfunktion empfangen wurden. Wenn ein `access_token`Wert gefunden wird und der `state` Wert mit dem wert übereinstimmt, der zu Beginn des Authentifizierungsflusses angegeben wurde, wird das Zugriffstoken durch Aufrufen `notifySuccess()`an die Registerkarte zurückgegeben. Andernfalls wird ein Fehler mit `notifyFailure()`gemeldet.
+Dieser Code analysiert die Schlüssel-Wert-Paare, die von Azure AD mithilfe `window.location.hash` der `getHashParameters()` Hilfsfunktion empfangen werden. Wenn ein Wert gefunden `access_token`wird und der `state` Wert mit dem wert übereinstimmt, der zu Beginn des Authentifizierungsflusses bereitgestellt wird, wird das Zugriffstoken für die Registerkarte durch Aufrufen `notifySuccess()`zurückgegeben. Andernfalls wird ein Fehler mit `notifyFailure()`gemeldet.
 
-### <a name="notes"></a>Notizen
+### <a name="notes"></a>Anmerkungen
 
 `NotifyFailure()` hat die folgenden vordefinierten Fehlerursachen:
 
-* `CancelledByUser` Der Benutzer hat das Popupfenster geschlossen, bevor er den Authentifizierungsfluss abgeschlossen hat.
-* `FailedToOpenWindow` Das Popupfenster konnte nicht geöffnet werden. Wenn Microsoft Teams in einem Browser ausgeführt wird, bedeutet dies in der Regel, dass das Fenster durch einen Popupblocker blockiert wurde.
+* `CancelledByUser` der Benutzer das Popupfenster geschlossen hat, bevor der Authentifizierungsfluss abgeschlossen wurde.
+* `FailedToOpenWindow` das Popupfenster konnte nicht geöffnet werden. Wenn Microsoft Teams in einem Browser ausgeführt wird, bedeutet dies in der Regel, dass das Fenster durch einen Popupblocker blockiert wurde.
 
-Wenn dies erfolgreich war, können Sie die Seite aktualisieren oder neu laden und Inhalte anzeigen, die für den jetzt authentifizierten Benutzer relevant sind. Wenn die Authentifizierung fehlschlägt, wird eine Fehlermeldung angezeigt.
+Bei erfolgreicher Ausführung können Sie die Seite aktualisieren oder erneut laden und Inhalte anzeigen, die für den jetzt authentifizierten Benutzer relevant sind. Wenn die Authentifizierung fehlschlägt, wird eine Fehlermeldung angezeigt.
 
-Ihre App kann ein eigenes Sitzungscookie festlegen, damit sich der Benutzer nicht erneut anmelden muss, wenn er zu Ihrer Registerkarte auf dem aktuellen Gerät zurückkehrt.
+Ihre App kann ein eigenes Sitzungscookie festlegen, sodass sich der Benutzer nicht erneut anmelden muss, wenn er auf dem aktuellen Gerät zu Ihrer Registerkarte zurückkehrt.
 
 > [!NOTE]
 >
-> * Chrome 80, das Anfang 2020 veröffentlicht werden soll, führt neue Cookiewerte ein und erlegt standardmäßig Cookierichtlinien auf. Es wird empfohlen, die beabsichtigte Verwendung für Ihre Cookies festzulegen, anstatt sich auf das Standardverhalten des Browsers zu verlassen. *Siehe* [SameSite-Cookieattribut (Update 2020)](../../../resources/samesite-cookie-update.md).
-> * Um das richtige Token für Microsoft Teams kostenlose und Gastbenutzer zu erhalten, ist es wichtig, dass die Apps mandantenspezifischen Endpunkt `https://login.microsoftonline.com/**{tenantId}**`verwenden. Sie können tenantId aus der Bot-Nachricht oder dem Registerkartenkontext abrufen. Wenn die Apps verwendet `https://login.microsoftonline.com/common`werden, erhalten die Benutzer falsche Token und melden sich beim "Home"-Mandanten anstelle des Mandanten an, bei dem sie derzeit angemeldet sind.
+> * Chrome 80, das Anfang 2020 veröffentlicht werden soll, führt neue Cookiewerte ein und erzwingt standardmäßig Cookierichtlinien. Es wird empfohlen, die beabsichtigte Verwendung für Ihre Cookies festzulegen, anstatt sich auf das Standardverhalten des Browsers zu verlassen. *Siehe* [SameSite-Cookieattribut (Update 2020)](../../../resources/samesite-cookie-update.md).
+> * Um das richtige Token für Microsoft Teams Free- und Gastbenutzer zu erhalten, ist es wichtig, dass die Apps den mandantenspezifischen Endpunkt `https://login.microsoftonline.com/**{tenantId}**`verwenden. Sie können tenantId aus der Botnachricht oder dem Registerkartenkontext abrufen. Wenn die Apps verwenden `https://login.microsoftonline.com/common`, erhalten die Benutzer falsche Token und melden sich beim "Home"-Mandanten anstelle des Mandanten an, bei dem sie derzeit angemeldet sind.
 
-Weitere Informationen zu single Sign-On (SSO) finden Sie im Artikel ["Automatische Authentifizierung](~/tabs/how-to/authentication/auth-silent-AAD.md)".
+Weitere Informationen zu Single Sign-On (SSO) finden Sie im Artikel [Automatische Authentifizierung](~/tabs/how-to/authentication/auth-silent-AAD.md).
 
 ## <a name="code-sample"></a>Codebeispiel
 
-Beispielcode, der den Vorgang der Registerkartenauthentifizierung mit Azure AD zeigt:
+Beispielcode, der den Registerkartenauthentifizierungsprozess mithilfe von Azure AD zeigt:
 
 | **Beispielname** | **description** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|
-| Microsoft Teams Registerkartenauthentifizierung | Registerkartenauthentifizierungsprozess mit Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
+| Microsoft Teams Registerkartenauthentifizierung | Registerkartenauthentifizierung mithilfe von Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 
 * [Planen der Benutzerauthentifizierung](../../../concepts/design/understand-use-cases.md)
 * [Entwerfen Sie Ihre Registerkarte für Microsoft Teams](~/tabs/design/tabs.md)
 * [Automatische Authentifizierung](~/tabs/how-to/authentication/auth-silent-aad.md)
-* [Hinzufügen einer Authentifizierung zu Ihrer Messaging-Erweiterung](~/messaging-extensions/how-to/add-authentication.md)
+* [Hinzufügen der Authentifizierung zu Ihrer Nachrichtenerweiterung](~/messaging-extensions/how-to/add-authentication.md)
 * [SSO-Unterstützung (Single Sign-On) für Bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)

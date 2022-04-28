@@ -4,12 +4,12 @@ author: surbhigupta
 description: Aktivieren und konfigurieren Sie Ihre Apps für Teams Besprechungen und verschiedene Besprechungsszenarien, aktualisieren Sie das App-Manifest, konfigurieren Sie Features, z. B. In-Besprechungsdialogfeld, freigegebene Besprechungsphase, Besprechungsseite und vieles mehr
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 719019439e095abf1ef6befccb3f9f6eaa8cd22b
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 4c3f571797df2810e76fc7145e9e9441adbd1e9b
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826978"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103348"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen
 
@@ -93,7 +93,7 @@ Teams Besprechungen bieten eine Zusammenarbeitserfahrung für Ihre Organisation.
 
 ### <a name="before-a-meeting"></a>Vor einer Besprechung
 
-Vor einer Besprechung können Benutzer Registerkarten, Bots und Messaging-Erweiterungen hinzufügen. Benutzer mit Organisator- und Referentenrollen können einer Besprechung Registerkarten hinzufügen.
+Vor einer Besprechung können Benutzer Registerkarten, Bots und Nachrichtenerweiterungen hinzufügen. Benutzer mit Organisator- und Referentenrollen können einer Besprechung Registerkarten hinzufügen.
 
 So fügen Sie einer Besprechung eine Registerkarte hinzu:
 
@@ -104,10 +104,10 @@ So fügen Sie einer Besprechung eine Registerkarte hinzu:
 
 1. Wählen Sie im angezeigten Registerkartenkatalog die App aus, die Sie hinzufügen möchten, und führen Sie die erforderlichen Schritte aus. Die App wird als Registerkarte installiert.
 
-So fügen Sie einer Besprechung eine Messaging-Erweiterung hinzu:
+So fügen Sie einer Besprechung eine Nachrichtenerweiterung hinzu:
 
 1. Wählen Sie die Auslassungszeichen aus, &#x25CF;&#x25CF;&#x25CF; sich im Bereich "Nachricht verfassen" im Chat befinden.
-1. Wählen Sie die App aus, die Sie hinzufügen möchten, und führen Sie die erforderlichen Schritte aus. Die App wird als Messaging-Erweiterung installiert.
+1. Wählen Sie die App aus, die Sie hinzufügen möchten, und führen Sie die erforderlichen Schritte aus. Die App wird als Nachrichtenerweiterung installiert.
 
 So fügen Sie einen Bot zu einer Besprechung hinzu:
 
@@ -129,7 +129,7 @@ Auf `meetingSidePanel` diese Weise können Sie die Benutzeroberflächen in einer
 
 Informationen zur Verwendung der `userContext` API zum Weiterleiten von Anforderungen finden Sie [unter Teams SDK](../tabs/how-to/access-teams-context.md#user-context). Weitere Informationen finden Sie [unter Teams Authentifizierungsfluss für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md). Der Authentifizierungsfluss für Registerkarten ähnelt dem Authentifizierungsfluss für Websites. Registerkarten können OAuth 2.0 also direkt verwenden. Weitere Informationen finden Sie [unter Microsoft Identity Platform- und OAuth 2.0-Autorisierungscodefluss](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
-Die Messaging-Erweiterung funktioniert wie erwartet, wenn sich ein Benutzer in einer Besprechungsansicht befindet. Der Benutzer kann Erweiterungskarten zum Verfassen von Nachrichten posten. AppName in der Besprechung ist eine QuickInfo, die den App-Namen in der Besprechungs-U-Leiste angibt.
+Die Nachrichtenerweiterung funktioniert wie erwartet, wenn sich ein Benutzer in einer Besprechungsansicht befindet. Der Benutzer kann Erweiterungskarten zum Verfassen von Nachrichten posten. AppName in der Besprechung ist eine QuickInfo, die den App-Namen in der Besprechungs-U-Leiste angibt.
 
 > [!NOTE]
 > Verwenden Sie Version 1.7.0 oder höher von [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), da versionen davor das Seitenpanel nicht unterstützen.

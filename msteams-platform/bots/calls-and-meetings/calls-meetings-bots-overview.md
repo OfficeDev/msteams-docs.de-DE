@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Ihre Microsoft Teams-Apps mitHilfe von Sprach- un
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Anrufe Audio Video IVR Voice Online-Besprechungen Echtzeit-Mediendatenströme Bot
-ms.openlocfilehash: e17d0c18bfb3f751a11e43780dba9f0f85441a96
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: a7b9dbe81304e2556b8b8b868f1f9e29f8bba284
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073823"
+ms.locfileid: "65102505"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots für Anrufe und Onlinebesprechungen
 
@@ -45,7 +45,7 @@ Anrufe in Teams können reine Audio- oder Audio- und Videodaten sein. Anstelle v
 
 Anrufe sind peer-to-peer zwischen einer Person und Ihrem Bot oder multiparty zwischen Ihrem Bot und zwei oder mehr Personen in einem Gruppenanruf.
 
-![Anruftypen](~/assets/images/calls-and-meetings/call-types.png)
+:::image type="content" source="~/assets/images/calls-and-meetings/call-types.png" alt-text="Anruftypen"border="true":::
 
 Im Folgenden sind die verschiedenen Anruftypen und -berechtigungen aufgeführt, die für den Anruf erforderlich sind:
 
@@ -63,7 +63,7 @@ Es gibt zwei Arten von Signalen, eingehenden Anruf und In-Call. Im Folgenden sin
 
 * Um einen eingehenden Anruf zu erhalten, geben Sie einen Endpunkt in Ihre Bot-Einstellungen ein. Dieser Endpunkt erhält eine Benachrichtigung, wenn ein eingehender Anruf initiiert wird. Sie können den Anruf annehmen, ablehnen oder an eine andere Person umleiten.
 
-    ![Anrufbehandlung](~/assets/images/calls-and-meetings/call-handling.png)
+     :::image type="content" source="~/assets/images/calls-and-meetings/call-handling.png" alt-text="Anrufbehandlung"border="true":::
 
 * Wenn sich ein Bot in einem Anruf befindet, gibt es APIs zum Stummschalten und Aufheben der Stummschaltung des Bots und zum Starten oder Beenden der Freigabe von Video- oder Desktopinhalten für andere Teilnehmer.
 * Der Bot kann auch auf die Liste der Teilnehmer zugreifen, neue Teilnehmer einladen und sie stummschalten.

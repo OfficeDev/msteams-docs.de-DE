@@ -5,12 +5,12 @@ description: Eine Übersicht über Bots in Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: fbf7f7b1f4e863ec7612a404b5576baf40035d21
-ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
+ms.openlocfilehash: 53d016c6e01c73a6fbe5f59ed4a3239077e8b12e
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952303"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65102421"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots in Microsoft Teams
 
@@ -21,11 +21,11 @@ Ein Bot wird auch als Chatbot oder Unterhaltungsbot bezeichnet. Es handelt sich 
 
 Unterhaltungs-Bots ermöglichen es Benutzern, mit Ihrem Webdienst über Text, interaktive Karten und Aufgabenmodule zu interagieren.
 
-![Aufrufen eines Bots mithilfe von Text](~/assets/images/invokebotwithtext.png)
+:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="Webdienst mit Text"lightbox="../assets/images/invokebotwithtext.png":::
 
-![Aufrufen eines Bots mithilfe einer Karte](~/assets/images/invokebotwithcard.png)
+:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="Webdienst mit interaktiven Karten"lightbox="../assets/images/invokebotwithcard.png"border="true":::
 
-<img src="~/assets/images/task-module-example.png" alt="Invoke bot using task module" width="400"/>
+:::image type="content" source="../assets/images/task-module-example.png" alt-text="Webdienst mit Aufgabenmodul"lightbox="../assets/images/task-module-example.png"border="true":::
 
 Unterhaltungsbots sind unglaublich flexibel. Bots können einige Basisbefehle verarbeiten oder komplexe Aufgaben, die künstliche Intelligenz und die Verarbeitung natürlicher Sprache erfordern. Bots können Teil einer größeren Anwendung oder eigenständig sein.
 

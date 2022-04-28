@@ -1,15 +1,15 @@
 ---
 title: Einheitliche Besprechungs-Apps
 author: surbhigupta
-description: Erfahren Sie mehr über Teams Besprechungslebenszyklus und die Besprechungserfahrung des Benutzers in der Desktop- und mobilen Umgebung, Teilnehmer- und Benutzerrollen und -typen, integrieren Sie Bots und Messaging-Erweiterungen in den Besprechungslebenszyklus.
+description: Erfahren Sie mehr über Teams Besprechungslebenszyklus und die Besprechungserfahrung des Benutzers in der Desktop- und mobilen Umgebung, Teilnehmer- und Benutzerrollen und -typen, integrieren Bots und Nachrichtenerweiterungen in den Besprechungslebenszyklus.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 4eb3b65213414b7e793795490613c343fc84ad3a
-ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
+ms.openlocfilehash: 0da600f3cbdf32a998e55bdf0db21ef1bbb4122f
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64838464"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103334"
 ---
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 
@@ -19,11 +19,11 @@ Teams einheitlichen Besprechungs-Apps basieren auf den folgenden Konzepten:
 * Es gibt drei verschiedene Teilnehmerrollen in einer Besprechung: Organisator, Referent und Teilnehmer. Weitere Informationen finden Sie [unter Rollen in einer Teams Besprechung](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * Es gibt verschiedene [Benutzertypen](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) in einer Besprechung: Mandantenspezifische, [Gast](/microsoftteams/guest-access)-, [Verbund](/microsoftteams/manage-external-access)- und anonyme Benutzer.
 
-In diesem Artikel werden die Informationen zum Lebenszyklus von Besprechungen und zum Integrieren von Registerkarten, Bots und Messaging-Erweiterungen behandelt. Es identifiziert verschiedene Teilnehmerrollen und Benutzertypen.
+In diesem Artikel werden die Informationen zum Lebenszyklus von Besprechungen und zum Integrieren von Registerkarten, Bots und Nachrichtenerweiterungen behandelt. Es identifiziert verschiedene Teilnehmerrollen und Benutzertypen.
 
 ## <a name="meeting-lifecycle"></a>Der Besprechungslebenszyklus
 
-Den Phasen des Besprechungslebenszyklus entsprechen in der App drei Umgebungen: vor der Besprechung, in der Besprechung und nach der Besprechung. Sie können Registerkarten, Bots und Messaging-Erweiterungen in jedes der Freigabefenster des Besprechungslebenszyklus integrieren.
+Den Phasen des Besprechungslebenszyklus entsprechen in der App drei Umgebungen: vor der Besprechung, in der Besprechung und nach der Besprechung. Sie können Registerkarten, Bots und Nachrichtenerweiterungen in jede Phase des Besprechungslebenszyklus integrieren.
 
 > [!NOTE]
 > Besprechungserweiterungen wie Bots, Karten, Nachrichtenerweiterungen und Nachrichtenaktionen werden im Webclient unterstützt. Gehostete Benutzeroberflächen wie Registerkarten, Inhaltsblasen und Freigabe für Die Stufe werden derzeit jedoch nicht vollständig unterstützt.
@@ -152,9 +152,9 @@ In der folgenden Abbildung wird die Registerkarte **"Contoso** " mit Ergebnissen
 
 Bots, die im Gruppenchatbereich aktiviert sind, funktionieren in Besprechungen. Um Bots zu implementieren, beginnen Sie mit [dem Erstellen eines Bots](../build-your-first-app/build-bot.md), und fahren Sie dann mit dem [Erstellen von Apps für Teams Besprechungen](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references) fort.
 
-### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>Integrieren von Messaging-Erweiterungen in den Besprechungslebenszyklus
+### <a name="integrate-message-extensions-into-the-meeting-lifecycle"></a>Integrieren von Nachrichtenerweiterungen in den Besprechungslebenszyklus
 
-Um die Messaging-Erweiterung zu implementieren, erstellen [Sie zunächst eine Messaging-Erweiterung](../messaging-extensions/how-to/create-messaging-extension.md), und fahren Sie dann mit dem [Erstellen von Apps für Teams Besprechungen](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references) fort.
+Um die Nachrichtenerweiterung zu implementieren, beginnen Sie mit [dem Erstellen einer Nachrichtenerweiterung](../messaging-extensions/how-to/create-messaging-extension.md), und fahren Sie dann mit dem [Erstellen von Apps für Teams Besprechungen](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references) fort.
 
 Mit den Teams einheitlichen Besprechungs-Apps können Sie Ihre App basierend auf Teilnehmerrollen in einer Besprechung entwerfen.
 
@@ -210,7 +210,7 @@ Ein Gast oder anonymer Benutzer kann keine Apps hinzufügen, entfernen oder dein
 
 Die folgende Tabelle enthält die Benutzertypen und listet die Features auf, auf die jeder Benutzer zugreifen kann:
 
-| Benutzertyp | Registerkarten | Bots | Messaging-Erweiterungen | Adaptive Karten | Aufgabenmodule | Dialogfeld "Besprechung" | Besprechungsphase |
+| Benutzertyp | Registerkarten | Bots | Nachrichtenerweiterungen | Adaptive Karten | Aufgabenmodule | Dialogfeld "Besprechung" | Besprechungsphase |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Anonymer Benutzer | Nicht verfügbar | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Nicht verfügbar | Nicht verfügbar |
 | Gast, Teil der Mandanten-Azure AD | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Verfügbar | Kann nur auf Teams Desktopclient starten, anzeigen und mit der App in der Besprechungsphase interagieren |
@@ -225,5 +225,5 @@ Die folgende Tabelle enthält die Benutzertypen und listet die Features auf, auf
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md):
-* [Messaging-Erweiterung](../messaging-extensions/what-are-messaging-extensions.md)
+* [Nachrichtenerweiterung](../messaging-extensions/what-are-messaging-extensions.md)
 * [Entwerfen Ihrer App](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)

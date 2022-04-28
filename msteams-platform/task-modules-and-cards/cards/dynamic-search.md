@@ -5,12 +5,12 @@ description: Beschreibt die Typkopfsuche mit dem Input.ChoiceSet-Steuerelement i
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: d33fce44cbf1ff550d9aa21686111746318bb17e
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 1e302a74ceffb88989989b42aa8a202d1e79fb36
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073795"
+ms.locfileid: "65103439"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>Vorausschauende Suche in Adaptiven Karten
 
@@ -61,7 +61,7 @@ Die folgende Abbildung veranschaulicht die mobile Erfahrung der Typeahead-Suche:
 ---
 
 > [!NOTE]
-> Mit der dynamischen Suche, z. B. abfragebasierten Messaging-Erweiterungen, können Sie keine umfangreichen Kartenfunktionen erhalten.
+> Mit der dynamischen Suche, z. B. abfragebasierten Nachrichtenerweiterungen, können Sie keine umfangreichen Kartenfunktionen erhalten.
 
 ## <a name="implement-typeahead-search"></a>Implementieren der Typeahead-Suche
 

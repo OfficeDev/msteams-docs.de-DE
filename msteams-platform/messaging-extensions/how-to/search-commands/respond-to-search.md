@@ -1,35 +1,35 @@
 ---
-title: Auf Suchbefehl antworten
+title: Antworten auf Suchbefehl
 author: surbhigupta
-description: Erfahren Sie, wie Sie mithilfe von Codebeispielen und Beispielen auf den Suchbefehl aus einer Messaging-Erweiterung in einer Microsoft Teams-App antworten.
+description: Erfahren Sie, wie Sie mithilfe von Codebeispielen und Beispielen auf den Suchbefehl aus einer Nachrichtenerweiterung in einer Microsoft Teams-App reagieren.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 42b36e5d7056368463797d1297c0674b33b6b5a0
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4dcf3d5743471daa034d138818cf11a9a516a32e
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453824"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104504"
 ---
-# <a name="respond-to-search-command"></a>Auf Suchbefehl antworten
+# <a name="respond-to-search-command"></a>Antworten auf Suchbefehl
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Nachdem der Benutzer den Suchbefehl übermittelt hat, empfängt Ihr Webdienst eine `composeExtension/query` Aufrufnachricht, die ein `value` Objekt mit den Suchparametern enthält. Dieser Aufruf, der mit den folgenden Bedingungen ausgelöst wird:
+Nachdem der Benutzer den Suchbefehl übermittelt hat, erhält Ihr Webdienst eine `composeExtension/query` Aufrufmeldung, die ein `value` Objekt mit den Suchparametern enthält. Dieser Aufruf, der mit den folgenden Bedingungen ausgelöst wird:
 
 * Wenn Zeichen in das Suchfeld eingegeben werden.
-* `initialRun` in Ihrem App-Manifest auf "true" festgelegt ist, erhalten Sie die Aufrufnachricht, sobald der Suchbefehl aufgerufen wird. Weitere Informationen finden Sie unter [Standardabfrage](#default-query).
+* `initialRun` in Ihrem App-Manifest auf "true" festgelegt ist, erhalten Sie die Aufrufmeldung, sobald der Suchbefehl aufgerufen wird. Weitere Informationen finden Sie unter [Standardabfrage](#default-query).
 
 In diesem Dokument erfahren Sie, wie Sie auf Benutzeranforderungen in Form von Karten und Vorschauen reagieren und unter welchen Bedingungen Microsoft Teams eine Standardabfrage ausgibt.
 
-Die Anforderungsparameter befinden sich im `value` Objekt in der Anforderung, das die folgenden Eigenschaften enthält:
+Die Anforderungsparameter werden im `value` Objekt in der Anforderung gefunden, das die folgenden Eigenschaften enthält:
 
 | Eigenschaftenname | Zweck |
 |---|---|
 | `commandId` | Der Name des vom Benutzer aufgerufenen Befehls, der einem der im App-Manifest deklarierten Befehle entspricht. |
-| `parameters` | Array von Parametern. Jedes Parameterobjekt enthält den Parameternamen sowie den vom Benutzer bereitgestellten Parameterwert. |
-| `queryOptions` | Paginierungsparameter: <br>`skip`: Anzahl für diese Abfrage überspringen <br>`count`: Anzahl der zurückzugebenden Elemente. |
+| `parameters` | Array von Parametern. Jedes Parameterobjekt enthält den Parameternamen zusammen mit dem vom Benutzer bereitgestellten Parameterwert. |
+| `queryOptions` | Paginierungsparameter: <br>`skip`: Überspringen der Anzahl für diese Abfrage <br>`count`: Anzahl der zurückzugebenden Elemente. |
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -52,7 +52,7 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Der json unten ist gekürzt, um die relevantesten Abschnitte hervorzuheben.
+Der folgende JSON-Code wird gekürzt, um die relevantesten Abschnitte hervorzuheben.
 
 ```json
 {
@@ -77,17 +77,17 @@ Der json unten ist gekürzt, um die relevantesten Abschnitte hervorzuheben.
 
 * * *
 
-## <a name="respond-to-user-requests"></a>Antworten auf Benutzeranforderungen
+## <a name="respond-to-user-requests"></a>Reagieren auf Benutzeranforderungen
 
-Wenn der Benutzer eine Abfrage ausführt, gibt Microsoft Teams eine synchrone HTTP-Anforderung an Ihren Dienst aus. An diesem Punkt hat `5` Ihr Code Sekunden Zeit, um eine HTTP-Antwort auf die Anforderung bereitzustellen. Während dieser Zeit kann Ihr Dienst zusätzliche Nachschlagevorgänge oder eine beliebige andere Geschäftslogik ausführen, die für die Bearbeitung der Anforderung erforderlich ist.
+Wenn der Benutzer eine Abfrage ausführt, gibt Microsoft Teams eine synchrone HTTP-Anforderung an Ihren Dienst aus. An diesem Punkt hat `5` Der Code Sekunden, um eine HTTP-Antwort auf die Anforderung bereitzustellen. Während dieser Zeit kann Ihr Dienst zusätzliche Nachschlagevorgänge oder eine andere Geschäftslogik ausführen, die zum Bedienen der Anforderung erforderlich ist.
 
-Ihr Dienst muss mit den Ergebnissen antworten, die der Benutzerabfrage entsprechen. Die Antwort muss einen HTTP-Statuscode und ein gültiges `200 OK` Anwendungs- oder JSON-Objekt mit den folgenden Eigenschaften angeben:
+Ihr Dienst muss mit den Ergebnissen antworten, die mit der Benutzerabfrage übereinstimmen. Die Antwort muss einen HTTP-Statuscode und ein gültiges `200 OK` Anwendungs- oder JSON-Objekt mit den folgenden Eigenschaften angeben:
 
 |Eigenschaftenname|Zweck|
 |---|---|
-|`composeExtension`|Antwortumschlag auf oberster Ebene.|
-|`composeExtension.type`|Antworttyp. Die folgenden Typen werden unterstützt: <br>`result`: Zeigt eine Liste der Suchergebnisse an <br>`auth`: Fordert den Benutzer zur Authentifizierung auf <br>`config`: Fordert den Benutzer auf, die Messaging-Erweiterung einzurichten <br>`message`: Zeigt eine Nur-Text-Nachricht an |
-|`composeExtension.attachmentLayout`|Gibt das Layout der Anlagen an. Wird für Antworten vom Typ `result`verwendet. <br>Derzeit werden die folgenden Typen unterstützt: <br>`list`: Eine Liste von Kartenobjekten, die Miniaturansichten, Titel und Textfelder enthalten <br>`grid`: Ein Raster mit Miniaturansichten |
+|`composeExtension`|Antwortumschlag der obersten Ebene.|
+|`composeExtension.type`|Antworttyp. Die folgenden Typen werden unterstützt: <br>`result`: Zeigt eine Liste der Suchergebnisse an. <br>`auth`: Fordert den Benutzer auf, sich zu authentifizieren <br>`config`: Fordert den Benutzer auf, die Nachrichtenerweiterung einzurichten. <br>`message`: Zeigt eine Nur-Text-Nachricht an. |
+|`composeExtension.attachmentLayout`|Gibt das Layout der Anlagen an. Wird für Antworten vom Typ `result`verwendet. <br>Derzeit werden die folgenden Typen unterstützt: <br>`list`: Eine Liste der Kartenobjekte, die Miniaturansichten, Titel und Textfelder enthalten <br>`grid`: Ein Raster mit Miniaturansichten |
 |`composeExtension.attachments`|Array gültiger Anlagenobjekte. Wird für Antworten vom Typ `result`verwendet. <br>Derzeit werden die folgenden Typen unterstützt: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Vorgeschlagene Aktionen. Wird für Antworten vom Typ `auth` oder `config`verwendet. |
 |`composeExtension.text`|Anzuzeigende Meldung. Wird für Antworten vom Typ `message`verwendet. |
@@ -101,22 +101,22 @@ Teams unterstützt die folgenden Kartentypen:
 * [Office 365-Connectorkarte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Karte](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Um ein besseres Verständnis und einen besseren Überblick über Karten zu haben, sehen Sie sich an, [was Karten sind](~/task-modules-and-cards/what-are-cards.md).
+Um ein besseres Verständnis und einen besseren Überblick über Karten zu erhalten, sehen Sie, [was Karten sind](~/task-modules-and-cards/what-are-cards.md).
 
-Informationen zur Verwendung der Miniaturansicht- und Herokartentypen finden Sie unter [Hinzufügen von Karten und Kartenaktionen](~/task-modules-and-cards/cards/cards-actions.md).
+Informationen zum Verwenden der Miniaturansichten- und Hero-Kartentypen finden Sie unter ["Hinzufügen von Karten und Kartenaktionen"](~/task-modules-and-cards/cards/cards-actions.md).
 
-Weitere Informationen zur Office 365 Connectorkarte finden Sie unter [Verwenden Office 365 Connectorkarten](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+Weitere Informationen zur Office 365 Connectorkarte finden [Sie unter Verwenden von Office 365 Connectorkarten](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-Die Ergebnisliste wird auf der Microsoft Teams Benutzeroberfläche mit einer Vorschau der einzelnen Elemente angezeigt. Die Vorschau wird auf eine der beiden folgenden Arten generiert:
+Die Ergebnisliste wird in der benutzeroberfläche Microsoft Teams mit einer Vorschau der einzelnen Elemente angezeigt. Die Vorschau wird auf eine der beiden folgenden Arten generiert:
 
-* Verwenden der `preview` Eigenschaft innerhalb des `attachment` Objekts. Die `preview` Anlage kann nur ein Held oder eine Miniaturansichtskarte sein.
-* Extrahieren aus den grundlegenden `title`, `text`und `image` Eigenschaften des `attachment` Objekts. Die grundlegenden Eigenschaften werden nur verwendet, wenn die `preview` Eigenschaft nicht angegeben ist.
+* Verwenden der `preview` Eigenschaft innerhalb des Objekts `attachment` . Die `preview` Anlage kann nur ein Held oder eine Miniaturansichtskarte sein.
+* Extrahieren aus den grundlegenden `title`, `text`und `image` Eigenschaften des Objekts `attachment` . Die grundlegenden Eigenschaften werden nur verwendet, wenn die `preview` Eigenschaft nicht angegeben ist.
 
-Für Hero- oder Miniaturansichtskarte werden mit Ausnahme der Aufrufaktion andere Aktionen wie Schaltfläche und Tippen in der Vorschaukarte nicht unterstützt.
+Bei Hero- oder Miniaturansichtenkarten werden mit Ausnahme der Aktion zum Aufrufen anderer Aktionen wie Schaltfläche und Tippen in der Vorschaukarte nicht unterstützt.
 
-Um eine adaptive Karte oder Office 365 Connectorkarte zu senden, müssen Sie eine Vorschau einschließen. Die `preview` Eigenschaft muss eine Hero- oder Miniaturansichtskarte sein. Wenn Sie die Vorschaueigenschaft im `attachment` Objekt nicht angeben, wird keine Vorschau generiert.
+Um eine adaptive Karte oder Office 365 Connectorkarte zu senden, müssen Sie eine Vorschau einschließen. Die `preview` Eigenschaft muss eine Hero- oder Miniaturansichtenkarte sein. Wenn Sie die Vorschaueigenschaft nicht im `attachment` Objekt angeben, wird keine Vorschau generiert.
 
-Für Hero- und Miniaturansichtskarten müssen Sie keine Vorschaueigenschaft angeben, eine Vorschau wird standardmäßig generiert.
+Für Hero- und Miniaturansichtenkarten müssen Sie keine Vorschaueigenschaft angeben, eine Vorschau wird standardmäßig generiert.
 
 ### <a name="response-example"></a>Anforderungsbeispiel
 
@@ -383,13 +383,13 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 * * *
 
 > [!NOTE]
-> `OnTeamsMessagingExtensionSelectItemAsync` wird in der mobilen Teams-Anwendung nicht ausgelöst.
+> `OnTeamsMessagingExtensionSelectItemAsync` wird in der Mobilen Teams-Anwendung nicht ausgelöst.
 
 ## <a name="default-query"></a>Standardabfrage
 
-Wenn Sie dies im Manifest festlegen `initialRun` `true`, gibt Microsoft Teams eine **Standardabfrage** aus, wenn der Benutzer die Messaging-Erweiterung zum ersten Mal öffnet. Ihr Dienst kann auf diese Abfrage mit einer Reihe vorab ausgefüllter Ergebnisse antworten. Dies ist nützlich, wenn ihr Suchbefehl eine Authentifizierung oder Konfiguration erfordert und zuletzt angezeigte Elemente, Favoriten oder andere Informationen anzeigt, die nicht von benutzereingaben abhängig sind.
+Wenn Sie im Manifest festlegen `initialRun` `true`, gibt Microsoft Teams eine **Standardabfrage** aus, wenn der Benutzer die Nachrichtenerweiterung zum ersten Mal öffnet. Ihr Dienst kann auf diese Abfrage mit einer Reihe von vorab ausgefüllten Ergebnissen antworten. Dies ist nützlich, wenn ihr Suchbefehl eine Authentifizierung oder Konfiguration erfordert und zuletzt angezeigte Elemente, Favoriten oder andere Informationen angezeigt werden, die nicht von benutzereingaben abhängig sind.
 
-Die Standardabfrage weist die gleiche Struktur wie jede normale Benutzerabfrage auf, wobei das `name` Feld auf `initialRun` das folgende Objekt festgelegt und `value` festgelegt ist `true` :
+Die Standardabfrage hat die gleiche Struktur wie jede normale Benutzerabfrage, wobei das Feld auf `initialRun` das `name` folgende Objekt festgelegt und `value` festgelegt `true` ist:
 
 ```json
 {
@@ -416,14 +416,14 @@ Die Standardabfrage weist die gleiche Struktur wie jede normale Benutzerabfrage 
 
 | Beispielname           | Beschreibung | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams Messaging-Erweiterungsaktion| Beschreibt, wie Aktionsbefehle definiert, Aufgabenmodul erstellt und auf Aufgabenmodul-Sendeaktion reagiert wird. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams Messaging-Erweiterungssuche   |  Beschreibt, wie Suchbefehle definiert und auf Suchvorgänge reagiert wird.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams Nachrichtenerweiterungsaktion| Beschreibt das Definieren von Aktionsbefehlen, das Erstellen eines Aufgabenmoduls und das Reagieren auf Aufgabenmodul-Sendeaktionen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams Nachrichtenerweiterungssuche   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchvorgänge reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Hinzufügen der Authentifizierung zu einer Messaging-Erweiterung](~/messaging-extensions/how-to/add-authentication.md)
+> [Hinzufügen der Authentifizierung zu einer Nachrichtenerweiterung](~/messaging-extensions/how-to/add-authentication.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Hinzufügen einer Konfiguration zu einer Messaging-Erweiterung](~/get-started/first-message-extension.md)
+[Hinzufügen einer Konfiguration zu einer Nachrichtenerweiterung](~/get-started/first-message-extension.md)

@@ -1,25 +1,25 @@
 ---
 title: Bereitstellen in die Cloud
 author: MuyangAmigo
-description: Bereitstellen der App in der Cloud, Azure oder SharePoint
+description: Bereitstellen der App in der Cloud, azure oder SharePoint
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 35a60e718bb97cdcc24de66729e3929b2d21a59f
-ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
+ms.openlocfilehash: 1d0ade9abed4be212abfb96068626172c4f0f03e
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64614530"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104147"
 ---
 # <a name="deploy-to-the-cloud"></a>Bereitstellen in die Cloud
 
-Teams Toolkit hilft Ihnen, den Front-End- und Back-End-Code in Ihrer Anwendung bereitzustellen oder in Ihre bereitgestellten Cloudressourcen in Azure hochzuladen.
+Teams Toolkit hilft Ihnen beim Bereitstellen oder Hochladen des Frontend- und Back-End-Codes in Ihrer Anwendung in Ihre bereitgestellten Cloudressourcen in Azure.
 
-* Die Registerkarte, z. B. Front-End-Anwendungen, wird im Azure-Speicher bereitgestellt und für statisches Webhosting oder eine SharePoint-Website konfiguriert.
-* Die Back-End-APIs werden in Azure-Funktionen bereitgestellt.
-* Der Bot oder die Messaging-Erweiterung wird im Azure-App-Dienst bereitgestellt.
+* Die Registerkarte, z. B. Frontend-Anwendungen, wird im Azure-Speicher bereitgestellt und für statisches Webhosting oder eine SharePoint-Website konfiguriert.
+* Die Back-End-APIs werden für Azure-Funktionen bereitgestellt.
+* Der Bot oder die Nachrichtenerweiterung wird im Azure-App-Dienst bereitgestellt.
 
 ## <a name="prerequisite"></a>Voraussetzungen
 
@@ -27,8 +27,8 @@ Teams Toolkit hilft Ihnen, den Front-End- und Back-End-Code in Ihrer Anwendung b
 
 > [!NOTE]
 >
-> * Stellen Sie sicher, dass Teams App-Projekt im VS-Code geöffnet ist.
-> * Bevor Sie Projektcode in der Cloud bereitstellen, [stellen Sie die Cloudressourcen bereit](provision.md).
+> * Stellen Sie sicher, dass Teams App-Projekt in VS-Code geöffnet ist.
+> * Stellen Sie vor der Bereitstellung von Projektcode in [der Cloud die Cloudressourcen bereit](provision.md).
 
 ## <a name="deploy-teams-apps-using-teams-toolkit"></a>Bereitstellen Teams Apps mit Teams Toolkit
 
@@ -39,17 +39,17 @@ Die Anleitungen für die ersten Schritte helfen Ihnen bei der Bereitstellung mit
 
 ## <a name="details-on-teams-app-workload"></a>Details zu Teams App-Workload
 
-| Teams App-Workload | Quellcode | Buildartefakt| Zielressource |
+| Teams App-Workload | Quellcode | Buildartefakte| Zielressource |
 |-------------|----------|---------------|---------------|
-|Registerkarten mit React </br> Die Front-End-Workload| `yourProjectFolder/tabs`| `tabs/build` |Azure-Speicher |
-|Registerkarten mit SharePoint </br> Die Front-End-Workload | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint App-Katalog |
+|Registerkarten mit React </br> Die Frontend-Workload| `yourProjectFolder/tabs`| `tabs/build` |Azure Storage |
+|Registerkarten mit SharePoint </br> Die Frontend-Workload | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint App-Katalog |
 |APIs für Azure-Funktionen </br> Die Back-End-Workload | `yourProjectFolder/api`| Nicht zutreffend |Azure-Funktionen |
-|Bots und Messaging-Erweiterungen </br> Die Back-End-Workload | `yourProjectFolder/bot` | Nicht zutreffend | Azure-App-Dienst |
+|Bots und Nachrichtenerweiterungen </br> Die Back-End-Workload | `yourProjectFolder/bot` | Nicht zutreffend | Azure-App-Dienst |
 
 > [!NOTE]
 > Wenn Sie die Azure-API-Verwaltungsressource in Ihr Projekt einschließen und die Bereitstellung auslösen. Sie können Ihre APIs in Azure-Funktionen im Azure-API-Verwaltungsdienst veröffentlichen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Hinzufügen weiterer Cloudressourcen](add-resource.md)
 * [Erstellen und Bereitstellen eines Azure-Clouddiensts](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)

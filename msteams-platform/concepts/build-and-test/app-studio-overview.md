@@ -4,22 +4,22 @@ description: Erste Schritte zum Erstellen von großartigen Apps in Microsoft Tea
 keywords: Erste Schritte mit App Studio-Teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: d03fae40ee0d003f3556e40c52ad876bb8949b5b
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 3c87edeaf7404e0a9f362f1233cd543c7a0d963a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399177"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103916"
 ---
-# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Verwalten Von Apps mit App Studio für Microsoft Teams
+# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Verwalten Ihrer Apps mit App Studio für Microsoft Teams
 
 > [!TIP]
-> **Testen Sie das Entwicklerportal**: App Studio wurde weiterentwickelt. Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps mit dem neuen [Entwicklerportal](https://dev.teams.microsoft.com/).
+> **Testen Sie das Entwicklerportal**: App Studio hat sich weiterentwickelt. Konfigurieren, verteilen und verwalten Sie Ihre Teams-Apps mit dem neuen [Entwicklerportal](https://dev.teams.microsoft.com/).
 
 Mit App Studio können Sie ganz einfach mit dem Erstellen oder Integrieren Ihrer eigenen Microsoft Teams-Apps beginnen, unabhängig davon, ob Sie benutzerdefinierte Apps für Ihr Unternehmen oder SaaS-Anwendungen für Teams auf der ganzen Welt entwickeln, indem Sie die Erstellung des Manifests und Pakets für Ihre App optimieren und nützliche Tools wie Karteneditor und eine React-Steuerelementbibliothek bereitstellen.
 
 > [!IMPORTANT]
-> App Studio ist derzeit in den folgenden Arten von Teams Organisationen nicht verfügbar:
+> App Studio ist derzeit in den folgenden Typen von Teams-Organisationen nicht verfügbar:
 >
 > * Government Community Cloud (GCC)
 > * GCC High
@@ -45,7 +45,7 @@ Klicken Sie in App Studio auf die Registerkarte **Manifest-Editor**, auf der Sie
 
 ## <a name="app-studio-features"></a>App Studio-Features
 
-In diesem Abschnitt werden Features wie Unterhaltung, Manifest-Editor, Details und Funktionen behandelt. Sie können Ihre Funktionen mithilfe der App-Anpassung anpassen.
+In diesem Abschnitt werden Features wie Unterhaltung, Manifest-Editor, Details und Funktionen behandelt. Sie können Ihre Funktionen mithilfe von App-Anpassungen anpassen.
 
 ### <a name="conversation"></a>Unterhaltung
 
@@ -66,7 +66,7 @@ Der Detailabschnitt des Manifest-Editors definiert die allgemeine Beschreibung d
 Im Abschnitt "Funktionen" des Manifest-Editors werden die Funktionen der App definiert und Details zu den einzelnen Funktionen aufgelistet.
 
 > [!NOTE]
-> Als bewährte Methode müssen Sie Anpassungsrichtlinien für App-Benutzer und -Kunden bereitstellen, die sie beim Anpassen Ihrer App befolgen können. Weitere Informationen finden Sie unter [Anpassen von Apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+> Als bewährte Methode müssen Sie Anpassungsrichtlinien für App-Benutzer und -Kunden bereitstellen, die sie beim Anpassen Ihrer App befolgen können. Weitere Informationen finden Sie [unter Anpassen von Apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 ##### <a name="tabs"></a>Registerkarten
 
@@ -76,7 +76,7 @@ Im Abschnitt "Funktionen" des Manifest-Editors werden die Funktionen der App def
 
   Sie müssen auch alle zusätzlichen Domänen angeben, von denen die Registerkarte erwartet, dass sie geladen werden oder mit denen sie verlinkt wird.
 
-* **Persönliche Registerkarten.** In diesem Abschnitt können Sie eine Reihe von Registerkarten definieren, die standardmäßig in der persönlichen App-Benutzeroberfläche angezeigt werden (Erfahrung, die ein Benutzer mit Ihrer App außerhalb des Kontexts eines Teams oder Kanals hat). Geben Sie in diesem Abschnitt den Registerkartennamen an, ein eindeutiger Bezeichner, die URL, die auf die Benutzeroberfläche verweist und in Teams angezeigt werden soll, und optional die URL, die verwendet werden soll, wenn ein Benutzer die Registerkarte in einem Browser anzeigen möchte. Stellen Sie mit Teams Registerkarten alle zusätzlichen Domänen bereit, von denen die Registerkarte erwartet, dass sie geladen wird oder mit denen eine Verknüpfung hergestellt wird.
+* **Persönliche Registerkarten.** In diesem Abschnitt können Sie eine Reihe von Registerkarten definieren, die standardmäßig in der persönlichen App-Umgebung angezeigt werden (Erfahrung, die ein Benutzer mit Ihrer App außerhalb des Kontexts eines Teams oder Kanals hat). Geben Sie in diesem Abschnitt den Registerkartennamen an, ein eindeutiger Bezeichner, die URL, die auf die Benutzeroberfläche verweist und in Teams angezeigt werden soll, und optional die URL, die verwendet werden soll, wenn ein Benutzer die Registerkarte in einem Browser anzeigen möchte. Geben Sie mit Teams Registerkarten alle zusätzlichen Domänen an, von denen die Registerkarte erwartet, dass sie geladen wird, oder verknüpfen Sie sie.
 
 ##### <a name="bots"></a>Bots
 
@@ -84,7 +84,7 @@ In diesem Abschnitt können Sie Ihrer App einen [Unterhaltungs-Bot](~/bots/what-
 
 Wenn Sie noch keinen Bot beim Bot Framework registriert haben, klicken Sie auf **Registrieren**, um einen neuen Bot zu erstellen. Wenn Sie mit der Registrierung Ihres Bots fertig sind, kehren Sie zu diesem Abschnitt des Manifest-Editors zurück, um dessen Namen und Bot Framework-ID einzugeben.
 
-Nachdem Sie die Informationen Ihres Bots bereitgestellt haben, können Sie jetzt optional eine Liste der Befehle definieren, die Ihr Bot Benutzern vorschlagen kann. Fügen Sie den Befehlsnamen, eine Befehlsbeschreibung mit Angaben zu dessen Syntax und Argumenten sowie die Bereiche hinzu, für die dieser Befehl gelten soll.
+Nachdem Sie die Informationen Ihres Bots bereitgestellt haben, können Sie jetzt optional eine Liste von Befehlen definieren, die Ihr Bot Benutzern vorschlagen kann. Fügen Sie den Befehlsnamen, eine Befehlsbeschreibung mit Angaben zu dessen Syntax und Argumenten sowie die Bereiche hinzu, für die dieser Befehl gelten soll.
 
 > [!NOTE]
 > Wenn Sie Ihren Bot so definiert haben, dass er nur einen Bereich unterstützt, werden die für den nicht unterstützten Bereich angegebenen Befehle ignoriert. Sie können die vom Bot unterstützten Bereiche jederzeit bearbeiten.
@@ -93,13 +93,13 @@ Nachdem Sie die Informationen Ihres Bots bereitgestellt haben, können Sie jetzt
 
 In diesem Abschnitt können Sie Ihrer App einen Connector hinzufügen. Wenn Sie bereits einen Office 365-Connector registriert haben, wählen Sie **Einrichten** und geben Sie den Namen und die ID des Konnektors ein. Wenn Sie einen neuen Konnektor möchten, klicken Sie auf **Registrieren**, um zum Connector Developer Dashboard in Ihrem Browser zu gelangen.
 
-##### <a name="messaging-extensions"></a>Messaging-Erweiterungen
+##### <a name="message-extensions"></a>Nachrichtenerweiterungen
 
-[Messaging-Erweiterungen](~/messaging-extensions/what-are-messaging-extensions.md) bieten Benutzern eine leistungsstarke Möglichkeit, mit Ihrer App in Microsoft Teams zu agieren. Benutzer können Informationen von Ihrem Dienst abfragen und diese Informationen in Form von Karten direkt im Kanal oder in der Chat-Unterhaltung veröffentlichen.
+[Nachrichtenerweiterungen](~/messaging-extensions/what-are-messaging-extensions.md) sind eine leistungsstarke Möglichkeit für Benutzer, innerhalb Microsoft Teams mit Ihrer App zu interagieren. Benutzer können Informationen von Ihrem Dienst abfragen und diese Informationen in Form von Karten direkt im Kanal oder in der Chat-Unterhaltung veröffentlichen.
 
-Messaging-Erweiterungen werden von Bot Framework-Bots unterstützt, sodass für den Betrieb ein konfigurierter Bot erforderlich ist. Wenn über Sie den Namen und die Bot Framework-ID des Bots verfügen, für den Sie die Messaging-Erweiterung aktivieren möchten, geben Sie ihn ein. Andernfalls klicken Sie auf **Registrieren**, um den Namen zu erstellen, und geben Sie anschließend die Informationen ein. Wählen Sie aus, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann.
+Nachrichtenerweiterungen werden von Bot Framework-Bots unterstützt, sodass sie einen konfigurierten Bot für den Betrieb benötigen. Wenn Sie den Namen und die Bot Framework-ID des Bots haben, den Sie mit der Nachrichtenerweiterung betreiben möchten, geben Sie ihn ein. Andernfalls klicken Sie auf **Registrieren**, um den Namen zu erstellen, und geben Sie anschließend die Informationen ein. Wählen Sie aus, ob die Konfiguration einer Nachrichtenerweiterung vom Benutzer aktualisiert werden kann.
 
-Nachdem Sie den zugrunde liegenden Bot konfiguriert haben, definieren Sie die Befehle und Parameter, welche die Messaging-Erweiterung akzeptieren soll.
+Nachdem Sie den zugrunde liegenden Bot konfiguriert haben, definieren Sie die Befehle und Parameter, die die Nachrichtenerweiterung akzeptieren kann.
 
 Jeder Befehl erfordert einen Titel und eine ID. Der Befehl kann optional eine Beschreibung für den Benutzer enthalten. Jeder Befehl kann bis zu fünf Parameter unterstützen, für die jeweils Folgendes erforderlich ist:
 
@@ -108,7 +108,7 @@ Jeder Befehl erfordert einen Titel und eine ID. Der Befehl kann optional eine Be
 * Eine optionale Beschreibung.
 
 > [!NOTE]
-> Informationen zum Erstellen von Messaging-Erweiterungen mit App Studio finden Sie unter ["Erstellen einer Messaging-Erweiterung mit App Studio](~/resources/create-messaging-extension-using-appstudio.md)".
+> Informationen zum Erstellen einer Nachrichtenerweiterung mit app studio finden [Sie unter Erstellen einer Nachrichtenerweiterung mit app studio](~/resources/create-messaging-extension-using-appstudio.md).
 
 #### <a name="test-and-distribute"></a>Testen und Verteilen
 
@@ -122,14 +122,14 @@ Auf Ihrer Projekthomepage können Sie Ihre App in ein Team hochladen, Ihre App f
 
 Bei einer Karte handelt es sich um einen Container für kurze oder verknüpfte Informationen. Microsoft Teams unterstützt Karten, die mehrere Eigenschaften und Anhänge haben können. Karten sind eine wichtige Methode, mit der Bots und Konnektoren verwertbare Informationen an Benutzer weitergeben.
 
-Um diesen Prozess einfacher und weniger fehleranfällig zu machen, können Sie auf der Registerkarte "Karten-Editor" Hero-Karten oder Miniaturansichtskarten mithilfe eines Formulars erstellen und die resultierende Karte (genau wie ein Benutzer sie sehen würde) über einen Bot überprüfen und testen. Er enthält auch den entsprechenden JSON-, C#- oder Node.js-Code für die Karte, die Sie in den Quellcode Ihrer App kopieren/einfügen können.
+Um diesen Vorgang einfacher und weniger fehleranfällig zu machen, können Sie auf der Registerkarte "Karten-Editor" Herokarten oder Miniaturansichtenkarten mithilfe eines Formulars erstellen und die resultierende Karte (genau so, wie sie einem Benutzer angezeigt wird) über einen Bot überprüfen und testen. Er enthält auch den entsprechenden JSON-, C#- oder Node.js-Code für die Karte, die Sie in den Quellcode Ihrer App kopieren/einfügen können.
 
 Wenn Sie bereits über eine Karte verfügen, die Sie in Teams überprüfen möchten, können Sie den JSON für diese Karte in die Registerkarte JSON unter *Karteninformationen hinzufügen* einfügen und an sich selbst senden, um zu sehen, wie er in einem Chat aussieht.
 
 ### <a name="react-control-library"></a>React-Steuerelementbibliothek
 
 >[!Note]
-> Diese React Steuerelementbibliothek ist in Zukunft veraltet. Erwägen Sie die Verwendung der [React-Steuerelemente Fluent-UI als alternative zuvor Stardust-UI](https://microsoft.github.io/fluent-ui-react/).
+> Diese React Steuerelementbibliothek wird in Zukunft nicht mehr unterstützt. Erwägen Sie die Verwendung der [Fluent-UI-React-Steuerelemente als alternative,](https://microsoft.github.io/fluent-ui-react/) zuvor stardust ui.
 
 Das Erstellen einer App, die Teams‘ Bewährte Methoden befolgt, ist eine hervorragende Möglichkeit, Ihrer App ein Erscheinungsbild zu verleihen, das sich nahtlos in die Kundenerfahrung in Teams einfügt. Die von Ihnen verwendeten UI-Steuerelemente sind entscheidend, um dieses Ziel zu erreichen. Um das Erstellen einer konsistenten Benutzeroberfläche zu vereinfachen, bietet App Studio verschiedene Kategorien von Steuerelementen für die Benutzeroberfläche, die den Entwurfsprinzipien von Teams entsprechen.
 

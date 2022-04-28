@@ -5,12 +5,12 @@ keywords: Teams-Bots-Dateien, die empfangen werden
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: ebfa6bf24899d8bc88a15018b0d74d395bb56c79
-ms.sourcegitcommit: 5201e7f390fbb2a9190cae1781c2f09e1746c8f7
+ms.openlocfilehash: 22c88a435628c34942eb8f5652b9170f861a0446
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64820300"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65102527"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Senden und Empfangen von Dateien über den Bot
 
@@ -99,7 +99,7 @@ So laden Sie eine Datei auf einen Benutzer hoch:
 
 Die folgende Desktopnachricht enthält ein einfaches Anlageobjekt, das die Benutzerberechtigung zum Hochladen der Datei anfordert:
 
-![Consent card requesting user permission to upload file](../../assets/images/bots/bot-file-consent-card.png)
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Consent card requesting user permission to upload file"lightbox="../../assets/images/bots/bot-file-consent-card.png"border="true":::
 
 Die folgende mobile Nachricht enthält ein Anlageobjekt, das die Benutzerberechtigung zum Hochladen der Datei anfordert:
 
@@ -200,7 +200,7 @@ In der folgenden Tabelle werden die Inhaltseigenschaften der Anlage beschrieben:
 
 Rufen Sie Inlinebilder, die Teil der Nachricht sind, mithilfe des Zugriffstokens des Bots ab.
 
-![Inlinebild](../../assets/images/bots/inline-image.png)
+:::image type="content" source="../../assets/images/bots/inline-image.png" alt-text="Inlinebild"border="true":::
 
 Der folgende Code zeigt ein Beispiel für das Abrufen von Inlinebildern aus einer Nachricht:
 

@@ -3,113 +3,113 @@ title: Übersicht über universelle Aktionen für adaptive Karten
 description: Eine kurze Übersicht über universelle Aktionen für adaptive Karten, z. B. benutzerspezifische Ansichten, sequenzielle Workflowunterstützung und vieles mehr für Desktop- und mobile Umgebungen
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ec546b0345c1fd26caf0b3016a788e14b623ae2
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: dc3a61b323e462f90937d8b6c432d624c29e0125
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356164"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103411"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Universal-Aktionen für adaptive Karten
 
-Universelle Aktionen für adaptive Karten haben sich aus dem Feedback von Entwicklern entwickelt, dass das Layout und Rendering für adaptive Karten zwar universell war, die Aktionsbehandlung jedoch nicht war. Auch wenn ein Entwickler dieselbe Karte an verschiedene Orte senden möchte, müssen aktionen unterschiedlich behandelt werden.
+Universelle Aktionen für adaptive Karten haben sich aus dem Feedback von Entwicklern entwickelt, dass die Aktionsbehandlung trotz des universellen Layouts und Renderings für adaptive Karten nicht möglich war. Auch wenn ein Entwickler die gleiche Karte an verschiedene Orte senden wollte, muss er Aktionen anders behandeln.
 
-Universelle Aktionen für adaptive Karten stellt den Bot als allgemeines Back-End für die Behandlung von Aktionen bereit und führt einen neuen Aktionstyp ein, `Action.Execute`der appsübergreifend funktioniert, z. B. Teams und Outlook.
+Universelle Aktionen für adaptive Karten stellt den Bot als gängiges Back-End für die Behandlung von Aktionen dar und führt einen neuen Aktionstyp ein, der appsübergreifend funktioniert, `Action.Execute`z. B. Teams und Outlook.
 
-Dieses Dokument hilft Ihnen zu verstehen, wie Sie das Modell für universelle Aktionen verwenden können, um die Benutzerfreundlichkeit der Interaktion mit adaptiven Karten plattform- und anwendungsübergreifend zu verbessern.
+Dieses Dokument hilft Ihnen zu verstehen, wie Sie das Modell für universelle Aktionen verwenden können, um die Benutzererfahrung bei der Interaktion mit adaptiven Karten über Plattformen und Anwendungen hinweg zu verbessern.
 
 > [!NOTE]
-> Unterstützung für universelle Aktionen für adaptive Karten v1.4 ist nur für vom Bot gesendete Karten verfügbar. Unterstützung für Karten, die über das Feld zum Verfassen gesendet werden, und die Verbreitung von Karten für Links wird in Kürze verfügbar sein.
+> Unterstützung für universelle Aktionen für adaptive Karten v1.4 ist nur für Karten verfügbar, die vom Bot gesendet werden. Die Unterstützung für Karten, die über das Feld "Verfassen" und die Verbreitung von Links gesendet werden, wird in Kürze verfügbar sein.
 
 ## <a name="enhance-user-experiences-with-universal-actions-for-adaptive-cards"></a>Verbessern der Benutzererfahrung mit universellen Aktionen für adaptive Karten
 
-Universelle Aktionen für adaptive Karten verbessern die Benutzererfahrung, indem die folgenden Szenarien aktiviert werden:
+Universelle Aktionen für adaptive Karten verbessern die Benutzerfreundlichkeit, indem die folgenden Szenarien aktiviert werden:
 
 * [Universelle Aktionen](#universal-actions)
 * [Benutzerspezifische Ansichten](#user-specific-views)
-* [Sequenzielle Workflowunterstützung](#sequential-workflow-support)
+* [Unterstützung sequenzieller Workflows](#sequential-workflow-support)
 * [Aktuelle Ansichten](#up-to-date-views)
 
 ### <a name="universal-actions"></a>Universelle Aktionen
 
-Vor den universellen Aktionen für adaptive Karten haben verschiedene Hosts wie folgt unterschiedliche Aktionsmodelle bereitgestellt:
+Vor den universellen Aktionen für adaptive Karten stellten verschiedene Hosts unterschiedliche Aktionsmodelle wie folgt bereit:
 
-* Teams oder bots verwendet `Action.Submit`, ein Ansatz, der das tatsächliche Kommunikationsmodell auf den zugrunde liegenden Kanal zurücksetzt.
-* Outlook für die Kommunikation mit dem Back-End-Dienst verwendet`Action.Http`, der explizit in der Nutzlast der adaptiven Karte angegeben ist.
+* Teams oder bots verwendet `Action.Submit`, ein Ansatz, der das tatsächliche Kommunikationsmodell auf den zugrunde liegenden Kanal zurückstellen.
+* Outlook verwendet`Action.Http`, um mit dem in der Nutzlast der adaptiven Karte explizit angegebenen Back-End-Dienst zu kommunizieren.
 
 Die folgende Abbildung zeigt das aktuelle inkonsistente Aktionsmodell:
 
 :::image type="content" source="~/assets/images/adaptive-cards/current-teams-outlook-action-model.png" alt-text="Inkonsistentes Aktionsmodell":::
 
-Mit den universellen Aktionen für adaptive Karten können Sie die Aktionsbehandlung auf verschiedenen Plattformen verwenden `Action.Execute` . `Action.Execute`funktioniert über Hubs hinweg, einschließlich Teams und Outlook. Darüber hinaus kann eine adaptive Karte als Antwort auf eine `Action.Execute` ausgelöste Aufrufanforderung zurückgegeben werden.
+Mit den universellen Aktionen für adaptive Karten können Sie die Aktionsbehandlung auf verschiedenen Plattformen verwenden `Action.Execute` . `Action.Execute`funktioniert hubübergreifend, einschließlich Teams und Outlook. Darüber hinaus kann eine adaptive Karte als Antwort für eine `Action.Execute` ausgelöste Aufrufanforderung zurückgegeben werden.
 
 Die folgende Abbildung zeigt das neue Modell für universelle Aktionen:
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="Neue universelle Aktionen für adaptive Karten":::
 
-Sie können jetzt die gleiche Karte an beide senden, Teams und Outlook, und sie mithilfe des zugrunde liegenden Bots miteinander synchronisieren. Alle Aktionen, die auf beiden Plattformen ausgeführt werden, werden mit diesem Build einmal auf die andere Plattform übernommen *und stellen ein beliebiges* Modell (Universelle Aktionen für adaptive Karten) bereit.
+Sie können jetzt die gleiche Karte an beide senden, Teams und Outlook, und sie mithilfe des zugrunde liegenden Bots synchron halten. Alle Auf beiden Plattformen ausgeführten Aktionen werden mit diesem Build einmal für die andere plattform widergespiegelt *. Stellen Sie das Modell an einer beliebigen Stelle* (Universelle Aktionen für adaptive Karten) bereit.
 
 Die folgende Abbildung zeigt die universellen Aktionen für adaptive Karten für Teams und Outlook:
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
-:::image type="content" source="~/assets/images/mobile-universal-bots-teams-outlook.png" alt-text="Mobile Karte für Teams und Outlook":::
+:::image type="content" source="~/assets/images/mobile-universal-bots-teams-outlook.png" alt-text="Mobile karte zum Teams und Outlook":::
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Dieselbe Karte wie Teams und Outlook":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Gleiche Karte zum Teams und Outlook" lightbox="../../../assets/images/adaptive-cards/universal-bots-teams-outlook.png":::
 
 * * *
 
 ### <a name="user-specific-views"></a>Benutzerspezifische Ansichten
 
-Heute sieht jeder Benutzer im Teams Chat oder Kanal genau die gleichen Ansichts- und Schaltflächenaktionen auf der adaptiven Karte. In bestimmten Szenarien ist es jedoch erforderlich, dass bestimmte Benutzer unterschiedlich handeln und Zugriff auf unterschiedliche Informationen innerhalb desselben Chats oder Kanals haben.
+Heute sieht jeder Benutzer im Teams Chat oder Kanal genau die gleichen Ansichts- und Schaltflächenaktionen auf der adaptiven Karte. In bestimmten Szenarien ist es jedoch erforderlich, dass bestimmte Benutzer anders handeln und Zugriff auf unterschiedliche Informationen innerhalb desselben Chats oder Kanals haben.
 
-Wenn Sie beispielsweise eine Karte für die Schadensberichterstattung in einem Chat oder Kanal senden, muss nur dem Benutzer, dem der Vorfall zugewiesen ist, eine Schaltfläche **"Auflösen** " angezeigt werden. Andererseits muss dem Ersteller des Vorfalls eine Schaltfläche " **Bearbeiten"** angezeigt werden, und alle anderen Benutzer dürfen nur Details des Vorfalls anzeigen können. Dies wird durch benutzerspezifische Ansichten ermöglicht, die von der `refresh` Eigenschaft aktiviert werden.
+Wenn Sie z. B. eine Vorfallberichtskarte in einem Chat oder Kanal senden, muss nur dem Benutzer, dem der Vorfall zugewiesen wurde, die Schaltfläche " **Auflösen** " angezeigt werden. Andererseits muss dem Vorfallersteller eine Schaltfläche **"Bearbeiten"** angezeigt werden, und alle anderen Benutzer dürfen nur Details des Vorfalls anzeigen. Dies wird durch benutzerspezifische Ansichten ermöglicht, die von der `refresh` Eigenschaft aktiviert werden.
 
-Die folgende Abbildung zeigt ein Beispiel für eine Ticketing-Messaging-Erweiterung (ME), bei der verschiedenen Benutzern im Chat basierend auf der Anforderung unterschiedliche Aktionen angezeigt werden:
+Die folgende Abbildung zeigt ein Beispiel für eine Erweiterung der Ticketnachricht (ME), bei der verschiedenen Benutzern im Chat basierend auf der Anforderung unterschiedliche Aktionen angezeigt werden:
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
-:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Benutzerspezifische Ansichten mobiler Benutzer":::
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Mobile benutzerspezifische Ansichten" lightbox="../../../assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg":::
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="Benutzerspezifische Ansichten":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="Benutzerspezifische Ansichten" lightbox="../../../assets/images/adaptive-cards/universal-bots-incident-management.png":::
 
 * * *
 
 Weitere Informationen finden Sie im [Beispiel für benutzerspezifische Ansichten](User-Specific-Views.md).
 
-### <a name="sequential-workflow-support"></a>Sequenzielle Workflowunterstützung
+### <a name="sequential-workflow-support"></a>Unterstützung sequenzieller Workflows
 
-Mit sequenzieller Workflowunterstützung können Benutzer eine Reihe von Workflows durchlaufen, ohne separate Karten zu senden. Dies wird durch die Möglichkeit `Action.Execute` ermöglicht, eine adaptive Karte als Reaktion auf eine Aktion zurückzugeben. Außerdem kann jeder Benutzer im Chat oder Kanal den Workflow durchlaufen, ohne die Karte für andere Benutzer im Chat zu ändern.
+Mit der Unterstützung sequenzieller Workflows können Benutzer eine Reihe von Workflows durchlaufen, ohne unterschiedliche Karten separat zu senden. Dies wird durch die Möglichkeit `Action.Execute` ermöglicht, eine adaptive Karte als Reaktion auf eine Aktion zurückzugeben. Außerdem kann jeder Benutzer im Chat oder Kanal den Workflow durchlaufen, ohne die Karte für andere Benutzer im Chat zu ändern.
 
-Die folgende Abbildung zeigt ein Beispiel für einen Bot zur Sortierung von Essen: <br/>
+Die folgende Abbildung zeigt ein Beispiel für einen Bot für die Lebensmittelbestellung: <br/>
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
 
 Die folgende Abbildung zeigt die verschiedenen Zustände für verschiedene Benutzer im Chat oder Kanal:
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Zustände des Bots &quot;Auffüllen&quot;":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Catering-Bot-Staaten" lightbox="../../../assets/images/adaptive-cards/universal-bots-catering-bot.png":::
 
 Weitere Informationen finden Sie im [Beispiel für sequenziellen Workflow](Sequential-Workflows.md).
 
 ### <a name="up-to-date-views"></a>Aktuelle Ansichten
 
-Sie können adaptive Karten erstellen, die automatisch aktualisiert werden. Dies kann z. B. eine Genehmigungsanforderung sein, die von einem Benutzer gesendet wurde. Nach der Genehmigung muss die Karte automatisch Details zur Genehmigungszeit der Anforderung und zur Person anzeigen, die die Anforderung genehmigt hat. Mit dem Aktualisierungsmodell können Sie so aktuelle Ansichten bereitstellen. Die folgende Abbildung zeigt einen mehrstufigen Genehmigungsfluss und wie die Ansichten für verschiedene Benutzer angezeigt werden.
+Sie können adaptive Karten erstellen, die automatisch aktualisiert werden. Dies kann beispielsweise eine Genehmigungsanforderung sein, die von einem Benutzer gesendet wurde. Nach der Genehmigung muss die Karte automatisch Details zum Genehmigungszeitpunkt der Anforderung und zur Person anzeigen, die die Anforderung genehmigt hat. Mit dem Aktualisierungsmodell können Sie solche aktuellen Ansichten bereitstellen. Die folgende Abbildung zeigt einen mehrstufigen Genehmigungsfluss und zeigt, wie die Ansichten für verschiedene Benutzer angezeigt werden.
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png" alt-text="Aktuelle benutzerspezifische Ansichten":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png" alt-text="Aktuelle benutzerspezifische Ansichten" lightbox="../../../assets/images/adaptive-cards/universal-bots-up-to-date-views.png":::
 
 Weitere Informationen finden Sie im [Beispiel für aktuelle Ansichten](Up-To-Date-Views.md).
 
-Jetzt können Sie verstehen, wie adaptive Karten mit dem neuen Modell für universelle Aktionen transformiert werden können, um eine einzigartige und verbesserte Benutzererfahrung bereitzustellen.
+Jetzt können Sie verstehen, wie adaptive Karten mit dem neuen Modell für universelle Aktionen transformiert werden können, um eine einzigartige und verbesserte Benutzererfahrung zu bieten.
 
 ## <a name="adaptive-cards-and-the-new-universal-actions-model"></a>Adaptive Karten und das neue Modell für universelle Aktionen
 
-Adaptive Karten sind eine Kombination aus Inhalten, z. B. Text und Grafiken, und Aktionen, die von einem Benutzer ausgeführt werden können. Weitere Informationen finden Sie unter [Adaptive Karten](http://adaptivecards.io/). Die neuen universellen Aktionen für adaptive Karten ermöglichen eine allgemeine Behandlung der Aktionen adaptiver Karten über Plattformen und Anwendungen hinweg. Weitere Informationen finden Sie unter ["Universelles Aktionsmodell"](/adaptive-cards/authoring-cards/universal-action-model).
+Adaptive Karten sind eine Kombination aus Inhalten, z. B. Text und Grafiken, und Aktionen, die von einem Benutzer ausgeführt werden können. Weitere Informationen finden Sie unter [Adaptive Karten](http://adaptivecards.io/). Die neuen universellen Aktionen für adaptive Karten ermöglichen eine gemeinsame Behandlung der Aktionen für adaptive Karten über Plattformen und Anwendungen hinweg. Weitere Informationen finden Sie unter ["Universelles Aktionsmodell"](/adaptive-cards/authoring-cards/universal-action-model).
 
-Sie können loslegen, indem Sie Szenarien mithilfe der [Schnellstartanleitung](Work-with-universal-actions-for-adaptive-cards.md) aktualisieren und universelle Aktionen nutzen.
+Sie können zunächst Szenarien mithilfe des [Schnellstarthandbuchs](Work-with-universal-actions-for-adaptive-cards.md) aktualisieren und universelle Aktionen nutzen.
 
 ## <a name="next-step"></a>Nächster Schritt
 

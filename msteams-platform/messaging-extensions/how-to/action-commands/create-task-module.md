@@ -1,46 +1,46 @@
 ---
 title: Erstellen und Senden des Aufgabenmoduls
 author: surbhigupta
-description: Erfahren Sie, wie Sie die anfängliche Aufrufaktion behandeln und mithilfe von Codebeispielen und Beispielen mit einem Aufgabenmodul aus einem Aktions-Messaging-Erweiterungsbefehl antworten.
+description: Erfahren Sie, wie Sie die erste Aufrufaktion behandeln und mithilfe eines Aufgabenmoduls aus einem Aktionsnachrichtenerweiterungsbefehl mithilfe von Codebeispielen und Beispielen antworten.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 30ef2cdbe5bde14120a0ba8b17040c26a5de2a45
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: bea8358edfa11dd278bdbc8ea052c61612d6db71
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453481"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104469"
 ---
 # <a name="create-and-send-the-task-module"></a>Erstellen und Senden des Aufgabenmoduls
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Sie können das Aufgabenmodul mithilfe einer adaptiven Karte oder einer eingebetteten Webansicht erstellen. Um ein Aufgabenmodul zu erstellen, müssen Sie den Prozess ausführen, der als ursprüngliche Aufrufanforderung bezeichnet wird. Dieses Dokument behandelt die Eigenschaften der anfänglichen Aufrufanforderung, nutzlastaktivitäten, wenn ein Aufgabenmodul von 1:1-Chat, Gruppenchat, Kanal (neuer Beitrag), Kanal (Antwort auf Thread) und Befehlsfeld aufgerufen wird.
+Sie können das Aufgabenmodul mithilfe einer adaptiven Karte oder einer eingebetteten Webansicht erstellen. Um ein Aufgabenmodul zu erstellen, müssen Sie den Prozess ausführen, der als ursprüngliche Aufrufanforderung bezeichnet wird. In diesem Dokument werden die anfängliche Aufrufanforderung, Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus 1:1-Chat aufgerufen wird, Gruppenchat, Kanal (neuer Beitrag), Kanal (Antwort auf Thread) und Befehlsfeld behandelt.
 > [!NOTE]
-> Wenn Sie das Aufgabenmodul nicht mit im App-Manifest definierten Parametern auffüllen, müssen Sie das Aufgabenmodul für Benutzer mit einer adaptiven Karte oder einer eingebetteten Webansicht erstellen.
+> Wenn Sie das Aufgabenmodul nicht mit parametern füllen, die im App-Manifest definiert sind, müssen Sie das Aufgabenmodul für Benutzer mit einer adaptiven Karte oder einer eingebetteten Webansicht erstellen.
 
-## <a name="the-initial-invoke-request"></a>Die anfängliche Aufrufanforderung
+## <a name="the-initial-invoke-request"></a>Die ursprüngliche Aufrufanforderung
 
-Im Prozess der anfänglichen Aufrufanforderung empfängt Ihr Dienst ein `Activity` Objekt vom Typ `composeExtension/fetchTask`, und Sie müssen mit einem `task` Objekt antworten, das entweder eine adaptive Karte oder eine URL zur eingebetteten Webansicht enthält. Zusammen mit den Standardmäßigen Bot-Aktivitätseigenschaften enthält die nutzlast des anfänglichen Aufrufs die folgenden Anforderungsmetadaten:
+Im Prozess der anfänglichen Aufrufanforderung empfängt Ihr Dienst ein `Activity` Objekt vom Typ `composeExtension/fetchTask`, und Sie müssen mit einem `task` Objekt antworten, das entweder eine adaptive Karte oder eine URL zur eingebetteten Webansicht enthält. Zusammen mit den Standard-Bot-Aktivitätseigenschaften enthält die erste Aufrufnutzlast die folgenden Anforderungsmetadaten:
 
 |Eigenschaftenname|Zweck|
 |---|---|
-|`type`| Anforderungstyp. Es muss .`invoke` |
-|`name`| Typ des Befehls, der an Ihren Dienst ausgegeben wird. Es muss .`composeExtension/fetchTask` |
-|`from.id`| DIE ID des Benutzers, der die Anforderung gesendet hat. |
-|`from.name`| Name des Benutzers, der die Anforderung gesendet hat. |
+|`type`| Anforderungstyp. Es muss sein `invoke`. |
+|`name`| Typ des Befehls, der für Ihren Dienst ausgegeben wird. Es muss sein `composeExtension/fetchTask`. |
+|`from.id`| ID des Benutzers, der die Anforderung gesendet hat. |
+|`from.name`| Der Name des Benutzers, der die Anforderung gesendet hat. |
 |`from.aadObjectId`| Azure Active Directory Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 |`channelData.tenant.id`| Azure Active Directory Mandanten-ID. |
-|`channelData.channel.id`| Kanal-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
-|`channelData.team.id`| Team-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
+|`channelData.channel.id`| Kanal-ID (wenn die Anforderung in einem Kanal erfolgt ist). |
+|`channelData.team.id`| Team-ID (wenn die Anforderung in einem Kanal erfolgt ist). |
 |`value.commandId` | Enthält die ID des Befehls, der aufgerufen wurde. |
-|`value.commandContext` | Der Kontext, der das Ereignis ausgelöst hat. Es muss .`compose` |
-|`value.context.theme` | Das Clientdesign des Benutzers, nützlich für eingebettete Webansichtsformatierungen. Es muss `default`oder `contrast` `dark`sein. |
+|`value.commandContext` | Der Kontext, der das Ereignis ausgelöst hat. Es muss sein `compose`. |
+|`value.context.theme` | Das Clientdesign des Benutzers, nützlich für die Formatierung eingebetteter Webansichten. Es muss sein `default`, `contrast` oder `dark`. |
 
 ### <a name="example"></a>Beispiel
 
-Der Code für die anfängliche Aufrufanforderung wird im folgenden Beispiel angegeben:
+Der Code für die ursprüngliche Aufrufanforderung wird im folgenden Beispiel angegeben:
 
 ```json
 {
@@ -70,27 +70,27 @@ Der Code für die anfängliche Aufrufanforderung wird im folgenden Beispiel ange
   "name": "composeExtension/fetchTask"
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-11-chat"></a>Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus dem 1:1-Chat aufgerufen wird
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-11-chat"></a>Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul aus einem 1:1-Chat aufgerufen wird
 
-Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus dem 1:1-Chat aufgerufen wird, werden wie folgt aufgelistet:
+Die Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul aus einem 1:1-Chat aufgerufen wird, sind wie folgt aufgeführt:
 
 |Eigenschaftenname|Zweck|
 |---|---|
-|`type`| Anforderungstyp. Es muss .`invoke` |
-|`name`| Typ des Befehls, der an Ihren Dienst ausgegeben wird. Es muss .`composeExtension/fetchTask` |
-|`from.id`| DIE ID des Benutzers, der die Anforderung gesendet hat. |
-|`from.name`| Name des Benutzers, der die Anforderung gesendet hat. |
+|`type`| Anforderungstyp. Es muss sein `invoke`. |
+|`name`| Typ des Befehls, der für Ihren Dienst ausgegeben wird. Es muss sein `composeExtension/fetchTask`. |
+|`from.id`| ID des Benutzers, der die Anforderung gesendet hat. |
+|`from.name`| Der Name des Benutzers, der die Anforderung gesendet hat. |
 |`from.aadObjectId`| Azure Active Directory Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 |`channelData.tenant.id`| Azure Active Directory Mandanten-ID. |
-|`channelData.source.name`| Der Quellname, von dem aus das Aufgabenmodul aufgerufen wird. |
-|`ChannelData.legacy. replyToId`| Dient zum Abrufen oder Festlegen der ID der Nachricht, auf die diese Nachricht eine Antwort ist. |
+|`channelData.source.name`| Der Quellname, aus dem das Aufgabenmodul aufgerufen wird. |
+|`ChannelData.legacy. replyToId`| Ruft die ID der Nachricht ab, auf die diese Nachricht eine Antwort ist, oder legt sie fest. |
 |`value.commandId` | Enthält die ID des Befehls, der aufgerufen wurde. |
-|`value.commandContext` | Der Kontext, der das Ereignis ausgelöst hat. Es muss .`compose` |
-|`value.context.theme` | Das Clientdesign des Benutzers, nützlich für eingebettete Webansichtsformatierungen. Es muss `default`oder `contrast` `dark`sein. |
+|`value.commandContext` | Der Kontext, der das Ereignis ausgelöst hat. Es muss sein `compose`. |
+|`value.context.theme` | Das Clientdesign des Benutzers, nützlich für die Formatierung eingebetteter Webansichten. Es muss sein `default`, `contrast` oder `dark`. |
 
 ### <a name="example"></a>Beispiel
 
-Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus dem 1:1-Chat aufgerufen wird, werden im folgenden Beispiel angegeben:
+Die Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul aus einem 1:1-Chat aufgerufen wird, werden im folgenden Beispiel angegeben:
 
 ```json
 {
@@ -121,27 +121,27 @@ Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus dem 1:1-Chat au
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a>Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus einem Gruppenchat aufgerufen wird
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a>Eigenschaften von Nutzlastaktivitäten, wenn ein Aufgabenmodul aus einem Gruppenchat aufgerufen wird
 
-Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus einem Gruppenchat aufgerufen wird, sind wie folgt aufgeführt:
+Die Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul aus einem Gruppenchat aufgerufen wird, werden wie folgt aufgelistet:
 
 |Eigenschaftenname|Zweck|
 |---|---|
-|`type`| Anforderungstyp. Es muss .`invoke` |
-|`name`| Typ des Befehls, der an Ihren Dienst ausgegeben wird. Es muss .`composeExtension/fetchTask` |
-|`from.id`| DIE ID des Benutzers, der die Anforderung gesendet hat. |
-|`from.name`| Name des Benutzers, der die Anforderung gesendet hat. |
+|`type`| Anforderungstyp. Es muss sein `invoke`. |
+|`name`| Typ des Befehls, der für Ihren Dienst ausgegeben wird. Es muss sein `composeExtension/fetchTask`. |
+|`from.id`| ID des Benutzers, der die Anforderung gesendet hat. |
+|`from.name`| Der Name des Benutzers, der die Anforderung gesendet hat. |
 |`from.aadObjectId`| Azure Active Directory Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 |`channelData.tenant.id`| Azure Active Directory Mandanten-ID. |
-|`channelData.source.name`| Der Quellname, von dem aus das Aufgabenmodul aufgerufen wird. |
-|`ChannelData.legacy. replyToId`| Dient zum Abrufen oder Festlegen der ID der Nachricht, auf die diese Nachricht eine Antwort ist. |
+|`channelData.source.name`| Der Quellname, aus dem das Aufgabenmodul aufgerufen wird. |
+|`ChannelData.legacy. replyToId`| Ruft die ID der Nachricht ab, auf die diese Nachricht eine Antwort ist, oder legt sie fest. |
 |`value.commandId` | Enthält die ID des Befehls, der aufgerufen wurde. |
-|`value.commandContext` | Der Kontext, der das Ereignis ausgelöst hat. Es muss .`compose` |
-|`value.context.theme` | Das Clientdesign des Benutzers, nützlich für eingebettete Webansichtsformatierungen. Es muss `default`oder `contrast` `dark`sein. |
+|`value.commandContext` | Der Kontext, der das Ereignis ausgelöst hat. Es muss sein `compose`. |
+|`value.context.theme` | Das Clientdesign des Benutzers, nützlich für die Formatierung eingebetteter Webansichten. Es muss sein `default`, `contrast` oder `dark`. |
 
 ### <a name="example"></a>Beispiel
 
-Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus einem Gruppenchat aufgerufen wird, werden im folgenden Beispiel angegeben:
+Die Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul aus einem Gruppenchat aufgerufen wird, werden im folgenden Beispiel angegeben:
 
 ```json
 {
@@ -180,7 +180,7 @@ Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus einem Gruppench
 
 ## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-meeting-chat"></a>Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus einem Besprechungschat aufgerufen wird
 
-Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus einem Besprechungschat aufgerufen wird, sind im folgenden Beispiel angegeben:
+Die Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul aus einem Besprechungschat aufgerufen wird, werden im folgenden Beispiel angegeben:
 
 ```json
 {
@@ -220,29 +220,29 @@ Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus einem Besprechu
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-new-post"></a>Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul von einem Kanal aufgerufen wird (neuer Beitrag)
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-new-post"></a>Payload activity properties when a task module is invoked from a channel (new post)
 
-Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul von einem Kanal aufgerufen wird (neuer Beitrag), werden wie folgt aufgelistet:
+Die Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul über einen Kanal aufgerufen wird (neuer Beitrag), werden wie folgt aufgelistet:
 
 |Eigenschaftenname|Zweck|
 |---|---|
-|`type`| Anforderungstyp. Es muss .`invoke` |
-|`name`| Typ des Befehls, der an Ihren Dienst ausgegeben wird. Es muss .`composeExtension/fetchTask` |
-|`from.id`| DIE ID des Benutzers, der die Anforderung gesendet hat. |
-|`from.name`| Name des Benutzers, der die Anforderung gesendet hat. |
+|`type`| Anforderungstyp. Es muss sein `invoke`. |
+|`name`| Typ des Befehls, der für Ihren Dienst ausgegeben wird. Es muss sein `composeExtension/fetchTask`. |
+|`from.id`| ID des Benutzers, der die Anforderung gesendet hat. |
+|`from.name`| Der Name des Benutzers, der die Anforderung gesendet hat. |
 |`from.aadObjectId`| Azure Active Directory Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 |`channelData.tenant.id`| Azure Active Directory Mandanten-ID. |
-|`channelData.channel.id`| Kanal-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
-|`channelData.team.id`| Team-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
-|`channelData.source.name`| Der Quellname, von dem aus das Aufgabenmodul aufgerufen wird. |
-|`ChannelData.legacy. replyToId`| Dient zum Abrufen oder Festlegen der ID der Nachricht, auf die diese Nachricht eine Antwort ist. |
+|`channelData.channel.id`| Kanal-ID (wenn die Anforderung in einem Kanal erfolgt ist). |
+|`channelData.team.id`| Team-ID (wenn die Anforderung in einem Kanal erfolgt ist). |
+|`channelData.source.name`| Der Quellname, aus dem das Aufgabenmodul aufgerufen wird. |
+|`ChannelData.legacy. replyToId`| Ruft die ID der Nachricht ab, auf die diese Nachricht eine Antwort ist, oder legt sie fest. |
 |`value.commandId` | Enthält die ID des Befehls, der aufgerufen wurde. |
-|`value.commandContext` | Der Kontext, der das Ereignis ausgelöst hat. Es muss .`compose` |
-|`value.context.theme` | Das Clientdesign des Benutzers, nützlich für eingebettete Webansichtsformatierungen. Es muss `default`, `contrast`oder `dark`sein. |
+|`value.commandContext` | Der Kontext, der das Ereignis ausgelöst hat. Es muss sein `compose`. |
+|`value.context.theme` | Das Clientdesign des Benutzers, nützlich für die Formatierung eingebetteter Webansichten. Dies muss ein Wert vom Typ , `contrast`oder `dark`sein`default`. |
 
 ### <a name="example"></a>Beispiel
 
-Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul von einem Kanal aufgerufen wird (neuer Beitrag), werden im folgenden Beispiel angegeben:
+Die Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul aus einem Kanal aufgerufen wird (neuer Beitrag), werden im folgenden Beispiel angegeben:
 
 ```json
 {
@@ -286,29 +286,29 @@ Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul von einem Kanal auf
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-reply-to-thread"></a>Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul von einem Kanal aufgerufen wird (Antwort auf Thread)
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-reply-to-thread"></a>Payload activity properties when a task module is invoked from a channel (reply to thread)
 
-Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul von einem Kanal aufgerufen wird (Antwort auf Thread), werden wie folgt aufgelistet:
+Die Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul aus einem Kanal aufgerufen wird (Auf Thread antworten) werden wie folgt aufgeführt:
 
 |Eigenschaftenname|Zweck|
 |---|---|
-|`type`| Anforderungstyp. Es muss .`invoke` |
-|`name`| Typ des Befehls, der an Ihren Dienst ausgegeben wird. Es muss .`composeExtension/fetchTask` |
-|`from.id`| DIE ID des Benutzers, der die Anforderung gesendet hat. |
-|`from.name`| Name des Benutzers, der die Anforderung gesendet hat. |
+|`type`| Anforderungstyp. Es muss sein `invoke`. |
+|`name`| Typ des Befehls, der für Ihren Dienst ausgegeben wird. Es muss sein `composeExtension/fetchTask`. |
+|`from.id`| ID des Benutzers, der die Anforderung gesendet hat. |
+|`from.name`| Der Name des Benutzers, der die Anforderung gesendet hat. |
 |`from.aadObjectId`| Azure Active Directory Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 |`channelData.tenant.id`| Azure Active Directory Mandanten-ID. |
-|`channelData.channel.id`| Kanal-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
-|`channelData.team.id`| Team-ID (wenn die Anforderung in einem Kanal vorgenommen wurde). |
-|`channelData.source.name`| Der Quellname, von dem aus das Aufgabenmodul aufgerufen wird. |
-|`ChannelData.legacy. replyToId`| Dient zum Abrufen oder Festlegen der ID der Nachricht, auf die diese Nachricht eine Antwort ist. |
+|`channelData.channel.id`| Kanal-ID (wenn die Anforderung in einem Kanal erfolgt ist). |
+|`channelData.team.id`| Team-ID (wenn die Anforderung in einem Kanal erfolgt ist). |
+|`channelData.source.name`| Der Quellname, aus dem das Aufgabenmodul aufgerufen wird. |
+|`ChannelData.legacy. replyToId`| Ruft die ID der Nachricht ab, auf die diese Nachricht eine Antwort ist, oder legt sie fest. |
 |`value.commandId` | Enthält die ID des Befehls, der aufgerufen wurde. |
-|`value.commandContext` | Der Kontext, der das Ereignis ausgelöst hat. Es muss .`compose` |
-|`value.context.theme` | Das Clientdesign des Benutzers, nützlich für eingebettete Webansichtsformatierungen. Es muss `default`oder `contrast` `dark`sein. |
+|`value.commandContext` | Der Kontext, der das Ereignis ausgelöst hat. Es muss sein `compose`. |
+|`value.context.theme` | Das Clientdesign des Benutzers, nützlich für die Formatierung eingebetteter Webansichten. Es muss sein `default`, `contrast` oder `dark`. |
 
 ### <a name="example"></a>Beispiel
 
-Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul von einem Kanal aufgerufen wird (Antwort auf Thread), werden im folgenden Beispiel angegeben:
+Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus einem Kanal aufgerufen wird (Antwort auf Thread), werden im folgenden Beispiel angegeben:
 
 ```json
 {
@@ -395,26 +395,26 @@ Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul von einem Kanal auf
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-command-box"></a>Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul aus einem Befehlsfeld aufgerufen wird
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-command-box"></a>Payload activity properties when a task module is invoked from a command box
 
-Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul von einem Befehlsfeld aufgerufen wird, sind wie folgt aufgeführt:
+Die Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul über ein Befehlsfeld aufgerufen wird, sind wie folgt aufgeführt:
 
 |Eigenschaftenname|Zweck|
 |---|---|
-|`type`| Anforderungstyp. Es muss .`invoke` |
-|`name`| Typ des Befehls, der an Ihren Dienst ausgegeben wird. Es muss .`composeExtension/fetchTask` |
-|`from.id`| DIE ID des Benutzers, der die Anforderung gesendet hat. |
-|`from.name`| Name des Benutzers, der die Anforderung gesendet hat. |
+|`type`| Anforderungstyp. Es muss sein `invoke`. |
+|`name`| Typ des Befehls, der für Ihren Dienst ausgegeben wird. Es muss sein `composeExtension/fetchTask`. |
+|`from.id`| ID des Benutzers, der die Anforderung gesendet hat. |
+|`from.name`| Der Name des Benutzers, der die Anforderung gesendet hat. |
 |`from.aadObjectId`| Azure Active Directory Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 |`channelData.tenant.id`| Azure Active Directory Mandanten-ID. |
-|`channelData.source.name`| Der Quellname, von dem aus das Aufgabenmodul aufgerufen wird. |
+|`channelData.source.name`| Der Quellname, aus dem das Aufgabenmodul aufgerufen wird. |
 |`value.commandId` | Enthält die ID des Befehls, der aufgerufen wurde. |
-|`value.commandContext` | Der Kontext, der das Ereignis ausgelöst hat. Es muss .`compose` |
-|`value.context.theme` | Das Clientdesign des Benutzers, nützlich für eingebettete Webansichtsformatierungen. Es muss `default`, `contrast`oder `dark`sein. |
+|`value.commandContext` | Der Kontext, der das Ereignis ausgelöst hat. Es muss sein `compose`. |
+|`value.context.theme` | Das Clientdesign des Benutzers, nützlich für die Formatierung eingebetteter Webansichten. Dies muss ein Wert vom Typ , `contrast`oder `dark`sein`default`. |
 
 ### <a name="example"></a>Beispiel
 
-Die Nutzlastaktivitätseigenschaften, wenn ein Aufgabenmodul über ein Befehlsfeld aufgerufen wird, sind im folgenden Beispiel angegeben:
+Die Eigenschaften der Nutzlastaktivität, wenn ein Aufgabenmodul über ein Befehlsfeld aufgerufen wird, sind im folgenden Beispiel angegeben:
 
 ```json
 {
@@ -541,9 +541,9 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 * * *
 
-## <a name="initial-invoke-request-from-a-message"></a>Anforderung des ersten Aufrufs einer Nachricht
+## <a name="initial-invoke-request-from-a-message"></a>Ursprüngliche Aufrufanforderung aus einer Nachricht
 
-Wenn Ihr Bot aus einer Nachricht aufgerufen wird, muss das `value` Objekt in der anfänglichen Aufrufanforderung die Details der Nachricht enthalten, aus der Ihre Messaging-Erweiterung aufgerufen wird. Die `reactions` Arrays und `mentions` Arrays sind optional und sind nicht vorhanden, wenn es keine Reaktionen oder Erwähnungen in der ursprünglichen Nachricht gibt.
+Wenn Ihr Bot aus einer Nachricht aufgerufen wird, muss das `value` Objekt in der ursprünglichen Aufrufanforderung die Details der Nachricht enthalten, aus der ihre Nachrichtenerweiterung aufgerufen wird. Die `reactions` Arrays sind `mentions` optional und nicht vorhanden, wenn in der ursprünglichen Nachricht keine Reaktionen oder Erwähnungen vorhanden sind.
 Der folgende Abschnitt ist ein Beispiel für das `value` Objekt:
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
@@ -642,23 +642,23 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-to-the-fetchtask"></a>Antworten auf fetchTask
+## <a name="respond-to-the-fetchtask"></a>Reagieren auf fetchTask
 
-Antworten Sie auf die Aufrufanforderung mit einem `task` Objekt, das entweder ein `taskInfo` Objekt mit der adaptiven Karte oder Web-URL oder eine einfache Zeichenfolgennachricht enthält.
+Antworten Sie auf die Aufrufanforderung mit einem `task` Objekt, das ein `taskInfo` Objekt mit der adaptiven Karte oder web-URL oder eine einfache Zeichenfolgenmeldung enthält.
 
 |Eigenschaftenname|Zweck|
 |---|---|
-|`type`| Dies kann entweder `continue` die Darstellung eines Formulars oder `message` ein einfaches Popup sein. |
-|`value`| Entweder ein `taskInfo` Objekt für ein Formular oder ein `string` für eine Nachricht. |
+|`type`| Dies kann entweder `continue` das Präsentieren eines Formulars oder `message` ein einfaches Popup sein. |
+|`value`| Entweder ein `taskInfo` Objekt für ein Formular oder ein `string` Objekt für eine Nachricht. |
 
 Das Schema für das taskInfo-Objekt lautet:
 
 |Eigenschaftenname|Zweck|
 |---|---|
 |`title`| Der Titel des Aufgabenmoduls.|
-|`height`| Es muss entweder eine ganze Zahl (in Pixel) oder `small`, `medium`sein `large`.|
-|`width`| Es muss entweder eine ganze Zahl (in Pixel) oder `small`, `medium`sein `large`.|
-|`card`| Die adaptive Karte, die das Formular definiert (bei Verwendung eines).
+|`height`| Dabei muss es sich entweder um eine ganze Zahl (in Pixel) oder `small`um `medium`eine ganzzahlige Zahl handeln `large`.|
+|`width`| Dabei muss es sich entweder um eine ganze Zahl (in Pixel) oder `small`um `medium`eine ganzzahlige Zahl handeln `large`.|
+|`card`| Die adaptive Karte, die das Formular definiert (sofern verwendet).
 |`url`| Die URL, die innerhalb des Aufgabenmoduls als eingebettete Webansicht geöffnet werden soll.|
 |`fallbackUrl`| Wenn ein Client das Aufgabenmodulfeature nicht unterstützt, wird diese URL auf einer Browserregisterkarte geöffnet. |
 
@@ -822,7 +822,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="create-a-task-module-with-an-embedded-web-view"></a>Erstellen eines Aufgabenmoduls mit einer eingebetteten Webansicht
 
-Wenn Sie eine eingebettete Webansicht verwenden, müssen Sie mit einem `task` Objekt mit dem Objekt antworten, das `value` die URL zum Webformular enthält, das Sie laden möchten. Die Domänen einer beliebigen URL, die Sie laden möchten, müssen im `validDomains` Array im Manifest Ihrer App enthalten sein. Weitere Informationen zum Erstellen ihrer eingebetteten Webansicht finden Sie in der [Dokumentation zum Aufgabenmodul](~/task-modules-and-cards/what-are-task-modules.md).
+Wenn Sie eine eingebettete Webansicht verwenden, müssen Sie mit einem `task` Objekt mit dem Objekt antworten, das `value` die URL zu dem Webformular enthält, das Sie laden möchten. Die Domänen jeder URL, die Sie laden möchten, müssen im `validDomains` Array im Manifest Ihrer App enthalten sein. Weitere Informationen zum Erstellen ihrer eingebetteten Webansicht finden Sie in der [Dokumentation zum Aufgabenmodul](~/task-modules-and-cards/what-are-task-modules.md).
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -898,9 +898,9 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="request-to-install-your-conversational-bot"></a>Anfordern der Installation Ihres Unterhaltungs-Bots
 
-Wenn die App einen Unterhaltungs-Bot enthält, installieren Sie den Bot in der Unterhaltung, und laden Sie dann das Aufgabenmodul. Der Bot ist hilfreich, um zusätzlichen Kontext für das Aufgabenmodul abzurufen. Ein Beispiel für dieses Szenario ist das Abrufen der Liste zum Auffüllen eines Personenauswahl-Steuerelements oder der Liste der Kanäle in einem Team.
+Wenn die App einen Unterhaltungs-Bot enthält, installieren Sie den Bot in der Unterhaltung, und laden Sie dann das Aufgabenmodul. Der Bot ist nützlich, um zusätzlichen Kontext für das Aufgabenmodul abzurufen. Ein Beispiel für dieses Szenario ist das Abrufen der Teilnehmerliste zum Auffüllen eines Personenauswahl-Steuerelements oder der Liste der Kanäle in einem Team.
 
-Wenn die Messaging-Erweiterung den `composeExtension/fetchTask` Aufruf empfängt, überprüfen Sie, ob der Bot im aktuellen Kontext installiert ist, um den Fluss zu vereinfachen. Überprüfen Sie z. B. den Fluss mit einem Abruflistenanruf. Wenn der Bot nicht installiert ist, geben Sie eine adaptive Karte mit einer Aktion zurück, die den Benutzer zur Installation des Bots anfordert. Der Benutzer muss über die Berechtigung verfügen, die Apps an diesem Speicherort zur Überprüfung zu installieren. Wenn die App-Installation nicht erfolgreich ist, erhält der Benutzer eine Nachricht, um sich an den Administrator zu wenden.
+Wenn die Nachrichtenerweiterung den `composeExtension/fetchTask` Aufruf empfängt, überprüfen Sie, ob der Bot im aktuellen Kontext installiert ist, um den Fluss zu erleichtern. Überprüfen Sie z. B. den Fluss mit einem Anruf beim Abrufen der Teilnehmerliste. Wenn der Bot nicht installiert ist, geben Sie eine adaptive Karte mit einer Aktion zurück, die den Benutzer auffordert, den Bot zu installieren. Der Benutzer muss über die Berechtigung zum Installieren der Apps an diesem Speicherort verfügen, um dies überprüfen zu können. Wenn die App-Installation nicht erfolgreich ist, erhält der Benutzer eine Nachricht, um sich an den Administrator zu wenden.
 
 #### <a name="example"></a>Beispiel
 
@@ -930,7 +930,7 @@ Der folgende Codeabschnitt ist ein Beispiel für die Antwort:
 }
 ```
 
-Nach der Installation des Unterhaltungsbots empfängt er eine weitere Aufrufnachricht mit `name = composeExtension/submitAction`, und `value.data.msteams.justInTimeInstall = true`.
+Nach der Installation des Unterhaltungs-Bots empfängt er eine weitere Aufrufnachricht mit `name = composeExtension/submitAction`und `value.data.msteams.justInTimeInstall = true`.
 
 #### <a name="example"></a>Beispiel
 
@@ -958,7 +958,7 @@ Der folgende Codeabschnitt ist ein Beispiel für die Aufgabenantwort auf den Auf
 }
 ```
 
-Die Aufgabenantwort auf den Aufruf muss mit der des installierten Bots vergleichbar sein.
+Die Aufgabenantwort auf den Aufruf muss der des installierten Bots ähneln.
 
 #### <a name="example"></a>Beispiel
 
@@ -985,13 +985,13 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 | Beispielname           | Beschreibung | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams Messaging-Erweiterungsaktion| Beschreibt, wie Aktionsbefehle definiert, Aufgabenmodul erstellt und auf Aufgabenmodul-Sendeaktion reagiert wird. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams Messaging-Erweiterungssuche   |  Beschreibt, wie Suchbefehle definiert und auf Suchvorgänge reagiert wird.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams Nachrichtenerweiterungsaktion| Beschreibt das Definieren von Aktionsbefehlen, das Erstellen eines Aufgabenmoduls und das Reagieren auf Aufgabenmodul-Sendeaktionen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams Nachrichtenerweiterungssuche   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchvorgänge reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Reagieren auf Aktionsbefehl](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+> [Auf Aktionsbefehl reagieren](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
 ## <a name="see-also"></a>Siehe auch
 

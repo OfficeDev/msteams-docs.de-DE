@@ -1,46 +1,46 @@
 ---
 title: Entwerfen Ihrer benutzerdefinierten App
 author: heath-hamilton
-description: Erfahren Sie, wie Sie Microsoft Teams-Apps entwerfen. Zu den Ressourcen gehören das Microsoft Teams UI Kit, bewährte Methoden, Beispiele und vieles mehr.
+description: Erfahren Sie, wie Sie Microsoft Teams Apps entwerfen. Zu den Ressourcen gehören das Microsoft Teams UI Kit, bewährte Methoden, Beispiele und vieles mehr.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 7a7a6d380341c94f4ed2eef92bf4407ac1a7681f
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: c6ccc282159a436b31671fc821372a3f08e47539
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63466528"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104462"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Entwerfen Ihrer Microsoft Teams-App
 
-:::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="Konzeptionelles Bild, das die Microsoft Teams Entwurfsrichtlinien einführt.":::
+:::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="Konzeptionelle Darstellung der Microsoft Teams Designrichtlinien.":::
 
-Unabhängig davon, ob Sie Designer, Produktmanager, Entwickler oder Entwickler mit Tools mit geringem Code sind, können Diese Richtlinien Ihnen dabei helfen, schnell die richtigen Entwurfsentscheidungen für Ihre Microsoft Teams App zu treffen.
+Ganz gleich, ob Sie Designer, Produktmanager, Entwickler oder Hersteller sind, die Low-Code-Tools verwenden– diese Richtlinien können Ihnen helfen, schnell die richtigen Designentscheidungen für Ihre Microsoft Teams-App zu treffen.
 
 ## <a name="creating-a-cohesive-experience"></a>Erstellen einer zusammenhängenden Oberfläche
 
-Das Entwerfen einer Teams-App ähnelt dem Entwerfen einer herkömmlichen Web-App, unterscheidet sich jedoch auch etwas. Ein effektives Design hebt die einzigartigen Attribute Ihrer App hervor und passt sich natürlich mit Teams Features und Kontexten an.
+Das Entwerfen einer Teams-App ist wie das Entwerfen einer herkömmlichen Web-App, aber auch ein wenig anders. Ein effektives Design hebt die einzigartigen Attribute Ihrer App hervor und passt sich gleichzeitig natürlich Teams Features und Kontexten an.
 
-Diese Richtlinien und Ressourcen können Ihnen dabei helfen, dieses Gleichgewicht zu finden. Sie wissen, was Sie tun müssen und was Sie beim Entwerfen Ihrer Teams-App vermeiden müssen (z. B. navigation auf einer Registerkarte mit mehreren Ebenen).
+Diese Richtlinien und Ressourcen können Ihnen dabei helfen, dieses Gleichgewicht zu erreichen. Sie wissen, was Sie tun und was Sie beim Entwerfen Ihrer Teams App vermeiden sollten (z. B. navigation auf mehreren Ebenen auf einer Registerkarte).
 
-## <a name="teams-app-design-principles"></a>Teams App-Entwurfsprinzipien
+## <a name="teams-app-design-principles"></a>Teams App-Designprinzipien
 
-Teams Apps helfen Menschen, gemeinsam mehr zu erreichen. Verwenden Sie diese Prinzipien, um Ihr Design zu leiten.
+Teams Apps helfen Denkhilfen, gemeinsam mehr zu erreichen. Verwenden Sie diese Prinzipien, um Ihr Design zu leiten.
 
 :::row:::
    :::column span="":::
 
 ### <a name="collaborative"></a>Gemeinsame
 
-Teams App fördert die Zusammenarbeit durch koordinierte und gemeinsame Aktivitäten zwischen Benutzern.
+Teams App fördert die Zusammenarbeit durch koordinierte und gemeinsame Aktivitäten unter den Benutzern.
 
    :::column-end:::
    :::column span="":::
 
 ### <a name="trustworthy"></a>Vertrauenswürdig
 
-Die App ist sicher und konform. Benutzer können auf einfache Weise Informationen zum Datenschutz finden.
+Die App ist sicher und konform. Benutzer können leicht Informationen zum Datenschutz finden.
 
    :::column-end:::
 :::row-end:::
@@ -50,7 +50,7 @@ Die App ist sicher und konform. Benutzer können auf einfache Weise Informatione
 
 ### <a name="globally-inclusive"></a>Global inklusiv
 
-Personen aller Hintergründe, Fähigkeiten und Fächer können die App verwenden. Es ist kulturell, rassisch und  social aware.
+Personen mit allen Hintergründen, Fähigkeiten und Disziplinen können die App verwenden. Es ist kulturell, rassisch und sozial bewusst.
 
    :::column-end:::
    :::column span="":::
@@ -65,9 +65,9 @@ Die App konzentriert sich auf Kernszenarien, die sich mit Teams Workflows verbin
 :::row:::
    :::column span="":::
 
-### <a name="native-or-distinct"></a>Systemeigen oder unterschiedlich
+### <a name="native-or-distinct"></a>Systemeigene oder unterschiedliche
 
-Die App verwendet systemeigene Teams Designkomponenten oder Ihre eigenen. Es gibt keine Mischung aus Farbschemas, Steuerelementen usw.
+Die App verwendet systemeigene Teams Designkomponenten oder ihre eigenen. Es gibt keine Mischung aus Farbschemas, Steuerelementen usw.
 
    :::column-end:::
    :::column span="":::
@@ -82,16 +82,16 @@ Die App basiert auf einem Szenario, das Benutzer in Teams ausführen müssen.
 :::row:::
    :::column span="":::
 
-### <a name="easy-to-use"></a>Einfach zu verwenden
+### <a name="easy-to-use"></a>Einfach zu bedienen
 
-Die Benutzeroberfläche ist leicht verständlich, ansprechend in Aussehen und Tonfall und macht die Mitarbeiter produktiver.
+Die Benutzeroberfläche ist leicht zu verstehen, in Aussehen und Ton angenehm und macht die Benutzer produktiver.
 
    :::column-end:::
    :::column span="":::
 
 ### <a name="responsive"></a>Reaktionsfähig
 
-Die App ist geräte- und bildschirmunabhängig.
+Die App ist geräte- und bildschirmagnostisch.
 
    :::column-end:::
 :::row-end:::
@@ -101,50 +101,50 @@ Die App ist geräte- und bildschirmunabhängig.
 
 ### <a name="accessible"></a>Barrierefrei
 
-Die App erfüllt Teams Barrierefreiheitsanforderungen hinsichtlich Farbkontrast, Navigationsalternativen und mehr.
+Die App erfüllt Teams Anforderungen an die Barrierefreiheit in Bezug auf Farbkontrast, Navigationsalternativen und vieles mehr.
 
    :::column-end:::
    :::column span="":::
 
 ### <a name="well-described"></a>Gut beschrieben
 
-Text, Symbole und Bilder machen deutlich, wozu die App dient und wie sie verwendet wird.
+Text, Symbole und Bilder machen deutlich, wofür die App steht und wie sie verwendet wird.
 
    :::column-end:::
 :::row-end:::
 
-## <a name="teams-design-system"></a>Teams-Entwurfssystem
+## <a name="teams-design-system"></a>Teams Designsystem
 
-Lernen Sie die [Grundlagen des Teams App-Designs](design-teams-app-fundamentals.md) kennen, einschließlich Layout, Farbschemas und mehr.
+Lernen Sie die [Grundlagen Teams App-Designs](design-teams-app-fundamentals.md) kennen, einschließlich Layout, Farbschemas und mehr.
 
 ## <a name="app-capabilities"></a>App-Funktionen
 
-Erfahren Sie, wie Benutzer Teams Apps hinzufügen, verwenden und verwalten, um die einzelnen Funktionen in Ihrem Design optimal zu nutzen.
+Verstehen Sie, wie Benutzer Teams Apps hinzufügen, verwenden und verwalten, um jede Funktion in Ihrem Design optimal zu nutzen.
 
 * [Persönliche Apps](../../concepts/design/personal-apps.md)
 * [Registerkarten](../../tabs/design/tabs.md)
-* [Messaging-Erweiterungen](../../messaging-extensions/design/messaging-extension-design.md)
+* [Nachrichtenerweiterungen](../../messaging-extensions/design/messaging-extension-design.md)
 * [Bots](../../bots/design/bots.md)
 * [Besprechungserweiterungen](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
 ## <a name="ui-templates"></a>Vorlagen für Benutzeroberflächen
 
-Erstellen Sie schnell komplexe, präzise Designs mit [Vorlagen für gängige Teams Anwendungsfälle und Workflows](design-teams-app-ui-templates.md).
+Erstellen Sie schnell komplexe, hochwertige Designs mit [Vorlagen für gängige Teams Anwendungsfälle und Workflows](design-teams-app-ui-templates.md).
 
 ## <a name="basic-ui-components"></a>Grundlegende Benutzeroberflächenkomponenten
 
-Basierend auf Fluent Ui sind [dies die Kernelemente](design-teams-app-basic-ui-components.md), die Sie verwenden können, um Teams Oberflächen von Grund auf neu zu erstellen.
+Basierend auf Fluent Benutzeroberfläche sind dies die [Kernelemente](design-teams-app-basic-ui-components.md), die Sie verwenden können, um Teams Umgebungen von Grund auf neu zu erstellen.
 
 ## <a name="tools-and-samples"></a>Tools und Beispiele
 
-Die folgenden Tools können Designern und Entwicklern bei den ersten Schritten helfen:
+Die folgenden Tools können Designern und Entwicklern bei den ersten Schritte helfen:
 
 ### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-Benutzeroberflächenbausatz
 
-Entwerfen Sie eine Teams-App mit UI-Komponenten, Vorlagen und Beispielen, die Sie nach Bedarf ziehen, ablegen und ändern können. Das UI-Kit enthält auch umfassende Informationen dazu, wie Apps in unterschiedlichen Teams Szenarien aussehen und sich verhalten sollten.
+Entwerfen Sie eine Teams-App mit UI-Komponenten, Vorlagen und Beispielen, die Sie nach Bedarf ziehen, ablegen und ändern können. Das UI-Kit enthält außerdem umfassende Informationen dazu, wie Apps in verschiedenen Teams-Szenarien aussehen und sich verhalten sollten.
 
 > [!div class="nextstepaction"]
-> [Abrufen des UI-Kits (Numma)](https://www.figma.com/community/file/916836509871353159)
+> [Abrufen des UI-Kits (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ### <a name="microsoft-teams-ui-library"></a>Microsoft Teams-Benutzeroberflächenbibliothek
 
@@ -167,14 +167,14 @@ Sie können eine Beispiel-App hochladen, um zu sehen, wie Apps im Teams-Client a
 
 ## <a name="other-resources"></a>Weitere Ressourcen
 
-Um mehr zu erfahren, probieren Sie eine der folgenden Ressourcen aus:
+Wenn Sie mehr erfahren möchten, probieren Sie eine der folgenden Ressourcen aus:
 
-### <a name="fluent-ui-documentation"></a>Dokumentation zur Fluent Benutzeroberfläche
+### <a name="fluent-ui-documentation"></a>dokumentation zur Fluent der Benutzeroberfläche
 
-Rufen Sie Codebeispiele und Implementierungsdetails für die grundlegenden Fluent UI-Komponenten ab, die zum Erstellen Teams Oberflächen verwendet werden.
+Erhalten Sie Codebeispiele und Implementierungsdetails für die grundlegenden Fluent UI-Komponenten, die zum Erstellen Teams Oberflächen verwendet werden.
 
 > [!div class="nextstepaction"]
-> [Testen Teams UI-Komponenten (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
+> [Testen Teams UI-Komponenten (Fluent Ui)](https://fluentsite.z22.web.core.windows.net/)
 
 ### <a name="adaptive-cards-designer"></a>Designer für adaptive Karten
 

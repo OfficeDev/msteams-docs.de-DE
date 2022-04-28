@@ -4,16 +4,16 @@ description: Beschreibt Kartenaktionen in Microsoft Teams und deren Verwendung i
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: Teams-Bots – Kartenaktionen
-ms.openlocfilehash: 756ff357947980ecf4a0c7c88c375c427e016d61
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 12100ca05d8e4ff4f68c934bc82e1f078dd0210e
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398603"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103909"
 ---
 # <a name="card-actions"></a>Kartenaktionen
 
-Karten, die von Bots und Messagingerweiterungen in Teams verwendet werden, unterstützen die folgenden Aktivitätstypen [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards):
+Karten, die von Bots und Nachrichtenerweiterungen in Teams verwendet werden, unterstützen die folgenden Aktivitätstypen[`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards):
 
 > [!NOTE]
 > Die `CardAction`-Aktionen unterscheiden sich von `potentialActions` für Office 365-Connectorkarten, wenn sie von Connectors verwendet werden.
@@ -31,7 +31,7 @@ Karten, die von Bots und Messagingerweiterungen in Teams verwendet werden, unter
 >* Teams unterstützt keine `CardAction`-Typen, die in der vorherigen Tabelle nicht aufgeführt sind.
 >* Teams unterstützt die `potentialActions`-Eigenschaft nicht.
 >* Kartenaktionen unterscheiden sich von [vorgeschlagenen Aktionen](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot-Framework oder Azure Bot Service. Vorgeschlagene Aktionen werden in Microsoft Teams nicht unterstützt. Wenn Schaltflächen in einer Teams-Botnachricht angezeigt werden sollen, verwenden Sie eine Karte.
->* Wenn Sie eine Kartenaktion als Teil einer Messagingerweiterung verwenden, funktionieren die Aktionen erst, wenn die Karte an den Kanal übermittelt wird. Die Aktionen funktionieren nicht, während sich die Karte im Feld "Nachricht verfassen" befindet.
+>* Wenn Sie eine Kartenaktion als Teil einer Nachrichtenerweiterung verwenden, funktionieren die Aktionen erst, wenn die Karte an den Kanal übermittelt wird. Die Aktionen funktionieren nicht, während sich die Karte im Feld "Nachricht verfassen" befindet.
 
 ## <a name="action-type-openurl"></a>openUrl-Aktionstyp
 

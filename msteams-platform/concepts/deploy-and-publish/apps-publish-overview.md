@@ -6,12 +6,12 @@ author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: Bereitstellen des Uploads der Veröffentlichungs-App gcc
-ms.openlocfilehash: f691edee8f4e3aab34aa616f9bbf0ed451874070
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 5db182f9276865fc98d277f642f7e58fd4a52df5
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073069"
+ms.locfileid: "65104434"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Verteilen Ihrer Microsoft Teams-App
 
@@ -45,7 +45,7 @@ Weitere Informationen finden Sie [unter Verwalten Ihrer Apps im Teams Admin Cent
 In GCC Teams Umgebungen sind kompatible Microsoft-Apps standardmäßig aktiviert. Stellen Sie vor der Veröffentlichung einer App jedoch sicher, dass alle Endpunkte der App den Anforderungen Ihrer GCC Organisation entsprechen. Weitere Informationen finden Sie [unter Government Community Cloud](../app-fundamentals-overview.md#government-community-cloud).
 
 > [!IMPORTANT]
->Wenn Ihre App eine Bot- oder Messaging-Erweiterung enthält, müssen Sie beim Einrichten eines Kanals zwischen Ihrem Bot und Teams in Azure die Option **Microsoft Teams für Behörden** auswählen. Weitere Informationen finden Sie unter [Verbinden eines Bots mit Kanälen](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
+>Wenn Ihre App eine Bot- oder Nachrichtenerweiterung enthält, müssen Sie beim Einrichten eines Kanals zwischen Ihrem Bot und Teams in Azure die Option **Microsoft Teams für Behörden** auswählen. Weitere Informationen finden Sie unter [Verbinden eines Bots mit Kanälen](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
 
 ## <a name="publish-your-app-to-the-teams-store"></a>Veröffentlichen Ihrer App im Teams Store
 

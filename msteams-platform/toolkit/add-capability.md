@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9d2e3d559bd9d561e3afae8b0db9544ab2ad86cc
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 746b089bf8be4b091a34969118e640d8571c2237
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073531"
+ms.locfileid: "65103271"
 ---
 # <a name="add-capabilities-to-your-teams-apps"></a>Hinzufügen von Funktionen zu ihrer Teams-App
 
@@ -21,7 +21,7 @@ Während der App-Entwicklung können Sie eine neue Teams-App mit Teams App-Funkt
 |--------|-------------|
 | Registerkarten |  Registerkarten sind einfache HTML-Tags, die auf Im App-Manifest deklarierte Domänen verweisen. Sie können Registerkarten als Teil des Kanals innerhalb eines Teams, eines Gruppenchats oder einer persönlichen App für einen einzelnen Benutzer hinzufügen.|
 | Bots |  Bots helfen bei der Interaktion mit Ihrem Webdienst über Text, interaktive Karten und Aufgabenmodule|
-| Messaging-Erweiterungen | Messaging-Erweiterungen helfen bei der Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams-Client|
+| Nachrichtenerweiterungen | Nachrichtenerweiterungen helfen bei der Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams-Client|
 
 ## <a name="prerequisite"></a>Voraussetzungen
 
@@ -35,7 +35,8 @@ Während der App-Entwicklung können Sie eine neue Teams-App mit Teams App-Funkt
 Die Einschränkungen für TeamsFx beim Hinzufügen weiterer Funktionen lauten wie folgt:
 
 * Sie können Registerkarten bis zu 16 Instanzen hinzufügen.
-* Sie können Bot- und Messaging-Erweiterungen für jede Instanz hinzufügen.
+* Sie können Bot- und Nachrichtenerweiterungen für jeweils eine Instanz hinzufügen.
+
 ## <a name="add-capabilities"></a>Hinzufügen von Funktionen
 
 > [!Note]
@@ -69,7 +70,7 @@ Die ausgewählten Funktionen wurden erfolgreich zu Ihrem Projekt hinzugefügt. D
    |-----------------------|----------|
    |So fügen Sie eine Registerkarte hinzu|`teamsfx capability add tab`|
    |So fügen Sie einen Bot hinzu|`teamsfx capability add bot`|
-   |So fügen Sie eine Messaging-Erweiterung hinzu|`teamsfx capability add messaging-extension`|
+   |So fügen Sie eine Nachrichtenerweiterung hinzu|`teamsfx capability add messaging-extension`|
 
 ## <a name="supported-capabilities"></a>Unterstützte Funktionen
 
@@ -77,18 +78,18 @@ Neben den Funktionen, über die Ihre Teams App bereits verfügt, können Sie ihr
 
 |Vorhandene Funktionen|Weitere unterstützte Funktionen|
 |--------------------|--------------------|
-|Registerkarten mit SPFx|Keines|
-|Registerkarten mit Azure|Bot- und Messaging-Erweiterung|
+|Registerkarten mit SPFx|Keine|
+|Registerkarten mit Azure|Bot- und Nachrichtenerweiterung|
 |Bot|Registerkarten|
-|Messaging-Erweiterung|Registerkarten und Bot|
+|Nachrichtenerweiterung|Registerkarten und Bot|
 |Registerkarten und Bot|Registerkarten und Nachrichtenerweiterung|
-|Registerkarten und Messaging-Erweiterung|Registerkarten und Bot|
-|Registerkarten, Bot und Messaging-Erweiterung|Registerkarten|
+|Registerkarten und Nachrichtenerweiterung|Registerkarten und Bot|
+|Registerkarten, Bot und Nachrichtenerweiterung|Registerkarten|
 |Registerkarten |Bot- und Nachrichtenerweiterung|
 
-## <a name="add-bot-tab-and-messaging-extension"></a>Hinzufügen einer Bot-, Registerkarten- und Messaging-Erweiterung
+## <a name="add-bot-tab-and-message-extension"></a>Hinzufügen von Bots, Registerkarten und Nachrichtenerweiterungen
 
-Nach dem Hinzufügen eines Bots und einer Messaging-Erweiterung sind die Änderungen in Ihrem Projekt wie folgt:
+Nach dem Hinzufügen eines Bots und einer Nachrichtenerweiterung sind die Änderungen in Ihrem Projekt wie folgt:
 
 * Ein Botvorlagencode wird einem Unterordner mit Pfad `yourProjectFolder/bot`hinzugefügt. Dazu gehört eine **Hello** World-Bot-Anwendungsvorlage in Ihr Projekt.
 * `launch.json`und `task.json` unter `.vscode` Ordner werden aktualisiert, was die erforderlichen Skripts für Visual Studio Code enthält, und wird ausgeführt, wenn Sie Ihre Anwendung lokal debuggen möchten
@@ -108,7 +109,6 @@ Nach dem Hinzufügen der Registerkarte sind die Änderungen in Ihrem Projekt wie
   * Die Bereiche der Registerkarten
 * Die Dateien unter `templates/azure/teamsfx` werden aktualisiert, und `templates/azure/provision/xxx`die Bicep-Datei wird neu generiert.
 * Die Datei unter `.fx/config` wird neu generiert, wodurch sichergestellt wird, dass Ihr Projekt mit den richtigen Konfigurationen für neu hinzugefügte Funktionen festgelegt wird.
-
 
 
 ## <a name="see-also"></a>Siehe auch

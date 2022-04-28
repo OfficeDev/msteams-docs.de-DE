@@ -5,12 +5,12 @@ description: Übersicht über die Tools und SDKs zum Erstellen Microsoft Teams B
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: a50f93e718dcff35d810f0f8748c97095b49b138
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 52f933aaddd5a02319ae1c0a35e9a4a26b617b57
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073746"
+ms.locfileid: "65104322"
 ---
 # <a name="bots-and-sdks"></a>Tools und SDKs
 
@@ -36,7 +36,7 @@ Das [Bot Framework](https://dev.botframework.com/) ist ein umfangreiches SDK zum
 
 * Verwenden Sie spezielle Kartentypen wie die Office 365 Connectorkarte.
 * Legen Sie Teams spezifischen Kanaldaten zu Aktivitäten fest.
-* Verarbeiten Sie Messaging-Erweiterungsanforderungen.
+* Verarbeiten von Nachrichtenerweiterungsanforderungen.
 
 > [!IMPORTANT]
 > Sie können Teams-Apps in jeder Webprogrammiertechnologie entwickeln und die [Bot Framework-REST-APIs](/bot-framework/rest-api/bot-framework-rest-overview) direkt aufrufen. Sie müssen jedoch in allen Fällen eine Tokenbehandlung durchführen.
