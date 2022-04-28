@@ -4,12 +4,12 @@ description: Beschreibt alle neuen oder aktuellen Entwicklerfunktionen in Micros
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 'Teams: Was sind die neuesten Updates oder Entwicklervorschau und Features'
-ms.openlocfilehash: 936d5eff50453801527425cbd4a61f6928fb1d30
-ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
+ms.openlocfilehash: ba9588517e7b0657eef7da265844e20d8b2fbd76
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952387"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073090"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -22,6 +22,7 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 
 | Datum | Update | Hier finden |
 | --- | --- | --- |
+|20.04.2022 |  Einrichten von CI/CD-Pipelines | Tools und SDKs > Teams Toolkit für Visual Studio Code > [Einrichten von CI/CD-Pipelines](toolkit/use-CICD-template.md)|
 |19.04.2022 | Hochladen Ihrer App in Microsoft Teams | Verteilen Ihrer App > [Hochladen Ihrer App](concepts/deploy-and-publish/apps-upload.md)|
 |06.04.2022| Für Teams über persönliche App oder Registerkarte freigeben (Entwicklervorschau) | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus einer persönlichen App oder Registerkarte](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |01.04.2022| Schritt-für-Schritt-Anleitung für die Erstellung von Teams-Unterhaltungs-Bots eingeführt| Erstellen von Bots > Bot-Unterhaltungen > Kanal- und Gruppenunterhaltungen > [Schrittweise Anleitung zum Erstellen von Teams Unterhaltungs-Bots](sbs-teams-conversation-bot.yml) |
@@ -61,6 +62,10 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
+|26.04.2022|Deinstallationsverhalten für eine persönliche App mit Bot | Erstellen von Bots > Bot-Unterhaltungen > [Verhaltensaktualisierungen in persönlichen Apps mit Bots deinstallieren](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
+|22.04.2022| Testvorschau für monetarisierte Apps | Monetarisieren Ihrer App > [Testvorschau für monetarisierte Apps](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
+|22.04.2022| In-App-Kaufablauf für die Monetarisierung von Apps | Monetarisieren Ihrer App > [In-App-Käufe](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+|20.04.2022 |  Einrichten von CI/CD-Pipelines | Tools und SDKs > Teams Toolkit für Visual Studio Code > [Einrichten von CI/CD-Pipelines](toolkit/use-CICD-template.md)|
 |19.04.2022 | Hochladen Ihrer App in Microsoft Teams | Verteilen Ihrer App > [Hochladen Ihrer App](concepts/deploy-and-publish/apps-upload.md)|
 |01.04.2022| Schritt-für-Schritt-Anleitung für die Erstellung von Teams-Unterhaltungs-Bots eingeführt| Erstellen von Bots > Bot-Unterhaltungen > Kanal- und Gruppenunterhaltungen > [Schrittweise Anleitung zum Erstellen von Teams Unterhaltungs-Bots](sbs-teams-conversation-bot.yml) |
 |30.03.2022| Das Modul „Erste Schritte mit der Blazor-App mithilfe von Registerkarten und Bots“ wurde aktualisiert|  Erste Schritte > [Erstellen Ihrer ersten App mit Blazor](sbs-gs-blazorupdate.yml)|
@@ -269,14 +274,10 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 |06.04.2022| Für Teams über persönliche App oder Registerkarte freigeben | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus einer persönlichen App oder Registerkarte](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |07.02.2022| Tools und SDKs |Teams-Toolkit für Visual Studio Code > </br> • Hinzufügen von Funktionen zur Teams-App> [Fügen Sie Funktionen für Ihre Teams-Apps hinzu](toolkit/add-capability.md) </br> • Hinzufügen von Cloudressourcen zur Teams-App> [Fügen Sie Cloudressourcen für Ihre Teams-App hinzu](toolkit/add-resource.md) |
 |02.02.2022| App-Manifestversion 1.12 eingeführt | App-Manifest > Öffentliche Entwicklervorschau > [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
-|03.02.2022| Testvorschau für monetarisierte Apps| Monetarisieren Ihrer App > [Testvorschau für monetarisierte Apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|03.02.2022| In-App-Kaufablauf für die Monetarisierung von Apps | Monetarisieren Ihrer App > [In-App-Käufe](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |17.01.2022| Personenauswahl in Adaptiven Karten für Mobilgeräte  | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Personenauswahl in Adaptiven Karten](task-modules-and-cards/cards/people-picker.md)|
 |10.01.2022 | Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code | Tools und SDKs > Teams Toolkit for Visual Studio Code > [Grundlagen des Teams Toolkit](toolkit/teams-toolkit-fundamentals.md) |
-|24.12.2021| Schrittweise Anleitung zum Erteilen von Berechtigungen für Registerkartengeräte eingeführt | App-Grundlagen > Gerätefunktionen > [Schritt-für-Schritt-Anleitung zum Erteilen von Berechtigungen für Tab-Geräte](sbs-tab-device-permissions.yml) |
 |15.11.2021| Persönliche Registerkarten und Messaging-Erweiterungen werden in Outlook und Office ausgeführt | [Erweitern von Teams-Apps auf Microsoft 365](~/m365-apps/overview.md) |
 |28.10.2021|Bots können aktiviert werden, um alle Kanalnachrichten mit ressourcenspezifischer Zustimmung (RESOURCE-Specific Consent, RSC) zu empfangen. | • Erstellen von Bots > Bot-Unterhaltungen > Nachrichten in Bot-Unterhaltungen > [Empfangen aller Nachrichten mit RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Übersicht über Bot-Unterhaltungen](~/bots/how-to/conversations/conversation-basics.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Kanal- und Gruppenunterhaltungen](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • App-Manifest > Öffentliche Entwickler-Vorschau > [Manifest-Schema für Entwickler-Vorschau](~/resources/schema/manifest-schema-dev-preview.md) |
-|21.06.2021|Deinstallationsverhalten für eine persönliche App mit Bot | Erstellen von Bots > Bot-Unterhaltungen > [Verhaltensaktualisierungen in persönlichen Apps mit Bots deinstallieren](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |16.06.2021| Ressourcenspezifische Zustimmung für Chats | • Verwenden von Teams-Daten mit Microsoft Graph > [Ressourcenspezifische Zustimmung](graph-api/rsc/resource-specific-consent.md) </br> • Testen Ihrer App > Microsoft Graph > [Testen ressourcenspezifischer Genehmigungen in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
 Weitere Informationen finden Sie unter [Öffentliche Entwickler-Vorschau für Teams](~/resources/dev-preview/developer-preview-intro.md).

@@ -6,20 +6,20 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: 74aa3ef53aab329b0b2acae34dc976c142703e0e
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 33e1e00165119af1e1b63d024097bd3a1a1b13c2
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63731894"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073830"
 ---
 # <a name="debug-background-process"></a>Debuggen von Hintergrundprozessen
 
 Der lokale Debugworkflow umfasst die Dateien `.vscode/launch.json` und `.vscode/tasks.json`, um den Debugger in Visual Studio Code zu konfigurieren, dann startet Visual Studio Code die Debugger und Microsoft Edge oder Chrome-Debugger startet wie folgt eine neue Browserinstanz:
 
-1. Die Datei `launch.json` konfiguriert den Debugger in Visual Studio Code. 
+1. Die Datei `launch.json` konfiguriert den Debugger in Visual Studio Code.
 
-2. Visual Studio Code führt den Verbund `preLaunchTask`, `Pre Debug Check & Start All` in Datei `.vscode/tasks.json` aus.
+2. Visual Studio Code führt den Verbund **preLaunchTask**, **Überprüfung vor dem Debuggen und alle Starten** in der Datei `.vscode/tasks.json` aus.
 
 3. Visual Studio Code startet dann die in den Verbundkonfigurationen angegebenen Debugger, z. B. **An Bot anfügen**, **An Back-End anfügen**, **An Front-End anfügen** und **Bot starten**.
 
@@ -41,11 +41,11 @@ Das Teams-Toolkit überprüft während des Debugprozesses die folgenden Vorausse
    
 * Microsoft 365 Konto mit gültigen Anmeldeinformationen, das Teams-Toolkit fordert Sie auf, sich bei dem Microsoft 365-Konto anzumelden, wenn Sie sich nicht bereits angemeldet haben.
 
-* Das Hochladen oder Querladen benutzerdefinierter Apps für Ihren Entwicklermandanten ist aktiviert. Wenn nicht, wird das lokale Debuggen beendet.
+* Das Hochladen oder Querladen benutzerdefinierter Apps für Ihren Entwicklermandanten ist aktiviert, wenn dies nicht der Fall ist, wird das lokale Debuggen beendet.
 
-* Ngrok-Binärversion 2.3, gültig für Bot- und Messagingerweiterung.  Wenn Ngrok nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Teams-Toolkit das Ngrok-NPM-Paket `ngrok@4.2.2` in `~/.fx/bin/ngrok`. Die Ngrok-Binärdatei wird vom Ngrok-NPM-Paket in `/.fx/bin/ngrok/node modules/ngrok/bin`verwaltet.
+* Die Ngrok-Binärdatei, Version 2.3, ist für Bot- und Messaging-Erweiterungen anwendbar. Wenn Ngrok nicht installiert ist oder die Version nicht den Anforderungen entspricht, installiert das Teams-Toolkit das Ngrok-NPM-Paket `ngrok@4.2.2` in `~/.fx/bin/ngrok`. Die Ngrok-Binärdatei wird vom Ngrok-NPM-Paket in `/.fx/bin/ngrok/node modules/ngrok/bin`verwaltet.
 
-* Azure Functions Core Tools, Version 3. Wenn Azure Functions Core Tools nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Teams-Toolkit das Azure Functions Core Tools-NPM-Paket, azure-functions-core-tools@3 für **Windows** und für **macOs** in  `~/.fx/bin/func`. Das Azure Functions Core Tools-NPM-Paket in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` verwaltet die Azure Functions Core Tools-Binärdatei. Bei Linux wird das lokale Debuggen beendet.
+* Azure Functions Core Tools, Version 3. Wenn Azure Functions Core Tools nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Teams-Toolkit das Azure Functions Core Tools-NPM-Paket „azure-functions-core-tools@3“ für **Windows** und für **macOs** in `~/.fx/bin/func`. Das Azure Functions Core Tools-NPM-Paket in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` verwaltet die Azure Functions Core Tools-Binärdatei. Bei Linux wird das lokale Debuggen beendet.
 
 * .NET Core SDK-Version, die für Azure Functions gilt. Wenn .NET Core SDK nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Teams-Toolkit .NET Core SDK für Windows und MacOS in `~/.fx/bin/dotnet`. Bei Linux wird das lokale Debuggen beendet.
 
@@ -56,7 +56,7 @@ Das Teams-Toolkit überprüft während des Debugprozesses die folgenden Vorausse
   |Windows, MacOs (x64) und Linux | **3.1 (empfohlen)**, 5.0, 6.0 |
   |macOs (arm64) |6.0 |
 
-* Entwicklungszertifikat, wenn das Entwicklungszertifikat für localhost nicht für die Registerkarte in Windows oder macOS installiert ist, werden Sie vom Teams-Toolkit aufgefordert, es zu installieren.
+* Entwicklungszertifikat. Wenn das Entwicklungszertifikat für localhost nicht für die Registerkarte in Windows oder macOS installiert ist, werden Sie vom Teams-Toolkit aufgefordert, es zu installieren.
 
 * Azure Functions-Bindungserweiterungen, die in `api/extensions.csproj` definiert sind. Wenn Azure Functions-Bindungserweiterungen nicht installiert sind, installiert das Teams-Toolkit Azure Functions-Bindungserweiterungen.
 
@@ -64,7 +64,7 @@ Das Teams-Toolkit überprüft während des Debugprozesses die folgenden Vorausse
 
 * Bot- und Messagingerweiterung. Das Teams-Toolkit startet Ngrok, um einen HTTP-Tunnel für Bot- und Messagingerweiterungen zu erstellen.
 
-* Verfügbare Ports, wenn Registerkarten-, Bot-, Messagingerweiterungs- und Azure Functions-Ports nicht verfügbar sind, wird das lokale Debuggen beendet.
+* Verfügbare Ports. Wenn keine Ports für Registerkarten, Bots, Messagingerweiterungen und Azure Functions verfügbar sind, wird das lokale Debuggen beendet.
 
   In der folgenden Tabelle sind die Ports aufgeführt, die für Komponenten verfügbar sind:
 
@@ -81,16 +81,16 @@ Das Teams-Toolkit überprüft während des Debugprozesses die folgenden Vorausse
 
 |Project type|Installation| Limitation|
 |----------|--------------------------------|-----|
-|Tab without Azure functions | Node.js LTS versions 10, 12, **14 (recommended)**, 16 | The local debug terminates, if Node.js is not installed or the version doesn't match the requirement.|
-|Tab with Azure functions | Node.js LTS versions 10, 12, **14 (recommended)** |The local debug terminates, if Node.js is not installed or the version doesn't match the requirement.|
-|Bot | Node.js LTS versions 10, 12, **14 (recommended)**, 16|The local debug terminates, if Node.js is not installed or the version doesn't match the requirement.|
-|Messaging extension | Node.js LTS versions 10, 12, **14 (recommended)**, 16 |The local debug terminates, if Node.js is not installed or the version doesn't match the requirement.|
+|Tab without Azure functions | Node.js LTS versions 10, 12, **14 (recommended)**, 16 | The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
+|Tab with Azure functions | Node.js LTS versions 10, 12, **14 (recommended)** |The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
+|Bot | Node.js LTS versions 10, 12, **14 (recommended)**, 16|The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
+|Messaging extension | Node.js LTS versions 10, 12, **14 (recommended)**, 16 |The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
 |Sign in to Microsoft 365 account | Microsoft 365 credentials |Teams toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in. |
-|Bot, messaging extension | Ngrok version 2.3| • If Ngrok is not installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|
-|Azure functions | Azure Functions Core Tools version 3| • If Azure Functions Core Tools is not installed or the version doesn't match the requirement, the Teams toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|
-|Azure functions |.NET Core SDK version|• If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.|
-|Azure functions | Azure functions binding extensions defined in `api/extensions.csproj`| If Azure functions binding extensions is not installed, the toolkit installs Azure functions binding extensions.|
-|NPM packages| NPM packages for tab app, bot app, messaging extension app, and Azure functions|If NPM is not installed, the toolkit installs all NPM packages.|
+|Bot, messaging extension | Ngrok version 2.3| • If Ngrok isn't installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|
+|Azure functions | Azure Functions Core Tools version 3| • If Azure Functions Core Tools isn't installed or the version doesn't match the requirement, the Teams toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|
+|Azure functions |.NET Core SDK version|• If .NET Core SDK isn't installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.|
+|Azure functions | Azure functions binding extensions defined in `api/extensions.csproj`| If Azure functions binding extensions isn't installed, the toolkit installs Azure functions binding extensions.|
+|NPM packages| NPM packages for tab app, bot app, messaging extension app, and Azure functions|If NPM isn't installed, the toolkit installs all NPM packages.|
 |Bot and messaging extension | Ngrok |Toolkit starts Ngrok to create a HTTP tunnel for bot and messaging extension. |
 
 > [!NOTE]
@@ -105,7 +105,7 @@ Use the following .NET Core versions:
 
 
 > [!NOTE]
-> If the development certificate for localhost is not installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.</br> -->
+> If the development certificate for localhost isn't installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.</br> -->
 
 
 Wenn Sie **Start Debugging (F5)** auswählen, zeigt der Ausgabekanal des Teams-Toolkits den Fortschritt und das Ergebnis an, nachdem die Voraussetzungen überprüft wurden.
@@ -130,32 +130,34 @@ Im Einrichtungsprozess bereitet das Teams-Toolkit die folgenden Registrierungen 
 
 1. Macht eine API verfügbar.
 
-    a. Konfiguriert den Anwendungs-ID-URI. Für Registerkarte, `api://localhost/{appId}`. Für Bot- oder Messagingerweiterung,  `api://botid-{botid}`.
+    a. Konfiguriert den Anwendungs-ID-URI. Für Registerkarte, `api://localhost/{appId}`. Für Bot- oder Messagingerweiterung, `api://botid-{botid}`.
 
     b. Fügt einen Bereich mit dem Namen `access_as_user` hinzu. Aktiviert es für **Administratoren und Benutzer**.
 
-In der folgenden Tabelle sind die Konfigurationen der Microsoft 365-Clientanwendung mit den Client-IDs aufgeführt:
-
-  | Microsoft 365-Clientanwendung |  Client-ID  |
-  | --- | --- |
-  | Teams-Desktop, Mobil | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
-  | Teams-Web | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-  | Office.com | 4345a7b9-9a63-4910-a426-35363201d503 |
-  | Office.com | 4765445b-32c6-49b0-83e6-1d93765276ca |
-  | Office-Desktop | 0ec893e0-5785-4de6-99da-4ed124e5296c |
-  | Outlook Desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-  | Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
-  | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 4. Konfiguriert API-Berechtigungen. Fügt **User.Read** die Microsoft Graph-Berechtigung hinzu.
 
-In der folgenden Tabelle ist die Konfiguration der Authentifizierung wie folgt aufgeführt:
-
-  | Projekttyp | Umleitungs-URIs für das Web | Umleitungs-URIs für eine einseitige Anwendung |
-  | --- | --- | --- |
-  | Tab | `https://localhost:53000/auth-end.html` | `https://localhost:53000/auth-end.html?clientId={appId>}` |
-  | Bot- oder Messagingerweiterung | `https://ngrok.io/auth-end.html` | – |
+    In der folgenden Tabelle ist die Konfiguration der Authentifizierung wie folgt aufgeführt:
+    
+      | Projekttyp | Umleitungs-URIs für das Web | Umleitungs-URIs für eine einseitige Anwendung |
+      | --- | --- | --- |
+      | Tab | `https://localhost:53000/auth-end.html` | `https://localhost:53000/auth-end.html?clientId={appId>}` |
+      | Bot- oder Messagingerweiterung | `https://ngrok.io/auth-end.html` | – |
   
+
+    In der folgenden Tabelle sind die Konfigurationen der Microsoft 365-Clientanwendung mit den Client-IDs aufgeführt:
+    
+      | Microsoft 365-Clientanwendung |  Client-ID  |
+      | --- | --- |
+      | Teams-Desktop, Mobil | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+      | Teams-Web | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+      | Office.com | 4345a7b9-9a63-4910-a426-35363201d503 |
+      | Office.com | 4765445b-32c6-49b0-83e6-1d93765276ca |
+      | Office-Desktop | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+      | Outlook Desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+      | Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
+      | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+    
 ### <a name="registers-and-configures-bot"></a>Registriert und konfiguriert den Bot 
 
 Für Registerkarten-App oder Messagingerweiterungs-App:
@@ -172,7 +174,7 @@ Für Registerkarten-App oder Messagingerweiterungs-App:
 
 ### <a name="registers-and-configures-teams-app"></a>Registriert und konfiguriert Teams-App
 
-Registriert eine Teams-App in [Entwickler](https://dev.teams.microsoft.com/home) mithilfe der Manifestvorlage in `templates/appPackage/manifest.local.template.json`.
+Registriert eine Teams-App in [Entwickler](https://dev.teams.microsoft.com/home) mithilfe der Manifestvorlage in `templates/appPackage/manifest.template.json`.
 
 Nach dem Registrieren und Konfigurieren der App werden lokale Debugdateien generiert.
 
@@ -182,8 +184,8 @@ Sie können die Projektordner und -dateien im Explorer-Bereich von Visual Studio
 
 | Ordnername| Inhalt| Debugkonfigurationstyp |
 | --- | --- | --- |
-|  `.fx/configs/localSettings.json` | Lokale Debugkonfigurationsdatei | Die Werte jeder Konfiguration werden während des lokalen Debuggens generiert und gespeichert. |
-|  `templates/appPackage/manifest.local.template.json` | Teams-App-Manifestvorlagendatei für lokales Debuggen | Die Platzhalter in der Datei werden während des lokalen Debuggens aufgelöst. |
+|  `.fx/configs/config.local.json` | Lokale Debugkonfigurationsdatei | Die Werte jeder Konfiguration werden während des lokalen Debuggens generiert und gespeichert. |
+|  `templates/appPackage/manifest.template.json` | Teams-App-Manifestvorlagendatei für lokales Debuggen | Die Platzhalter in der Datei werden während des lokalen Debuggens aufgelöst. |
 |  `tabs/.env.teams.local`  | Umgebungsvariablendatei für Registerkarte  | Die Werte jeder Umgebungsvariable werden während des lokalen Debuggens generiert und gespeichert. |
 |  `bot/.env.teamsfx.local` | Umgebungsvariablendatei für Bot- und Messagingerweiterung| Die Werte jeder Umgebungsvariable werden während des lokalen Debuggens generiert und gespeichert. |
 | `api/.env.teamsfx.local`  | Umgebungsvariablendatei für Azure Functions | Die Werte jeder Umgebungsvariable werden während des lokalen Debuggens generiert und gespeichert. |

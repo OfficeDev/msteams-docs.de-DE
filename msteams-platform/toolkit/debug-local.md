@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 25a851f0dcc956139551a46b713dc2e7df3f626d
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: df40425e00014e3836a572dd6de02d978e15d737
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63731862"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073673"
 ---
 # <a name="debug-your-teams-app-locally"></a>Lokales Debuggen Ihrer Teams-App
 
@@ -72,7 +72,7 @@ Führen Sie die folgenden Schritte aus, um Ihre App nach dem Erstellen einer neu
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browseroption" border="false":::
 
-1. Wählen Sie **Debuggen starten (F5)** oder  **Ausführen** aus, um Ihre Teams-App im Debugmodus auszuführen.
+1. Wählen Sie **Debuggen starten (F5)** oder **Ausführen** aus, um Ihre Teams-App im Debugmodus auszuführen.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Debugging starten" border="false":::
 
@@ -91,7 +91,7 @@ Führen Sie die folgenden Schritte aus, um Ihre App nach dem Erstellen einer neu
    > [!TIP]
    > Sie können **Weitere Informationen** auswählen, um mehr über das Entwicklungszertifikat zu erfahren.
 
-5. Wählen Sie **Ja** aus, wenn das folgende Dialogfenster angezeigt wird:
+5. Wählen Sie **Ja** aus, wenn das folgende Dialogfeld angezeigt wird:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="Zertifizierungsstelle" border="true":::
 
@@ -106,7 +106,7 @@ Das Toolkit startet je nach Auswahl eine neue Edge- oder Chrome-Browserinstanz u
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browserlisten" border="false":::
 
-1. Wählen Sie **Debuggen starten (F5)** oder  **Ausführen** aus, um Ihre Teams-App im Debugmodus auszuführen.
+1. Wählen Sie **Debuggen starten (F5)** oder **Ausführen** aus, um Ihre Teams-App im Debugmodus auszuführen.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Debuggen Ihrer App" border="false":::
 
@@ -133,13 +133,13 @@ Das Toolkit startet je nach Auswahl eine neue Edge- oder Chrome-Browserinstanz u
 </details>
 
 
-#### <a name="2-debug-your-app"></a>2. Debuggen Ihrer App 
+#### <a name="2-debug-your-app"></a>2. Debuggen Ihrer App
 
 Nach dem anfänglichen Einrichtungsprozess startet das Teams-Toolkit die folgenden Prozesse:
 
-  a. [Startet App-Dienste](#starts-app-services) </br>
-  b. [Startet Debugger](#launches-debuggers)   </br>
-  c. [Lädt die Teams-App quer](#sideloads-the-teams-app)
+a. [Startet App-Dienste](#starts-app-services) </br>
+b. [Startet Debugger](#launches-debuggers)   </br>
+      c. [Lädt die Teams-App quer](#sideloads-the-teams-app)
         
 #### <a name="starts-app-services"></a>Startet App-Dienste
 
@@ -149,7 +149,7 @@ Führt die in `.vscode/tasks.json` definierten Aufgaben wie folgt aus:
 | --- | --- | --- |
 |  Tab |  **Front-End starten** |  Registerkarten |
 |  Bot- oder Messagingerweiterungen |  **Bot starten** |  Bot |
-|  Azure Functions |  **Back-End starten** |  api |
+|  Azure Functions |  **Back-End starten** |  API |
 
 In der folgenden Abbildung werden die Aufgabennamen auf der Registerkarte **Ausgabe****Terminal** des Visual Studio Code angezeigt, während die Registerkarte, der Bot oder die Messagingerweiterung ausgeführt wird, und Azure Functions.
 
@@ -196,7 +196,16 @@ Mit dem Teams-Toolkit können Sie die Debugeinstellungen anpassen, um Ihre Regis
 
 1. Deaktivieren Sie in Visual Studio Code Einstellungen **Stellen Sie sicher, dass Ngrok installiert und gestartet (ngrok) ist**.
 
-1. Legen Sie die Konfiguration von „botDomain“ und „botEndpoint“ in `.fx/configs/localSettings.json` für Ihre Domäne und Ihren Endpunkt fest.
+1. Legen Sie die Konfiguration von „siteEndpoint“ in `.fx/configs/config.local.json` für Ihren Endpunkt fest.
+
+```json
+{
+    "bot": {
+        "siteEndpoint": "https://your-bot-tunneling-url"
+    }
+}
+
+```
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="Anpassen des Bot-Endpunkts":::
 
@@ -207,7 +216,16 @@ Mit dem Teams-Toolkit können Sie die Debugeinstellungen anpassen, um Ihre Regis
 
 1. Deaktivieren Sie in Visual Studio Code Einstellungen **Stellen Sie sicher, dass das Entwicklungszertifikat vertrauenswürdig ist (devCert)**.
 
-1. Legen Sie die Konfiguration „SslCertFile“ und „sslKeyFile“ in `.fx/configs/localSettings.json` für den Zertifikatdateipfad und den Schlüsseldateipfad fest.
+1. Legen Sie die Konfiguration `sslCertFile` und `sslKeyFile` in `.fx/configs/config.local.json` für den Zertifikatdateipfad und den Schlüsseldateipfad fest.
+
+```json
+{
+    "frontend": {
+        "sslCertFile": "",
+        "sslKeyFile": ""
+    }
+}
+```
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="Anpassen des Zertifikats":::
 
