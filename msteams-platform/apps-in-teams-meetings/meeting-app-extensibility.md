@@ -3,13 +3,13 @@ title: Einheitliche Besprechungs-Apps
 author: surbhigupta
 description: Erfahren Sie mehr über Teams Besprechungslebenszyklus und die Besprechungserfahrung des Benutzers in der Desktop- und mobilen Umgebung, Teilnehmer- und Benutzerrollen und -typen, integrieren Bots und Nachrichtenerweiterungen in den Besprechungslebenszyklus.
 ms.topic: conceptual
-ms.localizationpriority: none
-ms.openlocfilehash: 0da600f3cbdf32a998e55bdf0db21ef1bbb4122f
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.localizationpriority: medium
+ms.openlocfilehash: 97f1254fc71dce93aa7e30b8ef1901f9fd93b6f0
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103334"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111346"
 ---
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 

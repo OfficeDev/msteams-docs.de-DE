@@ -4,13 +4,13 @@ author: surbhigupta
 description: Erfahren Sie, wie Sie mithilfe von Codebeispielen und Beispielen auf den Suchbefehl aus einer Nachrichtenerweiterung in einer Microsoft Teams-App reagieren.
 ms.topic: conceptual
 ms.author: anclear
-ms.localizationpriority: none
-ms.openlocfilehash: 4dcf3d5743471daa034d138818cf11a9a516a32e
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.localizationpriority: medium
+ms.openlocfilehash: f02db887a83965eeaac9e905fd20b34f79b34a68
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104504"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111934"
 ---
 # <a name="respond-to-search-command"></a>Antworten auf Suchbefehl
 
@@ -416,8 +416,8 @@ Die Standardabfrage hat die gleiche Struktur wie jede normale Benutzerabfrage, w
 
 | Beispielname           | Beschreibung | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams Nachrichtenerweiterungsaktion| Beschreibt das Definieren von Aktionsbefehlen, das Erstellen eines Aufgabenmoduls und das Reagieren auf Aufgabenmodul-Sendeaktionen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams Nachrichtenerweiterungssuche   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchvorgänge reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams Nachrichtenerweiterungsaktion| Beschreibt das Definieren von Aktionsbefehlen, das Erstellen eines Aufgabenmoduls und das Reagieren auf Aufgabenmodul-Sendeaktionen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams Nachrichtenerweiterungssuche   |  Beschreibt, wie Sie Suchbefehle definieren und auf Suchvorgänge reagieren.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Nächster Schritt
 
