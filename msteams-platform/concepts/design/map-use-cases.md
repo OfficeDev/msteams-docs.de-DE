@@ -5,12 +5,12 @@ description: Ermitteln Sie, wie die Anwendungsfälle für Ihre App innerhalb der
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 006b639509d8aaaef96c8f4a3b57235097f1d531
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 9fdf2c56bab0a822d0c3769d6d7e9fdb6aa3a929
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765939"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103327"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>Zuordnen von Anwendungsfällen zu Microsoft Teams-App-Features
 
@@ -36,8 +36,8 @@ Apps für die Interaktion mit Ihren Daten
 
 | **Sie möchten...** | **Probieren Sie Folgendes aus...** |
 | --- | --- |
-| Externe Systeme durchsuchen und die Ergebnisse als interaktive Karte mit anderen teilen | Messaging-Erweiterungen mit Suchbefehlen |
-| Informationen sammeln, um sie in einen Datenspeicher einzufügen oder erweiterte Suchvorgänge auszuführen. | Messaging-Erweiterungen mit Aktionsbefehlen |
+| Externe Systeme durchsuchen und die Ergebnisse als interaktive Karte mit anderen teilen | Nachrichtenerweiterungen mit Suchbefehlen |
+| Informationen sammeln, um sie in einen Datenspeicher einzufügen oder erweiterte Suchvorgänge auszuführen. | Nachrichtenerweiterungen mit Aktionsbefehlen |
 | Eingebettete Weblösungen erstellen zum Anzeigen, Arbeiten mit und Freigeben von Daten | Registerkarten |
 | Daten aus dem Microsoft Teams-Client per Push übertragen und senden | Connectors und Webhooks|
 | Interaktive modale Formulare, von wo immer Sie diese benötigen, um Informationen zu sammeln oder anzuzeigen | Aufgabenmodule |
@@ -51,8 +51,8 @@ Eine schnelle Möglichkeit, einen Prozess oder Workflow in einem externen System
 
 | **Sie möchten...** | **Probieren Sie Folgendes aus...** |
 | --- | --- |
-| Nachrichten auslösen, sodass Ihre Benutzer die Inhalte einer Nachricht schnell an Ihre Webdienste senden können | Messaging-Erweiterungen mit Aktionsbefehlen |
-| Nachrichten von einer Registerkarte, einem Bot oder einer Messaging-Erweiterung öffnen, um Informationen zu sammeln, bevor ein Workflow initiiert wird | Aufgabenmodule |
+| Nachrichten auslösen, sodass Ihre Benutzer die Inhalte einer Nachricht schnell an Ihre Webdienste senden können | Aktionsbefehle für Nachrichtenerweiterungen |
+| Öffnen Sie Nachrichten von einer Registerkarte, einem Bot oder einer Nachrichtenerweiterung, um Informationen zu sammeln, bevor Sie einen Workflow starten. | Aufgabenmodule |
 | Mit Ihren Benutzern über Text und funktionsreiche Karten interagieren | Unterhaltungs-Bots |
 | Eine gute Wahl für einfache Hin- und Her-Interaktionen, wenn Sie keinen vollständigen Unterhaltungs-Bot erstellen müssen. |  Ausgehende Webhooks |
 
@@ -93,7 +93,7 @@ Sehen wir uns an, wie Microsoft Teams-Funktionen verschiedene Features für Ihre
 Beispiel:
 
 * Verwenden Sie die **Registerkartenfunktion**, um Aufgabenmodule anzuzeigen, Geräteberechtigungen anzufordern, <`iframe`> Inhalte anzuzeigen oder Deep-Links zu verwenden.
-* Verwenden Sie die **Messaging-Erweiterungsfunktion**, um Karten zu senden, Links zu öffnen oder Aktionen für Nachrichten auszuführen.
+* Nutzen Sie die Möglichkeit der **Nachrichtenerweiterung**, um Karten zu versenden, Links freizugeben oder Aktionen für Nachrichten durchzuführen.
 
 ## <a name="see-also"></a>Siehe auch
 
