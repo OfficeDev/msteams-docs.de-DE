@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: aaef04fc6e624f1d6863ac8a575c5d2662643ecd
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 7a35b58bb6612cce74b995cf2506e8a287f1b703
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826992"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103972"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
@@ -162,7 +162,7 @@ Apps, die auf der iOS- oder Android-Version von Teams ausgeführt werden, müsse
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für den kommerziellen Marktplatz Nr. 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension).
 
-Bei Apps, die den Microsoft Azure Bot Service verwenden (z. B. Bots und Messaging-Erweiterungen), müssen Sie alle in den Microsoft [Online Services-Bedingungen](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46) definierten Anforderungen erfüllen.
+Bei Apps, die den Microsoft Azure Bot Service nutzen (z. B. Bots und Nachrichtenerweiterungen), müssen Sie alle in den Microsoft-[Nutzungsbedingungen für Onlinedienste](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46) definierten Anforderungen erfüllen.
 
 Bots müssen immer die Berechtigung zum Hochladen einer Datei und zum Anzeigen einer Bestätigungsmeldung anfordern.
 
@@ -236,7 +236,7 @@ Team-Apps müssen innerhalb eines angemessenen Zeitrahmens reagieren oder eine L
 
 * Registerkarten müssen innerhalb von zwei Sekunden reagieren oder eine Lademeldung oder Warnung anzeigen.
 * Bots müssen innerhalb von zwei Sekunden auf Benutzerbefehle reagieren oder eine Tippanzeige anzeigen.
-* Messaging-Erweiterungen müssen innerhalb von zwei Sekunden auf Benutzerbefehle reagieren.
+* Nachrichtenerweiterungen müssen innerhalb von zwei Sekunden auf Benutzerbefehle reagieren.
 * Benachrichtigungen müssen innerhalb von zwei Sekunden nach der Benutzeraktion angezeigt werden.
 
 ## <a name="app-package-and-store-listing"></a>App-Paket und Store-Eintrag
@@ -261,7 +261,7 @@ App-Pakete müssen korrekt formatiert sein und alle erforderlichen Informationen
 Das Manifest der Teams-App definiert die Konfiguration Ihrer App.
 
 * Ihr Manifest muss einem öffentlich freigegebenen Manifest-Schema entsprechen. Weitere Informationen finden Sie in den[Manifest-Hinweisen.](~/resources/schema/manifest-schema.md) Reichen Sie Ihre App nicht mit einer Vorschauversion des Manifests ein.
-* Wenn Ihre App eine Bot- oder Messaging-Erweiterung enthält, müssen die Details im App-Manifest mit den Bot Framework-Metadaten konsistent sein, einschließlich Bot-Name, Logo, Link zur Datenschutzrichtlinie und Link zu den Nutzungsbedingungen.
+* Wenn Ihre App eine Bot- oder Nachrichtenerweiterung enthält, müssen die Details im App-Manifest mit den Bot Framework-Metadaten übereinstimmen, einschließlich Bot-Name, Logo, Link zur Datenschutzerklärung und Link zu den Nutzungsbedingungen.
 * Wenn Ihre App Azure Active Directory für die Authentifizierung verwendet, fügen Sie die Azure Active Directory (Azure AD)-Anwendungs-(Client-)ID in das Manifest ein. Weitere Informationen finden Sie in der [Manifestreferenz.](~/resources/schema/manifest-schema.md#webapplicationinfo)
 
 ### <a name="app-icons"></a>App-Symbole
@@ -274,7 +274,7 @@ Symbole sind eines der Hauptelemente, die Benutzer beim Durchsuchen des Teams-Sp
 * Die Farbversion Ihres Symbols muss 192 x 192 Pixel betragen. Ihr Symbol kann eine beliebige Farbe oder mehrere Farben haben, muss aber auf einem einfarbigen oder vollständig transparenten quadratischen Hintergrund stehen.
 * In den folgenden Szenarien wird die Kontur-Version Ihres Symbols angezeigt:
   * Wenn Ihre App in Gebrauch ist und auf der App-Leiste auf der linken Seite von Teams **gehostet** wird.
-  * Wenn ein Benutzer die Messaging-Erweiterung Ihrer App anheftet.
+  * Wenn ein Benutzer die Nachrichtenerweiterung Ihrer App anheftet.
 
 * Die Kontur muss 32 x 32 Pixel groß sein und kann weiß mit transparentem Hintergrund oder transparent mit weißem Hintergrund sein. Das Symbol darf keinen zusätzlichen Abstand um es herum aufweisen.
 
@@ -789,7 +789,7 @@ Entwerfen Sie Ihre App mit [einfachen](~/concepts/design/design-teams-app-basic-
 * Wenn Ihre App-Funktionalität Änderungen an den Einstellungen erfordert, fügen Sie eine **Registerkarte „Einstellungen“** ein. [*Vorgeschlagene Korrektur*]
 * Registerkarten müssen dem Teams-Interaktionsentwurf folgen, z. B. seiteninterne Navigation, Position und Verwendung von Dialogfeldern, Informationshierarchien usw. Weitere Informationen finden Sie unter [Microsoft Teams Fluent UI Kit](~/concepts/design/design-teams-app-basic-ui-components.md)
 
-* Registerkarteninhalte im iframe dürfen keine Funktionen enthalten, die die Kernfunktionen von Teams nachahmen. Zum Beispiel Bots, Messaging-Erweiterungen, Anrufe, Besprechungen usw.
+* Registerkarteninhalte im iframe dürfen keine Funktionen enthalten, die die Kernfunktionen von Teams nachahmen. Zum Beispiel Bots, Nachrichtenerweiterungen, Anrufe, Besprechungen usw.
 
 * Der Inhalt der Landing Page der konfigurierbaren Tabs muss für alle Mitglieder des Channels kontextuell gleich sein.
 
@@ -1061,18 +1061,18 @@ Apps, die nur Benachrichtigungen mit Inhalten bereitstellen wie **“Sie haben e
 > [!TIP]
 > Zeigen Sie Informationen in der Vorschau an, und stellen Sie grundlegende Inline-Benutzeraktionen auf der bereitgestellten Karte bereit, so dass der Benutzer nicht für alle Aktionen (unabhängig von der Komplexität) außerhalb von Teams navigieren muss.
 
-## <a name="messaging-extensions"></a>Messaging-Erweiterungen
+## <a name="message-extensions"></a>Nachrichtenerweiterungen
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions).
 
-Wenn Ihre App eine Messaging-Erweiterung enthält, stellen Sie sicher, dass sie diesen Richtlinien entspricht.
+Wenn Ihre App eine Nachrichtenerweiterung enthält, stellen Sie sicher, dass sie diesen Richtlinien entspricht.
 
 > [!TIP]
-> Weitere Informationen zum Erstellen einer qualitativ hochwertigen App-Erfahrung finden Sie in[ den Entwurfsrichtlinien für Teams Messaging-Erweiterungen](~/messaging-extensions/design/messaging-extension-design.md).
+> Weitere Informationen zum Erstellen einer qualitativ hochwertigen App-Erfahrung finden Sie in den [Entwurfsrichtlinien für Microsoft Teams Nachrichtenerweiterungen](~/messaging-extensions/design/messaging-extension-design.md).
 
 ### <a name="action-commands"></a>Aktionsbefehle
 
-Aktionsbasierte Messaging-Erweiterungen müssen folgende Aktionen ausführen:
+Aktionsbasierte Nachrichtenerweiterungen müssen folgende Aktionen ausführen:
 
 * Ermöglichen Sie es Benutzern, Aktionen für eine Nachricht auszulösen, ohne Zwischenschritte wie die Anmeldung auszuführen.
 
@@ -1142,11 +1142,11 @@ Aktionsbasierte Messaging-Erweiterungen müssen folgende Aktionen ausführen:
 
 ### <a name="preview-links-link-unfurling"></a>Vorschau-Links (Link-Unfurling)
 
-Messaging-Erweiterungen müssen eine Vorschau der erkannten Links im Feld „Teams verfassen“ anzeigen. Fügen Sie keine Domänen hinzu, die sich außerhalb Ihrer Kontrolle befinden (entweder absolute URLs oder Platzhalter). Beispielsweise ist `yourapp.onmicrosoft.com` gültig, aber `*.onmicrosoft.com` nicht gültig. Top-Level Domains sind ebenfalls nicht zulässig. Zum Beispiel `*.com` oder `*.org`. [*Obligatorischer Fix*]
+Nachrichtenerweiterungen müssen eine Vorschau der erkannten Links im Feld „Verfassen“ in Microsoft Teams anzeigen. Fügen Sie keine Domänen hinzu, die sich außerhalb Ihrer Kontrolle befinden (entweder absolute URLs oder Platzhalter). Beispielsweise ist `yourapp.onmicrosoft.com` gültig, aber `*.onmicrosoft.com` nicht gültig. Top-Level Domains sind ebenfalls nicht zulässig. Zum Beispiel `*.com` oder `*.org`. [*Obligatorischer Fix*]
 
 ### <a name="search-commands"></a>Suchbefehle
 
-* Such-basierte Messaging-Erweiterungen müssen Text bereitstellen, der den Nutzern hilft, effektiv zu suchen. [*Obligatorischer Fix*]
+* Such-basierte Nachrichtenerweiterungen müssen Text bereitstellen, der den Nutzern bei der effektiven Suche hilft. [*Obligatorischer Fix*]
 
 :::row:::
     :::column span="":::
@@ -1170,13 +1170,13 @@ Messaging-Erweiterungen müssen eine Vorschau der erkannten Links im Feld „Tea
    :::column-end:::
 :::row-end:::
 
-### <a name="search-based-messaging-extension-only-apps"></a>Nur Apps mit suchbasierter Messaging-Erweiterung
+### <a name="search-based-message-extension-only-apps"></a>Nur Apps mit suchbasierten Nachrichtenerweiterungen
 
 [*Obligatorischer Fix*]
 
-Apps, die aus einer suchbasierter Messaging-Erweiterung bestehen, bieten Benutzern einen Mehrwert, indem Sie Karten freigeben, die kontextbezogene Unterhaltungen ohne Kontextwechsel ermöglichen.
+Apps, die aus einer suchbasierten Nachrichtenerweiterung bestehen, bieten Benutzern einen Mehrwert, indem sie Karten freigeben, die kontextbezogene Unterhaltungen ohne Kontextwechsel ermöglichen.
 
-Um die Validierung für eine reine suchbasierte Nachrichtenerweiterung zu bestehen, ist Folgendes als Basis erforderlich, um sicherzustellen, dass die Benutzerfreundlichkeit nicht beeinträchtigt wird. Eine über eine Messaging-Erweiterung freigegebene Karte bietet einen Wert in Teams, wenn:
+Um die Validierung für eine reine suchbasierte Nachrichtenerweiterung zu bestehen, ist Folgendes als Basis erforderlich, um sicherzustellen, dass die Benutzerfreundlichkeit nicht beeinträchtigt wird. Eine über eine Nachrichtenerweiterung freigegebene Karte bietet einen Mehrwert in Microsoft Teams, wenn:
 
 1. Die bereitgestellte Karte enthält angemessene Details, die keine weitere Benutzeraktion erfordern.
 1. Die bereitgestellte Karte enthält angemessene Vorschauinformationen, damit ein Benutzer Maßnahmen ergreifen oder weitere Details in einem Link anzeigen kann, der außerhalb von Teams geöffnet wird.
@@ -1279,7 +1279,7 @@ Verwenden Sie die folgenden Richtlinien für die Erweiterung von Besprechungen:
    :::column-end:::
 :::row-end:::
 
-* Messaging-Erweiterungen müssen während Besprechungen genauso funktionieren wie außerhalb von Besprechungen.
+* Nachrichtenerweiterungen müssen während Besprechungen genauso funktionieren wie außerhalb von Besprechungen.
 
 ### <a name="in-meeting-tabs"></a>Registerkarten in Besprechungen
 
