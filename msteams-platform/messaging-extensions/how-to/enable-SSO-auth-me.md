@@ -1,20 +1,20 @@
 ---
 title: SSO-Unterstützung für Ihre Nachrichtenerweiterungen
 author: KirtiPereira
-description: Erfahren Sie, wie Sie die SSO-Unterstützung für Ihre Nachrichtenerweiterungen mit Codebeispielen aktivieren.
-ms.localizationpriority: medium
+description: Erfahren Sie, wie Sie die SSO-Unterstützung für Ihre Messaging-Erweiterungen mit Codebeispielen aktivieren.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 4ee49b349d287325bb029aa155a61219a8656e22
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 148e8c59acc520e7771ac23c38b4b17c43d4d74d
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104392"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111255"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>Unterstützung für einmaliges Anmelden für Nachrichtenerweiterungen
 
-Die Unterstützung für einmaliges Anmelden (Single Sign-On, SSO) ist jetzt für Nachrichtenerweiterungen und die Verbreitung von Links verfügbar. Durch aktivieren des einmaligen Anmeldens für Nachrichtenerweiterungen wird standardmäßig das Authentifizierungstoken aktualisiert, wodurch die Anzahl der Anmeldeinformationen für Microsoft Teams minimiert wird.
+Die Unterstützung für Single Sign-On (SSO) ist jetzt auch für Nachrichtenerweiterungen und die Entfaltung von Links verfügbar. Durch die standardmäßige Aktivierung von Single Sign-On für Nachrichtenerweiterungen wird das Authentifizierungs-Token aktualisiert, wodurch die Anzahl der erforderlichen Eingaben der Anmeldedaten für Microsoft Teams minimiert wird.
 
 In diesem Dokument erfahren Sie, wie Sie den SSO aktivieren und Ihr Authentifizierungstoken bei Bedarf speichern.
 
@@ -34,11 +34,11 @@ Nachdem die Voraussetzungen erfüllt sind, können Sie SSO für Nachrichtenerwei
 
 So aktivieren Sie SSO:
 
-1. Aktualisieren Sie die [OAuth-Verbindungsdetails](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection) Ihrer Bots im Microsoft Azure Portal.
+1. Aktualisieren Sie die [OAuth-Verbindungs](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection)Details Ihrer Bots im Microsoft Azure Portal.
 2. Laden Sie das [Beispiel für Nachrichtenerweiterungen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) herunter, und folgen Sie den Setupanweisungen des Assistenten.
    > [!NOTE]
    > Verwenden Sie ihre OAuth-Verbindung für Bots, wenn Sie Ihre Nachrichtenerweiterungen einrichten.
-3. Aktualisieren Sie in der Datei ["TeamsMessagingExtensionsSearchAuthConfigBot.cs](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config/Bots/TeamsMessagingExtensionsSearchAuthConfigBot.cs) " den Wert von *"auth* " in *"silentAuth* " in der `OnTeamsMessagingExtensionQueryAsync` Datei und/oder `OnTeamsAppBasedLinkQueryAsync`.  
+3. Aktualisieren Sie in der Datei [TeamsMessagingExtensionsSearchAuthConfigBot.cs](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config/Bots/TeamsMessagingExtensionsSearchAuthConfigBot.cs) den Wert von *auth* auf *silentAuth* in den Feldern `OnTeamsMessagingExtensionQueryAsync` und / oder `OnTeamsAppBasedLinkQueryAsync`.  
 
     > [!NOTE]
     > Wir unterstützen keine anderen Handler SSO, außer `OnTeamsMessagingExtensionQueryAsync` und `OnTeamsAppBasedLinkQueryAsync` aus der TeamsMessagingExtensionsSearchAuthConfigBot.cs-Datei.
@@ -55,7 +55,7 @@ So aktivieren Sie SSO:
     
      ```
   
-    Wenn Sie die OAuth-Verbindung verwenden, fügen Sie der Datei "TeamsMessagingExtensionsSearchAuthConfigBot.cs" den folgenden Code hinzu, um das Token zu aktualisieren oder im Speicher hinzuzufügen:
+    Wenn Sie die OAuth-Verbindung verwenden, fügen Sie den folgenden Code in die Datei TeamsMessagingExtensionsSearchAuthConfigBot.cs ein, um das Token im Speicher zu aktualisieren oder hinzuzufügen:
 
    ```C#
    protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
