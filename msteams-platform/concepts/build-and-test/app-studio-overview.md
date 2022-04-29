@@ -4,17 +4,17 @@ description: Erste Schritte zum Erstellen von großartigen Apps in Microsoft Tea
 keywords: Erste Schritte mit App Studio-Teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 3c87edeaf7404e0a9f362f1233cd543c7a0d963a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 175d4718e91a8ebe2c72b3c06530952fe007baf9
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103916"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135717"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Verwalten Ihrer Apps mit App Studio für Microsoft Teams
 
 > [!TIP]
-> **Testen Sie das Entwicklerportal**: App Studio hat sich weiterentwickelt. Konfigurieren, verteilen und verwalten Sie Ihre Teams-Apps mit dem neuen [Entwicklerportal](https://dev.teams.microsoft.com/).
+> **Testen Sie das Entwicklerportal**: App Studio hat sich weiterentwickelt. Konfigurieren, verteilen und verwalten Sie Ihre Teams-Apps mit dem neuen [Entwicklerportal](https://dev.teams.microsoft.com/). <br> App Studio wird bis zum 30. Juni 2022 veraltet sein.
 
 Mit App Studio können Sie ganz einfach mit dem Erstellen oder Integrieren Ihrer eigenen Microsoft Teams-Apps beginnen, unabhängig davon, ob Sie benutzerdefinierte Apps für Ihr Unternehmen oder SaaS-Anwendungen für Teams auf der ganzen Welt entwickeln, indem Sie die Erstellung des Manifests und Pakets für Ihre App optimieren und nützliche Tools wie Karteneditor und eine React-Steuerelementbibliothek bereitstellen.
 

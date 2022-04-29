@@ -1,28 +1,28 @@
 ---
-title: Senden von Mandanten-ID und Unterhaltungs-ID an die Anforderungsheader des Bots
-description: Beschreibt, wie Mandant-ID und Unterhaltungs-ID an die Anforderungsheader des Bots gesendet werden.
+title: Senden der Mandanten-ID und Konversations-ID an die Anforderungsheader des Bots
+description: Beschreibt, wie die Mandanten-ID und Unterhaltungs-ID an die Anforderungsheader des Bots gesendet werden.
 ms.topic: conceptual
-ms.localizationpriority: medium
-ms.openlocfilehash: 054b5bed99b1569a74ba4f69b144bd1edd60fd3d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 9b63dd81eeccbf78989a31a06baa5d678916acef
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889279"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111290"
 ---
-# <a name="send-tenant-id-and-conversation-id-to-the-request-headers-of-the-bot"></a>Senden von Mandanten-ID und Unterhaltungs-ID an die Anforderungsheader des Bots
+# <a name="send-tenant-id-and-conversation-id-to-the-request-headers-of-the-bot"></a>Senden der Mandanten-ID und Konversations-ID an die Anforderungsheader des Bots
 
-Die aktuellen ausgehenden Anforderungen an den Bot enthalten keine Informationen im Header oder in der URL, die Bots dabei helfen, den Datenverkehr weiterzuleiten, ohne die gesamte Nutzlast zu entpacken. Die Aktivitäten werden über eine URL ähnlich https://<your_domain>/api/messages an den Bot gesendet. Es werden Anforderungen empfangen, um die Unterhaltungs-ID und mandanten-ID in den Kopfzeilen anzuzeigen.
+Die aktuellen ausgehenden Anforderungen an den Bot enthalten im Header oder in der URL keine Informationen, die Bots beim Weiterleiten des Datenverkehrs unterstützen, ohne die gesamte Nutzlast zu entpacken. Die Aktivitäten werden über eine URL ähnlich wie https://<Ihre_Domäne>/api/messages an den Bot gesendet. Anforderungen werden empfangen, um die Unterhaltungs-ID und Mandanten-ID in den Headern anzuzeigen.
 
 ## <a name="request-header-fields"></a>Anforderungsheaderfelder
 
-Allen an Bots gesendeten Anforderungen werden zwei nicht standardmäßige Anforderungsheaderfelder hinzugefügt, sowohl für den asynchronen als auch für den synchronen Fluss. Die folgende Tabelle enthält die Anforderungsheaderfelder und deren Werte:
+Zwei nicht standardmäßige Anforderungsheaderfelder werden allen Anforderungen hinzugefügt, die an Bots gesendet werden, sowohl für asynchronen Fluss als auch für synchronen Fluss. Die folgende Tabelle enthält die Anforderungsheaderfelder und deren Werte:
 
-| Feldtaste | Wert |
+| Feldschlüssel | Wert |
 |----------------|-----------------|
-| x-ms-conversation-id | Die Unterhaltungs-ID, die der Anforderungsaktivität entspricht, falls zutreffend und bestätigt oder bestätigt. |
+| x-ms-conversation-id | Die Unterhaltungs-ID, die der Anforderungsaktivität entspricht, falls zutreffend und bestätigt oder überprüft. |
 | x-ms-tenant-id | Die Mandanten-ID, die der Unterhaltung in der Anforderungsaktivität entspricht. |
 
-Wenn der Mandant oder die Unterhaltungs-ID in der Aktivität nicht vorhanden ist oder auf Dienstseite nicht überprüft wurde, ist der Wert leer.
+Wenn die Mandanten- oder Unterhaltungs-ID nicht in der Aktivität vorhanden ist oder auf Dienstseite nicht überprüft wurde, ist der Wert leer.
 
 ![Anforderungsheaderfelder](~/assets/images/bots/requestheaderfields.png)

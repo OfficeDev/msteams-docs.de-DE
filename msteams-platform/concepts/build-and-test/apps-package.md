@@ -3,12 +3,12 @@ title: Verpacken Ihrer App
 description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App zum Testen, Hochladen und Veröffentlichen im Store verpacken.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 7b895f30230a71db5953ffebc5dce2aa04972abb
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ec583ff0998baef7162156c8c5c5c07fde176321
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356070"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104091"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Erstellen eines Microsoft Teams-App-Pakets
 
@@ -34,7 +34,7 @@ Stellen Sie beim Veröffentlichen im Microsoft Teams-Store sicher, dass Ihr Mani
 Ihr App-Paket muss zwei .png-Versionen Ihres App-Symbols enthalten: eine Farb- und eine Konturversion.
 
 > [!Note]
-> Wenn Ihre App über eine Bot- oder Messaging-Erweiterung verfügt, werden Ihre Symbole auch in Ihre Microsoft Azure Bot Service-Registrierung einbezogen.
+> Wenn Ihre App über eine Bot- oder Nachrichtenerweiterung verfügt, werden Ihre Symbole auch in Ihre Microsoft Azure Bot Service-Registrierung aufgenommen.
 
 Damit Ihre App die Microsoft Teams Store-Überprüfung bestehen kann, müssen diese Symbole die folgenden Größenanforderungen erfüllen.
 
@@ -51,7 +51,7 @@ In Microsoft Teams wird Ihr Symbol in verschiedenen Szenarien automatisch auf ei
 Ein Kontursymbol wird in zwei Szenarien angezeigt:
 
 * Wenn Ihre App verwendet wird und auf der App-Leiste auf der linken Seite von Microsoft Teams "hervorgehoben" ist.
-* Wenn ein Benutzer die Messaging-Erweiterung Ihrer App anheftet.
+* Wenn ein Benutzer die Nachrichtenerweiterung Ihrer App anheftet.
 
 Das Symbol muss 32 x 32 Pixel groß sein. Es kann weiß mit transparentem Hintergrund oder transparent mit weißem Hintergrund sein (es sind keine anderen Farben zulässig). Das Kontursymbol sollte keinen zusätzlichen Abstand um das Symbol aufweisen.
 
@@ -94,7 +94,7 @@ Hier sehen Sie, wie App-Symbole in verschiedenen Microsoft Teams-Funktionen und 
 
 :::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Beispiel, das zeigt, wie ein App-Symbol in einem Bot innerhalb eines Kanals aussieht." border="false":::
 
-#### <a name="messaging-extension"></a>Messaging-Erweiterung
+#### <a name="message-extension"></a>Nachrichtenerweiterung
 
 :::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="Alternativer Text" border="false":::
 

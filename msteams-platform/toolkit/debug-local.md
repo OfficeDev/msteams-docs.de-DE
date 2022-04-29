@@ -5,16 +5,16 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: df40425e00014e3836a572dd6de02d978e15d737
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 6fd32b35a28ae0d9b1592f82a824622000c04161
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073673"
+ms.locfileid: "65104441"
 ---
 # <a name="debug-your-teams-app-locally"></a>Lokales Debuggen Ihrer Teams-App
 
-Das Teams-Toolkit hilft Ihnen, Ihre Teams-App lokal zu debuggen und eine Vorschau anzuzeigen. Debuggen ist der Prozess der Überprüfung, Erkennung und Behebung von Problemen oder Fehlern, um sicherzustellen, dass das Programm erfolgreich ausgeführt wird. Mit Visual Studio Code können Sie Registerkarten, Bots, Messaging-Erweiterungen und Azure Functions debuggen. Das Teams-Toolkit unterstützt die folgenden Debugfeatures:
+Das Teams-Toolkit hilft Ihnen, Ihre Teams-App lokal zu debuggen und eine Vorschau anzuzeigen. Debuggen ist der Prozess der Überprüfung, Erkennung und Behebung von Problemen oder Fehlern, um sicherzustellen, dass das Programm erfolgreich ausgeführt wird. Visual Studio Code ermöglicht das Debuggen von Registerkarten, Bots, Nachrichtenerweiterungen und Azure Functions. Das Teams-Toolkit unterstützt die folgenden Debugfeatures:
 
 * [Debugging starten](#start-debugging)
 * [Debuggen mit mehreren Zielen](#multi-target-debugging)
@@ -37,17 +37,17 @@ Sie können einen einzelnen Vorgang ausführen, wählen Sie **F5**, um mit dem D
 
 #### <a name="multi-target-debugging"></a>Debuggen mit mehreren Zielen
 
-Das Teams-Toolkit verwendet das Debugfeature mit mehreren Zielen, um Registerkarten, Bots, Messagingerweiterungen und Azure Functions gleichzeitig zu debuggen.
+Teams Toolkit nutzt die Multi-Target-Debugging-Funktion zum gleichzeitigen Debuggen von Registerkarten, Bots, Nachrichtenerweiterungen und Azure Functions.
 
 #### <a name="toggle-breakpoints"></a>Umschalthaltepunkte
 
-Sie können Haltepunkte in den Quellcodes von Registerkarten, Bots, Messagingerweiterungen und Azure Functions umschalten. Die Haltepunkte werden ausgeführt, wenn Sie in einem Webbrowser mit der Teams-App interagieren. Die folgende Abbildung zeigt die Umschalthaltepunkte:
+Sie können Haltepunkte in den Quellcodes von Registerkarten, Bots, Nachrichtenerweiterungen und Azure Functions umschalten. Die Haltepunkte werden ausgeführt, wenn Sie in einem Webbrowser mit der Teams-App interagieren. Die folgende Abbildung zeigt die Umschalthaltepunkte:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="Umschalthaltepunkte":::
 
 #### <a name="hot-reload"></a>Hot Reload
 
-Sie können die Quellcodes der Registerkarte, des Bots, der Messagingerweiterung und von Azure Functions gleichzeitig aktualisieren und speichern, wenn Sie die Teams-App debuggen. Die App wird neu geladen, und der Debugger wird erneut an die Programmiersprachen angehängt.
+Sie können die Quellcodes von Registerkarten, Bots, Nachrichtenerweiterungen und Azure Functions gleichzeitig aktualisieren und speichern, wenn Sie die Teams-App debuggen. Die App wird neu geladen, und der Debugger wird erneut an die Programmiersprachen angehängt.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="hot-reload für Quellcodes":::
 
@@ -68,7 +68,7 @@ Führen Sie die folgenden Schritte aus, um Ihre App nach dem Erstellen einer neu
 <details>
 <summary><b>Windows</b></summary>
 
-1. Wählen Sie **Edge debuggen** oder **Chrome debuggen** aus der **Ausführen und Debuggen** in der Aktivitätsleiste aus.
+1. Wählen Sie **Edge debuggen** oder **Chrome debuggen** aus dem Menü **Ausführen und Debuggen** in der Aktivitätsleiste aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browseroption" border="false":::
 
@@ -102,7 +102,7 @@ Das Toolkit startet je nach Auswahl eine neue Edge- oder Chrome-Browserinstanz u
 <details>
 <summary><b>macOS</b></summary>
 
-1. Wählen Sie **Edge debuggen** oder **Chrome debuggen** aus der **Ausführen und Debuggen** in der Aktivitätsleiste aus.
+1. Wählen Sie **Edge debuggen** oder **Chrome debuggen** aus dem Menü **Ausführen und Debuggen** in der Aktivitätsleiste aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browserlisten" border="false":::
 
@@ -148,10 +148,10 @@ Führt die in `.vscode/tasks.json` definierten Aufgaben wie folgt aus:
 |  Komponente |  Aufgabenname  | Ordner |
 | --- | --- | --- |
 |  Tab |  **Front-End starten** |  Registerkarten |
-|  Bot- oder Messagingerweiterungen |  **Bot starten** |  Bot |
+|  Bot- oder Nachrichtenerweiterungen |  **Bot starten** |  Bot |
 |  Azure Functions |  **Back-End starten** |  API |
 
-In der folgenden Abbildung werden die Aufgabennamen auf der Registerkarte **Ausgabe****Terminal** des Visual Studio Code angezeigt, während die Registerkarte, der Bot oder die Messagingerweiterung ausgeführt wird, und Azure Functions.
+In der folgenden Abbildung werden die Aufgabennamen auf der Registerkarte **Ausgabe****Terminal** des Visual Studio Code angezeigt, während die Registerkarte, der Bot oder die Nachrichtenerweiterung und Azure Functions ausgeführt werden.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Startet App-Dienste":::
 
@@ -166,15 +166,15 @@ In der folgenden Tabelle sind die Debugkonfigurationsnamen und -typen für das P
 |  Komponente |  Debugkonfigurationsname  | Debugkonfigurationstyp |
 | --- | --- | --- |
 |  Tab |  **An Front-End (Edge) anfügen** oder  **An Front-End (Chrome) anfügen**  |  pwa-msedge oder pwa-chrome  |
-|  Bot- oder Messagingerweiterungen |   **An Bot anfügen** |  pwa-node |
+|  Bot- oder Nachrichtenerweiterungen |   **An Bot anfügen** |  pwa-node |
 | Azure Functions |   **An Back-End anfügen** |  pwa-node |
 
 In der folgenden Tabelle sind die Debugkonfigurationsnamen und -typen für das Projekt mit der Bot-App und ohne Registerkarte aufgeführt:
 
 |  Komponente |  Debugkonfigurationsname  | Debugkonfigurationstyp  |
 | --- | --- | --- |
-|  Bot- oder Messagingerweiterung  | **Bot starten (Edge)** oder  **Bot starten (Chrome)**  |   pwa-msedge oder pwa-chrome  |
-|  Bot- oder Messagingerweiterung  |   **An Bot anfügen** |  pwa-node  |
+|  Bot- oder Nachrichtenerweiterung  | **Bot starten (Edge)** oder  **Bot starten (Chrome)**  |   pwa-msedge oder pwa-chrome  |
+|  Bot- oder Nachrichtenerweiterung  |   **An Bot anfügen** |  pwa-node  |
 |  Azure Functions |  **An Back-End anfügen** |  pwa-node |
 
 #### <a name="sideloads-the-teams-app"></a>Lädt die Teams-App quer
@@ -194,7 +194,7 @@ Mit dem Teams-Toolkit können Sie die Debugeinstellungen anpassen, um Ihre Regis
 <details>
 <summary><b>Verwenden Ihres Bot-Endpunkts</b></summary>
 
-1. Deaktivieren Sie in Visual Studio Code Einstellungen **Stellen Sie sicher, dass Ngrok installiert und gestartet (ngrok) ist**.
+1. Stellen Sie in den Visual Studio Code-Einstellungen sicher, dass **Ngrok installiert und gestartet ist (ngrok)**.
 
 1. Legen Sie die Konfiguration von „siteEndpoint“ in `.fx/configs/config.local.json` für Ihren Endpunkt fest.
 
@@ -214,7 +214,7 @@ Mit dem Teams-Toolkit können Sie die Debugeinstellungen anpassen, um Ihre Regis
 <details>
 <summary><b>Verwenden des Entwicklungszertifikats</b></summary>
 
-1. Deaktivieren Sie in Visual Studio Code Einstellungen **Stellen Sie sicher, dass das Entwicklungszertifikat vertrauenswürdig ist (devCert)**.
+1. Deaktivieren Sie in den Visual Studio Code-Einstellungen die Option **Sicherstellen, dass das Entwicklungszertifikat vertrauenswürdig ist (devCert)**.
 
 1. Legen Sie die Konfiguration `sslCertFile` und `sslKeyFile` in `.fx/configs/config.local.json` für den Zertifikatdateipfad und den Schlüsseldateipfad fest.
 
@@ -234,21 +234,21 @@ Mit dem Teams-Toolkit können Sie die Debugeinstellungen anpassen, um Ihre Regis
 <details>
 <summary><b>Verwenden Sie Ihre Startskripts, um App Services zu starten</b></summary>
 
-1. Aktualisieren Sie für Registerkarten das `dev:teamsfx`-Skript in `tabs/package.json`.
+1. Aktualisieren Sie für die Registerkarte `dev:teamsfx`das Skript in`tabs/package.json`.
 
-1. Aktualisieren Sie für Bot- oder Messagingerweiterungen das `dev:teamsfx`-Skript in `bot/package.json`.
+1. Aktualisieren Sie für Bot- oder Nachrichtenerweiterungen `dev:teamsfx` das Skript in `bot/package.json`.
 
-1. Aktualisieren Sie für Azure Functions das `dev:teamsfx`-Skript in `api/package.json` und für TypeScript das `watch:teamsfx`-Skript.
+1. Aktualisieren Sie für Azure Functions das `dev:teamsfx`Skript in `api/package.json` und für TypeScript das `watch:teamsfx`Skript.
 
    > [!NOTE]
-   > Derzeit unterstützen die Registerkarte, der Bot, die Messagingerweiterungs-Apps und Azure Functions Ports keine Anpassung.
+   > Derzeit unterstützen die Tab-, Bot- und Nachrichtenerweiterungs-Apps sowie die Azure Functions-Ports keine Anpassungen.
 
 </details>
 
 <details>
 <summary><b>Umgebungsvariablen hinzufügen</b></summary>
 
-Sie können der `.env.teamsfx.local`-Datei Umgebungsvariablen für die Registerkarte, den Bot, die Messagingerweiterung und Azure Functions hinzufügen. Das Teams-Toolkit lädt die Umgebungsvariablen, die Sie hinzugefügt haben, um Dienste während des lokalen Debuggens zu starten.
+Sie können der `.env.teamsfx.local`Datei Umgebungsvariablen für Registerkarte, Bot, Nachrichtenerweiterung und Azure Functions hinzufügen. Das Teams-Toolkit lädt die Umgebungsvariablen, die Sie hinzugefügt haben, um Dienste während des lokalen Debuggens zu starten.
 
  > [!NOTE]
  > Starten Sie nach dem Hinzufügen neuer Umgebungsvariablen ein neues lokales Debuggen, da Hot Reload von den Umgebungsvariablen nicht unterstützt wird.
@@ -259,7 +259,7 @@ Sie können der `.env.teamsfx.local`-Datei Umgebungsvariablen für die Registerk
 <summary><b>Teilkomponente debuggen</b></summary>
 
 
-Das Teams-Toolkit verwendet das Visual Studio Code-Debuggen mit mehreren Zielen, um Registerkarten, Bots, Messagingerweiterungen und Azure Functions gleichzeitig zu debuggen. Sie können `.vscode/launch.json` und `.vscode/tasks.json` aktualisieren, um Teilkomponenten zu debuggen. Wenn Sie die Registerkarte nur in einer Registerkarte plus Bot mit Azure Functions Projekt debuggen möchten, führen Sie die folgenden Schritte aus:
+Teams Toolkit nutzt Visual Studio Code Multi-Target-Debugging zum gleichzeitigen Debuggen von Registerkarten, Bots, Nachrichtenerweiterungen und Azure-Funktionen. Sie können `.vscode/launch.json` und `.vscode/tasks.json` aktualisieren, um Teilkomponenten zu debuggen. Wenn Sie die Registerkarte nur in einer Registerkarte plus Bot mit Azure Functions Projekt debuggen möchten, führen Sie die folgenden Schritte aus:
 
 1. Kommentieren Sie **An Bot anfügen** und **An Back-End anfügen** aus der Debugverbindung in `.vscode/launch.json`
 

@@ -1,50 +1,50 @@
 ---
 title: Verbreiten von Links
 author: surbhigupta
-description: Erfahren Sie, wie Sie die Verbreitung von Links mit nachrichtenerweiterung in einer Microsoft Teams-App mit App-Manifest oder manuell mitHilfe von Codebeispielen und Beispielen hinzufügen.
-ms.localizationpriority: medium
+description: Erfahren Sie, wie Sie in einer Microsoft Teams-App mit App-Manifest oder manuell mithilfe von Codebeispielen und Beispielen Links verbreiten, die sich mit der Messagingerweiterung erweitern.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 2dee02545a522b202e9cc695f7099848269e8944
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: b172320f6f116026fe5ea4b45c9c74da6ff82f07
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104406"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111248"
 ---
 # <a name="link-unfurling"></a>Verbreiten von Links
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-In diesem Dokument erfahren Sie, wie Sie Ihrem App-Manifest mit App Studio und manuell die Verbreitung von Links hinzufügen. Mit der Verbreitung von Links kann Sich Ihre App registrieren, um eine `invoke` Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Nachrichtenbereich zum Verfassen eingefügt werden. Die `invoke` enthält die vollständige URL, die in den Nachrichtenbereich zum Verfassen eingefügt wurde, und Sie können mit einer Karte antworten, die der Benutzer ausblenden kann, wodurch zusätzliche Informationen oder Aktionen bereitgestellt werden. Dies funktioniert ähnlich wie ein Suchbefehl, bei dem die URL als Suchbegriff dient.
+In diesem Dokument erfahren Sie, wie Sie Ihrem App-Manifest das Verbreiten von Links mithilfe von App Studio und manuell hinzufügen können. Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Die `invoke`-Aktivität enthält die vollständige URL, die in den Bereich zum Verfassen von Nachrichten eingefügt wurde, und Sie können mit einer Karte antworten, die der Benutzer öffnen kann, die zusätzliche Informationen oder Aktionen bereitstellt. Dies funktioniert ähnlich wie ein Suchbefehl, wobei die URL als Suchbegriff dient.
 
 > [!NOTE]
 >
-> * Derzeit wird die Verbreitung von Links auf mobilen Clients nicht unterstützt.
-> * Das Ergebnis der Entknüpfung der Verknüpfung wird 30 Minuten lang zwischengespeichert.
+> * Derzeit wird das Aufheben der Verbreitung von Links auf mobilen Clients nicht unterstützt.
+> * Das Ergebnis der Verbreitung von Links wird 30 Minuten lang zwischengespeichert.
 
-Die Azure DevOps Nachrichtenerweiterung verwendet die Verbreitung von Links, um nach URLs zu suchen, die in den Nachrichtenbereich zum Verfassen eingefügt wurden, die auf ein Arbeitselement verweisen. In der folgenden Abbildung hat ein Benutzer eine URL für ein Arbeitselement in Azure DevOps eingefügt, die die Nachrichtenerweiterung in eine Karte aufgelöst hat:
+Die Azure DevOps Nachrichtenerweiterung verwendet die Verbreitung von Links, um nach URLs zu suchen, die in den Bereich für das Verfassen von Nachrichten eingefügt werden, der auf ein Arbeitselement verweist. In der folgenden Abbildung hat ein Benutzer eine URL für ein Arbeitselement in Azure DevOps eingefügt, die die Nachrichtenerweiterung in eine Karte aufgelöst hat:
 
-![Beispiel für die Verbreitung von Links](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+![Beispiel der Verbreitung von Links](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
-## <a name="add-link-unfurling-to-your-app-manifest"></a>Hinzufügen der Verbreitung von Links zum App-Manifest
+## <a name="add-link-unfurling-to-your-app-manifest"></a>Hinzufügen einer Verbreitung von Links zum App-Manifest
 
-Um dem App-Manifest die Verbreitung von Links hinzuzufügen, fügen Sie dem `composeExtensions` Abschnitt ihres App-Manifest-JSON ein neues `messageHandlers` Array hinzu. Sie können das Array entweder mithilfe von App Studio oder manuell hinzufügen. Domäneneinträge können beispielsweise `*.example.com`Platzhalter enthalten. Dies entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com`dann .
+Um Ihrem App-Manifest das Verbreiten von Links hinzuzufügen, fügen Sie dem `composeExtensions`-Abschnitt des JSON-Codes Ihres App-Manifests ein neues `messageHandlers`-Array hinzu. Sie können das Array entweder mithilfe von App Studio oder manuell hinzufügen. Domain-Auflistungen können Platzhalter enthalten, zum Beispiel `*.example.com`. Dies entspricht genau einem Segment der Domäne; Wenn Sie übereinstimmen müssen, verwenden `a.b.example.com` Sie `*.*.example.com`.
 
 > [!NOTE]
-> Fügen Sie keine Domänen hinzu, die sich weder direkt noch über Platzhalter in Ihrem Steuerelement befinden. Ist z. B. `yourapp.onmicrosoft.com` gültig, aber `*.onmicrosoft.com` ungültig. Außerdem sind domänen auf oberster Ebene unzulässig. Beispiel: `*.com`. `*.org`
+> Fügen Sie keine Domänen hinzu, die nicht Ihrer Kontrolle liegen, weder direkt noch über Platzhalter. Beispielsweise ist `yourapp.onmicrosoft.com` gültig, `*.onmicrosoft.com` gilt jedoch nicht. Außerdem sind die Domänen der obersten Ebene nicht zulässig. Beispielsweise `*.com`, `*.org`.
 
-### <a name="add-link-unfurling-using-app-studio"></a>Hinzufügen der Verbreitung von Links mitHilfe von App Studio
+### <a name="add-link-unfurling-using-app-studio"></a>Hinzufügen des Verbreitens von Links mit App Studio
 
-1. Öffnen Sie **App Studio** über den Microsoft Teams-Client, und wählen Sie die Registerkarte "**Manifest-Editor**" aus.
+1. Öffnen Sie **App Studio** über den Microsoft Teams-Client, und wählen Sie die Registerkarte **Manifest-Editor** aus.
 1. Laden Sie Ihr App-Manifest.
-1. Fügen Sie auf der Seite " **Nachrichtenerweiterung** " die Domäne hinzu, nach der Sie im Abschnitt " **Nachrichtenhandler** " suchen möchten. In der folgenden Abbildung wird der Vorgang erläutert:
+1. Fügen Sie auf der Seite **Nachrichtenerweiterung** die Domäne hinzu, nach der Sie im Abschnitt **Nachrichtenhandler** suchen möchten. In der folgenden Abbildung wird der Prozess erläutert:
 
     ![Abschnitt "Nachrichtenhandler" in App Studio](~/assets/images/link-unfurling.png)
 
-### <a name="add-link-unfurling-manually"></a>Hinzufügen der manuellen Verbreitung von Links
+### <a name="add-link-unfurling-manually"></a>Verbreitung von Links manuell hinzufügen
 
-Damit Ihre Nachrichtenerweiterung mit Links interagiert, müssen Sie zuerst das `messageHandlers` Array zu Ihrem App-Manifest hinzufügen. Im folgenden Beispiel wird erläutert, wie Sie die Bereitstellung von Links manuell hinzufügen:
+Damit Ihre Nachrichtenerweiterung mit Links interagieren kann, müssen Sie zuerst das `messageHandlers`-Array zu Ihrem App-Manifest hinzufügen. Im folgenden Beispiel wird erläutert, wie Sie das Verbreiten von Links manuell hinzufügen:
 
 ```json
 ...
@@ -68,9 +68,9 @@ Damit Ihre Nachrichtenerweiterung mit Links interagiert, müssen Sie zuerst das 
 
 Ein vollständiges Manifestbeispiel finden Sie unter [Manifestreferenz](~/resources/schema/manifest-schema.md).
 
-## <a name="handle-the-composeextensionquerylink-invoke"></a>Behandeln des Aufrufs `composeExtension/queryLink`
+## <a name="handle-the-composeextensionquerylink-invoke"></a>Behandeln des `composeExtension/queryLink`-Aufrufs
 
-Nachdem Sie die Domäne zum App-Manifest hinzugefügt haben, müssen Sie den Webdienstcode aktualisieren, um die Aufrufanforderung zu verarbeiten. Verwenden Sie die empfangene URL, um Ihren Dienst zu durchsuchen und eine Kartenantwort zu erstellen. Wenn Sie mit mehr als einer Karte antworten, wird nur die erste Kartenantwort verwendet.
+Nachdem Sie die Domäne zum App-Manifest hinzugefügt haben, müssen Sie Ihren Webdienstcode aktualisieren, um die Aufrufanforderung zu verarbeiten. Verwenden Sie die empfangene URL, um Ihren Dienst durchzusuchen und eine Kartenantwort zu erstellen. Wenn Sie mit mehr als einer Karte antworten, wird nur die erste Kartenantwort verwendet.
 
 Die folgenden Kartentypen werden unterstützt:
 
@@ -79,7 +79,7 @@ Die folgenden Kartentypen werden unterstützt:
 * [Office 365-Connectorkarte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Karte](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Weitere Informationen finden Sie unter [Aufrufen des Aktionstyps](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
+Weitere Informationen finden Sie unter [Aktionstypaufruf](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
 
 ### <a name="example"></a>Beispiel
 
@@ -128,7 +128,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Es folgt ein Beispiel für das `invoke` An Ihren Bot gesendete Beispiel:
+Es folgt ein Beispiel für `invoke`, die an Ihren Bot gesendet werden:
 
 ```json
 {
@@ -181,9 +181,9 @@ Es folgt ein Beispiel für die Antwort:
 
 ## <a name="step-by-step-guide"></a>Schrittweise Anleitung
 
-Befolgen Sie die [schrittweise Anleitung](../../sbs-botbuilder-linkunfurling.yml), um Links in Teams mithilfe von Bot zu entfernen.
+Befolgen Sie die [Schritt-für-Schritt-Anleitung](../../sbs-botbuilder-linkunfurling.yml), um Links in Teams mithilfe des Bots zu verbreiten.
 
 ## <a name="see-also"></a>Siehe auch
 
 * [Karten](~/task-modules-and-cards/what-are-cards.md)
-* [Registerkartenverknüpfung und Phasenansicht](~/tabs/tabs-link-unfurling.md)
+* [Registerkartenlink entfalten und Bühnenansicht](~/tabs/tabs-link-unfurling.md)
