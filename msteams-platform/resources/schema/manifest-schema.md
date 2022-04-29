@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: Manifestschema für Microsoft Teams
-ms.openlocfilehash: 0c2dccd3533ff5115fe28a09dee2304a56287413
-ms.sourcegitcommit: 7bae0aa77b9f4818efc72133eb582d682e126cb3
+ms.openlocfilehash: 135e4c7cfd82c0ca47075e8339bf9123fe094a9a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64706151"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104007"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -535,25 +535,25 @@ Das Objekt ist ein Array (maximal ein Element), wobei alle Elemente vom Typ `obj
 
 **Optional** – Array
 
-Definiert eine Messaging-Erweiterung für die App.
+Definiert eine Nachrichtenerweiterung für die App.
 
 > [!NOTE]
-> Der Name des Features wurde im November 2017 von "Compose-Erweiterung" in "Messaging-Erweiterung" geändert, der Manifestname bleibt jedoch unverändert, sodass vorhandene Erweiterungen weiterhin funktionieren.
+> Der Name des Features wurde im November 2017 von "Compose-Erweiterung" in "Nachrichtenerweiterung" geändert, der Manifestname bleibt jedoch unverändert, sodass vorhandene Erweiterungen weiterhin funktionieren.
 
-Das Element ist ein Array (maximal ein Element), wobei alle Elemente vom Typ `object` sind. Dieser Block ist nur für Lösungen erforderlich, die eine Messaging-Erweiterung bereitstellen.
+Das Element ist ein Array (maximal ein Element), wobei alle Elemente vom Typ `object` sind. Dieser Block ist nur für Lösungen erforderlich, die eine Nachrichtenerweiterung bereitstellen.
 
 |Name| Typ | Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`botId`|string|64|✔|Die eindeutige Microsoft-App-ID für den Bot, welcher der Messaging-Erweiterung zugeordnet ist, wie beim Bot Framework registriert. Die ID kann mit der Gesamt-App-ID übereinstimmen.|
-|`commands`|Array von Objekten|10|✔|Array von Befehlen, die von der Messaging-Erweiterung unterstützt werden.|
-|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob die Konfiguration einer Messaging-Erweiterung vom Benutzer aktualisiert werden kann. Standard: **false**.|
+|`botId`|string|64|✔|Die eindeutige Microsoft-App-ID für den Bot, welcher der Nachrichtenerweiterung zugeordnet ist, wie beim Bot Framework registriert. Die ID kann mit der Gesamt-App-ID übereinstimmen.|
+|`commands`|Array von Objekten|10|✔|Array von Befehlen, die von der Nachrichtenerweiterung unterstützt werden.|
+|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob die Konfiguration einer Nachrichtenerweiterung vom Benutzer aktualisiert werden kann. Standard: **false**.|
 |`messageHandlers`|Array von Objekten|5||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind.|
 |`messageHandlers.type`|string|||Der Typ des Nachrichtenhandlers. Muss `"link"` sein.|
 |`messageHandlers.value.domains`|Array aus Zeichenfolgen|||Array von Domänen, für die sich der Link-Nachrichtenhandler registrieren kann.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-Ihre Messaging-Erweiterung muss mindestens einen Befehl deklarieren (maximal 10 Befehle insgesamt). Jeder Befehl wird in Microsoft Teams als potenzielle Interaktion vom Einstiegspunkt in der Benutzeroberfläche angezeigt.
+Ihre Nachrichtenerweiterung muss mindestens einen Befehl deklarieren (maximal 10 Befehle insgesamt). Jeder Befehl wird in Microsoft Teams als potenzielle Interaktion vom Einstiegspunkt in der Benutzeroberfläche angezeigt.
 
 Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 
@@ -566,7 +566,7 @@ Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 |`initialRun`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt wird. Standard ist **false**.|
 |`context`|Array aus Zeichenfolgen|3||Definiert, wo die Nachrichtenerweiterung aufgerufen werden kann. Eine beliebige Kombination aus `compose`, `commandBox`, `message`. Der Standardwert ist `["compose","commandBox"]`.|
 |`fetchTask`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden muss. Standard ist **false**.|
-|`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das vorab geladen werden soll, wenn ein Messaging-Erweiterungsbefehl verwendet wird.|
+|`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das vorab geladen werden soll, wenn ein Nachrichtenerweiterungsbefehl verwendet wird.|
 |`taskInfo.title`|string|64 Zeichen||Titel des ersten Dialogfelds.|
 |`taskInfo.width`|string|||Dialogfensterbreite: entweder eine Angabe in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
 |`taskInfo.height`|string|||Dialogfensterhöhe: entweder eine Angabe in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
@@ -809,7 +809,7 @@ Geben Sie die Definition der Besprechungserweiterung an. Weitere Informationen f
 **Optional** – Objekt
 
 > [!NOTE]
-> Wenn Sie die `manifestVersion` -Eigenschaft auf 1.12 festlegen, ist die Autorisierungseigenschaft nicht mit den älteren Versionen (Version 1.11 oder früher) des Manifests kompatibel. Die Autorisierung wird für Manifestversion 1.12 unterstützt.
+> Wenn Sie die `manifestVersion` -Eigenschaft auf 1.12 festlegen, ist die Autorisierungseigenschaft nicht mit den älteren Versionen (Version 1.11 oder früher) des Manifests kompatibel. Die Autorisierung wird für die Manifestversion 1.12 unterstützt.
 
 Spezifizieren und konsolidieren Sie autorisierungsbezogene Informationen für die App.
 

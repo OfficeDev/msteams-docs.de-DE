@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: 'Einstiegspunkte: Erweiterbarkeit – Anwendungsfälle – Gerätefunktion'
-ms.openlocfilehash: 13ad637e4e6ef6831d5d268d866538c6ce99e33f
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: f91ae1de96845c913d5001660a1e9f09985ca25a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073111"
+ms.locfileid: "65104028"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planen Ihrer App mit Teams-Features
 
@@ -56,7 +56,7 @@ Das Verstehen des Nutzers und seines Anliegens sind die ersten Indikatoren dafü
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Konzeptionelle Darstellung der Teams-Lösung." border="true":::
 
-    Ihre Apps werden in Teams als Tabs, Bots, Messaging Extensions, Connectors und Webhooks oder als App mit mehreren Funktionen angezeigt. Diese Funktionen werden im Hintergrund von Azure, Microsoft Graph, SharePoint und Power Apps unterstützt, mit denen Aufgaben und Prozesse automatisiert werden können.
+    Ihre Apps werden in Teams als Registerkarten, Bots, Nachrichtenerweiterungen, Connectors und Webhooks oder als App mit mehreren Funktionen angezeigt. Diese Funktionen werden im Hintergrund von Azure, Microsoft Graph, SharePoint und Power Apps unterstützt, mit denen Aufgaben und Prozesse automatisiert werden können.
 
     Zusammen erwecken diese Funktionen Ihre App-Lösung zum Leben.
 
@@ -82,7 +82,7 @@ Die folgende Tabelle enthält Teams-Features und -Verfügbarkeit für GCC, GCC-H
 | Benutzerdefinierte oder Branchenregisterkarten-Apps |  ✔️ | ✔️ | ✔️ |
 | Sideloading von Apps | ✔️ | ❌ | ❌ |
 | Benutzerdefinierte oder branchenspezifische Bots | ✔️ | ❌ | ❌ |
-| Benutzerdefinierte Messagingerweiterungen | ❌ | ❌ | ❌ |
+| Benutzerdefinierte Nachrichtenerweiterungen | ❌ | ❌ | ❌ |
 | Benutzerdefinierte Connectors | ❌ | ❌ | ❌ |
 
 Mithilfe der folgenden Liste können Sie die Verfügbarkeit von GCC, GCC-High und DOD für die Features ermitteln:

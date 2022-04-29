@@ -5,12 +5,12 @@ description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Te
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams-Office365-Connector
-ms.openlocfilehash: 348b133ea4df73d52f8b35a2271ccf9be6f4ff8e
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: a8c4c5cc9b0db3b1bb41477e413af7c864a493c4
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398876"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104077"
 ---
 # <a name="create-and-send-messages"></a>Nachrichten erstellen und senden
 
@@ -52,7 +52,7 @@ Weitere Informationen zu Connectorkarten-Aktionen finden Sie unter [Aktionen](/o
 
 Um eine Nachricht über Ihren eingehenden Webhook oder Office 365 Connector zu senden, senden Sie eine JSON-Nutzlast an die Webhook-URL. Diese Nutzlast muss in einer [Office 365- Connectorkarte](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card) bestehen.
 
-Sie können diesen JSON-Code auch zum Erstellen von Karten mit umfassenden Eingabeoptionen verwenden, wie z. B. Texteingabe, Mehrfachauswahl oder Auswählen eines Datums und einer Uhrzeit. Der Code, der die Karte generiert und an die Webhook-URL sendet, kann in jedem gehosteten Dienst ausgeführt werden. Diese Karten sind als Bestandteil von Aktionen erfordernde Nachrichten definiert und werden auch in [Karten](~/task-modules-and-cards/what-are-cards.md) unterstützt, die in Microsoft Teams-Bots und Messaging-Erweiterungen verwendet werden.
+Sie können diesen JSON-Code auch zum Erstellen von Karten mit umfassenden Eingabeoptionen verwenden, wie z. B. Texteingabe, Mehrfachauswahl oder Auswählen eines Datums und einer Uhrzeit. Der Code, der die Karte generiert und an die Webhook-URL sendet, kann in jedem gehosteten Dienst ausgeführt werden. Diese Karten sind als Bestandteil von Aktionen erfordernde Nachrichten definiert und werden auch in [Karten](~/task-modules-and-cards/what-are-cards.md) unterstützt, die in Microsoft Teams-Bots und Nachrichtenerweiterungen verwendet werden.
 
 ### <a name="example-of-connector-message"></a>Beispiel für eine Connectornachricht
 

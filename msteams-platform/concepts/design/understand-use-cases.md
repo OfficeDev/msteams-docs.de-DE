@@ -5,12 +5,12 @@ description: In diesem Artikel erfahren Sie mehr über die Möglichkeiten der Mi
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 55955972bb9ebfbb3699ebcbc2cc131afc00fbd1
-ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
+ms.openlocfilehash: dbed78461fd39f4442c67ac7ec7523ca5cc09ba5
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498231"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104378"
 ---
 # <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
 
@@ -97,15 +97,15 @@ Gespräche führen oft zu der Notwendigkeit, etwas zu tun (eine Bestellung zu er
 
    :::column span="":::
 
-#### <a name="messaging-extensions"></a>Messaging-Erweiterungen
+#### <a name="message-extensions"></a>Nachrichtenerweiterungen
 
-Mit [Messagingerweiterungen](../../messaging-extensions/what-are-messaging-extensions.md)können Sie externe Informationen durchsuchen und freigeben. Sie können auch auf eine Nachricht reagieren, z. B. durch das Erstellen eines Hilfetickets basierend auf dem Inhalt eines Kanalbeitrags.
+Mit [Nachrichtenerweiterungen](../../messaging-extensions/what-are-messaging-extensions.md) können Sie externe Informationen durchsuchen und freigeben. Sie können auch auf eine Nachricht reagieren, z. B. durch das Erstellen eines Hilfetickets basierend auf dem Inhalt eines Kanalbeitrags.
 
    :::column-end:::
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Konzeptionelle Darstellung, wie Messaging-Erweiterungen im Teams-Client aussehen." border="false":::
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Konzeptionelle Darstellung, wie Nachrichtenerweiterungen im Teams-Client aussehen." border="false":::
 
    :::column-end:::
 :::row-end:::

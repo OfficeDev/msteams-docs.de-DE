@@ -6,19 +6,19 @@ keywords: Teams-Registerkarte „Ausgehender Webhook“
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8545f36d8449e2cf86b7af841690b8bfb8d66c6c
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
-ms.translationtype: MT
+ms.openlocfilehash: 93cdadbbb0e14a174d84a8fd0a71e5b4f77c0af4
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685625"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104021"
 ---
 # <a name="create-an-incoming-webhook"></a>Erstellen eines eingehenden Webhooks
 
 Mit einem eingehenden Webhook können externe Anwendungen Inhalte in Microsoft Teams-Kanälen freigeben. Die Webhooks werden als Tools zum Nachverfolgen und Benachrichtigen verwendet. Die Webhooks stellen eine eindeutige URL zum Senden einer JSON-Nutzlast mit einer Nachricht im Kartenformat bereit. Karten sind Benutzeroberflächencontainer, welche Inhalte und Aktionen enthalten, die sich auf ein einzelnes Thema beziehen. Sie können Karten innerhalb der folgenden Funktionen verwenden:
 
 * Bots
-* Messaging-Erweiterungen
+* Nachrichtenerweiterungen
 * Connectors
 
 ## <a name="key-features-of-an-incoming-webhook"></a>Wichtige Features des eingehenden Webhooks
@@ -39,7 +39,7 @@ Die folgende Tabelle enthält die Features und die Beschreibung eines eingehende
 
 > [!NOTE]
 >
-> * Teams-Bots, Messaging-Erweiterungen, der eingehende Webhook und das Bot-Framework unterstützen adaptive Karten. Adaptive Karten sind ein offenes, plattformübergreifendes Kartenframework, das auf allen Plattformen wie Windows, Android, iOS usw. verwendet wird. Derzeit werden adaptive Karten von [Teams-Connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) nicht unterstützt. Es ist jedoch möglich, einen [Fluss](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) zu erstellen, der adaptive Karten an einen Teams-Kanal sendet.
+> * Teams-Bots, Nachrichtenerweiterungen, der eingehende Webhook und das Bot-Framework unterstützen adaptive Karten. Adaptive Karten sind ein offenes, plattformübergreifendes Kartenframework, das auf allen Plattformen wie Windows, Android, iOS usw. verwendet wird. Derzeit werden adaptive Karten von [Teams-Connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) nicht unterstützt. Es ist jedoch möglich, einen [Fluss](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) zu erstellen, der adaptive Karten an einen Teams-Kanal sendet.
 > * Weitere Informationen zu Karten und Webhooks finden Sie unter [Adaptive Karten und eingehende Webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
 
 ## <a name="create-an-incoming-webhook"></a>Erstellen eines eingehenden Webhooks
@@ -95,5 +95,5 @@ Führen Sie die folgenden Schritte aus, um einen eingehenden Webhook aus einem T
 * [Erstellen eines ausgehenden Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Erstellen eines Office 365-Connectors](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Nachrichten erstellen und senden](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [Freigeben für Teams aus Web-Apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
+* [Von Web-Apps für Teams freigeben](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)

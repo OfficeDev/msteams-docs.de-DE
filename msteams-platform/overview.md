@@ -6,22 +6,22 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 14f74a89122d3622f6abfecaff80bdab6f63a71a
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 47d9f7af804f8d060dbb03b5d20eb672582899f1
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398750"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104497"
 ---
 # <a name="teams-app-that-fits"></a>Eine Teams-App, die passt
 
-Microsoft Teams bietet eine Sammlung von Apps, die von Microsoft oder externen Diensten bereitgestellt werden. Bei Microsoft Teams-Apps kann es sich um Registerkarten, Bots oder Messaging-Erweiterungen oder eine beliebige Kombination dieser drei handeln. Diese Apps erweitern den Wert von Microsoft Teams für die Zusammenarbeit.
+Microsoft Teams bietet eine Sammlung von Apps, die von Microsoft oder externen Diensten bereitgestellt werden. Bei Microsoft Teams-Apps kann es sich um Registerkarten, Bots oder Nachrichtenerweiterungen oder eine beliebige Kombination dieser drei handeln. Diese Apps erweitern den Wert von Microsoft Teams für die Zusammenarbeit.
 
-Apps können persönlich oder gemeinsam genutzt sein. Eine persönliche App ermöglicht die direkte Kommunikation mit einer anderen Person, während bei einer gemeinsam genutzten App mehrere Benutzer den App-Raum für die Zusammenarbeit nutzen können.
+Apps können persönlich sein oder gemeinsam genutzt werden. Eine persönliche App ermöglicht die direkte Kommunikation mit einer anderen Person, während bei einer gemeinsam genutzten App mehrere Benutzer den App-Raum für die Zusammenarbeit nutzen können.
 
 ## <a name="driving-organizational-goals"></a>Voranbringen von Unternehmenszielen
 
-Zusammenarbeit und Kommunikation sind von wesentlicher Bedeutung für eine Organisation. Bündige Kommunikation, Integration in die erforderlichen Dienste und Barrierefreiheit unterwegs sind der Grund, warum Organisationen sich zunehmend für Apps entscheiden.
+Zusammenarbeit und Kommunikation sind für eine Organisation essentiell. Bündige Kommunikation, Integration in die erforderlichen Dienste und Barrierefreiheit unterwegs sind der Grund, warum Organisationen sich zunehmend für Apps entscheiden.
 
 Organisationen verwenden sie, um mit ihren Kunden zu kommunizieren, Dienste bereitzustellen und Informationen zu teilen. Aber das ist noch nicht alles! Apps sind der Ort, an dem Personen zusammenarbeiten können. Eine gut platzierte App hilft beim Erstellen einer einheitlichen Umgebung für externe und interne Geschäftsanforderungen.
 

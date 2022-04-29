@@ -1,15 +1,15 @@
 ---
 title: Karten
-description: Beschreibung von Karten und deren Verwendung in Bots, Connectors und Messaging-Erweiterungen
+description: Beschreibung von Karten und deren Verwendung in Bots, Connectors und Nachrichtenerweiterungen
 ms.localizationpriority: high
 keywords: Connectors Bots Karten Messaging
 ms.topic: overview
-ms.openlocfilehash: 249a83c8a41ddfa3a7409ce897238389114db165
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 3689c57ce16f8cfff1d197a35dc0eae084babd36
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398652"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104455"
 ---
 # <a name="cards"></a>Karten
 
@@ -26,13 +26,13 @@ Die Bots für Microsoft Teams unterstützen die folgenden Arten von Karten:
 * Miniaturbildkarte
 * Kartensammlungen
 
-Je nach Kartentyp können Sie Ihren Karten Rich-Text-Formatierung mittels Markdown oder HTML hinzufügen. Karten, die von Bots und Messaging-Erweiterungen in Microsoft Teams verwendet werden, fügen die folgenden Kartenaktionen hinzu bzw. reagieren darauf: `openUrl`, `messageBack`, `imBack`, `invoke` und `signin`.
+Je nach Kartentyp können Sie Ihren Karten Rich-Text-Formatierung mittels Markdown oder HTML hinzufügen. Karten, die von Bots und Nachrichtenerweiterungen in Microsoft Teams verwendet werden, fügen die folgenden Kartenaktionen hinzu bzw. reagieren darauf: `openUrl`, `messageBack`, `imBack`, `invoke` und `signin`.
 
 In Microsoft Teams werden Karten an drei verschiedenen Orten verwendet:
 
 * Connectors
 * Bots
-* Messaging-Erweiterungen
+* Nachrichtenerweiterungen
 
 ## <a name="cards-in-connectors"></a>Karten in Connectors
 
@@ -44,9 +44,9 @@ Das Microsoft Bot Framework erweitert die Kartenspezifikation durch das Hinzufü
 
 Bots in Microsoft Teams können einfache Karten, Connectorkarten oder adaptive Karten verwenden. [Kartentypen](~/task-modules-and-cards/cards/cards-reference.md) enthält Informationen zu Karten, die von Bots in Microsoft Teams unterstützt werden.
 
-## <a name="cards-in-messaging-extensions"></a>Karten in Messaging-Erweiterungen
+## <a name="cards-in-message-extensions"></a>Karten in Nachrichtenerweiterungen
 
-[Messaging-Erweiterungen](~/messaging-extensions/what-are-messaging-extensions.md) können ebenfalls eine Karte zurückgeben. Messaging-Erweiterungen können einfache Karten, Connectorkarten oder adaptive Karten verwenden. Diese Karten befinden sich unter [Kartentypen](~/task-modules-and-cards/cards/cards-reference.md).
+[Nachrichtenerweiterungen](~/messaging-extensions/what-are-messaging-extensions.md) können ebenfalls eine Karte zurückgeben. Nachrichtenerweiterungen können einfache Karten, Connectorkarten oder adaptive Karten verwenden. Diese Karten befinden sich unter [Kartentypen](~/task-modules-and-cards/cards/cards-reference.md).
 
 ## <a name="types-of-cards"></a>Kartentypen
 

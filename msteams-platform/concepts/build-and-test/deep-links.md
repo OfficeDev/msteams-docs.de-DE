@@ -4,12 +4,12 @@ description: Beschreibt Deeplinks und deren Verwendung in Ihren Apps
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Deeplink für Teams
-ms.openlocfilehash: 79be1bcc04c33234859c4b564c9211c699b148e1
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: cc8e71e77964ff2a07e75983c94f72091033b789
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399310"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103923"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links
 
@@ -63,7 +63,7 @@ Geben Sie die folgenden Felder an:
 > * Persönliche Registerkarten haben einen `personal` Bereich, während Kanal- und Gruppenregisterkarten `team` oder `group` Bereiche nutzen. Die Syntax der beiden Registerkartentypen unterscheidet sich geringfügig, da nur dem Kontextobjekt der konfigurierbaren Registerkarte eine `channel` Eigenschaft zugeordnet ist. Weitere Informationen zu Registerkartenbereichen finden Sie in der [Manifest](~/resources/schema/manifest-schema.md)-Referenz.
 > * Deeplinks funktionieren nur ordnungsgemäß, wenn die Registerkarte mithilfe der Bibliothek v0.4 oder höher konfiguriert wurde und daher eine Entitäts-ID vorhanden ist. Deeplinks zu Registerkarten ohne Entitäts-IDs navigieren weiterhin zur Registerkarte, können aber die Unterentitäts-ID nicht auf der Registerkarte bereitstellen.
 
-Verwenden Sie das folgende Format für einen Deeplink, den Sie in einer Bot-, Connector- oder Messaging-Erweiterungskarte verwenden können:
+Verwenden Sie das folgende Format für einen Deep-Link, den Sie in einem Bot, Connector oder einer Nachrichtenerweiterungskarte verwenden können:
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
@@ -158,7 +158,7 @@ Wenn Sie beispielsweise ein Office 365-Benutzerprofil von Ihrem Bot als Karte au
 
 ### <a name="generate-a-deep-link-to-a-chat"></a>Generieren eines Deeplinks zu einem Chat
 
-Verwenden Sie dieses Format für einen Deeplink, den Sie auf einer Bot-, Connector- oder Messaging-Erweiterungskarte verwenden können:
+Verwenden Sie dieses Format für einen Deep-Link, den Sie auf einer Bot-, Connector- oder Nachrichtenerweiterungskarte verwenden können:
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
@@ -174,13 +174,13 @@ Um diesen Deeplink mit Ihrem Bot zu verwenden, geben Sie diesen als URL-Ziel auf
 
 ## <a name="generate-deep-links-to-file-in-channel"></a>Generieren von Deeplinks zu Dateien im Kanal
 
-Das folgende Deeplink-Format kann auf einer Bot-, Connector- oder Messaging-Erweiterungskarte verwendet werden:
+Das folgende Deep Link-Format kann in einem Bot, Connector oder einer Nachrichtenerweiterungskarte verwendet werden:
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 Die Abfrageparameter sind:
 
-* `fileId`: Eindeutige Datei-ID aus Sharepoint Online, auch bekannt als `sourcedoc`. Beispiel: `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
+* `fileId`: Eindeutige Datei-ID aus Sharepoint Online, auch bekannt als `sourcedoc`. Beispiel:`1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
 * `tenantId`: Mandanten-ID, z. B. `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
 * `fileType`: Unterstützter Dateityp, z. B. docx, pptx, xlsx und pdf.
 * `objectUrl`: Objekt-URL der Datei. Das Format ist `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Beispiel: `https://microsoft.sharepoint.com/teams/(filepath)`.
@@ -192,7 +192,7 @@ Die Abfrageparameter sind:
 > [!NOTE]
 > Sie können `threadId` und `groupId` in der URL dieses Kanals sehen.  
 
-Das folgende Deeplink-Format wird in einer Bot-, Connector- oder Messaging-Erweiterungskarte verwendet: 
+Das folgende Deep Link-Format wird in einem Bot, Connector oder einer Nachrichtenerweiterungskarte verwendet:
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
@@ -221,7 +221,7 @@ Erstellen Sie Deeplinks für die App, nachdem die App im Teams Store aufgeführt
   
 ## <a name="deep-linking-for-sharepoint-framework-tabs"></a>Deeplink-Verknüpfung für SharePoint-Framework-Registerkarten
 
-Das folgende Deeplink-Format kann auf einer Bot-, Connector- oder Messaging-Erweiterungskarte verwendet werden: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+Das folgende Deep Link-Format kann in einem Bot, Connector oder einer Nachrichtenerweiterungskarte verwendet werden: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
 > Wenn ein Bot eine TextBlock-Nachricht mit einem Deeplink sendet, wird eine neue Browserregisterkarte geöffnet, wenn Benutzer den Link auswählen. Dies erfolgt in der Chrome und Microsoft Teams Desktop-App, die unter Linux ausgeführt wird.
@@ -246,7 +246,7 @@ Sie können Deeplinks zu dem in Teams integrierten Planungsdialogfeld erstellen.
 
 ### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>Generieren eines Deeplinks zum Planungsdialogfeld
 
-Verwenden Sie das folgende Format für einen Deeplink, den Sie auf einer Bot-, Connector- oder Messaging-Erweiterungskarte verwenden können: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
+Verwenden Sie das folgende Format für einen Deep-Link, den Sie auf einer Bot-, Connector- oder Nachrichtenerweiterungskarte verwenden können: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Beispiel: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
@@ -286,7 +286,7 @@ Bei einem Videoanruf fordert der Client eine Bestätigung an und aktiviert das V
   
 Nachfolgend sind die Abfrageparameter aufgeführt:
 
-* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Anrufs darstellen. Derzeit unterstützt das Benutzer-ID-Feld die Azure AD UserPrincipalName, in der Regel eine E-Mail-Adresse. Bei einem PSTN-Anruf unterstützt es eine pstn mri 4:&lt;phonenumber&gt;.
+* `users`: Die durch Trennzeichen getrennte Liste der Benutzer-IDs, die die Teilnehmer des Anrufs darstellen. Derzeit unterstützt das Feld „Benutzer-ID“ den Azure AD UserPrincipalName, in der Regel eine E-Mail-Adresse, oder im Fall eines PSTN-Anrufs unterstützt es eine PSTN-MRI 4:&lt;Telefonnummer&gt;.
 * `withVideo`: Dies ist ein optionaler Parameter, den Sie für einen Videoanruf verwenden können. Durch Festlegen dieses Parameters wird nur die Kamera des Anrufers aktiviert. Der Empfänger des Anrufs hat die Möglichkeit, Audio- oder Audio- und Videoanrufe über das Teams Anrufbenachrichtigungsfenster entgegen zu nehmen.
 * `Source`: Dies ist ein optionaler Parameter, der über die Deeplink-Quelle informiert.
 

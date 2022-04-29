@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 8723e88e7b4ccf297edace9276af06a160e76f87
-ms.sourcegitcommit: 123a64d7bcd310352dcff9f769b5f7f9cafd6aeb
+ms.openlocfilehash: b28d68faf6d124faaa2b800accea568775acaa32
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64910550"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104154"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Erstellen einer neuen Teams-App mit dem Teams-Toolkit
 
@@ -25,7 +25,7 @@ Um eine neue Teams-App mithilfe des Teams-Toolkits zu erstellen, können Sie ein
 1. Öffnen Sie Visual Studio Code.
 1. Wählen Sie das Teams-Toolkit-Symbol :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: in der Visual Studio Code-Randleiste aus.
 1. Wählen Sie **Neue Microsoft Teams-App erstellen** aus.
-1. Wählen Sie aus den verfügbaren Funktionen „Registerkarte“, „Bot“, „Messaging-Erweiterung“ aus, oder eine Registerkarte mithilfe von SharePoint-Framework (SPFx). 
+1. Wählen Sie aus den verfügbaren Funktionen „Registerkarte“, „Bot“, „Nachrichtenerweiterung“ aus, oder eine Registerkarte mithilfe von SharePoint-Framework (SPFx). 
 1. Wählen Sie mindestens eine Option aus, um mit dem Erstellen der Teams-App zu beginnen.
 
 ### <a name="create-a-new-teams-app-using-view-samples"></a>Erstellen einer neuen Teams-App mithilfe von Anzeigebeispielen

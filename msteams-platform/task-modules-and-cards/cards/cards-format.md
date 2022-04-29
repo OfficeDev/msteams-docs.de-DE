@@ -5,12 +5,12 @@ keywords: Kartenformat für Teams-Bots
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: f48cecf9938710c40634c48299e3213e0475984a
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 9598ea8f241388e982d0ce0e05de0e5ed0b9e407
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727267"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103951"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatieren von Karten in Microsoft Teams
 
@@ -66,15 +66,15 @@ Sie können die Escape-Sequenzen `\r` oder `\n` für Zeilenumbrüche in Listen v
 
 Auf dem Desktop erscheint die Markdownformatierung für adaptive Karten wie in der folgenden Abbildung dargestellt, sowohl in Webbrowsern als auch in der Teams-Clientanwendung:
 
-![Markdownformatierung für adaptive Karten im Desktopclient](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-desktop-client.png" alt-text="Adaptiver Markdown-Desktopclient":::
 
 Unter iOS erscheint die Markdownformatierung für adaptive Karten wie in der folgenden Abbildung dargestellt:
 
-![Markdownformatierung adaptiver Karten in iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="Markdownformatierung adaptiver Karten in iOS":::
 
 Unter Android erscheint die Markdownformatierung für adaptive Karten wie in der folgenden Abbildung dargestellt:
 
-![Markdownformatierung adaptiver Karten in Android](../../assets/images/cards/Adaptive-markdown-Android.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Markdownformatierung adaptiver Karten in Android":::
 
 Weitere Informationen finden Sie unter [Textfeatures in adaptiven Karten](/adaptive-cards/create/textfeatures).
 
@@ -123,13 +123,13 @@ Adaptive Karten unterstützen Emoji. Der folgende Code zeigt ein Beispiel für A
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
 ```
 
-:::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="Adaptive Karte mit einem Emoji" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
+:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Adaptive Karte mit einem Emoji":::
 
 ### <a name="mention-support-within-adaptive-cards"></a>Unterstützung von Erwähnungen innerhalb adaptiver Karten
 
-Sie können @erwähnen in einem Textblock einer adaptiven Karte für Bots und Messaging-Erweiterungsantworten hinzufügen. Um @erwähnen in Karten hinzuzufügen, folgen Sie der gleichen Benachrichtigungslogik und demselben Rendering wie bei nachrichtenbasierten [Erwähnungen in Kanal- und Gruppenchatunterhaltungen](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
+Sie können @erwähnen in einem Textblock einer adaptiven Karte für Bots und Nachrichtenerweiterungsantworten hinzufügen. Um @erwähnen in Karten hinzuzufügen, folgen Sie der gleichen Benachrichtigungslogik und demselben Rendering wie bei nachrichtenbasierten [Erwähnungen in Kanal- und Gruppenchatunterhaltungen](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
-Bots und Messaging-Erweiterungen können Erwähnungen innerhalb des Karteninhalts in den Elementen [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) und [FactSet](https://adaptivecards.io/explorer/FactSet.html) enthalten.
+Bots und Nachrichtenerweiterungen können Erwähnungen innerhalb des Karteninhalts in den Elementen [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) und [FactSet](https://adaptivecards.io/explorer/FactSet.html) enthalten.
 
 > [!NOTE]
 >
@@ -188,7 +188,7 @@ In der folgenden Tabelle werden die neu unterstützten Benutzererwähnungs-IDs b
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>Benutzererwähnung in Bots mit adaptiven Karten
 
-Bots unterstützen die Benutzererwähnung mit der Azure AD-Objekt-ID und dem UPN, zusätzlich zu den vorhandenen IDs. Die Unterstützung für zwei neue IDs ist in Bots für Textnachrichten, adaptiven Kartentext und die Messaging-Erweiterungsantwort verfügbar. Bots unterstützen die Erwähnungs-IDs in Unterhaltungen und `invoke`-Szenarien. Der Benutzer erhält eine Aktivitätsfeedbenachrichtigung, wenn er mit den IDs @erwähnt wird.
+Bots unterstützen die Benutzererwähnung mit der Azure AD-Objekt-ID und dem UPN, zusätzlich zu den vorhandenen IDs. Die Unterstützung für zwei neue IDs ist in Bots für Textnachrichten, adaptiven Kartentext und die Nachrichtenerweiterungsantwort verfügbar. Bots unterstützen die Erwähnungs-IDs in Unterhaltungen und `invoke`-Szenarien. Der Benutzer erhält eine Aktivitätsfeedbenachrichtigung, wenn er mit den IDs @erwähnt wird.
 
 > [!NOTE]
 > Schemaupdates und Änderungen der Benutzeroberfläche/-erfahrung sind für Benutzererwähnungen mit adaptiven Karten im Bot nicht erforderlich.
@@ -233,7 +233,7 @@ Beispiel für die Benutzererwähnung in Bots mit adaptiven Karten wie folgt:
 
 Die folgende Abbildung veranschaulicht die Benutzererwähnung mit adaptiver Karte im Bot:
 
-![Benutzererwähnung im Bot mit adaptiver Karte](~/assets/images/authentication/user-mention-in-bot.png)
+:::image type="content" source="../../assets/images/authentication/user-mention-in-bot.png" alt-text="Benutzererwähnung im Bot mit adaptiver Karte":::
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Benutzererwähnung im eingehenden Webhook mit adaptiven Karten
 
@@ -297,7 +297,7 @@ Beispiel für die Benutzererwähnung im eingehenden Webhook wie folgt:
 
 Die folgende Abbildung veranschaulicht die Benutzererwähnung im eingehenden Webhook:
 
-![Benutzererwähnung im eingehenden Webhook](~/assets/images/authentication/user-mention-in-incoming-webhook.png)
+:::image type="content" source="../../assets/images/authentication/user-mention-in-incoming-webhook.png" alt-text="Benutzererwähnung im eingehenden Webhook":::
 
 ### <a name="information-masking-in-adaptive-cards"></a>Maskieren von Information in adaptiven Karten
 
@@ -322,7 +322,7 @@ Der folgende Code zeigt ein Beispiel für eine adaptive Karte mit Maskierungseig
 
 Die folgende Abbildung zeigt ein Beispiel für die Maskierung von Informationen in adaptiven Karten:
 
-![Abbildung zur Maskierung von Informationen](../../assets/images/cards/masking-information-view.png)
+:::image type="content" source="../../assets/images/Cards/masking-information-view.png" alt-text="Maskieren der Informationsansicht":::
 
 ### <a name="full-width-adaptive-card"></a>Adaptive Karte in ganzer Breite
 
@@ -359,11 +359,11 @@ Um eine adaptive Karte in ganzer Breite zu erstellen, muss Ihre App die Elemente
 
 Die folgende Abbildung zeigt eine adaptive Karte in ganzer Breite:
 
-![Adaptive Kartenansicht in ganzer Breite](../../assets/images/cards/full-width-adaptive-card.png)
+:::image type="content" source="../../assets/images/Cards/full-width-adaptive-card.png" alt-text="Adaptive Kartenansicht in ganzer Breite":::
 
 Die folgende Abbildung zeigt die Standardansicht der adaptiven Karte, wenn Sie die `width`-Eigenschaft nicht auf **Ganz** festgelegt haben:
 
-![Adaptive Kartenansicht mit geringer Breite](../../assets/images/cards/small-width-adaptive-card.png)
+:::image type="content" source="../../assets/images/Cards/small-width-adaptive-card.png" alt-text="Adaptive Kartenansicht mit geringer Breite":::
 
 ### <a name="typeahead-support"></a>Typeahead-Unterstützung
 
@@ -411,11 +411,11 @@ In einer adaptiven Karte können Sie die Eigenschaft `msteams` verwenden, um die
 
 Wenn Benutzer mit dem Mauszeiger auf das Bild zeigen, wird in der oberen rechten Ecke ein Erweiterungssymbol angezeigt, wie in der folgenden Abbildung dargestellt:
 
-![Adaptive Karte mit erweiterbarem Bild](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+:::image type="content" source="../../assets/images/Cards/adaptivecard-hover-expand-icon.png" alt-text="Adaptive Karte mit erweiterbarem Bild":::
 
 Das Bild wird in der Bühnenansicht angezeigt, wenn der Benutzer das Erweiterungssymbol auswählt, wie in der folgenden Abbildung dargestellt:
 
-![Bild in Bühnenansicht erweitert](../../assets/images/cards/adaptivecard-expand-image.png)
+:::image type="content" source="../../assets/images/Cards/adaptivecard-expand-image.png" alt-text="Bild in Bühnenansicht erweitert":::
 
 In der Bühnenansicht können Benutzer das Bild vergrößern und verkleinern. Sie können die Bilder auf Ihrer adaptiven Karte auswählen, die über diese Funktion verfügen muss.
 
@@ -447,11 +447,11 @@ In Connector-Karten werden Zeilenumbrüche für `\n\n` gerendert, jedoch nicht f
 
 Auf dem Desktop erscheint die Markdownformatierung für Connector-Karten wie in der folgenden Abbildung dargestellt:
 
-![Markdownformatierung für Connector-Karten im Desktopclient](../../assets/images/cards/connector-desktop-markdown-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-desktop-markdown-combined.png" alt-text="Markdownformatierung für Connector-Karten":::
 
 Unter iOS erscheint die Markdownformatierung für Connector-Karten wie in der folgenden Abbildung dargestellt:
 
-![Markdownformatierung für Connector-Karten im iOS-Client](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Markdownformatierung für Connector-Karten im iOS-Client":::
 
 Connector-Karten, die Markdown für iOS verwenden, weisen die folgenden Probleme auf:
 
@@ -460,7 +460,7 @@ Connector-Karten, die Markdown für iOS verwenden, weisen die folgenden Probleme
 
 Unter Android erscheint die Markdownformatierung für Connector-Karten wie in der folgenden Abbildung dargestellt:
 
-![Markdownformatierung für Connector-Karten im Android-Client](../../assets/images/cards/connector-android-markdown-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-android-markdown-combined.png" alt-text="Markdownformatierung für Connector-Karten im Android-Client":::
 
 ### <a name="format-example-for-markdown-connector-cards"></a>Formatbeispiel für Markdown-Connector-Karten
 
@@ -545,11 +545,11 @@ In Connector-Karten werden Zeilenumbrüche in HTML mit dem `<p>`-Tag gerendert.
 
 Auf dem Desktop erscheint die HTML-Formatierung für Connector-Karten wie in der folgenden Abbildung dargestellt:
 
-![HTML-Formatierung für Connector-Karten im Desktopclient](../../assets/images/cards/Connector-desktop-html-combined.png)
+:::image type="content" source="../../assets/images/Cards/Connector-desktop-html-combined.png" alt-text="HTML-Formatierung für Connector-Karten im Desktopclient":::
 
 Unter iOS erscheint die HTML-Formatierung wie in der folgenden Abbildung dargestellt:
 
-![HTML-Formatierung für Connector-Karten im iOS-Client](../../assets/images/cards/connector-iphone-html-combined-80.png)
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="HTML-Formatierung für Connector-Karten im iOS-Client":::
 
 Connector-Karten, die HTML für iOS verwenden, weisen die folgenden Probleme auf:
 
@@ -558,7 +558,7 @@ Connector-Karten, die HTML für iOS verwenden, weisen die folgenden Probleme auf
 
 Unter Android erscheint die HTML-Formatierung wie in der folgenden Abbildung dargestellt:
 
-![HTML-Formatierung für Connector-Karten im Android-Client](../../assets/images/cards/connector-android-html-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-android-html-combined.png" alt-text="HTML-Formatierung für Connector-Karten im Android-Client":::
 
 ### <a name="format-sample-for-html-connector-cards"></a>Formatbeispiel für HTML-Connector-Karten
 
@@ -635,17 +635,17 @@ Da es Auflösungsunterschiede zwischen der Desktop- und der mobilen Plattform gi
 
 Auf dem Desktop erscheint die HTML-Formatierung wie in der folgenden Abbildung dargestellt:
 
-![HTML-Formatierung im Desktopclient](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-desktop-v2.png" alt-text="HTML-Formatierung im Desktopclient":::
 
 Unter iOS erscheint die HTML-Formatierung wie in der folgenden Abbildung dargestellt:
 
-![HTML-Formatierung im iOS-Client](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-mobile-v2.png" alt-text="HTML-Formatierung im iOS-Client":::
 
 Zeichenformatierungen wie „Fett“ und „Kursiv“ werden unter iOS nicht gerendert.
 
 Unter Android erscheint die HTML-Formatierung wie in der folgenden Abbildung dargestellt:
 
-![HTML-Formatierung im Android-Client](../../assets/images/cards/card-formatting-xml-android-60.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-android-60.png" alt-text="HTML-Formatierung im Android-Client":::
 
 Zeichenformatierung wie „Fett“ und „Kursiv“ werden unter Android korrekt angezeigt.
 

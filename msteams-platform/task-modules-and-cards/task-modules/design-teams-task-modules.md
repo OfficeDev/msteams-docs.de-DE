@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Aufgabenmodule für Teams-Apps entwerfen und 
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 460e9b4d51949ccc5e1a4cafb48c30eba60b4262
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 1514ed8e3101065efd482ced45de98b8b0f58ab8
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355968"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104133"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Entwerfen von Aufgabenmodulen für Ihre Microsoft Teams-App
 
@@ -31,9 +31,9 @@ Aufgabenmodule können von fast überall in Ihrer App gestartet werden.
 
 * **Registerkarte**: Ein Aufgabenmodul kann über einen beliebigen Link innerhalb einer Registerkarte gestartet werden. Verwenden Sie dies in Szenarien, in denen sich der Benutzer auf eine Interaktion konzentrieren soll.
 * **Bot**: Ein Aufgabenmodul kann über einen Link innerhalb einer Botnachricht gestartet werden.
-* **Adaptive Karte**: Ein Aufgabenmodul kann über eine adaptive Karte gestartet werden (gesendet mit einer Messaging-Erweiterung oder von einem Bot), wenn ein Benutzer eine Schaltfläche auswählt.
-* **Messaging-Erweiterung (Aktionsbefehle)**: Messaging-Erweiterungen ermöglichen es Ihnen, eine bestimmte Aktion für Nachrichteninhalte auszuführen. Wenn Sie eine Aktion auswählen, wird ein Aufgabenmodul geöffnet.
-* **Messaging-Erweiterung (Feldkontext verfassen)**: Im Feld „verfassen“ können Sie eine Messaging-Erweiterung entwerfen, um ein Aufgabenmodul zu öffnen anstelle des typischen Flyout. Reservieren Sie Aufgabenmodule für komplexe Interaktionen, z. B. das Ausfüllen eines Formulars.
+* **Adaptive Karte**: Ein Aufgabenmodul kann von einer adaptiven Karte (mit einer Nachrichtenerweiterung oder von einem Bot gesendet) gestartet werden, wenn ein Benutzer eine Schaltfläche auswählt.
+* **Nachrichtenerweiterung (Aktionsbefehle)**: Nachrichtenerweiterungen ermöglichen es Ihnen, eine bestimmte Aktion auf den Inhalt der Nachricht anzuwenden. Wenn Sie eine Aktion auswählen, wird ein Aufgabenmodul geöffnet.
+* **Nachrichtenerweiterung (Kontext des Erfassungsfelds)**: Im Erfassungsfeld können Sie eine Nachrichtenerweiterung entwerfen, um ein Aufgabenmodul anstelle des typischen Flyouts zu öffnen. Reservieren Sie Aufgabenmodule für komplexe Interaktionen, z. B. das Ausfüllen eines Formulars.
 
 ## <a name="anatomy"></a>Anatomie
 

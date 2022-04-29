@@ -5,12 +5,12 @@ description: 'Fragen, die Sie bei der Planung Ihrer App berücksichtigen sollten
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 6a2440ea05c1a89f4e1306b6fb54635287fb2d6d
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 4620d1bc17332e40f79c429769090f1ce7b2210f
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765932"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104308"
 ---
 # <a name="teams-app-planning-checklist"></a>Prüfliste für die Teams App-Planung
 
@@ -78,7 +78,7 @@ Hier ist eine Checkliste mit Fragen, die Sie bei der Planung Ihrer App berücksi
 | # | Erwägen Sie... |
 | --- | --- |
 | 1 | Was geschieht, wenn ein Nutzer Ihre Registerkarte zum ersten Mal in einem Kanal konfiguriert? |
-| 2 | Wenn Sie Karten mit einer Messaging-Erweiterung austauschen, ist es dann sinnvoll, einen kleinen Link zu einer Seite mit weiteren Informationen hinzuzufügen, um den Nutzern zu zeigen, was Ihre App sonst noch kann? |
+| 2 | Wenn Sie Karten mit einer Nachrichtenerweiterung austauschen, ist es dann sinnvoll, einen kleinen Link zu einer Seite mit weiteren Informationen hinzuzufügen, um den Nutzern zu zeigen, was Ihre App sonst noch kann? |
 | 3 | Erwarten Sie, dass die meisten Personen bereits einen gewissen Kontext haben, für den Ihre App gedacht ist, oder dass sie Ihre Dienste bereits in einem anderen Kontext genutzt haben? |
 | 4 | Kommen sie ohne Vorkenntnisse zu Ihrer App? |
 

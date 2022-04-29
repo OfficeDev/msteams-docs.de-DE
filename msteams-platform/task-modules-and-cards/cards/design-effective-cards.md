@@ -4,18 +4,18 @@ description: Erfahren Sie, wie Sie adaptive Karten für Teams entwerfen und das 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6d908c47585c44718e25ec92dc8e06bff0ef5c9e
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 1575cfb4e5c97aaf5b4b849a32f3244b3d0626c7
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398624"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103902"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Entwerfen adaptiver Karten für Ihre Microsoft Teams-App
 
-Eine adaptive Karte enthält einen Freihandform-Textkörper mit Kartenelementen und optionalen Aktionen. Adaptive Karten sind Aktionen erfordernde Inhaltsausschnitte, die Sie einer Unterhaltung über einen Bot oder eine Messagingerweiterung hinzufügen können. Mithilfe von Text, Grafiken und Schaltflächen ermöglichen diese Karten eine umfassende Kommunikation mit Ihrer Zielgruppe.
+Eine adaptive Karte enthält einen Freihandform-Textkörper mit Kartenelementen und optionalen Aktionen. Adaptive Karten sind umsetzbare Inhaltsausschnitte, die Sie einer Unterhaltung über einen Bot oder eine Nachrichtenerweiterung hinzufügen können. Mithilfe von Text, Grafiken und Schaltflächen ermöglichen diese Karten eine umfassende Kommunikation mit Ihrer Zielgruppe.
 
-Das Framework für adaptive Karten wird in vielen Microsoft-Produkten verwendet, einschließlich Microsoft Teams. Sie können Karten in Nachrichten über Bots oder Messagingerweiterungen an Benutzer senden. Benutzer können auch Aktionen auf Karten durchführen, wenn diese bereitgestellt werden.
+Das Framework für adaptive Karten wird in vielen Microsoft-Produkten verwendet, einschließlich Microsoft Teams. Sie können Karten in Nachrichten über Bots oder Nachrichtenerweiterungen an Benutzer senden. Benutzer können auch Aktionen auf Karten durchführen, wenn diese bereitgestellt werden.
 
 :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Übersichtsbeispiel für eine adaptive Karte." border="false":::
 
