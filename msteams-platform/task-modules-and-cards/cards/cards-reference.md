@@ -4,12 +4,12 @@ description: Beschreibt alle für Bots in Teams verfügbaren Karten und Kartenak
 ms.localizationpriority: high
 keywords: Referenz zu Bots-Karten
 ms.topic: reference
-ms.openlocfilehash: 2eab0ee575efb1abf0aed025243d3e4d891b60fd
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: b1dd6d5c9ac388f1862041df836f5590d57bfe84
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571495"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104140"
 ---
 # <a name="types-of-cards"></a>Kartentypen
 
@@ -26,7 +26,7 @@ So erstellen Sie eine Hero-, Miniaturansichts- oder adaptive Karte in App Studio
 1. Wählen Sie **Neue Karte erstellen** aus.
 1. Wählen Sie **Erstellen** aus, um eine **Hero-Karte**, **Miniaturansichtskarte** oder **Adaptive Karte** zu erstellen. Die Details zu den Metadaten, die Schaltflächen und die Beispiele für json, csharp und node-Code werden für diese Karte angezeigt.
 
-    ![Hero-Kartendetails](~/assets/images/Cards/Herocarddetails.png)
+    :::image type="content" source="../../assets/images/Cards/Herocarddetails.png" alt-text="Hero-Kartendetails":::
 
 1. Wählen Sie **Diese Karte an mich senden** aus. Die Karte wird als Chatnachricht an Sie gesendet.
 
@@ -117,14 +117,14 @@ Eine adaptive Karte ist eine anpassbare Karte, die eine beliebige Kombination au
 
 Die folgende Tabelle enthält die Features, die Adaptive Karten unterstützen:
 
-| Bots in Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
+| Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
 >
-> * Die Teams-Plattform unterstützt v1.4 oder frühere adaptive Kartenfeatures für von Bots gesendete Karten und aktionsbasierte Messaging-Erweiterungen.
-> * Die Teams-Plattform unterstützt v1.3 oder frühere Features von Adaptiven Karten für andere Funktionen, z. B. von Benutzern gesendeten Karten (suchbasierte Messaging-Erweiterungen und Verbreitung von Links), Registerkarten und Aufgabenmodule.
+> * Die Teams-Plattform unterstützt v1.4 oder frühere adaptive Kartenfeatures für von Bots gesendete Karten und aktionsbasierte Nachrichtenerweiterungen.
+> * Die Teams-Plattform unterstützt v1.3 oder frühere Features von Adaptiven Karten für andere Funktionen, z. B. von Benutzern gesendeten Karten (suchbasierte Nachrichtenerweiterungen und Verbreitung von Links), Registerkarten und Aufgabenmodule.
 > * Das Formatieren positiver oder destruktiver Aktionen wird in Adaptiven Karten auf der Teams-Plattform nicht unterstützt.
 > * Medienelemente werden derzeit in Adaptive Card auf der Teams-Plattform nicht unterstützt.
 
@@ -300,7 +300,7 @@ Eine Karte, die in der Regel ein einzelnes großes Bild, eine oder mehrere Schal
 
 Die folgende Tabelle enthält die Features, die Hero-Karten unterstützen:
 
-| Bots in Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
+| Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -319,7 +319,7 @@ Die folgende Tabelle enthält die Eigenschaften einer Hero-Karte:
 
 ### <a name="example-of-a-hero-card"></a>Beispiel für eine Hero-Karte
 
-![Beispiel für eine Hero-Karte](~/assets/images/cards/hero.png)
+:::image type="content" source="../../assets/images/Cards/hero.png" alt-text="Hero-Karte":::
 
 Der folgende Code zeigt ein Beispiel für eine Hero-Karte:
 
@@ -367,7 +367,7 @@ Die Listenkarte wurde von Teams hinzugefügt, um Funktionen bereitzustellen, die
 
 Die folgende Tabelle enthält die Features, die Listenkarten unterstützen:
 
-| Bots in Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
+| Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 
@@ -445,7 +445,7 @@ Sie können mit einer Office 365-Connectorkarte arbeiten, die ein flexibles Layo
 
 Die folgende Tabelle enthält die Features, die Office 365-Connectorkarten unterstützen:
 
-| Bots in Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
+| Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
 
@@ -567,13 +567,13 @@ Teams unterstützt die Belegkarte. Es handelt sich um eine Karte, die es einem B
 
 Die folgende Tabelle enthält die Features, die Belegkarten unterstützen:
 
-| Bots in Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
+| Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 ### <a name="example-of-a-receipt-card"></a>Beispiel für eine Belegkarte
 
-![Beispiel für eine Belegkarte](~/assets/images/cards/receipt.png)
+:::image type="content" source="../../assets/images/Cards/receipt.png" alt-text="Belegkarte":::
 
 Der folgende Code zeigt ein Beispiel für eine Belegkarte:
 
@@ -641,7 +641,7 @@ Die Anmeldeaktion kann von beliebigen Karten in Teams verwendet werden, nur nich
 
 Die folgende Tabelle enthält die Features, die Anmeldekarten unterstützen:
 
-| Bots in Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
+| Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -660,11 +660,11 @@ Sie können mit einer Miniaturansichtskarte arbeiten, die zum Senden einer einfa
 
 Die folgende Tabelle enthält die Features, die Miniaturansichtskarten unterstützen:
 
-| Bots in Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
+| Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
-![Beispiel für eine Miniaturansichtskarte](~/assets/images/cards/thumbnail.png)
+:::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="Miniaturbildkarte":::
 
 ### <a name="properties-of-a-thumbnail-card"></a>Eigenschaften einer Miniaturansichtskarte
 
@@ -743,7 +743,7 @@ Das [Karusselllayout](/azure/bot-service/bot-builder-howto-add-media-attachments
 
 Die folgende Tabelle enthält die Features, die Karussellsammlungen unterstützen:
 
-| Bots in Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
+| Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -756,7 +756,7 @@ Die Eigenschaften einer Karussellkarte sind identisch mit den Hero- und Miniatur
 
 #### <a name="example-of-a-carousel-collection"></a>Beispiel für eine Karussellsammlung
 
-![Beispiel für ein Karussell von Karten](~/assets/images/cards/carousel.png)
+:::image type="content" source="../../assets/images/Cards/carousel.png" alt-text="Karussellsammlung":::
 
 Der folgende Code zeigt ein Beispiel für eine Karussellsammlung:
 
@@ -937,13 +937,13 @@ Das Listenlayout zeigt eine vertikal gestapelte Liste von Karten, optional mit z
 
 Die folgende Tabelle enthält die Features, die Listensammlungen unterstützen:
 
-| Bots in Teams | Messaging-Erweiterungen  | Connectors | Bot Framework |
+| Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 #### <a name="example-of-a-list-collection"></a>Beispiel für eine Listensammlung
 
-![Beispiel für eine Liste von Karten](~/assets/images/cards/list.png)
+:::image type="content" source="../../assets/images/Cards/list.png" alt-text="Listensammlung":::
 
 Die Eigenschaften von Listensammlungen sind identisch mit den Hero- oder Miniaturansichtskarten.
 
