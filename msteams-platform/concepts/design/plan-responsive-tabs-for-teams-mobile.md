@@ -1,51 +1,51 @@
 ---
-title: Planen von Teams Mobilgeräten
+title: Planen Ihrer Apps für mobile Microsoft Teams-Geräte
 author: surbhigupta
-description: Leitfaden zum Planen des Erstellens einer App auf Teams Mobile
+description: Planungsleitfaden für die Erstellung einer App für mobile Microsoft Teams-Geräte
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: v-abirade
-ms.openlocfilehash: e260d3d4a1afcc625d588e6918eb9a01acfdea77
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 16eada349d2a6adc5b45e89f075107838594eeeb
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103930"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111724"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planen reaktionsfähiger Registerkarten für Teams Mobile
 
- Teams Plattform bietet die Möglichkeit, Apps auf Mobilgeräten und Desktops zu erstellen. Ihre App-Benutzer können entweder Desktop oder Mobil oder beides bevorzugen. Die Benutzer können Daten auf dem Desktop vorbereiten, aber mehr Daten mit mobilen Geräten nutzen und teilen. Der Schlüssel zum Erstellen jeder App besteht darin, die Anforderungen der Benutzer zu verstehen und zu erfüllen. Es gibt Funktionen wie Bots, Nachrichtenerweiterungen und Connectors, die nahtlos auf desktop- und mobilen Geräten funktionieren. Das Erstellen von Registerkarten und Aufgabenmodulen erfordert jedoch eine Planung für das Hosten Ihrer Weboberfläche auf Teams Mobilgeräten. Der Artikel enthält Anleitungen zum Planen Ihrer reaktionsfähigen Webseiten auf Teams Mobilgeräten.
+ Die Microsoft Teams-Plattform bietet die Möglichkeit, Apps für Mobilgeräte und Desktops zu erstellen. Ihre App-Benutzer können Desktops oder Mobilgeräte oder beides bevorzugen. Die Benutzer können Daten auf dem Desktop vorbereiten, aber mehr Daten mit Mobilgeräten nutzen und teilen. Der Schlüssel zum Erstellen jeglicher App besteht darin, die Anforderungen der Benutzer zu verstehen und zu erfüllen. Es gibt Funktionen wie Bots, Nachrichtenerweiterungen und Connectors, die nahtlos auf Desktop- und Mobilgeräten funktionieren. Das Erstellen von Registerkarten und Aufgabenmodulen erfordert jedoch etwas Planung für das Hosten Ihrer Weblösung auf mobilen Microsoft Teams-Geräten. Dieser Artikel enthält Anweisungen zum Planen reaktionsfähiger Webseiten auf mobilen Microsoft Teams-Geräten.
 
-## <a name="identify-apps-scope"></a>Identifizieren des App-Bereichs
+## <a name="identify-apps-scope"></a>Identifizieren des App-Anwendungsbereichs
 
-Die folgende Liste enthält die wichtigsten Informationen zum Planen des Erstellens von Apps für Teams Mobile:
+Die folgende Liste enthält die wichtigsten Informationen zum Planen der Erstellung von Apps für mobile Microsoft Teams-Geräte:
 
-* Berücksichtigen Sie die geräteübergreifende Funktionalität Teams App. Wenn Sie beispielsweise über eine gut funktionierende App auf dem Desktop verfügen, können Sie eine ähnliche App auf mobilgeräten erstellen. Anfangs kann es schwierig sein, die gesamte Desktoperfahrung auf Mobilgeräten zu verschieben. Sie können mit einfachen, aber gängigen Szenarien beginnen. Fügen Sie Funktionen und Funktionen hinzu, nachdem Sie mehr Einblicke und Benutzerfeedback gesammelt haben.
+* Erwägen Sie geräteübergreifende Funktionalität für die Microsoft Teams-App. Wenn Sie beispielsweise über eine gut funktionierende App für Desktops verfügen, können Sie eine ähnliche App für Mobilgeräte erstellen. Anfangs kann es schwierig sein, die gesamte Desktoplösung für Mobilgeräte anzupassen. Sie können mit einfachen, aber gängigen Szenarien beginnen. Fügen Sie weitere Funktionen und Features hinzu, nachdem Sie Erkenntnisse und Benutzerfeedback gesammelt haben.
 
-* Stellen Sie sicher, dass sie auf mobilgeräte geeignete Benutzerpersona ausgerichtet sind. Wenn Sie z. B. eine App erstellen, die Diensten für Endbenutzer und außerdem Datenzugriff für Entwickler und leitende Manager bereitstellt, können die Endbenutzer die App mehr nutzen, während Sie mit dem Erstellen von Apps auf Teams Mobilgerät beginnen. Sie können auf alle Personen in Ihrer Desktop-App eingehen, es wird jedoch empfohlen, mit Persona mit einer größeren Basis und möglichen Early Adopters für eine kleinere Bildschirmerfahrung zu beginnen. Gemäß dem Beispiel sind die Endbenutzer die entsprechenden Benutzerpersonas. Sie können schrittweise Funktionen hinzufügen, um andere Benutzerpersonas auf Ihrem Teams Mobile zu unterstützen.
+* Stellen Sie sicher, dass die App auf geeignete Benutzerpersonas auf Mobilgeräten ausgerichtet ist. Wenn Sie z. B. eine App erstellen, die Dienste für Endbenutzer und außerdem Datenzugriff für Entwickler und leitende Angestellt bietet, können die Endbenutzer die App mehr nutzen, während Sie mit dem Erstellen der App für mobile Microsoft Teams-Geräte beginnen. Sie können alle Personas Ihrer Desktop-App berücksichtigen, es empfiehlt sich jedoch, für eine kleinere Bildschirmerfahrung mit Personas mit größerer Basis und möglichen Early Adopters zu beginnen. Wie in dem Beispiel sind die Endbenutzer die geeigneten Benutzerpersonas. Sie können schrittweise Funktionen hinzufügen, um weitere Benutzerpersonas in Ihrer mobilen Microsoft Teams-App zu unterstützen.
 
-## <a name="understand-different-stages-to-build-apps"></a>Grundlegendes zu verschiedenen Phasen zum Erstellen von Apps
+## <a name="understand-different-stages-to-build-apps"></a>Grundlegendes zu den verschiedenen Phasen beim Erstellen von Apps
 
-Nachdem Sie den App-Bereich identifiziert haben, ist es an der Zeit, die folgenden drei Phasen zu verstehen, um jede App auf Teams Mobilgeräten zu planen und die Benutzerfreundlichkeit zu verbessern:
+Nachdem Sie den App-Anwendungsbereich identifiziert haben, gilt es, die folgenden drei Phasen für die Planung jeglicher mobilen Microsoft Teams-App und zur Verbesserung der Benutzerfreundlichkeit zu verstehen:
 
-1. **Verbrauch**
+1. **Nutzung**
 
-   Apps auf Mobilgeräten anzeigen. Um eine App auf mobilgeräten zu erstellen, können Sie mit der Nutzung beginnen. Da die mobile Welt das Scrollen nach Inhalten zu einer gängigen Praxis gemacht hat, können Sie relevante Informationen anzeigen. Verwenden Sie Einsatzmechanismen, z. B. Benachrichtigungen, um Updates zu informieren.
+   Apps auf Mobilgeräten anzeigen. Für die Erstellung einer App für Mobilgeräte können Sie bei der Nutzung beginnen. Da Mobilgeräte das Scrollen nach Inhalten zu einer gängigen Praxis gemacht haben, können Sie relevante Informationen anzeigen. Verwenden Sie Engagementmechanismen, z. B. Benachrichtigungen, um über Updates zu informieren.
 
 2. **Schnelle Aktionen**
 
-   Verwenden Sie die App auf mobilgeräten. Nachdem Ihre Benutzer mit der Nutzung der Inhalte auf mobilgeräten begonnen haben, können Sie Ihre App auf die nächste Ebene skalieren, indem Sie einige Aktionen von der Desktop-App migrieren. Sie können neue Aktionen für mobile Geräte optimieren und erstellen.
+   Verwenden der App auf Mobilgeräten. Nachdem Ihre Benutzer mit der Nutzung der Inhalte auf Mobilgeräten begonnen haben, können Sie Ihre App an die nächste Ebene anpassen, indem Sie einige Aktionen von der Desktop-App auf sie übertragen. Sie können neue Aktionen für Mobilgeräte optimieren und programmieren.
 
 3. **Aktivierung**
 
-   Stellen Sie vollständige App-Funktionen bereit, um sich auf mobilgeräten zu engagieren. Wenn Ihre Benutzer mit Ihrer App interagieren, bieten Sie die vollständige immersive Erfahrung auf mobilgeräten, entweder auf augenhöher oder besser als die Desktoperfahrung. Um ihren Benutzern eine gute Benutzererfahrung zu bieten, sorgen Sie dafür, dass alle Anwendungsfälle auf Mobilgeräten reaktionsfähig sind.
+   Stellen Sie vollständige App-Funktionen für Interaktionen auf Mobilgeräten bereit. Bieten Sie für Interaktionen mit Ihrer App auf Mobilgeräten eine vollständige immersive Benutzererfahrung, die entweder so gut oder noch besser als jene auf Desktops ist. Um den Nutzern eine gute Benutzererfahrung zu bieten, sorgen Sie für Reaktionsfähigkeit für alle Anwendungsfälle auf Mobilgeräten.
 
 > [!TIP]
-> Informationen zu den Entwurfsrichtlinien finden Sie im [Entwurfsprozess für Teams Apps](design-teams-app-process.md).
+> Informationen zu den Entwurfsrichtlinien finden Sie unter [Entwurfsprozess für Microsoft Teams-Apps](design-teams-app-process.md).
 
 ## <a name="use-cases"></a>Anwendungsfälle
 
-Lassen Sie uns die folgenden Anwendungsfälle durchgehen, um zu verstehen, wie verschiedene Arten von Apps für Teams Mobile geplant werden:
+Lassen Sie uns die folgenden Anwendungsfälle durchgehen, um zu verstehen, wie verschiedene Arten von Apps für mobile Microsoft Teams-Geräte geplant werden:
 
 <br>
 
@@ -53,25 +53,25 @@ Lassen Sie uns die folgenden Anwendungsfälle durchgehen, um zu verstehen, wie v
 
 <summary><b>Dashboarding- und Datenvisualisierungs-Apps</b></summary>
 
-Sie können verstehen, wie Sie dynamische Registerkarten für Dashboarding- und Datenvisualisierungs-Apps auf Teams mobilen Plattform planen.
+Lernen Sie, wie Sie dynamische Registerkarten für Dashboarding- und Datenvisualisierungs-Apps auf der Microsoft Teams-Plattform für Mobilgeräte planen.
 
-Verbrauch:
+Nutzung:
 
-In der ersten Phase können Sie die grundlegendste Verbrauchserfahrung implementieren, um Daten anzuzeigen. Der Zweck jeder App in der Domäne besteht darin, Daten in Form von Visualisierungen anzuzeigen. In Ihrer App können Sie zuletzt angezeigte Visualisierungen auf dem Desktop oder eine Liste aller autorisierten Diagramme für die Benutzer anzeigen. Nach dem Erstellen von Dashboards auf dem Desktop können Benutzer auf die Informationen über mobile Geräte zugreifen. Sie können eine detaillierte Ansicht eines beliebigen Diagramms anzeigen, das vom Benutzer als erweiterte Ansicht auf Ihren Registerkarten oder mithilfe von Aufgabenmodulen ausgewählt wurde.
+In der ersten Phase können Sie die grundlegendste Nutzungsumgebung implementieren, um Daten anzuzeigen. Der Zweck jeder App in der Domäne besteht darin, Daten zu visualisieren. In Ihrer App können Sie zuletzt auf dem Desktop angezeigte Visualisierungen oder eine Liste aller autorisierten Diagramme für die Benutzer anzeigen. Nach dem Erstellen von Dashboards auf dem Desktop können Benutzer über Mobilgeräte auf die Informationen zugreifen. Sie können eine vom Benutzer ausgewählte detaillierte Ansicht eines beliebigen Diagramms als erweiterte Ansicht auf Ihren Registerkarten oder mithilfe von Aufgabenmodulen anzeigen.
 
-Sie können die folgenden Informationen anzeigen:
+Die folgenden Informationen können ebenfalls angezeigt werden:
 
 * Dashboards und Zusammenfassungen
-* Visuelle Daten, Karten und Infografiken
-* Diagramme, Diagramme und Tabellen
+* Visualisierte Daten, Karten und Infografiken
+* Diagramme, Grafiken und Tabellen
 
 ![Nutzung von Dashboarding- und Datenvisualisierungs-Apps](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
 
 Schnelle Aktionen:
 
-In der zweiten Phase können die Benutzer über die Desktopoberfläche an den vorhandenen Diagrammen und visuellen Elementen arbeiten. Sie können die folgenden Aktionen einführen:
+In der zweiten Phase können die Benutzer über die Desktopversion an den vorhandenen Diagrammen und visuellen Elementen arbeiten. Sie können die folgenden Aktionen einbinden:
 
-* Inhalt durchsuchen
+* Inhalte durchsuchen
 * Filtern von Daten
 * Erstellen von Lesezeichen
 
@@ -79,15 +79,15 @@ In der zweiten Phase können die Benutzer über die Desktopoberfläche an den vo
 
 Aktivierung:
 
-In der dritten Phase können Benutzer Inhalte wie Diagramme und Grafiken von Grund auf neu erstellen. Stellen Sie sicher, dass Alle Funktionen in Ihrer App für mobile Geräte eingeführt werden. Sie können z. B. Aufgabenmodule verwenden, um auf bestimmte Datenelemente mit detaillierter Ansicht zuzugreifen.
+In der dritten Phase können Benutzer Inhalte wie Diagramme und Grafiken von Grund auf neu erstellen. Stellen Sie sicher, alle Funktionen in Ihre App für Mobilgeräte zu übertragen. Sie können z. B. Aufgabenmodule verwenden, um den Zugang zu bestimmten Datenelementen mit detaillierten Ansichten zu erleichtern.
 
-Sie können Benutzern folgenden Zugriff gewähren:
+Sie können Benutzern folgende Zugriffsoptionen bieten:
 
 * Titel und Beschreibung ändern
 * Einfügen von Datenelementen zum Erstellen von Visualisierungen
-* Freigeben von Visualisierungen in einem Kanal- oder Gruppenchat
+* Freigeben von Visualisierungen in einem Kanal oder Gruppenchat
 
-![Aktivieren von Dashboarding- und Datenvisualisierungs-Apps](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
+![Aktivieren von Dashboarding- und Datenvisualisierungs-Apps – Aktivierung](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
 
 <br>
 
@@ -99,36 +99,36 @@ Sie können Benutzern folgenden Zugriff gewähren:
 
 <summary><b>Aufgaben-Boarding-Apps</b></summary>
 
-Sie können verstehen, wie Sie reaktionsfähige Registerkarten für Aufgabenboarding-Apps auf Teams mobilen Plattform planen.
+Lernen Sie, wie Sie dynamische Registerkarten für Aufgaben-Boarding-Apps auf der Microsoft Teams-Plattform für Mobilgeräte planen.
 
-Verbrauch:
+Nutzung:
 
-In der ersten Phase kann Ihre App dem Benutzer die Liste der Aufgaben in einem vertikalen Stapel anzeigen. Wenn mehrere Kategorien von Vorgängen vorhanden sind, z. B. **"Vorgeschlagen**", " **Aktiv"** und " **Geschlossen** ", stellen Sie Filter zum Anzeigen gruppierter Vorgänge oder als Kopfzeilen bereit, um die gruppierten Vorgänge anzuzeigen.
+In der ersten Phase kann Ihre App dem Benutzer die Liste der Aufgaben in einem vertikalen Stapel anzeigen. Stellen Sie bei mehreren Kategorien von Aufgaben – z. B. **Vorgeschlagen**, **Aktiv** und **Geschlossen** – Filter zum Anzeigen gruppierter Aufgaben oder als Überschriften bereit, um die gruppierten Aufgaben anzuzeigen.
 
-![Nutzung von Taskboarding-Apps](../../assets/images/app-fundamentals/taskboarding-apps-consumption.png)
+![Aufgaben-Boarding-Apps – Nutzung](../../assets/images/app-fundamentals/taskboarding-apps-consumption.png)
 
 Schnelle Aktionen:
 
-In der zweiten Phase können Sie benutzern den folgenden App-Zugriff bereitstellen:
+In der zweiten Phase können Sie den Benutzern folgende Zugriffoptionen in der App bieten:
 
-* Erstellen von Aufgaben oder Elementen mit den obligatorischen Feldern, um die kognitive Belastung der Benutzer zu verringern
-* Ändern des Tafeltyps oder der Ansicht
+* Erstellen von Aufgaben oder Elementen mit Pflichtfeldern, um die kognitive Belastung der Benutzer zu verringern
+* Ändern des Board-Typs oder der Ansicht
 * Überprüfen von Aufgaben durch Erweitern der Ansicht
 * Verwenden von Aufgabenmodulen zum Anzeigen einer detaillierten Ansicht
 * Verschieben der Aufgaben in verschiedene Kategorien
 * Freigeben relevanter Aufgaben in Chats und Kanälen über E-Mails und Aktivitätsfeeds
 
-![Schnelle Aktionen für Taskboarding-Apps](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
+![Aufgaben-Boarding-Apps – Schnelle Aktionen](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
 
 Aktivierung:
 
-In der dritten Phase können Sie die Benutzererfahrung mit den folgenden Aktivitäten aktivieren:
+In der dritten Phase können Sie die Benutzererfahrung um die folgenden Aktivitäten erweitern:
 
 * Hinzufügen neuer Projekte und Boards
-* Hinzufügen und Ändern verschiedener Kategorien, z. B. **"Vorgeschlagen"**, "**Aktiv"** und "**Geschlossen**"
+* Hinzufügen und Ändern verschiedener Kategorien, z. B. **Vorgeschlagen**, **Aktiv** und **Geschlossen**
 * Konfigurieren der Aufgaben für Kommentare, Anlagen und andere komplexe Features
 
-![Aktivierung von Taskboarding-Apps](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
+![Aufgaben-Boarding-Apps – Aktivierung](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
 <br>
 
 </details>
@@ -137,44 +137,44 @@ In der dritten Phase können Sie die Benutzererfahrung mit den folgenden Aktivit
 
 <details>
 
-<summary><b>Gemeinsame Dokumenterstellung und Whiteboarding von Apps</b></summary>
+<summary><b>Apps für gemeinsame Dokumenterstellung und Whiteboarding</b></summary>
 
-Sie können verstehen, wie Sie dynamische Registerkarten für die gemeinsame Dokumenterstellung und das Whiteboarding von Apps auf Teams mobilen Plattform planen.
+Lernen Sie, wie Sie dynamische Registerkarten für Apps für die gemeinsame Dokumenterstellung und das Whiteboarding auf der Microsoft Teams-Plattform für Mobilgeräte planen.
 
-Verbrauch:
+Nutzung:
 
-In der ersten Phase können Sie die Desktopoberfläche in Betracht ziehen, um die Inhalte und Ressourcen in Ihrer App anzuzeigen.  Sie können die folgenden Funktionen anzeigen:
+In der ersten Phase können Sie eine Desktoplösung in Betracht ziehen, um die Inhalte und Ressourcen in Ihrer App anzuzeigen.  Sie können die folgenden Funktionen anzeigen:
 
 * Kommentare oder Feedback
 * Vergrößern oder Verkleinern
-* Aktuelle Phase oder Fortschritt eines ausstehenden Dokuments
+* Aktueller Status oder Fortschritt eines ausstehenden Dokuments
 
-![Gemeinsame Dokumenterstellung und Nutzung von Whiteboarding-Apps](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
+![Apps für gemeinsame Dokumenterstellung und Whiteboarding – Nutzung](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
 
 Schnelle Aktionen:
 
 In der zweiten Phase können Sie die folgenden Aktionen einführen:
 
-* Erstellen einer neuen Tafel für die Zusammenarbeit oder neuer Dokumente zum Signieren
-* Teilen von Boards intern und auch mit Gästen
+* Erstellen eines neuen Boards für die Zusammenarbeit oder neuer Dokumente zum Signieren
+* Freigeben von Boards intern und auch für Gäste
 * Konfigurieren von Administratorberechtigungen
 
 > [!TIP]
 > Sie machen Aktionen verfügbar, die auf den kleinen Bildschirmen einfach angezeigt werden können.
 
-![Schnelle Aktionen für gemeinsame Dokumenterstellung und Whiteboarding von Apps](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png)
+![Apps für gemeinsame Dokumenterstellung und Whiteboarding – schnelle Aktionen](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png)
 
 Aktivierung:
 
-Stellen Sie in der dritten Phase ihren Benutzern eine vollständige Erfahrung bereit. Sie können die Benutzererfahrung mit den folgenden Aktivitäten aktivieren:
+Stellen Sie in der dritten Phase ihren Benutzern eine vollständige Lösung bereit. Sie können die Benutzererfahrung um die folgenden Aktivitäten erweitern:
 
 * Hinzufügen von Text, Formen und schnellen Notizen
-* Navigieren im Inhalt
+* Navigieren in Inhalten
 * Hinzufügen von Ebenen und Filtern
 * Löschen, Rückgängigmachen und Wiederholen von Vorgängen
-* Zugreifen auf Kamera und Mikrofon mit JS SDK-APIs. Weitere Informationen zu Gerätefunktionen finden Sie in der [Übersicht über die Gerätefunktionen](../device-capabilities/device-capabilities-overview.md).
+* Zugreifen auf Kamera und Mikrofon mit JS SDK-APIs. Weitere Informationen zu Gerätefunktionen finden Sie in der [Übersicht über Gerätefunktionen](../device-capabilities/device-capabilities-overview.md).
 
-![Aktivieren von Apps für gemeinsame Dokumenterstellung und Whiteboarding](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)
+![Apps für gemeinsame Dokumenterstellung und Whiteboarding – Aktivierung](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)
 
 <br>
 
@@ -182,7 +182,7 @@ Stellen Sie in der dritten Phase ihren Benutzern eine vollständige Erfahrung be
 
 ## <a name="see-also"></a>Siehe auch
 
-Die folgenden Entwurfs- und Validierungsrichtlinien helfen je nach Umfang Ihrer App:
+Je nach Umfang Ihrer App können die folgenden Entwurfs- und Validierungsrichtlinien hilfreich sein:
 
 * [Entwerfen ihrer Registerkarte](../../tabs/design/tabs.md)
 * [Entwerfen Ihres Bots](../../bots/design/bots.md)

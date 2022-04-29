@@ -1,25 +1,25 @@
 ---
-title: Schemareferenz für öffentliche Entwicklervorschaumanifest
-description: Beispielmanifestdatei und Beschreibung aller komponenten, die für Microsoft Teams unterstützt werden
+title: Manifest-Schemareferenz für die öffentliche Entwicklervorschau
+description: Beispielmanifestdatei und Beschreibung aller ihrer Komponenten, die für Microsoft Teams unterstützt werden
 ms.topic: reference
-keywords: Teams-Manifestschema Developer Preview
-ms.localizationpriority: medium
+keywords: Entwicklervorschau des Teams-Manifestschemas
+ms.localizationpriority: high
 ms.date: 11/15/2021
-ms.openlocfilehash: e388dc955acbe3ba0c116f2a5d5f610d3cbdc3c3
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: a32ea7faba4d3c0e362637c8e4338112cd75d839
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104063"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65110330"
 ---
-# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referenz: Öffentliches Entwicklervorschaumanifestschema für Microsoft Teams
+# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für die öffentliche Entwicklervorschau für Microsoft Teams
 
-Informationen zum Aktivieren der Entwicklervorschau finden Sie in der [öffentlichen Entwicklervorschau für Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
+Informationen zum Aktivieren der [Entwicklervorschau finden Sie unter Öffentliche Entwicklervorschau für Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
-> Wenn Sie keine Entwicklervorschaufeatures verwenden, einschließlich [der Ausführung Teams persönlichen Registerkarten und Nachrichtenerweiterungen in Outlook und Office](../../m365-apps/overview.md), verwenden Sie stattdessen das [App-Manifest für GA-Features](~/resources/schema/manifest-schema.md).
+> Wenn Sie keine Vorschaufunktionen für Entwickler verwenden, einschließlich der Ausführung persönlicher Registerkarten und Nachrichtenerweiterungen für [Teams in Outlook und Office](../../m365-apps/overview.md), verwenden Sie stattdessen das [App-Manifest für allgemeine](~/resources/schema/manifest-schema.md) Funktionen.
 
-Das Microsoft Teams-Manifest beschreibt, wie die App in die Microsoft Teams Plattform integriert wird. Ihr Manifest muss dem unter [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) gehosteten Schema entsprechen.
+Das Microsoft Teams-Manifest beschreibt, wie sich die App in die Microsoft Teams-Plattform integriert. Ihr Manifest muss dem unter [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) gehosteten Schema entsprechen.
 
 ## <a name="sample-full-manifest"></a>Vollständiges Beispielmanifest
 
@@ -276,48 +276,48 @@ Das Schema definiert die folgenden Eigenschaften:
 
 ## <a name="schema"></a>$schema
 
-*Optional, aber empfohlen* &ndash; Schnur
+*Optional, aber empfohlen* &ndash; String
 
 Die `https://` URL, die auf das JSON-Schema für das Manifest verweist.
 
 ## <a name="manifestversion"></a>manifestVersion
 
-**Erforderlich** &ndash; Schnur
+**Erforderliche** &ndash; Zeichenfolge
 
-Die Version des Manifestschemas, das von diesem Manifest verwendet wird. Wird `m365DevPreview` nur verwendet, wenn Sie eine Vorschau Teams Apps anzeigen, die [in Office und Outlook ausgeführt](../../m365-apps/overview.md) werden. Andernfalls für alle anderen Teams Vorschaufeatures verwenden`devPreview`.
+Die Version des Manifestschemas, das dieses Manifest verwendet. Nur `m365DevPreview` verwenden, wenn Sie eine Vorschau [von Teams-Apps anzeigen, die in Office und Outlook ausgeführt werden](../../m365-apps/overview.md). Andernfalls für alle `devPreview` anderen Teams-Vorschaufunktionen verwenden.
 
 ## <a name="version"></a>Version
 
-**Erforderlich** &ndash; Schnur
+**Erforderliche** &ndash; Zeichenfolge
 
-Die Version der jeweiligen App. Wenn Sie etwas in Ihrem Manifest aktualisieren, muss die Version ebenfalls erhöht werden. Auf diese Weise wird bei der Installation des neuen Manifests das vorhandene überschrieben, und der Benutzer erhält die neue Funktionalität. Wenn diese App an den Store übermittelt wurde, muss das neue Manifest erneut übermittelt und erneut überprüft werden. Anschließend erhalten Benutzer dieser App das neue aktualisierte Manifest in einigen Stunden automatisch, nachdem es genehmigt wurde.
+Die Version der jeweiligen App. Wenn Sie etwas in Ihrem Manifest aktualisieren, muss die Version ebenfalls erhöht werden. Auf diese Weise wird bei der Installation des neuen Manifests das vorhandene überschrieben und der Benutzer erhält die neue Funktionalität. Wenn diese App an den Store übermittelt wurde, muss das neue Manifest erneut übermittelt und erneut validiert werden. Anschließend erhalten Benutzer dieser App das neue aktualisierte Manifest automatisch innerhalb weniger Stunden, nachdem es genehmigt wurde.
 
-Wenn die App eine Änderung der Berechtigungen angefordert hat, werden die Benutzer aufgefordert, ein Upgrade auszuführen und der App erneut zuzustimmen.
+Wenn sich die von der App angeforderten Berechtigungen ändern, werden die Benutzer aufgefordert, ein Upgrade durchzuführen und der App erneut zuzustimmen.
 
 Diese Versionszeichenfolge muss dem [SemVer](http://semver.org/)-Standard entsprechen (MAJOR.MINOR.PATCH).
 
 ## <a name="id"></a>id
 
-**Erforderlich** &ndash; Microsoft-App-ID
+**Erforderliche** &ndash; Microsoft-App-ID
 
-Der eindeutige von Microsoft generierte Bezeichner für diese App. Wenn Sie einen Bot über die Microsoft Bot Framework registriert haben oder sich die Web-App Ihrer Registerkarte bereits bei Microsoft anmeldet, sollten Sie bereits über eine ID verfügen und diese hier eingeben. Andernfalls sollten Sie eine neue ID im Microsoft-Anwendungsregistrierungsportal ([Meine Anwendungen](https://apps.dev.microsoft.com)) generieren, sie hier eingeben und sie dann wiederverwenden, wenn Sie [einen Bot hinzufügen](~/bots/how-to/create-a-bot-for-teams.md).
+Die eindeutige, von Microsoft generierte Kennung für diese App. Wenn Sie einen Bot über das Microsoft Bot Framework registriert haben oder sich die Web-App Ihres Tabs bereits bei Microsoft anmeldet, sollten Sie bereits über eine ID verfügen und diese hier eingeben. Andernfalls sollten Sie eine neue ID im Microsoft-Anwendungsregistrierungsportal ([My Applications](https://apps.dev.microsoft.com)) generieren, sie hier eingeben und sie dann wiederverwenden, wenn Sie [einen Bot hinzufügen](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## <a name="packagename"></a>packageName
 
-**Erforderlich** &ndash; Schnur
+**Erforderliche** &ndash; Zeichenfolge
 
-Ein eindeutiger Bezeichner für diese App in umgekehrter Domänennotation; beispiel: "com.example.myapp".
+Ein eindeutiger Bezeichner für diese App in umgekehrter Domänenschreibweise; Beispiel: com.example.myapp.
 
 ## <a name="developer"></a>developer
 
 Erforderlich:
 
-Gibt Informationen zu Ihrem Unternehmen an. Für Apps, die an AppSource (früher Office Store) übermittelt wurden, müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen.
+Gibt Informationen zu Ihrem Unternehmen an. Für an AppSource (ehemals Office Store) übermittelte Apps müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen.
 
 |Name| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|
 |`name`|32 Zeichen|✔|Der Anzeigename für den Entwickler.|
-|`websiteUrl`|2048 Zeichen|✔|Die https://-URL zur Website des Entwicklers. Über diesen Link sollten Benutzer zu Ihrer Unternehmens- oder produktspezifischen Startseite gelangen.|
+|`websiteUrl`|2048 Zeichen|✔|Die https://-URL zur Website des Entwicklers. Dieser Link sollte Benutzer zu Ihrer unternehmens- oder produktspezifischen Zielseite führen.|
 |`privacyUrl`|2048 Zeichen|✔|Die https://-URL zur Datenschutzerklärung des Entwicklers.|
 |`termsOfUseUrl`|2048 Zeichen|✔|Die https://-URL zu den Nutzungsbedingungen des Entwicklers.|
 |`mpnId`|10 Zeichen|✔|**Optional**: Die Microsoft Partner Network-ID der Partnerorganisation, die die App erstellt.|
@@ -326,11 +326,11 @@ Gibt Informationen zu Ihrem Unternehmen an. Für Apps, die an AppSource (früher
 
 Optional:
 
-Ermöglicht die Angabe einer Standardsprache sowie Zeiger auf zusätzliche Sprachdateien. Siehe [Lokalisierung](~/concepts/build-and-test/apps-localization.md).
+Ermöglicht die Angabe einer Standardsprache sowie Verweise auf zusätzliche Sprachdateien. Siehe [Lokalisierung](~/concepts/build-and-test/apps-localization.md).
 
 |Name| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|
-|`defaultLanguageTag`|4 Zeichen|✔|Das Sprachtag der Zeichenfolgen in dieser Manifestdatei der obersten Ebene.|
+|`defaultLanguageTag`|4 Zeichen|✔|Das Sprach-Tag der Zeichenfolgen in dieser Manifestdatei der obersten Ebene.|
 
 ### <a name="localizationinfoadditionallanguages"></a>localizationInfo.additionalLanguages
 
@@ -345,7 +345,7 @@ Ein Array von Objekten, die zusätzliche Sprachübersetzungen angeben.
 
 Erforderlich:
 
-Der Name Ihrer App-Lösung, der Benutzern in der Microsoft Teams-Umgebung angezeigt wird. Für Apps, die an AppSource übermittelt werden, müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen. Die Werte von `short` und `full` sollten nicht identisch sein.
+Der Name Ihrer App-Lösung, der Benutzern in der Microsoft Teams-Umgebung angezeigt wird. Für Apps, die an AppSource übermittelt werden, müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen. Die Werte von `short` und `full` sollten nicht gleich sein.
 
 |Name| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|
@@ -358,7 +358,7 @@ Erforderlich:
 
 Beschreibt Ihre App für Benutzer. Für an AppSource übermittelte Apps müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen.
 
-Stellen Sie sicher, dass Ihre Beschreibung Ihre Erfahrung genau beschreibt und Informationen bereitstellt, um potenziellen Kunden zu helfen, zu verstehen, was Ihre Erfahrung bewirkt. Beachten Sie auch in der vollständigen Beschreibung, ob ein externes Konto für die Verwendung erforderlich ist. Die Werte von `short` und `full` sollten nicht identisch sein.  Ihre kurzbeschreibung darf nicht innerhalb der langen Beschreibung wiederholt werden und darf keinen anderen App-Namen enthalten.
+Stellen Sie sicher, dass Ihre Beschreibung Ihre Erfahrung genau beschreibt und Informationen bereitstellt, die potenziellen Kunden helfen, zu verstehen, was Ihre Erfahrung bewirkt. In der vollständigen Beschreibung sollten Sie auch vermerken, ob für die Nutzung ein externes Konto erforderlich ist. Die Werte von `short` und `full` sollten nicht gleich sein.  Ihre Kurzbeschreibung darf innerhalb der Langbeschreibung nicht wiederholt werden und keinen anderen App-Namen enthalten.
 
 |Name| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|
@@ -378,9 +378,9 @@ Symbole, die in der Microsoft Teams-App verwendet werden. Die Symboldateien müs
 
 ## <a name="accentcolor"></a>accentColor
 
-**Erforderlich** &ndash; Schnur
+**Erforderliche** &ndash; Zeichenfolge
 
-Eine Farbe, die in Verbindung mit und als Hintergrund für Ihre Gliederungssymbole verwendet werden soll.
+Eine Farbe, die als Hintergrund für Ihre Kontursymbole verwendet wrden soll.
 
 Bei dem Wert muss es sich um einen gültigen HTML-Farbcode handeln, der mit "#" beginnt, z. B. `#4464ee`.
 
@@ -390,16 +390,16 @@ Optional:
 
 Wird verwendet, wenn Ihre App-Lösung über Teamkanal-Registerkarten verfügt, die eine zusätzliche Konfiguration erfordern, bevor sie hinzugefügt werden. Konfigurierbare Registerkarten werden nur im Teams-Bereich unterstützt, und derzeit wird nur eine Registerkarte pro App unterstützt.
 
-Das Objekt ist ein Array, wobei alle Elemente vom Typ `object` sind. Dieser Block ist nur für Lösungen erforderlich, die eine konfigurierbare Kanalregisterkartenlösung bereitstellen.
+Das Objekt ist ein Array, wobei alle Elemente vom Typ `object` sind. Dieser Block ist nur für Lösungen erforderlich, die eine konfigurierbare Channel-Tab-Lösung bereitstellen.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`configurationUrl`|Zeichenfolge|2048 Zeichen|✔|Die https://-URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
-|`canUpdateConfiguration`|Boolesch|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: `true`|
+|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: `true`|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die Bereiche `team` und `groupchat`. |
 |`context` |Array von Enumerationen|6 ||Die Gruppe von `contextItem`-Bereichen, in denen eine [Registerkarte unterstützt wird](../../tabs/how-to/access-teams-context.md). Standard: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`und `meetingStage`.|
 |`sharePointPreviewImage`|Zeichenfolge|2048||Ein relativer Dateipfad zu einem Registerkarten-Vorschaubild zur Verwendung in SharePoint. Größe: 1024 x 768. |
-|`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint verfügbar gemacht wird. Optionen: `sharePointFullPage` und `sharePointWebPart` |
+|`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint verfügbar gemacht wird `sharePointFullPage` Optionen sind und `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -407,17 +407,17 @@ Optional:
 
 Definiert eine Reihe von Registerkarten, die standardmäßig "angeheftet" werden können, ohne dass der Benutzer sie manuell hinzufügen muss. Im `personal`-Bereich deklarierte statische Registerkarten werden immer an die persönliche Benutzeroberfläche der App angeheftet. Im `team`-Bereich deklarierte statische Registerkarten werden derzeit nicht unterstützt.
 
-Rendern Sie Registerkarten mit adaptiven Karten, indem Sie sie anstelle `contentUrl` des **staticTabs-Blocks** angeben`contentBotId`.
+Rendern Sie Registerkarten mit adaptiven Karten, `contentBotId` indem Sie anstelle `contentUrl` von im **staticTabs-Block** angeben.
 
-Das Objekt ist ein Array (maximal 16 Elemente) mit allen Elementen des Typs `object`. Dieser Block ist nur für Lösungen erforderlich, die eine Lösung mit statischen Registerkarten bereitstellen.
+Das Objekt ist ein Array (maximal 16 Elemente) mit allen Elementen vom Typ `object`. Dieser Block ist nur für Lösungen erforderlich, die eine Lösung mit statischen Registerkarten bereitstellen.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`entityId`|String|64 Zeichen|✔|Ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird.|
 |`name`|Zeichenfolge|128 Zeichen|✔|Der Anzeigename der Registerkarte in der Kanal-Benutzeroberfläche.|
 |`contentUrl`|Zeichenfolge|2048 Zeichen|✔|Die https://-URL, die auf die Entitäts-Benutzeroberfläche verweist, die im Microsoft Teams-Canvas angezeigt werden soll.|
-|`contentBotId`|   | | | Die Microsoft Teams App-ID, die für den Bot im Bot Framework-Portal angegeben wurde. |
-|`websiteUrl`|Zeichenfolge|2048 Zeichen||Die https:// URL, die darauf verweist, wenn ein Benutzer sich für die Anzeige in einem Browser entscheidet.|
+|`contentBotId`|   | | | Die für den Bot im Bot Framework-Portal angegebene Microsoft Teams-App-ID. |
+|`websiteUrl`|Zeichenfolge|2048 Zeichen||Die https://-URL, auf die verwiesen werden soll, wenn ein Benutzer sich für die Anzeige in einem Browser entscheidet.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen statische Registerkarten nur den `personal`-Bereich. Das bedeutet, dass sie nur als Teil der persönlichen Benutzeroberfläche bereitgestellt werden können.|
 
 ## <a name="bots"></a>Bots
@@ -426,24 +426,24 @@ Optional:
 
 Definiert eine Bot-Lösung zusammen mit optionalen Informationen wie Standardbefehlseigenschaften.
 
-Das Objekt ist ein Array (maximal 1 Element&mdash; ist derzeit nur ein Bot pro App zulässig) mit allen Elementen des Typs `object`. Dieser Block ist nur für Lösungen erforderlich, die einen Bot umfassen.
+Das Objekt ist ein Array (maximal nur 1 Element&mdash;derzeit ist nur ein Bot pro App erlaubt) mit allen Elementen vom Typ `object`. Dieser Block ist nur für Lösungen erforderlich, die einen Bot umfassen.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`botId`|String|64 Zeichen|✔|Die eindeutige Microsoft-App-ID für den Bot, wie bei Bot Framework registriert. Dies kann mit der allgemeinen [App-ID](#id) identisch sein.|
-|`needsChannelSelector`|Boolesch|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot einem bestimmten Kanal hinzuzufügen. Standard: `false`|
+|`botId`|String|64 Zeichen|✔|Die eindeutige Microsoft-App-ID für den Bot, wie bei Bot Framework registriert. Dies kann durchaus mit der Gesamt-[App-ID identisch sein](#id).|
+|`needsChannelSelector`|Boolesch|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: `false`|
 |`isNotificationOnly`|Boolesch|||Gibt an, ob es sich bei einem Bot um einen unidirektionalen Bot mit nur Benachrichtigungsfunktion und nicht um einen dialogorientierten Bot handelt. Standard: `false`|
 |`supportsFiles`|Boolesch|||Gibt an, ob der Bot die Möglichkeit unterstützt, Dateien im persönlichen Chat hoch-/herunterzuladen. Standard: `false`|
 |`scopes`|Array von Enumerationen|3|✔|Gibt an, ob der Bot eine Umgebung im Kontext eines Kanals in einem `team` oder Gruppenchat (`groupchat`) bietet, oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`). Diese Optionen sind nicht exklusiv.|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-Eine optionale Liste von Befehlen, die Ihr Bot Benutzern vorschlagen kann. Das Objekt ist ein Array (maximal 2 Elemente) mit allen Elementen des Typs `object`. Sie müssen eine separate Befehlsliste für jeden Bereich definieren, den Ihr Bot unterstützt. Weitere Informationen finden Sie unter [Bot-Menüs](~/bots/how-to/create-a-bot-commands-menu.md).
+Eine optionale Liste von Befehlen, die Ihr Bot Benutzern vorschlagen kann. Das Objekt ist ein Array (maximal 2 Elemente) mit allen Elementen vom Typ `object`; Sie müssen für jeden Bereich, den Ihr Bot unterstützt, eine separate Befehlsliste definieren. Weitere Informationen finden Sie unter [Bot-Menüs](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`items.scopes`|Array von Enumerationen|3|✔|Gibt den Bereich an, für den die Befehlsliste gültig ist. Optionen sind `team`, `personal` und `groupchat`.|
-|`items.commands`|Array von Objekten|10|✔|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: Der Name des Bot-Befehls (Zeichenfolge, 32).<br>`description`: Eine einfache Beschreibung oder ein Beispiel für die Befehlssyntax und zugehörige Argumente (string, 128)|
+|`items.commands`|Array von Objekten|10|✔|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: der Bot-Befehlsname (Zeichenfolge, 32).<br>`description`: Eine einfache Beschreibung oder ein Beispiel für die Befehlssyntax und zugehörige Argumente (string, 128)|
 
 ## <a name="connectors"></a>connectors
 
@@ -466,19 +466,19 @@ Optional:
 Definiert eine Nachrichtenerweiterung für die App.
 
 > [!NOTE]
-> Der Name des Features wurde im November 2017 von "Erweiterung verfassen" in "Nachrichtenerweiterung" geändert, der Manifestname bleibt jedoch unverändert, sodass vorhandene Erweiterungen weiterhin funktionieren.
+> Der Name des Features wurde im November 2017 von „compose extension“ in „message extension“ geändert, aber der Manifestname bleibt unverändert, sodass vorhandene Erweiterungen weiterhin funktionieren.
 
 Das Objekt ist ein Array (maximal 1 Element) mit allen Elementen vom Typ `object`. Dieser Block ist nur für Lösungen erforderlich, die eine Nachrichtenerweiterung bereitstellen.
 
 |Name| Typ | Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`botId`|Zeichenfolge|64|✔|Die eindeutige Microsoft-App-ID für den Bot, der die Nachrichtenerweiterung unterstützt, wie sie im Bot Framework registriert ist. Dies kann mit der allgemeinen [App-ID](#id) identisch sein.|
-|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob die Konfiguration einer Nachrichtenerweiterung vom Benutzer aktualisiert werden kann. Der Standardwert lautet `false`.|
-|`commands`|Array des Objekts|10|✔|Array von Befehlen, die die Nachrichtenerweiterung unterstützt|
+|`botId`|Zeichenfolge|64|✔|Die eindeutige Microsoft-App-ID für den Bot, der die Nachrichtenerweiterung unterstützt, wie sie beim Bot Framework registriert ist. Dies kann durchaus mit der Gesamt-[App-ID identisch sein](#id).|
+|`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob die Konfiguration einer Nachrichtenerweiterung vom Benutzer aktualisiert werden kann. Der Standardwert ist `false`.|
+|`commands`|Objekt-Array|10|✔|Array von Befehlen, die die Nachrichtenerweiterung unterstützt|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-Ihre Nachrichtenerweiterung sollte mindestens einen Befehl deklarieren. Jeder Befehl wird in Microsoft Teams als potenzielle Interaktion vom Einstiegspunkt in der Benutzeroberfläche angezeigt. Es gibt maximal 10 Befehle.
+Ihre Nachrichtenerweiterung sollte einen oder mehrere Befehle deklarieren. Jeder Befehl wird in Microsoft Teams als potenzielle Interaktion vom Einstiegspunkt in der Benutzeroberfläche angezeigt. Es gibt maximal 10 Befehle.
 
 Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 
@@ -488,23 +488,23 @@ Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 |`type`|String|64 Zeichen||Der Befehlstyp. Entweder `query` oder `action`. Standard: `query`|
 |`title`|Zeichenfolge|32 Zeichen|✔|Der benutzerfreundliche Name des Befehls.|
 |`description`|Zeichenfolge|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
-|`initialRun`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob der Befehl zunächst ohne Parameter ausgeführt werden soll. Standard: `false`|
-|`context`|Zeichenfolgenarray|3||Definiert, wo die Nachrichtenerweiterung aufgerufen werden kann. Eine beliebige Kombination von `compose`, `commandBox`, `message`. Der Standardwert ist `["compose", "commandBox"]`|
+|`initialRun`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt werden soll. Standard: `false`|
+|`context`|Array von Zeichenfolgen|3||Definiert, wo die Nachrichtenerweiterung aufgerufen werden kann. Jede Kombination von `compose`, `commandBox`, `message`. Standard ist `["compose", "commandBox"]`|
 |`fetchTask`|Boolesch|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden soll.|
-|`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das bei Verwendung eines Befehls für die Nachrichtenerweiterung vorab geladen werden soll.|
+|`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das vorab geladen werden soll, wenn Sie einen Nachrichtenerweiterungsbefehl verwenden.|
 |`taskInfo.title`|Zeichenfolge|64||Titel des ersten Dialogfelds.|
 |`taskInfo.width`|Zeichenfolge|||Dialogfensterbreite: entweder eine Angabe in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
 |`taskInfo.height`|Zeichenfolge|||Dialogfensterhöhe: entweder eine Angabe in Pixeln oder ein Standardlayout, z. B. "groß", "mittel" oder "klein".|
 |`taskInfo.url`|Zeichenfolge|||Anfängliche WebView-URL.|
-|`messageHandlers`|Array von Objekten|5||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind. Domänen müssen auch in `validDomains`aufgeführt sein.|
+|`messageHandlers`|Array von Objekten|5||Eine Liste von Handlern, die das Aufrufen von Apps zulassen, wenn bestimmte Bedingungen erfüllt sind. Domains müssen auch in aufgeführt werden `validDomains`.|
 |`messageHandlers.type`|Zeichenfolge|||Der Typ des Nachrichtenhandlers. Muss `"link"` sein.|
-|`messageHandlers.value.domains`|Zeichenfolgenarray|||Array von Domänen, für die sich der Link-Nachrichtenhandler registrieren kann.|
-|`parameters`|Array des Objekts|5|✔|Die Liste der Parameter, die der Befehl verwendet. Mindestens: 1; maximal: 5|
+|`messageHandlers.value.domains`|Array von Zeichenfolgen|||Array von Domänen, für die sich der Link-Nachrichtenhandler registrieren kann.|
+|`parameters`|Objekt-Array|5|✔|Die Liste der Parameter, die der Befehl verwendet. Minimum: 1; Maximum: 5|
 |`parameter.name`|String|64 Zeichen|✔|Der Name des Parameters, wie er im Client angezeigt wird. Dies ist in der Benutzeranforderung enthalten.|
 |`parameter.title`|Zeichenfolge|32 Zeichen|✔|Benutzerfreundlicher Titel für den Parameter.|
 |`parameter.description`|Zeichenfolge|128 Zeichen||Benutzerfreundliche Zeichenfolge, die den Zweck dieses Parameters beschreibt.|
-|`parameter.inputType`|Zeichenfolge|128 Zeichen||Definiert den Typ des Steuerelements, das in einem Aufgabenmodul für `fetchTask: true`angezeigt wird. Einer von `text`, `textarea`, `number`, `date`, `time`, `toggle`. `choiceset`|
-|`parameter.choices`|Array von Objekten|10||Die Auswahloptionen für die `choiceset`. Verwenden Sie nur, wenn `parameter.inputType` `choiceset`ist .|
+|`parameter.inputType`|Zeichenfolge|128 Zeichen||Definiert den Typ des Steuerelements, das in einem Aufgabenmodul für `fetchTask: true` angezeigt wird. Einer von `text`, `textarea`, `number`, `date`, `time`, `toggle`. `choiceset`|
+|`parameter.choices`|Array von Objekten|10||Die Auswahloptionen für `choiceset`. Wird nur verwendet, wenn `parameter.inputType` `choiceset` ist.|
 |`parameter.choices.title`|Zeichenfolge|128||Titel der Auswahl.|
 |`parameter.choices.value`|Zeichenfolge|512||Value of the choice.|
 
@@ -512,18 +512,18 @@ Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 
 Optional:
 
-Ein Array, das `string` angibt, welche Berechtigungen die App anfordert, wodurch Endbenutzer wissen, wie die Erweiterung ausgeführt wird. Die folgenden Optionen sind nicht exklusiv:
+Ein Array davon `string` gibt an, welche Berechtigungen die App anfordert, wodurch Endbenutzer wissen, wie die Erweiterung funktioniert. Die folgenden Optionen sind nicht exklusiv:
 
 * `identity` &emsp; Erfordert Benutzeridentitätsinformationen.
 * `messageTeamMembers`&emsp; Erfordert die Berechtigung, direkte Nachrichten an Teammitglieder zu senden.
 
-Wenn Sie diese Berechtigungen beim Aktualisieren Ihrer App ändern, wiederholen Die Benutzer den Zustimmungsprozess bei der ersten Ausführung der aktualisierten App.
+Das Ändern dieser Berechtigungen beim Aktualisieren Ihrer App führt dazu, dass Ihre Benutzer den Zustimmungsprozess wiederholen, wenn sie die aktualisierte App zum ersten Mal ausführen.
 
 ## <a name="devicepermissions"></a>devicePermissions
 
 **Optional** Zeichenfolgenarray
 
-Gibt die systemeigenen Features auf dem Gerät eines Benutzers an, auf die Ihre App möglicherweise Zugriff anfordern kann. Mögliche Optionen sind:
+Gibt die nativen Funktionen auf dem Gerät eines Benutzers an, auf die Ihre App möglicherweise Zugriff anfordert. Optionen sind:
 
 * `geolocation`
 * `media`
@@ -533,14 +533,14 @@ Gibt die systemeigenen Features auf dem Gerät eines Benutzers an, auf die Ihre 
 
 ## <a name="validdomains"></a>validDomains
 
-**Optional**, mit Ausnahme **von "Erforderlich"** , sofern angegeben
+**Optional**, außer **Erforderlich**, wo angegeben
 
-Eine Liste gültiger Domänen, von denen die App erwartet, dass inhalte geladen werden. Domäneneinträge können beispielsweise `*.example.com`Platzhalter enthalten. Dies entspricht genau einem Segment der Domäne. wenn Sie übereinstimmen `a.b.example.com` müssen, verwenden Sie `*.*.example.com`dann . Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne außer derjenigen navigieren muss, die für die Registerkartenkonfiguration verwendet wird, muss diese Domäne hier angegeben werden.
+Eine Liste gültiger Domänen, von denen die App erwartet, Inhalte zu laden. Domain-Auflistungen können Platzhalter enthalten, zum Beispiel `*.example.com`. Dies entspricht genau einem Segment der Domäne; Wenn Sie übereinstimmen müssen, verwenden `a.b.example.com` Sie `*.*.example.com`. Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der einen Verwendung für die Registerkartenkonfiguration navigieren muss, muss diese Domäne hier angegeben werden.
 
-Es ist **jedoch nicht** erforderlich, die Domänen von Identitätsanbietern, die Sie unterstützen möchten, in Ihre App aufzunehmen. Um sich beispielsweise mit einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten, aber Sie sollten accounts.google.com nicht in `validDomains[]`einschließen.
+Es ist jedoch **nicht** erforderlich, die Domains von Identitätsanbietern, die Sie unterstützen möchten, in Ihre App aufzunehmen. Um sich beispielsweise mit einer Google-ID zu authentifizieren, muss zu accounts.google.com umgeleitet werden, aber Sie sollten accounts.google.com nicht in einschließen `validDomains[]`.
 
 > [!IMPORTANT]
-> Fügen Sie keine Domänen hinzu, die sich außerhalb Ihres Steuerelements befinden, weder direkt noch über Platzhalter. Ist z. B. `yourapp.onmicrosoft.com` gültig, aber `*.onmicrosoft.com` ungültig.
+> Fügen Sie keine Domänen hinzu, die sich Ihrer Kontrolle entziehen, weder direkt noch über Platzhalter. Beispielsweise ist gültig, `yourapp.onmicrosoft.com` aber nicht `*.onmicrosoft.com` gültig.
 
 Das Objekt ist ein Array, wobei alle Elemente vom Typ `string` sind.
 
@@ -548,7 +548,7 @@ Das Objekt ist ein Array, wobei alle Elemente vom Typ `string` sind.
 
 Optional:
 
-Geben Sie Ihre Microsoft Azure Active Directory (Azure AD) App-ID und Graph Informationen an, damit sich Benutzer nahtlos bei Ihrer Auzre AD-App anmelden können.
+Geben Sie Ihre Microsoft Azure Active Directory (Azure AD)-App-ID und Graph-Informationen an, damit Benutzer sich nahtlos bei Ihrer Auzre AD-App anmelden können.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
