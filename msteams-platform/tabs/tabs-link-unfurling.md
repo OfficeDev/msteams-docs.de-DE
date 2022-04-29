@@ -1,55 +1,55 @@
 ---
 title: Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 author: Rajeshwari-v
-description: Erfahren Sie, wie Sie einen Link ausblenden, die Phasenansicht öffnen und eine Registerkarte mit Microsoft Teams App anheften. Erfahren Sie mehr über die Phasenansicht und das Aufrufen mithilfe der adaptiven Karte mithilfe von Codebeispielen und Beispielen.
+description: Erfahren Sie Näheres über die Vorschaugenerierung für Links, das Öffnen der Bühnenansicht und das Anheften einer Registerkarte mit der Microsoft Teams-App. Erfahren Sie mehr über die Bühnenansicht und deren Aufruf mithilfe einer adaptiven Karte anhand von Codebeispielen und Beispielen.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: none
-ms.openlocfilehash: 043129d6a81543ac00acf8b64da49f75282823a2
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 0f1d5db388e937fc382a045d40cc47a1350c033b
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104084"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65110295"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 
-Die Phasenansicht ist eine neue Benutzeroberflächenkomponente, mit der Sie den Inhalt rendern können, der im Vollbildmodus in Teams geöffnet und als Registerkarte angeheftet ist.
+Die Bühnenansicht ist eine neue Benutzeroberflächenkomponente zum Rendern von Inhalten, die im Vollbildmodus in Microsoft Teams geöffnet und als Registerkarte angeheftet werden können.
 
-## <a name="stage-view"></a>Phasenansicht
+## <a name="stage-view"></a>Bühnenansicht
 
-Die Phasenansicht ist eine Vollbild-UI-Komponente, die Sie aufrufen können, um Ihre Webinhalte anzuzeigen. Der vorhandene Link-Entfesselungsdienst wird aktualisiert, sodass er verwendet wird, um URLs mithilfe einer adaptiven Karte und Chatdiensten in eine Registerkarte umzuwandeln. Wenn ein Benutzer eine URL in einem Chat oder Kanal sendet, wird die URL auf einer adaptiven Karte bereitgestellt. Der Benutzer kann " **Ansicht** auf der Karte" auswählen und den Inhalt direkt aus der Phasenansicht als Registerkarte anheften.
+Die Bühnenansicht ist eine Vollbild-Benutzeroberflächenkomponente, die Sie aufrufen können, um Webinhalte anzuzeigen. Der bestehende Dienst zum Generieren von Link-Vorschauen wurde so aktualisiert, dass URLs mithilfe einer adaptiven Karte und Chatdiensten in eine Registerkarte umgewandelt werden können. Wenn ein Benutzer eine URL in einem Chat oder Kanal sendet, wird eine Vorschau der URL auf einer adaptiven Karte bereitgestellt. Der Benutzer kann auf **Ansicht** auf der Karte klicken und den Inhalt direkt aus der Bühnenansicht als Registerkarte anheften.
 
-## <a name="advantage-of-stage-view"></a>Vorteile der Phasenansicht
+## <a name="advantage-of-stage-view"></a>Vorteile der Bühnenansicht
 
-Die Phasenansicht bietet eine nahtlosere Erfahrung beim Anzeigen von Inhalten in Teams. Benutzer können die von Ihrer App bereitgestellten Inhalte öffnen und anzeigen, ohne den Kontext zu verlassen, und sie können die Inhalte an den Chat oder Kanal anheften, um künftig schnell darauf zugreifen zu können, was zu einer höheren Benutzerbindung mit Ihrer App führt.
+Die Bühnenansicht ermöglicht eine nahtlosere Anzeige von Inhalten in Microsoft Teams. Benutzer können die von Ihrer App bereitgestellten Inhalte öffnen und anzeigen, ohne den aktuellen Kontext zu verlassen, und sie können die Inhalte im Chat oder Kanal anheften, um künftig schnell darauf zugreifen zu können, was zu einer höheren Benutzerbindung für Ihre App führt.
 
-## <a name="stage-view-vs-task-module"></a>Phasenansicht im Vergleich zum Aufgabenmodul
+## <a name="stage-view-vs-task-module"></a>Bühnenansicht im Vergleich zum Aufgabenmodul
 
-|Phasenansicht|Aufgabenmodul|
+|Bühnenansicht|Aufgabenmodul|
 |:-----------|:-----------|
-|Die Phasenansicht ist nützlich, wenn Sie umfangreiche Inhalte für die Benutzer anzeigen können, z. B. eine Seite, ein Dashboard, eine Datei usw. Es bietet umfangreiche Features, die ihnen helfen, Ihre Inhalte im Vollbildbereich zu rendern.|[Das Aufgabenmodul](../task-modules-and-cards/task-modules/task-modules-tabs.md) ist besonders nützlich, um Nachrichten anzuzeigen, die Aufmerksamkeit des Benutzers erfordern, oder um Informationen zu sammeln, die erforderlich sind, um zum nächsten Schritt zu wechseln.|
+|Die Bühnenansicht ist nützlich, wenn den Benutzern vielfältige Inhalte angezeigt werden sollen, z. B. eine Seite, ein Dashboard, eine Datei usw. Sie bietet umfangreiche Features zum Rendern Ihrer Inhalte im Vollbildbereich.|[Das Aufgabenmodul](../task-modules-and-cards/task-modules/task-modules-tabs.md) ist besonders nützlich, um Nachrichten anzuzeigen, welche die Aufmerksamkeit des Benutzers erfordern, oder um Informationen zu sammeln, die für den nächsten Schritt erforderlich sind.|
   
-## <a name="invoke-stage-view"></a>Phasenansicht aufrufen
+## <a name="invoke-stage-view"></a>Die Bühnenansicht aufrufen
 
-Sie können die Phasenansicht auf folgende Weise aufrufen:
+Sie können die Bühnenansicht auf folgende Weise aufrufen:
 
-* [Aufrufen der Phasenansicht über adaptive Karte](#invoke-stage-view-from-adaptive-card)
-* [Aufrufen der Phasenansicht über Deep Link](#invoke-stage-view-through-deep-link)
+* [Aufrufen der Bühnenansicht über eine adaptive Karte](#invoke-stage-view-from-adaptive-card)
+* [Aufrufen der Bühnenansicht über einen Deep-Link](#invoke-stage-view-through-deep-link)
 
-## <a name="invoke-stage-view-from-adaptive-card"></a>Aufrufen der Phasenansicht über adaptive Karte
+## <a name="invoke-stage-view-from-adaptive-card"></a>Aufrufen der Bühnenansicht über eine adaptive Karte
 
-Wenn der Benutzer eine URL auf dem Teams Desktopclient eingibt, wird der Bot aufgerufen und gibt eine [adaptive Karte](../task-modules-and-cards/cards/cards-actions.md) mit der Option zum Öffnen der URL in einer Phase zurück. Nachdem eine Phase gestartet und bereitgestellt `tabInfo` wurde, können Sie die Möglichkeit hinzufügen, die Phase als Registerkarte anzuheften.  
+Wenn der Benutzer eine URL auf dem Microsoft Teams-Desktopclient eingibt, wird der Bot aufgerufen, welcher eine [adaptive Karte](../task-modules-and-cards/cards/cards-actions.md) mit der Option zum Öffnen der URL in der Bühnenansicht zurückgibt. Sie können die Möglichkeit hinzufügen, die Bühnenansicht als Registerkarte anzuheften, nachdem sie gestartet und `tabInfo` bereitgestellt wurde.  
 
-Die folgenden Bilder zeigen eine Phase, die von einer adaptiven Karte geöffnet wurde:
+Die folgenden Bilder zeigen eine Bühnenansicht, die über eine adaptive Karte geöffnet wurde:
 
-[![Öffnen einer Phase mit adaptiver Karte](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
+[![Öffnen einer Bühnenansicht über eine adaptive Karte](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
 
-[![Öffnen einer Phase](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
+[![Öffnen einer Bühnenansicht](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
 
 ### <a name="example"></a>Beispiel
 
-Im Folgenden sehen Sie den Code zum Öffnen einer Phase von einer adaptiven Karte:
+Im Folgenden sehen Sie den Code zum Öffnen einer Bühnenansicht über eine adaptive Karte:
 
 ```json
 {
@@ -72,38 +72,38 @@ Im Folgenden sehen Sie den Code zum Öffnen einer Phase von einer adaptiven Kart
 } 
 ```
 
-Der `invoke` Anforderungstyp muss sein `composeExtension/queryLink`.
+Der `invoke`-Anforderungstyp muss `composeExtension/queryLink` sein.
 
 > [!NOTE]
 >
-> * `invoke` Der Workflow ähnelt dem aktuellen `appLinking` Workflow.
-> * Um konsistenzerhalten zu können, wird empfohlen, den Namen als `View`zu benennen`Action.Submit`.
-> * `websiteUrl` ist eine erforderliche Eigenschaft, die `TabInfo` im Objekt übergeben werden soll.
+> * Der `invoke`-Workflow ähnelt dem aktuellen `appLinking`-Workflow.
+> * Zur Gewährleistung der Einheitlichkeit wird empfohlen, `Action.Submit` als `View` zu benennen.
+> * `websiteUrl` ist eine erforderliche Eigenschaft, die im `TabInfo`-Objekt übergeben werden muss.
 
-Im Folgenden sehen Sie den Prozess zum Aufrufen der Phasenansicht:
+Im Folgenden sehen Sie den Ablauf zum Aufrufen der Bühnenansicht:
 
-* Wenn der Benutzer **"Ansicht"** auswählt, erhält der Bot eine `invoke` Anforderung. Der Anforderungstyp ist `composeExtension/queryLink`.
-* `invoke` Antwort von Bot enthält eine adaptive Karte mit darin enthaltenem Typ `tab/tabInfoAction` .
-* Der Bot antwortet mit einem `200` Code.
+* Wenn der Benutzer **Ansicht** auswählt, erhält der Bot eine `invoke`-Anforderung. Der Anforderungstyp ist `composeExtension/queryLink`.
+* Die `invoke`-Antwort des Bots enthält eine adaptive Karte mit darin enthaltenem Typ `tab/tabInfoAction`.
+* Der Bot antwortet mit einem `200`-Code.
 
 > [!NOTE]
-> Auf Teams mobilen Clients öffnet das Aufrufen der Phasenansicht für Apps, die über den [Teams Store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) verteilt werden und keine moblieoptimierte Oberfläche haben, den Standardwebbrowser des Geräts. Der Browser öffnet die im `websiteUrl` Parameter des `TabInfo` Objekts angegebene URL.
+> Auf mobilen Microsoft Teams-Clients wird beim Aufrufen der Bühnenansicht für Apps, die über den [Microsoft Teams Store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) verteilt werden und für die es keine für Mobilgeräte optimierte Version gibt, der Standardwebbrowser des Geräts geöffnet. Der Browser öffnet die im `websiteUrl`-Parameter des `TabInfo`-Objekts angegebene URL.
 
-## <a name="invoke-stage-view-through-deep-link"></a>Aufrufen der Phasenansicht über Deep Link
+## <a name="invoke-stage-view-through-deep-link"></a>Aufrufen der Bühnenansicht über einen Deep-Link
 
-Um die Phasenansicht über Deep-Link von Ihrer Registerkarte aufzurufen, müssen Sie die Deep-Link-URL in der `microsoftTeams.executeDeeplink(url)` API umschließen. Der Deep-Link kann auch durch eine `OpenURL` Aktion auf der Karte übergeben werden.
+Um die Bühnenansicht über einen Deep-Link von Ihrer Registerkarte aufzurufen, müssen Sie die Deep-Link-URL in der `microsoftTeams.executeDeeplink(url)`-API umschließen. Der Deep-Link kann auch durch eine `OpenURL`-Aktion auf der Karte übergeben werden.
 
 ### <a name="syntax"></a>Syntax
 
-Es folgt die Deeplink-Syntax:
+Die Deep-Link-Syntax sieht wie folgt aus:
 
 https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}
  
 ### <a name="examples"></a>Beispiele
 
-Wenn ein Benutzer eine URL eingibt, wird sie auf einer adaptiven Karte eingeblendet.
+Wenn ein Benutzer eine URL eingibt, wird eine Vorschau davon auf einer adaptiven Karte generiert.
 
-Im Folgenden sind die Deep-Link-Beispiele zum Aufrufen der Phasenansicht aufgeführt:
+Im Folgenden sind die Deep-Link-Beispiele zum Aufrufen der Bühnenansicht aufgeführt:
 
 **Beispiel 1: URL mit threadId**
 
@@ -126,27 +126,27 @@ Codiert
 https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D
 
 > [!NOTE]
-> Alle Deeplinks müssen vor dem Einfügen der URL codiert werden. Nicht codierte URLs werden nicht unterstützt.
+> Alle Deep-Links müssen vor dem Einfügen der URL codiert werden. Nicht codierte URLs werden nicht unterstützt.
 >
-> * Dies `name` ist optional in Deep-Link. Wenn er nicht enthalten ist, wird er durch den App-Namen ersetzt.
-> * Der Deep-Link kann auch durch eine `OpenURL` Aktion übergeben werden.
-> * Wenn Sie eine Phase aus einem bestimmten Kontext starten, stellen Sie sicher, dass Ihre App in diesem Kontext funktioniert. Wenn Ihre Phasenansicht beispielsweise über eine persönliche App gestartet wird, müssen Sie sicherstellen, dass Ihre App über einen persönlichen Bereich verfügt.
+> * `name` ist in Deep-Links optional. Wenn er nicht enthalten ist, wird er durch den App-Namen ersetzt.
+> * Der Deep-Link kann auch durch eine `OpenURL`-Aktion übergeben werden.
+> * Wenn Sie eine Bühnenansicht aus einem bestimmten Kontext starten, stellen Sie sicher, dass Ihre App in diesem Kontext funktioniert. Wenn die Bühnenansicht beispielsweise über eine persönliche App gestartet wird, müssen Sie sicherstellen, dass Ihre App über einen persönlichen Bereich verfügt.
 
-## <a name="tab-information-property"></a>Registerkarteninformationseigenschaft
+## <a name="tab-information-property"></a>Eigenschaften für Registerkarteninformationen
 
-| Eigenschaftenname | Typ | Anzahl der Zeichen | Beschreibung |
+| Eigenschaftenname | Typ | Anzahl Zeichen | Beschreibung |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | Zeichenfolge | 64 | Diese Eigenschaft ist ein eindeutiger Bezeichner für die Entität, die auf der Registerkarte angezeigt wird. Dies ist ein Pflichtfeld.|
-| `name` | Zeichenfolge | 128 | Diese Eigenschaft ist der Anzeigename der Registerkarte in der Kanalschnittstelle. Dieses Feld ist optional.|
-| `contentUrl` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, die auf die Entitätsbenutzeroberfläche verweist, die im Teams Zeichenbereich angezeigt werden soll. Dies ist ein Pflichtfeld.|
-| `websiteUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, auf die zeigen soll, wenn ein Benutzer die Ansicht in einem Browser auswählt. Dies ist ein Pflichtfeld.|
+| `entityId` | Zeichenfolge | 64 | Diese Eigenschaft ist ein eindeutiger Bezeichner für die von der Registerkarte angezeigte Entität. Dies ist ein Pflichtfeld.|
+| `name` | Zeichenfolge | 128 | Diese Eigenschaft ist der Anzeigename der Registerkarte auf der Kanaloberfläche. Dieses Feld ist optional.|
+| `contentUrl` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https://-URL, die auf die Entitäts-Benutzeroberfläche verweist, die im Microsoft Teams-Canvas angezeigt werden soll. Dies ist ein Pflichtfeld.|
+| `websiteUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, auf die verwiesen werden soll, wenn ein Benutzer die Ansicht in einem Browser auswählt. Dies ist ein Pflichtfeld.|
 | `removeUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, die auf die Benutzeroberfläche verweist, die angezeigt werden soll, wenn der Benutzer die Registerkarte löscht. Dies ist ein optionales Feld.|
 
 ## <a name="code-sample"></a>Codebeispiel
 
 | Beispielname | Beschreibung | C# |Node.js|
 |-------------|-------------|------|----|
-|Registerkarte in der Phasenansicht |Microsoft Teams Registerkartenbeispiel-App zum Demonstrieren der Registerkarte in der Phasenansicht.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+|Registerkarte in der Bühnenansicht |Beispiel-App für Microsoft Teams-Registerkarten zum Demonstrieren einer Registerkarte in der Bühnenansicht.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
 
 ## <a name="next-step"></a>Nächster Schritt
 
@@ -155,7 +155,7 @@ https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?conte
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Verbreitung von Nachrichtenerweiterungen](~/messaging-extensions/how-to/link-unfurling.md)
-* [Teams Registerkarten](~/tabs/what-are-tabs.md)
+* [Link-Vorschaugenerierung für Nachrichtenerweiterungen](~/messaging-extensions/how-to/link-unfurling.md)
+* [Microsoft Teams-Registerkarten](~/tabs/what-are-tabs.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
 * [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)

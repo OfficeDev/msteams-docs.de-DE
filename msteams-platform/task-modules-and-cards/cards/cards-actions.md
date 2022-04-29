@@ -1,19 +1,19 @@
 ---
 title: Hinzufügen von Kartenaktionen in einem Bot
 description: Beschreibt Kartenaktionen in Microsoft Teams und deren Verwendung in Ihren Bots
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: conceptual
 keywords: Teams-Bots – Kartenaktionen
-ms.openlocfilehash: 12100ca05d8e4ff4f68c934bc82e1f078dd0210e
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 7650ec5f3b027396226f8250aa353d48e8c9e0f3
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103909"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111577"
 ---
 # <a name="card-actions"></a>Kartenaktionen
 
-Karten, die von Bots und Nachrichtenerweiterungen in Teams verwendet werden, unterstützen die folgenden Aktivitätstypen[`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards):
+Karten, die von Bots und Nachrichtenerweiterungen in Teams verwendet werden, unterstützen die folgenden [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) Aktivitätstypen:
 
 > [!NOTE]
 > Die `CardAction`-Aktionen unterscheiden sich von `potentialActions` für Office 365-Connectorkarten, wenn sie von Connectors verwendet werden.
@@ -23,7 +23,7 @@ Karten, die von Bots und Nachrichtenerweiterungen in Teams verwendet werden, unt
 | `openUrl` | Öffnet eine URL im Standardbrowser. |
 | `messageBack` | Sendet eine Nachricht und Nutzlast vom Benutzer, der die Schaltfläche ausgewählt oder auf die Karte getippt hat, an den Bot. Sendet eine separate Nachricht an den Chatstream. |
 | `imBack`| Sendet eine Nachricht vom Benutzer, der die Schaltfläche ausgewählt oder auf die Karte getippt hat, an den Bot. Diese Nachricht vom Benutzer zum Bot ist für alle Unterhaltungsteilnehmer sichtbar. |
-| `invoke` | Sendet eine Nachricht und Nutzlast vom Benutzer, der die Schaltfläche ausgewählt oder auf die Karte getippt hat, an den Bot. Diese Nachricht ist nicht sichtbar. |
+| `invoke` | Sendet eine Nachricht und Payload von dem Benutzer, der die Schaltfläche ausgewählt oder auf die Karte getippt hat, an den Bot. Diese Meldung ist nicht sichtbar. |
 | `signin` | Initiiert den OAuth-Fluss, sodass Bots eine Verbindung mit sicheren Diensten herstellen können. |
 
 > [!NOTE]
@@ -31,7 +31,7 @@ Karten, die von Bots und Nachrichtenerweiterungen in Teams verwendet werden, unt
 >* Teams unterstützt keine `CardAction`-Typen, die in der vorherigen Tabelle nicht aufgeführt sind.
 >* Teams unterstützt die `potentialActions`-Eigenschaft nicht.
 >* Kartenaktionen unterscheiden sich von [vorgeschlagenen Aktionen](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot-Framework oder Azure Bot Service. Vorgeschlagene Aktionen werden in Microsoft Teams nicht unterstützt. Wenn Schaltflächen in einer Teams-Botnachricht angezeigt werden sollen, verwenden Sie eine Karte.
->* Wenn Sie eine Kartenaktion als Teil einer Nachrichtenerweiterung verwenden, funktionieren die Aktionen erst, wenn die Karte an den Kanal übermittelt wird. Die Aktionen funktionieren nicht, während sich die Karte im Feld "Nachricht verfassen" befindet.
+>* Wenn Sie eine Kartenaktion als Teil einer Nachrichtenerweiterung verwenden, funktionieren die Aktionen erst, wenn die Karte an den Kanal gesendet wird. Die Aktionen funktionieren nicht, während sich die Karte im Feld "Nachricht verfassen" befindet.
 
 ## <a name="action-type-openurl"></a>openUrl-Aktionstyp
 

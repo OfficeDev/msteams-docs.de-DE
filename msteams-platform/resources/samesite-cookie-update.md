@@ -1,94 +1,94 @@
 ---
 title: SameSite-Cookieattribut
 author: laujan
-description: Erfahren Sie mehr über Arten von Cookies, einschließlich SameSite-Cookies, deren Attribute, ihre Auswirkungen auf Teams Registerkarten, Aufgabenmodule und Nachrichtenerweiterungen sowie deren Authentifizierung in Teams
+description: Erfahren Sie mehr über verschiedene Arten von Cookies, einschließlich SameSite-Cookies, deren Attribute, ihre Auswirkungen auf Microsoft Teams-Registerkarten, Aufgabenmodule und Nachrichtenerweiterungen sowie deren Authentifizierung in Microsoft Teams.
 keywords: Cookieattribute samesite
 ms.topic: reference
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lomeybur
-ms.openlocfilehash: 1fbaf46da93a0d7c253f1f5d2ad6c9ae1764565a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 7bf6d5a986a2111ba624534aa13b0aaa2866120c
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104490"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65110337"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite-Cookieattribut
 
-Cookies sind Textzeichenfolgen, die von Websites gesendet und vom Webbrowser auf einem Computer gespeichert werden. Sie werden für die Authentifizierung und Personalisierung verwendet. Cookies werden beispielsweise verwendet, um zustandsbehaftete Informationen zurückzurufen, Benutzereinstellungen beizubehalten, Browseraktivitäten aufzuzeichnen und relevante Anzeigen anzuzeigen. Cookies sind immer mit einer bestimmten Domäne verknüpft und werden von verschiedenen Parteien installiert.
+Cookies sind Textzeichenfolgen, die von Websites gesendet und vom Webbrowser auf einem Computer gespeichert werden. Sie werden für Authentifizierung und Personalisierung verwendet. Cookies werden beispielsweise verwendet, um Statusinformationen abzurufen, Benutzereinstellungen beizubehalten, Browseraktivitäten aufzuzeichnen und relevante Werbeanzeigen einzublenden. Cookies sind immer mit einer bestimmten Domäne verknüpft und werden von verschiedenen Parteien installiert.
 
 ## <a name="types-of-cookies"></a>Arten von Cookies
 
-Die Cookietypen und ihre entsprechenden Bereiche lauten wie folgt:
+Arten von Cookies und entsprechende Anwendungsbereiche:
 
 |Cookie|Bereich|
 | ------ | ------ |
-|First Party Cookie|Ein First Party Cookie wird von Websites erstellt, die ein Benutzer besucht. Es wird verwendet, um Daten, z. B. Einkaufswagenartikel, Anmeldeinformationen zu speichern. Beispielsweise Authentifizierungscookies und andere Analysen.|
-|Second Party Cookie|Ein Second Party Cookie ist technisch identisch mit einem First Party Cookie. Der Unterschied besteht darin, dass Daten über eine Datenpartnerschaftsvereinbarung an eine zweite Partei weitergegeben werden. Beispielsweise [Microsoft Teams Analyse und Berichterstellung](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). |
-|Cookie von Drittanbietern|Ein Drittanbieter-Cookie wird von einer anderen Domäne als der, die der Benutzer explizit besucht hat, installiert und hauptsächlich zum Nachverfolgen verwendet. Beispiel: **"Gefällt mir** "-Schaltflächen, Anzeigendienst und Live-Chats.|
+|Cookies von Erstanbietern|Ein Erstanbieter-Cookie wird von Websites erstellt, die ein Benutzer besucht. Es wird verwendet, um Daten wie z. B. Einkaufswagenartikel und Anmeldeinformationen zu speichern. Dazu gehören beispielsweise Authentifizierungscookies und andere Analyse-Cookies.|
+|Zweitparteien-Cookies|Ein Zweitparteien-Cookie ist technisch gesehen dasselbe wie ein Erstanbieter-Cookie. Der Unterschied besteht darin, dass Daten auf der Grundlage einer Datenpartnerschaftsvereinbarung an eine zweite Partei übermittelt werden. Beispielsweise für [Microsoft Teams–Analysen und -Berichte](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). |
+|Cookies von Drittanbietern|Ein Drittanbieter-Cookie wird von einer anderen Domäne als der, die der Benutzer besucht hat, abgelegt und hauptsächlich für das Tracking verwendet. Beispiele: **Gefällt mir**-Schaltflächen, Werbeanzeigen und Live-Chats.|
 
 ## <a name="cookies-and-http-requests"></a>Cookies und HTTP-Anforderungen
 
-Vor der Einführung der SameSite-Einschränkungen wurden die Cookies im Browser gespeichert. Sie wurden an jede HTTP-Webanforderung angefügt und vom HTTP-Antwortheader an den `Set Cookie` Server gesendet. Mit dieser Methode wurden Sicherheitslücken eingeführt, z. B. siteübergreifende Anforderungsfälschung, die als CSRF-Angriffe bezeichnet werden. Die SameSite-Komponente verringerte die Belichtung durch ihre Implementierung und Verwaltung im SetCookie-Header.
+Vor der Einführung der SameSite-Einschränkungen wurden die Cookies im Browser gespeichert. Sie wurden an jede HTTP-Webanforderung angefügt und über den `Set Cookie`-HTTP-Antwortheader an den Server gesendet. Dadurch wurden Sicherheitslücken eingeführt, z. B. siteübergreifende Anforderungsfälschungen, die als CSRF-Angriffe bezeichnet werden. Durch die SameSite-Komponente wurde dieses Risiko verringert dank deren Implementierung und Verwaltung im SetCookie-Header.
 
-## <a name="samesite-cookie-attribute-initial-release"></a>SameSite-Cookieattribut: erste Version
+## <a name="samesite-cookie-attribute-initial-release"></a>SameSite-Cookieattribut: erste Veröffentlichung
 
-Google Chrome Version 51 hat die `SetCookie SameSite` Spezifikation als optionales Attribut eingeführt. Ab Build 17672 Windows 10 sameSite-Cookieunterstützung für den [MicrosoftEdge-Browser&nbsp;](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/) eingeführt.
+Die `SetCookie SameSite`-Spezifikation wurde als optionales Attribut in Google Chrome Version 51 eingeführt. Ab Build 17672 bietet Windows 10 sameSite-Cookieunterstützung für den [Microsoft&nbsp;Edge-Browser](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/).
 
-Sie können das Hinzufügen des SameSite-Cookieattributs zur `SetCookie` Kopfzeile deaktivieren oder es mit einer der beiden Einstellungen **Lax** und **Strict** hinzufügen. Ein nicht implementiertes SameSite-Attribut wurde als Standardzustand betrachtet.
+Sie können das Hinzufügen des SameSite-Cookieattributs zum `SetCookie`-Header deaktivieren oder es mit einer von zwei Einstellungen hinzufügen, **Lax** und **Strict**. Ein nicht implementiertes SameSite-Attribut wurde als Standardzustand betrachtet.
 
 ## <a name="samesite-cookie-attribute-2020-release"></a>SameSite-Cookieattribut: Version 2020
 
-Chrome 80, veröffentlicht im Februar 2020, führt neue Cookie-Werte ein und erzwingt standardmäßig Cookie-Richtlinien. Drei Werte werden an das aktualisierte SameSite-Attribut übergeben: **Strict**, **Lax** oder **None**. Wenn nicht angegeben, verwendet das SameSite-Attribut von Cookies standardmäßig den Wert `SameSite=Lax` .
+In Chrome 80, veröffentlicht im Februar 2020, wurden neue Cookie-Werte eingeführt und es werden standardmäßig Cookie-Richtlinien erzwungen. Drei Werte werden im aktualisierten SameSite-Attribut übergeben: **Strict**, **Lax** oder **None**. Wenn nicht angegeben, verwendet das SameSite-Attribut von Cookies standardmäßig den Wert `SameSite=Lax`.
 
-SameSite-Cookieattribute lauten wie folgt:
+SameSite-Cookieattribute:
 
-|Setting | Durchsetzung | Wert |Attributspezifikation |
+|Einstellung | Erzwingung | Wert |Attributspezifikation |
 | -------- | ----------- | --------|--------|
-| **Lax**  | Cookies werden automatisch nur in einem **Erstanbieterkontext** und mit HTTP GET-Anforderungen gesendet. SameSite-Cookies werden bei websiteübergreifenden Unteranforderungen, z. B. Aufrufen zum Laden von Bildern oder iFrames, einbehalten. Sie wurden gesendet, wenn ein Benutzer von einer externen Website aus zu der URL navigiert, z. B. durch Folgen eines Links.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
-| **Streng** |Der Browser sendet Cookies nur für Kontextanforderungen von Erstanbietern. Dies sind Anforderungen, die von der Website stammen, die das Cookie festgelegt hat. Wenn die Anforderung von einer anderen URL als der des aktuellen Speicherorts stammt, werden keine der mit dem `Strict` Attribut markierten Cookies gesendet.| Optional |`Set-Cookie: key=value; SameSite=Strict`|
-| **Keine** | Cookies werden sowohl im Erstanbieterkontext als auch in Ursprungsübergreifenden Anfragen gesendet; Der Wert muss jedoch explizit festgelegt **`None`** werden, und alle Browseranforderungen **müssen dem HTTPS-Protokoll folgen** und das **`Secure`** Attribut enthalten, das eine verschlüsselte Verbindung erfordert. Cookies, die dieser Anforderung nicht entsprechen, werden **abgelehnt**. <br/>**Beide Attribute sind zusammen erforderlich**. Wenn  **`None`** die Angabe ohne **`Secure`**  oder wenn das HTTPS-Protokoll nicht verwendet wird, werden die Cookies von Drittanbietern abgelehnt.| Optional, wenn jedoch festgelegt, ist das HTTPS-Protokoll erforderlich. |`Set-Cookie: key=value; SameSite=None; Secure` |
+| **Lax**  | Cookies werden automatisch nur in einem **Erstanbieterkontext** und mit HTTP GET-Anforderungen gesendet. SameSite-Cookies werden bei untergeordneten websiteübergreifenden Anforderungen, z. B. Aufrufen zum Laden von Bildern oder iFrames, einbehalten. Sie werden gesendet, wenn ein Benutzer von einer externen Website aus zu der URL navigiert, z. B. durch Folgen eines Links.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
+| **Streng** |Der Browser sendet Cookies nur für Erstanbieter-Kontextanforderungen. Dies sind Anforderungen, die von der Website stammen, von der das Cookie abgelegt wurde. Wenn die Anforderung von einer anderen URL als jener der aktuellen Site stammt, werden keine der mit dem `Strict`-Attribut getaggten Cookies gesendet.| Optional |`Set-Cookie: key=value; SameSite=Strict`|
+| **Keine** | Cookies werden sowohl im Erstanbieterkontext als auch in ursprungsübergreifenden Anfragen gesendet. Der Wert muss jedoch explizit auf **`None`** festgelegt werden, und alle Browseranforderungen **müssen dem HTTPS-Protokoll folgen** und das **`Secure`**-Attribut enthalten, welches eine verschlüsselte Verbindung erfordert. Cookies, die dieser Anforderung nicht entsprechen, werden **abgelehnt**. <br/>**Beide Attribute sind zusammen erforderlich**. Wenn  **`None`** ohne **`Secure`** angegeben ist, oder wenn nicht das HTTPS-Protokoll verwendet wird, werden die Drittanbieter-Cookies abgelehnt.| Optional, aber falls festgelegt, ist das HTTPS-Protokoll erforderlich. |`Set-Cookie: key=value; SameSite=None; Secure` |
 
-## <a name="teams-implications-and-adjustments"></a>Teams Auswirkungen und Anpassungen
+## <a name="teams-implications-and-adjustments"></a>Auswirkungen und Anpassungen in Microsoft Teams
 
-1. Aktivieren Sie die entsprechende SameSite-Einstellung für Ihre Cookies, und überprüfen Sie, ob Ihre Apps und Erweiterungen in Teams weiterhin funktionieren.
-1. Wenn Ihre Apps oder Erweiterungen fehlschlagen, führen Sie die erforderlichen Korrekturen vor der Chrome 80-Version aus.
+1. Aktivieren Sie die entsprechende SameSite-Einstellung für Ihre Cookies, und überprüfen Sie dann, ob Ihre Apps und Erweiterungen in Microsoft Teams weiterhin funktionieren.
+1. Wenn bei Ihren Apps oder Erweiterungen Fehler auftreten, nehmen Sie die erforderlichen Korrekturen vor der Chrome 80-Version vor.
 1. Interne Microsoft-Partner können dem folgenden Team beitreten, um weitere Informationen oder Hilfe zu diesem Problem zu erhalten: <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47>.
 
 > [!NOTE]
-> Sie müssen SameSite-Attribute festlegen, um die beabsichtigte Verwendung für Ihre Cookies widerzuspiegeln. Verlassen Sie sich nicht auf das Standardverhalten des Browsers. Weitere Informationen finden Sie unter [Developers: Get Ready for New SameSite=None; Secure Cookie Einstellungen](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html).
+> Sie müssen SameSite-Attribute entsprechend der beabsichtigten Verwendung Ihrer Cookies festlegen. Verlassen Sie sich nicht auf das Standardverhalten von Browsern. Weitere Informationen finden Sie unter [Entwickler: Machen Sie sich bereit für neue sichere Cookie-Einstellungen mit SameSite=None](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html).
 
 ### <a name="tabs-task-modules-and-message-extensions"></a>Registerkarten, Aufgabenmodule und Nachrichtenerweiterungen
 
-* Teams Registerkarten verwenden`<iframes>`, um Inhalte einzubetten, die in einem Kontext der obersten Ebene oder des Erstanbieters angezeigt werden.
+* In Microsoft Teams-Registerkarten werden `<iframes>` verwendet, um Inhalte einzubetten, die in einem Kontext der obersten Ebene oder des Erstanbieters angezeigt werden.
 * Aufgabenmodule ermöglichen Ihnen das Erstellen von modalen Popup-Oberflächen in Ihrer Teams-Anwendung. Ähnlich wie bei einer Registerkarte wird innerhalb der aktuellen Seite ein modales Fenster geöffnet.
-* Mithilfe von Nachrichtenerweiterungen können Sie angereicherte Inhalte aus externen Ressourcen in eine Chatnachricht einfügen.
+* Mithilfe von Nachrichtenerweiterungen können Sie vielfältige Inhalte aus externen Ressourcen in eine Chatnachricht einfügen.
 
-Cookies, die von eingebetteten Inhalten verwendet werden, werden als Drittanbieter betrachtet, wenn die Website in einem `<iframe>`angezeigt wird. Wenn remote-Ressourcen auf einer Seite darauf angewiesen sind, dass Cookies mit einer Anforderung `<img>` und `<script>` Tags, externen Schriftarten und personalisierten Inhalten gesendet werden, müssen Sie sicherstellen, dass diese für die websiteübergreifende Nutzung gekennzeichnet sind, z `SameSite=None; Secure` . B. oder sicherstellen, dass ein Fallback vorhanden ist.
+Cookies, die von eingebetteten Inhalten verwendet werden, werden als Drittanbieter-Cookies betrachtet, wenn die Website in einem `<iframe>` angezeigt wird. Wenn Remote-Ressourcen auf einer Seite darauf angewiesen sind, dass Cookies mit einer `<img>`-Anforderung und `<script>`-Tags, externen Schriftarten und personalisierten Inhalten gesendet werden, müssen Sie sicherstellen, dass diese für die websiteübergreifende Nutzung gekennzeichnet sind, z. B. `SameSite=None; Secure`, oder sicherstellen, dass ein Fallback vorhanden ist.
 
 ### <a name="authentication"></a>Authentifizierung
 
-Sie müssen den webbasierten Authentifizierungsfluss für Folgendes verwenden:
+Sie müssen den webbasierten Authentifizierungsablauf für Folgendes verwenden:
 
-* Eingebettete Inhaltsseiten in Registerkarten.
-* Konfigurationsseite, Aufgabenmodul und Nachrichtenerweiterung.
-* Unterhaltungs-Bot mit einem Aufgabenmodul.
+* Eingebettete Inhaltsseiten in Registerkarten
+* Konfigurationsseiten, Aufgabenmodule und Nachrichtenerweiterungen
+* Unterhaltungs-Bots mit einem Aufgabenmodul
 
-Gemäß den aktualisierten SameSite-Einschränkungen fügt ein Browser kein Cookie zu einer bereits authentifizierten Website hinzu, wenn der Link von einer externen Website abgeleitet wird. Sie müssen sicherstellen, dass Ihre Authentifizierungscookies für die websiteübergreifende Nutzung `SameSite=None; Secure` gekennzeichnet sind, oder sicherstellen, dass ein Fallback vorhanden ist.
+Gemäß den aktualisierten SameSite-Einschränkungen fügt ein Browser kein Cookie zu einer bereits authentifizierten Website hinzu, wenn der Link von einer externen Website stammt. Sie müssen sicherstellen, dass Ihre Authentifizierungscookies für die websiteübergreifende Nutzung gekennzeichnet sind (`SameSite=None; Secure`) oder dass ein Fallback vorhanden ist.
 
 ## <a name="android-system-webview"></a>Android System WebView
 
-Android WebView ist eine Chrome-Systemkomponente, mit der Android-Apps den Webinhalt anzeigen können. Während die neuen Einschränkungen standardmäßig sind, werden sie ab Chrome 80 nicht sofort in WebViews erzwungen. Sie werden in Zukunft angewendet. Zur Vorbereitung ermöglicht Android nativen Apps, Cookies direkt über die [CookieManager-API](https://developer.android.com/reference/android/webkit/CookieManager) festzulegen.
+Android WebView ist eine Chrome-Systemkomponente, mit der Android-Apps Webinhalte anzeigen können. Die neuen Einschränkungen gelten zwar ab Chrome 80 standardmäßig, werden aber nicht sofort in WebViews erzwungen. Sie werden in Zukunft angewendet. Zur Vorbereitung ermöglicht Android nativen Apps, Cookies direkt über die [CookieManager-API](https://developer.android.com/reference/android/webkit/CookieManager) festzulegen.
 
 > [!NOTE]
 >
-> * Sie müssen Cookies von Erstanbietern als `SameSite=Lax` oder `SameSite=Strict`gegebenenfalls deklarieren.
+> * Sie müssen Cookies von Erstanbietern als `SameSite=Lax` oder `SameSite=Strict` deklarieren.
 > * Sie müssen Cookies von Drittanbietern als `SameSite=None; Secure`deklarieren.
 
 ## <a name="see-also"></a>Siehe auch
 
 * [SameSite-Beispiele](https://github.com/GoogleChromeLabs/samesite-examples)
-* [SameSite Cookie Rezepte](https://web.dev/samesite-cookie-recipes/)
+* [SameSite Cookie-Rezepte](https://web.dev/samesite-cookie-recipes/)
 * [Bekannte inkompatible Clients]( https://www.chromium.org/updates/same-site/incompatible-clients)
 * [Entwickler: Machen Sie sich bereit für neue sichere Cookie-Einstellungen mit SameSite=None](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 * [Bevorstehende Änderungen an SameSite-Cookies in ASP.NET und ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
