@@ -4,12 +4,12 @@ description: Beschreibt alle neuen oder aktuellen Entwicklerfunktionen in Micros
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 'Teams: Was sind die neuesten Updates oder Entwicklervorschau und Features'
-ms.openlocfilehash: ba9588517e7b0657eef7da265844e20d8b2fbd76
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 7be0852fad2344a5d57437d928a2a1d386bc4eb3
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073090"
+ms.locfileid: "65104049"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -29,14 +29,14 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 |30.03.2022| Das Modul „Erste Schritte mit der Blazor-App mithilfe von Registerkarten und Bots“ wurde aktualisiert|  Erste Schritte > [Erstellen Ihrer ersten App mit Blazor](sbs-gs-blazorupdate.yml)|
 |30.03.2022|Geräteberechtigungen für den Browser | Integrieren der Gerätefunktionen > [Geräteberechtigungen für den Browser](concepts/device-capabilities/browser-device-permissions.md) |
 |29.03.2022 | Integration der Personenauswahl | Integrieren in Teams > [Integrieren der Personenauswahl](concepts/device-capabilities/people-picker-capability.md)|
-|23.03.2022| Schritt-für-Schritt-Anleitung zum Entfalten von Links in Teams mithilfe des Bots wurde eingeführt | Erstellen von Nachrichtenerweiterungen > Entfalten von Links hinzufügen > [Entfalten von Links in Teams mittels Bot](sbs-botbuilder-linkunfurling.yml)|
+|23.03.2022| Schritt-für-Schritt-Anleitung zum Entfalten von Links in Teams mithilfe des Bots wurde eingeführt | Nachrichtenerweiterungen erstellen > Linkentfaltung hinzufügen > [Links in Teams mit Bot entfalten](sbs-botbuilder-linkunfurling.yml)|
 |22.03.2022| Informationen zum Debugprozess hinzugefügt| • Tools und SDKs> Teams Toolkit für Visual Studio Code > [Lokales Debuggen Ihrer Teams-App](toolkit/debug-local.md) </br> • Tools und SDKs> Teams Toolkit für Visual Studio Code > [Debug-Hintergrundprozess](toolkit/debug-background-process.md)|
 |14.03.2022| Schritt-für-Schritt-Anleitung zum Erstellen und Testen eines Connectors in Microsoft Teams wurde eingeführt | Erstellen von Webhooks und Connectors > Erstellen von Office 365-Connectors > [Erstellen von Teams-Connectors](sbs-teams-connectors.yml)|
 |10.03.2022| Informationen zu Moodle LMS und Microsoft 365-Plug-Ins hinzugefügt | Integrieren mit Teams > Moodle LMS >[ Moodle Lernmanagementsystem](resources/moodle-overview.md)|
 |03.03.2022 | So fügen Sie die Authentifizierung mithilfe eines externen OAuth-Anbieters hinzu.| Authentifizierung hinzufügen > Registerkarten > [Verwenden externer OAuth-Anbieter](tabs/how-to/authentication/auth-oauth-provider.md) |
 |25.02.2022| Schrittweise Anleitung zum Aufrufen von Aufgabenmodulen in Teams eingeführt| Erstellen von Karten und Aufgabenmodulen > Erstellen von Aufgabenmodulen > Verwenden von Aufgabenmodulen aus Bots > [Aufrufen des Aufgabenmoduls von Teams](sbs-botbuilder-taskmodule.yml)|
-|24.02.2022| Schrittweise Anleitung zum Erstellen einer aktionsbasierten Messaging-Erweiterung eingeführt | Erstellen von Messaging-Erweiterungen > Aktionsbefehle > Definieren von Aktionsbefehlen > [Erstellen einer aktionsbasierten Messaging-Erweiterung](sbs-meetingextension-action.yml)|
-|24.02.2022| Schrittweise Anleitung zum Erstellen einer suchbasierten Messaging-Erweiterung eingeführt | Erstellen von Messaging-Erweiterungen > Suchbefehle > Definieren von Suchbefehlen > [Erstellen einer suchbasierten Messaging-Erweiterung](sbs-messagingextension-searchcommand.yml)|
+|24.02.2022| Schrittweise Anleitung zum Erstellen einer aktionsbasierten Nachrichtenerweiterung eingeführt | Nachrichtenerweiterungen erstellen > Aktionsbefehle > Aktionsbefehle definieren > [Aktionsbasierte Nachrichtenerweiterung erstellen](sbs-meetingextension-action.yml)|
+|24.02.2022| Schrittweise Anleitung zum Erstellen einer suchbasierten Nachrichtenerweiterung eingeführt | Erstellen von Nachrichtenerweiterungen > Suchbefehle > Definieren von Suchbefehlen > [Erstellen einer suchbasierten Nachrichtenerweiterung](sbs-messagingextension-searchcommand.yml)|
 |24.02.2022| Schrittweise Anleitung zum Erstellen ausgehender Webhooks eingeführt | Erstellen von Webhooks und Connectors > Erstellen ausgehender Webhooks > [Erstellen ausgehender Webhooks](sbs-outgoing-webhooks.yml)|
 | 23.02.2022 |Bewertungsparameter für Microsoft Teams-Store| Vermarkten Ihrer App > Veröffentlichen im Teams Store > [Bewertungsparameter für Microsoft Teams Store](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 |09.02.2022| Schritt-für-Schritt-Anleitung zum Hochladen von Dateien zu Teams aus einem Bot eingeführt | Erstellen von Bots > Senden und Empfangen von Dateien > [Schritt-für-Schritt-Anleitung zum Hochladen von Dateien zu Teams aus einem Bot](sbs-file-handling-in-bot.yml) |
@@ -71,14 +71,14 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 |30.03.2022| Das Modul „Erste Schritte mit der Blazor-App mithilfe von Registerkarten und Bots“ wurde aktualisiert|  Erste Schritte > [Erstellen Ihrer ersten App mit Blazor](sbs-gs-blazorupdate.yml)|
 |30.03.2022|Geräteberechtigungen für den Browser | Integrieren der Gerätefunktionen > [Geräteberechtigungen für den Browser](concepts/device-capabilities/browser-device-permissions.md) |
 |29.03.2022 |Integration der Personenauswahl | Integrieren in Teams > [Integrieren der Personenauswahl](concepts/device-capabilities/people-picker-capability.md)
-|23.03.2022| Schritt-für-Schritt-Anleitung zum Entfalten von Links in Teams mithilfe des Bots wurde eingeführt | Erstellen von Nachrichtenerweiterungen > Entfalten von Links hinzufügen > [Entfalten von Links in Teams mittels Bot](sbs-botbuilder-linkunfurling.yml)|  
+|23.03.2022| Schritt-für-Schritt-Anleitung zum Entfalten von Links in Teams mithilfe des Bots wurde eingeführt | Nachrichtenerweiterungen erstellen > Linkentfaltung hinzufügen > [Links in Teams mit Bot entfalten](sbs-botbuilder-linkunfurling.yml)|  
 |22.03.2022| Informationen zum Debugprozess hinzugefügt| • Tools und SDKs> Teams Toolkit für Visual Studio Code > [Lokales Debuggen Ihrer Teams-App](toolkit/debug-local.md) </br> • Tools und SDKs> Teams Toolkit für Visual Studio Code > [Debug-Hintergrundprozess](toolkit/debug-background-process.md)|
 |14.03.2022| Schritt-für-Schritt-Anleitung zum Erstellen und Testen eines Connectors in Microsoft Teams wurde eingeführt | Erstellen von Webhooks und Connectors > Erstellen von Office 365-Connectors > [Erstellen von Teams-Connectors](sbs-teams-connectors.yml)|
 |10.03.2022 | Informationen zu Moodle LMS und Microsoft 365-Plug-Ins hinzugefügt | Integrieren mit Teams > Moodle LMS >[ Moodle Lernmanagementsystem](resources/moodle-overview.md)|  
 |03.03.2022 | So fügen Sie die Authentifizierung mithilfe eines externen OAuth-Anbieters hinzu.| Authentifizierung hinzufügen > Registerkarten > [Verwenden externer OAuth-Anbieter](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 25.02.2022| Schrittweise Anleitung zum Aufrufen von Aufgabenmodulen in Teams eingeführt| Erstellen von Karten und Aufgabenmodulen > Erstellen von Aufgabenmodulen > Verwenden von Aufgabenmodulen aus Bots > [Aufrufen des Aufgabenmoduls von Teams](sbs-botbuilder-taskmodule.yml)|
-| 24.02.2022| Schrittweise Anleitung zum Erstellen einer aktionsbasierten Messaging-Erweiterung eingeführt | Erstellen von Messaging-Erweiterungen > Aktionsbefehle > Definieren von Aktionsbefehlen > [Erstellen einer aktionsbasierten Messaging-Erweiterung](sbs-meetingextension-action.yml)|
-| 24.02.2022| Schrittweise Anleitung zum Erstellen einer suchbasierten Messaging-Erweiterung eingeführt | Erstellen von Messaging-Erweiterungen > Suchbefehle > Definieren von Suchbefehlen > [Erstellen einer suchbasierten Messaging-Erweiterung](sbs-messagingextension-searchcommand.yml)|
+| 24.02.2022| Schrittweise Anleitung zum Erstellen einer aktionsbasierten Nachrichtenerweiterung eingeführt | Nachrichtenerweiterungen erstellen > Aktionsbefehle > Aktionsbefehle definieren > [Aktionsbasierte Nachrichtenerweiterung erstellen](sbs-meetingextension-action.yml)|
+| 24.02.2022| Schrittweise Anleitung zum Erstellen einer suchbasierten Nachrichtenerweiterung eingeführt | Erstellen von Nachrichtenerweiterungen > Suchbefehle > Definieren von Suchbefehlen > [Erstellen einer suchbasierten Nachrichtenerweiterung](sbs-messagingextension-searchcommand.yml)|
 | 24.02.2022| Schrittweise Anleitung zum Erstellen ausgehender Webhooks eingeführt | Erstellen von Webhooks und Connectors > Erstellen ausgehender Webhooks > [Erstellen ausgehender Webhooks](sbs-outgoing-webhooks.yml)|
 | 23.02.2022 |Bewertungsparameter für Microsoft Teams-Store| Vermarkten Ihrer App > Veröffentlichen im Teams Store > [Bewertungsparameter für Microsoft Teams Store](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 18.02.2022 | Ein umfangreiches Glossar für die Microsoft Teams-Entwicklerdokumentation wurde eingeführt, damit Sie die Definition eines Begriffs schnell finden können. | [Glossar](~/get-started/glossary.md) |
@@ -111,7 +111,7 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 |24.12.2021| Schrittweise Anleitung zum Erteilen von Berechtigungen für Registerkartengeräte eingeführt | App-Grundlagen > Gerätefunktionen > [Schritt-für-Schritt-Anleitung zum Erteilen von Berechtigungen für Registerkartengeräte](sbs-tab-device-permissions.yml) |
 |23.12.2021| Schritt-für-Schritt-Anleitung für die Erstellung von Registerkarten mit adaptiven Karten eingeführt| Hinzufügen von Authentifizierung > Registerkarten > Verwenden der SSO-Authentifizierung > [Schritt-für-Schritt-Anleitung zum Erstellen von Registerkarten mit adaptiven Karten](sbs-tab-with-adaptive-cards.yml) |
 |21.12.2021 | Die „Erste Schritte“-Module für JavaScript, C# und Node.js für Teams-Toolkit 3.0.0 wurden aktualisiert | • Erste Schritte > [Erstellen Ihrer ersten App mit JavaScript](sbs-gs-javascript.yml) <br> • Erste Schritte > [Erstellen Ihrer ersten App mit C# oder .NET](sbs-gs-csharp.yml) <br> • Erste Schritte> [Erstellen Ihrer ersten App mit Node.js](sbs-gs-nodejs.yml) |
-|20.12.2021| Schrittweise Anleitung für Registerkarten und Messaging-Erweiterungen mit einmaligem Anmelden (Single Sign-On, SSO) eingeführt | Authentifizierung hinzufügen > Registerkarten > Verwenden der SSO-Authentifizierung > [Schritt-für-Schritt-Anleitung mit SSO für Registerkarten und Messaging-Erweiterungen](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
+|20.12.2021| Schrittweise Anleitung für Registerkarten und Nachrichtenerweiterungen mit einmaligem Anmelden (Single Sign-On, SSO) eingeführt | Hinzufügen von Authentifizierung > Registerkarten > Verwenden der SSO-Authentifizierung > [Schrittweise Anleitung mit SSO für Registerkarten und Nachrichtenerweiterungen](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
 |20.12.2021| Schrittweise Anleitung zum Erstellen einer Besprechungsinhaltsblase eingeführt | Apps für Teams-Meetings erstellen > Apps für Meetings aktivieren und konfigurieren > [Schritt-für-Schritt-Anleitung zum Erstellen von Meeting-Inhaltsblasen](sbs-meeting-content-bubble.yml) |
 |09.12.2021| Schritt-für-Schritt-Anleitung zur Bühnenansicht der Besprechung eingeführt | Erstellen von Apps für Teams-Besprechungen > Aktivieren und Konfigurieren von Apps für Besprechungen > [Schritt-für-Schritt-Anleitung zum Erstellen von Meeting-Phasenansichten](sbs-meetings-stage-view.yml)|
 |13.12.2021 | Richtlinien für mit dem SaaS-Angebot verknüpfte App eingeführt | Vermarkten Ihrer App > Veröffentlichen Sie sie im Teams Store > Prüfen Sie die Richtlinien zur Store-Validierung > [Richtlinien für Apps, die mit einem SaaS-Angebot verknüpft sind](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
@@ -208,9 +208,9 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 | -------- | --------- | ------------------ |
 | 26.12.2019 | Der `replyToId`Parameter in Payloads, die an einen Bot gesendet werden, wird nicht mehr verschlüsselt, sodass Sie diesen Wert verwenden können, um Deeplinks zu diesen Nachrichten zu erstellen. Nachrichten-Payloads enthalten die verschlüsselten Werte im Parameter`legacy.replyToId`.  |
 | 05.11.2019 | Einmaliges Anmelden mit dem Teams JavaScript-SDK. | [Einmaliges Anmelden](tabs/how-to/authentication/auth-aad-sso.md) |
-| 31.10.2019 | Konversations-Bots und Messaging-Erweiterungsdokumentation wurden aktualisiert, um das 4.6 Bot Framework SDK widerzuspiegeln. Die Dokumentation für das v3 SDK ist im Abschnitt „Ressourcen“ verfügbar. | Alle Dokumentationen zu Bot- und Messaging-Erweiterungen |
+| 31.10.2019 | Die Dokumentation zu Konversationsbots und Nachrichtenerweiterungen wurde aktualisiert, um das 4.6 Bot Framework SDK zu berücksichtigen. Die Dokumentation für das v3 SDK ist im Abschnitt „Ressourcen“ verfügbar. | Die gesamte Dokumentation zu Bots und Nachrichtenerweiterungen |
 | 31.10.2019 | Neue Dokumentationsstruktur und Überarbeitung wichtiger Artikel. Bitte melden Sie alle toten Links oder 404's, indem Sie ein GitHub-Problem erstellen. | Alle! |
-| 13.09.2019 | Der Anfrage-Bot wird über die aktionsbasierte Messaging-Erweiterung installiert. | [Initiieren von Aktionen mit Messagingerweiterungen](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
+| 13.09.2019 | Der Anforderungsbot wird über die aktionsbasierte Nachrichtenerweiterung installiert. | [Initiieren von Aktionen mit Nachrichtenerweiterungen](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
 | 28.08.2019 | Unterstützung für private Kanäle auf Registerkarten und Connectors. | [Kontext für Ihre Registerkarte erhalten](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) |
 | 20.06.2019 | Freigeben einer externen Website von einer externen Website in einem Teams-Kanal. | [Für Teams freigeben](~/share-to-teams.md) |
 | 25.05.2019 | Antworten sie mit einer Bot-Nachricht aus dem Aufgabenmodul. | [Antworten mit Bot-Nachrichten vom Aufgabenmodul](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
@@ -243,7 +243,7 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 | 11.09.2018 | Registerkartenkonfigurationsseiten sind jetzt deutlich größer. | [Registerkarten-Design](tabs/design/tabs.md) |
 | 15.08.2018 | Adaptive Karten werden jetzt in Teams unterstützt.|[Adaptive Kartenaktionen in Teams](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
 | 10.08.2018 | Client-Unterstützung für DevTools.| [DevTools für den Microsoft Teams-Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
-| 08.08.2018 | Messaging-Erweiterungen unterstützen jetzt mehrere Befehle. | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
+| 08.08.2018 | Nachrichtenerweiterungen unterstützen jetzt mehrere Befehle. | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
 | 07.08.2018 | Die Inline-Konfiguration wird jetzt in Connectors unterstützt. Die Connectors-Dokumentation wurde ebenfalls überarbeitet und aus Gründen der Übersichtlichkeit erweitert.| [Connectors](~/concepts/connectors/connectors.md)|
 | 06.08.2018 | Ihr Bot kann jetzt Dateien senden und empfangen. | [Senden und Empfangen von Dateien über Ihren Bot](~/bots/how-to/bots-filesv4.md)|
 | 23.07.2018 | Informationen zur erneuten App-Zertifizierung wurden dem Abschnitt „Veröffentlichen“ hinzugefügt. |[Manifest-Berechtigungen](resources/schema/manifest-schema.md#permissions)|
@@ -276,7 +276,8 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 |02.02.2022| App-Manifestversion 1.12 eingeführt | App-Manifest > Öffentliche Entwicklervorschau > [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
 |17.01.2022| Personenauswahl in Adaptiven Karten für Mobilgeräte  | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Personenauswahl in Adaptiven Karten](task-modules-and-cards/cards/people-picker.md)|
 |10.01.2022 | Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code | Tools und SDKs > Teams Toolkit for Visual Studio Code > [Grundlagen des Teams Toolkit](toolkit/teams-toolkit-fundamentals.md) |
-|15.11.2021| Persönliche Registerkarten und Messaging-Erweiterungen werden in Outlook und Office ausgeführt | [Erweitern von Teams-Apps auf Microsoft 365](~/m365-apps/overview.md) |
+|24.12.2021| Schrittweise Anleitung zum Erteilen von Berechtigungen für Registerkartengeräte eingeführt | App-Grundlagen > Gerätefunktionen > [Schritt-für-Schritt-Anleitung zum Erteilen von Berechtigungen für Tab-Geräte](sbs-tab-device-permissions.yml) |
+|15.11.2021| Persönliche Registerkarten und Nachrichtenerweiterungen werden in Outlook und Office ausgeführt. | [Erweitern von Teams-Apps auf Microsoft 365](~/m365-apps/overview.md) |
 |28.10.2021|Bots können aktiviert werden, um alle Kanalnachrichten mit ressourcenspezifischer Zustimmung (RESOURCE-Specific Consent, RSC) zu empfangen. | • Erstellen von Bots > Bot-Unterhaltungen > Nachrichten in Bot-Unterhaltungen > [Empfangen aller Nachrichten mit RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Übersicht über Bot-Unterhaltungen](~/bots/how-to/conversations/conversation-basics.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Kanal- und Gruppenunterhaltungen](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • App-Manifest > Öffentliche Entwickler-Vorschau > [Manifest-Schema für Entwickler-Vorschau](~/resources/schema/manifest-schema-dev-preview.md) |
 |16.06.2021| Ressourcenspezifische Zustimmung für Chats | • Verwenden von Teams-Daten mit Microsoft Graph > [Ressourcenspezifische Zustimmung](graph-api/rsc/resource-specific-consent.md) </br> • Testen Ihrer App > Microsoft Graph > [Testen ressourcenspezifischer Genehmigungen in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 

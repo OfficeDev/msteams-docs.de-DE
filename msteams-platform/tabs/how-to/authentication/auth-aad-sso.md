@@ -4,12 +4,12 @@ description: Beschreibt Einmaliges Anmelden (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams-Authentifizierungs-SSO – Microsoft Azure Active Directory (Azure AD)-Single Sign-On-API
-ms.openlocfilehash: 8ac1e44ecb36d3b863a6800b0167ce7ec9ce1803
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: d9391489c8bafafa24ba52528f5d0b8440319a55
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571320"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104420"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Unterstützung für einmaliges Anmelden (SSO) für Registerkarten
 
@@ -277,7 +277,7 @@ Die oben beschriebene Authentifizierungslösung funktioniert nur für Apps und D
 
 ## <a name="step-by-step-guides"></a>Schritt-für-Schritt-Anleitungen
 
-* Befolgen Sie die [Schritt-für-Schritt-Anleitung](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) zum Authentifizieren von Registerkarten und Messaging-Erweiterungen.
+* Befolgen Sie die [schrittweise Anleitung](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) zum Authentifizieren von Registerkarten und Nachrichtenerweiterungen.
 * Befolgen Sie die [Schritt-für-Schritt-Anleitung](../../../sbs-tab-with-adaptive-cards.yml), um Registerkarten mit adaptiven Karten zu erstellen.
 
 ## <a name="see-also"></a>Siehe auch

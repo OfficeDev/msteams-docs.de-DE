@@ -4,12 +4,12 @@ description: Glossar für Microsoft Teams-Entwicklerdokumentation
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams-Entwicklerdefinition
-ms.openlocfilehash: bbfb59d2dec2f72bb94aae1b241554ebc5de3211
-ms.sourcegitcommit: 2863b7537f414517c0fe751f135b39978eb749bf
+ms.openlocfilehash: 1f97cd46ae8096830b2f46c80f4ffc13212eebd8
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2022
-ms.locfileid: "63625998"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103993"
 ---
 # <a name="glossary"></a>Glossar
 
@@ -19,8 +19,8 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 
 | Begriff | Definition |
 | --- | --- |
-| [Aktionsbefehl](../messaging-extensions/how-to/action-commands/define-action-command.md) | Eine Art Messaging-Erweiterungs-App, die ein Popup verwendet, um Informationen zu sammeln oder anzuzeigen. <br>**Weitere Informationen unter**: [Messaging-Erweiterung](#m); [Suchbefehle](#s) |
-| [Adaptive Karten](../task-modules-and-cards/what-are-cards.md) | Ein handlungsrelevanter Inhaltsausschnitt, der einer Unterhaltung von einem Bot oder einer Messaging-Erweiterung hinzugefügt wird. Verwenden Sie Text, Grafiken und Schaltflächen mit diesen Karten für eine umfassende Kommunikation. |
+| [Aktionsbefehl](../messaging-extensions/how-to/action-commands/define-action-command.md) | Eine Art von Nachrichtenerweiterungs-App, die ein Popup verwendet, um Informationen zu sammeln oder anzuzeigen. <br>**Siehe auch**: [Nachrichtenerweiterung](#m);[Suchbefehle](#s) |
+| [Adaptive Karten](../task-modules-and-cards/what-are-cards.md) | Ein umsetzbarer Inhaltsausschnitt, der einer Unterhaltung von einem Bot oder einer Nachrichtenerweiterung hinzugefügt wird. Verwenden Sie Text, Grafiken und Schaltflächen mit diesen Karten für eine umfassende Kommunikation. |
 | [Anonymer Benutzer](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | Ein Teilnehmertyp in einer Microsoft Teams-Besprechung, der keine Azure AD-Identität hat und nicht mit einem Mandanten verbunden ist. Sie sind wie externe Benutzer in einer Besprechung.<br>**Weitere Informationen unter**: [Verbundbenutzer](#f) |
 | [App-Katalog](../toolkit/publish.md) | Eine Website, die SharePoint- und Office-Apps für die interne Verwendung einer Organisation speichert. <br>**Weitere Informationen unter**: [SPFx](#s) |
 | [App-Manifest](../resources/schema/manifest-schema.md) | Das Teams App-Manifest beschreibt, wie die App in das Microsoft Teams Produkt integriert wird. Das Manifest muss dem [Manifestschema](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json) entsprechen. |
@@ -49,14 +49,14 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | Begriff | Definition |
 | --- | --- |
 | [Bot aufrufen](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Ein Bot, der an Audio- oder Videoanrufen und Online-Besprechungen teilnimmt. <br> **Weitere Informationen unter**: [Chat-Bot](#c); [Besprechungsbot](#m) |
-| [Funktionalität](../toolkit/add-capability.md) | Ein Teams Feature, das Sie in Ihre App für die Interaktion mit App-Benutzern integrieren können. Eine App-Funktion wird verwendet, um Teams an Ihre App-Anforderungen anzupassen. Eine App kann über eine oder mehrere Kernfunktionen verfügen, z. B. Registerkarte, Bot und Messaging-Erweiterung. <br>**Weitere Informationen unter**: [Gerätefunktion](#d); [Medienfunktion](#m) |
+| [Funktionalität](../toolkit/add-capability.md) | Ein Teams Feature, das Sie in Ihre App für die Interaktion mit App-Benutzern integrieren können. Eine App-Funktion wird verwendet, um Teams an Ihre App-Anforderungen anzupassen. Eine App kann über eine oder mehrere Kernfunktionen verfügen, z. B. Registerkarte, Bot und Nachrichtenerweiterung. <br>**Weitere Informationen unter**: [Gerätefunktion](#d); [Medienfunktion](#m) |
 | [Chat-Bot](../bots/how-to/conversations/conversation-basics.md) | Ein Bot wird auch als Chatbot oder Unterhaltungsbot bezeichnet. Es handelt sich um eine App, die einfache und sich wiederholende Aufgaben von Benutzern ausführt, z. B. Kundendienst- oder Supportmitarbeiter. <br> **Weitere Informationen unter**: [Unterhaltungs-Bot](#c) |
 | Kanal | Ein zentraler Ort, an dem ein Team Nachrichten, Tools und Dateien gemeinsam nutzen kann. Sie können einen Kanal für Teamarbeit und Kommunikation verwenden. <br>**Weitere Informationen unter**: [Unterhaltung](#c) |
 | [Geheimer Clientschlüssel](../bots/how-to/authentication/add-authentication.md) | Der geheime Clientschlüssel/das Kennwort oder ein öffentliches oder privates Schlüsselpaar, bei dem es sich um ein Zertifikat handelt. Nicht erforderlich für systemeigene Apps. <br> **Weitere Informationen unter**: [Bot](#b) |
 | [Cloudressourcen](../toolkit/add-resource.md) | Ein Dienst, der in der Cloud über das Internet verfügbar ist und von Ihrer Teams-App verwendet werden kann. Dabei kann es sich um Speicherkonten, Web-Apps, Datenbanken und vieles mehr handeln. |
 | [Apps für die Zusammenarbeit](../concepts/extensibility-points.md) | Eine App mit Funktionen, mit denen ein Benutzer in einem kollaborativen Arbeitsbereich mit anderen Benutzern arbeiten kann. <br> **Weitere Informationen unter**: [Eigenständige App](#s) |
-| [Verfassen-Erweiterung](../resources/schema/manifest-schema.md#composeextensions) | Eine Eigenschaft im App-Manifest (`composeExtensions`), die auf die Messaging-Erweiterungsfunktion verweist. Es wird verwendet, wenn sich Ihre Erweiterung entweder authentifizieren oder konfigurieren muss, um fortzufahren. <br>**Weitere Informationen**: [App-Manifest](#a); [Messaging-Erweiterung](#m) |
-| [Befehlsfeld](../resources/schema/manifest-schema.md) | Ein Kontexttyp im App-Manifest (`commandBox`), den Sie konfigurieren können, um eine Messaging-Erweiterung aus dem Befehlsfeld von Teams aufzurufen. |
+| [Verfassen-Erweiterung](../resources/schema/manifest-schema.md#composeextensions) | Eine Eigenschaft im App-Manifest (`composeExtensions`), die auf die Nachrichtenerweiterungsfunktion verweist. Es wird verwendet, wenn sich Ihre Erweiterung entweder authentifizieren oder konfigurieren muss, um fortzufahren. <br>**Weitere Informationen**: [App-Manifest](#a); [Nachrichtenerweiterung](#m) |
+| [Befehlsfeld](../resources/schema/manifest-schema.md) | Ein Kontexttyp im App-Manifest (`commandBox`), den Sie konfigurieren können, um eine Nachrichtenerweiterung über das Teams-Befehlsfeld aufzurufen. |
 | [Connector](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | Damit können Benutzer den Empfang von Benachrichtigungen und Nachrichten von den Webdiensten abonnieren. Connectors machen den HTTPS-Endpunkt für den Dienst verfügbar, um Nachrichten in Teams-Kanälen zu posten, in der Regel in Form von Karten. <br> **Weitere Informationen unter**: [Webhook](#w) |
 | Unterhaltung | Eine Reihe von Nachrichten, die zwischen Ihrer Microsoft Teams-App (Registerkarte oder Bot) und einem oder mehreren Benutzern gesendet werden. Eine Unterhaltung kann drei Bereiche haben: Kanal-, Privat- und Gruppen-Chat. <br>**Weitere Informationen unter**: [1:1-Chat](#o); [Gruppen-Chat](#g); [Kanal](#c) |
 | [Unterhaltungs-Bot](../bots/how-to/conversations/conversation-messages.md) |  Er ermöglicht einem Benutzer, mithilfe von Text, interaktiven Karten und Aufgabenmodulen mit Ihrem Webdienst zu interagieren. <br>**Weitere Informationen unter** [Chat-Bot](#c) |
@@ -108,7 +108,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 
 | Begriff | Definition |
 | --- | --- |
-| [Verbreiten von Links](../messaging-extensions/how-to/link-unfurling.md) | Ein Feature, das bei Messaging-Erweiterung und Besprechung verwendet wird, um Links zu aktivieren, die in einen Bereich zum Verfassen von Nachrichten eingefügt werden. Die Links werden erweitert, um zusätzliche Informationen zu dem Link in adaptiven Karten oder in der Besprechungsphasenansicht anzuzeigen. |
+| [Verbreiten von Links](../messaging-extensions/how-to/link-unfurling.md) | Eine Funktion, die bei der Nachrichtenerweiterung und Besprechungen verwendet wird, um Links zu öffnen, die in einen Bereich zum Verfassen von Nachrichten eingefügt werden. Die Links werden erweitert, um zusätzliche Informationen zu dem Link in adaptiven Karten oder in der Besprechungsphasenansicht anzuzeigen. |
 | [Lokale Umgebung](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Eine standardmäßige Entwicklungsumgebung, die von Teams Toolkit erstellt wurde.  <br>**Weitere Informationen unter**: [Umgebung](#e); [Entwicklungsumgebung](#d) |
 | [Lokale Workbench](../sbs-gs-spfx.yml) | Die Standardoption zum Ausführen und Debuggen einer Teams-App in Visual Studio Code, die mit SPFx erstellt wird. <br>**Weitere Informationen unter**: [Workbench](#w); [Teams Workbench](#t) |
 | [Standortfunktion](../concepts/device-capabilities/location-capability.md) | Eine Gerätefunktion, die Sie in Ihre App integrieren können, um den geografischen Standort des App-Benutzers für eine verbesserte Zusammenarbeit zu kennen. Dieses Feature ist derzeit nur für mobile Microsoft Teams-Clients verfügbar.<br>**Weitere Informationen unter**: [Funktion](#c); [Medienfunktion](#m); [Gerätefunktion](#d); [Teams Mobile](#t) |
@@ -120,9 +120,9 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | --- | --- |
 | [Medienfunktion](../concepts/device-capabilities/mobile-camera-image-permissions.md) | Systemeigene Gerätefunktionen wie Kamera und Mikrofon, die Sie in Ihre Teams App integrieren können. <br>**Weitere Informationen unter**: [Funktion](#c); [Gerätefunktion](#d) |
 | [Besprechungsbot](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bots, die mit Teams-Anrufen und Besprechungen interagieren, verwenden Sprach-, Video- und Bildschirmfreigabe in Echtzeit. <br>**Weitere Informationen unter**: [Anruf-Bot](#c); [Chat-Bot](#c) |
-| [Der Besprechungslebenszyklus](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | Es umfasst App-Erfahrungen vor der Besprechung, während sowie nach der Besprechung. Sie können Registerkarten, Bots und Messaging-Erweiterungen in jedes der Freigabefenster des Besprechungslebenszyklus integrieren. <br>**Weitere Informationen unter**: [Besprechungserfahrung](#i) |
+| [Der Besprechungslebenszyklus](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | Es umfasst App-Erfahrungen vor der Besprechung, während sowie nach der Besprechung. Sie können Registerkarten, Bots und Nachrichtenerweiterungen in jeder Phase des Besprechungslebenszyklus integrieren. <br>**Weitere Informationen unter**: [Besprechungserfahrung](#i) |
 | [Besprechungsphase](../sbs-meetings-stage-view.yml) | Ein Feature der Besprechungserweiterungs-App. Es handelt sich um einen freigegebenen Bereich, auf den alle Teilnehmer während der Besprechung zugriffen können. Es hilft Teilnehmern, in Echtzeit mit App-Inhalten zu interagieren und zusammenzuarbeiten. <br>**Weitere Informationen unter**: [Phasenansicht](#s) |
-| [Messaging-Erweiterung](../messaging-extensions/what-are-messaging-extensions.md) | Messaging-Erweiterungen sind Verknüpfungen zum Einfügen von App-Inhalten oder zum Interagieren mit einer Nachricht. Sie können eine Messaging-Erweiterung verwenden, ohne die Unterhaltung zu verlassen.<br>**Weitere Informationen unter**: [Suchbefehle](#s); [Aktionsbefehle](#a) |
+| [Nachrichtenerweiterung](../messaging-extensions/what-are-messaging-extensions.md) | Nachrichtenerweiterungen sind Abkürzungen zum Einfügen von App-Inhalten oder zum Bearbeiten einer Nachricht. Sie können eine Nachrichtenerweiterung verwenden, ohne die Konversation verlassen zu müssen.<br>**Weitere Informationen unter**: [Suchbefehle](#s); [Aktionsbefehle](#a) |
 | [Besprechungserweiterung](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | Eine App, die während des Besprechungslebenszyklus verwendet werden soll, um sie produktiver zu machen, wie z. B. Whiteboard, Dashboard und viele mehr. |
 | [Microsoft 365 Konto](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 Konto umfasst 25 Benutzerlizenzen, einschließlich des Administrators, nur für Entwicklungszwecke. |
 | [Microsoft 365-Entwicklerprogramm](../toolkit/accounts.md)| Das Microsoft 365-Entwicklerprogramm hilft Ihnen beim Erstellen von Apps, die Microsoft 365 erweitern. |
@@ -138,7 +138,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | --- | --- |
 | [Office 365-Connector](../webhooks-and-connectors/how-to/connectors-creating.md) | Sie können eine benutzerdefinierte Konfigurationsseite für Ihren eingehenden Webhook erstellen und diese als Teil einer Teams-App verpacken. Sie können Nachrichten in erster Linie mit Office 365 Connectorkarten senden und ihnen eine begrenzte Anzahl von Kartenaktionen hinzufügen. |
 | [Ausgehender Webhook](../webhooks-and-connectors/how-to/add-outgoing-webhook.md) | Er fungiert als Bot und sucht mithilfe von @mention nach Nachrichten in Kanälen. Es sendet Benachrichtigungen an externe Webdienste und antwortet mit umfangreichen Nachrichten, die Karten und Bilder enthalten. <br>**Weitere Informationen unter**: [Webhook](#w); [Eingehender Webhook](#i) |
-| [Outlook-Kanal](../m365-apps/extend-m365-teams-message-extension.md#add-an-outlook-channel-for-your-bot) | Ein Feature der Teams Messaging-Erweiterungs-App, mit dem die Benutzer über Microsoft Outlook interagieren können. |
+| [Outlook-Kanal](../m365-apps/extend-m365-teams-message-extension.md#add-an-outlook-channel-for-your-bot) | Eine Funktion der Teams-Nachrichtenerweiterungs-App, mit der die Benutzer von Microsoft Outlook aus interagieren können. |
 | [1:1-Chat](../resources/bot-v3/bot-conversations/bots-conv-personal.md) | Ein Chattyp zwischen der persönlichen Bot-App von Teams und einem einzelnen Benutzer. <br>**Weitere Informationen unter**: [Gruppen-Chat](#g); [Chat-Bot](#c) |
 
 ## <a name="p"></a>P
@@ -163,7 +163,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 
 | Begriff | Definition |
 | --- | --- |
-| [Suchbefehle](../messaging-extensions/how-to/search-commands/define-search-command.md) | Ein Typ einer Messaging-Erweiterungs-App, mit der Benutzer externe Systeme durchsuchen und das Suchergebnis mithilfe einer Karte in eine Nachricht einfügen können. <br>**Weitere Informationen unter**: [Messaging-Erweiterungen](#m); [Aktionsbefehle](#a) |
+| [Suchbefehle](../messaging-extensions/how-to/search-commands/define-search-command.md) | Eine Art von Nachrichtenerweiterungs-App, mit der Benutzer externe Systeme durchsuchen und das Suchergebnis mithilfe einer Karte in eine Nachricht einfügen können. <br>**Weitere Informationen unter**: [Nachrichtenerweiterungen](#m); [Aktionsbefehle](#a) |
 | [Sequenzieller Workflow](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md) | Ein Workflow, mit dem ein Bot basierend auf der Benutzerantwort eine Unterhaltung mit einem Benutzer durchführen kann. |
 | [Freigegebene App](../concepts/extensibility-points.md#shared-app-experiences) | Eine App, die in einem Team, Kanal oder Chat vorhanden ist, in der Benutzer zusammenarbeiten und interagieren können. <br>**Weitere Informationen unter:** Persönliche App |
 | [SharePoint Websitesammlung](../sbs-gs-spfx.yml) | Eine Sammlungssite für SharePoint-Apps. Sie benötigen ein Administratorkonto für diese Site, bevor Sie Ihre SPFx-basierte App auf der SharePoint-Site bereitstellen können.<br>**Weitere Informationen unter**: SPFx |
@@ -184,7 +184,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | [Registerkartenchat](../tabs/how-to/conversational-tabs.md) | Ein Registerkartentyp, mit dem ein Benutzer eine fokussierte Unterhaltungserfahrung auf dynamischen Registerkarten haben kann. |
 | [Aufgabenmodule](../task-modules-and-cards/what-are-task-modules.md) | Eine Funktion der Teams-App zum Erstellen eines modalen Popups zum Abschließen von Aufgaben, Anzeigen von Videos oder Dashboards. |
 | [Diskussionsthread](../tabs/design/tabs.md#thread-discussion) | Eine Unterhaltung, die in einem Kanal oder Chat zwischen Benutzern gepostet wird. <br>**Weitere Informationen unter** [Unterhaltung](#c); [Kanal](#c) |
-| [Microsoft Teams](../overview.md) | Microsoft Teams ist die Nachrichten-App für Ihre Organisation: ein Arbeitsbereich für Besprechungen, Zusammenarbeit und Kommunikation in Echtzeit, Besprechungen sowie Datei- und App-Freigabe. |
+| [Microsoft Teams](../overview.md) | Microsoft Teams ist die ultimative Nachrichten-App für Ihr Unternehmen. Es ist ein Arbeitsbereich für Zusammenarbeit und Kommunikation in Echtzeit, Besprechungen, Datei- und App-Sharing. |
 | [Teams Toolkit](../toolkit/teams-toolkit-fundamentals.md) | Mithilfe des Microsoft Teams-Toolkits können Sie benutzerdefinierte Teams-Apps direkt innerhalb der Visual Studio Code-Umgebung erstellen.  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx ist eine textbasierte Befehlszeilenschnittstelle, die die Microsoft Teams-Anwendungsentwicklung beschleunigt. Sie wird auch als TeamsFx-CLI bezeichnet.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK ist im Gerüstprojekt mithilfe des TeamsFx-Toolkits oder der CLI vorkonfiguriert. |

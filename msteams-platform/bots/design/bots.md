@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: f2f0fb7e3ed57ebfdbbe3c8cd20b654c600d9623
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: f6a19b2c75d5e3b42e7b1b7cea7834d28e3917a9
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475825"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104385"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Entwerfen Ihres Microsoft Teams-Bots
 
@@ -92,7 +92,7 @@ Vergessen Sie nicht: Im Bot-Befehlsmenü (**Was kann ich tun?**) müssen Sie auc
 
 ### <a name="tours"></a>Touren
 
-Sie können eine Tour mit Begrüßungsnachrichten einfügen und wenn der Bot auf so etwas wie einen Hilfebefehl reagiert. Eine Tour ist der effektivste Weg, um zu beschreiben, was Ihr Bot tun kann. Falls zutreffend, eignen sie sich auch hervorragend zur Beschreibung der anderen Features Ihrer App. Fügen Sie beispielsweise Screenshots Ihrer Messaging-Erweiterung ein.
+Sie können eine Tour mit Begrüßungsnachrichten einfügen und wenn der Bot auf so etwas wie einen Hilfebefehl reagiert. Eine Tour ist der effektivste Weg, um zu beschreiben, was Ihr Bot tun kann. Falls zutreffend, eignen sie sich auch hervorragend zur Beschreibung der anderen Features Ihrer App. Fügen Sie beispielsweise Screenshots Ihrer Nachrichtenerweiterung ein.
 
 > [!IMPORTANT]
 > Touren sollten zugänglich sein, ohne sich anmelden zu müssen.
@@ -159,8 +159,8 @@ Sie können Bots in den folgenden Kontexten verwenden:
 |3|**Benutzerdefinierte Registerkarten**: Öffnet weitere Inhalte zu Ihrer App.|
 |4|**Info-Registerkarte**: Zeigt grundlegende Informationen zu Ihrer App an.|
 |5|**Chat-Blase**: Bot-Unterhaltungen verwenden das Team-Messaging-Framework.|
-|6|**Adaptive Karte**: Wenn die Antworten Ihres Bots Adaptive Karten enthalten, nimmt die Karte die volle Breite der Chatblase in Anspruch.|
-|7|**Befehlsmenü**: Zeigt die von Ihnen definierten Standardbefehle Ihres Bots an.|
+|6 |**Adaptive Karte**: Wenn die Antworten Ihres Bots Adaptive Karten enthalten, nimmt die Karte die volle Breite der Chatblase in Anspruch.|
+|7 |**Befehlsmenü**: Zeigt die von Ihnen definierten Standardbefehle Ihres Bots an.|
 
 ### <a name="command-menu"></a>Befehlszeile
 
@@ -279,7 +279,7 @@ In persönlichen Apps kann eine Registerkarte die Möglichkeiten Ihres Bots erg�
 
 ## <a name="manage-a-bot"></a>Verwalten eines Bots
 
-Benutzer sollten in der Lage sein, die Einstellungen eines Bots zu ändern. Sie können diese Funktionalität mit Bot-Befehlen bereitstellen, aber es ist normalerweise effizienter, alle Einstellungen in ein [Aufgabenmodul](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) aufzunehmen (wie im folgenden Beispiel dargestellt).
+Benutzer sollten die Möglichkeit haben, die Einstellungen eines Bots zu ändern. Sie können diese Funktionalität mit Bot-Befehlen bereitstellen, aber in der Regel ist es effizienter, alle Einstellungen in ein [Aufgabenmodul](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)aufzunehmen (wie im folgenden Beispiel gezeigt).
 
 :::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Beispiel zeigt ein Aufgabenmodul zum Konfigurieren der Einstellungen eines Bots." border="false":::
 

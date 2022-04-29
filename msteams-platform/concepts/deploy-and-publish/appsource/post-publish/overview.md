@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 62bf3eb9534f0f113c0c1ec4877859ebd22e9bce
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 2a85739a5a94109aae87de4579f17fe99df8d28b
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501942"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104532"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Unterhalt Ihrer veröffentlichte Microsoft Teams-App
 
@@ -29,13 +29,13 @@ Bei Daten für neu veröffentlichte Apps dauert es etwa eine Woche, bis sie im B
 >
 > Zuvor wurden die Links durch Auswählen des Ellipsensymbols auf der App-Kachel kopiert. Bei der aktualisierten Teams-Storeerfahrung haben Sie über die Registerkarte „Details“ der Apps Zugriff auf diese. Dieses Update wird ab dem 01. März 2022 allgemein verfügbar sein (GA).
 
-Sie können Änderungen an Ihrer App (z. B. neue Features oder sogar Metadaten) in Partner Center übermitteln. Diese Änderungen erfordern einen neuen Überprüfungsprozess.
+Sie können Änderungen an Ihrer App (z. B. neue Funktionen oder sogar Metadaten) im Partner Center einreichen. Diese Änderungen erfordern einen neuen Überprüfungsprozess.
 
 Stellen Sie beim Veröffentlichen von Updates Folgendes sicher:
 
 * Ändern Sie Ihre App-ID nicht.
 * Erhöhen Sie die Versionsnummer Ihrer App.
-* Wählen Sie im Partner Center nicht die Option **Neue App hinzufügen** aus, um das Update durchführen zu können. Gehen Sie stattdessen zur App-Seite.
+* Wählen Sie im Partner Center nicht **Neue App hinzufügen** aus, um das Update durchzuführen. Wechseln Sie stattdessen zur Seite Ihrer App.
 
 ### <a name="app-updates-requiring-user-consent"></a>App-Updates, die eine Zustimmung des Benutzers erfordern
 
@@ -46,11 +46,11 @@ Wenn Sie jedoch eine der folgenden Änderungen an Ihrer App vornehmen, müssen I
 * Sie ändern die Bot-ID.
 * Sie ändern die Konfiguration der unidirektionalen Benachrichtigung eines Bots.
 * Sie ändern Sie Unterstützung eines Bots für das Hochladen und Herunterladen von Dateien.
-* Sie fügen eine Nachrichtenerweiterung hinzu bzw. entfernen eine.
+* Fügen Sie eine Nachrichtenerweiterung hinzu oder entfernen Sie sie.
 * Sie fügen eine persönliche Registerkarte hinzu.
 * Sie fügen eine Kanal- und Gruppen-Registerkarte hinzu.
 * Sie fügen einen Connector hinzu.
-* Sie ändern Konfigurationen in Zusammenhang mit der Registrierung Ihrer Microsoft Azure Active Directory (Azure AD)-App. Weitere Informationen finden Sie unter [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Ändern Sie Konfigurationen im Zusammenhang mit der Registrierung Ihrer Microsoft Azure Active Directory (Azure AD)-App. Weitere Informationen finden Sie unter[`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Beheben von Problemen mit Ihrer veröffentlichten App
 
