@@ -1,17 +1,17 @@
 ---
 title: Apps für Teams-Besprechungen
 author: surbhigupta
-description: Übersicht über Apps in Teams Besprechungen basierend auf Teilnehmer- und Benutzerrolle
+description: Übersicht über Apps in Microsoft Teams-Besprechungen basierend auf Teilnehmer- und Benutzerrolle
 ms.topic: overview
 ms.author: lajanuar
-ms.localizationpriority: medium
-keywords: Rollen-API für Benutzerteilnehmer in Teams-Apps für Besprechungen
-ms.openlocfilehash: cdccc6eafdfad25b813ca08419981aec1a9ce18a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Microsoft Teams Apps Besprechungen Benutzer Teilnehmerrollen API
+ms.openlocfilehash: ec3a9dc46b5a509e68f451e8e2735fc2acbe7bd1
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103299"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111304"
 ---
 # <a name="apps-for-teams-meetings"></a>Apps für Teams-Besprechungen
 
@@ -19,21 +19,21 @@ Besprechungen ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikat
 
 Die Benutzer können während Besprechungen über den Registerkartenkatalog aus ihrem Kalender auf Apps zugreifen, z. B.:
 
-* Pre-Stage a Kanban board.
-* Starten Sie ein Dialogfeld mit Aktionen in der Besprechung.
-* Erstellen Sie eine Umfrage nach der Besprechung.
+* Provisorische Bereitstellung eines Kanban-Boards
+* Starten eines Dialogfelds mit Aktionen in der Besprechung
+* Erstellen einer Umfrage nach der Besprechung
 
-Die folgende Abbildung gibt Ihnen eine Vorstellung von den Erweiterbarkeitsfeatures der Besprechungs-App:
+Die folgende Abbildung vermittelt eine Vorstellung von den Erweiterungsmöglichkeiten der Besprechungs-App:
 
 ![Erweiterbarkeit der Besprechungs-App](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
-Dieser Artikel enthält eine Übersicht über die Erweiterbarkeit der Besprechungs-App, API-Verweise, aktivieren und konfigurieren Apps für Besprechungen und benutzerdefinierte Szenen im Zusammen-Modus in Teams.
+Dieser Artikel bietet eine Übersicht über die Erweiterungsmöglichkeiten der Besprechungs-App, API-Verweise, das Aktivieren und Konfigurieren von Apps für Besprechungen und benutzerdefinierte Zusammen-Modus-Szenen in Microsoft Teams.
 
-Verbessern Sie Ihre Besprechungserfahrung mithilfe des Features zur Besprechungserweiterung. Mit diesem Feature können Sie Ihre Apps in Besprechungen integrieren. Es umfasst auch verschiedene Phasen eines Besprechungslebenszyklus, in denen Sie Registerkarten, Bots und Nachrichtenerweiterungen integrieren können. Sie können verschiedene Teilnehmerrollen und Benutzertypen identifizieren, Besprechungsereignisse abrufen und In-Besprechungsdialogfelder generieren.
+Verbessern Sie Ihre Besprechungserfahrung mithilfe des Features zur Besprechungserweiterung. Mit diesem Feature können Sie Ihre Apps in Besprechungen integrieren. Es umfasst auch verschiedene Freigabefenster eines Besprechungslebenszyklus, in denen Sie Registerkarten, Bots und Messaging-Erweiterungen integrieren können. Sie können verschiedene Teilnehmerrollen und Benutzertypen angeben, Besprechungsereignisse abrufen und In-Meeting-Dialogfenster generieren.
 
-Um Teams mit Apps für Besprechungen anzupassen, aktivieren Sie Ihre Apps für Teams Besprechungen, indem Sie das App-Manifest aktualisieren und die Apps auch für Besprechungsszenarien konfigurieren.
+Um Microsoft Teams mit Apps für Besprechungen anzupassen, aktivieren Sie Ihre Apps für Microsoft Teams-Besprechungen, indem Sie das App-Manifest aktualisieren und die Apps auch für Besprechungsszenarien konfigurieren.
 
-Mit dem neuen benutzerdefinierten Feature "Zusammen-Modus-Szenen" können Benutzer an einer Besprechung mit ihrem Team an einer zentralen Stelle zusammenarbeiten.
+Mit dem neuen benutzerdefinierten Feature "Zusammen-Modus-Szenen" können Benutzer an einer Besprechung mit ihrem Team an einem zentralen Ort zusammenarbeiten.
 
 ## <a name="next-step"></a>Nächster Schritt
 
@@ -42,8 +42,8 @@ Mit dem neuen benutzerdefinierten Feature "Zusammen-Modus-Szenen" können Benutz
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Entwerfen Ihrer Microsoft Teams Besprechungserweiterung](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Api-Referenzen für Besprechungs-Apps – Teams](~/apps-in-teams-meetings/api-references.md)
-* [Szenen des benutzerdefinierten Zusammen-Modus](~/apps-in-teams-meetings/teams-together-mode.md)
-* [Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* [Entwerfen eigener Microsoft Teams-Messaging-Erweiterungen](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [API-Referenzen für Besprechungs-Apps – Microsoft Teams](~/apps-in-teams-meetings/api-references.md)
+* [Benutzerdefinierte Zusammen-Modus-Szenen](~/apps-in-teams-meetings/teams-together-mode.md)
+* [Aktivieren und Konfigurieren Ihrer Apps für Microsoft Teams-Besprechungen](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Der Besprechungslebenszyklus](meeting-app-extensibility.md#meeting-lifecycle)
