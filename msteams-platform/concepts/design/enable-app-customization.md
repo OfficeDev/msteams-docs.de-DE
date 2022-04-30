@@ -2,51 +2,56 @@
 title: Anpassen Ihrer Teams-App
 author: heath-hamilton
 description: Erfahren Sie, wie Teams Administratoren Ihre App für ihre Organisation anpassen können.
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: overview
-keywords: Akzentfarbenmarke blendet App-Genehmigung aus
-ms.openlocfilehash: 1487a1a44991143b93b87bf47bdb93180d97cb8c
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
-ms.translationtype: MT
+keywords: App-Genehmigung für Akzentfarbe ausblenden
+ms.openlocfilehash: 4728e6f34680d51983558d1ad96c47ffe3650234
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948614"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111199"
 ---
 # <a name="customize-your-teams-app"></a>Anpassen Ihrer Teams-App
 
-## <a name="enable-your-microsoft-teams-app-to-be-customized"></a>Aktivieren der anpassungsfähigen Microsoft Teams-App
+## <a name="enable-your-microsoft-teams-app-to-be-customized"></a>Aktivieren der Anpassung Ihrer Microsoft Teams-App
 
-Sie können Es Kunden ermöglichen, einige Aspekte Ihrer Microsoft Teams-App im Teams Admin Center anzupassen. Dieses Feature wird nur für Apps unterstützt, die im Teams Store veröffentlicht wurden. Quergeladene Apps und Apps, die für eine Organisation veröffentlicht wurden, können nicht angepasst werden.
+Sie können Kunden erlauben, einige Aspekte Ihrer Microsoft Teams-App im Teams Admin Center anzupassen. Dieses Feature wird nur für Apps unterstützt, die im Teams Store veröffentlicht wurden. Quergeladene Apps und Apps, die für eine Organisation veröffentlicht wurden, können nicht angepasst werden.
 
 Einige mögliche Beispiele für dieses Feature sind:
 
-* Ändern der Akzentfarbe der App entsprechend der Marke einer Organisation.
-* Aktualisieren des App-Namens von *Contoso* auf *Contoso-Agent*, bei dem es sich um den Namen handelt, der Benutzern in der Organisation angezeigt wird. (Hinweis: Benutzern, die einen Connector zu einem Chat oder Kanal hinzufügen, wird weiterhin der ursprüngliche App-Name *Contoso* angezeigt.)
+* Ändern der Akzentfarbe der App, um sie an die Marke einer Organisation anzupassen.
+* Aktualisieren des App-Namens von *Contoso* zu *Contoso-Agent*, das ist der Name, den Benutzer in der Organisation sehen werden. (Hinweis: Benutzer, die einen Connector zu einem Chat oder Kanal hinzufügen, sehen weiterhin den ursprünglichen App-Namen *Contoso*.)
 
-Sie können dieses Feature im [Entwicklerportal für Teams](https://dev.teams.microsoft.com/home)aktivieren. Dadurch `configurableProperties` wird konfiguriert, was in Versionen vor 1.10 des Teams-App-Manifests nicht verfügbar ist.
+Sie können dieses Feature im [Entwicklerportal für Teams](https://dev.teams.microsoft.com/home) aktivieren. Dadurch wird `configurableProperties` konfiguriert, was in früheren Versionen vor Version 1.10 des Teams App-Manifests nicht verfügbar ist.
 
 ### <a name="test-your-app"></a>Testen eigener Apps
 
-Sie können dieses Feature während der Entwicklung nicht testen. Die App-Anpassung wird beim Querladen oder Veröffentlichen im App-Katalog einer Organisation nicht unterstützt.
+Sie können dieses Feature während der Entwicklung nicht testen. App-Anpassungen werden beim Querladen oder Veröffentlichen im App-Katalog einer Organisation nicht unterstützt.
 
-### <a name="user-considerations"></a>Überlegungen zu Benutzern
+### <a name="user-considerations"></a>Überlegungen zum Benutzer
 
-Bereitstellen von Richtlinien für Kunden (insbesondere Teams Administratoren), die Ihre App anpassen möchten. Weitere Informationen finden Sie unter [Anpassen von Apps in Teams.](/MicrosoftTeams/customize-apps)
+Stellen Sie Richtlinien für Kunden (insbesondere Teams Administratoren) bereit, die Ihre App anpassen möchten. Weitere Informationen finden Sie unter [Apps in Teams anpassen](/MicrosoftTeams/customize-apps).
 
-## <a name="hide-teams-app-until-admin-approves"></a>Ausblenden Teams App bis zur Genehmigung durch den Administrator
+## <a name="hide-teams-app-until-admin-approves"></a>Teams-App bis zur Zustimmung des Administrators ausblenden
 
-Um Teams App-Erfahrung zu verbessern, können Sie eine App standardmäßig vor Benutzern ausblenden, bis der Administrator das Einblenden der App erlaubt. Contoso Electronic hat beispielsweise eine Helpdesk-App für Teams erstellt. Um eine ordnungsgemäße Funktionsweise der App zu ermöglichen, möchte Contoso Electronic, dass die Kunden zuerst bestimmte Eigenschaften der App einrichten. Die App ist standardmäßig ausgeblendet und für Benutzer nur verfügbar, nachdem der Administrator sie erlaubt hat.
+Um die Erfahrung mit der Teams-App zu verbessern, können Sie eine App standardmäßig vor Benutzern ausblenden, bis der Administrator das Einblenden der App zulässt. Beispielsweise hat Contoso Electronics eine Helpdesk-App für Teams erstellt. Um eine angemessene Funktion der App zu ermöglichen, möchte Contoso Electronics, dass die Kunden zuerst bestimmte Eigenschaften der App einrichten. Die App ist standardmäßig ausgeblendet und steht Benutzern erst zur Verfügung, nachdem der Administrator sie zulässt.
 
-Um die App auszublenden, legen Sie die Eigenschaft in der App-Manifestdatei `defaultBlockUntilAdminAction` auf `true` . Wenn die Eigenschaft auf ", in Teams Admin Center > Verwalten von Apps festgelegt `true` ist, wird **vom Herausgeber blockiert** im **App-Status** angezeigt: 
+> [!NOTE]
+> Teams Store hat sich weiterentwickelt:
+> 
+> Zuvor wurden die BRANCHEN-Apps durch Auswahl der Ellipsen auf der Kachel aktualisiert. Mit der aktualisierten Teams Store-Oberfläche können Sie jetzt die branchenspezifischen Apps aktualisieren, indem Sie sich beim [Teams Admin Center](https://admin.teams.microsoft.com)anmelden.
 
-![Verwalten von Apps, die vom Herausgeber blockiert werden](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
+Um die App auszublenden, legen Sie in der App-Manifestdatei die Eigenschaft `defaultBlockUntilAdminAction` auf `true` fest. Wenn die Eigenschaft auf `true`Teams Admin Center > **Apps verwalten** festgelegt ist, wird **Vom Herausgeber blockiert** im **Status** der App angezeigt:
 
-Der Administrator erhält eine Anforderung zum Ergreifen von Maßnahmen, bevor ein Benutzer auf die App zugreifen kann. Unter **"Apps verwalten"** können die Administratoren **"Zulassen"** auswählen, um die App mit dem Status **"Vom Herausgeber blockiert"** zuzulassen:
+![Vom Herausgeber blockierte Apps verwalten](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
+
+Der Administrator erhält eine Aufforderung, Aktionen durchzuführen, bevor ein Benutzer auf die App zugreifen kann. Unter **Apps verwalten** können die Administratoren **Zulassen** auswählen, um die App mit dem Status **Vom Herausgeber blockiert** zuzulassen:
 
 ![Verwalten von Apps](../../assets/images/apps-in-meetings/manageapp.png)
 
-Wenn die App standardmäßig nicht ausgeblendet werden soll, können Sie die `defaultBlockUntilAdminAction` Eigenschaft auf `false` aktualisieren. Wenn die neue Version der App genehmigt wird, ist die App standardmäßig zulässig, solange der Administrator keine explizite Aktion ausgeführt hat.
+Wenn die App standardmäßig nicht ausgeblendet werden soll, können Sie die Eigenschaft `defaultBlockUntilAdminAction` auf `false` aktualisieren. Wenn die neue Version der App genehmigt wird, ist die App standardmäßig zulässig, solange der Administrator keine explizite Aktion ausgeführt hat.
 
 > [!NOTE]
 > `defaultBlockUntilAdminAction` wird für Branchen-Apps nicht unterstützt. Wenn Sie eine Branchen-App mit dieser Eigenschaft hochladen, wird die App nicht blockiert.
@@ -54,5 +59,4 @@ Wenn die App standardmäßig nicht ausgeblendet werden soll, können Sie die `de
 ## <a name="see-also"></a>Siehe auch
 
 * [App-Manifestschema](/microsoftteams/platform/resources/schema/manifest-schema)
-* [Anpassen von Apps im Teams Admin Center](/MicrosoftTeams/customize-apps)
-
+* [Anpassen von Apps im Teams-Admin Center](/MicrosoftTeams/customize-apps)
