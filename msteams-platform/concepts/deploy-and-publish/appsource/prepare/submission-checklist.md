@@ -6,12 +6,12 @@ ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: Verteilen von Validierungsrichtlinien für App-Pakete im Übermittlungsspeicher lokalisieren
-ms.openlocfilehash: 4d3116a305ee1b5d353310bdc047c282822af173
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: e1c2f94eb0bb3989ea461b10543fcea3051ef52a
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501991"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135752"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Vorbereiten der Übermittlung an den Microsoft Teams Store
 
@@ -24,14 +24,14 @@ Bevor Sie Ihre App an [Partner Center](/office/dev/store/use-partner-center-to-s
 Während Ihre App möglicherweise in einer Testumgebung funktioniert, sollten Sie Ihr App-Paket überprüfen, um Probleme während des Übermittlungsprozesses zu vermeiden.
 
 > [!NOTE]
-> App Studio wird in Kürze eingestellt. Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps mit dem neuen [Entwicklerportal](https://dev.teams.microsoft.com/)
+ > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal[Entwicklerportal](https://dev.teams.microsoft.com/) zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird per 30. Juni 2022 eingestellt.
 
 Das Microsoft Teams App-Überprüfungstool hilft Ihnen, Probleme zu identifizieren und zu beheben, bevor Sie sie an Partner Center übermitteln. Das Tool überprüft die Konfigurationen Ihrer App automatisch anhand der gleichen Testfälle, die während der Store-Überprüfung verwendet werden.
 
 1. Wechseln Sie zum [Microsoft Teams App-Überprüfungstool](https://dev.teams.microsoft.com/appvalidation.html). (Hinweis: Das Tool ist auch in [App Studio](../../../build-and-test/app-studio-overview.md) verfügbar.)
 1. Laden Sie Ihr App-Paket hoch, um die automatisierten Tests auszuführen.
 1. Wechseln Sie zur **vorläufigen Checkliste**, und überprüfen Sie die Testfälle, die schwierig zu automatisieren sind.
-1. [Beheben von Problemen mit Ihren Konfigurationen](~/resources/schema/manifest-schema.md) oder Ihrer App im Allgemeinen. Diese Probleme treten auf, wenn die automatisierten Tests Ihnen Fehler liefern oder sie nicht alle Kriterien in der Prüfliste erfüllt haben.
+1. [Beheben Sie Fehler mit Ihren Konfigurationen ](~/resources/schema/manifest-schema.md) oder Ihrer App ganz allgemein. Diese Probleme treten auf, wenn die automatisierten Tests Ihnen Fehler liefern, oder wenn Sie nicht alle Kriterien in der Prüfliste erfüllt haben.
 
 ## <a name="compile-testing-instructions"></a>Kompilieren von Testanweisungen
 
@@ -95,7 +95,7 @@ Sie müssen eine kurze und lange Beschreibung Ihrer App haben.
 
 #### <a name="short-description"></a>Kurzbeschreibung
 
-Eine kurze Zusammenfassung Ihrer App, die originell, ansprechend und an Ihre Zielgruppe gerichtet sein sollte. Halten Sie die kurze Beschreibung in einem Satz.
+Eine präzise Zusammenfassung Ihrer App, die originell, ansprechend und auf Ihre Zielgruppe ausgerichtet sein sollte. Beschränken Sie die kurze Beschreibung auf einen Satz.
 
 :::row:::
 
@@ -165,7 +165,7 @@ Bewährte Methoden finden Sie in den folgenden Ressourcen:
 
 ### <a name="create-a-video"></a>Erstellen eines Videos
 
-Ein Video in Ihrem Eintrag kann der effektivste Weg sein, um zu kommunizieren, warum die Leute Ihre App verwenden sollten. Behandeln Sie die folgenden Fragen in einem Video:
+Ein Video in Ihrem Listing kann die effektivste Methode sein, um zu kommunizieren, warum Personen Ihre App verwenden sollten. Beantworten Sie die folgenden Fragen in einem Video:
 
 * Für wen ist Ihre App geeignet?
 * Welche Probleme kann Ihre App lösen?
@@ -177,7 +177,7 @@ Sie können eine URL für Ihr YouTube- oder Vimeo-Video hinzufügen.
 #### <a name="best-practices-for-videos"></a>Bewährte Methoden für Videos
 
 * Halten Sie Ihr Video zwischen 60 und 90 Sekunden.
-* Setzen Sie auf Qualität. In einer Auflistung sehen Benutzer Ihr Video vor Screenshots.
+* Achten Sie auf Qualität. In einem Listing sehen Benutzer Ihr Video vor Screenshots.
 * Kommunizieren Sie den Wert des Produkts in erzählerischer Form.
 * Veranschaulichen, wie das Produkt funktioniert.
 

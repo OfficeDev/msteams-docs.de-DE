@@ -1,16 +1,16 @@
 ---
 title: Hinzufügen der Authentifizierung zu Ihrer Nachrichtenerweiterung
 author: surbhigupta
-description: Informationen zum Hinzufügen einer Authentifizierung zu einer Nachrichtenerweiterung mithilfe von Codebeispielen und Beispielen
-ms.localizationpriority: medium
+description: Erfahren Sie, wie Sie einer Messaging-Erweiterung mithilfe von Codebeispielen eine Authentifizierung hinzufügen, und sehen Sie ein Beispiel.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e3f799214a5007f90c03b2a7f9ac280c8e8760e1
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 36a2aa269bfc43f4c07e97a5c214e3081a38ffeb
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104413"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135710"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Hinzufügen der Authentifizierung zu Ihrer Nachrichtenerweiterung
 
@@ -18,7 +18,7 @@ ms.locfileid: "65104413"
 
 ## <a name="identify-the-user"></a>Identifizieren des Benutzers
 
-Jede Anforderung an Ihre Dienste umfasst die Benutzer-ID, den Anzeigenamen des Benutzers und Azure Active Directory Objekt-ID.
+Jede Anforderung an Ihre Dienste enthält die Benutzer-ID, den Anzeigenamen des Benutzers und die Azure Active Directory-Objekt-ID.
 
 ```json
 "from": {
@@ -28,24 +28,24 @@ Jede Anforderung an Ihre Dienste umfasst die Benutzer-ID, den Anzeigenamen des B
 },
 ```
 
-Die `id` Werte werden `aadObjectId` für den authentifizierten Teams Benutzer garantiert. Sie werden als Schlüssel zum Nachschlagen der Anmeldeinformationen oder eines zwischengespeicherten Zustands in Ihrem Dienst verwendet. Darüber hinaus enthält jede Anforderung die Azure Active Directory Mandanten-ID, die verwendet wird, um die Organisation des Benutzers zu identifizieren. Falls zutreffend, enthält die Anforderung auch die Team-ID und Kanal-ID, von der die Anforderung stammt.
+Die Werte `id` und `aadObjectId` werden für den authentifizierten Teams-Benutzer garantiert. Sie werden als Schlüssel verwendet, um die Anmeldeinformationen oder einen zwischengespeicherten Status in Ihrem Dienst nachzuschlagen. Zusätzlich enthält jede Anforderung die Azure Active Directory-Mandanten-ID, die verwendet wird, um die Organisation des Benutzers zu identifizieren. Falls zutreffend, enthält die Anforderung auch die Team-ID und die Kanal-ID, von der die Anforderung stammt.
 
 ## <a name="authentication"></a>Authentifizierung
 
-Wenn Ihr Dienst eine Benutzerauthentifizierung erfordert, müssen sich die Benutzer anmelden, bevor sie die Nachrichtenerweiterung verwenden. Die Authentifizierungsschritte ähneln denen eines Bots oder einer Registerkarte. Die Reihenfolge lautet wie folgt:
+Wenn Ihr Dienst eine Benutzerauthentifizierung erfordert, müssen sich die Benutzer anmelden, bevor sie die Nachrichtenerweiterung verwenden. Die Authentifizierungsschritte ähneln denen eines Bots oder einer Registerkarte. Die Sequenz sieht wie folgt aus:
 
-1. Der Benutzer gibt eine Abfrage aus, oder die Standardabfrage wird automatisch an Ihren Dienst gesendet.
-1. Ihr Dienst überprüft, ob der Benutzer authentifiziert wird, indem er die Teams Benutzer-ID überprüft.
-1. Wenn der Benutzer nicht authentifiziert ist, senden Sie eine `auth` Antwort mit einer `openUrl` vorgeschlagenen Aktion zurück, einschließlich der Authentifizierungs-URL.
+1. Der Benutzer stellt eine Abfrage, oder die Standardabfrage wird automatisch an Ihren Dienst gesendet.
+1. Ihr Dienst überprüft, ob der Benutzer authentifiziert ist, indem er die Teams-Benutzer-ID untersucht.
+1. Wenn der Benutzer nicht authentifiziert ist, senden Sie eine `auth`-Antwort mit einer vorgeschlagenen `openUrl`- Aktion zurück, einschließlich der Authentifizierungs-URL.
 1. Der Microsoft Teams-Client startet ein Dialogfeld, in dem Ihre Webseite mithilfe der angegebenen Authentifizierungs-URL gehostet wird.
-1. Nachdem sich der Benutzer angemeldet hat, sollten Sie das Fenster schließen und einen **Authentifizierungscode** an den Teams-Client senden.
-1. Der Teams-Client gibt dann die Abfrage an Ihren Dienst erneut, der den in Schritt 5 übergebenen Authentifizierungscode enthält.
+1. Nachdem sich der Benutzer angemeldet hat, sollten Sie Ihr Fenster schließen und einen **Authentifizierungscode** an den Teams-Client senden.
+1. Der Teams-Client stellt dann die Abfrage an Ihren Dienst erneut, einschließlich des in Schritt 5 übergebenen Authentifizierungscodes.
 
-Ihr Dienst sollte überprüfen, ob der in Schritt 6 empfangene Authentifizierungscode mit dem aus Schritt 5 übereinstimmt. Dadurch wird sichergestellt, dass ein böswilliger Benutzer nicht versucht, den Anmeldefluss zu spoofieren oder zu kompromittieren. Dadurch wird die Schleife "geschlossen", um die Sequenz der sicheren Authentifizierung abzuschließen.
+Ihr Dienst sollte überprüfen, ob der in Schritt 6 empfangene Authentifizierungscode mit dem aus Schritt 5 übereinstimmt. Dadurch wird sichergestellt, dass ein bösartiger Benutzer nicht versucht, den Anmeldefluss zu spoofen oder zu kompromittieren. Dies wird effektiv „die Schleife schließen“, um die sichere Authentifizierungssequenz abzuschließen.
 
 ### <a name="respond-with-a-sign-in-action"></a>Antworten mit einer Anmeldeaktion
 
-Um einen nicht authentifizierten Benutzer zur Anmeldung aufzufordern, antworten Sie mit einer vorgeschlagenen Aktion des Typs `openUrl` , der die Authentifizierungs-URL enthält.
+Um einen nicht authentifizierten Benutzer zur Anmeldung aufzufordern, antworten Sie mit einer vorgeschlagenen Aktion vom Typ `openUrl`, welche die Authentifizierungs-URL enthält.
 
 #### <a name="response-example-for-a-sign-in-action"></a>Antwortbeispiel für eine Anmeldeaktion
 
@@ -68,25 +68,25 @@ Um einen nicht authentifizierten Benutzer zur Anmeldung aufzufordern, antworten 
 
 > [!NOTE]
 >
-> * Damit die Anmeldeumgebung in einem Teams Popupfenster gehostet wird, muss sich der Domänenteil der URL in der Liste der gültigen Domänen Ihrer App befinden. Weitere Informationen finden Sie unter ["validDomains](~/resources/schema/manifest-schema.md#validdomains) " im Manifestschema.
-> * Die Größe des Authentifizierungs-Popups kann definiert werden, `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",`indem Abfragezeichenfolgenparameter wie Breite und Höhe eingeschlossen werden.
+> * Damit die Anmeldeerfahrung in einem Teams-Popupfenster gehostet werden kann, muss sich der Domänenteil der URL in der Liste der gültigen Domänen Ihrer App befinden. Weitere Informationen finden Sie unter [validDomains](~/resources/schema/manifest-schema.md#validdomains) im Manifestschema.
+> * Die Größe des Authentifizierungs-Popupfensters kann durch Einschließen von Abfragezeichenfolgenparametern der Breite und Höhe `Value = $"{_siteUrl}/searchSettings.html?height=600&width=600"` definiert werden.
 
 ### <a name="start-the-sign-in-flow"></a>Starten des Anmeldeflusses
 
-Ihre Anmeldeerfahrung muss reaktionsfähig sein und in ein Popupfenster passen. Es sollte in das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client) integriert werden, das die Nachrichtenübergabe verwendet.
+Ihre Anmeldeerfahrung muss reaktionsfähig sein und in ein Popupfenster passen. Sie sollte in das [Microsoft Teams JavaScript-Client SDK](/javascript/api/overview/msteams-client) integriert werden, das die Nachrichtenübergabe verwendet.
 
-Wie bei anderen eingebetteten Umgebungen, die innerhalb Microsoft Teams ausgeführt werden, muss Ihr Code im Fenster zuerst aufgerufen `microsoftTeams.initialize()`werden. Wenn Ihr Code einen OAuth-Fluss ausführt, können Sie die Teams Benutzer-ID an Ihr Fenster übergeben, das sie dann an die OAuth-Anmelde-URL übergibt.
+Wie bei anderen eingebetteten Erfahrungen, die innerhalb von Microsoft Teams ausgeführt werden, muss Ihr Code im Fenster zuerst `microsoftTeams.initialize()` aufrufen. Wenn Ihr Code einen OAuth-Fluss ausführt, können Sie die Teams-Benutzer-ID an Ihr Fenster übergeben, das sie dann an die OAuth-Anmelde-URL übergibt.
 
 ### <a name="complete-the-sign-in-flow"></a>Abschließen des Anmeldeflusses
 
-Wenn die Anmeldeanforderung abgeschlossen ist und zu Ihrer Seite zurückgeleitet wird, muss sie die folgenden Schritte ausführen:
+Wenn die Anmeldeanforderung abgeschlossen ist und zurück zu Ihrer Seite leitet, müssen die folgenden Schritte ausgeführt werden:
 
-1. Generieren Sie einen Sicherheitscode, eine Zufallszahl. Sie müssen diesen Code in Ihrem Dienst zusammen mit den Anmeldeinformationen zwischenspeichern, die über den Anmeldeablauf abgerufen wurden, z. B. OAuth 2.0-Token.
-1. Rufen Sie `microsoftTeams.authentication.notifySuccess` den Sicherheitscode auf, und übergeben Sie ihn.
+1. Generieren Sie einen Sicherheitscode, eine Zufallszahl. Sie müssen diesen Code in Ihrem Dienst zwischenspeichern, zusammen mit den Anmeldeinformationen, die über den Anmeldefluss erhalten wurden, z. B. OAuth 2.0-Token.
+1. Rufen Sie `microsoftTeams.authentication.notifySuccess` auf, und übergeben Sie den Sicherheitscode.
 
-An diesem Punkt wird das Fenster geschlossen, und das Steuerelement wird an den Teams-Client übergeben. Der Client gibt nun die ursprüngliche Benutzerabfrage zusammen mit dem Sicherheitscode in der `state` Eigenschaft neu. Ihr Code kann den Sicherheitscode verwenden, um die zuvor gespeicherten Anmeldeinformationen nachzuschlagen, um die Authentifizierungssequenz abzuschließen und dann die Benutzeranforderung abzuschließen.
+An diesem Punkt wird das Fenster geschlossen, und die Kontrolle wird an den Teams-Client übergeben. Der Client stellt nun die ursprüngliche Benutzerabfrage zusammen mit dem Sicherheitscode in der Eigenschaft `state` erneut aus. Ihr Code kann den Sicherheitscode verwenden, um die zuvor gespeicherten Anmeldeinformationen nachzuschlagen, um die Authentifizierungssequenz abzuschließen und dann die Benutzeranforderung abzuschließen.
 
-#### <a name="reissued-request-example"></a>Beispiel für eine erneute Anforderung
+#### <a name="reissued-request-example"></a>Beispiel für neu ausgestellte Anforderung
 
 ```json
 {
@@ -143,4 +143,4 @@ An diesem Punkt wird das Fenster geschlossen, und das Steuerelement wird an den 
 
 ## <a name="see-also"></a>Siehe auch
 
-[SSO-Unterstützung (Single Sign-On) für Nachrichtenerweiterungen](~/messaging-extensions/how-to/enable-sso-auth-me.md)
+[Unterstützung für Single Sign-On (SSO) für Nachrichtenerweiterungen](~/messaging-extensions/how-to/enable-sso-auth-me.md)

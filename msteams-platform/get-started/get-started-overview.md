@@ -4,12 +4,12 @@ description: Übersicht über die ersten Schritte für Microsoft Teams-Entwickle
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams Entwicklerbeispiele
-ms.openlocfilehash: 12fea3fcbdceddfba4c0f60db2ed64b20f801284
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 11989fe16da36e9fc68840782f63078fc39731c6
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104357"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135766"
 ---
 # <a name="get-started"></a>Erste Schritte
 
@@ -42,7 +42,7 @@ Wählen Sie je nach gewünschten Funktionen für Ihre App einen geeigneten Satz 
 Wenn Sie bereits mit dem Yeoman-Workflow vertraut sind, bevorzugen Sie möglicherweise die Verwendung von [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) zum Erstellen Ihrer Apps.
 
 > [!NOTE]
-> Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen.
+> Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen.<br> App Studio wird per 30. Juni 2022 eingestellt.
 
 ## <a name="build-your-first-teams-app"></a>Erstellen Ihrer ersten Teams-App
 
