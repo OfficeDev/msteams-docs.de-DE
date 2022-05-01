@@ -4,12 +4,12 @@ description: Beschreibt alle neuen oder aktuellen Entwicklerfunktionen in Micros
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 'Teams: Was sind die neuesten Updates oder Entwicklervorschau und Features'
-ms.openlocfilehash: 7be0852fad2344a5d57437d928a2a1d386bc4eb3
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: aabbe185edd57491dc9928d66700d1f35f8b1557
+ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104049"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65132709"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -22,6 +22,7 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 
 | Datum | Update | Hier finden |
 | --- | --- | --- |
+|28.04.2022| Häufige Gründe für App-Überprüfungsfehler | Verteilen Ihrer App > Veröffentlichen im Teams Store > [Häufige Gründe für Fehler bei der App-Überprüfung](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
 |20.04.2022 |  Einrichten von CI/CD-Pipelines | Tools und SDKs > Teams Toolkit für Visual Studio Code > [Einrichten von CI/CD-Pipelines](toolkit/use-CICD-template.md)|
 |19.04.2022 | Hochladen Ihrer App in Microsoft Teams | Verteilen Ihrer App > [Hochladen Ihrer App](concepts/deploy-and-publish/apps-upload.md)|
 |06.04.2022| Für Teams über persönliche App oder Registerkarte freigeben (Entwicklervorschau) | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus einer persönlichen App oder Registerkarte](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
