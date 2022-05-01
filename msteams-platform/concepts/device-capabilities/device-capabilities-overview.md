@@ -1,48 +1,48 @@
 ---
 title: Gerätefunktionen – Übersicht
 author: Rajeshwari-v
-description: Übersicht über systemeigene Gerätefunktionen wie Kamera, Bild, Medien, Mikrofon, Mikrofon, QR-Code und mehr.
+description: Überblick über systemeigene Gerätefunktionen wie Kamera, Bild, Medien, Mikrofon, Mikrofon, QR-Code und mehr.
 ms.author: surbhigupta
-keywords: Kamerabild Medienmikrofon Mikrofon QR Code Qrcode Barcode Barcode Scan Location Map Capabilities native Geräteberechtigungen
-ms.localizationpriority: medium
+keywords: Kamerabild Medien Mikrofon Mikrofon QR-Code QR-Code Barcode Barcode Scan Scanner Standortzuordnung Funktionen systemeigene Geräteberechtigungen
+ms.localizationpriority: high
 ms.topic: overview
-ms.openlocfilehash: 4febce3868df9fbba90cb4a94e67f6d0856606c9
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: 854580fc8825ab007d97b1a3e5feb65af883c9a3
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452690"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111752"
 ---
 # <a name="device-capabilities"></a>Gerätefunktionen
 
-Microsoft Teams Plattform verbessert kontinuierlich die Entwicklerfunktionen, die sich an den integrierten Oberflächen von Erstanbietern orientieren. Die erweiterte Teams-Plattform ermöglicht Partnern die Integration von Gerätefunktionen wie Kamera, QR- oder Strichcodescanner, Fotogalerie, Mikrofon und Standort in ihre Web-Apps. Diese Integration reduziert die Barriere für die App-Entwicklung, beschleunigt den Entwicklungszyklus und erstellt neue Szenarien oder Anwendungsfälle für die Entwicklercommunity.
+Die Microsoft Teams-Plattform verbessert kontinuierlich die Entwicklerfunktionen, die sich an integrierten First-Party-Erfahrungen ausrichten. Die erweiterte Teams-Plattform ermöglicht es Partnern, Gerätefunktionen wie Kamera, QR- oder Barcode-Scanner, Fotogalerie, Mikrofon und Standort in ihre Web-Apps zu integrieren. Diese Integration reduziert die Barrieren für die App-Entwicklung, beschleunigt den Entwicklungszyklus und schafft neue Szenarien oder Anwendungsfälle für die Entwickler-Community.
 
-Geräteberechtigungen unterscheiden sich im Browser. Bisher wurde im Browser behandelt, wie Zugriffsberechtigungen erteilt werden, und diese Berechtigungen werden nun in Microsoft Teams behandelt. Weitere Informationen finden Sie unter ["Berechtigungen für Browsergeräte"](browser-device-permissions.md).
+Geräteberechtigungen sind im Browser unterschiedlich. Zuvor hat der Browser die Erteilung von Zugriffsberechtigungen gehandhabt, und jetzt werden diese Berechtigungen in Microsoft Teams gehandhabt. Weitere Informationen finden Sie unter [Browsergeräteberechtigungen](browser-device-permissions.md).
 
 ## <a name="native-device-capabilities"></a>Systemeigene Gerätefunktionen
 
-Ein Mobilgerät oder Desktop verfügt über integrierte Geräte, z. B. Kamera und Mikrofon, die als Funktionen bezeichnet werden. Sie können auf die folgenden Gerätefunktionen auf Mobilgeräten oder Desktops über dedizierte APIs zugreifen, [die in Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) verfügbar sind:
+Ein Mobilgerät oder Desktop verfügt über integrierte Geräte wie Kamera und Mikrofon, die als Funktionen bezeichnet werden. Sie können auf die folgenden Gerätefunktionen auf Mobilgeräten oder Desktops über dedizierte APIs zugreifen, die in [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) verfügbar sind:
 
 * Medienfunktionen, z. B.
   * Kamera
   * Mikrofon
   * Katalog
-  * QR- oder Strichcodescanner
+  * QR- oder Barcode-Scanner
 * Standort
 
 Nachdem Sie Zugriff auf die Gerätefunktionen erhalten haben, können Sie sie in die Teams-Plattform integrieren, um die Zusammenarbeit zu verbessern.
 
 ## <a name="request-device-permissions"></a>Geräteberechtigungen anfordern
 
-Verwenden Sie die tools in [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), um die erforderlichen [Berechtigungen](native-device-permissions.md) für den Zugriff auf die systemeigenen Gerätefunktionen anzufordern. Während der Zugriff auf diese Funktionen in modernen Webbrowsern standard ist, müssen Sie Teams über die Funktionen informieren, die Sie verwenden, indem Sie Ihr App-Manifest aktualisieren. Mit diesem Update können Sie Berechtigungen anfordern, während Ihre App auf Teams mobilen Clients oder Desktopclients ausgeführt wird.
+Verwenden Sie die im [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) enthaltenen Tools, um die erforderlichen [Berechtigungen](native-device-permissions.md) für den Zugriff auf die systemeigene Gerätefunktionen anzufordern. Während der Zugriff auf diese Funktionen in modernen Webbrowsern Standard ist, müssen Sie Teams über die von Ihnen verwendeten Funktionen informieren, indem Sie Ihr App-Manifest aktualisieren. Mit diesem Update können Sie Berechtigungen anfordern, während Ihre App auf mobilen oder Desktop-Clients von Teams ausgeführt wird.
 
 ## <a name="integrate-device-capabilities"></a>Integrieren von Gerätefunktionen
 
-Verwenden Sie nach dem Zugriff auf Gerätefunktionen Teams Medienfunktions-APIs, um [Medienfunktionen](mobile-camera-image-permissions.md) in die Teams-Plattform zu integrieren, um die Benutzererfahrung zu verbessern. Diese integrierten Funktionen ermöglichen Ihrer App Folgendes:
+Nachdem Sie Zugriff auf Gerätefunktionen erhalten haben, verwenden Sie Teams-APIs für Medienfunktionen, um [Medienfunktionen](mobile-camera-image-permissions.md) in die Teams-Plattform zu integrieren und so die Benutzererfahrung zu verbessern. Diese integrierten Funktionen ermöglichen Ihrer App Folgendes:
 
-* Erfassen und Freigeben von Bildern.
-* Scannen Sie QR oder Barcode mithilfe des [Scannersteuerelements](qr-barcode-scanner-capability.md).
-* Aufzeichnen von Audiodaten über das Mikrofon.
-* Standort mithilfe der [Standortauswahl](location-capability.md) freigeben.
+* Bilder aufnehmen und teilen.
+* Scannen von QR oder Barcode mit der [Scannersteuerung](qr-barcode-scanner-capability.md).
+* Aufnehmen von Audio über das Mikrofon.
+* Teilen von Standort mit der [Standortauswahl](location-capability.md).
 
-Darüber hinaus können Sie das Teams Systemeigene [Personenauswahl-Steuerelement](people-picker-capability.md) integrieren, mit dem Benutzer Personen in der Web-App-Oberfläche suchen und auswählen können.
+Außerdem können Sie das systemeigene [Personenauswahl-Steuerelement](people-picker-capability.md) von Teams integrieren, mit dem Benutzer Personen in der Webanwendung suchen und auswählen können.
