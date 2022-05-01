@@ -5,12 +5,12 @@ description: Eine Übersicht über Aktionsbefehle für Messaging-Erweiterungen m
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ef9f1c45ec3b2d1df4bf5449885263034f19fde7
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 9a39b01f7ccbf45e33be89aef4411e1d2fba8108
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111682"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135745"
 ---
 # <a name="define-message-extension-action-commands"></a>Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 
@@ -48,7 +48,7 @@ Zuerst müssen Sie den Speicherort festlegen, von dem aus der Aktionsbefehl aufg
 
 In der folgenden Abbildung werden die Speicherorte angezeigt, von denen der Aktionsbefehl aufgerufen wird:
 
-![Speicherorte zum Aufrufen von Aktionsbefehlen](~/assets/images/messaging-extension-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="Speicherorte zum Aufrufen von Aktionsbefehlen":::
 
 ## <a name="select-how-to-create-your-task-module"></a>Auswählen, wie Sie Ihr Aufgabenmodul erstellen möchten
 
@@ -78,7 +78,7 @@ Um den Aktionsbefehl zum App-Manifest hinzuzufügen, müssen Sie der obersten Eb
 Sie können einen Aktionsbefehl mit **App Studio** oder **Entwicklerportal** erstellen.
 
 > [!NOTE]
-> App Studio wird in Kürze eingestellt. Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps mit dem neuen [Entwicklerportal](https://dev.teams.microsoft.com/).
+ > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal [Entwicklerportal](https://dev.teams.microsoft.com/) zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird zum 30. Juni 2022 eingestellt.
 
 # <a name="app-studio"></a>[App-Studio](#tab/AS)
 
@@ -92,43 +92,47 @@ Sie können einen Aktionsbefehl mit **App Studio** oder **Entwicklerportal** ers
 1. Wählen Sie nach dem Importieren eines App-Pakets unter **Funktionen** die Option **Nachrichtenerweiterungen** aus. Sie erhalten ein Popupfenster zum Einrichten der Nachrichtenerweiterung.
 1. Wählen Sie im Fenster **Einrichten** aus, um die Nachrichtenerweiterung in Ihre App-Umgebung einzuschließen. In der folgenden Abbildung wird das Fenster zum Einrichten der Nachrichtenerweiterung angezeigt:
 
-    <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Einrichten von Messaging-Erweiterungen":::
 
 1. Um eine Nachrichtenerweiterung zu erstellen, benötigen Sie einen von Microsoft registrierten Bot. Sie können entweder einen vorhandenen Bot verwenden oder einen neuen Bot erstellen. Wählen Sie die Option **Neuen Bot erstellen** aus, geben Sie dem neuen Bot einen Namen, und wählen Sie **Erstellen** aus. In der folgenden Abbildung wird die Boterstellung für die Nachrichtenerweiterung angezeigt:
 
-    <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Erstellen eines Bots für die Messaging-Erweiterung":::
+
+1. Um einen vorhandenen Bot zu verwenden, wählen Sie **Vorhandenen Bot verwenden** und dann **Aus einem meiner vorhandenen Bots auswählen** aus, um die vorhandenen Bots aus der Dropdownliste auszuwählen. Geben Sie einen **Botnamen** ein, und wählen Sie **Speichern** aus, oder wählen Sie **Mit einer anderen Bot-ID verbinden** aus, wenn Sie bereits eine Bot-ID erstellt haben. Geben Sie einen **Botnamen** ein, und wählen Sie **Speichern** aus.
+
+    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Verwenden eines vorhandenen Bots für die Messaging-Erweiterung":::
 
 1. Wählen Sie im Abschnitt **Befehl** der Seite mit den Nachrichtenerweiterungen die Option **Hinzufügen** aus, um die Befehle einzuschließen, die das Verhalten der Nachrichtenerweiterung bestimmen.
 In der folgenden Abbildung wird das Hinzufügen des Befehls für die Nachrichtenerweiterung angezeigt:
 
-   <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Einschließen des Befehls":::
 
 1. Wählen Sie **Benutzern erlauben, Aktionen in externen Diensten von Teams aus auszulösen** aus. In der folgenden Abbildung wird die Aktionsbefehlsauswahl angezeigt:
 
-    <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-selection.png" alt-text="Auswahl des Aktionsbefehls":::
 
 1. Wenn Sie einen statischen Parametersatz zum Erstellen des Aufgabenmoduls verwenden möchten, wählen Sie **Satz statischer Parameter für den Befehl definieren** aus.
 
     In der folgenden Abbildung wird die Auswahl der statischen Parameter für den Aktionsbefehl angezeigt:
 
-   <img src="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt="action command static parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt-text="Auswahl statischer Parameter für den Aktionsbefehl":::
 
     In der folgenden Abbildung wird ein Beispiel für die Einrichtung statischer Parameter angezeigt:
 
-   <img src="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt="action command static parameter set-up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt-text="Einrichten statischer Parameter für den Aktionsbefehl":::
 
     In der folgenden Abbildung wird ein Beispiel für das Testen statischer Parameter angezeigt:
 
-   <img src="~/assets/images/messaging-extension/static-parameter-testing.png" alt="action command static parameter testing" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/static-parameter-testing.png" alt-text="Testen statischer Parameter für den Aktionsbefehl":::
 
 1. Um dynamische Parameter zu verwenden, wählen Sie die Option **Einen dynamischen Satz von Parametern von Ihrem Bot abrufen** aus. In der folgenden Abbildung wird die Auswahl der Parameter für den Aktionsbefehl angezeigt:
 
-    <img src="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt="action command dynamic parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt-text="Auswahl dynamischer Parameter für den Aktionsbefehl":::
 
 1. Fügen Sie eine **Befehls-ID** und einen **Titel** hinzu.
 1. Wählen Sie den Speicherort aus, von dem aus Sie den Aktionsbefehl aufrufen möchten. In der folgenden Abbildung wird der Speicherort zum Aufrufen des Aktionsbefehls angezeigt:
 
-    <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-invoke-location.png" alt-text="Speicherort zum Aufrufen des Aktionsbefehls":::
 
 1. Wählen Sie **Speichern**.
 1. Um weitere Parameter hinzuzufügen, wählen Sie die Schaltfläche **Hinzufügen** im Abschnitt **Parameter** aus.
