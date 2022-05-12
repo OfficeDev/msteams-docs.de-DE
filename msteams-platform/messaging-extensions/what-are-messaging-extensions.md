@@ -2,23 +2,25 @@
 title: Nachrichtenerweiterungen
 author: surbhigupta
 description: Eine Übersicht über Messaging-Erweiterungen auf der Microsoft Teams-Plattform
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c8814d7bd3b67ad88859eb381f1d7116fe1a5c43
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 54c0ce0139f6d70aca0c002edff2c60065c48b7b
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110386"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297142"
 ---
 # <a name="message-extensions"></a>Nachrichtenerweiterungen
 
-Nachrichtenerweiterungen ermöglichen den Benutzern die Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams-Client. Sie können in einem externen System über den Nachrichtenbereich „Verfassen“, das Befehlsfeld oder direkt aus einer Nachricht heraus suchen oder Aktionen starten. Sie können die Ergebnisse dieser Interaktion an den Microsoft Teams-Client in Form einer reich formatierten Karte zurücksenden. Dieses Dokument bietet einen Überblick über die Nachrichtenerweiterung, Aufgaben, die in verschiedenen Szenarien ausgeführt werden, das Arbeiten mit Nachrichtenerweiterungen, Aktions- und Suchbefehle sowie die Verbreitung von Links.
+Nachrichtenerweiterungen ermöglichen den Benutzern die Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams-Client. Sie können in einem externen System über den Nachrichtenbereich „Verfassen“, das Befehlsfeld oder direkt aus einer Nachricht heraus suchen oder Aktionen starten. Sie können die Ergebnisse dieser Interaktion an den Microsoft Teams-Client in Form einer reich formatierten Karte zurücksenden.
+
+Dieses Dokument bietet einen Überblick über die Nachrichtenerweiterung, Aufgaben, die in verschiedenen Szenarien ausgeführt werden, das Arbeiten mit Nachrichtenerweiterungen, Aktions- und Suchbefehle sowie die Verbreitung von Links.
 
 In der folgenden Abbildung werden die Speicherorte angezeigt, von denen Nachrichtenerweiterungen aufgerufen werden:
 
-![Aufruforte für Nachrichtenerweiterungen](~/assets/images/messaging-extension-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="Aufruforte für Nachrichtenerweiterungen":::
 
 > [!NOTE]
 > @mentioning Nachrichtenerweiterungen werden im Feld „Verfassen“ nicht mehr unterstützt.
@@ -48,16 +50,18 @@ Es gibt zwei Typen von Befehlen für Nachrichtenerweiterungen: Aktionsbefehl und
 
 Aktionsbefehle werden verwendet, um den Benutzern ein modales Popup zum Sammeln oder Anzeigen von Informationen präsentieren. Wenn der Benutzer das Formular übermittelt, antwortet Ihr Webdienst, indem er eine Nachricht direkt in die Unterhaltung einfügt oder eine Nachricht in den Nachrichtenbereich „Verfassen“ einfügt. Danach kann der Benutzer die Nachricht übermitteln. Sie können mehrere Formulare für komplexere Workflows miteinander verketten.
 
-Die Aktionsbefehle werden aus dem Nachrichtenbereich „Verfassen“, aus dem Befehlsfeld oder aus einer Nachricht heraus ausgelöst. Wenn der Befehl von einer Nachricht aus aufgerufen wird, enthält die ursprüngliche JSON-Nutzlast, die an Ihren Bot gesendet wird, die gesamte Nachricht, von der aus sie aufgerufen wurde. Das folgende Bild zeigt das Aufgabenmodul für Aktionsbefehle für die Nachrichtenerweiterung: ![Aufgabenmodul für Aktionsbefehle für die Nachrichtenerweiterung](~/assets/images/task-module.png)
+Die Aktionsbefehle werden aus dem Nachrichtenbereich „Verfassen“, aus dem Befehlsfeld oder aus einer Nachricht heraus ausgelöst. Wenn der Befehl von einer Nachricht aus aufgerufen wird, enthält die ursprüngliche JSON-Nutzlast, die an Ihren Bot gesendet wird, die gesamte Nachricht, von der aus sie aufgerufen wurde. Die folgende Abbildung zeigt das Aufgabenmodul für die Nachrichtenerweiterungsaktion:
+
+:::image type="content" source="~/assets/images/task-module.png" alt-text="Nachrichtenerweiterung Aktion Befehl Aufgabenmodul":::
 
 ### <a name="search-commands"></a>Suchbefehle
 
-Suchbefehle ermöglichen es den Benutzern, ein externes System nach Informationen zu durchsuchen (entweder manuell über ein Suchfeld oder durch Einfügen eines Links zu einer überwachten Domäne in den Nachrichtenbereich „Verfassen“) und die Ergebnisse der Suche in eine Nachricht einzufügen. Im einfachsten Suchbefehlsfluss enthält die anfängliche Aufrufnachricht die vom Benutzer übermittelte Suchzeichenfolge. Sie antworten mit einer Liste von Karten und Kartenvorschauen. Der Teams-Client rendert eine Liste der Kartenvorschauen für den Benutzer. Wenn der Benutzer eine Karte aus der Liste auswählt, wird sie in voller Größe in den Nachrichtenbereich „Verfassen“ eingefügt.
+Mit den Suchbefehlen können die Benutzer ein externes System nach Informationen durchsuchen, entweder manuell über ein Suchfeld oder indem sie einen Link zu einer überwachten Domäne in den Bereich zum Verfassen von Nachrichten einfügen und die Ergebnisse der Suche in eine Nachricht einfügen. Im einfachsten Suchbefehlsfluss enthält die anfängliche Aufrufnachricht die vom Benutzer übermittelte Suchzeichenfolge. Sie antworten mit einer Liste von Karten und Kartenvorschauen. Der Teams-Client rendert eine Liste der Kartenvorschauen für den Benutzer. Wenn der Benutzer eine Karte aus der Liste auswählt, wird sie in voller Größe in den Nachrichtenbereich „Verfassen“ eingefügt.
 
-Die Karten werden aus dem Nachrichtenbereich „Verfassen“ oder dem Befehlsfeld ausgelöst und nicht von einer Nachricht ausgelöst. Sie können nicht aus einer Nachricht ausgelöst werden.
+Die Karten werden aus dem Nachrichtenbereich „Verfassen“ oder dem Befehlsfeld ausgelöst und nicht von einer Nachricht ausgelöst. Sie können nicht durch eine Nachricht ausgelöst werden.
 Im folgenden Bild wird das Aufgabenmodul für die Nachrichtenerweiterung aus Suchbasis angezeigt:
 
-![Befehl zur Nachrichtenerweiterung auf Suchbasis](~/assets/images/search-extension.png)
+:::image type="content" source="~/assets/images/search-extension.png" alt-text="Suchbefehl für Nachrichtenerweiterung":::
 
 > [!NOTE]
 > Weitere Informationen zu Karten finden Sie unter [Was sind Karten](../task-modules-and-cards/what-are-cards.md).
@@ -67,7 +71,7 @@ Im folgenden Bild wird das Aufgabenmodul für die Nachrichtenerweiterung aus Suc
 Ein Webdienst wird aufgerufen, wenn eine URL in den Nachrichtenbereich „Verfassen“ eingefügt wird. Diese Funktionalität wird als Verbreiten von Links bezeichnet. Sie können abonnieren, um einen Aufruf zu erhalten, wenn URLs, die eine bestimmte Domäne enthalten, in den Nachrichtenbereich „Verfassen“ eingefügt werden. Ihr Webdienst kann die URL in eine detaillierte Karte „verbreiten", wodurch mehr Informationen als die standardmäßige Website-Vorschaukarte bereitgestellt werden. Sie können Schaltflächen hinzufügen, damit die Benutzer sofort Maßnahmen ergreifen können, ohne den Microsoft Teams-Client zu verlassen.
 In den folgenden Bildern wird das Feature zum Verbreiten von Links angezeigt, wenn ein Link in die Nachrichtenerweiterung eingefügt wird:
 
-![Link verbreiten](../assets/images/messaging-extension/unfurl-link.png)
+:::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="Link verbreiten":::
 
 ![Verbreiten von Links](../assets/images/messaging-extension/link-unfurl.gif)
 
@@ -231,7 +235,7 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 |------------|-------------|----------------|------------|------------|
 | Nachrichtenerweiterung mit aktionsbasierten Befehlen | In diesem Beispiel wird veranschaulicht, wie Sie eine aktionsbasierte Nachrichtenerweiterung erstellen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | Nachrichtenerweiterung mit suchbasierten Befehlen | In diesem Beispiel wird das Erstellen einer suchbasierten Nachrichtenerweiterung veranschaulicht. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
-|Nachrichtenerweiterungsaktion für die Aufgabenplanung|In diesem Beispiel wird veranschaulicht, wie Sie eine Aufgabe über den Aktionsbefehl „Nachrichtenerweiterung“ planen und eine Erinnerungskarte zu einem geplanten Datum und einer geplanten Uhrzeit erhalten.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
+|Nachrichtenerweiterungsaktion für die Aufgabenplanung|In diesem Beispiel wird veranschaulicht, wie Sie eine Aufgabe über den Aktionsbefehl „Nachrichtenerweiterung“ planen und eine Erinnerungskarte zu einem geplanten Datum und einer geplanten Uhrzeit erhalten.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
 
 ## <a name="next-step"></a>Nächster Schritt
 
