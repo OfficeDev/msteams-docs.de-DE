@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 21de5611daacbc00630cd7fa4b2aa3704788ed5e
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: c57bbdf6be1b31d61acc1725924f42faeb20b264
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63464316"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191194"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Vorbereiten von Konten zum Erstellen von Teams-Apps
 
@@ -28,7 +28,7 @@ Wenn Sie über ein Visual Studio Enterprise- oder Professional-Abonnement verfü
 
 ### <a name="microsoft-365-developer-program"></a>Microsoft 365-Entwicklerprogramm
 
-Um ein kostenloses Teams Entwicklerkonto zu erhalten, treten Sie dem Microsoft 365-Entwicklerprogramm bei, und führen Sie die folgenden Schritte aus:
+Um ein kostenloses Teams-Entwicklerkonto zu erhalten, treten Sie dem Microsoft 365-Entwicklerprogramm bei und führen Sie die folgenden Schritte aus:
 
 1. Gehen Sie zu [Microsoft 365-Entwicklerprogramm](https://developer.microsoft.com/microsoft-365/dev-program).
 2. Wählen Sie **Jetzt beitreten** aus.
@@ -53,7 +53,7 @@ Sie können sich mit einem der folgenden Kontotypen für das Entwicklerprogramm 
 
 - **Visual Studio Benutzer-ID**
 
-    Die Benutzer-ID, die für die Verwendung für Visual Studio Professional- oder Enterprise-Abonnements erstellt wurde, kann verwendet werden, um dem Entwicklerprogramm im Visual Studio-Katalog beizutreten, damit die vollen Vorteile des Visual Studio Abonnements genutzt werden können.
+    Die Benutzer-ID, die für die Nutzung des Visual Studio Professional- oder Enterprise-Abonnements erstellt wurde, kann verwendet werden, um dem Entwicklerprogramm in der Visual Studio Gallery beizutreten und alle Vorteile als Visual Studio-Abonnent zu nutzen.
 
 ## <a name="azure-account-to-host-backend-resources"></a>Azure-Konto zum Hosten von Back-End-Ressourcen
 
@@ -61,19 +61,19 @@ Das Azure-Konto ist optional, wenn Ihre vorhandene Anwendung auf einem anderen C
 
 **Visual Studio-ID**
 
-Wenn Sie Ihre anwendungsbezogenen Ressourcen hosten oder auf Ressourcen in Azure zugreifen möchten, können Sie [ein kostenloses Konto erstellen](https://azure.microsoft.com/free/), bevor Sie beginnen. Alternativ können Sie ihre Back-End-Ressourcen mit einem anderen Cloudanbieter oder auf Ihren eigenen Servern hosten, wenn diese über die öffentliche Domäne verfügbar sind.
+Wenn Sie Ihre anwendungsbezogenen Ressourcen hosten oder auf Ressourcen in Azure zugreifen möchten, können Sie [ein kostenloses Konto erstellen](https://azure.microsoft.com/free/), bevor Sie beginnen. Alternativ können Sie Ihre Backend-Ressourcen auch bei einem anderen Cloud-Anbieter oder auf Ihren eigenen Servern hosten, wenn diese öffentlich zugänglich sind.
 
 ## <a name="teams-custom-app-upload-or-sideload-permission"></a>Berechtigung zum Hochladen oder Querladen benutzerdefinierter Teams-Apps
 
 > [!IMPORTANT]
-> Nachdem Sie die App erstellt haben, müssen Sie ihre App in Teams laden, ohne sie zu verteilen. Dieser Vorgang wird als **Querladen** bezeichnet.
+> Nachdem Sie die App erstellt haben, müssen Sie Ihre App in Teams laden, ohne sie zu verteilen. Dieser Vorgang wird als **Sideloading** bezeichnet.
 
    Sie können überprüfen, ob die Berechtigung zum Querladen entweder mit Visual Studio Code oder Teams Client aktiviert ist.
 
 * **Überprüfen der Berechtigung zum Querladen mithilfe von Visual Studio Code**
 
     1. Öffnen Sie **Visual Studio Code**.
-    1. Wählen Sie im linken Bereich **Teams Toolkit** aus. Wenn die Option nicht angezeigt wird, stellen Sie sicher, dass Sie die Teams Toolkit-Erweiterung installiert haben.
+    1. Wählen Sie im linken Bereich **Teams Toolkit** aus. Wenn Sie die Option nicht sehen können, stellen Sie sicher, dass Sie die Teams Toolkit-Erweiterung installiert haben.
     1. Wählen Sie **Konten** aus, und melden Sie sich bei Ihrem Microsoft 365 Konto an.
     1. Überprüfen Sie, ob Sie die Option **Querladen aktiviert** anzeigen können, wie in der folgenden Abbildung dargestellt:
 
@@ -91,7 +91,7 @@ Wenn Sie Ihre anwendungsbezogenen Ressourcen hosten oder auf Ressourcen in Azure
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Benutzerdefinierte App hochladen" border="true":::
 
-        Wenn Sie die Option **Benutzerdefinierte App hochladen** nicht anzeigen können, bedeutet dies, dass Sie nicht über die erforderliche Berechtigung zum Querladen verfügen.
+        Wenn Sie die Option Eine benutzerdefinierte App hochladen** nicht sehen können, bedeutet dies, dass Sie nicht über die erforderliche Berechtigung für das Sideloading verfügen.
         * Aktivieren Sie für einen Mandantenadministrator die Einstellung für das Querladen Ihres Mandanten oder Ihrer Organisation im Teams Admin Center.
         * Wenn Sie kein Mandantenadministrator sind, müssen Sie sich an Ihren Mandantenadministrator wenden, um das Querladen zu aktivieren.
 
@@ -131,5 +131,5 @@ Weitere Informationen finden Sie unter [Verwalten von benutzerdefinierten App-Ri
 * [Erstellen einer neuen Teams-App mit Teams Toolkit](create-new-project.md)
 * [Bereitstellen von Cloudressourcen](provision.md)
 * [Bereitstellen der Teams-App in der Cloud](deploy.md)
-* [Veröffentlichen Ihrer Teams-App](TeamsFx-collaboration.md)
+* [Veröffentlichen Ihrer Teams-App](../concepts/deploy-and-publish/appsource/publish.md)
 * [Verwalten mehrerer Umgebungen](TeamsFx-multi-env.md)

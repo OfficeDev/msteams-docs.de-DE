@@ -3,19 +3,19 @@ title: Erstellen von Office 365-Connectors
 author: laujan
 description: Beschreibt die ersten Schritte mit Office 365-Connectors in Microsoft Teams
 keywords: Teams-Office365-Connector
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 1ec406d633eb2db0d3564984d5451d58d41b4c14
-ms.sourcegitcommit: 38c435e806bb7c2c30efd10e8264c5c06a43fad3
+ms.openlocfilehash: 8091edf34ff53930afea03cd2c4833bf6a000158
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65136968"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297149"
 ---
 # <a name="create-office-365-connectors"></a>Erstellen von Office 365-Connectors
 
-Mit Microsoft Teams-Apps können Sie einen vorhandenen Office 365-Connector hinzufügen oder innerhalb Teams einen neuen erstellen. Weitere Informationen finden Sie unter [Erstellen eines eigenen Connectors](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
+Mit Microsoft Teams Apps können Sie Ihren bestehenden Office 365 Connector hinzufügen oder einen neuen in Teams erstellen. Weitere Informationen finden Sie unter [Erstellen Sie Ihren eigenen Connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
 ## <a name="add-a-connector-to-teams-app"></a>Hinzufügen eines Connectors zur Teams-App
 
@@ -26,7 +26,7 @@ Um Ihren Connector zu verteilen, registrieren Sie ihn im [Connectors-Entwicklerd
 Damit ein Connector nur in Microsoft Teams funktioniert, befolgen Sie die Anweisungen zum Einreichen des Connectors im Artikel zum [Veröffentlichen Ihrer App im Microsoft Teams-Store](~/concepts/deploy-and-publish/appsource/publish.md). Ansonsten funktioniert ein registrierter Connector in allen Office 365-Produkten, die Anwendungen unterstützen, einschließlich Outlook und Teams.
 
 > [!IMPORTANT]
-> Ihr Connector wird registriert, nachdem Sie im Connectors-Entwicklerdashboard auf **Speichern** klicken. Wenn Sie Ihren Connector in AppSource veröffentlichen möchten, folgen Sie den Anweisungen zum [Veröffentlichen Ihrer Microsoft Teams-App in AppSource](~/concepts/deploy-and-publish/apps-publish.md). Wenn Sie Ihre App nicht in AppSource veröffentlichen möchten, verteilen Sie sie direkt an die Organisation. Nach dem [Veröffentlichen von Connectors für Ihre Organisation](#publish-connectors-for-the-organization) ist keine weitere Aktion im Connectordashboard erforderlich.
+> Ihr Connector wird registriert, nachdem Sie im Connectors-Entwicklerdashboard auf **Speichern** klicken. Wenn Sie Ihren Connector in AppSource veröffentlichen möchten, folgen Sie den Anweisungen zum [Veröffentlichen Ihrer Microsoft Teams-App in AppSource](~/concepts/deploy-and-publish/apps-publish.md). Wenn Sie Ihre App nicht in AppSource veröffentlichen möchten, verteilen Sie sie direkt an die Organisation. Nach dem Veröffentlichen von Connectors für Ihre Organisation ist keine weitere Aktion im Connectordashboard erforderlich.
 
 ### <a name="integrate-the-configuration-experience"></a>Integrieren der Konfigurationserfahrung
 
@@ -52,7 +52,7 @@ So integrieren Sie die Konfigurationserfahrung:
     > Sie müssen `microsoftTeams.settings.setValidityState(true)` als Antwort auf die Benutzerauswahl oder Feldaktualisierung aufrufen.
 
 1. Registrieren Sie den `microsoftTeams.settings.registerOnSaveHandler()`-Ereignishandler, der aufgerufen wird, wenn der Benutzer auf **Speichern** klickt.
-1. Rufen Sie `microsoftTeams.settings.setSettings()` auf, um die Connectoreinstellungen zu speichern. Die gespeicherten Einstellungen werden auch im Konfigurationsdialogfeld angezeigt, wenn der Benutzer versucht, eine vorhandene Konfiguration für Ihren Connector zu aktualisieren.
+1. Aufruf`microsoftTeams.settings.setSettings()`, um die Einstellungen des Connectors zu speichern. Die gespeicherten Einstellungen werden auch im Konfigurationsdialog angezeigt, wenn der Benutzer versucht, eine bestehende Konfiguration für Ihren Connector zu aktualisieren.
 1. Rufen Sie `microsoftTeams.settings.getSettings()` auf, um Webhookeigenschaften abzurufen, einschließlich der URL.
 
     > [!NOTE]
@@ -208,7 +208,7 @@ Die folgende manifest.json-Datei enthält die Elemente, die zum Testen und Einre
 
 ## <a name="test-your-connector"></a>Testen des Connectors
 
-Um Ihren Connector zu testen, laden Sie ihn mit einer beliebigen anderen App in ein Team hoch. Sie können ein ZIP-Paket erstellen, indem Sie die Manifestdatei aus den beiden Symboldateien und dem Entwicklerdashboard für Connectors verwenden, die, wie unter [Einschließen des Connectors in Ihr Manifest](#include-the-connector-in-your-manifest) beschrieben, geändert wurden.
+Um Ihren Connector zu testen, laden Sie ihn zusammen mit einer beliebigen anderen App in ein Team hoch. Sie können ein .zip-Paket erstellen, indem Sie die Manifestdatei aus den beiden Symboldateien und dem Konnektor Developer Dashboard verwenden und diese gemäß den Anweisungen unter [Einbindung des Konnektors in Ihr Manifest](#include-the-connector-in-your-manifest)ändern.
 
 Nachdem Sie die App hochgeladen haben, öffnen Sie die Connectorliste von einem beliebigen Kanal aus. Scrollen Sie nach unten, um Ihre App im Abschnitt **Hochgeladen** anzuzeigen:
 
@@ -224,7 +224,7 @@ Folgen Sie der [Schritt-für-Schritt-Anleitung](../../sbs-teams-connectors.yml),
 ## <a name="distribute-webhook-and-connector"></a>Verteilen von Webhook und Connector
 
 1. [Richten Sie einen eingehenden Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) direkt für Ihr Team ein.
-1. Fügen Sie eine [Konfigurationsseite](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) hinzu, und [veröffentlichen Sie Ihren eingehenden Webhook](~/webhooks-and-connectors/how-to/connectors-creating.md#publish-connectors-for-the-organization) in einem Office 365-Connector.
+1. Fügen Sie eine [Konfigurationsseite](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) hinzu, und veröffentlichen Sie Ihren eingehenden Webhook in einem Office 365-Connector.
 1. Verpacken und veröffentlichen Sie Ihren Connector als Teil Ihrer [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md)-Übermittlung.
 
 ## <a name="code-sample"></a>Codebeispiel

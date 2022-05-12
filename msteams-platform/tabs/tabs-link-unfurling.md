@@ -4,13 +4,13 @@ author: Rajeshwari-v
 description: Erfahren Sie Näheres über die Vorschaugenerierung für Links, das Öffnen der Bühnenansicht und das Anheften einer Registerkarte mit der Microsoft Teams-App. Erfahren Sie mehr über die Bühnenansicht und deren Aufruf mithilfe einer adaptiven Karte anhand von Codebeispielen und Beispielen.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: high
-ms.openlocfilehash: 0f1d5db388e937fc382a045d40cc47a1350c033b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.localizationpriority: medium
+ms.openlocfilehash: 71974d9c553509b974dc2b52377f2d7ab8d79a16
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110295"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296959"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 
@@ -22,7 +22,7 @@ Die Bühnenansicht ist eine Vollbild-Benutzeroberflächenkomponente, die Sie auf
 
 ## <a name="advantage-of-stage-view"></a>Vorteile der Bühnenansicht
 
-Die Bühnenansicht ermöglicht eine nahtlosere Anzeige von Inhalten in Microsoft Teams. Benutzer können die von Ihrer App bereitgestellten Inhalte öffnen und anzeigen, ohne den aktuellen Kontext zu verlassen, und sie können die Inhalte im Chat oder Kanal anheften, um künftig schnell darauf zugreifen zu können, was zu einer höheren Benutzerbindung für Ihre App führt.
+Stage View sorgt für ein nahtloses Erlebnis beim Betrachten von Inhalten in Teams. Die Benutzer können die von Ihrer App bereitgestellten Inhalte öffnen und ansehen, ohne den Kontext zu verlassen, und sie können die Inhalte an den Chat oder den Kanal anheften, um später schnell darauf zugreifen zu können, was zu einem höheren Engagement der Benutzer mit Ihrer App führt.
 
 ## <a name="stage-view-vs-task-module"></a>Bühnenansicht im Vergleich zum Aufgabenmodul
 
@@ -82,12 +82,12 @@ Der `invoke`-Anforderungstyp muss `composeExtension/queryLink` sein.
 
 Im Folgenden sehen Sie den Ablauf zum Aufrufen der Bühnenansicht:
 
-* Wenn der Benutzer **Ansicht** auswählt, erhält der Bot eine `invoke`-Anforderung. Der Anforderungstyp ist `composeExtension/queryLink`.
+* Wenn der Benutzer **Ansicht** wählt, erhält der Bot eine `invoke`Anfrage. Der Anfragetyp ist`composeExtension/queryLink`.
 * Die `invoke`-Antwort des Bots enthält eine adaptive Karte mit darin enthaltenem Typ `tab/tabInfoAction`.
 * Der Bot antwortet mit einem `200`-Code.
 
 > [!NOTE]
-> Auf mobilen Microsoft Teams-Clients wird beim Aufrufen der Bühnenansicht für Apps, die über den [Microsoft Teams Store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) verteilt werden und für die es keine für Mobilgeräte optimierte Version gibt, der Standardwebbrowser des Geräts geöffnet. Der Browser öffnet die im `websiteUrl`-Parameter des `TabInfo`-Objekts angegebene URL.
+> Auf mobilen Clients von Teams wird beim Aufrufen von Stage View für Apps, die über den [Teams Store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) vertrieben werden und nicht für Mobilgeräte optimiert sind, der Standard-Webbrowser des Geräts geöffnet. Der Browser öffnet die im `websiteUrl`Parameter des `TabInfo`Objekts angegebene URL.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Aufrufen der Bühnenansicht über einen Deep-Link
 
@@ -138,15 +138,15 @@ https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?conte
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Zeichenfolge | 64 | Diese Eigenschaft ist ein eindeutiger Bezeichner für die von der Registerkarte angezeigte Entität. Dies ist ein Pflichtfeld.|
 | `name` | Zeichenfolge | 128 | Diese Eigenschaft ist der Anzeigename der Registerkarte auf der Kanaloberfläche. Dieses Feld ist optional.|
-| `contentUrl` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https://-URL, die auf die Entitäts-Benutzeroberfläche verweist, die im Microsoft Teams-Canvas angezeigt werden soll. Dies ist ein Pflichtfeld.|
-| `websiteUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, auf die verwiesen werden soll, wenn ein Benutzer die Ansicht in einem Browser auswählt. Dies ist ein Pflichtfeld.|
+| `contentUrl` | Zeichenfolge | 2048 | Bei dieser Eigenschaft handelt es sich um die URL https://, die auf die Entitäts-UI verweist, die im Teams Canvas angezeigt werden soll. Dies ist ein Pflichtfeld.|
+| `websiteUrl?` | Zeichenfolge | 2048 | Bei dieser Eigenschaft handelt es sich um die URL https://, auf die Sie verweisen, wenn ein Benutzer die Ansicht in einem Browser auswählt. Dies ist ein Pflichtfeld.|
 | `removeUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, die auf die Benutzeroberfläche verweist, die angezeigt werden soll, wenn der Benutzer die Registerkarte löscht. Dies ist ein optionales Feld.|
 
 ## <a name="code-sample"></a>Codebeispiel
 
 | Beispielname | Beschreibung | C# |Node.js|
 |-------------|-------------|------|----|
-|Registerkarte in der Bühnenansicht |Beispiel-App für Microsoft Teams-Registerkarten zum Demonstrieren einer Registerkarte in der Bühnenansicht.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+|Registerkarte in der Bühnenansicht |Beispiel-App für Microsoft Teams-Registerkarten zum Demonstrieren einer Registerkarte in der Bühnenansicht.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
 
 ## <a name="next-step"></a>Nächster Schritt
 

@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d095bc5536742ad1e0b6d3e9053c6a18e5f1c0f3
-ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
+ms.openlocfilehash: 5929b98d055d8a4b180df55f4298f12a617040c9
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952353"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191201"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Hochladen Ihrer App in Microsoft Teams
 
@@ -59,7 +59,7 @@ Wenn Ihre App nicht quergeladen werden kann oder Probleme beim Hochladen auftret
 
 ## <a name="manage-your-apps"></a>Ihre Apps verwalten
 
-„Verwalten Ihrer Apps“ bietet Benutzern einen dedizierten Ort zum Verwalten, Aktualisieren und Entfernen ihrer Apps, Berechtigungen und Abonnements auf dem Teams-Client. Die Benutzer können die Apps über **Verwalten Ihrer Apps** installieren.
+Mit Verwalten Sie Ihre Apps können Benutzer ihre Apps, Berechtigungen und Abonnements auf dem Teams-Client von einem speziellen Ort aus verwalten, aktualisieren und entfernen. Die Benutzer können die Apps von **Verwalten Sie Ihre Apps** aus installieren.
 
 ### <a name="access-your-app"></a>Zugriff auf Ihre App
 
@@ -81,7 +81,7 @@ Teams bietet mehrere Möglichkeiten zum Öffnen von Apps. Weitere Informationen 
 
 Sie müssen Ihre App nicht erneut querladen, wenn Sie Codeänderungen vornehmen (diese werden in Teams in Echtzeit widerspiegelt). Sie müssen sie jedoch neu installieren, wenn Sie App-Konfigurationen ändern.
 
-Wenn für Ihre App ein Update verfügbar ist, ist die **Update verfügbar**-Option aktiviert. Führen Sie zum Aktualisieren die folgenden Schritte aus:
+Wenn ein Update für Ihre App verfügbar ist, ist die Option **Update verfügbar** aktiviert. Führen Sie zum Aktualisieren die folgenden Schritte aus:
 
 1. Wählen Sie **Update verfügbar** aus, um die Aktualisierung anzuzeigen.
 
@@ -115,7 +115,7 @@ Führen Sie die folgenden Schritte aus, um die App aus Teams zu entfernen:
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Verwenden Ihrer Teams-App](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b)
+>[Apps für Teams-Besprechungen erstellen](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
 
 ## <a name="see-also"></a>Siehe auch
 
