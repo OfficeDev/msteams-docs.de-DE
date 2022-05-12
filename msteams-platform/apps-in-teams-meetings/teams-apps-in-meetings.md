@@ -4,14 +4,14 @@ author: surbhigupta
 description: Übersicht über Apps in Microsoft Teams-Besprechungen basierend auf Teilnehmer- und Benutzerrolle
 ms.topic: overview
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Microsoft Teams Apps Besprechungen Benutzer Teilnehmerrollen API
-ms.openlocfilehash: ec3a9dc46b5a509e68f451e8e2735fc2acbe7bd1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: ec9db255d6dad410844451830b12ee902b106712
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111304"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296952"
 ---
 # <a name="apps-for-teams-meetings"></a>Apps für Teams-Besprechungen
 
@@ -38,7 +38,7 @@ Mit dem neuen benutzerdefinierten Feature "Zusammen-Modus-Szenen" können Benutz
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Erweiterbarkeit der Besprechungs-App](meeting-app-extensibility.md)
+> [Einheitliche Besprechungs-Apps](meeting-app-extensibility.md)
 
 ## <a name="see-also"></a>Siehe auch
 

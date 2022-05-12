@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: b28d68faf6d124faaa2b800accea568775acaa32
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: e287d6251af6d44b78010449dce751b938f390bd
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104154"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191264"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Erstellen einer neuen Teams-App mit dem Teams-Toolkit
 
@@ -53,6 +53,6 @@ Weitere Informationen finden Sie unter [Erstellen einer neuen Teams-Registerkart
 
 * [Bereitstellen von Cloudressourcen](provision.md)
 * [Bereitstellen der Teams-App in der Cloud](deploy.md)
-* [Veröffentlichen Ihrer Teams-App](TeamsFx-collaboration.md)
+* [Veröffentlichen Ihrer Teams-App](../concepts/deploy-and-publish/appsource/publish.md)
 * [Verwalten mehrerer Umgebungen](TeamsFx-multi-env.md)
 * [Zusammenarbeit mit anderen Entwicklern am Teams-Projekt](TeamsFx-collaboration.md)

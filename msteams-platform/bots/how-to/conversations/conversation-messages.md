@@ -5,16 +5,16 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: d31f528b17c671074f3009c435cfff7bad728a09
-ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
+ms.openlocfilehash: fa13a03d30fd112b1c8983683b667d0cb96ef4ee
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65102120"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191180"
 ---
 # <a name="messages-in-bot-conversations"></a>Meldungen in Bot-Unterhaltungen
 
-Jede Nachricht in einer Unterhaltung ist ein `Activity` Objekt vom Typ `messageType: message`. Wenn ein Benutzer eine Nachricht sendet, Teams die Nachricht an Ihren Bot senden. Teams sendet ein JSON-Objekt an den Messaging-Endpunkt Ihres Bots. Ihr Bot untersucht die Nachricht, um ihren Typ zu bestimmen, und antwortet entsprechend.
+Jede Nachricht in einer Unterhaltung ist ein `Activity` Objekt vom Typ `messageType: message`. Wenn ein Benutzer eine Nachricht sendet, Teams die Nachricht an Ihren Bot senden. Teams sendet ein JSON-Objekt an den Messaging-Endpunkt Ihres Bots. Ihr Bot untersucht die Nachricht, um ihren Typ zu bestimmen und entsprechend zu reagieren.
 
 Grundlegende Unterhaltungen werden über den Bot Framework-Connector, eine einzelne REST-API, behandelt. Diese API ermöglicht es Ihrem Bot, mit Teams und anderen Kanälen zu kommunizieren. Das Bot Builder SDK bietet die folgenden Features:
 
@@ -195,7 +195,7 @@ async def on_members_added_activity(
 
 Nachrichten, die zwischen Benutzern und Bots gesendet werden, enthalten interne Kanaldaten innerhalb der Nachricht. Diese Daten ermöglichen es dem Bot, in diesem Kanal ordnungsgemäß zu kommunizieren. Mit dem Bot Builder SDK können Sie die Nachrichtenstruktur ändern.
 
-## <a name="teams-channel-data"></a>Teams Kanaldaten
+## <a name="teams-channel-data"></a>Teams-Kanaldaten
 
 Das `channelData` Objekt enthält Teams-spezifische Informationen und ist eine definitive Quelle für Team- und Kanal-IDs. Optional können Sie diese IDs zwischenspeichern und als Schlüssel für den lokalen Speicher verwenden. Das `TeamsActivityHandler` SDK ruft wichtige Informationen aus dem `channelData` Objekt ab, um es leicht zugänglich zu machen. Sie können jedoch immer über das Objekt auf die `turnContext` ursprünglichen Daten zugreifen.
 
@@ -207,14 +207,14 @@ Ein typisches `channelData` Objekt in einer Aktivität, die an Ihren Bot gesende
 * `tenant.id`: Microsoft Azure Active Directory (Azure AD)-Mandanten-ID, die in allen Kontexten übergeben wird.
 * `team`: Wird nur in Kanalkontexten und nicht im persönlichen Chat übergeben.
   * `id`: GUID für den Kanal.
-  * `name`: Der Name des Teams, das nur in Fällen von [Teamneunamenereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md) übergeben wurde.
+  * `name`: Der Name des Teams, das nur in Fällen von [Teamneunamenereignissen](subscribe-to-conversation-events.md#team-renamed) übergeben wurde.
 * `channel`: Wird nur in Kanalkontexten übergeben, wenn der Bot erwähnt wird oder für Ereignisse in Kanälen in Teams, in denen der Bot hinzugefügt wurde.
   * `id`: GUID für den Kanal.
   * `name`: Kanalname, der nur in Fällen von [Kanaländerungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md) übergeben wird.
 * `channelData.teamsTeamId`: Veraltet. Diese Eigenschaft ist nur aus Gründen der Abwärtskompatibilität enthalten.
 * `channelData.teamsChannelId`: Veraltet. Diese Eigenschaft ist nur aus Gründen der Abwärtskompatibilität enthalten.
 
-### <a name="example-channeldata-object-channelcreated-event"></a>Beispiel für ein channelData-Objekt (channelCreated-Ereignis)
+### <a name="example-channeldata-object-channelcreated-event"></a>Beispiel eines channelData-Objekts (channelCreated-Ereignis)
 
 Der folgende Code zeigt ein Beispiel für ein channelData-Objekt:
 
@@ -241,13 +241,13 @@ Nachrichten, die von Ihrem Bot empfangen oder an diesen gesendet werden, können
 | Format    | Vom Benutzer zum Bot | Vom Bot zum Benutzer | Anmerkungen                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich-Text  | ✔                | ✔                | Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und Bilder an Ihren Bot senden.                                                                                        |
-| Bilder  | ✔                | ✔                | Maximal 1024×1024 und 1 MB im PNG-, JPEG- oder GIF-Format. Animierte GIF-Dateien werden nicht unterstützt.  |
+| Bilder  | ✔                | ✔                | Maximal 1024×1024 MB und 1 MB im PNG-, JPEG- oder GIF-Format. Animiertes GIF wird nicht unterstützt.  |
 | Karten     | ✖                | ✔                | Weitere Informationen zu unterstützten Karten finden Sie in der [Teams Kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md). |
 | Emojis    | ✔                | ✔                | Teams unterstützt derzeit Emojis über UTF-16, z. B. U+1F600 zum Grinsen im Gesicht. |
 
 ## <a name="notifications-to-your-message"></a>Benachrichtigungen an Ihre Nachricht
 
-Sie können Ihrer Nachricht auch mithilfe der `Notification.Alert` Eigenschaft Benachrichtigungen hinzufügen. Benachrichtigungen benachrichtigen Benutzer über neue Aufgaben, Erwähnungen und Kommentare. Diese Warnungen beziehen sich auf das, was Benutzer gerade bearbeiten oder was sie durch Einfügen einer Benachrichtigung in ihren Aktivitätsfeed anzeigen müssen. Damit Benachrichtigungen von Ihrer Bot-Nachricht ausgelöst werden, legen Sie die `TeamsChannelData` Objekteigenschaft `Notification.Alert` auf *"true"* fest. Ob eine Benachrichtigung ausgelöst wird, hängt von den Teams Einstellungen des einzelnen Benutzers ab, und Sie können diese Einstellungen nicht außer Kraft setzen. Der Benachrichtigungstyp ist entweder ein Banner oder sowohl ein Banner als auch eine E-Mail.
+Sie können Ihrer Nachricht auch mithilfe der `Notification.Alert` Eigenschaft Benachrichtigungen hinzufügen. Benachrichtigungen benachrichtigen Benutzer über neue Aufgaben, Erwähnungen und Kommentare. Diese Warnungen beziehen sich auf das, was Benutzer gerade bearbeiten oder was sie durch Einfügen einer Benachrichtigung in ihren Aktivitätsfeed anzeigen müssen. Damit Benachrichtigungen von Ihrer Bot-Nachricht ausgelöst werden, legen Sie die `TeamsChannelData` Objekteigenschaft `Notification.Alert` auf *"true"* fest. Ob eine Benachrichtigung ausgelöst wird, hängt von den Teams Einstellungen des einzelnen Benutzers ab, und Sie können diese Einstellungen nicht überschreiben. Der Benachrichtigungstyp ist entweder ein Banner oder sowohl ein Banner als auch eine E-Mail.
 
 > [!NOTE]
 > Im Feld **"Zusammenfassung** " wird text vom Benutzer als Benachrichtigung im Feed angezeigt.
@@ -329,9 +329,9 @@ Um Ihre Nachricht zu verbessern, können Sie Bilder als Anlagen zu dieser Nachri
 
 ## <a name="picture-messages"></a>Bildnachrichten
 
-Bilder werden gesendet, indem Anlagen zu einer Nachricht hinzugefügt werden. Weitere Informationen zu Anlagen finden Sie in der [Bot Framework-Dokumentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
+Bilder werden gesendet, indem Anhänge zu einer Nachricht hinzugefügt werden. Weitere Informationen zu Anlagen finden Sie unter [Hinzufügen von Medienanlagen zu Nachrichten](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
 
-Bilder können höchstens 1024×1024 und 1 MB im PNG-, JPEG- oder GIF-Format sein. Animierte GIF-Dateien werden nicht unterstützt.
+Bilder können höchstens 1024×1024 MB und 1 MB im PNG-, JPEG- oder GIF-Format sein. Animiertes GIF wird nicht unterstützt.
 
 Geben Sie die Höhe und Breite der einzelnen Bilder mithilfe von XML an. In Markdown ist die Bildgröße standardmäßig 256×256. Beispiel:
 
@@ -421,4 +421,4 @@ Es folgen die Statuscodes und deren Fehlercode- und Meldungswerte:
 * [Senden proaktiver Nachrichten](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Abonnieren von Unterhaltungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [Senden und Empfangen von Dateien über den Bot](~/bots/how-to/bots-filesv4.md)
-* [Mandanten-ID und Unterhaltungs-ID an die Anforderungsheader des Bots senden](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [Senden der Mandanten-ID und Konversations-ID an die Anforderungsheader des Bots](~/bots/how-to/conversations/request-headers-of-the-bot.md)
