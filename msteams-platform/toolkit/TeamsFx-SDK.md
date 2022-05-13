@@ -3,15 +3,15 @@ title: TeamsFx SDK
 author: MuyangAmigo
 description: Informationen zum TeamsFx SDK
 ms.author: nintan
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: d54c3d962ecc9d1fd703bd4126d71564f8358794
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: aad897e7b4028363bcfa0f21a75b6da01fc57ec6
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111220"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297177"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -105,7 +105,7 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### <a name="teamsfx-class"></a>TeamsFx-Klasse
 
-TeamsFx-Klasseninstanzen greifen standardmäßig auf alle TeamsFx-Einstellungen aus Umgebungsvariablen zu. Sie können auch benutzerdefinierte Konfigurationswerte festlegen, um die Standardwerte zu überschreiben. Einzelheiten finden [Sie in der](#override-configuration) Außerkraftsetzungskonfiguration. Beim Erstellen einer TeamsFx-Instanz müssen Sie auch den Identitätstyp angeben. Es gibt zwei Identitätstypen:
+TeamsFx-Klasseninstanzen greifen standardmäßig auf alle TeamsFx-Einstellungen aus Umgebungsvariablen zu. Sie können auch benutzerdefinierte Konfigurationswerte festlegen, um die Standardwerte zu überschreiben. Einzelheiten finden Sie in der [Außerkraftsetzungskonfiguration](#override-configuration). Beim Erstellen einer TeamsFx-Instanz müssen Sie auch den Identitätstyp angeben. Es gibt zwei Identitätstypen:
 
 * Benutzeridentität
 * Anwendungsidentität
@@ -117,7 +117,7 @@ TeamsFx-Klasseninstanzen greifen standardmäßig auf alle TeamsFx-Einstellungen 
 | `new TeamsFx(IdentityType.User)`| Die Anwendung wird als aktueller Teams-Benutzer authentifiziert. |
 | `TeamsFx:setSsoToken()`| Benutzeridentität in der Node.js-Umgebung (ohne Browser). |
 | `TeamsFx:getUserInfo()` | Um Basisinformationen des Benutzers zu erhalten. |
-| `TeamsFx:login()` | Es wird verwendet, damit Benutzer den Zustimmungsprozess durchführen können, wenn Sie SSO verwenden möchten, um Zugriffstoken für bestimmte OAuth-Bereiche zu erhalten. |
+| `TeamsFx:login()` | Wird verwendet, damit Benutzer den Zustimmungsprozess durchführen können, wenn Sie SSO verwenden möchten, um Zugriffstoken für bestimmte OAuth-Bereiche zu erhalten. |
 
 > [!NOTE]
 > Sie können im Namen des aktuellen Teams-Benutzers auf Ressourcen zugreifen.
@@ -134,9 +134,9 @@ TeamsFx-Klasseninstanzen greifen standardmäßig auf alle TeamsFx-Einstellungen 
 
 ### <a name="credential"></a>Credential
 
-Sie müssen den Identitätstyp auswählen, wenn Sie TeamsFx initialisieren. .Nachdem Sie den Identitätstyp bei der Initialisierung von TeamsFx angegeben haben, verwendet das SDK verschiedene Arten von Anmeldeinformationen, um die Identität darzustellen und Zugriffstoken durch den entsprechenden Authentifizierungsablauf zu erhalten.
+Sie müssen den Identitätstyp auswählen, wenn Sie TeamsFx initialisieren. Nachdem Sie den Identitätstyp bei der Initialisierung von TeamsFx angegeben haben, verwendet das SDK verschiedene Arten von Anmeldeinformationsklassen, um die Identität darzustellen und Zugriffstoken durch den entsprechenden Authentifizierungsablauf zu erhalten.
 
-Es gibt drei Anmeldeinformationsklassen, um die Authentifizierung zu vereinfachen. [credential ordner](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential). Anmeldeinformationsklassen implementieren `TokenCredential` eine Schnittstelle, die in Azure-Bibliotheks-APIs weit verbreitet ist und darauf ausgelegt ist, Zugriffstoken für bestimmte Bereiche bereitzustellen. Andere APIs verlassen sich auf den Aufruf `TeamsFx:getCredential()` von Anmeldeinformationen, um eine Instanz`TokenCredential` von.
+Es gibt drei Anmeldeinformationsklassen, um die Authentifizierung zu vereinfachen. [credential ordner](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential). Anmeldeinformationsklassen implementieren `TokenCredential` eine Schnittstelle, die in Azure-Bibliotheks-APIs weit verbreitet ist und darauf ausgelegt ist, Zugriffstoken für bestimmte Bereiche bereitzustellen. Andere APIs verlassen sich auf den Aufruf `TeamsFx:getCredential()` von Anmeldeinformationen, um eine Instanz von `TokenCredential` zu erhalten.
 
 Hier sind die entsprechenden Szenarien für die Ziele der einzelnen Anmeldeinformationsklassen.
 
@@ -151,7 +151,7 @@ Erforderliche Konfiguration: `initiateLoginEndpoint`, `clientId`.
 Erforderliche Konfiguration:`authorityHost`, `tenantId`, `clientId`, `clientSecret` oder `certificateContent`.
 
 #### <a name="application-identity-in-nodejs-environment"></a>Anwendungsidentität in der Node.js-Umgebung
-`AppCredential` stellt die Anwendungsidentität dar. Es wird normalerweise verwendet, wenn der Benutzer nicht beteiligt ist, wie z. B. ein zeitgesteuerter Automatisierungsjob. Das SDK verwendet diese Anmeldeinformationen, wenn der Entwickler die App-Identität in der Node.js-Umgebung auswählt.
+`AppCredential` stellt die Anwendungsidentität dar. Wird verwendet, wenn der Benutzer nicht beteiligt ist, wie z. B. ein zeitgesteuerter Automatisierungsjob. Das SDK verwendet diese Anmeldeinformationen, wenn der Entwickler die App-Identität in der Node.js-Umgebung auswählt.
 
 Erforderliche Konfiguration: `tenantId`, `clientId`, `clientSecret` oder `certificateContent`.
 
@@ -159,13 +159,13 @@ Erforderliche Konfiguration: `tenantId`, `clientId`, `clientSecret` oder `certif
 
 Bot-bezogene Klassen werden im [bot-Ordner gespeichert](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
 
-`TeamsBotSsoPrompt` hat eine gute Integration mit dem Bot-Framework. Es vereinfacht den Authentifizierungsprozess, wenn Sie Bot-Anwendungen entwickeln und Bot-SSO nutzen möchten.
+`TeamsBotSsoPrompt` weist eine gute Integration mit dem Bot-Framework auf. Es vereinfacht den Authentifizierungsprozess, wenn Sie Bot-Anwendungen entwickeln und Bot-SSO nutzen möchten.
 
 Erforderliche Konfiguration: `initiateLoginEndpoint`, `tenantId`, `clientId` und `applicationIdUri`.
 
 ### <a name="supported-functions"></a>Unterstützte Funktionen
 
-TeamsFx SDK bietet mehrere Funktionen, um die Konfiguration für Bibliotheken von Drittanbietern zu vereinfachen. Sie befinden sich im [Kernordner](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
+TeamsFx SDK bietet mehrere Funktionen, um die Konfiguration für Bibliotheken von Drittanbietern zu vereinfachen. Sie befinden sich unter dem [Hauptordner](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
 
 *  Microsoft Graph Service:`createMicrosoftGraphClient` und `MsGraphAuthProvider` Hilfe beim Erstellen einer authentifizierten Graph-Instanz.
 *  SQL:`getTediousConnectionConfig` gibt eine langwierige Verbindungskonfiguration zurück.
@@ -419,7 +419,7 @@ Sie können beim Erstellen einer TeamsFx-Instanz eine benutzerdefinierte Konfigu
 
 ## <a name="upgrade-latest-sdk-version"></a>Aktualisieren Sie die neueste SDK-Version
 
-Wenn Sie die SDK-Version mit verwenden, können Sie diese Schritte ausführen `loadConfiguration()`, um auf die neueste SDK-Version zu aktualisieren.
+Wenn Sie die SDK-Version mit `loadConfiguration()` verwenden, können Sie diese Schritte ausführen, um auf die neueste SDK-Version zu aktualisieren.
 1. Benutzerdefinierte `loadConfiguration()` Einstellungen entfernen und übergeben mit `new TeamsFx(IdentityType.User, { ...customConfig })`
 2. Ersetzen `new TeamsUserCredential()` mit `new TeamsFx()`
 3. Ersetzen `new M365TenantCredential()` mit `new TeamsFx(IdentityType.App)`

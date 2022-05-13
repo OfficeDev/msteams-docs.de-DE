@@ -2,15 +2,15 @@
 title: App-Entwurfsprozess
 author: heath-hamilton
 description: Erhalten Sie eine allgemeine Vorstellung davon, wie und wann Sie Microsoft-Tools und -Ressourcen verwenden können, um eine effektive Microsoft Teams-App zu entwerfen.
-ms.localizationpriority: high
+ms.localizationpriority: mediums
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: b59c2c09240478899ff66e6554719f0f46bc791c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 40d223180e0f8bcbfcd5aad27a9a3eb4ee571328
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111269"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297219"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Entwurfsprozess für Microsoft Teams-Apps
 
@@ -20,7 +20,7 @@ Es gibt mehrere Tools und Ressourcen zum Entwerfen Ihrer Microsoft Teams-App. In
 
 ## <a name="plan-your-app"></a>Planen Ihrer App
 
-Beim Entwerfen einer qualitativ hochwertigen Teams-App müssen Sie sich darüber klar sein, welche Aufgaben die App erfüllen soll und wie die Benutzer sie voraussichtlich nutzen werden. Bevor Sie mit dem Entwurf beginnen, beantworten Sie die folgenden Fragen:
+Beim Entwerfen einer qualitativ hochwertigen Microsoft Teams-App müssen Sie sich darüber klar sein, welche Aufgaben die App erfüllen soll und wie die Benutzer sie voraussichtlich nutzen werden. Bevor Sie mit dem Entwurf beginnen, beantworten Sie die folgenden Fragen:
 
 * Wer sind Ihre Benutzer?
 * Was ist deren Problem?
@@ -113,7 +113,7 @@ Derzeit sind nicht alle im UI-Kit aufgeführten Vorlagen in der Bibliothek verf�
 
 Unabhängig davon, ob Sie gerade erst mit Ihrer App beginnen oder die App fast produktionsbereiten ist, empfehlen wir Ihnen, die folgenden Ressourcen regelmäßig zu überprüfen:
 
-* **Validierungsrichtlinien für den Microsoft Teams-Store**: Stellt Standards bereit, die von allen Teams-Apps und nicht nur von Apps, die im Store aufgeführt sind, angestrebt werden sollten. Weitere Informationen finden Sie in den [Richtlinien](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+* **Validierungsrichtlinien für den Microsoft Teams-Store**: Stellt Standards bereit, die von allen Teams-Apps und nicht nur von Apps, die im Store aufgeführt sind, angestrebt werden sollten. Weitere Informationen hierzu finden Sie in den [Richtlinien](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 * **Bewährte Methoden für das Design**: Diese Dokumente und das UI-Kit bieten bewährte Methoden zum Entwerfen qualitativ hochwertiger Apps. Sehen Sie sich beispielsweise die [bewährten Methoden für das Entwerfen von Bots an](~/bots/design/bots.md#best-practices).
 
 ## <a name="see-also"></a>Siehe auch

@@ -2,15 +2,15 @@
 title: Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 author: surbhigupta
 description: Eine Übersicht über Aktionsbefehle für Messaging-Erweiterungen mit App-Manifestbeispiel
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 9a39b01f7ccbf45e33be89aef4411e1d2fba8108
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 7793563db7a3e2d4f3b5b780cadac22ae609c74d
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135745"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297212"
 ---
 # <a name="define-message-extension-action-commands"></a>Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 
@@ -54,7 +54,7 @@ In der folgenden Abbildung werden die Speicherorte angezeigt, von denen der Akti
 
 Sie müssen nicht nur auswählen, von wo aus der Befehl aufgerufen werden kann, sondern auch, wie das Formular im Aufgabenmodul für Ihre Benutzer aufgefüllt werden soll. Sie haben die folgenden drei Optionen zum Erstellen des Formulars, das innerhalb des Aufgabenmoduls gerendert wird:
 
-* **Statische Parameterliste**: Dies ist die einfachste Methode. Sie können eine Liste von Parametern in Ihrem App-Manifest definieren, die vom Teams-Client gerendert werden, die Formatierung kann in diesem Fall jedoch nicht gesteuert werden.
+* **Statische Parameterliste**: Dies ist die einfachste Methode. Sie können eine Liste von Parametern in Ihrem App-Manifest definieren, die vom Microsoft Teams-Client gerendert werden, die Formatierung kann in diesem Fall jedoch nicht gesteuert werden.
 * **Adaptive Karte**: Sie können eine adaptive Karte verwenden, die eine bessere Kontrolle über die Benutzeroberfläche bietet, die Ihnen zur Verfügung stehenden Steuerelemente und Formatierungsoptionen aber dennoch beschränkt.
 * **Eingebettete Webansicht**: Sie können eine benutzerdefinierte Webansicht in das Aufgabenmodul einbetten, um eine vollständige Kontrolle über die Benutzeroberfläche und die Steuerelemente zu haben.
 
@@ -78,7 +78,7 @@ Um den Aktionsbefehl zum App-Manifest hinzuzufügen, müssen Sie der obersten Eb
 Sie können einen Aktionsbefehl mit **App Studio** oder **Entwicklerportal** erstellen.
 
 > [!NOTE]
- > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal [Entwicklerportal](https://dev.teams.microsoft.com/) zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird zum 30. Juni 2022 eingestellt.
+ > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal [Entwicklerportal](https://dev.teams.microsoft.com/) zum Konfigurieren, Verteilen und Verwalten Ihrer Microsoft Teams-Apps zu testen. App Studio wird per 30. Juni 2022 eingestellt.
 
 # <a name="app-studio"></a>[App-Studio](#tab/AS)
 
@@ -102,8 +102,7 @@ Sie können einen Aktionsbefehl mit **App Studio** oder **Entwicklerportal** ers
 
     :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Verwenden eines vorhandenen Bots für die Messaging-Erweiterung":::
 
-1. Wählen Sie im Abschnitt **Befehl** der Seite mit den Nachrichtenerweiterungen die Option **Hinzufügen** aus, um die Befehle einzuschließen, die das Verhalten der Nachrichtenerweiterung bestimmen.
-In der folgenden Abbildung wird das Hinzufügen des Befehls für die Nachrichtenerweiterung angezeigt:
+1. Wählen Sie im Abschnitt **Befehl** der Seite mit den Nachrichtenerweiterungen die Option **Hinzufügen** aus, um die Befehle einzuschließen, die das Verhalten der Nachrichtenerweiterung bestimmen. In der folgenden Abbildung ist das Hinzufügen des Befehls für die Nachrichtenerweiterung zu sehen:
 
     :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Einschließen des Befehls":::
 
