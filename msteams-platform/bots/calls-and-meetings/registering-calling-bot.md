@@ -2,14 +2,14 @@
 title: Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
 description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanruf-Bot für Microsoft Teams registrieren, einen neuen Bot erstellen oder ihm Anruffunktionen hinzufügen und Graph-Berechtigungen hinzufügen.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Anruf-Bot Audio-/Video Videomedien
-ms.openlocfilehash: 53c12b3d65ad909088e18081ed4b38a77919844b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 71ab66ab6c5f53405897447b8d531ed0ce6dac99
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111416"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297163"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
 
@@ -40,7 +40,7 @@ Informationen zum Erstellen von Bots finden Sie unter [Erstellen eines Bots für
 
 So erstellen Sie einen neuen Bot für Microsoft Teams:
 
-1. Verwenden Sie diesen Link, um einen neuen Bot zu erstellen: `https://dev.botframework.com/bots/new` Alternativ können Sie im Bot Framework-Portal die Schaltfläche "**Bot erstellen**" anklicken und Ihren Bot in Microsoft Azure erstellen. Hierfür müssen Sie über ein Azure-Konto verfügen.
+1. Verwenden Sie diesen Link, um einen neuen Bot zu erstellen, `https://dev.botframework.com/bots/new`. Alternativ können Sie im Bot Framework-Portal die Schaltfläche **Bot erstellen** anklicken und Ihren Bot in Microsoft Azure erstellen. Hierfür müssen Sie über ein Azure-Konto verfügen.
 1. Fügen Sie den Microsoft Teams-Kanal hinzu.
 1. Wählen Sie die Registerkarte **Anrufe** auf der Microsoft Teams-Kanalseite aus. Klicken Sie auf **Anrufe aktivieren**, und aktualisieren Sie dann **Webhook (für Anrufe)** mit Ihrer HTTPS-URL, unter der Sie eingehende Benachrichtigungen erhalten, beispielsweise `https://contoso.com/teamsapp/api/calling`. Weitere Informationen finden Sie unter [Konfigurieren von Kanälen](/bot-framework/portal-configure-channels).
 
@@ -78,7 +78,7 @@ Die folgende Tabelle enthält eine Liste der Anwendungsberechtigungen für Onlin
 
 ### <a name="assign-permissions"></a>Berechtigungen zuweisen
 
-Wenn Sie den [Microsoft Azure Active Directory (Azure AD) V1-Endpunkt](/azure/active-directory/develop/azure-ad-endpoint-comparison) verwenden möchten, müssen Sie die Anwendungsberechtigungen für Ihren Bot vorab über das [Microsoft Azure-Portal](https://aka.ms/aadapplist) konfigurieren.
+Wenn Sie den [Microsoft Azure Active Directory (Azure AD) V1-Endpunkt](/azure/active-directory/develop/azure-ad-endpoint-comparison) verwenden möchten, müssen Sie die Anwendungsberechtigungen für Ihren Bot vorab über das [Microsoft Azure-Portal](https://portal.azure.com) konfigurieren.
 
 ### <a name="get-tenant-administrator-consent"></a>Einholen der Administratorzustimmung
 

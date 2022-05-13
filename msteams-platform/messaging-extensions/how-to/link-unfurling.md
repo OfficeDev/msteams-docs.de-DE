@@ -2,15 +2,15 @@
 title: Verbreiten von Links
 author: surbhigupta
 description: Erfahren Sie, wie Sie in einer Microsoft Teams-App mit App-Manifest oder manuell mithilfe von Codebeispielen und Beispielen Links verbreiten, die sich mit der Messagingerweiterung erweitern.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: b172320f6f116026fe5ea4b45c9c74da6ff82f07
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 09b8447e68a07e98293409e6c371a301da3017d0
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111248"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297184"
 ---
 # <a name="link-unfurling"></a>Verbreiten von Links
 
@@ -25,7 +25,7 @@ In diesem Dokument erfahren Sie, wie Sie Ihrem App-Manifest das Verbreiten von L
 
 Die Azure DevOps Nachrichtenerweiterung verwendet die Verbreitung von Links, um nach URLs zu suchen, die in den Bereich für das Verfassen von Nachrichten eingefügt werden, der auf ein Arbeitselement verweist. In der folgenden Abbildung hat ein Benutzer eine URL für ein Arbeitselement in Azure DevOps eingefügt, die die Nachrichtenerweiterung in eine Karte aufgelöst hat:
 
-![Beispiel der Verbreitung von Links](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+:::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Beispiel der Verbreitung von Links":::
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Hinzufügen einer Verbreitung von Links zum App-Manifest
 
@@ -38,9 +38,9 @@ Um Ihrem App-Manifest das Verbreiten von Links hinzuzufügen, fügen Sie dem `co
 
 1. Öffnen Sie **App Studio** über den Microsoft Teams-Client, und wählen Sie die Registerkarte **Manifest-Editor** aus.
 1. Laden Sie Ihr App-Manifest.
-1. Fügen Sie auf der Seite **Nachrichtenerweiterung** die Domäne hinzu, nach der Sie im Abschnitt **Nachrichtenhandler** suchen möchten. In der folgenden Abbildung wird der Prozess erläutert:
+1. Fügen Sie auf der Seite **Nachrichtenerweiterung** die Domäne hinzu, nach der Sie im Abschnitt **Nachrichtenhandler** suchen möchten. Das folgende Bild erläutert den Prozess:
 
-    ![Abschnitt "Nachrichtenhandler" in App Studio](~/assets/images/link-unfurling.png)
+    :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="Abschnitt „Nachrichtenhandler“ in App Studio":::
 
 ### <a name="add-link-unfurling-manually"></a>Verbreitung von Links manuell hinzufügen
 
