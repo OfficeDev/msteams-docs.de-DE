@@ -1,17 +1,17 @@
 ---
-title: Freigeben für Teams aus Web-Apps
+title: Von Web-Apps für Teams freigeben
 description: Erfahren Sie, wie Sie die Schaltfläche "Freigeben" zu Teams eingebetteten Schaltfläche auf Ihrer Website mit einer Websitevorschau hinzufügen, indem Sie Codebeispiele verwenden.
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Freigeben Teams Freigeben für Teams
-ms.openlocfilehash: ac08d3c697bc5f02eb8527d2239afe022cb421af
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.openlocfilehash: b3efd268e2bded3955c2d9ab76d6dea755d06b5a
+ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685688"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65439300"
 ---
-# <a name="share-to-teams-from-web-apps"></a>Freigeben für Teams aus Web-Apps
+# <a name="share-to-teams-from-web-apps"></a>Von Web-Apps für Teams freigeben
 
 Websites von Drittanbietern können das Startprogrammskript verwenden, um "Freigeben" in Teams Schaltflächen auf ihren Webseiten einzubetten. Wenn Sie diese Option auswählen, wird die Freigabe gestartet, um Teams Oberfläche in einem Popupfenster anzuzeigen. Auf diese Weise können Sie einen Link direkt für eine beliebige Person oder Microsoft Teams Kanal freigeben, ohne den Kontext zu wechseln. In diesem Dokument erfahren Sie, wie Sie eine Schaltfläche "Freigeben" erstellen und in Teams für Ihre Website einbetten, ihre Websitevorschau erstellen und "Freigeben" auf Teams für Education erweitern.
 
@@ -65,6 +65,17 @@ In der folgenden Abbildung wird die Popupoberfläche "Freigeben für Teams" ange
     </div>
     ```
 
+1. Um eine Nachricht Ihrer Wahl im Feld zum Verfassen anzuzeigen, können Sie Ihren Text im `data-msg-text` Attribut definieren.
+
+     ```html
+     <div
+      class="teams-share-button"
+      data-href="https://<link-to-be-shared>"
+      data-msg-text="<default-message-to-be-populated-in-compose-box>"
+      data-preview="false">
+      </div>
+     ```
+
 1. Wenn Ihre Seite Inhalte dynamisch rendert, können Sie mithilfe der `shareToMicrosoftTeams.renderButtons()` Methode erzwingen, dass **"Freigeben** " an der entsprechenden Stelle in der Pipeline gerendert wird.
 
 ## <a name="craft-your-website-preview"></a>Erstellen der Websitevorschau
@@ -80,7 +91,7 @@ In der folgenden Tabelle sind die erforderlichen Tags aufgeführt:
 
 |Wert|Metatag| öffnen Graph|
 |----|----|----|
-|Position|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
+|Titel|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
 |Beschreibung|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |Miniaturansicht| nichts. |`<meta property="og:image" content="http://example.com/image.jpg">`|
 

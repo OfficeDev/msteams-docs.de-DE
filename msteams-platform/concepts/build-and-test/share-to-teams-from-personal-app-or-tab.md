@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie die Freigabe in Teams hinzufügen, die in Ihr
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Freigeben Teams Freigeben für Teams
-ms.openlocfilehash: 7ece44c3b0a48ad2ce0ad72aed5ba9efc9cf57c2
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.openlocfilehash: 59185b9e2531a0ca61c97ceba50b4f71f06c45e9
+ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685702"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65439363"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>Für Teams über persönliche App oder Registerkarte freigeben
 
@@ -43,6 +43,7 @@ microsoftTeams.sharing.shareWebContent({
           {
             type: 'URL',
             url: '<URL to be shared>',
+            message: 'Default message to be loaded in the compose box',
             preview: true
           }
         ]
@@ -55,6 +56,7 @@ Die Nutzlast enthält die folgenden Parameter:
 |---|---|
 | `type` | Der Typ muss `URL` |
 | `url` | `URL` freigegeben werden |
+|`message`| Standardnachricht, die im Feld zum Verfassen geladen werden soll |
 | `preview` | So eingestellt, dass `true` die URL-Vorschau aktiviert wird |
 
 Die folgende Abbildung zeigt die Option "Für Teams freigeben":
@@ -82,7 +84,7 @@ Die folgende Tabelle enthält die Antwortcodes:
 | **9000** | Der Plattformcode ist alt und implementiert diese API nicht. |
 | **10000** | Der Rückgabewert ist zu groß und hat unsere Größengrenzen überschritten. |
 
-## <a name="limitations"></a>Einschränkungen
+## <a name="limitations"></a>Begrenzungen
 
 Die Einschränkungen zum Hinzufügen von "Freigeben" zu Teams Schaltfläche:
 
@@ -114,5 +116,5 @@ Nachdem Sie die Schaltfläche "Für Teams freigeben" auf der persönlichen App o
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Freigeben für Teams aus Web-Apps](share-to-teams-from-web-apps.md)
+* [Von Web-Apps für Teams freigeben](share-to-teams-from-web-apps.md)
 * [Erstellen einer persönlichen Registerkarte](../../tabs/how-to/create-personal-tab.md)
