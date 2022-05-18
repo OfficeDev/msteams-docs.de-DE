@@ -2,15 +2,15 @@
 title: Hinzufügen der Authentifizierung zu Ihrer Nachrichtenerweiterung
 author: surbhigupta
 description: Erfahren Sie, wie Sie einer Messaging-Erweiterung mithilfe von Codebeispielen eine Authentifizierung hinzufügen, und sehen Sie ein Beispiel.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 36a2aa269bfc43f4c07e97a5c214e3081a38ffeb
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 996ae2fe8a45e5ebbb481865198b759c7ad221a3
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135710"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297008"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Hinzufügen der Authentifizierung zu Ihrer Nachrichtenerweiterung
 
@@ -81,7 +81,7 @@ Wie bei anderen eingebetteten Erfahrungen, die innerhalb von Microsoft Teams aus
 
 Wenn die Anmeldeanforderung abgeschlossen ist und zurück zu Ihrer Seite leitet, müssen die folgenden Schritte ausgeführt werden:
 
-1. Generieren Sie einen Sicherheitscode, eine Zufallszahl. Sie müssen diesen Code in Ihrem Dienst zwischenspeichern, zusammen mit den Anmeldeinformationen, die über den Anmeldefluss erhalten wurden, z. B. OAuth 2.0-Token.
+1. Sie müssen einen Sicherheitscode generieren, eine Zufallszahl. Sie müssen diesen Code in Ihrem Dienst zwischenspeichern, zusammen mit den Anmeldeinformationen, die über den Anmeldefluss erhalten wurden, z. B. OAuth 2.0-Token.
 1. Rufen Sie `microsoftTeams.authentication.notifySuccess` auf, und übergeben Sie den Sicherheitscode.
 
 An diesem Punkt wird das Fenster geschlossen, und die Kontrolle wird an den Teams-Client übergeben. Der Client stellt nun die ursprüngliche Benutzerabfrage zusammen mit dem Sicherheitscode in der Eigenschaft `state` erneut aus. Ihr Code kann den Sicherheitscode verwenden, um die zuvor gespeicherten Anmeldeinformationen nachzuschlagen, um die Authentifizierungssequenz abzuschließen und dann die Benutzeranforderung abzuschließen.

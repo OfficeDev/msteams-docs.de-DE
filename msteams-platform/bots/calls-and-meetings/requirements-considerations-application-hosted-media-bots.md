@@ -2,23 +2,23 @@
 title: Anforderungen und Überlegungen für anwendungsgehostete Medienbots
 description: Verstehen Sie wichtige Anforderungen und Überlegungen sowie Skalierbarkeits- und Leistungsüberlegungen im Zusammenhang mit der Erstellung von anwendungsgehosteten Medienbots für Microsoft Teams anhand von Codebeispielen und Beispielen.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Anwendungsgehostete Medien Windows-Server Azure-VM
 ms.date: 11/16/2018
-ms.openlocfilehash: 35ad133d898b53538f51c2ae4c699cd19368f9af
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 109d5bd29112b7c233fadd921b141f2287246498
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111983"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296980"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Anforderungen und Überlegungen für anwendungsgehostete Medienbots
 
-Ein von einer Anwendung gehosteter Medienbot benötigt die [`Microsoft.Graph.Communications.Calls.Media` .NET-Bibliothek](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/), um auf die Audio- und Videomedienströme zuzugreifen. Der Bot muss auf einem lokalen Windows Server-Computer oder einem Windows Server-Gastbetriebssystem (OS) in Azure bereitgestellt werden.
+Für einen in der Anwendung gehosteten Medienbot ist die [`Microsoft.Graph.Communications.Calls.Media` .NET-Bibliothek](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) erforderlich, um auf die Audio- und Videomedienstreams zuzugreifen. Der Bot muss auf einem Windows Server auf einem lokalen Computer oder einem Windows Server-Gastbetriebssystem in Azure bereitgestellt werden.
 
 > [!NOTE]
 >
-> * Die Anleitung zum Entwickeln von Messaging- und Interactive Voice Response (IVR)-Bots gilt nicht vollständig für das Erstellen von anwendungsgehosteten Medien-Bots.
+> * Die Anleitung zum Entwickeln von Bots für Nachrichten und interaktive Sprachantworten (Interactive Voice Response, IVR) gilt nicht vollumfänglich für das Erstellen von durch Anwendungen gehosteten Medienbots.
 > * Da sich die Microsoft Real-time Media Platform für Bots in der Entwicklervorschau befindet, können sich die Anleitungen in diesem Dokument ändern.
 
 ## <a name="c-or-net-and-windows-server-for-development"></a>C# oder .NET und Windows Server für die Entwicklung
@@ -32,9 +32,9 @@ Ein von der Anwendung gehosteter Medienbot erfordert Folgendes:
   * Service Fabric mit Virtual Machine Scale Sets (VMSS).
   * Infrastructure as a Service (IaaS) Virtuelle Maschine (VM).  
   
-* Der Bot kann nicht als Azure-Web-App bereitgestellt werden.
+* Der Bot kann nicht als Azure-Webapp bereitgestellt werden.
 
-* Der Bot muss auf einer aktuellen Version der `Microsoft.Graph.Communications.Calls.Media`.NET-Bibliothek ausgeführt werden. Der Bot muss entweder die neueste verfügbare Version des [NuGet-Pakets oder eine Version verwenden](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/), die nicht älter als drei Monate ist. Ältere Versionen der Bibliothek sind veraltet und funktionieren nach einigen Monaten nicht mehr. Die Aktualisierung der `Microsoft.Graph.Communications.Calls.Media` Bibliothek stellt die beste Interoperabilität zwischen dem Bot und Microsoft Teams sicher.
+* Der Bot muss auf einer aktuellen Version der `Microsoft.Graph.Communications.Calls.Media`.NET-Bibliothek ausgeführt werden. Der Bot muss entweder die neueste verfügbare Version des [NuGet-Pakets](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) verwenden, oder eine Version, die nicht älter als drei Monate ist. Ältere Versionen der Bibliothek sind veraltet und funktionieren nach einigen Monaten nicht mehr. Die Aktualisierung der `Microsoft.Graph.Communications.Calls.Media` Bibliothek stellt die beste Interoperabilität zwischen dem Bot und Microsoft Teams sicher.
 
 Der nächste Abschnitt enthält Einzelheiten darüber, wo sich Echtzeit-Medienaufrufe befinden.
 
@@ -51,11 +51,11 @@ Von der Anwendung gehostete Medien-Bots müssen direkt im Internet zugänglich s
 * Auf jede VM-Instanz, die einen von der Anwendung gehosteten Medienbot in Azure hostet, muss direkt über das Internet mit einer öffentlichen IP-Adresse (ILPIP) auf Instanzebene zugegriffen werden können.
   * Informationen zum Abrufen und Konfigurieren eines ILPIP für einen Azure Cloud-Dienst finden Sie unter Klassische [Übersicht über öffentliche IP-Adressen auf Instanzebene](/azure/virtual-network/virtual-networks-instance-level-public-ip).
   * Informationen zum Konfigurieren eines ILPIP für eine VM-Skalierungsgruppe finden Sie unter [öffentliches IPv4 pro virtuellem Computer](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-networking#public-ipv4-per-virtual-machine).
-* Der Dienst, der einen von der Anwendung gehosteten Medienbot hostet, muss außerdem jede VM-Instanz mit einem öffentlich zugänglichen Port konfigurieren, der der jeweiligen Instanz zugeordnet ist.
+* Der Dienst, der einen von einer Anwendung gehosteten Medienbot hostet, muss außerdem jede VM-Instanz mit einem öffentlich zugänglichen Port konfigurieren, welcher der jeweiligen Instanz zugeordnet ist.
   * Für einen Azure Cloud Service erfordert dies einen Instanzeingabeendpunkt. Weitere Informationen [finden Sie unter Aktivieren der Kommunikation für Rolleninstanzen in Azure](/azure/cloud-services/cloud-services-enable-communication-role-instances).
   * Für eine VM-Skalierungsgruppe muss eine NAT-Regel auf dem Load Balancer konfiguriert werden. Weitere Informationen finden Sie unter [virtuelle Netzwerke und virtuelle Computer in Azure](/azure/virtual-machines/windows/network-overview).
 
-* Anwendungsgehostete Medien-Bots werden vom Bot Framework-Emulator nicht unterstützt.
+* Von einer Anwendung gehostete Medienbots werden vom Botframework-Emulator nicht unterstützt.
 
 Der nächste Abschnitt enthält Details zu Skalierbarkeits- und Leistungsüberlegungen von anwendungsgehosteten Medien-Bots.
 

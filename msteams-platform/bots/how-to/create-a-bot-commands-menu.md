@@ -3,15 +3,15 @@ title: Ein Befehlsmenü für Ihren Bot erstellen
 author: surbhigupta
 description: Erfahren Sie, wie Sie ein Befehlsmenü für Ihren Microsoft Teams-Bot mit Codebeispielen erstellen.
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
 keywords: Befehlsmenü verfassen Nachricht Unterhaltung @erwähnen
-ms.openlocfilehash: 37d4c5f451efe9fe2caf137a89d12cdbbdb178d1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 59f2dc595a4baac2d99b25d9c7c0fb0d3c5013d1
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111843"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296966"
 ---
 # <a name="bot-command-menus"></a>Bot-Befehlsmenüs
 
@@ -43,13 +43,15 @@ Eine Voraussetzung zum Erstellen eines Befehlsmenüs für Ihren Bot besteht dari
    > [!NOTE]
    > Wenn Sie nicht über **App Studio** verfügen, können Sie es herunterladen. Weitere Informationen finden Sie unter [Installieren von App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
 
-    :::image type="content" source="/media/AppStudio.png" alt-text="App Studio installieren"lightbox="media/AppStudio.png"border="true":::
+  > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird bis zum 30. Juni 2022 eingestellt.
 
-2. Wählen Sie in **App Studio** die Registerkarte **Manifest-Editor** aus. Wenn Sie nicht über ein vorhandenes App-Paket verfügen, können Sie eine vorhandene App erstellen oder importieren. Weitere Informationen finden Sie unter [Aktualisieren eines App-Pakets](~/get-started/deploy-csharp-app-studio.md).
+  :::image type="content" source="/media/AppStudio.png" alt-text="App Studio installieren"lightbox="media/AppStudio.png"border="true":::
+
+2. Wählen Sie im **App Studio** die Registerkarte **Manifesteditor** aus. Wenn Sie nicht über ein vorhandenes App-Paket verfügen, können Sie eine App erstellen oder eine vorhandene importieren. Weitere Informationen finden Sie unter [Aktualisieren eines App-Pakets](~/get-started/deploy-csharp-app-studio.md).
 
 3. Wählen Sie im linken Bereich des **Manifest-Editors** und im Abschnitt **Funktionen** die Option **Bots aus**.
 
-4. Wählen Sie im rechten Bereich des **Manifest-Editors** und im Abschnitt **Befehle** die Option **Hinzufügen** aus. Der Bildschirm **Neuer Befehl** wird angezeigt.
+4. Wählen Sie im rechten Bereich des **Manifesteditors** und im Abschnitt **Befehle** die Option **Hinzufügen** aus. Der Bildschirm **Neuer Befehl** wird angezeigt.
 
     :::image type="content" source="/media/AppStudio-CommandMenu-Add.png" alt-text="App-Paketdatei auswählen"lightbox="/media/AppStudio-CommandMenu-Add.png"border="true":::
 
@@ -63,7 +65,7 @@ Eine Voraussetzung zum Erstellen eines Befehlsmenüs für Ihren Bot besteht dari
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Erstellen eines Befehlsmenüs für Ihren Bot durch Bearbeiten von Manifest.json
 
-Eine weitere Möglichkeit zum Erstellen eines Befehlsmenüs besteht darin, es direkt in der Manifestdatei zu erstellen, während Sie den Bot-Quellcode entwickeln. Gehen Sie folgendermaßen vor, um diese Methode zu verwenden:
+Eine weitere Möglichkeit zum Erstellen eines Befehlsmenüs besteht darin, es direkt in der Manifestdatei zu erstellen, während Sie den Bot-Quellcode entwickeln. Um diese Methode anzuwenden, sollten Sie die folgenden Punkte beachten:
 
 * Jedes Menü unterstützt bis zu 10 Befehle.
 * Erstellen Sie ein einzelnes Befehlsmenü, das in allen Bereichen funktioniert.
@@ -190,7 +192,7 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # <a name="python"></a>[Python](#tab/python)
 
-Sie können den Nachrichtentextteil **@Mention** mithilfe einer statischen Methode analysieren, die im Bot Framework bereitgestellt wird. Es handelt sich um eine Methode der Klasse `TurnContext` mit dem Namen `remove_recipient_mention`.
+Sie können den Nachrichtentextteil **@Erwähnung** mithilfe einer statischen Methode analysieren, die im Bot Framework bereitgestellt wird. Dies ist eine Methode der `TurnContext`-Klasse mit Namen `remove_recipient_mention`.
 
 Der Python-Code zum Analysieren des Nachrichtentextteils **\@Erwähnung** lautet wie folgt:
 
@@ -207,7 +209,7 @@ Um eine reibungslose Funktionsweise Ihres Bot-Codes zu ermöglichen, müssen Sie
 Im Folgenden werden die bewährten Methoden für das Befehlsmenü aufgeführt:
 
 * Halten Sie es einfach: Das Bot-Menü soll die wichtigsten Funktionen Ihres Bots darstellen.
-* Halten Sie es kurz: Menüoptionen dürfen nicht lang sein und dürfen keine komplexen Anweisungen in natürlicher Sprache sein. Es müssen einfache Befehle sein.
+* Halten Sie es kurz: Menüoptionen dürfen nicht lang sein und dürfen keine komplexen Anweisungen in natürlicher Sprache sein. Sie müssen einfache Befehle sein.
 * Lassen Sie es aufrufbar: Bot-Menüaktionen oder -Befehle müssen immer verfügbar sein, unabhängig vom Status der Unterhaltung oder des Dialogs, in dem sich der Bot befindet.
 
 > [!NOTE]

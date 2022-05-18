@@ -2,18 +2,18 @@
 title: Auswählen eines Setups zum Testen und Debuggen Ihrer App
 description: Beschreibt Optionen zum Testen und Debuggen Microsoft Teams Apps in einer lokalen und in der Cloud gehosteten Umgebung.
 keywords: Teams führen Debug-Apps lokal in der Cloud gehostet Host
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e87032cbe9b116aa0ddbe816169c2763301edd07
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: ba4a07b2a83901f537512067894865bf1c59895d
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135759"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296994"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Auswählen eines Setups zum Testen und Debuggen Ihrer Microsoft Teams-App
 
-Microsoft Teams Apps enthalten eine oder mehrere Funktionen, und die Möglichkeiten zum Ausführen oder sogar hosten sind unterschiedlich. Verwenden Sie zum Debuggen eine der folgenden Methoden:
+Die Microsoft Teams-Apps enthalten eine oder mehrere Funktionen, und die Möglichkeiten, sie auszuführen oder sogar zu hosten, unterscheiden sich. Verwenden Sie zum Debuggen eine der folgenden Möglichkeiten:
 
 * **Rein lokal**: Für Bots können Sie Ihre Erfahrung im Bot-Emulator testen. Für andere Inhalte können Sie lokal in Ihrem Browser ausführen und Inhalte adressieren durch `http://localhost`.
 * **Lokal gehostet in Teams**: Dies umfasst die lokale Ausführung der App in Tunnelsoftware und [das Erstellen eines Pakets](~/concepts/build-and-test/apps-package.md) zum [Hochladen](~/concepts/deploy-and-publish/apps-upload.md) in Teams. Damit können Sie Ihre App ganz einfach im Teams Client ausführen und debuggen.
@@ -67,11 +67,11 @@ Für Bots, die im Microsoft Bot Framework registriert sind, aktualisieren Sie de
 Sie können jeden extern adressierbaren Dienst verwenden, um Ihren Entwicklungs- und Produktionscode und deren HTTPS-Endpunkte zu hosten. Es wird nicht erwartet, dass sich Ihre Funktionen im selben Dienst befinden. Der Zugriff auf alle Domänen muss über Ihre Microsoft Teams Apps erfolgen, die [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) im Objekt in der `manifest.json` Datei aufgeführt sind.
 
 > [!NOTE]
-> Um eine sichere Umgebung zu gewährleisten, müssen Sie explizit die genaue Domäne und Unterdomänen, auf die Sie verweisen, und diese Domänen müssen in Ihrer Kontrolle sein. Wird z. B `*.azurewebsites.net` nicht empfohlen, wird jedoch `contoso.azurewebsites.net` empfohlen.
+> Um eine sichere Umgebung zu gewährleisten, müssen Sie die genauen Domänen und Unterdomänen, auf die Sie verweisen, explizit angeben, und diese Domänen müssen unter Ihrer Kontrolle stehen. Beispielsweise wird `*.azurewebsites.net` nicht empfohlen, aber `contoso.azurewebsites.net` wird empfohlen.
 
 ## <a name="load-and-run-your-experience"></a>Laden und Ausführen der Benutzeroberfläche
 
-Zum Laden und Ausführen Ihrer Benutzeroberfläche in Microsoft Teams müssen Sie ein Paket erstellen und in Teams hochladen. Weitere Informationen finden Sie unter:
+Zum Laden und Ausführen Ihrer Erfahrung in Microsoft Teams müssen Sie ein Paket erstellen und in Teams hochladen. Weitere Informationen finden Sie unter:
 
 * [Microsoft Teams: Erstellen eines App-Pakets für Ihre Microsoft Teams-App](~/concepts/build-and-test/apps-package.md).
 * [Hochladen Ihrer App in Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).
