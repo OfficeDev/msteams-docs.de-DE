@@ -5,12 +5,12 @@ description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Tea
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1ab927f11588d58a68249c1213e6eae17346ac8d
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: d6651baa6b57254f8aea5c62425c2c948abe1382
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103292"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602278"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Registerkarten für Microsoft Teams erstellen
 
@@ -18,6 +18,8 @@ Registerkarten sind Teams-fähige Webseiten, die in Microsoft Teams eingebettet 
 
 > [!IMPORTANT]
 > Derzeit sind benutzerdefinierte Registerkarten in Government Community Cloud (GCC), GCC-High und Department of Defense (DOD) verfügbar.
+>
+> Es wird empfohlen, das Teams-Client-SDK über [npm-Paket](https://www.npmjs.com/package/@microsoft/teams-js) zu verwenden und es mit Ihrer App zu bündeln, da derzeit Teams Client-SDK in Government Cloud CDN nicht verfügbar ist.
 
 Die folgende Abbildung zeigt persönliche Registerkarten:
 

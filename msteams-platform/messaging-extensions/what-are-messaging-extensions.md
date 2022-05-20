@@ -5,16 +5,19 @@ description: Eine Übersicht über Messaging-Erweiterungen auf der Microsoft Tea
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 54c0ce0139f6d70aca0c002edff2c60065c48b7b
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 52c9b5a890197f652c8debcae32bc6ab08d7f1c7
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297142"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602257"
 ---
 # <a name="message-extensions"></a>Nachrichtenerweiterungen
 
 Nachrichtenerweiterungen ermöglichen den Benutzern die Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams-Client. Sie können in einem externen System über den Nachrichtenbereich „Verfassen“, das Befehlsfeld oder direkt aus einer Nachricht heraus suchen oder Aktionen starten. Sie können die Ergebnisse dieser Interaktion an den Microsoft Teams-Client in Form einer reich formatierten Karte zurücksenden.
+
+> [!IMPORTANT]
+> Nachrichtenerweiterungen sind in Government Community Cloud(GCC)- und GCC-High-Umgebungen verfügbar, jedoch nicht in der DoD-Umgebung (Department of Defense).
 
 Dieses Dokument bietet einen Überblick über die Nachrichtenerweiterung, Aufgaben, die in verschiedenen Szenarien ausgeführt werden, das Arbeiten mit Nachrichtenerweiterungen, Aktions- und Suchbefehle sowie die Verbreitung von Links.
 
@@ -235,7 +238,7 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 |------------|-------------|----------------|------------|------------|
 | Nachrichtenerweiterung mit aktionsbasierten Befehlen | In diesem Beispiel wird veranschaulicht, wie Sie eine aktionsbasierte Nachrichtenerweiterung erstellen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | Nachrichtenerweiterung mit suchbasierten Befehlen | In diesem Beispiel wird das Erstellen einer suchbasierten Nachrichtenerweiterung veranschaulicht. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
-|Nachrichtenerweiterungsaktion für die Aufgabenplanung|In diesem Beispiel wird veranschaulicht, wie Sie eine Aufgabe über den Aktionsbefehl „Nachrichtenerweiterung“ planen und eine Erinnerungskarte zu einem geplanten Datum und einer geplanten Uhrzeit erhalten.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
+|Nachrichtenerweiterungsaktion für die Aufgabenplanung|In diesem Beispiel wird veranschaulicht, wie Sie eine Aufgabe über den Aktionsbefehl „Nachrichtenerweiterung“ planen und eine Erinnerungskarte zu einem geplanten Datum und einer geplanten Uhrzeit erhalten.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
 
 ## <a name="next-step"></a>Nächster Schritt
 

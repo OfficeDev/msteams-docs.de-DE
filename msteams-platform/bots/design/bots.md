@@ -5,19 +5,19 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: f6a19b2c75d5e3b42e7b1b7cea7834d28e3917a9
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 67f67535994bde9871cdaa7be8081e05ccbf1a1d
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104385"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602299"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Entwerfen Ihres Microsoft Teams-Bots
 
 Bots sind Unterhaltungs-Apps, die bestimmte Aufgaben ausführen. Basierend auf dem <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a> kommunizieren Bots mit Benutzern, beantworten ihre Fragen und benachrichtigen sie proaktiv über Änderungen und andere Ereignisse. Sie sind eine tolle Möglichkeit zur Kontaktaufnahme.
 
 > [!IMPORTANT]
-> Bots sind in Government Community Cloud(GCC)-Umgebungen, aber nicht in GCC High and Department of Defense (DoD)-Umgebungen verfügbar.
+> Bots sind in Government Community Cloud(GCC)- und GCC High-Umgebungen, aber nicht in Department of Defense (DoD)-Umgebungen verfügbar.
 
 Die folgenden Informationen beschreiben und veranschaulichen, wie Benutzer Bots in Teams hinzufügen, verwenden und verwalten können, um Ihr App-Design zu steuern.
 

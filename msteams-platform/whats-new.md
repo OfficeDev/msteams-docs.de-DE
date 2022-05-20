@@ -4,12 +4,12 @@ description: Beschreibt alle neuen oder aktuellen Entwicklerfunktionen in Micros
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 'Teams: Was sind die neuesten Updates oder Entwicklervorschau und Features'
-ms.openlocfilehash: aabbe185edd57491dc9928d66700d1f35f8b1557
-ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
+ms.openlocfilehash: a65a63ef7fafe8ab63e5c865349ff2da6c8869fa
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65132709"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602285"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -22,6 +22,7 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 
 | Datum | Update | Hier finden |
 | --- | --- | --- |
+|19.05.2022|Bots und Nachrichtenerweiterungen für GCC und GCCH| • Erstellen von Bots > [Übersicht](bots/what-are-bots.md) </br> • Erstellen von Nachrichtenerweiterungen > [Übersicht](messaging-extensions/what-are-messaging-extensions.md) |
 |28.04.2022| Häufige Gründe für App-Überprüfungsfehler | Verteilen Ihrer App > Veröffentlichen im Teams Store > [Häufige Gründe für Fehler bei der App-Überprüfung](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
 |20.04.2022 |  Einrichten von CI/CD-Pipelines | Tools und SDKs > Teams Toolkit für Visual Studio Code > [Einrichten von CI/CD-Pipelines](toolkit/use-CICD-template.md)|
 |19.04.2022 | Hochladen Ihrer App in Microsoft Teams | Verteilen Ihrer App > [Hochladen Ihrer App](concepts/deploy-and-publish/apps-upload.md)|
@@ -63,6 +64,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
+|19.05.2022|Bots und Nachrichtenerweiterungen für GCC und GCCH| • Erstellen von Bots > [Übersicht](bots/what-are-bots.md) </br> • Erstellen von Nachrichtenerweiterungen > [Übersicht](messaging-extensions/what-are-messaging-extensions.md) |
 |26.04.2022|Deinstallationsverhalten für eine persönliche App mit Bot | Erstellen von Bots > Bot-Unterhaltungen > [Verhaltensaktualisierungen in persönlichen Apps mit Bots deinstallieren](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |22.04.2022| Testvorschau für monetarisierte Apps | Monetarisieren Ihrer App > [Testvorschau für monetarisierte Apps](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
 |22.04.2022| In-App-Kaufablauf für die Monetarisierung von Apps | Monetarisieren Ihrer App > [In-App-Käufe](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)

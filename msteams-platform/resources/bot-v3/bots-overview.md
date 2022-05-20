@@ -5,12 +5,12 @@ ms.topic: conceptual
 keywords: Entwicklung von Teams-Bots
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: 164c8e518e38d506bbaf80f59edebfb18c07acec
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: cbf8b1c14b080d890dd4c65390671632e2602f81
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103425"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602264"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Hinzufügen von Bots zu Microsoft Teams-Apps
 
@@ -19,7 +19,7 @@ ms.locfileid: "65103425"
 Erstellen und verbinden Sie intelligente Bots, um mit Microsoft Teams Benutzern über chatten zu interagieren. Oder stellen Sie einen einfachen befehlsbasierten Bot bereit, der als "Befehlszeilenschnittstelle" für ihre umfassendere Teams App-Erfahrung verwendet werden kann. Sie können einen Nur-Benachrichtigungs-Bot erstellen, der Informationen, die für Ihre Benutzer relevant sind, direkt in einem Kanal oder in einer direkten Nachricht an sie weiterleiten kann. Sie können sogar Ihren vorhandenen Bot Framework-basierten Bot mitbringen und Teams spezifischen Support hinzufügen, um Ihre Erfahrung zu glänzen.
 
 > [!IMPORTANT]
-> Derzeit sind Bots in Government Community Cloud (GCC) verfügbar, aber nicht in GCC-High und department of defense (DOD).
+> Derzeit sind Bots in Government Community Cloud (GCC) und GCC-High verfügbar, jedoch nicht in Department of Defense (DOD).
 
 ![Beispiel für einen Bot, der einen Benutzer unterstützt](~/assets/images/bot_example.png)
 
@@ -73,6 +73,6 @@ Die folgenden Themen führen Sie durch den Prozess der Erstellung eines großart
 * [Verwenden von Registerkarten mit Bots](~/resources/bot-v3/bots-with-tabs.md): Zusammenwirken von Registerkarten und Bots.
 * [Testen Sie Ihren Bot](~/resources/bot-v3/bots-test.md): Fügen Sie Ihren Bot für persönliche oder Teamunterhaltungen hinzu, um ihn in Aktion zu sehen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 [Bot Framework-Beispiele](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

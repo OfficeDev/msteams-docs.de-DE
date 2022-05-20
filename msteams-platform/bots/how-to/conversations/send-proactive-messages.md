@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: 'Nachricht senden: Kanal-ID der Benutzer-ID abrufen: Konversations-ID'
-ms.openlocfilehash: ec41ec08af9c7e3b7280995f8abc66b3a5a7baa0
-ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
+ms.openlocfilehash: fd3ed48022239aaa84e00c8b3b59701970d9a0af
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64590717"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602271"
 ---
 # <a name="proactive-messages"></a>Proaktive Nachrichten
 
@@ -21,6 +21,13 @@ Eine proaktive Nachricht ist jede Nachricht, die von einem Bot gesendet wird, de
 * Willkommensnachrichten
 * Benachrichtigungen
 * Geplante Nachrichten
+
+> [!IMPORTANT]
+> Derzeit sind Bots in Government Community Cloud (GCC) und in GCC-High verfügbar, aber nicht in Department of Defense (DOD).
+>
+> Für proaktive Nachrichten sollten die Bots die folgenden Endpunkte für Government Cloud-Umgebungen verwenden:
+>    * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`.
+>    * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
 Damit Ihr Bot eine proaktive Nachricht an einen Benutzer, einen Gruppenchat oder ein Team senden kann, muss er Zugriff haben, um die Nachricht zu senden. Für einen Gruppenchat oder ein Team muss die App, die Ihren Bot enthält, zuerst an diesem Speicherort installiert werden.
 Sie können bei Bedarf in einem Team [Ihre App proaktiv mithilfe von Microsoft Graph installieren](#proactively-install-your-app-using-graph) oder eine [App-Richtlinie](/microsoftteams/teams-custom-app-policies-and-settings) verwenden, um Apps an Teams und Benutzer in Ihrem Mandanten zu pushen. Für Benutzer muss Ihre App entweder für den Benutzer installiert sein, oder Ihr Benutzer muss Teil eines Teams sein, in dem Ihre App installiert ist.
