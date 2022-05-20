@@ -1,74 +1,46 @@
 ---
 title: Produktionsfertige Shifts-Connectors
-description: Erfahren Sie mehr über die Vorteile der Verwendung von Schichtkonnektoren für die Mitarbeiterverwaltung für Teams, wie z. B. Schicht-zu-Teams Schichten-Konnektor und JDA-zu-Teams Shifts-Konnektor
+description: Erfahren Sie mehr über die Vorteile der Verwendung von Schichtconnectors für die Mitarbeiterverwaltung für Teams, z. B. Kronos-zu-Teams-Schichten-Connector und JDA-zu-Teams-Schichten-Connector
 ms.topic: reference
 author: surbhigupta
 ms.date: 03/09/2020
 ms.localizationpriority: medium
-keywords: Microsoft Teams Connectors kronos
+keywords: Microsoft Teams connectors kronos
 ms.author: lajanuar
-ms.openlocfilehash: 84e16f26dbe8597089e601e0d7eadca12a4a4446
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: cf4fa72932a231085b7b1c16a5153d2df0cd7643
+ms.sourcegitcommit: bde5f3f409fb6824a5d6ff5618e9386c85879b8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453103"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65604264"
 ---
 # <a name="production-ready-shifts-connectors"></a>Produktionsfertige Shifts-Connectors  
 
-Teams Shifts Workforce Management (WFM)-Connectors sind produktionsbereite, Open Source- und communitygesteuerte Integrationen, die für Mitarbeiter in Service und Produktion nützlich sind. Sie bieten eine nahtlose Benutzererfahrung und einen schnellen Prozess für die digitale Transformation von Mitarbeitern in Service und Produktion mit Teams Schichten.
+Teams Shifts Workforce Management (WFM)-Connectors sind produktionsbereite, Open Source- und Community-gesteuerte Integrationen, die für Mitarbeiter in erster Linie nützlich sind. Sie bieten eine nahtlose Erfahrung und einen schnellen Prozess für die digitale Transformation von Erstarbeitern mit Teams Schichten.
 
-Jeder Connector bietet detaillierte Anleitungen für die Bereitstellung und Integration in Ihrer Organisation. Der vollständige Quellcode ist in GitHub Repository verfügbar. Sie können details oder Verzweigung erkunden und an Ihre spezifischen Anforderungen anpassen.
+Jeder Connector bietet detaillierte Anleitungen für die Bereitstellung und Integration in Ihre Organisation. Der vollständige Quellcode ist in GitHub Repository verfügbar. Sie können details oder Verzweigungen untersuchen und an Ihre spezifischen Anforderungen anpassen.
 
-Dieses Dokument bietet eine Übersicht über die wichtigsten Vorteile von Teams Shifts WFM-Connectors, Demos-zu-Teams Shifts-Verbinder und JDA-zu-Teams Shifts-Verbinder.
+Dieses Dokument enthält eine Übersicht über die wichtigsten Vorteile von WFM-Verbindern für Teams Schichten, Kronos-zu-Teams-Schichten-Verbindern und JDA-zu-Teams-Schichten-Verbindern.
 
-## <a name="key-benefits-of-teams-shifts-wfm-connectors"></a>Wichtige Vorteile von Teams Schichten von WFM-Connectors
+## <a name="key-benefits-of-teams-shifts-wfm-connectors"></a>Wichtige Vorteile von WFM-Connectors für Teams Schichten
 
-Es folgen die wichtigsten Vorteile von Teams Shifts WFM-Connectors:
+Im Folgenden sind die wichtigsten Vorteile von WFM-Connectors für Teams Schichten dargestellt:
 
-* **Plug and play experience:** All Shifts WFM connectors include ARM Azure deployment scripts that allow you to host all necessary services in Microsoft Azure. Zum Bereitstellen der Apps ist keine Codierung erforderlich.
+* **Plug-and-Play-Erfahrung:** Alle Shifts-WFM-Connectors enthalten ARM Azure-Bereitstellungsskripts, mit denen Sie alle erforderlichen Dienste in Microsoft Azure hosten können. Zum Bereitstellen der Apps ist keine Codierung erforderlich.
 
-* **Produktionsbereiter Code:** Alle Shifts-Connectors entsprechen den empfohlenen bewährten Sicherheits- und Infrastrukturmethoden, und alle von der Community übermittelten Änderungen werden überprüft, um die fortlaufende Konformität sicherzustellen.
+* **Produktionsbereiter Code:** Alle Shifts-Connectors entsprechen den empfohlenen bewährten Methoden für Sicherheit und Infrastruktur, und alle von der Community übermittelten Änderungen werden überprüft, um eine kontinuierliche Konformität sicherzustellen.
 
-* **Anpassbar und erweiterbar:** Während alle Shifts WFM-Connectors sofort bereitgestellt werden können, stehen die gesamte Codebasis und Bereitstellungsskripts zur Verfügung. Sie können sie ganz einfach an Ihre individuellen Anforderungen anpassen oder erweitern.
+* **Anpassbar und erweiterbar:** Während alle Shifts-WFM-Connectors bereit für die sofortige Verwendung sind, stehen die gesamte Codebasis und Bereitstellungsskripts zur Verfügung. Sie können sie ganz einfach an Ihre individuellen Anforderungen anpassen oder erweitern.
 
-* **Ausführliche Dokumentation & Unterstützung:** Alle Shifts WFM-Connectors werden von einer End-to-End-Dokumentation für Die Lösungsarchitektur, Bereitstellung und Konfigurationsschritte begleitet. Die Connectorrepositorys werden überwacht, sodass Sie alle Probleme, Herausforderungen oder Schwierigkeiten melden können, die sie über die GitHub Problemverfolgung des Repositorys auftreten.
+* **Ausführliche Dokumentation & Unterstützung:** Alle Schicht-WFM-Connectors werden von einer End-to-End-Dokumentation für Lösungsarchitektur, Bereitstellung und Konfigurationsschritte begleitet. Die Konnektorrepositorys werden überwacht, sodass Sie alle Probleme, Herausforderungen oder Schwierigkeiten, auf die Sie stoßen, über die GitHub Problemverfolgung des Repositorys melden können.
 
-* **Nahtlose Integration:** Die Integration zwischen WFM-Lösungen und Teams Schichten ermöglicht Mitarbeitern in Service und Produktion die Verwendung der Teams Shifts-App, um ihre Zeitpläne und Schichtzeiten anzuzeigen oder zu verwalten, und alle anderen umfassenden Funktionen für die Zusammenarbeit in Teams direkt von ihrem mobilen Gerät oder Desktop aus zu verwenden, ohne den Kontext zu einer anderen App wechseln zu müssen.  
+* **Nahtlose Integration:** Durch die Integration zwischen WFM-Lösungen und Teams Schichten können Mitarbeiter in der ersten Zeile die App Teams Schichten verwenden, um ihre Zeitpläne und Schichtzeiten anzuzeigen oder zu verwalten, und alle anderen umfangreichen Funktionen für die Zusammenarbeit nutzen, die in Teams direkt von ihrem mobilen Gerät oder Desktop bereitgestellt werden, ohne den Kontext zu einer anderen App wechseln zu müssen.  
 
-Ansicht "Schichten öffnen" in Teams:
+Schichtansicht in Teams öffnen:
 
-Die Schichtansicht in Teams wird in der folgenden Abbildung angezeigt:
+Die Schichtansicht in Teams ist in der folgenden Abbildung dargestellt:
 
 ![Offene Schichten in Teams](../assets/images/teams-open-shifts-view.png)
-
-## <a name="kronos-to-teams-shifts-connector"></a>Kronos-to-Teams Shifts Connector
-
-Mit Open-Source-Code können Sie Die zentrale Version 8.1 von Kronos Workforce und höher in Teams Schichten integrieren, z. B. Desktop- oder mobile Teams-App für die folgenden Szenarien für Mitarbeiter und Vorgesetzte in Service und Produktion:
-
-* Zeitplan anzeigen.
-
-* Veröffentlichen und Anfordern von offenen Schichten.
-
-* Swapverschiebungen.
-
-* Fordern Sie eine arbeitsfreie Zeit an.
-
-* Bieten Sie Schichten an.
-
-Weitere Informationen zur Bereitstellung des Schichtkonnektors "Kronos-to-Teams" finden [Sie unter "Get it on GitHub](https://aka.ms/KronosShiftsConnector)".
-
-## <a name="jda-to-teams-shifts-connector"></a>JDA-zu-Teams Shifts-Konnektor
-
-Mit Open-Source-Code können Sie JDA, z. B. BlueYonder Version 17.2 und höher, in Teams Schichten integrieren, z. B. Desktop- oder mobile Teams-App für die folgenden Szenarien für Mitarbeiter und Vorgesetzte in Service und Produktion:
-
-* Veröffentlichen sie Schichten und planen Sie Gruppen in JDA, und zeigen Sie sie in Teams an.
-
-* Ermöglichen Sie umfangreiche Planungsszenarien, einschließlich der Anforderung von Schichttausch und Arbeitsfreie Zeit.
-
-* Legen Sie die Benutzerverfügbarkeit mithilfe der [Microsoft Graph-API für Schichten fest](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true).
-
-Weitere Informationen zu Beiträgen und Vorschlägen finden [Sie unter "Abrufen auf GitHub](https://aka.ms/JDAShiftsConnector)".
 
 ## <a name="see-also"></a>Siehe auch
 
