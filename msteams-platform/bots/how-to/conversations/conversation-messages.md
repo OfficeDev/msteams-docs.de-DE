@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: fa13a03d30fd112b1c8983683b667d0cb96ef4ee
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: 1b3f5784161295aa31a723e3ca6b0a08f21afb76
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191180"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65611458"
 ---
 # <a name="messages-in-bot-conversations"></a>Meldungen in Bot-Unterhaltungen
 
@@ -23,6 +23,8 @@ Grundlegende Unterhaltungen werden über den Bot Framework-Connector, eine einze
 * Einfache Methoden zum Integrieren von kognitiven Diensten, z. B. natürliche Sprachverarbeitung (NLP).
 
 Ihr Bot empfängt Nachrichten von Teams mithilfe der `Text` Eigenschaft und sendet einzelne oder mehrere Nachrichtenantworten an die Benutzer.
+
+Weitere Informationen finden Sie [unter Benutzerzuordnung für Bot-Nachrichten](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages)
 
 ## <a name="receive-a-message"></a>Empfangen einer Nachricht
 
