@@ -5,12 +5,12 @@ description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Tea
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d6651baa6b57254f8aea5c62425c2c948abe1382
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 7f39d01c9ff6a264d16c89129ed1b93525da5b6f
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602278"
+ms.locfileid: "65611444"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Registerkarten für Microsoft Teams erstellen
 
@@ -75,6 +75,9 @@ Sie können eine der folgenden Methoden verwenden, um Registerkarten zu erstelle
 Eine benutzerdefinierte Registerkarte wird im App-Manifest Ihres App-Pakets deklariert. Für jede Webseite, die Sie als Registerkarte in Ihrer App hinzufügen möchten, definieren Sie eine URL und einen Bereich. Darüber hinaus können Sie die [JavaScript-Client-SDK von Teams](/javascript/api/overview/msteams-client) zu Ihrer Seite hinzufügen und `microsoftTeams.initialize()` nach dem Laden Ihrer Seite aufrufen. Teams zeigt Ihre Seite an und bietet Zugriff auf Teams-spezifische Informationen, z. B. dass der Teams-Client das dunkle Design ausführt.
 
 Unabhängig davon, ob Sie Ihre Registerkarte innerhalb des Kanals, der Gruppe oder des persönlichen Bereichs verfügbar machen möchten, müssen Sie eine <iframe\>HTML-[Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md) auf Ihrer Registerkarte präsentieren. Bei persönlichen Registerkarten wird die Inhalts-URL direkt in Ihrem Teams-App-Manifest durch die `contentUrl`-Eigenschaft in der `staticTabs`-Matrix festgelegt. Der Inhalt Ihrer Registerkarten ist für alle Benutzer gleich.
+
+> [!Note]
+> Die Teams-App erkennt keine Unter-IFrames. Daher wird es nicht geladen, wenn ein IFrame in der Registerkarten-App vorhanden ist.
 
 Für Kanal- oder Gruppenregisterkarten können Sie auch eine zusätzliche Konfigurationsseite erstellen. Auf dieser Seite können Sie die URL der Inhaltsseite konfigurieren, in der Regel mithilfe von URL-Abfragezeichenfolgenparametern, um den entsprechenden Inhalt für diesen Kontext zu laden. Dies liegt daran, dass Ihre Kanal- oder Gruppenregisterkarte mehreren Teams oder Gruppenchats hinzugefügt werden kann. Bei jeder nachfolgenden Installation können Ihre Benutzer die Registerkarte konfigurieren, sodass Sie die Benutzeroberfläche nach Bedarf anpassen können. Wenn Benutzer eine Registerkarte hinzufügen oder konfigurieren, wird der Registerkarte, die auf der Benutzeroberfläche (User Interface, UI) von Teams angezeigt wird, eine URL zugeordnet. Das Konfigurieren einer Registerkarte fügt dieser URL einfach zusätzliche Parameter bei. Wenn Sie beispielsweise die Registerkarte „Azure Boards“ hinzufügen, können Sie auf der Konfigurationsseite auswählen, welches Board die Registerkarte lädt. Die URL der Konfigurationsseite wird von der `configurationUrl`-Eigenschaft in der `configurableTabs`-Matrix in Ihrem App-Manifest angegeben.
 
