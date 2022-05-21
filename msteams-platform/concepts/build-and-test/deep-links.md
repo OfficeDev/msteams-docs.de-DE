@@ -1,15 +1,14 @@
 ---
 title: Erstellen von Deep-Links
-description: Beschreibt Deeplinks und deren Verwendung in Ihren Apps
+description: Lernen Sie, wie Teams Deep Links beschrieben werden und wie Sie sie in Ihren Anwendungen verwenden können.
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: Deeplink für Teams
-ms.openlocfilehash: cc8e71e77964ff2a07e75983c94f72091033b789
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 750fc8f6153cf64fa585e3d74d73afba483aafb0
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103923"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65611455"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links
 
@@ -69,7 +68,7 @@ Verwenden Sie das folgende Format für einen Deep-Link, den Sie in einem Bot, Co
 
 > [!NOTE]
 > Wenn der Bot eine Nachricht `TextBlock` mit einem Deeplink sendet, wird eine neue Browserregisterkarte geöffnet, wenn der Benutzer den Link auswählt. Dies geschieht in Chrome und in der Microsoft Teams Desktop-App, die beide unter Linux ausgeführt werden.
-> Wenn der Bot dieselbe Deeplink-URL an eine(n) `Action.OpenUrl` sendet, wird die Registerkarte Teams in der aktuellen Browserregisterkarte geöffnet, wenn der Benutzer den Link auswählt. Es wird keine neue Browserregisterkarte geöffnet.
+> Wenn der Bot dieselbe Deeplink-URL an eine(n) `Action.OpenUrl` sendet, wird die Registerkarte Teams in der aktuellen Browserregisterkarte geöffnet, wenn der Benutzer den Link auswählt. Eine neue Browserregisterkarte wird nicht geöffnet.
 
 <!--- TBD: Edit this article.
 * Admonitions/alerts seem to be overused. 
@@ -79,19 +78,19 @@ Verwenden Sie das folgende Format für einen Deep-Link, den Sie in einem Bot, Co
 * Example values and some URLs should be in backticks and not emphasized.
 * Codeblock are missing language.
 * Check for markdownlint errors.
-* Table with just a row is not really needed. Provide the content without tabulating it.
+* Table with just a row isn't really needed. Provide the content without tabulating it.
 --->
 
 Die Abfrageparameter sind:
 
 | Parametername | Beschreibung | Beispiel |
 |:------------|:--------------|:---------------------|
-| `appId`&emsp; | Die ID aus Ihrem Manifest. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
+| `appId`&emsp; | Die ID aus dem Teams Admin Center. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | Die ID für das Element auf der Registerkarte, die Sie beim [Konfigurieren der Registerkarte](~/tabs/how-to/create-tab-pages/configuration-page.md)angegeben haben.|Tasklist123|
 | `entityWebUrl` oder `subEntityWebUrl`&emsp; | Ein optionales Feld mit einer Fallback-URL, das verwendet werden soll, wenn der Client das Rendern der Registerkarte nicht unterstützt. | `https://tasklist.example.com/123` oder `https://tasklist.example.com/list123/task456` |
 | `entityLabel` oder `subEntityLabel`&emsp; | Eine Beschriftung für das Element auf Ihrer Registerkarte, die beim Anzeigen des Deeplinks verwendet werden soll. | Task List 123 oder Task 456 |
 | `context.subEntityId`&emsp; | Eine ID für das Element auf der Registerkarte. |Task456 |
-| `context.channelId`&emsp; | Microsoft Teams-Kanal-ID, die auf der Registerkarte [Kontext](~/tabs/how-to/access-teams-context.md)verfügbar ist. Diese Eigenschaft ist nur in konfigurierbaren Registerkarten mit einem **Team**-Bereich verfügbar. Sie ist nicht auf statischen Registerkarten verfügbar, die über einen **persönlichen** Bereich verfügen.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `context.channelId`&emsp; | Microsoft Teams-Kanal-ID, die auf der Registerkarte [Kontext](~/tabs/how-to/access-teams-context.md)verfügbar ist. Diese Eigenschaft ist nur in konfigurierbaren Registerkarten mit einem **Team**-Bereich verfügbar. Sie ist in statischen Registerkarten, die einen **persönlichen** Bereich haben, nicht verfügbar.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `chatId`&emsp; | ChatId, die auf der Registerkarte [Kontext](~/tabs/how-to/access-teams-context.md) für Gruppen- und Besprechungschats verfügbar ist | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `contextType`&emsp; |  Chat ist der einzige unterstützte contextType für Besprechungen. | Chat |
 
@@ -167,10 +166,30 @@ Beispiel: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@cont
 Die Abfrageparameter sind:
 
 * `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, auf der die Chat-Teilnehmer angegeben sind. Der Benutzer, der die Aktion ausführt, ist immer als Teilnehmer enthalten. Derzeit unterstützt das Feld „Benutzer-ID“ das Microsoft Azure Active Directory (Azure AD) UserPrincipalName, wie z. B. nur eine E-Mail-Adresse.
-* `topicName`: Ein optionales Feld für den Anzeigenamen des Chats, für einen Chats mit 3 oder mehr Benutzern. Wenn dieses Feld nicht angegeben ist, basiert der Anzeigename des Chats auf den Namen der Teilnehmer.
+* `topicName`: Ein optionales Feld für den Anzeigenamen des Chats, im Fall eines Chats mit drei oder mehr Benutzern. Wenn dieses Feld nicht angegeben wird, basiert der Bildschirmname des Chats auf den Namen der Teilnehmer.
 * `message`: Ein optionales Feld für den Nachrichtentext, den Sie in das Feld zum Verfassen des aktuellen Benutzers einfügen möchten, während sich der Chat im Entwurfszustand befindet.
 
 Um diesen Deeplink mit Ihrem Bot zu verwenden, geben Sie diesen als URL-Ziel auf der Schaltfläche Ihrer Karte an, oder tippen Sie über den Aktionstyp `openUrl` auf die Aktion.
+
+## <a name="generate-deep-links-to-channel-conversation"></a>Erzeugen von Deep Links zu Channel-Konversationen
+
+Verwenden Sie dieses Deep-Link-Format, um zu einer bestimmten Konversation innerhalb eines Kanal-Threads zu navigieren:
+
+`https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
+
+Beispiel: `https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=1648741500652&teamName=<teamName>&channelName=<channelName>&createdTime=1648741500652`
+
+Die Abfrageparameter sind:
+
+* `channelId`: Kanal-ID der Unterhaltung. Beispiel: `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`.
+* `tenantId`: Mandanten-ID, z. B. `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
+* `groupId`: Gruppen-ID der Datei. Beispiel: `3606f714-ec2e-41b3-9ad1-6afb331bd35d`.
+* `parentMessageId`: ID der übergeordneten Nachricht der Konversation.
+* `teamName`: Name des Teams.
+* `channelName`: Name des Kanals des Teams.
+
+> [!NOTE]
+> Sie können `channelId` und `groupId` in der URL dieses Kanals sehen.
 
 ## <a name="generate-deep-links-to-file-in-channel"></a>Generieren von Deeplinks zu Dateien im Kanal
 
@@ -196,7 +215,7 @@ Das folgende Deep Link-Format wird in einem Bot, Connector oder einer Nachrichte
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
-Das folgende Beispielformat veranschaulicht den Deeplink zu Dateien:
+Das folgende Beispielformat veranschaulicht den Deep-Link zu Dateien:
 
 `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
@@ -232,7 +251,7 @@ Die Abfrageparameter sind:
 * `appID`: Ihre Manifest-ID, z. B. `fe4a8eba-2a31-4737-8e33-e5fae6fee194`.
 
 * `entityID`: Die Element-ID, die Sie beim [Konfigurieren der Registerkarte](~/tabs/how-to/create-tab-pages/configuration-page.md)angegeben haben. Zum Beispiel: `tasklist123`.
-* `entityWebUrl`: Ein optionales Feld mit einer Fallback-URL, das verwendet werden soll, wenn der Client das Rendern der Registerkarte – `https://tasklist.example.com/123` oder `https://tasklist.example.com/list123/task456` – nicht unterstützt.
+* `entityWebUrl`: Ein optionales Feld mit einer Fallback URL, das verwendet werden soll, wenn der Client das Rendern der Registerkarte nicht unterstützt - `https://tasklist.example.com/123` oder `https://tasklist.example.com/list123/task456`.
 * `entityName`: Eine Beschriftung für das Element auf Ihrer Registerkarte, das beim Anzeigen des Deeplinks, Task List 123 oder Task 456, verwendet werden soll.
 
 Beispiel: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
@@ -262,7 +281,7 @@ Die Abfrageparameter sind:
 * `content`: Ein optionales Feld für das Besprechungsdetails-Feld.
 
 > [!NOTE]
-> Derzeit wird die Angabe des Standorts nicht unterstützt. Sie müssen den UTC-Offset angeben, d. h. Zeitzonen beim Generieren der Start- und Endzeiten.
+> Derzeit wird die Angabe des Standorts nicht unterstützt. Sie müssen den UTC-Offset angeben. Dies bedeutet Zeitzonen, wenn Sie Ihre Start- und Endzeiten generieren.
 
 Um diesen Deeplink mit Ihrem Bot zu verwenden, können Sie diesen als URL-Ziel auf der Schaltfläche Ihrer Karte angeben oder über den Aktionstyp `openUrl` auf die Aktion tippen.
 
