@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 746b089bf8be4b091a34969118e640d8571c2237
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 7778a5747ae6b5118d5ebeac857e2a9944cff62b
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103271"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654540"
 ---
 # <a name="add-capabilities-to-your-teams-apps"></a>Hinzufügen von Funktionen zu ihrer Teams-App
 
@@ -28,7 +28,7 @@ Während der App-Entwicklung können Sie eine neue Teams-App mit Teams App-Funkt
 * Installieren Sie die [neueste Version des Teams-Toolkits](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 > [!TIP]
-> Stellen Sie sicher, dass Teams App-Projekt in VS-Code geöffnet ist.
+> Stellen Sie sicher, dass Sie das Teams-App-Projekt in VS-Code geöffnet haben.
 
 ## <a name="limitations"></a>Einschränkungen
 
@@ -37,11 +37,12 @@ Die Einschränkungen für TeamsFx beim Hinzufügen weiterer Funktionen lauten wi
 * Sie können Registerkarten bis zu 16 Instanzen hinzufügen.
 * Sie können Bot- und Nachrichtenerweiterungen für jeweils eine Instanz hinzufügen.
 
-## <a name="add-capabilities"></a>Hinzufügen von Funktionen
+## <a name="add-capabilities"></a>Fähigkeiten hinzufügen
 
 > [!Note]
 > Sie müssen die Bereitstellung für jede Umgebung durchführen, nachdem Sie Ihrer Teams-App erfolgreich Funktionen hinzugefügt haben.
-* Sie können Funktionen mit Teams Toolkit in Visual Studio Code hinzufügen.
+* Sie können funktionen mit Teams Toolkit in Visual Studio Code hinzufügen
+
     1. **öffnen Microsoft Visual Studio Code**
     1. Auswählen **Teams Toolkits** im linken Bereich
     1. Wählen Sie **"Funktionen hinzufügen" aus.**
@@ -78,7 +79,7 @@ Neben den Funktionen, über die Ihre Teams App bereits verfügt, können Sie ihr
 
 |Vorhandene Funktionen|Weitere unterstützte Funktionen|
 |--------------------|--------------------|
-|Registerkarten mit SPFx|Keine|
+|Registerkarten mit SPFx|None|
 |Registerkarten mit Azure|Bot- und Nachrichtenerweiterung|
 |Bot|Registerkarten|
 |Nachrichtenerweiterung|Registerkarten und Bot|
@@ -92,7 +93,7 @@ Neben den Funktionen, über die Ihre Teams App bereits verfügt, können Sie ihr
 Nach dem Hinzufügen eines Bots und einer Nachrichtenerweiterung sind die Änderungen in Ihrem Projekt wie folgt:
 
 * Ein Botvorlagencode wird einem Unterordner mit Pfad `yourProjectFolder/bot`hinzugefügt. Dazu gehört eine **Hello** World-Bot-Anwendungsvorlage in Ihr Projekt.
-* `launch.json`und `task.json` unter `.vscode` Ordner werden aktualisiert, was die erforderlichen Skripts für Visual Studio Code enthält, und wird ausgeführt, wenn Sie Ihre Anwendung lokal debuggen möchten
+* `launch.json`und `task.json` unter `.vscode` Ordner aktualisiert werden, die erforderliche Skripts für Visual Studio Code enthält, und wird ausgeführt, wenn Sie Ihre Anwendung lokal debuggen möchten
 * `manifest.template.json`datei under `templates/appPackage` folder is updated, which includes the bot related information in the manifest file that represents your application in the Teams Platform. Folgende Änderungen stehen zur Verfügung:
   * Die ID Ihres Bots
   * Die Bereiche Ihres Bots
@@ -103,13 +104,18 @@ Nach dem Hinzufügen eines Bots und einer Nachrichtenerweiterung sind die Änder
 Nach dem Hinzufügen der Registerkarte sind die Änderungen in Ihrem Projekt wie folgt:
 
 * Ein Code für eine Frontend-Registerkartenvorlage wird einem Unterordner mit Pfad `yourProjectFolder/tab`hinzugefügt, der eine Anwendungsvorlage für die Registerkarte " **Hello World** " in Ihr Projekt enthält.
-* `launch.json`und `task.json` unter `.vscode` Ordner werden aktualisiert, was die erforderlichen Skripts für Visual Studio Code enthält, und wird ausgeführt, wenn Sie Ihre Anwendung lokal debuggen möchten
+* `launch.json`und `task.json` unter `.vscode` Ordner aktualisiert werden, die erforderliche Skripts für Visual Studio Code enthält, und wird ausgeführt, wenn Sie Ihre Anwendung lokal debuggen möchten
 * `manifest.template.json`datei under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform. Die Änderungen sind:
   * Die konfigurierbaren und statischen Registerkarten
   * Die Bereiche der Registerkarten
 * Die Dateien unter `templates/azure/teamsfx` werden aktualisiert, und `templates/azure/provision/xxx`die Bicep-Datei wird neu generiert.
 * Die Datei unter `.fx/config` wird neu generiert, wodurch sichergestellt wird, dass Ihr Projekt mit den richtigen Konfigurationen für neu hinzugefügte Funktionen festgelegt wird.
 
+## <a name="step-by-step-guide"></a>Schrittweise Anleitung
+
+* Befolgen Sie die schrittweise Anleitung zum Erstellen [des Befehls-Bots](../sbs-gs-commandbot.yml) in Microsoft Teams
+
+* Befolgen Sie die [schrittweise Anleitung zum Erstellen eines Benachrichtigungs-Bots](../sbs-gs-notificationbot.yml) in Microsoft Teams.
 
 ## <a name="see-also"></a>Siehe auch
 

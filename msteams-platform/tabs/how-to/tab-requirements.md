@@ -3,15 +3,15 @@ title: Voraussetzungen
 author: surbhigupta
 description: Jede Registerkarte in Microsoft Teams muss diese Anforderungen erfüllen.
 keywords: Teams Registerkarten Gruppenkanal konfigurierbar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2ac02c7c78fca1ddf4c64e2718cdaf840b0ae59b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: ca9b4d073a324c3cbf1d2d087bec8d366faf0830
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110281"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654897"
 ---
 # <a name="prerequisites"></a>Voraussetzungen
 
@@ -44,7 +44,7 @@ Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, während S
 | &nbsp; | Installieren | Zum Benutzen... |
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-End-JavaScript-Laufzeitumgebung. Verwenden Sie die neueste LTS-Version v14.|
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-End-JavaScript-Laufzeitumgebung. Verwenden Sie die neueste Version von v16 LTS.|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (empfohlen) oder [Google Chrome](https://www.google.com/chrome/) | Ein Browser mit Entwicklertools. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Build-Umgebungen für JavaScript, TypeScript oder SharePoint Framework (SPFx). |
 | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET und Webentwicklung**, oder **plattformübergreifende .NET** Core-Entwicklungsworkload | .NET. Sie können die kostenlose Community Edition von Visual Studio 2019 installieren. |
@@ -64,5 +64,5 @@ Lassen Sie uns jetzt Ihren Tab erstellen. Aber wählen Sie zuerst die Registerka
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Registerkarten für Teams](~/tabs/what-are-tabs.md)
+* [Teams-Registerkarten](~/tabs/what-are-tabs.md)
 * [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)

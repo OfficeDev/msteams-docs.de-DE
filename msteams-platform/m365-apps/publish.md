@@ -1,18 +1,18 @@
 ---
-title: Veröffentlichen Teams Apps für Microsoft 365
+title: Veröffentlichen von Microsoft Teams-Apps für Microsoft 365
 description: Machen Sie Ihre Microsoft 365-fähigen Teams-Apps für Benutzer in Teams, Outlook und Office
 ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 66b5adb6162222da155318aeb818fd681a664816
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: b256eb75f871425d855c0f12359015134870efc0
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653704"
+ms.locfileid: "65656079"
 ---
-# <a name="publish-teams-apps-for-microsoft-365"></a>Veröffentlichen Teams Apps für Microsoft 365
+# <a name="publish-teams-apps-for-microsoft-365"></a>Veröffentlichen von Microsoft Teams-Apps für Microsoft 365
 
 Microsoft 365-aktivierte Teams-Apps werden für die Produktionsverwendung in Microsoft Teams unterstützt. Sie können diese Apps für die Vorschau von Zielgruppen verteilen, die die *Targeted Release-Versionen* von outlook.com und office.com sowie den *Betakanalbuild* von Outlook für Windows Desktop verwenden. Verteilungsoptionen und -prozesse für Microsoft 365-aktivierte Teams-Apps sind identisch mit herkömmlichen Teams-Apps.
 
@@ -42,7 +42,7 @@ Als globaler Administrator können Sie das App-Paket vom [Microsoft-Administrato
 
 ## <a name="multitenant-distribution"></a>Verteilung an mehrere Mandanten
 
-Der Übermittlungsprozess von [Microsoft AppSource](https://appsource.microsoft.com/) (Microsoft Commercial Marketplace) für Teams Apps, die für Outlook und Office aktiviert sind, ist der gleiche wie für herkömmliche Teams-Apps. Der einzige Unterschied besteht darin, dass Sie Teams App-Manifestversion [1.13](../tabs/how-to/using-teams-client-sdk.md) in Ihrem App-Paket verwenden müssen, das Unterstützung für Teams  Apps, die über Microsoft 365 ausgeführt werden.
+Der Übermittlungsprozess von [Microsoft AppSource](https://appsource.microsoft.com/) (Microsoft Commercial Marketplace) für Teams Apps, die für Outlook und Office aktiviert sind, entspricht herkömmlichen Teams-Apps. Der einzige Unterschied besteht darin, dass Sie Teams [App-Manifestversion 1.13](../tabs/how-to/using-teams-client-sdk.md) in Ihrem App-Paket verwenden müssen, das Unterstützung für Teams Apps bietet, die über Microsoft 365 ausgeführt werden.
 
 > [!TIP]
 > Verwenden Sie Teams Developer Portal, um [Ihr App-Paket zu überprüfen](https://dev.teams.microsoft.com/validation), um Fehler oder Warnungen zu beheben, bevor Sie es an den Teams Store (über [das Microsoft Partner Network](https://partner.microsoft.com/)) übermitteln.

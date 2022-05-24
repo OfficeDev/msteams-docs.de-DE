@@ -92,26 +92,24 @@
           href: toolkit/teams-toolkit-fundamentals.md
         - name: Erstellen einer neuen Teams-App
           href: toolkit/create-new-project.md
+        - name: Vorbereiten von Konten zum Erstellen einer Teams-App
+          href: toolkit/accounts.md
         - name: Lokales Debuggen Ihrer Teams-App
           href: toolkit/debug-local.md
         - name: Debuggen von Hintergrundprozessen
           href: toolkit/debug-background-process.md
-        - name: Vorbereiten von Konten zum Erstellen einer Teams-App
-          href: toolkit/accounts.md
         - name: Bereitstellen von Cloudressourcen
           href: toolkit/provision.md
         - name: Bereitstellen der Teams-App in der Cloud
           href: toolkit/deploy.md
+        - name: Vorschau und Anpassen des Teams-App-Manifests
+          href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
         - name: Veröffentlichen von Teams-Apps mithilfe von Teams-Toolkits
           href: toolkit/publish.md
         - name: Hinzufügen von Funktionen zur Teams-App
           href: toolkit/add-capability.md
         - name: Hinzufügen von Cloudressourcen zur Teams-App
           href: toolkit/add-resource.md
-        - name: Anpassen des Teams-App-Manifests
-          href: toolkit/TeamsFx-manifest-customization.md
-        - name: Vorschau des Teams-App-Manifests
-          href: toolkit/TeamsFx-manifest-preview.md
         - name: Verwalten mehrerer Umgebungen
           href: toolkit/TeamsFx-multi-env.md
         - name: Zusammenarbeit mit anderen Entwicklern am Teams-Toolkit
@@ -132,8 +130,6 @@
       href: concepts/build-and-test/teams-developer-portal.md
     - name: Microsoft Teams JavaScript-Client-SDK
       href: tabs/how-to/using-teams-client-sdk.md
-    - name: Microsoft Teams JavaScript-Client-SDK v2 Vorschau
-      href: m365-apps/using-teams-client-sdk-preview.md
     - name: Node.js Bot Framework für Bots und Nachrichtenerweiterungen (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: .NET Bot Framework für Bots und Nachrichtenerweiterungen (GitHub)
@@ -421,6 +417,8 @@
       href: m365-apps/extend-m365-teams-personal-tab.md
     - name: Aktivieren einer Teams-Nachrichtenerweiterung für Outlook
       href: m365-apps/extend-m365-teams-message-extension.md
+    - name: Veröffentlichen von Microsoft Teams-Apps für Microsoft 365
+      href: m365-apps/publish.md
 - name: Testen eigener Apps
   items:
     - name: Übersicht

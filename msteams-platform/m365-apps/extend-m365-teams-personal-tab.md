@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a28c9d3e8b54d2c3f160ccd5e38f6e666e60f2e
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: abdd21eae707b2edf180a77f3fe25aaed3b165e5
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653777"
+ms.locfileid: "65654568"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ausweiten einer persönlichen Microsoft Teams-Registerkarte auf Microsoft 365
 
@@ -131,9 +131,9 @@ Wenn Ihre App CSP-Header ( [Content Security Policy](https://developer.mozilla.o
 1. Wählen Sie den Namen Ihrer persönlichen Registerkartenanwendung aus, um die entsprechende App-Registrierung zu öffnen.
 1. Wählen Sie die Option **Eine API verfügbar machen** aus (unter *Verwalten*).
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorisieren von Client-IDs vom Blatt *App-Registrierungen* im Azure-Portal":::
+    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorisieren von Client-IDs vom Blatt *App-Registrierungen* im Azure-Portal":::
 
-Stellen Sie im Abschnitt **Autorisierte Clientanwendungen** sicher, dass alle folgenden `Client Id`-Werte hinzugefügt wurden:
+1. Stellen Sie im Abschnitt **Autorisierte Clientanwendungen** sicher, dass alle folgenden `Client Id`-Werte hinzugefügt wurden:
 
 |Microsoft 365-Clientanwendung | Client-ID |
 |--|--|
@@ -184,7 +184,7 @@ So zeigen Sie Ihre App an, die in Outlook auf Windows Desktop ausgeführt wird:
 1. Wählen Sie auf der Seitenleiste  **"Weitere Apps" aus**. Der Titel Ihrer quergeladenen App wird unter den installierten Apps angezeigt.
 1. Wählen Sie Ihr App-Symbol aus, um die App in Outlook zu starten.
 
-:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste in Outlook-Desktopclients auf die Option &quot;Weitere Apps&quot; (Auslassungspunkte), um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
+    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste in Outlook-Desktopclients auf die Option &quot;Weitere Apps&quot; (Auslassungspunkte), um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
 
 ### <a name="outlook-on-the-web"></a>Outlook im Web
 
@@ -194,7 +194,7 @@ So zeigen Sie Ihre App in Outlook im Web an:
 1. Wählen Sie die Auslassungszeichen (**...**) auf der Seitenleiste aus. Der Titel Ihrer quergeladenen App wird unter den installierten Apps angezeigt.
 1. Wählen Sie Ihr App-Symbol aus, um die App zu starten und eine Vorschau anzuzeigen, die in Outlook im Web ausgeführt wird.
 
-:::image type="content" source="images/outlook-web-more-apps.png" alt-text="Klicken Sie auf outlook.com auf der Seitenleiste auf die Option &quot;Weitere Apps&quot; (Auslassungspunkte), um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
+    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Klicken Sie auf outlook.com auf der Seitenleiste auf die Option &quot;Weitere Apps&quot; (Auslassungspunkte), um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
 
 ### <a name="office-on-windows"></a>Office unter Windows
 
@@ -204,7 +204,7 @@ So zeigen Sie Ihre App an, die in Office auf einem Windows-Desktop ausgeführt w
 1. Wählen Sie die Auslassungszeichen (**...**) auf der Seitenleiste aus. Der Titel Ihrer quergeladenen App wird unter den installierten Apps angezeigt.
 1. Wählen Sie ihr App-Symbol aus, um die App in Office zu starten.
 
-:::image type="content" source="images/office-desktop-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste in Office-Desktopclients auf die Option &quot;Weitere Apps&quot; (Auslassungspunkte), um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
+    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste in Office-Desktopclients auf die Option &quot;Weitere Apps&quot; (Auslassungspunkte), um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
 
 ### <a name="office-on-the-web"></a>Office im Web
 
@@ -214,7 +214,7 @@ So zeigen Sie eine Vorschau Ihrer App an, die in Office im Web ausgeführt wird:
 1. Wählen Sie auf der Seitenleiste das **Symbol "Apps** " aus. Der Titel Ihrer quergeladenen App wird unter den installierten Apps angezeigt.
 1. Wählen Sie Ihr App-Symbol aus, um die App in Office im Web zu starten.
 
-:::image type="content" source="images/office-web-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste von office.com auf die Option &quot;Weitere Apps&quot;, um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
+    :::image type="content" source="images/office-web-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste von office.com auf die Option &quot;Weitere Apps&quot;, um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
@@ -236,7 +236,7 @@ Verwenden Sie die [Microsoft Teams-Communitykanäle für Entwickler](/microsoftt
 
 Bei der ersten Ausführung des lokalen Debuggens zum Office oder Outlook werden Sie aufgefordert, sich bei Ihrem Microsoft 365 Mandantenkonto anzumelden und ein selbstsigniertes Testzertifikat zu installieren. Sie werden auch aufgefordert, Teams manuell zu installieren. Wählen Sie **"In Teams installieren**" aus, um ein Browserfenster zu öffnen und Ihre App manuell zu installieren. Klicken Sie dann auf **"Weiter**", um mit dem Debuggen Ihrer App in Office/Outlook fortzufahren.
 
-:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="{alt-text}":::
+:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Dialogfeld &quot;Toolkit&quot; Teams Installation":::
 
 Geben Sie Feedback und melden Sie Alle Probleme mit dem Teams Toolkit-Debugging unter [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 

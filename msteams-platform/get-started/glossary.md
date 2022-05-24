@@ -4,12 +4,12 @@ description: Glossar für Microsoft Teams-Entwicklerdokumentation
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams-Entwicklerdefinition
-ms.openlocfilehash: f5b5461949367adc8ce101866556abf657259312
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 54068043d174a79de8a59e0d14b2310e0ae70f32
+ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135724"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65653273"
 ---
 # <a name="glossary"></a>Glossar
 
@@ -188,7 +188,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | [Teams Toolkit](../toolkit/teams-toolkit-fundamentals.md) | Mithilfe des Microsoft Teams-Toolkits können Sie benutzerdefinierte Teams-Apps direkt innerhalb der Visual Studio Code-Umgebung erstellen.  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx ist eine textbasierte Befehlszeilenschnittstelle, die die Microsoft Teams-Anwendungsentwicklung beschleunigt. Sie wird auch als TeamsFx-CLI bezeichnet.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK ist im Gerüstprojekt mithilfe des TeamsFx-Toolkits oder der CLI vorkonfiguriert. |
-| [TeamsJS-SDK](../tabs/how-to/using-teams-client-sdk.md) | Mit dem TeamsJS-SDK können Sie gehostete Erfahrungen in Teams erstellen. Die Funktionen in der [neuesten Version](~/m365-apps/using-teams-client-sdk-preview.md) erweitern die Teams-App für die Ausführung in Outlook und Office. |
+| [TeamsJS-SDK](../tabs/how-to/using-teams-client-sdk.md) | Mit dem TeamsJS-SDK können Sie gehostete Erfahrungen in Teams erstellen. Ab TeamsJS v.2.0.0 können Sie Teams-Apps so erweitern, dass sie in Outlook und Office ausgeführt werden können. |
 | [Teams Mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams als mobile App verfügbar. |
 | [Teams Store](../concepts/deploy-and-publish/appsource/publish.md) | Eine Store-Angebotsseite, die Apps für Benutzer an einem zentralen Ort bereitstellt. Die Apps sind nach Verwendung, Branche und anderem kategorisiert. Eine App muss Store Validierungsrichtlinien folgen und eine Genehmigung einholen, bevor sie benutzern über den Teams Store zur Verfügung steht.  <br>**Weitere Informationen unter**: [Store-Validierungsrichtlinien](#s) |
 | [Teams Workbench](../sbs-gs-spfx.yml) | Eine Workbench in Visual Studio Code beim Erstellen für Teams Apps verwendet, die mit SPFx und Teams Toolkit erstellt wurden. <br>**Weitere Informationen unter**: [Workbench](#w); [Lokale Workbench](#l) |

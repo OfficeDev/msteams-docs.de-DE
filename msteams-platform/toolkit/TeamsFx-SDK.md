@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: aad897e7b4028363bcfa0f21a75b6da01fc57ec6
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: ae533039c8a0af5719dd884628d600ae3be11410
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297177"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654891"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -231,20 +231,26 @@ const profile = await graphClient.api("/me").get();
 <br>
 
 <details>
+<summary><b>Erstellen eines API-Clients zum Aufrufen einer vorhandenen API in Bot oder Azure-Funktion</b></summary>
+
+:::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/createapi-client.PNG" alt-text="API-Client erstellen" border="false":::
+
+
+</details>
+
+<br>
+
+<details>
 <summary><b>Rufen Sie die Azure-Funktion in der Registerkarten-App auf</b></summary>
 
 Verwenden Sie `axios` die Bibliothek, um eine HTTP-Anforderung an die Azure-Funktion zu senden.
 
 ```ts
 const teamsfx = new TeamsFx();
-const token = teamsfx.getCredential().getToken(""); // Get SSO token for the use
-// Call API hosted in Azure Functions on behalf of user
-const apiEndpoint = teamsfx.getConfig("apiEndpoint");
-const response = await axios.default.get(apiEndpoint + "api/httptrigger1", {
-  headers: {
-    authorization: "Bearer " + token,
-  },
-});
+const credential = teamsfx.getCredential(); //Create an API Client that uses SSO token to authenticate requests
+const apiClient = CreateApiClient(teamsfx.getConfig("apiEndpoint")),
+new BearerTokenAuthProvider(async () =>  (await credential.getToken(""))!.token);// Call API hosted in Azure Functions on behalf of user
+const response = await apiClient.get("/api/" + functionName);
 ```
 
 </details>
