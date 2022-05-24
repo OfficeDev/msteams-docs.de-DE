@@ -6,87 +6,95 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 7778a5747ae6b5118d5ebeac857e2a9944cff62b
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: a0ebea1fb05e3583c90c41596da98a25d89f9b4c
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654540"
+ms.locfileid: "65656761"
 ---
-# <a name="add-capabilities-to-your-teams-apps"></a>Hinzufügen von Funktionen zu ihrer Teams-App
+# <a name="add-capabilities-to-teams-apps"></a>Hinzufügen von Funktionen zu Teams-Apps
 
-Während der App-Entwicklung können Sie eine neue Teams-App mit Teams App-Funktion erstellen. In der folgenden Tabelle sind die Teams App-Funktionen aufgeführt:
+Das Hinzufügen von Funktionen in Teams Toolkit hilft Ihnen, Ihrer vorhandenen Teams-App zusätzliche Funktionen hinzuzufügen. In der folgenden Tabelle sind die Teams App-Funktionen aufgeführt:
 
 |**Funktion**|**Beschreibung**|
 |--------|-------------|
-| Registerkarten |  Registerkarten sind einfache HTML-Tags, die auf Im App-Manifest deklarierte Domänen verweisen. Sie können Registerkarten als Teil des Kanals innerhalb eines Teams, eines Gruppenchats oder einer persönlichen App für einen einzelnen Benutzer hinzufügen.|
-| Bots |  Bots helfen bei der Interaktion mit Ihrem Webdienst über Text, interaktive Karten und Aufgabenmodule|
-| Nachrichtenerweiterungen | Nachrichtenerweiterungen helfen bei der Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams-Client|
+| Registerkarten |  Registerkarten sind einfache HTML-Tags, die sich auf im App-Manifest deklarierte Domänen beziehen. Sie können Registerkarten als Teil des Kanals innerhalb eines Teams, eines Gruppenchats oder einer persönlichen App für einen einzelnen Benutzer hinzufügen.|
+| Bots |  Bots helfen bei der Interaktion mit Ihrem Webdienst über Text, interaktive Karten und Aufgabenmodule.|
+| Nachrichtenerweiterungen | Nachrichtenerweiterungen helfen bei der Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams-Client.|
 
-## <a name="prerequisite"></a>Voraussetzungen
+## <a name="advantages"></a>Vorteile
 
-* Installieren Sie die [neueste Version des Teams-Toolkits](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+Die folgende Liste bietet Vorteile zum Hinzufügen weiterer Funktionen in TeamsFx:
 
-> [!TIP]
-> Stellen Sie sicher, dass Sie das Teams-App-Projekt in VS-Code geöffnet haben.
+* Bietet Komfort
+* Fügt Ihrer App weitere Funktionen hinzu, indem Quellcodes automatisch mit Teams Toolkit hinzugefügt werden.
 
 ## <a name="limitations"></a>Einschränkungen
 
-Die Einschränkungen für TeamsFx beim Hinzufügen weiterer Funktionen lauten wie folgt:
+Die folgende Liste enthält Einschränkungen zum Hinzufügen weiterer Funktionen in TeamsFx:
 
 * Sie können Registerkarten bis zu 16 Instanzen hinzufügen.
-* Sie können Bot- und Nachrichtenerweiterungen für jeweils eine Instanz hinzufügen.
+* Sie können einen Bot und eine Nachrichtenerweiterung für jede Instanz hinzufügen.
 
 ## <a name="add-capabilities"></a>Fähigkeiten hinzufügen
 
-> [!Note]
-> Sie müssen die Bereitstellung für jede Umgebung durchführen, nachdem Sie Ihrer Teams-App erfolgreich Funktionen hinzugefügt haben.
-* Sie können funktionen mit Teams Toolkit in Visual Studio Code hinzufügen
+**Sie können Funktionen mit den folgenden Methoden hinzufügen:**
 
-    1. **öffnen Microsoft Visual Studio Code**
-    1. Auswählen **Teams Toolkits** im linken Bereich
-    1. Wählen Sie **"Funktionen hinzufügen" aus.**
+* So fügen Sie Funktionen mithilfe des Teams Toolkits in Visual Studio Code hinzu
+* So fügen Sie Funktionen mithilfe der Befehlspalette hinzu
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add capabilities.png" alt-text="capabilities":::
+  > [!Note]
+  > Sie müssen für jede Umgebung bereitstellen, nachdem Sie die Funktionen in Ihrer Teams App erfolgreich hinzugefügt haben.
 
-*   Sie können auch die Befehlspalette öffnen und Teams eingeben: Funktionen hinzufügen:
+* **So fügen Sie Funktionen mithilfe des Teams Toolkits in Visual Studio Code hinzu:**
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/tree view capabilities.png" alt-text="Alternative Funktionen":::
+   1. Öffnen Sie **Visual Studio Code**.
+   1. Wählen Sie im linken Bereich **Teams Toolkit** aus.
+   1. Wählen Sie unter **"ENTWICKLUNG****" die Option "Features hinzufügen"** aus.
 
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="Eine aktualisierte" border="true":::
 
-    1. Wählen Sie im Popup die Funktionen aus, die in Ihr Projekt aufgenommen werden sollen:
+* **So fügen Sie Funktionen mithilfe der Befehlspalette hinzu:**
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select capabilities.png" alt-text="select":::
+   1. Öffnen Sie **die Befehlspalette**.
+   1. Geben Sie **Teams:Features hinzufügen ein**.
+   1. Drücken Sie **EINGABE**.
 
-    2. Wählen Sie **"OK**" aus.
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="Teamfeature" border="true":::
 
-Die ausgewählten Funktionen wurden erfolgreich zu Ihrem Projekt hinzugefügt. Das Teams Toolkit generiert Quellcode für neu hinzugefügte Funktionen
+   1. Wählen Sie im Popup die Funktion aus, die Sie in Ihrem Projekt hinzufügen möchten.
 
-## <a name="add-capabilities-using-teamsfx-cli-in-command-window"></a>Hinzufügen von Funktionen mithilfe der TeamsFx CLI im Befehlsfenster
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="Benachrichtigung" border="true":::
 
-1. Ändern des Verzeichnisses in Ihr **Projektverzeichnis**
-1. Führen Sie den folgenden Befehl aus, um Ihrem Projekt unterschiedliche Funktionen hinzuzufügen:
+## <a name="add-capabilities-using-teamsfx-cli"></a>Hinzufügen von Funktionen mithilfe von TeamsFx CLI
 
-   |Funktion und Szenario| Befehl|
-   |-----------------------|----------|
-   |So fügen Sie eine Registerkarte hinzu|`teamsfx capability add tab`|
-   |So fügen Sie einen Bot hinzu|`teamsfx capability add bot`|
-   |So fügen Sie eine Nachrichtenerweiterung hinzu|`teamsfx capability add messaging-extension`|
+* Ändern des Verzeichnisses in Ihr **Projektverzeichnis**
+* In der folgenden Tabelle sind die Funktionen und erforderlichen Befehle aufgeführt:
 
-## <a name="supported-capabilities"></a>Unterstützte Funktionen
+  |Funktion und Szenario| Befehl|
+  |-----------------------|----------|
+  |So fügen Sie einen Benachrichtigungs-Bot hinzu |`teamsfx add notification `|
+  |So fügen Sie den Befehlsbot hinzu |`teamsfx add command-and-response `|
+  |So fügen Sie eine sso-aktivierte Registerkarte hinzu |`teamsfx add sso-tab`|
+  |So fügen Sie eine Registerkarte hinzu |`teamsfx add tab`|
+  |So fügen Sie einen Bot hinzu |`teamsfx add bot`|
+  |So fügen Sie eine Nachrichtenerweiterung hinzu |`teamsfx add message extension`|
 
-Neben den Funktionen, über die Ihre Teams App bereits verfügt, können Sie ihrer Teams App unterschiedliche Funktionen hinzufügen. Die folgende Tabelle enthält die verschiedenen Teams App-Funktionen:
+## <a name="available-capabilities-to-add-for-different-teams-project"></a>Verfügbare Funktionen zum Hinzufügen für verschiedene Teams Projekts
+
+Sie können verschiedene Funktionen basierend auf dem Projekt hinzufügen, das Sie in Teams App erstellt haben.
+In der folgenden Tabelle sind die verfügbaren Funktionen aufgeführt, die Sie in Ihrem Projekt hinzufügen können:
 
 |Vorhandene Funktionen|Weitere unterstützte Funktionen|
 |--------------------|--------------------|
-|Registerkarten mit SPFx|None|
-|Registerkarten mit Azure|Bot- und Nachrichtenerweiterung|
-|Bot|Registerkarten|
-|Nachrichtenerweiterung|Registerkarten und Bot|
-|Registerkarten und Bot|Registerkarten und Nachrichtenerweiterung|
-|Registerkarten und Nachrichtenerweiterung|Registerkarten und Bot|
-|Registerkarten, Bot und Nachrichtenerweiterung|Registerkarten|
-|Registerkarten |Bot- und Nachrichtenerweiterung|
+|registerkarte SPFx |None|
+|SSO-aktivierte Registerkarte |SSO-aktivierte Registerkarte, Benachrichtigungs-Bot, Befehls-Bot, Bot, Nachrichtenerweiterung|
+|Benachrichtigungs-Bot |SSO-aktivierte Registerkarte, Registerkarte|
+|Befehlsbot |SSO-aktivierte Registerkarte, Registerkarte|
+|Tab |Registerkarte, Benachrichtigungs-Bot, Befehls-Bot, Bot, Nachrichtenerweiterung|
+|Bot |Nachrichtenerweiterung, SSO-aktivierte Registerkarte, Registerkarte|
+|Nachrichtenerweiterung |Bot, SSO-aktivierte Registerkarte, Registerkarte |
 
 ## <a name="add-bot-tab-and-message-extension"></a>Hinzufügen von Bots, Registerkarten und Nachrichtenerweiterungen
 
@@ -115,7 +123,7 @@ Nach dem Hinzufügen der Registerkarte sind die Änderungen in Ihrem Projekt wie
 
 * Befolgen Sie die schrittweise Anleitung zum Erstellen [des Befehls-Bots](../sbs-gs-commandbot.yml) in Microsoft Teams
 
-* Befolgen Sie die [schrittweise Anleitung zum Erstellen eines Benachrichtigungs-Bots](../sbs-gs-notificationbot.yml) in Microsoft Teams.
+* Befolgen Sie die schrittweise Anleitung zum Erstellen [eines Benachrichtigungs-Bots](../sbs-gs-notificationbot.yml) in Microsoft Teams.
 
 ## <a name="see-also"></a>Siehe auch
 

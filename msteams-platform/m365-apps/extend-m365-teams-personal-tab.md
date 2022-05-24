@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: abdd21eae707b2edf180a77f3fe25aaed3b165e5
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: b164231a95c511402431b5d4cdb3c7d0fc6cfdff
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654568"
+ms.locfileid: "65656173"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ausweiten einer persönlichen Microsoft Teams-Registerkarte auf Microsoft 365
 
@@ -91,7 +91,7 @@ Wenn Sie das Microsoft Teams-Toolkit zum Erstellen Ihrer persönlichen App verwe
 
 ## <a name="update-sdk-references"></a>Aktualisieren von SDK-Verweisen
 
-Um in Outlook und Office ausgeführt werden zu können, muss Ihre App auf das npm-Paket `@microsoft/teams-js@2.0.0` (oder höher) verweisen. Während Code mit Versionen auf unterer Ebene in Outlook und Office unterstützt wird, werden Veraltete Warnungen protokolliert, und die Unterstützung für Versionen mit unterer Ebene von TeamsJS in Outlook und Office wird schließlich eingestellt.
+Um in Outlook und Office ausgeführt werden zu können, muss Ihre App auf das npm-Paket `@microsoft/teams-js@2.0.0` (oder höher) verweisen. Während Code mit Versionen auf unterer Ebene in Outlook und Office unterstützt wird, werden Veraltete Warnungen protokolliert, und die Unterstützung für Versionen unterer Ebene von TeamsJS in Outlook und Office wird schließlich eingestellt.
 
 Sie können Teams Toolkit verwenden, um die erforderlichen Codeänderungen für das Upgrade von 1.x TeamsJS-Versionen auf TeamsJS Version 2.0.0 zu identifizieren und zu automatisieren. Alternativ können Sie dieselben Schritte manuell ausführen. Weitere Informationen finden Sie [unter Microsoft Teams JavaScript-Client-SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20).
 
@@ -107,8 +107,7 @@ Nach Abschluss der Datei *"package.json* " wird auf die Datei "package.json" (od
 > * `TODO` Kommentarerinnerungen zum [Konvertieren von Rückruffunktionen in Zusagen](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
 
 > [!IMPORTANT]
-> Code in *.html*-Dateien wird von den Upgradetools nicht unterstützt und erfordert manuelle Änderungen.
-
+> Code in *.html* Dateien wird von den Upgradetools nicht unterstützt und erfordert manuelle Änderungen.
 
 ## <a name="configure-content-security-policy-headers"></a>Konfigurieren der Header von Inhaltssicherheitsrichtlinien
 
@@ -135,15 +134,15 @@ Wenn Ihre App CSP-Header ( [Content Security Policy](https://developer.mozilla.o
 
 1. Stellen Sie im Abschnitt **Autorisierte Clientanwendungen** sicher, dass alle folgenden `Client Id`-Werte hinzugefügt wurden:
 
-|Microsoft 365-Clientanwendung | Client-ID |
-|--|--|
-|Teams-Desktop, Mobil |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
-|Teams-Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
-|Office-Desktop  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
-|Outlook Desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
-|Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+    |Microsoft 365-Clientanwendung | Client-ID |
+    |--|--|
+    |Teams-Desktop, Mobil |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+    |Teams-Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+    |Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
+    |Office-Desktop  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+    |Outlook Desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+    |Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
+    |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## <a name="sideload-your-app-in-teams"></a>Querladen der App in Microsoft Teams
 
@@ -165,23 +164,23 @@ Der letzte Schritt zum Ausführen Ihrer App in Office und Outlook besteht darin,
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Option &quot;benutzerdefinierte App Hochladen&quot; in Teams":::
 
-Nachdem sie in Teams quergeladen wurde, steht Ihre persönliche Registerkarte in Outlook und Office zur Verfügung. Melden Sie sich mit den gleichen Anmeldeinformationen an, die Sie zum Anmelden bei Teams zum Querladen Ihrer App verwendet haben.
+Nachdem sie auf Teams quergeladen wurde, ist Ihre persönliche Registerkarte in Outlook und Office verfügbar. Melden Sie sich mit den gleichen Anmeldeinformationen an, die Sie zum Anmelden bei Teams zum Querladen Ihrer App verwendet haben.
 
-Sie können die App für den schnellen Zugriff anheften, oder Sie finden Ihre App im Flyout mit den Auslassungszeichen (**...**) unter den zuletzt verwendeten Anwendungen in der Randleiste auf der linken Seite. Durch das Anheften einer App in Teams wird sie nicht als App in Office oder Outlook angehefteten.
+Sie können die App für den schnellen Zugriff anheften, oder Sie finden Ihre App im Flyout mit den Auslassungszeichen (**...**) unter den zuletzt verwendeten Anwendungen in der Randleiste auf der linken Seite. Wenn Sie eine App in Teams anheften, heften Sie sie nicht als App in Office oder Outlook an.
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>Anzeigen einer Vorschau Ihrer persönlichen Registerkarte in anderen Microsoft 365-Umgebungen
 
 Hier erfahren Sie, wie Sie eine Vorschau Ihrer App anzeigen, die in Office- und Outlook-, Web- und Windows Desktopclients ausgeführt wird.
 
 > [!NOTE]
-> Wenn Sie Ihre App aus Teams deinstallieren, wird sie auch aus den Katalogen "**Weitere Apps**" in Outlook und Office entfernt. Wenn Sie die oben bereitgestellte Teams Toolkit-Beispiel-App verwenden
+> Wenn Sie Ihre App aus Teams deinstallieren, wird sie auch aus den Katalogen "**Weitere Apps**" in Outlook und Office entfernt. Wenn Sie die oben bereitgestellte Teams Toolkit-Beispiel-App verwenden.
 
 ### <a name="outlook-on-windows"></a>Outlook unter Windows
 
 So zeigen Sie Ihre App an, die in Outlook auf Windows Desktop ausgeführt wird:
 
 1. Starten Sie Outlook, und melden Sie sich mit Ihrem Entwickler-Mandantenkonto an.
-1. Wählen Sie auf der Seitenleiste  **"Weitere Apps" aus**. Der Titel Ihrer quergeladenen App wird unter den installierten Apps angezeigt.
+1. Wählen Sie auf der Seitenleiste  **"Weitere Apps" aus**. Ihr quergeladener App-Titel wird unter den installierten Apps angezeigt.
 1. Wählen Sie Ihr App-Symbol aus, um die App in Outlook zu starten.
 
     :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste in Outlook-Desktopclients auf die Option &quot;Weitere Apps&quot; (Auslassungspunkte), um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
@@ -191,7 +190,7 @@ So zeigen Sie Ihre App an, die in Outlook auf Windows Desktop ausgeführt wird:
 So zeigen Sie Ihre App in Outlook im Web an:
 
 1. Navigieren Sie zu [Outlook im Web](https://outlook.office.com), und melden Sie sich mit Ihrem Entwickler-Mandantenkonto an.
-1. Wählen Sie die Auslassungszeichen (**...**) auf der Seitenleiste aus. Der Titel Ihrer quergeladenen App wird unter den installierten Apps angezeigt.
+1. Wählen Sie die Auslassungszeichen (**...**) auf der Seitenleiste aus. Ihr quergeladener App-Titel wird unter den installierten Apps angezeigt.
 1. Wählen Sie Ihr App-Symbol aus, um die App zu starten und eine Vorschau anzuzeigen, die in Outlook im Web ausgeführt wird.
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Klicken Sie auf outlook.com auf der Seitenleiste auf die Option &quot;Weitere Apps&quot; (Auslassungspunkte), um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
@@ -201,7 +200,7 @@ So zeigen Sie Ihre App in Outlook im Web an:
 So zeigen Sie Ihre App an, die in Office auf einem Windows-Desktop ausgeführt wird:
 
 1. Starten Sie Office, und melden Sie sich mit Ihrem Entwickler-Mandantenkonto an.
-1. Wählen Sie die Auslassungszeichen (**...**) auf der Seitenleiste aus. Der Titel Ihrer quergeladenen App wird unter den installierten Apps angezeigt.
+1. Wählen Sie die Auslassungszeichen (**...**) auf der Seitenleiste aus. Ihr quergeladener App-Titel wird unter den installierten Apps angezeigt.
 1. Wählen Sie ihr App-Symbol aus, um die App in Office zu starten.
 
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste in Office-Desktopclients auf die Option &quot;Weitere Apps&quot; (Auslassungspunkte), um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
@@ -210,15 +209,15 @@ So zeigen Sie Ihre App an, die in Office auf einem Windows-Desktop ausgeführt w
 
 So zeigen Sie eine Vorschau Ihrer App an, die in Office im Web ausgeführt wird:
 
-1. Melden Sie sich bei office.com mit Testmandantenanmeldeinformationen an.
-1. Wählen Sie auf der Seitenleiste das **Symbol "Apps** " aus. Der Titel Ihrer quergeladenen App wird unter den installierten Apps angezeigt.
+1. Melden Sie sich bei **office.com** mit den Anmeldeinformationen des Testmandanten an.
+1. Wählen Sie auf der Seitenleiste das **Symbol "Apps** " aus. Ihr quergeladener App-Titel wird unter den installierten Apps angezeigt.
 1. Wählen Sie Ihr App-Symbol aus, um die App in Office im Web zu starten.
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste von office.com auf die Option &quot;Weitere Apps&quot;, um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
-Derzeit wird eine Teilmenge Teams Anwendungstypen und -funktionen in Outlook- und Office-Clients unterstützt. Diese Unterstützung wird im Laufe der Zeit erweitert. 
+Derzeit wird eine Teilmenge Teams Anwendungstypen und -funktionen in Outlook- und Office-Clients unterstützt. Diese Unterstützung wird im Laufe der Zeit erweitert.
 
 Lesen Sie [Microsoft 365 Support](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook), um die Hostunterstützung für verschiedene TeamsJS-Funktionen zu überprüfen.
 
@@ -240,7 +239,7 @@ Bei der ersten Ausführung des lokalen Debuggens zum Office oder Outlook werden 
 
 Geben Sie Feedback und melden Sie Alle Probleme mit dem Teams Toolkit-Debugging unter [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="next-step"></a>Nächster Schritt
 
 Veröffentlichen Sie Ihre App so, dass sie in Teams, Outlook und Office auffindbar ist:
 
@@ -253,4 +252,4 @@ Veröffentlichen Sie Ihre App so, dass sie in Teams, Outlook und Office auffindb
 |---------------|--------------|--------|
 | Todoliste | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert nur in Teams (verwenden Sie diese Beispiel-App, um den in diesem Lernprogramm beschriebenen Upgradeprozess auszuprobieren). | [Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Todoliste (Microsoft 365) | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert in Teams, Outlook Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
-| Bild-Editor (Microsoft 365) | Erstellen, Bearbeiten, Öffnen und Speichern von Bildern mithilfe von Microsoft Graph-API. Funktioniert in Teams, Outlook Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+| Bild-Editor (Microsoft 365) | Erstellen, Bearbeiten, Öffnen und Speichern von Bildern mithilfe von Microsoft Graph-API. Funktioniert in Teams, Outlook Office. | [Anzeigen](https://github.com/OfficeDev/m365-extensibility-image-editor) |

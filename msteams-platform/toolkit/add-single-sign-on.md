@@ -6,14 +6,14 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: db676795e394856f6e787086cae654efad79172a
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 73177f96172e4fd60b7225c2463efb6a057f36c4
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65655246"
+ms.locfileid: "65656845"
 ---
-# <a name="add-single-sign-on-experience"></a>Einmaliges Anmelden hinzufügen
+# <a name="add-single-sign-on-to-teams-app"></a>Hinzufügen von einmaligem Anmelden zu Teams App
 
 Microsoft Teams bietet einmaliges Anmelden für die Anwendung, um angemeldete Teams Benutzertoken für den Zugriff auf Microsoft Graph und andere APIs abzurufen. Teams Toolkit erleichtert die Interaktion, indem einige der Azure AD-Flüsse und -Integrationen hinter einigen einfachen APIs abstrahiert werden. Auf diese Weise können Sie SSO-Features (Single Sign-On) ganz einfach zu Ihrer Teams Anwendung hinzufügen.
 
@@ -282,22 +282,22 @@ export async function showUserImage(context, ssoToken, param) {
 
    * Fügen Sie die folgende Zeile für die neue Befehlsregistrierung mithilfe von `addCommand` `teamsSsoBot`:
 
-   ```bash
+     ```bash
 
-   this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
+     this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
 
-   ```
+     ```
 
    * Fügen Sie nach der obigen Zeile die folgenden Zeilen hinzu, um einen neuen Befehl `photo` zu registrieren und sich mit der oben hinzugefügten Methode `showUserImage` zu verbinden:
 
-   ```bash
+     ```bash
 
-   // As shown here, you can add your own parameter into the `showUserImage` method
-   // You can also use regular expression for the command here
-   const scope = ["User.Read"];
-   this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
+     // As shown here, you can add your own parameter into the `showUserImage` method
+     // You can also use regular expression for the command here
+     const scope = ["User.Read"];
+     this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
 
-   ```
+     ```
 
 3. Registrieren Sie Ihren Befehl im Teams App-Manifest. Öffnen Sie `templates/appPackage/manifest.template.json`den Bot, und fügen Sie die folgenden Zeilen in `command` `commandLists` Ihrem Bot hinzu:
 
@@ -336,12 +336,12 @@ Teams Registerkarten und Bots verfügen über einen ähnlichen Fluss für die SS
 
 ### <a name="simplified-sso-with-teamsfx"></a>Vereinfachtes SSO mit TeamsFx
 
-TeamsFx hilft, die Entwickleraufgaben zu reduzieren, indem es Teams SSO nutzt und auf Cloud-Ressourcen bis hin zu einzeiligen Anweisungen ohne Konfiguration zugreift.
+TeamsFx trägt dazu bei, die Entwickleraufgaben mithilfe von SSO zu reduzieren und auf Cloudressourcen bis hin zu Einzelzeilenanweisungen mit Nullkonfiguration zuzugreifen.
 
 Mit dem TeamsFx SDK können Sie Benutzerauthentifizierungscode auf vereinfachte Weise mithilfe von Anmeldeinformationen schreiben:
 
 1. Benutzeridentität in Browserumgebung: `TeamsUserCredential` stellt Teams Identität des aktuellen Benutzers dar.
-2. Benutzeridentität in Node.js Umgebung: `OnBehalfOfUserCredentail` verwendet "On-Behalf-Of"-Fluss und Teams SSO-Token.
+2. Benutzeridentität in Node.js Umgebung: `OnBehalfOfUserCredentail` verwendet "On-Behalf-Of"-Fluss und SSO-Token.
 3. Anwendungsidentität in Node.js Umgebung: `AppCredential` stellt die Anwendungsidentität dar.
 
 Weitere Informationen zum TeamsFx SDK finden Sie unter:

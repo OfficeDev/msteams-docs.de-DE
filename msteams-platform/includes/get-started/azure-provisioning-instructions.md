@@ -87,4 +87,4 @@ Sobald die Bereitstellungs- und Bereitstellungsschritte abgeschlossen sind:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Screenshot der installierten App." border="false":::
 
-    Herzlichen Glückwunsch! Ihre Bot-App wird jetzt remote von Azure ausgeführt!
+    Herzlichen Glückwunsch! Ihre Registerkarten-App wird jetzt remote von Azure ausgeführt!

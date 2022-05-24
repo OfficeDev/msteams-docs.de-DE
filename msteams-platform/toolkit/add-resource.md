@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 27e46454658bdc95e5baf5e7453fd50b1b92f03f
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: f3b96b60447596eae8c1cdf37f4b38f6653c444b
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654799"
+ms.locfileid: "65656649"
 ---
 # <a name="add-cloud-resources-to-teams-app"></a>Hinzufügen von Cloudressourcen zur Teams-App
 
@@ -67,8 +67,8 @@ Wenn Sie SPFx-basiertes Registerkartenprojekt erstellt haben, können Sie keine 
   |---------------|----------|
   | Azure-Funktion|`teamsfx add azure-function`|
   | Azure SQL-Datenbank|`teamsfx add azure-sql`|
-  | Azure-API-Verwaltung|`teamsfx resource add azure-apim`|
-  | Azure Key Vault|`teamsfx resource add azure-keyvault`|
+  | Azure-API-Verwaltung|`teamsfx add azure-apim`|
+  | Azure Key Vault|`teamsfx add azure-keyvault`|
 
 ## <a name="types-of-cloud-resources"></a>Arten von Cloudressourcen
 
