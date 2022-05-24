@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: a3259c46927547b98700f76f704c6c5cb222a74d
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 1c78c6cfe68d263ede675161e5a89b03b0885616
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104014"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65656159"
 ---
 # <a name="debug-background-process"></a>Debuggen von Hintergrundprozessen
 
@@ -33,21 +33,21 @@ Das Teams-Toolkit überprüft während des Debugprozesses die folgenden Vorausse
 
   |Projekttyp|Node.js LTS-Version|
   |----------|--------------------------------|
-  |Registerkarte ohne Azure Functions | 10, 12, **14 (empfohlen)**, 16 |
-  |Registerkarte mit Azure Functions | 10, 12, **14 (empfohlen)**|
-  |Bot |  10, 12, **14 (empfohlen)**, 16|
-  |Nachrichtenerweiterung | 10, 12, **14 (empfohlen)**, 16 |
+  |Tab | 14, 16 (empfohlen) |
+  |SPFx Registerkarte | 12, 14 (empfohlen)|
+  |Bot |  14, 16 (empfohlen)|
+  |Nachrichtenerweiterung | 14, 16 (empfohlen) |
 
    
 * Microsoft 365 Konto mit gültigen Anmeldeinformationen, das Teams-Toolkit fordert Sie auf, sich bei dem Microsoft 365-Konto anzumelden, wenn Sie sich nicht bereits angemeldet haben.
 
 * Das Hochladen oder Querladen benutzerdefinierter Apps für Ihren Entwicklermandanten ist aktiviert, wenn dies nicht der Fall ist, wird das lokale Debuggen beendet.
 
-* Ngrok Binary Version 2.3 gilt für Bot- und Nachrichtenerweiterungen. Wenn Ngrok nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Teams Toolkit das Ngrok NPM-Paket `ngrok@4.2.2` in `~/.fx/bin/ngrok`. Die Ngrok-Binärdatei wird vom Ngrok-NPM-Paket in `/.fx/bin/ngrok/node modules/ngrok/bin`verwaltet.
+* Die Ngrok-Binärversion 2.3 ist für Bot- und Nachrichtenerweiterungen geeignet. Wenn Ngrok nicht installiert ist oder die Version nicht den Anforderungen entspricht, installiert das Teams-Toolkit das Ngrok-NPM-Paket `ngrok@4.2.2` in `~/.fx/bin/ngrok`. Die Ngrok-Binärdatei wird durch das Ngrok NPM-Paket in `/.fx/bin/ngrok/node modules/ngrok/bin`
 
-* Azure Functions Core Tools, Version 3. Wenn Azure Functions Core Tools nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Teams-Toolkit das Azure Functions Core Tools-NPM-Paket „azure-functions-core-tools@3“ für **Windows** und für **macOs** in `~/.fx/bin/func`. Das Azure Functions Core Tools-NPM-Paket in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` verwaltet die Azure Functions Core Tools-Binärdatei. Bei Linux wird das lokale Debuggen beendet.
+* Azure Functions Core Tools Version 4 installiert das Teams-Toolkit Azure Functions Core Tools NPM-Paket, azure-functions-core-tools@3 für **Windows** und für **macOs** in  `~/.fx/bin/func`, wenn Azure Functions Core Tools nicht installiert ist oder die Version nicht der Anforderung entspricht. Das Azure Functions Core Tools-NPM-Paket in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` verwaltet die Azure Functions Core Tools-Binärdatei. Bei Linux wird das lokale Debuggen beendet.
 
-* .NET Core SDK-Version, die für Azure Functions gilt. Wenn .NET Core SDK nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Teams-Toolkit .NET Core SDK für Windows und MacOS in `~/.fx/bin/dotnet`. Bei Linux wird das lokale Debuggen beendet.
+* Wenn das .NET Core SDK nicht installiert ist oder die Version nicht den Anforderungen entspricht, installiert das Teams Toolkit das .NET Core SDK für Windows und MacOS in `~/.fx/bin/dotnet`. Für Linux wird das lokale Debugging beendet
 
   In der folgenden Tabelle sind die .NET Core-Versionen aufgeführt:
 
