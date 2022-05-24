@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: 194c31d02424d08080dca981bb9fe6d963d0a416
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 684951451519ca5e1aaa82344de802259df22a63
+ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073083"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65653280"
 ---
 # <a name="manage-multiple-environments"></a>Verwalten mehrerer Umgebungen
 
@@ -57,7 +57,7 @@ Sie können die Zielumgebung für alle umgebungsbezogenen Vorgänge auswählen. 
 
 ## <a name="project-folder-structure"></a>Project Ordnerstruktur
 
-Nachdem Sie das Projekt erstellt haben, können Sie die Projektordner und -dateien im Explorer-Bereich von Visual Studio Code anzeigen. Neben den benutzerdefinierten Codes werden einige Dateien vom Teams Toolkit verwendet, um die Konfiguration, den Zustand und die Vorlage der App zu verwalten. Die folgende Liste enthält Dateien und beschreibt deren Beziehung zu mehreren Umgebungen.
+Nachdem Sie das Projekt erstellt haben, können Sie die Projektordner und Dateien im Explorer-Bereich von Visual Studio Code anzeigen. Neben den benutzerdefinierten Codes werden einige Dateien vom Teams Toolkit verwendet, um die Konfiguration, den Zustand und die Vorlage der App zu verwalten. Die folgende Liste enthält Dateien und beschreibt deren Beziehung zu mehreren Umgebungen.
 
 * `.fx/configs`: Konfigurieren von Dateien, die der Benutzer für die Teams-App anpassen kann
   * `config.<envName>.json`: Konfigurationsdatei pro Umgebung 
@@ -70,19 +70,19 @@ Nachdem Sie das Projekt erstellt haben, können Sie die Projektordner und -datei
   * `appPackage`: App-Manifestvorlagendateien
   * `azure`: Bicep-Vorlagendateien
 
-## <a name="customize-resource-provision"></a>Anpassen der Ressourcenbereitstellung
+## <a name="customize-resource-provision"></a>Passen Sie die Ressourcenbereitstellung an
 
 Teams Toolkit können Sie die Konfigurationsdateien und Vorlagendateien ändern, um die Ressourcenbereitstellung in jeder Umgebung anzupassen.
 
 In der folgenden Tabelle sind die allgemeinen Szenarien für die benutzerdefinierte Ressourcenbereitstellung aufgeführt:
 
-| Szenarien | Speicherort| Beschreibung |
+| Szenarien | Standort| Beschreibung |
 | --- | --- | --- |
-| Anpassen der Azure-Ressource | <ul> <li>Bicep-Dateien unter `templates/azure`</li> <li>`.fx/azure.parameters.<envName>.json`</li></ul> | [Anpassen von ARM-Parametern und -Vorlagen](provision.md#customize-arm-parameters-and-templates) |
-| Vorhandene Azure AD-App für Teams App wiederverwenden | <ul> <li>`auth` Abschnitt in`.fx/config.<envName>.json`</li> </ul> |  [Verwenden einer vorhandenen Azure AD-App für Ihre Teams-App](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
-| Vorhandene Azure AD-App für Bot wiederverwenden | <ul> <li>`bot` Abschnitt in`.fx/config.<envName>.json`</li> </ul> | [Verwenden einer vorhandenen Azure AD-App für Ihren Bot](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
-| Überspringen des Hinzufügens von Benutzern während der Bereitstellung SQL | <ul> <li>`skipAddingSqlUser` -Eigenschaft in`.fx/config.<envName>.json`</li> </ul> | [Hinzufügen von Benutzern für SQL Datenbank überspringen](provision.md#skip-adding-user-for-sql-database) |
-| Anpassen des App-Manifests | <ul> <li>`templates/manifest.template.json`</li> <li>`manifest` Abschnitt in `.fx/config.<envName>.json`</li>  </ul> | [Anpassen Teams App-Manifests im Teams Toolkit](TeamsFx-manifest-customization.md) |
+| Anpassen der Azure-Ressource | <ul> <li>Bicep-Dateien unter `templates/azure`</li> <li>`.fx/azure.parameters.<envName>.json`</li></ul> | [Passen Sie ARM-Parameter und -Vorlagen an](provision.md#customize-arm-parameters-and-templates) |
+| Vorhandene Azure AD-App für Teams-App wiederverwenden | <ul> <li>`auth` Abschnitt in`.fx/config.<envName>.json`</li> </ul> |  [Verwenden Sie eine vorhandene Azure AD-App für Ihre Teams-App](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Vorhandene Azure AD-App für Bot wiederverwenden | <ul> <li>`bot` Abschnitt in`.fx/config.<envName>.json`</li> </ul> | [Verwenden Sie eine vorhandene Azure AD-App für Ihren Bot](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
+| Überspringen des Hinzufügens von Benutzern während der Bereitstellung SQL | <ul> <li>`skipAddingSqlUser` -Eigenschaft in`.fx/config.<envName>.json`</li> </ul> | [Überspringen Sie das Hinzufügen eines Benutzers für die SQL-Datenbank](provision.md#skip-adding-user-for-sql-database) |
+| Anpassen des App-Manifests | <ul> <li>`templates/manifest.template.json`</li> <li>`manifest` Abschnitt in `.fx/config.<envName>.json`</li>  </ul> | [Vorschau des App-Manifests im Toolkit](TeamsFx-preview-and-customize-app-manifest.md)|
 
 ## <a name="scenarios"></a>Szenarien
 
