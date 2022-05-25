@@ -2,38 +2,62 @@
 title: Erstellen einer Inhaltsseite
 author: surbhigupta
 description: Erstellen einer Inhaltsseite
-keywords: teams tabs group channel configurable static
+keywords: Gruppenkanal für Teams-Registerkarten konfigurierbar statisch
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 887559b65acd7c28ba6c8f96b380fde837fbc053
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 4f0d5ea16c51b8b40dd28c6ff29ee7d990636f31
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398589"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65673027"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Erstellen einer Inhaltsseite für Ihre Registerkarte
 
 Eine Inhaltsseite ist eine Webseite, die im Teams-Client gerendert wird. Diese sind Teil von:
 
 * Eine benutzerdefinierte Registerkarte mit persönlichem Bereich: In diesem Fall ist die Inhaltsseite die erste Seite, auf die der Benutzer trifft.
-* Eine benutzerdefinierte Kanal- oder Gruppenregisterkarte: Die Inhaltsseite wird angezeigt, nachdem der Benutzer die Registerkarte im entsprechenden Kontext angeheftet und konfiguriert hat.
-* Ein [Aufgabenmodul](~/task-modules-and-cards/what-are-task-modules.md): Sie können eine Inhaltsseite erstellen und als Webansicht in ein Aufgabenmodul einbetten. Die Seite wird innerhalb des modalen Popups gerendert.
+* Eine benutzerdefinierte Kanal- oder Gruppenregisterkarte: Die Inhaltsseite wird angezeigt, nachdem der Benutzer die Registerkarte im entsprechenden Kontext angehefteten und konfiguriert hat.
+* Ein [Aufgabenmodul](~/task-modules-and-cards/what-are-task-modules.md): Sie können eine Inhaltsseite erstellen und als Webview in ein Aufgabenmodul einbetten. Die Seite wird innerhalb des modalen Popups gerendert.
 
-Dieser Artikel ist spezifisch für die Verwendung von Inhaltsseiten als Registerkarten. Der Großteil der hier aufgeführten Anleitungen gilt jedoch unabhängig davon, wie die Inhaltsseite dem Benutzer angezeigt wird.
+Dieser Artikel betrifft die Verwendung von Inhaltsseiten als Registerkarten. der Großteil der hier aufgeführten Anleitungen gilt jedoch unabhängig davon, wie die Inhaltsseite dem Benutzer präsentiert wird.
 
-## <a name="tab-content-and-design-guidelines"></a>Registerkarteninhalte und Entwurfsrichtlinien
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
-Das übergeordnete Ziel Ihrer Registerkarte besteht darin, den Zugriff auf aussagekräftige und ansprechende Inhalte zu ermöglichen, die einen praktischen Nutzen und einen offensichtlichen Zweck haben. Sie müssen sich darauf konzentrieren, das Registerkartendesign übersichtlich, navigations intuitiv und inhaltssiv zu gestalten.
+## <a name="tab-content-and-design-guidelines"></a>Registerkarteninhalte und Designrichtlinien
 
-Weitere Informationen finden Sie in den [Richtlinien für das Registerkartendesign](~/tabs/design/tabs.md) und [Microsoft Teams Richtlinien für die Speichervalidierung](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+Das übergeordnete Ziel Ihrer Registerkarte ist es, Zugriff auf aussagekräftige und ansprechende Inhalte zu ermöglichen, die praktischen Wert und einen offensichtlichen Zweck haben. Sie müssen sich darauf konzentrieren, das Registerkartendesign übersichtlich, die Navigation intuitiv und den Inhalt immersiv zu gestalten.
+
+Weitere Informationen finden Sie in den [Entwurfsrichtlinien für Registerkarten](~/tabs/design/tabs.md) und [Microsoft Teams Richtlinien für die Speicherüberprüfung](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 ## <a name="integrate-your-code-with-teams"></a>Integrieren von Code in Teams
 
-Damit Ihre Seite in Teams angezeigt werden kann, müssen Sie das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) und einen Aufruf `microsoftTeams.initialize()` nach dem Laden der Seite einschließen.
+Damit Ihre Seite in Teams angezeigt wird, müssen Sie das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) einschließen und einen Aufruf einschließen, `app.initialize()` nachdem die Seite geladen wurde.
 
-Der folgende Code enthält ein Beispiel dafür, wie Ihre Seite und der Teams-Client kommunizieren:
+Der folgende Code enthält ein Beispiel für die Kommunikation zwischen Ihrer Seite und dem Teams-Client:
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+...
+    <script src= 'https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
+...
+</head>
+
+<body>
+...
+    <script>
+    app.initialize();
+    </script>
+...
+</body>
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```html
 <!DOCTYPE html>
@@ -53,9 +77,11 @@ Der folgende Code enthält ein Beispiel dafür, wie Ihre Seite und der Teams-Cli
 </body>
 ```
 
-## <a name="access-additional-content"></a>Zugreifen auf zusätzliche Inhalte
+***
 
-Sie können auf zusätzliche Inhalte zugreifen, indem Sie das SDK verwenden, um mit Teams zu interagieren, Deep-Links zu erstellen, Aufgabenmodule zu verwenden und zu überprüfen, ob URL-Domänen im `validDomains` Array enthalten sind.
+## <a name="access-additional-content"></a>Zugriff auf zusätzliche Inhalte
+
+Sie können mithilfe des SDK auf zusätzliche Inhalte zugreifen, um mit Teams zu interagieren, Deep-Links zu erstellen, Aufgabenmodule zu verwenden und zu überprüfen, ob URL-Domänen im `validDomains` Array enthalten sind.
 
 ### <a name="use-the-sdk-to-interact-with-teams"></a>Verwenden des SDK für die Interaktion mit Teams
 
@@ -63,36 +89,36 @@ Das [Teams-Client-JavaScript-SDK](~/tabs/how-to/using-teams-client-sdk.md) biete
 
 ### <a name="deep-links"></a>Deep-Links
 
-Sie können Deeplinks zu Entitäten in Teams erstellen. Diese werden verwendet, um Links zu erstellen, die zu Inhalten und Informationen auf Ihrer Registerkarte navigieren. Weitere Informationen finden Sie unter [Erstellen von Deep-Links zu Inhalten und Features in Teams](~/concepts/build-and-test/deep-links.md).
+Sie können Deeplinks zu Entitäten in Teams erstellen. Diese werden verwendet, um Links zu erstellen, die zu Inhalten und Informationen auf Ihrer Registerkarte navigieren. Weitere Informationen finden [Sie unter Erstellen von Deep-Links zu Inhalten und Features in Teams](~/concepts/build-and-test/deep-links.md).
 
 ### <a name="task-modules"></a>Aufgabenmodule
 
-Ein Aufgabenmodul ist eine modale Popupoberfläche, die Sie von Ihrer Registerkarte aus auslösen können. Auf einer Inhaltsseite können Sie Aufgabenmodule verwenden, um Formulare zum Sammeln zusätzlicher Informationen, zum Anzeigen der Details eines Elements in einer Liste oder zum Darstellen zusätzlicher Informationen für den Benutzer anzuzeigen. Die Aufgabenmodule selbst können zusätzliche Inhaltsseiten sein oder vollständig mit adaptiven Karten erstellt werden. Weitere Informationen finden Sie unter [Verwenden von Aufgabenmodulen auf Registerkarten](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+Ein Aufgabenmodul ist eine modale Popuperfahrung, die Sie über Ihre Registerkarte auslösen können. Auf einer Inhaltsseite können Sie Aufgabenmodule verwenden, um Formulare zum Sammeln zusätzlicher Informationen, zum Anzeigen der Details eines Elements in einer Liste oder zum Präsentieren zusätzlicher Informationen für den Benutzer zu präsentieren. Die Aufgabenmodule selbst können zusätzliche Inhaltsseiten sein oder vollständig mit adaptiven Karten erstellt werden. Weitere Informationen finden Sie [unter Verwenden von Aufgabenmodulen auf Registerkarten](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 ### <a name="valid-domains"></a>Gültige Domänen
 
-Stellen Sie sicher, dass alle URL-Domänen, die in Ihren Registerkarten verwendet werden, `validDomains` im Array in Ihrem [Manifest](~/concepts/build-and-test/apps-package.md) enthalten sind. Weitere Informationen finden Sie unter ["validDomains"](~/resources/schema/manifest-schema.md#validdomains) in der Manifestschemareferenz.
+Stellen Sie sicher, dass alle URL-Domänen, die auf Ihren Registerkarten verwendet werden, im `validDomains` Array in Ihrem [Manifest](~/concepts/build-and-test/apps-package.md) enthalten sind. Weitere Informationen finden Sie unter ["validDomains](~/resources/schema/manifest-schema.md#validdomains) " in der Manifestschemareferenz.
 
 > [!NOTE]
-> Die Kernfunktionalität Ihrer Registerkarte befindet sich innerhalb Teams und nicht außerhalb von Teams.
+> Die Kernfunktionalität Ihrer Registerkarte ist innerhalb Teams und nicht außerhalb von Teams vorhanden.
 
-## <a name="show-a-native-loading-indicator"></a>Anzeigen einer systemeigenen Ladeanzeige
+## <a name="show-a-native-loading-indicator"></a>Anzeigen eines systemeigenen Ladeindikators
 
-Ab [Manifestschema v1.7](../../../resources/schema/manifest-schema.md) können Sie eine [systemeigene Ladeanzeige](../../../resources/schema/manifest-schema.md#showloadingindicator) bereitstellen. Beispiel: [Registerkarteninhaltsseite](#integrate-your-code-with-teams), [Konfigurationsseite](configuration-page.md), [Seite zum Entfernen](removal-page.md) und [Aufgabenmodule in Registerkarten](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
+Ab [Manifestschema v1.7](../../../resources/schema/manifest-schema.md) können Sie einen [systemeigenen Ladeindikator](../../../resources/schema/manifest-schema.md#showloadingindicator) bereitstellen. Beispiel: [Registerkarteninhaltsseite](#integrate-your-code-with-teams), [Konfigurationsseite](configuration-page.md), [Entfernungsseite](removal-page.md) und [Aufgabenmodule in Registerkarten](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
 >
-> * Das Verhalten auf mobilen Clients kann nicht über die systemeigene Ladeindikatoreigenschaft konfiguriert werden. Mobile Clients zeigen diesen Indikator standardmäßig auf Inhaltsseiten und iframebasierten Aufgabenmodulen an. Dieser Indikator wird auf mobilen Geräten angezeigt, wenn eine Anforderung zum Abrufen von Inhalten gestellt wird, und wird geschlossen, sobald die Anforderung abgeschlossen ist.
+> * Das Verhalten auf mobilen Clients kann nicht über die eigenschaft des systemeigenen Ladeindikators konfiguriert werden. Mobile Clients zeigen diesen Indikator standardmäßig auf Inhaltsseiten und iframe-basierten Aufgabenmodulen an. Dieser Indikator auf mobilen Geräten wird angezeigt, wenn eine Anforderung zum Abrufen von Inhalten gestellt wird, und wird geschlossen, sobald die Anforderung abgeschlossen ist.
 
-Wenn Sie im App-Manifest angeben `showLoadingIndicator : true`  , müssen alle Registerkartenkonfiguration, Inhalte, Entfernungsseiten und alle iframebasierten Aufgabenmodule die folgenden Schritte ausführen:
+Wenn Sie in Ihrem App-Manifest angeben `showLoadingIndicator : true`  , müssen alle Registerkartenkonfigurationen, Inhalte, Entfernungsseiten und alle iframebasierten Aufgabenmodule die folgenden Schritte ausführen:
 
 So zeigen Sie die Ladeanzeige an:
 
-1. Zu Ihrem Manifest hinzufügen `"showLoadingIndicator": true` .
-1. Aufrufen von `microsoftTeams.initialize();`
-1. Rufen Sie als **obligatorischen** Schritt Teams auf, `microsoftTeams.appInitialization.notifySuccess()` dass Ihre App erfolgreich geladen wurde. Teams blendet dann ggf. die Ladeanzeige aus. Wenn `notifySuccess`  die App nicht innerhalb von 30 Sekunden aufgerufen wird, wird davon ausgegangen, dass ein Timeout für Ihre App aufgetreten ist und ein Fehlerbildschirm mit einer Wiederholungsoption angezeigt wird.
-1. **Wenn Sie bereit** sind, auf dem Bildschirm zu drucken und den restlichen Inhalt Ihrer Anwendung zu laden, können Sie die Ladeanzeige manuell ausblenden, indem Sie sie aufrufen `microsoftTeams.appInitialization.notifyAppLoaded();`.
-1. Wenn die Anwendung nicht geladen werden kann, können Sie Teams mitteilen`microsoftTeams.appInitialization.notifyFailure(reason);`, dass ein Fehler aufgetreten ist. Dem Benutzer wird ein Fehlerbildschirm angezeigt. Der folgende Code enthält ein Beispiel für Anwendungsfehlerursachen:
+1. Fügen Sie Ihrem Manifest hinzu `"showLoadingIndicator": true` .
+1. Aufrufen von `app.initialize();`
+1. Als **obligatorischen** Schritt müssen Sie aufrufen`app.notifySuccess()`, um Teams zu benachrichtigen, dass Ihre App erfolgreich geladen wurde. Anschließend blendet Teams ggf. die Ladeanzeige aus. Wenn `notifySuccess` Teams nicht innerhalb von 30 Sekunden aufgerufen wird, geht Teams davon aus, dass die App ein Timeout verursacht hat, und zeigt einen Fehlerbildschirm mit einer Wiederholungsoption an.
+1. **Wenn Sie zum** Drucken auf dem Bildschirm bereit sind und den Rest des Anwendungsinhalts verzögert laden möchten, können Sie die Ladeanzeige manuell ausblenden, indem Sie aufrufen `app.notifyAppLoaded();`.
+1. Wenn Ihre Anwendung nicht geladen wird, können Sie Teams `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` über den Fehler informieren und optional eine Fehlermeldung bereitstellen. Dem Benutzer wird ein Fehlerbildschirm angezeigt. Der folgende Code zeigt die Enumeration, die die möglichen Gründe definiert, die Sie für das Nichtladen der Anwendung angeben können:
 
     ```typescript
     /* List of failure reasons */
@@ -110,8 +136,8 @@ So zeigen Sie die Ladeanzeige an:
 
 ## <a name="see-also"></a>Siehe auch
 
-* [registerkarten Teams](~/tabs/what-are-tabs.md)
+* [Microsoft Teams-Registerkarten](~/tabs/what-are-tabs.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
-* [Aufgeklappte Registerkartenverknüpfung und Phasenansicht](~/tabs/tabs-link-unfurling.md)
+* [Registerkartenlink entfalten und Bühnenansicht](~/tabs/tabs-link-unfurling.md)
 * [Erstellen einer Konfigurationsseite](~/tabs/how-to/create-tab-pages/configuration-page.md)
 * [Entwicklertools für Microsoft Teams-Registerkarten](~/tabs/how-to/developer-tools.md)

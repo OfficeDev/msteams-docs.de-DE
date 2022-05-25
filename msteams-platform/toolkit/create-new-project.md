@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: e287d6251af6d44b78010449dce751b938f390bd
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: 5da4a0ada6e116a22957a6f1f1b1f2f281501e2a
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191264"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654475"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Erstellen einer neuen Teams-App mit dem Teams-Toolkit
 
@@ -25,8 +25,19 @@ Um eine neue Teams-App mithilfe des Teams-Toolkits zu erstellen, können Sie ein
 1. Öffnen Sie Visual Studio Code.
 1. Wählen Sie das Teams-Toolkit-Symbol :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: in der Visual Studio Code-Randleiste aus.
 1. Wählen Sie **Neue Microsoft Teams-App erstellen** aus.
-1. Wählen Sie aus den verfügbaren Funktionen „Registerkarte“, „Bot“, „Nachrichtenerweiterung“ aus, oder eine Registerkarte mithilfe von SharePoint-Framework (SPFx). 
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Teams Toolkit-Randleiste":::
+
+1. Sie können **Eine neue Teams-App erstellen** oder **Aus einem Beispiel starten** auswählen.
+   
+   :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="App erstellen":::
+   
+1. Wenn Sie **Eine neue Teams-App erstellen** auswählen, wird die folgende Abbildung mit Vorlagen aus drei Kategorien angezeigt: Szenariobasierte Teams-App, einfache Teams-App und erweiterte Teams-Apps in Microsoft 365: 
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Funktionen für Teams-App":::
+
 1. Wählen Sie mindestens eine Option aus, um mit dem Erstellen der Teams-App zu beginnen.
+
 
 ### <a name="create-a-new-teams-app-using-view-samples"></a>Erstellen einer neuen Teams-App mithilfe von Anzeigebeispielen
 
@@ -34,13 +45,20 @@ Sie können eine neue App erstellen, indem Sie **Anzeigebeispiele** erkunden und
 
  1. Öffnen Sie das **Teams-Toolkit** aus Microsoft Visual Studio Code.
  1. Wählen Sie den Abschnitt **ENTWICKLUNG** in der Baumansicht aus.
- 1. Wählen Sie **Beispiele anzeigen** aus. Der Beispielkatalog wird wie in der folgenden Abbildung dargestellt angezeigt:
+ 1. Wählen Sie **Anzeigebeispiele** aus. 
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="Anzeigebeispiele":::
 
-Sie können Beispiele erkunden und herunterladen und Ihre App entweder lokal oder remote ausführen, um eine Vorschau im Teams-Webclient anzuzeigen. Folgen Sie den Anweisungen für jedes Beispiel, oder wählen Sie **Anzeigen auf GitHub** aus, um das Beispiel im `TeamsFx Samples repository` zu öffnen und den Quellcode zu durchsuchen.
+    Der Beispielkatalog wird wie in der folgenden Abbildung dargestellt angezeigt:
+   
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sample-gallery.png" alt-text="Beispielkatalog":::
 
-Weitere Informationen finden Sie unter [Erstellen einer neuen Teams-Registerkarten-App (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2).
+  Sie können den Beispielkatalog wie folgt erkunden:
+
+  1. Wählen Sie ein Beispiel aus, um detaillierte Informationen zu durchsuchen.
+  1. Wählen Sie auf der Informationsseite jedes Beispiels **Erstellen** aus, um es herunterzuladen. 
+  1. Führen Sie Ihre App lokal oder remote aus, um eine Vorschau im Teams-Webclient anzuzeigen, indem Sie die Anweisungen befolgen, die nach dem Herunterladen des Beispiels automatisch geöffnet werden.
+  1. Wenn Sie die Beispiele nicht herunterladen möchten, können Sie **Auf GitHub anzeigen** auswählen, um das Beispiel im GitHub-Beispielrepository zu öffnen und den Quellcode durchzusuchen.
 
 ## <a name="step-by-step-guides-using-teams-toolkit"></a>Schritt-für-Schritt-Anleitungen mithilfe des Teams-Toolkits
 
@@ -48,6 +66,8 @@ Weitere Informationen finden Sie unter [Erstellen einer neuen Teams-Registerkart
 * [Erstellen einer Teams-App mit JavaScript, mithilfe von React](../sbs-gs-javascript.yml)
 * [Erstellen einer Teams-App mit SPFx](../sbs-gs-spfx.yml)
 * [Erstellen einer Teams-App mit C# oder .NET](../sbs-gs-csharp.yml)
+* Benachrichtigung an Teams senden 
+* Befehlsbot erstellen
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -6,12 +6,12 @@ keywords: Teams Registerkarten Gruppenkanal konfigurierbar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ca9b4d073a324c3cbf1d2d087bec8d366faf0830
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 92b03146200af978f3fa5d6dc2c5e6ad27a12200
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654897"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672929"
 ---
 # <a name="prerequisites"></a>Voraussetzungen
 
@@ -31,13 +31,15 @@ Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, während S
 
 * Gestalten Sie Ihre Registerkarten basierend auf dem Design, dem Design und der Absicht des Teams-Clients. Registerkarten funktionieren am besten, wenn sie für einen bestimmten Bedarf erstellt wurden und sich auf eine kleine Gruppe von Aufgaben oder eine Teilmenge von Daten konzentrieren, die für die Kanalposition der Registerkarte relevant sind.
 
-* Fügen Sie auf Ihrer Inhaltsseite mithilfe von Skript-Tags einen Verweis auf das JavaScript-Client-SDK von [Microsoft Teams](/javascript/api/overview/msteams-client) hinzu. Rufen Sie nach dem Laden Ihrer Seite an `microsoftTeams.initialize()`, andernfalls wird Ihre Seite nicht angezeigt.
+* Fügen Sie auf Ihrer Inhaltsseite mithilfe von Skript-Tags einen Verweis auf das JavaScript-Client-SDK von [Microsoft Teams](/javascript/api/overview/msteams-client) hinzu. Führen Sie nach dem Laden der Seite einen Aufruf durch `app.initialize()`, andernfalls wird ihre Seite nicht angezeigt.
 
 * Damit die Authentifizierung auf mobilen Clients funktioniert, müssen Sie auf Teams JavaScript SDK 1.4.1 und höher aktualisieren.
 
-* Wenn Sie festlegen, dass Ihre Kanal- oder Gruppenregisterkarte auf dem mobilen Teams-Client angezeigt wird, muss die `setSettings()` Konfiguration einen Wert für die `websiteUrl` Eigenschaft aufweisen.
+* Wenn Sie festlegen, dass Ihre Kanal- oder Gruppenregisterkarte auf dem mobilen Teams-Client angezeigt wird, muss die `setConfig()` Konfiguration einen Wert für die `websiteUrl` Eigenschaft aufweisen.
 
-* Die Registerkarte „Microsoft Teams“ unterstützt nicht die Möglichkeit, Intranet-Websites zu laden, die selbstsignierte Zertifikate verwenden.
+* Microsoft Teams Registerkarte unterstützt nicht die Möglichkeit, Intranetwebsites zu laden, die selbstsignierte Zertifikate verwenden.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="tools-to-build-tabs"></a>Tools zum Erstellen von Registerkarten
 

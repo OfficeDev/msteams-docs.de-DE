@@ -20,8 +20,12 @@
   items:
     - name: Übersicht über die ersten Schritte
       href: get-started/get-started-overview.md
-    - name: Erstellen Ihrer ersten App mit JavaScript
+    - name: Erstellen Ihrer ersten Registerkarten-App mit JavaScript
       href: sbs-gs-javascript.yml
+    - name: Erstellen Ihrer ersten Bot-App mit JavaScript
+      href: sbs-gs-bot.yml
+    - name: Erstellen Sie Ihre erste Messagingerweiterungs-App mittels JavaScript
+      href: sbs-gs-msgext.yml
     - name: Erstellen Ihrer ersten App mit Blazor
       href: sbs-gs-blazorupdate.yml
     - name: Erstellen Ihrer ersten App mit SPFx
@@ -104,18 +108,24 @@
           href: toolkit/deploy.md
         - name: Vorschau und Anpassen des Teams-App-Manifests
           href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
-        - name: Veröffentlichen von Teams-Apps mithilfe von Teams-Toolkits
-          href: toolkit/publish.md
+        - name: Azure AD-Manifests anpassen
+          href: toolkit/AAD-manifest-customization.md
         - name: Hinzufügen von Funktionen zur Teams-App
           href: toolkit/add-capability.md
         - name: Hinzufügen von Cloudressourcen zur Teams-App
           href: toolkit/add-resource.md
+        - name: Hinzufügen des einmaligen Anmeldens zur Teams-App
+          href: toolkit/add-single-sign-on.md
+        - name: Hinzufügen einer API-Verbindung zur Teams-App
+          href: toolkit/add-API-connection.md
+        - name: Einrichten von CI/CD-Pipelines
+          href: toolkit/use-CICD-template.md
+        - name: Veröffentlichen von Teams-Apps mithilfe von Teams-Toolkits
+          href: toolkit/publish.md
         - name: Verwalten mehrerer Umgebungen
           href: toolkit/TeamsFx-multi-env.md
         - name: Zusammenarbeit mit anderen Entwicklern am Teams-Toolkit
           href: toolkit/TeamsFx-collaboration.md
-        - name: Einrichten von CI/CD-Pipelines
-          href: toolkit/use-CICD-template.md
         - name: TeamsFx SDK
           href: toolkit/TeamsFx-SDK.md
     - name: Teams-Toolkit-CLI

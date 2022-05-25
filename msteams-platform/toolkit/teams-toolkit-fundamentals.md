@@ -6,15 +6,14 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/17/2022
-ms.openlocfilehash: 12ac74f64c4be69ff9b73ca2de1ee7c91917b259
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 1b65fedbc34cb00771dde279a19ab1d6b4d8b16a
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656859"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65673013"
 ---
 # <a name="teams-toolkit-overview"></a>Überblick über das Teams-Toolkit
-
 
 Das Teams-Toolkit für Microsoft Visual Studio Code unterstützt Sie beim Erstellen und Bereitstellen von Teams-Apps mit integrierter Identität, Zugriff auf Cloud-Speicher, Daten aus Microsoft Graph und anderen Diensten in Azure und Microsoft 365 ohne Konfiguration. Für die Entwicklung von Teams-Apps können Sie ähnlich wie beim Teams-Toolkit für Visual Studio das [CLI-Tool verwenden](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), das aus Toolkit besteht `teamsfx`.
 Mit dem Teams-Toolkit können Sie Ihre Teams-App direkt aus Visual Studio Code erstellen, debuggen und bereitstellen. Die App-Entwicklung mit dem Toolkit hat folgende Vorteile:

@@ -5,12 +5,12 @@ description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Tea
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 7f39d01c9ff6a264d16c89129ed1b93525da5b6f
-ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
+ms.openlocfilehash: c885587dcbd5447cd62b399d28504a096b705e71
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65611444"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672971"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Registerkarten für Microsoft Teams erstellen
 
@@ -20,6 +20,8 @@ Registerkarten sind Teams-fähige Webseiten, die in Microsoft Teams eingebettet 
 > Derzeit sind benutzerdefinierte Registerkarten in Government Community Cloud (GCC), GCC-High und Department of Defense (DOD) verfügbar.
 >
 > Es wird empfohlen, das Teams-Client-SDK über [npm-Paket](https://www.npmjs.com/package/@microsoft/teams-js) zu verwenden und es mit Ihrer App zu bündeln, da derzeit Teams Client-SDK in Government Cloud CDN nicht verfügbar ist.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 Die folgende Abbildung zeigt persönliche Registerkarten:
 
@@ -33,7 +35,7 @@ Es gibt einige Voraussetzungen, die Sie erfüllen müssen, bevor Sie mit Registe
 
 Es gibt zwei Arten von Registerkarten in Teams: persönliche und Kanal oder Gruppe. [Persönliche Registerkarten](~/tabs/how-to/create-personal-tab.md) sind zusammen mit auf eine Person bezogene Bots Bestandteile persönlicher Apps und auf einen einzelnen Benutzer beschränkt. Sie können für den einfachen Zugriff an die linke Navigationsleiste angeheftet werden. [Kanal-- oder Gruppenregisterkarten](~/tabs/how-to/create-channel-group-tab.md) übermitteln Inhalte an Kanäle und Gruppenchats und sind eine hervorragende Möglichkeit zum Erstellen von Bereichen für die Zusammenarbeit rund um dedizierte webbasierte Inhalte.
 
-Sie können als Teil einer persönlichen Registerkarte, einer Kanal- oder Gruppenregisterkarte oder eines Aufgabenmoduls [eine Inhaltsseite erstellen](~/tabs/how-to/create-tab-pages/content-page.md). Sie können [eine Konfigurationsseite erstellen](~/tabs/how-to/create-tab-pages/configuration-page.md), die es den Benutzern ermöglicht, die Microsoft Teams-App zu konfigurieren und sie zur Konfiguration eines Kanals oder einer Gruppenchat-Registerkarte, einer Nachrichtenerweiterung oder eines Office 365-Connectors zu verwenden. Sie können Benutzern erlauben, Ihre Registerkarte nach der Installation neu zu konfigurieren und für Ihre Anwendung [eine Seite zum Entfernen von Registerkarten zu erstellen](~/tabs/how-to/create-tab-pages/removal-page.md). Wenn Sie eine Teams-App erstellen, die eine Registerkarte enthält, müssen Sie testen, wie Ihre [Registerkarte auf den Android- und iOS Teams-Clients funktioniert](~/tabs/design/tabs-mobile.md). Ihre Registerkarte muss durch grundlegende Informationen, Gebietsschema- und Designinformationen sowie `entityId` oder `subEntityId` [Kontext erhalten](~/tabs/how-to/access-teams-context.md), der identifiziert, was sich in der Registerkarte befindet.
+Sie können als Teil einer persönlichen Registerkarte, einer Kanal- oder Gruppenregisterkarte oder eines Aufgabenmoduls [eine Inhaltsseite erstellen](~/tabs/how-to/create-tab-pages/content-page.md). Sie können [eine Konfigurationsseite erstellen](~/tabs/how-to/create-tab-pages/configuration-page.md), die es den Benutzern ermöglicht, die Microsoft Teams-App zu konfigurieren und sie zur Konfiguration eines Kanals oder einer Gruppenchat-Registerkarte, einer Nachrichtenerweiterung oder eines Office 365-Connectors zu verwenden. Sie können Benutzern erlauben, Ihre Registerkarte nach der Installation neu zu konfigurieren und für Ihre Anwendung [eine Seite zum Entfernen von Registerkarten zu erstellen](~/tabs/how-to/create-tab-pages/removal-page.md). Wenn Sie eine Teams-App erstellen, die eine Registerkarte enthält, müssen Sie testen, wie Ihre [Registerkarte auf den Android- und iOS Teams-Clients funktioniert](~/tabs/design/tabs-mobile.md). Ihre Registerkarte muss durch grundlegende Informationen, Gebietsschema- und Designinformationen sowie `app.Context.page.id` oder `app.Context.page.subPageId` [Kontext erhalten](~/tabs/how-to/access-teams-context.md), der identifiziert, was sich in der Registerkarte befindet.
 
 Sie können Registerkarten mit adaptiven Karten erstellen und alle Teams-App-Funktionen zentralisieren, indem Sie die Notwendigkeit für ein anderes Back-End für Ihre Bots und Registerkarten eliminieren. [Bühnenansicht](~/tabs/tabs-link-unfurling.md) ist eine neue Benutzeroberflächenkomponente, die es Ihnen ermöglicht, den in Teams im Vollbildmodus geöffneten und als Registerkarte angehefteten Inhalt zu rendern. Der bestehende Dienst zum [Aufklappen von Verknüpfungen](~/tabs/tabs-link-unfurling.md) wird aktualisiert, sodass URLs mithilfe einer adaptiven Karte und Chatdiensten in eine Registerkarte umgewandelt werden können. Sie können [Unterhaltungsregisterkarten erstellen](~/tabs/how-to/conversational-tabs.md) indem Sie Unterentitäten von Unterhaltungen verwenden, mit denen Benutzer Unterhaltungen über Unterentitäten auf Ihrer Registerkarte führen können, z. B. über bestimmte Aufgaben, Patienten und Verkaufschancen, anstatt die gesamte Registerkarte zu diskutieren. Sie können Änderungen an [Registerkartenrändern](~/resources/removing-tab-margins.md) vornehmen, um die Erfahrung des Entwicklers beim Erstellen von Apps zu verbessern. Sie können die Registerkarte ziehen und an der gewünschten Position platzieren, um die Registerkartenpositionen in Ihren persönlichen Apps und in Kanal- oder Gruppenchats auszutauschen.
 
@@ -72,7 +74,7 @@ Sie können eine der folgenden Methoden verwenden, um Registerkarten zu erstelle
 
 ### <a name="declare-custom-tab-in-app-manifest"></a>Benutzerdefinierte Registerkarte im App-Manifest deklarieren
 
-Eine benutzerdefinierte Registerkarte wird im App-Manifest Ihres App-Pakets deklariert. Für jede Webseite, die Sie als Registerkarte in Ihrer App hinzufügen möchten, definieren Sie eine URL und einen Bereich. Darüber hinaus können Sie die [JavaScript-Client-SDK von Teams](/javascript/api/overview/msteams-client) zu Ihrer Seite hinzufügen und `microsoftTeams.initialize()` nach dem Laden Ihrer Seite aufrufen. Teams zeigt Ihre Seite an und bietet Zugriff auf Teams-spezifische Informationen, z. B. dass der Teams-Client das dunkle Design ausführt.
+Eine benutzerdefinierte Registerkarte wird im App-Manifest Ihres App-Pakets deklariert. Für jede Webseite, die Sie als Registerkarte in Ihrer App hinzufügen möchten, definieren Sie eine URL und einen Bereich. Darüber hinaus können Sie die [JavaScript-Client-SDK von Teams](/javascript/api/overview/msteams-client) zu Ihrer Seite hinzufügen und `app.initialize()` nach dem Laden Ihrer Seite aufrufen. Teams zeigt Ihre Seite an und bietet Zugriff auf Teams-spezifische Informationen, z. B. dass der Teams-Client das dunkle Design ausführt.
 
 Unabhängig davon, ob Sie Ihre Registerkarte innerhalb des Kanals, der Gruppe oder des persönlichen Bereichs verfügbar machen möchten, müssen Sie eine <iframe\>HTML-[Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md) auf Ihrer Registerkarte präsentieren. Bei persönlichen Registerkarten wird die Inhalts-URL direkt in Ihrem Teams-App-Manifest durch die `contentUrl`-Eigenschaft in der `staticTabs`-Matrix festgelegt. Der Inhalt Ihrer Registerkarten ist für alle Benutzer gleich.
 
