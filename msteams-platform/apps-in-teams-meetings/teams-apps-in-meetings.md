@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Microsoft Teams Apps Besprechungen Benutzer Teilnehmerrollen API
-ms.openlocfilehash: ec9db255d6dad410844451830b12ee902b106712
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 3543cb8e1beff69484a6348f511a033ad09e1f6d
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296952"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668046"
 ---
 # <a name="apps-for-teams-meetings"></a>Apps für Teams-Besprechungen
 
@@ -47,3 +47,4 @@ Mit dem neuen benutzerdefinierten Feature "Zusammen-Modus-Szenen" können Benutz
 * [Benutzerdefinierte Zusammen-Modus-Szenen](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Aktivieren und Konfigurieren Ihrer Apps für Microsoft Teams-Besprechungen](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Der Besprechungslebenszyklus](meeting-app-extensibility.md#meeting-lifecycle)
+* [Verbesserte Zusammenarbeit mit Live Share SDK](teams-live-share-overview.md)

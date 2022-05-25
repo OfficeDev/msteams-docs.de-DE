@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Erstellen Ihrer ersten App mit JavaScript
+title: Erstellen Ihrer ersten Nachrichtenerweiterungs-App mit JavaScript
 metadata:
   title: Hallo Welt mit JavaScript
   description: In diesem Lernprogramm erfahren Sie, wie Sie Hallo Welt-App mit JavaScript erstellen.
@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Zurück zur Übersicht über Erste Schritte
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 879abf31d54829e09cc66d6956e44289d43c8628
-  ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+  ms.openlocfilehash: 3f85204d547ca05ebbc30fdd9b0d0a65c1740c01
+  ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/24/2022
-  ms.locfileid: "65656968"
+  ms.lasthandoff: 05/25/2022
+  ms.locfileid: "65668165"
 items:
 - durationInMinutes: 1
   content: "Starten Sie Microsoft Teams App-Entwicklung mit Ihrer ersten Teams-App. Sie erstellen eine Nachrichtenerweiterung Teams App. \n\nIhre App verfügt über eine Funktion, die über eine eigene Benutzeroberfläche und UX verfügt:\n\n:::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png\" alt-text=\"Diagramm, das diese App zeigt, verfügt über drei Features.\" border=\"false\":::\n\n\nIn diesem Lernprogramm lernen Sie Folgendes:\n\n- So richten Sie ein neues Projekt mit Teams Toolkit ein.\n- So erstellen Sie eine Nachrichtenerweiterungs-App.\n- So stellen Sie Ihre App bereit.\n"

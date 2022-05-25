@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: b164231a95c511402431b5d4cdb3c7d0fc6cfdff
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 7c7c53b7b269e5c406cb27c3faee8b818dc567a6
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656173"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668137"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ausweiten einer persönlichen Microsoft Teams-Registerkarte auf Microsoft 365
 
@@ -148,15 +148,15 @@ Wenn Ihre App CSP-Header ( [Content Security Policy](https://developer.mozilla.o
 
 Der letzte Schritt zum Ausführen Ihrer App in Office und Outlook besteht darin, das aktualisierte [App-Paket](..//concepts/build-and-test/apps-package.md) für persönliche Registerkarten in Microsoft Teams querzuladen.
 
-1. Packen Sie Ihre Teams-Anwendung ([Manifest-](../resources/schema/manifest-schema.md) und [App-Symbole](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in einer ZIP-Datei. Wenn Sie Teams Toolkit zum Erstellen Ihrer App verwendet haben, können Sie dies ganz einfach mithilfe der Option **Teams-Metadatenpaket in einer ZIP-Datei verpacken** im Menü *Bereitstellung* von Teams Toolkit tun:
+1. Packen Sie Ihre Teams-Anwendung ([Manifest-](../resources/schema/manifest-schema.md) und [App-Symbole](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in einer ZIP-Datei. Wenn Sie Teams Toolkit zum Erstellen Ihrer App verwendet haben, können Sie dies ganz einfach mithilfe der **Zip-Teams-Metadatenpaketoption** im **Bereitstellungsmenü** des Teams Toolkits tun.
 
-    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Option „Teams-Metadatenpaket in einer ZIP-Datei verpacken“ in der Teams Toolkit-Erweiterung für Visual Studio Code":::
+    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Option „ Microsoft Teams-Metadatenpaket in einer ZIP-Datei verpacken“ in der Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code":::
 
-1. Melden Sie sich mit Ihrem Sandkastenmandantenkonto bei Teams an, und wechseln Sie in den *Entwicklervorschaumodus*. Wählen Sie das Menü mit den Auslassungspunkten (**...**) nach Ihrem Benutzerprofil und dann Folgendes aus: Info > **Entwicklervorschau**.
+1. Melden Sie sich mit Ihrem Sandkastenmandantenkonto bei Teams an, und wechseln Sie in den *Entwicklervorschaumodus*. Wählen Sie das Menü mit den Auslassungspunkten (**...**) nach Ihrem Benutzerprofil und dann Folgendes aus: **Info** > **zur Entwicklervorschau**.
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="Öffnen Sie Teams Menü &quot;Info&quot; und wählen Sie die Option &quot;Entwicklervorschau&quot; aus.":::
 
-1. Wählen Sie *"Apps* " aus, um den Bereich " **Apps verwalten** " zu öffnen. Wählen Sie dann **"App veröffentlichen"** aus.
+1. Wählen Sie **"Apps** " aus, um den Bereich " **Apps verwalten** " zu öffnen. Wählen Sie dann **"App veröffentlichen"** aus.
 
     :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Öffnen Sie den Bereich &quot;Apps verwalten&quot;, und wählen Sie &quot;App veröffentlichen&quot; aus.":::
 

@@ -4,14 +4,14 @@ author: surbhigupta
 description: Identifizieren Sie die API-Referenzen für Meeting-Apps anhand von Beispielen und Codebeispielen
 ms.topic: conceptual
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Teams Apps Besprechungen Benutzer Teilnehmer Rolle API Benutzerkontext Benachrichtigungssignalabfrage
-ms.openlocfilehash: 4f04d94d5fd9d1b38f7569db658fac10ccaa2650
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 75dc6dde65b24fd05931021544fafe3af956d88d
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111353"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65667983"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
@@ -777,6 +777,7 @@ Der folgende Code stellt ein Beispiel für die Nutzlast eines Besprechungsende-E
 
 * [Teams-Authentifizierungsablauf für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps für Teams-Besprechungen](teams-apps-in-meetings.md)
+* [Live Share SDK](teams-live-share-overview.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

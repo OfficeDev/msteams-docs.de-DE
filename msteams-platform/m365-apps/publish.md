@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: b256eb75f871425d855c0f12359015134870efc0
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 78a2d0354028426f4de98759a501e66530cf1166
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656079"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668060"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>Veröffentlichen von Microsoft Teams-Apps für Microsoft 365
 
@@ -26,7 +26,7 @@ Outlook-fähigen Nachrichtenerweiterungen können auf verschiedene Weise an Test
 
 ### <a name="teams-client"></a>Teams-Client
 
-Wählen Sie im Menü *"Apps*" die Option "*Apps* >  verwalten *" aus. Veröffentlichen Sie eine appSubmit* >  **an Ihre Organisation**. Dies erfordert die Genehmigung Ihres IT-Administrators.
+Wählen Sie im Menü **"Apps**" die Option "**Apps** >  verwalten **" aus. Veröffentlichen Sie eine App** > **Übermitteln Sie eine App an Ihre Organisation**. Dies erfordert die Genehmigung Ihres IT-Administrators.
 
 ### <a name="teams-developer-portal"></a>Teams Developer Portal
 

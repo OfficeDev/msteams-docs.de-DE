@@ -3,14 +3,14 @@ title: Manifest-Schemareferenz für die öffentliche Entwicklervorschau
 description: Beispielmanifestdatei und Beschreibung aller ihrer Komponenten, die für Microsoft Teams unterstützt werden
 ms.topic: reference
 keywords: Entwicklervorschau des Teams-Manifestschemas
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: a32ea7faba4d3c0e362637c8e4338112cd75d839
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cd018acfa71dc7815ae4a2a85311d0adb3245652
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110330"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668130"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für die öffentliche Entwicklervorschau für Microsoft Teams
 
@@ -284,7 +284,7 @@ Die `https://` URL, die auf das JSON-Schema für das Manifest verweist.
 
 **Erforderliche** &ndash; Zeichenfolge
 
-Die Version des Manifestschemas, das dieses Manifest verwendet. Nur `m365DevPreview` verwenden, wenn Sie eine Vorschau [von Teams-Apps anzeigen, die in Office und Outlook ausgeführt werden](../../m365-apps/overview.md). Andernfalls für alle `devPreview` anderen Teams-Vorschaufunktionen verwenden.
+Die Version des Manifestschemas, das dieses Manifest verwendet.
 
 ## <a name="version"></a>Version
 
@@ -556,6 +556,97 @@ Geben Sie Ihre Microsoft Azure Active Directory (Azure AD)-App-ID und Graph-Info
 |`resource`|Zeichenfolge|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für SSO.|
 |`applicationPermissions`|Array|Maximal 100 Elemente|✔|Ressourcenberechtigungen für die Anwendung.|
 
+## <a name="graphconnector"></a>graphConnector
+
+**Optional** – Objekt
+
+Geben Sie die Graph Connectorkonfiguration der App an. Wenn dies vorhanden ist, muss [auch webApplicationInfo.id](#webapplicationinfo) angegeben werden.
+
+|Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
+|---|---|---|---|---|
+|`notificationUrl`|string|2048 Zeichen|✔|Die URL, an die Graph-Connector-Benachrichtigungen für die Anwendung gesendet werden sollen.|
+
+## <a name="showloadingindicator"></a>showLoadingIndicator
+
+**Optional** – Boolescher Wert
+
+Gibt an, ob die Ladeanzeige angezeigt werden soll, wenn eine App oder Registerkarte geladen wird. Der Standardwert ist **false**.
+> [!NOTE]
+> Wenn Sie für `showLoadingIndicator` im App-Manifest "true" auswählen, ändern Sie zum ordnungsgemäßen Laden der Seite die Inhaltsseiten Ihrer Registerkarten und Aufgabenmodule, wie im Dokument [Anzeigen eines systemeigenen Lade-Indikators](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator).
+
+## <a name="isfullscreen"></a>isFullScreen
+
+ **Optional** – Boolescher Wert
+
+Gibt an, wo eine persönliche App mit oder ohne Registerkartenkopfleiste gerendert wird. Standard ist **false**.
+
+> [!NOTE]
+> `isFullScreen` funktioniert nur für Apps, die in Ihrer Organisation veröffentlicht wurden.
+
+## <a name="activities"></a>Aktivitäten
+
+**Optional** – Objekt
+
+Definiert die Eigenschaften, die Ihre App zum Posten eines Benutzeraktivitätsfeeds verwendet.
+
+|Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
+|---|---|---|---|---|
+|`activityTypes`|Array von Objekten|128 Elemente| | Geben Sie die Arten von Aktivitäten an, die Ihre App in einem Benutzeraktivitätsfeed veröffentlichen kann.|
+
+### <a name="activitiesactivitytypes"></a>activities.activityTypes
+
+|Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
+|---|---|---|---|---|
+|`type`|string|32 Zeichen|✔|Der Benachrichtigungstyp. *Siehe unten*.|
+|`description`|string|128 Zeichen|✔|Eine kurze Beschreibung der Benachrichtigung. *Siehe unten*.|
+|`templateText`|string|128 Zeichen|✔|Beispiel: "{actor} hat die Aufgabe {taskId} für Sie erstellt."|
+
+```json
+{
+   "activities":{
+      "activityTypes":[
+         {
+            "type":"taskCreated",
+            "description":"Task Created Activity",
+            "templateText":"{actor} created task {taskId} for you"
+         },
+         {
+            "type":"teamMention",
+            "description":"Team Mention Activity",
+            "templateText":"{actor} mentioned team"
+         },
+         {
+            "type":"channelMention",
+            "description":"Channel Mention Activity",
+            "templateText":"{actor} mentioned channel"
+         },
+         {
+            "type":"userMention",
+            "description":"Personal Mention Activity",
+            "templateText":"{actor} mentioned user"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"creatorTaskCreated",
+            "description":"Created Task Created",
+            "templateText":"The Creator created task {taskId} for you"
+         }
+      ]
+   }
+}
+```
+
+***
+
 ## <a name="configurableproperties"></a>configurableProperties
 
 **Optional** – Array
@@ -688,6 +779,15 @@ Delegierte Berechtigungen ermöglichen der App den Zugriff auf Daten im Namen de
     |**Name**|**Beschreibung**|
     |---|---|
     |`InAppPurchase.Allow.User`|Ermöglicht es der App, dem Benutzer Angebote auf dem Marktplatz zu zeigen und die Einkäufe des Benutzers innerhalb der App im Namen des angemeldeten Benutzers abzuschließen.|
+
+* **Ressourcenspezifische Berechtigungen für Teams Livefreigabe**
+
+   |Name| Beschreibung |
+   | ----- | ----- |
+   |`LiveShareSession.ReadWrite.Chat`|<!--- need info --->|
+   |`LiveShareSession.ReadWrite.Channel`|<!--- need info --->|
+   |`MeetingStage.Write.Chat`|<!--- need info --->|
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|<!--- need info --->|
 
 ## <a name="see-also"></a>Siehe auch
 
