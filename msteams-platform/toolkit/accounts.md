@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: c57bbdf6be1b31d61acc1725924f42faeb20b264
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: cb9985aa1f7b9f3f5eff3308f385afbefffba3b6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191194"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756954"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Vorbereiten von Konten zum Erstellen von Teams-Apps
 
@@ -91,7 +91,7 @@ Wenn Sie Ihre anwendungsbezogenen Ressourcen hosten oder auf Ressourcen in Azure
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Benutzerdefinierte App hochladen" border="true":::
 
-        Wenn Sie die Option Eine benutzerdefinierte App hochladen** nicht sehen können, bedeutet dies, dass Sie nicht über die erforderliche Berechtigung für das Sideloading verfügen.
+        Wenn Sie die Option **Benutzerdefinierte App hochladen** nicht anzeigen können, bedeutet dies, dass Sie nicht über die erforderliche Berechtigung zum Querladen verfügen.
         * Aktivieren Sie für einen Mandantenadministrator die Einstellung für das Querladen Ihres Mandanten oder Ihrer Organisation im Teams Admin Center.
         * Wenn Sie kein Mandantenadministrator sind, müssen Sie sich an Ihren Mandantenadministrator wenden, um das Querladen zu aktivieren.
 

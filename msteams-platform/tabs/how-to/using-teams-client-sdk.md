@@ -6,12 +6,12 @@ description: Übersicht über das Microsoft Teams JavaScript-Client-SDK, das Sie
 ms.localizationpriority: high
 keywords: Teams Registerkarten Gruppenkanal konfigurierbares statisches SDK JavaScript persönliches m365
 ms.topic: conceptual
-ms.openlocfilehash: 2a1c827913759d49ba721251d4a6f5382d8eb3a4
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: 11d5bfa9b2dff29cb627a75f13af70915784a175
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653287"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757619"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Erstellen von Registerkarten und anderen gehosteten Umgebungen mit dem Microsoft Teams JavaScript-Client-SDK
 
@@ -20,7 +20,7 @@ Mit dem Microsoft Teams JavaScript-Client-SDK können Sie gehostete Umgebungen i
 * [Registerkarten](../../tabs/what-are-tabs.md)
 * [Dialogfelder (Aufgabenmodule)](../../task-modules-and-cards/what-are-task-modules.md)
 
-Ab Version `2.0.0` wurde das vorhandene Teams-Client-SDK (`@microsoft/teams-js` oder einfach `TeamsJS`) umgestaltet, damit [Teams-Apps nicht nur in Microsoft Teams, sondern auch in Outlook und Office ausgeführt werden können](/m365-apps/overview.md). Aus funktionaler Sicht unterstützt die neueste Version von TeamsJS alle vorhandenen Teams-App-Funktionen (v.1.x.x) und fügt gleichzeitig die optionale Möglichkeit zum Hosten von Teams-Apps in Outlook und Office hinzu.
+Ab Version `2.0.0` wurde das vorhandene Teams-Client-SDK (`@microsoft/teams-js` oder einfach `TeamsJS`) umgestaltet, damit [Teams-Apps nicht nur in Microsoft Teams, sondern auch in Outlook und Office ausgeführt werden können](/microsoftteams/platform/m365-apps/overview). Aus funktionaler Sicht unterstützt die neueste Version von TeamsJS alle vorhandenen Teams-App-Funktionen (v.1.x.x) und fügt gleichzeitig die optionale Möglichkeit zum Hosten von Teams-Apps in Outlook und Office hinzu.
 
 Hier sehen Sie die aktuellen Anleitungen zu Versionsverwaltung für verschiedene App-Szenarien:
 

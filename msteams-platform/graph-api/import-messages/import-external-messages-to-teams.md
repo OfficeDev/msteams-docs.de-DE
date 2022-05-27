@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Microsoft Teams Nachrichten importieren API Graph Microsoft Migrieren Migration Posting
-ms.openlocfilehash: 72e33ae6c8792016394c7a464f132260a5231112
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 3fb593bf72c1f8b495a45bad8eef6e2177684c7b
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111745"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756920"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Plattform-Nachrichten von Drittanbietern mithilfe von Microsoft Graph in Teams importieren
 

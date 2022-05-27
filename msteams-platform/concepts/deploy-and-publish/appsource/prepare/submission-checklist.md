@@ -6,12 +6,12 @@ ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: Verteilen von Validierungsrichtlinien für App-Pakete im Übermittlungsspeicher lokalisieren
-ms.openlocfilehash: e1c2f94eb0bb3989ea461b10543fcea3051ef52a
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 6ea5ff76cc81f23719e4b4c499f4a2f2594718a2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135752"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756779"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Vorbereiten der Übermittlung an den Microsoft Teams Store
 
@@ -23,8 +23,8 @@ Bevor Sie Ihre App an [Partner Center](/office/dev/store/use-partner-center-to-s
 
 Während Ihre App möglicherweise in einer Testumgebung funktioniert, sollten Sie Ihr App-Paket überprüfen, um Probleme während des Übermittlungsprozesses zu vermeiden.
 
-> [!NOTE]
- > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal[Entwicklerportal](https://dev.teams.microsoft.com/) zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird per 30. Juni 2022 eingestellt.
+> [!WARNING]
+> Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal[Entwicklerportal](https://dev.teams.microsoft.com/) zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird per 30. Juni 2022 eingestellt.
 
 Das Microsoft Teams App-Überprüfungstool hilft Ihnen, Probleme zu identifizieren und zu beheben, bevor Sie sie an Partner Center übermitteln. Das Tool überprüft die Konfigurationen Ihrer App automatisch anhand der gleichen Testfälle, die während der Store-Überprüfung verwendet werden.
 
@@ -75,15 +75,15 @@ Ein Store-Eintrag kann der erste Eindruck einer Person von Ihrer App sein. Erhö
 
 ### <a name="specify-a-short-name"></a>Geben Sie einen kurzen Namen ein.
 
-Der Name Ihrer App (insbesondere der [*Kurzname*](~/resources/schema/manifest-schema.md#name)) spielt eine wichtige Rolle, wenn es darum geht, wie Benutzer sie im Store entdecken.
+Der Name Ihrer App (insbesondere der *[Kurzname](~/resources/schema/manifest-schema.md#name)*) spielt eine wichtige Rolle, wenn es darum geht, wie Benutzer sie im Store entdecken.
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Der Beispiel-Screenshot zeigt, wo der Kurzname einer App in einem Store-Eintrag angezeigt wird.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Der Beispiel-Screenshot zeigt, wo der Kurzname einer App in einem Store-Eintrag angezeigt wird.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -99,11 +99,11 @@ Eine präzise Zusammenfassung Ihrer App, die originell, ansprechend und auf Ihre
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Der Beispiel-Screenshot zeigt, wo die kurze Beschreibung einer App in einem Store-Eintrag angezeigt wird.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Der Beispiel-Screenshot zeigt, wo die kurze Beschreibung einer App in einem Store-Eintrag angezeigt wird.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -121,11 +121,11 @@ Obwohl diese Beschreibung bis zu 4 000 Zeichen lang sein kann, werden die meiste
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="Der Beispiel-Screenshot zeigt, wo die lange Beschreibung einer App in einem Store-Eintrag angezeigt wird.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="Der Beispiel-Screenshot zeigt, wo die lange Beschreibung einer App in einem Store-Eintrag angezeigt wird.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -143,11 +143,11 @@ Screenshots bieten eine auffällige visuelle Vorschau Ihrer App, um Ihren App-Na
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Im Beispiel-Screenshot wird hervorgehoben, wo App-Screenshots in einem Store-Eintrag angezeigt werden.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Im Beispiel-Screenshot wird hervorgehoben, wo App-Screenshots in einem Store-Eintrag angezeigt werden.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -212,7 +212,6 @@ Partner Center unterstützt [lokalisierte Store-Einträge](/office/dev/store/pre
 > Wenn Sie eine neue App übermitteln, können Sie den Herausgebernachweis erst offiziell abschließen, wenn Ihre App im Teams Store aufgeführt ist. Wenn Sie eine aufgelistete App aktualisieren, schließen Sie den Herausgebernachweis ab, bevor Sie die neueste Version der App zur Überprüfung übermitteln.
 
 ## <a name="next-step"></a>Nächster Schritt
-
 > [!div class="nextstepaction"]
 > [Übermitteln Ihrer App](/office/dev/store/add-in-submission-guide)
 

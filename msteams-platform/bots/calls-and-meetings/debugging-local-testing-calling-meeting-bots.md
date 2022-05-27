@@ -2,19 +2,19 @@
 title: Anruf- und Besprechungsbot lokal debuggen
 description: Erfahren Sie, wie Sie mit ngrok auch Anruf- und Online-Meeting-Bots auf Ihrem lokalen PC entwickeln können.
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: lokale Entwicklung Ngrok-Tunnel
 ms.date: 11/18/2018
-ms.openlocfilehash: 7e5f9de7177c847352b0e2768b52553455989443
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 7f85243e0a5d94711cd303ff542decd3bbc7847a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111997"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757115"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>Entwickeln Sie Anruf- und Online-Meeting-Bots auf Ihrem lokalen PC
 
-In [Ausführen und Debuggen Ihrer App](../../concepts/build-and-test/debug.md) erklären wir, wie Sie mit [ngrok](https://ngrok.com) einen Tunnel zwischen Ihrem lokalen Computer und dem Internet erstellen. In diesem Thema erfahren Sie, wie Sie ngrok und Ihren lokalen PC auch verwenden können, um Bots zu entwickeln, die Anrufe und Online-Meetings unterstützen.
+In ["Ausführen und Debuggen Ihrer App](../../concepts/build-and-test/debug.md)" wird erläutert, wie Sie [mithilfe von ngrok](https://ngrok.com) einen Tunnel zwischen Ihrem lokalen Computer und dem Internet erstellen. In diesem Thema erfahren Sie, wie Sie ngrok und Ihren lokalen PC auch verwenden können, um Bots zu entwickeln, die Anrufe und Online-Meetings unterstützen.
 
 Messaging-Bots verwenden HTTP, aber Anruf- und Online-Meeting-Bots verwenden das niedrigere TCP. Ngrok unterstützt TCP-Tunnel zusätzlich zu HTTP-Tunneln.
 
@@ -22,7 +22,7 @@ Messaging-Bots verwenden HTTP, aber Anruf- und Online-Meeting-Bots verwenden das
 
 Gehen Sie zu [ngrok](https://ngrok.com) und registrieren Sie sich für ein kostenloses Konto oder melden Sie sich bei Ihrem bestehenden Konto an. Nachdem Sie sich angemeldet haben, gehen Sie zum [Dashboard](https://dashboard.ngrok.com) und rufen Sie Ihr Authentifizierungstoken ab.
 
-Erstellen Sie eine ngrok-Konfigurationsdatei und fügen Sie die folgende Zeile `ngrok.yml` hinzu. Weitere Informationen darüber, wo sich die Datei befinden kann, finden Sie unter [ngrok](https://ngrok.com/docs#config):
+Erstellen Sie eine ngrok-Konfigurationsdatei `ngrok.yml` , und fügen Sie die folgende Zeile hinzu. Weitere Informationen darüber, wo sich die Datei befinden kann, finden Sie unter [ngrok](https://ngrok.com/docs#config):
 
   `authtoken: <Your-AuthToken>`
 
@@ -46,7 +46,7 @@ tunnels:
 
 Anwendungsgehostete Medien verwenden Zertifikate und TCP-Tunnel. Die folgenden zwei Schritte sind dazu erforderlich:
 
-1. Die öffentlichen TCP-Endpunkte von Ngrok haben feste URLs. Sie sind `0.tcp.ngrok.io`, `1.tcp.ngrok.io`, und so weiter. Sie müssen über einen DNS-CNAME-Eintrag für Ihren Dienst verfügen, der auf diese URLs verweist. Sagen wir zum Beispiel `0.bot.contoso.com` bezieht sich auf `0.tcp.ngrok.io`, `1.bot.contoso.com` bezieht sich auf `1.tcp.ngrok.io` und so weiter.
+1. Die öffentlichen TCP-Endpunkte von Ngrok haben feste URLs. Sie sind `0.tcp.ngrok.io`usw `1.tcp.ngrok.io`. Sie müssen über einen DNS-CNAME-Eintrag für Ihren Dienst verfügen, der auf diese URLs verweist. Sagen wir zum Beispiel `0.bot.contoso.com` bezieht sich auf `0.tcp.ngrok.io`, `1.bot.contoso.com` bezieht sich auf `1.tcp.ngrok.io` und so weiter.
 2. Für Ihre URLs ist ein SSL-Zertifikat erforderlich. Verwenden Sie zur Vereinfachung ein SSL-Zertifikat, das für eine Wildcard-Domain ausgestellt wurde. In diesem Fall wäre es `*.bot.contoso.com`. Dieses SSL-Zertifikat wird vom Medien-SDK validiert, daher muss es mit der öffentlichen URL Ihres Bots übereinstimmen. Notieren Sie sich den Fingerabdruck und installieren Sie ihn in Ihren Maschinenzertifikaten.
 3. Richten Sie nun einen TCP-Tunnel ein, um den Datenverkehr an localhost weiterzuleiten. Schreiben Sie die folgenden Zeilen in Ihre ngrok.yml:
 
@@ -62,7 +62,7 @@ Nachdem die ngrok-Konfiguration fertig ist, starten Sie sie:
 
   `ngrok.exe start -all -config <Path to your ngrok.yml>`
 
-Dies startet ngrok und definiert die öffentlichen URLs, die die Tunnel zu Ihrem Localhost bereitstellen. Es folgt ein Beispiel für die Ausgabe:
+Dies startet ngrok und definiert die öffentlichen URLs, die die Tunnel für Ihren localhost bereitstellen. Es folgt ein Beispiel für die Ausgabe:
 
 ```cmd
 Forwarding  http://signal.ngrok.io -> localhost:12345
@@ -119,5 +119,5 @@ var mediaPlatform = new MediaPlatformSettings
 ## <a name="caveats"></a>Vorbehalte
 
 * Kostenlose Ngrok-Konten bieten **keine** Ende-zu-Ende-Verschlüsselung. Die HTTPS-Daten enden bei der ngrok-URL und die Daten fließen unverschlüsselt von ngrok nach`localhost`. Wenn Sie eine Ende-zu-Ende-Verschlüsselung benötigen, ziehen Sie ein kostenpflichtiges ngrok-Konto in Betracht. Siehe [TLS-Tunnel](https://ngrok.com/docs#tls) für Schritte zum Einrichten sicherer End-to-End-Tunnel.
-* Da die Bot-Callback-URL dynamisch ist, erfordern eingehende Anrufszenarien, dass Sie Ihre ngrok-Endpunkte häufig aktualisieren. Eine Möglichkeit, dies zu beheben, besteht darin, ein kostenpflichtiges ngrok-Konto zu verwenden, das feste Subdomains bereitstellt, auf die Sie Ihren Bot und die Plattform verweisen können.
+* Da die Bot-Callback-URL dynamisch ist, erfordern eingehende Anrufszenarien, dass Sie Ihre ngrok-Endpunkte häufig aktualisieren. Eine Möglichkeit, dies zu beheben, ist die Verwendung eines kostenpflichtigen ngrok-Kontos, das feste Unterdomänen bereitstellt, auf die Sie Ihren Bot und die Plattform verweisen können.
 * Ngrok-Tunnel können auch mit [Azure Service Fabric verwendet werden](/azure/service-fabric/service-fabric-overview). Ein Beispiel dafür finden Sie in der [HueBot-Beispiel-App](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/HueBot/HueBot).

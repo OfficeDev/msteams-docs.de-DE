@@ -4,20 +4,20 @@ description: Erfahren Sie, wie Sie die Schaltfläche "Freigeben" zu Teams eingeb
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Freigeben Teams Freigeben für Teams
-ms.openlocfilehash: b3efd268e2bded3955c2d9ab76d6dea755d06b5a
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: f891c3ea768b3e97a9764ec08f5f91dd7b13e821
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439300"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757059"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Von Web-Apps für Teams freigeben
 
-Websites von Drittanbietern können das Startprogrammskript verwenden, um "Freigeben" in Teams Schaltflächen auf ihren Webseiten einzubetten. Wenn Sie diese Option auswählen, wird die Freigabe gestartet, um Teams Oberfläche in einem Popupfenster anzuzeigen. Auf diese Weise können Sie einen Link direkt für eine beliebige Person oder Microsoft Teams Kanal freigeben, ohne den Kontext zu wechseln. In diesem Dokument erfahren Sie, wie Sie eine Schaltfläche "Freigeben" erstellen und in Teams für Ihre Website einbetten, ihre Websitevorschau erstellen und "Freigeben" auf Teams für Education erweitern.
+Websites von Drittanbietern können das Launcher-Skript verwenden, um Schaltflächen für die Weitergabe an Teams in ihre Webseiten einzubetten. Wenn Sie diese Option auswählen, wird die Freigabe gestartet, um Teams Oberfläche in einem Popupfenster anzuzeigen. Auf diese Weise können Sie einen Link direkt für eine beliebige Person oder Microsoft Teams Kanal freigeben, ohne den Kontext zu wechseln. In diesem Dokument erfahren Sie, wie Sie eine Schaltfläche "Freigeben" erstellen und in Teams für Ihre Website einbetten, ihre Websitevorschau erstellen und "Freigeben" auf Teams für Education erweitern.
 
 > [!NOTE]
 >
-> * Nur die Desktopversionen von MicrosoftEdge&nbsp; und Google Chrome werden unterstützt.
+> * Nur die Desktopversionen von Microsoft&nbsp;Edge und Google Chrome werden unterstützt.
 > * Die Verwendung von Freemium- oder Gastkonten wird nicht unterstützt.  
 
 In der folgenden Abbildung wird die Popupoberfläche "Freigeben für Teams" angezeigt:
@@ -99,7 +99,7 @@ Sie können entweder die HTML-Standardversionen oder die Open Graph-Version verw
 
 ## <a name="share-to-teams-for-education"></a>Für Teams für Education freigeben
 
-Für Lehrer, die die Schaltfläche "Freigeben zum Teams" verwenden, gibt es eine zusätzliche Option für `Create an Assignment`. Auf diese Weise können Sie schnell eine Aufgabe im ausgewählten Team basierend auf dem freigegebenen Link erstellen. In der folgenden Abbildung wird "Freigeben für Teams für Bildungseinrichtungen" angezeigt:
+Für Lehrer, die die Schaltfläche "Freigeben zum Teams" verwenden, gibt es eine zusätzliche Option`Create an Assignment`, mit der Sie schnell eine Aufgabe im ausgewählten Team basierend auf dem freigegebenen Link erstellen können. In der folgenden Abbildung wird "Freigeben für Teams für Bildungseinrichtungen" angezeigt:
 
 :::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Für Teams Popupschulung freigeben":::
 

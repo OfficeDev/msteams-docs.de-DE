@@ -1,15 +1,15 @@
 ---
 title: Aufgabenmodule in Microsoft Teams-Registerkarten verwenden
 description: Erläutert das Aufrufen von Aufgabenmodulen über Teams-Registerkarten und das Übermitteln des Ergebnisses mithilfe des Microsoft Teams-Client-SDK. Es enthält Codebeispiele.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Client-SDK für Aufgabenmodule für Teams-Registerkarten
-ms.openlocfilehash: eb199842a60832e6eb77575a7438cc9f52db6e09
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 61955a9afd070a17b17210239054819f02d3b484
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111227"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756696"
 ---
 # <a name="use-task-modules-in-tabs"></a>Verwenden von Aufgabenmodulen in Registerkarten
 
@@ -35,8 +35,8 @@ Sie können sehen, wie das Aufrufen eines Aufgabenmoduls über eine Registerkart
 
 Verwenden Sie zum Aufrufen eines Aufgabenmoduls über eine Registerkarte `microsoftTeams.tasks.startTask()`, und übergeben Sie ein [TaskInfo-Objekt](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) und eine optionale `submitHandler`-Rückruffunktion. Es müssen zwei Fälle berücksichtigt werden:
 
-* Der Wert von `TaskInfo.url` ist auf eine URL festgelegt. Das Aufgabenmodulfenster wird angezeigt, und `TaskModule.url` wird als ein `<iframe>` darin geladen. JavaScript auf dieser Seite ruft `microsoftTeams.initialize()` auf. Wenn eine `submitHandler`-Funktion auf der Seite vorhanden ist und beim Aufrufen von `microsoftTeams.tasks.startTask()` ein Fehler auftritt, dann wird `submitHandler` aufgerufen, wobei `err` auf die Fehlerzeichenfolge festgelegt ist, die dasselbe angibt. Weitere Informationen finden Sie unter [Aufgabenmodul-Aufruffehler](#task-module-invocation-errors).
-* Der Wert von `taskInfo.card` ist der [JSON für eine adaptive Karte](~/task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). Es gibt keine JavaScript `submitHandler`-Funktion, die aufgerufen werden kann, wenn der Benutzer eine Schaltfläche auf der adaptiven Karte schließt oder drückt. Die einzige Möglichkeit, den vom Benutzer eingegebenen Inhalt zu erhalten, besteht darin, das Ergebnis an einen Bot zu übergeben. Um ein Aufgabenmodul für eine adaptive Karte über eine Registerkarte zu verwenden, muss Ihre App einen Bot enthalten, um eine Antwort vom Benutzer zu erhalten.
+* Der Wert von `TaskInfo.url` ist auf eine URL festgelegt. Das Aufgabenmodulfenster wird angezeigt, und `TaskModule.url` wird als ein `<iframe>` darin geladen. JavaScript auf dieser Seite ruft `microsoftTeams.initialize()` auf. `submitHandler` Wenn eine Funktion auf der Seite vorhanden ist und beim Aufrufen `microsoftTeams.tasks.startTask()`ein Fehler auftritt, wird diese `submitHandler` aufgerufen, wobei `err` der Wert auf die Fehlerzeichenfolge festgelegt ist, die dasselbe angibt. Weitere Informationen finden Sie unter [Aufgabenmodul-Aufruffehler](#task-module-invocation-errors).
+* Der Wert von `taskInfo.card` ist der [JSON für eine adaptive Karte](~/task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). Es gibt keine JavaScript-Funktion `submitHandler` , die aufgerufen werden kann, wenn der Benutzer eine Schaltfläche auf der adaptiven Karte schließt oder drückt. Die einzige Möglichkeit, den vom Benutzer eingegebenen Inhalt zu erhalten, besteht darin, das Ergebnis an einen Bot zu übergeben. Um ein Aufgabenmodul für eine adaptive Karte über eine Registerkarte zu verwenden, muss Ihre App einen Bot enthalten, um eine Antwort vom Benutzer zu erhalten.
 
 Der nächste Abschnitt enthält ein Beispiel für das Aufrufen eines Aufgabenmoduls.
 
@@ -70,13 +70,13 @@ submitHandler = (err, result) => {
 microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 ```
 
-Der `submitHandler` ist sehr einfach und gibt den Wert von `err` oder `result` an die Konsole zurück.
+Dies `submitHandler` ist einfach und spiegelt den Wert von `err` oder `result` an die Konsole wider.
 
 ## <a name="submit-the-result-of-a-task-module"></a>Übermitteln des Ergebnisses eines Aufgabenmoduls
 
-Die `submitHandler`-Funktion befindet sich auf der `TaskInfo.url`-Webseite und wird mit `TaskInfo.url` verwendet. Wenn beim Aufrufen des Aufgabenmoduls ein Fehler auftritt, wird ihre `submitHandler`-Funktion sofort mit einer `err`-Zeichenfolge aufgerufen, die angibt, welcher [Fehler aufgetreten ist](#task-module-invocation-errors). Die `submitHandler`-Funktion wird auch mit einer `err`-Zeichenfolge aufgerufen, wenn der Benutzer oben rechts im Aufgabenmodul „X“ auswählt, um es zu schließen.
+Die `submitHandler`-Funktion befindet sich auf der `TaskInfo.url`-Webseite und wird mit `TaskInfo.url` verwendet. Wenn beim Aufrufen des Aufgabenmoduls ein Fehler auftritt, wird Ihre `submitHandler` Funktion sofort mit einer `err` Zeichenfolge aufgerufen, die angibt, welcher [Fehler aufgetreten](#task-module-invocation-errors) ist. Die `submitHandler`-Funktion wird auch mit einer `err`-Zeichenfolge aufgerufen, wenn der Benutzer oben rechts im Aufgabenmodul „X“ auswählt, um es zu schließen.
 
-Wenn kein Aufruffehler auftritt und der Benutzer „X“ nicht auswählt, um es zu schließen, wählt der Benutzer eine Schaltfläche aus, wenn er fertig ist. Je nachdem, ob es sich um eine URL oder eine adaptive Karte im Aufgabenmodul handelt, finden Sie in den nächsten Abschnitten Details, was passiert.
+Wenn kein Aufruffehler vorliegt und der Benutzer X nicht auswählt, um es zu schließen, wählt der Benutzer nach Abschluss eine Schaltfläche aus. Je nachdem, ob es sich um eine URL oder eine adaptive Karte im Aufgabenmodul handelt, enthalten die nächsten Abschnitte Details zu den Ereignissen.
 
 ### <a name="html-or-javascript-taskinfourl"></a>HTML- oder JavaScript-`TaskInfo.url`
 
@@ -86,7 +86,7 @@ Rufen Sie nach dem Überprüfen der Eingaben des Benutzers die SDK-Funktion `mic
 
 ### <a name="adaptive-card-taskinfocard"></a>Adaptive Karte `TaskInfo.card`
 
-Wenn Sie das Aufgabenmodul mit einer `submitHandler` aufrufen und der Benutzer eine `Action.Submit`-Schaltfläche auswählt, werden die Werte auf der Karte als Wert von `result` zurückgegeben. Wenn der Benutzer oben rechts die ESC-Taste oder „X“ auswählt, wird stattdessen `err` zurückgegeben. Wenn Ihre App zusätzlich zu einer Registerkarte einen Bot enthält, können Sie einfach die `appId` des Bots als Wert für `completionBotId` in das `TaskInfo`-Objekt einschließen. Der vom Benutzer ausgefüllte Text der adaptiven Karte wird mithilfe einer `task/submit invoke`-Nachricht an den Bot gesendet, wenn der Benutzer eine `Action.Submit`-Schaltfläche auswählt. Das Schema für das von Ihnen empfangene Objekt ähnelt [dem Schema, das Sie für „task/fetch“- und „task/submit“-Nachrichten erhalten](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages). Der einzige Unterschied besteht darin, dass das Schema des JSON-Objekts ein adaptives Kartenobjekt ist, im Gegensatz zu einem Objekt, das ein adaptives Kartenobjekt enthält wie bei der [Verwendung von adaptiven Karten mit Bots](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
+Wenn Sie das Aufgabenmodul mit einer `submitHandler` aufrufen und der Benutzer eine `Action.Submit`-Schaltfläche auswählt, werden die Werte auf der Karte als Wert von `result` zurückgegeben. Wenn der Benutzer oben rechts die ESC-Taste oder „X“ auswählt, wird stattdessen `err` zurückgegeben. Wenn Ihre App zusätzlich zu einer Registerkarte einen Bot enthält, können Sie den `appId` Bot als Wert `completionBotId` in das `TaskInfo` Objekt einschließen. Der vom Benutzer ausgefüllte Text der adaptiven Karte wird mithilfe einer `task/submit invoke`-Nachricht an den Bot gesendet, wenn der Benutzer eine `Action.Submit`-Schaltfläche auswählt. Das Schema für das empfangene Objekt ähnelt [dem Schema, das Sie für Aufgaben-/Abruf- und Aufgaben-/Sendenachrichten erhalten](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages). Der einzige Unterschied besteht darin, dass das Schema des JSON-Objekts ein adaptives Kartenobjekt ist, im Gegensatz zu einem Objekt, das ein adaptives Kartenobjekt enthält wie bei der [Verwendung von adaptiven Karten mit Bots](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
 
 Der nächste Abschnitt enthält ein Beispiel für die Übermittlung des Ergebnisses eines Aufgabenmoduls.
 
@@ -131,7 +131,7 @@ Die folgende Tabelle enthält die möglichen Werte von `err`, die von Ihrem `sub
 
 |Beispielname | Beschreibung | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|Beispielregisterkarten und Bots des Aufgabenmoduls – V3 | Beispiele für das Erstellen von Aufgabenmodulen. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)|
+|Beispielregisterkarten und Bots des Aufgabenmoduls – V3 | Beispiele für das Erstellen von Aufgabenmodulen. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)|
 
 ## <a name="next-step"></a>Nächster Schritt
 

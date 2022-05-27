@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 392d69b76c3bba7a4f8e7543731ef436af714c7c
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: aa2aacb781909720bdb6a0bc27d593f9c73d11b0
+ms.sourcegitcommit: a4b3b2fb265142155508f9b396609da1280df35d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727339"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65696459"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Einschließen eines SaaS-Angebots in Ihre Microsoft Teams-App
 
@@ -122,7 +122,7 @@ Vollständige Anweisungen dazu finden Sie unter [Erstellen eines SaaS-Angebots](
 Es wird dringend empfohlen, die End-to-End-Einkaufserfahrung zu überprüfen, bevor Sie Ihr SaaS-Angebot veröffentlichen. Sie können dies tun, indem Sie ein separates Angebot nur zu Testzwecken erstellen. Vollständige Informationen finden Sie unter [Testangebotsübersicht](/azure/marketplace/plan-saas-offer#test-offer), [Erstellen eines Testangebots](/azure/marketplace/create-saas-dev-test-offer) und [Anzeigen einer Vorschau Ihres Angebots](/azure/marketplace/test-publish-saas-offer).
 
 > [!IMPORTANT]
-> Sie können eine End-to-End-Transaktion in Teams testen, bis Ihre App die Store-Überprüfung abgeschlossen hat. Weitere Informationen finden Sie unter [Testvorschau für monetarisierte Apps](Test-preview-for-monetized-apps.md).
+> Sie können eine End-to-End-Transaktion in Teams mithilfe der [Testvorschau für monetarisierte Apps](Test-preview-for-monetized-apps.md) testen. Bei Live-Angeboten müssen Sie den Überprüfungsprozess des App Stores durchführen.
 
 Aus Teams Sicht müssen diese Tests überprüfen, ob die Anzahl der Lizenzen und Zuweisungen mit den Angaben im Teams Admin Center übereinstimmt, wenn Benutzer Folgendes tun:
 

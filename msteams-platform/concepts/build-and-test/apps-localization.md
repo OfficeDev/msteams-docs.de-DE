@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams veröffentlichen Office Publishing AppSource-Lokalisierungssprache für den Store
 ms.date: 05/15/2018
-ms.openlocfilehash: 25a7694017cc8002ac23cf7075c59488ceb9773d
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: 2975365f56c573b66fda5e5a51106dc8cecf8c0f
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737041"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757045"
 ---
 # <a name="localize-your-app"></a>Lokalisieren IhrerApp
 
@@ -22,7 +22,7 @@ Berücksichtigen Sie die folgenden Faktoren, um Ihre Microsoft Teams App zu loka
 
 ## <a name="localize-your-appsource-listing"></a>Lokalisieren Des AppSource-Eintrags
 
-Wenn Sie die App im Store veröffentlichen, geben Sie Metadaten (Beschreibungen, Screenshots, Namen) in den Sprachen an, in denen Ihre App aufgelistet werden soll, und geben Sie diese Sprachen explizit auf der **Marketplace-Eintragsseite** im Partner Center an. Weitere Informationen finden Sie [unter lokalisierten Microsoft AppSource-Fronts](/office/dev/store/prepare-localized-solutions#localized-microsoft-appsource-fronts). Um lokalisierte Einträge im App Store zu unterstützen, können Sie Ihrem Eintrag weitere Sprachen hinzufügen. Die Standardsprachinformationen, die Sie im [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) für Ihren Eintrag angeben, werden im [AppSource-Websiteeintrag](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource ist ein Ort für alle Anforderungen Ihres Teams. Bringen Sie alles zusammen, einschließlich Chats, Besprechungen, Anrufen, Dateien und Tools, um produktivere Teamarbeit zu ermöglichen.") für Ihre App angezeigt. Derzeit ist Die Standardsprache Englisch.
+Wenn Sie die App im Store veröffentlichen, stellen Sie Metadaten (Beschreibungen, Screenshots, Namen) in den Sprachen bereit, in denen Ihre App aufgeführt werden soll, und geben Sie diese Sprachen explizit auf der **Marketplace-Eintragsseite** im Partner Center an. Weitere Informationen finden Sie [unter lokalisierten Microsoft AppSource-Fronts](/office/dev/store/prepare-localized-solutions#localized-microsoft-appsource-fronts). Um lokalisierte Einträge im App Store zu unterstützen, können Sie Ihrem Eintrag weitere Sprachen hinzufügen. Die Standardsprachinformationen, die Sie im [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) für Ihren Eintrag angeben, werden im [AppSource-Websiteeintrag](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource ist ein Ort für alle Anforderungen Ihres Teams. Bringen Sie alles zusammen, einschließlich Chats, Besprechungen, Anrufen, Dateien und Tools, um produktivere Teamarbeit zu ermöglichen.") für Ihre App angezeigt. Derzeit ist Die Standardsprache Englisch.
 
 ### <a name="configure-localization"></a>Konfigurieren der Lokalisierung
 
@@ -46,7 +46,7 @@ Die Bilder, die Sie mit der englischen Sprache hochladen, werden in AppSource ve
 
 Verwenden Sie das Microsoft Teams App-Schema `v1.5` und höher, um Ihre App zu lokalisieren. Sie können dies tun, indem Sie das `$schema` Attribut in der Datei manifest.json auf `https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json` oder höher festlegen und die Eigenschaft auf `$schema` version `manifestVersion` aktualisieren (`1.5`in diesem Fall).
 
-Fügen Sie die `localizationInfo` Eigenschaft mit der Standardsprache hinzu, die ihre Anwendung unterstützt. Die Standardsprache wird als endgültige Ausweichsprache verwendet, wenn die Clienteinstellungen des Benutzers nicht mit einer Ihrer zusätzlichen Sprachen übereinstimmen.
+Fügen Sie die `localizationInfo` Eigenschaft mit der Standardsprache hinzu, die ihre Anwendung unterstützt. Die Standardsprache wird als letzte Fallbacksprache verwendet, wenn die Clienteinstellungen des Benutzers nicht mit einer Ihrer zusätzlichen Sprachen übereinstimmen.
 
 ### <a name="example-manifestjson-change"></a>Beispiel für manifest.json-Änderung
 
@@ -97,7 +97,7 @@ Wenn die Sprache des Benutzers auf "en-ca" festgelegt ist, werden die folgenden 
 1. Der Teams-Client überschreibt die Zeichenfolgen "fr" und überschreibt sie mit den "en"-Zeichenfolgen.
 1. Da keine "en-ca"-Lokalisierung bereitgestellt wird, werden die "en"-Lokalisierungen verwendet.
 
-Wenn die Sprache des Benutzers auf "es-es" festgelegt ist, übernimmt der Teams Client die Zeichenfolgen "fr". Der Teams Client überschreibt die Zeichenfolgen nicht mit einer der Sprachdateien, da keine "es"- oder "es-es"-Übersetzung bereitgestellt wird.
+Wenn die Sprache des Benutzers auf "es-es" festgelegt ist, übernimmt der Teams Client die Zeichenfolgen "fr". Der Teams-Client überschreibt die Zeichenfolgen nicht mit einer der Sprachdateien, da keine "es"- oder "es-es"-Übersetzung bereitgestellt wird.
 
 Daher müssen Sie in Ihrem Manifest Nur-Sprachübersetzungen auf oberster Ebene bereitstellen. Beispielsweise `en` anstelle von `en-us`. Außerkraftsetzungen auf Regionsebene müssen nur für die wenigen Zeichenfolgen bereitgestellt werden, die sie benötigen.
 

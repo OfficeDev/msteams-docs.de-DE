@@ -1,17 +1,16 @@
 ---
 title: API-Referenzen für Besprechungs-Apps
 author: surbhigupta
-description: Identifizieren Sie die API-Referenzen für Meeting-Apps anhand von Beispielen und Codebeispielen
+description: Identifizieren Sie die API-Verweise auf Besprechungs-Apps anhand von Beispielen und Codebeispielen, Teams Apps-Besprechungs-Benutzerteilnehmer-Rollen-API- Benutzerkontextbenachrichtigungs-Signalabfrage.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: Teams Apps Besprechungen Benutzer Teilnehmer Rolle API Benutzerkontext Benachrichtigungssignalabfrage
-ms.openlocfilehash: 75dc6dde65b24fd05931021544fafe3af956d88d
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 9d0ae72e89104d58722c24dcdd1138d9fcc97033
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65667983"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755832"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
@@ -28,15 +27,15 @@ Die folgende Tabelle enthält eine Liste der APIs, die in den Microsoft Teams Cl
 
 |Methode| Beschreibung| Quelle|
 |---|---|----|
-|[**Benutzerkontext abrufen**](#get-user-context-api)| Rufen Sie kontextbezogene Informationen ab, um relevante Inhalte auf einer Registerkarte „Teams“ anzuzeigen.| MSTC SDK|
-|[**Teilnehmer abrufen**](#get-participant-api)| Rufen Sie Teilnehmerinformationen nach Meeting-ID und Teilnehmer-ID ab. |MSBF SDK|
-|[**Senden Sie eine Besprechungsbenachrichtigung**](#send-an-in-meeting-notification)| Stellen Sie Meeting-Signale mithilfe der vorhandenen Konversationsbenachrichtigungs-API für den Benutzer-Bot-Chat bereit und ermöglichen Sie die Benachrichtigung von Benutzeraktionen, die eine Benachrichtigung im Meeting anzeigen. |MSBF SDK|
-|[**Besprechungsdetails abrufen**](#get-meeting-details-api)| Rufen Sie die statischen Metadaten eines Meetings ab. |MSBF SDK |
-|[**Senden Sie Untertitel in Echtzeit**](#send-real-time-captions-api)| Senden Sie Untertitel in Echtzeit an ein laufendes Meeting. |MSTC SDK|
-|[**Teilen Sie App-Inhalte auf der Bühne**](#share-app-content-to-stage-api)| Teilen Sie bestimmte Teile der App für die Meeting-Phase aus dem Seitenbereich der App in einem Meeting. |MSTC SDK|
-|[**Rufen Sie den Freigabestatus für App-Inhalte ab**](#get-app-content-stage-sharing-state-api)| Rufen Sie Informationen über den Freigabestatus der App in der Besprechungsphase ab. |MSTC SDK|
-|[**Holen Sie sich Funktionen zum Teilen von App-Inhalten**](#get-app-content-stage-sharing-capabilities-api)| Rufen Sie die Funktionen der App zum Teilen in der Besprechungsphase ab. |MSTC SDK|
-|[**Holen Sie sich Team-Meeting-Events in Echtzeit**](#get-real-time-teams-meeting-events-api)|Rufen Sie Meeting-Ereignisse in Echtzeit ab, z. B. die tatsächliche Start- und Endzeit.| MSBF SDK|
+|[**Benutzerkontext abrufen**](#get-user-context-api)| Rufen Sie kontextbezogene Informationen ab, um relevante Inhalte auf einer Registerkarte „Teams“ anzuzeigen.| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**Teilnehmer abrufen**](#get-participant-api)| Rufen Sie Teilnehmerinformationen nach Meeting-ID und Teilnehmer-ID ab. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
+|[**Senden Sie eine Besprechungsbenachrichtigung**](#send-an-in-meeting-notification)| Stellen Sie Meeting-Signale mithilfe der vorhandenen Konversationsbenachrichtigungs-API für den Benutzer-Bot-Chat bereit und ermöglichen Sie die Benachrichtigung von Benutzeraktionen, die eine Benachrichtigung im Meeting anzeigen. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
+|[**Besprechungsdetails abrufen**](#get-meeting-details-api)| Rufen Sie die statischen Metadaten eines Meetings ab. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
+|[**Senden Sie Untertitel in Echtzeit**](#send-real-time-captions-api)| Senden Sie Untertitel in Echtzeit an ein laufendes Meeting. | [MSTC SDK](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
+|[**Teilen Sie App-Inhalte auf der Bühne**](#share-app-content-to-stage-api)| Teilen Sie bestimmte Teile der App für die Meeting-Phase aus dem Seitenbereich der App in einem Meeting. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+|[**Rufen Sie den Freigabestatus für App-Inhalte ab**](#get-app-content-stage-sharing-state-api)| Rufen Sie Informationen über den Freigabestatus der App in der Besprechungsphase ab. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingstate?view=msteams-client-js-latest&preserve-view=true) |
+|[**Holen Sie sich Funktionen zum Teilen von App-Inhalten**](#get-app-content-stage-sharing-capabilities-api)| Rufen Sie die Funktionen der App zum Teilen in der Besprechungsphase ab. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingcapabilities?view=msteams-client-js-latest&preserve-view=true) |
+|[**Holen Sie sich Team-Meeting-Events in Echtzeit**](#get-real-time-teams-meeting-events-api)|Rufen Sie Meeting-Ereignisse in Echtzeit ab, z. B. die tatsächliche Start- und Endzeit.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>Holen Sie sich die Benutzerkontext-API
 
@@ -133,6 +132,22 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ---
 
+| Eigenschaftenname | Zweck |
+|---|---|
+| **user.id** | ID des Benutzers. |
+| **user.aadObjectId** | Azure Active Directory Objekt-ID des Benutzers. |
+| **user.name** | Der Name des Benutzers. |
+| **user.givenName** | Vorname des Benutzers.|
+| **user.surname** | Nachname des Benutzers. |
+| **user.email** | E-Mail-ID des Benutzers. |
+| **user.userPrincipalName** | UPN des Benutzers. |
+| **user.tenantId** | Azure Active Directory Mandanten-ID. |
+| **user.userRole** | Rolle des Benutzers, z. B. "Administrator" oder "Benutzer". |
+| **meeting.role** | Die Rolle des Teilnehmers in der Besprechung. z. B. "Organisator" oder "Referent" oder "Teilnehmer". |
+| **meeting.inMeeting** | Der Wert, der angibt, ob sich der Teilnehmer an der Besprechung befindet. |
+| **conversation.id** | Die Besprechungschat-ID. |
+| **conversation.isGroup** | Boolescher Wert, der angibt, ob die Unterhaltung mehr als zwei Teilnehmer hat. |
+
 ### <a name="response-codes"></a>Antwortcodes
 
 Die folgende Tabelle enthält die Antwortcodes:
@@ -217,6 +232,15 @@ POST /v3/conversations/{conversationId}/activities
 ```
 
 ---
+
+| Eigenschaftenname | Zweck |
+|---|---|
+| **type** | Aktivitätstyp. |
+| **text** | Der Textinhalt der Nachricht. |
+| **summary** | Der Zusammenfassungstext der Nachricht. |
+| **channelData.notification.alertInMeeting** | Boolescher Wert, der angibt, ob dem Benutzer während einer Besprechung eine Benachrichtigung angezeigt werden soll. |
+| **channelData.notification.externalResourceUrl** | Der Wert der externen Ressourcen-URL der Benachrichtigung.|
+| **replyToId** | Die ID der übergeordneten oder Stammnachricht des Threads. |
 
 ### <a name="response-codes"></a>Antwortcodes
 
@@ -378,6 +402,28 @@ Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
 ```
 
 ---
+
+| Eigenschaftenname | Zweck |
+|---|---|
+| **details.id** | Die ID der Besprechung, codiert als BASE64-Zeichenfolge. |
+| **details.msGraphResourceId** | Die MsGraphResourceId, die speziell für MS-Graph-API-Aufrufe verwendet wird. |
+| **details.scheduledStartTime** | Die geplante Startzeit der Besprechung in UTC. |
+| **details.scheduledEndTime** | Die geplante Endzeit der Besprechung in UTC. |
+| **details.joinUrl** | Die URL, die für die Teilnahme an der Besprechung verwendet wird. |
+| **details.title** | Der Titel der Besprechung. |
+| **details.type** | Der Typ der Besprechung – z. B. Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
+| **conversation.isGroup** | Boolescher Wert, der angibt, ob die Unterhaltung mehr als zwei Teilnehmer hat. |
+| **conversation.conversationType** | Der Unterhaltungstyp. |
+| **conversation.id** | Die Besprechungschat-ID. |
+| **organizer.id** | Die Benutzer-ID des Organisators. |
+| **organizer.aadObjectId** | Die Azure Active Directory Objekt-ID des Organisators. |
+| **organizer.tenantId** | Die Azure Active Directory Mandanten-ID des Organisators. |
+
+Im Falle eines Besprechungsserientyps:
+
+**startDate**: Gibt das Datum an, an dem mit der Anwendung des Musters begonnen werden soll. Der Wert von "startDate" muss dem Datumswert der Starteigenschaft für die Ereignisressource entsprechen. Hinweis: Das erste Vorkommen der Besprechung kann nicht an diesem Datum stattfinden, wenn es nicht in das Muster passt.
+
+**endDate**: Gibt das Datum an, an dem das Anwenden des Musters beendet werden soll. Hinweis: Das letzte Vorkommen der Besprechung kann nicht an diesem Datum auftreten, wenn es nicht in das Muster passt.
 
 ## <a name="send-real-time-captions-api"></a>API zum Senden von Beschriftungen in Echtzeit
 
@@ -760,6 +806,35 @@ Der folgende Code stellt ein Beispiel für die Nutzlast eines Besprechungsende-E
     "locale": "en-US" 
 }
 ```
+
+| Eigenschaftenname | Zweck |
+|---|---|
+| **name** | Der Name des Benutzers.|
+| **type** | Aktivitätstyp. |
+| **Timestamp** | Lokales Datum und Uhrzeit der Nachricht, ausgedrückt im ISO-8601-Format. |
+| **id** | ID für die Aktivität. |
+| **channelId** | Kanal, dem diese Aktivität zugeordnet ist. |
+| **serviceUrl** | Dienst-URL, an die Antworten auf diese Aktivität gesendet werden sollen. |
+| **from.id** | ID des Benutzers, der die Anforderung gesendet hat. |
+| **from.aadObjectId** | Azure Active Directory-Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
+| **conversation.isGroup** | Boolescher Wert, der angibt, ob die Unterhaltung mehr als zwei Teilnehmer hat. |
+| **conversation.tenantId** | Azure Active Directory Mandanten-ID der Unterhaltung oder Besprechung. |
+| **conversation.id** | Die Besprechungschat-ID. |
+| **recipient.id** | DIE ID des Benutzers, der die Anforderung empfängt. |
+| **recipient.name** | Der Name des Benutzers, der die Anforderung empfängt. |
+| **entities.locale** | Entität, die Metadaten zum Gebietsschema enthält. |
+| **entities.country** | Entität, die Metadaten zum Land enthält. |
+| **entities.type** | Entität, die Metadaten zum Client enthält. |
+| **channelData.tenant.id** | Azure Active Directory Mandanten-ID. |
+| **channelData.source** | Der Quellname, aus dem das Ereignis ausgelöst oder aufgerufen wird. |
+| **channelData.meeting.id** | Die der Besprechung zugeordnete Standard-ID. |
+| **Wert. MeetingType** | Der Besprechungstyp. |
+| **Wert. Titel** | Der Betreff der Besprechung. |
+| **Wert. Id** | Die der Besprechung zugeordnete Standard-ID. |
+| **Wert. JoinUrl** | Die Teilnahme-URL der Besprechung. |
+| **Wert. Starttime** | Die Startzeit der Besprechung in UTC. |
+| **Wert. Endtime** | Die Besprechungsendzeit in UTC. |
+| **locale**| Das Gebietsschema der vom Client festgelegten Nachricht. |
 
 ## <a name="code-sample"></a>Codebeispiel
 

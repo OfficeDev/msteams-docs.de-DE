@@ -3,15 +3,15 @@ title: Bot-Aktivitätenhandler
 author: surbhigupta
 description: Grundlegendes zu den Bot-Aktivitätenhandlern in Teams.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
 keywords: Aktivitätenhandler Framework Bot Karte Zustimmung Kanal Ereignis
-ms.openlocfilehash: e975279276e8b8d4f3b934144b6cb1c3a7850424
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 5b03eeaa01231fd070c1e81fc11b9254e10aba91
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65112004"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757430"
 ---
 # <a name="bot-activity-handlers"></a>Bot-Aktivitätenhandler
 
@@ -23,7 +23,7 @@ Zum Organisieren der Unterhaltungslogik für Ihren Bot wird ein Aktivitätenhand
 
 Der Teams-Aktivitätenhandler wird vom Aktivitätenhandler des Microsoft Bot Frameworks abgeleitet. Er leitet alle Teams-Aktivitäten weiter, bevor er die Behandlung von nicht Teams-spezifischen Aktivitäten zulässt.
 
-Wenn ein Bot eine Aktivität für Teams empfängt, leitet er diese an seinen Aktivitätenhandler weiter. Alle Aktivitäten werden über einen Basishandler weitergeleitet, der als Turnhandler bezeichnet wird. Der Turnhandler ruft den erforderlichen Aktivitätenhandler auf, der für die Verarbeitung der empfangenen Aktivitätsart zuständig ist. Der Teams-Bot wird von der Klasse `TeamsActivityHandler` abgeleitet, die von der Klasse `ActivityHandler` des Bot Frameworks abgeleitet wird.
+Wenn ein Bot für Teams eine Aktivität empfängt, wird er an die Aktivitätshandler weitergeleitet. Alle Aktivitäten werden über einen Basishandler weitergeleitet, der als Turnhandler bezeichnet wird. Der Turnhandler ruft den erforderlichen Aktivitätenhandler auf, der für die Verarbeitung der empfangenen Aktivitätsart zuständig ist. Der Teams-Bot wird von der Klasse `TeamsActivityHandler` abgeleitet, die von der Klasse `ActivityHandler` des Bot Frameworks abgeleitet wird.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -31,7 +31,7 @@ Bots werden mit dem Bot Framework erstellt. Wenn die Bots eine Nachrichtenaktivi
 
 In der Teams-Aktivitätenhandlerklasse gibt es die zwei primären Teams-Aktivitätenhandler `OnConversationUpdateActivityAsync` und `OnInvokeActivityAsync`. `OnConversationUpdateActivityAsync` leitet alle Unterhaltungsaktualisierungsaktivitäten, und `OnInvokeActivityAsync` leitet alle Teams-Aufrufaktivitäten.
 
-Um Ihre Logik für Teams-spezifische Aktivitätenhandler zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im Abschnitt [Botlogik](#bot-logic) gezeigt. Es gibt keine Basisimplementierung für diese Handler, daher müssen Sie die von Ihnen gewünschte Logik in Ihre Überschreibung aufnehmen.
+Um Ihre Logik für Teams-spezifische Aktivitätenhandler zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im Abschnitt [Botlogik](#bot-logic) gezeigt. Es gibt keine Basisimplementierung für diese Handler. Daher müssen Sie die gewünschte Logik in ihrer Außerkraftsetzung hinzufügen.
 
 Die Codeausschnitte für Teams-Aktivitätenhandler:
 
@@ -101,7 +101,7 @@ Bots werden mit dem Bot Framework erstellt. Wenn die Bots eine Nachrichtenaktivi
 
 In der Teams-Aktivitätenhandlerklasse gibt es die zwei primären Teams-Aktivitätenhandler `dispatchConversationUpdateActivity` und `onInvokeActivity`. `dispatchConversationUpdateActivity` leitet alle Unterhaltungsaktualisierungsaktivitäten, und `onInvokeActivity` leitet alle Teams-Aufrufaktivitäten.
 
-Um Ihre Logik für Teams-spezifische Aktivitätenhandler zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im Abschnitt [Botlogik](#bot-logic) gezeigt. Definieren Sie Ihre Botlogik für diese Handler, und achten Sie daruf, dass Sie am Ende `next()` aufrufen. Durch Aufrufen von `next()` stellen Sie sicher, dass der nächste Handler ausgeführt wird.
+Um Ihre Logik für Teams-spezifische Aktivitätenhandler zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im Abschnitt [Botlogik](#bot-logic) gezeigt. Definieren Sie Ihre Botlogik für diese Handler, und achten Sie daruf, dass Sie am Ende `next()` aufrufen. Durch Aufrufen `next()`stellen Sie sicher, dass der nächste Handler ausgeführt wird.
 
 Die Codeausschnitte für Teams-Aktivitätenhandler:
 
@@ -171,13 +171,13 @@ Bots werden mit dem Bot Framework erstellt. Wenn die Bots eine Nachrichtenaktivi
 
 In der Teams-Aktivitätenhandlerklasse gibt es die zwei primären Teams-Aktivitätenhandler `on_conversation_update_activity` und `on_invoke_activity`. `on_conversation_update_activity` leitet alle Unterhaltungsaktualisierungsaktivitäten, und `on_invoke_activity` leitet alle Teams-Aufrufaktivitäten.
 
-Um Ihre Logik für Teams-spezifische Aktivitätenhandler zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im Abschnitt [Botlogik](#bot-logic) gezeigt. Es gibt keine Basisimplementierung für diese Handler, daher müssen Sie die von Ihnen gewünschte Logik in Ihre Überschreibung aufnehmen.
+Um Ihre Logik für Teams-spezifische Aktivitätenhandler zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im Abschnitt [Botlogik](#bot-logic) gezeigt. Es gibt keine Basisimplementierung für diese Handler. Daher müssen Sie die gewünschte Logik in ihrer Außerkraftsetzung hinzufügen.
 
 ---
 
 ## <a name="bot-logic"></a>Botlogik
 
-Die Botlogik verarbeitet eingehende Aktivitäten aus einem oder mehreren Bot-Kanälen und generiert als Reaktion ausgehende Aktivitäten. Dies gilt weiterhin für Bots, die von der Teams-Aktivitätenhandlerklasse abgeleitet wurden, die zuerst nach Teams-Aktivitäten sucht. Nach der Überprüfung auf Teams-Aktivitäten übergibt sie alle anderen Aktivitäten an den Aktivitätenhandler des Bot Frameworks.
+Die Botlogik verarbeitet eingehende Aktivitäten aus einem oder mehreren Bot-Kanälen und generiert als Reaktion ausgehende Aktivitäten. Dies gilt immer noch für Bots, die von der Teams Aktivitätshandlerklasse abgeleitet wurden, die zuerst nach Teams Aktivitäten sucht. Nach der Überprüfung auf Teams-Aktivitäten übergibt sie alle anderen Aktivitäten an den Aktivitätenhandler des Bot Frameworks.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -190,7 +190,7 @@ Die Botlogik verarbeitet eingehende Aktivitäten aus einem oder mehreren Bot-Kan
 
 Aktivitätenhandler unterscheiden sich im Kontext eines Teams, in dem ein neues Mitglied dem Team anstelle eines Nachrichtenthreads hinzugefügt wird.
 
-Die Liste der unter `ActivityHandler` definierten Handler umfasst Folgendes:
+Die Liste der definierten `ActivityHandler` Handler umfasst Folgendes:
 
 | Ereignis | Handler | Beschreibung |
 | :-- | :-- | :-- |
@@ -219,7 +219,7 @@ Der `TeamsActivityHandler` erweitert die Liste der Handler im Abschnitt „Core 
 
 #### <a name="teams-invoke-activities"></a>Aufrufaktivitäten in Teams
 
-Die vom `OnInvokeActivityAsync`-Teams-Aktivitätenhandler aufgerufene Liste der Teams-Aktivitätenhandler umfasst Folgendes:
+Die Liste der vom Teams-Aktivitätshandler aufgerufenen `OnInvokeActivityAsync` Teams Aktivitätshandler umfasst Folgendes:
 
 | Aufruftypen                    | Handler                              | Beschreibung                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -227,12 +227,12 @@ Die vom `OnInvokeActivityAsync`-Teams-Aktivitätenhandler aufgerufene Liste der 
 | fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | Diese Methode wird aufgerufen, wenn eine Dateizustimmungskarte vom Benutzer akzeptiert wird. |
 | fileConsent/invoke              | `OnTeamsFileConsentAsync`            | Diese Methode wird aufgerufen, wenn eine Dateizustimmungskartenaktivität vom Connector empfangen wird. |
 | fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | Diese Methode wird aufgerufen, wenn eine Dateizustimmungskarte vom Benutzer abgelehnt wird. |
-| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | Diese Methode wird aufgerufen, wenn eine Office 365-Connectorkarten-Aktionsaktivität vom Connector empfangen wird. |
+| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | Diese Methode wird aufgerufen, wenn eine Aktionsaktivität Office 365 Connectorkarte vom Connector empfangen wird. |
 | signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | Diese Methode wird aufgerufen, wenn eine signIn-Überprüfungsstatusaktivität vom Connector empfangen wird. |
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um die Logik bereitzustellen, wenn ein Aufgabenmodul abgerufen wird. |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um die Logik bereitzustellen, wenn ein Aufgabenmodul übermittelt wird. |
 
-Die in diesem Abschnitt aufgeführten Aufrufaktivitäten gelten für Unterhaltungs-Bots in Teams. Das Bot Framework SDK unterstützt speziell für Nachrichtenerweiterungen auch Aufrufaktivitäten. Weitere Informationen finden Sie unter [Nachrichtenerweiterungen](https://aka.ms/azure-bot-what-are-messaging-extensions).
+Die in diesem Abschnitt aufgeführten Aufrufaktivitäten gelten für Unterhaltungsbots in Teams. Das Bot Framework SDK unterstützt speziell für Nachrichtenerweiterungen auch Aufrufaktivitäten. Weitere Informationen finden Sie unter [Nachrichtenerweiterungen](https://aka.ms/azure-bot-what-are-messaging-extensions).
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
@@ -243,7 +243,7 @@ Die in diesem Abschnitt aufgeführten Aufrufaktivitäten gelten für Unterhaltun
 
 Aktivitätenhandler unterscheiden sich im Kontext eines Teams, in dem das neue Mitglied dem Team anstelle eines Nachrichtenthreads hinzugefügt wird.
 
-Die Liste der unter `ActivityHandler` definierten Handler umfasst Folgendes:
+Die Liste der definierten `ActivityHandler` Handler umfasst Folgendes:
 
 | Ereignis | Handler | Beschreibung |
 | :-- | :-- | :-- |
@@ -271,7 +271,7 @@ Der `TeamsActivityHandler` erweitert die Liste der Handler im Abschnitt „Core 
 
 #### <a name="teams-invoke-activities"></a>Aufrufaktivitäten in Teams
 
-Die vom `onInvokeActivity`-Teams-Aktivitätenhandler aufgerufene Liste der Teams-Aktivitätenhandler umfasst Folgendes:
+Die Liste der vom Teams-Aktivitätshandler aufgerufenen `onInvokeActivity` Teams Aktivitätshandler umfasst Folgendes:
 
 | Aufruftypen                    | Handler                              | Beschreibung                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -279,7 +279,7 @@ Die vom `onInvokeActivity`-Teams-Aktivitätenhandler aufgerufene Liste der Teams
 | fileConsent/invoke              | `handleTeamsFileConsentAccept`      | Diese Methode wird aufgerufen, wenn eine Dateizustimmungskarte vom Benutzer akzeptiert wird. |
 | fileConsent/invoke              | `handleTeamsFileConsent`            | Diese Methode wird aufgerufen, wenn eine Dateizustimmungskartenaktivität vom Connector empfangen wird. |
 | fileConsent/invoke              | `handleTeamsFileConsentDecline`     | Diese Methode wird aufgerufen, wenn eine Dateizustimmungskarte vom Benutzer abgelehnt wird. |
-| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | Diese Methode wird aufgerufen, wenn eine Office 365-Connectorkarten-Aktionsaktivität vom Connector empfangen wird. |
+| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | Diese Methode wird aufgerufen, wenn eine Aktionsaktivität Office 365 Connectorkarte vom Connector empfangen wird. |
 | signin/verifyState              | `handleTeamsSigninVerifyState`      | Diese Methode wird aufgerufen, wenn eine signIn-Überprüfungsstatusaktivität vom Connector empfangen wird. |
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um die Logik bereitzustellen, wenn ein Aufgabenmodul abgerufen wird. |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um die Logik bereitzustellen, wenn ein Aufgabenmodul übermittelt wird. |
@@ -295,7 +295,7 @@ Die in diesem Abschnitt aufgeführten Aufrufaktivitäten gelten für Unterhaltun
 
 Aktivitätenhandler unterscheiden sich im Kontext eines Teams, in dem das neue Mitglied dem Team anstelle eines Nachrichtenthreads hinzugefügt wird.
 
-Die Liste der unter `ActivityHandler` definierten Handler umfasst Folgendes:
+Die Liste der definierten `ActivityHandler` Handler umfasst Folgendes:
 
 | Ereignis | Handler | Beschreibung |
 | :-- | :-- | :-- |
@@ -324,7 +324,7 @@ Der `TeamsActivityHandler` erweitert die Liste der Handler vom Abschnitt „Core
 
 #### <a name="teams-invoke-activities"></a>Aufrufaktivitäten in Teams
 
-Die vom `on_invoke_activity`-Teams-Aktivitätenhandler aufgerufene Liste der Teams-Aktivitätenhandler umfasst Folgendes:
+Die Liste der vom Teams-Aktivitätshandler aufgerufenen `on_invoke_activity` Teams Aktivitätshandler umfasst Folgendes:
 
 | Aufruftypen                    | Handler                              | Beschreibung                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -332,7 +332,7 @@ Die vom `on_invoke_activity`-Teams-Aktivitätenhandler aufgerufene Liste der Tea
 | fileConsent/invoke              | `on_teams_file_consent_accept`      | Diese Methode wird aufgerufen, wenn eine Dateizustimmungskarte vom Benutzer akzeptiert wird. |
 | fileConsent/invoke              | `on_teams_file_consent`            | Diese Methode wird aufgerufen, wenn eine Dateizustimmungskartenaktivität vom Connector empfangen wird. |
 | fileConsent/invoke              | `on_teams_file_consent_decline`     | Diese Methode wird aufgerufen, wenn eine Dateizustimmungskarte vom Benutzer abgelehnt wird. |
-| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | Diese Methode wird aufgerufen, wenn eine Office 365-Connectorkarten-Aktionsaktivität vom Connector empfangen wird. |
+| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | Diese Methode wird aufgerufen, wenn eine Aktionsaktivität Office 365 Connectorkarte vom Connector empfangen wird. |
 | signin/verifyState              | `on_teams_signin_verify_state`      | Diese Methode wird aufgerufen, wenn eine signIn-Überprüfungsstatusaktivität vom Connector empfangen wird. |
 | task/fetch                      | `on_teams_task_module_fetch`        | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um die Logik bereitzustellen, wenn ein Aufgabenmodul abgerufen wird. |
 | task/submit                     | `on_teams_task_module_submit`       | Diese Methode kann in einer abgeleiteten Klasse überschrieben werden, um die Logik bereitzustellen, wenn ein Aufgabenmodul übermittelt wird. |
@@ -343,7 +343,7 @@ Die in diesem Abschnitt aufgeführten Aufrufaktivitäten gelten für Unterhaltun
 
 ---
 
-Nachdem Sie sich nun mit Bot-Aktivitätenhandlern vertraut gemacht haben, sehen Sie nun, wie sich Bots je nach Unterhaltung und den empfangenen oder gesendeten Nachrichten unterschiedlich verhalten.
+Nachdem Sie sich nun mit Bot-Aktivitätshandlern vertraut machen, lassen Sie uns sehen, wie sich Bots je nach Unterhaltung und den empfangenen oder gesendeten Nachrichten unterschiedlich verhalten.
 
 ## <a name="next-step"></a>Nächster Schritt
 

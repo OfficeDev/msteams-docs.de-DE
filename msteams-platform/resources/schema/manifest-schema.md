@@ -2,20 +2,22 @@
 title: Manifestschemareferenz
 description: Beschreibung des Manifestschemas für Microsoft Teams
 ms.topic: reference
-ms.author: lajanuar
 ms.localizationpriority: high
 keywords: Manifestschema für Microsoft Teams
-ms.openlocfilehash: 135e4c7cfd82c0ca47075e8339bf9123fe094a9a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 788a8f5542510e3232c3f97bf12584f08f12d0f6
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104007"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672908"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
-Das Microsoft Teams-Manifest beschreibt, wie die App in das Microsoft Teams Produkt integriert wird. Ihr Manifest muss dem unter [`https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json) gehosteten Schema entsprechen. Frühere Versionen 1.0, 1.1,..., und 1.12 werden ebenfalls unterstützt (mit „v1.x“ in der URL).
+Das Microsoft Teams-App-Manifest beschreibt, wie Ihre App in das Microsoft Teams-Produkt integriert wird. Ihr App-Manifest muss dem Schema entsprechen, das auf [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json)gehostet wird. Frühere Versionen 1.0, 1.1,...,1.12 und die aktuelle Version 1.13 (siehe Hinweis unten) werden jeweils unterstützt (mit "v1.x" in der URL).
 Weitere Informationen zu den Änderungen, die in den einzelnen Versionen vorgenommen wurden, finden Sie im [Manifeständerungsprotokoll](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
+
+> [!Important]
+> Version `1.13` des Microsoft Teams-App-Manifestschemas ermöglicht die Unterstützung für [die Erweiterung von Teams-Apps auf Outlook und Office](../../m365-apps/overview.md). Für Apps, die nur für Teams bestimmt sind, verwenden Sie Version `1.12` (oder früher). Die Schemas 1.12 und 1.13 sind andernfalls identisch. Weitere Informationen finden Sie in der Übersicht über das [JavaScript-Client-SDK von Teams](../../m365-apps/overview.md).
 
 Das folgende Schemabeispiel umfasst alle Erweiterbarkeitsoptionen:
 
@@ -23,8 +25,8 @@ Das folgende Schemabeispiel umfasst alle Erweiterbarkeitsoptionen:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.12",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.13",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "packageName": "com.example.myapp",
@@ -344,7 +346,7 @@ Die https://-URL, die auf das JSON-Schema für das Manifest verweist.
 
 **Erforderlich** – Zeichenfolge
 
-Die Version des Manifestschemas, das dieses Manifest verwendet.
+Die Version des Manifestschemas, die dieses Manifest verwendet. Verwenden Sie `1.13`, um die Unterstützung von Teams-Apps in Outlook und Office zu aktivieren. verwenden Sie `1.12` (oder früher) für Apps nur für Teams.
 
 ## <a name="version"></a>Version
 
@@ -457,7 +459,7 @@ Wird verwendet, wenn Ihre App-Lösung über Teamkanal-Registerkarten verfügt, d
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 Zeichen|✔|Die https://-URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die Bereiche `team` und `groupchat`. |
-|`canUpdateConfiguration`|Boolean|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: **true**.|
+|`canUpdateConfiguration`|Boolescher Wert|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: **true**.|
 |`context` |Array von Enumerationen|6 ||Die Gruppe von `contextItem`-Bereichen, in denen eine [Registerkarte unterstützt wird](../../tabs/how-to/access-teams-context.md). Standard: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Ein relativer Dateipfad zu einem Registerkarten-Vorschaubild zur Verwendung in SharePoint. Größe: 1024 x 768. |
 |`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint bereitgestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
@@ -630,6 +632,16 @@ Geben Sie Ihre Azure Active Directory-App-ID und Microsoft Graph-Informationen a
 |`id`|string|36 Zeichen|✔|Azure AD-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
 |`resource`|string|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für Einmaliges Anmelden. </br> **HINWEIS:** Wenn Sie Einmaliges Anmelden nicht verwenden, geben Sie einen Dummyzeichenfolgenwert in dieses Feld in Ihr App-Manifest ein (z. B. https://notapplicable), um eine Fehlermeldung zu vermeiden. |
 
+## <a name="graphconnector"></a>graphConnector
+
+**Optional** – Objekt
+
+Geben Sie die Graph-Connectorkonfiguration der App an. Wenn dies vorhanden ist, muss [auch webApplicationInfo.id](#webapplicationinfo) angegeben werden.
+
+|Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
+|---|---|---|---|---|
+|`notificationUrl`|string|2048 Zeichen|✔|Die URL, an die Graph-Connector-Benachrichtigungen für die Anwendung gesendet werden sollen.|
+
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
 **Optional** – Boolescher Wert
@@ -642,7 +654,7 @@ Gibt an, ob der Ladefortschritt angezeigt werden soll, während eine App oder Re
 
  **Optional** – Boolescher Wert
 
-Gibt an, wo eine persönliche App mit oder ohne Registerkartenkopfleiste gerendert wird. Standard ist **false**.
+Gibt an, ob eine persönliche App ohne Registerkartenkopfleiste gerendert wird (was den Vollbildmodus anzeigt). Der Standardwert ist **false**.
 
 > [!NOTE]
 > `isFullScreen` funktioniert nur für Apps, die in Ihrer Organisation veröffentlicht wurden.

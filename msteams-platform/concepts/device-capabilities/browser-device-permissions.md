@@ -2,18 +2,18 @@
 title: Geräteberechtigungen für den Browser
 keywords: Teams Apps Funktionen Berechtigungen
 description: Sichere Wiedereinführung der Unterstützung von Geräteberechtigungen für Apps in unserem Webclient
-localization_priority: high
+localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: beb9007593bd1c9a660429d9e92a08e39c1f4710
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 0789715aebfd1db0c9d0100ccffb2ff213a10d1d
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111367"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756744"
 ---
 # <a name="device-permissions-for-the-browser"></a>Geräteberechtigungen für den Browser
 
-Teams App, für die Geräteberechtigungen erforderlich sind, wie z. B. Kamera- oder Mikrofonzugriff, müssen jetzt Benutzern die Berechtigung manuell auf App-Ebene im Webbrowser erteilen. Zuvor hat der Browser behandelt, wie Zugriffsberechtigungen gewährt werden, aber jetzt werden diese Berechtigungen in Microsoft Teams behandelt. Dies hat Auswirkungen darauf, wie Sie Ihre Anwendung entwerfen und ob sie diese Berechtigungen im Browser benötigen.
+Teams App, für die Geräteberechtigungen erforderlich sind, z. B. Kamera- oder Mikrofonzugriff, müssen Benutzer die Berechtigung jetzt manuell auf App-Ebene im Webbrowser erteilen. Zuvor hat der Browser behandelt, wie Zugriffsberechtigungen gewährt werden, aber jetzt werden diese Berechtigungen in Microsoft Teams behandelt. Dies hat Auswirkungen darauf, wie Sie Ihre Anwendung entwerfen und ob sie diese Berechtigungen im Browser benötigen.
 
 ## <a name="enable-apps-device-permissions"></a>Aktivieren der Geräteberechtigungen der App
 
@@ -33,7 +33,7 @@ Ein Benutzer muss diese Berechtigungen im Browser aktivieren, damit diese Berech
 
 ## <a name="recommendation"></a>Empfehlung
 
-Teams-App, für die Geräteberechtigungen im Browser erforderlich sind, muss Benutzern eine Anleitung zum Suchen und Aktivieren dieser Berechtigungen auf der Teams-Benutzeroberfläche anzeigen. Je nach Kontext, in dem Ihr Programm ausgeführt wird, müssen Sie sicherstellen, dass die Anleitung den Benutzer auf den richtigen Speicherort für den Zugriff auf diese Berechtigungen verweist, da sie sich bei persönlichen Apps, Aufgabenmodul-Dialogfeldern, Registerkarten in Chats und Kanälen oder Besprechungen unterscheiden.
+Teams App, für die Geräteberechtigungen im Browser erforderlich sind, müssen Benutzern Anweisungen zum Suchen und Aktivieren dieser Berechtigungen in der benutzeroberfläche Teams anzeigen. Je nach Kontext, in dem Ihre Anwendung ausgeführt wird, müssen Sie sicherstellen, dass die Anweisungen den Benutzer auf den richtigen Speicherort verweisen, um auf diese Berechtigungen zuzugreifen. Die Berechtigungen unterscheiden sich für persönliche Apps, Aufgabenmoduldialogfelder, Registerkarten in Chats und Kanäle oder Besprechungen.
 
 </br>
 <img src="../../assets/images/tabs/enable-access.png" alt="Enable camera access" width="800"/>

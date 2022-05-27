@@ -4,12 +4,12 @@ description: Beschreibt alle neuen oder aktuellen Entwicklerfunktionen in Micros
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 'Teams: Was sind die neuesten Updates oder Entwicklervorschau und Features'
-ms.openlocfilehash: e116cb5bbe9344d4782e4d75b65e0baea5c0339b
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 2150c0dba509a1dc9c46d149538e1951cafcc955
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/25/2022
-ms.locfileid: "65667968"
+ms.locfileid: "65672964"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -23,6 +23,7 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 |24.05.2022| Übermitteln Ihrer Outlook- und Office-fähigen Apps an den Teams Store | Erweitern Ihrer App über Microsoft 365 hinweg > [Übersicht](m365-apps/overview.md) |
 |24.05.2022| App-Anleitung und Neuerungen in TeamsJS, Version 2.0.0| Tools und SDKs > [Teams JavaScript-Client-SDK](tabs/how-to/using-teams-client-sdk.md)  |
 | 24.05.2022 | Teams-Toolkit, Version 4.0.0, für Visual Studio Code jetzt allgemein verfügbar | Tools und SDKs > Teams-Toolkit für Visual Studio Code > <br> • [Überblick über das Teams-Toolkit](toolkit/teams-toolkit-fundamentals.md) <br> • [Erstellen eines Befehlsbots mit JavaScript](toolkit/add-capability.md) <br> • [Erstellen eines Benachrichtigungsbots mit JavaScript](toolkit/add-capability.md) <br> • [Vorschau und Anpassen des Teams-App-Manifests](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Herstellen einer Verbindung mit vorhandenen APIs](toolkit/add-API-connection.md) <br> • [Hinzufügen von Funktionen zu ihrer Teams-App](toolkit/add-capability.md) <br> • [Hinzufügen der Oberfläche für einmaliges Anmelden](toolkit/add-single-sign-on.md) <br> • [Hinzufügen von Cloudressourcen zur Teams-App](toolkit/add-resource.md) |
+| 24.05.2022 | App-Manifestversion 1.13 eingeführt | App-Manifest > [Manifestschema für Microsoft Teams](resources/schema/manifest-schema.md) |
 | 24.05.2022 | Bots und Nachrichtenerweiterungen für GCC und GCCH | • Planen ihrer App > [Übersicht](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Erstellen von Bots > [Übersicht](bots/what-are-bots.md) </br> • Erstellen von Nachrichtenerweiterungen > [Übersicht](messaging-extensions/what-are-messaging-extensions.md) |
 
 <!--
@@ -79,6 +80,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 |24.05.2022| Übermitteln Ihrer Outlook- und Office-fähigen Apps an den Teams Store | Erweitern Ihrer App über Microsoft 365 hinweg > [Übersicht](m365-apps/overview.md) |
 |24.05.2022| App-Anleitung und Neuerungen in TeamsJS, Version 2.0.0| Tools und SDKs > [Teams JavaScript-Client-SDK](tabs/how-to/using-teams-client-sdk.md)  |
 | 24.05.2022 | Teams-Toolkit, Version 4.0.0, für Visual Studio Code jetzt allgemein verfügbar | Tools und SDKs > Teams-Toolkit für Visual Studio Code > <br> • [Überblick über das Teams-Toolkit](toolkit/teams-toolkit-fundamentals.md) <br> • [Erstellen eines Befehlsbots mit JavaScript](toolkit/add-capability.md) <br> • [Erstellen eines Benachrichtigungsbots mit JavaScript](toolkit/add-capability.md) <br> • [Vorschau und Anpassen des Teams-App-Manifests](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Herstellen einer Verbindung mit vorhandenen APIs](toolkit/add-API-connection.md) <br> • [Hinzufügen von Funktionen zu ihrer Teams-App](toolkit/add-capability.md) <br> • [Hinzufügen der Oberfläche für einmaliges Anmelden](toolkit/add-single-sign-on.md) <br> • [Hinzufügen von Cloudressourcen zur Teams-App](toolkit/add-resource.md) |
+| 24.05.2022 | App-Manifestversion 1.13 eingeführt | App-Manifest > [Manifestschema für Microsoft Teams](resources/schema/manifest-schema.md) |
 |24.05.2022|Bots und Nachrichtenerweiterungen für GCC und GCCH| • Planen ihrer App > [Übersicht](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Erstellen von Bots > [Übersicht](bots/what-are-bots.md) </br> • Erstellen von Nachrichtenerweiterungen > [Übersicht](messaging-extensions/what-are-messaging-extensions.md) |
 |26.04.2022|Deinstallationsverhalten für eine persönliche App mit Bot | Erstellen von Bots > Bot-Unterhaltungen > [Verhaltensaktualisierungen in persönlichen Apps mit Bots deinstallieren](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |22.04.2022| Testvorschau für monetarisierte Apps | Monetarisieren Ihrer App > [Testvorschau für monetarisierte Apps](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
@@ -165,7 +167,7 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 |13.05.2021| Informationen zu mConnect und Skooler wurden hinzugefügt | Integrieren mit Teams > Moodle LMS >[ Moodle Lernmanagementsystem](resources/moodle-overview.md)|
 |10.05.2021| App-Manifest v1.10 wurde veröffentlicht | App-Manifest > [Manifest-Schema](resources/schema/manifest-schema.md) |
 |10.05.2021| Neue App-Anpassungsfunktion | Entwerfen Sie Ihre App > [Ermöglichen Sie Organisationen, Ihre App anzupassen](concepts/design/enable-app-customization.md) |
-|07.05.2021| Deep-Links für Audio- und Videoanrufe im Chat. | Integration in Teams > [Deep-Links](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
+|07.05.2021| Deep-Links für Audio- und Videoanrufe im Chat. | Integration in Teams > [Deep-Links](concepts/build-and-test/deep-links.md#navigate-to-an-audio-or-audio-video-call) |
 |30.04.2021|Neue Anleitung zum Veröffentlichen von Apps im Teams-Store | • Veröffentlichen im Teams Store > [Veröffentlichen Ihrer App im Teams Store](concepts/deploy-and-publish/appsource/publish.md)</br> • Veröffentlichen im Teams Store > [Richtlinien zur Überprüfung des Teams-Shops](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |29.04.2021 | Unterstützung für universelle Aktionen für adaptive Karten v1.4. | Erstellung von Karten und Aufgabenmodul > Erstellen von Karten > Universelle Aktionen für Adaptive Karten > [Universelle Aktionen für Adaptive Karten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |29.04.2021 | Benutzerspezifische Ansichten | Erstellung von Karten und Aufgabenmodulen > Erstellen von Karten > Universelle Aktionen für Adaptive Karten > [Benutzerspezifische Ansichten](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
@@ -240,7 +242,7 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 | 06.05.2019 | Programm zur Anwendungszertifizierung für Store-Apps. | [Anwendungszertifizierung](~/concepts/deploy-and-publish/appsource/post-publish/overview.md#complete-microsoft-365-certification) |
 | 06.05.2019 | App-Vorlagen sind jetzt verfügbar | [App-Vorlagen](~/samples/app-templates.md). |
 | 23.04.2019 | Aktionsbasierte Nachrichtenerweiterungen sind jetzt verfügbar. | [Aktionsbasierte Nachrichtenerweiterungen](~/concepts/messaging-extensions/create-extensions.md) |
-| 18.02.2019 | Erstellen von Deep-Links zu privatem Chat. | [Deep-Link zu einem Chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 18.02.2019 | Erstellen von Deep-Links zu privatem Chat. | [Deep-Link zu einem Chat](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 23.01.2019 | Anzeigen von SKU- und Lizenztyp-Informationen im Registerkartenkontext. | [Registerkartenkontext](~/concepts/tabs/tabs-context.md) |
 |
 </details>
@@ -254,7 +256,7 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 | -------- | --------- | ------------------ |
 | 12.11.2018 | Registerkarten im Gruppenchat sind jetzt in der veröffentlichten Version von Teams verfügbar. Im Rahmen dieser Arbeit wurde der Abschnitt „Registerkarten“ aus Gründen der Übersichtlichkeit überarbeitet.| [Konfigurierbare Registerkarten](~/concepts/tabs/tabs-configurable.md) |
 | 11.11.2018 | Die ersten Schritte für Node JS und .NET/C# wurden aktualisiert, um App Studio in Teams zu verwenden, und ein neuer Abschnitt zum Hosten von Node-basierten Teams-Apps in Azure wurde hinzugefügt. | [Erste Schritte mit der Microsoft Teams-Plattform mit C#/.NET und App Studio](~/get-started/get-started-dotnet-app-studio.md),  [Erste Schritte auf der Microsoft Teams-Plattform mit Node JS und App Studio](~/get-started/get-started-nodejs-app-studio.md), [Hosten Ihrer Node Teams-App in Azure](~/get-started/get-started-nodejs-in-azure.md)|
-| 09.11.2018 | Sie können jetzt Deep-Links zu privaten Chats zwischen Benutzern erstellen. | [Deep-Link zu einem Chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 09.11.2018 | Sie können jetzt Deep-Links zu privaten Chats zwischen Benutzern erstellen. | [Deep-Link zu einem Chat](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 08.11.2018 | SharePoint Framework 1.7 wurde ausgeliefert und mit ihm eine neue Funktion zur Verwendung der Registerkarte Microsoft Teams als SharePoint Framework Webpart. | [Registerkarten in SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
 | 05.11.2018 | Das **Aufgabenmodul** -Feature wurde veröffentlicht. Ein Aufgabenmodul ermöglicht es Ihnen, modale Popup-Fenster in Ihrer Teams-Anwendung zu erstellen, sowohl von Bots als auch von Registerkarten aus. Innerhalb des Popups können Sie Ihren eigenen benutzerdefinierten HTML-/JavaScript-Code ausführen, ein `<iframe>`-basiertes Widget anzeigen, z. B. ein YouTube- oder Microsoft Stream-Video, oder eine [adaptive Karte](/adaptive-cards/)anzeigen. | [Aufgabenmodul – Übersicht](~/concepts/task-modules/task-modules-overview.md), [Aufgabenmodul auf Registerkarten](~/concepts/task-modules/task-modules-tabs.md),  [Aufgabenmodul in Bots](~/concepts/task-modules/task-modules-bots.md) |
 | 05.10.2018 | Formatierungsinformationen für Karten wurden aktualisiert und auf den Desktop-, iOS- und Android-Clients für Teams getestet. | [Karten](~/concepts/cards/cards.md), [Kartenformatierung](~/concepts/cards/cards-format.md) |

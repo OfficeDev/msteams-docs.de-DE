@@ -3,14 +3,14 @@ title: Testen und Debuggen Ihres Bots
 description: In diesem Artikel wird das Testen von Bots in Microsoft Teams beschrieben
 keywords: Testen von Microsoft Teams-Bots
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: 7eae460614f33456748b2546e36c10924f49b25d
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a95432ae2e704d6faac51185ce0d971f9f1e15ef
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111472"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755914"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Testen und debuggen Ihres Microsoft Teams-Bots
 
@@ -55,11 +55,11 @@ Sie können auch eine Unterhaltung mit Ihrem Bot mithilfe seiner ID initiieren. 
 2. Verweisen Sie direkt in Microsoft Teams auf die App-ID Ihres Bots:
    * Kopieren Sie auf der seite [Bot-Dashboard](https://dev.botframework.com/bots) für Ihren Bot unter **Details** die **Microsoft-App-ID** für Ihren Bot.
   
-     ![Abrufen der AppID für den Bot](~/assets/images/bots_appid_botframework.png)
+      :::image type="content" source="../../assets/images/bots_appid_botframework.png" alt-text="Bot-Dashboard":::
   
    * Wählen Sie in Microsoft Teams im **Chatbereich** das Symbol **Chat hinzufügen** aus. Fügen Sie für **An** die Microsoft App-ID Ihres Bots ein.
   
-     ![Hochladen der AppID für den Bot](~/assets/images/bots_uploading.png)
+      :::image type="content" source="../../assets/images/bots_uploading.png" alt-text="Hochladen der AppID für den Bot"border="true":::
 
      Die App-ID sollte in Ihren Botnamen aufgelöst werden.
 
@@ -72,7 +72,7 @@ Ihr Bot empfängt das `conversationUpdate`-Ereignis genau wie Bots, die einem Te
 
 Beachten Sie, dass Benutzer ihren Bot am Senden persönlicher Chatnachrichten hindern können. Sie können dies aktivieren, indem sie im Chatkanal mit der rechten Maustaste auf Ihren Bot klicken und **Bot-Unterhaltungen blockieren** auswählen. Dies bedeutet, dass Ihre Bots weiterhin Nachrichten senden, der Benutzer diese Nachrichten jedoch nicht erhält.
 
-![Blockieren eines Bots](~/assets/images/bots/botdisable.png)
+  :::image type="content" source="../../assets/images/bots/botdisable.png" alt-text="Blockieren eines Bots"border="true":::
 
 ## <a name="removing-a-bot-from-a-team"></a>Entfernen eines Bots aus einem Team
 

@@ -6,12 +6,12 @@ keywords: Teams-Registerkarten Gruppenkanal konfigurierbar entfernen Löschen
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: fe0445099958af7cd9eccc831fe22fa2e94cbcc5
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 0d8d466a2dd2504b74f72b342345576b6f823a89
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672936"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757465"
 ---
 # <a name="create-a-removal-page"></a>Erstellen einer Seite zum Entfernen
 
@@ -25,7 +25,7 @@ Sie `manifest.json` definieren die Features und Funktionen Ihrer Registerkarte. 
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Boolean|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Der Standardwert ist `true`. |
+|`canUpdateConfiguration`|Boolescher Wert|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Der Standardwert ist `true`. |
 
 Wenn Ihre Registerkarte in einen Kanal- oder Gruppenchat hochgeladen wird, fügt Teams ein Dropdownmenü mit der rechten Maustaste für Ihre Registerkarte hinzu. Die verfügbaren Optionen werden durch die `canUpdateConfiguration` Einstellung bestimmt. Die folgende Tabelle enthält die Einstellungsdetails:
 
@@ -47,7 +47,7 @@ Die `RemoveEvent` Schnittstelle beschreibt ein Objekt mit zwei Methoden:
 
 * Die `notifySuccess()` Funktion ist erforderlich. Es gibt an, dass das Entfernen der zugrunde liegenden Ressource erfolgreich war und der Inhalt entfernt werden kann.
 
-* Die `notifyFailure(string)` Funktion ist optional. Es gibt an, dass das Entfernen der zugrunde liegenden Ressource fehlgeschlagen ist und der Inhalt nicht entfernt werden kann. Der optionale Zeichenfolgenparameter gibt einen Grund für den Fehler an. Falls angegeben, wird diese Zeichenfolge dem Benutzer angezeigt. andernfalls wird ein allgemeiner Fehler angezeigt.
+* Die `notifyFailure(string)` Funktion ist optional. Es weist darauf hin, dass das Entfernen der zugrunde liegenden Ressource fehlgeschlagen ist und der Inhalt nicht entfernt werden kann. Der optionale Zeichenfolgenparameter gibt einen Grund für den Fehler an. Falls angegeben, wird diese Zeichenfolge dem Benutzer angezeigt. andernfalls wird ein allgemeiner Fehler angezeigt.
 
 #### <a name="use-the-getconfig-function"></a>Verwenden der `getConfig()` Funktion
 

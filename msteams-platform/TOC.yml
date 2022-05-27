@@ -24,7 +24,7 @@
       href: sbs-gs-javascript.yml
     - name: Erstellen Ihrer ersten Bot-App mit JavaScript
       href: sbs-gs-bot.yml
-    - name: Erstellen Sie Ihre erste Messagingerweiterungs-App mittels JavaScript
+    - name: Erstellen Ihrer ersten Nachrichtenerweiterungs-App mit JavaScript
       href: sbs-gs-msgext.yml
     - name: Erstellen Ihrer ersten App mit Blazor
       href: sbs-gs-blazorupdate.yml
@@ -34,6 +34,10 @@
       href: sbs-gs-csharp.yml
     - name: Erstellen Ihrer ersten App mit Node.js
       href: sbs-gs-nodejs.yml
+    - name: Erstellen eines Benachrichtigungsbots mit JavaScript
+      href: sbs-gs-notificationbot.yml
+    - name: Erstellen eines Befehlsbots mit JavaScript
+      href: sbs-gs-commandbot.yml
     - name: Codebeispiele
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Planen Ihrer App
@@ -301,6 +305,24 @@
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: API-Referenzen für Besprechungs-Apps
       href: apps-in-teams-meetings/API-references.md
+    - name: Verbesserte Zusammenarbeit mit Live Share
+      items:
+        - name: Übersicht
+          href: apps-in-teams-meetings/teams-live-share-overview.md
+        - name: Erste Schritte
+          items:
+            - name: Schnellstart
+              href: apps-in-teams-meetings/teams-live-share-quick-start.md
+            - name: Dice Roller-Lernprogramm
+              href: apps-in-teams-meetings/teams-live-share-tutorial.md
+        - name: Kernfunktionen
+          href: apps-in-teams-meetings/teams-live-share-capabilities.md
+        - name: Medienfunktionen
+          href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
+        - name: Agiles Poker-Tutorial
+          href: sbs-teams-live-share.yml
+        - name: Live Share SDK – FAQ
+          href: apps-in-teams-meetings/teams-live-share-faq.md
     - name: Benutzerdefinierte Zusammen-Modus-Szenen
       href: apps-in-teams-meetings/teams-together-mode.md
 - name: Erstellen von Webhooks und Connectors

@@ -2,16 +2,16 @@
 title: Erstellen Sie Apps mit dem Teams-Toolkit und Visual Studio
 description: Beginnen Sie mit dem Erstellen großartiger benutzerdefinierter Apps direkt in Visual Studio mit dem Microsoft Teams-Toolkit. Erfahren Sie, wie Sie Ihre App in Visual Studio konfigurieren, validieren und über Visual Studio und das Developer Portal veröffentlichen.
 keywords: teams Visual Studio-Toolkit
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 1/13/2022
 ms.author: johmil
-ms.openlocfilehash: 751ea9b8a0f4592c5884c4d49450972cef7e6623
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 9dbe606b99ef493a136381667bbd1c1da1f955b0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111311"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756457"
 ---
 # <a name="teams-toolkit-for-visual-studio"></a>Microsoft Teams-Toolkit-Erweiterung für Visual Studio
 
@@ -31,7 +31,7 @@ Die Erweiterung von Teams Toolkit für Visual Studio macht es einfach, neue Proj
 5. Erweitern Sie auf der rechten Seite den Abschnitt **ASP.NET- und Webentwicklung**, und wählen Sie **Microsoft Teams-Entwicklungstools** in der Liste der optionalen Komponenten aus.
 6. Wählen Sie im Visual **Studio-Installer Installieren** oder **Ändern** aus, um den Installationsvorgang abzuschließen.
 
-![Auswählen der Microsoft Teams-Entwicklungstools im Visual Studio-Installationsprogramm.) installiert.](images/teams-development-tools-vs-installer.png)
+   ![Auswählen der Microsoft Teams-Entwicklungstools im Visual Studio-Installationsprogramm.) installiert.](images/teams-development-tools-vs-installer.png)
 
 ## <a name="get-started-quickly-with-a-new-project"></a>Beginnen Sie schnell mit einem neuen Projekt
 
@@ -49,7 +49,7 @@ Mit der Microsoft Teams-App-Projektvorlage können Sie ein Microsoft 365-Konto a
 1. Geben Sie im **Fenster Neues Projekt** konfigurieren _HelloTeams_ in das Feld **Projektname** ein oder geben Sie es ein. Wählen Sie dann **Erstellen aus**.
 1. Wählen Sie im **Fenster Neue Teams-Anwendung** erstellen ein Microsoft 365-Konto aus oder melden Sie sich mit der **Kontoauswahl bei einem Konto** an. Wählen Sie dann **Erstellen aus**.
 
-![Erstellen eines neuen Microsoft Teams-App-Projekts in Visual Studio.](images/teams-toolkit-vs-new-project.png)
+   ![Erstellen eines neuen Microsoft Teams-App-Projekts in Visual Studio.](images/teams-toolkit-vs-new-project.png)
 
 Visual Studio öffnet Ihr neues Projekt und Teams Toolkit richtet Ihr neues Projekt im Teams Developer Portal ein. Das Projekt wird für die Teams-Organisation hinzugefügt, die mit dem Microsoft 365-Konto verknüpft ist, das Sie in den obigen Schritten ausgewählt haben, und eine neue Azure Active Directory-Registrierung erstellen. Dies ist erforderlich, damit die App in Teams ausgeführt werden kann.
 

@@ -2,15 +2,15 @@
 title: Eingehende Anrufbenachrichtigungen
 description: Lernen Sie anhand von Codebeispielen detaillierte technische Informationen zur Behandlung von Benachrichtigungen bei eingehenden Anrufen und zur Umleitung und Authentifizierung von Anrufen kennen
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Affinität zwischen Rückrufregion und Anrufbenachrichtigungen
 ms.date: 04/02/2019
-ms.openlocfilehash: a3d8a861d28813782b6b0dfd24807ed106780c85
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e2844649764284f74e242967106adbfdc8edf8cf
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111549"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757143"
 ---
 # <a name="incoming-call-notifications"></a>Eingehende Anrufbenachrichtigungen
 
@@ -18,7 +18,7 @@ In [Registrieren eines Anruf- und Besprechungsbots für Microsoft Teams](./regis
 
 ## <a name="protocol-determination"></a>Protokollermittlung
 
-Die eingehende Benachrichtigung wird aus Gründen der Kompatibilität mit dem früheren [Skype-Protokoll](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true) in einem Legacy-Format bereitgestellt. Um den Aufruf in das Microsoft Graph-Protokoll umzuwandeln, muss Ihr Bot feststellen, ob die Benachrichtigung in einem Legacy-Format vorliegt und die folgende Antwort geben:
+Die eingehende Benachrichtigung wird aus Gründen der Kompatibilität mit dem früheren [Skype-Protokoll](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true) in einem Legacy-Format bereitgestellt. Um den Aufruf in das Microsoft Graph-Protokoll zu konvertieren, muss Ihr Bot ermitteln, ob die Benachrichtigung im Legacyformat vorliegt, und die folgende Antwort liefert:
 
 ```http
 HTTP/1.1 204 No Content
@@ -87,7 +87,7 @@ Die auf <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> veröffen
 * `tid` ist die Mandanten-ID für Contoso.com.
 * `iss` ist der Tokenherausgeber, `https://api.botframework.com`.
 
-Für die Handhabung Ihres Codes muss der Webhook das Token validieren, sicherstellen, dass es nicht abgelaufen ist und prüfen, ob es von der veröffentlichten OpenID-Konfiguration signiert wurde. Sie müssen auch überprüfen, ob aud Ihrer App-ID entspricht, bevor Sie die Rückrufanforderung annehmen.
+Für die Codebehandlung muss der Webhook das Token überprüfen, sicherstellen, dass es nicht abgelaufen ist, und überprüfen, ob es von der veröffentlichten OpenID-Konfiguration signiert wurde. Sie müssen auch überprüfen, ob aud Ihrer App-ID entspricht, bevor Sie die Rückrufanforderung annehmen.
 
 Weitere Informationen finden Sie unter [Überprüfen eingehender Anforderungen](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
 

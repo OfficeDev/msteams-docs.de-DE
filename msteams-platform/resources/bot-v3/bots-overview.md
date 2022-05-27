@@ -5,12 +5,12 @@ ms.topic: conceptual
 keywords: Entwicklung von Teams-Bots
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: cbf8b1c14b080d890dd4c65390671632e2602f81
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: f592ae06efc2c416e70530fe2c46cbfbfc03140b
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602264"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755853"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Hinzufügen von Bots zu Microsoft Teams-Apps
 
@@ -21,7 +21,7 @@ Erstellen und verbinden Sie intelligente Bots, um mit Microsoft Teams Benutzern 
 > [!IMPORTANT]
 > Derzeit sind Bots in Government Community Cloud (GCC) und GCC-High verfügbar, jedoch nicht in Department of Defense (DOD).
 
-![Beispiel für einen Bot, der einen Benutzer unterstützt](~/assets/images/bot_example.png)
+:::image type="content" source="../../assets/images/bot_example.png" alt-text="Beispiel für einen Bot, der einen Benutzer unterstützt" border="true":::
 
 ## <a name="what-you-need-to-know-bots"></a>Was Sie wissen müssen: Bots
 
@@ -73,6 +73,6 @@ Die folgenden Themen führen Sie durch den Prozess der Erstellung eines großart
 * [Verwenden von Registerkarten mit Bots](~/resources/bot-v3/bots-with-tabs.md): Zusammenwirken von Registerkarten und Bots.
 * [Testen Sie Ihren Bot](~/resources/bot-v3/bots-test.md): Fügen Sie Ihren Bot für persönliche oder Teamunterhaltungen hinzu, um ihn in Aktion zu sehen.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 [Bot Framework-Beispiele](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

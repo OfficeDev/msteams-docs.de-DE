@@ -5,12 +5,12 @@ description: Beschreibt anhand von Codebeispielen, wie Sie auf die Submit-Aktion
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: de1924881b6e3732fc4b2170a496f234244be84e
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 16ad47f3b57dc5704ad106f8ec3593a2234d29d3
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297198"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757563"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Auf die Aktion zum Absenden des Aufgabenmoduls reagieren
 
@@ -21,14 +21,14 @@ Nachdem ein Benutzer das Aufgabenmodul abgeschickt hat, erhält Ihr Webdienst ei
 
 Sie haben die folgenden Möglichkeiten zu antworten:
 
-* Keine Antwort: Verwenden Sie die Submit-Aktion, um einen Prozess in einem externen System auszulösen und dem Benutzer keine Rückmeldung zu geben. Es ist nützlich für langlaufende Prozesse und um abwechselnd Feedback zu geben. Sie können z. B. Feedback mit einer [proaktiven Nachricht](~/bots/how-to/conversations/send-proactive-messages.md) geben.
+* Keine Antwort: Verwenden Sie die Submit-Aktion, um einen Prozess in einem externen System auszulösen und dem Benutzer keine Rückmeldung zu geben. Es ist nützlich für lang andauernde Prozesse und um abwechselnd Feedback zu geben. Sie können z. B. Feedback mit einer [proaktiven Nachricht](~/bots/how-to/conversations/send-proactive-messages.md) geben.
 * [Ein weiteres Aufgabenmodul](#respond-with-another-task-module): Sie können mit einem zusätzlichen Aufgabenmodul als Teil einer mehrstufigen Interaktion antworten.
 * [Kartenantwort](#respond-with-a-card-inserted-into-the-compose-message-area): mit einer Karte antworten, mit der der Benutzer interagieren oder die er in eine Nachricht einfügen kann
 * [Adaptive Karte vom Bot](#bot-response-with-adaptive-card): Fügen Sie eine adaptive Karte direkt in die Unterhaltung ein.
 * [Fordern Sie den Benutzer auf, sich zu authentifizieren](~/messaging-extensions/how-to/add-authentication.md).
 * [Fordern Sie den Benutzer auf, zusätzliche Konfigurationen bereitzustellen](~/get-started/first-message-extension.md).
 
-Für die Authentifizierung oder Konfiguration wird der ursprüngliche Aufruf an Ihren Webdienst zurückgesendet, nachdem der Benutzer den Vorgang abgeschlossen hat. Die folgende Tabelle zeigt, welche Arten von Antworten basierend auf dem Aufrufspeicherort `commandContext` der Nachrichtenerweiterung verfügbar sind:
+Für die Authentifizierung oder Konfiguration wird der ursprüngliche Aufruf an Ihren Webdienst zurückgesendet, nachdem der Benutzer den Vorgang abgeschlossen hat. Die folgende Tabelle zeigt, welche Arten von Antworten verfügbar sind, basierend auf dem Aufrufspeicherort `commandContext` der Nachrichtenerweiterung:
 
 |Antworttyp | Verfassen | Befehlsleiste | Message |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -215,18 +215,18 @@ So konfigurieren Sie die Umfrage:
 1. Der Benutzer wählt die Nachrichtenerweiterung aus, um das Aufgabenmodul aufzurufen.
 1. Der Benutzer konfiguriert die Abfrage mit dem Aufgabenmodul.
 1. Nach dem Übermitteln des Aufgabenmoduls verwendet die App die bereitgestellten Informationen, um die Abstimmung als adaptive Karte zu erstellen, und sendet sie als `botMessagePreview` Antwort an den Client.
-1. Der Benutzer kann dann eine Vorschau der Adaptive Card-Nachricht anzeigen, bevor der Bot sie in den Kanal einfügt. Wenn die App kein Mitglied des Kanals ist, wählen Sie `Send` aus, um sie hinzuzufügen.
+1. Der Benutzer kann dann eine Vorschau der Adaptive Card-Nachricht anzeigen, bevor der Bot sie in den Kanal einfügt. Wenn die App kein Mitglied des Kanals ist, wählen Sie diese Option `Send` aus, um sie hinzuzufügen.
 
     > [!NOTE]
     >
     > * Die Benutzer können auch auswählen, dass `Edit`die Nachricht werden soll, wodurch sie an das ursprüngliche Aufgabenmodul zurückgegeben werden.
     > * Durch die Interaktion mit der adaptiven Karte wird die Nachricht vor dem Senden geändert.
     >
-1. Nachdem der Benutzer `Send` der Bot die Nachricht an den Kanal sendet.
+1. Nachdem der Benutzer die Option ausgewählt hat `Send`, sendet der Bot die Nachricht an den Kanal.
 
 ## <a name="respond-to-initial-submit-action"></a>Reagieren auf erste Übermittlungsaktion
 
-Ihr Aufgabenmodul muss auf die anfängliche `composeExtension/submitAction` Nachricht mit einer Vorschau der Karte reagieren, die der Bot an den Kanal sendet. Der Benutzer kann die Karte vor dem Senden überprüfen und versuchen, Ihren Bot in der Unterhaltung zu installieren, wenn der Bot noch nicht installiert ist.
+Ihr Aufgabenmodul muss auf die anfängliche `composeExtension/submitAction` Nachricht mit einer Vorschau der Karte reagieren, die der Bot an den Kanal sendet. Der Benutzer kann die Karte vor dem Senden überprüfen und versuchen, Ihren Bot in der Unterhaltung zu installieren, wenn der Bot bereits installiert ist.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 

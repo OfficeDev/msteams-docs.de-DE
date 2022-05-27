@@ -2,18 +2,18 @@
 title: Optimieren eines Bots mit Ratenbegrenzung in Teams
 description: Erfahren Sie anhand von Beispielcodes mehr über das Behandeln von Ratenbegrenzungen für Bots mit Pro Bot pro Thread-Grenzwert und pro Grenzwert für alle Bots. Darüber hinaus lernen Sie bewährte Methoden der Ratenbegrenzung in Microsoft Teams kennen.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Teams Bots Ratenbegrenzung
-ms.openlocfilehash: 09b3f0b79737e3da09b34ebe1931a7209632cca1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a864970bd837ef4af3ccebe0b09ca4d38ac7b76b
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111808"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757150"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimieren eines Bots mit Ratenbegrenzung in Teams
 
-Ratenbegrenzung ist eine Methode, um Nachrichten auf eine bestimmte maximale Häufigkeit zu beschränken. Als allgemeines Prinzip muss Ihre Anwendung die Anzahl der Nachrichten beschränken, die sie auf einen einzelnen Chat oder eine Kanalunterhaltung sendet. Dadurch wird sichergestellt, dass eine optimale Benutzererfahrung gewährleistet ist und Nachrichten Ihren Benutzern nicht als Spam angezeigt werden.
+Ratenbegrenzung ist eine Methode, um Nachrichten auf eine bestimmte maximale Häufigkeit zu beschränken. Als allgemeines Prinzip muss Ihre Anwendung die Anzahl der Nachrichten beschränken, die sie auf einen einzelnen Chat oder eine Kanalunterhaltung sendet. Dadurch wird sichergestellt, dass eine optimale Benutzererfahrung erzielt wird und Nachrichten ihren Benutzern nicht als Spam angezeigt werden.
 
 Um Microsoft Teams und seine Benutzer zu schützen, bieten die Bot-APIs eine Ratenbegrenzung für eingehende Anforderungen. Apps, die diesen Grenzwert überschreiten, erhalten den Fehlerstatus `HTTP 429 Too Many Requests`. Alle Anforderungen unterliegen derselben Richtlinie zur Begrenzung der Rate, einschließlich senden von Nachrichten, Kanalaufzählungen und Listenabrufen.
 
@@ -140,11 +140,11 @@ In der folgenden Tabelle sind die Grenzwerte pro Bot pro Thread aufgeführt:
 | Unterhaltung erstellen | 2 | 8  |
 | Unterhaltung erstellen | 30 | 60 |
 | Unterhaltung erstellen | 3600 | 1800 |
-| Abrufen von Unterhaltungsmitgliedern| 1 | 14  |
+| Abrufen von Unterhaltungsmitgliedern| 1 | 14 |
 | Abrufen von Unterhaltungsmitgliedern| 2 | 16 |
 | Abrufen von Unterhaltungsmitgliedern| 30 | 120 |
 | Abrufen von Unterhaltungsmitgliedern| 3600 | 3600 |
-| Abrufen von Unterhaltungen | 1 | 14  |
+| Abrufen von Unterhaltungen | 1 | 14 |
 | Abrufen von Unterhaltungen | 2 | 16 |
 | Abrufen von Unterhaltungen | 30 | 120 |
 | Abrufen von Unterhaltungen | 3600 | 3600 |
@@ -162,11 +162,11 @@ Die folgende Tabelle enthält den Grenzwert pro Thread für alle Bots:
 
 | Szenario | Zeitraum in Sekunden | Maximal zulässige Vorgänge |
 | --- | --- | --- |
-| An Unterhaltung senden | 1 | 14  |
+| An Unterhaltung senden | 1 | 14 |
 | An Unterhaltung senden | 2 | 16 |
-| Unterhaltung erstellen | 1 | 14  |
+| Unterhaltung erstellen | 1 | 14 |
 | Unterhaltung erstellen | 2 | 16 |
-| Unterhaltung erstellen| 1 | 14  |
+| Unterhaltung erstellen| 1 | 14 |
 | Unterhaltung erstellen| 2 | 16 |
 | Abrufen von Unterhaltungsmitgliedern| 1 | 28 |
 | Abrufen von Unterhaltungsmitgliedern| 2 | 32 |

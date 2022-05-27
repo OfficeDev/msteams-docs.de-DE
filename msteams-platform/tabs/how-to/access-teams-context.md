@@ -4,12 +4,12 @@ description: Beschreibt, wie Sie Benutzerkontext zu Ihren Registerkarten abrufen
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams Registerkarten Benutzerkontext
-ms.openlocfilehash: 319aea79c38466969f84e1e00d44b127a77ef92f
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 04a0e751a8a532895b183690e00bc058c94d3346
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672919"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755944"
 ---
 # <a name="get-context-for-your-tab"></a>Kontext für Ihre Registerkarte erhalten
 
@@ -109,6 +109,9 @@ Zusätzlich zu diesen Feldänderungen stehen zwei neue Felder für freigegebene 
 * `hostTeamTenantId`: Legen Sie den Wert fest, der `tenantId` dem Hostingteam oder dem Team zugeordnet ist, das den freigegebenen Kanal erstellt hat. Auf die Eigenschaft kann mit der Mandanten-ID des aktuellen Benutzers im `tid` Feld `getContext` verwiesen werden, um zu ermitteln, ob der Benutzer intern oder extern zum Mandanten des Hostingteams gehört.
 
 Wenn Ihre Seite einen dieser Werte verwendet, muss der Wert des Felds `channelType` sein `Shared` , um zu bestimmen, ob Ihre Seite in einem freigegebenen Kanal geladen ist und entsprechend reagieren kann.
+
+> [!NOTE]
+> Jedes Mal, wenn ein Benutzer den Teams Desktop- oder Webclient neu startet oder neu lädt, wird eine neue SessionID erstellt, die von Teams Sitzung nachverfolgt wird. Wenn ein Benutzer die Teams-Apps beendet und in Teams Plattform neu lädt, wird eine neue App-SessionID erstellt, die von der App-Sitzung nachverfolgt wird.
 
 ## <a name="handle-theme-change"></a>Behandeln von Designänderungen
 

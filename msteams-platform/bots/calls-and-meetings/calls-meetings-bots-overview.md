@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Ihre Microsoft Teams-Apps per Sprache und Video m
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Anrufen Anrufe Audio Video IVR Sprache Onlinebesprechungen Echtzeitmedienstreams Bot
-ms.openlocfilehash: 98dd4e329abec3e1b84ae9230d299a2e9d50fd8b
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 48c5283a1552c2f04651fe67254def0e6d60a8e6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297170"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756730"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots für Anrufe und Onlinebesprechungen
 
@@ -23,7 +23,7 @@ Wenn Sie diese Graph-APIs in einer Teams-App verwenden möchten, erstellen Sie e
 
 Darüber hinaus können Bots über die Echtzeitmedienplattform per Sprach-, Video- und Bildschirmfreigabe mit Teams-Anrufen und Besprechungen interagieren. Ein Bot, der an Audio- oder Videoanrufen und Onlinebesprechungen teilnimmt, ist ein regulärer Microsoft Teams-Bot mit wenigen zusätzlichen Funktionen, die zum Registrieren des Bots verwendet werden.
 
-Mit dem Teams-App-Manifest mit zwei zusätzlichen Einstellungen `supportsCalling` und `supportsVideo`Graph-Berechtigungen für die Microsoft App-ID Ihres Bots und der Zustimmung des Mandantenadministrators können Sie den Bot registrieren. Bei der Registrierung eines Bots für Anrufe und Besprechungen für Teams wird die Webhook-URL erwähnt, die der Webhook-Endpunkt für alle eingehenden Anrufe an Ihren Bot ist. Für einen in der Anwendung gehosteten Medienbot ist die .NET-Bibliothek Microsoft.Graph.Communications.Calls.Media erforderlich, um auf die Audio- und Videomedienstreams zuzugreifen. Zudem muss der Bot auf einem Windows Server-Computer oder Windows Server-Gastbetriebssystem in Azure bereitgestellt werden. Bots in Teams unterstützen nur eine bestimmte Gruppe von Medienformaten für Audio- und Videoinhalte.
+Mit dem Teams-App-Manifest mit zwei zusätzlichen Einstellungen `supportsCalling` und `supportsVideo`Graph-Berechtigungen für die Microsoft App-ID Ihres Bots und der Zustimmung des Mandantenadministrators können Sie den Bot registrieren. Bei der Registrierung eines Bots für Anrufe und Besprechungen für Teams wird die Webhook-URL erwähnt, die der Webhook-Endpunkt für alle eingehenden Anrufe an Ihren Bot ist. Für einen in der Anwendung gehosteten Medienbot ist die .NET-Bibliothek Microsoft.Graph.Communications.Calls.Media erforderlich, um auf die Audio- und Videomedienstreams zuzugreifen. Zudem muss der Bot auf einem Windows Server-Computer oder Windows Server-Gastbetriebssystem in Azure bereitgestellt werden. Bots auf Teams unterstützen nur eine bestimmte Gruppe von Medienformaten für Audio- und Videoinhalte.
 
 Nun müssen Sie einige Kernkonzepte, Terminologien und Konventionen verstehen.
 
@@ -49,13 +49,13 @@ Anrufe erfolgen entweder zwischen einer Person und Ihrem Bot (Peer-to-Peer) oder
 
 Im Folgenden sind die verschiedenen Anruftypen und -berechtigungen aufgeführt, die für den Anruf erforderlich sind:
 
-* Ein Benutzer kann einen Peer-to-Peer-Anruf mit Ihrem Bot starten oder den Bot zu einem bestehenden Anruf mit mehreren Teilnehmern einladen. Der Anruf mit mehreren Teilnehmern ist in der Teams-Benutzeroberfläche noch nicht aktiviert.
+* Ein Benutzer kann einen Peer-to-Peer-Anruf mit Ihrem Bot starten oder den Bot zu einem bestehenden Anruf mit mehreren Teilnehmern einladen. Der Anruf mit mehreren Teilnehmern ist in der benutzeroberfläche Teams noch nicht aktiviert.
 
     > [!NOTE]
     > Vom Benutzer initiierte Anrufe an einen Bot werden derzeit auf der mobilen Microsoft Teams-Plattform nicht unterstützt.
 
-* Graph-Berechtigungen sind nicht erforderlich, damit ein Benutzer einen Peer-to-Peer-Anruf mit Ihrem Bot initiiert. Zusätzliche Berechtigungen sind erforderlich, damit Ihr Bot an einem Anruf mit mehreren Teilnehmern teilnimmt oder damit der Bot einen Peer-to-Peer-Anruf mit einem Benutzer initiiert.
-* Ein Anruf kann als Peer-to-Peer-Anruf beginnen und schließlich zu einem Anruf mit mehreren Teilnehmern werden. Ihr Bot kann Anrufe mit mehreren Teilnehmern initiieren, indem er andere Teilnehmer einlädt, sofern der Bot die richtigen Berechtigungen besitzt. Wenn Ihr Bot nicht die Berechtigungen besitzt, um an Gruppenanrufen teilzunehmen, und wenn ein Teilnehmer einen anderen Teilnehmer zu dem Anruf hinzufügt, wird der Bot aus dem Anruf ausgeschlossen.
+* Graph Berechtigungen sind für einen Benutzer nicht erforderlich, um einen Peer-to-Peer-Anruf mit Ihrem Bot zu initiieren. Zusätzliche Berechtigungen sind erforderlich, damit Ihr Bot an einem Anruf mit mehreren Teilnehmern teilnimmt oder damit der Bot einen Peer-to-Peer-Anruf mit einem Benutzer initiiert.
+* Ein Anruf kann als Peer-to-Peer-Anruf beginnen und schließlich zu einem Anruf mit mehreren Teilnehmern werden. Ihr Bot kann Anrufe mit mehreren Teilnehmern initiieren, indem er andere Teilnehmer einlädt, sofern der Bot die richtigen Berechtigungen besitzt. Wenn Ihr Bot nicht berechtigt ist, an Gruppenanrufen teilzunehmen, und wenn ein Teilnehmer dem Anruf einen weiteren Teilnehmer hinzufügt, wird der Bot aus dem Anruf entfernt.
 
 ### <a name="signals"></a>Signale
 
@@ -74,11 +74,11 @@ Aus Sicht eines Teams-Benutzers gibt es zwei Arten von Onlinebesprechungen: ad h
 
 ### <a name="real-time-media"></a>Echtzeitmedien
 
-Wenn ein Bot an einem Anruf oder einer Onlinebesprechung teilnimmt, muss er Audio- und Videostreams handhaben. Wenn Benutzer während eines Anrufs sprechen, sich vor einer Webcam zeigen oder ihre Bildschirme in einer Besprechung präsentieren, wird dies einem Bot als Audio- und Videostreams angezeigt. Wenn ein Bot etwas so Einfaches wie **Drücken Sie 0, um den Operator zu erreichen** in einem IVR-Szenario (Interactive Voice Response) sagen möchte, muss eine .WAV-Datei abgespielt werden. Zusammenfassend wird dies als Medien oder Echtzeitmedien bezeichnet.
+Wenn ein Bot an einem Anruf oder einer Onlinebesprechung teilnimmt, muss er Audio- und Videostreams handhaben. Wenn Benutzer bei einem Anruf sprechen, sich auf einer Webcam anzeigen oder ihre Bildschirme in einer Besprechung präsentieren, wird sie einem Bot als Audio- und Videostreams angezeigt. Wenn ein Bot etwas so Einfaches wie **Drücken Sie 0, um den Operator zu erreichen** in einem IVR-Szenario (Interactive Voice Response) sagen möchte, muss eine .WAV-Datei abgespielt werden. Zusammenfassend wird dies als Medien oder Echtzeitmedien bezeichnet.
 
-Echtzeitmedien beziehen sich auf Szenarien, in denen Medien im Gegensatz zur Wiedergabe zuvor aufgezeichneter Audio- oder Videodaten in Echtzeit verarbeitet werden müssen. Der Umgang mit Medienstreams, insbesondere Echtzeitmedienstreams, ist äußerst komplex. Microsoft hat die Echtzeitmedienplattform erstellt, um diese Szenarien zu handhaben und so viel wie möglich von der herkömmlichen umfangreichen Verarbeitung von Echtzeitmedien auszulagern. Wenn der Bot auf einen eingehenden Anruf antwortet oder einem neuen oder bestehenden Anruf beitritt, muss er der Echtzeitmedienplattform mitteilen, wie Medien gehandhabt werden. Wenn Sie eine IVR-Anwendung (Interactive Voice Response) erstellen, können Sie die kostspielige Audioverarbeitung an Microsoft auslagern. Benötigt Ihr Bot direkten Zugriff auf Medienstreams, wird auch dieses Szenario unterstützt. Es gibt zwei Arten der Medienverarbeitung:
+Echtzeitmedien beziehen sich auf Szenarien, in denen Medien im Gegensatz zur Wiedergabe zuvor aufgezeichneter Audio- oder Videodaten in Echtzeit verarbeitet werden müssen. Der Umgang mit Medienstreams, insbesondere Echtzeitmedienstreams, ist komplex. Microsoft hat die Echtzeitmedienplattform erstellt, um diese Szenarien zu handhaben und so viel wie möglich von der herkömmlichen umfangreichen Verarbeitung von Echtzeitmedien auszulagern. Wenn der Bot auf einen eingehenden Anruf antwortet oder einem neuen oder bestehenden Anruf beitritt, muss er der Echtzeitmedienplattform mitteilen, wie Medien gehandhabt werden. Wenn Sie eine IVR-Anwendung erstellen, können Sie die teure Audioverarbeitung an Microsoft auslagern. Benötigt Ihr Bot direkten Zugriff auf Medienstreams, wird auch dieses Szenario unterstützt. Es gibt zwei Arten der Medienverarbeitung:
 
-* **Vom Dienst gehostete Medien**: Bots konzentrieren sich auf die Verwaltung von Anwendungsworkflows, z. B. das Routing von Anrufen und das Auslagern der Audioverarbeitung an die Microsoft Echtzeitmedienplattform. Mit vom Dienst gehosteten Medien haben Sie mehrere Optionen zum Implementieren und Hosten Ihres Bots. Ein vom Dienst gehosteter Medienbot kann als statusfreier Dienst implementiert werden, da er keine Medien lokal verarbeitet. Vom Dienst gehostete Medienbots können die folgenden APIs verwenden:
+* **Vom Dienst gehostete Medien**: Bots konzentrieren sich auf die Verwaltung von Anwendungsworkflows, z. B. das Routing von Anrufen und das Auslagern der Audioverarbeitung an die Microsoft Echtzeitmedienplattform. Mit vom Dienst gehosteten Medien haben Sie mehrere Optionen zum Implementieren und Hosten Ihres Bots. Ein vom Dienst gehosteter Medienbot kann als statusloser Dienst implementiert werden, da er Medien nicht lokal verarbeitet. Vom Dienst gehostete Medienbots können die folgenden APIs verwenden:
 
   * `PlayPrompt` zum Wiedergeben eines Audioclips.
   * `Record` zum Aufzeichnen von Audioclips.

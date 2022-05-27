@@ -4,12 +4,12 @@ description: Hier sind die Voraussetzungen für die Erweiterung Ihrer Teams-Apps
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: aede01c48f9e5e4ddbfbfebac9a5fa504225ca62
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: fc96d8883f0ad09ebd321a392481e75d92ae8641
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656180"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668025"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Richten Sie Ihre Entwicklungsumgebung für die Erweiterung von Teams-Apps auf Microsoft 365 ein
 
@@ -31,9 +31,9 @@ Sie benötigen einen Sandbox-Mandanten für Microsoft 365-Entwicklerabonnements,
 
 Außerdem müssen Sie das Sideloading für Ihren Mandanten aktivieren:
 
-1. Melden Sie sich bei Microsoft 365 Admin Center an (https://admin.microsoft.com) mit Ihren Anmeldeinformationen für den Testmandanten, und wählen Sie im Seitenbereich **Teams** aus, um das *Microsoft Teams Admin Center* zu öffnen
-1. Auswählen: Teams Apps > Verwalten von Apps > **organisationsweite App-Einstellungen**
-1. Aktivieren Sie unter **Benutzerdefinierte Apps** die Option *Interaktion mit benutzerdefinierten Apps*
+1. Melden Sie sich beim Microsoft 365 Admin Center an (https://admin.microsoft.com) mit den Anmeldeinformationen für Ihren Testmandanten), und wählen Sie im Seitenbereich **Microsoft Teams** aus, um das *Microsoft Teams Admin Center* zu öffnen.
+1. Auswählen: Microsoft Teams-Apps > Apps verwalten > **Organisationsweite App-Einstellungen**.
+1. Aktivieren Sie unter **Benutzerdefinierte Apps** die Option *Interaktion mit benutzerdefinierten Apps*.
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Aktivieren Sie das Sideloading für benutzerdefinierte Apps über das Teams-Administrationszentrum":::
 
@@ -99,5 +99,7 @@ Die Erweiterung [Teams Toolkit für Visual Studio Code](https://aka.ms/teams-too
 
 Erstellen oder aktualisieren Sie eine Teams-App für die Ausführung über Microsoft 365:
 
-* [Aktivieren einer persönlichen Teams-Registerkarte für Office und Outlook](extend-m365-teams-personal-tab.md)
-* [Aktivieren einer Teams-Messaging-Erweiterung für Outlook](extend-m365-teams-message-extension.md)
+> [!div class="nextstepaction"]
+> [Aktivieren einer persönlichen Teams-Registerkarte für Office und Outlook](extend-m365-teams-personal-tab.md)
+> [!div class="nextstepaction"]
+> [Aktivieren einer Teams-Messaging-Erweiterung für Outlook](extend-m365-teams-message-extension.md)

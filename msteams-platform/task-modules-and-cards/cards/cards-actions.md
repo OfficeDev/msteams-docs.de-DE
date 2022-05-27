@@ -1,15 +1,15 @@
 ---
 title: Hinzufügen von Kartenaktionen in einem Bot
 description: Beschreibt Kartenaktionen in Microsoft Teams und deren Verwendung in Ihren Bots
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: Teams-Bots – Kartenaktionen
-ms.openlocfilehash: 7650ec5f3b027396226f8250aa353d48e8c9e0f3
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 305706f3dfad820584f7a95e231870d258caa8ed
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111577"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756485"
 ---
 # <a name="card-actions"></a>Kartenaktionen
 
@@ -23,7 +23,7 @@ Karten, die von Bots und Nachrichtenerweiterungen in Teams verwendet werden, unt
 | `openUrl` | Öffnet eine URL im Standardbrowser. |
 | `messageBack` | Sendet eine Nachricht und Nutzlast vom Benutzer, der die Schaltfläche ausgewählt oder auf die Karte getippt hat, an den Bot. Sendet eine separate Nachricht an den Chatstream. |
 | `imBack`| Sendet eine Nachricht vom Benutzer, der die Schaltfläche ausgewählt oder auf die Karte getippt hat, an den Bot. Diese Nachricht vom Benutzer zum Bot ist für alle Unterhaltungsteilnehmer sichtbar. |
-| `invoke` | Sendet eine Nachricht und Payload von dem Benutzer, der die Schaltfläche ausgewählt oder auf die Karte getippt hat, an den Bot. Diese Meldung ist nicht sichtbar. |
+| `invoke` | Sendet eine Nachricht und Nutzlast vom Benutzer, der die Schaltfläche ausgewählt oder auf die Karte getippt hat, an den Bot. Diese Meldung ist nicht sichtbar. |
 | `signin` | Initiiert den OAuth-Fluss, sodass Bots eine Verbindung mit sicheren Diensten herstellen können. |
 
 > [!NOTE]
@@ -98,7 +98,7 @@ Mit `messageBack` können Sie eine vollständig angepasste Aktion mit den folgen
 | `value` | Wird an Ihren Bot gesendet, wenn die Aktion ausgeführt wird. Sie können den Kontext für die Aktion codieren, z. B. eindeutige Bezeichner oder ein JSON-Objekt. |
 | `text` | Wird an Ihren Bot gesendet, wenn die Aktion ausgeführt wird. Verwenden Sie diese Eigenschaft, um die Botentwicklung zu vereinfachen. Ihr Code kann eine einzelne Eigenschaft der obersten Ebene überprüfen, um Botlogik zu verteilen. |
 
-Die Flexibilität von "`messageBack`" bedeutet, dass Ihr Code keine sichtbare Benutzernachricht im Verlauf hinterlassen kann, indem er einfach nicht "`displayText`" verwendet.
+Die Flexibilität bedeutet `messageBack` , dass Ihr Code keine sichtbare Benutzermeldung im Verlauf hinterlassen kann, indem er einfach nicht verwendet `displayText`.
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -427,7 +427,7 @@ Adaptive Karten unterstützen vier Aktionstypen:
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
-Sie können auch die Nutzlast der adaptiven Karte "`Action.Submit`" ändern, um vorhandene Bot-Framework-Aktionen mithilfe einer `msteams`-Eigenschaft im `data`-Objekt von "`Action.Submit`" zu unterstützen. Der nächste Abschnitt enthält Details zur Verwendung vorhandener Bot-Framework-Aktionen mit adaptiven Karten.
+Sie können auch die Nutzlast der adaptiven Karte "`Action.Submit`" ändern, um vorhandene Bot-Framework-Aktionen mithilfe einer `msteams`-Eigenschaft im `data`-Objekt von "`Action.Submit`" zu unterstützen. Der nächste Abschnitt enthält Details zur Verwendung vorhandener Bot Framework-Aktionen mit adaptiven Karten.
 
 > [!NOTE]
 > Das Hinzufügen von "`msteams`" zu Daten mit einer Bot-Framework-Aktion funktioniert nicht mit einem Aufgabenmodul für adaptive Karten.

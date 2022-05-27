@@ -3,21 +3,21 @@ author: heath-hamilton
 description: Bewährte Methoden oder Überlegungen zum Integrieren vorhandener Web-Apps in Microsoft Teams
 ms.author: surbhigupta
 ms.date: 08/26/2020
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 title: Überlegungen zur Microsoft Teams-Integration
-ms.openlocfilehash: 2e1d749a34d0dec2a38e84e57aa6147c791264c1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e963019783699ebe0ed20b8e45632d03d6631e71
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111661"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757640"
 ---
 # <a name="considerations-for-teams-integration"></a>Überlegungen zur Microsoft Teams-Integration
 
 Sie können Webanwendungen mit den sozialen und kollaborativen Funktionen von Microsoft Teams ausstatten, indem Sie sie richtig in Microsoft Teams integrieren.
   
-Folgende Arten von Apps können Sie in Microsoft Teams integrieren:
+Die verschiedenen Arten von Apps, die Sie in Teams integrieren können, sind die folgenden:
 
 * **Eigenständige Apps**: Eine eigenständige App ist eine einseitige oder große und komplexe App. Der Benutzer kann einige Aspekte davon in Teams verwenden.
 * **Apps für die Zusammenarbeit**: Eine App, die bereits für die sozialen und kollaborativen Features von Microsoft Teams entwickelt wurde.
@@ -30,7 +30,7 @@ Dieses Dokument bietet einen Überblick über Microsoft Teams-Funktionen, Share-
 
 ***Integrationsszenarien**: Eigenständige Apps, Apps für die Zusammenarbeit, SharePoint*
 
-Ihre Microsoft Teams-App muss erforderliche und erwartete Features für die Zusammenarbeit enthalten. Um mit der App-Integration zu arbeiten, ist es wichtig, sich mit Microsoft Teams-Entwicklungsterminologie vertraut zu machen.
+Ihre Microsoft Teams-App muss erforderliche und erwartete Features für die Zusammenarbeit enthalten. Um mit der App-Integration zu arbeiten, ist es wichtig, sich mit Teams Entwicklungsterminologie vertraut zu machen.
 
 |Allgemeine App-Features   |Funktionen der Microsoft Teams-Plattform   |
 |----------|-----------|
@@ -90,7 +90,7 @@ Microsoft Teams verfügt über Mechanismen für einmaliges Anmelden (Single Sign
 > [!IMPORTANT]
 > Derzeit sind Drittanbieter-Apps in Government Community Cloud (GCC) verfügbar, aber nicht für GCC-High und Department of Defense (DOD). Drittanbieter-Apps sind für GCC standardmäßig deaktiviert. Informationen zum Aktivieren von Drittanbieter-Apps für GCC finden Sie unter [Verwalten von App-Berechtigungsrichtlinien](/microsoftteams/teams-app-permission-policies) und [Verwalten von Apps](/microsoftteams/manage-apps).
 
-Für SharePoint-Seiten können Sie nur SSO verwenden und keine weitere Azure AD-ID hinzufügen, wenn SSO für eine andere App verwendet werden soll, da die ID die SharePoint-App ist.
+Für SharePoint Seiten können Sie nur SSO verwenden und keine weitere Azure AD-ID hinzufügen, wenn SSO für eine andere App verwendet werden soll, da die ID die SharePoint App ist.
 
 Erfahren Sie mehr über die [Authentifizierung in Microsoft Teams](../concepts/authentication/authentication.md).
 
@@ -98,7 +98,7 @@ Erfahren Sie mehr über die [Authentifizierung in Microsoft Teams](../concepts/a
 
 ***Integrationsszenarien**: Eigenständige Apps, Apps für die Zusammenarbeit*
 
-Achten Sie darauf, die [Microsoft Teams-Designrichtlinien](../concepts/design/understand-use-cases.md) zu befolgen, um native Apps für Microsoft Teams zu erstellen. Sie können vorhandenen App-Inhalt nicht zu einer Microsoft Teams-Registerkarte migrieren. Weitere Informationen zum App-Design finden Sie unter [Fluent Design System](https://fluentsite.z22.web.core.windows.net/).
+Achten Sie darauf, die [Microsoft Teams-Designrichtlinien](../concepts/design/understand-use-cases.md) zu befolgen, um native Apps für Microsoft Teams zu erstellen. Sie können einen vorhandenen App-Inhalt nicht zu einer Teams Registerkarte migrieren. Weitere Informationen zum App-Design finden Sie [unter Fluent Design System](https://fluentsite.z22.web.core.windows.net/).
 
 ## <a name="maximize-deep-linking"></a>Maximieren von Deep Linking
 
@@ -112,11 +112,11 @@ Sie können Links zu Informationen und Features in Teams erstellen. Verwenden Si
 
 Verwenden Sie in Ihrer Microsoft Teams-App für Multithreadunterhaltungen einen [Bot](../bots/what-are-bots.md), da dieser mehr Flexibilität als ein [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) bietet.
 
-Bots ermöglichen Ihnen auch **, proaktive Nachrichten** an einzelne Benutzer oder Kanäle zu senden. Bei den proaktiven Nachrichten handelt es sich um nicht angeforderte Nachrichten, die durch ein externes Ereignis ausgelöst werden, und nicht um Nachrichten, die an einen Bot gesendet werden. Beispielsweise sendet Ihr Bot eine Willkommensnachricht, wenn er installiert wird oder ein neuer Benutzer einem Kanal beitritt.
+Bots ermöglichen Ihnen auch **, proaktive Nachrichten** an einzelne Benutzer oder Kanäle zu senden. Bei den proaktiven Nachrichten handelt es sich um nicht angeforderte Nachrichten, die durch ein externes Ereignis ausgelöst werden, und nicht um Nachrichten, die an einen Bot gesendet werden. Beispielsweise sendet Ihr Bot eine Willkommensnachricht, wenn er installiert ist oder ein neuer Benutzer einem Kanal beitritt.
 
 Das Senden proaktiver Nachrichten erfordert Microsoft Teams-spezifische Bezeichner. Sie können die Informationen erfassen, indem Sie [Listen- oder Benutzerprofildaten abrufen](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile), [Unterhaltungsereignisse abonnieren](../bots/how-to/conversations/subscribe-to-conversation-events.md) oder [Microsoft Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams) verwenden.
 
-Spammen Sie die Benutzer nicht mit übermäßigen Nachrichten zu. Wenn die Microsoft Teams-Funktion dies unterstützt, können die Benutzer Benachrichtigungseinstellungen für Ihre App konfigurieren.
+Spamen Sie Benutzer nicht mit übermäßigen Nachrichten. Wenn die Microsoft Teams-Funktion dies unterstützt, können die Benutzer Benachrichtigungseinstellungen für Ihre App konfigurieren.
 Es folgt ein Beispiel für eine Benachrichtigung: **Senden Sie mir keine nicht angeforderten Nachrichten**.
 
 ## <a name="use-sharepoint-for-file-and-data-storage"></a>Verwenden von SharePoint für Datei- und Datenspeicherung

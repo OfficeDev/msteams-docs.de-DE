@@ -5,16 +5,16 @@ description: Erfahren Sie, wie Sie Ihren Bot lokal mit einer IDE innerhalb einer
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: da6e04e4df8824f4dc13d63e0aa4cd5bb6afb48a
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 1c0c2124c12e9ab13bf72008e8dda0846f35d768
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297226"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757598"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Testen und Debuggen Ihres Bots lokal
 
-Beim Testen Ihres Bots müssen Sie sowohl die Kontexte berücksichtigen, in denen der Bot ausgeführt werden soll, und alle Funktionen, die Sie evtl. zu Ihrem Bot hinzugefügt haben, die für Microsoft Teams spezifische Daten erfordern. Stellen Sie sicher, dass die Methode, die Sie zum Testen Ihres Bots ausgewählt haben, seiner Funktionalität entspricht.
+Beim Testen Ihres Bots müssen Sie sowohl die Kontexte berücksichtigen, in denen Ihr Bot ausgeführt werden soll, als auch alle Funktionen, die Sie möglicherweise zu Ihrem Bot hinzugefügt haben, die datenspezifisch für Microsoft Teams erfordern. Stellen Sie sicher, dass die Methode, die Sie zum Testen Ihres Bots ausgewählt haben, seiner Funktionalität entspricht.
 
 ## <a name="test-by-uploading-to-teams"></a>Testen durch Hochladen in Microsoft Teams
 
@@ -34,7 +34,7 @@ Es gibt zwei Methoden zum Hochladen Ihrer App:
 Wenn Sie Ihren Bot während der Entwicklung lokal hosten, müssen Sie einen Tunneldienst wie [ngrok](https://ngrok.com/) verwenden, um Ihren Bot zu testen. Nachdem Sie ngrok heruntergeladen und installiert haben, fügen Sie Ihrem Pfad `ngrok` hinzu, und führen Sie den folgenden Befehl aus, um den Tunneldienst zu starten:
 
 ```bash
-ngrok http <port> -host-header=localhost:<port>
+ngrok http <port> --host-header=localhost:<port>
 ```
 
 Verwenden Sie den von ngrok bereitgestellten HTTPS-Endpunkt in Ihrem App-Manifest.
@@ -44,7 +44,7 @@ Verwenden Sie den von ngrok bereitgestellten HTTPS-Endpunkt in Ihrem App-Manifes
 
 ## <a name="test-your-bot-without-uploading-to-teams"></a>Testen Ihres Bots ohne Hochladen in Microsoft Teams
 
-Gelegentlich ist es erforderlich, Ihren Bot zu testen, ohne ihn als App in Microsoft Teams zu installieren. Wir stellen zwei Methoden zum Testen des Bots bereit. Das Testen Ihres Bots, ohne ihn als App zu installieren, kann nützlich sein, um sicherzustellen, dass Ihr Bot verfügbar ist und reagiert. Sie können jedoch nicht die vollständige Breite an Microsoft Teams-Funktionen testen, die Sie zu Ihrem Bot hinzugefügt haben. Wenn Sie Ihren Bot vollständig testen möchten, sehen Sie sich [Testen durch Hochladen](#test-by-uploading-to-teams) an.
+Gelegentlich ist es erforderlich, Ihren Bot zu testen, ohne ihn als App in Microsoft Teams zu installieren. Wir stellen zwei Methoden zum Testen des Bots bereit. Das Testen Ihres Bots, ohne ihn als App zu installieren, kann nützlich sein, um sicherzustellen, dass Ihr Bot verfügbar ist und reagiert. Es ermöglicht Ihnen jedoch nicht, den vollen Umfang Microsoft Teams Funktionen zu testen, die Sie Ihrem Bot hinzugefügt haben. Wenn Sie Ihren Bot vollständig testen möchten, sehen Sie sich [Testen durch Hochladen](#test-by-uploading-to-teams) an.
 
 ### <a name="use-the-bot-emulator"></a>Verwenden des Bot-Emulators
 
@@ -57,7 +57,7 @@ Weitere Informationen finden Sie in den [vollständigen Anweisungen zum Bot Fram
 > [!Important]
 > Die Kommunikation mit Ihrem Bot per ID ist nur für grundlegende Testzwecke vorgesehen. Alle Teams-spezifischen Funktionen, die Sie Ihrem Bot hinzugefügt haben, funktionieren nicht.
 
-Sie können auch eine Unterhaltung mit Ihrem Bot mithilfe seiner ID initiieren. Wenn ein Bot über eine dieser Methoden hinzugefügt wird, ist er in Kanalunterhaltungen nicht adressierbar, und Sie können keine anderen Microsoft Teams App-Funktionen wie Registerkarten oder Nachrichtenerweiterungen nutzen. Sie können eine Unterhaltung auf eine der folgenden Arten initiieren:
+Initiieren Sie eine Unterhaltung mit Ihrem Bot mithilfe seiner ID. Wenn ein Bot über eine dieser Methoden hinzugefügt wird, ist er in Kanalunterhaltungen nicht adressierbar, und Sie können keine anderen Microsoft Teams App-Funktionen wie Registerkarten oder Nachrichtenerweiterungen nutzen. Initiieren Sie eine Unterhaltung auf eine der folgenden Arten:
 
 * Wählen Sie auf der seite [Bot-Dashboard](https://dev.botframework.com/bots) für Ihren Bot unter **Kanäle** die Option **Zu Microsoft Teams hinzufügen** aus. Microsoft Teams startet einen persönlichen Chat mit Ihrem Bot.
 
@@ -88,7 +88,7 @@ Benutzer können ihren Bot am Senden persönlicher Chatnachrichten hindern. Sie 
 
 ## <a name="remove-a-bot-from-a-team"></a>Entfernen eines Bots aus einem Team
 
-Benutzer können den Bot löschen, indem sie in ihrer Teams-Ansicht in der Bots-Liste das Papierkorbsymbol auswählen. Dadurch wird nur die Nutzung des Bots im Team blockiert, einzelne Benutzer können weiterhin im persönlichen Kontext interagieren. Bots können im persönlichen Kontext nicht von einem Benutzer deaktiviert oder entfernt werden.
+Benutzer können den Bot löschen, indem sie in ihrer Teams-Ansicht in der Bots-Liste das Papierkorbsymbol auswählen. Dadurch wird nur der Bot aus der Verwendung dieses Teams entfernt. Einzelne Benutzer können weiterhin im persönlichen Kontext interagieren. Bots im persönlichen Kontext können von Benutzern nicht deaktiviert oder entfernt werden.
 
 ## <a name="disable-a-bot-in-teams"></a>Deaktivieren eines Bots in Teams
 

@@ -6,30 +6,30 @@ keywords: Gruppenkanal für Teams-Registerkarten konfigurierbar statisch
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4f0d5ea16c51b8b40dd28c6ff29ee7d990636f31
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 8de792faafeaa526a1abffe042394daeeb60cb3d
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65673027"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757472"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Erstellen einer Inhaltsseite für Ihre Registerkarte
 
-Eine Inhaltsseite ist eine Webseite, die im Teams-Client gerendert wird. Diese sind Teil von:
+Eine Inhaltsseite ist eine Webseite, die innerhalb des Teams-Clients gerendert wird, die Teil von:
 
 * Eine benutzerdefinierte Registerkarte mit persönlichem Bereich: In diesem Fall ist die Inhaltsseite die erste Seite, auf die der Benutzer trifft.
 * Eine benutzerdefinierte Kanal- oder Gruppenregisterkarte: Die Inhaltsseite wird angezeigt, nachdem der Benutzer die Registerkarte im entsprechenden Kontext angehefteten und konfiguriert hat.
 * Ein [Aufgabenmodul](~/task-modules-and-cards/what-are-task-modules.md): Sie können eine Inhaltsseite erstellen und als Webview in ein Aufgabenmodul einbetten. Die Seite wird innerhalb des modalen Popups gerendert.
 
-Dieser Artikel betrifft die Verwendung von Inhaltsseiten als Registerkarten. der Großteil der hier aufgeführten Anleitungen gilt jedoch unabhängig davon, wie die Inhaltsseite dem Benutzer präsentiert wird.
+Dieser Artikel betrifft die Verwendung von Inhaltsseiten als Registerkarten. der großteil der hier aufgeführten Anleitungen gilt jedoch unabhängig davon, wie die Inhaltsseite dem Benutzer präsentiert wird.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="tab-content-and-design-guidelines"></a>Registerkarteninhalte und Designrichtlinien
 
-Das übergeordnete Ziel Ihrer Registerkarte ist es, Zugriff auf aussagekräftige und ansprechende Inhalte zu ermöglichen, die praktischen Wert und einen offensichtlichen Zweck haben. Sie müssen sich darauf konzentrieren, das Registerkartendesign übersichtlich, die Navigation intuitiv und den Inhalt immersiv zu gestalten.
+Das übergeordnete Ziel Ihrer Registerkarte ist es, Zugriff auf die aussagekräftigen und ansprechenden Inhalte zu ermöglichen, die einen praktischen Wert und einen offensichtlichen Zweck haben. 
 
-Weitere Informationen finden Sie in den [Entwurfsrichtlinien für Registerkarten](~/tabs/design/tabs.md) und [Microsoft Teams Richtlinien für die Speicherüberprüfung](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+Sie müssen sich darauf konzentrieren, Das Registerkartendesign übersichtlich, die Navigation intuitiv und den Inhalt immersiv zu gestalten. Weitere Informationen finden Sie in den [Entwurfsrichtlinien für Registerkarten](~/tabs/design/tabs.md) und [Microsoft Teams Richtlinien für die Speicherüberprüfung](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 ## <a name="integrate-your-code-with-teams"></a>Integrieren von Code in Teams
 
@@ -89,11 +89,11 @@ Das [Teams-Client-JavaScript-SDK](~/tabs/how-to/using-teams-client-sdk.md) biete
 
 ### <a name="deep-links"></a>Deep-Links
 
-Sie können Deeplinks zu Entitäten in Teams erstellen. Diese werden verwendet, um Links zu erstellen, die zu Inhalten und Informationen auf Ihrer Registerkarte navigieren. Weitere Informationen finden [Sie unter Erstellen von Deep-Links zu Inhalten und Features in Teams](~/concepts/build-and-test/deep-links.md).
+Sie können Deeplinks zu Entitäten in Teams erstellen. Sie werden verwendet, um Links zu erstellen, die zu Inhalten und Informationen auf Ihrer Registerkarte navigieren. Weitere Informationen finden [Sie unter Erstellen von Deep-Links zu Inhalten und Features in Teams](~/concepts/build-and-test/deep-links.md).
 
 ### <a name="task-modules"></a>Aufgabenmodule
 
-Ein Aufgabenmodul ist eine modale Popuperfahrung, die Sie über Ihre Registerkarte auslösen können. Auf einer Inhaltsseite können Sie Aufgabenmodule verwenden, um Formulare zum Sammeln zusätzlicher Informationen, zum Anzeigen der Details eines Elements in einer Liste oder zum Präsentieren zusätzlicher Informationen für den Benutzer zu präsentieren. Die Aufgabenmodule selbst können zusätzliche Inhaltsseiten sein oder vollständig mit adaptiven Karten erstellt werden. Weitere Informationen finden Sie [unter Verwenden von Aufgabenmodulen auf Registerkarten](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+Ein Aufgabenmodul ist eine modale Popuperfahrung, die Sie über Ihre Registerkarte auslösen können. Verwenden Sie auf einer Inhaltsseite Aufgabenmodule, um Formulare zum Sammeln zusätzlicher Informationen, zum Anzeigen der Details eines Elements in einer Liste oder zum Präsentieren des Benutzers mit zusätzlichen Informationen darzustellen. Die Aufgabenmodule selbst können zusätzliche Inhaltsseiten sein oder vollständig mit adaptiven Karten erstellt werden. Weitere Informationen finden Sie [unter Verwenden von Aufgabenmodulen auf Registerkarten](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 ### <a name="valid-domains"></a>Gültige Domänen
 
@@ -108,7 +108,7 @@ Ab [Manifestschema v1.7](../../../resources/schema/manifest-schema.md) können S
 
 > [!NOTE]
 >
-> * Das Verhalten auf mobilen Clients kann nicht über die eigenschaft des systemeigenen Ladeindikators konfiguriert werden. Mobile Clients zeigen diesen Indikator standardmäßig auf Inhaltsseiten und iframe-basierten Aufgabenmodulen an. Dieser Indikator auf mobilen Geräten wird angezeigt, wenn eine Anforderung zum Abrufen von Inhalten gestellt wird, und wird geschlossen, sobald die Anforderung abgeschlossen ist.
+> * Das Verhalten auf mobilen Clients kann nicht über die eigenschaft des nativen Ladeindikators konfiguriert werden. Mobile Clients zeigen diesen Indikator standardmäßig auf Inhaltsseiten und iframe-basierten Aufgabenmodulen an. Dieser Indikator auf mobilen Geräten wird angezeigt, wenn eine Anforderung zum Abrufen von Inhalten gestellt wird, und wird geschlossen, sobald die Anforderung abgeschlossen ist.
 
 Wenn Sie in Ihrem App-Manifest angeben `showLoadingIndicator : true`  , müssen alle Registerkartenkonfigurationen, Inhalte, Entfernungsseiten und alle iframebasierten Aufgabenmodule die folgenden Schritte ausführen:
 

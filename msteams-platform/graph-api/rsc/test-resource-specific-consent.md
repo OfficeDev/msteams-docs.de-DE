@@ -1,17 +1,17 @@
 ---
 title: Testen Sie ressourcenspezifische Einwilligungsberechtigungen in Teams
 description: Details zum Testen der ressourcenspezifischen Zustimmung in Teams mit Postman mit Codebeispielen
-ms.localizationpriority: high
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Teams-Autorisierung OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.openlocfilehash: a03e0be6bfab79f0e900f2dc3fb71b5bcb388350
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 60014699aa1275df787fcf553ae04671d1105f1c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111360"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757444"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Testen Sie ressourcenspezifische Einwilligungsberechtigungen in Teams
 
@@ -30,11 +30,11 @@ Stellen Sie sicher, dass Sie vor dem Testen die folgenden App-Manifeständerunge
 
 <summary><b>RSC-Berechtigungen für App-Manifestversion 1.12</b></summary>
 
-Fügen Sie Ihrem App-Manifest einen [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) Schlüssel mit den folgenden Werten hinzu:
+Fügen Sie Ihrem App-Manifest einen [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo)Schlüssel mit den folgenden Werten hinzu:
 
 |Name| Typ | Beschreibung|
 |---|---|---|
-|`id` |Zeichenfolge |Ihre Azure AD App-ID. Weitere Informationen finden Sie unter [App im Azure AD-Portal registrieren](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`id` |Zeichenfolge |Ihre Azure AD App-ID. Weitere Informationen finden Sie [unter App im Azure AD-Portal registrieren](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|Zeichenfolge| Dieses Feld hat in RSC keine Operation, muss aber hinzugefügt werden und einen Wert haben, um eine Fehlerantwort zu vermeiden; jede Zeichenfolge wird tun.|
 
 Geben Sie die von der App benötigten Berechtigungen an.
@@ -196,13 +196,13 @@ Beispiel für RSC in einem Chat
 
 <summary><b>RSC-Berechtigungen für App-Manifest Version 1.11 oder früher</b></summary>
 
-Fügen Sie Ihrem App-Manifest einen [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) Schlüssel mit den folgenden Werten hinzu:
+Fügen Sie Ihrem App-Manifest einen [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo)Schlüssel mit den folgenden Werten hinzu:
 
 |Name| Typ | Beschreibung|
 |---|---|---|
-|`id` |Zeichenfolge |Ihre Azure AD App-ID. Weitere Informationen finden Sie unter [App im Azure AD-Portal registrieren](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`id` |Zeichenfolge |Ihre Azure AD App-ID. Weitere Informationen finden Sie [unter App im Azure AD-Portal registrieren](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|Zeichenfolge| Dieses Feld hat in RSC keine Operation, muss aber hinzugefügt werden und einen Wert haben, um eine Fehlerantwort zu vermeiden; jede Zeichenfolge wird tun.|
-|`applicationPermissions`|Array aus Zeichenfolgen|RSC-Berechtigungen für Ihre App. Weitere Informationen finden Sie unter [ressourcenspezifische Berechtigungen](resource-specific-consent.md#resource-specific-permissions).|
+|`applicationPermissions`|Array aus Zeichenfolgen|Legen Sie die Berechtigungen für  Ihre app. Weitere Informationen finden Sie unter [ressourcenspezifische Berechtigungen](resource-specific-consent.md#resource-specific-permissions).|
 
 Beispiel für RSC in einem Team
 

@@ -5,12 +5,12 @@ description: Eine Übersicht über Aktionsbefehle für Messaging-Erweiterungen m
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7793563db7a3e2d4f3b5b780cadac22ae609c74d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 7bdb3a0572ab7723a03768357260f252fbbf626c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297212"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756898"
 ---
 # <a name="define-message-extension-action-commands"></a>Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 
@@ -54,7 +54,7 @@ In der folgenden Abbildung werden die Speicherorte angezeigt, von denen der Akti
 
 Sie müssen nicht nur auswählen, von wo aus der Befehl aufgerufen werden kann, sondern auch, wie das Formular im Aufgabenmodul für Ihre Benutzer aufgefüllt werden soll. Sie haben die folgenden drei Optionen zum Erstellen des Formulars, das innerhalb des Aufgabenmoduls gerendert wird:
 
-* **Statische Parameterliste**: Dies ist die einfachste Methode. Sie können eine Liste von Parametern in Ihrem App-Manifest definieren, die vom Microsoft Teams-Client gerendert werden, die Formatierung kann in diesem Fall jedoch nicht gesteuert werden.
+* **Statische Parameterliste**: Dies ist die einfachste Methode. Sie können eine Liste der Parameter in Ihrem App-Manifest definieren, die vom Teams Client gerendert wird, die Formatierung kann in diesem Fall jedoch nicht gesteuert werden.
 * **Adaptive Karte**: Sie können eine adaptive Karte verwenden, die eine bessere Kontrolle über die Benutzeroberfläche bietet, die Ihnen zur Verfügung stehenden Steuerelemente und Formatierungsoptionen aber dennoch beschränkt.
 * **Eingebettete Webansicht**: Sie können eine benutzerdefinierte Webansicht in das Aufgabenmodul einbetten, um eine vollständige Kontrolle über die Benutzeroberfläche und die Steuerelemente zu haben.
 
@@ -77,7 +77,7 @@ Um den Aktionsbefehl zum App-Manifest hinzuzufügen, müssen Sie der obersten Eb
 
 Sie können einen Aktionsbefehl mit **App Studio** oder **Entwicklerportal** erstellen.
 
-> [!NOTE]
+> [!WARNING]
  > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal [Entwicklerportal](https://dev.teams.microsoft.com/) zum Konfigurieren, Verteilen und Verwalten Ihrer Microsoft Teams-Apps zu testen. App Studio wird per 30. Juni 2022 eingestellt.
 
 # <a name="app-studio"></a>[App-Studio](#tab/AS)
@@ -158,7 +158,7 @@ Wenn Sie eine statische Liste von Parametern verwenden, müssen Sie auch die fol
 | `parameter.title` | Diese Eigenschaft ist ein kurzer benutzerfreundlicher Parametertitel oder eine Bezeichnung. | Ja | 1.0 |
 | `parameter.inputType` | Diese Eigenschaft ist auf den Typ der erforderlichen Eingabe festgelegt. Folgende Werte stehen zur Verfügung: `text`, `textarea`, `number`, `date`, `time`, `toggle`. Der Standardwert ist `text`. | Nein | 1.4 |
 
-Wenn Sie eine eingebettete Webansicht verwenden, können Sie optional das Objekt `taskInfo` hinzufügen, um Ihre Webansicht abzurufen, ohne den Bot direkt aufzurufen. Wenn Sie diese Option auswählen, ist das Verhalten ähnlich wie bei der Verwendung einer statischen Liste von Parametern. Die erste Interaktion mit Ihrem Bot besteht darin, [auf die Aufgabenmodul-Sendeaktion zu reagieren](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Wenn Sie ein Objekt `taskInfo` verwenden, müssen Sie den Parameter `fetchTask` auf`false`festlegen.
+Wenn Sie eine eingebettete Webansicht verwenden, können Sie das `taskInfo` Objekt optional hinzufügen, um Ihre Webansicht abzurufen, ohne den Bot direkt aufzurufen. Wenn Sie diese Option auswählen, ist das Verhalten ähnlich wie bei der Verwendung einer statischen Liste von Parametern. Die erste Interaktion mit Ihrem Bot besteht darin, [auf die Aufgabenmodul-Sendeaktion zu reagieren](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Wenn Sie ein `taskInfo` Objekt verwenden, müssen Sie den `fetchTask` Parameter auf `false`festlegen.
 
 | Eigenschaftenname | Zweck | Erforderlich? | Minimale Manifestversion |
 |---|---|---|---|
@@ -170,7 +170,7 @@ Wenn Sie eine eingebettete Webansicht verwenden, können Sie optional das Objekt
 
 #### <a name="app-manifest-example"></a>Beispiel für ein App-Manifest
 
-Der folgende Abschnitt ist ein Beispiel für ein Objekt `composeExtensions`, das zwei Aktionsbefehle definiert. Er ist kein Beispiel für das vollständige Manifest. Das vollständige App-Manifestschema finden Sie unter [App-Manifestschema](~/resources/schema/manifest-schema.md):
+Der folgende Abschnitt ist ein Beispiel für ein Objekt `composeExtensions`, das zwei Aktionsbefehle definiert. Es ist kein Beispiel für das vollständige Manifest. Das vollständige App-Manifestschema finden Sie unter [App-Manifestschema](~/resources/schema/manifest-schema.md):
 
 ```json
 ...
@@ -232,12 +232,12 @@ Befolgen Sie die [schrittweise Anleitung](../../../sbs-meetingextension-action.y
 
 ## <a name="next-step"></a>Nächster Schritt
 
-Wenn Sie entweder eine adaptive Karte oder eine eingebettete Webansicht ohne ein Objekt `taskInfo` verwenden, gehen Sie im nächsten Schritt wie folgt vor:
+Wenn Sie entweder eine adaptive Karte oder eine eingebettete Webansicht ohne Objekt `taskInfo` verwenden, gehen Sie im nächsten Schritt wie folgt vor:
 
 > [!div class="nextstepaction"]
 > [Aufgabenmodul erstellen und damit reagieren](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-Wenn Sie die Parameter oder eine eingebettete Webansicht mit einem Objekt `taskInfo` verwenden, gehen Sie im nächsten Schritt wie folgt vor:
+Wenn Sie die Parameter oder eine eingebettete Webansicht mit einem `taskInfo` Objekt verwenden, gehen Sie im nächsten Schritt wie folgt vor:
 
 > [!div class="nextstepaction"]
 > [Auf das Senden des Aufgabenmoduls reagieren](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

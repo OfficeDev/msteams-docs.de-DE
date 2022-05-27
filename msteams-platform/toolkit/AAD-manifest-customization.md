@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: a0a7a44986e0e672cfc4e4bcd723019b914b4904
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 9ffd4e4fd8f346f49d715f2537942d02cd4892d9
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656775"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755937"
 ---
 # <a name="azure-ad-manifest"></a>Azure AD-Manifest
 
@@ -274,17 +274,17 @@ Sie müssen während verschiedener Phasen Ihres Teams Anwendungsentwicklungslebe
 
       * Lesen Sie die `state.{env}.json` Datei, um eine vorhandene Azure AD-Anwendung zu finden. Wenn bereits eine Azure AD-Anwendung vorhanden ist, verwendet Teams Toolkit die vorhandene Azure AD-Anwendung erneut, andernfalls müssen Sie eine neue Anwendung mithilfe der `aad.template.json` Datei erstellen.
 
-      * Ignoriert zunächst einige Eigenschaften in der Manifestdatei, die zusätzlichen Kontext erfordern (z. B. replyUrls-Eigenschaft erfordert Frontend oder Bot-Endpunkt) während der Erstellung einer neuen Azure AD-Anwendung mit der Manifestdatei
+      * Zunächst werden einige Eigenschaften in der Manifestdatei ignoriert, die zusätzlichen Kontext erfordern (z. B. replyUrls-Eigenschaft erfordert Frontend oder Bot-Endpunkt) während der Erstellung einer neuen Azure AD-Anwendung mit der Manifestdatei.
 
-      * Nach Abschluss der Bereitstellung anderer Ressourcen werden die IdentifierUris und replyUrls der Azure AD-Anwendung entsprechend den richtigen Endpunkten aktualisiert.
+      * Nach Abschluss der Bereitstellung anderer Ressourcen werden die IdentifierUris und replyUrls der Azure AD-Anwendung entsprechend auf die richtigen Endpunkte aktualisiert.
 
 5. **So erstellen Sie eine Anwendung**
 
-    * Mit dem Befehl "In der Cloud bereitstellen" wird Ihre Anwendung für die bereitgestellten Ressourcen bereitgestellt. Es umfasst nicht das Bereitstellen von Änderungen an der Azure AD-Anwendung, die Sie vorgenommen haben.
+    * Mit dem Befehl "In der Cloud bereitstellen" wird Ihre Anwendung für die bereitgestellten Ressourcen bereitgestellt. Dies schließt nicht die Bereitstellung von Änderungen der Azure AD-Anwendung ein, die Sie vorgenommen haben.
 
-    * Sie können sehen, [Bereitstellen von Azure AD-Anwendungsänderungen für die Remoteumgebung](#deploy-azure-ad-application-changes-for-remote-environment) zum Bereitstellen von Azure AD-Anwendungsänderungen für die Remoteumgebung
+    * Sie können sehen, [Bereitstellen von Azure AD-Anwendungsänderungen für die Remoteumgebung](#deploy-azure-ad-application-changes-for-remote-environment) , um Azure AD-Anwendungsänderungen für die Remoteumgebung bereitzustellen.
 
-    * Teams Toolkit aktualisiert die Azure AD-Anwendung gemäß der Azure AD-Manifestvorlagendatei
+    * Teams Toolkit aktualisiert die Azure AD-Anwendung gemäß der Azure AD-Manifestvorlagendatei.
 
 ## <a name="limitations"></a>Einschränkungen
 
@@ -306,10 +306,10 @@ Sie müssen während verschiedener Phasen Ihres Teams Anwendungsentwicklungslebe
 
 2. Derzeit `requiredResourceAccess` kann die Eigenschaft nur für benutzerlesbare Ressourcenanwendungsnamen oder Berechtigungsnamenzeichenfolgen und `Office 365 SharePoint Online` APIs `Microsoft Graph` verwendet werden. Für andere APIs müssen Sie stattdessen UUID verwenden. Sie können die folgenden Schritte ausführen, um IDs aus Azure-Portal abzurufen:
 
-    * Registrieren einer neuen Azure AD-Anwendung auf [Azure-Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)
-    * Auswählen `API permissions` auf der Azure AD-Anwendungsseite
+    * Registrieren Sie eine neue Azure AD-Anwendung auf [Azure-Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
+    * Wählen Sie `API permissions` auf der Azure AD-Anwendungsseite aus.
     * Wählen Sie diese Option aus `add a permission` , um die gewünschte Berechtigung hinzuzufügen.
-    * Select `Manifest`, from the `requiredResourceAccess` property, you can find the IDs of API and permissions
+    * Wählen Sie `Manifest`aus der Eigenschaft die `requiredResourceAccess` IDs der API und Berechtigungen aus.
 
 ## <a name="see-also"></a>Siehe auch
 

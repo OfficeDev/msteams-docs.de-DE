@@ -6,12 +6,12 @@ keywords: Native Geräteberechtigungen für Standortkartenfunktionen
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 369e9307a8007d45cc42ae4059b16cdcf9a3cc4c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: d143cdd0e94664d916bd5eefa7523d92e2af183a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111185"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757171"
 ---
 # <a name="integrate-location-capabilities"></a>Integration von Standortfunktionen
 
@@ -94,7 +94,7 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 ## <a name="error-handling"></a>Fehlerbehandlung
 
-Sie müssen sicherstellen, dass diese Fehler in Ihrer Teams-App angemessen behandelt werden. In der folgenden Tabelle sind die Fehlercodes und die Bedingungen aufgeführt, unter denen die Fehler generiert werden:
+Sie müssen sicherstellen, dass diese Fehler in Ihrer Microsoft Teams-App angemessen behandelt werden. In der folgenden Tabelle sind die Fehlercodes und die Bedingungen aufgeführt, unter denen die Fehler generiert werden:
 
 |Fehlercode |  Fehlername     | Bedingung|
 | --------- | --------------- | -------- |

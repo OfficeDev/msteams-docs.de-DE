@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie die SSO-Unterstützung für Ihre Messaging-Er
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: bba2a8a225a75c21c46a242dec8acc55dcc0e8b5
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 490d44631fbd291e6c8686d94222b41ddd68de86
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296945"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757423"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>Unterstützung für einmaliges Anmelden für Nachrichtenerweiterungen
 
@@ -43,7 +43,7 @@ So aktivieren Sie SSO:
     > [!NOTE]
     > Wir unterstützen keine anderen Handler SSO, außer `OnTeamsMessagingExtensionQueryAsync` und `OnTeamsAppBasedLinkQueryAsync` aus der TeamsMessagingExtensionsSearchAuthConfigBot.cs-Datei.
 
-4. Sie erhalten das Token im `OnTeamsMessagingExtensionQueryAsync` Handler in der `turnContext.Activity.Value` Nutzlast oder in dem `OnTeamsAppBasedLinkQueryAsync`, je nachdem, für welches Szenario Sie das SSO aktivieren für:
+4. Sie erhalten das Token im `OnTeamsMessagingExtensionQueryAsync` Handler in der `turnContext.Activity.Value` Nutzlast oder in dem `OnTeamsAppBasedLinkQueryAsync`, je nachdem, für welches Szenario Sie das SSO aktivieren:
 
     ```json
     JObject valueObject=JObject.FromObject(turnContext.Activity.Value);

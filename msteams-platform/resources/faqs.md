@@ -4,12 +4,12 @@ description: Antworten auf einige häufig gestellte Fragen
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 587451e3a0e89206a4ea49aaca3c682ab290ac5b
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 944fc379f7623599c543171a8d57a7854b51a980
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453969"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757549"
 ---
 # <a name="moodle-faq"></a>Häufig gestellte Fragen zu Moodle
 
@@ -119,7 +119,7 @@ Die Ursache für Inkonsistenzen bei Benutzern, die sich nicht mit ihren Microsof
 
 <summary><b>Alle Benutzer können sich nicht mit ihren Microsoft 365 Anmeldeinformationen anmelden. Was können wir tun, um dieses Problem zu beheben?</b></summary>
 
-Benutzer, die sich zu Beginn nicht anmelden konnten, müssen das Problem melden und überprüfen, dass die Anwendung **Geheimer Clientschlüssel** nicht abgelaufen ist.
+Benutzer, die sich zu Beginn nicht anmelden konnten, müssen das Problem melden und verifizieren, dass der **geheime Clientschlüssel** der Anwendung nicht abgelaufen ist.
 
 Die folgende Abbildung zeigt die Fehlermeldung, die beim Anmelden des Benutzers mithilfe seiner Microsoft 365 Anmeldeinformationen empfangen wurde:
 
@@ -176,7 +176,7 @@ Weitere Informationen zum Bearbeiten der Atto-Symbolleiste finden Sie unter:
 
 <summary><b>Werden die über die Microsoft-Integration geplanten Besprechungen in Outlook oder in Teams-Kalendern angezeigt? Wie lautet die Standardzeitachse für die Besprechungen, die angezeigt werden sollen?</b></summary>
 
-Die über die App geplanten Besprechungen werden nicht im Outlook- oder Teams-Kalender der Planers angezeigt, da sie Kanalbesprechungen ähneln. Alle Mitglieder im Kurskanal können direkt über den eingebetteten Kanallink an der Besprechung teilnehmen. Weitere Informationen finden Sie unter [Kanalbesprechungen](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
+Die über die App geplanten Besprechungen werden nicht im Outlook- oder Teams-Kalender des Planers angezeigt, da sie Kanalbesprechungen ähneln. Alle Mitglieder im Kurskanal können direkt über den eingebetteten Kanallink an der Besprechung teilnehmen. Weitere Informationen finden Sie unter [Kanalbesprechungen](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
 Sie können jedoch auf die Einladung zugreifen und den Feldern **Erforderlich** oder **Optional** der Besprechungseinladung manuell Teilnehmernamen hinzufügen, um die Remotebesprechung in ihren Kalendern anzuzeigen. Die Standardzeitachsen basieren auf dem Datum, an dem der Benutzer angibt, wann die Besprechung erstellt wird. Weitere Informationen finden Sie unter [Grenzwerte und Spezifikationen für Teams](/microsoftteams/limits-specifications-teams).
 

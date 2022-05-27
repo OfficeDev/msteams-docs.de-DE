@@ -5,12 +5,12 @@ ms.topic: how-to
 keywords: Erstellen von Teams-Bots
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: e531b8058581c6c3e005bb6beb2e16c1b74bfebc
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 92d4593290d1332b86b370a49b20daaf43868a51
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135696"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757388"
 ---
 # <a name="create-a-bot"></a>Erstellen eines Bots
 
@@ -50,7 +50,9 @@ Weitere Informationen finden Sie in der [Bot Framework-Dokumentation](/azure/bot
 > * Wenn Sie Ihren Bot mit Microsoft Azure registrieren, muss Ihr Botcode nicht auf Microsoft Azure *gehostet* werden.
 > * Wenn Sie einen Bot mit Azure-Portal registrieren, müssen Sie über ein Microsoft Azure Konto verfügen. Sie können [kostenlos ein Konto erstellen](https://azure.microsoft.com/free/). Um Ihre Identität zu überprüfen, wenn Sie eine erstellen, müssen Sie eine Kreditkarte angeben, die jedoch nicht belastet wird. Es ist immer kostenlos, Bots mit Microsoft Teams zu erstellen und zu verwenden.
 > * Sie können jetzt App Studio verwenden, um App- und Bot-Informationen direkt innerhalb Microsoft Teams zu registrieren/zu aktualisieren. Sie müssen die Azure-Portal nur zum Hinzufügen oder Konfigurieren anderer Bot Framework-Kanäle wie Direct Line, Webchat, Skype und Facebook Messenger verwenden.
->* Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird bis zum 30. Juni 2022 veraltet sein
+
+> [!WARNING]
+>* Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird bis zum 30. Juni 2022 eingestellt.
 
 ## <a name="see-also"></a>Siehe auch
 

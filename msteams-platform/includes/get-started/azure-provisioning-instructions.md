@@ -33,7 +33,7 @@ Wählen Sie das Teams-Toolkit-Symbol :::image type="icon" source="~/assets/image
 
    Der Bereitstellungsprozess erstellt Ressourcen in der Azure-Cloud. Es kann einige Zeit dauern. Sie können den Fortschritt überwachen, indem Sie die Dialogfelder in der unteren rechten Ecke ansehen. Nach ein paar Minuten wird der folgende Hinweis angezeigt:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="Screenshot des Dialogfelds &quot;Bereitstellung abgeschlossen&quot;." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot des Dialogfelds &quot;Bereitstellung abgeschlossen&quot;." border="false":::
 
     Wenn Sie möchten, können Sie die bereitgestellten Ressourcen anzeigen. Für dieses Lernprogramm müssen Sie keine Ressourcen anzeigen.
 
@@ -82,13 +82,26 @@ Sobald die Bereitstellungs- und Bereitstellungsschritte abgeschlossen sind:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot der Remotestart-App." border="false":::
 
-1. Wählen Sie **"Hinzufügen"** aus, wenn Sie aufgefordert werden, die App auf Teams auf Ihrem lokalen Computer querzuladen.
+1. Klicken Sie auf **Hinzufügen**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-bot-debug.png" alt-text="Screenshot, der zeigt, dass der Bot auf Teams Client hinzugefügt wird.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot der installierten App." border="false":::
 
-   Sie können eingeben `welcome` , um eine Einführungskarte anzuzeigen, und sie eingeben `learn` , um zur Dokumentation für adaptive Karten und Bot-Befehle zu wechseln.
+   Das Toolkit zeigt eine Meldung an, die angibt, dass die App Teams hinzugefügt wird.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Screenshot der Lernkarte im Bot auf Teams Client.":::       
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Screenshot zeigt die Meldung, dass Sie die App jetzt oder später testen können" border="true":::
+ 
+    - Wenn Sie " **Herunterladen**" auswählen, können Sie die App später aus der Liste der quergeladenen Apps ausprobieren.
+    - Wenn Sie **"Testen**" auswählen, lädt Teams Ihre App.
+
+   Ihre App wird auf der Azure-Website geladen.
+   
+1. Wählen Sie **"Testen" aus**.
+
+   Die Nachrichtenerweiterungs-App wird in einer Chat-Bot-App geladen.
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Screenshot, der zeigt, dass die App in Teams quergeladen wurde" border="false":::
+
+
 
 
 

@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Entwicklervorschau des Teams-Manifestschemas
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: cd018acfa71dc7815ae4a2a85311d0adb3245652
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 82f1a4fd9a51089069d1f8ed40d5e169f49b62c7
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668130"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757493"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für die öffentliche Entwicklervorschau für Microsoft Teams
 
@@ -290,7 +290,7 @@ Die Version des Manifestschemas, das dieses Manifest verwendet.
 
 **Erforderliche** &ndash; Zeichenfolge
 
-Die Version der jeweiligen App. Wenn Sie etwas in Ihrem Manifest aktualisieren, muss die Version ebenfalls erhöht werden. Auf diese Weise wird bei der Installation des neuen Manifests das vorhandene überschrieben und der Benutzer erhält die neue Funktionalität. Wenn diese App an den Store übermittelt wurde, muss das neue Manifest erneut übermittelt und erneut validiert werden. Anschließend erhalten Benutzer dieser App das neue aktualisierte Manifest automatisch innerhalb weniger Stunden, nachdem es genehmigt wurde.
+Die Version der jeweiligen App. Wenn Sie etwas in Ihrem Manifest aktualisieren, muss die Version ebenfalls erhöht werden. Auf diese Weise wird bei der Installation des neuen Manifests das vorhandene überschrieben, und der Benutzer erhält die neue Funktionalität. Wenn diese App an den Store übermittelt wurde, muss das neue Manifest erneut übermittelt und erneut überprüft werden. Anschließend erhalten Benutzer dieser App das neue aktualisierte Manifest in einigen Stunden automatisch, nachdem es genehmigt wurde.
 
 Wenn sich die von der App angeforderten Berechtigungen ändern, werden die Benutzer aufgefordert, ein Upgrade durchzuführen und der App erneut zuzustimmen.
 
@@ -300,7 +300,7 @@ Diese Versionszeichenfolge muss dem [SemVer](http://semver.org/)-Standard entspr
 
 **Erforderliche** &ndash; Microsoft-App-ID
 
-Die eindeutige, von Microsoft generierte Kennung für diese App. Wenn Sie einen Bot über das Microsoft Bot Framework registriert haben oder sich die Web-App Ihres Tabs bereits bei Microsoft anmeldet, sollten Sie bereits über eine ID verfügen und diese hier eingeben. Andernfalls sollten Sie eine neue ID im Microsoft-Anwendungsregistrierungsportal ([My Applications](https://apps.dev.microsoft.com)) generieren, sie hier eingeben und sie dann wiederverwenden, wenn Sie [einen Bot hinzufügen](~/bots/how-to/create-a-bot-for-teams.md).
+Die eindeutige, von Microsoft generierte Kennung für diese App. Wenn Sie einen Bot über die Microsoft Bot Framework registriert haben oder sich die Web-App Ihrer Registerkarte bereits bei Microsoft anmeldet, sollten Sie bereits über eine ID verfügen und diese hier eingeben. Andernfalls müssen Sie eine neue ID im Microsoft-Anwendungsregistrierungsportal ([Meine Anwendungen](https://apps.dev.microsoft.com)) generieren, sie hier eingeben und sie dann wiederverwenden, wenn Sie [einen Bot hinzufügen](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## <a name="packagename"></a>packageName
 
@@ -326,7 +326,7 @@ Gibt Informationen zu Ihrem Unternehmen an. Für an AppSource (ehemals Office St
 
 Optional:
 
-Ermöglicht die Angabe einer Standardsprache sowie Verweise auf zusätzliche Sprachdateien. Siehe [Lokalisierung](~/concepts/build-and-test/apps-localization.md).
+Ermöglicht die Spezifikation einer Standardsprache und Zeiger auf zusätzliche Sprachdateien. Siehe [Lokalisierung](~/concepts/build-and-test/apps-localization.md).
 
 |Name| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|
@@ -339,13 +339,13 @@ Ein Array von Objekten, die zusätzliche Sprachübersetzungen angeben.
 |Name| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|
 |`languageTag`|4 Zeichen|✔|Das Sprachtag der Zeichenfolgen in der bereitgestellten Datei.|
-|`file`|4 Zeichen|✔|Ein relativer Dateipfad zu einer JSON-Datei, die die übersetzten Zeichenfolgen enthält.|
+|`file`|4 Zeichen|✔|Ein relativer Dateipfad zur JSON-Datei mit den übersetzten Zeichenfolgen.|
 
 ## <a name="name"></a>name
 
 Erforderlich:
 
-Der Name Ihrer App-Lösung, der Benutzern in der Microsoft Teams-Umgebung angezeigt wird. Für Apps, die an AppSource übermittelt werden, müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen. Die Werte von `short` und `full` sollten nicht gleich sein.
+Der Name Ihrer App-Lösung, der Benutzern in der Microsoft Teams-Umgebung angezeigt wird. Für Apps, die an AppSource übermittelt werden, müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen. Die Werte von `short` und `full` sollten nicht identisch sein.
 
 |Name| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|
@@ -358,7 +358,7 @@ Erforderlich:
 
 Beschreibt Ihre App für Benutzer. Für an AppSource übermittelte Apps müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen.
 
-Stellen Sie sicher, dass Ihre Beschreibung Ihre Erfahrung genau beschreibt und Informationen bereitstellt, die potenziellen Kunden helfen, zu verstehen, was Ihre Erfahrung bewirkt. In der vollständigen Beschreibung sollten Sie auch vermerken, ob für die Nutzung ein externes Konto erforderlich ist. Die Werte von `short` und `full` sollten nicht gleich sein.  Ihre Kurzbeschreibung darf innerhalb der Langbeschreibung nicht wiederholt werden und keinen anderen App-Namen enthalten.
+Stellen Sie sicher, dass Ihre Beschreibung Ihre Erfahrung genau beschreibt und Informationen bereitstellt, die potenziellen Kunden helfen, zu verstehen, was Ihre Erfahrung bewirkt. In der vollständigen Beschreibung sollten Sie auch vermerken, ob für die Nutzung ein externes Konto erforderlich ist. Die Werte von `short` und `full` sollten nicht identisch sein.  Ihre Kurzbeschreibung darf innerhalb der Langbeschreibung nicht wiederholt werden und keinen anderen App-Namen enthalten.
 
 |Name| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|
@@ -380,7 +380,7 @@ Symbole, die in der Microsoft Teams-App verwendet werden. Die Symboldateien müs
 
 **Erforderliche** &ndash; Zeichenfolge
 
-Eine Farbe, die als Hintergrund für Ihre Kontursymbole verwendet wrden soll.
+Eine Farbe, die mit und als Hintergrund für Ihre Gliederungssymbole verwendet werden soll.
 
 Bei dem Wert muss es sich um einen gültigen HTML-Farbcode handeln, der mit "#" beginnt, z. B. `#4464ee`.
 
@@ -388,7 +388,7 @@ Bei dem Wert muss es sich um einen gültigen HTML-Farbcode handeln, der mit "#" 
 
 Optional:
 
-Wird verwendet, wenn Ihre App-Lösung über Teamkanal-Registerkarten verfügt, die eine zusätzliche Konfiguration erfordern, bevor sie hinzugefügt werden. Konfigurierbare Registerkarten werden nur im Teams-Bereich unterstützt, und derzeit wird nur eine Registerkarte pro App unterstützt.
+Wird verwendet, wenn Ihre App über eine Teamkanal-Registerkartenoberfläche verfügt, die zusätzliche Konfiguration erfordert, bevor sie hinzugefügt wird. Konfigurierbare Registerkarten werden nur im Teams-Bereich unterstützt, und derzeit wird nur eine Registerkarte pro App unterstützt.
 
 Das Objekt ist ein Array, wobei alle Elemente vom Typ `object` sind. Dieser Block ist nur für Lösungen erforderlich, die eine konfigurierbare Channel-Tab-Lösung bereitstellen.
 
@@ -512,7 +512,7 @@ Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 
 Optional:
 
-Ein Array davon `string` gibt an, welche Berechtigungen die App anfordert, wodurch Endbenutzer wissen, wie die Erweiterung funktioniert. Die folgenden Optionen sind nicht exklusiv:
+Ein Array von `string`, das angibt, welche Berechtigungen die App anfordert, wodurch Endbenutzer wissen, wie die Erweiterung ausgeführt wird. Die folgenden Optionen sind nicht exklusiv:
 
 * `identity` &emsp; Erfordert Benutzeridentitätsinformationen.
 * `messageTeamMembers`&emsp; Erfordert die Berechtigung, direkte Nachrichten an Teammitglieder zu senden.
@@ -537,7 +537,7 @@ Gibt die nativen Funktionen auf dem Gerät eines Benutzers an, auf die Ihre App 
 
 Eine Liste gültiger Domänen, von denen die App erwartet, Inhalte zu laden. Domain-Auflistungen können Platzhalter enthalten, zum Beispiel `*.example.com`. Dies entspricht genau einem Segment der Domäne; Wenn Sie übereinstimmen müssen, verwenden `a.b.example.com` Sie `*.*.example.com`. Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der einen Verwendung für die Registerkartenkonfiguration navigieren muss, muss diese Domäne hier angegeben werden.
 
-Es ist jedoch **nicht** erforderlich, die Domains von Identitätsanbietern, die Sie unterstützen möchten, in Ihre App aufzunehmen. Um sich beispielsweise mit einer Google-ID zu authentifizieren, muss zu accounts.google.com umgeleitet werden, aber Sie sollten accounts.google.com nicht in einschließen `validDomains[]`.
+Es ist jedoch **nicht** erforderlich, die Domains von Identitätsanbietern, die Sie unterstützen möchten, in Ihre App aufzunehmen. Um sich beispielsweise mithilfe einer Google-ID zu authentifizieren, ist es notwendig, zu accounts.google.com umzuleiten, aber Sie sollten accounts.google.com nicht in `validDomains[]`einschließen.
 
 > [!IMPORTANT]
 > Fügen Sie keine Domänen hinzu, die sich Ihrer Kontrolle entziehen, weder direkt noch über Platzhalter. Beispielsweise ist gültig, `yourapp.onmicrosoft.com` aber nicht `*.onmicrosoft.com` gültig.
@@ -548,7 +548,7 @@ Das Objekt ist ein Array, wobei alle Elemente vom Typ `string` sind.
 
 Optional:
 
-Geben Sie Ihre Microsoft Azure Active Directory (Azure AD)-App-ID und Graph-Informationen an, damit Benutzer sich nahtlos bei Ihrer Auzre AD-App anmelden können.
+Geben Sie Ihre Microsoft Azure Active Directory (Azure AD)-App-ID und Graph Informationen an, damit sich Benutzer nahtlos bei Ihrer Azure AD-App anmelden können.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
@@ -560,7 +560,7 @@ Geben Sie Ihre Microsoft Azure Active Directory (Azure AD)-App-ID und Graph-Info
 
 **Optional** – Objekt
 
-Geben Sie die Graph Connectorkonfiguration der App an. Wenn dies vorhanden ist, muss [auch webApplicationInfo.id](#webapplicationinfo) angegeben werden.
+Geben Sie die Graph-Connectorkonfiguration der App an. Wenn dies vorhanden ist, muss [auch webApplicationInfo.id](#webapplicationinfo) angegeben werden.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
@@ -663,7 +663,7 @@ Sie können eine der folgenden Eigenschaften definieren:
 * `longDescription`: Die detaillierte Beschreibung der App.
 * `smallImageUrl`: Das Kontursymbol der App.
 * `largeImageUrl`: Das Farbsymbol der App.
-* `accentColor`: Die Farbe, die in Verbindung mit und als Hintergrund für Ihre Gliederungssymbole verwendet werden soll.
+* `accentColor`: Die Farbe, die mit und als Hintergrund für Ihre Gliederungssymbole verwendet werden soll.
 * `developerUrl`: Die HTTPS-URL der Website des Entwicklers.
 * `privacyUrl`: Die HTTPS-URL der Datenschutzerklärung des Entwicklers.
 * `termsOfUseUrl`: Die HTTPS-URL der Nutzungsbedingungen des Entwicklers.

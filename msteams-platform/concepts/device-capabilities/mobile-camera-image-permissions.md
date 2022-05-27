@@ -4,14 +4,14 @@ author: Rajeshwari-v
 description: Erfahren Sie anhand von Codebeispielen, wie Sie das Microsoft Teams JavaScript-Client-SDK verwenden, um Medienfunktionen zu aktivieren.
 keywords: Medien-API Kamerabild Mikrofonfunktionen systemeigene Geräteberechtigungen
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c9b31bf6fe97446bfbccdd1861612ec938733f88
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a65f39d3796bc0dacaa80f6badba7a011716edbf
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111262"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756758"
 ---
 # <a name="integrate-media-capabilities"></a>Integrieren von Medienfunktionen
 
@@ -24,11 +24,11 @@ Um Medienfunktionen zu integrieren, müssen Sie die App-Manifestdatei aktualisie
 
 Für eine effektive Integration benötigen Sie ein gutes Verständnis von [Codeausschnitten](#code-snippets) für den Aufruf der jeweiligen APIs, welche die Nutzung systemeigener Medienfunktionen ermöglichen.
 
-Es ist wichtig, sich mit den [API-Antwortfehlern](#error-handling) vertraut zu machen, um die Fehler in Ihrer Microsoft Teams-App zu behandeln.
+Es ist wichtig, sich mit den [API-Antwortfehlern](#error-handling) vertraut zu machen, um die Fehler in Ihrer Teams-App zu behandeln.
 
 > [!NOTE]
 >
-> * Derzeit werden Medienfunktionen in Microsoft Teams nur auf mobilen Clients unterstützt.
+> * Derzeit sind Microsoft Teams-Unterstützung für Medienfunktionen nur für mobile Clients verfügbar.
 > * Derzeit werden in Microsoft Teams keine Geräteberechtigungen für Apps mit mehreren Fenstern, Registerkarten und den Besprechungsseitenbereich unterstützt.
 > * Geräteberechtigungen unterscheiden sich im Browser. Weitere Informationen finden Sie unter [Browsergeräteberechtigungen](browser-device-permissions.md).
 
@@ -59,7 +59,7 @@ Mit den [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.m
   
 > [!IMPORTANT]
 >
-> * Die `selectMedia`-, `getMedia`- und `viewImages`-APIs können von mehreren Microsoft Teams-Oberflächen aus aufgerufen werden, z. B. Aufgabenmodulen, Registerkarten und persönlichen Apps. Weitere Informationen finden Sie unter [Einstiegspunkte für Microsoft Teams-Apps](../extensibility-points.md).
+> * Die `selectMedia`-, `getMedia`- und `viewImages`-APIs können von mehreren Microsoft Teams-Oberflächen aus aufgerufen werden, z. B. Aufgabenmodulen, Registerkarten und persönlichen Apps. Weitere Informationen finden Sie unter [Einstiegspunkte für Teams Apps](../extensibility-points.md).
 > * Die `selectMedia`-API wurde erweitert, um Mikrofon- und Audioeigenschaften zu unterstützen.
 
 Sie müssen die folgenden APIs verwenden, um die Medienfunktionen Ihres Geräts zu aktivieren:
@@ -85,11 +85,11 @@ Sie müssen sicherstellen, dass diese Fehler in Ihrer Microsoft Teams-App angeme
 
 |Fehlercode |  Fehlername     | Bedingung|
 | --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | Die API wird auf der aktuellen Plattform nicht unterstützt.|
-| **404** | FILE_NOT_FOUND | Die angegebene Datei wurde am angegebenen Speicherort nicht gefunden.|
+| **100** | NOT_SUPPORTED_ON_PLATFORM | DIE API wird auf der aktuellen Plattform nicht unterstützt.|
+| **404** | FILE_NOT_FOUND | Die angegebene Datei wird am angegebenen Speicherort nicht gefunden.|
 | **500** | INTERNAL_ERROR | Interner Fehler beim Ausführen des erforderlichen Vorgangs.|
 | **1000** | PERMISSION_DENIED |Die Berechtigung wird vom Benutzer verweigert.|
-| **3000** | NO_HW_SUPPORT | Die Funktion wird von der zugrundeliegenden Hardware nicht unterstützt.|
+| **3000** | NO_HW_SUPPORT | Die zugrunde liegende Hardware unterstützt die Funktion nicht.|
 | **4000**| INVALID_ARGUMENTS | Mindestens ein Argument ist ungültig.|
 |  **8000** | USER_ABORT |Der Benutzer bricht den Vorgang ab.|
 | **9000**| OLD_PLATFORM | Plattformcode ist veraltet und implementiert diese API nicht.|

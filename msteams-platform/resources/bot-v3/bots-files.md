@@ -3,14 +3,14 @@ title: Senden und Empfangen von Dateien von einem Bot
 description: Erfahren Sie, wie Sie Dateien über den Bot senden und empfangen, indem Sie Graph-APIs für persönliche, Kanal- und Gruppenchatbereiche verwenden. Verwenden Sie Teams-Bot-APIs unter Verwendung von Codebeispielen, die auf dem v3 Bot Framework SDK basieren.
 keywords: Senden und Empfangen von Teams-Bots-Dateien
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: b12e8e79e7d8d5180803004b4e0f238446a8fc98
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 2baf356b8ec5cf0f7d3e68af81a34ccd178e90b9
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110358"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755902"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>Senden und Empfangen von Dateien über Ihren Bot
 
@@ -89,7 +89,7 @@ Das Hochladen einer Datei für einen Benutzer umfasst die folgenden Schritte:
 
 Diese Desktopnachricht enthält ein einfaches Anlageobjekt, in dem der Benutzer um die Berechtigung zum Hochladen der Datei gebeten wird:
 
-![Screenshot der Zustimmungskarte, die die Benutzerberechtigung zum Hochladen der Datei anfordert](../../assets/images/bots/bot-file-consent-card.png)
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Screenshot der Zustimmungskarte, die die Benutzerberechtigung zum Hochladen der Datei anfordert" border="true":::
 
 Die mobile Nachricht enthält ein Anlageobjekt, das die Benutzerberechtigung zum Hochladen der Datei anfordert:
 

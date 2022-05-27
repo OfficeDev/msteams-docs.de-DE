@@ -6,12 +6,12 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: ebb6f7e66f09c3ebbc3834577f924f5a34bb8583
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: 94f02ce31a9af3acb78fc6fef6f071df02bfd565
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653880"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755860"
 ---
 # <a name="edit-teams-app-manifest"></a>Bearbeiten Teams App-Manifests
 
@@ -51,7 +51,7 @@ Der Beispielkatalog wird wie in der folgenden Abbildung dargestellt angezeigt:
 
 **So zeigen Sie eine Vorschau der Manifestdatei in der Remoteumgebung an**
 
-* Wählen Sie **"Bereitstellung in der Cloud**" unter **"ENTWICKLUNG**" in Teams Toolkit-Erweiterung oder 
+* Wählen Sie **"Bereitstellung in der Cloud**" unter **"ENTWICKLUNG**" in Teams Toolkit-Erweiterung oder
 * Trigger **Teams: Bereitstellung in der Cloud über die** Befehlspalette.
  
 Es generiert die Konfiguration für die Remote-Teams-App und erstellt das Paket- und Vorschaumanifest unter dem `build/appPackage` Ordner.
@@ -72,7 +72,7 @@ Sie können eine Vorschau der Manifestdatei auch in der Remoteumgebung anzeigen,
 
 Nachdem Sie die Manifestdatei in der Vorschau angezeigt haben, können Sie Ihre lokalen Änderungen auf folgende Weise mit dev Portal synchronisieren:
 
-1. Bereitstellen Teams App-Manifests
+1. Bereitstellen Teams App-Manifests.
 
    Sie können Teams App-Manifest auf eine der folgenden Arten bereitstellen:
 
@@ -80,17 +80,17 @@ Nachdem Sie die Manifestdatei in der Vorschau angezeigt haben, können Sie Ihre 
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="Bereitstellen des Manifests":::
 
-   * Trigger `Teams: Deploy Teams app manifest` aus Befehlspalette
+   * Trigger `Teams: Deploy Teams app manifest` aus Befehlspalette.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="Bereitstellen über die Befehlspalette":::
 
-2. Aktualisieren auf Teams Plattform
+2. Auf Teams Plattform aktualisieren.
 
    Sie können auf eine der folgenden Arten auf Teams Plattform aktualisieren:
 
-   * Wählen Sie in **Teams der** oberen linken Ecke von`manifest.{env}.json`
+   * Wählen Sie in der oberen linken Ecke von **Teams Plattform** aktualisieren aus`manifest.{env}.json`.
 
-   * Trigger **Teams: Aktualisieren des Manifests auf Teams Plattform** auf der Menüleiste von`manifest.{env}.json`
+   * Trigger **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Auf Teams aktualisieren":::
 
@@ -114,12 +114,11 @@ Sie können auch **Teams auslösen: Aktualisieren des Manifests auf Teams Plattf
 
 Wenn die Manifestdatei aufgrund einer Änderung der Konfigurationsdatei oder einer Vorlagenänderung veraltet ist, wählen Sie eine der folgenden Aktionen aus:
 
-* **Nur Vorschau**: Lokale Manifestdatei wird gemäß der aktuellen Konfiguration überschrieben
-* **Vorschau und Update**: Lokale Manifestdatei wird entsprechend der aktuellen Konfiguration überschrieben und auch auf Teams-Plattform aktualisiert
-* **Abbrechen**: Es wird keine Aktion ausgeführt
+* **Nur Vorschau**: Die lokale Manifestdatei wird gemäß der aktuellen Konfiguration überschrieben.
+* **Vorschau und Aktualisierung**: Die lokale Manifestdatei wird gemäß der aktuellen Konfiguration überschrieben und auch auf Teams Plattform aktualisiert.
+* **Abbrechen**: Es wird keine Aktion ausgeführt.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre" border="true":::
-
 
 ## <a name="customize-teams-app-manifest"></a>Anpassen des Teams-App-Manifests
 
@@ -177,8 +176,8 @@ In `manifest.template.json`, you can navigate to codelens to preview the values 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Preview values":::
 
-> [!NOTE] 
-> Provision the environment or execute local debug to generate values for placeholders. 
+> [!NOTE]
+> Provision the environment or execute local debug to generate values for placeholders.
 
 You can navigate to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
 
@@ -187,7 +186,6 @@ You can navigate to state file or configuration file by selecting the codelens, 
 To preview values for all the environments, you can hover over the placeholder. It shows a list with environment names and corresponding values. If you haven't provisioned the environment or executed the local debug, select `Trigger Teams: Provision in the cloud command to see placeholder value` or `Trigger local debug to see placeholder value`.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Preview all values":::
-
 
 ## See also
 

@@ -3,18 +3,18 @@ title: Übersicht über universelle Aktionen für adaptive Karten
 description: Eine kurze Übersicht über universelle Aktionen für adaptive Karten, z. B. benutzerspezifische Ansichten, sequenzielle Workflowunterstützung und vieles mehr für Desktop- und mobile Umgebungen
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: dc3a61b323e462f90937d8b6c432d624c29e0125
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: eb47da7a1a6bf765864e402b83badef664401404
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103411"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756471"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Universal-Aktionen für adaptive Karten
 
-Universelle Aktionen für adaptive Karten haben sich aus dem Feedback von Entwicklern entwickelt, dass die Aktionsbehandlung trotz des universellen Layouts und Renderings für adaptive Karten nicht möglich war. Auch wenn ein Entwickler die gleiche Karte an verschiedene Orte senden wollte, muss er Aktionen anders behandeln.
+Universelle Aktionen für adaptive Karten haben sich aus dem Feedback von Entwicklern entwickelt, dass die Aktionsbehandlung trotz der universellen Darstellung von Layout und Rendering für adaptive Karten nicht möglich war. Auch wenn ein Entwickler die gleiche Karte an verschiedene Orte senden wollte, muss er Aktionen anders behandeln.
 
-Universelle Aktionen für adaptive Karten stellt den Bot als gängiges Back-End für die Behandlung von Aktionen dar und führt einen neuen Aktionstyp ein, der appsübergreifend funktioniert, `Action.Execute`z. B. Teams und Outlook.
+Universelle Aktionen für adaptive Karten bringen den Bot als allgemeines Back-End für die Behandlung von Aktionen mit sich und führen einen neuen Aktionstyp ein, der appsübergreifend funktioniert, `Action.Execute`z. B. Teams und Outlook.
 
 Dieses Dokument hilft Ihnen zu verstehen, wie Sie das Modell für universelle Aktionen verwenden können, um die Benutzererfahrung bei der Interaktion mit adaptiven Karten über Plattformen und Anwendungen hinweg zu verbessern.
 

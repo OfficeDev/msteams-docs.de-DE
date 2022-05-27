@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c7c53b7b269e5c406cb27c3faee8b818dc567a6
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: f0dc772043eca4fc624fbd04261ddbc921c91fc4
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668137"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755951"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ausweiten einer persönlichen Microsoft Teams-Registerkarte auf Microsoft 365
 
@@ -52,14 +52,14 @@ Alternativ können Sie eine einfache Single Sign-On *Hello World-App* verwenden,
 
 Um mit einer [persönlichen Registerkarte](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365) zu beginnen, die bereits für die Ausführung in Outlook und Office aktiviert ist, verwenden Sie Teams Toolkit-Erweiterung für Visual Studio Code.
 
-1. Öffnen Sie Visual Studio Code die Befehlspalette (`Ctrl+Shift+P`), geben Sie `Teams: Create a new Teams app`ein.
+1. Öffnen Sie in Visual Studio Code die Befehlspalette (`Ctrl+Shift+P`), geben Sie `Teams: Create a new Teams app` ein.
 1. Wählen Sie die **SSO-aktivierte persönliche Registerkarte aus**.
 
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Aufgabenlisten-Beispiel (funktioniert in Microsoft Teams, Outlook und Office) im Microsoft Teams-Toolkit":::
 
 1. Wählen Sie einen Speicherort auf Ihrem lokalen Computer für den Arbeitsbereichsordner aus.
 1. Öffnen Sie die Befehlspalette (`Ctrl+Shift+P`) und geben `Teams: Provision in the cloud` Sie ein, um die erforderlichen App-Ressourcen (App Service Plan, Storage Konto, Funktions-App, verwaltete Identität) in Ihrem Azure-Konto zu erstellen.
-1. Öffnen Sie die Befehlspalette (`Ctrl+Shift+P`) und geben Sie `Teams: Deploy to the cloud` ein, um den Beispielcode für die bereitgestellten Ressourcen in Azure bereitzustellen und die App zu starten.
+1. Öffnen Sie die Befehlspalette (`Ctrl+Shift+P`) und geben Sie `Teams: Deploy to the cloud` ein, um den Beispielcode für die bereitgestellten Ressourcen in Azure einzusetzen und die App zu starten.
 
 Von hier aus können Sie die [App in Teams querladen](#sideload-your-app-in-teams) und eine Vorschau ihrer App in Outlook und Office anzeigen. (Die App-Manifest- und TeamsJS-API-Aufrufe wurden bereits für Microsoft 365 aktualisiert.)
 
@@ -148,21 +148,21 @@ Wenn Ihre App CSP-Header ( [Content Security Policy](https://developer.mozilla.o
 
 Der letzte Schritt zum Ausführen Ihrer App in Office und Outlook besteht darin, das aktualisierte [App-Paket](..//concepts/build-and-test/apps-package.md) für persönliche Registerkarten in Microsoft Teams querzuladen.
 
-1. Packen Sie Ihre Teams-Anwendung ([Manifest-](../resources/schema/manifest-schema.md) und [App-Symbole](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in einer ZIP-Datei. Wenn Sie Teams Toolkit zum Erstellen Ihrer App verwendet haben, können Sie dies ganz einfach mithilfe der **Zip-Teams-Metadatenpaketoption** im **Bereitstellungsmenü** des Teams Toolkits tun.
+1. Packen Sie Ihre Teams-Anwendung ([Manifest-](../resources/schema/manifest-schema.md) und [App-Symbole](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in einer ZIP-Datei. Wenn Sie Teams Toolkit zum Erstellen Ihrer App verwendet haben, können Sie dies ganz einfach mithilfe der Option **Teams-Metadatenpaket in einer ZIP-Datei verpacken** im Menü **Bereitstellung** von Teams Toolkit tun.
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Option „ Microsoft Teams-Metadatenpaket in einer ZIP-Datei verpacken“ in der Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code":::
 
-1. Melden Sie sich mit Ihrem Sandkastenmandantenkonto bei Teams an, und wechseln Sie in den *Entwicklervorschaumodus*. Wählen Sie das Menü mit den Auslassungspunkten (**...**) nach Ihrem Benutzerprofil und dann Folgendes aus: **Info** > **zur Entwicklervorschau**.
+1. Melden Sie sich mit Ihrem Sandkastenmandantenkonto bei Microsoft Teams an, und wechseln Sie in den *Entwicklervorschaumodus*. Wählen Sie im Menü mit den Auslassungspunkten (**...**) neben Ihrem Benutzerprofil Folgendes aus: **Info** > **Entwicklervorschau**.
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="Öffnen Sie Teams Menü &quot;Info&quot; und wählen Sie die Option &quot;Entwicklervorschau&quot; aus.":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="Öffnen Sie über das Microsoft Teams-Menü mit den Auslassungspunkten die Option „Info“, und wählen Sie dann „Entwicklervorschau“ aus.":::
 
-1. Wählen Sie **"Apps** " aus, um den Bereich " **Apps verwalten** " zu öffnen. Wählen Sie dann **"App veröffentlichen"** aus.
+1. Wählen Sie **Apps** aus, um den Bereich **Apps verwalten** zu öffnen. Wählen Sie dann **App veröffentlichen** aus.
 
     :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Öffnen Sie den Bereich &quot;Apps verwalten&quot;, und wählen Sie &quot;App veröffentlichen&quot; aus.":::
 
 1. Wählen Sie **Hochladen eine benutzerdefinierte App-Option** aus, und wählen Sie Ihr App-Paket aus.
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Option &quot;benutzerdefinierte App Hochladen&quot; in Teams":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Option &quot;Benutzerdefinierte App hochladen&quot; in Microsoft Teams":::
 
 Nachdem sie auf Teams quergeladen wurde, ist Ihre persönliche Registerkarte in Outlook und Office verfügbar. Melden Sie sich mit den gleichen Anmeldeinformationen an, die Sie zum Anmelden bei Teams zum Querladen Ihrer App verwendet haben.
 
@@ -225,7 +225,7 @@ Eine allgemeine Zusammenfassung Microsoft 365 Host- und Plattformunterstützung 
 
 Sie können die Hostunterstützung einer bestimmten Funktion zur Laufzeit überprüfen, indem Sie die Funktion für diese `isSupported()` Funktion (Namespace) aufrufen und das App-Verhalten entsprechend anpassen. Auf diese Weise kann Ihre App benutzeroberflächen und Funktionen in Hosts, die sie unterstützen, aufhellen und in Hosts, die dies nicht unterstützen, eine ansprechende Fallbackerfahrung bieten. Weitere Informationen finden Sie unter ["Unterscheiden der App-Erfahrung"](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience).
 
-Verwenden Sie die [Microsoft Teams-Communitykanäle für Entwickler](/microsoftteams/platform/feedback), um Probleme zu melden und Feedback zu geben.
+Verwenden Sie die [Kanäle der Microsoft Teams-Entwicklercommunity](/microsoftteams/platform/feedback), um Probleme zu melden und Feedback zu geben.
 
 ### <a name="debugging"></a>Debugging
 
@@ -239,17 +239,17 @@ Bei der ersten Ausführung des lokalen Debuggens zum Office oder Outlook werden 
 
 Geben Sie Feedback und melden Sie Alle Probleme mit dem Teams Toolkit-Debugging unter [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
-## <a name="next-step"></a>Nächster Schritt
-
-Veröffentlichen Sie Ihre App so, dass sie in Teams, Outlook und Office auffindbar ist:
-
-> [!div class="nextstepaction"]
-> [Veröffentlichen Teams Apps für Outlook und Office](publish.md)
-
 ## <a name="code-sample"></a>Codebeispiel
 
 | **Beispielname** | **Beschreibung** | **Node.js** |
 |---------------|--------------|--------|
-| Todoliste | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert nur in Teams (verwenden Sie diese Beispiel-App, um den in diesem Lernprogramm beschriebenen Upgradeprozess auszuprobieren). | [Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
-| Todoliste (Microsoft 365) | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert in Teams, Outlook Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
+| Todoliste | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert nur in Teams (verwenden Sie diese Beispiel-App, um den in diesem Lernprogramm beschriebenen Upgradeprozess auszuprobieren). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
+| Todoliste (Microsoft 365) | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert in Teams, Outlook Office. | [Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Bild-Editor (Microsoft 365) | Erstellen, Bearbeiten, Öffnen und Speichern von Bildern mithilfe von Microsoft Graph-API. Funktioniert in Teams, Outlook Office. | [Anzeigen](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+
+## <a name="next-step"></a>Nächster Schritt
+
+Veröffentlichen Sie Ihre App, damit sie in Teams, Outlook und Office auffindbar ist:
+
+> [!div class="nextstepaction"]
+> [Veröffentlichen von Teams-Apps für Outlook und Office](publish.md)

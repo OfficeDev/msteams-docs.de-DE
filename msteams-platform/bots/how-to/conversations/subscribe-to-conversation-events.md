@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: Ereignisse Bot Kanal Nachricht Reaktion Unterhaltung
-ms.openlocfilehash: a168231b48e493402f0190f36e65cf2918ca7e83
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: d9722ece0edd835213b7a963368c81ab1121c436
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297156"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757570"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Unterhaltungsereignisse in Ihrem Teams-Bot
 
@@ -404,7 +404,7 @@ async def on_teams_channel_restored(
 
 ### <a name="team-members-added"></a>Hinzugefügte Teammitglieder
 
-Das `teamMemberAdded`-Ereignis wird an Ihren Bot gesendet, wenn es zum ersten Mal zu einer Unterhaltung hinzugefügt wird. Das Ereignis wird jedes Mal an Ihren Bot gesendet, wenn ein neuer Benutzer zu einem Team- oder Gruppenchat hinzugefügt wird, in dem Ihr Bot installiert ist. Beachten Sie, dass die Benutzerinformationen, die als ID bezeichnet werden, für Ihren Bot eindeutig sind und für die zukünftige Verwendung durch Ihren Dienst zwischengespeichert werden können, z. B. für das Senden einer Nachricht an einen bestimmten Benutzer.
+Das `teamMemberAdded` Ereignis wird an Ihren Bot gesendet, wenn es zum ersten Mal zu einer Unterhaltung hinzugefügt wird. Das Ereignis wird jedes Mal an Ihren Bot gesendet, wenn ein neuer Benutzer zu einem Team- oder Gruppenchat hinzugefügt wird, in dem Ihr Bot installiert ist. Beachten Sie, dass die Benutzerinformationen, die als ID bezeichnet werden, für Ihren Bot eindeutig sind und für die zukünftige Verwendung durch Ihren Dienst zwischengespeichert werden können, z. B. für das Senden einer Nachricht an einen bestimmten Benutzer.
 
 Der folgende Code zeigt ein Beispiel für ein Ereignis, das von Teammitgliedern hinzugefügt wurde:
 
@@ -548,7 +548,7 @@ async def on_teams_members_added(
 
 ### <a name="team-members-removed"></a>Teammitglieder entfernt
 
-Das `teamMemberRemoved`-Ereignis wird an Ihren Bot gesendet, wenn es aus einem Team entfernt wird. Das Ereignis wird jedes Mal an Ihren Bot gesendet, wenn ein Benutzer aus einem Team entfernt wird, in dem Ihr Bot Mitglied ist. Um festzustellen, ob das entfernte neue Mitglied der Bot selbst war oder ein Benutzer, überprüfen Sie das `Activity`-Objekt des `turnContext`.  Wenn das `Id`-Feld des `MembersRemoved`-Objekts mit dem `Id`-Feld des `Recipient`-Objekts identisch ist, ist das entfernte Element der Bot, andernfalls ist es ein Benutzer. Die `Id` des Bots ist in der Regel `28:<MicrosoftAppId>`.
+Das `teamMemberRemoved` Ereignis wird an Ihren Bot gesendet, wenn es aus einem Team entfernt wird. Das Ereignis wird jedes Mal an Ihren Bot gesendet, wenn ein Benutzer aus einem Team entfernt wird, in dem Ihr Bot Mitglied ist. Um festzustellen, ob das entfernte neue Mitglied der Bot selbst war oder ein Benutzer, überprüfen Sie das `Activity`-Objekt des `turnContext`.  Wenn das `Id` Feld des `MembersRemoved` Objekts mit dem `Id` Feld des `Recipient` Objekts identisch ist, ist das entfernte Element der Bot, andernfalls ist es ein Benutzer. Die `Id` des Bots ist in der Regel `28:<MicrosoftAppId>`.
 
 > [!NOTE]
 > Wenn ein Benutzer dauerhaft aus einem Mandanten gelöscht wird, wird das `membersRemoved conversationUpdate`-Ereignis ausgelöst.
@@ -1058,7 +1058,7 @@ Nachdem Sie nun mit den Unterhaltungsaktualisierungsereignissen gearbeitet haben
 
 ## <a name="message-reaction-events"></a>Ereignisse bei Nachrichtenreaktionen
 
-Das `messageReaction`-Ereignis wird gesendet, wenn ein Benutzer Reaktion auf eine Nachricht, die von Ihrem Bot gesendet wurde, hinzufügt oder entfernt. Die `replyToId` enthält die ID der Nachricht und `Type` ist die Art der Reaktion im Textformat. Die Arten von Reaktionen umfassen wütend, Herz, breites Grinsen, gefällt mir, traurig und überrascht. Dieses Ereignis enthält nicht den Inhalt der ursprünglichen Nachricht. Wenn die Verarbeitung von Reaktionen auf Ihre Nachrichten für Ihren Bot wichtig ist, müssen Sie die Nachrichten speichern, wenn Sie sie senden. Die folgende Tabelle enthält weitere Informationen zum Ereignistyp und zu Nutzlastobjekten:
+Das `messageReaction` Ereignis wird gesendet, wenn ein Benutzer Reaktionen auf eine Nachricht hinzufügt oder entfernt, die von Ihrem Bot gesendet wurde. Die `replyToId` enthält die ID der Nachricht und `Type` ist die Art der Reaktion im Textformat. Die Arten von Reaktionen umfassen wütend, Herz, breites Grinsen, gefällt mir, traurig und überrascht. Dieses Ereignis enthält nicht den Inhalt der ursprünglichen Nachricht. Wenn die Verarbeitung von Reaktionen auf Ihre Nachrichten für Ihren Bot wichtig ist, müssen Sie die Nachrichten speichern, wenn Sie sie senden. Die folgende Tabelle enthält weitere Informationen zum Ereignistyp und zu Nutzlastobjekten:
 
 | EventType       | Nutzdatenobjekt   | Beschreibung                                                             | Bereich |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
@@ -1414,7 +1414,7 @@ Wenn Sie diese Installations- und Deinstallationsereignisse verwenden, gibt es e
 * Sie erstellen Ihren Bot ohne das Microsoft Bot Framework SDK, und daher gibt der Bot beim Empfangen eines unerwarteten Ereignisses eine Ausnahme.
 * Sie erstellen Ihren Bot mit dem Microsoft Bot Framework SDK, und Sie können das Standardereignisverhalten ändern, indem Sie den Basisereignishandle überschreiben.
 
-Es ist wichtig zu wissen, dass neue Ereignisse jederzeit in der Zukunft hinzugefügt werden können und Ihr Bot beginnt, sie zu empfangen. Sie müssen also mögliche unerwarteter Ereignisse abfangen. Wenn Sie das Bot Framework SDK verwenden, antwortet Ihr Bot automatisch mit „200 – OK“ auf alle Ereignisse, die Sie nicht behandeln möchten.
+Es ist wichtig zu wissen, dass neue Ereignisse jederzeit in der Zukunft hinzugefügt werden können und Ihr Bot beginnt, sie zu empfangen. Sie müssen also mögliche unerwarteter Ereignisse abfangen. Wenn Sie das Bot Framework SDK verwenden, antwortet Ihr Bot automatisch mit einer 200 - OK auf alle Ereignisse, die Sie nicht behandeln möchten.
 
 ## <a name="code-sample"></a>Codebeispiel
 

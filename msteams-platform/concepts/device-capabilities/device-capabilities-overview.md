@@ -1,17 +1,16 @@
 ---
 title: Gerätefunktionen – Übersicht
 author: Rajeshwari-v
-description: Überblick über systemeigene Gerätefunktionen wie Kamera, Bild, Medien, Mikrofon, Mikrofon, QR-Code und mehr.
+description: Erfahren Sie, wie Sie systemeigene Gerätefunktionen wie Kamera, Bild, Medien, Mikrofon, QR-Code und vieles mehr in Microsoft Teams App integrieren.
 ms.author: surbhigupta
-keywords: Kamerabild Medien Mikrofon Mikrofon QR-Code QR-Code Barcode Barcode Scan Scanner Standortzuordnung Funktionen systemeigene Geräteberechtigungen
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 854580fc8825ab007d97b1a3e5feb65af883c9a3
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 8d5c288e35ef18ada9ff93390ff745798ba3b01c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111752"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757031"
 ---
 # <a name="device-capabilities"></a>Gerätefunktionen
 

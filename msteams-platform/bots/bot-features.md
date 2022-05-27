@@ -5,12 +5,12 @@ description: Übersicht über die Tools und SDKs zum Erstellen von Microsoft Tea
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 05cb93fef74d22931591b3bb077afbb785d168ad
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 6e4384bc4594dd3751afca781bd2121ad8aeb210
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602239"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756863"
 ---
 # <a name="bots-and-sdks"></a>Tools und SDKs
 
@@ -51,14 +51,14 @@ Ihr Teams-Bot besteht aus folgenden Komponenten:
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots mit Webhooks und Connectors
 
-Webhooks und Connectors verbinden Ihren Bot mit Ihren Webdiensten. Mit Webhooks und Connectors können Sie einen Bot für grundlegende Interaktionen erstellen, wie das Erstellen eines Workflows oder andere einfache Befehle. Diese sind nur in dem Team verfügbar, in dem Sie sie erstellen, und sind für einfache, auf den Workflow Ihres Unternehmens zugeschnittene Prozesse gedacht. Unter [Was sind Webhooks und Connectors?](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) finden Sie weitere Informationen.
+Webhooks und Connectors verbinden Ihren Bot mit Ihren Webdiensten. Mit Webhooks und Connectors können Sie einen Bot für grundlegende Interaktionen erstellen, wie das Erstellen eines Workflows oder andere einfache Befehle. Sie sind nur in dem Team verfügbar, in dem Sie sie erstellen, und sind für einfache Prozesse vorgesehen, die für den Workflow Ihres Unternehmens spezifisch sind. Unter [Was sind Webhooks und Connectors?](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) finden Sie weitere Informationen.
 
 ## <a name="azure-bot-service"></a>Azure Bot-Dienst
 
 Der Azure-Bot-Dienst bietet zusammen mit dem Bot Framework Tools zum Erstellen, Testen, Bereitstellen und Verwalten intelligenter Bots an einem zentralen Ort. Sie können Ihren Bot auch im Azure-Bot-Dienst erstellen.
 
 > [!IMPORTANT]
-> Bot-Anwendungen innerhalb Microsoft Teams sind in GCC-High über [Azure Bot Service](/azure/bot-service/channel-connect-teams) verfügbar.
+> Bot-Anwendungen in Microsoft Teams sind in GCC-High über [Azure Bot Service](/azure/bot-service/channel-connect-teams) verfügbar.
 
 > [!NOTE]
 > * Bots in GCCH unterstützen nur bis zur Manifestversion v1.10.
@@ -164,7 +164,7 @@ Bots in Microsoft Teams können Teil einer 1:1-Unterhaltung, eines Gruppenchats 
 
 ### <a name="in-a-channel"></a>In einem Kanal
 
-Kanäle enthalten Unterhaltungsthreads zwischen mehreren Personen (bis zu 2.000). Dadurch erhält Ihr Bot potenziell eine enorme Reichweite, die einzelnen Interaktionen müssen aber präzise sein. Herkömmliche Multi-Turn-Interaktionen funktionieren nicht. Stattdessen müssen Sie versuchen, interaktive Karten oder Aufgabenmodule einzusetzen, oder die Unterhaltung in eine 1:1-Unterhaltung auszulagern, um viele Informationen zu sammeln. Ihr Bot hat nur Zugriff auf Nachrichten, in denen er direkt @erwähnt (`@mentioned`) wird. Mithilfe von Microsoft Graph und Berechtigungen auf Organisationsebene können Sie zusätzliche Nachrichten aus der Unterhaltung abrufen.
+Kanäle enthalten Unterhaltungsthreads zwischen mehreren Personen (bis zu 2.000). Dadurch erhält Ihr Bot potenziell eine enorme Reichweite, die einzelnen Interaktionen müssen aber präzise sein. Herkömmliche Multi-Turn-Interaktionen funktionieren nicht. Stattdessen müssen Sie versuchen, interaktive Karten oder Aufgabenmodule einzusetzen, oder die Unterhaltung in eine 1:1-Unterhaltung auszulagern, um viele Informationen zu sammeln. Ihr Bot hat nur Zugriff auf Nachrichten, in denen er sich befindet `@mentioned`. Mithilfe von Microsoft Graph und Berechtigungen auf Organisationsebene können Sie zusätzliche Nachrichten aus der Unterhaltung abrufen.
 
 Bots funktionieren in einem Kanal in den folgenden Fällen besser:
 
@@ -175,7 +175,7 @@ Bots funktionieren in einem Kanal in den folgenden Fällen besser:
 
 ### <a name="in-a-group-chat"></a>In einem Gruppenchat
 
-Gruppenchats sind Unterhaltungen ohne Threading zwischen drei oder mehr Personen. Sie weisen tendenziell weniger Mitglieder auf als ein Kanal und sind kurzlebiger. Ähnlich wie bei einem Kanal hat ihr Bot nur Zugriff auf Nachrichten, in denen er direkt @erwähnt (`@mentioned`) wird.
+Gruppenchats sind Unterhaltungen ohne Threading zwischen drei oder mehr Personen. Sie weisen tendenziell weniger Mitglieder auf als ein Kanal und sind kurzlebiger. Ähnlich wie bei einem Kanal hat Ihr Bot nur Zugriff auf Nachrichten, in denen er sich direkt befindet `@mentioned` .
 
 In den Fällen, in denen Bots in einem Kanal besser funktionieren, funktionieren auch in einem Gruppenchat besser.
 
@@ -190,11 +190,11 @@ Ein 1:1-Chat ist ein herkömmliches Interaktionsverfahren eines Unterhaltungs-Bo
 
 ## <a name="disadvantages-of-bots"></a>Nachteile von Bots
 
-Ein umfangreicher Dialog zwischen Ihrem Bot und dem Benutzer ist ein langsamer und übermäßig komplexer Weg, um eine Aufgabe zu erledigen. Ein Bot, der zu viele Befehle unterstützt, insbesondere eine zu große Anzahl von Befehlen, ist nicht erfolgreich oder wird von Benutzern nicht positiv gesehen.
+Ein umfangreicher Dialog zwischen Ihrem Bot und dem Benutzer ist ein langsamer und übermäßig komplexer Weg, um eine Aufgabe zu erledigen. Ein Bot, der übermäßige Befehle unterstützt, insbesondere eine breite Palette von Befehlen, ist nicht erfolgreich oder wird von Benutzern nicht positiv gesehen.
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>Komplexe Aufgaben im Chat
 
-Ein umfangreiches Dialogfeld erfordert, dass der Entwickler den Status beibehält. Um den Status zu verlassen, muss ein Benutzer entweder ein Timeout überschreiten oder **Abbrechen** eingeben. Auch der Prozess ist mühsam. Sehen Sie sich beispielsweise das folgende Unterhaltungsszenario an:
+Ein umfangreiches Dialogfeld erfordert, dass der Entwickler den Status beibehält. Um diesen Zustand zu beenden, muss ein Benutzer entweder ein Timeout oder **"Abbrechen"** auswählen. Auch der Prozess ist mühsam. Sehen Sie sich beispielsweise das folgende Unterhaltungsszenario an:
 
 BENUTZER: Plane eine Besprechung mit Marie.
 
@@ -214,7 +214,7 @@ Da es im aktuellen Bot-Menü nur sechs sichtbare Befehle gibt, wird alles andere
 
 ### <a name="maintain-a-large-knowledge-base"></a>Verwalten eines großen Wissensdatenbank
 
-Einer der Nachteile von Bots ist, dass es schwierig ist, eine große Wissensdatenbank zum Abrufen nicht nach Rangfolge sortierter Antworten zu pflegen. Bots sind am besten für kurze, schnelle Interaktionen geeignet, nicht für das Durchsuchen langer Listen auf der Suche nach einer Antwort.
+Einer der Nachteile von Bots ist, dass es schwierig ist, einen großen Abruf Wissensdatenbank mit nicht gerankten Antworten zu verwalten. Bots sind am besten für kurze, schnelle Interaktionen geeignet, nicht für das Durchsuchen langer Listen auf der Suche nach einer Antwort.
 
 ## <a name="code-snippets"></a>Codeausschnitte
 

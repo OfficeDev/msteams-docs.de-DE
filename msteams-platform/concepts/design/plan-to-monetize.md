@@ -4,16 +4,16 @@ description: Erfahren Sie, wie Sie die Monetarisierung Ihrer Microsoft Teams-App
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 2a799f7a796405327c075d6729fba7901d73cdaa
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 9a21304666866da5c08af5ba3df1f0a48297398c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63502009"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756849"
 ---
 # <a name="plan-to-monetize-your-app"></a>Monetarisieren Ihrer App planen
 
-Eines der wichtigsten Ziele beim Erstellen einer Teams-App ist die Lösung der Probleme Ihrer Benutzer in einer Zone für die Zusammenarbeit. Eine App, die dieses Ziel erreicht, eignet sich als Dienstprogramm für die globale Nutzung. Microsoft Teams App Store bietet Features, mit denen Sie Ihre Apps monetarisieren und Kunden gewinnen können, indem Sie mit Ihren Benutzern interagieren.
+Eines der wichtigsten Ziele beim Erstellen einer Teams-App ist die Lösung der Probleme Ihrer Benutzer in einer Zone für die Zusammenarbeit. Eine App, die dieses Ziel erreicht, eignet sich als Dienstprogramm für die globale Nutzung. Der Microsoft Teams App Store bietet Features, mit denen Sie Ihre Apps monetarisieren und Kunden gewinnen können, indem Sie mit Ihren Benutzern interagieren.
 
 Erwägen Sie, Ihre App im Teams Store zu veröffentlichen, um Ihrer App die beste Plattform für die globale Sichtbarkeit zu bieten. Faktoren wie App-Typ, Art des Diensts und Zielkunden beeinflussen Ihre Wahl für die beste Monetarisierungsoption.
 

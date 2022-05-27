@@ -4,12 +4,12 @@ description: Beschreibt Optionen zum Testen und Debuggen Microsoft Teams Apps in
 keywords: Teams führen Debug-Apps lokal in der Cloud gehostet Host
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: ba4a07b2a83901f537512067894865bf1c59895d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 7db690ff7d622e327d5029b6cb6fe8c3b101ada6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296994"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757010"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Auswählen eines Setups zum Testen und Debuggen Ihrer Microsoft Teams-App
 
@@ -60,11 +60,13 @@ Für Bots, die im Microsoft Bot Framework registriert sind, aktualisieren Sie de
 
 > [!NOTE]
 > * Um den Messaging-Endpunkt für einen Bot zu aktualisieren, müssen Sie das Bot-Framework verwenden. Wählen Sie Ihren Bot in [Ihrer Liste der Bots in Bot Framework](https://dev.botframework.com/bots) aus. Sie müssen Ihren Bot nicht zu Microsoft Azure migrieren. Sie können Ihren Messaging-Endpunkt auch über [App Studio](~/concepts/build-and-test/app-studio-overview.md) aktualisieren.
+
+> [!WARNING]
 > * Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird bis zum 30. Juni 2022 eingestellt.
 
 ## <a name="cloud-hosted"></a>In der Cloud gehostet
 
-Sie können jeden extern adressierbaren Dienst verwenden, um Ihren Entwicklungs- und Produktionscode und deren HTTPS-Endpunkte zu hosten. Es wird nicht erwartet, dass sich Ihre Funktionen im selben Dienst befinden. Der Zugriff auf alle Domänen muss über Ihre Microsoft Teams Apps erfolgen, die [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) im Objekt in der `manifest.json` Datei aufgeführt sind.
+Sie können jeden extern adressierbaren Dienst verwenden, um Ihren Entwicklungs- und Produktionscode und deren HTTPS-Endpunkte zu hosten. Es wird nicht davon ausgegangen, dass sich Ihre Funktionen im selben Dienst befinden. Der Zugriff auf alle Domänen muss über Ihre Microsoft Teams Apps erfolgen, die [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) im Objekt in der `manifest.json` Datei aufgeführt sind.
 
 > [!NOTE]
 > Um eine sichere Umgebung zu gewährleisten, müssen Sie die genauen Domänen und Unterdomänen, auf die Sie verweisen, explizit angeben, und diese Domänen müssen unter Ihrer Kontrolle stehen. Beispielsweise wird `*.azurewebsites.net` nicht empfohlen, aber `contoso.azurewebsites.net` wird empfohlen.

@@ -7,18 +7,20 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: Yeoman ASP.NET MVC-Paket App-Manifest Unterhaltung Domäne Berechtigung Store
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6acb5e0adf24dca7538b6ceaca470b9b6c3126f2
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 9da0078813d43584d415ccb9425a529decdc78bd
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111241"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65673020"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
 Persönliche Registerkarten sind zusammen mit auf eine Person bezogene Bots Bestandteil persönlicher Apps und sind auf einen einzelnen Benutzer beschränkt. Sie können an den linken Bereich angeheftet werden, um den Zugriff zu erleichtern. Sie können Ihre persönlichen Registerkarten auch [neu anordnen](#reorder-static-personal-tabs).
 
-Stellen Sie sicher, dass Sie über [Voraussetzungen](~/tabs/how-to/tab-requirements.md) erfüllen, um Ihre persönliche Registerkarte zu erstellen.
+Stellen Sie sicher, dass all [Voraussetzungen](~/tabs/how-to/tab-requirements.md) erfüllt sind, um Ihre persönliche Registerkarte zu erstellen.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
@@ -64,19 +66,19 @@ Im Folgenden finden Sie die Schritte zum Erstellen einer persönlichen Registerk
 
     * **Wie lautet der Name Ihrer Lösung?**
 
-      Der Lösungsname ist ihr Projektname. Sie können den vorgeschlagenen Namen annehmen, indem Sie **EINGABE** auswählen.
+      Der Lösungsname ist Ihr Projektname. Sie können den vorgeschlagenen Namen annehmen, indem Sie die **EINGABETASTE** drücken.
 
     * **Wohin möchten Sie die Daten verschieben?**
 
-      Sie befinden sich derzeit in Ihrem Projektverzeichnis. Wählen Sie **EINGABE** aus.
+      Sie befinden sich derzeit in Ihrem Projektverzeichnis. Drücken Sie die **EINGABETASTE**.
 
     * **Titel Ihres Microsoft Teams App-Projektes?**
 
-      Der Titel ist der Name Ihres App-Pakets und wird im App-Manifest und in der Beschreibung verwendet. Geben Sie einen Titel ein, oder wählen Sie **EINGABE** aus, um den Standardnamen zu übernehmen.
+      Der Titel ist der Name Ihres App-Pakets und wird im App-Manifest und in der Beschreibung verwendet. Geben Sie einen Titel ein, oder drücken Sie die **EINGABETASTE**, um den Standardnamen zu übernehmen.
 
-    * **Ihr (Firmen-)Name? (max. 32 Zeichen)**
+    * **Ihr (Firmen)name? (max. 32 Zeichen)**
 
-      Ihr Firmenname wird im App-Manifest verwendet. Geben Sie einen Firmennamen ein, oder wählen Sie **EINGABE** aus, um den Standardnamen anzunehmen.
+      Ihr Firmenname wird im App-Manifest verwendet. Geben Sie einen Firmennamen ein, oder drücken **Sie die EINGABETASTE**, um den Standardnamen zu übernehmen.
 
     * **Welche Manifestversion möchten Sie verwenden?**
 
@@ -84,39 +86,39 @@ Im Folgenden finden Sie die Schritte zum Erstellen einer persönlichen Registerk
 
     * **Schnelle Gerüsterstellung? (J/n)**
 
-      Der Standardwert ist „ja“. Geben Sie **n** ein, um Ihre Microsoft Partner-ID einzugeben.
+      Der Standardwert ist "ja". geben Sie **n** ein, um Ihre Microsoft Partner-ID einzugeben.
 
-    * **Geben Sie Ihre Microsoft Partner-ID ein, sofern Sie über eine verfügen (leer lassen, um zu überspringen)**
+    * **Geben Sie Ihre Microsoft Partner-ID ein, sofern Sie über eine verfügen (zum Überspringen leer lassen).**
 
       Dieses Feld ist nicht erforderlich und darf nur verwendet werden, wenn Sie bereits Teil des [Microsoft Partner-Netzwerks](https://partner.microsoft.com) sind.
 
     * **Was möchten Sie zu Ihrem Projekt hinzufügen?**
 
-      Wählen Sie **( &ast; ) A-Registerkarte** aus.
+      Wählen Sie **( &ast; ) Eine Registerkarte** aus.
 
-    * **Die URL, unter der Sie diese Lösung hosten möchten?**
+    * **Die URL, unter der Sie diese Lösung hosten möchten?**: 
 
-      Standardmäßig schlägt der Generator eine URL für Azure-Websites vor. Sie testen Ihre App nur lokal, sodass keine gültige URL erforderlich ist.
+      Standardmäßig schlägt der Generator eine Azure-Website-URL vor. Sie testen Ihre App nur lokal, daher ist keine gültige URL erforderlich.
 
-    * **Möchten Sie einen Ladeindikator anzeigen, wenn Ihre App/Registerkarte geladen wird?**
+    * **Soll ein Ladeindikator angezeigt werden, während Ihre App/Registerkarte geladen wird?**
 
-      Legen Sie fest, dass beim Laden Ihrer Anwendung oder Registerkarte **keine** Ladeanzeige eingefügt werden soll. Der Standardwert ist „nein“, geben Sie **n** ein.
+      Legen Sie fest, dass beim Laden Ihrer App oder Registerkarte **keine** Ladeanzeige eingeschlossen werden soll. Der Standardwert ist "nein", geben Sie "**n**" ein.
 
     * **Möchten Sie, dass persönliche Apps ohne eine Registerkarten-Kopfleiste dargestellt werden?**
 
-      Legen Sie fest, **keine** persönliche Apps ohne Registerkarten-Kopfzeilenleiste für das Rendern einzuschließen. Standard ist "nein", geben Sie **n** ein.
+      Legen Sie fest, **keine** persönliche Apps ohne Registerkarten-Kopfzeilenleiste dargestellt werden sollen. Der Standardwert ist "nein", geben Sie "**n**" ein.
 
     * **Möchten Sie ein Testframework und anfängliche Tests einschließen? (j/N)**
 
-      Legen Sie fest, **kein** Testframework für dieses Projekt einzuschließen. Der Standardwert ist „nein“, geben Sie **n** ein.
+      Legen Sie fest, **kein** Testframework für dieses Projekt einzuschließen. Der Standardwert ist "nein", geben Sie "**n**" ein.
 
     * **Möchten Sie ESLint-Unterstützung einschließen? (y/N)**
 
-      Legen Sie fest, keine ESLint-Unterstützung einzuschließen. Der Standardwert ist „nein“, geben Sie **n** ein.
+      Legen Sie fest, keine ESLint-Unterstützung einzuschließen. Der Standardwert ist "nein", geben Sie "**n**" ein.
 
-    * **Möchten Sie Azure Applications Insights für die Telemetrie verwenden? (y/N)**
+    * **Möchten Sie Azure Applications Insights für Telemetriedaten verwenden? (y/N)**
 
-      Legen Sie fest, **keine** [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview) einzuschließen. Der Standardwert ist „nein“. Geben Sie **n** ein.
+      Legen Sie fest, [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview) **nicht** einzuschließen. Die Standardeinstellung ist "nein". geben Sie "**n**" ein.
 
     * **Standardregisterkartenname (max. 16 Zeichen)?**
 
@@ -207,7 +209,7 @@ Erstellen Sie eine Inhaltsseite, und aktualisieren Sie die vorhandenen Dateien d
 
 ### <a name="create-your-app-package"></a>Erstellen Ihres App-Pakets
 
-Sie benötigen ein App-Paket, um Ihre Anwendung in Teams erstellen und ausführen zu können. Das App-Paket wird über eine gulp-Aufgabe erstellt, welche die `manifest.json`-Datei überprüft und den ZIP-Ordner im Verzeichnis `./package` generiert. Verwenden Sie an der Eingabeaufforderung den Befehl `gulp manifest`.
+Sie benötigen ein App-Paket, um Ihre Anwendung in Microsoft Teams erstellen und ausführen zu können. Das App-Paket wird über eine gulp-Aufgabe erstellt, welche die `manifest.json`-Datei überprüft und den ZIP-Ordner im Verzeichnis `./package` generiert. Verwenden Sie an der Eingabeaufforderung den Befehl `gulp manifest`.
 
 ### <a name="build-and-run-your-application"></a>Erstellen und Ausführen Ihrer Anwendung
 
@@ -248,7 +250,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Hochladen Ihrer Anwendung in Teams
 
-1. Wechseln Sie zu Microsoft Teams, und wählen Sie **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams-Store"::: aus.
+1. Wechseln Sie zu Microsoft Teams, und wählen Sie **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store"::: aus.
 1. Wählen Sie **Ihre Apps verwalten** und **Eine benutzerdefinierte App hochladen** aus.
 1. Wechseln Sie zu Ihrem Projektverzeichnis, navigieren Sie zum Ordner **./package**, wählen Sie den ZIP-Ordner aus und dann **Öffnen**.
 
@@ -304,7 +306,7 @@ Im Folgenden finden Sie die Schritte zum Erstellen einer persönlichen Registerk
 
 #### <a name="startupcs"></a>Startup.cs
 
-Dieses Projekt wurde aus einer leeren Vorlage für ASP.NET Core 3.1-Webanwendung erstellt, wobei das Kontrollkästchen **Erweitert – Konfigurieren für HTTPS** beim Setup aktiviert ist. Die MVC-Dienste werden von der `ConfigureServices()`-Methode des Frameworks für die Abhängigkeitsinjektion registriert. Außerdem ermöglicht die leere Vorlage nicht die standardmäßige Bereitstellung statischer Inhalte, sodass die Middleware für statische Dateien der Methode `Configure()` mit dem folgenden Code hinzugefügt wird:
+Dieses Projekt wurde aus einer leeren Vorlage für ASP.NET Core 3.1-Webanwendungen erstellt, wobei das Kontrollkästchen **Erweitert – Für HTTPS konfigurieren** beim Setup aktiviert ist. Die MVC-Dienste werden von der `ConfigureServices()`-Methode des Frameworks für die Abhängigkeitsinjektion registriert. Außerdem ermöglicht die leere Vorlage nicht die standardmäßige Bereitstellung statischer Inhalte, sodass die Middleware für statische Dateien der Methode `Configure()` mit dem folgenden Code hinzugefügt wird:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -366,10 +368,10 @@ Klicken Sie im Visual Studio-Lösungsexplorer mit der rechten Maustaste auf das 
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Öffnen Sie in Visual Studio-Lösungsexplorer **PersonalTab.cshtml** aus dem Ordner **Pages**, und fügen Sie `microsoftTeams.initialize()` in den `<script>`-Kategorien hinzu, und speichern Sie.
+1. Öffnen Sie in Visual Studio-Lösungsexplorer **PersonalTab.cshtml** aus dem Ordner **Pages**, und fügen Sie `app.initialize()` in den `<script>`-Kategorien hinzu, und speichern Sie.
 
 1. Wählen Sie in Visual Studio **F5** oder **Debuggen starten** im Menü **Debuggen** Ihrer Anwendung aus.
 
@@ -391,11 +393,11 @@ ngrok http 3978 --host-header=localhost
 
 1. Wählen Sie `tab.zip` aus, und öffnen Sie es im Entwicklerportal.
 
-1. Eine standardmäßige **App-ID** wird erstellt und im Abschnitt **Allgemeine Informationen** aufgefüllt.
+1. Eine Standard-**App-ID** wird erstellt und im Abschnitt **Allgemeine Informationen** aufgefüllt.
 
 1. Fügen Sie die Kurz- und Langbeschreibung für Ihre App in **Beschreibungen** hinzu.
 
-1. Fügen Sie in **Entwicklerinformation** die erforderlichen Details hinzu, und geben Sie in **Website (muss eine gültige HTTPS-URL sein)** Ihre ngrok-HTTPS-URL ein.
+1. Fügen Sie in **Entwicklerinformationen** die erforderlichen Details hinzu, und geben Sie unter **Website (muss eine gültige HTTPS-URL sein)** Ihre ngrok-HTTPS-URL ein.
 
 1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie auf `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen auf `https://<yourngrokurl>/tou`, und speichern Sie.
 
@@ -403,11 +405,11 @@ ngrok http 3978 --host-header=localhost
 
 1. Wählen Sie **Speichern**.
 
-1. Im Abschnitt „Domänen“ müssen Domänen auf Ihren Registerkarten Ihre ngrok-URL ohne das HTTPS-Präfix `<yourngrokurl>.ngrok.io` enthalten.
+1. Im Abschnitt "Domänen" müssen Domänen auf Ihren Registerkarten Ihre ngrok-URL ohne das HTTPS-Präfix `<yourngrokurl>.ngrok.io` enthalten.
 
-### <a name="preview-your-app-in-teams"></a>Anzeigen einer Vorschau Ihrer App in Teams
+### <a name="preview-your-app-in-teams"></a>Eine Vorschau ihrer App in Microsoft Teams anzeigen
 
-1. Wählen Sie **Vorschau in Teams** auf der Entwicklerportal-Symbolleiste aus, das Entwicklerportal informiert Sie, dass Ihre App erfolgreich quergeladen wurde. Die Seite **Hinzufügen** wird für Ihre App in Teams angezeigt.
+1. Wählen Sie auf der Entwicklerportal-Symbolleiste **Vorschau in Microsoft Teams** aus; das Entwicklerportal informiert Sie, dass Ihre App erfolgreich quergeladen wurde. Die Seite **Hinzufügen** wird für Ihre App in Teams angezeigt.
 
 1. Wählen Sie **Hinzufügen** aus, um die Registerkarte in Teams zu laden. Ihre Registerkarte ist jetzt in Teams verfügbar.
 
@@ -457,7 +459,7 @@ Im Folgenden finden Sie die Schritte zum Erstellen einer persönlichen Registerk
 
 #### <a name="startupcs"></a>Startup.cs
 
-Dieses Projekt wurde aus einer leeren Vorlage für ASP.NET Core 3.1-Webanwendung erstellt, wobei das Kontrollkästchen **Erweitert – Konfigurieren für HTTPS** beim Setup aktiviert ist. Die MVC-Dienste werden von der `ConfigureServices()`-Methode des Frameworks für die Abhängigkeitsinjektion registriert. Außerdem ermöglicht die leere Vorlage nicht die standardmäßige Bereitstellung statischer Inhalte, sodass die Middleware für statische Dateien der Methode `Configure()` mit dem folgenden Code hinzugefügt wird:
+Dieses Projekt wurde aus einer leeren Vorlage für ASP.NET Core 3.1-Webanwendungen erstellt, wobei das Kontrollkästchen **Erweitert – Für HTTPS konfigurieren** beim Setup aktiviert ist. Die MVC-Dienste werden von der `ConfigureServices()`-Methode des Frameworks für die Abhängigkeitsinjektion registriert. Außerdem ermöglicht die leere Vorlage nicht die standardmäßige Bereitstellung statischer Inhalte, sodass die Middleware für statische Dateien der Methode `Configure()` mit dem folgenden Code hinzugefügt wird:
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -475,7 +477,7 @@ public void Configure(IApplicationBuilder app)
 
 In ASP.NET Core sucht die Anwendung im Webstammordner nach statischen Dateien.
 
-#### <a name="appmanifest-folder"></a>Ordner „AppManifest“
+#### <a name="appmanifest-folder"></a>AppManifest-Ordner
 
 Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
@@ -531,10 +533,10 @@ Die Controller verwenden die `ViewBag`-Eigenschaft, um Werte dynamisch in die An
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Öffnen Sie im Visual Studio-Lösungsexplorer **PersonalTab.cshtml** aus dem Ordner **Views** > **PersonalTab**, und fügen Sie `microsoftTeams.initialize()` innerhalb der `<script>`-Kategorien hinzu, und speichern Sie.
+1. Öffnen Sie im Visual Studio-Lösungsexplorer **PersonalTab.cshtml** aus dem Ordner **Views** > **PersonalTab**, und fügen Sie `app.initialize()` innerhalb der `<script>`-Kategorien hinzu, und speichern Sie.
 
 1. Wählen Sie in Visual Studio **F5** oder **Debuggen starten** im Menü **Debuggen** Ihrer Anwendung aus.
 
@@ -560,11 +562,11 @@ ngrok http 3978 --host-header=localhost
 
 1. Wählen Sie **tab.zip** aus, und öffnen Sie es im Entwicklerportal.
 
-1. Eine standardmäßige **App-ID** wird erstellt und im Abschnitt **Allgemeine Informationen** aufgefüllt.
+1. Eine Standard-**App-ID** wird erstellt und im Abschnitt **Allgemeine Informationen** aufgefüllt.
 
 1. Fügen Sie die Kurz- und Langbeschreibung für Ihre App in **Beschreibungen** hinzu.
 
-1. Fügen Sie in **Entwicklerinformation** die erforderlichen Details hinzu, und geben Sie in **Website (muss eine gültige HTTPS-URL sein)** Ihre ngrok-HTTPS-URL ein.
+1. Fügen Sie in **Entwicklerinformationen** die erforderlichen Details hinzu, und geben Sie unter **Website (muss eine gültige HTTPS-URL sein)** Ihre ngrok-HTTPS-URL ein.
 
 1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie auf `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen auf `https://<yourngrokurl>/tou`, und speichern Sie.
 
@@ -576,7 +578,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="preview-your-app-in-teams"></a>Anzeigen einer Vorschau Ihrer App in Teams
 
-1. Wählen Sie **Vorschau in Teams** auf der Entwicklerportal-Symbolleiste aus, das Entwicklerportal informiert Sie, dass Ihre App erfolgreich quergeladen wurde. Die Seite **Hinzufügen** wird für Ihre App in Teams angezeigt.
+1. Wählen Sie auf der Entwicklerportal-Symbolleiste **Vorschau in Microsoft Teams** aus; das Entwicklerportal informiert Sie, dass Ihre App erfolgreich quergeladen wurde. Die Seite **Hinzufügen** wird für Ihre App in Teams angezeigt.
 
 1. Wählen Sie **Hinzufügen** aus, um die Registerkarte in Teams zu laden. Ihre Registerkarte ist jetzt in Teams verfügbar.
 

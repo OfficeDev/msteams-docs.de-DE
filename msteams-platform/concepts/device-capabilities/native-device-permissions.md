@@ -1,15 +1,14 @@
 ---
 title: Anfordern von Geräteberechtigungen für Ihre Microsoft Teams-App
-keywords: Teams-Apps-Funktionen Berechtigungen geräteeigener Scan QR-Barcode-Bild-Audiovideo
-description: So aktualisieren Sie Ihr App-Manifest, um Zugriff auf systemeigene Features anzufordern, die in der Regel die Zustimmung des Benutzers erfordern, z. B. Scan-QR, Barcode, Bild, Audio, Videofunktionen
+description: Erfahren Sie, wie Sie Ihr App-Manifest aktualisieren und den Zugriff auf systemeigene Features anfordern, die Benutzerzustimmung, Standort, QR-Code und Barcode, Bild-, Audio- und Videofunktionen betreffen.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 5269aed130714bc9afbe97b170d955d79d79abc8
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 624a079d7c72f77fac4109d11cde13974359884f
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103306"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757605"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Anfordern von Geräteberechtigungen für Ihre Microsoft Teams-App
 
@@ -88,7 +87,7 @@ Mit jeder Eigenschaft können Sie den Benutzer auffordern, um seine Zustimmung z
 
 | Eigenschaft      | Beschreibung   |
 | --- | --- |
-| Medien         | Berechtigung zum Verwenden der Kamera, des Mikrofons, der Lautsprecher und des Zugriffs auf die Mediengalerie. |
+| media         | Berechtigung zum Verwenden der Kamera, des Mikrofons, der Lautsprecher und des Zugriffs auf die Mediengalerie. |
 | Geolocation   | Berechtigung zum Zurückgeben des Standorts des Benutzers.      |
 | Benachrichtigungen | Berechtigung zum Senden der Benutzerbenachrichtigungen.      |
 | Midi          | Berechtigung zum Senden und Empfangen von Midi-Informationen (Musical Instrument Digital Interface) von einem digitalen Musikinstrument.   |
@@ -125,9 +124,9 @@ Nutzen Sie die entsprechende HTML5- oder Teams-API, um eine Aufforderung zur Zus
 > * Unterstützung für `camera`, `gallery`und `microphone` wird über [**die selectMedia-API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) aktiviert. Verwenden Sie [**die captureImage-API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) für eine einzelne Bildaufnahme.
 > * Die Unterstützung für `location` wird über [**die getLocation-API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) aktiviert. Sie müssen dies `getLocation API` für den Standort verwenden, da die HTML5-Geolocation-API auf Teams Desktopclient derzeit nicht vollständig unterstützt wird.
 
-Beispiel:
+Zum Beispiel:
 
-* Wenn Sie den Benutzer auffordern möchten, auf seine Position zuzugreifen, müssen Sie Folgendes aufrufen `getCurrentPosition()`:
+* Um den Benutzer auf seine Position zuzugreifen, müssen Sie Folgendes aufrufen `getCurrentPosition()`:
 
     ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
@@ -250,5 +249,5 @@ Geräteberechtigungen werden für jede Anmeldesitzung gespeichert. Dies bedeutet
 
 * [Geräteberechtigungen für den Browser](browser-device-permissions.md)
 * [Integrieren von Medienfunktionen in Microsoft Teams](mobile-camera-image-permissions.md)
-* [Integrieren von QR- oder Strichcodescannerfunktionen in Teams](qr-barcode-scanner-capability.md)
+* [Integrieren von QR-Code- oder Strichcodescanner-Funktionen in Microsoft Teams](qr-barcode-scanner-capability.md)
 * [Integrieren von Standortfunktionen in Microsoft Teams](location-capability.md)

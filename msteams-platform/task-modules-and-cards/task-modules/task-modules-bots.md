@@ -1,23 +1,23 @@
 ---
 title: Verwenden Sie Aufgabenmodule in Microsoft Teams-Bots
 description: So verwenden Sie Aufgabenmodule mit Microsoft Teams-Bots, einschließlich Bot Framework-Karten, adaptive Karten und Deep Links.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Aufgabenmodule Teams Bots Deep Links Adaptive Karte
-ms.openlocfilehash: 1074eee616ca7a5d78a071fb42c23d0010a8300d
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 443ff94fcc5c8b47dda5462555bf181c88b71ce3
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111332"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756716"
 ---
 # <a name="use-task-modules-from-bots"></a>Verwenden von Aufgabenmodulen aus Bots
 
-Aufgabenmodule können von Microsoft Teams-Bots mithilfe von Schaltflächen auf Adaptive Cards und Bot Framework-Karten aufgerufen werden, d. h. Hero, Thumbnail und Office 365 Connector. Aufgabenmodule bieten oft eine bessere Benutzererfahrung als mehrere Konversationsschritte. Verfolgen Sie den Bot-Status und erlauben Sie dem Benutzer, die Sequenz zu unterbrechen oder abzubrechen.
+Aufgabenmodule können von Microsoft Teams Bots mithilfe von Schaltflächen auf adaptiven Karten und Bot Framework-Karten aufgerufen werden, die Hero-, Miniaturansicht- und Office 365 Connector sind. Aufgabenmodule bieten oft eine bessere Benutzererfahrung als mehrere Konversationsschritte. Verfolgen Sie den Bot-Status und erlauben Sie dem Benutzer, die Sequenz zu unterbrechen oder abzubrechen.
 
 Es gibt zwei Möglichkeiten, Aufgabenmodule aufzurufen:
 
-* Eine neue Art von Aufrufnachricht `task/fetch`: Die Verwendung der `invoke` [Kartenaktion](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) für Bot Framework-Karten oder die `Action.Submit` [Kartenaktion](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) für adaptive Karten mit `task/fetch`einem Aufgabenmodul entweder einer URL oder einer adaptiven Karte wird dynamisch von Ihrem Bot abgerufen.
+* Eine neue Aufrufmeldung `task/fetch`: Die Verwendung der `invoke` [Kartenaktion](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) für Bot Framework-Karten oder der `Action.Submit` [Kartenaktion](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) für adaptive Karten mit `task/fetch`einem Aufgabenmodul entweder einer URL oder einer adaptiven Karte wird dynamisch von Ihrem Bot abgerufen.
 * Deep-Link-URLs: Mithilfe der [Deep-Link-Syntax für Aufgabenmodule](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax) können Sie die `openUrl` [Kartenaktion](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) für Bot Framework-Karten bzw. die `Action.OpenUrl` [Kartenaktion](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) für adaptive Karten verwenden. Bei Deep-Link-URLs ist die Aufgabenmodul-URL oder der Textkörper der adaptiven Karte bereits bekannt, um einen Server-Roundtrip relativ zu zu zu `task/fetch`vermeiden.
 
 > [!IMPORTANT]
@@ -62,7 +62,7 @@ Der nächste Abschnitt enthält Details zum Übermitteln des Ergebnisses eines A
 
 Wenn der Benutzer mit dem Aufgabenmodul fertig ist, wird das Ergebnis an den Bot zurückgesendet, ähnlich wie bei Registerkarten. Weitere Informationen finden Sie im [Beispiel zum Übermitteln des Ergebnisses eines Aufgabenmoduls](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module). Es gibt einige Unterschiede wie folgt:
 
-* HTML oder JavaScript: `TaskInfo.url`Nachdem Sie überprüft haben, was der Benutzer eingegeben hat, rufen Sie die SDK-Funktion auf, auf die `microsoftTeams.tasks.submitTask()` im Folgenden `submitTask()` aus Gründen der Lesbarkeit verwiesen wird. Sie können ohne Parameter aufrufen`submitTask()`, wenn Sie Teams das Aufgabenmodul schließen möchten, aber Sie müssen ein Objekt oder eine Zeichenfolge an Das `submitHandler`übergeben. Übergeben Sie ihn als ersten Parameter, `result`. Teams aufruft`submitHandler`, `err` ist `null`und `result` ist das Objekt oder die Zeichenfolge, das `submitTask()`Sie übergeben haben. Wenn Sie einen Aufruf mit einem Parameter ausführen`submitTask()`, müssen Sie ein `appId` oder ein Array von Zeichenfolgen `appId` `result` übergeben. Auf diese Weise können Teams überprüfen, ob die App, die das Ergebnis sendet, das gleiche ist, das das Aufgabenmodul aufgerufen hat. Ihr Bot erhält eine `task/submit` Nachricht, einschließlich `result`. Weitere Informationen finden Sie unter [Nutzlast und `task/fetch` `task/submit` Nachrichten](#payload-of-taskfetch-and-tasksubmit-messages).
+* HTML oder JavaScript: `TaskInfo.url`Nachdem Sie überprüft haben, was der Benutzer eingegeben hat, rufen Sie die SDK-Funktion auf, auf die `microsoftTeams.tasks.submitTask()` im Folgenden `submitTask()` aus Gründen der Lesbarkeit verwiesen wird. Sie können ohne Parameter aufrufen`submitTask()`, wenn Sie Teams das Aufgabenmodul schließen möchten, aber Sie müssen ein Objekt oder eine Zeichenfolge an Das `submitHandler`übergeben. Übergeben Sie ihn als ersten Parameter, `result`. Teams aufruft`submitHandler`, `err` ist `null`und `result` ist das Objekt oder die Zeichenfolge, das `submitTask()`Sie übergeben haben. Wenn Sie einen Aufruf mit einem Parameter ausführen`submitTask()`, müssen Sie ein `appId` oder ein Array von Zeichenfolgen `appId` `result` übergeben. Auf diese Weise können Teams überprüfen, ob die App, die das Ergebnis sendet, das gleiche ergebnis ist, das das Aufgabenmodul aufgerufen hat. Ihr Bot erhält eine `task/submit` Nachricht, einschließlich `result`. Weitere Informationen finden Sie unter [Nutzlast und `task/fetch` `task/submit` Nachrichten](#payload-of-taskfetch-and-tasksubmit-messages).
 * Adaptive Karte: `TaskInfo.card`Der Textkörper der adaptiven Karte, wie er vom Benutzer ausgefüllt wurde, wird über eine Nachricht an den Bot gesendet, wenn der Benutzer eine `task/submit` beliebige `Action.Submit` Schaltfläche auswählt.
 
 Der nächste Abschnitt enthält Details zur Flexibilität von `task/submit`.

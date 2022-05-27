@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: Befehlsmenü verfassen Nachricht Unterhaltung @erwähnen
-ms.openlocfilehash: 59f2dc595a4baac2d99b25d9c7c0fb0d3c5013d1
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: b81959b23363142cd463788950116b4f805f95ae
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296966"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757696"
 ---
 # <a name="bot-command-menus"></a>Bot-Befehlsmenüs
 
@@ -42,8 +42,9 @@ Eine Voraussetzung zum Erstellen eines Befehlsmenüs für Ihren Bot besteht dari
 1. Öffnen Sie Teams, und wählen Sie im linken Bereich **Apps** aus. Suchen Sie auf der Seite **Apps** nach **App Studio**, und wählen Sie **Öffnen** aus.
    > [!NOTE]
    > Wenn Sie nicht über **App Studio** verfügen, können Sie es herunterladen. Weitere Informationen finden Sie unter [Installieren von App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
-
-  > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird bis zum 30. Juni 2022 eingestellt.
+  
+   > [!WARNING]
+   > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird bis zum 30. Juni 2022 eingestellt.
 
   :::image type="content" source="/media/AppStudio.png" alt-text="App Studio installieren"lightbox="media/AppStudio.png"border="true":::
 

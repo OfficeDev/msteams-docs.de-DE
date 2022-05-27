@@ -1,19 +1,19 @@
 ---
 title: Entwicklertools für Microsoft Teams-Registerkarten
 description: Beschreibt, wie Sie bei Verwendung des Microsoft Teams-Desktopclients und beim Debuggen zu den DevTools gelangen
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: devtools Debuggen der Registerkarte „Entwicklertools“ für den mobilen Chrome-Desktop-Client
-ms.openlocfilehash: 4e7ea8ee51d5dd77345c0c7392775aa29050a9a5
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: c4601711948df798bda6b7d4940b5436c66f8c97
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111444"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757479"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>Entwicklertools für Microsoft Teams-Registerkarten
 
-Wenn Teams in einem Browser ausgeführt wird, ist es einfach, auf die DevTools des Browsers zuzugreifen: F12 unter Windows oder Befehl-Option-I unter MacOS. Mit den DevTools haben Sie Zugriff auf:
+Wenn Teams in einem Browser ausgeführt wird, ist es einfach, auf die DevTools des Browsers zuzugreifen: F12 unter Windows oder Command-Option-I unter MacOS. Mit den DevTools haben Sie Zugriff auf:
 
 1. Konsolenprotokolle anzeigen.
 1. Anzeigen oder Ändern von HTML-, CSS- und Netzwerkanforderungen während der Laufzeit.

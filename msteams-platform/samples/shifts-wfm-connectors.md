@@ -7,16 +7,16 @@ ms.date: 03/09/2020
 ms.localizationpriority: medium
 keywords: Microsoft Teams connectors kronos
 ms.author: lajanuar
-ms.openlocfilehash: cf4fa72932a231085b7b1c16a5153d2df0cd7643
-ms.sourcegitcommit: bde5f3f409fb6824a5d6ff5618e9386c85879b8b
+ms.openlocfilehash: 78c76e93040354d37770988f45f1b94d35f6102c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65604264"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757353"
 ---
 # <a name="production-ready-shifts-connectors"></a>Produktionsfertige Shifts-Connectors  
 
-Teams Shifts Workforce Management (WFM)-Connectors sind produktionsbereite, Open Source- und Community-gesteuerte Integrationen, die für Mitarbeiter in erster Linie nützlich sind. Sie bieten eine nahtlose Erfahrung und einen schnellen Prozess für die digitale Transformation von Erstarbeitern mit Teams Schichten.
+Teams Shifts Workforce Management (WFM)-Connectors sind produktionsbereite, Open Source- und Community-gesteuerte Integrationen, die für Mitarbeiter in Service und Produktion nützlich sind. Sie bieten eine nahtlose Erfahrung und einen schnellen Prozess für die digitale Transformation von Mitarbeiter in Service und Produktion mit Teams Schichten.
 
 Jeder Connector bietet detaillierte Anleitungen für die Bereitstellung und Integration in Ihre Organisation. Der vollständige Quellcode ist in GitHub Repository verfügbar. Sie können details oder Verzweigungen untersuchen und an Ihre spezifischen Anforderungen anpassen.
 
@@ -34,7 +34,7 @@ Im Folgenden sind die wichtigsten Vorteile von WFM-Connectors für Teams Schicht
 
 * **Ausführliche Dokumentation & Unterstützung:** Alle Schicht-WFM-Connectors werden von einer End-to-End-Dokumentation für Lösungsarchitektur, Bereitstellung und Konfigurationsschritte begleitet. Die Konnektorrepositorys werden überwacht, sodass Sie alle Probleme, Herausforderungen oder Schwierigkeiten, auf die Sie stoßen, über die GitHub Problemverfolgung des Repositorys melden können.
 
-* **Nahtlose Integration:** Durch die Integration zwischen WFM-Lösungen und Teams Schichten können Mitarbeiter in der ersten Zeile die App Teams Schichten verwenden, um ihre Zeitpläne und Schichtzeiten anzuzeigen oder zu verwalten, und alle anderen umfangreichen Funktionen für die Zusammenarbeit nutzen, die in Teams direkt von ihrem mobilen Gerät oder Desktop bereitgestellt werden, ohne den Kontext zu einer anderen App wechseln zu müssen.  
+* **Nahtlose Integration:** Durch die Integration zwischen WFM-Lösungen und Teams Schichten können Mitarbeiter in Service und Produktion die App Teams Schichten verwenden, um ihre Zeitpläne und Schichtzeiten anzuzeigen oder zu verwalten und alle anderen umfangreichen Funktionen für die Zusammenarbeit zu verwenden, die in Teams direkt von ihrem mobilen Gerät oder Desktop bereitgestellt werden, ohne den Kontext zu einer anderen App wechseln zu müssen.  
 
 Schichtansicht in Teams öffnen:
 

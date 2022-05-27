@@ -4,12 +4,12 @@ description: In diesem Modul erfahren Sie mehr über Live Share SDK-Funktionen, 
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 5b0d805dc84c49784aaaf04e2a6a7e1f3348661c
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: c6ea321cf9a0bee33b44c54f273662663f23b433
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668279"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756604"
 ---
 ---
 
@@ -128,7 +128,7 @@ Das Live Share SDK unterstützt alle in Fluid Framework enthaltenen [verteilten 
 | [SharedSegmentSequence](https://fluidframework.com/docs/data-structures/sequences/) | Eine listenähnliche Datenstruktur zum Speichern einer Gruppe von Elementen (als Segmente bezeichnet) an festgelegten Positionen.                                                    |
 | [SharedString](https://fluidframework.com/docs/data-structures/string/)             | Sequenz mit verteilter Zeichenfolge, die für die Bearbeitung von Dokumenttext optimiert ist.                                                                     |
 
-Sehen wir uns an, wie `SharedMap` funktioniert. In diesem Beispiel haben wir `SharedMap` verwendet, um ein einfaches Wiedergabelistenfeature zu erstellen.
+Sehen wir uns an, wie `SharedMap` funktioniert. In diesem Beispiel haben wir `SharedMap` verwendet, um ein Wiedergabelistenfeature zu erstellen.
 
 ```javascript
 import { SharedMap } from "fluid-framework";
@@ -289,5 +289,5 @@ Achten Sie darauf, dass Ihre Kunden ihre Szenarien verstehen, bevor Sie die Roll
 * [GitHub-Repository](https://github.com/microsoft/live-share-sdk)
 * [Live Share SDK-Referenzdokumente](/javascript/api/@microsoft/live-share/)
 * [Live Share Media SDK-Referenzdokumente](/javascript/api/@microsoft/live-share-media/)
-* [Live Share FAQ](teams-live-share-faq.md)
+* [Live Share – FAQ](teams-live-share-faq.md)
 * [Teams-Apps in Besprechungen](teams-apps-in-meetings.md)

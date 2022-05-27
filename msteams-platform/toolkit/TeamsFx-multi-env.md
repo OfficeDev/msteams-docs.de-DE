@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: 684951451519ca5e1aaa82344de802259df22a63
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: 72d980849d48498dddedb87db35ae15ca69e4cda
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653280"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756933"
 ---
 # <a name="manage-multiple-environments"></a>Verwalten mehrerer Umgebungen
 
@@ -45,9 +45,9 @@ Nach dem Erstellen eines neuen Projekts erstellt Teams Toolkit standardmäßig F
 1. Wählen Sie das **Symbol Teams** in der Randleiste aus.
 2. Wählen Sie **+Teams: Erstellen Sie eine neue Umgebung** unter dem Abschnitt "Umgebung", wie in der folgenden Abbildung dargestellt:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
 
-Wenn Sie über mehrere Umgebungen verfügen, müssen Sie eine vorhandene Umgebung auswählen, um dieselbe zu erstellen. Der Befehl kopiert den Dateiinhalt der `config.<newEnv>.json` vorhandenen Umgebung, die Sie ausgewählt haben, in `azure.parameters.<newEnv>.json` die neu erstellte Umgebung.
+   Wenn Sie über mehrere Umgebungen verfügen, müssen Sie eine vorhandene Umgebung auswählen, um dieselbe zu erstellen. Der Befehl kopiert den Dateiinhalt der `config.<newEnv>.json` vorhandenen Umgebung, die Sie ausgewählt haben, in `azure.parameters.<newEnv>.json` die neu erstellte Umgebung.
 
 ## <a name="select-target-environment"></a>Zielumgebung auswählen
 
@@ -204,18 +204,21 @@ Da die Teams App-Manifestvorlage in allen Umgebungen gemeinsam genutzt wird, kö
     },
     ...
   }
- ```
-3. Führen Sie den Bereitstellungsbefehl für **alle** Umgebungen aus, um den App-Namen in Remoteumgebungen zu aktualisieren. Informationen zum Ausführen des Bereitstellungsbefehls mit Teams Toolkit finden Sie unter [Provision](provision.md#provision-using-teams-toolkit)
+
+  ```
+
+3. Führen Sie den Bereitstellungsbefehl für **alle** Umgebungen aus, um den App-Namen in Remoteumgebungen zu aktualisieren. Informationen zum Ausführen des Bereitstellungsbefehls mit Teams Toolkit finden Sie unter ["Bereitstellung"](provision.md#provision-using-teams-toolkit).
+
 <br></details>
 <br>
+
 <details>
 <br><summary><b>Szenario 4: Anpassen von Azure-Ressourcen für unterschiedliche Umgebungen</b></summary>
 Sie können Azure-Ressourcen für jede Umgebung anpassen, z. B. den Namen der Azure-Funktion angeben, indem Sie die Umgebung entsprechend fx/configs/azure.parameters bearbeiten. {env}.json. Datei.
 
-Weitere Informationen zu Bicep-Vorlagen- und Parameterdateien finden Sie unter [Bereitstellen von Cloudressourcen](provision.md)
-</details> <br
-
-
+Weitere Informationen zu Bicep-Vorlagen- und Parameterdateien finden Sie [unter Bereitstellen von Cloudressourcen](provision.md)
+</details>
+</br>
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -3,15 +3,15 @@ title: Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint
 author: surbhigupta
 description: Erfahren Sie anhand von Codebeispielen, wie Sie Ihre bestehende Microsoft Teams-Registerkarte als SharePoint-Framework-Webpart für SharePoint bereitstellen.
 keywords: SharePoint-Framework Entwicklung Microsoft Teams-Registerkarten
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c11356750f78a015c8d404f519f45476f947b80a
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 54fd6858a115662e24944a692458bb3d4e8034a0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111689"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757311"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint
 
@@ -72,7 +72,7 @@ Sie können Microsoft Teams-Registerkarten auch mithilfe von SharePoint-Framewor
 
 ## <a name="introduction"></a>Einführung
 
-Die hier verwendete Registerkarte wird bereits in Azure gehostet, um uns auf die erforderliche Integrationsarbeit zu konzentrieren.
+Die hier verwendete Registerkarte wird bereits in Azure gehostet, um sich auf die erforderlichen Integrationsarbeiten zu konzentrieren.
 
 Die verwendete Beispiel-App ist eine Talentmanagement-Anwendung. Sie wird für die Verwaltung des Einstellungsprozesses von Bewerbern für offene Positionen in einem Team verwendet. Erstellen Sie eine Microsoft Teams-Beispiel-App, und laden Sie sie in Microsoft Teams. Erstellen Sie keine echte Talentmanagementanwendung.
 
@@ -95,7 +95,7 @@ Laden Sie das [Beispiel-App-Manifest](https://github.com/MicrosoftDocs/msteams-d
 
     ![Benutzerdefinierte App hochladen](~/assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png)
 
-1. Die hochzuladende Datei befindet sich im Ordner **Downloads**. Der Dateiname lautet "TalentMgmt-Azure.zip". In der folgenden Abbildung wird der entsprechende Bildschirm angezeigt:
+1. Die hochzuladende Datei befindet sich im Ordner **Downloads**. Es wird TalentMgmt-Azure.zip genannt. In der folgenden Abbildung wird der entsprechende Bildschirm angezeigt:
 
     ![TalentMgmt in Azure](~/assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png)
 
@@ -118,7 +118,7 @@ In der folgenden Abbildung wird der entsprechende Bildschirm angezeigt:
 
 1. Sie können die Erstellungsumgebung für SharePoint-Seiten sehen. Benennen Sie Ihre Seite als **Meine Microsoft Teams-Registerkarte**.
 
-1. Öffnen Sie die Webpart-Toolbox durch Anklicken der `+`-Schaltfläche, und wählen Sie Ihre Microsoft Teams-Registerkarte namens **Contoso HR** aus. Webparts werden alphabetisch sortiert. Bei einer längeren Liste können Sie über die Suchleiste danach suchen. Dadurch wird ein Webpart im Canvas erstellt, das Ihre Microsoft Teams-Registerkarte enthält. In der folgenden Abbildung ist die Registerkartenansicht zu sehen:
+1. Öffnen Sie die Webpart-Toolbox durch Anklicken der `+`-Schaltfläche, und wählen Sie Ihre Microsoft Teams-Registerkarte namens **Contoso HR** aus. Webparts werden alphabetisch sortiert. Wenn es sich um eine lange Liste handelt, können Sie die Suchleiste verwenden, um sie zu finden. Dadurch wird ein Webpart im Canvas erstellt, das Ihre Microsoft Teams-Registerkarte enthält. In der folgenden Abbildung ist die Registerkartenansicht zu sehen:
 
    ![Registerkartenansicht](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 

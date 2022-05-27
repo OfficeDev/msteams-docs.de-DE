@@ -5,20 +5,20 @@ description: Erfahren Sie Näheres über die Vorschaugenerierung für Links, das
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 71974d9c553509b974dc2b52377f2d7ab8d79a16
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 08df4cfccf6d9fabad1e07736796d6728d7c527c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296959"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756737"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 
-Die Bühnenansicht ist eine neue Benutzeroberflächenkomponente zum Rendern von Inhalten, die im Vollbildmodus in Microsoft Teams geöffnet und als Registerkarte angeheftet werden können.
+Die Phasenansicht ist eine neue Benutzeroberflächenkomponente. Damit können Sie den Inhalt rendern, der im Vollbildmodus in Teams geöffnet und als Registerkarte angeheftet ist.
 
 ## <a name="stage-view"></a>Bühnenansicht
 
-Die Bühnenansicht ist eine Vollbild-Benutzeroberflächenkomponente, die Sie aufrufen können, um Webinhalte anzuzeigen. Der bestehende Dienst zum Generieren von Link-Vorschauen wurde so aktualisiert, dass URLs mithilfe einer adaptiven Karte und Chatdiensten in eine Registerkarte umgewandelt werden können. Wenn ein Benutzer eine URL in einem Chat oder Kanal sendet, wird eine Vorschau der URL auf einer adaptiven Karte bereitgestellt. Der Benutzer kann auf **Ansicht** auf der Karte klicken und den Inhalt direkt aus der Bühnenansicht als Registerkarte anheften.
+Die Bühnenansicht ist eine Vollbild-Benutzeroberflächenkomponente, die Sie aufrufen können, um Webinhalte anzuzeigen. Der vorhandene Link-Entknüpfungsdienst wird so aktualisiert, dass er verwendet wird, um URLs mithilfe einer adaptiven Karte und Chatdiensten in eine Registerkarte umzuwandeln. Wenn ein Benutzer eine URL in einem Chat oder Kanal sendet, wird eine Vorschau der URL auf einer adaptiven Karte bereitgestellt. Der Benutzer kann auf **Ansicht** auf der Karte klicken und den Inhalt direkt aus der Bühnenansicht als Registerkarte anheften.
 
 ## <a name="advantage-of-stage-view"></a>Vorteile der Bühnenansicht
 
@@ -101,7 +101,7 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl"
  
 ### <a name="examples"></a>Beispiele
 
-Wenn ein Benutzer eine URL eingibt, wird eine Vorschau davon auf einer adaptiven Karte generiert.
+Wenn ein Benutzer eine URL eingibt, wird sie in eine adaptive Karte eingeblendet.
 
 Im Folgenden sind die Deep-Link-Beispiele zum Aufrufen der Bühnenansicht aufgeführt:
 
@@ -109,7 +109,7 @@ Im Folgenden sind die Deep-Link-Beispiele zum Aufrufen der Bühnenansicht aufgef
 
 Nicht codierte URL:
 
-https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
+https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes: Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
 
 Codierte URL:
 
@@ -119,7 +119,7 @@ https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?conte
 
 Nicht codierte URL:
 
-https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous"}
+https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes: Miscellaneous"}
 
 Codiert
 

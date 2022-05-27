@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 5da4a0ada6e116a22957a6f1f1b1f2f281501e2a
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: d44f757141d31faaf4639a58fbbd31e5729e6f02
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654475"
+ms.locfileid: "65656152"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Erstellen einer neuen Teams-App mit dem Teams-Toolkit
 
@@ -28,11 +28,11 @@ Um eine neue Teams-App mithilfe des Teams-Toolkits zu erstellen, können Sie ein
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Teams Toolkit-Randleiste":::
 
-1. Sie können **Eine neue Teams-App erstellen** oder **Aus einem Beispiel starten** auswählen.
+1. Sie können **eine neue Teams-App erstellen** oder **von einem Musterbeispiel ausgehen** auswählen.
    
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="App erstellen":::
    
-1. Wenn Sie **Eine neue Teams-App erstellen** auswählen, wird die folgende Abbildung mit Vorlagen aus drei Kategorien angezeigt: Szenariobasierte Teams-App, einfache Teams-App und erweiterte Teams-Apps in Microsoft 365: 
+1. Wenn Sie **eine neue Teams-App erstellen** auswählen, wird die folgende Abbildung mit Vorlagen aus drei Kategorien angezeigt: Szenariobasierte Teams-App, Basic Teams-App und Erweiterte Teams-Apps in Microsoft 365: 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Funktionen für Teams-App":::
 
@@ -53,12 +53,12 @@ Sie können eine neue App erstellen, indem Sie **Anzeigebeispiele** erkunden und
    
     :::image type="content" source="../assets/images/teams-toolkit-v2/sample-gallery.png" alt-text="Beispielkatalog":::
 
-  Sie können den Beispielkatalog wie folgt erkunden:
+  Sie können die Beispielgalerie wie folgt erkunden:
 
   1. Wählen Sie ein Beispiel aus, um detaillierte Informationen zu durchsuchen.
   1. Wählen Sie auf der Informationsseite jedes Beispiels **Erstellen** aus, um es herunterzuladen. 
-  1. Führen Sie Ihre App lokal oder remote aus, um eine Vorschau im Teams-Webclient anzuzeigen, indem Sie die Anweisungen befolgen, die nach dem Herunterladen des Beispiels automatisch geöffnet werden.
-  1. Wenn Sie die Beispiele nicht herunterladen möchten, können Sie **Auf GitHub anzeigen** auswählen, um das Beispiel im GitHub-Beispielrepository zu öffnen und den Quellcode durchzusuchen.
+  1. Führen Sie Ihre Anwendung lokal oder aus der Ferne aus, um eine Vorschau im Teams-Webclient zu erhalten. Folgen Sie dazu den Anweisungen, die sich automatisch öffnen, nachdem Sie das Beispiel heruntergeladen haben.
+  1. Wenn Sie die Beispiele nicht herunterladen möchten, können Sie **auf GitHub anzeigen** wählen, um das Beispiel im GitHub Samples Repository zu öffnen und den Quellcode zu durchsuchen.
 
 ## <a name="step-by-step-guides-using-teams-toolkit"></a>Schritt-für-Schritt-Anleitungen mithilfe des Teams-Toolkits
 
@@ -66,8 +66,8 @@ Sie können eine neue App erstellen, indem Sie **Anzeigebeispiele** erkunden und
 * [Erstellen einer Teams-App mit JavaScript, mithilfe von React](../sbs-gs-javascript.yml)
 * [Erstellen einer Teams-App mit SPFx](../sbs-gs-spfx.yml)
 * [Erstellen einer Teams-App mit C# oder .NET](../sbs-gs-csharp.yml)
-* Benachrichtigung an Teams senden 
-* Befehlsbot erstellen
+* [Benachrichtigung an Teams senden](../sbs-gs-notificationbot.yml)
+* [Befehlsbot erstellen](../sbs-gs-commandbot.yml)
 
 ## <a name="see-also"></a>Siehe auch
 
