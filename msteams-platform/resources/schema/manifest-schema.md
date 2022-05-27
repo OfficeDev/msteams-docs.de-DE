@@ -4,12 +4,12 @@ description: Beschreibung des Manifestschemas für Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Manifestschema für Microsoft Teams
-ms.openlocfilehash: 788a8f5542510e3232c3f97bf12584f08f12d0f6
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 5881d5745e12255aad270c227cdd9508a0023644
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672908"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755881"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -17,7 +17,7 @@ Das Microsoft Teams-App-Manifest beschreibt, wie Ihre App in das Microsoft Teams
 Weitere Informationen zu den Änderungen, die in den einzelnen Versionen vorgenommen wurden, finden Sie im [Manifeständerungsprotokoll](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 > [!Important]
-> Version `1.13` des Microsoft Teams-App-Manifestschemas ermöglicht die Unterstützung für [die Erweiterung von Teams-Apps auf Outlook und Office](../../m365-apps/overview.md). Für Apps, die nur für Teams bestimmt sind, verwenden Sie Version `1.12` (oder früher). Die Schemas 1.12 und 1.13 sind andernfalls identisch. Weitere Informationen finden Sie in der Übersicht über das [JavaScript-Client-SDK von Teams](../../m365-apps/overview.md).
+> Version `1.13` des Microsoft Teams-App-Manifestschemas ermöglicht die Unterstützung für [die Erweiterung von Teams-Apps auf Outlook und Office](../../m365-apps/overview.md). Für Apps, die nur für Teams bestimmt sind, verwenden Sie Version `1.12` (oder früher). Die Schemas 1.12 und 1.13 sind andernfalls identisch. Weitere Informationen finden Sie in der Übersicht über das [JavaScript-Client-SDK von Teams](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit).
 
 Das folgende Schemabeispiel umfasst alle Erweiterbarkeitsoptionen:
 
@@ -497,8 +497,8 @@ Das Element ist ein Array (maximal ein Element &mdash; derzeit ist nur ein Bot p
 |---|---|---|---|---|
 |`botId`|string|64 Zeichen|✔|Die eindeutige Microsoft-App-ID für den Bot, wie bei Bot Framework registriert. Die ID kann mit der Gesamt-[App-ID](#id)übereinstimmen.|
 |`scopes`|Array von Enumerationen|3|✔|Gibt an, ob der Bot eine Umgebung im Kontext eines Kanals in einem `team` oder Gruppenchat (`groupchat`) bietet, oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`). Diese Optionen sind nicht exklusiv.|
-|`needsChannelSelector`|Boolean|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
-|`isNotificationOnly`|Boolesch|||Gibt an, ob es sich bei einem Bot um einen unidirektionalen Bot mit nur Benachrichtigungsfunktion und nicht um einen dialogorientierten Bot handelt. Standard: **`false`**|
+|`needsChannelSelector`|Boolescher Wert|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
+|`isNotificationOnly`|Boolescher Wert|||Gibt an, ob es sich bei einem Bot um einen unidirektionalen Bot mit nur Benachrichtigungsfunktion und nicht um einen dialogorientierten Bot handelt. Standard: **`false`**|
 |`supportsFiles`|Boolean|||Gibt an, ob der Bot die Möglichkeit unterstützt, Dateien im persönlichen Chat hoch-/herunterzuladen. Standard: **`false`**|
 |`supportsCalling`|Boolesch|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
 |`supportsVideo`|Boolean|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|

@@ -5,13 +5,13 @@ description: Überblick über das Teams-Toolkit, die Installation des Teams-Tool
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/17/2022
-ms.openlocfilehash: 1b65fedbc34cb00771dde279a19ab1d6b4d8b16a
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.date: 05/24/2022
+ms.openlocfilehash: f0c09d605e63118755f28804689aa6659ebbb657
+ms.sourcegitcommit: 09ee0305b827ad6d1368d892db3824c5dbad886f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65673013"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65759669"
 ---
 # <a name="teams-toolkit-overview"></a>Überblick über das Teams-Toolkit
 

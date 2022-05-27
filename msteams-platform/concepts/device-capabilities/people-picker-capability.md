@@ -5,12 +5,12 @@ keywords: Steuerelement „Personenauswahl“
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: a2e2a21f0485e0df87f8963defbe54ed540e455a
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 802bb2ab2a3224809e07c56d498ad85473ced492
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755895"
+ms.locfileid: "65757591"
 ---
 # <a name="integrate-people-picker"></a>Integration der Personenauswahl
 

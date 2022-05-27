@@ -5,12 +5,12 @@ description: Identifizieren Sie die API-Verweise auf Besprechungs-Apps anhand vo
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d0ae72e89104d58722c24dcdd1138d9fcc97033
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: cb28e893a9c0460290294893800f77c90829edda
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755832"
+ms.locfileid: "65756583"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
@@ -157,7 +157,7 @@ Die folgende Tabelle enthält die Antwortcodes:
 | **403** | Get-Teilnehmerinformationen werden nicht mit der App geteilt. Wenn die App nicht im Meeting installiert ist, löst sie die Fehlerantwort 403 aus. Wenn der Mandantenadministrator die App während der Live-Site-Migration deaktiviert oder blockiert, wird die Fehlerantwort 403 ausgelöst. |
 | **200** | Die Teilnehmerinformationen wurden erfolgreich abgerufen.|
 | **401** | Die App antwortet mit einem ungültigen Token.|
-| **404** | Das Meeting ist entweder abgelaufen oder die Teilnehmer sind nicht verfügbar.|
+| **404** | Die Besprechung ist entweder abgelaufen, oder die Teilnehmer sind nicht verfügbar.|
 
 ## <a name="send-an-in-meeting-notification"></a>Senden Sie eine Besprechungsbenachrichtigung
 
@@ -534,8 +534,8 @@ Die folgende Tabelle enthält die Antwortcodes:
 |Antwortcode|Beschreibung|
 |---|---|
 | **500** | Interner Fehler. |
-| **501** | API wird im aktuellen Kontext nicht unterstützt.|
-| **1000** | Die App verfügt nicht über die erforderlichen Berechtigungen, um die Freigabe zum Bereitstellen zuzulassen.|
+| **501** | DIE API wird im aktuellen Kontext nicht unterstützt.|
+| **1000** | Die App verfügt nicht über die erforderlichen Berechtigungen, um die Freigabe für die Phase zuzulassen.|
 
 ## <a name="get-app-content-stage-sharing-state-api"></a>Rufen Sie die App-Content-Stage-Sharing-Status-API ab
 
@@ -574,8 +574,8 @@ Die folgende Tabelle enthält die Antwortcodes:
 |Antwortcode|Beschreibung|
 |---|---|
 | **500** | Interner Fehler. |
-| **501** | API wird im aktuellen Kontext nicht unterstützt.|
-| **1000** | Die App verfügt nicht über die erforderlichen Berechtigungen, um die Freigabe zum Bereitstellen zuzulassen.|
+| **501** | DIE API wird im aktuellen Kontext nicht unterstützt.|
+| **1000** | Die App verfügt nicht über die erforderlichen Berechtigungen, um die Freigabe für die Phase zuzulassen.|
 
 ## <a name="get-app-content-stage-sharing-capabilities-api"></a>Holen Sie sich die API für die Freigabe von App-Inhalten
 
@@ -614,7 +614,7 @@ Die folgende Tabelle enthält die Antwortcodes:
 |Antwortcode|Beschreibung|
 |---|---|
 | **500** | Interner Fehler. |
-| **1000** | Die App verfügt nicht über die Berechtigung zum Bereitstellen von Freigaben.|
+| **1000** | Die App verfügt nicht über Berechtigungen, um die Freigabe für die Phase zuzulassen.|
 
 ## <a name="get-real-time-teams-meeting-events-api"></a>Holen Sie sich die API für Team-Meeting-Events in Echtzeit
 
