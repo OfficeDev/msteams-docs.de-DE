@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 248830328e68ce5c8e844a200501d240ff9e82ea
-ms.sourcegitcommit: 1346b0eab13704807fca98f85c452214701d3fa2
+ms.openlocfilehash: e2d9b08afb7be0d8d74596598876264f8efc10e0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64793797"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757283"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Veröffentlichen Sie Ihre App im Microsoft Teams Store
 
@@ -51,23 +51,24 @@ Wenn Sie der Meinung sind, dass Ihre App für die Produktion bereit ist, können
 
 * **Umfassende Funktions- und Benutzerfreundlichkeitstests**
 
-  Ihre App wird von einem Prüfer gründlich geprüft, um sicherzustellen, dass sie den [Zertifizierungsrichtlinien des Microsoft Commercial Marketplace](/legal/marketplace/certification-policies) entspricht. Der Schwerpunkt liegt dabei auf tiefgreifenden Funktions- und Benutzererfahrungstests, Prüfungen der Benutzerfreundlichkeit und Metadatenprüfungen. Die App-Validierung wird für Desktop-, Web- und mobile Clients durchgeführt. Wir bemühen uns, Ihnen innerhalb von 24 Arbeitsstunden nach der Einreichung einen detaillierten Testbericht zur Verfügung zu stellen.
+  Ihre App wird von einem Validierungssteuerelement gründlich überprüft, um die Einhaltung der [Microsoft Commercial Marketplace-Zertifizierungsrichtlinien](/legal/marketplace/certification-policies) sicherzustellen. 
+  Der Schwerpunkt liegt auf umfassenden Funktions- und Benutzererfahrungstests, Benutzerfreundlichkeitsprüfungen und Metadatenüberprüfungen. Die App-Überprüfung wird auf Desktop-, Web- und mobilen Clients durchgeführt. Wir arbeiten hart daran, Ihnen einen detaillierten Testbericht in 24 Arbeitsstunden nach der Übermittlung zur Verfügung zu stellen.
 
 * **Geführte App-Veröffentlichung über den Concierge-Dienst**
 
-  Wenn keine Probleme mit Ihrer App auftreten, wird Ihre App genehmigt und im Teams Store veröffentlicht. Wenn Probleme auftreten, erhalten Sie vom Partner Center einen automatisierten Überprüfungsbericht mit den Fehlerdetails. Um Sie bei der erfolgreichen Veröffentlichung Ihrer App im Teams Store zu unterstützen und Sie durch diesen Prozess zu führen, sendet Ihnen das Validierungsteam eine personalisierte E-Mail von unserem Concierge-Dienst [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com), die die folgenden Informationen enthält:
+  Wenn keine Probleme mit Ihrer App auftreten, wird Ihre App genehmigt und im Teams Store veröffentlicht. Wenn die Probleme jedoch vorhanden sind, erhalten Sie vom Partner Center einen automatisierten Überprüfungsbericht mit den Fehlerdetails. Um Sie bei der erfolgreichen Veröffentlichung Ihrer App im Teams Store zu unterstützen und Sie durch diesen Prozess zu führen, sendet Ihnen das Validierungsteam eine personalisierte E-Mail von unserem Concierge-Dienst [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com), die die folgenden Informationen enthält:
 
   * Zusammenfassung aller Probleme
 
   * Details zu Fehlern oder Problemen mit Richtlinienlinks und Kategorisierung:
 
-    * Obligatorische Fehlerbehebung: Diese Probleme müssen vor der App-Genehmigung behoben werden.
+    * Obligatorische Fehlerbehebung: Probleme müssen vor der App-Genehmigung behoben werden.
 
-    * Empfohlene Korrektur: Diese Probleme können nach der App-Genehmigung behoben werden, da es sich hierbei um Empfehlungen zur Verbesserung der App-Erfahrung handelt.
+    * Empfohlene Korrektur: Probleme können nach der App-Genehmigung behoben werden, da es sich bei den Problemen um Empfehlungen zur Verbesserung der App-Erfahrung handelt.
 
-    * Blocker: Diese Probleme verhindern, dass das Validierungsteam Ihre App-Funktionalität weiter testet, und müssen gelöst werden, damit die Validierung fortgesetzt werden kann.
+    * Blocker: Probleme verhindern, dass das Validierungsteam Ihre App-Funktionalität weiter testet, und müssen gelöst werden, damit die Validierung fortgesetzt werden kann.
 
-    * Abfrage: Diese Abfragen können freigegeben werden, um Antworten auf bestimmte Fragen im Zusammenhang mit Ihrer App zu erhalten.
+    * Abfrage: Abfragen können freigegeben werden, um Antworten auf bestimmte Fragen im Zusammenhang mit Ihrer App zu erhalten.
 
   * Schritte zum Neuerstellen von Problemen über schriftliche Anweisungen oder das Videoformat.
 
@@ -89,13 +90,13 @@ Wenn Sie der Meinung sind, dass Ihre App für die Produktion bereit ist, können
 
 * **Während der Entwurfsphase**
 
-  Lesen Sie die [Store-Validierungsrichtlinien](prepare/teams-store-validation-guidelines.md) früh im Lebenszyklus Ihrer App (Entwurfsphase), um sicherzustellen, dass Sie Ihre App in Übereinstimmung mit den Store-Anforderungen erstellen. Wenn Sie Ihre App gemäß diesen Richtlinien erstellen, werden dadurch jegliche Überarbeitungen aufgrund der Nichteinhaltung von Store-Richtlinien verhindert.
+  Lesen Sie die [Store-Validierungsrichtlinien](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) früh im Lebenszyklus Ihrer App (Entwurfsphase), um sicherzustellen, dass Sie Ihre App in Übereinstimmung mit den Store-Anforderungen erstellen. Wenn Sie Ihre App gemäß diesen Richtlinien erstellen, werden dadurch jegliche Überarbeitungen aufgrund der Nichteinhaltung von Store-Richtlinien verhindert.
 
 * **Vor der App-Übermittlung**
 
   1. [Erstellen Sie Ihr Partner Center-Konto](prepare/create-partner-center-dev-account.md) weit im Voraus. Wenn Sie Probleme mit Ihrem [Partner Center-Konto](prepare/create-partner-center-dev-account.md) haben, erstellen Sie ein [Supportticket](/azure/marketplace/partner-center-portal/support).
 
-  1. Überprüfen Sie die [Store-Validierungsrichtlinien](prepare/teams-store-validation-guidelines.md) erneut, um sicherzustellen, dass Ihre App den Store-Anforderungen entspricht. Dies trägt dazu bei, die Anzahl der in Ihrer App festgestellten Probleme, und somit die Zeit zu reduzieren, die für die Genehmigung Ihrer App benötigt wird.
+  1. Überprüfen Sie die [Store-Validierungsrichtlinien](prepare/teams-store-validation-guidelines.md) erneut, um sicherzustellen, dass Ihre App den Store-Anforderungen entspricht. Dies trägt dazu bei, die Anzahl der in Ihrer App festgestellten Probleme zu reduzieren, und somit auch die Zeit, die für die Genehmigung Ihrer App benötigt wird.
 
   1. Testen und erneutes Testen Ihrer App:
 
@@ -106,20 +107,20 @@ Wenn Sie der Meinung sind, dass Ihre App für die Produktion bereit ist, können
      1. Testen Sie Ihre App vor der App-Übermittlung gründlich, um sicherzustellen, dass sie den Store-Richtlinien entspricht. Laden Sie die App in Teams quer, und testen Sie die End-to-End-Benutzerflows für Ihre App. Stellen Sie sicher, dass die Funktionalität wie erwartet funktioniert, Links nicht beschädigt sind, die Benutzererfahrung nicht blockiert wird und alle Einschränkungen deutlich hervorgehoben sind.
 
      1. Testen Sie Ihre App auf Desktop-, Web- und mobilen Clients. Stellen Sie sicher, dass die App über verschiedene Formfaktoren hinweg reagiert.
-
+  
   1. Führen Sie die [Herausgeberüberprüfung](/azure/active-directory/develop/publisher-verification-overview) aus, bevor Sie Ihre App übermitteln. Wenn Probleme auftreten, können Sie ein [Supportticket](/azure/marketplace/partner-center-portal/support) zur Behebung erstellen.
 
   1. Während Sie sich auf die App-Übermittlung vorbereiten, befolgen Sie [die Checkliste](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist) und schließen Sie die folgenden Details als Teil Ihres Übermittlungspakets ein:
 
-      1. Sorgfältig überprüftes App-Paket.
+        1. Sorgfältig überprüftes App-Paket.
 
-      1. Die Anmeldeinformationen von Administratoren und Benutzern ohne Administratorrechte zum Testen Ihrer App-Funktionalität (wenn Ihre App ein Premium-Abonnementmodell bietet).
+        1. Die Anmeldeinformationen von Administratoren und Benutzern ohne Administratorrechte zum Testen Ihrer App-Funktionalität (wenn Ihre App ein Premium-Abonnementmodell bietet).
 
-      1. Testanweisungen mit Details zur App-Funktionalität und unterstützten Szenarien.
+        1. Testanweisungen mit Details zur App-Funktionalität und unterstützten Szenarien.
 
-      1. Einrichtungsanweisungen, wenn Ihre App eine zusätzliche Konfiguration für den Zugriff auf die App-Funktionalität erfordert. Wenn Ihre App eine komplexe Konfiguration erfordert, können Sie alternativ auch einen [bereitgestellten Demomandanten](/office/developer-program/microsoft-365-developer-program-get-started) mit Administratorzugriff bereitstellen, damit unsere Validierungssteuerelemente die Konfigurationsschritte überspringen können.
+        1. Einrichtungsanweisungen, wenn Ihre App eine weitere Konfiguration für den Zugriff auf die App-Funktionalität erfordert. Wenn Ihre App eine komplexe Konfiguration erfordert, können Sie alternativ auch einen [bereitgestellten Demomandanten](/office/developer-program/microsoft-365-developer-program-get-started) mit Administratorzugriff bereitstellen, damit unsere Validierungssteuerelemente die Konfigurationsschritte überspringen können.
 
-      1. Link zu einem Demovideo zum Aufzeichnen des Schlüsselbenutzerflows für Ihre App. Dies wird dringend empfohlen.
+        1. Link zu einem Demovideo zum Aufzeichnen des Schlüsselbenutzerflows für Ihre App. Dies wird dringend empfohlen.
 
 * **Nach der App-Übermittlung**
 
@@ -127,9 +128,47 @@ Wenn Sie der Meinung sind, dass Ihre App für die Produktion bereit ist, können
 
   * Stellen Sie sicher, dass Sie über eine ausreichende Entwicklerbandbreite verfügen, um gemeldete Probleme zu beheben, bis die App genehmigt wird.
 
-  * Stellen Sie sicher, dass Sie [alle Probleme behoben haben](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues), die vom Concierge-Dienst [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) gemeldet wurden, bevor Sie Ihr App-Paket für weitere Tests freigeben. Dies trägt dazu bei, die Anzahl der Iterationen zu reduzieren, die zum Überprüfen Ihrer App erforderlich sind, und somit die Zeit, die zum Genehmigen Ihrer App benötigt wird.
+  * Stellen Sie sicher, dass Sie [alle Probleme behoben haben](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues), die vom Concierge-Dienst [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) gemeldet wurden, bevor Sie Ihr App-Paket für weitere Tests freigeben. Es trägt dazu bei, die Anzahl der Iterationen zu reduzieren, die zum Überprüfen Ihrer App erforderlich sind, und somit die Zeit, die zum Genehmigen Ihrer App benötigt wird.
   
-  * Vermeiden Sie das Ändern der App-Funktionalität während des Überprüfungsprozesses. Dies kann zur Ermittlung neuer Probleme führen und die Zeit verlängern, die zum Genehmigen Ihrer App benötigt wird.
+  * Vermeiden Sie das Ändern der App-Funktionalität während des Überprüfungsprozesses, das zur Ermittlung neuer Probleme führen und die Zeit verlängern kann, die zum Genehmigen Ihrer App benötigt wird.
+
+## <a name="additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer"></a>Weitere Tipps für eine schnelle Genehmigung zum Veröffentlichen Ihrer App in Verbindung mit einem SaaS-Angebot
+
+* **Während der Entwurfsphase**
+
+  Überprüfen Sie die [Store-Validierungsrichtlinien, die für Apps spezifisch sind, die mit verknüpften SaaS-Angeboten veröffentlicht wurden](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) früh im Lebenszyklus Ihrer App (Entwurfsphase), um sicherzustellen, dass Sie Ihre App in Übereinstimmung mit den Store-Anforderungen und [den Microsoft Commercial Marketplace-Richtlinien für Teams Apps erstellen, die mit SaaS-Angeboten verknüpft sind](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers). Wenn Sie Ihre App gemäß diesen Richtlinien erstellen, werden dadurch jegliche Überarbeitungen aufgrund der Nichteinhaltung von Store-Richtlinien verhindert.
+
+* **Vor der App-Übermittlung**
+
+  1. Stellen Sie beim Vorbereiten der App-Übermittlung Folgendes sicher:
+
+      1. Ihre App ist mit einem (bereits veröffentlichten) Live-SaaS-Angebot auf AppSource mit mindestens einem Plan mit Preisinformationen verknüpft.
+
+      1. Sie haben die `subscriptionOffer`-Details in Ihrem App-Manifest im Format `publisherId.offerId`richtig erwähnt.
+
+      1. Sie müssen sicherstellen, dass Ihr verknüpftes SaaS-Angebot für die Unterstützung von Lizenzen konzipiert ist, die auf einem benannten [pro-Benutzer-Modell](/azure/marketplace/create-new-saas-offer-plans) zugewiesen sind. Verknüpfte SaaS-Angebote, die andere Preismodelle wie Flatrate unterstützen, werden derzeit nicht für die Veröffentlichung im Teams Store akzeptiert.
+
+      1. Fügen Sie Testanweisungen oder Einrichtungsanweisungen oder einen Link zu einem Demovideo hinzu, in dem die App-Funktionalität und die unterstützten Szenarien sowie alle zusätzlichen Informationen beschrieben werden, damit unsere Tester Ihre Workflows im SaaS-Portal leicht verstehen können.
+
+  1. Sie müssen die End-to-End-Workflows für Kauf- und Lizenzverwaltung gründlich [selbst testen](~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md), bevor Sie Ihre App, die mit einem SaaS-Angebot verknüpft ist, zur Validierung übermitteln. Stellen Sie Folgendes sicher:
+
+     1. Sowohl Administrator- als auch Nicht-Administratorbenutzer können eine Bestellung aufgeben und den Kauf Ihres Abonnements bestätigen. Käufer können zur Zielseite der SaaS-Anwendung navigieren, indem sie im Microsoft Admin Center **Jetzt einrichten** auswählen. Testen Sie und stellen Sie sicher, dass Ihre Käufer ihr Abonnement in Ihrer SaaS-Anwendung aktivieren und konfigurieren können. Das Senden von Nachrichten in Ihrer SaaS-Anwendung sollte ausreichend viele und klare Informationen auf dem Weg zu einem Käufer bieten.
+
+     1. Im Abschnitt **Abonnements verwalten** im Microsoft Admin Center werden die richtigen Details der Abonnements angezeigt, die von Ihren Testbenutzern bereitgestellt wurden. Der Abonnementstatus, die Anzahl der Lizenzen und andere Details müssen korrekt sein.
+
+     1. Der Kauf und die Entfernung von Lizenzworkflows funktionieren wie erwartet. Stellen Sie sicher, dass Käufer die Anzahl der Lizenzen von Microsoft Admin Center erhöhen können. Stellen Sie sicher, dass die Anzahl und Zuweisung von Lizenzen in Ihrer SaaS-Anwendung die jeweiligen Lizenzen und die richtigen Empfänger widerspiegelt. Stellen Sie außerdem sicher, dass Ihre SaaS-Anwendung eine Möglichkeit bietet, einem Benutzer eine Lizenz zu entwenden. Stellen Sie nach dem Entfernen einer Lizenz sicher, dass die verbleibenden Zuweisungen und die Anzahl in Ihrer SaaS-Anwendung erhalten bleiben und die richtigen Details im Microsoft Admin Center gespiegelt werden.
+
+     1. Die Kündigung des Abonnements funktioniert wie erwartet. Käufer können ein Abonnement kündigen. Überprüfen Sie nach der Kündigung, ob der richtige Abonnementstatus im Microsoft Admin Center und Ihrer SaaS-Anwendung angezeigt wird. Stellen Sie sicher, dass der Käufer nach erfolgreicher Kündigung den Zugriff auf das Abonnement verloren hat.
+
+     1. Der erneute Erwerb eines Abonnements ist nahtlos. Testen Sie nach der Kündigung eines aktiven Abonnements sorgfältig, um sicherzustellen, dass Käufer das Abonnement erneut erwerben können.
+
+     1. Käufer können ihren abonnierten Plan ändern. Nachdem der Plan geändert wurde, können Benutzer auf die aktualisierten oder heruntergestuften Planfeatures zugreifen.
+
+     1. Ihre SaaS-Anwendung enthält Lizenzverwaltungsfeatures. Käufer müssen in der Lage sein, Benutzern verfügbare Lizenzen zuzuweisen, zu ändern und erneut zuzuweisen. Überprüfen Sie, ob Käufer Benutzer hinzufügen oder entfernen können, um die Lizenzen zu verwalten.
+  
+  1. Sie müssen die Mindest- und Massenlizenzkaufflüsse testen und sicherstellen, dass sie wie erwartet funktionieren.
+  
+  1. Sie müssen sicherstellen, dass Benutzer, denen Lizenzen zugewiesen sind, Zugriff auf die genau richtigen erworbenen Planfeatures haben, die in Ihrem Planeintrag beschrieben sind.
 
 ## <a name="see-also"></a>Siehe auch
 

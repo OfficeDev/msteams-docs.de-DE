@@ -1,15 +1,15 @@
 ---
 title: Karten
-description: Beschreibung von Karten und deren Verwendung in Bots, Connectors und Nachrichtenerweiterungen
+description: Beschreibt Karten und deren Verwendung in Bots, Connectors und Nachrichtenerweiterungen
 ms.localizationpriority: high
 keywords: Connectors Bots Karten Messaging
 ms.topic: overview
-ms.openlocfilehash: 23ac23928a1fa1a31e41bd5b553612bf02c23728
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: fc18c1048ec019a5532b50babff8e2d419343c1f
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191257"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756478"
 ---
 # <a name="cards"></a>Karten
 
@@ -54,7 +54,7 @@ Alle von Microsoft Teams verwendeten Karten sind unter [Kartentypen](~/task-modu
 
 ## <a name="adaptive-cards"></a>Adaptive Karten
 
-[Adaptive Karten](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) sind eine neue produktübergreifende Spezifikation für Karten in Microsoft-Produkten, einschließlich Bots, Cortana, Outlook und Windows. Sie werden als Kartentyp für die Entwicklung neuer Microsoft Teams-Lösungen empfohlen. Allgemeine Informationen vom für adaptive Karten zuständigen Team finden Sie unter [Übersicht über adaptive Karten](/adaptive-cards). Sie können adaptive Karten überall dort verwenden, wo Sie vorhandene Hero-Karten, Office 365-Karten und Miniaturbildkarten verwenden.
+[Adaptive Karten](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) sind eine neue produktübergreifende Spezifikation für Karten in Microsoft-Produkten, einschließlich Bots, Cortana, Outlook und Windows. Sie sind der empfohlene Kartentyp für die Entwicklung neuer Teams-Lösungen. Allgemeine Informationen vom für adaptive Karten zuständigen Team finden Sie unter [Übersicht über adaptive Karten](/adaptive-cards). Sie können adaptive Karten überall dort verwenden, wo Sie vorhandene Hero-Karten, Office 365-Karten und Miniaturbildkarten verwenden.
 
 Neben adaptiven Karten unterstützt Microsoft Teams noch zwei andere Arten von Karten:
 

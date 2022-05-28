@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: 1c78c6cfe68d263ede675161e5a89b03b0885616
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 48c3716258477bf7b8dc1086a75aa7a495ff5026
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656159"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756884"
 ---
 # <a name="debug-background-process"></a>Debuggen von Hintergrundprozessen
 
@@ -23,7 +23,7 @@ Der lokale Debugworkflow umfasst die Dateien `.vscode/launch.json` und `.vscode/
 
 3. Visual Studio Code startet dann die in den Verbundkonfigurationen angegebenen Debugger, z. B. **An Bot anfügen**, **An Back-End anfügen**, **An Front-End anfügen** und **Bot starten**.
 
-4.  Der Microsoft Edge- oder Chrome-Debugger startet eine neue Browserinstanz und öffnet eine Webseite zum Laden des Teams-Clients.
+4. Der Microsoft Edge- oder Chrome-Debugger startet eine neue Browserinstanz und öffnet eine Webseite zum Laden des Teams-Clients.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -38,16 +38,15 @@ Das Teams-Toolkit überprüft während des Debugprozesses die folgenden Vorausse
   |Bot |  14, 16 (empfohlen)|
   |Nachrichtenerweiterung | 14, 16 (empfohlen) |
 
-   
 * Microsoft 365 Konto mit gültigen Anmeldeinformationen, das Teams-Toolkit fordert Sie auf, sich bei dem Microsoft 365-Konto anzumelden, wenn Sie sich nicht bereits angemeldet haben.
 
 * Das Hochladen oder Querladen benutzerdefinierter Apps für Ihren Entwicklermandanten ist aktiviert, wenn dies nicht der Fall ist, wird das lokale Debuggen beendet.
 
-* Die Ngrok-Binärversion 2.3 ist für Bot- und Nachrichtenerweiterungen geeignet. Wenn Ngrok nicht installiert ist oder die Version nicht den Anforderungen entspricht, installiert das Teams-Toolkit das Ngrok-NPM-Paket `ngrok@4.2.2` in `~/.fx/bin/ngrok`. Die Ngrok-Binärdatei wird durch das Ngrok NPM-Paket in `/.fx/bin/ngrok/node modules/ngrok/bin`
+* Ngrok Binary Version 2.3 gilt für Bot- und Nachrichtenerweiterungen. Wenn Ngrok nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Teams Toolkit das Ngrok NPM-Paket `ngrok@4.2.2` in `~/.fx/bin/ngrok`. Die Ngrok-Binärdatei wird vom Ngrok-NPM-Paket in `/.fx/bin/ngrok/node modules/ngrok/bin`verwaltet.
 
-* Azure Functions Core Tools Version 4 installiert das Teams-Toolkit Azure Functions Core Tools NPM-Paket, azure-functions-core-tools@3 für **Windows** und für **macOs** in  `~/.fx/bin/func`, wenn Azure Functions Core Tools nicht installiert ist oder die Version nicht der Anforderung entspricht. Das Azure Functions Core Tools-NPM-Paket in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` verwaltet die Azure Functions Core Tools-Binärdatei. Bei Linux wird das lokale Debuggen beendet.
+* Azure Functions Core Tools Version 4: Wenn Azure Functions Core Tools nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Microsoft Teams-Toolkit das Azure Functions Core Tools NPM-Paket, azure-functions-core-tools@3 für **Windows** und für **MacOs** in  `~/.fx/bin/func`. Das Azure Functions Core Tools-NPM-Paket in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` verwaltet die Azure Functions Core Tools-Binärdatei. Bei Linux wird das lokale Debuggen beendet.
 
-* Wenn das .NET Core SDK nicht installiert ist oder die Version nicht den Anforderungen entspricht, installiert das Teams Toolkit das .NET Core SDK für Windows und MacOS in `~/.fx/bin/dotnet`. Für Linux wird das lokale Debugging beendet
+* .NET Core SDK-Version, die für Azure Functions gilt. Wenn .NET Core SDK nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Teams-Toolkit .NET Core SDK für Windows und MacOS in `~/.fx/bin/dotnet`. Bei Linux wird das lokale Debuggen beendet.
 
   In der folgenden Tabelle sind die .NET Core-Versionen aufgeführt:
 
@@ -56,13 +55,13 @@ Das Teams-Toolkit überprüft während des Debugprozesses die folgenden Vorausse
   |Windows, MacOs (x64) und Linux | **3.1 (empfohlen)**, 5.0, 6.0 |
   |macOs (arm64) |6.0 |
 
-* Entwicklungszertifikat. Wenn das Entwicklungszertifikat für localhost nicht für die Registerkarte in Windows oder macOS installiert ist, werden Sie vom Teams-Toolkit aufgefordert, es zu installieren.
+* Entwicklungszertifikat. Wenn das Entwicklungszertifikat für localhost nicht für die Registerkarte in Windows oder MacOS installiert ist, werden Sie vom Teams-Toolkit aufgefordert, es zu installieren.
 
 * Azure Functions-Bindungserweiterungen, die in `api/extensions.csproj` definiert sind. Wenn Azure Functions-Bindungserweiterungen nicht installiert sind, installiert das Teams-Toolkit Azure Functions-Bindungserweiterungen.
 
 * NPM-Pakete, die für die Registerkarten-App, Bot-App, Nachrichtenerweiterungs-App und Azure Functions gelten. Wenn NPM nicht installiert ist, installiert das Teams-Toolkit alle NPM-Pakete.
 
-* Bot- und Nachrichtenerweiterung, das Teams Toolkit startet Ngrok, um einen HTTP-Tunnel für Bot- und Nachrichtenerweiterung zu erstellen
+* Bot- und Nachrichtenerweiterung, das Teams Toolkit startet Ngrok, um einen HTTP-Tunnel für Bot- und Nachrichtenerweiterung zu erstellen.
 
 * Verfügbare Ports, wenn Registerkarten-, Bot-, Nachrichtenerweiterungs- und Azure Functions-Ports nicht verfügbar sind, wird das lokale Debuggen beendet.
 
@@ -75,7 +74,6 @@ Das Teams-Toolkit überprüft während des Debugprozesses die folgenden Vorausse
   | Knoteninspektor für Bot- oder Nachrichtenerweiterung | 9239 |
   | Azure Functions | 7071 |
   | Knoteninspektor für Azure Functions | 9229 |
-
 
 <!-- The following table lists the limitations if the required software is unavailable for debugging:
 
@@ -103,10 +101,8 @@ Use the following .NET Core versions:
 |Windows, macOs (x64), Linux | **3.1 (recommended)**, 5.0, 6.0 |
 |macOs (arm64) |6.0 |
 
-
 > [!NOTE]
-> If the development certificate for localhost isn't installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.</br> -->
-
+> If the development certificate for localhost isn't installed for tab in Windows or MacOS, the Teams toolkit prompts you to install it.</br> -->
 
 Wenn Sie **Start Debugging (F5)** auswählen, zeigt der Ausgabekanal des Teams-Toolkits den Fortschritt und das Ergebnis an, nachdem die Voraussetzungen überprüft wurden.
 
@@ -134,10 +130,9 @@ Im Einrichtungsprozess bereitet das Teams-Toolkit die folgenden Registrierungen 
 
     b. Fügt einen Bereich mit dem Namen `access_as_user` hinzu. Aktiviert es für **Administratoren und Benutzer**.
 
-
 4. Konfiguriert API-Berechtigungen. Fügt **User.Read** die Microsoft Graph-Berechtigung hinzu.
 
-    In der folgenden Tabelle ist die Konfiguration der Authentifizierung wie folgt aufgeführt:
+    In der folgenden Tabelle ist die Konfiguration der Authentifizierung aufgeführt:
     
       | Projekttyp | Umleitungs-URIs für das Web | Umleitungs-URIs für eine einseitige Anwendung |
       | --- | --- | --- |
@@ -157,7 +152,7 @@ Im Einrichtungsprozess bereitet das Teams-Toolkit die folgenden Registrierungen 
       | Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
       | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
     
-### <a name="registers-and-configures-bot"></a>Registriert und konfiguriert den Bot 
+### <a name="registers-and-configures-bot"></a>Registriert und konfiguriert den Bot
 
 Für Registerkarten-App oder Nachrichtenerweiterungs-App:
 

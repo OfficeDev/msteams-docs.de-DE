@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 2a85739a5a94109aae87de4579f17fe99df8d28b
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 844398ded497911f6c30cf732ab01d40b622f7ad
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104532"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757017"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Unterhalt Ihrer veröffentlichte Microsoft Teams-App
 
@@ -29,7 +29,7 @@ Bei Daten für neu veröffentlichte Apps dauert es etwa eine Woche, bis sie im B
 >
 > Zuvor wurden die Links durch Auswählen des Ellipsensymbols auf der App-Kachel kopiert. Bei der aktualisierten Teams-Storeerfahrung haben Sie über die Registerkarte „Details“ der Apps Zugriff auf diese. Dieses Update wird ab dem 01. März 2022 allgemein verfügbar sein (GA).
 
-Sie können Änderungen an Ihrer App (z. B. neue Funktionen oder sogar Metadaten) im Partner Center einreichen. Diese Änderungen erfordern einen neuen Überprüfungsprozess.
+Sie können Änderungen an Ihrer App (z. B. neue Features oder sogar Metadaten) in Partner Center übermitteln. Diese Änderungen erfordern einen neuen Überprüfungsprozess.
 
 Stellen Sie beim Veröffentlichen von Updates Folgendes sicher:
 

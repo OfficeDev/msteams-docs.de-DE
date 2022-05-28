@@ -4,12 +4,12 @@ description: Übersicht über die ersten Schritte für Microsoft Teams-Entwickle
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams Entwicklerbeispiele
-ms.openlocfilehash: 7e2288912fd2a851571b4b735af02db519fefe47
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 9e4405439241de9a4f3db97d256df8b8fab21880
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654771"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757710"
 ---
 # <a name="get-started"></a>Erste Schritte
 
@@ -23,7 +23,7 @@ Hier ist eine Vorstellung davon, was Sie lernen werden:
 - Machen Sie sich mit dem Toolkit und SDKs vertraut.
 - Konfigurieren und erstellen Sie verschiedene Arten von Teams-Apps.
 
-Werfen wir einen kurzen Blick auf die Optionen der Buildumgebung, aus denen Sie wählen können, und die Roadmap zum Erstellen und Bereitstellen einer Teams-App.
+Werfen wir einen kurzen Blick auf die Optionen der Buildumgebung, aus denen Sie auswählen können, und die Roadmap zum Erstellen und Bereitstellen einer Teams-App.
 
 :::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Abbildung der grundlegenden Schritte zum Erstellen und Bereitstellen einer Teams-App":::
 
@@ -41,7 +41,7 @@ Wählen Sie je nach gewünschten Funktionen für Ihre App einen geeigneten Satz 
 
 Wenn Sie bereits mit dem Yeoman-Workflow vertraut sind, bevorzugen Sie möglicherweise die Verwendung von [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) zum Erstellen Ihrer Apps.
 
-> [!NOTE]
+> [!WARNING]
 > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen.<br> App Studio wird per 30. Juni 2022 eingestellt.
 
 ## <a name="build-your-first-teams-app"></a>Erstellen Ihrer ersten Teams-App
@@ -49,7 +49,11 @@ Wenn Sie bereits mit dem Yeoman-Workflow vertraut sind, bevorzugen Sie mögliche
 Nun erstellen wir Ihre erste Teams-App. Wählen Sie jedoch zunächst Ihre Sprache (oder das Framework) aus, und bereiten Sie Ihre Entwicklungsumgebung vor.
 
 > [!div class="nextstepaction"]
-> [Erstellen einer Teams-App mit JavaScript, mithilfe von React](../sbs-gs-javascript.yml)
+> [Erstellen einer Registerkarten-App in Teams mit JavaScript, mithilfe von React](../sbs-gs-javascript.yml)
+> [!div class="nextstepaction"]
+> [Erstellen einer Bot-App in Teams mit JavaScript, mithilfe von React](../sbs-gs-bot.yml)
+> [!div class="nextstepaction"]
+> [Erstellen einer Nachrichtenerweiterungs-App in Teams mit JavaScript, mithilfe von React](../sbs-gs-msgext.yml)
 > [!div class="nextstepaction"]
 > [Erstellen einer Teams-App mit Blazor](../sbs-gs-blazorupdate.yml)
 > [!div class="nextstepaction"]
