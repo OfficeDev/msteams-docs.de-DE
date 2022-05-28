@@ -3,12 +3,12 @@ title: Erstellen von Deep-Links
 description: Lernen Sie, wie Teams Deep Links beschrieben werden und wie Sie sie in Ihren Anwendungen verwenden können.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: a57487f64070955b21c8b11bd9995f0f2201b0e2
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: a1bd16f178508d62a2a38b6d8880a9315ee45ee3
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672957"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756769"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links
 
@@ -181,7 +181,7 @@ Es ist möglich, in einer App mit TeamsJS zu navigieren. Der folgende Code veran
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
-Sie können eine Navigation von Ihrer Registerkarte aus mithilfe der [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true)-Funktion auslösen, wie im folgenden Code dargestellt:
+Sie können die Navigation von Ihrer Registerkarte aus mithilfe der [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true)-Funktion auslösen, wie im folgenden Code dargestellt:
 
 ```javascript
 if (pages.isSupported()) {
@@ -352,7 +352,7 @@ Die Abfrageparameter sind:
 * `objectUrl`: Objekt-URL der Datei. Das Format ist `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Beispiel: `https://microsoft.sharepoint.com/teams/(filepath)`.
 * `baseUrl`: Basis-URL der Datei. Das Format ist `https://{tenantName}.sharepoint.com/sites/{TeamName}`. Beispiel: `https://microsoft.sharepoint.com/teams`.
 * `serviceName`: Name des Diensts, App-ID. Beispiel: `teams`.
-* `threadId`: Die threadId ist die Team-ID des Teams, in dem die Datei gespeichert ist. Sie ist optional und kann nicht für Dateien festgelegt werden, die im OneDrive Ordner eines Benutzers gespeichert sind. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
+* `threadId`: Die threadId ist die Team-ID des Teams, in dem die Datei gespeichert ist. Sie ist optional und kann nicht für Dateien festgelegt werden, die im OneDrive-Ordner eines Benutzers gespeichert sind. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
 * `groupId`: Gruppen-ID der Datei. Beispiel: `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
 
 > [!NOTE]
@@ -438,7 +438,7 @@ Zwar wird Verwendung der stark typisierten APIs von TeamsJS empfohlen, Sie könn
   
 Nachfolgend sind die Abfrageparameter aufgeführt:
 
-* `users`: Die durch Trennzeichen getrennte Liste der Benutzer-IDs, die die Teilnehmer des Anrufs darstellen. Derzeit unterstützt das Feld „Benutzer-ID“ den Azure AD UserPrincipalName, in der Regel eine E-Mail-Adresse, oder im Fall eines PSTN-Anrufs unterstützt es eine PSTN-MRI 4:&lt;Telefonnummer&gt;.
+* `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, die die Teilnehmer des Anrufs darstellen. Derzeit unterstützt das Benutzer-ID-Feld den Azure AD UserPrincipalName, in der Regel eine E-Mail-Adresse. Bei einem PSTN-Anruf unterstützt es eine pstn mri 4:&lt;phonenumber&gt;.
 * `withVideo`: Dies ist ein optionaler Parameter, den Sie für einen Videoanruf verwenden können. Durch Festlegen dieses Parameters wird nur die Kamera des Anrufers aktiviert. Der Empfänger des Anrufs hat die Möglichkeit, Audio- oder Audio- und Videoanrufe über das Teams Anrufbenachrichtigungsfenster entgegen zu nehmen.
 * `Source`: Dies ist ein optionaler Parameter, der über die Deep-Link-Quelle informiert.
 
