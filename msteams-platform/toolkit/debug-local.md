@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 6fd32b35a28ae0d9b1592f82a824622000c04161
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 04c88e840ba1edbeb657428bb76ecea86acf895a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104441"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756632"
 ---
 # <a name="debug-your-teams-app-locally"></a>Lokales Debuggen Ihrer Teams-App
 
@@ -102,11 +102,11 @@ Das Toolkit startet je nach Auswahl eine neue Edge- oder Chrome-Browserinstanz u
 <details>
 <summary><b>macOS</b></summary>
 
-1. Wählen Sie **Edge debuggen** oder **Chrome debuggen** aus dem Menü **Ausführen und Debuggen** in der Aktivitätsleiste aus.
+1. Wählen Sie **Edge debuggen** oder **Chrome debuggen** aus der **Ausführen und Debuggen** in der Aktivitätsleiste aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browserlisten" border="false":::
 
-1. Wählen Sie **Debuggen starten (F5)** oder **Ausführen** aus, um Ihre Teams-App im Debugmodus auszuführen.
+1. Wählen Sie **Debuggen starten (F5)** oder  **Ausführen** aus, um Ihre Teams-App im Debugmodus auszuführen.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Debuggen Ihrer App" border="false":::
 
@@ -128,18 +128,16 @@ Das Toolkit startet je nach Auswahl eine neue Edge- oder Chrome-Browserinstanz u
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="Mac-Anmeldung" border="true":::
 
-Das Toolkit startet je nach Auswahl eine neue Edge- oder Chrome-Browserinstanz und öffnet eine Webseite zum Laden des Teams-Clients. 
+Das Toolkit startet je nach Auswahl eine neue Edge- oder Chrome-Browserinstanz und öffnet eine Webseite zum Laden des Teams-Clients.
 
 </details>
-
 
 #### <a name="2-debug-your-app"></a>2. Debuggen Ihrer App
 
 Nach dem anfänglichen Einrichtungsprozess startet das Teams-Toolkit die folgenden Prozesse:
 
 a. [Startet App-Dienste](#starts-app-services) </br>
-b. [Startet Debugger](#launches-debuggers)   </br>
-      c. [Lädt die Teams-App quer](#sideloads-the-teams-app)
+b. [Startet Debugger](#launches-debuggers)   </br>c. [Lädt die Teams-App quer](#sideloads-the-teams-app)
         
 #### <a name="starts-app-services"></a>Startet App-Dienste
 
@@ -194,9 +192,9 @@ Mit dem Teams-Toolkit können Sie die Debugeinstellungen anpassen, um Ihre Regis
 <details>
 <summary><b>Verwenden Ihres Bot-Endpunkts</b></summary>
 
-1. Stellen Sie in den Visual Studio Code-Einstellungen sicher, dass **Ngrok installiert und gestartet ist (ngrok)**.
+1. Deaktivieren Sie in Visual Studio Code Einstellungen **Stellen Sie sicher, dass Ngrok installiert und gestartet (ngrok) ist**.
 
-1. Legen Sie die Konfiguration von „siteEndpoint“ in `.fx/configs/config.local.json` für Ihren Endpunkt fest.
+1. Legen Sie die „siteEndpoint“-Konfiguration in `.fx/configs/config.local.json` auf Ihren Endpunkt fest.
 
 ```json
 {
@@ -214,9 +212,9 @@ Mit dem Teams-Toolkit können Sie die Debugeinstellungen anpassen, um Ihre Regis
 <details>
 <summary><b>Verwenden des Entwicklungszertifikats</b></summary>
 
-1. Deaktivieren Sie in den Visual Studio Code-Einstellungen die Option **Sicherstellen, dass das Entwicklungszertifikat vertrauenswürdig ist (devCert)**.
+1. Deaktivieren Sie in Visual Studio Code Einstellungen **Stellen Sie sicher, dass das Entwicklungszertifikat vertrauenswürdig ist (devCert)**.
 
-1. Legen Sie die Konfiguration `sslCertFile` und `sslKeyFile` in `.fx/configs/config.local.json` für den Zertifikatdateipfad und den Schlüsseldateipfad fest.
+1. Legen Sie die „`sslCertFile`“- und „`sslKeyFile`“-Konfiguration in `.fx/configs/config.local.json` für den Zertifikatsdateipfad und den Schlüsseldateipfad fest.
 
 ```json
 {
@@ -234,11 +232,11 @@ Mit dem Teams-Toolkit können Sie die Debugeinstellungen anpassen, um Ihre Regis
 <details>
 <summary><b>Verwenden Sie Ihre Startskripts, um App Services zu starten</b></summary>
 
-1. Aktualisieren Sie für die Registerkarte `dev:teamsfx`das Skript in`tabs/package.json`.
+1. Aktualisieren Sie für Registerkarten das `dev:teamsfx`-Skript in `tabs/package.json`.
 
-1. Aktualisieren Sie für Bot- oder Nachrichtenerweiterungen `dev:teamsfx` das Skript in `bot/package.json`.
+1. Für Bot- oder Nachrichtenerweiterung, aktualisieren Sie das Skript `dev:teamsfx` in `bot/package.json`.
 
-1. Aktualisieren Sie für Azure Functions das `dev:teamsfx`Skript in `api/package.json` und für TypeScript das `watch:teamsfx`Skript.
+1. Aktualisieren Sie für Azure Functions das `dev:teamsfx`-Skript in `api/package.json` und für TypeScript das `watch:teamsfx`-Skript.
 
    > [!NOTE]
    > Derzeit unterstützen die Tab-, Bot- und Nachrichtenerweiterungs-Apps sowie die Azure Functions-Ports keine Anpassungen.
@@ -261,7 +259,7 @@ Sie können der `.env.teamsfx.local`Datei Umgebungsvariablen für Registerkarte,
 
 Teams Toolkit nutzt Visual Studio Code Multi-Target-Debugging zum gleichzeitigen Debuggen von Registerkarten, Bots, Nachrichtenerweiterungen und Azure-Funktionen. Sie können `.vscode/launch.json` und `.vscode/tasks.json` aktualisieren, um Teilkomponenten zu debuggen. Wenn Sie die Registerkarte nur in einer Registerkarte plus Bot mit Azure Functions Projekt debuggen möchten, führen Sie die folgenden Schritte aus:
 
-1. Kommentieren Sie **An Bot anfügen** und **An Back-End anfügen** aus der Debugverbindung in `.vscode/launch.json`
+1. Kommentieren Sie **An Bot anfügen** und **An Back-End anfügen** aus der Debugverbindung in `.vscode/launch.json`.
 
    ```json
    {
@@ -281,7 +279,7 @@ Teams Toolkit nutzt Visual Studio Code Multi-Target-Debugging zum gleichzeitigen
    }
    ```
 
-2. Kommentieren **Back-End starten** und "Bot starten" aus "Alle Aufgaben starten" in ".vscode/tasks.json".
+2. Kommentieren Sie **Back-End starten** und „Bot starten" aus „Alle Aufgaben starten" in „.vscode/tasks.json".
 
    ```json
    {
@@ -298,7 +296,6 @@ Teams Toolkit nutzt Visual Studio Code Multi-Target-Debugging zum gleichzeitigen
    ```
 
 </details>
-
 
 ## <a name="next-step"></a>Nächster Schritt
 
