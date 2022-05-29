@@ -4,16 +4,16 @@ description: Beschreibt alle für Bots in Teams verfügbaren Karten und Kartenak
 ms.localizationpriority: high
 keywords: Referenz zu Bots-Karten
 ms.topic: reference
-ms.openlocfilehash: b1dd6d5c9ac388f1862041df836f5590d57bfe84
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 33df4c45aa613ec79c4380850043d373f2d5863d
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104140"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757199"
 ---
 # <a name="types-of-cards"></a>Kartentypen
 
-Adaptive, Hero-, Listen-, Office 365-Connector-, Beleg-, Anmelde- und Miniaturansichtskarten und Kartensammlungen werden in Bots für Microsoft Teams unterstützt. Sie basieren auf von Bot Framework definierten Karten, aber Teams unterstützt nicht alle Bot Framework-Karten und hat einige eigene hinzugefügt.
+Adaptive, Hero-, Listen-, Office 365-Connector-, Beleg-, Anmelde- und Miniaturansichtskarten und Kartensammlungen werden in Bots für Microsoft Teams unterstützt. Sie basieren auf Karten, die vom Bot Framework definiert wurden, aber Teams unterstützt nicht alle Bot Framework-Karten und hat einige eigene hinzugefügt.
 
 Bevor Sie die verschiedenen Kartentypen identifizieren, sollten Sie wissen, wie Sie eine Hero-, Miniaturansichts- oder Adaptive Karte erstellen.
 
@@ -81,11 +81,11 @@ Sie können allgemeine Eigenschaften durchgehen, die für alle Karten gelten.
 
 ### <a name="inline-card-images"></a>Inline-Kartenbilder
 
-Die Karte kann ein Inlinebild enthalten, indem Sie einen Link zum öffentlich verfügbaren Bild einfügen. Aus Leistungsgründen wird dringend empfohlen, das Bild auf einem öffentlichen Content Delivery Network (CDN) zu hosten.
+Die Karte kann ein Inlinebild enthalten, indem Sie einen Link zum öffentlich verfügbaren Bild einfügen. Aus Leistungsgründen wird dringend empfohlen, das Image in einem öffentlichen Content Delivery Network (CDN) zu hosten.
 
 Bilder werden vergrößert oder verkleinert, um das Seitenverhältnis für die Abdeckung des Bildbereichs beizubehalten. Die Bilder werden dann von der Mitte her zugeschnitten, um das entsprechende Seitenverhältnis für die Karte zu erhalten.
 
-Bilder dürfen höchstens 1024×1024 groß sein und müssen im PNG-, JPEG- oder GIF-Format vorliegen. Animiertes GIF wird nicht unterstützt.
+Bilder dürfen höchstens 1024×1024 groß sein und müssen im PNG-, JPEG- oder GIF-Format vorliegen. Animierte GIFs werden nicht unterstützt.
 
 Die folgende Tabelle enthält die Eigenschaften von Inline-Kartenbildern:
 
@@ -99,7 +99,7 @@ Die folgende Tabelle enthält die Eigenschaften von Inline-Kartenbildern:
 
 ### <a name="buttons"></a>Schaltflächen
 
-Schaltflächen werden am unteren Rand der Karte gestapelt angezeigt. Der Schaltflächentext befindet sich immer in einer Zeile und wird abgeschnitten, wenn der Text die Breite der Schaltfläche überschreitet. Zusätzliche Schaltflächen, die über die von der Karte unterstützte Höchstzahl hinausgehen, werden nicht angezeigt.
+Schaltflächen werden am unteren Rand der Karte gestapelt angezeigt. Der Schaltflächentext befindet sich immer in einer Zeile und wird abgeschnitten, wenn der Text die Breite der Schaltfläche überschreitet. Alle zusätzlichen Tasten, die über die maximale Anzahl der von der Karte unterstützten Tasten hinausgehen, werden nicht angezeigt.
 
 Weitere Informationen finden Sie unter [Kartenaktionen](~/task-modules-and-cards/cards/cards-actions.md).
 
@@ -486,7 +486,7 @@ Um den Rendering-Stil für `activityImage` anzugeben, können Sie `activityImage
 | `avatar` | Standardmäßig wird `activityImage` als Kreis zugeschnitten. |
 | `article` | `activityImage` wird als Rechteck angezeigt und behält das Seitenverhältnis bei. |
 
-Weitere Informationen zu den Eigenschaften der Connectorkarte finden Sie unter [Referenz zu Nachrichtenkarten mit Aktionen](/outlook/actionable-messages/card-reference). Die einzigen Connector-Karteneigenschaften, die Teams derzeit nicht unterstützen, sind:
+Weitere Informationen zu den Eigenschaften der Connectorkarte finden Sie unter [Referenz zu Nachrichtenkarten mit Aktionen](/outlook/actionable-messages/card-reference). Die einzigen Anschlusskarteneigenschaften, die Teams derzeit nicht unterstützt, sind die folgenden:
 
 * `heroImage`
 * `hideOriginalBody`
@@ -561,7 +561,7 @@ Der folgende Code zeigt ein Beispiel für eine Office 365-Connectorkarte:
 
 ## <a name="receipt-card"></a>Belegkarte
 
-Teams unterstützt die Belegkarte. Es handelt sich um eine Karte, die es einem Bot ermöglicht, dem Benutzer einen Beleg bereitzustellen. Sie enthält in der Regel die Liste der Elemente, die in den Beleg aufgenommen werden sollen, z. B. Informationen zu Steuern und Summen.
+Teams unterstützt eine Belegkarte, mit der ein Bot dem Benutzer einen Beleg ausstellen kann. Sie enthält in der Regel die Liste der Elemente, die in den Beleg aufgenommen werden sollen, z. B. Informationen zu Steuern und Summen.
 
 ### <a name="support-for-receipt-cards"></a>Unterstützung für Belegkarten
 
@@ -958,7 +958,7 @@ Eine Liste kann pro Nachricht maximal zehn Karten anzeigen.
 
 ## <a name="cards-not-supported-in-teams"></a>Karten werden in Teams nicht unterstützt
 
-Die folgenden Karten werden von Bot Framework implementiert, aber nicht von Teams unterstützt:
+Die folgenden Karten werden vom Bot Framework implementiert, werden aber von Teams nicht unterstützt:
 
 * Animationskarten
 * Audiokarten

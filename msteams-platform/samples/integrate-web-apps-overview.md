@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 keywords: Power Plattform Power Apps People Picker Deep Link Virtueller Agent Assistent Share-to-Teams
-ms.openlocfilehash: c700755051eebbdb827a0fb9aba0ea51d31dbcf8
-ms.sourcegitcommit: bde5f3f409fb6824a5d6ff5618e9386c85879b8b
+ms.openlocfilehash: dc31644fca25aeca12b7e5f3095ebae53a3c02ac
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65604271"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757668"
 ---
 # <a name="integrate-web-apps"></a>Integrieren von Web-Apps
 
@@ -46,7 +46,7 @@ Die Microsoft Power-Plattform vereint vier robuste Microsoft-Technologien, wie P
 
 ### <a name="power-apps"></a>Power Apps
 
-Mit Power Apps können Sie Geschäftsanwendungen erstellen, die mit Ihren Geschäftsdaten verbunden sind und auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind. Power Apps ermöglichen eine breite Palette von Anwendungsszenarien, um geschäftliche Herausforderungen durch Canvas-Anwendungen zu lösen. Nachdem Sie die Anwendung erstellt haben, können Sie sie aus dem Power Apps Maker Portal exportieren und in Microsoft Teams einbetten.
+Mit Power Apps können Sie Geschäftsanwendungen erstellen, die mit Ihren Geschäftsdaten verbunden sind und auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind. Power Apps ermöglicht eine breite Palette von Anwendungsszenarien, um geschäftliche Herausforderungen durch Canvas-Anwendungen zu lösen. Nachdem Sie die Anwendung erstellt haben, können Sie sie aus dem Power Apps Maker Portal exportieren und in Microsoft Teams einbetten.
 
 ### <a name="power-virtual-agents"></a>Power Virtual Agents
 
@@ -62,7 +62,7 @@ Sie können App-Vorlagen verwenden, um maßgeschneiderte Apps zu erstellen, die 
 
 ## <a name="install-moodle-lms"></a>Installieren von Moodle LMS
 
-Moodle ist ein beliebtes Open-Source-Lernmanagementsystem (LMS). Sie ist jetzt in Microsoft Teams integriert. Mit dieser Integration können Pädagogen und Lehrer in Moodle-Kursen zusammenarbeiten, Fragen zu Noten und Aufgaben stellen und mit Benachrichtigungen direkt in Teams auf dem Laufenden bleiben.
+Moodle ist ein beliebtes Open-Source-Lernmanagementsystem (LMS). Es ist jetzt in Microsoft Teams integriert. Mit dieser Integration können Pädagogen und Lehrer in Moodle-Kursen zusammenarbeiten, Fragen zu Noten und Aufgaben stellen und mit Benachrichtigungen direkt in Teams auf dem Laufenden bleiben.
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Erstellen einer Schaltfläche zum Teilen in Teams für Ihre Website
 

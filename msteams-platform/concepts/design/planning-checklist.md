@@ -5,12 +5,12 @@ description: 'Fragen, die Sie bei der Planung Ihrer App berücksichtigen sollten
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 4620d1bc17332e40f79c429769090f1ce7b2210f
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: b0d9450f3d729131b28dbf744843eeeda1b91c22
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104308"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756751"
 ---
 # <a name="teams-app-planning-checklist"></a>Prüfliste für die Teams App-Planung
 
@@ -78,7 +78,7 @@ Hier ist eine Checkliste mit Fragen, die Sie bei der Planung Ihrer App berücksi
 | # | Erwägen Sie... |
 | --- | --- |
 | 1 | Was geschieht, wenn ein Nutzer Ihre Registerkarte zum ersten Mal in einem Kanal konfiguriert? |
-| 2 | Wenn Sie Karten mit einer Nachrichtenerweiterung austauschen, ist es dann sinnvoll, einen kleinen Link zu einer Seite mit weiteren Informationen hinzuzufügen, um den Nutzern zu zeigen, was Ihre App sonst noch kann? |
+| 2 | Wenn Sie Karten mit einer Nachrichtenerweiterung freigeben, ist es dann sinnvoll, einen kleinen Link zu einer Seite mit weiteren Informationen hinzuzufügen, um den Benutzern zu zeigen, was Ihre App sonst noch kann? |
 | 3 | Erwarten Sie, dass die meisten Personen bereits einen gewissen Kontext haben, für den Ihre App gedacht ist, oder dass sie Ihre Dienste bereits in einem anderen Kontext genutzt haben? |
 | 4 | Kommen sie ohne Vorkenntnisse zu Ihrer App? |
 
@@ -90,7 +90,7 @@ Hier ist eine Checkliste mit Fragen, die Sie bei der Planung Ihrer App berücksi
 | # | Erwägen Sie... |
 | --- | --- |
 | 1 | Gibt es 1:1-Interaktionen mit der App, die aus Datenschutz- oder anderen Gründen erforderlich sind? Beispielsweise das Überprüfen des Restguthabens oder anderer privater Informationen. |
-| 2 | Gibt es eine Zusammenarbeit zwischen Nutzern, die möglicherweise keine gemeinsamen Teams haben? Beispiel: Suchen nach bevorstehenden organisationsweiten Ereignissen in einem Unternehmen. |
+| 2 | Werden sie die Zusammenarbeit zwischen Benutzern fördern, die vielleicht keine gemeinsamen Teams haben? Beispiel: Suchen nach bevorstehenden organisationsweiten Ereignissen in einem Unternehmen. |
 | 3 | Gibt es personalisierte Benachrichtigungen oder Nachrichten, die während der gesamten Teams-App an einen Benutzer gesendet werden müssen? |
 
 </details>
@@ -101,7 +101,7 @@ Hier ist eine Checkliste mit Fragen, die Sie bei der Planung Ihrer App berücksi
 | # | Erwägen Sie... |
 | --- | --- |
 | 1 | Sind die informationen, die von der App auf der Registerkarte oder über einen Bot angezeigt werden, für die meisten Mitglieder eines Teams relevant und nützlich? Beispiel: Scrum-App. |
-| 2 | Kann sich der Appkontext ändern, je nachdem, in welchem Team diese hinzugefügt wird? Aufgaben der Planer unterscheiden sich beispielsweise in verschiedenen Teams. |
+| 2 | Könnte sich der Kontext der App ändern, je nachdem, zu welchem Team sie hinzugefügt wird? Aufgaben der Planer unterscheiden sich beispielsweise in verschiedenen Teams. |
 | 3 | Ist es möglich, dass alle Mitglieder einer Persona, die zusammenarbeiten müssen, Teil eines einzelnen Teams sind? Beispielsweise Mitarbeiter, die an einem Ticket arbeiten. |
 
 </details>

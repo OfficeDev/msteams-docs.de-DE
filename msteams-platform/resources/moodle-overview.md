@@ -5,12 +5,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
 keywords: Deep-Links zu Moodle LMS mConnect
-ms.openlocfilehash: 3a999846b9df72298e35eed9edaf9bd96df30edf
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: dc5674ef092c9462786871aa8bb8618a84b141b8
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453123"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757346"
 ---
 # <a name="moodle-learning-management-system"></a>Moodle-Lernverwaltungssystem
 
@@ -36,15 +36,15 @@ Moodle LMS unterstützt Benutzer beim Zugriff auf die folgenden Apps:
 
 * **Microsoft 365 Plug-Ins**: Die Microsoft 365-Plug-Ins sind darauf ausgelegt, die Integration zwischen Moodle-Websites und Microsoft Teams sicherzustellen. Diese Plug-Ins können unabhängig oder in Zusammenarbeit verwendet werden, um unterschiedliche Benutzeranforderungen zu erfüllen. Weitere Informationen finden Sie unter [Microsoft 365 Plug-Ins](m365-plugins/m365-plugins-overview.md).
 
-* **Partner-Apps für Moodle**: Alle Partner-Apps für Moodle und Teams sind im Microsoft Store verfügbar. Weitere Informationen finden Sie unter [Partner-Apps für Moodle](partner-apps-for-moodle.md).
+* **Partner-Apps für Moodle**: Alle Partner-Apps für Moodle und Teams sind im Microsoft Store verfügbar. Weitere Informationen finden Sie unter [Partneranwendungen für Moodle](partner-apps-for-moodle.md).
 
 ## <a name="user-requirement-scenarios"></a>Szenarien mit Benutzeranforderungen
 
 In den folgenden Szenarien wird das Potential von beschleunigtem Lernen beschrieben, das die Clouddienste von Microsoft mit Moodle-Kursen kombiniert:
 
-* **Vereinfachen von hybriden Remotebesprechungen**: Teams-Besprechungen und Erweiterbarkeitsdienste ermöglichen Lehrkräften die persönliche und remote Präsentation mit Kursteilnehmern. Für Schüler/Studenten ist es erforderlich, dass sie Zugriff auf freigegebene Ansichten, Apps und Umfragen für Remotebesprechungen haben. Die Nachverfolgungsaufgaben bieten mehrsprachige Transkription und Audio- oder Videokursaufzeichnungen. Teams und Moodle arbeiten zusammen, um Arbeitspläne, Aktivitäten und Aufgaben zu teilen.
+* **Vereinfachen von hybriden Remote-Besprechungen**: Teams-Besprechungen und Erweiterungsdienste ermöglichen es Lehrkräften, persönlich und aus der Ferne mit Studenten zu interagieren. Für Schüler/Studenten ist es erforderlich, dass sie Zugriff auf freigegebene Ansichten, Apps und Umfragen für Remotebesprechungen haben. Die Nachverfolgungsaufgaben bieten mehrsprachige Transkription und Audio- oder Videokursaufzeichnungen. Teams und Moodle arbeiten zusammen, um Arbeitspläne, Aktivitäten und Aufgaben zu teilen.
 
-* **Personalisieren von Besprechungspanels**: Erstellen Sie mithilfe von Teams-Graph-API-Endpunkten einzigartige Lernerfahrungen für die Zusammenarbeit. Bei anderen zusätzlichen Plänen oder Projekten können Benutzer alle neuen Mitarbeiter befragen und die Ergebnisse mithilfe benutzerdefinierter Umfragen kategorisieren. Es gibt die Möglichkeit, Quizze direkt in Teams zu teilen, während Updates asynchron auf die Moodle-Website übertragen werden.
+* **Personalisieren von Besprechungspanels**: Erstellen Sie mithilfe von Teams-Graph-API-Endpunkten einzigartige Lernerfahrungen für die Zusammenarbeit. Bei anderen zusätzlichen Plänen oder Projekten können Benutzer alle neuen Mitarbeiter befragen und die Ergebnisse mithilfe benutzerdefinierter Umfragen kategorisieren. Es besteht die Möglichkeit, Quizze direkt in Teams zu teilen und gleichzeitig Aktualisierungen asynchron auf die Moodle-Website zu übertragen.
 
 * **Automatisieren der Einrichtung**: Um automatisierte Einrichtungen für Bildungseinrichtungen einzurichten, wenn ein neuer Kursteilnehmer beitritt, kann der Benutzer einen Moodle-Kurs hinzufügen, eine adaptive Karte mit relevanten Links an den Kursteilnehmer senden und wichtige Lesekursmaterialien vorschlagen. Der benutzerdefinierte Teams-Connector für Moodle hilft jedes Mal, wenn eine Kursbesprechung geplant ist, ein Moodle-Kalenderereignis zu erstellen.
 
