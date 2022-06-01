@@ -1,17 +1,17 @@
 ---
 title: Teams-Lösung zum Erstellen von Apps
 author: heath-hamilton
-description: Übersicht über die Teams-Lösung zum Erstellen von Apps
+description: Erfahren Sie mehr über die Teams-Lösung zum Erstellen von Apps, und bieten Sie Unterstützung von der Planung Ihrer App bis zur Verteilung.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: d93e27c7180938a7329eec94ff54a9988b851430
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 2df7bf928109c1616bebf99d895c953c4a420e9a
+ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501963"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65795133"
 ---
 # <a name="the-teams-solution"></a>Die Teams-Lösung
 

@@ -1,17 +1,17 @@
 ---
 title: Erkunden von Teams als Plattform zum Erstellen von Apps
 author: heath-hamilton
-description: Überblick über die Erkundung der Funktionen der Microsoft Teams-Plattform.
+description: Hier finden Sie eine Übersicht über die Microsoft Teams-Plattformfeatures für Ihre App auf Desktop- und mobilen Geräten.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: df8a19d907c2b9ca420ed49d143ff7b145e3f7ca
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 769f0217d64295768159ccb77ae1726e83648468
+ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104427"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65795147"
 ---
 # <a name="explore-teams-platform-features"></a>Erkunden der Features der Teams-Plattform
 
