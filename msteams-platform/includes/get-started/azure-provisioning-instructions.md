@@ -86,7 +86,7 @@ Sobald die Bereitstellungs- und Bereitstellungsschritte abgeschlossen sind:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot der installierten App." border="false":::
 
-   Das Toolkit zeigt eine Meldung an, die angibt, dass die App Teams hinzugefügt wird.
+   Das Toolkit zeigt eine Meldung an, die angibt, dass die App zu Teams hinzugefügt wurde.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Screenshot zeigt die Meldung, dass Sie die App jetzt oder später testen können" border="true":::
  
@@ -99,7 +99,7 @@ Sobald die Bereitstellungs- und Bereitstellungsschritte abgeschlossen sind:
 
    Die Nachrichtenerweiterungs-App wird in einer Chat-Bot-App geladen.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Screenshot, der zeigt, dass die App in Teams quergeladen wurde" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Screenshot der quergeladenen App in Teams" border="false":::
 
 
 

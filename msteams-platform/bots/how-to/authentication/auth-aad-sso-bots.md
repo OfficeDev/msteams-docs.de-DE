@@ -2,14 +2,14 @@
 title: Unterstützung für einmaliges Anmelden für Bots
 description: Beschreibt, wie ein Benutzertoken abgerufen wird. Derzeit kann ein Bot-Entwickler eine Anmeldekarte oder den Azure-Bot-Dienst mit OAuth-Kartenunterstützung verwenden.
 keywords: Token, Benutzertoken, SSO-Unterstützung für Bots, Berechtigung, Microsoft Graph, Azure AD
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 49fac724cea263dac8e1540b0b40f5e3b8d267d8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e271296eafc1a4e74865c00cf467c5cb2901146e
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111759"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887597"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Single-Sign-On (SSO)-Unterstützung für Bots
 
@@ -56,7 +56,7 @@ Die folgenden Schritte führen Sie zur Entwicklung des SSO Teams-Bots:
 
 ### <a name="register-your-app-through-the-azure-ad-portal"></a>Registrieren Sie Ihre App über das Azure AD-Portal
 
-Die Schritte zum Registrieren Ihrer App über das Azure AD-Portal ähneln denen auf der Registerkarte [SSO-Ablauf](../../../tabs/how-to/authentication/auth-aad-sso.md). Die folgenden Schritte führen Sie zur Registrierung Ihrer App:
+Die Schritte zum Registrieren Ihrer App über das Azure AD-Portal ähneln denen auf der Registerkarte [SSO-Ablauf](../../../tabs/how-to/authentication/tab-sso-overview.md). Die folgenden Schritte führen Sie zur Registrierung Ihrer App:
 
 1. Registrieren Sie eine neue Anwendung im Portal [Azure Active Directory – App-Registrierungen](https://go.microsoft.com/fwlink/?linkid=2083908).
 
@@ -96,7 +96,7 @@ Die Schritte zum Registrieren Ihrer App über das Azure AD-Portal ähneln denen 
    >
    > Sie müssen sich der folgenden wichtigen Einschränkungen bewusst sein:
    >
-   > * Nur Microsoft Graph-API-Berechtigungen auf Benutzerebene wie E-Mail, Profil, Offlinezugriff und OpenId werden unterstützt. Wenn Sie Zugriff auf andere Microsoft Graph-Bereiche wie `User.Read` oder `Mail.Read` benötigen, finden Sie weitere Informationen unter [Zugriffstoken mit Graph-Berechtigungen abrufen](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions).
+   > * Nur Microsoft Graph-API-Berechtigungen auf Benutzerebene wie E-Mail, Profil, Offlinezugriff und OpenId werden unterstützt. Wenn Sie Zugriff auf andere Microsoft Graph-Bereiche benötigen, z `User.Read` . B. oder `Mail.Read`, lesen Sie ["Registerkarten-App erweitern" mit Microsoft Graph-Berechtigungen und -Bereich](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
    > * Der Domänenname Ihrer Anwendung muss mit dem Domänennamen übereinstimmen, den Sie für Ihre Azure AD-Anwendung registriert haben.
    > * Mehrere Domänen pro App werden derzeit nicht unterstützt.
    > * Anwendungen, die die Domäne `azurewebsites.net` verwenden, werden nicht unterstützt, da dies häufig vorkommt und ein Sicherheitsrisiko darstellen kann.

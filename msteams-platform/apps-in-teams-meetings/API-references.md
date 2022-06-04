@@ -1,16 +1,16 @@
 ---
 title: API-Referenzen für Besprechungs-Apps
 author: surbhigupta
-description: Identifizieren Sie die API-Verweise auf Besprechungs-Apps anhand von Beispielen und Codebeispielen, Teams Apps-Besprechungs-Benutzerteilnehmer-Rollen-API- Benutzerkontextbenachrichtigungs-Signalabfrage.
+description: Identifizieren Sie die Besprechungs-Apps-API-Verweise mit Beispielen und Codebeispielen, Teams-Apps Besprechungen Benutzerteilnehmer-Rollen-API Benutzerkontext-Benachrichtigungs-Signalabfrage.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: cb28e893a9c0460290294893800f77c90829edda
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 075801958ccffb9613840995bdda86b6df37d2a3
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756583"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887576"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
@@ -53,7 +53,7 @@ Die `GetParticipant` API muss über eine Bot-Registrierung und -ID verfügen, um
 ### <a name="query-parameters"></a>Abfrageparameter
 
 > [!TIP]
-> Rufen Sie Teilnehmer-IDs und Mandanten-IDs [auf der Registerkarte SSO-Authentifizierung ab](../tabs/how-to/authentication/auth-aad-sso.md).
+> Rufen Sie Teilnehmer-IDs und Mandanten-IDs [auf der Registerkarte SSO-Authentifizierung ab](../tabs/how-to/authentication/tab-sso-overview.md).
 
 Die `Meeting` API muss `meetingId`, `participantId` und als URL-Parameter `tenantId` haben. Die Parameter sind als Teil des Teams-Client-SDK und der bot-Aktivität verfügbar.
 
@@ -135,7 +135,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | Eigenschaftenname | Zweck |
 |---|---|
 | **user.id** | ID des Benutzers. |
-| **user.aadObjectId** | Azure Active Directory Objekt-ID des Benutzers. |
+| **user.aadObjectId** | Azure Active Directory-Objekt-ID des Benutzers. |
 | **user.name** | Der Name des Benutzers. |
 | **user.givenName** | Vorname des Benutzers.|
 | **user.surname** | Nachname des Benutzers. |
@@ -406,7 +406,7 @@ Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
 | Eigenschaftenname | Zweck |
 |---|---|
 | **details.id** | Die ID der Besprechung, codiert als BASE64-Zeichenfolge. |
-| **details.msGraphResourceId** | Die MsGraphResourceId, die speziell für MS-Graph-API-Aufrufe verwendet wird. |
+| **details.msGraphResourceId** | Die MsGraphResourceId, die speziell für MS Graph-API-Aufrufe verwendet wird. |
 | **details.scheduledStartTime** | Die geplante Startzeit der Besprechung in UTC. |
 | **details.scheduledEndTime** | Die geplante Endzeit der Besprechung in UTC. |
 | **details.joinUrl** | Die URL, die für die Teilnahme an der Besprechung verwendet wird. |
@@ -416,8 +416,8 @@ Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
 | **conversation.conversationType** | Der Unterhaltungstyp. |
 | **conversation.id** | Die Besprechungschat-ID. |
 | **organizer.id** | Die Benutzer-ID des Organisators. |
-| **organizer.aadObjectId** | Die Azure Active Directory Objekt-ID des Organisators. |
-| **organizer.tenantId** | Die Azure Active Directory Mandanten-ID des Organisators. |
+| **organizer.aadObjectId** | Die Azure Active Directory-Objekt-ID des Organisators. |
+| **organizer.tenantId** | Die Azure Active Directory-Mandanten-ID des Organisators. |
 
 Im Falle eines Besprechungsserientyps:
 
@@ -487,7 +487,7 @@ Die `shareAppContentToStage` API ermöglicht es Ihnen, bestimmte Teile Ihrer App
 
 ### <a name="prerequisite"></a>Voraussetzungen
 
-*  Um die `shareAppContentToStage` API zu verwenden, müssen Sie die RSC-Berechtigungen erhalten. Konfigurieren Sie im App-Manifest die `authorization` Eigenschaft `name` und `type` das und im `resourceSpecific` Feld. Beispiel:
+* Um die `shareAppContentToStage` API zu verwenden, müssen Sie die RSC-Berechtigungen erhalten. Konfigurieren Sie im App-Manifest die `authorization` Eigenschaft `name` und `type` das und im `resourceSpecific` Feld. Beispiel:
 
     ```json
     "authorization": {
@@ -501,7 +501,8 @@ Die `shareAppContentToStage` API ermöglicht es Ihnen, bestimmte Teile Ihrer App
     }
     }
     ```
-*  `appContentUrl` muss vom `validDomains` Array innerhalb von manifest.json zugelassen werden, sonst würde die API 501 zurückgeben.
+
+* `appContentUrl` muss vom `validDomains` Array innerhalb von manifest.json zugelassen werden, sonst würde die API 501 zurückgeben.
 
 ### <a name="query-parameter"></a>Abfrageparameter
 
@@ -818,7 +819,7 @@ Der folgende Code stellt ein Beispiel für die Nutzlast eines Besprechungsende-E
 | **from.id** | ID des Benutzers, der die Anforderung gesendet hat. |
 | **from.aadObjectId** | Azure Active Directory-Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 | **conversation.isGroup** | Boolescher Wert, der angibt, ob die Unterhaltung mehr als zwei Teilnehmer hat. |
-| **conversation.tenantId** | Azure Active Directory Mandanten-ID der Unterhaltung oder Besprechung. |
+| **conversation.tenantId** | Azure Active Directory-Mandanten-ID der Unterhaltung oder Besprechung. |
 | **conversation.id** | Die Besprechungschat-ID. |
 | **recipient.id** | DIE ID des Benutzers, der die Anforderung empfängt. |
 | **recipient.name** | Der Name des Benutzers, der die Anforderung empfängt. |

@@ -6,12 +6,12 @@ keywords: Teams Registerkarten Gruppenkanal konfigurierbar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5352481d30071edb96dae8bf3ec04f15a6e9c8d7
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 2ee2a6017ed96d90d205b0a764f5f0fe8b512207
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672943"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887632"
 ---
 # <a name="create-a-configuration-page"></a>Erstellen einer Konfigurationsseite
 
@@ -245,7 +245,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>Verwenden Sie die `getContext()` Funktion, um den Kontext abzurufen
 
-Die `app.getContext()` Funktion gibt eine Zusage zurück, die mit dem [Kontextschnittstellenobjekt](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) aufgelöst wird.
+Die `app.getContext()` Funktion gibt eine Zusage zurück, die mit dem [Kontextschnittstellenobjekt](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) aufgelöst wird.
 
 Der folgende Code ist ein Beispiel für das Hinzufügen dieser Funktion zur Konfigurationsseite, um Kontextwerte abzurufen:
 
@@ -294,7 +294,7 @@ Authentifizieren Sie sich, bevor Sie einem Benutzer erlauben, Ihre App zu konfig
 
 Legen Sie die Eigenschaft Ihres Manifests `canUpdateConfiguration` auf `true`. Es ermöglicht den Benutzern, eine Kanal- oder Gruppenregisterkarte zu ändern, neu zu konfigurieren oder umzubenennen. Informieren Sie den Benutzer über die Auswirkungen auf inhalte, wenn eine Registerkarte entfernt wird. Fügen Sie dazu eine Seite mit Entfernungsoptionen in die App ein, und legen Sie einen Wert für die `removeUrl` Eigenschaft in der `setConfig()` (früheren `setSettings()`) Konfiguration fest. Der Benutzer kann persönliche Registerkarten deinstallieren, aber nicht ändern. Weitere Informationen finden [Sie unter Erstellen einer Entfernungsseite für Ihren Tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-`setConfig()` Microsoft Teams (früher`setSettings()`) Konfiguration für die Entfernungsseite:
+Konfiguration von Microsoft Teams `setConfig()` (früher `setSettings()`) für die Entfernungsseite:
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 

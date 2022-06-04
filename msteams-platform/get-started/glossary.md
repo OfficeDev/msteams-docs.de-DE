@@ -3,12 +3,12 @@ title: Microsoft Teams-Entwicklerdokumentation – Glossar
 description: Informationen zu den in der Microsoft Teams-Entwicklerdokumentation verwendeten Begriffen
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 0762f1f8315d1254e3adb0875655735dcdc0f130
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 333f8e2efe0952d96907f6db2c76ebb688e3777d
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795140"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887625"
 ---
 # <a name="glossary"></a>Glossar
 
@@ -31,7 +31,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | [Azure-Ressource](../toolkit/provision.md) | Ein über Azure verfügbarer Dienst, den Ihre Teams-App für die Azure-Bereitstellung verwenden kann. Dabei kann es sich um Speicherkonten, Web-Apps, Datenbanken und vieles mehr handeln. |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Der cloudbasierte Identitäts- und Zugriffsverwaltungsdienst von Microsoft. Er hilft authentifizierten Benutzern beim Zugriff auf interne und externe Azure-Ressourcen. |
 | [Authentifizierung](../concepts/authentication/authentication.md) | Ein Prozess zur Validierung des Benutzerzugriffs für die Verwendung Ihrer App. Dies kann mithilfe von Microsoft Graph-APIs oder webbasierter Authentifizierung erfolgen. <br> **Weitere Informationen**: [Identitätsanbieter](#i); [SSO](#s) |
-| [Authentifizierungsfluss](../concepts/authentication/authentication.md#web-based-authentication-flow) | In Teams gibt es zwei Authentifizierungsflüsse, um einen Benutzer für die Verwendung einer App zu authentifizieren: webbasierte Authentifizierung und OAuthPrompt-Fluss. |
+| [Authentifizierungsfluss](../concepts/authentication/authentication.md) | In Teams gibt es zwei Authentifizierungsflüsse, um einen Benutzer für die Verwendung einer App zu authentifizieren: webbasierte Authentifizierung und OAuthPrompt-Fluss. |
 
 ## <a name="b"></a>B
 

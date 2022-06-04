@@ -1,65 +1,90 @@
 ---
 title: Authentifizieren von App-Benutzern
-description: Beschreibt die Authentifizierung in Teams und deren Verwendung in den Apps
+description: Beschreibt die Authentifizierung in Teams und deren Verwendung in den Apps.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams-Authentifizierung OAuth SSO Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 53f258769140a2b40bb59a1232250f74ec693bee
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: db1a16959755668ec9aa298ed355ef657503ca03
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757157"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887758"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Authentifizieren von Benutzern in Microsoft Teams
 
-> [!Note]
-> Die webbasierte Authentifizierung auf mobilen Clients erfordert Version 1.4.1 oder höher des Teams JavaScript-Client-SDK.
+Bei der Authentifizierung geht es darum, App-Benutzer zu überprüfen und die App- und App-Benutzer vor ungerechtfertigten Zugriffen zu schützen. Sie können eine Authentifizierungsmethode verwenden, die für Ihre App geeignet ist, um App-Benutzer zu überprüfen, die die Teams-App verwenden möchten.
 
-Um auf durch Azure AD geschützte Benutzerinformationen zuzugreifen und auf Daten von Diensten wie Facebook und Twitter zuzugreifen, stellt die App eine vertrauenswürdige Verbindung mit diesen Anbietern her. Wenn die App Microsoft Graph-APIs im Benutzerbereich verwendet, authentifizieren Sie den Benutzer, um die entsprechenden Authentifizierungstoken abzurufen.
+Wählen Sie aus, ob Sie die Authentifizierung für Ihre App auf eine der beiden folgenden Arten hinzufügen möchten:
 
-In Teams gibt es zwei unterschiedliche Authentifizierungsflüsse für die App. Führen Sie einen herkömmlichen webbasierten Authentifizierungsfluss in einer [Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md) aus, die in eine Registerkarte, eine Konfigurationsseite oder ein Aufgabenmodul eingebettet ist. Wenn die App einen Unterhaltungs-Bot enthält, verwenden Sie den OAuthPrompt-Flow und optional den Tokendienst von Azure Bot Framework, um einen Benutzer als Teil einer Unterhaltung zu authentifizieren.
+- **Aktivieren des einmaligen Anmeldens (Single Sign-On, SSO) in einer Teams-App**: SSO in Teams ist eine Authentifizierungsmethode, die die Teams-Identität eines App-Benutzers verwendet, um ihnen Zugriff auf Ihre App zu gewähren. Ein Benutzer, der sich bei Teams angemeldet hat, muss sich in der Teams-Umgebung nicht erneut bei Ihrer App anmelden. Wenn nur eine Zustimmung des App-Benutzers erforderlich ist, ruft die Teams-App Zugriffsdetails für sie aus Azure Active Directory (AD) ab. Nachdem der App-Benutzer seine Zustimmung erteilt hat, kann er auch von anderen Geräten aus auf die App zugreifen, ohne erneut überprüft werden zu müssen.
 
-## <a name="web-based-authentication-flow"></a>Webbasierter Authentifizierungsflow
+- **Aktivieren Sie die Authentifizierung mithilfe des OAuth-Anbieters eines Drittanbieters**: Sie können einen OAuth-Identitätsanbieter (IdP) eines Drittanbieters verwenden, um Ihre App-Benutzer zu authentifizieren. Der App-Benutzer ist beim Identitätsanbieter registriert, der eine Vertrauensstellung mit Ihrer App hat. Wenn der Benutzer versucht, sich anzumelden, überprüft der Identitätsanbieter den App-Benutzer und gewährt dem Benutzer Zugriff auf Ihre App. Azure AD ist ein solcher OAuth-Anbieter von Drittanbietern. Sie können andere Anbieter wie Google, Facebook, GitHub oder einen anderen Anbieter verwenden.
 
-Verwenden Sie den webbasierten [Authentifizierungsfluss für Registerkarten](~/tabs/what-are-tabs.md) , und wählen Sie ihn für [Unterhaltungs-Bots](~/bots/what-are-bots.md) oder [Nachrichtenerweiterungen](~/messaging-extensions/what-are-messaging-extensions.md) aus. Verwenden Sie das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client) in einer Webinhaltsseite, um die Authentifizierung zu aktivieren. Nachdem Sie die Authentifizierung aktiviert haben, betten Sie die Inhaltsseite in eine Registerkarte, eine Konfigurationsseite oder ein Aufgabenmodul ein. Weitere Informationen zum webbasierten Authentifizierungsfluss finden Sie unter:
+## <a name="select-authentication-method"></a>Authentifizierungsmethode auswählen
 
-* [Das Hinzufügen der Authentifizierung zum Teams Bot](~/bots/how-to/authentication/add-authentication.md) beschreibt, wie Sie den webbasierten Authentifizierungsfluss mit einem unterhaltungsbasierten Bot verwenden.
-* [Der Authentifizierungsfluss in Registerkarten](~/tabs/how-to/authentication/auth-flow-tab.md) beschreibt, wie die Registerkartenauthentifizierung in Teams funktioniert. Dies zeigt einen typischen webbasierten Authentifizierungsfluss, der für Registerkarten verwendet wird.
-* [Die Azure AD-Authentifizierung in Registerkarten](~/tabs/how-to/authentication/auth-tab-AAD.md) beschreibt, wie Sie eine Verbindung mit Azure AD über eine Registerkarte in der App in Teams herstellen.
-* [Die automatische Authentifizierung In Azure AD](~/tabs/how-to/authentication/auth-silent-AAD.md) wird beschrieben, wie Sie Anmelde- oder Zustimmungsaufforderungen in der App mitHilfe von Azure AD reduzieren.
-* [.Net oder C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) oder [JavaScript oder Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) stellt Beispiele für die webbasierte Authentifizierung bereit.
+Aktivieren Sie die Authentifizierung mit SSO oder OAuth-IdPs von Drittanbietern in Ihrer Registerkarten-App, Bot-App und Messaging-Erweiterungs-App. Wählen Sie eine der beiden Methoden zum Hinzufügen der Authentifizierung in Ihrer App aus:
 
-## <a name="the-oauthprompt-flow-for-conversational-bots"></a>Der OAuthPrompt-Fluss für Unterhaltungsbots
+:::row:::
+    :::column span="1":::
+        SSO
+    :::column-end:::
+    :::column span="1":::
+        &nbsp;
+    :::column-end:::
+    :::column span="1":::
+        OAuth
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column span="1":::
+        :::image type="content" source="../../assets/images/authentication/tab-sso-icon.png" alt-text="SSO für Registerkarten-App" link="../../tabs/how-to/authentication/tab-sso-overview.md" border="false":::
+    :::column-end:::
+    :::column span="1":::
+        <br>
 
-Der OAuthPrompt-Flow von Azure Bot Framework erleichtert die Authentifizierung für Apps, die Unterhaltungs-Bots verwenden. Verwenden Sie den Tokendienst von Azure Bot Framework, um die Tokenzwischenspeicherung zu unterstützen.
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Registerkarten-App**  
+        
+    :::column-end:::
+    :::column span="1":::
+        :::image type="content" source="../../assets/images/authentication/tab-app-idp.png" alt-text="Authentifizierung mit OAuth-Anbieter eines Drittanbieters für Registerkarten-App." link="../../tabs/how-to/authentication/auth-tab-aad.md" border="false":::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column span="1":::
+        :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO für Bot-App" link="../../bots/how-to/authentication/auth-aad-sso-bots.md" border="false":::
+    :::column-end:::
+    :::column span="1":::
+        <br>
 
-Weitere Informationen zur Verwendung von OAuthPrompt finden Sie unter:
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Bot-App**
+        
+    :::column-end:::
+    :::column span="1":::
+        :::image type="content" source="../../assets/images/authentication/bot-app-idp.png" alt-text="Authentifizierung beim OAuth-Anbieter eines Drittanbieters für Bot-App." link="../../bots/how-to/authentication/add-authentication.md" border="false":::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column span="1":::
+        :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO für Messaging-Erweiterungs-App" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md" border="false":::
+    :::column-end:::
+    :::column span="1":::
+        <br>
 
-* [Die Übersicht über den Botauthentifizierungsfluss](~/bots/how-to/authentication/auth-flow-bot.md) beschreibt, wie die Authentifizierung innerhalb eines Bots in der App in Teams funktioniert. Dies zeigt einen nicht webbasierten Authentifizierungsfluss, der für Bots in Teams Web-, Desktop-App- und mobilen Apps verwendet wird.
-* Die [Botauthentifizierung](~/bots/how-to/authentication/add-authentication.md) beschreibt, wie die OAuth-Authentifizierung dem Teams Bot hinzugefügt wird.
+        &nbsp;&nbsp; &nbsp; **Nachrichtenerweiterungs-App**
+        
+    :::column-end:::
+    :::column span="1":::
+        :::image type="content" source="../../assets/images/authentication/mex-app-idp.png" alt-text="Authentifizierung mit oAuth-IdPs von Drittanbietern für Messaging-Erweiterungs-App." link="../../messaging-extensions/how-to/add-authentication.md" border="false":::
+    :::column-end:::
+:::row-end:::
 
-## <a name="code-sample"></a>Codebeispiel
-
-bietet Beispiel für botauthentifizierung v3 SDK.
-
-| **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
-|---------------|------------|------------|-------------|---------------|
-| Bot-Authentifizierung | In diesem Beispiel wird gezeigt, wie Sie mit der Authentifizierung in einem Bot für Microsoft Teams beginnen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| Registerkarten-, Bot- und Nachrichtenerweiterungs-SSO (ME) | Dieses Beispiel zeigt SSO für Tab, Bot und ME - Suche, Aktion, Link entfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Nicht verfügbar |
-
-## <a name="configure-the-identity-provider"></a>Konfigurieren des Identitätsanbieters
-
-Konfigurieren Sie unabhängig vom Authentifizierungsfluss der App den Identitätsanbieter für die Kommunikation mit der Teams App. In den meisten Beispielen und Exemplaren geht es in erster Linie um die Verwendung von Azure AD als Identitätsanbieter. Die Konzepte gelten jedoch unabhängig vom Identitätsanbieter.
-
-Weitere Informationen finden Sie [unter Konfigurieren eines Identitätsanbieters](~/concepts/authentication/configure-identity-provider.md).
-
-## <a name="third-party-cookies-on-ios"></a>Cookies von Drittanbietern auf iOS
-
-Nach dem iOS 14-Update hat Apple standardmäßig den Zugriff auf [Cookies von Drittanbietern](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) für alle Apps blockiert. Daher können die Apps, die Cookies von Drittanbietern für die Authentifizierung in ihren Kanal- oder Chat-Registerkarten und persönlichen Apps verwenden, ihre Authentifizierungsworkflows auf Teams iOS Clients nicht abschließen. Um den Datenschutz- und Sicherheitsanforderungen zu entsprechen, müssen Sie zu einem tokenbasierten System wechseln oder Cookies von Erstanbietern für die Benutzerauthentifizierungsworkflows verwenden.
+> [!NOTE]
+> Die Seite "Automatische Authentifizierung" wird in das Modul "Ressourcen" verschoben. Weitere Informationen finden Sie [unter Automatische Authentifizierung](../../tabs/how-to/authentication/auth-silent-aad.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Microsoft Teams-Authentifizierungsablauf für Registerkarten](~/tabs/how-to/authentication/auth-flow-tab.md)
-* [Unterstützung für einmaliges Anmelden für Bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)
-* [Hinzufügen der Authentifizierung zu Ihrer Nachrichtenerweiterung](~/messaging-extensions/how-to/add-authentication.md)
+- [Aktivieren des einmaligen Anmeldens in einer Registerkarten-App](../../tabs/how-to/authentication/tab-sso-overview.md)
+- [Microsoft Teams-Authentifizierungsablauf für Registerkarten](~/tabs/how-to/authentication/auth-flow-tab.md)
+- [Unterstützung für einmaliges Anmelden für Bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)
+- [Hinzufügen der Authentifizierung zu Ihrer Nachrichtenerweiterung](~/messaging-extensions/how-to/add-authentication.md)

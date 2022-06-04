@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie einer Messaging-Erweiterung mithilfe von Code
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 996ae2fe8a45e5ebbb481865198b759c7ad221a3
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: dbc49707d3fe2777761f51c46b23efaf7df96491
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297008"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887611"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Hinzufügen der Authentifizierung zu Ihrer Nachrichtenerweiterung
 
@@ -81,7 +81,7 @@ Wie bei anderen eingebetteten Erfahrungen, die innerhalb von Microsoft Teams aus
 
 Wenn die Anmeldeanforderung abgeschlossen ist und zurück zu Ihrer Seite leitet, müssen die folgenden Schritte ausgeführt werden:
 
-1. Sie müssen einen Sicherheitscode generieren, eine Zufallszahl. Sie müssen diesen Code in Ihrem Dienst zwischenspeichern, zusammen mit den Anmeldeinformationen, die über den Anmeldefluss erhalten wurden, z. B. OAuth 2.0-Token.
+1. Generieren Sie einen Sicherheitscode, eine Zufallszahl. Sie müssen diesen Code in Ihrem Dienst mit den Anmeldeinformationen zwischenspeichern, die über den Anmeldeablauf abgerufen wurden, z. B. OAuth 2.0-Token.
 1. Rufen Sie `microsoftTeams.authentication.notifySuccess` auf, und übergeben Sie den Sicherheitscode.
 
 An diesem Punkt wird das Fenster geschlossen, und die Kontrolle wird an den Teams-Client übergeben. Der Client stellt nun die ursprüngliche Benutzerabfrage zusammen mit dem Sicherheitscode in der Eigenschaft `state` erneut aus. Ihr Code kann den Sicherheitscode verwenden, um die zuvor gespeicherten Anmeldeinformationen nachzuschlagen, um die Authentifizierungssequenz abzuschließen und dann die Benutzeranforderung abzuschließen.
