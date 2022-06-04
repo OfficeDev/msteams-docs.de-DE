@@ -4,12 +4,12 @@ description: Beschreibung des Manifestschemas für Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Manifestschema für Microsoft Teams
-ms.openlocfilehash: 5881d5745e12255aad270c227cdd9508a0023644
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: cbb0835ccc121b6a0e178c31a0a9df2e492fd605
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755881"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887835"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
@@ -459,7 +459,7 @@ Wird verwendet, wenn Ihre App-Lösung über Teamkanal-Registerkarten verfügt, d
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 Zeichen|✔|Die https://-URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die Bereiche `team` und `groupchat`. |
-|`canUpdateConfiguration`|Boolescher Wert|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: **true**.|
+|`canUpdateConfiguration`|Boolean|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: **true**.|
 |`context` |Array von Enumerationen|6 ||Die Gruppe von `contextItem`-Bereichen, in denen eine [Registerkarte unterstützt wird](../../tabs/how-to/access-teams-context.md). Standard: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Ein relativer Dateipfad zu einem Registerkarten-Vorschaubild zur Verwendung in SharePoint. Größe: 1024 x 768. |
 |`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint bereitgestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
@@ -497,8 +497,8 @@ Das Element ist ein Array (maximal ein Element &mdash; derzeit ist nur ein Bot p
 |---|---|---|---|---|
 |`botId`|string|64 Zeichen|✔|Die eindeutige Microsoft-App-ID für den Bot, wie bei Bot Framework registriert. Die ID kann mit der Gesamt-[App-ID](#id)übereinstimmen.|
 |`scopes`|Array von Enumerationen|3|✔|Gibt an, ob der Bot eine Umgebung im Kontext eines Kanals in einem `team` oder Gruppenchat (`groupchat`) bietet, oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`). Diese Optionen sind nicht exklusiv.|
-|`needsChannelSelector`|Boolescher Wert|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
-|`isNotificationOnly`|Boolescher Wert|||Gibt an, ob es sich bei einem Bot um einen unidirektionalen Bot mit nur Benachrichtigungsfunktion und nicht um einen dialogorientierten Bot handelt. Standard: **`false`**|
+|`needsChannelSelector`|Boolean|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
+|`isNotificationOnly`|Boolesch|||Gibt an, ob es sich bei einem Bot um einen unidirektionalen Bot mit nur Benachrichtigungsfunktion und nicht um einen dialogorientierten Bot handelt. Standard: **`false`**|
 |`supportsFiles`|Boolean|||Gibt an, ob der Bot die Möglichkeit unterstützt, Dateien im persönlichen Chat hoch-/herunterzuladen. Standard: **`false`**|
 |`supportsCalling`|Boolesch|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
 |`supportsVideo`|Boolean|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
@@ -630,7 +630,7 @@ Geben Sie Ihre Azure Active Directory-App-ID und Microsoft Graph-Informationen a
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`id`|string|36 Zeichen|✔|Azure AD-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
-|`resource`|string|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für Einmaliges Anmelden. </br> **HINWEIS:** Wenn Sie Einmaliges Anmelden nicht verwenden, geben Sie einen Dummyzeichenfolgenwert in dieses Feld in Ihr App-Manifest ein (z. B. https://notapplicable), um eine Fehlermeldung zu vermeiden. |
+|`resource`|string|2048 Zeichen|✔|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für Einmaliges Anmelden. </br> **HINWEIS:** Wenn Sie Einmaliges Anmelden nicht verwenden, geben Sie einen Dummyzeichenfolgenwert in dieses Feld in Ihr App-Manifest ein (z. B. <https://notapplicable>), um eine Fehlermeldung zu vermeiden. |
 
 ## <a name="graphconnector"></a>graphConnector
 
@@ -872,6 +872,85 @@ Delegierte Berechtigungen ermöglichen der App den Zugriff auf Daten im Namen de
     |**Name**|**Beschreibung**|
     |---|---|
     |`InAppPurchase.Allow.User`|Ermöglicht es der App, dem Benutzer Angebote auf dem Marktplatz zu zeigen und die Einkäufe des Benutzers innerhalb der App im Namen des angemeldeten Benutzers abzuschließen.|
+
+## <a name="create-a-manifest-file"></a>Erstellen einer Manifestdatei
+
+Wenn Ihre App nicht über eine Teams-App-Manifestdatei verfügt, müssen Sie diese erstellen.
+
+So erstellen Sie eine Teams-App-Manifestdatei:
+
+1. Verwenden Sie das [Beispielmanifestschema](#sample-full-manifest), um eine JSON-Datei zu erstellen.
+1. Speichern Sie diese im Stammverzeichnis Ihres Projektordners als `manifest.json`.
+
+<br>
+<details>
+<summary>Hier ist ein Beispiel für ein Manifestschema für eine Registerkarten-App mit aktiviertem SSO:</summary>
+<br>
+
+> [!NOTE]
+> Der hier gezeigte Inhalt des Manifestbeispiels gilt nur für eine Registerkarten-App. Es werden Beispielwerte für den URI der tertiären Domäne und den Paketnamen verwendet. Weitere Informationen finden Sie unter [Beispielmanifestschema](#sample-full-manifest).
+
+  ```json
+{ 
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json", 
+ "manifestVersion": "1.12", 
+ "version": "1.0.0", 
+ "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
+ "packageName": "com.contoso.teamsauthsso", 
+ "developer": { 
+ "name": "Microsoft", 
+ "websiteUrl": "https://www.microsoft.com", 
+ "privacyUrl": "https://www.microsoft.com/privacy", 
+ "termsOfUseUrl": "https://www.microsoft.com/termsofuse" 
+  }, 
+
+  "name": { 
+    "short": "Teams Auth SSO", 
+    "full": "Teams Auth SSO" 
+  }, 
+
+
+  "description": { 
+    "short": "Teams Auth SSO app", 
+    "full": "The Teams Auth SSO app" 
+  }, 
+
+  "icons": { 
+    "outline": "outline.png", 
+    "color": "color.png" 
+  }, 
+
+  "accentColor": "#60A18E", 
+  "staticTabs": [ 
+    { 
+     "entityId": "auth", 
+     "name": "Auth", 
+     "contentUrl": "https://https://subdomain.example.com/Home/Index", 
+     "scopes": [ "personal" ] 
+    } 
+  ], 
+
+  "configurableTabs": [ 
+    { 
+     "configurationUrl": "https://subdomain.example.com/Home/Configure", 
+     "canUpdateConfiguration": true, 
+     "scopes": [ 
+     "team" 
+      ] 
+    } 
+  ], 
+  "permissions": [ "identity", "messageTeamMembers" ], 
+  "validDomains": [ 
+   "{subdomain or ngrok url}" 
+  ], 
+  "webApplicationInfo": { 
+    "id": "{Azure AD AppId}", 
+    "resource": "api://subdomain.example.com/{Azure AD AppId}" 
+  }
+} 
+```
+
+</details>
 
 ## <a name="see-also"></a>Siehe auch
 

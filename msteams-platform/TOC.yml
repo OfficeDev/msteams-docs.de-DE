@@ -381,20 +381,30 @@
   items:
     - name: Übersicht
       href: concepts/authentication/authentication.md
-    - name: Identitätsanbieter konfigurieren
-      href: concepts/authentication/configure-identity-provider.md
     - name: Registerkarten
       items:
-        - name: Authentifizierungsablauf in Registerkarten
-          href: tabs/how-to/authentication/auth-flow-tab.md
-        - name: Verwenden von Azure AD-Authentifizierung
-          href: tabs/how-to/authentication/auth-tab-aad.md
-        - name: Verwenden der automatischen Authentifizierung
-          href: tabs/how-to/authentication/auth-silent-aad.md
-        - name: Verwenden von SSO-Authentifizierung (einmaliges Anmelden)
-          href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: Verwenden externer OAuth-Anbieter
-          href: tabs/how-to/authentication/auth-oauth-provider.md
+        - name: Aktivieren von SSO für die Registerkarten-App
+          items:
+            - name: Übersicht
+              href: tabs/how-to/authentication/tab-sso-overview.md
+            - name: Registrieren der Registerkarten-App in Azure AD
+              href: tabs/how-to/authentication/tab-sso-register-aad.md
+            - name: Hinzufügen von Code zum Aktivieren von SSO
+              href: tabs/how-to/authentication/tab-sso-code.md
+            - name: Aktualisieren des App-Manifests für SSO und Vorschau
+              href: tabs/how-to/authentication/tab-sso-manifest.md
+            - name: Erteilen von Berechtigungen und Bereichen für Microsoft Graph
+              href: tabs/how-to/authentication/tab-sso-graph-api.md
+            - name: Problembehandlung
+              href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+        - name: OAuth IdP-Authentifizierung von Drittanbietern verwenden
+          items:
+            - name: Übersicht
+              href: tabs/how-to/authentication/auth-flow-tab.md
+            - name: Konfigurieren der OAuth-IdP-Authentifizierung von Drittanbietern
+              href: tabs/how-to/authentication/auth-tab-aad.md
+            - name: Verwenden externer OAuth-Anbieter
+              href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: Bots
       items:
         - name: Authentifizierungsfluss in Bots
@@ -583,6 +593,8 @@
           href: concepts/build-and-test/apps-localization.md
         - name: Json-Schemareferenz lokalisieren
           href: resources/schema/localization-schema.md
+    - name: Verwenden der automatischen Authentifizierung
+      href: tabs/how-to/authentication/auth-silent-aad.md
     - name: SameSite-Cookieattribut
       href: resources/samesite-cookie-update.md
     - name: Mitwirken an der Teams-Dokumentation

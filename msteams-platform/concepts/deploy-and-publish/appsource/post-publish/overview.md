@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 844398ded497911f6c30cf732ab01d40b622f7ad
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: cea78b40bbfbe8b309f9e3fa8c05f62404717b33
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757017"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887807"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Unterhalt Ihrer veröffentlichte Microsoft Teams-App
 
@@ -39,7 +39,7 @@ Stellen Sie beim Veröffentlichen von Updates Folgendes sicher:
 
 ### <a name="app-updates-requiring-user-consent"></a>App-Updates, die eine Zustimmung des Benutzers erfordern
 
-Wenn ein Benutzer Ihre App installiert, muss er der App die Berechtigung erteilen, auf die Dienste und Informationen zuzugreifen, die die App für die Funktion benötigt. In den meisten Fällen müssen Benutzer dies einmal tun, und neue Versionen Ihrer App werden automatisch installiert.
+Wenn ein Benutzer Ihre App installiert, muss er der App die Berechtigung erteilen, auf die Dienste und Informationen zuzugreifen, die die App für die Funktion benötigt. In den meisten Fällen müssen Benutzer dies einmal tun, und eine neue Version Ihrer App wird automatisch installiert.
 Wenn Sie jedoch eine der folgenden Änderungen an Ihrer App vornehmen, müssen Ihre vorhandenen Benutzer eine andere Berechtigungsanforderung akzeptieren, um das Update zu installieren:
 
 * Sie fügen einen Bot hinzu bzw. entfernen einen.
