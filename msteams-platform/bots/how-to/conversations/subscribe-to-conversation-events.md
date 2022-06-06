@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: Ereignisse Bot Kanal Nachricht Reaktion Unterhaltung
-ms.openlocfilehash: d9722ece0edd835213b7a963368c81ab1121c436
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 9234b192788a1449d5da344b271f5028ce7fd110
+ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757570"
+ms.lasthandoff: 06/06/2022
+ms.locfileid: "65906278"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Unterhaltungsereignisse in Ihrem Teams-Bot
 
@@ -23,10 +23,11 @@ Wenn Sie Unterhaltungs-Bots für Microsoft Teams erstellen, können Sie mit Unte
 * Auslösen einer Willkommensnachricht, wenn ein neues Teammitglied hinzugefügt oder eins entfernt wird.
 * Auslösen einer Benachrichtigung, wenn ein Kanal erstellt, umbenannt oder gelöscht wird.
 * Auslösen einer Benachrichtigung, wenn eine Botnachricht von einem Benutzer mit „Gefällt mir“ markiert wird.
+* Identifizieren Sie den Standardkanal für Ihren Bot anhand von Benutzereingaben (Auswahl) während der Installation.
 
 ## <a name="conversation-update-events"></a>Aktualisierungsereignisse in Unterhaltungen
 
-Sie können Unterhaltungsaktualisierungsereignisse verwenden, um bessere Benachrichtigungen und effektivere Bot-Aktionen bereitzustellen.
+Sie können Unterhaltungsaktualisierungsereignisse verwenden, um bessere Benachrichtigungen und effektive Bot-Aktionen bereitzustellen.
 
 > [!IMPORTANT]
 >
@@ -50,8 +51,8 @@ In der folgenden Tabelle finden Sie eine Liste mit Teams-Unterhaltungsaktualisie
 | Kanal umbenannt     | channelRenamed    | OnTeamsChannelRenamedAsync | [Ein Kanal wurde umbenannt](#channel-renamed). | Team |
 | Kanal gelöscht     | ChannelDeleted    | OnTeamsChannelDeletedAsync | [Ein Kanal wurde gelöscht](#channel-deleted). | Team |
 | Kanal wiederhergestellt    | channelRestored    | OnTeamsChannelRestoredAsync | [Ein Kanal wurde wiederhergestellt](#channel-deleted). | Team |
-| Mitglieder hinzugefügt   | MembersAdded   | OnTeamsMembersAddedAsync   | [Ein Mitglied wurde hinzugefügt](#team-members-added). | Alle |
-| Mitglieder entfernt | MembersRemoved | OnTeamsMembersRemovedAsync | [Ein Mitglied wurde entfernt](#team-members-removed). | groupChat und Team |
+| Mitglieder hinzugefügt   | MembersAdded   | OnTeamsMembersAddedAsync   | [Ein Mitglied wurde hinzugefügt](#members-added). | Alle |
+| Mitglieder entfernt | MembersRemoved | OnTeamsMembersRemovedAsync | [Ein Mitglied wurde entfernt](#members-removed). | Alle |
 | Team umbenannt        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Ein Team wurde umbenannt](#team-renamed).       | Team |
 | Team gelöscht        | TeamDeleted       | OnTeamsTeamDeletedAsync    | [Ein Team wurde gelöscht](#team-deleted).       | Team |
 | Team archiviert        | teamArchived       | OnTeamsTeamArchivedAsync    | [Ein Team wurde archiviert](#team-archived).       | Team |
@@ -60,7 +61,7 @@ In der folgenden Tabelle finden Sie eine Liste mit Teams-Unterhaltungsaktualisie
 
 ### <a name="channel-created"></a>Kanal erstellt
 
-So wird immer das Ereignis „Kanal erstellt“ an Ihren Bot gesendet, wenn ein neuer Kanal in einem Team erstellt wird, in dem Ihr Bot installiert ist.
+Das `channelCreated` Ereignis wird an Ihren Bot gesendet, wenn ein neuer Kanal in einem Team erstellt wird, in dem Ihr Bot installiert ist.
 
 Der folgende Code zeigt ein Beispiel für ein Kanalereignis, das erstellt wurde:
 
@@ -149,7 +150,7 @@ async def on_teams_channel_created(
 
 ### <a name="channel-renamed"></a>Kanal umbenannt
 
-So wird beispielsweise immer das Ereignis „Kanal umbenannt“ an Ihren Bot gesendet, wenn ein Kanal in einem Team umbenannt wird, in dem Ihr Bot installiert ist.
+Das `channelRenamed` Ereignis wird an Ihren Bot gesendet, wenn ein Kanal in einem Team umbenannt wird, in dem Ihr Bot installiert ist.
 
 Der folgende Code zeigt ein Beispiel für ein Kanalereignis, das umbenannt wurde:
 
@@ -231,7 +232,7 @@ async def on_teams_channel_renamed(
 
 ### <a name="channel-deleted"></a>Kanal gelöscht
 
-So wird beispielsweise immer das Ereignis „Kanal gelöscht“ an Ihren Bot gesendet, wenn ein Kanal in einem Team gelöscht wird, in dem Ihr Bot installiert ist.
+Das `channelDeleted` Ereignis wird an Ihren Bot gesendet, wenn ein Kanal in einem Team gelöscht wird, in dem Ihr Bot installiert ist.
 
 Der folgende Code zeigt ein Beispiel für ein Kanalereignis, das gelöscht wurde:
 
@@ -315,7 +316,7 @@ async def on_teams_channel_deleted(
 
 ### <a name="channel-restored"></a>Kanal wiederhergestellt
 
-Das wiederhergestellte Kanalereignis wird an Ihren Bot gesendet, wenn ein zuvor gelöschter Kanal in einem Team wiederhergestellt wird, in dem Ihr Bot bereits installiert ist.
+Das `channelRestored` Ereignis wird an Ihren Bot gesendet, wenn ein zuvor gelöschter Kanal in einem Team wiederhergestellt wird, in dem Ihr Bot bereits installiert ist.
 
 Der folgende Code zeigt ein Beispiel für ein Kanalereignis, das wiederhergestellt wurde:
 
@@ -402,9 +403,22 @@ async def on_teams_channel_restored(
 
 ---
 
-### <a name="team-members-added"></a>Hinzugefügte Teammitglieder
+### <a name="members-added"></a>Mitglieder hinzugefügt
 
-Das `teamMemberAdded` Ereignis wird an Ihren Bot gesendet, wenn es zum ersten Mal zu einer Unterhaltung hinzugefügt wird. Das Ereignis wird jedes Mal an Ihren Bot gesendet, wenn ein neuer Benutzer zu einem Team- oder Gruppenchat hinzugefügt wird, in dem Ihr Bot installiert ist. Beachten Sie, dass die Benutzerinformationen, die als ID bezeichnet werden, für Ihren Bot eindeutig sind und für die zukünftige Verwendung durch Ihren Dienst zwischengespeichert werden können, z. B. für das Senden einer Nachricht an einen bestimmten Benutzer.
+Ein ereignis hinzugefügtes Mitglied wird in den folgenden Szenarien an Ihren Bot gesendet:
+
+1. Wenn der Bot selbst installiert und zu einer Unterhaltung hinzugefügt wird
+
+   > Im Teamkontext wird die conversation.id der Aktivität auf den `id` Kanal festgelegt, der während der App-Installation vom Benutzer ausgewählt wurde, oder auf den Kanal, von dem aus der Bot installiert wurde (derzeit in [der öffentlichen Entwicklervorschau](../../../resources/dev-preview/developer-preview-intro.md) verfügbar).
+
+2. Wenn ein Benutzer zu einer Unterhaltung hinzugefügt wird, in der der Bot installiert ist
+
+   > Benutzer-IDs, die in der Ereignisnutzlast empfangen werden, sind für den Bot eindeutig und können für die zukünftige Verwendung zwischengespeichert werden, z. B. direktes Messaging eines Benutzers.
+
+Die hinzugefügte Aktivität `eventType` des Mitglieds wird festgelegt `teamMemberAdded` , wenn das Ereignis aus einem Teamkontext gesendet wird. Um festzustellen, ob das neue hinzugefügte Mitglied der Bot selbst oder ein Benutzer war, überprüfen Sie das `Activity` Objekt des `turnContext`. Wenn die `MembersAdded` Liste ein Objekt enthält, das `id` mit dem `id` Feld des `Recipient` Objekts identisch ist, ist das hinzugefügte Element der Bot, andernfalls ist es ein Benutzer. Die Bots `id` sind formatiert als `28:<MicrosoftAppId>`.
+
+> [!TIP]
+> Verwenden Sie das [`InstallationUpdate` Ereignis](#installation-update-event) , um zu bestimmen, wann Ihr Bot einer Unterhaltung hinzugefügt oder daraus entfernt wird.
 
 Der folgende Code zeigt ein Beispiel für ein Ereignis, das von Teammitgliedern hinzugefügt wurde:
 
@@ -455,46 +469,58 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Dies ist die Nachricht, die Ihr Bot erhält, wenn der Bot zu einem Team hinzugefügt wird.
+Die Nachricht, die Ihr Bot erhält, wenn der Bot einem Team hinzugefügt wird.
+
+> [!NOTE]
+> In dieser Nutzlast ist `channelData.settings.selectedChannel.id` dies die ID des Kanals, `conversation.id` den der Benutzer während der App-Installation ausgewählt hat oder von dem die Installation ausgelöst wurde.
 
 ```json
 {
+    "type": "conversationUpdate",
     "membersAdded": [
         {
-            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+            "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b"
         }
     ],
-    "type": "conversationUpdate",
-    "timestamp": "2017-02-23T19:38:35.312Z",
-    "localTimestamp": "2017-02-23T12:38:35.312-07:00",
-    "id": "f:5f85c2ad",
+    "timestamp": "2021-12-07T22:34:56.534Z",
+    "id": "f:0b9079f4-d4d3-3d8e-b883-798298053c7e",
     "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
     "from": {
-        "id": "29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+        "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
+        "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
     },
     "conversation": {
         "isGroup": true,
         "conversationType": "channel",
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f",
+        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
+        "name": "2021 Test Channel"
     },
     "recipient": {
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-        "name": "SongsuggesterBot"
+        "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
+        "name": "Test Bot"
     },
     "channelData": {
+        "settings": {
+            "selectedChannel": {
+                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+            }
+        },
         "team": {
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+            "aadGroupId": "f3ec8cd2-e704-4344-8c47-9a3a21d683c0",
+            "name": "TestTeam2022",
+            "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
         },
         "eventType": "teamMemberAdded",
         "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+            "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
         }
     }
 }
 ```
 
-Dies ist die Nachricht, die Ihr Bot erhält, wenn der Bot zu einem 1:1-Chat hinzugefügt wird.
+Die Nachricht, die Ihr Bot erhält, wenn der Bot zu einem 1:1-Chat hinzugefügt wird.
 
 ```json
 {
@@ -546,9 +572,15 @@ async def on_teams_members_added(
 
 ---
 
-### <a name="team-members-removed"></a>Teammitglieder entfernt
+### <a name="members-removed"></a>Mitglieder entfernt
 
-Das `teamMemberRemoved` Ereignis wird an Ihren Bot gesendet, wenn es aus einem Team entfernt wird. Das Ereignis wird jedes Mal an Ihren Bot gesendet, wenn ein Benutzer aus einem Team entfernt wird, in dem Ihr Bot Mitglied ist. Um festzustellen, ob das entfernte neue Mitglied der Bot selbst war oder ein Benutzer, überprüfen Sie das `Activity`-Objekt des `turnContext`.  Wenn das `Id` Feld des `MembersRemoved` Objekts mit dem `Id` Feld des `Recipient` Objekts identisch ist, ist das entfernte Element der Bot, andernfalls ist es ein Benutzer. Die `Id` des Bots ist in der Regel `28:<MicrosoftAppId>`.
+In den folgenden Szenarien wird ein Mitglied entferntes Ereignis an Ihren Bot gesendet:
+
+1. Wenn der Bot selbst deinstalliert und aus einer Unterhaltung entfernt wird.
+2. Wenn ein Benutzer aus einer Unterhaltung entfernt wird, in der der Bot installiert ist.
+
+Die Aktivität `eventType` "Mitglied entfernt" wird festgelegt `teamMemberRemoved` , wenn das Ereignis aus einem Teamkontext gesendet wird. Um festzustellen, ob das entfernte neue Mitglied der Bot selbst war oder ein Benutzer, überprüfen Sie das `Activity`-Objekt des `turnContext`. Wenn die `MembersRemoved` Liste ein Objekt enthält, das `id` mit dem `id` Feld des `Recipient` Objekts identisch ist, ist das hinzugefügte Element der Bot, andernfalls ist es ein Benutzer. Die ID des Bots ist formatiert als `28:<MicrosoftAppId>`.
+
 
 > [!NOTE]
 > Wenn ein Benutzer dauerhaft aus einem Mandanten gelöscht wird, wird das `membersRemoved conversationUpdate`-Ereignis ausgelöst.
@@ -740,7 +772,7 @@ async def on_teams_team_renamed(
 
 ### <a name="team-deleted"></a>Team gelöscht
 
-Ihr Bot wird benachrichtigt, wenn das Team, in dem er sich befindet, gelöscht wird. Er empfängt ein `conversationUpdate`-Ereignis mit `eventType.teamDeleted` im `channelData`-Objekt.
+Der Bot erhält eine Benachrichtigung, wenn das Team gelöscht wird. Er empfängt ein `conversationUpdate`-Ereignis mit `eventType.teamDeleted` im `channelData`-Objekt.
 
 Der folgende Code zeigt ein Beispiel für ein Teamereignis, das gelöscht wurde:
 
@@ -1296,6 +1328,15 @@ Der Bot empfängt ein `installationUpdate`-Ereignis, wenn Sie einen Bot in einem
 
 Verwenden Sie das `installationUpdate`-Ereignis, um eine einführende Nachricht von Ihrem Bot bei der Installation zu senden. Dieses Ereignis hilft Ihnen, Ihre Datenschutz- und Datenaufbewahrungsanforderungen zu erfüllen. Sie können auch Benutzer- oder Threaddaten bereinigen und löschen, wenn der Bot deinstalliert wird.
 
+Ähnlich wie das `conversationUpdate` Ereignis, das gesendet wird, wenn ein Bot zu einem Team hinzugefügt wird, wird die conversation.id des `installationUpdate` Ereignisses auf die ID des Kanals festgelegt, der während der App-Installation von einem Benutzer ausgewählt wurde, oder auf den Kanal, in dem die Installation stattgefunden hat. Die ID stellt den Kanal dar, in dem der Benutzer beabsichtigt, dass der Bot funktioniert, und muss vom Bot beim Senden einer Willkommensnachricht verwendet werden. Für Szenarien, in denen die ID des Kanals "Allgemein" explizit erforderlich ist, können Sie sie in `team.id` `channelData`abrufen.
+
+In diesem Beispiel wird der `conversation.id` Von und `installationUpdate` die `conversationUpdate` Aktivitäten auf die ID des Antwortkanals im Daves Demo-Team festgelegt.
+
+![Erstellen eines ausgewählten Kanals](~/assets/videos/addteam.gif)
+
+> [!NOTE]
+> Die ausgewählte Kanal-ID wird nur für `installationUpdate` *Add-Ereignisse* festgelegt, die gesendet werden, wenn eine App in einem Team installiert wird (derzeit in [der öffentlichen Entwicklervorschau](../../../resources/dev-preview/developer-preview-intro.md) verfügbar).
+
 # <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
@@ -1337,56 +1378,58 @@ async onInstallationUpdateActivity(context: TurnContext) {
 # <a name="json"></a>[JSON](#tab/json)
 
 ```json
-{ 
-  "action": "add", 
-  "type": "installationUpdate", 
-  "timestamp": "2020-10-20T22:08:07.869Z", 
-  "id": "f:3033745319439849398", 
-  "channelId": "msteams", 
-  "serviceUrl": "https://smba.trafficmanager.net/amer/", 
-  "from": { 
-    "id": "sample id", 
-    "aadObjectId": "sample Azure AD Object ID" 
-  },
-  "conversation": { 
-    "isGroup": true, 
-    "conversationType": "channel", 
-    "tenantId": "sample tenant ID", 
-    "id": "sample conversation Id@thread.skype" 
-  }, 
-
-  "recipient": { 
-    "id": "sample reciepent bot ID", 
-    "name": "bot name" 
-  }, 
-  "entities": [ 
-    { 
-      "locale": "en", 
-      "platform": "Windows", 
-      "type": "clientInfo" 
-    } 
-  ], 
-  "channelData": { 
-    "settings": { 
-      "selectedChannel": { 
-        "id": "sample channel ID@thread.skype" 
-      } 
-    }, 
-    "channel": { 
-      "id": "sample channel ID" 
-    }, 
-    "team": { 
-      "id": "sample team ID" 
-    }, 
-    "tenant": { 
-      "id": "sample tenant ID" 
-    }, 
-    "source": { 
-      "name": "message" 
-    } 
-  }, 
-  "locale": "en" 
-}
+{
+    {
+    "type": "installationUpdate",
+    "id": "f:816eb23d-bfa1-afa3-dfeb-d2aa338e9541",
+    "timestamp": "2021-11-09T04:47:30.91Z",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
+    "channelId": "msteams",
+    "from": {
+        "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
+        "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
+    },
+    "recipient": {
+        "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
+        "name": "Test Bot"
+    },
+    "locale": "en-US",
+    "entities": [
+        {
+            "type": "clientInfo",
+            "locale": "en-US"
+        }
+    ],
+    "conversation": {
+        "isGroup": true,
+        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
+        "name": "2021 Test Channel",
+        "conversationType": "channel",
+        "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+    },
+    "channelData": {
+        "settings": {
+            "selectedChannel": {
+                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+            }
+        },
+        "channel": {
+            "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+        },
+        "team": {
+            "aadGroupId": "da849743-4259-475f-ae7a-4f4b0fb49943",
+            "name": "TestTeam2022",
+            "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
+        },
+        "tenant": {
+            "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+        },
+        "source": {
+            "name": "message"
+        }
+    },
+    "action": "add"
+    }
 ```
 
 # <a name="python"></a>[Python](#tab/python)
@@ -1409,7 +1452,7 @@ Wenn Sie eine App deinstallieren, wird der Bot ebenfalls deinstalliert. Wenn ein
 
 ## <a name="event-handling-for-install-and-uninstall-events"></a>Ereignisbehandlung für Installations- und Deinstallationsereignisse
 
-Wenn Sie diese Installations- und Deinstallationsereignisse verwenden, gibt es einige Fälle, in denen Bots beim Empfangen unerwarteter Ereignisse von Teams Ausnahmen ausgeben. Dies geschieht in den folgenden Fällen:
+Wenn Sie diese Installations- und Deinstallationsereignisse verwenden, gibt es einige Fälle, in denen Bots Ausnahmen vom Empfangen unerwarteter Ereignisse von Teams erteilen, was in den folgenden Fällen auftritt:
 
 * Sie erstellen Ihren Bot ohne das Microsoft Bot Framework SDK, und daher gibt der Bot beim Empfangen eines unerwarteten Ereignisses eine Ausnahme.
 * Sie erstellen Ihren Bot mit dem Microsoft Bot Framework SDK, und Sie können das Standardereignisverhalten ändern, indem Sie den Basisereignishandle überschreiben.

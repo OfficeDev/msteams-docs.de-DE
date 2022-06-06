@@ -4,12 +4,12 @@ description: Beschreibt, wie ein Benutzertoken abgerufen wird. Derzeit kann ein 
 keywords: Token, Benutzertoken, SSO-Unterstützung für Bots, Berechtigung, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e271296eafc1a4e74865c00cf467c5cb2901146e
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: cf62bc0834c6ce3792ef30355b2c6b3234127672
+ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887597"
+ms.lasthandoff: 06/06/2022
+ms.locfileid: "65906261"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Single-Sign-On (SSO)-Unterstützung für Bots
 
@@ -385,4 +385,4 @@ Um zu verstehen, was der Bot tut, wenn der Token-Austausch keine Zustimmungsauff
 
 ## <a name="step-by-step-guide"></a>Schrittweise Anleitung
 
-Folgen Sie der [Schritt-für-Schritt-Anleitung](../../../sbs-bots-with-sso.yml), die Ihnen hilft, einen Bot mit aktivierter SSO-Authentifizierung zu erstellen.
+Befolgen Sie die [schrittweise Anleitung](../../../sbs-bots-with-sso.yml), um einen Bot mit SSO-Authentifizierung zu erstellen.

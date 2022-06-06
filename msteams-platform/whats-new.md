@@ -3,12 +3,12 @@ title: Neuerungen für Entwickler in Teams
 description: Erfahren Sie mehr über die neuen Entwicklerfeatures und Verbesserungen an diesen Features in Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 6152181ac53685ad056f9a7e4ae8f11cf5dab0a1
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 267f8a00994a066c9eb7a32669a816a452a7af70
+ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887765"
+ms.lasthandoff: 06/06/2022
+ms.locfileid: "65906288"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -264,6 +264,7 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
+| 06/06/2022| Aktualisieren Sie Konversations- und Installationsereignisse in Ihrem Teams-Bot |  Bots erstellen > Bot-Konversationen > Konversationsereignisse in Ihrem Teams-Bot > [Konversationsereignisse in Ihrem Teams-Bot](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |24.05.2022| Verbesserte Zusammenarbeit mit Live Share SDK |  Erstellen von Apps für Teams-Besprechungen > Verbesserte Zusammenarbeit mit Live Share > [Übersicht](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 06.04.2022 | Für Teams über persönliche App oder Registerkarte freigeben | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus einer persönlichen App oder Registerkarte](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 07.02.2022 | Tools und SDKs |Teams-Toolkit für Visual Studio Code > </br> • Hinzufügen von Funktionen zur Teams-App> [Fügen Sie Funktionen für Ihre Teams-Apps hinzu](toolkit/add-capability.md) </br> • Hinzufügen von Cloudressourcen zur Teams-App> [Fügen Sie Cloudressourcen für Ihre Teams-App hinzu](toolkit/add-resource.md) |
