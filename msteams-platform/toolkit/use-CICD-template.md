@@ -6,17 +6,16 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/20/2022
-ms.openlocfilehash: 7f2e3c10fe7658ba7138aef8ddbc1028d5dcaca4
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: c39ad23fe42fd9cfd97ae2fcf49390cf19fac4a2
+ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297135"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65938933"
 ---
 # <a name="set-up-cicd-pipelines"></a>Einrichten von CI/CD-Pipelines
 
 TeamsFx hilft bei der Automatisierung Ihres Entwicklungsworkflows beim Erstellen von Teams-Anwendungen. Im Folgenden finden Sie die Tools und Vorlagen, mit denen Sie CI/CD-Pipelines einrichten, Workflowvorlagen erstellen und CI/CD-Workflows mit GitHub, Azure DevOps, Jenkins und anderen Plattformen anpassen können. Um Ressourcen bereitzustellen, können Sie Azure-Dienstprinzipale erstellen und die Microsoft Teams-App über das Microsoft Teams-Entwicklerportal veröffentlichen. Um eine Microsoft Teams-App manuell zu veröffentlichen, können Sie das [Entwicklerportal für Microsoft Teams](https://dev.teams.microsoft.com/home) nutzen.
-
 
 |Tools und Vorlagen | Beschreibung |
 |---|---|
@@ -24,7 +23,6 @@ TeamsFx hilft bei der Automatisierung Ihres Entwicklungsworkflows beim Erstellen
 |[Microsoft Teams-Toolkit in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code-Erweiterung, die Sie bei der Entwicklung von Teams-Apps und Automatisierungsworkflows für GitHub, Azure DevOps und Jenkins unterstützt. |
 |[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Kommandozeilen-Tool, das Sie bei der Entwicklung von Teams-Apps und Automatisierungsworkflows für GitHub, Azure DevOps und Jenkins unterstützt.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) und [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Skriptvorlagen für die Automatisierung außerhalb von GitHub, Azure DevOps oder Jenkins. |
-
 
 ## <a name="set-up-pipelines"></a>Einrichten von Pipelines
 
@@ -35,25 +33,25 @@ Sie können Pipelines mit den folgenden Plattformen einrichten:
 1. [Einrichten von Pipelines mit Jenkins](#set-up-pipelines-with-jenkins)
 1. [Einrichten von Pipelines für andere Plattformen](#set-up-pipelines-for-other-platforms)
 
-
-### <a name="set-up-pipelines-with-github"></a>Einrichten von Pipelines mit GitHub
+## <a name="set-up-pipelines-with-github"></a>Einrichten von Pipelines mit GitHub
 
 So richten Sie Pipelines mit GitHub für CI/CD ein:
 
-1. Erstellen von Workflowvorlagen.
+* Erstellen von Workflowvorlagen.
 
-   * Visual Studio Code
-   * TeamsFx CLI
+  * Visual Studio Code
+  * TeamsFx CLI
 
-1. Anpassen des CI/CD-Workflows.
+* Anpassen des CI/CD-Workflows.
 
+### <a name="create-workflow-templates"></a>Erstellen von Workflowvorlagen
 
-## <a name="create-workflow-templates-with-github"></a>Erstellen von Workflowvorlagen mit GitHub
+Sie können die folgenden Workflowvorlagen mit GitHub erstellen:
 
-**Erstellen von Workflowvorlagen mit dem Microsoft Teams-Toolkit in Visual Studio Code**
+**Microsoft Teams-Toolkit in Visual Studio Code**
 
 1. Erstellen Sie eine neue Microsoft Teams-App mit dem Microsoft Teams-Toolkit.
-1. Wählen Sie das Symbol für das **Microsoft Teams-Toolkit** in der Visual Studio Code-Aktivitätsleiste aus.
+1. Wählen Sie in der linken Navigationsleiste das :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="Symbol-API-Symbol"::: des **Teams-Toolkits** aus.
 1. Wählen Sie **CI/CD-Workflows hinzufügen** aus.
 1. Wählen Sie in der Eingabeaufforderung eine Umgebung aus.
 1. Wählen Sie **GitHub** als CI/CD-Anbieter aus.
@@ -61,7 +59,7 @@ So richten Sie Pipelines mit GitHub für CI/CD ein:
 1. Öffnen Sie die Vorlage, und passen Sie die Workflows an, die in Ihre Szenarien passen.
 1. Folgen Sie den README-Dateien unter`.github/workflows`, um den Workflow in GitHub einzurichten.
 
-**Erstellen von Workflowvorlagen mithilfe von TeamsFx CLI**
+**TeamsFx CLI**
 
 1. Geben Sie `cd` in Ihr Microsoft Teams-App-Projektverzeichnis ein.
 2. Geben Sie den Befehl `teamsfx add cicd` ein, um den interaktiven Befehlsprozess zu starten.
@@ -82,24 +80,25 @@ Sie können die Testskripts zum Anpassen des CI/CD-Workflows ändern oder entfer
 1. Ändern Sie bei Bedarf die Buildskripts.
 1. Entfernen Sie bei Bedarf die Testskripts.
 
-### <a name="set-up-pipelines-with-azure-devops"></a>Einrichten von Pipelines mit Azure DevOps
+## <a name="set-up-pipelines-with-azure-devops"></a>Einrichten von Pipelines mit Azure DevOps
 
 So richten Sie Pipelines mit Azure DevOps für CI/CD ein:
 
-1. Erstellen von Workflowvorlagen.
+* Erstellen von Workflowvorlagen.
 
-   * Visual Studio Code
-   * TeamsFx CLI
+  * Visual Studio Code
+  * TeamsFx CLI
 
-1. Anpassen des CI/CD-Workflows.
+* Anpassen des CI/CD-Workflows.
 
+### <a name="create-workflow-templates"></a>Erstellen von Workflowvorlagen
 
-## <a name="create-workflow-templates-with-azure-devops"></a>Erstellen von Workflowvorlagen mit Azure DevOps
+Sie können die folgenden Workflowvorlagen mit Azure DevOps erstellen:
 
-**Erstellen von Workflowvorlagen mit dem Microsoft Teams-Toolkit in Visual Studio Code**
+**Microsoft Teams-Toolkit in Visual Studio Code**
 
 1. Erstellen Sie eine neue Microsoft Teams-App mit dem Microsoft Teams-Toolkit.
-2. Wählen Sie das Symbol für das **Microsoft Teams-Toolkit** in der Visual Studio Code-Aktivitätsleiste aus.
+2. Wählen Sie in der linken Navigationsleiste das :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="Symbol-API-Symbol"::: des **Teams-Toolkits** aus.
 3. Wählen Sie **CI/CD-Workflows hinzufügen** aus.
 4. Wählen Sie in der Eingabeaufforderung eine Umgebung aus.
 5. Wählen Sie **Azure DevOps** als CI/CD-Anbieter aus.
@@ -107,7 +106,7 @@ So richten Sie Pipelines mit Azure DevOps für CI/CD ein:
 7. Öffnen Sie die Vorlage, und passen Sie die Workflows an, die in Ihre Szenarien passen.
 8. Folgen Sie den README-Dateien unter`.azure/pipelines`, um den Workflow in Azure DevOps einzurichten.
 
-**Erstellen von Workflowvorlagen mithilfe der TeamsFx CLI**
+**TeamsFx CLI**
 
 1. Geben Sie `cd` in Ihr Microsoft Teams-App-Projektverzeichnis ein.
 2. Geben Sie den Befehl `teamsfx add cicd` ein, um den interaktiven Befehlsprozess zu starten.
@@ -122,35 +121,37 @@ So richten Sie Pipelines mit Azure DevOps für CI/CD ein:
 
 ### <a name="customize-ci-workflow"></a>Anpassen des CI-Workflows
 
-Im Folgenden sind die Änderungen aufgeführt, die Sie am Skript oder an der Workflowdefinition vornehmen können:
+Sie können die folgenden Änderungen für das Skript oder die Workflowdefinition vornehmen:
 
 1. Verwenden Sie das npm-Buildskript, oder passen Sie die Art der Erstellung im Automatisierungscode an.
 1. Verwenden Sie npm test script, das bei Erfolg Null zurückgibt, und ändern Sie die Testbefehle.
 
 ### <a name="customize-cd-workflow"></a>Anpassen des CD-Workflows
 
-Im Folgenden sind die Änderungen aufgeführt, die Sie am Skript oder an der Workflowdefinition vornehmen können:
+Sie können die folgenden Änderungen für das Skript oder die Workflowdefinition vornehmen:
 
 1. Stellen Sie sicher, dass Sie ein npm-Build-Skript haben oder passen Sie die Art und Weise der Erstellung im Automatisierungscode an.
 1. Stellen Sie sicher, dass Sie ein npm-Testskript haben, das bei Erfolg Null zurückgibt oder ändern Sie die Testbefehle.
 
-### <a name="set-up-pipelines-with-jenkins"></a>Einrichten von Pipelines mit Jenkins
+## <a name="set-up-pipelines-with-jenkins"></a>Einrichten von Pipelines mit Jenkins
 
 So richten Sie Pipelines mit Jenkins für CI/CD ein:
 
-1. Erstellen von Workflowvorlagen.
+* Erstellen von Workflowvorlagen.
 
-   * Visual Studio Code
-   * TeamsFx CLI
+  * Visual Studio Code
+  * TeamsFx CLI
 
-1. Anpassen des CI/CD-Workflows.
+* Anpassen des CI/CD-Workflows.
 
-## <a name="create-workflow-templates-with-jenkins"></a>Erstellen von Workflowvorlagen mit Jenkins
+### <a name="create-workflow-templates"></a>Erstellen von Workflowvorlagen
 
-**Erstellen von Workflowvorlagen mit dem Microsoft Teams-Toolkit in Visual Studio Code**
+Sie können die folgenden Workflowvorlagen mit Jenkins erstellen:
+
+**Microsoft Teams-Toolkit in Visual Studio Code**
 
 1. Erstellen Sie eine neue Microsoft Teams-App mit dem Microsoft Teams-Toolkit.
-2. Wählen Sie das Symbol für das **Microsoft Teams-Toolkit** in der Visual Studio Code-Randleiste aus.
+2. Wählen Sie in der linken Navigationsleiste das :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="Symbol-API-Symbol"::: des **Teams-Toolkits** aus.
 3. Wählen Sie **CI/CD-Workflows hinzufügen** aus.
 4. Wählen Sie in der Eingabeaufforderung eine Umgebung aus.
 5. Wählen Sie **Jenkins** als CI/CD-Anbieter aus.
@@ -158,7 +159,7 @@ So richten Sie Pipelines mit Jenkins für CI/CD ein:
 7. Öffnen Sie die Vorlage, und passen Sie die Workflows an, die in Ihre Szenarien passen.
 8. Folgen Sie den README-Dateien unter`.jenkins/pipelines`, um den Workflow mit Jenkins einzurichten.
 
-**Erstellen von Workflowvorlagen mithilfe von TeamsFx CLI**
+**TeamsFx CLI**
 
 1. Geben Sie `cd` in Ihr Microsoft Teams-App-Projektverzeichnis ein.
 2. Geben Sie den Befehl `teamsfx add cicd` ein, um den interaktiven Befehlsprozess zu starten.
@@ -173,12 +174,11 @@ So richten Sie Pipelines mit Jenkins für CI/CD ein:
 
 ### <a name="customize-ci-workflow"></a>Anpassen des CI-Workflows
 
-Im Folgenden sind einige der Änderungen aufgeführt, die Sie an Ihrem Projekt vornehmen können:
+Sie können die folgenden Änderungen an Ihrem Projekt vornehmen:
 
 1. Ändern Sie, wie der CI-Flow ausgelöst wird. Die Standardeinstellung ist, die Auslöser von **pollSCM** zu verwenden, wenn eine neue Änderung in den **Entwicklungszweig** verschoben wird.
 1. Stellen Sie sicher, dass Sie ein npm-Build-Skript haben oder passen Sie die Art und Weise der Erstellung im Automatisierungscode an.
 1. Stellen Sie sicher, dass Sie ein npm-Testskript haben, das bei Erfolg Null zurückgibt oder ändern Sie die Testbefehle.
-
 
 ### <a name="customize-cd-workflow"></a>Anpassen des CD-Workflows
 
@@ -188,8 +188,7 @@ Führen Sie die folgenden Schritte aus, um die CD-Pipeline anzupassen:
 1. Ändern Sie bei Bedarf die Buildskripts.
 1. Entfernen Sie die Testskripts, wenn Sie keine Tests haben.
 
-
-### <a name="set-up-pipelines-for-other-platforms"></a>Einrichten von Pipelines für andere Plattformen
+## <a name="set-up-pipelines-for-other-platforms"></a>Einrichten von Pipelines für andere Plattformen
 
 Sie können den aufgeführten vordefinierten Bash-Beispielskripts folgen, um CI/CD-Pipelines auf den anderen Plattformen zu erstellen und anzupassen:
 
@@ -204,7 +203,6 @@ Die Skripts basieren auf einem plattformübergreifenden TeamsFx-Befehlszeilentoo
 > * Um die Ausführung von `@microsoft/teamsfx-cli` im nicht interaktiven Modus zu ermöglichen, legen Sie eine globale Konfiguration mit folgendem Befehl fest: `teamsfx config set -g interactive false`. Im nicht interaktiven Modus fordert `@microsoft/teamsfx-cli` keine Eingaben an..
 
 Stellen Sie sicher, dass die Azure- und Microsoft 365-Anmeldeinformationen in Ihren Umgebungsvariablen sicher eingerichtet wurden. Wenn Sie zum Beispiel GitHub als Quellcode-Repository verwenden, lesen Sie bitte[GitHub Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
-
 
 ## <a name="provision-and-deploy-resources"></a>Bereitstellen von Ressourcen
 
@@ -227,16 +225,14 @@ Weitere Informationen finden Sie in den [Richtlinien für Azure-Dienstprinzipale
 
 ## <a name="publish-teams-app-using-teams-developer-portal"></a>Veröffentlichen einer Microsoft Teams-App mit dem Microsoft Teams-Entwicklerportal
 
-Wenn Änderungen an der Manifestdatei der Microsoft Teams-App vorliegen, können Sie das Manifest aktualisieren und die Microsoft Teams-App erneut veröffentlichen.
-
-Um eine Microsoft Teams-App manuell zu veröffentlichen, können Sie das [Entwicklerportal für Microsoft Teams](https://dev.teams.microsoft.com/home) nutzen.
+Wenn Änderungen an der Manifestdatei der Microsoft Teams-App vorliegen, können Sie das Manifest aktualisieren und die Microsoft Teams-App erneut veröffentlichen. Um eine Microsoft Teams-App manuell zu veröffentlichen, können Sie das [Entwicklerportal für Microsoft Teams](https://dev.teams.microsoft.com/home) nutzen.
 
 Führen Sie die folgenden Schritte aus, um Ihre App zu veröffentlichen:
 
-1. Melden Sie sich beim [Entwicklerportal für Microsoft Teams](https://dev.teams.microsoft.com) mit dem entsprechenden Konto an.
-2. Importieren Sie Ihr App-Paket in eine ZIP-Datei, indem Sie `App -> Import app -> Replace` auswählen.
+1. Melden Sie sich mit dem entsprechenden Konto beim [Entwicklerportal für Teams](https://dev.teams.microsoft.com) an.
+2. Importieren Sie Ihr App-Paket in ZIP, wählen Sie `App -> Import app -> Replace`aus.
 3. Wählen Sie die Ziel-App in der App-Liste aus.
-4. Veröffentlichen Sie Ihre App, indem Sie `Publish -> Publish to your org`auswählen.
+4. Veröffentlichen Sie Ihre App, wählen Sie `Publish -> Publish to your org`.
 
 ### <a name="see-also"></a>Siehe auch
 

@@ -1,90 +1,91 @@
 ---
-title: Zusammenarbeit an TeamsFx-Project mit Teams Toolkit
+title: Zusammenarbeiten an TeamsFx Project mithilfe des Teams-Toolkits
 author: yanjiang
-description: Zusammenarbeit an TeamsFx-Project mit Teams Toolkit
+description: Zusammenarbeiten an TeamsFx Project mithilfe des Teams-Toolkits
 ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 423e03e373edb1980186ea3dc43f2817d2e25636
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: be36cf1af9741d65d66ede498f5ac2fff31df148
+ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452564"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65938870"
 ---
-# <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Zusammenarbeit an Teams Projekt mit Teams Toolkit
+# <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Zusammenarbeiten an Teams-Projekten mit dem Teams-Toolkit
 
-Mehrere Entwickler können zusammenarbeiten, um dasselbe TeamsFx-Projekt zu debuggen, bereitzustellen und bereitzustellen. Es müssen jedoch manuell die richtigen Berechtigungen für Teams App und Microsoft Azure Active Directory (Azure AD) App.Teams  Das Toolkit unterstützt die Zusammenarbeitsfunktion, damit Entwickler und Projektbesitzer andere Entwickler oder Mitarbeiter zum TeamsFx-Projekt einladen können, dasselbe TeamsFx-Projekt zu debuggen, bereitzustellen und bereitzustellen.
+Mehrere Entwickler können zusammenarbeiten, um das gleiche TeamsFx-Projekt zu debuggen, bereitzustellen und bereitzustellen. Es ist jedoch erforderlich, die richtigen Berechtigungen für die Teams-App und die Microsoft Azure Active Directory (Azure AD)-App manuell festzulegen. Das Teams-Toolkit unterstützt die Zusammenarbeitsfunktion, damit Entwickler und Projektbesitzer andere Entwickler oder Mitarbeiter zum TeamsFx-Projekt einladen können, um dasselbe TeamsFx-Projekt zu debuggen, bereitzustellen und bereitzustellen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-* Kontovoraussetzungen
+* Microsoft 365-Abonnement
+* Azure mit gültigem Abonnement
+  
+  Weitere Informationen zu verschiedenen Konten finden Sie unter [Vorbereiten von Konten zum Erstellen der Teams-App](accounts.md).
 
-    Um Cloudressourcen bereitzustellen, benötigen Sie die folgenden Konten. Weitere Informationen finden Sie unter ["Vorbereiten von Konten zum Erstellen Teams App](accounts.md)".
-
-  * Microsoft 365-Abonnement
-  * Azure mit gültigem Abonnement
-
-* [Installieren Sie Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Version v3.0.0+.
+* [Installieren von Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Version v3.0.0+
 
 > [!TIP]
-> Stellen Sie sicher, dass in Microsoft Visual Studio Code ein Teams App-Projekt geöffnet ist.
+> Stellen Sie sicher, dass Sie ein Teams-App-Projekt in Visual Studio Code geöffnet haben.
 
 ## <a name="collaborate-with-other-developers"></a>Zusammenarbeit mit anderen Entwicklern
 
-Die folgende Liste führt uns dazu, den Zusammenarbeitsprozess und dessen Einschränkung zu verstehen:
+Die folgenden Listen führen uns, um den Zusammenarbeitsprozess und dessen Einschränkung zu verstehen:
 
-### <a name="as-project-owner"></a>Als Projektbesitzer
+* Als Projektbesitzer
 
-> [!NOTE]
-> Bevor Mitarbeiter für eine Umgebung hinzugefügt werden, muss der Projektbesitzer das Projekt zuerst [bereitstellen](provision.md) .
+  > [!NOTE]
+  > Bevor Projektmitarbeiter für eine Umgebung hinzugefügt werden, muss der Projektbesitzer das Projekt zuerst [bereitstellen](provision.md) .
 
-* Wählen Sie im Abschnitt **"UMGEBUNG"** auf Teams Toolkit **Mitarbeiter aus**. Es zeigt die Optionen **"Add Microsoft 365 Teams App (with Azure AD App) Owners"** und **"List Microsoft 365 Teams App"-Besitzer (mit Azure AD App)-Besitzern** an, wie in den folgenden Abbildungen gezeigt:
+  1. Wählen Sie im Abschnitt **"UMGEBUNG** " im Teams-Toolkit **Mitarbeiter aus**. Es zeigt die Optionen **"Microsoft 365 Teams-App hinzufügen" (mit Azure AD-App)-Besitzern** und " **Microsoft 365 Teams-App-Besitzer auflisten" (mit Azure AD-App) an** , wie in den folgenden Bildern dargestellt:
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="Mitarbeiter":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="Mitarbeiter":::
 
-* Wählen Sie **Besitzer Microsoft 365 Teams App hinzufügen (mit Azure AD App)** aus, und fügen Sie als Mitarbeiter andere Microsoft 365 Konto-E-Mail-Adresse hinzu. Das hinzuzufügende Konto muss sich auf demselben Mandanten wie der Projektbesitzer für Remotedebugger befinden, wie in der Abbildung dargestellt:
+  2. Wählen Sie **"Microsoft 365 Teams-App (mit Azure AD-App)-Besitzern hinzufügen** " aus, und fügen Sie andere E-Mail-Adressen des Microsoft 365-Kontos als Mitarbeiter hinzu. Das hinzuzufügende Konto muss sich für das Remotedebuggen auf demselben Mandanten wie der Projektbesitzer befinden, wie in der Abbildung gezeigt:
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="envi hinzufügen":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="envi hinzufügen":::
 
-* Um Mitarbeiter in der aktuellen Umgebung anzuzeigen, wählen Sie "**List Microsoft 365 Teams App(with Azure AD App)"-Besitzer** aus, und die Mitarbeiter werden dann im Ausgabekanal aufgeführt, wie in der folgenden Abbildung dargestellt:
+  3. Wenn Sie Mitarbeiter in der aktuellen Umgebung anzeigen möchten, wählen Sie **"Microsoft 365 Teams-App-Besitzer auflisten" (mit Azure AD-App)** aus. Mitarbeiter werden dann im Ausgabekanal aufgelistet, wie in der folgenden Abbildung dargestellt:
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
 
-* Verschieben Sie das Projekt an GitHub.
+  4. Pushen des Projekts auf GitHub
 
-> [!NOTE]
-> Der neu hinzugefügte Mitarbeiter erhält keine Benachrichtigung. Project Besitzer muss den Mitarbeiter benachrichtigen.
+     > [!NOTE]
+     > Die neu hinzugefügten Mitarbeiter erhalten keine Benachrichtigung. Der Projektbesitzer muss den Mitarbeiter benachrichtigen.
 
-### <a name="as-project-collaborator"></a>Als Projektmitarbeiter
+* Als Projektmitarbeiter
 
-* Klonen Sie das Projekt aus GitHub.
-* Melden Sie sich bei Microsoft 365 Konto an.
-* Melden Sie sich bei einem Azure-Konto an, das über die Berechtigung "Mitwirkender" für alle Azure-Ressourcen verfügt, die in diesem Projekt verwendet werden.
-* Um eine Vorschau Ihrer Teams-App anzuzeigen, stellen Sie das Projekt remote bereit.
-* Starten Sie die Remote-App, um eine Vorschau der Teams-App zu erhalten.
+  1. Klonen Sie das Projekt von GitHub.
+  2. Melden Sie sich beim Microsoft 365-Konto an.
+  3. Melden Sie sich beim Azure-Konto an, es verfügt über die Berechtigung "Mitwirkender" für alle Azure-Ressourcen, die im Projekt verwendet werden.
+  4. Um eine Vorschau Ihrer Teams-App anzuzeigen, stellen Sie das Projekt remote bereit.
+  5. Starten Sie remote, um eine Vorschau der Teams-App zu erhalten.
 
-Weitere Informationen finden Sie unter [Erstellen und Ausführen Ihrer Teams-App in einer Remoteumgebung](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch).
+     > [!NOTE]
+     > Mitarbeiter müssen sich mit dem Konto anmelden, das der Projektbesitzer unter demselben Mandanten mit dem Projektbesitzer hinzufügt. Weitere Informationen finden Sie [unter Erstellen und Ausführen Ihrer Teams-App in einer Remoteumgebung](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch).
 
-> [!NOTE]
-> Mitarbeiter müssen sich mithilfe des vom Projektbesitzer hinzugefügten Kontos anmelden, das sich unter demselben Mandanten mit dem Projektbesitzer befindet.
+### <a name="limitations"></a>Einschränkungen
 
-### <a name="limitation"></a>Einschränkung
+Wenn Sie Mitarbeiter aus der Erweiterung des Teams-Toolkits entfernen möchten, müssen Sie sie manuell entfernen, da Sie sie nicht direkt entfernen können. Führen Sie die folgenden Schritte aus, um Mitarbeiter manuell zu entfernen:
 
-Mitarbeiter können nicht direkt aus Teams Toolkit-Erweiterung entfernt werden. Führen Sie die folgenden Schritte aus, um Mitarbeiter manuell zu entfernen:
+* Verwenden des Entwicklerportals
 
-  1. Wechseln Sie zu Teams Entwicklerportal, und wählen Sie Ihre Teams App anhand des Namens oder der App-ID aus.
-  2. Wählen Sie **"Besitzer"** aus dem linken Bereich aus.
-  3. Wählen Sie den Mitarbeiter aus, und entfernen Sie den Mitarbeiter.
-  4. Wechseln Sie zu [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), wählen Sie **die App-Registrierung** im linken Bereich aus, und suchen Sie Ihre Azure AD-App.
-  5. Wählen Sie **"Besitzer"** im linken Bereich auf Azure AD Seite "App-Verwaltung" aus.
-  6. Wählen Sie den Mitarbeiter aus, und entfernen Sie den Mitarbeiter.
+  * Wechseln Sie zum [Teams-Entwicklerportal](https://dev.teams.microsoft.com/home) , und wählen Sie Ihre Teams-App nach Name oder App-ID aus.
+  * **Auswählen von Besitzern** im linken Bereich
+  * Auswählen und Entfernen des Mitarbeiters
 
-> [!NOTE]
->
-> * Mitarbeiter, die Ihrem Projekt hinzugefügt wurden, erhalten keine Benachrichtigung. Project Besitzer muss Mitarbeiter offline benachrichtigen.
-> * Azure-bezogene Berechtigungen müssen vom Azure-Abonnementadministrator auf Microsoft Azure Portal manuell festgelegt werden. Das Azure-Konto muss über eine Mitwirkenderolle für das Abonnement verfügen, damit Entwickler an der Bereitstellung und Bereitstellung des TeamsFx-Projekts zusammenarbeiten können.
+* Verwenden von Azure Active Directory
+
+  * Wechseln Sie zu [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), wählen Sie im linken Bereich **die App-Registrierung** aus, und suchen Sie Ihre Azure AD-App
+  * Auswählen von **Besitzern** im linken Bereich auf der Verwaltungsseite der Azure AD-App
+  * Auswählen und Entfernen des Mitarbeiters
+
+   > [!NOTE]
+   >
+   > * Mitarbeiter, die Ihrem Projekt hinzugefügt wurden, erhalten keine Benachrichtigung. Projektbesitzer muss Mitarbeiter offline benachrichtigen.
+   > * Azure-bezogene Berechtigungen müssen vom Azure-Abonnementadministrator im Azure-Portal manuell festgelegt werden. Das Azure-Konto muss über eine Mitwirkenderolle für das Abonnement verfügen, damit Entwickler zusammenarbeiten können, um TeamsFx-Projekt bereitzustellen und bereitzustellen.
 
 ## <a name="see-also"></a>Siehe auch
 
