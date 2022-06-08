@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 04c88e840ba1edbeb657428bb76ecea86acf895a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: a41cbac6a0cee3f42a6de2d436c227c858347d4e
+ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756632"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65938961"
 ---
 # <a name="debug-your-teams-app-locally"></a>Lokales Debuggen Ihrer Teams-App
 
@@ -22,7 +22,6 @@ Das Teams-Toolkit hilft Ihnen, Ihre Teams-App lokal zu debuggen und eine Vorscha
 * [Hot Reload](#hot-reload)
 * [Debuggen beenden](#stop-debugging)  
 
-
 Während des Debugvorgangs startet das Teams-Toolkit automatisch App-Dienste, startet Debugger und lädt die Teams-App quer. Die Teams-App steht nach dem Debuggen lokal im Teams-Webclient zur Vorschau zur Verfügung. Sie können ebenfalls Debugeinstellungen anpassen, um Ihre Botendpunkte, Ihr Entwicklungszertifikat, oder Ihre Teilkomponente zum Laden Ihrer konfigurierten App zu verwenden.
 
 ## <a name="prerequisite"></a>Voraussetzungen
@@ -31,27 +30,29 @@ Installieren Sie die [neueste Version des Teams-Toolkits](https://marketplace.vi
 
 ## <a name="key-features-of-teams-toolkit"></a>Wichtige Features des Teams-Toolkits
 
-#### <a name="start-debugging"></a>Debugging starten
+Die folgende Liste enthält die wichtigsten Features des Teams-Toolkits:
 
-Sie können einen einzelnen Vorgang ausführen, wählen Sie **F5**, um mit dem Debuggen zu beginnen. Das Teams-Toolkit beginnt mit der Überprüfung der Voraussetzungen, der Registrierung der Azure Active Directory App, der Registrierung der Teams-App, dem Registrieren des Bots, dem Starten von Diensten und dem Starten des Browsers.
+### <a name="start-debugging"></a>Debugging starten
 
-#### <a name="multi-target-debugging"></a>Debuggen mit mehreren Zielen
+Sie können einen einzelnen Vorgang ausführen. Drücken Sie **F5**, um mit dem Debuggen zu beginnen. Das Teams-Toolkit beginnt mit der Überprüfung der Voraussetzungen, registriert die Azure AD-App, die Teams-App und den Bot und startet Dienste und den Browser.
+
+### <a name="multi-target-debugging"></a>Debuggen mit mehreren Zielen
 
 Teams Toolkit nutzt die Multi-Target-Debugging-Funktion zum gleichzeitigen Debuggen von Registerkarten, Bots, Nachrichtenerweiterungen und Azure Functions.
 
-#### <a name="toggle-breakpoints"></a>Umschalthaltepunkte
+### <a name="toggle-breakpoints"></a>Umschalthaltepunkte
 
 Sie können Haltepunkte in den Quellcodes von Registerkarten, Bots, Nachrichtenerweiterungen und Azure Functions umschalten. Die Haltepunkte werden ausgeführt, wenn Sie in einem Webbrowser mit der Teams-App interagieren. Die folgende Abbildung zeigt die Umschalthaltepunkte:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="Umschalthaltepunkte":::
 
-#### <a name="hot-reload"></a>Hot Reload
+### <a name="hot-reload"></a>Hot Reload
 
 Sie können die Quellcodes von Registerkarten, Bots, Nachrichtenerweiterungen und Azure Functions gleichzeitig aktualisieren und speichern, wenn Sie die Teams-App debuggen. Die App wird neu geladen, und der Debugger wird erneut an die Programmiersprachen angehängt.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="hot-reload für Quellcodes":::
 
-#### <a name="stop-debugging"></a>Debuggen beenden
+### <a name="stop-debugging"></a>Debuggen beenden
 
 Wenn Sie das lokale Debuggen abgeschlossen haben, können Sie auf der unverankerten Debugsymbolleiste **Beenden** oder **Trennen** auswählen, um alle Debugsitzungen zu beenden und Aufgaben zu beenden. Die folgende Abbildung zeigt die Aktion „Debuggen beenden“:
 
@@ -59,27 +60,25 @@ Wenn Sie das lokale Debuggen abgeschlossen haben, können Sie auf der unveranker
 
 ## <a name="debug-your-teams-app-locally"></a>Lokales Debuggen Ihrer Teams-App
 
-#### <a name="1-set-up-your-teams-toolkit"></a>1. Einrichten des Teams-Toolkits
+Die folgenden Schritte helfen Ihnen beim lokalen Debuggen Ihrer Teams-App:
 
-Führen Sie die folgenden Schritte aus, um Ihre App nach dem Erstellen einer neuen App mithilfe des Teams-Toolkits zu debuggen:
+### <a name="set-up-your-teams-toolkit"></a>Einrichten des Teams-Toolkits
 
-<br>
+Führen Sie die folgenden Schritte aus, um nach dem Erstellen einer neuen App mithilfe des Teams-Toolkits Ihre App zu debuggen:
 
-<details>
-<summary><b>Windows</b></summary>
+# <a name="windows"></a>[Windows](#tab/Windows)
 
-1. Wählen Sie **Edge debuggen** oder **Chrome debuggen** aus dem Menü **Ausführen und Debuggen** in der Aktivitätsleiste aus.
+1. Wählen Sie **Edge debuggen** oder **Chrome debuggen** aus der **Ausführen und Debuggen** in der Aktivitätsleiste aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browseroption" border="false":::
 
-1. Wählen Sie **Debuggen starten (F5)** oder **Ausführen** aus, um Ihre Teams-App im Debugmodus auszuführen.
+1. Wählen Sie **Debuggen starten (F5)** oder  **Ausführen** aus, um Ihre Teams-App im Debugmodus auszuführen.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Debugging starten" border="false":::
 
 3. Wählen Sie **Anmelden** bei Ihrem Microsoft 365-Konto aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Anmelden" border="true":::
-
 
    > [!TIP]
    > Sie können **Weitere Informationen** auswählen, um mehr über das Microsoft 365-Entwicklerprogramm zu erfahren. Ihr Standardwebbrowser wird geöffnet, damit Sie sich mit Ihren Anmeldeinformationen bei Ihrem Microsoft 365-Konto anmelden können.
@@ -95,12 +94,9 @@ Führen Sie die folgenden Schritte aus, um Ihre App nach dem Erstellen einer neu
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="Zertifizierungsstelle" border="true":::
 
-Das Toolkit startet je nach Auswahl eine neue Edge- oder Chrome-Browserinstanz und öffnet eine Webseite zum Laden des Teams-Clients.  
+Das Toolkit startet entsprechend Ihrer Auswahl eine neue Edge- oder Chrome-Browserinstanz und öffnet eine Webseite zum Laden des Teams-Clients.  
 
-</details>
-
-<details>
-<summary><b>macOS</b></summary>
+# <a name="macos"></a>[macOS](#tab/macOS)
 
 1. Wählen Sie **Edge debuggen** oder **Chrome debuggen** aus der **Ausführen und Debuggen** in der Aktivitätsleiste aus.
 
@@ -130,16 +126,16 @@ Das Toolkit startet je nach Auswahl eine neue Edge- oder Chrome-Browserinstanz u
 
 Das Toolkit startet je nach Auswahl eine neue Edge- oder Chrome-Browserinstanz und öffnet eine Webseite zum Laden des Teams-Clients.
 
-</details>
+---
 
-#### <a name="2-debug-your-app"></a>2. Debuggen Ihrer App
+### <a name="debug-your-app"></a>Debuggen Ihrer App
 
 Nach dem anfänglichen Einrichtungsprozess startet das Teams-Toolkit die folgenden Prozesse:
 
-a. [Startet App-Dienste](#starts-app-services) </br>
-b. [Startet Debugger](#launches-debuggers)   </br>c. [Lädt die Teams-App quer](#sideloads-the-teams-app)
-        
-#### <a name="starts-app-services"></a>Startet App-Dienste
+<br>
+
+<details>
+<summary><b>Startet App-Dienste</b></summary>
 
 Führt die in `.vscode/tasks.json` definierten Aufgaben wie folgt aus:
 
@@ -153,7 +149,9 @@ In der folgenden Abbildung werden die Aufgabennamen auf der Registerkarte **Ausg
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Startet App-Dienste":::
 
-#### <a name="launches-debuggers"></a>Startet Debugger
+</details>
+<details>
+<summary><b>Startet Debugger</b></summary>
 
 Startet die in `.vscode/launch.json` definierten Debugkonfigurationen wie folgt:
 
@@ -175,17 +173,21 @@ In der folgenden Tabelle sind die Debugkonfigurationsnamen und -typen für das P
 |  Bot- oder Nachrichtenerweiterung  |   **An Bot anfügen** |  pwa-node  |
 |  Azure Functions |  **An Back-End anfügen** |  pwa-node |
 
-#### <a name="sideloads-the-teams-app"></a>Lädt die Teams-App quer
+</details>
+<details>
+<summary><b>Lädt die Teams-App quer</b></summary>
 
-Die Konfiguration **Front-End anfügen** oder **Bot starten** startet eine neue Edge- oder Chrome-Browserinstanz und öffnet eine Webseite zum Laden des Teams-Clients. Nachdem der Teams-Client geladen wurde, lädt Teams die Teams-App quer, die von der in den Startkonfigurationen [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint})definierte Sideload-URL gesteuert wird.  Wenn der Teams-Client im Webbrowser geladen wird, wählen Sie **Hinzufügen** aus, oder wählen Sie einen aus der Dropdownliste gemäß Ihren Anforderungen aus.
+Die Konfiguration **Front-End anfügen** oder **Bot starten** startet eine neue Edge- oder Chrome-Browserinstanz und öffnet eine Webseite zum Laden des Teams-Clients. Nachdem der Teams-Client geladen wurde, lädt Teams die Teams-App quer, die von der in den Startkonfigurationen [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}) definierte URL für den Querladevorgang gesteuert wird.  Wenn der Teams-Client im Webbrowser geladen wird, wählen Sie **Hinzufügen** aus, oder wählen Sie einen aus der Dropdownliste gemäß Ihren Anforderungen aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Lokales Debuggen" border="true":::
 
    Ihre App wird Teams hinzugefügt!
 
+</details>
+
 ## <a name="customize-debug-settings"></a>Anpassen von Debugeinstellungen
 
-Mit dem Teams-Toolkit können Sie die Debugeinstellungen anpassen, um Ihre Registerkarte oder Ihren Bot zu erstellen, indem Sie einige Voraussetzungen deaktivieren:
+Das Teams-Toolkit deaktiviert einige Voraussetzungen und ermöglicht es Ihnen, die Debugeinstellungen anzupassen, um Ihre Registerkarte oder Ihren Bot zu erstellen:
 
 <br>
 
@@ -194,7 +196,7 @@ Mit dem Teams-Toolkit können Sie die Debugeinstellungen anpassen, um Ihre Regis
 
 1. Deaktivieren Sie in Visual Studio Code Einstellungen **Stellen Sie sicher, dass Ngrok installiert und gestartet (ngrok) ist**.
 
-1. Legen Sie die „siteEndpoint“-Konfiguration in `.fx/configs/config.local.json` auf Ihren Endpunkt fest.
+1. Legen Sie `siteEndpoint` Konfiguration in `.fx/configs/config.local.json` auf Ihren Endpunkt fest.
 
 ```json
 {
@@ -255,7 +257,6 @@ Sie können der `.env.teamsfx.local`Datei Umgebungsvariablen für Registerkarte,
 
 <details>
 <summary><b>Teilkomponente debuggen</b></summary>
-
 
 Teams Toolkit nutzt Visual Studio Code Multi-Target-Debugging zum gleichzeitigen Debuggen von Registerkarten, Bots, Nachrichtenerweiterungen und Azure-Funktionen. Sie können `.vscode/launch.json` und `.vscode/tasks.json` aktualisieren, um Teilkomponenten zu debuggen. Wenn Sie die Registerkarte nur in einer Registerkarte plus Bot mit Azure Functions Projekt debuggen möchten, führen Sie die folgenden Schritte aus:
 
