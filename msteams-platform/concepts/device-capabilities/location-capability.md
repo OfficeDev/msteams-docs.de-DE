@@ -6,12 +6,12 @@ keywords: Native Geräteberechtigungen für Standortkartenfunktionen
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: d143cdd0e94664d916bd5eefa7523d92e2af183a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: ff2403331d3d51581be4711fb6fb14fcdb809544
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757171"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033050"
 ---
 # <a name="integrate-location-capabilities"></a>Integration von Standortfunktionen
 
@@ -58,7 +58,7 @@ Sie müssen die folgenden APIs verwenden, um die Standortfunktionen Ihres Gerät
 |[showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) | Zeigt den Standort auf der Karte an. |
 
 > [!NOTE]
-> Die `getLocation()`-API enthält die folgenden [Eingabekonfigurationen](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true), `allowChooseLocation` und `showMap`.<br/> Wenn der Wert von "`allowChooseLocation`" *true* lautet, können die Benutzer einen beliebigen Standort ihrer Wahl auswählen.<br/>  Wenn der Wert *false* lautet, können die Benutzer ihren aktuellen Speicherort nicht ändern.<br/> Wenn der Wert von "`showMap`" *false* lautet, wird der aktuelle Speicherort abgerufen, ohne die Karte anzuzeigen. "`showMap`" wird ignoriert, wenn "`allowChooseLocation`" auf *true* festgelegt ist.
+> Die `getLocation()`-API enthält die folgenden [Eingabekonfigurationen](/javascript/api/@microsoft/teams-js/microsoftteams.location.locationprops), `allowChooseLocation` und `showMap`.<br/> Wenn der Wert von "`allowChooseLocation`" *true* lautet, können die Benutzer einen beliebigen Standort ihrer Wahl auswählen.<br/>  Wenn der Wert *false* lautet, können die Benutzer ihren aktuellen Speicherort nicht ändern.<br/> Wenn der Wert von "`showMap`" *false* lautet, wird der aktuelle Speicherort abgerufen, ohne die Karte anzuzeigen. "`showMap`" wird ignoriert, wenn "`allowChooseLocation`" auf *true* festgelegt ist.
 
 Die folgende Abbildung zeigt die Web-App-Erfahrung der Standortfunktionen:
 

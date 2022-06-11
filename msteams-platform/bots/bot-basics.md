@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: Aktivitätenhandler Framework Bot Karte Zustimmung Kanal Ereignis
-ms.openlocfilehash: 5b03eeaa01231fd070c1e81fc11b9254e10aba91
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 8bf1638274c8d83c8483df13556927d98b4d8cb5
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757430"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032921"
 ---
 # <a name="bot-activity-handlers"></a>Bot-Aktivitätenhandler
 
@@ -24,6 +24,9 @@ Zum Organisieren der Unterhaltungslogik für Ihren Bot wird ein Aktivitätenhand
 Der Teams-Aktivitätenhandler wird vom Aktivitätenhandler des Microsoft Bot Frameworks abgeleitet. Er leitet alle Teams-Aktivitäten weiter, bevor er die Behandlung von nicht Teams-spezifischen Aktivitäten zulässt.
 
 Wenn ein Bot für Teams eine Aktivität empfängt, wird er an die Aktivitätshandler weitergeleitet. Alle Aktivitäten werden über einen Basishandler weitergeleitet, der als Turnhandler bezeichnet wird. Der Turnhandler ruft den erforderlichen Aktivitätenhandler auf, der für die Verarbeitung der empfangenen Aktivitätsart zuständig ist. Der Teams-Bot wird von der Klasse `TeamsActivityHandler` abgeleitet, die von der Klasse `ActivityHandler` des Bot Frameworks abgeleitet wird.
+
+> [!NOTE]
+> Wenn die Verarbeitung der Bot-Aktivität länger als 15 Sekunden dauert, Teams eine Wiederholungsanforderung an den Botendpunkt senden. Daher sehen Sie doppelte Anforderungen in Ihrem Bot.
 
 # <a name="c"></a>[C#](#tab/csharp)
 

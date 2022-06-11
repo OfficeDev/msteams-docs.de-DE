@@ -3,36 +3,36 @@ title: Problembehandlung bei der Authentifizierung für Registerkarten mit SSO i
 description: Problembehandlung bei der SSO-Authentifizierung in Teams und deren Verwendung auf Registerkarten
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Fragen zu Microsoft Azure Active Directory (Azure AD)-SSO-Fehlern auf den Registerkarten der Teams-Authentifizierung
-ms.openlocfilehash: 474f1050642124d2fa34e51417dcd14c9937f033
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: Fragen zu SSO-Fehlern bei Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD)
+ms.openlocfilehash: 74246dce24869bb4645045950de01c179ba129d8
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887997"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032809"
 ---
 # <a name="troubleshooting-sso-authentication-in-teams"></a>Problembehandlung bei der SSO-Authentifizierung in Teams
 
 Hier ist eine Liste von Problemen und Fragen zu SSO und wie Sie diese beheben können.
 <br>
 
-## <a name="support-for-microsoft-graph"></a>Unterstützung für Microsoft Graph
+## <a name="support-for-microsoft-graph"></a>Support für Microsoft Graph
 
 <br>
 <details>
-<summary>1. Funktioniert die Graph-API in Postman?</summary>
+<summary>1. Funktioniert Graph-API in Postman?</summary>
 <br>
-Sie können die Microsoft Graph Postman-Auflistung mit Microsoft Graph-APIs verwenden.
+Sie können die Microsoft Graph Postman-Sammlung mit Microsoft Graph-APIs verwenden.
 
 Weitere Informationen finden Sie unter [Verwenden von Postman mit einer Microsoft Graph-API](/graph/use-postman).
 </details>
 <br>
 <details>
-<summary>2. Funktioniert die Graph-API im Microsoft Graph-Explorer?</summary>
+<summary>2. Funktioniert Graph-API im Microsoft Graph Explorer?</summary>
 <br>
-Ja, die Graph-API funktioniert im Microsoft Graph-Explorer.
+Ja, Graph-API funktioniert im Microsoft Graph Explorer.
 
-Weitere Informationen finden Sie im [Graph-Explorer](https://developer.microsoft.com/graph/graph-explorer).
+Weitere Informationen finden Sie [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer).
 
 </details>
 <br>
@@ -47,7 +47,7 @@ Wenn Azure AD eine Anforderung für den Zugriff auf eine Microsoft Graph-Ressour
 
 Ihr Code muss dem Client (z. B. im Textkörper einer 403 Forbidden-Antwort) mitteilen, wie der Fehler behandelt werden soll:
 
-- Wenn die Registerkarten-App Microsoft Graph-Bereiche benötigt, für die nur ein Administrator seine Zustimmung geben kann, sollte ihr Code einen Fehler auslösen.
+- Wenn die Registerkarten-App Microsoft Graph Bereiche benötigt, für die nur ein Administrator zustimmen kann, sollte Ihr Code einen Fehler generieren.
 - Wenn die einzigen Bereiche, die benötigt werden, vom Benutzer zugewiesen werden können, sollte Ihr Code auf ein alternatives System zur Benutzerauthentifizierung zurückgreifen.
 
 </details>
@@ -72,7 +72,7 @@ Der serverseitige Code sollte eine 403 Forbidden-Antwort an den Client senden, u
 Sie können diesen Fehler in einem der beiden Szenarien erhalten:
 
 1. Die benutzerdefinierte Domäne wird Azure AD nicht hinzugefügt. Um Azure AD eine benutzerdefinierte Domäne hinzuzufügen und zu registrieren, folgen [Sie dem Hinzufügen eines benutzerdefinierten Domänennamens zum Azure AD-Verfahren](/azure/active-directory/fundamentals/add-custom-domain) , und führen Sie dann die Schritte zum [erneuten Konfigurieren des Zugriffstokenbereichs](tab-sso-register-aad.md#configure-scope-for-access-token) aus.
-1. Sie sind nicht mit Administratoranmeldeinformationen im Microsoft 365-Mandanten angemeldet. Melden Sie sich bei Microsoft 365 als Administrator an.
+1. Sie sind nicht mit Administratoranmeldeinformationen im Microsoft 365 Mandanten angemeldet. Melden Sie sich bei Microsoft 365 als Administrator an.
 
 </details>
 <br>
@@ -97,20 +97,20 @@ Weitere Informationen zum Anwendungs-ID-URI finden Sie unter [So machen Sie eine
 <details>
 <summary>7. Fehler: Allgemeiner Fehler beim Ausführen der Registerkarten-App.</summary>
 <br>
-Ein allgemeiner Fehler kann angezeigt werden, wenn eine oder mehrere der in Azure AD vorgenommenen App-Konfigurationen falsch sind. Um diesen Fehler zu beheben, überprüfen Sie, ob die in Ihrem Code und Teams-Manifest konfigurierten App-Details den Werten in Azure AD entsprechen.
+Ein allgemeiner Fehler kann angezeigt werden, wenn eine oder mehrere der in Azure AD vorgenommenen App-Konfigurationen falsch sind. Um diesen Fehler zu beheben, überprüfen Sie, ob die in Ihrem Code und Teams Manifest konfigurierten App-Details mit den Werten in Azure AD übereinstimmen.
 
 Die folgende Abbildung zeigt ein Beispiel für die in Azure AD konfigurierten App-Details.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="App-Konfigurationswerte in Azure AD" border="false":::
 
-Überprüfen Sie, ob die folgenden Werte zwischen Azure AD, clientseitigem Code und dem App-Manifest von Teams übereinstimmen:
+Überprüfen Sie, ob die folgenden Werte zwischen Azure AD, clientseitigem Code und Teams App-Manifest übereinstimmen:
 
-- **App-ID**: Die App-ID, die Sie in Azure AD generiert haben, sollte im Code und in der Teams-Manifestdatei identisch sein. Überprüfen Sie, ob die App-ID im Teams-Manifest der **Anwendungs-ID (Client-ID)** in Azure AD entspricht.
+- **App-ID**: Die App-ID, die Sie in Azure AD generiert haben, sollte im Code und in Teams Manifestdatei identisch sein. Überprüfen Sie die App-ID in Teams Manifest mit der **Anwendungs-ID (Client-ID)** in Azure AD übereinstimmt.
 
 - **Geheimer App-Schlüssel**: Der im Back-End Ihrer App konfigurierte App-Schlüssel sollte mit den **Clientanmeldeinformationen** in Azure AD übereinstimmen.
     Sie sollten auch überprüfen, ob der geheime Clientschlüssel abgelaufen ist.
 
-- **Anwendungs-ID-URI**: Der App-ID-URI im Code und in der Manifestdatei der Teams-App sollte mit dem **Anwendungs-ID-URI** in Azure AD übereinstimmen.
+- **Anwendungs-ID-URI**: Der App-ID-URI im Code und in Teams App-Manifestdatei sollte mit dem **Anwendungs-ID-URI** in Azure AD übereinstimmen.
 
 - **App-Berechtigungen**: Überprüfen Sie, ob die berechtigungen, die Sie im Bereich definiert haben, ihren App-Anforderungen entsprechen. Wenn ja, überprüfen Sie, ob sie dem Benutzer im Zugriffstoken gewährt wurden.
 

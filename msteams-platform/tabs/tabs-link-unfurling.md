@@ -5,12 +5,12 @@ description: Erfahren Sie Näheres über die Vorschaugenerierung für Links, das
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 08df4cfccf6d9fabad1e07736796d6728d7c527c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2471a375960e47e31c6f35966a9ad2fba7007e99
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756737"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033036"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 
@@ -87,7 +87,7 @@ Im Folgenden sehen Sie den Ablauf zum Aufrufen der Bühnenansicht:
 * Der Bot antwortet mit einem `200`-Code.
 
 > [!NOTE]
-> Auf mobilen Clients von Teams wird beim Aufrufen von Stage View für Apps, die über den [Teams Store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) vertrieben werden und nicht für Mobilgeräte optimiert sind, der Standard-Webbrowser des Geräts geöffnet. Der Browser öffnet die im `websiteUrl`Parameter des `TabInfo`Objekts angegebene URL.
+> Auf mobilen Clients von Teams wird beim Aufrufen von Stage View für Apps, die über den [Teams Store](/microsoftteams/platform/concepts/deploy-and-publish/apps-publish-overview) vertrieben werden und nicht für Mobilgeräte optimiert sind, der Standard-Webbrowser des Geräts geöffnet. Der Browser öffnet die im `websiteUrl`Parameter des `TabInfo`Objekts angegebene URL.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Aufrufen der Bühnenansicht über einen Deep-Link
 

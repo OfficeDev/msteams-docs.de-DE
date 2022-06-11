@@ -5,34 +5,34 @@ description: Erfahren Sie, wie Sie in einer Microsoft Teams-App mit App-Manifest
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 09b8447e68a07e98293409e6c371a301da3017d0
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: c5f89847e374f6e7e2e15409f4a9fe019701788d
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297184"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032973"
 ---
 # <a name="link-unfurling"></a>Verbreiten von Links
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-In diesem Dokument erfahren Sie, wie Sie Ihrem App-Manifest das Verbreiten von Links mithilfe von App Studio und manuell hinzufügen können. Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Die `invoke`-Aktivität enthält die vollständige URL, die in den Bereich zum Verfassen von Nachrichten eingefügt wurde, und Sie können mit einer Karte antworten, die der Benutzer öffnen kann, die zusätzliche Informationen oder Aktionen bereitstellt. Dies funktioniert ähnlich wie ein Suchbefehl, wobei die URL als Suchbegriff dient.
+In diesem Dokument erfahren Sie, wie Sie ihrem App-Manifest mit App Studio oder manuell die Verbreitung von Links hinzufügen. Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Enthält `invoke` die vollständige URL, die in den Nachrichtenbereich zum Verfassen eingefügt wurde. Sie können mit einer Karte antworten, die der Benutzer für zusätzliche Informationen oder Aktionen ausblenden kann. Dies funktioniert als Suchbefehl mit der URL als Suchbegriff.
 
 > [!NOTE]
 >
 > * Derzeit wird das Aufheben der Verbreitung von Links auf mobilen Clients nicht unterstützt.
 > * Das Ergebnis der Verbreitung von Links wird 30 Minuten lang zwischengespeichert.
 
-Die Azure DevOps Nachrichtenerweiterung verwendet die Verbreitung von Links, um nach URLs zu suchen, die in den Bereich für das Verfassen von Nachrichten eingefügt werden, der auf ein Arbeitselement verweist. In der folgenden Abbildung hat ein Benutzer eine URL für ein Arbeitselement in Azure DevOps eingefügt, die die Nachrichtenerweiterung in eine Karte aufgelöst hat:
+Die Azure DevOps Nachrichtenerweiterung verwendet die Verbreitung von Links, um nach URLs zu suchen, die in den Bereich für das Verfassen von Nachrichten eingefügt werden, der auf ein Arbeitselement verweist. In der folgenden Abbildung hat ein Benutzer eine URL für ein Element in Azure DevOps eingefügt, dass die Nachrichtenerweiterung in eine Karte aufgelöst wurde:
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Beispiel der Verbreitung von Links":::
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Hinzufügen einer Verbreitung von Links zum App-Manifest
 
-Um Ihrem App-Manifest das Verbreiten von Links hinzuzufügen, fügen Sie dem `composeExtensions`-Abschnitt des JSON-Codes Ihres App-Manifests ein neues `messageHandlers`-Array hinzu. Sie können das Array entweder mithilfe von App Studio oder manuell hinzufügen. Domain-Auflistungen können Platzhalter enthalten, zum Beispiel `*.example.com`. Dies entspricht genau einem Segment der Domäne; Wenn Sie übereinstimmen müssen, verwenden `a.b.example.com` Sie `*.*.example.com`.
+Um Ihrem App-Manifest das Verbreiten von Links hinzuzufügen, fügen Sie dem `composeExtensions`-Abschnitt des JSON-Codes Ihres App-Manifests ein neues `messageHandlers`-Array hinzu. Sie können das Array mithilfe von App Studio oder manuell hinzufügen. Domain-Auflistungen können Platzhalter enthalten, zum Beispiel `*.example.com`. Dies entspricht genau einem Segment der Domäne; Wenn Sie übereinstimmen müssen, verwenden `a.b.example.com` Sie `*.*.example.com`.
 
 > [!NOTE]
-> Fügen Sie keine Domänen hinzu, die nicht Ihrer Kontrolle liegen, weder direkt noch über Platzhalter. Beispielsweise ist `yourapp.onmicrosoft.com` gültig, `*.onmicrosoft.com` gilt jedoch nicht. Außerdem sind die Domänen der obersten Ebene nicht zulässig. Beispielsweise `*.com`, `*.org`.
+> Fügen Sie keine Domänen hinzu, die sich weder direkt noch über Platzhalter in Ihrem Steuerelement befinden. Beispielsweise ist `yourapp.onmicrosoft.com` gültig, `*.onmicrosoft.com` gilt jedoch nicht. Die Domänen der obersten Ebene sind verboten, `*.com`z. B. . `*.org`
 
 ### <a name="add-link-unfurling-using-app-studio"></a>Hinzufügen des Verbreitens von Links mit App Studio
 
@@ -43,6 +43,9 @@ Um Ihrem App-Manifest das Verbreiten von Links hinzuzufügen, fügen Sie dem `co
     :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="Abschnitt „Nachrichtenhandler“ in App Studio":::
 
 ### <a name="add-link-unfurling-manually"></a>Verbreitung von Links manuell hinzufügen
+
+> [!NOTE]
+> Wenn die Authentifizierung über Azure AD hinzugefügt wird, [lösen Sie Links in Teams mithilfe von Bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4) aus.
 
 Damit Ihre Nachrichtenerweiterung mit Links interagieren kann, müssen Sie zuerst das `messageHandlers`-Array zu Ihrem App-Manifest hinzufügen. Im folgenden Beispiel wird erläutert, wie Sie das Verbreiten von Links manuell hinzufügen:
 

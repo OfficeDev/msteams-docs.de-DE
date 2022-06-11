@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: Befehlsmenü verfassen Nachricht Unterhaltung @erwähnen
-ms.openlocfilehash: 6d61b7566dd0dcb25fae94bf43f2f19bd219e9b0
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: 524ecb9ee829292487cc0e6c45604d4c241967c8
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938940"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032963"
 ---
 # <a name="bot-command-menus"></a>Bot-Befehlsmenüs
 
@@ -21,11 +21,11 @@ Um eine Reihe von Kernbefehlen zu definieren, auf die Ihr Bot reagieren kann, k�
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-![Befehlsmenü „Bot“](./conversations/media/bot-menu-sample.png)
+:::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Bot-Befehlsmenü":::
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
-![Befehlsmenü „Mobiler Bot“](./conversations/media/mobile-bot-menu-sample.png)
+:::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="Mobile-bot-command-menu":::
 
 * * *
 
@@ -40,11 +40,11 @@ Eine Voraussetzung zum Erstellen eines Befehlsmenüs für Ihren Bot besteht dari
 **So erstellen Sie mit App Studio ein Befehlsmenü für Ihren Bot**
 
 1. Öffnen Sie Teams, und wählen Sie im linken Bereich **Apps** aus. Suchen Sie auf der Seite **Apps** nach **App Studio**, und wählen Sie **Öffnen** aus.
-    
+
    > [!WARNING]
    > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird bis zum 30. Juni 2022 eingestellt.
 
-   :::image type="content" source="/media/AppStudio.png" alt-text="App Studio installieren"lightbox="media/AppStudio.png"border="true":::
+   :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 
 2. Wählen Sie im **App Studio** die Registerkarte **Manifesteditor** aus. Wenn Sie nicht über ein vorhandenes App-Paket verfügen, können Sie eine App erstellen oder eine vorhandene importieren. Weitere Informationen finden Sie unter [Aktualisieren eines App-Pakets](~/get-started/deploy-csharp-app-studio.md).
 
@@ -52,7 +52,7 @@ Eine Voraussetzung zum Erstellen eines Befehlsmenüs für Ihren Bot besteht dari
 
 4. Wählen Sie im rechten Bereich des **Manifesteditors** und im Abschnitt **Befehle** die Option **Hinzufügen** aus. Der Bildschirm **Neuer Befehl** wird angezeigt.
 
-    :::image type="content" source="/media/AppStudio-CommandMenu-Add.png" alt-text="App-Paketdatei auswählen"lightbox="/media/AppStudio-CommandMenu-Add.png"border="true":::
+   :::image type="content" source="media/AppStudio-CommandMenu-Add.png" alt-text="App-Paketdatei auswählen" lightbox="media/AppStudio-CommandMenu-Add.png "border="true":::
 
 5. Geben Sie den **Befehlstext** ein, der als Befehlsmenü für Ihren Bot angezeigt werden muss.
 
@@ -60,7 +60,7 @@ Eine Voraussetzung zum Erstellen eines Befehlsmenüs für Ihren Bot besteht dari
 
 7. Aktivieren Sie die Kontrollkästchen **Bereich**, um auszuwählen, wo dieses Befehlsmenü angezeigt werden muss, und wählen Sie **Speichern** aus.
 
-:::image type="content" source="/media/AppStudio-NewCommandMenu.png" alt-text="App Studio-Menüschaltfläche „Neue Befehle“"lightbox="/media/AppStudio-NewCommandMenu.png"border="true":::
+   :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="App Studio-Menüschaltfläche &quot;Neue Befehle&quot; "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Erstellen eines Befehlsmenüs für Ihren Bot durch Bearbeiten von Manifest.json
 

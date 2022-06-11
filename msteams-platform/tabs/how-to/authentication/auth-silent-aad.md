@@ -4,24 +4,24 @@ description: Beschreibt die automatische Authentifizierung, einmaliges Anmelden,
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams-Authentifizierung – SSO– automatische Azure AD-Registerkarte
-ms.openlocfilehash: 8cac439b73884703324d45506bce3600f3084031
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 50d5d5327ee31286c7124f23b8fd4c8b07c71639
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887793"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033022"
 ---
 # <a name="silent-authentication"></a>Automatische Authentifizierung
 
 > [!IMPORTANT]
-> Der Support und die Entwicklung von Microsoft für die Active Directory-Authentifizierungsbibliothek (ADAL) einschließlich der Sicherheitsfixes endet am **30. Juni 2022**. Aktualisieren Sie Ihre Anwendungen so, dass Sie die Microsoft-Authentifizierungsbibliothek (MSAL) verwenden, um weiterhin Support zu erhalten. Siehe [Migrieren von Anwendungen zur Microsoft-Authentifizierungsbibliothek (MSAL).](/azure/active-directory/develop/msal-migration)
+> Der Support und die Entwicklung von Microsoft für die Active Directory-Authentifizierungsbibliothek (ADAL) einschließlich der Sicherheitsfixes endet am **30. Juni 2022**. Um weiterhin Support zu erhalten, aktualisieren Sie Ihre Anwendungen so, dass microsoft Authentication Library (MSAL) verwendet wird. Siehe [Migrieren von Anwendungen zur Microsoft-Authentifizierungsbibliothek (MSAL).](/azure/active-directory/develop/msal-migration)
 
 > [!NOTE]
 > Damit die Authentifizierung für Ihre Registerkarte auf mobilen Clients funktioniert, stellen Sie sicher, dass Sie Teams JavaScript SDK Version 1.4.1 oder höher verwenden.
 
 Die automatische Authentifizierung in Azure AD minimiert, wie oft ein Benutzer seine Anmeldeinformationen eingibt, indem das Authentifizierungstoken automatisch aktualisiert wird. Eine echte Unterstützung für einmaliges Anmelden finden Sie in der [SSO-Dokumentation](~/tabs/how-to/authentication/tab-sso-overview.md).
 
-Verwenden Sie die [Azure AD-Authentifizierungsbibliothek](/azure/active-directory/develop/active-directory-authentication-libraries) für JavaScript, um ein Zugriffstoken für Microsoft Azure Active Directory (Azure AD) im Hintergrund abzurufen, um den Code clientseitig zu verwalten. Wenn sich der Benutzer kürzlich angemeldet hat, wird kein Popupdialogfeld angezeigt.
+Verwenden Sie die [Azure AD-Authentifizierungsbibliothek](/azure/active-directory/develop/active-directory-authentication-libraries) für JavaScript, um ein Microsoft Azure Active Directory (Azure AD)-Zugriffstoken im Hintergrund abzurufen, um den Code clientseitig zu verwalten. Wenn sich der Benutzer kürzlich angemeldet hat, wird kein Popupdialogfeld angezeigt.
 
 Die Active Directory-Authentifizierungsbibliothek ist zwar für AngularJS-Anwendungen optimiert, funktioniert aber auch mit JavaScript-Einzelseitenanwendungen (Single-Page Applications, SPA).
 
@@ -34,7 +34,7 @@ Die Active Directory-Authentifizierungsbibliothek erstellt einen ausgeblendeten 
 
 ## <a name="how-to-do-silent-authentication"></a>Durchführen der automatischen Authentifizierung
 
-Der Code in diesem Artikel stammt aus der Teams-Beispiel-App, bei der es sich um einen [Beispielknoten für die Teams-Authentifizierung](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs) handelt.
+Der Code in diesem Artikel stammt aus der Teams Beispiel-App, die [Teams Authentifizierungsbeispielknoten](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs) ist.
 
 [Initiieren Sie die konfigurierbare Registerkarte "Automatische und einfache Authentifizierung" mitHilfe von Azure AD](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) , und folgen Sie den Anweisungen, um das Beispiel auf Ihrem lokalen Computer auszuführen.
 
@@ -130,7 +130,7 @@ if (authContext.isCallback(window.location.hash)) {
 Verwenden Sie den folgenden Code, um den Abmeldungsfluss in der Azure AD-Authentifizierung zu behandeln:
 
 > [!NOTE]
-> Wenn Sie sich von der Registerkarte oder dem Bot von Teams abmelden, wird die aktuelle Sitzung gelöscht.
+> Wenn Sie sich von Teams Registerkarte oder bot abmelden, wird die aktuelle Sitzung gelöscht.
 
 ```javascript
 function logout() {
@@ -139,7 +139,7 @@ window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Konfigurieren von Identitätsanbietern für die Verwendung von Azure AD](../../../concepts/authentication/configure-identity-provider.md)
 * [Informationen zur Microsoft-Authentifizierungsbibliothek (MSAL)](/azure/active-directory/develop/msal-overview)

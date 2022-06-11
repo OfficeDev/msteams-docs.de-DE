@@ -6,12 +6,12 @@ keywords: Teams-Office365-Connector
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 3258e6b08041abbfcd3e0b9a4365d6a31f884e0b
-ms.sourcegitcommit: 09ee0305b827ad6d1368d892db3824c5dbad886f
+ms.openlocfilehash: 2d711821d2b76b4cc2fd93a6d28cd5061129222e
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65759662"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032952"
 ---
 # <a name="create-office-365-connectors"></a>Erstellen von Office 365-Connectors
 
@@ -127,7 +127,7 @@ Wenn Sie die Anmeldung in Ihre eingebettete Seite integrieren möchten, um den B
 #### <a name="getsettings-response-properties"></a>Eigenschaften der `GetSettings`-Antwort
 
 >[!NOTE]
->Die vom `getSettings`-Aufruf zurückgegebenen Parameter unterscheiden sich, wenn Sie diese Methode von einer Registerkarte aus aufrufen, von den in den [js-Einstellungen](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true) dokumentierten Parametern.
+>Die vom `getSettings`-Aufruf zurückgegebenen Parameter unterscheiden sich, wenn Sie diese Methode von einer Registerkarte aus aufrufen, von den in den [js-Einstellungen](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings) dokumentierten Parametern.
 
 Die folgende Tabelle enthält die Parameter und die Details zu `GetSetting`-Antworteigenschaften:
 

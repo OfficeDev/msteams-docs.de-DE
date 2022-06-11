@@ -5,12 +5,12 @@ keywords: Suche nach Nachrichtenerweiterungen für Teams-Nachrichtenerweiterunge
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: 13915bc3e67f6d5789fe9e977f6579a05a010542
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: dec73b248f6a71f078eff6a956c7875ef3507227
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104399"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032942"
 ---
 # <a name="search-with-message-extensions"></a>Suchen mit Nachrichtenerweiterungen
 
@@ -130,11 +130,11 @@ Zusätzlich zu den Standard-Bot-Aktivitätseigenschaften enthält die Nutzlast d
 |Eigenschaftenname|Zweck|
 |---|---|
 |`type`| Art der Anforderung; muss .`invoke` |
-|`name`| Typ des Befehls, der für Ihren Dienst ausgegeben wird. Derzeit werden die folgenden Typen unterstützt: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
+|`name`| Art des Befehls, der für Ihren Dienst ausgegeben wird. Derzeit werden die folgenden Typen unterstützt: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
 |`from.id`| ID des Benutzers, der die Anforderung gesendet hat. |
-|`from.name`| Der Name des Benutzers, der die Anforderung gesendet hat. |
-|`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
-|`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD) Mandanten-ID. |
+|`from.name`| Name des Benutzers, der die Anforderung gesendet hat. |
+|`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD)-Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
+|`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD)-Mandanten-ID. |
 |`channelData.channel.id`| Kanal-ID (wenn die Anforderung in einem Kanal erfolgt ist). |
 |`channelData.team.id`| Team-ID (wenn die Anforderung in einem Kanal erfolgt ist). |
 |`clientInfo`|Optionale Metadaten zu der Clientsoftware, die zum Senden der Nachricht eines Benutzers verwendet wird. Die Entität kann zwei Eigenschaften enthalten:<br>Das `country` Feld enthält den vom Benutzer erkannten Speicherort.<br>Das `platform` Feld beschreibt die Messaging-Clientplattform. <br>Weitere Informationen *finden Sie unter* [Nicht-IRI-Entitätstypen – clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
@@ -197,7 +197,7 @@ Die Anforderungsparameter selbst befinden sich im Wertobjekt, das die folgenden 
 
 Alternativ (oder zusätzlich) zum Durchsuchen Ihres externen Diensts können Sie eine URL verwenden, die in das Feld zum Verfassen von Nachrichten eingefügt wurde, um Ihren Dienst abzufragen und eine Karte zurückzugeben. Im Screenshot unten hat ein Benutzer eine URL für ein Arbeitselement in Azure DevOps eingefügt, das die Nachrichtenerweiterung in eine Karte aufgelöst hat.
 
-![Beispiel für die Verbreitung von Links](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+![Beispiel der Verbreitung von Links](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
 Damit Ihre Nachrichtenerweiterung auf diese Weise mit Links interagiert, müssen Sie zuerst das `messageHandlers` Array zu Ihrem App-Manifest hinzufügen, wie im folgenden Beispiel gezeigt:
 
@@ -242,7 +242,7 @@ Ihr Dienst sollte mit den Ergebnissen antworten, die der Benutzerabfrage entspre
 |Eigenschaftenname|Zweck|
 |---|---|
 |`composeExtension`|Antwortumschlag der obersten Ebene.|
-|`composeExtension.type`|Antworttyp. Die folgenden Typen werden unterstützt: <br>`result`: Zeigt eine Liste der Suchergebnisse an. <br>`auth`: fordert den Benutzer auf, sich zu authentifizieren <br>`config`: fordert den Benutzer auf, die Nachrichtenerweiterung einzurichten. <br>`message`: zeigt eine Nur-Text-Nachricht an. |
+|`composeExtension.type`|Antworttyp. Die folgenden Typen werden unterstützt: <br>`result`: Zeigt eine Liste der Suchergebnisse an. <br>`auth`: Fordert den Benutzer auf, sich zu authentifizieren <br>`config`: Fordert den Benutzer auf, die Nachrichtenerweiterung einzurichten. <br>`message`: zeigt eine Nur-Text-Nachricht an. |
 |`composeExtension.attachmentLayout`|Gibt das Layout der Anlagen an. Wird für Antworten vom Typ `result`verwendet. <br>Derzeit werden die folgenden Typen unterstützt: <br>`list`: eine Liste von Kartenobjekten, die Miniaturansichten, Titel und Textfelder enthalten <br>`grid`: Ein Raster mit Miniaturansichten |
 |`composeExtension.attachments`|Array gültiger Anlagenobjekte. Wird für Antworten vom Typ `result`verwendet. <br>Derzeit werden die folgenden Typen unterstützt: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Vorgeschlagene Aktionen. Wird für Antworten vom Typ `auth` oder `config`verwendet. |
@@ -435,7 +435,7 @@ Die Standardabfrage hat dieselbe Struktur wie jede normale Benutzerabfrage, mit 
 
 ## <a name="identify-the-user"></a>Identifizieren des Benutzers
 
-Jede Anforderung an Ihre Dienste enthält die verschleierte ID des Benutzers, der die Anforderung ausgeführt hat, sowie den Anzeigenamen und die Microsoft Azure Active Directory (Azure AD) Objekt-ID des Benutzers.
+Jede Anforderung an Ihre Dienste enthält die verschleierte ID des Benutzers, der die Anforderung ausgeführt hat, sowie den Anzeigenamen und die Microsoft Azure Active Directory (Azure AD)-Objekt-ID des Benutzers.
 
 ```json
 "from": {
@@ -445,7 +445,7 @@ Jede Anforderung an Ihre Dienste enthält die verschleierte ID des Benutzers, de
 },
 ```
 
-Die `id` Werte und `aadObjectId` die Werte entsprechen garantiert dem des authentifizierten Teams Benutzers. Sie können als Schlüssel verwendet werden, um Anmeldeinformationen oder einen zwischengespeicherten Zustand in Ihrem Dienst nachzuschlagen. Darüber hinaus enthält jede Anforderung die Microsoft Azure Active Directory (Azure AD) Mandanten-ID des Benutzers, die verwendet werden kann, um die Organisation des Benutzers zu identifizieren. Falls zutreffend, enthält die Anforderung auch die Team- und Kanal-IDs, von denen die Anforderung stammt.
+Die `id` Werte und `aadObjectId` die Werte entsprechen garantiert dem des authentifizierten Teams Benutzers. Sie können als Schlüssel verwendet werden, um Anmeldeinformationen oder einen zwischengespeicherten Zustand in Ihrem Dienst nachzuschlagen. Darüber hinaus enthält jede Anforderung die Microsoft Azure Active Directory (Azure AD)-Mandanten-ID des Benutzers, die verwendet werden kann, um die Organisation des Benutzers zu identifizieren. Falls zutreffend, enthält die Anforderung auch die Team- und Kanal-IDs, von denen die Anforderung stammt.
 
 ## <a name="authentication"></a>Authentifizierung
 
@@ -460,11 +460,11 @@ Die Reihenfolge lautet wie folgt:
 5. Nachdem sich der Benutzer angemeldet hat, sollten Sie das Fenster schließen und einen "Authentifizierungscode" an den Teams-Client senden.
 6. Der Teams-Client gibt dann die Abfrage an Ihren Dienst erneut, der den in Schritt 5 übergebenen Authentifizierungscode enthält.
 
-Ihr Dienst sollte überprüfen, ob der in Schritt 6 empfangene Authentifizierungscode mit dem aus Schritt 5 übereinstimmt. Dadurch wird sichergestellt, dass ein böswilliger Benutzer nicht versucht, den Anmeldefluss zu spoofieren oder zu kompromittieren. Dadurch wird die Schleife "geschlossen", um die Sequenz der sicheren Authentifizierung abzuschließen.
+Ihr Dienst sollte überprüfen, ob der in Schritt 6 empfangene Authentifizierungscode mit dem aus Schritt 5 übereinstimmt. Dadurch wird sichergestellt, dass ein böswilliger Benutzer nicht versucht, den Anmeldefluss zu spoofieren oder zu kompromittieren. Dies wird effektiv „die Schleife schließen“, um die sichere Authentifizierungssequenz abzuschließen.
 
 ### <a name="respond-with-a-sign-in-action"></a>Antworten mit einer Anmeldeaktion
 
-Um einen nicht authentifizierten Benutzer zur Anmeldung aufzufordern, antworten Sie mit einer vorgeschlagenen Aktion des Typs `openUrl` , der die Authentifizierungs-URL enthält.
+Um einen nicht authentifizierten Benutzer zur Anmeldung aufzufordern, antworten Sie mit einer vorgeschlagenen Aktion vom Typ `openUrl`, welche die Authentifizierungs-URL enthält.
 
 #### <a name="response-example-for-a-sign-in-action"></a>Antwortbeispiel für eine Anmeldeaktion
 
@@ -486,24 +486,24 @@ Um einen nicht authentifizierten Benutzer zur Anmeldung aufzufordern, antworten 
 ```
 
 > [!NOTE]
-> Damit die Anmeldeumgebung in einem Teams-Popup gehostet werden kann, muss sich der Domänenteil der URL in der Liste der gültigen Domänen Ihrer App befinden. Weitere Informationen finden Sie unter ["validDomains](~/resources/schema/manifest-schema.md#validdomains) " im Manifestschema.
+> Damit die Anmeldeumgebung in einem Teams-Popup gehostet werden kann, muss sich der Domänenteil der URL in der Liste der gültigen Domänen Ihrer App befinden. Weitere Informationen finden Sie unter [validDomains](~/resources/schema/manifest-schema.md#validdomains) im Manifestschema.
 
 ### <a name="start-the-sign-in-flow"></a>Starten des Anmeldeflusses
 
-Ihre Anmeldeerfahrung sollte reaktionsfähig sein und in ein Popupfenster passen. Es sollte in das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client) integriert werden, das die Nachrichtenübergabe verwendet.
+Ihre Anmeldeerfahrung sollte reaktionsfähig sein und in ein Popupfenster passen. Sie sollte in das [Microsoft Teams JavaScript-Client SDK](/javascript/api/overview/msteams-client) integriert werden, das die Nachrichtenübergabe verwendet.
 
-Wie bei anderen eingebetteten Umgebungen, die innerhalb Microsoft Teams ausgeführt werden, muss Ihr Code im Fenster zuerst aufgerufen `microsoftTeams.initialize()`werden. Wenn Ihr Code einen OAuth-Fluss ausführt, können Sie die Teams Benutzer-ID in Ihr Fenster übergeben, die sie dann an die OAuth-Anmelde-URL übergeben kann.
+Wie bei anderen eingebetteten Erfahrungen, die innerhalb von Microsoft Teams ausgeführt werden, muss Ihr Code im Fenster zuerst `microsoftTeams.initialize()` aufrufen. Wenn Ihr Code einen OAuth-Fluss ausführt, können Sie die Teams Benutzer-ID in Ihr Fenster übergeben, die sie dann an die OAuth-Anmelde-URL übergeben kann.
 
 ### <a name="complete-the-sign-in-flow"></a>Abschließen des Anmeldeflusses
 
 Wenn die Anmeldeanforderung abgeschlossen ist und zurück zu Ihrer Seite umgeleitet wird, sollte sie die folgenden Schritte ausführen:
 
 1. Generieren Sie einen Sicherheitscode. (Dies kann eine Zufallszahl sein.) Sie müssen diesen Code in Ihrem Dienst zusammen mit den Anmeldeinformationen zwischenspeichern, die über den Anmeldeablauf abgerufen wurden, z. B. OAuth 2.0-Token.
-2. Rufen Sie `microsoftTeams.authentication.notifySuccess` den Sicherheitscode auf, und übergeben Sie ihn.
+2. Rufen Sie `microsoftTeams.authentication.notifySuccess` auf, und übergeben Sie den Sicherheitscode.
 
 An diesem Punkt wird das Fenster geschlossen, und die Steuerung wird an den Teams Client übergeben. Der Client kann jetzt die ursprüngliche Benutzerabfrage zusammen mit dem Sicherheitscode in der `state` Eigenschaft neu erstellen. Ihr Code kann den Sicherheitscode verwenden, um die zuvor gespeicherten Anmeldeinformationen nachzuschlagen, um die Authentifizierungssequenz abzuschließen und dann die Benutzeranforderung abzuschließen.
 
-#### <a name="reissued-request-example"></a>Beispiel für eine erneute Anforderung
+#### <a name="reissued-request-example"></a>Beispiel für neu ausgestellte Anforderung
 
 ```json
 {
@@ -658,6 +658,6 @@ const app = new App();
 app.run();
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Bot Framework-Beispiele](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
