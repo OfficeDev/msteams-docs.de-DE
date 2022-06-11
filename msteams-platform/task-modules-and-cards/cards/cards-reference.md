@@ -4,12 +4,12 @@ description: Beschreibt alle für Bots in Teams verfügbaren Karten und Kartenak
 ms.localizationpriority: high
 keywords: Referenz zu Bots-Karten
 ms.topic: reference
-ms.openlocfilehash: 33df4c45aa613ec79c4380850043d373f2d5863d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 56dc77dfbb9d7d67d5846db13eca7351636814af
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757199"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032990"
 ---
 # <a name="types-of-cards"></a>Kartentypen
 
@@ -21,13 +21,15 @@ Bevor Sie die verschiedenen Kartentypen identifizieren, sollten Sie wissen, wie 
 
 So erstellen Sie eine Hero-, Miniaturansichts- oder adaptive Karte in App Studio:
 
-1. Wechseln Sie von Teams zu **App Studio**.
-1. Wählen Sie den **Karteneditor** aus.
-1. Wählen Sie **Neue Karte erstellen** aus.
-1. Wählen Sie **Erstellen** aus, um eine **Hero-Karte**, **Miniaturansichtskarte** oder **Adaptive Karte** zu erstellen. Die Details zu den Metadaten, die Schaltflächen und die Beispiele für json, csharp und node-Code werden für diese Karte angezeigt.
+1. Wechseln Sie zum [Entwicklerportal für Teams](https://dev.teams.microsoft.com/home).
+1. Wählen Sie **Adaptive Karten entwerfen und erstellen** aus.
+1. Wählen Sie **Neue Karte** aus.
+1. Geben Sie einen Kartennamen ein, und wählen Sie **Speichern** aus.
+1. Wählen Sie eine der Karten aus **Hero-Karte**, **Miniaturansichtskarte** oder **Adaptive Karte** aus.
 
-    :::image type="content" source="../../assets/images/Cards/Herocarddetails.png" alt-text="Hero-Kartendetails":::
+   :::image type="content" source="../../assets/images/Cards/Herocarddetailsteams.PNG" alt-text="herocard":::
 
+1. Wählen Sie **Speichern**.
 1. Wählen Sie **Diese Karte an mich senden** aus. Die Karte wird als Chatnachricht an Sie gesendet.
 
 ## <a name="card-examples"></a>Kartenbeispiele
