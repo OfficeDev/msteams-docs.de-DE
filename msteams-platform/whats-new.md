@@ -3,12 +3,12 @@ title: Neuerungen für Entwickler in Teams
 description: Erfahren Sie mehr über die neuen Entwicklerfeatures und Verbesserungen an diesen Features in Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 267f8a00994a066c9eb7a32669a816a452a7af70
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: 90361f12d3aa327ca0cab3eca9c87ff44b947f94
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906288"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032980"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -47,6 +47,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
+| 06/08/2022 | Optionales Kartenfeedback für Erfolgsmeldungen| Bots erstellen > Bot-Unterhaltungen >[Nachrichten in Bot-Unterhaltungen](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 03.06.2022 | Das Modul „Authentifizierung hinzufügen“ zum Aktivieren von SSO für die Registerkarten-App mit neuer Struktur und neuen Prozeduren wurde aktualisiert. | Authentifizierung hinzufügen > Registerkarten > [Aktivieren von Single Sign-On in einer Registerkarten-App](tabs/how-to/authentication/tab-sso-overview.md) |
 | 24.05.2022 | Weitere Tipps für eine schnelle Genehmigung zum Veröffentlichen Ihrer App in Verbindung mit einem SaaS-Angebot | Veröffentlichen im Teams Store > Übersicht > [Weitere Tipps für eine schnelle Genehmigung zum Veröffentlichen Ihrer App in Verbindung mit einem SaaS-Angebot](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
 | 24.05.2022 | Übermitteln Ihrer Outlook- und Office-fähigen Apps an den Teams Store | Erweitern Ihrer App über Microsoft 365 hinweg > [Übersicht](m365-apps/overview.md) |

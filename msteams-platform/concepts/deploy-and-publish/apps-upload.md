@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c1eacf5b023b5bb4bfc9ec243ed8beebcb0a5220
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: df9f38be8202f9b982292847a7cfcc982e72fcb5
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756794"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032816"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Hochladen Ihrer App in Microsoft Teams
 
@@ -19,6 +19,9 @@ In den folgenden Szenarien können Sie Microsoft Teams-Apps querladen, ohne sie 
 * Sie möchten eine App lokal selbst oder mit anderen Entwicklern testen und debuggen.
 * Sie haben eine App für sich selbst erstellt, um einen Workflow zu automatisieren.
 * Sie haben eine App für eine kleine Gruppe von Benutzern erstellt, z. B. Ihre Arbeitsgruppe.
+
+> [!NOTE]
+> Wenn Sie Ihre App mehrmals per Sideloading laden, wird mehr als eine Instanz für Messaging-Erweiterungen angezeigt.
 
 > [!IMPORTANT]
 > Derzeit sind Querladen-Apps in Government Community Cloud (GCC) verfügbar, aber nicht für GCC-High und Department of Defense (DOD).

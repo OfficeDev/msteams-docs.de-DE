@@ -6,12 +6,12 @@ description: Übersicht über das Microsoft Teams JavaScript-Client-SDK, das Sie
 ms.localizationpriority: high
 keywords: Teams Registerkarten Gruppenkanal konfigurierbares statisches SDK JavaScript persönliches m365
 ms.topic: conceptual
-ms.openlocfilehash: 11d5bfa9b2dff29cb627a75f13af70915784a175
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 3b607056e2e3e10ff6817acdea4425573f99c170
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757619"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033043"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Erstellen von Registerkarten und anderen gehosteten Umgebungen mit dem Microsoft Teams JavaScript-Client-SDK
 
@@ -24,13 +24,7 @@ Ab Version `2.0.0` wurde das vorhandene Teams-Client-SDK (`@microsoft/teams-js` 
 
 Hier sehen Sie die aktuellen Anleitungen zu Versionsverwaltung für verschiedene App-Szenarien:
 
-|                  |[TeamsJS-Version](/javascript/api/overview/msteams-client) | [App-Manifestversion](../../resources/schema/manifest-schema.md)| Nächste Schritte|
-|------------------|---------|--------|---|
-|**Teams-Apps, ausgeweitet auf Office/Outlook**| TeamsJS v.2.0 oder höher  | **1.13** oder höher | [Erweitern von Teams-Apps auf Microsoft 365](../../m365-apps/extend-m365-teams-personal-tab.md) oder [Erstellen einer neuen Microsoft 365-App](../../m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
-|**Vorhandene reine Teams-Apps**| Update auf TeamsJS v.2.0, wenn möglich (v.1.12 wird weiterhin unterstützt*)  | 1.12 | [Grundlegendes zur Abwärtskompatibilität von TeamsJS](#backwards-compatibility) und [Update auf TeamsJS v.2.0](#updating-to-the-teams-client-sdk-v200) |
-|**Neue reine Teams-Apps**| TeamsJS v.2.0 oder höher | 1.12 | [Erstellen einer neuen Teams-App mit Teams Toolkit](../../toolkit/create-new-project.md) |
-
-**Es empfiehlt sich, wann immer möglich die neueste TeamsJS-Version (v.2.0 oder höher) zu verwenden, um von den neuesten Verbesserungen und der Unterstützung neuer Features zu profitieren (auch für reine Teams-Apps). TeamsJS v.1.12 wird weiterhin unterstützt, es werden aber keine neuen Features oder Verbesserungen hinzugefügt.*
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 Der Rest dieses Artikels führt Sie durch die Struktur und die neuesten Updates für das Microsoft Teams JavaScript-Client-SDK.
 
@@ -66,14 +60,14 @@ In der folgenden Tabelle sind Teams-Registerkarten und -Dialogfelder (Aufgabenmo
 
 #### <a name="app-permissions"></a>App-Berechtigungen
 
-App-Funktionen, für die der Benutzer [Geräteberechtigungen](../../concepts/device-capabilities/device-capabilities-overview.md) (z. B. *Standort*) erteilen muss, werden für Apps, die außerhalb von Teams ausgeführt werden, noch nicht unterstützt. Es gibt derzeit keine Möglichkeit, App-Berechtigungen bei der Ausführung in Outlook oder Office unter „Einstellungen“ oder in Ihrem App-Header zu überprüfen. Ruft eine in Office oder Outlook ausgeführte Teams-App eine TeamsJS-API (oder HTML5-API) auf, die Geräteberechtigungen auslöst, gibt diese API einen Fehler aus und zeigt kein Systemdialogfeld an, in dem um Zustimmung des Benutzers gebeten wird.
+App-Funktionen, für die der Benutzer [Geräteberechtigungen](../../concepts/device-capabilities/device-capabilities-overview.md) (z. B. *Standort*) erteilen muss, werden für Apps, die außerhalb von Teams ausgeführt werden, noch nicht unterstützt. Es gibt derzeit keine Möglichkeit, App-Berechtigungen bei der Ausführung in Outlook oder Office unter „Einstellungen“ oder in Ihrem App-Header zu überprüfen. Wenn eine Teams-Anwendung, die in Office oder Outlook ausgeführt wird, eine TeamsJS (oder HTML5) API aufruft, die Geräteberechtigungen auslöst, generiert diese API einen Fehler und zeigt keinen Systemdialog an, der den Benutzer um seine Zustimmung bittet.
 
 Der aktuelle Ansatz besteht derzeit darin, den Code so zu ändern, dass der Fehler abgefangen wird:
 
 * Überprüfen Sie [isSupported()](#differentiate-your-app-experience) für eine Funktion, bevor Sie sie verwenden. `media`, `meeting` und `files` unterstützen sie noch keine *isSupported*-Anrufe und funktionieren noch nicht außerhalb von Microsoft Teams.
 * Erfassen und Behandeln von Fehlern beim Aufrufen von TeamsJS- und HTML5-APIs.
 
-Wenn eine API nicht unterstützt wird oder einen Fehler ausgibt, fügen Sie Logik hinzu, um den Vorgang ordnungsgemäß zu beenden, oder stellen Sie eine Problemumgehung bereit. Beispiel:
+Wenn eine API nicht unterstützt wird oder einen Fehler generiert, fügen Sie eine Logik hinzu, um einen Fehler zu vermeiden oder einen Workaround anzubieten. Beispiel:
 
 * Leiten Sie den Benutzer auf die Website Ihrer App weiter.
 * Weisen Sie den Benutzer an, die App in Microsoft Teams zu verwenden, um den Fluss abzuschließen.
@@ -231,7 +225,7 @@ async function example() {
 
 Eine *Funktion* ist eine logische Gruppierung (über Namespaces) von APIs, die ähnliche Funktionen bereitstellen. Sie können sich Microsoft Teams, Outlook und Office als Hosts für Ihre Registerkarten-App vorstellen. Ein Host unterstützt eine bestimmte Funktion, wenn er alle in dieser Funktion definierten APIs unterstützt. Ein Host kann eine Funktion nicht teilweise implementieren. Funktionen können feature- oder inhaltsbasiert sein, z. B. *authentication* (Authentifizierung) oder *dialog* (Dialogfeld). Es gibt auch Funktionen für Anwendungstypen wie *Seiten* und andere Gruppierungen.
 
-Ab TeamsJS v.2.0 werden APIs als Funktionen in einem JavaScript-Namespace definiert, dessen Name der erforderlichen Funktion entspricht. Wenn eine App beispielsweise auf einem Host ausgeführt wird, der die *dialog*-Funktion (Dialogfeld) unterstützt, kann die App sicher APIs aufrufen, z. B. `dialog.open` (zusätzlich zu anderen dialogfeldbezogenen APIs, die im Namespace definiert sind). Wenn eine App versucht, eine API aufzurufen, die auf diesem Host nicht unterstützt wird, löst die API eine Ausnahme aus. Um zu überprüfen, ob der aktuelle Host, auf dem Ihre App ausgeführt wird, eine bestimmte Funktion unterstützt, rufen Sie die Funktion [isSupported()](#differentiate-your-app-experience) ihres Namespaces auf.
+Ab TeamsJS v.2.0 werden APIs als Funktionen in einem JavaScript-Namespace definiert, dessen Name der erforderlichen Funktion entspricht. Wenn eine App beispielsweise auf einem Host ausgeführt wird, der die *dialog*-Funktion (Dialogfeld) unterstützt, kann die App sicher APIs aufrufen, z. B. `dialog.open` (zusätzlich zu anderen dialogfeldbezogenen APIs, die im Namespace definiert sind). Wenn eine Anwendung versucht, eine API aufzurufen, die in diesem Host nicht unterstützt wird, erzeugt die API eine Ausnahme. Um zu überprüfen, ob der aktuelle Host, auf dem Ihre App ausgeführt wird, eine bestimmte Funktion unterstützt, rufen Sie die Funktion [isSupported()](#differentiate-your-app-experience) ihres Namespaces auf.
 
 #### <a name="differentiate-your-app-experience"></a>Ableiten Ihrer App-Umgebung
 

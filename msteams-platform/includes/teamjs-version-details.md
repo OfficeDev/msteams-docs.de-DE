@@ -1,0 +1,7 @@
+|                  |[TeamsJS-Version](/javascript/api/overview/msteams-client) | [App-Manifestversion](../resources/schema/manifest-schema.md)| Nächste Schritte|
+|------------------|---------|--------|---|
+|**Teams-Apps, ausgeweitet auf Office/Outlook**| TeamsJS v.2.0 oder höher  | **1.13** oder höher | [Erweitern von Teams-Apps auf Microsoft 365](../m365-apps/extend-m365-teams-personal-tab.md) oder [Erstellen einer neuen Microsoft 365-App](../m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
+|**Vorhandene reine Teams-Apps**| Update auf TeamsJS v.2.0, wenn möglich (v.1.12 wird weiterhin unterstützt*)  | 1.12 | [Grundlegendes zur Abwärtskompatibilität von TeamsJS](../tabs/how-to/using-teams-client-sdk.md#backwards-compatibility) und [Update auf TeamsJS v.2.0](../tabs/how-to/using-teams-client-sdk.md#updating-to-the-teams-client-sdk-v200)|
+|**Neue reine Teams-Apps**| TeamsJS v.2.0 oder höher | 1.12 | [Erstellen einer neuen Teams-App mit Teams Toolkit](../toolkit/create-new-project.md)|
+
+**Verwenden Sie nach Möglichkeit die neueste Version von TeamsJS (v.2.0 oder höher), um die neuesten Verbesserungen und neuen Features zu nutzen, einschließlich Teams-Apps. TeamsJS v.1.12 wird weiterhin unterstützt, es werden jedoch keine neuen Features oder Verbesserungen hinzugefügt. Die Schemas 1.12 und 1.13 sind andernfalls identisch. Weitere Informationen zu TeamsJS finden Sie unter [Teams JavaScript-Client-SDK](../tabs/how-to/using-teams-client-sdk.md).*

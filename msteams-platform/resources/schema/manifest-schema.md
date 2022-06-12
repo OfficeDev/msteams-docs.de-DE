@@ -4,20 +4,21 @@ description: Beschreibung des Manifestschemas für Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Manifestschema für Microsoft Teams
-ms.openlocfilehash: cbb0835ccc121b6a0e178c31a0a9df2e492fd605
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 5ec9aa0968ad8d15bf935302480330bca78c1bf1
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887835"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032932"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
 
 Das Microsoft Teams-App-Manifest beschreibt, wie Ihre App in das Microsoft Teams-Produkt integriert wird. Ihr App-Manifest muss dem Schema entsprechen, das auf [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json)gehostet wird. Frühere Versionen 1.0, 1.1,...,1.12 und die aktuelle Version 1.13 (siehe Hinweis unten) werden jeweils unterstützt (mit "v1.x" in der URL).
 Weitere Informationen zu den Änderungen, die in den einzelnen Versionen vorgenommen wurden, finden Sie im [Manifeständerungsprotokoll](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
-> [!Important]
-> Version `1.13` des Microsoft Teams-App-Manifestschemas ermöglicht die Unterstützung für [die Erweiterung von Teams-Apps auf Outlook und Office](../../m365-apps/overview.md). Für Apps, die nur für Teams bestimmt sind, verwenden Sie Version `1.12` (oder früher). Die Schemas 1.12 und 1.13 sind andernfalls identisch. Weitere Informationen finden Sie in der Übersicht über das [JavaScript-Client-SDK von Teams](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit).
+In der folgenden Tabelle sind die TeamsJS-Version und die Versionen der App-Manifeste für die verschiedenen App-Szenarien aufgeführt:
+
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 Das folgende Schemabeispiel umfasst alle Erweiterbarkeitsoptionen:
 
@@ -459,7 +460,7 @@ Wird verwendet, wenn Ihre App-Lösung über Teamkanal-Registerkarten verfügt, d
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 Zeichen|✔|Die https://-URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
 |`scopes`|Array von Enumerationen|1|✔|Derzeit unterstützen konfigurierbare Registerkarten nur die Bereiche `team` und `groupchat`. |
-|`canUpdateConfiguration`|Boolean|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: **true**.|
+|`canUpdateConfiguration`|Boolescher Wert|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: **true**.|
 |`context` |Array von Enumerationen|6 ||Die Gruppe von `contextItem`-Bereichen, in denen eine [Registerkarte unterstützt wird](../../tabs/how-to/access-teams-context.md). Standard: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Ein relativer Dateipfad zu einem Registerkarten-Vorschaubild zur Verwendung in SharePoint. Größe: 1024 x 768. |
 |`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint bereitgestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
@@ -497,11 +498,11 @@ Das Element ist ein Array (maximal ein Element &mdash; derzeit ist nur ein Bot p
 |---|---|---|---|---|
 |`botId`|string|64 Zeichen|✔|Die eindeutige Microsoft-App-ID für den Bot, wie bei Bot Framework registriert. Die ID kann mit der Gesamt-[App-ID](#id)übereinstimmen.|
 |`scopes`|Array von Enumerationen|3|✔|Gibt an, ob der Bot eine Umgebung im Kontext eines Kanals in einem `team` oder Gruppenchat (`groupchat`) bietet, oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`). Diese Optionen sind nicht exklusiv.|
-|`needsChannelSelector`|Boolean|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
+|`needsChannelSelector`|Boolescher Wert|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
 |`isNotificationOnly`|Boolesch|||Gibt an, ob es sich bei einem Bot um einen unidirektionalen Bot mit nur Benachrichtigungsfunktion und nicht um einen dialogorientierten Bot handelt. Standard: **`false`**|
-|`supportsFiles`|Boolean|||Gibt an, ob der Bot die Möglichkeit unterstützt, Dateien im persönlichen Chat hoch-/herunterzuladen. Standard: **`false`**|
+|`supportsFiles`|Boolescher Wert|||Gibt an, ob der Bot die Möglichkeit unterstützt, Dateien im persönlichen Chat hoch-/herunterzuladen. Standard: **`false`**|
 |`supportsCalling`|Boolesch|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
-|`supportsVideo`|Boolean|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
+|`supportsVideo`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -593,6 +594,9 @@ Ein Array von `string`, das angibt, welche Berechtigungen die App anfordert, wod
 * `messageTeamMembers`&emsp; Erfordert die Berechtigung, direkte Nachrichten an Teammitglieder zu senden.
 
 Wenn Sie diese Berechtigungen während der App-Aktualisierung ändern, müssen Ihre Benutzer den Zustimmungsprozess wiederholen, nachdem sie die aktualisierte App gestartet haben. Weitere Informationen finden Sie unter [Aktualisieren Ihrer App](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
+
+> [!NOTE]
+> Berechtigungen sind jetzt veraltet.
 
 ## <a name="devicepermissions"></a>devicePermissions
 
