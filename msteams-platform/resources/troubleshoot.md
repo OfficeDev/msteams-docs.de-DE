@@ -5,14 +5,14 @@ keywords: Problembehandlung bei der Entwicklung von Teams-Apps
 localization_priority: Normal
 ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: 76a1a4d45757dff36d45c73f1ea5f2791fbe2e02
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: ea6a452d3e3ace7c78e29f6829ac124eea8219d6
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032823"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048962"
 ---
-# <a name="troubleshoot-your-microsoft-teams-app"></a>Problembehandlung für Ihre Microsoft Teams-App
+# <a name="troubleshoot-your-microsoft-teams-app"></a>Fehlerbehebung für Ihre Microsoft Teams-Anwendung
 
 ## <a name="troubleshooting-tabs"></a>Problembehandlung bei Registerkarten
 
@@ -53,7 +53,7 @@ Wenn Sie beim Hinzufügen einer Registerkarte " **Speichern"** auswählen, aber 
 Sofern Sie keine automatische Authentifizierung durchführen, müssen Sie den Authentifizierungsprozess befolgen, der vom [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client) bereitgestellt wird.
 
 > [!NOTE]
->Wir verlangen, dass der gesamte Authentifizierungsfluss in Ihrer Domäne beginnt und endet, die im `validDomains` Objekt in Ihrem Manifest aufgeführt sein muss.
+> Wir verlangen, dass der gesamte Authentifizierungsfluss in Ihrer Domäne beginnt und endet, die im `validDomains` Objekt in Ihrem Manifest aufgeführt sein muss.
 
 Weitere Informationen zur Authentifizierung finden Sie unter [Authentifizieren eines Benutzers](~/concepts/authentication/authentication.md).
 

@@ -6,12 +6,12 @@ keywords: Teams Registerkarten Gruppenkanal konfigurierbar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2ee2a6017ed96d90d205b0a764f5f0fe8b512207
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: ec1a479421b7439db7a5492a059d470bd2d7024e
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887632"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048976"
 ---
 # <a name="create-a-configuration-page"></a>Erstellen einer Konfigurationsseite
 
@@ -21,7 +21,7 @@ Eine Konfigurationsseite ist eine spezielle [Art von Inhaltsseite](content-page.
 * Eine [Nachrichtenerweiterung](~/messaging-extensions/what-are-messaging-extensions.md).
 * [Office 365-Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)].
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>Konfigurieren einer Kanal- oder Gruppenchatregisterkarte
 
@@ -171,7 +171,7 @@ Die Auswahl der entsprechenden Schaltfläche löst entweder `saveGray()` oder `s
 * Der `pages.config.registerOnSaveHandler()` Ereignishandler wird ausgelöst.
 * **Speichern** auf der Konfigurationsseite der App ist aktiviert.
 
-Der Konfigurationsseitencode informiert Teams darüber, dass die Konfigurationsanforderungen erfüllt sind und die Installation fortgesetzt werden kann. Wenn der Benutzer **Speichern** auswählt, werden die `pages.config.setConfig()` Parameter von eingestellt, wie von der Schnittstelle `Config` definiert. Weitere Informationen finden Sie unter [config interface](/javascript/api/@microsoft/teams-js/pages.config.Config?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` wird aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
+Der Konfigurationsseitencode informiert Teams darüber, dass die Konfigurationsanforderungen erfüllt sind und die Installation fortgesetzt werden kann. Wenn der Benutzer **Speichern** auswählt, werden die `pages.config.setConfig()` Parameter von eingestellt, wie von der Schnittstelle `Config` definiert. Weitere Informationen finden Sie unter [config interface](/javascript/api/@microsoft/teams-js/pages.config?). `saveEvent.notifySuccess()` wird aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
 
 >[!NOTE]
 >
@@ -294,7 +294,7 @@ Authentifizieren Sie sich, bevor Sie einem Benutzer erlauben, Ihre App zu konfig
 
 Legen Sie die Eigenschaft Ihres Manifests `canUpdateConfiguration` auf `true`. Es ermöglicht den Benutzern, eine Kanal- oder Gruppenregisterkarte zu ändern, neu zu konfigurieren oder umzubenennen. Informieren Sie den Benutzer über die Auswirkungen auf inhalte, wenn eine Registerkarte entfernt wird. Fügen Sie dazu eine Seite mit Entfernungsoptionen in die App ein, und legen Sie einen Wert für die `removeUrl` Eigenschaft in der `setConfig()` (früheren `setSettings()`) Konfiguration fest. Der Benutzer kann persönliche Registerkarten deinstallieren, aber nicht ändern. Weitere Informationen finden [Sie unter Erstellen einer Entfernungsseite für Ihren Tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-Konfiguration von Microsoft Teams `setConfig()` (früher `setSettings()`) für die Entfernungsseite:
+`setConfig()` Microsoft Teams (früher`setSettings()`) Konfiguration für die Entfernungsseite:
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 

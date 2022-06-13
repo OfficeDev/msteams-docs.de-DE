@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: b5e023041ad732c7580b8b01cd62bc7159a52887
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: cbce3d51d902301f6aca422bfe2c8112e50f6b31
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033057"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66049004"
 ---
 # <a name="install-moodle-lms"></a>Installieren von Moodle LMS
 
@@ -287,7 +287,7 @@ So ermöglichen Sie die automatische Erstellung von Moodle-Registerkarten:
 Wenn ein Moodle-Kurs synchronisiert wird, installiert Microsoft Teams automatisch die Moodle-App im Team, erstellt eine Moodle-Registerkarte im Kanal "Allgemein" von Teams und konfiguriert sie so, dass sie die Kursseite für den Moodle-Kurs enthält, aus dem er synchronisiert wird. Sie können jetzt direkt von Microsoft Teams aus mit Ihren Moodle-Kursen arbeiten.
 
 > [!NOTE]
-> Besuchen Sie unsere [User Voice-Seite](https://microsoftteams.uservoice.com/forums/916759-moodle), um Featureanfragen oder Feedback mit uns zu teilen.
+> Besuchen Sie unsere [User Voice-Seite](https://support.microsoft.com/en-us/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a), um Featureanfragen oder Feedback mit uns zu teilen.
 
 ## <a name="see-also"></a>Siehe auch
 
