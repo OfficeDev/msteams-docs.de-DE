@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: a0ebea1fb05e3583c90c41596da98a25d89f9b4c
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 18c1379a630e637bea95209c35b823306b35a5de
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656761"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123997"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Hinzufügen von Funktionen zu Teams-Apps
 
@@ -27,7 +27,7 @@ Das Hinzufügen von Funktionen in Teams Toolkit hilft Ihnen, Ihrer vorhandenen T
 
 Die folgende Liste bietet Vorteile zum Hinzufügen weiterer Funktionen in TeamsFx:
 
-* Bietet Komfort
+* Bietet Komfort.
 * Fügt Ihrer App weitere Funktionen hinzu, indem Quellcodes automatisch mit Teams Toolkit hinzugefügt werden.
 
 ## <a name="limitations"></a>Einschränkungen
@@ -41,8 +41,8 @@ Die folgende Liste enthält Einschränkungen zum Hinzufügen weiterer Funktionen
 
 **Sie können Funktionen mit den folgenden Methoden hinzufügen:**
 
-* So fügen Sie Funktionen mithilfe des Teams Toolkits in Visual Studio Code hinzu
-* So fügen Sie Funktionen mithilfe der Befehlspalette hinzu
+* So fügen Sie Funktionen mit Teams Toolkit in Visual Studio Code hinzu.
+* So fügen Sie Funktionen mithilfe der Befehlspalette hinzu.
 
   > [!Note]
   > Sie müssen für jede Umgebung bereitstellen, nachdem Sie die Funktionen in Ihrer Teams App erfolgreich hinzugefügt haben.
@@ -69,13 +69,13 @@ Die folgende Liste enthält Einschränkungen zum Hinzufügen weiterer Funktionen
 
 ## <a name="add-capabilities-using-teamsfx-cli"></a>Hinzufügen von Funktionen mithilfe von TeamsFx CLI
 
-* Ändern des Verzeichnisses in Ihr **Projektverzeichnis**
+* Wechseln Sie in das Verzeichnis für **Ihr Projekt**.
 * In der folgenden Tabelle sind die Funktionen und erforderlichen Befehle aufgeführt:
 
   |Funktion und Szenario| Befehl|
   |-----------------------|----------|
-  |So fügen Sie einen Benachrichtigungs-Bot hinzu |`teamsfx add notification `|
-  |So fügen Sie den Befehlsbot hinzu |`teamsfx add command-and-response `|
+  |So fügen Sie einen Benachrichtigungs-Bot hinzu |`teamsfx add notification`|
+  |So fügen Sie den Befehlsbot hinzu |`teamsfx add command-and-response`|
   |So fügen Sie eine sso-aktivierte Registerkarte hinzu |`teamsfx add sso-tab`|
   |So fügen Sie eine Registerkarte hinzu |`teamsfx add tab`|
   |So fügen Sie einen Bot hinzu |`teamsfx add bot`|
@@ -88,7 +88,7 @@ In der folgenden Tabelle sind die verfügbaren Funktionen aufgeführt, die Sie i
 
 |Vorhandene Funktionen|Weitere unterstützte Funktionen|
 |--------------------|--------------------|
-|registerkarte SPFx |None|
+|registerkarte SPFx |Keine|
 |SSO-aktivierte Registerkarte |SSO-aktivierte Registerkarte, Benachrichtigungs-Bot, Befehls-Bot, Bot, Nachrichtenerweiterung|
 |Benachrichtigungs-Bot |SSO-aktivierte Registerkarte, Registerkarte|
 |Befehlsbot |SSO-aktivierte Registerkarte, Registerkarte|
@@ -100,8 +100,8 @@ In der folgenden Tabelle sind die verfügbaren Funktionen aufgeführt, die Sie i
 
 Nach dem Hinzufügen eines Bots und einer Nachrichtenerweiterung sind die Änderungen in Ihrem Projekt wie folgt:
 
-* Ein Botvorlagencode wird einem Unterordner mit Pfad `yourProjectFolder/bot`hinzugefügt. Dazu gehört eine **Hello** World-Bot-Anwendungsvorlage in Ihr Projekt.
-* `launch.json`und `task.json` unter `.vscode` Ordner aktualisiert werden, die erforderliche Skripts für Visual Studio Code enthält, und wird ausgeführt, wenn Sie Ihre Anwendung lokal debuggen möchten
+* Ein Botvorlagencode wird einem Unterordner mit Pfad `yourProjectFolder/bot`hinzugefügt. Dies schließt eine **Hello** World-Bot-Anwendungsvorlage in Ihr Projekt ein.
+* `launch.json`und `task.json` unter `.vscode` Ordner aktualisiert werden, die erforderliche Skripts für Visual Studio Code enthält, und wird ausgeführt, wenn Sie Ihre Anwendung lokal debuggen möchten.
 * `manifest.template.json`datei under `templates/appPackage` folder is updated, which includes the bot related information in the manifest file that represents your application in the Teams Platform. Folgende Änderungen stehen zur Verfügung:
   * Die ID Ihres Bots
   * Die Bereiche Ihres Bots
@@ -112,7 +112,7 @@ Nach dem Hinzufügen eines Bots und einer Nachrichtenerweiterung sind die Änder
 Nach dem Hinzufügen der Registerkarte sind die Änderungen in Ihrem Projekt wie folgt:
 
 * Ein Code für eine Frontend-Registerkartenvorlage wird einem Unterordner mit Pfad `yourProjectFolder/tab`hinzugefügt, der eine Anwendungsvorlage für die Registerkarte " **Hello World** " in Ihr Projekt enthält.
-* `launch.json`und `task.json` unter `.vscode` Ordner aktualisiert werden, die erforderliche Skripts für Visual Studio Code enthält, und wird ausgeführt, wenn Sie Ihre Anwendung lokal debuggen möchten
+* `launch.json`und `task.json` unter `.vscode` Ordner aktualisiert werden, die erforderliche Skripts für Visual Studio Code enthält, und wird ausgeführt, wenn Sie Ihre Anwendung lokal debuggen möchten.
 * `manifest.template.json`datei under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform. Die Änderungen sind:
   * Die konfigurierbaren und statischen Registerkarten
   * Die Bereiche der Registerkarten

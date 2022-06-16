@@ -1,19 +1,19 @@
 ---
 title: Verbinden vorhandenen APIs
 author: MuyangAmigo
-description: Beschreibt die Verbindung mit vorhandenen APIs.
+description: In diesem Artikel erfahren Sie, wie Toolkit Ihnen beim Bootstrap-Beispielzugriff auf vorhandene APIs hilft. Es enthält eine Liste verschiedener Authentifizierungstypen.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
 ms.date: 05/20/2022
-ms.openlocfilehash: b2dd6bfb1bc13b4d2b94ff57e2005b6450f59c23
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 2e00991f42b85e0e053fd94e68298c819a14a730
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656768"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124004"
 ---
-# <a name="add-api-connection-to-teams-app"></a>Hinzufügen einer API-Verbindung zu Teams App
+# <a name="add-api-connection-to-teams-app"></a>Hinzufügen einer API-Verbindung zur Teams-App
 
 Teams Toolkit hilft Ihnen beim Zugriff auf vorhandene APIs zum Erstellen Teams Anwendungen. Diese APIs werden von Ihrer Organisation oder von Drittanbietern entwickelt.
 
@@ -25,9 +25,9 @@ Teams Toolkit hilft Ihnen beim Bootstrap-Beispielcode für den Zugriff auf die A
 
 Wenn Sie Teams Toolkit zum Herstellen einer Verbindung mit einer vorhandenen API verwenden, führt Teams Toolkit die folgende Funktion aus:
 
-* Generieren von Beispielcode unter `./bot` oder `./api` Ordner
-* Hinzufügen eines Verweises auf das `@microsoft/teamsfx` Paket zu `package.json`
-* Hinzufügen von Anwendungseinstellungen für Ihre API  `.env.teamsfx.local` zum Konfigurieren des lokalen Debuggens
+* Generieren Sie Beispielcode unter `./bot` oder `./api` ordner.
+* Fügen Sie dem Paket `package.json`einen Verweis hinzu`@microsoft/teamsfx`.
+* Fügen Sie Anwendungseinstellungen für Ihre API hinzu, die  `.env.teamsfx.local` das lokale Debuggen konfigurieren.
 
 ### <a name="connect-to-api-in-visual-studio-code"></a>Verbinden der API in Visual Studio Code
 
@@ -80,7 +80,7 @@ Der Basisbefehl dieses Features lautet `teamsfx add api-connection [authenticati
 
    |**Authentifizierungstyp**|**Beispielbefehl**|
    |-----------------------|------------------|
-   |Standard|teamsfx add api-connection basic --endpoint <https://example.com> --component bot --alias example --user-name exampleuser --interactive false|
+   |Standard|teamsfx add api-connection basic --endpoint <https://example.com> --component bot --alias example--user-name exampleuser --interactive false|
    |API-Schlüssel|teamsfx add api-connection apikey --endpoint <https://example.com> --component bot --alias example --key-location header --key-name example-key-name --interactive false|
    |Azure AD|teamsfx add api-connection aad --endpoint <https://example.com> --component bot --alias example --app-type custom --tenant-id your_tenant_id --app-id your_app_id --interactive false|
    |Zertifikat|teamsfx add api-connection cert --endpoint <https://example.com> --component bot --alias example --interactive false|
@@ -121,7 +121,7 @@ Die folgenden Schritte helfen beim Testen der API-Verbindung in der lokalen Umge
     Der generierte API-Client ist ein Axios-API-Client. Verwenden Sie den Axios-Client, um Anforderungen an die API zu senden.
 
      > [!Note]
-     >[Axios](https://www.npmjs.com/package/axios) ist ein beliebtes nodejs-Paket, das Sie bei HTTP-Anforderungen unterstützt. Weitere Informationen zum Erstellen von HTTP(s)-Anforderungen finden Sie in der [Axios-Beispieldokumentation](https://axios-http.com/docs/example) , um zu erfahren, wie Sie HTTP(s) erstellen.
+     > [Axios](https://www.npmjs.com/package/axios) ist ein beliebtes nodejs-Paket, das Sie bei HTTP-Anforderungen unterstützt. Weitere Informationen zum Erstellen von HTTP(s)-Anforderungen finden Sie in der [Axios-Beispieldokumentation](https://axios-http.com/docs/example) , um zu erfahren, wie Sie HTTP(s) erstellen.
 
 ## <a name="deploy-your-application-to-azure"></a>Bereitstellen Ihrer Anwendung in Azure
 
@@ -160,6 +160,7 @@ class CustomAuthProvider implements AuthProvider {
     };
 }
 ```
+
 </details>
 <details>
 <summary><b>Verbinden zu APIs für Azure AD-Berechtigungen</b></summary>
@@ -204,6 +205,7 @@ Sie können die Schritte ausführen, um auf diese APIs zuzugreifen, während Sie
 
         > [!NOTE]
         > Verwenden Sie für Anwendungsberechtigungen Ihre Client-ID.
+        >
 </details>
 
 ## <a name="see-also"></a>Siehe auch

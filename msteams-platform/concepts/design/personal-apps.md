@@ -1,17 +1,17 @@
 ---
 title: Entwerfen Ihrer persönlichen App
-description: Lernen Sie, wie Sie eine persönliche Teams-App entwerfen, und holen Sie sich das Microsoft Teams UI Kit, um Komponenten wie Dashboards, Formulare und Aufgabentafeln für Mobile und Desktop zu erstellen. Lernen Sie die besten Praktiken für die Entwicklung persönlicher Apps kennen.
+description: Lernen Sie, wie Sie eine persönliche Teams-App entwerfen, und holen Sie sich das Microsoft Teams UI Kit, um Komponenten wie Dashboards, Formulare und Aufgabentafeln für Mobile und Desktop zu erstellen.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: Vorlage für das iFrame-Dashboardformular der Webview-Navigations-Bots der persönlichen App für das Ui Kit
-ms.openlocfilehash: 4ab361ad274eda0659e01bbd57a1b8ce3f84984f
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: fe22f63ec3bf93011f3acebd8f1269496e8444e5
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297233"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123927"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Entwerfen Ihrer persönlichen App für Microsoft Teams
 

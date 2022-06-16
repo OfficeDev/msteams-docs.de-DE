@@ -1,16 +1,15 @@
 ---
 title: Manifest-Schemareferenz für die öffentliche Entwicklervorschau
-description: Beispielmanifestdatei und Beschreibung aller ihrer Komponenten, die für Microsoft Teams unterstützt werden
+description: Erfahren Sie mehr über die Beispielmanifestdatei und die Beschreibung aller Komponenten, die für Microsoft Teams unterstützt werden.
 ms.topic: reference
-keywords: Entwicklervorschau des Teams-Manifestschemas
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 82f1a4fd9a51089069d1f8ed40d5e169f49b62c7
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 09aea8d3288f52e26d9f1e1845a2124e77d1c280
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757493"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123041"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für die öffentliche Entwicklervorschau für Microsoft Teams
 
@@ -755,9 +754,9 @@ Anwendungsberechtigungen ermöglichen der App den Zugriff auf Daten, ohne dass e
 
 #### <a name="resource-specific-delegated-permissions"></a>Ressourcenspezifische delegierte Berechtigungen
 
-Delegierte Berechtigungen ermöglichen der App den Zugriff auf Daten im Namen des angemeldeten Benutzers. 
+Delegierte Berechtigungen ermöglichen der App den Zugriff auf Daten im Namen des angemeldeten Benutzers.
 
-* **Ressourcenspezifische delegierte Berechtigungen für Teams** 
+* **Ressourcenspezifische delegierte Berechtigungen für Teams**
 
     |**Name**|**Beschreibung**|
     |---|---|

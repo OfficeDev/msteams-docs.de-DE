@@ -2,7 +2,7 @@
 title: Geräteberechtigung für Registerkarte erteilen
 metadata:
   title: Geräteberechtigung für Registerkarte erteilen
-  description: In diesem Lernprogramm erfahren Sie, wie Sie Registerkartengeräteberechtigungen für Microsoft Teams-Apps erteilen.
+  description: In diesem Lernmodul erfahren Sie, wie Sie Registerkartengeräteberechtigungen wie Standort, Kamera- und Mikrofonzugriff für Microsoft Teams-Apps erteilen.
   audience: Developer
   level: Beginner
   ms.date: 12/24/2021
@@ -11,16 +11,16 @@ metadata:
   nextTutorialTitle: Weitere Informationen zu Geräteberechtigungen für browser
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 8f2aa73b49676a4130ca185a38bebbb0788d0dae
-  ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+  ms.openlocfilehash: d352c26bba4958776b00ea72cdb4147a763d1d1f
+  ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 06/04/2022
-  ms.locfileid: "65887674"
+  ms.lasthandoff: 06/16/2022
+  ms.locfileid: "66123314"
 items:
 - durationInMinutes: 1
   content: >
-    Die Teams-App, die Geräteberechtigungen erfordert, z. B. Standort-, Kamera- oder Mikrofonzugriff, erfordert jetzt, dass Benutzer die Berechtigung im Webbrowser manuell erteilen. Zuvor hat der Browser behandelt, wie Zugriffsberechtigungen gewährt werden, aber jetzt werden diese Berechtigungen in Microsoft Teams behandelt.
+    Teams App, für die Geräteberechtigungen erforderlich sind, z. B. Standort-, Kamera- oder Mikrofonzugriff, müssen Benutzer jetzt die Berechtigung im Webbrowser manuell erteilen. Zuvor hat der Browser behandelt, wie Zugriffsberechtigungen gewährt werden, aber jetzt werden diese Berechtigungen in Microsoft Teams behandelt.
 
 
     Diese schrittweise Anleitung hilft Ihnen, Registerkartengeräteberechtigungen bei Teams zu erteilen. Die folgende Ausgabe wird angezeigt:
@@ -35,7 +35,7 @@ items:
 
     * [Microsoft Teams](https://www.microsoft.com/en-in/microsoft-teams/log-in) mit einem gültigen Konto
 
-    * [Microsoft 365-Entwicklerkonto](https://developer.microsoft.com/en-us/microsoft-365/dev-program) oder Zugriff auf das Teams-Konto mit den entsprechenden Berechtigungen zum Installieren einer App
+    * [Microsoft 365 Entwicklerkonto](https://developer.microsoft.com/en-us/microsoft-365/dev-program) oder Zugriff auf Teams Konto mit den entsprechenden Berechtigungen zum Installieren einer App
 
     * [Neueste Version von Visual Studio](https://code.visualstudio.com/Download)
 
@@ -48,13 +48,13 @@ items:
 - title: Einrichten einer lokalen Umgebung
   durationInMinutes: 1
   content: >
-    1. Öffnen Sie [Microsoft Teams-Beispiele](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+    1. Öffnen [Sie Microsoft Teams Beispiele](https://github.com/OfficeDev/Microsoft-Teams-Samples).
 
 
     1. Wählen Sie **"Code**" aus.
 
 
-    1. Wählen Sie im Dropdownmenü " **Mit GitHub-Desktop öffnen**" aus.
+    1. Wählen Sie im Dropdownmenü "**Mit GitHub Desktop öffnen**" aus.
 
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/cloner-epository-tab-device.png" alt-text="Klonen des Repositorys" border="true":::
@@ -67,10 +67,10 @@ items:
 - title: Einrichten der Manifestdatei
   durationInMinutes: 1
   content: "1. Navigieren Sie zu **manifest.json** im geklonten Repository.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifestjson-tab-device.png\" alt-text=\"Manifestdatei\" border=\"true\":::\n\n1. Öffnen Sie **manifest.json** in Visual Studio, und nehmen Sie die folgenden Änderungen vor:\n  \n   Ersetzen Sie `<<BASE_URI_DOMAIN>>` den HTTP-Endpunkt von ngrok mit Ausnahme des https://-Teils an allen Stellen.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/tab-device-VS-update1.png\" alt-text=\"Aktualisieren von ngrok in Visual Studio\" border=\"true\":::\n          \n"
-- title: Erstellen und Ausführen einer Client-App mit npm
+- title: Erstellen und Ausführen einer Client-App mithilfe von npm
   durationInMinutes: 1
-  content: "1. Navigieren Sie in Ihrem geklonten Repository zu **Beispielen > Registerkartengeräteberechtigungen > nodejs**.\n\n1. Kopieren Sie den **Ordnerpfad nodejs** . \n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/nodejs-path-tab-device.png\" alt-text=\"Kopieren des Pfads\" border=\"true\":::  \n\n1. Öffnen Sie ein neues **Eingabeaufforderungsfenster** , und ändern Sie das aktuelle Verzeichnis in den kopierten **nodejs-Pfad** .\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/nodejs-new-folder-path-tab-device.png\" alt-text=\"Kopieren des Pfads\" border=\"true\":::     \n\n1. Führen Sie den folgenden Befehl in der **Eingabeaufforderung** aus, um Pakete und Abhängigkeiten herunterzuladen:\n\n   ```Command-Prompt\n    npm install\n    ```  \n\n1. Führen Sie den folgenden Befehl in der **Eingabeaufforderung** aus, um die App zu starten:\n\n   ```Command-Prompt\n   npm start\n   ```\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/npm-start-install1.png\" alt-text=\"installieren und starten Sie npm\" border=\"true\":::     \n\n1. Die folgende Ausgabe wird im Browser angezeigt:\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-react.png\" alt-text=\"Browserausgabe\" border=\"true\":::     \n"
-- title: Hinzufügen der Registerkartengeräteberechtigung zu Teams
+  content: "1. Navigieren Sie in Ihrem geklonten Repository zu **Beispielen > Registerkartengeräteberechtigungen > nodejs**.\n\n1. Kopieren Sie den **Ordnerpfad nodejs** . \n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/nodejs-path-tab-device.png\" alt-text=\"Kopieren des Pfads\" border=\"true\":::  \n\n1. Öffnen Sie ein neues **Eingabeaufforderungsfenster** , und ändern Sie das aktuelle Verzeichnis in den kopierten **nodejs-Pfad** .\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/nodejs-new-folder-path-tab-device.png\" alt-text=\"Kopieren des Pfads\" border=\"true\":::     \n\n1. Führen Sie den folgenden Befehl in der **Eingabeaufforderung** aus, um Pakete und Abhängigkeiten herunterzuladen:\n\n   ```Command-Prompt\n    npm install\n    ```  \n\n1. Führen Sie den folgenden Befehl in der **Eingabeaufforderung** aus, um die App zu starten:\n\n   ```Command-Prompt\n   npm start\n   ```\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/npm-start-install1.png\" alt-text=\"npm installieren und starten\" border=\"true\":::     \n\n1. Die folgende Ausgabe wird im Browser angezeigt:\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-react.png\" alt-text=\"Browserausgabe\" border=\"true\":::     \n"
+- title: Hinzufügen der Geräteberechtigung für registerkarten zu Teams
   durationInMinutes: 1
   content: "# <a name=\"desktop\"></a>[Desktop](#tab/desktop) \n\n\n1. Navigieren Sie in Ihrem geklonten Repository zu **Beispielen** > **nodejs** > **appPackage** für **Registerkartengeräteberechtigungen** > .\n\n1. Erstellen Sie eine .zip mit den folgenden Dateien, die im **Ordner \"appPackage** \" vorhanden sind: \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1.png\" alt-text=\"Erstellen einer ZIP-Datei\" border=\"true\":::        \n \n 1. Wechseln Sie zu **Microsoft Teams**.\n\n 1. Wählen Sie **Apps** aus.\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/apps-tab-device1.png\" alt-text=\"Apps auswählen\" border=\"true\":::         \n\n 1. Wählen Sie in der unteren linken Ecke **die Option \"Apps verwalten\"** aus.\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manage-apps-tab-device.png\" alt-text=\"Wählen Sie &quot;App verwalten&quot; aus.\" border=\"true\":::         \n\n 1. Wählen Sie **Benutzerdefinierte App hochladen** aus.\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device1.png\" alt-text=\"Benutzerdefinierte App hochladen\" border=\"true\":::           \n\n 1. Wählen Sie **\"Öffnen** \" aus, um die .zip Datei hochzuladen, die Sie im Ordner **\"appPackage** \" erstellt haben.\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1.png\" alt-text=\"Hinzufügen der ZIP-Datei des Manifests\" border=\"true\":::             \n\n 1. Klicken Sie auf **Hinzufügen**.\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-add-desktop.png\" alt-text=\"Hinzufügen der Geräteberechtigung für die App-Registerkarte\" border=\"true\":::               \n\n 1. Wählen Sie **die Registerkarte \"Geräteberechtigung\"** aus, um die folgende Ausgabe anzuzeigen:\n \n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png\" alt-text=\"Hinzufügen eines Registerkartengeräts zum Desktop\" border=\"true\"::: \n\n\n# <a name=\"browser\"></a>[Browser](#tab/Browser)\n\n\n1. Navigieren Sie in Ihrem geklonten Repository zu **Beispielen** > **nodejs** > **appPackage** für **Registerkartengeräteberechtigungen** > .\n\n1. Erstellen Sie eine .zip mit den folgenden Dateien, die im **Ordner \"appPackage** \" vorhanden sind: \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1.png\" alt-text=\"Erstellen einer ZIP-Datei\" border=\"true\":::        \n\n1. Wechseln Sie zu **Microsoft Teams**. \n\n1. Wählen Sie **Apps** aus.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/apps-tab-device1.png\" alt-text=\"Apps auswählen\" border=\"true\":::         \n\n1. Wählen Sie in der unteren linken Ecke **die Option \"Apps verwalten\"** aus.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manage-apps-tab-device.png\" alt-text=\"Wählen Sie &quot;App verwalten&quot; aus.\" border=\"true\":::         \n\n1. Wählen Sie **Benutzerdefinierte App hochladen** aus. \n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device1.png\" alt-text=\"Benutzerdefinierte App hochladen\" border=\"true\":::           \n\n1. Wählen Sie **\"Öffnen** \" aus, um die .zip Datei hochzuladen, die Sie im Ordner **\"appPackage** \" erstellt haben.\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1.png\" alt-text=\"Hinzufügen der ZIP-Datei des Manifests\" border=\"true\":::             \n\n1. Klicken Sie auf **Hinzufügen**.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-add-browser-teams1.png\" alt-text=\"Hinzufügen der Geräteberechtigung für die App-Registerkarte\" border=\"true\":::               \n\n1. Wählen Sie **die Registerkarte \"Geräteberechtigung\"** aus, um die folgende Ausgabe anzuzeigen:\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png\" alt-text=\"Speicherort abrufen\" border=\"true\":::\n\n\n# <a name=\"mobile\"></a>[Mobil](#tab/mobile)\n\n \n  Öffnen Sie Teams auf Mobilgeräten, um die folgenden Ausgaben anzuzeigen:\n\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/mobile-teams-output1.png\" alt-text=\"Mobiles Registerkartengerät\" border=\"true\":::                   \n\n \n"
 - title: Testen eigener Apps
@@ -79,4 +79,4 @@ items:
 - title: Vollständige Herausforderung
   durationInMinutes: 1
   content: "Sind Sie auf so etwas gekommen?\n\n:::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/output1.png\" alt-text=\"location\" border=\"true\":::                   \n"
-- content: Sie haben das Lernprogramm abgeschlossen und können jetzt registerkartengeräteberechtigungen bei Teams erteilen.
+- content: Sie haben das Lernprogramm abgeschlossen und können jetzt die Berechtigung für Registerkartengeräte bei Teams erteilen.

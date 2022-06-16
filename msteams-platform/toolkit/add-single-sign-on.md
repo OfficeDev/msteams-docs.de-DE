@@ -1,27 +1,27 @@
 ---
-title: Hinzufügen des einmaligen Anmeldens zu Ihren Teams-Apps
+title: Hinzufügen von einmaligem Anmelden zu Ihren Teams-Apps
 author: zyxiaoyuer
 description: Describes Add single sign on of Teams Toolkit
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 3b83104dd07d34989f85fa0b96182c5c43408d98
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: e9b45f1bd95140eae8da851544dfa4ee87646225
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887590"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123447"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Hinzufügen des einmaligen Anmeldens zur Teams-App
 
-Microsoft Teams bietet einmaliges Anmelden für die Anwendung, um ein angemeldetes Teams-Benutzertoken für den Zugriff auf Microsoft Graph und andere APIs abzurufen. Das Teams-Toolkit erleichtert die Interaktion, indem einige der Azure AD-Flüsse und -Integrationen hinter einigen einfachen APIs abstrahiert werden. Auf diese Weise können Sie Ihrer Teams-Anwendung ganz einfach Features für einmaliges Anmelden (Single Sign-On, SSO) hinzufügen.
+Microsoft Teams bietet einmaliges Anmelden für die Anwendung, um angemeldete Teams Benutzertoken für den Zugriff auf Microsoft Graph und andere APIs abzurufen. Teams Toolkit erleichtert die Interaktion, indem einige der Azure AD-Flüsse und -Integrationen hinter einigen einfachen APIs abstrahiert werden. Auf diese Weise können Sie SSO-Features (Single Sign-On) ganz einfach zu Ihrer Teams Anwendung hinzufügen.
 
 Für Anwendungen, die mit dem Benutzer in einem Chat, einem Team oder einem Kanal interagieren, wird SSO als adaptive Karte manifestiert, mit der der Benutzer interagieren kann, um den Azure AD-Zustimmungsfluss aufzurufen.
 
 ## <a name="enable-sso-support"></a>Aktivieren der SSO-Unterstützung
 
-Das Teams-Toolkit hilft Ihnen beim Hinzufügen von SSO zu den folgenden Teams-Funktionen:
+Teams Toolkit hilft Ihnen beim Hinzufügen von SSO zu den folgenden Teams Funktionen:
 
 * Tab
 * Bot
@@ -30,10 +30,10 @@ Das Teams-Toolkit hilft Ihnen beim Hinzufügen von SSO zu den folgenden Teams-Fu
 
 ### <a name="add-sso-using-visual-studio-code"></a>Hinzufügen von SSO mit Visual Studio Code
 
-Die folgenden Schritte helfen Ihnen beim Hinzufügen von SSO mithilfe des Teams-Toolkits in Visual Studio Code
+Mit den folgenden Schritten können Sie SSO mit Teams Toolkit in Visual Studio Code hinzufügen.
 
 1. Öffnen Sie **Visual Studio Code.**
-2. Wählen Sie "Teams Toolkit :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso Add sidebar"::: " in der linken Navigationsleiste aus.
+2. Wählen Sie Teams :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="Toolkit-Sso Hinzufügen einer Randleiste"::: in der linken Navigationsleiste aus.
 3. Wählen Sie unter **"ENTWICKLUNG****" die Option "Features hinzufügen"** aus.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="sso Features hinzufügen":::
@@ -51,19 +51,19 @@ Sie können den Befehl in Ihrem **Projektstammverzeichnis** ausführen`teamsfx a
 > [!Note]
 > Das Feature aktiviert SSO für alle vorhandenen anwendbaren Funktionen. Führen Sie die gleichen Schritte aus, um SSO zu aktivieren, wenn Sie dem Projekt später Funktionen hinzufügen.
 
-## <a name="customize-your-project-using-teams-toolkit"></a>Anpassen Ihres Projekts mithilfe des Teams-Toolkits
+## <a name="customize-your-project-using-teams-toolkit"></a>Anpassen Ihres Projekts mit Teams Toolkit
 
-In der folgenden Tabelle sind die Änderungen aufgeführt, die das Teams-Toolkit an Ihrem Projekt vornimmt:
+In der folgenden Tabelle sind die Änderungen aufgeführt, die Teams Toolkit an Ihrem Projekt vornimmt:
 
    |**Type**|**Datei**|**Zweck**|
    |--------|--------|-----------|
    |Erstellen|`aad.template.json` Unter `template/appPackage`|Das Azure AD-Anwendungsmanifest stellt Ihre Azure AD-App dar. `template/appPackage` hilft beim Registrieren einer Azure AD-App während der lokalen Debug- oder Bereitstellungsphase.|
-   |Ändern|`manifest.template.json` Unter `template/appPackage`|Ein `webApplicationInfo` Objekt wird ihrer Manifestvorlage der Teams-App hinzugefügt. Teams erfordert dieses Feld, um SSO zu aktivieren. Die Änderung wird wirksam, wenn Sie das lokale Debuggen oder bereitstellen auslösen.|
+   |Ändern|`manifest.template.json` Unter `template/appPackage`|Ein `webApplicationInfo` Objekt wird ihrer Teams App-Manifestvorlage hinzugefügt. Teams erfordert dieses Feld, um SSO zu aktivieren. Die Änderung wird wirksam, wenn Sie das lokale Debuggen oder bereitstellen auslösen.|
    |Erstellen|`auth/tab`|Referenzcode, Authentifizierungsumleitungsseiten und eine `README.md` Datei werden in diesem Pfad für ein Registerkartenprojekt generiert.|
    |Erstellen|`auth/bot`|Referenzcode, Authentifizierungsumleitungsseiten und eine `README.md` Datei werden in diesem Pfad für ein Botprojekt generiert.|
 
 > [!Note]
-> Durch das Hinzufügen von SSO ändert das Teams-Toolkit nichts in der Cloud, bis Sie das lokale Debuggen auslösen. Aktualisieren Sie Ihren Code, um sicherzustellen, dass SSO im Projekt funktioniert.
+> Durch das Hinzufügen von SSO ändert Teams Toolkit nichts in der Cloud, bis Sie das lokale Debuggen auslösen. Aktualisieren Sie Ihren Code, um sicherzustellen, dass SSO im Projekt funktioniert.
 
 ## <a name="update-your-application-to-use-sso"></a>Aktualisieren Ihrer Anwendung für die Verwendung von SSO
 
@@ -77,13 +77,13 @@ Mit den folgenden Schritten können Sie SSO in Ihrer Anwendung aktivieren.
 <br><details>
 <summary><b>Registerkartenprojekt </b></summary>
 
-1. Kopieren `auth-start.html` und `auth-end.htm`** im `auth/public` Ordner in `tabs/public/`. Das Teams-Toolkit registriert diese beiden Endpunkte im Umleitungsfluss von Azure AD für Azure AD.
+1. Kopieren `auth-start.html` und `auth-end.htm`** im `auth/public` Ordner in `tabs/public/`. Teams Toolkit registriert diese beiden Endpunkte im Umleitungsfluss von Azure AD für Azure AD.
 
 2. Ordner unter `auth/tab` kopieren `sso` nach `tabs/src/sso/`.
 
     * `InitTeamsFx`: Die Datei implementiert eine Funktion, die das TeamsFx SDK initialisiert und die Komponente öffnet `GetUserProfile` , nachdem das SDK initialisiert wurde.
 
-    * `GetUserProfile`: Die Datei implementiert eine Funktion, die die Microsoft Graph-API aufruft, um Benutzerinformationen abzurufen.
+    * `GetUserProfile`: Die Datei implementiert eine Funktion, die Microsoft Graph-API aufruft, um Benutzerinformationen abzurufen.
 
 3. Ausführen `npm install @microsoft/teamsfx-react` unter `tabs/`.
 
@@ -185,7 +185,7 @@ Mit den folgenden Schritten können Sie SSO in Ihrer Anwendung aktivieren.
 
    ```
 
-9. Registrieren Sie Ihren Befehl im Teams-App-Manifest. Öffnen Sie `templates/appPackage/manifest.template.json`den Bot, und fügen Sie die folgenden Zeilen in `command` `commandLists` Ihrem Bot hinzu:
+9. Registrieren Sie Ihren Befehl im Teams App-Manifest. Öffnen Sie `templates/appPackage/manifest.template.json`den Bot, und fügen Sie die folgenden Zeilen in `command` `commandLists` Ihrem Bot hinzu:
 
    ```JSON
 
@@ -205,7 +205,7 @@ Mit den folgenden Schritten können Sie SSO in Ihrer Anwendung aktivieren.
 
 Die folgenden Schritte helfen Ihnen beim Hinzufügen eines neuen Befehls, nachdem Sie SSO in Ihrem Projekt hinzugefügt haben:
 
-1. Erstellen Sie eine neue Datei (`todo.ts` oder `todo.js`) unter `bot/src/` und fügen Sie Ihre eigene Geschäftslogik hinzu, um die Graph-API aufzurufen:
+1. Erstellen Sie eine neue Datei (`todo.ts` oder `todo.js`) unter `bot/src/` und fügen Sie Ihre eigene Geschäftslogik hinzu, um Graph-API aufzurufen:
 
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
@@ -300,7 +300,7 @@ export async function showUserImage(context, ssoToken, param) {
 
      ```
 
-3. Registrieren Sie Ihren Befehl im Teams-App-Manifest. Öffnen Sie `templates/appPackage/manifest.template.json`den Bot, und fügen Sie die folgenden Zeilen in `command` `commandLists` Ihrem Bot hinzu:
+3. Registrieren Sie Ihren Befehl im Teams App-Manifest. Öffnen Sie `templates/appPackage/manifest.template.json`den Bot, und fügen Sie die folgenden Zeilen in `command` `commandLists` Ihrem Bot hinzu:
 
    ```JSON
 
@@ -316,12 +316,12 @@ export async function showUserImage(context, ssoToken, param) {
 
 ## <a name="debug-your-application"></a>Debuggen Sie Ihre Anwendung
 
-Drücken Sie F5, um die Anwendung zu debuggen. Teams Toolkit verwendet die Azure AD-Manifestdatei, um eine Azure AD-Anwendung für SSO zu registrieren. Informationen zu lokalen Debugfunktionen des Teams-Toolkits finden Sie [unter "Lokales Debuggen Ihrer Teams-App](debug-local.md)".
+Drücken Sie F5, um die Anwendung zu debuggen. Teams Toolkit verwendet die Azure AD-Manifestdatei, um eine Azure AD-Anwendung für SSO zu registrieren. Informationen Teams lokalen Debugfunktionen des Toolkits finden Sie unter ["Lokales Debuggen Ihrer Teams-App](debug-local.md)".
 
 ## <a name="customize-azure-ad-application-registration"></a>Anpassen der Azure AD-Anwendungsregistrierung
 
 Mit dem [Azure AD-App-Manifest](/azure/active-directory/develop/reference-app-manifest) können Sie verschiedene Aspekte der Anwendungsregistrierung anpassen. Sie können das Manifest nach Bedarf aktualisieren. Wenn Sie zusätzliche API-Berechtigungen für den Zugriff auf die gewünschten APIs einschließen müssen, lesen Sie [API-Berechtigungen für den Zugriff auf die gewünschten APIs](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
-Informationen zum Anzeigen Ihrer Azure AD-Anwendung im Azure-Portal finden [Sie unter "Azure AD-Anwendung im Azure-Portal anzeigen](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal)".
+Informationen zum Anzeigen Ihrer Azure AD-Anwendung im Azure-Portal finden [Sie unter "Azure AD-Anwendung anzeigen" in Azure-Portal](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal).
 
 ## <a name="sso-authentication-concepts"></a>SSO-Authentifizierungskonzepte
 
@@ -331,7 +331,7 @@ Die folgenden Konzepte helfen Ihnen bei der SSO-Authentifizierung:
 
 Bei der SSO-Authentifizierung (Single Sign-On) in Microsoft Azure Active Directory (Azure AD) wird das Authentifizierungstoken automatisch aktualisiert, um zu minimieren, wie oft Benutzer ihre Anmeldeinformationen eingeben müssen. Wenn Benutzer der Verwendung Ihrer App zustimmen, müssen sie ihre Zustimmung auf einem anderen Gerät nicht erneut erteilen, da sie automatisch angemeldet werden.
 
-Teams-Registerkarten und -Bots weisen einen ähnlichen Fluss für die SSO-Unterstützung auf. Weitere Informationen finden Sie unter:
+Teams Registerkarten und Bots verfügen über einen ähnlichen Fluss für die SSO-Unterstützung. Weitere Informationen finden Sie unter:
 
 1. [SSO-Authentifizierung (Single Sign-On) auf Registerkarten](../tabs/how-to/authentication/tab-sso-overview.md)
 2. [SSO-Authentifizierung (Single Sign-On) in Bots](../bots/how-to/authentication/auth-aad-sso-bots.md)
@@ -342,7 +342,7 @@ TeamsFx trägt dazu bei, die Entwickleraufgaben mithilfe von SSO zu reduzieren u
 
 Mit dem TeamsFx SDK können Sie Benutzerauthentifizierungscode auf vereinfachte Weise mithilfe von Anmeldeinformationen schreiben:
 
-1. Benutzeridentität in Browserumgebung: `TeamsUserCredential` stellt die Identität des aktuellen Teams-Benutzers dar.
+1. Benutzeridentität in Browserumgebung: `TeamsUserCredential` stellt Teams Identität des aktuellen Benutzers dar.
 2. Benutzeridentität in Node.js Umgebung: `OnBehalfOfUserCredentail` verwendet "On-Behalf-Of"-Fluss und SSO-Token.
 3. Anwendungsidentität in Node.js Umgebung: `AppCredential` stellt die Anwendungsidentität dar.
 

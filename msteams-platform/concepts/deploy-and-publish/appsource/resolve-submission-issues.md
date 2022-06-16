@@ -1,16 +1,16 @@
 ---
 title: Beheben von Problemen mit Der Store-Übermittlung
-description: Verstehen, wie Sie Probleme mit Ihrer Microsoft Teams Store-Übermittlung behandeln und beheben.
+description: In diesem Artikel erfahren Sie, wie Sie Probleme mit Ihrer Microsoft Teams Store-Übermittlung behandeln und beheben.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: f69b3d1bbcdcf0f85151df62bbb032934a871d12
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 51427f2023ba566391a3d0b544d74e5658464a7c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111388"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123209"
 ---
 # <a name="resolve-issues-if-your-microsoft-teams-store-submission-fails"></a>Beheben von Problemen, wenn ihre Microsoft Teams Store-Übermittlung fehlschlägt
 

@@ -4,12 +4,12 @@ description: Beschreibt, wie ein Benutzertoken abgerufen wird. Derzeit kann ein 
 keywords: Token, Benutzertoken, SSO-Unterstützung für Bots, Berechtigung, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: cf62bc0834c6ce3792ef30355b2c6b3234127672
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: c10fe639417ad71814b060ba70e6a33c4ae4038f
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906261"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123468"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Single-Sign-On (SSO)-Unterstützung für Bots
 
@@ -96,7 +96,7 @@ Die Schritte zum Registrieren Ihrer App über das Azure AD-Portal ähneln denen 
    >
    > Sie müssen sich der folgenden wichtigen Einschränkungen bewusst sein:
    >
-   > * Nur Microsoft Graph-API-Berechtigungen auf Benutzerebene wie E-Mail, Profil, Offlinezugriff und OpenId werden unterstützt. Wenn Sie Zugriff auf andere Microsoft Graph-Bereiche benötigen, z `User.Read` . B. oder `Mail.Read`, lesen Sie ["Registerkarten-App erweitern" mit Microsoft Graph-Berechtigungen und -Bereich](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
+   > * Nur Microsoft Graph-API-Berechtigungen auf Benutzerebene wie E-Mail, Profil, Offlinezugriff und OpenId werden unterstützt. Wenn Sie Zugriff auf andere Microsoft Graph-Bereiche benötigen, z`User.Read`. B. oder `Mail.Read`finden Sie weitere Informationen unter [Erweitern der Registerkarten-App mit Microsoft Graph Berechtigungen und Bereich](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
    > * Der Domänenname Ihrer Anwendung muss mit dem Domänennamen übereinstimmen, den Sie für Ihre Azure AD-Anwendung registriert haben.
    > * Mehrere Domänen pro App werden derzeit nicht unterstützt.
    > * Anwendungen, die die Domäne `azurewebsites.net` verwenden, werden nicht unterstützt, da dies häufig vorkommt und ein Sicherheitsrisiko darstellen kann.
@@ -379,9 +379,9 @@ Um zu verstehen, was der Bot tut, wenn der Token-Austausch keine Zustimmungsauff
 
 ## <a name="code-sample"></a>Codebeispiel
 
-|**Beispielname** | **Beschreibung** |**.NET** |
-|----------------|-----------------|--------------|
-|Bot-Framework-SDK | Beispiel für die Verwendung des Bot-Framework-SDK. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
+|**Beispielname** | **Beschreibung** |**.NET** |**C#** |**Node.js** |
+|----------------|-----------------|--------------|--------------|--------------|
+|Bot-Framework-SDK | Dieser Beispielcode veranschaulicht die ersten Schritte mit der Authentifizierung in einem Bot für Microsoft Teams. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)|
 
 ## <a name="step-by-step-guide"></a>Schrittweise Anleitung
 

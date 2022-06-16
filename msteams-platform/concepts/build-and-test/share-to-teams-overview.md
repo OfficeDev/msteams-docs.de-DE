@@ -1,15 +1,14 @@
 ---
 title: Übersicht für Teams freigeben
-description: Beschreibt, wie man eine Schaltfläche zum Teilen für Teams erstellt
+description: Erfahren Sie, wie Sie Teams Übersicht und wo Sie die Schaltfläche "Teilen zu Teams" in den Teams-Apps und Registerkarten-Apps erstellen können.
 ms.topic: how-to
 ms.localizationpriority: mediumss
-keywords: Übersicht für Teams freigeben
-ms.openlocfilehash: 1bc840c5b85042ef109d544a3b94cd55f6eae2ad
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: caf75bed6c741e5d504c91e2c7df5739ec786cbb
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297128"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123773"
 ---
 # <a name="share-to-teams"></a>Für Teams freigeben
 

@@ -1,16 +1,16 @@
 ---
 title: Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 author: Rajeshwari-v
-description: Erfahren Sie Näheres über die Vorschaugenerierung für Links, das Öffnen der Bühnenansicht und das Anheften einer Registerkarte mit der Microsoft Teams-App. Erfahren Sie mehr über die Bühnenansicht und deren Aufruf mithilfe einer adaptiven Karte anhand von Codebeispielen und Beispielen.
+description: Erfahren Sie, wie Sie einen Link bereitstellen, die Phasenansicht öffnen und eine Registerkarte mit Teams App anheften. Hier erfahren Sie, wie Sie es mithilfe einer adaptiven Karte mithilfe von Codebeispielen und Beispielen aufrufen.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: d752e55777a07834663f564632bd6a9ff220fdaf
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 07854a38fff8ded02fabba98926511e964f5baf0
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048983"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66122908"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 
@@ -146,7 +146,7 @@ Codiert
 
 | Beispielname | Beschreibung | C# |Node.js|
 |-------------|-------------|------|----|
-|Registerkarte in der Bühnenansicht |Beispiel-App für Microsoft Teams-Registerkarten zum Demonstrieren einer Registerkarte in der Bühnenansicht.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+|Registerkarte in der Bühnenansicht |Beispiel-App für Microsoft Teams-Registerkarten zum Demonstrieren einer Registerkarte in der Bühnenansicht.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
 
 ## <a name="next-step"></a>Nächster Schritt
 

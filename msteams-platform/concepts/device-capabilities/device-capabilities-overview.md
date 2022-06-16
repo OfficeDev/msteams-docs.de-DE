@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie systemeigene Gerätefunktionen wie Kamera, Bi
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 8d5c288e35ef18ada9ff93390ff745798ba3b01c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e2f1e36d78e2bea5e5f4a5b4625c503e570dd77d
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757031"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123836"
 ---
 # <a name="device-capabilities"></a>Gerätefunktionen
 
@@ -45,3 +45,9 @@ Nachdem Sie Zugriff auf Gerätefunktionen erhalten haben, verwenden Sie Teams-AP
 * Teilen von Standort mit der [Standortauswahl](location-capability.md).
 
 Außerdem können Sie das systemeigene [Personenauswahl-Steuerelement](people-picker-capability.md) von Teams integrieren, mit dem Benutzer Personen in der Webanwendung suchen und auswählen können.
+
+## <a name="code-sample"></a>Codebeispiel
+
+| Beispielname           | Beschreibung | Node.js    |
+|:---------------------|:--------------|:---------|
+|Geräteberechtigungen | Beschreibt, wie Microsoft Teams Registerkarten-Beispiel-App für Geräteberechtigungen veranschaulicht wird. |[Anzeigen](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

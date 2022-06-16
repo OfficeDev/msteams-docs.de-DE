@@ -1,40 +1,40 @@
 ---
-title: Konfigurieren der Standardinstallationsoptionen für Ihre App
-description: Beschreibt, wie Die Standardinstallationsoptionen und die Standardfunktion Ihrer App für freigegebene Bereiche angegeben werden.
+title: Konfigurieren von Standardinstallationsoptionen für Ihre App
+description: Erfahren Sie, wie Sie die Standardinstallationsoptionen und Die Standardfunktion Ihrer Teams-App für gemeinsame Bereiche angeben.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: a6857e549c688bd7078aeaceae4b9f5a885ae2c3
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 9055b765c30f83c4031ad0e2ba5f18f4e747ac3f
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453208"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66122901"
 ---
-# <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>Konfigurieren der Standardinstallationsoptionen für Ihre Microsoft Teams-App
+# <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>Konfigurieren von Standardinstallationsoptionen für Ihre Microsoft Teams-App
 
-Es ist üblich, dass eine App mehrere Szenarien in Teams unterstützt, aber Sie haben sie möglicherweise mit einem bestimmten Bereich und einer bestimmten Funktion entworfen. Wenn Ihre App beispielsweise in erster Linie für die Verwendung im Team oder Kanal vorgesehen ist, können Sie sicherstellen, dass die erste Installationsoption, die Benutzern im Store angezeigt wird, **"Zu einem Team hinzufügen**" ist.
+Es ist üblich, dass eine App mehrere Szenarien in Teams unterstützt, aber Möglicherweise haben Sie sie mit einem bestimmten Bereich und einer bestimmten Funktion entworfen. Wenn Ihre App beispielsweise in erster Linie für die Team- oder Kanalnutzung bestimmt ist, können Sie sicherstellen, dass die erste Installationsoption, die Benutzern im Store angezeigt wird, **"Zu einem Team hinzufügen"** lautet.
 
 :::row:::
    :::column span="2":::
 
-![Hinzufügen eines App-Dropdownbeispiels](../../assets/images/compose-extensions/addanapp.png)
+![Beispiel zum Hinzufügen eines App-Dropdowns](../../assets/images/compose-extensions/addanapp.png)
 
    :::column-end:::
    :::column span="2":::
    :::column-end:::
 :::row-end:::
 
-Wenn die primäre Funktion Ihrer App ein Bot ist, können Sie den Bot auch als Standardfunktion festlegen, wenn ein Benutzer Ihre App in einem Team installiert.
+Wenn die primäre Funktion Ihrer App ein Bot ist, können Sie den Bot auch zur Standardfunktion machen, wenn ein Benutzer Ihre App in einem Team installiert.
 
-## <a name="configure-your-apps-default-install-scope"></a>Konfigurieren des Standardmäßigen Installationsumfangs Ihrer App
+## <a name="configure-your-apps-default-install-scope"></a>Konfigurieren des Standardinstallationsbereichs Ihrer App
 
 Konfigurieren Sie den Standardinstallationsbereich für Ihre App. Sie können jeweils nur einen Bereich festlegen.
 
 So konfigurieren Sie den Standardinstallationsbereich in Ihrem App-Manifest:
 
-1. Öffnen Sie Das App-Manifest, und fügen Sie die `defaultInstallScope` Eigenschaft hinzu.
-2. Legen Sie den Standardmäßigen Installationsbereichswert als , `personal`, `team``groupchat`oder `meetings`fest.
+1. Öffnen Sie Ihr App-Manifest, und fügen Sie die `defaultInstallScope` Eigenschaft hinzu.
+2. Legen Sie den Standardinstallationsbereichswert entweder `personal`als , `team`, `groupchat`oder `meetings`fest.
 
     ```json
     "defaultInstallScope": "meetings",
@@ -45,19 +45,19 @@ So konfigurieren Sie den Standardinstallationsbereich in Ihrem App-Manifest:
 
 ## <a name="configure-the-default-capability-for-shared-scopes"></a>Konfigurieren der Standardfunktion für freigegebene Bereiche
 
-Konfigurieren Sie die Standardfunktion, wenn Ihre App für ein Team, eine Besprechung oder einen Gruppenchat installiert wird.
+Konfigurieren Sie die Standardfunktion, wenn Ihre App für ein Team, eine Besprechung oder ein Gruppenchat installiert wird.
 
 > [!NOTE]
 > `defaultGroupCapability` stellt die Standardfunktion bereit, die dem Team, dem Gruppenchat oder der Besprechung hinzugefügt wird. Wählen Sie eine Registerkarte, einen Bot oder einen Connector als Standardfunktion für Ihre App aus. Sie müssen jedoch sicherstellen, dass Sie die ausgewählte Funktion in Ihrer App-Definition bereitgestellt haben.
 
 So konfigurieren Sie Details im App-Manifest:
 
-1. Öffnen Sie Ihr App-Manifest, und fügen Sie die `defaultGroupCapability` Eigenschaft hinzu.
-2. Legen Sie den Wert `team`, `groupchat`or fest `meetings`.
-3. Für die ausgewählte Gruppenfunktion sind die verfügbaren Gruppenfunktionen , `bot``tab`oder `connector`.
+1. Öffnen Sie Das App-Manifest, und fügen Sie die `defaultGroupCapability` Eigenschaft hinzu.
+2. Legen Sie einen Wert von `team`, `groupchat`oder `meetings`fest.
+3. Für die ausgewählte Gruppenfunktion sind die verfügbaren Gruppenfunktionen: , `bot`, `tab`oder `connector`.
 
     > [!NOTE]
-    > Sie können nur eine Standardfunktion `bot``tab`oder `connector` für die ausgewählte Gruppenfunktion auswählen.
+    > Sie können nur eine Standardfunktion oder `bot``tab``connector` für die ausgewählte Gruppenfunktion auswählen.
 
     ```json
     "defaultGroupCapability": {

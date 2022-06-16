@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: a41cbac6a0cee3f42a6de2d436c227c858347d4e
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: 5615175ef6dac7f232f276c73f2991db8433224c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938961"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123976"
 ---
 # <a name="debug-your-teams-app-locally"></a>Lokales Debuggen Ihrer Teams-App
 
@@ -177,7 +177,7 @@ In der folgenden Tabelle sind die Debugkonfigurationsnamen und -typen für das P
 <details>
 <summary><b>Lädt die Teams-App quer</b></summary>
 
-Die Konfiguration **Front-End anfügen** oder **Bot starten** startet eine neue Edge- oder Chrome-Browserinstanz und öffnet eine Webseite zum Laden des Teams-Clients. Nachdem der Teams-Client geladen wurde, lädt Teams die Teams-App quer, die von der in den Startkonfigurationen [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}) definierte URL für den Querladevorgang gesteuert wird.  Wenn der Teams-Client im Webbrowser geladen wird, wählen Sie **Hinzufügen** aus, oder wählen Sie einen aus der Dropdownliste gemäß Ihren Anforderungen aus.
+Die Konfiguration **Front-End anfügen** oder **Bot starten** startet eine neue Edge- oder Chrome-Browserinstanz und öffnet eine Webseite zum Laden des Teams-Clients. Nachdem der Teams-Client geladen wurde, lädt Teams die Teams-App quer, die von der in den Startkonfigurationen [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}) definierte URL für den Querladevorgang gesteuert wird. Wenn der Teams-Client im Webbrowser geladen wird, wählen Sie **Hinzufügen** aus, oder wählen Sie einen aus der Dropdownliste gemäß Ihren Anforderungen aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Lokales Debuggen" border="true":::
 

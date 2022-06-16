@@ -1,17 +1,17 @@
 ---
 author: heath-hamilton
-description: Bewährte Methoden oder Überlegungen zum Integrieren vorhandener Web-Apps in Microsoft Teams
+description: Lernen Sie bewährte Methoden oder Überlegungen zum Integrieren vorhandener Web-Apps in Microsoft Teams kennen. Es enthält Informationen zu API-Anforderungen, Authentifizierung und Deep-Linking Ihrer App mit Teams.
 ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Überlegungen zur Microsoft Teams-Integration
-ms.openlocfilehash: e963019783699ebe0ed20b8e45632d03d6631e71
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2df2d9be6962a70c4eb8a933a7c1893ae4bbdb25
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757640"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123801"
 ---
 # <a name="considerations-for-teams-integration"></a>Überlegungen zur Microsoft Teams-Integration
 
