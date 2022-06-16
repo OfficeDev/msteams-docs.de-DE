@@ -428,7 +428,7 @@
     - name: Geräteberechtigungen für den Browser
       href: concepts/device-capabilities/browser-device-permissions.md
     - name: Integrieren von Medienfunktionen
-      href: concepts/device-capabilities/mobile-camera-image-permissions.md
+      href: concepts/device-capabilities/media-capabilities.md
     - name: QR- oder Barcode-Scannerfunktion integrieren
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
     - name: Integration von Standortfunktionen

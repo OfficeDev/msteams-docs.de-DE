@@ -5,12 +5,12 @@ description: Eine Übersicht über benutzerdefinierte Registerkarten auf der Tea
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: c885587dcbd5447cd62b399d28504a096b705e71
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 42d03b988268f9042bd6f6e84d180c8d4b0b2209
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672971"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130417"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Registerkarten für Microsoft Teams erstellen
 
@@ -99,7 +99,7 @@ Sie können mehrere Kanäle oder Gruppenregisterkarten und bis zu 16 persönlich
 
 * [Benutzerdefinierte Registerkarten in Microsoft Teams](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
 * [Geräteberechtigungen anfordern](../concepts/device-capabilities/native-device-permissions.md)
-* [Integrieren von Medienfunktionen](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Integrieren von Medienfunktionen](../concepts/device-capabilities/media-capabilities.md)
 * [Integrieren eines QR- oder Barcodescanners](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integration von Standortfunktionen](../concepts/device-capabilities/location-capability.md)
 * [Registerkarten auf mobilen Geräten](design/tabs-mobile.md#tabs-on-mobile)

@@ -3,12 +3,12 @@ title: Microsoft Teams-Entwicklerdokumentation – Glossar
 description: Informationen zu den in der Microsoft Teams-Entwicklerdokumentation verwendeten Begriffen
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 333f8e2efe0952d96907f6db2c76ebb688e3777d
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 99872eb963c708e4b2a45f01e743ae9845ffa4b0
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887625"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130424"
 ---
 # <a name="glossary"></a>Glossar
 
@@ -117,7 +117,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 
 | Begriff | Definition |
 | --- | --- |
-| [Medienfunktion](../concepts/device-capabilities/mobile-camera-image-permissions.md) | Systemeigene Gerätefunktionen wie Kamera und Mikrofon, die Sie in Ihre Teams App integrieren können. <br>**Weitere Informationen unter**: [Funktion](#c); [Gerätefunktion](#d) |
+| [Medienfunktion](../concepts/device-capabilities/media-capabilities.md) | Systemeigene Gerätefunktionen wie Kamera und Mikrofon, die Sie in Ihre Teams App integrieren können. <br>**Weitere Informationen unter**: [Funktion](#c); [Gerätefunktion](#d) |
 | [Besprechungsbot](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bots, die mit Teams-Anrufen und Besprechungen interagieren, verwenden Sprach-, Video- und Bildschirmfreigabe in Echtzeit. <br>**Weitere Informationen unter**: [Anruf-Bot](#c); [Chat-Bot](#c) |
 | [Der Besprechungslebenszyklus](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | Es umfasst App-Erfahrungen vor der Besprechung, während sowie nach der Besprechung. Sie können Registerkarten, Bots und Nachrichtenerweiterungen in jeder Phase des Besprechungslebenszyklus integrieren. <br>**Weitere Informationen unter**: [Besprechungserfahrung](#i) |
 | [Besprechungsphase](../sbs-meetings-stage-view.yml) | Ein Feature der Besprechungserweiterungs-App. Es handelt sich um einen freigegebenen Bereich, auf den alle Teilnehmer während der Besprechung zugriffen können. Es hilft Teilnehmern, in Echtzeit mit App-Inhalten zu interagieren und zusammenzuarbeiten. <br>**Weitere Informationen unter**: [Phasenansicht](#s) |

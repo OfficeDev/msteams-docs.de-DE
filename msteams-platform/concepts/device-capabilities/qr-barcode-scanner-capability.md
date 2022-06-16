@@ -6,12 +6,12 @@ keywords: Kamera Medien QR-Code qrcode Barcode Strichcode Scanner Scan-Funktione
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 1a8b89754ddf4f04fb2cc6f5890d8ce4c3f25dab
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2dced2abc29ee21e50a3a37ccfed4811102cc8ce
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757717"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130501"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR- oder Barcode-Scannerfunktion integrieren
 
@@ -34,7 +34,7 @@ Es ist wichtig, sich mit den [API-Antwortfehlern](#error-handling) vertraut zu m
 
 ## <a name="update-manifest"></a>Aktualisieren des Manifests
 
-Aktualisieren Sie Ihre Microsoft Teams-App-Datei[manifest.json](../../resources/schema/manifest-schema.md#devicepermissions), indem Sie die `devicePermissions`-Eigenschaft hinzufügen und `media` angeben. Damit kann Ihre App die erforderlichen Berechtigungen von Benutzern anfordern, bevor sie mit der Verwendung der QR- oder Strichcodescannerfunktion beginnen. Das Update für das App-Manifest lautet wie folgt:
+Aktualisieren Sie Ihre Teams-App-Datei[manifest.json](../../resources/schema/manifest-schema.md#devicepermissions), indem Sie die `devicePermissions`-Eigenschaft hinzufügen und `media` angeben. Damit kann Ihre App die erforderlichen Berechtigungen von Benutzern anfordern, bevor sie mit der Verwendung der QR- oder Strichcodescannerfunktion beginnen. Das Update für das App-Manifest lautet wie folgt:
 
 ``` json
 "devicePermissions": [
@@ -78,7 +78,7 @@ Sie müssen sicherstellen, dass diese Fehler in Ihrer Microsoft Teams-App angeme
 
 |Fehlercode |  Fehlername     | Bedingung|
 | --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | DIE API wird auf der aktuellen Plattform nicht unterstützt.|
+| **100** | NOT_SUPPORTED_ON_PLATFORM | Die API wird auf der aktuellen Plattform nicht unterstützt.|
 | **500** | INTERNAL_ERROR | Interner Fehler beim Ausführen des erforderlichen Vorgangs.|
 | **1000** | PERMISSION_DENIED |Die Berechtigung wird vom Benutzer verweigert.|
 | **3000** | NO_HW_SUPPORT | Die zugrunde liegende Hardware unterstützt die Funktion nicht.|
@@ -109,6 +109,6 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Integrieren von Medienfunktionen in Microsoft Teams](mobile-camera-image-permissions.md)
+* [Integrieren von Medienfunktionen](media-capabilities.md)
 * [Integrieren von Standortfunktionen in Microsoft Teams](location-capability.md)
-* [Integrieren der Personenauswahl in Microsoft Teams](people-picker-capability.md)
+* [Integrieren der Personenauswahl in Teams](people-picker-capability.md)

@@ -6,12 +6,12 @@ keywords: Native Geräteberechtigungen für Standortkartenfunktionen
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: cea6ab31f816f41a191a93620c5b91f0b7ba56a2
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 0a2c7400801decd937243bbbe5dbcea307d13fc0
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048997"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130452"
 ---
 # <a name="integrate-location-capabilities"></a>Integration von Standortfunktionen
 
@@ -114,6 +114,6 @@ Sie müssen sicherstellen, dass diese Fehler in Ihrer Microsoft Teams-App angeme
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Integrieren von Medienfunktionen in Microsoft Teams](mobile-camera-image-permissions.md)
+* [Integrieren von Medienfunktionen](media-capabilities.md)
 * [Integrieren von QR-Code- oder Strichcodescanner-Funktionen in Microsoft Teams](qr-barcode-scanner-capability.md)
 * [Integrieren der Personenauswahl in Teams](people-picker-capability.md)

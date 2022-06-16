@@ -4,12 +4,12 @@ description: Informationen zum Aufrufen und Schließen von Aufgabenmodulen, Aufg
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b33d553849376da73b3269ac9a5c0a551d6074d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 04e27e780c1d2686be2ee73909c2d28bfc19fd23
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757304"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130410"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>Aufrufen und Schließen von Aufgabenmodulen
 
@@ -237,6 +237,6 @@ Microsoft Teams stellt sicher, dass die Tastaturnavigation vom Aufgabenmodulkopf
 ## <a name="see-also"></a>Siehe auch
 
 * [Geräteberechtigungen anfordern](~/concepts/device-capabilities/native-device-permissions.md)
-* [Integrieren von Medienfunktionen](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Integrieren von Medienfunktionen](~/concepts/device-capabilities/media-capabilities.md)
 * [Integrieren von QR-Code- oder Strichcodescanner-Funktionen in Microsoft Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrieren von Standortfunktionen in Microsoft Teams](~/concepts/device-capabilities/location-capability.md)

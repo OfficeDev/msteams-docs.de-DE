@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie systemeigene Gerätefunktionen wie Kamera, Bi
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: e2f1e36d78e2bea5e5f4a5b4625c503e570dd77d
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 8795e3caef1582fca10ad8e0c396d98ef7b80422
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123836"
+ms.locfileid: "66130431"
 ---
 # <a name="device-capabilities"></a>Gerätefunktionen
 
@@ -37,7 +37,7 @@ Verwenden Sie die im [Microsoft Teams JavaScript-Client-SDK](/javascript/api/ove
 
 ## <a name="integrate-device-capabilities"></a>Integrieren von Gerätefunktionen
 
-Nachdem Sie Zugriff auf Gerätefunktionen erhalten haben, verwenden Sie Teams-APIs für Medienfunktionen, um [Medienfunktionen](mobile-camera-image-permissions.md) in die Teams-Plattform zu integrieren und so die Benutzererfahrung zu verbessern. Diese integrierten Funktionen ermöglichen Ihrer App Folgendes:
+Nachdem Sie Zugriff auf Gerätefunktionen erhalten haben, verwenden Sie Teams-APIs für Medienfunktionen, um [Medienfunktionen](media-capabilities.md) in die Teams-Plattform zu integrieren und so die Benutzererfahrung zu verbessern. Diese integrierten Funktionen ermöglichen Ihrer App Folgendes:
 
 * Bilder aufnehmen und teilen.
 * Scannen von QR oder Barcode mit der [Scannersteuerung](qr-barcode-scanner-capability.md).
@@ -50,4 +50,4 @@ Außerdem können Sie das systemeigene [Personenauswahl-Steuerelement](people-pi
 
 | Beispielname           | Beschreibung | Node.js    |
 |:---------------------|:--------------|:---------|
-|Geräteberechtigungen | Beschreibt, wie Microsoft Teams Registerkarten-Beispiel-App für Geräteberechtigungen veranschaulicht wird. |[Anzeigen](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
+|Geräteberechtigungen | Beschreibt, wie Microsoft Teams Registerkarten-Beispiel-App für Geräteberechtigungen veranschaulicht wird. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
