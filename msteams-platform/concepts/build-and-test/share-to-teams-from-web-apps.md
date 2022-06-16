@@ -4,25 +4,36 @@ description: Erfahren Sie, wie Sie die Schaltfläche "Freigeben" zu Teams eingeb
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Freigeben Teams Freigeben für Teams
-ms.openlocfilehash: f891c3ea768b3e97a9764ec08f5f91dd7b13e821
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 9a2223ebe89575d81db23ca696f88a2f2d519d31
+ms.sourcegitcommit: 1fdafba2d49a07715315b3f50b910e2c8cb6680c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757059"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66118947"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Von Web-Apps für Teams freigeben
 
-Websites von Drittanbietern können das Launcher-Skript verwenden, um Schaltflächen für die Weitergabe an Teams in ihre Webseiten einzubetten. Wenn Sie diese Option auswählen, wird die Freigabe gestartet, um Teams Oberfläche in einem Popupfenster anzuzeigen. Auf diese Weise können Sie einen Link direkt für eine beliebige Person oder Microsoft Teams Kanal freigeben, ohne den Kontext zu wechseln. In diesem Dokument erfahren Sie, wie Sie eine Schaltfläche "Freigeben" erstellen und in Teams für Ihre Website einbetten, ihre Websitevorschau erstellen und "Freigeben" auf Teams für Education erweitern.
+Websites von Drittanbietern können das Launcher-Skript verwenden, um Schaltflächen für die Weitergabe an Teams in ihre Webseiten einzubetten. Wenn Sie "Freigeben" auswählen, um die Schaltfläche Teams, wird die Schaltfläche "Freigeben" gestartet, um Teams Oberfläche in einem Popupfenster zu Teams. Auf diese Weise können Sie einen Link direkt für eine beliebige Person oder Microsoft Teams Kanal freigeben, ohne den Kontext zu wechseln.
+
+In der folgenden Abbildung wird das Popupfenster für "Freigeben" für Teams Vorschau angezeigt:
+
+:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams-Popup" border="true":::
 
 > [!NOTE]
 >
 > * Nur die Desktopversionen von Microsoft&nbsp;Edge und Google Chrome werden unterstützt.
-> * Die Verwendung von Freemium- oder Gastkonten wird nicht unterstützt.  
+> * Die Verwendung von Freemium- oder Gastkonten wird nicht unterstützt.
 
-In der folgenden Abbildung wird die Popupoberfläche "Freigeben für Teams" angezeigt:
+Sie können auch die Verbreitung von Links für die über "Freigeben" freigegebenen Links zu Teams Schaltfläche hinzufügen, die in der Web-App, persönlichen App oder Registerkarte gehostet wird. Weitere Informationen finden Sie unter ["Verbreitung von Links"](~/messaging-extensions/how-to/link-unfurling.md).
 
-:::image type="content" source="../../assets/images/share-to-teams-popup.png" alt-text="Popupmenü &quot;Für Teams freigeben&quot;":::
+In der folgenden Abbildung wird die Verknüpfungsausweitung über die Schaltfläche "Freigeben für Teams" angezeigt:
+
+:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Freigabe-zu-Teams-Link-Verbreitung" border="true":::
+
+> [!NOTE]
+> Die Verbreitung von Links in der Freigabe zu Teams ist derzeit nur in der öffentlichen Entwicklervorschau verfügbar.
+
+In diesem Artikel erfahren Sie, wie Sie eine Schaltfläche "Freigeben" erstellen und in Teams für Ihre Website einbetten, Eine Websitevorschau erstellen und auf Teams für Education erweitern.
 
 ## <a name="embed-a-share-to-teams-button"></a>Einbetten einer Freigabe in Teams Schaltfläche
 
@@ -43,9 +54,9 @@ In der folgenden Abbildung wird die Popupoberfläche "Freigeben für Teams" ange
 
     Nach Abschluss dieses Vorgangs wird das symbol für Microsoft Teams ihrer Website hinzugefügt. Die folgende Abbildung zeigt das Symbol "Für Teams freigeben":
 
-    ![Symbol "Für Teams freigeben"](~/assets/icons/share-to-teams-icon.png)
+    :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="Symbol &quot;Für Teams freigeben&quot;" border="true":::
 
-1. Wenn Sie für die Schaltfläche "Freigeben zu Teams" eine andere Symbolgröße wünschen, verwenden Sie das `data-icon-px-size` Attribut.
+1. Wenn Sie eine andere Symbolgröße für die Schaltfläche "Freigeben" Teams möchten, verwenden Sie alternativ das `data-icon-px-size` Attribut.
 
     ```html
     <div
