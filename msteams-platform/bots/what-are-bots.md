@@ -1,16 +1,16 @@
 ---
 title: Bots in Microsoft Teams
 author: surbhigupta
-description: Eine Übersicht über Bots in Microsoft Teams.
+description: Beginnen Sie mit diesem Lernpfad mit Unterhaltungsbots in Microsoft Teams und dessen Codebeispielen.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 81fa44730a26f3d7bcafdc9f37ec15b4eb7b1951
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 13f966d8c01cb6dcc9dc88fadaeb8ad0d348a2ff
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602292"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143711"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots in Microsoft Teams
 
@@ -39,7 +39,7 @@ Jede Interaktion zwischen dem Benutzer und dem Bot wird als eine Aktivität darg
 
 Bots sind Apps, die über eine Unterhaltungsschnittstelle verfügen. Sie können mithilfe von Text, interaktiven Karten und Sprache mit einem Bot interagieren. Ein Bot verhält sich in einer Kanal- oder Gruppenchatunterhaltung anders als in einer 1:1-Unterhaltung. Unterhaltungen werden über den Bot Framework-Connector verarbeitet. Weitere Informationen finden Sie unter [Grundlagen zu Unterhaltungen](~/bots/how-to/conversations/conversation-basics.md).
 
-Ihr Bot benötigt Kontextinformationen, z. B. Benutzerprofildetails, um auf relevante Inhalte zuzugreifen und das Boterlebnis zu verbessern. Weitere Informationen finden Sie unter [Abrufen des Teams-Kontexts](~/bots/how-to/get-teams-context.md).
+Ihr Bot benötigt Kontextinformationen, z. B. Benutzerprofildetails, um auf relevante Inhalte zuzugreifen und die Boterfahrung zu verbessern. Weitere Informationen finden Sie unter [Teams-Kontext abrufen](~/bots/how-to/get-teams-context.md).
 
 Sie können Dateien über den Bot mithilfe von Graph-APIs oder Teams-Bot-APIs senden und empfangen. Weitere Informationen finden Sie unter [Senden und Empfangen von Dateien über den Bot](~/bots/how-to/bots-filesv4.md).
 

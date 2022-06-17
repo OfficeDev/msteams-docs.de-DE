@@ -4,12 +4,12 @@ description: In diesem Modul erfahren Sie mehr über Live Share SDK-Funktionen, 
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: c6ea321cf9a0bee33b44c54f273662663f23b433
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f5986515f9916a0138524b919dca46d0cf0ee8d4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756604"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143242"
 ---
 ---
 
@@ -29,13 +29,13 @@ Das [Live Share SDK](https://github.com/microsoft/live-share-sdk) ist ein auf [n
 **npm**
 
 ```bash
-$ npm install @microsoft/live-share --save
+npm install @microsoft/live-share --save
 ```
 
 **Yarn**
 
 ```bash
-$ yarn add @microsoft/live-share
+yarn add @microsoft/live-share
 ```
 
 ## <a name="register-rsc-permissions"></a>Registrieren von RSC-Berechtigungen
@@ -91,10 +91,10 @@ Um das Live Share SDK für Ihre Besprechungserweiterung zu aktivieren, müssen S
 
 Führen Sie die Schritte aus, um einer Sitzung beizutreten, die der Besprechung eines Benutzers zugeordnet ist:
 
-1. Initialisieren des Teams-Client-SDK
-2. Initialisieren des [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient)
-3. Definieren der vertraulichen Daten, die Sie schützen möchten. Beispiel: `SharedMap`
-4. Dem Container beitreten
+1. Initialisieren Sie das Teams Client-SDK.
+2. Initialisieren des [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient).
+3. Definieren der vertraulichen Daten, die Sie schützen möchten. Beispiel: `SharedMap`.
+4. Dem Container beitreten.
 
 Beispiel:
 

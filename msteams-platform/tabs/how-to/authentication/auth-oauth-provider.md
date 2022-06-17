@@ -1,15 +1,14 @@
 ---
 title: Verwenden externer OAuth-Anbieter
-description: Beschreibt die Authentifizierung mit externen OAuth-Anbietern
+description: In diesem Modul erfahren Sie, wie Sie die Authentifizierung mit externen OAuth-Anbietern durchführen und sie einem externen Browser hinzufügen
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: Teams-Authentifizierung mit externem OAuth-Anbieter
-ms.openlocfilehash: dc47163b58bcf2ce39820b0ba9db4e6cb05774ef
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 8a7d89bbe3c6109e52a4d22f4bc26eace7acc5d1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826964"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142276"
 ---
 # <a name="use-external-oauth-providers"></a>Verwenden externer OAuth-Anbieter
 

@@ -1,16 +1,15 @@
 ---
 title: Senden proaktiver Nachrichten
-description: Erfahren Sie, wie Sie proaktive Nachrichten mit Ihrem Microsoft Teams-Bot senden und Ihre App proaktiv mit Microsoft Graph installieren und die Codebeispiele basierend auf Bot Framework SDK v4 überprüfen.
+description: Erfahren Sie, wie Sie proaktive Nachrichten mit Ihrem Teams-Bot senden, Ihre App mit Microsoft Graph installieren und Codebeispiele basierend auf dem Bot-Framework-SDK v4 überprüfen
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
-Keywords: 'Nachricht senden: Kanal-ID der Benutzer-ID abrufen: Konversations-ID'
-ms.openlocfilehash: 7b1227dd69e8245b6ad318eb5e7425893075d878
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: cf163b8c74a74eeb83757e65fd79351176290fc9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757577"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143508"
 ---
 # <a name="proactive-messages"></a>Proaktive Nachrichten
 

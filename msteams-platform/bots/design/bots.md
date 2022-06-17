@@ -1,16 +1,16 @@
 ---
 title: Entwerfen Ihres Bots
-description: Erfahren Sie, wie Sie einen Teams-Bot entwerfen und das Microsoft Teams UI Kit erhalten.
+description: In diesem Modul erfahren Sie, wie Sie einen Teams Bot und seine Anwendungsfälle entwerfen und hinzufügen und das Microsoft Teams UI Kit erhalten.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 67f67535994bde9871cdaa7be8081e05ccbf1a1d
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 7e17d4b07454013479936dc6e721cd1e2354b3ba
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602299"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143592"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Entwerfen Ihres Microsoft Teams-Bots
 

@@ -1,15 +1,15 @@
 ---
 title: Aktivieren und Konfigurieren Ihrer Apps für Teams-Besprechungen
 author: surbhigupta
-description: Aktivieren und Konfigurieren Ihrer Apps für Teams-Besprechungen und verschiedene Besprechungsszenarien, Aktualisieren des App-Manifests, Konfigurieren von Features, z. B. besprechungsinternes Dialogfeld, geteilte Freigabefenster, Besprechungsseitenbereich und mehr
+description: Erfahren Sie, wie Sie Ihre Apps für Teams-Besprechungen und verschiedene Besprechungsszenarien aktivieren und konfigurieren, das App-Manifest aktualisieren, Features konfigurieren und vieles mehr.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 20253da4688009baabb746f3e71d0af47b2455d6
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: e7286399d27533d816e20f6b22e45f2526efdbe1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111318"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142591"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams-Besprechungen
 
@@ -37,10 +37,10 @@ Die Funktionen der Besprechungs-App werden in Ihrem App-Manifest mithilfe der Ar
 
 > [!NOTE]
 >
-> * Sie müssen Ihr App-Manifest mit dem [Manifestschema](../resources/schema/manifest-schema-dev-preview.md) aktualisieren.
 > * Apps in Besprechungen erfordern einen `groupchat`-Bereich. Der `team`-Bereich funktioniert nur für Registerkarten in Kanälen.
+> * Apps in Besprechungen können die folgenden Kontexte verwenden: `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` und `meetingStage`.
 
-Das App-Manifest muss den folgenden Codeausschnitt enthalten:
+Der folgende Codeausschnitt ist ein Beispiel für eine konfigurierbare Registerkarte, die in einer App für Teams Besprechungen verwendet wird:
 
 ```json
 
@@ -114,8 +114,9 @@ So fügen Sie einer Besprechung einen Bot hinzu:
 Geben Sie in einem Besprechungschat den Schlüssel **@** ein, und wählen Sie **Bots abrufen** aus.
 
 > [!NOTE]
+>
 > * Das besprechungsinterne Dialogfeld zeigt ein Dialogfeld in einer Besprechung an und postet gleichzeitig eine adaptive Karte im Besprechungschat, auf die Benutzer zugreifen können. Die adaptive Karte im Besprechungschat hilft Benutzern während der Teilnahme an der Besprechung, oder wenn die Teams-App minimiert ist.
-> * Die Benutzeridentität muss mit den [SSO-Registerkarten](../tabs/how-to/authentication/auth-aad-sso.md) bestätigt werden. Nach der Authentifizierung kann die App die Benutzerrolle mithilfe der `GetParticipant`-API abrufen.
+> * Die Benutzeridentität muss mit den [SSO-Registerkarten](../tabs/how-to/authentication/tab-sso-overview.md) bestätigt werden. Nach der Authentifizierung kann die App die Benutzerrolle mithilfe der `GetParticipant`-API abrufen.
 > * Basierend auf der Benutzerrolle kann die App rollenspezifische Erfahrungen bieten. Beispielsweise ermöglicht eine Umfrage-App nur Organisatoren und Referenten das Erstellen einer neuen Umfrage.
 > * Rollenzuweisungen können geändert werden, während eine Besprechung ausgeführt wird. Weitere Informationen finden Sie unter [Rollen in einer Teams-Besprechung](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
@@ -184,6 +185,7 @@ Teilnehmer können bestimmte Teile der App für das gemeinschaftliche Freigabefe
 Um bestimmte Teile der App für das Freigabefenster freizugeben, müssen Sie die zugehörigen APIs in der Teams-Client-SDK-Bibliothek aufrufen. Weitere Informationen finden Sie unter [API-Referenz](API-references.md).
 
 > [!NOTE]
+>
 > * Verwenden Sie die Teams-Manifestversion 1.12 oder höher, um bestimmte Teile der App für das Freigabefenster freizugeben.
 > * Das Freigeben bestimmter Teile der App für das Freigabefenster wird nur für Teams-Desktopclients unterstützt.
 

@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 6df09a7398d26c4e0a69a2a9ac3f256b7086a9e0
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: d531b01a8de3663fed6806bc68386d9c4c894695
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668074"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142101"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Erweitern einer Teams-Nachrichtenerweiterung in Microsoft 365
 
@@ -20,9 +20,9 @@ Der Prozess zum Aktualisieren Ihrer suchbasierten Teams-Nachrichtenerweiterung z
 
 > [!div class="checklist"]
 >
-> * Aktualisieren Ihres App-Manifests
-> * Hinzufügen eines Outlook-Kanals für Ihren Bot
-> * Querladen Ihrer aktualisierten App in Teams
+> * Aktualisieren Sie Ihr App-Manifest.
+> * Fügen Sie einen Outlook-Kanal für Ihren Bot hinzu.
+> * Laden Sie Ihre aktualisierte App in Teams quer.
 
 Der Rest dieses Leitfadens führt Sie durch diese Schritte und zeigt Ihnen, wie Sie Ihre Nachrichtenerweiterung in Outlook für Windows Desktop und auf outlook.com in der Vorschau anzeigen können.
 
@@ -30,10 +30,10 @@ Der Rest dieses Leitfadens führt Sie durch diese Schritte und zeigt Ihnen, wie 
 
 Für dieses Lernprogramm benötigen Sie Folgendes:
 
-* Einen Sandkastenmandanten für das Microsoft 365-Entwicklerprogramm
-* Registrierung in *Office 365 Targeted Releases* Ihres Sandkastenmandanten
-* Eine Testumgebung mit Office-Apps, die über den Microsoft 365 Apps-*Betakanal* installiert wurden
-* (Optional) Microsoft Visual Studio Code mit der Microsoft Teams Toolkit-Erweiterung
+* Einen Sandkastenmandanten für das Microsoft 365-Entwicklerprogramm.
+* Registrierung in *Office 365 Targeted Releases* für Ihren Sandbox-Mandanten.
+* Eine Testumgebung mit installierten Office-Anwendungen aus dem Microsoft 365 Apps-*Betakanal*.
+* (Optional) Microsoft Visual Studio Code mit der Teams Toolkit-Erweiterung.
 
 > [!div class="nextstepaction"]
 > [Veröffentlichen von Microsoft Teams-Apps, die für Microsoft 365 erweitert wurden](publish.md)
@@ -79,7 +79,7 @@ Sie haben zwei Möglichkeiten zum Aktualisieren Ihres App-Manifests:
 
 # <a name="manual-steps"></a>[Manuelle Anwendung](#tab/manifest-manual)
 
-Öffnen Sie Ihr Teams-App-Manifest, und aktualisieren Sie das `$schema` und die `manifestVersion` mit den folgenden Werten:
+Öffnen Sie Ihr Microsoft Teams-App-Manifest, und aktualisieren Sie das `$schema` und die `manifestVersion` mit den folgenden Werten:
 
 ```json
 {
@@ -90,7 +90,7 @@ Sie haben zwei Möglichkeiten zum Aktualisieren Ihres App-Manifests:
 
 ---
 
-Wenn Sie Teams Toolkit zum Erstellen Ihrer Nachrichtenerweiterungs-App verwendet haben, können Sie damit die Änderungen an der Manifestdatei validieren und Fehler identifizieren. Öffnen Sie die Befehlspalette `Ctrl+Shift+P`, und suchen Sie **Teams: Manifestdatei überprüfen**.
+Wenn Sie das Microsoft Teams Toolkit zum Erstellen Ihrer Nachrichtenerweiterungs-App verwendet haben, können Sie damit die Änderungen an der Manifestdatei validieren und Fehler identifizieren. Öffnen Sie die Befehlspalette `Ctrl+Shift+P` und suchen Sie **Teams: Manifestdatei validieren** (Teams: Validate manifest file).
 
 ## <a name="add-an-outlook-channel-for-your-bot"></a>Hinzufügen eines Outlook-Kanals für Ihren Bot
 
@@ -115,7 +115,7 @@ Damit Benutzer von Outlook aus mit Ihrer Nachrichtenerweiterung interagieren kö
 > [!NOTE]
 > Sie können den Schritt überspringen, wenn Sie die in diesem Lernprogramm bereitgestellte [Beispiel-App](#quickstart) verwenden, da das Szenario keine Azure Active Directory (AAD) Single Sign-On-Authentifizierung umfasst.
 
-Azure Active Directory (AD) Single Sign-On (SSO) für Nachrichtenerweiterungen funktioniert in Outlook [genauso wie in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). Sie müssen jedoch mehrere Clientanwendungsbezeichner zur Azure AD App-Registrierung Ihres Bots im Portal *App-Registrierungen* Ihres Mandanten hinzufügen.
+Azure Active Directory (AD) Single Sign-On (SSO) für Nachrichtenerweiterungen funktioniert in Outlook genauso [wie in Microsoft Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). Sie müssen jedoch der Azure AD-App-Registrierung Ihres Bots im *App-Registrierungsportal* Ihres Mandanten mehrere Clientanwendungsbezeichner hinzufügen.
 
 1. Melden Sie sich mit Ihrem Sandkastenmandantenkonto beim [Azure-Portal](https://portal.azure.com) an.
 1. Öffnen Sie **App-Registrierungen**.

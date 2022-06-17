@@ -1,15 +1,14 @@
 ---
 title: Kartentypen
-description: Beschreibt alle für Bots in Teams verfügbaren Karten und Kartenaktionen
+description: In diesem Modul erfahren Sie, welche Karten und Kartenaktionen Bots in Teams zur Verfügung stehen, und erstellen Sie einen Hero, Miniaturansichten und adaptive Karten
 ms.localizationpriority: high
-keywords: Referenz zu Bots-Karten
 ms.topic: reference
-ms.openlocfilehash: 56dc77dfbb9d7d67d5846db13eca7351636814af
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 4633b1399068fffe95a9fff4b5320426617ae1d1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032990"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142626"
 ---
 # <a name="types-of-cards"></a>Kartentypen
 
@@ -63,13 +62,13 @@ Sie können unterschiedliche Kartentypen basierend auf Ihren Anwendungsanforderu
 
 | Kartentyp | Bots | Vorschau der Nachrichtenerweiterung | Ergebnisse der Nachrichtenerweiterung | Aufgabenmodule | Ausgehende Webhooks | Eingehende Webhooks | Office 365-Connectors |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Adaptive Karte | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| Office 365-Connectorkarte | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
-| Hero-Karte | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| Miniaturbildkarte | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| Listenkarte | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
-| Belegkarte | ✔ | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ |
-| Anmeldekarte | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
+| Adaptive Karte | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
+| Office 365-Connectorkarte | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
+| Hero-Karte | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| Miniaturbildkarte | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| Listenkarte | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ❌ |
+| Belegkarte | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ❌ |
+| Anmeldekarte | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
 > Bei adaptiven Karten in eingehenden Webhooks werden alle systemeigenen Schemaelemente adaptiver Karten, mit Ausnahme von `Action.Submit`, vollständig unterstützt. Die unterstützten Aktionen sind [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)und [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
@@ -121,7 +120,7 @@ Die folgende Tabelle enthält die Features, die Adaptive Karten unterstützen:
 
 | Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 > [!NOTE]
 >
@@ -304,7 +303,7 @@ Die folgende Tabelle enthält die Features, die Hero-Karten unterstützen:
 
 | Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### <a name="properties-of-a-hero-card"></a>Eigenschaften einer Hero-Karte
 
@@ -371,7 +370,7 @@ Die folgende Tabelle enthält die Features, die Listenkarten unterstützen:
 
 | Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ |✔ |
+| ✔️ | ❌ | ❌ |✔️ |
 
 ### <a name="properties-of-a-list-card"></a>Eigenschaften einer Listenkarte
 
@@ -449,7 +448,7 @@ Die folgende Tabelle enthält die Features, die Office 365-Connectorkarten unter
 
 | Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✔ | ✖ |
+| ✔️ | ✔️ | ✔️ | ❌ |
 
 ### <a name="properties-of-the-office-365-connector-card"></a>Eigenschaften der Office 365-Connectorkarte
 
@@ -571,7 +570,7 @@ Die folgende Tabelle enthält die Features, die Belegkarten unterstützen:
 
 | Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### <a name="example-of-a-receipt-card"></a>Beispiel für eine Belegkarte
 
@@ -645,7 +644,7 @@ Die folgende Tabelle enthält die Features, die Anmeldekarten unterstützen:
 
 | Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 ### <a name="additional-information-on-signin-cards"></a>Zusätzliche Informationen zu Anmeldekarten
 
@@ -664,7 +663,7 @@ Die folgende Tabelle enthält die Features, die Miniaturansichtskarten unterstü
 
 | Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 :::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="Miniaturbildkarte":::
 
@@ -747,7 +746,7 @@ Die folgende Tabelle enthält die Features, die Karussellsammlungen unterstütze
 
 | Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 > [!NOTE]
 > Ein Karussell kann pro Nachricht maximal zehn Karten anzeigen.
@@ -941,7 +940,7 @@ Die folgende Tabelle enthält die Features, die Listensammlungen unterstützen:
 
 | Bots in Teams | Nachrichtenerweiterungen  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 #### <a name="example-of-a-list-collection"></a>Beispiel für eine Listensammlung
 

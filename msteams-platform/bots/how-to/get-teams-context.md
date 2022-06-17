@@ -1,17 +1,16 @@
 ---
 title: Microsoft Teams-Kontext für Ihren Bot erhalten
 author: surbhigupta
-description: Erfahren Sie, wie Sie den spezifischen Kontext von Microsoft Team für Ihren Bot erhalten, einschließlich der Unterhaltungsliste, der Details eines einzelnen Mitglieds oder Teams, der Kanalliste und Codebeispiele.
+description: Erfahren Sie, wie Sie den Teams-spezifischen Kontext für Ihren Bot abrufen, z. B. die Unterhaltungsliste, die Details eines einzelnen Mitglieds oder Teams, die Kanalliste und Codebeispiele.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-keywords: Bot Kontext Liste Benutzerprofil Kanalliste
-ms.openlocfilehash: 8bbbf7af5fd9d86ec1019a5c3b4ec76dce4085f2
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: fc138a66bd5a489133c11db8a24b2a9d6d06634d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756590"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143760"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Microsoft Teams-Kontext für Ihren Bot erhalten
 

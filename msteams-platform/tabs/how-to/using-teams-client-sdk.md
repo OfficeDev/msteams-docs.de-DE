@@ -2,16 +2,15 @@
 title: Erstellen von Registerkarten und anderen gehosteten Umgebungen mit dem Microsoft Teams JavaScript-Client-SDK
 author: heath-hamilton
 ms.author: surbhigupta
-description: Übersicht über das Microsoft Teams JavaScript-Client-SDK, das Sie beim Erstellen von App-Umgebungen unterstützen kann, die in einem <iframe> in Office und Outlook gehostet werden.
+description: Lernen Sie in diesem Modul das JavaScript-Client-SDK von Microsoft Teams kennen, das Ihnen beim Erstellen von App-Erfahrungen helfen kann, die in <iframe> in Office und Outlook gehostet werden.
 ms.localizationpriority: high
-keywords: Teams Registerkarten Gruppenkanal konfigurierbares statisches SDK JavaScript persönliches m365
 ms.topic: conceptual
-ms.openlocfilehash: 3b607056e2e3e10ff6817acdea4425573f99c170
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 1909df76b3cc61f0d93e4efe40e02b99dc3de730
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033043"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144215"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Erstellen von Registerkarten und anderen gehosteten Umgebungen mit dem Microsoft Teams JavaScript-Client-SDK
 

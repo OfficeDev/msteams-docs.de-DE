@@ -1,17 +1,16 @@
 ---
 title: Erstellen von Registerkarten mit adaptiven Karten
 author: KirtiPereira
-description: Erfahren Sie mehr über das Erstellen von Registerkarten mithilfe adaptiver Karten mit Codebeispielen und grundlegenden Informationen zu Aufgabenmodulworkflows sowie zur Authentifizierung.
+description: In diesem Modul erfahren Sie mehr über das Erstellen von Registerkarten mithilfe von Beispielen für adaptive Karten mit Code, einschließlich des Aufrufens von Aktivitäten, des Verständnisses des Aufgabenmodul-Workflows und der Authentifizierung.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: Datenfluss für die Authentifizierung von persönlichen Apps mit adaptiver Karte
-ms.openlocfilehash: 3c919cb6185481306985adfe9402ba0c31aac584
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: c71c8199e1606a7d36f2cdbd553ac5232b9a7926
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110288"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143998"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
@@ -430,7 +429,7 @@ Der folgende Code zeigt ein Beispiel für eine erneute Anforderung:
 
 |**Beispielname** | **Beschreibung** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| Anzeigen adaptiver Karten auf einer Teams-Registerkarte | Microsoft Teams-Beispielcode für die Registerkarte, der veranschaulicht, wie adaptive Karten in Teams angezeigt werden. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| Anzeigen adaptiver Karten auf einer Teams-Registerkarte | Microsoft Teams-Beispielcode für die Registerkarte, der veranschaulicht, wie adaptive Karten in Teams angezeigt werden. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="next-step"></a>Nächster Schritt
 
