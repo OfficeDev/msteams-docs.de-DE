@@ -1,15 +1,14 @@
 ---
 title: Entwickeln von Nachrichtenerweiterungen
-description: Beschreibt die ersten Schritte mit Nachrichtenerweiterungen in Microsoft Teams
+description: In diesem Modul erfahren Sie, wie Sie mit Nachrichtenerweiterungen in Microsoft Teams
 ms.topic: overview
 ms.localizationpriority: medium
-keywords: Messaging-Erweiterungen für Teams-Messaging-Erweiterungen
-ms.openlocfilehash: 8d44ea8ffe3c265a5c65ae2e842fe4f55f950e58
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: c81df30b71bbdba19842e45f06b4c9bb930e4c0d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111920"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143977"
 ---
 # <a name="develop-message-extensions-for-microsoft-teams"></a>Entwickeln von Nachrichtenerweiterungen für Microsoft Teams
 
@@ -19,17 +18,17 @@ Nachrichtenerweiterungen sind eine leistungsstarke Möglichkeit für Benutzer, �
 
 ![Beispiel für eine Nachrichtenerweiterungskarte](~/assets/images/compose-extensions/ceexample.png)
 
-Nachrichtenerweiterungen werden am unteren Rand des Felds zum Verfassen angezeigt. Einige sind integriert, z. B. Emoji, Giphy und Aufkleber. Wählen Sie die Schaltfläche " **Weitere Optionen** (**&#8943;**) aus, um andere Nachrichtenerweiterungen anzuzeigen, einschließlich derer, die Sie aus dem App-Katalog hinzufügen oder sich selbst hochladen.
+Nachrichtenerweiterungen werden am unteren Rand des Felds zum Verfassen angezeigt. Einige sind integriert, z. B. Emoji, GIF und Aufkleber. Wählen Sie die Schaltfläche " **Weitere Optionen** (**&#8943;**) aus, um andere Nachrichtenerweiterungen anzuzeigen, einschließlich derer, die Sie aus dem App-Katalog hinzufügen oder sich selbst hochladen.
 
 Wie würden Sie Nachrichtenerweiterungen verwenden? Hier sind einige Möglichkeiten:
 
-* Arbeitselemente und Fehler
-* Kundensupporttickets
-* Verwendungsdiagramme und Berichte
-* Bilder und Medieninhalte
-* Verkaufschancen und Leads
+* Arbeitselemente und Fehler.
+* Kundensupporttickets.
+* Verwendungsdiagramme und Berichte.
+* Bilder und Medieninhalte.
+* Verkaufschancen und Leads.
 
-## <a name="types-of-message-extensions"></a>Typen von Nachrichtenerweiterungen
+## <a name="types-of-message-extensions"></a>Arten von Nachrichtenerweiterungen
 
 Es gibt in erster Linie zwei Arten von Nachrichtenerweiterungen, die Sie heute für Teams erstellen können. Die folgenden Themen führen Sie durch den Erstellungsprozess:
 

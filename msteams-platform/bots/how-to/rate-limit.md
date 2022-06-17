@@ -1,15 +1,14 @@
 ---
 title: Optimieren eines Bots mit Ratenbegrenzung in Teams
-description: Erfahren Sie anhand von Beispielcodes mehr über das Behandeln von Ratenbegrenzungen für Bots mit Pro Bot pro Thread-Grenzwert und pro Grenzwert für alle Bots. Darüber hinaus lernen Sie bewährte Methoden der Ratenbegrenzung in Microsoft Teams kennen.
+description: Informationen zum Behandlungsratenlimit für Bots mit pro Bot und Threadlimit für alle Bots unter Verwendung von Codebeispielen
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Teams Bots Ratenbegrenzung
-ms.openlocfilehash: a864970bd837ef4af3ccebe0b09ca4d38ac7b76b
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f6afb9cd3b3894dff31ecaf5e8d9ece7204248a1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757150"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143732"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimieren eines Bots mit Ratenbegrenzung in Teams
 

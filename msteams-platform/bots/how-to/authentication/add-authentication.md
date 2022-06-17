@@ -1,17 +1,16 @@
 ---
 title: Authentifizierung für Ihren Teams-Bot hinzufügen
 author: surbhigupta
-description: Hinzufügen der OAuth-Authentifizierung zu einem Bot in Microsoft Teams mithilfe von Azure Active Directory. Erfahren Sie, wie Sie authentifizierungsfähige Bots erstellen, bereitstellen und integrieren.
+description: Erfahren Sie, wie Sie einem Bot in Teams mithilfe von Azure Active Directory die OAuth-Authentifizierung hinzufügen. Erfahren Sie, wie Sie authentifizierungsfähige Bots erstellen, bereitstellen und integrieren.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: Ressourcengruppen-Bot-Registrierung Azure-Emulator-Botmanifest bereitstellen
-ms.openlocfilehash: 9594723f671f69a5dc4cb99f0ab48385603e3394
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2a9ebf96f5795b6674646bc50dd856badf59152e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756947"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142563"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Authentifizierung für Ihren Teams-Bot hinzufügen
 
@@ -340,7 +339,7 @@ Alternativ können Sie in Visual Studio die folgenden Schritte ausführen:
 1. Wählen Sie im linken Bereich **Einstellungen** aus.
 1. Geben Sie im Feld **Messagingendpunkt** die oben abgerufene URL gefolgt von `api/messages` ein. Dies ist ein Beispiel: `https://botteamsauth.azurewebsites.net/api/messages`.
     > [!NOTE]
-    > Für einen Bot ist nur ein Messagingendpunkt zulässig.
+    > Für einen Bot ist nur ein Messaging-Endpunkt zulässig.
 1. Wählen Sie oben links die Schaltfläche **Speichern** aus.
 
 ## <a name="test-the-bot-using-the-emulator"></a>Testen des Bots mithilfe von Emulator
@@ -629,6 +628,15 @@ Verwenden Sie in einem Dialogschritt `begin_dialog`, um die OAuth-Eingabeaufford
 [!code-python[allow logout](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/logout_dialog.py?range=29-36&highlight=6)]
 
 ---
+
+## <a name="code-sample"></a>Codebeispiel
+
+Dieser Abschnitt enthält ein Beispiel für botauthentifizierung v3 SDK.
+
+| **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
+|---------------|------------|------------|-------------|---------------|
+| Bot-Authentifizierung | In diesem Beispiel wird gezeigt, wie Sie mit der Authentifizierung in einem Bot für Microsoft Teams beginnen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Registerkarten-, Bot- und Nachrichtenerweiterungs-SSO (ME) | Dieses Beispiel zeigt SSO für Tab, Bot und ME – Suche, Aktion, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Nicht verfügbar |
 
 ## <a name="see-also"></a>Siehe auch
 

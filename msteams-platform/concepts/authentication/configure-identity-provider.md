@@ -1,15 +1,14 @@
 ---
 title: Konfigurieren von OAuth 2.0-Identitätsanbietern
-description: Beschreibt, wie Identitätsanbieter mit einem Fokus auf Microsoft Azure Active Directory (Azure AD) konfiguriert werden.
+description: In diesem Modul erfahren Sie, wie Sie Identitätsanbieter mit dem Fokus auf Microsoft Azure Active Directory (Azure AD) konfigurieren.
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Teams-Authentifizierung – Azure AD-OAuth-Identitätsanbieter
-ms.openlocfilehash: 6fb17041e9169b4d5e74295cbb62ea97c8befd0f
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 2d344fb5ffcbde35ad9e85eed9ea662d2a0ca9f6
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887569"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143445"
 ---
 # <a name="configure-identity-providers"></a>Identitätsanbieter konfigurieren
 
@@ -37,6 +36,6 @@ Ersetzen Sie `<hostname>` ihren eigentlichen Host, der eine dedizierte Hostingwe
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Authentifizieren eines Benutzers in einem Microsoft Teams-Bot](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
+* [Authentifizieren eines Benutzers in einem Microsoft Teams Bot](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
 * [Unterstützung für einmaliges Anmelden (SSO) für Registerkarten](../../tabs/how-to/authentication/tab-sso-overview.md)
-* [Authentifizieren eines Benutzers auf einer Microsoft Teams-Registerkarte](../../tabs/how-to/authentication/auth-tab-aad.md)
+* [Authentifizieren eines Benutzers auf einer Microsoft Teams Registerkarte](../../tabs/how-to/authentication/auth-tab-aad.md)

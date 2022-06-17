@@ -1,16 +1,16 @@
 ---
 title: Aufgabenmodule
 author: surbhigupta
-description: Hinzufügen modaler Popupoberflächen zum Sammeln oder Anzeigen von Informationen für Ihre Benutzer aus Ihren Microsoft Teams-Apps
+description: In diesem Modul erfahren Sie, wie Sie modale Popupoberflächen hinzufügen, um Informationen aus Ihren Microsoft Teams-Apps für Ihre Benutzer zu sammeln oder anzuzeigen.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a7d7778aa4d38dbc879255c449b93590d04f00e2
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f5bed6e92200d19fc99f8f91d632dd04d61a1722
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756597"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143599"
 ---
 # <a name="task-modules"></a>Aufgabenmodule
 

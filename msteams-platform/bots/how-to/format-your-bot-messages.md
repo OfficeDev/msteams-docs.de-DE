@@ -1,16 +1,16 @@
 ---
 title: Formatieren von Bot-Nachrichten
 author: surbhigupta
-description: Fügen Sie Ihren Bot-Nachrichten umfangreiche Formatierungen hinzu, z. B. Durchgestrichen, sortierte und ungeordnete Liste, Link, Bildlink und mehr.
+description: In diesem Modul erfahren Sie, wie Sie Ihren Bot-Nachrichten umfangreiche Formatierung hinzufügen, z. B. durchgestrichene, sortierte und ungeordnete Liste, Link, Bildlink und mehr.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d8697cf25b0cc08f880f8849ea152d1c30d4c146
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 3bb58062a449d9122940064416cc621fc65603d1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111828"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143480"
 ---
 # <a name="format-your-bot-messages"></a>Formatieren von Bot-Nachrichten
 
@@ -44,17 +44,17 @@ Einige Formatvorlagen werden derzeit nicht auf allen Plattformen unterstützt. D
 
 | Format                     | Nur-Text-Nachrichten | Funktionsreiche Karten – nur XML |
 | ---                       | :---: | :---: |
-| Fett                      | ✔ | ✖ |
-| Kursiv                    | ✔ | ✔ |
-| Header (Stufe 1&ndash;3) | ✖ | ✔ |
-| Durchgestrichen             | ✖ | ✔ |
-| Horizontales Lineal           | ✖ | ✖ |
-| Unsortierte Liste            | ✖ | ✔ |
-| Sortierte Liste              | ✖ | ✔ |
-| Vorformatierter Text         | ✔ | ✔ |
-| Blockzitat                | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ |
-| Bildverknüpfung                | ✔ | ✖ |
+| Fett                      | ✔️️ | ❌ |
+| Kursiv                    | ✔️ | ✔️ |
+| Header (Stufe 1&ndash;3) | ❌ | ✔️ |
+| Durchgestrichen             | ❌ | ✔️ |
+| Horizontales Lineal           | ❌ | ❌ |
+| Unsortierte Liste            | ❌ | ✔️ |
+| Sortierte Liste              | ❌ | ✔️ |
+| Vorformatierter Text         | ✔️ | ✔️ |
+| Blockzitat                | ✔️ | ✔️ |
+| Hyperlink                 | ✔️ | ✔️ |
+| Bildverknüpfung                | ✔️ | ❌ |
 
 Stellen Sie nach Überprüfung des plattformübergreifenden Supports sicher, dass auch die Unterstützung einzelner Plattformen verfügbar ist.
 
@@ -68,17 +68,17 @@ Die folgende Tabelle enthält eine Liste der Formatvorlagen, die unter Desktop, 
 
 | Format                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
-| Fett                      | ✔ | ✔ | ✔ |
-| Kursiv                    | ✔ | ✔ | ✔ |
-| Header (Stufe 1&ndash;3) | ✖ | ✖ | ✖ |
-| Durchgestrichen             | ✔ | ✔ | ✖ |
-| Horizontales Lineal           | ✖ | ✖ | ✖ |
-| Unsortierte Liste            | ✔ | ✖ | ✖ |
-| Sortierte Liste              | ✔ | ✖ | ✖ |
-| Vorformatierter Text         | ✔ | ✔ | ✔ |
-| Blockzitat                | ✔ | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ | ✔ |
-| Bildverknüpfung                | ✔ | ✔ | ✔ |
+| Fett                      | ✔️ | ✔️ | ✔️ |
+| Kursiv                    | ✔️ | ✔️ | ✔️ |
+| Header (Stufe 1&ndash;3) | ❌ | ❌ | ❌ |
+| Durchgestrichen             | ✔️ | ✔️ | ❌ |
+| Horizontales Lineal           | ❌ | ❌ | ❌ |
+| Unsortierte Liste            | ✔️ | ❌ | ❌ |
+| Sortierte Liste              | ✔️ | ❌ | ❌ |
+| Vorformatierter Text         | ✔️ | ✔️ | ✔️ |
+| Blockzitat                | ✔️ | ✔️ | ✔️ |
+| Hyperlink                 | ✔️ | ✔️ | ✔️ |
+| Bildverknüpfung                | ✔️ | ✔️ | ✔️ |
 
 ### <a name="cards"></a>Karten
 

@@ -1,25 +1,24 @@
 ---
 title: Reine Benachrichtigungsbots
-description: In diesem Artikel wird beschrieben, was reine Benachrichtigungsbots in Microsoft Teams sind
-keywords: Teams-Bots Benachrichtigung
+description: In diesem Modul erfahren Sie, welche Benachrichtigungs-Bots in Microsoft Teams, App-Manifest und den bewährten Methoden und Einschränkungen enthalten sind.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 01/29/2020
-ms.openlocfilehash: 1ee009fb76a52bcebdd3fe24c7a672f1ed455b42
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 547ef73cfd036efe566afe15e4f50701a275c2cd
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111479"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144299"
 ---
 # <a name="notification-only-bots-in-microsoft-teams"></a>Reine Benachrichtigungs-Bots in Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Wenn der einzige Zweck Ihres Bots darin besteht, Benachrichtigungen an Benutzer zu übermitteln und er kein Unterhaltungs-Bot ist, können Sie das `isNotificationOnly`-Feld in Ihrem App-Manifest aktivieren. Dies führt zu den folgenden Änderungen:
+Wenn der einzige Zweck Ihres Bots darin besteht, Benachrichtigungen an Benutzer zu übermitteln und nicht in Unterhaltungen besteht, können Sie das `isNotificationOnly` Feld in Ihrem App-Manifest aktivieren. Dies führt zu den folgenden Änderungen:
 
-* Benutzer können Ihrem reinen Benachrichtigungs-Bot keine Nachricht senden.
-* Benutzer können den Bot nicht @erwähnen.
+* Benutzer können Ihrem Nur-Benachrichtigungs-Bot keine Nachricht senden.
+* Benutzer können den Bot nicht @mention.
 
 > [!NOTE]
 > Die reinen Bot-Apps werden in beiden Fällen in der persönlichen Anwendungsleiste angezeigt: `isNotificationOnly: true` oder `isNotificationOnly: false`.

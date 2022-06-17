@@ -1,16 +1,15 @@
 ---
 title: Anforderungen und Überlegungen für anwendungsgehostete Medienbots
-description: Verstehen Sie wichtige Anforderungen und Überlegungen sowie Skalierbarkeits- und Leistungsüberlegungen im Zusammenhang mit der Erstellung von anwendungsgehosteten Medienbots für Microsoft Teams anhand von Codebeispielen und Beispielen.
+description: Lernen Sie wichtige Anforderungen und Überlegungen sowie Skalierbarkeits- und Leistungsaspekte im Zusammenhang mit der Erstellung von in der Anwendung gehosteten Medienbots für Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Anwendungsgehostete Medien Windows-Server Azure-VM
 ms.date: 11/16/2018
-ms.openlocfilehash: 987bb26ba7ad91f11228f7072d3e268ebd87dc5a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 87cdbce71189f64c0d34fc0cddb5211355017007
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756611"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142486"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Anforderungen und Überlegungen für anwendungsgehostete Medienbots
 

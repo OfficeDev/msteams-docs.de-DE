@@ -1,17 +1,17 @@
 ---
 title: Teams App-Manifest im Teams Toolkit
 author: zyxiaoyuer
-description: Teams App-Manifest
+description: In diesem Modul erfahren Sie, wie Sie Teams App-Manifest in der unterschiedlichen Umgebung bearbeiten, in der Vorschau anzeigen und anpassen.
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 4cfa9beac8f75b04df8ac916a1d0e4e45919ffe3
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 505f5aeaf6cdae995efd182535c4d5a8814f9ea1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123654"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143872"
 ---
 # <a name="edit-teams-app-manifest"></a>Bearbeiten Teams App-Manifests
 
@@ -33,7 +33,7 @@ Sie können eine Vorschau der Manifestdatei in lokalen und Remoteumgebungen anze
 * [Vorschau der Manifestdatei in der lokalen Umgebung](#preview-manifest-file-in-local-environment)
 * [Vorschau der Manifestdatei in der Remoteumgebung](#preview-manifest-file-in-remote-environment)
 
-### <a name="preview-manifest-file-in-local-environment"></a>Vorschau der Manifestdatei in der lokalen Umgebung
+## <a name="preview-manifest-file-in-local-environment"></a>Vorschau der Manifestdatei in der lokalen Umgebung
 
 Um eine Vorschau der Manifestdatei in der lokalen Umgebung anzuzeigen, können Sie **F5** drücken, um das lokale Debuggen auszuführen. Es generiert lokale Standardeinstellungen für Sie, dann werden das App-Paket und das Vorschaumanifest unter dem `build/appPackage` Ordner erstellt.
 
@@ -47,7 +47,7 @@ Der Beispielkatalog wird wie in der folgenden Abbildung dargestellt angezeigt:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Preview":::
 
-### <a name="preview-manifest-file-in-remote-environment"></a>Vorschau der Manifestdatei in der Remoteumgebung
+## <a name="preview-manifest-file-in-remote-environment"></a>Vorschau der Manifestdatei in der Remoteumgebung
 
 **So zeigen Sie eine Vorschau der Manifestdatei in der Remoteumgebung an**
 
@@ -112,7 +112,7 @@ Sie können auch **Teams auslösen: Aktualisieren des Manifests auf Teams Plattf
 > [!NOTE]
 > Die Änderung wird in Dev Portal aktualisiert. Alle manuellen Updates im Dev Portal werden überschrieben.
 
-Wenn die Manifestdatei aufgrund einer Änderung der Konfigurationsdatei oder einer Vorlagenänderung veraltet ist, wählen Sie eine der folgenden Aktionen aus:
+Wenn die Manifestdatei aufgrund von Konfigurationsdateiänderungen oder Vorlagenänderungen veraltet ist, wählen Sie eine der folgenden Aktionen aus:
 
 * **Nur Vorschau**: Die lokale Manifestdatei wird gemäß der aktuellen Konfiguration überschrieben.
 * **Vorschau und Aktualisierung**: Die lokale Manifestdatei wird gemäß der aktuellen Konfiguration überschrieben und auch auf Teams Plattform aktualisiert.
@@ -150,7 +150,7 @@ Die folgende Liste enthält unterstützte Platzhalter in `manifest.template.json
      }
      ```
 
-2. Sie können zur Konfigurationsdatei navigieren, indem Sie einen der Konfigurationsplatzhalter " **Gehe zu Konfigurationsdatei** " oder **"Statusdatei anzeigen"** in `manifest.template.json`auswählen.
+2. Sie können zur Konfigurationsdatei navigieren, indem Sie einen der Konfigurationsplatzhalter " **Zur Konfigurationsdatei** wechseln" oder **"Statusdatei anzeigen"** in `manifest.template.json`auswählen.
 
 ### <a name="validate-manifest"></a>Überprüfen des Manifests
 

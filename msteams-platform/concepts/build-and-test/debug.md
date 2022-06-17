@@ -1,15 +1,14 @@
 ---
 title: Auswählen eines Setups zum Testen und Debuggen Ihrer App
-description: Beschreibt Optionen zum Testen und Debuggen Microsoft Teams Apps in einer lokalen und in der Cloud gehosteten Umgebung.
-keywords: Teams führen Debug-Apps lokal in der Cloud gehostet Host
+description: In diesem Modul lernen Sie Optionen zum Testen und Debuggen Microsoft Teams Apps in einer lokalen und in der Cloud gehosteten Umgebung kennen.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 7db690ff7d622e327d5029b6cb6fe8c3b101ada6
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 38259c31f9c6d29ffae22217a17ccf173b5ced59
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757010"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143417"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Auswählen eines Setups zum Testen und Debuggen Ihrer Microsoft Teams-App
 
@@ -59,10 +58,12 @@ Um ngrok in Ihrem Projekt basierend auf den von Ihnen verwendeten Funktionen zu 
 Für Bots, die im Microsoft Bot Framework registriert sind, aktualisieren Sie den Messaging-Endpunkt des Bots, um diesen neuen ngrok-Endpunkt zu verwenden. Beispiel: `https://2d1224fb.ngrok.io/api/messages`. Sie können überprüfen, ob ngrok funktioniert, indem Sie die Bot-Antwort im Testchatfenster des Bot Framework-Portals testen. Wie der Emulator ermöglicht ihnen dieser Test nicht den Zugriff auf Teams-spezifische Funktionalität.
 
 > [!NOTE]
+>
 > * Um den Messaging-Endpunkt für einen Bot zu aktualisieren, müssen Sie das Bot-Framework verwenden. Wählen Sie Ihren Bot in [Ihrer Liste der Bots in Bot Framework](https://dev.botframework.com/bots) aus. Sie müssen Ihren Bot nicht zu Microsoft Azure migrieren. Sie können Ihren Messaging-Endpunkt auch über [App Studio](~/concepts/build-and-test/app-studio-overview.md) aktualisieren.
 
 > [!WARNING]
-> * Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird bis zum 30. Juni 2022 eingestellt.
+>
+> * Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird zum 30. Juni 2022 eingestellt.
 
 ## <a name="cloud-hosted"></a>In der Cloud gehostet
 

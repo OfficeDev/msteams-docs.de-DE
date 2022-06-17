@@ -1,16 +1,15 @@
 ---
 title: Senden und Empfangen von Dateien über den Bot
-description: Erfahren Sie, wie Sie Dateien über den Bot senden und empfangen, indem Sie Graph-APIs für persönliche, Kanal- und Gruppenchatbereiche verwenden. Verwenden Sie Teams-Bot-APIs mit auf dem v4 Bot Framework SDK basierten Codebeispielen.
-keywords: Senden und Empfangen von Teams-Bot-Dateien
+description: Erfahren Sie, wie Sie Dateien über den Bot senden und empfangen, indem Sie Graph-APIs für persönliche, Kanal- und Gruppenchatbereiche verwenden.
 ms.date: 05/20/2019
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 102bdeb2cd05882266299f7962a6b69b1ecfa37c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a7746b15798c46c807c276fb7d29f34b59858528
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111213"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142927"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Senden und Empfangen von Dateien über den Bot
 

@@ -1,16 +1,16 @@
 ---
 title: Nachrichtenerweiterungen
 author: surbhigupta
-description: Eine Übersicht über Messaging-Erweiterungen auf der Microsoft Teams-Plattform
+description: In diesem Modul lernen Sie Messaging-Erweiterungen und Szenarien kennen, in denen Nachrichtenerweiterungen auf der Microsoft Teams-Plattform verwendet werden.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 52c9b5a890197f652c8debcae32bc6ab08d7f1c7
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 5a63c1a36217f4c0aa237e38537be2e094acdea3
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602257"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144320"
 ---
 # <a name="message-extensions"></a>Nachrichtenerweiterungen
 

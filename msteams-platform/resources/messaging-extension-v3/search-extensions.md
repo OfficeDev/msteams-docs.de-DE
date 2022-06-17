@@ -1,16 +1,15 @@
 ---
 title: Suchen mit Nachrichtenerweiterungen
-description: Beschreibt, wie suchbasierte Nachrichtenerweiterungen entwickelt werden.
-keywords: Suche nach Nachrichtenerweiterungen für Teams-Nachrichtenerweiterungen
+description: In diesem Modul erfahren Sie, wie Sie suchbasierte Nachrichtenerweiterungen entwickeln.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: dec73b248f6a71f078eff6a956c7875ef3507227
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: a555091558d66e070f09ec6df8338ac686657019
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032942"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142752"
 ---
 # <a name="search-with-message-extensions"></a>Suchen mit Nachrichtenerweiterungen
 
@@ -658,6 +657,6 @@ const app = new App();
 app.run();
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Bot Framework-Beispiele](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

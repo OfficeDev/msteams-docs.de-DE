@@ -1,16 +1,16 @@
 ---
 title: API-Referenzen für Besprechungs-Apps
 author: surbhigupta
-description: Identifizieren Sie die API-Verweise auf Besprechungs-Apps anhand von Beispielen und Codebeispielen, Teams Apps-Besprechungs-Benutzerteilnehmer-Rollen-API- Benutzerkontextbenachrichtigungs-Signalabfrage.
+description: Erfahren Sie, wie Sie die Besprechungs-Apps-API-Verweise mit Beispielen und Codebeispielen Teams Benutzerrollen-API-Benutzerkontextbenachrichtigungs-Signalabfrage für Apps-Besprechungen identifizieren.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b53b85ef2831261d493302dec3aed8a82910f5d
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 380f470c51933e4be90d008261ab75eafc566f2c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032788"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142948"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 

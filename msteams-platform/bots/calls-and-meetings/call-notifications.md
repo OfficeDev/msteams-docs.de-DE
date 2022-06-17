@@ -1,16 +1,15 @@
 ---
 title: Eingehende Anrufbenachrichtigungen
-description: Lernen Sie anhand von Codebeispielen detaillierte technische Informationen zur Behandlung von Benachrichtigungen bei eingehenden Anrufen und zur Umleitung und Authentifizierung von Anrufen kennen
+description: In diesem Modul erfahren Sie mehr über detaillierte technische Informationen zum Behandeln von Benachrichtigungen aus eingehenden Anrufen, zum Umleiten und Authentifizieren von Anrufen mithilfe von Codebeispielen
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Affinität zwischen Rückrufregion und Anrufbenachrichtigungen
 ms.date: 04/02/2019
-ms.openlocfilehash: e2844649764284f74e242967106adbfdc8edf8cf
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: fd68b85a3c6f5f4682a728461d792093bcd8cac0
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757143"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143830"
 ---
 # <a name="incoming-call-notifications"></a>Eingehende Anrufbenachrichtigungen
 

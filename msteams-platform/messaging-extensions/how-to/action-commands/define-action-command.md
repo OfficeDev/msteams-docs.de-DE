@@ -1,16 +1,16 @@
 ---
 title: Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 author: surbhigupta
-description: Eine Übersicht über Aktionsbefehle für Messaging-Erweiterungen mit App-Manifestbeispiel
+description: In diesem Modul erfahren Sie, wie Sie Aktionsbefehle für Messaging-Erweiterungen mit dem App-Manifestbeispiel in Microsoft Teams definieren.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7bdb3a0572ab7723a03768357260f252fbbf626c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 64a11741612fdf8efbcca968fed3a3d78cda90b1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756898"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143431"
 ---
 # <a name="define-message-extension-action-commands"></a>Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 

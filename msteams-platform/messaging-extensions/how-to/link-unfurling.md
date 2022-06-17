@@ -1,16 +1,16 @@
 ---
 title: Verbreiten von Links
 author: surbhigupta
-description: Erfahren Sie, wie Sie in einer Microsoft Teams-App mit App-Manifest oder manuell mithilfe von Codebeispielen und Beispielen Links verbreiten, die sich mit der Messagingerweiterung erweitern.
+description: In diesem Modul erfahren Sie, wie Sie die Verbreitung von Links mit Messaging-Erweiterung in einer Teams-App mit App-Manifest oder manuell mitHilfe von Codebeispielen und Beispielen hinzufügen.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c5f89847e374f6e7e2e15409f4a9fe019701788d
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: e166ced0b001414a89d24c81430c1b93431ff3a7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032973"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142815"
 ---
 # <a name="link-unfurling"></a>Verbreiten von Links
 

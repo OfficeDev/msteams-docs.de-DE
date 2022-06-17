@@ -1,17 +1,16 @@
 ---
 title: Erstellen einer Konfigurationsseite
 author: surbhigupta
-description: Erfahren Sie anhand von Codebeispielen, wie Sie eine Konfigurationsseite erstellen, um einen Kanal oder Gruppenchat für Einstellungen zu konfigurieren, z. B. Abrufen von Kontextdaten, Einfügen von Platzhaltern und Authentifizierung.
-keywords: Teams Registerkarten Gruppenkanal konfigurierbar
+description: In diesem Modul erfahren Sie, wie Sie eine Konfigurationsseite erstellen, um einen Kanal- oder Gruppenchat für Einstellungen wie das Abrufen von Kontextdaten und vieles mehr zu konfigurieren.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ec1a479421b7439db7a5492a059d470bd2d7024e
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 2c439b38c061ad5f61538bb841f8ce7b9267ec0a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048976"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143956"
 ---
 # <a name="create-a-configuration-page"></a>Erstellen einer Konfigurationsseite
 

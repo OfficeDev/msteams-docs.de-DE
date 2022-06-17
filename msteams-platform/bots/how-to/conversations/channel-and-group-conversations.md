@@ -1,16 +1,16 @@
 ---
 title: Kanal- und Gruppenunterhaltungen mit einem Bot
 author: surbhigupta
-description: Senden, Empfangen und Behandeln von Nachrichten für einen Bot in einem Kanal- oder Gruppenchat. Informationen zu Entwurfsrichtlinien, Erstellen von Unterhaltungsthreads, Verwenden von @mentions mithilfe von Codebeispielen
+description: Erfahren Sie, wie Sie Nachrichten für einen Bot in einem Kanal- oder Gruppenchat senden, empfangen und behandeln. Erfahren Sie mehr über Designrichtlinien und mehr.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6b3adf491ccfed2401308f0b6d283047f24f91e2
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e9edc06d65120748c6e87ba5a5916f55d6346a9e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757178"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144411"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Kanal- und Gruppenchatunterhaltungen mit einem Bot
 

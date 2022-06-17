@@ -1,15 +1,14 @@
 ---
 title: 'Testen der App: Übersicht'
-description: Beschreibt den Prozess zum Testen und Debuggen Ihrer benutzerdefinierten Microsoft Teams-App in Microsoft 365.
+description: In diesem Modul erfahren Sie, wie Sie Ihre Teams benutzerdefinierte App in Microsoft 365 testen und debuggen und Testdaten zu Ihrem Microsoft 365 Mandanten hinzufügen.
 ms.topic: how-to
-ms.localizationpriority: high
-keywords: Konfigurieren des Microsoft 365-Mandanten, Microsoft Teams, Hochladen der Test-App
-ms.openlocfilehash: 98c00ece54e1654570556bac122e6760b283b73f
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 3fa27881a081021fbb405208a5f7b4a259012aaf
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111528"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144383"
 ---
 # <a name="test-your-app"></a>Testen eigener Apps
 

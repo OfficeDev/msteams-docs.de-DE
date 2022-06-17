@@ -1,17 +1,16 @@
 ---
 title: Registerkarten für Unterhaltungen erstellen
 author: surbhigupta
-description: Erfahren Sie, wie Sie unterhaltungsbasierten Unterentitätschat für Ihre Kanalregisterkarten erstellen, um Unterhaltungen mithilfe von Codebeispielen zu verwalten.
-keywords: Teams-Registerkartenkanal konfigurierbar
+description: In diesem Modul erfahren Sie, wie Sie Unterhaltungsunterentitätschats für Ihre Kanalregisterkarten erstellen und Unterhaltungen mithilfe von Codebeispielen verwalten.
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: ddf14d9d7dabe5b20cc21181783dc5c33f29eff9
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: f982c49c645a59f25182b7635839ece723c71ef3
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111654"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142080"
 ---
 # <a name="create-conversational-tabs"></a>Registerkarten für Unterhaltungen erstellen
 
@@ -103,7 +102,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Teams Registerkarten](~/tabs/what-are-tabs.md)
+* [Microsoft Teams-Registerkarten](~/tabs/what-are-tabs.md)
 * [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
 * [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
 * [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)

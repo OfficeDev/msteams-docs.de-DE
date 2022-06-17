@@ -1,15 +1,14 @@
 ---
 title: Kontext für Ihre Registerkarte erhalten
-description: Beschreibt, wie Sie Benutzerkontext zu Ihren Registerkarten abrufen
+description: In diesem Modul erfahren Sie, wie Sie Benutzerkontext zu Ihren Registerkarten, Benutzerkontext und Access-Kontextinformationen abrufen.
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: Teams Registerkarten Benutzerkontext
-ms.openlocfilehash: 0539f1dc3f31a2b068e80b4ff12b93a26e09b766
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: d6723c4733bd127dd32970e3d1059a75771c8bee
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757360"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142311"
 ---
 # <a name="get-context-for-your-tab"></a>Kontext für Ihre Registerkarte erhalten
 

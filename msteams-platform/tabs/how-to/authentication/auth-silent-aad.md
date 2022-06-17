@@ -1,15 +1,14 @@
 ---
 title: Automatische Authentifizierung
-description: Beschreibt die automatische Authentifizierung, einmaliges Anmelden, Azure AD für Registerkarten
+description: In diesem Modul erfahren Sie, wie Sie automatische Authentifizierung, einmaliges Anmelden und Azure AD für Registerkarten durchführen und wie es funktioniert
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Teams-Authentifizierung – SSO– automatische Azure AD-Registerkarte
-ms.openlocfilehash: 50d5d5327ee31286c7124f23b8fd4c8b07c71639
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: bb5b65e70192c4796d7c828d19512e2a414cf812
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033022"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144243"
 ---
 # <a name="silent-authentication"></a>Automatische Authentifizierung
 
@@ -139,7 +138,7 @@ window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Konfigurieren von Identitätsanbietern für die Verwendung von Azure AD](../../../concepts/authentication/configure-identity-provider.md)
 * [Informationen zur Microsoft-Authentifizierungsbibliothek (MSAL)](/azure/active-directory/develop/msal-overview)

@@ -1,15 +1,14 @@
 ---
 title: Aufgabenmodule in Microsoft Teams-Registerkarten verwenden
-description: Erläutert das Aufrufen von Aufgabenmodulen über Teams-Registerkarten und das Übermitteln des Ergebnisses mithilfe des Microsoft Teams-Client-SDK. Es enthält Codebeispiele.
+description: Erfahren Sie, wie Sie Aufgabenmodule über Teams Registerkarten aufrufen und das Ergebnis mit dem Microsoft Teams Client SDK übermitteln. Es enthält Codebeispiele.
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: Client-SDK für Aufgabenmodule für Teams-Registerkarten
-ms.openlocfilehash: 61955a9afd070a17b17210239054819f02d3b484
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: a55ea89e67bf70254d52791d1ed5f0a1c573e89e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756696"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142066"
 ---
 # <a name="use-task-modules-in-tabs"></a>Verwenden von Aufgabenmodulen in Registerkarten
 

@@ -1,70 +1,70 @@
 ---
 title: Verwenden von Azure Bot Service für die Authentifizierung in Teams
-description: Beschreibt den Azure Bot Service OAuthCard und seine Verwendung für die Authentifizierung
+description: Beschreibt die Azure Bot Service OAuthCard und ihre Verwendung für die Authentifizierung
 ms.topic: conceptual
 localization_priority: Normal
-keywords: Teams-Authentifizierung OAuthCard OAuth Card Azure Bot Service
-ms.openlocfilehash: 3d0df4f04625c5be3468d12319b54096ae06de90
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+keywords: Teams-Authentifizierung OAuthCard OAuth-Karte Azure Bot Service
+ms.openlocfilehash: 7731e4d1148e50c748d9c5e1b55371628a78dea7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020681"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143165"
 ---
 # <a name="using-azure-bot-service-for-authentication-in-teams"></a>Verwenden von Azure Bot Service für die Authentifizierung in Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Ohne die OAuthCard des Azure Bot Service ist es kompliziert, die Authentifizierung in einem Bot zu implementieren. Es handelt sich um eine Herausforderung mit vollem Stapel, die das Erstellen einer Weberfahrung, die Integration mit externen OAuth-Anbietern, die Tokenverwaltung und die Verarbeitung der richtigen Server-zu-Server-API-Aufrufe zum sicheren Abschließen des Authentifizierungsflusses erfordert. Dies kann zu unübersichtlichen Erfahrungen führen, bei denen die Eingabe von "magischen Zahlen" erforderlich ist.
+Ohne die OAuthCard des Azure Bot Service ist es kompliziert, die Authentifizierung in einem Bot zu implementieren. Dies ist eine Herausforderung, die das Erstellen einer Weboberfläche, die Integration mit externen OAuth-Anbietern, die Tokenverwaltung und die Behandlung der richtigen Server-zu-Server-API-Aufrufe umfasst, um den Authentifizierungsfluss sicher abzuschließen. Dies kann zu klobigen Erfahrungen führen, die den Eintrag von "magischen Zahlen" erfordern.
 
-Mit der OAuthCard von Azure Bot Service ist es für Ihren Teams einfacher, sich bei Ihren Benutzern zu registrieren und auf externe Datenanbieter zu zugreifen. Unabhängig davon, ob Sie die Authentifizierung bereits implementiert haben und zu einer einfacheren Lösung wechseln möchten oder wenn Sie ihren Botdienst zum ersten Mal Authentifizierung hinzufügen möchten, kann die OAuthCard dies vereinfachen.
+Mit der OAuthCard von Azure Bot Service ist es für Ihren Teams Bot einfacher, sich bei Ihren Benutzern anzumelden und auf externe Datenanbieter zuzugreifen. Ganz gleich, ob Sie die Authentifizierung bereits implementiert haben und zu einem einfacheren Element wechseln möchten, oder wenn Sie ihrem Botdienst zum ersten Mal eine Authentifizierung hinzufügen möchten, kann die OAuthCard dies vereinfachen.
 
-In anderen Themen in [der](~/resources/bot-v3/bot-authentication/auth-flow-bot.md) Authentifizierung wird die Authentifizierung ohne OAuthCard beschrieben. Wenn Sie also die Authentifizierung in Teams genauer verstehen möchten oder die OAuthCard nicht verwenden können, können Sie sich weiterhin auf diese Themen beziehen.
+Andere Themen in der [Authentifizierung](~/resources/bot-v3/bot-authentication/auth-flow-bot.md) beschreiben die Authentifizierung, ohne die OAuthCard zu verwenden. Wenn Sie also die Authentifizierung in Teams tiefer verstehen möchten oder wenn Sie die OAuthCard nicht verwenden können, können Sie dennoch auf diese Themen verweisen.
 
-## <a name="support-for-the-oauthcard"></a>Unterstützung für OAuthCard
+## <a name="support-for-the-oauthcard"></a>Unterstützung für die OAuthCard
 
-Es gibt derzeit einige Einschränkungen, wo Sie OAuthCard verwenden können. Zu diesen zählen:
+Es gibt derzeit einige Einschränkungen, wo Sie die OAuthCard verwenden können. Zu diesen zählen:
 
-* Die Karte funktioniert nicht mit [gastzugriff](/MicrosoftTeams/guest-access)
-* Es funktioniert nicht mit [Microsoft Teams kostenlos](https://products.office.com/microsoft-teams/free)
-* Es kann nur für die Botauthentifizierung verwendet werden
-* Es funktioniert nur für Bots, die im [Azure Bot Service registriert sind.](https://azure.microsoft.com/services/bot-service/)
+* Die Karte funktioniert nicht mit [Gastzugriff](/MicrosoftTeams/guest-access).
+* Es funktioniert nicht mit [Microsoft Teams kostenlos](https://products.office.com/microsoft-teams/free).
+* Es kann nur für die Bot-Authentifizierung verwendet werden.
+* Dies funktioniert nur für Bots, die im [Azure Bot Service](https://azure.microsoft.com/services/bot-service/) registriert sind.
 
-## <a name="how-does-the-azure-bot-service-help-me-do-authentication"></a>Wie hilft mir der Azure Bot Service bei der Authentifizierung?
+## <a name="how-does-the-azure-bot-service-help-me-do-authentication"></a>Wie hilft mir das Azure Bot Service bei der Authentifizierung?
 
-Vollständige Dokumentation mit der OAuthCard finden Sie im Thema: Hinzufügen der Authentifizierung [zu Ihrem Bot über Azure Bot Service](/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0&preserve-view=true). Beachten Sie, dass sich dieses Thema im Azure Bot Framework-Dokumentationssatz befindet und nicht spezifisch für Teams.
+Die vollständige Dokumentation mithilfe der OAuthCard finden Sie im Thema: [Hinzufügen der Authentifizierung zu Ihrem Bot über Azure Bot Service](/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0&preserve-view=true). Beachten Sie, dass dieses Thema im Azure Bot Framework-Dokumentationssatz enthalten ist und nicht spezifisch für Teams ist.
 
-In den folgenden Abschnitten wird die Verwendung der OAuthCard in Teams.
+In den folgenden Abschnitten wird die Verwendung der OAuthCard in Teams beschrieben.
 
 ## <a name="main-benefits-for-teams-developers"></a>Hauptvorteile für Teams Entwickler
 
 Die OAuthCard hilft bei der Authentifizierung auf folgende Weise:
 
-* Stellt einen standardbasierten webbasierten Authentifizierungsfluss zur Verfügung: Sie müssen keine Webseite mehr schreiben und hosten, um an externe Anmeldeerfahrungen zu leiten oder eine Umleitung bereitstellen zu können.
-* Ist nahtlos für Endbenutzer: Füllen Sie die vollständige Anmeldeerfahrung direkt innerhalb Teams.
-* Umfasst eine einfache Tokenverwaltung: Sie müssen kein Tokenspeichersystem mehr implementieren– stattdessen übernimmt der Bot-Dienst die Zwischenspeicherung von Token und stellt einen sicheren Mechanismus zum Abrufen dieser Token zur Verfügung.
-* Wird von vollständigen SDKs unterstützt: einfach zu integrieren und von Ihrem Botdienst zu nutzen.
-* Verfügt über eine out-of-box-Unterstützung für viele beliebte OAuth-Anbieter, z. B. Azure AD/MSA, Facebook und Google.
+* Bietet einen vordefinierten webbasierten Authentifizierungsfluss: Sie müssen keine Webseite mehr schreiben und hosten, um zu externen Anmeldeumgebungen zu gelangen oder eine Umleitung bereitzustellen.
+* Ist für Endbenutzer nahtlos: Füllen Sie die vollständige Anmeldeerfahrung direkt innerhalb Teams aus.
+* Umfasst eine einfache Tokenverwaltung: Sie müssen kein Tokenspeichersystem mehr implementieren– stattdessen kümmert sich die Bot Service um die Tokenzwischenspeicherung und bietet einen sicheren Mechanismus zum Abrufen dieser Token.
+* Wird von vollständigen SDKs unterstützt: einfach zu integrieren und von Ihrem Bot-Dienst zu nutzen.
+* Bietet out-of-box-Unterstützung für viele beliebte OAuth-Anbieter, z. B. Azure AD/MSA, Facebook und Google.
 
 ## <a name="when-should-i-implement-my-own-solution"></a>Wann sollte ich meine eigene Lösung implementieren?
 
-Da Zugriffstoken vertrauliche Informationen sind, möchten Sie sie möglicherweise nicht in einem externen Dienst speichern lassen. In diesem Fall können Sie ihr eigenes Tokenverwaltungssystem und die Anmeldeerfahrung weiterhin in Teams implementieren, wie in den restlichen Themen Teams [Authentifizierung](~/resources/bot-v3/bot-authentication/auth-flow-bot.md) beschrieben.
+Da Zugriffstoken vertrauliche Informationen sind, möchten Sie möglicherweise nicht, dass sie in einem externen Dienst gespeichert werden. In diesem Fall können Sie weiterhin Ihr eigenes Tokenverwaltungssystem und Ihre Anmeldeerfahrung innerhalb Teams implementieren, wie in den restlichen Themen zur Teams [Authentifizierung](~/resources/bot-v3/bot-authentication/auth-flow-bot.md) beschrieben.
 
 ## <a name="getting-started-with-oauthcard-in-teams"></a>Erste Schritte mit OAuthCard in Teams
 
 > [!NOTE]
-> In diesem Handbuch wird das Bot Framework v3 SDK verwendet. Die v4-Implementierung finden Sie [hier](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true). Sie müssen weiterhin ein Manifest erstellen und token.botframework.com in den Abschnitt hinzufügen, da andernfalls das Authentifizierungsfenster nicht mit der Schaltfläche Anmelden `validDomains` geöffnet wird. Verwenden Sie [das App Studio,](~/concepts/build-and-test/app-studio-overview.md) um Ihr Manifest zu generieren.
+> In diesem Handbuch wird das Bot Framework v3 SDK verwendet. Die v4-Implementierung finden Sie [hier](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true). Sie müssen weiterhin ein Manifest erstellen und token.botframework.com in den `validDomains` Abschnitt aufnehmen, da andernfalls das Authentifizierungsfenster nicht mit der Schaltfläche "Anmelden" geöffnet wird. Verwenden Sie [App Studio](~/concepts/build-and-test/app-studio-overview.md) , um Ihr Manifest zu generieren.
 
-Sie müssen zunächst Ihren Azure-Botdienst konfigurieren, um externe Authentifizierungsanbieter einrichten zu können. Ausführliche [Schritte finden Sie unter](~/concepts/authentication/configure-identity-provider.md) Konfigurieren von Identitätsanbietern.
+Sie müssen zuerst Ihren Azure-Botdienst konfigurieren, um externe Authentifizierungsanbieter einzurichten. Ausführliche Schritte [finden Sie unter Konfigurieren von Identitätsanbietern](~/concepts/authentication/configure-identity-provider.md) .
 
-Um die Authentifizierung mithilfe des Azure Bot Service zu aktivieren, müssen Sie die folgenden Ergänzungen zu Ihrem Code erstellen:
+Um die Authentifizierung mithilfe der Azure Bot Service zu aktivieren, müssen Sie ihrem Code die folgenden Ergänzungen hinzufügen:
 
-1. Schließen token.botframework.com in den Abschnitt Ihres App-Manifests ein, da Teams die Anmeldeseite des `validDomains` Botdiensts einbetten wird.
-2. Rufen Sie das Token aus dem Botdienst ab, wenn Ihr Bot auf authentifizierte Ressourcen zugreifen muss. Wenn kein Token verfügbar ist, senden Sie eine Nachricht mit einer OAuthCard an den Benutzer, der ihn anfordert, sich beim externen Dienst zu melden.
+1. Fügen Sie token.botframework.com in den `validDomains` Abschnitt ihres App-Manifests ein, da Teams die Anmeldeseite des Bot Service einbettet.
+2. Rufen Sie das Token aus dem Bot Service ab, wenn Ihr Bot auf authentifizierte Ressourcen zugreifen muss. Wenn kein Token verfügbar ist, senden Sie eine Nachricht mit einer OAuthCard an den Benutzer, der sie auffordert, sich beim externen Dienst anzumelden.
 3. Behandeln Sie die Anmeldeabschlussaktivität. Dadurch wird sichergestellt, dass die Authentifizierungsanforderung und das Token dem Benutzer zugeordnet sind, der derzeit mit Ihrem Bot interagiert.
-4. Rufen Sie das Token ab, wenn Ihr Bot authentifizierte Aktionen ausführen muss, z. B. das Aufrufen externer REST-APIs.
+4. Rufen Sie das Token immer dann ab, wenn Ihr Bot authentifizierte Aktionen ausführen muss, z. B. das Aufrufen externer REST-APIs.
 
-Im Dialogfeldcode müssen Sie diesen Codeausschnitt (C#) hinzufügen, der nach einem vorhandenen Zugriffstoken sucht:
+In Ihrem Dialogfeldcode müssen Sie diesen Codeausschnitt (C#) hinzufügen, der nach einem vorhandenen Zugriffstoken sucht:
 
 ```CSharp
 // First ask Bot Service if it already has a token for this user
@@ -94,7 +94,7 @@ private async Task SendOAuthCardAsync(IDialogContext context, Activity activity)
 }
 ```
 
-Zum Verarbeiten der vollständigen Anmeldeaktivität müssen Sie diesen Aufruf verarbeiten:
+Um die Aktivität zum Abschließen der Anmeldung zu behandeln, müssen Sie diesen Aufruf verarbeiten:
 
 ```CSharp
 if (activity.Name == "signin/verifyState")
@@ -108,7 +108,7 @@ if (activity.Name == "signin/verifyState")
 }
 ```
 
-In Ihrem Dialogfeldcode können Sie das Token dann vom Bot-Authentifizierungsdienst abrufen:
+In Ihrem Dialogfeldcode können Sie dann das Token aus dem Bot-Authentifizierungsdienst abrufen:
 
 ```CSharp
 if (text.Contains("loginComplete"))
@@ -133,11 +133,11 @@ if (text.Contains("loginComplete"))
 }
 ```
 
-## <a name="using-oauthcard-with-messaging-extensions"></a>Verwenden von OAuthCard mit Messagingerweiterungen
+## <a name="using-oauthcard-with-messaging-extensions"></a>Verwenden von OAuthCard mit Messaging-Erweiterungen
 
-Sie können azure bot Service auch verwenden, um Drittanbieter mit Ihrer Messagingerweiterung zu verbinden. Der Fluss ist mit einem Bot identisch, außer anstatt eine OAuthCard zurück zu geben, gibt Ihr Dienst eine Anmeldeaufforderung zurück.
+Sie können auch Azure Bot Service verwenden, um Drittanbieter mit Ihrer Messaging-Erweiterung zu verbinden. Der Fluss ist der gleiche wie bei einem Bot, außer dass Ihr Dienst keine OAuthCard zurückgibt, sondern eine Anmeldeaufforderung zurückgibt.
 
-Der folgende Codeausschnitt (C#) veranschaulicht das Erstellen der Anmeldeantwort:
+Der folgende Codeausschnitt (C#) veranschaulicht, wie die Anmeldeantwort erstellt wird:
 
 ```CSharp
 var token = await client.OAuthApi.GetUserTokenAsync(activity.From.Id, ConnectionName).ConfigureAwait(false);
@@ -163,9 +163,9 @@ if (token == null)
 }
 ```
 
-Beachten Sie, dass Sie im obigen Beispiel den Aufruf direkt `GetSignInLinkAsync` für die Eigenschaft erstellen `client.OAuthApi` müssen.
+Beachten Sie, dass Sie im obigen Beispiel den Aufruf `GetSignInLinkAsync` direkt für die `client.OAuthApi` Eigenschaft ausführen müssen.
 
-Wenn der Benutzer die Anmeldesequenz erfolgreich abgeschlossen hat, erhält Ihr Dienst eine weitere Invoke-Anforderung, die die ursprüngliche Benutzerabfrage enthält, sowie eine State-Parameterzeichenfolge, die den "magischen Code" enthält. Sie können nun das Token mit dieser Zeichenfolge zusammen mit der Benutzer-ID und dem Verbindungsnamen abrufen.
+Wenn der Benutzer die Anmeldesequenz erfolgreich abgeschlossen hat, erhält Ihr Dienst eine weitere Invoke-Anforderung, die die ursprüngliche Benutzerabfrage enthält, zusammen mit einer Statusparameterzeichenfolge, die den "magischen Code" enthält. Sie können das Token jetzt mithilfe dieser Zeichenfolge zusammen mit der Benutzer-ID und dem Verbindungsnamen abrufen.
 
 ```CSharp
 var query = activity.GetComposeExtensionQueryData();

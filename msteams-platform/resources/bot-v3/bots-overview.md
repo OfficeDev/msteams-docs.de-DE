@@ -1,16 +1,15 @@
 ---
 title: Hinzufügen von Bots zu Microsoft Teams-Apps
-description: Beschreibt die ersten Schritte beim Entwickeln von Bots in Microsoft Teams
+description: In diesem Modul erfahren Sie, wie Sie mit der Entwicklung von Bots in Microsoft Teams beginnen und was sind alle Anforderungen zum Hinzufügen eines Bots in Teams
 ms.topic: conceptual
-keywords: Entwicklung von Teams-Bots
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: f592ae06efc2c416e70530fe2c46cbfbfc03140b
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 6c57371e0df5739d800fc07e46a014aeb3836bc8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755853"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142360"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Hinzufügen von Bots zu Microsoft Teams-Apps
 
@@ -31,7 +30,7 @@ Ein Bot verhält sich je nach Art der Unterhaltung, an der er beteiligt ist, unt
 
 * `teams` Wird auch als Kanalunterhaltungen bezeichnet.
 * `personal` Unterhaltungen zwischen einem Bot und einem einzelnen Benutzer.
-* `groupChat` Eine Unterhaltung zwischen einem Bot und 2 oder mehr Benutzern.
+* `groupChat` Eine Unterhaltung zwischen einem Bot und zwei oder mehr Benutzern.
 
 Weitere Informationen finden Sie unter ["Unterhaltung mit einem Microsoft Teams Bot führen"](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
@@ -60,7 +59,7 @@ Ausgehende Webhooks ermöglichen es Ihnen, einen einfachen Bot für grundlegende
 
 ## <a name="build-a-great-teams-bot"></a>Erstellen eines großartigen Teams Bots
 
-Die folgenden Themen führen Sie durch den Prozess der Erstellung eines großartigen Bots für Teams:
+Die folgenden Artikel führen Sie durch den Prozess der Erstellung eines großartigen Bots für Teams:
 
 * [Erstellen eines Bots](~/resources/bot-v3/bots-create.md): Nutzen Sie die großartigen Tools, Dokumentationen und Communitys, die vom Bot Framework-Team bereitgestellt werden.
 * [Sprechen Sie mit Ihrem Bot](~/resources/bot-v3/bot-conversations/bots-conversations.md): Fügen Sie einfachen Unterhaltungsfluss hinzu, und nutzen Sie kanalspezifische Funktionen. Wenn Sie in .NET oder Node.js entwickeln, verwenden Sie unsere Erweiterungen für das Bot Builder SDK, um Ihre Arbeit zu vereinfachen.

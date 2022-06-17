@@ -1,15 +1,14 @@
 ---
 title: Initiieren von Aktionen mit Nachrichtenerweiterungen
-description: Erstellen von aktionsbasierten Nachrichtenerweiterungen, damit Benutzer externe Dienste auslösen können
+description: In diesem Modul erfahren Sie, wie Sie aktionsbasierte Nachrichtenerweiterungen erstellen, damit Benutzer externe Dienste auslösen können.
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: Suche nach Nachrichtenerweiterungen für Teams-Nachrichtenerweiterungen
-ms.openlocfilehash: a29d1a5b49845d930ac4efbdd3967bd6b4446891
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 9b40c7a74b1d7680ac47016a9e0174a2c4c06e8c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104374"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143676"
 ---
 # <a name="initiate-actions-with-message-extensions"></a>Initiieren von Aktionen mit Nachrichtenerweiterungen
 

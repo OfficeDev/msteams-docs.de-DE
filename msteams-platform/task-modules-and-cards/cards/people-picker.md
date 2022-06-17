@@ -1,17 +1,16 @@
 ---
 title: Personenauswahl in Adaptiven Karten
-description: Beschreibt die Verwendung des Personenauswahl-Steuerelements in adaptiven Karten
+description: In diesem Modul erfahren Sie, wie Sie das Personenauswahl-Steuerelement in adaptiven Karten, seinen Szenarien und der Personenauswahl verwenden.
 localization_priority: Medium
-keywords: Personenauswahl für adaptive Karten
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 3d6305895239ca2b8a0c871e53723979feb3f890
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 3b366ebc91e57a2e48dec03fb50aed24d704e41d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111633"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144166"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>Personenauswahl in Adaptiven Karten
 
@@ -59,9 +58,9 @@ Die folgende Abbildung zeigt das Szenario für die Neuzuweisung:
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
 > [!NOTE]
-> Derzeit ist dieses Feature nur in der [öffentlichen Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) verfügbar.
+> Derzeit ist diese Funktion nur in [der öffentlichen Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) verfügbar.
 
-Mobile Android- und iOS-Clients unterstützen die Personenauswahl in adaptiven Karten. Sie können die Personenauswahl auf Mobilgeräten verwenden, um Benutzer zu suchen und auszuwählen, um die Benutzerfreundlichkeit zu verbessern. Die Suchumgebung ist mit jeder anderen Benutzerauswahlerfahrung auf mobilgeräten vergleichbar.
+Android und iOS mobile Clients unterstützen die Personenauswahl in adaptiven Karten. Sie können die Personenauswahl auf Mobilgeräten verwenden, um Benutzer zu suchen und auszuwählen, um die Benutzerfreundlichkeit zu verbessern. Die Suchumgebung ist mit jeder anderen Benutzerauswahlerfahrung auf mobilgeräten vergleichbar.
 
 ### <a name="reassignment-scenario-example"></a>Beispiel für ein Szenario für die neu zugewiesene Zuweisung
 
@@ -162,7 +161,7 @@ Um die Suche innerhalb einer Liste von Unterhaltungsmitgliedern zu aktivieren, v
 
 ### <a name="data-submission"></a>Datenübermittlung
 
-Sie können ausgewählte Daten verwenden `Action.Submit` oder `Action.Execute` an Ihren Bot übermitteln. Die `invoke` in Ihrem Bot empfangene Nutzlast ist eine Liste der Microsoft Azure Active Directory (Azure AD)-IDs oder der in der statischen Liste bereitgestellten IDs.
+Sie können ausgewählte Daten verwenden `Action.Submit` oder `Action.Execute` an Ihren Bot übermitteln. Die `invoke` in Ihrem Bot empfangene Nutzlast ist eine Liste der Microsoft Azure Active Directory(Azure AD)-IDs oder der in der statischen Liste bereitgestellten IDs.
 Wenn in der Personenauswahl ein Benutzer im Steuerelement ausgewählt wird, ist der `Azure AD ID` Wert des Benutzers der zurückgeschickte Wert. Die `Azure AD ID` Zeichenfolge ist eine Zeichenfolge und identifiziert einen Benutzer im Verzeichnis eindeutig.
 
 Das Format des an den Bot übermittelten Werts hängt vom Wert der `isMultiSelect` Eigenschaft ab:

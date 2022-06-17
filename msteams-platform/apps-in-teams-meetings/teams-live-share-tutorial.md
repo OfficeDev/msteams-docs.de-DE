@@ -4,12 +4,12 @@ description: In diesem Modul erfahren Sie, wie Sie mit Live Share SDK beginnen u
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 8dad224b74ff8a6d1252c4d1d27900f3bb5c6962
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: b13b37c73760d18cc11f30afca989c34ba1c1bb8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668298"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143564"
 ---
 ---
 
@@ -101,7 +101,7 @@ start().catch((error) => console.error(error));
 
 ## <a name="join-a-fluid-container"></a>Verknüpfen eines Fluid-Containers
 
-Nicht alle Ihre App-Ansichten müssen zusammenarbeiten. Die `stage`-Ansicht benötigt _immer_ Funktionen für die Zusammenarbeit, die `content`-Ansicht benötigt _möglicherweise_ Funktionen für die Zusammenarbeit, und die `config`-Ansicht sollte _niemals_ Funktionen für die Zusammenarbeit benötigen. Für die Ansichten, die Funktionen für die Zusammenarbeit benötigen, müssen Sie einem Fluid-Container beitreten, der der aktuellen Besprechung zugeordnet ist.
+Nicht alle Ihre App-Ansichten müssen zusammenarbeiten. Die `stage`-Ansicht benötigt *immer* Funktionen für die Zusammenarbeit, die `content`-Ansicht benötigt *möglicherweise* Funktionen für die Zusammenarbeit, und die `config`-Ansicht sollte *niemals* Funktionen für die Zusammenarbeit benötigen. Für die Ansichten, die Funktionen für die Zusammenarbeit benötigen, müssen Sie einem Fluid-Container beitreten, der der aktuellen Besprechung zugeordnet ist.
 
 Das Beitreten des Containers für die Besprechung ist so einfach wie das Erstellen eines neuen [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) und das anschließende Aufrufen der [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer)-Methode.  Wenn Sie lokal ausgeführt werden, müssen Sie eine benutzerdefinierte Verbindungskonfiguration mit einem speziellen `LOCAL_MODE_TENANT_ID` übergeben. Andernfalls ist der Beitritt zu einem lokalen Container mit dem Beitritt zu einem Container in Teams identisch.
 
@@ -192,15 +192,15 @@ Die nächste Änderung, die vorgenommen werden muss, besteht darin, die `updateD
 
 ### <a name="handle-remote-changes"></a>Behandeln von Remoteänderungen
 
-Die von `diceMap` zurückgegebenen Werte sind nur eine Momentaufnahme in der Zeit. Um die Daten bei Änderungen auf dem neuesten Stand zu halten, muss ein Ereignishandler auf dem `diceMap` festgelegt werden, um jedes Mal `updateDice` aufzurufen, wenn das `valueChanged`-Ereignis gesendet wird. Eine Liste der ausgelösten Ereignisse und der an diese Ereignisse übergebenen Werte finden Sie unter [SharedMap](https://fluidframework.com/docs/data-structures/map/). 
+Die von `diceMap` zurückgegebenen Werte sind nur eine Momentaufnahme in der Zeit. Um die Daten bei Änderungen auf dem neuesten Stand zu halten, muss ein Ereignishandler auf dem `diceMap` festgelegt werden, um jedes Mal `updateDice` aufzurufen, wenn das `valueChanged`-Ereignis gesendet wird. Eine Liste der ausgelösten Ereignisse und der an diese Ereignisse übergebenen Werte finden Sie unter [SharedMap](https://fluidframework.com/docs/data-structures/map/).
 
-```js 
+```js
     diceMap.on("valueChanged", updateDice);
 ```
 
 ## <a name="write-the-side-panel-view"></a>Schreiben der Seitenbereichsansicht
 
-Die Seitenbereichsansicht, die über die Registerkarte "`contentUrl`" mit dem `sidePanel`-Framekontext geladen wird, wird dem Benutzer in einem Seitenbereich angezeigt, wenn er Ihre App innerhalb einer Besprechung öffnet. Das Ziel dieser Ansicht besteht darin, einem Benutzer die Auswahl von Inhalten für die App zu ermöglichen, bevor die App für die Besprechungsphase freigegeben wird. Für die Live Share SDK-Apps kann die Seitenbereichsansicht auch als Begleitoberfläche für die App verwendet werden. Der Aufruf von [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) aus der Seitenbereichsansicht stellt eine Verbindung mit demselben Fluid-Container her, mit dem die Phasenansicht verbunden ist. Dieser Container kann dann für die Kommunikation mit der Phasenansicht verwendet werden. Stellen Sie sicher, dass Sie mit der Stufenansicht _und_ der Seitenbereichsansicht aller Benutzer kommunizieren.
+Die Seitenbereichsansicht, die über die Registerkarte "`contentUrl`" mit dem `sidePanel`-Framekontext geladen wird, wird dem Benutzer in einem Seitenbereich angezeigt, wenn er Ihre App innerhalb einer Besprechung öffnet. Das Ziel dieser Ansicht besteht darin, einem Benutzer die Auswahl von Inhalten für die App zu ermöglichen, bevor die App für die Besprechungsphase freigegeben wird. Für die Live Share SDK-Apps kann die Seitenbereichsansicht auch als Begleitoberfläche für die App verwendet werden. Der Aufruf von [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) aus der Seitenbereichsansicht stellt eine Verbindung mit demselben Fluid-Container her, mit dem die Phasenansicht verbunden ist. Dieser Container kann dann für die Kommunikation mit der Phasenansicht verwendet werden. Stellen Sie sicher, dass Sie mit der Stufenansicht *und* der Seitenbereichsansicht aller Benutzer kommunizieren.
 
 In der Seitenbereichsansicht des Beispiels wird der Benutzer aufgefordert, die Schaltfläche "Freigeben in Phase" auszuwählen.
 
@@ -359,7 +359,7 @@ Nachdem Sie Ihren Code bereitgestellt haben, können Sie [Teams Toolkit](../tool
 
 | Beispielname | Beschreibung                                                      | JavaScript                                                                           |
 | :---------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Dice Roller | Ermöglichen Sie allen verbundenen Clients, einen Würfel zu rollen und das Ergebnis anzuzeigen. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) |
+| Dice Roller | Ermöglichen Sie allen verbundenen Clients, einen Würfel zu rollen und das Ergebnis anzuzeigen. | [Anzeigen](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

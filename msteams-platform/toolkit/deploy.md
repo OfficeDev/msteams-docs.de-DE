@@ -1,17 +1,17 @@
 ---
 title: Bereitstellen in die Cloud
 author: MuyangAmigo
-description: Bereitstellen der App in der Cloud, azure oder SharePoint
+description: In diesem Modul erfahren Sie, wie Sie die App in der Cloud, in Azure oder SharePoint bereitstellen und Teams Apps mit Teams Toolkit bereitstellen.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 1d0ade9abed4be212abfb96068626172c4f0f03e
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: f7870a81c221182c98a0619d99c7cce255fcc170
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104147"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142052"
 ---
 # <a name="deploy-to-the-cloud"></a>Bereitstellen in die Cloud
 
@@ -23,11 +23,11 @@ Teams Toolkit hilft Ihnen beim Bereitstellen oder Hochladen des Frontend- und Ba
 
 ## <a name="prerequisite"></a>Voraussetzungen
 
-* [Installieren Sie Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Version v3.0.0+.
+* [Installieren des Teams-Toolkits](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Version v3.0.0+.
 
 > [!NOTE]
 >
-> * Stellen Sie sicher, dass Teams App-Projekt in VS-Code geöffnet ist.
+> * Stellen Sie sicher, dass Sie das Teams-App-Projekt in VS-Code geöffnet haben.
 > * Stellen Sie vor der Bereitstellung von Projektcode in [der Cloud die Cloudressourcen bereit](provision.md).
 
 ## <a name="deploy-teams-apps-using-teams-toolkit"></a>Bereitstellen Teams Apps mit Teams Toolkit

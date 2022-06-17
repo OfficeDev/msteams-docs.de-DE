@@ -1,16 +1,15 @@
 ---
 title: Kombinieren von Bots mit Registerkarten
-description: In diesem Artikel wird beschrieben, wie Registerkarten und Bots zusammen verwendet werden.
-keywords: Entwicklung von Teams-Bots-Registerkarten
+description: In diesem Artikel erfahren Sie, wie Sie Registerkarten und Bots zusammen verwenden und Deep-Links zu Registerkarten in Nachrichten von Ihrem Bot und der Entwicklung von Teams-Bots-Registerkarten erstellen.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 03/15/2018
-ms.openlocfilehash: 9ec2c37417d6c16edf4ead521dea91655ba11165
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: f8199b65fded8c43af45cb303a400652e5516db2
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123731"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142094"
 ---
 # <a name="combine-bots-with-tabs"></a>Kombinieren von Bots mit Registerkarten
 
@@ -31,7 +30,7 @@ Dieser Fluss funktioniert am besten, wenn Ihr Identitätsanbieter das OAuth 2.0-
 
 Sie möchten Registerkarten verwenden, um mehr Inhalt anzuzeigen, als in eine Karte passen können, oder eine Möglichkeit zum Ausführen komplexer Aufgaben zum Ausfüllen von Formularen mithilfe des Registerkartenzeichenbereichs bieten. Erwägen Sie beispielsweise, den Benutzer zur Registerkarte zu navigieren, wenn er auf die Karte ihres Bots klickt. Dazu müssen Sie die Nachricht Ihres Bots codieren, um eine [Deep-Link-URL](~/concepts/build-and-test/deep-links.md) einzuschließen, entweder über Markup oder als Ziel der openUrl-Aktion.
 
-Deep-Links basieren auf einer entityId, einem undurchsichtigen Wert, der einer eindeutigen Entität in Ihrem System zugeordnet ist. Wenn die Registerkarte erstellt wird, speichern Sie im Idealfall einen einfachen Zustand, z. B. flag auf Ihrem Back-End, das angibt, dass die Registerkarte im Kanal erstellt wurde. Wenn Ihr Bot eine Nachricht erstellt, kann er auf die entitäts-ID abzielen, die dieser Registerkarte zugeordnet ist.
+Deep-Links basieren auf einer entityId, einem undurchsichtigen Wert, der einer eindeutigen Entität in Ihrem System zugeordnet ist. Wenn die Registerkarte erstellt wird, speichern Sie idealerweise einen einfachen Zustand. Kennzeichnen Sie z. B. auf Ihrem Back-End, dass die Registerkarte im Kanal erstellt wurde. Wenn Ihr Bot eine Nachricht erstellt, kann er auf die entitäts-ID abzielen, die dieser Registerkarte zugeordnet ist.
 
 > [!NOTE]
 > da Registerkarten in persönlichen Chats "statisch" sind und mit der App installiert sind, können Sie immer deren Existenz annehmen und so Deep-Links entsprechend erstellen.

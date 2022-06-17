@@ -1,16 +1,15 @@
 ---
 title: Verwalten Ihrer Apps mit dem Entwicklerportal
-description: Erfahren Sie, wie Sie Ihre Apps mithilfe des Entwicklerportals für Microsoft Teams konfigurieren, verteilen und verwalten.
-keywords: Erste Schritte für Entwicklerportalteams
+description: In diesem Modul erfahren Sie, wie Sie Ihre Apps mithilfe des Entwicklerportals für Microsoft Teams konfigurieren, verteilen und verwalten.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: c7ca898cd411028dffa6c8a197c78cd796f823e5
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: 948f22cf8f55a33e2d5b24b875678039fd101fc2
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439325"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142367"
 ---
 # <a name="manage-your-teams-apps-using-developer-portal"></a>Verwalten Ihrer Teams-Apps mithilfe des Entwicklerportals
 
@@ -27,8 +26,8 @@ Das <a href="https://dev.teams.microsoft.com" target="_blank">Entwicklerportal f
 
 Das Entwicklerportal bietet mehrere Möglichkeiten zum Registrieren einer Teams-App:
 
-* Registrieren einer brandneuen App
-* Importieren eines vorhandenen App-Pakets
+* Registrieren Sie eine brandneue App.
+* Importieren sie ein vorhandenes App-Paket.
 
 > [!NOTE]
 > Wenn Sie eine App mit dem [Microsoft Teams Toolkit für Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) erstellen, können Sie diese App im Entwicklerportal verwalten.
@@ -174,4 +173,4 @@ Das Entwicklerportal enthält auch Tools, mit denen Sie einige wichtige Features
 
 ## <a name="see-also"></a>Siehe auch
 
-[Einschließen eines SaaS-Angebots in Ihre Microsoft Teams-App](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+[Einschließen eines SaaS-Angebots mit Ihrer Microsoft Teams-App](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

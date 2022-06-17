@@ -1,15 +1,15 @@
 ---
 title: Sequenzielle Workflows
-description: Informationen zu sequenziellen Workflows für adaptive Karten mit universellen Aktionen mit Codebeispielen
+description: In diesem Modul erfahren Sie mehr über sequenzielle Workflows für adaptive Karten mit universellen Aktionen mit Codebeispielen
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 32200fc7a4df12567ba4000aad34e5a229dbc466
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 40743ccd67386aae72685536ede1ae50d5aea907
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073781"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143312"
 ---
 # <a name="sequential-workflows"></a>Sequenzielle Workflows
 
@@ -127,7 +127,7 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 |Beispielname | Beschreibung | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Teams-Catering-Bot | Erstellen Sie mit adaptiven Karten einen Bot, der Lebensmittelbestellungen akzeptiert. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Noch nicht verfügbar |
+| Teams-Catering-Bot | Erstellen Sie einen Bot, der mit adaptiven Karten eine Bestellung annimmt. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Noch nicht verfügbar |
 | Adaptive Karten für sequenzielle Workflows | Veranschaulichen, wie sequenzielle Workflows, benutzerspezifische Ansichten und aktuelle adaptive Karten in Bots implementiert werden. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch

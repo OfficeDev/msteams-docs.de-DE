@@ -1,16 +1,15 @@
 ---
 title: Senden und Empfangen von Dateien von einem Bot
-description: Erfahren Sie, wie Sie Dateien über den Bot senden und empfangen, indem Sie Graph-APIs für persönliche, Kanal- und Gruppenchatbereiche verwenden. Verwenden Sie Teams-Bot-APIs unter Verwendung von Codebeispielen, die auf dem v3 Bot Framework SDK basieren.
-keywords: Senden und Empfangen von Teams-Bots-Dateien
+description: Erfahren Sie, wie Sie Dateien über den Bot mithilfe Graph APIs für persönliche Chat-, Kanal- und Gruppenchatbereiche senden und empfangen.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 2baf356b8ec5cf0f7d3e68af81a34ccd178e90b9
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 96642885f6dd9581a5efdaba21249002282c5c9a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755902"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143368"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>Senden und Empfangen von Dateien über Ihren Bot
 
@@ -42,7 +41,7 @@ In den folgenden Abschnitten wird beschrieben, wie Sie dies tun, um Dateiinhalte
 
 Um Dateien in Ihrem Bot zu senden und zu empfangen, müssen Sie die `supportsFiles`-Eigenschaft im Manifest auf `true`festlegen. Diese Eigenschaft wird im Abschnitt [Bots](~/resources/schema/manifest-schema.md#bots) der Manifestreferenz beschrieben.
 
-Die Definition sieht wie folgt aus: `"supportsFiles": true`. Wenn Ihr Bot `supportsFiles` nicht aktiviert, funktionieren die folgenden Features nicht.
+Die Definition sieht wie folgt aus: `"supportsFiles": true`. Wenn Ihr Bot nicht aktiviert `supportsFiles`ist, funktionieren die folgenden Features nicht.
 
 ### <a name="receiving-files-in-personal-chat"></a>Empfangen von Dateien im persönlichen Chat
 
@@ -83,7 +82,7 @@ Das Hochladen einer Datei für einen Benutzer umfasst die folgenden Schritte:
 1. Senden Sie eine Nachricht an den Benutzer, in der Sie um die Berechtigung zum Schreiben der Datei bitten. Diese Nachricht muss eine `FileConsentCard`-Anlage mit dem Namen der hochzuladenden Datei enthalten.
 2. Wenn der Benutzer den Dateidownload akzeptiert, empfängt Ihr Bot eine *Aufrufaktivität* mit einer Standort-URL.
 3. Um die Datei zu übertragen, führt Ihr Bot einen `HTTP POST` direkt in die angegebene Speicherort-URL aus.
-4. Optional können Sie die ursprüngliche Zustimmungskarte entfernen, wenn Sie nicht erlauben möchten, dass der Benutzer weitere Uploads derselben Datei akzeptiert.
+4. Optional können Sie die ursprüngliche Zustimmungskarte entfernen, wenn Sie dem Benutzer nicht erlauben möchten, weitere Uploads derselben Datei zu akzeptieren.
 
 #### <a name="message-requesting-permission-to-upload"></a>Nachricht für die Anforderung der Berechtigung zum Hochladen
 
@@ -165,7 +164,7 @@ Wenn der Benutzer die Datei ablehnt, erhält Ihr Bot entsprechend das folgende E
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Benachrichtigen des Benutzers über eine hochgeladene Datei
 
-Nachdem Sie eine Datei in die OneDrive-Instanz des Benutzers hochgeladen haben, sollten Sie unabhängig davon, ob Sie den oben beschriebenen Mechanismus oder benutzerdelegierte OneDrive-APIs verwenden, eine Bestätigungsmeldung an den Benutzer senden. Diese Nachricht sollte eine `FileCard`-Anlage enthalten, auf die der Benutzer klicken kann, um sie in der Vorschau anzuzeigen, in OneDrive zu öffnen oder lokal herunterzuladen.
+Nachdem Sie eine Datei in die OneDrive-Instanz des Benutzers hochgeladen haben, sollten Sie unabhängig davon, ob Sie den oben beschriebenen Mechanismus oder benutzerdelegierte OneDrive-APIs verwenden, eine Bestätigungsmeldung an den Benutzer senden. Diese Nachricht sollte eine `FileCard` Anlage enthalten, die der Benutzer auswählen kann, um sie entweder in der Vorschau anzuzeigen, in OneDrive zu öffnen oder lokal herunterzuladen.
 
 ```json
 {

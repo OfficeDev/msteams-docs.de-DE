@@ -1,17 +1,16 @@
 ---
 title: Apps für Teams-Besprechungen
 author: surbhigupta
-description: Übersicht über Apps in Microsoft Teams-Besprechungen basierend auf Teilnehmer- und Benutzerrolle
+description: In diesem Artikel erfahren Sie, wie Apps in Microsoft Teams Besprechungen basierend auf Teilnehmer- und Benutzerrolle und App-Erweiterbarkeit funktionieren.
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: Microsoft Teams Apps Besprechungen Benutzer Teilnehmerrollen API
-ms.openlocfilehash: 3543cb8e1beff69484a6348f511a033ad09e1f6d
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 332d0e382cbadbe41900e8cc65eb0266e94954dc
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668046"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142507"
 ---
 # <a name="apps-for-teams-meetings"></a>Apps für Teams-Besprechungen
 

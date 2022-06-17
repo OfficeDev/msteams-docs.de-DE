@@ -1,29 +1,29 @@
 ---
 title: Einheitliche Besprechungs-Apps
 author: surbhigupta
-description: Erfahren Sie mehr über Teams Besprechungslebenszyklus und die Besprechungserfahrung des Benutzers in der Desktop- und mobilen Umgebung, Teilnehmer- und Benutzerrollen und -typen, integrieren Bots und Nachrichtenerweiterungen in den Besprechungslebenszyklus.
+description: Erfahren Sie mehr über Teams Besprechungslebenszyklus und die Besprechungserfahrung von Benutzern auf Desktops und Mobilgeräten, Benutzertypen, Integrieren von Bots und Nachrichtenerweiterungen in den Besprechungslebenszyklus.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 97f1254fc71dce93aa7e30b8ef1901f9fd93b6f0
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: caea4d49526c01de497f72a1878f9520d6e22348
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111346"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142577"
 ---
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 
 Teams einheitlichen Besprechungs-Apps basieren auf den folgenden Konzepten:
 
 * Der Besprechungslebenszyklus besteht aus verschiedenen Phasen mit entsprechenden Freigabefenstern: vor der Besprechung, in der Besprechung und nach der Besprechung.  
-* Es gibt drei verschiedene Teilnehmerrollen in einer Besprechung: Organisator, Referent und Teilnehmer. Weitere Informationen finden Sie [unter Rollen in einer Teams Besprechung](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
+* Es gibt drei verschiedene Teilnehmerrollen in einer Besprechung: Organisator, Referent und Teilnehmer. Weitere Informationen finden Sie unter [Rollen in einer Teams-Besprechung](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * Es gibt verschiedene [Benutzertypen](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) in einer Besprechung: Mandantenspezifische, [Gast](/microsoftteams/guest-access)-, [Verbund](/microsoftteams/manage-external-access)- und anonyme Benutzer.
 
 In diesem Artikel werden die Informationen zum Lebenszyklus von Besprechungen und zum Integrieren von Registerkarten, Bots und Nachrichtenerweiterungen behandelt. Es identifiziert verschiedene Teilnehmerrollen und Benutzertypen.
 
 ## <a name="meeting-lifecycle"></a>Der Besprechungslebenszyklus
 
-Den Phasen des Besprechungslebenszyklus entsprechen in der App drei Umgebungen: vor der Besprechung, in der Besprechung und nach der Besprechung. Sie können Registerkarten, Bots und Nachrichtenerweiterungen in jede Phase des Besprechungslebenszyklus integrieren.
+Den Phasen des Besprechungslebenszyklus entsprechen in der App drei Umgebungen: vor der Besprechung, in der Besprechung und nach der Besprechung. Sie können Registerkarten, Bots und Nachrichtenerweiterungen in jeder Phase des Besprechungslebenszyklus integrieren.
 
 > [!NOTE]
 > Besprechungserweiterungen wie Bots, Karten, Nachrichtenerweiterungen und Nachrichtenaktionen werden im Webclient unterstützt. Gehostete Benutzeroberflächen wie Registerkarten, Inhaltsblasen und Freigabe für Die Stufe werden derzeit jedoch nicht vollständig unterstützt.
@@ -33,7 +33,7 @@ Den Phasen des Besprechungslebenszyklus entsprechen in der App drei Umgebungen: 
 Registerkarten ermöglichen es Teammitgliedern, auf Dienste und Inhalte in einem bestimmten Bereich innerhalb einer Besprechung zuzugreifen. Das Team arbeitet direkt mit Registerkarten und unterhält sich über die Tools und Daten, die auf den Registerkarten verfügbar sind. In Teams Besprechung können Sie eine Registerkarte hinzufügen, indem Sie <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>aus, und wählen Sie die App aus, die Sie installieren möchten.
 
 > [!IMPORTANT]
-> Wenn Sie eine Registerkarte in Ihre Besprechung integriert haben, muss Ihre App den Teams [SSO-Authentifizierungsfluss (Single Sign-On, einmaliges Anmelden) für Registerkarten](../tabs/how-to/authentication/auth-aad-sso.md) befolgen.
+> Wenn Sie eine Registerkarte in Ihre Besprechung integriert haben, muss Ihre App den Teams [SSO-Authentifizierungsfluss (Single Sign-On, einmaliges Anmelden) für Registerkarten](../tabs/how-to/authentication/tab-sso-overview.md) befolgen.
 
 > [!NOTE]
 >
@@ -47,7 +47,7 @@ Registerkarten ermöglichen es Teammitgliedern, auf Dienste und Inhalte in einem
 So fügen Sie einer vorhandenen Besprechung Registerkarten hinzu:
 
 1. Wählen Sie in Ihrem Kalender eine Besprechung aus, der Sie eine Registerkarte hinzufügen möchten.
-1. Wählen Sie die Registerkarte " **Details** " und dann <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. Der Registerkartenkatalog wird angezeigt.
+1. Wählen Sie die Registerkarte **Details** aus, und wählen Sie <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. Der Registerkartenkatalog wird angezeigt.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="Pre-Meeting-App-Umgebung":::
 
@@ -87,7 +87,6 @@ So verwenden Sie Registerkarten während einer Besprechung:
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
 :::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="Desktopansicht":::
-
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
@@ -178,7 +177,7 @@ Die Standardeinstellungen für Teilnehmer werden vom IT-Administrator einer Orga
 > [!NOTE]
 > Nur ein Organisator oder Referent kann Apps hinzufügen, entfernen oder deinstallieren.
 
-Weitere Informationen finden Sie [unter Rollen in einer Teams Besprechung](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+Weitere Informationen finden Sie unter [Rollen in einer Teams-Besprechung](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 Nachdem Sie Ihre App basierend auf Teilnehmerrollen in einer Besprechung erstellt haben, können Sie jeden Benutzertyp für Besprechungen identifizieren und auswählen, worauf er zugreifen kann.
 
@@ -199,9 +198,9 @@ In der folgenden Liste werden die verschiedenen Benutzertypen zusammen mit ihrer
     > Ihre Teams Benutzer können Apps hinzufügen, wenn sie Besprechungen oder Chats mit anderen Organisationen hosten. Die Benutzer können Apps verwenden, die von externen Benutzern geteilt werden, wenn Ihre Benutzer an Besprechungen oder Chats teilnehmen, die von anderen Organisationen gehostet werden. Die Datenrichtlinien der Organisation des hostenden Benutzers sowie die Datenfreigabepraktiken der Drittanbieter-Apps, die von der Organisation dieses Benutzers gemeinsam genutzt werden, werden wirksam.
 
     > [!IMPORTANT]
-    > Derzeit sind Drittanbieter-Apps in Government Community Cloud (GCC) verfügbar, aber nicht für GCC-High und das Verteidigungsministerium (DEPARTMENT of Defense, DOD). Drittanbieter-Apps sind für GCC standardmäßig deaktiviert. Informationen zum Aktivieren von Apps von Drittanbietern für GCC finden Sie unter [Verwalten von App-Berechtigungsrichtlinien](/microsoftteams/teams-app-permission-policies) und [Verwalten von Apps](/microsoftteams/manage-apps).
+    > Derzeit sind Drittanbieter-Apps in Government Community Cloud (GCC) verfügbar, aber nicht für GCC-High und Department of Defense (DOD). Drittanbieter-Apps sind für GCC standardmäßig deaktiviert. Informationen zum Aktivieren von Drittanbieter-Apps für GCC finden Sie unter [Verwalten von App-Berechtigungsrichtlinien](/microsoftteams/teams-app-permission-policies) und [Verwalten von Apps](/microsoftteams/manage-apps).
 
-* **Anonym**: Anonyme Benutzer haben keine Azure AD Identität und sind nicht mit einem Mandanten verbunden. Die anonymen Teilnehmer sind wie externe Benutzer, aber ihre Identität wird in der Besprechung nicht angezeigt. Anonyme Benutzer können nicht auf Apps in einem Besprechungsfenster und einer Besprechungsphase zugreifen. Ein anonymer Benutzer kann kein Organisator, aber Referent oder Teilnehmer sein.
+* **Anonym**: Anonyme Benutzer haben keine Azure AD-Identität und sind nicht mit einem Mandanten verbunden. Die anonymen Teilnehmer sind wie externe Benutzer, aber ihre Identität wird in der Besprechung nicht angezeigt. Anonyme Benutzer können nicht auf Apps in einem Besprechungsfenster und einer Besprechungsphase zugreifen. Ein anonymer Benutzer kann kein Organisator, aber Referent oder Teilnehmer sein.
 
     > [!NOTE]
     > Anonyme Benutzer erben die globale Standard-App-Berechtigungsrichtlinie auf Benutzerebene. Weitere Informationen finden Sie [unter "Apps verwalten](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)".
@@ -213,13 +212,13 @@ Die folgende Tabelle enthält die Benutzertypen und listet die Features auf, auf
 | Benutzertyp | Registerkarten | Bots | Nachrichtenerweiterungen | Adaptive Karten | Aufgabenmodule | Dialogfeld "Besprechung" | Besprechungsphase |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Anonymer Benutzer | Nicht verfügbar | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Nicht verfügbar | Nicht verfügbar |
-| Gast, Teil der Mandanten-Azure AD | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Verfügbar | Kann nur auf Teams Desktopclient starten, anzeigen und mit der App in der Besprechungsphase interagieren |
+| Gast, Teil des Mandanten Azure AD | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Verfügbar | Kann nur auf Teams Desktopclient starten, anzeigen und mit der App in der Besprechungsphase interagieren |
 | Verbundbenutzer finden weitere Informationen unter [nicht standardmäßigen Benutzern](/microsoftteams/non-standard-users). | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Interaktion ist zulässig. Abrufen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Nicht verfügbar | Kann die App nur auf Teams Desktopclient starten, anzeigen und mit der App in der Besprechungsphase interagieren. |
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Aktivieren und Konfigurieren Ihrer Apps für Teams Besprechungen](enable-and-configure-your-app-for-teams-meetings.md)
+> [Aktivieren und konfigurieren Sie Ihre Apps für Teams-Besprechungen](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## <a name="see-also"></a>Siehe auch
 

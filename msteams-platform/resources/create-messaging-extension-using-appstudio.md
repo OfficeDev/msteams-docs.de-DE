@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie eine Microsoft Teams Messaging-Erweiterung mi
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 09bc7a7884f69c7c3ac4c8e195e5ac6d14d20990
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: b6eb248f84bdfb62c369ed2b95831c9d7eacec05
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032781"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142339"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Eine Messaging-Erweiterung mit App Studio erstellen
 
@@ -19,11 +19,11 @@ ms.locfileid: "66032781"
 
 Auf hoher Ebene müssen Sie die folgenden Schritte ausführen, um eine Messaging-Erweiterung zu erstellen.
 
-1. Vorbereiten Ihrer Entwicklungsumgebung
-2. Erstellen und Bereitstellen Ihres Webdiensts (während der Entwicklung verwenden Sie einen Tunneldienst wie ngrok, um ihn lokal auszuführen)
-3. Registrieren Ihres Webdiensts bei Bot Framework
-4. Erstellen Ihres App-Pakets
-5. Hochladen Ihres Pakets in Microsoft Teams
+1. Vorbereiten Ihrer Entwicklungsumgebung.
+2. Erstellen und Bereitstellen Ihres Webdiensts (während der Entwicklung verwenden Sie einen Tunneldienst wie ngrok, um ihn lokal auszuführen).
+3. Registrieren Sie Ihren Webdienst beim Bot Framework.
+4. Erstellen Sie Ihr App-Paket.
+5. Hochladen Ihres Pakets in Microsoft Teams.
 
 Das Erstellen Ihres Webdiensts, das Erstellen Ihres App-Pakets und das Registrieren Ihres Webdiensts beim Bot Framework kann in beliebiger Reihenfolge erfolgen. Da diese drei Teile so miteinander verflochten sind, müssen Sie unabhängig davon, in welcher Reihenfolge Sie sie ausführen, zurückkehren, um die anderen Zuschnitte zu aktualisieren. Ihre Registrierung benötigt den Messaging-Endpunkt von Ihrem bereitgestellten Webdienst, und Ihr Webdienst benötigt die ID und das Kennwort, die aus Ihrer Registrierung erstellt wurden. Ihr App-Manifest benötigt auch diese ID, um Teams mit Ihrem Webdienst zu verbinden.
 

@@ -1,17 +1,17 @@
 ---
 title: Hinzufügen von einmaligem Anmelden zu Ihren Teams-Apps
 author: zyxiaoyuer
-description: Describes Add single sign on of Teams Toolkit
+description: In diesem Modul erfahren Sie, wie Sie einmaliges Anmelden (Single Sign-On, SSO) von Teams Toolkit hinzufügen, SSO-Unterstützung aktivieren, Ihre Anwendung so aktualisieren, dass sie SSO verwendet
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: e9b45f1bd95140eae8da851544dfa4ee87646225
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: b1c53da3a7af0676ca29006359971d881a3a8f5b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123447"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144131"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Hinzufügen des einmaligen Anmeldens zur Teams-App
 
@@ -30,7 +30,7 @@ Teams Toolkit hilft Ihnen beim Hinzufügen von SSO zu den folgenden Teams Funkti
 
 ### <a name="add-sso-using-visual-studio-code"></a>Hinzufügen von SSO mit Visual Studio Code
 
-Mit den folgenden Schritten können Sie SSO mit Teams Toolkit in Visual Studio Code hinzufügen.
+Die folgenden Schritte helfen Ihnen beim Hinzufügen von SSO mit Teams Toolkit in Visual Studio Code
 
 1. Öffnen Sie **Visual Studio Code.**
 2. Wählen Sie Teams :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="Toolkit-Sso Hinzufügen einer Randleiste"::: in der linken Navigationsleiste aus.
@@ -55,7 +55,7 @@ Sie können den Befehl in Ihrem **Projektstammverzeichnis** ausführen`teamsfx a
 
 In der folgenden Tabelle sind die Änderungen aufgeführt, die Teams Toolkit an Ihrem Projekt vornimmt:
 
-   |**Type**|**Datei**|**Zweck**|
+   |**Typ**|**Datei**|**Zweck**|
    |--------|--------|-----------|
    |Erstellen|`aad.template.json` Unter `template/appPackage`|Das Azure AD-Anwendungsmanifest stellt Ihre Azure AD-App dar. `template/appPackage` hilft beim Registrieren einer Azure AD-App während der lokalen Debug- oder Bereitstellungsphase.|
    |Ändern|`manifest.template.json` Unter `template/appPackage`|Ein `webApplicationInfo` Objekt wird ihrer Teams App-Manifestvorlage hinzugefügt. Teams erfordert dieses Feld, um SSO zu aktivieren. Die Änderung wird wirksam, wenn Sie das lokale Debuggen oder bereitstellen auslösen.|
@@ -67,7 +67,7 @@ In der folgenden Tabelle sind die Änderungen aufgeführt, die Teams Toolkit an 
 
 ## <a name="update-your-application-to-use-sso"></a>Aktualisieren Ihrer Anwendung für die Verwendung von SSO
 
-Mit den folgenden Schritten können Sie SSO in Ihrer Anwendung aktivieren.
+Die folgenden Schritte helfen Ihnen, SSO in Ihrer Anwendung zu aktivieren.
 
 > [!NOTE]
 > Diese Änderungen basieren auf den Vorlagen, die wir gerüsten.

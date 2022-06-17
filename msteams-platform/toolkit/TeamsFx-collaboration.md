@@ -1,17 +1,17 @@
 ---
 title: Zusammenarbeiten an TeamsFx Project mit Teams Toolkit
 author: yanjiang
-description: Zusammenarbeiten an TeamsFx Project mit Teams Toolkit
+description: In diesem Artikel erfahren Sie, wie Sie mit Teams Toolkit an TeamsFx Project zusammenarbeiten und mit anderen Entwicklern zusammenarbeiten.
 ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 099820252fd83a2d916e8d61f3b83b63291695e9
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 0f81990603b3e0275a057c489d7fac44ee0127cc
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124018"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142059"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Zusammenarbeiten an Teams-Projekten mit dem Teams-Toolkit
 

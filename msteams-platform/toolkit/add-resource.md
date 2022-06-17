@@ -1,17 +1,17 @@
 ---
 title: Hinzufügen von Ressourcen zu Teams-Apps
 author: MuyangAmigo
-description: Beschreibt das Hinzufügen von Ressourcen des Teams-Toolkits.
+description: In diesem Modul erfahren Sie, wie Sie Ressourcen des Teams Toolkits, Vorteile, Einschränkungen und Funktionen hinzufügen.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f3b96b60447596eae8c1cdf37f4b38f6653c444b
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 9d8c7b1fd6b4910e1024f10a44e54271a0fbb475
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656649"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143858"
 ---
 # <a name="add-cloud-resources-to-teams-app"></a>Hinzufügen von Cloudressourcen zur Teams-App
 

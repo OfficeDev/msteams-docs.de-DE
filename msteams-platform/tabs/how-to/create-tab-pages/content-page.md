@@ -1,17 +1,16 @@
 ---
 title: Erstellen einer Inhaltsseite
 author: surbhigupta
-description: Erstellen einer Inhaltsseite
-keywords: Gruppenkanal für Teams-Registerkarten konfigurierbar statisch
+description: In diesem Modul erfahren Sie, wie Sie eine Inhaltsseite für Ihre Registerkarten- und Registerkarteninhalte und Designrichtlinien erstellen.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8de792faafeaa526a1abffe042394daeeb60cb3d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 646e7f1a1177330fdb4db64b7e6cd1bde0df5db5
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757472"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142206"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Erstellen einer Inhaltsseite für Ihre Registerkarte
 

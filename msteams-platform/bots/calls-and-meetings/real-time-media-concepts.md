@@ -1,15 +1,14 @@
 ---
 title: Medienanrufe und Besprechungen in Echtzeit mit Microsoft Teams
-description: Grundlegendes zu wichtigen Konzepten beim Erstellen von Bots, die Audio- und Videoanrufe in Echtzeit und Onlinebesprechungen durchführen können. Informieren zu Mediensitzungen, Bildfrequenz, Audio-/Videoformat und Referenz zu Entwicklerressourcen
+description: Lernen Sie wichtige Konzepte beim Erstellen von Bots kennen, die Audio- und Videoanrufe in Echtzeit und Onlinebesprechungen durchführen können.
 ms.topic: conceptual
-ms.localizationpriority: high
-keywords: Audiostream Videostream Audio-/Videoanrufe Besprechung Echtzeit Medien anwendungsgehostete Medien dienstgehostete Medien
-ms.openlocfilehash: 0e5343567be3843c457885fcf506446b20b6dcf7
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b1ff14a0229483312c0de6fdb33836ee205f1e14
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111990"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143788"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Medienanrufe und Besprechungen in Echtzeit mit Microsoft Teams
 

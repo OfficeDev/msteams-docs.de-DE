@@ -1,17 +1,17 @@
 ---
 title: Erstellen einer Kanal- oder Gruppenregisterkarte
 author: laujan
-description: Hier finden Sie eine Schnellstartanleitung zum Erstellen einer Kanal- und Gruppenregisterkarte mit dem Yeoman-Generator für Microsoft Teams, einschließlich der näheren Betrachtung des Quellcodes mit Codebeispielen.
+description: In diesem Modul erfahren Sie, wie Sie eine Kanal- und Gruppenregisterkarte mit dem Yeoman-Generator für Microsoft Teams erstellen, einschließlich der Überprüfung des Quellcodes mit Codebeispielen.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: cd50547e1b6d504d20d57ac1c23e741c6e043cf0
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 3ac2c126d2228fa17e693eebdf4b64a9149ef45f
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672950"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142675"
 ---
 # <a name="channel-or-group-tab"></a>Kanal- oder Gruppenregisterkarten
 
@@ -427,7 +427,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
 1. Im Abschnitt "Domänen" müssen Domänen auf Ihren Registerkarten Ihre ngrok-URL ohne das HTTPS-Präfix `<yourngrokurl>.ngrok.io` enthalten.
 
-### <a name="preview-your-app-in-teams"></a>Eine Vorschau ihrer App in Microsoft Teams anzeigen
+### <a name="preview-your-app-in-teams"></a>Anzeigen einer Vorschau Ihrer App in Teams
 
 1. Wählen Sie auf der Entwicklerportal-Symbolleiste **Vorschau in Microsoft Teams** aus; das Entwicklerportal informiert Sie, dass Ihre App erfolgreich quergeladen wurde. Die Seite **Hinzufügen** wird für Ihre App in Microsoft Teams angezeigt.
 
@@ -495,7 +495,7 @@ public void Configure(IApplicationBuilder app)
 
 In ASP.NET Core sucht die Anwendung im Webstammordner nach statischen Dateien.
 
-#### <a name="appmanifest-folder"></a>AppManifest-Ordner
+#### <a name="appmanifest-folder"></a>Ordner „AppManifest“
 
 Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
@@ -645,7 +645,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
 1. Im Abschnitt "Domänen" müssen Domänen auf Ihren Registerkarten Ihre ngrok-URL ohne das HTTPS-Präfix `<yourngrokurl>.ngrok.io` enthalten.
 
-### <a name="preview-your-app-in-teams"></a>Eine Vorschau ihrer App in Microsoft Teams anzeigen
+### <a name="preview-your-app-in-teams"></a>Anzeigen einer Vorschau Ihrer App in Teams
 
 1. Wählen Sie auf der Entwicklerportal-Symbolleiste **Vorschau in Microsoft Teams** aus; das Entwicklerportal informiert Sie, dass Ihre App erfolgreich quergeladen wurde. Die Seite **Hinzufügen** wird für Ihre App in Microsoft Teams angezeigt.
 

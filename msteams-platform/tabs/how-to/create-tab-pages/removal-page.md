@@ -1,17 +1,16 @@
 ---
 title: Erstellen einer Seite zum Entfernen von Registerkarten
 author: surbhigupta
-description: So erstellen Sie eine Seite zum Entfernen von Registerkarten
-keywords: Teams-Registerkarten Gruppenkanal konfigurierbar entfernen Löschen
+description: In diesem Modul erfahren Sie, wie Sie eine Seite zum Entfernen von Registerkarten erstellen und die Neukonfiguration Ihrer Registerkarte nach der Installation aktivieren.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 0d8d466a2dd2504b74f72b342345576b6f823a89
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 81bc5f667d1be301965ccddf0709c8cb02f328e8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757465"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142633"
 ---
 # <a name="create-a-removal-page"></a>Erstellen einer Seite zum Entfernen
 

@@ -1,14 +1,14 @@
 ---
 title: Übersicht über universelle Aktionen für adaptive Karten
-description: Eine kurze Übersicht über universelle Aktionen für adaptive Karten, z. B. benutzerspezifische Ansichten, sequenzielle Workflowunterstützung und vieles mehr für Desktop- und mobile Umgebungen
+description: Informationen zu universellen Aktionen für adaptive Karten, z. B. benutzerspezifische Ansichten, sequenzielle Workflowunterstützung und mehr für Desktop- und mobile Umgebungen
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: eb47da7a1a6bf765864e402b83badef664401404
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 82f2120164b745d021f2d2d8921ac8492015c6ed
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756471"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142087"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Universal-Aktionen für adaptive Karten
 
@@ -109,7 +109,7 @@ Jetzt können Sie verstehen, wie adaptive Karten mit dem neuen Modell für unive
 
 Adaptive Karten sind eine Kombination aus Inhalten, z. B. Text und Grafiken, und Aktionen, die von einem Benutzer ausgeführt werden können. Weitere Informationen finden Sie unter [Adaptive Karten](http://adaptivecards.io/). Die neuen universellen Aktionen für adaptive Karten ermöglichen eine gemeinsame Behandlung der Aktionen für adaptive Karten über Plattformen und Anwendungen hinweg. Weitere Informationen finden Sie unter ["Universelles Aktionsmodell"](/adaptive-cards/authoring-cards/universal-action-model).
 
-Sie können zunächst Szenarien mithilfe des [Schnellstarthandbuchs](Work-with-universal-actions-for-adaptive-cards.md) aktualisieren und universelle Aktionen nutzen.
+Sie können die ersten Schritte ausführen, indem Sie Szenarien mithilfe der [Schnellstartanleitung] aktualisieren. (Work-with-universal-actions-for-adaptive-cards.md) und universelle Aktionen nutzen.
 
 ## <a name="next-step"></a>Nächster Schritt
 
@@ -121,4 +121,4 @@ Sie können zunächst Szenarien mithilfe des [Schnellstarthandbuchs](Work-with-u
 * [Was sind Bots?](~/bots/what-are-bots.md)
 * [Übersicht über adaptive Karten](~/task-modules-and-cards/what-are-cards.md)
 * [Adaptive Karten @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
-* [Adaptive Karten @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
+* [Adaptive Karten @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460).

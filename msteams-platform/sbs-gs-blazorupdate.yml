@@ -2,7 +2,7 @@
 title: Erstellen Ihrer ersten App mit Blazor
 metadata:
   title: Hallo Welt mit Blazor
-  description: In diesem Lernprogramm lernen Sie, Hallo Welt App mit Blazor zu erstellen.
+  description: In diesem Lernprogramm erfahren Sie, wie Sie Hallo Welt-App mit Blazor erstellen, interaktive Web-UIs mit C# erstellen und Registerkarten-App und Bot-App erstellen.
   audience: Developer
   level: Beginner
   ms.date: 04/03/2022
@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Zurück zur Übersicht über Erste Schritte
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: d6ceee27abfb72b9b3f7bf5c5663fd7ee835a174
-  ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+  ms.openlocfilehash: 37986a6301127ec194072fccf2c52904bf4f99b9
+  ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 06/16/2022
-  ms.locfileid: "66123300"
+  ms.lasthandoff: 06/17/2022
+  ms.locfileid: "66143123"
 items:
 - durationInMinutes: 1
   content: "\nMit Blazor können Sie interaktive Web-UIs anstelle von JavaScript mit C# erstellen. \n\nSie können eine Registerkarten-App und eine Bot-App mit Blazor und der neuesten Version von Visual Studio erstellen.\n\n:::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png\" alt-text=\"Diagramm, das zeigt, dass diese App über zwei Features verfügt: Registerkarte und Bot.\" border=\"false\":::\n\n> [!NOTE]\n> Derzeit unterstützt Teams Toolkit die Nachrichtenerweiterungsfunktion nicht.\n"

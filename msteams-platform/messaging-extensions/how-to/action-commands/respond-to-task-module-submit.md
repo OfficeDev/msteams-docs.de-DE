@@ -1,16 +1,16 @@
 ---
 title: Auf die Aktion zum Absenden des Aufgabenmoduls reagieren
 author: surbhigupta
-description: Beschreibt anhand von Codebeispielen, wie Sie auf die Submit-Aktion des Aufgabenmoduls aus einem Aktionsbefehl der Messaging-Erweiterung mit einer proaktiven Nachricht, einem anderen Aufgabenmodul, einem adaptiven Kartenbot und mehr reagieren.
+description: In diesem Modul erfahren Sie, wie Sie über einen Aktionsbefehl einer Messagingerweiterung mit proaktiver Nachricht und mehr auf die Aufgabenmodul-Übermittlungsaktion reagieren.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 16ad47f3b57dc5704ad106f8ec3593a2234d29d3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 8bb61750d9b8cc52008e30e3b37b901a018915e7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757563"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144026"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Auf die Aktion zum Absenden des Aufgabenmoduls reagieren
 
@@ -32,10 +32,10 @@ Für die Authentifizierung oder Konfiguration wird der ursprüngliche Aufruf an 
 
 |Antworttyp | Verfassen | Befehlsleiste | Message |
 |--------------|:-------------:|:-------------:|:---------:|
-|Kartenantwort | ✔ | ✔ | ✔ |
-|Ein weiteres Aufgabenmodul | ✔ | ✔ | ✔ |
-|Bot mit adaptiver Karte | ✔ | x | ✔ |
-| Keine Antwort | ✔ | ✔ | ✔ |
+|Kartenantwort | ✔️ | ✔️ | ✔️ |
+|Ein weiteres Aufgabenmodul | ✔️ | ✔️ | ✔️ |
+|Bot mit adaptiver Karte | ✔️ | ❌ | ✔️ |
+| Keine Antwort | ✔️ | ✔️ | ✔️ |
 
 > [!NOTE]
 >

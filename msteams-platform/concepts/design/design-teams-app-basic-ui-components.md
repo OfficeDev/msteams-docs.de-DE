@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über die UI-Komponenten, die zum Erstellen Micro
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: ae2dee58bf19b5400fa162c06a0c73e6137626c2
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 1c83eea2a16234d869ee031f1a1856d26ba48a25
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123668"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142416"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Entwerfen Ihrer Microsoft Teams-App mit grundlegenden Fluent UI-Komponenten
 
@@ -18,12 +18,12 @@ Sie können Ihre Teams-App mit den folgenden grundlegenden Fluent UI-Komponenten
 
 Die Abbildungen auf dieser Seite zeigen, wie Komponenten in Teams Standarddesigns (hell) und dunkel aussehen.
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-Benutzeroberflächenbausatz
 
 Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent Ui</a> enthält das Microsoft Teams UI Kit Komponenten und Muster, die speziell für die Erstellung Teams Apps entwickelt wurden. Im UI-Kit können Sie die hier aufgeführten Komponenten direkt in Ihr Design aufnehmen und einfügen und weitere Beispiele für die Verwendung der einzelnen Komponenten anzeigen.
 
 > [!div class="nextstepaction"]
-> [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Rufen Sie das Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159) ab.
 
 ## <a name="alert"></a>Warnung
 

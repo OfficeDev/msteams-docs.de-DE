@@ -1,14 +1,14 @@
 ---
-title: Microsoft Teams-Entwicklercommunity – Hilfe und Feedback
+title: Microsoft Teams Support und Feedback der Entwicklercommunity
 description: Erfahren Sie, Microsoft Teams Produktteam über verschiedene Feedback- und Supportkanäle hinweg auf die Entwicklercommunity reagiert.
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: e12a5bed7310009539abf56d304deb0359df14e6
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 1155df225aff3016f0c978dc9c84b4462874ea16
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123405"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144103"
 ---
 # <a name="support-and-feedback"></a>Support und Feedback
 

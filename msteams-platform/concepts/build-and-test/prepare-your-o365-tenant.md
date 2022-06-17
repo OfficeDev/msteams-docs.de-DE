@@ -1,15 +1,14 @@
 ---
 title: Vorbereiten Ihres Microsoft 365-Mandanten
-description: Erste Schritte mit Teams in Microsoft 365
+description: In diesem Modul erfahren Sie, wie Sie mit Teams in Microsoft 365 beginnen und Ihre Entwicklungsumgebung erstellen.
 ms.topic: how-to
-ms.localizationpriority: high
-keywords: Konfigurieren Microsoft 365 Mandanten Teams Hochladen
-ms.openlocfilehash: 9e9972a41b6b210b99e7a5ac16fc3665132c3757
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 241040767c610692873e5a68bd215849a8cd26a0
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111395"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144390"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Vorbereiten Ihres Microsoft 365-Mandanten
 

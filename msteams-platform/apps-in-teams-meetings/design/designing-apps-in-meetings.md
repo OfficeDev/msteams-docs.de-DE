@@ -5,24 +5,23 @@ description: Erfahren Sie, wie Sie Apps in Teams Besprechungen entwerfen und das
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: UI Kit-Vorlage für reaktionsfähiges Verhalten in der Besprechung – freigegebene Besprechungsphase
-ms.openlocfilehash: 5688e858fda4aa90fb4bfa75ca70c145308d97ca
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 9d5925df278591cc75abaaa8f030a2d7cfc1c80c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122999"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142682"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen eigener Microsoft Teams-Messaging-Erweiterungen
 
 Sie können Apps erstellen, um Besprechungen produktiver zu gestalten. Bitten Sie z. B. personen, während einer Besprechung eine Umfrage abzuschließen oder eine schnelle Erinnerung zu senden, die den Ablauf der Besprechung nicht unterbricht.
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-Benutzeroberflächenbausatz
 
 Umfassendere Entwurfsrichtlinien, einschließlich Elemente, die Sie nach Bedarf abrufen und ändern können, finden Sie im Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
-> [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Holen Sie sich den Microsoft Teams-Benutzeroberflächenbausatz (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Hinzufügen einer Besprechungserweiterung
 
@@ -87,7 +86,7 @@ Personen können die Registerkarte "In Besprechung" verwenden, um Folgendes zu e
 * Erstellen Sie eine Umfrage, eine Umfrage oder ein Aufgabenelement für die Besprechungsteilnehmer.
 * Zeigen Sie für die Besprechung relevante Notizen an. Beispielsweise Informationen zu einem Vertriebsleiter.
 
-#### <a name="mobile"></a>Mobilgeräte
+#### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Das Beispiel zeigt, wie Sie Umfrageinhalte auf einer Registerkarte in einer Besprechung auf mobilgeräten präsentieren können." border="false":::
 
@@ -187,11 +186,11 @@ In Besprechungsdialogfeldern kann die Größe variieren, um unterschiedliche Sze
 
 Sie können Benutzern die Freigabe und Interaktion mit einigen oder allen App-Inhalten auf der Besprechungsphase ermöglichen. Hier sind Beispiele dafür, wie Personen dieses Feature während einer Besprechung verwenden können:
 
-* Bearbeiten eines Dokuments
+* Bearbeiten eines Dokuments.
 * Whiteboarding
-* Überprüfen eines Dashboards
-* Ansehen eines Videos
-* Spielen eines Spiels
+* Überprüfen eines Dashboards.
+* Schauen Sie sich ein Video an.
+* Spielen eines Spiels.
 
 Für die Besprechung freigegebene Apps belegen denselben Platz wie ein freigegebener Bildschirm. Die Phase wird auch für alle Besprechungsteilnehmer auf die gleiche Weise neu festgelegt.
 

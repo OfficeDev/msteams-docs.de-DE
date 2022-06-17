@@ -1,16 +1,15 @@
 ---
 title: Senden und empfangen Sie Nachrichten mit einem Bot
-description: Beschreibt das Senden und Empfangen von Nachrichten mit Bots in Microsoft Teams
+description: In diesem Modul erfahren Sie, wie Sie eine Unterhaltung mit einem Microsoft Teams Bot, proaktive Nachrichten, Unterhaltungsgrundlagen, Nachrichteninhalte und -formatierungen führen
 ms.topic: overview
 ms.localizationpriority: medium
-keywords: Teams-Bots-Nachrichten
 ms.date: 05/20/2019
-ms.openlocfilehash: 0d4665d098e0e14fa3de5f2667c7e970b545b284
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: fdf408a9e9d49c9c5c862a6b4dda3c7db7de93e8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296973"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143389"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Führen Sie ein Gespräch mit einem Microsoft Teams-Bot
 
@@ -74,7 +73,7 @@ Weitere Informationen zum Formatieren von Karten in Nachrichten finden Sie unter
 
 Bilder werden gesendet, indem Anhänge zu einer Nachricht hinzugefügt werden. Weitere Informationen zu Anhängen finden Sie in der [Bot Framework-Dokumentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true).
 
-Bilder dürfen höchstens 1024 × 1024 MB groß sein und 1 MB im PNG-, JPEG- oder GIF-Format vorliegen; animiertes GIF wird nicht unterstützt.
+Bilder können höchstens 1024×1024 MB und 1 MB im PNG-, JPEG- oder GIF-Format sein; animiertes GIF wird nicht unterstützt.
 
 Wir empfehlen, dass Sie die Höhe und Breite jedes Bildes mithilfe von XML angeben. Wenn Sie Markdown verwenden, beträgt die Bildgröße standardmäßig 256 × 256. Beispiel:
 
@@ -219,7 +218,7 @@ Die neue Nachricht muss nicht mit dem ursprünglichen Typ übereinstimmen. Wenn 
 
 ### <a name="rest-api"></a>REST-API
 
-Um eine Nachrichtenaktualisierung auszugeben, führen Sie einfach eine PUT-Anforderung `/v3/conversations/<conversationId>/activities/<activityId>/` an den Endpunkt mit einer bestimmten Aktivitäts-ID aus. Um dieses Szenario abzuschließen, sollten Sie die vom ursprünglichen POST-Aufruf zurückgegebene Aktivitäts-ID zwischenspeichern..
+Um eine Nachrichtenaktualisierung auszustellen, führen Sie eine PUT-Anforderung für den `/v3/conversations/<conversationId>/activities/<activityId>/` Endpunkt mithilfe einer bestimmten Aktivitäts-ID aus. Um dieses Szenario abzuschließen, sollten Sie die vom ursprünglichen POST-Aufruf zurückgegebene Aktivitäts-ID zwischenspeichern..
 
 ```json
 PUT /v3/conversations/19%3Aja0cu120i1jod12j%40skype.net/activities/012ujdo0128

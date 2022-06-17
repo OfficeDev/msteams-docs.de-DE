@@ -1,17 +1,17 @@
 ---
 title: TeamsFx-Befehlszeilenschnittstelle
 author: MuyangAmigo
-description: Beschreibt die TeamsFx-Befehlszeilenschnittstelle
+description: In diesem Modul lernen Sie die TeamsFx-Bibliothek, die TeamsFx-Befehlszeilenschnittstelle, unterstützte Befehle und ihre Szenarien kennen.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f26593c409f0b2f7d64093fa90e65afebd27c0ec
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: d269da398280f51a3225414f279a25fcd5d9d7cf
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123794"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142073"
 ---
 # <a name="teamsfx-library"></a>TeamsFx-Bibliothek
 
@@ -130,8 +130,8 @@ In der folgenden Tabelle sind die Clouddienstkonten wie Azure und Microsoft 365 
 
 | Befehl | Beschreibung |
 |:----------------  |:-------------|
-| `teamsfx account login <service>`  | Melden Sie sich beim ausgewählten Clouddienst an. Dienstoptionen sind M365 oder Azure. |
-| `teamsfx account logout <service>`  | Melden Sie sich beim ausgewählten Clouddienst ab. Dienstoptionen sind M365 oder Azure. |
+| `teamsfx account login <service>`  | Melden Sie sich beim ausgewählten Clouddienst an. Dienstoptionen sind Microsoft 365 oder Azure. |
+| `teamsfx account logout <service>`  | Melden Sie sich beim ausgewählten Clouddienst ab. Dienstoptionen sind Microsoft 365 oder Azure. |
 | `teamsfx account set --subscription` | Aktualisieren Sie die Kontoeinstellungen, um eine Abonnement-ID festzulegen. |
 
 ## `teamsfx env`
@@ -378,7 +378,7 @@ Die folgende Liste enthält erforderliche Berechtigungen für `TeamsFx` Projekte
       teamsfx new --interactive false --app-name newapp --host-type azure
       ```
 
-    * So melden Sie sich beim Microsoft 365- und Azure-Konto an
+    * So melden Sie sich bei Microsoft 365- und Azure-Konto an:
 
       ```bash
       teamsfx account login azure
@@ -412,13 +412,13 @@ Die folgende Liste enthält erforderliche Berechtigungen für `TeamsFx` Projekte
   * Als Projektmitarbeiter:
 
     * Klonen Sie das Projekt von GitHub.
-    * Melden Sie sich beim Microsoft 365-Konto an. Stellen Sie sicher, dass dasselbe Microsoft 365-Konto hinzugefügt wird:
+    * Melden Sie sich bei Microsoft 365 Konto an. Stellen Sie sicher, dass dasselbe Microsoft 365-Konto hinzugefügt wird:
 
       ```bash
       teamsfx account login Microsoft 365
       ```
 
-    * Melden Sie sich beim Azure-Konto mit der Berechtigung „Mitwirkender“ für alle Azure-Ressourcen an.
+    * Melden Sie sich mit der Berechtigung "Mitwirkender" für alle Azure-Ressourcen beim Azure-Konto an.
 
       ```bash
       teamsfx account login azure

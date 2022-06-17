@@ -1,17 +1,16 @@
 ---
 title: Voraussetzungen
 author: surbhigupta
-description: Jede Registerkarte in Microsoft Teams muss diese Anforderungen erfüllen.
-keywords: Teams Registerkarten Gruppenkanal konfigurierbar
+description: In diesem Modul lernen Sie die Anforderungen für jede Registerkarte in Microsoft Teams einhalten müssen, und tools zum Erstellen von Registerkarten.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 92b03146200af978f3fa5d6dc2c5e6ad27a12200
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 50497e0f4af4cb12a97cd355d3a81714398c9ab2
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672929"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142619"
 ---
 # <a name="prerequisites"></a>Voraussetzungen
 

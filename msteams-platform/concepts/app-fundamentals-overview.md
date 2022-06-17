@@ -5,13 +5,12 @@ description: Einführung in die Elemente der Planung einer App, des Verständnis
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-keywords: 'Einstiegspunkte: Erweiterbarkeit – Anwendungsfälle – Gerätefunktion'
-ms.openlocfilehash: ffcefbdfc5696f91872fcf828f9e40e58e224a6b
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 469c21c69fc7be450f2e51c26ddb1cf3c67292f4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602250"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142423"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planen Ihrer App mit Teams-Features
 
@@ -21,9 +20,9 @@ Im Kern ist Teams eine Plattform für die Zusammenarbeit. Es ist auch eine sozia
 
 In diesem Abschnitt erfahren Sie, wie Sie:
 
-* Identifizieren und Zuordnen von Anwendungsfällen zu Teams-Features
-* Planungscheckliste verwenden
-* Planen Sie über die Anwendungsbereitstellung hinaus.
+* Identifizieren und Zuordnen von Anwendungsfällen zu Teams-Features.
+* Planungscheckliste verwenden.
+* Planen Sie über die App-Bereitstellung hinaus.
 
 ## <a name="plan-with-teams"></a>Planen mit Teams
 

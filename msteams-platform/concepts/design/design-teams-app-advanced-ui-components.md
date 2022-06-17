@@ -5,23 +5,23 @@ description: Erfahren Sie mehr über die Teams UI-Komponenten, z. B. Breadcrumbs
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 2b009d4a31181ed1794dafdb8e224b7239bebd81
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 145b5adbefcd1ccd5bc90007700cf4851c96b26b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123419"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143424"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Entwerfen Ihrer Microsoft Teams-App mit erweiterten UI-Komponenten
 
 Die folgenden Komponenten sind eine Kombination [aus grundlegenden UI-Komponenten](~/concepts/design/design-teams-app-basic-ui-components.md), die Sie für allgemeine Teams Entwurfssituationen wie navigation verwenden können.
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-Benutzeroberflächenbausatz
 
 Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent Ui</a> enthält das Microsoft Teams UI Kit Komponenten und Muster, die speziell für die Erstellung Teams Apps entwickelt wurden. Im UI-Kit können Sie die hier aufgeführten Komponenten direkt in Ihr Design aufnehmen und einfügen und weitere Beispiele für die Verwendung der einzelnen Komponenten anzeigen.
 
 > [!div class="nextstepaction"]
-> [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Holen Sie sich den Microsoft Teams-Benutzeroberflächenbausatz (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="breadcrumb"></a>Breadcrumb
 
@@ -88,7 +88,7 @@ Erfahren Sie, wie Sie die [Phasenansicht](~/tabs/tabs-link-unfurling.md) impleme
 * Anzeigen von Inhalten auf einer großen Oberfläche innerhalb Teams anstelle einer anderen App oder eines anderen Browsers
 * Spotlight-Medien oder andere umfangreiche Inhalte
 
-### <a name="mobile"></a>Mobilgeräte
+### <a name="mobile"></a>Mobil
 
 Ihre App kann eine Phase über eine adaptive Karte, einen freigegebenen Link oder visuelle Komponenten (z. B. ein Diagramm) starten.
 
@@ -104,9 +104,9 @@ Eine Symbolleiste ist ein Container zum Gruppieren einer Gruppe von Steuerelemen
 
 ### <a name="top-use-cases"></a>Die häufigsten Anwendungsfälle
 
-* Kontextbezogene Aktionen für App-Inhalte
-* Kontextbezogene Filterung und Suche
-* Navigation und Breadcrumbs
+* Kontextbezogene Aktionen für App-Inhalte.
+* Kontextbezogener Filter und Suche.
+* Navigation und Breadcrumbs.
 
 ### <a name="mobile"></a>Mobilgeräte
 

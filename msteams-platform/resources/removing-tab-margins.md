@@ -1,17 +1,16 @@
 ---
 title: Änderungen am Registerkartenrand
 author: surbhigupta
-description: Beschreibt, wie das Entfernen von Registerkartenrändern die App-Erstellung verbessert.
-keywords: Entfernen von Rändern mit Tabstoppabstand
+description: In diesem Modul erfahren Sie, wie das Entfernen von Registerkartenrändern die App-Erstellung verbessert.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 2bfa74e95a84314e261f8865c5581d4e1738e12a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 178c8616a00bc64f10a39815db16d11dcea6eb40
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757185"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143319"
 ---
 # <a name="tab-margin-changes"></a>Änderungen am Registerkartenrand
 

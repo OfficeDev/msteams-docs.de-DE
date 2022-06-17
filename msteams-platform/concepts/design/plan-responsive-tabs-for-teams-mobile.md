@@ -1,16 +1,16 @@
 ---
 title: Planen Ihrer Apps für mobile Microsoft Teams-Geräte
 author: surbhigupta
-description: Planungsleitfaden für die Erstellung einer App für mobile Microsoft Teams-Geräte
+description: Mit diesem Lernmodul erfahren Sie, wie Sie das Erstellen einer App auf Teams Mobile planen und verschiedene Phasen zum Erstellen von Apps verstehen.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 16eada349d2a6adc5b45e89f075107838594eeeb
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 22b3abc44b2996547bc05e8cd11458b00eed1436
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111724"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143186"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planen reaktionsfähiger Registerkarten für Teams Mobile
 
@@ -61,9 +61,9 @@ In der ersten Phase können Sie die grundlegendste Nutzungsumgebung implementier
 
 Die folgenden Informationen können ebenfalls angezeigt werden:
 
-* Dashboards und Zusammenfassungen
-* Visualisierte Daten, Karten und Infografiken
-* Diagramme, Grafiken und Tabellen
+* Dashboards und Zusammenfassungen.
+* Visuelle Daten, Karten und Infografiken.
+* Diagramme, Diagramme und Tabellen.
 
 ![Nutzung von Dashboarding- und Datenvisualisierungs-Apps](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
 
@@ -71,9 +71,9 @@ Schnelle Aktionen:
 
 In der zweiten Phase können die Benutzer über die Desktopversion an den vorhandenen Diagrammen und visuellen Elementen arbeiten. Sie können die folgenden Aktionen einbinden:
 
-* Inhalte durchsuchen
-* Filtern von Daten
-* Erstellen von Lesezeichen
+* Inhalt durchsuchen.
+* Filtern von Daten.
+* Erstellen von Textmarken
 
 ![Dashboarding- und Datenvisualisierungs-Apps – schnelle Aktionen](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png)
 
@@ -83,9 +83,9 @@ In der dritten Phase können Benutzer Inhalte wie Diagramme und Grafiken von Gru
 
 Sie können Benutzern folgende Zugriffsoptionen bieten:
 
-* Titel und Beschreibung ändern
-* Einfügen von Datenelementen zum Erstellen von Visualisierungen
-* Freigeben von Visualisierungen in einem Kanal oder Gruppenchat
+* Titel und Beschreibung ändern.
+* Fügen Sie Datenelemente ein, um Visualisierungen zu erstellen.
+* Freigeben von Visualisierungen in einem Kanal- oder Gruppenchat.
 
 ![Aktivieren von Dashboarding- und Datenvisualisierungs-Apps – Aktivierung](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
 
@@ -111,12 +111,12 @@ Schnelle Aktionen:
 
 In der zweiten Phase können Sie den Benutzern folgende Zugriffoptionen in der App bieten:
 
-* Erstellen von Aufgaben oder Elementen mit Pflichtfeldern, um die kognitive Belastung der Benutzer zu verringern
-* Ändern des Board-Typs oder der Ansicht
-* Überprüfen von Aufgaben durch Erweitern der Ansicht
-* Verwenden von Aufgabenmodulen zum Anzeigen einer detaillierten Ansicht
-* Verschieben der Aufgaben in verschiedene Kategorien
-* Freigeben relevanter Aufgaben in Chats und Kanälen über E-Mails und Aktivitätsfeeds
+* Erstellen Sie Aufgaben oder Elemente mit den obligatorischen Feldern, um die kognitive Belastung der Benutzer zu verringern.
+* Ändern Sie den Boardtyp oder die Ansicht.
+* Überprüfen Sie Aufgaben, indem Sie die Ansicht erweitern.
+* Verwenden Sie Aufgabenmodule, um eine detaillierte Ansicht anzuzeigen.
+* Verschieben Sie die Aufgaben in verschiedene Kategorien.
+* Teilen Sie relevante Aufgaben in Chats und Kanälen über E-Mails und Aktivitätsfeeds.
 
 ![Aufgaben-Boarding-Apps – Schnelle Aktionen](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
 
@@ -124,9 +124,9 @@ Aktivierung:
 
 In der dritten Phase können Sie die Benutzererfahrung um die folgenden Aktivitäten erweitern:
 
-* Hinzufügen neuer Projekte und Boards
-* Hinzufügen und Ändern verschiedener Kategorien, z. B. **Vorgeschlagen**, **Aktiv** und **Geschlossen**
-* Konfigurieren der Aufgaben für Kommentare, Anlagen und andere komplexe Features
+* Fügen Sie neue Projekte und Boards hinzu.
+* Fügen Sie verschiedene Kategorien hinzu, z. B. **"Vorgeschlagen**", " **Aktiv"** und "Geschlossen", und ändern **Sie** sie.
+* Konfigurieren Sie die Aufgaben für Kommentare, Anlagen und andere komplexe Features.
 
 ![Aufgaben-Boarding-Apps – Aktivierung](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
 <br>
@@ -145,9 +145,9 @@ Nutzung:
 
 In der ersten Phase können Sie eine Desktoplösung in Betracht ziehen, um die Inhalte und Ressourcen in Ihrer App anzuzeigen.  Sie können die folgenden Funktionen anzeigen:
 
-* Kommentare oder Feedback
-* Vergrößern oder Verkleinern
-* Aktueller Status oder Fortschritt eines ausstehenden Dokuments
+* Kommentare oder Feedback.
+* Vergrößern oder Verkleinern.
+* Aktuelle Phase oder Fortschritt eines ausstehenden Dokuments.
 
 ![Apps für gemeinsame Dokumenterstellung und Whiteboarding – Nutzung](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
 
@@ -155,9 +155,9 @@ Schnelle Aktionen:
 
 In der zweiten Phase können Sie die folgenden Aktionen einführen:
 
-* Erstellen eines neuen Boards für die Zusammenarbeit oder neuer Dokumente zum Signieren
-* Freigeben von Boards intern und auch für Gäste
-* Konfigurieren von Administratorberechtigungen
+* Erstellen Sie eine neue Tafel für die Zusammenarbeit oder neue Dokumente zum Signieren.
+* Teilen Sie Boards intern und auch mit Gästen.
+* Konfigurieren sie Administratorberechtigungen.
 
 > [!TIP]
 > Sie machen Aktionen verfügbar, die auf den kleinen Bildschirmen einfach angezeigt werden können.
@@ -168,10 +168,10 @@ Aktivierung:
 
 Stellen Sie in der dritten Phase ihren Benutzern eine vollständige Lösung bereit. Sie können die Benutzererfahrung um die folgenden Aktivitäten erweitern:
 
-* Hinzufügen von Text, Formen und schnellen Notizen
-* Navigieren in Inhalten
-* Hinzufügen von Ebenen und Filtern
-* Löschen, Rückgängigmachen und Wiederholen von Vorgängen
+* Hinzufügen von Text, Formen und schnellen Notizen.
+* Navigieren sie durch Inhalte.
+* Fügen Sie Ebenen und Filter hinzu.
+* Löschen, Rückgängigmachen und Wiederholen von Vorgängen.
 * Zugreifen auf Kamera und Mikrofon mit JS SDK-APIs. Weitere Informationen zu Gerätefunktionen finden Sie in der [Übersicht über Gerätefunktionen](../device-capabilities/device-capabilities-overview.md).
 
 ![Apps für gemeinsame Dokumenterstellung und Whiteboarding – Aktivierung](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)

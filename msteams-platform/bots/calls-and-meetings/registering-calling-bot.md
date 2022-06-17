@@ -1,15 +1,14 @@
 ---
 title: Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
-description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanruf-Bot für Microsoft Teams registrieren, einen neuen Bot erstellen oder ihm Anruffunktionen hinzufügen und Graph-Berechtigungen hinzufügen.
+description: In diesem Modul erfahren Sie, wie Sie einen neuen Audio-/Videoanruf-Bot für Microsoft Teams registrieren, einen neuen Bot erstellen oder Anruffunktionen hinzufügen und Graph-Berechtigungen hinzufügen.
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Anruf-Bot Audio-/Video Videomedien
-ms.openlocfilehash: 71ab66ab6c5f53405897447b8d531ed0ce6dac99
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 74e786850f11a77cea5cc0980febb56d550ae671
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297163"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143795"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
 

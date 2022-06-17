@@ -1,16 +1,16 @@
 ---
 title: Definieren von Suchbefehlen für Nachrichtenerweiterungen
 author: surbhigupta
-description: Erfahren Sie mehr über die Suchbefehle für Nachrichtenerweiterungen für Microsoft Teams Apps, um einen Suchbefehl über das App-Manifest und manuell mithilfe von Codebeispielen und Beispielen zu erstellen.
+description: In diesem Modul erfahren Sie mehr über die Suchbefehle für Nachrichtenerweiterungen für Teams Apps, um einen Suchbefehl über das App-Manifest und manuell zu erstellen.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 987d690beca81574244ae6fbf9e6614ee097ebcb
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e71e83f8fbd6b0d44257a2d38fd13486b087bc5e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756618"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142808"
 ---
 # <a name="define-message-extension-search-commands"></a>Definieren von Suchbefehlen für Nachrichtenerweiterungen
 

@@ -1,16 +1,15 @@
 ---
 title: Anruf- und Besprechungsbot lokal debuggen
-description: Erfahren Sie, wie Sie mit ngrok auch Anruf- und Online-Meeting-Bots auf Ihrem lokalen PC entwickeln können.
+description: In diesem Modul erfahren Sie, wie Sie mit ngrok auch Anrufe und Onlinebesprechungs-Bots auf Ihrem lokalen PC entwickeln können.
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: lokale Entwicklung Ngrok-Tunnel
 ms.date: 11/18/2018
-ms.openlocfilehash: 7f85243e0a5d94711cd303ff542decd3bbc7847a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 518d0b846737eca7f4c182dba032b2c85366cee6
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757115"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143816"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>Entwickeln Sie Anruf- und Online-Meeting-Bots auf Ihrem lokalen PC
 

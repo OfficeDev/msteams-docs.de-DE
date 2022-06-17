@@ -1,16 +1,15 @@
 ---
 title: Meldungen in Bot-Unterhaltungen
-description: Beschreibt Möglichkeiten für eine Unterhaltung mit einem Microsoft Teams Bot. Erfahren Sie mehr über Teams Kanaldaten, Benachrichtigungen an Ihre Nachricht, Bildnachrichten und adaptive Karten mithilfe von Codebeispielen.
+description: Erfahren Sie, wie Sie eine Unterhaltung mit einem Teams Bot führen und Kanaldaten Teams, Benachrichtigungen an Ihre Nachricht, Bildnachrichten, adaptive Karten mithilfe von Codebeispielen
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 1704ff5fcbff177651a8ff6fec952fb76aa1a44c
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 7e71e6ce6c70967de9c9f086251772df8d758f4a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033015"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142451"
 ---
 # <a name="messages-in-bot-conversations"></a>Meldungen in Bot-Unterhaltungen
 
@@ -242,10 +241,10 @@ Nachrichten, die von Ihrem Bot empfangen oder an diesen gesendet werden, können
 
 | Format    | Vom Benutzer zum Bot | Vom Bot zum Benutzer | Anmerkungen                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| Rich-Text  | ✔                | ✔                | Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und Bilder an Ihren Bot senden.                                                                                        |
-| Bilder  | ✔                | ✔                | Maximal 1024×1024 MB und 1 MB im PNG-, JPEG- oder GIF-Format. Animierte GIFs werden nicht unterstützt.  |
-| Karten     | ✖                | ✔                | Weitere Informationen zu unterstützten Karten finden Sie in der [Teams Kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md). |
-| Emojis    | ✔                | ✔                | Teams unterstützt derzeit Emojis über UTF-16, z. B. U+1F600 zum Grinsen im Gesicht. |
+| Rich-Text  | ✔️                | ✔️                | Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und Bilder an Ihren Bot senden.                                                                                        |
+| Bilder  | ✔️                | ✔️                | Maximal 1024×1024 MB und 1 MB im PNG-, JPEG- oder GIF-Format. Animierte GIFs werden nicht unterstützt.  |
+| Karten     | ❌                | ✔️                | Weitere Informationen zu unterstützten Karten finden Sie in der [Teams Kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md). |
+| Emojis    | ✔️                | ✔️                | Teams unterstützt derzeit Emojis über UTF-16, z. B. U+1F600 zum Grinsen im Gesicht. |
 
 ## <a name="notifications-to-your-message"></a>Benachrichtigungen an Ihre Nachricht
 
@@ -335,7 +334,7 @@ Bilder werden gesendet, indem Anhänge zu einer Nachricht hinzugefügt werden. W
 
 Bilder können höchstens 1024×1024 MB und 1 MB im PNG-, JPEG- oder GIF-Format sein. Animierte GIFs werden nicht unterstützt.
 
-Geben Sie die Höhe und Breite der einzelnen Bilder mithilfe von XML an. In Markdown ist die Bildgröße standardmäßig 256×256. Zum Beispiel:
+Geben Sie die Höhe und Breite der einzelnen Bilder mithilfe von XML an. In Markdown ist die Bildgröße standardmäßig 256×256. Beispiel:
 
 * Verwenden Sie: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * Verwenden Sie nicht: `![Duck on a rock](http://aka.ms/Fo983c)`.
@@ -387,7 +386,7 @@ Die Meldung zum Ausfüllen des Formulars wird in adaptiven Karten angezeigt, wä
      Sie können den Chat **schließen** oder wechseln, um die Nachricht zu schließen.
 
      Wenn Sie die Erfolgsmeldung nicht anzeigen möchten, legen Sie das Attribut `hide` in der `msTeams` `feedback` Eigenschaft fest`true`. Es folgt ein Beispiel:
-    
+
      ```json
         "content": {
             "type": "AdaptiveCard",
@@ -406,7 +405,6 @@ Die Meldung zum Ausfüllen des Formulars wird in adaptiven Karten angezeigt, wä
             ]
         } 
      ```
-    
 
 Weitere Informationen zu Karten und Karten in Bots finden Sie in der [Kartendokumentation](~/task-modules-and-cards/what-are-cards.md).
 
@@ -429,14 +427,14 @@ Es folgen die Statuscodes und deren Fehlercode- und Meldungswerte:
 
 |Beispielname | Beschreibung | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Teams-Unterhaltungsbot | Verarbeitung von Nachrichten- und Unterhaltungsereignissen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Teams-Unterhaltungsbot | Verarbeitung von Nachrichten- und Unterhaltungsereignissen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Bot-Befehlsmenüs](~/bots/how-to/create-a-bot-commands-menu.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Senden proaktiver Nachrichten](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Abonnieren von Unterhaltungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

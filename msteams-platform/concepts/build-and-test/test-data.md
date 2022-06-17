@@ -1,16 +1,15 @@
 ---
 title: Hinzufügen von Testdaten zu Ihrem Microsoft 365-Testmandanten
-description: Einrichten Ihres Office 365-Entwicklerprogrammabonnements für erfolgreiches Testen von Microsoft Teams-Apps mithilfe von Codeausschnitten
+description: Erfahren Sie, wie Sie Ihr Office 365-Entwicklerprogrammabonnement für erfolgreiche Tests von Microsoft Teams-Apps mithilfe von Codeausschnitten einrichten.
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Testen von Apps im Entwicklerprogramm für Teams
 ms.date: 11/01/2019
-ms.openlocfilehash: 6694c925e49d38fa15f908e58202907c7d479fa0
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 35a61413ab9e9a672971ba6ce45b49f6dc645ab3
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757024"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142353"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Hinzufügen von Testdaten zu Ihrem Microsoft 365-Testmandanten
 

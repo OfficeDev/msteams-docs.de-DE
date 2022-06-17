@@ -1,15 +1,14 @@
 ---
 title: Verwenden Sie Aufgabenmodule in Microsoft Teams-Bots
-description: So verwenden Sie Aufgabenmodule mit Microsoft Teams-Bots, einschließlich Bot Framework-Karten, adaptive Karten und Deep Links.
+description: Erfahren Sie, wie Sie Aufgabenmodule mit Microsoft Teams Bots verwenden, einschließlich Bot Framework-Karten, adaptive Karten und Deep-Links.
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: Aufgabenmodule Teams Bots Deep Links Adaptive Karte
-ms.openlocfilehash: 443ff94fcc5c8b47dda5462555bf181c88b71ce3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e7bed83d9f13913b9a72997ac3679f844db3034a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756716"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142983"
 ---
 # <a name="use-task-modules-from-bots"></a>Verwenden von Aufgabenmodulen aus Bots
 

@@ -1,17 +1,16 @@
 ---
 title: Entwerfen Der App – Grundlegendes zur App-Struktur
-description: Verstehen Sie, was Sie beim Entwerfen Ihrer App in Microsoft Teams anpassen können und was nicht.
+description: In diesem Modul erfahren Sie, was Sie beim Entwerfen der App-Struktur in Microsoft Teams anpassen können und was nicht.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-keywords: Drahtmodellkanal-Chat-Besprechungsnachrichtenerweiterungen mobiler Desktop
-ms.openlocfilehash: 8353fa74dce12642e5ca96c85c34dc06fc0da203
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: cbcf44572b0105f9c0af4c7dc8cd0b00b6f5f9b9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103285"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144397"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Grundlegendes zur Struktur von Microsoft Teams-Apps
 
@@ -67,7 +66,7 @@ Bots sind Unterhaltungs-Apps, die in Teams native Messaging-Features integriert 
 
 ***Unterstützte Bereiche**: Persönlich, Kanäle, Chats, Besprechungen*
 
-### <a name="mobile"></a>Mobilgeräte
+### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="Konzeptionelle Abbildung der Front-End-Bereiche in Teams, die Entwickler für Bots auf mobilgeräten anpassen können." border="false":::
 
@@ -77,7 +76,7 @@ Bots sind Unterhaltungs-Apps, die in Teams native Messaging-Features integriert 
 
 ## <a name="message-extensions"></a>Nachrichtenerweiterungen
 
-Nachrichtenerweiterungen sind Tastenkombinationen zum Einfügen von App-Inhalten oder zum Ausführen einer Nachricht, ohne die Unterhaltung zu beenden. Aktionsbasierte Nachrichtenerweiterungen bieten Ihnen mehr Kontrolle über die Benutzeroberfläche, während Teams vieles von dem verarbeitet, was für suchbasierte Nachrichtenerweiterungen gerendert wird.
+Nachrichtenerweiterungen sind Abkürzungen zum Einfügen von App-Inhalten oder zum Bearbeiten einer Nachricht, ohne die Konversation verlassen zu müssen. Aktionsbasierte Nachrichtenerweiterungen bieten Ihnen mehr Kontrolle über die Benutzeroberfläche, während Teams vieles von dem verarbeitet, was für suchbasierte Nachrichtenerweiterungen gerendert wird.
 
 ***Unterstützte Bereiche**: Persönlich, Kanäle, Chats, Besprechungen*
 
