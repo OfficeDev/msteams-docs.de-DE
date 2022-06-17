@@ -1,15 +1,14 @@
 ---
 title: Developer Preview
-description: Beschreibt die Features in der Öffentlichen Entwicklervorschau für Microsoft Teams
+description: In diesem Artikel lernen Sie die Features kennen, die in der öffentlichen Entwicklervorschau von Microsoft Teams und im Entwicklervorschau-App-Manifest enthalten sind.
 ms.topic: conceptual
 ms.localizationpriority: high
-keywords: Features der Entwicklervorschau für Teams
-ms.openlocfilehash: a671a8ed6a1e4a49c731bcad78dd0d454a6bb600
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 6a0f053020db1f703de5abf7d64accf5816422c9
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756877"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123920"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Öffentliche Entwicklervorschau für Microsoft Teams
 

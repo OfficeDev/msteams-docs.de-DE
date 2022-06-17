@@ -1,16 +1,15 @@
 ---
 title: Integration der Personenauswahl
-description: Verwenden des Microsoft Teams JavaScript-Client-SDK zum Integrieren Personenauswahl Steuerelements
-keywords: Steuerelement „Personenauswahl“
+description: In diesem Artikel erfahren Sie, wie Sie das JavaScript-Client-SDK von Teams verwenden, um die Steuerung der Personenauswahl und die Vorteile der Verwendung der Personenauswahl zu integrieren.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 802bb2ab2a3224809e07c56d498ad85473ced492
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f16145354b05ab584e295ffd23262d2b925e4249
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757591"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123027"
 ---
 # <a name="integrate-people-picker"></a>Integration der Personenauswahl
 
@@ -52,7 +51,7 @@ Die folgende Abbildung zeigt die Personenauswahl auf Mobilgeräten und Desktops:
 Die Personenauswahl ermöglicht dem Benutzer das Suchen und Hinzufügen von Personen mithilfe der folgenden Schritte:
 
 1. Geben Sie den Namen der erforderlichen Person ein. Eine Liste mit Namensvorschlägen wird angezeigt.
-1. Wählen Sie den Namen der erforderlichen Person aus der Liste aus. 
+1. Wählen Sie den Namen der erforderlichen Person aus der Liste aus.
 
    :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Auswahl auf Mobilgerät" border="true":::
 
@@ -61,7 +60,7 @@ Die Personenauswahl ermöglicht dem Benutzer das Suchen und Hinzufügen von Pers
 Die Personenauswahl für Web oder Desktop wird in einem modalen Fenster über Ihrer Web-App gestartet, und zum Hinzufügen von Personen führen Sie die folgenden Schritte aus:
 
 1. Geben Sie den Namen der erforderlichen Person ein. Eine Liste mit Namensvorschlägen wird angezeigt.
-1. Wählen Sie den Namen der erforderlichen Person aus der Liste aus. 
+1. Wählen Sie den Namen der erforderlichen Person aus der Liste aus.
 
    :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Personenauswahl nach Name auf Desktop" border="true":::
 

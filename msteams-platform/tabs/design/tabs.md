@@ -1,17 +1,17 @@
 ---
 title: Designregisterkarten für Desktop, Web und Mobilgeräte
-description: Weitere Informationen darüber, wie Sie eine Teams Registerkarte für Desktop, Web und Mobilgeräte entwerfen und den Microsoft Teams-Benutzeroberflächenbausatz erhalten. Erfahren Sie mehr über die Registerkartenfunktionalität und -darstellung, das Erstellen einer Benutzerauthentifizierung, Registerkartenbenachrichtigungen und Deep Linking auf Registerkarten.
+description: Hier erfahren Sie, wie Sie eine Registerkarte für Desktop, Web und Mobilgeräte entwerfen und das Microsoft Teams-UI-Kit erhalten. Erfahren Sie mehr über die Registerkarte, das Erstellen von Benutzerauthentifizierung, Registerkartenbenachrichtigungen und Deep-Linking.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Diskussionsthread zur SSO Deep Linking-rollenbasierten Ansichtder Einrichtung der Registerkarte „Verwalten“ des Benutzeroberflächenkits
-ms.openlocfilehash: c2c081a1cb0ca96cce7cc55a9e39facc9cd691db
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 21f5dcdba9d2c201c14330deb9517bb470489ee2
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948586"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123258"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Entwerfen Sie Ihre Registerkarte für Microsoft Teams
 

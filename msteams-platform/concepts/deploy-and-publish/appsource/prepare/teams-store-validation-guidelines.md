@@ -1,16 +1,16 @@
 ---
 title: Richtlinien zur Validierung von Microsoft Teams-Speichern
-description: Beschreibt die Richtlinien, die jede an den Teams Store (AppSource) übermittelte App befolgen muss.
+description: In diesem Artikel finden Sie die Richtlinien, denen jede an den Teams Store (AppSource) übermittelte App folgen muss.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 7a35b58bb6612cce74b995cf2506e8a287f1b703
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 316105d9ea6010094328ad7d204cfb765aecc022
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103972"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123843"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
@@ -23,6 +23,60 @@ Wenn Sie diese Richtlinien befolgen, erhöht sich die Wahrscheinlichkeit, dass I
 > * Bestimmte Richtlinien sind als *obligatorische Korrektur* gekennzeichnet. Wenn Ihre App-Einreichung diese obligatorischen Richtlinien nicht erfüllt, erhalten Sie von uns einen Fehlerbericht mit Maßnahmen zur Behebung des Problems. Ihre App-Einreichung wird die Microsoft Teams Store-Validierung erst bestehen, nachdem Sie die Probleme behoben haben.
 > * Andere Richtlinien sind als *vorgeschlagene Korrektur* markiert. Für ein optimales Nutzererlebnis empfehlen wir Ihnen, die Probleme zu beheben. Ihre App wird jedoch nicht für die Veröffentlichung im Teams Store gesperrt, wenn Sie die Probleme nicht beheben.
 
+:::row:::
+   :::column:::
+      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value-proposition-teams" link="#value-proposition" border="false":::
+   :::column-end:::
+   :::column span="":::
+     :::image type="content" source="../../../../assets/icons/security.png" alt-text="security-store" link="#security" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/function.png" alt-text="functionality" link="#general-functionality-and-performance" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/package.png" alt-text="app-package" link="#app-package-and-store-listing" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/saas-offer.PNG" alt-text="saas" link="#apps-linked-to-saas-offer" border="false":::
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/tab.png" alt-text="tab-teams" link="#tabs" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="content" source="../../../../assets/icons/bot.png" alt-text="bot-teams" link="#bots-1" border="false":::
+   :::column-end:::
+   :::column span="":::
+     :::image type="content" source="../../../../assets/icons/messaging-extension.png" alt-text="messaging" link="#message-extensions" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/task-module.png" alt-text="task-module-teams" link="#task-modules" border="false":::
+   :::column-end:::
+     :::column span="":::
+      :::image type="content" source="../../../../assets/icons/meeting.png" alt-text="meeting-extension" link="#meeting-extensions" border="false":::
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-2" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/notifications.png" alt-text="teams-notification" link="#notifications" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/microsoft-365.png" alt-text="microsoft" link="#microsoft-365-app-compliance-program" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/advertising.png" alt-text="advertising-teams" link="#advertising" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-1" border="false":::
+   :::column-end:::
+:::row-end:::
+
 ## <a name="value-proposition"></a>Wertbeitrag 
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der kommerziellen Zertifizierungsrichtlinie von Microsoft Nr. 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) und bietet Entwicklern von Microsoft Teams-Apps zusätzliche Anleitungen zum Wertversprechen ihres Angebots.
@@ -32,6 +86,8 @@ Wenn Sie diese Richtlinien befolgen, erhöht sich die Wahrscheinlichkeit, dass I
 [*Obligatorischer Fix*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit der Microsoft[-Zertifizierungsrichtlinie Nr. 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) und bietet Entwicklern zusätzliche Hinweise zur Benennung ihrer Anwendungen.
+<br></br>
+<details><summary>Erweitern, um mehr zu erfahren</summary>
 
 Der Name einer App spielt eine entscheidende Rolle dafür, wie Benutzer sie im Store entdecken. Verwenden Sie die folgenden Richtlinien, um eine App zu benennen:
 
@@ -57,15 +113,21 @@ Der Name einer App spielt eine entscheidende Rolle dafür, wie Benutzer sie im S
  > [!TIP]  
  > Das Branding Ihrer App im Microsoft Teams Store und auf Microsoft AppSource, einschließlich Ihres App-Namens, Entwicklernamens, App-Symbols, der Microsoft AppSource-Screenshots, des Videos, der Kurzbeschreibung und der Website, darf weder einzeln noch zusammen ein offizielles Microsoft-Angebot vortäuschen, es sei denn, Ihre App ist ein offizielles Microsoft 1P-Angebot.
 
+</details>
+
 ### <a name="suitable-for-workplace-consumption"></a>Geeignet für den Gebrauch am Arbeitsplatz
 
 [*Obligatorischer Fix*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit den kommerziellen Zertifizierungsrichtlinien von Microsoft Nr. [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness), [100.8](/legal/marketplace/certification-policies#1008-significant-value) und [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) und bietet Entwicklern zusätzliche Anleitungen für die Erstellung arbeitsplatzgerechter Anwendungen.
+<br></br>
+<details><summary>Erweitern, um mehr zu erfahren</summary>
 
 App-Inhalte müssen für die allgemeine Nutzung am Arbeitsplatz geeignet sein und alle Einschränkungen einhalten, die in den Zertifizierungsrichtlinien für kommerzielle Marktplätze aufgeführt sind. Inhalte mit Bezug zu Religion, Politik, Glücksspielen und längerer Unterhaltung sind verboten.
 
 Ihre Anwendung muss die Zusammenarbeit in der Gruppe ermöglichen, die Produktivität des Einzelnen verbessern oder beides. Apps, die für Teambindung und soziale Kontakte gedacht sind, müssen kollaborativ sein und für mehrere Teilnehmer konzipiert sein. Die Anwendungen dürfen weder einen erheblichen Zeitaufwand von mehr als 60 Minuten pro Sitzung erfordern noch die Produktivität beeinträchtigen.
+
+</details>
 
 ### <a name="similar-platforms-and-services"></a>Ähnliche Plattformen und Dienste
 
@@ -86,6 +148,8 @@ Die Namen von App-Funktionen in Schaltflächen und anderen UI-Texten dürfen sic
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der kommerziellen Microsoft-Zertifizierungsrichtlinie Nr. 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) und bietet Entwicklern eine Anleitung für die Authentifizierung ihrer Anwendungen mit externen Diensten.
 
 Weitere Informationen zum Implementieren der App-Authentifizierung finden Sie unter [Authentifizierung in Teams](~/concepts/authentication/authentication.md).
+<br></br>
+<details><summary>Erweitern, um mehr zu erfahren</summary>
 
 #### <a name="authenticating-with-external-services"></a>Authentifizieren mit externen Diensten
 
@@ -101,8 +165,9 @@ Wenn Ihre App Benutzer mit einem externen Dienst authentifiziert, befolgen Sie d
   
 * **Erfahrungen beim Teilen von Inhalten**: Apps, die eine Authentifizierung bei einem externen Dienst erfordern, um Inhalte in Teams-Kanälen freizugeben, müssen in der Hilfedokumentation (oder ähnlichen Ressourcen) klar angeben, wie Inhalte getrennt oder freigegeben werden, wenn diese Funktion vom externen Dienst unterstützt wird. Dies bedeutet nicht, dass die Fähigkeit zur Aufhebung der Freigabe von Inhalten in Ihrer Teams-App vorhanden sein muss.
 
-## <a name="security"></a>Sicherheit
+</details>
 
+## <a name="security"></a>Sicherheit
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie zur kommerziellen Zertifizierung Nr. 1140.3](/legal/marketplace/certification-policies#11403-security).
 
@@ -111,18 +176,12 @@ Wenn Ihre App Benutzer mit einem externen Dienst authentifiziert, befolgen Sie d
 [*Obligatorischer Fix*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der kommerziellen Zertifizierungsrichtlinie Nr. 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions) von Microsoft und bietet eine Anleitung zur Übermittlung von Finanzinformationen innerhalb der Teams-Schnittstelle und informiert Entwickler über eingeschränkte Zahlungsszenarien in der mobilen Version (Android und iOS) ihrer Teams-App.
+<br></br>
+<details><summary>Erweitern, um mehr zu erfahren</summary>
 
-Apps dürfen Benutzer nicht auffordern, Zahlungen innerhalb der Teams-Benutzeroberfläche zu tätigen und Finanzinformationen über eine Bot-Schnittstelle an Benutzer zu übermitteln.  
+Apps dürfen Benutzer nicht auffordern, Zahlungen innerhalb der Teams-Benutzeroberfläche zu tätigen und Finanzinformationen über eine Bot-Schnittstelle an Benutzer zu übermitteln.
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![In App-Zahlungen](~/assets/images/submission/validation-financial-information-1.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-financial-information-1.png" alt-text="validation-financial-info":::
 
 Sie können nur dann einen Link zu sicheren externen Zahlungsdiensten bereitstellen, wenn Sie dies in Ihren Nutzungsbedingungen, Datenschutzrichtlinien, auf Ihrer Profilseite oder auf Ihrer Website bekannt geben, bevor der Nutzer der Nutzung der App zustimmt.
 
@@ -132,55 +191,39 @@ Apps, die auf der iOS- oder Android-Version von Teams ausgeführt werden, müsse
 
 * Apps dürfen keine In-App-Käufe, Testangebote oder Benutzeroberflächen enthalten, die darauf abzielen, den Nutzern kostenpflichtige Versionen oder Online-Shops zum Kauf anderer Inhalte, Apps oder Add-Ins anzubieten.
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![In-App-Käufe](~/assets/images/submission/validation-financial-information-in-app-purchase.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-financial-information-in-app-purchase.png" alt-text="validation-financial-info-in-app-purchase":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Online-Shops](~/assets/images/submission/validation-financial-information-online-stores.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-financial-information-online-stores.png" alt-text="validation-online-store":::
 
 * Wenn Ihre App ein Konto erfordert, können sich Benutzer kostenlos für ein Konto registrieren. Die Verwendung des Begriffs **kostenlos** oder **kostenloser Account** ist untersagt.
 * Sie können bestimmen, ob ein Konto unbegrenzt oder für einen begrenzten Zeitraum aktiv ist. Wenn das Konto abläuft, darf die App keine Benutzeroberfläche, keinen Text oder keine Links anzeigen, die auf die Notwendigkeit der Zahlung hinweisen.
 * Die Datenschutzrichtlinien und Nutzungsbedingungen Ihrer App müssen frei von kommerziellen UI oder Links sein.
+
+</details>
 
 ### <a name="bots"></a>Bots
 
 [*Obligatorischer Fix*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für den kommerziellen Marktplatz Nr. 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension).
+<br></br>
+<details><summary>Erweitern, um mehr zu erfahren</summary>
 
 Bei Apps, die den Microsoft Azure Bot Service nutzen (z. B. Bots und Nachrichtenerweiterungen), müssen Sie alle in den Microsoft-[Nutzungsbedingungen für Onlinedienste](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46) definierten Anforderungen erfüllen.
 
 Bots müssen immer die Berechtigung zum Hochladen einer Datei und zum Anzeigen einer Bestätigungsmeldung anfordern.
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Bestätigungsmeldung](~/assets/images/submission/validation-bot-confirmation-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-confirmation-message.png" alt-text="validation-bot-confirmation":::
+
+</details>
 
 ### <a name="external-domains"></a>Externe Domänen
 
 [*Obligatorischer Fix*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit der [Microsoft Richtlinie Nr. 1140.3.3 für kommerzielle Marktplätze](/legal/marketplace/certification-policies#114033-external-domains) und enthält eine Anleitung für Entwickler zur Verwendung eingeschränkter Domänen in der `validDomains` Manifest-Eigenschaft.
+<br></br>
+<details><summary>Erweitern, um mehr zu erfahren</summary>
 
 Sie dürfen keine Domänen außerhalb der Kontrolle Ihrer Organisation (einschließlich Wildcards) und Tunnelingdienste in die Domänenkonfigurationen Ihrer App einschließen. Zu den folgenden Ausnahmen gehören:
 
@@ -190,6 +233,8 @@ Sie dürfen keine Domänen außerhalb der Kontrolle Ihrer Organisation (einschli
 #### <a name="government-community-cloud-listings"></a>Community Cloud-Einträge für Behörden
 
 Um Ihre App an Government Community Cloud (GCC)-Benutzer zu vertreiben, muss der Authentifizierungsprozess die Benutzer identifizieren und an eine GCC-spezifische oder erwartete URL weiterleiten, während doppelte Einträge im Teams Store vermieden werden.
+
+</details>
 
 ### <a name="sensitive-content"></a>Vertraulicher Inhalt
 
@@ -208,10 +253,14 @@ Die App muss die Benutzer warnen, bevor sie Dateien oder ausführbare Dateien (.
 [*Obligatorischer Fix*]
 
 Apps dürfen Benutzer für Kernbenutzerszenarien nicht aus Teams herausnehmen. App-Inhalte und -Interaktionen müssen im Rahmen von Teams-Funktionen wie Bots, adaptiven Karten, Registerkarten und Aufgabenmodulen erfolgen.
+<br></br>
+<details><summary>Erweitern, um mehr zu erfahren</summary>
 
 Verknüpfen Sie Benutzer innerhalb der Teams-App und nicht mit einer externen Website oder App. Für Szenarien, die externe Funktionen erfordern, muss Ihre Anwendung die ausdrückliche Erlaubnis des Benutzers einholen, um die Funktionen zu starten.
 
 Der UI-Text für Schaltflächen, die externe Funktionen starten, muss Inhalte enthalten, die anzeigen, dass der Benutzer die Teams-Instanz verlässt. Fügen Sie z. B. Text wie **„Hier geht es zu Contoso.com“** oder **„Ansicht in Contoso.com“** ein.
+
+</details>
 
 ### <a name="compatibility"></a>Kompatibilität
 
@@ -268,7 +317,11 @@ Das Manifest der Teams-App definiert die Konfiguration Ihrer App.
 
 [*Obligatorischer Fix*]
 
-Symbole sind eines der Hauptelemente, die Benutzer beim Durchsuchen des Teams-Speichers sehen. Ihre Symbole müssen die Marke und den Zweck Ihrer App unter Einhaltung der folgenden Anforderungen kommunizieren:
+Symbole sind eines der Hauptelemente, die Benutzer beim Durchsuchen des Teams-Speichers sehen. 
+<br></br>
+<details><summary>Erweitern, um mehr zu erfahren</summary>
+
+Ihre Symbole müssen die Marke und den Zweck Ihrer App unter Einhaltung der folgenden Anforderungen kommunizieren:
 
 * Ihr App-Paket muss zwei .png-Versionen Ihres App-Symbols enthalten: Ein Farbsymbol und ein Umrisssymbol.
 * Die Farbversion Ihres Symbols muss 192 x 192 Pixel betragen. Ihr Symbol kann eine beliebige Farbe oder mehrere Farben haben, muss aber auf einem einfarbigen oder vollständig transparenten quadratischen Hintergrund stehen.
@@ -282,9 +335,13 @@ Symbole sind eines der Hauptelemente, die Benutzer beim Durchsuchen des Teams-Sp
 
 Weitere Informationen finden Sie in den [Richtlinien für Symbole.](~/concepts/build-and-test/apps-package.md#app-icons)
 
+</details>
+
 ### <a name="app-descriptions"></a>App-Beschreibungen
 
 Sie müssen eine kurze und lange Beschreibung Ihrer App haben. Die Beschreibungen in Ihren App-Konfigurationen und im Partner Center müssen identisch sein.
+<br></br>
+<details><summary>Erweitern, um mehr zu erfahren</summary>
 
 Beschreibungen dürfen nicht direkt oder durch Andeutungen eine andere Marke (von Microsoft oder anderen) verunglimpfen. Stellen Sie sicher, dass Ihre Beschreibung keine Behauptungen enthält, die nicht belegt werden können. Beispielsweise **garantierte Steigerung der Effizienz um 200 Prozent**.
 
@@ -346,9 +403,15 @@ Die lange Beschreibung kann eine ansprechende Erzählung bieten, die das Wertver
 * Ungeprüfte Behauptungen aufstellen. Zum Beispiel „am besten“, „Top“ und „am besten bewertet“, es sei denn, dies wird mit der Quelle des Anspruchs angegeben.
 * Vergleichen Sie Ihr Angebot mit anderen Marketplace-Angeboten.
 
+</details>
+
 ### <a name="screenshots"></a>Screenshots
 
-Screenshots bieten eine markante visuelle Vorschau Ihrer App, um den Namen, das Symbol und die Beschreibungen Ihrer App zu ergänzen. Beachten Sie Folgendes:
+Screenshots bieten eine auffällige visuelle Vorschau Ihrer App, um Ihren App-Namen, das Symbol und die Beschreibungen zu ergänzen.
+<br></br>
+<details><summary>Erweitern, um mehr zu erfahren</summary>
+
+Beachten Sie Folgendes:
 
 * Sie können bis zu fünf Screenshots pro Eintrag erstellen.
 * Unterstützte Dateitypen sind PNG, JPEG und GIF.
@@ -373,6 +436,8 @@ Screenshots bieten eine markante visuelle Vorschau Ihrer App, um den Namen, das 
 
 > [!TIP]  
 > Ein Video kann die effektivste Methode sein, um zu kommunizieren, warum Benutzer Ihre App verwenden sollten. Ein Video ist auch das erste, was Benutzern in Ihrem Eintrag angezeigt wird. Weitere Informationen finden Sie unter [Video für Ihren Store-Eintrag erstellen](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video).
+
+</details>
 
 ### <a name="privacy-policy"></a>Datenschutzrichtlinie
 
@@ -401,11 +466,17 @@ Verwenden Sie die folgenden Richtlinien, um die Nutzungsbedingungen zu schreiben
 
 ### <a name="support-links"></a>Supportlinks
 
+[*Obligatorischer Fix*]
+
 Die Support-URLs Ihrer App dürfen keine Authentifizierung erfordern. Benutzer dürfen sich beispielsweise nicht anmelden müssen, um Sie zu kontaktieren.
+<br></br>
+<details><summary>Erweitern, um mehr zu erfahren</summary>
 
-Support-URLs müssen Ihre Kontaktdetails oder eine Möglichkeit zur Weiterleitung enthalten, damit Benutzer ein Supportticket erstellen können. Wenn Ihre Support-URL beispielsweise auf GitHub gehostet wird, muss die GitHub-Seite in Ihrem Besitz sein und Ihre Kontaktdetails oder eine Möglichkeit zur Erstellung eines Supporttickets für Benutzer enthalten. [*Obligatorischer Fix*]
+Support-URLs müssen Ihre Kontaktdetails oder eine Möglichkeit zur Weiterleitung enthalten, damit Benutzer ein Supportticket erstellen können. Wenn Ihre Support-URL beispielsweise auf GitHub gehostet wird, muss die GitHub-Seite in Ihrem Besitz sein und Ihre Kontaktdetails oder eine Möglichkeit zur Erstellung eines Supporttickets für Benutzer enthalten.
 
-  ![Support-URL](~/assets/images/submission/validation-supportlinks-authentication.png)  
+:::image type="content" source="../../../../assets/images/submission/validation-supportlinks-authentication.png" alt-text="validation-support-links-auth":::
+
+</details>
 
 ### <a name="localization"></a>Lokalisierung
 
@@ -415,14 +486,20 @@ Wenn Ihre App Lokalisierung unterstützt, muss Ihr App-Paket eine Datei mit Spra
 
 ## <a name="apps-linked-to-saas-offer"></a>Apps, die mit dem SaaS-Angebot verknüpft sind
 
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für den kommerziellen Marktplatz Nr. 1140.5](/legal/marketplace/certification-policies?branch=pr-en-us-5673). Wenn Sie eine Teams-App erstellen, die mit einem SaaS-Angebot verknüpft ist, stellen Sie sicher, dass diese Richtlinien eingehalten werden.
+<br></br>
+<details><summary>Allgemein</summary>
+
 * ISVs müssen die Möglichkeit unterstützen, dass mehrere Benutzer (Abonnenten) im selben Tenant ihr eigenes Abonnement verwalten und den Benutzern im Tenant Lizenzen zuweisen können.
-*
- Das Angebot muss alle [technischen Anforderungen](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer) für Teams-Apps erfüllen, die mit einem SaaS-Angebot verknüpft sind.
+* Das Angebot muss alle [technischen Anforderungen](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer) für Teams-Apps erfüllen, die mit einem SaaS-Angebot verknüpft sind.
 * Die mit dem SaaS-Angebot verbundenen Teams-Apps müssen alle in [1000 Software-As-A-Service (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas)definierten Anforderungen erfüllen.
 * `subscriptionOffer` die in der Manifest-Datei erwähnten Details müssen korrekt sein. Fügen Sie in Ihrem App-Manifest den Knoten `subscriptionOffer` mit dem Wert `publisherId.offerId`hinzu oder aktualisieren Sie ihn. Wenn Ihre Herausgeber-ID beispielsweise `contoso1234` und Ihre Angebots-ID `offer01`ist, muss der Wert, den Sie in Ihrem App-Manifest angeben, `contoso1234.offer01`lauten.
 * Das mit der Teams-App verknüpfte SaaS-Angebot muss in AppSource live sein, und Vorschau-Angebote werden nicht zur Genehmigung im Store akzeptiert.
 
-### <a name="offer-metadata"></a>Angebotsmetadaten
+</details>
+
+</br>
+<details><summary>Angebotsmetadaten</summary>
 
 * Die Angebotsmetadaten müssen im Teams-Manifest, in der Auflistung der Teams-App in AppSource und im SaaS-Angebot in AppSource übereinstimmen.
 * Teams-App und SaaS-Angebot müssen vom selben Herausgeber oder Entwickler stammen. Das SaaS-Angebot, auf das im App-Manifest verwiesen wird, muss demselben Herausgeber gehören wie die Teams-App, die auf dem kommerziellen Marktplatz eingereicht wird.
@@ -432,7 +509,10 @@ Wenn Ihre App Lokalisierung unterstützt, muss Ihr App-Paket eine Datei mit Spra
 * Die Teams-Apps, die mit dem SaaS-Angebot verknüpft sind, sind so konzipiert, dass sie Lizenzen unterstützen, die pro Benutzer zugewiesen werden. Manchmal ist das SaaS-Angebot mit anderen Methoden aufgebaut oder hat spezielle Kaufabläufe. Sie müssen in den Metadaten der App und in den Details des Abonnementplans deutlich auf die Methode und die Kaufabläufe hinweisen.
 * Das SaaS-Angebot muss allen Nutzern in allen Phasen des Kaufprozesses Nachrichten und Anleitungen bereitstellen.
 
-### <a name="saas-offer-home-page-and-license-management"></a>Startseite und Lizenzverwaltung für SaaS-Angebote  
+</details>
+</br>
+
+<details><summary>Startseite und Lizenzverwaltung für SaaS-Angebote</summary>
 
 * Stellen Sie Abonnenten eine Einführung in die Verwendung des Produkts bereit.
 * Zulassen, dass der Abonnent Lizenzen zuweist.
@@ -441,19 +521,27 @@ Wenn Ihre App Lokalisierung unterstützt, muss Ihr App-Paket eine Datei mit Spra
 * Benutzer nach der Lizenzzuweisung benachrichtigen.
 * Führen Sie die Benutzer über den Teams-Chatbot oder per E-Mail durch die Hinzufügung der App zu Teams und die ersten Schritte.
 
-### <a name="usability-and-functionality"></a>Benutzerfreundlichkeit und Funktionalität  
+</details>
+</br>
+
+<details><summary>Benutzerfreundlichkeit und Funktionalität</summary>
 
 * Nach dem erfolgreichen Kauf und der Zuweisung von Lizenzen müssen Sie Folgendes angeben:
 * Zugang zu Nutzern für abonnierte Plan-Features.
 * Zusätzlicher Nutzen und bedeutende Vorteile des Abonnements für die Nutzer.
 * Stellen Sie in Ihrer Teams-App einen Link zur Startseite der SaaS-Anwendung bereit, auf der Abonnenten die Lizenzen in Zukunft verwalten können.
 
-### <a name="configure-and-test-saas-application"></a>Konfigurieren und Testen der SaaS-Anwendung
+</details>
+</br>
+
+<details><summary>Konfigurieren und Testen der SaaS-Anwendung</summary>
 
 Wenn die Einrichtung Ihrer Anwendung zu Testzwecken komplex ist, stellen Sie ein durchgängiges Funktionsdokument, verknüpfte Konfigurationsschritte für das SaaS-Angebot und Anweisungen für die Lizenz- und Benutzerverwaltung als Teil Ihrer „Hinweise zur Zertifizierung“ zur Verfügung.
 
 > [!TIP]  
 > Sie können ein Video zur Funktionsweise Ihrer App und Lizenzverwaltung hinzufügen, um das Team beim Testen zu unterstützen.
+
+</details>
 
 ## <a name="tabs"></a>Registerkarten
 
@@ -462,137 +550,56 @@ Wenn Ihre App eine Registerkarte enthält, stellen Sie sicher, dass sie diesen R
 > [!TIP]
 > Weitere Informationen zum Erstellen einer qualitativ hochwertigen App finden Sie unter [Richtlinien zum Entwerfen von Teams-Registerkarten](~/tabs/design/tabs.md).
 
-### <a name="setup"></a>Setup
+</br>
+<details><summary>Setup</summary>
 
 * Die Einrichtung der Registerkarte darf einen neuen Benutzer **nicht in eine Sackgasse führen**. Geben Sie eine Nachricht zum Abschließen der Aktion oder des Workflows an. [*Obligatorischer Fix*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Neues Konto erstellen](~/assets/images/submission/validation-tabs-setup-create-new-account.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-create-new-account.png" alt-text="validation-tabs-setup-create-new-acc":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Fehlende Weiterleitungsanleitung](~/assets/images/submission/validation-tabs-missing-forward-guidance.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-missing-forward-guidance.png" alt-text="validation-tabs-missing-fwd-guidance":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Neue Benutzeranmeldung](~/assets/images/submission/validation-tabs-setup-new-user.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-new-user.png" alt-text="validation-tabs-set-up-new-user":::
 
 * Authentifizieren Sie Ihre Benutzer während der Registerkarteneinrichtung und nicht danach, um die beste Erfahrung beim ersten Start zu machen. Die Authentifizierung kann außerhalb des Konfigurationsfensters der Registerkarte erfolgen. [*Vorgeschlagene Korrektur*]
 
 * Der Benutzer darf die Registerkartenkonfiguration in Teams nicht verlassen, um Inhalte außerhalb von Teams zu erstellen und dann zu Teams zurückzukehren, um sie anzuheften. Der Konfigurationsbildschirm der Registerkarte muss den Wert der Konfiguration erläutern und wie sie durchgeführt wird. [*Obligatorischer Fix*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![Profilnamen abrufen](~/assets/images/submission/validation-tabs-setup-profile-name.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-profile-name.png" alt-text="validation-tabs-set-up-profile-name":::
 
 * Der Registerkartenkonfigurationsbildschirm darf keine gesamte Website einbetten. Konzentrieren Sie sich auf Ihre Konfigurationserfahrung. Wenn Sie z. B. eine Projektmanagement-Anwendung entwickeln, mit der Benutzer ein Projekt in einem Kanal konfigurieren können, sollten Sie den Konfigurationsbildschirm für die Registerkarte so gestalten, dass der Benutzer ein Projekt aus Ihrer Anwendung auswählen kann, um es im Kanal zu konfigurieren. [*obligatorischer Fix*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![Konfigurationserfahrung](~/assets/images/submission/validation-tabs-setup-configuration-experience.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-experience.png" alt-text="validation-tabs-setup-configuration-exp":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![Konfigurationsbildschirm](~/assets/images/submission/validation-tabs-setup-configuration-screen.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-screen.png" alt-text="validation-tabs-set-up-configuration-screen":::
 
 * Der Konfigurationsbildschirm der Registerkarte darf den Benutzer nicht auffordern, eine URL einzubetten. Die Aufforderung an den Benutzer, während der Einrichtung der Registerkarte eine URL zu konfigurieren, ist ein Fehler in der Benutzerführung. Der Benutzer verlässt den Konfigurationsbildschirm der Registerkarte, ruft die URL ab, kehrt zum Konfigurationsbildschirm zurück und gibt die URL ein. Ein bereits vorhandenes Teams-Feature ermöglicht Benutzern bereits das Anheften eines Websitelinks im Kanal. Wenn Ihre App den Benutzer auffordert, bei der Konfiguration der Registerkarte eine Website-URL einzubetten, und die App darauf beschränkt ist, den gesamten Website-Inhalt auf der Registerkarte des Kanals anzuzeigen, bietet Ihre App dem Benutzer keinen nennenswerten Mehrwert. [*Obligatorischer Fix*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![Konfigurierte URL](~/assets/images/submission/validation-tabs-setup-configured-url.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configured-url.png" alt-text="validation-tabs-set-up-configured-url":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![Konfigurierte URL eingeschränkt](~/assets/images/submission/validation-tabs-setup-configured-url-two.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configured-url-two.png" alt-text="validation-tabs-set-up-configured-url-two":::
 
-### <a name="views"></a>Ansichten
+</details>
+</br>
+
+<details><summary>Ansichten</summary>
 
 * Im Bereich des Anmeldebildschirms dürfen keine großen Logos verwendet werden. [*Obligatorischer Fix*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![Großes Logo anzeigen](~\assets\images\submission\validation-views-applogin.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-views-applogin.png" alt-text="validation-views-app-login":::
 
-* Inhalte können vereinfacht werden, indem sie auf mehrere Registerkarten verteilt werden. [*Vorgeschlagener Fix*]
+* Inhalte können vereinfacht werden, indem sie auf mehrere Registerkarten verteilt werden. [*Vorgeschlagene Korrektur*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Mehrere Registerkarten](~/assets/images/submission/validation-views-multiple-tabs.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-views-multiple-tabs.png" alt-text="val-views-multiple-tabs":::
 
 * Registerkarten dürfen keinen doppelten Header aufweisen. Entfernen Sie das doppelte Logo aus dem iframe, da das Registerkartenframework bereits das App-Symbol und den Namen anzeigt. [*Vorgeschlagener Fix*]
 
- :::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Duplizieren des Kopfzeilenlogo](~/assets/images/submission/validation-views-duplicate-header-logo.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+    :::image type="content" source="../../../../assets/images/submission/validation-views-duplicate-header-logo.png" alt-text="validation-views-duplicate-head-logo":::
 
-### <a name="navigation"></a>Navigation
+</details>
+</br>
+
+<details><summary>Navigation</summary>
 
 Im Folgenden sind die Navigationsrichtlinien aufgeführt:
 
@@ -600,67 +607,19 @@ Im Folgenden sind die Navigationsrichtlinien aufgeführt:
 
 Entwerfen Sie Ihre App mit [einfachen](~/concepts/design/design-teams-app-basic-ui-components.md) und [erweiterten](~\concepts\design\design-teams-app-advanced-ui-components.md) Fluent UI-Komponenten.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![Linke Navigation](~/assets/images/submission/validation-navigation-left-navigation.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="validation-nav-static-tab":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![Symbol und Text](~/assets/images/submission/validation-navigation-icon-text.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-horizontal-rail.png" alt-text="validation-nav-horizontal-rail":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Zusammenklappbare linke Leiste](~/assets/images/submission/validation-navigation-collapsable-left-rail.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-left-navigation.png" alt-text="validation-navigation-left-nav":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Statische Registerkarte](~/assets/images/submission/validation-navigation-static-tab.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-icon-text.png" alt-text="validation-nav-icon-text":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Horizontale Leiste](~/assets/images/submission/validation-navigation-horizontal-rail.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-collapsable-left-rail.png" alt-text="validation-nav-collapsable-left-rail":::
 
 * Registerkarten mit Symbolleiste in der linken Leiste müssen 20 px Abstand zum linken Navigationsbereich von Teams beibehalten. [*Obligatorischer Fix*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Abstand zwischen Symbolleiste](~/assets/images/submission/validation-navigation-spacing-between-toolbar.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+    :::image type="content" source="../../../../assets/images/submission/validation-navigation-spacing-between-toolbar.png" alt-text="validation-nav-spacing-between-toolbar":::
 
 * Die Zweit- und Drittseiten eines Tabs müssen in einer Ebene Zwei (L2)- und Ebene Drei (L3)-Ansicht im Hauptregisterkartenbereich geöffnet werden, der über Breadcrumb Navigation oder die linke Navigationsleiste geleitet wird. Sie können auch die folgenden Komponenten einschließen, um die Registerkartennavigation zu unterstützen: [*Obligatorischer Fix*]
   * Zurück-Schaltflächen
@@ -670,83 +629,30 @@ Entwerfen Sie Ihre App mit [einfachen](~/concepts/design/design-teams-app-basic-
 
 * Deep-Links in Registerkarten dürfen nicht mit einer externen Webseite, sondern an einer Stelle in Teams verknüpft werden. Beispielsweise Aufgabenmodule oder andere Registerkarten. [*Obligatorischer Fix*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Schaltfläche „Ansicht“ nicht verknüpft](~/assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png" alt-text="validation-nav-view-button-not-linked-static-tab":::
 
 * Registerkarten dürfen Benutzern nicht erlauben, außerhalb Teams zu navigieren, um die Hauptanwendung zu nutzen. Registerkarten können für nicht zum Kerngeschäft gehörende Arbeitsabläufe außerhalb von Teams umgeleitet werden. Zum Beispiel, um ein Supportticket zu erstellen. [*Obligatorischer Fix*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Core Workflow auf der Registerkarte „Konfiguration“](~/assets/images/submission/validation-navigation-core-workflow-within-configuration.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-navigation-core-workflow-within-configuration.png" alt-text="validation-nav-core-workflow-within-configuration":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![App Core Workflow leitet nach außen um](~/assets/images/submission/validation-navigation-core-workflow-redirects-outside.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-navigation-core-workflow-redirects-outside.png" alt-text="validation-nav-core-workflow-redirects-outside":::
 
-### <a name="usability"></a>Benutzerfreundlichkeit
+</details>
+</br>
+
+<details><summary>Benutzerfreundlichkeit</summary>
 
 * Registerkarten müssen einen Wert bereitstellen, der über das Hosten einer vorhandenen Website hinausgeht. [*Obligatorischer Fix*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Die Benutzerfreundlichkeits-App stellt Workflows bereit.](~/assets/images/submission/validation-usability-app-provides-workflows.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.png" alt-text="validation-usability-app-provides-work-flows":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![Website I-Frame zu Benutzerfreundlichkeit ](~/assets/images/submission/validation-usability-website-i-framed.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="validation-usability-website-i-frame":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Teams-App Benutzerfreundlichkeit identisch](~/assets/images/submission/validation-usability-teams-app-identical-website.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-teams-app-identical-website.png" alt-text="validation-usability-teams-app-identical-websites":::
 
 * Der Inhalt darf innerhalb der Registerkarte nicht abgeschnitten werden oder sich überschneiden.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Abschneiden von Benutzerfreundlichkeitsinhalten](~/assets/images/submission/validation-usability-content-truncation.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-content-truncation.png" alt-text="validation-usability-content-truncations":::
 
 * Benutzer müssen in der Lage sein, ihre letzte Aktion auf der Registerkarte rückgängig zu machen.
 
@@ -754,37 +660,13 @@ Entwerfen Sie Ihre App mit [einfachen](~/concepts/design/design-teams-app-basic-
 
 * Registerkarten müssen für Teams-Designs reaktionsfähig sein. Wenn ein Benutzer das Design ändert, muss das Design der App die Auswahl widerspiegeln.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Dynamische Registerkarten für Benutzerfreundlichkeit](~/assets/images/submission/validation-usability-responsive-tabs.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-responsive-tabs.png" alt-text="validation-usability-responsive-tab":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![Statische Registerkarten für die Benutzerfreundlichkeit](~/assets/images/submission/validation-usability-unresponsive-tabs.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-unresponsive-tabs.png" alt-text="validation-usability-unresponsive-tab":::
 
 * Registerkarten müssen nach Möglichkeit Komponenten im Teams-Stil verwenden, z. B. Teams-Schriftarten, Typraster, Farbpaletten, Rastersystem, Bewegung, Ton der Stimme usw. Weitere Informationen finden Sie unter [Richtlinien für den Registerkartenentwurf](/microsoftteams/platform/tabs/design/tabs). [*vorgeschlagene Korrektur*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Andere Schriftart für Benutzerfreundlichkeit](~/assets/images/submission/validation-usability-app-uses-diff-font.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-app-uses-diff-font.png" alt-text="validation-usability-app-uses-font":::
 
 * Wenn Ihre App-Funktionalität Änderungen an den Einstellungen erfordert, fügen Sie eine **Registerkarte „Einstellungen“** ein. [*Vorgeschlagene Korrektur*]
 * Registerkarten müssen dem Teams-Interaktionsentwurf folgen, z. B. seiteninterne Navigation, Position und Verwendung von Dialogfeldern, Informationshierarchien usw. Weitere Informationen finden Sie unter [Microsoft Teams Fluent UI Kit](~/concepts/design/design-teams-app-basic-ui-components.md)
@@ -797,27 +679,11 @@ Entwerfen Sie Ihre App mit [einfachen](~/concepts/design/design-teams-app-basic-
 
 * Wenn Ihre App die Bereitstellung einer persönlichen Bereichsansicht für den Benutzer erfordert, um die Effizienz oder Produktivität am Arbeitsplatz zu steigern, verwenden Sie gefilterte Ansichten, Deep Links zu persönlichen Apps oder navigieren Sie auf der konfigurierbaren Registerkarte zu L2- oder L3-Ansichten, und halten Sie die Zielseite für alle Benutzer kontextbezogen gleich.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![Konfigurierbare Registerkarte „Benutzerfreundlichkeit“ – persönliche Informationen](~/assets/images/submission/validation-usability-configurable-tab-personal-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-tab-personal-info.png" alt-text="validation-usability-configurable-tab-pers-info":::
 
 * Konfigurierbare Registerkarten müssen über eine gezielte Funktionalität verfügen.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![Benutzerfreundlichkeit – Konfigurierbare verschachtelte Registerkarten](~/assets/images/submission/validation-usability-configurable-nested-tabs.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-nested-tabs.png" alt-text="validation-usability-configurable-nested-tab":::
 
 * Registerkartenfunktionen müssen auf Mobilgeräten (Android und iOS) vollständig responsiv sein.
 
@@ -825,6 +691,8 @@ Entwerfen Sie Ihre App mit [einfachen](~/concepts/design/design-teams-app-basic-
 >
 > * Fügen Sie einen persönlichen Bot neben einer persönlichen Registerkarte ein.
 > * Erlauben Sie Benutzern, Inhalte von ihrer persönlichen Registerkarte zu teilen.
+
+</details>
 
 ## <a name="bots"></a>Bots
 
@@ -835,133 +703,62 @@ Wenn Ihre App einen Bot enthält, stellen Sie sicher, dass er diesen Richtlinien
 > [!TIP]
 > Weitere Informationen zum Erstellen eines qualitativ hochwertigen App-Erlebnisses finden Sie unter [Entwurfsrichtlinien für Teams-Bots](~/bots/design/bots.md).
 
-### <a name="bot-commands"></a>Bot-Befehle
+</br>
+<details><summary>Bot-Befehle</summary>
 
 Das Analysieren von Benutzereingaben und das Vorhersagen der Benutzerabsicht ist schwierig. Botbefehle stellen Benutzern eine Reihe von Wörtern oder Ausdrücken bereit, die Ihr Bot versteht.
 
 * Es wird dringend empfohlen, unterstützte Bot-Befehle in Ihren App-Konfigurationen aufzulisten. Diese Befehle werden im Feld zum Verfassen angezeigt, wenn ein Benutzer versucht, Ihrem Bot eine Nachricht zu senden.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![Aufgeführte Botbefehle](~/assets/images/submission/validation-bot-commands-listed.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
-  
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Nicht aufgeführte Botbefehle](~/assets/images/submission/validation-bot-commands-not-listed.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-listed.png" alt-text="validation-bot-commands-list":::
+
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-not-listed.png" alt-text="validation-bot-commands-not-list":::
 
 * Alle Befehle, die Ihr Bot unterstützt, müssen ordnungsgemäß funktionieren, einschließlich generischer Befehle wie **Hi**, **Hello** und **Help**.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Bot-Hilfebefehl](~/assets/images/submission/validation-bot-help-command.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-help-command.png" alt-text="validation-bots-help-command":::
 
 * Bot-Befehle dürfen einen Benutzer nicht in eine Sackgasse führen, die Befehle müssen immer einen Weg nach vorn weisen.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Bot-Befehl „Dead“](~/assets/images/submission/validation-bot-commands-deadend.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-deadend.png" alt-text="validation-bot-commands-dead-end":::
 
 > [!TIP]
 > Fügen Sie für persönliche Bots eine Registerkarte **Hilfe** hinzu, die genauer beschreibt, was Ihr Bot tun kann.
 
-### <a name="bot-welcome-messages"></a>Bot-Begrüßungsnachrichten
+</details>
+</br>
 
-* Wenn die App einen komplexen Konfigurationsablauf hat (erfordert eine Unternehmenslizenz oder hat keinen intuitiven Anmeldeablauf), dann müssen Bots in solchen Apps beim ersten Durchlauf immer eine Willkommensnachricht senden. Für ein optimales Erlebnis muss die Willkommensnachricht den Wert enthalten, den der Bot den Benutzern bietet, wer den Bot im Kanal installiert hat, wie der Bot konfiguriert wird und alle unterstützten Bot-Befehle kurz beschrieben werden. Sie können die Begrüßungsnachricht mithilfe einer adaptiven Karte mit Schaltflächen anzeigen, um die Benutzerfreundlichkeit zu verbessern. Weitere Informationen finden Sie unter [Auslösen einer Bot-Begrüßungsnachricht.](~/bots/how-to/conversations/send-proactive-messages.md) Für Apps ohne komplexen Konfigurationsablauf können Sie während der ersten Ausführung des Bots eine Willkommensnachricht auslösen. Wenn jedoch eine Begrüßungsnachricht ausgelöst wird, muss sie den Richtlinien für Begrüßungsnachrichten entsprechen.
+<details><summary>Bot-Begrüßungsnachrichten</summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Bot-Willkommensnachricht](~/assets/images/submission/validation-bot-welcome-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+* Wenn die App einen komplexen Konfigurationsablauf hat (erfordert eine Unternehmenslizenz oder hat keinen intuitiven Anmeldeablauf), dann müssen Bots in solchen Apps beim ersten Durchlauf immer eine Willkommensnachricht senden.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Bot ohne Begrüßungsnachricht](~/assets/images/submission/validation-bot-no-welcome-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+Für ein optimales Erlebnis muss die Willkommensnachricht den Wert enthalten, den der Bot den Benutzern bietet, wer den Bot im Kanal installiert hat, wie der Bot konfiguriert wird und alle unterstützten Bot-Befehle kurz beschrieben werden. Sie können die Begrüßungsnachricht mithilfe einer adaptiven Karte mit Schaltflächen anzeigen, um die Benutzerfreundlichkeit zu verbessern. Weitere Informationen finden Sie unter [Auslösen einer Bot-Begrüßungsnachricht.](~/bots/how-to/conversations/send-proactive-messages.md) Für Apps ohne komplexen Konfigurationsablauf können Sie während der ersten Ausführung des Bots eine Willkommensnachricht auslösen. Wenn jedoch eine Begrüßungsnachricht ausgelöst wird, muss sie den Richtlinien für Begrüßungsnachrichten entsprechen.
 
-* Bot-Begrüßungsnachrichten in Kanälen und Chats sind bei der ersten Ausführung optional, insbesondere wenn der Bot für den persönlichen Gebrauch verfügbar ist und ähnliche Aktionen ausführt. Ihr Bot darf keine Begrüßungsnachrichten an einzelne Nutzer senden (das gilt als [Spamming](#bot-message-spamming)). In der Nachricht muss auch die Person erwähnt werden, die den Bot hinzugefügt hat.
+:::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.png" alt-text="validation-bot-welcom-message":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Willkommensnachricht nicht ausgelöst](~/assets/images/submission/validation-bot-welcome-message-not-triggered.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="validation-bot-no-wel-come-message":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Ausgelöste Willkommensnachricht](~/assets/images/submission/validation-bot-welcome-message-triggered.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+* Bot-Begrüßungsnachrichten in Kanälen und Chats sind bei der ersten Ausführung optional, insbesondere wenn der Bot für den persönlichen Gebrauch verfügbar ist und ähnliche Aktionen ausführt. Ihr Bot darf keine Begrüßungsnachrichten an einzelne Nutzer senden (das gilt als [Spamming](#botmessagespamming)). In der Nachricht muss auch die Person erwähnt werden, die den Bot hinzugefügt hat.
+
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-not-triggered.png" alt-text="validation-bot-welcome-message-not-trigger":::
+
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-triggered.png" alt-text="validation-bot-wel-message-trigger":::
 
 > [!TIP]
 > In Begrüßungsnachrichten an einzelne Nutzer kann eine Karussell-Tour einen effektiven Überblick über Ihren Bot und alle anderen App-Funktionen bieten, um Nutzer zu ermutigen, Bot-Befehle auszuprobieren. Erstellen Sie z. B. **eine Aufgabe**.
 
-### <a name="bot-message-spamming"></a>Spam mit Bot-Nachrichten
+</details>
+</br>
+
+<details><summary><a id="botmessagespamming">Spam mit Bot-Nachrichten</a></summary>
 
 Bots dürfen Nutzer nicht durch das Versenden mehrerer Nachrichten in kurzer Zeit spammen.
 
 * **Bot-Nachrichten in Kanälen und Chats**: Spamen Sie Benutzer nicht, indem Sie separate Beiträge erstellen. Erstellen Sie einen einzelnen Beitrag mit Antworten im selben Thread.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Bot schickt eine Spam-Nachricht](~/assets/images/submission/validation-bot-message-spamming-one-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spamming-one-message.png" alt-text="validation-bot-message-spam-one-message":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Bot-Spamming mit mehreren Nachrichten](~/assets/images/submission/validation-bot-message-spamming-multiple-messages.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spamming-multiple-messages.png" alt-text="validation-bot-message-spam-multiple-message":::
 
 * **Bot-Nachrichten in persönlichen Apps**:
   * Senden Sie nicht mehrere Nachrichten in kurzer Zeit.
@@ -970,53 +767,26 @@ Bots dürfen Nutzer nicht durch das Versenden mehrerer Nachrichten in kurzer Zei
   * Verwenden Sie ein Formular (oder Aufgabenmodul), um alle Eingaben eines Benutzers gleichzeitig zu erfassen.
   * NLP-basierte Chatbots können Multi-Turn-Konversationen nutzen, um die Diskussion ansprechender zu gestalten und einen Arbeitsablauf abzuschließen.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Bot mit Aufgabenmodul](~/assets/images/submission/validation-bot-messages-using-task-module.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-task-module.png" alt-text="validation-bot-message-using-task-module":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![Bot mit mehreren Unterhaltungen](~/assets/images/submission/validation-bot-messages-using-mutliple-conversation.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-mutliple-conversation.png" alt-text="validation-bot-messages-using-mutliple-conversations":::
 
 * **Willkommensnachrichten**: Wiederholen Sie nicht gleiche Willkommensnachricht in regelmäßigen Abständen. Wenn beispielsweise ein neues Mitglied zu einem Team hinzugefügt wird, sollten Sie die anderen Mitglieder nicht mit einer Begrüßungsnachricht spammen. Nachricht an das neue Mitglied persönlich senden.
 
-### <a name="bot-notifications"></a>Bot-Benachrichtigungen
+</details>
+</br>
+
+<details><summary>Bot-Benachrichtigungen</summary>
 
 Bot-Benachrichtigungen müssen Inhalte enthalten, die für den Bereich relevant sind, den Sie für den Bot definieren (Team, Chat oder persönlich).
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![Bot-Benachrichtigung relevant](~/assets/images/submission/validation-bot-notifications-relevant.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notifications-relevant.png" alt-text="validation-bot-notification-relevant":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![Bot-Benachrichtigung nicht relevant](~/assets/images/submission/validation-bot-notifications-not-relevant.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notifications-not-relevant.png" alt-text="validation-bot-notification-not-relevant":::
 
-### <a name="bots-and-adaptive-cards"></a>Bots und adaptive Karten
+</details>
+</br>
+<details><summary>Bots und adaptive Karten</summary>
 
 Adaptive Karten sind eine dringend empfohlene Möglichkeit, Bot-Nachrichten anzuzeigen. Die Karten müssen einfach sein und nur bis zu sechs Aktionen enthalten. Um weitere Inhalte anzuzeigen, sollten Sie ein Aufgabenmodul oder eine Registerkarte verwenden.
 
@@ -1027,7 +797,10 @@ Weitere Informationen zu Karten finden Sie unter:
 
 Die Bot-Erfahrung muss auf Mobilgeräten vollständig responsiv sein. Die Bot-Antworten müssen gegebenenfalls einen Weg nach vorn aufzeigen. Bots müssen reaktionsschnell sein und bei Fehlern eine ansprechende Fehlermeldung anzeigen. Bot-Nachrichten, die im persönlichen Bereich an die Basis des Benutzers auf Triggern in einem gemeinsamen Bereich gesendet werden, müssen kontextbezogene Informationen (einschließlich des Nachrichtenursprungs) bereitstellen.
 
-### <a name="notification-only-bots"></a>Nur Benachrichtigungsbots
+</details>
+</br>
+
+<details><summary>Nur Benachrichtigungsbots</summary>
 
 Apps, die aus reinen Benachrichtigungs-Bots bestehen, bieten dem Nutzer einen Mehrwert, indem sie auf der Grundlage bestimmter Auslöser oder Ereignisse in der Hauptanwendung oder im Backend Benachrichtigungen für den Nutzer auslösen. Beispielsweise wird ein neuer Vertriebsleiter oder Einsteiger hinzugefügt, den das Vertriebsteam weiter verfolgen kann. Ein sehr guter Benachrichtigungsbot benachrichtigt die Benutzer regelmäßig über bestimmte Ereignisvervollständigungen, z. B. Workflowvervollständigungen oder Warnungen.
 
@@ -1038,28 +811,16 @@ Eine Meldung ist für Teams von Nutzen, wenn:
 
 Apps, die nur Benachrichtigungen mit Inhalten bereitstellen wie **“Sie haben eine neue Benachrichtigung. Klicken Sie, um sie anzuzeigen“** bereitstellen und von den Nutzern verlangen, für alles andere außerhalb von Teams zu navigieren, bieten keinen nennenswerten Mehrwert innerhalb von Teams.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![Unangemessene Bot-Information](~/assets/images/submission/validation-bot-notification-only-inadequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="validation-nav-static-tab":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![Angemessene Bot-Information](~/assets/images/submission/validation-bot-notification-only-adequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-horizontal-rail.png" alt-text="validation-nav-horizontal-rail":::
+
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="validation-bot-notifications-only-inadequete-info":::
 
 > [!TIP]
 > Zeigen Sie Informationen in der Vorschau an, und stellen Sie grundlegende Inline-Benutzeraktionen auf der bereitgestellten Karte bereit, so dass der Benutzer nicht für alle Aktionen (unabhängig von der Komplexität) außerhalb von Teams navigieren muss.
+
+</details>
 
 ## <a name="message-extensions"></a>Nachrichtenerweiterungen
 
@@ -1070,107 +831,55 @@ Wenn Ihre App eine Nachrichtenerweiterung enthält, stellen Sie sicher, dass sie
 > [!TIP]
 > Weitere Informationen zum Erstellen einer qualitativ hochwertigen App-Erfahrung finden Sie in den [Entwurfsrichtlinien für Microsoft Teams Nachrichtenerweiterungen](~/messaging-extensions/design/messaging-extension-design.md).
 
-### <a name="action-commands"></a>Aktionsbefehle
+</br>
+<details><summary>Aktionsbefehle</summary>
 
 Aktionsbasierte Nachrichtenerweiterungen müssen folgende Aktionen ausführen:
 
 * Ermöglichen Sie es Benutzern, Aktionen für eine Nachricht auszulösen, ohne Zwischenschritte wie die Anmeldung auszuführen.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![Kein Zwischenschritt ](~/assets/images/submission/validation-messaging-extension-no-intermediate-step.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-no-intermediate-step.png" alt-text="validation-messaging-extension-no-intermediate-steps":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![Zwischenschritt verfügbar](~/assets/images/submission/validation-messaging-extension-intermediate-step-available.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-intermediate-step-available.png" alt-text="validation-messaging-extension-intermediate-steps-available":::
 
 * Übergeben des Nachrichtenkontexts an den nächsten Arbeitsstatus. [*Obligatorischer Fix*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![App übergibt Nachricht](~/assets/images/submission/validation-messaging-extension-app-passes-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-app-passes-message.png" alt-text="validation-messaging-extension-app-passes-messages":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![App übergibt Nachricht nicht](~/assets/images/submission/validation-messaging-extension-app-doesnot-pass-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-app-doesnot-pass-message.png" alt-text="validation-messaging-extension-app-doesnot-pass-messages":::
 
 * Integrieren Sie den Namen der Host-App anstelle eines generischen Verbs für Aktionsbefehle, die von einer Chat-Nachricht, einem Channel-Post oder einem Aufruf zum Handeln innerhalb von Apps ausgelöst werden. Verwenden Sie z. B. **Starten einer Skype-Besprechung** für **Besprechung starten**, **Datei in DocuSign hochladen** für **Datei hochladen** usw. [*Vorgeschlagene Korrektur*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![Hostname des Aktionsbefehls](~/assets/images/submission/validation-messaging-extension-action-command-host-name.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-host-name.png" alt-text="validation-messaging-extension-action-command-host-names":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![Verb für den Aktionsbefehl](~/assets/images/submission/validation-messaging-extension-action-command-verb.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-verb.png" alt-text="validation-messaging-extension-action-commands-verb":::
 
-### <a name="preview-links-link-unfurling"></a>Vorschau-Links (Link-Unfurling)
+</details>
+</br>
+
+<details><summary>Vorschau-Links (Link-Unfurling)</summary>
+
+[*Obligatorischer Fix*]
 
 Nachrichtenerweiterungen müssen eine Vorschau der erkannten Links im Feld „Verfassen“ in Microsoft Teams anzeigen. Fügen Sie keine Domänen hinzu, die sich außerhalb Ihrer Kontrolle befinden (entweder absolute URLs oder Platzhalter). Beispielsweise ist `yourapp.onmicrosoft.com` gültig, aber `*.onmicrosoft.com` nicht gültig. Top-Level Domains sind ebenfalls nicht zulässig. Zum Beispiel `*.com` oder `*.org`. [*Obligatorischer Fix*]
 
-### <a name="search-commands"></a>Suchbefehle
+</details>
+</br>
+
+<details><summary>Suchbefehle</summary>
 
 * Such-basierte Nachrichtenerweiterungen müssen Text bereitstellen, der den Nutzern bei der effektiven Suche hilft. [*Obligatorischer Fix*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![Hilfetext verfügbar](~/assets/images/submission/validation-search-commands-text-available.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-search-commands-text-available.png" alt-text="validation-search-command-text-available":::
 
 * @mention ausführbare Dateien müssen klar, leicht verständlich und lesbar sein.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![Suchbefehl nicht eindeutig ausführbar](~/assets/images/submission/validation-search-command-unclear-executable.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-search-command-unclear-executable.png" alt-text="validation-search-commands-unclear-executable":::
 
-### <a name="search-based-message-extension-only-apps"></a>Nur Apps mit suchbasierten Nachrichtenerweiterungen
+</details>
+</br>
+
+<details><summary>Aktionsbefehle</summary>Nur Apps mit suchbasierten Nachrichtenerweiterungen
 
 [*Obligatorischer Fix*]
 
@@ -1181,64 +890,43 @@ Um die Validierung für eine reine suchbasierte Nachrichtenerweiterung zu besteh
 1. Die bereitgestellte Karte enthält angemessene Details, die keine weitere Benutzeraktion erfordern.
 1. Die bereitgestellte Karte enthält angemessene Vorschauinformationen, damit ein Benutzer Maßnahmen ergreifen oder weitere Details in einem Link anzeigen kann, der außerhalb von Teams geöffnet wird.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Suchbasiertes Messaging nicht ausreichend](~/assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-adequete-info.png" alt-text="validation-search-base-messaging-ext-adequete-info":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-   ![Angemessenes suchbasiertes Messaging](~/assets/images/submission/validation-search-based-messaging-ext-adequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png" alt-text="validation-search-base-messaging-ext-inadequete-info":::
 
 Apps, die nur zur Verbreitung von Links dienen, bieten in Teams keinen nennenswerten Mehrwert. Erwägen Sie die Erstellung zusätzlicher Workflows in Ihrer App, wenn Ihre App nur die Verbreitung von Links unterstützt und keine andere Funktionalität aufweist.
 
+</details>
+
 ## <a name="task-modules"></a>Aufgabenmodule
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules).
+[*Obligatorischer Fix*]
 
-Ein Aufgabenmodul muss ein Symbol und den Kurznamen der App enthalten, mit der es verknüpft ist. Aufgabenmodule dürfen nicht eine ganze App einbetten, sondern nur die Komponenten anzeigen, die für die Durchführung einer bestimmten Aktion erforderlich sind. [*Obligatorischer Fix*]
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules).
+<br></br>
+<details><summary>Erweitern, um mehr zu erfahren</summary>
+
+Ein Aufgabenmodul muss ein Symbol und den Kurznamen der App enthalten, mit der es verknüpft ist. Aufgabenmodule dürfen nicht eine ganze App einbetten, sondern nur die Komponenten anzeigen, die für die Durchführung einer bestimmten Aktion erforderlich sind.
 
 Weitere Informationen finden Sie unter [Entwurfsrichtlinien für Teams-Aufgabenmodule](~\task-modules-and-cards\task-modules\design-teams-task-modules.md).
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Aufgabenmodul zeigt Komponenten an](~/assets/images/submission/validation-task-module-displays-components.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-task-module-displays-components.png" alt-text="validation-task-module-displays-component":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Aufgabenmodul bettet App ein](~/assets/images/submission/validation-task-module-embeds-app.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-task-module-embeds-app.png" alt-text="validation-task-module-embed-app":::
 
 > [!TIP]
 > Weitere Informationen zum Erstellen einer qualitativ hochwertigen App-Erfahrung finden Sie in den[ Entwurfsrichtlinien für Teams Aufgabenmodule](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
+
+</details>
 
 ## <a name="meeting-extensions"></a>Besprechungserweiterungen
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions).
 > [!TIP]
 > Weitere Informationen zum Erstellen einer qualitativ hochwertigen App-Erfahrung finden Sie in den [Designrichtlinien für die Erweiterung von Teams-Meetings](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+
+</br>
+<details><summary>Allgemein</summary>
 
 Verwenden Sie die folgenden Richtlinien für die Erweiterung von Besprechungen:
 
@@ -1257,75 +945,55 @@ Verwenden Sie die folgenden Richtlinien für die Erweiterung von Besprechungen:
 > [!TIP]
 > Sie müssen `groupchat` als Bereich unter `configurableTabs` und `meetingDetailsTab` oder `meetingChatTab` und `meetingSidePanel` als Kontexteigenschaft im Manifest deklarieren, um Ihre App für Besprechungen auf Teams Mobile zu aktivieren.
 
-### <a name="pre-and-post-meeting-experience"></a>Erfahrung vor und nach der Besprechung
+</details>
+
+</br>
+<details><summary>Erfahrung vor und nach der Besprechung</summary>
 
 * Bildschirmanzeigen vor und nach Besprechungen müssen den allgemeinen Richtlinien für den Entwurf von Registerkarten entsprechen. Weitere Informationen finden Sie unter [Teams-Entwurfsrichtlinien](~/tabs/design/tabs.md).
 * Registerkarten dürfen kein horizontales Scrollen haben.
 * Registerkarten müssen ein strukturiertes Layout aufweisen, wenn mehrere Elemente angezeigt werden. Beispielsweise finden Sie mehr als 10 Umfragen oder Erhebungen unter [Beispiellayout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
 * Ihre App muss Benutzer benachrichtigen, wenn die Ergebnisse einer Umfrage oder Erhebung exportiert werden, indem sie angibt, dass **Ergebnisse erfolgreich heruntergeladen** wurden.
 
-### <a name="in-meeting-experience"></a>Besprechungserfahrung
+</details>
+
+</br>
+<details><summary>Besprechungserfahrung</summary>
 
 * Apps dürfen nur während Besprechungen ein dunkles Design verwenden. Weitere Informationen finden Sie unter [Teams-Entwurfsrichtlinien](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming).
 * Eine QuickInfo muss den Namen der App anzeigen, wenn der Mauszeiger während einer Besprechung über das App-Symbol bewegt wird.
 
- :::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![QuickInfo – App-Name anzeigen](~/assets/images/submission/validation-in-meeting-exp-display-app-name.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-display-app-name.png" alt-text="validation-in-meeting-exp-display-app-names":::
 
 * Nachrichtenerweiterungen müssen während Besprechungen genauso funktionieren wie außerhalb von Besprechungen.
 
-### <a name="in-meeting-tabs"></a>Registerkarten in Besprechungen
+</details>
+
+</br>
+<details><summary>Registerkarten in Besprechungen</summary>
 
 * Muss reaktionsfähig sein.
 * Die Abstands- und Komponentengrößen müssen beibehalten werden.
 * Muss über eine Schaltfläche „Zurück“ verfügen, wenn mehrere Navigationsebenen vorhanden sind.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![In-Meeting-Schaltfläche „Zurück“ verfügbar](~/assets/images/submission/validation-in-meeting-exp-back-button.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button.png" alt-text="validation-in-meeting-exp-back-buttons":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![In-Meeting-Schaltfläche „Zurück“ fehlt](~/assets/images/submission/validation-in-meeting-exp-back-button-absent.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button-absent.png" alt-text="validation-in-meeting-exp-back-buttons-absent":::
 
 * Darf nicht mehr als eine Schaltfläche zum Schließen enthalten. Dies könnte die Benutzer verwirren, da es bereits eine eingebaute Schaltfläche in der Kopfzeile gibt, um die Registerkarte zu schließen.
 * Darf kein horizontales Scrollen haben.
 
-### <a name="in-meeting-dialogs"></a>Dialoge im Besprechungen
+</details>
+
+</br>
+<details><summary>Dialoge im Besprechungen</summary>
 
 * Muss sparsam und für leichte und aufgabenorientierte Szenarien eingesetzt werden.
 * Der Inhalt muss in einer einzigen Spalte angezeigt werden und darf nicht über mehrere Navigationsebenen verfügen.
 * Darf keine Aufgabenmodule verwenden.
 * Muss mit der Mitte der Besprechungsbereich ausgerichtet sein.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![In-Meeting-Dialogfeld nicht ausgerichtet](~/assets/images/submission/validation-in-meeting-dialog-not-aligned.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-dialog-not-aligned.png" alt-text="validation-in-meeting-dialog-not-align":::
 
 * Muss geschlossen werden, nachdem ein Benutzer eine Schaltfläche ausgewählt oder eine Aktion ausgeführt hat.
 
@@ -1336,55 +1004,61 @@ Verwenden Sie die folgenden Richtlinien für die Erweiterung von Besprechungen:
   * Die maximale Größe jedes Bilds beträgt 5 MB. Eine Szene ist eine Sammlung mehrerer Bilder. Der Grenzwert gilt für jedes einzelne Bild.
   * Wählen Sie nach Bedarf **Transparent** aus. Dieses Kontrollkästchen ist im rechten Bereich verfügbar, wenn ein Bild ausgewählt ist. Die überlappenden Bilder müssen als „transparent“ gekennzeichnet werden, um anzugeben, dass sie Bilder in der Szene überlappen.
 
+</details>
+
 ## <a name="notifications"></a>Benachrichtigungen
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis).
 
 Wenn Ihre App die von [Microsoft Graph bereitgestellten Aktivitätsfeed-APIs](/graph/teams-send-activityfeednotifications) verwendet, stellen Sie sicher, dass sie die folgenden Richtlinien einhält.
-
-### <a name="general"></a>Allgemein
+<br></br>
+<details><summary>Allgemein</summary>
 
 * Alle in der App-Konfiguration angegebenen Benachrichtigungs-Auslöser müssen funktionieren.
 * Benachrichtigungen müssen gemäß den unterstützten Sprachen lokalisiert werden, die für Ihre App konfiguriert sind.
 * Benachrichtigungen müssen innerhalb von fünf Sekunden nach der Benutzeraktion angezeigt werden.
 
-### <a name="avatars"></a>Avatare
+</details>
+</br>
+<details><summary>Avatare</summary>
 
 * Der Benachrichtigungs-Avatar muss mit dem Farbsymbol Ihrer App übereinstimmen.
 * Von einem Benutzer ausgelöste Benachrichtigungen müssen den Avatar des Benutzers enthalten.
 
-### <a name="spamming"></a>Spamming
+</details>
+</br>
+<details><summary>Spamming</summary>
 
 * Apps dürfen nicht mehr als 10 Benachrichtigungen pro Minute an einen Benutzer senden.
 * Bots und der Aktivitätsfeed dürfen keine doppelten Benachrichtigungen auslösen.
 * Benachrichtigungen müssen den Benutzern einen gewissen Wert bieten und dürfen nicht für triviale oder irrelevante Ereignisse verwendet werden.
 
-### <a name="navigation-and-layout"></a>Navigation und Layout
+</details>
+</br>
+<details><summary>Navigation und Layout</summary>
 
 * Benachrichtigungen müssen dem Layout und der Erfahrung des Teams-Aktivitätsfeeds entsprechen.
 * Bei Auswahl einer Benachrichtigung muss der Benutzer zu relevanten Inhalten innerhalb Teams weitergeleitet werden.
 
+</details>
+
 ## <a name="microsoft-365-app-compliance-program"></a>Microsoft 365-App-Compliance Program
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Dieser Abschnitt steht im Einklang mit[ der Microsoft-Richtlinie für kommerzielle Marktplätze Nr. 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation).
+<br></br>
+<details><summary>Erweitern, um mehr zu erfahren</summary>
 
 Das Microsoft 365 App Compliance-Programm soll Organisationen dabei helfen, Risiken zu bewerten und zu verwalten, indem Sicherheits- und Compliance-Informationen zu Ihrer App ausgewertet werden. Wenn Sie eine App im Teams Store veröffentlichen, müssen Sie die folgenden Stufen des Programms abschließen:
 
-* **Publisher Überprüfung:** Hilft Administratoren und Endbenutzern, die Authentizität von App-Entwicklern zu verstehen, die sich in die Microsoft Identity Platform integrieren. Nach Abschluss des Vorgangs wird im Zustimmungsdialog von Azure Active Directory und auf anderen Bildschirmen ein blaues **verifiziert** Zeichen angezeigt. Weitere Informationen finden Sie unter [Markieren Ihrer App als vom Herausgeber überprüft](/azure/active-directory/develop/mark-app-as-publisher-verified).  
+* **Publisher Überprüfung:** Hilft Administratoren und Endbenutzern, die Authentizität von App-Entwicklern zu verstehen, die sich in die Microsoft Identity Platform integrieren. Nach Abschluss des Vorgangs wird im Zustimmungsdialog von Azure Active Directory und auf anderen Bildschirmen ein blaues **verifiziert** Zeichen angezeigt. Weitere Informationen finden Sie unter [Markieren Ihrer App als vom Herausgeber überprüft](/azure/active-directory/develop/mark-app-as-publisher-verified).
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![Herausgeberüberprüfung](~/assets/images/submission/validation-365-compliance-publisher-verification.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-365-compliance-publisher-verification.png" alt-text="validation-365-compliance-publisher-verifications":::
 
 * **Publisher-Bestätigung:** Ein Prozess, bei dem Sie allgemeine Informationen zur Datenverarbeitung sowie Sicherheits- und Compliance-Informationen weitergeben, um potenziellen Kunden zu helfen, fundierte Entscheidungen über die Verwendung Ihrer App zu treffen.
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Wenn Sie eine App übermitteln, die zuvor noch nicht aufgeführt wurde, können Sie den Herausgebernachweis erst dann offiziell abschließen, wenn sich Ihre App im Teams Store befindet. Wenn Sie eine aufgeführte App aktualisieren, führen Sie die Publisher-Bestätigung durch, bevor Sie die neueste Version der App einreichen.
+
+</details>
 
 ## <a name="advertising"></a>Werbung
 

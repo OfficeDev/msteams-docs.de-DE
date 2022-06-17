@@ -1,14 +1,14 @@
 ---
 title: Neuerungen für Entwickler in Teams
-description: Erfahren Sie mehr über die neuen Entwicklerfeatures und Verbesserungen an diesen Features in Microsoft Teams.
+description: In diesem Lernpfad erfahren Sie mehr über die neuen Entwicklerfeatures und Verbesserungen an diesen Features in Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: ca3cbbac88a0133c5c4973f0a1ad8809f8e4ff73
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: e7c361ab7ee2579e3b28df0e8d6f22538c8f4d52
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048969"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123188"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -24,7 +24,6 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (G
 | 24.05.2022 | Teams-Toolkit, Version 4.0.0, für Visual Studio Code jetzt allgemein verfügbar | Tools und SDKs > Teams-Toolkit für Visual Studio Code > <br> • [Überblick über das Teams-Toolkit](toolkit/teams-toolkit-fundamentals.md) <br> • [Erstellen eines Befehlsbots mit JavaScript](toolkit/add-capability.md) <br> • [Erstellen eines Benachrichtigungsbots mit JavaScript](toolkit/add-capability.md) <br> • [Vorschau und Anpassen des Teams-App-Manifests](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Herstellen einer Verbindung mit vorhandenen APIs](toolkit/add-API-connection.md) <br> • [Hinzufügen von Funktionen zu ihrer Teams-App](toolkit/add-capability.md) <br> • [Hinzufügen der Oberfläche für einmaliges Anmelden](toolkit/add-single-sign-on.md) <br> • [Hinzufügen von Cloudressourcen zur Teams-App](toolkit/add-resource.md) |
 | 24.05.2022 | App-Manifestversion 1.13 eingeführt | App-Manifest > [Manifestschema für Microsoft Teams](resources/schema/manifest-schema.md) |
 | 24.05.2022 | Bots und Nachrichtenerweiterungen für GCC und GCCH | • Planen ihrer App > [Übersicht](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Erstellen von Bots > [Übersicht](bots/what-are-bots.md) </br> • Erstellen von Nachrichtenerweiterungen > [Übersicht](messaging-extensions/what-are-messaging-extensions.md) |
-
 
 <!--
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
@@ -266,6 +265,7 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
+| 16.06.2022 | Link zum Freigeben für Teams aus Web-Apps| Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus Web Apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 06/06/2022| Aktualisieren Sie Konversations- und Installationsereignisse in Ihrem Teams-Bot |  Bots erstellen > Bot-Konversationen > Konversationsereignisse in Ihrem Teams-Bot > [Konversationsereignisse in Ihrem Teams-Bot](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |24.05.2022| Verbesserte Zusammenarbeit mit Live Share SDK |  Erstellen von Apps für Teams-Besprechungen > Verbesserte Zusammenarbeit mit Live Share > [Übersicht](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 06.04.2022 | Für Teams über persönliche App oder Registerkarte freigeben | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus einer persönlichen App oder Registerkarte](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |

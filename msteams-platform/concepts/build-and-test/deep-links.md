@@ -1,14 +1,14 @@
 ---
 title: Erstellen von Deep-Links
-description: Lernen Sie, wie Teams Deep Links beschrieben werden und wie Sie sie in Ihren Anwendungen verwenden können.
+description: Erfahren Sie, wie Sie Deep Links erstellen und wie Sie sie in Ihren Microsoft Teams-Apps mit Registerkarten verwenden und darin navigieren.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: a1bd16f178508d62a2a38b6d8880a9315ee45ee3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: bb0e9adf0541f428b46459598d41466d450bdca7
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756769"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123717"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links
 
@@ -245,7 +245,7 @@ Es wird zwar empfohlen, die stark typisierten APIs von TeamsJS zu verwenden, Dee
 Beispiel: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
 > [!NOTE]
-> Die Suchparameter unterstützen kein `+` Signal anstelle von Leerzeichen (` `). Stellen Sie sicher, dass der URI-Codierungscode `%20` für Leerzeichen ausgibt, z. B. `?subject=test%20subject` ist gut, aber `?subject=test+subject` ist schlecht.
+> Die Suchparameter unterstützen kein `+` Signal anstelle von Leerzeichen (``). Stellen Sie sicher, dass der URI-Codierungscode `%20` für Leerzeichen ausgibt, z. B. `?subject=test%20subject` ist gut, aber `?subject=test+subject` ist schlecht.
 
 Die Abfrageparameter sind:
 

@@ -1,16 +1,16 @@
 ---
 title: Verwalten und Unterstützen Ihrer veröffentlichten App
-description: Woran Sie denken müssen, wenn Ihr Store im Teams-Store und bei AppSource gelistet ist.
+description: Erfahren Sie, wie Sie Ihre veröffentlichte Microsoft Teams-App warten und woran Sie denken müssen, wenn Ihr Store im Teams Store und in AppSource aufgeführt ist.
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: cea78b40bbfbe8b309f9e3fa8c05f62404717b33
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: e01b5b8dc053559248bc3217a0807b69ec014669
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887807"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123048"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Unterhalt Ihrer veröffentlichte Microsoft Teams-App
 
@@ -65,6 +65,17 @@ Erstellen Sie den Link mithilfe der folgenden URL, an die Ihre App-ID angefügt 
 ## <a name="complete-microsoft-365-certification"></a>Durchführen einer Microsoft 365-Zertifizierung
 
 Eine [Microsoft 365-Zertifizierung](/microsoft-365-app-certification/docs/certification) bietet die Sicherheit, dass Daten und der Datenschutz angemessen gesichert und geschützt sind, wenn eine Office-Anwendung oder ein Add-In eines Drittanbieters in Ihrem Microsoft 365-Ökosystem installiert wird. Die Zertifizierung bestätigt, dass Ihre App mit Microsoft-Technologien kompatibel ist, den bewährten Cloud App Security-Verfahren entspricht und von Microsoft unterstützt wird.
+
+## <a name="stop-app-distribution"></a>Beenden der App-Verteilung
+
+Sie können eine App aus dem [kommerziellen Microsoft Marketplace](/azure/marketplace/overview) entfernen, um deren Entdeckung und Verwendung zu verhindern.
+
+Führen Sie die folgenden Schritte aus, um die Verteilung einer App nach der Veröffentlichung zu stoppen:
+
+1. Wählen Sie auf der Seite **Produktübersicht** die Option **Verkauf beenden** aus. Es entfernt die App aus der Microsoft AppSource.
+1. Um die Aufhebung der Auflistung der App zu initiieren, wählen Sie auf **Partner Center** die Seite **Übersicht** und dann **Verkauf beenden** aus.
+
+Nachdem Sie die Verteilung einer App beendet haben, können Sie sie weiterhin im Partner Center mit dem Status **Nicht verfügbar** sehen. Wenn Sie sich entscheiden, die App erneut aufzulisten, befolgen Sie die Anweisungen zum [Veröffentlichen Ihrer App im Microsoft Teams Store](/concepts/deploy-and-publish/appsource/publish#teams-app-submission).
 
 ## <a name="see-also"></a>Siehe auch
 

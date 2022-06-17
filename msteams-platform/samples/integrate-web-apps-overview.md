@@ -1,17 +1,16 @@
 ---
 title: Integrieren von Web-Apps
 author: Rajeshwari-v
-description: Ein Überblick über die Integration von Webanwendungen und Gerätefunktionen mit der Teams-Anwendung.
+description: In diesem Artikel beginnen Sie mit der Integration von Webanwendungen und Gerätefunktionen in die Microsoft Teams-App. Power-Plattform zum Erstellen von Power-Apps, Power Virtual Agents, Virtual Assistant, App-Vorlagen, Shift-Konnektoren, Moodle LMS.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: Power Plattform Power Apps People Picker Deep Link Virtueller Agent Assistent Share-to-Teams
-ms.openlocfilehash: dc31644fca25aeca12b7e5f3095ebae53a3c02ac
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: a5394962594acf60e88bff0c7449c17a2a4b7c17
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757668"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123538"
 ---
 # <a name="integrate-web-apps"></a>Integrieren von Web-Apps
 

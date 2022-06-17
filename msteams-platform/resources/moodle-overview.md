@@ -1,16 +1,15 @@
 ---
 title: Moodle-Lernverwaltungssystem
-description: Übersicht über die Moodle LMS-Integration in Teams
+description: Lernen Sie die Moodle LMS-Integration mit Teams, Moodle-Lernmanagement, mConnect und Deep Links, Barrierefreiheit und Benutzeranforderungsszenarien kennen. Diese Integration bietet Audio, Videoanrufe, Chat, Kurs- und Aktivitätsmanagement, analytische Einblicke und mehr.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-keywords: Deep-Links zu Moodle LMS mConnect
-ms.openlocfilehash: dc5674ef092c9462786871aa8bb8618a84b141b8
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 61182fe5c11ba5c399d720ae043671983e262b1c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757346"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124025"
 ---
 # <a name="moodle-learning-management-system"></a>Moodle-Lernverwaltungssystem
 

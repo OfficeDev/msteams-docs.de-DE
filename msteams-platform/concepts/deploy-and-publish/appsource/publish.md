@@ -1,16 +1,16 @@
 ---
 title: Übersicht – Veröffentlichen Sie Ihre App im Microsoft Teams Store
-description: Beschreibt den Prozess zum Übermitteln Ihrer App an Partner Center und zum Veröffentlichen im Microsoft Teams Store (und AppSource).
+description: Erfahren Sie, wie Sie Ihre App an das Partner Center übermitteln und sie im Microsoft Teams Store (und AppSource) veröffentlichen.
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: e2d9b08afb7be0d8d74596598876264f8efc10e0
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 66aa139669079cad2ebb2d552ccbf7c997f38a6a
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757283"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124032"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Veröffentlichen Sie Ihre App im Microsoft Teams Store
 
@@ -20,7 +20,7 @@ Apps, die im Teams Store veröffentlicht werden, werden auch automatisch auf [Mi
 
 ## <a name="understand-the-publishing-process"></a>Grundlegendes zum Veröffentlichungsprozess
 
-Wenn Sie der Meinung sind, dass Ihre App für die Produktion bereit ist, können Sie damit beginnen, sie im Teams Store zu veröffentlichen.
+Wenn Ihre App produktionsbereit ist, können Sie damit beginnen, sie im Teams Store aufzulisten.
 
 > [!TIP]
 > Wenn Sie die Schritte vor der Übermittlung genau befolgen, kann dies die Wahrscheinlichkeit erhöhen, dass Microsoft Ihre App für die Veröffentlichung genehmigt.
@@ -51,7 +51,7 @@ Wenn Sie der Meinung sind, dass Ihre App für die Produktion bereit ist, können
 
 * **Umfassende Funktions- und Benutzerfreundlichkeitstests**
 
-  Ihre App wird von einem Validierungssteuerelement gründlich überprüft, um die Einhaltung der [Microsoft Commercial Marketplace-Zertifizierungsrichtlinien](/legal/marketplace/certification-policies) sicherzustellen. 
+  Ihre App wird von einem Validierungssteuerelement gründlich überprüft, um die Einhaltung der [Microsoft Commercial Marketplace-Zertifizierungsrichtlinien](/legal/marketplace/certification-policies) sicherzustellen.
   Der Schwerpunkt liegt auf umfassenden Funktions- und Benutzererfahrungstests, Benutzerfreundlichkeitsprüfungen und Metadatenüberprüfungen. Die App-Überprüfung wird auf Desktop-, Web- und mobilen Clients durchgeführt. Wir arbeiten hart daran, Ihnen einen detaillierten Testbericht in 24 Arbeitsstunden nach der Übermittlung zur Verfügung zu stellen.
 
 * **Geführte App-Veröffentlichung über den Concierge-Dienst**
