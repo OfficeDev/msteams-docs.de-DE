@@ -1,15 +1,15 @@
 ---
 title: Häufig gestellte Fragen
-description: Antworten auf einige häufig gestellte Fragen
+description: In diesem Lernartikel finden Sie Antworten auf einige häufig gestellte Fragen, während Sie das Moodle LMS verwenden.
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 944fc379f7623599c543171a8d57a7854b51a980
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 532a7b9c36cff3bf7499d909ddd260fa0c1785b3
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757549"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123482"
 ---
 # <a name="moodle-faq"></a>Häufig gestellte Fragen zu Moodle
 
@@ -65,7 +65,7 @@ Die folgende Abbildung zeigt Optionen für Einschränkungen bei der Benutzererst
 
 <summary><b>Wir möchten, dass unsere Lehrpersonal Kurse mit Teams synchronisieren kann? Sind Moodle-Administratoren die einzigen, die die Synchronisierung von Kursen steuern können?</b></summary>
 
-Standardmäßig können nur Moodle-Administratoren die Synchronisierung konfigurieren. Der Teambesitzer kann steuern, ob ein Kurs mit Teams synchronisiert wird, und ob **"Konfigurieren der Kurssynchronisierung im Kurs zulassen"** aktiviert ist. In diesem Fall ist der Teambesitzer das Lehrpersonal. Der Block zeigt die Konfigurationsoption für Personen mit den entsprechenden Besitzerberechtigungen an. 
+Standardmäßig können nur Moodle-Administratoren die Synchronisierung konfigurieren. Der Teambesitzer kann steuern, ob ein Kurs mit Teams synchronisiert wird, und ob **"Konfigurieren der Kurssynchronisierung im Kurs zulassen"** aktiviert ist. In diesem Fall ist der Teambesitzer das Lehrpersonal. Der Block zeigt die Konfigurationsoption für Personen mit den entsprechenden Besitzerberechtigungen an.
 
 <!-- For more information, see Microsoft 365 block within the Moodle course interface. -->
 
@@ -189,5 +189,3 @@ Sie können jedoch auf die Einladung zugreifen und den Feldern **Erforderlich** 
 <summary><b>Gibt es eine Supportwebsite, auf der wir weitere Hilfe zu Produkten und anderen Problemen erhalten können?</b></summary>
 
 Support und Hilfe zu Produkt- und Dienstproblemen oder Hilfe zur Entwicklercommunity finden Sie unter [Support und Feedback](/microsoftteams/platform/feedback).
-
-

@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 7e9ccfe5fd533f9502ea2de176efa8a46712524d
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: a7b830ef0aba9b7e46a10d67de128aa9f3076eeb
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938907"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66122915"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Vorbereiten von Konten zum Erstellen von Teams-Apps
 

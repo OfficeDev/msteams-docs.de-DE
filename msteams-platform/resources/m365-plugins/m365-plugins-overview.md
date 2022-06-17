@@ -1,15 +1,15 @@
 ---
 title: Microsoft 365-Plugins
-description: Details zu Microsoft 365 Plug-Ins
+description: In diesem Artikel erhalten Sie Informationen zu Microsoft 365-Plugins, Plug-In-Liste und -Bezeichnungen, Microsoft 365 und One Note-Interaktion und vielem mehr.
 ms.topic: Microsoft 365 plugins
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 3a1847a01687d2d363f29938ed589d3a12179c9c
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 5228803be99d77e24f5cd1731c826b1a28509097
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63454002"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124046"
 ---
 # <a name="microsoft-365-plugins"></a>Microsoft 365-Plugins
 
@@ -149,7 +149,7 @@ Die folgende Abbildung zeigt die Microsoft-Block-Benutzeroberfläche:
 
 ## <a name="oembed-filter"></a>oEmbed-Filter
 
-Das oEmbed-Filter-Plugin vereinfacht und verbessert die Benutzerfreundlichkeit, indem es die Einbindung von externen HTML-Inhalten in Moodle vereinfacht. Im Folgenden sind die Vorteile des oEmbed-Filters aufgeführt. 
+Das oEmbed-Filter-Plugin vereinfacht und verbessert die Benutzerfreundlichkeit, indem es die Einbindung von externen HTML-Inhalten in Moodle vereinfacht. Im Folgenden sind die Vorteile des oEmbed-Filters aufgeführt.
 
 * Reduziert die Zeit zum Einbetten von Videos in eine HTML-Seite.
 * Ermöglicht das Einbetten mehrerer Videoinhaltsanbieter.
@@ -163,4 +163,4 @@ Die folgende Abbildung zeigt die Aufnahme externer HTML-Inhalte in Moodle:
 ## <a name="see-also"></a>Siehe auch
 
 * [Partner-Apps für Moodle](../partner-apps-for-moodle.md)
-* [Moodle– häufig gestellte Fragen](../faqs.md)
+* [Moodle – häufig gestellte Fragen](../faqs.md)

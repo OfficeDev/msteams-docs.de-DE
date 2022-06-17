@@ -6,12 +6,12 @@ keywords: Teams-Registerkarte „Ausgehender Webhook“
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 93cdadbbb0e14a174d84a8fd0a71e5b4f77c0af4
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: fab709bc8a6fe35db527b911567dab0b6a20717d
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104021"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123780"
 ---
 # <a name="create-an-incoming-webhook"></a>Erstellen eines eingehenden Webhooks
 
@@ -89,6 +89,12 @@ Führen Sie die folgenden Schritte aus, um einen eingehenden Webhook aus einem T
 1. Füllen Sie die Felder des Dialogfelds und die Kontrollkästchen aus, und wählen Sie **Entfernen** aus.
 
     ![Endgültiges Entfernen](~/assets/images/finalremove.png)
+
+## <a name="code-sample"></a>Codebeispiel
+
+| Beispielname           | Beschreibung | C#    | Node.js   |
+|:---------------------|:--------------|:---------|:--------|
+|Eingehender Webhook|Dieser Beispielcode veranschaulicht das Senden einer Karte mithilfe des eingehenden Webhooks. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs) |
 
 ## <a name="see-also"></a>Siehe auch
 

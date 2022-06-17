@@ -1,17 +1,16 @@
 ---
 title: Gestalten Ihrer Nachrichtenerweiterung
-description: Erfahren Sie, wie Sie eine Teams-Nachrichtenerweiterung entwerfen und das Microsoft Teams-UI-Kit erhalten.
-keywords: Verweis auf Teams-Gestaltungsrichtlinien für Nachrichtenerweiterungen – Tipps Best Praxis
+description: Erfahren Sie, wie Sie eine Teams-Nachrichtenerweiterung entwerfen und das Microsoft Teams-UI-Kit erhalten. Beschreibt Teams-Gestaltungsrichtlinien für Nachrichtenerweiterungen – Tipps Best Praxis
 author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: 4021f52359d2c97382fa988679bbfe2f9bd0ecab
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: f7da87ecbacbf5632b0aea9ec8aa5142443acace
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104098"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123948"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Entwerfen Ihrer Microsoft Teams-Nachrichtenerweiterung
 

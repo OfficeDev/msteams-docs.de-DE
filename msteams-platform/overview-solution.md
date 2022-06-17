@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 2df7bf928109c1616bebf99d895c953c4a420e9a
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 1f2422f6e5c32e30bba80141e53a6ab60b08e08b
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795133"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123545"
 ---
 # <a name="the-teams-solution"></a>Die Teams-Lösung
 
@@ -71,7 +71,7 @@ Vom Entwurf bis zur Erstellung und Vermarktung einer Teams-App können Sie versc
 1. Planen Sie Ihr Projekt und ermitteln Sie die Anforderung.
 1. Entwerfen Sie die App. Verwenden Sie Teams UI Kit und UI Library für die Gestaltung der Benutzeroberfläche von Registerkarten.
 1. Erstellen Sie die App mit JavaScript mithilfe des Teams-Toolkits.
-1. Erweitern Sie die Funktionalität, indem Sie weitere Teams-Funktionen und M365-Daten mit Microsoft Graph hinzufügen.
+1. Erweitern Sie die Funktionalität, indem Sie weitere Teams-Funktionen und Microsoft 365-Daten mit Microsoft Graph hinzufügen.
 1. Testen Sie die App auf einem Entwicklermandanten mit Beispiel-Nutzerdaten.
 1. Stellen Sie die App in Azure bereit.
 1. Verwalten und Veröffentlichen der Apps im Store mit dem Developer Portal. Monetarisieren Sie Ihre App mit Optionen wie SaaS-Angeboten, In-App-Käufen uvm.

@@ -1,17 +1,16 @@
 ---
 title: Vorbereiten der Übermittlung an den Store
-description: Beschreibt die letzten Schritte, bevor Sie Ihre Microsoft Teams-App übermitteln, die im Store aufgeführt werden soll. Erfahren Sie, wie Sie Ihr App-Paket überprüfen, Testanweisungen kompilieren und Details zum Store-Eintrag erstellen.
+description: Lernen Sie die letzten Schritte kennen, bevor Sie Ihre Microsoft Teams-App übermitteln, die im Store aufgeführt werden soll. Erfahren Sie, wie Sie Ihr App-Paket überprüfen und vieles mehr.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-keywords: Verteilen von Validierungsrichtlinien für App-Pakete im Übermittlungsspeicher lokalisieren
-ms.openlocfilehash: 81c453a69b0c552c3e2db07edb6fd795d9c068ae
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: c71579900f910d2677ab0d48bab5a37853dfb69c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033008"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123167"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Vorbereiten der Übermittlung an den Microsoft Teams Store
 
@@ -20,7 +19,7 @@ Sie haben Ihre Microsoft Teams-App entworfen, erstellt und getestet. Jetzt könn
 Sehen Sie sich das folgende Video an, um mehr über die Veröffentlichung Ihrer Anwendung im Microsoft Teams App Store zu erfahren:
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 Bevor Sie Ihre App beim[Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource)einreichen, sollten Sie Folgendes tun.
