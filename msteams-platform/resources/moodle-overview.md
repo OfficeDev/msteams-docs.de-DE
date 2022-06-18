@@ -4,12 +4,12 @@ description: Lernen Sie die Moodle LMS-Integration mit Teams, Moodle-Lernmanagem
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 61182fe5c11ba5c399d720ae043671983e262b1c
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: e782c6361be7a6ca95b6a21baf88bee63461f139
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124025"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143305"
 ---
 # <a name="moodle-learning-management-system"></a>Moodle-Lernverwaltungssystem
 
@@ -17,7 +17,7 @@ ms.locfileid: "66124025"
 
 * Audio- oder Videoanrufe
 * Mit Schülern/Studenten chatten
-* Kurs- und Aktivitätsverwaltung
+* Kurse und Aktivitäten
 * Badges und Belohnungen
 * Analytische Erkenntnisse
 

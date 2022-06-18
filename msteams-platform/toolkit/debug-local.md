@@ -1,16 +1,16 @@
 ---
 title: Debuggen Sie Ihre Teams-App
-description: Debuggen Sie Ihre Teams-App lokal im Teams-Toolkit
+description: In diesem Modul lernen Sie, wie Sie Ihre Teams-App lokal im Teams-Toolkit und wichtige Features des Teams-Toolkits debuggen.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 5615175ef6dac7f232f276c73f2991db8433224c
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5cc1d14122a7977170e3c4fa04aba782b0146af9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123976"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142227"
 ---
 # <a name="debug-your-teams-app-locally"></a>Lokales Debuggen Ihrer Teams-App
 
@@ -58,7 +58,7 @@ Wenn Sie das lokale Debuggen abgeschlossen haben, können Sie auf der unveranker
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="Debuggen beenden":::
 
-## <a name="debug-your-teams-app-locally"></a>Lokales Debuggen Ihrer Teams-App
+## <a name="debug-your-app-locally"></a>Lokales Debuggen Ihrer App
 
 Die folgenden Schritte helfen Ihnen beim lokalen Debuggen Ihrer Teams-App:
 

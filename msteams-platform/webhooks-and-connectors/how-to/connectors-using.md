@@ -1,16 +1,15 @@
 ---
 title: Nachrichten erstellen und senden
 author: laujan
-description: Beschreibt die Verwendung von Office 365-Connectors in Microsoft Teams
+description: In diesem Modul erfahren Sie, wie Sie Office 365-Connectors verwenden und Aktionen erfordernde Nachrichten in Microsoft Teams erstellen und senden.
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: Teams-Office365-Connector
-ms.openlocfilehash: a8c4c5cc9b0db3b1bb41477e413af7c864a493c4
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 86fe2237b5cf92c4fbc345f171cc8365baa0f348
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104077"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143263"
 ---
 # <a name="create-and-send-messages"></a>Nachrichten erstellen und senden
 

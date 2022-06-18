@@ -1,15 +1,15 @@
 ---
-title: Häufig gestellte Fragen
-description: In diesem Lernartikel finden Sie Antworten auf einige häufig gestellte Fragen, während Sie das Moodle LMS verwenden.
+title: Häufig gestellte Fragen zu Moodle
+description: In diesem Artikel erhalten Sie Antworten auf einige häufig gestellte Fragen zum Verwenden von Moodle LMS.
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 532a7b9c36cff3bf7499d909ddd260fa0c1785b3
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 45323bf169be059f96cedb797c29d9408f3564e6
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123482"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143102"
 ---
 # <a name="moodle-faq"></a>Häufig gestellte Fragen zu Moodle
 

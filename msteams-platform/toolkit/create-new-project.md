@@ -1,17 +1,17 @@
 ---
 title: Erstellen einer neuen Teams-App mit dem Teams-Toolkit
 author: zyxiaoyuer
-description: Erstellen einer neuen Teams-App mithilfe des Teams-Toolkits
+description: In diesem Modul erfahren Sie, wie Sie eine neue Teams-App mithilfe des Teams-Toolkits erstellen, eine neue Teams-App mithilfe von Ansichtsbeispielen erstellen.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: d44f757141d31faaf4639a58fbbd31e5729e6f02
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 4f85798c57c7816bed727e41adc69cf7dbc380d4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656152"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142220"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Erstellen einer neuen Teams-App mit dem Teams-Toolkit
 
@@ -20,7 +20,7 @@ Um eine neue Teams-App mithilfe des Teams-Toolkits zu erstellen, können Sie ein
 * [Erstellen einer neuen Teams-App](create-new-project.md#create-a-new-teams-app)
 * [Anzeigebeispiele](create-new-project.md#create-a-new-teams-app-using-view-samples)
 
-### <a name="create-a-new-teams-app"></a>Erstellen einer neuen Teams-App
+## <a name="create-a-new-teams-app"></a>Erstellen einer neuen Teams-App
 
 1. Öffnen Sie Visual Studio Code.
 1. Wählen Sie das Teams-Toolkit-Symbol :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: in der Visual Studio Code-Randleiste aus.
@@ -29,17 +29,16 @@ Um eine neue Teams-App mithilfe des Teams-Toolkits zu erstellen, können Sie ein
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Teams Toolkit-Randleiste":::
 
 1. Sie können **eine neue Teams-App erstellen** oder **von einem Musterbeispiel ausgehen** auswählen.
-   
+
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="App erstellen":::
-   
-1. Wenn Sie **eine neue Teams-App erstellen** auswählen, wird die folgende Abbildung mit Vorlagen aus drei Kategorien angezeigt: Szenariobasierte Teams-App, Basic Teams-App und Erweiterte Teams-Apps in Microsoft 365: 
+
+1. Wenn Sie **eine neue Teams-App erstellen** auswählen, wird die folgende Abbildung mit Vorlagen aus drei Kategorien angezeigt: Szenariobasierte Teams-App, Basic Teams-App und Erweiterte Teams-Apps in Microsoft 365:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Funktionen für Teams-App":::
 
 1. Wählen Sie mindestens eine Option aus, um mit dem Erstellen der Teams-App zu beginnen.
 
-
-### <a name="create-a-new-teams-app-using-view-samples"></a>Erstellen einer neuen Teams-App mithilfe von Anzeigebeispielen
+## <a name="create-a-new-teams-app-using-view-samples"></a>Erstellen einer neuen Teams-App mithilfe von Anzeigebeispielen
 
 Sie können eine neue App erstellen, indem Sie **Anzeigebeispiele** erkunden und ein vorhandenes Beispiel auswählen. Das ausgewählte Beispiel verfügt möglicherweise bereits über einige Funktionen, z. B. eine Aufgabenliste mit einem Azure-Back-End oder eine Integration in das Microsoft Graph-Toolkit.
 
@@ -50,7 +49,7 @@ Sie können eine neue App erstellen, indem Sie **Anzeigebeispiele** erkunden und
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="Anzeigebeispiele":::
 
     Der Beispielkatalog wird wie in der folgenden Abbildung dargestellt angezeigt:
-   
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/sample-gallery.png" alt-text="Beispielkatalog":::
 
   Sie können die Beispielgalerie wie folgt erkunden:
