@@ -1,15 +1,15 @@
 ---
 title: Entwerfen adaptiver Karten für Ihre App
-description: Erfahren Sie, wie Sie adaptive Karten für Teams entwerfen und das Microsoft Teams UI Kit erhalten.
+description: In diesem Modul erfahren Sie, wie Sie adaptive Karten für Ihre Teams-Apps entwerfen und das Kit für die Microsoft Teams-Benutzeroberfläche abrufen.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1575cfb4e5c97aaf5b4b849a32f3244b3d0626c7
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: f734f228575c3152d4f9498da6a7215cd1a98b8b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103902"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142661"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Entwerfen adaptiver Karten für Ihre Microsoft Teams-App
 
@@ -398,7 +398,7 @@ Hier ist der Code für die Implementierung des Entwurfsbeispiels, dem Sie folgen
 
 # <a name="design"></a>[Entwerfen](#tab/design)
 
-Wenn sich die Größe von etwas, das Sie anzeigen, nicht ändern muss, legen Sie die Spalten auf eine bestimmte Pixelbreite fest. Dieses Beispiel zeigt die linke Spalte mit einer Größe von 50 Pixeln, während die Beschreibungen neben den Miniaturbildern die Länge der Karte strecken
+Wenn sich die Größe von etwas, das Sie anzeigen, nicht ändern muss, legen Sie die Spalten auf eine bestimmte Pixelbreite fest. Dieses Beispiel zeigt die linke Spalte mit einer Größe von 50 Pixeln, während sich die Beschreibungen neben den Miniaturbildern über die Länge der Karte erstrecken.
 
 :::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="Abbildung zeigt, wie die Spaltenbreite in adaptiven Karten festgelegt wird.":::
 
