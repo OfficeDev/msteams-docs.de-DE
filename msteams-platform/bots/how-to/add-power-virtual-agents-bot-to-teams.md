@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie einen Power Virtual Agents Chatbot in die Tea
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: efcf87f490d923ce5c5c5e0c675063defce40a1c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 0f66a42cecbac25f82980c16e7f979c5d613816d
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143249"
+ms.locfileid: "66150848"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Hinzufügen eines Power Virtual Agent-Chatbots
 
@@ -23,7 +23,8 @@ Power Virtual Agents können Sie leistungsstarke Chatbots erstellen, die Fragen 
 Diese Bots können problemlos erstellt werden, ohne dass Data Scientists oder Entwickler benötigt werden müssen.
 
 > [!NOTE]
-> * Indem Sie Ihren Chatbot zu Microsoft Teams hinzufügen, werden einige der Daten, z. B. Bot-Inhalte und Benutzerchatinhalte, für Microsoft Teams freigegeben. Dies bedeutet, dass Ihre Daten außerhalb der [Compliance- und geografischen oder regionalen Grenzen Ihrer Organisation](/power-virtual-agents/data-location) fließen. <br/>
+>
+> * Indem Sie Ihren Chatbot zu Microsoft Teams hinzufügen, werden einige der Daten, z. B. Bot-Inhalte und Benutzerchatinhalte, mit Teams geteilt. Dies bedeutet, dass Ihre Daten außerhalb der [Compliance- und geografischen oder regionalen Grenzen Ihrer Organisation](/power-virtual-agents/data-location) fließen. <br/>
 > * Sie dürfen mit Microsoft Power Platform erstellte Apps nicht im Teams App Store veröffentlichen. Microsoft Power Platform-Apps können nur im App Store einer Organisation veröffentlicht werden.
 
 ## <a name="make-your-chatbot-available-in-teams-through-the-power-virtual-agents-portal"></a>Stellen Sie Ihren Chatbot über das Power Virtual Agents Portal in Teams zur Verfügung

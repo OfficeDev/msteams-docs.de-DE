@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über das Testen und Debuggen Ihres Bots lokal mi
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 95a52b02c864a65454a8a03fa9917c4a5d99fdb8
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c0fae3ccaf82eaf9e626a948959520d20dca3c01
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142892"
+ms.locfileid: "66150806"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Testen und Debuggen Ihres Bots lokal
 
@@ -57,11 +57,11 @@ Weitere Informationen finden Sie in den [vollständigen Anweisungen zum Bot Fram
 > [!Important]
 > Die Kommunikation mit Ihrem Bot per ID ist nur für grundlegende Testzwecke vorgesehen. Alle Teams-spezifischen Funktionen, die Sie Ihrem Bot hinzugefügt haben, funktionieren nicht.
 
-Initiieren Sie eine Unterhaltung mit Ihrem Bot mithilfe seiner ID. Wenn ein Bot über eine dieser Methoden hinzugefügt wird, ist er in Kanalunterhaltungen nicht adressierbar, und Sie können keine anderen Microsoft Teams App-Funktionen wie Registerkarten oder Nachrichtenerweiterungen nutzen. Initiieren Sie eine Unterhaltung auf eine der folgenden Arten:
+Initiieren Sie eine Unterhaltung mit Ihrem Bot mithilfe seiner ID. Wenn ein Bot über eine dieser Methoden hinzugefügt wird, ist er in Kanalunterhaltungen nicht adressierbar, und Sie können andere Teams App-Funktionen wie Registerkarten oder Nachrichtenerweiterungen nicht nutzen. Initiieren Sie eine Unterhaltung auf eine der folgenden Arten:
 
-* Wählen Sie auf der seite [Bot-Dashboard](https://dev.botframework.com/bots) für Ihren Bot unter **Kanäle** die Option **Zu Microsoft Teams hinzufügen** aus. Microsoft Teams startet einen persönlichen Chat mit Ihrem Bot.
+* Wählen Sie auf der seite [Bot-Dashboard](https://dev.botframework.com/bots) für Ihren Bot unter **Kanäle** die Option **Zu Microsoft Teams hinzufügen** aus. Teams startet einen persönlichen Chat mit Ihrem Bot.
 
-* Verweisen Sie direkt in Microsoft Teams auf die App-ID Ihres Bots:
+* Verweisen Sie direkt in Teams auf die App-ID Ihres Bots:
    1. Kopieren Sie auf der seite [Bot-Dashboard](https://dev.botframework.com/bots) für Ihren Bot unter **Details** die **Microsoft-App-ID** für Ihren Bot.
   
       ![Abrufen der AppID für den Bot](~/assets/images/bots_appid_botframework.png)
@@ -73,10 +73,10 @@ Initiieren Sie eine Unterhaltung mit Ihrem Bot mithilfe seiner ID. Wenn ein Bot 
       Die App-ID muss in Ihrem Botnamen aufgelöst werden.
 
    3. Wählen Sie Ihren Bot aus, und senden Sie eine Nachricht, um eine Unterhaltung zu starten.
-      Alternativ können Sie die App-ID Ihres Bots in das Suchfeld oben links in Microsoft Teams einfügen. Wechseln Sie auf der Suchergebnisseite zur Registerkarte **Personen**, um Ihren Bot anzuzeigen und damit zu chatten.
+      Alternativ können Sie die App-ID Ihres Bots in das Suchfeld oben links in Teams einfügen. Wechseln Sie auf der Suchergebnisseite zur Registerkarte **Personen**, um Ihren Bot anzuzeigen und damit zu chatten.
 
 > [!Note]
-> Damit Microsoft Teams auf die App-ID Ihres Bots verweisen kann, aktivieren Sie [Querladen von Apps](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+> Damit Teams auf die App-ID Ihres Bots verweisen können, aktivieren Sie [das Querladen von Apps](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 Ihr Bot empfängt das `conversationUpdate`-Ereignis, wenn Sie die Bots zu einem Team hinzufügen, jedoch ohne die Teaminformationen im `channelData`-Objekt.
 

@@ -4,12 +4,12 @@ keywords: Teams Apps Funktionen Berechtigungen
 description: Sichere Wiedereinführung der Unterstützung von Geräteberechtigungen für Apps in unserem Webclient
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: 0789715aebfd1db0c9d0100ccffb2ff213a10d1d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f1d25a94f25756e1beed66c430547a7f2f706c5f
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756744"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150813"
 ---
 # <a name="device-permissions-for-the-browser"></a>Geräteberechtigungen für den Browser
 
@@ -29,7 +29,7 @@ Nachdem die Option **App-Berechtigungen** ausgewählt wurde, wird ein Popup ange
 Ein Benutzer muss diese Berechtigungen im Browser aktivieren, damit diese Berechtigungen wirksam werden. Nachdem der Benutzer die Geräteberechtigungen der App im Browser geändert hat, wird er aufgefordert, die Anwendung in Teams neu zu laden.
 
 > [!IMPORTANT]
-> Sie müssen die Benutzer darauf hinweisen, wohin sie wechseln müssen, um diese **App-Berechtigungen** in Microsoft Teams zu aktivieren.
+> Sie müssen die Benutzer darauf aufmerksam machen, wohin sie gehen müssen, um diese **App-Berechtigungen** in Teams zu aktivieren.
 
 ## <a name="recommendation"></a>Empfehlung
 
@@ -46,7 +46,7 @@ Teams App, für die Geräteberechtigungen im Browser erforderlich sind, müssen 
 
 ## <a name="step-by-step-guide"></a>Schrittweise Anleitung
 
-Befolgen Sie die [Schritt-für-Schritt-Anleitung](../../sbs-tab-device-permissions.yml), um Registerkarten-Geräteberechtigungen in Microsoft Teams zu erteilen.
+Befolgen Sie die [schrittweise Anleitung, um Registerkartengeräteberechtigungen](../../sbs-tab-device-permissions.yml) in Teams zu erteilen.
 
 ## <a name="see-also"></a>Siehe auch
 

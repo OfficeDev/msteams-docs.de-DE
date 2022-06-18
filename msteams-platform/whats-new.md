@@ -1,14 +1,14 @@
 ---
 title: Neuerungen für Entwickler in Teams
-description: In diesem Lernpfad erfahren Sie mehr über die neuen Entwicklerfeatures und Verbesserungen an diesen Features in Microsoft Teams.
+description: In diesem Lernpfad erfahren Sie mehr über die neuen Entwicklerfeatures und Verbesserungen für diese Features in Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e7c361ab7ee2579e3b28df0e8d6f22538c8f4d52
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 0b7c2078980748f8e0820348e23a22c57ac7c22f
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123188"
+ms.locfileid: "66130466"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -47,6 +47,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
+| 16.06.2022 | Aktualisierte Medienfunktionen zur Unterstützung von Desktop und Mobilgeräten| Integrieren von Gerätefunktionen > [Integrieren von Medienfunktionen](concepts/device-capabilities/media-capabilities.md)|
 | 06/08/2022 | Optionales Kartenfeedback für Erfolgsmeldungen| Bots erstellen > Bot-Unterhaltungen >[Nachrichten in Bot-Unterhaltungen](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 03.06.2022 | Das Modul „Authentifizierung hinzufügen“ zum Aktivieren von SSO für die Registerkarten-App mit neuer Struktur und neuen Prozeduren wurde aktualisiert. | Authentifizierung hinzufügen > Registerkarten > [Aktivieren von Single Sign-On in einer Registerkarten-App](tabs/how-to/authentication/tab-sso-overview.md) |
 | 24.05.2022 | Weitere Tipps für eine schnelle Genehmigung zum Veröffentlichen Ihrer App in Verbindung mit einem SaaS-Angebot | Veröffentlichen im Teams Store > Übersicht > [Weitere Tipps für eine schnelle Genehmigung zum Veröffentlichen Ihrer App in Verbindung mit einem SaaS-Angebot](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
@@ -151,9 +152,9 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 |05.03.2021|Standardinstallationsbereich und Gruppenfunktion | Vermarkten Ihrer App > [Standard-Installationsbereich und Gruppenfunktion](concepts/deploy-and-publish/add-default-install-scope.md) |
 |05.03.2021|Neuanordnen persönlicher App-Registerkarten | Erstellen von Registerkarten > [Neuanordnen der Registerkarte „Chat“ in persönlichen Apps](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs) |
 |04.03.2021|Maskieren von Information in adaptiven Karten | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Information ausblenden in Adaptiven Karten](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
-|19.02.2021|Standortfunktionen hinzugefügt. <br/> Informationen zu Standortfunktionen werden in den Dateien für die Übersicht der Gerätefunktionen, die nativen Geräteberechtigungen, dem Integrieren von Medienfunktionen und den Funktionen für QR- oder Barcode-Scanner hinzugefügt | • App-Grundlagen > Gerätefunktionen > [Übersicht](concepts/device-capabilities/device-capabilities-overview.md) </br> • App-Grundlagen > Gerätefunktionen > [Anfordern von Geräteberechtigungen](concepts/device-capabilities/native-device-permissions.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von Medienfunktionen](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von QR- oder Barcode-Scannerfunktionen](concepts/device-capabilities/qr-barcode-scanner-capability.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von Standortfunktionen](concepts/device-capabilities/location-capability.md) |
-|18.02.2021|QR- oder Barcode-Scannerfunktion hinzugefügt. <br/> Die Informationen zu Funktionen der QR- oder Barcode-Scanner werden in den Dateien für die Übersicht der Gerätefunktionen, die nativen Geräteberechtigungen und zum Integrieren von Medienfunktionen hinzugefügt | • App-Grundlagen > Gerätefunktionen > [Übersicht](concepts/device-capabilities/device-capabilities-overview.md) </br> • App-Grundlagen > Gerätefunktionen > [Anfordern von Geräteberechtigungen](concepts/device-capabilities/native-device-permissions.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von Medienfunktionen](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von QR- oder Barcode-Scannerfunktionen](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
-|09.02.2021|Übersicht über die hinzugefügten Gerätefunktionen. <br/> Die Informationen zur Mikrofonfunktion werden in den Dateien für die nativen Geräteberechtigungen und zum Integrieren von Medienfunktionen hinzugefügt. |• App-Grundlagen > Gerätefunktionen > [Übersicht](concepts/device-capabilities/device-capabilities-overview.md) </br> App-Grundlagen > • Gerätefunktionen > [Anfordern von Geräteberechtigungen](concepts/device-capabilities/native-device-permissions.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von Medienfunktionen](concepts/device-capabilities/mobile-camera-image-permissions.md)|
+|19.02.2021|Standortfunktionen hinzugefügt. <br/> Informationen zu Standortfunktionen werden in den Dateien für die Übersicht der Gerätefunktionen, die nativen Geräteberechtigungen, dem Integrieren von Medienfunktionen und den Funktionen für QR- oder Barcode-Scanner hinzugefügt | • App-Grundlagen > Gerätefunktionen > [Übersicht](concepts/device-capabilities/device-capabilities-overview.md) </br> • App-Grundlagen > Gerätefunktionen > [Anfordern von Geräteberechtigungen](concepts/device-capabilities/native-device-permissions.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von Medienfunktionen](concepts/device-capabilities/media-capabilities.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von QR- oder Barcode-Scannerfunktionen](concepts/device-capabilities/qr-barcode-scanner-capability.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von Standortfunktionen](concepts/device-capabilities/location-capability.md) |
+|18.02.2021|QR- oder Barcode-Scannerfunktion hinzugefügt. <br/> Die Informationen zu Funktionen der QR- oder Barcode-Scanner werden in den Dateien für die Übersicht der Gerätefunktionen, die nativen Geräteberechtigungen und zum Integrieren von Medienfunktionen hinzugefügt | • App-Grundlagen > Gerätefunktionen > [Übersicht](concepts/device-capabilities/device-capabilities-overview.md) </br> • App-Grundlagen > Gerätefunktionen > [Anfordern von Geräteberechtigungen](concepts/device-capabilities/native-device-permissions.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von Medienfunktionen](concepts/device-capabilities/media-capabilities.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von QR- oder Barcode-Scannerfunktionen](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
+|09.02.2021|Übersicht über die hinzugefügten Gerätefunktionen. <br/> Die Informationen zur Mikrofonfunktion werden in den Dateien für die nativen Geräteberechtigungen und zum Integrieren von Medienfunktionen hinzugefügt. |• App-Grundlagen > Gerätefunktionen > [Übersicht](concepts/device-capabilities/device-capabilities-overview.md) </br> App-Grundlagen > • Gerätefunktionen > [Anfordern von Geräteberechtigungen](concepts/device-capabilities/native-device-permissions.md) </br> • App-Grundlagen > Gerätefunktionen > [Integrieren von Medienfunktionen](concepts/device-capabilities/media-capabilities.md)|
 
 <br>
 
@@ -265,7 +266,7 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
-| 16.06.2022 | Link zum Freigeben für Teams aus Web-Apps| Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus Web Apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
+| 16.06.2022 | Link zum Freigeben für Teams aus Web-Apps entfalten| Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus Web-Apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 06/06/2022| Aktualisieren Sie Konversations- und Installationsereignisse in Ihrem Teams-Bot |  Bots erstellen > Bot-Konversationen > Konversationsereignisse in Ihrem Teams-Bot > [Konversationsereignisse in Ihrem Teams-Bot](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |24.05.2022| Verbesserte Zusammenarbeit mit Live Share SDK |  Erstellen von Apps für Teams-Besprechungen > Verbesserte Zusammenarbeit mit Live Share > [Übersicht](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 06.04.2022 | Für Teams über persönliche App oder Registerkarte freigeben | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus einer persönlichen App oder Registerkarte](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |

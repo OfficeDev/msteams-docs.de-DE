@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie einem Bot in Teams mithilfe von Azure Active 
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 2a9ebf96f5795b6674646bc50dd856badf59152e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c66425550bdb989d8e0cb55d806a5e6b8fc92d6a
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142563"
+ms.locfileid: "66150764"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Authentifizierung für Ihren Teams-Bot hinzufügen
 
@@ -189,7 +189,7 @@ In diesem Verfahren verwenden Sie einen Azure AD-Anbieter. andere von Azure AD u
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>Konfigurieren der Identitätsanbieterverbindung und Registrieren beim Bot
 
-Hinweis: Hier gibt es zwei Optionen für Dienstanbieter: Microsoft Azure Active Directory (Azure AD) V1 und Microsoft Azure Active Directory (Azure AD) V2.  Die Unterschiede zwischen den beiden Anbietern werden [hier](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison) zusammengefasst. Im Allgemeinen bietet V2 jedoch mehr Flexibilität in Bezug auf das Ändern von Botberechtigungen.  Graph-API-Berechtigungen werden im Feld "Bereiche" aufgeführt, und wenn neue hinzugefügt werden, ermöglichen Bots Benutzern, den neuen Berechtigungen bei der nächsten Anmeldung zuzustimmen.  Für V1 muss die Bot-Zustimmung vom Benutzer gelöscht werden, damit neue Berechtigungen im OAuth-Dialogfeld angezeigt werden.
+Beachten Sie, dass es hier zwei Optionen für Dienstanbieter gibt: Azure AD V1 und Azure AD V2.  Die Unterschiede zwischen den beiden Anbietern werden [hier](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison) zusammengefasst. Im Allgemeinen bietet V2 jedoch mehr Flexibilität in Bezug auf das Ändern von Botberechtigungen.  Graph-API-Berechtigungen werden im Feld "Bereiche" aufgeführt, und wenn neue hinzugefügt werden, ermöglichen Bots Benutzern, den neuen Berechtigungen bei der nächsten Anmeldung zuzustimmen.  Für V1 muss die Bot-Zustimmung vom Benutzer gelöscht werden, damit neue Berechtigungen im OAuth-Dialogfeld angezeigt werden.
 
 #### <a name="microsoft-azure-active-directory-azure-ad-v1"></a>Microsoft Azure Active Directory (Azure AD) V1
 
@@ -211,7 +211,7 @@ In der folgenden Abbildung wird die entsprechende Auswahl auf der Ressourcenseit
 
         - Wenn Sie entweder "*Konten" nur in diesem Organisationsverzeichnis (nur Microsoft – einzelner Mandant)* oder *"Konten" in einem beliebigen Organisationsverzeichnis (Microsoft Azure Active Directory (Azure AD) – Mehrere Mandanten)* ausgewählt haben, geben Sie die **Mandanten-ID** ein, die Sie zuvor für die Microsoft Azure Active Directory (Azure) aufgezeichnet haben. AD) app. Dies ist der Mandant, der den Benutzern zugeordnet ist, die authentifiziert werden können.
 
-        - Wenn Sie *"Konten" in einem Beliebigen Organisationsverzeichnis (Any Microsoft Azure Active Directory (Azure AD) ausgewählt haben, geben* Sie anstelle einer Mandanten-ID das Wort **"common**" (Mehrere Mandanten- und persönliche Microsoft-Konten, z. B. Skype, Xbox, Outlook) ein. Andernfalls überprüft die Microsoft Azure Active Directory-App (Azure AD) den Mandanten, dessen ID ausgewählt wurde, und schließt persönliche Microsoft-Konten aus.
+        - Wenn Sie *"Konten" in einem Beliebigen Organisationsverzeichnis (Any Microsoft Azure Active Directory (Azure AD) ausgewählt haben, geben* Sie anstelle einer Mandanten-ID das Wort **"common**" (Mehrere Mandanten- und persönliche Microsoft-Konten, z. B. Skype, Xbox, Outlook) ein. Andernfalls überprüft die Azure AD -App (Azure AD) über den Mandanten, dessen ID ausgewählt wurde, und schließt persönliche Microsoft-Konten aus.
 
     h. Geben Sie für die **Ressourcen-URL** "`https://graph.microsoft.com/`" ein. Dies wird im aktuellen Codebeispiel nicht verwendet.  
     i. Lassen Sie das Feld **Bereiche** leer. Die folgende Abbildung dient lediglich als Beispiel:
@@ -230,15 +230,15 @@ In der folgenden Abbildung wird die entsprechende Auswahl auf der Ressourcenseit
 1. Füllen Sie das Formular wie folgt aus:
 
     1. **Name**. Geben Sie einen Namen für die Verbindung ein. Sie verwenden diesen Namen in Ihrem Bot in der `appsettings.json`-Datei. Beispiel: *BotTeamsAuthADv2*.
-    1. **Dienstanbieter**. Wählen Sie **Microsoft Azure Active Directory v2** aus. Sobald Sie diese Option ausgewählt haben, werden die Microsoft Azure Active Directory(Azure AD)-spezifischen Felder angezeigt.
+    1. **Dienstanbieter**. Wählen Sie **Microsoft Azure Active Directory v2** aus. Sobald Sie dies ausgewählt haben, werden die Azure AD-spezifischen Felder angezeigt.
     1. **Client-ID**. Geben Sie in den obigen Schritten die Anwendungs-ID (Client-ID) ein, die Sie für Ihre Azure Identity Provider-App notiert haben.
     1. **Geheimer Clientschlüssel**. Geben Sie in den obigen Schritten den geheimen Schlüssel ein, den Sie für Ihre Azure Identity Provider-App notiert haben.
     1. **Tokenaustausch-URL**. Lassen Sie dieses Feld leer.
     1. **Mandanten-ID**. Geben Sie die **Directory-ID (Mandant)** ein, die Sie zuvor für Ihre Azure-Identitäts-App notiert haben, oder **Allgemeines**, je nachdem, welchen unterstützten Kontotyp Sie beim Erstellen der Identitätsanbieter-App ausgewählt haben. Um zu entscheiden, welcher Wert zugewiesen werden soll, befolgen Sie die folgenden Kriterien:
 
-        - Wenn Sie entweder "*Konten" nur in diesem Organisationsverzeichnis (nur Microsoft – einzelner Mandant)* oder *"Konten" in einem beliebigen Organisationsverzeichnis (Microsoft Azure Active Directory – Mehrere Mandanten*) ausgewählt haben, geben Sie die **Mandanten-ID** ein, die Sie zuvor für die Microsoft Azure Active Directory(Azure AD)-App aufgezeichnet haben. Dies ist der Mandant, der den Benutzern zugeordnet ist, die authentifiziert werden können.
+        - Wenn Sie entweder "*Konten" nur in diesem Organisationsverzeichnis (nur Microsoft – einzelner Mandant)* oder *"Konten" in einem beliebigen Organisationsverzeichnis (Microsoft Azure Active Directory – Mehrere Mandanten)* ausgewählt haben, geben Sie die **Mandanten-ID** ein, die Sie zuvor für die Azure AD-App aufgezeichnet haben. Dies ist der Mandant, der den Benutzern zugeordnet ist, die authentifiziert werden können.
 
-        - Wenn Sie *"Konten" in einem Beliebigen Organisationsverzeichnis (Any Microsoft Azure Active Directory (Azure AD) ausgewählt haben, geben* Sie anstelle einer Mandanten-ID das Wort **"common**" (Mehrere Mandanten- und persönliche Microsoft-Konten, z. B. Skype, Xbox, Outlook) ein. Andernfalls überprüft die Microsoft Azure Active Directory-App (Azure AD) den Mandanten, dessen ID ausgewählt wurde, und schließt persönliche Microsoft-Konten aus.
+        - Wenn Sie *"Konten" in einem Beliebigen Organisationsverzeichnis (Any Microsoft Azure Active Directory (Azure AD) ausgewählt haben, geben* Sie anstelle einer Mandanten-ID das Wort **"common**" (Mehrere Mandanten- und persönliche Microsoft-Konten, z. B. Skype, Xbox, Outlook) ein. Andernfalls überprüft die Azure AD-App den Mandanten, dessen ID ausgewählt wurde, und schließt persönliche Microsoft-Konten aus.
 
     1. Geben Sie für Bereiche eine durch Leerzeichen getrennte Liste von **Diagrammberechtigungen** ein, die diese Anwendung benötigt, z. B.: User.Read User.ReadBasic.All Mail.Read
 
@@ -452,8 +452,8 @@ Der folgende Assistent wird angezeigt:
 
 ### <a name="testing-the-bot-locally-in-teams"></a>Testen des Bots lokal in Teams
 
-Microsoft Teams ein vollständig cloudbasiertes Produkt ist, und alle Dienste, auf die es zugreift, müssen aus der Cloud über HTTPS-Endpunkte verfügbar sein. Damit der Bot (unser Beispiel) in Teams funktioniert, müssen Sie daher entweder den Code in der Cloud Ihrer Wahl veröffentlichen oder eine lokal ausgeführte Instanz extern über ein **Tunneling**-Tool zugänglich machen. Wir empfehlen [ngrok](https://ngrok.com/download), wodurch eine extern adressierbare URL für einen Port erstellt wird, den Sie lokal auf Ihrem Computer öffnen.
-Führen Sie die folgenden Schritte aus, um ngrok in Vorbereitung auf die lokale Ausführung Ihrer Microsoft Teams-App einzurichten:
+Teams ein vollständig cloudbasiertes Produkt ist, müssen alle Dienste, auf die es zugreift, über HTTPS-Endpunkte aus der Cloud verfügbar sein. Damit der Bot (unser Beispiel) in Teams funktioniert, müssen Sie daher entweder den Code in der Cloud Ihrer Wahl veröffentlichen oder eine lokal ausgeführte Instanz extern über ein **Tunneling**-Tool zugänglich machen. Wir empfehlen [ngrok](https://ngrok.com/download), wodurch eine extern adressierbare URL für einen Port erstellt wird, den Sie lokal auf Ihrem Computer öffnen.
+Führen Sie die folgenden Schritte aus, um ngrok in Vorbereitung auf die lokale Ausführung Ihrer Teams-App einzurichten:
 
 1. Wechseln Sie in einem Terminalfenster zu dem Verzeichnis, in dem Sie `ngrok.exe` installiert haben. Es wird empfohlen, den Pfad *Umgebungsvariable* so festzulegen, dass er darauf zeigt.
 1. Führen Sie z. B `ngrok http 3978 --host-header=localhost:3978` aus. Ersetzen Sie die Portnummer nach Bedarf.
@@ -462,7 +462,7 @@ Dadurch wird ngrok gestartet, um den von Ihnen angegebenen Port lauschen zu kön
     ![teams bot app auth connection string adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
 1. Kopieren Sie die HTTPS-Adresse unter Forwarding. Sie sieht folgendermaßen aus: `https://dea822bf.ngrok.io/`.
-1. Fügen Sie `/api/messages` an, um `https://dea822bf.ngrok.io/api/messages` abzurufen. Dies ist der **Nachrichtenendpunkt** für den Bot, der lokal auf Ihrem Computer ausgeführt wird und in einem Chat in Microsoft Teams über das Web erreichbar ist.
+1. Fügen Sie `/api/messages` an, um `https://dea822bf.ngrok.io/api/messages` abzurufen. Dies ist der **Nachrichtenendpunkt** für den Bot, der lokal auf Ihrem Computer ausgeführt wird und über das Web in einem Chat in Teams erreichbar ist.
 1. Ein letzter Schritt besteht darin, den Nachrichtenendpunkt des bereitgestellten Bots zu aktualisieren. Im Beispiel haben wir den Bot in Azure bereitgestellt. Führen wir also die folgenden Schritte aus:
     1. Navigieren Sie in Ihrem Browser zum [**Azure-Portal**][azure-portal].
     1. Wählen Sie Ihre **Bot-Registrierung** aus.
@@ -481,7 +481,7 @@ Dadurch wird ngrok gestartet, um den von Ihnen angegebenen Port lauschen zu kön
 
 ### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.json
 
-Dieses Manifest enthält Informationen, die von Microsoft Teams benötigt werden, um eine Verbindung mit dem Bot herzustellen:  
+Dieses Manifest enthält Informationen, die von Teams benötigt werden, um eine Verbindung mit dem Bot herzustellen:  
 
 ```json
 {
@@ -635,7 +635,7 @@ Dieser Abschnitt enthält ein Beispiel für botauthentifizierung v3 SDK.
 
 | **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| Bot-Authentifizierung | In diesem Beispiel wird gezeigt, wie Sie mit der Authentifizierung in einem Bot für Microsoft Teams beginnen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Bot-Authentifizierung | In diesem Beispiel wird gezeigt, wie Sie mit der Authentifizierung in einem Bot für Teams beginnen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 | Registerkarten-, Bot- und Nachrichtenerweiterungs-SSO (ME) | Dieses Beispiel zeigt SSO für Tab, Bot und ME – Suche, Aktion, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Nicht verfügbar |
 
 ## <a name="see-also"></a>Siehe auch

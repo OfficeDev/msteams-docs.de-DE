@@ -5,18 +5,18 @@ description: Erfahren Sie, wie Sie systemeigene Gerätefunktionen wie Kamera, Bi
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 8795e3caef1582fca10ad8e0c396d98ef7b80422
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: de79edb8e751c302dd685d74a7f477e50178eaec
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130431"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150673"
 ---
 # <a name="device-capabilities"></a>Gerätefunktionen
 
 Die Microsoft Teams-Plattform verbessert kontinuierlich die Entwicklerfunktionen, die sich an integrierten First-Party-Erfahrungen ausrichten. Die erweiterte Teams-Plattform ermöglicht es Partnern, Gerätefunktionen wie Kamera, QR- oder Barcode-Scanner, Fotogalerie, Mikrofon und Standort in ihre Web-Apps zu integrieren. Diese Integration reduziert die Barrieren für die App-Entwicklung, beschleunigt den Entwicklungszyklus und schafft neue Szenarien oder Anwendungsfälle für die Entwickler-Community.
 
-Geräteberechtigungen sind im Browser unterschiedlich. Zuvor hat der Browser die Erteilung von Zugriffsberechtigungen gehandhabt, und jetzt werden diese Berechtigungen in Microsoft Teams gehandhabt. Weitere Informationen finden Sie unter [Browsergeräteberechtigungen](browser-device-permissions.md).
+Geräteberechtigungen sind im Browser unterschiedlich. Zuvor hat der Browser behandelt, wie Zugriffsberechtigungen erteilt werden, und jetzt werden diese Berechtigungen in Teams behandelt. Weitere Informationen finden Sie unter [Browsergeräteberechtigungen](browser-device-permissions.md).
 
 ## <a name="native-device-capabilities"></a>Systemeigene Gerätefunktionen
 
@@ -50,4 +50,4 @@ Außerdem können Sie das systemeigene [Personenauswahl-Steuerelement](people-pi
 
 | Beispielname           | Beschreibung | Node.js    |
 |:---------------------|:--------------|:---------|
-|Geräteberechtigungen | Beschreibt, wie Microsoft Teams Registerkarten-Beispiel-App für Geräteberechtigungen veranschaulicht wird. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
+|Geräteberechtigungen | Beschreibt, wie Teams Registerkarten-Beispiel-App für Geräteberechtigungen veranschaulicht wird. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

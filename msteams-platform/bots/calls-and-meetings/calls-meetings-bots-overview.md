@@ -3,12 +3,12 @@ title: Bots für Anrufe und Onlinebesprechungen
 description: In diesem Modul erfahren Sie, wie Ihre Microsoft Teams-Apps mit Benutzern per Sprach- und Videofunktion mithilfe von Microsoft Graph-APIs für Anrufe und Onlinebesprechungen interagieren können, und erfahren Sie mehr über Echtzeitmedienströme.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bbeca082a561386d6c64d08e1d303975f9746f0a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 2fe13adaf662d70e7ca9e7f1ca3d73bac0208f53
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143851"
+ms.locfileid: "66150827"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots für Anrufe und Onlinebesprechungen
 
@@ -51,7 +51,7 @@ Im Folgenden sind die verschiedenen Anruftypen und -berechtigungen aufgeführt, 
 * Ein Benutzer kann einen Peer-to-Peer-Anruf mit Ihrem Bot starten oder den Bot zu einem bestehenden Anruf mit mehreren Teilnehmern einladen. Der Anruf mit mehreren Teilnehmern ist in der Teams-Benutzeroberfläche noch nicht aktiviert.
 
     > [!NOTE]
-    > Vom Benutzer initiierte Anrufe an einen Bot werden derzeit auf der mobilen Microsoft Teams-Plattform nicht unterstützt.
+    > Vom Benutzer initiierte Aufrufe an einen Bot werden derzeit auf Teams mobilen Plattform nicht unterstützt.
 
 * Graph-Berechtigungen sind nicht erforderlich, damit ein Benutzer einen Peer-to-Peer-Anruf mit Ihrem Bot initiiert. Zusätzliche Berechtigungen sind erforderlich, damit Ihr Bot an einem Anruf mit mehreren Teilnehmern teilnimmt oder damit der Bot einen Peer-to-Peer-Anruf mit einem Benutzer initiiert.
 * Ein Anruf kann als Peer-to-Peer-Anruf beginnen und schließlich zu einem Anruf mit mehreren Teilnehmern werden. Ihr Bot kann Anrufe mit mehreren Teilnehmern initiieren, indem er andere Teilnehmer einlädt, sofern der Bot die richtigen Berechtigungen besitzt. Wenn Ihr Bot nicht die Berechtigungen besitzt, um an Gruppenanrufen teilzunehmen, und wenn ein Teilnehmer einen anderen Teilnehmer zu dem Anruf hinzufügt, wird der Bot aus dem Anruf ausgeschlossen.

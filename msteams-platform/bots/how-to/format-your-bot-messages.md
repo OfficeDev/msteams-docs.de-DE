@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie Ihren Bot-Nachrichten umfangr
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 3bb58062a449d9122940064416cc621fc65603d1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d50f47cde4c0e6af37ccffe4654109beeea73f8b
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143480"
+ms.locfileid: "66150787"
 ---
 # <a name="format-your-bot-messages"></a>Formatieren von Bot-Nachrichten
 
@@ -36,7 +36,7 @@ Derzeit gelten die folgenden Einschränkungen für die Formatierung:
 * Funktionsreiche Karten unterstützen die Formatierung nur in der Texteigenschaft, nicht in den Titel- oder Untertiteleigenschaften.
 * Funktionsreiche Karten unterstützen keine Markdown- oder Tabellenformatierung.
 
-Stellen Sie nach dem Formatieren von Textinhalten sicher, dass die Formatierung auf allen Plattformen funktioniert, die von Microsoft Teams unterstützt werden.
+Stellen Sie nach dem Formatieren von Textinhalten sicher, dass die Formatierung auf allen Plattformen funktioniert, die von Teams unterstützt werden.
 
 ## <a name="cross-platform-support"></a>Plattformübergreifender Support
 

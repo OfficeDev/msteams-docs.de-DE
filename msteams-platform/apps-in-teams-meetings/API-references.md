@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie die Besprechungs-Apps-API-Verweise mit Beispi
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 380f470c51933e4be90d008261ab75eafc566f2c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 018aa14b72a63575deaefb8ee53f7fe4de7474ef
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142948"
+ms.locfileid: "66150659"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
@@ -27,7 +27,7 @@ Die folgende Tabelle enthält eine Liste der APIs, die in den Microsoft Teams Cl
 
 |Methode| Beschreibung| Quelle|
 |---|---|----|
-|[**Benutzerkontext abrufen**](#get-user-context-api)| Rufen Sie kontextbezogene Informationen ab, um relevante Inhalte auf einer Registerkarte „Teams“ anzuzeigen.| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**Benutzerkontext abrufen**](#get-user-context-api)| Rufen Sie kontextbezogene Informationen ab, um relevante Inhalte auf einer Microsoft Teams Registerkarte anzuzeigen.| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
 |[**Teilnehmer abrufen**](#get-participant-api)| Rufen Sie Teilnehmerinformationen nach Meeting-ID und Teilnehmer-ID ab. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**Senden Sie eine Besprechungsbenachrichtigung**](#send-an-in-meeting-notification)| Stellen Sie Meeting-Signale mithilfe der vorhandenen Konversationsbenachrichtigungs-API für den Benutzer-Bot-Chat bereit und ermöglichen Sie die Benachrichtigung von Benutzeraktionen, die eine Benachrichtigung im Meeting anzeigen. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Besprechungsdetails abrufen**](#get-meeting-details-api)| Rufen Sie die statischen Metadaten eines Meetings ab. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -427,11 +427,11 @@ Im Falle eines Besprechungsserientyps:
 
 ## <a name="send-real-time-captions-api"></a>API zum Senden von Beschriftungen in Echtzeit
 
-Die API zum Senden von Beschriftungen in Echtzeit macht einen POST-Endpunkt für Microsoft Teams Kommunikationszugriff für Cart-Untertitel (Real-Time Translation) verfügbar, von Menschen eingegebene Untertitel. Textinhalte, die an diesen Endpunkt gesendet werden, werden Endbenutzern in einer Microsoft Teams Besprechung angezeigt, wenn sie Untertitel aktiviert haben.
+Die API zum Senden von Beschriftungen in Echtzeit macht einen POST-Endpunkt für Teams Kommunikationszugriff für Cart-Untertitel (Real-Time Translation) verfügbar, von Menschen eingegebene Untertitel. Textinhalte, die an diesen Endpunkt gesendet werden, werden Endbenutzern in einer Teams Besprechung angezeigt, wenn sie Untertitel aktiviert haben.
 
 ### <a name="cart-url"></a>CART-URL
 
-Sie können die CART-URL für den POST-Endpunkt von der Seite **"Besprechungsoptionen"** in einer Microsoft Teams Besprechung abrufen. Weitere Informationen finden Sie [unter CART-Beschriftungen in einer Microsoft Teams Besprechung](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Sie müssen die CART-URL nicht ändern, um CART-Beschriftungen zu verwenden.
+Sie können die CART-URL für den POST-Endpunkt von der Seite "**Besprechungsoptionen"** in einer Teams Besprechung abrufen. Weitere Informationen finden Sie [unter CART-Beschriftungen in einer Microsoft Teams Besprechung](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Sie müssen die CART-URL nicht ändern, um CART-Beschriftungen zu verwenden.
 
 #### <a name="query-parameter"></a>Abfrageparameter
 
@@ -841,10 +841,10 @@ Der folgende Code stellt ein Beispiel für die Nutzlast eines Besprechungsende-E
 
 |Beispielname | Beschreibung | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Erweiterbarkeit von Besprechungen | Erweiterbarkeitsbeispiel für Microsoft Teams-Meetings zum Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Bubble-Bot für Besprechungsinhalte | Beispiel für die Erweiterbarkeit von Microsoft Teams-Meetings für die Interaktion mit dem Inhaltsblasen-Bot in einem Meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| BesprechungsmeetingSidePanel | Beispiel für die Erweiterbarkeit von Microsoft Teams-Meetings für die Interaktion mit dem Seitenbereich in Meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Registerkarte „Details“ im Meeting | Beispiel für die Erweiterbarkeit von Microsoft Teams-Meetings für die Interaktion mit der Registerkarte „Details“ im Meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| Erweiterbarkeit von Besprechungen | Teams Beispiel für die Besprechungserweiterung zum Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Bubble-Bot für Besprechungsinhalte | Teams Besprechungserweiterungsbeispiel für die Interaktion mit dem Inhaltsblasen-Bot in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| BesprechungsmeetingSidePanel | Teams Besprechungserweiterungsbeispiel für die Interaktion mit dem Seitenbereich in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Registerkarte „Details“ im Meeting | Teams Besprechungserweiterungsbeispiel für die Interaktion mit der Registerkarte "Details" in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 |Beispiel für Meeting-Ereignisse|Beispiel-App zum Anzeigen von Teams-Besprechungsereignissen in Echtzeit|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |Beispiel für die Rekrutierung von Meetings|Beispiel-App, um die Meeting-Erfahrung für das Rekrutierungsszenario zu zeigen.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |App-Installation mit QR-Code|Beispiel-App, die den QR-Code generiert und die App mithilfe des QR-Codes installiert|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|

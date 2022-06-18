@@ -5,18 +5,18 @@ description: In diesem Artikel erfahren Sie mehr über Bot-Aktivitätshandler, F
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1d57d71e83e7e615e01f084b0fd4d5815dbe18e1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 488c01f47f5518673ec66c3dbac5f3bd8f6927f3
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143837"
+ms.locfileid: "66150862"
 ---
 # <a name="bot-activity-handlers"></a>Bot-Aktivitätenhandler
 
 Dieses Dokument baut auf dem Artikel über die [Wie Bots funktionieren](https://aka.ms/how-bots-work) in der Core [Bot Framework-Dokumentation](https://aka.ms/azure-bot-service-docs) auf. Der Hauptunterschied zwischen Bots, die für Microsoft Teams entwickelt wurden, und dem Core Bot Framework liegt in den Funktionen, die in Teams bereitgestellt werden.
 
-Zum Organisieren der Unterhaltungslogik für Ihren Bot wird ein Aktivitätenhandler verwendet. Aktivitäten werden auf zwei Arten behandelt: mit Teams-Aktivitätenhandlern und Botlogik. Der Teams-Aktivitätenhandler fügt Unterstützung für Microsoft Teams-spezifische Ereignisse und Interaktionen hinzu. Das Botobjekt enthält die Unterhaltungslogik für einen Turn und macht einen Turnhandler verfügbar. Dies ist die Methode, die eingehende Aktivitäten vom Botadapter akzeptieren kann.
+Zum Organisieren der Unterhaltungslogik für Ihren Bot wird ein Aktivitätenhandler verwendet. Aktivitäten werden auf zwei Arten behandelt: mit Teams-Aktivitätenhandlern und Botlogik. Der Teams-Aktivitätshandler fügt Unterstützung für Teams-spezifische Ereignisse und Interaktionen hinzu. Das Botobjekt enthält die Unterhaltungslogik für einen Turn und macht einen Turnhandler verfügbar. Dies ist die Methode, die eingehende Aktivitäten vom Botadapter akzeptieren kann.
 
 ## <a name="teams-activity-handlers"></a>Teams Aktivitäten Handler
 

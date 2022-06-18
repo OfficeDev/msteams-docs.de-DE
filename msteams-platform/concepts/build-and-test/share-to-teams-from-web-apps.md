@@ -3,12 +3,12 @@ title: Von Web-Apps für Teams freigeben
 description: Erfahren Sie, wie Sie die Schaltfläche "Freigeben" zu Teams eingebetteten Schaltfläche auf Ihrer Website mit einer Websitevorschau hinzufügen, indem Sie Codebeispiele verwenden.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: d08086d01132d86605137bb6b622821239695c84
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 38e082166c0a2d66c5e2e26280fe1c8d9c3053a2
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123461"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150834"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Von Web-Apps für Teams freigeben
 
@@ -51,7 +51,7 @@ In diesem Artikel erfahren Sie, wie Sie eine Schaltfläche "Freigeben" erstellen
     </div>
     ```
 
-    Nach Abschluss dieses Vorgangs wird das symbol für Microsoft Teams ihrer Website hinzugefügt. Die folgende Abbildung zeigt das Symbol "Für Teams freigeben":
+    Nach Abschluss dieses Vorgangs wird das Symbol für Teams Ihrer Website hinzugefügt. Die folgende Abbildung zeigt das Symbol "Für Teams freigeben":
 
     :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="Symbol &quot;Für Teams freigeben&quot;" border="true":::
 

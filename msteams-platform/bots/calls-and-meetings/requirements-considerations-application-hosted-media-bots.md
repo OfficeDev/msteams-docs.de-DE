@@ -4,12 +4,12 @@ description: Lernen Sie wichtige Anforderungen und Überlegungen sowie Skalierba
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 11/16/2018
-ms.openlocfilehash: 87cdbce71189f64c0d34fc0cddb5211355017007
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5ba9f630e75bd9271eda66a93e69d8506e2b368c
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142486"
+ms.locfileid: "66150791"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Anforderungen und Überlegungen für anwendungsgehostete Medienbots
 
@@ -39,7 +39,7 @@ Der nächste Abschnitt enthält Einzelheiten darüber, wo sich Echtzeit-Medienau
 
 ## <a name="real-time-media-calls-stay-where-theyre-created"></a>Medienanrufe in Echtzeit bleiben dort, wo sie erstellt werden
 
-Echtzeit-Medienanrufe bleiben auf dem Computer, auf dem sie erstellt wurden. Ein Echtzeit-Medienanruf wird an die Instanz der virtuellen Maschine (VM) angeheftet, die den Anruf angenommen oder gestartet hat. Medien von einem Microsoft Teams-Anruf oder -Meeting fließen zu dieser VM-Instanz, und Medien, die der Bot an Microsoft Teams zurücksendet, müssen ebenfalls von dieser VM stammen. Wenn beim Stoppen der VM Echtzeit-Medienaufrufe ausgeführt werden, werden diese Aufrufe abrupt beendet. Wenn der Bot Vorkenntnisse über das bevorstehende Herunterfahren der VM hat, kann er die Anrufe beenden.
+Echtzeit-Medienanrufe bleiben auf dem Computer, auf dem sie erstellt wurden. Ein Echtzeit-Medienanruf wird an die Instanz der virtuellen Maschine (VM) angeheftet, die den Anruf angenommen oder gestartet hat. Medien aus einem Teams Anruf- oder Besprechungsflüsse an diese VM-Instanz und Medien, die der Bot an Teams zurücksendet, müssen ebenfalls von dieser VM stammen. Wenn beim Stoppen der VM Echtzeit-Medienaufrufe ausgeführt werden, werden diese Aufrufe abrupt beendet. Wenn der Bot Vorkenntnisse über das bevorstehende Herunterfahren der VM hat, kann er die Anrufe beenden.
 
 Der nächste Abschnitt enthält Details zur Zugänglichkeit von anwendungsgehosteten Medien-Bots.
 

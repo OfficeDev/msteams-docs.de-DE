@@ -1,15 +1,15 @@
 ---
 title: Anfordern von Geräteberechtigungen für Ihre Microsoft Teams-App
 keywords: Teams-Apps-Funktionen Berechtigungen geräteeigener Scan QR-Barcode-Bild-Audiovideo
-description: So aktualisieren Sie Ihr App-Manifest, um Zugriff auf systemeigene Features anzufordern, die in der Regel die Zustimmung des Benutzers erfordern, z. B. Scan-QR, Barcode, Bild, Audio, Videofunktionen
+description: So aktualisieren Sie Ihr App-Manifest, um Zugriff auf systemeigene Features anzufordern, die eine Zustimmung des Benutzers erfordern, z. B. QR-, Barcode-, Bild-, Audio- und Videofunktionen scannen
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: c346eaf880fd6a0a3847441f674fcfa72f2c5ed7
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: a2ffcb378c3e46f7e940e7729eb62ad31d0745a9
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130473"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150820"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>Anfordern von Geräteberechtigungen für Ihre Teams-App
 
@@ -19,7 +19,7 @@ Sie können Ihre Teams-App mit systemeigenen Gerätefunktionen wie Kamera, Mikro
 >
 > * Informationen zum Integrieren von Medienfunktionen in Ihre Microsoft Teams Webclient, Desktop und Mobilgerät finden Sie unter [Integrieren von Medienfunktionen](media-capabilities.md).
 > * Informationen zur Integration von QR- oder Strichcodescannerfunktionen in Ihre Microsoft Teams mobile App finden [Sie unter Integrieren der QR- oder Strichcodescannerfunktion in Teams](qr-barcode-scanner-capability.md).
-> * Informationen zum Integrieren von Standortfunktionen in Ihre Microsoft Teams Webclient, Desktop und Mobilgerät finden Sie unter [Integrieren von Standortfunktionen](location-capability.md).
+> * Informationen zum Integrieren von Standortfunktionen in Ihre Teams Webclient, Desktop und Mobilgerät finden Sie unter [Integrieren von Standortfunktionen](location-capability.md).
 
 ## <a name="native-device-permissions"></a>Systemeigene Geräteberechtigungen
 
@@ -36,7 +36,7 @@ Durch den Zugriff auf die Gerätefunktionen können Sie auf der Teams Plattform 
 >
 > * Derzeit unterstützt Teams keine Geräteberechtigungen für Apps mit mehreren Fenstern, Registerkarten und den Besprechungsbereich.
 > * Geräteberechtigungen unterscheiden sich im Browser. Weitere Informationen finden Sie unter [Browsergeräteberechtigungen](browser-device-permissions.md).
-> * Derzeit ist Microsoft Teams Unterstützung für QR-Barcodescanner nur für mobile Clients verfügbar.
+> * Derzeit ist Teams Unterstützung für QR-Strichcodescanner nur für mobile Clients verfügbar.
 
 ## <a name="access-device-permissions"></a>Zugriff auf Geräteberechtigungen
 
@@ -130,7 +130,7 @@ Nutzen Sie die entsprechende HTML5- oder Teams-API, um eine Aufforderung zur Zus
 
 Beispiel:
 
-* Wenn Sie den Benutzer auffordern möchten, auf seine Position zuzugreifen, müssen Sie Folgendes aufrufen `getCurrentPosition()`:
+* Um den Benutzer auf seine Position zuzugreifen, müssen Sie Folgendes aufrufen `getCurrentPosition()`:
 
     ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });

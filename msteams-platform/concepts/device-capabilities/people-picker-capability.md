@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie Sie das JavaScript-Client-SDK v
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: f16145354b05ab584e295ffd23262d2b925e4249
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 0da107c4086d7eae568990746a877b79f030a564
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123027"
+ms.locfileid: "66130445"
 ---
 # <a name="integrate-people-picker"></a>Integration der Personenauswahl
 
@@ -105,6 +105,6 @@ In der folgenden Tabelle sind die Fehlercodes und deren Beschreibungen aufgefüh
 
 ## <a name="see-also"></a>Weitere Informationen
 
-* [Integrieren von Medienfunktionen in Microsoft Teams](mobile-camera-image-permissions.md)
+* [Integrieren von Medienfunktionen](~/concepts/device-capabilities/media-capabilities.md)
 * [Integrieren von QR-Code- oder Strichcodescanner-Funktionen in Microsoft Teams](qr-barcode-scanner-capability.md)
 * [Integrieren von Standortfunktionen in Microsoft Teams](location-capability.md)
