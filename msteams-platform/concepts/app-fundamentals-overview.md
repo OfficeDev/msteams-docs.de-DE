@@ -5,12 +5,12 @@ description: Einführung in die Elemente der Planung einer App, des Verständnis
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 469c21c69fc7be450f2e51c26ddb1cf3c67292f4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: bb72b099c82e12190cbdb955d68362dda731a939
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142423"
+ms.locfileid: "66150687"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planen Ihrer App mit Teams-Features
 
@@ -91,7 +91,7 @@ Die folgende Tabelle enthält Teams-Features und -Verfügbarkeit für GCC, GCC-H
 | Sideloading von Apps | ✔️ | ❌ | ❌ |
 | Benutzerdefinierte Connectors | ❌ | ❌ | ❌ |
 
-****Compliancebenutzeroberfläche***: Durch die Aktivierung der Kommunikation mit Drittanbietern akzeptieren Kunden, dass diese Kommunikation vom Drittanbieter und nicht von Microsoft verarbeitet wird. Der Kunde ist allein für die Minderung von Risiken verantwortlich, die mit der Verbindung mit Bots von Drittanbietern in deren Diensten verbunden sind. Microsoft empfiehlt keine Drittanbieter und übernimmt keinerlei Gewährleistungen, weder ausdrücklich noch konkludent, in Bezug auf die Sicherheit von Drittanbietern, denen der Kunde eine Verbindung mit dem Dienst ermöglicht. Durch das Aktivieren von Bots wird Ihre Systemgrenze basierend auf dem Bot, den Sie nutzen möchten, über diesen Mandanten hinaus erweitert. Es liegt in Ihrer Verantwortung sicherzustellen, dass dadurch Ihre Complianceanforderungen erfüllt werden, einschließlich FedRAMP, DFARS, ITAR usw. Es liegt in Ihrer Verantwortung, das Risiko und die Compliance aller Endpunkte und URLs zu bewerten, mit denen Sie eine Verbindung herstellen.
+****Compliancebenutzeroberfläche***: Durch die Aktivierung der Kommunikation mit Drittanbietern akzeptieren Kunden, dass diese Kommunikation vom Drittanbieter und nicht von Microsoft verarbeitet wird. Der Kunde ist allein für die Minderung von Risiken verantwortlich, die mit der Verbindung mit Bots von Drittanbietern in deren Diensten verbunden sind. Microsoft befürwortet und gibt keine ausdrücklichen oder stillschweigenden Gewährleistungen in Bezug auf die Sicherheit von Drittanbietern, denen der Kunde erlaubt, sich mit ihrem Dienst zu verbinden. Durch das Aktivieren von Bots wird Ihre Systemgrenze basierend auf dem Bot, den Sie nutzen möchten, über diesen Mandanten hinaus erweitert. Es liegt in Ihrer Verantwortung sicherzustellen, dass dadurch Ihre Complianceanforderungen erfüllt werden, einschließlich FedRAMP, DFARS, ITAR usw. Es liegt in Ihrer Verantwortung, das Risiko und die Compliance aller Endpunkte und URLs zu bewerten, mit denen Sie eine Verbindung herstellen.
 
 Mithilfe der folgenden Liste können Sie die Verfügbarkeit von GCC, GCC-High und DOD für die Features ermitteln:
 

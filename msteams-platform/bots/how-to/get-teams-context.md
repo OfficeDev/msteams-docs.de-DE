@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie den Teams-spezifischen Kontext für Ihren Bot
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: fc138a66bd5a489133c11db8a24b2a9d6d06634d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 51e241aacce149dfab7371ab9c1d8f987134b67e
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143760"
+ms.locfileid: "66150694"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Microsoft Teams-Kontext für Ihren Bot erhalten
 
@@ -208,7 +208,7 @@ Response body
 
 * * *
 
-Nachdem Sie Details zu einem einzelnen Mitglied erhalten haben, können Sie Details des Teams abrufen. Um Informationen zu einem Team abzurufen, verwenden Sie derzeit die Microsoft Teams-Bot-APIs `TeamsInfo.GetMemberDetailsAsync` für C# oder `TeamsInfo.getTeamDetails` für TypeScript.
+Nachdem Sie Details zu einem einzelnen Mitglied erhalten haben, können Sie Details des Teams abrufen. Verwenden Sie derzeit zum Abrufen von Informationen für ein Team die Teams-Bot-APIs `TeamsInfo.GetMemberDetailsAsync` für C# oder `TeamsInfo.getTeamDetails` für TypeScript.
 
 ## <a name="get-teams-details"></a>Abrufen von Teamdetails
 
@@ -283,7 +283,7 @@ Response body
 
 * * *
 
-Nachdem Sie Details des Teams erhalten haben, können Sie die Liste der Kanäle in einem Team abrufen. Um Informationen für eine Liste von Kanälen in einem Team abzurufen, verwenden Sie derzeit die Microsoft Teams-Bot-APIs `TeamsInfo.GetTeamChannelsAsync` für C# oder `TeamsInfo.getTeamChannels` für TypeScript-APIs.
+Nachdem Sie Details des Teams erhalten haben, können Sie die Liste der Kanäle in einem Team abrufen. Verwenden Sie derzeit zum Abrufen von Informationen für eine Liste von Kanälen in einem Team die Teams-Bot-APIs `TeamsInfo.GetTeamChannelsAsync` für C# oder `TeamsInfo.getTeamChannels` für TypeScript-APIs.
 
 ## <a name="get-the-list-of-channels-in-a-team"></a>Abrufen der Liste der Kanäle in einem Team
 

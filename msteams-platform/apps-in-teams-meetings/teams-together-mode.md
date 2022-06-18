@@ -3,12 +3,12 @@ title: Benutzerdefinierte Zusammen-Modus-Szenen
 description: Arbeiten mit benutzerdefinierte Zusammen-Modus-Szenen
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 047e2aa04bfb0196ab7a01e91ce54b01d61f64bf
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: bf02350378b308a1a6aa4f914c03f3ad4a3d9142
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64736872"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150645"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Benutzerdefinierte Zusammen-Modus-Szenen
 
@@ -24,7 +24,7 @@ Der folgende Prozess bietet einen Überblick über das Erstellen einer Nur-Szene
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Nur-Szenen-App erstellen" border="false":::
 
-Eine Nur-Szenen-App ist immer noch eine App in Microsoft Teams. Das Scene Studio verarbeitet die Erstellung des App-Pakets im Hintergrund. Mehrere Szenen in einem einzelnen App-Paket werden den Benutzern als flache Liste angezeigt.
+Eine reine Szenen-App ist immer noch eine App in Teams. Das Scene Studio verarbeitet die Erstellung des App-Pakets im Hintergrund. Mehrere Szenen in einem einzelnen App-Paket werden den Benutzern als flache Liste angezeigt.
 
 > [!NOTE]
 > Benutzer können den Together-Modus nicht vom Mobiltelefon aus initiieren. Wenn ein Benutzer jedoch über ein Mobiltelefon an einem Meeting teilnimmt und der Together-Modus auf dem Desktop aktiviert wird, werden die mobilen Benutzer, die das Video aktiviert haben, auf dem Desktop im Together-Modus angezeigt.
@@ -34,7 +34,7 @@ Eine Nur-Szenen-App ist immer noch eine App in Microsoft Teams. Das Scene Studio
 Sie müssen über grundlegende Kenntnisse der folgenden Punkte verfügen, um benutzerdefinierte Szenen im Zusammen-Modus verwenden zu können:
 
 * Definieren von Szenen und Plätzen in einer Szene.
-* Sie sollten über ein Microsoft-Entwickler Konto verfügen, und mit dem Microsoft Teams-[Entwicklerportal](../concepts/build-and-test/teams-developer-portal.md) und App Studio vertraut sein.
+* Besitzen Sie ein Microsoft-Entwicklerkonto und machen Sie sich mit dem Teams [Entwicklerportal](../concepts/build-and-test/teams-developer-portal.md) und App Studio vertraut.
 * Machen Sie sich mit dem [Konzept des Querladens von Apps](../concepts/deploy-and-publish/apps-upload.md) vertraut.
 * Stellen Sie sicher, dass der Administrator die Berechtigung zum [**Hochladen einer benutzerdefinierten App**](../concepts/deploy-and-publish/apps-upload.md) erteilt hat, und wählen Sie alle Filter als Teil der App-Setup- bzw. Besprechungsrichtlinien aus.
 
@@ -50,7 +50,7 @@ Berücksichtigen Sie die folgenden Vorgehensweisen für die Erstellung von Szene
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>Erstellen einer Szene mithilfe des Scene Studio
 
-Microsoft verfügt über ein Scene Studio, mit dem Sie Szenen erstellen können. Es ist im [Szenen-Editor – Teams Entwicklerportal](https://dev.teams.microsoft.com/scenes) verfügbar. Dieses Dokument bezieht sich auf Scene Studio im Microsoft Teams-Entwicklerportal. Die Schnittstelle und die Funktionen sind im App Studio Scene Designer identisch.
+Microsoft verfügt über ein Scene Studio, mit dem Sie Szenen erstellen können. Es ist im [Szenen-Editor – Teams Entwicklerportal](https://dev.teams.microsoft.com/scenes) verfügbar. Dieses Dokument bezieht sich auf Scene Studio im Entwicklerportal von Teams. Die Schnittstelle und die Funktionen sind im App Studio Scene Designer identisch.
 
 Eine Szene im Kontext des Scene Studio ist ein Artefakt, das die folgenden Elemente enthält:
 
@@ -106,9 +106,9 @@ Führen Sie die folgenden Schritte aus, um eine Szene mithilfe des Szenenstudios
 
     ![Platz zuweisen](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. Wählen Sie **Speichern** und dann **In Teams anzeigen** aus, um Ihre Szene schnell in Microsoft Teams zu testen.
+1. Wählen Sie **Speichern** und **In Teams anzeigen** aus, um Ihre Szene schnell in Teams zu testen.
 
-    * Wenn Sie **In Teams anzeigen** auswählen, wird automatisch eine Microsoft Teams-App erstellt, die auf der **Apps**-Seite im Teams-Entwicklerportal angezeigt werden kann.
+    * Wenn Sie **In Teams anzeigen** auswählen, wird automatisch eine Teams-App erstellt, die auf der Seite **„Apps“** im Teams-Entwicklerportal angezeigt werden kann.
     * Wenn Sie **In Teams anzeigen** auswählen, wird automatisch ein App-Paket erstellt, das "appmanifest.json" hinter der Szene ist. Sie können über das Menü zu **Apps** wechseln und auf das automatisch erstellte App-Paket zugreifen.
     * Um eine von Ihnen erstellte Szene zu löschen, wählen Sie **Szene löschen** auf der oberen Leiste aus.
 
@@ -217,7 +217,7 @@ Führen Sie die folgenden Schritte aus, um Szenen auszuwählen und benutzerdefin
 1. Erstellen Sie eine neue Testbesprechung.
 
     >[!NOTE]
-    > Wenn Sie **Vorschau** im Scene Studio auswählen, wird die Szene als App in Microsoft Teams installiert. Dies ist das Modell, mit dem Entwickler Szenen aus dem Scene Studio testen und ausprobieren können. Nachdem eine Szene als App versendet wurde, sehen Benutzer diese Szenen im Szenenkatalog.
+    > Wenn Sie im Szenenstudio **Vorschau** auswählen, wird die Szene als App in Teams installiert. Dies ist das Modell, mit dem Entwickler Szenen aus dem Scene Studio testen und ausprobieren können. Nachdem eine Szene als App versendet wurde, sehen Benutzer diese Szenen im Szenenkatalog.
 
 1. Wählen Sie in der Dropdownliste **Katalog** in der oberen linken Ecke **Zusammen-Modus** aus. Das Dialogfeld **Auswahl** wird angezeigt, und die hinzugefügte Szene ist verfügbar.
 
