@@ -1,18 +1,17 @@
 ---
 title: Erstellen einer persönlichen Registerkarte
 author: laujan
-description: Eine Schnellstartanleitung zum Erstellen einer persönlichen Registerkarte mit dem Yeoman-Generator, ASP.NET Core oder ASP.NET Core MVC für Microsoft Teams unter Verwendung von Node.js und aktualisieren des App-Manifests.
+description: In diesem Modul erfahren Sie, wie Sie mithilfe von Node.js eine persönliche Registerkarte mit dem Yeoman-Generator, ASP.NET Core oder ASP.NET Core MVC für Microsoft Teams erstellen und das App-Manifest aktualisieren.
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
-keywords: Yeoman ASP.NET MVC-Paket App-Manifest Unterhaltung Domäne Berechtigung Store
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 9da0078813d43584d415ccb9425a529decdc78bd
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 9cceb8f75976dcb7606d09a027e66c775e226365
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65673020"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143991"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
@@ -296,10 +295,10 @@ Im Folgenden finden Sie die Schritte zum Erstellen einer persönlichen Registerk
 
 1. Wählen Sie in Visual Studio **F5** oder **Debuggen starten** im Menü **Debuggen** Ihrer Anwendung aus, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde. Wechseln Sie in einem Browser zu den folgenden URLs:
 
-    * <http://localhost:3978/>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978/>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>Überprüfen des Quellcodes</b></summary>
@@ -407,7 +406,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Im Abschnitt "Domänen" müssen Domänen auf Ihren Registerkarten Ihre ngrok-URL ohne das HTTPS-Präfix `<yourngrokurl>.ngrok.io` enthalten.
 
-### <a name="preview-your-app-in-teams"></a>Eine Vorschau ihrer App in Microsoft Teams anzeigen
+### <a name="preview-your-app-in-teams"></a>Anzeigen einer Vorschau Ihrer App in Teams
 
 1. Wählen Sie auf der Entwicklerportal-Symbolleiste **Vorschau in Microsoft Teams** aus; das Entwicklerportal informiert Sie, dass Ihre App erfolgreich quergeladen wurde. Die Seite **Hinzufügen** wird für Ihre App in Teams angezeigt.
 
@@ -449,10 +448,10 @@ Im Folgenden finden Sie die Schritte zum Erstellen einer persönlichen Registerk
 
 1. Wählen Sie in Visual Studio **F5** oder **Debuggen starten** im Menü **Debuggen** Ihrer Anwendung aus, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde. Wechseln Sie in einem Browser zu den folgenden URLs:
 
-    * <http://localhost:3978>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>Überprüfen des Quellcodes</b></summary>

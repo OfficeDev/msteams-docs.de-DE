@@ -1,14 +1,14 @@
 ---
 title: Erste Schritte – Übersicht
-description: Beginnen Sie mit diesem Lernpfad mit der Microsoft Teams-Entwicklerdokumentation, die Sie mit allgemeinen Tools, grundlegenden Konzepten und erweiterten Features vertraut macht.
+description: In diesem Modul erfahren Sie, wie Sie mit der Microsoft Teams-Entwicklerdokumentation beginnen, die Sie mit allgemeinen Tools, grundlegenden Konzepten und erweiterten Features vertraut macht.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: a2dc779e24828ce73f9a93498bdcceecbdfe582b
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 09522f4509d9e9c73c7b854b57fbb7ad5e982ba2
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795154"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143158"
 ---
 # <a name="get-started"></a>Erste Schritte
 

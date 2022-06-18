@@ -4,12 +4,12 @@ description: In diesem Modul erfahren Sie, was das Microsoft Live Share SDK und 
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 5fa509ee7835db80a99487ed7d42ab7d6ed8341d
-ms.sourcegitcommit: 09ee0305b827ad6d1368d892db3824c5dbad886f
+ms.openlocfilehash: dc05093f69627cc5872e25113e1ca2ca680c07c7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65759655"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142500"
 ---
 ---
 
