@@ -5,12 +5,12 @@ description: Beginnen Sie mit diesem Lernpfad mit Unterhaltungsbots in Microsoft
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 13f966d8c01cb6dcc9dc88fadaeb8ad0d348a2ff
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8fef926e88709db9e1d74b6e56f643d3b048dd3b
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143711"
+ms.locfileid: "66150841"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots in Microsoft Teams
 
@@ -18,7 +18,7 @@ Ein Bot wird auch als Chatbot oder Unterhaltungsbot bezeichnet. Es handelt sich 
 
 > [!IMPORTANT]
 > Derzeit sind Bots in Government Community Cloud (GCC) und in GCC-High verfügbar, aber nicht in Department of Defense (DOD).
-> 
+>
 > Bot-Anwendungen in Microsoft Teams sind in GCC-High über [Azure Bot Service](/azure/bot-service/channel-connect-teams) verfügbar.
 
 Unterhaltungs-Bots ermöglichen es Benutzern, mit Ihrem Webdienst über Text, interaktive Karten und Aufgabenmodule zu interagieren.
@@ -43,9 +43,9 @@ Ihr Bot benötigt Kontextinformationen, z. B. Benutzerprofildetails, um auf rele
 
 Sie können Dateien über den Bot mithilfe von Graph-APIs oder Teams-Bot-APIs senden und empfangen. Weitere Informationen finden Sie unter [Senden und Empfangen von Dateien über den Bot](~/bots/how-to/bots-filesv4.md).
 
-Die Ratenbegrenzung wird verwendet, um Bots zu optimieren, die für Ihre Teams-Anwendung verwendet werden. Um Microsoft Teams und seine Benutzer zu schützen, bieten die Bot-APIs eine Ratenbegrenzung für eingehende Anforderungen. Weitere Informationen finden Sie unter [Optimieren eines Bots mit Ratenbegrenzung in Teams](~/bots/how-to/rate-limit.md).
+Die Ratenbegrenzung wird verwendet, um Bots zu optimieren, die für Ihre Teams-Anwendung verwendet werden. Um Teams und seine Benutzer zu schützen, bieten die Bot-APIs eine Ratenbegrenzung für eingehende Anforderungen. Weitere Informationen finden Sie unter [Optimieren eines Bots mit Ratenbegrenzung in Teams](~/bots/how-to/rate-limit.md).
 
-Mit Microsoft Graph APIs für Anrufe und Onlinebesprechungen können Microsoft Teams-Apps jetzt per Sprache und Video mit Benutzern interagieren. Siehe [Anrufe und Meeting-Bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
+Mit Microsoft Graph-APIs für Anrufe und Onlinebesprechungen können Teams-Apps jetzt per Sprache und Video mit Benutzern interagieren. Weitere Informationen finden Sie unter [Anruf- und Besprechungsbots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
 
 Sie können die Teams-Bot-APIs verwenden, um Informationen für Mitglieder eines Chats oder Teams abzurufen. Weitere Informationen finden Sie unter [Änderungen an Teams-Bot-APIs zum Abrufen von Team- oder Chatmitgliedern](~/resources/team-chat-member-api-changes.md).
 

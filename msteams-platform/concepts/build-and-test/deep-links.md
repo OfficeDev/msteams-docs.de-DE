@@ -3,12 +3,12 @@ title: Erstellen von Deep-Links
 description: Erfahren Sie, wie Sie Deep Links erstellen und wie Sie sie in Ihren Microsoft Teams-Apps mit Registerkarten verwenden und darin navigieren.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: bb0e9adf0541f428b46459598d41466d450bdca7
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: e5e9596c6049e899e6cc807b7ce2128b322a971e
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123717"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150680"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links
 
@@ -91,7 +91,7 @@ Alternativ können Sie Deeplinks auch programmgesteuert unter Verwendung des sp�
 
 ### <a name="consume-a-deep-link-from-a-tab"></a>Verwenden eines Deeplinks von einer Registerkarte
 
-Beim Navigieren zu einem Deep-Link navigiert Microsoft Teams einfach zur Registerkarte und bietet einen Mechanismus über die Microsoft Teams JavaScript-Bibliothek zum Abrufen der Unterseiten-ID, sofern vorhanden.
+Beim Navigieren zu einem Deep-Link navigiert Microsoft Teams einfach zur Registerkarte und bietet einen Mechanismus über die Teams JavaScript-Bibliothek zum Abrufen der Unterseiten-ID, sofern diese vorhanden ist.
 
 Der [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true)-Aufruf (`microsoftTeams.getContext()`) in TeamsJS v1) gibt eine Zusage zurück, die mit dem Kontext aufgelöst wird, der die `subPageId`-Eigenschaft (subEntityId für TeamsJS v1) enthält, wenn über einen Deep-Link zur Registerkarte navigiert wird. Weitere Informationen finden Sie unter [PageInfo-Schnittstelle](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
 
@@ -109,7 +109,7 @@ Verwenden Sie das folgende Format für einen Deep-Link, den Sie in einem Bot, Co
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
-> Wenn der Bot eine Nachricht `TextBlock` mit einem Deeplink sendet, wird eine neue Browserregisterkarte geöffnet, wenn der Benutzer den Link auswählt. Dies geschieht in Chrome und in der Microsoft Teams Desktop-App, die beide unter Linux ausgeführt werden.
+> Wenn der Bot eine Nachricht `TextBlock` mit einem Deeplink sendet, wird eine neue Browserregisterkarte geöffnet, wenn der Benutzer den Link auswählt. Dies geschieht in Chrome und in der Teams Desktop-App, die beide unter Linux ausgeführt werden.
 > Wenn der Bot dieselbe Deeplink-URL an eine(n) `Action.OpenUrl` sendet, wird die Registerkarte Teams in der aktuellen Browserregisterkarte geöffnet, wenn der Benutzer den Link auswählt. Eine neue Browserregisterkarte wird nicht geöffnet.
 
 <!--- TBD: Edit this article.
@@ -446,7 +446,7 @@ Nachfolgend sind die Abfrageparameter aufgeführt:
 
 | Beispielname | Beschreibung | C# |Node.js|
 |-------------|-------------|------|----|
-|Unterentitäts-ID für die Deeplink-Nutzung  |Microsoft Teams-Beispiel-App zum Demonstrieren einer Deep-Link-Verknüpfung vom Bot-Chat zu der Registerkarte, die die Unterentitäts-ID verwendet.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|Unterentitäts-ID für die Deeplink-Nutzung  | Teams-Beispiel-App zum Demonstrieren einer Deep-Link-Verknüpfung vom Bot-Chat zu der Registerkarte, welche die untergeordnete Entitäts-ID konsumiert.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## <a name="see-also"></a>Siehe auch
 
