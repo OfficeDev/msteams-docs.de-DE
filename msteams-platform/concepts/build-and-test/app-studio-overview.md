@@ -3,12 +3,12 @@ title: Erste Schritte mit App Studio für Microsoft Teams
 description: In diesem Artikel erfahren Sie, wie Sie Ihre Apps mit App Studio erstellen und verwalten, um Microsoft Teams und App Studio zu installieren.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: de1a3bb355ce7f033cc1f41e3e42d3e97de6d0c1
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: cf9f4a144886c67b2c2c667683d62a65fc4ee9c4
+ms.sourcegitcommit: e429131d01df7103a467df2c42cdfe41ab822b10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150701"
+ms.lasthandoff: 06/20/2022
+ms.locfileid: "66164267"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Verwalten Ihrer Apps mit App Studio für Microsoft Teams
 
@@ -30,15 +30,15 @@ App Studio ist eine Teams-App, die im Teams Store zu finden ist. Folgen Sie dies
 
 Suchen Sie im Store nach App Studio.
 
-![Store-Eintrag für App Studio](~/assets/images/get-started/storeteamsappstudio.png)
+:::image type="content" source="../../assets/images/get-started/StoreTeamsAppStudio.png" alt-text="Store-Eintrag für App Studio":::
 
 Wählen Sie die App Studio-Kachel aus, um die App-Installationsseite zu öffnen:
 
-![Konfigurieren der App-Suite](~/assets/images/get-started/teamsappstudioconfiguration.png)
+:::image type="content" source="../../assets/images/get-started/teamsAppStudioConfiguration.png" alt-text="Konfigurieren der App-Suite":::
 
 Wählen Sie **Installieren**.
 
-![App Studio](~/assets/images/get-started/teamsappstudio.png)
+:::image type="content" source="../../assets/images/get-started/TeamsAppStudio.png" alt-text="App Studio":::
 
 Sobald Sie sich in App Studio befinden, wählen Sie auf der Registerkarte " **Manifest-Editor** " aus, auf der Sie entweder eine vorhandene App importieren oder eine neue App erstellen können.
 
@@ -148,6 +148,32 @@ Steuerelemente enthalten:
 * Registerkarten
 * Tabellen
 * Symbole
+
+## <a name="app-studio-to-developer-portal"></a>App Studio zum Entwicklerportal
+
+App Studio ist veraltet, Sie können das Entwicklerportal verwenden. Die folgende Tabelle enthält die detaillierten Informationen zu den im Entwicklerportal unterstützten Features:
+
+| Features | App-Studio | Entwicklerportal |
+| --- | --- | --- |
+| App-Analysen* | ❌ | ✔️ |
+| App-Funktionen– Bots | ✔️ | ✔️ |
+| App-Funktionen–Connectors | ✔️ | ✔️ |
+| App-Funktionen– Messaging-Erweiterung | ✔️ | ✔️ |
+| App-Funktionen– Besprechungserweiterung | ❌ | ✔️ |
+| App-Funktionen – Persönliche Apps | ✔️ | ✔️ |
+| App-Funktionen – Registerkarten | ✔️ | ✔️ |
+| App-Umgebungen | ❌ | ✔️ |
+| App-Sprachen | ✔️ | ✔️ |
+| App-Manifestvorschau und -download | ✔️ | ✔️ |
+| App-Pläne und Preise | ❌ | ✔️ |
+| App-Veröffentlichung | ✔️ | ✔️ |
+| App-Berechtigungen | ❌ | ✔️ |
+| Teilen von Apps mit Mitentwicklern | ❌ | ✔️ |
+| App-Überprüfung | ✔️ | ✔️ |
+| Erstellen einer neuen App | ✔️ | ✔️ |
+| Übermitteln eines ZIP-Pakets | ✔️ | ✔️ |
+
+\**App-Analysen werden in Kürze für GA verfügbar sein.*
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -4,12 +4,12 @@ description: In diesem Modul erfahren Sie, wie Sie Ihre Apps mithilfe des Entwic
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 948f22cf8f55a33e2d5b24b875678039fd101fc2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 391d6c671bf7c34a734eed3202df50ebdc4f9eae
+ms.sourcegitcommit: e429131d01df7103a467df2c42cdfe41ab822b10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142367"
+ms.lasthandoff: 06/20/2022
+ms.locfileid: "66164241"
 ---
 # <a name="manage-your-teams-apps-using-developer-portal"></a>Verwalten Ihrer Teams-Apps mithilfe des Entwicklerportals
 
@@ -21,6 +21,31 @@ Das <a href="https://dev.teams.microsoft.com" target="_blank">Entwicklerportal f
 >
 > * Derzeit ist das Entwicklerportal nicht für Mandanten Government Community Cloud (GCC), GCC-High oder Department of Defense (DOD) verfügbar.
 > * Sie können jedoch einen regulären Mandanten verwenden, um eine App im Entwicklerportal zu erstellen, die App herunterzuladen und die App [mithilfe von Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) in eine nationale Cloud hochzuladen. Weitere Informationen finden Sie unter ["Nationale Cloudbereitstellungen"](/graph/deployments).
+
+> [!IMPORTANT]
+> Wenn Sie von App Studio zum Entwicklerportal migrieren, enthält die folgende Tabelle detaillierte Informationen zu den Features, die im Entwicklerportal unterstützt werden:
+
+| Features | App-Studio | Entwicklerportal |
+| --- | --- | --- |
+| App-Analysen* | ❌ | ✔️ |
+| App-Funktionen– Bots | ✔️ | ✔️ |
+| App-Funktionen–Connectors | ✔️ | ✔️ |
+| App-Funktionen– Messaging-Erweiterung | ✔️ | ✔️ |
+| App-Funktionen– Besprechungserweiterung | ❌ | ✔️ |
+| App-Funktionen – Persönliche Apps | ✔️ | ✔️ |
+| App-Funktionen – Registerkarten | ✔️ | ✔️ |
+| App-Umgebungen | ❌ | ✔️ |
+| App-Sprachen | ✔️ | ✔️ |
+| App-Manifestvorschau und -download | ✔️ | ✔️ |
+| App-Pläne und Preise | ❌ | ✔️ |
+| App-Veröffentlichung | ✔️ | ✔️ |
+| App-Berechtigungen | ❌ | ✔️ |
+| Teilen von Apps mit Mitentwicklern | ❌ | ✔️ |
+| App-Überprüfung | ✔️ | ✔️ |
+| Erstellen einer neuen App | ✔️ | ✔️ |
+| Übermitteln eines ZIP-Pakets | ✔️ | ✔️ |
+
+\**App-Analysen werden in Kürze für GA verfügbar sein.*
 
 ## <a name="register-an-app"></a>Registrieren einer App
 
