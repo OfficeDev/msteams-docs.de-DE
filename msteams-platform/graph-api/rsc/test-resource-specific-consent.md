@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Teams-Autorisierung OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.openlocfilehash: 60014699aa1275df787fcf553ae04671d1105f1c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: d0eba34c8477c00e400e89adee7b9f09604918b7
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757444"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189878"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Testen Sie ressourcenspezifische Einwilligungsberechtigungen in Teams
 
@@ -28,7 +28,7 @@ Stellen Sie sicher, dass Sie vor dem Testen die folgenden App-Manifeständerunge
 
 <details>
 
-<summary><b>RSC-Berechtigungen für App-Manifestversion 1.12</b></summary>
+<summary><b>RSC-Berechtigungen für App-Manifestversion 1.12 und höher</b></summary>
 
 Fügen Sie Ihrem App-Manifest einen [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo)Schlüssel mit den folgenden Werten hinzu:
 
@@ -194,7 +194,7 @@ Beispiel für RSC in einem Chat
 
 <details>
 
-<summary><b>RSC-Berechtigungen für App-Manifest Version 1.11 oder früher</b></summary>
+<summary><b>RSC-Berechtigungen für App-Manifestversion 1.11 und früher</b></summary>
 
 Fügen Sie Ihrem App-Manifest einen [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo)Schlüssel mit den folgenden Werten hinzu:
 

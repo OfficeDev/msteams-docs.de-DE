@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Nachrichten für einen Bot in einem Kanal- od
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e9edc06d65120748c6e87ba5a5916f55d6346a9e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 47b706aea1e6ba292126d93a8e0b6ce173c4b588
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144411"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190261"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Kanal- und Gruppenchatunterhaltungen mit einem Bot
 
@@ -26,6 +26,12 @@ Bots in einer Gruppe oder einem Kanal empfangen Nachrichten nur, wenn sie @botna
 > Mithilfe der ressourcenspezifischen Zustimmung (Resource Specific Consent, RSC) können Bots alle Kanalnachrichten in Teams empfangen, in denen sie installiert sind, ohne @mentioned zu werden. Weitere Informationen finden Sie unter ["Empfangen aller Kanalnachrichten mit RSC"](channel-messages-with-rsc.md).
 >
 > Das Veröffentlichen einer Nachricht oder adaptiven Karte in einem privaten Kanal wird derzeit nicht unterstützt.
+
+Sehen Sie sich das folgende Video an, um mehr über Kanal- und Gruppenchatunterhaltungen mit einem Bot zu erfahren:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+<br>
 
 ## <a name="design-guidelines"></a>Richtlinien für den Entwurf
 

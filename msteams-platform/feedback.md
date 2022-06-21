@@ -3,12 +3,12 @@ title: Microsoft Teams Support und Feedback der Entwicklercommunity
 description: Erfahren Sie, Microsoft Teams Produktteam über verschiedene Feedback- und Supportkanäle hinweg auf die Entwicklercommunity reagiert.
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 1155df225aff3016f0c978dc9c84b4462874ea16
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: aa8518c095eed2357e1da80af5eec1b15c71759f
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144103"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190257"
 ---
 # <a name="support-and-feedback"></a>Support und Feedback
 
@@ -20,15 +20,15 @@ Verwenden Sie **Azure Admin Center** oder **Microsoft 365 Admin Center** für al
 |:------------|:------------|
 | **Probleme und Fehler bei Microsoft Teams-Produkten** | Wenn Sie über einen Premier-Supportvertrag für :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 verfügen, besuchen Sie das Microsoft 365 Admin Center, und [öffnen Sie eine Serviceanfrage](https://admin.microsoft.com/) über das Supportmenü. |
 | **Hilfe und Support – Azure** | Wenn Sie über ein kostenpflichtiges Azure-Abonnement verfügen, besuchen Sie das Azure Admin Center, um [ein Ticket zu öffnen](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportreq). |
-| **Allgemeine Fragen zu Microsoft Teams** | Bei allgemeinen Fragen zu Microsoft Teams senden Sie diese über die :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: [Microsoft Teams-Community](https://answers.microsoft.com/msteams/forum).|
+| **Allgemeine Fragen zu Teams** | Wenn Sie allgemeine Fragen zu Teams haben, übermitteln Sie Ihre Fragen zu :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: [Microsoft Teams Community](https://answers.microsoft.com/msteams/forum).|
 
 ## <a name="developer-community-help"></a>Entwicklercommunityhilfe
 
-Die Microsoft Teams-Community von Entwicklern verwendet Stack Overflow und Microsoft Q&A, um sich mit anderen Entwicklern in Verbindung zu setzen, um Ideen zu sammeln, Sachverhalte zu klären und Abfragen zu übermitteln. Darüber hinaus können Sie auch andere Kontakte oder Websites nutzen, abhängig von der Art der Communityhilfe, die erforderlich ist, um Probleme und Einschränkungen zu melden sowie allgemeine Fragen zu stellen.
+Teams Entwicklercommunity verwenden Stack Overflow und Microsoft Q&A, um sich mit anderen Entwicklern in Verbindung zu setzen, Umklärungen zu erhalten und Abfragen zu übermitteln. Darüber hinaus können Sie auch andere Kontakte oder Websites nutzen, abhängig von der Art der Communityhilfe, die erforderlich ist, um Probleme und Einschränkungen zu melden sowie allgemeine Fragen zu stellen.
 
 ### <a name="developer-community-forums"></a>Entwicklercommunityforen
 
-Posten Sie Ihre Fragen, und helfen Sie anderen Communitymitgliedern, indem Sie Fragen zur Microsoft Teams-App-Entwicklung teilen und beantworten.
+Posten Sie Ihre Fragen, und helfen Sie anderen Communitymitgliedern, indem Sie Teams Fragen zur App-Entwicklung freigeben und beantworten.
 
 | **Communitykanal**|   **Kontaktperson**  |
 |:---------------------|:---------------|

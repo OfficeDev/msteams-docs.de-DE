@@ -5,12 +5,12 @@ description: In diesem Artikel lernen Sie Tools und SDKs zum Erstellen Microsoft
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 0b344b6a2db0abc4d1769c47aca6f496f69b98d7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 10e6535c015e63ecc88b57d56019c12bdb50d531
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142465"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189330"
 ---
 # <a name="bots-and-sdks"></a>Tools und SDKs
 
@@ -61,6 +61,7 @@ Der Azure-Bot-Dienst bietet zusammen mit dem Bot Framework Tools zum Erstellen, 
 > Bot-Anwendungen in Microsoft Teams sind in GCC-High über [Azure Bot Service](/azure/bot-service/channel-connect-teams) verfügbar.
 
 > [!NOTE]
+>
 > * Bots in GCCH unterstützen nur bis zur Manifestversion v1.10.
 > * Bild-URLs in adaptiven Karten werden in der GCCH-Umgebung nicht unterstützt. Sie können eine Bild-URL durch Base64-codierten DataUri ersetzen.
 > * Bei der Registrierung des Botkanals in Azure Government werden Web-App-Bots, App-Dienste (App-Serviceplan) und Anwendungserkenntnisse bereitgestellt, die Bereitstellung des Azure-Bot-Diensts wird jedoch nicht unterstützt (kein App-Dienst).
@@ -70,12 +71,12 @@ Der Azure-Bot-Dienst bietet zusammen mit dem Bot Framework Tools zum Erstellen, 
 >   * Wechseln Sie zur Ressourcengruppe, und löschen Sie die nicht verwendeten Ressourcen manuell. Beispielsweise der App-Dienst, der App-Serviceplan (wenn Sie während der Bot-Registrierung erstellt haben) und die Anwendungserkenntnisse (wenn Sie ihn während der Bot-Registrierung aktivieren).
 >   * Sie können az-cli auch für die Bot-Registrierung verwenden:
 >
->     1. Melden Sie sich bei Azure an, und legen Sie das Abonnement fest. <br> 
->           &nbsp; az cloud set –name "AzureUSGovernment" <br> 
+>     1. Melden Sie sich bei Azure an, und legen Sie das Abonnement fest. <br>
+>           &nbsp; az cloud set –name "AzureUSGovernment" <br>
 >           &nbsp; az account set –name "`subscriptionname/id`".<br>
 >     1. Erstellen einer App-Registrierung  
->           &nbsp; az ad app create --display-name "`name`" <br> 
->           &nbsp; --password "`password`" --available-to-other-tenants.<br> 
+>           &nbsp; az ad app create --display-name "`name`" <br>
+>           &nbsp; --password "`password`" --available-to-other-tenants.<br>
 >           Ihre App-ID würde hier erstellt.<br>
 >     1. Erstellen einer Botressource <br>
 >           &nbsp; az bot create –resource-group "`resource-group`"<br>
@@ -117,7 +118,7 @@ Wenn die Bot-Registrierung in Azure Government Portal erfolgt, müssen Sie die B
     * Legen Sie `ConnectionName` auf den Namen der OAuth-Verbindungseinstellung fest, die Sie Ihrem Bot hinzugefügt haben.
 
     * Legen Sie `MicrosoftAppId` und `MicrosoftAppPassword` auf die App-ID und den geheimen App-Schlüssel Ihres Bots fest.
-    
+
     Abhängig von den Zeichen in Ihrem geheimen Botschlüssel müssen Sie das Kennwort möglicherweise mit XML-ESCAPEZEICHEN versehen. Beispielsweise müssen alle kaufmännischen Und-Zeichen (&) als `&amp;`codiert werden.
 
     ```json
@@ -129,16 +130,17 @@ Wenn die Bot-Registrierung in Azure Government Portal erfolgt, müssen Sie die B
       "ConnectionName": ""
     }
     ```
+
 2. **Startup.cs aktualisieren:**
 
     Um OAuth in *nicht öffentlichen Azure-Clouds* wie der Government Cloud oder in Bots mit Datenaufbewahrung zu verwenden, müssen Sie den folgenden Code in der Datei **"Startup.cs** " hinzufügen.
-    
+
     ```csharp
     string uri = "<uri-to-use>";
     MicrosoftAppCredentials.TrustServiceUrl(uri);
     OAuthClientConfig.OAuthEndpoint = uri;
     ```
-    
+
     Dabei \<uri-to-use\> ist eine der folgenden URIs:
 
     |**uri**|**Beschreibung**|
@@ -308,3 +310,4 @@ this.onMessage(async (context, next) => {
 * [Bot-Befehlsmenüs](~/bots/how-to/create-a-bot-commands-menu.md)
 * [Authentifizierungsfluss für Bots in Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
 * [Verwenden von Aufgabenmodulen aus Bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Veröffentlichen Ihres Bots in Azure](/azure/bot-service/bot-builder-deploy-az-cli)

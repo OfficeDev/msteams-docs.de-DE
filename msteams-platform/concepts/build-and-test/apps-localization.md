@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie Ihre Microsoft Teams App lokalisieren und Zei
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/15/2018
-ms.openlocfilehash: 5c3d0612f0e7ce0e183d097469165cf2f9c337d0
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: cfb425bef1b09540c1049a3769c87d8def272314
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150666"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189594"
 ---
 # <a name="localize-your-app"></a>Lokalisieren IhrerApp
 
@@ -46,6 +46,9 @@ Die Bilder, die Sie mit der englischen Sprache hochladen, werden in AppSource ve
 Verwenden Sie das Microsoft Teams App-Schema `v1.5` und höher, um Ihre App zu lokalisieren. Sie können dies tun, indem Sie das `$schema` Attribut in der Datei manifest.json auf `https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json` oder höher festlegen und die Eigenschaft auf `$schema` version `manifestVersion` aktualisieren (`1.5`in diesem Fall).
 
 Fügen Sie die `localizationInfo` Eigenschaft mit der Standardsprache hinzu, die ihre Anwendung unterstützt. Die Standardsprache wird als letzte Fallbacksprache verwendet, wenn die Clienteinstellungen des Benutzers nicht mit einer Ihrer zusätzlichen Sprachen übereinstimmen.
+
+> [!NOTE]
+> Die Manifestversion muss sowohl für manifest.json- als auch für localization.json-Dateien identisch sein.
 
 ### <a name="example-manifestjson-change"></a>Beispiel für manifest.json-Änderung
 

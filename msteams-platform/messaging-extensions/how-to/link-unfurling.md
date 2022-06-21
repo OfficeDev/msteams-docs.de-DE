@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie die Verbreitung von Links mit
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e166ced0b001414a89d24c81430c1b93431ff3a7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: debbcdcf4c22f63262e16fda70c0e778bffa9379
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142815"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189995"
 ---
 # <a name="link-unfurling"></a>Verbreiten von Links
 
@@ -26,6 +26,11 @@ In diesem Dokument erfahren Sie, wie Sie ihrem App-Manifest mit App Studio oder 
 Die Azure DevOps Nachrichtenerweiterung verwendet die Verbreitung von Links, um nach URLs zu suchen, die in den Bereich für das Verfassen von Nachrichten eingefügt werden, der auf ein Arbeitselement verweist. In der folgenden Abbildung hat ein Benutzer eine URL für ein Element in Azure DevOps eingefügt, dass die Nachrichtenerweiterung in eine Karte aufgelöst wurde:
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Beispiel der Verbreitung von Links":::
+
+Weitere Informationen zur Verbreitung von Links finden Sie im folgenden Video:
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+<br>
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Hinzufügen einer Verbreitung von Links zum App-Manifest
 

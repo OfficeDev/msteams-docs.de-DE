@@ -3,12 +3,12 @@ title: Von Web-Apps für Teams freigeben
 description: Erfahren Sie, wie Sie die Schaltfläche "Freigeben" zu Teams eingebetteten Schaltfläche auf Ihrer Website mit einer Websitevorschau hinzufügen, indem Sie Codebeispiele verwenden.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 38e082166c0a2d66c5e2e26280fe1c8d9c3053a2
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: de5bf1d762a39b5dce222cd4260f03bf461f5547
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150834"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190022"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Von Web-Apps für Teams freigeben
 
@@ -33,6 +33,12 @@ In der folgenden Abbildung wird die Verknüpfungsausweitung über die Schaltflä
 > Die Verbreitung von Links in der Freigabe zu Teams ist derzeit nur in der öffentlichen Entwicklervorschau verfügbar.
 
 In diesem Artikel erfahren Sie, wie Sie eine Schaltfläche "Freigeben" erstellen und in Teams für Ihre Website einbetten, Eine Websitevorschau erstellen und auf Teams für Education erweitern.
+
+Im folgenden Video erfahren Sie, wie Sie die Schaltfläche "Freigeben" in Teams einbetten:
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
+<br>
+
 
 ## <a name="embed-a-share-to-teams-button"></a>Einbetten einer Freigabe in Teams Schaltfläche
 
@@ -99,7 +105,7 @@ So zeigen Sie die Vorschau an:
 
 In der folgenden Tabelle sind die erforderlichen Tags aufgeführt:
 
-|Wert|Metatag| öffnen Graph|
+|Value|Metatag| öffnen Graph|
 |----|----|----|
 |Titel|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
 |Beschreibung|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|

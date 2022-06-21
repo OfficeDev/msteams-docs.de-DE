@@ -1,15 +1,15 @@
 ---
 title: Suchen mit Nachrichtenerweiterungen
-description: In diesem Modul erfahren Sie, wie Sie suchbasierte Nachrichtenerweiterungen entwickeln.
+description: In diesem Artikel erfahren Sie, wie Sie suchbasierte Nachrichtenerweiterungen entwickeln.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: a555091558d66e070f09ec6df8338ac686657019
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 20dbc7c5a65ee44f3b40eda29a20d6d37e8a81f0
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142752"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190012"
 ---
 # <a name="search-with-message-extensions"></a>Suchen mit Nachrichtenerweiterungen
 
@@ -94,15 +94,15 @@ Um Ihre Nachrichtenerweiterung zu öffnen, navigieren Sie zu einem Ihrer Chats o
 
 Die meiste Arbeit umfasst das `onQuery` Ereignis, das alle Interaktionen im Nachrichtenerweiterungsfenster behandelt.
 
-Wenn Sie im Manifest festlegen `canUpdateConfiguration` `true`, aktivieren Sie das **menüelement Einstellungen** für Ihre Nachrichtenerweiterung und müssen auch behandeln `onQuerySettingsUrl` und `onSettingsUpdate`.
+Wenn Sie im Manifest festlegen `canUpdateConfiguration` `true`, aktivieren Sie das menüelement Einstellungen für Ihre Nachrichtenerweiterung und müssen auch behandeln `onQuerySettingsUrl` und `onSettingsUpdate`.
 
 ## <a name="handle-onquery-events"></a>Behandeln von onQuery-Ereignissen
 
 Eine Nachrichtenerweiterung empfängt ein `onQuery` Ereignis, wenn etwas im Fenster der Nachrichtenerweiterung geschieht oder an das Fenster gesendet wird.
 
-Wenn ihre Nachrichtenerweiterung eine Konfigurationsseite verwendet, sollte der Handler `onQuery` zuerst nach gespeicherten Konfigurationsinformationen suchen. Wenn die Nachrichtenerweiterung nicht konfiguriert ist, geben Sie eine `config` Antwort mit einem Link zu Ihrer Konfigurationsseite zurück. Beachten Sie, dass die Antwort von der Konfigurationsseite auch von `onQuery`behandelt wird. Die einzige Ausnahme ist, wenn die Konfigurationsseite vom Handler `onQuerySettingsUrl`aufgerufen wird. Weitere Informationen finden Sie im folgenden Abschnitt:
+Wenn ihre Nachrichtenerweiterung eine Konfigurationsseite verwendet, sollte der Handler `onQuery` zuerst nach gespeicherten Konfigurationsinformationen suchen. Wenn die Nachrichtenerweiterung nicht konfiguriert ist, geben Sie eine `config` Antwort mit einem Link zu Ihrer Konfigurationsseite zurück. Die Antwort von der Konfigurationsseite wird auch von `onQuery`behandelt. Die einzige Ausnahme ist, wenn die Konfigurationsseite vom Handler `onQuerySettingsUrl`aufgerufen wird. Weitere Informationen finden Sie im folgenden Abschnitt:
 
-Wenn Ihre Nachrichtenerweiterung eine Authentifizierung erfordert, überprüfen Sie die Benutzerstatusinformationen. wenn der Benutzer nicht angemeldet ist, folgen Sie den Anweisungen im Abschnitt ["Authentifizierung](#authentication) " weiter unten in diesem Thema.
+Wenn Ihre Nachrichtenerweiterung eine Authentifizierung erfordert, überprüfen Sie die Benutzerstatusinformationen. Wenn der Benutzer nicht angemeldet ist, folgen Sie den Anweisungen im Abschnitt ["Authentifizierung](#authentication) " weiter unten in diesem Thema.
 
 Überprüfen Sie als Nächstes, ob `initialRun` sie festgelegt ist. Wenn ja, ergreifen Sie entsprechende Maßnahmen, z. B. das Bereitstellen von Anweisungen oder eine Liste der Antworten.
 
@@ -136,9 +136,9 @@ Zusätzlich zu den Standard-Bot-Aktivitätseigenschaften enthält die Nutzlast d
 |`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD)-Mandanten-ID. |
 |`channelData.channel.id`| Kanal-ID (wenn die Anforderung in einem Kanal erfolgt ist). |
 |`channelData.team.id`| Team-ID (wenn die Anforderung in einem Kanal erfolgt ist). |
-|`clientInfo`|Optionale Metadaten zu der Clientsoftware, die zum Senden der Nachricht eines Benutzers verwendet wird. Die Entität kann zwei Eigenschaften enthalten:<br>Das `country` Feld enthält den vom Benutzer erkannten Speicherort.<br>Das `platform` Feld beschreibt die Messaging-Clientplattform. <br>Weitere Informationen *finden Sie unter* [Nicht-IRI-Entitätstypen – clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
+|`clientInfo`|Optionale Metadaten zu der Clientsoftware, die zum Senden der Nachricht eines Benutzers verwendet wird. Die Entität kann zwei Eigenschaften enthalten:<br>Das `country` Feld enthält den vom Benutzer erkannten Speicherort.<br>Das `platform` Feld beschreibt die Messaging-Clientplattform. <br>Weitere Informationen finden Sie  [unter "Nicht-IRI-Entitätstypen – clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)".|
 
-Die Anforderungsparameter selbst befinden sich im Wertobjekt, das die folgenden Eigenschaften enthält:
+Die Anforderungsparameter werden im Wertobjekt gefunden, das die folgenden Eigenschaften enthält:
 
 | Eigenschaftenname | Zweck |
 |---|---|
@@ -194,7 +194,7 @@ Die Anforderungsparameter selbst befinden sich im Wertobjekt, das die folgenden 
 
 ### <a name="receive-requests-from-links-inserted-into-the-compose-message-box"></a>Empfangen von Anforderungen von Links, die in das Feld zum Verfassen von Nachrichten eingefügt wurden
 
-Alternativ (oder zusätzlich) zum Durchsuchen Ihres externen Diensts können Sie eine URL verwenden, die in das Feld zum Verfassen von Nachrichten eingefügt wurde, um Ihren Dienst abzufragen und eine Karte zurückzugeben. Im Screenshot unten hat ein Benutzer eine URL für ein Arbeitselement in Azure DevOps eingefügt, das die Nachrichtenerweiterung in eine Karte aufgelöst hat.
+Alternativ (oder zusätzlich) zum Durchsuchen Ihres externen Diensts können Sie eine URL verwenden, die in das Feld zum Verfassen von Nachrichten eingefügt wurde, um Ihren Dienst abzufragen und eine Karte zurückzugeben. Im Screenshot unten hat ein Benutzer eine URL für ein Arbeitselement in Azure DevOps eingefügt, die die Nachrichtenerweiterung in eine Karte aufgelöst hat.
 
 ![Beispiel der Verbreitung von Links](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -234,7 +234,7 @@ Wenn Ihre App mehrere Elemente zurückgibt, wird nur das erste element verwendet
 
 ### <a name="respond-to-user-requests"></a>Reagieren auf Benutzeranforderungen
 
-Wenn der Benutzer eine Abfrage ausführt, gibt Microsoft Teams eine synchrone HTTP-Anforderung an Ihren Dienst aus. An diesem Punkt hat Ihr Code 5 Sekunden Zeit, um eine HTTP-Antwort auf die Anforderung bereitzustellen. Während dieser Zeit kann Ihr Dienst zusätzliche Nachschlagevorgänge oder eine andere Geschäftslogik ausführen, die zum Bedienen der Anforderung erforderlich ist.
+Wenn der Benutzer eine Abfrage ausführt, gibt Teams eine synchrone HTTP-Anforderung an Ihren Dienst aus. Während dieser Zeit hat Ihr Code 5 Sekunden Zeit, um eine HTTP-Antwort auf die Anforderung bereitzustellen. Während dieser Zeit kann Ihr Dienst zusätzliche Nachschlagevorgänge oder eine andere Geschäftslogik ausführen, die zum Bedienen der Anforderung erforderlich ist.
 
 Ihr Dienst sollte mit den Ergebnissen antworten, die der Benutzerabfrage entsprechen. Die Antwort muss einen HTTP-Statuscode und ein gültiges `200 OK` Application/JSON-Objekt mit dem folgenden Text angeben:
 
@@ -267,7 +267,7 @@ Die Ergebnisliste wird in der benutzeroberfläche Microsoft Teams mit einer Vors
 * Verwenden der `preview` Eigenschaft innerhalb des Objekts `attachment` . Bei der `preview` Anlage kann es sich nur um eine Hero- oder Miniaturansichtenkarte handeln.
 * Extrahiert aus den grundlegenden `title`, `text`und `image` Eigenschaften der Anlage. Diese werden nur verwendet, wenn die `preview` Eigenschaft nicht festgelegt ist und diese Eigenschaften verfügbar sind.
 
-Sie können eine Vorschau einer adaptiven oder Office 365 Connectorkarte in der Ergebnisliste einfach anzeigen, indem Sie die Vorschaueigenschaft festlegen. Dies ist nicht erforderlich, wenn die Ergebnisse bereits Hero- oder Miniaturansichtenkarten sind. Wenn Sie die Vorschauanlage verwenden, muss es sich entweder um eine Hero- oder eine Miniaturansichtskarte handeln. Wenn keine Vorschaueigenschaft angegeben ist, schlägt die Vorschau der Karte fehl, und es wird nichts angezeigt.
+Sie können eine Vorschau einer adaptiven oder Office 365 Connectorkarte in der Ergebnisliste anzeigen, indem Sie einfach die Vorschaueigenschaft festlegen. Dies ist nicht erforderlich, wenn es sich bei den Ergebnissen bereits um Hero- oder Miniaturbildkarten handelt. Wenn Sie die Vorschauanlage verwenden, muss es sich entweder um eine Hero- oder eine Miniaturansichtskarte handeln. Wenn keine Vorschaueigenschaft angegeben ist, schlägt die Vorschau der Karte fehl, und es wird nichts angezeigt.
 
 #### <a name="response-example"></a>Anforderungsbeispiel
 
@@ -434,7 +434,7 @@ Die Standardabfrage hat dieselbe Struktur wie jede normale Benutzerabfrage, mit 
 
 ## <a name="identify-the-user"></a>Identifizieren des Benutzers
 
-Jede Anforderung an Ihre Dienste enthält die verschleierte ID des Benutzers, der die Anforderung ausgeführt hat, sowie den Anzeigenamen und die Microsoft Azure Active Directory (Azure AD)-Objekt-ID des Benutzers.
+Jede Anforderung an Ihre Dienste enthält die verschleierte ID des Benutzers, der die Anforderung ausgeführt hat, sowie den Anzeigenamen und Microsoft Azure Active Directory (Azure AD)-Objekt-ID des Benutzers.
 
 ```json
 "from": {
@@ -448,7 +448,7 @@ Die `id` Werte und `aadObjectId` die Werte entsprechen garantiert dem des authen
 
 ## <a name="authentication"></a>Authentifizierung
 
-Wenn Ihr Dienst eine Benutzerauthentifizierung erfordert, müssen Sie sich beim Benutzer anmelden, bevor er die Nachrichtenerweiterung verwenden kann. Wenn Sie einen Bot oder eine Registerkarte geschrieben haben, die sich beim Benutzer anmeldet, sollte dieser Abschnitt vertraut sein.
+Wenn Ihr Dienst eine Benutzerauthentifizierung erfordert, müssen Sie sich beim Benutzer anmelden, bevor der Benutzer die Nachrichtenerweiterung verwenden kann. Wenn Sie einen Bot oder eine Registerkarte geschrieben haben, die sich beim Benutzer anmeldet, sollte dieser Abschnitt vertraut sein.
 
 Die Reihenfolge lautet wie folgt:
 
@@ -491,7 +491,7 @@ Um einen nicht authentifizierten Benutzer zur Anmeldung aufzufordern, antworten 
 
 Ihre Anmeldeerfahrung sollte reaktionsfähig sein und in ein Popupfenster passen. Sie sollte in das [Microsoft Teams JavaScript-Client SDK](/javascript/api/overview/msteams-client) integriert werden, das die Nachrichtenübergabe verwendet.
 
-Wie bei anderen eingebetteten Erfahrungen, die innerhalb von Microsoft Teams ausgeführt werden, muss Ihr Code im Fenster zuerst `microsoftTeams.initialize()` aufrufen. Wenn Ihr Code einen OAuth-Fluss ausführt, können Sie die Teams Benutzer-ID in Ihr Fenster übergeben, die sie dann an die OAuth-Anmelde-URL übergeben kann.
+Wie bei anderen eingebetteten Umgebungen, die innerhalb Teams ausgeführt werden, muss Ihr Code im Fenster zuerst aufgerufen `microsoftTeams.initialize()`werden. Wenn Ihr Code einen OAuth-Fluss ausführt, können Sie die Teams Benutzer-ID in Ihr Fenster übergeben, die sie dann an die OAuth-Anmelde-URL übergeben kann.
 
 ### <a name="complete-the-sign-in-flow"></a>Abschließen des Anmeldeflusses
 

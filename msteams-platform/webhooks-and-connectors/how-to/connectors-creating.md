@@ -5,16 +5,23 @@ description: In diesem Modul erfahren Sie, wie Sie mit Office 365 Connectors beg
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 53f5f6d9f360c465175b18d8b1b5eab9020d3ccf
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1727ff46124c5c9dd5567ae63cea0826e806be2c
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143557"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189325"
 ---
 # <a name="create-office-365-connectors"></a>Erstellen von Office 365-Connectors
 
 Mit Microsoft Teams Apps können Sie Ihren bestehenden Office 365 Connector hinzufügen oder einen neuen in Teams erstellen. Weitere Informationen finden Sie unter [Erstellen Sie Ihren eigenen Connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
+
+Im folgenden Video erfahren Sie, wie Sie eine Office 365 Connectors erstellen:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+<br>
+
 
 ## <a name="add-a-connector-to-teams-app"></a>Hinzufügen eines Connectors zur Teams-App
 
@@ -22,7 +29,7 @@ Sie können ein [Paket](~/concepts/build-and-test/apps-package.md) erstellen und
 
 Um Ihren Connector zu verteilen, registrieren Sie ihn im [Connectors-Entwicklerdashboard](https://aka.ms/connectorsdashboard).
 
-Damit ein Connector nur in Microsoft Teams funktioniert, befolgen Sie die Anweisungen zum Einreichen des Connectors im Artikel zum [Veröffentlichen Ihrer App im Microsoft Teams-Store](~/concepts/deploy-and-publish/appsource/publish.md). Ansonsten funktioniert ein registrierter Connector in allen Office 365-Produkten, die Anwendungen unterstützen, einschließlich Outlook und Teams.
+Damit ein Connector nur in Teams funktioniert, befolgen Sie die Anweisungen zum Übermitteln des Connectors beim [Veröffentlichen Ihrer App im Artikel zum Microsoft Teams Store](~/concepts/deploy-and-publish/appsource/publish.md). Ansonsten funktioniert ein registrierter Connector in allen Office 365-Produkten, die Anwendungen unterstützen, einschließlich Outlook und Teams.
 
 > [!IMPORTANT]
 > Ihr Connector wird registriert, nachdem Sie im Connectors-Entwicklerdashboard auf **Speichern** klicken. Wenn Sie Ihren Connector in AppSource veröffentlichen möchten, folgen Sie den Anweisungen zum [Veröffentlichen Ihrer Microsoft Teams-App in AppSource](~/concepts/deploy-and-publish/apps-publish.md). Wenn Sie Ihre App nicht in AppSource veröffentlichen möchten, verteilen Sie sie direkt an die Organisation. Nach dem Veröffentlichen von Connectors für Ihre Organisation ist keine weitere Aktion im Connectordashboard erforderlich.
@@ -40,7 +47,7 @@ Benutzer können die gesamte Connectorkonfiguration abschließen, ohne den Teams
     > * Der Code kann das Speicherereignis verarbeiten, indem er die Webhookeinstellungen abruft. Ihr Code speichert den Webhook, um später Ereignisse zu posten.
     > * Die Konfigurationserfahrung wird inline in Teams geladen.
 
-Sie können Ihre vorhandene Webkonfigurationserfahrung wiederverwenden oder eine separate Version erstellen, die speziell in Teams gehostet wird. Ihr Code muss das Microsoft Teams JavaScript SDK enthalten. Dadurch erhält Ihr Code Zugriff auf APIs, um allgemeine Vorgänge auszuführen, z. B. das Abrufen des aktuellen Benutzer-, Kanal- oder Teamkontexts und das Initiieren von Authentifizierungsabläufen.
+Sie können Ihre vorhandene Webkonfigurationserfahrung wiederverwenden oder eine separate Version erstellen, die speziell in Teams gehostet wird. Ihr Code muss das Teams JavaScript SDK enthalten. Dadurch erhält Ihr Code Zugriff auf APIs, um allgemeine Vorgänge auszuführen, z. B. das Abrufen des aktuellen Benutzer-, Kanal- oder Teamkontexts und das Initiieren von Authentifizierungsabläufen.
 
 So integrieren Sie die Konfigurationserfahrung:
 
@@ -136,7 +143,7 @@ Die folgende Tabelle enthält die Parameter und die Details zu `GetSetting`-Antw
 | `configName`  | Der Konfigurationsname, wie durch Ihren Code beim Aufrufen von `setSettings()` festgelegt. |
 | `contentUrl` | Die URL der Konfigurationsseite, wie durch Ihren Code beim Aufruf von `setSettings()` festgelegt. |
 | `webhookUrl` | Die für den Connector erstellte Webhook-URL. Verwenden Sie die Webhook-URL zum POSTEN von strukturiertem JSON, um Karten an den Kanal zu senden. Die `webhookUrl` wird nur zurückgegeben, wenn die Anwendung erfolgreich Daten zurückgibt. |
-| `appType` | Die zurückgegebenen Werte können `mail`, `groups`, oder `teams` sein und entsprechen Office 365 Mail, Office 365-Gruppen bzw. Microsoft Teams. |
+| `appType` | Die zurückgegebenen Werte können `mail`Office 365 `groups``teams` Mail, Office 365 Groups oder Teams entsprechen. |
 | `userObjectId` | Die eindeutige ID, die dem Office 365-Benutzer entspricht, der die Einrichtung des Connectors initiiert hat. Sie sollte gesichert werden. Dieser Wert kann verwendet werden, um den Benutzer in Office 365 zuzuordnen, der die Konfiguration in Ihrem Dienst eingerichtet hat. |
 
 #### <a name="handle-edits"></a>Behandeln von Bearbeitungen
@@ -214,11 +221,11 @@ Nachdem Sie die App hochgeladen haben, öffnen Sie die Connectorliste von einem 
 ![Screenshot des Abschnitts „Hochgeladen“ im Connectordialogfeld](~/assets/images/connectors/connector_dialog_uploaded.png)
 
 > [!NOTE]
-> Der Fluss erfolgt vollständig innerhalb Microsoft Teams als gehostete Erfahrung.
+> Der Fluss erfolgt vollständig innerhalb Teams als gehostete Erfahrung.
 
 Um zu überprüfen, ob die `HttpPOST`-Aktion ordnungsgemäß funktioniert, [senden Sie Nachrichten an Ihren Connector](~/webhooks-and-connectors/how-to/connectors-using.md).
 
-Folgen Sie der [Schritt-für-Schritt-Anleitung](../../sbs-teams-connectors.yml), um die Connectors in Microsoft Teams zu erstellen und zu testen.
+Befolgen Sie die [schrittweise Anleitung](../../sbs-teams-connectors.yml) zum Erstellen und Testen der Verbinder in Ihrem Teams.
 
 ## <a name="distribute-webhook-and-connector"></a>Verteilen von Webhook und Connector
 

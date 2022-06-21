@@ -4,12 +4,12 @@ description: In diesem Modul erfahren Sie mehr über die Unterstützung der Text
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/29/2018
-ms.openlocfilehash: 2bec542b678f371e20317d1ea7d11b4e97f52338
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 0aea1472a323c0161567c4661c02956568cb2187
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142332"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189733"
 ---
 # <a name="formatting-bot-messages"></a>Formatierung von Bot-Mitteilungen
 
@@ -27,7 +27,7 @@ Microsoft Teams unterstützt die folgenden Formatierungsoptionen:
 
 ## <a name="formatting-text-content"></a>Formatieren von Textinhalten
 
-Microsoft Teams unterstützt eine Teilmenge von Markdown- und XML-Formatierungstags (HTML).
+Teams unterstützt eine Teilmenge von Markdown- und XML-Formatierungstags (HTML).
 
 Derzeit gelten die folgenden Einschränkungen:
 * Nur-Text-Nachrichten unterstützen keine Tabellenformatierung.
@@ -36,7 +36,7 @@ Informationen zum Formatieren in Karten finden Sie [unter Teams Kartenreferenz](
 
 ### <a name="cross-platform-support"></a>Plattformübergreifender Support
 
-Um sicherzustellen, dass Ihre Formatierung auf allen Plattformen funktioniert, die von Microsoft Teams unterstützt werden, beachten Sie, dass einige Formatvorlagen derzeit nicht auf allen Plattformen unterstützt werden.
+Um sicherzustellen, dass Ihre Formatierung auf allen Plattformen funktioniert, die von Teams unterstützt werden, beachten Sie, dass einige Formatvorlagen derzeit nicht auf allen Plattformen unterstützt werden.
 
 | Format                     | Nur-Text-Nachrichten | Karten (nur XML) |
 |---------------------------|--------------------|------------------|

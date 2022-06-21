@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie mehr über die Suchbefehle für Nachri
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: e71e83f8fbd6b0d44257a2d38fd13486b087bc5e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 10bb71580ac67db155bd14b74325635ae22e6840
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142808"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189613"
 ---
 # <a name="define-message-extension-search-commands"></a>Definieren von Suchbefehlen für Nachrichtenerweiterungen
 
@@ -20,6 +20,12 @@ Mithilfe von Suchbefehlen für Nachrichtenerweiterungen können Benutzer externe
 
 > [!NOTE]
 > Die Maximale Größe der Ergebniskarte beträgt 28 KB. Die Karte wird nicht gesendet, wenn ihre Größe 28 KB überschreitet.
+
+Im folgenden Video erfahren Sie, wie Sie Suchbefehle für Nachrichtenerweiterungen definieren:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+<br>
 
 ## <a name="select-search-command-invoke-locations"></a>Auswählen von Suchbefehlsspeicherorten
 

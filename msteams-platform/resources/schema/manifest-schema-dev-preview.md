@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Beispielmanifestdatei und die Beschreib
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: deaf094ab18ddd2ebe70ea9594f41c108398bf32
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: ec5d02c5804f3b2de1398936666577c2a31bc2d4
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142737"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189869"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für die öffentliche Entwicklervorschau für Microsoft Teams
 
@@ -471,13 +471,13 @@ Das Objekt ist ein Array (maximal 1 Element) mit allen Elementen vom Typ `object
 
 |Name| Typ | Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`botId`|Zeichenfolge|64|✔️|Die eindeutige Microsoft-App-ID für den Bot, der die Nachrichtenerweiterung unterstützt, wie sie beim Bot Framework registriert ist. Dies kann durchaus mit der Gesamt-[App-ID identisch sein](#id).|
+|`botId`|Zeichenfolge|64|✔️|Die eindeutige Microsoft-App-ID für den Bot, welcher der Nachrichtenerweiterung zugeordnet ist, wie beim Bot Framework registriert. Dies kann durchaus mit der Gesamt-[App-ID identisch sein](#id).|
 |`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob die Konfiguration einer Nachrichtenerweiterung vom Benutzer aktualisiert werden kann. Der Standardwert ist `false`.|
 |`commands`|Objekt-Array|10|✔️|Array von Befehlen, die die Nachrichtenerweiterung unterstützt|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-Ihre Nachrichtenerweiterung sollte einen oder mehrere Befehle deklarieren. Jeder Befehl wird in Microsoft Teams als potenzielle Interaktion vom Einstiegspunkt in der Benutzeroberfläche angezeigt. Es gibt maximal 10 Befehle.
+Ihre Nachrichtenerweiterung sollte einen oder mehrere Befehle deklarieren. Jeder Befehl wird in Teams als potenzielle Interaktion vom uibasierten Einstiegspunkt aus angezeigt. Es gibt maximal 10 Befehle.
 
 Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 

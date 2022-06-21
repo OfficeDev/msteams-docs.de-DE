@@ -5,16 +5,16 @@ description: In diesem Modul erfahren Sie, wie das Entfernen von Registerkartenr
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 178c8616a00bc64f10a39815db16d11dcea6eb40
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 270d8499ff917a5b95aeaeaa48ddf11215f77d03
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143319"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190142"
 ---
 # <a name="tab-margin-changes"></a>Änderungen am Registerkartenrand
 
-In diesem Dokument wird beschrieben, wie das Entfernen von Rändern um alle Registerkarten in Microsoft Teams die App-Erstellung verbessert. Dies ist eine Verbesserung, die 2021 in Microsoft Teams eingeführt wurde.
+In diesem Dokument wird beschrieben, wie das Entfernen von Rändern um alle Registerkarten in Microsoft Teams die App-Erstellung verbessert. Dies ist eine Verbesserung, die 2021 in Teams eingeführt wurde.
 Sie können Apps erstellen, die für Teams nativer aussehen, indem Sie die Ränder um alle Registerkarten entfernen. Registerkarten mit entfernten Rändern werden an Microsoft Teams [UI Kit-Designs](~/tabs/design/tabs.md) ausgerichtet. Die meisten Apps bieten ein verbessertes Aussehen ohne Ränder.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tabstopp-Witz und ohne Ränder" border="false":::

@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie eine Microsoft Teams Messaging-Erweiterung mi
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b6eb248f84bdfb62c369ed2b95831c9d7eacec05
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9f222f52a4eea3b59e6caf15e77b006a58a426d2
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142339"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190024"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Eine Messaging-Erweiterung mit App Studio erstellen
 
@@ -23,7 +23,7 @@ Auf hoher Ebene müssen Sie die folgenden Schritte ausführen, um eine Messaging
 2. Erstellen und Bereitstellen Ihres Webdiensts (während der Entwicklung verwenden Sie einen Tunneldienst wie ngrok, um ihn lokal auszuführen).
 3. Registrieren Sie Ihren Webdienst beim Bot Framework.
 4. Erstellen Sie Ihr App-Paket.
-5. Hochladen Ihres Pakets in Microsoft Teams.
+5. Hochladen Das Paket Teams.
 
 Das Erstellen Ihres Webdiensts, das Erstellen Ihres App-Pakets und das Registrieren Ihres Webdiensts beim Bot Framework kann in beliebiger Reihenfolge erfolgen. Da diese drei Teile so miteinander verflochten sind, müssen Sie unabhängig davon, in welcher Reihenfolge Sie sie ausführen, zurückkehren, um die anderen Zuschnitte zu aktualisieren. Ihre Registrierung benötigt den Messaging-Endpunkt von Ihrem bereitgestellten Webdienst, und Ihr Webdienst benötigt die ID und das Kennwort, die aus Ihrer Registrierung erstellt wurden. Ihr App-Manifest benötigt auch diese ID, um Teams mit Ihrem Webdienst zu verbinden.
 
@@ -56,7 +56,7 @@ Sie können Ihr App-Manifest entweder in App Studio oder manuell erstellen.
 
 ### <a name="create-your-app-manifest-using-app-studio"></a>Erstellen Ihres App-Manifests mit App Studio
 
-Sie können die App Studio-App im Microsoft Teams-Client verwenden, um das App-Manifest zu erstellen.
+Sie können die App Studio-App im Teams-Client verwenden, um Das App-Manifest zu erstellen.
 
 1. Öffnen Sie App Studio im Teams-Client aus dem **...**-Überlaufmenü auf der linken Navigationsleiste. Wenn es noch nicht installiert ist, können Sie dies tun, indem Sie danach suchen.
 2. Wählen Sie auf der Registerkarte " **Manifest-Editor** " die Option " **Neue App erstellen** " aus (oder wenn Sie einer vorhandenen App eine Messaging-Erweiterung hinzufügen, können Sie Ihr App-Paket importieren).
@@ -71,7 +71,7 @@ Auf der Registerkarte **"Fertig stellen => Testen und verteilen** " können Sie 
 
 ### <a name="create-your-app-manifest-manually"></a>Manuelles Erstellen des App-Manifests
 
-Wie bei Bots und Registerkarten aktualisieren Sie das [App-Manifest](~/resources/schema/manifest-schema.md#composeextensions) Ihrer App so, dass es die Eigenschaften der Messagingerweiterung enthält. Diese Eigenschaften steuern, wie Ihre Messaging-Erweiterung im Microsoft Teams-Client angezeigt wird und wie sie sich verhält. Messaging-Erweiterungen werden ab Version 1.0 des Manifests unterstützt.
+Wie bei Bots und Registerkarten aktualisieren Sie das [App-Manifest](~/resources/schema/manifest-schema.md#composeextensions) Ihrer App so, dass es die Eigenschaften der Messagingerweiterung enthält. Diese Eigenschaften steuern, wie Ihre Messaging-Erweiterung im Teams-Client angezeigt und verhalten wird. Messaging-Erweiterungen werden ab Version 1.0 des Manifests unterstützt.
 
 #### <a name="declare-your-messaging-extension"></a>Deklarieren Ihrer Messaging-Erweiterung
 

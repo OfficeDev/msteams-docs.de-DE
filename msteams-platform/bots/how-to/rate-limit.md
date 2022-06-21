@@ -3,12 +3,12 @@ title: Optimieren eines Bots mit Ratenbegrenzung in Teams
 description: Informationen zum Behandlungsratenlimit für Bots mit pro Bot und Threadlimit für alle Bots unter Verwendung von Codebeispielen
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: f6afb9cd3b3894dff31ecaf5e8d9ece7204248a1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9f94ef6a047cf597421d788dfaca95656eac2318
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143732"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190243"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimieren eines Bots mit Ratenbegrenzung in Teams
 
@@ -176,3 +176,7 @@ Die folgende Tabelle enthält den Grenzwert pro Thread für alle Bots:
 
 > [!div class="nextstepaction"]
 > [Bots für Anrufe und Besprechungen](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwalten eines lang andauernden Vorgangs](/azure/bot-service/bot-builder-howto-long-operations-guidance?view=azure-bot-service-4.0&preserve-view=true)

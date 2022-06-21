@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie Aktionsbefehle für Messaging
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 64a11741612fdf8efbcca968fed3a3d78cda90b1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 0d6979a3d0845be88e43e150451ee6e4097a6870
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143431"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189617"
 ---
 # <a name="define-message-extension-action-commands"></a>Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 
@@ -23,6 +23,12 @@ Bevor Sie den Aktionsbefehl erstellen, müssen Sie die folgenden Faktoren festle
 1. [Von wo kann der Aktionsbefehl ausgelöst werden?](#select-action-command-invoke-locations)
 1. [Wie wird das Aufgabenmodul erstellt?](#select-how-to-create-your-task-module)
 1. [Wird die endgültige Nachricht oder Karte von einem Bot an den Kanal gesendet, oder wird die Nachricht oder Karte in den Bereich zum Verfassen von Nachrichten eingefügt, damit der Benutzer die Nachricht bzw. Karte übermitteln kann?](#select-how-the-final-message-is-sent)
+
+Im folgenden Video erfahren Sie, wie Sie Aktionsbefehle für Nachrichtenerweiterungen definieren:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+<br>
 
 ## <a name="select-action-command-invoke-locations"></a>Auswählen von Speicherorten zum Aufrufen von Aktionsbefehlen
 
@@ -185,7 +191,7 @@ Der folgende Abschnitt ist ein Beispiel für ein Objekt `composeExtensions`, das
         "title": "Create To Do",
         "type": "action",
         "context": ["commandBox", "message", "compose"],
-        "fetchTask": true,
+        "fetchTask": false,
         "parameters": [
           {
             "name": "Name",
@@ -212,7 +218,7 @@ Der folgende Abschnitt ist ein Beispiel für ein Objekt `composeExtensions`, das
         "description": "Reassign a todo item",
         "title": "Reassign a todo item",
         "type": "action",
-        "fetchTask": true,
+        "fetchTask": false,
       }
     ]
   }

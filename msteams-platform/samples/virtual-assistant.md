@@ -3,12 +3,12 @@ title: Erstellen eines virtuellen Assistenten
 description: Erfahren Sie, wie Sie Virtual Assistant Bot für Teams erstellen, indem Sie Codebeispiele und Codeausschnitte mit Features wie adaptive Karten, Behandlung von Unterbrechungen und mehr verwenden.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 4b1dc7168cc67cd455182dddd4dd2d14a0cf9c3d
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: a26f68edd2134c0bda066325915891aae5e8e2d0
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123062"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189517"
 ---
 # <a name="create-virtual-assistant"></a>Erstellen eines virtuellen Assistenten
 
@@ -263,7 +263,11 @@ Im folgenden Abschnitt ist der Codeausschnitt aus der Manifestdatei eines Skills
                 "id": "searchQuery",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    ....   
+                 ....}
+         ]
+     }
+ ]
+                 
 ```
 
 Im folgenden Abschnitt ist der entsprechende Codeausschnitt aus der Manifestdatei des virtuellen Assistenten dargestellt:
@@ -277,7 +281,11 @@ Im folgenden Abschnitt ist der entsprechende Codeausschnitt aus der Manifestdate
                 "id": "searchQuery:<skill_id>",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    .... 
+                 ....}
+         ]
+     }
+ ]
+ 
 ```
 
 Nachdem die Befehle von einem Benutzer aufgerufen wurden, kann der virtuelle Assistent einen zugeordneten Skill durch die Analyse der Befehls-ID identifizieren, die Aktivität durch Entfernen des zusätzlichen Suffix `:<skill_id>` aus der Befehls-ID aktualisieren und an den entsprechenden Skill weiterleiten. Der Code für einen Skill muss das zusätzliche Suffix nicht verarbeiten. Somit werden Konflikte zwischen Befehls-IDs von Skills vermieden. Bei diesem Ansatz werden alle Such- und Aktionsbefehle eines Skills in allen Kontexten, z. B. **compose**, **CommandBox** und **message**, von einem virtuellen Assistenten unterstützt.
@@ -334,7 +342,7 @@ Einige Nachrichtenerweiterungsaktivitäten enthalten nicht die Befehls-ID. Beisp
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht, wie die App-Vorlage "Raum buchen" in einen Skill eines virtuellen Assistenten konvertiert werden kann: "Raum buchen" ist ein Microsoft Teams-Bot, mit dem Nutzer schnell einen Besprechungsraum für 30, 60 oder 90 Minuten ab der aktuellen Uhrzeit finden und reservieren können. Die Standarddauer beträgt 30 Minuten. Der "Raum buchen"-Bot ist auf persönliche bzw. 1:1-Unterhaltungen beschränkt.
+Das folgende Beispiel zeigt, wie Sie die App-Vorlage "Book-a-room" in eine Virtual Assistant Fähigkeit konvertieren: "Book-a-room" ist eine Teams, mit der Benutzer einen Besprechungsraum ab der aktuellen Zeit schnell für 30, 60 oder 90 Minuten finden und reservieren können. Die Standarddauer beträgt 30 Minuten. Der "Raum buchen"-Bot ist auf persönliche bzw. 1:1-Unterhaltungen beschränkt.
 Die folgende Abbildung zeigt einen virtuellen Assistenten mit einem "**Raum buchen**"-Skill:
 
 ![Virtueller Assistent mit einem "Raum buchen"-Skill](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
@@ -343,7 +351,7 @@ Nachfolgend sind die Delta-Änderungen dargestellt, die eingeführt wurden, um s
 
 ### <a name="skill-manifest"></a>Skillmanifest
 
-Ein Skillmanifest ist eine JSON-Datei, die den Messaging-Endpunkt, die ID, den Namen und andere relevante Metadaten eines Skills enthält. Dieses Manifest unterscheidet sich vom Manifest, das zum Querladen einer App in Microsoft Teams verwendet wird. Ein virtueller Assistent erfordert einen Pfad zu dieser Datei als Input zum Anfügen eines Skills. Wir haben das folgende Manifest zum Ordner "wwwroot" des Bots hinzugefügt.
+Ein Skillmanifest ist eine JSON-Datei, die den Messaging-Endpunkt, die ID, den Namen und andere relevante Metadaten eines Skills enthält. Dieses Manifest unterscheidet sich vom Manifest, das zum Querladen einer App in Teams verwendet wird. Ein virtueller Assistent erfordert einen Pfad zu dieser Datei als Input zum Anfügen eines Skills. Wir haben das folgende Manifest zum Ordner "wwwroot" des Bots hinzugefügt.
 
 ```bash
 botskills connect --remoteManifest "<url to skill's manifest>" ..

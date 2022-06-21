@@ -5,16 +5,16 @@ description: In diesem Modul lernen Sie Messaging-Erweiterungen und Szenarien ke
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 5a63c1a36217f4c0aa237e38537be2e094acdea3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7550667495c2d65fd2a9a502830c46eeccfe9749
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144320"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189796"
 ---
 # <a name="message-extensions"></a>Nachrichtenerweiterungen
 
-Nachrichtenerweiterungen ermöglichen den Benutzern die Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams-Client. Sie können in einem externen System über den Nachrichtenbereich „Verfassen“, das Befehlsfeld oder direkt aus einer Nachricht heraus suchen oder Aktionen starten. Sie können die Ergebnisse dieser Interaktion an den Microsoft Teams-Client in Form einer reich formatierten Karte zurücksenden.
+Nachrichtenerweiterungen ermöglichen den Benutzern die Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams-Client. Sie können in einem externen System über den Nachrichtenbereich „Verfassen“, das Befehlsfeld oder direkt aus einer Nachricht heraus suchen oder Aktionen starten. Sie können die Ergebnisse dieser Interaktion in Form einer reich formatierten Karte an den Teams Client zurücksenden.
 
 > [!IMPORTANT]
 > Nachrichtenerweiterungen sind in Government Community Cloud(GCC)- und GCC-High-Umgebungen verfügbar, jedoch nicht in der DoD-Umgebung (Department of Defense).
@@ -38,12 +38,12 @@ In der folgenden Abbildung werden die Speicherorte angezeigt, von denen Nachrich
 
 ## <a name="understand-how-message-extensions-work"></a>Grundlegendes zur Funktionsweise von Nachrichtenerweiterungen
 
-Eine Nachrichtenerweiterung besteht aus einem Webdienst, den Sie hosten, und einem App-Manifest, das definiert, von wo aus Ihr Webdienst im Microsoft Teams-Client aufgerufen wird. Der Webdienst nutzt das Messaging-Schema und das sichere Kommunikationsprotokoll des Bot-Frameworks, sodass Sie Ihren Webdienst auch als Bot im Bot-Framework registrieren müssen.
+Eine Nachrichtenerweiterung besteht aus einem Webdienst, den Sie hosten, und einem App-Manifest, das definiert, von wo aus Ihr Webdienst im Teams-Client aufgerufen wird. Der Webdienst nutzt das Messaging-Schema und das sichere Kommunikationsprotokoll des Bot-Frameworks, sodass Sie Ihren Webdienst auch als Bot im Bot-Framework registrieren müssen.
 
 > [!NOTE]
 > Obwohl Sie den Webdienst manuell erstellen können, verwenden Sie das[Bot Framework SDK](https://github.com/microsoft/botframework-sdk), um mit dem Protokoll zu arbeiten.
 
-Im App-Manifest für die Microsoft Teams-App wird eine einzelne Nachrichtenerweiterung mit bis zu zehn verschiedenen Befehlen definiert. Jeder Befehl definiert einen Typ, z. B. Aktion oder Suche, und die Speicherorte im Client, von denen aus er aufgerufen wird. Die Aufruforte sind der Nachrichtenbereich „Verfassen“, die Befehlsleiste und die Nachricht. Beim Aufruf empfängt der Webdienst eine HTTPS-Nachricht mit einer JSON-Nutzlast einschließlich aller relevanten Informationen. Antworten Sie mit einer JSON-Nutzlast, sodass der Teams-Client die nächste zu aktivierende Interaktion kennen kann.
+Im App-Manifest für Teams App wird eine einzelne Nachrichtenerweiterung mit bis zu zehn verschiedenen Befehlen definiert. Jeder Befehl definiert einen Typ, z. B. Aktion oder Suche, und die Speicherorte im Client, von denen aus er aufgerufen wird. Die Aufruforte sind der Nachrichtenbereich „Verfassen“, die Befehlsleiste und die Nachricht. Beim Aufruf empfängt der Webdienst eine HTTPS-Nachricht mit einer JSON-Nutzlast einschließlich aller relevanten Informationen. Antworten Sie mit einer JSON-Nutzlast, sodass der Teams-Client die nächste zu aktivierende Interaktion kennen kann.
 
 ## <a name="types-of-message-extension-commands"></a>Typen von Befehlen für Nachrichtenerweiterungen
 
@@ -71,7 +71,7 @@ Im folgenden Bild wird das Aufgabenmodul für die Nachrichtenerweiterung aus Suc
 
 ## <a name="link-unfurling"></a>Verbreiten von Links
 
-Ein Webdienst wird aufgerufen, wenn eine URL in den Nachrichtenbereich „Verfassen“ eingefügt wird. Diese Funktionalität wird als Verbreiten von Links bezeichnet. Sie können abonnieren, um einen Aufruf zu erhalten, wenn URLs, die eine bestimmte Domäne enthalten, in den Nachrichtenbereich „Verfassen“ eingefügt werden. Ihr Webdienst kann die URL in eine detaillierte Karte „verbreiten", wodurch mehr Informationen als die standardmäßige Website-Vorschaukarte bereitgestellt werden. Sie können Schaltflächen hinzufügen, damit die Benutzer sofort Maßnahmen ergreifen können, ohne den Microsoft Teams-Client zu verlassen.
+Ein Webdienst wird aufgerufen, wenn eine URL in den Nachrichtenbereich „Verfassen“ eingefügt wird. Diese Funktionalität wird als Verbreiten von Links bezeichnet. Sie können abonnieren, um einen Aufruf zu erhalten, wenn URLs, die eine bestimmte Domäne enthalten, in den Nachrichtenbereich „Verfassen“ eingefügt werden. Ihr Webdienst kann die URL in eine detaillierte Karte „verbreiten", wodurch mehr Informationen als die standardmäßige Website-Vorschaukarte bereitgestellt werden. Sie können Schaltflächen hinzufügen, damit die Benutzer sofort Maßnahmen ergreifen können, ohne den Teams Client verlassen zu müssen.
 In den folgenden Bildern wird das Feature zum Verbreiten von Links angezeigt, wenn ein Link in die Nachrichtenerweiterung eingefügt wird:
 
 :::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="Link verbreiten":::

@@ -5,18 +5,18 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 66aa139669079cad2ebb2d552ccbf7c997f38a6a
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 210110974769c44258200a3e6b48d0cb68a48e07
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124032"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189929"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Veröffentlichen Sie Ihre App im Microsoft Teams Store
 
 Sie können Ihre App direkt an den Store in Microsoft Teams verteilen und Millionen von Benutzern auf der ganzen Welt erreichen. Wenn Ihre App auch im Store vorgestellt wird, können Sie potenzielle Kunden sofort erreichen.
 
-Apps, die im Teams Store veröffentlicht werden, werden auch automatisch auf [Microsoft AppSource](https://appsource.microsoft.com) gelistet, dem offiziellen Marketplace für Microsoft 365 Apps und Lösungen.
+Apps, die im Teams Store veröffentlicht werden, werden automatisch auch auf [dem Microsoft Commercial Marketplace](https://appsource.microsoft.com) gelistet, dem offiziellen Marktplatz für Microsoft 365-Apps und -Lösungen.
 
 ## <a name="understand-the-publishing-process"></a>Grundlegendes zum Veröffentlichungsprozess
 
@@ -74,9 +74,9 @@ Wenn Ihre App produktionsbereit ist, können Sie damit beginnen, sie im Teams St
 
   * Empfehlungen zum Beheben der gemeldeten Probleme mit Links zu Anleitungsdokumenten.
 
-  Nachdem Sie die Liste der Probleme überprüft haben, beheben Sie alle gemeldeten Probleme, und geben Sie das aktualisierte App-Paket per E-Mail frei, damit das Validierungsteam Ihre App erneut gründlich überprüft. Wenn Sie Abfragen im Zusammenhang mit den gemeldeten Problemen haben, wenden Sie sich unter [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) an das Validierungsteam.
+  Nachdem Sie die Liste der Probleme überprüft haben, beheben Sie alle gemeldeten Probleme, und geben Sie das aktualisierte App-Paket per E-Mail frei, damit das Validierungsteam Ihre App erneut überprüft. Wenn Sie Abfragen im Zusammenhang mit den gemeldeten Problemen haben, wenden Sie sich unter [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) an das Validierungsteam.
 
-  Wenn in Ihrer App weiterhin Probleme oder Regressionsprobleme auftreten, erhalten Sie einen aktualisierten Validierungsbericht vom Validierungsteam. Wenn Ihre App Blocker aufwies, werden möglicherweise neue Probleme gemeldet, wenn Ihre App überprüft wird, nachdem die Blocker behoben wurden. Manchmal hat das Validierungsteam auch Regressionsprobleme in Apps nach der Bereitstellung von Fehlerbehebungen bemerkt. Es bedarf einiger erneuter Übermittlungen, um alle Probleme für eine App zu abzuschließen, die Fehlern beinhaltet, und die Genehmigung für die Veröffentlichung im Teams Store zu erhalten.
+  Wenn in Ihrer App weiterhin Probleme oder Regressionsprobleme auftreten, erhalten Sie einen aktualisierten Validierungsbericht vom Validierungsteam. Wenn Ihre App Blocker aufwies, werden möglicherweise neue Probleme gemeldet, wenn Ihre App überprüft wird, nachdem die Blocker behoben wurden. Manchmal hat das Validierungsteam auch Regressionsprobleme in Apps nach der Bereitstellung von Fehlerbehebungen bemerkt. Es sind einige Wiedervorlagen nötig, bis alle Probleme einer App, die aus Fehlern besteht, behoben sind und die App zur Veröffentlichung im Teams Store freigegeben wird.
 
   Nachdem alle gemeldeten Probleme abgeschlossen wurden und die endgültige Übermittlung im Partner Center erfolgt ist, genehmigt und veröffentlicht das Validierungsteam Ihre App. Es dauert mindestens einen Arbeitstag bis die App im Teams Store verfügbar ist.
 
@@ -96,7 +96,7 @@ Wenn Ihre App produktionsbereit ist, können Sie damit beginnen, sie im Teams St
 
   1. [Erstellen Sie Ihr Partner Center-Konto](prepare/create-partner-center-dev-account.md) weit im Voraus. Wenn Sie Probleme mit Ihrem [Partner Center-Konto](prepare/create-partner-center-dev-account.md) haben, erstellen Sie ein [Supportticket](/azure/marketplace/partner-center-portal/support).
 
-  1. Überprüfen Sie die [Store-Validierungsrichtlinien](prepare/teams-store-validation-guidelines.md) erneut, um sicherzustellen, dass Ihre App den Store-Anforderungen entspricht. Dies trägt dazu bei, die Anzahl der in Ihrer App festgestellten Probleme zu reduzieren, und somit auch die Zeit, die für die Genehmigung Ihrer App benötigt wird.
+  1. Überprüfen Sie die [Store-Validierungsrichtlinien](prepare/teams-store-validation-guidelines.md) erneut, um sicherzustellen, dass Ihre App den Store-Anforderungen entspricht. Die Überprüfung trägt dazu bei, die Anzahl der in Ihrer App festgestellten Probleme zu reduzieren, und somit die Zeit, die für die Genehmigung Ihrer App benötigt wird.
 
   1. Testen und erneutes Testen Ihrer App:
 
@@ -124,7 +124,7 @@ Wenn Ihre App produktionsbereit ist, können Sie damit beginnen, sie im Teams St
 
 * **Nach der App-Übermittlung**
 
-  * Nachdem Sie den Validierungsbericht überprüft haben, beantworten Sie den E-Mail-Thread mit allen Abfragen im Zusammenhang mit dem Validierungsbericht, oder wenn Sie zusätzliche Unterstützung benötigen, um die gemeldeten Probleme zu beheben.
+  * Nachdem Sie den Validierungsbericht geprüft haben, antworten Sie auf den E-Mail-Thread mit allen Fragen zum Validierungsbericht oder wenn Sie zusätzliche Unterstützung bei der Lösung der gemeldeten Probleme benötigen.
 
   * Stellen Sie sicher, dass Sie über eine ausreichende Entwicklerbandbreite verfügen, um gemeldete Probleme zu beheben, bis die App genehmigt wird.
 
@@ -160,11 +160,11 @@ Wenn Ihre App produktionsbereit ist, können Sie damit beginnen, sie im Teams St
 
      1. Die Kündigung des Abonnements funktioniert wie erwartet. Käufer können ein Abonnement kündigen. Überprüfen Sie nach der Kündigung, ob der richtige Abonnementstatus im Microsoft Admin Center und Ihrer SaaS-Anwendung angezeigt wird. Stellen Sie sicher, dass der Käufer nach erfolgreicher Kündigung den Zugriff auf das Abonnement verloren hat.
 
-     1. Der erneute Erwerb eines Abonnements ist nahtlos. Testen Sie nach der Kündigung eines aktiven Abonnements sorgfältig, um sicherzustellen, dass Käufer das Abonnement erneut erwerben können.
+     1. Der erneute Kauf eines Abonnements erfolgt reibungslos. Testen Sie nach der Kündigung eines aktiven Abonnements sorgfältig, um sicherzustellen, dass Käufer das Abonnement erneut erwerben können.
 
      1. Käufer können ihren abonnierten Plan ändern. Nachdem der Plan geändert wurde, können Benutzer auf die aktualisierten oder heruntergestuften Planfeatures zugreifen.
 
-     1. Ihre SaaS-Anwendung enthält Lizenzverwaltungsfeatures. Käufer müssen in der Lage sein, Benutzern verfügbare Lizenzen zuzuweisen, zu ändern und erneut zuzuweisen. Überprüfen Sie, ob Käufer Benutzer hinzufügen oder entfernen können, um die Lizenzen zu verwalten.
+     1. Ihre SaaS-Anwendung enthält Lizenzverwaltungsfeatures. Käufer müssen in der Lage sein, den Benutzern verfügbare Lizenzen zuzuweisen, zu ändern und neu zuzuweisen. Überprüfen Sie, ob Käufer Benutzer hinzufügen oder entfernen können, um die Lizenzen zu verwalten.
   
   1. Sie müssen die Mindest- und Massenlizenzkaufflüsse testen und sicherstellen, dass sie wie erwartet funktionieren.
   

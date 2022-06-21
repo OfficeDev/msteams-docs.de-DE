@@ -1,16 +1,16 @@
 ---
 title: Veröffentlichen von Microsoft Teams-Apps für Microsoft 365
-description: Machen Sie Ihre Microsoft 365-fähigen Teams-Apps für Benutzer in Teams, Outlook und Office
+description: Erfahren Sie, wie Sie Ihre Microsoft 365-fähigen Teams-Apps für Benutzer in Teams, Outlook und Office auffindbar machen.
 ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 78a2d0354028426f4de98759a501e66530cf1166
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: ff0391bb82bed022ec372094546e3a5236e030ea
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668060"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190185"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>Veröffentlichen von Microsoft Teams-Apps für Microsoft 365
 

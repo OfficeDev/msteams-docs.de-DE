@@ -4,12 +4,12 @@ author: surbhigupta
 description: Erfahren Sie mehr über Teams Besprechungslebenszyklus und die Besprechungserfahrung von Benutzern auf Desktops und Mobilgeräten, Benutzertypen, Integrieren von Bots und Nachrichtenerweiterungen in den Besprechungslebenszyklus.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: caea4d49526c01de497f72a1878f9520d6e22348
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4bc4609f2fdf6bba8b170088d214846c35d45486
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142577"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189363"
 ---
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 
@@ -226,3 +226,4 @@ Die folgende Tabelle enthält die Benutzertypen und listet die Features auf, auf
 * [Bot](../bots/what-are-bots.md):
 * [Nachrichtenerweiterung](../messaging-extensions/what-are-messaging-extensions.md)
 * [Entwerfen Ihrer App](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Microsoft Teams-Besuchsberichte zu einer Besprechung](/microsoftteams/teams-analytics-and-reports/meeting-attendance-report)

@@ -1,16 +1,16 @@
 ---
 title: Hinzufügen der Authentifizierung zu Ihrer Nachrichtenerweiterung
 author: surbhigupta
-description: In diesem Modul erfahren Sie, wie Sie einer Messaging-Erweiterung mithilfe von Codebeispielen und Beispielen die Authentifizierung hinzufügen.
+description: In diesem Artikel erfahren Sie, wie Sie einer Messaging-Erweiterung mithilfe von Codebeispielen und Beispielen die Authentifizierung hinzufügen.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: cca9aef8e08b9d997497e1531db928d8e29d7eac
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a400c7f367eddecf8e3c1b761d46b391deca3f86
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143543"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190268"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Hinzufügen der Authentifizierung zu Ihrer Nachrichtenerweiterung
 
@@ -41,11 +41,11 @@ Wenn Ihr Dienst eine Benutzerauthentifizierung erfordert, müssen sich die Benut
 1. Nachdem sich der Benutzer angemeldet hat, sollten Sie Ihr Fenster schließen und einen **Authentifizierungscode** an den Teams-Client senden.
 1. Der Teams-Client stellt dann die Abfrage an Ihren Dienst erneut, einschließlich des in Schritt 5 übergebenen Authentifizierungscodes.
 
-Ihr Dienst sollte überprüfen, ob der in Schritt 6 empfangene Authentifizierungscode mit dem aus Schritt 5 übereinstimmt. Dadurch wird sichergestellt, dass ein bösartiger Benutzer nicht versucht, den Anmeldefluss zu spoofen oder zu kompromittieren. Dies wird effektiv „die Schleife schließen“, um die sichere Authentifizierungssequenz abzuschließen.
+Ihr Dienst sollte überprüfen, ob der in Schritt 6 empfangene Authentifizierungscode mit Schritt 5 übereinstimmt. Die Schritte stellen sicher, dass ein böswilliger Benutzer nicht versucht, den Anmeldefluss zu spoofieren oder zu kompromittieren. Der Fluss "schließt die Schleife" effektiv, um die sichere Authentifizierungssequenz abzuschließen.
 
 ### <a name="respond-with-a-sign-in-action"></a>Antworten mit einer Anmeldeaktion
 
-Um einen nicht authentifizierten Benutzer zur Anmeldung aufzufordern, antworten Sie mit einer vorgeschlagenen Aktion vom Typ `openUrl`, welche die Authentifizierungs-URL enthält.
+Um einen nicht authentifizierten Benutzer zur Anmeldung aufzufordern, antworten Sie mit einer vorgeschlagenen Aktion des Typs `openUrl` , der die Authentifizierungs-URL enthält.
 
 #### <a name="response-example-for-a-sign-in-action"></a>Antwortbeispiel für eine Anmeldeaktion
 

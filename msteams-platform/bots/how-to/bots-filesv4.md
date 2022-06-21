@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie Dateien über den Bot senden und empfangen, i
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: a7746b15798c46c807c276fb7d29f34b59858528
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9ac04b912de87ac6e048e7cb7577c0a61b1f9f83
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142927"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189650"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Senden und Empfangen von Dateien über den Bot
 
@@ -238,7 +238,7 @@ private static Attachment GetInlineAttachment()
 }
 ```
 
-### <a name="basic-example-in-c"></a>Einfaches Beispiel in C#
+### <a name="basic-example-in-c"></a>Einfaches Beispiel in C #
 
 Der folgende Code zeigt ein Beispiel für die Behandlung von Dateiuploads und das Senden von Dateizustimmungsanforderungen im Dialogfeld des Bots:
 
@@ -332,3 +332,7 @@ Befolgen Sie die [schrittweise Anleitung](../../sbs-file-handling-in-bot.yml) zu
 
 > [!div class="nextstepaction"]
 > [Optimieren eines Bots mit Ratenbegrenzung in Teams](~/bots/how-to/rate-limit.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Geschützte APIs in Microsoft Teams](/graph/teams-protected-apis)

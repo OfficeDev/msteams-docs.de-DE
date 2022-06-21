@@ -4,12 +4,12 @@ description: In diesem Modul erfahren Sie mehr über die Formatierung von Bot-Na
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 9121573dfa6f5c7a96f04ed16bcb0d41de0b5c34
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9e331a17940ee482a0c2adcb81b57a17823ab668
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143333"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190167"
 ---
 # <a name="message-formatting-for-bots"></a>Nachrichtenformatierung für Bots
 
@@ -27,7 +27,7 @@ Microsoft Teams unterstützt die folgenden Formatierungsoptionen:
 
 ## <a name="formatting-text-content"></a>Formatieren von Textinhalten
 
-Microsoft Teams unterstützt eine Teilmenge von Markdown- und XML-Formatierungstags (HTML).
+Teams unterstützt eine Teilmenge von Markdown- und XML-Formatierungstags (HTML).
 
 Derzeit gelten die folgenden Einschränkungen:
 
@@ -37,7 +37,7 @@ Derzeit gelten die folgenden Einschränkungen:
 
 ## <a name="cross-platform-support"></a>Plattformübergreifender Support
 
-Um sicherzustellen, dass Ihre Formatierung auf allen Plattformen funktioniert, die von Microsoft Teams unterstützt werden, beachten Sie, dass einige Formatvorlagen derzeit nicht auf allen Plattformen unterstützt werden.
+Um sicherzustellen, dass Ihre Formatierung auf allen Plattformen funktioniert, die von Teams unterstützt werden, beachten Sie, dass einige Formatvorlagen derzeit nicht auf allen Plattformen unterstützt werden.
 
 | Format                     | Nur-Text-Nachrichten | Rich-Karten (nur XML) |
 | ---                       | :---: | :---: |

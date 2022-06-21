@@ -5,12 +5,12 @@ description: Erfahren Sie anhand von Codebeispielen, wie Sie Ihre bestehende Mic
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f889a4e1932feb02eeb502ab2f85f051093a5b58
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 1da3d1359da2878586dafef16dac9a868d074ff1
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123647"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189470"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint
 
@@ -67,7 +67,7 @@ Ab SharePoint-Framework Version 1.7 können Sie Ihre Microsoft Teams-Registerkar
 
 ### <a name="sharepoint-framework-in-teams"></a>SharePoint-Framework in Microsoft Teams
 
-Sie können Microsoft Teams-Registerkarten auch mithilfe von SharePoint-Framework implementieren. SharePoint-Framework-Webparts werden automatisch innerhalb von SharePoint gehostet, ohne dass externe Dienste wie Azure nötig sind. SharePoint-Entwicklern vereinfacht dies den Entwicklungsprozess für Microsoft Teams-Registerkarten erheblich. Weitere Informationen zu SharePoint-Framework in Microsoft Teams finden Sie unter [Verwenden des SharePoint-Frameworks in Microsoft Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+Sie können Ihre Teams Registerkarten auch mithilfe von SharePoint-Framework implementieren. SharePoint-Framework-Webparts werden automatisch innerhalb von SharePoint gehostet, ohne dass externe Dienste wie Azure nötig sind. SharePoint-Entwicklern vereinfacht dies den Entwicklungsprozess für Microsoft Teams-Registerkarten erheblich. Weitere Informationen zu SharePoint-Framework in Microsoft Teams finden Sie unter [Verwenden des SharePoint-Frameworks in Microsoft Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
 ## <a name="introduction"></a>Einführung
 

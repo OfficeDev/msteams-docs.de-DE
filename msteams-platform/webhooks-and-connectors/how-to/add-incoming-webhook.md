@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie der Teams-App einen eingehend
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5374b9327abb15949a31ab47443c273a111ad7b9
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a1cb8f3e686ad0e1ee956345095d07c97f7a137c
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142192"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189901"
 ---
 # <a name="create-an-incoming-webhook"></a>Erstellen eines eingehenden Webhooks
 
@@ -19,6 +19,10 @@ Mit einem eingehenden Webhook können externe Anwendungen Inhalte in Microsoft T
 * Bots
 * Nachrichtenerweiterungen
 * Connectors
+
+Im folgenden Video erfahren Sie, wie Sie eingehende Webhooks erstellen:
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
 
 ## <a name="key-features-of-an-incoming-webhook"></a>Wichtige Features des eingehenden Webhooks
 

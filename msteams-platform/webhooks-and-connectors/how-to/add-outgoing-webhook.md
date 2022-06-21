@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie einen ausgehenden Webhook in 
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 5c86fd5e3885fd859d02489c81f81aa0502b965a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a290d7197c842c3920bd536fa71774fd82e47d84
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143284"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189893"
 ---
 # <a name="create-outgoing-webhook"></a>Ausgehenden Webhook erstellen
 
@@ -25,6 +25,12 @@ Der ausgehende Webhook fungiert als Bot und sucht mithilfe von **@mention** nach
 * Try using &nbsp; to add spaces in codeblocks for indentation and remove the hard tabs.
 * Table with just a row is not really needed. Provide the content without tabulating it.
 --->
+
+Im folgenden Video erfahren Sie, wie Sie ausgehende Webhooks erstellen:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzu]
+<br>
 
 ## <a name="key-features-of-outgoing-webhook"></a>Wichtige Features des ausgehenden Webhooks
 
@@ -109,7 +115,7 @@ Ihr Code muss die in der Anforderung enthaltene HMAC-Signatur immer wie folgt ü
 
 **Erstellen einer Methode zum Senden einer Erfolgs- oder Fehlerantwort**
 
-Antworten von ausgehenden Webhooks werden in derselben Antwortkette wie die ursprüngliche Nachricht angezeigt. Wenn der Benutzer eine Abfrage ausführt, gibt Microsoft Teams eine synchrone HTTP-Anforderung an Ihren Dienst aus, und Ihr Code erhält fünf Sekunden Zeit, um auf die Nachricht zu reagieren, bevor ein Timeout der Verbindung auftritt und sie beendet wird.
+Antworten von ausgehenden Webhooks werden in derselben Antwortkette wie die ursprüngliche Nachricht angezeigt. Wenn der Benutzer eine Abfrage durchführt, gibt Teams eine synchrone HTTP-Anforderung an Ihren Dienst aus, und Ihr Code erhält fünf Sekunden Zeit, um auf die Nachricht zu antworten, bevor die Verbindung abläuft und beendet wird.
 
 ### <a name="example-response"></a>Beispielantwort
 
@@ -232,7 +238,7 @@ var responseMsg = JSON.stringify({
 
 |**Beispielname** | **Beschreibung** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Ausgehende Webhooks | Beispiele zum Erstellen von benutzerdefinierten Bots für die Verwendung in Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| Ausgehende Webhooks | Beispiele zum Erstellen benutzerdefinierter Bots zur Verwendung in Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## <a name="step-by-step-guide"></a>Schrittweise Anleitung
 

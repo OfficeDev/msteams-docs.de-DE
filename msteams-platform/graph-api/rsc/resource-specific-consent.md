@@ -1,16 +1,16 @@
 ---
 title: Aktivieren Sie die ressourcenspezifische Zustimmung in Teams
-description: Lernen Sie in diesem Modul die ressourcenspezifische Zustimmung in Microsoft Teams kennen und wie Sie sie nutzen können.
+description: In diesem Artikel lernen Sie die ressourcenspezifische Zustimmung in Microsoft Teams kennen und erfahren, wie Sie sie nutzen können.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: f311723aa6bdb9fc95207169b7ab55434d246509
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: af546bb888cf5a3e35b7c241eba927e2d144bdd0
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144355"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189917"
 ---
 # <a name="resource-specific-consent"></a>Ressourcenspezifische Zustimmung
 

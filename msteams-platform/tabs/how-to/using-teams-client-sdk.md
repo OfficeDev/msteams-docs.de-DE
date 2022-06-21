@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: Lernen Sie in diesem Modul das JavaScript-Client-SDK von Microsoft Teams kennen, das Ihnen beim Erstellen von App-Erfahrungen helfen kann, die in <iframe> in Office und Outlook gehostet werden.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 1909df76b3cc61f0d93e4efe40e02b99dc3de730
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 165b08b3936afe03f492d8e6983c5504d38bad8b
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144215"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189505"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Erstellen von Registerkarten und anderen gehosteten Umgebungen mit dem Microsoft Teams JavaScript-Client-SDK
 
@@ -235,7 +235,7 @@ Der Name des Hosts, auf dem Ihre App ausgeführt wird, wird als *hostName*-Eigen
 * Gehen Sie **nicht** basierend auf dem *HostName*-Eigenschaftswert davon aus, dass bestimmte Funktionen auf einem Host verfügbar sind oder nicht verfügbar sind. Überprüfen Sie stattdessen die Unterstützung der Funktion (`isSupported`).
 * Sie sollten *hostName* **nicht verwenden**, um API-Aufrufe Gates zuzuweisen. Überprüfen Sie stattdessen die Unterstützung der Funktion (`isSupported`).
 * Sie sollten *hostName* **verwenden**, um das Design Ihrer Anwendung basierend auf dem Host, auf dem sie ausgeführt wird, zu unterscheiden. Sie können das Lila von Microsoft Teams beispielsweise als Hauptakzentfarbe verwenden, wenn die App in Teams ausgeführt wird, und das Blau von Outlook, wenn sie in Outlook ausgeführt wird.
-* Sie sollten *hostName* **verwenden**, um Nachrichten, die dem Benutzer angezeigt werden, basierend auf dem Host, auf dem die App ausgeführt wird, zu unterscheiden. Zeigen Sie beispielsweise *Aufgaben in Office verwalten* an, wenn die App in Office im Web ausgeführt wird, und *Aufgaben in Teams verwalten*, wenn sie in Microsoft Teams ausgeführt wird.
+* Sie sollten *hostName* **verwenden**, um Nachrichten, die dem Benutzer angezeigt werden, basierend auf dem Host, auf dem die App ausgeführt wird, zu unterscheiden. Zeigen Sie z. B.*Ihre Aufgaben in Office verwalten* an, wenn sie in Office im Web ausgeführt werden, und *Ihre Aufgaben in Teams verwalten*, wenn Sie in Teams ausgeführt werden.
 
 #### <a name="namespaces"></a>Namespaces
 
@@ -243,7 +243,7 @@ Ab TeamsJS v.2.0 werden APIs mithilfe von Namespaces in *Funktionen* unterteilt.
 
 ##### <a name="app-namespace"></a>Namespace *app*(App)
 
-Der Namespace `app` enthält APIs auf oberster Ebene, die für die allgemeine App-Nutzung über Microsoft Teams, Office und Outlook hinweg erforderlich sind. Alle APIs aus verschiedenen anderen TeamsJS-Namespaces wurden ab TeamsJS v.2.0 in den Namespace `app` verschoben:
+Der `app`Namespace enthält Top-Level-APIs, die für die gesamte App-Nutzung in Teams, Office und Outlook erforderlich sind. Alle APIs aus verschiedenen anderen TeamsJS-Namespaces wurden ab TeamsJS v.2.0 in den Namespace `app` verschoben:
 
 | Ursprünglicher Namespace `global (window)` | Neuer Namespace `app` |
 | - | - |

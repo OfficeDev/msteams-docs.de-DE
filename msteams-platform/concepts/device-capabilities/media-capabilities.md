@@ -1,17 +1,16 @@
 ---
 title: Integrieren von Medienfunktionen
 author: Rajeshwari-v
-description: Erfahren Sie anhand von Codebeispielen, wie Sie das Microsoft Teams JavaScript-Client-SDK verwenden, um Medienfunktionen zu aktivieren.
-keywords: Medien-API Kamerabild Mikrofonfunktionen systemeigene Geräteberechtigungen
+description: Erfahren Sie, wie Sie Teams JavaScript-Client-SDK verwenden, um Medienfunktionen mithilfe von Codebeispielen zu ermöglichen, und erfahren Sie außerdem, wie Sie die Vorteile der Integration von Medienfunktionen nutzen können.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 586db765ff94449a137e131cd788cbc1732d55f2
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: 366c58ac283e687f8a297b8701b932f99550574e
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130526"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190237"
 ---
 # <a name="integrate-media-capabilities"></a>Integrieren von Medienfunktionen
 

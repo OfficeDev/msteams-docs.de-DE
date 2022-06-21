@@ -3,12 +3,12 @@ title: Unterstützung für einmaliges Anmelden für Bots
 description: Erfahren Sie, wie Sie ein Benutzertoken erhalten, und ein Bot-Entwickler kann eine Anmeldekarte oder den Azure-Botdienst mit der OAuth-Kartenunterstützung verwenden.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 37c7fcd62c6b85c2220e9db57060da03437d79da
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 924262b492c85205a8f1ba4fd034e86ecdf82d53
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144145"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189726"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Single-Sign-On (SSO)-Unterstützung für Bots
 
@@ -16,6 +16,11 @@ Die Single-Sign-On-Authentifizierung in Microsoft Azure Active Directory (Azure 
 
 >[!NOTE]
 > OAuth 2.0 ist ein offener Standard für die Authentifizierung und Autorisierung, der von Azure AD und vielen anderen Identitätsanbietern verwendet wird. Ein grundlegendes Verständnis von OAuth 2.0 ist Voraussetzung für die Arbeit mit Authentifizierung in Teams.
+
+Im folgenden Video erfahren Sie mehr über die SSO-Unterstützung (Single Sign-On) für Bots:
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
+<br>
 
 ## <a name="bot-sso-at-runtime"></a>Bot-SSO zur Laufzeit
 

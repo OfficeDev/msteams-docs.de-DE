@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 3ac2c126d2228fa17e693eebdf4b64a9149ef45f
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6bdece5b23999025b1e4ecd22b2fb8f87f7c3325
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142675"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189598"
 ---
 # <a name="channel-or-group-tab"></a>Kanal- oder Gruppenregisterkarten
 
@@ -192,7 +192,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Hochladen Ihrer Anwendung in Microsoft Teams
 
-1. Wechseln Sie zu Microsoft Teams, und wählen Sie **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store"::: aus.
+1. Wechseln Sie zu Teams, und wählen Sie **"Apps**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::" aus.
 1. Wählen Sie **Apps verwalten** und dann **Benutzerdefinierte App hochladen** aus.
 1. Wechseln Sie zu Ihrem Projektverzeichnis, navigieren Sie zum Ordner **./package**, wählen Sie den ZIP-Ordner des App-Pakets und dann **Öffnen** aus.
 
@@ -248,9 +248,9 @@ Im Folgenden sind die Schritte zum Erstellen einer Kanal- oder Gruppenregisterka
 
 1. Wählen Sie in Visual Studio **F5** oder **Debuggen starten** im Menü **Debuggen** Ihrer Anwendung aus, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde. Wechseln Sie in einem Browser zu den folgenden URLs:
 
-    * https://localhost:3978/
-    * https://localhost:3978/privacy
-    * https://localhost:3978/tou
+    * <https://localhost:3978/>
+    * <https://localhost:3978/privacy>
+    * <https://localhost:3978/tou>
 
 <details>
 <summary><b>Überprüfen des Quellcodes</b></summary>
@@ -291,7 +291,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 * Ein **transparentes Kontursymbol** mit einer Größe von 32 x 32 Pixeln.
 * Eine `manifest.json`-Datei, welche die Attribute Ihrer App angibt.
 
-Diese Dateien müssen in einem App-Paket gezippt werden, damit sie beim Hochladen Ihrer Registerkarte in Microsoft Teams verwendet werden können. Wenn ein Benutzer ihre Registerkarte hinzufügen oder aktualisieren möchte, lädt Microsoft Teams die in Ihrem Manifest angegebene `configurationUrl`, bettet sie in einen IFrame ein und rendert sie auf Ihrer Registerkarte.
+Diese Dateien müssen in einem App-Paket gezippt werden, damit sie beim Hochladen Ihrer Registerkarte in Microsoft Teams verwendet werden können. Wenn ein Benutzer ihre Registerkarte hinzufügen oder aktualisieren möchte, lädt Teams die `configurationUrl` in Ihrem Manifest angegebene, bettet sie in einen IFrame ein und rendert sie auf Ihrer Registerkarte.
 
 #### <a name="csproj"></a>.csproj
 
@@ -335,10 +335,10 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
-    
+
     > [!IMPORTANT]
     > Kopieren Sie nicht die `<script src="...">`-URLs von dieser Seite, und fügen Sie sie nicht ein, da sie nicht die neueste Version darstellen. Um die neueste Version des SDK zu erhalten, wechseln Sie immer zu [Microsoft Teams JavaScript-API](https://www.npmjs.com/package/@microsoft/teams-js).
-    
+
 1. Fügen Sie einen Aufruf von `microsoftTeams.initialize();` in das `script`-Tag ein.
 
 1. Wechseln Sie in Visual Studio-Projektmappen-Explorer zum Ordner **Pages**, und öffnen Sie **Tab.cshtml**.
@@ -394,7 +394,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Aktualisieren Ihres App-Pakets über das Entwicklerportal
 
-1. Navigieren Sie zu Microsoft Teams. Wenn Sie die [webbasierte Version](https://teams.microsoft.com) verwenden, können Sie Ihren Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md) Ihres Browsers überprüfen.
+1. Wechseln Sie zu Teams. Wenn Sie die [webbasierte Version](https://teams.microsoft.com) verwenden, können Sie Ihren Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md) Ihres Browsers überprüfen.
 
 1. Wechseln Sie zum [**Entwicklerportal**](https://dev.teams.microsoft.com/home).
 
@@ -434,7 +434,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 1. Wählen Sie **Zu Team hinzufügen** aus, um die Registerkarte in einem Team einzurichten. Konfigurieren Sie Ihre Registerkarte, und klicken Sie auf **Speichern**. Ihre Registerkarte ist jetzt in Microsoft Teams verfügbar.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Kanalregisterkarte-ASPNET hochgeladen" border="true":::
-    
+
     Jetzt haben Sie Ihre Kanal- oder Gruppenregisterkarte erfolgreich erstellt und in Microsoft Teams hinzugefügt.
 
 ::: zone-end
@@ -468,9 +468,9 @@ Im Folgenden sind die Schritte zum Erstellen einer Kanal- oder Gruppenregisterka
 
 1. Wählen Sie in Visual Studio **F5** oder **Debuggen starten** im Menü **Debuggen** Ihrer Anwendung aus, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde. Wechseln Sie in einem Browser zu den folgenden URLs:
 
-    * https://localhost:3978/
-    * https://localhost:3978/privacy
-    * https://localhost:3978/tou
+    * <https://localhost:3978/>
+    * <https://localhost:3978/privacy>
+    * <https://localhost:3978/tou>
 
 <details>
 <summary><b>Überprüfen des Quellcodes</b></summary>
@@ -563,15 +563,15 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
-    
+
     > [!IMPORTANT]
     > Kopieren Sie nicht die `<script src="...">`-URLs von dieser Seite, und fügen Sie sie nicht ein, da sie nicht die neueste Version darstellen. Um die neueste Version des SDK zu erhalten, wechseln Sie immer zu [Microsoft Teams JavaScript-API](https://www.npmjs.com/package/@microsoft/teams-js).
-    
+
 1. Fügen Sie einen Aufruf von `microsoftTeams.initialize();` in das `script`-Tag ein.
 
 1. Wechseln Sie in Visual Studio-Projektmappen-Explorer zum Ordner **Tab**, und öffnen Sie **Tab.cshtml**.
 
-    In **Tab.cshtml** stellt die Anwendung dem Benutzer zwei Optionsschaltflächen zum Anzeigen der Registerkarte mit einem roten oder grauen Symbol bereit. Wenn Sie die Schaltfläche **Grau auswählen** oder **Rot auswählen** anklicken, wird `saveGray()` oder `saveRed()` ausgelöst, jeweils `settings.setValidityState(true)` festgelegt und die **Speichern**-Schaltfläche auf der Konfigurationsseite aktiviert. Dieser Code teilt Microsoft Teams mit, dass Sie die erforderlichen Konfigurationen vorgenommen haben und die Installation fortgesetzt werden kann. Die Parameter von `settings.setSettings` sind festgelegt. Schließlich wird `saveEvent.notifySuccess()` aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde. 
+    In **Tab.cshtml** stellt die Anwendung dem Benutzer zwei Optionsschaltflächen zum Anzeigen der Registerkarte mit einem roten oder grauen Symbol bereit. Wenn Sie die Schaltfläche **Grau auswählen** oder **Rot auswählen** anklicken, wird `saveGray()` oder `saveRed()` ausgelöst, jeweils `settings.setValidityState(true)` festgelegt und die **Speichern**-Schaltfläche auf der Konfigurationsseite aktiviert. Dieser Code teilt Microsoft Teams mit, dass Sie die erforderlichen Konfigurationen vorgenommen haben und die Installation fortgesetzt werden kann. Die Parameter von `settings.setSettings` sind festgelegt. Schließlich wird `saveEvent.notifySuccess()` aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
 
 1. Aktualisieren Sie die Werte `websiteUrl` und `contentUrl` jeder Funktion mit der HTTPS-ngrok-URL zu Ihrer Registerkarte.
 
@@ -617,7 +617,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Aktualisieren Ihres App-Pakets über das Entwicklerportal
 
-1. Navigieren Sie zu Microsoft Teams. Wenn Sie die [webbasierte Version](https://teams.microsoft.com) verwenden, können Sie Ihren Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md) Ihres Browsers überprüfen.
+1. Wechseln Sie zu Teams. Wenn Sie die [webbasierte Version](https://teams.microsoft.com) verwenden, können Sie Ihren Front-End-Code mithilfe der [Entwicklertools](~/tabs/how-to/developer-tools.md) Ihres Browsers überprüfen.
 
 1. Wechseln Sie zum [**Entwicklerportal**](https://dev.teams.microsoft.com/home).
 
@@ -652,7 +652,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 1. Wählen Sie **Zu Team hinzufügen** aus, um die Registerkarte in einem Team einzurichten. Konfigurieren Sie Ihre Registerkarte, und klicken Sie auf **Speichern**. Ihre Registerkarte ist jetzt in Microsoft Teams verfügbar.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Kanalregisterkarte-ASPNET MVC hochgeladen" border="true":::
-    
+
     Jetzt haben Sie Ihre Kanal- oder Gruppenregisterkarte erfolgreich erstellt und in Microsoft Teams hinzugefügt.
 
 ::: zone-end

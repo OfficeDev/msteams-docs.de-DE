@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie systemeigene Gerätefunktionen wie Kamera, Bi
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: de79edb8e751c302dd685d74a7f477e50178eaec
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 26ca39aea4d759edbce62f43e9c832632d267cf6
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150673"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189453"
 ---
 # <a name="device-capabilities"></a>Gerätefunktionen
 
@@ -50,4 +50,4 @@ Außerdem können Sie das systemeigene [Personenauswahl-Steuerelement](people-pi
 
 | Beispielname           | Beschreibung | Node.js    |
 |:---------------------|:--------------|:---------|
-|Geräteberechtigungen | Beschreibt, wie Teams Registerkarten-Beispiel-App für Geräteberechtigungen veranschaulicht wird. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
+|Geräteberechtigungen | Beschreibt, wie Teams Registerkarten-Beispiel-App für Geräteberechtigungen veranschaulicht wird. |[Anzeigen](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

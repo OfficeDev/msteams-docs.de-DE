@@ -4,12 +4,12 @@ description: Lernen Sie in diesem Modul das End-to-End-Szenario einer Unterhaltu
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: ad212108b9cce66e14cab5c850d8ff466d73c467
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e93b6cc18e38da4f6307fda3d30968bfa709dbf1
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142780"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190177"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Kanal und Gruppenchatunterhaltungen mit einem Microsoft Teams-Bot
 
@@ -25,7 +25,7 @@ Bots, die einem Team hinzugefügt wurden, werden ein weiteres Teammitglied und k
 
 Ein Bot in einer Gruppe oder einem Kanal sollte Informationen bereitstellen, die für alle Mitglieder relevant und geeignet sind. Während Ihr Bot sicherlich alle informationen bereitstellen kann, die für die Erfahrung relevant sind, denken Sie daran, dass Unterhaltungen damit für jeden sichtbar sind. Daher sollte ein großartiger Bot in einer Gruppe oder einem Kanal allen Benutzern einen Mehrwert verleihen und sicherlich nicht versehentlich Informationen freigeben, die besser für eine 1:1-Unterhaltung geeignet sind.
 
-Ihr Bot ist, wie er ist, möglicherweise in allen Bereichen vollständig relevant, ohne dass mehr Arbeit erforderlich ist. In Microsoft Teams wird nicht erwartet, dass Ihr Bot in allen Bereichen funktioniert, aber Sie sollten sicherstellen, dass Ihr Bot den Benutzerwert in den bereichen bereitstellt, die Sie unterstützen möchten. Weitere Informationen zu Bereichen finden Sie [unter Apps in Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
+Ihr Bot ist, wie er ist, möglicherweise in allen Bereichen vollständig relevant, ohne dass mehr Arbeit erforderlich ist. In Teams wird nicht erwartet, dass Ihr Bot in allen Bereichen funktioniert, aber Sie sollten sicherstellen, dass Ihr Bot den Benutzerwert in den bereichen bereitstellt, die Sie unterstützen möchten. Weitere Informationen zu Bereichen finden Sie [unter Apps in Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
 Die Entwicklung eines Bots, der in Gruppen oder Kanälen funktioniert, verwendet viele der gleichen Funktionen wie persönliche Unterhaltungen. Zusätzliche Ereignisse und Daten in der Nutzlast stellen Teams Gruppen- und Kanalinformationen bereit. Diese Unterschiede sowie wichtige Unterschiede in der gemeinsamen Funktionalität werden in den folgenden Abschnitten beschrieben.
 
