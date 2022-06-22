@@ -1,16 +1,16 @@
 ---
 title: Erweitern einer Teams-Nachrichtenerweiterung in Microsoft 365
-description: Hier erfahren Sie, wie Sie Ihre suchbasierte Teams-Nachrichtenerweiterung für die Ausführung in Outlook aktualisieren.
+description: Erfahren Sie, wie Sie die suchbasierte Teams-Nachrichtenerweiterung durch Aktualisierung des App-Manifests für die Ausführung in Outlook aktualisieren, einen Outlook-Kanal hinzufügen und eine aktualisierte App querladen.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: d531b01a8de3663fed6806bc68386d9c4c894695
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7c926f67181f58fc982b535853ec990bbae0651d
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142101"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190202"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Erweitern einer Teams-Nachrichtenerweiterung in Microsoft 365
 
@@ -106,9 +106,9 @@ Damit Benutzer von Outlook aus mit Ihrer Nachrichtenerweiterung interagieren kö
 
     :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="Hinzufügen eines Outlook-Kanals „Nachrichtenerweiterungen“ für Ihren Bot aus dem Bereich „Azure Bot Channels“":::
 
-1. Vergewissern Sie sich, dass Ihr Outlook-Kanal zusammen mit Microsoft Teams im Bereich **Kanäle** Ihres Bots aufgeführt ist.
+1. Vergewissern Sie sich, dass Ihr Outlook-Kanal zusammen mit Teams im Bereich **Kanäle** Ihres Bots aufgeführt ist.
 
-    :::image type="content" source="images/azure-bot-channels.png" alt-text="Bereich „Azure Bot Channels“, in dem sowohl Microsoft Teams als auch Outlook-Kanäle aufgeführt sind":::
+    :::image type="content" source="images/azure-bot-channels.png" alt-text="Bereich „Azure Bot-Kanäle“, in dem sowohl Teams als auch Outlook-Kanäle aufgeführt sind":::
 
 ## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Aktualisieren der Microsoft Azure Active Directory (Azure AD)-App-Registrierung für SSO
 
@@ -133,7 +133,7 @@ Azure Active Directory (AD) Single Sign-On (SSO) für Nachrichtenerweiterungen f
 
 ## <a name="sideload-your-updated-message-extension-in-teams"></a>Querladen Ihrer aktualisierten Nachrichtenerweiterung in Teams
 
-Der letzte Schritt besteht darin, die aktualisierte Nachrichtenerweiterung ([App-Paket](/microsoftteams/platform/concepts/build-and-test/apps-package)) in Microsoft Teams querzuladen. Nach Abschluss wird Ihre Nachrichtenerweiterung in den installierten *Apps* aus dem Bereich zum Verfassen von Nachrichten angezeigt.
+Der letzte Schritt besteht darin, die aktualisierte Nachrichtenerweiterung ([App-Paket](/microsoftteams/platform/concepts/build-and-test/apps-package)) in Teams querzuladen. Nach Abschluss wird Ihre Nachrichtenerweiterung in den installierten *Apps* aus dem Bereich zum Verfassen von Nachrichten angezeigt.
 
 1. Verpacken Sie Ihre Teams-Anwendung (Manifest- und App-[Symbole](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in einer ZIP-Datei. Wenn Sie Teams Toolkit zum Erstellen Ihrer App verwendet haben, können Sie dies ganz einfach mithilfe der Option **Teams-Metadatenpaket in einer ZIP-Datei verpacken** im Menü *Bereitstellung* von Teams Toolkit tun.
 

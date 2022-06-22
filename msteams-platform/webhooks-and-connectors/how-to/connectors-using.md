@@ -4,12 +4,12 @@ author: laujan
 description: In diesem Modul erfahren Sie, wie Sie Office 365-Connectors verwenden und Aktionen erfordernde Nachrichten in Microsoft Teams erstellen und senden.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 86fe2237b5cf92c4fbc345f171cc8365baa0f348
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1d52760784e3d0bbbd1e4a87c576294530242629
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143263"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190105"
 ---
 # <a name="create-and-send-messages"></a>Nachrichten erstellen und senden
 
@@ -168,7 +168,7 @@ Führen Sie die folgenden Schritte aus, um eine Nachricht im Webhook mit cURL zu
     > [!NOTE]
     > Wenn der POST-Vorgang erfolgreich ist, sollte eine einfache **1** durch `curl` ausgegeben werden.
 
-1. Überprüfen Sie den Microsoft Teams-Client auf die neue gepostete Karte.
+1. Überprüfen Sie den Teams-Client auf die neue gepostete Karte.
 
 # <a name="powershell"></a>[PowerShell](#tab/PowerShell)
 
@@ -185,7 +185,7 @@ Führen Sie die folgenden Schritte aus, um eine Nachricht an den Webhook mit Pow
     > [!NOTE]
     > Wenn der POST-Vorgang erfolgreich ist, sollte eine einfache **1** durch `Invoke-RestMethod` ausgegeben werden.
 
-1. Überprüfen Sie den Microsoft Teams-Kanal, der der Webhook-URL zugeordnet ist. Die neue Karte wird nun im Kanal angezeigt. Bevor Sie den Connector zum Testen oder Veröffentlichen Ihrer App verwenden, müssen Sie folgendes tun:
+1. Überprüfen Sie den Teams-Kanal, welcher der Webhook-URL zugeordnet ist. Die neue Karte wird nun im Kanal angezeigt. Bevor Sie den Connector zum Testen oder Veröffentlichen Ihrer App verwenden, müssen Sie folgendes tun:
 
     * [Zwei Symbole einschließen](../../concepts/build-and-test/apps-package.md#app-icons).
     * Ändern Sie den `icons`-Teil des Manifests in die Dateinamen der Symbole anstelle von URLs.

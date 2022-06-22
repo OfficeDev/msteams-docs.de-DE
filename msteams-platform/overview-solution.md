@@ -6,16 +6,17 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 1f2422f6e5c32e30bba80141e53a6ab60b08e08b
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 22722d764cf498ff96bb81e9ede65c4ae112011f
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123545"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190117"
 ---
 # <a name="the-teams-solution"></a>Die Teams-Lösung
 
-Die Microsoft Teams-Plattform ist eine leistungsstarke und flexible Plattform zum Erstellen von Apps für Microsoft Teams. Sie bietet eine umfangreiche Sammlung von Entwicklungsumgebungen und Tools zur Unterstützung der App-Entwicklung.
+
+Die Microsoft Teams-Plattform ist eine leistungsstarke und flexible Plattform zum Erstellen von Apps für Teams. Sie bietet eine umfangreiche Sammlung von Entwicklungsumgebungen und Tools zur Unterstützung der App-Entwicklung.
 
 ## <a name="the-user-story"></a>Die User Story
 
@@ -31,19 +32,19 @@ Sortieren und Zuordnen von Anforderungen zu Teams-Features:
 | Anforderungen der Nutzer-App | Prognose überprüfen | Benachrichtigung vor der Reise | Registrierter Nutzer |
 | --- |:---:|:---:|:---:|
 | **Funktionalität** | Bot | &nbsp; | &nbsp; |
-| **Integration** | &nbsp; | &nbsp; | Microsoft Graph, Wetter-API |
+| **Integration** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph, Wetter-API |
 | **Scope** | &nbsp; | Persönliche App | &nbsp; |
 | **Integrationspunkt** | &nbsp; | Chat | &nbsp; |
 
 **Teams-App-Lösung**: Eine *persönliche Chat-Bot*-App von Teams, die Prognosen prüft und *registrierten Nutzern* vor ihrem Reisedatum *eine Prognose-Benachrichtigung sendet*.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Ein Entwickler bei einem Reisebüro erstellt einen Bot für Microsoft Teams, der Wettervorhersagen an Kunden sendet, damit sie ihre Reisedaten im Voraus planen können " border="false":::.
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Ein Entwickler in einem Reisebüro erstellt einen Bot für Teams, der Wettervorhersagen an Kunden sendet, damit sie ihre Reisedaten im Voraus planen können" border="false":::
 
 Teams bietet diese und viele weitere Funktionen, um Ihren Benutzern eine funktionsreiche App-Lösung zu bieten. So entwickeln Sie diese App:
 
 1. Erstellen Sie eine persönliche Chatbot-App.
 1. Integrieren Sie eine externe Wettervorhersage-API, um eine Verbindung herzustellen und eine Vorhersage für ein bestimmtes Datum und einen bestimmten Standort abzufragen.
-1. Integration in Microsoft Graph für registrierte Nutzer.
+1. Integration mit :::image type="icon" source="assets/icons/teams-icon.png" border="false"::: Microsoft Graph für registrierte Benutzer.
 1. Überprüfen und senden Sie Prognosedetails basierend auf dem Reisedatum und dem Reisestandort des Nutzers.
 
 ## <a name="choose-what-suits-you"></a>Wählen Sie aus, was zu Ihnen passt
@@ -71,7 +72,7 @@ Vom Entwurf bis zur Erstellung und Vermarktung einer Teams-App können Sie versc
 1. Planen Sie Ihr Projekt und ermitteln Sie die Anforderung.
 1. Entwerfen Sie die App. Verwenden Sie Teams UI Kit und UI Library für die Gestaltung der Benutzeroberfläche von Registerkarten.
 1. Erstellen Sie die App mit JavaScript mithilfe des Teams-Toolkits.
-1. Erweitern Sie die Funktionalität, indem Sie weitere Teams-Funktionen und Microsoft 365-Daten mit Microsoft Graph hinzufügen.
+1. Erweitern Sie die Funktionalität, indem Sie weitere Teams-Funktionen und M365-Daten mit :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph hinzufügen.
 1. Testen Sie die App auf einem Entwicklermandanten mit Beispiel-Nutzerdaten.
 1. Stellen Sie die App in Azure bereit.
 1. Verwalten und Veröffentlichen der Apps im Store mit dem Developer Portal. Monetarisieren Sie Ihre App mit Optionen wie SaaS-Angeboten, In-App-Käufen uvm.
@@ -109,7 +110,7 @@ Vom Entwurf bis zur Erstellung und Vermarktung einer Teams-App können Sie versc
         **Entwerfen Ihrer App**
     :::column-end:::
     :::column span="2":::
-        Entwerfen Sie Ihre App-Benutzeroberfläche mit dem Microsoft Teams UI Kit.
+        Entwerfen Sie Ihre App-Benutzeroberfläche mit dem Teams-Kit für Benutzeroberflächen.
 
         > [!div class="nextstepaction"]
         > [Entwerfen Ihrer Teams-App](~/concepts/design/design-teams-app-process.md)
@@ -133,7 +134,7 @@ Vom Entwurf bis zur Erstellung und Vermarktung einer Teams-App können Sie versc
         **Erstrecken Ihrer App über Microsoft 365**
     :::column-end:::
     :::column span="2":::
-        Mit Microsoft Teams JavaScript-Client-SDK v2 Preview können Sie eine Vorschau Ihrer Teams Apps anzeigen, die in anderen stark frequentierten Microsoft 365-Umgebungen ausgeführt werden.
+Mit dem Teams JavaScript-Client-SDK v2 Preview können Sie eine Vorschau Ihrer Teams Apps anzeigen, die in anderen stark genutzten Microsoft 365-Umgebungen ausgeführt werden.
 
         > [!div class="nextstepaction"]
         > [Erweitern Ihrer App](m365-apps/overview.md)
@@ -145,7 +146,7 @@ Vom Entwurf bis zur Erstellung und Vermarktung einer Teams-App können Sie versc
         **Testen eigener Apps**
     :::column-end:::
     :::column span="2":::
-        Nachdem Sie Ihre App in Microsoft Teams integriert haben, müssen Sie ihre App testen, bevor Sie sie veröffentlichen.
+        Nachdem Sie Ihre App in Teams integriert haben, müssen Sie ihre App testen, bevor Sie diese veröffentlichen.
 
         > [!div class="nextstepaction"]
         > [Testen eigener Apps](concepts/build-and-test/test-app-overview.md)
@@ -157,7 +158,7 @@ Vom Entwurf bis zur Erstellung und Vermarktung einer Teams-App können Sie versc
         **Verteilen Ihrer App**
     :::column-end:::
     :::column span="2":::
-        Sie können Ihre Microsoft Teams-App für eine Person, ein Team, eine Organisation oder jede Person bereitstellen, die sie verwenden möchte.
+        Sie können Ihre Teams-App für eine Person, ein Team, eine Organisation oder jede Person zur Verfügung stellen, die sie nutzen möchte.
 
         > [!div class="nextstepaction"]
         > [Verteilen Ihrer App](~/concepts/deploy-and-publish/apps-publish-overview.md)

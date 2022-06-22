@@ -5,16 +5,16 @@ ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
-ms.openlocfilehash: 61be6f8d85b5b98e9c96d4dec7301dea18ea55bc
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3a667247e0e67e4454effe2226e8775ac3fa0c3e
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123850"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190007"
 ---
 # <a name="microsoft-teams-store-ranking-parameters"></a>Bewertungsparameter für Microsoft Teams-Store
 
-Die Informationen in dieser Offenlegungserklärung gelten für den Microsoft Teams Store, in dem Microsoft Drittanbieter-Apps für Benutzer zur Verfügung stellt. Der Microsoft Teams Store bewertet die App-Suchergebnisse im Store anhand einer Reihe von Bewertungsparametern, um den Benutzern relevante Suchergebnisse zu liefern. Die aufgeführten Bewertungsparameter sind nicht vollständig und sollen unserer Herausgebercommunity ein allgemeines Verständnis der wichtigsten Parameter vermitteln, die die Storefront bei der Bewertungsermittlung verwendet. Alle in diesem Dokument verwendeten, aber nicht anderweitig definierten Begriffe haben die Bedeutung, die in der Microsoft Publisher-Vereinbarung angegeben ist.
+Die Informationen in dieser Offenlegungserklärung gelten für den Microsoft Teams Store, in dem Microsoft Drittanbieter-Apps für Benutzer zur Verfügung stellt. Der Microsoft Teams Store bewertet die App-Suchergebnisse im Store anhand einer Reihe von Bewertungsparametern, um den Benutzern relevante Suchergebnisse zu liefern. Die aufgeführten Bewertungsparameter sind nicht vollständig und sollen unserer Herausgebercommunity ein allgemeines Verständnis der wichtigsten Parameter vermitteln, welche die Storefront bei der Bewertungsermittlung verwendet. Alle in diesem Dokument verwendeten, aber nicht anderweitig definierten Begriffe haben die Bedeutung, die in der Microsoft Publisher-Vereinbarung angegeben ist.
 
 Das Microsoft Teams Store-Redaktionsteam bestimmt die Bedeutung und den geografischen Raum einer App in den redaktionellen Abschnitten wie z. B. dem Werbebanner im Microsoft Teams Store anhand von Bewertungsparametern. Diese werden als zielorientierte Kriterien verwendet, die gleichermaßen auf alle Apps im Microsoft Teams Store angewendet werden, welche Microsoft-eigene Apps und alle Drittanbieter-Entwickler-Apps enthalten. Es folgen die wichtigsten Parameter, die zum Bestimmen der App-Platzierungen verwendet werden:
 

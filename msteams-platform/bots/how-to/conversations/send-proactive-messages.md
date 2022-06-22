@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie proaktive Nachrichten mit Ihrem Teams-Bot sen
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
-ms.openlocfilehash: cf163b8c74a74eeb83757e65fd79351176290fc9
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4344a1c1a3d58d8bb3c06105b05a1b370b55e259
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143508"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190139"
 ---
 # <a name="proactive-messages"></a>Proaktive Nachrichten
 
@@ -25,8 +25,9 @@ Eine proaktive Nachricht ist jede Nachricht, die von einem Bot gesendet wird, de
 > Derzeit sind Bots in Government Community Cloud (GCC) und in GCC-High verfügbar, aber nicht in Department of Defense (DOD).
 >
 > Für proaktive Nachrichten sollten die Bots die folgenden Endpunkte für Government Cloud-Umgebungen verwenden:
->    * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`.
->    * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
+>
+> * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`.
+> * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
 Damit Ihr Bot eine proaktive Nachricht an einen Benutzer, einen Gruppenchat oder ein Team senden kann, muss er Zugriff haben, um die Nachricht zu senden. Für einen Gruppenchat oder ein Team muss die App, die Ihren Bot enthält, zuerst an diesem Speicherort installiert werden.
 Sie können bei Bedarf in einem Team [Ihre App proaktiv mithilfe von Microsoft Graph installieren](#proactively-install-your-app-using-graph) oder eine [App-Richtlinie](/microsoftteams/teams-custom-app-policies-and-settings) verwenden, um Apps an Teams und Benutzer in Ihrem Mandanten zu pushen. Für Benutzer muss Ihre App entweder für den Benutzer installiert sein, oder Ihr Benutzer muss Teil eines Teams sein, in dem Ihre App installiert ist.
@@ -64,7 +65,9 @@ Nachdem Sie über die Benutzer- oder Kanalinformationen verfügen, müssen Sie d
 
 Sie müssen die Unterhaltung erstellen, falls sie nicht vorhanden ist oder Sie die `conversationId` nicht kennen. Sie dürfen die Konversation nur einmal erstellen und den `conversationId` Wert oder `conversationReference` Objekt speichern.
 
-Nachdem die Unterhaltung erstellt wurde, müssen Sie die Konversations-ID abrufen.
+Sie können die Unterhaltung abrufen, wenn die App zum ersten Mal installiert wird. Nachdem die Unterhaltung erstellt wurde, müssen Sie die Konversations-ID abrufen. Die `conversationId` ist in den Aktualisierungsereignissen der Unterhaltung verfügbar.
+
+Wenn Sie nicht über die `conversationId` verfügen, können Sie [Ihre App proaktiv mithilfe von Graph installieren](#proactively-install-your-app-using-graph), um die `conversationId` abzurufen.
 
 ## <a name="get-the-conversation-id"></a>Abrufen der Konversations-ID
 
@@ -77,6 +80,13 @@ Nachdem Sie die entsprechenden Adressinformationen erhalten haben, können Sie I
 Nachdem Sie nun über die richtigen Adressinformationen verfügen, können Sie Ihre Nachricht senden. Wenn Sie das SDK verwenden, müssen Sie die `continueConversation`-Methode sowie die `conversationId` und `tenantId` verwenden, um einen direkten API-Aufruf zu tätigen. Sie müssen die `conversationParameters` richtig festlegen, um Ihre Nachricht erfolgreich zu senden. Sehen Sie sich den Abschnitt [Beispiele](#samples) an, oder verwenden Sie eines der Beispiele, die im Abschnitt [Codebeispiel](#code-sample) aufgeführt sind.
 
 Nachdem Sie die proaktive Nachricht gesendet haben, müssen Sie diese bewährten Methoden befolgen und proaktive Nachrichten senden, um einen besseren Informationsaustausch zwischen Benutzern und dem Bot zu ermöglichen.
+
+Im folgenden Video erfahren Sie, wie Sie proaktive Nachrichten aus Bots senden:
+
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+<br>
 
 ## <a name="best-practices-for-proactive-messaging"></a>Bewährte Methoden für proaktives Messaging
 

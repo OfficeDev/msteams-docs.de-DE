@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 9cceb8f75976dcb7606d09a027e66c775e226365
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e9c89f6f1aed486582eb2f50ee8f8107f5ef8473
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143991"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189468"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
@@ -249,7 +249,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Hochladen Ihrer Anwendung in Teams
 
-1. Wechseln Sie zu Microsoft Teams, und wählen Sie **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store"::: aus.
+1. Wechseln Sie zu Teams, und wählen Sie **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store"::: aus.
 1. Wählen Sie **Ihre Apps verwalten** und **Eine benutzerdefinierte App hochladen** aus.
 1. Wechseln Sie zu Ihrem Projektverzeichnis, navigieren Sie zum Ordner **./package**, wählen Sie den ZIP-Ordner aus und dann **Öffnen**.
 
@@ -335,7 +335,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 * Ein transparentes Kontursymbol mit einer Größe von 32 x 32 Pixeln.
 * Eine `manifest.json`-Datei, welche die Attribute Ihrer App angibt.
 
-Diese Dateien müssen in einem App-Paket gezippt werden, damit sie beim Hochladen Ihrer Registerkarte in Teams verwendet werden können. Microsoft Teams lädt die in Ihrem Manifest angegebene `contentUrl`, bettet sie in ein <iframe\> ein und rendert sie in Ihrer Registerkarte.
+Diese Dateien müssen in einem App-Paket gezippt werden, damit sie beim Hochladen Ihrer Registerkarte in Teams verwendet werden können. Teams lädt die in Ihrem Manifest angegebene `contentUrl`, bettet sie in ein <IFrame\> ein, und rendert sie in Ihrer Registerkarte.
 
 #### <a name="csproj"></a>.csproj
 
@@ -484,7 +484,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 * Ein **transparentes Kontursymbol** mit einer Größe von 32 x 32 Pixeln.
 * Eine `manifest.json`-Datei, welche die Attribute Ihrer App angibt.
 
-Diese Dateien müssen in einem App-Paket gezippt werden, damit sie beim Hochladen Ihrer Registerkarte in Teams verwendet werden können. Microsoft Teams lädt die in Ihrem Manifest angegebene `contentUrl`, bettet sie in ein IFrame ein und rendert sie in Ihrer Registerkarte.
+Diese Dateien müssen in einem App-Paket gezippt werden, damit sie beim Hochladen Ihrer Registerkarte in Teams verwendet werden können. Teams lädt die in Ihrem Manifest angegebene `contentUrl`, bettet sie in ein IFrame ein, und rendert sie in Ihrer Registerkarte.
 
 #### <a name="csproj"></a>.csproj
 

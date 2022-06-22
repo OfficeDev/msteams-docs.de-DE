@@ -1,17 +1,16 @@
 ---
 title: Integration von Standortfunktionen
 author: Rajeshwari-v
-description: Erfahren Sie, wie Sie Teams JavaScript-Client-SDK verwenden, um Standortfunktionen mithilfe von Codeausschnitten und Beispielen zu nutzen.
-keywords: Native Geräteberechtigungen für Standortkartenfunktionen
+description: Erfahren Sie, wie Sie das Teams JavaScript-Client-SDK verwenden, um Standortfunktionen mithilfe von Codeausschnitten und Beispielen zu nutzen.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 0a2c7400801decd937243bbbe5dbcea307d13fc0
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: 00fdfe470dcc5028afb233f9fbe0c6a6f7ff1b2c
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130452"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189865"
 ---
 # <a name="integrate-location-capabilities"></a>Integration von Standortfunktionen
 
