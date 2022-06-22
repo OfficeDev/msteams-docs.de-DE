@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 3513f272254b578c94a9b9adcf7b70f1113e4509
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 1df61412f8cf3e47340a7626004d3652a77b60e9
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795161"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189606"
 ---
 # <a name="teams-app-that-fits"></a>Eine Teams-App, die passt
 
@@ -39,7 +39,7 @@ Sie können Apps mithilfe der Microsoft Teams-Entwicklerplattform erstellen, ind
 
 ## <a name="build-apps-with-microsoft-teams-platform"></a>Erstellen von Apps mit der Microsoft Teams-Plattform
 
-Microsoft Teams-Apps sorgen für mehr Produktivität in Ihrem Arbeitsbereich für die Zusammenarbeit, da sie wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse in einen Bereich bringen, in dem sich immer mehr Menschen treffen, lernen und arbeiten. Mit Apps erweitern Sie die Funktionen der Microsoft Teams-Plattform entsprechend Ihren Anforderungen. Erstellen Sie etwas ganz Neues, oder integrieren Sie eine vorhandene App, und nutzen Sie die Vorteile der Microsoft Teams-Plattform für Ihre individuellen Geschäftsanforderungen.
+Teams-Apps tragen dazu bei, dass Ihr gemeinsamer Arbeitsbereich produktiver wird, indem sie wichtige Informationen, allgemeine Tools und vertrauenswürdige Prozesse dorthin bringen, wo Menschen zunehmend zusammenkommen, lernen und arbeiten. Mit Apps erweitern Sie die Funktionen der Microsoft Teams-Plattform entsprechend Ihren Anforderungen. Erstellen Sie etwas ganz Neues, oder integrieren Sie eine vorhandene App, und nutzen Sie die Vorteile der Microsoft Teams-Plattform für Ihre individuellen Geschäftsanforderungen.
 
 Die Vorteile des Erstellens von Apps reichen von der Erfüllung organisatorischer Ziele bis hin zur Steigerung der internen Produktivität.
 
@@ -75,7 +75,7 @@ Hier sind die Gründe, warum sich Microsoft Teams hervorragend für Ihre App-Anf
 
 - **Persönliche Apps mit Registerkarten und Bots**
 
-    Bots für Einzelunterhaltungen zählen zu den offeneren Features in Microsoft Teams. Die Unterhaltung findet nur zwischen dem Bot und Ihrem Benutzer statt. Sie haben die Flexibilität, Aufgabenmodule zu verwenden, um komplexe Informationsmengen zu vereinfachen.
+    Eins-zu-eins-Konversationsbots sind eine der offeneren Funktionen in Teams. Die Unterhaltung findet nur zwischen dem Bot und Ihrem Benutzer statt. Sie haben die Flexibilität, Aufgabenmodule zu verwenden, um komplexe Informationsmengen zu vereinfachen.
 
     Wenn Ihre App beispielsweise ein Designtool mit mehreren Mitarbeitern ist, hilft ein gemeinsamer Bot, der alle Benutzer benachrichtigt, die Benutzermotivation zu fördern.
 

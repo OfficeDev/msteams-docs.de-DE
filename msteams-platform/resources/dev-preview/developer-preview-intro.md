@@ -3,19 +3,19 @@ title: Öffentliche Entwicklervorschau für Microsoft Teams
 description: In diesem Artikel lernen Sie die Features kennen, die in der öffentlichen Entwicklervorschau von Microsoft Teams und im Entwicklervorschau-App-Manifest enthalten sind.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 6efc0681ad15add36ddaf94d3ca89ef931e9f30e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e166d9c65d93569e8854759dce725f5edca104f9
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143984"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190249"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Öffentliche Entwicklervorschau für Microsoft Teams
 
 >[!NOTE]
 >Die in der Vorschau enthaltenen Features sind möglicherweise nicht vollständig und werden möglicherweise geändert, bevor sie in der öffentlichen Version verfügbar werden. Sie werden nur zu Test- und Untersuchungszwecken bereitgestellt. Sie sollten nicht in Produktionsanwendungen verwendet werden.
 
-Developer Preview ist ein öffentliches Programm für Entwickler, das frühzeitigen Zugriff auf nicht veröffentlichte Features in Microsoft Teams bietet. Auf diese Weise können Sie anstehende Features untersuchen und testen, um sie in Ihre Microsoft Teams-App einzubeziehen. Wir freuen uns auch über [Feedback](~/feedback.md) zu allen Features in der Entwicklervorschau. Die Entwicklervorschau ist pro Microsoft Teams-Client aktiviert, sodass Sie sich keine Gedanken über Auswirkungen auf Ihre gesamte Organisation machen müssen.
+Developer Preview ist ein öffentliches Programm für Entwickler, das frühzeitigen Zugriff auf nicht veröffentlichte Features in Microsoft Teams bietet. Auf diese Weise können Sie neue Funktionen erkunden und testen, um sie möglicherweise in Ihre Teams-App aufzunehmen. Wir freuen uns auch über [Feedback](~/feedback.md) zu allen Features in der Entwicklervorschau. Die Entwicklervorschau ist pro Microsoft Teams-Client aktiviert, sodass Sie sich keine Gedanken über Auswirkungen auf Ihre gesamte Organisation machen müssen.
 
 ## <a name="developer-preview-app-manifest"></a>Entwicklervorschau-App-Manifest
 
