@@ -5,17 +5,17 @@ description: In diesem Artikel beginnen Sie mit der Integration von Webanwendung
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 73fb039886d47a5f011b1dcfb9a8a3a46cb4ff6f
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4df1e9ebbcdf23fce9c875384b2918c84fe0edd2
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144270"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189774"
 ---
 # <a name="integrate-web-apps"></a>Integrieren von Web-Apps
 
 Durch die Integration der Funktionen einer bestehenden Webanwendung in die Microsoft Teams-Plattform können Sie die Benutzererfahrung verbessern. Achten Sie darauf, die [Microsoft Teams-Designrichtlinien](~/concepts/design/understand-use-cases.md) zu befolgen, um native Apps für Microsoft Teams zu erstellen.
-Dieses Dokument gibt einen Überblick über die Voraussetzungen für die Integration von Webanwendungen in Teams, die Power-Plattform zur Erstellung von Power-Apps, Power Virtual Agents, Virtual Assistant, App-Vorlagen, Shift-Konnektoren, Moodle LMS, das Erstellen einer Share-to-Teams-Schaltfläche für Ihre Website, das Hinzufügen einer Microsoft Teams-Registerkarte in SharePoint, das Erstellen von Deep Links und die Integration von Gerätefunktionen.
+Dieses Dokument gibt einen Überblick über die Voraussetzungen für die Integration von Webanwendungen in Teams, die Power-Plattform zur Erstellung von Power-Apps, Power Virtual Agents, Virtual Assistant, App-Vorlagen, Shift-Konnektoren, Moodle LMS, das Erstellen einer Schaltfläche zum Teilen in Teams für Ihre Website, das Hinzufügen einer Teams-Registerkarte in SharePoint, das Erstellen von Deep Links und die Integration von Gerätefunktionen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -45,7 +45,7 @@ Die Microsoft Power-Plattform vereint vier robuste Microsoft-Technologien, wie P
 
 ### <a name="power-apps"></a>Power Apps
 
-Mit Power Apps können Sie Geschäftsanwendungen erstellen, die mit Ihren Geschäftsdaten verbunden sind und auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind. Power Apps ermöglicht eine breite Palette von Anwendungsszenarien, um geschäftliche Herausforderungen durch Canvas-Anwendungen zu lösen. Nachdem Sie die Anwendung erstellt haben, können Sie sie aus dem Power Apps Maker Portal exportieren und in Microsoft Teams einbetten.
+Mit Power Apps können Sie Geschäftsanwendungen erstellen, die mit Ihren Geschäftsdaten verbunden sind und auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind. Power Apps ermöglicht eine breite Palette von Anwendungsszenarien, um geschäftliche Herausforderungen durch Canvas-Anwendungen zu lösen. Nachdem Sie die Anwendung erstellt haben, können Sie sie aus dem Power Apps Maker-Portal exportieren und in Teams einbetten.
 
 ### <a name="power-virtual-agents"></a>Power Virtual Agents
 
@@ -61,7 +61,7 @@ Sie können App-Vorlagen verwenden, um maßgeschneiderte Apps zu erstellen, die 
 
 ## <a name="install-moodle-lms"></a>Installieren von Moodle LMS
 
-Moodle ist ein beliebtes Open-Source-Lernmanagementsystem (LMS). Es ist jetzt in Microsoft Teams integriert. Mit dieser Integration können Pädagogen und Lehrer in Moodle-Kursen zusammenarbeiten, Fragen zu Noten und Aufgaben stellen und mit Benachrichtigungen direkt in Teams auf dem Laufenden bleiben.
+Moodle ist ein beliebtes Open-Source-Lernmanagementsystem (LMS). Es ist jetzt in Teams integriert. Mit dieser Integration können Pädagogen und Lehrer in Moodle-Kursen zusammenarbeiten, Fragen zu Noten und Aufgaben stellen und mit Benachrichtigungen direkt in Teams auf dem Laufenden bleiben.
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Erstellen einer Schaltfläche zum Teilen in Teams für Ihre Website
 
@@ -69,7 +69,7 @@ Websites von Drittanbietern können das Launcher-Skript verwenden, um Schaltflä
 
 ## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>Hinzufügen einer Microsoft Teams-Registerkarte in SharePoint
 
-Sie können eine vielfältig nutzbare Integration zwischen Microsoft Teams und Sharepoint erhalten, indem Sie eine Microsoft Teams-Registerkarte in SharePoint als SPFx-Webpart hinzufügen.
+Sie können eine vielfältig nutzbare Integration zwischen Teams und SharePoint erhalten, indem Sie eine Teams-Registerkarte in SharePoint als SPFx-Webpart hinzufügen.
 
 ## <a name="create-deep-link"></a>Deep Link erstellen
 
@@ -77,7 +77,7 @@ Sie können Deep Links zu den Entitäten in Teams erstellen. Sie können Links z
 
 ## <a name="integrate-device-capabilities"></a>Integrieren von Gerätefunktionen
 
-Die Microsoft Teams-Plattform verbessert kontinuierlich die Entwicklerfunktionen, die sich an integrierten First-Party-Erfahrungen ausrichten. Die erweiterte Teams-Plattform ermöglicht Partnern den Zugriff auf und die Integration von nativen Gerätefunktionen wie Kamera, QR- oder Barcode-Scanner, Fotogalerie, Mikrofon und Standort mithilfe spezieller APIs, die im Microsoft Teams JavaScript Client SDK verfügbar sind.
+Die Teams-Plattform verbessert kontinuierlich die Entwicklerfunktionen, die sich an integrierten First-Party-Erfahrungen ausrichten. Die erweiterte Teams-Plattform ermöglicht Partnern den Zugriff auf und die Integration von nativen Gerätefunktionen wie Kamera, QR- oder Barcode-Scanner, Fotogalerie, Mikrofon und Standort mithilfe spezieller APIs, die im Microsoft Teams JavaScript Client SDK verfügbar sind.
 
 ## <a name="integrate-people-picker"></a>Integration der Personenauswahl
 
@@ -85,9 +85,9 @@ Sie können das native People-Picker-Steuerelement von Teams integrieren, mit de
 
 ## <a name="integrate-teams-in-your-external-app"></a>Integrieren Sie Teams in Ihre externe Anwendung
 
-Sie können Ihre eigenen Erfahrungen in Microsoft Teams einbetten, indem Sie Teams-Anwendungen erstellen. Wenn Sie dieses Modell *umkehren* und Teams oder andere Kommunikationsfunktionen in Ihre eigene externe App integrieren möchten, lesen Sie [Azure Communication Services](/azure/communication-services/overview). Azure Communication Services sind Cloud-basierte Dienste mit REST-APIs und SDKs für Client-Bibliotheken, mit denen Sie die Kommunikation in Ihre eigenen benutzerdefinierten Anwendungen integrieren können. Sie können generische oder im Teams-Stil formatierte React-Webkomponenten für Anrufe und Chats mithilfe der [UI-Bibliothek](https://azure.github.io/communication-ui-library/) einbetten.
+Sie können Ihre eigenen Erfahrungen in Teams einbetten, indem Sie Teams-Anwendungen erstellen. Wenn Sie dieses Modell *umkehren* und Teams oder andere Kommunikationsfunktionen in Ihre eigene externe App integrieren möchten, lesen Sie [Azure Communication Services](/azure/communication-services/overview). Azure Communication Services sind Cloud-basierte Dienste mit REST-APIs und SDKs für Client-Bibliotheken, mit denen Sie die Kommunikation in Ihre eigenen benutzerdefinierten Anwendungen integrieren können. Sie können generische oder im Teams-Stil formatierte React-Webkomponenten für Anrufe und Chats mithilfe der [UI-Bibliothek](https://azure.github.io/communication-ui-library/) einbetten.
 
-Azure Communication Services Anwendungen können öffentliche Vorschaufunktionen verwenden, um [mit Teams zu zusammenarbeiten](/azure/communication-services/concepts/teams-interop) und Ihrer benutzerdefinierten Anwendung zu ermöglichen, anonym an Teams-Besprechungen teilzunehmen. So können Sie beispielsweise Videogespräche in eine mobile Bankanwendung integrieren und Endbenutzern ermöglichen, sich mit Hilfe von Microsoft Teams virtuell mit Bankmitarbeitern zu treffen.
+Azure Communication Services Anwendungen können öffentliche Vorschaufunktionen verwenden, um [mit Teams zu zusammenarbeiten](/azure/communication-services/concepts/teams-interop) und Ihrer benutzerdefinierten Anwendung zu ermöglichen, anonym an Teams-Besprechungen teilzunehmen. So können Sie beispielsweise Videogespräche in eine mobile Bankanwendung integrieren und Endbenutzern ermöglichen, sich mit Hilfe von Teams virtuell mit Bankmitarbeitern zu treffen.
 
 Sie können auch die Microsoft 365-Identität integrieren, um externe Anwendungen zu erstellen, die Video- und PSTN-Anrufe im Namen eines Benutzers von Teams einbetten. Wenn Sie [Skype for Business SDKs](/skype-sdk/appsdk/skypeappsdk) in der Vergangenheit verwendet haben, werden diese Funktionen als Teil Azure Communication Services als Ersatz empfohlen.
 
