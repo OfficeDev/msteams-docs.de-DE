@@ -5,14 +5,14 @@ description: In diesem Modul erfahren Sie, wie Sie benutzerdefinierte Registerka
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 94fef69a1f11209fdb4512e7d140c2d6dbf813ef
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 2f2ace5503caa509a875823a260b2903a4b6440e
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143648"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503893"
 ---
-# <a name="build-tabs-for-microsoft-teams"></a>Registerkarten für Microsoft Teams erstellen
+# <a name="build-tabs-for-teams"></a>Erstellen von Registerkarten für Teams
 
 Registerkarten sind Teams-fähige Webseiten, die in Microsoft Teams eingebettet sind. Es handelt sich um einfache HTML-`<iframe\>`-Tags, die auf im App-Manifest deklarierte Domänen verweisen und als Teil eines Kanals innerhalb eines Teams, Gruppenchats oder einer persönlichen App für einen einzelnen Benutzer hinzugefügt werden können. Sie können benutzerdefinierte Registerkarten in Ihre App einschließen, um Ihre eigenen Webinhalte in Teams einzubetten oder Ihren Webinhalten Teams-spezifische Funktionen hinzuzufügen. Weitere Informationen finden Sie unter [JavaScript-Client-SDK für Teams](/javascript/api/overview/msteams-client).
 
@@ -25,11 +25,11 @@ Registerkarten sind Teams-fähige Webseiten, die in Microsoft Teams eingebettet 
 
 Die folgende Abbildung zeigt persönliche Registerkarten:
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Registerkarte „Persönlich“" lightbox="../assets/images/tabs/personaltab.png":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Registerkarte „Persönlich“" lightbox="../assets/images/tabs/personaltab.png" border="true":::
 
 Die folgende Abbildung zeigt die Contoso-Kanalregisterkarten:
 
-:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Kanal- oder Gruppenregisterkarten" lightbox="../assets/images/tabs/tabs.png":::
+:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Kanal- oder Gruppenregisterkarten" lightbox="../assets/images/tabs/tabs.png" border="true":::
 
 Es gibt einige Voraussetzungen, die Sie erfüllen müssen, bevor Sie mit Registerkarten arbeiten.
 

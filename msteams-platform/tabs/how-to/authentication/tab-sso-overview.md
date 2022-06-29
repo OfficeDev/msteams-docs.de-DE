@@ -4,14 +4,14 @@ description: Übersicht über die SSO-Authentifizierung in Teams und deren Verwe
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD) SSO-Zugriffstoken-App-Manifest
-ms.openlocfilehash: 3214faec45001dd244115636e0964a56781837a8
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: fa68f181e53f433aea7d5cae3a1cb22615284c4b
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888013"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503767"
 ---
-# <a name="enable-single-sign-on-in-a-tab-app"></a>Aktivieren des einmaligen Anmeldens in einer Registerkarten-App
+# <a name="enable-sso-for-tab-app"></a>Aktivieren von SSO für die Registerkarten-App
 
 <!--Single sign-on (SSO) allows a user to access an application or a web service after signing-in only once. The app users never have to go through authentication again.-->
 

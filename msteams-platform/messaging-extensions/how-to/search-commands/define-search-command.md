@@ -1,16 +1,16 @@
 ---
 title: Definieren von Suchbefehlen für Nachrichtenerweiterungen
 author: surbhigupta
-description: In diesem Modul erfahren Sie mehr über die Suchbefehle für Nachrichtenerweiterungen für Teams Apps, um einen Suchbefehl über das App-Manifest und manuell zu erstellen.
+description: In diesem Modul erfahren Sie mehr über die Suchbefehle für Nachrichtenerweiterungen für Teams-Apps, um einen Suchbefehl über das App-Manifest und manuell zu erstellen.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 10bb71580ac67db155bd14b74325635ae22e6840
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: c131a511c5c16eac4bf57093bbbeed9bd4172e97
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189613"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503942"
 ---
 # <a name="define-message-extension-search-commands"></a>Definieren von Suchbefehlen für Nachrichtenerweiterungen
 
@@ -24,7 +24,7 @@ Mithilfe von Suchbefehlen für Nachrichtenerweiterungen können Benutzer externe
 Im folgenden Video erfahren Sie, wie Sie Suchbefehle für Nachrichtenerweiterungen definieren:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
 <br>
 
 ## <a name="select-search-command-invoke-locations"></a>Auswählen von Suchbefehlsspeicherorten
@@ -94,7 +94,7 @@ Zum manuellen Hinzufügen des Suchbefehls für die Nachrichtenerweiterung zum Ap
 |`initialRun` | Wenn diese Eigenschaft auf **"true**" festgelegt ist, gibt sie an, dass dieser Befehl ausgeführt werden soll, sobald der Benutzer diesen Befehl auf der Benutzeroberfläche auswählt. | Nein | 1.0 |
 | `context` | Diese Eigenschaft ist ein optionales Array von Werten, das den Kontext definiert, in dem die Suchaktion verfügbar ist. Die möglichen Werte sind `message`, `compose` oder `commandBox`. Der Standardwert lautet `["compose", "commandBox"]`. | Nein | 1,5 |
 
-Sie müssen die Details des Suchparameters hinzufügen, der den Text definiert, der für den Benutzer im Teams-Client sichtbar ist.
+Sie müssen die Details des Suchparameters hinzufügen, der den Text definiert, der für Ihren Benutzer im Teams-Client sichtbar ist.
 
 | Eigenschaftenname | Zweck | Erforderlich? | Minimale Manifestversion |
 |---|---|---|---|

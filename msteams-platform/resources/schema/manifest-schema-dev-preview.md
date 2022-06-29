@@ -1,17 +1,17 @@
 ---
 title: Manifest-Schemareferenz für die öffentliche Entwicklervorschau
-description: Erfahren Sie mehr über die Beispielmanifestdatei und die Beschreibung aller Komponenten, die für Microsoft Teams unterstützt werden.
+description: Erfahren Sie mehr über die Beispielmanifestdatei und die Beschreibung aller komponenten, die für Microsoft Teams unterstützt werden.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: ec5d02c5804f3b2de1398936666577c2a31bc2d4
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 1c42b405506aff9ae570d6792db4ff8f73fb9255
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189869"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503473"
 ---
-# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für die öffentliche Entwicklervorschau für Microsoft Teams
+# <a name="public-developer-preview-manifest-schema-for-teams"></a>Öffentliches Entwicklervorschau-Manifestschema für Teams
 
 Informationen zum Aktivieren der [Entwicklervorschau finden Sie unter Öffentliche Entwicklervorschau für Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
@@ -477,7 +477,7 @@ Das Objekt ist ein Array (maximal 1 Element) mit allen Elementen vom Typ `object
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-Ihre Nachrichtenerweiterung sollte einen oder mehrere Befehle deklarieren. Jeder Befehl wird in Teams als potenzielle Interaktion vom uibasierten Einstiegspunkt aus angezeigt. Es gibt maximal 10 Befehle.
+Ihre Nachrichtenerweiterung sollte einen oder mehrere Befehle deklarieren. Jeder Befehl wird in Teams als potenzielle Interaktion vom UI-basierten Einstiegspunkt aus angezeigt. Es gibt maximal 10 Befehle.
 
 Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 
@@ -547,7 +547,7 @@ Das Objekt ist ein Array, wobei alle Elemente vom Typ `string` sind.
 
 Optional:
 
-Geben Sie Ihre Microsoft Azure Active Directory (Azure AD)-App-ID und Graph Informationen an, damit sich Benutzer nahtlos bei Ihrer Azure AD-App anmelden können.
+Geben Sie Ihre Microsoft Azure Active Directory (Azure AD)-App-ID und Graph-Informationen an, damit sich Benutzer nahtlos bei Ihrer Azure AD-App anmelden können.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
@@ -779,7 +779,7 @@ Delegierte Berechtigungen ermöglichen der App den Zugriff auf Daten im Namen de
     |---|---|
     |`InAppPurchase.Allow.User`|Ermöglicht es der App, dem Benutzer Angebote auf dem Marktplatz zu zeigen und die Einkäufe des Benutzers innerhalb der App im Namen des angemeldeten Benutzers abzuschließen.|
 
-* **Ressourcenspezifische Berechtigungen für Teams Livefreigabe**
+* **Ressourcenspezifische Berechtigungen für die Livefreigabe von Teams**
 
    |Name| Beschreibung |
    | ----- | ----- |

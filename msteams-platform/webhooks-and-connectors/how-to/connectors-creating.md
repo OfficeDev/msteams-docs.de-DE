@@ -1,16 +1,16 @@
 ---
 title: Erstellen von Office 365-Connectors
 author: laujan
-description: In diesem Modul erfahren Sie, wie Sie mit Office 365 Connectors beginnen und Teams App in Microsoft Teams
+description: In diesem Modul erfahren Sie, wie Sie mit Office 365 Connectors beginnen und der Teams-App in Microsoft Teams Connector hinzufügen.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 1727ff46124c5c9dd5567ae63cea0826e806be2c
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: dec9acbf7ba2f52303b04a5219de575a96a792e5
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189325"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485346"
 ---
 # <a name="create-office-365-connectors"></a>Erstellen von Office 365-Connectors
 
@@ -29,7 +29,7 @@ Sie können ein [Paket](~/concepts/build-and-test/apps-package.md) erstellen und
 
 Um Ihren Connector zu verteilen, registrieren Sie ihn im [Connectors-Entwicklerdashboard](https://aka.ms/connectorsdashboard).
 
-Damit ein Connector nur in Teams funktioniert, befolgen Sie die Anweisungen zum Übermitteln des Connectors beim [Veröffentlichen Ihrer App im Artikel zum Microsoft Teams Store](~/concepts/deploy-and-publish/appsource/publish.md). Ansonsten funktioniert ein registrierter Connector in allen Office 365-Produkten, die Anwendungen unterstützen, einschließlich Outlook und Teams.
+Damit ein Connector nur in Teams funktioniert, befolgen Sie die Anweisungen zum Übermitteln des Connectors beim [Veröffentlichen Ihrer App im Microsoft Teams Store-Artikel](~/concepts/deploy-and-publish/appsource/publish.md) . Ansonsten funktioniert ein registrierter Connector in allen Office 365-Produkten, die Anwendungen unterstützen, einschließlich Outlook und Teams.
 
 > [!IMPORTANT]
 > Ihr Connector wird registriert, nachdem Sie im Connectors-Entwicklerdashboard auf **Speichern** klicken. Wenn Sie Ihren Connector in AppSource veröffentlichen möchten, folgen Sie den Anweisungen zum [Veröffentlichen Ihrer Microsoft Teams-App in AppSource](~/concepts/deploy-and-publish/apps-publish.md). Wenn Sie Ihre App nicht in AppSource veröffentlichen möchten, verteilen Sie sie direkt an die Organisation. Nach dem Veröffentlichen von Connectors für Ihre Organisation ist keine weitere Aktion im Connectordashboard erforderlich.
@@ -143,7 +143,7 @@ Die folgende Tabelle enthält die Parameter und die Details zu `GetSetting`-Antw
 | `configName`  | Der Konfigurationsname, wie durch Ihren Code beim Aufrufen von `setSettings()` festgelegt. |
 | `contentUrl` | Die URL der Konfigurationsseite, wie durch Ihren Code beim Aufruf von `setSettings()` festgelegt. |
 | `webhookUrl` | Die für den Connector erstellte Webhook-URL. Verwenden Sie die Webhook-URL zum POSTEN von strukturiertem JSON, um Karten an den Kanal zu senden. Die `webhookUrl` wird nur zurückgegeben, wenn die Anwendung erfolgreich Daten zurückgibt. |
-| `appType` | Die zurückgegebenen Werte können `mail`Office 365 `groups``teams` Mail, Office 365 Groups oder Teams entsprechen. |
+| `appType` | Die zurückgegebenen Werte können dem `mail``groups``teams` Office 365 Mail, Office 365 Groups oder Teams entsprechen. |
 | `userObjectId` | Die eindeutige ID, die dem Office 365-Benutzer entspricht, der die Einrichtung des Connectors initiiert hat. Sie sollte gesichert werden. Dieser Wert kann verwendet werden, um den Benutzer in Office 365 zuzuordnen, der die Konfiguration in Ihrem Dienst eingerichtet hat. |
 
 #### <a name="handle-edits"></a>Behandeln von Bearbeitungen
@@ -221,11 +221,11 @@ Nachdem Sie die App hochgeladen haben, öffnen Sie die Connectorliste von einem 
 ![Screenshot des Abschnitts „Hochgeladen“ im Connectordialogfeld](~/assets/images/connectors/connector_dialog_uploaded.png)
 
 > [!NOTE]
-> Der Fluss erfolgt vollständig innerhalb Teams als gehostete Erfahrung.
+> Der Ablauf erfolgt vollständig innerhalb von Teams als gehostete Erfahrung.
 
 Um zu überprüfen, ob die `HttpPOST`-Aktion ordnungsgemäß funktioniert, [senden Sie Nachrichten an Ihren Connector](~/webhooks-and-connectors/how-to/connectors-using.md).
 
-Befolgen Sie die [schrittweise Anleitung](../../sbs-teams-connectors.yml) zum Erstellen und Testen der Verbinder in Ihrem Teams.
+Befolgen Sie die [schrittweise Anleitung](../../sbs-teams-connectors.yml) zum Erstellen und Testen der Connectors in Ihren Teams.
 
 ## <a name="distribute-webhook-and-connector"></a>Verteilen von Webhook und Connector
 

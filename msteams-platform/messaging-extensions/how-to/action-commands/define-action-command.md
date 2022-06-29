@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie Aktionsbefehle für Messaging
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0d6979a3d0845be88e43e150451ee6e4097a6870
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 75df991c0af1ca49a1fbba1846a01ff4b30236db
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189617"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503935"
 ---
 # <a name="define-message-extension-action-commands"></a>Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 
@@ -27,7 +27,7 @@ Bevor Sie den Aktionsbefehl erstellen, müssen Sie die folgenden Faktoren festle
 Im folgenden Video erfahren Sie, wie Sie Aktionsbefehle für Nachrichtenerweiterungen definieren:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>Auswählen von Speicherorten zum Aufrufen von Aktionsbefehlen
@@ -60,7 +60,7 @@ In der folgenden Abbildung werden die Speicherorte angezeigt, von denen der Akti
 
 Sie müssen nicht nur auswählen, von wo aus der Befehl aufgerufen werden kann, sondern auch, wie das Formular im Aufgabenmodul für Ihre Benutzer aufgefüllt werden soll. Sie haben die folgenden drei Optionen zum Erstellen des Formulars, das innerhalb des Aufgabenmoduls gerendert wird:
 
-* **Statische Parameterliste**: Dies ist die einfachste Methode. Sie können eine Liste der Parameter in Ihrem App-Manifest definieren, die vom Teams Client gerendert wird, die Formatierung kann in diesem Fall jedoch nicht gesteuert werden.
+* **Statische Parameterliste**: Dies ist die einfachste Methode. Sie können eine Liste von Parametern in Ihrem App-Manifest definieren, die der Teams-Client rendert, die Formatierung in diesem Fall jedoch nicht steuern.
 * **Adaptive Karte**: Sie können eine adaptive Karte verwenden, die eine bessere Kontrolle über die Benutzeroberfläche bietet, die Ihnen zur Verfügung stehenden Steuerelemente und Formatierungsoptionen aber dennoch beschränkt.
 * **Eingebettete Webansicht**: Sie können eine benutzerdefinierte Webansicht in das Aufgabenmodul einbetten, um eine vollständige Kontrolle über die Benutzeroberfläche und die Steuerelemente zu haben.
 

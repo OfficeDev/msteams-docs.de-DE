@@ -5,14 +5,14 @@ description: In diesem Modul erfahren Sie, wie Sie der Teams-App einen eingehend
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a1cb8f3e686ad0e1ee956345095d07c97f7a137c
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 4b93e7118cbd9b22ef7022f19b9538fe156b59f6
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189901"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503494"
 ---
-# <a name="create-an-incoming-webhook"></a>Erstellen eines eingehenden Webhooks
+# <a name="create-incoming-webhooks"></a>Erstellen eingehender Webhooks
 
 Mit einem eingehenden Webhook können externe Anwendungen Inhalte in Microsoft Teams-Kanälen freigeben. Die Webhooks werden als Tools zum Nachverfolgen und Benachrichtigen verwendet. Die Webhooks stellen eine eindeutige URL zum Senden einer JSON-Nutzlast mit einer Nachricht im Kartenformat bereit. Karten sind Benutzeroberflächencontainer, welche Inhalte und Aktionen enthalten, die sich auf ein einzelnes Thema beziehen. Sie können Karten innerhalb der folgenden Funktionen verwenden:
 

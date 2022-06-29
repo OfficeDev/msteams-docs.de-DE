@@ -3,15 +3,15 @@ title: Registrieren Ihrer Registerkarten-App bei Azure AD
 description: Beschreibt das Registrieren Ihrer Registerkarten-App bei Azure AD
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Teams-Authentifizierungsregisterkarten Zugriffstoken-SSO-Mandantenbereich von Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: e508e80f4e2c881e848f628a12392e6ced5e6f4b
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD) Zugriffstoken-SSO-Mandantenbereich
+ms.openlocfilehash: 9ddc513e0dbe2f664325295dd4f8feb953e47b05
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888046"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503522"
 ---
-# <a name="register-your-app-in-azure-ad"></a>Registrieren Ihrer App in Azure AD
+# <a name="register-your-tab-app-in-azure-ad"></a>Registrieren Ihrer Registerkarten-App in Azure AD
 
 Azure AD bietet Zugriff auf Ihre Registerkarten-App basierend auf der Teams-Identität des App-Benutzers. Sie müssen Ihre Registerkarten-App bei Azure AD registrieren, damit der App-Benutzer, der sich bei Teams angemeldet hat, Zugriff auf Ihre Registerkarten-App erhalten kann.
 
@@ -25,7 +25,7 @@ Erstellen Sie eine neue App-Registrierung in Azure AD, und machen Sie ihre (Web-
 
 Möglicherweise müssen Sie auch zusätzliche Details konfigurieren, z. B. die Authentifizierung von App-Benutzern auf der Plattform oder auf dem Gerät, auf das Sie Ihre Registerkarten-App ausrichten möchten.
 
-Graph-API-Berechtigungen auf Benutzerebene werden unterstützt, d. h. E-Mail, Profil, offline_access und OpenId. Wenn Sie Zugriff auf zusätzliche Graph-Bereiche benötigen, z `User.Read` . B. oder `Mail.Read`, lesen [Sie "Abrufen eines Zugriffstokens mit Graph-Berechtigungen](tab-sso-graph-api.md)".
+Graph-API Berechtigungen auf Benutzerebene werden unterstützt, d. h. E-Mail, Profil, offline_access und OpenId. Wenn Sie Zugriff auf zusätzliche Graph-Bereiche benötigen, z `User.Read` . B. oder `Mail.Read`, lesen [Sie "Abrufen eines Zugriffstokens mit Graph-Berechtigungen](tab-sso-graph-api.md)".
 
 Die Azure AD-Konfiguration ermöglicht SSO für Ihre Registerkarten-App in Teams. Sie antwortet mit einem Zugriffstoken zum Überprüfen des App-Benutzers.
 
@@ -57,14 +57,14 @@ Registrieren Sie eine neue App in Azure AD, und konfigurieren Sie den Mandanten 
 
 ### <a name="to-register-a-new-app-in-azure-ad"></a>So registrieren Sie eine neue App in Azure AD
 
-1. Öffnen Sie das [Azure-Portal](https://ms.portal.azure.com/) in Ihrem Webbrowser.
-   Die Seite "Microsoft Azure AD-Portal" wird geöffnet.
+1. Öffnen Sie die [Azure-Portal](https://ms.portal.azure.com/) in Ihrem Webbrowser.
+   Die Seite Microsoft Azure AD Portal wird geöffnet.
 
-2. Wählen Sie das Symbol " **App-Registrierungen** " aus.
+2. Wählen Sie das **Symbol App-Registrierungen** aus.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD-Portalseite." border="true":::
 
-   Die Seite **"App-Registrierungen** " wird angezeigt.
+   Die **seite App-Registrierungen** wird angezeigt.
 
 3. Wählen Sie **+Symbol "Neue Registrierung** " aus.
 
@@ -83,8 +83,8 @@ Registrieren Sie eine neue App in Azure AD, und konfigurieren Sie den Mandanten 
 
     | Option | Wählen Sie diese Option aus, um... |
     | --- | --- |
-    | Nur Konten in diesem Organisationsverzeichnis (nur Microsoft – einzelner Mandant) | Erstellen Sie eine Anwendung, die nur von Benutzern (oder Gästen) in Ihrem Mandanten verwendet werden kann. <br> Diese App wird häufig als Branchenanwendung bezeichnet und ist eine Einzelmandantenanwendung auf der Microsoft Identity Platform. |
-    | Konten in einem beliebigen Organisationsverzeichnis (beliebiges Azure AD-Verzeichnis – Mehrere Mandanten) | Ermöglichen Sie Benutzern in jedem Azure AD-Mandanten die Verwendung Ihrer Anwendung. Diese Option ist geeignet, wenn Sie z. B. eine SaaS-Anwendung erstellen und sie mehreren Organisationen zur Verfügung stellen möchten. <br> Dieser App-Typ wird in der Microsoft Identity Platform als mehrinstanzenfähige Anwendung bezeichnet.|
+    | Nur Konten in diesem Organisationsverzeichnis (nur Microsoft – einzelner Mandant) | Erstellen Sie eine Anwendung, die nur von Benutzern (oder Gästen) in Ihrem Mandanten verwendet werden kann. <br> Diese App wird häufig als Branchenanwendung bezeichnet und ist eine Einzelmandantenanwendung im Microsoft Identity Platform. |
+    | Konten in einem beliebigen Organisationsverzeichnis (beliebiges Azure AD-Verzeichnis – Mehrere Mandanten) | Ermöglichen Sie Benutzern in jedem Azure AD-Mandanten die Verwendung Ihrer Anwendung. Diese Option ist geeignet, wenn Sie z. B. eine SaaS-Anwendung erstellen und sie mehreren Organisationen zur Verfügung stellen möchten. <br> Dieser App-Typ wird im Microsoft Identity Platform als mehrinstanzenfähige Anwendung bezeichnet.|
     | Konten in einem beliebigen Organisationsverzeichnis (beliebiges Azure AD-Verzeichnis – mehrere Mandanten) und persönliche Microsoft-Konten | Richten Sie sich an die breiteste Gruppe von Kunden. <br> Wenn Sie diese Option auswählen, registrieren Sie eine mehrinstanzenfähige Anwendung, die Auch App-Benutzer unterstützen kann, die über persönliche Microsoft-Konten verfügen. |
     | Nur persönliche Microsoft-Konten | Erstellen Sie eine Anwendung nur für Benutzer, die über persönliche Microsoft-Konten verfügen. |
 
@@ -159,7 +159,7 @@ Um den Bereich zu konfigurieren und vertrauenswürdige Clientanwendungen zu auto
     >
     >    Verwenden Sie die *Demoanwendung* der Kleinbuchstabenoption als Basisressourcennamen.
 
-1. Wählen Sie **Speichern** aus.
+1. Wählen Sie **Speichern**.
 
     Im Browser wird eine Meldung angezeigt, die besagt, dass der Anwendungs-ID-URI aktualisiert wurde.
 
@@ -185,7 +185,7 @@ Um den Bereich zu konfigurieren und vertrauenswürdige Clientanwendungen zu auto
 
     1. Geben Sie den Bereichsnamen ein. Dieses Feld ist erforderlich.
     2. Wählen Sie den Benutzer aus, der die Zustimmung für diesen Bereich erteilen kann. Die Standardoption ist **nur "Administratoren**".
-    3. Geben Sie den **Anzeigenamen der Administratorzustimmung ein**. Dieses Feld ist erforderlich.
+    3. Geben Sie den **Anzeigenamen der Admin Zustimmung ein**. Dieses Feld ist erforderlich.
     4. Geben Sie die Beschreibung für die Administratorzustimmung ein. Dieses Feld ist erforderlich.
     5. Geben Sie den **Anzeigenamen der Benutzerzustimmung ein**.
     6. Geben Sie die Beschreibung für die Beschreibung der Benutzer-Zustimmung ein.
@@ -272,6 +272,6 @@ Herzlichen Glückwunsch! Sie haben die App-Konfiguration in Azure AD abgeschloss
 
 - [Mandant in Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps)
 - [Erweitern der Registerkarten-App mit Microsoft Graph-Berechtigungen und -Bereich](tab-sso-graph-api.md)
-- [Schnellstart – Registrieren einer Anwendung bei der Microsoft Identity Platform](/azure/active-directory/develop/quickstart-register-app)
+- [Schnellstart – Registrieren einer Anwendung beim Microsoft Identity Platform](/azure/active-directory/develop/quickstart-register-app)
 - [Schnellstart: Konfigurieren einer Anwendung zum Verfügbarmachen einer Web-API](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)
 - [OAuth 2.0-Autorisierungscodefluss](/azure/active-directory/develop/v2-oauth2-auth-code-flow)

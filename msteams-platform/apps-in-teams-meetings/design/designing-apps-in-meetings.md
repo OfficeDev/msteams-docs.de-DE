@@ -1,31 +1,31 @@
 ---
 title: Entwerfen Der Besprechungserweiterung
 author: heath-hamilton
-description: Erfahren Sie, wie Sie Apps in Teams Besprechungen entwerfen und das Microsoft Teams UI Kit, die Registerkarte "In-Meeting", Anwendungsfälle, reaktionsfähiges Verhalten, freigegebene Besprechungsphase, Design und Navigation abrufen.
+description: Erfahren Sie, wie Sie Besprechungserweiterungen für Ihre Apps in Teams-Besprechungen entwerfen. Verwenden Sie die Benutzeroberflächenvorlagen im Microsoft Teams UI Kit, um Ihre Besprechungsregisterkarte zu entwerfen.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 9d5925df278591cc75abaaa8f030a2d7cfc1c80c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 92b33881e0fcb5eb6c9b10725d69f92d97e53063
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142682"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484661"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen eigener Microsoft Teams-Messaging-Erweiterungen
 
 Sie können Apps erstellen, um Besprechungen produktiver zu gestalten. Bitten Sie z. B. personen, während einer Besprechung eine Umfrage abzuschließen oder eine schnelle Erinnerung zu senden, die den Ablauf der Besprechung nicht unterbricht.
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-Benutzeroberflächenbausatz
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
-Umfassendere Entwurfsrichtlinien, einschließlich Elemente, die Sie nach Bedarf abrufen und ändern können, finden Sie im Microsoft Teams UI Kit.
+Umfassendere Entwurfsrichtlinien, einschließlich Elemente, die Sie bei Bedarf abrufen und ändern können, finden Sie im Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
-> [Holen Sie sich den Microsoft Teams-Benutzeroberflächenbausatz (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Hinzufügen einer Besprechungserweiterung
 
-Benutzer können eine Besprechungserweiterung vor und während Besprechungen hinzufügen. Sie können eine App für eine bestimmte Besprechung auch direkt aus dem Teams Store hinzufügen.
+Benutzer können eine Besprechungserweiterung vor und während Besprechungen hinzufügen. Sie können auch eine App für eine bestimmte Besprechung direkt aus dem Teams-Store hinzufügen.
 
 ### <a name="add-before-a-meeting"></a>Vor einer Besprechung hinzufügen
 
@@ -35,7 +35,7 @@ In den Besprechungsdetails können Benutzer **"Registerkarte hinzufügen+** " au
 
 ### <a name="add-during-a-meeting"></a>Während einer Besprechung hinzufügen
 
-#### <a name="mobile"></a>Mobilgeräte
+#### <a name="mobile"></a>Mobil
 
 Nachdem die App hinzugefügt wurde (z. B. auf dem Desktop), können Benutzer auf die App in einer Besprechung zugreifen, indem sie **"Mehr**:::image type="icon" source="../../assets/icons/teams-client-more.png":::" auswählen.
 
@@ -65,7 +65,7 @@ Vor einer Besprechung ist Ihre App für Benutzer auf einer Registerkarte verfüg
 
 ### <a name="design-with-ui-templates"></a>Entwerfen mit Benutzeroberflächenvorlagen
 
-Verwenden Sie eine der folgenden Teams Benutzeroberflächenvorlagen, um die Besprechungsregisterkarte zu entwerfen:
+Verwenden Sie eine der folgenden Teams-Benutzeroberflächenvorlagen, um ihre Besprechungsregisterkarte zu entwerfen:
 
 * [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): Listen können verwandte Elemente in einem übersichtlichen Format anzeigen und Benutzern ermöglichen, Aktionen für eine gesamte Liste oder einzelne Elemente auszuführen.
 * [Task Board](../../concepts/design/design-teams-app-ui-templates.md#task-board): Ein Task Board, manchmal auch als „Kanban-Board“ oder „Organisationsprozessdarstellungen“ bezeichnet, ist eine Sammlung von Karten, die häufig verwendet werden, um den Status von Arbeitselementen oder Tickets nachzuverfolgen.
@@ -131,18 +131,18 @@ Für Szenarien mit Navigationsebenen oder umfangreichen Inhalten wird empfohlen,
 
 ## <a name="use-an-in-meeting-dialog"></a>Verwenden eines Besprechungsdialogfelds
 
-Besprechungsdialogfelder werden auf der Teams Besprechungsphase angezeigt. Sie erfordern die Aufmerksamkeit, Bestätigung oder Interaktion eines Benutzers, sind aber subtil und unterbrechen die Besprechung nicht. Sie sollten diese sparsam und für Szenarien verwenden, die leicht und aufgabenorientiert sind.
+Besprechungsdialogfelder werden auf der Teams-Besprechungsphase angezeigt. Sie erfordern die Aufmerksamkeit, Bestätigung oder Interaktion eines Benutzers, sind aber subtil und unterbrechen die Besprechung nicht. Sie sollten diese sparsam und für Szenarien verwenden, die leicht und aufgabenorientiert sind.
 
 ### <a name="use-cases"></a>Anwendungsfälle
 
 In-Besprechungsdialogfelder werden von einem Benutzer (z. B. dem Besprechungsorganisator) ausgelöst, der folgende Aktionen ausführen soll:
 
-* Geben Sie kurzes Feedback
-* Nehmen Sie an einer kurzen Umfrage oder Umfrage teil
-* Genehmigungen übermitteln
-* Abrufen von Erinnerungen
+* Geben Sie kurzes Feedback.
+* Nehmen Sie an einer kurzen Umfrage oder Umfrage teil.
+* Genehmigungen übermitteln.
+* Abrufen von Erinnerungen.
 
-### <a name="mobile"></a>Mobilgeräte
+### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="Das Beispiel zeigt, wie Sie ein Dialogfeld in einer Besprechung auf mobilgeräten verwenden können." border="false":::
 
@@ -261,7 +261,7 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
 |1|**App-Symbol**: Das hervorgehobene Symbol gibt an, dass die Registerkarte der App in der Besprechung geöffnet ist.|
-|2|**Schaltfläche "Für Besprechung freigeben"**: Der Einstiegspunkt zum Freigeben der App für die Besprechung. Verwenden Sie für eine konsistente Benutzeroberfläche immer das Standardsymbol Teams Freigabe. **"Für Besprechung freigeben** " ist der empfohlene Standardtext, aber Sie können ihn auch für Ihre Anwendungsfälle anpassen. Beispiel: **Gemeinsames Wiedergeben** für eine Spiele-App oder **Gemeinsames Ansehen** für eine Video-App. Stellen Sie in beiden Fällen klar, dass die Aktion eine freigegebene, interaktive Erfahrung für alle Teilnehmer der Besprechung schafft.|
+|2|**Schaltfläche "Für Besprechung freigeben"**: Der Einstiegspunkt zum Freigeben der App für die Besprechung. Verwenden Sie für eine konsistente Benutzererfahrung immer das standardmäßige Teams-Freigabesymbol. **"Für Besprechung freigeben** " ist der empfohlene Standardtext, aber Sie können ihn auch für Ihre Anwendungsfälle anpassen. Beispiel: **Gemeinsames Wiedergeben** für eine Spiele-App oder **Gemeinsames Ansehen** für eine Video-App. Stellen Sie in beiden Fällen klar, dass die Aktion eine freigegebene, interaktive Erfahrung für alle Teilnehmer der Besprechung schafft.|
 |3|**Referentenzuordnung**: Zeigt den Namen des Teilnehmers an, der die App freigegeben hat.|
 |4|**iframe**: Zeigt Ihre App-Inhalte an.|
 |5|**Schaltfläche "Freigabe beenden"**: Beendet die Freigabe der App für die Besprechungsphase. Wird nur für den Teilnehmer angezeigt, der die Freigabe gestartet hat.|
@@ -391,7 +391,7 @@ Wir empfehlen, die visuell schwerste Aktion an der richtigen Position zu positio
 
 #### <a name="dont-left-or-center-align-actions"></a>Nicht empfohlen: Linksbündige oder zentrierte Ausrichtungsaktionen
 
-Dies weicht vom Standardmäßigen Teams Muster für die Platzierung von Steuerelementen in einem Dialogfeld ab und kann mit einem Dialogfeld hinter dem oberen Dialogfeld in Konflikt kommen.
+Dies weicht vom standardmäßigen Teams-Muster für die Platzierung von Steuerelementen in einem Dialogfeld ab und kann mit einem Dialogfeld hinter dem oberen Dialogfeld in Konflikt kommen.
 
    :::column-end:::
 :::row-end:::
@@ -455,7 +455,7 @@ In Besprechungsdialogfeldern sind für kurze Interaktionen vorgesehen.
 
 #### <a name="do-focus-on-dark-theme"></a>Do: Fokus auf dunkles Design
 
-Teams Besprechungen sind für dunkle Designs optimiert, um visuelle und kognitive Geräusche zu reduzieren, sodass sich benutzer auf die Diskussion und freigegebene Inhalte konzentrieren können. Beachten Sie, dass bestimmte Arten von Apps (z. B. Whiteboarding und Dokumentbearbeitung) keinen dunklen Zeichenbereich benötigen.
+Teams-Besprechungen sind für dunkle Designs optimiert, um visuelle und kognitive Geräusche zu reduzieren, damit sich Benutzer auf die Diskussion und freigegebene Inhalte konzentrieren können. Beachten Sie, dass bestimmte Arten von Apps (z. B. Whiteboarding und Dokumentbearbeitung) keinen dunklen Zeichenbereich benötigen.
 
    :::column-end:::
    :::column span="":::
@@ -466,7 +466,7 @@ Teams Besprechungen sind für dunkle Designs optimiert, um visuelle und kognitiv
 
 #### <a name="dont-use-unfamiliar-colors"></a>Nicht: Verwenden Sie unbekannte Farben
 
-Farben, die mit der Besprechungsumgebung kollidieren, können ablenkend sein und für Teams weniger nativ erscheinen. Erfahren Sie mehr über die Teams [Farbhierarchie](https://developer.microsoft.com/fluentui#/styles/web/colors/products), einschließlich neutraler Anrufdesigns.
+Farben, die mit der Besprechungsumgebung kollidieren, können ablenken und in Teams weniger nativ erscheinen. Erfahren Sie mehr über die [Teams-Farbhierarchie](https://developer.microsoft.com/fluentui#/styles/web/colors/products), einschließlich neutraler Anrufdesigns.
 
    :::column-end:::
 :::row-end:::

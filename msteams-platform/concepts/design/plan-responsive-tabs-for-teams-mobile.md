@@ -1,16 +1,16 @@
 ---
 title: Planen Ihrer Apps für mobile Microsoft Teams-Geräte
 author: surbhigupta
-description: Mit diesem Lernmodul erfahren Sie, wie Sie das Erstellen einer App auf Teams Mobile planen und verschiedene Phasen zum Erstellen von Apps verstehen.
+description: Mit diesem Lernmodul erfahren Sie, wie Sie das Erstellen einer App auf Mobilen Teams planen und verschiedene Phasen zum Erstellen von Apps verstehen.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 22b3abc44b2996547bc05e8cd11458b00eed1436
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 23f42e07f8c7b44cbcda35b5ed5f8fe17a320271
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143186"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484000"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planen reaktionsfähiger Registerkarten für Teams Mobile
 
@@ -65,7 +65,7 @@ Die folgenden Informationen können ebenfalls angezeigt werden:
 * Visuelle Daten, Karten und Infografiken.
 * Diagramme, Diagramme und Tabellen.
 
-![Nutzung von Dashboarding- und Datenvisualisierungs-Apps](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="Zeigen Sie die Daten in Form einer Visualisierung an.":::
 
 Schnelle Aktionen:
 
@@ -75,7 +75,7 @@ In der zweiten Phase können die Benutzer über die Desktopversion an den vorhan
 * Filtern von Daten.
 * Erstellen von Textmarken
 
-![Dashboarding- und Datenvisualisierungs-Apps – schnelle Aktionen](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png)
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" alt-text="Schnelle Aktionen für das vorhandene Diagramm und die vorhandenen visuellen Elemente.":::
 
 Aktivierung:
 
@@ -87,7 +87,7 @@ Sie können Benutzern folgende Zugriffsoptionen bieten:
 * Fügen Sie Datenelemente ein, um Visualisierungen zu erstellen.
 * Freigeben von Visualisierungen in einem Kanal- oder Gruppenchat.
 
-![Aktivieren von Dashboarding- und Datenvisualisierungs-Apps – Aktivierung](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="Ermöglichen Sie Benutzern das Erstellen von Inhalten wie Diagrammgrafiken.":::
 
 <br>
 
@@ -105,7 +105,7 @@ Nutzung:
 
 In der ersten Phase kann Ihre App dem Benutzer die Liste der Aufgaben in einem vertikalen Stapel anzeigen. Stellen Sie bei mehreren Kategorien von Aufgaben – z. B. **Vorgeschlagen**, **Aktiv** und **Geschlossen** – Filter zum Anzeigen gruppierter Aufgaben oder als Überschriften bereit, um die gruppierten Aufgaben anzuzeigen.
 
-![Aufgaben-Boarding-Apps – Nutzung](../../assets/images/app-fundamentals/taskboarding-apps-consumption.png)
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-consumption.png" alt-text="Zeigt die Liste der Aufgaben in einem vertikalen Stapel an.":::
 
 Schnelle Aktionen:
 
@@ -118,7 +118,7 @@ In der zweiten Phase können Sie den Benutzern folgende Zugriffoptionen in der A
 * Verschieben Sie die Aufgaben in verschiedene Kategorien.
 * Teilen Sie relevante Aufgaben in Chats und Kanälen über E-Mails und Aktivitätsfeeds.
 
-![Aufgaben-Boarding-Apps – Schnelle Aktionen](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="Erstellen Sie Aufgaben, um die kognitive Belastung der Benutzer zu reduzieren.":::
 
 Aktivierung:
 
@@ -128,7 +128,8 @@ In der dritten Phase können Sie die Benutzererfahrung um die folgenden Aktivit�
 * Fügen Sie verschiedene Kategorien hinzu, z. B. **"Vorgeschlagen**", " **Aktiv"** und "Geschlossen", und ändern **Sie** sie.
 * Konfigurieren Sie die Aufgaben für Kommentare, Anlagen und andere komplexe Features.
 
-![Aufgaben-Boarding-Apps – Aktivierung](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" alt-text="Aktivieren Sie die Benutzeroberfläche, indem Sie Projekte und Boards hinzufügen.":::
+
 <br>
 
 </details>
@@ -149,7 +150,7 @@ In der ersten Phase können Sie eine Desktoplösung in Betracht ziehen, um die I
 * Vergrößern oder Verkleinern.
 * Aktuelle Phase oder Fortschritt eines ausstehenden Dokuments.
 
-![Apps für gemeinsame Dokumenterstellung und Whiteboarding – Nutzung](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="Zeigt Inhalte und Ressourcen in der Desktopoberfläche an.":::
 
 Schnelle Aktionen:
 
@@ -162,7 +163,7 @@ In der zweiten Phase können Sie die folgenden Aktionen einführen:
 > [!TIP]
 > Sie machen Aktionen verfügbar, die auf den kleinen Bildschirmen einfach angezeigt werden können.
 
-![Apps für gemeinsame Dokumenterstellung und Whiteboarding – schnelle Aktionen](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png)
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" alt-text="Führt ein, um ein neues Board für die Zusammenarbeit zu erstellen.":::
 
 Aktivierung:
 
@@ -174,7 +175,7 @@ Stellen Sie in der dritten Phase ihren Benutzern eine vollständige Lösung bere
 * Löschen, Rückgängigmachen und Wiederholen von Vorgängen.
 * Zugreifen auf Kamera und Mikrofon mit JS SDK-APIs. Weitere Informationen zu Gerätefunktionen finden Sie in der [Übersicht über Gerätefunktionen](../device-capabilities/device-capabilities-overview.md).
 
-![Apps für gemeinsame Dokumenterstellung und Whiteboarding – Aktivierung](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="Aktivieren Sie die Benutzererfahrung, indem Sie Textformen und schnelle Notizen und andere Funktionen hinzufügen.":::
 
 <br>
 

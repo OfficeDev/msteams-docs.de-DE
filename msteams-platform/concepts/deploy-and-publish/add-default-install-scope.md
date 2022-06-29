@@ -1,19 +1,19 @@
 ---
 title: Konfigurieren von Standardinstallationsoptionen für Ihre App
-description: Erfahren Sie, wie Sie die Standardinstallationsoptionen und Die Standardfunktion Ihrer Teams-App für gemeinsame Bereiche angeben.
+description: Erfahren Sie, wie Sie die Standardinstallationsoptionen und Standardfunktionen Ihrer Teams-App für gemeinsame Bereiche angeben.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 9055b765c30f83c4031ad0e2ba5f18f4e747ac3f
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 75ea4dbae2379e6d6e7e2cc707314207cd7186ca
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122901"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503452"
 ---
-# <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>Konfigurieren von Standardinstallationsoptionen für Ihre Microsoft Teams-App
+# <a name="configure-default-install-options-for-teams-app"></a>Konfigurieren der Standardinstallationsoptionen für die Teams-App
 
-Es ist üblich, dass eine App mehrere Szenarien in Teams unterstützt, aber Möglicherweise haben Sie sie mit einem bestimmten Bereich und einer bestimmten Funktion entworfen. Wenn Ihre App beispielsweise in erster Linie für die Team- oder Kanalnutzung bestimmt ist, können Sie sicherstellen, dass die erste Installationsoption, die Benutzern im Store angezeigt wird, **"Zu einem Team hinzufügen"** lautet.
+Es ist üblich, dass eine App mehrere Szenarien in Teams unterstützt, aber Sie haben sie möglicherweise mit einem bestimmten Bereich und einer bestimmten Funktion entworfen. Wenn Ihre App beispielsweise in erster Linie für die Team- oder Kanalnutzung bestimmt ist, können Sie sicherstellen, dass die erste Installationsoption, die Benutzern im Store angezeigt wird, **"Zu einem Team hinzufügen"** lautet.
 
 :::row:::
    :::column span="2":::

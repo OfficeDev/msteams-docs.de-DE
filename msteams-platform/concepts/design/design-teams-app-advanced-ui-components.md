@@ -1,27 +1,27 @@
 ---
 title: Entwerfen Ihrer App mit erweiterten UI-Komponenten
 author: heath-hamilton
-description: Erfahren Sie mehr über die Teams UI-Komponenten, z. B. Breadcrumbs, Benachrichtigungsleiste, Phasenansicht zusammen mit relevanten Anwendungsfällen.
+description: Erfahren Sie mehr über die Teams-UI-Komponenten, z. B. Breadcrumbs, Benachrichtigungsleiste, Phasenansicht sowie relevante Anwendungsfälle.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 145b5adbefcd1ccd5bc90007700cf4851c96b26b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 30d429bf927b3cb9422fc4f3ea238ce9eceae49e
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143424"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485723"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Entwerfen Ihrer Microsoft Teams-App mit erweiterten UI-Komponenten
 
-Die folgenden Komponenten sind eine Kombination [aus grundlegenden UI-Komponenten](~/concepts/design/design-teams-app-basic-ui-components.md), die Sie für allgemeine Teams Entwurfssituationen wie navigation verwenden können.
+Die folgenden Komponenten sind eine Kombination aus [grundlegenden UI-Komponenten](~/concepts/design/design-teams-app-basic-ui-components.md) , die Sie für allgemeine Teams-Entwurfssituationen wie navigation verwenden können.
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-Benutzeroberflächenbausatz
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
-Basierend auf <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent Ui</a> enthält das Microsoft Teams UI Kit Komponenten und Muster, die speziell für die Erstellung Teams Apps entwickelt wurden. Im UI-Kit können Sie die hier aufgeführten Komponenten direkt in Ihr Design aufnehmen und einfügen und weitere Beispiele für die Verwendung der einzelnen Komponenten anzeigen.
+Basierend auf der <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent-Benutzeroberfläche</a> enthält das Microsoft Teams UI Kit Komponenten und Muster, die speziell für die Erstellung von Teams-Apps entwickelt wurden. Im UI-Kit können Sie die hier aufgeführten Komponenten direkt in Ihr Design aufnehmen und einfügen und weitere Beispiele für die Verwendung der einzelnen Komponenten anzeigen.
 
 > [!div class="nextstepaction"]
-> [Holen Sie sich den Microsoft Teams-Benutzeroberflächenbausatz (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="breadcrumb"></a>Breadcrumb
 
@@ -32,7 +32,7 @@ Breadcrumbs sind eine Navigationshilfe, die die Hierarchie Ihrer App vermittelt.
 * Kommunikationshierarchie
 * Navigation
 
-### <a name="mobile"></a>Mobilgeräte
+### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="Das Beispiel zeigt eine Breadcrumb-Vorlage auf Mobilgeräten." border="false":::
 
@@ -42,14 +42,14 @@ Breadcrumbs sind eine Navigationshilfe, die die Hierarchie Ihrer App vermittelt.
 
 ## <a name="left-nav"></a>Linker Navigationsbereich
 
-Verwenden Sie die linke Navigationsleiste, um mehrere Seiten innerhalb Ihrer Teams Registerkarte zu durchsuchen. Im folgenden Beispiel befindet sich die linke Navigationsleiste zwischen der Kanalliste und dem Registerkarteninhalt.
+Verwenden Sie die linke Navigationsleiste, um mehrere Seiten auf Ihrer Teams-Registerkarte zu durchsuchen. Im folgenden Beispiel befindet sich die linke Navigationsleiste zwischen der Kanalliste und dem Registerkarteninhalt.
 
 ### <a name="top-use-cases"></a>Die häufigsten Anwendungsfälle
 
-* Durchsuchen sie mehrere Seiten auf einer Teams Registerkarte.
+* Durchsuchen Sie mehrere Seiten auf einer Teams-Registerkarte.
 * Unterteilen Sie komplexe Apps in mehrere Seiten.
 
-### <a name="mobile"></a>Mobilgeräte
+### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="Das Beispiel zeigt eine linke Navigationsvorlage auf mobilgeräten." border="false":::
 
@@ -65,11 +65,11 @@ Sie können eine Benachrichtigungsleiste mithilfe der Fluent [UI-Warnungskompone
 
 ### <a name="top-use-cases"></a>Die häufigsten Anwendungsfälle
 
-* Kritische Meldungen, Fehler und Warnungen
+* Kritische Meldungen, Fehler und Warnungen.
 * Erfolgsmeldungen
 * Informations- oder Werbenachrichten
 
-### <a name="mobile"></a>Mobilgeräte
+### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="Beispiel zeigt die Benutzeroberflächenvorlage der Benachrichtigungsleiste auf mobilgeräten." border="false":::
 
@@ -85,7 +85,7 @@ Erfahren Sie, wie Sie die [Phasenansicht](~/tabs/tabs-link-unfurling.md) impleme
 
 ### <a name="top-use-cases"></a>Die häufigsten Anwendungsfälle
 
-* Anzeigen von Inhalten auf einer großen Oberfläche innerhalb Teams anstelle einer anderen App oder eines anderen Browsers
+* Anzeigen von Inhalten auf einer großen Oberfläche in Teams anstelle einer anderen App oder eines anderen Browsers.
 * Spotlight-Medien oder andere umfangreiche Inhalte
 
 ### <a name="mobile"></a>Mobil
@@ -108,7 +108,7 @@ Eine Symbolleiste ist ein Container zum Gruppieren einer Gruppe von Steuerelemen
 * Kontextbezogener Filter und Suche.
 * Navigation und Breadcrumbs.
 
-### <a name="mobile"></a>Mobilgeräte
+### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="Das Beispiel zeigt eine Symbolleistenvorlage auf mobilgeräten." border="false":::
 

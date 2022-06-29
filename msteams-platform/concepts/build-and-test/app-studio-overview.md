@@ -1,19 +1,19 @@
 ---
 title: Erste Schritte mit App Studio für Microsoft Teams
-description: In diesem Artikel erfahren Sie, wie Sie Ihre Apps mit App Studio erstellen und verwalten, um Microsoft Teams und App Studio zu installieren.
+description: In diesem Artikel erfahren Sie, wie Sie Ihre Apps mit App Studio für Microsoft Teams erstellen und verwalten und App Studio installieren.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: cf9f4a144886c67b2c2c667683d62a65fc4ee9c4
-ms.sourcegitcommit: e429131d01df7103a467df2c42cdfe41ab822b10
+ms.openlocfilehash: 6ec2e1dfc064302de096cb356641a773e7dceb35
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2022
-ms.locfileid: "66164267"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485706"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Verwalten Ihrer Apps mit App Studio für Microsoft Teams
 
 > [!WARNING]
-> **Testen Sie das Entwicklerportal**: App Studio hat sich weiterentwickelt. Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps mit dem neuen [Entwicklerportal](https://dev.teams.microsoft.com/). <br> App Studio wird zum 30. Juni 2022 eingestellt.
+> **Testen Sie das Entwicklerportal**: App Studio hat sich weiterentwickelt. Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps mit dem neuen [Entwicklerportal](https://dev.teams.microsoft.com/). <br> App Studio wird bis zum 01. August 2022 veraltet sein.
 
 Mit App Studio können Sie ganz einfach mit dem Erstellen oder Integrieren Ihrer eigenen Microsoft Teams-Apps beginnen, unabhängig davon, ob Sie benutzerdefinierte Apps für Ihr Unternehmen oder SaaS-Anwendungen für Teams auf der ganzen Welt entwickeln, indem Sie die Erstellung des Manifests und Pakets für Ihre App optimieren und nützliche Tools wie Karteneditor und eine React-Steuerelementbibliothek bereitstellen.
 
@@ -52,7 +52,7 @@ Hier können Sie sehen, wie die [in App Studio erstellten Karten](#card-editor) 
 
 ### <a name="manifest-editor"></a>Manifest-Editor
 
-Wie bereits erwähnt, ist die manifest.json-Datei der wichtigste Teil eines Teams-App-Pakets. Diese Datei, die dem [Teams App-Schema](~/resources/schema/manifest-schema.md) entsprechen muss, enthält Metadaten, mit denen Teams Ihre App den Benutzern korrekt präsentieren können.
+Wie bereits erwähnt, ist die manifest.json-Datei der wichtigste Teil eines Teams-App-Pakets. Diese Datei, die dem [Teams-App-Schema](~/resources/schema/manifest-schema.md) entsprechen muss, enthält Metadaten, mit denen Microsoft Teams Ihre App den Benutzern korrekt präsentieren kann.
 
 Die Registerkarte "Manifest-Editor" in App Studio vereinfacht das Erstellen des Manifests, sodass Sie die App beschreiben, Ihre Symbole hochladen, App-Funktionen hinzufügen und eine .zip Datei erstellen können, die einfach in Teams hochgeladen werden kann, um sie zu testen oder für andere Benutzer zu verwenden. App Studio erzeugt keinen funktionalen Code für Ihre App oder hosten Ihre App. Ihre App muss bereits unter der im Manifest angegebenen URL gehostet und ausgeführt werden, damit der App-Upload-Vorgang zu einer funktionierenden App führt.
 
@@ -69,13 +69,13 @@ Im Abschnitt "Funktionen" des Manifest-Editors werden die Funktionen der App def
 
 ##### <a name="tabs"></a>Registerkarten
 
-* **Teamregisterkarten.** Eine Teamregisterkarte wird Teil eines Kanals und ermöglicht den schnellen Zugriff auf Teaminformationen und -ressourcen. Beispielsweise enthält die Registerkarte Planner einen einzelnen Plan für einen Kanal. Die Registerkarte Power BI wird einem bestimmten Bericht zugeordnet. Benutzer können einen Drilldown zum relevanten Kontext ausführen, sollten jedoch nicht außerhalb der Registerkarte navigieren können. Die Registerkarte Power BI ermöglicht z. B. keine Navigation zu anderen Power BI Berichten, sondern die Schaltfläche "*Zur Website wechseln*", mit der der Bericht auf der Hauptwebsite Power BI gestartet wird.
+* **Teamregisterkarten.** Eine Teamregisterkarte wird Teil eines Kanals und ermöglicht den schnellen Zugriff auf Teaminformationen und -ressourcen. Beispielsweise enthält die Registerkarte Planner einen einzelnen Plan für einen Kanal. Die Registerkarte Power BI wird einem bestimmten Bericht zugeordnet. Benutzer können einen Drilldown zum relevanten Kontext ausführen, sollten jedoch nicht außerhalb der Registerkarte navigieren können. Die Power BI-Registerkarte ermöglicht z. B. keine Navigation zu anderen Power BI-Berichten, aber sie aktiviert die Schaltfläche " *Zur Website wechseln* ", mit der der Bericht auf der Power BI-Hauptwebsite gestartet wird.
 
   Für Teamregisterkarten müssen Sie eine *Konfigurations-URL* angeben, um Optionen anzuzeigen und Informationen zu sammeln, damit Benutzer den Inhalt und die Erfahrung Ihrer Registerkarte anpassen können. Diese iframed-HTML-Seite wird angezeigt, wenn ein Benutzer die Registerkarte zum ersten Mal einem Kanal hinzufügt.
 
   Sie müssen auch alle zusätzlichen Domänen angeben, von denen die Registerkarte erwartet, dass sie geladen werden oder mit denen sie verlinkt wird.
 
-* **Persönliche Registerkarten.** Sie können eine Reihe von Registerkarten definieren, die standardmäßig in der persönlichen App-Umgebung angezeigt werden (Erfahrung, die ein Benutzer mit Ihrer App außerhalb des Kontexts eines Teams oder Kanals hat). Geben Sie in diesem Abschnitt den Registerkartennamen an, ein eindeutiger Bezeichner, die URL, die auf die Benutzeroberfläche verweist und in Teams angezeigt werden soll, und optional die URL, die verwendet werden soll, wenn ein Benutzer die Registerkarte in einem Browser anzeigen möchte. Geben Sie mit Teams Registerkarten alle zusätzlichen Domänen an, von denen die Registerkarte erwartet, dass sie geladen wird, oder verknüpfen Sie sie.
+* **Persönliche Registerkarten.** Sie können eine Reihe von Registerkarten definieren, die standardmäßig in der persönlichen App-Umgebung angezeigt werden (Erfahrung, die ein Benutzer mit Ihrer App außerhalb des Kontexts eines Teams oder Kanals hat). Geben Sie in diesem Abschnitt den Registerkartennamen an, ein eindeutiger Bezeichner, die URL, die auf die Benutzeroberfläche verweist und in Teams angezeigt werden soll, und optional die URL, die verwendet werden soll, wenn ein Benutzer die Registerkarte in einem Browser anzeigen möchte. Stellen Sie mit Teams-Registerkarten alle zusätzlichen Domänen bereit, von denen die Registerkarte erwartet, dass sie von der Registerkarte geladen wird, oder verknüpfen Sie sie.
 
 ##### <a name="bots"></a>Bots
 
@@ -94,7 +94,7 @@ In diesem Abschnitt können Sie Ihrer App einen Connector hinzufügen. Wenn Sie 
 
 ##### <a name="message-extensions"></a>Nachrichtenerweiterungen
 
-[Nachrichtenerweiterungen](~/messaging-extensions/what-are-messaging-extensions.md) sind eine leistungsstarke Möglichkeit für Benutzer, innerhalb Teams mit Ihrer App zu interagieren. Benutzer können Informationen von Ihrem Dienst abfragen und diese Informationen in Form von Karten direkt im Kanal oder in der Chat-Unterhaltung veröffentlichen.
+[Nachrichtenerweiterungen](~/messaging-extensions/what-are-messaging-extensions.md) sind eine leistungsstarke Möglichkeit für Benutzer, mit Ihrer App in Teams zu interagieren. Benutzer können Informationen von Ihrem Dienst abfragen und diese Informationen in Form von Karten direkt im Kanal oder in der Chat-Unterhaltung veröffentlichen.
 
 Nachrichtenerweiterungen werden von Bot Framework-Bots unterstützt, sodass sie einen konfigurierten Bot für den Betrieb benötigen. Wenn Sie den Namen und die Bot Framework-ID des Bots haben, den Sie mit der Nachrichtenerweiterung betreiben möchten, geben Sie ihn ein. Wählen Sie andernfalls **"Registrieren"** aus, um eine zu erstellen, und geben Sie anschließend die Informationen ein. Wählen Sie aus, ob die Konfiguration einer Nachrichtenerweiterung vom Benutzer aktualisiert werden kann.
 
@@ -130,7 +130,7 @@ Wenn Sie bereits über eine Karte verfügen, die Sie in Teams überprüfen möch
 >[!Note]
 > Diese React Steuerelementbibliothek wird in Zukunft nicht mehr unterstützt. Erwägen Sie die Verwendung der [Fluent-UI-React-Steuerelemente als alternative,](https://microsoft.github.io/fluent-ui-react/) zuvor stardust ui.
 
-Das Erstellen einer App, die Teams‘ Bewährte Methoden befolgt, ist eine hervorragende Möglichkeit, Ihrer App ein Erscheinungsbild zu verleihen, das sich nahtlos in die Kundenerfahrung in Teams einfügt. Die von Ihnen verwendeten UI-Steuerelemente sind entscheidend, um dieses Ziel zu erreichen. Um die Erstellung einer konsistenten Benutzeroberfläche zu vereinfachen, stellt App Studio mehrere Kategorien von UI-Steuerelementen bereit, die Teams Designprinzipien entsprechen.
+Das Erstellen einer App, die Teams‘ Bewährte Methoden befolgt, ist eine hervorragende Möglichkeit, Ihrer App ein Erscheinungsbild zu verleihen, das sich nahtlos in die Kundenerfahrung in Teams einfügt. Die von Ihnen verwendeten UI-Steuerelemente sind entscheidend, um dieses Ziel zu erreichen. Um die Erstellung einer konsistenten Benutzeroberfläche zu vereinfachen, stellt App Studio mehrere Kategorien von UI-Steuerelementen bereit, die den Entwurfsprinzipien von Teams entsprechen.
 
 Beispiele für die Steuerelemente und die entsprechenden React-Komponenten werden bereitgestellt und können beim Erstellen Ihrer App verwendet werden.
 

@@ -1,16 +1,16 @@
 ---
 title: Anpassen Ihrer Teams-App
 author: heath-hamilton
-description: In diesem Modul erfahren Sie, wie Teams Administratoren Ihre Teams-App für ihre Organisation anpassen und Teams App ausblenden können, bis der Administrator dies genehmigt.
+description: In diesem Modul erfahren Sie, wie Teams-Administratoren Ihre Teams-App für ihre Organisation anpassen und die Teams-App ausblenden können, bis der Administrator dies genehmigt.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 224f2d755ad74b7ded81cf6ffb1791169c6eb3b7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c63a901aba88b8f9f77c3a3e54217204a3e91cc9
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143200"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503445"
 ---
 # <a name="customize-your-teams-app"></a>Anpassen Ihrer Teams-App
 
@@ -44,7 +44,7 @@ Um die Erfahrung mit der Teams-App zu verbessern, können Sie eine App standardm
 
 Um die App auszublenden, legen Sie in der App-Manifestdatei die Eigenschaft `defaultBlockUntilAdminAction` auf `true` fest. Wenn die Eigenschaft auf `true`Teams Admin Center > **Apps verwalten** festgelegt ist, wird **Vom Herausgeber blockiert** im **Status** der App angezeigt:
 
-![Vom Herausgeber blockierte Apps verwalten](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
+:::image type="content" source="../../assets/images/apps-in-meetings/manageappsblockedapps.png" alt-text="Vom Herausgeber blockierte Apps verwalten.":::
 
 Der Administrator erhält eine Aufforderung, Aktionen durchzuführen, bevor ein Benutzer auf die App zugreifen kann. Unter **Apps verwalten** können die Administratoren **Zulassen** auswählen, um die App mit dem Status **Vom Herausgeber blockiert** zuzulassen:
 

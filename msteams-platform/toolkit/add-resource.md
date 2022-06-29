@@ -1,17 +1,17 @@
 ---
 title: Hinzufügen von Ressourcen zu Teams-Apps
 author: MuyangAmigo
-description: In diesem Modul erfahren Sie, wie Sie Ressourcen des Teams Toolkits, Vorteile, Einschränkungen und Funktionen hinzufügen.
+description: In diesem Modul erfahren Sie, wie Sie Ressourcen des Teams-Toolkits, Vorteile, Einschränkungen und Funktionen hinzufügen.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9d8c7b1fd6b4910e1024f10a44e54271a0fbb475
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a9848ecf16dfb8ff4034dc26dd350ce71c8e656e
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143858"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485643"
 ---
 # <a name="add-cloud-resources-to-teams-app"></a>Hinzufügen von Cloudressourcen zur Teams-App
 
@@ -21,27 +21,27 @@ TeamsFx hilft bei der Bereitstellung der Cloudressourcen für Ihr Anwendungshost
 
 Die folgende Liste bietet Vorteile zum Hinzufügen weiterer Cloudressourcen in TeamsFx:
 
-* Bietet Komfort
-* Generiert automatisch alle Konfigurationsdateien und stellt mithilfe des Teams Toolkits eine Verbindung mit Teams App her
+* Bietet Komfort.
+* Generiert automatisch alle Konfigurationsdateien und stellt mithilfe des Teams-Toolkits eine Verbindung mit der Teams-App her.
 
 ## <a name="limitation"></a>Einschränkung
 
-Wenn Sie SPFx-basiertes Registerkartenprojekt erstellt haben, können Sie keine Azure-Cloudressourcen hinzufügen.
+Wenn Sie ein SPFx-basiertes Registerkartenprojekt erstellt haben, können Sie keine Azure-Cloudressourcen hinzufügen.
 
 ## <a name="add-cloud-resources"></a>Fügen Sie Cloud-Ressourcen hinzu
 
 **Sie können Cloudressourcen mit den folgenden Methoden hinzufügen:**
 
-* So fügen Sie Cloudressourcen mithilfe des Teams Toolkits in Visual Studio Code hinzu
-* So fügen Sie Cloudressourcen mithilfe der Befehlspalette hinzu
+* So fügen Sie Cloudressourcen mithilfe des Teams-Toolkits in Visual Studio Code hinzu.
+* So fügen Sie Cloudressourcen mithilfe der Befehlspalette hinzu.
 
   > [!NOTE]
-  > Sie müssen für jede Umgebung bereitstellen, nachdem Sie die Ressource erfolgreich in Ihrer Teams-App hinzugefügt haben.
+  > Sie müssen die Bereitstellung für jede Umgebung durchführen, nachdem Sie die Ressource erfolgreich in Ihrer Teams-App hinzugefügt haben.
   
-* **So fügen Sie Cloudressourcen mithilfe des Teams Toolkits in Visual Studio Code hinzu:**
+* **So fügen Sie Cloudressourcen mithilfe des Teams-Toolkits in Visual Studio Code hinzu:**
 
    1. Öffnen Sie **Visual Studio Code**.
-   1. Wählen Sie im linken Bereich **Teams Toolkit** aus.
+   1. Wählen Sie im linken Bereich **das Teams-Toolkit** aus.
    1. Wählen Sie unter **"ENTWICKLUNG****" die Option "Features hinzufügen"** aus.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="Feature hinzufügen" border="true":::
@@ -49,7 +49,7 @@ Wenn Sie SPFx-basiertes Registerkartenprojekt erstellt haben, können Sie keine 
 * **So fügen Sie Cloudressourcen mithilfe der Befehlspalette hinzu:**
 
    1. Öffnen Sie **die Befehlspalette**.
-   1. Geben Sie **Teams:Features hinzufügen ein**.
+   1. Geben Sie **"Teams:Features hinzufügen"** ein.
    1. Drücken Sie **EINGABE**.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="Cloud" border="true":::
@@ -74,19 +74,19 @@ Wenn Sie SPFx-basiertes Registerkartenprojekt erstellt haben, können Sie keine 
 
 In den folgenden Szenarien lässt sich TeamsFx in Azure-Dienste integrieren:
 
-- [Azure-Funktionen](/azure/azure-functions/functions-overview): Eine serverlose Lösung, die Ihre On-Demand-Anforderungen erfüllt, z. B. die Erstellung von Web-APIs für das Backend Ihrer Teams-Anwendungen.
-- [Azure SQL-Datenbank](/azure/azure-sql/database/sql-database-paas-overview): Eine Plattform-as-a-Service (PaaS) Datenbank-Engine, die als Datenspeicher für Ihre Teams-Anwendungen dient.
-- [Azure-API-Verwaltung](deploy.md): Ein API-Gateway kann verwendet werden, um APIs zu verwalten, die für Teams-Anwendungen erstellt wurden, und sie für andere Anwendungen wie Power-Apps zu veröffentlichen.
-- [Azure Key Vault](/azure/key-vault/general/overview): Sichern Sie kryptografische Schlüssel und andere Geheimnisse, die von Cloud-Anwendungen und -Diensten verwendet werden.
+* [Azure-Funktionen](/azure/azure-functions/functions-overview): Eine serverlose Lösung, die Ihre On-Demand-Anforderungen erfüllt, z. B. die Erstellung von Web-APIs für das Backend Ihrer Teams-Anwendungen.
+* [Azure SQL-Datenbank](/azure/azure-sql/database/sql-database-paas-overview): Eine Plattform-as-a-Service (PaaS) Datenbank-Engine, die als Datenspeicher für Ihre Teams-Anwendungen dient.
+* [Azure-API-Verwaltung](deploy.md): Ein API-Gateway kann verwendet werden, um APIs zu verwalten, die für Teams-Anwendungen erstellt wurden, und sie für die Nutzung in anderen Anwendungen wie Power-Apps zu veröffentlichen.
+* [Azure Key Vault](/azure/key-vault/general/overview): Sichern Sie kryptografische Schlüssel und andere Geheimnisse, die von Cloud-Anwendungen und -Diensten verwendet werden.
 
 ## <a name="add-cloud-resources"></a>Cloud-Ressourcen hinzufügen
 
 Die folgenden Änderungen werden nach dem Hinzufügen von Ressourcen in Ihrem Projekt angezeigt:
 
-- Neue Parameter, die azure.parameter hinzugefügt wurden. {env}.json, um erforderliche Informationen für die Bereitstellung bereitzustellen.
-- Neue Inhalte sind in der ARM-Vorlage enthalten `templates/azure`, mit der Ausnahme, dass sich die Dateien im `templates/azure/teamsfx` Ordner zum Hinzufügen der Azure-Ressourcen befinden.
-- Die Dateien unter dem `templates/azure/teamsfx`Ordner werden neu generiert, um sicherzustellen, dass die für TeamsFx erforderliche Konfiguration für hinzugefügte Azure-Ressourcen auf dem neuesten Stand ist.
-- `.fx/projectSettings.json` wird aktualisiert, um die verfügbaren Ressourcen in Ihrem Projekt nachzuverfolgen.
+* Neue Parameter, die azure.parameter hinzugefügt wurden. {env}.json, um erforderliche Informationen für die Bereitstellung bereitzustellen.
+* Neue Inhalte sind in der ARM-Vorlage enthalten `templates/azure`, mit der Ausnahme, dass sich die Dateien im `templates/azure/teamsfx` Ordner zum Hinzufügen der Azure-Ressourcen befinden.
+* Die Dateien unter dem `templates/azure/teamsfx`Ordner werden neu generiert, um sicherzustellen, dass die für TeamsFx erforderliche Konfiguration für hinzugefügte Azure-Ressourcen auf dem neuesten Stand ist.
+* `.fx/projectSettings.json` wird aktualisiert, um die verfügbaren Ressourcen in Ihrem Projekt nachzuverfolgen.
 
 Die folgenden zusätzlichen Änderungen werden nach dem Hinzufügen von Ressourcen in Ihrem Projekt angezeigt:
 

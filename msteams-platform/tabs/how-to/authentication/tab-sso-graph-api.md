@@ -3,13 +3,13 @@ title: Erweitern der Registerkarten-App mit Microsoft Graph-Berechtigungen
 description: Beschreibt das Konfigurieren von API-Berechtigungen mit Microsoft Graph
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD) Graph-API Delegierter Berechtigungszugriffstokenbereich
-ms.openlocfilehash: 76b474f69b31d9c9b9925803ee7c0240f9e5a7c4
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD) Graph-API Delegierten Berechtigungszugriffstokenbereich
+ms.openlocfilehash: 020148e8510e7e9b2ad14b893ccb8531f3a83402
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888029"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485293"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Erweitern der Registerkarten-App mit Microsoft Graph-Berechtigungen und -Bereich
 
@@ -37,7 +37,7 @@ Sie können zusätzliche Graph-Bereiche in Azure AD für Ihre App konfigurieren.
 
     Die Seite **"API-Berechtigungen"** wird angezeigt.
 
-3. Wählen Sie **"Auswählen" und "Berechtigungen hinzufügen** " aus, um Microsoft Graph-API-Berechtigungen hinzuzufügen.
+3. Wählen Sie **"+ Berechtigungen hinzufügen**" aus, um Microsoft Graph-API-Berechtigungen hinzuzufügen.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="Seite &quot;App-Berechtigungen&quot;." border="true":::
 
@@ -198,7 +198,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 Wenn Sie auf Microsoft Graph-Daten zugreifen müssen, konfigurieren Sie Ihren serverseitigen Code für Folgendes:
 
 1. Überprüfen Sie das Zugriffstoken. Weitere Informationen finden Sie unter [Überprüfen des Zugriffstokens](tab-sso-code.md#validate-the-access-token).
-1. Initiieren Sie den OAuth 2.0-OBO-Fluss mit einem Aufruf der Microsoft Identity Platform, der das Zugriffstoken, einige Metadaten zum Benutzer und die Anmeldeinformationen der Registerkarten-App (app-ID und geheimer Clientschlüssel) enthält. Die Microsoft-Identitätsplattform gibt ein neues Zugriffstoken zurück, das für den Zugriff auf Microsoft Graph verwendet werden kann.
+1. Initiieren Sie den OAuth 2.0-OBO-Fluss mit einem Aufruf der Microsoft Identity Platform, die das Zugriffstoken, einige Metadaten zum Benutzer und die Anmeldeinformationen der Registerkarten-App (app-ID und geheimer Clientschlüssel) enthält. Die Microsoft-Identitätsplattform gibt ein neues Zugriffstoken zurück, das für den Zugriff auf Microsoft Graph verwendet werden kann.
 1. Rufen Sie Daten aus Microsoft Graph unter Verwendung des neuen Tokens ab.
 1. Verwenden Sie die Tokencache-Serialisierung in MSAL.NET, um das neue Zugriffstoken bei Bedarf für mehrere zwischenzuspeichern.
 
@@ -229,3 +229,4 @@ Sie können mithilfe der Auth-API um Zustimmung bitten. Ein weiterer Ansatz zum 
 - [OAuth 2.0-Fluss im Auftrag von](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
 - [Zugriff auf MS Graph erhalten](/graph/auth-v2-user)
 - [Tokencache-Serialisierung in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet)
+- [Microsoft Teams MSAL2-Anbieter](/graph/toolkit/providers/teams-msal2)

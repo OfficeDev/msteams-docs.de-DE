@@ -3,14 +3,14 @@ title: Unterstützung für einmaliges Anmelden für Bots
 description: Erfahren Sie, wie Sie ein Benutzertoken erhalten, und ein Bot-Entwickler kann eine Anmeldekarte oder den Azure-Botdienst mit der OAuth-Kartenunterstützung verwenden.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 924262b492c85205a8f1ba4fd034e86ecdf82d53
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 5ce3fab237c8190670292616c05ee3bf51b4e7cb
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189726"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503655"
 ---
-# <a name="single-sign-on-sso-support-for-bots"></a>Single-Sign-On (SSO)-Unterstützung für Bots
+# <a name="use-sso-authentication-for-bots"></a>Verwenden der SSO-Authentifizierung für Bots
 
 Die Single-Sign-On-Authentifizierung in Microsoft Azure Active Directory (Azure AD) aktualisiert das Authentifizierungstoken im Hintergrund, um die Anzahl der Male zu minimieren, die Benutzer ihre Anmeldeinformationen eingeben müssen. Wenn Benutzer der Verwendung Ihrer App zustimmen, müssen sie ihre Zustimmung auf einem anderen Gerät nicht erneut erteilen, da sie automatisch angemeldet werden. Registerkarten und Bots haben einen ähnlichen Fluss für die SSO-Unterstützung. Aber Bot [fordert Token](#request-a-bot-token) an und [erhält Antworten](#receive-the-bot-token) mit einem anderen Protokoll.
 
@@ -19,7 +19,7 @@ Die Single-Sign-On-Authentifizierung in Microsoft Azure Active Directory (Azure 
 
 Im folgenden Video erfahren Sie mehr über die SSO-Unterstützung (Single Sign-On) für Bots:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc>]
 <br>
 
 ## <a name="bot-sso-at-runtime"></a>Bot-SSO zur Laufzeit
@@ -100,7 +100,7 @@ Die Schritte zum Registrieren Ihrer App über das Azure AD-Portal ähneln denen 
    >
    > Sie müssen sich der folgenden wichtigen Einschränkungen bewusst sein:
    >
-   > * Nur Microsoft Graph-API-Berechtigungen auf Benutzerebene wie E-Mail, Profil, Offlinezugriff und OpenId werden unterstützt. Wenn Sie Zugriff auf andere Microsoft Graph-Bereiche benötigen, z`User.Read`. B. oder `Mail.Read`finden Sie weitere Informationen unter [Erweitern der Registerkarten-App mit Microsoft Graph Berechtigungen und Bereich](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
+   > * Nur Microsoft Graph-API-Berechtigungen auf Benutzerebene wie E-Mail, Profil, Offlinezugriff und OpenId werden unterstützt. Wenn Sie Zugriff auf andere Microsoft Graph-Bereiche benötigen, z `User.Read` . B. oder `Mail.Read`, lesen Sie ["Registerkarten-App erweitern" mit Microsoft Graph-Berechtigungen und -Bereich](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
    > * Der Domänenname Ihrer Anwendung muss mit dem Domänennamen übereinstimmen, den Sie für Ihre Azure AD-Anwendung registriert haben.
    > * Mehrere Domänen pro App werden derzeit nicht unterstützt.
    > * Anwendungen, die die Domäne `azurewebsites.net` verwenden, werden nicht unterstützt, da dies häufig vorkommt und ein Sicherheitsrisiko darstellen kann.
@@ -362,7 +362,7 @@ Um zu verstehen, was der Bot tut, wenn der Token-Austausch keine Zustimmungsauff
 
 ### <a name="update-the-auth-sample"></a>Aktualisieren Sie das Authentifizierungsbeispiel
 
-Öffnen Sie [Teams-Authentifizierungsbeispiel](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) und führen Sie dann die folgenden Schritte aus, um es zu aktualisieren:
+Öffnen Sie das [Teams-Authentifizierungsbeispiel](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth), und führen Sie dann die folgenden Schritte aus, um es zu aktualisieren:
 
 1. Aktualisieren Sie den TeamsBot, um die Deduplizierung der eingehenden Anfrage zu handhaben, indem Sie den folgenden Code einfügen:
 
@@ -385,7 +385,7 @@ Um zu verstehen, was der Bot tut, wenn der Token-Austausch keine Zustimmungsauff
 
 |**Beispielname** | **Beschreibung** |**.NET** |**C#** |**Node.js** |
 |----------------|-----------------|--------------|--------------|--------------|
-|Bot-Framework-SDK | Dieser Beispielcode veranschaulicht die ersten Schritte mit der Authentifizierung in einem Bot für Microsoft Teams. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)|
+|Bot-Framework-SDK | Dieser Beispielcode veranschaulicht, wie Sie mit der Authentifizierung in einem Bot für Microsoft Teams beginnen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)|
 
 ## <a name="step-by-step-guide"></a>Schrittweise Anleitung
 

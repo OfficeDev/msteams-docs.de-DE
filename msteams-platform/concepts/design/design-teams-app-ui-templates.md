@@ -5,22 +5,22 @@ description: Erfahren Sie, wie Sie Ihre App schneller mit standardisierten UI-Ko
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: d6323baf20c733eaddc1e8797a56d63effc45eab
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 497385a8fa87714c8c87409d9d42bb88c294918a
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142899"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484821"
 ---
-# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Entwerfen Ihrer Microsoft Teams-App mit UI-Vorlagen
+# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Entwerfen Ihrer Microsoft Teams-App mit Benutzeroberflächenvorlagen
 
-Entwerfen Sie Ihre Microsoft Teams-App schneller mit UI-Vorlagen. Bei den Vorlagen handelt es sich um eine Sammlung von Fluent UI-basierten Komponenten, die in gängigen Teams Anwendungsfällen funktionieren, sodass Sie mehr Zeit haben, die beste Benutzererfahrung zu ermitteln.
+Entwerfen Sie Ihre Microsoft Teams-App schneller mit Benutzeroberflächenvorlagen. Die Vorlagen sind eine Sammlung von fluent-UI-basierten Komponenten, die in gängigen Teams-Anwendungsfällen funktionieren, sodass Sie mehr Zeit haben, die beste Benutzererfahrung zu ermitteln.
 
 ## <a name="getting-started-with-tools-and-samples"></a>Erste Schritte mit Tools und Beispielen
 
 Die folgenden Ressourcen können Ihnen beim Entwerfen und Entwickeln Ihrer App mithilfe von UI-Vorlagen helfen.
 
-### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-Benutzeroberflächenbausatz
+### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
 Holen Sie sich UI-Vorlagen für Ihr App-Design aus dem Microsoft Teams UI Kit, das auch umfassende Informationen zur Verwendung, Anatomie, Barrierefreiheit und bewährten Methoden enthält.
 
@@ -41,19 +41,19 @@ Importieren Sie diese Vorlagen und zugehörigen Komponenten direkt in Ihr Teams-
 
 ### <a name="sample-app"></a>Beispiel-App
 
-Installieren Sie eine Beispiel-App, um zu sehen, wie UI-Vorlagen in Teams Kontexten aussehen und sich verhalten.
+Installieren Sie eine Beispiel-App, um zu sehen, wie Benutzeroberflächenvorlagen in Teams-Kontexten aussehen und sich verhalten.
 
 > [!div class="nextstepaction"]
 > [Abrufen der Beispiel-App (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
 ## <a name="calendar"></a>Kalender
 
-In Teams ist ein Kalender der Ort, an dem ein Benutzer bevorstehende und vergangene Ereignisse für sich selbst oder eine Gruppe anzeigt, plant und verwaltet.
+In Teams zeigt ein Kalender an, plant und verwaltet ein Benutzer bevorstehende und vergangene Ereignisse für sich selbst oder eine Gruppe.
 
 ### <a name="top-use-cases"></a>Die häufigsten Anwendungsfälle
 
 * Planen von Besprechungen und Ereignissen
-* Abrufen von Erinnerungen an bevorstehende Besprechungen und Ereignisse
+* Erhalten Sie Erinnerungen an bevorstehende Besprechungen und Ereignisse.
 * Anzeigen von Zeitplänen
 
 ### <a name="desktop"></a>Desktop
@@ -62,15 +62,15 @@ In Teams ist ein Kalender der Ort, an dem ein Benutzer bevorstehende und vergang
 
 ## <a name="dashboard"></a>Dashboard
 
-Ein Dashboard zeigt verschiedene Arten von Inhalten an einem zentralen Ort an (z. B. eine Teams persönliche App oder Registerkarte). Benutzer sollten in der Lage sein, zumindest einige der Elemente anzupassen, die auf einem Dashboard angezeigt werden.
+Ein Dashboard zeigt verschiedene Arten von Inhalten an einem zentralen Ort an (z. B. eine persönliche Teams-App oder -Registerkarte). Benutzer sollten in der Lage sein, zumindest einige der Elemente anzupassen, die auf einem Dashboard angezeigt werden.
 
 ### <a name="top-use-cases"></a>Die häufigsten Anwendungsfälle
 
 * Analysieren von Daten
 * Berichtsmetriken
-* Organisieren verschiedener Informationen an einem Ort
+* Organisieren Sie verschiedene Informationen an einem Ort.
 
-### <a name="mobile"></a>Mobilgeräte
+### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="Beispiel zeigt eine Dashboard-UI-Vorlage auf mobilgeräten." border="false":::
 
@@ -84,10 +84,10 @@ Sie können verschiedene Kartengrößen (single, double und full) verwenden, um 
 
 ### <a name="top-use-cases"></a>Die häufigsten Anwendungsfälle
 
-* Anzeigen komplexer Informationen
-* Erstellen eines Dashboards
+* Zeigen Sie komplexe Informationen an.
+* Erstellen Sie ein Dashboard.
 
-### <a name="mobile"></a>Mobilgeräte
+### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="Das Beispiel zeigt eine Datenvisualisierungs-UI-Vorlage auf mobilgeräten." border="false":::
 
@@ -102,7 +102,7 @@ Die leere Statusvorlage kann für viele Szenarien verwendet werden, einschließl
 ### <a name="top-use-cases"></a>Die häufigsten Anwendungsfälle
 
 * Anmelden
-* Willkommensnachrichten und Erste-Ausführung-Erfahrungen
+* Willkommensnachrichten und Erste-Ausführung-Erfahrungen.
 * Erfolgsmeldungen
 * Fehlermeldungen
 
@@ -140,7 +140,7 @@ Formulare werden verwendet, um Benutzereingaben auf strukturierte Weise zu samme
 * Einstellungen
 * Benutzereingabesammlung
 
-### <a name="mobile"></a>Mobilgeräte
+### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="Das Beispiel zeigt eine Formular-UI-Vorlage auf mobilen Geräten." border="false":::
 
@@ -157,7 +157,7 @@ Sie können eine Liste verwenden, um verwandte Elemente in einem scannbaren Form
 * Anzeigen von Daten
 * Kontextbezogene Aktionen für App-Inhalte
 
-### <a name="mobile"></a>Mobilgeräte
+### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="Beispiel zeigt eine Listen-UI-Vorlage auf mobilgeräten." border="false":::
 
@@ -167,7 +167,7 @@ Sie können eine Liste verwenden, um verwandte Elemente in einem scannbaren Form
 
 ## <a name="sign-in"></a>Anmelden
 
-Sie können App-Anmeldeflüsse für verschiedene Teams Kontexte und Identitätsanbieter entwerfen. Das folgende Beispiel enthält einmaliges Anmelden (Single Sign-On, SSO), das wir für die einfachste Authentifizierung empfehlen.
+Sie können App-Anmeldeflüsse für verschiedene Teams-Kontexte und Identitätsanbieter entwerfen. Das folgende Beispiel enthält einmaliges Anmelden (Single Sign-On, SSO), das wir für die einfachste Authentifizierung empfehlen.
 
 ### <a name="top-use-case"></a>Top-Anwendungsfall
 
@@ -183,7 +183,7 @@ Sie können App-Anmeldeflüsse für verschiedene Teams Kontexte und Identitätsa
 
 ## <a name="settings"></a>Einstellungen
 
-Einstellungen Bildschirme können Benutzer ihre Einstellungen mit Ihrer App konfigurieren. (Hinweis: Einstellungen ist ein Container für [grundlegende UI-Komponenten](~/concepts/design/design-teams-app-basic-ui-components.md).)
+Auf den Einstellungsbildschirmen können Benutzer ihre Einstellungen mit Ihrer App konfigurieren. (Hinweis: "Einstellungen" ist ein Container für [grundlegende UI-Komponenten](~/concepts/design/design-teams-app-basic-ui-components.md).)
 
 ### <a name="top-use-case"></a>Top-Anwendungsfall
 
@@ -201,7 +201,7 @@ Ein Task Board, manchmal auch als Kanban Board oder Swim Lanes bezeichnet, ist e
 * Brainstorming. Hinzufügen von Ideen in verschiedenen Kategorien.
 * Sortierübungen. Organisieren aller Arten von Informationen in Buckets.
 
-### <a name="mobile"></a>Mobilgeräte
+### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="Das Beispiel zeigt eine Vorlage für die Task board-UI auf mobilgeräten." border="false":::
 
@@ -219,7 +219,7 @@ Ein Assistent führt einen Benutzer durch mehrere Bildschirme, um eine Aufgabe a
 * Onboarding
 * Erste Ausführungserfahrungen
 
-### <a name="mobile"></a>Mobilgeräte
+### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="Das Beispiel zeigt eine Benutzeroberflächenvorlage des Assistenten auf mobilgeräten." border="false":::
 
@@ -229,6 +229,6 @@ Ein Assistent führt einen Benutzer durch mehrere Bildschirme, um eine Aufgabe a
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Entwerfen Ihrer App mit grundlegenden Fluent UI-Komponenten](~/concepts/design/design-teams-app-basic-ui-components.md)
+* [Entwerfen Ihrer App mit grundlegenden Komponenten der Fluent-Benutzeroberfläche](~/concepts/design/design-teams-app-basic-ui-components.md)
 * [Entwerfen Ihrer Microsoft Teams-App mit erweiterten UI-Komponenten](~/concepts/design/design-teams-app-advanced-ui-components.md)
 * [Formatieren von Bot-Nachrichten](~/bots/how-to/format-your-bot-messages.md)

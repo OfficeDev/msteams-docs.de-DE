@@ -1,16 +1,16 @@
 ---
 title: Tools und SDKs
 author: surbhigupta
-description: In diesem Artikel lernen Sie Tools und SDKs zum Erstellen Microsoft Teams Bots und Bots mit dem Microsoft Bot Framework kennen.
+description: In diesem Artikel lernen Sie Tools und SDKs zum Erstellen von Microsoft Teams-Bots und -Bots mit dem Microsoft Bot Framework kennen.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 10e6535c015e63ecc88b57d56019c12bdb50d531
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 28cebe4634899a607bb13804997ffbe0649d54f2
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189330"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485685"
 ---
 # <a name="bots-and-sdks"></a>Tools und SDKs
 
@@ -186,9 +186,10 @@ In den Fällen, in denen Bots in einem Kanal besser funktionieren, funktionieren
 Ein 1:1-Chat ist ein herkömmliches Interaktionsverfahren eines Unterhaltungs-Bots mit einem Benutzer. Einige Beispiele für 1:1-Unterhaltungs-Bots sind:
 
 * F&A-Bots
-* Bots, die Workflows in anderen Systemen initiieren
-* Bots, die Witze erzählen
-* Bots, die Notizen erstellen. Bevor Sie einen 1:1-Chatbot erstellen, überprüfen Sie, ob eine unterhaltungsbasierte Oberfläche die beste Möglichkeit ist, Ihre Funktionalität darzustellen.
+* Bots, die Workflows in anderen Systemen initiieren.
+* Bots, die Witze erzählen.
+* Bots, die Notizen erstellen.
+Überlegen Sie vor dem Erstellen von 1:1-Chatbots, ob eine unterhaltungsbasierte Benutzeroberfläche die beste Möglichkeit ist, Ihre Funktionalität darzustellen.
 
 ## <a name="disadvantages-of-bots"></a>Nachteile von Bots
 
@@ -296,7 +297,7 @@ this.onMessage(async (context, next) => {
 |Beispielname | Beschreibung | .NETCore | Node.js | Python|
 |----------------|-----------------|--------------|----------------|-------|
 | Teams-Unterhaltungsbot | Verarbeitung von Nachrichten- und Unterhaltungsereignissen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
-| Bot-Beispiele | Gruppe von Bot-Beispielen | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python)|
+| Bot-Beispiele | Gruppe von Bot-Beispielen | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python)|
 
 ## <a name="next-step"></a>Nächster Schritt
 

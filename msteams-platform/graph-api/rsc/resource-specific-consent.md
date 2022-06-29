@@ -1,16 +1,16 @@
 ---
 title: Aktivieren Sie die ressourcenspezifische Zustimmung in Teams
-description: In diesem Artikel lernen Sie die ressourcenspezifische Zustimmung in Microsoft Teams kennen und erfahren, wie Sie sie nutzen können.
+description: In diesem Artikel erfahren Sie, wie Sie ressourcenspezifische Zustimmung in Microsoft Teams erhalten und wie Sie sie nutzen können.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: af546bb888cf5a3e35b7c241eba927e2d144bdd0
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 158905194ea29bfd2aca8149b8f8d6236905b754
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189917"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484866"
 ---
 # <a name="resource-specific-consent"></a>Ressourcenspezifische Zustimmung
 
@@ -44,7 +44,7 @@ Die granularen, Teams-spezifischen RSC-Berechtigungen definieren, was eine Anwen
 |TeamMember.Read.Group|Rufen Sie die Mitglieder dieses Teams ab. |
 |TeamsActivity.Send.Group|Erstellen Sie neue Benachrichtigungen in den Aktivitätsfeeds der Benutzer in diesem Team. |
 
-Weitere Einzelheiten finden Sie unter [teamressourcenspezifische Einwilligungsberechtigungen](/graph/permissions-reference#teams-resource-specific-consent-permissions).
+Weitere Einzelheiten finden Sie unter [teamressourcenspezifische Einwilligungsberechtigungen](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
 ### <a name="resource-specific-permissions-for-a-chat"></a>Ressourcenspezifische Berechtigungen für einen Chat
 
@@ -66,6 +66,7 @@ Die folgende Tabelle enthält ressourcenspezifische Berechtigungen für einen Ch
 | Calls.AccessMedia.Chat         | Zugreifen auf Mediendatenströme in Anrufen, die mit diesem Chat oder dieser Besprechung verbunden sind.                                    |
 | Calls.JoinGroupCall.Chat         | Nehmen Sie an Anrufen teil, die mit diesem Chat oder dieser Besprechung verbunden sind.                                    |
 | TeamsActivity.Send.Chat         | Erstellen Sie neue Benachrichtigungen in den Aktivitätsfeeds der Benutzer in diesem Chat. |
+| OnlineMeetingTranscript.Read.Chat | Lesen Sie die Transkriptionen der Besprechung, die diesem Chat zugeordnet ist. |
 
 Weitere Einzelheiten finden Sie unter [Zustimmungsberechtigungen für Chat-Ressourcen](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 

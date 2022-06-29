@@ -1,16 +1,16 @@
 ---
 title: Auswählen eines Setups zum Testen und Debuggen Ihrer App
-description: In diesem Modul lernen Sie Optionen zum Testen und Debuggen Microsoft Teams Apps in einer lokalen und in der Cloud gehosteten Umgebung kennen.
+description: In diesem Modul lernen Sie Optionen zum Testen und Debuggen von Microsoft Teams-Apps in einer lokalen und in der Cloud gehosteten Umgebung kennen.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 351f1c444c2a6c9467f8f9d697303a2bf1357600
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 04a3e26d11961f2e08600b54f4612fb8f2a10cee
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150652"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503886"
 ---
-# <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Auswählen eines Setups zum Testen und Debuggen Ihrer Microsoft Teams-App
+# <a name="choose-a-test-setup-and-debug-your-teams-app"></a>Auswählen eines Testsetups und Debuggen Ihrer Teams-App
 
 Die Microsoft Teams-Apps enthalten eine oder mehrere Funktionen, und die Möglichkeiten, sie auszuführen oder sogar zu hosten, unterscheiden sich. Verwenden Sie zum Debuggen eine der folgenden Möglichkeiten:
 
@@ -40,7 +40,7 @@ Ihr Bot kann innerhalb der Bot-Emulator ausgeführt werden. Dadurch können Sie 
 
 ## <a name="locally-hosted"></a>Lokal gehostet
 
-Teams ein vollständig cloudbasiertes Produkt ist, müssen alle Dienste, auf die es zugreift, über HTTPS-Endpunkte öffentlich verfügbar sein. Damit Ihre App innerhalb Teams funktioniert, müssen Sie den Code entweder in der Cloud Ihrer Wahl veröffentlichen oder unsere lokal ausgeführte Instanz extern zugänglich machen. Letzteres können wir mit Tunneling-Software tun.
+Teams ist ein vollständig cloudbasiertes Produkt, es erfordert, dass alle Dienste, auf die es zugreift, über HTTPS-Endpunkte öffentlich verfügbar sind. Damit Ihre App innerhalb Teams funktioniert, müssen Sie den Code entweder in der Cloud Ihrer Wahl veröffentlichen oder unsere lokal ausgeführte Instanz extern zugänglich machen. Letzteres können wir mit Tunneling-Software tun.
 
 Obwohl Sie ein beliebiges Tool Ihrer Wahl verwenden können, wird [ngrok](https://ngrok.com/download) verwendet und empfohlen, wodurch eine extern adressierbare URL für einen Port erstellt wird, den Sie lokal auf Ihrem Computer öffnen.
 
@@ -55,7 +55,7 @@ Führen Sie die folgenden Schritte aus, um ngrok in Vorbereitung auf die lokale 
 
 Um ngrok in Ihrem Projekt basierend auf den von Ihnen verwendeten Funktionen zu verwenden, müssen Sie alle URL-Verweise in Ihrer Code-, Konfigurations- und manifest.json-Datei ersetzen, um diesen URL-Endpunkt verwenden zu können.
 
-Für Bots, die im Microsoft Bot Framework registriert sind, aktualisieren Sie den Messaging-Endpunkt des Bots, um diesen neuen ngrok-Endpunkt zu verwenden. Beispiel: `https://2d1224fb.ngrok.io/api/messages`. Sie können überprüfen, ob ngrok funktioniert, indem Sie die Bot-Antwort im Testchatfenster des Bot Framework-Portals testen. Wie der Emulator ermöglicht ihnen dieser Test nicht den Zugriff auf Teams-spezifische Funktionalität.
+Für Bots, die im Microsoft Bot Framework registriert sind, aktualisieren Sie den Messaging-Endpunkt des Bots, um diesen neuen ngrok-Endpunkt zu verwenden. Beispiel: `https://2d1224fb.ngrok.io/api/messages`. Sie können überprüfen, ob ngrok funktioniert, indem Sie die Bot-Antwort im Testchatfenster des Bot Framework-Portals testen. Wie der Emulator ermöglicht ihnen dieser Test nicht den Zugriff auf Teams-spezifische Funktionen.
 
 > [!NOTE]
 >
@@ -67,14 +67,14 @@ Für Bots, die im Microsoft Bot Framework registriert sind, aktualisieren Sie de
 
 ## <a name="cloud-hosted"></a>In der Cloud gehostet
 
-Sie können jeden extern adressierbaren Dienst verwenden, um Ihren Entwicklungs- und Produktionscode und deren HTTPS-Endpunkte zu hosten. Es wird nicht davon ausgegangen, dass sich Ihre Funktionen im selben Dienst befinden. Der Zugriff auf alle Domänen muss über Ihre Teams Apps erfolgen, die [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) im Objekt in der `manifest.json` Datei aufgeführt sind.
+Sie können jeden extern adressierbaren Dienst verwenden, um Ihren Entwicklungs- und Produktionscode und deren HTTPS-Endpunkte zu hosten. Es wird nicht davon ausgegangen, dass sich Ihre Funktionen im selben Dienst befinden. Der Zugriff auf alle Domänen muss über Ihre Teams-Apps erfolgen, die [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) im Objekt in der `manifest.json` Datei aufgeführt sind.
 
 > [!NOTE]
 > Um eine sichere Umgebung zu gewährleisten, müssen Sie die genauen Domänen und Unterdomänen, auf die Sie verweisen, explizit angeben, und diese Domänen müssen unter Ihrer Kontrolle stehen. Beispielsweise wird `*.azurewebsites.net` nicht empfohlen, aber `contoso.azurewebsites.net` wird empfohlen.
 
 ## <a name="load-and-run-your-experience"></a>Laden und Ausführen der Benutzeroberfläche
 
-Zum Laden und Ausführen Ihrer Benutzeroberfläche in Teams müssen Sie ein Paket erstellen und in Teams hochladen. Weitere Informationen finden Sie unter:
+Um Ihre Erfahrung in Teams zu laden und auszuführen, müssen Sie ein Paket erstellen und in Teams hochladen. Weitere Informationen finden Sie unter:
 
 * [Microsoft Teams: Erstellen eines App-Pakets für Ihre Microsoft Teams-App](~/concepts/build-and-test/apps-package.md).
 * [Hochladen Ihrer App in Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).
@@ -86,4 +86,4 @@ Zum Laden und Ausführen Ihrer Benutzeroberfläche in Teams müssen Sie ein Pake
 
 ## <a name="see-also"></a>Siehe auch
 
-[Testen und Debuggen Ihres Bots lokal](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally)
+[Testen und Debuggen Des Bots lokal mit IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)

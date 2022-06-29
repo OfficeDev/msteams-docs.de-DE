@@ -6,14 +6,14 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 4f85798c57c7816bed727e41adc69cf7dbc380d4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1737c55598d5963a77317a0b37869275f96a902d
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142220"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503753"
 ---
-# <a name="create-a-new-teams-app-using-teams-toolkit"></a>Erstellen einer neuen Teams-App mit dem Teams-Toolkit
+# <a name="create-a-new-teams-app-using-teams-toolkit"></a>Erstellen einer neuen Teams-App mit dem Teams-Toolkit 
 
 Um eine neue Teams-App mithilfe des Teams-Toolkits zu erstellen, können Sie eine der folgenden Optionen auswählen:
 

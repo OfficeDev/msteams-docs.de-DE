@@ -1,16 +1,16 @@
 ---
 title: Veröffentlichen von Teams-Apps mithilfe von Teams-Toolkits
 author: zyxiaoyuer
-description: In diesem Modul erfahren Sie, wie Sie Teams Apps mit Teams Toolkit veröffentlichen und in einzelnen Bereichen oder Querladen-Berechtigungen veröffentlichen.
+description: In diesem Modul erfahren Sie, wie Sie Teams-Apps mithilfe des Teams-Toolkits veröffentlichen und in einzelnen Bereichen oder Querladen-Berechtigungen veröffentlichen.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 0ae6ab1f128eccae6df4fff20364f590106ab146
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6c0f296549dc325548314e74f1f3ca7017b7aef0
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142605"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485356"
 ---
 # <a name="publish-teams-apps-using-teams-toolkit"></a>Veröffentlichen von Teams-Apps mithilfe von Teams-Toolkits
 
@@ -41,7 +41,7 @@ Führen Sie die folgenden Schritte aus, um das App-Paket hochzuladen:
 
 1. Wählen Sie im Teams-Client **Apps** in der linken Leiste aus.
 2. Wählen Sie **Verwalten Ihrer Apps** aus.
-3. Wählen Sie **App veröffentlichen** aus.
+3. Wählen Sie **"App veröffentlichen**" aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pub.png" alt-text="publish":::
 

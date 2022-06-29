@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 7e2ecb4c64153a2ed06d235146165705227ef102
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e530adfc92f4edc1e25946a5af7c38300ae67777
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142185"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485636"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -177,8 +177,8 @@ TeamsFx SDK bietet mehrere Funktionen, um die Konfiguration für Bibliotheken vo
 
 Erforderliche Konfiguration:
 
-* `sqlServerEndpoint`, `sqlUsername`, `sqlPassword` wenn Sie die Benutzeridentität verwenden möchten
-* `sqlServerEndpoint`, `sqlIdentityId` wenn Sie die MSI-Identität verwenden möchten
+* `sqlServerEndpoint`, `sqlUsername`wenn `sqlPassword` Sie die Benutzeridentität verwenden möchten.
+* `sqlServerEndpoint`, `sqlIdentityId` wenn Sie die MSI-Identität verwenden möchten.
 
 ### <a name="error-handling"></a>Fehlerbehandlung
 

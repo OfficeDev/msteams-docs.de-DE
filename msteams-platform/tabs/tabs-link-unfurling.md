@@ -1,20 +1,20 @@
 ---
 title: Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 author: Rajeshwari-v
-description: Erfahren Sie, wie Sie einen Link bereitstellen, die Phasenansicht öffnen und eine Registerkarte mit Teams App anheften. Hier erfahren Sie, wie Sie es mithilfe einer adaptiven Karte mithilfe von Codebeispielen und Beispielen aufrufen.
+description: Erfahren Sie Näheres über die Vorschaugenerierung für Links, das Öffnen der Bühnenansicht und das Anheften einer Registerkarte mit der Microsoft Teams-App. Erfahren Sie mehr über die Bühnenansicht und deren Aufruf mithilfe einer adaptiven Karte anhand von Codebeispielen und Beispielen.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 07854a38fff8ded02fabba98926511e964f5baf0
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: fd3d38ce3772137bfcfa121a886c5271246096b6
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122908"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484939"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 
-Die Phasenansicht ist eine neue Benutzeroberflächenkomponente. Damit können Sie den Inhalt rendern, der im Vollbildmodus in Teams geöffnet und als Registerkarte angeheftet ist.
+Die Phasenansicht ist eine neue Benutzeroberflächenkomponente. Sie können den Inhalt rendern, der in Teams im Vollbildmodus geöffnet und als Registerkarte angeheftet ist.
 
 ## <a name="stage-view"></a>Bühnenansicht
 
@@ -87,7 +87,7 @@ Im Folgenden sehen Sie den Ablauf zum Aufrufen der Bühnenansicht:
 * Der Bot antwortet mit einem `200`-Code.
 
 > [!NOTE]
-> Auf Teams mobilen Clients öffnet das Aufrufen der Phasenansicht für Apps, die über [Ihre Microsoft Teams-App](../concepts/deploy-and-publish/apps-publish-overview.md) verteilt werden und keine moblie-optimierte Umgebung haben, den Standardwebbrowser des Geräts. Der Browser öffnet die im `websiteUrl`-Parameter des `TabInfo`-Objekts angegebene URL.
+> Auf mobilen Clients von Teams wird beim Aufrufen von Stage View für Apps, die über den [Teams Store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) vertrieben werden und nicht für Mobilgeräte optimiert sind, der Standard-Webbrowser des Geräts geöffnet. Der Browser öffnet die im `websiteUrl`Parameter des `TabInfo`Objekts angegebene URL.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Aufrufen der Bühnenansicht über einen Deep-Link
 

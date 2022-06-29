@@ -5,17 +5,17 @@ localization_priority: Medium
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 3b366ebc91e57a2e48dec03fb50aed24d704e41d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9802cbc0f78a84db972640ed8f96321a71a82504
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144166"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503487"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>Personenauswahl in Adaptiven Karten
 
 >[!NOTE]
-> Derzeit ist die Personenauswahl in adaptiven Karten in der [öffentlichen Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) nur für mobilgeräte und allgemein verfügbar (GA) für Desktop verfügbar.
+> Derzeit ist die Personenauswahl in adaptiven Karten in der [öffentlichen Entwicklervorschau für Teams](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-teams) nur für Mobile und allgemein verfügbar (GA) für Desktop verfügbar.
 
 Die Personenauswahl hilft Benutzern beim Suchen und Auswählen von Benutzern in der adaptiven Karte. Sie können die Personenauswahl als Eingabesteuerelement zur adaptiven Karte hinzufügen, die in Chats, Kanälen, Aufgabenmodulen und Registerkarten funktioniert. Die Personenauswahl unterstützt die folgenden Features:
 
@@ -58,9 +58,9 @@ Die folgende Abbildung zeigt das Szenario für die Neuzuweisung:
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
 > [!NOTE]
-> Derzeit ist diese Funktion nur in [der öffentlichen Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) verfügbar.
+> Derzeit ist dieses Feature nur in der  [öffentlichen Entwicklervorschau für Teams](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-teams) verfügbar.
 
-Android und iOS mobile Clients unterstützen die Personenauswahl in adaptiven Karten. Sie können die Personenauswahl auf Mobilgeräten verwenden, um Benutzer zu suchen und auszuwählen, um die Benutzerfreundlichkeit zu verbessern. Die Suchumgebung ist mit jeder anderen Benutzerauswahlerfahrung auf mobilgeräten vergleichbar.
+Mobile Android- und iOS-Clients unterstützen die Personenauswahl in adaptiven Karten. Sie können die Personenauswahl auf Mobilgeräten verwenden, um Benutzer zu suchen und auszuwählen, um die Benutzerfreundlichkeit zu verbessern. Die Suchumgebung ist mit jeder anderen Benutzerauswahlerfahrung auf mobilgeräten vergleichbar.
 
 ### <a name="reassignment-scenario-example"></a>Beispiel für ein Szenario für die neu zugewiesene Zuweisung
 

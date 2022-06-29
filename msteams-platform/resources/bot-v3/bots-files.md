@@ -1,17 +1,18 @@
 ---
 title: Senden und Empfangen von Dateien von einem Bot
-description: Erfahren Sie, wie Sie Dateien über den Bot mithilfe Graph APIs für persönliche Chat-, Kanal- und Gruppenchatbereiche senden und empfangen.
+description: Erfahren Sie, wie Sie Dateien über den Bot senden und empfangen, indem Sie Graph-APIs für persönliche, Kanal- und Gruppenchatbereiche verwenden. Verwenden Sie Teams-Bot-APIs unter Verwendung von Codebeispielen, die auf dem v3 Bot Framework SDK basieren.
+keywords: Senden und Empfangen von Teams-Bots-Dateien
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 96642885f6dd9581a5efdaba21249002282c5c9a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5d7b83890947a77a477c67197557c92aa6e7b103
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143368"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503585"
 ---
-# <a name="send-and-receive-files-through-your-bot"></a>Senden und Empfangen von Dateien über Ihren Bot
+# <a name="send-and-receive-files-using-bots"></a>Senden und Empfangen von Dateien mithilfe von Bots
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -164,7 +165,7 @@ Wenn der Benutzer die Datei ablehnt, erhält Ihr Bot entsprechend das folgende E
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Benachrichtigen des Benutzers über eine hochgeladene Datei
 
-Nachdem Sie eine Datei in die OneDrive-Instanz des Benutzers hochgeladen haben, sollten Sie unabhängig davon, ob Sie den oben beschriebenen Mechanismus oder benutzerdelegierte OneDrive-APIs verwenden, eine Bestätigungsmeldung an den Benutzer senden. Diese Nachricht sollte eine `FileCard` Anlage enthalten, die der Benutzer auswählen kann, um sie entweder in der Vorschau anzuzeigen, in OneDrive zu öffnen oder lokal herunterzuladen.
+Nachdem Sie eine Datei in die OneDrive-Instanz des Benutzers hochgeladen haben, sollten Sie unabhängig davon, ob Sie den oben beschriebenen Mechanismus oder benutzerdelegierte OneDrive-APIs verwenden, eine Bestätigungsmeldung an den Benutzer senden. Diese Nachricht sollte eine `FileCard` Anlage enthalten, die der Benutzer auswählen kann, um entweder eine Vorschau anzuzeigen, sie in OneDrive zu öffnen oder lokal herunterzuladen.
 
 ```json
 {
@@ -266,3 +267,7 @@ private static Attachment CreateFileConsentAttachment()
     return att;
 }
 ```
+
+## <a name="see-also"></a>Siehe auch
+
+[Arbeiten mit Dateien in Microsoft Graph](/graph/api/resources/onedrive)

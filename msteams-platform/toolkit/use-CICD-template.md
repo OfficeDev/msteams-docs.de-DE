@@ -1,17 +1,17 @@
 ---
 title: CI/CD-Vorlagen
 author: MuyangAmigo
-description: In diesem Modul erfahren Sie, wie Sie CI/CD-Pipelinevorlagen in GitHub, Azure DevOps und Jenkins für Teams Application DevelopersCI/CD-Vorlagen verwenden.
+description: In diesem Modul erfahren Sie, wie Sie CI/CD-Pipelinevorlagen in GitHub-, Azure DevOps- und Jenkins für Teams-AnwendungsentwicklerCI/CD-Vorlagen verwenden.
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/20/2022
-ms.openlocfilehash: db263d3c8cf7eff085e237e884ef5baafc200230
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1b2f7258b661a2b194f2072c9ad8fd920d58983d
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142598"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485397"
 ---
 # <a name="set-up-cicd-pipelines"></a>Einrichten von CI/CD-Pipelines
 
@@ -19,7 +19,7 @@ TeamsFx hilft bei der Automatisierung Ihres Entwicklungsworkflows beim Erstellen
 
 |Tools und Vorlagen | Beschreibung |
 |---|---|
-|[TeamsFx CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub Aktion, die in TeamsFx CLI integriert ist.|
+|[TeamsFx CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub-Aktion, die in TeamsFx CLI integriert ist.|
 |[Microsoft Teams-Toolkit in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code-Erweiterung, die Sie bei der Entwicklung von Teams-Apps und Automatisierungsworkflows für GitHub, Azure DevOps und Jenkins unterstützt. |
 |[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Kommandozeilen-Tool, das Sie bei der Entwicklung von Teams-Apps und Automatisierungsworkflows für GitHub, Azure DevOps und Jenkins unterstützt.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) und [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Skriptvorlagen für die Automatisierung außerhalb von GitHub, Azure DevOps oder Jenkins. |
@@ -51,8 +51,17 @@ Sie können die folgenden Workflowvorlagen mit GitHub erstellen:
 **Microsoft Teams-Toolkit in Visual Studio Code**
 
 1. Erstellen Sie eine neue Microsoft Teams-App mit dem Microsoft Teams-Toolkit.
-1. Wählen Sie in der linken Navigationsleiste Teams :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="Symbol-API-Symbol"::: des **Toolkits** aus.
+
+1. Wählen Sie im linken Bereich das Symbol " **Teams-Toolkit** " :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: aus.
+
+1. Wählen Sie **"Features hinzufügen" aus.**
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/add-feature.png" alt-text="Hinzufügen von Features":::
+
 1. Wählen Sie **CI/CD-Workflows hinzufügen** aus.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/toolkit-ci-cd-workflow.png" alt-text="Ci/CD-Workflow auswählen":::
+
 1. Wählen Sie in der Eingabeaufforderung eine Umgebung aus.
 1. Wählen Sie **GitHub** als CI/CD-Anbieter aus.
 1. Wählen Sie aus diesen Optionen mindestens eine Vorlage aus: CI, CD, Bereitstellung oder Veröffentlichen in Microsoft Teams.
@@ -98,13 +107,13 @@ Sie können die folgenden Workflowvorlagen mit Azure DevOps erstellen:
 **Microsoft Teams-Toolkit in Visual Studio Code**
 
 1. Erstellen Sie eine neue Microsoft Teams-App mit dem Microsoft Teams-Toolkit.
-2. Wählen Sie in der linken Navigationsleiste Teams :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="Symbol-API-Symbol"::: des **Toolkits** aus.
-3. Wählen Sie **CI/CD-Workflows hinzufügen** aus.
-4. Wählen Sie in der Eingabeaufforderung eine Umgebung aus.
-5. Wählen Sie **Azure DevOps** als CI/CD-Anbieter aus.
-6. Wählen Sie aus diesen Optionen mindestens eine Vorlage aus: CI, CD, Bereitstellung und Veröffentlichen in Microsoft Teams.
-7. Öffnen Sie die Vorlage, und passen Sie die Workflows an, die in Ihre Szenarien passen.
-8. Folgen Sie den README-Dateien unter`.azure/pipelines`, um den Workflow in Azure DevOps einzurichten.
+2. Wählen Sie im linken Bereich das Symbol " **Teams-Toolkit** " :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: aus.
+1. Wählen Sie **CI/CD-Workflows hinzufügen** aus.
+1. Wählen Sie in der Eingabeaufforderung eine Umgebung aus.
+1. Wählen Sie **Azure DevOps** als CI/CD-Anbieter aus.
+1. Wählen Sie aus diesen Optionen mindestens eine Vorlage aus: CI, CD, Bereitstellung und Veröffentlichen in Microsoft Teams.
+1. Öffnen Sie die Vorlage, und passen Sie die Workflows an, die in Ihre Szenarien passen.
+1. Folgen Sie den README-Dateien unter`.azure/pipelines`, um den Workflow in Azure DevOps einzurichten.
 
 **TeamsFx CLI**
 
@@ -151,7 +160,7 @@ Sie können die folgenden Workflowvorlagen mit Jenkins erstellen:
 **Microsoft Teams-Toolkit in Visual Studio Code**
 
 1. Erstellen Sie eine neue Microsoft Teams-App mit dem Microsoft Teams-Toolkit.
-2. Wählen Sie in der linken Navigationsleiste Teams :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="Symbol-API-Symbol"::: des **Toolkits** aus.
+2. Wählen Sie im linken Bereich das Symbol " **Teams-Toolkit** " :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: aus.
 3. Wählen Sie **CI/CD-Workflows hinzufügen** aus.
 4. Wählen Sie in der Eingabeaufforderung eine Umgebung aus.
 5. Wählen Sie **Jenkins** als CI/CD-Anbieter aus.
@@ -229,7 +238,7 @@ Wenn Änderungen an der Manifestdatei der Microsoft Teams-App vorliegen, können
 
 Führen Sie die folgenden Schritte aus, um Ihre App zu veröffentlichen:
 
-1. Melden Sie sich beim [Entwicklerportal für Teams](https://dev.teams.microsoft.com) mit dem entsprechenden Konto an.
+1. Melden Sie sich mit dem entsprechenden Konto beim [Entwicklerportal für Teams](https://dev.teams.microsoft.com) an.
 2. Importieren Sie Ihr App-Paket in ZIP, wählen Sie `App -> Import app -> Replace`aus.
 3. Wählen Sie die Ziel-App in der App-Liste aus.
 4. Veröffentlichen Sie Ihre App, wählen Sie `Publish -> Publish to your org`.

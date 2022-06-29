@@ -3,14 +3,14 @@ title: Automatische Authentifizierung
 description: In diesem Modul erfahren Sie, wie Sie automatische Authentifizierung, einmaliges Anmelden und Azure AD für Registerkarten durchführen und wie es funktioniert
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bb5b65e70192c4796d7c828d19512e2a414cf812
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d4fdf501899b17d3ee64cf74b1a1fb52e0e749db
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144243"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503627"
 ---
-# <a name="silent-authentication"></a>Automatische Authentifizierung
+# <a name="use-silent-authentication-in-azure-ad"></a>Verwenden der automatischen Authentifizierung in Azure AD
 
 > [!IMPORTANT]
 > Der Support und die Entwicklung von Microsoft für die Active Directory-Authentifizierungsbibliothek (ADAL) einschließlich der Sicherheitsfixes endet am **30. Juni 2022**. Um weiterhin Support zu erhalten, aktualisieren Sie Ihre Anwendungen so, dass microsoft Authentication Library (MSAL) verwendet wird. Siehe [Migrieren von Anwendungen zur Microsoft-Authentifizierungsbibliothek (MSAL).](/azure/active-directory/develop/msal-migration)
@@ -33,7 +33,7 @@ Die Active Directory-Authentifizierungsbibliothek erstellt einen ausgeblendeten 
 
 ## <a name="how-to-do-silent-authentication"></a>Durchführen der automatischen Authentifizierung
 
-Der Code in diesem Artikel stammt aus der Teams Beispiel-App, die [Teams Authentifizierungsbeispielknoten](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs) ist.
+Der Code in diesem Artikel stammt aus der Teams-Beispiel-App, bei der es sich um einen [Beispielknoten für die Teams-Authentifizierung](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs) handelt.
 
 [Initiieren Sie die konfigurierbare Registerkarte "Automatische und einfache Authentifizierung" mitHilfe von Azure AD](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) , und folgen Sie den Anweisungen, um das Beispiel auf Ihrem lokalen Computer auszuführen.
 
@@ -129,7 +129,7 @@ if (authContext.isCallback(window.location.hash)) {
 Verwenden Sie den folgenden Code, um den Abmeldungsfluss in der Azure AD-Authentifizierung zu behandeln:
 
 > [!NOTE]
-> Wenn Sie sich von Teams Registerkarte oder bot abmelden, wird die aktuelle Sitzung gelöscht.
+> Wenn Sie sich von der Registerkarte oder dem Bot von Teams abmelden, wird die aktuelle Sitzung gelöscht.
 
 ```javascript
 function logout() {

@@ -5,16 +5,16 @@ description: In diesem Modul erfahren Sie, wie Sie eine Seite zum Entfernen von 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 81bc5f667d1be301965ccddf0709c8cb02f328e8
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: cc2d08176d4da365eac9d5a5fd48ff53dbf84461
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142633"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485216"
 ---
-# <a name="create-a-removal-page"></a>Erstellen einer Seite zum Entfernen
+# <a name="tab-re-configuration-and-removal-page"></a>Seite zum Erneuten Konfigurieren und Entfernen von Registerkarten
 
-Sie können die Benutzererfahrung erweitern und verbessern, indem Sie Die Entfernungs- und Änderungsoptionen in Ihrer App unterstützen. Teams ermöglicht Es Benutzern, eine Kanal- oder Gruppenregisterkarte umzubenennen oder zu entfernen, und Sie können Benutzern erlauben, Ihre Registerkarte nach der Installation neu zu konfigurieren. Darüber hinaus bietet die Registerkartenentfernung den Benutzern nach dem Entfernen Optionen zum Löschen oder Archivieren von Inhalten.
+Sie können die Benutzererfahrung erweitern und verbessern, indem Sie Die Entfernungs- und Änderungsoptionen in Ihrer App unterstützen. Teams ermöglicht Benutzern das Umbenennen oder Entfernen einer Kanal- oder Gruppenregisterkarte, und Sie können Benutzern erlauben, Ihre Registerkarte nach der Installation neu zu konfigurieren. Darüber hinaus bietet die Registerkartenentfernung den Benutzern nach dem Entfernen Optionen zum Löschen oder Archivieren von Inhalten.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -36,7 +36,7 @@ Wenn Ihre Registerkarte in einen Kanal- oder Gruppenchat hochgeladen wird, fügt
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Erstellen einer Seite zum Entfernen von Registerkarten für Ihre Anwendung
 
-Die optionale Seite zum Entfernen ist eine HTML-Seite, die Sie hosten, und wird angezeigt, wenn die Registerkarte entfernt wird. Die URL der Entfernungsseite wird durch die `setConfig()` Methode (früher `setSettings()`) auf Ihrer Konfigurationsseite festgelegt. Wie bei allen Seiten in Ihrer App muss die Seite zum Entfernen [Teams Registerkartenvoraussetzungen](../../../tabs/how-to/tab-requirements.md) entsprechen.
+Die optionale Seite zum Entfernen ist eine HTML-Seite, die Sie hosten, und wird angezeigt, wenn die Registerkarte entfernt wird. Die URL der Entfernungsseite wird durch die `setConfig()` Methode (früher `setSettings()`) auf Ihrer Konfigurationsseite festgelegt. Wie bei allen Seiten in Ihrer App muss die Seite zum Entfernen den [Voraussetzungen der Teams-Registerkarte](../../../tabs/how-to/tab-requirements.md) entsprechen.
 
 ### <a name="register-a-remove-handler"></a>Registrieren eines Remove-Handlers
 
@@ -58,7 +58,7 @@ Sie können `getContext()` den aktuellen Kontext abrufen, in dem der Frame ausge
 
 #### <a name="include-authentication"></a>Authentifizierung einschließen
 
-Die Authentifizierung ist erforderlich, bevor ein Benutzer den Registerkarteninhalt löschen kann. Kontextinformationen können zum Erstellen von Authentifizierungsanforderungen und Autorisierungsseiten-URLs verwendet werden. Siehe [Microsoft Teams Authentifizierungsfluss für Registerkarten](~/tabs/how-to/authentication/auth-flow-tab.md). Stellen Sie sicher, dass alle Domänen, die auf Ihren Registerkartenseiten verwendet werden, im `manifest.json` `validDomains` Array aufgeführt sind.
+Die Authentifizierung ist erforderlich, bevor ein Benutzer den Registerkarteninhalt löschen kann. Kontextinformationen können zum Erstellen von Authentifizierungsanforderungen und Autorisierungsseiten-URLs verwendet werden. Siehe [Microsoft Teams-Authentifizierungsfluss für Registerkarten](~/tabs/how-to/authentication/auth-flow-tab.md). Stellen Sie sicher, dass alle Domänen, die auf Ihren Registerkartenseiten verwendet werden, im `manifest.json` `validDomains` Array aufgeführt sind.
 
 Es folgt ein Beispielcodeblock zum Entfernen von Registerkarten:
 
@@ -110,15 +110,15 @@ Es folgt ein Beispielcodeblock zum Entfernen von Registerkarten:
 
 ***
 
-Wenn ein Benutzer "Aus dem Dropdownmenü der Registerkarte **entfernen**" auswählt, lädt Teams die optionale `removeUrl` Seite, die auf ihrer **Konfigurationsseite** zugewiesen ist, in einen IFrame. Dem Benutzer wird eine Schaltfläche angezeigt, die mit der Funktion geladen wird, die `onClick()` die Schaltfläche "**Entfernen**" am unteren Rand der IFrame-Seite zum Entfernen aufruft `pages.config.setValidityState(true)` und aktiviert.
+Wenn ein Benutzer "Aus dem Dropdownmenü der Registerkarte **entfernen** " auswählt, lädt Teams die optionale `removeUrl` Seite, die auf Ihrer **Konfigurationsseite** zugewiesen ist, in einen IFrame. Dem Benutzer wird eine Schaltfläche angezeigt, die mit der Funktion geladen wird, die `onClick()` die Schaltfläche "**Entfernen**" am unteren Rand der IFrame-Seite zum Entfernen aufruft `pages.config.setValidityState(true)` und aktiviert.
 
-Nachdem der Remove-Handler ausgeführt wurde, `removeEvent.notifySuccess()` oder `removeEvent.notifyFailure()` benachrichtigt Teams des Inhaltsentfernungsergebnisses.
+Nachdem der Remove-Handler ausgeführt wurde, `removeEvent.notifySuccess()` oder `removeEvent.notifyFailure()` benachrichtigt Teams über das Ergebnis der Inhaltsentfernung.
 
 >[!NOTE]
 >
 > * Um sicherzustellen, dass die Kontrolle eines autorisierten Benutzers über eine Registerkarte nicht gehemmt wird, entfernt Teams die Registerkarte sowohl in Erfolgs- als auch in Fehlerfällen.
-> * Nachdem Sie den `registerOnRemoveHandler` Ereignishandler aufgerufen haben, haben Sie 15 Sekunden Zeit, um auf die Methode zu reagieren. Standardmäßig aktiviert Teams die Schaltfläche "**Entfernen**" nach fünf Sekunden, auch wenn Sie nicht aufrufen`setValidityState(true)`.
-> * Wenn der Benutzer "**Entfernen**" auswählt, entfernt Teams die Registerkarte nach 30 Sekunden, unabhängig davon, ob die Aktionen abgeschlossen wurden oder nicht.
+> * Nachdem Sie den `registerOnRemoveHandler` Ereignishandler aufgerufen haben, haben Sie 15 Sekunden Zeit, um auf die Methode zu reagieren. Standardmäßig aktiviert Teams die Schaltfläche " **Entfernen** " nach fünf Sekunden, auch wenn Sie nicht anrufen `setValidityState(true)`.
+> * Wenn der Benutzer " **Entfernen**" auswählt, entfernt Teams die Registerkarte nach 30 Sekunden, unabhängig davon, ob die Aktionen abgeschlossen wurden oder nicht.
 
 ## <a name="next-step"></a>Nächster Schritt
 

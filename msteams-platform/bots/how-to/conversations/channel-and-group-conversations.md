@@ -1,22 +1,22 @@
 ---
-title: Kanal- und Gruppenunterhaltungen mit einem Bot
+title: Erstellen von Unterhaltungs-Bots für Kanal- oder Gruppenchats
 author: surbhigupta
 description: Erfahren Sie, wie Sie Nachrichten für einen Bot in einem Kanal- oder Gruppenchat senden, empfangen und behandeln. Erfahren Sie mehr über Designrichtlinien und mehr.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 47b706aea1e6ba292126d93a8e0b6ce173c4b588
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 57f0f5e65d9236074512947d41b29041db4869d9
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190261"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503606"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Kanal- und Gruppenchatunterhaltungen mit einem Bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Um den Microsoft Teams Bot in einem Team- oder Gruppenchat zu installieren, fügen Sie den `teams` Oder-Bereich `groupchat` zu Ihrem Bot hinzu. Dadurch können alle Mitglieder der Unterhaltung mit Ihrem Bot interagieren. Nachdem der Bot installiert wurde, hat er Zugriff auf Metadaten zu der Unterhaltung, z. B. die Liste der Unterhaltungsmitglieder. Außerdem hat der Bot bei der Installation in einem Team Zugriff auf Details zu diesem Team und die vollständige Liste der Kanäle.
+Um den Microsoft Teams-Bot in einem Team- oder Gruppenchat zu installieren, fügen Sie den `teams` Oder-Bereich `groupchat` zu Ihrem Bot hinzu. Dadurch können alle Mitglieder der Unterhaltung mit Ihrem Bot interagieren. Nachdem der Bot installiert wurde, hat er Zugriff auf Metadaten zu der Unterhaltung, z. B. die Liste der Unterhaltungsmitglieder. Außerdem hat der Bot bei der Installation in einem Team Zugriff auf Details zu diesem Team und die vollständige Liste der Kanäle.
 
 Bots in einer Gruppe oder einem Kanal empfangen Nachrichten nur, wenn sie @botname erwähnt werden. Sie erhalten keine anderen Nachrichten, die an die Unterhaltung gesendet werden. Der Bot muss direkt @erwähnt werden. Ihr Bot erhält keine Nachricht, wenn das Team oder der Kanal erwähnt wird oder wenn jemand auf eine Nachricht von Ihrem Bot antwortet, ohne sie @mentioning.
 
@@ -280,7 +280,7 @@ Senden Sie in den folgenden Fällen keine Nachricht:
 
 ## <a name="step-by-step-guide"></a>Schrittweise Anleitung
 
-Befolgen Sie die [schrittweise Anleitung](../../../sbs-teams-conversation-bot.yml), um einen Teams Unterhaltungs-Bot zu erstellen.
+Befolgen Sie die [schrittweise Anleitung](../../../sbs-teams-conversation-bot.yml) zum Erstellen eines Teams-Unterhaltungs-Bots.
 
 ## <a name="next-step"></a>Nächster Schritt
 
@@ -289,4 +289,7 @@ Befolgen Sie die [schrittweise Anleitung](../../../sbs-teams-conversation-bot.ym
 
 ## <a name="see-also"></a>Siehe auch
 
-[Microsoft Teams-Kontext abrufen](~/bots/how-to/get-teams-context.md)
+* [Microsoft Teams-Kontext abrufen](~/bots/how-to/get-teams-context.md)
+* [Erstellen eines privaten Kanals im Namen des Benutzers](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
+* [Verbinden eines Bots mit Webchat Kanal](/azure/bot-service/bot-service-channel-connect-webchat)
+

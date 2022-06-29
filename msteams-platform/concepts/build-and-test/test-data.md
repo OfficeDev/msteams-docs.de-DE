@@ -4,20 +4,20 @@ description: Erfahren Sie, wie Sie Ihr Office 365-Entwicklerprogrammabonnement f
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 11/01/2019
-ms.openlocfilehash: 35a61413ab9e9a672971ba6ce45b49f6dc645ab3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: eea5c92f0f04cf09ba0dbcd92be638d3ae957901
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142353"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503459"
 ---
-# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Hinzufügen von Testdaten zu Ihrem Microsoft 365-Testmandanten
+# <a name="add-test-data-to-your-environment"></a>Hinzufügen von Testdaten zu Ihrer Umgebung
 
 Sie können Ihre Microsoft Teams-App mit Beispieldaten mit einem Microsoft 365-Entwicklerabonnement testen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-1. [Nehmen Sie am Microsoft 365-Entwicklerprogramm teil](/office/developer-program/office-365-developer-program), wenn Sie keinen Testmandanten haben.
+1. [Treten Sie dem Microsoft 365-Entwicklerprogramm bei](/office/developer-program/office-365-developer-program), wenn Sie keinen Testmandanten haben.
 2. [Richten Sie ein Microsoft 365-Entwicklerabonnement ein](/office/developer-program/office-365-developer-program-get-started).
 3. [Verwenden Sie Beispieldatenpakete mit Ihrem Microsoft 365-Entwicklerabonnement, um das Inhaltspaket der Benutzer zu installieren](/office/developer-program/install-sample-packs).
 4. [Installieren Sie das PowerShell-Modul von Teams](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).

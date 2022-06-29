@@ -5,14 +5,14 @@ description: Beginnen Sie mit diesem Lernpfad mit Unterhaltungsbots in Microsoft
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 8fef926e88709db9e1d74b6e56f643d3b048dd3b
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 6eea7c4d42ff63e11b5096542271e22d3e71328c
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150841"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503760"
 ---
-# <a name="bots-in-microsoft-teams"></a>Bots in Microsoft Teams
+# <a name="build-bots-for-teams"></a>Erstellen von Bots für Teams
 
 Ein Bot wird auch als Chatbot oder Unterhaltungsbot bezeichnet. Es handelt sich um eine App, die einfache und sich wiederholende Aufgaben von Benutzern ausführt, z. B. Kundendienst- oder Supportmitarbeiter. Die tägliche Verwendung von Bots umfasst Bots, die Informationen über das Wetter bereitstellen, Essensreservierungen durchführen oder Reiseinformationen bereitstellen. Interaktionen mit Bots können kurze Fragen und Antworten oder komplexe Unterhaltungen sein.
 

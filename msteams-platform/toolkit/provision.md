@@ -1,29 +1,29 @@
 ---
 title: Verwenden des Teams-Toolkits zum Bereitstellen von Cloudressourcen
 author: MuyangAmigo
-description: In diesem Modul erfahren Sie, wie Sie Cloudressourcen mit Teams Toolkit bereitstellen, Ressourcen erstellen und die Ressourcenbereitstellung anpassen.
+description: In diesem Modul erfahren Sie, wie Sie Cloudressourcen mithilfe des Teams-Toolkits bereitstellen, Ressourcen erstellen und die Ressourcenbereitstellung anpassen.
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 1c4232cfe51ae900414f474bcdd05c9a67d5c4c6
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7d95c5310147f9f974802d007a951d80a12acbe0
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144117"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503368"
 ---
-# <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Verwenden des Teams-Toolkits zum Bereitstellen von Cloudressourcen
+# <a name="provision-cloud-resources-using-teams-toolkit"></a>Bereitstellen von Cloudressourcen mithilfe des Teams-Toolkits
 
-TeamsFx lässt sich in Azure und Microsoft 365 Cloud integrieren, sodass Sie Ihre Anwendung mit einem einzigen Befehl in Azure platzieren können. TeamsFx lässt sich in Azure Resource Manager integrieren, mit dem Sie Azure-Ressourcen bereitstellen können, die Ihre Anwendung für den Code-Ansatz benötigt.  
+TeamsFx lässt sich in Azure und Microsoft 365 Cloud integrieren, sodass Sie Ihre Anwendung mit einem einzigen Befehl in Azure platzieren können. TeamsFx lässt sich in Azure Resource Manager integrieren, mit dem Sie Azure-Ressourcen bereitstellen können, die Ihre Anwendung für den Code-Ansatz benötigt.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 * Kontovoraussetzungen Zum Bereitstellen von Cloud-Ressourcen müssen Sie über die folgenden Konten verfügen:
 
-  * Microsoft 365 Konto mit gültigem Abonnement.
+  * Microsoft 365-Konto mit gültigem Abonnement.
   * Azure mit gültigem Abonnement.
-  Weitere Informationen finden Sie unter [Vorbereiten von Konten für die Erstellung Teams App](accounts.md).
+  Weitere Informationen finden Sie unter [Vorbereiten von Konten für das Erstellen von Teams-Apps](accounts.md).
 
 * [Installieren des Teams-Toolkits](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Version v3.0.0+.
 
@@ -41,7 +41,7 @@ Die Bereitstellung erfolgt mit einem einzigen Befehl in Teams Toolkit für Visua
 Wenn Sie den Bereitstellungsbefehl in Teams Toolkit oder TeamsFx CLI auslösen, können Sie die folgenden Ressourcen erhalten:
 
 * Microsoft Azure Active Directory (Azure AD)-Anwendung unter Ihrem Microsoft 365-Mandanten.
-* Teams App-Registrierung unter der Teams Plattform Ihres Microsoft 365 Mandanten.
+* Teams-App-Registrierung unter der Teams-Plattform Ihres Microsoft 365-Mandanten.
 * Azure-Ressourcen unter Ihrem ausgewählten Azure-Abonnement.
 
 Wenn Sie ein neues Projekt erstellen, können Sie alle Azure-Ressourcen verwenden. Die ARM-Vorlage definiert alle Azure-Ressourcen und hilft beim Erstellen erforderlicher Azure-Ressourcen während der Bereitstellung. Wenn Sie einem vorhandenen Projekt [eine neue Funktionsressource hinzufügen](./add-resource.md), spiegelt die aktualisierte ARM-Vorlage die letzte Änderung wider.

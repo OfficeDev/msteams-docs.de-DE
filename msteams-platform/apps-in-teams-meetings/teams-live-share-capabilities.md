@@ -4,16 +4,16 @@ description: In diesem Modul erfahren Sie mehr über Live Share SDK-Funktionen, 
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: f5986515f9916a0138524b919dca46d0cf0ee8d4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 35d5228ac39dd1a9d58d699d8c989aeeceaf765d
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143242"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503347"
 ---
 ---
 
-# <a name="live-share-capabilities"></a>Live Share-Funktionen
+# <a name="live-share-core-capabilities"></a>Live Share Kernfunktionen
 
 Das Live Share SDK kann mit minimalem Aufwand den `sidePanel` und `meetingStage` Kontexten Ihrer Besprechungserweiterung hinzugefügt werden. Dieser Artikel konzentriert sich auf die Integration des Live Share SDK in Ihre App und wichtige Funktionen des SDK.
 

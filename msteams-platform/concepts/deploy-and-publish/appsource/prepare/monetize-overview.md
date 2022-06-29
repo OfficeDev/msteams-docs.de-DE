@@ -5,17 +5,17 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 6dfa80b40eb53c5d552ab4a3ffc9a6cefd7cda0a
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 9b684fccb108b733a63ae6b61e002bc24bde32ef
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123055"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485510"
 ---
 # <a name="monetize-your-app"></a>Monetarisieren Ihrer App
 
 Der Microsoft Teams App-Store bietet Features, mit denen Sie Ihre Apps monetarisieren und Kunden gewinnen können, indem Sie mit Ihren Benutzern interagieren. Die Themen in diesem Abschnitt zeigen Ihnen, wie Sie diese Features in Ihre App integrieren.
- 
+
 ## <a name="choose-a-pricing-model"></a>Auswählen eines Preismodells
 
 :::row:::

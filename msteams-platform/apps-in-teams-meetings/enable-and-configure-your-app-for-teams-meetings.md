@@ -4,14 +4,14 @@ author: surbhigupta
 description: Erfahren Sie, wie Sie Ihre Apps für Teams-Besprechungen und verschiedene Besprechungsszenarien aktivieren und konfigurieren, das App-Manifest aktualisieren, Features konfigurieren und vieles mehr.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: e7286399d27533d816e20f6b22e45f2526efdbe1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a59ee31eb1837389b09f58c83a02f056ab55506a
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142591"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503361"
 ---
-# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Aktivieren und Konfigurieren Ihrer Apps für Teams-Besprechungen
+# <a name="enable-and-configure-apps-for-meetings"></a>Aktivieren und Konfigurieren von Apps für Besprechungen
 
 Jedes Team hat eine andere Art, zu kommunizieren und Aufgaben gemeinsam zu erledigen. Um diese verschiedenen Aufgaben zu erfüllen, passen Sie Teams mit Apps für Besprechungen an. Aktivieren Sie Ihre Apps für Teams-Besprechungen, und konfigurieren Sie die Apps so, dass sie im Besprechungsbereich innerhalb ihres App-Manifests verfügbar sind.
 

@@ -1,16 +1,16 @@
 ---
 title: Bot-Aktivitätenhandler
 author: surbhigupta
-description: In diesem Artikel erfahren Sie mehr über Bot-Aktivitätshandler, Frameworks, Teams Aktivitätshandler und Botlogik in Microsoft Teams.
+description: In diesem Artikel erfahren Sie mehr über Bot-Aktivitätshandler, Frameworks, Teams-Aktivitätshandler und Botlogik in Microsoft Teams.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 488c01f47f5518673ec66c3dbac5f3bd8f6927f3
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: c1d3acb4328f61f15d4751aedff3d413d18072fd
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150862"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485573"
 ---
 # <a name="bot-activity-handlers"></a>Bot-Aktivitätenhandler
 
@@ -25,7 +25,7 @@ Der Teams-Aktivitätenhandler wird vom Aktivitätenhandler des Microsoft Bot Fra
 Wenn ein Bot für Teams eine Aktivität empfängt, wird er an die Aktivitätshandler weitergeleitet. Alle Aktivitäten werden über einen Basishandler weitergeleitet, der als Turnhandler bezeichnet wird. Der Turnhandler ruft den erforderlichen Aktivitätenhandler auf, der für die Verarbeitung der empfangenen Aktivitätsart zuständig ist. Der Teams-Bot wird von der Klasse `TeamsActivityHandler` abgeleitet, die von der Klasse `ActivityHandler` des Bot Frameworks abgeleitet wird.
 
 > [!NOTE]
-> Wenn die Verarbeitung der Bot-Aktivität länger als 15 Sekunden dauert, Teams eine Wiederholungsanforderung an den Botendpunkt senden. Daher sehen Sie doppelte Anforderungen in Ihrem Bot.
+> Wenn die Verarbeitung der Bot-Aktivität länger als 15 Sekunden dauert, sendet Teams eine Wiederholungsanforderung an den Bot-Endpunkt. Daher sehen Sie doppelte Anforderungen in Ihrem Bot.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -33,7 +33,7 @@ Bots werden mit dem Bot Framework erstellt. Wenn die Bots eine Nachrichtenaktivi
 
 In der Teams-Aktivitätenhandlerklasse gibt es die zwei primären Teams-Aktivitätenhandler `OnConversationUpdateActivityAsync` und `OnInvokeActivityAsync`. `OnConversationUpdateActivityAsync` leitet alle Unterhaltungsaktualisierungsaktivitäten, und `OnInvokeActivityAsync` leitet alle Teams-Aufrufaktivitäten.
 
-Um Ihre Logik für Teams-spezifische Aktivitätenhandler zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im Abschnitt [Botlogik](#bot-logic) gezeigt. Es gibt keine Basisimplementierung für diese Handler. Daher müssen Sie die gewünschte Logik in ihrer Außerkraftsetzung hinzufügen.
+Um Ihre Logik für Teams-spezifische Aktivitätenhandler zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im Abschnitt [Botlogik](#bot-logic) gezeigt. Es gibt keine Basisimplementierung für diese Handler. Fügen Sie daher die gewünschte Logik in Ihre Außerkraftsetzung ein.
 
 Die Codeausschnitte für Teams-Aktivitätenhandler:
 
@@ -173,13 +173,13 @@ Bots werden mit dem Bot Framework erstellt. Wenn die Bots eine Nachrichtenaktivi
 
 In der Teams-Aktivitätenhandlerklasse gibt es die zwei primären Teams-Aktivitätenhandler `on_conversation_update_activity` und `on_invoke_activity`. `on_conversation_update_activity` leitet alle Unterhaltungsaktualisierungsaktivitäten, und `on_invoke_activity` leitet alle Teams-Aufrufaktivitäten.
 
-Um Ihre Logik für Teams-spezifische Aktivitätenhandler zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im Abschnitt [Botlogik](#bot-logic) gezeigt. Es gibt keine Basisimplementierung für diese Handler. Daher müssen Sie die gewünschte Logik in ihrer Außerkraftsetzung hinzufügen.
+Um Ihre Logik für Teams-spezifische Aktivitätenhandler zu implementieren, müssen Sie die Methoden in Ihrem Bot überschreiben, wie im Abschnitt [Botlogik](#bot-logic) gezeigt. Es gibt keine Basisimplementierung für diese Handler. Fügen Sie daher die gewünschte Logik in Ihre Außerkraftsetzung ein.
 
 ---
 
 ## <a name="bot-logic"></a>Botlogik
 
-Die Botlogik verarbeitet eingehende Aktivitäten aus einem oder mehreren Bot-Kanälen und generiert als Reaktion ausgehende Aktivitäten. Dies gilt immer noch für Bots, die von der Teams Aktivitätshandlerklasse abgeleitet wurden, die zuerst nach Teams Aktivitäten sucht. Nach der Überprüfung auf Teams-Aktivitäten übergibt sie alle anderen Aktivitäten an den Aktivitätenhandler des Bot Frameworks.
+Die Botlogik verarbeitet eingehende Aktivitäten aus einem oder mehreren Bot-Kanälen und generiert als Reaktion ausgehende Aktivitäten. Dies gilt weiterhin für Bots, die von der Teams-Aktivitätshandlerklasse abgeleitet wurden, die zuerst auf Teams-Aktivitäten überprüft. Nach der Überprüfung auf Teams-Aktivitäten übergibt sie alle anderen Aktivitäten an den Aktivitätenhandler des Bot Frameworks.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -221,7 +221,7 @@ Der `TeamsActivityHandler` erweitert die Liste der Handler im Abschnitt „Core 
 
 #### <a name="teams-invoke-activities"></a>Aufrufaktivitäten in Teams
 
-Die Liste der vom Teams-Aktivitätshandler aufgerufenen `OnInvokeActivityAsync` Teams Aktivitätshandler umfasst Folgendes:
+Die Liste der vom `OnInvokeActivityAsync` Teams-Aktivitätshandler aufgerufenen Teams-Aktivitätshandler umfasst Folgendes:
 
 | Aufruftypen                    | Handler                              | Beschreibung                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -273,7 +273,7 @@ Der `TeamsActivityHandler` erweitert die Liste der Handler im Abschnitt „Core 
 
 #### <a name="teams-invoke-activities"></a>Aufrufaktivitäten in Teams
 
-Die Liste der vom Teams-Aktivitätshandler aufgerufenen `onInvokeActivity` Teams Aktivitätshandler umfasst Folgendes:
+Die Liste der vom `onInvokeActivity` Teams-Aktivitätshandler aufgerufenen Teams-Aktivitätshandler umfasst Folgendes:
 
 | Aufruftypen                    | Handler                              | Beschreibung                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -326,7 +326,7 @@ Der `TeamsActivityHandler` erweitert die Liste der Handler vom Abschnitt „Core
 
 #### <a name="teams-invoke-activities"></a>Aufrufaktivitäten in Teams
 
-Die Liste der vom Teams-Aktivitätshandler aufgerufenen `on_invoke_activity` Teams Aktivitätshandler umfasst Folgendes:
+Die Liste der vom `on_invoke_activity` Teams-Aktivitätshandler aufgerufenen Teams-Aktivitätshandler umfasst Folgendes:
 
 | Aufruftypen                    | Handler                              | Beschreibung                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |

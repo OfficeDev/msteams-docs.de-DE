@@ -1,19 +1,19 @@
 ---
-title: Erstellen einer Kanal- oder Gruppenregisterkarte
+title: Erstellen einer Kanalregisterkarte
 author: laujan
-description: In diesem Modul erfahren Sie, wie Sie eine Kanal- und Gruppenregisterkarte mit dem Yeoman-Generator für Microsoft Teams erstellen, einschließlich der Überprüfung des Quellcodes mit Codebeispielen.
+description: In diesem Modul erfahren Sie, wie Sie mit dem Yeoman-Generator für Microsoft Teams eine Kanal- und Gruppenregisterkarte erstellen, einschließlich der Überprüfung des Quellcodes mit Codebeispielen.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6bdece5b23999025b1e4ecd22b2fb8f87f7c3325
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b9696b4e41393595edc6a0bdb5d81a74bdf8c699
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189598"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503648"
 ---
-# <a name="channel-or-group-tab"></a>Kanal- oder Gruppenregisterkarten
+# <a name="create-a-channel-tab"></a>Erstellen einer Kanalregisterkarte
 
 Kanal-- oder Gruppenregisterkarten übermitteln Inhalte an Kanäle und Gruppenchats und sind eine hervorragende Möglichkeit zum Erstellen von Bereichen für die Zusammenarbeit rund um dedizierte webbasierte Inhalte.
 
@@ -190,10 +190,10 @@ gulp ngrok-serve
 > [!IMPORTANT]
 > Nachdem Ihre Registerkarte über **ngrok** in Microsoft Teams hochgeladen und erfolgreich gespeichert wurde, können Sie diese in Microsoft Teams anzeigen, bis Ihre Tunnelsitzung endet. Wenn Sie die ngrok-Sitzung neu starten, müssen Sie Ihre App mit der neuen URL aktualisieren.
 
-### <a name="upload-your-application-to-teams"></a>Hochladen Ihrer Anwendung in Microsoft Teams
+### <a name="upload-your-application-to-teams"></a>Hochladen Ihrer Anwendung in Teams
 
-1. Wechseln Sie zu Teams, und wählen Sie **"Apps**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::" aus.
-1. Wählen Sie **Apps verwalten** und dann **Benutzerdefinierte App hochladen** aus.
+1. Wechseln Sie zu Teams, und wählen Sie **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store"::: aus.
+1. Wählen Sie **Ihre Apps verwalten** und **Eine benutzerdefinierte App hochladen** aus.
 1. Wechseln Sie zu Ihrem Projektverzeichnis, navigieren Sie zum Ordner **./package**, wählen Sie den ZIP-Ordner des App-Pakets und dann **Öffnen** aus.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Hochgeladene Kanalregisterkarte" border="true":::
@@ -291,7 +291,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 * Ein **transparentes Kontursymbol** mit einer Größe von 32 x 32 Pixeln.
 * Eine `manifest.json`-Datei, welche die Attribute Ihrer App angibt.
 
-Diese Dateien müssen in einem App-Paket gezippt werden, damit sie beim Hochladen Ihrer Registerkarte in Microsoft Teams verwendet werden können. Wenn ein Benutzer ihre Registerkarte hinzufügen oder aktualisieren möchte, lädt Teams die `configurationUrl` in Ihrem Manifest angegebene, bettet sie in einen IFrame ein und rendert sie auf Ihrer Registerkarte.
+Diese Dateien müssen in einem App-Paket gezippt werden, damit sie beim Hochladen Ihrer Registerkarte in Microsoft Teams verwendet werden können. Wenn ein Benutzer Ihre Registerkarte hinzufügen oder aktualisieren möchte, lädt Teams die `configurationUrl` in Ihrem Manifest angegebene Registerkarte, bettet sie in einen IFrame ein und rendert sie auf Ihrer Registerkarte.
 
 #### <a name="csproj"></a>.csproj
 

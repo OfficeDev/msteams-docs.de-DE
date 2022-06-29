@@ -1,18 +1,18 @@
 ---
 title: Verbreiten von Links
 author: surbhigupta
-description: In diesem Modul erfahren Sie, wie Sie die Verbreitung von Links mit Messaging-Erweiterung in einer Teams-App mit App-Manifest oder manuell mitHilfe von Codebeispielen und Beispielen hinzufügen.
+description: In diesem Modul erfahren Sie, wie Sie die Verbreitung von Links mit messaging-Erweiterung in einer Teams-App mit App-Manifest oder manuell mitHilfe von Codebeispielen und Beispielen hinzufügen.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: debbcdcf4c22f63262e16fda70c0e778bffa9379
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: d12b443972472d4ee307b55c0e492cff844acad4
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189995"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503613"
 ---
-# <a name="link-unfurling"></a>Verbreiten von Links
+# <a name="add-link-unfurling"></a>Linkausweitung hinzufügen
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
@@ -23,7 +23,7 @@ In diesem Dokument erfahren Sie, wie Sie ihrem App-Manifest mit App Studio oder 
 > * Derzeit wird das Aufheben der Verbreitung von Links auf mobilen Clients nicht unterstützt.
 > * Das Ergebnis der Verbreitung von Links wird 30 Minuten lang zwischengespeichert.
 
-Die Azure DevOps Nachrichtenerweiterung verwendet die Verbreitung von Links, um nach URLs zu suchen, die in den Bereich für das Verfassen von Nachrichten eingefügt werden, der auf ein Arbeitselement verweist. In der folgenden Abbildung hat ein Benutzer eine URL für ein Element in Azure DevOps eingefügt, dass die Nachrichtenerweiterung in eine Karte aufgelöst wurde:
+Die Azure DevOps Nachrichtenerweiterung verwendet die Verbreitung von Links, um nach URLs zu suchen, die in den Bereich für das Verfassen von Nachrichten eingefügt werden, der auf ein Arbeitselement verweist. In der folgenden Abbildung hat ein Benutzer eine URL für ein Element in Azure DevOps eingefügt, das die Nachrichtenerweiterung in eine Karte aufgelöst hat:
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Beispiel der Verbreitung von Links":::
 
@@ -50,7 +50,7 @@ Um Ihrem App-Manifest das Verbreiten von Links hinzuzufügen, fügen Sie dem `co
 ### <a name="add-link-unfurling-manually"></a>Verbreitung von Links manuell hinzufügen
 
 > [!NOTE]
-> Wenn die Authentifizierung über Azure AD hinzugefügt wird, [lösen Sie Links in Teams mithilfe von Bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4) aus.
+> Wenn die Authentifizierung über Azure AD hinzugefügt wird, [lösen Sie Links in Teams mithilfe des Bots](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4) aus.
 
 Damit Ihre Nachrichtenerweiterung mit Links interagieren kann, müssen Sie zuerst das `messageHandlers`-Array zu Ihrem App-Manifest hinzufügen. Im folgenden Beispiel wird erläutert, wie Sie das Verbreiten von Links manuell hinzufügen:
 

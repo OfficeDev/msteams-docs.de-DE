@@ -1,17 +1,17 @@
 ---
 title: Überblick über das Teams-Toolkit
 author: zyxiaoyuer
-description: In diesem Modul lernen Sie Teams Toolkit, die Installation des Teams Toolkits und die Benutzerreise des Teams Toolkits kennen.
+description: Lernen Sie in diesem Modul das Teams-Toolkit, die Installation des Teams-Toolkits und die Benutzerreise des Teams-Toolkits kennen.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: 529d7b6e18bf9ff0f28bb2230358f25f95b9e3db
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 49bf74276053f927f0337882d6f278ca64494128
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142199"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484607"
 ---
 # <a name="teams-toolkit-overview"></a>Überblick über das Teams-Toolkit
 
@@ -21,7 +21,7 @@ Mit dem Teams-Toolkit können Sie Ihre Teams-App direkt aus Visual Studio Code e
 * Integrierte Identität
 * Zugriff auf Cloudspeicher
 * Daten von Microsoft Graph
-* Azure- und Microsoft 365-Dienste mit Zero-Configuration-Ansatz
+* Azure- und Microsoft 365-Dienste mit Zero-Configuration-Ansatz.
 
 Teams Toolkit bringt alle Tools, die zum Erstellen einer Teams-App benötigt werden, an einem Ort zusammen.
 
@@ -29,7 +29,7 @@ Teams Toolkit bringt alle Tools, die zum Erstellen einer Teams-App benötigt wer
 
 Teams Toolkit automatisiert manuelle Arbeit und bietet eine hervorragende Integration von Teams und Azure-Ressourcen. Das folgende Bild zeigt die Benutzerreise von Teams Toolkit:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey.png" alt-text="Teams Toolkit User Journey" border="true":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="User Journey des Teams-Toolkits" border="true" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 Die wichtigsten Meilensteine dieser Reise sind:
 
@@ -46,7 +46,7 @@ Die wichtigsten Meilensteine dieser Reise sind:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1.png" alt-text="installieren":::
 
-1. Geben Sie **Teams Toolkit** in das Suchfeld ein.
+1. Geben Sie das **Teams-Toolkit** in das Suchfeld ein.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2.png" alt-text="Toolkit":::
 
@@ -63,7 +63,7 @@ Nach der Toolkit-Installation sehen Sie die Teams Toolkit-Benutzeroberfläche wi
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/Teams-toolkit.png" alt-text="minifunktionen":::
 
-Sie können **Erste Schritte** auswählen, um das Teams Toolkit zu erkunden, oder **eine neue Teams-App** erstellen, um ein Teams Projekt zu erstellen. Wenn Sie ein Teams Projekt, das von Teams Toolkit erstellt wurde, in Visual Studio Code geöffnet haben, wird Teams Toolkit-Benutzeroberfläche mit allen Funktionen angezeigt, wie in der folgenden Abbildung dargestellt:
+Sie können " **Erste Schritte** " auswählen, um das Teams-Toolkit zu erkunden, oder **eine neue Teams-App** erstellen, um ein Teams-Projekt zu erstellen. Wenn Sie ein vom Teams-Toolkit erstelltes Teams-Projekt in Visual Studio Code geöffnet haben, wird die Benutzeroberfläche des Teams-Toolkits mit allen Funktionen angezeigt, wie in der folgenden Abbildung gezeigt:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="Screenshot des Teams-Toolkits":::
 
@@ -71,7 +71,7 @@ Lassen Sie uns eine Tour durch die in diesem Dokument behandelten Themen unterne
 
 ## <a name="accounts"></a>Konten
 
-Um eine Teams-App zu entwickeln, benötigen Sie mindestens ein Microsoft 365-Konto mit einem gültigen Abonnement. Wenn Sie Ihre Back-End-Ressourcen auf Azure hosten möchten, ist außerdem ein Azure-Konto erforderlich. Teams Toolkit unterstützt die integrierte Erfahrung bei der Anmeldung, Bereitstellung und Bereitstellung für Azure-Ressourcen. Sie können ein [kostenloses Azure-Konto erstellen, bevor](https://azure.microsoft.com/free/) Sie beginnen.
+Um eine Teams-App zu entwickeln, benötigen Sie mindestens ein Microsoft 365-Konto mit einem gültigen Abonnement. Wenn Sie Ihre Back-End-Ressourcen auf Azure hosten möchten, ist außerdem ein Azure-Konto erforderlich. Das Teams-Toolkit unterstützt die integrierte Erfahrung bei der Anmeldung, Bereitstellung und Bereitstellung für Azure-Ressourcen. Sie können ein [kostenloses Azure-Konto erstellen, bevor](https://azure.microsoft.com/free/) Sie beginnen.
 
 ## <a name="environment"></a>Umgebung
 
@@ -89,11 +89,11 @@ Das Teams-Toolkit unterstützt Sie beim Erstellen und Anpassen Ihres Teams-App-P
 
 ### <a name="create-a-new-teams-app"></a>Erstellen einer neuen Teams-App
 
-Es hilft Ihnen, mit Teams App-Entwicklung zu beginnen, indem Sie ein neues Teams Projekt mit Teams Toolkit erstellen, indem Sie entweder ein **neues Projekt erstellen** oder **anhand eines Beispiels starten**.
+Es hilft Ihnen, mit der Entwicklung von Teams-Apps zu beginnen, indem Sie ein neues Teams-Projekt mithilfe des Teams-Toolkits erstellen, indem **Sie entweder ein neues Projekt erstellen** oder **anhand eines Beispiels starten**.
 
 ### <a name="add-features"></a>Features hinzufügen
 
-Es hilft Ihnen, zusätzliche Teams-Funktionen wie **Tab** oder **Bot** inkrementell hinzuzufügen oder optional Azure-Ressourcen wie **Azure SQL-Datenbank** oder **Azure Key Vault** hinzuzufügen, was Ihren Entwicklungsanforderungen an Ihre aktuelle Teams-App entspricht. Sie können auch **Workflows für einmaliges Anmelden** oder **CI/CD** für Ihre Teams-App hinzufügen. 
+Es hilft Ihnen, zusätzliche Teams-Funktionen wie **Tab** oder **Bot** inkrementell hinzuzufügen oder optional Azure-Ressourcen wie **Azure SQL-Datenbank** oder **Azure Key Vault** hinzuzufügen, was Ihren Entwicklungsanforderungen an Ihre aktuelle Teams-App entspricht. Sie können auch **Workflows für einmaliges Anmelden** oder **CI/CD** für Ihre Teams-App hinzufügen.
 
 ### <a name="edit-manifest-file"></a>Manifestdatei bearbeiten
 
@@ -105,7 +105,7 @@ Stellen Sie während oder nach der Entwicklung sicher, dass die Teams-App bereit
 
 ### <a name="provision-in-the-cloud"></a>Bereitstellung in der Cloud
 
-Es lässt sich in den Azure-Ressourcen-Manager integrieren, der es Ihnen ermöglicht, Azure-Ressourcen bereitzustellen, die Ihre Anwendung für den Code-Ansatz benötigt.
+Es lässt sich in Azure Resource Manager integrieren, mit dem Sie Azure-Ressourcen bereitstellen können, die Ihre Anwendung für den Codeansatz benötigt.
 
 ### <a name="deploy-to-the-cloud"></a>Bereitstellen in die Cloud
 

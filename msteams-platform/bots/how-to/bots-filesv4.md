@@ -1,17 +1,17 @@
 ---
-title: Senden und Empfangen von Dateien über den Bot
+title: Senden und Empfangen von Dateien mithilfe eines Bots
 description: Erfahren Sie, wie Sie Dateien über den Bot senden und empfangen, indem Sie Graph-APIs für persönliche, Kanal- und Gruppenchatbereiche verwenden.
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 9ac04b912de87ac6e048e7cb7577c0a61b1f9f83
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 3fdf39c18743c991610c266a58e37e0109ffbf05
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189650"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503879"
 ---
-# <a name="send-and-receive-files-through-the-bot"></a>Senden und Empfangen von Dateien über den Bot
+# <a name="send-and-receive-files-using-bot"></a>Senden und Empfangen von Dateien mithilfe eines Bots
 
 > [!IMPORTANT]
 > Die Artikel in diesem Dokument basieren auf dem v4 Bot Framework SDK.

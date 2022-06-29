@@ -4,14 +4,14 @@ description: Beschreibt das Aktualisieren des Manifests zum Aktivieren von SSO f
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD) Graph-API
-ms.openlocfilehash: 0bc50b61d5beac45ae11ec1264cd6fc4861e0738
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 437c16763e918430e91fe543c2dbc62d95452c5c
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888105"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503480"
 ---
-# <a name="update-app-manifest-for-sso-and-preview-app"></a>Aktualisieren des App-Manifests für SSO und Vorschau-App
+# <a name="update-manifest-for-sso-and-preview-app"></a>Updatemanifest für SSO und Vorschau-App
 
 Stellen Sie vor dem Aktualisieren des Teams-App-Manifests sicher, dass Sie Code zum Aktivieren von SSO in Ihrer Registerkarten-App konfiguriert haben.
 
@@ -153,8 +153,6 @@ So zeigen Sie eine Vorschau Ihrer Registerkarten-App in Teams an:
     Die Optionen zum Hochladen einer App werden angezeigt.
 
 1. Wählen Sie **"Benutzerdefinierte App hochladen** " aus, um die Registerkarten-App in Teams querzuladen.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sideload-tab-app.png" alt-text="Querladen der Registerkarten-App in Teams":::
 
 1. Wählen Sie Ihre ZIP-Datei des App-Pakets und dann **"Hinzufügen"** aus.
 

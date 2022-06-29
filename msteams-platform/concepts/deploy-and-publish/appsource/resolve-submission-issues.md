@@ -5,16 +5,16 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 51427f2023ba566391a3d0b544d74e5658464a7c
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5faf2d3622e88febe9522f5e2df6716ec2680cca
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123209"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503872"
 ---
-# <a name="resolve-issues-if-your-microsoft-teams-store-submission-fails"></a>Beheben von Problemen, wenn ihre Microsoft Teams Store-Übermittlung fehlschlägt
+# <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Beheben von Problemen, wenn die Übermittlung an den Teams-Store fehlschlägt
 
-Apps, die im Microsoft Teams Store veröffentlicht werden, müssen die [Teams Store-Validierungsrichtlinien](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) und [richtlinien für kommerzielle Marketplaces](/legal/marketplace/certification-policies) erfüllen.
+Apps, die im Microsoft Teams-Store veröffentlicht werden, müssen den [Validierungsrichtlinien für den Teams-Store](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) und [den Richtlinien für kommerzielle Marketplaces](/legal/marketplace/certification-policies) entsprechen.
 
 Wenn ihre Store-Übermittlung fehlschlägt, stellt Microsoft einen Concierge-Überprüfungsdienst bereit, der Ihnen hilft, Ihre App kompatibel und veröffentlicht zu machen.
 
@@ -71,10 +71,10 @@ Wenn ihre Store-Übermittlung keine Probleme hat, wird Ihre App innerhalb von 1 
 
 Wenn Sie Folgendes ausführen, kann dies zu einer erfolgreichen Übermittlung führen:
 
-1. Entwickeln Sie Ihre App basierend auf den [Teams Designrichtlinien](~/concepts/design/design-teams-app-overview.md).
-1. Stellen Sie sicher, dass Ihre App die [Validierungsrichtlinien für Teams Store](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) und [die Zertifizierungsrichtlinien für kommerzielle Microsoft Marketplaces](/legal/marketplace/certification-policies) einhält.
-1. Testen Sie Ihr App-Paket mit dem [Microsoft Teams App-Überprüfungstool](https://dev.teams.microsoft.com/appvalidation.html).
-1. [Bereiten Sie ihre übermittlung Teams Store](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md) vor.
+1. Entwickeln Sie Ihre App basierend auf den [Entwurfsrichtlinien für Teams](~/concepts/design/design-teams-app-overview.md).
+1. Stellen Sie sicher, dass Ihre App die [Validierungsrichtlinien für den Teams-Store](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) und die [Zertifizierungsrichtlinien für den kommerziellen Marketplace von Microsoft](/legal/marketplace/certification-policies) einhält.
+1. Testen Sie Ihr App-Paket mit dem [Microsoft Teams-App-Validierungstool](https://dev.teams.microsoft.com/appvalidation.html).
+1. [Bereiten Sie Ihre Teams Store-Übermittlung vor](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 
 <br>
 

@@ -1,18 +1,18 @@
 ---
-title: Erstellen von Registerkarten und anderen gehosteten Umgebungen mit dem Microsoft Teams JavaScript-Client-SDK
+title: Microsoft Teams JavaScript-Client-SDK
 author: heath-hamilton
 ms.author: surbhigupta
 description: Lernen Sie in diesem Modul das JavaScript-Client-SDK von Microsoft Teams kennen, das Ihnen beim Erstellen von App-Erfahrungen helfen kann, die in <iframe> in Office und Outlook gehostet werden.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 165b08b3936afe03f492d8e6983c5504d38bad8b
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: fddc06c2139796839500a99421d1e2c92a4318c0
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189505"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503921"
 ---
-# <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Erstellen von Registerkarten und anderen gehosteten Umgebungen mit dem Microsoft Teams JavaScript-Client-SDK
+# <a name="teams-javascript-client-sdk"></a>Microsoft Teams JavaScript-Client-SDK
 
 Mit dem Microsoft Teams JavaScript-Client-SDK können Sie gehostete Umgebungen in Teams, Office und Outlook erstellen, in denen Ihre App-Inhalte in einem [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) gehostet werden. Das SDK ist hilfreich für die Entwicklung von Apps mit den folgenden Microsoft Teams-Funktionen:
 
@@ -42,7 +42,7 @@ In der folgenden Tabelle sind Teams-Registerkarten und -Dialogfelder (Aufgabenmo
 | appInitialization| | Veraltet. Durch Namespace `app` ersetzt. |
 | appInstallDialog | Teams||
 | Authentifizierung | Teams, Outlook, Office | |
-| Kalender | Teams, Outlook ||
+| Kalender | Outlook ||
 | call | Teams||
 | Chat |Teams||
 | Dialogfeld | Teams, Outlook, Office | Namespace, der Dialogfelder darstellt (vormals als *Aufgabenmodule* bezeichnet. Siehe Hinweise zu [Dialogfeldern](#dialogs). |
