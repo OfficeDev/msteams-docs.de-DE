@@ -4,12 +4,12 @@ description: In diesem Modul erfahren Sie, wie Sie mit Live Share SDK beginnen u
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: b13b37c73760d18cc11f30afca989c34ba1c1bb8
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8af4a452820a01c0a535106e9273d953cb5f0713
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143564"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484628"
 ---
 ---
 
@@ -103,7 +103,7 @@ start().catch((error) => console.error(error));
 
 Nicht alle Ihre App-Ansichten müssen zusammenarbeiten. Die `stage`-Ansicht benötigt *immer* Funktionen für die Zusammenarbeit, die `content`-Ansicht benötigt *möglicherweise* Funktionen für die Zusammenarbeit, und die `config`-Ansicht sollte *niemals* Funktionen für die Zusammenarbeit benötigen. Für die Ansichten, die Funktionen für die Zusammenarbeit benötigen, müssen Sie einem Fluid-Container beitreten, der der aktuellen Besprechung zugeordnet ist.
 
-Das Beitreten des Containers für die Besprechung ist so einfach wie das Erstellen eines neuen [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) und das anschließende Aufrufen der [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer)-Methode.  Wenn Sie lokal ausgeführt werden, müssen Sie eine benutzerdefinierte Verbindungskonfiguration mit einem speziellen `LOCAL_MODE_TENANT_ID` übergeben. Andernfalls ist der Beitritt zu einem lokalen Container mit dem Beitritt zu einem Container in Teams identisch.
+Der Beitritt zum Container für das Meeting ist so einfach wie das Erstellen eines neuen [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) und das anschließende Aufrufen seiner Methode [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer).  Wenn Sie lokal ausgeführt werden, müssen Sie eine benutzerdefinierte Verbindungskonfiguration mit einem speziellen `LOCAL_MODE_TENANT_ID` übergeben. Andernfalls ist der Beitritt zu einem lokalen Container mit dem Beitritt zu einem Container in Teams identisch.
 
 ```js
 async function joinContainer() {

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 1df61412f8cf3e47340a7626004d3652a77b60e9
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 2f7d22c75bda7eb9ed820ac463214ed08bdc8cca
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189606"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485327"
 ---
 # <a name="teams-app-that-fits"></a>Eine Teams-App, die passt
 
@@ -51,7 +51,7 @@ Hier sind die Gründe, warum sich Microsoft Teams hervorragend für Ihre App-Anf
 
 - **Soziale Interaktionen**
 
-    Teams ist eine soziale Plattform; benutzerdefinierte, auf soziale Netzwerke ausgerichtete Apps ermutigen Ihr Team dazu, Ihre Unternehmenskultur für die Bereiche der Zusammenarbeit zu übernehmen. Verwenden Sie Apps zum Senden von Umfragen, zum Teilen von Feedback untereinander, um Beziehungen und Kommunikation zu ermöglichen.
+    Teams ist eine soziale Plattform; benutzerdefinierte, auf soziale Netzwerke ausgerichtete Apps ermutigen Ihr Team dazu, Ihre Unternehmenskultur für die Bereiche der Zusammenarbeit zu übernehmen. Verwenden Sie Apps, um Umfragen zu senden, Feedback miteinander zu teilen, Verbindungen herzustellen und zu kommunizieren.
 
     :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="Microsoft Teams-App zur Förderung des Teamgeistes" border="false":::
 
